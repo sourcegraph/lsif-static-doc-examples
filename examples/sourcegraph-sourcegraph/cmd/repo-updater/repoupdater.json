@@ -4,9 +4,7 @@
     "identifier": "repoupdater",
     "newPage": true,
     "searchKey": "cmd/repo-updater/repoupdater",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "mockRepoLookup",
                 "newPage": false,
                 "searchKey": "repoupdater.mockRepoLookup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "dsn",
                 "newPage": false,
                 "searchKey": "repoupdater.dsn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,9 +87,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -107,9 +105,7 @@
                 "identifier": "HandlerMetrics",
                 "newPage": false,
                 "searchKey": "repoupdater.HandlerMetrics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +123,7 @@
                       "identifier": "NewHandlerMetrics",
                       "newPage": false,
                       "searchKey": "repoupdater.NewHandlerMetrics",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -149,9 +143,7 @@
                       "identifier": "HandlerMetrics.MustRegister",
                       "newPage": false,
                       "searchKey": "repoupdater.HandlerMetrics.MustRegister",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -174,7 +166,9 @@
                 "identifier": "observedHandler",
                 "newPage": false,
                 "searchKey": "repoupdater.observedHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -192,7 +186,9 @@
                       "identifier": "observedHandler.ServeHTTP",
                       "newPage": false,
                       "searchKey": "repoupdater.observedHandler.ServeHTTP",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -215,7 +211,9 @@
                 "identifier": "responseRecorder",
                 "newPage": false,
                 "searchKey": "repoupdater.responseRecorder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -233,7 +231,9 @@
                       "identifier": "responseRecorder.WriteHeader",
                       "newPage": false,
                       "searchKey": "repoupdater.responseRecorder.WriteHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -253,7 +253,9 @@
                       "identifier": "responseRecorder.Write",
                       "newPage": false,
                       "searchKey": "repoupdater.responseRecorder.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -276,9 +278,7 @@
                 "identifier": "Server",
                 "newPage": false,
                 "searchKey": "repoupdater.Server",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -296,9 +296,7 @@
                       "identifier": "Server.Handler",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.Handler",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -318,7 +316,9 @@
                       "identifier": "Server.handleRepoUpdateSchedulerInfo",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.handleRepoUpdateSchedulerInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -338,7 +338,9 @@
                       "identifier": "Server.handleRepoLookup",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.handleRepoLookup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -358,7 +360,9 @@
                       "identifier": "Server.handleEnqueueRepoUpdate",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.handleEnqueueRepoUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -378,7 +382,9 @@
                       "identifier": "Server.enqueueRepoUpdate",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.enqueueRepoUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -398,7 +404,9 @@
                       "identifier": "Server.handleExternalServiceSync",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.handleExternalServiceSync",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -418,7 +426,9 @@
                       "identifier": "Server.repoLookup",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.repoLookup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -438,7 +448,9 @@
                       "identifier": "Server.remoteRepoSync",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.remoteRepoSync",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -458,7 +470,9 @@
                       "identifier": "Server.handleEnqueueChangesetSync",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.handleEnqueueChangesetSync",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -478,7 +492,9 @@
                       "identifier": "Server.handleSchedulePermsSync",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.handleSchedulePermsSync",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -501,7 +517,9 @@
                 "identifier": "fakeRepoSource",
                 "newPage": false,
                 "searchKey": "repoupdater.fakeRepoSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -519,7 +537,9 @@
                       "identifier": "fakeRepoSource.GetRepo",
                       "newPage": false,
                       "searchKey": "repoupdater.fakeRepoSource.GetRepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -542,7 +562,9 @@
                 "identifier": "fakeScheduler",
                 "newPage": false,
                 "searchKey": "repoupdater.fakeScheduler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -560,7 +582,9 @@
                       "identifier": "fakeScheduler.UpdateOnce",
                       "newPage": false,
                       "searchKey": "repoupdater.fakeScheduler.UpdateOnce",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -580,7 +604,9 @@
                       "identifier": "fakeScheduler.ScheduleInfo",
                       "newPage": false,
                       "searchKey": "repoupdater.fakeScheduler.ScheduleInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -603,7 +629,9 @@
                 "identifier": "fakePermsSyncer",
                 "newPage": false,
                 "searchKey": "repoupdater.fakePermsSyncer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -621,7 +649,9 @@
                       "identifier": "fakePermsSyncer.ScheduleUsers",
                       "newPage": false,
                       "searchKey": "repoupdater.fakePermsSyncer.ScheduleUsers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -641,7 +671,9 @@
                       "identifier": "fakePermsSyncer.ScheduleRepos",
                       "newPage": false,
                       "searchKey": "repoupdater.fakePermsSyncer.ScheduleRepos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -664,7 +696,9 @@
                 "identifier": "testSource",
                 "newPage": false,
                 "searchKey": "repoupdater.testSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -682,7 +716,9 @@
                       "identifier": "testSource.ListRepos",
                       "newPage": false,
                       "searchKey": "repoupdater.testSource.ListRepos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -702,7 +738,9 @@
                       "identifier": "testSource.ExternalServices",
                       "newPage": false,
                       "searchKey": "repoupdater.testSource.ExternalServices",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -722,7 +760,9 @@
                       "identifier": "testSource.WithAuthenticator",
                       "newPage": false,
                       "searchKey": "repoupdater.testSource.WithAuthenticator",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -742,7 +782,9 @@
                       "identifier": "testSource.ValidateAuthenticator",
                       "newPage": false,
                       "searchKey": "repoupdater.testSource.ValidateAuthenticator",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -768,9 +810,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -788,9 +828,7 @@
                 "identifier": "ObservedHandler",
                 "newPage": false,
                 "searchKey": "repoupdater.ObservedHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -810,7 +848,9 @@
                 "identifier": "respond",
                 "newPage": false,
                 "searchKey": "repoupdater.respond",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -830,7 +870,9 @@
                 "identifier": "externalServiceValidate",
                 "newPage": false,
                 "searchKey": "repoupdater.externalServiceValidate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -850,7 +892,9 @@
                 "identifier": "newRepoInfo",
                 "newPage": false,
                 "searchKey": "repoupdater.newRepoInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -870,7 +914,9 @@
                 "identifier": "pathAppend",
                 "newPage": false,
                 "searchKey": "repoupdater.pathAppend",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -890,7 +936,9 @@
                 "identifier": "isUnauthorized",
                 "newPage": false,
                 "searchKey": "repoupdater.isUnauthorized",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -910,7 +958,9 @@
                 "identifier": "isTemporarilyUnavailable",
                 "newPage": false,
                 "searchKey": "repoupdater.isTemporarilyUnavailable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -930,7 +980,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "repoupdater.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -950,7 +1002,9 @@
                 "identifier": "TestIntegration",
                 "newPage": false,
                 "searchKey": "repoupdater.TestIntegration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -970,7 +1024,9 @@
                 "identifier": "TestServer_handleRepoLookup",
                 "newPage": false,
                 "searchKey": "repoupdater.TestServer_handleRepoLookup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -990,7 +1046,9 @@
                 "identifier": "testServerEnqueueRepoUpdate",
                 "newPage": false,
                 "searchKey": "repoupdater.testServerEnqueueRepoUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1010,7 +1068,9 @@
                 "identifier": "testRepoLookup",
                 "newPage": false,
                 "searchKey": "repoupdater.testRepoLookup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1030,7 +1090,9 @@
                 "identifier": "TestServer_handleSchedulePermsSync",
                 "newPage": false,
                 "searchKey": "repoupdater.TestServer_handleSchedulePermsSync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1050,7 +1112,9 @@
                 "identifier": "TestExternalServiceValidate_ValidatesToken",
                 "newPage": false,
                 "searchKey": "repoupdater.TestExternalServiceValidate_ValidatesToken",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

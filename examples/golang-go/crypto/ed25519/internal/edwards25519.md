@@ -153,10 +153,15 @@ However, developers who do need to interact with low-level edwards25519 operatio
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="identity" href="#identity">var identity</a>
 
 ```
 searchKey: edwards25519.identity
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +174,7 @@ identity is the point at infinity.
 
 ```
 searchKey: edwards25519.generator
+tags: [private]
 ```
 
 ```Go
@@ -181,6 +187,7 @@ generator is the canonical curve basepoint. See TestGenerator for the correspond
 
 ```
 searchKey: edwards25519.feOne
+tags: [private]
 ```
 
 ```Go
@@ -191,6 +198,7 @@ var feOne = new(field.Element).One()
 
 ```
 searchKey: edwards25519.d
+tags: [private]
 ```
 
 ```Go
@@ -203,6 +211,7 @@ d is a constant in the curve equation.
 
 ```
 searchKey: edwards25519.d2
+tags: [private]
 ```
 
 ```Go
@@ -213,6 +222,7 @@ var d2 = new(field.Element).Add(d, d)
 
 ```
 searchKey: edwards25519.scZero
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +233,7 @@ var scZero = ...
 
 ```
 searchKey: edwards25519.scOne
+tags: [private]
 ```
 
 ```Go
@@ -233,6 +244,7 @@ var scOne = ...
 
 ```
 searchKey: edwards25519.scMinusOne
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +255,7 @@ var scMinusOne = ...
 
 ```
 searchKey: edwards25519.basepointTablePrecomp
+tags: [private]
 ```
 
 ```Go
@@ -256,6 +269,7 @@ var basepointTablePrecomp struct {
 
 ```
 searchKey: edwards25519.basepointNafTablePrecomp
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +283,7 @@ var basepointNafTablePrecomp struct {
 
 ```
 searchKey: edwards25519.B
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +294,7 @@ var B = NewGeneratorPoint()
 
 ```
 searchKey: edwards25519.I
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +305,7 @@ var I = NewIdentityPoint()
 
 ```
 searchKey: edwards25519.testAllocationsSink
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +316,7 @@ var testAllocationsSink byte
 
 ```
 searchKey: edwards25519.quickCheckConfig1024
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +329,7 @@ quickCheckConfig1024 will make each quickcheck test run (1024 * -quickchecks) ti
 
 ```
 searchKey: edwards25519.quickCheckConfig32
+tags: [private]
 ```
 
 ```Go
@@ -323,6 +342,7 @@ quickCheckConfig32 will make each quickcheck test run (32 * -quickchecks) times.
 
 ```
 searchKey: edwards25519.dalekScalar
+tags: [private]
 ```
 
 ```Go
@@ -335,6 +355,7 @@ a random scalar generated using dalek.
 
 ```
 searchKey: edwards25519.dalekScalarBasepoint
+tags: [private]
 ```
 
 ```Go
@@ -345,10 +366,15 @@ the above, times the edwards25519 basepoint.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="projP1xP1" href="#projP1xP1">type projP1xP1 struct</a>
 
 ```
 searchKey: edwards25519.projP1xP1
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +387,7 @@ type projP1xP1 struct {
 
 ```
 searchKey: edwards25519.projP1xP1.Add
+tags: [private]
 ```
 
 ```Go
@@ -371,6 +398,7 @@ func (v *projP1xP1) Add(p *Point, q *projCached) *projP1xP1
 
 ```
 searchKey: edwards25519.projP1xP1.Sub
+tags: [private]
 ```
 
 ```Go
@@ -381,6 +409,7 @@ func (v *projP1xP1) Sub(p *Point, q *projCached) *projP1xP1
 
 ```
 searchKey: edwards25519.projP1xP1.AddAffine
+tags: [private]
 ```
 
 ```Go
@@ -391,6 +420,7 @@ func (v *projP1xP1) AddAffine(p *Point, q *affineCached) *projP1xP1
 
 ```
 searchKey: edwards25519.projP1xP1.SubAffine
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +431,7 @@ func (v *projP1xP1) SubAffine(p *Point, q *affineCached) *projP1xP1
 
 ```
 searchKey: edwards25519.projP1xP1.Double
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +442,7 @@ func (v *projP1xP1) Double(p *projP2) *projP1xP1
 
 ```
 searchKey: edwards25519.projP2
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +455,7 @@ type projP2 struct {
 
 ```
 searchKey: edwards25519.projP2.Zero
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +466,7 @@ func (v *projP2) Zero() *projP2
 
 ```
 searchKey: edwards25519.projP2.FromP1xP1
+tags: [private]
 ```
 
 ```Go
@@ -443,6 +477,7 @@ func (v *projP2) FromP1xP1(p *projP1xP1) *projP2
 
 ```
 searchKey: edwards25519.projP2.FromP3
+tags: [private]
 ```
 
 ```Go
@@ -453,7 +488,6 @@ func (v *projP2) FromP3(p *Point) *projP2
 
 ```
 searchKey: edwards25519.Point
-tags: [exported]
 ```
 
 ```Go
@@ -478,7 +512,6 @@ The zero value is NOT valid, and it may be used only as a receiver.
 
 ```
 searchKey: edwards25519.NewIdentityPoint
-tags: [exported]
 ```
 
 ```Go
@@ -491,7 +524,6 @@ NewIdentityPoint returns a new Point set to the identity.
 
 ```
 searchKey: edwards25519.NewGeneratorPoint
-tags: [exported]
 ```
 
 ```Go
@@ -504,7 +536,6 @@ NewGeneratorPoint returns a new Point set to the canonical generator.
 
 ```
 searchKey: edwards25519.Point.Set
-tags: [exported]
 ```
 
 ```Go
@@ -517,7 +548,6 @@ Set sets v = u, and returns v.
 
 ```
 searchKey: edwards25519.Point.Bytes
-tags: [exported]
 ```
 
 ```Go
@@ -530,6 +560,7 @@ Bytes returns the canonical 32-byte encoding of v, according to RFC 8032, Sectio
 
 ```
 searchKey: edwards25519.Point.bytes
+tags: [private]
 ```
 
 ```Go
@@ -540,7 +571,6 @@ func (v *Point) bytes(buf *[32]byte) []byte
 
 ```
 searchKey: edwards25519.Point.SetBytes
-tags: [exported]
 ```
 
 ```Go
@@ -555,6 +585,7 @@ Note that SetBytes accepts all non-canonical encodings of valid points. That is,
 
 ```
 searchKey: edwards25519.Point.fromP1xP1
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +596,7 @@ func (v *Point) fromP1xP1(p *projP1xP1) *Point
 
 ```
 searchKey: edwards25519.Point.fromP2
+tags: [private]
 ```
 
 ```Go
@@ -575,7 +607,6 @@ func (v *Point) fromP2(p *projP2) *Point
 
 ```
 searchKey: edwards25519.Point.Add
-tags: [exported]
 ```
 
 ```Go
@@ -588,7 +619,6 @@ Add sets v = p + q, and returns v.
 
 ```
 searchKey: edwards25519.Point.Subtract
-tags: [exported]
 ```
 
 ```Go
@@ -601,7 +631,6 @@ Subtract sets v = p - q, and returns v.
 
 ```
 searchKey: edwards25519.Point.Negate
-tags: [exported]
 ```
 
 ```Go
@@ -614,7 +643,6 @@ Negate sets v = -p, and returns v.
 
 ```
 searchKey: edwards25519.Point.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -627,7 +655,6 @@ Equal returns 1 if v is equivalent to u, and 0 otherwise.
 
 ```
 searchKey: edwards25519.Point.ScalarBaseMult
-tags: [exported]
 ```
 
 ```Go
@@ -642,7 +669,6 @@ The scalar multiplication is done in constant time.
 
 ```
 searchKey: edwards25519.Point.ScalarMult
-tags: [exported]
 ```
 
 ```Go
@@ -657,7 +683,6 @@ The scalar multiplication is done in constant time.
 
 ```
 searchKey: edwards25519.Point.VarTimeDoubleScalarBaseMult
-tags: [exported]
 ```
 
 ```Go
@@ -672,6 +697,7 @@ Execution time depends on the inputs.
 
 ```
 searchKey: edwards25519.incomparable
+tags: [private]
 ```
 
 ```Go
@@ -682,6 +708,7 @@ type incomparable [0]func()
 
 ```
 searchKey: edwards25519.projCached
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +721,7 @@ type projCached struct {
 
 ```
 searchKey: edwards25519.projCached.Zero
+tags: [private]
 ```
 
 ```Go
@@ -704,6 +732,7 @@ func (v *projCached) Zero() *projCached
 
 ```
 searchKey: edwards25519.projCached.FromP3
+tags: [private]
 ```
 
 ```Go
@@ -714,6 +743,7 @@ func (v *projCached) FromP3(p *Point) *projCached
 
 ```
 searchKey: edwards25519.projCached.Select
+tags: [private]
 ```
 
 ```Go
@@ -726,6 +756,7 @@ Select sets v to a if cond == 1 and to b if cond == 0.
 
 ```
 searchKey: edwards25519.projCached.CondNeg
+tags: [private]
 ```
 
 ```Go
@@ -738,6 +769,7 @@ CondNeg negates v if cond == 1 and leaves it unchanged if cond == 0.
 
 ```
 searchKey: edwards25519.affineCached
+tags: [private]
 ```
 
 ```Go
@@ -750,6 +782,7 @@ type affineCached struct {
 
 ```
 searchKey: edwards25519.affineCached.Zero
+tags: [private]
 ```
 
 ```Go
@@ -760,6 +793,7 @@ func (v *affineCached) Zero() *affineCached
 
 ```
 searchKey: edwards25519.affineCached.FromP3
+tags: [private]
 ```
 
 ```Go
@@ -770,6 +804,7 @@ func (v *affineCached) FromP3(p *Point) *affineCached
 
 ```
 searchKey: edwards25519.affineCached.Select
+tags: [private]
 ```
 
 ```Go
@@ -782,6 +817,7 @@ Select sets v to a if cond == 1 and to b if cond == 0.
 
 ```
 searchKey: edwards25519.affineCached.CondNeg
+tags: [private]
 ```
 
 ```Go
@@ -794,7 +830,6 @@ CondNeg negates v if cond == 1 and leaves it unchanged if cond == 0.
 
 ```
 searchKey: edwards25519.Scalar
-tags: [exported]
 ```
 
 ```Go
@@ -821,7 +856,6 @@ The zero value is a valid zero element.
 
 ```
 searchKey: edwards25519.NewScalar
-tags: [exported]
 ```
 
 ```Go
@@ -834,7 +868,6 @@ NewScalar returns a new zero Scalar.
 
 ```
 searchKey: edwards25519.Scalar.MultiplyAdd
-tags: [exported]
 ```
 
 ```Go
@@ -847,7 +880,6 @@ MultiplyAdd sets s = x * y + z mod l, and returns s.
 
 ```
 searchKey: edwards25519.Scalar.Add
-tags: [exported]
 ```
 
 ```Go
@@ -860,7 +892,6 @@ Add sets s = x + y mod l, and returns s.
 
 ```
 searchKey: edwards25519.Scalar.Subtract
-tags: [exported]
 ```
 
 ```Go
@@ -873,7 +904,6 @@ Subtract sets s = x - y mod l, and returns s.
 
 ```
 searchKey: edwards25519.Scalar.Negate
-tags: [exported]
 ```
 
 ```Go
@@ -886,7 +916,6 @@ Negate sets s = -x mod l, and returns s.
 
 ```
 searchKey: edwards25519.Scalar.Multiply
-tags: [exported]
 ```
 
 ```Go
@@ -899,7 +928,6 @@ Multiply sets s = x * y mod l, and returns s.
 
 ```
 searchKey: edwards25519.Scalar.Set
-tags: [exported]
 ```
 
 ```Go
@@ -912,7 +940,6 @@ Set sets s = x, and returns s.
 
 ```
 searchKey: edwards25519.Scalar.SetUniformBytes
-tags: [exported]
 ```
 
 ```Go
@@ -925,7 +952,6 @@ SetUniformBytes sets s to an uniformly distributed value given 64 uniformly dist
 
 ```
 searchKey: edwards25519.Scalar.SetCanonicalBytes
-tags: [exported]
 ```
 
 ```Go
@@ -938,7 +964,6 @@ SetCanonicalBytes sets s = x, where x is a 32-byte little-endian encoding of s, 
 
 ```
 searchKey: edwards25519.Scalar.SetBytesWithClamping
-tags: [exported]
 ```
 
 ```Go
@@ -953,7 +978,6 @@ Note that since Scalar values are always reduced modulo the prime order of the c
 
 ```
 searchKey: edwards25519.Scalar.Bytes
-tags: [exported]
 ```
 
 ```Go
@@ -966,7 +990,6 @@ Bytes returns the canonical 32-byte little-endian encoding of s.
 
 ```
 searchKey: edwards25519.Scalar.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -979,6 +1002,7 @@ Equal returns 1 if s and t are equal, and 0 otherwise.
 
 ```
 searchKey: edwards25519.Scalar.nonAdjacentForm
+tags: [private]
 ```
 
 ```Go
@@ -993,6 +1017,7 @@ w must be between 2 and 8, or nonAdjacentForm will panic.
 
 ```
 searchKey: edwards25519.Scalar.signedRadix16
+tags: [private]
 ```
 
 ```Go
@@ -1003,6 +1028,7 @@ func (s *Scalar) signedRadix16() [64]int8
 
 ```
 searchKey: edwards25519.Scalar.Generate
+tags: [private]
 ```
 
 ```Go
@@ -1015,6 +1041,7 @@ Generate returns a valid (reduced modulo l) Scalar with a distribution weighted 
 
 ```
 searchKey: edwards25519.projLookupTable
+tags: [private]
 ```
 
 ```Go
@@ -1029,6 +1056,7 @@ A dynamic lookup table for variable-base, constant-time scalar muls.
 
 ```
 searchKey: edwards25519.projLookupTable.FromP3
+tags: [private]
 ```
 
 ```Go
@@ -1041,6 +1069,7 @@ Builds a lookup table at runtime. Fast.
 
 ```
 searchKey: edwards25519.projLookupTable.SelectInto
+tags: [private]
 ```
 
 ```Go
@@ -1053,6 +1082,7 @@ Set dest to x*Q, where -8 <= x <= 8, in constant time.
 
 ```
 searchKey: edwards25519.affineLookupTable
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1097,7 @@ A precomputed lookup table for fixed-base, constant-time scalar muls.
 
 ```
 searchKey: edwards25519.affineLookupTable.FromP3
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1110,7 @@ This is not optimised for speed; fixed-base tables should be precomputed.
 
 ```
 searchKey: edwards25519.affineLookupTable.SelectInto
+tags: [private]
 ```
 
 ```Go
@@ -1091,6 +1123,7 @@ Set dest to x*Q, where -8 <= x <= 8, in constant time.
 
 ```
 searchKey: edwards25519.nafLookupTable5
+tags: [private]
 ```
 
 ```Go
@@ -1105,6 +1138,7 @@ A dynamic lookup table for variable-base, variable-time scalar muls.
 
 ```
 searchKey: edwards25519.nafLookupTable5.FromP3
+tags: [private]
 ```
 
 ```Go
@@ -1117,6 +1151,7 @@ Builds a lookup table at runtime. Fast.
 
 ```
 searchKey: edwards25519.nafLookupTable5.SelectInto
+tags: [private]
 ```
 
 ```Go
@@ -1129,6 +1164,7 @@ Given odd x with 0 < x < 2^4, return x*Q (in variable time).
 
 ```
 searchKey: edwards25519.nafLookupTable8
+tags: [private]
 ```
 
 ```Go
@@ -1143,6 +1179,7 @@ A precomputed lookup table for fixed-base, variable-time scalar muls.
 
 ```
 searchKey: edwards25519.basepointNafTable
+tags: [private]
 ```
 
 ```Go
@@ -1155,6 +1192,7 @@ basepointNafTable is the nafLookupTable8 for the basepoint. It is precomputed th
 
 ```
 searchKey: edwards25519.nafLookupTable8.FromP3
+tags: [private]
 ```
 
 ```Go
@@ -1167,6 +1205,7 @@ This is not optimised for speed; fixed-base tables should be precomputed.
 
 ```
 searchKey: edwards25519.nafLookupTable8.SelectInto
+tags: [private]
 ```
 
 ```Go
@@ -1179,6 +1218,7 @@ Given odd x with 0 < x < 2^7, return x*Q (in variable time).
 
 ```
 searchKey: edwards25519.notZeroScalar
+tags: [private]
 ```
 
 ```Go
@@ -1189,6 +1229,7 @@ type notZeroScalar Scalar
 
 ```
 searchKey: edwards25519.notZeroScalar.Generate
+tags: [private]
 ```
 
 ```Go
@@ -1197,10 +1238,15 @@ func (notZeroScalar) Generate(rand *mathrand.Rand, size int) reflect.Value
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="checkInitialized" href="#checkInitialized">func checkInitialized(points ...*Point)</a>
 
 ```
 searchKey: edwards25519.checkInitialized
+tags: [private]
 ```
 
 ```Go
@@ -1211,6 +1257,7 @@ func checkInitialized(points ...*Point)
 
 ```
 searchKey: edwards25519.copyFieldElement
+tags: [private]
 ```
 
 ```Go
@@ -1221,6 +1268,7 @@ func copyFieldElement(buf *[32]byte, v *field.Element) []byte
 
 ```
 searchKey: edwards25519.isReduced
+tags: [private]
 ```
 
 ```Go
@@ -1233,6 +1281,7 @@ isReduced returns whether the given scalar is reduced modulo l.
 
 ```
 searchKey: edwards25519.load3
+tags: [private]
 ```
 
 ```Go
@@ -1243,6 +1292,7 @@ func load3(in []byte) int64
 
 ```
 searchKey: edwards25519.load4
+tags: [private]
 ```
 
 ```Go
@@ -1253,6 +1303,7 @@ func load4(in []byte) int64
 
 ```
 searchKey: edwards25519.scMulAdd
+tags: [private]
 ```
 
 ```Go
@@ -1278,6 +1329,7 @@ where l = 2^252 + 27742317777372353535851937790883648493.
 
 ```
 searchKey: edwards25519.scReduce
+tags: [private]
 ```
 
 ```Go
@@ -1301,6 +1353,7 @@ where l = 2^252 + 27742317777372353535851937790883648493.
 
 ```
 searchKey: edwards25519.basepointTable
+tags: [private]
 ```
 
 ```Go
@@ -1313,6 +1366,7 @@ basepointTable is a set of 32 affineLookupTables, where table i is generated fro
 
 ```
 searchKey: edwards25519.checkOnCurve
+tags: [private]
 ```
 
 ```Go
@@ -1323,6 +1377,7 @@ func checkOnCurve(t *testing.T, points ...*Point)
 
 ```
 searchKey: edwards25519.TestGenerator
+tags: [private]
 ```
 
 ```Go
@@ -1333,6 +1388,7 @@ func TestGenerator(t *testing.T)
 
 ```
 searchKey: edwards25519.TestAddSubNegOnBasePoint
+tags: [private]
 ```
 
 ```Go
@@ -1343,6 +1399,7 @@ func TestAddSubNegOnBasePoint(t *testing.T)
 
 ```
 searchKey: edwards25519.TestComparable
+tags: [private]
 ```
 
 ```Go
@@ -1353,6 +1410,7 @@ func TestComparable(t *testing.T)
 
 ```
 searchKey: edwards25519.TestInvalidEncodings
+tags: [private]
 ```
 
 ```Go
@@ -1363,6 +1421,7 @@ func TestInvalidEncodings(t *testing.T)
 
 ```
 searchKey: edwards25519.TestNonCanonicalPoints
+tags: [private]
 ```
 
 ```Go
@@ -1373,6 +1432,7 @@ func TestNonCanonicalPoints(t *testing.T)
 
 ```
 searchKey: edwards25519.TestAllocations
+tags: [private]
 ```
 
 ```Go
@@ -1383,6 +1443,7 @@ func TestAllocations(t *testing.T)
 
 ```
 searchKey: edwards25519.decodeHex
+tags: [private]
 ```
 
 ```Go
@@ -1393,6 +1454,7 @@ func decodeHex(s string) []byte
 
 ```
 searchKey: edwards25519.TestScalarAliasing
+tags: [private]
 ```
 
 ```Go
@@ -1403,6 +1465,7 @@ func TestScalarAliasing(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarGenerate
+tags: [private]
 ```
 
 ```Go
@@ -1413,6 +1476,7 @@ func TestScalarGenerate(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarSetCanonicalBytes
+tags: [private]
 ```
 
 ```Go
@@ -1423,6 +1487,7 @@ func TestScalarSetCanonicalBytes(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarSetUniformBytes
+tags: [private]
 ```
 
 ```Go
@@ -1433,6 +1498,7 @@ func TestScalarSetUniformBytes(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarSetBytesWithClamping
+tags: [private]
 ```
 
 ```Go
@@ -1443,6 +1509,7 @@ func TestScalarSetBytesWithClamping(t *testing.T)
 
 ```
 searchKey: edwards25519.bigIntFromLittleEndianBytes
+tags: [private]
 ```
 
 ```Go
@@ -1453,6 +1520,7 @@ func bigIntFromLittleEndianBytes(b []byte) *big.Int
 
 ```
 searchKey: edwards25519.TestScalarMultiplyDistributesOverAdd
+tags: [private]
 ```
 
 ```Go
@@ -1463,6 +1531,7 @@ func TestScalarMultiplyDistributesOverAdd(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarAddLikeSubNeg
+tags: [private]
 ```
 
 ```Go
@@ -1473,6 +1542,7 @@ func TestScalarAddLikeSubNeg(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarNonAdjacentForm
+tags: [private]
 ```
 
 ```Go
@@ -1483,6 +1553,7 @@ func TestScalarNonAdjacentForm(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarEqual
+tags: [private]
 ```
 
 ```Go
@@ -1493,6 +1564,7 @@ func TestScalarEqual(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultSmallScalars
+tags: [private]
 ```
 
 ```Go
@@ -1503,6 +1575,7 @@ func TestScalarMultSmallScalars(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultVsDalek
+tags: [private]
 ```
 
 ```Go
@@ -1513,6 +1586,7 @@ func TestScalarMultVsDalek(t *testing.T)
 
 ```
 searchKey: edwards25519.TestBaseMultVsDalek
+tags: [private]
 ```
 
 ```Go
@@ -1523,6 +1597,7 @@ func TestBaseMultVsDalek(t *testing.T)
 
 ```
 searchKey: edwards25519.TestVarTimeDoubleBaseMultVsDalek
+tags: [private]
 ```
 
 ```Go
@@ -1533,6 +1608,7 @@ func TestVarTimeDoubleBaseMultVsDalek(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultDistributesOverAdd
+tags: [private]
 ```
 
 ```Go
@@ -1543,6 +1619,7 @@ func TestScalarMultDistributesOverAdd(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultNonIdentityPoint
+tags: [private]
 ```
 
 ```Go
@@ -1553,6 +1630,7 @@ func TestScalarMultNonIdentityPoint(t *testing.T)
 
 ```
 searchKey: edwards25519.TestBasepointTableGeneration
+tags: [private]
 ```
 
 ```Go
@@ -1563,6 +1641,7 @@ func TestBasepointTableGeneration(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultMatchesBaseMult
+tags: [private]
 ```
 
 ```Go
@@ -1573,6 +1652,7 @@ func TestScalarMultMatchesBaseMult(t *testing.T)
 
 ```
 searchKey: edwards25519.TestBasepointNafTableGeneration
+tags: [private]
 ```
 
 ```Go
@@ -1583,6 +1663,7 @@ func TestBasepointNafTableGeneration(t *testing.T)
 
 ```
 searchKey: edwards25519.TestVarTimeDoubleBaseMultMatchesBaseMult
+tags: [private]
 ```
 
 ```Go
@@ -1593,6 +1674,7 @@ func TestVarTimeDoubleBaseMultMatchesBaseMult(t *testing.T)
 
 ```
 searchKey: edwards25519.BenchmarkScalarBaseMult
+tags: [private]
 ```
 
 ```Go
@@ -1603,6 +1685,7 @@ func BenchmarkScalarBaseMult(t *testing.B)
 
 ```
 searchKey: edwards25519.BenchmarkScalarMult
+tags: [private]
 ```
 
 ```Go
@@ -1613,6 +1696,7 @@ func BenchmarkScalarMult(t *testing.B)
 
 ```
 searchKey: edwards25519.BenchmarkVarTimeDoubleScalarBaseMult
+tags: [private]
 ```
 
 ```Go
@@ -1623,6 +1707,7 @@ func BenchmarkVarTimeDoubleScalarBaseMult(t *testing.B)
 
 ```
 searchKey: edwards25519.TestProjLookupTable
+tags: [private]
 ```
 
 ```Go
@@ -1633,6 +1718,7 @@ func TestProjLookupTable(t *testing.T)
 
 ```
 searchKey: edwards25519.TestAffineLookupTable
+tags: [private]
 ```
 
 ```Go
@@ -1643,6 +1729,7 @@ func TestAffineLookupTable(t *testing.T)
 
 ```
 searchKey: edwards25519.TestNafLookupTable5
+tags: [private]
 ```
 
 ```Go
@@ -1653,6 +1740,7 @@ func TestNafLookupTable5(t *testing.T)
 
 ```
 searchKey: edwards25519.TestNafLookupTable8
+tags: [private]
 ```
 
 ```Go

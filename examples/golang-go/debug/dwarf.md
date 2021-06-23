@@ -564,26 +564,20 @@ Package dwarf provides access to DWARF debugging information loaded from executa
         * [func (u *unit) dwarf64() (bool, bool)](#unit.dwarf64)
         * [func (u *unit) addrsize() int](#unit.addrsize)
 * [Functions](#func)
-    * [func _()](#_)
-    * [func _()](#_)
     * [func pathIsAbs(path string) bool](#pathIsAbs)
     * [func pathJoin(dirname, filename string) string](#pathJoin)
     * [func splitDrive(path string) (drive, rest string)](#splitDrive)
-    * [func _()](#_)
     * [func zeroArray(t *Type)](#zeroArray)
     * [func TestDwarf5Ranges(t *testing.T)](#TestDwarf5Ranges)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="_Attr_name" href="#_Attr_name">const _Attr_name</a>
 
 ```
 searchKey: dwarf._Attr_name
+tags: [private]
 ```
 
 ```Go
@@ -594,6 +588,7 @@ const _Attr_name = ...
 
 ```
 searchKey: dwarf._Class_name
+tags: [private]
 ```
 
 ```Go
@@ -604,7 +599,6 @@ const _Class_name = ...
 
 ```
 searchKey: dwarf.AttrSibling
-tags: [exported]
 ```
 
 ```Go
@@ -615,7 +609,6 @@ const AttrSibling Attr = 0x01
 
 ```
 searchKey: dwarf.AttrLocation
-tags: [exported]
 ```
 
 ```Go
@@ -626,7 +619,6 @@ const AttrLocation Attr = 0x02
 
 ```
 searchKey: dwarf.AttrName
-tags: [exported]
 ```
 
 ```Go
@@ -637,7 +629,6 @@ const AttrName Attr = 0x03
 
 ```
 searchKey: dwarf.AttrOrdering
-tags: [exported]
 ```
 
 ```Go
@@ -648,7 +639,6 @@ const AttrOrdering Attr = 0x09
 
 ```
 searchKey: dwarf.AttrByteSize
-tags: [exported]
 ```
 
 ```Go
@@ -659,7 +649,6 @@ const AttrByteSize Attr = 0x0B
 
 ```
 searchKey: dwarf.AttrBitOffset
-tags: [exported]
 ```
 
 ```Go
@@ -670,7 +659,6 @@ const AttrBitOffset Attr = 0x0C
 
 ```
 searchKey: dwarf.AttrBitSize
-tags: [exported]
 ```
 
 ```Go
@@ -681,7 +669,6 @@ const AttrBitSize Attr = 0x0D
 
 ```
 searchKey: dwarf.AttrStmtList
-tags: [exported]
 ```
 
 ```Go
@@ -692,7 +679,6 @@ const AttrStmtList Attr = 0x10
 
 ```
 searchKey: dwarf.AttrLowpc
-tags: [exported]
 ```
 
 ```Go
@@ -703,7 +689,6 @@ const AttrLowpc Attr = 0x11
 
 ```
 searchKey: dwarf.AttrHighpc
-tags: [exported]
 ```
 
 ```Go
@@ -714,7 +699,6 @@ const AttrHighpc Attr = 0x12
 
 ```
 searchKey: dwarf.AttrLanguage
-tags: [exported]
 ```
 
 ```Go
@@ -725,7 +709,6 @@ const AttrLanguage Attr = 0x13
 
 ```
 searchKey: dwarf.AttrDiscr
-tags: [exported]
 ```
 
 ```Go
@@ -736,7 +719,6 @@ const AttrDiscr Attr = 0x15
 
 ```
 searchKey: dwarf.AttrDiscrValue
-tags: [exported]
 ```
 
 ```Go
@@ -747,7 +729,6 @@ const AttrDiscrValue Attr = 0x16
 
 ```
 searchKey: dwarf.AttrVisibility
-tags: [exported]
 ```
 
 ```Go
@@ -758,7 +739,6 @@ const AttrVisibility Attr = 0x17
 
 ```
 searchKey: dwarf.AttrImport
-tags: [exported]
 ```
 
 ```Go
@@ -769,7 +749,6 @@ const AttrImport Attr = 0x18
 
 ```
 searchKey: dwarf.AttrStringLength
-tags: [exported]
 ```
 
 ```Go
@@ -780,7 +759,6 @@ const AttrStringLength Attr = 0x19
 
 ```
 searchKey: dwarf.AttrCommonRef
-tags: [exported]
 ```
 
 ```Go
@@ -791,7 +769,6 @@ const AttrCommonRef Attr = 0x1A
 
 ```
 searchKey: dwarf.AttrCompDir
-tags: [exported]
 ```
 
 ```Go
@@ -802,7 +779,6 @@ const AttrCompDir Attr = 0x1B
 
 ```
 searchKey: dwarf.AttrConstValue
-tags: [exported]
 ```
 
 ```Go
@@ -813,7 +789,6 @@ const AttrConstValue Attr = 0x1C
 
 ```
 searchKey: dwarf.AttrContainingType
-tags: [exported]
 ```
 
 ```Go
@@ -824,7 +799,6 @@ const AttrContainingType Attr = 0x1D
 
 ```
 searchKey: dwarf.AttrDefaultValue
-tags: [exported]
 ```
 
 ```Go
@@ -835,7 +809,6 @@ const AttrDefaultValue Attr = 0x1E
 
 ```
 searchKey: dwarf.AttrInline
-tags: [exported]
 ```
 
 ```Go
@@ -846,7 +819,6 @@ const AttrInline Attr = 0x20
 
 ```
 searchKey: dwarf.AttrIsOptional
-tags: [exported]
 ```
 
 ```Go
@@ -857,7 +829,6 @@ const AttrIsOptional Attr = 0x21
 
 ```
 searchKey: dwarf.AttrLowerBound
-tags: [exported]
 ```
 
 ```Go
@@ -868,7 +839,6 @@ const AttrLowerBound Attr = 0x22
 
 ```
 searchKey: dwarf.AttrProducer
-tags: [exported]
 ```
 
 ```Go
@@ -879,7 +849,6 @@ const AttrProducer Attr = 0x25
 
 ```
 searchKey: dwarf.AttrPrototyped
-tags: [exported]
 ```
 
 ```Go
@@ -890,7 +859,6 @@ const AttrPrototyped Attr = 0x27
 
 ```
 searchKey: dwarf.AttrReturnAddr
-tags: [exported]
 ```
 
 ```Go
@@ -901,7 +869,6 @@ const AttrReturnAddr Attr = 0x2A
 
 ```
 searchKey: dwarf.AttrStartScope
-tags: [exported]
 ```
 
 ```Go
@@ -912,7 +879,6 @@ const AttrStartScope Attr = 0x2C
 
 ```
 searchKey: dwarf.AttrStrideSize
-tags: [exported]
 ```
 
 ```Go
@@ -923,7 +889,6 @@ const AttrStrideSize Attr = 0x2E
 
 ```
 searchKey: dwarf.AttrUpperBound
-tags: [exported]
 ```
 
 ```Go
@@ -934,7 +899,6 @@ const AttrUpperBound Attr = 0x2F
 
 ```
 searchKey: dwarf.AttrAbstractOrigin
-tags: [exported]
 ```
 
 ```Go
@@ -945,7 +909,6 @@ const AttrAbstractOrigin Attr = 0x31
 
 ```
 searchKey: dwarf.AttrAccessibility
-tags: [exported]
 ```
 
 ```Go
@@ -956,7 +919,6 @@ const AttrAccessibility Attr = 0x32
 
 ```
 searchKey: dwarf.AttrAddrClass
-tags: [exported]
 ```
 
 ```Go
@@ -967,7 +929,6 @@ const AttrAddrClass Attr = 0x33
 
 ```
 searchKey: dwarf.AttrArtificial
-tags: [exported]
 ```
 
 ```Go
@@ -978,7 +939,6 @@ const AttrArtificial Attr = 0x34
 
 ```
 searchKey: dwarf.AttrBaseTypes
-tags: [exported]
 ```
 
 ```Go
@@ -989,7 +949,6 @@ const AttrBaseTypes Attr = 0x35
 
 ```
 searchKey: dwarf.AttrCalling
-tags: [exported]
 ```
 
 ```Go
@@ -1000,7 +959,6 @@ const AttrCalling Attr = 0x36
 
 ```
 searchKey: dwarf.AttrCount
-tags: [exported]
 ```
 
 ```Go
@@ -1011,7 +969,6 @@ const AttrCount Attr = 0x37
 
 ```
 searchKey: dwarf.AttrDataMemberLoc
-tags: [exported]
 ```
 
 ```Go
@@ -1022,7 +979,6 @@ const AttrDataMemberLoc Attr = 0x38
 
 ```
 searchKey: dwarf.AttrDeclColumn
-tags: [exported]
 ```
 
 ```Go
@@ -1033,7 +989,6 @@ const AttrDeclColumn Attr = 0x39
 
 ```
 searchKey: dwarf.AttrDeclFile
-tags: [exported]
 ```
 
 ```Go
@@ -1044,7 +999,6 @@ const AttrDeclFile Attr = 0x3A
 
 ```
 searchKey: dwarf.AttrDeclLine
-tags: [exported]
 ```
 
 ```Go
@@ -1055,7 +1009,6 @@ const AttrDeclLine Attr = 0x3B
 
 ```
 searchKey: dwarf.AttrDeclaration
-tags: [exported]
 ```
 
 ```Go
@@ -1066,7 +1019,6 @@ const AttrDeclaration Attr = 0x3C
 
 ```
 searchKey: dwarf.AttrDiscrList
-tags: [exported]
 ```
 
 ```Go
@@ -1077,7 +1029,6 @@ const AttrDiscrList Attr = 0x3D
 
 ```
 searchKey: dwarf.AttrEncoding
-tags: [exported]
 ```
 
 ```Go
@@ -1088,7 +1039,6 @@ const AttrEncoding Attr = 0x3E
 
 ```
 searchKey: dwarf.AttrExternal
-tags: [exported]
 ```
 
 ```Go
@@ -1099,7 +1049,6 @@ const AttrExternal Attr = 0x3F
 
 ```
 searchKey: dwarf.AttrFrameBase
-tags: [exported]
 ```
 
 ```Go
@@ -1110,7 +1059,6 @@ const AttrFrameBase Attr = 0x40
 
 ```
 searchKey: dwarf.AttrFriend
-tags: [exported]
 ```
 
 ```Go
@@ -1121,7 +1069,6 @@ const AttrFriend Attr = 0x41
 
 ```
 searchKey: dwarf.AttrIdentifierCase
-tags: [exported]
 ```
 
 ```Go
@@ -1132,7 +1079,6 @@ const AttrIdentifierCase Attr = 0x42
 
 ```
 searchKey: dwarf.AttrMacroInfo
-tags: [exported]
 ```
 
 ```Go
@@ -1143,7 +1089,6 @@ const AttrMacroInfo Attr = 0x43
 
 ```
 searchKey: dwarf.AttrNamelistItem
-tags: [exported]
 ```
 
 ```Go
@@ -1154,7 +1099,6 @@ const AttrNamelistItem Attr = 0x44
 
 ```
 searchKey: dwarf.AttrPriority
-tags: [exported]
 ```
 
 ```Go
@@ -1165,7 +1109,6 @@ const AttrPriority Attr = 0x45
 
 ```
 searchKey: dwarf.AttrSegment
-tags: [exported]
 ```
 
 ```Go
@@ -1176,7 +1119,6 @@ const AttrSegment Attr = 0x46
 
 ```
 searchKey: dwarf.AttrSpecification
-tags: [exported]
 ```
 
 ```Go
@@ -1187,7 +1129,6 @@ const AttrSpecification Attr = 0x47
 
 ```
 searchKey: dwarf.AttrStaticLink
-tags: [exported]
 ```
 
 ```Go
@@ -1198,7 +1139,6 @@ const AttrStaticLink Attr = 0x48
 
 ```
 searchKey: dwarf.AttrType
-tags: [exported]
 ```
 
 ```Go
@@ -1209,7 +1149,6 @@ const AttrType Attr = 0x49
 
 ```
 searchKey: dwarf.AttrUseLocation
-tags: [exported]
 ```
 
 ```Go
@@ -1220,7 +1159,6 @@ const AttrUseLocation Attr = 0x4A
 
 ```
 searchKey: dwarf.AttrVarParam
-tags: [exported]
 ```
 
 ```Go
@@ -1231,7 +1169,6 @@ const AttrVarParam Attr = 0x4B
 
 ```
 searchKey: dwarf.AttrVirtuality
-tags: [exported]
 ```
 
 ```Go
@@ -1242,7 +1179,6 @@ const AttrVirtuality Attr = 0x4C
 
 ```
 searchKey: dwarf.AttrVtableElemLoc
-tags: [exported]
 ```
 
 ```Go
@@ -1253,7 +1189,6 @@ const AttrVtableElemLoc Attr = 0x4D
 
 ```
 searchKey: dwarf.AttrAllocated
-tags: [exported]
 ```
 
 ```Go
@@ -1266,7 +1201,6 @@ The following are new in DWARF 3.
 
 ```
 searchKey: dwarf.AttrAssociated
-tags: [exported]
 ```
 
 ```Go
@@ -1277,7 +1211,6 @@ const AttrAssociated Attr = 0x4F
 
 ```
 searchKey: dwarf.AttrDataLocation
-tags: [exported]
 ```
 
 ```Go
@@ -1288,7 +1221,6 @@ const AttrDataLocation Attr = 0x50
 
 ```
 searchKey: dwarf.AttrStride
-tags: [exported]
 ```
 
 ```Go
@@ -1299,7 +1231,6 @@ const AttrStride Attr = 0x51
 
 ```
 searchKey: dwarf.AttrEntrypc
-tags: [exported]
 ```
 
 ```Go
@@ -1310,7 +1241,6 @@ const AttrEntrypc Attr = 0x52
 
 ```
 searchKey: dwarf.AttrUseUTF8
-tags: [exported]
 ```
 
 ```Go
@@ -1321,7 +1251,6 @@ const AttrUseUTF8 Attr = 0x53
 
 ```
 searchKey: dwarf.AttrExtension
-tags: [exported]
 ```
 
 ```Go
@@ -1332,7 +1261,6 @@ const AttrExtension Attr = 0x54
 
 ```
 searchKey: dwarf.AttrRanges
-tags: [exported]
 ```
 
 ```Go
@@ -1343,7 +1271,6 @@ const AttrRanges Attr = 0x55
 
 ```
 searchKey: dwarf.AttrTrampoline
-tags: [exported]
 ```
 
 ```Go
@@ -1354,7 +1281,6 @@ const AttrTrampoline Attr = 0x56
 
 ```
 searchKey: dwarf.AttrCallColumn
-tags: [exported]
 ```
 
 ```Go
@@ -1365,7 +1291,6 @@ const AttrCallColumn Attr = 0x57
 
 ```
 searchKey: dwarf.AttrCallFile
-tags: [exported]
 ```
 
 ```Go
@@ -1376,7 +1301,6 @@ const AttrCallFile Attr = 0x58
 
 ```
 searchKey: dwarf.AttrCallLine
-tags: [exported]
 ```
 
 ```Go
@@ -1387,7 +1311,6 @@ const AttrCallLine Attr = 0x59
 
 ```
 searchKey: dwarf.AttrDescription
-tags: [exported]
 ```
 
 ```Go
@@ -1398,7 +1321,6 @@ const AttrDescription Attr = 0x5A
 
 ```
 searchKey: dwarf.AttrBinaryScale
-tags: [exported]
 ```
 
 ```Go
@@ -1409,7 +1331,6 @@ const AttrBinaryScale Attr = 0x5B
 
 ```
 searchKey: dwarf.AttrDecimalScale
-tags: [exported]
 ```
 
 ```Go
@@ -1420,7 +1341,6 @@ const AttrDecimalScale Attr = 0x5C
 
 ```
 searchKey: dwarf.AttrSmall
-tags: [exported]
 ```
 
 ```Go
@@ -1431,7 +1351,6 @@ const AttrSmall Attr = 0x5D
 
 ```
 searchKey: dwarf.AttrDecimalSign
-tags: [exported]
 ```
 
 ```Go
@@ -1442,7 +1361,6 @@ const AttrDecimalSign Attr = 0x5E
 
 ```
 searchKey: dwarf.AttrDigitCount
-tags: [exported]
 ```
 
 ```Go
@@ -1453,7 +1371,6 @@ const AttrDigitCount Attr = 0x5F
 
 ```
 searchKey: dwarf.AttrPictureString
-tags: [exported]
 ```
 
 ```Go
@@ -1464,7 +1381,6 @@ const AttrPictureString Attr = 0x60
 
 ```
 searchKey: dwarf.AttrMutable
-tags: [exported]
 ```
 
 ```Go
@@ -1475,7 +1391,6 @@ const AttrMutable Attr = 0x61
 
 ```
 searchKey: dwarf.AttrThreadsScaled
-tags: [exported]
 ```
 
 ```Go
@@ -1486,7 +1401,6 @@ const AttrThreadsScaled Attr = 0x62
 
 ```
 searchKey: dwarf.AttrExplicit
-tags: [exported]
 ```
 
 ```Go
@@ -1497,7 +1411,6 @@ const AttrExplicit Attr = 0x63
 
 ```
 searchKey: dwarf.AttrObjectPointer
-tags: [exported]
 ```
 
 ```Go
@@ -1508,7 +1421,6 @@ const AttrObjectPointer Attr = 0x64
 
 ```
 searchKey: dwarf.AttrEndianity
-tags: [exported]
 ```
 
 ```Go
@@ -1519,7 +1431,6 @@ const AttrEndianity Attr = 0x65
 
 ```
 searchKey: dwarf.AttrElemental
-tags: [exported]
 ```
 
 ```Go
@@ -1530,7 +1441,6 @@ const AttrElemental Attr = 0x66
 
 ```
 searchKey: dwarf.AttrPure
-tags: [exported]
 ```
 
 ```Go
@@ -1541,7 +1451,6 @@ const AttrPure Attr = 0x67
 
 ```
 searchKey: dwarf.AttrRecursive
-tags: [exported]
 ```
 
 ```Go
@@ -1552,7 +1461,6 @@ const AttrRecursive Attr = 0x68
 
 ```
 searchKey: dwarf.AttrSignature
-tags: [exported]
 ```
 
 ```Go
@@ -1565,7 +1473,6 @@ The following are new in DWARF 4.
 
 ```
 searchKey: dwarf.AttrMainSubprogram
-tags: [exported]
 ```
 
 ```Go
@@ -1576,7 +1483,6 @@ const AttrMainSubprogram Attr = 0x6A
 
 ```
 searchKey: dwarf.AttrDataBitOffset
-tags: [exported]
 ```
 
 ```Go
@@ -1587,7 +1493,6 @@ const AttrDataBitOffset Attr = 0x6B
 
 ```
 searchKey: dwarf.AttrConstExpr
-tags: [exported]
 ```
 
 ```Go
@@ -1598,7 +1503,6 @@ const AttrConstExpr Attr = 0x6C
 
 ```
 searchKey: dwarf.AttrEnumClass
-tags: [exported]
 ```
 
 ```Go
@@ -1609,7 +1513,6 @@ const AttrEnumClass Attr = 0x6D
 
 ```
 searchKey: dwarf.AttrLinkageName
-tags: [exported]
 ```
 
 ```Go
@@ -1620,7 +1523,6 @@ const AttrLinkageName Attr = 0x6E
 
 ```
 searchKey: dwarf.AttrStringLengthBitSize
-tags: [exported]
 ```
 
 ```Go
@@ -1633,7 +1535,6 @@ The following are new in DWARF 5.
 
 ```
 searchKey: dwarf.AttrStringLengthByteSize
-tags: [exported]
 ```
 
 ```Go
@@ -1644,7 +1545,6 @@ const AttrStringLengthByteSize Attr = 0x70
 
 ```
 searchKey: dwarf.AttrRank
-tags: [exported]
 ```
 
 ```Go
@@ -1655,7 +1555,6 @@ const AttrRank Attr = 0x71
 
 ```
 searchKey: dwarf.AttrStrOffsetsBase
-tags: [exported]
 ```
 
 ```Go
@@ -1666,7 +1565,6 @@ const AttrStrOffsetsBase Attr = 0x72
 
 ```
 searchKey: dwarf.AttrAddrBase
-tags: [exported]
 ```
 
 ```Go
@@ -1677,7 +1575,6 @@ const AttrAddrBase Attr = 0x73
 
 ```
 searchKey: dwarf.AttrRnglistsBase
-tags: [exported]
 ```
 
 ```Go
@@ -1688,7 +1585,6 @@ const AttrRnglistsBase Attr = 0x74
 
 ```
 searchKey: dwarf.AttrDwoName
-tags: [exported]
 ```
 
 ```Go
@@ -1699,7 +1595,6 @@ const AttrDwoName Attr = 0x76
 
 ```
 searchKey: dwarf.AttrReference
-tags: [exported]
 ```
 
 ```Go
@@ -1710,7 +1605,6 @@ const AttrReference Attr = 0x77
 
 ```
 searchKey: dwarf.AttrRvalueReference
-tags: [exported]
 ```
 
 ```Go
@@ -1721,7 +1615,6 @@ const AttrRvalueReference Attr = 0x78
 
 ```
 searchKey: dwarf.AttrMacros
-tags: [exported]
 ```
 
 ```Go
@@ -1732,7 +1625,6 @@ const AttrMacros Attr = 0x79
 
 ```
 searchKey: dwarf.AttrCallAllCalls
-tags: [exported]
 ```
 
 ```Go
@@ -1743,7 +1635,6 @@ const AttrCallAllCalls Attr = 0x7A
 
 ```
 searchKey: dwarf.AttrCallAllSourceCalls
-tags: [exported]
 ```
 
 ```Go
@@ -1754,7 +1645,6 @@ const AttrCallAllSourceCalls Attr = 0x7B
 
 ```
 searchKey: dwarf.AttrCallAllTailCalls
-tags: [exported]
 ```
 
 ```Go
@@ -1765,7 +1655,6 @@ const AttrCallAllTailCalls Attr = 0x7C
 
 ```
 searchKey: dwarf.AttrCallReturnPC
-tags: [exported]
 ```
 
 ```Go
@@ -1776,7 +1665,6 @@ const AttrCallReturnPC Attr = 0x7D
 
 ```
 searchKey: dwarf.AttrCallValue
-tags: [exported]
 ```
 
 ```Go
@@ -1787,7 +1675,6 @@ const AttrCallValue Attr = 0x7E
 
 ```
 searchKey: dwarf.AttrCallOrigin
-tags: [exported]
 ```
 
 ```Go
@@ -1798,7 +1685,6 @@ const AttrCallOrigin Attr = 0x7F
 
 ```
 searchKey: dwarf.AttrCallParameter
-tags: [exported]
 ```
 
 ```Go
@@ -1809,7 +1695,6 @@ const AttrCallParameter Attr = 0x80
 
 ```
 searchKey: dwarf.AttrCallPC
-tags: [exported]
 ```
 
 ```Go
@@ -1820,7 +1705,6 @@ const AttrCallPC Attr = 0x81
 
 ```
 searchKey: dwarf.AttrCallTailCall
-tags: [exported]
 ```
 
 ```Go
@@ -1831,7 +1715,6 @@ const AttrCallTailCall Attr = 0x82
 
 ```
 searchKey: dwarf.AttrCallTarget
-tags: [exported]
 ```
 
 ```Go
@@ -1842,7 +1725,6 @@ const AttrCallTarget Attr = 0x83
 
 ```
 searchKey: dwarf.AttrCallTargetClobbered
-tags: [exported]
 ```
 
 ```Go
@@ -1853,7 +1735,6 @@ const AttrCallTargetClobbered Attr = 0x84
 
 ```
 searchKey: dwarf.AttrCallDataLocation
-tags: [exported]
 ```
 
 ```Go
@@ -1864,7 +1745,6 @@ const AttrCallDataLocation Attr = 0x85
 
 ```
 searchKey: dwarf.AttrCallDataValue
-tags: [exported]
 ```
 
 ```Go
@@ -1875,7 +1755,6 @@ const AttrCallDataValue Attr = 0x86
 
 ```
 searchKey: dwarf.AttrNoreturn
-tags: [exported]
 ```
 
 ```Go
@@ -1886,7 +1765,6 @@ const AttrNoreturn Attr = 0x87
 
 ```
 searchKey: dwarf.AttrAlignment
-tags: [exported]
 ```
 
 ```Go
@@ -1897,7 +1775,6 @@ const AttrAlignment Attr = 0x88
 
 ```
 searchKey: dwarf.AttrExportSymbols
-tags: [exported]
 ```
 
 ```Go
@@ -1908,7 +1785,6 @@ const AttrExportSymbols Attr = 0x89
 
 ```
 searchKey: dwarf.AttrDeleted
-tags: [exported]
 ```
 
 ```Go
@@ -1919,7 +1795,6 @@ const AttrDeleted Attr = 0x8A
 
 ```
 searchKey: dwarf.AttrDefaulted
-tags: [exported]
 ```
 
 ```Go
@@ -1930,7 +1805,6 @@ const AttrDefaulted Attr = 0x8B
 
 ```
 searchKey: dwarf.AttrLoclistsBase
-tags: [exported]
 ```
 
 ```Go
@@ -1941,6 +1815,7 @@ const AttrLoclistsBase Attr = 0x8C
 
 ```
 searchKey: dwarf.formAddr
+tags: [private]
 ```
 
 ```Go
@@ -1953,6 +1828,7 @@ value formats
 
 ```
 searchKey: dwarf.formDwarfBlock2
+tags: [private]
 ```
 
 ```Go
@@ -1963,6 +1839,7 @@ const formDwarfBlock2 format = 0x03
 
 ```
 searchKey: dwarf.formDwarfBlock4
+tags: [private]
 ```
 
 ```Go
@@ -1973,6 +1850,7 @@ const formDwarfBlock4 format = 0x04
 
 ```
 searchKey: dwarf.formData2
+tags: [private]
 ```
 
 ```Go
@@ -1983,6 +1861,7 @@ const formData2 format = 0x05
 
 ```
 searchKey: dwarf.formData4
+tags: [private]
 ```
 
 ```Go
@@ -1993,6 +1872,7 @@ const formData4 format = 0x06
 
 ```
 searchKey: dwarf.formData8
+tags: [private]
 ```
 
 ```Go
@@ -2003,6 +1883,7 @@ const formData8 format = 0x07
 
 ```
 searchKey: dwarf.formString
+tags: [private]
 ```
 
 ```Go
@@ -2013,6 +1894,7 @@ const formString format = 0x08
 
 ```
 searchKey: dwarf.formDwarfBlock
+tags: [private]
 ```
 
 ```Go
@@ -2023,6 +1905,7 @@ const formDwarfBlock format = 0x09
 
 ```
 searchKey: dwarf.formDwarfBlock1
+tags: [private]
 ```
 
 ```Go
@@ -2033,6 +1916,7 @@ const formDwarfBlock1 format = 0x0A
 
 ```
 searchKey: dwarf.formData1
+tags: [private]
 ```
 
 ```Go
@@ -2043,6 +1927,7 @@ const formData1 format = 0x0B
 
 ```
 searchKey: dwarf.formFlag
+tags: [private]
 ```
 
 ```Go
@@ -2053,6 +1938,7 @@ const formFlag format = 0x0C
 
 ```
 searchKey: dwarf.formSdata
+tags: [private]
 ```
 
 ```Go
@@ -2063,6 +1949,7 @@ const formSdata format = 0x0D
 
 ```
 searchKey: dwarf.formStrp
+tags: [private]
 ```
 
 ```Go
@@ -2073,6 +1960,7 @@ const formStrp format = 0x0E
 
 ```
 searchKey: dwarf.formUdata
+tags: [private]
 ```
 
 ```Go
@@ -2083,6 +1971,7 @@ const formUdata format = 0x0F
 
 ```
 searchKey: dwarf.formRefAddr
+tags: [private]
 ```
 
 ```Go
@@ -2093,6 +1982,7 @@ const formRefAddr format = 0x10
 
 ```
 searchKey: dwarf.formRef1
+tags: [private]
 ```
 
 ```Go
@@ -2103,6 +1993,7 @@ const formRef1 format = 0x11
 
 ```
 searchKey: dwarf.formRef2
+tags: [private]
 ```
 
 ```Go
@@ -2113,6 +2004,7 @@ const formRef2 format = 0x12
 
 ```
 searchKey: dwarf.formRef4
+tags: [private]
 ```
 
 ```Go
@@ -2123,6 +2015,7 @@ const formRef4 format = 0x13
 
 ```
 searchKey: dwarf.formRef8
+tags: [private]
 ```
 
 ```Go
@@ -2133,6 +2026,7 @@ const formRef8 format = 0x14
 
 ```
 searchKey: dwarf.formRefUdata
+tags: [private]
 ```
 
 ```Go
@@ -2143,6 +2037,7 @@ const formRefUdata format = 0x15
 
 ```
 searchKey: dwarf.formIndirect
+tags: [private]
 ```
 
 ```Go
@@ -2153,6 +2048,7 @@ const formIndirect format = 0x16
 
 ```
 searchKey: dwarf.formSecOffset
+tags: [private]
 ```
 
 ```Go
@@ -2165,6 +2061,7 @@ The following are new in DWARF 4.
 
 ```
 searchKey: dwarf.formExprloc
+tags: [private]
 ```
 
 ```Go
@@ -2175,6 +2072,7 @@ const formExprloc format = 0x18
 
 ```
 searchKey: dwarf.formFlagPresent
+tags: [private]
 ```
 
 ```Go
@@ -2185,6 +2083,7 @@ const formFlagPresent format = 0x19
 
 ```
 searchKey: dwarf.formRefSig8
+tags: [private]
 ```
 
 ```Go
@@ -2195,6 +2094,7 @@ const formRefSig8 format = 0x20
 
 ```
 searchKey: dwarf.formStrx
+tags: [private]
 ```
 
 ```Go
@@ -2207,6 +2107,7 @@ The following are new in DWARF 5.
 
 ```
 searchKey: dwarf.formAddrx
+tags: [private]
 ```
 
 ```Go
@@ -2217,6 +2118,7 @@ const formAddrx format = 0x1B
 
 ```
 searchKey: dwarf.formRefSup4
+tags: [private]
 ```
 
 ```Go
@@ -2227,6 +2129,7 @@ const formRefSup4 format = 0x1C
 
 ```
 searchKey: dwarf.formStrpSup
+tags: [private]
 ```
 
 ```Go
@@ -2237,6 +2140,7 @@ const formStrpSup format = 0x1D
 
 ```
 searchKey: dwarf.formData16
+tags: [private]
 ```
 
 ```Go
@@ -2247,6 +2151,7 @@ const formData16 format = 0x1E
 
 ```
 searchKey: dwarf.formLineStrp
+tags: [private]
 ```
 
 ```Go
@@ -2257,6 +2162,7 @@ const formLineStrp format = 0x1F
 
 ```
 searchKey: dwarf.formImplicitConst
+tags: [private]
 ```
 
 ```Go
@@ -2267,6 +2173,7 @@ const formImplicitConst format = 0x21
 
 ```
 searchKey: dwarf.formLoclistx
+tags: [private]
 ```
 
 ```Go
@@ -2277,6 +2184,7 @@ const formLoclistx format = 0x22
 
 ```
 searchKey: dwarf.formRnglistx
+tags: [private]
 ```
 
 ```Go
@@ -2287,6 +2195,7 @@ const formRnglistx format = 0x23
 
 ```
 searchKey: dwarf.formRefSup8
+tags: [private]
 ```
 
 ```Go
@@ -2297,6 +2206,7 @@ const formRefSup8 format = 0x24
 
 ```
 searchKey: dwarf.formStrx1
+tags: [private]
 ```
 
 ```Go
@@ -2307,6 +2217,7 @@ const formStrx1 format = 0x25
 
 ```
 searchKey: dwarf.formStrx2
+tags: [private]
 ```
 
 ```Go
@@ -2317,6 +2228,7 @@ const formStrx2 format = 0x26
 
 ```
 searchKey: dwarf.formStrx3
+tags: [private]
 ```
 
 ```Go
@@ -2327,6 +2239,7 @@ const formStrx3 format = 0x27
 
 ```
 searchKey: dwarf.formStrx4
+tags: [private]
 ```
 
 ```Go
@@ -2337,6 +2250,7 @@ const formStrx4 format = 0x28
 
 ```
 searchKey: dwarf.formAddrx1
+tags: [private]
 ```
 
 ```Go
@@ -2347,6 +2261,7 @@ const formAddrx1 format = 0x29
 
 ```
 searchKey: dwarf.formAddrx2
+tags: [private]
 ```
 
 ```Go
@@ -2357,6 +2272,7 @@ const formAddrx2 format = 0x2A
 
 ```
 searchKey: dwarf.formAddrx3
+tags: [private]
 ```
 
 ```Go
@@ -2367,6 +2283,7 @@ const formAddrx3 format = 0x2B
 
 ```
 searchKey: dwarf.formAddrx4
+tags: [private]
 ```
 
 ```Go
@@ -2377,6 +2294,7 @@ const formAddrx4 format = 0x2C
 
 ```
 searchKey: dwarf.formGnuRefAlt
+tags: [private]
 ```
 
 ```Go
@@ -2389,6 +2307,7 @@ Extensions for multi-file compression (.dwz) [http://www.dwarfstd.org/ShowIssue.
 
 ```
 searchKey: dwarf.formGnuStrpAlt
+tags: [private]
 ```
 
 ```Go
@@ -2399,7 +2318,6 @@ const formGnuStrpAlt format = 0x1f21
 
 ```
 searchKey: dwarf.TagArrayType
-tags: [exported]
 ```
 
 ```Go
@@ -2410,7 +2328,6 @@ const TagArrayType Tag = 0x01
 
 ```
 searchKey: dwarf.TagClassType
-tags: [exported]
 ```
 
 ```Go
@@ -2421,7 +2338,6 @@ const TagClassType Tag = 0x02
 
 ```
 searchKey: dwarf.TagEntryPoint
-tags: [exported]
 ```
 
 ```Go
@@ -2432,7 +2348,6 @@ const TagEntryPoint Tag = 0x03
 
 ```
 searchKey: dwarf.TagEnumerationType
-tags: [exported]
 ```
 
 ```Go
@@ -2443,7 +2358,6 @@ const TagEnumerationType Tag = 0x04
 
 ```
 searchKey: dwarf.TagFormalParameter
-tags: [exported]
 ```
 
 ```Go
@@ -2454,7 +2368,6 @@ const TagFormalParameter Tag = 0x05
 
 ```
 searchKey: dwarf.TagImportedDeclaration
-tags: [exported]
 ```
 
 ```Go
@@ -2465,7 +2378,6 @@ const TagImportedDeclaration Tag = 0x08
 
 ```
 searchKey: dwarf.TagLabel
-tags: [exported]
 ```
 
 ```Go
@@ -2476,7 +2388,6 @@ const TagLabel Tag = 0x0A
 
 ```
 searchKey: dwarf.TagLexDwarfBlock
-tags: [exported]
 ```
 
 ```Go
@@ -2487,7 +2398,6 @@ const TagLexDwarfBlock Tag = 0x0B
 
 ```
 searchKey: dwarf.TagMember
-tags: [exported]
 ```
 
 ```Go
@@ -2498,7 +2408,6 @@ const TagMember Tag = 0x0D
 
 ```
 searchKey: dwarf.TagPointerType
-tags: [exported]
 ```
 
 ```Go
@@ -2509,7 +2418,6 @@ const TagPointerType Tag = 0x0F
 
 ```
 searchKey: dwarf.TagReferenceType
-tags: [exported]
 ```
 
 ```Go
@@ -2520,7 +2428,6 @@ const TagReferenceType Tag = 0x10
 
 ```
 searchKey: dwarf.TagCompileUnit
-tags: [exported]
 ```
 
 ```Go
@@ -2531,7 +2438,6 @@ const TagCompileUnit Tag = 0x11
 
 ```
 searchKey: dwarf.TagStringType
-tags: [exported]
 ```
 
 ```Go
@@ -2542,7 +2448,6 @@ const TagStringType Tag = 0x12
 
 ```
 searchKey: dwarf.TagStructType
-tags: [exported]
 ```
 
 ```Go
@@ -2553,7 +2458,6 @@ const TagStructType Tag = 0x13
 
 ```
 searchKey: dwarf.TagSubroutineType
-tags: [exported]
 ```
 
 ```Go
@@ -2564,7 +2468,6 @@ const TagSubroutineType Tag = 0x15
 
 ```
 searchKey: dwarf.TagTypedef
-tags: [exported]
 ```
 
 ```Go
@@ -2575,7 +2478,6 @@ const TagTypedef Tag = 0x16
 
 ```
 searchKey: dwarf.TagUnionType
-tags: [exported]
 ```
 
 ```Go
@@ -2586,7 +2488,6 @@ const TagUnionType Tag = 0x17
 
 ```
 searchKey: dwarf.TagUnspecifiedParameters
-tags: [exported]
 ```
 
 ```Go
@@ -2597,7 +2498,6 @@ const TagUnspecifiedParameters Tag = 0x18
 
 ```
 searchKey: dwarf.TagVariant
-tags: [exported]
 ```
 
 ```Go
@@ -2608,7 +2508,6 @@ const TagVariant Tag = 0x19
 
 ```
 searchKey: dwarf.TagCommonDwarfBlock
-tags: [exported]
 ```
 
 ```Go
@@ -2619,7 +2518,6 @@ const TagCommonDwarfBlock Tag = 0x1A
 
 ```
 searchKey: dwarf.TagCommonInclusion
-tags: [exported]
 ```
 
 ```Go
@@ -2630,7 +2528,6 @@ const TagCommonInclusion Tag = 0x1B
 
 ```
 searchKey: dwarf.TagInheritance
-tags: [exported]
 ```
 
 ```Go
@@ -2641,7 +2538,6 @@ const TagInheritance Tag = 0x1C
 
 ```
 searchKey: dwarf.TagInlinedSubroutine
-tags: [exported]
 ```
 
 ```Go
@@ -2652,7 +2548,6 @@ const TagInlinedSubroutine Tag = 0x1D
 
 ```
 searchKey: dwarf.TagModule
-tags: [exported]
 ```
 
 ```Go
@@ -2663,7 +2558,6 @@ const TagModule Tag = 0x1E
 
 ```
 searchKey: dwarf.TagPtrToMemberType
-tags: [exported]
 ```
 
 ```Go
@@ -2674,7 +2568,6 @@ const TagPtrToMemberType Tag = 0x1F
 
 ```
 searchKey: dwarf.TagSetType
-tags: [exported]
 ```
 
 ```Go
@@ -2685,7 +2578,6 @@ const TagSetType Tag = 0x20
 
 ```
 searchKey: dwarf.TagSubrangeType
-tags: [exported]
 ```
 
 ```Go
@@ -2696,7 +2588,6 @@ const TagSubrangeType Tag = 0x21
 
 ```
 searchKey: dwarf.TagWithStmt
-tags: [exported]
 ```
 
 ```Go
@@ -2707,7 +2598,6 @@ const TagWithStmt Tag = 0x22
 
 ```
 searchKey: dwarf.TagAccessDeclaration
-tags: [exported]
 ```
 
 ```Go
@@ -2718,7 +2608,6 @@ const TagAccessDeclaration Tag = 0x23
 
 ```
 searchKey: dwarf.TagBaseType
-tags: [exported]
 ```
 
 ```Go
@@ -2729,7 +2618,6 @@ const TagBaseType Tag = 0x24
 
 ```
 searchKey: dwarf.TagCatchDwarfBlock
-tags: [exported]
 ```
 
 ```Go
@@ -2740,7 +2628,6 @@ const TagCatchDwarfBlock Tag = 0x25
 
 ```
 searchKey: dwarf.TagConstType
-tags: [exported]
 ```
 
 ```Go
@@ -2751,7 +2638,6 @@ const TagConstType Tag = 0x26
 
 ```
 searchKey: dwarf.TagConstant
-tags: [exported]
 ```
 
 ```Go
@@ -2762,7 +2648,6 @@ const TagConstant Tag = 0x27
 
 ```
 searchKey: dwarf.TagEnumerator
-tags: [exported]
 ```
 
 ```Go
@@ -2773,7 +2658,6 @@ const TagEnumerator Tag = 0x28
 
 ```
 searchKey: dwarf.TagFileType
-tags: [exported]
 ```
 
 ```Go
@@ -2784,7 +2668,6 @@ const TagFileType Tag = 0x29
 
 ```
 searchKey: dwarf.TagFriend
-tags: [exported]
 ```
 
 ```Go
@@ -2795,7 +2678,6 @@ const TagFriend Tag = 0x2A
 
 ```
 searchKey: dwarf.TagNamelist
-tags: [exported]
 ```
 
 ```Go
@@ -2806,7 +2688,6 @@ const TagNamelist Tag = 0x2B
 
 ```
 searchKey: dwarf.TagNamelistItem
-tags: [exported]
 ```
 
 ```Go
@@ -2817,7 +2698,6 @@ const TagNamelistItem Tag = 0x2C
 
 ```
 searchKey: dwarf.TagPackedType
-tags: [exported]
 ```
 
 ```Go
@@ -2828,7 +2708,6 @@ const TagPackedType Tag = 0x2D
 
 ```
 searchKey: dwarf.TagSubprogram
-tags: [exported]
 ```
 
 ```Go
@@ -2839,7 +2718,6 @@ const TagSubprogram Tag = 0x2E
 
 ```
 searchKey: dwarf.TagTemplateTypeParameter
-tags: [exported]
 ```
 
 ```Go
@@ -2850,7 +2728,6 @@ const TagTemplateTypeParameter Tag = 0x2F
 
 ```
 searchKey: dwarf.TagTemplateValueParameter
-tags: [exported]
 ```
 
 ```Go
@@ -2861,7 +2738,6 @@ const TagTemplateValueParameter Tag = 0x30
 
 ```
 searchKey: dwarf.TagThrownType
-tags: [exported]
 ```
 
 ```Go
@@ -2872,7 +2748,6 @@ const TagThrownType Tag = 0x31
 
 ```
 searchKey: dwarf.TagTryDwarfBlock
-tags: [exported]
 ```
 
 ```Go
@@ -2883,7 +2758,6 @@ const TagTryDwarfBlock Tag = 0x32
 
 ```
 searchKey: dwarf.TagVariantPart
-tags: [exported]
 ```
 
 ```Go
@@ -2894,7 +2768,6 @@ const TagVariantPart Tag = 0x33
 
 ```
 searchKey: dwarf.TagVariable
-tags: [exported]
 ```
 
 ```Go
@@ -2905,7 +2778,6 @@ const TagVariable Tag = 0x34
 
 ```
 searchKey: dwarf.TagVolatileType
-tags: [exported]
 ```
 
 ```Go
@@ -2916,7 +2788,6 @@ const TagVolatileType Tag = 0x35
 
 ```
 searchKey: dwarf.TagDwarfProcedure
-tags: [exported]
 ```
 
 ```Go
@@ -2929,7 +2800,6 @@ The following are new in DWARF 3.
 
 ```
 searchKey: dwarf.TagRestrictType
-tags: [exported]
 ```
 
 ```Go
@@ -2940,7 +2810,6 @@ const TagRestrictType Tag = 0x37
 
 ```
 searchKey: dwarf.TagInterfaceType
-tags: [exported]
 ```
 
 ```Go
@@ -2951,7 +2820,6 @@ const TagInterfaceType Tag = 0x38
 
 ```
 searchKey: dwarf.TagNamespace
-tags: [exported]
 ```
 
 ```Go
@@ -2962,7 +2830,6 @@ const TagNamespace Tag = 0x39
 
 ```
 searchKey: dwarf.TagImportedModule
-tags: [exported]
 ```
 
 ```Go
@@ -2973,7 +2840,6 @@ const TagImportedModule Tag = 0x3A
 
 ```
 searchKey: dwarf.TagUnspecifiedType
-tags: [exported]
 ```
 
 ```Go
@@ -2984,7 +2850,6 @@ const TagUnspecifiedType Tag = 0x3B
 
 ```
 searchKey: dwarf.TagPartialUnit
-tags: [exported]
 ```
 
 ```Go
@@ -2995,7 +2860,6 @@ const TagPartialUnit Tag = 0x3C
 
 ```
 searchKey: dwarf.TagImportedUnit
-tags: [exported]
 ```
 
 ```Go
@@ -3006,7 +2870,6 @@ const TagImportedUnit Tag = 0x3D
 
 ```
 searchKey: dwarf.TagMutableType
-tags: [exported]
 ```
 
 ```Go
@@ -3018,7 +2881,6 @@ const TagMutableType Tag = 0x3E // Later removed from DWARF.
 
 ```
 searchKey: dwarf.TagCondition
-tags: [exported]
 ```
 
 ```Go
@@ -3029,7 +2891,6 @@ const TagCondition Tag = 0x3F
 
 ```
 searchKey: dwarf.TagSharedType
-tags: [exported]
 ```
 
 ```Go
@@ -3040,7 +2901,6 @@ const TagSharedType Tag = 0x40
 
 ```
 searchKey: dwarf.TagTypeUnit
-tags: [exported]
 ```
 
 ```Go
@@ -3053,7 +2913,6 @@ The following are new in DWARF 4.
 
 ```
 searchKey: dwarf.TagRvalueReferenceType
-tags: [exported]
 ```
 
 ```Go
@@ -3064,7 +2923,6 @@ const TagRvalueReferenceType Tag = 0x42
 
 ```
 searchKey: dwarf.TagTemplateAlias
-tags: [exported]
 ```
 
 ```Go
@@ -3075,7 +2933,6 @@ const TagTemplateAlias Tag = 0x43
 
 ```
 searchKey: dwarf.TagCoarrayType
-tags: [exported]
 ```
 
 ```Go
@@ -3088,7 +2945,6 @@ The following are new in DWARF 5.
 
 ```
 searchKey: dwarf.TagGenericSubrange
-tags: [exported]
 ```
 
 ```Go
@@ -3099,7 +2955,6 @@ const TagGenericSubrange Tag = 0x45
 
 ```
 searchKey: dwarf.TagDynamicType
-tags: [exported]
 ```
 
 ```Go
@@ -3110,7 +2965,6 @@ const TagDynamicType Tag = 0x46
 
 ```
 searchKey: dwarf.TagAtomicType
-tags: [exported]
 ```
 
 ```Go
@@ -3121,7 +2975,6 @@ const TagAtomicType Tag = 0x47
 
 ```
 searchKey: dwarf.TagCallSite
-tags: [exported]
 ```
 
 ```Go
@@ -3132,7 +2985,6 @@ const TagCallSite Tag = 0x48
 
 ```
 searchKey: dwarf.TagCallSiteParameter
-tags: [exported]
 ```
 
 ```Go
@@ -3143,7 +2995,6 @@ const TagCallSiteParameter Tag = 0x49
 
 ```
 searchKey: dwarf.TagSkeletonUnit
-tags: [exported]
 ```
 
 ```Go
@@ -3154,7 +3005,6 @@ const TagSkeletonUnit Tag = 0x4A
 
 ```
 searchKey: dwarf.TagImmutableType
-tags: [exported]
 ```
 
 ```Go
@@ -3165,6 +3015,7 @@ const TagImmutableType Tag = 0x4B
 
 ```
 searchKey: dwarf.opAddr
+tags: [private]
 ```
 
 ```Go
@@ -3178,6 +3029,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opDeref
+tags: [private]
 ```
 
 ```Go
@@ -3190,6 +3042,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConst1u
+tags: [private]
 ```
 
 ```Go
@@ -3203,6 +3056,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConst1s
+tags: [private]
 ```
 
 ```Go
@@ -3216,6 +3070,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConst2u
+tags: [private]
 ```
 
 ```Go
@@ -3229,6 +3084,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConst2s
+tags: [private]
 ```
 
 ```Go
@@ -3242,6 +3098,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConst4u
+tags: [private]
 ```
 
 ```Go
@@ -3255,6 +3112,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConst4s
+tags: [private]
 ```
 
 ```Go
@@ -3268,6 +3126,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConst8u
+tags: [private]
 ```
 
 ```Go
@@ -3281,6 +3140,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConst8s
+tags: [private]
 ```
 
 ```Go
@@ -3294,6 +3154,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConstu
+tags: [private]
 ```
 
 ```Go
@@ -3307,6 +3168,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConsts
+tags: [private]
 ```
 
 ```Go
@@ -3320,6 +3182,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opDup
+tags: [private]
 ```
 
 ```Go
@@ -3332,6 +3195,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opDrop
+tags: [private]
 ```
 
 ```Go
@@ -3344,6 +3208,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opOver
+tags: [private]
 ```
 
 ```Go
@@ -3356,6 +3221,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opPick
+tags: [private]
 ```
 
 ```Go
@@ -3369,6 +3235,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opSwap
+tags: [private]
 ```
 
 ```Go
@@ -3381,6 +3248,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opRot
+tags: [private]
 ```
 
 ```Go
@@ -3393,6 +3261,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opXderef
+tags: [private]
 ```
 
 ```Go
@@ -3405,6 +3274,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opAbs
+tags: [private]
 ```
 
 ```Go
@@ -3417,6 +3287,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opAnd
+tags: [private]
 ```
 
 ```Go
@@ -3429,6 +3300,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opDiv
+tags: [private]
 ```
 
 ```Go
@@ -3441,6 +3313,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opMinus
+tags: [private]
 ```
 
 ```Go
@@ -3453,6 +3326,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opMod
+tags: [private]
 ```
 
 ```Go
@@ -3465,6 +3339,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opMul
+tags: [private]
 ```
 
 ```Go
@@ -3477,6 +3352,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opNeg
+tags: [private]
 ```
 
 ```Go
@@ -3489,6 +3365,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opNot
+tags: [private]
 ```
 
 ```Go
@@ -3501,6 +3378,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opOr
+tags: [private]
 ```
 
 ```Go
@@ -3513,6 +3391,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opPlus
+tags: [private]
 ```
 
 ```Go
@@ -3525,6 +3404,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opPlusUconst
+tags: [private]
 ```
 
 ```Go
@@ -3538,6 +3418,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opShl
+tags: [private]
 ```
 
 ```Go
@@ -3550,6 +3431,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opShr
+tags: [private]
 ```
 
 ```Go
@@ -3562,6 +3444,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opShra
+tags: [private]
 ```
 
 ```Go
@@ -3574,6 +3457,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opXor
+tags: [private]
 ```
 
 ```Go
@@ -3586,6 +3470,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opSkip
+tags: [private]
 ```
 
 ```Go
@@ -3599,6 +3484,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opBra
+tags: [private]
 ```
 
 ```Go
@@ -3612,6 +3498,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opEq
+tags: [private]
 ```
 
 ```Go
@@ -3624,6 +3511,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opGe
+tags: [private]
 ```
 
 ```Go
@@ -3636,6 +3524,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opGt
+tags: [private]
 ```
 
 ```Go
@@ -3648,6 +3537,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opLe
+tags: [private]
 ```
 
 ```Go
@@ -3660,6 +3550,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opLt
+tags: [private]
 ```
 
 ```Go
@@ -3672,6 +3563,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opNe
+tags: [private]
 ```
 
 ```Go
@@ -3684,6 +3576,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opLit0
+tags: [private]
 ```
 
 ```Go
@@ -3696,6 +3589,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opReg0
+tags: [private]
 ```
 
 ```Go
@@ -3710,6 +3604,7 @@ OpLitN = OpLit0 + N for N = 0..31
 
 ```
 searchKey: dwarf.opBreg0
+tags: [private]
 ```
 
 ```Go
@@ -3725,6 +3620,7 @@ OpRegN = OpReg0 + N for N = 0..31
 
 ```
 searchKey: dwarf.opRegx
+tags: [private]
 ```
 
 ```Go
@@ -3740,6 +3636,7 @@ OpBregN = OpBreg0 + N for N = 0..31
 
 ```
 searchKey: dwarf.opFbreg
+tags: [private]
 ```
 
 ```Go
@@ -3753,6 +3650,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opBregx
+tags: [private]
 ```
 
 ```Go
@@ -3766,6 +3664,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opPiece
+tags: [private]
 ```
 
 ```Go
@@ -3779,6 +3678,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opDerefSize
+tags: [private]
 ```
 
 ```Go
@@ -3792,6 +3692,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opXderefSize
+tags: [private]
 ```
 
 ```Go
@@ -3805,6 +3706,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opNop
+tags: [private]
 ```
 
 ```Go
@@ -3817,6 +3719,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opPushObjAddr
+tags: [private]
 ```
 
 ```Go
@@ -3831,6 +3734,7 @@ The following are new in DWARF 3.
 
 ```
 searchKey: dwarf.opCall2
+tags: [private]
 ```
 
 ```Go
@@ -3844,6 +3748,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opCall4
+tags: [private]
 ```
 
 ```Go
@@ -3857,6 +3762,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opCallRef
+tags: [private]
 ```
 
 ```Go
@@ -3870,6 +3776,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opFormTLSAddress
+tags: [private]
 ```
 
 ```Go
@@ -3882,6 +3789,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opCallFrameCFA
+tags: [private]
 ```
 
 ```Go
@@ -3894,6 +3802,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opBitPiece
+tags: [private]
 ```
 
 ```Go
@@ -3906,6 +3815,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opImplicitValue
+tags: [private]
 ```
 
 ```Go
@@ -3920,6 +3830,7 @@ The following are new in DWARF 4.
 
 ```
 searchKey: dwarf.opStackValue
+tags: [private]
 ```
 
 ```Go
@@ -3932,6 +3843,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opImplicitPointer
+tags: [private]
 ```
 
 ```Go
@@ -3946,6 +3858,7 @@ The following a new in DWARF 5.
 
 ```
 searchKey: dwarf.opAddrx
+tags: [private]
 ```
 
 ```Go
@@ -3958,6 +3871,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConstx
+tags: [private]
 ```
 
 ```Go
@@ -3970,6 +3884,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opEntryValue
+tags: [private]
 ```
 
 ```Go
@@ -3982,6 +3897,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConstType
+tags: [private]
 ```
 
 ```Go
@@ -3994,6 +3910,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opRegvalType
+tags: [private]
 ```
 
 ```Go
@@ -4006,6 +3923,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opDerefType
+tags: [private]
 ```
 
 ```Go
@@ -4018,6 +3936,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opXderefType
+tags: [private]
 ```
 
 ```Go
@@ -4030,6 +3949,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opConvert
+tags: [private]
 ```
 
 ```Go
@@ -4042,6 +3962,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.opReinterpret
+tags: [private]
 ```
 
 ```Go
@@ -4054,6 +3975,7 @@ Location expression operators. The debug info encodes value locations like 8(R3)
 
 ```
 searchKey: dwarf.encAddress
+tags: [private]
 ```
 
 ```Go
@@ -4066,6 +3988,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encBoolean
+tags: [private]
 ```
 
 ```Go
@@ -4078,6 +4001,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encComplexFloat
+tags: [private]
 ```
 
 ```Go
@@ -4090,6 +4014,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encFloat
+tags: [private]
 ```
 
 ```Go
@@ -4102,6 +4027,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encSigned
+tags: [private]
 ```
 
 ```Go
@@ -4114,6 +4040,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encSignedChar
+tags: [private]
 ```
 
 ```Go
@@ -4126,6 +4053,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encUnsigned
+tags: [private]
 ```
 
 ```Go
@@ -4138,6 +4066,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encUnsignedChar
+tags: [private]
 ```
 
 ```Go
@@ -4150,6 +4079,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encImaginaryFloat
+tags: [private]
 ```
 
 ```Go
@@ -4164,6 +4094,7 @@ The following are new in DWARF 3.
 
 ```
 searchKey: dwarf.encPackedDecimal
+tags: [private]
 ```
 
 ```Go
@@ -4176,6 +4107,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encNumericString
+tags: [private]
 ```
 
 ```Go
@@ -4188,6 +4120,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encEdited
+tags: [private]
 ```
 
 ```Go
@@ -4200,6 +4133,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encSignedFixed
+tags: [private]
 ```
 
 ```Go
@@ -4212,6 +4146,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encUnsignedFixed
+tags: [private]
 ```
 
 ```Go
@@ -4224,6 +4159,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encDecimalFloat
+tags: [private]
 ```
 
 ```Go
@@ -4236,6 +4172,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.encUTF
+tags: [private]
 ```
 
 ```Go
@@ -4250,6 +4187,7 @@ The following are new in DWARF 4.
 
 ```
 searchKey: dwarf.encUCS
+tags: [private]
 ```
 
 ```Go
@@ -4264,6 +4202,7 @@ The following are new in DWARF 5.
 
 ```
 searchKey: dwarf.encASCII
+tags: [private]
 ```
 
 ```Go
@@ -4276,6 +4215,7 @@ Basic type encodings -- the value for AttrEncoding in a TagBaseType Entry.
 
 ```
 searchKey: dwarf.lnsCopy
+tags: [private]
 ```
 
 ```Go
@@ -4288,6 +4228,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lnsAdvancePC
+tags: [private]
 ```
 
 ```Go
@@ -4300,6 +4241,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lnsAdvanceLine
+tags: [private]
 ```
 
 ```Go
@@ -4312,6 +4254,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lnsSetFile
+tags: [private]
 ```
 
 ```Go
@@ -4324,6 +4267,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lnsSetColumn
+tags: [private]
 ```
 
 ```Go
@@ -4336,6 +4280,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lnsNegateStmt
+tags: [private]
 ```
 
 ```Go
@@ -4348,6 +4293,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lnsSetBasicBlock
+tags: [private]
 ```
 
 ```Go
@@ -4360,6 +4306,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lnsConstAddPC
+tags: [private]
 ```
 
 ```Go
@@ -4372,6 +4319,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lnsFixedAdvancePC
+tags: [private]
 ```
 
 ```Go
@@ -4384,6 +4332,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lnsSetPrologueEnd
+tags: [private]
 ```
 
 ```Go
@@ -4398,6 +4347,7 @@ DWARF 3
 
 ```
 searchKey: dwarf.lnsSetEpilogueBegin
+tags: [private]
 ```
 
 ```Go
@@ -4410,6 +4360,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lnsSetISA
+tags: [private]
 ```
 
 ```Go
@@ -4422,6 +4373,7 @@ Statement program standard opcode encodings.
 
 ```
 searchKey: dwarf.lneEndSequence
+tags: [private]
 ```
 
 ```Go
@@ -4434,6 +4386,7 @@ Statement program extended opcode encodings.
 
 ```
 searchKey: dwarf.lneSetAddress
+tags: [private]
 ```
 
 ```Go
@@ -4446,6 +4399,7 @@ Statement program extended opcode encodings.
 
 ```
 searchKey: dwarf.lneDefineFile
+tags: [private]
 ```
 
 ```Go
@@ -4458,6 +4412,7 @@ Statement program extended opcode encodings.
 
 ```
 searchKey: dwarf.lneSetDiscriminator
+tags: [private]
 ```
 
 ```Go
@@ -4472,6 +4427,7 @@ DWARF 4
 
 ```
 searchKey: dwarf.lnctPath
+tags: [private]
 ```
 
 ```Go
@@ -4484,6 +4440,7 @@ Line table directory and file name entry formats. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lnctDirectoryIndex
+tags: [private]
 ```
 
 ```Go
@@ -4496,6 +4453,7 @@ Line table directory and file name entry formats. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lnctTimestamp
+tags: [private]
 ```
 
 ```Go
@@ -4508,6 +4466,7 @@ Line table directory and file name entry formats. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lnctSize
+tags: [private]
 ```
 
 ```Go
@@ -4520,6 +4479,7 @@ Line table directory and file name entry formats. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lnctMD5
+tags: [private]
 ```
 
 ```Go
@@ -4532,6 +4492,7 @@ Line table directory and file name entry formats. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lleEndOfList
+tags: [private]
 ```
 
 ```Go
@@ -4544,6 +4505,7 @@ Location list entry codes. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lleBaseAddressx
+tags: [private]
 ```
 
 ```Go
@@ -4556,6 +4518,7 @@ Location list entry codes. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lleStartxEndx
+tags: [private]
 ```
 
 ```Go
@@ -4568,6 +4531,7 @@ Location list entry codes. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lleStartxLength
+tags: [private]
 ```
 
 ```Go
@@ -4580,6 +4544,7 @@ Location list entry codes. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lleOffsetPair
+tags: [private]
 ```
 
 ```Go
@@ -4592,6 +4557,7 @@ Location list entry codes. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lleDefaultLocation
+tags: [private]
 ```
 
 ```Go
@@ -4604,6 +4570,7 @@ Location list entry codes. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lleBaseAddress
+tags: [private]
 ```
 
 ```Go
@@ -4616,6 +4583,7 @@ Location list entry codes. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lleStartEnd
+tags: [private]
 ```
 
 ```Go
@@ -4628,6 +4596,7 @@ Location list entry codes. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.lleStartLength
+tags: [private]
 ```
 
 ```Go
@@ -4640,6 +4609,7 @@ Location list entry codes. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.utCompile
+tags: [private]
 ```
 
 ```Go
@@ -4652,6 +4622,7 @@ Unit header unit type encodings. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.utType
+tags: [private]
 ```
 
 ```Go
@@ -4664,6 +4635,7 @@ Unit header unit type encodings. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.utPartial
+tags: [private]
 ```
 
 ```Go
@@ -4676,6 +4648,7 @@ Unit header unit type encodings. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.utSkeleton
+tags: [private]
 ```
 
 ```Go
@@ -4688,6 +4661,7 @@ Unit header unit type encodings. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.utSplitCompile
+tags: [private]
 ```
 
 ```Go
@@ -4700,6 +4674,7 @@ Unit header unit type encodings. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.utSplitType
+tags: [private]
 ```
 
 ```Go
@@ -4712,6 +4687,7 @@ Unit header unit type encodings. These are new in DWARF 5.
 
 ```
 searchKey: dwarf.rleEndOfList
+tags: [private]
 ```
 
 ```Go
@@ -4724,6 +4700,7 @@ Opcodes for DWARFv5 debug_rnglists section.
 
 ```
 searchKey: dwarf.rleBaseAddressx
+tags: [private]
 ```
 
 ```Go
@@ -4736,6 +4713,7 @@ Opcodes for DWARFv5 debug_rnglists section.
 
 ```
 searchKey: dwarf.rleStartxEndx
+tags: [private]
 ```
 
 ```Go
@@ -4748,6 +4726,7 @@ Opcodes for DWARFv5 debug_rnglists section.
 
 ```
 searchKey: dwarf.rleStartxLength
+tags: [private]
 ```
 
 ```Go
@@ -4760,6 +4739,7 @@ Opcodes for DWARFv5 debug_rnglists section.
 
 ```
 searchKey: dwarf.rleOffsetPair
+tags: [private]
 ```
 
 ```Go
@@ -4772,6 +4752,7 @@ Opcodes for DWARFv5 debug_rnglists section.
 
 ```
 searchKey: dwarf.rleBaseAddress
+tags: [private]
 ```
 
 ```Go
@@ -4784,6 +4765,7 @@ Opcodes for DWARFv5 debug_rnglists section.
 
 ```
 searchKey: dwarf.rleStartEnd
+tags: [private]
 ```
 
 ```Go
@@ -4796,6 +4778,7 @@ Opcodes for DWARFv5 debug_rnglists section.
 
 ```
 searchKey: dwarf.rleStartLength
+tags: [private]
 ```
 
 ```Go
@@ -4808,7 +4791,6 @@ Opcodes for DWARFv5 debug_rnglists section.
 
 ```
 searchKey: dwarf.ClassUnknown
-tags: [exported]
 ```
 
 ```Go
@@ -4821,7 +4803,6 @@ ClassUnknown represents values of unknown DWARF class.
 
 ```
 searchKey: dwarf.ClassAddress
-tags: [exported]
 ```
 
 ```Go
@@ -4834,7 +4815,6 @@ ClassAddress represents values of type uint64 that are addresses on the target m
 
 ```
 searchKey: dwarf.ClassBlock
-tags: [exported]
 ```
 
 ```Go
@@ -4847,7 +4827,6 @@ ClassBlock represents values of type []byte whose interpretation depends on the 
 
 ```
 searchKey: dwarf.ClassConstant
-tags: [exported]
 ```
 
 ```Go
@@ -4860,7 +4839,6 @@ ClassConstant represents values of type int64 that are constants. The interpreta
 
 ```
 searchKey: dwarf.ClassExprLoc
-tags: [exported]
 ```
 
 ```Go
@@ -4873,7 +4851,6 @@ ClassExprLoc represents values of type []byte that contain an encoded DWARF expr
 
 ```
 searchKey: dwarf.ClassFlag
-tags: [exported]
 ```
 
 ```Go
@@ -4886,7 +4863,6 @@ ClassFlag represents values of type bool.
 
 ```
 searchKey: dwarf.ClassLinePtr
-tags: [exported]
 ```
 
 ```Go
@@ -4899,7 +4875,6 @@ ClassLinePtr represents values that are an int64 offset into the "line" section.
 
 ```
 searchKey: dwarf.ClassLocListPtr
-tags: [exported]
 ```
 
 ```Go
@@ -4912,7 +4887,6 @@ ClassLocListPtr represents values that are an int64 offset into the "loclist" se
 
 ```
 searchKey: dwarf.ClassMacPtr
-tags: [exported]
 ```
 
 ```Go
@@ -4925,7 +4899,6 @@ ClassMacPtr represents values that are an int64 offset into the "mac" section.
 
 ```
 searchKey: dwarf.ClassRangeListPtr
-tags: [exported]
 ```
 
 ```Go
@@ -4938,7 +4911,6 @@ ClassRangeListPtr represents values that are an int64 offset into the "rangelist
 
 ```
 searchKey: dwarf.ClassReference
-tags: [exported]
 ```
 
 ```Go
@@ -4951,7 +4923,6 @@ ClassReference represents values that are an Offset offset of an Entry in the in
 
 ```
 searchKey: dwarf.ClassReferenceSig
-tags: [exported]
 ```
 
 ```Go
@@ -4964,7 +4935,6 @@ ClassReferenceSig represents values that are a uint64 type signature referencing
 
 ```
 searchKey: dwarf.ClassString
-tags: [exported]
 ```
 
 ```Go
@@ -4977,7 +4947,6 @@ ClassString represents values that are strings. If the compilation unit specifie
 
 ```
 searchKey: dwarf.ClassReferenceAlt
-tags: [exported]
 ```
 
 ```Go
@@ -4990,7 +4959,6 @@ ClassReferenceAlt represents values of type int64 that are an offset into the DW
 
 ```
 searchKey: dwarf.ClassStringAlt
-tags: [exported]
 ```
 
 ```Go
@@ -5003,7 +4971,6 @@ ClassStringAlt represents values of type int64 that are an offset into the DWARF
 
 ```
 searchKey: dwarf.ClassAddrPtr
-tags: [exported]
 ```
 
 ```Go
@@ -5016,7 +4983,6 @@ ClassAddrPtr represents values that are an int64 offset into the "addr" section.
 
 ```
 searchKey: dwarf.ClassLocList
-tags: [exported]
 ```
 
 ```Go
@@ -5029,7 +4995,6 @@ ClassLocList represents values that are an int64 offset into the "loclists" sect
 
 ```
 searchKey: dwarf.ClassRngList
-tags: [exported]
 ```
 
 ```Go
@@ -5042,7 +5007,6 @@ ClassRngList represents values that are a uint64 offset from the base of the "rn
 
 ```
 searchKey: dwarf.ClassRngListsPtr
-tags: [exported]
 ```
 
 ```Go
@@ -5055,7 +5019,6 @@ ClassRngListsPtr represents values that are an int64 offset into the "rnglists" 
 
 ```
 searchKey: dwarf.ClassStrOffsetsPtr
-tags: [exported]
 ```
 
 ```Go
@@ -5068,6 +5031,7 @@ ClassStrOffsetsPtr represents values that are an int64 offset into the "str_offs
 
 ```
 searchKey: dwarf._Tag_name_0
+tags: [private]
 ```
 
 ```Go
@@ -5078,6 +5042,7 @@ const _Tag_name_0 = "ArrayTypeClassTypeEntryPointEnumerationTypeFormalParameter"
 
 ```
 searchKey: dwarf._Tag_name_1
+tags: [private]
 ```
 
 ```Go
@@ -5088,6 +5053,7 @@ const _Tag_name_1 = "ImportedDeclaration"
 
 ```
 searchKey: dwarf._Tag_name_2
+tags: [private]
 ```
 
 ```Go
@@ -5098,6 +5064,7 @@ const _Tag_name_2 = "LabelLexDwarfBlock"
 
 ```
 searchKey: dwarf._Tag_name_3
+tags: [private]
 ```
 
 ```Go
@@ -5108,6 +5075,7 @@ const _Tag_name_3 = "Member"
 
 ```
 searchKey: dwarf._Tag_name_4
+tags: [private]
 ```
 
 ```Go
@@ -5118,6 +5086,7 @@ const _Tag_name_4 = "PointerTypeReferenceTypeCompileUnitStringTypeStructType"
 
 ```
 searchKey: dwarf._Tag_name_5
+tags: [private]
 ```
 
 ```Go
@@ -5126,14 +5095,11 @@ const _Tag_name_5 = ...
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="_Attr_map" href="#_Attr_map">var _Attr_map</a>
 
 ```
 searchKey: dwarf._Attr_map
+tags: [private]
 ```
 
 ```Go
@@ -5144,6 +5110,7 @@ var _Attr_map = ...
 
 ```
 searchKey: dwarf._Class_index
+tags: [private]
 ```
 
 ```Go
@@ -5154,6 +5121,7 @@ var _Class_index = [...]uint8{0, 12, 24, 34, 47, 59, 68, 80, 95, 106, 123, 137, 
 
 ```
 searchKey: dwarf.attrIsExprloc
+tags: [private]
 ```
 
 ```Go
@@ -5166,6 +5134,7 @@ attrIsExprloc indicates attributes that allow exprloc values that are encoded as
 
 ```
 searchKey: dwarf.attrPtrClass
+tags: [private]
 ```
 
 ```Go
@@ -5178,6 +5147,7 @@ attrPtrClass indicates the *ptr class of attributes that have encoding formSecOf
 
 ```
 searchKey: dwarf.knownOpcodeLengths
+tags: [private]
 ```
 
 ```Go
@@ -5190,7 +5160,6 @@ knownOpcodeLengths gives the opcode lengths (in varint arguments) of known stand
 
 ```
 searchKey: dwarf.ErrUnknownPC
-tags: [exported]
 ```
 
 ```Go
@@ -5203,6 +5172,7 @@ ErrUnknownPC is the error returned by LineReader.ScanPC when the seek PC is not 
 
 ```
 searchKey: dwarf.errSegmentSelector
+tags: [private]
 ```
 
 ```Go
@@ -5213,6 +5183,7 @@ var errSegmentSelector = errors.New("non-zero segment_selector size not supporte
 
 ```
 searchKey: dwarf._Tag_index_0
+tags: [private]
 ```
 
 ```Go
@@ -5223,6 +5194,7 @@ var _Tag_index_0 = [...]uint8{0, 9, 18, 28, 43, 58}
 
 ```
 searchKey: dwarf._Tag_index_2
+tags: [private]
 ```
 
 ```Go
@@ -5233,6 +5205,7 @@ var _Tag_index_2 = [...]uint8{0, 5, 18}
 
 ```
 searchKey: dwarf._Tag_index_4
+tags: [private]
 ```
 
 ```Go
@@ -5243,6 +5216,7 @@ var _Tag_index_4 = [...]uint8{0, 11, 24, 35, 45, 55}
 
 ```
 searchKey: dwarf._Tag_index_5
+tags: [private]
 ```
 
 ```Go
@@ -5253,6 +5227,7 @@ var _Tag_index_5 = ...
 
 ```
 searchKey: dwarf.PathJoin
+tags: [private]
 ```
 
 ```Go
@@ -5261,14 +5236,11 @@ var PathJoin = pathJoin
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="buf" href="#buf">type buf struct</a>
 
 ```
 searchKey: dwarf.buf
+tags: [private]
 ```
 
 ```Go
@@ -5289,6 +5261,7 @@ Data buffer being decoded.
 
 ```
 searchKey: dwarf.makeBuf
+tags: [private]
 ```
 
 ```Go
@@ -5299,6 +5272,7 @@ func makeBuf(d *Data, format dataFormat, name string, off Offset, data []byte) b
 
 ```
 searchKey: dwarf.buf.uint8
+tags: [private]
 ```
 
 ```Go
@@ -5309,6 +5283,7 @@ func (b *buf) uint8() uint8
 
 ```
 searchKey: dwarf.buf.bytes
+tags: [private]
 ```
 
 ```Go
@@ -5319,6 +5294,7 @@ func (b *buf) bytes(n int) []byte
 
 ```
 searchKey: dwarf.buf.skip
+tags: [private]
 ```
 
 ```Go
@@ -5329,6 +5305,7 @@ func (b *buf) skip(n int)
 
 ```
 searchKey: dwarf.buf.string
+tags: [private]
 ```
 
 ```Go
@@ -5339,6 +5316,7 @@ func (b *buf) string() string
 
 ```
 searchKey: dwarf.buf.uint16
+tags: [private]
 ```
 
 ```Go
@@ -5349,6 +5327,7 @@ func (b *buf) uint16() uint16
 
 ```
 searchKey: dwarf.buf.uint24
+tags: [private]
 ```
 
 ```Go
@@ -5359,6 +5338,7 @@ func (b *buf) uint24() uint32
 
 ```
 searchKey: dwarf.buf.uint32
+tags: [private]
 ```
 
 ```Go
@@ -5369,6 +5349,7 @@ func (b *buf) uint32() uint32
 
 ```
 searchKey: dwarf.buf.uint64
+tags: [private]
 ```
 
 ```Go
@@ -5379,6 +5360,7 @@ func (b *buf) uint64() uint64
 
 ```
 searchKey: dwarf.buf.varint
+tags: [private]
 ```
 
 ```Go
@@ -5391,6 +5373,7 @@ Read a varint, which is 7 bits per byte, little endian. the 0x80 bit means read 
 
 ```
 searchKey: dwarf.buf.uint
+tags: [private]
 ```
 
 ```Go
@@ -5403,6 +5386,7 @@ Unsigned int is just a varint.
 
 ```
 searchKey: dwarf.buf.int
+tags: [private]
 ```
 
 ```Go
@@ -5415,6 +5399,7 @@ Signed int is a sign-extended varint.
 
 ```
 searchKey: dwarf.buf.addr
+tags: [private]
 ```
 
 ```Go
@@ -5427,6 +5412,7 @@ Address-sized uint.
 
 ```
 searchKey: dwarf.buf.unitLength
+tags: [private]
 ```
 
 ```Go
@@ -5437,6 +5423,7 @@ func (b *buf) unitLength() (length Offset, dwarf64 bool)
 
 ```
 searchKey: dwarf.buf.error
+tags: [private]
 ```
 
 ```Go
@@ -5447,6 +5434,7 @@ func (b *buf) error(s string)
 
 ```
 searchKey: dwarf.buf.entry
+tags: [private]
 ```
 
 ```Go
@@ -5459,6 +5447,7 @@ Entry reads a single entry from buf, decoding according to the given abbreviatio
 
 ```
 searchKey: dwarf.dataFormat
+tags: [private]
 ```
 
 ```Go
@@ -5480,6 +5469,7 @@ Data format, other than byte order. This affects the handling of certain field f
 
 ```
 searchKey: dwarf.unknownFormat
+tags: [private]
 ```
 
 ```Go
@@ -5492,6 +5482,7 @@ Some parts of DWARF have no data format, e.g., abbrevs.
 
 ```
 searchKey: dwarf.unknownFormat.version
+tags: [private]
 ```
 
 ```Go
@@ -5502,6 +5493,7 @@ func (u unknownFormat) version() int
 
 ```
 searchKey: dwarf.unknownFormat.dwarf64
+tags: [private]
 ```
 
 ```Go
@@ -5512,6 +5504,7 @@ func (u unknownFormat) dwarf64() (bool, bool)
 
 ```
 searchKey: dwarf.unknownFormat.addrsize
+tags: [private]
 ```
 
 ```Go
@@ -5522,7 +5515,6 @@ func (u unknownFormat) addrsize() int
 
 ```
 searchKey: dwarf.DecodeError
-tags: [exported]
 ```
 
 ```Go
@@ -5537,7 +5529,6 @@ type DecodeError struct {
 
 ```
 searchKey: dwarf.DecodeError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -5548,7 +5539,6 @@ func (e DecodeError) Error() string
 
 ```
 searchKey: dwarf.Attr
-tags: [exported]
 ```
 
 ```Go
@@ -5561,7 +5551,6 @@ An Attr identifies the attribute type in a DWARF Entry's Field.
 
 ```
 searchKey: dwarf.Attr.String
-tags: [exported]
 ```
 
 ```Go
@@ -5572,7 +5561,6 @@ func (i Attr) String() string
 
 ```
 searchKey: dwarf.Attr.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -5583,6 +5571,7 @@ func (a Attr) GoString() string
 
 ```
 searchKey: dwarf.format
+tags: [private]
 ```
 
 ```Go
@@ -5595,7 +5584,6 @@ A format is a DWARF data encoding format.
 
 ```
 searchKey: dwarf.Tag
-tags: [exported]
 ```
 
 ```Go
@@ -5608,7 +5596,6 @@ A Tag is the classification (the type) of an Entry.
 
 ```
 searchKey: dwarf.Tag.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -5619,7 +5606,6 @@ func (t Tag) GoString() string
 
 ```
 searchKey: dwarf.Tag.String
-tags: [exported]
 ```
 
 ```Go
@@ -5630,6 +5616,7 @@ func (i Tag) String() string
 
 ```
 searchKey: dwarf.abbrev
+tags: [private]
 ```
 
 ```Go
@@ -5646,6 +5633,7 @@ a single entry's description: a sequence of attributes
 
 ```
 searchKey: dwarf.afield
+tags: [private]
 ```
 
 ```Go
@@ -5661,6 +5649,7 @@ type afield struct {
 
 ```
 searchKey: dwarf.abbrevTable
+tags: [private]
 ```
 
 ```Go
@@ -5673,7 +5662,6 @@ a map from entry format ids to their descriptions
 
 ```
 searchKey: dwarf.Entry
-tags: [exported]
 ```
 
 ```Go
@@ -5691,7 +5679,6 @@ An entry is a sequence of attribute/value pairs.
 
 ```
 searchKey: dwarf.Entry.Val
-tags: [exported]
 ```
 
 ```Go
@@ -5710,7 +5697,6 @@ v, ok := e.Val(AttrSibling).(int64)
 
 ```
 searchKey: dwarf.Entry.AttrField
-tags: [exported]
 ```
 
 ```Go
@@ -5723,7 +5709,6 @@ AttrField returns the Field associated with attribute Attr in Entry, or nil if t
 
 ```
 searchKey: dwarf.Field
-tags: [exported]
 ```
 
 ```Go
@@ -5762,7 +5747,6 @@ For unrecognized or vendor-defined attributes, Class may be ClassUnknown.
 
 ```
 searchKey: dwarf.Class
-tags: [exported]
 ```
 
 ```Go
@@ -5779,6 +5763,7 @@ DWARF version 4 distinguishes attribute value classes more finely than previous 
 
 ```
 searchKey: dwarf.formToClass
+tags: [private]
 ```
 
 ```Go
@@ -5791,7 +5776,6 @@ formToClass returns the DWARF 4 Class for the given form. If the DWARF version i
 
 ```
 searchKey: dwarf.Class.String
-tags: [exported]
 ```
 
 ```Go
@@ -5802,7 +5786,6 @@ func (i Class) String() string
 
 ```
 searchKey: dwarf.Class.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -5813,7 +5796,6 @@ func (i Class) GoString() string
 
 ```
 searchKey: dwarf.Offset
-tags: [exported]
 ```
 
 ```Go
@@ -5826,7 +5808,6 @@ An Offset represents the location of an Entry within the DWARF info. (See Reader
 
 ```
 searchKey: dwarf.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -5848,7 +5829,6 @@ A Reader allows reading Entry structures from a DWARF `info' section. The Entry 
 
 ```
 searchKey: dwarf.Reader.AddressSize
-tags: [exported]
 ```
 
 ```Go
@@ -5861,7 +5841,6 @@ AddressSize returns the size in bytes of addresses in the current compilation un
 
 ```
 searchKey: dwarf.Reader.ByteOrder
-tags: [exported]
 ```
 
 ```Go
@@ -5874,7 +5853,6 @@ ByteOrder returns the byte order in the current compilation unit.
 
 ```
 searchKey: dwarf.Reader.Seek
-tags: [exported]
 ```
 
 ```Go
@@ -5887,6 +5865,7 @@ Seek positions the Reader at offset off in the encoded entry stream. Offset 0 ca
 
 ```
 searchKey: dwarf.Reader.maybeNextUnit
+tags: [private]
 ```
 
 ```Go
@@ -5899,6 +5878,7 @@ maybeNextUnit advances to the next unit if this one is finished.
 
 ```
 searchKey: dwarf.Reader.nextUnit
+tags: [private]
 ```
 
 ```Go
@@ -5911,7 +5891,6 @@ nextUnit advances to the next unit.
 
 ```
 searchKey: dwarf.Reader.Next
-tags: [exported]
 ```
 
 ```Go
@@ -5924,7 +5903,6 @@ Next reads the next entry from the encoded entry stream. It returns nil, nil whe
 
 ```
 searchKey: dwarf.Reader.SkipChildren
-tags: [exported]
 ```
 
 ```Go
@@ -5937,6 +5915,7 @@ SkipChildren skips over the child entries associated with the last Entry returne
 
 ```
 searchKey: dwarf.Reader.clone
+tags: [private]
 ```
 
 ```Go
@@ -5949,6 +5928,7 @@ clone returns a copy of the reader. This is used by the typeReader interface.
 
 ```
 searchKey: dwarf.Reader.offset
+tags: [private]
 ```
 
 ```Go
@@ -5961,7 +5941,6 @@ offset returns the current buffer offset. This is used by the typeReader interfa
 
 ```
 searchKey: dwarf.Reader.SeekPC
-tags: [exported]
 ```
 
 ```Go
@@ -5976,7 +5955,6 @@ Because compilation units can describe multiple regions of the executable, in th
 
 ```
 searchKey: dwarf.LineReader
-tags: [exported]
 ```
 
 ```Go
@@ -6020,6 +5998,7 @@ A LineReader reads a sequence of LineEntry structures from a DWARF "line" sectio
 
 ```
 searchKey: dwarf.LineReader.readHeader
+tags: [private]
 ```
 
 ```Go
@@ -6032,6 +6011,7 @@ readHeader reads the line number program header from r.buf and sets all of the h
 
 ```
 searchKey: dwarf.LineReader.readLNCTFormat
+tags: [private]
 ```
 
 ```Go
@@ -6044,6 +6024,7 @@ readLNCTFormat reads an LNCT format description.
 
 ```
 searchKey: dwarf.LineReader.readLNCT
+tags: [private]
 ```
 
 ```Go
@@ -6056,6 +6037,7 @@ readLNCT reads a sequence of LNCT entries and returns path information.
 
 ```
 searchKey: dwarf.LineReader.readFileEntry
+tags: [private]
 ```
 
 ```Go
@@ -6068,6 +6050,7 @@ readFileEntry reads a file entry from either the header or a DW_LNE_define_file 
 
 ```
 searchKey: dwarf.LineReader.updateFile
+tags: [private]
 ```
 
 ```Go
@@ -6080,7 +6063,6 @@ updateFile updates r.state.File after r.fileIndex has changed or r.fileEntries h
 
 ```
 searchKey: dwarf.LineReader.Next
-tags: [exported]
 ```
 
 ```Go
@@ -6095,6 +6077,7 @@ Rows are always in order of increasing entry.Address, but entry.Line may go forw
 
 ```
 searchKey: dwarf.LineReader.step
+tags: [private]
 ```
 
 ```Go
@@ -6107,6 +6090,7 @@ step processes the next opcode and updates r.state. If the opcode emits a row in
 
 ```
 searchKey: dwarf.LineReader.advancePC
+tags: [private]
 ```
 
 ```Go
@@ -6119,7 +6103,6 @@ advancePC advances "operation pointer" (the combination of Address and OpIndex) 
 
 ```
 searchKey: dwarf.LineReader.Tell
-tags: [exported]
 ```
 
 ```Go
@@ -6132,7 +6115,6 @@ Tell returns the current position in the line table.
 
 ```
 searchKey: dwarf.LineReader.Seek
-tags: [exported]
 ```
 
 ```Go
@@ -6147,7 +6129,6 @@ The argument pos must have been returned by a call to Tell on this line table.
 
 ```
 searchKey: dwarf.LineReader.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -6160,6 +6141,7 @@ Reset repositions the line table reader at the beginning of the line table.
 
 ```
 searchKey: dwarf.LineReader.resetState
+tags: [private]
 ```
 
 ```Go
@@ -6172,7 +6154,6 @@ resetState resets r.state to its default values
 
 ```
 searchKey: dwarf.LineReader.Files
-tags: [exported]
 ```
 
 ```Go
@@ -6189,7 +6170,6 @@ The file name table of a compilation unit is not fixed. Files returns the file t
 
 ```
 searchKey: dwarf.LineReader.SeekPC
-tags: [exported]
 ```
 
 ```Go
@@ -6206,7 +6186,6 @@ Note that DWARF line tables only permit sequential, forward scans. Hence, in the
 
 ```
 searchKey: dwarf.LineEntry
-tags: [exported]
 ```
 
 ```Go
@@ -6295,7 +6274,6 @@ A LineEntry is a row in a DWARF line table.
 
 ```
 searchKey: dwarf.LineFile
-tags: [exported]
 ```
 
 ```Go
@@ -6312,6 +6290,7 @@ A LineFile is a source file referenced by a DWARF line table entry.
 
 ```
 searchKey: dwarf.lnctForm
+tags: [private]
 ```
 
 ```Go
@@ -6327,7 +6306,6 @@ lnctForm is a pair of an LNCT code and a form. This represents an entry in the d
 
 ```
 searchKey: dwarf.LineReaderPos
-tags: [exported]
 ```
 
 ```Go
@@ -6349,7 +6327,6 @@ A LineReaderPos represents a position in a line table.
 
 ```
 searchKey: dwarf.Data
-tags: [exported]
 ```
 
 ```Go
@@ -6386,7 +6363,6 @@ Data represents the DWARF debugging information loaded from an executable file (
 
 ```
 searchKey: dwarf.New
-tags: [exported]
 ```
 
 ```Go
@@ -6401,6 +6377,7 @@ The []byte arguments are the data from the corresponding debug section in the ob
 
 ```
 searchKey: dwarf.Data.parseAbbrev
+tags: [private]
 ```
 
 ```Go
@@ -6413,7 +6390,6 @@ ParseAbbrev returns the abbreviation table that starts at byte off in the .debug
 
 ```
 searchKey: dwarf.Data.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -6426,7 +6402,6 @@ Reader returns a new Reader for Data. The reader is positioned at byte offset 0 
 
 ```
 searchKey: dwarf.Data.Ranges
-tags: [exported]
 ```
 
 ```Go
@@ -6439,6 +6414,7 @@ Ranges returns the PC ranges covered by e, a slice of [low,high) pairs. Only som
 
 ```
 searchKey: dwarf.Data.baseAddressForEntry
+tags: [private]
 ```
 
 ```Go
@@ -6451,6 +6427,7 @@ baseAddressForEntry returns the initial base address to be used when looking up 
 
 ```
 searchKey: dwarf.Data.dwarf2Ranges
+tags: [private]
 ```
 
 ```Go
@@ -6461,6 +6438,7 @@ func (d *Data) dwarf2Ranges(u *unit, base uint64, ranges int64, ret [][2]uint64)
 
 ```
 searchKey: dwarf.Data.dwarf5Ranges
+tags: [private]
 ```
 
 ```Go
@@ -6473,6 +6451,7 @@ dwarf5Ranges interpets a debug_rnglists sequence, see DWARFv5 section 2.17.3 (pa
 
 ```
 searchKey: dwarf.Data.debugAddr
+tags: [private]
 ```
 
 ```Go
@@ -6485,7 +6464,6 @@ debugAddr returns the address at idx in debug_addr
 
 ```
 searchKey: dwarf.Data.LineReader
-tags: [exported]
 ```
 
 ```Go
@@ -6500,7 +6478,6 @@ If this compilation unit has no line table, it returns nil, nil.
 
 ```
 searchKey: dwarf.Data.AddTypes
-tags: [exported]
 ```
 
 ```Go
@@ -6513,7 +6490,6 @@ AddTypes will add one .debug_types section to the DWARF data. A typical object w
 
 ```
 searchKey: dwarf.Data.AddSection
-tags: [exported]
 ```
 
 ```Go
@@ -6526,7 +6502,6 @@ AddSection adds another DWARF section by name. The name should be a DWARF sectio
 
 ```
 searchKey: dwarf.Data.Type
-tags: [exported]
 ```
 
 ```Go
@@ -6539,6 +6514,7 @@ Type reads the type at off in the DWARF `info' section.
 
 ```
 searchKey: dwarf.Data.readType
+tags: [private]
 ```
 
 ```Go
@@ -6551,6 +6527,7 @@ readType reads a type from r at off of name. It adds types to the type cache, ap
 
 ```
 searchKey: dwarf.Data.parseTypes
+tags: [private]
 ```
 
 ```Go
@@ -6563,6 +6540,7 @@ Parse a .debug_types section.
 
 ```
 searchKey: dwarf.Data.sigToType
+tags: [private]
 ```
 
 ```Go
@@ -6575,6 +6553,7 @@ Return the type for a type signature.
 
 ```
 searchKey: dwarf.Data.parseUnits
+tags: [private]
 ```
 
 ```Go
@@ -6585,6 +6564,7 @@ func (d *Data) parseUnits() ([]unit, error)
 
 ```
 searchKey: dwarf.Data.offsetToUnit
+tags: [private]
 ```
 
 ```Go
@@ -6597,7 +6577,6 @@ offsetToUnit returns the index of the unit containing offset off. It returns -1 
 
 ```
 searchKey: dwarf.Type
-tags: [exported]
 ```
 
 ```Go
@@ -6614,7 +6593,6 @@ A Type conventionally represents a pointer to any of the specific Type structure
 
 ```
 searchKey: dwarf.CommonType
-tags: [exported]
 ```
 
 ```Go
@@ -6630,7 +6608,6 @@ A CommonType holds fields common to multiple types. If a field is not known or n
 
 ```
 searchKey: dwarf.CommonType.Common
-tags: [exported]
 ```
 
 ```Go
@@ -6641,7 +6618,6 @@ func (c *CommonType) Common() *CommonType
 
 ```
 searchKey: dwarf.CommonType.Size
-tags: [exported]
 ```
 
 ```Go
@@ -6652,7 +6628,6 @@ func (c *CommonType) Size() int64
 
 ```
 searchKey: dwarf.BasicType
-tags: [exported]
 ```
 
 ```Go
@@ -6669,7 +6644,6 @@ A BasicType holds fields common to all basic types.
 
 ```
 searchKey: dwarf.BasicType.Basic
-tags: [exported]
 ```
 
 ```Go
@@ -6680,7 +6654,6 @@ func (b *BasicType) Basic() *BasicType
 
 ```
 searchKey: dwarf.BasicType.String
-tags: [exported]
 ```
 
 ```Go
@@ -6691,7 +6664,6 @@ func (t *BasicType) String() string
 
 ```
 searchKey: dwarf.CharType
-tags: [exported]
 ```
 
 ```Go
@@ -6706,7 +6678,6 @@ A CharType represents a signed character type.
 
 ```
 searchKey: dwarf.UcharType
-tags: [exported]
 ```
 
 ```Go
@@ -6721,7 +6692,6 @@ A UcharType represents an unsigned character type.
 
 ```
 searchKey: dwarf.IntType
-tags: [exported]
 ```
 
 ```Go
@@ -6736,7 +6706,6 @@ An IntType represents a signed integer type.
 
 ```
 searchKey: dwarf.UintType
-tags: [exported]
 ```
 
 ```Go
@@ -6751,7 +6720,6 @@ A UintType represents an unsigned integer type.
 
 ```
 searchKey: dwarf.FloatType
-tags: [exported]
 ```
 
 ```Go
@@ -6766,7 +6734,6 @@ A FloatType represents a floating point type.
 
 ```
 searchKey: dwarf.ComplexType
-tags: [exported]
 ```
 
 ```Go
@@ -6781,7 +6748,6 @@ A ComplexType represents a complex floating point type.
 
 ```
 searchKey: dwarf.BoolType
-tags: [exported]
 ```
 
 ```Go
@@ -6796,7 +6762,6 @@ A BoolType represents a boolean type.
 
 ```
 searchKey: dwarf.AddrType
-tags: [exported]
 ```
 
 ```Go
@@ -6811,7 +6776,6 @@ An AddrType represents a machine address type.
 
 ```
 searchKey: dwarf.UnspecifiedType
-tags: [exported]
 ```
 
 ```Go
@@ -6826,7 +6790,6 @@ An UnspecifiedType represents an implicit, unknown, ambiguous or nonexistent typ
 
 ```
 searchKey: dwarf.QualType
-tags: [exported]
 ```
 
 ```Go
@@ -6843,7 +6806,6 @@ A QualType represents a type that has the C/C++ "const", "restrict", or "volatil
 
 ```
 searchKey: dwarf.QualType.String
-tags: [exported]
 ```
 
 ```Go
@@ -6854,7 +6816,6 @@ func (t *QualType) String() string
 
 ```
 searchKey: dwarf.QualType.Size
-tags: [exported]
 ```
 
 ```Go
@@ -6865,7 +6826,6 @@ func (t *QualType) Size() int64
 
 ```
 searchKey: dwarf.ArrayType
-tags: [exported]
 ```
 
 ```Go
@@ -6883,7 +6843,6 @@ An ArrayType represents a fixed size array type.
 
 ```
 searchKey: dwarf.ArrayType.String
-tags: [exported]
 ```
 
 ```Go
@@ -6894,7 +6853,6 @@ func (t *ArrayType) String() string
 
 ```
 searchKey: dwarf.ArrayType.Size
-tags: [exported]
 ```
 
 ```Go
@@ -6905,7 +6863,6 @@ func (t *ArrayType) Size() int64
 
 ```
 searchKey: dwarf.VoidType
-tags: [exported]
 ```
 
 ```Go
@@ -6920,7 +6877,6 @@ A VoidType represents the C void type.
 
 ```
 searchKey: dwarf.VoidType.String
-tags: [exported]
 ```
 
 ```Go
@@ -6931,7 +6887,6 @@ func (t *VoidType) String() string
 
 ```
 searchKey: dwarf.PtrType
-tags: [exported]
 ```
 
 ```Go
@@ -6947,7 +6902,6 @@ A PtrType represents a pointer type.
 
 ```
 searchKey: dwarf.PtrType.String
-tags: [exported]
 ```
 
 ```Go
@@ -6958,7 +6912,6 @@ func (t *PtrType) String() string
 
 ```
 searchKey: dwarf.StructType
-tags: [exported]
 ```
 
 ```Go
@@ -6977,7 +6930,6 @@ A StructType represents a struct, union, or C++ class type.
 
 ```
 searchKey: dwarf.StructType.String
-tags: [exported]
 ```
 
 ```Go
@@ -6988,7 +6940,6 @@ func (t *StructType) String() string
 
 ```
 searchKey: dwarf.StructType.Defn
-tags: [exported]
 ```
 
 ```Go
@@ -6999,7 +6950,6 @@ func (t *StructType) Defn() string
 
 ```
 searchKey: dwarf.StructField
-tags: [exported]
 ```
 
 ```Go
@@ -7019,7 +6969,6 @@ A StructField represents a field in a struct, union, or C++ class type.
 
 ```
 searchKey: dwarf.EnumType
-tags: [exported]
 ```
 
 ```Go
@@ -7036,7 +6985,6 @@ An EnumType represents an enumerated type. The only indication of its native int
 
 ```
 searchKey: dwarf.EnumType.String
-tags: [exported]
 ```
 
 ```Go
@@ -7047,7 +6995,6 @@ func (t *EnumType) String() string
 
 ```
 searchKey: dwarf.EnumValue
-tags: [exported]
 ```
 
 ```Go
@@ -7063,7 +7010,6 @@ An EnumValue represents a single enumeration value.
 
 ```
 searchKey: dwarf.FuncType
-tags: [exported]
 ```
 
 ```Go
@@ -7080,7 +7026,6 @@ A FuncType represents a function type.
 
 ```
 searchKey: dwarf.FuncType.String
-tags: [exported]
 ```
 
 ```Go
@@ -7091,7 +7036,6 @@ func (t *FuncType) String() string
 
 ```
 searchKey: dwarf.DotDotDotType
-tags: [exported]
 ```
 
 ```Go
@@ -7106,7 +7050,6 @@ A DotDotDotType represents the variadic ... function parameter.
 
 ```
 searchKey: dwarf.DotDotDotType.String
-tags: [exported]
 ```
 
 ```Go
@@ -7117,7 +7060,6 @@ func (t *DotDotDotType) String() string
 
 ```
 searchKey: dwarf.TypedefType
-tags: [exported]
 ```
 
 ```Go
@@ -7133,7 +7075,6 @@ A TypedefType represents a named type.
 
 ```
 searchKey: dwarf.TypedefType.String
-tags: [exported]
 ```
 
 ```Go
@@ -7144,7 +7085,6 @@ func (t *TypedefType) String() string
 
 ```
 searchKey: dwarf.TypedefType.Size
-tags: [exported]
 ```
 
 ```Go
@@ -7155,7 +7095,6 @@ func (t *TypedefType) Size() int64
 
 ```
 searchKey: dwarf.UnsupportedType
-tags: [exported]
 ```
 
 ```Go
@@ -7171,7 +7110,6 @@ An UnsupportedType is a placeholder returned in situations where we encounter a 
 
 ```
 searchKey: dwarf.UnsupportedType.String
-tags: [exported]
 ```
 
 ```Go
@@ -7182,6 +7120,7 @@ func (t *UnsupportedType) String() string
 
 ```
 searchKey: dwarf.typeReader
+tags: [private]
 ```
 
 ```Go
@@ -7202,6 +7141,7 @@ typeReader is used to read from either the info section or the types section.
 
 ```
 searchKey: dwarf.typeFixer
+tags: [private]
 ```
 
 ```Go
@@ -7215,6 +7155,7 @@ type typeFixer struct {
 
 ```
 searchKey: dwarf.typeFixer.recordArrayType
+tags: [private]
 ```
 
 ```Go
@@ -7225,6 +7166,7 @@ func (tf *typeFixer) recordArrayType(t *Type)
 
 ```
 searchKey: dwarf.typeFixer.apply
+tags: [private]
 ```
 
 ```Go
@@ -7235,6 +7177,7 @@ func (tf *typeFixer) apply()
 
 ```
 searchKey: dwarf.typeUnit
+tags: [private]
 ```
 
 ```Go
@@ -7252,6 +7195,7 @@ The typeUnit format is a single type with a signature. It holds the same data as
 
 ```
 searchKey: dwarf.typeUnitReader
+tags: [private]
 ```
 
 ```Go
@@ -7269,6 +7213,7 @@ typeUnitReader is a typeReader for a tagTypeUnit.
 
 ```
 searchKey: dwarf.typeUnitReader.Seek
+tags: [private]
 ```
 
 ```Go
@@ -7281,6 +7226,7 @@ Seek to a new position in the type unit.
 
 ```
 searchKey: dwarf.typeUnitReader.AddressSize
+tags: [private]
 ```
 
 ```Go
@@ -7293,6 +7239,7 @@ AddressSize returns the size in bytes of addresses in the current type unit.
 
 ```
 searchKey: dwarf.typeUnitReader.Next
+tags: [private]
 ```
 
 ```Go
@@ -7305,6 +7252,7 @@ Next reads the next Entry from the type unit.
 
 ```
 searchKey: dwarf.typeUnitReader.clone
+tags: [private]
 ```
 
 ```Go
@@ -7317,6 +7265,7 @@ clone returns a new reader for the type unit.
 
 ```
 searchKey: dwarf.typeUnitReader.offset
+tags: [private]
 ```
 
 ```Go
@@ -7329,6 +7278,7 @@ offset returns the current offset.
 
 ```
 searchKey: dwarf.unit
+tags: [private]
 ```
 
 ```Go
@@ -7348,6 +7298,7 @@ type unit struct {
 
 ```
 searchKey: dwarf.unit.version
+tags: [private]
 ```
 
 ```Go
@@ -7358,6 +7309,7 @@ func (u *unit) version() int
 
 ```
 searchKey: dwarf.unit.dwarf64
+tags: [private]
 ```
 
 ```Go
@@ -7368,6 +7320,7 @@ func (u *unit) dwarf64() (bool, bool)
 
 ```
 searchKey: dwarf.unit.addrsize
+tags: [private]
 ```
 
 ```Go
@@ -7376,34 +7329,11 @@ func (u *unit) addrsize() int
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
-### <a id="_" href="#_">func _()</a>
-
-```
-searchKey: dwarf._
-```
-
-```Go
-func _()
-```
-
-### <a id="_" href="#_">func _()</a>
-
-```
-searchKey: dwarf._
-```
-
-```Go
-func _()
-```
-
 ### <a id="pathIsAbs" href="#pathIsAbs">func pathIsAbs(path string) bool</a>
 
 ```
 searchKey: dwarf.pathIsAbs
+tags: [private]
 ```
 
 ```Go
@@ -7416,6 +7346,7 @@ pathIsAbs reports whether path is an absolute path (or "full path name" in DWARF
 
 ```
 searchKey: dwarf.pathJoin
+tags: [private]
 ```
 
 ```Go
@@ -7428,6 +7359,7 @@ pathJoin joins dirname and filename. filename must be relative. DWARF paths can 
 
 ```
 searchKey: dwarf.splitDrive
+tags: [private]
 ```
 
 ```Go
@@ -7436,20 +7368,11 @@ func splitDrive(path string) (drive, rest string)
 
 splitDrive splits the DOS drive letter or UNC share point from path, if any. path == drive + rest 
 
-### <a id="_" href="#_">func _()</a>
-
-```
-searchKey: dwarf._
-```
-
-```Go
-func _()
-```
-
 ### <a id="zeroArray" href="#zeroArray">func zeroArray(t *Type)</a>
 
 ```
 searchKey: dwarf.zeroArray
+tags: [private]
 ```
 
 ```Go
@@ -7460,6 +7383,7 @@ func zeroArray(t *Type)
 
 ```
 searchKey: dwarf.TestDwarf5Ranges
+tags: [private]
 ```
 
 ```Go

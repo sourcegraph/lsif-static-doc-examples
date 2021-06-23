@@ -39,11 +39,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DefaultMutexExpiry" href="#DefaultMutexExpiry">const DefaultMutexExpiry</a>
 
 ```
 searchKey: rcache.DefaultMutexExpiry
-tags: [exported]
 ```
 
 ```Go
@@ -54,7 +57,6 @@ const DefaultMutexExpiry = time.Minute
 
 ```
 searchKey: rcache.DefaultMutexTries
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +69,6 @@ We make it low since we want to give up quickly. Failing to acquire the lock wil
 
 ```
 searchKey: rcache.DefaultMutexDelay
-tags: [exported]
 ```
 
 ```Go
@@ -78,6 +79,7 @@ const DefaultMutexDelay = 512 * time.Millisecond
 
 ```
 searchKey: rcache.dataVersion
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +92,7 @@ dataVersion is used for releases that change type structure for data that may al
 
 ```
 searchKey: rcache.dataVersionToDelete
+tags: [private]
 ```
 
 ```Go
@@ -98,10 +101,15 @@ const dataVersionToDelete = "v1"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="deleteBatchSize" href="#deleteBatchSize">var deleteBatchSize</a>
 
 ```
 searchKey: rcache.deleteBatchSize
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +122,7 @@ The number of keys to delete per batch. The maximum number of keys that can be u
 
 ```
 searchKey: rcache.pool
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +133,7 @@ var pool = redispool.Cache
 
 ```
 searchKey: rcache.globalPrefix
+tags: [private]
 ```
 
 ```Go
@@ -132,11 +142,14 @@ var globalPrefix = dataVersion
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MutexOptions" href="#MutexOptions">type MutexOptions struct</a>
 
 ```
 searchKey: rcache.MutexOptions
-tags: [exported]
 ```
 
 ```Go
@@ -158,7 +171,6 @@ MutexOptions hold options passed to TryAcquireMutex. It is safe to pass zero val
 
 ```
 searchKey: rcache.Cache
-tags: [exported]
 ```
 
 ```Go
@@ -174,7 +186,6 @@ Cache implements httpcache.Cache
 
 ```
 searchKey: rcache.New
-tags: [exported]
 ```
 
 ```Go
@@ -187,7 +198,6 @@ New creates a redis backed Cache
 
 ```
 searchKey: rcache.NewWithTTL
-tags: [exported]
 ```
 
 ```Go
@@ -200,7 +210,6 @@ NewWithTTL creates a redis backed Cache which expires values after ttlSeconds.
 
 ```
 searchKey: rcache.Cache.GetMulti
-tags: [exported]
 ```
 
 ```Go
@@ -211,7 +220,6 @@ func (r *Cache) GetMulti(keys ...string) [][]byte
 
 ```
 searchKey: rcache.Cache.SetMulti
-tags: [exported]
 ```
 
 ```Go
@@ -222,7 +230,6 @@ func (r *Cache) SetMulti(keyvals ...[2]string)
 
 ```
 searchKey: rcache.Cache.Get
-tags: [exported]
 ```
 
 ```Go
@@ -235,7 +242,6 @@ Get implements httpcache.Cache.Get
 
 ```
 searchKey: rcache.Cache.Set
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +254,6 @@ Set implements httpcache.Cache.Set
 
 ```
 searchKey: rcache.Cache.Delete
-tags: [exported]
 ```
 
 ```Go
@@ -261,6 +266,7 @@ Delete implements httpcache.Cache.Delete
 
 ```
 searchKey: rcache.Cache.rkeyPrefix
+tags: [private]
 ```
 
 ```Go
@@ -273,7 +279,6 @@ rkeyPrefix generates the actual key prefix we use on redis.
 
 ```
 searchKey: rcache.TB
-tags: [exported]
 ```
 
 ```Go
@@ -288,11 +293,14 @@ TB is a subset of testing.TB
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TryAcquireMutex" href="#TryAcquireMutex">func TryAcquireMutex(ctx context.Context, name string, options MutexOptions) (context.Context, func(), bool)</a>
 
 ```
 searchKey: rcache.TryAcquireMutex
-tags: [exported]
 ```
 
 ```Go
@@ -311,7 +319,6 @@ A caller can therefore assume that they are the sole holder of the lock as long 
 
 ```
 searchKey: rcache.DeleteOldCacheData
-tags: [exported]
 ```
 
 ```Go
@@ -324,7 +331,6 @@ DeleteOldCacheData deletes the rcache data in the given Redis instance that's pr
 
 ```
 searchKey: rcache.SetupForTest
-tags: [exported]
 ```
 
 ```Go
@@ -337,6 +343,7 @@ SetupForTest adjusts the globalPrefix and clears it out. You will have conflicts
 
 ```
 searchKey: rcache.deleteKeysWithPrefix
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +354,7 @@ func deleteKeysWithPrefix(c redis.Conn, prefix string) error
 
 ```
 searchKey: rcache.TestTryAcquireMutex
+tags: [private]
 ```
 
 ```Go
@@ -357,6 +365,7 @@ func TestTryAcquireMutex(t *testing.T)
 
 ```
 searchKey: rcache.TestCache_namespace
+tags: [private]
 ```
 
 ```Go
@@ -367,6 +376,7 @@ func TestCache_namespace(t *testing.T)
 
 ```
 searchKey: rcache.TestCache_simple
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +387,7 @@ func TestCache_simple(t *testing.T)
 
 ```
 searchKey: rcache.TestCache_multi
+tags: [private]
 ```
 
 ```Go
@@ -387,6 +398,7 @@ func TestCache_multi(t *testing.T)
 
 ```
 searchKey: rcache.TestCache_deleteKeysWithPrefix
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +409,7 @@ func TestCache_deleteKeysWithPrefix(t *testing.T)
 
 ```
 searchKey: rcache.bytes
+tags: [private]
 ```
 
 ```Go

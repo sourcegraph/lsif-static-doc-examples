@@ -60,15 +60,10 @@ Package fstest implements support for testing implementations and users of file 
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="MapFS" href="#MapFS">type MapFS map[string]*fstest.MapFile</a>
 
 ```
 searchKey: fstest.MapFS
-tags: [exported]
 ```
 
 ```Go
@@ -85,7 +80,6 @@ File system operations read directly from the map, so that the file system can b
 
 ```
 searchKey: fstest.MapFS.Open
-tags: [exported]
 ```
 
 ```Go
@@ -98,7 +92,6 @@ Open opens the named file.
 
 ```
 searchKey: fstest.MapFS.ReadFile
-tags: [exported]
 ```
 
 ```Go
@@ -109,7 +102,6 @@ func (fsys MapFS) ReadFile(name string) ([]byte, error)
 
 ```
 searchKey: fstest.MapFS.Stat
-tags: [exported]
 ```
 
 ```Go
@@ -120,7 +112,6 @@ func (fsys MapFS) Stat(name string) (fs.FileInfo, error)
 
 ```
 searchKey: fstest.MapFS.ReadDir
-tags: [exported]
 ```
 
 ```Go
@@ -131,7 +122,6 @@ func (fsys MapFS) ReadDir(name string) ([]fs.DirEntry, error)
 
 ```
 searchKey: fstest.MapFS.Glob
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +132,6 @@ func (fsys MapFS) Glob(pattern string) ([]string, error)
 
 ```
 searchKey: fstest.MapFS.Sub
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +142,6 @@ func (fsys MapFS) Sub(dir string) (fs.FS, error)
 
 ```
 searchKey: fstest.MapFile
-tags: [exported]
 ```
 
 ```Go
@@ -171,6 +159,7 @@ A MapFile describes a single file in a MapFS.
 
 ```
 searchKey: fstest.fsOnly
+tags: [private]
 ```
 
 ```Go
@@ -183,6 +172,7 @@ fsOnly is a wrapper that hides all but the fs.FS methods, to avoid an infinite r
 
 ```
 searchKey: fstest.noSub
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +185,7 @@ type noSub struct {
 
 ```
 searchKey: fstest.noSub.Sub
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +196,7 @@ func (noSub) Sub()
 
 ```
 searchKey: fstest.mapFileInfo
+tags: [private]
 ```
 
 ```Go
@@ -220,6 +212,7 @@ A mapFileInfo implements fs.FileInfo and fs.DirEntry for a given map file.
 
 ```
 searchKey: fstest.mapFileInfo.Name
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +223,7 @@ func (i *mapFileInfo) Name() string
 
 ```
 searchKey: fstest.mapFileInfo.Size
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +234,7 @@ func (i *mapFileInfo) Size() int64
 
 ```
 searchKey: fstest.mapFileInfo.Mode
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +245,7 @@ func (i *mapFileInfo) Mode() fs.FileMode
 
 ```
 searchKey: fstest.mapFileInfo.Type
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +256,7 @@ func (i *mapFileInfo) Type() fs.FileMode
 
 ```
 searchKey: fstest.mapFileInfo.ModTime
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +267,7 @@ func (i *mapFileInfo) ModTime() time.Time
 
 ```
 searchKey: fstest.mapFileInfo.IsDir
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +278,7 @@ func (i *mapFileInfo) IsDir() bool
 
 ```
 searchKey: fstest.mapFileInfo.Sys
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +289,7 @@ func (i *mapFileInfo) Sys() interface{}
 
 ```
 searchKey: fstest.mapFileInfo.Info
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +300,7 @@ func (i *mapFileInfo) Info() (fs.FileInfo, error)
 
 ```
 searchKey: fstest.openMapFile
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +317,7 @@ An openMapFile is a regular (non-directory) fs.File open for reading.
 
 ```
 searchKey: fstest.openMapFile.Stat
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +328,7 @@ func (f *openMapFile) Stat() (fs.FileInfo, error)
 
 ```
 searchKey: fstest.openMapFile.Close
+tags: [private]
 ```
 
 ```Go
@@ -336,6 +339,7 @@ func (f *openMapFile) Close() error
 
 ```
 searchKey: fstest.openMapFile.Read
+tags: [private]
 ```
 
 ```Go
@@ -346,6 +350,7 @@ func (f *openMapFile) Read(b []byte) (int, error)
 
 ```
 searchKey: fstest.openMapFile.Seek
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +361,7 @@ func (f *openMapFile) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: fstest.openMapFile.ReadAt
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +372,7 @@ func (f *openMapFile) ReadAt(b []byte, offset int64) (int, error)
 
 ```
 searchKey: fstest.mapDir
+tags: [private]
 ```
 
 ```Go
@@ -383,6 +390,7 @@ A mapDir is a directory fs.File (so also an fs.ReadDirFile) open for reading.
 
 ```
 searchKey: fstest.mapDir.Stat
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +401,7 @@ func (d *mapDir) Stat() (fs.FileInfo, error)
 
 ```
 searchKey: fstest.mapDir.Close
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +412,7 @@ func (d *mapDir) Close() error
 
 ```
 searchKey: fstest.mapDir.Read
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +423,7 @@ func (d *mapDir) Read(b []byte) (int, error)
 
 ```
 searchKey: fstest.mapDir.ReadDir
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +434,7 @@ func (d *mapDir) ReadDir(count int) ([]fs.DirEntry, error)
 
 ```
 searchKey: fstest.fsTester
+tags: [private]
 ```
 
 ```Go
@@ -440,6 +452,7 @@ An fsTester holds state for running the test.
 
 ```
 searchKey: fstest.fsTester.errorf
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +465,7 @@ errorf adds an error line to errText.
 
 ```
 searchKey: fstest.fsTester.openDir
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +476,7 @@ func (t *fsTester) openDir(dir string) fs.ReadDirFile
 
 ```
 searchKey: fstest.fsTester.checkDir
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +489,7 @@ checkDir checks the directory dir, which is expected to exist (it is either the 
 
 ```
 searchKey: fstest.fsTester.checkGlob
+tags: [private]
 ```
 
 ```Go
@@ -486,6 +502,7 @@ checkGlob checks that various glob patterns work if the file system implements G
 
 ```
 searchKey: fstest.fsTester.checkStat
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +515,7 @@ checkStat checks that a direct stat of path matches entry, which was found in th
 
 ```
 searchKey: fstest.fsTester.checkDirList
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +528,7 @@ checkDirList checks that two directory lists contain the same files and file inf
 
 ```
 searchKey: fstest.fsTester.checkFile
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +541,7 @@ checkFile checks that basic file reading works correctly.
 
 ```
 searchKey: fstest.fsTester.checkFileRead
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +552,7 @@ func (t *fsTester) checkFileRead(file, desc string, data1, data2 []byte)
 
 ```
 searchKey: fstest.fsTester.checkOpen
+tags: [private]
 ```
 
 ```Go
@@ -544,6 +565,7 @@ checkBadPath checks that various invalid forms of file's name cannot be opened u
 
 ```
 searchKey: fstest.fsTester.checkBadPath
+tags: [private]
 ```
 
 ```Go
@@ -554,15 +576,10 @@ checkBadPath checks that various invalid forms of file's name cannot be opened u
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="TestFS" href="#TestFS">func TestFS(fsys fs.FS, expected ...string) error</a>
 
 ```
 searchKey: fstest.TestFS
-tags: [exported]
 ```
 
 ```Go
@@ -585,6 +602,7 @@ if err := fstest.TestFS(myFS, "file/that/should/be/present"); err != nil {
 
 ```
 searchKey: fstest.testFS
+tags: [private]
 ```
 
 ```Go
@@ -595,6 +613,7 @@ func testFS(fsys fs.FS, expected ...string) error
 
 ```
 searchKey: fstest.formatEntry
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +626,7 @@ formatEntry formats an fs.DirEntry into a string for error messages and comparis
 
 ```
 searchKey: fstest.formatInfoEntry
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +639,7 @@ formatInfoEntry formats an fs.FileInfo into a string like the result of formatEn
 
 ```
 searchKey: fstest.formatInfo
+tags: [private]
 ```
 
 ```Go
@@ -631,6 +652,7 @@ formatInfo formats an fs.FileInfo into a string for error messages and compariso
 
 ```
 searchKey: fstest.TestMapFS
+tags: [private]
 ```
 
 ```Go
@@ -641,6 +663,7 @@ func TestMapFS(t *testing.T)
 
 ```
 searchKey: fstest.TestSymlink
+tags: [private]
 ```
 
 ```Go
@@ -651,6 +674,7 @@ func TestSymlink(t *testing.T)
 
 ```
 searchKey: fstest.TestDash
+tags: [private]
 ```
 
 ```Go

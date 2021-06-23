@@ -255,10 +255,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="benchmarkString" href="#benchmarkString">const benchmarkString</a>
 
 ```
 searchKey: strings_test.benchmarkString
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +274,7 @@ const benchmarkString = "some_text=some☺value"
 
 ```
 searchKey: strings_test.space
+tags: [private]
 ```
 
 ```Go
@@ -277,10 +283,15 @@ const space = "\t\v\r\f\n\u0085\u00a0\u2000\u3000"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="someBytes" href="#someBytes">var someBytes</a>
 
 ```
 searchKey: strings_test.someBytes
+tags: [private]
 ```
 
 ```Go
@@ -291,6 +302,7 @@ var someBytes = []byte("some bytes sdljlk jsklj3lkjlk djlkjw")
 
 ```
 searchKey: strings_test.sinkS
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +313,7 @@ var sinkS string
 
 ```
 searchKey: strings_test.compareTests
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +324,7 @@ var compareTests = ...
 
 ```
 searchKey: strings_test.htmlEscaper
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +335,7 @@ var htmlEscaper = ...
 
 ```
 searchKey: strings_test.htmlUnescaper
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +346,7 @@ var htmlUnescaper = ...
 
 ```
 searchKey: strings_test.capitalLetters
+tags: [private]
 ```
 
 ```Go
@@ -341,6 +357,7 @@ var capitalLetters = NewReplacer("a", "A", "b", "B")
 
 ```
 searchKey: strings_test.algorithmTestCases
+tags: [private]
 ```
 
 ```Go
@@ -351,6 +368,7 @@ var algorithmTestCases = ...
 
 ```
 searchKey: strings_test.mapdata
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +379,7 @@ var mapdata = ...
 
 ```
 searchKey: strings_test.abcd
+tags: [private]
 ```
 
 ```Go
@@ -371,6 +390,7 @@ var abcd = "abcd"
 
 ```
 searchKey: strings_test.faces
+tags: [private]
 ```
 
 ```Go
@@ -381,6 +401,7 @@ var faces = "☺☻☹"
 
 ```
 searchKey: strings_test.commas
+tags: [private]
 ```
 
 ```Go
@@ -391,6 +412,7 @@ var commas = "1,2,3,4"
 
 ```
 searchKey: strings_test.dots
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +423,7 @@ var dots = "1....2....3....4"
 
 ```
 searchKey: strings_test.indexTests
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +434,7 @@ var indexTests = ...
 
 ```
 searchKey: strings_test.lastIndexTests
+tags: [private]
 ```
 
 ```Go
@@ -421,6 +445,7 @@ var lastIndexTests = ...
 
 ```
 searchKey: strings_test.indexAnyTests
+tags: [private]
 ```
 
 ```Go
@@ -431,6 +456,7 @@ var indexAnyTests = ...
 
 ```
 searchKey: strings_test.lastIndexAnyTests
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +467,7 @@ var lastIndexAnyTests = ...
 
 ```
 searchKey: strings_test.benchmarkLongString
+tags: [private]
 ```
 
 ```Go
@@ -451,6 +478,7 @@ var benchmarkLongString = Repeat(" ", 100) + benchmarkString
 
 ```
 searchKey: strings_test.splittests
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +489,7 @@ var splittests = ...
 
 ```
 searchKey: strings_test.splitaftertests
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +500,7 @@ var splitaftertests = ...
 
 ```
 searchKey: strings_test.fieldstests
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +511,7 @@ var fieldstests = ...
 
 ```
 searchKey: strings_test.FieldsFuncTests
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +522,7 @@ var FieldsFuncTests = ...
 
 ```
 searchKey: strings_test.upperTests
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +533,7 @@ var upperTests = ...
 
 ```
 searchKey: strings_test.lowerTests
+tags: [private]
 ```
 
 ```Go
@@ -511,6 +544,7 @@ var lowerTests = ...
 
 ```
 searchKey: strings_test.trimSpaceTests
+tags: [private]
 ```
 
 ```Go
@@ -521,6 +555,7 @@ var trimSpaceTests = ...
 
 ```
 searchKey: strings_test.toValidUTF8Tests
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +566,7 @@ var toValidUTF8Tests = ...
 
 ```
 searchKey: strings_test.trimTests
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +577,7 @@ var trimTests = ...
 
 ```
 searchKey: strings_test.isSpace
+tags: [private]
 ```
 
 ```Go
@@ -551,6 +588,7 @@ var isSpace = predicate{unicode.IsSpace, "IsSpace"}
 
 ```
 searchKey: strings_test.isDigit
+tags: [private]
 ```
 
 ```Go
@@ -561,6 +599,7 @@ var isDigit = predicate{unicode.IsDigit, "IsDigit"}
 
 ```
 searchKey: strings_test.isUpper
+tags: [private]
 ```
 
 ```Go
@@ -571,6 +610,7 @@ var isUpper = predicate{unicode.IsUpper, "IsUpper"}
 
 ```
 searchKey: strings_test.isValidRune
+tags: [private]
 ```
 
 ```Go
@@ -586,6 +626,7 @@ var isValidRune = predicate{
 
 ```
 searchKey: strings_test.trimFuncTests
+tags: [private]
 ```
 
 ```Go
@@ -596,6 +637,7 @@ var trimFuncTests = ...
 
 ```
 searchKey: strings_test.indexFuncTests
+tags: [private]
 ```
 
 ```Go
@@ -606,6 +648,7 @@ var indexFuncTests = ...
 
 ```
 searchKey: strings_test.RepeatTests
+tags: [private]
 ```
 
 ```Go
@@ -616,6 +659,7 @@ var RepeatTests = ...
 
 ```
 searchKey: strings_test.RunesTests
+tags: [private]
 ```
 
 ```Go
@@ -626,6 +670,7 @@ var RunesTests = ...
 
 ```
 searchKey: strings_test.UnreadRuneErrorTests
+tags: [private]
 ```
 
 ```Go
@@ -636,6 +681,7 @@ var UnreadRuneErrorTests = ...
 
 ```
 searchKey: strings_test.ReplaceTests
+tags: [private]
 ```
 
 ```Go
@@ -646,6 +692,7 @@ var ReplaceTests = ...
 
 ```
 searchKey: strings_test.TitleTests
+tags: [private]
 ```
 
 ```Go
@@ -656,6 +703,7 @@ var TitleTests = ...
 
 ```
 searchKey: strings_test.ContainsTests
+tags: [private]
 ```
 
 ```Go
@@ -666,6 +714,7 @@ var ContainsTests = ...
 
 ```
 searchKey: strings_test.ContainsAnyTests
+tags: [private]
 ```
 
 ```Go
@@ -676,6 +725,7 @@ var ContainsAnyTests = ...
 
 ```
 searchKey: strings_test.ContainsRuneTests
+tags: [private]
 ```
 
 ```Go
@@ -686,6 +736,7 @@ var ContainsRuneTests = ...
 
 ```
 searchKey: strings_test.EqualFoldTests
+tags: [private]
 ```
 
 ```Go
@@ -696,6 +747,7 @@ var EqualFoldTests = ...
 
 ```
 searchKey: strings_test.CountTests
+tags: [private]
 ```
 
 ```Go
@@ -706,6 +758,7 @@ var CountTests = ...
 
 ```
 searchKey: strings_test.benchInputHard
+tags: [private]
 ```
 
 ```Go
@@ -716,6 +769,7 @@ var benchInputHard = makeBenchInputHard()
 
 ```
 searchKey: strings_test.benchInputTorture
+tags: [private]
 ```
 
 ```Go
@@ -726,6 +780,7 @@ var benchInputTorture = Repeat("ABC", 1<<10) + "123" + Repeat("ABC", 1<<10)
 
 ```
 searchKey: strings_test.benchNeedleTorture
+tags: [private]
 ```
 
 ```Go
@@ -736,6 +791,7 @@ var benchNeedleTorture = Repeat("ABC", 1<<10+1)
 
 ```
 searchKey: strings_test.makeFieldsInput
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +802,7 @@ var makeFieldsInput = ...
 
 ```
 searchKey: strings_test.makeFieldsInputASCII
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +813,7 @@ var makeFieldsInputASCII = ...
 
 ```
 searchKey: strings_test.stringdata
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +824,7 @@ var stringdata = ...
 
 ```
 searchKey: strings_test.stringSink
+tags: [private]
 ```
 
 ```Go
@@ -774,10 +833,15 @@ var stringSink string
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="errWriter" href="#errWriter">type errWriter struct{}</a>
 
 ```
 searchKey: strings_test.errWriter
+tags: [private]
 ```
 
 ```Go
@@ -788,6 +852,7 @@ type errWriter struct{}
 
 ```
 searchKey: strings_test.errWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -798,6 +863,7 @@ func (errWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: strings_test.IndexTest
+tags: [private]
 ```
 
 ```Go
@@ -812,6 +878,7 @@ type IndexTest struct {
 
 ```
 searchKey: strings_test.SplitTest
+tags: [private]
 ```
 
 ```Go
@@ -827,6 +894,7 @@ type SplitTest struct {
 
 ```
 searchKey: strings_test.FieldsTest
+tags: [private]
 ```
 
 ```Go
@@ -840,6 +908,7 @@ type FieldsTest struct {
 
 ```
 searchKey: strings_test.StringTest
+tags: [private]
 ```
 
 ```Go
@@ -854,6 +923,7 @@ Test case for any function which accepts and returns a single string.
 
 ```
 searchKey: strings_test.predicate
+tags: [private]
 ```
 
 ```Go
@@ -867,6 +937,7 @@ type predicate struct {
 
 ```
 searchKey: strings_test.not
+tags: [private]
 ```
 
 ```Go
@@ -875,10 +946,15 @@ func not(p predicate) predicate
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="check" href="#check">func check(t *testing.T, b *Builder, want string)</a>
 
 ```
 searchKey: strings_test.check
+tags: [private]
 ```
 
 ```Go
@@ -889,6 +965,7 @@ func check(t *testing.T, b *Builder, want string)
 
 ```
 searchKey: strings_test.TestBuilder
+tags: [private]
 ```
 
 ```Go
@@ -899,6 +976,7 @@ func TestBuilder(t *testing.T)
 
 ```
 searchKey: strings_test.TestBuilderString
+tags: [private]
 ```
 
 ```Go
@@ -909,6 +987,7 @@ func TestBuilderString(t *testing.T)
 
 ```
 searchKey: strings_test.TestBuilderReset
+tags: [private]
 ```
 
 ```Go
@@ -919,6 +998,7 @@ func TestBuilderReset(t *testing.T)
 
 ```
 searchKey: strings_test.TestBuilderGrow
+tags: [private]
 ```
 
 ```Go
@@ -929,6 +1009,7 @@ func TestBuilderGrow(t *testing.T)
 
 ```
 searchKey: strings_test.TestBuilderWrite2
+tags: [private]
 ```
 
 ```Go
@@ -939,6 +1020,7 @@ func TestBuilderWrite2(t *testing.T)
 
 ```
 searchKey: strings_test.TestBuilderWriteByte
+tags: [private]
 ```
 
 ```Go
@@ -949,6 +1031,7 @@ func TestBuilderWriteByte(t *testing.T)
 
 ```
 searchKey: strings_test.TestBuilderAllocs
+tags: [private]
 ```
 
 ```Go
@@ -959,6 +1042,7 @@ func TestBuilderAllocs(t *testing.T)
 
 ```
 searchKey: strings_test.TestBuilderCopyPanic
+tags: [private]
 ```
 
 ```Go
@@ -969,6 +1053,7 @@ func TestBuilderCopyPanic(t *testing.T)
 
 ```
 searchKey: strings_test.TestBuilderWriteInvalidRune
+tags: [private]
 ```
 
 ```Go
@@ -979,6 +1064,7 @@ func TestBuilderWriteInvalidRune(t *testing.T)
 
 ```
 searchKey: strings_test.benchmarkBuilder
+tags: [private]
 ```
 
 ```Go
@@ -989,6 +1075,7 @@ func benchmarkBuilder(b *testing.B, f func(b *testing.B, numWrite int, grow bool
 
 ```
 searchKey: strings_test.BenchmarkBuildString_Builder
+tags: [private]
 ```
 
 ```Go
@@ -999,6 +1086,7 @@ func BenchmarkBuildString_Builder(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkBuildString_ByteBuffer
+tags: [private]
 ```
 
 ```Go
@@ -1009,6 +1097,7 @@ func BenchmarkBuildString_ByteBuffer(b *testing.B)
 
 ```
 searchKey: strings_test.TestCompare
+tags: [private]
 ```
 
 ```Go
@@ -1019,6 +1108,7 @@ func TestCompare(t *testing.T)
 
 ```
 searchKey: strings_test.TestCompareIdenticalString
+tags: [private]
 ```
 
 ```Go
@@ -1029,6 +1119,7 @@ func TestCompareIdenticalString(t *testing.T)
 
 ```
 searchKey: strings_test.TestCompareStrings
+tags: [private]
 ```
 
 ```Go
@@ -1039,6 +1130,7 @@ func TestCompareStrings(t *testing.T)
 
 ```
 searchKey: strings_test.ExampleFields
+tags: [private]
 ```
 
 ```Go
@@ -1049,6 +1141,7 @@ func ExampleFields()
 
 ```
 searchKey: strings_test.ExampleFieldsFunc
+tags: [private]
 ```
 
 ```Go
@@ -1059,6 +1152,7 @@ func ExampleFieldsFunc()
 
 ```
 searchKey: strings_test.ExampleCompare
+tags: [private]
 ```
 
 ```Go
@@ -1069,6 +1163,7 @@ func ExampleCompare()
 
 ```
 searchKey: strings_test.ExampleContains
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1174,7 @@ func ExampleContains()
 
 ```
 searchKey: strings_test.ExampleContainsAny
+tags: [private]
 ```
 
 ```Go
@@ -1089,6 +1185,7 @@ func ExampleContainsAny()
 
 ```
 searchKey: strings_test.ExampleContainsRune
+tags: [private]
 ```
 
 ```Go
@@ -1099,6 +1196,7 @@ func ExampleContainsRune()
 
 ```
 searchKey: strings_test.ExampleCount
+tags: [private]
 ```
 
 ```Go
@@ -1109,6 +1207,7 @@ func ExampleCount()
 
 ```
 searchKey: strings_test.ExampleEqualFold
+tags: [private]
 ```
 
 ```Go
@@ -1119,6 +1218,7 @@ func ExampleEqualFold()
 
 ```
 searchKey: strings_test.ExampleHasPrefix
+tags: [private]
 ```
 
 ```Go
@@ -1129,6 +1229,7 @@ func ExampleHasPrefix()
 
 ```
 searchKey: strings_test.ExampleHasSuffix
+tags: [private]
 ```
 
 ```Go
@@ -1139,6 +1240,7 @@ func ExampleHasSuffix()
 
 ```
 searchKey: strings_test.ExampleIndex
+tags: [private]
 ```
 
 ```Go
@@ -1149,6 +1251,7 @@ func ExampleIndex()
 
 ```
 searchKey: strings_test.ExampleIndexFunc
+tags: [private]
 ```
 
 ```Go
@@ -1159,6 +1262,7 @@ func ExampleIndexFunc()
 
 ```
 searchKey: strings_test.ExampleIndexAny
+tags: [private]
 ```
 
 ```Go
@@ -1169,6 +1273,7 @@ func ExampleIndexAny()
 
 ```
 searchKey: strings_test.ExampleIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -1179,6 +1284,7 @@ func ExampleIndexByte()
 
 ```
 searchKey: strings_test.ExampleIndexRune
+tags: [private]
 ```
 
 ```Go
@@ -1189,6 +1295,7 @@ func ExampleIndexRune()
 
 ```
 searchKey: strings_test.ExampleLastIndex
+tags: [private]
 ```
 
 ```Go
@@ -1199,6 +1306,7 @@ func ExampleLastIndex()
 
 ```
 searchKey: strings_test.ExampleLastIndexAny
+tags: [private]
 ```
 
 ```Go
@@ -1209,6 +1317,7 @@ func ExampleLastIndexAny()
 
 ```
 searchKey: strings_test.ExampleLastIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -1219,6 +1328,7 @@ func ExampleLastIndexByte()
 
 ```
 searchKey: strings_test.ExampleLastIndexFunc
+tags: [private]
 ```
 
 ```Go
@@ -1229,6 +1339,7 @@ func ExampleLastIndexFunc()
 
 ```
 searchKey: strings_test.ExampleJoin
+tags: [private]
 ```
 
 ```Go
@@ -1239,6 +1350,7 @@ func ExampleJoin()
 
 ```
 searchKey: strings_test.ExampleRepeat
+tags: [private]
 ```
 
 ```Go
@@ -1249,6 +1361,7 @@ func ExampleRepeat()
 
 ```
 searchKey: strings_test.ExampleReplace
+tags: [private]
 ```
 
 ```Go
@@ -1259,6 +1372,7 @@ func ExampleReplace()
 
 ```
 searchKey: strings_test.ExampleReplaceAll
+tags: [private]
 ```
 
 ```Go
@@ -1269,6 +1383,7 @@ func ExampleReplaceAll()
 
 ```
 searchKey: strings_test.ExampleSplit
+tags: [private]
 ```
 
 ```Go
@@ -1279,6 +1394,7 @@ func ExampleSplit()
 
 ```
 searchKey: strings_test.ExampleSplitN
+tags: [private]
 ```
 
 ```Go
@@ -1289,6 +1405,7 @@ func ExampleSplitN()
 
 ```
 searchKey: strings_test.ExampleSplitAfter
+tags: [private]
 ```
 
 ```Go
@@ -1299,6 +1416,7 @@ func ExampleSplitAfter()
 
 ```
 searchKey: strings_test.ExampleSplitAfterN
+tags: [private]
 ```
 
 ```Go
@@ -1309,6 +1427,7 @@ func ExampleSplitAfterN()
 
 ```
 searchKey: strings_test.ExampleTitle
+tags: [private]
 ```
 
 ```Go
@@ -1319,6 +1438,7 @@ func ExampleTitle()
 
 ```
 searchKey: strings_test.ExampleToTitle
+tags: [private]
 ```
 
 ```Go
@@ -1329,6 +1449,7 @@ func ExampleToTitle()
 
 ```
 searchKey: strings_test.ExampleToTitleSpecial
+tags: [private]
 ```
 
 ```Go
@@ -1339,6 +1460,7 @@ func ExampleToTitleSpecial()
 
 ```
 searchKey: strings_test.ExampleMap
+tags: [private]
 ```
 
 ```Go
@@ -1349,6 +1471,7 @@ func ExampleMap()
 
 ```
 searchKey: strings_test.ExampleNewReplacer
+tags: [private]
 ```
 
 ```Go
@@ -1359,6 +1482,7 @@ func ExampleNewReplacer()
 
 ```
 searchKey: strings_test.ExampleToUpper
+tags: [private]
 ```
 
 ```Go
@@ -1369,6 +1493,7 @@ func ExampleToUpper()
 
 ```
 searchKey: strings_test.ExampleToUpperSpecial
+tags: [private]
 ```
 
 ```Go
@@ -1379,6 +1504,7 @@ func ExampleToUpperSpecial()
 
 ```
 searchKey: strings_test.ExampleToLower
+tags: [private]
 ```
 
 ```Go
@@ -1389,6 +1515,7 @@ func ExampleToLower()
 
 ```
 searchKey: strings_test.ExampleToLowerSpecial
+tags: [private]
 ```
 
 ```Go
@@ -1399,6 +1526,7 @@ func ExampleToLowerSpecial()
 
 ```
 searchKey: strings_test.ExampleTrim
+tags: [private]
 ```
 
 ```Go
@@ -1409,6 +1537,7 @@ func ExampleTrim()
 
 ```
 searchKey: strings_test.ExampleTrimSpace
+tags: [private]
 ```
 
 ```Go
@@ -1419,6 +1548,7 @@ func ExampleTrimSpace()
 
 ```
 searchKey: strings_test.ExampleTrimPrefix
+tags: [private]
 ```
 
 ```Go
@@ -1429,6 +1559,7 @@ func ExampleTrimPrefix()
 
 ```
 searchKey: strings_test.ExampleTrimSuffix
+tags: [private]
 ```
 
 ```Go
@@ -1439,6 +1570,7 @@ func ExampleTrimSuffix()
 
 ```
 searchKey: strings_test.ExampleTrimFunc
+tags: [private]
 ```
 
 ```Go
@@ -1449,6 +1581,7 @@ func ExampleTrimFunc()
 
 ```
 searchKey: strings_test.ExampleTrimLeft
+tags: [private]
 ```
 
 ```Go
@@ -1459,6 +1592,7 @@ func ExampleTrimLeft()
 
 ```
 searchKey: strings_test.ExampleTrimLeftFunc
+tags: [private]
 ```
 
 ```Go
@@ -1469,6 +1603,7 @@ func ExampleTrimLeftFunc()
 
 ```
 searchKey: strings_test.ExampleTrimRight
+tags: [private]
 ```
 
 ```Go
@@ -1479,6 +1614,7 @@ func ExampleTrimRight()
 
 ```
 searchKey: strings_test.ExampleTrimRightFunc
+tags: [private]
 ```
 
 ```Go
@@ -1489,6 +1625,7 @@ func ExampleTrimRightFunc()
 
 ```
 searchKey: strings_test.ExampleBuilder
+tags: [private]
 ```
 
 ```Go
@@ -1499,6 +1636,7 @@ func ExampleBuilder()
 
 ```
 searchKey: strings_test.TestReader
+tags: [private]
 ```
 
 ```Go
@@ -1509,6 +1647,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: strings_test.TestReadAfterBigSeek
+tags: [private]
 ```
 
 ```Go
@@ -1519,6 +1658,7 @@ func TestReadAfterBigSeek(t *testing.T)
 
 ```
 searchKey: strings_test.TestReaderAt
+tags: [private]
 ```
 
 ```Go
@@ -1529,6 +1669,7 @@ func TestReaderAt(t *testing.T)
 
 ```
 searchKey: strings_test.TestReaderAtConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -1539,6 +1680,7 @@ func TestReaderAtConcurrent(t *testing.T)
 
 ```
 searchKey: strings_test.TestEmptyReaderConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -1549,6 +1691,7 @@ func TestEmptyReaderConcurrent(t *testing.T)
 
 ```
 searchKey: strings_test.TestWriteTo
+tags: [private]
 ```
 
 ```Go
@@ -1559,6 +1702,7 @@ func TestWriteTo(t *testing.T)
 
 ```
 searchKey: strings_test.TestReaderLenSize
+tags: [private]
 ```
 
 ```Go
@@ -1571,6 +1715,7 @@ tests that Len is affected by reads, but Size is not.
 
 ```
 searchKey: strings_test.TestReaderReset
+tags: [private]
 ```
 
 ```Go
@@ -1581,6 +1726,7 @@ func TestReaderReset(t *testing.T)
 
 ```
 searchKey: strings_test.TestReaderZero
+tags: [private]
 ```
 
 ```Go
@@ -1591,6 +1737,7 @@ func TestReaderZero(t *testing.T)
 
 ```
 searchKey: strings_test.oldHTMLEscape
+tags: [private]
 ```
 
 ```Go
@@ -1603,6 +1750,7 @@ The http package's old HTML escaping function.
 
 ```
 searchKey: strings_test.TestReplacer
+tags: [private]
 ```
 
 ```Go
@@ -1615,6 +1763,7 @@ TestReplacer tests the replacer implementations.
 
 ```
 searchKey: strings_test.TestPickAlgorithm
+tags: [private]
 ```
 
 ```Go
@@ -1627,6 +1776,7 @@ TestPickAlgorithm tests that NewReplacer picks the correct algorithm.
 
 ```
 searchKey: strings_test.TestWriteStringError
+tags: [private]
 ```
 
 ```Go
@@ -1639,6 +1789,7 @@ TestWriteStringError tests that WriteString returns an error received from the u
 
 ```
 searchKey: strings_test.TestGenericTrieBuilding
+tags: [private]
 ```
 
 ```Go
@@ -1651,6 +1802,7 @@ TestGenericTrieBuilding verifies the structure of the generated trie. There is o
 
 ```
 searchKey: strings_test.BenchmarkGenericNoMatch
+tags: [private]
 ```
 
 ```Go
@@ -1661,6 +1813,7 @@ func BenchmarkGenericNoMatch(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkGenericMatch1
+tags: [private]
 ```
 
 ```Go
@@ -1671,6 +1824,7 @@ func BenchmarkGenericMatch1(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkGenericMatch2
+tags: [private]
 ```
 
 ```Go
@@ -1681,6 +1835,7 @@ func BenchmarkGenericMatch2(b *testing.B)
 
 ```
 searchKey: strings_test.benchmarkSingleString
+tags: [private]
 ```
 
 ```Go
@@ -1691,6 +1846,7 @@ func benchmarkSingleString(b *testing.B, pattern, text string)
 
 ```
 searchKey: strings_test.BenchmarkSingleMaxSkipping
+tags: [private]
 ```
 
 ```Go
@@ -1701,6 +1857,7 @@ func BenchmarkSingleMaxSkipping(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkSingleLongSuffixFail
+tags: [private]
 ```
 
 ```Go
@@ -1711,6 +1868,7 @@ func BenchmarkSingleLongSuffixFail(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkSingleMatch
+tags: [private]
 ```
 
 ```Go
@@ -1721,6 +1879,7 @@ func BenchmarkSingleMatch(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkByteByteNoMatch
+tags: [private]
 ```
 
 ```Go
@@ -1731,6 +1890,7 @@ func BenchmarkByteByteNoMatch(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkByteByteMatch
+tags: [private]
 ```
 
 ```Go
@@ -1741,6 +1901,7 @@ func BenchmarkByteByteMatch(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkByteStringMatch
+tags: [private]
 ```
 
 ```Go
@@ -1751,6 +1912,7 @@ func BenchmarkByteStringMatch(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkHTMLEscapeNew
+tags: [private]
 ```
 
 ```Go
@@ -1761,6 +1923,7 @@ func BenchmarkHTMLEscapeNew(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkHTMLEscapeOld
+tags: [private]
 ```
 
 ```Go
@@ -1771,6 +1934,7 @@ func BenchmarkHTMLEscapeOld(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkByteStringReplacerWriteString
+tags: [private]
 ```
 
 ```Go
@@ -1781,6 +1945,7 @@ func BenchmarkByteStringReplacerWriteString(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkByteReplacerWriteString
+tags: [private]
 ```
 
 ```Go
@@ -1791,6 +1956,7 @@ func BenchmarkByteReplacerWriteString(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkByteByteReplaces
+tags: [private]
 ```
 
 ```Go
@@ -1803,6 +1969,7 @@ BenchmarkByteByteReplaces compares byteByteImpl against multiple Replaces.
 
 ```
 searchKey: strings_test.BenchmarkByteByteMap
+tags: [private]
 ```
 
 ```Go
@@ -1815,6 +1982,7 @@ BenchmarkByteByteMap compares byteByteImpl against Map.
 
 ```
 searchKey: strings_test.BenchmarkMap
+tags: [private]
 ```
 
 ```Go
@@ -1825,6 +1993,7 @@ func BenchmarkMap(b *testing.B)
 
 ```
 searchKey: strings_test.TestFinderNext
+tags: [private]
 ```
 
 ```Go
@@ -1835,6 +2004,7 @@ func TestFinderNext(t *testing.T)
 
 ```
 searchKey: strings_test.TestFinderCreation
+tags: [private]
 ```
 
 ```Go
@@ -1845,6 +2015,7 @@ func TestFinderCreation(t *testing.T)
 
 ```
 searchKey: strings_test.eq
+tags: [private]
 ```
 
 ```Go
@@ -1855,6 +2026,7 @@ func eq(a, b []string) bool
 
 ```
 searchKey: strings_test.runIndexTests
+tags: [private]
 ```
 
 ```Go
@@ -1867,6 +2039,7 @@ Execute f on each test case.  funcName should be the name of f; it's used in fai
 
 ```
 searchKey: strings_test.TestIndex
+tags: [private]
 ```
 
 ```Go
@@ -1877,6 +2050,7 @@ func TestIndex(t *testing.T)
 
 ```
 searchKey: strings_test.TestLastIndex
+tags: [private]
 ```
 
 ```Go
@@ -1887,6 +2061,7 @@ func TestLastIndex(t *testing.T)
 
 ```
 searchKey: strings_test.TestIndexAny
+tags: [private]
 ```
 
 ```Go
@@ -1897,6 +2072,7 @@ func TestIndexAny(t *testing.T)
 
 ```
 searchKey: strings_test.TestLastIndexAny
+tags: [private]
 ```
 
 ```Go
@@ -1907,6 +2083,7 @@ func TestLastIndexAny(t *testing.T)
 
 ```
 searchKey: strings_test.TestIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -1917,6 +2094,7 @@ func TestIndexByte(t *testing.T)
 
 ```
 searchKey: strings_test.TestLastIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -1927,6 +2105,7 @@ func TestLastIndexByte(t *testing.T)
 
 ```
 searchKey: strings_test.simpleIndex
+tags: [private]
 ```
 
 ```Go
@@ -1937,6 +2116,7 @@ func simpleIndex(s, sep string) int
 
 ```
 searchKey: strings_test.TestIndexRandom
+tags: [private]
 ```
 
 ```Go
@@ -1947,6 +2127,7 @@ func TestIndexRandom(t *testing.T)
 
 ```
 searchKey: strings_test.TestIndexRune
+tags: [private]
 ```
 
 ```Go
@@ -1957,6 +2138,7 @@ func TestIndexRune(t *testing.T)
 
 ```
 searchKey: strings_test.BenchmarkIndexRune
+tags: [private]
 ```
 
 ```Go
@@ -1967,6 +2149,7 @@ func BenchmarkIndexRune(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndexRuneLongString
+tags: [private]
 ```
 
 ```Go
@@ -1977,6 +2160,7 @@ func BenchmarkIndexRuneLongString(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndexRuneFastPath
+tags: [private]
 ```
 
 ```Go
@@ -1987,6 +2171,7 @@ func BenchmarkIndexRuneFastPath(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndex
+tags: [private]
 ```
 
 ```Go
@@ -1997,6 +2182,7 @@ func BenchmarkIndex(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkLastIndex
+tags: [private]
 ```
 
 ```Go
@@ -2007,6 +2193,7 @@ func BenchmarkLastIndex(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -2017,6 +2204,7 @@ func BenchmarkIndexByte(b *testing.B)
 
 ```
 searchKey: strings_test.TestSplit
+tags: [private]
 ```
 
 ```Go
@@ -2027,6 +2215,7 @@ func TestSplit(t *testing.T)
 
 ```
 searchKey: strings_test.TestSplitAfter
+tags: [private]
 ```
 
 ```Go
@@ -2037,6 +2226,7 @@ func TestSplitAfter(t *testing.T)
 
 ```
 searchKey: strings_test.TestFields
+tags: [private]
 ```
 
 ```Go
@@ -2047,6 +2237,7 @@ func TestFields(t *testing.T)
 
 ```
 searchKey: strings_test.TestFieldsFunc
+tags: [private]
 ```
 
 ```Go
@@ -2057,6 +2248,7 @@ func TestFieldsFunc(t *testing.T)
 
 ```
 searchKey: strings_test.runStringTests
+tags: [private]
 ```
 
 ```Go
@@ -2069,6 +2261,7 @@ Execute f on each test case.  funcName should be the name of f; it's used in fai
 
 ```
 searchKey: strings_test.tenRunes
+tags: [private]
 ```
 
 ```Go
@@ -2079,6 +2272,7 @@ func tenRunes(ch rune) string
 
 ```
 searchKey: strings_test.rot13
+tags: [private]
 ```
 
 ```Go
@@ -2091,6 +2285,7 @@ User-defined self-inverse mapping function
 
 ```
 searchKey: strings_test.TestMap
+tags: [private]
 ```
 
 ```Go
@@ -2101,6 +2296,7 @@ func TestMap(t *testing.T)
 
 ```
 searchKey: strings_test.TestToUpper
+tags: [private]
 ```
 
 ```Go
@@ -2111,6 +2307,7 @@ func TestToUpper(t *testing.T)
 
 ```
 searchKey: strings_test.TestToLower
+tags: [private]
 ```
 
 ```Go
@@ -2121,6 +2318,7 @@ func TestToLower(t *testing.T)
 
 ```
 searchKey: strings_test.TestToValidUTF8
+tags: [private]
 ```
 
 ```Go
@@ -2131,6 +2329,7 @@ func TestToValidUTF8(t *testing.T)
 
 ```
 searchKey: strings_test.BenchmarkToUpper
+tags: [private]
 ```
 
 ```Go
@@ -2141,6 +2340,7 @@ func BenchmarkToUpper(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkToLower
+tags: [private]
 ```
 
 ```Go
@@ -2151,6 +2351,7 @@ func BenchmarkToLower(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkMapNoChanges
+tags: [private]
 ```
 
 ```Go
@@ -2161,6 +2362,7 @@ func BenchmarkMapNoChanges(b *testing.B)
 
 ```
 searchKey: strings_test.TestSpecialCase
+tags: [private]
 ```
 
 ```Go
@@ -2171,6 +2373,7 @@ func TestSpecialCase(t *testing.T)
 
 ```
 searchKey: strings_test.TestTrimSpace
+tags: [private]
 ```
 
 ```Go
@@ -2181,6 +2384,7 @@ func TestTrimSpace(t *testing.T)
 
 ```
 searchKey: strings_test.TestTrim
+tags: [private]
 ```
 
 ```Go
@@ -2191,6 +2395,7 @@ func TestTrim(t *testing.T)
 
 ```
 searchKey: strings_test.BenchmarkTrim
+tags: [private]
 ```
 
 ```Go
@@ -2201,6 +2406,7 @@ func BenchmarkTrim(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkToValidUTF8
+tags: [private]
 ```
 
 ```Go
@@ -2211,6 +2417,7 @@ func BenchmarkToValidUTF8(b *testing.B)
 
 ```
 searchKey: strings_test.TestTrimFunc
+tags: [private]
 ```
 
 ```Go
@@ -2221,6 +2428,7 @@ func TestTrimFunc(t *testing.T)
 
 ```
 searchKey: strings_test.TestIndexFunc
+tags: [private]
 ```
 
 ```Go
@@ -2231,6 +2439,7 @@ func TestIndexFunc(t *testing.T)
 
 ```
 searchKey: strings_test.equal
+tags: [private]
 ```
 
 ```Go
@@ -2241,6 +2450,7 @@ func equal(m string, s1, s2 string, t *testing.T) bool
 
 ```
 searchKey: strings_test.TestCaseConsistency
+tags: [private]
 ```
 
 ```Go
@@ -2251,6 +2461,7 @@ func TestCaseConsistency(t *testing.T)
 
 ```
 searchKey: strings_test.TestRepeat
+tags: [private]
 ```
 
 ```Go
@@ -2261,6 +2472,7 @@ func TestRepeat(t *testing.T)
 
 ```
 searchKey: strings_test.repeat
+tags: [private]
 ```
 
 ```Go
@@ -2271,6 +2483,7 @@ func repeat(s string, count int) (err error)
 
 ```
 searchKey: strings_test.TestRepeatCatchesOverflow
+tags: [private]
 ```
 
 ```Go
@@ -2283,6 +2496,7 @@ See Issue golang.org/issue/16237
 
 ```
 searchKey: strings_test.runesEqual
+tags: [private]
 ```
 
 ```Go
@@ -2293,6 +2507,7 @@ func runesEqual(a, b []rune) bool
 
 ```
 searchKey: strings_test.TestRunes
+tags: [private]
 ```
 
 ```Go
@@ -2303,6 +2518,7 @@ func TestRunes(t *testing.T)
 
 ```
 searchKey: strings_test.TestReadByte
+tags: [private]
 ```
 
 ```Go
@@ -2313,6 +2529,7 @@ func TestReadByte(t *testing.T)
 
 ```
 searchKey: strings_test.TestReadRune
+tags: [private]
 ```
 
 ```Go
@@ -2323,6 +2540,7 @@ func TestReadRune(t *testing.T)
 
 ```
 searchKey: strings_test.TestUnreadRuneError
+tags: [private]
 ```
 
 ```Go
@@ -2333,6 +2551,7 @@ func TestUnreadRuneError(t *testing.T)
 
 ```
 searchKey: strings_test.TestReplace
+tags: [private]
 ```
 
 ```Go
@@ -2343,6 +2562,7 @@ func TestReplace(t *testing.T)
 
 ```
 searchKey: strings_test.TestTitle
+tags: [private]
 ```
 
 ```Go
@@ -2353,6 +2573,7 @@ func TestTitle(t *testing.T)
 
 ```
 searchKey: strings_test.TestContains
+tags: [private]
 ```
 
 ```Go
@@ -2363,6 +2584,7 @@ func TestContains(t *testing.T)
 
 ```
 searchKey: strings_test.TestContainsAny
+tags: [private]
 ```
 
 ```Go
@@ -2373,6 +2595,7 @@ func TestContainsAny(t *testing.T)
 
 ```
 searchKey: strings_test.TestContainsRune
+tags: [private]
 ```
 
 ```Go
@@ -2383,6 +2606,7 @@ func TestContainsRune(t *testing.T)
 
 ```
 searchKey: strings_test.TestEqualFold
+tags: [private]
 ```
 
 ```Go
@@ -2393,6 +2617,7 @@ func TestEqualFold(t *testing.T)
 
 ```
 searchKey: strings_test.BenchmarkEqualFold
+tags: [private]
 ```
 
 ```Go
@@ -2403,6 +2628,7 @@ func BenchmarkEqualFold(b *testing.B)
 
 ```
 searchKey: strings_test.TestCount
+tags: [private]
 ```
 
 ```Go
@@ -2413,6 +2639,7 @@ func TestCount(t *testing.T)
 
 ```
 searchKey: strings_test.makeBenchInputHard
+tags: [private]
 ```
 
 ```Go
@@ -2423,6 +2650,7 @@ func makeBenchInputHard() string
 
 ```
 searchKey: strings_test.benchmarkIndexHard
+tags: [private]
 ```
 
 ```Go
@@ -2433,6 +2661,7 @@ func benchmarkIndexHard(b *testing.B, sep string)
 
 ```
 searchKey: strings_test.benchmarkLastIndexHard
+tags: [private]
 ```
 
 ```Go
@@ -2443,6 +2672,7 @@ func benchmarkLastIndexHard(b *testing.B, sep string)
 
 ```
 searchKey: strings_test.benchmarkCountHard
+tags: [private]
 ```
 
 ```Go
@@ -2453,6 +2683,7 @@ func benchmarkCountHard(b *testing.B, sep string)
 
 ```
 searchKey: strings_test.BenchmarkIndexHard1
+tags: [private]
 ```
 
 ```Go
@@ -2463,6 +2694,7 @@ func BenchmarkIndexHard1(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndexHard2
+tags: [private]
 ```
 
 ```Go
@@ -2473,6 +2705,7 @@ func BenchmarkIndexHard2(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndexHard3
+tags: [private]
 ```
 
 ```Go
@@ -2483,6 +2716,7 @@ func BenchmarkIndexHard3(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndexHard4
+tags: [private]
 ```
 
 ```Go
@@ -2493,6 +2727,7 @@ func BenchmarkIndexHard4(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkLastIndexHard1
+tags: [private]
 ```
 
 ```Go
@@ -2503,6 +2738,7 @@ func BenchmarkLastIndexHard1(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkLastIndexHard2
+tags: [private]
 ```
 
 ```Go
@@ -2513,6 +2749,7 @@ func BenchmarkLastIndexHard2(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkLastIndexHard3
+tags: [private]
 ```
 
 ```Go
@@ -2523,6 +2760,7 @@ func BenchmarkLastIndexHard3(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkCountHard1
+tags: [private]
 ```
 
 ```Go
@@ -2533,6 +2771,7 @@ func BenchmarkCountHard1(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkCountHard2
+tags: [private]
 ```
 
 ```Go
@@ -2543,6 +2782,7 @@ func BenchmarkCountHard2(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkCountHard3
+tags: [private]
 ```
 
 ```Go
@@ -2553,6 +2793,7 @@ func BenchmarkCountHard3(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndexTorture
+tags: [private]
 ```
 
 ```Go
@@ -2563,6 +2804,7 @@ func BenchmarkIndexTorture(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkCountTorture
+tags: [private]
 ```
 
 ```Go
@@ -2573,6 +2815,7 @@ func BenchmarkCountTorture(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkCountTortureOverlapping
+tags: [private]
 ```
 
 ```Go
@@ -2583,6 +2826,7 @@ func BenchmarkCountTortureOverlapping(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkCountByte
+tags: [private]
 ```
 
 ```Go
@@ -2593,6 +2837,7 @@ func BenchmarkCountByte(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkFields
+tags: [private]
 ```
 
 ```Go
@@ -2603,6 +2848,7 @@ func BenchmarkFields(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkFieldsFunc
+tags: [private]
 ```
 
 ```Go
@@ -2613,6 +2859,7 @@ func BenchmarkFieldsFunc(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkSplitEmptySeparator
+tags: [private]
 ```
 
 ```Go
@@ -2623,6 +2870,7 @@ func BenchmarkSplitEmptySeparator(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkSplitSingleByteSeparator
+tags: [private]
 ```
 
 ```Go
@@ -2633,6 +2881,7 @@ func BenchmarkSplitSingleByteSeparator(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkSplitMultiByteSeparator
+tags: [private]
 ```
 
 ```Go
@@ -2643,6 +2892,7 @@ func BenchmarkSplitMultiByteSeparator(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkSplitNSingleByteSeparator
+tags: [private]
 ```
 
 ```Go
@@ -2653,6 +2903,7 @@ func BenchmarkSplitNSingleByteSeparator(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkSplitNMultiByteSeparator
+tags: [private]
 ```
 
 ```Go
@@ -2663,6 +2914,7 @@ func BenchmarkSplitNMultiByteSeparator(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkRepeat
+tags: [private]
 ```
 
 ```Go
@@ -2673,6 +2925,7 @@ func BenchmarkRepeat(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndexAnyASCII
+tags: [private]
 ```
 
 ```Go
@@ -2683,6 +2936,7 @@ func BenchmarkIndexAnyASCII(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndexAnyUTF8
+tags: [private]
 ```
 
 ```Go
@@ -2693,6 +2947,7 @@ func BenchmarkIndexAnyUTF8(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkLastIndexAnyASCII
+tags: [private]
 ```
 
 ```Go
@@ -2703,6 +2958,7 @@ func BenchmarkLastIndexAnyASCII(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkLastIndexAnyUTF8
+tags: [private]
 ```
 
 ```Go
@@ -2713,6 +2969,7 @@ func BenchmarkLastIndexAnyUTF8(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkTrimASCII
+tags: [private]
 ```
 
 ```Go
@@ -2723,6 +2980,7 @@ func BenchmarkTrimASCII(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkIndexPeriodic
+tags: [private]
 ```
 
 ```Go
@@ -2733,6 +2991,7 @@ func BenchmarkIndexPeriodic(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkJoin
+tags: [private]
 ```
 
 ```Go
@@ -2743,6 +3002,7 @@ func BenchmarkJoin(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkTrimSpace
+tags: [private]
 ```
 
 ```Go
@@ -2753,6 +3013,7 @@ func BenchmarkTrimSpace(b *testing.B)
 
 ```
 searchKey: strings_test.BenchmarkReplaceAll
+tags: [private]
 ```
 
 ```Go

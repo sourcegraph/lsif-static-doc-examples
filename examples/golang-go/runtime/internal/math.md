@@ -11,11 +11,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MaxUintptr" href="#MaxUintptr">const MaxUintptr</a>
 
 ```
 searchKey: math.MaxUintptr
-tags: [exported]
 ```
 
 ```Go
@@ -24,11 +27,14 @@ const MaxUintptr = ^uintptr(0)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MulUintptr" href="#MulUintptr">func MulUintptr(a, b uintptr) (uintptr, bool)</a>
 
 ```
 searchKey: math.MulUintptr
-tags: [exported]
 ```
 
 ```Go
@@ -41,7 +47,6 @@ MulUintptr returns a * b and whether the multiplication overflowed. On supported
 
 ```
 searchKey: math.Mul64
-tags: [exported]
 ```
 
 ```Go

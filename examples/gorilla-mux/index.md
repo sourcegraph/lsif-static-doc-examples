@@ -571,14 +571,11 @@ Note: The handler chain will be stopped if your middleware doesn't call `next.Se
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="varsKey" href="#varsKey">const varsKey</a>
 
 ```
 searchKey: mux.varsKey
+tags: [private]
 ```
 
 ```Go
@@ -589,6 +586,7 @@ const varsKey contextKey = iota
 
 ```
 searchKey: mux.routeKey
+tags: [private]
 ```
 
 ```Go
@@ -599,6 +597,7 @@ const routeKey
 
 ```
 searchKey: mux.regexpTypePath
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +608,7 @@ const regexpTypePath regexpType = 0
 
 ```
 searchKey: mux.regexpTypeHost
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +619,7 @@ const regexpTypeHost regexpType = 1
 
 ```
 searchKey: mux.regexpTypePrefix
+tags: [private]
 ```
 
 ```Go
@@ -629,6 +630,7 @@ const regexpTypePrefix regexpType = 2
 
 ```
 searchKey: mux.regexpTypeQuery
+tags: [private]
 ```
 
 ```Go
@@ -637,15 +639,10 @@ const regexpTypeQuery regexpType = 3
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrMethodMismatch" href="#ErrMethodMismatch">var ErrMethodMismatch</a>
 
 ```
 searchKey: mux.ErrMethodMismatch
-tags: [exported]
 ```
 
 ```Go
@@ -658,7 +655,6 @@ ErrMethodMismatch is returned when the method in the request does not match the 
 
 ```
 searchKey: mux.ErrNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -671,7 +667,6 @@ ErrNotFound is returned when no route match is found.
 
 ```
 searchKey: mux.SkipRouter
-tags: [exported]
 ```
 
 ```Go
@@ -684,6 +679,7 @@ SkipRouter is used as a return value from WalkFuncs to indicate that the router 
 
 ```
 searchKey: mux.headerMatcherTests
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +690,7 @@ var headerMatcherTests = ...
 
 ```
 searchKey: mux.hostMatcherTests
+tags: [private]
 ```
 
 ```Go
@@ -704,6 +701,7 @@ var hostMatcherTests = ...
 
 ```
 searchKey: mux.methodMatcherTests
+tags: [private]
 ```
 
 ```Go
@@ -714,6 +712,7 @@ var methodMatcherTests = ...
 
 ```
 searchKey: mux.pathMatcherTests
+tags: [private]
 ```
 
 ```Go
@@ -724,6 +723,7 @@ var pathMatcherTests = ...
 
 ```
 searchKey: mux.schemeMatcherTests
+tags: [private]
 ```
 
 ```Go
@@ -734,6 +734,7 @@ var schemeMatcherTests = ...
 
 ```
 searchKey: mux.urlBuildingTests
+tags: [private]
 ```
 
 ```Go
@@ -742,15 +743,10 @@ var urlBuildingTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="MiddlewareFunc" href="#MiddlewareFunc">type MiddlewareFunc func(net/http.Handler) net/http.Handler</a>
 
 ```
 searchKey: mux.MiddlewareFunc
-tags: [exported]
 ```
 
 ```Go
@@ -763,7 +759,6 @@ MiddlewareFunc is a function which receives an http.Handler and returns another 
 
 ```
 searchKey: mux.CORSMethodMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -776,7 +771,6 @@ CORSMethodMiddleware automatically sets the Access-Control-Allow-Methods respons
 
 ```
 searchKey: mux.MiddlewareFunc.Middleware
-tags: [exported]
 ```
 
 ```Go
@@ -789,6 +783,7 @@ Middleware allows MiddlewareFunc to implement the middleware interface.
 
 ```
 searchKey: mux.middleware
+tags: [private]
 ```
 
 ```Go
@@ -803,7 +798,6 @@ middleware interface is anything which implements a MiddlewareFunc named Middlew
 
 ```
 searchKey: mux.Router
-tags: [exported]
 ```
 
 ```Go
@@ -859,7 +853,6 @@ This will send all incoming requests to the router.
 
 ```
 searchKey: mux.NewRouter
-tags: [exported]
 ```
 
 ```Go
@@ -872,7 +865,6 @@ NewRouter returns a new router instance.
 
 ```
 searchKey: mux.Router.Use
-tags: [exported]
 ```
 
 ```Go
@@ -885,6 +877,7 @@ Use appends a MiddlewareFunc to the chain. Middleware can be used to intercept o
 
 ```
 searchKey: mux.Router.useInterface
+tags: [private]
 ```
 
 ```Go
@@ -897,7 +890,6 @@ useInterface appends a middleware to the chain. Middleware can be used to interc
 
 ```
 searchKey: mux.Router.Match
-tags: [exported]
 ```
 
 ```Go
@@ -914,7 +906,6 @@ If the request does not match any of this router's or its subrouters' routes the
 
 ```
 searchKey: mux.Router.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -929,7 +920,6 @@ When there is a match, the route variables can be retrieved calling mux.Vars(req
 
 ```
 searchKey: mux.Router.Get
-tags: [exported]
 ```
 
 ```Go
@@ -942,7 +932,6 @@ Get returns a route registered with the given name.
 
 ```
 searchKey: mux.Router.GetRoute
-tags: [exported]
 ```
 
 ```Go
@@ -955,7 +944,6 @@ GetRoute returns a route registered with the given name. This method was renamed
 
 ```
 searchKey: mux.Router.StrictSlash
-tags: [exported]
 ```
 
 ```Go
@@ -976,7 +964,6 @@ Special case: when a route sets a path prefix using the PathPrefix() method, str
 
 ```
 searchKey: mux.Router.SkipClean
-tags: [exported]
 ```
 
 ```Go
@@ -993,7 +980,6 @@ When false, the path will be cleaned, so /fetch/[http://xkcd.com/534/](http://xk
 
 ```
 searchKey: mux.Router.UseEncodedPath
-tags: [exported]
 ```
 
 ```Go
@@ -1008,7 +994,6 @@ If not called, the router will match the unencoded path to the routes. For eg. "
 
 ```
 searchKey: mux.Router.NewRoute
-tags: [exported]
 ```
 
 ```Go
@@ -1021,7 +1006,6 @@ NewRoute registers an empty route.
 
 ```
 searchKey: mux.Router.Name
-tags: [exported]
 ```
 
 ```Go
@@ -1034,7 +1018,6 @@ Name registers a new route with a name. See Route.Name().
 
 ```
 searchKey: mux.Router.Handle
-tags: [exported]
 ```
 
 ```Go
@@ -1047,7 +1030,6 @@ Handle registers a new route with a matcher for the URL path. See Route.Path() a
 
 ```
 searchKey: mux.Router.HandleFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1061,7 +1043,6 @@ HandleFunc registers a new route with a matcher for the URL path. See Route.Path
 
 ```
 searchKey: mux.Router.Headers
-tags: [exported]
 ```
 
 ```Go
@@ -1074,7 +1055,6 @@ Headers registers a new route with a matcher for request header values. See Rout
 
 ```
 searchKey: mux.Router.Host
-tags: [exported]
 ```
 
 ```Go
@@ -1087,7 +1067,6 @@ Host registers a new route with a matcher for the URL host. See Route.Host().
 
 ```
 searchKey: mux.Router.MatcherFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1100,7 +1079,6 @@ MatcherFunc registers a new route with a custom matcher function. See Route.Matc
 
 ```
 searchKey: mux.Router.Methods
-tags: [exported]
 ```
 
 ```Go
@@ -1113,7 +1091,6 @@ Methods registers a new route with a matcher for HTTP methods. See Route.Methods
 
 ```
 searchKey: mux.Router.Path
-tags: [exported]
 ```
 
 ```Go
@@ -1126,7 +1103,6 @@ Path registers a new route with a matcher for the URL path. See Route.Path().
 
 ```
 searchKey: mux.Router.PathPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -1139,7 +1115,6 @@ PathPrefix registers a new route with a matcher for the URL path prefix. See Rou
 
 ```
 searchKey: mux.Router.Queries
-tags: [exported]
 ```
 
 ```Go
@@ -1152,7 +1127,6 @@ Queries registers a new route with a matcher for URL query values. See Route.Que
 
 ```
 searchKey: mux.Router.Schemes
-tags: [exported]
 ```
 
 ```Go
@@ -1165,7 +1139,6 @@ Schemes registers a new route with a matcher for URL schemes. See Route.Schemes(
 
 ```
 searchKey: mux.Router.BuildVarsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1178,7 +1151,6 @@ BuildVarsFunc registers a new route with a custom function for modifying route v
 
 ```
 searchKey: mux.Router.Walk
-tags: [exported]
 ```
 
 ```Go
@@ -1191,6 +1163,7 @@ Walk walks the router and all its sub-routers, calling walkFn for each route in 
 
 ```
 searchKey: mux.Router.walk
+tags: [private]
 ```
 
 ```Go
@@ -1201,6 +1174,7 @@ func (r *Router) walk(walkFn WalkFunc, ancestors []*Route) error
 
 ```
 searchKey: mux.routeConf
+tags: [private]
 ```
 
 ```Go
@@ -1235,6 +1209,7 @@ common route configuration shared between `Router` and `Route`
 
 ```
 searchKey: mux.copyRouteConf
+tags: [private]
 ```
 
 ```Go
@@ -1247,7 +1222,6 @@ returns an effective deep copy of `routeConf`
 
 ```
 searchKey: mux.WalkFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1260,7 +1234,6 @@ WalkFunc is the type of the function called for each route visited by Walk. At e
 
 ```
 searchKey: mux.RouteMatch
-tags: [exported]
 ```
 
 ```Go
@@ -1282,6 +1255,7 @@ RouteMatch stores information about a matched route.
 
 ```
 searchKey: mux.contextKey
+tags: [private]
 ```
 
 ```Go
@@ -1292,6 +1266,7 @@ type contextKey int
 
 ```
 searchKey: mux.routeRegexpOptions
+tags: [private]
 ```
 
 ```Go
@@ -1305,6 +1280,7 @@ type routeRegexpOptions struct {
 
 ```
 searchKey: mux.regexpType
+tags: [private]
 ```
 
 ```Go
@@ -1315,6 +1291,7 @@ type regexpType int
 
 ```
 searchKey: mux.routeRegexp
+tags: [private]
 ```
 
 ```Go
@@ -1344,6 +1321,7 @@ routeRegexp stores a regexp to match a host or path and information to collect a
 
 ```
 searchKey: mux.copyRouteRegexp
+tags: [private]
 ```
 
 ```Go
@@ -1354,6 +1332,7 @@ func copyRouteRegexp(r *routeRegexp) *routeRegexp
 
 ```
 searchKey: mux.newRouteRegexp
+tags: [private]
 ```
 
 ```Go
@@ -1370,6 +1349,7 @@ Previously we accepted only Python-like identifiers for variable names ([a-zA-Z_
 
 ```
 searchKey: mux.routeRegexp.Match
+tags: [private]
 ```
 
 ```Go
@@ -1382,6 +1362,7 @@ Match matches the regexp against the URL host or path.
 
 ```
 searchKey: mux.routeRegexp.url
+tags: [private]
 ```
 
 ```Go
@@ -1394,6 +1375,7 @@ url builds a URL part using the given values.
 
 ```
 searchKey: mux.routeRegexp.getURLQuery
+tags: [private]
 ```
 
 ```Go
@@ -1406,6 +1388,7 @@ getURLQuery returns a single query parameter from a request URL. For a URL with 
 
 ```
 searchKey: mux.routeRegexp.matchQueryString
+tags: [private]
 ```
 
 ```Go
@@ -1416,6 +1399,7 @@ func (r *routeRegexp) matchQueryString(req *http.Request) bool
 
 ```
 searchKey: mux.routeRegexp.GoString
+tags: [private]
 ```
 
 ```Go
@@ -1426,6 +1410,7 @@ func (r *routeRegexp) GoString() string
 
 ```
 searchKey: mux.routeRegexpGroup
+tags: [private]
 ```
 
 ```Go
@@ -1442,6 +1427,7 @@ routeRegexpGroup groups the route matchers that carry variables.
 
 ```
 searchKey: mux.routeRegexpGroup.setMatch
+tags: [private]
 ```
 
 ```Go
@@ -1454,7 +1440,6 @@ setMatch extracts the variables from the URL once a route matches.
 
 ```
 searchKey: mux.Route
-tags: [exported]
 ```
 
 ```Go
@@ -1482,7 +1467,6 @@ Route stores information to match a request and build URLs.
 
 ```
 searchKey: mux.CurrentRoute
-tags: [exported]
 ```
 
 ```Go
@@ -1495,7 +1479,6 @@ CurrentRoute returns the matched route for the current request, if any. This onl
 
 ```
 searchKey: mux.Route.SkipClean
-tags: [exported]
 ```
 
 ```Go
@@ -1508,7 +1491,6 @@ SkipClean reports whether path cleaning is enabled for this route via Router.Ski
 
 ```
 searchKey: mux.Route.Match
-tags: [exported]
 ```
 
 ```Go
@@ -1521,7 +1503,6 @@ Match matches the route against the request.
 
 ```
 searchKey: mux.Route.GetError
-tags: [exported]
 ```
 
 ```Go
@@ -1534,7 +1515,6 @@ GetError returns an error resulted from building the route, if any.
 
 ```
 searchKey: mux.Route.BuildOnly
-tags: [exported]
 ```
 
 ```Go
@@ -1547,7 +1527,6 @@ BuildOnly sets the route to never match: it is only used to build URLs.
 
 ```
 searchKey: mux.Route.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -1560,7 +1539,6 @@ Handler sets a handler for the route.
 
 ```
 searchKey: mux.Route.HandlerFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1573,7 +1551,6 @@ HandlerFunc sets a handler function for the route.
 
 ```
 searchKey: mux.Route.GetHandler
-tags: [exported]
 ```
 
 ```Go
@@ -1586,7 +1563,6 @@ GetHandler returns the handler for the route, if any.
 
 ```
 searchKey: mux.Route.Name
-tags: [exported]
 ```
 
 ```Go
@@ -1599,7 +1575,6 @@ Name sets the name for the route, used to build URLs. It is an error to call Nam
 
 ```
 searchKey: mux.Route.GetName
-tags: [exported]
 ```
 
 ```Go
@@ -1612,6 +1587,7 @@ GetName returns the name for the route, if any.
 
 ```
 searchKey: mux.Route.addMatcher
+tags: [private]
 ```
 
 ```Go
@@ -1624,6 +1600,7 @@ addMatcher adds a matcher to the route.
 
 ```
 searchKey: mux.Route.addRegexpMatcher
+tags: [private]
 ```
 
 ```Go
@@ -1636,7 +1613,6 @@ addRegexpMatcher adds a host or path matcher and builder to a route.
 
 ```
 searchKey: mux.Route.Headers
-tags: [exported]
 ```
 
 ```Go
@@ -1657,7 +1633,6 @@ The above route will only match if both request header values match. If the valu
 
 ```
 searchKey: mux.Route.HeadersRegexp
-tags: [exported]
 ```
 
 ```Go
@@ -1678,7 +1653,6 @@ The above route will only match if both the request header matches both regular 
 
 ```
 searchKey: mux.Route.Host
-tags: [exported]
 ```
 
 ```Go
@@ -1706,7 +1680,6 @@ Variable names must be unique in a given route. They can be retrieved calling mu
 
 ```
 searchKey: mux.Route.MatcherFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1719,7 +1692,6 @@ MatcherFunc adds a custom function to be used as request matcher.
 
 ```
 searchKey: mux.Route.Methods
-tags: [exported]
 ```
 
 ```Go
@@ -1732,7 +1704,6 @@ Methods adds a matcher for HTTP methods. It accepts a sequence of one or more me
 
 ```
 searchKey: mux.Route.Path
-tags: [exported]
 ```
 
 ```Go
@@ -1761,7 +1732,6 @@ Variable names must be unique in a given route. They can be retrieved calling mu
 
 ```
 searchKey: mux.Route.PathPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -1778,7 +1748,6 @@ Also note that the setting of Router.StrictSlash() has no effect on routes with 
 
 ```
 searchKey: mux.Route.Queries
-tags: [exported]
 ```
 
 ```Go
@@ -1806,7 +1775,6 @@ Variables can define an optional regexp pattern to be matched:
 
 ```
 searchKey: mux.Route.Schemes
-tags: [exported]
 ```
 
 ```Go
@@ -1819,7 +1787,6 @@ Schemes adds a matcher for URL schemes. It accepts a sequence of schemes to be m
 
 ```
 searchKey: mux.Route.BuildVarsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1832,7 +1799,6 @@ BuildVarsFunc adds a custom function to be used to modify build variables before
 
 ```
 searchKey: mux.Route.Subrouter
-tags: [exported]
 ```
 
 ```Go
@@ -1857,7 +1823,6 @@ Here, the routes registered in the subrouter won't be tested if the host doesn't
 
 ```
 searchKey: mux.Route.URL
-tags: [exported]
 ```
 
 ```Go
@@ -1915,7 +1880,6 @@ All variables defined in the route are required, and their values must conform t
 
 ```
 searchKey: mux.Route.URLHost
-tags: [exported]
 ```
 
 ```Go
@@ -1930,7 +1894,6 @@ The route must have a host defined.
 
 ```
 searchKey: mux.Route.URLPath
-tags: [exported]
 ```
 
 ```Go
@@ -1945,7 +1908,6 @@ The route must have a path defined.
 
 ```
 searchKey: mux.Route.GetPathTemplate
-tags: [exported]
 ```
 
 ```Go
@@ -1958,7 +1920,6 @@ GetPathTemplate returns the template used to build the route match. This is usef
 
 ```
 searchKey: mux.Route.GetPathRegexp
-tags: [exported]
 ```
 
 ```Go
@@ -1971,7 +1932,6 @@ GetPathRegexp returns the expanded regular expression used to match route path. 
 
 ```
 searchKey: mux.Route.GetQueriesRegexp
-tags: [exported]
 ```
 
 ```Go
@@ -1984,7 +1944,6 @@ GetQueriesRegexp returns the expanded regular expressions used to match the rout
 
 ```
 searchKey: mux.Route.GetQueriesTemplates
-tags: [exported]
 ```
 
 ```Go
@@ -1997,7 +1956,6 @@ GetQueriesTemplates returns the templates used to build the query matching. This
 
 ```
 searchKey: mux.Route.GetMethods
-tags: [exported]
 ```
 
 ```Go
@@ -2010,7 +1968,6 @@ GetMethods returns the methods the route matches against This is useful for buil
 
 ```
 searchKey: mux.Route.GetHostTemplate
-tags: [exported]
 ```
 
 ```Go
@@ -2023,6 +1980,7 @@ GetHostTemplate returns the template used to build the route match. This is usef
 
 ```
 searchKey: mux.Route.prepareVars
+tags: [private]
 ```
 
 ```Go
@@ -2035,6 +1993,7 @@ prepareVars converts the route variable pairs into a map. If the route has a Bui
 
 ```
 searchKey: mux.Route.buildVars
+tags: [private]
 ```
 
 ```Go
@@ -2045,6 +2004,7 @@ func (r *Route) buildVars(m map[string]string) map[string]string
 
 ```
 searchKey: mux.Route.GoString
+tags: [private]
 ```
 
 ```Go
@@ -2055,6 +2015,7 @@ func (r *Route) GoString() string
 
 ```
 searchKey: mux.matcher
+tags: [private]
 ```
 
 ```Go
@@ -2069,6 +2030,7 @@ matcher types try to match a request.
 
 ```
 searchKey: mux.headerMatcher
+tags: [private]
 ```
 
 ```Go
@@ -2081,6 +2043,7 @@ headerMatcher matches the request against header values.
 
 ```
 searchKey: mux.headerMatcher.Match
+tags: [private]
 ```
 
 ```Go
@@ -2091,6 +2054,7 @@ func (m headerMatcher) Match(r *http.Request, match *RouteMatch) bool
 
 ```
 searchKey: mux.headerRegexMatcher
+tags: [private]
 ```
 
 ```Go
@@ -2103,6 +2067,7 @@ headerRegexMatcher matches the request against the route given a regex for the h
 
 ```
 searchKey: mux.headerRegexMatcher.Match
+tags: [private]
 ```
 
 ```Go
@@ -2113,7 +2078,6 @@ func (m headerRegexMatcher) Match(r *http.Request, match *RouteMatch) bool
 
 ```
 searchKey: mux.MatcherFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2126,7 +2090,6 @@ MatcherFunc is the function signature used by custom matchers.
 
 ```
 searchKey: mux.MatcherFunc.Match
-tags: [exported]
 ```
 
 ```Go
@@ -2139,6 +2102,7 @@ Match returns the match for a given request.
 
 ```
 searchKey: mux.methodMatcher
+tags: [private]
 ```
 
 ```Go
@@ -2151,6 +2115,7 @@ methodMatcher matches the request against HTTP methods.
 
 ```
 searchKey: mux.methodMatcher.Match
+tags: [private]
 ```
 
 ```Go
@@ -2161,6 +2126,7 @@ func (m methodMatcher) Match(r *http.Request, match *RouteMatch) bool
 
 ```
 searchKey: mux.schemeMatcher
+tags: [private]
 ```
 
 ```Go
@@ -2173,6 +2139,7 @@ schemeMatcher matches the request against URL schemes.
 
 ```
 searchKey: mux.schemeMatcher.Match
+tags: [private]
 ```
 
 ```Go
@@ -2183,7 +2150,6 @@ func (m schemeMatcher) Match(r *http.Request, match *RouteMatch) bool
 
 ```
 searchKey: mux.BuildVarsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2196,6 +2162,7 @@ BuildVarsFunc is the function signature used by custom build variable functions 
 
 ```
 searchKey: mux.testMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -2208,6 +2175,7 @@ type testMiddleware struct {
 
 ```
 searchKey: mux.testMiddleware.Middleware
+tags: [private]
 ```
 
 ```Go
@@ -2218,6 +2186,7 @@ func (tm *testMiddleware) Middleware(h http.Handler) http.Handler
 
 ```
 searchKey: mux.routeTest
+tags: [private]
 ```
 
 ```Go
@@ -2245,6 +2214,7 @@ type routeTest struct {
 
 ```
 searchKey: mux.TestA301ResponseWriter
+tags: [private]
 ```
 
 ```Go
@@ -2258,6 +2228,7 @@ type TestA301ResponseWriter struct {
 
 ```
 searchKey: mux.TestA301ResponseWriter.Header
+tags: [private]
 ```
 
 ```Go
@@ -2268,6 +2239,7 @@ func (ho *TestA301ResponseWriter) Header() http.Header
 
 ```
 searchKey: mux.TestA301ResponseWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -2278,6 +2250,7 @@ func (ho *TestA301ResponseWriter) Write(b []byte) (int, error)
 
 ```
 searchKey: mux.TestA301ResponseWriter.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -2288,6 +2261,7 @@ func (ho *TestA301ResponseWriter) WriteHeader(code int)
 
 ```
 searchKey: mux.methodsSubrouterTest
+tags: [private]
 ```
 
 ```Go
@@ -2310,6 +2284,7 @@ methodsSubrouterTest models the data necessary for testing handler matching for 
 
 ```
 searchKey: mux.customMethodNotAllowedHandler
+tags: [private]
 ```
 
 ```Go
@@ -2322,6 +2297,7 @@ type customMethodNotAllowedHandler struct {
 
 ```
 searchKey: mux.customMethodNotAllowedHandler.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -2332,6 +2308,7 @@ func (h customMethodNotAllowedHandler) ServeHTTP(w http.ResponseWriter, r *http.
 
 ```
 searchKey: mux.ResponseRecorder
+tags: [private]
 ```
 
 ```Go
@@ -2349,6 +2326,7 @@ ResponseRecorder is an implementation of http.ResponseWriter that records its mu
 
 ```
 searchKey: mux.NewRecorder
+tags: [private]
 ```
 
 ```Go
@@ -2361,6 +2339,7 @@ NewRecorder returns an initialized ResponseRecorder.
 
 ```
 searchKey: mux.ResponseRecorder.Header
+tags: [private]
 ```
 
 ```Go
@@ -2373,6 +2352,7 @@ Header returns the response headers.
 
 ```
 searchKey: mux.ResponseRecorder.Write
+tags: [private]
 ```
 
 ```Go
@@ -2385,6 +2365,7 @@ Write always succeeds and writes to rw.Body, if not nil.
 
 ```
 searchKey: mux.ResponseRecorder.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -2397,6 +2378,7 @@ WriteHeader sets rw.Code.
 
 ```
 searchKey: mux.ResponseRecorder.Flush
+tags: [private]
 ```
 
 ```Go
@@ -2409,6 +2391,7 @@ Flush sets rw.Flushed to true.
 
 ```
 searchKey: mux.headerMatcherTest
+tags: [private]
 ```
 
 ```Go
@@ -2423,6 +2406,7 @@ type headerMatcherTest struct {
 
 ```
 searchKey: mux.hostMatcherTest
+tags: [private]
 ```
 
 ```Go
@@ -2438,6 +2422,7 @@ type hostMatcherTest struct {
 
 ```
 searchKey: mux.methodMatcherTest
+tags: [private]
 ```
 
 ```Go
@@ -2452,6 +2437,7 @@ type methodMatcherTest struct {
 
 ```
 searchKey: mux.pathMatcherTest
+tags: [private]
 ```
 
 ```Go
@@ -2467,6 +2453,7 @@ type pathMatcherTest struct {
 
 ```
 searchKey: mux.schemeMatcherTest
+tags: [private]
 ```
 
 ```Go
@@ -2481,6 +2468,7 @@ type schemeMatcherTest struct {
 
 ```
 searchKey: mux.urlBuildingTest
+tags: [private]
 ```
 
 ```Go
@@ -2493,14 +2481,11 @@ type urlBuildingTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="getAllMethodsForRoute" href="#getAllMethodsForRoute">func getAllMethodsForRoute(r *Router, req *http.Request) ([]string, error)</a>
 
 ```
 searchKey: mux.getAllMethodsForRoute
+tags: [private]
 ```
 
 ```Go
@@ -2513,7 +2498,6 @@ getAllMethodsForRoute returns all the methods from method matchers matching a gi
 
 ```
 searchKey: mux.Vars
-tags: [exported]
 ```
 
 ```Go
@@ -2526,6 +2510,7 @@ Vars returns the route variables for the current request, if any.
 
 ```
 searchKey: mux.requestWithVars
+tags: [private]
 ```
 
 ```Go
@@ -2536,6 +2521,7 @@ func requestWithVars(r *http.Request, vars map[string]string) *http.Request
 
 ```
 searchKey: mux.requestWithRoute
+tags: [private]
 ```
 
 ```Go
@@ -2546,6 +2532,7 @@ func requestWithRoute(r *http.Request, route *Route) *http.Request
 
 ```
 searchKey: mux.cleanPath
+tags: [private]
 ```
 
 ```Go
@@ -2558,6 +2545,7 @@ cleanPath returns the canonical path for p, eliminating . and .. elements. Borro
 
 ```
 searchKey: mux.uniqueVars
+tags: [private]
 ```
 
 ```Go
@@ -2570,6 +2558,7 @@ uniqueVars returns an error if two slices contain duplicated strings.
 
 ```
 searchKey: mux.checkPairs
+tags: [private]
 ```
 
 ```Go
@@ -2582,6 +2571,7 @@ checkPairs returns the count of strings passed in, and an error if the count is 
 
 ```
 searchKey: mux.mapFromPairsToString
+tags: [private]
 ```
 
 ```Go
@@ -2594,6 +2584,7 @@ mapFromPairsToString converts variadic string parameters to a string to string m
 
 ```
 searchKey: mux.mapFromPairsToRegex
+tags: [private]
 ```
 
 ```Go
@@ -2606,6 +2597,7 @@ mapFromPairsToRegex converts variadic string parameters to a string to regex map
 
 ```
 searchKey: mux.matchInArray
+tags: [private]
 ```
 
 ```Go
@@ -2618,6 +2610,7 @@ matchInArray returns true if the given string value is in the array.
 
 ```
 searchKey: mux.matchMapWithString
+tags: [private]
 ```
 
 ```Go
@@ -2630,6 +2623,7 @@ matchMapWithString returns true if the given key/value pairs exist in a given ma
 
 ```
 searchKey: mux.matchMapWithRegex
+tags: [private]
 ```
 
 ```Go
@@ -2642,6 +2636,7 @@ matchMapWithRegex returns true if the given key/value pairs exist in a given map
 
 ```
 searchKey: mux.methodNotAllowed
+tags: [private]
 ```
 
 ```Go
@@ -2654,6 +2649,7 @@ methodNotAllowed replies to the request with an HTTP status code 405.
 
 ```
 searchKey: mux.methodNotAllowedHandler
+tags: [private]
 ```
 
 ```Go
@@ -2666,6 +2662,7 @@ methodNotAllowedHandler returns a simple request handler that replies to each re
 
 ```
 searchKey: mux.findFirstQueryKey
+tags: [private]
 ```
 
 ```Go
@@ -2678,6 +2675,7 @@ findFirstQueryKey returns the same result as (*url.URL).Query()[key][0]. If key 
 
 ```
 searchKey: mux.braceIndices
+tags: [private]
 ```
 
 ```Go
@@ -2690,6 +2688,7 @@ braceIndices returns the first level curly brace indices from a string. It retur
 
 ```
 searchKey: mux.varGroupName
+tags: [private]
 ```
 
 ```Go
@@ -2702,6 +2701,7 @@ varGroupName builds a capturing group name for the indexed variable.
 
 ```
 searchKey: mux.getHost
+tags: [private]
 ```
 
 ```Go
@@ -2714,6 +2714,7 @@ getHost tries its best to return the request host. According to section 14.23 of
 
 ```
 searchKey: mux.extractVars
+tags: [private]
 ```
 
 ```Go
@@ -2724,7 +2725,6 @@ func extractVars(input string, matches []int, names []string, output map[string]
 
 ```
 searchKey: mux.SetURLVars
-tags: [exported]
 ```
 
 ```Go
@@ -2739,6 +2739,7 @@ This API should only be used for testing purposes; it provides a way to inject v
 
 ```
 searchKey: mux.BenchmarkMux
+tags: [private]
 ```
 
 ```Go
@@ -2749,6 +2750,7 @@ func BenchmarkMux(b *testing.B)
 
 ```
 searchKey: mux.BenchmarkMuxAlternativeInRegexp
+tags: [private]
 ```
 
 ```Go
@@ -2759,6 +2761,7 @@ func BenchmarkMuxAlternativeInRegexp(b *testing.B)
 
 ```
 searchKey: mux.BenchmarkManyPathVariables
+tags: [private]
 ```
 
 ```Go
@@ -2769,6 +2772,7 @@ func BenchmarkManyPathVariables(b *testing.B)
 
 ```
 searchKey: mux.dummyHandler
+tags: [private]
 ```
 
 ```Go
@@ -2779,6 +2783,7 @@ func dummyHandler(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: mux.TestMiddlewareAdd
+tags: [private]
 ```
 
 ```Go
@@ -2789,6 +2794,7 @@ func TestMiddlewareAdd(t *testing.T)
 
 ```
 searchKey: mux.TestMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -2799,6 +2805,7 @@ func TestMiddleware(t *testing.T)
 
 ```
 searchKey: mux.TestMiddlewareSubrouter
+tags: [private]
 ```
 
 ```Go
@@ -2809,6 +2816,7 @@ func TestMiddlewareSubrouter(t *testing.T)
 
 ```
 searchKey: mux.TestMiddlewareExecution
+tags: [private]
 ```
 
 ```Go
@@ -2819,6 +2827,7 @@ func TestMiddlewareExecution(t *testing.T)
 
 ```
 searchKey: mux.TestMiddlewareNotFound
+tags: [private]
 ```
 
 ```Go
@@ -2829,6 +2838,7 @@ func TestMiddlewareNotFound(t *testing.T)
 
 ```
 searchKey: mux.TestMiddlewareMethodMismatch
+tags: [private]
 ```
 
 ```Go
@@ -2839,6 +2849,7 @@ func TestMiddlewareMethodMismatch(t *testing.T)
 
 ```
 searchKey: mux.TestMiddlewareNotFoundSubrouter
+tags: [private]
 ```
 
 ```Go
@@ -2849,6 +2860,7 @@ func TestMiddlewareNotFoundSubrouter(t *testing.T)
 
 ```
 searchKey: mux.TestMiddlewareMethodMismatchSubrouter
+tags: [private]
 ```
 
 ```Go
@@ -2859,6 +2871,7 @@ func TestMiddlewareMethodMismatchSubrouter(t *testing.T)
 
 ```
 searchKey: mux.TestCORSMethodMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -2869,6 +2882,7 @@ func TestCORSMethodMiddleware(t *testing.T)
 
 ```
 searchKey: mux.TestCORSMethodMiddlewareSubrouter
+tags: [private]
 ```
 
 ```Go
@@ -2879,6 +2893,7 @@ func TestCORSMethodMiddlewareSubrouter(t *testing.T)
 
 ```
 searchKey: mux.TestMiddlewareOnMultiSubrouter
+tags: [private]
 ```
 
 ```Go
@@ -2889,6 +2904,7 @@ func TestMiddlewareOnMultiSubrouter(t *testing.T)
 
 ```
 searchKey: mux.TestSchemeMatchers
+tags: [private]
 ```
 
 ```Go
@@ -2899,6 +2915,7 @@ func TestSchemeMatchers(t *testing.T)
 
 ```
 searchKey: mux.TestHost
+tags: [private]
 ```
 
 ```Go
@@ -2909,6 +2926,7 @@ func TestHost(t *testing.T)
 
 ```
 searchKey: mux.TestPath
+tags: [private]
 ```
 
 ```Go
@@ -2919,6 +2937,7 @@ func TestPath(t *testing.T)
 
 ```
 searchKey: mux.TestPathPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2929,6 +2948,7 @@ func TestPathPrefix(t *testing.T)
 
 ```
 searchKey: mux.TestSchemeHostPath
+tags: [private]
 ```
 
 ```Go
@@ -2939,6 +2959,7 @@ func TestSchemeHostPath(t *testing.T)
 
 ```
 searchKey: mux.TestHeaders
+tags: [private]
 ```
 
 ```Go
@@ -2949,6 +2970,7 @@ func TestHeaders(t *testing.T)
 
 ```
 searchKey: mux.TestMethods
+tags: [private]
 ```
 
 ```Go
@@ -2959,6 +2981,7 @@ func TestMethods(t *testing.T)
 
 ```
 searchKey: mux.TestQueries
+tags: [private]
 ```
 
 ```Go
@@ -2969,6 +2992,7 @@ func TestQueries(t *testing.T)
 
 ```
 searchKey: mux.TestSchemes
+tags: [private]
 ```
 
 ```Go
@@ -2979,6 +3003,7 @@ func TestSchemes(t *testing.T)
 
 ```
 searchKey: mux.TestMatcherFunc
+tags: [private]
 ```
 
 ```Go
@@ -2989,6 +3014,7 @@ func TestMatcherFunc(t *testing.T)
 
 ```
 searchKey: mux.TestBuildVarsFunc
+tags: [private]
 ```
 
 ```Go
@@ -2999,6 +3025,7 @@ func TestBuildVarsFunc(t *testing.T)
 
 ```
 searchKey: mux.TestSubRouter
+tags: [private]
 ```
 
 ```Go
@@ -3009,6 +3036,7 @@ func TestSubRouter(t *testing.T)
 
 ```
 searchKey: mux.TestNamedRoutes
+tags: [private]
 ```
 
 ```Go
@@ -3019,6 +3047,7 @@ func TestNamedRoutes(t *testing.T)
 
 ```
 searchKey: mux.TestNameMultipleCalls
+tags: [private]
 ```
 
 ```Go
@@ -3029,6 +3058,7 @@ func TestNameMultipleCalls(t *testing.T)
 
 ```
 searchKey: mux.TestStrictSlash
+tags: [private]
 ```
 
 ```Go
@@ -3039,6 +3069,7 @@ func TestStrictSlash(t *testing.T)
 
 ```
 searchKey: mux.TestUseEncodedPath
+tags: [private]
 ```
 
 ```Go
@@ -3049,6 +3080,7 @@ func TestUseEncodedPath(t *testing.T)
 
 ```
 searchKey: mux.TestWalkSingleDepth
+tags: [private]
 ```
 
 ```Go
@@ -3059,6 +3091,7 @@ func TestWalkSingleDepth(t *testing.T)
 
 ```
 searchKey: mux.TestWalkNested
+tags: [private]
 ```
 
 ```Go
@@ -3069,6 +3102,7 @@ func TestWalkNested(t *testing.T)
 
 ```
 searchKey: mux.TestWalkSubrouters
+tags: [private]
 ```
 
 ```Go
@@ -3079,6 +3113,7 @@ func TestWalkSubrouters(t *testing.T)
 
 ```
 searchKey: mux.TestWalkErrorRoute
+tags: [private]
 ```
 
 ```Go
@@ -3089,6 +3124,7 @@ func TestWalkErrorRoute(t *testing.T)
 
 ```
 searchKey: mux.TestWalkErrorMatcher
+tags: [private]
 ```
 
 ```Go
@@ -3099,6 +3135,7 @@ func TestWalkErrorMatcher(t *testing.T)
 
 ```
 searchKey: mux.TestWalkErrorHandler
+tags: [private]
 ```
 
 ```Go
@@ -3109,6 +3146,7 @@ func TestWalkErrorHandler(t *testing.T)
 
 ```
 searchKey: mux.TestSubrouterErrorHandling
+tags: [private]
 ```
 
 ```Go
@@ -3119,6 +3157,7 @@ func TestSubrouterErrorHandling(t *testing.T)
 
 ```
 searchKey: mux.TestPanicOnCapturingGroups
+tags: [private]
 ```
 
 ```Go
@@ -3131,6 +3170,7 @@ See: [https://github.com/gorilla/mux/issues/200](https://github.com/gorilla/mux/
 
 ```
 searchKey: mux.getRouteTemplate
+tags: [private]
 ```
 
 ```Go
@@ -3141,6 +3181,7 @@ func getRouteTemplate(route *Route) string
 
 ```
 searchKey: mux.testRoute
+tags: [private]
 ```
 
 ```Go
@@ -3151,6 +3192,7 @@ func testRoute(t *testing.T, test routeTest)
 
 ```
 searchKey: mux.testUseEscapedRoute
+tags: [private]
 ```
 
 ```Go
@@ -3161,6 +3203,7 @@ func testUseEscapedRoute(t *testing.T, test routeTest)
 
 ```
 searchKey: mux.testTemplate
+tags: [private]
 ```
 
 ```Go
@@ -3171,6 +3214,7 @@ func testTemplate(t *testing.T, test routeTest)
 
 ```
 searchKey: mux.testMethods
+tags: [private]
 ```
 
 ```Go
@@ -3181,6 +3225,7 @@ func testMethods(t *testing.T, test routeTest)
 
 ```
 searchKey: mux.testRegexp
+tags: [private]
 ```
 
 ```Go
@@ -3191,6 +3236,7 @@ func testRegexp(t *testing.T, test routeTest)
 
 ```
 searchKey: mux.testQueriesRegexp
+tags: [private]
 ```
 
 ```Go
@@ -3201,6 +3247,7 @@ func testQueriesRegexp(t *testing.T, test routeTest)
 
 ```
 searchKey: mux.testQueriesTemplates
+tags: [private]
 ```
 
 ```Go
@@ -3211,6 +3258,7 @@ func testQueriesTemplates(t *testing.T, test routeTest)
 
 ```
 searchKey: mux.Test301Redirect
+tags: [private]
 ```
 
 ```Go
@@ -3221,6 +3269,7 @@ func Test301Redirect(t *testing.T)
 
 ```
 searchKey: mux.TestSkipClean
+tags: [private]
 ```
 
 ```Go
@@ -3231,6 +3280,7 @@ func TestSkipClean(t *testing.T)
 
 ```
 searchKey: mux.TestSubrouterHeader
+tags: [private]
 ```
 
 ```Go
@@ -3243,6 +3293,7 @@ func TestSubrouterHeader(t *testing.T)
 
 ```
 searchKey: mux.TestNoMatchMethodErrorHandler
+tags: [private]
 ```
 
 ```Go
@@ -3253,6 +3304,7 @@ func TestNoMatchMethodErrorHandler(t *testing.T)
 
 ```
 searchKey: mux.TestErrMatchNotFound
+tags: [private]
 ```
 
 ```Go
@@ -3263,6 +3315,7 @@ func TestErrMatchNotFound(t *testing.T)
 
 ```
 searchKey: mux.methodHandler
+tags: [private]
 ```
 
 ```Go
@@ -3275,6 +3328,7 @@ methodHandler writes the method string in response.
 
 ```
 searchKey: mux.TestMethodsSubrouterCatchall
+tags: [private]
 ```
 
 ```Go
@@ -3287,6 +3341,7 @@ TestMethodsSubrouterCatchall matches handlers for subrouters where a catchall ha
 
 ```
 searchKey: mux.TestMethodsSubrouterStrictSlash
+tags: [private]
 ```
 
 ```Go
@@ -3299,6 +3354,7 @@ TestMethodsSubrouterStrictSlash matches handlers on subrouters with strict-slash
 
 ```
 searchKey: mux.TestMethodsSubrouterPathPrefix
+tags: [private]
 ```
 
 ```Go
@@ -3311,6 +3367,7 @@ TestMethodsSubrouterPathPrefix matches handlers on subrouters created on a route
 
 ```
 searchKey: mux.TestMethodsSubrouterSubrouter
+tags: [private]
 ```
 
 ```Go
@@ -3323,6 +3380,7 @@ TestMethodsSubrouterSubrouter matches handlers on subrouters produced from metho
 
 ```
 searchKey: mux.TestMethodsSubrouterPathVariable
+tags: [private]
 ```
 
 ```Go
@@ -3335,6 +3393,7 @@ TestMethodsSubrouterPathVariable matches handlers on matching paths with path va
 
 ```
 searchKey: mux.ExampleSetURLVars
+tags: [private]
 ```
 
 ```Go
@@ -3345,6 +3404,7 @@ func ExampleSetURLVars()
 
 ```
 searchKey: mux.testMethodsSubrouter
+tags: [private]
 ```
 
 ```Go
@@ -3357,6 +3417,7 @@ testMethodsSubrouter runs an individual methodsSubrouterTest.
 
 ```
 searchKey: mux.TestSubrouterMatching
+tags: [private]
 ```
 
 ```Go
@@ -3367,6 +3428,7 @@ func TestSubrouterMatching(t *testing.T)
 
 ```
 searchKey: mux.Test_copyRouteConf
+tags: [private]
 ```
 
 ```Go
@@ -3379,6 +3441,7 @@ verify that copyRouteConf copies fields as expected.
 
 ```
 searchKey: mux.TestMethodNotAllowed
+tags: [private]
 ```
 
 ```Go
@@ -3389,6 +3452,7 @@ func TestMethodNotAllowed(t *testing.T)
 
 ```
 searchKey: mux.TestSubrouterCustomMethodNotAllowed
+tags: [private]
 ```
 
 ```Go
@@ -3399,6 +3463,7 @@ func TestSubrouterCustomMethodNotAllowed(t *testing.T)
 
 ```
 searchKey: mux.TestSubrouterNotFound
+tags: [private]
 ```
 
 ```Go
@@ -3409,6 +3474,7 @@ func TestSubrouterNotFound(t *testing.T)
 
 ```
 searchKey: mux.TestContextMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -3419,6 +3485,7 @@ func TestContextMiddleware(t *testing.T)
 
 ```
 searchKey: mux.mapToPairs
+tags: [private]
 ```
 
 ```Go
@@ -3431,6 +3498,7 @@ mapToPairs converts a string map to a slice of string pairs
 
 ```
 searchKey: mux.stringMapEqual
+tags: [private]
 ```
 
 ```Go
@@ -3443,6 +3511,7 @@ stringMapEqual checks the equality of two string maps
 
 ```
 searchKey: mux.stringHandler
+tags: [private]
 ```
 
 ```Go
@@ -3455,6 +3524,7 @@ stringHandler returns a handler func that writes a message 's' to the http.Respo
 
 ```
 searchKey: mux.newRequest
+tags: [private]
 ```
 
 ```Go
@@ -3467,6 +3537,7 @@ newRequest is a helper function to create a new request with a method and url. T
 
 ```
 searchKey: mux.newRequestWithHeaders
+tags: [private]
 ```
 
 ```Go
@@ -3479,6 +3550,7 @@ create a new request with the provided headers
 
 ```
 searchKey: mux.newRequestHost
+tags: [private]
 ```
 
 ```Go
@@ -3491,6 +3563,7 @@ newRequestHost a new request with a method, url, and host header
 
 ```
 searchKey: mux.TestRouteMatchers
+tags: [private]
 ```
 
 ```Go
@@ -3501,6 +3574,7 @@ func TestRouteMatchers(t *testing.T)
 
 ```
 searchKey: mux.TestHeaderMatcher
+tags: [private]
 ```
 
 ```Go
@@ -3511,6 +3585,7 @@ func TestHeaderMatcher(t *testing.T)
 
 ```
 searchKey: mux.TestHostMatcher
+tags: [private]
 ```
 
 ```Go
@@ -3521,6 +3596,7 @@ func TestHostMatcher(t *testing.T)
 
 ```
 searchKey: mux.TestMethodMatcher
+tags: [private]
 ```
 
 ```Go
@@ -3531,6 +3607,7 @@ func TestMethodMatcher(t *testing.T)
 
 ```
 searchKey: mux.TestPathMatcher
+tags: [private]
 ```
 
 ```Go
@@ -3541,6 +3618,7 @@ func TestPathMatcher(t *testing.T)
 
 ```
 searchKey: mux.TestSchemeMatcher
+tags: [private]
 ```
 
 ```Go
@@ -3551,6 +3629,7 @@ func TestSchemeMatcher(t *testing.T)
 
 ```
 searchKey: mux.TestUrlBuilding
+tags: [private]
 ```
 
 ```Go
@@ -3561,6 +3640,7 @@ func TestUrlBuilding(t *testing.T)
 
 ```
 searchKey: mux.TestMatchedRouteName
+tags: [private]
 ```
 
 ```Go
@@ -3571,6 +3651,7 @@ func TestMatchedRouteName(t *testing.T)
 
 ```
 searchKey: mux.TestSubRouting
+tags: [private]
 ```
 
 ```Go
@@ -3581,6 +3662,7 @@ func TestSubRouting(t *testing.T)
 
 ```
 searchKey: mux.TestVariableNames
+tags: [private]
 ```
 
 ```Go
@@ -3591,6 +3673,7 @@ func TestVariableNames(t *testing.T)
 
 ```
 searchKey: mux.TestRedirectSlash
+tags: [private]
 ```
 
 ```Go
@@ -3601,6 +3684,7 @@ func TestRedirectSlash(t *testing.T)
 
 ```
 searchKey: mux.TestNewRegexp
+tags: [private]
 ```
 
 ```Go
@@ -3613,6 +3697,7 @@ Test for the new regexp library, still not available in stable Go.
 
 ```
 searchKey: mux.Test_findFirstQueryKey
+tags: [private]
 ```
 
 ```Go
@@ -3623,6 +3708,7 @@ func Test_findFirstQueryKey(t *testing.T)
 
 ```
 searchKey: mux.Benchmark_findQueryKey
+tags: [private]
 ```
 
 ```Go
@@ -3633,6 +3719,7 @@ func Benchmark_findQueryKey(b *testing.B)
 
 ```
 searchKey: mux.Benchmark_findQueryKeyGoLib
+tags: [private]
 ```
 
 ```Go

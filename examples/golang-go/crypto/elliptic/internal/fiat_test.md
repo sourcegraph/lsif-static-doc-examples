@@ -9,10 +9,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="p521Random" href="#p521Random">func p521Random(t *testing.T) *fiat.P521Element</a>
 
 ```
 searchKey: fiat_test.p521Random
+tags: [private]
 ```
 
 ```Go
@@ -23,6 +28,7 @@ func p521Random(t *testing.T) *fiat.P521Element
 
 ```
 searchKey: fiat_test.TestP521Invert
+tags: [private]
 ```
 
 ```Go

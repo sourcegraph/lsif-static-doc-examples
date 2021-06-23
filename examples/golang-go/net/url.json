@@ -4,9 +4,7 @@
     "identifier": "url",
     "newPage": true,
     "searchKey": "net/url",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "upperhex",
                 "newPage": false,
                 "searchKey": "url.upperhex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "encodePath",
                 "newPage": false,
                 "searchKey": "url.encodePath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "encodePathSegment",
                 "newPage": false,
                 "searchKey": "url.encodePathSegment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "encodeHost",
                 "newPage": false,
                 "searchKey": "url.encodeHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "encodeZone",
                 "newPage": false,
                 "searchKey": "url.encodeZone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "encodeUserPassword",
                 "newPage": false,
                 "searchKey": "url.encodeUserPassword",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "encodeQueryComponent",
                 "newPage": false,
                 "searchKey": "url.encodeQueryComponent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "encodeFragment",
                 "newPage": false,
                 "searchKey": "url.encodeFragment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                 "identifier": "pathThatLooksSchemeRelative",
                 "newPage": false,
                 "searchKey": "url.pathThatLooksSchemeRelative",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -227,9 +241,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "urltests",
                 "newPage": false,
                 "searchKey": "url.urltests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "parseRequestURLTests",
                 "newPage": false,
                 "searchKey": "url.parseRequestURLTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -287,7 +303,9 @@
                 "identifier": "stringURLTests",
                 "newPage": false,
                 "searchKey": "url.stringURLTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -307,7 +325,9 @@
                 "identifier": "unescapeTests",
                 "newPage": false,
                 "searchKey": "url.unescapeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -327,7 +347,9 @@
                 "identifier": "queryEscapeTests",
                 "newPage": false,
                 "searchKey": "url.queryEscapeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,7 +369,9 @@
                 "identifier": "pathEscapeTests",
                 "newPage": false,
                 "searchKey": "url.pathEscapeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +391,9 @@
                 "identifier": "encodeQueryTests",
                 "newPage": false,
                 "searchKey": "url.encodeQueryTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +413,9 @@
                 "identifier": "resolvePathTests",
                 "newPage": false,
                 "searchKey": "url.resolvePathTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,7 +435,9 @@
                 "identifier": "resolveReferenceTests",
                 "newPage": false,
                 "searchKey": "url.resolveReferenceTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -427,7 +457,9 @@
                 "identifier": "parseTests",
                 "newPage": false,
                 "searchKey": "url.parseTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,7 +479,9 @@
                 "identifier": "requritests",
                 "newPage": false,
                 "searchKey": "url.requritests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,7 +501,9 @@
                 "identifier": "shouldEscapeTests",
                 "newPage": false,
                 "searchKey": "url.shouldEscapeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,7 +523,9 @@
                 "identifier": "netErrorTests",
                 "newPage": false,
                 "searchKey": "url.netErrorTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +545,9 @@
                 "identifier": "escapeBenchmarks",
                 "newPage": false,
                 "searchKey": "url.escapeBenchmarks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,7 +567,9 @@
                 "identifier": "sink",
                 "newPage": false,
                 "searchKey": "url.sink",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -550,9 +592,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -570,9 +610,7 @@
                 "identifier": "Error",
                 "newPage": false,
                 "searchKey": "url.Error",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -590,9 +628,7 @@
                       "identifier": "Error.Unwrap",
                       "newPage": false,
                       "searchKey": "url.Error.Unwrap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -612,9 +648,7 @@
                       "identifier": "Error.Error",
                       "newPage": false,
                       "searchKey": "url.Error.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -634,9 +668,7 @@
                       "identifier": "Error.Timeout",
                       "newPage": false,
                       "searchKey": "url.Error.Timeout",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -656,9 +688,7 @@
                       "identifier": "Error.Temporary",
                       "newPage": false,
                       "searchKey": "url.Error.Temporary",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -681,7 +711,9 @@
                 "identifier": "encoding",
                 "newPage": false,
                 "searchKey": "url.encoding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -701,9 +733,7 @@
                 "identifier": "EscapeError",
                 "newPage": false,
                 "searchKey": "url.EscapeError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -721,9 +751,7 @@
                       "identifier": "EscapeError.Error",
                       "newPage": false,
                       "searchKey": "url.EscapeError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -746,9 +774,7 @@
                 "identifier": "InvalidHostError",
                 "newPage": false,
                 "searchKey": "url.InvalidHostError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -766,9 +792,7 @@
                       "identifier": "InvalidHostError.Error",
                       "newPage": false,
                       "searchKey": "url.InvalidHostError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -791,9 +815,7 @@
                 "identifier": "URL",
                 "newPage": false,
                 "searchKey": "url.URL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -811,9 +833,7 @@
                       "identifier": "Parse",
                       "newPage": false,
                       "searchKey": "url.Parse",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -833,9 +853,7 @@
                       "identifier": "ParseRequestURI",
                       "newPage": false,
                       "searchKey": "url.ParseRequestURI",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -855,7 +873,9 @@
                       "identifier": "parse",
                       "newPage": false,
                       "searchKey": "url.parse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -875,7 +895,9 @@
                       "identifier": "URL.setPath",
                       "newPage": false,
                       "searchKey": "url.URL.setPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -895,9 +917,7 @@
                       "identifier": "URL.EscapedPath",
                       "newPage": false,
                       "searchKey": "url.URL.EscapedPath",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -917,7 +937,9 @@
                       "identifier": "URL.setFragment",
                       "newPage": false,
                       "searchKey": "url.URL.setFragment",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -937,9 +959,7 @@
                       "identifier": "URL.EscapedFragment",
                       "newPage": false,
                       "searchKey": "url.URL.EscapedFragment",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -959,9 +979,7 @@
                       "identifier": "URL.String",
                       "newPage": false,
                       "searchKey": "url.URL.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -981,9 +999,7 @@
                       "identifier": "URL.Redacted",
                       "newPage": false,
                       "searchKey": "url.URL.Redacted",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1003,9 +1019,7 @@
                       "identifier": "URL.IsAbs",
                       "newPage": false,
                       "searchKey": "url.URL.IsAbs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1025,9 +1039,7 @@
                       "identifier": "URL.Parse",
                       "newPage": false,
                       "searchKey": "url.URL.Parse",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1047,9 +1059,7 @@
                       "identifier": "URL.ResolveReference",
                       "newPage": false,
                       "searchKey": "url.URL.ResolveReference",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1069,9 +1079,7 @@
                       "identifier": "URL.Query",
                       "newPage": false,
                       "searchKey": "url.URL.Query",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1091,9 +1099,7 @@
                       "identifier": "URL.RequestURI",
                       "newPage": false,
                       "searchKey": "url.URL.RequestURI",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1113,9 +1119,7 @@
                       "identifier": "URL.Hostname",
                       "newPage": false,
                       "searchKey": "url.URL.Hostname",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1135,9 +1139,7 @@
                       "identifier": "URL.Port",
                       "newPage": false,
                       "searchKey": "url.URL.Port",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1157,9 +1159,7 @@
                       "identifier": "URL.MarshalBinary",
                       "newPage": false,
                       "searchKey": "url.URL.MarshalBinary",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1179,9 +1179,7 @@
                       "identifier": "URL.UnmarshalBinary",
                       "newPage": false,
                       "searchKey": "url.URL.UnmarshalBinary",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1204,9 +1202,7 @@
                 "identifier": "Userinfo",
                 "newPage": false,
                 "searchKey": "url.Userinfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1224,9 +1220,7 @@
                       "identifier": "User",
                       "newPage": false,
                       "searchKey": "url.User",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1246,9 +1240,7 @@
                       "identifier": "UserPassword",
                       "newPage": false,
                       "searchKey": "url.UserPassword",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1268,7 +1260,9 @@
                       "identifier": "parseAuthority",
                       "newPage": false,
                       "searchKey": "url.parseAuthority",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1288,9 +1282,7 @@
                       "identifier": "Userinfo.Username",
                       "newPage": false,
                       "searchKey": "url.Userinfo.Username",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1310,9 +1302,7 @@
                       "identifier": "Userinfo.Password",
                       "newPage": false,
                       "searchKey": "url.Userinfo.Password",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1332,9 +1322,7 @@
                       "identifier": "Userinfo.String",
                       "newPage": false,
                       "searchKey": "url.Userinfo.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1357,9 +1345,7 @@
                 "identifier": "Values",
                 "newPage": false,
                 "searchKey": "url.Values",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1377,9 +1363,7 @@
                       "identifier": "ParseQuery",
                       "newPage": false,
                       "searchKey": "url.ParseQuery",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1399,9 +1383,7 @@
                       "identifier": "Values.Get",
                       "newPage": false,
                       "searchKey": "url.Values.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1421,9 +1403,7 @@
                       "identifier": "Values.Set",
                       "newPage": false,
                       "searchKey": "url.Values.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1443,9 +1423,7 @@
                       "identifier": "Values.Add",
                       "newPage": false,
                       "searchKey": "url.Values.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1465,9 +1443,7 @@
                       "identifier": "Values.Del",
                       "newPage": false,
                       "searchKey": "url.Values.Del",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1487,9 +1463,7 @@
                       "identifier": "Values.Has",
                       "newPage": false,
                       "searchKey": "url.Values.Has",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1509,9 +1483,7 @@
                       "identifier": "Values.Encode",
                       "newPage": false,
                       "searchKey": "url.Values.Encode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1534,7 +1506,9 @@
                 "identifier": "URLTest",
                 "newPage": false,
                 "searchKey": "url.URLTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1554,7 +1528,9 @@
                 "identifier": "EscapeTest",
                 "newPage": false,
                 "searchKey": "url.EscapeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1574,7 +1550,9 @@
                 "identifier": "EncodeQueryTest",
                 "newPage": false,
                 "searchKey": "url.EncodeQueryTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1594,7 +1572,9 @@
                 "identifier": "parseTest",
                 "newPage": false,
                 "searchKey": "url.parseTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1614,7 +1594,9 @@
                 "identifier": "RequestURITest",
                 "newPage": false,
                 "searchKey": "url.RequestURITest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1634,7 +1616,9 @@
                 "identifier": "shouldEscapeTest",
                 "newPage": false,
                 "searchKey": "url.shouldEscapeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1654,7 +1638,9 @@
                 "identifier": "timeoutError",
                 "newPage": false,
                 "searchKey": "url.timeoutError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1672,7 +1658,9 @@
                       "identifier": "timeoutError.Error",
                       "newPage": false,
                       "searchKey": "url.timeoutError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1692,7 +1680,9 @@
                       "identifier": "timeoutError.Timeout",
                       "newPage": false,
                       "searchKey": "url.timeoutError.Timeout",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1715,7 +1705,9 @@
                 "identifier": "temporaryError",
                 "newPage": false,
                 "searchKey": "url.temporaryError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1733,7 +1725,9 @@
                       "identifier": "temporaryError.Error",
                       "newPage": false,
                       "searchKey": "url.temporaryError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1753,7 +1747,9 @@
                       "identifier": "temporaryError.Temporary",
                       "newPage": false,
                       "searchKey": "url.temporaryError.Temporary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1776,7 +1772,9 @@
                 "identifier": "timeoutTemporaryError",
                 "newPage": false,
                 "searchKey": "url.timeoutTemporaryError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1794,7 +1792,9 @@
                       "identifier": "timeoutTemporaryError.Error",
                       "newPage": false,
                       "searchKey": "url.timeoutTemporaryError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1820,9 +1820,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1840,7 +1838,9 @@
                 "identifier": "ishex",
                 "newPage": false,
                 "searchKey": "url.ishex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1860,7 +1860,9 @@
                 "identifier": "unhex",
                 "newPage": false,
                 "searchKey": "url.unhex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1880,7 +1882,9 @@
                 "identifier": "shouldEscape",
                 "newPage": false,
                 "searchKey": "url.shouldEscape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1900,9 +1904,7 @@
                 "identifier": "QueryUnescape",
                 "newPage": false,
                 "searchKey": "url.QueryUnescape",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1922,9 +1924,7 @@
                 "identifier": "PathUnescape",
                 "newPage": false,
                 "searchKey": "url.PathUnescape",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1944,7 +1944,9 @@
                 "identifier": "unescape",
                 "newPage": false,
                 "searchKey": "url.unescape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1964,9 +1966,7 @@
                 "identifier": "QueryEscape",
                 "newPage": false,
                 "searchKey": "url.QueryEscape",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1986,9 +1986,7 @@
                 "identifier": "PathEscape",
                 "newPage": false,
                 "searchKey": "url.PathEscape",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2008,7 +2006,9 @@
                 "identifier": "escape",
                 "newPage": false,
                 "searchKey": "url.escape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2028,7 +2028,9 @@
                 "identifier": "getScheme",
                 "newPage": false,
                 "searchKey": "url.getScheme",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2048,7 +2050,9 @@
                 "identifier": "split",
                 "newPage": false,
                 "searchKey": "url.split",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2068,7 +2072,9 @@
                 "identifier": "parseHost",
                 "newPage": false,
                 "searchKey": "url.parseHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2088,7 +2094,9 @@
                 "identifier": "validEncoded",
                 "newPage": false,
                 "searchKey": "url.validEncoded",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2108,7 +2116,9 @@
                 "identifier": "validOptionalPort",
                 "newPage": false,
                 "searchKey": "url.validOptionalPort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2128,7 +2138,9 @@
                 "identifier": "parseQuery",
                 "newPage": false,
                 "searchKey": "url.parseQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2148,7 +2160,9 @@
                 "identifier": "resolvePath",
                 "newPage": false,
                 "searchKey": "url.resolvePath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2168,7 +2182,9 @@
                 "identifier": "splitHostPort",
                 "newPage": false,
                 "searchKey": "url.splitHostPort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2188,7 +2204,9 @@
                 "identifier": "validUserinfo",
                 "newPage": false,
                 "searchKey": "url.validUserinfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2208,7 +2226,9 @@
                 "identifier": "stringContainsCTLByte",
                 "newPage": false,
                 "searchKey": "url.stringContainsCTLByte",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2228,7 +2248,9 @@
                 "identifier": "ufmt",
                 "newPage": false,
                 "searchKey": "url.ufmt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2248,7 +2270,9 @@
                 "identifier": "BenchmarkString",
                 "newPage": false,
                 "searchKey": "url.BenchmarkString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2268,7 +2292,9 @@
                 "identifier": "TestParse",
                 "newPage": false,
                 "searchKey": "url.TestParse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2288,7 +2314,9 @@
                 "identifier": "TestParseRequestURI",
                 "newPage": false,
                 "searchKey": "url.TestParseRequestURI",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2308,7 +2336,9 @@
                 "identifier": "TestURLString",
                 "newPage": false,
                 "searchKey": "url.TestURLString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2328,7 +2358,9 @@
                 "identifier": "TestURLRedacted",
                 "newPage": false,
                 "searchKey": "url.TestURLRedacted",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2348,7 +2380,9 @@
                 "identifier": "TestUnescape",
                 "newPage": false,
                 "searchKey": "url.TestUnescape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2368,7 +2402,9 @@
                 "identifier": "TestQueryEscape",
                 "newPage": false,
                 "searchKey": "url.TestQueryEscape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2388,7 +2424,9 @@
                 "identifier": "TestPathEscape",
                 "newPage": false,
                 "searchKey": "url.TestPathEscape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2408,7 +2446,9 @@
                 "identifier": "TestEncodeQuery",
                 "newPage": false,
                 "searchKey": "url.TestEncodeQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2428,7 +2468,9 @@
                 "identifier": "TestResolvePath",
                 "newPage": false,
                 "searchKey": "url.TestResolvePath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2448,7 +2490,9 @@
                 "identifier": "BenchmarkResolvePath",
                 "newPage": false,
                 "searchKey": "url.BenchmarkResolvePath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2468,7 +2512,9 @@
                 "identifier": "TestResolveReference",
                 "newPage": false,
                 "searchKey": "url.TestResolveReference",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2488,7 +2534,9 @@
                 "identifier": "TestQueryValues",
                 "newPage": false,
                 "searchKey": "url.TestQueryValues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2508,7 +2556,9 @@
                 "identifier": "TestParseQuery",
                 "newPage": false,
                 "searchKey": "url.TestParseQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2528,7 +2578,9 @@
                 "identifier": "TestRequestURI",
                 "newPage": false,
                 "searchKey": "url.TestRequestURI",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2548,7 +2600,9 @@
                 "identifier": "TestParseFailure",
                 "newPage": false,
                 "searchKey": "url.TestParseFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2568,7 +2622,9 @@
                 "identifier": "TestParseErrors",
                 "newPage": false,
                 "searchKey": "url.TestParseErrors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2588,7 +2644,9 @@
                 "identifier": "TestStarRequest",
                 "newPage": false,
                 "searchKey": "url.TestStarRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2608,7 +2666,9 @@
                 "identifier": "TestShouldEscape",
                 "newPage": false,
                 "searchKey": "url.TestShouldEscape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2628,7 +2688,9 @@
                 "identifier": "TestURLErrorImplementsNetError",
                 "newPage": false,
                 "searchKey": "url.TestURLErrorImplementsNetError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2648,7 +2710,9 @@
                 "identifier": "TestURLHostnameAndPort",
                 "newPage": false,
                 "searchKey": "url.TestURLHostnameAndPort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2668,7 +2732,9 @@
                 "identifier": "TestJSON",
                 "newPage": false,
                 "searchKey": "url.TestJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2688,7 +2754,9 @@
                 "identifier": "TestGob",
                 "newPage": false,
                 "searchKey": "url.TestGob",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2708,7 +2776,9 @@
                 "identifier": "TestNilUser",
                 "newPage": false,
                 "searchKey": "url.TestNilUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2728,7 +2798,9 @@
                 "identifier": "TestInvalidUserPassword",
                 "newPage": false,
                 "searchKey": "url.TestInvalidUserPassword",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2748,7 +2820,9 @@
                 "identifier": "TestRejectControlCharacters",
                 "newPage": false,
                 "searchKey": "url.TestRejectControlCharacters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2768,7 +2842,9 @@
                 "identifier": "BenchmarkQueryEscape",
                 "newPage": false,
                 "searchKey": "url.BenchmarkQueryEscape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2788,7 +2864,9 @@
                 "identifier": "BenchmarkPathEscape",
                 "newPage": false,
                 "searchKey": "url.BenchmarkPathEscape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2808,7 +2886,9 @@
                 "identifier": "BenchmarkQueryUnescape",
                 "newPage": false,
                 "searchKey": "url.BenchmarkQueryUnescape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2828,7 +2908,9 @@
                 "identifier": "BenchmarkPathUnescape",
                 "newPage": false,
                 "searchKey": "url.BenchmarkPathUnescape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2848,7 +2930,9 @@
                 "identifier": "BenchmarkSplit",
                 "newPage": false,
                 "searchKey": "url.BenchmarkSplit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

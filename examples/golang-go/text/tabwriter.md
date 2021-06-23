@@ -49,15 +49,10 @@ The text/tabwriter package is frozen and is not accepting new features.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="FilterHTML" href="#FilterHTML">const FilterHTML</a>
 
 ```
 searchKey: tabwriter.FilterHTML
-tags: [exported]
 ```
 
 ```Go
@@ -72,7 +67,6 @@ Ignore html tags and treat entities (starting with '&' and ending in ';') as sin
 
 ```
 searchKey: tabwriter.StripEscape
-tags: [exported]
 ```
 
 ```Go
@@ -87,7 +81,6 @@ Strip Escape characters bracketing escaped text segments instead of passing them
 
 ```
 searchKey: tabwriter.AlignRight
-tags: [exported]
 ```
 
 ```Go
@@ -102,7 +95,6 @@ Force right-alignment of cell content. Default is left-alignment.
 
 ```
 searchKey: tabwriter.DiscardEmptyColumns
-tags: [exported]
 ```
 
 ```Go
@@ -117,7 +109,6 @@ Handle empty columns as if they were not present in the input in the first place
 
 ```
 searchKey: tabwriter.TabIndent
-tags: [exported]
 ```
 
 ```Go
@@ -132,7 +123,6 @@ Always use tabs for indentation columns (i.e., padding of leading empty cells on
 
 ```
 searchKey: tabwriter.Debug
-tags: [exported]
 ```
 
 ```Go
@@ -147,7 +137,6 @@ Print a vertical bar ('|') between columns (after formatting). Discarded columns
 
 ```
 searchKey: tabwriter.Escape
-tags: [exported]
 ```
 
 ```Go
@@ -160,14 +149,11 @@ The value 0xff was chosen because it cannot appear in a valid UTF-8 sequence.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="newline" href="#newline">var newline</a>
 
 ```
 searchKey: tabwriter.newline
+tags: [private]
 ```
 
 ```Go
@@ -178,6 +164,7 @@ var newline = []byte{'\n'}
 
 ```
 searchKey: tabwriter.tabs
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +175,7 @@ var tabs = []byte("\t\t\t\t\t\t\t\t")
 
 ```
 searchKey: tabwriter.vbar
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +186,7 @@ var vbar = []byte{'|'}
 
 ```
 searchKey: tabwriter.hbar
+tags: [private]
 ```
 
 ```Go
@@ -206,14 +195,11 @@ var hbar = []byte("---\n")
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="cell" href="#cell">type cell struct</a>
 
 ```
 searchKey: tabwriter.cell
+tags: [private]
 ```
 
 ```Go
@@ -230,7 +216,6 @@ A cell represents a segment of text terminated by tabs or line breaks. The text 
 
 ```
 searchKey: tabwriter.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -284,7 +269,6 @@ The Writer must buffer input internally, because proper spacing of one line may 
 
 ```
 searchKey: tabwriter.NewWriter
-tags: [exported]
 ```
 
 ```Go
@@ -297,6 +281,7 @@ NewWriter allocates and initializes a new tabwriter.Writer. The parameters are t
 
 ```
 searchKey: tabwriter.Writer.addLine
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +294,7 @@ addLine adds a new line. flushed is a hint indicating whether the underlying wri
 
 ```
 searchKey: tabwriter.Writer.reset
+tags: [private]
 ```
 
 ```Go
@@ -321,7 +307,6 @@ Reset the current state.
 
 ```
 searchKey: tabwriter.Writer.Init
-tags: [exported]
 ```
 
 ```Go
@@ -347,6 +332,7 @@ flags		formatting control
 
 ```
 searchKey: tabwriter.Writer.dump
+tags: [private]
 ```
 
 ```Go
@@ -359,6 +345,7 @@ debugging support (keep code around)
 
 ```
 searchKey: tabwriter.Writer.write0
+tags: [private]
 ```
 
 ```Go
@@ -369,6 +356,7 @@ func (b *Writer) write0(buf []byte)
 
 ```
 searchKey: tabwriter.Writer.writeN
+tags: [private]
 ```
 
 ```Go
@@ -379,6 +367,7 @@ func (b *Writer) writeN(src []byte, n int)
 
 ```
 searchKey: tabwriter.Writer.writePadding
+tags: [private]
 ```
 
 ```Go
@@ -389,6 +378,7 @@ func (b *Writer) writePadding(textw, cellw int, useTabs bool)
 
 ```
 searchKey: tabwriter.Writer.writeLines
+tags: [private]
 ```
 
 ```Go
@@ -399,6 +389,7 @@ func (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)
 
 ```
 searchKey: tabwriter.Writer.format
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +402,7 @@ Format the text between line0 and line1 (excluding line1); pos is the buffer pos
 
 ```
 searchKey: tabwriter.Writer.append
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +415,7 @@ Append text to current cell.
 
 ```
 searchKey: tabwriter.Writer.updateWidth
+tags: [private]
 ```
 
 ```Go
@@ -435,6 +428,7 @@ Update the cell width.
 
 ```
 searchKey: tabwriter.Writer.startEscape
+tags: [private]
 ```
 
 ```Go
@@ -447,6 +441,7 @@ Start escaped mode.
 
 ```
 searchKey: tabwriter.Writer.endEscape
+tags: [private]
 ```
 
 ```Go
@@ -459,6 +454,7 @@ Terminate escaped mode. If the escaped text was an HTML tag, its width is assume
 
 ```
 searchKey: tabwriter.Writer.terminateCell
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +467,7 @@ Terminate the current cell by adding it to the list of cells of the current line
 
 ```
 searchKey: tabwriter.Writer.handlePanic
+tags: [private]
 ```
 
 ```Go
@@ -481,7 +478,6 @@ func (b *Writer) handlePanic(err *error, op string)
 
 ```
 searchKey: tabwriter.Writer.Flush
-tags: [exported]
 ```
 
 ```Go
@@ -494,6 +490,7 @@ Flush should be called after the last call to Write to ensure that any data buff
 
 ```
 searchKey: tabwriter.Writer.flush
+tags: [private]
 ```
 
 ```Go
@@ -506,6 +503,7 @@ flush is the internal version of Flush, with a named return value which we don't
 
 ```
 searchKey: tabwriter.Writer.flushNoDefers
+tags: [private]
 ```
 
 ```Go
@@ -518,7 +516,6 @@ flushNoDefers is like flush, but without a deferred handlePanic call. This can b
 
 ```
 searchKey: tabwriter.Writer.Write
-tags: [exported]
 ```
 
 ```Go
@@ -531,6 +528,7 @@ Write writes buf to the writer b. The only errors returned are ones encountered 
 
 ```
 searchKey: tabwriter.osError
+tags: [private]
 ```
 
 ```Go

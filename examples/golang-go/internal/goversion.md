@@ -8,11 +8,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Version" href="#Version">const Version</a>
 
 ```
 searchKey: goversion.Version
-tags: [exported]
 ```
 
 ```Go

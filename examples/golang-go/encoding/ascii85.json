@@ -4,9 +4,7 @@
     "identifier": "ascii85",
     "newPage": true,
     "searchKey": "encoding/ascii85",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "bigtest",
                 "newPage": false,
                 "searchKey": "ascii85.bigtest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "pairs",
                 "newPage": false,
                 "searchKey": "ascii85.pairs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,9 +87,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "encoder",
                 "newPage": false,
                 "searchKey": "ascii85.encoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +125,9 @@
                       "identifier": "encoder.Write",
                       "newPage": false,
                       "searchKey": "ascii85.encoder.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -145,7 +147,9 @@
                       "identifier": "encoder.Close",
                       "newPage": false,
                       "searchKey": "ascii85.encoder.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -168,9 +172,7 @@
                 "identifier": "CorruptInputError",
                 "newPage": false,
                 "searchKey": "ascii85.CorruptInputError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -188,9 +190,7 @@
                       "identifier": "CorruptInputError.Error",
                       "newPage": false,
                       "searchKey": "ascii85.CorruptInputError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -213,7 +213,9 @@
                 "identifier": "decoder",
                 "newPage": false,
                 "searchKey": "ascii85.decoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -231,7 +233,9 @@
                       "identifier": "decoder.Read",
                       "newPage": false,
                       "searchKey": "ascii85.decoder.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -254,7 +258,9 @@
                 "identifier": "testpair",
                 "newPage": false,
                 "searchKey": "ascii85.testpair",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -277,9 +283,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -297,9 +301,7 @@
                 "identifier": "Encode",
                 "newPage": false,
                 "searchKey": "ascii85.Encode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -319,9 +321,7 @@
                 "identifier": "MaxEncodedLen",
                 "newPage": false,
                 "searchKey": "ascii85.MaxEncodedLen",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -341,9 +341,7 @@
                 "identifier": "NewEncoder",
                 "newPage": false,
                 "searchKey": "ascii85.NewEncoder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -363,9 +361,7 @@
                 "identifier": "Decode",
                 "newPage": false,
                 "searchKey": "ascii85.Decode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -385,9 +381,7 @@
                 "identifier": "NewDecoder",
                 "newPage": false,
                 "searchKey": "ascii85.NewDecoder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -407,7 +401,9 @@
                 "identifier": "testEqual",
                 "newPage": false,
                 "searchKey": "ascii85.testEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -427,7 +423,9 @@
                 "identifier": "strip85",
                 "newPage": false,
                 "searchKey": "ascii85.strip85",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,7 +445,9 @@
                 "identifier": "TestEncode",
                 "newPage": false,
                 "searchKey": "ascii85.TestEncode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,7 +467,9 @@
                 "identifier": "TestEncoder",
                 "newPage": false,
                 "searchKey": "ascii85.TestEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,7 +489,9 @@
                 "identifier": "TestEncoderBuffering",
                 "newPage": false,
                 "searchKey": "ascii85.TestEncoderBuffering",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +511,9 @@
                 "identifier": "TestDecode",
                 "newPage": false,
                 "searchKey": "ascii85.TestDecode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,7 +533,9 @@
                 "identifier": "TestDecoder",
                 "newPage": false,
                 "searchKey": "ascii85.TestDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -547,7 +555,9 @@
                 "identifier": "TestDecoderBuffering",
                 "newPage": false,
                 "searchKey": "ascii85.TestDecoderBuffering",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -567,7 +577,9 @@
                 "identifier": "TestDecodeCorrupt",
                 "newPage": false,
                 "searchKey": "ascii85.TestDecodeCorrupt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -587,7 +599,9 @@
                 "identifier": "TestBig",
                 "newPage": false,
                 "searchKey": "ascii85.TestBig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -607,7 +621,9 @@
                 "identifier": "TestDecoderInternalWhitespace",
                 "newPage": false,
                 "searchKey": "ascii85.TestDecoderInternalWhitespace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

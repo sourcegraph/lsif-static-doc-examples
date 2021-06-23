@@ -8,7 +8,7 @@
     * [var tests](#tests)
 * [Types](#type)
     * [type buffer struct](#buffer)
-        * [func (b *buffer) init(n int)](#buffer.init)
+        * [func (b *buffer) init(n int)](#buffer.init.tabwriter_test.go)
         * [func (b *buffer) clear()](#buffer.clear)
         * [func (b *buffer) Write(buf []byte) (written int, err error)](#buffer.Write)
         * [func (b *buffer) String() string](#buffer.String)
@@ -33,10 +33,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="codeSnippet" href="#codeSnippet">const codeSnippet</a>
 
 ```
 searchKey: tabwriter_test.codeSnippet
+tags: [private]
 ```
 
 ```Go
@@ -56,10 +61,15 @@ lines
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="tests" href="#tests">var tests</a>
 
 ```
 searchKey: tabwriter_test.tests
+tags: [private]
 ```
 
 ```Go
@@ -68,10 +78,15 @@ var tests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="buffer" href="#buffer">type buffer struct</a>
 
 ```
 searchKey: tabwriter_test.buffer
+tags: [private]
 ```
 
 ```Go
@@ -80,10 +95,11 @@ type buffer struct {
 }
 ```
 
-#### <a id="buffer.init" href="#buffer.init">func (b *buffer) init(n int)</a>
+#### <a id="buffer.init.tabwriter_test.go" href="#buffer.init.tabwriter_test.go">func (b *buffer) init(n int)</a>
 
 ```
 searchKey: tabwriter_test.buffer.init
+tags: [private]
 ```
 
 ```Go
@@ -94,6 +110,7 @@ func (b *buffer) init(n int)
 
 ```
 searchKey: tabwriter_test.buffer.clear
+tags: [private]
 ```
 
 ```Go
@@ -104,6 +121,7 @@ func (b *buffer) clear()
 
 ```
 searchKey: tabwriter_test.buffer.Write
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +132,7 @@ func (b *buffer) Write(buf []byte) (written int, err error)
 
 ```
 searchKey: tabwriter_test.buffer.String
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +143,7 @@ func (b *buffer) String() string
 
 ```
 searchKey: tabwriter_test.panicWriter
+tags: [private]
 ```
 
 ```Go
@@ -134,6 +154,7 @@ type panicWriter struct{}
 
 ```
 searchKey: tabwriter_test.panicWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -142,10 +163,15 @@ func (panicWriter) Write([]byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleWriter_Init" href="#ExampleWriter_Init">func ExampleWriter_Init()</a>
 
 ```
 searchKey: tabwriter_test.ExampleWriter_Init
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +182,7 @@ func ExampleWriter_Init()
 
 ```
 searchKey: tabwriter_test.Example_elastic
+tags: [private]
 ```
 
 ```Go
@@ -166,6 +193,7 @@ func Example_elastic()
 
 ```
 searchKey: tabwriter_test.Example_trailingTab
+tags: [private]
 ```
 
 ```Go
@@ -176,6 +204,7 @@ func Example_trailingTab()
 
 ```
 searchKey: tabwriter_test.write
+tags: [private]
 ```
 
 ```Go
@@ -186,6 +215,7 @@ func write(t *testing.T, testname string, w *Writer, src string)
 
 ```
 searchKey: tabwriter_test.verify
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +226,7 @@ func verify(t *testing.T, testname string, w *Writer, b *buffer, src, expected s
 
 ```
 searchKey: tabwriter_test.check
+tags: [private]
 ```
 
 ```Go
@@ -206,6 +237,7 @@ func check(t *testing.T, testname string, minwidth, tabwidth, padding int, padch
 
 ```
 searchKey: tabwriter_test.Test
+tags: [private]
 ```
 
 ```Go
@@ -216,6 +248,7 @@ func Test(t *testing.T)
 
 ```
 searchKey: tabwriter_test.wantPanicString
+tags: [private]
 ```
 
 ```Go
@@ -226,6 +259,7 @@ func wantPanicString(t *testing.T, want string)
 
 ```
 searchKey: tabwriter_test.TestPanicDuringFlush
+tags: [private]
 ```
 
 ```Go
@@ -236,6 +270,7 @@ func TestPanicDuringFlush(t *testing.T)
 
 ```
 searchKey: tabwriter_test.TestPanicDuringWrite
+tags: [private]
 ```
 
 ```Go
@@ -246,6 +281,7 @@ func TestPanicDuringWrite(t *testing.T)
 
 ```
 searchKey: tabwriter_test.BenchmarkTable
+tags: [private]
 ```
 
 ```Go
@@ -256,6 +292,7 @@ func BenchmarkTable(b *testing.B)
 
 ```
 searchKey: tabwriter_test.BenchmarkPyramid
+tags: [private]
 ```
 
 ```Go
@@ -266,6 +303,7 @@ func BenchmarkPyramid(b *testing.B)
 
 ```
 searchKey: tabwriter_test.BenchmarkRagged
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +314,7 @@ func BenchmarkRagged(b *testing.B)
 
 ```
 searchKey: tabwriter_test.BenchmarkCode
+tags: [private]
 ```
 
 ```Go

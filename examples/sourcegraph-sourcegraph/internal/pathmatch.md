@@ -29,11 +29,14 @@ Package pathmatch provides helpers for matching paths against globs and regular 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="PathMatcher" href="#PathMatcher">type PathMatcher interface</a>
 
 ```
 searchKey: pathmatch.PathMatcher
-tags: [exported]
 ```
 
 ```Go
@@ -51,7 +54,6 @@ PathMatcher reports whether the path was matched.
 
 ```
 searchKey: pathmatch.CompilePattern
-tags: [exported]
 ```
 
 ```Go
@@ -64,7 +66,6 @@ CompilePattern compiles pattern into a PathMatcher func.
 
 ```
 searchKey: pathmatch.CompilePatterns
-tags: [exported]
 ```
 
 ```Go
@@ -77,7 +78,6 @@ CompilePatterns compiles the patterns into a PathMatcher func that matches a pat
 
 ```
 searchKey: pathmatch.CompilePathPatterns
-tags: [exported]
 ```
 
 ```Go
@@ -94,6 +94,7 @@ This is the most common behavior for include/exclude paths in a search interface
 
 ```
 searchKey: pathmatch.pathMatcherFunc
+tags: [private]
 ```
 
 ```Go
@@ -107,6 +108,7 @@ type pathMatcherFunc struct {
 
 ```
 searchKey: pathmatch.pathMatcherFunc.MatchPath
+tags: [private]
 ```
 
 ```Go
@@ -117,6 +119,7 @@ func (f *pathMatcherFunc) MatchPath(path string) bool
 
 ```
 searchKey: pathmatch.pathMatcherFunc.String
+tags: [private]
 ```
 
 ```Go
@@ -127,6 +130,7 @@ func (f *pathMatcherFunc) String() string
 
 ```
 searchKey: pathmatch.regexpMatcher
+tags: [private]
 ```
 
 ```Go
@@ -139,6 +143,7 @@ regexpMatcher is a PathMatcher backed by a regexp.
 
 ```
 searchKey: pathmatch.regexpMatcher.MatchPath
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +154,7 @@ func (m *regexpMatcher) MatchPath(path string) bool
 
 ```
 searchKey: pathmatch.regexpMatcher.String
+tags: [private]
 ```
 
 ```Go
@@ -159,7 +165,6 @@ func (m *regexpMatcher) String() string
 
 ```
 searchKey: pathmatch.CompileOptions
-tags: [exported]
 ```
 
 ```Go
@@ -175,6 +180,7 @@ CompileOptions specifies options about the patterns to compile.
 
 ```
 searchKey: pathmatch.pathMatcherAnd
+tags: [private]
 ```
 
 ```Go
@@ -187,6 +193,7 @@ pathMatcherAnd is a PathMatcher that matches a path iff all of the underlying ma
 
 ```
 searchKey: pathmatch.pathMatcherAnd.MatchPath
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +204,7 @@ func (pm pathMatcherAnd) MatchPath(path string) bool
 
 ```
 searchKey: pathmatch.pathMatcherAnd.String
+tags: [private]
 ```
 
 ```Go
@@ -207,6 +215,7 @@ func (pm pathMatcherAnd) String() string
 
 ```
 searchKey: pathmatch.pathMatcherIncludeExclude
+tags: [private]
 ```
 
 ```Go
@@ -222,6 +231,7 @@ pathMatcherIncludeExclude is a PathMatcher that matches a path iff it matches th
 
 ```
 searchKey: pathmatch.pathMatcherIncludeExclude.MatchPath
+tags: [private]
 ```
 
 ```Go
@@ -232,6 +242,7 @@ func (pm pathMatcherIncludeExclude) MatchPath(path string) bool
 
 ```
 searchKey: pathmatch.pathMatcherIncludeExclude.String
+tags: [private]
 ```
 
 ```Go
@@ -240,10 +251,15 @@ func (pm pathMatcherIncludeExclude) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestCompilePattern" href="#TestCompilePattern">func TestCompilePattern(t *testing.T)</a>
 
 ```
 searchKey: pathmatch.TestCompilePattern
+tags: [private]
 ```
 
 ```Go
@@ -254,6 +270,7 @@ func TestCompilePattern(t *testing.T)
 
 ```
 searchKey: pathmatch.TestCompilePathPatterns
+tags: [private]
 ```
 
 ```Go

@@ -12,10 +12,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="gopher" href="#gopher">const gopher</a>
 
 ```
 searchKey: png_test.gopher
+tags: [private]
 ```
 
 ```Go
@@ -24,10 +29,15 @@ const gopher = ...
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="gopherPNG" href="#gopherPNG">func gopherPNG() io.Reader</a>
 
 ```
 searchKey: png_test.gopherPNG
+tags: [private]
 ```
 
 ```Go
@@ -40,6 +50,7 @@ gopherPNG creates an io.Reader by decoding the base64 encoded image data string 
 
 ```
 searchKey: png_test.ExampleDecode
+tags: [private]
 ```
 
 ```Go
@@ -50,6 +61,7 @@ func ExampleDecode()
 
 ```
 searchKey: png_test.ExampleEncode
+tags: [private]
 ```
 
 ```Go

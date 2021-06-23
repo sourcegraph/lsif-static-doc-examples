@@ -74,14 +74,11 @@ References:
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="aesIV" href="#aesIV">const aesIV</a>
 
 ```
 searchKey: ecdsa.aesIV
+tags: [private]
 ```
 
 ```Go
@@ -90,14 +87,11 @@ const aesIV = "IV for ECDSA CTR"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="one" href="#one">var one</a>
 
 ```
 searchKey: ecdsa.one
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +102,7 @@ var one = new(big.Int).SetInt64(1)
 
 ```
 searchKey: ecdsa.errZeroParam
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +113,7 @@ var errZeroParam = errors.New("zero parameter")
 
 ```
 searchKey: ecdsa.zeroReader
+tags: [private]
 ```
 
 ```Go
@@ -126,14 +122,11 @@ var zeroReader = &zr{}
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="invertible" href="#invertible">type invertible interface</a>
 
 ```
 searchKey: ecdsa.invertible
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +142,7 @@ A invertible implements fast inverse mod Curve.Params().N
 
 ```
 searchKey: ecdsa.combinedMult
+tags: [private]
 ```
 
 ```Go
@@ -163,7 +157,6 @@ combinedMult implements fast multiplication S1*g + S2*p (g - generator, p - arbi
 
 ```
 searchKey: ecdsa.PublicKey
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +172,6 @@ PublicKey represents an ECDSA public key.
 
 ```
 searchKey: ecdsa.PublicKey.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +186,6 @@ Two keys are only considered to have the same value if they have the same Curve 
 
 ```
 searchKey: ecdsa.PrivateKey
-tags: [exported]
 ```
 
 ```Go
@@ -210,7 +201,6 @@ PrivateKey represents an ECDSA private key.
 
 ```
 searchKey: ecdsa.GenerateKey
-tags: [exported]
 ```
 
 ```Go
@@ -223,7 +213,6 @@ GenerateKey generates a public and private key pair.
 
 ```
 searchKey: ecdsa.PrivateKey.Public
-tags: [exported]
 ```
 
 ```Go
@@ -236,7 +225,6 @@ Public returns the public key corresponding to priv.
 
 ```
 searchKey: ecdsa.PrivateKey.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -251,7 +239,6 @@ See PublicKey.Equal for details on how Curve is compared.
 
 ```
 searchKey: ecdsa.PrivateKey.Sign
-tags: [exported]
 ```
 
 ```Go
@@ -266,6 +253,7 @@ This method implements crypto.Signer, which is an interface to support keys wher
 
 ```
 searchKey: ecdsa.zr
+tags: [private]
 ```
 
 ```Go
@@ -278,6 +266,7 @@ type zr struct {
 
 ```
 searchKey: ecdsa.zr.Read
+tags: [private]
 ```
 
 ```Go
@@ -288,14 +277,11 @@ Read replaces the contents of dst with zeros.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="randFieldElement" href="#randFieldElement">func randFieldElement(c elliptic.Curve, rand io.Reader) (k *big.Int, err error)</a>
 
 ```
 searchKey: ecdsa.randFieldElement
+tags: [private]
 ```
 
 ```Go
@@ -308,6 +294,7 @@ randFieldElement returns a random element of the field underlying the given curv
 
 ```
 searchKey: ecdsa.hashToInt
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +307,7 @@ hashToInt converts a hash value to an integer. There is some disagreement about 
 
 ```
 searchKey: ecdsa.fermatInverse
+tags: [private]
 ```
 
 ```Go
@@ -332,7 +320,6 @@ fermatInverse calculates the inverse of k in GF(P) using Fermat's method. This h
 
 ```
 searchKey: ecdsa.Sign
-tags: [exported]
 ```
 
 ```Go
@@ -345,6 +332,7 @@ Sign signs a hash (which should be the result of hashing a larger message) using
 
 ```
 searchKey: ecdsa.signGeneric
+tags: [private]
 ```
 
 ```Go
@@ -355,7 +343,6 @@ func signGeneric(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve
 
 ```
 searchKey: ecdsa.SignASN1
-tags: [exported]
 ```
 
 ```Go
@@ -368,7 +355,6 @@ SignASN1 signs a hash (which should be the result of hashing a larger message) u
 
 ```
 searchKey: ecdsa.Verify
-tags: [exported]
 ```
 
 ```Go
@@ -381,6 +367,7 @@ Verify verifies the signature in r, s of hash using the public key, pub. Its ret
 
 ```
 searchKey: ecdsa.verifyGeneric
+tags: [private]
 ```
 
 ```Go
@@ -391,7 +378,6 @@ func verifyGeneric(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int)
 
 ```
 searchKey: ecdsa.VerifyASN1
-tags: [exported]
 ```
 
 ```Go
@@ -404,6 +390,7 @@ VerifyASN1 verifies the ASN.1 encoded signature, sig, of hash using the public k
 
 ```
 searchKey: ecdsa.sign
+tags: [private]
 ```
 
 ```Go
@@ -414,6 +401,7 @@ func sign(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve, hash 
 
 ```
 searchKey: ecdsa.verify
+tags: [private]
 ```
 
 ```Go
@@ -424,6 +412,7 @@ func verify(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int) bool
 
 ```
 searchKey: ecdsa.testAllCurves
+tags: [private]
 ```
 
 ```Go
@@ -434,6 +423,7 @@ func testAllCurves(t *testing.T, f func(*testing.T, elliptic.Curve))
 
 ```
 searchKey: ecdsa.TestKeyGeneration
+tags: [private]
 ```
 
 ```Go
@@ -444,6 +434,7 @@ func TestKeyGeneration(t *testing.T)
 
 ```
 searchKey: ecdsa.testKeyGeneration
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +445,7 @@ func testKeyGeneration(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa.TestSignAndVerify
+tags: [private]
 ```
 
 ```Go
@@ -464,6 +456,7 @@ func TestSignAndVerify(t *testing.T)
 
 ```
 searchKey: ecdsa.testSignAndVerify
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +467,7 @@ func testSignAndVerify(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa.TestSignAndVerifyASN1
+tags: [private]
 ```
 
 ```Go
@@ -484,6 +478,7 @@ func TestSignAndVerifyASN1(t *testing.T)
 
 ```
 searchKey: ecdsa.testSignAndVerifyASN1
+tags: [private]
 ```
 
 ```Go
@@ -494,6 +489,7 @@ func testSignAndVerifyASN1(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa.TestNonceSafety
+tags: [private]
 ```
 
 ```Go
@@ -504,6 +500,7 @@ func TestNonceSafety(t *testing.T)
 
 ```
 searchKey: ecdsa.testNonceSafety
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +511,7 @@ func testNonceSafety(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa.TestINDCCA
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +522,7 @@ func TestINDCCA(t *testing.T)
 
 ```
 searchKey: ecdsa.testINDCCA
+tags: [private]
 ```
 
 ```Go
@@ -534,6 +533,7 @@ func testINDCCA(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa.fromHex
+tags: [private]
 ```
 
 ```Go
@@ -544,6 +544,7 @@ func fromHex(s string) *big.Int
 
 ```
 searchKey: ecdsa.TestVectors
+tags: [private]
 ```
 
 ```Go
@@ -554,6 +555,7 @@ func TestVectors(t *testing.T)
 
 ```
 searchKey: ecdsa.TestNegativeInputs
+tags: [private]
 ```
 
 ```Go
@@ -564,6 +566,7 @@ func TestNegativeInputs(t *testing.T)
 
 ```
 searchKey: ecdsa.testNegativeInputs
+tags: [private]
 ```
 
 ```Go
@@ -574,6 +577,7 @@ func testNegativeInputs(t *testing.T, curve elliptic.Curve)
 
 ```
 searchKey: ecdsa.TestZeroHashSignature
+tags: [private]
 ```
 
 ```Go
@@ -584,6 +588,7 @@ func TestZeroHashSignature(t *testing.T)
 
 ```
 searchKey: ecdsa.testZeroHashSignature
+tags: [private]
 ```
 
 ```Go
@@ -594,6 +599,7 @@ func testZeroHashSignature(t *testing.T, curve elliptic.Curve)
 
 ```
 searchKey: ecdsa.benchmarkAllCurves
+tags: [private]
 ```
 
 ```Go
@@ -604,6 +610,7 @@ func benchmarkAllCurves(t *testing.B, f func(*testing.B, elliptic.Curve))
 
 ```
 searchKey: ecdsa.BenchmarkSign
+tags: [private]
 ```
 
 ```Go
@@ -614,6 +621,7 @@ func BenchmarkSign(b *testing.B)
 
 ```
 searchKey: ecdsa.BenchmarkVerify
+tags: [private]
 ```
 
 ```Go
@@ -624,6 +632,7 @@ func BenchmarkVerify(b *testing.B)
 
 ```
 searchKey: ecdsa.BenchmarkGenerateKey
+tags: [private]
 ```
 
 ```Go

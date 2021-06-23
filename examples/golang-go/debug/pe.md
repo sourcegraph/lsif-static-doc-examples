@@ -152,14 +152,11 @@ Package pe implements access to PE (Microsoft Windows Portable Executable) files
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="seekStart" href="#seekStart">const seekStart</a>
 
 ```
 searchKey: pe.seekStart
+tags: [private]
 ```
 
 ```Go
@@ -172,7 +169,6 @@ Avoid use of post-Go 1.4 io features, to make safe for toolchain bootstrap.
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_UNKNOWN
-tags: [exported]
 ```
 
 ```Go
@@ -183,7 +179,6 @@ const IMAGE_FILE_MACHINE_UNKNOWN = 0x0
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_AM33
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +189,6 @@ const IMAGE_FILE_MACHINE_AM33 = 0x1d3
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_AMD64
-tags: [exported]
 ```
 
 ```Go
@@ -205,7 +199,6 @@ const IMAGE_FILE_MACHINE_AMD64 = 0x8664
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_ARM
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +209,6 @@ const IMAGE_FILE_MACHINE_ARM = 0x1c0
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_ARMNT
-tags: [exported]
 ```
 
 ```Go
@@ -227,7 +219,6 @@ const IMAGE_FILE_MACHINE_ARMNT = 0x1c4
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_ARM64
-tags: [exported]
 ```
 
 ```Go
@@ -238,7 +229,6 @@ const IMAGE_FILE_MACHINE_ARM64 = 0xaa64
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_EBC
-tags: [exported]
 ```
 
 ```Go
@@ -249,7 +239,6 @@ const IMAGE_FILE_MACHINE_EBC = 0xebc
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_I386
-tags: [exported]
 ```
 
 ```Go
@@ -260,7 +249,6 @@ const IMAGE_FILE_MACHINE_I386 = 0x14c
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_IA64
-tags: [exported]
 ```
 
 ```Go
@@ -271,7 +259,6 @@ const IMAGE_FILE_MACHINE_IA64 = 0x200
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_M32R
-tags: [exported]
 ```
 
 ```Go
@@ -282,7 +269,6 @@ const IMAGE_FILE_MACHINE_M32R = 0x9041
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_MIPS16
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +279,6 @@ const IMAGE_FILE_MACHINE_MIPS16 = 0x266
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_MIPSFPU
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +289,6 @@ const IMAGE_FILE_MACHINE_MIPSFPU = 0x366
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_MIPSFPU16
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +299,6 @@ const IMAGE_FILE_MACHINE_MIPSFPU16 = 0x466
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_POWERPC
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +309,6 @@ const IMAGE_FILE_MACHINE_POWERPC = 0x1f0
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_POWERPCFP
-tags: [exported]
 ```
 
 ```Go
@@ -337,7 +319,6 @@ const IMAGE_FILE_MACHINE_POWERPCFP = 0x1f1
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_R4000
-tags: [exported]
 ```
 
 ```Go
@@ -348,7 +329,6 @@ const IMAGE_FILE_MACHINE_R4000 = 0x166
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_SH3
-tags: [exported]
 ```
 
 ```Go
@@ -359,7 +339,6 @@ const IMAGE_FILE_MACHINE_SH3 = 0x1a2
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_SH3DSP
-tags: [exported]
 ```
 
 ```Go
@@ -370,7 +349,6 @@ const IMAGE_FILE_MACHINE_SH3DSP = 0x1a3
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_SH4
-tags: [exported]
 ```
 
 ```Go
@@ -381,7 +359,6 @@ const IMAGE_FILE_MACHINE_SH4 = 0x1a6
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_SH5
-tags: [exported]
 ```
 
 ```Go
@@ -392,7 +369,6 @@ const IMAGE_FILE_MACHINE_SH5 = 0x1a8
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_THUMB
-tags: [exported]
 ```
 
 ```Go
@@ -403,7 +379,6 @@ const IMAGE_FILE_MACHINE_THUMB = 0x1c2
 
 ```
 searchKey: pe.IMAGE_FILE_MACHINE_WCEMIPSV2
-tags: [exported]
 ```
 
 ```Go
@@ -414,7 +389,6 @@ const IMAGE_FILE_MACHINE_WCEMIPSV2 = 0x169
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_EXPORT
-tags: [exported]
 ```
 
 ```Go
@@ -427,7 +401,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_IMPORT
-tags: [exported]
 ```
 
 ```Go
@@ -440,7 +413,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_RESOURCE
-tags: [exported]
 ```
 
 ```Go
@@ -453,7 +425,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_EXCEPTION
-tags: [exported]
 ```
 
 ```Go
@@ -466,7 +437,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_SECURITY
-tags: [exported]
 ```
 
 ```Go
@@ -479,7 +449,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_BASERELOC
-tags: [exported]
 ```
 
 ```Go
@@ -492,7 +461,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_DEBUG
-tags: [exported]
 ```
 
 ```Go
@@ -505,7 +473,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_ARCHITECTURE
-tags: [exported]
 ```
 
 ```Go
@@ -518,7 +485,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_GLOBALPTR
-tags: [exported]
 ```
 
 ```Go
@@ -531,7 +497,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_TLS
-tags: [exported]
 ```
 
 ```Go
@@ -544,7 +509,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG
-tags: [exported]
 ```
 
 ```Go
@@ -557,7 +521,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT
-tags: [exported]
 ```
 
 ```Go
@@ -570,7 +533,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_IAT
-tags: [exported]
 ```
 
 ```Go
@@ -583,7 +545,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT
-tags: [exported]
 ```
 
 ```Go
@@ -596,7 +557,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR
-tags: [exported]
 ```
 
 ```Go
@@ -609,7 +569,6 @@ IMAGE_DIRECTORY_ENTRY constants
 
 ```
 searchKey: pe.IMAGE_FILE_RELOCS_STRIPPED
-tags: [exported]
 ```
 
 ```Go
@@ -622,7 +581,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_EXECUTABLE_IMAGE
-tags: [exported]
 ```
 
 ```Go
@@ -635,7 +593,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_LINE_NUMS_STRIPPED
-tags: [exported]
 ```
 
 ```Go
@@ -648,7 +605,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_LOCAL_SYMS_STRIPPED
-tags: [exported]
 ```
 
 ```Go
@@ -661,7 +617,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_AGGRESIVE_WS_TRIM
-tags: [exported]
 ```
 
 ```Go
@@ -674,7 +629,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_LARGE_ADDRESS_AWARE
-tags: [exported]
 ```
 
 ```Go
@@ -687,7 +641,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_BYTES_REVERSED_LO
-tags: [exported]
 ```
 
 ```Go
@@ -700,7 +653,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_32BIT_MACHINE
-tags: [exported]
 ```
 
 ```Go
@@ -713,7 +665,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_DEBUG_STRIPPED
-tags: [exported]
 ```
 
 ```Go
@@ -726,7 +677,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_REMOVABLE_RUN_FROM_SWAP
-tags: [exported]
 ```
 
 ```Go
@@ -739,7 +689,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_NET_RUN_FROM_SWAP
-tags: [exported]
 ```
 
 ```Go
@@ -752,7 +701,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_SYSTEM
-tags: [exported]
 ```
 
 ```Go
@@ -765,7 +713,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_DLL
-tags: [exported]
 ```
 
 ```Go
@@ -778,7 +725,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_UP_SYSTEM_ONLY
-tags: [exported]
 ```
 
 ```Go
@@ -791,7 +737,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_FILE_BYTES_REVERSED_HI
-tags: [exported]
 ```
 
 ```Go
@@ -804,7 +749,6 @@ Values of IMAGE_FILE_HEADER.Characteristics. These can be combined together.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_UNKNOWN
-tags: [exported]
 ```
 
 ```Go
@@ -817,7 +761,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_NATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -830,7 +773,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_WINDOWS_GUI
-tags: [exported]
 ```
 
 ```Go
@@ -843,7 +785,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_WINDOWS_CUI
-tags: [exported]
 ```
 
 ```Go
@@ -856,7 +797,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_OS2_CUI
-tags: [exported]
 ```
 
 ```Go
@@ -869,7 +809,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_POSIX_CUI
-tags: [exported]
 ```
 
 ```Go
@@ -882,7 +821,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_NATIVE_WINDOWS
-tags: [exported]
 ```
 
 ```Go
@@ -895,7 +833,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_WINDOWS_CE_GUI
-tags: [exported]
 ```
 
 ```Go
@@ -908,7 +845,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_EFI_APPLICATION
-tags: [exported]
 ```
 
 ```Go
@@ -921,7 +857,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER
-tags: [exported]
 ```
 
 ```Go
@@ -934,7 +869,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_EFI_RUNTIME_DRIVER
-tags: [exported]
 ```
 
 ```Go
@@ -947,7 +881,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_EFI_ROM
-tags: [exported]
 ```
 
 ```Go
@@ -960,7 +893,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_XBOX
-tags: [exported]
 ```
 
 ```Go
@@ -973,7 +905,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION
-tags: [exported]
 ```
 
 ```Go
@@ -986,7 +917,6 @@ OptionalHeader64.Subsystem and OptionalHeader32.Subsystem values.
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA
-tags: [exported]
 ```
 
 ```Go
@@ -999,7 +929,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE
-tags: [exported]
 ```
 
 ```Go
@@ -1012,7 +941,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY
-tags: [exported]
 ```
 
 ```Go
@@ -1025,7 +953,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_NX_COMPAT
-tags: [exported]
 ```
 
 ```Go
@@ -1038,7 +965,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_NO_ISOLATION
-tags: [exported]
 ```
 
 ```Go
@@ -1051,7 +977,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_NO_SEH
-tags: [exported]
 ```
 
 ```Go
@@ -1064,7 +989,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_NO_BIND
-tags: [exported]
 ```
 
 ```Go
@@ -1077,7 +1001,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_APPCONTAINER
-tags: [exported]
 ```
 
 ```Go
@@ -1090,7 +1013,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_WDM_DRIVER
-tags: [exported]
 ```
 
 ```Go
@@ -1103,7 +1025,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_GUARD_CF
-tags: [exported]
 ```
 
 ```Go
@@ -1116,7 +1037,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.IMAGE_DLLCHARACTERISTICS_TERMINAL_SERVER_AWARE
-tags: [exported]
 ```
 
 ```Go
@@ -1129,7 +1049,6 @@ OptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics valu
 
 ```
 searchKey: pe.COFFSymbolSize
-tags: [exported]
 ```
 
 ```Go
@@ -1140,6 +1059,7 @@ const COFFSymbolSize = 18
 
 ```
 searchKey: pe.linkNoCgo
+tags: [private]
 ```
 
 ```Go
@@ -1150,6 +1070,7 @@ const linkNoCgo = iota
 
 ```
 searchKey: pe.linkCgoDefault
+tags: [private]
 ```
 
 ```Go
@@ -1160,6 +1081,7 @@ const linkCgoDefault
 
 ```
 searchKey: pe.linkCgoInternal
+tags: [private]
 ```
 
 ```Go
@@ -1170,6 +1092,7 @@ const linkCgoInternal
 
 ```
 searchKey: pe.linkCgoExternal
+tags: [private]
 ```
 
 ```Go
@@ -1180,6 +1103,7 @@ const linkCgoExternal
 
 ```
 searchKey: pe.testprog
+tags: [private]
 ```
 
 ```Go
@@ -1188,14 +1112,11 @@ const testprog = ...
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="fileTests" href="#fileTests">var fileTests</a>
 
 ```
 searchKey: pe.fileTests
+tags: [private]
 ```
 
 ```Go
@@ -1204,15 +1125,10 @@ var fileTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="File" href="#File">type File struct</a>
 
 ```
 searchKey: pe.File
-tags: [exported]
 ```
 
 ```Go
@@ -1234,7 +1150,6 @@ A File represents an open PE file.
 
 ```
 searchKey: pe.Open
-tags: [exported]
 ```
 
 ```Go
@@ -1247,7 +1162,6 @@ Open opens the named file using os.Open and prepares it for use as a PE binary.
 
 ```
 searchKey: pe.NewFile
-tags: [exported]
 ```
 
 ```Go
@@ -1260,7 +1174,6 @@ NewFile creates a new File for accessing a PE binary in an underlying reader.
 
 ```
 searchKey: pe.File.Close
-tags: [exported]
 ```
 
 ```Go
@@ -1273,7 +1186,6 @@ Close closes the File. If the File was created using NewFile directly instead of
 
 ```
 searchKey: pe.File.Section
-tags: [exported]
 ```
 
 ```Go
@@ -1286,7 +1198,6 @@ Section returns the first section with the given name, or nil if no such section
 
 ```
 searchKey: pe.File.DWARF
-tags: [exported]
 ```
 
 ```Go
@@ -1297,7 +1208,6 @@ func (f *File) DWARF() (*dwarf.Data, error)
 
 ```
 searchKey: pe.File.ImportedSymbols
-tags: [exported]
 ```
 
 ```Go
@@ -1310,7 +1220,6 @@ ImportedSymbols returns the names of all symbols referred to by the binary f tha
 
 ```
 searchKey: pe.File.ImportedLibraries
-tags: [exported]
 ```
 
 ```Go
@@ -1323,6 +1232,7 @@ ImportedLibraries returns the names of all libraries referred to by the binary f
 
 ```
 searchKey: pe.zeroReaderAt
+tags: [private]
 ```
 
 ```Go
@@ -1335,6 +1245,7 @@ zeroReaderAt is ReaderAt that reads 0s.
 
 ```
 searchKey: pe.zeroReaderAt.ReadAt
+tags: [private]
 ```
 
 ```Go
@@ -1347,7 +1258,6 @@ ReadAt writes len(p) 0s into p.
 
 ```
 searchKey: pe.ImportDirectory
-tags: [exported]
 ```
 
 ```Go
@@ -1366,7 +1276,6 @@ type ImportDirectory struct {
 
 ```
 searchKey: pe.FormatError
-tags: [exported]
 ```
 
 ```Go
@@ -1380,7 +1289,6 @@ FormatError is unused. The type is retained for compatibility.
 
 ```
 searchKey: pe.FormatError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1391,7 +1299,6 @@ func (e *FormatError) Error() string
 
 ```
 searchKey: pe.FileHeader
-tags: [exported]
 ```
 
 ```Go
@@ -1410,7 +1317,6 @@ type FileHeader struct {
 
 ```
 searchKey: pe.DataDirectory
-tags: [exported]
 ```
 
 ```Go
@@ -1424,7 +1330,6 @@ type DataDirectory struct {
 
 ```
 searchKey: pe.OptionalHeader32
-tags: [exported]
 ```
 
 ```Go
@@ -1467,7 +1372,6 @@ type OptionalHeader32 struct {
 
 ```
 searchKey: pe.OptionalHeader64
-tags: [exported]
 ```
 
 ```Go
@@ -1509,7 +1413,6 @@ type OptionalHeader64 struct {
 
 ```
 searchKey: pe.SectionHeader32
-tags: [exported]
 ```
 
 ```Go
@@ -1533,6 +1436,7 @@ SectionHeader32 represents real PE COFF section header.
 
 ```
 searchKey: pe.SectionHeader32.fullName
+tags: [private]
 ```
 
 ```Go
@@ -1545,7 +1449,6 @@ fullName finds real name of section sh. Normally name is stored in sh.Name, but 
 
 ```
 searchKey: pe.Reloc
-tags: [exported]
 ```
 
 ```Go
@@ -1562,7 +1465,6 @@ Reloc represents a PE COFF relocation. Each section contains its own relocation 
 
 ```
 searchKey: pe.SectionHeader
-tags: [exported]
 ```
 
 ```Go
@@ -1586,7 +1488,6 @@ SectionHeader is similar to SectionHeader32 with Name field replaced by Go strin
 
 ```
 searchKey: pe.Section
-tags: [exported]
 ```
 
 ```Go
@@ -1611,7 +1512,6 @@ Section provides access to PE COFF section.
 
 ```
 searchKey: pe.Section.Data
-tags: [exported]
 ```
 
 ```Go
@@ -1624,7 +1524,6 @@ Data reads and returns the contents of the PE section s.
 
 ```
 searchKey: pe.Section.Open
-tags: [exported]
 ```
 
 ```Go
@@ -1637,7 +1536,6 @@ Open returns a new ReadSeeker reading the PE section s.
 
 ```
 searchKey: pe.StringTable
-tags: [exported]
 ```
 
 ```Go
@@ -1650,6 +1548,7 @@ StringTable is a COFF string table.
 
 ```
 searchKey: pe.readStringTable
+tags: [private]
 ```
 
 ```Go
@@ -1660,7 +1559,6 @@ func readStringTable(fh *FileHeader, r io.ReadSeeker) (StringTable, error)
 
 ```
 searchKey: pe.StringTable.String
-tags: [exported]
 ```
 
 ```Go
@@ -1673,7 +1571,6 @@ String extracts string from COFF string table st at offset start.
 
 ```
 searchKey: pe.COFFSymbol
-tags: [exported]
 ```
 
 ```Go
@@ -1693,7 +1590,6 @@ COFFSymbol represents single COFF symbol table record.
 
 ```
 searchKey: pe.COFFSymbol.FullName
-tags: [exported]
 ```
 
 ```Go
@@ -1706,7 +1602,6 @@ FullName finds real name of symbol sym. Normally name is stored in sym.Name, but
 
 ```
 searchKey: pe.Symbol
-tags: [exported]
 ```
 
 ```Go
@@ -1725,6 +1620,7 @@ Symbol is similar to COFFSymbol with Name field replaced by Go string. Symbol al
 
 ```
 searchKey: pe.fileTest
+tags: [private]
 ```
 
 ```Go
@@ -1740,14 +1636,11 @@ type fileTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="getString" href="#getString">func getString(section []byte, start int) (string, bool)</a>
 
 ```
 searchKey: pe.getString
+tags: [private]
 ```
 
 ```Go
@@ -1760,6 +1653,7 @@ getString extracts a string from symbol string table.
 
 ```
 searchKey: pe.readOptionalHeader
+tags: [private]
 ```
 
 ```Go
@@ -1772,6 +1666,7 @@ readOptionalHeader accepts a io.ReadSeeker pointing to optional header in the PE
 
 ```
 searchKey: pe.readDataDirectories
+tags: [private]
 ```
 
 ```Go
@@ -1784,6 +1679,7 @@ readDataDirectories accepts a io.ReadSeeker pointing to data directories in the 
 
 ```
 searchKey: pe.readRelocs
+tags: [private]
 ```
 
 ```Go
@@ -1794,6 +1690,7 @@ func readRelocs(sh *SectionHeader, r io.ReadSeeker) ([]Reloc, error)
 
 ```
 searchKey: pe.cstring
+tags: [private]
 ```
 
 ```Go
@@ -1806,6 +1703,7 @@ cstring converts ASCII byte sequence b to string. It stops once it finds 0 or re
 
 ```
 searchKey: pe.readCOFFSymbols
+tags: [private]
 ```
 
 ```Go
@@ -1816,6 +1714,7 @@ func readCOFFSymbols(fh *FileHeader, r io.ReadSeeker) ([]COFFSymbol, error)
 
 ```
 searchKey: pe.isSymNameOffset
+tags: [private]
 ```
 
 ```Go
@@ -1828,6 +1727,7 @@ isSymNameOffset checks symbol name if it is encoded as offset into string table.
 
 ```
 searchKey: pe.removeAuxSymbols
+tags: [private]
 ```
 
 ```Go
@@ -1838,6 +1738,7 @@ func removeAuxSymbols(allsyms []COFFSymbol, st StringTable) ([]*Symbol, error)
 
 ```
 searchKey: pe.testCgoDWARF
+tags: [private]
 ```
 
 ```Go
@@ -1848,6 +1749,7 @@ func testCgoDWARF(t *testing.T, linktype int)
 
 ```
 searchKey: pe.TestDefaultLinkerDWARF
+tags: [private]
 ```
 
 ```Go
@@ -1858,6 +1760,7 @@ func TestDefaultLinkerDWARF(t *testing.T)
 
 ```
 searchKey: pe.TestInternalLinkerDWARF
+tags: [private]
 ```
 
 ```Go
@@ -1868,6 +1771,7 @@ func TestInternalLinkerDWARF(t *testing.T)
 
 ```
 searchKey: pe.TestExternalLinkerDWARF
+tags: [private]
 ```
 
 ```Go
@@ -1878,6 +1782,7 @@ func TestExternalLinkerDWARF(t *testing.T)
 
 ```
 searchKey: pe.isOptHdrEq
+tags: [private]
 ```
 
 ```Go
@@ -1888,6 +1793,7 @@ func isOptHdrEq(a, b interface{}) bool
 
 ```
 searchKey: pe.TestOpen
+tags: [private]
 ```
 
 ```Go
@@ -1898,6 +1804,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: pe.TestOpenFailure
+tags: [private]
 ```
 
 ```Go
@@ -1908,6 +1815,7 @@ func TestOpenFailure(t *testing.T)
 
 ```
 searchKey: pe.getImageBase
+tags: [private]
 ```
 
 ```Go
@@ -1918,6 +1826,7 @@ func getImageBase(f *File) uintptr
 
 ```
 searchKey: pe.testDWARF
+tags: [private]
 ```
 
 ```Go
@@ -1928,6 +1837,7 @@ func testDWARF(t *testing.T, linktype int)
 
 ```
 searchKey: pe.TestBSSHasZeros
+tags: [private]
 ```
 
 ```Go
@@ -1938,6 +1848,7 @@ func TestBSSHasZeros(t *testing.T)
 
 ```
 searchKey: pe.TestDWARF
+tags: [private]
 ```
 
 ```Go
@@ -1948,6 +1859,7 @@ func TestDWARF(t *testing.T)
 
 ```
 searchKey: pe.TestBuildingWindowsGUI
+tags: [private]
 ```
 
 ```Go
@@ -1958,6 +1870,7 @@ func TestBuildingWindowsGUI(t *testing.T)
 
 ```
 searchKey: pe.TestImportTableInUnknownSection
+tags: [private]
 ```
 
 ```Go
@@ -1968,6 +1881,7 @@ func TestImportTableInUnknownSection(t *testing.T)
 
 ```
 searchKey: pe.TestInvalidOptionalHeaderMagic
+tags: [private]
 ```
 
 ```Go
@@ -1978,6 +1892,7 @@ func TestInvalidOptionalHeaderMagic(t *testing.T)
 
 ```
 searchKey: pe.TestImportedSymbolsNoPanicMissingOptionalHeader
+tags: [private]
 ```
 
 ```Go
@@ -1988,6 +1903,7 @@ func TestImportedSymbolsNoPanicMissingOptionalHeader(t *testing.T)
 
 ```
 searchKey: pe.TestImportedSymbolsNoPanicWithSliceOutOfBound
+tags: [private]
 ```
 
 ```Go

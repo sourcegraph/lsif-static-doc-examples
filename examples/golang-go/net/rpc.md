@@ -295,14 +295,11 @@ The net/rpc package is frozen and is not accepting new features.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="debugText" href="#debugText">const debugText</a>
 
 ```
 searchKey: rpc.debugText
+tags: [private]
 ```
 
 ```Go
@@ -313,7 +310,6 @@ const debugText = ...
 
 ```
 searchKey: rpc.DefaultRPCPath
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +322,6 @@ Defaults used by HandleHTTP
 
 ```
 searchKey: rpc.DefaultDebugPath
-tags: [exported]
 ```
 
 ```Go
@@ -337,6 +332,7 @@ const DefaultDebugPath = "/debug/rpc"
 
 ```
 searchKey: rpc.newHttpPath
+tags: [private]
 ```
 
 ```Go
@@ -345,15 +341,10 @@ const newHttpPath = "/foo"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrShutdown" href="#ErrShutdown">var ErrShutdown</a>
 
 ```
 searchKey: rpc.ErrShutdown
-tags: [exported]
 ```
 
 ```Go
@@ -364,6 +355,7 @@ var ErrShutdown = errors.New("connection is shut down")
 
 ```
 searchKey: rpc.debug
+tags: [private]
 ```
 
 ```Go
@@ -374,6 +366,7 @@ var debug = template.Must(template.New("RPC debug").Parse(debugText))
 
 ```
 searchKey: rpc.debugLog
+tags: [private]
 ```
 
 ```Go
@@ -386,6 +379,7 @@ If set, print log statements for internal and I/O errors.
 
 ```
 searchKey: rpc.typeOfError
+tags: [private]
 ```
 
 ```Go
@@ -398,7 +392,6 @@ Precompute the reflect type for error. Can't use error directly because Typeof t
 
 ```
 searchKey: rpc.DefaultServer
-tags: [exported]
 ```
 
 ```Go
@@ -411,6 +404,7 @@ DefaultServer is the default instance of *Server.
 
 ```
 searchKey: rpc.invalidRequest
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +417,7 @@ A value sent as a placeholder for the server's response value when the server re
 
 ```
 searchKey: rpc.connected
+tags: [private]
 ```
 
 ```Go
@@ -435,6 +430,7 @@ Can connect to RPC service using HTTP CONNECT to rpcPath.
 
 ```
 searchKey: rpc.newServer
+tags: [private]
 ```
 
 ```Go
@@ -445,6 +441,7 @@ var newServer *Server
 
 ```
 searchKey: rpc.serverAddr
+tags: [private]
 ```
 
 ```Go
@@ -455,6 +452,7 @@ var serverAddr, newServerAddr string
 
 ```
 searchKey: rpc.newServerAddr
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +463,7 @@ var serverAddr, newServerAddr string
 
 ```
 searchKey: rpc.httpServerAddr
+tags: [private]
 ```
 
 ```Go
@@ -475,6 +474,7 @@ var httpServerAddr string
 
 ```
 searchKey: rpc.once
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +485,7 @@ var once, newOnce, httpOnce sync.Once
 
 ```
 searchKey: rpc.newOnce
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +496,7 @@ var once, newOnce, httpOnce sync.Once
 
 ```
 searchKey: rpc.httpOnce
+tags: [private]
 ```
 
 ```Go
@@ -503,15 +505,10 @@ var once, newOnce, httpOnce sync.Once
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ServerError" href="#ServerError">type ServerError string</a>
 
 ```
 searchKey: rpc.ServerError
-tags: [exported]
 ```
 
 ```Go
@@ -524,7 +521,6 @@ ServerError represents an error that has been returned from the remote side of t
 
 ```
 searchKey: rpc.ServerError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -535,7 +531,6 @@ func (e ServerError) Error() string
 
 ```
 searchKey: rpc.Call
-tags: [exported]
 ```
 
 ```Go
@@ -554,6 +549,7 @@ Call represents an active RPC.
 
 ```
 searchKey: rpc.Call.done
+tags: [private]
 ```
 
 ```Go
@@ -564,7 +560,6 @@ func (call *Call) done()
 
 ```
 searchKey: rpc.Client
-tags: [exported]
 ```
 
 ```Go
@@ -588,7 +583,6 @@ Client represents an RPC Client. There may be multiple outstanding Calls associa
 
 ```
 searchKey: rpc.NewClient
-tags: [exported]
 ```
 
 ```Go
@@ -603,7 +597,6 @@ The read and write halves of the connection are serialized independently, so no 
 
 ```
 searchKey: rpc.NewClientWithCodec
-tags: [exported]
 ```
 
 ```Go
@@ -616,7 +609,6 @@ NewClientWithCodec is like NewClient but uses the specified codec to encode requ
 
 ```
 searchKey: rpc.DialHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -629,7 +621,6 @@ DialHTTP connects to an HTTP RPC server at the specified network address listeni
 
 ```
 searchKey: rpc.DialHTTPPath
-tags: [exported]
 ```
 
 ```Go
@@ -642,7 +633,6 @@ DialHTTPPath connects to an HTTP RPC server at the specified network address and
 
 ```
 searchKey: rpc.Dial
-tags: [exported]
 ```
 
 ```Go
@@ -655,6 +645,7 @@ Dial connects to an RPC server at the specified network address.
 
 ```
 searchKey: rpc.dialDirect
+tags: [private]
 ```
 
 ```Go
@@ -665,6 +656,7 @@ func dialDirect() (*Client, error)
 
 ```
 searchKey: rpc.dialHTTP
+tags: [private]
 ```
 
 ```Go
@@ -675,6 +667,7 @@ func dialHTTP() (*Client, error)
 
 ```
 searchKey: rpc.Client.send
+tags: [private]
 ```
 
 ```Go
@@ -685,6 +678,7 @@ func (client *Client) send(call *Call)
 
 ```
 searchKey: rpc.Client.input
+tags: [private]
 ```
 
 ```Go
@@ -695,7 +689,6 @@ func (client *Client) input()
 
 ```
 searchKey: rpc.Client.Close
-tags: [exported]
 ```
 
 ```Go
@@ -708,7 +701,6 @@ Close calls the underlying codec's Close method. If the connection is already sh
 
 ```
 searchKey: rpc.Client.Go
-tags: [exported]
 ```
 
 ```Go
@@ -721,7 +713,6 @@ Go invokes the function asynchronously. It returns the Call structure representi
 
 ```
 searchKey: rpc.Client.Call
-tags: [exported]
 ```
 
 ```Go
@@ -734,7 +725,6 @@ Call invokes the named function, waits for it to complete, and returns its error
 
 ```
 searchKey: rpc.ClientCodec
-tags: [exported]
 ```
 
 ```Go
@@ -753,6 +743,7 @@ A ClientCodec implements writing of RPC requests and reading of RPC responses fo
 
 ```
 searchKey: rpc.gobClientCodec
+tags: [private]
 ```
 
 ```Go
@@ -768,6 +759,7 @@ type gobClientCodec struct {
 
 ```
 searchKey: rpc.gobClientCodec.WriteRequest
+tags: [private]
 ```
 
 ```Go
@@ -778,6 +770,7 @@ func (c *gobClientCodec) WriteRequest(r *Request, body interface{}) (err error)
 
 ```
 searchKey: rpc.gobClientCodec.ReadResponseHeader
+tags: [private]
 ```
 
 ```Go
@@ -788,6 +781,7 @@ func (c *gobClientCodec) ReadResponseHeader(r *Response) error
 
 ```
 searchKey: rpc.gobClientCodec.ReadResponseBody
+tags: [private]
 ```
 
 ```Go
@@ -798,6 +792,7 @@ func (c *gobClientCodec) ReadResponseBody(body interface{}) error
 
 ```
 searchKey: rpc.gobClientCodec.Close
+tags: [private]
 ```
 
 ```Go
@@ -808,6 +803,7 @@ func (c *gobClientCodec) Close() error
 
 ```
 searchKey: rpc.debugMethod
+tags: [private]
 ```
 
 ```Go
@@ -821,6 +817,7 @@ type debugMethod struct {
 
 ```
 searchKey: rpc.methodArray
+tags: [private]
 ```
 
 ```Go
@@ -831,6 +828,7 @@ type methodArray []debugMethod
 
 ```
 searchKey: rpc.methodArray.Len
+tags: [private]
 ```
 
 ```Go
@@ -841,6 +839,7 @@ func (m methodArray) Len() int
 
 ```
 searchKey: rpc.methodArray.Less
+tags: [private]
 ```
 
 ```Go
@@ -851,6 +850,7 @@ func (m methodArray) Less(i, j int) bool
 
 ```
 searchKey: rpc.methodArray.Swap
+tags: [private]
 ```
 
 ```Go
@@ -861,6 +861,7 @@ func (m methodArray) Swap(i, j int)
 
 ```
 searchKey: rpc.debugService
+tags: [private]
 ```
 
 ```Go
@@ -875,6 +876,7 @@ type debugService struct {
 
 ```
 searchKey: rpc.serviceArray
+tags: [private]
 ```
 
 ```Go
@@ -885,6 +887,7 @@ type serviceArray []debugService
 
 ```
 searchKey: rpc.serviceArray.Len
+tags: [private]
 ```
 
 ```Go
@@ -895,6 +898,7 @@ func (s serviceArray) Len() int
 
 ```
 searchKey: rpc.serviceArray.Less
+tags: [private]
 ```
 
 ```Go
@@ -905,6 +909,7 @@ func (s serviceArray) Less(i, j int) bool
 
 ```
 searchKey: rpc.serviceArray.Swap
+tags: [private]
 ```
 
 ```Go
@@ -915,6 +920,7 @@ func (s serviceArray) Swap(i, j int)
 
 ```
 searchKey: rpc.debugHTTP
+tags: [private]
 ```
 
 ```Go
@@ -927,6 +933,7 @@ type debugHTTP struct {
 
 ```
 searchKey: rpc.debugHTTP.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -939,6 +946,7 @@ Runs at /debug/rpc
 
 ```
 searchKey: rpc.methodType
+tags: [private]
 ```
 
 ```Go
@@ -955,6 +963,7 @@ type methodType struct {
 
 ```
 searchKey: rpc.methodType.NumCalls
+tags: [private]
 ```
 
 ```Go
@@ -965,6 +974,7 @@ func (m *methodType) NumCalls() (n uint)
 
 ```
 searchKey: rpc.service
+tags: [private]
 ```
 
 ```Go
@@ -980,6 +990,7 @@ type service struct {
 
 ```
 searchKey: rpc.service.call
+tags: [private]
 ```
 
 ```Go
@@ -990,7 +1001,6 @@ func (s *service) call(server *Server, sending *sync.Mutex, wg *sync.WaitGroup, 
 
 ```
 searchKey: rpc.Request
-tags: [exported]
 ```
 
 ```Go
@@ -1007,7 +1017,6 @@ Request is a header written before every RPC call. It is used internally but doc
 
 ```
 searchKey: rpc.Response
-tags: [exported]
 ```
 
 ```Go
@@ -1025,7 +1034,6 @@ Response is a header written before every RPC return. It is used internally but 
 
 ```
 searchKey: rpc.Server
-tags: [exported]
 ```
 
 ```Go
@@ -1044,7 +1052,6 @@ Server represents an RPC Server.
 
 ```
 searchKey: rpc.NewServer
-tags: [exported]
 ```
 
 ```Go
@@ -1057,7 +1064,6 @@ NewServer returns a new Server.
 
 ```
 searchKey: rpc.Server.Register
-tags: [exported]
 ```
 
 ```Go
@@ -1079,7 +1085,6 @@ It returns an error if the receiver is not an exported type or has no suitable m
 
 ```
 searchKey: rpc.Server.RegisterName
-tags: [exported]
 ```
 
 ```Go
@@ -1092,6 +1097,7 @@ RegisterName is like Register but uses the provided name for the type instead of
 
 ```
 searchKey: rpc.Server.register
+tags: [private]
 ```
 
 ```Go
@@ -1102,6 +1108,7 @@ func (server *Server) register(rcvr interface{}, name string, useName bool) erro
 
 ```
 searchKey: rpc.Server.sendResponse
+tags: [private]
 ```
 
 ```Go
@@ -1112,7 +1119,6 @@ func (server *Server) sendResponse(sending *sync.Mutex, req *Request, reply inte
 
 ```
 searchKey: rpc.Server.ServeConn
-tags: [exported]
 ```
 
 ```Go
@@ -1125,7 +1131,6 @@ ServeConn runs the server on a single connection. ServeConn blocks, serving the 
 
 ```
 searchKey: rpc.Server.ServeCodec
-tags: [exported]
 ```
 
 ```Go
@@ -1138,7 +1143,6 @@ ServeCodec is like ServeConn but uses the specified codec to decode requests and
 
 ```
 searchKey: rpc.Server.ServeRequest
-tags: [exported]
 ```
 
 ```Go
@@ -1151,6 +1155,7 @@ ServeRequest is like ServeCodec but synchronously serves a single request. It do
 
 ```
 searchKey: rpc.Server.getRequest
+tags: [private]
 ```
 
 ```Go
@@ -1161,6 +1166,7 @@ func (server *Server) getRequest() *Request
 
 ```
 searchKey: rpc.Server.freeRequest
+tags: [private]
 ```
 
 ```Go
@@ -1171,6 +1177,7 @@ func (server *Server) freeRequest(req *Request)
 
 ```
 searchKey: rpc.Server.getResponse
+tags: [private]
 ```
 
 ```Go
@@ -1181,6 +1188,7 @@ func (server *Server) getResponse() *Response
 
 ```
 searchKey: rpc.Server.freeResponse
+tags: [private]
 ```
 
 ```Go
@@ -1191,6 +1199,7 @@ func (server *Server) freeResponse(resp *Response)
 
 ```
 searchKey: rpc.Server.readRequest
+tags: [private]
 ```
 
 ```Go
@@ -1201,6 +1210,7 @@ func (server *Server) readRequest(codec ServerCodec) (service *service, mtype *m
 
 ```
 searchKey: rpc.Server.readRequestHeader
+tags: [private]
 ```
 
 ```Go
@@ -1211,7 +1221,6 @@ func (server *Server) readRequestHeader(codec ServerCodec) (svc *service, mtype 
 
 ```
 searchKey: rpc.Server.Accept
-tags: [exported]
 ```
 
 ```Go
@@ -1224,7 +1233,6 @@ Accept accepts connections on the listener and serves requests for each incoming
 
 ```
 searchKey: rpc.Server.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -1237,7 +1245,6 @@ ServeHTTP implements an http.Handler that answers RPC requests.
 
 ```
 searchKey: rpc.Server.HandleHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -1250,6 +1257,7 @@ HandleHTTP registers an HTTP handler for RPC messages on rpcPath, and a debuggin
 
 ```
 searchKey: rpc.gobServerCodec
+tags: [private]
 ```
 
 ```Go
@@ -1266,6 +1274,7 @@ type gobServerCodec struct {
 
 ```
 searchKey: rpc.gobServerCodec.ReadRequestHeader
+tags: [private]
 ```
 
 ```Go
@@ -1276,6 +1285,7 @@ func (c *gobServerCodec) ReadRequestHeader(r *Request) error
 
 ```
 searchKey: rpc.gobServerCodec.ReadRequestBody
+tags: [private]
 ```
 
 ```Go
@@ -1286,6 +1296,7 @@ func (c *gobServerCodec) ReadRequestBody(body interface{}) error
 
 ```
 searchKey: rpc.gobServerCodec.WriteResponse
+tags: [private]
 ```
 
 ```Go
@@ -1296,6 +1307,7 @@ func (c *gobServerCodec) WriteResponse(r *Response, body interface{}) (err error
 
 ```
 searchKey: rpc.gobServerCodec.Close
+tags: [private]
 ```
 
 ```Go
@@ -1306,7 +1318,6 @@ func (c *gobServerCodec) Close() error
 
 ```
 searchKey: rpc.ServerCodec
-tags: [exported]
 ```
 
 ```Go
@@ -1326,6 +1337,7 @@ A ServerCodec implements reading of RPC requests and writing of RPC responses fo
 
 ```
 searchKey: rpc.shutdownCodec
+tags: [private]
 ```
 
 ```Go
@@ -1339,6 +1351,7 @@ type shutdownCodec struct {
 
 ```
 searchKey: rpc.shutdownCodec.WriteRequest
+tags: [private]
 ```
 
 ```Go
@@ -1349,6 +1362,7 @@ func (c *shutdownCodec) WriteRequest(*Request, interface{}) error
 
 ```
 searchKey: rpc.shutdownCodec.ReadResponseBody
+tags: [private]
 ```
 
 ```Go
@@ -1359,6 +1373,7 @@ func (c *shutdownCodec) ReadResponseBody(interface{}) error
 
 ```
 searchKey: rpc.shutdownCodec.ReadResponseHeader
+tags: [private]
 ```
 
 ```Go
@@ -1369,6 +1384,7 @@ func (c *shutdownCodec) ReadResponseHeader(*Response) error
 
 ```
 searchKey: rpc.shutdownCodec.Close
+tags: [private]
 ```
 
 ```Go
@@ -1379,6 +1395,7 @@ func (c *shutdownCodec) Close() error
 
 ```
 searchKey: rpc.R
+tags: [private]
 ```
 
 ```Go
@@ -1391,6 +1408,7 @@ type R struct {
 
 ```
 searchKey: rpc.S
+tags: [private]
 ```
 
 ```Go
@@ -1401,6 +1419,7 @@ type S struct{}
 
 ```
 searchKey: rpc.S.Recv
+tags: [private]
 ```
 
 ```Go
@@ -1411,6 +1430,7 @@ func (s *S) Recv(nul *struct{}, reply *R) error
 
 ```
 searchKey: rpc.Args
+tags: [private]
 ```
 
 ```Go
@@ -1423,6 +1443,7 @@ type Args struct {
 
 ```
 searchKey: rpc.Reply
+tags: [private]
 ```
 
 ```Go
@@ -1435,6 +1456,7 @@ type Reply struct {
 
 ```
 searchKey: rpc.Arith
+tags: [private]
 ```
 
 ```Go
@@ -1445,6 +1467,7 @@ type Arith int
 
 ```
 searchKey: rpc.Arith.Add
+tags: [private]
 ```
 
 ```Go
@@ -1455,6 +1478,7 @@ func (t *Arith) Add(args Args, reply *Reply) error
 
 ```
 searchKey: rpc.Arith.Mul
+tags: [private]
 ```
 
 ```Go
@@ -1465,6 +1489,7 @@ func (t *Arith) Mul(args *Args, reply *Reply) error
 
 ```
 searchKey: rpc.Arith.Div
+tags: [private]
 ```
 
 ```Go
@@ -1475,6 +1500,7 @@ func (t *Arith) Div(args Args, reply *Reply) error
 
 ```
 searchKey: rpc.Arith.String
+tags: [private]
 ```
 
 ```Go
@@ -1485,6 +1511,7 @@ func (t *Arith) String(args *Args, reply *string) error
 
 ```
 searchKey: rpc.Arith.Scan
+tags: [private]
 ```
 
 ```Go
@@ -1495,6 +1522,7 @@ func (t *Arith) Scan(args string, reply *Reply) (err error)
 
 ```
 searchKey: rpc.Arith.Error
+tags: [private]
 ```
 
 ```Go
@@ -1505,6 +1533,7 @@ func (t *Arith) Error(args *Args, reply *Reply) error
 
 ```
 searchKey: rpc.Arith.SleepMilli
+tags: [private]
 ```
 
 ```Go
@@ -1515,6 +1544,7 @@ func (t *Arith) SleepMilli(args *Args, reply *Reply) error
 
 ```
 searchKey: rpc.hidden
+tags: [private]
 ```
 
 ```Go
@@ -1525,6 +1555,7 @@ type hidden int
 
 ```
 searchKey: rpc.hidden.Exported
+tags: [private]
 ```
 
 ```Go
@@ -1535,6 +1566,7 @@ func (t *hidden) Exported(args Args, reply *Reply) error
 
 ```
 searchKey: rpc.Embed
+tags: [private]
 ```
 
 ```Go
@@ -1547,6 +1579,7 @@ type Embed struct {
 
 ```
 searchKey: rpc.BuiltinTypes
+tags: [private]
 ```
 
 ```Go
@@ -1557,6 +1590,7 @@ type BuiltinTypes struct{}
 
 ```
 searchKey: rpc.BuiltinTypes.Map
+tags: [private]
 ```
 
 ```Go
@@ -1567,6 +1601,7 @@ func (BuiltinTypes) Map(args *Args, reply *map[int]int) error
 
 ```
 searchKey: rpc.BuiltinTypes.Slice
+tags: [private]
 ```
 
 ```Go
@@ -1577,6 +1612,7 @@ func (BuiltinTypes) Slice(args *Args, reply *[]int) error
 
 ```
 searchKey: rpc.BuiltinTypes.Array
+tags: [private]
 ```
 
 ```Go
@@ -1587,6 +1623,7 @@ func (BuiltinTypes) Array(args *Args, reply *[2]int) error
 
 ```
 searchKey: rpc.CodecEmulator
+tags: [private]
 ```
 
 ```Go
@@ -1605,6 +1642,7 @@ CodecEmulator provides a client-like api and a ServerCodec interface. Can be use
 
 ```
 searchKey: rpc.CodecEmulator.Call
+tags: [private]
 ```
 
 ```Go
@@ -1615,6 +1653,7 @@ func (codec *CodecEmulator) Call(serviceMethod string, args *Args, reply *Reply)
 
 ```
 searchKey: rpc.CodecEmulator.ReadRequestHeader
+tags: [private]
 ```
 
 ```Go
@@ -1625,6 +1664,7 @@ func (codec *CodecEmulator) ReadRequestHeader(req *Request) error
 
 ```
 searchKey: rpc.CodecEmulator.ReadRequestBody
+tags: [private]
 ```
 
 ```Go
@@ -1635,6 +1675,7 @@ func (codec *CodecEmulator) ReadRequestBody(argv interface{}) error
 
 ```
 searchKey: rpc.CodecEmulator.WriteResponse
+tags: [private]
 ```
 
 ```Go
@@ -1645,6 +1686,7 @@ func (codec *CodecEmulator) WriteResponse(resp *Response, reply interface{}) err
 
 ```
 searchKey: rpc.CodecEmulator.Close
+tags: [private]
 ```
 
 ```Go
@@ -1655,6 +1697,7 @@ func (codec *CodecEmulator) Close() error
 
 ```
 searchKey: rpc.ReplyNotPointer
+tags: [private]
 ```
 
 ```Go
@@ -1665,6 +1708,7 @@ type ReplyNotPointer int
 
 ```
 searchKey: rpc.ReplyNotPointer.ReplyNotPointer
+tags: [private]
 ```
 
 ```Go
@@ -1675,6 +1719,7 @@ func (t *ReplyNotPointer) ReplyNotPointer(args *Args, reply Reply) error
 
 ```
 searchKey: rpc.ArgNotPublic
+tags: [private]
 ```
 
 ```Go
@@ -1685,6 +1730,7 @@ type ArgNotPublic int
 
 ```
 searchKey: rpc.ArgNotPublic.ArgNotPublic
+tags: [private]
 ```
 
 ```Go
@@ -1695,6 +1741,7 @@ func (t *ArgNotPublic) ArgNotPublic(args *local, reply *Reply) error
 
 ```
 searchKey: rpc.ReplyNotPublic
+tags: [private]
 ```
 
 ```Go
@@ -1705,6 +1752,7 @@ type ReplyNotPublic int
 
 ```
 searchKey: rpc.ReplyNotPublic.ReplyNotPublic
+tags: [private]
 ```
 
 ```Go
@@ -1715,6 +1763,7 @@ func (t *ReplyNotPublic) ReplyNotPublic(args *Args, reply *local) error
 
 ```
 searchKey: rpc.NeedsPtrType
+tags: [private]
 ```
 
 ```Go
@@ -1725,6 +1774,7 @@ type NeedsPtrType int
 
 ```
 searchKey: rpc.NeedsPtrType.NeedsPtrType
+tags: [private]
 ```
 
 ```Go
@@ -1735,6 +1785,7 @@ func (t *NeedsPtrType) NeedsPtrType(args *Args, reply *Reply) error
 
 ```
 searchKey: rpc.local
+tags: [private]
 ```
 
 ```Go
@@ -1745,6 +1796,7 @@ type local struct{}
 
 ```
 searchKey: rpc.WriteFailCodec
+tags: [private]
 ```
 
 ```Go
@@ -1755,6 +1807,7 @@ type WriteFailCodec int
 
 ```
 searchKey: rpc.WriteFailCodec.WriteRequest
+tags: [private]
 ```
 
 ```Go
@@ -1765,6 +1818,7 @@ func (WriteFailCodec) WriteRequest(*Request, interface{}) error
 
 ```
 searchKey: rpc.WriteFailCodec.ReadResponseHeader
+tags: [private]
 ```
 
 ```Go
@@ -1775,6 +1829,7 @@ func (WriteFailCodec) ReadResponseHeader(*Response) error
 
 ```
 searchKey: rpc.WriteFailCodec.ReadResponseBody
+tags: [private]
 ```
 
 ```Go
@@ -1785,6 +1840,7 @@ func (WriteFailCodec) ReadResponseBody(interface{}) error
 
 ```
 searchKey: rpc.WriteFailCodec.Close
+tags: [private]
 ```
 
 ```Go
@@ -1795,6 +1851,7 @@ func (WriteFailCodec) Close() error
 
 ```
 searchKey: rpc.writeCrasher
+tags: [private]
 ```
 
 ```Go
@@ -1807,6 +1864,7 @@ type writeCrasher struct {
 
 ```
 searchKey: rpc.writeCrasher.Close
+tags: [private]
 ```
 
 ```Go
@@ -1817,6 +1875,7 @@ func (writeCrasher) Close() error
 
 ```
 searchKey: rpc.writeCrasher.Read
+tags: [private]
 ```
 
 ```Go
@@ -1827,6 +1886,7 @@ func (w *writeCrasher) Read(p []byte) (int, error)
 
 ```
 searchKey: rpc.writeCrasher.Write
+tags: [private]
 ```
 
 ```Go
@@ -1835,14 +1895,11 @@ func (writeCrasher) Write(p []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="isExportedOrBuiltinType" href="#isExportedOrBuiltinType">func isExportedOrBuiltinType(t reflect.Type) bool</a>
 
 ```
 searchKey: rpc.isExportedOrBuiltinType
+tags: [private]
 ```
 
 ```Go
@@ -1855,6 +1912,7 @@ Is this type exported or a builtin?
 
 ```
 searchKey: rpc.suitableMethods
+tags: [private]
 ```
 
 ```Go
@@ -1867,7 +1925,6 @@ suitableMethods returns suitable Rpc methods of typ, it will report error using 
 
 ```
 searchKey: rpc.Register
-tags: [exported]
 ```
 
 ```Go
@@ -1880,7 +1937,6 @@ Register publishes the receiver's methods in the DefaultServer.
 
 ```
 searchKey: rpc.RegisterName
-tags: [exported]
 ```
 
 ```Go
@@ -1893,7 +1949,6 @@ RegisterName is like Register but uses the provided name for the type instead of
 
 ```
 searchKey: rpc.ServeConn
-tags: [exported]
 ```
 
 ```Go
@@ -1906,7 +1961,6 @@ ServeConn runs the DefaultServer on a single connection. ServeConn blocks, servi
 
 ```
 searchKey: rpc.ServeCodec
-tags: [exported]
 ```
 
 ```Go
@@ -1919,7 +1973,6 @@ ServeCodec is like ServeConn but uses the specified codec to decode requests and
 
 ```
 searchKey: rpc.ServeRequest
-tags: [exported]
 ```
 
 ```Go
@@ -1932,7 +1985,6 @@ ServeRequest is like ServeCodec but synchronously serves a single request. It do
 
 ```
 searchKey: rpc.Accept
-tags: [exported]
 ```
 
 ```Go
@@ -1945,7 +1997,6 @@ Accept accepts connections on the listener and serves requests to DefaultServer 
 
 ```
 searchKey: rpc.HandleHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -1958,6 +2009,7 @@ HandleHTTP registers an HTTP handler for RPC messages to DefaultServer on Defaul
 
 ```
 searchKey: rpc.TestCloseCodec
+tags: [private]
 ```
 
 ```Go
@@ -1968,6 +2020,7 @@ func TestCloseCodec(t *testing.T)
 
 ```
 searchKey: rpc.TestGobError
+tags: [private]
 ```
 
 ```Go
@@ -1978,6 +2031,7 @@ func TestGobError(t *testing.T)
 
 ```
 searchKey: rpc.listenTCP
+tags: [private]
 ```
 
 ```Go
@@ -1988,6 +2042,7 @@ func listenTCP() (net.Listener, string)
 
 ```
 searchKey: rpc.startServer
+tags: [private]
 ```
 
 ```Go
@@ -1998,6 +2053,7 @@ func startServer()
 
 ```
 searchKey: rpc.startNewServer
+tags: [private]
 ```
 
 ```Go
@@ -2008,6 +2064,7 @@ func startNewServer()
 
 ```
 searchKey: rpc.startHttpServer
+tags: [private]
 ```
 
 ```Go
@@ -2018,6 +2075,7 @@ func startHttpServer()
 
 ```
 searchKey: rpc.TestRPC
+tags: [private]
 ```
 
 ```Go
@@ -2028,6 +2086,7 @@ func TestRPC(t *testing.T)
 
 ```
 searchKey: rpc.testRPC
+tags: [private]
 ```
 
 ```Go
@@ -2038,6 +2097,7 @@ func testRPC(t *testing.T, addr string)
 
 ```
 searchKey: rpc.testNewServerRPC
+tags: [private]
 ```
 
 ```Go
@@ -2048,6 +2108,7 @@ func testNewServerRPC(t *testing.T, addr string)
 
 ```
 searchKey: rpc.TestHTTP
+tags: [private]
 ```
 
 ```Go
@@ -2058,6 +2119,7 @@ func TestHTTP(t *testing.T)
 
 ```
 searchKey: rpc.testHTTPRPC
+tags: [private]
 ```
 
 ```Go
@@ -2068,6 +2130,7 @@ func testHTTPRPC(t *testing.T, path string)
 
 ```
 searchKey: rpc.TestBuiltinTypes
+tags: [private]
 ```
 
 ```Go
@@ -2078,6 +2141,7 @@ func TestBuiltinTypes(t *testing.T)
 
 ```
 searchKey: rpc.TestServeRequest
+tags: [private]
 ```
 
 ```Go
@@ -2088,6 +2152,7 @@ func TestServeRequest(t *testing.T)
 
 ```
 searchKey: rpc.testServeRequest
+tags: [private]
 ```
 
 ```Go
@@ -2098,6 +2163,7 @@ func testServeRequest(t *testing.T, server *Server)
 
 ```
 searchKey: rpc.TestRegistrationError
+tags: [private]
 ```
 
 ```Go
@@ -2110,6 +2176,7 @@ Check that registration handles lots of bad methods and a type with no suitable 
 
 ```
 searchKey: rpc.TestSendDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -2120,6 +2187,7 @@ func TestSendDeadlock(t *testing.T)
 
 ```
 searchKey: rpc.testSendDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -2130,6 +2198,7 @@ func testSendDeadlock(client *Client)
 
 ```
 searchKey: rpc.countMallocs
+tags: [private]
 ```
 
 ```Go
@@ -2140,6 +2209,7 @@ func countMallocs(dial func() (*Client, error), t *testing.T) float64
 
 ```
 searchKey: rpc.TestCountMallocs
+tags: [private]
 ```
 
 ```Go
@@ -2150,6 +2220,7 @@ func TestCountMallocs(t *testing.T)
 
 ```
 searchKey: rpc.TestCountMallocsOverHTTP
+tags: [private]
 ```
 
 ```Go
@@ -2160,6 +2231,7 @@ func TestCountMallocsOverHTTP(t *testing.T)
 
 ```
 searchKey: rpc.TestClientWriteError
+tags: [private]
 ```
 
 ```Go
@@ -2170,6 +2242,7 @@ func TestClientWriteError(t *testing.T)
 
 ```
 searchKey: rpc.TestTCPClose
+tags: [private]
 ```
 
 ```Go
@@ -2180,6 +2253,7 @@ func TestTCPClose(t *testing.T)
 
 ```
 searchKey: rpc.TestErrorAfterClientClose
+tags: [private]
 ```
 
 ```Go
@@ -2190,6 +2264,7 @@ func TestErrorAfterClientClose(t *testing.T)
 
 ```
 searchKey: rpc.TestAcceptExitAfterListenerClose
+tags: [private]
 ```
 
 ```Go
@@ -2202,6 +2277,7 @@ Tests the fix to issue 11221. Without the fix, this loops forever or crashes.
 
 ```
 searchKey: rpc.TestShutdown
+tags: [private]
 ```
 
 ```Go
@@ -2212,6 +2288,7 @@ func TestShutdown(t *testing.T)
 
 ```
 searchKey: rpc.benchmarkEndToEnd
+tags: [private]
 ```
 
 ```Go
@@ -2222,6 +2299,7 @@ func benchmarkEndToEnd(dial func() (*Client, error), b *testing.B)
 
 ```
 searchKey: rpc.benchmarkEndToEndAsync
+tags: [private]
 ```
 
 ```Go
@@ -2232,6 +2310,7 @@ func benchmarkEndToEndAsync(dial func() (*Client, error), b *testing.B)
 
 ```
 searchKey: rpc.BenchmarkEndToEnd
+tags: [private]
 ```
 
 ```Go
@@ -2242,6 +2321,7 @@ func BenchmarkEndToEnd(b *testing.B)
 
 ```
 searchKey: rpc.BenchmarkEndToEndHTTP
+tags: [private]
 ```
 
 ```Go
@@ -2252,6 +2332,7 @@ func BenchmarkEndToEndHTTP(b *testing.B)
 
 ```
 searchKey: rpc.BenchmarkEndToEndAsync
+tags: [private]
 ```
 
 ```Go
@@ -2262,6 +2343,7 @@ func BenchmarkEndToEndAsync(b *testing.B)
 
 ```
 searchKey: rpc.BenchmarkEndToEndAsyncHTTP
+tags: [private]
 ```
 
 ```Go

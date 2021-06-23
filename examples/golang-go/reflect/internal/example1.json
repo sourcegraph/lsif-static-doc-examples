@@ -4,7 +4,9 @@
     "identifier": "example1",
     "newPage": true,
     "searchKey": "reflect/internal/example1",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "MyStruct",
                 "newPage": false,
                 "searchKey": "example1.MyStruct",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

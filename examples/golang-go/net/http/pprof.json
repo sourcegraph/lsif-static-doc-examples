@@ -4,9 +4,7 @@
     "identifier": "pprof",
     "newPage": true,
     "searchKey": "net/http/pprof",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "profileSupportsDelta",
                 "newPage": false,
                 "searchKey": "pprof.profileSupportsDelta",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "profileDescriptions",
                 "newPage": false,
                 "searchKey": "pprof.profileDescriptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "Sink",
                 "newPage": false,
                 "searchKey": "pprof.Sink",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "srv",
                 "newPage": false,
                 "searchKey": "pprof.srv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +131,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "handler",
                 "newPage": false,
                 "searchKey": "pprof.handler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -165,7 +169,9 @@
                       "identifier": "handler.ServeHTTP",
                       "newPage": false,
                       "searchKey": "pprof.handler.ServeHTTP",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -185,7 +191,9 @@
                       "identifier": "handler.serveDeltaProfile",
                       "newPage": false,
                       "searchKey": "pprof.handler.serveDeltaProfile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -208,7 +216,9 @@
                 "identifier": "profileEntry",
                 "newPage": false,
                 "searchKey": "pprof.profileEntry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -231,9 +241,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -246,12 +254,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/pprof#init",
+              "pathID": "/net/http/pprof#init.pprof.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.pprof.go",
                 "newPage": false,
                 "searchKey": "pprof.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -271,9 +281,7 @@
                 "identifier": "Cmdline",
                 "newPage": false,
                 "searchKey": "pprof.Cmdline",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -293,7 +301,9 @@
                 "identifier": "sleep",
                 "newPage": false,
                 "searchKey": "pprof.sleep",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -313,7 +323,9 @@
                 "identifier": "durationExceedsWriteTimeout",
                 "newPage": false,
                 "searchKey": "pprof.durationExceedsWriteTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -333,7 +345,9 @@
                 "identifier": "serveError",
                 "newPage": false,
                 "searchKey": "pprof.serveError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -353,9 +367,7 @@
                 "identifier": "Profile",
                 "newPage": false,
                 "searchKey": "pprof.Profile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -375,9 +387,7 @@
                 "identifier": "Trace",
                 "newPage": false,
                 "searchKey": "pprof.Trace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -397,9 +407,7 @@
                 "identifier": "Symbol",
                 "newPage": false,
                 "searchKey": "pprof.Symbol",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -419,9 +427,7 @@
                 "identifier": "Handler",
                 "newPage": false,
                 "searchKey": "pprof.Handler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -441,7 +447,9 @@
                 "identifier": "collectProfile",
                 "newPage": false,
                 "searchKey": "pprof.collectProfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -461,9 +469,7 @@
                 "identifier": "Index",
                 "newPage": false,
                 "searchKey": "pprof.Index",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -483,7 +489,9 @@
                 "identifier": "indexTmplExecute",
                 "newPage": false,
                 "searchKey": "pprof.indexTmplExecute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -503,7 +511,9 @@
                 "identifier": "TestDescriptions",
                 "newPage": false,
                 "searchKey": "pprof.TestDescriptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -523,7 +533,9 @@
                 "identifier": "TestHandlers",
                 "newPage": false,
                 "searchKey": "pprof.TestHandlers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -543,7 +555,9 @@
                 "identifier": "mutexHog1",
                 "newPage": false,
                 "searchKey": "pprof.mutexHog1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -563,7 +577,9 @@
                 "identifier": "mutexHog2",
                 "newPage": false,
                 "searchKey": "pprof.mutexHog2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -583,7 +599,9 @@
                 "identifier": "mutexHog",
                 "newPage": false,
                 "searchKey": "pprof.mutexHog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -603,7 +621,9 @@
                 "identifier": "TestDeltaProfile",
                 "newPage": false,
                 "searchKey": "pprof.TestDeltaProfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -623,7 +643,9 @@
                 "identifier": "query",
                 "newPage": false,
                 "searchKey": "pprof.query",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -643,7 +665,9 @@
                 "identifier": "seen",
                 "newPage": false,
                 "searchKey": "pprof.seen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

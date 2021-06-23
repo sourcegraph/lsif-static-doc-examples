@@ -72,7 +72,7 @@ For a study of the facility in action, visit
         * [func (name handler) serveDeltaProfile(w http.ResponseWriter, r *http.Request, p *pprof.Profile, secStr string)](#handler.serveDeltaProfile)
     * [type profileEntry struct](#profileEntry)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.pprof.go)
     * [func Cmdline(w http.ResponseWriter, r *http.Request)](#Cmdline)
     * [func sleep(r *http.Request, d time.Duration)](#sleep)
     * [func durationExceedsWriteTimeout(r *http.Request, seconds float64) bool](#durationExceedsWriteTimeout)
@@ -96,14 +96,11 @@ For a study of the facility in action, visit
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="profileSupportsDelta" href="#profileSupportsDelta">var profileSupportsDelta</a>
 
 ```
 searchKey: pprof.profileSupportsDelta
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +111,7 @@ var profileSupportsDelta = ...
 
 ```
 searchKey: pprof.profileDescriptions
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +122,7 @@ var profileDescriptions = ...
 
 ```
 searchKey: pprof.Sink
+tags: [private]
 ```
 
 ```Go
@@ -134,6 +133,7 @@ var Sink uint32
 
 ```
 searchKey: pprof.srv
+tags: [private]
 ```
 
 ```Go
@@ -142,14 +142,11 @@ var srv = httptest.NewServer(nil)
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="handler" href="#handler">type handler string</a>
 
 ```
 searchKey: pprof.handler
+tags: [private]
 ```
 
 ```Go
@@ -160,6 +157,7 @@ type handler string
 
 ```
 searchKey: pprof.handler.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -170,6 +168,7 @@ func (name handler) ServeHTTP(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: pprof.handler.serveDeltaProfile
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +179,7 @@ func (name handler) serveDeltaProfile(w http.ResponseWriter, r *http.Request, p 
 
 ```
 searchKey: pprof.profileEntry
+tags: [private]
 ```
 
 ```Go
@@ -193,14 +193,11 @@ type profileEntry struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
-### <a id="init" href="#init">func init()</a>
+### <a id="init.pprof.go" href="#init.pprof.go">func init()</a>
 
 ```
 searchKey: pprof.init
+tags: [private]
 ```
 
 ```Go
@@ -211,7 +208,6 @@ func init()
 
 ```
 searchKey: pprof.Cmdline
-tags: [exported]
 ```
 
 ```Go
@@ -224,6 +220,7 @@ Cmdline responds with the running program's command line, with arguments separat
 
 ```
 searchKey: pprof.sleep
+tags: [private]
 ```
 
 ```Go
@@ -234,6 +231,7 @@ func sleep(r *http.Request, d time.Duration)
 
 ```
 searchKey: pprof.durationExceedsWriteTimeout
+tags: [private]
 ```
 
 ```Go
@@ -244,6 +242,7 @@ func durationExceedsWriteTimeout(r *http.Request, seconds float64) bool
 
 ```
 searchKey: pprof.serveError
+tags: [private]
 ```
 
 ```Go
@@ -254,7 +253,6 @@ func serveError(w http.ResponseWriter, status int, txt string)
 
 ```
 searchKey: pprof.Profile
-tags: [exported]
 ```
 
 ```Go
@@ -267,7 +265,6 @@ Profile responds with the pprof-formatted cpu profile. Profiling lasts for durat
 
 ```
 searchKey: pprof.Trace
-tags: [exported]
 ```
 
 ```Go
@@ -280,7 +277,6 @@ Trace responds with the execution trace in binary form. Tracing lasts for durati
 
 ```
 searchKey: pprof.Symbol
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +289,6 @@ Symbol looks up the program counters listed in the request, responding with a ta
 
 ```
 searchKey: pprof.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -306,6 +301,7 @@ Handler returns an HTTP handler that serves the named profile.
 
 ```
 searchKey: pprof.collectProfile
+tags: [private]
 ```
 
 ```Go
@@ -316,7 +312,6 @@ func collectProfile(p *pprof.Profile) (*profile.Profile, error)
 
 ```
 searchKey: pprof.Index
-tags: [exported]
 ```
 
 ```Go
@@ -329,6 +324,7 @@ Index responds with the pprof-formatted profile named by the request. For exampl
 
 ```
 searchKey: pprof.indexTmplExecute
+tags: [private]
 ```
 
 ```Go
@@ -339,6 +335,7 @@ func indexTmplExecute(w io.Writer, profiles []profileEntry) error
 
 ```
 searchKey: pprof.TestDescriptions
+tags: [private]
 ```
 
 ```Go
@@ -351,6 +348,7 @@ TestDescriptions checks that the profile names under runtime/pprof package have 
 
 ```
 searchKey: pprof.TestHandlers
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +359,7 @@ func TestHandlers(t *testing.T)
 
 ```
 searchKey: pprof.mutexHog1
+tags: [private]
 ```
 
 ```Go
@@ -371,6 +370,7 @@ func mutexHog1(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration)
 
 ```
 searchKey: pprof.mutexHog2
+tags: [private]
 ```
 
 ```Go
@@ -383,6 +383,7 @@ mutexHog2 is almost identical to mutexHog but we keep them separate in order to 
 
 ```
 searchKey: pprof.mutexHog
+tags: [private]
 ```
 
 ```Go
@@ -395,6 +396,7 @@ mutexHog starts multiple goroutines that runs the given hogger function for the 
 
 ```
 searchKey: pprof.TestDeltaProfile
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +407,7 @@ func TestDeltaProfile(t *testing.T)
 
 ```
 searchKey: pprof.query
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +418,7 @@ func query(endpoint string) (*profile.Profile, error)
 
 ```
 searchKey: pprof.seen
+tags: [private]
 ```
 
 ```Go

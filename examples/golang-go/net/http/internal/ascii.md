@@ -14,11 +14,14 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="EqualFold" href="#EqualFold">func EqualFold(s, t string) bool</a>
 
 ```
 searchKey: ascii.EqualFold
-tags: [exported]
 ```
 
 ```Go
@@ -31,6 +34,7 @@ EqualFold is strings.EqualFold, ASCII only. It reports whether s and t are equal
 
 ```
 searchKey: ascii.lower
+tags: [private]
 ```
 
 ```Go
@@ -43,7 +47,6 @@ lower returns the ASCII lowercase version of b.
 
 ```
 searchKey: ascii.IsPrint
-tags: [exported]
 ```
 
 ```Go
@@ -56,7 +59,6 @@ IsPrint returns whether s is ASCII and printable according to [https://tools.iet
 
 ```
 searchKey: ascii.Is
-tags: [exported]
 ```
 
 ```Go
@@ -69,7 +71,6 @@ Is returns whether s is ASCII.
 
 ```
 searchKey: ascii.ToLower
-tags: [exported]
 ```
 
 ```Go
@@ -82,6 +83,7 @@ ToLower returns the lowercase version of s if s is ASCII and printable.
 
 ```
 searchKey: ascii.TestEqualFold
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +94,7 @@ func TestEqualFold(t *testing.T)
 
 ```
 searchKey: ascii.TestIsPrint
+tags: [private]
 ```
 
 ```Go

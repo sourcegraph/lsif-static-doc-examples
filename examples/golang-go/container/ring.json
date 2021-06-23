@@ -4,9 +4,7 @@
     "identifier": "ring",
     "newPage": true,
     "searchKey": "container/ring",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Ring",
                 "newPage": false,
                 "searchKey": "ring.Ring",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -64,9 +58,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "ring.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -86,7 +78,9 @@
                       "identifier": "makeN",
                       "newPage": false,
                       "searchKey": "ring.makeN",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -101,12 +95,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/container/ring#Ring.init",
+                    "pathID": "/container/ring#Ring.init.ring.go",
                     "documentation": {
-                      "identifier": "Ring.init",
+                      "identifier": "Ring.init.ring.go",
                       "newPage": false,
                       "searchKey": "ring.Ring.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,9 +122,7 @@
                       "identifier": "Ring.Next",
                       "newPage": false,
                       "searchKey": "ring.Ring.Next",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -148,9 +142,7 @@
                       "identifier": "Ring.Prev",
                       "newPage": false,
                       "searchKey": "ring.Ring.Prev",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -170,9 +162,7 @@
                       "identifier": "Ring.Move",
                       "newPage": false,
                       "searchKey": "ring.Ring.Move",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -192,9 +182,7 @@
                       "identifier": "Ring.Link",
                       "newPage": false,
                       "searchKey": "ring.Ring.Link",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -214,9 +202,7 @@
                       "identifier": "Ring.Unlink",
                       "newPage": false,
                       "searchKey": "ring.Ring.Unlink",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -236,9 +222,7 @@
                       "identifier": "Ring.Len",
                       "newPage": false,
                       "searchKey": "ring.Ring.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -258,9 +242,7 @@
                       "identifier": "Ring.Do",
                       "newPage": false,
                       "searchKey": "ring.Ring.Do",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -286,9 +268,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -306,7 +286,9 @@
                 "identifier": "dump",
                 "newPage": false,
                 "searchKey": "ring.dump",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -326,7 +308,9 @@
                 "identifier": "verify",
                 "newPage": false,
                 "searchKey": "ring.verify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -346,7 +330,9 @@
                 "identifier": "TestCornerCases",
                 "newPage": false,
                 "searchKey": "ring.TestCornerCases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -366,7 +352,9 @@
                 "identifier": "sumN",
                 "newPage": false,
                 "searchKey": "ring.sumN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -386,7 +374,9 @@
                 "identifier": "TestNew",
                 "newPage": false,
                 "searchKey": "ring.TestNew",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -406,7 +396,9 @@
                 "identifier": "TestLink1",
                 "newPage": false,
                 "searchKey": "ring.TestLink1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -426,7 +418,9 @@
                 "identifier": "TestLink2",
                 "newPage": false,
                 "searchKey": "ring.TestLink2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -446,7 +440,9 @@
                 "identifier": "TestLink3",
                 "newPage": false,
                 "searchKey": "ring.TestLink3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -466,7 +462,9 @@
                 "identifier": "TestUnlink",
                 "newPage": false,
                 "searchKey": "ring.TestUnlink",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -486,7 +484,9 @@
                 "identifier": "TestLinkUnlink",
                 "newPage": false,
                 "searchKey": "ring.TestLinkUnlink",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -506,7 +506,9 @@
                 "identifier": "TestMoveEmptyRing",
                 "newPage": false,
                 "searchKey": "ring.TestMoveEmptyRing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

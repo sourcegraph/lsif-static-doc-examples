@@ -4,9 +4,7 @@
     "identifier": "envvar",
     "newPage": true,
     "searchKey": "cmd/frontend/envvar",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "HTTPAddrInternal",
                 "newPage": false,
                 "searchKey": "envvar.HTTPAddrInternal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,7 +60,9 @@
                 "identifier": "sourcegraphDotComMode",
                 "newPage": false,
                 "searchKey": "envvar.sourcegraphDotComMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -86,7 +82,9 @@
                 "identifier": "disableProfiler",
                 "newPage": false,
                 "searchKey": "envvar.disableProfiler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +104,9 @@
                 "identifier": "openGraphPreviewServiceURL",
                 "newPage": false,
                 "searchKey": "envvar.openGraphPreviewServiceURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -129,9 +129,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -149,9 +147,7 @@
                 "identifier": "SourcegraphDotComMode",
                 "newPage": false,
                 "searchKey": "envvar.SourcegraphDotComMode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -171,9 +167,7 @@
                 "identifier": "MockSourcegraphDotComMode",
                 "newPage": false,
                 "searchKey": "envvar.MockSourcegraphDotComMode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -193,9 +187,7 @@
                 "identifier": "DisableProfiler",
                 "newPage": false,
                 "searchKey": "envvar.DisableProfiler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -215,9 +207,7 @@
                 "identifier": "OpenGraphPreviewServiceURL",
                 "newPage": false,
                 "searchKey": "envvar.OpenGraphPreviewServiceURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

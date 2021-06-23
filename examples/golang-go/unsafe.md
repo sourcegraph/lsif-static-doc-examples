@@ -20,15 +20,10 @@ Packages that import unsafe may be non-portable and are not protected by the Go 
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ArbitraryType" href="#ArbitraryType">type ArbitraryType int</a>
 
 ```
 searchKey: unsafe.ArbitraryType
-tags: [exported]
 ```
 
 ```Go
@@ -41,7 +36,6 @@ ArbitraryType is here for the purposes of documentation only and is not actually
 
 ```
 searchKey: unsafe.IntegerType
-tags: [exported]
 ```
 
 ```Go
@@ -54,7 +48,6 @@ IntegerType is here for the purposes of documentation only and is not actually p
 
 ```
 searchKey: unsafe.Pointer
-tags: [exported]
 ```
 
 ```Go
@@ -210,7 +203,6 @@ s := *(*string)(unsafe.Pointer(&hdr)) // p possibly already lost
 
 ```
 searchKey: unsafe.Add
-tags: [exported]
 ```
 
 ```Go
@@ -221,15 +213,10 @@ The function Add adds len to ptr and returns the updated pointer Pointer(uintptr
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Sizeof" href="#Sizeof">func Sizeof(x ArbitraryType) uintptr</a>
 
 ```
 searchKey: unsafe.Sizeof
-tags: [exported]
 ```
 
 ```Go
@@ -242,7 +229,6 @@ Sizeof takes an expression x of any type and returns the size in bytes of a hypo
 
 ```
 searchKey: unsafe.Offsetof
-tags: [exported]
 ```
 
 ```Go
@@ -255,7 +241,6 @@ Offsetof returns the offset within the struct of the field represented by x, whi
 
 ```
 searchKey: unsafe.Alignof
-tags: [exported]
 ```
 
 ```Go
@@ -268,7 +253,6 @@ Alignof takes an expression x of any type and returns the required alignment of 
 
 ```
 searchKey: unsafe.Slice
-tags: [exported]
 ```
 
 ```Go

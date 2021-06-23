@@ -4,7 +4,9 @@
     "identifier": "testutil",
     "newPage": true,
     "searchKey": "internal/testutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "gzipReadCloser",
                 "newPage": false,
                 "searchKey": "testutil.gzipReadCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -58,7 +64,9 @@
                       "identifier": "gzipReadCloser.Read",
                       "newPage": false,
                       "searchKey": "testutil.gzipReadCloser.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -78,7 +86,9 @@
                       "identifier": "gzipReadCloser.Close",
                       "newPage": false,
                       "searchKey": "testutil.gzipReadCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,7 +114,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -122,9 +134,7 @@
                 "identifier": "Diff",
                 "newPage": false,
                 "searchKey": "testutil.Diff",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -144,9 +154,7 @@
                 "identifier": "FetchTarFromGithub",
                 "newPage": false,
                 "searchKey": "testutil.FetchTarFromGithub",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -166,7 +174,9 @@
                 "identifier": "openGzipReader",
                 "newPage": false,
                 "searchKey": "testutil.openGzipReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -186,7 +196,9 @@
                 "identifier": "fsync",
                 "newPage": false,
                 "searchKey": "testutil.fsync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -206,9 +218,7 @@
                 "identifier": "AssertGolden",
                 "newPage": false,
                 "searchKey": "testutil.AssertGolden",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -228,7 +238,9 @@
                 "identifier": "marshal",
                 "newPage": false,
                 "searchKey": "testutil.marshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -248,9 +260,7 @@
                 "identifier": "NewStore",
                 "newPage": false,
                 "searchKey": "testutil.NewStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -270,7 +280,9 @@
                 "identifier": "addpaxheader",
                 "newPage": false,
                 "searchKey": "testutil.addpaxheader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -290,9 +302,7 @@
                 "identifier": "CreateZip",
                 "newPage": false,
                 "searchKey": "testutil.CreateZip",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -312,9 +322,7 @@
                 "identifier": "MockZipFile",
                 "newPage": false,
                 "searchKey": "testutil.MockZipFile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -334,9 +342,7 @@
                 "identifier": "TempZipFromFiles",
                 "newPage": false,
                 "searchKey": "testutil.TempZipFromFiles",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -356,9 +362,7 @@
                 "identifier": "TempZipFileOnDisk",
                 "newPage": false,
                 "searchKey": "testutil.TempZipFileOnDisk",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

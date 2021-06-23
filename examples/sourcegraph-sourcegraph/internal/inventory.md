@@ -31,7 +31,7 @@ Package inventory scans a directory tree to identify the programming languages, 
 * [Functions](#func)
     * [func countLines(r io.Reader, buf []byte) (lineCount int, byteCount int, err error)](#countLines)
     * [func GetLanguageByFilename(name string) (language string, safe bool)](#GetLanguageByFilename)
-    * [func init()](#init)
+    * [func init()](#init.inventory.go)
     * [func preferLanguage(lang, ext string)](#preferLanguage)
     * [func TestContext_Entries(t *testing.T)](#TestContext_Entries)
     * [func TestGetLang_language(t *testing.T)](#TestGetLang_language)
@@ -46,10 +46,15 @@ Package inventory scans a directory tree to identify the programming languages, 
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="fileReadBufferSize" href="#fileReadBufferSize">const fileReadBufferSize</a>
 
 ```
 searchKey: inventory.fileReadBufferSize
+tags: [private]
 ```
 
 ```Go
@@ -60,10 +65,15 @@ fileReadBufferSize is the size of the buffer we'll use while reading file conten
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="newLine" href="#newLine">var newLine</a>
 
 ```
 searchKey: inventory.newLine
+tags: [private]
 ```
 
 ```Go
@@ -72,11 +82,14 @@ var newLine = []byte{'\n'}
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Context" href="#Context">type Context struct</a>
 
 ```
 searchKey: inventory.Context
-tags: [exported]
 ```
 
 ```Go
@@ -103,7 +116,6 @@ Context defines the environment in which the inventory is computed.
 
 ```
 searchKey: inventory.Context.Entries
-tags: [exported]
 ```
 
 ```Go
@@ -118,6 +130,7 @@ If a file is referenced more than once (e.g., because it is a descendent of a su
 
 ```
 searchKey: inventory.Context.entries
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +141,7 @@ func (c *Context) entries(ctx context.Context, entries []fs.FileInfo, buf []byte
 
 ```
 searchKey: inventory.Context.tree
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +152,7 @@ func (c *Context) tree(ctx context.Context, tree fs.FileInfo, buf []byte) (inv I
 
 ```
 searchKey: inventory.Context.file
+tags: [private]
 ```
 
 ```Go
@@ -150,7 +165,6 @@ file computes the inventory of a single file. It caches the result.
 
 ```
 searchKey: inventory.Inventory
-tags: [exported]
 ```
 
 ```Go
@@ -166,7 +180,6 @@ Inventory summarizes a tree's contents (e.g., which programming languages are us
 
 ```
 searchKey: inventory.Sum
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +190,6 @@ func Sum(invs []Inventory) Inventory
 
 ```
 searchKey: inventory.Lang
-tags: [exported]
 ```
 
 ```Go
@@ -200,6 +212,7 @@ Lang represents a programming language used in a directory tree.
 
 ```
 searchKey: inventory.getLang
+tags: [private]
 ```
 
 ```Go
@@ -210,6 +223,7 @@ func getLang(ctx context.Context, file fs.FileInfo, buf []byte, getFileReader fu
 
 ```
 searchKey: inventory.fi
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +237,7 @@ type fi struct {
 
 ```
 searchKey: inventory.fi.Name
+tags: [private]
 ```
 
 ```Go
@@ -233,6 +248,7 @@ func (f fi) Name() string
 
 ```
 searchKey: inventory.fi.Size
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +259,7 @@ func (f fi) Size() int64
 
 ```
 searchKey: inventory.fi.IsDir
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +270,7 @@ func (f fi) IsDir() bool
 
 ```
 searchKey: inventory.fi.Mode
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +281,7 @@ func (f fi) Mode() os.FileMode
 
 ```
 searchKey: inventory.fi.ModTime
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +292,7 @@ func (f fi) ModTime() time.Time
 
 ```
 searchKey: inventory.fi.Sys
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +303,7 @@ func (f fi) Sys() interface{}
 
 ```
 searchKey: inventory.nopReadCloser
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +317,7 @@ type nopReadCloser struct {
 
 ```
 searchKey: inventory.nopReadCloser.Read
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +328,7 @@ func (n *nopReadCloser) Read(p []byte) (int, error)
 
 ```
 searchKey: inventory.nopReadCloser.Close
+tags: [private]
 ```
 
 ```Go
@@ -314,10 +337,15 @@ func (n *nopReadCloser) Close() error
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="countLines" href="#countLines">func countLines(r io.Reader, buf []byte) (lineCount int, byteCount int, err error)</a>
 
 ```
 searchKey: inventory.countLines
+tags: [private]
 ```
 
 ```Go
@@ -330,7 +358,6 @@ countLines counts the number of lines in the supplied reader it uses buf as a te
 
 ```
 searchKey: inventory.GetLanguageByFilename
-tags: [exported]
 ```
 
 ```Go
@@ -339,10 +366,11 @@ func GetLanguageByFilename(name string) (language string, safe bool)
 
 GetLanguageByFilename returns the guessed language for the named file (and safe == true if this is very likely to be correct). 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.inventory.go" href="#init.inventory.go">func init()</a>
 
 ```
 searchKey: inventory.init
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +381,7 @@ func init()
 
 ```
 searchKey: inventory.preferLanguage
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +394,7 @@ preferLanguage updates LanguagesByExtension to have lang listed first for ext.
 
 ```
 searchKey: inventory.TestContext_Entries
+tags: [private]
 ```
 
 ```Go
@@ -375,6 +405,7 @@ func TestContext_Entries(t *testing.T)
 
 ```
 searchKey: inventory.TestGetLang_language
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +416,7 @@ func TestGetLang_language(t *testing.T)
 
 ```
 searchKey: inventory.makeFileReader
+tags: [private]
 ```
 
 ```Go
@@ -395,6 +427,7 @@ func makeFileReader(ctx context.Context, path, contents string) func(context.Con
 
 ```
 searchKey: inventory.TestGet_readFile
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +438,7 @@ func TestGet_readFile(t *testing.T)
 
 ```
 searchKey: inventory.BenchmarkGetLang
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +449,7 @@ func BenchmarkGetLang(b *testing.B)
 
 ```
 searchKey: inventory.BenchmarkIsVendor
+tags: [private]
 ```
 
 ```Go
@@ -425,6 +460,7 @@ func BenchmarkIsVendor(b *testing.B)
 
 ```
 searchKey: inventory.newFileReader
+tags: [private]
 ```
 
 ```Go
@@ -435,6 +471,7 @@ func newFileReader(files []fs.FileInfo) func(_ context.Context, path string) (io
 
 ```
 searchKey: inventory.readFileTree
+tags: [private]
 ```
 
 ```Go
@@ -445,6 +482,7 @@ func readFileTree(name string) ([]fs.FileInfo, error)
 
 ```
 searchKey: inventory.fakeContents
+tags: [private]
 ```
 
 ```Go

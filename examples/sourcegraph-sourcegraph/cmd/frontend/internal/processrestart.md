@@ -14,10 +14,15 @@ Package processrestart provides utilities for restarting all Sourcegraph process
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="usingGoremanServer" href="#usingGoremanServer">var usingGoremanServer</a>
 
 ```
 searchKey: processrestart.usingGoremanServer
+tags: [private]
 ```
 
 ```Go
@@ -28,10 +33,15 @@ usingGoremanServer is whether we are running goreman in cmd/server.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="restartGoremanServer" href="#restartGoremanServer">func restartGoremanServer() error</a>
 
 ```
 searchKey: processrestart.restartGoremanServer
+tags: [private]
 ```
 
 ```Go
@@ -44,7 +54,6 @@ restartGoremanServer restarts the processes when running goreman in cmd/server. 
 
 ```
 searchKey: processrestart.CanRestart
-tags: [exported]
 ```
 
 ```Go
@@ -57,7 +66,6 @@ CanRestart reports whether the current set of Sourcegraph processes can be resta
 
 ```
 searchKey: processrestart.Restart
-tags: [exported]
 ```
 
 ```Go

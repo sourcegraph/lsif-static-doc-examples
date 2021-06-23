@@ -4,7 +4,9 @@
     "identifier": "syscall_test",
     "newPage": true,
     "searchKey": "syscall_test",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "MNT_WAIT",
                 "newPage": false,
                 "searchKey": "syscall_test.MNT_WAIT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "MNT_NOWAIT",
                 "newPage": false,
                 "searchKey": "syscall_test.MNT_NOWAIT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "command",
                 "newPage": false,
                 "searchKey": "syscall_test.command",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -119,7 +131,9 @@
                       "identifier": "create",
                       "newPage": false,
                       "searchKey": "syscall_test.create",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -139,7 +153,9 @@
                       "identifier": "command.Info",
                       "newPage": false,
                       "searchKey": "syscall_test.command.Info",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -159,7 +175,9 @@
                       "identifier": "command.Start",
                       "newPage": false,
                       "searchKey": "syscall_test.command.Start",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -179,7 +197,9 @@
                       "identifier": "command.Stop",
                       "newPage": false,
                       "searchKey": "syscall_test.command.Stop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -205,7 +225,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -223,7 +245,9 @@
                 "identifier": "TestDirent",
                 "newPage": false,
                 "searchKey": "syscall_test.TestDirent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -243,7 +267,9 @@
                 "identifier": "TestDirentRepeat",
                 "newPage": false,
                 "searchKey": "syscall_test.TestDirentRepeat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -263,7 +289,9 @@
                 "identifier": "parent",
                 "newPage": false,
                 "searchKey": "syscall_test.parent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -283,7 +311,9 @@
                 "identifier": "TestZeroSysProcAttr",
                 "newPage": false,
                 "searchKey": "syscall_test.TestZeroSysProcAttr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -303,7 +333,9 @@
                 "identifier": "TestSetpgid",
                 "newPage": false,
                 "searchKey": "syscall_test.TestSetpgid",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -323,7 +355,9 @@
                 "identifier": "TestPgid",
                 "newPage": false,
                 "searchKey": "syscall_test.TestPgid",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -343,7 +377,9 @@
                 "identifier": "TestForeground",
                 "newPage": false,
                 "searchKey": "syscall_test.TestForeground",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -363,7 +399,9 @@
                 "identifier": "TestForegroundSignal",
                 "newPage": false,
                 "searchKey": "syscall_test.TestForegroundSignal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -383,7 +421,9 @@
                 "identifier": "TestInvalidExec",
                 "newPage": false,
                 "searchKey": "syscall_test.TestInvalidExec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -403,7 +443,9 @@
                 "identifier": "TestExec",
                 "newPage": false,
                 "searchKey": "syscall_test.TestExec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -423,7 +465,9 @@
                 "identifier": "TestExecHelper",
                 "newPage": false,
                 "searchKey": "syscall_test.TestExecHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -443,7 +487,9 @@
                 "identifier": "TestGetdirentries",
                 "newPage": false,
                 "searchKey": "syscall_test.TestGetdirentries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -463,7 +509,9 @@
                 "identifier": "testGetdirentries",
                 "newPage": false,
                 "searchKey": "syscall_test.testGetdirentries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -483,7 +531,9 @@
                 "identifier": "TestMmap",
                 "newPage": false,
                 "searchKey": "syscall_test.TestMmap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -503,7 +553,9 @@
                 "identifier": "TestGetfsstat",
                 "newPage": false,
                 "searchKey": "syscall_test.TestGetfsstat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -523,7 +575,9 @@
                 "identifier": "TestExecPtrace",
                 "newPage": false,
                 "searchKey": "syscall_test.TestExecPtrace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -543,7 +597,9 @@
                 "identifier": "testSetGetenv",
                 "newPage": false,
                 "searchKey": "syscall_test.testSetGetenv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -563,7 +619,9 @@
                 "identifier": "TestEnv",
                 "newPage": false,
                 "searchKey": "syscall_test.TestEnv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -583,7 +641,9 @@
                 "identifier": "TestExecErrPermutedFds",
                 "newPage": false,
                 "searchKey": "syscall_test.TestExecErrPermutedFds",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -603,7 +663,9 @@
                 "identifier": "TestGettimeofday",
                 "newPage": false,
                 "searchKey": "syscall_test.TestGettimeofday",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -618,32 +680,14 @@
           },
           {
             "node": {
-              "pathID": "/syscall_test#_",
-              "documentation": {
-                "identifier": "_",
-                "newPage": false,
-                "searchKey": "syscall_test._",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func _()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc _()\n```\n\nTests that below functions, structures and constants are consistent on all Unix-like systems. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/syscall_test#TestFcntlFlock",
               "documentation": {
                 "identifier": "TestFcntlFlock",
                 "newPage": false,
                 "searchKey": "syscall_test.TestFcntlFlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -663,7 +707,9 @@
                 "identifier": "TestPassFD",
                 "newPage": false,
                 "searchKey": "syscall_test.TestPassFD",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -683,7 +729,9 @@
                 "identifier": "passFDChild",
                 "newPage": false,
                 "searchKey": "syscall_test.passFDChild",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -703,7 +751,9 @@
                 "identifier": "TestUnixRightsRoundtrip",
                 "newPage": false,
                 "searchKey": "syscall_test.TestUnixRightsRoundtrip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -723,7 +773,9 @@
                 "identifier": "TestRlimit",
                 "newPage": false,
                 "searchKey": "syscall_test.TestRlimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -743,7 +795,9 @@
                 "identifier": "TestSeekFailure",
                 "newPage": false,
                 "searchKey": "syscall_test.TestSeekFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -763,7 +817,9 @@
                 "identifier": "TestSetsockoptString",
                 "newPage": false,
                 "searchKey": "syscall_test.TestSetsockoptString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -783,7 +839,9 @@
                 "identifier": "TestENFILETemporary",
                 "newPage": false,
                 "searchKey": "syscall_test.TestENFILETemporary",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

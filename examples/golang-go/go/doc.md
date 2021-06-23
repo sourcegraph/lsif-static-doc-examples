@@ -180,14 +180,11 @@ Package doc extracts source code documentation from a Go AST.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ldquo" href="#ldquo">const ldquo</a>
 
 ```
 searchKey: doc.ldquo
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +195,7 @@ const ldquo = "&ldquo;"
 
 ```
 searchKey: doc.rdquo
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +206,7 @@ const rdquo = "&rdquo;"
 
 ```
 searchKey: doc.ulquo
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +217,7 @@ const ulquo = "“"
 
 ```
 searchKey: doc.urquo
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +228,7 @@ const urquo = "”"
 
 ```
 searchKey: doc.identRx
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +241,7 @@ Regexp for Go identifiers
 
 ```
 searchKey: doc.protoPart
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +254,7 @@ protocol (required) e.g. http
 
 ```
 searchKey: doc.hostPart
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +267,7 @@ host (required) e.g. www.example.com or [::1]:8080
 
 ```
 searchKey: doc.pathPart
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +280,7 @@ path+query+fragment (optional) e.g. /path/index.html?q=foo#bar
 
 ```
 searchKey: doc.urlRx
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +291,7 @@ const urlRx = protoPart + `://` + hostPart + pathPart
 
 ```
 searchKey: doc.opPara
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +302,7 @@ const opPara op = iota
 
 ```
 searchKey: doc.opHead
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +313,7 @@ const opHead
 
 ```
 searchKey: doc.opPre
+tags: [private]
 ```
 
 ```Go
@@ -316,7 +324,6 @@ const opPre
 
 ```
 searchKey: doc.AllDecls
-tags: [exported]
 ```
 
 ```Go
@@ -329,7 +336,6 @@ AllDecls says to extract documentation for all package-level declarations, not j
 
 ```
 searchKey: doc.AllMethods
-tags: [exported]
 ```
 
 ```Go
@@ -342,7 +348,6 @@ AllMethods says to show all embedded methods, not just the ones of invisible (un
 
 ```
 searchKey: doc.PreserveAST
-tags: [exported]
 ```
 
 ```Go
@@ -355,6 +360,7 @@ PreserveAST says to leave the AST unmodified. Originally, pieces of the AST such
 
 ```
 searchKey: doc.keepNL
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +371,7 @@ const keepNL = 1 << iota
 
 ```
 searchKey: doc.dataDir
+tags: [private]
 ```
 
 ```Go
@@ -373,14 +380,11 @@ const dataDir = "testdata"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="htmlQuoteReplacer" href="#htmlQuoteReplacer">var htmlQuoteReplacer</a>
 
 ```
 searchKey: doc.htmlQuoteReplacer
+tags: [private]
 ```
 
 ```Go
@@ -391,6 +395,7 @@ var htmlQuoteReplacer = strings.NewReplacer(ulquo, ldquo, urquo, rdquo)
 
 ```
 searchKey: doc.unicodeQuoteReplacer
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +406,7 @@ var unicodeQuoteReplacer = strings.NewReplacer("``", ulquo, "''", urquo)
 
 ```
 searchKey: doc.matchRx
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +417,7 @@ var matchRx = lazyregexp.New(`(` + urlRx + `)|(` + identRx + `)`)
 
 ```
 searchKey: doc.html_a
+tags: [private]
 ```
 
 ```Go
@@ -421,6 +428,7 @@ var html_a = []byte(`<a href="`)
 
 ```
 searchKey: doc.html_aq
+tags: [private]
 ```
 
 ```Go
@@ -431,6 +439,7 @@ var html_aq = []byte(`">`)
 
 ```
 searchKey: doc.html_enda
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +450,7 @@ var html_enda = []byte("</a>")
 
 ```
 searchKey: doc.html_i
+tags: [private]
 ```
 
 ```Go
@@ -451,6 +461,7 @@ var html_i = []byte("<i>")
 
 ```
 searchKey: doc.html_endi
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +472,7 @@ var html_endi = []byte("</i>")
 
 ```
 searchKey: doc.html_p
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +483,7 @@ var html_p = []byte("<p>\n")
 
 ```
 searchKey: doc.html_endp
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +494,7 @@ var html_endp = []byte("</p>\n")
 
 ```
 searchKey: doc.html_pre
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +505,7 @@ var html_pre = []byte("<pre>")
 
 ```
 searchKey: doc.html_endpre
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +516,7 @@ var html_endpre = []byte("</pre>\n")
 
 ```
 searchKey: doc.html_h
+tags: [private]
 ```
 
 ```Go
@@ -511,6 +527,7 @@ var html_h = []byte(`<h3 id="`)
 
 ```
 searchKey: doc.html_hq
+tags: [private]
 ```
 
 ```Go
@@ -521,6 +538,7 @@ var html_hq = []byte(`">`)
 
 ```
 searchKey: doc.html_endh
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +549,7 @@ var html_endh = []byte("</h3>\n")
 
 ```
 searchKey: doc.nonAlphaNumRx
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +560,7 @@ var nonAlphaNumRx = lazyregexp.New(`[^a-zA-Z0-9]`)
 
 ```
 searchKey: doc.nl
+tags: [private]
 ```
 
 ```Go
@@ -551,6 +571,7 @@ var nl = []byte("\n")
 
 ```
 searchKey: doc.space
+tags: [private]
 ```
 
 ```Go
@@ -561,6 +582,7 @@ var space = []byte(" ")
 
 ```
 searchKey: doc.prefix
+tags: [private]
 ```
 
 ```Go
@@ -571,6 +593,7 @@ var prefix = []byte("// ")
 
 ```
 searchKey: doc.outputPrefix
+tags: [private]
 ```
 
 ```Go
@@ -581,6 +604,7 @@ var outputPrefix = lazyregexp.New(`(?i)^[[:space:]]*(unordered )?output:`)
 
 ```
 searchKey: doc.underscore
+tags: [private]
 ```
 
 ```Go
@@ -591,6 +615,7 @@ var underscore = ast.NewIdent("_")
 
 ```
 searchKey: doc.noteMarker
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +627,7 @@ var noteMarker // MARKER(uid), MARKER at least 2 chars, uid at least 1 char
 
 ```
 searchKey: doc.noteMarkerRx
+tags: [private]
 ```
 
 ```Go
@@ -613,6 +639,7 @@ var noteMarkerRx = lazyregexp.New(`^[ \t]*` + noteMarker) // MARKER(uid) at text
 
 ```
 searchKey: doc.noteCommentRx
+tags: [private]
 ```
 
 ```Go
@@ -624,6 +651,7 @@ var noteCommentRx = lazyregexp.New(`^/[/*][ \t]*` + noteMarker) // MARKER(uid) a
 
 ```
 searchKey: doc.predeclaredTypes
+tags: [private]
 ```
 
 ```Go
@@ -634,6 +662,7 @@ var predeclaredTypes = ...
 
 ```
 searchKey: doc.predeclaredFuncs
+tags: [private]
 ```
 
 ```Go
@@ -644,6 +673,7 @@ var predeclaredFuncs = ...
 
 ```
 searchKey: doc.predeclaredConstants
+tags: [private]
 ```
 
 ```Go
@@ -654,7 +684,6 @@ var predeclaredConstants = ...
 
 ```
 searchKey: doc.IllegalPrefixes
-tags: [exported]
 ```
 
 ```Go
@@ -669,6 +698,7 @@ var IllegalPrefixes = []string{
 
 ```
 searchKey: doc.headingTests
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +709,7 @@ var headingTests = ...
 
 ```
 searchKey: doc.blocksTests
+tags: [private]
 ```
 
 ```Go
@@ -689,6 +720,7 @@ var blocksTests = ...
 
 ```
 searchKey: doc.emphasizeTests
+tags: [private]
 ```
 
 ```Go
@@ -699,6 +731,7 @@ var emphasizeTests = ...
 
 ```
 searchKey: doc.update
+tags: [private]
 ```
 
 ```Go
@@ -709,6 +742,7 @@ var update = flag.Bool("update", false, "update golden (.out) files")
 
 ```
 searchKey: doc.files
+tags: [private]
 ```
 
 ```Go
@@ -719,6 +753,7 @@ var files = flag.String("files", "", "consider only Go test files matching this 
 
 ```
 searchKey: doc.templateTxt
+tags: [private]
 ```
 
 ```Go
@@ -729,6 +764,7 @@ var templateTxt = readTemplate("template.txt")
 
 ```
 searchKey: doc.tests
+tags: [private]
 ```
 
 ```Go
@@ -737,14 +773,11 @@ var tests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="op" href="#op">type op int</a>
 
 ```
 searchKey: doc.op
+tags: [private]
 ```
 
 ```Go
@@ -755,6 +788,7 @@ type op int
 
 ```
 searchKey: doc.block
+tags: [private]
 ```
 
 ```Go
@@ -768,6 +802,7 @@ type block struct {
 
 ```
 searchKey: doc.lineWrapper
+tags: [private]
 ```
 
 ```Go
@@ -785,6 +820,7 @@ type lineWrapper struct {
 
 ```
 searchKey: doc.lineWrapper.write
+tags: [private]
 ```
 
 ```Go
@@ -795,6 +831,7 @@ func (l *lineWrapper) write(text string)
 
 ```
 searchKey: doc.lineWrapper.flush
+tags: [private]
 ```
 
 ```Go
@@ -805,7 +842,6 @@ func (l *lineWrapper) flush()
 
 ```
 searchKey: doc.Package
-tags: [exported]
 ```
 
 ```Go
@@ -840,7 +876,6 @@ Package is the documentation for an entire package.
 
 ```
 searchKey: doc.New
-tags: [exported]
 ```
 
 ```Go
@@ -853,7 +888,6 @@ New computes the package documentation for the given package AST. New takes owne
 
 ```
 searchKey: doc.NewFromFiles
-tags: [exported]
 ```
 
 ```Go
@@ -874,7 +908,6 @@ NewFromFiles takes ownership of the AST files and may edit them, unless the Pres
 
 ```
 searchKey: doc.Package.Filter
-tags: [exported]
 ```
 
 ```Go
@@ -887,7 +920,6 @@ Filter eliminates documentation for names that don't pass through the filter f. 
 
 ```
 searchKey: doc.Value
-tags: [exported]
 ```
 
 ```Go
@@ -906,7 +938,6 @@ Value is the documentation for a (possibly grouped) var or const declaration.
 
 ```
 searchKey: doc.Type
-tags: [exported]
 ```
 
 ```Go
@@ -934,7 +965,6 @@ Type is the documentation for a type declaration.
 
 ```
 searchKey: doc.Func
-tags: [exported]
 ```
 
 ```Go
@@ -962,6 +992,7 @@ Func is the documentation for a func declaration.
 
 ```
 searchKey: doc.customizeRecv
+tags: [private]
 ```
 
 ```Go
@@ -972,7 +1003,6 @@ func customizeRecv(f *Func, recvTypeName string, embeddedIsPtr bool, level int) 
 
 ```
 searchKey: doc.Note
-tags: [exported]
 ```
 
 ```Go
@@ -989,7 +1019,6 @@ A Note represents a marked comment starting with "MARKER(uid): note body". Any n
 
 ```
 searchKey: doc.Mode
-tags: [exported]
 ```
 
 ```Go
@@ -1002,7 +1031,6 @@ Mode values control the operation of New and NewFromFiles.
 
 ```
 searchKey: doc.Example
-tags: [exported]
 ```
 
 ```Go
@@ -1026,7 +1054,6 @@ An Example represents an example function found in a test source file.
 
 ```
 searchKey: doc.Filter
-tags: [exported]
 ```
 
 ```Go
@@ -1037,6 +1064,7 @@ type Filter func(string) bool
 
 ```
 searchKey: doc.methodSet
+tags: [private]
 ```
 
 ```Go
@@ -1049,6 +1077,7 @@ A methodSet describes a set of methods. Entries where Decl == nil are conflict e
 
 ```
 searchKey: doc.methodSet.set
+tags: [private]
 ```
 
 ```Go
@@ -1061,6 +1090,7 @@ set creates the corresponding Func for f and adds it to mset. If there are multi
 
 ```
 searchKey: doc.methodSet.add
+tags: [private]
 ```
 
 ```Go
@@ -1073,6 +1103,7 @@ add adds method m to the method set; m is ignored if the method set already cont
 
 ```
 searchKey: doc.embeddedSet
+tags: [private]
 ```
 
 ```Go
@@ -1085,6 +1116,7 @@ An embeddedSet describes a set of embedded types.
 
 ```
 searchKey: doc.namedType
+tags: [private]
 ```
 
 ```Go
@@ -1110,6 +1142,7 @@ A namedType represents a named unqualified (package local, or possibly predeclar
 
 ```
 searchKey: doc.reader
+tags: [private]
 ```
 
 ```Go
@@ -1141,6 +1174,7 @@ reader accumulates documentation for a single package. It modifies the AST: Comm
 
 ```
 searchKey: doc.reader.filterFieldList
+tags: [private]
 ```
 
 ```Go
@@ -1153,6 +1187,7 @@ filterFieldList removes unexported fields (field names) from the field list in p
 
 ```
 searchKey: doc.reader.filterParamList
+tags: [private]
 ```
 
 ```Go
@@ -1165,6 +1200,7 @@ filterParamList applies filterType to each parameter type in fields.
 
 ```
 searchKey: doc.reader.filterType
+tags: [private]
 ```
 
 ```Go
@@ -1177,6 +1213,7 @@ filterType strips any unexported struct fields or method types from typ in place
 
 ```
 searchKey: doc.reader.filterSpec
+tags: [private]
 ```
 
 ```Go
@@ -1187,6 +1224,7 @@ func (r *reader) filterSpec(spec ast.Spec) bool
 
 ```
 searchKey: doc.reader.filterSpecList
+tags: [private]
 ```
 
 ```Go
@@ -1197,6 +1235,7 @@ func (r *reader) filterSpecList(list []ast.Spec, tok token.Token) []ast.Spec
 
 ```
 searchKey: doc.reader.filterDecl
+tags: [private]
 ```
 
 ```Go
@@ -1207,6 +1246,7 @@ func (r *reader) filterDecl(decl ast.Decl) bool
 
 ```
 searchKey: doc.reader.fileExports
+tags: [private]
 ```
 
 ```Go
@@ -1219,6 +1259,7 @@ fileExports removes unexported declarations from src in place.
 
 ```
 searchKey: doc.reader.isVisible
+tags: [private]
 ```
 
 ```Go
@@ -1229,6 +1270,7 @@ func (r *reader) isVisible(name string) bool
 
 ```
 searchKey: doc.reader.lookupType
+tags: [private]
 ```
 
 ```Go
@@ -1241,6 +1283,7 @@ lookupType returns the base type with the given name. If the base type has not b
 
 ```
 searchKey: doc.reader.recordAnonymousField
+tags: [private]
 ```
 
 ```Go
@@ -1253,6 +1296,7 @@ recordAnonymousField registers fieldType as the type of an anonymous field in th
 
 ```
 searchKey: doc.reader.readDoc
+tags: [private]
 ```
 
 ```Go
@@ -1263,6 +1307,7 @@ func (r *reader) readDoc(comment *ast.CommentGroup)
 
 ```
 searchKey: doc.reader.remember
+tags: [private]
 ```
 
 ```Go
@@ -1273,6 +1318,7 @@ func (r *reader) remember(typ *ast.InterfaceType)
 
 ```
 searchKey: doc.reader.readValue
+tags: [private]
 ```
 
 ```Go
@@ -1285,6 +1331,7 @@ readValue processes a const or var declaration.
 
 ```
 searchKey: doc.reader.readType
+tags: [private]
 ```
 
 ```Go
@@ -1297,6 +1344,7 @@ readType processes a type declaration.
 
 ```
 searchKey: doc.reader.isPredeclared
+tags: [private]
 ```
 
 ```Go
@@ -1309,6 +1357,7 @@ isPredeclared reports whether n denotes a predeclared type.
 
 ```
 searchKey: doc.reader.readFunc
+tags: [private]
 ```
 
 ```Go
@@ -1321,6 +1370,7 @@ readFunc processes a func or method declaration.
 
 ```
 searchKey: doc.reader.readNote
+tags: [private]
 ```
 
 ```Go
@@ -1333,6 +1383,7 @@ readNote collects a single note from a sequence of comments.
 
 ```
 searchKey: doc.reader.readNotes
+tags: [private]
 ```
 
 ```Go
@@ -1345,6 +1396,7 @@ readNotes extracts notes from comments. A note must start at the beginning of a 
 
 ```
 searchKey: doc.reader.readFile
+tags: [private]
 ```
 
 ```Go
@@ -1357,6 +1409,7 @@ readFile adds the AST for a source file to the reader.
 
 ```
 searchKey: doc.reader.readPackage
+tags: [private]
 ```
 
 ```Go
@@ -1367,6 +1420,7 @@ func (r *reader) readPackage(pkg *ast.Package, mode Mode)
 
 ```
 searchKey: doc.reader.collectEmbeddedMethods
+tags: [private]
 ```
 
 ```Go
@@ -1379,6 +1433,7 @@ collectEmbeddedMethods collects the embedded methods of typ in mset.
 
 ```
 searchKey: doc.reader.computeMethodSets
+tags: [private]
 ```
 
 ```Go
@@ -1391,6 +1446,7 @@ computeMethodSets determines the actual method sets for each type encountered.
 
 ```
 searchKey: doc.reader.cleanupTypes
+tags: [private]
 ```
 
 ```Go
@@ -1403,6 +1459,7 @@ cleanupTypes removes the association of functions and methods with types that ha
 
 ```
 searchKey: doc.data
+tags: [private]
 ```
 
 ```Go
@@ -1417,6 +1474,7 @@ type data struct {
 
 ```
 searchKey: doc.data.Len
+tags: [private]
 ```
 
 ```Go
@@ -1427,6 +1485,7 @@ func (d *data) Len() int
 
 ```
 searchKey: doc.data.Swap
+tags: [private]
 ```
 
 ```Go
@@ -1437,6 +1496,7 @@ func (d *data) Swap(i, j int)
 
 ```
 searchKey: doc.data.Less
+tags: [private]
 ```
 
 ```Go
@@ -1447,6 +1507,7 @@ func (d *data) Less(i, j int) bool
 
 ```
 searchKey: doc.bundle
+tags: [private]
 ```
 
 ```Go
@@ -1458,14 +1519,11 @@ type bundle struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="commentEscape" href="#commentEscape">func commentEscape(w io.Writer, text string, nice bool)</a>
 
 ```
 searchKey: doc.commentEscape
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1536,7 @@ Escape comment text for HTML. If nice is set, also turn ` into &ldquo; and ' int
 
 ```
 searchKey: doc.convertQuotes
+tags: [private]
 ```
 
 ```Go
@@ -1488,6 +1547,7 @@ func convertQuotes(text string) string
 
 ```
 searchKey: doc.emphasize
+tags: [private]
 ```
 
 ```Go
@@ -1500,6 +1560,7 @@ Emphasize and escape a line of text for HTML. URLs are converted into links; if 
 
 ```
 searchKey: doc.indentLen
+tags: [private]
 ```
 
 ```Go
@@ -1510,6 +1571,7 @@ func indentLen(s string) int
 
 ```
 searchKey: doc.isBlank
+tags: [private]
 ```
 
 ```Go
@@ -1520,6 +1582,7 @@ func isBlank(s string) bool
 
 ```
 searchKey: doc.commonPrefix
+tags: [private]
 ```
 
 ```Go
@@ -1530,6 +1593,7 @@ func commonPrefix(a, b string) string
 
 ```
 searchKey: doc.unindent
+tags: [private]
 ```
 
 ```Go
@@ -1540,6 +1604,7 @@ func unindent(block []string)
 
 ```
 searchKey: doc.heading
+tags: [private]
 ```
 
 ```Go
@@ -1552,6 +1617,7 @@ heading returns the trimmed line if it passes as a section heading; otherwise it
 
 ```
 searchKey: doc.anchorID
+tags: [private]
 ```
 
 ```Go
@@ -1562,7 +1628,6 @@ func anchorID(line string) string
 
 ```
 searchKey: doc.ToHTML
-tags: [exported]
 ```
 
 ```Go
@@ -1585,6 +1650,7 @@ Go identifiers that appear in the words map are italicized; if the corresponding
 
 ```
 searchKey: doc.blocks
+tags: [private]
 ```
 
 ```Go
@@ -1595,7 +1661,6 @@ func blocks(text string) []block
 
 ```
 searchKey: doc.ToText
-tags: [exported]
 ```
 
 ```Go
@@ -1610,6 +1675,7 @@ A pair of (consecutive) backticks (`) is converted to a unicode left quote (“)
 
 ```
 searchKey: doc.simpleImporter
+tags: [private]
 ```
 
 ```Go
@@ -1622,7 +1688,6 @@ simpleImporter returns a (dummy) package object named by the last path component
 
 ```
 searchKey: doc.Examples
-tags: [exported]
 ```
 
 ```Go
@@ -1647,6 +1712,7 @@ Playable Examples must be in a package whose name ends in "_test". An Example is
 
 ```
 searchKey: doc.exampleOutput
+tags: [private]
 ```
 
 ```Go
@@ -1659,6 +1725,7 @@ Extracts the expected output and whether there was a valid output comment
 
 ```
 searchKey: doc.isTest
+tags: [private]
 ```
 
 ```Go
@@ -1671,6 +1738,7 @@ isTest tells whether name looks like a test, example, or benchmark. It is a Test
 
 ```
 searchKey: doc.playExample
+tags: [private]
 ```
 
 ```Go
@@ -1683,6 +1751,7 @@ playExample synthesizes a new *ast.File based on the provided file with the prov
 
 ```
 searchKey: doc.playExampleFile
+tags: [private]
 ```
 
 ```Go
@@ -1695,6 +1764,7 @@ playExampleFile takes a whole file example and synthesizes a new *ast.File such 
 
 ```
 searchKey: doc.stripOutputComment
+tags: [private]
 ```
 
 ```Go
@@ -1707,6 +1777,7 @@ stripOutputComment finds and removes the "Output:" or "Unordered output:" commen
 
 ```
 searchKey: doc.lastComment
+tags: [private]
 ```
 
 ```Go
@@ -1719,6 +1790,7 @@ lastComment returns the last comment inside the provided block.
 
 ```
 searchKey: doc.classifyExamples
+tags: [private]
 ```
 
 ```Go
@@ -1742,6 +1814,7 @@ Examples with malformed names are not associated with anything.
 
 ```
 searchKey: doc.splitExampleName
+tags: [private]
 ```
 
 ```Go
@@ -1756,6 +1829,7 @@ One of i == len(s) or s[i] == '_' must be true.
 
 ```
 searchKey: doc.isExampleSuffix
+tags: [private]
 ```
 
 ```Go
@@ -1766,6 +1840,7 @@ func isExampleSuffix(s string) bool
 
 ```
 searchKey: doc.filterIdentList
+tags: [private]
 ```
 
 ```Go
@@ -1778,6 +1853,7 @@ filterIdentList removes unexported names from list in place and returns the resu
 
 ```
 searchKey: doc.filterCompositeLit
+tags: [private]
 ```
 
 ```Go
@@ -1788,6 +1864,7 @@ func filterCompositeLit(lit *ast.CompositeLit, filter Filter, export bool)
 
 ```
 searchKey: doc.filterExprList
+tags: [private]
 ```
 
 ```Go
@@ -1798,6 +1875,7 @@ func filterExprList(list []ast.Expr, filter Filter, export bool) []ast.Expr
 
 ```
 searchKey: doc.updateIdentList
+tags: [private]
 ```
 
 ```Go
@@ -1810,6 +1888,7 @@ updateIdentList replaces all unexported identifiers with underscore and reports 
 
 ```
 searchKey: doc.hasExportedName
+tags: [private]
 ```
 
 ```Go
@@ -1822,6 +1901,7 @@ hasExportedName reports whether list contains any exported names.
 
 ```
 searchKey: doc.removeErrorField
+tags: [private]
 ```
 
 ```Go
@@ -1834,6 +1914,7 @@ removeErrorField removes anonymous fields named "error" from an interface. This 
 
 ```
 searchKey: doc.copyConstType
+tags: [private]
 ```
 
 ```Go
@@ -1846,6 +1927,7 @@ copyConstType returns a copy of typ with position pos. typ must be a valid const
 
 ```
 searchKey: doc.matchFields
+tags: [private]
 ```
 
 ```Go
@@ -1856,6 +1938,7 @@ func matchFields(fields *ast.FieldList, f Filter) bool
 
 ```
 searchKey: doc.matchDecl
+tags: [private]
 ```
 
 ```Go
@@ -1866,6 +1949,7 @@ func matchDecl(d *ast.GenDecl, f Filter) bool
 
 ```
 searchKey: doc.filterValues
+tags: [private]
 ```
 
 ```Go
@@ -1876,6 +1960,7 @@ func filterValues(a []*Value, f Filter) []*Value
 
 ```
 searchKey: doc.filterFuncs
+tags: [private]
 ```
 
 ```Go
@@ -1886,6 +1971,7 @@ func filterFuncs(a []*Func, f Filter) []*Func
 
 ```
 searchKey: doc.filterTypes
+tags: [private]
 ```
 
 ```Go
@@ -1896,6 +1982,7 @@ func filterTypes(a []*Type, f Filter) []*Type
 
 ```
 searchKey: doc.recvString
+tags: [private]
 ```
 
 ```Go
@@ -1908,6 +1995,7 @@ recvString returns a string representation of recv of the form "T", "*T", or "BA
 
 ```
 searchKey: doc.baseTypeName
+tags: [private]
 ```
 
 ```Go
@@ -1920,6 +2008,7 @@ baseTypeName returns the name of the base type of x (or "") and whether the type
 
 ```
 searchKey: doc.specNames
+tags: [private]
 ```
 
 ```Go
@@ -1930,6 +2019,7 @@ func specNames(specs []ast.Spec) []string
 
 ```
 searchKey: doc.fields
+tags: [private]
 ```
 
 ```Go
@@ -1942,6 +2032,7 @@ fields returns a struct's fields or an interface's methods.
 
 ```
 searchKey: doc.sortBy
+tags: [private]
 ```
 
 ```Go
@@ -1954,6 +2045,7 @@ sortBy is a helper function for sorting
 
 ```
 searchKey: doc.sortedKeys
+tags: [private]
 ```
 
 ```Go
@@ -1964,6 +2056,7 @@ func sortedKeys(m map[string]int) []string
 
 ```
 searchKey: doc.sortingName
+tags: [private]
 ```
 
 ```Go
@@ -1976,6 +2069,7 @@ sortingName returns the name to use when sorting d into place.
 
 ```
 searchKey: doc.sortedValues
+tags: [private]
 ```
 
 ```Go
@@ -1986,6 +2080,7 @@ func sortedValues(m []*Value, tok token.Token) []*Value
 
 ```
 searchKey: doc.sortedTypes
+tags: [private]
 ```
 
 ```Go
@@ -1996,6 +2091,7 @@ func sortedTypes(m map[string]*namedType, allMethods bool) []*Type
 
 ```
 searchKey: doc.removeStar
+tags: [private]
 ```
 
 ```Go
@@ -2006,6 +2102,7 @@ func removeStar(s string) string
 
 ```
 searchKey: doc.sortedFuncs
+tags: [private]
 ```
 
 ```Go
@@ -2016,6 +2113,7 @@ func sortedFuncs(m methodSet, allMethods bool) []*Func
 
 ```
 searchKey: doc.noteBodies
+tags: [private]
 ```
 
 ```Go
@@ -2028,7 +2126,6 @@ noteBodies returns a list of note body strings given a list of notes. This is on
 
 ```
 searchKey: doc.IsPredeclared
-tags: [exported]
 ```
 
 ```Go
@@ -2041,6 +2138,7 @@ IsPredeclared reports whether s is a predeclared identifier.
 
 ```
 searchKey: doc.firstSentenceLen
+tags: [private]
 ```
 
 ```Go
@@ -2053,6 +2151,7 @@ firstSentenceLen returns the length of the first sentence in s. The sentence end
 
 ```
 searchKey: doc.clean
+tags: [private]
 ```
 
 ```Go
@@ -2065,7 +2164,6 @@ clean replaces each sequence of space, \n, \r, or \t characters with a single sp
 
 ```
 searchKey: doc.Synopsis
-tags: [exported]
 ```
 
 ```Go
@@ -2078,6 +2176,7 @@ Synopsis returns a cleaned version of the first sentence in s. That sentence end
 
 ```
 searchKey: doc.TestIsHeading
+tags: [private]
 ```
 
 ```Go
@@ -2088,6 +2187,7 @@ func TestIsHeading(t *testing.T)
 
 ```
 searchKey: doc.TestBlocks
+tags: [private]
 ```
 
 ```Go
@@ -2098,6 +2198,7 @@ func TestBlocks(t *testing.T)
 
 ```
 searchKey: doc.TestToText
+tags: [private]
 ```
 
 ```Go
@@ -2108,6 +2209,7 @@ func TestToText(t *testing.T)
 
 ```
 searchKey: doc.TestEmphasize
+tags: [private]
 ```
 
 ```Go
@@ -2118,6 +2220,7 @@ func TestEmphasize(t *testing.T)
 
 ```
 searchKey: doc.TestCommentEscape
+tags: [private]
 ```
 
 ```Go
@@ -2128,6 +2231,7 @@ func TestCommentEscape(t *testing.T)
 
 ```
 searchKey: doc.readTemplate
+tags: [private]
 ```
 
 ```Go
@@ -2138,6 +2242,7 @@ func readTemplate(filename string) *template.Template
 
 ```
 searchKey: doc.nodeFmt
+tags: [private]
 ```
 
 ```Go
@@ -2148,6 +2253,7 @@ func nodeFmt(node interface{}, fset *token.FileSet) string
 
 ```
 searchKey: doc.synopsisFmt
+tags: [private]
 ```
 
 ```Go
@@ -2158,6 +2264,7 @@ func synopsisFmt(s string) string
 
 ```
 searchKey: doc.indentFmt
+tags: [private]
 ```
 
 ```Go
@@ -2168,6 +2275,7 @@ func indentFmt(indent, s string) string
 
 ```
 searchKey: doc.isGoFile
+tags: [private]
 ```
 
 ```Go
@@ -2178,6 +2286,7 @@ func isGoFile(fi fs.FileInfo) bool
 
 ```
 searchKey: doc.test
+tags: [private]
 ```
 
 ```Go
@@ -2188,6 +2297,7 @@ func test(t *testing.T, mode Mode)
 
 ```
 searchKey: doc.Test
+tags: [private]
 ```
 
 ```Go
@@ -2198,6 +2308,7 @@ func Test(t *testing.T)
 
 ```
 searchKey: doc.TestAnchorID
+tags: [private]
 ```
 
 ```Go
@@ -2208,6 +2319,7 @@ func TestAnchorID(t *testing.T)
 
 ```
 searchKey: doc.TestSynopsis
+tags: [private]
 ```
 
 ```Go

@@ -110,7 +110,7 @@ Package backend contains structs and functions which interact with our backends,
     * [func TestCheckEmailAbuse(t *testing.T)](#TestCheckEmailAbuse)
     * [func TestSendUserEmailVerificationEmail(t *testing.T)](#TestSendUserEmailVerificationEmail)
     * [func TestSendUserEmailOnFieldUpdate(t *testing.T)](#TestSendUserEmailOnFieldUpdate)
-    * [func init()](#init)
+    * [func init()](#init.versions_test.go)
     * [func TestGetFirstServiceVersion(t *testing.T)](#TestGetFirstServiceVersion)
     * [func TestUpdateServiceVersion(t *testing.T)](#TestUpdateServiceVersion)
     * [func TestIsValidUpgrade(t *testing.T)](#TestIsValidUpgrade)
@@ -118,14 +118,11 @@ Package backend contains structs and functions which interact with our backends,
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="authzBypass" href="#authzBypass">const authzBypass</a>
 
 ```
 searchKey: backend.authzBypass
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +133,7 @@ const authzBypass contextKey = iota
 
 ```
 searchKey: backend.getFirstVersionQuery
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +144,7 @@ const getFirstVersionQuery = `SELECT first_version FROM versions WHERE service =
 
 ```
 searchKey: backend.getVersionQuery
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +155,7 @@ const getVersionQuery = `SELECT version FROM versions WHERE service = %s`
 
 ```
 searchKey: backend.upsertVersionQuery
+tags: [private]
 ```
 
 ```Go
@@ -164,15 +164,10 @@ const upsertVersionQuery = ...
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="MockCountGoImporters" href="#MockCountGoImporters">var MockCountGoImporters</a>
 
 ```
 searchKey: backend.MockCountGoImporters
-tags: [exported]
 ```
 
 ```Go
@@ -183,6 +178,7 @@ var MockCountGoImporters func(ctx context.Context, repo api.RepoName) (int, erro
 
 ```
 searchKey: backend.goImportersCountCache
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +190,7 @@ var goImportersCountCache = rcache.NewWithTTL("go-importers-count", 14400) // 4 
 
 ```
 searchKey: backend.countGoImportersHTTPClient
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +202,7 @@ var countGoImportersHTTPClient *http.Client // mockable in tests
 
 ```
 searchKey: backend.useEnhancedLanguageDetection
+tags: [private]
 ```
 
 ```Go
@@ -217,6 +215,7 @@ Feature flag for enhanced (but much slower) language detection that uses file co
 
 ```
 searchKey: backend.inventoryCache
+tags: [private]
 ```
 
 ```Go
@@ -227,7 +226,6 @@ var inventoryCache = rcache.New(fmt.Sprintf("inv:v2:enhanced_%v", useEnhancedLan
 
 ```
 searchKey: backend.Mocks
-tags: [exported]
 ```
 
 ```Go
@@ -238,7 +236,6 @@ var Mocks MockServices
 
 ```
 searchKey: backend.ErrNotAuthenticated
-tags: [exported]
 ```
 
 ```Go
@@ -249,7 +246,6 @@ var ErrNotAuthenticated = errors.New("not authenticated")
 
 ```
 searchKey: backend.ErrNotAnOrgMember
-tags: [exported]
 ```
 
 ```Go
@@ -260,7 +256,6 @@ var ErrNotAnOrgMember = errors.New("current user is not an org member")
 
 ```
 searchKey: backend.Repos
-tags: [exported]
 ```
 
 ```Go
@@ -271,6 +266,7 @@ var Repos = ...
 
 ```
 searchKey: backend.metricIsRepoCloneable
+tags: [private]
 ```
 
 ```Go
@@ -281,6 +277,7 @@ var metricIsRepoCloneable = ...
 
 ```
 searchKey: backend.errRepoNotFound
+tags: [private]
 ```
 
 ```Go
@@ -294,7 +291,6 @@ var errRepoNotFound = &errcode.Mock{
 
 ```
 searchKey: backend.ErrMustBeSiteAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -305,7 +301,6 @@ var ErrMustBeSiteAdmin = errors.New("must be site admin")
 
 ```
 searchKey: backend.Symbols
-tags: [exported]
 ```
 
 ```Go
@@ -318,6 +313,7 @@ Symbols backend.
 
 ```
 searchKey: backend.metricLabels
+tags: [private]
 ```
 
 ```Go
@@ -328,6 +324,7 @@ var metricLabels = []string{"method", "success"}
 
 ```
 searchKey: backend.requestDuration
+tags: [private]
 ```
 
 ```Go
@@ -338,6 +335,7 @@ var requestDuration = ...
 
 ```
 searchKey: backend.requestGauge
+tags: [private]
 ```
 
 ```Go
@@ -348,7 +346,6 @@ var requestGauge = ...
 
 ```
 searchKey: backend.UserEmails
-tags: [exported]
 ```
 
 ```Go
@@ -361,6 +358,7 @@ UserEmails contains backend methods related to user email addresses.
 
 ```
 searchKey: backend.verifyEmailTemplates
+tags: [private]
 ```
 
 ```Go
@@ -371,6 +369,7 @@ var verifyEmailTemplates = ...
 
 ```
 searchKey: backend.updateAccountEmailTemplate
+tags: [private]
 ```
 
 ```Go
@@ -381,7 +380,6 @@ var updateAccountEmailTemplate = ...
 
 ```
 searchKey: backend.MockMakePasswordResetURL
-tags: [exported]
 ```
 
 ```Go
@@ -390,15 +388,10 @@ var MockMakePasswordResetURL func(ctx context.Context, userID int32) (*url.URL, 
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="MockServices" href="#MockServices">type MockServices struct</a>
 
 ```
 searchKey: backend.MockServices
-tags: [exported]
 ```
 
 ```Go
@@ -411,7 +404,6 @@ type MockServices struct {
 
 ```
 searchKey: backend.ErrRepoSeeOther
-tags: [exported]
 ```
 
 ```Go
@@ -427,7 +419,6 @@ ErrRepoSeeOther indicates that the repo does not exist on this server but might 
 
 ```
 searchKey: backend.ErrRepoSeeOther.Error
-tags: [exported]
 ```
 
 ```Go
@@ -438,6 +429,7 @@ func (e ErrRepoSeeOther) Error() string
 
 ```
 searchKey: backend.repos
+tags: [private]
 ```
 
 ```Go
@@ -451,6 +443,7 @@ type repos struct {
 
 ```
 searchKey: backend.repos.Get
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +454,7 @@ func (s *repos) Get(ctx context.Context, repo api.RepoID) (_ *types.Repo, err er
 
 ```
 searchKey: backend.repos.GetByName
+tags: [private]
 ```
 
 ```Go
@@ -473,6 +467,7 @@ GetByName retrieves the repository with the given name. On sourcegraph.com, if t
 
 ```
 searchKey: backend.repos.Add
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +480,7 @@ Add adds the repository with the given name to the database by calling repo-upda
 
 ```
 searchKey: backend.repos.List
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +491,7 @@ func (s *repos) List(ctx context.Context, opt database.ReposListOptions) (repos 
 
 ```
 searchKey: backend.repos.ListIndexable
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +504,7 @@ ListIndexable calls database.DefaultRepos.List, with tracing. It lists ALL defau
 
 ```
 searchKey: backend.repos.ListDefault
+tags: [private]
 ```
 
 ```Go
@@ -519,6 +517,7 @@ ListDefault calls database.DefaultRepos.ListPublic, with tracing. It lists all p
 
 ```
 searchKey: backend.repos.GetInventory
+tags: [private]
 ```
 
 ```Go
@@ -529,6 +528,7 @@ func (s *repos) GetInventory(ctx context.Context, repo *types.Repo, commitID api
 
 ```
 searchKey: backend.repos.ResolveRev
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +541,7 @@ ResolveRev will return the absolute commit for a commit-ish spec in a repo. If n
 
 ```
 searchKey: backend.repos.GetCommit
+tags: [private]
 ```
 
 ```Go
@@ -551,7 +552,6 @@ func (s *repos) GetCommit(ctx context.Context, repo *types.Repo, commitID api.Co
 
 ```
 searchKey: backend.MockRepos
-tags: [exported]
 ```
 
 ```Go
@@ -569,7 +569,6 @@ type MockRepos struct {
 
 ```
 searchKey: backend.MockRepos.MockGet
-tags: [exported]
 ```
 
 ```Go
@@ -580,7 +579,6 @@ func (s *MockRepos) MockGet(t *testing.T, wantRepo api.RepoID) (called *bool)
 
 ```
 searchKey: backend.MockRepos.MockGetByName
-tags: [exported]
 ```
 
 ```Go
@@ -591,7 +589,6 @@ func (s *MockRepos) MockGetByName(t *testing.T, wantName api.RepoName, repo api.
 
 ```
 searchKey: backend.MockRepos.MockGet_Return
-tags: [exported]
 ```
 
 ```Go
@@ -602,7 +599,6 @@ func (s *MockRepos) MockGet_Return(t *testing.T, returns *types.Repo) (called *b
 
 ```
 searchKey: backend.MockRepos.MockList
-tags: [exported]
 ```
 
 ```Go
@@ -613,7 +609,6 @@ func (s *MockRepos) MockList(t *testing.T, wantRepos ...api.RepoName) (called *b
 
 ```
 searchKey: backend.MockRepos.MockResolveRev_NoCheck
-tags: [exported]
 ```
 
 ```Go
@@ -624,7 +619,6 @@ func (s *MockRepos) MockResolveRev_NoCheck(t *testing.T, commitID api.CommitID) 
 
 ```
 searchKey: backend.MockRepos.MockResolveRev_NotFound
-tags: [exported]
 ```
 
 ```Go
@@ -635,7 +629,6 @@ func (s *MockRepos) MockResolveRev_NotFound(t *testing.T, wantRepo api.RepoID, w
 
 ```
 searchKey: backend.MockRepos.MockGetCommit_Return_NoCheck
-tags: [exported]
 ```
 
 ```Go
@@ -646,7 +639,6 @@ func (s *MockRepos) MockGetCommit_Return_NoCheck(t *testing.T, commit *git.Commi
 
 ```
 searchKey: backend.InsufficientAuthorizationError
-tags: [exported]
 ```
 
 ```Go
@@ -661,7 +653,6 @@ InsufficientAuthorizationError is an error that occurs when the authentication i
 
 ```
 searchKey: backend.InsufficientAuthorizationError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -672,7 +663,6 @@ func (e *InsufficientAuthorizationError) Error() string
 
 ```
 searchKey: backend.InsufficientAuthorizationError.Unauthorized
-tags: [exported]
 ```
 
 ```Go
@@ -683,6 +673,7 @@ func (e *InsufficientAuthorizationError) Unauthorized() bool
 
 ```
 searchKey: backend.contextKey
+tags: [private]
 ```
 
 ```Go
@@ -693,6 +684,7 @@ type contextKey int
 
 ```
 searchKey: backend.symbols
+tags: [private]
 ```
 
 ```Go
@@ -703,6 +695,7 @@ type symbols struct{}
 
 ```
 searchKey: backend.symbols.ListTags
+tags: [private]
 ```
 
 ```Go
@@ -715,6 +708,7 @@ ListTags returns symbols in a repository from ctags.
 
 ```
 searchKey: backend.userEmails
+tags: [private]
 ```
 
 ```Go
@@ -725,6 +719,7 @@ type userEmails struct{}
 
 ```
 searchKey: backend.userEmails.Add
+tags: [private]
 ```
 
 ```Go
@@ -737,6 +732,7 @@ Add adds an email address to a user. If email verification is required, it sends
 
 ```
 searchKey: backend.userEmails.SendUserEmailOnFieldUpdate
+tags: [private]
 ```
 
 ```Go
@@ -749,7 +745,6 @@ SendUserEmailOnFieldUpdate sends the user an email that important account inform
 
 ```
 searchKey: backend.UpgradeError
-tags: [exported]
 ```
 
 ```Go
@@ -766,7 +761,6 @@ UpgradeError is returned by UpdateServiceVersion when it faces an upgrade policy
 
 ```
 searchKey: backend.UpgradeError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -779,6 +773,7 @@ Error implements the error interface.
 
 ```
 searchKey: backend.mockRoundTripper
+tags: [private]
 ```
 
 ```Go
@@ -791,6 +786,7 @@ type mockRoundTripper struct {
 
 ```
 searchKey: backend.mockRoundTripper.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +797,7 @@ func (t mockRoundTripper) RoundTrip(req *http.Request) (*http.Response, error)
 
 ```
 searchKey: backend.gitObjectInfo
+tags: [private]
 ```
 
 ```Go
@@ -811,6 +808,7 @@ type gitObjectInfo string
 
 ```
 searchKey: backend.gitObjectInfo.OID
+tags: [private]
 ```
 
 ```Go
@@ -819,15 +817,10 @@ func (oid gitObjectInfo) OID() git.OID
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="CountGoImporters" href="#CountGoImporters">func CountGoImporters(ctx context.Context, repo api.RepoName) (count int, err error)</a>
 
 ```
 searchKey: backend.CountGoImporters
-tags: [exported]
 ```
 
 ```Go
@@ -842,6 +835,7 @@ TODO: The import path is not always the same as the repository name.
 
 ```
 searchKey: backend.listGoPackagesInRepoImprecise
+tags: [private]
 ```
 
 ```Go
@@ -854,6 +848,7 @@ listGoPackagesInRepoImprecise returns a list of import paths for all (probable) 
 
 ```
 searchKey: backend.isPossibleExternallyImportableGoPackageDir
+tags: [private]
 ```
 
 ```Go
@@ -864,7 +859,6 @@ func isPossibleExternallyImportableGoPackageDir(dirPath string) bool
 
 ```
 searchKey: backend.InventoryContext
-tags: [exported]
 ```
 
 ```Go
@@ -877,6 +871,7 @@ InventoryContext returns the inventory context for computing the inventory for t
 
 ```
 searchKey: backend.testContext
+tags: [private]
 ```
 
 ```Go
@@ -889,7 +884,6 @@ testContext creates a new context.Context for use by tests
 
 ```
 searchKey: backend.CheckOrgAccessOrSiteAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -904,7 +898,6 @@ It is used when an action on a user can be performed by site admins and the orga
 
 ```
 searchKey: backend.CheckOrgAccess
-tags: [exported]
 ```
 
 ```Go
@@ -919,6 +912,7 @@ It is used when an action on a user can be performed by the organization's membe
 
 ```
 searchKey: backend.checkOrgAccess
+tags: [private]
 ```
 
 ```Go
@@ -931,6 +925,7 @@ checkOrgAccess is a helper method used above which allows optionally allowing si
 
 ```
 searchKey: backend.checkUserIsOrgMember
+tags: [private]
 ```
 
 ```Go
@@ -941,6 +936,7 @@ func checkUserIsOrgMember(ctx context.Context, db dbutil.DB, userID, orgID int32
 
 ```
 searchKey: backend.shouldRedirect
+tags: [private]
 ```
 
 ```Go
@@ -951,7 +947,6 @@ func shouldRedirect(name api.RepoName) bool
 
 ```
 searchKey: backend.CheckCurrentUserIsSiteAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -964,7 +959,6 @@ CheckCurrentUserIsSiteAdmin returns an error if the current user is NOT a site a
 
 ```
 searchKey: backend.CheckUserIsSiteAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -977,7 +971,6 @@ CheckUserIsSiteAdmin returns an error if the user is NOT a site admin.
 
 ```
 searchKey: backend.CheckSiteAdminOrSameUser
-tags: [exported]
 ```
 
 ```Go
@@ -994,7 +987,6 @@ Returns an error containing the name of the given user.
 
 ```
 searchKey: backend.CheckSameUser
-tags: [exported]
 ```
 
 ```Go
@@ -1007,7 +999,6 @@ CheckSameUser returns an error if the user is not the user specified by subjectU
 
 ```
 searchKey: backend.CurrentUser
-tags: [exported]
 ```
 
 ```Go
@@ -1020,7 +1011,6 @@ CurrentUser gets the current authenticated user It returns nil, nil if no user i
 
 ```
 searchKey: backend.WithAuthzBypass
-tags: [exported]
 ```
 
 ```Go
@@ -1035,6 +1025,7 @@ WithAuthzBypass returns a context that backend.CheckXyz funcs report as being a 
 
 ```
 searchKey: backend.hasAuthzBypass
+tags: [private]
 ```
 
 ```Go
@@ -1045,6 +1036,7 @@ func hasAuthzBypass(ctx context.Context) bool
 
 ```
 searchKey: backend.trace
+tags: [private]
 ```
 
 ```Go
@@ -1055,6 +1047,7 @@ func trace(ctx context.Context, server, method string, arg interface{}, err *err
 
 ```
 searchKey: backend.checkEmailAbuse
+tags: [private]
 ```
 
 ```Go
@@ -1067,7 +1060,6 @@ checkEmailAbuse performs abuse prevention checks to prevent email abuse, i.e. us
 
 ```
 searchKey: backend.MakeEmailVerificationCode
-tags: [exported]
 ```
 
 ```Go
@@ -1080,7 +1072,6 @@ MakeEmailVerificationCode returns a random string that can be used as an email v
 
 ```
 searchKey: backend.SendUserEmailVerificationEmail
-tags: [exported]
 ```
 
 ```Go
@@ -1093,7 +1084,6 @@ SendUserEmailVerificationEmail sends an email to the user to verify the email ad
 
 ```
 searchKey: backend.MakeRandomHardToGuessPassword
-tags: [exported]
 ```
 
 ```Go
@@ -1104,7 +1094,6 @@ func MakeRandomHardToGuessPassword() string
 
 ```
 searchKey: backend.MakePasswordResetURL
-tags: [exported]
 ```
 
 ```Go
@@ -1115,7 +1104,6 @@ func MakePasswordResetURL(ctx context.Context, userID int32) (*url.URL, error)
 
 ```
 searchKey: backend.GetFirstServiceVersion
-tags: [exported]
 ```
 
 ```Go
@@ -1128,7 +1116,6 @@ GetFirstServiceVersion returns the first version registered for the given Source
 
 ```
 searchKey: backend.UpdateServiceVersion
-tags: [exported]
 ```
 
 ```Go
@@ -1141,7 +1128,6 @@ UpdateServiceVersion updates the latest version for the given Sourcegraph servic
 
 ```
 searchKey: backend.IsValidUpgrade
-tags: [exported]
 ```
 
 ```Go
@@ -1156,6 +1142,7 @@ IsValidUpgrade returns true if the given previous and latest versions comply wit
 
 ```
 searchKey: backend.TestCountGoImporters
+tags: [private]
 ```
 
 ```Go
@@ -1166,6 +1153,7 @@ func TestCountGoImporters(t *testing.T)
 
 ```
 searchKey: backend.TestListGoPackagesInRepoImprecise
+tags: [private]
 ```
 
 ```Go
@@ -1176,6 +1164,7 @@ func TestListGoPackagesInRepoImprecise(t *testing.T)
 
 ```
 searchKey: backend.TestIsPossibleExternallyImportableGoPackageDir
+tags: [private]
 ```
 
 ```Go
@@ -1186,6 +1175,7 @@ func TestIsPossibleExternallyImportableGoPackageDir(t *testing.T)
 
 ```
 searchKey: backend.TestReposService_Get
+tags: [private]
 ```
 
 ```Go
@@ -1196,6 +1186,7 @@ func TestReposService_Get(t *testing.T)
 
 ```
 searchKey: backend.TestReposService_List
+tags: [private]
 ```
 
 ```Go
@@ -1206,6 +1197,7 @@ func TestReposService_List(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_Add
+tags: [private]
 ```
 
 ```Go
@@ -1216,6 +1208,7 @@ func TestRepos_Add(t *testing.T)
 
 ```
 searchKey: backend.TestReposGetInventory
+tags: [private]
 ```
 
 ```Go
@@ -1226,6 +1219,7 @@ func TestReposGetInventory(t *testing.T)
 
 ```
 searchKey: backend.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -1236,6 +1230,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: backend.TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch
+tags: [private]
 ```
 
 ```Go
@@ -1246,6 +1241,7 @@ func TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev
+tags: [private]
 ```
 
 ```Go
@@ -1256,6 +1252,7 @@ func TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID
+tags: [private]
 ```
 
 ```Go
@@ -1266,6 +1263,7 @@ func TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_ResolveRev_commitIDSpecified_failsToResolve
+tags: [private]
 ```
 
 ```Go
@@ -1276,6 +1274,7 @@ func TestRepos_ResolveRev_commitIDSpecified_failsToResolve(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_GetCommit_repoupdaterError
+tags: [private]
 ```
 
 ```Go
@@ -1286,6 +1285,7 @@ func TestRepos_GetCommit_repoupdaterError(t *testing.T)
 
 ```
 searchKey: backend.TestCheckEmailAbuse
+tags: [private]
 ```
 
 ```Go
@@ -1296,6 +1296,7 @@ func TestCheckEmailAbuse(t *testing.T)
 
 ```
 searchKey: backend.TestSendUserEmailVerificationEmail
+tags: [private]
 ```
 
 ```Go
@@ -1306,16 +1307,18 @@ func TestSendUserEmailVerificationEmail(t *testing.T)
 
 ```
 searchKey: backend.TestSendUserEmailOnFieldUpdate
+tags: [private]
 ```
 
 ```Go
 func TestSendUserEmailOnFieldUpdate(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.versions_test.go" href="#init.versions_test.go">func init()</a>
 
 ```
 searchKey: backend.init
+tags: [private]
 ```
 
 ```Go
@@ -1326,6 +1329,7 @@ func init()
 
 ```
 searchKey: backend.TestGetFirstServiceVersion
+tags: [private]
 ```
 
 ```Go
@@ -1336,6 +1340,7 @@ func TestGetFirstServiceVersion(t *testing.T)
 
 ```
 searchKey: backend.TestUpdateServiceVersion
+tags: [private]
 ```
 
 ```Go
@@ -1346,6 +1351,7 @@ func TestUpdateServiceVersion(t *testing.T)
 
 ```
 searchKey: backend.TestIsValidUpgrade
+tags: [private]
 ```
 
 ```Go

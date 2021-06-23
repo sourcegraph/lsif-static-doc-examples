@@ -21,10 +21,15 @@ Package actor provides the structures for representing an actor who has access t
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="actorKey" href="#actorKey">const actorKey</a>
 
 ```
 searchKey: actor.actorKey
+tags: [private]
 ```
 
 ```Go
@@ -33,11 +38,14 @@ const actorKey key = iota
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Actor" href="#Actor">type Actor struct</a>
 
 ```
 searchKey: actor.Actor
-tags: [exported]
 ```
 
 ```Go
@@ -62,7 +70,6 @@ Actor represents an agent that accesses resources. It can represent an anonymous
 
 ```
 searchKey: actor.FromUser
-tags: [exported]
 ```
 
 ```Go
@@ -75,7 +82,6 @@ FromUser returns an actor corresponding to a user
 
 ```
 searchKey: actor.FromContext
-tags: [exported]
 ```
 
 ```Go
@@ -86,7 +92,6 @@ func FromContext(ctx context.Context) *Actor
 
 ```
 searchKey: actor.Actor.UIDString
-tags: [exported]
 ```
 
 ```Go
@@ -99,7 +104,6 @@ UIDString is a helper method that returns the UID as a string.
 
 ```
 searchKey: actor.Actor.String
-tags: [exported]
 ```
 
 ```Go
@@ -110,7 +114,6 @@ func (a *Actor) String() string
 
 ```
 searchKey: actor.Actor.IsAuthenticated
-tags: [exported]
 ```
 
 ```Go
@@ -123,6 +126,7 @@ IsAuthenticated returns true if the Actor is derived from an authenticated user.
 
 ```
 searchKey: actor.key
+tags: [private]
 ```
 
 ```Go
@@ -131,11 +135,14 @@ type key int
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="WithActor" href="#WithActor">func WithActor(ctx context.Context, a *Actor) context.Context</a>
 
 ```
 searchKey: actor.WithActor
-tags: [exported]
 ```
 
 ```Go
@@ -146,7 +153,6 @@ func WithActor(ctx context.Context, a *Actor) context.Context
 
 ```
 searchKey: actor.WithInternalActor
-tags: [exported]
 ```
 
 ```Go

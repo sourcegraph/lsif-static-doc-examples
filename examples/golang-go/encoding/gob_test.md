@@ -21,10 +21,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Vector" href="#Vector">type Vector struct</a>
 
 ```
 searchKey: gob_test.Vector
+tags: [private]
 ```
 
 ```Go
@@ -39,6 +44,7 @@ The Vector type has unexported fields, which the package cannot access. We there
 
 ```
 searchKey: gob_test.Vector.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -49,6 +55,7 @@ func (v Vector) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: gob_test.Vector.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -61,6 +68,7 @@ UnmarshalBinary modifies the receiver so it must take a pointer receiver.
 
 ```
 searchKey: gob_test.Point
+tags: [private]
 ```
 
 ```Go
@@ -73,6 +81,7 @@ type Point struct {
 
 ```
 searchKey: gob_test.Point.Hypotenuse
+tags: [private]
 ```
 
 ```Go
@@ -83,6 +92,7 @@ func (p Point) Hypotenuse() float64
 
 ```
 searchKey: gob_test.Pythagoras
+tags: [private]
 ```
 
 ```Go
@@ -95,6 +105,7 @@ type Pythagoras interface {
 
 ```
 searchKey: gob_test.interfaceDecode
+tags: [private]
 ```
 
 ```Go
@@ -107,6 +118,7 @@ interfaceDecode decodes the next interface value from the stream and returns it.
 
 ```
 searchKey: gob_test.P
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +132,7 @@ type P struct {
 
 ```
 searchKey: gob_test.Q
+tags: [private]
 ```
 
 ```Go
@@ -131,10 +144,15 @@ type Q struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example_encodeDecode" href="#Example_encodeDecode">func Example_encodeDecode()</a>
 
 ```
 searchKey: gob_test.Example_encodeDecode
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +165,7 @@ This example transmits a value that implements the custom encoding and decoding 
 
 ```
 searchKey: gob_test.Example_interface
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +178,7 @@ This example shows how to encode an interface value. The key distinction from re
 
 ```
 searchKey: gob_test.interfaceEncode
+tags: [private]
 ```
 
 ```Go
@@ -171,6 +191,7 @@ interfaceEncode encodes the interface value into the encoder.
 
 ```
 searchKey: gob_test.Example_basic
+tags: [private]
 ```
 
 ```Go

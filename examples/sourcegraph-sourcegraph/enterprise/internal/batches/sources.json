@@ -4,7 +4,9 @@
     "identifier": "sources",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/sources",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "fakeNotImplemented",
                 "newPage": false,
                 "searchKey": "sources.fakeNotImplemented",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "NoReposErr",
                 "newPage": false,
                 "searchKey": "sources.NoReposErr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -82,9 +86,7 @@
                 "identifier": "ErrMissingCredentials",
                 "newPage": false,
                 "searchKey": "sources.ErrMissingCredentials",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -104,9 +106,7 @@
                 "identifier": "ErrNoSSHCredential",
                 "newPage": false,
                 "searchKey": "sources.ErrNoSSHCredential",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -126,7 +126,9 @@
                 "identifier": "updateRegex",
                 "newPage": false,
                 "searchKey": "sources.updateRegex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -149,7 +151,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -167,9 +171,7 @@
                 "identifier": "BitbucketServerSource",
                 "newPage": false,
                 "searchKey": "sources.BitbucketServerSource",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -187,9 +189,7 @@
                       "identifier": "NewBitbucketServerSource",
                       "newPage": false,
                       "searchKey": "sources.NewBitbucketServerSource",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -209,7 +209,9 @@
                       "identifier": "newBitbucketServerSource",
                       "newPage": false,
                       "searchKey": "sources.newBitbucketServerSource",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -229,9 +231,7 @@
                       "identifier": "BitbucketServerSource.GitserverPushConfig",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.GitserverPushConfig",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -251,9 +251,7 @@
                       "identifier": "BitbucketServerSource.WithAuthenticator",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.WithAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -273,9 +271,7 @@
                       "identifier": "BitbucketServerSource.AuthenticatedUsername",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.AuthenticatedUsername",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -295,9 +291,7 @@
                       "identifier": "BitbucketServerSource.ValidateAuthenticator",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.ValidateAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -317,9 +311,7 @@
                       "identifier": "BitbucketServerSource.CreateChangeset",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.CreateChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -339,9 +331,7 @@
                       "identifier": "BitbucketServerSource.CloseChangeset",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.CloseChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -361,9 +351,7 @@
                       "identifier": "BitbucketServerSource.LoadChangeset",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.LoadChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -383,7 +371,9 @@
                       "identifier": "BitbucketServerSource.loadPullRequestData",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.loadPullRequestData",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -403,9 +393,7 @@
                       "identifier": "BitbucketServerSource.UpdateChangeset",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.UpdateChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -425,9 +413,7 @@
                       "identifier": "BitbucketServerSource.ReopenChangeset",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.ReopenChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -447,9 +433,7 @@
                       "identifier": "BitbucketServerSource.CreateComment",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.CreateComment",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -469,9 +453,7 @@
                       "identifier": "BitbucketServerSource.MergeChangeset",
                       "newPage": false,
                       "searchKey": "sources.BitbucketServerSource.MergeChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -494,9 +476,7 @@
                 "identifier": "ChangesetNotFoundError",
                 "newPage": false,
                 "searchKey": "sources.ChangesetNotFoundError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -514,9 +494,7 @@
                       "identifier": "ChangesetNotFoundError.Error",
                       "newPage": false,
                       "searchKey": "sources.ChangesetNotFoundError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -536,9 +514,7 @@
                       "identifier": "ChangesetNotFoundError.NonRetryable",
                       "newPage": false,
                       "searchKey": "sources.ChangesetNotFoundError.NonRetryable",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -561,9 +537,7 @@
                 "identifier": "DraftChangesetSource",
                 "newPage": false,
                 "searchKey": "sources.DraftChangesetSource",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -581,9 +555,7 @@
                       "identifier": "ToDraftChangesetSource",
                       "newPage": false,
                       "searchKey": "sources.ToDraftChangesetSource",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -606,9 +578,7 @@
                 "identifier": "ChangesetSource",
                 "newPage": false,
                 "searchKey": "sources.ChangesetSource",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -626,9 +596,7 @@
                       "identifier": "WithAuthenticatorForUser",
                       "newPage": false,
                       "searchKey": "sources.WithAuthenticatorForUser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -648,9 +616,7 @@
                       "identifier": "WithSiteAuthenticator",
                       "newPage": false,
                       "searchKey": "sources.WithSiteAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -670,7 +636,9 @@
                       "identifier": "buildChangesetSource",
                       "newPage": false,
                       "searchKey": "sources.buildChangesetSource",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -693,9 +661,7 @@
                 "identifier": "ChangesetNotMergeableError",
                 "newPage": false,
                 "searchKey": "sources.ChangesetNotMergeableError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -713,9 +679,7 @@
                       "identifier": "ChangesetNotMergeableError.Error",
                       "newPage": false,
                       "searchKey": "sources.ChangesetNotMergeableError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -735,9 +699,7 @@
                       "identifier": "ChangesetNotMergeableError.NonRetryable",
                       "newPage": false,
                       "searchKey": "sources.ChangesetNotMergeableError.NonRetryable",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -760,9 +722,7 @@
                 "identifier": "Changeset",
                 "newPage": false,
                 "searchKey": "sources.Changeset",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -780,9 +740,7 @@
                       "identifier": "Changeset.IsOutdated",
                       "newPage": false,
                       "searchKey": "sources.Changeset.IsOutdated",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -805,7 +763,9 @@
                 "identifier": "fakeSourcer",
                 "newPage": false,
                 "searchKey": "sources.fakeSourcer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -823,7 +783,9 @@
                       "identifier": "fakeSourcer.ForChangeset",
                       "newPage": false,
                       "searchKey": "sources.fakeSourcer.ForChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -843,7 +805,9 @@
                       "identifier": "fakeSourcer.ForRepo",
                       "newPage": false,
                       "searchKey": "sources.fakeSourcer.ForRepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -863,7 +827,9 @@
                       "identifier": "fakeSourcer.ForExternalService",
                       "newPage": false,
                       "searchKey": "sources.fakeSourcer.ForExternalService",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -886,9 +852,7 @@
                 "identifier": "FakeChangesetSource",
                 "newPage": false,
                 "searchKey": "sources.FakeChangesetSource",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -906,9 +870,7 @@
                       "identifier": "FakeChangesetSource.CreateDraftChangeset",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.CreateDraftChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -928,9 +890,7 @@
                       "identifier": "FakeChangesetSource.UndraftChangeset",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.UndraftChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -950,9 +910,7 @@
                       "identifier": "FakeChangesetSource.CreateChangeset",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.CreateChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -972,9 +930,7 @@
                       "identifier": "FakeChangesetSource.UpdateChangeset",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.UpdateChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -994,9 +950,7 @@
                       "identifier": "FakeChangesetSource.ListRepos",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.ListRepos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1016,9 +970,7 @@
                       "identifier": "FakeChangesetSource.ExternalServices",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.ExternalServices",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1038,9 +990,7 @@
                       "identifier": "FakeChangesetSource.LoadChangeset",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.LoadChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1060,9 +1010,7 @@
                       "identifier": "FakeChangesetSource.CloseChangeset",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.CloseChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1082,9 +1030,7 @@
                       "identifier": "FakeChangesetSource.ReopenChangeset",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.ReopenChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1104,9 +1050,7 @@
                       "identifier": "FakeChangesetSource.CreateComment",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.CreateComment",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1126,9 +1070,7 @@
                       "identifier": "FakeChangesetSource.GitserverPushConfig",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.GitserverPushConfig",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1148,9 +1090,7 @@
                       "identifier": "FakeChangesetSource.WithAuthenticator",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.WithAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1170,9 +1110,7 @@
                       "identifier": "FakeChangesetSource.ValidateAuthenticator",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.ValidateAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1192,9 +1130,7 @@
                       "identifier": "FakeChangesetSource.AuthenticatedUsername",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.AuthenticatedUsername",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1214,9 +1150,7 @@
                       "identifier": "FakeChangesetSource.MergeChangeset",
                       "newPage": false,
                       "searchKey": "sources.FakeChangesetSource.MergeChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1239,9 +1173,7 @@
                 "identifier": "GithubSource",
                 "newPage": false,
                 "searchKey": "sources.GithubSource",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1259,9 +1191,7 @@
                       "identifier": "NewGithubSource",
                       "newPage": false,
                       "searchKey": "sources.NewGithubSource",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1281,7 +1211,9 @@
                       "identifier": "newGithubSource",
                       "newPage": false,
                       "searchKey": "sources.newGithubSource",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1301,9 +1233,7 @@
                       "identifier": "GithubSource.GitserverPushConfig",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.GitserverPushConfig",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1323,9 +1253,7 @@
                       "identifier": "GithubSource.WithAuthenticator",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.WithAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1345,9 +1273,7 @@
                       "identifier": "GithubSource.ValidateAuthenticator",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.ValidateAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1367,9 +1293,7 @@
                       "identifier": "GithubSource.CreateChangeset",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.CreateChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1389,9 +1313,7 @@
                       "identifier": "GithubSource.CreateDraftChangeset",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.CreateDraftChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1411,7 +1333,9 @@
                       "identifier": "GithubSource.createChangeset",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.createChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1431,9 +1355,7 @@
                       "identifier": "GithubSource.CloseChangeset",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.CloseChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1453,9 +1375,7 @@
                       "identifier": "GithubSource.UndraftChangeset",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.UndraftChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1475,9 +1395,7 @@
                       "identifier": "GithubSource.LoadChangeset",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.LoadChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1497,9 +1415,7 @@
                       "identifier": "GithubSource.UpdateChangeset",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.UpdateChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1519,9 +1435,7 @@
                       "identifier": "GithubSource.ReopenChangeset",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.ReopenChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1541,9 +1455,7 @@
                       "identifier": "GithubSource.CreateComment",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.CreateComment",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1563,9 +1475,7 @@
                       "identifier": "GithubSource.MergeChangeset",
                       "newPage": false,
                       "searchKey": "sources.GithubSource.MergeChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1588,9 +1498,7 @@
                 "identifier": "GitLabSource",
                 "newPage": false,
                 "searchKey": "sources.GitLabSource",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1608,9 +1516,7 @@
                       "identifier": "NewGitLabSource",
                       "newPage": false,
                       "searchKey": "sources.NewGitLabSource",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1630,7 +1536,9 @@
                       "identifier": "newGitLabSource",
                       "newPage": false,
                       "searchKey": "sources.newGitLabSource",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1650,9 +1558,7 @@
                       "identifier": "GitLabSource.GitserverPushConfig",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.GitserverPushConfig",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1672,9 +1578,7 @@
                       "identifier": "GitLabSource.WithAuthenticator",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.WithAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1694,9 +1598,7 @@
                       "identifier": "GitLabSource.ValidateAuthenticator",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.ValidateAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1716,9 +1618,7 @@
                       "identifier": "GitLabSource.CreateChangeset",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.CreateChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1738,9 +1638,7 @@
                       "identifier": "GitLabSource.CreateDraftChangeset",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.CreateDraftChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1760,9 +1658,7 @@
                       "identifier": "GitLabSource.CloseChangeset",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.CloseChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1782,9 +1678,7 @@
                       "identifier": "GitLabSource.LoadChangeset",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.LoadChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1804,9 +1698,7 @@
                       "identifier": "GitLabSource.ReopenChangeset",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.ReopenChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1826,7 +1718,9 @@
                       "identifier": "GitLabSource.decorateMergeRequestData",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.decorateMergeRequestData",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1846,7 +1740,9 @@
                       "identifier": "GitLabSource.getMergeRequestNotes",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.getMergeRequestNotes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1866,7 +1762,9 @@
                       "identifier": "GitLabSource.getMergeRequestResourceStateEvents",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.getMergeRequestResourceStateEvents",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1886,7 +1784,9 @@
                       "identifier": "GitLabSource.getMergeRequestPipelines",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.getMergeRequestPipelines",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1906,9 +1806,7 @@
                       "identifier": "GitLabSource.UpdateChangeset",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.UpdateChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1928,9 +1826,7 @@
                       "identifier": "GitLabSource.UndraftChangeset",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.UndraftChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1950,9 +1846,7 @@
                       "identifier": "GitLabSource.CreateComment",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.CreateComment",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1972,9 +1866,7 @@
                       "identifier": "GitLabSource.MergeChangeset",
                       "newPage": false,
                       "searchKey": "sources.GitLabSource.MergeChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1997,9 +1889,7 @@
                 "identifier": "ErrNoPushCredentials",
                 "newPage": false,
                 "searchKey": "sources.ErrNoPushCredentials",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2017,9 +1907,7 @@
                       "identifier": "ErrNoPushCredentials.Error",
                       "newPage": false,
                       "searchKey": "sources.ErrNoPushCredentials.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2042,9 +1930,7 @@
                 "identifier": "SourcerStore",
                 "newPage": false,
                 "searchKey": "sources.SourcerStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2064,9 +1950,7 @@
                 "identifier": "Sourcer",
                 "newPage": false,
                 "searchKey": "sources.Sourcer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2084,9 +1968,7 @@
                       "identifier": "NewSourcer",
                       "newPage": false,
                       "searchKey": "sources.NewSourcer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2106,9 +1988,7 @@
                       "identifier": "NewFakeSourcer",
                       "newPage": false,
                       "searchKey": "sources.NewFakeSourcer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2131,7 +2011,9 @@
                 "identifier": "sourcer",
                 "newPage": false,
                 "searchKey": "sources.sourcer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2149,7 +2031,9 @@
                       "identifier": "sourcer.ForChangeset",
                       "newPage": false,
                       "searchKey": "sources.sourcer.ForChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2169,7 +2053,9 @@
                       "identifier": "sourcer.ForRepo",
                       "newPage": false,
                       "searchKey": "sources.sourcer.ForRepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2189,7 +2075,9 @@
                       "identifier": "sourcer.ForExternalService",
                       "newPage": false,
                       "searchKey": "sources.sourcer.ForExternalService",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2209,7 +2097,9 @@
                       "identifier": "sourcer.loadBatchesSource",
                       "newPage": false,
                       "searchKey": "sources.sourcer.loadBatchesSource",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2232,9 +2122,7 @@
                 "identifier": "UnsupportedAuthenticatorError",
                 "newPage": false,
                 "searchKey": "sources.UnsupportedAuthenticatorError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2252,7 +2140,9 @@
                       "identifier": "newUnsupportedAuthenticatorError",
                       "newPage": false,
                       "searchKey": "sources.newUnsupportedAuthenticatorError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2272,9 +2162,7 @@
                       "identifier": "UnsupportedAuthenticatorError.Error",
                       "newPage": false,
                       "searchKey": "sources.UnsupportedAuthenticatorError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2297,7 +2185,9 @@
                 "identifier": "gitLabChangesetSourceTestProvider",
                 "newPage": false,
                 "searchKey": "sources.gitLabChangesetSourceTestProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2315,7 +2205,9 @@
                       "identifier": "newGitLabChangesetSourceTestProvider",
                       "newPage": false,
                       "searchKey": "sources.newGitLabChangesetSourceTestProvider",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2335,7 +2227,9 @@
                       "identifier": "gitLabChangesetSourceTestProvider.testCommonParams",
                       "newPage": false,
                       "searchKey": "sources.gitLabChangesetSourceTestProvider.testCommonParams",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2355,7 +2249,9 @@
                       "identifier": "gitLabChangesetSourceTestProvider.mockCreateMergeRequest",
                       "newPage": false,
                       "searchKey": "sources.gitLabChangesetSourceTestProvider.mockCreateMergeRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2375,7 +2271,9 @@
                       "identifier": "gitLabChangesetSourceTestProvider.mockGetMergeRequest",
                       "newPage": false,
                       "searchKey": "sources.gitLabChangesetSourceTestProvider.mockGetMergeRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2395,7 +2293,9 @@
                       "identifier": "gitLabChangesetSourceTestProvider.mockGetMergeRequestNotes",
                       "newPage": false,
                       "searchKey": "sources.gitLabChangesetSourceTestProvider.mockGetMergeRequestNotes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2415,7 +2315,9 @@
                       "identifier": "gitLabChangesetSourceTestProvider.mockGetMergeRequestResourceStateEvents",
                       "newPage": false,
                       "searchKey": "sources.gitLabChangesetSourceTestProvider.mockGetMergeRequestResourceStateEvents",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2435,7 +2337,9 @@
                       "identifier": "gitLabChangesetSourceTestProvider.mockGetMergeRequestPipelines",
                       "newPage": false,
                       "searchKey": "sources.gitLabChangesetSourceTestProvider.mockGetMergeRequestPipelines",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2455,7 +2359,9 @@
                       "identifier": "gitLabChangesetSourceTestProvider.mockGetOpenMergeRequestByRefs",
                       "newPage": false,
                       "searchKey": "sources.gitLabChangesetSourceTestProvider.mockGetOpenMergeRequestByRefs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2475,7 +2381,9 @@
                       "identifier": "gitLabChangesetSourceTestProvider.mockUpdateMergeRequest",
                       "newPage": false,
                       "searchKey": "sources.gitLabChangesetSourceTestProvider.mockUpdateMergeRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2495,7 +2403,9 @@
                       "identifier": "gitLabChangesetSourceTestProvider.mockCreateComment",
                       "newPage": false,
                       "searchKey": "sources.gitLabChangesetSourceTestProvider.mockCreateComment",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2515,7 +2425,9 @@
                       "identifier": "gitLabChangesetSourceTestProvider.unmock",
                       "newPage": false,
                       "searchKey": "sources.gitLabChangesetSourceTestProvider.unmock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2538,7 +2450,9 @@
                 "identifier": "panicDoer",
                 "newPage": false,
                 "searchKey": "sources.panicDoer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2556,7 +2470,9 @@
                       "identifier": "panicDoer.Do",
                       "newPage": false,
                       "searchKey": "sources.panicDoer.Do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2582,7 +2498,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2600,7 +2518,9 @@
                 "identifier": "buildCreatePullRequestInput",
                 "newPage": false,
                 "searchKey": "sources.buildCreatePullRequestInput",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2620,7 +2540,9 @@
                 "identifier": "readSystemNotes",
                 "newPage": false,
                 "searchKey": "sources.readSystemNotes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2640,7 +2562,9 @@
                 "identifier": "readMergeRequestResourceStateEvents",
                 "newPage": false,
                 "searchKey": "sources.readMergeRequestResourceStateEvents",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2660,7 +2584,9 @@
                 "identifier": "readPipelines",
                 "newPage": false,
                 "searchKey": "sources.readPipelines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2680,7 +2606,9 @@
                 "identifier": "gitserverPushConfig",
                 "newPage": false,
                 "searchKey": "sources.gitserverPushConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2700,7 +2628,9 @@
                 "identifier": "loadExternalService",
                 "newPage": false,
                 "searchKey": "sources.loadExternalService",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2720,7 +2650,9 @@
                 "identifier": "loadUserCredential",
                 "newPage": false,
                 "searchKey": "sources.loadUserCredential",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2740,7 +2672,9 @@
                 "identifier": "loadSiteCredential",
                 "newPage": false,
                 "searchKey": "sources.loadSiteCredential",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2760,7 +2694,9 @@
                 "identifier": "setOAuthTokenAuth",
                 "newPage": false,
                 "searchKey": "sources.setOAuthTokenAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2780,7 +2716,9 @@
                 "identifier": "setBasicAuth",
                 "newPage": false,
                 "searchKey": "sources.setBasicAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2800,7 +2738,9 @@
                 "identifier": "extractCloneURL",
                 "newPage": false,
                 "searchKey": "sources.extractCloneURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2820,7 +2760,9 @@
                 "identifier": "TestBitbucketServerSource_LoadChangeset",
                 "newPage": false,
                 "searchKey": "sources.TestBitbucketServerSource_LoadChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2840,7 +2782,9 @@
                 "identifier": "TestBitbucketServerSource_CreateChangeset",
                 "newPage": false,
                 "searchKey": "sources.TestBitbucketServerSource_CreateChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2860,7 +2804,9 @@
                 "identifier": "TestBitbucketServerSource_CloseChangeset",
                 "newPage": false,
                 "searchKey": "sources.TestBitbucketServerSource_CloseChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2880,7 +2826,9 @@
                 "identifier": "TestBitbucketServerSource_ReopenChangeset",
                 "newPage": false,
                 "searchKey": "sources.TestBitbucketServerSource_ReopenChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2900,7 +2848,9 @@
                 "identifier": "TestBitbucketServerSource_UpdateChangeset",
                 "newPage": false,
                 "searchKey": "sources.TestBitbucketServerSource_UpdateChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2920,7 +2870,9 @@
                 "identifier": "TestBitbucketServerSource_CreateComment",
                 "newPage": false,
                 "searchKey": "sources.TestBitbucketServerSource_CreateComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2940,7 +2892,9 @@
                 "identifier": "TestBitbucketServerSource_WithAuthenticator",
                 "newPage": false,
                 "searchKey": "sources.TestBitbucketServerSource_WithAuthenticator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2960,7 +2914,9 @@
                 "identifier": "TestGithubSource_CreateChangeset",
                 "newPage": false,
                 "searchKey": "sources.TestGithubSource_CreateChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2980,7 +2936,9 @@
                 "identifier": "TestGithubSource_CloseChangeset",
                 "newPage": false,
                 "searchKey": "sources.TestGithubSource_CloseChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3000,7 +2958,9 @@
                 "identifier": "TestGithubSource_ReopenChangeset",
                 "newPage": false,
                 "searchKey": "sources.TestGithubSource_ReopenChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3020,7 +2980,9 @@
                 "identifier": "TestGithubSource_CreateComment",
                 "newPage": false,
                 "searchKey": "sources.TestGithubSource_CreateComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3040,7 +3002,9 @@
                 "identifier": "TestGithubSource_UpdateChangeset",
                 "newPage": false,
                 "searchKey": "sources.TestGithubSource_UpdateChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3060,7 +3024,9 @@
                 "identifier": "TestGithubSource_LoadChangeset",
                 "newPage": false,
                 "searchKey": "sources.TestGithubSource_LoadChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3080,7 +3046,9 @@
                 "identifier": "TestGithubSource_WithAuthenticator",
                 "newPage": false,
                 "searchKey": "sources.TestGithubSource_WithAuthenticator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3100,7 +3068,9 @@
                 "identifier": "TestGitLabSource_ChangesetSource",
                 "newPage": false,
                 "searchKey": "sources.TestGitLabSource_ChangesetSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3120,7 +3090,9 @@
                 "identifier": "TestReadNotesUntilSeen",
                 "newPage": false,
                 "searchKey": "sources.TestReadNotesUntilSeen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3140,7 +3112,9 @@
                 "identifier": "TestReadPipelinesUntilSeen",
                 "newPage": false,
                 "searchKey": "sources.TestReadPipelinesUntilSeen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3160,7 +3134,9 @@
                 "identifier": "paginatedNoteIterator",
                 "newPage": false,
                 "searchKey": "sources.paginatedNoteIterator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3180,7 +3156,9 @@
                 "identifier": "paginatedResourceStateEventIterator",
                 "newPage": false,
                 "searchKey": "sources.paginatedResourceStateEventIterator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3200,7 +3178,9 @@
                 "identifier": "paginatedPipelineIterator",
                 "newPage": false,
                 "searchKey": "sources.paginatedPipelineIterator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3220,7 +3200,9 @@
                 "identifier": "TestGitLabSource_WithAuthenticator",
                 "newPage": false,
                 "searchKey": "sources.TestGitLabSource_WithAuthenticator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3240,7 +3222,9 @@
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "sources.update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3260,7 +3244,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "sources.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3280,7 +3266,9 @@
                 "identifier": "newClientFactory",
                 "newPage": false,
                 "searchKey": "sources.newClientFactory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3300,7 +3288,9 @@
                 "identifier": "gitserverRedirectMiddleware",
                 "newPage": false,
                 "searchKey": "sources.gitserverRedirectMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3320,7 +3310,9 @@
                 "identifier": "newRecorder",
                 "newPage": false,
                 "searchKey": "sources.newRecorder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3340,7 +3332,9 @@
                 "identifier": "save",
                 "newPage": false,
                 "searchKey": "sources.save",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3360,7 +3354,9 @@
                 "identifier": "marshalJSON",
                 "newPage": false,
                 "searchKey": "sources.marshalJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3380,7 +3376,9 @@
                 "identifier": "TestExtractCloneURL",
                 "newPage": false,
                 "searchKey": "sources.TestExtractCloneURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3400,7 +3398,9 @@
                 "identifier": "TestLoadExternalService",
                 "newPage": false,
                 "searchKey": "sources.TestLoadExternalService",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3420,7 +3420,9 @@
                 "identifier": "TestGitserverPushConfig",
                 "newPage": false,
                 "searchKey": "sources.TestGitserverPushConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

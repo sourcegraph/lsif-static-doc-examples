@@ -15,10 +15,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="authenticationMiddleware" href="#authenticationMiddleware">type authenticationMiddleware struct</a>
 
 ```
 searchKey: mux_test.authenticationMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -33,6 +38,7 @@ Define our struct
 
 ```
 searchKey: mux_test.authenticationMiddleware.Populate
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +51,7 @@ Initialize it somewhere
 
 ```
 searchKey: mux_test.authenticationMiddleware.Middleware
+tags: [private]
 ```
 
 ```Go
@@ -55,10 +62,15 @@ Middleware function, which will be called for each request
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example_authenticationMiddleware" href="#Example_authenticationMiddleware">func Example_authenticationMiddleware()</a>
 
 ```
 searchKey: mux_test.Example_authenticationMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -69,6 +81,7 @@ func Example_authenticationMiddleware()
 
 ```
 searchKey: mux_test.ExampleCORSMethodMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -79,6 +92,7 @@ func ExampleCORSMethodMiddleware()
 
 ```
 searchKey: mux_test.ExampleRoute_HeadersRegexp
+tags: [private]
 ```
 
 ```Go
@@ -91,6 +105,7 @@ This example demonstrates setting a regular expression matcher for the header va
 
 ```
 searchKey: mux_test.ExampleRoute_HeadersRegexp_exactMatch
+tags: [private]
 ```
 
 ```Go

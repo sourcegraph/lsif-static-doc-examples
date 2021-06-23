@@ -20,11 +20,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestKey" href="#TestKey">type TestKey struct{}</a>
 
 ```
 searchKey: testing.TestKey
-tags: [exported]
 ```
 
 ```Go
@@ -37,7 +40,6 @@ TestKey is an encryption.Key that just base64 encodes the plaintext, to make sur
 
 ```
 searchKey: testing.TestKey.Encrypt
-tags: [exported]
 ```
 
 ```Go
@@ -48,7 +50,6 @@ func (k TestKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)
 
 ```
 searchKey: testing.TestKey.Decrypt
-tags: [exported]
 ```
 
 ```Go
@@ -59,7 +60,6 @@ func (k TestKey) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Se
 
 ```
 searchKey: testing.TestKey.Version
-tags: [exported]
 ```
 
 ```Go
@@ -70,7 +70,6 @@ func (k TestKey) Version(ctx context.Context) (encryption.KeyVersion, error)
 
 ```
 searchKey: testing.BadKey
-tags: [exported]
 ```
 
 ```Go
@@ -83,7 +82,6 @@ BadKey is an encryption.Key that always returns an error when any of its methods
 
 ```
 searchKey: testing.BadKey.Encrypt
-tags: [exported]
 ```
 
 ```Go
@@ -94,7 +92,6 @@ func (k *BadKey) Encrypt(context.Context, []byte) ([]byte, error)
 
 ```
 searchKey: testing.BadKey.Decrypt
-tags: [exported]
 ```
 
 ```Go
@@ -105,7 +102,6 @@ func (k *BadKey) Decrypt(context.Context, []byte) (*encryption.Secret, error)
 
 ```
 searchKey: testing.BadKey.Version
-tags: [exported]
 ```
 
 ```Go
@@ -116,7 +112,6 @@ func (k *BadKey) Version(context.Context) (encryption.KeyVersion, error)
 
 ```
 searchKey: testing.TransparentKey
-tags: [exported]
 ```
 
 ```Go
@@ -129,7 +124,6 @@ TransparentKey is a key that performs no encryption or decryption, but errors if
 
 ```
 searchKey: testing.NewTransparentKey
-tags: [exported]
 ```
 
 ```Go
@@ -140,7 +134,6 @@ func NewTransparentKey(t *testing.T) *TransparentKey
 
 ```
 searchKey: testing.TransparentKey.Decrypt
-tags: [exported]
 ```
 
 ```Go
@@ -151,7 +144,6 @@ func (dec *TransparentKey) Decrypt(ctx context.Context, ciphertext []byte) (*enc
 
 ```
 searchKey: testing.TransparentKey.Encrypt
-tags: [exported]
 ```
 
 ```Go
@@ -162,7 +154,6 @@ func (dec *TransparentKey) Encrypt(ctx context.Context, value []byte) ([]byte, e
 
 ```
 searchKey: testing.TransparentKey.Version
-tags: [exported]
 ```
 
 ```Go

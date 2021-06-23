@@ -13,11 +13,14 @@ This package allows packages that cannot import "reflect" to use types that are 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Slice" href="#Slice">type Slice struct</a>
 
 ```
 searchKey: unsafeheader.Slice
-tags: [exported]
 ```
 
 ```Go
@@ -36,7 +39,6 @@ Unlike reflect.SliceHeader, its Data field is sufficient to guarantee the data i
 
 ```
 searchKey: unsafeheader.String
-tags: [exported]
 ```
 
 ```Go

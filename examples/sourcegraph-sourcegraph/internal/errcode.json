@@ -4,7 +4,9 @@
     "identifier": "errcode",
     "newPage": true,
     "searchKey": "internal/errcode",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "HTTPErr",
                 "newPage": false,
                 "searchKey": "errcode.HTTPErr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "HTTPErr.Error",
                       "newPage": false,
                       "searchKey": "errcode.HTTPErr.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "HTTPErr.HTTPStatusCode",
                       "newPage": false,
                       "searchKey": "errcode.HTTPErr.HTTPStatusCode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -107,9 +105,7 @@
                 "identifier": "Mock",
                 "newPage": false,
                 "searchKey": "errcode.Mock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +123,7 @@
                       "identifier": "Mock.Error",
                       "newPage": false,
                       "searchKey": "errcode.Mock.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -149,9 +143,7 @@
                       "identifier": "Mock.NotFound",
                       "newPage": false,
                       "searchKey": "errcode.Mock.NotFound",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -174,7 +166,9 @@
                 "identifier": "nonRetryableError",
                 "newPage": false,
                 "searchKey": "errcode.nonRetryableError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -192,7 +186,9 @@
                       "identifier": "nonRetryableError.NonRetryable",
                       "newPage": false,
                       "searchKey": "errcode.nonRetryableError.NonRetryable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -215,9 +211,7 @@
                 "identifier": "PresentationError",
                 "newPage": false,
                 "searchKey": "errcode.PresentationError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -237,7 +231,9 @@
                 "identifier": "presentationError",
                 "newPage": false,
                 "searchKey": "errcode.presentationError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -255,7 +251,9 @@
                       "identifier": "presentationError.Error",
                       "newPage": false,
                       "searchKey": "errcode.presentationError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -275,7 +273,9 @@
                       "identifier": "presentationError.PresentationError",
                       "newPage": false,
                       "searchKey": "errcode.presentationError.PresentationError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -301,7 +301,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -319,9 +321,7 @@
                 "identifier": "HTTP",
                 "newPage": false,
                 "searchKey": "errcode.HTTP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -341,9 +341,7 @@
                 "identifier": "IsHTTPErrorCode",
                 "newPage": false,
                 "searchKey": "errcode.IsHTTPErrorCode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -363,9 +361,7 @@
                 "identifier": "IsNotFound",
                 "newPage": false,
                 "searchKey": "errcode.IsNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -385,9 +381,7 @@
                 "identifier": "IsUnauthorized",
                 "newPage": false,
                 "searchKey": "errcode.IsUnauthorized",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -407,9 +401,7 @@
                 "identifier": "IsForbidden",
                 "newPage": false,
                 "searchKey": "errcode.IsForbidden",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -429,9 +421,7 @@
                 "identifier": "IsAccountSuspended",
                 "newPage": false,
                 "searchKey": "errcode.IsAccountSuspended",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -451,9 +441,7 @@
                 "identifier": "IsBadRequest",
                 "newPage": false,
                 "searchKey": "errcode.IsBadRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -473,9 +461,7 @@
                 "identifier": "IsTemporary",
                 "newPage": false,
                 "searchKey": "errcode.IsTemporary",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -495,9 +481,7 @@
                 "identifier": "IsTimeout",
                 "newPage": false,
                 "searchKey": "errcode.IsTimeout",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -517,9 +501,7 @@
                 "identifier": "IsNonRetryable",
                 "newPage": false,
                 "searchKey": "errcode.IsNonRetryable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -539,9 +521,7 @@
                 "identifier": "MakeNonRetryable",
                 "newPage": false,
                 "searchKey": "errcode.MakeNonRetryable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -561,7 +541,9 @@
                 "identifier": "isErrorPredicate",
                 "newPage": false,
                 "searchKey": "errcode.isErrorPredicate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,9 +563,7 @@
                 "identifier": "WithPresentationMessage",
                 "newPage": false,
                 "searchKey": "errcode.WithPresentationMessage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -603,9 +583,7 @@
                 "identifier": "NewPresentationError",
                 "newPage": false,
                 "searchKey": "errcode.NewPresentationError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -625,9 +603,7 @@
                 "identifier": "PresentationMessage",
                 "newPage": false,
                 "searchKey": "errcode.PresentationMessage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -647,7 +623,9 @@
                 "identifier": "TestPresentationError",
                 "newPage": false,
                 "searchKey": "errcode.TestPresentationError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

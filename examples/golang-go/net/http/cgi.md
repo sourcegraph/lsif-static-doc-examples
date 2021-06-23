@@ -82,14 +82,11 @@ Note that using CGI means starting a new process to handle each request, which i
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="trailingPort" href="#trailingPort">var trailingPort</a>
 
 ```
 searchKey: cgi.trailingPort
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +97,7 @@ var trailingPort = regexp.MustCompile(`:([0-9]+)$`)
 
 ```
 searchKey: cgi.osDefaultInheritEnv
+tags: [private]
 ```
 
 ```Go
@@ -110,6 +108,7 @@ var osDefaultInheritEnv = ...
 
 ```
 searchKey: cgi.testHookStartProcess
+tags: [private]
 ```
 
 ```Go
@@ -121,6 +120,7 @@ var testHookStartProcess func(*os.Process) // nil except for some tests
 
 ```
 searchKey: cgi.cgiTested
+tags: [private]
 ```
 
 ```Go
@@ -131,6 +131,7 @@ var cgiTested, cgiWorks bool
 
 ```
 searchKey: cgi.cgiWorks
+tags: [private]
 ```
 
 ```Go
@@ -139,14 +140,11 @@ var cgiTested, cgiWorks bool
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="response" href="#response">type response struct</a>
 
 ```
 searchKey: cgi.response
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +162,7 @@ type response struct {
 
 ```
 searchKey: cgi.response.Flush
+tags: [private]
 ```
 
 ```Go
@@ -174,6 +173,7 @@ func (r *response) Flush()
 
 ```
 searchKey: cgi.response.Header
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +184,7 @@ func (r *response) Header() http.Header
 
 ```
 searchKey: cgi.response.Write
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +195,7 @@ func (r *response) Write(p []byte) (n int, err error)
 
 ```
 searchKey: cgi.response.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +206,7 @@ func (r *response) WriteHeader(code int)
 
 ```
 searchKey: cgi.response.writeCGIHeader
+tags: [private]
 ```
 
 ```Go
@@ -216,7 +219,6 @@ writeCGIHeader finalizes the header sent to the client and writes it to the outp
 
 ```
 searchKey: cgi.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -254,6 +256,7 @@ Handler runs an executable in a subprocess with a CGI environment.
 
 ```
 searchKey: cgi.Handler.stderr
+tags: [private]
 ```
 
 ```Go
@@ -264,7 +267,6 @@ func (h *Handler) stderr() io.Writer
 
 ```
 searchKey: cgi.Handler.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -275,6 +277,7 @@ func (h *Handler) ServeHTTP(rw http.ResponseWriter, req *http.Request)
 
 ```
 searchKey: cgi.Handler.printf
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +288,7 @@ func (h *Handler) printf(format string, v ...interface{})
 
 ```
 searchKey: cgi.Handler.handleInternalRedirect
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +299,7 @@ func (h *Handler) handleInternalRedirect(rw http.ResponseWriter, req *http.Reque
 
 ```
 searchKey: cgi.customWriterRecorder
+tags: [private]
 ```
 
 ```Go
@@ -308,6 +313,7 @@ type customWriterRecorder struct {
 
 ```
 searchKey: cgi.customWriterRecorder.Write
+tags: [private]
 ```
 
 ```Go
@@ -318,6 +324,7 @@ func (r *customWriterRecorder) Write(p []byte) (n int, err error)
 
 ```
 searchKey: cgi.limitWriter
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +338,7 @@ type limitWriter struct {
 
 ```
 searchKey: cgi.limitWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -341,6 +349,7 @@ func (w *limitWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: cgi.neverEnding
+tags: [private]
 ```
 
 ```Go
@@ -351,6 +360,7 @@ type neverEnding byte
 
 ```
 searchKey: cgi.neverEnding.Read
+tags: [private]
 ```
 
 ```Go
@@ -359,15 +369,10 @@ func (b neverEnding) Read(p []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Request" href="#Request">func Request() (*http.Request, error)</a>
 
 ```
 searchKey: cgi.Request
-tags: [exported]
 ```
 
 ```Go
@@ -380,6 +385,7 @@ Request returns the HTTP request as represented in the current environment. This
 
 ```
 searchKey: cgi.envMap
+tags: [private]
 ```
 
 ```Go
@@ -390,7 +396,6 @@ func envMap(env []string) map[string]string
 
 ```
 searchKey: cgi.RequestFromMap
-tags: [exported]
 ```
 
 ```Go
@@ -403,7 +408,6 @@ RequestFromMap creates an http.Request from CGI variables. The returned Request'
 
 ```
 searchKey: cgi.Serve
-tags: [exported]
 ```
 
 ```Go
@@ -416,6 +420,7 @@ Serve executes the provided Handler on the currently active CGI request, if any.
 
 ```
 searchKey: cgi.removeLeadingDuplicates
+tags: [private]
 ```
 
 ```Go
@@ -435,6 +440,7 @@ cgi.Handler{
 
 ```
 searchKey: cgi.upperCaseAndUnderscore
+tags: [private]
 ```
 
 ```Go
@@ -445,6 +451,7 @@ func upperCaseAndUnderscore(r rune) rune
 
 ```
 searchKey: cgi.TestRequest
+tags: [private]
 ```
 
 ```Go
@@ -455,6 +462,7 @@ func TestRequest(t *testing.T)
 
 ```
 searchKey: cgi.TestRequestWithTLS
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +473,7 @@ func TestRequestWithTLS(t *testing.T)
 
 ```
 searchKey: cgi.TestRequestWithoutHost
+tags: [private]
 ```
 
 ```Go
@@ -475,6 +484,7 @@ func TestRequestWithoutHost(t *testing.T)
 
 ```
 searchKey: cgi.TestRequestWithoutRequestURI
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +495,7 @@ func TestRequestWithoutRequestURI(t *testing.T)
 
 ```
 searchKey: cgi.TestRequestWithoutRemotePort
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +506,7 @@ func TestRequestWithoutRemotePort(t *testing.T)
 
 ```
 searchKey: cgi.TestResponse
+tags: [private]
 ```
 
 ```Go
@@ -505,6 +517,7 @@ func TestResponse(t *testing.T)
 
 ```
 searchKey: cgi.newRequest
+tags: [private]
 ```
 
 ```Go
@@ -515,6 +528,7 @@ func newRequest(httpreq string) *http.Request
 
 ```
 searchKey: cgi.runCgiTest
+tags: [private]
 ```
 
 ```Go
@@ -527,6 +541,7 @@ func runCgiTest(t *testing.T, h *Handler,
 
 ```
 searchKey: cgi.runResponseChecks
+tags: [private]
 ```
 
 ```Go
@@ -538,6 +553,7 @@ func runResponseChecks(t *testing.T, rw *httptest.ResponseRecorder,
 
 ```
 searchKey: cgi.check
+tags: [private]
 ```
 
 ```Go
@@ -548,6 +564,7 @@ func check(t *testing.T)
 
 ```
 searchKey: cgi.TestCGIBasicGet
+tags: [private]
 ```
 
 ```Go
@@ -558,6 +575,7 @@ func TestCGIBasicGet(t *testing.T)
 
 ```
 searchKey: cgi.TestCGIEnvIPv6
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +586,7 @@ func TestCGIEnvIPv6(t *testing.T)
 
 ```
 searchKey: cgi.TestCGIBasicGetAbsPath
+tags: [private]
 ```
 
 ```Go
@@ -578,6 +597,7 @@ func TestCGIBasicGetAbsPath(t *testing.T)
 
 ```
 searchKey: cgi.TestPathInfo
+tags: [private]
 ```
 
 ```Go
@@ -588,6 +608,7 @@ func TestPathInfo(t *testing.T)
 
 ```
 searchKey: cgi.TestPathInfoDirRoot
+tags: [private]
 ```
 
 ```Go
@@ -598,6 +619,7 @@ func TestPathInfoDirRoot(t *testing.T)
 
 ```
 searchKey: cgi.TestDupHeaders
+tags: [private]
 ```
 
 ```Go
@@ -608,6 +630,7 @@ func TestDupHeaders(t *testing.T)
 
 ```
 searchKey: cgi.TestDropProxyHeader
+tags: [private]
 ```
 
 ```Go
@@ -620,6 +643,7 @@ Issue 16405: CGI+http.Transport differing uses of HTTP_PROXY. Verify we don't se
 
 ```
 searchKey: cgi.TestPathInfoNoRoot
+tags: [private]
 ```
 
 ```Go
@@ -630,6 +654,7 @@ func TestPathInfoNoRoot(t *testing.T)
 
 ```
 searchKey: cgi.TestCGIBasicPost
+tags: [private]
 ```
 
 ```Go
@@ -640,6 +665,7 @@ func TestCGIBasicPost(t *testing.T)
 
 ```
 searchKey: cgi.chunk
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +676,7 @@ func chunk(s string) string
 
 ```
 searchKey: cgi.TestCGIPostChunked
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +689,7 @@ The CGI spec doesn't allow chunked requests.
 
 ```
 searchKey: cgi.TestRedirect
+tags: [private]
 ```
 
 ```Go
@@ -672,6 +700,7 @@ func TestRedirect(t *testing.T)
 
 ```
 searchKey: cgi.TestInternalRedirect
+tags: [private]
 ```
 
 ```Go
@@ -682,6 +711,7 @@ func TestInternalRedirect(t *testing.T)
 
 ```
 searchKey: cgi.TestCopyError
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +724,7 @@ TestCopyError tests that we kill the process if there's an error copying its out
 
 ```
 searchKey: cgi.TestDirUnix
+tags: [private]
 ```
 
 ```Go
@@ -704,6 +735,7 @@ func TestDirUnix(t *testing.T)
 
 ```
 searchKey: cgi.findPerl
+tags: [private]
 ```
 
 ```Go
@@ -714,6 +746,7 @@ func findPerl(t *testing.T) string
 
 ```
 searchKey: cgi.TestDirWindows
+tags: [private]
 ```
 
 ```Go
@@ -724,6 +757,7 @@ func TestDirWindows(t *testing.T)
 
 ```
 searchKey: cgi.TestEnvOverride
+tags: [private]
 ```
 
 ```Go
@@ -734,6 +768,7 @@ func TestEnvOverride(t *testing.T)
 
 ```
 searchKey: cgi.TestHandlerStderr
+tags: [private]
 ```
 
 ```Go
@@ -744,6 +779,7 @@ func TestHandlerStderr(t *testing.T)
 
 ```
 searchKey: cgi.TestRemoveLeadingDuplicates
+tags: [private]
 ```
 
 ```Go
@@ -754,6 +790,7 @@ func TestRemoveLeadingDuplicates(t *testing.T)
 
 ```
 searchKey: cgi.TestHostingOurselves
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +803,7 @@ This test is a CGI host (testing host.go) that runs its own binary as a child pr
 
 ```
 searchKey: cgi.TestKillChildAfterCopyError
+tags: [private]
 ```
 
 ```Go
@@ -778,6 +816,7 @@ If there's an error copying the child's output to the parent, test that we kill 
 
 ```
 searchKey: cgi.TestChildOnlyHeaders
+tags: [private]
 ```
 
 ```Go
@@ -790,6 +829,7 @@ Test that a child handler writing only headers works. golang.org/issue/7196
 
 ```
 searchKey: cgi.TestNilRequestBody
+tags: [private]
 ```
 
 ```Go
@@ -802,6 +842,7 @@ Test that a child handler does not receive a nil Request Body. golang.org/issue/
 
 ```
 searchKey: cgi.TestChildContentType
+tags: [private]
 ```
 
 ```Go
@@ -812,6 +853,7 @@ func TestChildContentType(t *testing.T)
 
 ```
 searchKey: cgi.Test500WithNoHeaders
+tags: [private]
 ```
 
 ```Go
@@ -824,6 +866,7 @@ golang.org/issue/7198
 
 ```
 searchKey: cgi.Test500WithNoContentType
+tags: [private]
 ```
 
 ```Go
@@ -834,6 +877,7 @@ func Test500WithNoContentType(t *testing.T)
 
 ```
 searchKey: cgi.Test500WithEmptyHeaders
+tags: [private]
 ```
 
 ```Go
@@ -844,6 +888,7 @@ func Test500WithEmptyHeaders(t *testing.T)
 
 ```
 searchKey: cgi.want500Test
+tags: [private]
 ```
 
 ```Go
@@ -854,6 +899,7 @@ func want500Test(t *testing.T, path string)
 
 ```
 searchKey: cgi.TestBeChildCGIProcess
+tags: [private]
 ```
 
 ```Go
@@ -866,6 +912,7 @@ Note: not actually a test.
 
 ```
 searchKey: cgi.isProcessRunning
+tags: [private]
 ```
 
 ```Go

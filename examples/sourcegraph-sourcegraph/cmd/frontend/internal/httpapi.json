@@ -4,7 +4,9 @@
     "identifier": "httpapi",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/httpapi",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "traceGraphQLQueriesSample",
                 "newPage": false,
                 "searchKey": "httpapi.traceGraphQLQueriesSample",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "schemaDecoder",
                 "newPage": false,
                 "searchKey": "httpapi.schemaDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "srcCliDownloadsURL",
                 "newPage": false,
                 "searchKey": "httpapi.srcCliDownloadsURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "allowedFilenames",
                 "newPage": false,
                 "searchKey": "httpapi.allowedFilenames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +135,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "graphQLQueryParams",
                 "newPage": false,
                 "searchKey": "httpapi.graphQLQueryParams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "traceData",
                 "newPage": false,
                 "searchKey": "httpapi.traceData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "errorHandler",
                 "newPage": false,
                 "searchKey": "httpapi.errorHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -199,7 +219,9 @@
                       "identifier": "errorHandler.Handle",
                       "newPage": false,
                       "searchKey": "httpapi.errorHandler.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -222,7 +244,9 @@
                 "identifier": "reposListServer",
                 "newPage": false,
                 "searchKey": "httpapi.reposListServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -240,7 +264,9 @@
                       "identifier": "reposListServer.serveIndex",
                       "newPage": false,
                       "searchKey": "httpapi.reposListServer.serveIndex",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -263,7 +289,9 @@
                 "identifier": "gitServiceHandler",
                 "newPage": false,
                 "searchKey": "httpapi.gitServiceHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -281,7 +309,9 @@
                       "identifier": "gitServiceHandler.serveInfoRefs",
                       "newPage": false,
                       "searchKey": "httpapi.gitServiceHandler.serveInfoRefs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -301,7 +331,9 @@
                       "identifier": "gitServiceHandler.serveGitUploadPack",
                       "newPage": false,
                       "searchKey": "httpapi.gitServiceHandler.serveGitUploadPack",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -321,7 +353,9 @@
                       "identifier": "gitServiceHandler.redirectToGitServer",
                       "newPage": false,
                       "searchKey": "httpapi.gitServiceHandler.redirectToGitServer",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -344,7 +378,9 @@
                 "identifier": "mockAddrForRepo",
                 "newPage": false,
                 "searchKey": "httpapi.mockAddrForRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -362,7 +398,9 @@
                       "identifier": "mockAddrForRepo.AddrForRepo",
                       "newPage": false,
                       "searchKey": "httpapi.mockAddrForRepo.AddrForRepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -385,7 +423,9 @@
                 "identifier": "mockRepos",
                 "newPage": false,
                 "searchKey": "httpapi.mockRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -403,7 +443,9 @@
                       "identifier": "mockRepos.ListIndexable",
                       "newPage": false,
                       "searchKey": "httpapi.mockRepos.ListIndexable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -423,7 +465,9 @@
                       "identifier": "mockRepos.List",
                       "newPage": false,
                       "searchKey": "httpapi.mockRepos.List",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -446,7 +490,9 @@
                 "identifier": "suffixIndexers",
                 "newPage": false,
                 "searchKey": "httpapi.suffixIndexers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -464,7 +510,9 @@
                       "identifier": "suffixIndexers.ReposSubset",
                       "newPage": false,
                       "searchKey": "httpapi.suffixIndexers.ReposSubset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -484,7 +532,9 @@
                       "identifier": "suffixIndexers.Enabled",
                       "newPage": false,
                       "searchKey": "httpapi.suffixIndexers.Enabled",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -510,7 +560,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -528,9 +580,7 @@
                 "identifier": "AccessTokenAuthMiddleware",
                 "newPage": false,
                 "searchKey": "httpapi.AccessTokenAuthMiddleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -550,7 +600,9 @@
                 "identifier": "serveGraphQL",
                 "newPage": false,
                 "searchKey": "httpapi.serveGraphQL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -570,7 +622,9 @@
                 "identifier": "traceGraphQL",
                 "newPage": false,
                 "searchKey": "httpapi.traceGraphQL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -590,7 +644,9 @@
                 "identifier": "getUID",
                 "newPage": false,
                 "searchKey": "httpapi.getUID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -610,7 +666,9 @@
                 "identifier": "writeJSON",
                 "newPage": false,
                 "searchKey": "httpapi.writeJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -630,9 +688,7 @@
                 "identifier": "NewHandler",
                 "newPage": false,
                 "searchKey": "httpapi.NewHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -652,9 +708,7 @@
                 "identifier": "NewInternalHandler",
                 "newPage": false,
                 "searchKey": "httpapi.NewInternalHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -669,12 +723,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/httpapi#init",
+              "pathID": "/cmd/frontend/internal/httpapi#init.httpapi.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.httpapi.go",
                 "newPage": false,
                 "searchKey": "httpapi.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -694,7 +750,9 @@
                 "identifier": "jsonMiddleware",
                 "newPage": false,
                 "searchKey": "httpapi.jsonMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -714,7 +772,9 @@
                 "identifier": "serveReposGetByName",
                 "newPage": false,
                 "searchKey": "httpapi.serveReposGetByName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -734,7 +794,9 @@
                 "identifier": "servePhabricatorRepoCreate",
                 "newPage": false,
                 "searchKey": "httpapi.servePhabricatorRepoCreate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -754,7 +816,9 @@
                 "identifier": "serveExternalServiceConfigs",
                 "newPage": false,
                 "searchKey": "httpapi.serveExternalServiceConfigs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -774,7 +838,9 @@
                 "identifier": "serveExternalServicesList",
                 "newPage": false,
                 "searchKey": "httpapi.serveExternalServicesList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -794,7 +860,9 @@
                 "identifier": "serveConfiguration",
                 "newPage": false,
                 "searchKey": "httpapi.serveConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -814,7 +882,9 @@
                 "identifier": "repoRankFromConfig",
                 "newPage": false,
                 "searchKey": "httpapi.repoRankFromConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -834,7 +904,9 @@
                 "identifier": "serveSearchConfiguration",
                 "newPage": false,
                 "searchKey": "httpapi.serveSearchConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -854,7 +926,9 @@
                 "identifier": "serveReposListEnabled",
                 "newPage": false,
                 "searchKey": "httpapi.serveReposListEnabled",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -874,7 +948,9 @@
                 "identifier": "serveSavedQueriesListAll",
                 "newPage": false,
                 "searchKey": "httpapi.serveSavedQueriesListAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -894,7 +970,9 @@
                 "identifier": "serveSavedQueriesGetInfo",
                 "newPage": false,
                 "searchKey": "httpapi.serveSavedQueriesGetInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -914,7 +992,9 @@
                 "identifier": "serveSavedQueriesSetInfo",
                 "newPage": false,
                 "searchKey": "httpapi.serveSavedQueriesSetInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -934,7 +1014,9 @@
                 "identifier": "serveSavedQueriesDeleteInfo",
                 "newPage": false,
                 "searchKey": "httpapi.serveSavedQueriesDeleteInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -954,7 +1036,9 @@
                 "identifier": "serveSettingsGetForSubject",
                 "newPage": false,
                 "searchKey": "httpapi.serveSettingsGetForSubject",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -974,7 +1058,9 @@
                 "identifier": "serveOrgsListUsers",
                 "newPage": false,
                 "searchKey": "httpapi.serveOrgsListUsers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -994,7 +1080,9 @@
                 "identifier": "serveOrgsGetByName",
                 "newPage": false,
                 "searchKey": "httpapi.serveOrgsGetByName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1014,7 +1102,9 @@
                 "identifier": "serveUsersGetByUsername",
                 "newPage": false,
                 "searchKey": "httpapi.serveUsersGetByUsername",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1034,7 +1124,9 @@
                 "identifier": "serveUserEmailsGetEmail",
                 "newPage": false,
                 "searchKey": "httpapi.serveUserEmailsGetEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1054,7 +1146,9 @@
                 "identifier": "serveExternalURL",
                 "newPage": false,
                 "searchKey": "httpapi.serveExternalURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1074,7 +1168,9 @@
                 "identifier": "serveCanSendEmail",
                 "newPage": false,
                 "searchKey": "httpapi.serveCanSendEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1094,7 +1190,9 @@
                 "identifier": "serveSendEmail",
                 "newPage": false,
                 "searchKey": "httpapi.serveSendEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1114,7 +1212,9 @@
                 "identifier": "serveGitResolveRevision",
                 "newPage": false,
                 "searchKey": "httpapi.serveGitResolveRevision",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1134,7 +1234,9 @@
                 "identifier": "serveGitTar",
                 "newPage": false,
                 "searchKey": "httpapi.serveGitTar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1154,7 +1256,9 @@
                 "identifier": "serveGitExec",
                 "newPage": false,
                 "searchKey": "httpapi.serveGitExec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1174,7 +1278,9 @@
                 "identifier": "handlePing",
                 "newPage": false,
                 "searchKey": "httpapi.handlePing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1194,7 +1300,9 @@
                 "identifier": "serveRepoRefresh",
                 "newPage": false,
                 "searchKey": "httpapi.serveRepoRefresh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1214,7 +1322,9 @@
                 "identifier": "badgeValue",
                 "newPage": false,
                 "searchKey": "httpapi.badgeValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1234,7 +1344,9 @@
                 "identifier": "badgeValueFmt",
                 "newPage": false,
                 "searchKey": "httpapi.badgeValueFmt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1254,7 +1366,9 @@
                 "identifier": "serveRepoShield",
                 "newPage": false,
                 "searchKey": "httpapi.serveRepoShield",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1274,7 +1388,9 @@
                 "identifier": "srcCliVersionServe",
                 "newPage": false,
                 "searchKey": "httpapi.srcCliVersionServe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1294,7 +1410,9 @@
                 "identifier": "srcCliDownloadServe",
                 "newPage": false,
                 "searchKey": "httpapi.srcCliDownloadServe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1314,7 +1432,9 @@
                 "identifier": "srcCliVersion",
                 "newPage": false,
                 "searchKey": "httpapi.srcCliVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1334,7 +1454,9 @@
                 "identifier": "isExpectedRelease",
                 "newPage": false,
                 "searchKey": "httpapi.isExpectedRelease",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1354,7 +1476,9 @@
                 "identifier": "telemetryHandler",
                 "newPage": false,
                 "searchKey": "httpapi.telemetryHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1369,12 +1493,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/httpapi#init",
+              "pathID": "/cmd/frontend/internal/httpapi#init.api_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.api_test.go",
                 "newPage": false,
                 "searchKey": "httpapi.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1394,7 +1520,9 @@
                 "identifier": "newTest",
                 "newPage": false,
                 "searchKey": "httpapi.newTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1414,7 +1542,9 @@
                 "identifier": "TestAccessTokenAuthMiddleware",
                 "newPage": false,
                 "searchKey": "httpapi.TestAccessTokenAuthMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1429,12 +1559,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/httpapi#init",
+              "pathID": "/cmd/frontend/internal/httpapi#init.db_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "httpapi.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1454,7 +1586,9 @@
                 "identifier": "TestGitServiceHandlers",
                 "newPage": false,
                 "searchKey": "httpapi.TestGitServiceHandlers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1474,7 +1608,9 @@
                 "identifier": "TestReposIndex",
                 "newPage": false,
                 "searchKey": "httpapi.TestReposIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1494,7 +1630,9 @@
                 "identifier": "TestRepoRankFromConfig",
                 "newPage": false,
                 "searchKey": "httpapi.TestRepoRankFromConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1514,7 +1652,9 @@
                 "identifier": "TestRepoRefresh",
                 "newPage": false,
                 "searchKey": "httpapi.TestRepoRefresh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1534,7 +1674,9 @@
                 "identifier": "TestRepoShieldFmt",
                 "newPage": false,
                 "searchKey": "httpapi.TestRepoShieldFmt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1554,7 +1696,9 @@
                 "identifier": "TestRepoShield",
                 "newPage": false,
                 "searchKey": "httpapi.TestRepoShield",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

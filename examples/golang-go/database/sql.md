@@ -358,39 +358,39 @@ For usage examples, see the wiki page at [https://golang.org/s/sqlwiki](https://
     * [type nullTestSpec struct](#nullTestSpec)
     * [type concurrentTest interface](#concurrentTest)
     * [type concurrentDBQueryTest struct](#concurrentDBQueryTest)
-        * [func (c *concurrentDBQueryTest) init(t testing.TB, db *DB)](#concurrentDBQueryTest.init)
+        * [func (c *concurrentDBQueryTest) init(t testing.TB, db *DB)](#concurrentDBQueryTest.init.sql_test.go.0xc0564c0da8)
         * [func (c *concurrentDBQueryTest) finish(t testing.TB)](#concurrentDBQueryTest.finish)
         * [func (c *concurrentDBQueryTest) test(t testing.TB) error](#concurrentDBQueryTest.test)
     * [type concurrentDBExecTest struct](#concurrentDBExecTest)
-        * [func (c *concurrentDBExecTest) init(t testing.TB, db *DB)](#concurrentDBExecTest.init)
+        * [func (c *concurrentDBExecTest) init(t testing.TB, db *DB)](#concurrentDBExecTest.init.sql_test.go.0xc0564c0da8)
         * [func (c *concurrentDBExecTest) finish(t testing.TB)](#concurrentDBExecTest.finish)
         * [func (c *concurrentDBExecTest) test(t testing.TB) error](#concurrentDBExecTest.test)
     * [type concurrentStmtQueryTest struct](#concurrentStmtQueryTest)
-        * [func (c *concurrentStmtQueryTest) init(t testing.TB, db *DB)](#concurrentStmtQueryTest.init)
+        * [func (c *concurrentStmtQueryTest) init(t testing.TB, db *DB)](#concurrentStmtQueryTest.init.sql_test.go.0xc0564c0da8)
         * [func (c *concurrentStmtQueryTest) finish(t testing.TB)](#concurrentStmtQueryTest.finish)
         * [func (c *concurrentStmtQueryTest) test(t testing.TB) error](#concurrentStmtQueryTest.test)
     * [type concurrentStmtExecTest struct](#concurrentStmtExecTest)
-        * [func (c *concurrentStmtExecTest) init(t testing.TB, db *DB)](#concurrentStmtExecTest.init)
+        * [func (c *concurrentStmtExecTest) init(t testing.TB, db *DB)](#concurrentStmtExecTest.init.sql_test.go.0xc0564c0da8)
         * [func (c *concurrentStmtExecTest) finish(t testing.TB)](#concurrentStmtExecTest.finish)
         * [func (c *concurrentStmtExecTest) test(t testing.TB) error](#concurrentStmtExecTest.test)
     * [type concurrentTxQueryTest struct](#concurrentTxQueryTest)
-        * [func (c *concurrentTxQueryTest) init(t testing.TB, db *DB)](#concurrentTxQueryTest.init)
+        * [func (c *concurrentTxQueryTest) init(t testing.TB, db *DB)](#concurrentTxQueryTest.init.sql_test.go.0xc0564c0da8)
         * [func (c *concurrentTxQueryTest) finish(t testing.TB)](#concurrentTxQueryTest.finish)
         * [func (c *concurrentTxQueryTest) test(t testing.TB) error](#concurrentTxQueryTest.test)
     * [type concurrentTxExecTest struct](#concurrentTxExecTest)
-        * [func (c *concurrentTxExecTest) init(t testing.TB, db *DB)](#concurrentTxExecTest.init)
+        * [func (c *concurrentTxExecTest) init(t testing.TB, db *DB)](#concurrentTxExecTest.init.sql_test.go.0xc0564c0da8)
         * [func (c *concurrentTxExecTest) finish(t testing.TB)](#concurrentTxExecTest.finish)
         * [func (c *concurrentTxExecTest) test(t testing.TB) error](#concurrentTxExecTest.test)
     * [type concurrentTxStmtQueryTest struct](#concurrentTxStmtQueryTest)
-        * [func (c *concurrentTxStmtQueryTest) init(t testing.TB, db *DB)](#concurrentTxStmtQueryTest.init)
+        * [func (c *concurrentTxStmtQueryTest) init(t testing.TB, db *DB)](#concurrentTxStmtQueryTest.init.sql_test.go.0xc0564c0da8)
         * [func (c *concurrentTxStmtQueryTest) finish(t testing.TB)](#concurrentTxStmtQueryTest.finish)
         * [func (c *concurrentTxStmtQueryTest) test(t testing.TB) error](#concurrentTxStmtQueryTest.test)
     * [type concurrentTxStmtExecTest struct](#concurrentTxStmtExecTest)
-        * [func (c *concurrentTxStmtExecTest) init(t testing.TB, db *DB)](#concurrentTxStmtExecTest.init)
+        * [func (c *concurrentTxStmtExecTest) init(t testing.TB, db *DB)](#concurrentTxStmtExecTest.init.sql_test.go.0xc0564c0da8)
         * [func (c *concurrentTxStmtExecTest) finish(t testing.TB)](#concurrentTxStmtExecTest.finish)
         * [func (c *concurrentTxStmtExecTest) test(t testing.TB) error](#concurrentTxStmtExecTest.test)
     * [type concurrentRandomTest struct](#concurrentRandomTest)
-        * [func (c *concurrentRandomTest) init(t testing.TB, db *DB)](#concurrentRandomTest.init)
+        * [func (c *concurrentRandomTest) init(t testing.TB, db *DB)](#concurrentRandomTest.init.sql_test.go.0xc0564c0da8)
         * [func (c *concurrentRandomTest) finish(t testing.TB)](#concurrentRandomTest.finish)
         * [func (c *concurrentRandomTest) test(t testing.TB) error](#concurrentRandomTest.test)
     * [type nvcDriver struct](#nvcDriver)
@@ -461,7 +461,7 @@ For usage examples, see the wiki page at [https://golang.org/s/sqlwiki](https://
     * [func TestUserDefinedBytes(t *testing.T)](#TestUserDefinedBytes)
     * [func TestDriverArgs(t *testing.T)](#TestDriverArgs)
     * [func TestDecimal(t *testing.T)](#TestDecimal)
-    * [func init()](#init)
+    * [func init()](#init.fakedb_test.go)
     * [func contains(list []string, y string) bool](#contains)
     * [func TestDrivers(t *testing.T)](#TestDrivers)
     * [func setHookOpenErr(fn func() error)](#setHookOpenErr)
@@ -471,7 +471,7 @@ For usage examples, see the wiki page at [https://golang.org/s/sqlwiki](https://
     * [func errf(msg string, args ...interface{}) error](#errf)
     * [func converterForType(typ string) driver.ValueConverter](#converterForType)
     * [func colTypeToReflectType(typ string) reflect.Type](#colTypeToReflectType)
-    * [func init()](#init)
+    * [func init()](#init.sql_test.go)
     * [func TestOpenDB(t *testing.T)](#TestOpenDB)
     * [func TestDriverPanic(t *testing.T)](#TestDriverPanic)
     * [func exec(t testing.TB, db *DB, query string, args ...interface{})](#exec)
@@ -520,7 +520,7 @@ For usage examples, see the wiki page at [https://golang.org/s/sqlwiki](https://
     * [func TestNullByteSlice(t *testing.T)](#TestNullByteSlice)
     * [func TestPointerParamsAndScans(t *testing.T)](#TestPointerParamsAndScans)
     * [func TestQueryRowClosingStmt(t *testing.T)](#TestQueryRowClosingStmt)
-    * [func init()](#init)
+    * [func init()](#init.sql_test.go.0xc0564c0da8)
     * [func setRowsCloseHook(fn func(*Rows, *error))](#setRowsCloseHook)
     * [func TestIssue6651(t *testing.T)](#TestIssue6651)
     * [func TestNullStringParam(t *testing.T)](#TestNullStringParam)
@@ -587,15 +587,10 @@ For usage examples, see the wiki page at [https://golang.org/s/sqlwiki](https://
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="LevelDefault" href="#LevelDefault">const LevelDefault</a>
 
 ```
 searchKey: sql.LevelDefault
-tags: [exported]
 ```
 
 ```Go
@@ -610,7 +605,6 @@ See [https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels
 
 ```
 searchKey: sql.LevelReadUncommitted
-tags: [exported]
 ```
 
 ```Go
@@ -625,7 +619,6 @@ See [https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels
 
 ```
 searchKey: sql.LevelReadCommitted
-tags: [exported]
 ```
 
 ```Go
@@ -640,7 +633,6 @@ See [https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels
 
 ```
 searchKey: sql.LevelWriteCommitted
-tags: [exported]
 ```
 
 ```Go
@@ -655,7 +647,6 @@ See [https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels
 
 ```
 searchKey: sql.LevelRepeatableRead
-tags: [exported]
 ```
 
 ```Go
@@ -670,7 +661,6 @@ See [https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels
 
 ```
 searchKey: sql.LevelSnapshot
-tags: [exported]
 ```
 
 ```Go
@@ -685,7 +675,6 @@ See [https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels
 
 ```
 searchKey: sql.LevelSerializable
-tags: [exported]
 ```
 
 ```Go
@@ -700,7 +689,6 @@ See [https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels
 
 ```
 searchKey: sql.LevelLinearizable
-tags: [exported]
 ```
 
 ```Go
@@ -715,6 +703,7 @@ See [https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels
 
 ```
 searchKey: sql.alwaysNewConn
+tags: [private]
 ```
 
 ```Go
@@ -727,6 +716,7 @@ alwaysNewConn forces a new connection to the database.
 
 ```
 searchKey: sql.cachedOrNewConn
+tags: [private]
 ```
 
 ```Go
@@ -739,6 +729,7 @@ cachedOrNewConn returns a cached connection, if available, else waits for one to
 
 ```
 searchKey: sql.defaultMaxIdleConns
+tags: [private]
 ```
 
 ```Go
@@ -749,6 +740,7 @@ const defaultMaxIdleConns = 2
 
 ```
 searchKey: sql.debugGetPut
+tags: [private]
 ```
 
 ```Go
@@ -761,6 +753,7 @@ debugGetPut determines whether getConn & putConn calls' stack traces are returne
 
 ```
 searchKey: sql.maxBadConnRetries
+tags: [private]
 ```
 
 ```Go
@@ -773,6 +766,7 @@ maxBadConnRetries is the number of maximum retries if the driver returns driver.
 
 ```
 searchKey: sql.fakeDBName
+tags: [private]
 ```
 
 ```Go
@@ -781,14 +775,11 @@ const fakeDBName = "foo"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="errNilPtr" href="#errNilPtr">var errNilPtr</a>
 
 ```
 searchKey: sql.errNilPtr
+tags: [private]
 ```
 
 ```Go
@@ -800,6 +791,7 @@ var errNilPtr = errors.New("destination pointer is nil") // embedded in descript
 
 ```
 searchKey: sql.valuerReflectType
+tags: [private]
 ```
 
 ```Go
@@ -810,6 +802,7 @@ var valuerReflectType = reflect.TypeOf((*driver.Valuer)(nil)).Elem()
 
 ```
 searchKey: sql.driversMu
+tags: [private]
 ```
 
 ```Go
@@ -820,6 +813,7 @@ var driversMu sync.RWMutex
 
 ```
 searchKey: sql.drivers
+tags: [private]
 ```
 
 ```Go
@@ -830,6 +824,7 @@ var drivers = make(map[string]driver.Driver)
 
 ```
 searchKey: sql.nowFunc
+tags: [private]
 ```
 
 ```Go
@@ -842,7 +837,6 @@ nowFunc returns the current time; it's overridden in tests.
 
 ```
 searchKey: sql.ErrNoRows
-tags: [exported]
 ```
 
 ```Go
@@ -855,6 +849,7 @@ ErrNoRows is returned by Scan when QueryRow doesn't return a row. In such a case
 
 ```
 searchKey: sql.connectionRequestQueueSize
+tags: [private]
 ```
 
 ```Go
@@ -867,6 +862,7 @@ This is the size of the connectionOpener request chan (DB.openerCh). This value 
 
 ```
 searchKey: sql.errDBClosed
+tags: [private]
 ```
 
 ```Go
@@ -877,6 +873,7 @@ var errDBClosed = errors.New("sql: database is closed")
 
 ```
 searchKey: sql.putConnHook
+tags: [private]
 ```
 
 ```Go
@@ -889,7 +886,6 @@ putConnHook is a hook for testing.
 
 ```
 searchKey: sql.ErrConnDone
-tags: [exported]
 ```
 
 ```Go
@@ -902,7 +898,6 @@ ErrConnDone is returned by any operation that is performed on a connection that 
 
 ```
 searchKey: sql.ErrTxDone
-tags: [exported]
 ```
 
 ```Go
@@ -915,6 +910,7 @@ ErrTxDone is returned by any operation that is performed on a transaction that h
 
 ```
 searchKey: sql.hookTxGrabConn
+tags: [private]
 ```
 
 ```Go
@@ -927,6 +923,7 @@ hookTxGrabConn specifies an optional hook to be called on a successful call to (
 
 ```
 searchKey: sql.rollbackHook
+tags: [private]
 ```
 
 ```Go
@@ -937,6 +934,7 @@ var rollbackHook func()
 
 ```
 searchKey: sql.bypassRowsAwaitDone
+tags: [private]
 ```
 
 ```Go
@@ -949,6 +947,7 @@ bypassRowsAwaitDone is only used for testing. If true, it will not close the Row
 
 ```
 searchKey: sql.errRowsClosed
+tags: [private]
 ```
 
 ```Go
@@ -959,6 +958,7 @@ var errRowsClosed = errors.New("sql: Rows are closed")
 
 ```
 searchKey: sql.errNoRows
+tags: [private]
 ```
 
 ```Go
@@ -969,6 +969,7 @@ var errNoRows = errors.New("sql: no Rows available")
 
 ```
 searchKey: sql.rowsCloseHook
+tags: [private]
 ```
 
 ```Go
@@ -981,6 +982,7 @@ rowsCloseHook returns a function so tests may install the hook through a test on
 
 ```
 searchKey: sql.someTime
+tags: [private]
 ```
 
 ```Go
@@ -991,6 +993,7 @@ var someTime = time.Unix(123, 0)
 
 ```
 searchKey: sql.answer
+tags: [private]
 ```
 
 ```Go
@@ -1001,6 +1004,7 @@ var answer int64 = 42
 
 ```
 searchKey: sql.scanstr
+tags: [private]
 ```
 
 ```Go
@@ -1013,6 +1017,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanbytes
+tags: [private]
 ```
 
 ```Go
@@ -1025,6 +1030,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanraw
+tags: [private]
 ```
 
 ```Go
@@ -1037,6 +1043,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanint
+tags: [private]
 ```
 
 ```Go
@@ -1049,6 +1056,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanint8
+tags: [private]
 ```
 
 ```Go
@@ -1061,6 +1069,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanint16
+tags: [private]
 ```
 
 ```Go
@@ -1073,6 +1082,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanint32
+tags: [private]
 ```
 
 ```Go
@@ -1085,6 +1095,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanuint8
+tags: [private]
 ```
 
 ```Go
@@ -1097,6 +1108,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanuint16
+tags: [private]
 ```
 
 ```Go
@@ -1109,6 +1121,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanbool
+tags: [private]
 ```
 
 ```Go
@@ -1121,6 +1134,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanf32
+tags: [private]
 ```
 
 ```Go
@@ -1133,6 +1147,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanf64
+tags: [private]
 ```
 
 ```Go
@@ -1145,6 +1160,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scantime
+tags: [private]
 ```
 
 ```Go
@@ -1157,6 +1173,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scanptr
+tags: [private]
 ```
 
 ```Go
@@ -1169,6 +1186,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.scaniface
+tags: [private]
 ```
 
 ```Go
@@ -1181,6 +1199,7 @@ Target variables for scanning into.
 
 ```
 searchKey: sql.valueConverterTests
+tags: [private]
 ```
 
 ```Go
@@ -1191,6 +1210,7 @@ var valueConverterTests = ...
 
 ```
 searchKey: sql.fdriver
+tags: [private]
 ```
 
 ```Go
@@ -1201,6 +1221,7 @@ var fdriver driver.Driver = &fakeDriver{}
 
 ```
 searchKey: sql.hookOpenErr
+tags: [private]
 ```
 
 ```Go
@@ -1216,6 +1237,7 @@ hook to simulate connection failures
 
 ```
 searchKey: sql.hookPostCloseConn
+tags: [private]
 ```
 
 ```Go
@@ -1229,6 +1251,7 @@ var hookPostCloseConn struct {
 
 ```
 searchKey: sql.testStrictClose
+tags: [private]
 ```
 
 ```Go
@@ -1239,6 +1262,7 @@ var testStrictClose *testing.T
 
 ```
 searchKey: sql.hookPrepareBadConn
+tags: [private]
 ```
 
 ```Go
@@ -1251,6 +1275,7 @@ hook to simulate broken connections
 
 ```
 searchKey: sql.errClosed
+tags: [private]
 ```
 
 ```Go
@@ -1261,6 +1286,7 @@ var errClosed = errors.New("fakedb: statement has been closed")
 
 ```
 searchKey: sql.hookExecBadConn
+tags: [private]
 ```
 
 ```Go
@@ -1273,6 +1299,7 @@ hook to simulate broken connections
 
 ```
 searchKey: sql.errFakeConnSessionDirty
+tags: [private]
 ```
 
 ```Go
@@ -1283,6 +1310,7 @@ var errFakeConnSessionDirty = errors.New("fakedb: session is dirty")
 
 ```
 searchKey: sql.hookQueryBadConn
+tags: [private]
 ```
 
 ```Go
@@ -1295,6 +1323,7 @@ hook to simulate broken connections
 
 ```
 searchKey: sql.hookCommitBadConn
+tags: [private]
 ```
 
 ```Go
@@ -1307,6 +1336,7 @@ hook to simulate broken connections
 
 ```
 searchKey: sql.hookRollbackBadConn
+tags: [private]
 ```
 
 ```Go
@@ -1319,6 +1349,7 @@ hook to simulate broken connections
 
 ```
 searchKey: sql.rowsCursorNextHook
+tags: [private]
 ```
 
 ```Go
@@ -1329,6 +1360,7 @@ var rowsCursorNextHook func(dest []driver.Value) error
 
 ```
 searchKey: sql.chrisBirthday
+tags: [private]
 ```
 
 ```Go
@@ -1339,6 +1371,7 @@ var chrisBirthday = time.Unix(123456789, 0)
 
 ```
 searchKey: sql.atomicRowsCloseHook
+tags: [private]
 ```
 
 ```Go
@@ -1350,6 +1383,7 @@ var atomicRowsCloseHook atomic.Value // of func(*Rows, *error)
 
 ```
 searchKey: sql.errTestScanWrap
+tags: [private]
 ```
 
 ```Go
@@ -1360,6 +1394,7 @@ var errTestScanWrap = errors.New("errTestScanWrap")
 
 ```
 searchKey: sql.pingError
+tags: [private]
 ```
 
 ```Go
@@ -1368,14 +1403,11 @@ var pingError = errors.New("Ping failed")
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ccChecker" href="#ccChecker">type ccChecker struct</a>
 
 ```
 searchKey: sql.ccChecker
+tags: [private]
 ```
 
 ```Go
@@ -1391,6 +1423,7 @@ ccChecker wraps the driver.ColumnConverter and allows it to be used as if it wer
 
 ```
 searchKey: sql.ccChecker.CheckNamedValue
+tags: [private]
 ```
 
 ```Go
@@ -1401,6 +1434,7 @@ func (c ccChecker) CheckNamedValue(nv *driver.NamedValue) error
 
 ```
 searchKey: sql.decimal
+tags: [private]
 ```
 
 ```Go
@@ -1420,6 +1454,7 @@ NOTE(kardianos): This is an experimental interface. See [https://golang.org/issu
 
 ```
 searchKey: sql.decimalDecompose
+tags: [private]
 ```
 
 ```Go
@@ -1435,6 +1470,7 @@ type decimalDecompose interface {
 
 ```
 searchKey: sql.decimalCompose
+tags: [private]
 ```
 
 ```Go
@@ -1449,7 +1485,6 @@ type decimalCompose interface {
 
 ```
 searchKey: sql.NamedArg
-tags: [exported]
 ```
 
 ```Go
@@ -1479,7 +1514,6 @@ For a more concise way to create NamedArg values, see the Named function.
 
 ```
 searchKey: sql.Named
-tags: [exported]
 ```
 
 ```Go
@@ -1505,7 +1539,6 @@ db.ExecContext(ctx, `
 
 ```
 searchKey: sql.IsolationLevel
-tags: [exported]
 ```
 
 ```Go
@@ -1518,7 +1551,6 @@ IsolationLevel is the transaction isolation level used in TxOptions.
 
 ```
 searchKey: sql.IsolationLevel.String
-tags: [exported]
 ```
 
 ```Go
@@ -1531,7 +1563,6 @@ String returns the name of the transaction isolation level.
 
 ```
 searchKey: sql.TxOptions
-tags: [exported]
 ```
 
 ```Go
@@ -1549,7 +1580,6 @@ TxOptions holds the transaction options to be used in DB.BeginTx.
 
 ```
 searchKey: sql.RawBytes
-tags: [exported]
 ```
 
 ```Go
@@ -1562,7 +1592,6 @@ RawBytes is a byte slice that holds a reference to memory owned by the database 
 
 ```
 searchKey: sql.NullString
-tags: [exported]
 ```
 
 ```Go
@@ -1589,7 +1618,6 @@ if s.Valid {
 
 ```
 searchKey: sql.NullString.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -1602,7 +1630,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: sql.NullString.Value
-tags: [exported]
 ```
 
 ```Go
@@ -1615,7 +1642,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: sql.NullInt64
-tags: [exported]
 ```
 
 ```Go
@@ -1631,7 +1657,6 @@ NullInt64 represents an int64 that may be null. NullInt64 implements the Scanner
 
 ```
 searchKey: sql.NullInt64.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -1644,7 +1669,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: sql.NullInt64.Value
-tags: [exported]
 ```
 
 ```Go
@@ -1657,7 +1681,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: sql.NullInt32
-tags: [exported]
 ```
 
 ```Go
@@ -1673,7 +1696,6 @@ NullInt32 represents an int32 that may be null. NullInt32 implements the Scanner
 
 ```
 searchKey: sql.NullInt32.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -1686,7 +1708,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: sql.NullInt32.Value
-tags: [exported]
 ```
 
 ```Go
@@ -1699,7 +1720,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: sql.NullInt16
-tags: [exported]
 ```
 
 ```Go
@@ -1715,7 +1735,6 @@ NullInt16 represents an int16 that may be null. NullInt16 implements the Scanner
 
 ```
 searchKey: sql.NullInt16.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -1728,7 +1747,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: sql.NullInt16.Value
-tags: [exported]
 ```
 
 ```Go
@@ -1741,7 +1759,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: sql.NullByte
-tags: [exported]
 ```
 
 ```Go
@@ -1757,7 +1774,6 @@ NullByte represents a byte that may be null. NullByte implements the Scanner int
 
 ```
 searchKey: sql.NullByte.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -1770,7 +1786,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: sql.NullByte.Value
-tags: [exported]
 ```
 
 ```Go
@@ -1783,7 +1798,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: sql.NullFloat64
-tags: [exported]
 ```
 
 ```Go
@@ -1799,7 +1813,6 @@ NullFloat64 represents a float64 that may be null. NullFloat64 implements the Sc
 
 ```
 searchKey: sql.NullFloat64.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -1812,7 +1825,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: sql.NullFloat64.Value
-tags: [exported]
 ```
 
 ```Go
@@ -1825,7 +1837,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: sql.NullBool
-tags: [exported]
 ```
 
 ```Go
@@ -1841,7 +1852,6 @@ NullBool represents a bool that may be null. NullBool implements the Scanner int
 
 ```
 searchKey: sql.NullBool.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -1854,7 +1864,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: sql.NullBool.Value
-tags: [exported]
 ```
 
 ```Go
@@ -1867,7 +1876,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: sql.NullTime
-tags: [exported]
 ```
 
 ```Go
@@ -1883,7 +1891,6 @@ NullTime represents a time.Time that may be null. NullTime implements the Scanne
 
 ```
 searchKey: sql.NullTime.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -1896,7 +1903,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: sql.NullTime.Value
-tags: [exported]
 ```
 
 ```Go
@@ -1909,7 +1915,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: sql.Scanner
-tags: [exported]
 ```
 
 ```Go
@@ -1942,7 +1947,6 @@ Scanner is an interface used by Scan.
 
 ```
 searchKey: sql.Out
-tags: [exported]
 ```
 
 ```Go
@@ -1975,7 +1979,6 @@ _, err := db.ExecContext(ctx, "ProcName", sql.Named("Arg1", sql.Out{Dest: &outAr
 
 ```
 searchKey: sql.DB
-tags: [exported]
 ```
 
 ```Go
@@ -2026,7 +2029,6 @@ The sql package creates and frees connections automatically; it also maintains a
 
 ```
 searchKey: sql.OpenDB
-tags: [exported]
 ```
 
 ```Go
@@ -2045,7 +2047,6 @@ The returned DB is safe for concurrent use by multiple goroutines and maintains 
 
 ```
 searchKey: sql.Open
-tags: [exported]
 ```
 
 ```Go
@@ -2064,6 +2065,7 @@ The returned DB is safe for concurrent use by multiple goroutines and maintains 
 
 ```
 searchKey: sql.newTestDB
+tags: [private]
 ```
 
 ```Go
@@ -2074,6 +2076,7 @@ func newTestDB(t testing.TB, name string) *DB
 
 ```
 searchKey: sql.newTestDBConnector
+tags: [private]
 ```
 
 ```Go
@@ -2084,6 +2087,7 @@ func newTestDBConnector(t testing.TB, fc *fakeConnector, name string) *DB
 
 ```
 searchKey: sql.DB.addDep
+tags: [private]
 ```
 
 ```Go
@@ -2096,6 +2100,7 @@ addDep notes that x now depends on dep, and x's finalClose won't be called until
 
 ```
 searchKey: sql.DB.addDepLocked
+tags: [private]
 ```
 
 ```Go
@@ -2106,6 +2111,7 @@ func (db *DB) addDepLocked(x finalCloser, dep interface{})
 
 ```
 searchKey: sql.DB.removeDep
+tags: [private]
 ```
 
 ```Go
@@ -2118,6 +2124,7 @@ removeDep notes that x no longer depends on dep. If x still has dependencies, ni
 
 ```
 searchKey: sql.DB.removeDepLocked
+tags: [private]
 ```
 
 ```Go
@@ -2128,6 +2135,7 @@ func (db *DB) removeDepLocked(x finalCloser, dep interface{}) func() error
 
 ```
 searchKey: sql.DB.pingDC
+tags: [private]
 ```
 
 ```Go
@@ -2138,7 +2146,6 @@ func (db *DB) pingDC(ctx context.Context, dc *driverConn, release func(error)) e
 
 ```
 searchKey: sql.DB.PingContext
-tags: [exported]
 ```
 
 ```Go
@@ -2151,7 +2158,6 @@ PingContext verifies a connection to the database is still alive, establishing a
 
 ```
 searchKey: sql.DB.Ping
-tags: [exported]
 ```
 
 ```Go
@@ -2166,7 +2172,6 @@ Ping uses context.Background internally; to specify the context, use PingContext
 
 ```
 searchKey: sql.DB.Close
-tags: [exported]
 ```
 
 ```Go
@@ -2181,6 +2186,7 @@ It is rare to Close a DB, as the DB handle is meant to be long-lived and shared 
 
 ```
 searchKey: sql.DB.maxIdleConnsLocked
+tags: [private]
 ```
 
 ```Go
@@ -2191,6 +2197,7 @@ func (db *DB) maxIdleConnsLocked() int
 
 ```
 searchKey: sql.DB.shortestIdleTimeLocked
+tags: [private]
 ```
 
 ```Go
@@ -2201,7 +2208,6 @@ func (db *DB) shortestIdleTimeLocked() time.Duration
 
 ```
 searchKey: sql.DB.SetMaxIdleConns
-tags: [exported]
 ```
 
 ```Go
@@ -2220,7 +2226,6 @@ The default max idle connections is currently 2. This may change in a future rel
 
 ```
 searchKey: sql.DB.SetMaxOpenConns
-tags: [exported]
 ```
 
 ```Go
@@ -2237,7 +2242,6 @@ If n <= 0, then there is no limit on the number of open connections. The default
 
 ```
 searchKey: sql.DB.SetConnMaxLifetime
-tags: [exported]
 ```
 
 ```Go
@@ -2254,7 +2258,6 @@ If d <= 0, connections are not closed due to a connection's age.
 
 ```
 searchKey: sql.DB.SetConnMaxIdleTime
-tags: [exported]
 ```
 
 ```Go
@@ -2271,6 +2274,7 @@ If d <= 0, connections are not closed due to a connection's idle time.
 
 ```
 searchKey: sql.DB.startCleanerLocked
+tags: [private]
 ```
 
 ```Go
@@ -2283,6 +2287,7 @@ startCleanerLocked starts connectionCleaner if needed.
 
 ```
 searchKey: sql.DB.connectionCleaner
+tags: [private]
 ```
 
 ```Go
@@ -2293,6 +2298,7 @@ func (db *DB) connectionCleaner(d time.Duration)
 
 ```
 searchKey: sql.DB.connectionCleanerRunLocked
+tags: [private]
 ```
 
 ```Go
@@ -2303,7 +2309,6 @@ func (db *DB) connectionCleanerRunLocked() (closing []*driverConn)
 
 ```
 searchKey: sql.DB.Stats
-tags: [exported]
 ```
 
 ```Go
@@ -2316,6 +2321,7 @@ Stats returns database statistics.
 
 ```
 searchKey: sql.DB.maybeOpenNewConnections
+tags: [private]
 ```
 
 ```Go
@@ -2328,6 +2334,7 @@ Assumes db.mu is locked. If there are connRequests and the connection limit hasn
 
 ```
 searchKey: sql.DB.connectionOpener
+tags: [private]
 ```
 
 ```Go
@@ -2340,6 +2347,7 @@ Runs in a separate goroutine, opens new connections when requested.
 
 ```
 searchKey: sql.DB.openNewConnection
+tags: [private]
 ```
 
 ```Go
@@ -2352,6 +2360,7 @@ Open one new connection
 
 ```
 searchKey: sql.DB.nextRequestKeyLocked
+tags: [private]
 ```
 
 ```Go
@@ -2364,6 +2373,7 @@ nextRequestKeyLocked returns the next connection request key. It is assumed that
 
 ```
 searchKey: sql.DB.conn
+tags: [private]
 ```
 
 ```Go
@@ -2376,6 +2386,7 @@ conn returns a newly-opened or cached *driverConn.
 
 ```
 searchKey: sql.DB.noteUnusedDriverStatement
+tags: [private]
 ```
 
 ```Go
@@ -2388,6 +2399,7 @@ noteUnusedDriverStatement notes that ds is no longer used and should be closed w
 
 ```
 searchKey: sql.DB.putConn
+tags: [private]
 ```
 
 ```Go
@@ -2400,6 +2412,7 @@ putConn adds a connection to the db's free pool. err is optionally the last erro
 
 ```
 searchKey: sql.DB.putConnDBLocked
+tags: [private]
 ```
 
 ```Go
@@ -2412,7 +2425,6 @@ Satisfy a connRequest or put the driverConn in the idle pool and return true or 
 
 ```
 searchKey: sql.DB.PrepareContext
-tags: [exported]
 ```
 
 ```Go
@@ -2427,7 +2439,6 @@ The provided context is used for the preparation of the statement, not for the e
 
 ```
 searchKey: sql.DB.Prepare
-tags: [exported]
 ```
 
 ```Go
@@ -2442,6 +2453,7 @@ Prepare uses context.Background internally; to specify the context, use PrepareC
 
 ```
 searchKey: sql.DB.prepare
+tags: [private]
 ```
 
 ```Go
@@ -2452,6 +2464,7 @@ func (db *DB) prepare(ctx context.Context, query string, strategy connReuseStrat
 
 ```
 searchKey: sql.DB.prepareDC
+tags: [private]
 ```
 
 ```Go
@@ -2464,7 +2477,6 @@ prepareDC prepares a query on the driverConn and calls release before returning.
 
 ```
 searchKey: sql.DB.ExecContext
-tags: [exported]
 ```
 
 ```Go
@@ -2477,7 +2489,6 @@ ExecContext executes a query without returning any rows. The args are for any pl
 
 ```
 searchKey: sql.DB.Exec
-tags: [exported]
 ```
 
 ```Go
@@ -2492,6 +2503,7 @@ Exec uses context.Background internally; to specify the context, use ExecContext
 
 ```
 searchKey: sql.DB.exec
+tags: [private]
 ```
 
 ```Go
@@ -2502,6 +2514,7 @@ func (db *DB) exec(ctx context.Context, query string, args []interface{}, strate
 
 ```
 searchKey: sql.DB.execDC
+tags: [private]
 ```
 
 ```Go
@@ -2512,7 +2525,6 @@ func (db *DB) execDC(ctx context.Context, dc *driverConn, release func(error), q
 
 ```
 searchKey: sql.DB.QueryContext
-tags: [exported]
 ```
 
 ```Go
@@ -2525,7 +2537,6 @@ QueryContext executes a query that returns rows, typically a SELECT. The args ar
 
 ```
 searchKey: sql.DB.Query
-tags: [exported]
 ```
 
 ```Go
@@ -2540,6 +2551,7 @@ Query uses context.Background internally; to specify the context, use QueryConte
 
 ```
 searchKey: sql.DB.query
+tags: [private]
 ```
 
 ```Go
@@ -2550,6 +2562,7 @@ func (db *DB) query(ctx context.Context, query string, args []interface{}, strat
 
 ```
 searchKey: sql.DB.queryDC
+tags: [private]
 ```
 
 ```Go
@@ -2562,7 +2575,6 @@ queryDC executes a query on the given connection. The connection gets released b
 
 ```
 searchKey: sql.DB.QueryRowContext
-tags: [exported]
 ```
 
 ```Go
@@ -2575,7 +2587,6 @@ QueryRowContext executes a query that is expected to return at most one row. Que
 
 ```
 searchKey: sql.DB.QueryRow
-tags: [exported]
 ```
 
 ```Go
@@ -2590,7 +2601,6 @@ QueryRow uses context.Background internally; to specify the context, use QueryRo
 
 ```
 searchKey: sql.DB.BeginTx
-tags: [exported]
 ```
 
 ```Go
@@ -2607,7 +2617,6 @@ The provided TxOptions is optional and may be nil if defaults should be used. If
 
 ```
 searchKey: sql.DB.Begin
-tags: [exported]
 ```
 
 ```Go
@@ -2622,6 +2631,7 @@ Begin uses context.Background internally; to specify the context, use BeginTx.
 
 ```
 searchKey: sql.DB.begin
+tags: [private]
 ```
 
 ```Go
@@ -2632,6 +2642,7 @@ func (db *DB) begin(ctx context.Context, opts *TxOptions, strategy connReuseStra
 
 ```
 searchKey: sql.DB.beginDC
+tags: [private]
 ```
 
 ```Go
@@ -2644,7 +2655,6 @@ beginDC starts a transaction. The provided dc must be valid and ready to use.
 
 ```
 searchKey: sql.DB.Driver
-tags: [exported]
 ```
 
 ```Go
@@ -2657,7 +2667,6 @@ Driver returns the database's underlying driver.
 
 ```
 searchKey: sql.DB.Conn
-tags: [exported]
 ```
 
 ```Go
@@ -2672,6 +2681,7 @@ Every Conn must be returned to the database pool after use by calling Conn.Close
 
 ```
 searchKey: sql.DB.numDeps
+tags: [private]
 ```
 
 ```Go
@@ -2682,6 +2692,7 @@ func (db *DB) numDeps() int
 
 ```
 searchKey: sql.DB.numDepsPollUntil
+tags: [private]
 ```
 
 ```Go
@@ -2694,6 +2705,7 @@ Dependencies are closed via a goroutine, so this polls waiting for numDeps to fa
 
 ```
 searchKey: sql.DB.numFreeConns
+tags: [private]
 ```
 
 ```Go
@@ -2704,6 +2716,7 @@ func (db *DB) numFreeConns() int
 
 ```
 searchKey: sql.DB.numOpenConns
+tags: [private]
 ```
 
 ```Go
@@ -2714,6 +2727,7 @@ func (db *DB) numOpenConns() int
 
 ```
 searchKey: sql.DB.clearAllConns
+tags: [private]
 ```
 
 ```Go
@@ -2726,6 +2740,7 @@ clearAllConns closes all connections in db.
 
 ```
 searchKey: sql.DB.dumpDeps
+tags: [private]
 ```
 
 ```Go
@@ -2736,6 +2751,7 @@ func (db *DB) dumpDeps(t *testing.T)
 
 ```
 searchKey: sql.DB.dumpDep
+tags: [private]
 ```
 
 ```Go
@@ -2746,6 +2762,7 @@ func (db *DB) dumpDep(t *testing.T, depth int, dep finalCloser, seen map[finalCl
 
 ```
 searchKey: sql.connReuseStrategy
+tags: [private]
 ```
 
 ```Go
@@ -2758,6 +2775,7 @@ connReuseStrategy determines how (*DB).conn returns database connections.
 
 ```
 searchKey: sql.driverConn
+tags: [private]
 ```
 
 ```Go
@@ -2786,6 +2804,7 @@ driverConn wraps a driver.Conn with a mutex, to be held during all calls into th
 
 ```
 searchKey: sql.driverConn.releaseConn
+tags: [private]
 ```
 
 ```Go
@@ -2796,6 +2815,7 @@ func (dc *driverConn) releaseConn(err error)
 
 ```
 searchKey: sql.driverConn.removeOpenStmt
+tags: [private]
 ```
 
 ```Go
@@ -2806,6 +2826,7 @@ func (dc *driverConn) removeOpenStmt(ds *driverStmt)
 
 ```
 searchKey: sql.driverConn.expired
+tags: [private]
 ```
 
 ```Go
@@ -2816,6 +2837,7 @@ func (dc *driverConn) expired(timeout time.Duration) bool
 
 ```
 searchKey: sql.driverConn.resetSession
+tags: [private]
 ```
 
 ```Go
@@ -2828,6 +2850,7 @@ resetSession checks if the driver connection needs the session to be reset and i
 
 ```
 searchKey: sql.driverConn.validateConnection
+tags: [private]
 ```
 
 ```Go
@@ -2840,6 +2863,7 @@ validateConnection checks if the connection is valid and can still be used. It a
 
 ```
 searchKey: sql.driverConn.prepareLocked
+tags: [private]
 ```
 
 ```Go
@@ -2852,6 +2876,7 @@ prepareLocked prepares the query on dc. When cg == nil the dc must keep track of
 
 ```
 searchKey: sql.driverConn.closeDBLocked
+tags: [private]
 ```
 
 ```Go
@@ -2864,6 +2889,7 @@ the dc.db's Mutex is held.
 
 ```
 searchKey: sql.driverConn.Close
+tags: [private]
 ```
 
 ```Go
@@ -2874,6 +2900,7 @@ func (dc *driverConn) Close() error
 
 ```
 searchKey: sql.driverConn.finalClose
+tags: [private]
 ```
 
 ```Go
@@ -2884,6 +2911,7 @@ func (dc *driverConn) finalClose() error
 
 ```
 searchKey: sql.driverStmt
+tags: [private]
 ```
 
 ```Go
@@ -2901,6 +2929,7 @@ driverStmt associates a driver.Stmt with the *driverConn from which it came, so 
 
 ```
 searchKey: sql.driverStmt.Close
+tags: [private]
 ```
 
 ```Go
@@ -2913,6 +2942,7 @@ Close ensures driver.Stmt is only closed once and always returns the same result
 
 ```
 searchKey: sql.depSet
+tags: [private]
 ```
 
 ```Go
@@ -2926,6 +2956,7 @@ depSet is a finalCloser's outstanding dependencies
 
 ```
 searchKey: sql.finalCloser
+tags: [private]
 ```
 
 ```Go
@@ -2942,6 +2973,7 @@ The finalCloser interface is used by (*DB).addDep and related dependency referen
 
 ```
 searchKey: sql.dsnConnector
+tags: [private]
 ```
 
 ```Go
@@ -2955,6 +2987,7 @@ type dsnConnector struct {
 
 ```
 searchKey: sql.dsnConnector.Connect
+tags: [private]
 ```
 
 ```Go
@@ -2965,6 +2998,7 @@ func (t dsnConnector) Connect(_ context.Context) (driver.Conn, error)
 
 ```
 searchKey: sql.dsnConnector.Driver
+tags: [private]
 ```
 
 ```Go
@@ -2975,7 +3009,6 @@ func (t dsnConnector) Driver() driver.Driver
 
 ```
 searchKey: sql.DBStats
-tags: [exported]
 ```
 
 ```Go
@@ -3002,6 +3035,7 @@ DBStats contains database statistics.
 
 ```
 searchKey: sql.connRequest
+tags: [private]
 ```
 
 ```Go
@@ -3017,6 +3051,7 @@ connRequest represents one request for a new connection When there are no idle c
 
 ```
 searchKey: sql.releaseConn
+tags: [private]
 ```
 
 ```Go
@@ -3027,7 +3062,6 @@ type releaseConn func(error)
 
 ```
 searchKey: sql.Conn
-tags: [exported]
 ```
 
 ```Go
@@ -3060,6 +3094,7 @@ After a call to Close, all operations on the connection fail with ErrConnDone.
 
 ```
 searchKey: sql.Conn.grabConn
+tags: [private]
 ```
 
 ```Go
@@ -3072,7 +3107,6 @@ grabConn takes a context to implement stmtConnGrabber but the context is not use
 
 ```
 searchKey: sql.Conn.PingContext
-tags: [exported]
 ```
 
 ```Go
@@ -3085,7 +3119,6 @@ PingContext verifies the connection to the database is still alive.
 
 ```
 searchKey: sql.Conn.ExecContext
-tags: [exported]
 ```
 
 ```Go
@@ -3098,7 +3131,6 @@ ExecContext executes a query without returning any rows. The args are for any pl
 
 ```
 searchKey: sql.Conn.QueryContext
-tags: [exported]
 ```
 
 ```Go
@@ -3111,7 +3143,6 @@ QueryContext executes a query that returns rows, typically a SELECT. The args ar
 
 ```
 searchKey: sql.Conn.QueryRowContext
-tags: [exported]
 ```
 
 ```Go
@@ -3124,7 +3155,6 @@ QueryRowContext executes a query that is expected to return at most one row. Que
 
 ```
 searchKey: sql.Conn.PrepareContext
-tags: [exported]
 ```
 
 ```Go
@@ -3139,7 +3169,6 @@ The provided context is used for the preparation of the statement, not for the e
 
 ```
 searchKey: sql.Conn.Raw
-tags: [exported]
 ```
 
 ```Go
@@ -3154,7 +3183,6 @@ Once f returns and err is nil, the Conn will continue to be usable until Conn.Cl
 
 ```
 searchKey: sql.Conn.BeginTx
-tags: [exported]
 ```
 
 ```Go
@@ -3171,6 +3199,7 @@ The provided TxOptions is optional and may be nil if defaults should be used. If
 
 ```
 searchKey: sql.Conn.closemuRUnlockCondReleaseConn
+tags: [private]
 ```
 
 ```Go
@@ -3183,6 +3212,7 @@ closemuRUnlockCondReleaseConn read unlocks closemu as the sql operation is done 
 
 ```
 searchKey: sql.Conn.txCtx
+tags: [private]
 ```
 
 ```Go
@@ -3193,6 +3223,7 @@ func (c *Conn) txCtx() context.Context
 
 ```
 searchKey: sql.Conn.close
+tags: [private]
 ```
 
 ```Go
@@ -3203,7 +3234,6 @@ func (c *Conn) close(err error) error
 
 ```
 searchKey: sql.Conn.Close
-tags: [exported]
 ```
 
 ```Go
@@ -3216,7 +3246,6 @@ Close returns the connection to the connection pool. All operations after a Clos
 
 ```
 searchKey: sql.Tx
-tags: [exported]
 ```
 
 ```Go
@@ -3275,6 +3304,7 @@ The statements prepared for a transaction by calling the transaction's Prepare o
 
 ```
 searchKey: sql.Tx.awaitDone
+tags: [private]
 ```
 
 ```Go
@@ -3287,6 +3317,7 @@ awaitDone blocks until the context in Tx is canceled and rolls back the transact
 
 ```
 searchKey: sql.Tx.isDone
+tags: [private]
 ```
 
 ```Go
@@ -3297,6 +3328,7 @@ func (tx *Tx) isDone() bool
 
 ```
 searchKey: sql.Tx.close
+tags: [private]
 ```
 
 ```Go
@@ -3309,6 +3341,7 @@ close returns the connection to the pool and must only be called by Tx.rollback 
 
 ```
 searchKey: sql.Tx.grabConn
+tags: [private]
 ```
 
 ```Go
@@ -3319,6 +3352,7 @@ func (tx *Tx) grabConn(ctx context.Context) (*driverConn, releaseConn, error)
 
 ```
 searchKey: sql.Tx.txCtx
+tags: [private]
 ```
 
 ```Go
@@ -3329,6 +3363,7 @@ func (tx *Tx) txCtx() context.Context
 
 ```
 searchKey: sql.Tx.closemuRUnlockRelease
+tags: [private]
 ```
 
 ```Go
@@ -3341,6 +3376,7 @@ closemuRUnlockRelease is used as a func(error) method value in ExecContext and Q
 
 ```
 searchKey: sql.Tx.closePrepared
+tags: [private]
 ```
 
 ```Go
@@ -3353,7 +3389,6 @@ Closes all Stmts prepared for this transaction.
 
 ```
 searchKey: sql.Tx.Commit
-tags: [exported]
 ```
 
 ```Go
@@ -3366,6 +3401,7 @@ Commit commits the transaction.
 
 ```
 searchKey: sql.Tx.rollback
+tags: [private]
 ```
 
 ```Go
@@ -3378,7 +3414,6 @@ rollback aborts the transaction and optionally forces the pool to discard the co
 
 ```
 searchKey: sql.Tx.Rollback
-tags: [exported]
 ```
 
 ```Go
@@ -3391,7 +3426,6 @@ Rollback aborts the transaction.
 
 ```
 searchKey: sql.Tx.PrepareContext
-tags: [exported]
 ```
 
 ```Go
@@ -3410,7 +3444,6 @@ The provided context will be used for the preparation of the context, not for th
 
 ```
 searchKey: sql.Tx.Prepare
-tags: [exported]
 ```
 
 ```Go
@@ -3429,7 +3462,6 @@ Prepare uses context.Background internally; to specify the context, use PrepareC
 
 ```
 searchKey: sql.Tx.StmtContext
-tags: [exported]
 ```
 
 ```Go
@@ -3456,7 +3488,6 @@ The returned statement operates within the transaction and will be closed when t
 
 ```
 searchKey: sql.Tx.Stmt
-tags: [exported]
 ```
 
 ```Go
@@ -3483,7 +3514,6 @@ Stmt uses context.Background internally; to specify the context, use StmtContext
 
 ```
 searchKey: sql.Tx.ExecContext
-tags: [exported]
 ```
 
 ```Go
@@ -3496,7 +3526,6 @@ ExecContext executes a query that doesn't return rows. For example: an INSERT an
 
 ```
 searchKey: sql.Tx.Exec
-tags: [exported]
 ```
 
 ```Go
@@ -3511,7 +3540,6 @@ Exec uses context.Background internally; to specify the context, use ExecContext
 
 ```
 searchKey: sql.Tx.QueryContext
-tags: [exported]
 ```
 
 ```Go
@@ -3524,7 +3552,6 @@ QueryContext executes a query that returns rows, typically a SELECT.
 
 ```
 searchKey: sql.Tx.Query
-tags: [exported]
 ```
 
 ```Go
@@ -3539,7 +3566,6 @@ Query uses context.Background internally; to specify the context, use QueryConte
 
 ```
 searchKey: sql.Tx.QueryRowContext
-tags: [exported]
 ```
 
 ```Go
@@ -3552,7 +3578,6 @@ QueryRowContext executes a query that is expected to return at most one row. Que
 
 ```
 searchKey: sql.Tx.QueryRow
-tags: [exported]
 ```
 
 ```Go
@@ -3567,6 +3592,7 @@ QueryRow uses context.Background internally; to specify the context, use QueryRo
 
 ```
 searchKey: sql.connStmt
+tags: [private]
 ```
 
 ```Go
@@ -3582,6 +3608,7 @@ connStmt is a prepared statement on a particular connection.
 
 ```
 searchKey: sql.stmtConnGrabber
+tags: [private]
 ```
 
 ```Go
@@ -3603,7 +3630,6 @@ stmtConnGrabber represents a Tx or Conn that will return the underlying driverCo
 
 ```
 searchKey: sql.Stmt
-tags: [exported]
 ```
 
 ```Go
@@ -3654,7 +3680,6 @@ If a Stmt is prepared on a Tx or Conn, it will be bound to a single underlying c
 
 ```
 searchKey: sql.Stmt.ExecContext
-tags: [exported]
 ```
 
 ```Go
@@ -3667,7 +3692,6 @@ ExecContext executes a prepared statement with the given arguments and returns a
 
 ```
 searchKey: sql.Stmt.Exec
-tags: [exported]
 ```
 
 ```Go
@@ -3682,6 +3706,7 @@ Exec uses context.Background internally; to specify the context, use ExecContext
 
 ```
 searchKey: sql.Stmt.removeClosedStmtLocked
+tags: [private]
 ```
 
 ```Go
@@ -3696,6 +3721,7 @@ To avoid lock contention on DB.mu, we do it only when s.db.numClosed - s.lastNum
 
 ```
 searchKey: sql.Stmt.connStmt
+tags: [private]
 ```
 
 ```Go
@@ -3708,6 +3734,7 @@ connStmt returns a free driver connection on which to execute the statement, a f
 
 ```
 searchKey: sql.Stmt.prepareOnConnLocked
+tags: [private]
 ```
 
 ```Go
@@ -3720,7 +3747,6 @@ prepareOnConnLocked prepares the query in Stmt s on dc and adds it to the list o
 
 ```
 searchKey: sql.Stmt.QueryContext
-tags: [exported]
 ```
 
 ```Go
@@ -3733,7 +3759,6 @@ QueryContext executes a prepared query statement with the given arguments and re
 
 ```
 searchKey: sql.Stmt.Query
-tags: [exported]
 ```
 
 ```Go
@@ -3748,7 +3773,6 @@ Query uses context.Background internally; to specify the context, use QueryConte
 
 ```
 searchKey: sql.Stmt.QueryRowContext
-tags: [exported]
 ```
 
 ```Go
@@ -3761,7 +3785,6 @@ QueryRowContext executes a prepared query statement with the given arguments. If
 
 ```
 searchKey: sql.Stmt.QueryRow
-tags: [exported]
 ```
 
 ```Go
@@ -3783,7 +3806,6 @@ QueryRow uses context.Background internally; to specify the context, use QueryRo
 
 ```
 searchKey: sql.Stmt.Close
-tags: [exported]
 ```
 
 ```Go
@@ -3796,6 +3818,7 @@ Close closes the statement.
 
 ```
 searchKey: sql.Stmt.finalClose
+tags: [private]
 ```
 
 ```Go
@@ -3806,7 +3829,6 @@ func (s *Stmt) finalClose() error
 
 ```
 searchKey: sql.Rows
-tags: [exported]
 ```
 
 ```Go
@@ -3838,6 +3860,7 @@ Rows is the result of a query. Its cursor starts before the first row of the res
 
 ```
 searchKey: sql.Rows.lasterrOrErrLocked
+tags: [private]
 ```
 
 ```Go
@@ -3850,6 +3873,7 @@ lasterrOrErrLocked returns either lasterr or the provided err. rs.closemu must b
 
 ```
 searchKey: sql.Rows.initContextClose
+tags: [private]
 ```
 
 ```Go
@@ -3860,6 +3884,7 @@ func (rs *Rows) initContextClose(ctx, txctx context.Context)
 
 ```
 searchKey: sql.Rows.awaitDone
+tags: [private]
 ```
 
 ```Go
@@ -3872,7 +3897,6 @@ awaitDone blocks until either ctx or txctx is canceled. The ctx is provided from
 
 ```
 searchKey: sql.Rows.Next
-tags: [exported]
 ```
 
 ```Go
@@ -3887,6 +3911,7 @@ Every call to Scan, even the first one, must be preceded by a call to Next.
 
 ```
 searchKey: sql.Rows.nextLocked
+tags: [private]
 ```
 
 ```Go
@@ -3897,7 +3922,6 @@ func (rs *Rows) nextLocked() (doClose, ok bool)
 
 ```
 searchKey: sql.Rows.NextResultSet
-tags: [exported]
 ```
 
 ```Go
@@ -3912,7 +3936,6 @@ After calling NextResultSet, the Next method should always be called before scan
 
 ```
 searchKey: sql.Rows.Err
-tags: [exported]
 ```
 
 ```Go
@@ -3925,7 +3948,6 @@ Err returns the error, if any, that was encountered during iteration. Err may be
 
 ```
 searchKey: sql.Rows.Columns
-tags: [exported]
 ```
 
 ```Go
@@ -3938,7 +3960,6 @@ Columns returns the column names. Columns returns an error if the rows are close
 
 ```
 searchKey: sql.Rows.ColumnTypes
-tags: [exported]
 ```
 
 ```Go
@@ -3951,7 +3972,6 @@ ColumnTypes returns column information such as column type, length, and nullable
 
 ```
 searchKey: sql.Rows.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -3997,7 +4017,6 @@ If any of the first arguments implementing Scanner returns an error, that error 
 
 ```
 searchKey: sql.Rows.Close
-tags: [exported]
 ```
 
 ```Go
@@ -4010,6 +4029,7 @@ Close closes the Rows, preventing further enumeration. If Next is called and ret
 
 ```
 searchKey: sql.Rows.close
+tags: [private]
 ```
 
 ```Go
@@ -4020,7 +4040,6 @@ func (rs *Rows) close(err error) error
 
 ```
 searchKey: sql.ColumnType
-tags: [exported]
 ```
 
 ```Go
@@ -4046,7 +4065,6 @@ ColumnType contains the name and type of a column.
 
 ```
 searchKey: sql.ColumnType.Name
-tags: [exported]
 ```
 
 ```Go
@@ -4059,7 +4077,6 @@ Name returns the name or alias of the column.
 
 ```
 searchKey: sql.ColumnType.Length
-tags: [exported]
 ```
 
 ```Go
@@ -4072,7 +4089,6 @@ Length returns the column type length for variable length column types such as t
 
 ```
 searchKey: sql.ColumnType.DecimalSize
-tags: [exported]
 ```
 
 ```Go
@@ -4085,7 +4101,6 @@ DecimalSize returns the scale and precision of a decimal type. If not applicable
 
 ```
 searchKey: sql.ColumnType.ScanType
-tags: [exported]
 ```
 
 ```Go
@@ -4098,7 +4113,6 @@ ScanType returns a Go type suitable for scanning into using Rows.Scan. If a driv
 
 ```
 searchKey: sql.ColumnType.Nullable
-tags: [exported]
 ```
 
 ```Go
@@ -4111,7 +4125,6 @@ Nullable reports whether the column may be null. If a driver does not support th
 
 ```
 searchKey: sql.ColumnType.DatabaseTypeName
-tags: [exported]
 ```
 
 ```Go
@@ -4124,7 +4137,6 @@ DatabaseTypeName returns the database system name of the column type. If an empt
 
 ```
 searchKey: sql.Row
-tags: [exported]
 ```
 
 ```Go
@@ -4141,7 +4153,6 @@ Row is the result of calling QueryRow to select a single row.
 
 ```
 searchKey: sql.Row.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -4154,7 +4165,6 @@ Scan copies the columns from the matched row into the values pointed at by dest.
 
 ```
 searchKey: sql.Row.Err
-tags: [exported]
 ```
 
 ```Go
@@ -4167,7 +4177,6 @@ Err provides a way for wrapping packages to check for query errors without calli
 
 ```
 searchKey: sql.Result
-tags: [exported]
 ```
 
 ```Go
@@ -4192,6 +4201,7 @@ A Result summarizes an executed SQL command.
 
 ```
 searchKey: sql.resultFromStatement
+tags: [private]
 ```
 
 ```Go
@@ -4202,6 +4212,7 @@ func resultFromStatement(ctx context.Context, ci driver.Conn, ds *driverStmt, ar
 
 ```
 searchKey: sql.driverResult
+tags: [private]
 ```
 
 ```Go
@@ -4215,6 +4226,7 @@ type driverResult struct {
 
 ```
 searchKey: sql.driverResult.LastInsertId
+tags: [private]
 ```
 
 ```Go
@@ -4225,6 +4237,7 @@ func (dr driverResult) LastInsertId() (int64, error)
 
 ```
 searchKey: sql.driverResult.RowsAffected
+tags: [private]
 ```
 
 ```Go
@@ -4235,6 +4248,7 @@ func (dr driverResult) RowsAffected() (int64, error)
 
 ```
 searchKey: sql.userDefined
+tags: [private]
 ```
 
 ```Go
@@ -4245,6 +4259,7 @@ type userDefined float64
 
 ```
 searchKey: sql.userDefinedSlice
+tags: [private]
 ```
 
 ```Go
@@ -4255,6 +4270,7 @@ type userDefinedSlice []int
 
 ```
 searchKey: sql.userDefinedString
+tags: [private]
 ```
 
 ```Go
@@ -4265,6 +4281,7 @@ type userDefinedString string
 
 ```
 searchKey: sql.conversionTest
+tags: [private]
 ```
 
 ```Go
@@ -4294,6 +4311,7 @@ type conversionTest struct {
 
 ```
 searchKey: sql.valueConverterTest
+tags: [private]
 ```
 
 ```Go
@@ -4308,6 +4326,7 @@ type valueConverterTest struct {
 
 ```
 searchKey: sql.Valuer_V
+tags: [private]
 ```
 
 ```Go
@@ -4318,6 +4337,7 @@ type Valuer_V string
 
 ```
 searchKey: sql.Valuer_V.Value
+tags: [private]
 ```
 
 ```Go
@@ -4328,6 +4348,7 @@ func (v Valuer_V) Value() (driver.Value, error)
 
 ```
 searchKey: sql.Valuer_P
+tags: [private]
 ```
 
 ```Go
@@ -4338,6 +4359,7 @@ type Valuer_P string
 
 ```
 searchKey: sql.Valuer_P.Value
+tags: [private]
 ```
 
 ```Go
@@ -4348,6 +4370,7 @@ func (p *Valuer_P) Value() (driver.Value, error)
 
 ```
 searchKey: sql.dec
+tags: [private]
 ```
 
 ```Go
@@ -4363,6 +4386,7 @@ type dec struct {
 
 ```
 searchKey: sql.dec.Decompose
+tags: [private]
 ```
 
 ```Go
@@ -4373,6 +4397,7 @@ func (d dec) Decompose(buf []byte) (form byte, negative bool, coefficient []byte
 
 ```
 searchKey: sql.dec.Compose
+tags: [private]
 ```
 
 ```Go
@@ -4383,6 +4408,7 @@ func (d *dec) Compose(form byte, negative bool, coefficient []byte, exponent int
 
 ```
 searchKey: sql.decFinite
+tags: [private]
 ```
 
 ```Go
@@ -4397,6 +4423,7 @@ type decFinite struct {
 
 ```
 searchKey: sql.decFinite.Decompose
+tags: [private]
 ```
 
 ```Go
@@ -4407,6 +4434,7 @@ func (d decFinite) Decompose(buf []byte) (form byte, negative bool, coefficient 
 
 ```
 searchKey: sql.decFinite.Compose
+tags: [private]
 ```
 
 ```Go
@@ -4417,6 +4445,7 @@ func (d *decFinite) Compose(form byte, negative bool, coefficient []byte, expone
 
 ```
 searchKey: sql.fakeDriver
+tags: [private]
 ```
 
 ```Go
@@ -4455,6 +4484,7 @@ When opening a fakeDriver's database, it starts empty with no tables. All tables
 
 ```
 searchKey: sql.fakeDriver.Open
+tags: [private]
 ```
 
 ```Go
@@ -4474,6 +4504,7 @@ Supports dsn forms:
 
 ```
 searchKey: sql.fakeDriver.getDB
+tags: [private]
 ```
 
 ```Go
@@ -4484,6 +4515,7 @@ func (d *fakeDriver) getDB(name string) *fakeDB
 
 ```
 searchKey: sql.fakeConnector
+tags: [private]
 ```
 
 ```Go
@@ -4499,6 +4531,7 @@ type fakeConnector struct {
 
 ```
 searchKey: sql.fakeConnector.Connect
+tags: [private]
 ```
 
 ```Go
@@ -4509,6 +4542,7 @@ func (c *fakeConnector) Connect(context.Context) (driver.Conn, error)
 
 ```
 searchKey: sql.fakeConnector.Driver
+tags: [private]
 ```
 
 ```Go
@@ -4519,6 +4553,7 @@ func (c *fakeConnector) Driver() driver.Driver
 
 ```
 searchKey: sql.fakeConnector.Close
+tags: [private]
 ```
 
 ```Go
@@ -4529,6 +4564,7 @@ func (c *fakeConnector) Close() error
 
 ```
 searchKey: sql.fakeDriverCtx
+tags: [private]
 ```
 
 ```Go
@@ -4541,6 +4577,7 @@ type fakeDriverCtx struct {
 
 ```
 searchKey: sql.fakeDriverCtx.OpenConnector
+tags: [private]
 ```
 
 ```Go
@@ -4551,6 +4588,7 @@ func (cc *fakeDriverCtx) OpenConnector(name string) (driver.Connector, error)
 
 ```
 searchKey: sql.fakeDB
+tags: [private]
 ```
 
 ```Go
@@ -4568,6 +4606,7 @@ type fakeDB struct {
 
 ```
 searchKey: sql.fakeDB.wipe
+tags: [private]
 ```
 
 ```Go
@@ -4578,6 +4617,7 @@ func (db *fakeDB) wipe()
 
 ```
 searchKey: sql.fakeDB.createTable
+tags: [private]
 ```
 
 ```Go
@@ -4588,6 +4628,7 @@ func (db *fakeDB) createTable(name string, columnNames, columnTypes []string) er
 
 ```
 searchKey: sql.fakeDB.table
+tags: [private]
 ```
 
 ```Go
@@ -4600,6 +4641,7 @@ must be called with db.mu lock held
 
 ```
 searchKey: sql.fakeDB.columnType
+tags: [private]
 ```
 
 ```Go
@@ -4610,6 +4652,7 @@ func (db *fakeDB) columnType(table, column string) (typ string, ok bool)
 
 ```
 searchKey: sql.table
+tags: [private]
 ```
 
 ```Go
@@ -4625,6 +4668,7 @@ type table struct {
 
 ```
 searchKey: sql.table.columnIndex
+tags: [private]
 ```
 
 ```Go
@@ -4635,6 +4679,7 @@ func (t *table) columnIndex(name string) int
 
 ```
 searchKey: sql.row
+tags: [private]
 ```
 
 ```Go
@@ -4647,6 +4692,7 @@ type row struct {
 
 ```
 searchKey: sql.memToucher
+tags: [private]
 ```
 
 ```Go
@@ -4660,6 +4706,7 @@ type memToucher interface {
 
 ```
 searchKey: sql.fakeConn
+tags: [private]
 ```
 
 ```Go
@@ -4698,6 +4745,7 @@ type fakeConn struct {
 
 ```
 searchKey: sql.fakeConn.touchMem
+tags: [private]
 ```
 
 ```Go
@@ -4708,6 +4756,7 @@ func (c *fakeConn) touchMem()
 
 ```
 searchKey: sql.fakeConn.incrStat
+tags: [private]
 ```
 
 ```Go
@@ -4718,6 +4767,7 @@ func (c *fakeConn) incrStat(v *int)
 
 ```
 searchKey: sql.fakeConn.isBad
+tags: [private]
 ```
 
 ```Go
@@ -4728,6 +4778,7 @@ func (c *fakeConn) isBad() bool
 
 ```
 searchKey: sql.fakeConn.isDirtyAndMark
+tags: [private]
 ```
 
 ```Go
@@ -4738,6 +4789,7 @@ func (c *fakeConn) isDirtyAndMark() bool
 
 ```
 searchKey: sql.fakeConn.Begin
+tags: [private]
 ```
 
 ```Go
@@ -4748,6 +4800,7 @@ func (c *fakeConn) Begin() (driver.Tx, error)
 
 ```
 searchKey: sql.fakeConn.ResetSession
+tags: [private]
 ```
 
 ```Go
@@ -4758,6 +4811,7 @@ func (c *fakeConn) ResetSession(ctx context.Context) error
 
 ```
 searchKey: sql.fakeConn.IsValid
+tags: [private]
 ```
 
 ```Go
@@ -4768,6 +4822,7 @@ func (c *fakeConn) IsValid() bool
 
 ```
 searchKey: sql.fakeConn.Close
+tags: [private]
 ```
 
 ```Go
@@ -4778,6 +4833,7 @@ func (c *fakeConn) Close() (err error)
 
 ```
 searchKey: sql.fakeConn.Exec
+tags: [private]
 ```
 
 ```Go
@@ -4788,6 +4844,7 @@ func (c *fakeConn) Exec(query string, args []driver.Value) (driver.Result, error
 
 ```
 searchKey: sql.fakeConn.ExecContext
+tags: [private]
 ```
 
 ```Go
@@ -4798,6 +4855,7 @@ func (c *fakeConn) ExecContext(ctx context.Context, query string, args []driver.
 
 ```
 searchKey: sql.fakeConn.Query
+tags: [private]
 ```
 
 ```Go
@@ -4808,6 +4866,7 @@ func (c *fakeConn) Query(query string, args []driver.Value) (driver.Rows, error)
 
 ```
 searchKey: sql.fakeConn.QueryContext
+tags: [private]
 ```
 
 ```Go
@@ -4818,6 +4877,7 @@ func (c *fakeConn) QueryContext(ctx context.Context, query string, args []driver
 
 ```
 searchKey: sql.fakeConn.prepareSelect
+tags: [private]
 ```
 
 ```Go
@@ -4834,6 +4894,7 @@ just a limitation for fakedb)
 
 ```
 searchKey: sql.fakeConn.prepareCreate
+tags: [private]
 ```
 
 ```Go
@@ -4846,6 +4907,7 @@ parts are table|col=type,col2=type2
 
 ```
 searchKey: sql.fakeConn.prepareInsert
+tags: [private]
 ```
 
 ```Go
@@ -4858,6 +4920,7 @@ parts are table|col=?,col2=val
 
 ```
 searchKey: sql.fakeConn.Prepare
+tags: [private]
 ```
 
 ```Go
@@ -4868,6 +4931,7 @@ func (c *fakeConn) Prepare(query string) (driver.Stmt, error)
 
 ```
 searchKey: sql.fakeConn.PrepareContext
+tags: [private]
 ```
 
 ```Go
@@ -4878,6 +4942,7 @@ func (c *fakeConn) PrepareContext(ctx context.Context, query string) (driver.Stm
 
 ```
 searchKey: sql.fakeTx
+tags: [private]
 ```
 
 ```Go
@@ -4890,6 +4955,7 @@ type fakeTx struct {
 
 ```
 searchKey: sql.fakeTx.Commit
+tags: [private]
 ```
 
 ```Go
@@ -4900,6 +4966,7 @@ func (tx *fakeTx) Commit() error
 
 ```
 searchKey: sql.fakeTx.Rollback
+tags: [private]
 ```
 
 ```Go
@@ -4910,6 +4977,7 @@ func (tx *fakeTx) Rollback() error
 
 ```
 searchKey: sql.boundCol
+tags: [private]
 ```
 
 ```Go
@@ -4924,6 +4992,7 @@ type boundCol struct {
 
 ```
 searchKey: sql.fakeStmt
+tags: [private]
 ```
 
 ```Go
@@ -4956,6 +5025,7 @@ type fakeStmt struct {
 
 ```
 searchKey: sql.fakeStmt.ColumnConverter
+tags: [private]
 ```
 
 ```Go
@@ -4966,6 +5036,7 @@ func (s *fakeStmt) ColumnConverter(idx int) driver.ValueConverter
 
 ```
 searchKey: sql.fakeStmt.Close
+tags: [private]
 ```
 
 ```Go
@@ -4976,6 +5047,7 @@ func (s *fakeStmt) Close() error
 
 ```
 searchKey: sql.fakeStmt.Exec
+tags: [private]
 ```
 
 ```Go
@@ -4986,6 +5058,7 @@ func (s *fakeStmt) Exec(args []driver.Value) (driver.Result, error)
 
 ```
 searchKey: sql.fakeStmt.ExecContext
+tags: [private]
 ```
 
 ```Go
@@ -4996,6 +5069,7 @@ func (s *fakeStmt) ExecContext(ctx context.Context, args []driver.NamedValue) (d
 
 ```
 searchKey: sql.fakeStmt.execInsert
+tags: [private]
 ```
 
 ```Go
@@ -5008,6 +5082,7 @@ When doInsert is true, add the row to the table. When doInsert is false do prep-
 
 ```
 searchKey: sql.fakeStmt.Query
+tags: [private]
 ```
 
 ```Go
@@ -5018,6 +5093,7 @@ func (s *fakeStmt) Query(args []driver.Value) (driver.Rows, error)
 
 ```
 searchKey: sql.fakeStmt.QueryContext
+tags: [private]
 ```
 
 ```Go
@@ -5028,6 +5104,7 @@ func (s *fakeStmt) QueryContext(ctx context.Context, args []driver.NamedValue) (
 
 ```
 searchKey: sql.fakeStmt.NumInput
+tags: [private]
 ```
 
 ```Go
@@ -5038,6 +5115,7 @@ func (s *fakeStmt) NumInput() int
 
 ```
 searchKey: sql.Dummy
+tags: [private]
 ```
 
 ```Go
@@ -5050,6 +5128,7 @@ type Dummy struct {
 
 ```
 searchKey: sql.rowsCursor
+tags: [private]
 ```
 
 ```Go
@@ -5083,6 +5162,7 @@ type rowsCursor struct {
 
 ```
 searchKey: sql.rowsCursor.touchMem
+tags: [private]
 ```
 
 ```Go
@@ -5093,6 +5173,7 @@ func (rc *rowsCursor) touchMem()
 
 ```
 searchKey: sql.rowsCursor.Close
+tags: [private]
 ```
 
 ```Go
@@ -5103,6 +5184,7 @@ func (rc *rowsCursor) Close() error
 
 ```
 searchKey: sql.rowsCursor.Columns
+tags: [private]
 ```
 
 ```Go
@@ -5113,6 +5195,7 @@ func (rc *rowsCursor) Columns() []string
 
 ```
 searchKey: sql.rowsCursor.ColumnTypeScanType
+tags: [private]
 ```
 
 ```Go
@@ -5123,6 +5206,7 @@ func (rc *rowsCursor) ColumnTypeScanType(index int) reflect.Type
 
 ```
 searchKey: sql.rowsCursor.Next
+tags: [private]
 ```
 
 ```Go
@@ -5133,6 +5217,7 @@ func (rc *rowsCursor) Next(dest []driver.Value) error
 
 ```
 searchKey: sql.rowsCursor.HasNextResultSet
+tags: [private]
 ```
 
 ```Go
@@ -5143,6 +5228,7 @@ func (rc *rowsCursor) HasNextResultSet() bool
 
 ```
 searchKey: sql.rowsCursor.NextResultSet
+tags: [private]
 ```
 
 ```Go
@@ -5153,6 +5239,7 @@ func (rc *rowsCursor) NextResultSet() error
 
 ```
 searchKey: sql.fakeDriverString
+tags: [private]
 ```
 
 ```Go
@@ -5167,6 +5254,7 @@ This could be surprising behavior to retroactively apply to driver.String now th
 
 ```
 searchKey: sql.fakeDriverString.ConvertValue
+tags: [private]
 ```
 
 ```Go
@@ -5177,6 +5265,7 @@ func (fakeDriverString) ConvertValue(v interface{}) (driver.Value, error)
 
 ```
 searchKey: sql.anyTypeConverter
+tags: [private]
 ```
 
 ```Go
@@ -5187,6 +5276,7 @@ type anyTypeConverter struct{}
 
 ```
 searchKey: sql.anyTypeConverter.ConvertValue
+tags: [private]
 ```
 
 ```Go
@@ -5197,6 +5287,7 @@ func (anyTypeConverter) ConvertValue(v interface{}) (driver.Value, error)
 
 ```
 searchKey: sql.stubDriverStmt
+tags: [private]
 ```
 
 ```Go
@@ -5209,6 +5300,7 @@ type stubDriverStmt struct {
 
 ```
 searchKey: sql.stubDriverStmt.Close
+tags: [private]
 ```
 
 ```Go
@@ -5219,6 +5311,7 @@ func (s stubDriverStmt) Close() error
 
 ```
 searchKey: sql.stubDriverStmt.NumInput
+tags: [private]
 ```
 
 ```Go
@@ -5229,6 +5322,7 @@ func (s stubDriverStmt) NumInput() int
 
 ```
 searchKey: sql.stubDriverStmt.Exec
+tags: [private]
 ```
 
 ```Go
@@ -5239,6 +5333,7 @@ func (s stubDriverStmt) Exec(args []driver.Value) (driver.Result, error)
 
 ```
 searchKey: sql.stubDriverStmt.Query
+tags: [private]
 ```
 
 ```Go
@@ -5249,6 +5344,7 @@ func (s stubDriverStmt) Query(args []driver.Value) (driver.Rows, error)
 
 ```
 searchKey: sql.nullTestRow
+tags: [private]
 ```
 
 ```Go
@@ -5263,6 +5359,7 @@ type nullTestRow struct {
 
 ```
 searchKey: sql.nullTestSpec
+tags: [private]
 ```
 
 ```Go
@@ -5277,6 +5374,7 @@ type nullTestSpec struct {
 
 ```
 searchKey: sql.concurrentTest
+tags: [private]
 ```
 
 ```Go
@@ -5291,6 +5389,7 @@ type concurrentTest interface {
 
 ```
 searchKey: sql.concurrentDBQueryTest
+tags: [private]
 ```
 
 ```Go
@@ -5299,10 +5398,11 @@ type concurrentDBQueryTest struct {
 }
 ```
 
-#### <a id="concurrentDBQueryTest.init" href="#concurrentDBQueryTest.init">func (c *concurrentDBQueryTest) init(t testing.TB, db *DB)</a>
+#### <a id="concurrentDBQueryTest.init.sql_test.go.0xc0564c0da8" href="#concurrentDBQueryTest.init.sql_test.go.0xc0564c0da8">func (c *concurrentDBQueryTest) init(t testing.TB, db *DB)</a>
 
 ```
 searchKey: sql.concurrentDBQueryTest.init
+tags: [private]
 ```
 
 ```Go
@@ -5313,6 +5413,7 @@ func (c *concurrentDBQueryTest) init(t testing.TB, db *DB)
 
 ```
 searchKey: sql.concurrentDBQueryTest.finish
+tags: [private]
 ```
 
 ```Go
@@ -5323,6 +5424,7 @@ func (c *concurrentDBQueryTest) finish(t testing.TB)
 
 ```
 searchKey: sql.concurrentDBQueryTest.test
+tags: [private]
 ```
 
 ```Go
@@ -5333,6 +5435,7 @@ func (c *concurrentDBQueryTest) test(t testing.TB) error
 
 ```
 searchKey: sql.concurrentDBExecTest
+tags: [private]
 ```
 
 ```Go
@@ -5341,10 +5444,11 @@ type concurrentDBExecTest struct {
 }
 ```
 
-#### <a id="concurrentDBExecTest.init" href="#concurrentDBExecTest.init">func (c *concurrentDBExecTest) init(t testing.TB, db *DB)</a>
+#### <a id="concurrentDBExecTest.init.sql_test.go.0xc0564c0da8" href="#concurrentDBExecTest.init.sql_test.go.0xc0564c0da8">func (c *concurrentDBExecTest) init(t testing.TB, db *DB)</a>
 
 ```
 searchKey: sql.concurrentDBExecTest.init
+tags: [private]
 ```
 
 ```Go
@@ -5355,6 +5459,7 @@ func (c *concurrentDBExecTest) init(t testing.TB, db *DB)
 
 ```
 searchKey: sql.concurrentDBExecTest.finish
+tags: [private]
 ```
 
 ```Go
@@ -5365,6 +5470,7 @@ func (c *concurrentDBExecTest) finish(t testing.TB)
 
 ```
 searchKey: sql.concurrentDBExecTest.test
+tags: [private]
 ```
 
 ```Go
@@ -5375,6 +5481,7 @@ func (c *concurrentDBExecTest) test(t testing.TB) error
 
 ```
 searchKey: sql.concurrentStmtQueryTest
+tags: [private]
 ```
 
 ```Go
@@ -5384,10 +5491,11 @@ type concurrentStmtQueryTest struct {
 }
 ```
 
-#### <a id="concurrentStmtQueryTest.init" href="#concurrentStmtQueryTest.init">func (c *concurrentStmtQueryTest) init(t testing.TB, db *DB)</a>
+#### <a id="concurrentStmtQueryTest.init.sql_test.go.0xc0564c0da8" href="#concurrentStmtQueryTest.init.sql_test.go.0xc0564c0da8">func (c *concurrentStmtQueryTest) init(t testing.TB, db *DB)</a>
 
 ```
 searchKey: sql.concurrentStmtQueryTest.init
+tags: [private]
 ```
 
 ```Go
@@ -5398,6 +5506,7 @@ func (c *concurrentStmtQueryTest) init(t testing.TB, db *DB)
 
 ```
 searchKey: sql.concurrentStmtQueryTest.finish
+tags: [private]
 ```
 
 ```Go
@@ -5408,6 +5517,7 @@ func (c *concurrentStmtQueryTest) finish(t testing.TB)
 
 ```
 searchKey: sql.concurrentStmtQueryTest.test
+tags: [private]
 ```
 
 ```Go
@@ -5418,6 +5528,7 @@ func (c *concurrentStmtQueryTest) test(t testing.TB) error
 
 ```
 searchKey: sql.concurrentStmtExecTest
+tags: [private]
 ```
 
 ```Go
@@ -5427,10 +5538,11 @@ type concurrentStmtExecTest struct {
 }
 ```
 
-#### <a id="concurrentStmtExecTest.init" href="#concurrentStmtExecTest.init">func (c *concurrentStmtExecTest) init(t testing.TB, db *DB)</a>
+#### <a id="concurrentStmtExecTest.init.sql_test.go.0xc0564c0da8" href="#concurrentStmtExecTest.init.sql_test.go.0xc0564c0da8">func (c *concurrentStmtExecTest) init(t testing.TB, db *DB)</a>
 
 ```
 searchKey: sql.concurrentStmtExecTest.init
+tags: [private]
 ```
 
 ```Go
@@ -5441,6 +5553,7 @@ func (c *concurrentStmtExecTest) init(t testing.TB, db *DB)
 
 ```
 searchKey: sql.concurrentStmtExecTest.finish
+tags: [private]
 ```
 
 ```Go
@@ -5451,6 +5564,7 @@ func (c *concurrentStmtExecTest) finish(t testing.TB)
 
 ```
 searchKey: sql.concurrentStmtExecTest.test
+tags: [private]
 ```
 
 ```Go
@@ -5461,6 +5575,7 @@ func (c *concurrentStmtExecTest) test(t testing.TB) error
 
 ```
 searchKey: sql.concurrentTxQueryTest
+tags: [private]
 ```
 
 ```Go
@@ -5470,10 +5585,11 @@ type concurrentTxQueryTest struct {
 }
 ```
 
-#### <a id="concurrentTxQueryTest.init" href="#concurrentTxQueryTest.init">func (c *concurrentTxQueryTest) init(t testing.TB, db *DB)</a>
+#### <a id="concurrentTxQueryTest.init.sql_test.go.0xc0564c0da8" href="#concurrentTxQueryTest.init.sql_test.go.0xc0564c0da8">func (c *concurrentTxQueryTest) init(t testing.TB, db *DB)</a>
 
 ```
 searchKey: sql.concurrentTxQueryTest.init
+tags: [private]
 ```
 
 ```Go
@@ -5484,6 +5600,7 @@ func (c *concurrentTxQueryTest) init(t testing.TB, db *DB)
 
 ```
 searchKey: sql.concurrentTxQueryTest.finish
+tags: [private]
 ```
 
 ```Go
@@ -5494,6 +5611,7 @@ func (c *concurrentTxQueryTest) finish(t testing.TB)
 
 ```
 searchKey: sql.concurrentTxQueryTest.test
+tags: [private]
 ```
 
 ```Go
@@ -5504,6 +5622,7 @@ func (c *concurrentTxQueryTest) test(t testing.TB) error
 
 ```
 searchKey: sql.concurrentTxExecTest
+tags: [private]
 ```
 
 ```Go
@@ -5513,10 +5632,11 @@ type concurrentTxExecTest struct {
 }
 ```
 
-#### <a id="concurrentTxExecTest.init" href="#concurrentTxExecTest.init">func (c *concurrentTxExecTest) init(t testing.TB, db *DB)</a>
+#### <a id="concurrentTxExecTest.init.sql_test.go.0xc0564c0da8" href="#concurrentTxExecTest.init.sql_test.go.0xc0564c0da8">func (c *concurrentTxExecTest) init(t testing.TB, db *DB)</a>
 
 ```
 searchKey: sql.concurrentTxExecTest.init
+tags: [private]
 ```
 
 ```Go
@@ -5527,6 +5647,7 @@ func (c *concurrentTxExecTest) init(t testing.TB, db *DB)
 
 ```
 searchKey: sql.concurrentTxExecTest.finish
+tags: [private]
 ```
 
 ```Go
@@ -5537,6 +5658,7 @@ func (c *concurrentTxExecTest) finish(t testing.TB)
 
 ```
 searchKey: sql.concurrentTxExecTest.test
+tags: [private]
 ```
 
 ```Go
@@ -5547,6 +5669,7 @@ func (c *concurrentTxExecTest) test(t testing.TB) error
 
 ```
 searchKey: sql.concurrentTxStmtQueryTest
+tags: [private]
 ```
 
 ```Go
@@ -5557,10 +5680,11 @@ type concurrentTxStmtQueryTest struct {
 }
 ```
 
-#### <a id="concurrentTxStmtQueryTest.init" href="#concurrentTxStmtQueryTest.init">func (c *concurrentTxStmtQueryTest) init(t testing.TB, db *DB)</a>
+#### <a id="concurrentTxStmtQueryTest.init.sql_test.go.0xc0564c0da8" href="#concurrentTxStmtQueryTest.init.sql_test.go.0xc0564c0da8">func (c *concurrentTxStmtQueryTest) init(t testing.TB, db *DB)</a>
 
 ```
 searchKey: sql.concurrentTxStmtQueryTest.init
+tags: [private]
 ```
 
 ```Go
@@ -5571,6 +5695,7 @@ func (c *concurrentTxStmtQueryTest) init(t testing.TB, db *DB)
 
 ```
 searchKey: sql.concurrentTxStmtQueryTest.finish
+tags: [private]
 ```
 
 ```Go
@@ -5581,6 +5706,7 @@ func (c *concurrentTxStmtQueryTest) finish(t testing.TB)
 
 ```
 searchKey: sql.concurrentTxStmtQueryTest.test
+tags: [private]
 ```
 
 ```Go
@@ -5591,6 +5717,7 @@ func (c *concurrentTxStmtQueryTest) test(t testing.TB) error
 
 ```
 searchKey: sql.concurrentTxStmtExecTest
+tags: [private]
 ```
 
 ```Go
@@ -5601,10 +5728,11 @@ type concurrentTxStmtExecTest struct {
 }
 ```
 
-#### <a id="concurrentTxStmtExecTest.init" href="#concurrentTxStmtExecTest.init">func (c *concurrentTxStmtExecTest) init(t testing.TB, db *DB)</a>
+#### <a id="concurrentTxStmtExecTest.init.sql_test.go.0xc0564c0da8" href="#concurrentTxStmtExecTest.init.sql_test.go.0xc0564c0da8">func (c *concurrentTxStmtExecTest) init(t testing.TB, db *DB)</a>
 
 ```
 searchKey: sql.concurrentTxStmtExecTest.init
+tags: [private]
 ```
 
 ```Go
@@ -5615,6 +5743,7 @@ func (c *concurrentTxStmtExecTest) init(t testing.TB, db *DB)
 
 ```
 searchKey: sql.concurrentTxStmtExecTest.finish
+tags: [private]
 ```
 
 ```Go
@@ -5625,6 +5754,7 @@ func (c *concurrentTxStmtExecTest) finish(t testing.TB)
 
 ```
 searchKey: sql.concurrentTxStmtExecTest.test
+tags: [private]
 ```
 
 ```Go
@@ -5635,6 +5765,7 @@ func (c *concurrentTxStmtExecTest) test(t testing.TB) error
 
 ```
 searchKey: sql.concurrentRandomTest
+tags: [private]
 ```
 
 ```Go
@@ -5643,10 +5774,11 @@ type concurrentRandomTest struct {
 }
 ```
 
-#### <a id="concurrentRandomTest.init" href="#concurrentRandomTest.init">func (c *concurrentRandomTest) init(t testing.TB, db *DB)</a>
+#### <a id="concurrentRandomTest.init.sql_test.go.0xc0564c0da8" href="#concurrentRandomTest.init.sql_test.go.0xc0564c0da8">func (c *concurrentRandomTest) init(t testing.TB, db *DB)</a>
 
 ```
 searchKey: sql.concurrentRandomTest.init
+tags: [private]
 ```
 
 ```Go
@@ -5657,6 +5789,7 @@ func (c *concurrentRandomTest) init(t testing.TB, db *DB)
 
 ```
 searchKey: sql.concurrentRandomTest.finish
+tags: [private]
 ```
 
 ```Go
@@ -5667,6 +5800,7 @@ func (c *concurrentRandomTest) finish(t testing.TB)
 
 ```
 searchKey: sql.concurrentRandomTest.test
+tags: [private]
 ```
 
 ```Go
@@ -5677,6 +5811,7 @@ func (c *concurrentRandomTest) test(t testing.TB) error
 
 ```
 searchKey: sql.nvcDriver
+tags: [private]
 ```
 
 ```Go
@@ -5690,6 +5825,7 @@ type nvcDriver struct {
 
 ```
 searchKey: sql.nvcDriver.Open
+tags: [private]
 ```
 
 ```Go
@@ -5700,6 +5836,7 @@ func (d *nvcDriver) Open(dsn string) (driver.Conn, error)
 
 ```
 searchKey: sql.nvcConn
+tags: [private]
 ```
 
 ```Go
@@ -5713,6 +5850,7 @@ type nvcConn struct {
 
 ```
 searchKey: sql.nvcConn.CheckNamedValue
+tags: [private]
 ```
 
 ```Go
@@ -5723,6 +5861,7 @@ func (c *nvcConn) CheckNamedValue(nv *driver.NamedValue) error
 
 ```
 searchKey: sql.decimalInt
+tags: [private]
 ```
 
 ```Go
@@ -5735,6 +5874,7 @@ type decimalInt struct {
 
 ```
 searchKey: sql.doNotInclude
+tags: [private]
 ```
 
 ```Go
@@ -5745,6 +5885,7 @@ type doNotInclude struct{}
 
 ```
 searchKey: sql.ctxOnlyDriver
+tags: [private]
 ```
 
 ```Go
@@ -5757,6 +5898,7 @@ type ctxOnlyDriver struct {
 
 ```
 searchKey: sql.ctxOnlyDriver.Open
+tags: [private]
 ```
 
 ```Go
@@ -5767,6 +5909,7 @@ func (d *ctxOnlyDriver) Open(dsn string) (driver.Conn, error)
 
 ```
 searchKey: sql.ctxOnlyConn
+tags: [private]
 ```
 
 ```Go
@@ -5782,6 +5925,7 @@ type ctxOnlyConn struct {
 
 ```
 searchKey: sql.ctxOnlyConn.Begin
+tags: [private]
 ```
 
 ```Go
@@ -5792,6 +5936,7 @@ func (c *ctxOnlyConn) Begin() (driver.Tx, error)
 
 ```
 searchKey: sql.ctxOnlyConn.Close
+tags: [private]
 ```
 
 ```Go
@@ -5802,6 +5947,7 @@ func (c *ctxOnlyConn) Close() error
 
 ```
 searchKey: sql.ctxOnlyConn.Prepare
+tags: [private]
 ```
 
 ```Go
@@ -5814,6 +5960,7 @@ Prepare is still part of the Conn interface, so while it isn't used must be defi
 
 ```
 searchKey: sql.ctxOnlyConn.PrepareContext
+tags: [private]
 ```
 
 ```Go
@@ -5824,6 +5971,7 @@ func (c *ctxOnlyConn) PrepareContext(ctx context.Context, q string) (driver.Stmt
 
 ```
 searchKey: sql.ctxOnlyConn.QueryContext
+tags: [private]
 ```
 
 ```Go
@@ -5834,6 +5982,7 @@ func (c *ctxOnlyConn) QueryContext(ctx context.Context, q string, args []driver.
 
 ```
 searchKey: sql.ctxOnlyConn.ExecContext
+tags: [private]
 ```
 
 ```Go
@@ -5844,6 +5993,7 @@ func (c *ctxOnlyConn) ExecContext(ctx context.Context, q string, args []driver.N
 
 ```
 searchKey: sql.alwaysErrScanner
+tags: [private]
 ```
 
 ```Go
@@ -5854,6 +6004,7 @@ type alwaysErrScanner struct{}
 
 ```
 searchKey: sql.alwaysErrScanner.Scan
+tags: [private]
 ```
 
 ```Go
@@ -5864,6 +6015,7 @@ func (alwaysErrScanner) Scan(interface{}) error
 
 ```
 searchKey: sql.badConn
+tags: [private]
 ```
 
 ```Go
@@ -5876,6 +6028,7 @@ badConn implements a bad driver.Conn, for TestBadDriver. The Exec method panics.
 
 ```
 searchKey: sql.badConn.Prepare
+tags: [private]
 ```
 
 ```Go
@@ -5886,6 +6039,7 @@ func (bc badConn) Prepare(query string) (driver.Stmt, error)
 
 ```
 searchKey: sql.badConn.Close
+tags: [private]
 ```
 
 ```Go
@@ -5896,6 +6050,7 @@ func (bc badConn) Close() error
 
 ```
 searchKey: sql.badConn.Begin
+tags: [private]
 ```
 
 ```Go
@@ -5906,6 +6061,7 @@ func (bc badConn) Begin() (driver.Tx, error)
 
 ```
 searchKey: sql.badConn.Exec
+tags: [private]
 ```
 
 ```Go
@@ -5916,6 +6072,7 @@ func (bc badConn) Exec(query string, args []driver.Value) (driver.Result, error)
 
 ```
 searchKey: sql.badDriver
+tags: [private]
 ```
 
 ```Go
@@ -5928,6 +6085,7 @@ badDriver is a driver.Driver that uses badConn.
 
 ```
 searchKey: sql.badDriver.Open
+tags: [private]
 ```
 
 ```Go
@@ -5938,6 +6096,7 @@ func (bd badDriver) Open(name string) (driver.Conn, error)
 
 ```
 searchKey: sql.pingDriver
+tags: [private]
 ```
 
 ```Go
@@ -5950,6 +6109,7 @@ type pingDriver struct {
 
 ```
 searchKey: sql.pingDriver.Open
+tags: [private]
 ```
 
 ```Go
@@ -5960,6 +6120,7 @@ func (pd *pingDriver) Open(name string) (driver.Conn, error)
 
 ```
 searchKey: sql.pingConn
+tags: [private]
 ```
 
 ```Go
@@ -5973,6 +6134,7 @@ type pingConn struct {
 
 ```
 searchKey: sql.pingConn.Ping
+tags: [private]
 ```
 
 ```Go
@@ -5981,14 +6143,11 @@ func (pc pingConn) Ping(ctx context.Context) error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="describeNamedValue" href="#describeNamedValue">func describeNamedValue(nv *driver.NamedValue) string</a>
 
 ```
 searchKey: sql.describeNamedValue
+tags: [private]
 ```
 
 ```Go
@@ -5999,6 +6158,7 @@ func describeNamedValue(nv *driver.NamedValue) string
 
 ```
 searchKey: sql.validateNamedValueName
+tags: [private]
 ```
 
 ```Go
@@ -6009,6 +6169,7 @@ func validateNamedValueName(name string) error
 
 ```
 searchKey: sql.defaultCheckNamedValue
+tags: [private]
 ```
 
 ```Go
@@ -6021,6 +6182,7 @@ defaultCheckNamedValue wraps the default ColumnConverter to have the same functi
 
 ```
 searchKey: sql.driverArgsConnLocked
+tags: [private]
 ```
 
 ```Go
@@ -6037,6 +6199,7 @@ ci must be locked.
 
 ```
 searchKey: sql.convertAssign
+tags: [private]
 ```
 
 ```Go
@@ -6049,6 +6212,7 @@ convertAssign is the same as convertAssignRows, but without the optional rows ar
 
 ```
 searchKey: sql.convertAssignRows
+tags: [private]
 ```
 
 ```Go
@@ -6061,6 +6225,7 @@ convertAssignRows copies to dest the value in src, converting it if possible. An
 
 ```
 searchKey: sql.strconvErr
+tags: [private]
 ```
 
 ```Go
@@ -6071,6 +6236,7 @@ func strconvErr(err error) error
 
 ```
 searchKey: sql.cloneBytes
+tags: [private]
 ```
 
 ```Go
@@ -6081,6 +6247,7 @@ func cloneBytes(b []byte) []byte
 
 ```
 searchKey: sql.asString
+tags: [private]
 ```
 
 ```Go
@@ -6091,6 +6258,7 @@ func asString(src interface{}) string
 
 ```
 searchKey: sql.asBytes
+tags: [private]
 ```
 
 ```Go
@@ -6101,6 +6269,7 @@ func asBytes(buf []byte, rv reflect.Value) (b []byte, ok bool)
 
 ```
 searchKey: sql.callValuerValue
+tags: [private]
 ```
 
 ```Go
@@ -6117,6 +6286,7 @@ This function is mirrored in the database/sql/driver package.
 
 ```
 searchKey: sql.ctxDriverPrepare
+tags: [private]
 ```
 
 ```Go
@@ -6127,6 +6297,7 @@ func ctxDriverPrepare(ctx context.Context, ci driver.Conn, query string) (driver
 
 ```
 searchKey: sql.ctxDriverExec
+tags: [private]
 ```
 
 ```Go
@@ -6137,6 +6308,7 @@ func ctxDriverExec(ctx context.Context, execerCtx driver.ExecerContext, execer d
 
 ```
 searchKey: sql.ctxDriverQuery
+tags: [private]
 ```
 
 ```Go
@@ -6147,6 +6319,7 @@ func ctxDriverQuery(ctx context.Context, queryerCtx driver.QueryerContext, query
 
 ```
 searchKey: sql.ctxDriverStmtExec
+tags: [private]
 ```
 
 ```Go
@@ -6157,6 +6330,7 @@ func ctxDriverStmtExec(ctx context.Context, si driver.Stmt, nvdargs []driver.Nam
 
 ```
 searchKey: sql.ctxDriverStmtQuery
+tags: [private]
 ```
 
 ```Go
@@ -6167,6 +6341,7 @@ func ctxDriverStmtQuery(ctx context.Context, si driver.Stmt, nvdargs []driver.Na
 
 ```
 searchKey: sql.ctxDriverBegin
+tags: [private]
 ```
 
 ```Go
@@ -6177,6 +6352,7 @@ func ctxDriverBegin(ctx context.Context, opts *TxOptions, ci driver.Conn) (drive
 
 ```
 searchKey: sql.namedValueToValue
+tags: [private]
 ```
 
 ```Go
@@ -6187,7 +6363,6 @@ func namedValueToValue(named []driver.NamedValue) ([]driver.Value, error)
 
 ```
 searchKey: sql.Register
-tags: [exported]
 ```
 
 ```Go
@@ -6200,6 +6375,7 @@ Register makes a database driver available by the provided name. If Register is 
 
 ```
 searchKey: sql.unregisterAllDrivers
+tags: [private]
 ```
 
 ```Go
@@ -6210,7 +6386,6 @@ func unregisterAllDrivers()
 
 ```
 searchKey: sql.Drivers
-tags: [exported]
 ```
 
 ```Go
@@ -6223,6 +6398,7 @@ Drivers returns a sorted list of the names of the registered drivers.
 
 ```
 searchKey: sql.rowsiFromStatement
+tags: [private]
 ```
 
 ```Go
@@ -6233,6 +6409,7 @@ func rowsiFromStatement(ctx context.Context, ci driver.Conn, ds *driverStmt, arg
 
 ```
 searchKey: sql.rowsColumnInfoSetupConnLocked
+tags: [private]
 ```
 
 ```Go
@@ -6243,6 +6420,7 @@ func rowsColumnInfoSetupConnLocked(rowsi driver.Rows) []*ColumnType
 
 ```
 searchKey: sql.stack
+tags: [private]
 ```
 
 ```Go
@@ -6253,6 +6431,7 @@ func stack() string
 
 ```
 searchKey: sql.withLock
+tags: [private]
 ```
 
 ```Go
@@ -6265,6 +6444,7 @@ withLock runs while holding lk.
 
 ```
 searchKey: sql.conversionTests
+tags: [private]
 ```
 
 ```Go
@@ -6275,6 +6455,7 @@ func conversionTests() []conversionTest
 
 ```
 searchKey: sql.intPtrValue
+tags: [private]
 ```
 
 ```Go
@@ -6285,6 +6466,7 @@ func intPtrValue(intptr interface{}) interface{}
 
 ```
 searchKey: sql.intValue
+tags: [private]
 ```
 
 ```Go
@@ -6295,6 +6477,7 @@ func intValue(intptr interface{}) int64
 
 ```
 searchKey: sql.uintValue
+tags: [private]
 ```
 
 ```Go
@@ -6305,6 +6488,7 @@ func uintValue(intptr interface{}) uint64
 
 ```
 searchKey: sql.float64Value
+tags: [private]
 ```
 
 ```Go
@@ -6315,6 +6499,7 @@ func float64Value(ptr interface{}) float64
 
 ```
 searchKey: sql.float32Value
+tags: [private]
 ```
 
 ```Go
@@ -6325,6 +6510,7 @@ func float32Value(ptr interface{}) float32
 
 ```
 searchKey: sql.timeValue
+tags: [private]
 ```
 
 ```Go
@@ -6335,6 +6521,7 @@ func timeValue(ptr interface{}) time.Time
 
 ```
 searchKey: sql.TestConversions
+tags: [private]
 ```
 
 ```Go
@@ -6345,6 +6532,7 @@ func TestConversions(t *testing.T)
 
 ```
 searchKey: sql.TestNullString
+tags: [private]
 ```
 
 ```Go
@@ -6355,6 +6543,7 @@ func TestNullString(t *testing.T)
 
 ```
 searchKey: sql.TestValueConverters
+tags: [private]
 ```
 
 ```Go
@@ -6365,6 +6554,7 @@ func TestValueConverters(t *testing.T)
 
 ```
 searchKey: sql.TestRawBytesAllocs
+tags: [private]
 ```
 
 ```Go
@@ -6377,6 +6567,7 @@ Tests that assigning to RawBytes doesn't allocate (and also works).
 
 ```
 searchKey: sql.TestUserDefinedBytes
+tags: [private]
 ```
 
 ```Go
@@ -6389,6 +6580,7 @@ func TestUserDefinedBytes(t *testing.T)
 
 ```
 searchKey: sql.TestDriverArgs
+tags: [private]
 ```
 
 ```Go
@@ -6399,16 +6591,18 @@ func TestDriverArgs(t *testing.T)
 
 ```
 searchKey: sql.TestDecimal
+tags: [private]
 ```
 
 ```Go
 func TestDecimal(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.fakedb_test.go" href="#init.fakedb_test.go">func init()</a>
 
 ```
 searchKey: sql.init
+tags: [private]
 ```
 
 ```Go
@@ -6419,6 +6613,7 @@ func init()
 
 ```
 searchKey: sql.contains
+tags: [private]
 ```
 
 ```Go
@@ -6429,6 +6624,7 @@ func contains(list []string, y string) bool
 
 ```
 searchKey: sql.TestDrivers
+tags: [private]
 ```
 
 ```Go
@@ -6439,6 +6635,7 @@ func TestDrivers(t *testing.T)
 
 ```
 searchKey: sql.setHookOpenErr
+tags: [private]
 ```
 
 ```Go
@@ -6449,6 +6646,7 @@ func setHookOpenErr(fn func() error)
 
 ```
 searchKey: sql.setHookpostCloseConn
+tags: [private]
 ```
 
 ```Go
@@ -6459,6 +6657,7 @@ func setHookpostCloseConn(fn func(*fakeConn, error))
 
 ```
 searchKey: sql.setStrictFakeConnClose
+tags: [private]
 ```
 
 ```Go
@@ -6471,6 +6670,7 @@ setStrictFakeConnClose sets the t to Errorf on when fakeConn.Close fails to clos
 
 ```
 searchKey: sql.checkSubsetTypes
+tags: [private]
 ```
 
 ```Go
@@ -6481,6 +6681,7 @@ func checkSubsetTypes(allowAny bool, args []driver.NamedValue) error
 
 ```
 searchKey: sql.errf
+tags: [private]
 ```
 
 ```Go
@@ -6491,6 +6692,7 @@ func errf(msg string, args ...interface{}) error
 
 ```
 searchKey: sql.converterForType
+tags: [private]
 ```
 
 ```Go
@@ -6501,16 +6703,18 @@ func converterForType(typ string) driver.ValueConverter
 
 ```
 searchKey: sql.colTypeToReflectType
+tags: [private]
 ```
 
 ```Go
 func colTypeToReflectType(typ string) reflect.Type
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.sql_test.go" href="#init.sql_test.go">func init()</a>
 
 ```
 searchKey: sql.init
+tags: [private]
 ```
 
 ```Go
@@ -6521,6 +6725,7 @@ func init()
 
 ```
 searchKey: sql.TestOpenDB
+tags: [private]
 ```
 
 ```Go
@@ -6531,6 +6736,7 @@ func TestOpenDB(t *testing.T)
 
 ```
 searchKey: sql.TestDriverPanic
+tags: [private]
 ```
 
 ```Go
@@ -6541,6 +6747,7 @@ func TestDriverPanic(t *testing.T)
 
 ```
 searchKey: sql.exec
+tags: [private]
 ```
 
 ```Go
@@ -6551,6 +6758,7 @@ func exec(t testing.TB, db *DB, query string, args ...interface{})
 
 ```
 searchKey: sql.closeDB
+tags: [private]
 ```
 
 ```Go
@@ -6561,6 +6769,7 @@ func closeDB(t testing.TB, db *DB)
 
 ```
 searchKey: sql.numPrepares
+tags: [private]
 ```
 
 ```Go
@@ -6573,6 +6782,7 @@ numPrepares assumes that db has exactly 1 idle conn and returns its count of cal
 
 ```
 searchKey: sql.TestQuery
+tags: [private]
 ```
 
 ```Go
@@ -6583,6 +6793,7 @@ func TestQuery(t *testing.T)
 
 ```
 searchKey: sql.TestQueryContext
+tags: [private]
 ```
 
 ```Go
@@ -6595,6 +6806,7 @@ TestQueryContext tests canceling the context while scanning the rows.
 
 ```
 searchKey: sql.waitCondition
+tags: [private]
 ```
 
 ```Go
@@ -6605,6 +6817,7 @@ func waitCondition(waitFor, checkEvery time.Duration, fn func() bool) bool
 
 ```
 searchKey: sql.waitForFree
+tags: [private]
 ```
 
 ```Go
@@ -6617,6 +6830,7 @@ waitForFree checks db.numFreeConns until either it equals want or the maxWait ti
 
 ```
 searchKey: sql.waitForRowsClose
+tags: [private]
 ```
 
 ```Go
@@ -6627,6 +6841,7 @@ func waitForRowsClose(t *testing.T, rows *Rows, maxWait time.Duration)
 
 ```
 searchKey: sql.TestQueryContextWait
+tags: [private]
 ```
 
 ```Go
@@ -6639,6 +6854,7 @@ TestQueryContextWait ensures that rows and all internal statements are closed wh
 
 ```
 searchKey: sql.TestTxContextWait
+tags: [private]
 ```
 
 ```Go
@@ -6651,6 +6867,7 @@ TestTxContextWait tests the transaction behavior when the tx context is canceled
 
 ```
 searchKey: sql.TestTxContextWaitNoDiscard
+tags: [private]
 ```
 
 ```Go
@@ -6663,6 +6880,7 @@ TestTxContextWaitNoDiscard is the same as TestTxContextWait, but should not disc
 
 ```
 searchKey: sql.TestUnsupportedOptions
+tags: [private]
 ```
 
 ```Go
@@ -6675,6 +6893,7 @@ TestUnsupportedOptions checks that the database fails when a driver that doesn't
 
 ```
 searchKey: sql.TestMultiResultSetQuery
+tags: [private]
 ```
 
 ```Go
@@ -6685,6 +6904,7 @@ func TestMultiResultSetQuery(t *testing.T)
 
 ```
 searchKey: sql.TestQueryNamedArg
+tags: [private]
 ```
 
 ```Go
@@ -6695,6 +6915,7 @@ func TestQueryNamedArg(t *testing.T)
 
 ```
 searchKey: sql.TestPoolExhaustOnCancel
+tags: [private]
 ```
 
 ```Go
@@ -6705,6 +6926,7 @@ func TestPoolExhaustOnCancel(t *testing.T)
 
 ```
 searchKey: sql.TestRowsColumns
+tags: [private]
 ```
 
 ```Go
@@ -6715,6 +6937,7 @@ func TestRowsColumns(t *testing.T)
 
 ```
 searchKey: sql.TestRowsColumnTypes
+tags: [private]
 ```
 
 ```Go
@@ -6725,6 +6948,7 @@ func TestRowsColumnTypes(t *testing.T)
 
 ```
 searchKey: sql.TestQueryRow
+tags: [private]
 ```
 
 ```Go
@@ -6735,6 +6959,7 @@ func TestQueryRow(t *testing.T)
 
 ```
 searchKey: sql.TestRowErr
+tags: [private]
 ```
 
 ```Go
@@ -6745,6 +6970,7 @@ func TestRowErr(t *testing.T)
 
 ```
 searchKey: sql.TestTxRollbackCommitErr
+tags: [private]
 ```
 
 ```Go
@@ -6755,6 +6981,7 @@ func TestTxRollbackCommitErr(t *testing.T)
 
 ```
 searchKey: sql.TestStatementErrorAfterClose
+tags: [private]
 ```
 
 ```Go
@@ -6765,6 +6992,7 @@ func TestStatementErrorAfterClose(t *testing.T)
 
 ```
 searchKey: sql.TestStatementQueryRow
+tags: [private]
 ```
 
 ```Go
@@ -6775,6 +7003,7 @@ func TestStatementQueryRow(t *testing.T)
 
 ```
 searchKey: sql.TestStatementClose
+tags: [private]
 ```
 
 ```Go
@@ -6787,6 +7016,7 @@ golang.org/issue/12798
 
 ```
 searchKey: sql.TestStatementQueryRowConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -6799,6 +7029,7 @@ golang.org/issue/3734
 
 ```
 searchKey: sql.TestBogusPreboundParameters
+tags: [private]
 ```
 
 ```Go
@@ -6811,6 +7042,7 @@ just a test of fakedb itself
 
 ```
 searchKey: sql.TestExec
+tags: [private]
 ```
 
 ```Go
@@ -6821,6 +7053,7 @@ func TestExec(t *testing.T)
 
 ```
 searchKey: sql.TestTxPrepare
+tags: [private]
 ```
 
 ```Go
@@ -6831,6 +7064,7 @@ func TestTxPrepare(t *testing.T)
 
 ```
 searchKey: sql.TestTxStmt
+tags: [private]
 ```
 
 ```Go
@@ -6841,6 +7075,7 @@ func TestTxStmt(t *testing.T)
 
 ```
 searchKey: sql.TestTxStmtPreparedOnce
+tags: [private]
 ```
 
 ```Go
@@ -6851,6 +7086,7 @@ func TestTxStmtPreparedOnce(t *testing.T)
 
 ```
 searchKey: sql.TestTxStmtClosedRePrepares
+tags: [private]
 ```
 
 ```Go
@@ -6861,6 +7097,7 @@ func TestTxStmtClosedRePrepares(t *testing.T)
 
 ```
 searchKey: sql.TestParentStmtOutlivesTxStmt
+tags: [private]
 ```
 
 ```Go
@@ -6871,6 +7108,7 @@ func TestParentStmtOutlivesTxStmt(t *testing.T)
 
 ```
 searchKey: sql.TestTxStmtFromTxStmtRePrepares
+tags: [private]
 ```
 
 ```Go
@@ -6883,6 +7121,7 @@ Test that tx.Stmt called with a statement already associated with tx as argument
 
 ```
 searchKey: sql.TestTxQuery
+tags: [private]
 ```
 
 ```Go
@@ -6895,6 +7134,7 @@ Issue: [https://golang.org/issue/2784](https://golang.org/issue/2784) This test 
 
 ```
 searchKey: sql.TestTxQueryInvalid
+tags: [private]
 ```
 
 ```Go
@@ -6905,6 +7145,7 @@ func TestTxQueryInvalid(t *testing.T)
 
 ```
 searchKey: sql.TestTxErrBadConn
+tags: [private]
 ```
 
 ```Go
@@ -6917,6 +7158,7 @@ Tests fix for issue 4433, that retries in Begin happen when conn.Begin() returns
 
 ```
 searchKey: sql.TestConnQuery
+tags: [private]
 ```
 
 ```Go
@@ -6927,6 +7169,7 @@ func TestConnQuery(t *testing.T)
 
 ```
 searchKey: sql.TestConnRaw
+tags: [private]
 ```
 
 ```Go
@@ -6937,6 +7180,7 @@ func TestConnRaw(t *testing.T)
 
 ```
 searchKey: sql.TestCursorFake
+tags: [private]
 ```
 
 ```Go
@@ -6947,6 +7191,7 @@ func TestCursorFake(t *testing.T)
 
 ```
 searchKey: sql.TestInvalidNilValues
+tags: [private]
 ```
 
 ```Go
@@ -6957,6 +7202,7 @@ func TestInvalidNilValues(t *testing.T)
 
 ```
 searchKey: sql.TestConnTx
+tags: [private]
 ```
 
 ```Go
@@ -6967,6 +7213,7 @@ func TestConnTx(t *testing.T)
 
 ```
 searchKey: sql.TestConnIsValid
+tags: [private]
 ```
 
 ```Go
@@ -6979,6 +7226,7 @@ TestConnIsValid verifies that a database connection that should be discarded, is
 
 ```
 searchKey: sql.TestIssue2542Deadlock
+tags: [private]
 ```
 
 ```Go
@@ -6991,6 +7239,7 @@ Tests fix for issue 2542, that we release a lock when querying on a closed conne
 
 ```
 searchKey: sql.TestCloseStmtBeforeRows
+tags: [private]
 ```
 
 ```Go
@@ -7003,6 +7252,7 @@ From golang.org/issue/3865
 
 ```
 searchKey: sql.TestNullByteSlice
+tags: [private]
 ```
 
 ```Go
@@ -7015,6 +7265,7 @@ Tests fix for issue 2788, that we bind nil to a []byte if the value in the colum
 
 ```
 searchKey: sql.TestPointerParamsAndScans
+tags: [private]
 ```
 
 ```Go
@@ -7025,16 +7276,18 @@ func TestPointerParamsAndScans(t *testing.T)
 
 ```
 searchKey: sql.TestQueryRowClosingStmt
+tags: [private]
 ```
 
 ```Go
 func TestQueryRowClosingStmt(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.sql_test.go.0xc0564c0da8" href="#init.sql_test.go.0xc0564c0da8">func init()</a>
 
 ```
 searchKey: sql.init
+tags: [private]
 ```
 
 ```Go
@@ -7045,6 +7298,7 @@ func init()
 
 ```
 searchKey: sql.setRowsCloseHook
+tags: [private]
 ```
 
 ```Go
@@ -7055,6 +7309,7 @@ func setRowsCloseHook(fn func(*Rows, *error))
 
 ```
 searchKey: sql.TestIssue6651
+tags: [private]
 ```
 
 ```Go
@@ -7067,6 +7322,7 @@ Test issue 6651
 
 ```
 searchKey: sql.TestNullStringParam
+tags: [private]
 ```
 
 ```Go
@@ -7077,6 +7333,7 @@ func TestNullStringParam(t *testing.T)
 
 ```
 searchKey: sql.TestNullInt64Param
+tags: [private]
 ```
 
 ```Go
@@ -7087,6 +7344,7 @@ func TestNullInt64Param(t *testing.T)
 
 ```
 searchKey: sql.TestNullInt32Param
+tags: [private]
 ```
 
 ```Go
@@ -7097,6 +7355,7 @@ func TestNullInt32Param(t *testing.T)
 
 ```
 searchKey: sql.TestNullInt16Param
+tags: [private]
 ```
 
 ```Go
@@ -7107,6 +7366,7 @@ func TestNullInt16Param(t *testing.T)
 
 ```
 searchKey: sql.TestNullByteParam
+tags: [private]
 ```
 
 ```Go
@@ -7117,6 +7377,7 @@ func TestNullByteParam(t *testing.T)
 
 ```
 searchKey: sql.TestNullFloat64Param
+tags: [private]
 ```
 
 ```Go
@@ -7127,6 +7388,7 @@ func TestNullFloat64Param(t *testing.T)
 
 ```
 searchKey: sql.TestNullBoolParam
+tags: [private]
 ```
 
 ```Go
@@ -7137,6 +7399,7 @@ func TestNullBoolParam(t *testing.T)
 
 ```
 searchKey: sql.TestNullTimeParam
+tags: [private]
 ```
 
 ```Go
@@ -7147,6 +7410,7 @@ func TestNullTimeParam(t *testing.T)
 
 ```
 searchKey: sql.nullTestRun
+tags: [private]
 ```
 
 ```Go
@@ -7157,6 +7421,7 @@ func nullTestRun(t *testing.T, spec nullTestSpec)
 
 ```
 searchKey: sql.TestQueryRowNilScanDest
+tags: [private]
 ```
 
 ```Go
@@ -7169,6 +7434,7 @@ golang.org/issue/4859
 
 ```
 searchKey: sql.TestIssue4902
+tags: [private]
 ```
 
 ```Go
@@ -7179,6 +7445,7 @@ func TestIssue4902(t *testing.T)
 
 ```
 searchKey: sql.TestSimultaneousQueries
+tags: [private]
 ```
 
 ```Go
@@ -7191,6 +7458,7 @@ Issue 3857 This used to deadlock.
 
 ```
 searchKey: sql.TestMaxIdleConns
+tags: [private]
 ```
 
 ```Go
@@ -7201,6 +7469,7 @@ func TestMaxIdleConns(t *testing.T)
 
 ```
 searchKey: sql.TestMaxOpenConns
+tags: [private]
 ```
 
 ```Go
@@ -7211,6 +7480,7 @@ func TestMaxOpenConns(t *testing.T)
 
 ```
 searchKey: sql.TestMaxOpenConnsOnBusy
+tags: [private]
 ```
 
 ```Go
@@ -7223,6 +7493,7 @@ Issue 9453: tests that SetMaxOpenConns can be lowered at runtime and affects the
 
 ```
 searchKey: sql.TestPendingConnsAfterErr
+tags: [private]
 ```
 
 ```Go
@@ -7235,6 +7506,7 @@ Issue 10886: tests that all connection attempts return when more than DB.maxOpen
 
 ```
 searchKey: sql.TestSingleOpenConn
+tags: [private]
 ```
 
 ```Go
@@ -7245,6 +7517,7 @@ func TestSingleOpenConn(t *testing.T)
 
 ```
 searchKey: sql.TestStats
+tags: [private]
 ```
 
 ```Go
@@ -7255,6 +7528,7 @@ func TestStats(t *testing.T)
 
 ```
 searchKey: sql.TestConnMaxLifetime
+tags: [private]
 ```
 
 ```Go
@@ -7265,6 +7539,7 @@ func TestConnMaxLifetime(t *testing.T)
 
 ```
 searchKey: sql.TestStmtCloseDeps
+tags: [private]
 ```
 
 ```Go
@@ -7277,6 +7552,7 @@ golang.org/issue/5323
 
 ```
 searchKey: sql.TestCloseConnBeforeStmts
+tags: [private]
 ```
 
 ```Go
@@ -7289,6 +7565,7 @@ golang.org/issue/5046
 
 ```
 searchKey: sql.TestRowsCloseOrder
+tags: [private]
 ```
 
 ```Go
@@ -7301,6 +7578,7 @@ golang.org/issue/5283: don't release the Rows' connection in Close before callin
 
 ```
 searchKey: sql.TestRowsImplicitClose
+tags: [private]
 ```
 
 ```Go
@@ -7311,6 +7589,7 @@ func TestRowsImplicitClose(t *testing.T)
 
 ```
 searchKey: sql.TestStmtCloseOrder
+tags: [private]
 ```
 
 ```Go
@@ -7321,6 +7600,7 @@ func TestStmtCloseOrder(t *testing.T)
 
 ```
 searchKey: sql.TestManyErrBadConn
+tags: [private]
 ```
 
 ```Go
@@ -7333,6 +7613,7 @@ Test cases where there's more than maxBadConnRetries bad connections in the pool
 
 ```
 searchKey: sql.TestTxCannotCommitAfterRollback
+tags: [private]
 ```
 
 ```Go
@@ -7345,6 +7626,7 @@ Issue 34775: Ensure that a Tx cannot commit after a rollback.
 
 ```
 searchKey: sql.TestTxStmtDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -7357,6 +7639,7 @@ Issue 40985 transaction statement deadlock while context cancel.
 
 ```
 searchKey: sql.TestConnExpiresFreshOutOfPool
+tags: [private]
 ```
 
 ```Go
@@ -7369,6 +7652,7 @@ Issue32530 encounters an issue where a connection may expire right after it come
 
 ```
 searchKey: sql.TestIssue20575
+tags: [private]
 ```
 
 ```Go
@@ -7381,6 +7665,7 @@ TestIssue20575 ensures the Rows from query does not block closing a transaction.
 
 ```
 searchKey: sql.TestIssue20622
+tags: [private]
 ```
 
 ```Go
@@ -7393,6 +7678,7 @@ TestIssue20622 tests closing the transaction before rows is closed, requires the
 
 ```
 searchKey: sql.TestErrBadConnReconnect
+tags: [private]
 ```
 
 ```Go
@@ -7405,6 +7691,7 @@ golang.org/issue/5718
 
 ```
 searchKey: sql.TestTxEndBadConn
+tags: [private]
 ```
 
 ```Go
@@ -7417,6 +7704,7 @@ golang.org/issue/11264
 
 ```
 searchKey: sql.doConcurrentTest
+tags: [private]
 ```
 
 ```Go
@@ -7427,6 +7715,7 @@ func doConcurrentTest(t testing.TB, ct concurrentTest)
 
 ```
 searchKey: sql.TestIssue6081
+tags: [private]
 ```
 
 ```Go
@@ -7437,6 +7726,7 @@ func TestIssue6081(t *testing.T)
 
 ```
 searchKey: sql.TestIssue18429
+tags: [private]
 ```
 
 ```Go
@@ -7453,6 +7743,7 @@ The addition of calling rows.Next also tests Issue 21117.
 
 ```
 searchKey: sql.TestIssue20160
+tags: [private]
 ```
 
 ```Go
@@ -7465,6 +7756,7 @@ TestIssue20160 attempts to test a short context life on a stmt Query.
 
 ```
 searchKey: sql.TestIssue18719
+tags: [private]
 ```
 
 ```Go
@@ -7479,6 +7771,7 @@ See [https://golang.org/cl/35550](https://golang.org/cl/35550) .
 
 ```
 searchKey: sql.TestIssue20647
+tags: [private]
 ```
 
 ```Go
@@ -7489,6 +7782,7 @@ func TestIssue20647(t *testing.T)
 
 ```
 searchKey: sql.TestConcurrency
+tags: [private]
 ```
 
 ```Go
@@ -7499,6 +7793,7 @@ func TestConcurrency(t *testing.T)
 
 ```
 searchKey: sql.TestConnectionLeak
+tags: [private]
 ```
 
 ```Go
@@ -7509,6 +7804,7 @@ func TestConnectionLeak(t *testing.T)
 
 ```
 searchKey: sql.TestStatsMaxIdleClosedZero
+tags: [private]
 ```
 
 ```Go
@@ -7519,6 +7815,7 @@ func TestStatsMaxIdleClosedZero(t *testing.T)
 
 ```
 searchKey: sql.TestStatsMaxIdleClosedTen
+tags: [private]
 ```
 
 ```Go
@@ -7529,6 +7826,7 @@ func TestStatsMaxIdleClosedTen(t *testing.T)
 
 ```
 searchKey: sql.TestMaxIdleTime
+tags: [private]
 ```
 
 ```Go
@@ -7539,6 +7837,7 @@ func TestMaxIdleTime(t *testing.T)
 
 ```
 searchKey: sql.TestNamedValueChecker
+tags: [private]
 ```
 
 ```Go
@@ -7549,6 +7848,7 @@ func TestNamedValueChecker(t *testing.T)
 
 ```
 searchKey: sql.TestNamedValueCheckerSkip
+tags: [private]
 ```
 
 ```Go
@@ -7559,6 +7859,7 @@ func TestNamedValueCheckerSkip(t *testing.T)
 
 ```
 searchKey: sql.TestOpenConnector
+tags: [private]
 ```
 
 ```Go
@@ -7569,6 +7870,7 @@ func TestOpenConnector(t *testing.T)
 
 ```
 searchKey: sql.TestQueryExecContextOnly
+tags: [private]
 ```
 
 ```Go
@@ -7581,6 +7883,7 @@ TestQueryExecContextOnly ensures drivers only need to implement QueryContext and
 
 ```
 searchKey: sql.TestRowsScanProperlyWrapsErrors
+tags: [private]
 ```
 
 ```Go
@@ -7593,6 +7896,7 @@ Issue 38099: Ensure that Rows.Scan properly wraps underlying errors.
 
 ```
 searchKey: sql.TestBadDriver
+tags: [private]
 ```
 
 ```Go
@@ -7605,6 +7909,7 @@ Issue 15901.
 
 ```
 searchKey: sql.TestPing
+tags: [private]
 ```
 
 ```Go
@@ -7615,6 +7920,7 @@ func TestPing(t *testing.T)
 
 ```
 searchKey: sql.TestTypedString
+tags: [private]
 ```
 
 ```Go
@@ -7627,6 +7933,7 @@ Issue 18101.
 
 ```
 searchKey: sql.BenchmarkConcurrentDBExec
+tags: [private]
 ```
 
 ```Go
@@ -7637,6 +7944,7 @@ func BenchmarkConcurrentDBExec(b *testing.B)
 
 ```
 searchKey: sql.BenchmarkConcurrentStmtQuery
+tags: [private]
 ```
 
 ```Go
@@ -7647,6 +7955,7 @@ func BenchmarkConcurrentStmtQuery(b *testing.B)
 
 ```
 searchKey: sql.BenchmarkConcurrentStmtExec
+tags: [private]
 ```
 
 ```Go
@@ -7657,6 +7966,7 @@ func BenchmarkConcurrentStmtExec(b *testing.B)
 
 ```
 searchKey: sql.BenchmarkConcurrentTxQuery
+tags: [private]
 ```
 
 ```Go
@@ -7667,6 +7977,7 @@ func BenchmarkConcurrentTxQuery(b *testing.B)
 
 ```
 searchKey: sql.BenchmarkConcurrentTxExec
+tags: [private]
 ```
 
 ```Go
@@ -7677,6 +7988,7 @@ func BenchmarkConcurrentTxExec(b *testing.B)
 
 ```
 searchKey: sql.BenchmarkConcurrentTxStmtQuery
+tags: [private]
 ```
 
 ```Go
@@ -7687,6 +7999,7 @@ func BenchmarkConcurrentTxStmtQuery(b *testing.B)
 
 ```
 searchKey: sql.BenchmarkConcurrentTxStmtExec
+tags: [private]
 ```
 
 ```Go
@@ -7697,6 +8010,7 @@ func BenchmarkConcurrentTxStmtExec(b *testing.B)
 
 ```
 searchKey: sql.BenchmarkConcurrentRandom
+tags: [private]
 ```
 
 ```Go
@@ -7707,6 +8021,7 @@ func BenchmarkConcurrentRandom(b *testing.B)
 
 ```
 searchKey: sql.BenchmarkManyConcurrentQueries
+tags: [private]
 ```
 
 ```Go

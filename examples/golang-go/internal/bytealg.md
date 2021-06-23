@@ -29,7 +29,7 @@
     * [func Equal(a, b []byte) bool](#Equal)
     * [func abigen_runtime_memequal(a, b unsafe.Pointer, size uintptr) bool](#abigen_runtime_memequal)
     * [func abigen_runtime_memequal_varlen(a, b unsafe.Pointer) bool](#abigen_runtime_memequal_varlen)
-    * [func init()](#init)
+    * [func init()](#init.index_amd64.go)
     * [func Cutover(n int) int](#Cutover)
     * [func Index(a, b []byte) int](#Index)
     * [func IndexString(a, b string) int](#IndexString)
@@ -39,10 +39,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="offsetX86HasSSE2" href="#offsetX86HasSSE2">const offsetX86HasSSE2</a>
 
 ```
 searchKey: bytealg.offsetX86HasSSE2
+tags: [private]
 ```
 
 ```Go
@@ -55,6 +60,7 @@ Offsets into internal/cpu records for use in assembly.
 
 ```
 searchKey: bytealg.offsetX86HasSSE42
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +73,7 @@ Offsets into internal/cpu records for use in assembly.
 
 ```
 searchKey: bytealg.offsetX86HasAVX2
+tags: [private]
 ```
 
 ```Go
@@ -79,6 +86,7 @@ Offsets into internal/cpu records for use in assembly.
 
 ```
 searchKey: bytealg.offsetX86HasPOPCNT
+tags: [private]
 ```
 
 ```Go
@@ -91,6 +99,7 @@ Offsets into internal/cpu records for use in assembly.
 
 ```
 searchKey: bytealg.offsetS390xHasVX
+tags: [private]
 ```
 
 ```Go
@@ -103,6 +112,7 @@ Offsets into internal/cpu records for use in assembly.
 
 ```
 searchKey: bytealg.offsetPPC64HasPOWER9
+tags: [private]
 ```
 
 ```Go
@@ -115,7 +125,6 @@ Offsets into internal/cpu records for use in assembly.
 
 ```
 searchKey: bytealg.PrimeRK
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +137,6 @@ PrimeRK is the prime base used in Rabin-Karp algorithm.
 
 ```
 searchKey: bytealg.MaxBruteForce
-tags: [exported]
 ```
 
 ```Go
@@ -137,11 +145,14 @@ const MaxBruteForce = 64
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MaxLen" href="#MaxLen">var MaxLen</a>
 
 ```
 searchKey: bytealg.MaxLen
-tags: [exported]
 ```
 
 ```Go
@@ -152,11 +163,14 @@ MaxLen is the maximum length of the string to be searched for (argument b) in In
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="HashStrBytes" href="#HashStrBytes">func HashStrBytes(sep []byte) (uint32, uint32)</a>
 
 ```
 searchKey: bytealg.HashStrBytes
-tags: [exported]
 ```
 
 ```Go
@@ -169,7 +183,6 @@ HashStrBytes returns the hash and the appropriate multiplicative factor for use 
 
 ```
 searchKey: bytealg.HashStr
-tags: [exported]
 ```
 
 ```Go
@@ -182,7 +195,6 @@ HashStr returns the hash and the appropriate multiplicative factor for use in Ra
 
 ```
 searchKey: bytealg.HashStrRevBytes
-tags: [exported]
 ```
 
 ```Go
@@ -195,7 +207,6 @@ HashStrRevBytes returns the hash of the reverse of sep and the appropriate multi
 
 ```
 searchKey: bytealg.HashStrRev
-tags: [exported]
 ```
 
 ```Go
@@ -208,7 +219,6 @@ HashStrRev returns the hash of the reverse of sep and the appropriate multiplica
 
 ```
 searchKey: bytealg.IndexRabinKarpBytes
-tags: [exported]
 ```
 
 ```Go
@@ -221,7 +231,6 @@ IndexRabinKarpBytes uses the Rabin-Karp search algorithm to return the index of 
 
 ```
 searchKey: bytealg.IndexRabinKarp
-tags: [exported]
 ```
 
 ```Go
@@ -234,7 +243,6 @@ IndexRabinKarp uses the Rabin-Karp search algorithm to return the index of the f
 
 ```
 searchKey: bytealg.Compare
-tags: [exported]
 ```
 
 ```Go
@@ -245,6 +253,7 @@ func Compare(a, b []byte) int
 
 ```
 searchKey: bytealg.abigen_runtime_cmpstring
+tags: [private]
 ```
 
 ```Go
@@ -255,7 +264,6 @@ func abigen_runtime_cmpstring(a, b string) int
 
 ```
 searchKey: bytealg.Count
-tags: [exported]
 ```
 
 ```Go
@@ -266,7 +274,6 @@ func Count(b []byte, c byte) int
 
 ```
 searchKey: bytealg.CountString
-tags: [exported]
 ```
 
 ```Go
@@ -277,6 +284,7 @@ func CountString(s string, c byte) int
 
 ```
 searchKey: bytealg.countGeneric
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +297,7 @@ A backup implementation to use by assembly.
 
 ```
 searchKey: bytealg.countGenericString
+tags: [private]
 ```
 
 ```Go
@@ -299,7 +308,6 @@ func countGenericString(s string, c byte) int
 
 ```
 searchKey: bytealg.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -314,6 +322,7 @@ Equal is equivalent to bytes.Equal. It is provided here for convenience, because
 
 ```
 searchKey: bytealg.abigen_runtime_memequal
+tags: [private]
 ```
 
 ```Go
@@ -324,16 +333,18 @@ func abigen_runtime_memequal(a, b unsafe.Pointer, size uintptr) bool
 
 ```
 searchKey: bytealg.abigen_runtime_memequal_varlen
+tags: [private]
 ```
 
 ```Go
 func abigen_runtime_memequal_varlen(a, b unsafe.Pointer) bool
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.index_amd64.go" href="#init.index_amd64.go">func init()</a>
 
 ```
 searchKey: bytealg.init
+tags: [private]
 ```
 
 ```Go
@@ -344,7 +355,6 @@ func init()
 
 ```
 searchKey: bytealg.Cutover
-tags: [exported]
 ```
 
 ```Go
@@ -357,7 +367,6 @@ Cutover reports the number of failures of IndexByte we should tolerate before sw
 
 ```
 searchKey: bytealg.Index
-tags: [exported]
 ```
 
 ```Go
@@ -370,7 +379,6 @@ Index returns the index of the first instance of b in a, or -1 if b is not prese
 
 ```
 searchKey: bytealg.IndexString
-tags: [exported]
 ```
 
 ```Go
@@ -383,7 +391,6 @@ IndexString returns the index of the first instance of b in a, or -1 if b is not
 
 ```
 searchKey: bytealg.IndexByte
-tags: [exported]
 ```
 
 ```Go
@@ -394,7 +401,6 @@ func IndexByte(b []byte, c byte) int
 
 ```
 searchKey: bytealg.IndexByteString
-tags: [exported]
 ```
 
 ```Go

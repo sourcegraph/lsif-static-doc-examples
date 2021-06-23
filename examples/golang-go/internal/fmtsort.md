@@ -20,11 +20,14 @@ Package fmtsort provides a general stable ordering mechanism for maps, on behalf
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SortedMap" href="#SortedMap">type SortedMap struct</a>
 
 ```
 searchKey: fmtsort.SortedMap
-tags: [exported]
 ```
 
 ```Go
@@ -40,7 +43,6 @@ SortedMap represents a map's keys and values. The keys and values are aligned in
 
 ```
 searchKey: fmtsort.Sort
-tags: [exported]
 ```
 
 ```Go
@@ -70,7 +72,6 @@ The ordering rules are more general than with Go's < operator:
 
 ```
 searchKey: fmtsort.SortedMap.Len
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +82,6 @@ func (o *SortedMap) Len() int
 
 ```
 searchKey: fmtsort.SortedMap.Less
-tags: [exported]
 ```
 
 ```Go
@@ -92,7 +92,6 @@ func (o *SortedMap) Less(i, j int) bool
 
 ```
 searchKey: fmtsort.SortedMap.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -101,10 +100,15 @@ func (o *SortedMap) Swap(i, j int)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="compare" href="#compare">func compare(aVal, bVal reflect.Value) int</a>
 
 ```
 searchKey: fmtsort.compare
+tags: [private]
 ```
 
 ```Go
@@ -117,6 +121,7 @@ compare compares two values of the same type. It returns -1, 0, 1 according to w
 
 ```
 searchKey: fmtsort.nilCompare
+tags: [private]
 ```
 
 ```Go
@@ -129,6 +134,7 @@ nilCompare checks whether either value is nil. If not, the boolean is false. If 
 
 ```
 searchKey: fmtsort.floatCompare
+tags: [private]
 ```
 
 ```Go
@@ -141,6 +147,7 @@ floatCompare compares two floating-point values. NaNs compare low.
 
 ```
 searchKey: fmtsort.isNaN
+tags: [private]
 ```
 
 ```Go
@@ -151,6 +158,7 @@ func isNaN(a float64) bool
 
 ```
 searchKey: fmtsort.Compare
+tags: [private]
 ```
 
 ```Go

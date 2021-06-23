@@ -48,11 +48,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="LoginStateOpCreateAccount" href="#LoginStateOpCreateAccount">const LoginStateOpCreateAccount</a>
 
 ```
 searchKey: oauth.LoginStateOpCreateAccount
-tags: [exported]
 ```
 
 ```Go
@@ -65,7 +68,6 @@ NOTE: OAuth is almost always used for creating new accounts, therefore we don't 
 
 ```
 searchKey: oauth.LoginStateOpCreateCodeHostConnection
-tags: [exported]
 ```
 
 ```Go
@@ -74,10 +76,15 @@ const LoginStateOpCreateCodeHostConnection LoginStateOp = "createCodeHostConnect
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="extraScopes" href="#extraScopes">var extraScopes</a>
 
 ```
 searchKey: oauth.extraScopes
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +97,7 @@ serviceType -> scopes
 
 ```
 searchKey: oauth.traceLogEnabled
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +108,7 @@ var traceLogEnabled, _ = ...
 
 ```
 searchKey: oauth.isOAuths
+tags: [private]
 ```
 
 ```Go
@@ -108,10 +117,15 @@ var isOAuths []func(p schema.AuthProviders) bool
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="loggingRoundTripper" href="#loggingRoundTripper">type loggingRoundTripper struct</a>
 
 ```
 searchKey: oauth.loggingRoundTripper
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +138,7 @@ type loggingRoundTripper struct {
 
 ```
 searchKey: oauth.loggingRoundTripper.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -134,7 +149,6 @@ func (l *loggingRoundTripper) RoundTrip(req *http.Request) (*http.Response, erro
 
 ```
 searchKey: oauth.Provider
-tags: [exported]
 ```
 
 ```Go
@@ -150,6 +164,7 @@ type Provider struct {
 
 ```
 searchKey: oauth.getExactlyOneOAuthProvider
+tags: [private]
 ```
 
 ```Go
@@ -160,7 +175,6 @@ func getExactlyOneOAuthProvider() *Provider
 
 ```
 searchKey: oauth.GetProvider
-tags: [exported]
 ```
 
 ```Go
@@ -173,7 +187,6 @@ GetProvider returns a provider with given serviceType and ID. It returns nil if 
 
 ```
 searchKey: oauth.NewProvider
-tags: [exported]
 ```
 
 ```Go
@@ -184,7 +197,6 @@ func NewProvider(op ProviderOp) *Provider
 
 ```
 searchKey: oauth.Provider.ConfigID
-tags: [exported]
 ```
 
 ```Go
@@ -195,7 +207,6 @@ func (p *Provider) ConfigID() providers.ConfigID
 
 ```
 searchKey: oauth.Provider.Config
-tags: [exported]
 ```
 
 ```Go
@@ -206,7 +217,6 @@ func (p *Provider) Config() schema.AuthProviders
 
 ```
 searchKey: oauth.Provider.CachedInfo
-tags: [exported]
 ```
 
 ```Go
@@ -217,7 +227,6 @@ func (p *Provider) CachedInfo() *providers.Info
 
 ```
 searchKey: oauth.Provider.Refresh
-tags: [exported]
 ```
 
 ```Go
@@ -228,7 +237,6 @@ func (p *Provider) Refresh(ctx context.Context) error
 
 ```
 searchKey: oauth.ProviderOp
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +256,6 @@ type ProviderOp struct {
 
 ```
 searchKey: oauth.LoginStateOp
-tags: [exported]
 ```
 
 ```Go
@@ -259,7 +266,6 @@ type LoginStateOp string
 
 ```
 searchKey: oauth.LoginState
-tags: [exported]
 ```
 
 ```Go
@@ -283,7 +289,6 @@ type LoginState struct {
 
 ```
 searchKey: oauth.DecodeState
-tags: [exported]
 ```
 
 ```Go
@@ -294,7 +299,6 @@ func DecodeState(encoded string) (*LoginState, error)
 
 ```
 searchKey: oauth.LoginState.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -305,7 +309,6 @@ func (s LoginState) Encode() (string, error)
 
 ```
 searchKey: oauth.SessionData
-tags: [exported]
 ```
 
 ```Go
@@ -323,7 +326,6 @@ type SessionData struct {
 
 ```
 searchKey: oauth.SessionIssuerHelper
-tags: [exported]
 ```
 
 ```Go
@@ -337,11 +339,14 @@ type SessionIssuerHelper interface {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewCookie" href="#NewCookie">func NewCookie(config gologin.CookieConfig, value string) *http.Cookie</a>
 
 ```
 searchKey: oauth.NewCookie
-tags: [exported]
 ```
 
 ```Go
@@ -356,6 +361,7 @@ The MaxAge field is used to determine whether an Expires field should be added f
 
 ```
 searchKey: oauth.expiresTime
+tags: [private]
 ```
 
 ```Go
@@ -368,7 +374,6 @@ expiresTime converts a maxAge time in seconds to a time.Time in the future if th
 
 ```
 searchKey: oauth.NewHandler
-tags: [exported]
 ```
 
 ```Go
@@ -379,6 +384,7 @@ func NewHandler(db dbutil.DB, serviceType, authPrefix string, isAPIHandler bool,
 
 ```
 searchKey: oauth.newOAuthFlowHandler
+tags: [private]
 ```
 
 ```Go
@@ -389,6 +395,7 @@ func newOAuthFlowHandler(db dbutil.DB, serviceType string) http.Handler
 
 ```
 searchKey: oauth.getExtraScopes
+tags: [private]
 ```
 
 ```Go
@@ -399,6 +406,7 @@ func getExtraScopes(ctx context.Context, db dbutil.DB, serviceType string) ([]st
 
 ```
 searchKey: oauth.withOAuthExternalHTTPClient
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +419,7 @@ withOAuthExternalHTTPClient updates client such that the golang.org/x/oauth2 pac
 
 ```
 searchKey: oauth.previewAndDuplicateReader
+tags: [private]
 ```
 
 ```Go
@@ -421,7 +430,6 @@ func previewAndDuplicateReader(reader io.ReadCloser) (preview string, freshReade
 
 ```
 searchKey: oauth.AddIsOAuth
-tags: [exported]
 ```
 
 ```Go
@@ -432,6 +440,7 @@ func AddIsOAuth(f func(p schema.AuthProviders) bool)
 
 ```
 searchKey: oauth.isOAuth
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +451,7 @@ func isOAuth(p schema.AuthProviders) bool
 
 ```
 searchKey: oauth.isHuman
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +464,7 @@ isHuman returns true if the request probably came from a human, rather than a bo
 
 ```
 searchKey: oauth.stateHandler
+tags: [private]
 ```
 
 ```Go
@@ -468,6 +479,7 @@ This is very similar to gologin's default StateHandler function, but we define o
 
 ```
 searchKey: oauth.randomState
+tags: [private]
 ```
 
 ```Go
@@ -480,6 +492,7 @@ Returns a base64 encoded random 32 byte string.
 
 ```
 searchKey: oauth.getRedirect
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +505,7 @@ if we have a redirect param use that, otherwise we'll try and pull the 'returnTo
 
 ```
 searchKey: oauth.canRedirect
+tags: [private]
 ```
 
 ```Go
@@ -504,7 +518,6 @@ canRedirect is used to limit the set of URLs we will redirect to after login to 
 
 ```
 searchKey: oauth.SessionIssuer
-tags: [exported]
 ```
 
 ```Go
@@ -515,6 +528,7 @@ func SessionIssuer(s SessionIssuerHelper, sessionKey string) http.Handler
 
 ```
 searchKey: oauth.TestCanRedirect
+tags: [private]
 ```
 
 ```Go

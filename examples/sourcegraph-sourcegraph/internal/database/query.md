@@ -21,11 +21,14 @@ Package query provides an expression tree structure which can be converted into 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Q" href="#Q">type Q interface{}</a>
 
 ```
 searchKey: query.Q
-tags: [exported]
 ```
 
 ```Go
@@ -38,7 +41,6 @@ Q is a query item. It is converted into a *sqlf.Query by Eval.
 
 ```
 searchKey: query.And
-tags: [exported]
 ```
 
 ```Go
@@ -51,7 +53,6 @@ And returns a Q which when evaluated will join the children by "AND".
 
 ```
 searchKey: query.Or
-tags: [exported]
 ```
 
 ```Go
@@ -64,7 +65,6 @@ Or returns a Q which when evaluated will join the children by "OR".
 
 ```
 searchKey: query.Not
-tags: [exported]
 ```
 
 ```Go
@@ -77,6 +77,7 @@ Not returns a Q which when evaluated will wrap child with "NOT".
 
 ```
 searchKey: query.and
+tags: [private]
 ```
 
 ```Go
@@ -89,6 +90,7 @@ type and struct {
 
 ```
 searchKey: query.or
+tags: [private]
 ```
 
 ```Go
@@ -101,6 +103,7 @@ type or struct {
 
 ```
 searchKey: query.not
+tags: [private]
 ```
 
 ```Go
@@ -113,6 +116,7 @@ type not struct {
 
 ```
 searchKey: query.printfBindVar
+tags: [private]
 ```
 
 ```Go
@@ -123,6 +127,7 @@ type printfBindVar struct{}
 
 ```
 searchKey: query.printfBindVar.BindVar
+tags: [private]
 ```
 
 ```Go
@@ -131,11 +136,14 @@ func (printfBindVar) BindVar(i int) string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Eval" href="#Eval">func Eval(q Q, atomToQueryFn func(q Q) (*sqlf.Query, error)) (*sqlf.Query, error)</a>
 
 ```
 searchKey: query.Eval
-tags: [exported]
 ```
 
 ```Go
@@ -166,7 +174,6 @@ Typically we expect atomToQueryFn to return a SQL condition like "name LIKE $q".
 
 ```
 searchKey: query.Print
-tags: [exported]
 ```
 
 ```Go

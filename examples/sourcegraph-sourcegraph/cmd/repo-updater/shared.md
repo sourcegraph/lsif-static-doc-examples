@@ -17,14 +17,11 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="port" href="#port">const port</a>
 
 ```
 searchKey: shared.port
+tags: [private]
 ```
 
 ```Go
@@ -33,14 +30,11 @@ const port = "3182"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="stateHTMLTemplate" href="#stateHTMLTemplate">var stateHTMLTemplate</a>
 
 ```
 searchKey: shared.stateHTMLTemplate
+tags: [private]
 ```
 
 ```Go
@@ -49,15 +43,10 @@ var stateHTMLTemplate string
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="EnterpriseInit" href="#EnterpriseInit">type EnterpriseInit func(db *database/sql.DB, store *github.com/sourcegraph/sourcegraph/internal/repos.Store, keyring github.com/sourcegraph/sourcegraph/internal/encryption/keyring.Ring, cf *github.com/sourcegraph/sourcegraph/internal/httpcli.Factory, server *github.com/sourcegraph/sourcegraph/cmd/repo-updater/repoupdater.Server) []github.com/sourcegraph/sourcegraph/internal/debugserver.Dumper</a>
 
 ```
 searchKey: shared.EnterpriseInit
-tags: [exported]
 ```
 
 ```Go
@@ -70,6 +59,7 @@ EnterpriseInit is a function that allows enterprise code to be triggered when de
 
 ```
 searchKey: shared.scheduler
+tags: [private]
 ```
 
 ```Go
@@ -87,15 +77,10 @@ type scheduler interface {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Main" href="#Main">func Main(enterpriseInit EnterpriseInit)</a>
 
 ```
 searchKey: shared.Main
-tags: [exported]
 ```
 
 ```Go
@@ -106,6 +91,7 @@ func Main(enterpriseInit EnterpriseInit)
 
 ```
 searchKey: shared.watchSyncer
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +102,7 @@ func watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps
 
 ```
 searchKey: shared.syncScheduler
+tags: [private]
 ```
 
 ```Go

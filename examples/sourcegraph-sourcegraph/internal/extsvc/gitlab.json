@@ -4,7 +4,9 @@
     "identifier": "gitlab",
     "newPage": true,
     "searchKey": "internal/extsvc/gitlab",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "TokenTypePAT",
                 "newPage": false,
                 "searchKey": "gitlab.TokenTypePAT",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "TokenTypeOAuth",
                 "newPage": false,
                 "searchKey": "gitlab.TokenTypeOAuth",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "MergeRequestStateOpened",
                 "newPage": false,
                 "searchKey": "gitlab.MergeRequestStateOpened",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "MergeRequestStateClosed",
                 "newPage": false,
                 "searchKey": "gitlab.MergeRequestStateClosed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "MergeRequestStateLocked",
                 "newPage": false,
                 "searchKey": "gitlab.MergeRequestStateLocked",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "MergeRequestStateMerged",
                 "newPage": false,
                 "searchKey": "gitlab.MergeRequestStateMerged",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                 "identifier": "UpdateMergeRequestStateEventClose",
                 "newPage": false,
                 "searchKey": "gitlab.UpdateMergeRequestStateEventClose",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,9 +184,7 @@
                 "identifier": "UpdateMergeRequestStateEventReopen",
                 "newPage": false,
                 "searchKey": "gitlab.UpdateMergeRequestStateEventReopen",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -216,9 +204,7 @@
                 "identifier": "UpdateMergeRequestStateEventUnchanged",
                 "newPage": false,
                 "searchKey": "gitlab.UpdateMergeRequestStateEventUnchanged",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -238,9 +224,7 @@
                 "identifier": "SystemNoteBodyReviewApproved",
                 "newPage": false,
                 "searchKey": "gitlab.SystemNoteBodyReviewApproved",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -260,9 +244,7 @@
                 "identifier": "SystemNoteBodyReviewUnapproved",
                 "newPage": false,
                 "searchKey": "gitlab.SystemNoteBodyReviewUnapproved",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,9 +264,7 @@
                 "identifier": "SystemNoteBodyUnmarkedWorkInProgress",
                 "newPage": false,
                 "searchKey": "gitlab.SystemNoteBodyUnmarkedWorkInProgress",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -304,9 +284,7 @@
                 "identifier": "SystemNoteBodyMarkedWorkInProgress",
                 "newPage": false,
                 "searchKey": "gitlab.SystemNoteBodyMarkedWorkInProgress",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +304,7 @@
                 "identifier": "SystemNoteBodyMarkedDraft",
                 "newPage": false,
                 "searchKey": "gitlab.SystemNoteBodyMarkedDraft",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -348,9 +324,7 @@
                 "identifier": "SystemNoteBodyMarkedReady",
                 "newPage": false,
                 "searchKey": "gitlab.SystemNoteBodyMarkedReady",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -370,9 +344,7 @@
                 "identifier": "PipelineStatusRunning",
                 "newPage": false,
                 "searchKey": "gitlab.PipelineStatusRunning",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -392,9 +364,7 @@
                 "identifier": "PipelineStatusPending",
                 "newPage": false,
                 "searchKey": "gitlab.PipelineStatusPending",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -414,9 +384,7 @@
                 "identifier": "PipelineStatusSuccess",
                 "newPage": false,
                 "searchKey": "gitlab.PipelineStatusSuccess",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -436,9 +404,7 @@
                 "identifier": "PipelineStatusFailed",
                 "newPage": false,
                 "searchKey": "gitlab.PipelineStatusFailed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -458,9 +424,7 @@
                 "identifier": "PipelineStatusCanceled",
                 "newPage": false,
                 "searchKey": "gitlab.PipelineStatusCanceled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -480,9 +444,7 @@
                 "identifier": "PipelineStatusSkipped",
                 "newPage": false,
                 "searchKey": "gitlab.PipelineStatusSkipped",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -502,9 +464,7 @@
                 "identifier": "PipelineStatusCreated",
                 "newPage": false,
                 "searchKey": "gitlab.PipelineStatusCreated",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -524,9 +484,7 @@
                 "identifier": "PipelineStatusManual",
                 "newPage": false,
                 "searchKey": "gitlab.PipelineStatusManual",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -546,9 +504,7 @@
                 "identifier": "Public",
                 "newPage": false,
                 "searchKey": "gitlab.Public",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -568,9 +524,7 @@
                 "identifier": "Private",
                 "newPage": false,
                 "searchKey": "gitlab.Private",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -590,9 +544,7 @@
                 "identifier": "Internal",
                 "newPage": false,
                 "searchKey": "gitlab.Internal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -612,9 +564,7 @@
                 "identifier": "ResourceStateEventStateClosed",
                 "newPage": false,
                 "searchKey": "gitlab.ResourceStateEventStateClosed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -634,9 +584,7 @@
                 "identifier": "ResourceStateEventStateReopened",
                 "newPage": false,
                 "searchKey": "gitlab.ResourceStateEventStateReopened",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -656,9 +604,7 @@
                 "identifier": "ResourceStateEventStateMerged",
                 "newPage": false,
                 "searchKey": "gitlab.ResourceStateEventStateMerged",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -681,7 +627,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -699,7 +647,9 @@
                 "identifier": "requestCounter",
                 "newPage": false,
                 "searchKey": "gitlab.requestCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -719,7 +669,9 @@
                 "identifier": "traceEnabled",
                 "newPage": false,
                 "searchKey": "gitlab.traceEnabled",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -739,9 +691,7 @@
                 "identifier": "ErrProjectNotFound",
                 "newPage": false,
                 "searchKey": "gitlab.ErrProjectNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -761,9 +711,7 @@
                 "identifier": "ErrMergeRequestNotFound",
                 "newPage": false,
                 "searchKey": "gitlab.ErrMergeRequestNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -783,9 +731,7 @@
                 "identifier": "ErrMergeRequestAlreadyExists",
                 "newPage": false,
                 "searchKey": "gitlab.ErrMergeRequestAlreadyExists",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -805,9 +751,7 @@
                 "identifier": "ErrTooManyMergeRequests",
                 "newPage": false,
                 "searchKey": "gitlab.ErrTooManyMergeRequests",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -827,9 +771,7 @@
                 "identifier": "ErrNotMergeable",
                 "newPage": false,
                 "searchKey": "gitlab.ErrNotMergeable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -849,9 +791,7 @@
                 "identifier": "MockListProjects",
                 "newPage": false,
                 "searchKey": "gitlab.MockListProjects",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -871,9 +811,7 @@
                 "identifier": "MockListUsers",
                 "newPage": false,
                 "searchKey": "gitlab.MockListUsers",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -893,9 +831,7 @@
                 "identifier": "MockGetUser",
                 "newPage": false,
                 "searchKey": "gitlab.MockGetUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -915,9 +851,7 @@
                 "identifier": "MockGetProject",
                 "newPage": false,
                 "searchKey": "gitlab.MockGetProject",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -937,9 +871,7 @@
                 "identifier": "MockListTree",
                 "newPage": false,
                 "searchKey": "gitlab.MockListTree",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -959,9 +891,7 @@
                 "identifier": "MockCreateMergeRequest",
                 "newPage": false,
                 "searchKey": "gitlab.MockCreateMergeRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -981,9 +911,7 @@
                 "identifier": "MockGetMergeRequest",
                 "newPage": false,
                 "searchKey": "gitlab.MockGetMergeRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1003,9 +931,7 @@
                 "identifier": "MockGetMergeRequestResourceStateEvents",
                 "newPage": false,
                 "searchKey": "gitlab.MockGetMergeRequestResourceStateEvents",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1025,9 +951,7 @@
                 "identifier": "MockGetMergeRequestNotes",
                 "newPage": false,
                 "searchKey": "gitlab.MockGetMergeRequestNotes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1047,9 +971,7 @@
                 "identifier": "MockGetMergeRequestPipelines",
                 "newPage": false,
                 "searchKey": "gitlab.MockGetMergeRequestPipelines",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1069,9 +991,7 @@
                 "identifier": "MockGetOpenMergeRequestByRefs",
                 "newPage": false,
                 "searchKey": "gitlab.MockGetOpenMergeRequestByRefs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1091,9 +1011,7 @@
                 "identifier": "MockUpdateMergeRequest",
                 "newPage": false,
                 "searchKey": "gitlab.MockUpdateMergeRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1113,9 +1031,7 @@
                 "identifier": "MockMergeMergeRequest",
                 "newPage": false,
                 "searchKey": "gitlab.MockMergeMergeRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1135,9 +1051,7 @@
                 "identifier": "MockCreateMergeRequestNote",
                 "newPage": false,
                 "searchKey": "gitlab.MockCreateMergeRequestNote",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1157,7 +1071,9 @@
                 "identifier": "projectsGitLabCacheCounter",
                 "newPage": false,
                 "searchKey": "gitlab.projectsGitLabCacheCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1177,9 +1093,7 @@
                 "identifier": "ListTreeMock",
                 "newPage": false,
                 "searchKey": "gitlab.ListTreeMock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1199,7 +1113,9 @@
                 "identifier": "updateRegex",
                 "newPage": false,
                 "searchKey": "gitlab.updateRegex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1222,7 +1138,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1240,9 +1158,7 @@
                 "identifier": "SudoableToken",
                 "newPage": false,
                 "searchKey": "gitlab.SudoableToken",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1260,9 +1176,7 @@
                       "identifier": "SudoableToken.Authenticate",
                       "newPage": false,
                       "searchKey": "gitlab.SudoableToken.Authenticate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1282,9 +1196,7 @@
                       "identifier": "SudoableToken.Hash",
                       "newPage": false,
                       "searchKey": "gitlab.SudoableToken.Hash",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1307,9 +1219,7 @@
                 "identifier": "TokenType",
                 "newPage": false,
                 "searchKey": "gitlab.TokenType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1329,9 +1239,7 @@
                 "identifier": "ClientProvider",
                 "newPage": false,
                 "searchKey": "gitlab.ClientProvider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1349,9 +1257,7 @@
                       "identifier": "NewClientProvider",
                       "newPage": false,
                       "searchKey": "gitlab.NewClientProvider",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1371,7 +1277,9 @@
                       "identifier": "createTestProvider",
                       "newPage": false,
                       "searchKey": "gitlab.createTestProvider",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1391,9 +1299,7 @@
                       "identifier": "ClientProvider.GetAuthenticatorClient",
                       "newPage": false,
                       "searchKey": "gitlab.ClientProvider.GetAuthenticatorClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1413,9 +1319,7 @@
                       "identifier": "ClientProvider.GetPATClient",
                       "newPage": false,
                       "searchKey": "gitlab.ClientProvider.GetPATClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1435,9 +1339,7 @@
                       "identifier": "ClientProvider.GetOAuthClient",
                       "newPage": false,
                       "searchKey": "gitlab.ClientProvider.GetOAuthClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1457,9 +1359,7 @@
                       "identifier": "ClientProvider.GetClient",
                       "newPage": false,
                       "searchKey": "gitlab.ClientProvider.GetClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1479,7 +1379,9 @@
                       "identifier": "ClientProvider.getClient",
                       "newPage": false,
                       "searchKey": "gitlab.ClientProvider.getClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1499,7 +1401,9 @@
                       "identifier": "ClientProvider.newClient",
                       "newPage": false,
                       "searchKey": "gitlab.ClientProvider.newClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1522,9 +1426,7 @@
                 "identifier": "CommonOp",
                 "newPage": false,
                 "searchKey": "gitlab.CommonOp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1544,9 +1446,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "gitlab.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1564,7 +1464,9 @@
                       "identifier": "newTestClient",
                       "newPage": false,
                       "searchKey": "gitlab.newTestClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1584,7 +1486,9 @@
                       "identifier": "Client.do",
                       "newPage": false,
                       "searchKey": "gitlab.Client.do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1604,7 +1508,9 @@
                       "identifier": "Client.doWithBaseURL",
                       "newPage": false,
                       "searchKey": "gitlab.Client.doWithBaseURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1624,9 +1530,7 @@
                       "identifier": "Client.RateLimitMonitor",
                       "newPage": false,
                       "searchKey": "gitlab.Client.RateLimitMonitor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1646,9 +1550,7 @@
                       "identifier": "Client.WithAuthenticator",
                       "newPage": false,
                       "searchKey": "gitlab.Client.WithAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1668,9 +1570,7 @@
                       "identifier": "Client.ValidateToken",
                       "newPage": false,
                       "searchKey": "gitlab.Client.ValidateToken",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1690,9 +1590,7 @@
                       "identifier": "Client.GetAuthenticatedUserOAuthScopes",
                       "newPage": false,
                       "searchKey": "gitlab.Client.GetAuthenticatedUserOAuthScopes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1712,9 +1610,7 @@
                       "identifier": "Client.ListMembers",
                       "newPage": false,
                       "searchKey": "gitlab.Client.ListMembers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1734,9 +1630,7 @@
                       "identifier": "Client.CreateMergeRequest",
                       "newPage": false,
                       "searchKey": "gitlab.Client.CreateMergeRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1756,9 +1650,7 @@
                       "identifier": "Client.GetMergeRequest",
                       "newPage": false,
                       "searchKey": "gitlab.Client.GetMergeRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1778,9 +1670,7 @@
                       "identifier": "Client.GetOpenMergeRequestByRefs",
                       "newPage": false,
                       "searchKey": "gitlab.Client.GetOpenMergeRequestByRefs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1800,9 +1690,7 @@
                       "identifier": "Client.UpdateMergeRequest",
                       "newPage": false,
                       "searchKey": "gitlab.Client.UpdateMergeRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1822,9 +1710,7 @@
                       "identifier": "Client.MergeMergeRequest",
                       "newPage": false,
                       "searchKey": "gitlab.Client.MergeMergeRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1844,9 +1730,7 @@
                       "identifier": "Client.CreateMergeRequestNote",
                       "newPage": false,
                       "searchKey": "gitlab.Client.CreateMergeRequestNote",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1866,9 +1750,7 @@
                       "identifier": "Client.GetMergeRequestNotes",
                       "newPage": false,
                       "searchKey": "gitlab.Client.GetMergeRequestNotes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1888,9 +1770,7 @@
                       "identifier": "Client.GetMergeRequestPipelines",
                       "newPage": false,
                       "searchKey": "gitlab.Client.GetMergeRequestPipelines",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1910,9 +1790,7 @@
                       "identifier": "Client.GetProject",
                       "newPage": false,
                       "searchKey": "gitlab.Client.GetProject",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1932,7 +1810,9 @@
                       "identifier": "Client.cachedGetProject",
                       "newPage": false,
                       "searchKey": "gitlab.Client.cachedGetProject",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1952,7 +1832,9 @@
                       "identifier": "Client.getProjectFromCache",
                       "newPage": false,
                       "searchKey": "gitlab.Client.getProjectFromCache",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1972,7 +1854,9 @@
                       "identifier": "Client.addProjectToCache",
                       "newPage": false,
                       "searchKey": "gitlab.Client.addProjectToCache",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1992,7 +1876,9 @@
                       "identifier": "Client.getProjectFromAPI",
                       "newPage": false,
                       "searchKey": "gitlab.Client.getProjectFromAPI",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2012,9 +1898,7 @@
                       "identifier": "Client.ListProjects",
                       "newPage": false,
                       "searchKey": "gitlab.Client.ListProjects",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2034,9 +1918,7 @@
                       "identifier": "Client.ListTree",
                       "newPage": false,
                       "searchKey": "gitlab.Client.ListTree",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2056,7 +1938,9 @@
                       "identifier": "Client.listTreeFromAPI",
                       "newPage": false,
                       "searchKey": "gitlab.Client.listTreeFromAPI",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2076,9 +1960,7 @@
                       "identifier": "Client.GetMergeRequestResourceStateEvents",
                       "newPage": false,
                       "searchKey": "gitlab.Client.GetMergeRequestResourceStateEvents",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2098,9 +1980,7 @@
                       "identifier": "Client.ListUsers",
                       "newPage": false,
                       "searchKey": "gitlab.Client.ListUsers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2120,9 +2000,7 @@
                       "identifier": "Client.GetUser",
                       "newPage": false,
                       "searchKey": "gitlab.Client.GetUser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2145,9 +2023,7 @@
                 "identifier": "HTTPError",
                 "newPage": false,
                 "searchKey": "gitlab.HTTPError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2165,9 +2041,7 @@
                       "identifier": "NewHTTPError",
                       "newPage": false,
                       "searchKey": "gitlab.NewHTTPError",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2187,9 +2061,7 @@
                       "identifier": "HTTPError.Code",
                       "newPage": false,
                       "searchKey": "gitlab.HTTPError.Code",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2209,9 +2081,7 @@
                       "identifier": "HTTPError.Message",
                       "newPage": false,
                       "searchKey": "gitlab.HTTPError.Message",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2231,9 +2101,7 @@
                       "identifier": "HTTPError.Error",
                       "newPage": false,
                       "searchKey": "gitlab.HTTPError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2253,9 +2121,7 @@
                       "identifier": "HTTPError.Unauthorized",
                       "newPage": false,
                       "searchKey": "gitlab.HTTPError.Unauthorized",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2275,9 +2141,7 @@
                       "identifier": "HTTPError.Forbidden",
                       "newPage": false,
                       "searchKey": "gitlab.HTTPError.Forbidden",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2300,9 +2164,7 @@
                 "identifier": "Label",
                 "newPage": false,
                 "searchKey": "gitlab.Label",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2322,9 +2184,7 @@
                 "identifier": "Member",
                 "newPage": false,
                 "searchKey": "gitlab.Member",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2344,9 +2204,7 @@
                 "identifier": "ID",
                 "newPage": false,
                 "searchKey": "gitlab.ID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2366,9 +2224,7 @@
                 "identifier": "MergeRequestState",
                 "newPage": false,
                 "searchKey": "gitlab.MergeRequestState",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2388,9 +2244,7 @@
                 "identifier": "MergeRequest",
                 "newPage": false,
                 "searchKey": "gitlab.MergeRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2410,9 +2264,7 @@
                 "identifier": "DiffRefs",
                 "newPage": false,
                 "searchKey": "gitlab.DiffRefs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2432,9 +2284,7 @@
                 "identifier": "CreateMergeRequestOpts",
                 "newPage": false,
                 "searchKey": "gitlab.CreateMergeRequestOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2454,9 +2304,7 @@
                 "identifier": "UpdateMergeRequestOpts",
                 "newPage": false,
                 "searchKey": "gitlab.UpdateMergeRequestOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2476,9 +2324,7 @@
                 "identifier": "UpdateMergeRequestStateEvent",
                 "newPage": false,
                 "searchKey": "gitlab.UpdateMergeRequestStateEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2498,9 +2344,7 @@
                 "identifier": "SystemNoteBody",
                 "newPage": false,
                 "searchKey": "gitlab.SystemNoteBody",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2520,9 +2364,7 @@
                 "identifier": "Note",
                 "newPage": false,
                 "searchKey": "gitlab.Note",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2540,9 +2382,7 @@
                       "identifier": "Note.ToEvent",
                       "newPage": false,
                       "searchKey": "gitlab.Note.ToEvent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2565,9 +2405,7 @@
                 "identifier": "ReviewApprovedEvent",
                 "newPage": false,
                 "searchKey": "gitlab.ReviewApprovedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2585,9 +2423,7 @@
                       "identifier": "ReviewApprovedEvent.Key",
                       "newPage": false,
                       "searchKey": "gitlab.ReviewApprovedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2610,9 +2446,7 @@
                 "identifier": "ReviewUnapprovedEvent",
                 "newPage": false,
                 "searchKey": "gitlab.ReviewUnapprovedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2630,9 +2464,7 @@
                       "identifier": "ReviewUnapprovedEvent.Key",
                       "newPage": false,
                       "searchKey": "gitlab.ReviewUnapprovedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2655,9 +2487,7 @@
                 "identifier": "MarkWorkInProgressEvent",
                 "newPage": false,
                 "searchKey": "gitlab.MarkWorkInProgressEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2675,9 +2505,7 @@
                       "identifier": "MarkWorkInProgressEvent.Key",
                       "newPage": false,
                       "searchKey": "gitlab.MarkWorkInProgressEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2700,9 +2528,7 @@
                 "identifier": "UnmarkWorkInProgressEvent",
                 "newPage": false,
                 "searchKey": "gitlab.UnmarkWorkInProgressEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2720,9 +2546,7 @@
                       "identifier": "UnmarkWorkInProgressEvent.Key",
                       "newPage": false,
                       "searchKey": "gitlab.UnmarkWorkInProgressEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2745,7 +2569,9 @@
                 "identifier": "keyer",
                 "newPage": false,
                 "searchKey": "gitlab.keyer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2765,9 +2591,7 @@
                 "identifier": "Pipeline",
                 "newPage": false,
                 "searchKey": "gitlab.Pipeline",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2785,9 +2609,7 @@
                       "identifier": "Pipeline.Key",
                       "newPage": false,
                       "searchKey": "gitlab.Pipeline.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2810,9 +2632,7 @@
                 "identifier": "PipelineStatus",
                 "newPage": false,
                 "searchKey": "gitlab.PipelineStatus",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2832,9 +2652,7 @@
                 "identifier": "Visibility",
                 "newPage": false,
                 "searchKey": "gitlab.Visibility",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2854,9 +2672,7 @@
                 "identifier": "Project",
                 "newPage": false,
                 "searchKey": "gitlab.Project",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2874,9 +2690,7 @@
                       "identifier": "Project.RequiresAuthentication",
                       "newPage": false,
                       "searchKey": "gitlab.Project.RequiresAuthentication",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2899,9 +2713,7 @@
                 "identifier": "ProjectCommon",
                 "newPage": false,
                 "searchKey": "gitlab.ProjectCommon",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2921,9 +2733,7 @@
                 "identifier": "GetProjectOp",
                 "newPage": false,
                 "searchKey": "gitlab.GetProjectOp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2943,7 +2753,9 @@
                 "identifier": "cachedProj",
                 "newPage": false,
                 "searchKey": "gitlab.cachedProj",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2963,9 +2775,7 @@
                 "identifier": "Tree",
                 "newPage": false,
                 "searchKey": "gitlab.Tree",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2985,9 +2795,7 @@
                 "identifier": "ListTreeOp",
                 "newPage": false,
                 "searchKey": "gitlab.ListTreeOp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3007,9 +2815,7 @@
                 "identifier": "ResourceStateEventState",
                 "newPage": false,
                 "searchKey": "gitlab.ResourceStateEventState",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3029,9 +2835,7 @@
                 "identifier": "ResourceStateEvent",
                 "newPage": false,
                 "searchKey": "gitlab.ResourceStateEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3049,9 +2853,7 @@
                       "identifier": "ResourceStateEvent.ToEvent",
                       "newPage": false,
                       "searchKey": "gitlab.ResourceStateEvent.ToEvent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3074,9 +2876,7 @@
                 "identifier": "MergeRequestClosedEvent",
                 "newPage": false,
                 "searchKey": "gitlab.MergeRequestClosedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3094,9 +2894,7 @@
                       "identifier": "MergeRequestClosedEvent.Key",
                       "newPage": false,
                       "searchKey": "gitlab.MergeRequestClosedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3119,9 +2917,7 @@
                 "identifier": "MergeRequestReopenedEvent",
                 "newPage": false,
                 "searchKey": "gitlab.MergeRequestReopenedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3139,9 +2935,7 @@
                       "identifier": "MergeRequestReopenedEvent.Key",
                       "newPage": false,
                       "searchKey": "gitlab.MergeRequestReopenedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3164,9 +2958,7 @@
                 "identifier": "MergeRequestMergedEvent",
                 "newPage": false,
                 "searchKey": "gitlab.MergeRequestMergedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3184,9 +2976,7 @@
                       "identifier": "MergeRequestMergedEvent.Key",
                       "newPage": false,
                       "searchKey": "gitlab.MergeRequestMergedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3209,7 +2999,9 @@
                 "identifier": "mockHTTPResponseBody",
                 "newPage": false,
                 "searchKey": "gitlab.mockHTTPResponseBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3227,7 +3019,9 @@
                       "identifier": "mockHTTPResponseBody.Do",
                       "newPage": false,
                       "searchKey": "gitlab.mockHTTPResponseBody.Do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3250,7 +3044,9 @@
                 "identifier": "mockHTTPEmptyResponse",
                 "newPage": false,
                 "searchKey": "gitlab.mockHTTPEmptyResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3268,7 +3064,9 @@
                       "identifier": "mockHTTPEmptyResponse.Do",
                       "newPage": false,
                       "searchKey": "gitlab.mockHTTPEmptyResponse.Do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3291,9 +3089,7 @@
                 "identifier": "Time",
                 "newPage": false,
                 "searchKey": "gitlab.Time",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3311,9 +3107,7 @@
                       "identifier": "Time.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "gitlab.Time.UnmarshalJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3336,9 +3130,7 @@
                 "identifier": "User",
                 "newPage": false,
                 "searchKey": "gitlab.User",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3356,9 +3148,7 @@
                       "identifier": "GetExternalAccountData",
                       "newPage": false,
                       "searchKey": "gitlab.GetExternalAccountData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3381,9 +3171,7 @@
                 "identifier": "Identity",
                 "newPage": false,
                 "searchKey": "gitlab.Identity",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3406,7 +3194,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -3419,12 +3209,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/extsvc/gitlab#init",
+              "pathID": "/internal/extsvc/gitlab#init.client.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.client.go",
                 "newPage": false,
                 "searchKey": "gitlab.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3444,7 +3236,9 @@
                 "identifier": "trace",
                 "newPage": false,
                 "searchKey": "gitlab.trace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3464,7 +3258,9 @@
                 "identifier": "isGitLabDotComURL",
                 "newPage": false,
                 "searchKey": "gitlab.isGitLabDotComURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3484,9 +3280,7 @@
                 "identifier": "HTTPErrorCode",
                 "newPage": false,
                 "searchKey": "gitlab.HTTPErrorCode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3506,9 +3300,7 @@
                 "identifier": "IsNotFound",
                 "newPage": false,
                 "searchKey": "gitlab.IsNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3528,9 +3320,7 @@
                 "identifier": "ExternalRepoSpec",
                 "newPage": false,
                 "searchKey": "gitlab.ExternalRepoSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3550,9 +3340,7 @@
                 "identifier": "IsWIP",
                 "newPage": false,
                 "searchKey": "gitlab.IsWIP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3572,9 +3360,7 @@
                 "identifier": "SetWIP",
                 "newPage": false,
                 "searchKey": "gitlab.SetWIP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3594,9 +3380,7 @@
                 "identifier": "UnsetWIP",
                 "newPage": false,
                 "searchKey": "gitlab.UnsetWIP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3616,7 +3400,9 @@
                 "identifier": "idCacheKey",
                 "newPage": false,
                 "searchKey": "gitlab.idCacheKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3636,7 +3422,9 @@
                 "identifier": "pathWithNamespaceCacheKey",
                 "newPage": false,
                 "searchKey": "gitlab.pathWithNamespaceCacheKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3656,9 +3444,7 @@
                 "identifier": "MockGetProject_Return",
                 "newPage": false,
                 "searchKey": "gitlab.MockGetProject_Return",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3678,9 +3464,7 @@
                 "identifier": "SetExternalAccountData",
                 "newPage": false,
                 "searchKey": "gitlab.SetExternalAccountData",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3700,7 +3484,9 @@
                 "identifier": "TestSudoableToken",
                 "newPage": false,
                 "searchKey": "gitlab.TestSudoableToken",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3720,7 +3506,9 @@
                 "identifier": "TestGetAuthenticatedUserOAuthScopes",
                 "newPage": false,
                 "searchKey": "gitlab.TestGetAuthenticatedUserOAuthScopes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3740,7 +3528,9 @@
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "gitlab.update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3760,7 +3550,9 @@
                 "identifier": "TestWIP",
                 "newPage": false,
                 "searchKey": "gitlab.TestWIP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3780,7 +3572,9 @@
                 "identifier": "TestCreateMergeRequest",
                 "newPage": false,
                 "searchKey": "gitlab.TestCreateMergeRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3800,7 +3594,9 @@
                 "identifier": "TestGetMergeRequest",
                 "newPage": false,
                 "searchKey": "gitlab.TestGetMergeRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3820,7 +3616,9 @@
                 "identifier": "TestGetOpenMergeRequestByRefs",
                 "newPage": false,
                 "searchKey": "gitlab.TestGetOpenMergeRequestByRefs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3840,7 +3638,9 @@
                 "identifier": "TestUpdateMergeRequest",
                 "newPage": false,
                 "searchKey": "gitlab.TestUpdateMergeRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3860,7 +3660,9 @@
                 "identifier": "TestCreateMergeRequestNote",
                 "newPage": false,
                 "searchKey": "gitlab.TestCreateMergeRequestNote",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3880,7 +3682,9 @@
                 "identifier": "TestMergeMergeRequest",
                 "newPage": false,
                 "searchKey": "gitlab.TestMergeMergeRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3900,7 +3704,9 @@
                 "identifier": "TestGetMergeRequestNotes",
                 "newPage": false,
                 "searchKey": "gitlab.TestGetMergeRequestNotes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3920,7 +3726,9 @@
                 "identifier": "TestNoteToEvent",
                 "newPage": false,
                 "searchKey": "gitlab.TestNoteToEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3940,7 +3748,9 @@
                 "identifier": "TestGetMergeRequestPipelines",
                 "newPage": false,
                 "searchKey": "gitlab.TestGetMergeRequestPipelines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3960,7 +3770,9 @@
                 "identifier": "TestPipelineKey",
                 "newPage": false,
                 "searchKey": "gitlab.TestPipelineKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3980,7 +3792,9 @@
                 "identifier": "TestClient_GetProject",
                 "newPage": false,
                 "searchKey": "gitlab.TestClient_GetProject",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4000,7 +3814,9 @@
                 "identifier": "TestClient_GetProject_nonexistent",
                 "newPage": false,
                 "searchKey": "gitlab.TestClient_GetProject_nonexistent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4020,7 +3836,9 @@
                 "identifier": "TestListTree",
                 "newPage": false,
                 "searchKey": "gitlab.TestListTree",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4040,7 +3858,9 @@
                 "identifier": "TestTimeUnmarshal",
                 "newPage": false,
                 "searchKey": "gitlab.TestTimeUnmarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

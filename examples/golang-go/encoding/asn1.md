@@ -275,14 +275,11 @@ See also `A Layman's Guide to a Subset of ASN.1, BER, and DER,' [http://luca.nto
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="allowAsterisk" href="#allowAsterisk">const allowAsterisk</a>
 
 ```
 searchKey: asn1.allowAsterisk
+tags: [private]
 ```
 
 ```Go
@@ -293,6 +290,7 @@ const allowAsterisk asteriskFlag = true
 
 ```
 searchKey: asn1.rejectAsterisk
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +301,7 @@ const rejectAsterisk asteriskFlag = false
 
 ```
 searchKey: asn1.allowAmpersand
+tags: [private]
 ```
 
 ```Go
@@ -313,6 +312,7 @@ const allowAmpersand ampersandFlag = true
 
 ```
 searchKey: asn1.rejectAmpersand
+tags: [private]
 ```
 
 ```Go
@@ -323,7 +323,6 @@ const rejectAmpersand ampersandFlag = false
 
 ```
 searchKey: asn1.TagBoolean
-tags: [exported]
 ```
 
 ```Go
@@ -336,7 +335,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagInteger
-tags: [exported]
 ```
 
 ```Go
@@ -349,7 +347,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagBitString
-tags: [exported]
 ```
 
 ```Go
@@ -362,7 +359,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagOctetString
-tags: [exported]
 ```
 
 ```Go
@@ -375,7 +371,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagNull
-tags: [exported]
 ```
 
 ```Go
@@ -388,7 +383,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagOID
-tags: [exported]
 ```
 
 ```Go
@@ -401,7 +395,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagEnum
-tags: [exported]
 ```
 
 ```Go
@@ -414,7 +407,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagUTF8String
-tags: [exported]
 ```
 
 ```Go
@@ -427,7 +419,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagSequence
-tags: [exported]
 ```
 
 ```Go
@@ -440,7 +431,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagSet
-tags: [exported]
 ```
 
 ```Go
@@ -453,7 +443,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagNumericString
-tags: [exported]
 ```
 
 ```Go
@@ -466,7 +455,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagPrintableString
-tags: [exported]
 ```
 
 ```Go
@@ -479,7 +467,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagT61String
-tags: [exported]
 ```
 
 ```Go
@@ -492,7 +479,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagIA5String
-tags: [exported]
 ```
 
 ```Go
@@ -505,7 +491,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagUTCTime
-tags: [exported]
 ```
 
 ```Go
@@ -518,7 +503,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagGeneralizedTime
-tags: [exported]
 ```
 
 ```Go
@@ -531,7 +515,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagGeneralString
-tags: [exported]
 ```
 
 ```Go
@@ -544,7 +527,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.TagBMPString
-tags: [exported]
 ```
 
 ```Go
@@ -557,7 +539,6 @@ ASN.1 tags represent the type of the following object.
 
 ```
 searchKey: asn1.ClassUniversal
-tags: [exported]
 ```
 
 ```Go
@@ -570,7 +551,6 @@ ASN.1 class types represent the namespace of the tag.
 
 ```
 searchKey: asn1.ClassApplication
-tags: [exported]
 ```
 
 ```Go
@@ -583,7 +563,6 @@ ASN.1 class types represent the namespace of the tag.
 
 ```
 searchKey: asn1.ClassContextSpecific
-tags: [exported]
 ```
 
 ```Go
@@ -596,7 +575,6 @@ ASN.1 class types represent the namespace of the tag.
 
 ```
 searchKey: asn1.ClassPrivate
-tags: [exported]
 ```
 
 ```Go
@@ -607,14 +585,11 @@ ASN.1 class types represent the namespace of the tag.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="bigOne" href="#bigOne">var bigOne</a>
 
 ```
 searchKey: asn1.bigOne
+tags: [private]
 ```
 
 ```Go
@@ -625,7 +600,6 @@ var bigOne = big.NewInt(1)
 
 ```
 searchKey: asn1.NullRawValue
-tags: [exported]
 ```
 
 ```Go
@@ -638,7 +612,6 @@ NullRawValue is a RawValue with its Tag set to the ASN.1 NULL type tag (5).
 
 ```
 searchKey: asn1.NullBytes
-tags: [exported]
 ```
 
 ```Go
@@ -651,6 +624,7 @@ NullBytes contains bytes representing the DER-encoded ASN.1 NULL type.
 
 ```
 searchKey: asn1.bitStringType
+tags: [private]
 ```
 
 ```Go
@@ -661,6 +635,7 @@ var bitStringType = reflect.TypeOf(BitString{})
 
 ```
 searchKey: asn1.objectIdentifierType
+tags: [private]
 ```
 
 ```Go
@@ -671,6 +646,7 @@ var objectIdentifierType = reflect.TypeOf(ObjectIdentifier{})
 
 ```
 searchKey: asn1.enumeratedType
+tags: [private]
 ```
 
 ```Go
@@ -681,6 +657,7 @@ var enumeratedType = reflect.TypeOf(Enumerated(0))
 
 ```
 searchKey: asn1.flagType
+tags: [private]
 ```
 
 ```Go
@@ -691,6 +668,7 @@ var flagType = reflect.TypeOf(Flag(false))
 
 ```
 searchKey: asn1.timeType
+tags: [private]
 ```
 
 ```Go
@@ -701,6 +679,7 @@ var timeType = reflect.TypeOf(time.Time{})
 
 ```
 searchKey: asn1.rawValueType
+tags: [private]
 ```
 
 ```Go
@@ -711,6 +690,7 @@ var rawValueType = reflect.TypeOf(RawValue{})
 
 ```
 searchKey: asn1.rawContentsType
+tags: [private]
 ```
 
 ```Go
@@ -721,6 +701,7 @@ var rawContentsType = reflect.TypeOf(RawContent(nil))
 
 ```
 searchKey: asn1.bigIntType
+tags: [private]
 ```
 
 ```Go
@@ -731,6 +712,7 @@ var bigIntType = reflect.TypeOf(new(big.Int))
 
 ```
 searchKey: asn1.byte00Encoder
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +723,7 @@ var byte00Encoder encoder = byteEncoder(0x00)
 
 ```
 searchKey: asn1.byteFFEncoder
+tags: [private]
 ```
 
 ```Go
@@ -751,6 +734,7 @@ var byteFFEncoder encoder = byteEncoder(0xff)
 
 ```
 searchKey: asn1.boolTestData
+tags: [private]
 ```
 
 ```Go
@@ -761,6 +745,7 @@ var boolTestData = ...
 
 ```
 searchKey: asn1.int64TestData
+tags: [private]
 ```
 
 ```Go
@@ -771,6 +756,7 @@ var int64TestData = ...
 
 ```
 searchKey: asn1.int32TestData
+tags: [private]
 ```
 
 ```Go
@@ -781,6 +767,7 @@ var int32TestData = ...
 
 ```
 searchKey: asn1.bigIntTests
+tags: [private]
 ```
 
 ```Go
@@ -791,6 +778,7 @@ var bigIntTests = ...
 
 ```
 searchKey: asn1.bitStringTestData
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +789,7 @@ var bitStringTestData = ...
 
 ```
 searchKey: asn1.bitStringRightAlignTests
+tags: [private]
 ```
 
 ```Go
@@ -811,6 +800,7 @@ var bitStringRightAlignTests = ...
 
 ```
 searchKey: asn1.objectIdentifierTestData
+tags: [private]
 ```
 
 ```Go
@@ -821,6 +811,7 @@ var objectIdentifierTestData = ...
 
 ```
 searchKey: asn1.utcTestData
+tags: [private]
 ```
 
 ```Go
@@ -831,6 +822,7 @@ var utcTestData = ...
 
 ```
 searchKey: asn1.generalizedTimeTestData
+tags: [private]
 ```
 
 ```Go
@@ -841,6 +833,7 @@ var generalizedTimeTestData = ...
 
 ```
 searchKey: asn1.tagAndLengthData
+tags: [private]
 ```
 
 ```Go
@@ -851,6 +844,7 @@ var tagAndLengthData = ...
 
 ```
 searchKey: asn1.parseFieldParametersTestData
+tags: [private]
 ```
 
 ```Go
@@ -861,6 +855,7 @@ var parseFieldParametersTestData []parseFieldParametersTest = ...
 
 ```
 searchKey: asn1.unmarshalTestData
+tags: [private]
 ```
 
 ```Go
@@ -871,6 +866,7 @@ var unmarshalTestData = ...
 
 ```
 searchKey: asn1.oiEqualTests
+tags: [private]
 ```
 
 ```Go
@@ -881,6 +877,7 @@ var oiEqualTests = ...
 
 ```
 searchKey: asn1.derEncodedSelfSignedCert
+tags: [private]
 ```
 
 ```Go
@@ -891,6 +888,7 @@ var derEncodedSelfSignedCert = ...
 
 ```
 searchKey: asn1.derEncodedSelfSignedCertBytes
+tags: [private]
 ```
 
 ```Go
@@ -901,6 +899,7 @@ var derEncodedSelfSignedCertBytes = ...
 
 ```
 searchKey: asn1.derEncodedPaypalNULCertBytes
+tags: [private]
 ```
 
 ```Go
@@ -911,6 +910,7 @@ var derEncodedPaypalNULCertBytes = ...
 
 ```
 searchKey: asn1.stringSliceTestData
+tags: [private]
 ```
 
 ```Go
@@ -921,6 +921,7 @@ var stringSliceTestData = ...
 
 ```
 searchKey: asn1.explicitTaggedTimeTestData
+tags: [private]
 ```
 
 ```Go
@@ -931,6 +932,7 @@ var explicitTaggedTimeTestData = ...
 
 ```
 searchKey: asn1.bmpStringTests
+tags: [private]
 ```
 
 ```Go
@@ -941,6 +943,7 @@ var bmpStringTests = ...
 
 ```
 searchKey: asn1.PST
+tags: [private]
 ```
 
 ```Go
@@ -951,6 +954,7 @@ var PST = time.FixedZone("PST", -8*60*60)
 
 ```
 searchKey: asn1.marshalTests
+tags: [private]
 ```
 
 ```Go
@@ -961,6 +965,7 @@ var marshalTests = ...
 
 ```
 searchKey: asn1.marshalWithParamsTests
+tags: [private]
 ```
 
 ```Go
@@ -971,6 +976,7 @@ var marshalWithParamsTests = ...
 
 ```
 searchKey: asn1.marshalErrTests
+tags: [private]
 ```
 
 ```Go
@@ -979,15 +985,10 @@ var marshalErrTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="StructuralError" href="#StructuralError">type StructuralError struct</a>
 
 ```
 searchKey: asn1.StructuralError
-tags: [exported]
 ```
 
 ```Go
@@ -1002,7 +1003,6 @@ A StructuralError suggests that the ASN.1 data is valid, but the Go type which i
 
 ```
 searchKey: asn1.StructuralError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1013,7 +1013,6 @@ func (e StructuralError) Error() string
 
 ```
 searchKey: asn1.SyntaxError
-tags: [exported]
 ```
 
 ```Go
@@ -1028,7 +1027,6 @@ A SyntaxError suggests that the ASN.1 data is invalid.
 
 ```
 searchKey: asn1.SyntaxError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1039,7 +1037,6 @@ func (e SyntaxError) Error() string
 
 ```
 searchKey: asn1.BitString
-tags: [exported]
 ```
 
 ```Go
@@ -1055,6 +1052,7 @@ BitString is the structure to use when you want an ASN.1 BIT STRING type. A bit 
 
 ```
 searchKey: asn1.parseBitString
+tags: [private]
 ```
 
 ```Go
@@ -1067,7 +1065,6 @@ parseBitString parses an ASN.1 bit string from the given byte slice and returns 
 
 ```
 searchKey: asn1.BitString.At
-tags: [exported]
 ```
 
 ```Go
@@ -1080,7 +1077,6 @@ At returns the bit at the given index. If the index is out of range it returns f
 
 ```
 searchKey: asn1.BitString.RightAlign
-tags: [exported]
 ```
 
 ```Go
@@ -1093,7 +1089,6 @@ RightAlign returns a slice where the padding bits are at the beginning. The slic
 
 ```
 searchKey: asn1.ObjectIdentifier
-tags: [exported]
 ```
 
 ```Go
@@ -1106,6 +1101,7 @@ An ObjectIdentifier represents an ASN.1 OBJECT IDENTIFIER.
 
 ```
 searchKey: asn1.parseObjectIdentifier
+tags: [private]
 ```
 
 ```Go
@@ -1118,7 +1114,6 @@ parseObjectIdentifier parses an OBJECT IDENTIFIER from the given bytes and retur
 
 ```
 searchKey: asn1.ObjectIdentifier.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -1131,7 +1126,6 @@ Equal reports whether oi and other represent the same identifier.
 
 ```
 searchKey: asn1.ObjectIdentifier.String
-tags: [exported]
 ```
 
 ```Go
@@ -1142,7 +1136,6 @@ func (oi ObjectIdentifier) String() string
 
 ```
 searchKey: asn1.Enumerated
-tags: [exported]
 ```
 
 ```Go
@@ -1155,7 +1148,6 @@ An Enumerated is represented as a plain int.
 
 ```
 searchKey: asn1.Flag
-tags: [exported]
 ```
 
 ```Go
@@ -1168,6 +1160,7 @@ A Flag accepts any data and is set to true if present.
 
 ```
 searchKey: asn1.asteriskFlag
+tags: [private]
 ```
 
 ```Go
@@ -1178,6 +1171,7 @@ type asteriskFlag bool
 
 ```
 searchKey: asn1.ampersandFlag
+tags: [private]
 ```
 
 ```Go
@@ -1188,7 +1182,6 @@ type ampersandFlag bool
 
 ```
 searchKey: asn1.RawValue
-tags: [exported]
 ```
 
 ```Go
@@ -1206,7 +1199,6 @@ A RawValue represents an undecoded ASN.1 object.
 
 ```
 searchKey: asn1.RawContent
-tags: [exported]
 ```
 
 ```Go
@@ -1219,6 +1211,7 @@ RawContent is used to signal that the undecoded, DER data needs to be preserved 
 
 ```
 searchKey: asn1.invalidUnmarshalError
+tags: [private]
 ```
 
 ```Go
@@ -1233,6 +1226,7 @@ An invalidUnmarshalError describes an invalid argument passed to Unmarshal. (The
 
 ```
 searchKey: asn1.invalidUnmarshalError.Error
+tags: [private]
 ```
 
 ```Go
@@ -1243,6 +1237,7 @@ func (e *invalidUnmarshalError) Error() string
 
 ```
 searchKey: asn1.tagAndLength
+tags: [private]
 ```
 
 ```Go
@@ -1256,6 +1251,7 @@ type tagAndLength struct {
 
 ```
 searchKey: asn1.parseTagAndLength
+tags: [private]
 ```
 
 ```Go
@@ -1268,6 +1264,7 @@ parseTagAndLength parses an ASN.1 tag and length pair from the given offset into
 
 ```
 searchKey: asn1.fieldParameters
+tags: [private]
 ```
 
 ```Go
@@ -1292,6 +1289,7 @@ fieldParameters is the parsed representation of tag string from a structure fiel
 
 ```
 searchKey: asn1.parseFieldParameters
+tags: [private]
 ```
 
 ```Go
@@ -1304,6 +1302,7 @@ Given a tag string with the format specified in the package comment, parseFieldP
 
 ```
 searchKey: asn1.encoder
+tags: [private]
 ```
 
 ```Go
@@ -1321,6 +1320,7 @@ encoder represents an ASN.1 element that is waiting to be marshaled.
 
 ```
 searchKey: asn1.makeBigInt
+tags: [private]
 ```
 
 ```Go
@@ -1331,6 +1331,7 @@ func makeBigInt(n *big.Int) (encoder, error)
 
 ```
 searchKey: asn1.makeObjectIdentifier
+tags: [private]
 ```
 
 ```Go
@@ -1341,6 +1342,7 @@ func makeObjectIdentifier(oid []int) (e encoder, err error)
 
 ```
 searchKey: asn1.makePrintableString
+tags: [private]
 ```
 
 ```Go
@@ -1351,6 +1353,7 @@ func makePrintableString(s string) (e encoder, err error)
 
 ```
 searchKey: asn1.makeIA5String
+tags: [private]
 ```
 
 ```Go
@@ -1361,6 +1364,7 @@ func makeIA5String(s string) (e encoder, err error)
 
 ```
 searchKey: asn1.makeNumericString
+tags: [private]
 ```
 
 ```Go
@@ -1371,6 +1375,7 @@ func makeNumericString(s string) (e encoder, err error)
 
 ```
 searchKey: asn1.makeUTF8String
+tags: [private]
 ```
 
 ```Go
@@ -1381,6 +1386,7 @@ func makeUTF8String(s string) encoder
 
 ```
 searchKey: asn1.makeUTCTime
+tags: [private]
 ```
 
 ```Go
@@ -1391,6 +1397,7 @@ func makeUTCTime(t time.Time) (e encoder, err error)
 
 ```
 searchKey: asn1.makeGeneralizedTime
+tags: [private]
 ```
 
 ```Go
@@ -1401,6 +1408,7 @@ func makeGeneralizedTime(t time.Time) (e encoder, err error)
 
 ```
 searchKey: asn1.makeBody
+tags: [private]
 ```
 
 ```Go
@@ -1411,6 +1419,7 @@ func makeBody(value reflect.Value, params fieldParameters) (e encoder, err error
 
 ```
 searchKey: asn1.makeField
+tags: [private]
 ```
 
 ```Go
@@ -1421,6 +1430,7 @@ func makeField(v reflect.Value, params fieldParameters) (e encoder, err error)
 
 ```
 searchKey: asn1.byteEncoder
+tags: [private]
 ```
 
 ```Go
@@ -1431,6 +1441,7 @@ type byteEncoder byte
 
 ```
 searchKey: asn1.byteEncoder.Len
+tags: [private]
 ```
 
 ```Go
@@ -1441,6 +1452,7 @@ func (c byteEncoder) Len() int
 
 ```
 searchKey: asn1.byteEncoder.Encode
+tags: [private]
 ```
 
 ```Go
@@ -1451,6 +1463,7 @@ func (c byteEncoder) Encode(dst []byte)
 
 ```
 searchKey: asn1.bytesEncoder
+tags: [private]
 ```
 
 ```Go
@@ -1461,6 +1474,7 @@ type bytesEncoder []byte
 
 ```
 searchKey: asn1.bytesEncoder.Len
+tags: [private]
 ```
 
 ```Go
@@ -1471,6 +1485,7 @@ func (b bytesEncoder) Len() int
 
 ```
 searchKey: asn1.bytesEncoder.Encode
+tags: [private]
 ```
 
 ```Go
@@ -1481,6 +1496,7 @@ func (b bytesEncoder) Encode(dst []byte)
 
 ```
 searchKey: asn1.stringEncoder
+tags: [private]
 ```
 
 ```Go
@@ -1491,6 +1507,7 @@ type stringEncoder string
 
 ```
 searchKey: asn1.stringEncoder.Len
+tags: [private]
 ```
 
 ```Go
@@ -1501,6 +1518,7 @@ func (s stringEncoder) Len() int
 
 ```
 searchKey: asn1.stringEncoder.Encode
+tags: [private]
 ```
 
 ```Go
@@ -1511,6 +1529,7 @@ func (s stringEncoder) Encode(dst []byte)
 
 ```
 searchKey: asn1.multiEncoder
+tags: [private]
 ```
 
 ```Go
@@ -1521,6 +1540,7 @@ type multiEncoder []encoder
 
 ```
 searchKey: asn1.multiEncoder.Len
+tags: [private]
 ```
 
 ```Go
@@ -1531,6 +1551,7 @@ func (m multiEncoder) Len() int
 
 ```
 searchKey: asn1.multiEncoder.Encode
+tags: [private]
 ```
 
 ```Go
@@ -1541,6 +1562,7 @@ func (m multiEncoder) Encode(dst []byte)
 
 ```
 searchKey: asn1.setEncoder
+tags: [private]
 ```
 
 ```Go
@@ -1551,6 +1573,7 @@ type setEncoder []encoder
 
 ```
 searchKey: asn1.setEncoder.Len
+tags: [private]
 ```
 
 ```Go
@@ -1561,6 +1584,7 @@ func (s setEncoder) Len() int
 
 ```
 searchKey: asn1.setEncoder.Encode
+tags: [private]
 ```
 
 ```Go
@@ -1571,6 +1595,7 @@ func (s setEncoder) Encode(dst []byte)
 
 ```
 searchKey: asn1.taggedEncoder
+tags: [private]
 ```
 
 ```Go
@@ -1587,6 +1612,7 @@ type taggedEncoder struct {
 
 ```
 searchKey: asn1.taggedEncoder.Len
+tags: [private]
 ```
 
 ```Go
@@ -1597,6 +1623,7 @@ func (t *taggedEncoder) Len() int
 
 ```
 searchKey: asn1.taggedEncoder.Encode
+tags: [private]
 ```
 
 ```Go
@@ -1607,6 +1634,7 @@ func (t *taggedEncoder) Encode(dst []byte)
 
 ```
 searchKey: asn1.int64Encoder
+tags: [private]
 ```
 
 ```Go
@@ -1617,6 +1645,7 @@ type int64Encoder int64
 
 ```
 searchKey: asn1.int64Encoder.Len
+tags: [private]
 ```
 
 ```Go
@@ -1627,6 +1656,7 @@ func (i int64Encoder) Len() int
 
 ```
 searchKey: asn1.int64Encoder.Encode
+tags: [private]
 ```
 
 ```Go
@@ -1637,6 +1667,7 @@ func (i int64Encoder) Encode(dst []byte)
 
 ```
 searchKey: asn1.bitStringEncoder
+tags: [private]
 ```
 
 ```Go
@@ -1647,6 +1678,7 @@ type bitStringEncoder BitString
 
 ```
 searchKey: asn1.bitStringEncoder.Len
+tags: [private]
 ```
 
 ```Go
@@ -1657,6 +1689,7 @@ func (b bitStringEncoder) Len() int
 
 ```
 searchKey: asn1.bitStringEncoder.Encode
+tags: [private]
 ```
 
 ```Go
@@ -1667,6 +1700,7 @@ func (b bitStringEncoder) Encode(dst []byte)
 
 ```
 searchKey: asn1.oidEncoder
+tags: [private]
 ```
 
 ```Go
@@ -1677,6 +1711,7 @@ type oidEncoder []int
 
 ```
 searchKey: asn1.oidEncoder.Len
+tags: [private]
 ```
 
 ```Go
@@ -1687,6 +1722,7 @@ func (oid oidEncoder) Len() int
 
 ```
 searchKey: asn1.oidEncoder.Encode
+tags: [private]
 ```
 
 ```Go
@@ -1697,6 +1733,7 @@ func (oid oidEncoder) Encode(dst []byte)
 
 ```
 searchKey: asn1.boolTest
+tags: [private]
 ```
 
 ```Go
@@ -1711,6 +1748,7 @@ type boolTest struct {
 
 ```
 searchKey: asn1.int64Test
+tags: [private]
 ```
 
 ```Go
@@ -1725,6 +1763,7 @@ type int64Test struct {
 
 ```
 searchKey: asn1.int32Test
+tags: [private]
 ```
 
 ```Go
@@ -1739,6 +1778,7 @@ type int32Test struct {
 
 ```
 searchKey: asn1.bitStringTest
+tags: [private]
 ```
 
 ```Go
@@ -1754,6 +1794,7 @@ type bitStringTest struct {
 
 ```
 searchKey: asn1.bitStringRightAlignTest
+tags: [private]
 ```
 
 ```Go
@@ -1768,6 +1809,7 @@ type bitStringRightAlignTest struct {
 
 ```
 searchKey: asn1.objectIdentifierTest
+tags: [private]
 ```
 
 ```Go
@@ -1782,6 +1824,7 @@ type objectIdentifierTest struct {
 
 ```
 searchKey: asn1.timeTest
+tags: [private]
 ```
 
 ```Go
@@ -1796,6 +1839,7 @@ type timeTest struct {
 
 ```
 searchKey: asn1.tagAndLengthTest
+tags: [private]
 ```
 
 ```Go
@@ -1810,6 +1854,7 @@ type tagAndLengthTest struct {
 
 ```
 searchKey: asn1.parseFieldParametersTest
+tags: [private]
 ```
 
 ```Go
@@ -1823,6 +1868,7 @@ type parseFieldParametersTest struct {
 
 ```
 searchKey: asn1.TestObjectIdentifierStruct
+tags: [private]
 ```
 
 ```Go
@@ -1835,6 +1881,7 @@ type TestObjectIdentifierStruct struct {
 
 ```
 searchKey: asn1.TestContextSpecificTags
+tags: [private]
 ```
 
 ```Go
@@ -1847,6 +1894,7 @@ type TestContextSpecificTags struct {
 
 ```
 searchKey: asn1.TestContextSpecificTags2
+tags: [private]
 ```
 
 ```Go
@@ -1860,6 +1908,7 @@ type TestContextSpecificTags2 struct {
 
 ```
 searchKey: asn1.TestContextSpecificTags3
+tags: [private]
 ```
 
 ```Go
@@ -1872,6 +1921,7 @@ type TestContextSpecificTags3 struct {
 
 ```
 searchKey: asn1.TestElementsAfterString
+tags: [private]
 ```
 
 ```Go
@@ -1885,6 +1935,7 @@ type TestElementsAfterString struct {
 
 ```
 searchKey: asn1.TestBigInt
+tags: [private]
 ```
 
 ```Go
@@ -1897,6 +1948,7 @@ type TestBigInt struct {
 
 ```
 searchKey: asn1.TestSet
+tags: [private]
 ```
 
 ```Go
@@ -1909,6 +1961,7 @@ type TestSet struct {
 
 ```
 searchKey: asn1.Certificate
+tags: [private]
 ```
 
 ```Go
@@ -1923,6 +1976,7 @@ type Certificate struct {
 
 ```
 searchKey: asn1.TBSCertificate
+tags: [private]
 ```
 
 ```Go
@@ -1941,6 +1995,7 @@ type TBSCertificate struct {
 
 ```
 searchKey: asn1.AlgorithmIdentifier
+tags: [private]
 ```
 
 ```Go
@@ -1953,6 +2008,7 @@ type AlgorithmIdentifier struct {
 
 ```
 searchKey: asn1.RDNSequence
+tags: [private]
 ```
 
 ```Go
@@ -1963,6 +2019,7 @@ type RDNSequence []RelativeDistinguishedNameSET
 
 ```
 searchKey: asn1.RelativeDistinguishedNameSET
+tags: [private]
 ```
 
 ```Go
@@ -1973,6 +2030,7 @@ type RelativeDistinguishedNameSET []AttributeTypeAndValue
 
 ```
 searchKey: asn1.AttributeTypeAndValue
+tags: [private]
 ```
 
 ```Go
@@ -1986,6 +2044,7 @@ type AttributeTypeAndValue struct {
 
 ```
 searchKey: asn1.Validity
+tags: [private]
 ```
 
 ```Go
@@ -1998,6 +2057,7 @@ type Validity struct {
 
 ```
 searchKey: asn1.PublicKeyInfo
+tags: [private]
 ```
 
 ```Go
@@ -2011,6 +2071,7 @@ type PublicKeyInfo struct {
 
 ```
 searchKey: asn1.rawStructTest
+tags: [private]
 ```
 
 ```Go
@@ -2024,6 +2085,7 @@ type rawStructTest struct {
 
 ```
 searchKey: asn1.oiEqualTest
+tags: [private]
 ```
 
 ```Go
@@ -2038,6 +2100,7 @@ type oiEqualTest struct {
 
 ```
 searchKey: asn1.explicitTaggedTimeTest
+tags: [private]
 ```
 
 ```Go
@@ -2050,6 +2113,7 @@ type explicitTaggedTimeTest struct {
 
 ```
 searchKey: asn1.implicitTaggedTimeTest
+tags: [private]
 ```
 
 ```Go
@@ -2062,6 +2126,7 @@ type implicitTaggedTimeTest struct {
 
 ```
 searchKey: asn1.truncatedExplicitTagTest
+tags: [private]
 ```
 
 ```Go
@@ -2074,6 +2139,7 @@ type truncatedExplicitTagTest struct {
 
 ```
 searchKey: asn1.invalidUTF8Test
+tags: [private]
 ```
 
 ```Go
@@ -2086,6 +2152,7 @@ type invalidUTF8Test struct {
 
 ```
 searchKey: asn1.unexported
+tags: [private]
 ```
 
 ```Go
@@ -2099,6 +2166,7 @@ type unexported struct {
 
 ```
 searchKey: asn1.exported
+tags: [private]
 ```
 
 ```Go
@@ -2112,6 +2180,7 @@ type exported struct {
 
 ```
 searchKey: asn1.intStruct
+tags: [private]
 ```
 
 ```Go
@@ -2124,6 +2193,7 @@ type intStruct struct {
 
 ```
 searchKey: asn1.twoIntStruct
+tags: [private]
 ```
 
 ```Go
@@ -2137,6 +2207,7 @@ type twoIntStruct struct {
 
 ```
 searchKey: asn1.bigIntStruct
+tags: [private]
 ```
 
 ```Go
@@ -2149,6 +2220,7 @@ type bigIntStruct struct {
 
 ```
 searchKey: asn1.nestedStruct
+tags: [private]
 ```
 
 ```Go
@@ -2161,6 +2233,7 @@ type nestedStruct struct {
 
 ```
 searchKey: asn1.rawContentsStruct
+tags: [private]
 ```
 
 ```Go
@@ -2174,6 +2247,7 @@ type rawContentsStruct struct {
 
 ```
 searchKey: asn1.implicitTagTest
+tags: [private]
 ```
 
 ```Go
@@ -2186,6 +2260,7 @@ type implicitTagTest struct {
 
 ```
 searchKey: asn1.explicitTagTest
+tags: [private]
 ```
 
 ```Go
@@ -2198,6 +2273,7 @@ type explicitTagTest struct {
 
 ```
 searchKey: asn1.flagTest
+tags: [private]
 ```
 
 ```Go
@@ -2210,6 +2286,7 @@ type flagTest struct {
 
 ```
 searchKey: asn1.generalizedTimeTest
+tags: [private]
 ```
 
 ```Go
@@ -2222,6 +2299,7 @@ type generalizedTimeTest struct {
 
 ```
 searchKey: asn1.ia5StringTest
+tags: [private]
 ```
 
 ```Go
@@ -2234,6 +2312,7 @@ type ia5StringTest struct {
 
 ```
 searchKey: asn1.printableStringTest
+tags: [private]
 ```
 
 ```Go
@@ -2246,6 +2325,7 @@ type printableStringTest struct {
 
 ```
 searchKey: asn1.genericStringTest
+tags: [private]
 ```
 
 ```Go
@@ -2258,6 +2338,7 @@ type genericStringTest struct {
 
 ```
 searchKey: asn1.optionalRawValueTest
+tags: [private]
 ```
 
 ```Go
@@ -2270,6 +2351,7 @@ type optionalRawValueTest struct {
 
 ```
 searchKey: asn1.omitEmptyTest
+tags: [private]
 ```
 
 ```Go
@@ -2282,6 +2364,7 @@ type omitEmptyTest struct {
 
 ```
 searchKey: asn1.defaultTest
+tags: [private]
 ```
 
 ```Go
@@ -2294,6 +2377,7 @@ type defaultTest struct {
 
 ```
 searchKey: asn1.applicationTest
+tags: [private]
 ```
 
 ```Go
@@ -2307,6 +2391,7 @@ type applicationTest struct {
 
 ```
 searchKey: asn1.privateTest
+tags: [private]
 ```
 
 ```Go
@@ -2322,6 +2407,7 @@ type privateTest struct {
 
 ```
 searchKey: asn1.numericStringTest
+tags: [private]
 ```
 
 ```Go
@@ -2334,6 +2420,7 @@ type numericStringTest struct {
 
 ```
 searchKey: asn1.testSET
+tags: [private]
 ```
 
 ```Go
@@ -2344,6 +2431,7 @@ type testSET []int
 
 ```
 searchKey: asn1.marshalTest
+tags: [private]
 ```
 
 ```Go
@@ -2357,6 +2445,7 @@ type marshalTest struct {
 
 ```
 searchKey: asn1.marshalWithParamsTest
+tags: [private]
 ```
 
 ```Go
@@ -2371,6 +2460,7 @@ type marshalWithParamsTest struct {
 
 ```
 searchKey: asn1.marshalErrTest
+tags: [private]
 ```
 
 ```Go
@@ -2382,14 +2472,11 @@ type marshalErrTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="parseBool" href="#parseBool">func parseBool(bytes []byte) (ret bool, err error)</a>
 
 ```
 searchKey: asn1.parseBool
+tags: [private]
 ```
 
 ```Go
@@ -2400,6 +2487,7 @@ func parseBool(bytes []byte) (ret bool, err error)
 
 ```
 searchKey: asn1.checkInteger
+tags: [private]
 ```
 
 ```Go
@@ -2412,6 +2500,7 @@ checkInteger returns nil if the given bytes are a valid DER-encoded INTEGER and 
 
 ```
 searchKey: asn1.parseInt64
+tags: [private]
 ```
 
 ```Go
@@ -2424,6 +2513,7 @@ parseInt64 treats the given bytes as a big-endian, signed integer and returns th
 
 ```
 searchKey: asn1.parseInt32
+tags: [private]
 ```
 
 ```Go
@@ -2436,6 +2526,7 @@ parseInt treats the given bytes as a big-endian, signed integer and returns the 
 
 ```
 searchKey: asn1.parseBigInt
+tags: [private]
 ```
 
 ```Go
@@ -2448,6 +2539,7 @@ parseBigInt treats the given bytes as a big-endian, signed integer and returns t
 
 ```
 searchKey: asn1.parseBase128Int
+tags: [private]
 ```
 
 ```Go
@@ -2460,6 +2552,7 @@ parseBase128Int parses a base-128 encoded int from the given offset in the given
 
 ```
 searchKey: asn1.parseUTCTime
+tags: [private]
 ```
 
 ```Go
@@ -2470,6 +2563,7 @@ func parseUTCTime(bytes []byte) (ret time.Time, err error)
 
 ```
 searchKey: asn1.parseGeneralizedTime
+tags: [private]
 ```
 
 ```Go
@@ -2482,6 +2576,7 @@ parseGeneralizedTime parses the GeneralizedTime from the given byte slice and re
 
 ```
 searchKey: asn1.parseNumericString
+tags: [private]
 ```
 
 ```Go
@@ -2494,6 +2589,7 @@ parseNumericString parses an ASN.1 NumericString from the given byte array and r
 
 ```
 searchKey: asn1.isNumeric
+tags: [private]
 ```
 
 ```Go
@@ -2506,6 +2602,7 @@ isNumeric reports whether the given b is in the ASN.1 NumericString set.
 
 ```
 searchKey: asn1.parsePrintableString
+tags: [private]
 ```
 
 ```Go
@@ -2518,6 +2615,7 @@ parsePrintableString parses an ASN.1 PrintableString from the given byte array a
 
 ```
 searchKey: asn1.isPrintable
+tags: [private]
 ```
 
 ```Go
@@ -2530,6 +2628,7 @@ isPrintable reports whether the given b is in the ASN.1 PrintableString set. If 
 
 ```
 searchKey: asn1.parseIA5String
+tags: [private]
 ```
 
 ```Go
@@ -2542,6 +2641,7 @@ parseIA5String parses an ASN.1 IA5String (ASCII string) from the given byte slic
 
 ```
 searchKey: asn1.parseT61String
+tags: [private]
 ```
 
 ```Go
@@ -2554,6 +2654,7 @@ parseT61String parses an ASN.1 T61String (8-bit clean string) from the given byt
 
 ```
 searchKey: asn1.parseUTF8String
+tags: [private]
 ```
 
 ```Go
@@ -2566,6 +2667,7 @@ parseUTF8String parses an ASN.1 UTF8String (raw UTF-8) from the given byte array
 
 ```
 searchKey: asn1.parseBMPString
+tags: [private]
 ```
 
 ```Go
@@ -2578,6 +2680,7 @@ parseBMPString parses an ASN.1 BMPString (Basic Multilingual Plane of ISO/IEC/IT
 
 ```
 searchKey: asn1.parseSequenceOf
+tags: [private]
 ```
 
 ```Go
@@ -2590,6 +2693,7 @@ parseSequenceOf is used for SEQUENCE OF and SET OF values. It tries to parse a n
 
 ```
 searchKey: asn1.invalidLength
+tags: [private]
 ```
 
 ```Go
@@ -2602,6 +2706,7 @@ invalidLength reports whether offset + length > sliceLength, or if the addition 
 
 ```
 searchKey: asn1.parseField
+tags: [private]
 ```
 
 ```Go
@@ -2614,6 +2719,7 @@ parseField is the main parsing function. Given a byte slice and an offset into t
 
 ```
 searchKey: asn1.canHaveDefaultValue
+tags: [private]
 ```
 
 ```Go
@@ -2626,6 +2732,7 @@ canHaveDefaultValue reports whether k is a Kind that we will set a default value
 
 ```
 searchKey: asn1.setDefaultValue
+tags: [private]
 ```
 
 ```Go
@@ -2638,7 +2745,6 @@ setDefaultValue is used to install a default value, from a tag string, into a Va
 
 ```
 searchKey: asn1.Unmarshal
-tags: [exported]
 ```
 
 ```Go
@@ -2699,7 +2805,6 @@ Other ASN.1 types are not supported; if it encounters them, Unmarshal returns a 
 
 ```
 searchKey: asn1.UnmarshalWithParams
-tags: [exported]
 ```
 
 ```Go
@@ -2712,6 +2817,7 @@ UnmarshalWithParams allows field parameters to be specified for the top-level el
 
 ```
 searchKey: asn1.getUniversalType
+tags: [private]
 ```
 
 ```Go
@@ -2724,6 +2830,7 @@ Given a reflected Go type, getUniversalType returns the default tag number and e
 
 ```
 searchKey: asn1.base128IntLength
+tags: [private]
 ```
 
 ```Go
@@ -2734,6 +2841,7 @@ func base128IntLength(n int64) int
 
 ```
 searchKey: asn1.appendBase128Int
+tags: [private]
 ```
 
 ```Go
@@ -2744,6 +2852,7 @@ func appendBase128Int(dst []byte, n int64) []byte
 
 ```
 searchKey: asn1.appendLength
+tags: [private]
 ```
 
 ```Go
@@ -2754,6 +2863,7 @@ func appendLength(dst []byte, i int) []byte
 
 ```
 searchKey: asn1.lengthLength
+tags: [private]
 ```
 
 ```Go
@@ -2764,6 +2874,7 @@ func lengthLength(i int) (numBytes int)
 
 ```
 searchKey: asn1.appendTagAndLength
+tags: [private]
 ```
 
 ```Go
@@ -2774,6 +2885,7 @@ func appendTagAndLength(dst []byte, t tagAndLength) []byte
 
 ```
 searchKey: asn1.appendTwoDigits
+tags: [private]
 ```
 
 ```Go
@@ -2784,6 +2896,7 @@ func appendTwoDigits(dst []byte, v int) []byte
 
 ```
 searchKey: asn1.appendFourDigits
+tags: [private]
 ```
 
 ```Go
@@ -2794,6 +2907,7 @@ func appendFourDigits(dst []byte, v int) []byte
 
 ```
 searchKey: asn1.outsideUTCRange
+tags: [private]
 ```
 
 ```Go
@@ -2804,6 +2918,7 @@ func outsideUTCRange(t time.Time) bool
 
 ```
 searchKey: asn1.appendUTCTime
+tags: [private]
 ```
 
 ```Go
@@ -2814,6 +2929,7 @@ func appendUTCTime(dst []byte, t time.Time) (ret []byte, err error)
 
 ```
 searchKey: asn1.appendGeneralizedTime
+tags: [private]
 ```
 
 ```Go
@@ -2824,6 +2940,7 @@ func appendGeneralizedTime(dst []byte, t time.Time) (ret []byte, err error)
 
 ```
 searchKey: asn1.appendTimeCommon
+tags: [private]
 ```
 
 ```Go
@@ -2834,6 +2951,7 @@ func appendTimeCommon(dst []byte, t time.Time) []byte
 
 ```
 searchKey: asn1.stripTagAndLength
+tags: [private]
 ```
 
 ```Go
@@ -2844,7 +2962,6 @@ func stripTagAndLength(in []byte) []byte
 
 ```
 searchKey: asn1.Marshal
-tags: [exported]
 ```
 
 ```Go
@@ -2868,7 +2985,6 @@ generalized: causes time.Time to be marshaled as ASN.1, GeneralizedTime values
 
 ```
 searchKey: asn1.MarshalWithParams
-tags: [exported]
 ```
 
 ```Go
@@ -2881,6 +2997,7 @@ MarshalWithParams allows field parameters to be specified for the top-level elem
 
 ```
 searchKey: asn1.TestParseBool
+tags: [private]
 ```
 
 ```Go
@@ -2891,6 +3008,7 @@ func TestParseBool(t *testing.T)
 
 ```
 searchKey: asn1.TestParseInt64
+tags: [private]
 ```
 
 ```Go
@@ -2901,6 +3019,7 @@ func TestParseInt64(t *testing.T)
 
 ```
 searchKey: asn1.TestParseInt32
+tags: [private]
 ```
 
 ```Go
@@ -2911,6 +3030,7 @@ func TestParseInt32(t *testing.T)
 
 ```
 searchKey: asn1.TestParseBigInt
+tags: [private]
 ```
 
 ```Go
@@ -2921,6 +3041,7 @@ func TestParseBigInt(t *testing.T)
 
 ```
 searchKey: asn1.TestBitString
+tags: [private]
 ```
 
 ```Go
@@ -2931,6 +3052,7 @@ func TestBitString(t *testing.T)
 
 ```
 searchKey: asn1.TestBitStringAt
+tags: [private]
 ```
 
 ```Go
@@ -2941,6 +3063,7 @@ func TestBitStringAt(t *testing.T)
 
 ```
 searchKey: asn1.TestBitStringRightAlign
+tags: [private]
 ```
 
 ```Go
@@ -2951,6 +3074,7 @@ func TestBitStringRightAlign(t *testing.T)
 
 ```
 searchKey: asn1.TestObjectIdentifier
+tags: [private]
 ```
 
 ```Go
@@ -2961,6 +3085,7 @@ func TestObjectIdentifier(t *testing.T)
 
 ```
 searchKey: asn1.TestUTCTime
+tags: [private]
 ```
 
 ```Go
@@ -2971,6 +3096,7 @@ func TestUTCTime(t *testing.T)
 
 ```
 searchKey: asn1.TestGeneralizedTime
+tags: [private]
 ```
 
 ```Go
@@ -2981,6 +3107,7 @@ func TestGeneralizedTime(t *testing.T)
 
 ```
 searchKey: asn1.TestParseTagAndLength
+tags: [private]
 ```
 
 ```Go
@@ -2991,6 +3118,7 @@ func TestParseTagAndLength(t *testing.T)
 
 ```
 searchKey: asn1.newInt
+tags: [private]
 ```
 
 ```Go
@@ -3001,6 +3129,7 @@ func newInt(n int) *int
 
 ```
 searchKey: asn1.newInt64
+tags: [private]
 ```
 
 ```Go
@@ -3011,6 +3140,7 @@ func newInt64(n int64) *int64
 
 ```
 searchKey: asn1.newString
+tags: [private]
 ```
 
 ```Go
@@ -3021,6 +3151,7 @@ func newString(s string) *string
 
 ```
 searchKey: asn1.newBool
+tags: [private]
 ```
 
 ```Go
@@ -3031,6 +3162,7 @@ func newBool(b bool) *bool
 
 ```
 searchKey: asn1.TestParseFieldParameters
+tags: [private]
 ```
 
 ```Go
@@ -3041,6 +3173,7 @@ func TestParseFieldParameters(t *testing.T)
 
 ```
 searchKey: asn1.TestUnmarshal
+tags: [private]
 ```
 
 ```Go
@@ -3051,6 +3184,7 @@ func TestUnmarshal(t *testing.T)
 
 ```
 searchKey: asn1.TestUnmarshalWithNilOrNonPointer
+tags: [private]
 ```
 
 ```Go
@@ -3061,6 +3195,7 @@ func TestUnmarshalWithNilOrNonPointer(t *testing.T)
 
 ```
 searchKey: asn1.TestCertificate
+tags: [private]
 ```
 
 ```Go
@@ -3071,6 +3206,7 @@ func TestCertificate(t *testing.T)
 
 ```
 searchKey: asn1.TestCertificateWithNUL
+tags: [private]
 ```
 
 ```Go
@@ -3081,6 +3217,7 @@ func TestCertificateWithNUL(t *testing.T)
 
 ```
 searchKey: asn1.TestRawStructs
+tags: [private]
 ```
 
 ```Go
@@ -3091,6 +3228,7 @@ func TestRawStructs(t *testing.T)
 
 ```
 searchKey: asn1.TestObjectIdentifierEqual
+tags: [private]
 ```
 
 ```Go
@@ -3101,6 +3239,7 @@ func TestObjectIdentifierEqual(t *testing.T)
 
 ```
 searchKey: asn1.TestStringSlice
+tags: [private]
 ```
 
 ```Go
@@ -3111,6 +3250,7 @@ func TestStringSlice(t *testing.T)
 
 ```
 searchKey: asn1.TestExplicitTaggedTime
+tags: [private]
 ```
 
 ```Go
@@ -3121,6 +3261,7 @@ func TestExplicitTaggedTime(t *testing.T)
 
 ```
 searchKey: asn1.TestImplicitTaggedTime
+tags: [private]
 ```
 
 ```Go
@@ -3131,6 +3272,7 @@ func TestImplicitTaggedTime(t *testing.T)
 
 ```
 searchKey: asn1.TestTruncatedExplicitTag
+tags: [private]
 ```
 
 ```Go
@@ -3141,6 +3283,7 @@ func TestTruncatedExplicitTag(t *testing.T)
 
 ```
 searchKey: asn1.TestUnmarshalInvalidUTF8
+tags: [private]
 ```
 
 ```Go
@@ -3151,6 +3294,7 @@ func TestUnmarshalInvalidUTF8(t *testing.T)
 
 ```
 searchKey: asn1.TestMarshalNilValue
+tags: [private]
 ```
 
 ```Go
@@ -3161,6 +3305,7 @@ func TestMarshalNilValue(t *testing.T)
 
 ```
 searchKey: asn1.TestUnexportedStructField
+tags: [private]
 ```
 
 ```Go
@@ -3171,6 +3316,7 @@ func TestUnexportedStructField(t *testing.T)
 
 ```
 searchKey: asn1.TestNull
+tags: [private]
 ```
 
 ```Go
@@ -3181,6 +3327,7 @@ func TestNull(t *testing.T)
 
 ```
 searchKey: asn1.TestExplicitTagRawValueStruct
+tags: [private]
 ```
 
 ```Go
@@ -3191,6 +3338,7 @@ func TestExplicitTagRawValueStruct(t *testing.T)
 
 ```
 searchKey: asn1.TestTaggedRawValue
+tags: [private]
 ```
 
 ```Go
@@ -3201,6 +3349,7 @@ func TestTaggedRawValue(t *testing.T)
 
 ```
 searchKey: asn1.TestBMPString
+tags: [private]
 ```
 
 ```Go
@@ -3211,6 +3360,7 @@ func TestBMPString(t *testing.T)
 
 ```
 searchKey: asn1.TestNonMinimalEncodedOID
+tags: [private]
 ```
 
 ```Go
@@ -3221,6 +3371,7 @@ func TestNonMinimalEncodedOID(t *testing.T)
 
 ```
 searchKey: asn1.farFuture
+tags: [private]
 ```
 
 ```Go
@@ -3231,6 +3382,7 @@ func farFuture() time.Time
 
 ```
 searchKey: asn1.TestMarshal
+tags: [private]
 ```
 
 ```Go
@@ -3241,6 +3393,7 @@ func TestMarshal(t *testing.T)
 
 ```
 searchKey: asn1.TestMarshalWithParams
+tags: [private]
 ```
 
 ```Go
@@ -3251,6 +3404,7 @@ func TestMarshalWithParams(t *testing.T)
 
 ```
 searchKey: asn1.TestMarshalError
+tags: [private]
 ```
 
 ```Go
@@ -3261,6 +3415,7 @@ func TestMarshalError(t *testing.T)
 
 ```
 searchKey: asn1.TestInvalidUTF8
+tags: [private]
 ```
 
 ```Go
@@ -3271,6 +3426,7 @@ func TestInvalidUTF8(t *testing.T)
 
 ```
 searchKey: asn1.TestMarshalOID
+tags: [private]
 ```
 
 ```Go
@@ -3281,6 +3437,7 @@ func TestMarshalOID(t *testing.T)
 
 ```
 searchKey: asn1.TestIssue11130
+tags: [private]
 ```
 
 ```Go
@@ -3291,6 +3448,7 @@ func TestIssue11130(t *testing.T)
 
 ```
 searchKey: asn1.BenchmarkMarshal
+tags: [private]
 ```
 
 ```Go
@@ -3301,6 +3459,7 @@ func BenchmarkMarshal(b *testing.B)
 
 ```
 searchKey: asn1.TestSetEncoder
+tags: [private]
 ```
 
 ```Go
@@ -3311,6 +3470,7 @@ func TestSetEncoder(t *testing.T)
 
 ```
 searchKey: asn1.TestSetEncoderSETSliceSuffix
+tags: [private]
 ```
 
 ```Go
@@ -3321,6 +3481,7 @@ func TestSetEncoderSETSliceSuffix(t *testing.T)
 
 ```
 searchKey: asn1.BenchmarkUnmarshal
+tags: [private]
 ```
 
 ```Go

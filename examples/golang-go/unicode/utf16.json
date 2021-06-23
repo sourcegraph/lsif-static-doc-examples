@@ -4,9 +4,7 @@
     "identifier": "utf16",
     "newPage": true,
     "searchKey": "unicode/utf16",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "replacementChar",
                 "newPage": false,
                 "searchKey": "utf16.replacementChar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "maxRune",
                 "newPage": false,
                 "searchKey": "utf16.maxRune",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "surr1",
                 "newPage": false,
                 "searchKey": "utf16.surr1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "surr2",
                 "newPage": false,
                 "searchKey": "utf16.surr2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "surr3",
                 "newPage": false,
                 "searchKey": "utf16.surr3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "surrSelf",
                 "newPage": false,
                 "searchKey": "utf16.surrSelf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "MaxRune",
                 "newPage": false,
                 "searchKey": "utf16.MaxRune",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "ReplacementChar",
                 "newPage": false,
                 "searchKey": "utf16.ReplacementChar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,9 +219,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -227,9 +237,7 @@
                 "identifier": "IsSurrogate",
                 "newPage": false,
                 "searchKey": "utf16.IsSurrogate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -249,9 +257,7 @@
                 "identifier": "DecodeRune",
                 "newPage": false,
                 "searchKey": "utf16.DecodeRune",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -271,9 +277,7 @@
                 "identifier": "EncodeRune",
                 "newPage": false,
                 "searchKey": "utf16.EncodeRune",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -293,9 +297,7 @@
                 "identifier": "Encode",
                 "newPage": false,
                 "searchKey": "utf16.Encode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -315,9 +317,7 @@
                 "identifier": "Decode",
                 "newPage": false,
                 "searchKey": "utf16.Decode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

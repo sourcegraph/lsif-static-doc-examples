@@ -16,10 +16,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="dotcomRootResolver" href="#dotcomRootResolver">type dotcomRootResolver struct</a>
 
 ```
 searchKey: dotcom.dotcomRootResolver
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +40,7 @@ dotcomRootResolver implements the GraphQL types DotcomMutation and DotcomQuery.
 
 ```
 searchKey: dotcom.dotcomRootResolver.Dotcom
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +51,7 @@ func (d dotcomRootResolver) Dotcom() graphqlbackend.DotcomResolver
 
 ```
 searchKey: dotcom.dotcomRootResolver.NodeResolvers
+tags: [private]
 ```
 
 ```Go
@@ -53,11 +60,14 @@ func (d dotcomRootResolver) NodeResolvers() map[string]graphqlbackend.NodeByIDFu
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Init" href="#Init">func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error</a>
 
 ```
 searchKey: dotcom.Init
-tags: [exported]
 ```
 
 ```Go

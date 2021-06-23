@@ -12,11 +12,14 @@ Package nettrace contains internal hooks for tracing activity in the net package
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TraceKey" href="#TraceKey">type TraceKey struct{}</a>
 
 ```
 searchKey: nettrace.TraceKey
-tags: [exported]
 ```
 
 ```Go
@@ -29,7 +32,6 @@ TraceKey is a context.Context Value key. Its associated value should be a *Trace
 
 ```
 searchKey: nettrace.LookupIPAltResolverKey
-tags: [exported]
 ```
 
 ```Go
@@ -46,7 +48,6 @@ func lookupIP(ctx context.Context, host string) ([]IPAddr, error)
 
 ```
 searchKey: nettrace.Trace
-tags: [exported]
 ```
 
 ```Go

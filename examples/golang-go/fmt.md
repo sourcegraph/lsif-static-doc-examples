@@ -330,7 +330,7 @@ Note: Fscan etc. can read one character (rune) past the input they return, which
     * [type fmtFlags struct](#fmtFlags)
     * [type fmt struct](#fmt)
         * [func (f *fmt) clearflags()](#fmt.clearflags)
-        * [func (f *fmt) init(buf *buffer)](#fmt.init)
+        * [func (f *fmt) init(buf *buffer)](#fmt.init.format.go)
         * [func (f *fmt) writePadding(n int)](#fmt.writePadding)
         * [func (f *fmt) pad(b []byte)](#fmt.pad)
         * [func (f *fmt) padString(s string)](#fmt.padString)
@@ -430,7 +430,6 @@ Note: Fscan etc. can read one character (rune) past the input they return, which
         * [func (s *ss) advance(format string) (i int)](#ss.advance)
         * [func (s *ss) doScanf(format string, a []interface{}) (numProcessed int, err error)](#ss.doScanf)
     * [type ssave struct](#ssave)
-        * [func newScanState(r io.Reader, nlIsSpace, nlIsEnd bool) (s *ss, old ssave)](#newScanState)
     * [type readRune struct](#readRune)
         * [func (r *readRune) readByte() (b byte, err error)](#readRune.readByte)
         * [func (r *readRune) ReadRune() (rr rune, size int, err error)](#readRune.ReadRune)
@@ -470,14 +469,11 @@ Note: Fscan etc. can read one character (rune) past the input they return, which
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ldigits" href="#ldigits">const ldigits</a>
 
 ```
 searchKey: fmt.ldigits
+tags: [private]
 ```
 
 ```Go
@@ -488,6 +484,7 @@ const ldigits = "0123456789abcdefx"
 
 ```
 searchKey: fmt.udigits
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +495,7 @@ const udigits = "0123456789ABCDEFX"
 
 ```
 searchKey: fmt.signed
+tags: [private]
 ```
 
 ```Go
@@ -508,6 +506,7 @@ const signed = true
 
 ```
 searchKey: fmt.unsigned
+tags: [private]
 ```
 
 ```Go
@@ -518,6 +517,7 @@ const unsigned = false
 
 ```
 searchKey: fmt.commaSpaceString
+tags: [private]
 ```
 
 ```Go
@@ -530,6 +530,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.nilAngleString
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +543,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.nilParenString
+tags: [private]
 ```
 
 ```Go
@@ -554,6 +556,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.nilString
+tags: [private]
 ```
 
 ```Go
@@ -566,6 +569,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.mapString
+tags: [private]
 ```
 
 ```Go
@@ -578,6 +582,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.percentBangString
+tags: [private]
 ```
 
 ```Go
@@ -590,6 +595,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.missingString
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +608,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.badIndexString
+tags: [private]
 ```
 
 ```Go
@@ -614,6 +621,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.panicString
+tags: [private]
 ```
 
 ```Go
@@ -626,6 +634,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.extraString
+tags: [private]
 ```
 
 ```Go
@@ -638,6 +647,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.badWidthString
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +660,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.badPrecString
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +673,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.noVerbString
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +686,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.invReflectString
+tags: [private]
 ```
 
 ```Go
@@ -686,6 +699,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.eof
+tags: [private]
 ```
 
 ```Go
@@ -696,6 +710,7 @@ const eof = -1
 
 ```
 searchKey: fmt.binaryDigits
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +723,7 @@ Numerical elements
 
 ```
 searchKey: fmt.octalDigits
+tags: [private]
 ```
 
 ```Go
@@ -720,6 +736,7 @@ Numerical elements
 
 ```
 searchKey: fmt.decimalDigits
+tags: [private]
 ```
 
 ```Go
@@ -732,6 +749,7 @@ Numerical elements
 
 ```
 searchKey: fmt.hexadecimalDigits
+tags: [private]
 ```
 
 ```Go
@@ -744,6 +762,7 @@ Numerical elements
 
 ```
 searchKey: fmt.sign
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +775,7 @@ Numerical elements
 
 ```
 searchKey: fmt.period
+tags: [private]
 ```
 
 ```Go
@@ -768,6 +788,7 @@ Numerical elements
 
 ```
 searchKey: fmt.exponent
+tags: [private]
 ```
 
 ```Go
@@ -780,6 +801,7 @@ Numerical elements
 
 ```
 searchKey: fmt.floatVerbs
+tags: [private]
 ```
 
 ```Go
@@ -790,6 +812,7 @@ const floatVerbs = "beEfFgGv"
 
 ```
 searchKey: fmt.hugeWid
+tags: [private]
 ```
 
 ```Go
@@ -800,6 +823,7 @@ const hugeWid = 1 << 30
 
 ```
 searchKey: fmt.intBits
+tags: [private]
 ```
 
 ```Go
@@ -810,6 +834,7 @@ const intBits = 32 << (^uint(0) >> 63)
 
 ```
 searchKey: fmt.uintptrBits
+tags: [private]
 ```
 
 ```Go
@@ -818,14 +843,11 @@ const uintptrBits = 32 << (^uintptr(0) >> 63)
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ppFree" href="#ppFree">var ppFree</a>
 
 ```
 searchKey: fmt.ppFree
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +860,7 @@ var ppFree = sync.Pool{
 
 ```
 searchKey: fmt.space
+tags: [private]
 ```
 
 ```Go
@@ -850,6 +873,7 @@ space is a copy of the unicode.White_Space ranges, to avoid depending on package
 
 ```
 searchKey: fmt.ssFree
+tags: [private]
 ```
 
 ```Go
@@ -862,6 +886,7 @@ var ssFree = sync.Pool{
 
 ```
 searchKey: fmt.complexError
+tags: [private]
 ```
 
 ```Go
@@ -872,6 +897,7 @@ var complexError = errors.New("syntax error scanning complex number")
 
 ```
 searchKey: fmt.boolError
+tags: [private]
 ```
 
 ```Go
@@ -882,6 +908,7 @@ var boolError = errors.New("syntax error scanning boolean")
 
 ```
 searchKey: fmt.IsSpace
+tags: [private]
 ```
 
 ```Go
@@ -892,6 +919,7 @@ var IsSpace = isSpace
 
 ```
 searchKey: fmt.Parsenum
+tags: [private]
 ```
 
 ```Go
@@ -900,14 +928,11 @@ var Parsenum = parsenum
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="wrapError" href="#wrapError">type wrapError struct</a>
 
 ```
 searchKey: fmt.wrapError
+tags: [private]
 ```
 
 ```Go
@@ -921,6 +946,7 @@ type wrapError struct {
 
 ```
 searchKey: fmt.wrapError.Error
+tags: [private]
 ```
 
 ```Go
@@ -931,6 +957,7 @@ func (e *wrapError) Error() string
 
 ```
 searchKey: fmt.wrapError.Unwrap
+tags: [private]
 ```
 
 ```Go
@@ -941,6 +968,7 @@ func (e *wrapError) Unwrap() error
 
 ```
 searchKey: fmt.fmtFlags
+tags: [private]
 ```
 
 ```Go
@@ -967,6 +995,7 @@ flags placed in a separate struct for easy clearing.
 
 ```
 searchKey: fmt.fmt
+tags: [private]
 ```
 
 ```Go
@@ -990,16 +1019,18 @@ A fmt is the raw formatter used by Printf etc. It prints into a buffer that must
 
 ```
 searchKey: fmt.fmt.clearflags
+tags: [private]
 ```
 
 ```Go
 func (f *fmt) clearflags()
 ```
 
-#### <a id="fmt.init" href="#fmt.init">func (f *fmt) init(buf *buffer)</a>
+#### <a id="fmt.init.format.go" href="#fmt.init.format.go">func (f *fmt) init(buf *buffer)</a>
 
 ```
 searchKey: fmt.fmt.init
+tags: [private]
 ```
 
 ```Go
@@ -1010,6 +1041,7 @@ func (f *fmt) init(buf *buffer)
 
 ```
 searchKey: fmt.fmt.writePadding
+tags: [private]
 ```
 
 ```Go
@@ -1022,6 +1054,7 @@ writePadding generates n bytes of padding.
 
 ```
 searchKey: fmt.fmt.pad
+tags: [private]
 ```
 
 ```Go
@@ -1034,6 +1067,7 @@ pad appends b to f.buf, padded on left (!f.minus) or right (f.minus).
 
 ```
 searchKey: fmt.fmt.padString
+tags: [private]
 ```
 
 ```Go
@@ -1046,6 +1080,7 @@ padString appends s to f.buf, padded on left (!f.minus) or right (f.minus).
 
 ```
 searchKey: fmt.fmt.fmtBoolean
+tags: [private]
 ```
 
 ```Go
@@ -1058,6 +1093,7 @@ fmtBoolean formats a boolean.
 
 ```
 searchKey: fmt.fmt.fmtUnicode
+tags: [private]
 ```
 
 ```Go
@@ -1070,6 +1106,7 @@ fmtUnicode formats a uint64 as "U+0078" or with f.sharp set as "U+0078 'x'".
 
 ```
 searchKey: fmt.fmt.fmtInteger
+tags: [private]
 ```
 
 ```Go
@@ -1082,6 +1119,7 @@ fmtInteger formats signed and unsigned integers.
 
 ```
 searchKey: fmt.fmt.truncateString
+tags: [private]
 ```
 
 ```Go
@@ -1094,6 +1132,7 @@ truncateString truncates the string s to the specified precision, if present.
 
 ```
 searchKey: fmt.fmt.truncate
+tags: [private]
 ```
 
 ```Go
@@ -1106,6 +1145,7 @@ truncate truncates the byte slice b as a string of the specified precision, if p
 
 ```
 searchKey: fmt.fmt.fmtS
+tags: [private]
 ```
 
 ```Go
@@ -1118,6 +1158,7 @@ fmtS formats a string.
 
 ```
 searchKey: fmt.fmt.fmtBs
+tags: [private]
 ```
 
 ```Go
@@ -1130,6 +1171,7 @@ fmtBs formats the byte slice b as if it was formatted as string with fmtS.
 
 ```
 searchKey: fmt.fmt.fmtSbx
+tags: [private]
 ```
 
 ```Go
@@ -1142,6 +1184,7 @@ fmtSbx formats a string or byte slice as a hexadecimal encoding of its bytes.
 
 ```
 searchKey: fmt.fmt.fmtSx
+tags: [private]
 ```
 
 ```Go
@@ -1154,6 +1197,7 @@ fmtSx formats a string as a hexadecimal encoding of its bytes.
 
 ```
 searchKey: fmt.fmt.fmtBx
+tags: [private]
 ```
 
 ```Go
@@ -1166,6 +1210,7 @@ fmtBx formats a byte slice as a hexadecimal encoding of its bytes.
 
 ```
 searchKey: fmt.fmt.fmtQ
+tags: [private]
 ```
 
 ```Go
@@ -1178,6 +1223,7 @@ fmtQ formats a string as a double-quoted, escaped Go string constant. If f.sharp
 
 ```
 searchKey: fmt.fmt.fmtC
+tags: [private]
 ```
 
 ```Go
@@ -1190,6 +1236,7 @@ fmtC formats an integer as a Unicode character. If the character is not valid Un
 
 ```
 searchKey: fmt.fmt.fmtQc
+tags: [private]
 ```
 
 ```Go
@@ -1202,6 +1249,7 @@ fmtQc formats an integer as a single-quoted, escaped Go character constant. If t
 
 ```
 searchKey: fmt.fmt.fmtFloat
+tags: [private]
 ```
 
 ```Go
@@ -1214,7 +1262,6 @@ fmtFloat formats a float64. It assumes that verb is a valid format specifier for
 
 ```
 searchKey: fmt.State
-tags: [exported]
 ```
 
 ```Go
@@ -1237,7 +1284,6 @@ State represents the printer state passed to custom formatters. It provides acce
 
 ```
 searchKey: fmt.Formatter
-tags: [exported]
 ```
 
 ```Go
@@ -1252,7 +1298,6 @@ Formatter is implemented by any value that has a Format method. The implementati
 
 ```
 searchKey: fmt.Stringer
-tags: [exported]
 ```
 
 ```Go
@@ -1267,7 +1312,6 @@ Stringer is implemented by any value that has a String method, which defines the
 
 ```
 searchKey: fmt.GoStringer
-tags: [exported]
 ```
 
 ```Go
@@ -1282,6 +1326,7 @@ GoStringer is implemented by any value that has a GoString method, which defines
 
 ```
 searchKey: fmt.buffer
+tags: [private]
 ```
 
 ```Go
@@ -1294,6 +1339,7 @@ Use simple []byte instead of bytes.Buffer to avoid large dependency.
 
 ```
 searchKey: fmt.buffer.write
+tags: [private]
 ```
 
 ```Go
@@ -1304,6 +1350,7 @@ func (b *buffer) write(p []byte)
 
 ```
 searchKey: fmt.buffer.writeString
+tags: [private]
 ```
 
 ```Go
@@ -1314,6 +1361,7 @@ func (b *buffer) writeString(s string)
 
 ```
 searchKey: fmt.buffer.writeByte
+tags: [private]
 ```
 
 ```Go
@@ -1324,6 +1372,7 @@ func (b *buffer) writeByte(c byte)
 
 ```
 searchKey: fmt.buffer.writeRune
+tags: [private]
 ```
 
 ```Go
@@ -1334,6 +1383,7 @@ func (bp *buffer) writeRune(r rune)
 
 ```
 searchKey: fmt.pp
+tags: [private]
 ```
 
 ```Go
@@ -1370,6 +1420,7 @@ pp is used to store a printer's state and is reused with sync.Pool to avoid allo
 
 ```
 searchKey: fmt.newPrinter
+tags: [private]
 ```
 
 ```Go
@@ -1382,6 +1433,7 @@ newPrinter allocates a new pp struct or grabs a cached one.
 
 ```
 searchKey: fmt.pp.free
+tags: [private]
 ```
 
 ```Go
@@ -1394,6 +1446,7 @@ free saves used pp structs in ppFree; avoids an allocation per invocation.
 
 ```
 searchKey: fmt.pp.Width
+tags: [private]
 ```
 
 ```Go
@@ -1404,6 +1457,7 @@ func (p *pp) Width() (wid int, ok bool)
 
 ```
 searchKey: fmt.pp.Precision
+tags: [private]
 ```
 
 ```Go
@@ -1414,6 +1468,7 @@ func (p *pp) Precision() (prec int, ok bool)
 
 ```
 searchKey: fmt.pp.Flag
+tags: [private]
 ```
 
 ```Go
@@ -1424,6 +1479,7 @@ func (p *pp) Flag(b int) bool
 
 ```
 searchKey: fmt.pp.Write
+tags: [private]
 ```
 
 ```Go
@@ -1436,6 +1492,7 @@ Implement Write so we can call Fprintf on a pp (through State), for recursive us
 
 ```
 searchKey: fmt.pp.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -1448,6 +1505,7 @@ Implement WriteString so that we can call io.WriteString on a pp (through state)
 
 ```
 searchKey: fmt.pp.unknownType
+tags: [private]
 ```
 
 ```Go
@@ -1458,6 +1516,7 @@ func (p *pp) unknownType(v reflect.Value)
 
 ```
 searchKey: fmt.pp.badVerb
+tags: [private]
 ```
 
 ```Go
@@ -1468,6 +1527,7 @@ func (p *pp) badVerb(verb rune)
 
 ```
 searchKey: fmt.pp.fmtBool
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1538,7 @@ func (p *pp) fmtBool(v bool, verb rune)
 
 ```
 searchKey: fmt.pp.fmt0x64
+tags: [private]
 ```
 
 ```Go
@@ -1490,6 +1551,7 @@ fmt0x64 formats a uint64 in hexadecimal and prefixes it with 0x or not, as reque
 
 ```
 searchKey: fmt.pp.fmtInteger
+tags: [private]
 ```
 
 ```Go
@@ -1502,6 +1564,7 @@ fmtInteger formats a signed or unsigned integer.
 
 ```
 searchKey: fmt.pp.fmtFloat
+tags: [private]
 ```
 
 ```Go
@@ -1514,6 +1577,7 @@ fmtFloat formats a float. The default precision for each verb is specified as la
 
 ```
 searchKey: fmt.pp.fmtComplex
+tags: [private]
 ```
 
 ```Go
@@ -1526,6 +1590,7 @@ fmtComplex formats a complex number v with r = real(v) and j = imag(v) as (r+ji)
 
 ```
 searchKey: fmt.pp.fmtString
+tags: [private]
 ```
 
 ```Go
@@ -1536,6 +1601,7 @@ func (p *pp) fmtString(v string, verb rune)
 
 ```
 searchKey: fmt.pp.fmtBytes
+tags: [private]
 ```
 
 ```Go
@@ -1546,6 +1612,7 @@ func (p *pp) fmtBytes(v []byte, verb rune, typeString string)
 
 ```
 searchKey: fmt.pp.fmtPointer
+tags: [private]
 ```
 
 ```Go
@@ -1556,6 +1623,7 @@ func (p *pp) fmtPointer(value reflect.Value, verb rune)
 
 ```
 searchKey: fmt.pp.catchPanic
+tags: [private]
 ```
 
 ```Go
@@ -1566,6 +1634,7 @@ func (p *pp) catchPanic(arg interface{}, verb rune, method string)
 
 ```
 searchKey: fmt.pp.handleMethods
+tags: [private]
 ```
 
 ```Go
@@ -1576,6 +1645,7 @@ func (p *pp) handleMethods(verb rune) (handled bool)
 
 ```
 searchKey: fmt.pp.printArg
+tags: [private]
 ```
 
 ```Go
@@ -1586,6 +1656,7 @@ func (p *pp) printArg(arg interface{}, verb rune)
 
 ```
 searchKey: fmt.pp.printValue
+tags: [private]
 ```
 
 ```Go
@@ -1598,6 +1669,7 @@ printValue is similar to printArg but starts with a reflect value, not an interf
 
 ```
 searchKey: fmt.pp.argNumber
+tags: [private]
 ```
 
 ```Go
@@ -1610,6 +1682,7 @@ argNumber returns the next argument to evaluate, which is either the value of th
 
 ```
 searchKey: fmt.pp.badArgNum
+tags: [private]
 ```
 
 ```Go
@@ -1620,6 +1693,7 @@ func (p *pp) badArgNum(verb rune)
 
 ```
 searchKey: fmt.pp.missingArg
+tags: [private]
 ```
 
 ```Go
@@ -1630,6 +1704,7 @@ func (p *pp) missingArg(verb rune)
 
 ```
 searchKey: fmt.pp.doPrintf
+tags: [private]
 ```
 
 ```Go
@@ -1640,6 +1715,7 @@ func (p *pp) doPrintf(format string, a []interface{})
 
 ```
 searchKey: fmt.pp.doPrint
+tags: [private]
 ```
 
 ```Go
@@ -1650,6 +1726,7 @@ func (p *pp) doPrint(a []interface{})
 
 ```
 searchKey: fmt.pp.doPrintln
+tags: [private]
 ```
 
 ```Go
@@ -1662,7 +1739,6 @@ doPrintln is like doPrint but always adds a space between arguments and a newlin
 
 ```
 searchKey: fmt.ScanState
-tags: [exported]
 ```
 
 ```Go
@@ -1703,7 +1779,6 @@ ScanState represents the scanner state passed to custom scanners. Scanners may d
 
 ```
 searchKey: fmt.Scanner
-tags: [exported]
 ```
 
 ```Go
@@ -1718,6 +1793,7 @@ Scanner is implemented by any value that has a Scan method, which scans the inpu
 
 ```
 searchKey: fmt.stringReader
+tags: [private]
 ```
 
 ```Go
@@ -1728,6 +1804,7 @@ type stringReader string
 
 ```
 searchKey: fmt.stringReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -1738,6 +1815,7 @@ func (r *stringReader) Read(b []byte) (n int, err error)
 
 ```
 searchKey: fmt.scanError
+tags: [private]
 ```
 
 ```Go
@@ -1752,6 +1830,7 @@ scanError represents an error generated by the scanning software. It's used as a
 
 ```
 searchKey: fmt.ss
+tags: [private]
 ```
 
 ```Go
@@ -1770,6 +1849,7 @@ ss is the internal implementation of ScanState.
 
 ```
 searchKey: fmt.newScanState
+tags: [private]
 ```
 
 ```Go
@@ -1782,6 +1862,7 @@ newScanState allocates a new ss struct or grab a cached one.
 
 ```
 searchKey: fmt.ss.Read
+tags: [private]
 ```
 
 ```Go
@@ -1794,6 +1875,7 @@ The Read method is only in ScanState so that ScanState satisfies io.Reader. It w
 
 ```
 searchKey: fmt.ss.ReadRune
+tags: [private]
 ```
 
 ```Go
@@ -1804,6 +1886,7 @@ func (s *ss) ReadRune() (r rune, size int, err error)
 
 ```
 searchKey: fmt.ss.Width
+tags: [private]
 ```
 
 ```Go
@@ -1814,6 +1897,7 @@ func (s *ss) Width() (wid int, ok bool)
 
 ```
 searchKey: fmt.ss.getRune
+tags: [private]
 ```
 
 ```Go
@@ -1826,6 +1910,7 @@ The public method returns an error; this private one panics. If getRune reaches 
 
 ```
 searchKey: fmt.ss.mustReadRune
+tags: [private]
 ```
 
 ```Go
@@ -1838,6 +1923,7 @@ mustReadRune turns io.EOF into a panic(io.ErrUnexpectedEOF). It is called in cas
 
 ```
 searchKey: fmt.ss.UnreadRune
+tags: [private]
 ```
 
 ```Go
@@ -1848,6 +1934,7 @@ func (s *ss) UnreadRune() error
 
 ```
 searchKey: fmt.ss.error
+tags: [private]
 ```
 
 ```Go
@@ -1858,6 +1945,7 @@ func (s *ss) error(err error)
 
 ```
 searchKey: fmt.ss.errorString
+tags: [private]
 ```
 
 ```Go
@@ -1868,6 +1956,7 @@ func (s *ss) errorString(err string)
 
 ```
 searchKey: fmt.ss.Token
+tags: [private]
 ```
 
 ```Go
@@ -1878,6 +1967,7 @@ func (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []byte, err error)
 
 ```
 searchKey: fmt.ss.free
+tags: [private]
 ```
 
 ```Go
@@ -1890,6 +1980,7 @@ free saves used ss structs in ssFree; avoid an allocation per invocation.
 
 ```
 searchKey: fmt.ss.SkipSpace
+tags: [private]
 ```
 
 ```Go
@@ -1902,6 +1993,7 @@ SkipSpace provides Scan methods the ability to skip space and newline characters
 
 ```
 searchKey: fmt.ss.token
+tags: [private]
 ```
 
 ```Go
@@ -1914,6 +2006,7 @@ token returns the next space-delimited string from the input. It skips white spa
 
 ```
 searchKey: fmt.ss.consume
+tags: [private]
 ```
 
 ```Go
@@ -1926,6 +2019,7 @@ consume reads the next rune in the input and reports whether it is in the ok str
 
 ```
 searchKey: fmt.ss.peek
+tags: [private]
 ```
 
 ```Go
@@ -1938,6 +2032,7 @@ peek reports whether the next character is in the ok string, without consuming i
 
 ```
 searchKey: fmt.ss.notEOF
+tags: [private]
 ```
 
 ```Go
@@ -1948,6 +2043,7 @@ func (s *ss) notEOF()
 
 ```
 searchKey: fmt.ss.accept
+tags: [private]
 ```
 
 ```Go
@@ -1960,6 +2056,7 @@ accept checks the next rune in the input. If it's a byte (sic) in the string, it
 
 ```
 searchKey: fmt.ss.okVerb
+tags: [private]
 ```
 
 ```Go
@@ -1972,6 +2069,7 @@ okVerb verifies that the verb is present in the list, setting s.err appropriatel
 
 ```
 searchKey: fmt.ss.scanBool
+tags: [private]
 ```
 
 ```Go
@@ -1984,6 +2082,7 @@ scanBool returns the value of the boolean represented by the next token.
 
 ```
 searchKey: fmt.ss.getBase
+tags: [private]
 ```
 
 ```Go
@@ -1996,6 +2095,7 @@ getBase returns the numeric base represented by the verb and its digit string.
 
 ```
 searchKey: fmt.ss.scanNumber
+tags: [private]
 ```
 
 ```Go
@@ -2008,6 +2108,7 @@ scanNumber returns the numerical string with specified digits starting here.
 
 ```
 searchKey: fmt.ss.scanRune
+tags: [private]
 ```
 
 ```Go
@@ -2020,6 +2121,7 @@ scanRune returns the next rune value in the input.
 
 ```
 searchKey: fmt.ss.scanBasePrefix
+tags: [private]
 ```
 
 ```Go
@@ -2032,6 +2134,7 @@ scanBasePrefix reports whether the integer begins with a base prefix and returns
 
 ```
 searchKey: fmt.ss.scanInt
+tags: [private]
 ```
 
 ```Go
@@ -2044,6 +2147,7 @@ scanInt returns the value of the integer represented by the next token, checking
 
 ```
 searchKey: fmt.ss.scanUint
+tags: [private]
 ```
 
 ```Go
@@ -2056,6 +2160,7 @@ scanUint returns the value of the unsigned integer represented by the next token
 
 ```
 searchKey: fmt.ss.floatToken
+tags: [private]
 ```
 
 ```Go
@@ -2068,6 +2173,7 @@ floatToken returns the floating-point number starting here, no longer than swid 
 
 ```
 searchKey: fmt.ss.complexTokens
+tags: [private]
 ```
 
 ```Go
@@ -2080,6 +2186,7 @@ complexTokens returns the real and imaginary parts of the complex number startin
 
 ```
 searchKey: fmt.ss.convertFloat
+tags: [private]
 ```
 
 ```Go
@@ -2092,6 +2199,7 @@ convertFloat converts the string to a float64value.
 
 ```
 searchKey: fmt.ss.scanComplex
+tags: [private]
 ```
 
 ```Go
@@ -2104,6 +2212,7 @@ convertComplex converts the next token to a complex128 value. The atof argument 
 
 ```
 searchKey: fmt.ss.convertString
+tags: [private]
 ```
 
 ```Go
@@ -2116,6 +2225,7 @@ convertString returns the string represented by the next input characters. The f
 
 ```
 searchKey: fmt.ss.quotedString
+tags: [private]
 ```
 
 ```Go
@@ -2128,6 +2238,7 @@ quotedString returns the double- or back-quoted string represented by the next i
 
 ```
 searchKey: fmt.ss.hexByte
+tags: [private]
 ```
 
 ```Go
@@ -2140,6 +2251,7 @@ hexByte returns the next hex-encoded (two-character) byte from the input. It ret
 
 ```
 searchKey: fmt.ss.hexString
+tags: [private]
 ```
 
 ```Go
@@ -2152,6 +2264,7 @@ hexString returns the space-delimited hexpair-encoded string.
 
 ```
 searchKey: fmt.ss.scanPercent
+tags: [private]
 ```
 
 ```Go
@@ -2164,6 +2277,7 @@ scanPercent scans a literal percent character.
 
 ```
 searchKey: fmt.ss.scanOne
+tags: [private]
 ```
 
 ```Go
@@ -2176,6 +2290,7 @@ scanOne scans a single value, deriving the scanner from the type of the argument
 
 ```
 searchKey: fmt.ss.doScan
+tags: [private]
 ```
 
 ```Go
@@ -2188,6 +2303,7 @@ doScan does the real work for scanning without a format string.
 
 ```
 searchKey: fmt.ss.advance
+tags: [private]
 ```
 
 ```Go
@@ -2200,6 +2316,7 @@ advance determines whether the next characters in the input match those of the f
 
 ```
 searchKey: fmt.ss.doScanf
+tags: [private]
 ```
 
 ```Go
@@ -2212,6 +2329,7 @@ doScanf does the real work when scanning with a format string. At the moment, it
 
 ```
 searchKey: fmt.ssave
+tags: [private]
 ```
 
 ```Go
@@ -2227,22 +2345,11 @@ type ssave struct {
 
 ssave holds the parts of ss that need to be saved and restored on recursive scans. 
 
-#### <a id="newScanState" href="#newScanState">func newScanState(r io.Reader, nlIsSpace, nlIsEnd bool) (s *ss, old ssave)</a>
-
-```
-searchKey: fmt.newScanState
-```
-
-```Go
-func newScanState(r io.Reader, nlIsSpace, nlIsEnd bool) (s *ss, old ssave)
-```
-
-newScanState allocates a new ss struct or grab a cached one. 
-
 ### <a id="readRune" href="#readRune">type readRune struct</a>
 
 ```
 searchKey: fmt.readRune
+tags: [private]
 ```
 
 ```Go
@@ -2261,6 +2368,7 @@ readRune is a structure to enable reading UTF-8 encoded code points from an io.R
 
 ```
 searchKey: fmt.readRune.readByte
+tags: [private]
 ```
 
 ```Go
@@ -2273,6 +2381,7 @@ readByte returns the next byte from the input, which may be left over from a pre
 
 ```
 searchKey: fmt.readRune.ReadRune
+tags: [private]
 ```
 
 ```Go
@@ -2285,6 +2394,7 @@ ReadRune returns the next UTF-8 encoded code point from the io.Reader inside r.
 
 ```
 searchKey: fmt.readRune.UnreadRune
+tags: [private]
 ```
 
 ```Go
@@ -2293,15 +2403,10 @@ func (r *readRune) UnreadRune() error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Errorf" href="#Errorf">func Errorf(format string, a ...interface{}) error</a>
 
 ```
 searchKey: fmt.Errorf
-tags: [exported]
 ```
 
 ```Go
@@ -2316,7 +2421,6 @@ If the format specifier includes a %w verb with an error operand, the returned e
 
 ```
 searchKey: fmt.Fprintf
-tags: [exported]
 ```
 
 ```Go
@@ -2329,7 +2433,6 @@ Fprintf formats according to a format specifier and writes to w. It returns the 
 
 ```
 searchKey: fmt.Printf
-tags: [exported]
 ```
 
 ```Go
@@ -2342,7 +2445,6 @@ Printf formats according to a format specifier and writes to standard output. It
 
 ```
 searchKey: fmt.Sprintf
-tags: [exported]
 ```
 
 ```Go
@@ -2355,7 +2457,6 @@ Sprintf formats according to a format specifier and returns the resulting string
 
 ```
 searchKey: fmt.Fprint
-tags: [exported]
 ```
 
 ```Go
@@ -2368,7 +2469,6 @@ Fprint formats using the default formats for its operands and writes to w. Space
 
 ```
 searchKey: fmt.Print
-tags: [exported]
 ```
 
 ```Go
@@ -2381,7 +2481,6 @@ Print formats using the default formats for its operands and writes to standard 
 
 ```
 searchKey: fmt.Sprint
-tags: [exported]
 ```
 
 ```Go
@@ -2394,7 +2493,6 @@ Sprint formats using the default formats for its operands and returns the result
 
 ```
 searchKey: fmt.Fprintln
-tags: [exported]
 ```
 
 ```Go
@@ -2407,7 +2505,6 @@ Fprintln formats using the default formats for its operands and writes to w. Spa
 
 ```
 searchKey: fmt.Println
-tags: [exported]
 ```
 
 ```Go
@@ -2420,7 +2517,6 @@ Println formats using the default formats for its operands and writes to standar
 
 ```
 searchKey: fmt.Sprintln
-tags: [exported]
 ```
 
 ```Go
@@ -2433,6 +2529,7 @@ Sprintln formats using the default formats for its operands and returns the resu
 
 ```
 searchKey: fmt.getField
+tags: [private]
 ```
 
 ```Go
@@ -2445,6 +2542,7 @@ getField gets the i'th field of the struct value. If the field is itself is an i
 
 ```
 searchKey: fmt.tooLarge
+tags: [private]
 ```
 
 ```Go
@@ -2457,6 +2555,7 @@ tooLarge reports whether the magnitude of the integer is too large to be used as
 
 ```
 searchKey: fmt.parsenum
+tags: [private]
 ```
 
 ```Go
@@ -2469,6 +2568,7 @@ parsenum converts ASCII to integer.  num is 0 (and isnum is false) if no number 
 
 ```
 searchKey: fmt.intFromArg
+tags: [private]
 ```
 
 ```Go
@@ -2481,6 +2581,7 @@ intFromArg gets the argNumth element of a. On return, isInt reports whether the 
 
 ```
 searchKey: fmt.parseArgNumber
+tags: [private]
 ```
 
 ```Go
@@ -2493,7 +2594,6 @@ parseArgNumber returns the value of the bracketed number, minus 1 (explicit argu
 
 ```
 searchKey: fmt.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -2506,7 +2606,6 @@ Scan scans text read from standard input, storing successive space-separated val
 
 ```
 searchKey: fmt.Scanln
-tags: [exported]
 ```
 
 ```Go
@@ -2519,7 +2618,6 @@ Scanln is similar to Scan, but stops scanning at a newline and after the final i
 
 ```
 searchKey: fmt.Scanf
-tags: [exported]
 ```
 
 ```Go
@@ -2532,7 +2630,6 @@ Scanf scans text read from standard input, storing successive space-separated va
 
 ```
 searchKey: fmt.Sscan
-tags: [exported]
 ```
 
 ```Go
@@ -2545,7 +2642,6 @@ Sscan scans the argument string, storing successive space-separated values into 
 
 ```
 searchKey: fmt.Sscanln
-tags: [exported]
 ```
 
 ```Go
@@ -2558,7 +2654,6 @@ Sscanln is similar to Sscan, but stops scanning at a newline and after the final
 
 ```
 searchKey: fmt.Sscanf
-tags: [exported]
 ```
 
 ```Go
@@ -2571,7 +2666,6 @@ Sscanf scans the argument string, storing successive space-separated values into
 
 ```
 searchKey: fmt.Fscan
-tags: [exported]
 ```
 
 ```Go
@@ -2584,7 +2678,6 @@ Fscan scans text read from r, storing successive space-separated values into suc
 
 ```
 searchKey: fmt.Fscanln
-tags: [exported]
 ```
 
 ```Go
@@ -2597,7 +2690,6 @@ Fscanln is similar to Fscan, but stops scanning at a newline and after the final
 
 ```
 searchKey: fmt.Fscanf
-tags: [exported]
 ```
 
 ```Go
@@ -2610,6 +2702,7 @@ Fscanf scans text read from r, storing successive space-separated values into su
 
 ```
 searchKey: fmt.isSpace
+tags: [private]
 ```
 
 ```Go
@@ -2620,6 +2713,7 @@ func isSpace(r rune) bool
 
 ```
 searchKey: fmt.notSpace
+tags: [private]
 ```
 
 ```Go
@@ -2632,6 +2726,7 @@ notSpace is the default scanning function used in Token.
 
 ```
 searchKey: fmt.indexRune
+tags: [private]
 ```
 
 ```Go
@@ -2642,6 +2737,7 @@ func indexRune(s string, r rune) int
 
 ```
 searchKey: fmt.hasX
+tags: [private]
 ```
 
 ```Go
@@ -2652,6 +2748,7 @@ func hasX(s string) bool
 
 ```
 searchKey: fmt.hexDigit
+tags: [private]
 ```
 
 ```Go
@@ -2664,6 +2761,7 @@ hexDigit returns the value of the hexadecimal digit.
 
 ```
 searchKey: fmt.errorHandler
+tags: [private]
 ```
 
 ```Go

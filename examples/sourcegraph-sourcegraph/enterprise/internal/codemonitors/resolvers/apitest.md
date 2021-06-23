@@ -26,11 +26,14 @@ Package apitest provided types used in testing.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Response" href="#Response">type Response struct</a>
 
 ```
 searchKey: apitest.Response
-tags: [exported]
 ```
 
 ```Go
@@ -43,7 +46,6 @@ type Response struct {
 
 ```
 searchKey: apitest.UpdateCodeMonitorResponse
-tags: [exported]
 ```
 
 ```Go
@@ -56,7 +58,6 @@ type UpdateCodeMonitorResponse struct {
 
 ```
 searchKey: apitest.User
-tags: [exported]
 ```
 
 ```Go
@@ -69,7 +70,6 @@ type User struct {
 
 ```
 searchKey: apitest.Node
-tags: [exported]
 ```
 
 ```Go
@@ -82,7 +82,6 @@ type Node struct {
 
 ```
 searchKey: apitest.MonitorConnection
-tags: [exported]
 ```
 
 ```Go
@@ -97,7 +96,6 @@ type MonitorConnection struct {
 
 ```
 searchKey: apitest.Monitor
-tags: [exported]
 ```
 
 ```Go
@@ -117,7 +115,6 @@ type Monitor struct {
 
 ```
 searchKey: apitest.UserOrg
-tags: [exported]
 ```
 
 ```Go
@@ -130,7 +127,6 @@ type UserOrg struct {
 
 ```
 searchKey: apitest.PageInfo
-tags: [exported]
 ```
 
 ```Go
@@ -144,7 +140,6 @@ type PageInfo struct {
 
 ```
 searchKey: apitest.ActionConnection
-tags: [exported]
 ```
 
 ```Go
@@ -159,7 +154,6 @@ type ActionConnection struct {
 
 ```
 searchKey: apitest.Action
-tags: [exported]
 ```
 
 ```Go
@@ -172,7 +166,6 @@ type Action struct {
 
 ```
 searchKey: apitest.ActionEmail
-tags: [exported]
 ```
 
 ```Go
@@ -190,7 +183,6 @@ type ActionEmail struct {
 
 ```
 searchKey: apitest.RecipientsConnection
-tags: [exported]
 ```
 
 ```Go
@@ -205,7 +197,6 @@ type RecipientsConnection struct {
 
 ```
 searchKey: apitest.Trigger
-tags: [exported]
 ```
 
 ```Go
@@ -220,7 +211,6 @@ type Trigger struct {
 
 ```
 searchKey: apitest.TriggerEventConnection
-tags: [exported]
 ```
 
 ```Go
@@ -235,7 +225,6 @@ type TriggerEventConnection struct {
 
 ```
 searchKey: apitest.TriggerEvent
-tags: [exported]
 ```
 
 ```Go
@@ -251,7 +240,6 @@ type TriggerEvent struct {
 
 ```
 searchKey: apitest.ActionEventConnection
-tags: [exported]
 ```
 
 ```Go
@@ -266,7 +254,6 @@ type ActionEventConnection struct {
 
 ```
 searchKey: apitest.ActionEvent
-tags: [exported]
 ```
 
 ```Go

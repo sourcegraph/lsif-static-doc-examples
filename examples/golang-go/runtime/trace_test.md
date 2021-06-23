@@ -31,10 +31,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="saveTraces" href="#saveTraces">var saveTraces</a>
 
 ```
 searchKey: trace_test.saveTraces
+tags: [private]
 ```
 
 ```Go
@@ -43,10 +48,15 @@ var saveTraces = flag.Bool("savetraces", false, "save traces collected by tests"
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="frame" href="#frame">type frame struct</a>
 
 ```
 searchKey: trace_test.frame
+tags: [private]
 ```
 
 ```Go
@@ -58,10 +68,15 @@ type frame struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="BenchmarkStartRegion" href="#BenchmarkStartRegion">func BenchmarkStartRegion(b *testing.B)</a>
 
 ```
 searchKey: trace_test.BenchmarkStartRegion
+tags: [private]
 ```
 
 ```Go
@@ -72,6 +87,7 @@ func BenchmarkStartRegion(b *testing.B)
 
 ```
 searchKey: trace_test.BenchmarkNewTask
+tags: [private]
 ```
 
 ```Go
@@ -82,6 +98,7 @@ func BenchmarkNewTask(b *testing.B)
 
 ```
 searchKey: trace_test.TestUserTaskRegion
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +109,7 @@ func TestUserTaskRegion(t *testing.T)
 
 ```
 searchKey: trace_test.Example
+tags: [private]
 ```
 
 ```Go
@@ -104,6 +122,7 @@ Example demonstrates the use of the trace package to trace the execution of a Go
 
 ```
 searchKey: trace_test.RunMyProgram
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +133,7 @@ func RunMyProgram()
 
 ```
 searchKey: trace_test.TestTraceSymbolize
+tags: [private]
 ```
 
 ```Go
@@ -126,6 +146,7 @@ TestTraceSymbolize tests symbolization and that events has proper stacks. In par
 
 ```
 searchKey: trace_test.skipTraceSymbolizeTestIfNecessary
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +157,7 @@ func skipTraceSymbolizeTestIfNecessary(t *testing.T)
 
 ```
 searchKey: trace_test.dumpEventStacks
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +168,7 @@ func dumpEventStacks(typ byte, events []*trace.Event) ([]byte, int)
 
 ```
 searchKey: trace_test.dumpFrames
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +179,7 @@ func dumpFrames(frames []frame) []byte
 
 ```
 searchKey: trace_test.TestEventBatch
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +192,7 @@ TestEventBatch tests Flush calls that happen during Start don't produce corrupte
 
 ```
 searchKey: trace_test.TestTraceStartStop
+tags: [private]
 ```
 
 ```Go
@@ -178,6 +203,7 @@ func TestTraceStartStop(t *testing.T)
 
 ```
 searchKey: trace_test.TestTraceDoubleStart
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +214,7 @@ func TestTraceDoubleStart(t *testing.T)
 
 ```
 searchKey: trace_test.TestTrace
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +225,7 @@ func TestTrace(t *testing.T)
 
 ```
 searchKey: trace_test.parseTrace
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +236,7 @@ func parseTrace(t *testing.T, r io.Reader) ([]*trace.Event, map[uint64]*trace.GD
 
 ```
 searchKey: trace_test.testBrokenTimestamps
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +247,7 @@ func testBrokenTimestamps(t *testing.T, data []byte)
 
 ```
 searchKey: trace_test.TestTraceStress
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +258,7 @@ func TestTraceStress(t *testing.T)
 
 ```
 searchKey: trace_test.isMemoryConstrained
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +271,7 @@ isMemoryConstrained reports whether the current machine is likely to be memory c
 
 ```
 searchKey: trace_test.TestTraceStressStartStop
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +284,7 @@ Do a bunch of various stuff (timers, GC, network, etc) in a separate goroutine. 
 
 ```
 searchKey: trace_test.TestTraceFutileWakeup
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +295,7 @@ func TestTraceFutileWakeup(t *testing.T)
 
 ```
 searchKey: trace_test.saveTrace
+tags: [private]
 ```
 
 ```Go

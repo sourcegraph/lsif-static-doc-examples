@@ -13,10 +13,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example_complexNumbers" href="#Example_complexNumbers">func Example_complexNumbers()</a>
 
 ```
 searchKey: constant_test.Example_complexNumbers
+tags: [private]
 ```
 
 ```Go
@@ -27,6 +32,7 @@ func Example_complexNumbers()
 
 ```
 searchKey: constant_test.ExampleBinaryOp
+tags: [private]
 ```
 
 ```Go
@@ -37,6 +43,7 @@ func ExampleBinaryOp()
 
 ```
 searchKey: constant_test.ExampleUnaryOp
+tags: [private]
 ```
 
 ```Go
@@ -47,6 +54,7 @@ func ExampleUnaryOp()
 
 ```
 searchKey: constant_test.ExampleCompare
+tags: [private]
 ```
 
 ```Go
@@ -57,6 +65,7 @@ func ExampleCompare()
 
 ```
 searchKey: constant_test.ExampleSign
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +76,7 @@ func ExampleSign()
 
 ```
 searchKey: constant_test.ExampleVal
+tags: [private]
 ```
 
 ```Go

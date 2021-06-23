@@ -266,7 +266,7 @@ Unicode character classes are those in unicode.Categories and unicode.Scripts.
         * [func (l1 patchList) append(p *Prog, l2 patchList) patchList](#patchList.append)
     * [type frag struct](#frag)
     * [type compiler struct](#compiler)
-        * [func (c *compiler) init()](#compiler.init)
+        * [func (c *compiler) init()](#compiler.init.compile.go)
         * [func (c *compiler) compile(re *Regexp) frag](#compiler.compile)
         * [func (c *compiler) inst(op InstOp) frag](#compiler.inst)
         * [func (c *compiler) nop() frag](#compiler.nop)
@@ -399,14 +399,11 @@ Unicode character classes are those in unicode.Categories and unicode.Scripts.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="_Op_name_0" href="#_Op_name_0">const _Op_name_0</a>
 
 ```
 searchKey: syntax._Op_name_0
+tags: [private]
 ```
 
 ```Go
@@ -417,6 +414,7 @@ const _Op_name_0 = ...
 
 ```
 searchKey: syntax._Op_name_1
+tags: [private]
 ```
 
 ```Go
@@ -427,7 +425,6 @@ const _Op_name_1 = "opPseudo"
 
 ```
 searchKey: syntax.ErrInternalError
-tags: [exported]
 ```
 
 ```Go
@@ -440,7 +437,6 @@ Unexpected error
 
 ```
 searchKey: syntax.ErrInvalidCharClass
-tags: [exported]
 ```
 
 ```Go
@@ -453,7 +449,6 @@ Parse errors
 
 ```
 searchKey: syntax.ErrInvalidCharRange
-tags: [exported]
 ```
 
 ```Go
@@ -464,7 +459,6 @@ const ErrInvalidCharRange ErrorCode = "invalid character class range"
 
 ```
 searchKey: syntax.ErrInvalidEscape
-tags: [exported]
 ```
 
 ```Go
@@ -475,7 +469,6 @@ const ErrInvalidEscape ErrorCode = "invalid escape sequence"
 
 ```
 searchKey: syntax.ErrInvalidNamedCapture
-tags: [exported]
 ```
 
 ```Go
@@ -486,7 +479,6 @@ const ErrInvalidNamedCapture ErrorCode = "invalid named capture"
 
 ```
 searchKey: syntax.ErrInvalidPerlOp
-tags: [exported]
 ```
 
 ```Go
@@ -497,7 +489,6 @@ const ErrInvalidPerlOp ErrorCode = "invalid or unsupported Perl syntax"
 
 ```
 searchKey: syntax.ErrInvalidRepeatOp
-tags: [exported]
 ```
 
 ```Go
@@ -508,7 +499,6 @@ const ErrInvalidRepeatOp ErrorCode = "invalid nested repetition operator"
 
 ```
 searchKey: syntax.ErrInvalidRepeatSize
-tags: [exported]
 ```
 
 ```Go
@@ -519,7 +509,6 @@ const ErrInvalidRepeatSize ErrorCode = "invalid repeat count"
 
 ```
 searchKey: syntax.ErrInvalidUTF8
-tags: [exported]
 ```
 
 ```Go
@@ -530,7 +519,6 @@ const ErrInvalidUTF8 ErrorCode = "invalid UTF-8"
 
 ```
 searchKey: syntax.ErrMissingBracket
-tags: [exported]
 ```
 
 ```Go
@@ -541,7 +529,6 @@ const ErrMissingBracket ErrorCode = "missing closing ]"
 
 ```
 searchKey: syntax.ErrMissingParen
-tags: [exported]
 ```
 
 ```Go
@@ -552,7 +539,6 @@ const ErrMissingParen ErrorCode = "missing closing )"
 
 ```
 searchKey: syntax.ErrMissingRepeatArgument
-tags: [exported]
 ```
 
 ```Go
@@ -563,7 +549,6 @@ const ErrMissingRepeatArgument ErrorCode = "missing argument to repetition opera
 
 ```
 searchKey: syntax.ErrTrailingBackslash
-tags: [exported]
 ```
 
 ```Go
@@ -574,7 +559,6 @@ const ErrTrailingBackslash ErrorCode = "trailing backslash at end of expression"
 
 ```
 searchKey: syntax.ErrUnexpectedParen
-tags: [exported]
 ```
 
 ```Go
@@ -585,7 +569,6 @@ const ErrUnexpectedParen ErrorCode = "unexpected )"
 
 ```
 searchKey: syntax.FoldCase
-tags: [exported]
 ```
 
 ```Go
@@ -597,7 +580,6 @@ const FoldCase Flags = 1 << iota // case-insensitive match
 
 ```
 searchKey: syntax.Literal
-tags: [exported]
 ```
 
 ```Go
@@ -609,7 +591,6 @@ const Literal // treat pattern as literal string
 
 ```
 searchKey: syntax.ClassNL
-tags: [exported]
 ```
 
 ```Go
@@ -621,7 +602,6 @@ const ClassNL // allow character classes like [^a-z] and [[:space:]] to match ne
 
 ```
 searchKey: syntax.DotNL
-tags: [exported]
 ```
 
 ```Go
@@ -633,7 +613,6 @@ const DotNL // allow . to match newline
 
 ```
 searchKey: syntax.OneLine
-tags: [exported]
 ```
 
 ```Go
@@ -645,7 +624,6 @@ const OneLine // treat ^ and $ as only matching at beginning and end of text
 
 ```
 searchKey: syntax.NonGreedy
-tags: [exported]
 ```
 
 ```Go
@@ -657,7 +635,6 @@ const NonGreedy // make repetition operators default to non-greedy
 
 ```
 searchKey: syntax.PerlX
-tags: [exported]
 ```
 
 ```Go
@@ -669,7 +646,6 @@ const PerlX // allow Perl extensions
 
 ```
 searchKey: syntax.UnicodeGroups
-tags: [exported]
 ```
 
 ```Go
@@ -681,7 +657,6 @@ const UnicodeGroups // allow \p{Han}, \P{Han} for Unicode group and negation
 
 ```
 searchKey: syntax.WasDollar
-tags: [exported]
 ```
 
 ```Go
@@ -693,7 +668,6 @@ const WasDollar // regexp OpEndText was $, not \z
 
 ```
 searchKey: syntax.Simple
-tags: [exported]
 ```
 
 ```Go
@@ -705,7 +679,6 @@ const Simple // regexp contains no counted repetition
 
 ```
 searchKey: syntax.MatchNL
-tags: [exported]
 ```
 
 ```Go
@@ -716,7 +689,6 @@ const MatchNL = ClassNL | DotNL
 
 ```
 searchKey: syntax.Perl
-tags: [exported]
 ```
 
 ```Go
@@ -728,7 +700,6 @@ const Perl = ClassNL | OneLine | PerlX | UnicodeGroups // as close to Perl as po
 
 ```
 searchKey: syntax.POSIX
-tags: [exported]
 ```
 
 ```Go
@@ -740,6 +711,7 @@ const POSIX Flags = 0 // POSIX syntax
 
 ```
 searchKey: syntax.opLeftParen
+tags: [private]
 ```
 
 ```Go
@@ -752,6 +724,7 @@ Pseudo-ops for parsing stack.
 
 ```
 searchKey: syntax.opVerticalBar
+tags: [private]
 ```
 
 ```Go
@@ -764,6 +737,7 @@ Pseudo-ops for parsing stack.
 
 ```
 searchKey: syntax.minFold
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +750,7 @@ minimum and maximum runes involved in folding. checked during test.
 
 ```
 searchKey: syntax.maxFold
+tags: [private]
 ```
 
 ```Go
@@ -786,7 +761,6 @@ const maxFold = 0x1e943
 
 ```
 searchKey: syntax.InstAlt
-tags: [exported]
 ```
 
 ```Go
@@ -797,7 +771,6 @@ const InstAlt InstOp = iota
 
 ```
 searchKey: syntax.InstAltMatch
-tags: [exported]
 ```
 
 ```Go
@@ -808,7 +781,6 @@ const InstAltMatch
 
 ```
 searchKey: syntax.InstCapture
-tags: [exported]
 ```
 
 ```Go
@@ -819,7 +791,6 @@ const InstCapture
 
 ```
 searchKey: syntax.InstEmptyWidth
-tags: [exported]
 ```
 
 ```Go
@@ -830,7 +801,6 @@ const InstEmptyWidth
 
 ```
 searchKey: syntax.InstMatch
-tags: [exported]
 ```
 
 ```Go
@@ -841,7 +811,6 @@ const InstMatch
 
 ```
 searchKey: syntax.InstFail
-tags: [exported]
 ```
 
 ```Go
@@ -852,7 +821,6 @@ const InstFail
 
 ```
 searchKey: syntax.InstNop
-tags: [exported]
 ```
 
 ```Go
@@ -863,7 +831,6 @@ const InstNop
 
 ```
 searchKey: syntax.InstRune
-tags: [exported]
 ```
 
 ```Go
@@ -874,7 +841,6 @@ const InstRune
 
 ```
 searchKey: syntax.InstRune1
-tags: [exported]
 ```
 
 ```Go
@@ -885,7 +851,6 @@ const InstRune1
 
 ```
 searchKey: syntax.InstRuneAny
-tags: [exported]
 ```
 
 ```Go
@@ -896,7 +861,6 @@ const InstRuneAny
 
 ```
 searchKey: syntax.InstRuneAnyNotNL
-tags: [exported]
 ```
 
 ```Go
@@ -907,7 +871,6 @@ const InstRuneAnyNotNL
 
 ```
 searchKey: syntax.EmptyBeginLine
-tags: [exported]
 ```
 
 ```Go
@@ -918,7 +881,6 @@ const EmptyBeginLine EmptyOp = 1 << iota
 
 ```
 searchKey: syntax.EmptyEndLine
-tags: [exported]
 ```
 
 ```Go
@@ -929,7 +891,6 @@ const EmptyEndLine
 
 ```
 searchKey: syntax.EmptyBeginText
-tags: [exported]
 ```
 
 ```Go
@@ -940,7 +901,6 @@ const EmptyBeginText
 
 ```
 searchKey: syntax.EmptyEndText
-tags: [exported]
 ```
 
 ```Go
@@ -951,7 +911,6 @@ const EmptyEndText
 
 ```
 searchKey: syntax.EmptyWordBoundary
-tags: [exported]
 ```
 
 ```Go
@@ -962,7 +921,6 @@ const EmptyWordBoundary
 
 ```
 searchKey: syntax.EmptyNoWordBoundary
-tags: [exported]
 ```
 
 ```Go
@@ -973,6 +931,7 @@ const EmptyNoWordBoundary
 
 ```
 searchKey: syntax.noMatch
+tags: [private]
 ```
 
 ```Go
@@ -983,7 +942,6 @@ const noMatch = -1
 
 ```
 searchKey: syntax.OpNoMatch
-tags: [exported]
 ```
 
 ```Go
@@ -995,7 +953,6 @@ const OpNoMatch Op = 1 + iota // matches no strings
 
 ```
 searchKey: syntax.OpEmptyMatch
-tags: [exported]
 ```
 
 ```Go
@@ -1007,7 +964,6 @@ const OpEmptyMatch // matches empty string
 
 ```
 searchKey: syntax.OpLiteral
-tags: [exported]
 ```
 
 ```Go
@@ -1019,7 +975,6 @@ const OpLiteral // matches Runes sequence
 
 ```
 searchKey: syntax.OpCharClass
-tags: [exported]
 ```
 
 ```Go
@@ -1031,7 +986,6 @@ const OpCharClass // matches Runes interpreted as range pair list
 
 ```
 searchKey: syntax.OpAnyCharNotNL
-tags: [exported]
 ```
 
 ```Go
@@ -1043,7 +997,6 @@ const OpAnyCharNotNL // matches any character except newline
 
 ```
 searchKey: syntax.OpAnyChar
-tags: [exported]
 ```
 
 ```Go
@@ -1055,7 +1008,6 @@ const OpAnyChar // matches any character
 
 ```
 searchKey: syntax.OpBeginLine
-tags: [exported]
 ```
 
 ```Go
@@ -1067,7 +1019,6 @@ const OpBeginLine // matches empty string at beginning of line
 
 ```
 searchKey: syntax.OpEndLine
-tags: [exported]
 ```
 
 ```Go
@@ -1079,7 +1030,6 @@ const OpEndLine // matches empty string at end of line
 
 ```
 searchKey: syntax.OpBeginText
-tags: [exported]
 ```
 
 ```Go
@@ -1091,7 +1041,6 @@ const OpBeginText // matches empty string at beginning of text
 
 ```
 searchKey: syntax.OpEndText
-tags: [exported]
 ```
 
 ```Go
@@ -1103,7 +1052,6 @@ const OpEndText // matches empty string at end of text
 
 ```
 searchKey: syntax.OpWordBoundary
-tags: [exported]
 ```
 
 ```Go
@@ -1115,7 +1063,6 @@ const OpWordBoundary // matches word boundary `\b`
 
 ```
 searchKey: syntax.OpNoWordBoundary
-tags: [exported]
 ```
 
 ```Go
@@ -1127,7 +1074,6 @@ const OpNoWordBoundary // matches word non-boundary `\B`
 
 ```
 searchKey: syntax.OpCapture
-tags: [exported]
 ```
 
 ```Go
@@ -1139,7 +1085,6 @@ const OpCapture // capturing subexpression with index Cap, optional name Name
 
 ```
 searchKey: syntax.OpStar
-tags: [exported]
 ```
 
 ```Go
@@ -1151,7 +1096,6 @@ const OpStar // matches Sub[0] zero or more times
 
 ```
 searchKey: syntax.OpPlus
-tags: [exported]
 ```
 
 ```Go
@@ -1163,7 +1107,6 @@ const OpPlus // matches Sub[0] one or more times
 
 ```
 searchKey: syntax.OpQuest
-tags: [exported]
 ```
 
 ```Go
@@ -1175,7 +1118,6 @@ const OpQuest // matches Sub[0] zero or one times
 
 ```
 searchKey: syntax.OpRepeat
-tags: [exported]
 ```
 
 ```Go
@@ -1187,7 +1129,6 @@ const OpRepeat // matches Sub[0] at least Min times, at most Max (Max == -1 is n
 
 ```
 searchKey: syntax.OpConcat
-tags: [exported]
 ```
 
 ```Go
@@ -1199,7 +1140,6 @@ const OpConcat // matches concatenation of Subs
 
 ```
 searchKey: syntax.OpAlternate
-tags: [exported]
 ```
 
 ```Go
@@ -1211,6 +1151,7 @@ const OpAlternate // matches alternation of Subs
 
 ```
 searchKey: syntax.opPseudo
+tags: [private]
 ```
 
 ```Go
@@ -1222,6 +1163,7 @@ const opPseudo Op = 128 // where pseudo-ops start
 
 ```
 searchKey: syntax.meta
+tags: [private]
 ```
 
 ```Go
@@ -1232,6 +1174,7 @@ const meta = `\.+*?()|[]{}^$`
 
 ```
 searchKey: syntax.testFlags
+tags: [private]
 ```
 
 ```Go
@@ -1240,14 +1183,11 @@ const testFlags = MatchNL | PerlX | UnicodeGroups
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="anyRuneNotNL" href="#anyRuneNotNL">var anyRuneNotNL</a>
 
 ```
 searchKey: syntax.anyRuneNotNL
+tags: [private]
 ```
 
 ```Go
@@ -1258,6 +1198,7 @@ var anyRuneNotNL = []rune{0, '\n' - 1, '\n' + 1, unicode.MaxRune}
 
 ```
 searchKey: syntax.anyRune
+tags: [private]
 ```
 
 ```Go
@@ -1268,6 +1209,7 @@ var anyRune = []rune{0, unicode.MaxRune}
 
 ```
 searchKey: syntax._Op_index_0
+tags: [private]
 ```
 
 ```Go
@@ -1278,6 +1220,7 @@ var _Op_index_0 = ...
 
 ```
 searchKey: syntax.anyTable
+tags: [private]
 ```
 
 ```Go
@@ -1288,6 +1231,7 @@ var anyTable = ...
 
 ```
 searchKey: syntax.code1
+tags: [private]
 ```
 
 ```Go
@@ -1300,6 +1244,7 @@ var code1 = []rune{
 
 ```
 searchKey: syntax.code2
+tags: [private]
 ```
 
 ```Go
@@ -1314,6 +1259,7 @@ var code2 = []rune{
 
 ```
 searchKey: syntax.code3
+tags: [private]
 ```
 
 ```Go
@@ -1329,6 +1275,7 @@ var code3 = []rune{
 
 ```
 searchKey: syntax.perlGroup
+tags: [private]
 ```
 
 ```Go
@@ -1339,6 +1286,7 @@ var perlGroup = ...
 
 ```
 searchKey: syntax.code4
+tags: [private]
 ```
 
 ```Go
@@ -1353,6 +1301,7 @@ var code4 = []rune{
 
 ```
 searchKey: syntax.code5
+tags: [private]
 ```
 
 ```Go
@@ -1366,6 +1315,7 @@ var code5 = []rune{
 
 ```
 searchKey: syntax.code6
+tags: [private]
 ```
 
 ```Go
@@ -1378,6 +1328,7 @@ var code6 = []rune{
 
 ```
 searchKey: syntax.code7
+tags: [private]
 ```
 
 ```Go
@@ -1391,6 +1342,7 @@ var code7 = []rune{
 
 ```
 searchKey: syntax.code8
+tags: [private]
 ```
 
 ```Go
@@ -1404,6 +1356,7 @@ var code8 = []rune{
 
 ```
 searchKey: syntax.code9
+tags: [private]
 ```
 
 ```Go
@@ -1416,6 +1369,7 @@ var code9 = []rune{
 
 ```
 searchKey: syntax.code10
+tags: [private]
 ```
 
 ```Go
@@ -1428,6 +1382,7 @@ var code10 = []rune{
 
 ```
 searchKey: syntax.code11
+tags: [private]
 ```
 
 ```Go
@@ -1440,6 +1395,7 @@ var code11 = []rune{
 
 ```
 searchKey: syntax.code12
+tags: [private]
 ```
 
 ```Go
@@ -1452,6 +1408,7 @@ var code12 = []rune{
 
 ```
 searchKey: syntax.code13
+tags: [private]
 ```
 
 ```Go
@@ -1467,6 +1424,7 @@ var code13 = []rune{
 
 ```
 searchKey: syntax.code14
+tags: [private]
 ```
 
 ```Go
@@ -1480,6 +1438,7 @@ var code14 = []rune{
 
 ```
 searchKey: syntax.code15
+tags: [private]
 ```
 
 ```Go
@@ -1492,6 +1451,7 @@ var code15 = []rune{
 
 ```
 searchKey: syntax.code16
+tags: [private]
 ```
 
 ```Go
@@ -1507,6 +1467,7 @@ var code16 = []rune{
 
 ```
 searchKey: syntax.code17
+tags: [private]
 ```
 
 ```Go
@@ -1521,6 +1482,7 @@ var code17 = []rune{
 
 ```
 searchKey: syntax.posixGroup
+tags: [private]
 ```
 
 ```Go
@@ -1531,6 +1493,7 @@ var posixGroup = ...
 
 ```
 searchKey: syntax.instOpNames
+tags: [private]
 ```
 
 ```Go
@@ -1541,6 +1504,7 @@ var instOpNames = ...
 
 ```
 searchKey: syntax.parseTests
+tags: [private]
 ```
 
 ```Go
@@ -1551,6 +1515,7 @@ var parseTests = ...
 
 ```
 searchKey: syntax.foldcaseTests
+tags: [private]
 ```
 
 ```Go
@@ -1561,6 +1526,7 @@ var foldcaseTests = ...
 
 ```
 searchKey: syntax.literalTests
+tags: [private]
 ```
 
 ```Go
@@ -1573,6 +1539,7 @@ var literalTests = []parseTest{
 
 ```
 searchKey: syntax.matchnlTests
+tags: [private]
 ```
 
 ```Go
@@ -1583,6 +1550,7 @@ var matchnlTests = ...
 
 ```
 searchKey: syntax.nomatchnlTests
+tags: [private]
 ```
 
 ```Go
@@ -1593,6 +1561,7 @@ var nomatchnlTests = ...
 
 ```
 searchKey: syntax.opNames
+tags: [private]
 ```
 
 ```Go
@@ -1603,6 +1572,7 @@ var opNames = ...
 
 ```
 searchKey: syntax.invalidRegexps
+tags: [private]
 ```
 
 ```Go
@@ -1613,6 +1583,7 @@ var invalidRegexps = ...
 
 ```
 searchKey: syntax.onlyPerl
+tags: [private]
 ```
 
 ```Go
@@ -1623,6 +1594,7 @@ var onlyPerl = ...
 
 ```
 searchKey: syntax.onlyPOSIX
+tags: [private]
 ```
 
 ```Go
@@ -1640,6 +1612,7 @@ var onlyPOSIX = []string{
 
 ```
 searchKey: syntax.compileTests
+tags: [private]
 ```
 
 ```Go
@@ -1650,6 +1623,7 @@ var compileTests = ...
 
 ```
 searchKey: syntax.simplifyTests
+tags: [private]
 ```
 
 ```Go
@@ -1658,14 +1632,11 @@ var simplifyTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="patchList" href="#patchList">type patchList struct</a>
 
 ```
 searchKey: syntax.patchList
+tags: [private]
 ```
 
 ```Go
@@ -1682,6 +1653,7 @@ These aren't really pointers: they're integers, so we can reinterpret them this 
 
 ```
 searchKey: syntax.makePatchList
+tags: [private]
 ```
 
 ```Go
@@ -1692,6 +1664,7 @@ func makePatchList(n uint32) patchList
 
 ```
 searchKey: syntax.patchList.patch
+tags: [private]
 ```
 
 ```Go
@@ -1702,6 +1675,7 @@ func (l patchList) patch(p *Prog, val uint32)
 
 ```
 searchKey: syntax.patchList.append
+tags: [private]
 ```
 
 ```Go
@@ -1712,6 +1686,7 @@ func (l1 patchList) append(p *Prog, l2 patchList) patchList
 
 ```
 searchKey: syntax.frag
+tags: [private]
 ```
 
 ```Go
@@ -1728,6 +1703,7 @@ A frag represents a compiled program fragment.
 
 ```
 searchKey: syntax.compiler
+tags: [private]
 ```
 
 ```Go
@@ -1736,10 +1712,11 @@ type compiler struct {
 }
 ```
 
-#### <a id="compiler.init" href="#compiler.init">func (c *compiler) init()</a>
+#### <a id="compiler.init.compile.go" href="#compiler.init.compile.go">func (c *compiler) init()</a>
 
 ```
 searchKey: syntax.compiler.init
+tags: [private]
 ```
 
 ```Go
@@ -1750,6 +1727,7 @@ func (c *compiler) init()
 
 ```
 searchKey: syntax.compiler.compile
+tags: [private]
 ```
 
 ```Go
@@ -1760,6 +1738,7 @@ func (c *compiler) compile(re *Regexp) frag
 
 ```
 searchKey: syntax.compiler.inst
+tags: [private]
 ```
 
 ```Go
@@ -1770,6 +1749,7 @@ func (c *compiler) inst(op InstOp) frag
 
 ```
 searchKey: syntax.compiler.nop
+tags: [private]
 ```
 
 ```Go
@@ -1780,6 +1760,7 @@ func (c *compiler) nop() frag
 
 ```
 searchKey: syntax.compiler.fail
+tags: [private]
 ```
 
 ```Go
@@ -1790,6 +1771,7 @@ func (c *compiler) fail() frag
 
 ```
 searchKey: syntax.compiler.cap
+tags: [private]
 ```
 
 ```Go
@@ -1800,6 +1782,7 @@ func (c *compiler) cap(arg uint32) frag
 
 ```
 searchKey: syntax.compiler.cat
+tags: [private]
 ```
 
 ```Go
@@ -1810,6 +1793,7 @@ func (c *compiler) cat(f1, f2 frag) frag
 
 ```
 searchKey: syntax.compiler.alt
+tags: [private]
 ```
 
 ```Go
@@ -1820,6 +1804,7 @@ func (c *compiler) alt(f1, f2 frag) frag
 
 ```
 searchKey: syntax.compiler.quest
+tags: [private]
 ```
 
 ```Go
@@ -1830,6 +1815,7 @@ func (c *compiler) quest(f1 frag, nongreedy bool) frag
 
 ```
 searchKey: syntax.compiler.loop
+tags: [private]
 ```
 
 ```Go
@@ -1842,6 +1828,7 @@ loop returns the fragment for the main loop of a plus or star. For plus, it can 
 
 ```
 searchKey: syntax.compiler.star
+tags: [private]
 ```
 
 ```Go
@@ -1852,6 +1839,7 @@ func (c *compiler) star(f1 frag, nongreedy bool) frag
 
 ```
 searchKey: syntax.compiler.plus
+tags: [private]
 ```
 
 ```Go
@@ -1862,6 +1850,7 @@ func (c *compiler) plus(f1 frag, nongreedy bool) frag
 
 ```
 searchKey: syntax.compiler.empty
+tags: [private]
 ```
 
 ```Go
@@ -1872,6 +1861,7 @@ func (c *compiler) empty(op EmptyOp) frag
 
 ```
 searchKey: syntax.compiler.rune
+tags: [private]
 ```
 
 ```Go
@@ -1882,7 +1872,6 @@ func (c *compiler) rune(r []rune, flags Flags) frag
 
 ```
 searchKey: syntax.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1898,7 +1887,6 @@ An Error describes a failure to parse a regular expression and gives the offendi
 
 ```
 searchKey: syntax.Error.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1909,7 +1897,6 @@ func (e *Error) Error() string
 
 ```
 searchKey: syntax.ErrorCode
-tags: [exported]
 ```
 
 ```Go
@@ -1922,7 +1909,6 @@ An ErrorCode describes a failure to parse a regular expression.
 
 ```
 searchKey: syntax.ErrorCode.String
-tags: [exported]
 ```
 
 ```Go
@@ -1933,7 +1919,6 @@ func (e ErrorCode) String() string
 
 ```
 searchKey: syntax.Flags
-tags: [exported]
 ```
 
 ```Go
@@ -1946,6 +1931,7 @@ Flags control the behavior of the parser and record information about regexp con
 
 ```
 searchKey: syntax.parser
+tags: [private]
 ```
 
 ```Go
@@ -1963,6 +1949,7 @@ type parser struct {
 
 ```
 searchKey: syntax.parser.newRegexp
+tags: [private]
 ```
 
 ```Go
@@ -1973,6 +1960,7 @@ func (p *parser) newRegexp(op Op) *Regexp
 
 ```
 searchKey: syntax.parser.reuse
+tags: [private]
 ```
 
 ```Go
@@ -1983,6 +1971,7 @@ func (p *parser) reuse(re *Regexp)
 
 ```
 searchKey: syntax.parser.push
+tags: [private]
 ```
 
 ```Go
@@ -1995,6 +1984,7 @@ push pushes the regexp re onto the parse stack and returns the regexp.
 
 ```
 searchKey: syntax.parser.maybeConcat
+tags: [private]
 ```
 
 ```Go
@@ -2007,6 +1997,7 @@ maybeConcat implements incremental concatenation of literal runes into string no
 
 ```
 searchKey: syntax.parser.literal
+tags: [private]
 ```
 
 ```Go
@@ -2019,6 +2010,7 @@ literal pushes a literal regexp for the rune r on the stack.
 
 ```
 searchKey: syntax.parser.op
+tags: [private]
 ```
 
 ```Go
@@ -2031,6 +2023,7 @@ op pushes a regexp with the given op onto the stack and returns that regexp.
 
 ```
 searchKey: syntax.parser.repeat
+tags: [private]
 ```
 
 ```Go
@@ -2043,6 +2036,7 @@ repeat replaces the top stack element with itself repeated according to op, min,
 
 ```
 searchKey: syntax.parser.concat
+tags: [private]
 ```
 
 ```Go
@@ -2055,6 +2049,7 @@ concat replaces the top of the stack (above the topmost '|' or '(') with its con
 
 ```
 searchKey: syntax.parser.alternate
+tags: [private]
 ```
 
 ```Go
@@ -2067,6 +2062,7 @@ alternate replaces the top of the stack (above the topmost '(') with its alterna
 
 ```
 searchKey: syntax.parser.collapse
+tags: [private]
 ```
 
 ```Go
@@ -2079,6 +2075,7 @@ collapse returns the result of applying op to sub. If sub contains op nodes, the
 
 ```
 searchKey: syntax.parser.factor
+tags: [private]
 ```
 
 ```Go
@@ -2109,6 +2106,7 @@ A(B[CD]|EF)|BC[XY]
 
 ```
 searchKey: syntax.parser.leadingString
+tags: [private]
 ```
 
 ```Go
@@ -2121,6 +2119,7 @@ leadingString returns the leading literal string that re begins with. The string
 
 ```
 searchKey: syntax.parser.removeLeadingString
+tags: [private]
 ```
 
 ```Go
@@ -2133,6 +2132,7 @@ removeLeadingString removes the first n leading runes from the beginning of re. 
 
 ```
 searchKey: syntax.parser.leadingRegexp
+tags: [private]
 ```
 
 ```Go
@@ -2145,6 +2145,7 @@ leadingRegexp returns the leading regexp that re begins with. The regexp refers 
 
 ```
 searchKey: syntax.parser.removeLeadingRegexp
+tags: [private]
 ```
 
 ```Go
@@ -2157,6 +2158,7 @@ removeLeadingRegexp removes the leading regexp in re. It returns the replacement
 
 ```
 searchKey: syntax.parser.parseRepeat
+tags: [private]
 ```
 
 ```Go
@@ -2169,6 +2171,7 @@ parseRepeat parses {min} (max=min) or {min,} (max=-1) or {min,max}. If s is not 
 
 ```
 searchKey: syntax.parser.parsePerlFlags
+tags: [private]
 ```
 
 ```Go
@@ -2181,6 +2184,7 @@ parsePerlFlags parses a Perl flag setting or non-capturing group or both, like (
 
 ```
 searchKey: syntax.parser.parseInt
+tags: [private]
 ```
 
 ```Go
@@ -2193,6 +2197,7 @@ parseInt parses a decimal integer.
 
 ```
 searchKey: syntax.parser.parseVerticalBar
+tags: [private]
 ```
 
 ```Go
@@ -2205,6 +2210,7 @@ parseVerticalBar handles a | in the input.
 
 ```
 searchKey: syntax.parser.swapVerticalBar
+tags: [private]
 ```
 
 ```Go
@@ -2217,6 +2223,7 @@ If the top of the stack is an element followed by an opVerticalBar swapVerticalB
 
 ```
 searchKey: syntax.parser.parseRightParen
+tags: [private]
 ```
 
 ```Go
@@ -2229,6 +2236,7 @@ parseRightParen handles a ) in the input.
 
 ```
 searchKey: syntax.parser.parseEscape
+tags: [private]
 ```
 
 ```Go
@@ -2241,6 +2249,7 @@ parseEscape parses an escape sequence at the beginning of s and returns the rune
 
 ```
 searchKey: syntax.parser.parseClassChar
+tags: [private]
 ```
 
 ```Go
@@ -2253,6 +2262,7 @@ parseClassChar parses a character class character at the beginning of s and retu
 
 ```
 searchKey: syntax.parser.parsePerlClassEscape
+tags: [private]
 ```
 
 ```Go
@@ -2265,6 +2275,7 @@ parsePerlClassEscape parses a leading Perl character class escape like \d from t
 
 ```
 searchKey: syntax.parser.parseNamedClass
+tags: [private]
 ```
 
 ```Go
@@ -2277,6 +2288,7 @@ parseNamedClass parses a leading POSIX named character class like [:alnum:] from
 
 ```
 searchKey: syntax.parser.appendGroup
+tags: [private]
 ```
 
 ```Go
@@ -2287,6 +2299,7 @@ func (p *parser) appendGroup(r []rune, g charGroup) []rune
 
 ```
 searchKey: syntax.parser.parseUnicodeClass
+tags: [private]
 ```
 
 ```Go
@@ -2299,6 +2312,7 @@ parseUnicodeClass parses a leading Unicode character class like \p{Han} from the
 
 ```
 searchKey: syntax.parser.parseClass
+tags: [private]
 ```
 
 ```Go
@@ -2311,6 +2325,7 @@ parseClass parses a character class at the beginning of s and pushes it onto the
 
 ```
 searchKey: syntax.charGroup
+tags: [private]
 ```
 
 ```Go
@@ -2324,6 +2339,7 @@ type charGroup struct {
 
 ```
 searchKey: syntax.ranges
+tags: [private]
 ```
 
 ```Go
@@ -2338,6 +2354,7 @@ ranges implements sort.Interface on a []rune. The choice of receiver type defini
 
 ```
 searchKey: syntax.ranges.Less
+tags: [private]
 ```
 
 ```Go
@@ -2348,6 +2365,7 @@ func (ra ranges) Less(i, j int) bool
 
 ```
 searchKey: syntax.ranges.Len
+tags: [private]
 ```
 
 ```Go
@@ -2358,6 +2376,7 @@ func (ra ranges) Len() int
 
 ```
 searchKey: syntax.ranges.Swap
+tags: [private]
 ```
 
 ```Go
@@ -2368,7 +2387,6 @@ func (ra ranges) Swap(i, j int)
 
 ```
 searchKey: syntax.Prog
-tags: [exported]
 ```
 
 ```Go
@@ -2385,7 +2403,6 @@ A Prog is a compiled regular expression program.
 
 ```
 searchKey: syntax.Compile
-tags: [exported]
 ```
 
 ```Go
@@ -2398,7 +2415,6 @@ Compile compiles the regexp into a program to be executed. The regexp should hav
 
 ```
 searchKey: syntax.Prog.String
-tags: [exported]
 ```
 
 ```Go
@@ -2409,6 +2425,7 @@ func (p *Prog) String() string
 
 ```
 searchKey: syntax.Prog.skipNop
+tags: [private]
 ```
 
 ```Go
@@ -2421,7 +2438,6 @@ skipNop follows any no-op or capturing instructions.
 
 ```
 searchKey: syntax.Prog.Prefix
-tags: [exported]
 ```
 
 ```Go
@@ -2434,7 +2450,6 @@ Prefix returns a literal string that all matches for the regexp must start with.
 
 ```
 searchKey: syntax.Prog.StartCond
-tags: [exported]
 ```
 
 ```Go
@@ -2447,7 +2462,6 @@ StartCond returns the leading empty-width conditions that must be true in any ma
 
 ```
 searchKey: syntax.InstOp
-tags: [exported]
 ```
 
 ```Go
@@ -2460,7 +2474,6 @@ An InstOp is an instruction opcode.
 
 ```
 searchKey: syntax.InstOp.String
-tags: [exported]
 ```
 
 ```Go
@@ -2471,7 +2484,6 @@ func (i InstOp) String() string
 
 ```
 searchKey: syntax.EmptyOp
-tags: [exported]
 ```
 
 ```Go
@@ -2484,7 +2496,6 @@ An EmptyOp specifies a kind or mixture of zero-width assertions.
 
 ```
 searchKey: syntax.EmptyOpContext
-tags: [exported]
 ```
 
 ```Go
@@ -2497,7 +2508,6 @@ EmptyOpContext returns the zero-width assertions satisfied at the position betwe
 
 ```
 searchKey: syntax.Inst
-tags: [exported]
 ```
 
 ```Go
@@ -2515,6 +2525,7 @@ An Inst is a single instruction in a regular expression program.
 
 ```
 searchKey: syntax.Inst.op
+tags: [private]
 ```
 
 ```Go
@@ -2527,7 +2538,6 @@ op returns i.Op but merges all the Rune special cases into InstRune
 
 ```
 searchKey: syntax.Inst.MatchRune
-tags: [exported]
 ```
 
 ```Go
@@ -2540,7 +2550,6 @@ MatchRune reports whether the instruction matches (and consumes) r. It should on
 
 ```
 searchKey: syntax.Inst.MatchRunePos
-tags: [exported]
 ```
 
 ```Go
@@ -2553,7 +2562,6 @@ MatchRunePos checks whether the instruction matches (and consumes) r. If so, Mat
 
 ```
 searchKey: syntax.Inst.MatchEmptyWidth
-tags: [exported]
 ```
 
 ```Go
@@ -2566,7 +2574,6 @@ MatchEmptyWidth reports whether the instruction matches an empty string between 
 
 ```
 searchKey: syntax.Inst.String
-tags: [exported]
 ```
 
 ```Go
@@ -2577,7 +2584,6 @@ func (i *Inst) String() string
 
 ```
 searchKey: syntax.Regexp
-tags: [exported]
 ```
 
 ```Go
@@ -2600,6 +2606,7 @@ A Regexp is a node in a regular expression syntax tree.
 
 ```
 searchKey: syntax.literalRegexp
+tags: [private]
 ```
 
 ```Go
@@ -2610,7 +2617,6 @@ func literalRegexp(s string, flags Flags) *Regexp
 
 ```
 searchKey: syntax.Parse
-tags: [exported]
 ```
 
 ```Go
@@ -2623,6 +2629,7 @@ Parse parses a regular expression string s, controlled by the specified Flags, a
 
 ```
 searchKey: syntax.simplify1
+tags: [private]
 ```
 
 ```Go
@@ -2643,7 +2650,6 @@ simplify1 is factored out of Simplify because the implementation for other opera
 
 ```
 searchKey: syntax.Regexp.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -2656,7 +2662,6 @@ Equal reports whether x and y have identical structure.
 
 ```
 searchKey: syntax.Regexp.String
-tags: [exported]
 ```
 
 ```Go
@@ -2667,7 +2672,6 @@ func (re *Regexp) String() string
 
 ```
 searchKey: syntax.Regexp.MaxCap
-tags: [exported]
 ```
 
 ```Go
@@ -2680,7 +2684,6 @@ MaxCap walks the regexp to find the maximum capture index.
 
 ```
 searchKey: syntax.Regexp.CapNames
-tags: [exported]
 ```
 
 ```Go
@@ -2693,6 +2696,7 @@ CapNames walks the regexp to find the names of capturing groups.
 
 ```
 searchKey: syntax.Regexp.capNames
+tags: [private]
 ```
 
 ```Go
@@ -2703,7 +2707,6 @@ func (re *Regexp) capNames(names []string)
 
 ```
 searchKey: syntax.Regexp.Simplify
-tags: [exported]
 ```
 
 ```Go
@@ -2716,7 +2719,6 @@ Simplify returns a regexp equivalent to re but without counted repetitions and w
 
 ```
 searchKey: syntax.Op
-tags: [exported]
 ```
 
 ```Go
@@ -2729,7 +2731,6 @@ An Op is a single regular expression operator.
 
 ```
 searchKey: syntax.Op.String
-tags: [exported]
 ```
 
 ```Go
@@ -2740,6 +2741,7 @@ func (i Op) String() string
 
 ```
 searchKey: syntax.parseTest
+tags: [private]
 ```
 
 ```Go
@@ -2751,14 +2753,11 @@ type parseTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="minFoldRune" href="#minFoldRune">func minFoldRune(r rune) rune</a>
 
 ```
 searchKey: syntax.minFoldRune
+tags: [private]
 ```
 
 ```Go
@@ -2771,6 +2770,7 @@ minFoldRune returns the minimum rune fold-equivalent to r.
 
 ```
 searchKey: syntax.repeatIsValid
+tags: [private]
 ```
 
 ```Go
@@ -2783,6 +2783,7 @@ repeatIsValid reports whether the repetition re is valid. Valid means that the c
 
 ```
 searchKey: syntax.cleanAlt
+tags: [private]
 ```
 
 ```Go
@@ -2795,6 +2796,7 @@ cleanAlt cleans re for eventual inclusion in an alternation.
 
 ```
 searchKey: syntax.isValidCaptureName
+tags: [private]
 ```
 
 ```Go
@@ -2807,6 +2809,7 @@ isValidCaptureName reports whether name is a valid capture name: [A-Za-z0-9_]+. 
 
 ```
 searchKey: syntax.isCharClass
+tags: [private]
 ```
 
 ```Go
@@ -2819,6 +2822,7 @@ can this be represented as a character class? single-rune literal string, char c
 
 ```
 searchKey: syntax.matchRune
+tags: [private]
 ```
 
 ```Go
@@ -2831,6 +2835,7 @@ does re match r?
 
 ```
 searchKey: syntax.mergeCharClass
+tags: [private]
 ```
 
 ```Go
@@ -2843,6 +2848,7 @@ mergeCharClass makes dst = dst|src. The caller must ensure that dst.Op >= src.Op
 
 ```
 searchKey: syntax.unicodeTable
+tags: [private]
 ```
 
 ```Go
@@ -2855,6 +2861,7 @@ unicodeTable returns the unicode.RangeTable identified by name and the table of 
 
 ```
 searchKey: syntax.cleanClass
+tags: [private]
 ```
 
 ```Go
@@ -2867,6 +2874,7 @@ cleanClass sorts the ranges (pairs of elements of r), merges them, and eliminate
 
 ```
 searchKey: syntax.appendLiteral
+tags: [private]
 ```
 
 ```Go
@@ -2879,6 +2887,7 @@ appendLiteral returns the result of appending the literal x to the class r.
 
 ```
 searchKey: syntax.appendRange
+tags: [private]
 ```
 
 ```Go
@@ -2891,6 +2900,7 @@ appendRange returns the result of appending the range lo-hi to the class r.
 
 ```
 searchKey: syntax.appendFoldedRange
+tags: [private]
 ```
 
 ```Go
@@ -2903,6 +2913,7 @@ appendFoldedRange returns the result of appending the range lo-hi and its case f
 
 ```
 searchKey: syntax.appendClass
+tags: [private]
 ```
 
 ```Go
@@ -2915,6 +2926,7 @@ appendClass returns the result of appending the class x to the class r. It assum
 
 ```
 searchKey: syntax.appendFoldedClass
+tags: [private]
 ```
 
 ```Go
@@ -2927,6 +2939,7 @@ appendFolded returns the result of appending the case folding of the class x to 
 
 ```
 searchKey: syntax.appendNegatedClass
+tags: [private]
 ```
 
 ```Go
@@ -2939,6 +2952,7 @@ appendNegatedClass returns the result of appending the negation of the class x t
 
 ```
 searchKey: syntax.appendTable
+tags: [private]
 ```
 
 ```Go
@@ -2951,6 +2965,7 @@ appendTable returns the result of appending x to the class r.
 
 ```
 searchKey: syntax.appendNegatedTable
+tags: [private]
 ```
 
 ```Go
@@ -2963,6 +2978,7 @@ appendNegatedTable returns the result of appending the negation of x to the clas
 
 ```
 searchKey: syntax.negateClass
+tags: [private]
 ```
 
 ```Go
@@ -2975,6 +2991,7 @@ negateClass overwrites r and returns r's negation. It assumes the class r is alr
 
 ```
 searchKey: syntax.checkUTF8
+tags: [private]
 ```
 
 ```Go
@@ -2985,6 +3002,7 @@ func checkUTF8(s string) error
 
 ```
 searchKey: syntax.nextRune
+tags: [private]
 ```
 
 ```Go
@@ -2995,6 +3013,7 @@ func nextRune(s string) (c rune, t string, err error)
 
 ```
 searchKey: syntax.isalnum
+tags: [private]
 ```
 
 ```Go
@@ -3005,6 +3024,7 @@ func isalnum(c rune) bool
 
 ```
 searchKey: syntax.unhex
+tags: [private]
 ```
 
 ```Go
@@ -3015,7 +3035,6 @@ func unhex(c rune) rune
 
 ```
 searchKey: syntax.IsWordChar
-tags: [exported]
 ```
 
 ```Go
@@ -3028,6 +3047,7 @@ IsWordChar reports whether r is consider a `word character' during the evaluatio
 
 ```
 searchKey: syntax.bw
+tags: [private]
 ```
 
 ```Go
@@ -3038,6 +3058,7 @@ func bw(b *strings.Builder, args ...string)
 
 ```
 searchKey: syntax.dumpProg
+tags: [private]
 ```
 
 ```Go
@@ -3048,6 +3069,7 @@ func dumpProg(b *strings.Builder, p *Prog)
 
 ```
 searchKey: syntax.u32
+tags: [private]
 ```
 
 ```Go
@@ -3058,6 +3080,7 @@ func u32(i uint32) string
 
 ```
 searchKey: syntax.dumpInst
+tags: [private]
 ```
 
 ```Go
@@ -3068,6 +3091,7 @@ func dumpInst(b *strings.Builder, i *Inst)
 
 ```
 searchKey: syntax.writeRegexp
+tags: [private]
 ```
 
 ```Go
@@ -3080,6 +3104,7 @@ writeRegexp writes the Perl syntax for the regular expression re to b.
 
 ```
 searchKey: syntax.escape
+tags: [private]
 ```
 
 ```Go
@@ -3090,6 +3115,7 @@ func escape(b *strings.Builder, r rune, force bool)
 
 ```
 searchKey: syntax.TestParseSimple
+tags: [private]
 ```
 
 ```Go
@@ -3100,6 +3126,7 @@ func TestParseSimple(t *testing.T)
 
 ```
 searchKey: syntax.TestParseFoldCase
+tags: [private]
 ```
 
 ```Go
@@ -3110,6 +3137,7 @@ func TestParseFoldCase(t *testing.T)
 
 ```
 searchKey: syntax.TestParseLiteral
+tags: [private]
 ```
 
 ```Go
@@ -3120,6 +3148,7 @@ func TestParseLiteral(t *testing.T)
 
 ```
 searchKey: syntax.TestParseMatchNL
+tags: [private]
 ```
 
 ```Go
@@ -3130,6 +3159,7 @@ func TestParseMatchNL(t *testing.T)
 
 ```
 searchKey: syntax.TestParseNoMatchNL
+tags: [private]
 ```
 
 ```Go
@@ -3140,6 +3170,7 @@ func TestParseNoMatchNL(t *testing.T)
 
 ```
 searchKey: syntax.testParseDump
+tags: [private]
 ```
 
 ```Go
@@ -3152,6 +3183,7 @@ Test Parse -> Dump.
 
 ```
 searchKey: syntax.dump
+tags: [private]
 ```
 
 ```Go
@@ -3164,6 +3196,7 @@ dump prints a string representation of the regexp showing the structure explicit
 
 ```
 searchKey: syntax.dumpRegexp
+tags: [private]
 ```
 
 ```Go
@@ -3176,6 +3209,7 @@ dumpRegexp writes an encoding of the syntax tree for the regexp re to b. It is u
 
 ```
 searchKey: syntax.mkCharClass
+tags: [private]
 ```
 
 ```Go
@@ -3186,6 +3220,7 @@ func mkCharClass(f func(rune) bool) string
 
 ```
 searchKey: syntax.isUpperFold
+tags: [private]
 ```
 
 ```Go
@@ -3196,6 +3231,7 @@ func isUpperFold(r rune) bool
 
 ```
 searchKey: syntax.TestFoldConstants
+tags: [private]
 ```
 
 ```Go
@@ -3206,6 +3242,7 @@ func TestFoldConstants(t *testing.T)
 
 ```
 searchKey: syntax.TestAppendRangeCollapse
+tags: [private]
 ```
 
 ```Go
@@ -3216,6 +3253,7 @@ func TestAppendRangeCollapse(t *testing.T)
 
 ```
 searchKey: syntax.TestParseInvalidRegexps
+tags: [private]
 ```
 
 ```Go
@@ -3226,6 +3264,7 @@ func TestParseInvalidRegexps(t *testing.T)
 
 ```
 searchKey: syntax.TestToStringEquivalentParse
+tags: [private]
 ```
 
 ```Go
@@ -3236,6 +3275,7 @@ func TestToStringEquivalentParse(t *testing.T)
 
 ```
 searchKey: syntax.TestCompile
+tags: [private]
 ```
 
 ```Go
@@ -3246,6 +3286,7 @@ func TestCompile(t *testing.T)
 
 ```
 searchKey: syntax.BenchmarkEmptyOpContext
+tags: [private]
 ```
 
 ```Go
@@ -3256,6 +3297,7 @@ func BenchmarkEmptyOpContext(b *testing.B)
 
 ```
 searchKey: syntax.TestSimplify
+tags: [private]
 ```
 
 ```Go

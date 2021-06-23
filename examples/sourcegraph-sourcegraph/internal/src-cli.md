@@ -18,11 +18,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MinimumVersion" href="#MinimumVersion">const MinimumVersion</a>
 
 ```
 searchKey: srccli.MinimumVersion
-tags: [exported]
 ```
 
 ```Go
@@ -37,6 +40,7 @@ At the time of a Sourcegraph release, this is always the latest src-cli version.
 
 ```
 searchKey: srccli.githubAPIReleasesEndpoint
+tags: [private]
 ```
 
 ```Go
@@ -45,10 +49,15 @@ const githubAPIReleasesEndpoint = "https://api.github.com/repos/sourcegraph/src-
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="releaseMeta" href="#releaseMeta">type releaseMeta struct</a>
 
 ```
 searchKey: srccli.releaseMeta
+tags: [private]
 ```
 
 ```Go
@@ -61,11 +70,14 @@ type releaseMeta struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Version" href="#Version">func Version() (string, error)</a>
 
 ```
 searchKey: srccli.Version
-tags: [exported]
 ```
 
 ```Go
@@ -78,6 +90,7 @@ Version returns the highest public version currently available via the GitHub re
 
 ```
 searchKey: srccli.highestMatchingVersion
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +103,7 @@ highestMatchingVersion returns the highest version with the same major and minor
 
 ```
 searchKey: srccli.releaseVersions
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +116,7 @@ releaseVersions requests the given URL and all subsequent pages of releases. Ret
 
 ```
 searchKey: srccli.releaseVersionsPage
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +129,7 @@ releaseVersionsPage requests the given URL and returns the non-draft, non-prerel
 
 ```
 searchKey: srccli.TestHighestMatchingVersion
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +140,7 @@ func TestHighestMatchingVersion(t *testing.T)
 
 ```
 searchKey: srccli.TestReleaseVersions
+tags: [private]
 ```
 
 ```Go

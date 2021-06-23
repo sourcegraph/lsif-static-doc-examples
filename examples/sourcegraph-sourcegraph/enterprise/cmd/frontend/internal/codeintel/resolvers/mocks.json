@@ -4,7 +4,9 @@
     "identifier": "mocks",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/codeintel/resolvers/mocks",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "MockQueryResolver",
                 "newPage": false,
                 "searchKey": "mocks.MockQueryResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "NewMockQueryResolver",
                       "newPage": false,
                       "searchKey": "mocks.NewMockQueryResolver",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "NewMockQueryResolverFrom",
                       "newPage": false,
                       "searchKey": "mocks.NewMockQueryResolverFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "MockQueryResolver.Definitions",
                       "newPage": false,
                       "searchKey": "mocks.MockQueryResolver.Definitions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,9 +122,7 @@
                       "identifier": "MockQueryResolver.Diagnostics",
                       "newPage": false,
                       "searchKey": "mocks.MockQueryResolver.Diagnostics",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -148,9 +142,7 @@
                       "identifier": "MockQueryResolver.DocumentationPage",
                       "newPage": false,
                       "searchKey": "mocks.MockQueryResolver.DocumentationPage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -170,9 +162,7 @@
                       "identifier": "MockQueryResolver.Hover",
                       "newPage": false,
                       "searchKey": "mocks.MockQueryResolver.Hover",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -192,9 +182,7 @@
                       "identifier": "MockQueryResolver.Ranges",
                       "newPage": false,
                       "searchKey": "mocks.MockQueryResolver.Ranges",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -214,9 +202,7 @@
                       "identifier": "MockQueryResolver.References",
                       "newPage": false,
                       "searchKey": "mocks.MockQueryResolver.References",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -239,9 +225,7 @@
                 "identifier": "QueryResolverDefinitionsFunc",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverDefinitionsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -259,9 +243,7 @@
                       "identifier": "QueryResolverDefinitionsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDefinitionsFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -281,9 +263,7 @@
                       "identifier": "QueryResolverDefinitionsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDefinitionsFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -303,9 +283,7 @@
                       "identifier": "QueryResolverDefinitionsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDefinitionsFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -325,9 +303,7 @@
                       "identifier": "QueryResolverDefinitionsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDefinitionsFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -347,7 +323,9 @@
                       "identifier": "QueryResolverDefinitionsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDefinitionsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -367,7 +345,9 @@
                       "identifier": "QueryResolverDefinitionsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDefinitionsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -387,9 +367,7 @@
                       "identifier": "QueryResolverDefinitionsFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDefinitionsFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -412,9 +390,7 @@
                 "identifier": "QueryResolverDefinitionsFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverDefinitionsFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -432,9 +408,7 @@
                       "identifier": "QueryResolverDefinitionsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDefinitionsFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -454,9 +428,7 @@
                       "identifier": "QueryResolverDefinitionsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDefinitionsFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -479,9 +451,7 @@
                 "identifier": "QueryResolverDiagnosticsFunc",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverDiagnosticsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -499,9 +469,7 @@
                       "identifier": "QueryResolverDiagnosticsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDiagnosticsFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -521,9 +489,7 @@
                       "identifier": "QueryResolverDiagnosticsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDiagnosticsFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -543,9 +509,7 @@
                       "identifier": "QueryResolverDiagnosticsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDiagnosticsFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -565,9 +529,7 @@
                       "identifier": "QueryResolverDiagnosticsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDiagnosticsFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -587,7 +549,9 @@
                       "identifier": "QueryResolverDiagnosticsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDiagnosticsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -607,7 +571,9 @@
                       "identifier": "QueryResolverDiagnosticsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDiagnosticsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -627,9 +593,7 @@
                       "identifier": "QueryResolverDiagnosticsFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDiagnosticsFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -652,9 +616,7 @@
                 "identifier": "QueryResolverDiagnosticsFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverDiagnosticsFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -672,9 +634,7 @@
                       "identifier": "QueryResolverDiagnosticsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDiagnosticsFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -694,9 +654,7 @@
                       "identifier": "QueryResolverDiagnosticsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDiagnosticsFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -719,9 +677,7 @@
                 "identifier": "QueryResolverDocumentationPageFunc",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverDocumentationPageFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -739,9 +695,7 @@
                       "identifier": "QueryResolverDocumentationPageFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDocumentationPageFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -761,9 +715,7 @@
                       "identifier": "QueryResolverDocumentationPageFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDocumentationPageFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -783,9 +735,7 @@
                       "identifier": "QueryResolverDocumentationPageFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDocumentationPageFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -805,9 +755,7 @@
                       "identifier": "QueryResolverDocumentationPageFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDocumentationPageFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -827,7 +775,9 @@
                       "identifier": "QueryResolverDocumentationPageFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDocumentationPageFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -847,7 +797,9 @@
                       "identifier": "QueryResolverDocumentationPageFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDocumentationPageFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -867,9 +819,7 @@
                       "identifier": "QueryResolverDocumentationPageFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDocumentationPageFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -892,9 +842,7 @@
                 "identifier": "QueryResolverDocumentationPageFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverDocumentationPageFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -912,9 +860,7 @@
                       "identifier": "QueryResolverDocumentationPageFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDocumentationPageFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -934,9 +880,7 @@
                       "identifier": "QueryResolverDocumentationPageFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverDocumentationPageFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -959,9 +903,7 @@
                 "identifier": "QueryResolverHoverFunc",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverHoverFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -979,9 +921,7 @@
                       "identifier": "QueryResolverHoverFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverHoverFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1001,9 +941,7 @@
                       "identifier": "QueryResolverHoverFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverHoverFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1023,9 +961,7 @@
                       "identifier": "QueryResolverHoverFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverHoverFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1045,9 +981,7 @@
                       "identifier": "QueryResolverHoverFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverHoverFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1067,7 +1001,9 @@
                       "identifier": "QueryResolverHoverFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverHoverFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1087,7 +1023,9 @@
                       "identifier": "QueryResolverHoverFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverHoverFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1107,9 +1045,7 @@
                       "identifier": "QueryResolverHoverFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverHoverFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1132,9 +1068,7 @@
                 "identifier": "QueryResolverHoverFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverHoverFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1152,9 +1086,7 @@
                       "identifier": "QueryResolverHoverFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverHoverFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1174,9 +1106,7 @@
                       "identifier": "QueryResolverHoverFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverHoverFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1199,9 +1129,7 @@
                 "identifier": "QueryResolverRangesFunc",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverRangesFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1219,9 +1147,7 @@
                       "identifier": "QueryResolverRangesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverRangesFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1241,9 +1167,7 @@
                       "identifier": "QueryResolverRangesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverRangesFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1263,9 +1187,7 @@
                       "identifier": "QueryResolverRangesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverRangesFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1285,9 +1207,7 @@
                       "identifier": "QueryResolverRangesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverRangesFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1307,7 +1227,9 @@
                       "identifier": "QueryResolverRangesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverRangesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1327,7 +1249,9 @@
                       "identifier": "QueryResolverRangesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverRangesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1347,9 +1271,7 @@
                       "identifier": "QueryResolverRangesFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverRangesFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1372,9 +1294,7 @@
                 "identifier": "QueryResolverRangesFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverRangesFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1392,9 +1312,7 @@
                       "identifier": "QueryResolverRangesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverRangesFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1414,9 +1332,7 @@
                       "identifier": "QueryResolverRangesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverRangesFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1439,9 +1355,7 @@
                 "identifier": "QueryResolverReferencesFunc",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverReferencesFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1459,9 +1373,7 @@
                       "identifier": "QueryResolverReferencesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverReferencesFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1481,9 +1393,7 @@
                       "identifier": "QueryResolverReferencesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverReferencesFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1503,9 +1413,7 @@
                       "identifier": "QueryResolverReferencesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverReferencesFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1525,9 +1433,7 @@
                       "identifier": "QueryResolverReferencesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverReferencesFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1547,7 +1453,9 @@
                       "identifier": "QueryResolverReferencesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverReferencesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1567,7 +1475,9 @@
                       "identifier": "QueryResolverReferencesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverReferencesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1587,9 +1497,7 @@
                       "identifier": "QueryResolverReferencesFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverReferencesFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1612,9 +1520,7 @@
                 "identifier": "QueryResolverReferencesFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.QueryResolverReferencesFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1632,9 +1538,7 @@
                       "identifier": "QueryResolverReferencesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverReferencesFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1654,9 +1558,7 @@
                       "identifier": "QueryResolverReferencesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.QueryResolverReferencesFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1679,9 +1581,7 @@
                 "identifier": "MockResolver",
                 "newPage": false,
                 "searchKey": "mocks.MockResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1699,9 +1599,7 @@
                       "identifier": "NewMockResolver",
                       "newPage": false,
                       "searchKey": "mocks.NewMockResolver",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1721,9 +1619,7 @@
                       "identifier": "NewMockResolverFrom",
                       "newPage": false,
                       "searchKey": "mocks.NewMockResolverFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1743,9 +1639,7 @@
                       "identifier": "MockResolver.CommitGraph",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.CommitGraph",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1765,9 +1659,7 @@
                       "identifier": "MockResolver.DeleteIndexByID",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.DeleteIndexByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1787,9 +1679,7 @@
                       "identifier": "MockResolver.DeleteUploadByID",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.DeleteUploadByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1809,9 +1699,7 @@
                       "identifier": "MockResolver.GetIndexByID",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.GetIndexByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1831,9 +1719,7 @@
                       "identifier": "MockResolver.GetIndexesByIDs",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.GetIndexesByIDs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1853,9 +1739,7 @@
                       "identifier": "MockResolver.GetUploadByID",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.GetUploadByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1875,9 +1759,7 @@
                       "identifier": "MockResolver.GetUploadsByIDs",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.GetUploadsByIDs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1897,9 +1779,7 @@
                       "identifier": "MockResolver.IndexConfiguration",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.IndexConfiguration",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1919,9 +1799,7 @@
                       "identifier": "MockResolver.IndexConnectionResolver",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.IndexConnectionResolver",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1941,9 +1819,7 @@
                       "identifier": "MockResolver.QueryResolver",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.QueryResolver",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1963,9 +1839,7 @@
                       "identifier": "MockResolver.QueueAutoIndexJobForRepo",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.QueueAutoIndexJobForRepo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1985,9 +1859,7 @@
                       "identifier": "MockResolver.UpdateIndexConfigurationByRepositoryID",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.UpdateIndexConfigurationByRepositoryID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2007,9 +1879,7 @@
                       "identifier": "MockResolver.UploadConnectionResolver",
                       "newPage": false,
                       "searchKey": "mocks.MockResolver.UploadConnectionResolver",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2032,9 +1902,7 @@
                 "identifier": "ResolverCommitGraphFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverCommitGraphFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2052,9 +1920,7 @@
                       "identifier": "ResolverCommitGraphFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverCommitGraphFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2074,9 +1940,7 @@
                       "identifier": "ResolverCommitGraphFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverCommitGraphFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2096,9 +1960,7 @@
                       "identifier": "ResolverCommitGraphFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverCommitGraphFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2118,9 +1980,7 @@
                       "identifier": "ResolverCommitGraphFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverCommitGraphFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2140,7 +2000,9 @@
                       "identifier": "ResolverCommitGraphFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverCommitGraphFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2160,7 +2022,9 @@
                       "identifier": "ResolverCommitGraphFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverCommitGraphFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2180,9 +2044,7 @@
                       "identifier": "ResolverCommitGraphFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverCommitGraphFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2205,9 +2067,7 @@
                 "identifier": "ResolverCommitGraphFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverCommitGraphFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2225,9 +2085,7 @@
                       "identifier": "ResolverCommitGraphFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverCommitGraphFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2247,9 +2105,7 @@
                       "identifier": "ResolverCommitGraphFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverCommitGraphFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2272,9 +2128,7 @@
                 "identifier": "ResolverDeleteIndexByIDFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverDeleteIndexByIDFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2292,9 +2146,7 @@
                       "identifier": "ResolverDeleteIndexByIDFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteIndexByIDFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2314,9 +2166,7 @@
                       "identifier": "ResolverDeleteIndexByIDFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteIndexByIDFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2336,9 +2186,7 @@
                       "identifier": "ResolverDeleteIndexByIDFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteIndexByIDFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2358,9 +2206,7 @@
                       "identifier": "ResolverDeleteIndexByIDFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteIndexByIDFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2380,7 +2226,9 @@
                       "identifier": "ResolverDeleteIndexByIDFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteIndexByIDFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2400,7 +2248,9 @@
                       "identifier": "ResolverDeleteIndexByIDFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteIndexByIDFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2420,9 +2270,7 @@
                       "identifier": "ResolverDeleteIndexByIDFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteIndexByIDFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2445,9 +2293,7 @@
                 "identifier": "ResolverDeleteIndexByIDFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverDeleteIndexByIDFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2465,9 +2311,7 @@
                       "identifier": "ResolverDeleteIndexByIDFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteIndexByIDFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2487,9 +2331,7 @@
                       "identifier": "ResolverDeleteIndexByIDFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteIndexByIDFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2512,9 +2354,7 @@
                 "identifier": "ResolverDeleteUploadByIDFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverDeleteUploadByIDFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2532,9 +2372,7 @@
                       "identifier": "ResolverDeleteUploadByIDFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteUploadByIDFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2554,9 +2392,7 @@
                       "identifier": "ResolverDeleteUploadByIDFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteUploadByIDFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2576,9 +2412,7 @@
                       "identifier": "ResolverDeleteUploadByIDFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteUploadByIDFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2598,9 +2432,7 @@
                       "identifier": "ResolverDeleteUploadByIDFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteUploadByIDFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2620,7 +2452,9 @@
                       "identifier": "ResolverDeleteUploadByIDFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteUploadByIDFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2640,7 +2474,9 @@
                       "identifier": "ResolverDeleteUploadByIDFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteUploadByIDFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2660,9 +2496,7 @@
                       "identifier": "ResolverDeleteUploadByIDFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteUploadByIDFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2685,9 +2519,7 @@
                 "identifier": "ResolverDeleteUploadByIDFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverDeleteUploadByIDFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2705,9 +2537,7 @@
                       "identifier": "ResolverDeleteUploadByIDFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteUploadByIDFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2727,9 +2557,7 @@
                       "identifier": "ResolverDeleteUploadByIDFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverDeleteUploadByIDFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2752,9 +2580,7 @@
                 "identifier": "ResolverGetIndexByIDFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverGetIndexByIDFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2772,9 +2598,7 @@
                       "identifier": "ResolverGetIndexByIDFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexByIDFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2794,9 +2618,7 @@
                       "identifier": "ResolverGetIndexByIDFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexByIDFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2816,9 +2638,7 @@
                       "identifier": "ResolverGetIndexByIDFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexByIDFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2838,9 +2658,7 @@
                       "identifier": "ResolverGetIndexByIDFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexByIDFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2860,7 +2678,9 @@
                       "identifier": "ResolverGetIndexByIDFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexByIDFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2880,7 +2700,9 @@
                       "identifier": "ResolverGetIndexByIDFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexByIDFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2900,9 +2722,7 @@
                       "identifier": "ResolverGetIndexByIDFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexByIDFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2925,9 +2745,7 @@
                 "identifier": "ResolverGetIndexByIDFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverGetIndexByIDFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2945,9 +2763,7 @@
                       "identifier": "ResolverGetIndexByIDFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexByIDFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2967,9 +2783,7 @@
                       "identifier": "ResolverGetIndexByIDFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexByIDFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2992,9 +2806,7 @@
                 "identifier": "ResolverGetIndexesByIDsFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverGetIndexesByIDsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3012,9 +2824,7 @@
                       "identifier": "ResolverGetIndexesByIDsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexesByIDsFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3034,9 +2844,7 @@
                       "identifier": "ResolverGetIndexesByIDsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexesByIDsFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3056,9 +2864,7 @@
                       "identifier": "ResolverGetIndexesByIDsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexesByIDsFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3078,9 +2884,7 @@
                       "identifier": "ResolverGetIndexesByIDsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexesByIDsFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3100,7 +2904,9 @@
                       "identifier": "ResolverGetIndexesByIDsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexesByIDsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3120,7 +2926,9 @@
                       "identifier": "ResolverGetIndexesByIDsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexesByIDsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3140,9 +2948,7 @@
                       "identifier": "ResolverGetIndexesByIDsFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexesByIDsFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3165,9 +2971,7 @@
                 "identifier": "ResolverGetIndexesByIDsFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverGetIndexesByIDsFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3185,9 +2989,7 @@
                       "identifier": "ResolverGetIndexesByIDsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexesByIDsFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3207,9 +3009,7 @@
                       "identifier": "ResolverGetIndexesByIDsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetIndexesByIDsFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3232,9 +3032,7 @@
                 "identifier": "ResolverGetUploadByIDFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverGetUploadByIDFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3252,9 +3050,7 @@
                       "identifier": "ResolverGetUploadByIDFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadByIDFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3274,9 +3070,7 @@
                       "identifier": "ResolverGetUploadByIDFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadByIDFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3296,9 +3090,7 @@
                       "identifier": "ResolverGetUploadByIDFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadByIDFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3318,9 +3110,7 @@
                       "identifier": "ResolverGetUploadByIDFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadByIDFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3340,7 +3130,9 @@
                       "identifier": "ResolverGetUploadByIDFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadByIDFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3360,7 +3152,9 @@
                       "identifier": "ResolverGetUploadByIDFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadByIDFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3380,9 +3174,7 @@
                       "identifier": "ResolverGetUploadByIDFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadByIDFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3405,9 +3197,7 @@
                 "identifier": "ResolverGetUploadByIDFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverGetUploadByIDFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3425,9 +3215,7 @@
                       "identifier": "ResolverGetUploadByIDFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadByIDFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3447,9 +3235,7 @@
                       "identifier": "ResolverGetUploadByIDFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadByIDFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3472,9 +3258,7 @@
                 "identifier": "ResolverGetUploadsByIDsFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverGetUploadsByIDsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3492,9 +3276,7 @@
                       "identifier": "ResolverGetUploadsByIDsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadsByIDsFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3514,9 +3296,7 @@
                       "identifier": "ResolverGetUploadsByIDsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadsByIDsFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3536,9 +3316,7 @@
                       "identifier": "ResolverGetUploadsByIDsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadsByIDsFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3558,9 +3336,7 @@
                       "identifier": "ResolverGetUploadsByIDsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadsByIDsFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3580,7 +3356,9 @@
                       "identifier": "ResolverGetUploadsByIDsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadsByIDsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3600,7 +3378,9 @@
                       "identifier": "ResolverGetUploadsByIDsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadsByIDsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3620,9 +3400,7 @@
                       "identifier": "ResolverGetUploadsByIDsFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadsByIDsFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3645,9 +3423,7 @@
                 "identifier": "ResolverGetUploadsByIDsFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverGetUploadsByIDsFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3665,9 +3441,7 @@
                       "identifier": "ResolverGetUploadsByIDsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadsByIDsFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3687,9 +3461,7 @@
                       "identifier": "ResolverGetUploadsByIDsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverGetUploadsByIDsFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3712,9 +3484,7 @@
                 "identifier": "ResolverIndexConfigurationFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverIndexConfigurationFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3732,9 +3502,7 @@
                       "identifier": "ResolverIndexConfigurationFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConfigurationFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3754,9 +3522,7 @@
                       "identifier": "ResolverIndexConfigurationFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConfigurationFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3776,9 +3542,7 @@
                       "identifier": "ResolverIndexConfigurationFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConfigurationFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3798,9 +3562,7 @@
                       "identifier": "ResolverIndexConfigurationFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConfigurationFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3820,7 +3582,9 @@
                       "identifier": "ResolverIndexConfigurationFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConfigurationFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3840,7 +3604,9 @@
                       "identifier": "ResolverIndexConfigurationFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConfigurationFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3860,9 +3626,7 @@
                       "identifier": "ResolverIndexConfigurationFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConfigurationFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3885,9 +3649,7 @@
                 "identifier": "ResolverIndexConfigurationFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverIndexConfigurationFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3905,9 +3667,7 @@
                       "identifier": "ResolverIndexConfigurationFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConfigurationFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3927,9 +3687,7 @@
                       "identifier": "ResolverIndexConfigurationFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConfigurationFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3952,9 +3710,7 @@
                 "identifier": "ResolverIndexConnectionResolverFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverIndexConnectionResolverFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3972,9 +3728,7 @@
                       "identifier": "ResolverIndexConnectionResolverFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConnectionResolverFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3994,9 +3748,7 @@
                       "identifier": "ResolverIndexConnectionResolverFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConnectionResolverFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4016,9 +3768,7 @@
                       "identifier": "ResolverIndexConnectionResolverFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConnectionResolverFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4038,9 +3788,7 @@
                       "identifier": "ResolverIndexConnectionResolverFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConnectionResolverFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4060,7 +3808,9 @@
                       "identifier": "ResolverIndexConnectionResolverFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConnectionResolverFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4080,7 +3830,9 @@
                       "identifier": "ResolverIndexConnectionResolverFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConnectionResolverFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4100,9 +3852,7 @@
                       "identifier": "ResolverIndexConnectionResolverFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConnectionResolverFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4125,9 +3875,7 @@
                 "identifier": "ResolverIndexConnectionResolverFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverIndexConnectionResolverFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4145,9 +3893,7 @@
                       "identifier": "ResolverIndexConnectionResolverFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConnectionResolverFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4167,9 +3913,7 @@
                       "identifier": "ResolverIndexConnectionResolverFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverIndexConnectionResolverFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4192,9 +3936,7 @@
                 "identifier": "ResolverQueryResolverFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverQueryResolverFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4212,9 +3954,7 @@
                       "identifier": "ResolverQueryResolverFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueryResolverFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4234,9 +3974,7 @@
                       "identifier": "ResolverQueryResolverFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueryResolverFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4256,9 +3994,7 @@
                       "identifier": "ResolverQueryResolverFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueryResolverFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4278,9 +4014,7 @@
                       "identifier": "ResolverQueryResolverFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueryResolverFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4300,7 +4034,9 @@
                       "identifier": "ResolverQueryResolverFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueryResolverFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4320,7 +4056,9 @@
                       "identifier": "ResolverQueryResolverFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueryResolverFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4340,9 +4078,7 @@
                       "identifier": "ResolverQueryResolverFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueryResolverFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4365,9 +4101,7 @@
                 "identifier": "ResolverQueryResolverFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverQueryResolverFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4385,9 +4119,7 @@
                       "identifier": "ResolverQueryResolverFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueryResolverFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4407,9 +4139,7 @@
                       "identifier": "ResolverQueryResolverFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueryResolverFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4432,9 +4162,7 @@
                 "identifier": "ResolverQueueAutoIndexJobForRepoFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4452,9 +4180,7 @@
                       "identifier": "ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4474,9 +4200,7 @@
                       "identifier": "ResolverQueueAutoIndexJobForRepoFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4496,9 +4220,7 @@
                       "identifier": "ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4518,9 +4240,7 @@
                       "identifier": "ResolverQueueAutoIndexJobForRepoFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4540,7 +4260,9 @@
                       "identifier": "ResolverQueueAutoIndexJobForRepoFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4560,7 +4282,9 @@
                       "identifier": "ResolverQueueAutoIndexJobForRepoFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4580,9 +4304,7 @@
                       "identifier": "ResolverQueueAutoIndexJobForRepoFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4605,9 +4327,7 @@
                 "identifier": "ResolverQueueAutoIndexJobForRepoFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4625,9 +4345,7 @@
                       "identifier": "ResolverQueueAutoIndexJobForRepoFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4647,9 +4365,7 @@
                       "identifier": "ResolverQueueAutoIndexJobForRepoFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverQueueAutoIndexJobForRepoFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4672,9 +4388,7 @@
                 "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4692,9 +4406,7 @@
                       "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4714,9 +4426,7 @@
                       "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4736,9 +4446,7 @@
                       "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4758,9 +4466,7 @@
                       "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4780,7 +4486,9 @@
                       "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4800,7 +4508,9 @@
                       "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4820,9 +4530,7 @@
                       "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4845,9 +4553,7 @@
                 "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4865,9 +4571,7 @@
                       "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4887,9 +4591,7 @@
                       "identifier": "ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4912,9 +4614,7 @@
                 "identifier": "ResolverUploadConnectionResolverFunc",
                 "newPage": false,
                 "searchKey": "mocks.ResolverUploadConnectionResolverFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4932,9 +4632,7 @@
                       "identifier": "ResolverUploadConnectionResolverFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUploadConnectionResolverFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4954,9 +4652,7 @@
                       "identifier": "ResolverUploadConnectionResolverFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUploadConnectionResolverFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4976,9 +4672,7 @@
                       "identifier": "ResolverUploadConnectionResolverFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUploadConnectionResolverFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4998,9 +4692,7 @@
                       "identifier": "ResolverUploadConnectionResolverFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUploadConnectionResolverFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5020,7 +4712,9 @@
                       "identifier": "ResolverUploadConnectionResolverFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUploadConnectionResolverFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5040,7 +4734,9 @@
                       "identifier": "ResolverUploadConnectionResolverFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUploadConnectionResolverFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5060,9 +4756,7 @@
                       "identifier": "ResolverUploadConnectionResolverFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUploadConnectionResolverFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5085,9 +4779,7 @@
                 "identifier": "ResolverUploadConnectionResolverFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.ResolverUploadConnectionResolverFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5105,9 +4797,7 @@
                       "identifier": "ResolverUploadConnectionResolverFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUploadConnectionResolverFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5127,9 +4817,7 @@
                       "identifier": "ResolverUploadConnectionResolverFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.ResolverUploadConnectionResolverFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",

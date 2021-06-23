@@ -56,14 +56,11 @@ Package builtin provides documentation for Go's predeclared identifiers. The ite
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="true" href="#true">const true</a>
 
 ```
 searchKey: builtin.true
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +74,7 @@ true and false are the two untyped boolean values.
 
 ```
 searchKey: builtin.false
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +88,7 @@ true and false are the two untyped boolean values.
 
 ```
 searchKey: builtin.iota
+tags: [private]
 ```
 
 ```Go
@@ -101,14 +100,11 @@ iota is a predeclared identifier representing the untyped integer ordinal number
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="nil" href="#nil">var nil</a>
 
 ```
 searchKey: builtin.nil
+tags: [private]
 ```
 
 ```Go
@@ -120,14 +116,11 @@ nil is a predeclared identifier representing the zero value for a pointer, chann
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="bool" href="#bool">type bool builtin.bool</a>
 
 ```
 searchKey: builtin.bool
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +133,7 @@ bool is the set of boolean values, true and false.
 
 ```
 searchKey: builtin.uint8
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +146,7 @@ uint8 is the set of all unsigned 8-bit integers. Range: 0 through 255.
 
 ```
 searchKey: builtin.uint16
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +159,7 @@ uint16 is the set of all unsigned 16-bit integers. Range: 0 through 65535.
 
 ```
 searchKey: builtin.uint32
+tags: [private]
 ```
 
 ```Go
@@ -176,6 +172,7 @@ uint32 is the set of all unsigned 32-bit integers. Range: 0 through 4294967295.
 
 ```
 searchKey: builtin.uint64
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +185,7 @@ uint64 is the set of all unsigned 64-bit integers. Range: 0 through 184467440737
 
 ```
 searchKey: builtin.int8
+tags: [private]
 ```
 
 ```Go
@@ -200,6 +198,7 @@ int8 is the set of all signed 8-bit integers. Range: -128 through 127.
 
 ```
 searchKey: builtin.int16
+tags: [private]
 ```
 
 ```Go
@@ -212,6 +211,7 @@ int16 is the set of all signed 16-bit integers. Range: -32768 through 32767.
 
 ```
 searchKey: builtin.int32
+tags: [private]
 ```
 
 ```Go
@@ -224,6 +224,7 @@ int32 is the set of all signed 32-bit integers. Range: -2147483648 through 21474
 
 ```
 searchKey: builtin.int64
+tags: [private]
 ```
 
 ```Go
@@ -236,6 +237,7 @@ int64 is the set of all signed 64-bit integers. Range: -9223372036854775808 thro
 
 ```
 searchKey: builtin.float32
+tags: [private]
 ```
 
 ```Go
@@ -248,6 +250,7 @@ float32 is the set of all IEEE-754 32-bit floating-point numbers.
 
 ```
 searchKey: builtin.float64
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +263,7 @@ float64 is the set of all IEEE-754 64-bit floating-point numbers.
 
 ```
 searchKey: builtin.complex64
+tags: [private]
 ```
 
 ```Go
@@ -272,6 +276,7 @@ complex64 is the set of all complex numbers with float32 real and imaginary part
 
 ```
 searchKey: builtin.complex128
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +289,7 @@ complex128 is the set of all complex numbers with float64 real and imaginary par
 
 ```
 searchKey: builtin.string
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +302,7 @@ string is the set of all strings of 8-bit bytes, conventionally but not necessar
 
 ```
 searchKey: builtin.int
+tags: [private]
 ```
 
 ```Go
@@ -308,6 +315,7 @@ int is a signed integer type that is at least 32 bits in size. It is a distinct 
 
 ```
 searchKey: builtin.copy
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +328,7 @@ The copy built-in function copies elements from a source slice into a destinatio
 
 ```
 searchKey: builtin.len
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +352,7 @@ For some arguments, such as a string literal or a simple array expression, the r
 
 ```
 searchKey: builtin.cap
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +376,7 @@ For some arguments, such as a simple array expression, the result can be a const
 
 ```
 searchKey: builtin.uint
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +389,7 @@ uint is an unsigned integer type that is at least 32 bits in size. It is a disti
 
 ```
 searchKey: builtin.uintptr
+tags: [private]
 ```
 
 ```Go
@@ -390,6 +402,7 @@ uintptr is an integer type that is large enough to hold the bit pattern of any p
 
 ```
 searchKey: builtin.byte
+tags: [private]
 ```
 
 ```Go
@@ -402,6 +415,7 @@ byte is an alias for uint8 and is equivalent to uint8 in all ways. It is used, b
 
 ```
 searchKey: builtin.rune
+tags: [private]
 ```
 
 ```Go
@@ -414,7 +428,6 @@ rune is an alias for int32 and is equivalent to int32 in all ways. It is used, b
 
 ```
 searchKey: builtin.Type
-tags: [exported]
 ```
 
 ```Go
@@ -427,6 +440,7 @@ Type is here for the purposes of documentation only. It is a stand-in for any Go
 
 ```
 searchKey: builtin.make
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +468,7 @@ unbuffered.
 
 ```
 searchKey: builtin.new
+tags: [private]
 ```
 
 ```Go
@@ -466,7 +481,6 @@ The new built-in function allocates memory. The first argument is a type, not a 
 
 ```
 searchKey: builtin.Type1
-tags: [exported]
 ```
 
 ```Go
@@ -479,7 +493,6 @@ Type1 is here for the purposes of documentation only. It is a stand-in for any G
 
 ```
 searchKey: builtin.IntegerType
-tags: [exported]
 ```
 
 ```Go
@@ -492,7 +505,6 @@ IntegerType is here for the purposes of documentation only. It is a stand-in for
 
 ```
 searchKey: builtin.FloatType
-tags: [exported]
 ```
 
 ```Go
@@ -505,6 +517,7 @@ FloatType is here for the purposes of documentation only. It is a stand-in for e
 
 ```
 searchKey: builtin.real
+tags: [private]
 ```
 
 ```Go
@@ -517,6 +530,7 @@ The real built-in function returns the real part of the complex number c. The re
 
 ```
 searchKey: builtin.imag
+tags: [private]
 ```
 
 ```Go
@@ -529,7 +543,6 @@ The imag built-in function returns the imaginary part of the complex number c. T
 
 ```
 searchKey: builtin.ComplexType
-tags: [exported]
 ```
 
 ```Go
@@ -542,6 +555,7 @@ ComplexType is here for the purposes of documentation only. It is a stand-in for
 
 ```
 searchKey: builtin.complex
+tags: [private]
 ```
 
 ```Go
@@ -554,6 +568,7 @@ The complex built-in function constructs a complex value from two floating-point
 
 ```
 searchKey: builtin.error
+tags: [private]
 ```
 
 ```Go
@@ -566,14 +581,11 @@ The error built-in interface type is the conventional interface for representing
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="append" href="#append">func append(slice []Type, elems ...Type) []Type</a>
 
 ```
 searchKey: builtin.append
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +609,7 @@ slice = append([]byte("hello "), "world"...)
 
 ```
 searchKey: builtin.delete
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +622,7 @@ The delete built-in function deletes the element with the specified key (m[key])
 
 ```
 searchKey: builtin.close
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +641,7 @@ will also set ok to false for a closed channel.
 
 ```
 searchKey: builtin.panic
+tags: [private]
 ```
 
 ```Go
@@ -639,6 +654,7 @@ The panic built-in function stops normal execution of the current goroutine. Whe
 
 ```
 searchKey: builtin.recover
+tags: [private]
 ```
 
 ```Go
@@ -651,6 +667,7 @@ The recover built-in function allows a program to manage behavior of a panicking
 
 ```
 searchKey: builtin.print
+tags: [private]
 ```
 
 ```Go
@@ -663,6 +680,7 @@ The print built-in function formats its arguments in an implementation-specific 
 
 ```
 searchKey: builtin.println
+tags: [private]
 ```
 
 ```Go

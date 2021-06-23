@@ -65,7 +65,7 @@ import _ "expvar"
     * [func Handler() http.Handler](#Handler)
     * [func cmdline() interface{}](#cmdline)
     * [func memstats() interface{}](#memstats)
-    * [func init()](#init)
+    * [func init()](#init.expvar.go)
     * [func RemoveAll()](#RemoveAll)
     * [func TestNil(t *testing.T)](#TestNil)
     * [func TestInt(t *testing.T)](#TestInt)
@@ -95,14 +95,11 @@ import _ "expvar"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="vars" href="#vars">var vars</a>
 
 ```
 searchKey: expvar.vars
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +113,7 @@ All published variables.
 
 ```
 searchKey: expvar.varKeysMu
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +126,7 @@ All published variables.
 
 ```
 searchKey: expvar.varKeys
+tags: [private]
 ```
 
 ```Go
@@ -139,15 +138,10 @@ All published variables.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Var" href="#Var">type Var interface</a>
 
 ```
 searchKey: expvar.Var
-tags: [exported]
 ```
 
 ```Go
@@ -165,7 +159,6 @@ Var is an abstract type for all exported variables.
 
 ```
 searchKey: expvar.Get
-tags: [exported]
 ```
 
 ```Go
@@ -178,7 +171,6 @@ Get retrieves a named exported variable. It returns nil if the name has not been
 
 ```
 searchKey: expvar.Int
-tags: [exported]
 ```
 
 ```Go
@@ -193,7 +185,6 @@ Int is a 64-bit integer variable that satisfies the Var interface.
 
 ```
 searchKey: expvar.NewInt
-tags: [exported]
 ```
 
 ```Go
@@ -204,7 +195,6 @@ func NewInt(name string) *Int
 
 ```
 searchKey: expvar.Int.Value
-tags: [exported]
 ```
 
 ```Go
@@ -215,7 +205,6 @@ func (v *Int) Value() int64
 
 ```
 searchKey: expvar.Int.String
-tags: [exported]
 ```
 
 ```Go
@@ -226,7 +215,6 @@ func (v *Int) String() string
 
 ```
 searchKey: expvar.Int.Add
-tags: [exported]
 ```
 
 ```Go
@@ -237,7 +225,6 @@ func (v *Int) Add(delta int64)
 
 ```
 searchKey: expvar.Int.Set
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +235,6 @@ func (v *Int) Set(value int64)
 
 ```
 searchKey: expvar.Float
-tags: [exported]
 ```
 
 ```Go
@@ -263,7 +249,6 @@ Float is a 64-bit float variable that satisfies the Var interface.
 
 ```
 searchKey: expvar.NewFloat
-tags: [exported]
 ```
 
 ```Go
@@ -274,7 +259,6 @@ func NewFloat(name string) *Float
 
 ```
 searchKey: expvar.Float.Value
-tags: [exported]
 ```
 
 ```Go
@@ -285,7 +269,6 @@ func (v *Float) Value() float64
 
 ```
 searchKey: expvar.Float.String
-tags: [exported]
 ```
 
 ```Go
@@ -296,7 +279,6 @@ func (v *Float) String() string
 
 ```
 searchKey: expvar.Float.Add
-tags: [exported]
 ```
 
 ```Go
@@ -309,7 +291,6 @@ Add adds delta to v.
 
 ```
 searchKey: expvar.Float.Set
-tags: [exported]
 ```
 
 ```Go
@@ -322,7 +303,6 @@ Set sets v to value.
 
 ```
 searchKey: expvar.Map
-tags: [exported]
 ```
 
 ```Go
@@ -339,7 +319,6 @@ Map is a string-to-Var map variable that satisfies the Var interface.
 
 ```
 searchKey: expvar.NewMap
-tags: [exported]
 ```
 
 ```Go
@@ -350,7 +329,6 @@ func NewMap(name string) *Map
 
 ```
 searchKey: expvar.Map.String
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +339,6 @@ func (v *Map) String() string
 
 ```
 searchKey: expvar.Map.Init
-tags: [exported]
 ```
 
 ```Go
@@ -374,6 +351,7 @@ Init removes all keys from the map.
 
 ```
 searchKey: expvar.Map.addKey
+tags: [private]
 ```
 
 ```Go
@@ -386,7 +364,6 @@ addKey updates the sorted list of keys in v.keys.
 
 ```
 searchKey: expvar.Map.Get
-tags: [exported]
 ```
 
 ```Go
@@ -397,7 +374,6 @@ func (v *Map) Get(key string) Var
 
 ```
 searchKey: expvar.Map.Set
-tags: [exported]
 ```
 
 ```Go
@@ -408,7 +384,6 @@ func (v *Map) Set(key string, av Var)
 
 ```
 searchKey: expvar.Map.Add
-tags: [exported]
 ```
 
 ```Go
@@ -421,7 +396,6 @@ Add adds delta to the *Int value stored under the given map key.
 
 ```
 searchKey: expvar.Map.AddFloat
-tags: [exported]
 ```
 
 ```Go
@@ -434,7 +408,6 @@ AddFloat adds delta to the *Float value stored under the given map key.
 
 ```
 searchKey: expvar.Map.Delete
-tags: [exported]
 ```
 
 ```Go
@@ -447,7 +420,6 @@ Delete deletes the given key from the map.
 
 ```
 searchKey: expvar.Map.Do
-tags: [exported]
 ```
 
 ```Go
@@ -460,7 +432,6 @@ Do calls f for each entry in the map. The map is locked during the iteration, bu
 
 ```
 searchKey: expvar.KeyValue
-tags: [exported]
 ```
 
 ```Go
@@ -476,7 +447,6 @@ KeyValue represents a single entry in a Map.
 
 ```
 searchKey: expvar.String
-tags: [exported]
 ```
 
 ```Go
@@ -491,7 +461,6 @@ String is a string variable, and satisfies the Var interface.
 
 ```
 searchKey: expvar.NewString
-tags: [exported]
 ```
 
 ```Go
@@ -502,7 +471,6 @@ func NewString(name string) *String
 
 ```
 searchKey: expvar.String.Value
-tags: [exported]
 ```
 
 ```Go
@@ -513,7 +481,6 @@ func (v *String) Value() string
 
 ```
 searchKey: expvar.String.String
-tags: [exported]
 ```
 
 ```Go
@@ -526,7 +493,6 @@ String implements the Var interface. To get the unquoted string use Value.
 
 ```
 searchKey: expvar.String.Set
-tags: [exported]
 ```
 
 ```Go
@@ -537,7 +503,6 @@ func (v *String) Set(value string)
 
 ```
 searchKey: expvar.Func
-tags: [exported]
 ```
 
 ```Go
@@ -550,7 +515,6 @@ Func implements Var by calling the function and formatting the returned value us
 
 ```
 searchKey: expvar.Func.Value
-tags: [exported]
 ```
 
 ```Go
@@ -561,7 +525,6 @@ func (f Func) Value() interface{}
 
 ```
 searchKey: expvar.Func.String
-tags: [exported]
 ```
 
 ```Go
@@ -570,15 +533,10 @@ func (f Func) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Publish" href="#Publish">func Publish(name string, v Var)</a>
 
 ```
 searchKey: expvar.Publish
-tags: [exported]
 ```
 
 ```Go
@@ -591,7 +549,6 @@ Publish declares a named exported variable. This should be called from a package
 
 ```
 searchKey: expvar.Do
-tags: [exported]
 ```
 
 ```Go
@@ -604,6 +561,7 @@ Do calls f for each exported variable. The global variable map is locked during 
 
 ```
 searchKey: expvar.expvarHandler
+tags: [private]
 ```
 
 ```Go
@@ -614,7 +572,6 @@ func expvarHandler(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: expvar.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -629,6 +586,7 @@ This is only needed to install the handler in a non-standard location.
 
 ```
 searchKey: expvar.cmdline
+tags: [private]
 ```
 
 ```Go
@@ -639,16 +597,18 @@ func cmdline() interface{}
 
 ```
 searchKey: expvar.memstats
+tags: [private]
 ```
 
 ```Go
 func memstats() interface{}
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.expvar.go" href="#init.expvar.go">func init()</a>
 
 ```
 searchKey: expvar.init
+tags: [private]
 ```
 
 ```Go
@@ -659,6 +619,7 @@ func init()
 
 ```
 searchKey: expvar.RemoveAll
+tags: [private]
 ```
 
 ```Go
@@ -671,6 +632,7 @@ RemoveAll removes all exported variables. This is for tests only.
 
 ```
 searchKey: expvar.TestNil
+tags: [private]
 ```
 
 ```Go
@@ -681,6 +643,7 @@ func TestNil(t *testing.T)
 
 ```
 searchKey: expvar.TestInt
+tags: [private]
 ```
 
 ```Go
@@ -691,6 +654,7 @@ func TestInt(t *testing.T)
 
 ```
 searchKey: expvar.BenchmarkIntAdd
+tags: [private]
 ```
 
 ```Go
@@ -701,6 +665,7 @@ func BenchmarkIntAdd(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkIntSet
+tags: [private]
 ```
 
 ```Go
@@ -711,6 +676,7 @@ func BenchmarkIntSet(b *testing.B)
 
 ```
 searchKey: expvar.TestFloat
+tags: [private]
 ```
 
 ```Go
@@ -721,6 +687,7 @@ func TestFloat(t *testing.T)
 
 ```
 searchKey: expvar.BenchmarkFloatAdd
+tags: [private]
 ```
 
 ```Go
@@ -731,6 +698,7 @@ func BenchmarkFloatAdd(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkFloatSet
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +709,7 @@ func BenchmarkFloatSet(b *testing.B)
 
 ```
 searchKey: expvar.TestString
+tags: [private]
 ```
 
 ```Go
@@ -751,6 +720,7 @@ func TestString(t *testing.T)
 
 ```
 searchKey: expvar.BenchmarkStringSet
+tags: [private]
 ```
 
 ```Go
@@ -761,6 +731,7 @@ func BenchmarkStringSet(b *testing.B)
 
 ```
 searchKey: expvar.TestMapInit
+tags: [private]
 ```
 
 ```Go
@@ -771,6 +742,7 @@ func TestMapInit(t *testing.T)
 
 ```
 searchKey: expvar.TestMapDelete
+tags: [private]
 ```
 
 ```Go
@@ -781,6 +753,7 @@ func TestMapDelete(t *testing.T)
 
 ```
 searchKey: expvar.TestMapCounter
+tags: [private]
 ```
 
 ```Go
@@ -791,6 +764,7 @@ func TestMapCounter(t *testing.T)
 
 ```
 searchKey: expvar.BenchmarkMapSet
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +775,7 @@ func BenchmarkMapSet(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapSetDifferent
+tags: [private]
 ```
 
 ```Go
@@ -811,6 +786,7 @@ func BenchmarkMapSetDifferent(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapSetDifferentRandom
+tags: [private]
 ```
 
 ```Go
@@ -823,6 +799,7 @@ BenchmarkMapSetDifferentRandom simulates such a case where the concerned keys of
 
 ```
 searchKey: expvar.BenchmarkMapSetString
+tags: [private]
 ```
 
 ```Go
@@ -833,6 +810,7 @@ func BenchmarkMapSetString(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapAddSame
+tags: [private]
 ```
 
 ```Go
@@ -843,6 +821,7 @@ func BenchmarkMapAddSame(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapAddDifferent
+tags: [private]
 ```
 
 ```Go
@@ -853,6 +832,7 @@ func BenchmarkMapAddDifferent(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapAddDifferentRandom
+tags: [private]
 ```
 
 ```Go
@@ -865,6 +845,7 @@ BenchmarkMapAddDifferentRandom simulates such a case where that the concerned ke
 
 ```
 searchKey: expvar.BenchmarkMapAddSameSteadyState
+tags: [private]
 ```
 
 ```Go
@@ -875,6 +856,7 @@ func BenchmarkMapAddSameSteadyState(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapAddDifferentSteadyState
+tags: [private]
 ```
 
 ```Go
@@ -885,6 +867,7 @@ func BenchmarkMapAddDifferentSteadyState(b *testing.B)
 
 ```
 searchKey: expvar.TestFunc
+tags: [private]
 ```
 
 ```Go
@@ -895,6 +878,7 @@ func TestFunc(t *testing.T)
 
 ```
 searchKey: expvar.TestHandler
+tags: [private]
 ```
 
 ```Go
@@ -905,6 +889,7 @@ func TestHandler(t *testing.T)
 
 ```
 searchKey: expvar.BenchmarkRealworldExpvarUsage
+tags: [private]
 ```
 
 ```Go

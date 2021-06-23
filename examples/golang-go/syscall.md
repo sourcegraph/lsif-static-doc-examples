@@ -1936,7 +1936,7 @@ Deprecated: this package is locked down. Callers should use the corresponding pa
     * [func libc_setattrlist_trampoline()](#libc_setattrlist_trampoline)
     * [func utimensat(dirfd int, path string, times *[2]Timespec, flag int) error](#utimensat)
     * [func Kill(pid int, signum Signal) (err error)](#Kill)
-    * [func init()](#init)
+    * [func init()](#init.syscall_darwin.go)
     * [func fdopendir(fd int) (dir uintptr, err error)](#fdopendir)
     * [func libc_fdopendir_trampoline()](#libc_fdopendir_trampoline)
     * [func readlen(fd int, buf *byte, nbuf int) (n int, err error)](#readlen)
@@ -2216,13 +2216,14 @@ Deprecated: this package is locked down. Callers should use the corresponding pa
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="isBigEndian" href="#isBigEndian">const isBigEndian</a>
 
 ```
 searchKey: syscall.isBigEndian
+tags: [private]
 ```
 
 ```Go
@@ -2233,6 +2234,7 @@ const isBigEndian = false
 
 ```
 searchKey: syscall.msanenabled
+tags: [private]
 ```
 
 ```Go
@@ -2243,6 +2245,7 @@ const msanenabled = false
 
 ```
 searchKey: syscall.offsetofInet4
+tags: [private]
 ```
 
 ```Go
@@ -2253,6 +2256,7 @@ const offsetofInet4 = int(unsafe.Offsetof(RawSockaddrInet4{}.Addr))
 
 ```
 searchKey: syscall.offsetofInet6
+tags: [private]
 ```
 
 ```Go
@@ -2263,6 +2267,7 @@ const offsetofInet6 = int(unsafe.Offsetof(RawSockaddrInet6{}.Addr))
 
 ```
 searchKey: syscall.anyMessageLen
+tags: [private]
 ```
 
 ```Go
@@ -2273,7 +2278,6 @@ const anyMessageLen = int(unsafe.Sizeof(anyMessage{}))
 
 ```
 searchKey: syscall.ImplementsGetwd
-tags: [exported]
 ```
 
 ```Go
@@ -2284,6 +2288,7 @@ const ImplementsGetwd = true
 
 ```
 searchKey: syscall.mask
+tags: [private]
 ```
 
 ```Go
@@ -2294,6 +2299,7 @@ const mask = 0x7F
 
 ```
 searchKey: syscall.core
+tags: [private]
 ```
 
 ```Go
@@ -2304,6 +2310,7 @@ const core = 0x80
 
 ```
 searchKey: syscall.shift
+tags: [private]
 ```
 
 ```Go
@@ -2314,6 +2321,7 @@ const shift = 8
 
 ```
 searchKey: syscall.exited
+tags: [private]
 ```
 
 ```Go
@@ -2324,6 +2332,7 @@ const exited = 0
 
 ```
 searchKey: syscall.stopped
+tags: [private]
 ```
 
 ```Go
@@ -2334,6 +2343,7 @@ const stopped = 0x7F
 
 ```
 searchKey: syscall.attrBitMapCount
+tags: [private]
 ```
 
 ```Go
@@ -2344,6 +2354,7 @@ const attrBitMapCount = 5
 
 ```
 searchKey: syscall.attrCmnModtime
+tags: [private]
 ```
 
 ```Go
@@ -2354,6 +2365,7 @@ const attrCmnModtime = 0x00000400
 
 ```
 searchKey: syscall.attrCmnAcctime
+tags: [private]
 ```
 
 ```Go
@@ -2364,6 +2376,7 @@ const attrCmnAcctime = 0x00001000
 
 ```
 searchKey: syscall.darwin64Bit
+tags: [private]
 ```
 
 ```Go
@@ -2374,6 +2387,7 @@ const darwin64Bit = (runtime.GOOS == "darwin" || runtime.GOOS == "ios") && sizeo
 
 ```
 searchKey: syscall.netbsd32Bit
+tags: [private]
 ```
 
 ```Go
@@ -2384,6 +2398,7 @@ const netbsd32Bit = runtime.GOOS == "netbsd" && sizeofPtr == 4
 
 ```
 searchKey: syscall.faketime
+tags: [private]
 ```
 
 ```Go
@@ -2394,7 +2409,6 @@ const faketime = false
 
 ```
 searchKey: syscall.AF_APPLETALK
-tags: [exported]
 ```
 
 ```Go
@@ -2405,7 +2419,6 @@ const AF_APPLETALK = 0x10
 
 ```
 searchKey: syscall.AF_CCITT
-tags: [exported]
 ```
 
 ```Go
@@ -2416,7 +2429,6 @@ const AF_CCITT = 0xa
 
 ```
 searchKey: syscall.AF_CHAOS
-tags: [exported]
 ```
 
 ```Go
@@ -2427,7 +2439,6 @@ const AF_CHAOS = 0x5
 
 ```
 searchKey: syscall.AF_CNT
-tags: [exported]
 ```
 
 ```Go
@@ -2438,7 +2449,6 @@ const AF_CNT = 0x15
 
 ```
 searchKey: syscall.AF_COIP
-tags: [exported]
 ```
 
 ```Go
@@ -2449,7 +2459,6 @@ const AF_COIP = 0x14
 
 ```
 searchKey: syscall.AF_DATAKIT
-tags: [exported]
 ```
 
 ```Go
@@ -2460,7 +2469,6 @@ const AF_DATAKIT = 0x9
 
 ```
 searchKey: syscall.AF_DECnet
-tags: [exported]
 ```
 
 ```Go
@@ -2471,7 +2479,6 @@ const AF_DECnet = 0xc
 
 ```
 searchKey: syscall.AF_DLI
-tags: [exported]
 ```
 
 ```Go
@@ -2482,7 +2489,6 @@ const AF_DLI = 0xd
 
 ```
 searchKey: syscall.AF_E164
-tags: [exported]
 ```
 
 ```Go
@@ -2493,7 +2499,6 @@ const AF_E164 = 0x1c
 
 ```
 searchKey: syscall.AF_ECMA
-tags: [exported]
 ```
 
 ```Go
@@ -2504,7 +2509,6 @@ const AF_ECMA = 0x8
 
 ```
 searchKey: syscall.AF_HYLINK
-tags: [exported]
 ```
 
 ```Go
@@ -2515,7 +2519,6 @@ const AF_HYLINK = 0xf
 
 ```
 searchKey: syscall.AF_IEEE80211
-tags: [exported]
 ```
 
 ```Go
@@ -2526,7 +2529,6 @@ const AF_IEEE80211 = 0x25
 
 ```
 searchKey: syscall.AF_IMPLINK
-tags: [exported]
 ```
 
 ```Go
@@ -2537,7 +2539,6 @@ const AF_IMPLINK = 0x3
 
 ```
 searchKey: syscall.AF_INET
-tags: [exported]
 ```
 
 ```Go
@@ -2548,7 +2549,6 @@ const AF_INET = 0x2
 
 ```
 searchKey: syscall.AF_INET6
-tags: [exported]
 ```
 
 ```Go
@@ -2559,7 +2559,6 @@ const AF_INET6 = 0x1e
 
 ```
 searchKey: syscall.AF_IPX
-tags: [exported]
 ```
 
 ```Go
@@ -2570,7 +2569,6 @@ const AF_IPX = 0x17
 
 ```
 searchKey: syscall.AF_ISDN
-tags: [exported]
 ```
 
 ```Go
@@ -2581,7 +2579,6 @@ const AF_ISDN = 0x1c
 
 ```
 searchKey: syscall.AF_ISO
-tags: [exported]
 ```
 
 ```Go
@@ -2592,7 +2589,6 @@ const AF_ISO = 0x7
 
 ```
 searchKey: syscall.AF_LAT
-tags: [exported]
 ```
 
 ```Go
@@ -2603,7 +2599,6 @@ const AF_LAT = 0xe
 
 ```
 searchKey: syscall.AF_LINK
-tags: [exported]
 ```
 
 ```Go
@@ -2614,7 +2609,6 @@ const AF_LINK = 0x12
 
 ```
 searchKey: syscall.AF_LOCAL
-tags: [exported]
 ```
 
 ```Go
@@ -2625,7 +2619,6 @@ const AF_LOCAL = 0x1
 
 ```
 searchKey: syscall.AF_MAX
-tags: [exported]
 ```
 
 ```Go
@@ -2636,7 +2629,6 @@ const AF_MAX = 0x26
 
 ```
 searchKey: syscall.AF_NATM
-tags: [exported]
 ```
 
 ```Go
@@ -2647,7 +2639,6 @@ const AF_NATM = 0x1f
 
 ```
 searchKey: syscall.AF_NDRV
-tags: [exported]
 ```
 
 ```Go
@@ -2658,7 +2649,6 @@ const AF_NDRV = 0x1b
 
 ```
 searchKey: syscall.AF_NETBIOS
-tags: [exported]
 ```
 
 ```Go
@@ -2669,7 +2659,6 @@ const AF_NETBIOS = 0x21
 
 ```
 searchKey: syscall.AF_NS
-tags: [exported]
 ```
 
 ```Go
@@ -2680,7 +2669,6 @@ const AF_NS = 0x6
 
 ```
 searchKey: syscall.AF_OSI
-tags: [exported]
 ```
 
 ```Go
@@ -2691,7 +2679,6 @@ const AF_OSI = 0x7
 
 ```
 searchKey: syscall.AF_PPP
-tags: [exported]
 ```
 
 ```Go
@@ -2702,7 +2689,6 @@ const AF_PPP = 0x22
 
 ```
 searchKey: syscall.AF_PUP
-tags: [exported]
 ```
 
 ```Go
@@ -2713,7 +2699,6 @@ const AF_PUP = 0x4
 
 ```
 searchKey: syscall.AF_RESERVED_36
-tags: [exported]
 ```
 
 ```Go
@@ -2724,7 +2709,6 @@ const AF_RESERVED_36 = 0x24
 
 ```
 searchKey: syscall.AF_ROUTE
-tags: [exported]
 ```
 
 ```Go
@@ -2735,7 +2719,6 @@ const AF_ROUTE = 0x11
 
 ```
 searchKey: syscall.AF_SIP
-tags: [exported]
 ```
 
 ```Go
@@ -2746,7 +2729,6 @@ const AF_SIP = 0x18
 
 ```
 searchKey: syscall.AF_SNA
-tags: [exported]
 ```
 
 ```Go
@@ -2757,7 +2739,6 @@ const AF_SNA = 0xb
 
 ```
 searchKey: syscall.AF_SYSTEM
-tags: [exported]
 ```
 
 ```Go
@@ -2768,7 +2749,6 @@ const AF_SYSTEM = 0x20
 
 ```
 searchKey: syscall.AF_UNIX
-tags: [exported]
 ```
 
 ```Go
@@ -2779,7 +2759,6 @@ const AF_UNIX = 0x1
 
 ```
 searchKey: syscall.AF_UNSPEC
-tags: [exported]
 ```
 
 ```Go
@@ -2790,7 +2769,6 @@ const AF_UNSPEC = 0x0
 
 ```
 searchKey: syscall.B0
-tags: [exported]
 ```
 
 ```Go
@@ -2801,7 +2779,6 @@ const B0 = 0x0
 
 ```
 searchKey: syscall.B110
-tags: [exported]
 ```
 
 ```Go
@@ -2812,7 +2789,6 @@ const B110 = 0x6e
 
 ```
 searchKey: syscall.B115200
-tags: [exported]
 ```
 
 ```Go
@@ -2823,7 +2799,6 @@ const B115200 = 0x1c200
 
 ```
 searchKey: syscall.B1200
-tags: [exported]
 ```
 
 ```Go
@@ -2834,7 +2809,6 @@ const B1200 = 0x4b0
 
 ```
 searchKey: syscall.B134
-tags: [exported]
 ```
 
 ```Go
@@ -2845,7 +2819,6 @@ const B134 = 0x86
 
 ```
 searchKey: syscall.B14400
-tags: [exported]
 ```
 
 ```Go
@@ -2856,7 +2829,6 @@ const B14400 = 0x3840
 
 ```
 searchKey: syscall.B150
-tags: [exported]
 ```
 
 ```Go
@@ -2867,7 +2839,6 @@ const B150 = 0x96
 
 ```
 searchKey: syscall.B1800
-tags: [exported]
 ```
 
 ```Go
@@ -2878,7 +2849,6 @@ const B1800 = 0x708
 
 ```
 searchKey: syscall.B19200
-tags: [exported]
 ```
 
 ```Go
@@ -2889,7 +2859,6 @@ const B19200 = 0x4b00
 
 ```
 searchKey: syscall.B200
-tags: [exported]
 ```
 
 ```Go
@@ -2900,7 +2869,6 @@ const B200 = 0xc8
 
 ```
 searchKey: syscall.B230400
-tags: [exported]
 ```
 
 ```Go
@@ -2911,7 +2879,6 @@ const B230400 = 0x38400
 
 ```
 searchKey: syscall.B2400
-tags: [exported]
 ```
 
 ```Go
@@ -2922,7 +2889,6 @@ const B2400 = 0x960
 
 ```
 searchKey: syscall.B28800
-tags: [exported]
 ```
 
 ```Go
@@ -2933,7 +2899,6 @@ const B28800 = 0x7080
 
 ```
 searchKey: syscall.B300
-tags: [exported]
 ```
 
 ```Go
@@ -2944,7 +2909,6 @@ const B300 = 0x12c
 
 ```
 searchKey: syscall.B38400
-tags: [exported]
 ```
 
 ```Go
@@ -2955,7 +2919,6 @@ const B38400 = 0x9600
 
 ```
 searchKey: syscall.B4800
-tags: [exported]
 ```
 
 ```Go
@@ -2966,7 +2929,6 @@ const B4800 = 0x12c0
 
 ```
 searchKey: syscall.B50
-tags: [exported]
 ```
 
 ```Go
@@ -2977,7 +2939,6 @@ const B50 = 0x32
 
 ```
 searchKey: syscall.B57600
-tags: [exported]
 ```
 
 ```Go
@@ -2988,7 +2949,6 @@ const B57600 = 0xe100
 
 ```
 searchKey: syscall.B600
-tags: [exported]
 ```
 
 ```Go
@@ -2999,7 +2959,6 @@ const B600 = 0x258
 
 ```
 searchKey: syscall.B7200
-tags: [exported]
 ```
 
 ```Go
@@ -3010,7 +2969,6 @@ const B7200 = 0x1c20
 
 ```
 searchKey: syscall.B75
-tags: [exported]
 ```
 
 ```Go
@@ -3021,7 +2979,6 @@ const B75 = 0x4b
 
 ```
 searchKey: syscall.B76800
-tags: [exported]
 ```
 
 ```Go
@@ -3032,7 +2989,6 @@ const B76800 = 0x12c00
 
 ```
 searchKey: syscall.B9600
-tags: [exported]
 ```
 
 ```Go
@@ -3043,7 +2999,6 @@ const B9600 = 0x2580
 
 ```
 searchKey: syscall.BIOCFLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -3054,7 +3009,6 @@ const BIOCFLUSH = 0x20004268
 
 ```
 searchKey: syscall.BIOCGBLEN
-tags: [exported]
 ```
 
 ```Go
@@ -3065,7 +3019,6 @@ const BIOCGBLEN = 0x40044266
 
 ```
 searchKey: syscall.BIOCGDLT
-tags: [exported]
 ```
 
 ```Go
@@ -3076,7 +3029,6 @@ const BIOCGDLT = 0x4004426a
 
 ```
 searchKey: syscall.BIOCGDLTLIST
-tags: [exported]
 ```
 
 ```Go
@@ -3087,7 +3039,6 @@ const BIOCGDLTLIST = 0xc00c4279
 
 ```
 searchKey: syscall.BIOCGETIF
-tags: [exported]
 ```
 
 ```Go
@@ -3098,7 +3049,6 @@ const BIOCGETIF = 0x4020426b
 
 ```
 searchKey: syscall.BIOCGHDRCMPLT
-tags: [exported]
 ```
 
 ```Go
@@ -3109,7 +3059,6 @@ const BIOCGHDRCMPLT = 0x40044274
 
 ```
 searchKey: syscall.BIOCGRSIG
-tags: [exported]
 ```
 
 ```Go
@@ -3120,7 +3069,6 @@ const BIOCGRSIG = 0x40044272
 
 ```
 searchKey: syscall.BIOCGRTIMEOUT
-tags: [exported]
 ```
 
 ```Go
@@ -3131,7 +3079,6 @@ const BIOCGRTIMEOUT = 0x4010426e
 
 ```
 searchKey: syscall.BIOCGSEESENT
-tags: [exported]
 ```
 
 ```Go
@@ -3142,7 +3089,6 @@ const BIOCGSEESENT = 0x40044276
 
 ```
 searchKey: syscall.BIOCGSTATS
-tags: [exported]
 ```
 
 ```Go
@@ -3153,7 +3099,6 @@ const BIOCGSTATS = 0x4008426f
 
 ```
 searchKey: syscall.BIOCIMMEDIATE
-tags: [exported]
 ```
 
 ```Go
@@ -3164,7 +3109,6 @@ const BIOCIMMEDIATE = 0x80044270
 
 ```
 searchKey: syscall.BIOCPROMISC
-tags: [exported]
 ```
 
 ```Go
@@ -3175,7 +3119,6 @@ const BIOCPROMISC = 0x20004269
 
 ```
 searchKey: syscall.BIOCSBLEN
-tags: [exported]
 ```
 
 ```Go
@@ -3186,7 +3129,6 @@ const BIOCSBLEN = 0xc0044266
 
 ```
 searchKey: syscall.BIOCSDLT
-tags: [exported]
 ```
 
 ```Go
@@ -3197,7 +3139,6 @@ const BIOCSDLT = 0x80044278
 
 ```
 searchKey: syscall.BIOCSETF
-tags: [exported]
 ```
 
 ```Go
@@ -3208,7 +3149,6 @@ const BIOCSETF = 0x80104267
 
 ```
 searchKey: syscall.BIOCSETIF
-tags: [exported]
 ```
 
 ```Go
@@ -3219,7 +3159,6 @@ const BIOCSETIF = 0x8020426c
 
 ```
 searchKey: syscall.BIOCSHDRCMPLT
-tags: [exported]
 ```
 
 ```Go
@@ -3230,7 +3169,6 @@ const BIOCSHDRCMPLT = 0x80044275
 
 ```
 searchKey: syscall.BIOCSRSIG
-tags: [exported]
 ```
 
 ```Go
@@ -3241,7 +3179,6 @@ const BIOCSRSIG = 0x80044273
 
 ```
 searchKey: syscall.BIOCSRTIMEOUT
-tags: [exported]
 ```
 
 ```Go
@@ -3252,7 +3189,6 @@ const BIOCSRTIMEOUT = 0x8010426d
 
 ```
 searchKey: syscall.BIOCSSEESENT
-tags: [exported]
 ```
 
 ```Go
@@ -3263,7 +3199,6 @@ const BIOCSSEESENT = 0x80044277
 
 ```
 searchKey: syscall.BIOCVERSION
-tags: [exported]
 ```
 
 ```Go
@@ -3274,7 +3209,6 @@ const BIOCVERSION = 0x40044271
 
 ```
 searchKey: syscall.BPF_A
-tags: [exported]
 ```
 
 ```Go
@@ -3285,7 +3219,6 @@ const BPF_A = 0x10
 
 ```
 searchKey: syscall.BPF_ABS
-tags: [exported]
 ```
 
 ```Go
@@ -3296,7 +3229,6 @@ const BPF_ABS = 0x20
 
 ```
 searchKey: syscall.BPF_ADD
-tags: [exported]
 ```
 
 ```Go
@@ -3307,7 +3239,6 @@ const BPF_ADD = 0x0
 
 ```
 searchKey: syscall.BPF_ALIGNMENT
-tags: [exported]
 ```
 
 ```Go
@@ -3318,7 +3249,6 @@ const BPF_ALIGNMENT = 0x4
 
 ```
 searchKey: syscall.BPF_ALU
-tags: [exported]
 ```
 
 ```Go
@@ -3329,7 +3259,6 @@ const BPF_ALU = 0x4
 
 ```
 searchKey: syscall.BPF_AND
-tags: [exported]
 ```
 
 ```Go
@@ -3340,7 +3269,6 @@ const BPF_AND = 0x50
 
 ```
 searchKey: syscall.BPF_B
-tags: [exported]
 ```
 
 ```Go
@@ -3351,7 +3279,6 @@ const BPF_B = 0x10
 
 ```
 searchKey: syscall.BPF_DIV
-tags: [exported]
 ```
 
 ```Go
@@ -3362,7 +3289,6 @@ const BPF_DIV = 0x30
 
 ```
 searchKey: syscall.BPF_H
-tags: [exported]
 ```
 
 ```Go
@@ -3373,7 +3299,6 @@ const BPF_H = 0x8
 
 ```
 searchKey: syscall.BPF_IMM
-tags: [exported]
 ```
 
 ```Go
@@ -3384,7 +3309,6 @@ const BPF_IMM = 0x0
 
 ```
 searchKey: syscall.BPF_IND
-tags: [exported]
 ```
 
 ```Go
@@ -3395,7 +3319,6 @@ const BPF_IND = 0x40
 
 ```
 searchKey: syscall.BPF_JA
-tags: [exported]
 ```
 
 ```Go
@@ -3406,7 +3329,6 @@ const BPF_JA = 0x0
 
 ```
 searchKey: syscall.BPF_JEQ
-tags: [exported]
 ```
 
 ```Go
@@ -3417,7 +3339,6 @@ const BPF_JEQ = 0x10
 
 ```
 searchKey: syscall.BPF_JGE
-tags: [exported]
 ```
 
 ```Go
@@ -3428,7 +3349,6 @@ const BPF_JGE = 0x30
 
 ```
 searchKey: syscall.BPF_JGT
-tags: [exported]
 ```
 
 ```Go
@@ -3439,7 +3359,6 @@ const BPF_JGT = 0x20
 
 ```
 searchKey: syscall.BPF_JMP
-tags: [exported]
 ```
 
 ```Go
@@ -3450,7 +3369,6 @@ const BPF_JMP = 0x5
 
 ```
 searchKey: syscall.BPF_JSET
-tags: [exported]
 ```
 
 ```Go
@@ -3461,7 +3379,6 @@ const BPF_JSET = 0x40
 
 ```
 searchKey: syscall.BPF_K
-tags: [exported]
 ```
 
 ```Go
@@ -3472,7 +3389,6 @@ const BPF_K = 0x0
 
 ```
 searchKey: syscall.BPF_LD
-tags: [exported]
 ```
 
 ```Go
@@ -3483,7 +3399,6 @@ const BPF_LD = 0x0
 
 ```
 searchKey: syscall.BPF_LDX
-tags: [exported]
 ```
 
 ```Go
@@ -3494,7 +3409,6 @@ const BPF_LDX = 0x1
 
 ```
 searchKey: syscall.BPF_LEN
-tags: [exported]
 ```
 
 ```Go
@@ -3505,7 +3419,6 @@ const BPF_LEN = 0x80
 
 ```
 searchKey: syscall.BPF_LSH
-tags: [exported]
 ```
 
 ```Go
@@ -3516,7 +3429,6 @@ const BPF_LSH = 0x60
 
 ```
 searchKey: syscall.BPF_MAJOR_VERSION
-tags: [exported]
 ```
 
 ```Go
@@ -3527,7 +3439,6 @@ const BPF_MAJOR_VERSION = 0x1
 
 ```
 searchKey: syscall.BPF_MAXBUFSIZE
-tags: [exported]
 ```
 
 ```Go
@@ -3538,7 +3449,6 @@ const BPF_MAXBUFSIZE = 0x80000
 
 ```
 searchKey: syscall.BPF_MAXINSNS
-tags: [exported]
 ```
 
 ```Go
@@ -3549,7 +3459,6 @@ const BPF_MAXINSNS = 0x200
 
 ```
 searchKey: syscall.BPF_MEM
-tags: [exported]
 ```
 
 ```Go
@@ -3560,7 +3469,6 @@ const BPF_MEM = 0x60
 
 ```
 searchKey: syscall.BPF_MEMWORDS
-tags: [exported]
 ```
 
 ```Go
@@ -3571,7 +3479,6 @@ const BPF_MEMWORDS = 0x10
 
 ```
 searchKey: syscall.BPF_MINBUFSIZE
-tags: [exported]
 ```
 
 ```Go
@@ -3582,7 +3489,6 @@ const BPF_MINBUFSIZE = 0x20
 
 ```
 searchKey: syscall.BPF_MINOR_VERSION
-tags: [exported]
 ```
 
 ```Go
@@ -3593,7 +3499,6 @@ const BPF_MINOR_VERSION = 0x1
 
 ```
 searchKey: syscall.BPF_MISC
-tags: [exported]
 ```
 
 ```Go
@@ -3604,7 +3509,6 @@ const BPF_MISC = 0x7
 
 ```
 searchKey: syscall.BPF_MSH
-tags: [exported]
 ```
 
 ```Go
@@ -3615,7 +3519,6 @@ const BPF_MSH = 0xa0
 
 ```
 searchKey: syscall.BPF_MUL
-tags: [exported]
 ```
 
 ```Go
@@ -3626,7 +3529,6 @@ const BPF_MUL = 0x20
 
 ```
 searchKey: syscall.BPF_NEG
-tags: [exported]
 ```
 
 ```Go
@@ -3637,7 +3539,6 @@ const BPF_NEG = 0x80
 
 ```
 searchKey: syscall.BPF_OR
-tags: [exported]
 ```
 
 ```Go
@@ -3648,7 +3549,6 @@ const BPF_OR = 0x40
 
 ```
 searchKey: syscall.BPF_RELEASE
-tags: [exported]
 ```
 
 ```Go
@@ -3659,7 +3559,6 @@ const BPF_RELEASE = 0x30bb6
 
 ```
 searchKey: syscall.BPF_RET
-tags: [exported]
 ```
 
 ```Go
@@ -3670,7 +3569,6 @@ const BPF_RET = 0x6
 
 ```
 searchKey: syscall.BPF_RSH
-tags: [exported]
 ```
 
 ```Go
@@ -3681,7 +3579,6 @@ const BPF_RSH = 0x70
 
 ```
 searchKey: syscall.BPF_ST
-tags: [exported]
 ```
 
 ```Go
@@ -3692,7 +3589,6 @@ const BPF_ST = 0x2
 
 ```
 searchKey: syscall.BPF_STX
-tags: [exported]
 ```
 
 ```Go
@@ -3703,7 +3599,6 @@ const BPF_STX = 0x3
 
 ```
 searchKey: syscall.BPF_SUB
-tags: [exported]
 ```
 
 ```Go
@@ -3714,7 +3609,6 @@ const BPF_SUB = 0x10
 
 ```
 searchKey: syscall.BPF_TAX
-tags: [exported]
 ```
 
 ```Go
@@ -3725,7 +3619,6 @@ const BPF_TAX = 0x0
 
 ```
 searchKey: syscall.BPF_TXA
-tags: [exported]
 ```
 
 ```Go
@@ -3736,7 +3629,6 @@ const BPF_TXA = 0x80
 
 ```
 searchKey: syscall.BPF_W
-tags: [exported]
 ```
 
 ```Go
@@ -3747,7 +3639,6 @@ const BPF_W = 0x0
 
 ```
 searchKey: syscall.BPF_X
-tags: [exported]
 ```
 
 ```Go
@@ -3758,7 +3649,6 @@ const BPF_X = 0x8
 
 ```
 searchKey: syscall.BRKINT
-tags: [exported]
 ```
 
 ```Go
@@ -3769,7 +3659,6 @@ const BRKINT = 0x2
 
 ```
 searchKey: syscall.CFLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -3780,7 +3669,6 @@ const CFLUSH = 0xf
 
 ```
 searchKey: syscall.CLOCAL
-tags: [exported]
 ```
 
 ```Go
@@ -3791,7 +3679,6 @@ const CLOCAL = 0x8000
 
 ```
 searchKey: syscall.CREAD
-tags: [exported]
 ```
 
 ```Go
@@ -3802,7 +3689,6 @@ const CREAD = 0x800
 
 ```
 searchKey: syscall.CS5
-tags: [exported]
 ```
 
 ```Go
@@ -3813,7 +3699,6 @@ const CS5 = 0x0
 
 ```
 searchKey: syscall.CS6
-tags: [exported]
 ```
 
 ```Go
@@ -3824,7 +3709,6 @@ const CS6 = 0x100
 
 ```
 searchKey: syscall.CS7
-tags: [exported]
 ```
 
 ```Go
@@ -3835,7 +3719,6 @@ const CS7 = 0x200
 
 ```
 searchKey: syscall.CS8
-tags: [exported]
 ```
 
 ```Go
@@ -3846,7 +3729,6 @@ const CS8 = 0x300
 
 ```
 searchKey: syscall.CSIZE
-tags: [exported]
 ```
 
 ```Go
@@ -3857,7 +3739,6 @@ const CSIZE = 0x300
 
 ```
 searchKey: syscall.CSTART
-tags: [exported]
 ```
 
 ```Go
@@ -3868,7 +3749,6 @@ const CSTART = 0x11
 
 ```
 searchKey: syscall.CSTATUS
-tags: [exported]
 ```
 
 ```Go
@@ -3879,7 +3759,6 @@ const CSTATUS = 0x14
 
 ```
 searchKey: syscall.CSTOP
-tags: [exported]
 ```
 
 ```Go
@@ -3890,7 +3769,6 @@ const CSTOP = 0x13
 
 ```
 searchKey: syscall.CSTOPB
-tags: [exported]
 ```
 
 ```Go
@@ -3901,7 +3779,6 @@ const CSTOPB = 0x400
 
 ```
 searchKey: syscall.CSUSP
-tags: [exported]
 ```
 
 ```Go
@@ -3912,7 +3789,6 @@ const CSUSP = 0x1a
 
 ```
 searchKey: syscall.CTL_MAXNAME
-tags: [exported]
 ```
 
 ```Go
@@ -3923,7 +3799,6 @@ const CTL_MAXNAME = 0xc
 
 ```
 searchKey: syscall.CTL_NET
-tags: [exported]
 ```
 
 ```Go
@@ -3934,7 +3809,6 @@ const CTL_NET = 0x4
 
 ```
 searchKey: syscall.DLT_APPLE_IP_OVER_IEEE1394
-tags: [exported]
 ```
 
 ```Go
@@ -3945,7 +3819,6 @@ const DLT_APPLE_IP_OVER_IEEE1394 = 0x8a
 
 ```
 searchKey: syscall.DLT_ARCNET
-tags: [exported]
 ```
 
 ```Go
@@ -3956,7 +3829,6 @@ const DLT_ARCNET = 0x7
 
 ```
 searchKey: syscall.DLT_ATM_CLIP
-tags: [exported]
 ```
 
 ```Go
@@ -3967,7 +3839,6 @@ const DLT_ATM_CLIP = 0x13
 
 ```
 searchKey: syscall.DLT_ATM_RFC1483
-tags: [exported]
 ```
 
 ```Go
@@ -3978,7 +3849,6 @@ const DLT_ATM_RFC1483 = 0xb
 
 ```
 searchKey: syscall.DLT_AX25
-tags: [exported]
 ```
 
 ```Go
@@ -3989,7 +3859,6 @@ const DLT_AX25 = 0x3
 
 ```
 searchKey: syscall.DLT_CHAOS
-tags: [exported]
 ```
 
 ```Go
@@ -4000,7 +3869,6 @@ const DLT_CHAOS = 0x5
 
 ```
 searchKey: syscall.DLT_CHDLC
-tags: [exported]
 ```
 
 ```Go
@@ -4011,7 +3879,6 @@ const DLT_CHDLC = 0x68
 
 ```
 searchKey: syscall.DLT_C_HDLC
-tags: [exported]
 ```
 
 ```Go
@@ -4022,7 +3889,6 @@ const DLT_C_HDLC = 0x68
 
 ```
 searchKey: syscall.DLT_EN10MB
-tags: [exported]
 ```
 
 ```Go
@@ -4033,7 +3899,6 @@ const DLT_EN10MB = 0x1
 
 ```
 searchKey: syscall.DLT_EN3MB
-tags: [exported]
 ```
 
 ```Go
@@ -4044,7 +3909,6 @@ const DLT_EN3MB = 0x2
 
 ```
 searchKey: syscall.DLT_FDDI
-tags: [exported]
 ```
 
 ```Go
@@ -4055,7 +3919,6 @@ const DLT_FDDI = 0xa
 
 ```
 searchKey: syscall.DLT_IEEE802
-tags: [exported]
 ```
 
 ```Go
@@ -4066,7 +3929,6 @@ const DLT_IEEE802 = 0x6
 
 ```
 searchKey: syscall.DLT_IEEE802_11
-tags: [exported]
 ```
 
 ```Go
@@ -4077,7 +3939,6 @@ const DLT_IEEE802_11 = 0x69
 
 ```
 searchKey: syscall.DLT_IEEE802_11_RADIO
-tags: [exported]
 ```
 
 ```Go
@@ -4088,7 +3949,6 @@ const DLT_IEEE802_11_RADIO = 0x7f
 
 ```
 searchKey: syscall.DLT_IEEE802_11_RADIO_AVS
-tags: [exported]
 ```
 
 ```Go
@@ -4099,7 +3959,6 @@ const DLT_IEEE802_11_RADIO_AVS = 0xa3
 
 ```
 searchKey: syscall.DLT_LINUX_SLL
-tags: [exported]
 ```
 
 ```Go
@@ -4110,7 +3969,6 @@ const DLT_LINUX_SLL = 0x71
 
 ```
 searchKey: syscall.DLT_LOOP
-tags: [exported]
 ```
 
 ```Go
@@ -4121,7 +3979,6 @@ const DLT_LOOP = 0x6c
 
 ```
 searchKey: syscall.DLT_NULL
-tags: [exported]
 ```
 
 ```Go
@@ -4132,7 +3989,6 @@ const DLT_NULL = 0x0
 
 ```
 searchKey: syscall.DLT_PFLOG
-tags: [exported]
 ```
 
 ```Go
@@ -4143,7 +3999,6 @@ const DLT_PFLOG = 0x75
 
 ```
 searchKey: syscall.DLT_PFSYNC
-tags: [exported]
 ```
 
 ```Go
@@ -4154,7 +4009,6 @@ const DLT_PFSYNC = 0x12
 
 ```
 searchKey: syscall.DLT_PPP
-tags: [exported]
 ```
 
 ```Go
@@ -4165,7 +4019,6 @@ const DLT_PPP = 0x9
 
 ```
 searchKey: syscall.DLT_PPP_BSDOS
-tags: [exported]
 ```
 
 ```Go
@@ -4176,7 +4029,6 @@ const DLT_PPP_BSDOS = 0x10
 
 ```
 searchKey: syscall.DLT_PPP_SERIAL
-tags: [exported]
 ```
 
 ```Go
@@ -4187,7 +4039,6 @@ const DLT_PPP_SERIAL = 0x32
 
 ```
 searchKey: syscall.DLT_PRONET
-tags: [exported]
 ```
 
 ```Go
@@ -4198,7 +4049,6 @@ const DLT_PRONET = 0x4
 
 ```
 searchKey: syscall.DLT_RAW
-tags: [exported]
 ```
 
 ```Go
@@ -4209,7 +4059,6 @@ const DLT_RAW = 0xc
 
 ```
 searchKey: syscall.DLT_SLIP
-tags: [exported]
 ```
 
 ```Go
@@ -4220,7 +4069,6 @@ const DLT_SLIP = 0x8
 
 ```
 searchKey: syscall.DLT_SLIP_BSDOS
-tags: [exported]
 ```
 
 ```Go
@@ -4231,7 +4079,6 @@ const DLT_SLIP_BSDOS = 0xf
 
 ```
 searchKey: syscall.DT_BLK
-tags: [exported]
 ```
 
 ```Go
@@ -4242,7 +4089,6 @@ const DT_BLK = 0x6
 
 ```
 searchKey: syscall.DT_CHR
-tags: [exported]
 ```
 
 ```Go
@@ -4253,7 +4099,6 @@ const DT_CHR = 0x2
 
 ```
 searchKey: syscall.DT_DIR
-tags: [exported]
 ```
 
 ```Go
@@ -4264,7 +4109,6 @@ const DT_DIR = 0x4
 
 ```
 searchKey: syscall.DT_FIFO
-tags: [exported]
 ```
 
 ```Go
@@ -4275,7 +4119,6 @@ const DT_FIFO = 0x1
 
 ```
 searchKey: syscall.DT_LNK
-tags: [exported]
 ```
 
 ```Go
@@ -4286,7 +4129,6 @@ const DT_LNK = 0xa
 
 ```
 searchKey: syscall.DT_REG
-tags: [exported]
 ```
 
 ```Go
@@ -4297,7 +4139,6 @@ const DT_REG = 0x8
 
 ```
 searchKey: syscall.DT_SOCK
-tags: [exported]
 ```
 
 ```Go
@@ -4308,7 +4149,6 @@ const DT_SOCK = 0xc
 
 ```
 searchKey: syscall.DT_UNKNOWN
-tags: [exported]
 ```
 
 ```Go
@@ -4319,7 +4159,6 @@ const DT_UNKNOWN = 0x0
 
 ```
 searchKey: syscall.DT_WHT
-tags: [exported]
 ```
 
 ```Go
@@ -4330,7 +4169,6 @@ const DT_WHT = 0xe
 
 ```
 searchKey: syscall.ECHO
-tags: [exported]
 ```
 
 ```Go
@@ -4341,7 +4179,6 @@ const ECHO = 0x8
 
 ```
 searchKey: syscall.ECHOCTL
-tags: [exported]
 ```
 
 ```Go
@@ -4352,7 +4189,6 @@ const ECHOCTL = 0x40
 
 ```
 searchKey: syscall.ECHOE
-tags: [exported]
 ```
 
 ```Go
@@ -4363,7 +4199,6 @@ const ECHOE = 0x2
 
 ```
 searchKey: syscall.ECHOK
-tags: [exported]
 ```
 
 ```Go
@@ -4374,7 +4209,6 @@ const ECHOK = 0x4
 
 ```
 searchKey: syscall.ECHOKE
-tags: [exported]
 ```
 
 ```Go
@@ -4385,7 +4219,6 @@ const ECHOKE = 0x1
 
 ```
 searchKey: syscall.ECHONL
-tags: [exported]
 ```
 
 ```Go
@@ -4396,7 +4229,6 @@ const ECHONL = 0x10
 
 ```
 searchKey: syscall.ECHOPRT
-tags: [exported]
 ```
 
 ```Go
@@ -4407,7 +4239,6 @@ const ECHOPRT = 0x20
 
 ```
 searchKey: syscall.EVFILT_AIO
-tags: [exported]
 ```
 
 ```Go
@@ -4418,7 +4249,6 @@ const EVFILT_AIO = -0x3
 
 ```
 searchKey: syscall.EVFILT_FS
-tags: [exported]
 ```
 
 ```Go
@@ -4429,7 +4259,6 @@ const EVFILT_FS = -0x9
 
 ```
 searchKey: syscall.EVFILT_MACHPORT
-tags: [exported]
 ```
 
 ```Go
@@ -4440,7 +4269,6 @@ const EVFILT_MACHPORT = -0x8
 
 ```
 searchKey: syscall.EVFILT_PROC
-tags: [exported]
 ```
 
 ```Go
@@ -4451,7 +4279,6 @@ const EVFILT_PROC = -0x5
 
 ```
 searchKey: syscall.EVFILT_READ
-tags: [exported]
 ```
 
 ```Go
@@ -4462,7 +4289,6 @@ const EVFILT_READ = -0x1
 
 ```
 searchKey: syscall.EVFILT_SIGNAL
-tags: [exported]
 ```
 
 ```Go
@@ -4473,7 +4299,6 @@ const EVFILT_SIGNAL = -0x6
 
 ```
 searchKey: syscall.EVFILT_SYSCOUNT
-tags: [exported]
 ```
 
 ```Go
@@ -4484,7 +4309,6 @@ const EVFILT_SYSCOUNT = 0xc
 
 ```
 searchKey: syscall.EVFILT_THREADMARKER
-tags: [exported]
 ```
 
 ```Go
@@ -4495,7 +4319,6 @@ const EVFILT_THREADMARKER = 0xc
 
 ```
 searchKey: syscall.EVFILT_TIMER
-tags: [exported]
 ```
 
 ```Go
@@ -4506,7 +4329,6 @@ const EVFILT_TIMER = -0x7
 
 ```
 searchKey: syscall.EVFILT_USER
-tags: [exported]
 ```
 
 ```Go
@@ -4517,7 +4339,6 @@ const EVFILT_USER = -0xa
 
 ```
 searchKey: syscall.EVFILT_VM
-tags: [exported]
 ```
 
 ```Go
@@ -4528,7 +4349,6 @@ const EVFILT_VM = -0xc
 
 ```
 searchKey: syscall.EVFILT_VNODE
-tags: [exported]
 ```
 
 ```Go
@@ -4539,7 +4359,6 @@ const EVFILT_VNODE = -0x4
 
 ```
 searchKey: syscall.EVFILT_WRITE
-tags: [exported]
 ```
 
 ```Go
@@ -4550,7 +4369,6 @@ const EVFILT_WRITE = -0x2
 
 ```
 searchKey: syscall.EV_ADD
-tags: [exported]
 ```
 
 ```Go
@@ -4561,7 +4379,6 @@ const EV_ADD = 0x1
 
 ```
 searchKey: syscall.EV_CLEAR
-tags: [exported]
 ```
 
 ```Go
@@ -4572,7 +4389,6 @@ const EV_CLEAR = 0x20
 
 ```
 searchKey: syscall.EV_DELETE
-tags: [exported]
 ```
 
 ```Go
@@ -4583,7 +4399,6 @@ const EV_DELETE = 0x2
 
 ```
 searchKey: syscall.EV_DISABLE
-tags: [exported]
 ```
 
 ```Go
@@ -4594,7 +4409,6 @@ const EV_DISABLE = 0x8
 
 ```
 searchKey: syscall.EV_DISPATCH
-tags: [exported]
 ```
 
 ```Go
@@ -4605,7 +4419,6 @@ const EV_DISPATCH = 0x80
 
 ```
 searchKey: syscall.EV_ENABLE
-tags: [exported]
 ```
 
 ```Go
@@ -4616,7 +4429,6 @@ const EV_ENABLE = 0x4
 
 ```
 searchKey: syscall.EV_EOF
-tags: [exported]
 ```
 
 ```Go
@@ -4627,7 +4439,6 @@ const EV_EOF = 0x8000
 
 ```
 searchKey: syscall.EV_ERROR
-tags: [exported]
 ```
 
 ```Go
@@ -4638,7 +4449,6 @@ const EV_ERROR = 0x4000
 
 ```
 searchKey: syscall.EV_FLAG0
-tags: [exported]
 ```
 
 ```Go
@@ -4649,7 +4459,6 @@ const EV_FLAG0 = 0x1000
 
 ```
 searchKey: syscall.EV_FLAG1
-tags: [exported]
 ```
 
 ```Go
@@ -4660,7 +4469,6 @@ const EV_FLAG1 = 0x2000
 
 ```
 searchKey: syscall.EV_ONESHOT
-tags: [exported]
 ```
 
 ```Go
@@ -4671,7 +4479,6 @@ const EV_ONESHOT = 0x10
 
 ```
 searchKey: syscall.EV_OOBAND
-tags: [exported]
 ```
 
 ```Go
@@ -4682,7 +4489,6 @@ const EV_OOBAND = 0x2000
 
 ```
 searchKey: syscall.EV_POLL
-tags: [exported]
 ```
 
 ```Go
@@ -4693,7 +4499,6 @@ const EV_POLL = 0x1000
 
 ```
 searchKey: syscall.EV_RECEIPT
-tags: [exported]
 ```
 
 ```Go
@@ -4704,7 +4509,6 @@ const EV_RECEIPT = 0x40
 
 ```
 searchKey: syscall.EV_SYSFLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -4715,7 +4519,6 @@ const EV_SYSFLAGS = 0xf000
 
 ```
 searchKey: syscall.EXTA
-tags: [exported]
 ```
 
 ```Go
@@ -4726,7 +4529,6 @@ const EXTA = 0x4b00
 
 ```
 searchKey: syscall.EXTB
-tags: [exported]
 ```
 
 ```Go
@@ -4737,7 +4539,6 @@ const EXTB = 0x9600
 
 ```
 searchKey: syscall.EXTPROC
-tags: [exported]
 ```
 
 ```Go
@@ -4748,7 +4549,6 @@ const EXTPROC = 0x800
 
 ```
 searchKey: syscall.FD_CLOEXEC
-tags: [exported]
 ```
 
 ```Go
@@ -4759,7 +4559,6 @@ const FD_CLOEXEC = 0x1
 
 ```
 searchKey: syscall.FD_SETSIZE
-tags: [exported]
 ```
 
 ```Go
@@ -4770,7 +4569,6 @@ const FD_SETSIZE = 0x400
 
 ```
 searchKey: syscall.FLUSHO
-tags: [exported]
 ```
 
 ```Go
@@ -4781,7 +4579,6 @@ const FLUSHO = 0x800000
 
 ```
 searchKey: syscall.F_ADDFILESIGS
-tags: [exported]
 ```
 
 ```Go
@@ -4792,7 +4589,6 @@ const F_ADDFILESIGS = 0x3d
 
 ```
 searchKey: syscall.F_ADDSIGS
-tags: [exported]
 ```
 
 ```Go
@@ -4803,7 +4599,6 @@ const F_ADDSIGS = 0x3b
 
 ```
 searchKey: syscall.F_ALLOCATEALL
-tags: [exported]
 ```
 
 ```Go
@@ -4814,7 +4609,6 @@ const F_ALLOCATEALL = 0x4
 
 ```
 searchKey: syscall.F_ALLOCATECONTIG
-tags: [exported]
 ```
 
 ```Go
@@ -4825,7 +4619,6 @@ const F_ALLOCATECONTIG = 0x2
 
 ```
 searchKey: syscall.F_CHKCLEAN
-tags: [exported]
 ```
 
 ```Go
@@ -4836,7 +4629,6 @@ const F_CHKCLEAN = 0x29
 
 ```
 searchKey: syscall.F_DUPFD
-tags: [exported]
 ```
 
 ```Go
@@ -4847,7 +4639,6 @@ const F_DUPFD = 0x0
 
 ```
 searchKey: syscall.F_DUPFD_CLOEXEC
-tags: [exported]
 ```
 
 ```Go
@@ -4858,7 +4649,6 @@ const F_DUPFD_CLOEXEC = 0x43
 
 ```
 searchKey: syscall.F_FLUSH_DATA
-tags: [exported]
 ```
 
 ```Go
@@ -4869,7 +4659,6 @@ const F_FLUSH_DATA = 0x28
 
 ```
 searchKey: syscall.F_FREEZE_FS
-tags: [exported]
 ```
 
 ```Go
@@ -4880,7 +4669,6 @@ const F_FREEZE_FS = 0x35
 
 ```
 searchKey: syscall.F_FULLFSYNC
-tags: [exported]
 ```
 
 ```Go
@@ -4891,7 +4679,6 @@ const F_FULLFSYNC = 0x33
 
 ```
 searchKey: syscall.F_GETFD
-tags: [exported]
 ```
 
 ```Go
@@ -4902,7 +4689,6 @@ const F_GETFD = 0x1
 
 ```
 searchKey: syscall.F_GETFL
-tags: [exported]
 ```
 
 ```Go
@@ -4913,7 +4699,6 @@ const F_GETFL = 0x3
 
 ```
 searchKey: syscall.F_GETLK
-tags: [exported]
 ```
 
 ```Go
@@ -4924,7 +4709,6 @@ const F_GETLK = 0x7
 
 ```
 searchKey: syscall.F_GETLKPID
-tags: [exported]
 ```
 
 ```Go
@@ -4935,7 +4719,6 @@ const F_GETLKPID = 0x42
 
 ```
 searchKey: syscall.F_GETNOSIGPIPE
-tags: [exported]
 ```
 
 ```Go
@@ -4946,7 +4729,6 @@ const F_GETNOSIGPIPE = 0x4a
 
 ```
 searchKey: syscall.F_GETOWN
-tags: [exported]
 ```
 
 ```Go
@@ -4957,7 +4739,6 @@ const F_GETOWN = 0x5
 
 ```
 searchKey: syscall.F_GETPATH
-tags: [exported]
 ```
 
 ```Go
@@ -4968,7 +4749,6 @@ const F_GETPATH = 0x32
 
 ```
 searchKey: syscall.F_GETPATH_MTMINFO
-tags: [exported]
 ```
 
 ```Go
@@ -4979,7 +4759,6 @@ const F_GETPATH_MTMINFO = 0x47
 
 ```
 searchKey: syscall.F_GETPROTECTIONCLASS
-tags: [exported]
 ```
 
 ```Go
@@ -4990,7 +4769,6 @@ const F_GETPROTECTIONCLASS = 0x3f
 
 ```
 searchKey: syscall.F_GLOBAL_NOCACHE
-tags: [exported]
 ```
 
 ```Go
@@ -5001,7 +4779,6 @@ const F_GLOBAL_NOCACHE = 0x37
 
 ```
 searchKey: syscall.F_LOG2PHYS
-tags: [exported]
 ```
 
 ```Go
@@ -5012,7 +4789,6 @@ const F_LOG2PHYS = 0x31
 
 ```
 searchKey: syscall.F_LOG2PHYS_EXT
-tags: [exported]
 ```
 
 ```Go
@@ -5023,7 +4799,6 @@ const F_LOG2PHYS_EXT = 0x41
 
 ```
 searchKey: syscall.F_MARKDEPENDENCY
-tags: [exported]
 ```
 
 ```Go
@@ -5034,7 +4809,6 @@ const F_MARKDEPENDENCY = 0x3c
 
 ```
 searchKey: syscall.F_NOCACHE
-tags: [exported]
 ```
 
 ```Go
@@ -5045,7 +4819,6 @@ const F_NOCACHE = 0x30
 
 ```
 searchKey: syscall.F_NODIRECT
-tags: [exported]
 ```
 
 ```Go
@@ -5056,7 +4829,6 @@ const F_NODIRECT = 0x3e
 
 ```
 searchKey: syscall.F_OK
-tags: [exported]
 ```
 
 ```Go
@@ -5067,7 +4839,6 @@ const F_OK = 0x0
 
 ```
 searchKey: syscall.F_PATHPKG_CHECK
-tags: [exported]
 ```
 
 ```Go
@@ -5078,7 +4849,6 @@ const F_PATHPKG_CHECK = 0x34
 
 ```
 searchKey: syscall.F_PEOFPOSMODE
-tags: [exported]
 ```
 
 ```Go
@@ -5089,7 +4859,6 @@ const F_PEOFPOSMODE = 0x3
 
 ```
 searchKey: syscall.F_PREALLOCATE
-tags: [exported]
 ```
 
 ```Go
@@ -5100,7 +4869,6 @@ const F_PREALLOCATE = 0x2a
 
 ```
 searchKey: syscall.F_RDADVISE
-tags: [exported]
 ```
 
 ```Go
@@ -5111,7 +4879,6 @@ const F_RDADVISE = 0x2c
 
 ```
 searchKey: syscall.F_RDAHEAD
-tags: [exported]
 ```
 
 ```Go
@@ -5122,7 +4889,6 @@ const F_RDAHEAD = 0x2d
 
 ```
 searchKey: syscall.F_RDLCK
-tags: [exported]
 ```
 
 ```Go
@@ -5133,7 +4899,6 @@ const F_RDLCK = 0x1
 
 ```
 searchKey: syscall.F_READBOOTSTRAP
-tags: [exported]
 ```
 
 ```Go
@@ -5144,7 +4909,6 @@ const F_READBOOTSTRAP = 0x2e
 
 ```
 searchKey: syscall.F_SETBACKINGSTORE
-tags: [exported]
 ```
 
 ```Go
@@ -5155,7 +4919,6 @@ const F_SETBACKINGSTORE = 0x46
 
 ```
 searchKey: syscall.F_SETFD
-tags: [exported]
 ```
 
 ```Go
@@ -5166,7 +4929,6 @@ const F_SETFD = 0x2
 
 ```
 searchKey: syscall.F_SETFL
-tags: [exported]
 ```
 
 ```Go
@@ -5177,7 +4939,6 @@ const F_SETFL = 0x4
 
 ```
 searchKey: syscall.F_SETLK
-tags: [exported]
 ```
 
 ```Go
@@ -5188,7 +4949,6 @@ const F_SETLK = 0x8
 
 ```
 searchKey: syscall.F_SETLKW
-tags: [exported]
 ```
 
 ```Go
@@ -5199,7 +4959,6 @@ const F_SETLKW = 0x9
 
 ```
 searchKey: syscall.F_SETNOSIGPIPE
-tags: [exported]
 ```
 
 ```Go
@@ -5210,7 +4969,6 @@ const F_SETNOSIGPIPE = 0x49
 
 ```
 searchKey: syscall.F_SETOWN
-tags: [exported]
 ```
 
 ```Go
@@ -5221,7 +4979,6 @@ const F_SETOWN = 0x6
 
 ```
 searchKey: syscall.F_SETPROTECTIONCLASS
-tags: [exported]
 ```
 
 ```Go
@@ -5232,7 +4989,6 @@ const F_SETPROTECTIONCLASS = 0x40
 
 ```
 searchKey: syscall.F_SETSIZE
-tags: [exported]
 ```
 
 ```Go
@@ -5243,7 +4999,6 @@ const F_SETSIZE = 0x2b
 
 ```
 searchKey: syscall.F_THAW_FS
-tags: [exported]
 ```
 
 ```Go
@@ -5254,7 +5009,6 @@ const F_THAW_FS = 0x36
 
 ```
 searchKey: syscall.F_UNLCK
-tags: [exported]
 ```
 
 ```Go
@@ -5265,7 +5019,6 @@ const F_UNLCK = 0x2
 
 ```
 searchKey: syscall.F_VOLPOSMODE
-tags: [exported]
 ```
 
 ```Go
@@ -5276,7 +5029,6 @@ const F_VOLPOSMODE = 0x4
 
 ```
 searchKey: syscall.F_WRITEBOOTSTRAP
-tags: [exported]
 ```
 
 ```Go
@@ -5287,7 +5039,6 @@ const F_WRITEBOOTSTRAP = 0x2f
 
 ```
 searchKey: syscall.F_WRLCK
-tags: [exported]
 ```
 
 ```Go
@@ -5298,7 +5049,6 @@ const F_WRLCK = 0x3
 
 ```
 searchKey: syscall.HUPCL
-tags: [exported]
 ```
 
 ```Go
@@ -5309,7 +5059,6 @@ const HUPCL = 0x4000
 
 ```
 searchKey: syscall.ICANON
-tags: [exported]
 ```
 
 ```Go
@@ -5320,7 +5069,6 @@ const ICANON = 0x100
 
 ```
 searchKey: syscall.ICMP6_FILTER
-tags: [exported]
 ```
 
 ```Go
@@ -5331,7 +5079,6 @@ const ICMP6_FILTER = 0x12
 
 ```
 searchKey: syscall.ICRNL
-tags: [exported]
 ```
 
 ```Go
@@ -5342,7 +5089,6 @@ const ICRNL = 0x100
 
 ```
 searchKey: syscall.IEXTEN
-tags: [exported]
 ```
 
 ```Go
@@ -5353,7 +5099,6 @@ const IEXTEN = 0x400
 
 ```
 searchKey: syscall.IFF_ALLMULTI
-tags: [exported]
 ```
 
 ```Go
@@ -5364,7 +5109,6 @@ const IFF_ALLMULTI = 0x200
 
 ```
 searchKey: syscall.IFF_ALTPHYS
-tags: [exported]
 ```
 
 ```Go
@@ -5375,7 +5119,6 @@ const IFF_ALTPHYS = 0x4000
 
 ```
 searchKey: syscall.IFF_BROADCAST
-tags: [exported]
 ```
 
 ```Go
@@ -5386,7 +5129,6 @@ const IFF_BROADCAST = 0x2
 
 ```
 searchKey: syscall.IFF_DEBUG
-tags: [exported]
 ```
 
 ```Go
@@ -5397,7 +5139,6 @@ const IFF_DEBUG = 0x4
 
 ```
 searchKey: syscall.IFF_LINK0
-tags: [exported]
 ```
 
 ```Go
@@ -5408,7 +5149,6 @@ const IFF_LINK0 = 0x1000
 
 ```
 searchKey: syscall.IFF_LINK1
-tags: [exported]
 ```
 
 ```Go
@@ -5419,7 +5159,6 @@ const IFF_LINK1 = 0x2000
 
 ```
 searchKey: syscall.IFF_LINK2
-tags: [exported]
 ```
 
 ```Go
@@ -5430,7 +5169,6 @@ const IFF_LINK2 = 0x4000
 
 ```
 searchKey: syscall.IFF_LOOPBACK
-tags: [exported]
 ```
 
 ```Go
@@ -5441,7 +5179,6 @@ const IFF_LOOPBACK = 0x8
 
 ```
 searchKey: syscall.IFF_MULTICAST
-tags: [exported]
 ```
 
 ```Go
@@ -5452,7 +5189,6 @@ const IFF_MULTICAST = 0x8000
 
 ```
 searchKey: syscall.IFF_NOARP
-tags: [exported]
 ```
 
 ```Go
@@ -5463,7 +5199,6 @@ const IFF_NOARP = 0x80
 
 ```
 searchKey: syscall.IFF_NOTRAILERS
-tags: [exported]
 ```
 
 ```Go
@@ -5474,7 +5209,6 @@ const IFF_NOTRAILERS = 0x20
 
 ```
 searchKey: syscall.IFF_OACTIVE
-tags: [exported]
 ```
 
 ```Go
@@ -5485,7 +5219,6 @@ const IFF_OACTIVE = 0x400
 
 ```
 searchKey: syscall.IFF_POINTOPOINT
-tags: [exported]
 ```
 
 ```Go
@@ -5496,7 +5229,6 @@ const IFF_POINTOPOINT = 0x10
 
 ```
 searchKey: syscall.IFF_PROMISC
-tags: [exported]
 ```
 
 ```Go
@@ -5507,7 +5239,6 @@ const IFF_PROMISC = 0x100
 
 ```
 searchKey: syscall.IFF_RUNNING
-tags: [exported]
 ```
 
 ```Go
@@ -5518,7 +5249,6 @@ const IFF_RUNNING = 0x40
 
 ```
 searchKey: syscall.IFF_SIMPLEX
-tags: [exported]
 ```
 
 ```Go
@@ -5529,7 +5259,6 @@ const IFF_SIMPLEX = 0x800
 
 ```
 searchKey: syscall.IFF_UP
-tags: [exported]
 ```
 
 ```Go
@@ -5540,7 +5269,6 @@ const IFF_UP = 0x1
 
 ```
 searchKey: syscall.IFNAMSIZ
-tags: [exported]
 ```
 
 ```Go
@@ -5551,7 +5279,6 @@ const IFNAMSIZ = 0x10
 
 ```
 searchKey: syscall.IFT_1822
-tags: [exported]
 ```
 
 ```Go
@@ -5562,7 +5289,6 @@ const IFT_1822 = 0x2
 
 ```
 searchKey: syscall.IFT_AAL5
-tags: [exported]
 ```
 
 ```Go
@@ -5573,7 +5299,6 @@ const IFT_AAL5 = 0x31
 
 ```
 searchKey: syscall.IFT_ARCNET
-tags: [exported]
 ```
 
 ```Go
@@ -5584,7 +5309,6 @@ const IFT_ARCNET = 0x23
 
 ```
 searchKey: syscall.IFT_ARCNETPLUS
-tags: [exported]
 ```
 
 ```Go
@@ -5595,7 +5319,6 @@ const IFT_ARCNETPLUS = 0x24
 
 ```
 searchKey: syscall.IFT_ATM
-tags: [exported]
 ```
 
 ```Go
@@ -5606,7 +5329,6 @@ const IFT_ATM = 0x25
 
 ```
 searchKey: syscall.IFT_BRIDGE
-tags: [exported]
 ```
 
 ```Go
@@ -5617,7 +5339,6 @@ const IFT_BRIDGE = 0xd1
 
 ```
 searchKey: syscall.IFT_CARP
-tags: [exported]
 ```
 
 ```Go
@@ -5628,7 +5349,6 @@ const IFT_CARP = 0xf8
 
 ```
 searchKey: syscall.IFT_CELLULAR
-tags: [exported]
 ```
 
 ```Go
@@ -5639,7 +5359,6 @@ const IFT_CELLULAR = 0xff
 
 ```
 searchKey: syscall.IFT_CEPT
-tags: [exported]
 ```
 
 ```Go
@@ -5650,7 +5369,6 @@ const IFT_CEPT = 0x13
 
 ```
 searchKey: syscall.IFT_DS3
-tags: [exported]
 ```
 
 ```Go
@@ -5661,7 +5379,6 @@ const IFT_DS3 = 0x1e
 
 ```
 searchKey: syscall.IFT_ENC
-tags: [exported]
 ```
 
 ```Go
@@ -5672,7 +5389,6 @@ const IFT_ENC = 0xf4
 
 ```
 searchKey: syscall.IFT_EON
-tags: [exported]
 ```
 
 ```Go
@@ -5683,7 +5399,6 @@ const IFT_EON = 0x19
 
 ```
 searchKey: syscall.IFT_ETHER
-tags: [exported]
 ```
 
 ```Go
@@ -5694,7 +5409,6 @@ const IFT_ETHER = 0x6
 
 ```
 searchKey: syscall.IFT_FAITH
-tags: [exported]
 ```
 
 ```Go
@@ -5705,7 +5419,6 @@ const IFT_FAITH = 0x38
 
 ```
 searchKey: syscall.IFT_FDDI
-tags: [exported]
 ```
 
 ```Go
@@ -5716,7 +5429,6 @@ const IFT_FDDI = 0xf
 
 ```
 searchKey: syscall.IFT_FRELAY
-tags: [exported]
 ```
 
 ```Go
@@ -5727,7 +5439,6 @@ const IFT_FRELAY = 0x20
 
 ```
 searchKey: syscall.IFT_FRELAYDCE
-tags: [exported]
 ```
 
 ```Go
@@ -5738,7 +5449,6 @@ const IFT_FRELAYDCE = 0x2c
 
 ```
 searchKey: syscall.IFT_GIF
-tags: [exported]
 ```
 
 ```Go
@@ -5749,7 +5459,6 @@ const IFT_GIF = 0x37
 
 ```
 searchKey: syscall.IFT_HDH1822
-tags: [exported]
 ```
 
 ```Go
@@ -5760,7 +5469,6 @@ const IFT_HDH1822 = 0x3
 
 ```
 searchKey: syscall.IFT_HIPPI
-tags: [exported]
 ```
 
 ```Go
@@ -5771,7 +5479,6 @@ const IFT_HIPPI = 0x2f
 
 ```
 searchKey: syscall.IFT_HSSI
-tags: [exported]
 ```
 
 ```Go
@@ -5782,7 +5489,6 @@ const IFT_HSSI = 0x2e
 
 ```
 searchKey: syscall.IFT_HY
-tags: [exported]
 ```
 
 ```Go
@@ -5793,7 +5499,6 @@ const IFT_HY = 0xe
 
 ```
 searchKey: syscall.IFT_IEEE1394
-tags: [exported]
 ```
 
 ```Go
@@ -5804,7 +5509,6 @@ const IFT_IEEE1394 = 0x90
 
 ```
 searchKey: syscall.IFT_IEEE8023ADLAG
-tags: [exported]
 ```
 
 ```Go
@@ -5815,7 +5519,6 @@ const IFT_IEEE8023ADLAG = 0x88
 
 ```
 searchKey: syscall.IFT_ISDNBASIC
-tags: [exported]
 ```
 
 ```Go
@@ -5826,7 +5529,6 @@ const IFT_ISDNBASIC = 0x14
 
 ```
 searchKey: syscall.IFT_ISDNPRIMARY
-tags: [exported]
 ```
 
 ```Go
@@ -5837,7 +5539,6 @@ const IFT_ISDNPRIMARY = 0x15
 
 ```
 searchKey: syscall.IFT_ISO88022LLC
-tags: [exported]
 ```
 
 ```Go
@@ -5848,7 +5549,6 @@ const IFT_ISO88022LLC = 0x29
 
 ```
 searchKey: syscall.IFT_ISO88023
-tags: [exported]
 ```
 
 ```Go
@@ -5859,7 +5559,6 @@ const IFT_ISO88023 = 0x7
 
 ```
 searchKey: syscall.IFT_ISO88024
-tags: [exported]
 ```
 
 ```Go
@@ -5870,7 +5569,6 @@ const IFT_ISO88024 = 0x8
 
 ```
 searchKey: syscall.IFT_ISO88025
-tags: [exported]
 ```
 
 ```Go
@@ -5881,7 +5579,6 @@ const IFT_ISO88025 = 0x9
 
 ```
 searchKey: syscall.IFT_ISO88026
-tags: [exported]
 ```
 
 ```Go
@@ -5892,7 +5589,6 @@ const IFT_ISO88026 = 0xa
 
 ```
 searchKey: syscall.IFT_L2VLAN
-tags: [exported]
 ```
 
 ```Go
@@ -5903,7 +5599,6 @@ const IFT_L2VLAN = 0x87
 
 ```
 searchKey: syscall.IFT_LAPB
-tags: [exported]
 ```
 
 ```Go
@@ -5914,7 +5609,6 @@ const IFT_LAPB = 0x10
 
 ```
 searchKey: syscall.IFT_LOCALTALK
-tags: [exported]
 ```
 
 ```Go
@@ -5925,7 +5619,6 @@ const IFT_LOCALTALK = 0x2a
 
 ```
 searchKey: syscall.IFT_LOOP
-tags: [exported]
 ```
 
 ```Go
@@ -5936,7 +5629,6 @@ const IFT_LOOP = 0x18
 
 ```
 searchKey: syscall.IFT_MIOX25
-tags: [exported]
 ```
 
 ```Go
@@ -5947,7 +5639,6 @@ const IFT_MIOX25 = 0x26
 
 ```
 searchKey: syscall.IFT_MODEM
-tags: [exported]
 ```
 
 ```Go
@@ -5958,7 +5649,6 @@ const IFT_MODEM = 0x30
 
 ```
 searchKey: syscall.IFT_NSIP
-tags: [exported]
 ```
 
 ```Go
@@ -5969,7 +5659,6 @@ const IFT_NSIP = 0x1b
 
 ```
 searchKey: syscall.IFT_OTHER
-tags: [exported]
 ```
 
 ```Go
@@ -5980,7 +5669,6 @@ const IFT_OTHER = 0x1
 
 ```
 searchKey: syscall.IFT_P10
-tags: [exported]
 ```
 
 ```Go
@@ -5991,7 +5679,6 @@ const IFT_P10 = 0xc
 
 ```
 searchKey: syscall.IFT_P80
-tags: [exported]
 ```
 
 ```Go
@@ -6002,7 +5689,6 @@ const IFT_P80 = 0xd
 
 ```
 searchKey: syscall.IFT_PARA
-tags: [exported]
 ```
 
 ```Go
@@ -6013,7 +5699,6 @@ const IFT_PARA = 0x22
 
 ```
 searchKey: syscall.IFT_PDP
-tags: [exported]
 ```
 
 ```Go
@@ -6024,7 +5709,6 @@ const IFT_PDP = 0xff
 
 ```
 searchKey: syscall.IFT_PFLOG
-tags: [exported]
 ```
 
 ```Go
@@ -6035,7 +5719,6 @@ const IFT_PFLOG = 0xf5
 
 ```
 searchKey: syscall.IFT_PFSYNC
-tags: [exported]
 ```
 
 ```Go
@@ -6046,7 +5729,6 @@ const IFT_PFSYNC = 0xf6
 
 ```
 searchKey: syscall.IFT_PPP
-tags: [exported]
 ```
 
 ```Go
@@ -6057,7 +5739,6 @@ const IFT_PPP = 0x17
 
 ```
 searchKey: syscall.IFT_PROPMUX
-tags: [exported]
 ```
 
 ```Go
@@ -6068,7 +5749,6 @@ const IFT_PROPMUX = 0x36
 
 ```
 searchKey: syscall.IFT_PROPVIRTUAL
-tags: [exported]
 ```
 
 ```Go
@@ -6079,7 +5759,6 @@ const IFT_PROPVIRTUAL = 0x35
 
 ```
 searchKey: syscall.IFT_PTPSERIAL
-tags: [exported]
 ```
 
 ```Go
@@ -6090,7 +5769,6 @@ const IFT_PTPSERIAL = 0x16
 
 ```
 searchKey: syscall.IFT_RS232
-tags: [exported]
 ```
 
 ```Go
@@ -6101,7 +5779,6 @@ const IFT_RS232 = 0x21
 
 ```
 searchKey: syscall.IFT_SDLC
-tags: [exported]
 ```
 
 ```Go
@@ -6112,7 +5789,6 @@ const IFT_SDLC = 0x11
 
 ```
 searchKey: syscall.IFT_SIP
-tags: [exported]
 ```
 
 ```Go
@@ -6123,7 +5799,6 @@ const IFT_SIP = 0x1f
 
 ```
 searchKey: syscall.IFT_SLIP
-tags: [exported]
 ```
 
 ```Go
@@ -6134,7 +5809,6 @@ const IFT_SLIP = 0x1c
 
 ```
 searchKey: syscall.IFT_SMDSDXI
-tags: [exported]
 ```
 
 ```Go
@@ -6145,7 +5819,6 @@ const IFT_SMDSDXI = 0x2b
 
 ```
 searchKey: syscall.IFT_SMDSICIP
-tags: [exported]
 ```
 
 ```Go
@@ -6156,7 +5829,6 @@ const IFT_SMDSICIP = 0x34
 
 ```
 searchKey: syscall.IFT_SONET
-tags: [exported]
 ```
 
 ```Go
@@ -6167,7 +5839,6 @@ const IFT_SONET = 0x27
 
 ```
 searchKey: syscall.IFT_SONETPATH
-tags: [exported]
 ```
 
 ```Go
@@ -6178,7 +5849,6 @@ const IFT_SONETPATH = 0x32
 
 ```
 searchKey: syscall.IFT_SONETVT
-tags: [exported]
 ```
 
 ```Go
@@ -6189,7 +5859,6 @@ const IFT_SONETVT = 0x33
 
 ```
 searchKey: syscall.IFT_STARLAN
-tags: [exported]
 ```
 
 ```Go
@@ -6200,7 +5869,6 @@ const IFT_STARLAN = 0xb
 
 ```
 searchKey: syscall.IFT_STF
-tags: [exported]
 ```
 
 ```Go
@@ -6211,7 +5879,6 @@ const IFT_STF = 0x39
 
 ```
 searchKey: syscall.IFT_T1
-tags: [exported]
 ```
 
 ```Go
@@ -6222,7 +5889,6 @@ const IFT_T1 = 0x12
 
 ```
 searchKey: syscall.IFT_ULTRA
-tags: [exported]
 ```
 
 ```Go
@@ -6233,7 +5899,6 @@ const IFT_ULTRA = 0x1d
 
 ```
 searchKey: syscall.IFT_V35
-tags: [exported]
 ```
 
 ```Go
@@ -6244,7 +5909,6 @@ const IFT_V35 = 0x2d
 
 ```
 searchKey: syscall.IFT_X25
-tags: [exported]
 ```
 
 ```Go
@@ -6255,7 +5919,6 @@ const IFT_X25 = 0x5
 
 ```
 searchKey: syscall.IFT_X25DDN
-tags: [exported]
 ```
 
 ```Go
@@ -6266,7 +5929,6 @@ const IFT_X25DDN = 0x4
 
 ```
 searchKey: syscall.IFT_X25PLE
-tags: [exported]
 ```
 
 ```Go
@@ -6277,7 +5939,6 @@ const IFT_X25PLE = 0x28
 
 ```
 searchKey: syscall.IFT_XETHER
-tags: [exported]
 ```
 
 ```Go
@@ -6288,7 +5949,6 @@ const IFT_XETHER = 0x1a
 
 ```
 searchKey: syscall.IGNBRK
-tags: [exported]
 ```
 
 ```Go
@@ -6299,7 +5959,6 @@ const IGNBRK = 0x1
 
 ```
 searchKey: syscall.IGNCR
-tags: [exported]
 ```
 
 ```Go
@@ -6310,7 +5969,6 @@ const IGNCR = 0x80
 
 ```
 searchKey: syscall.IGNPAR
-tags: [exported]
 ```
 
 ```Go
@@ -6321,7 +5979,6 @@ const IGNPAR = 0x4
 
 ```
 searchKey: syscall.IMAXBEL
-tags: [exported]
 ```
 
 ```Go
@@ -6332,7 +5989,6 @@ const IMAXBEL = 0x2000
 
 ```
 searchKey: syscall.INLCR
-tags: [exported]
 ```
 
 ```Go
@@ -6343,7 +5999,6 @@ const INLCR = 0x40
 
 ```
 searchKey: syscall.INPCK
-tags: [exported]
 ```
 
 ```Go
@@ -6354,7 +6009,6 @@ const INPCK = 0x10
 
 ```
 searchKey: syscall.IN_CLASSA_HOST
-tags: [exported]
 ```
 
 ```Go
@@ -6365,7 +6019,6 @@ const IN_CLASSA_HOST = 0xffffff
 
 ```
 searchKey: syscall.IN_CLASSA_MAX
-tags: [exported]
 ```
 
 ```Go
@@ -6376,7 +6029,6 @@ const IN_CLASSA_MAX = 0x80
 
 ```
 searchKey: syscall.IN_CLASSA_NET
-tags: [exported]
 ```
 
 ```Go
@@ -6387,7 +6039,6 @@ const IN_CLASSA_NET = 0xff000000
 
 ```
 searchKey: syscall.IN_CLASSA_NSHIFT
-tags: [exported]
 ```
 
 ```Go
@@ -6398,7 +6049,6 @@ const IN_CLASSA_NSHIFT = 0x18
 
 ```
 searchKey: syscall.IN_CLASSB_HOST
-tags: [exported]
 ```
 
 ```Go
@@ -6409,7 +6059,6 @@ const IN_CLASSB_HOST = 0xffff
 
 ```
 searchKey: syscall.IN_CLASSB_MAX
-tags: [exported]
 ```
 
 ```Go
@@ -6420,7 +6069,6 @@ const IN_CLASSB_MAX = 0x10000
 
 ```
 searchKey: syscall.IN_CLASSB_NET
-tags: [exported]
 ```
 
 ```Go
@@ -6431,7 +6079,6 @@ const IN_CLASSB_NET = 0xffff0000
 
 ```
 searchKey: syscall.IN_CLASSB_NSHIFT
-tags: [exported]
 ```
 
 ```Go
@@ -6442,7 +6089,6 @@ const IN_CLASSB_NSHIFT = 0x10
 
 ```
 searchKey: syscall.IN_CLASSC_HOST
-tags: [exported]
 ```
 
 ```Go
@@ -6453,7 +6099,6 @@ const IN_CLASSC_HOST = 0xff
 
 ```
 searchKey: syscall.IN_CLASSC_NET
-tags: [exported]
 ```
 
 ```Go
@@ -6464,7 +6109,6 @@ const IN_CLASSC_NET = 0xffffff00
 
 ```
 searchKey: syscall.IN_CLASSC_NSHIFT
-tags: [exported]
 ```
 
 ```Go
@@ -6475,7 +6119,6 @@ const IN_CLASSC_NSHIFT = 0x8
 
 ```
 searchKey: syscall.IN_CLASSD_HOST
-tags: [exported]
 ```
 
 ```Go
@@ -6486,7 +6129,6 @@ const IN_CLASSD_HOST = 0xfffffff
 
 ```
 searchKey: syscall.IN_CLASSD_NET
-tags: [exported]
 ```
 
 ```Go
@@ -6497,7 +6139,6 @@ const IN_CLASSD_NET = 0xf0000000
 
 ```
 searchKey: syscall.IN_CLASSD_NSHIFT
-tags: [exported]
 ```
 
 ```Go
@@ -6508,7 +6149,6 @@ const IN_CLASSD_NSHIFT = 0x1c
 
 ```
 searchKey: syscall.IN_LINKLOCALNETNUM
-tags: [exported]
 ```
 
 ```Go
@@ -6519,7 +6159,6 @@ const IN_LINKLOCALNETNUM = 0xa9fe0000
 
 ```
 searchKey: syscall.IN_LOOPBACKNET
-tags: [exported]
 ```
 
 ```Go
@@ -6530,7 +6169,6 @@ const IN_LOOPBACKNET = 0x7f
 
 ```
 searchKey: syscall.IPPROTO_3PC
-tags: [exported]
 ```
 
 ```Go
@@ -6541,7 +6179,6 @@ const IPPROTO_3PC = 0x22
 
 ```
 searchKey: syscall.IPPROTO_ADFS
-tags: [exported]
 ```
 
 ```Go
@@ -6552,7 +6189,6 @@ const IPPROTO_ADFS = 0x44
 
 ```
 searchKey: syscall.IPPROTO_AH
-tags: [exported]
 ```
 
 ```Go
@@ -6563,7 +6199,6 @@ const IPPROTO_AH = 0x33
 
 ```
 searchKey: syscall.IPPROTO_AHIP
-tags: [exported]
 ```
 
 ```Go
@@ -6574,7 +6209,6 @@ const IPPROTO_AHIP = 0x3d
 
 ```
 searchKey: syscall.IPPROTO_APES
-tags: [exported]
 ```
 
 ```Go
@@ -6585,7 +6219,6 @@ const IPPROTO_APES = 0x63
 
 ```
 searchKey: syscall.IPPROTO_ARGUS
-tags: [exported]
 ```
 
 ```Go
@@ -6596,7 +6229,6 @@ const IPPROTO_ARGUS = 0xd
 
 ```
 searchKey: syscall.IPPROTO_AX25
-tags: [exported]
 ```
 
 ```Go
@@ -6607,7 +6239,6 @@ const IPPROTO_AX25 = 0x5d
 
 ```
 searchKey: syscall.IPPROTO_BHA
-tags: [exported]
 ```
 
 ```Go
@@ -6618,7 +6249,6 @@ const IPPROTO_BHA = 0x31
 
 ```
 searchKey: syscall.IPPROTO_BLT
-tags: [exported]
 ```
 
 ```Go
@@ -6629,7 +6259,6 @@ const IPPROTO_BLT = 0x1e
 
 ```
 searchKey: syscall.IPPROTO_BRSATMON
-tags: [exported]
 ```
 
 ```Go
@@ -6640,7 +6269,6 @@ const IPPROTO_BRSATMON = 0x4c
 
 ```
 searchKey: syscall.IPPROTO_CFTP
-tags: [exported]
 ```
 
 ```Go
@@ -6651,7 +6279,6 @@ const IPPROTO_CFTP = 0x3e
 
 ```
 searchKey: syscall.IPPROTO_CHAOS
-tags: [exported]
 ```
 
 ```Go
@@ -6662,7 +6289,6 @@ const IPPROTO_CHAOS = 0x10
 
 ```
 searchKey: syscall.IPPROTO_CMTP
-tags: [exported]
 ```
 
 ```Go
@@ -6673,7 +6299,6 @@ const IPPROTO_CMTP = 0x26
 
 ```
 searchKey: syscall.IPPROTO_CPHB
-tags: [exported]
 ```
 
 ```Go
@@ -6684,7 +6309,6 @@ const IPPROTO_CPHB = 0x49
 
 ```
 searchKey: syscall.IPPROTO_CPNX
-tags: [exported]
 ```
 
 ```Go
@@ -6695,7 +6319,6 @@ const IPPROTO_CPNX = 0x48
 
 ```
 searchKey: syscall.IPPROTO_DDP
-tags: [exported]
 ```
 
 ```Go
@@ -6706,7 +6329,6 @@ const IPPROTO_DDP = 0x25
 
 ```
 searchKey: syscall.IPPROTO_DGP
-tags: [exported]
 ```
 
 ```Go
@@ -6717,7 +6339,6 @@ const IPPROTO_DGP = 0x56
 
 ```
 searchKey: syscall.IPPROTO_DIVERT
-tags: [exported]
 ```
 
 ```Go
@@ -6728,7 +6349,6 @@ const IPPROTO_DIVERT = 0xfe
 
 ```
 searchKey: syscall.IPPROTO_DONE
-tags: [exported]
 ```
 
 ```Go
@@ -6739,7 +6359,6 @@ const IPPROTO_DONE = 0x101
 
 ```
 searchKey: syscall.IPPROTO_DSTOPTS
-tags: [exported]
 ```
 
 ```Go
@@ -6750,7 +6369,6 @@ const IPPROTO_DSTOPTS = 0x3c
 
 ```
 searchKey: syscall.IPPROTO_EGP
-tags: [exported]
 ```
 
 ```Go
@@ -6761,7 +6379,6 @@ const IPPROTO_EGP = 0x8
 
 ```
 searchKey: syscall.IPPROTO_EMCON
-tags: [exported]
 ```
 
 ```Go
@@ -6772,7 +6389,6 @@ const IPPROTO_EMCON = 0xe
 
 ```
 searchKey: syscall.IPPROTO_ENCAP
-tags: [exported]
 ```
 
 ```Go
@@ -6783,7 +6399,6 @@ const IPPROTO_ENCAP = 0x62
 
 ```
 searchKey: syscall.IPPROTO_EON
-tags: [exported]
 ```
 
 ```Go
@@ -6794,7 +6409,6 @@ const IPPROTO_EON = 0x50
 
 ```
 searchKey: syscall.IPPROTO_ESP
-tags: [exported]
 ```
 
 ```Go
@@ -6805,7 +6419,6 @@ const IPPROTO_ESP = 0x32
 
 ```
 searchKey: syscall.IPPROTO_ETHERIP
-tags: [exported]
 ```
 
 ```Go
@@ -6816,7 +6429,6 @@ const IPPROTO_ETHERIP = 0x61
 
 ```
 searchKey: syscall.IPPROTO_FRAGMENT
-tags: [exported]
 ```
 
 ```Go
@@ -6827,7 +6439,6 @@ const IPPROTO_FRAGMENT = 0x2c
 
 ```
 searchKey: syscall.IPPROTO_GGP
-tags: [exported]
 ```
 
 ```Go
@@ -6838,7 +6449,6 @@ const IPPROTO_GGP = 0x3
 
 ```
 searchKey: syscall.IPPROTO_GMTP
-tags: [exported]
 ```
 
 ```Go
@@ -6849,7 +6459,6 @@ const IPPROTO_GMTP = 0x64
 
 ```
 searchKey: syscall.IPPROTO_GRE
-tags: [exported]
 ```
 
 ```Go
@@ -6860,7 +6469,6 @@ const IPPROTO_GRE = 0x2f
 
 ```
 searchKey: syscall.IPPROTO_HELLO
-tags: [exported]
 ```
 
 ```Go
@@ -6871,7 +6479,6 @@ const IPPROTO_HELLO = 0x3f
 
 ```
 searchKey: syscall.IPPROTO_HMP
-tags: [exported]
 ```
 
 ```Go
@@ -6882,7 +6489,6 @@ const IPPROTO_HMP = 0x14
 
 ```
 searchKey: syscall.IPPROTO_HOPOPTS
-tags: [exported]
 ```
 
 ```Go
@@ -6893,7 +6499,6 @@ const IPPROTO_HOPOPTS = 0x0
 
 ```
 searchKey: syscall.IPPROTO_ICMP
-tags: [exported]
 ```
 
 ```Go
@@ -6904,7 +6509,6 @@ const IPPROTO_ICMP = 0x1
 
 ```
 searchKey: syscall.IPPROTO_ICMPV6
-tags: [exported]
 ```
 
 ```Go
@@ -6915,7 +6519,6 @@ const IPPROTO_ICMPV6 = 0x3a
 
 ```
 searchKey: syscall.IPPROTO_IDP
-tags: [exported]
 ```
 
 ```Go
@@ -6926,7 +6529,6 @@ const IPPROTO_IDP = 0x16
 
 ```
 searchKey: syscall.IPPROTO_IDPR
-tags: [exported]
 ```
 
 ```Go
@@ -6937,7 +6539,6 @@ const IPPROTO_IDPR = 0x23
 
 ```
 searchKey: syscall.IPPROTO_IDRP
-tags: [exported]
 ```
 
 ```Go
@@ -6948,7 +6549,6 @@ const IPPROTO_IDRP = 0x2d
 
 ```
 searchKey: syscall.IPPROTO_IGMP
-tags: [exported]
 ```
 
 ```Go
@@ -6959,7 +6559,6 @@ const IPPROTO_IGMP = 0x2
 
 ```
 searchKey: syscall.IPPROTO_IGP
-tags: [exported]
 ```
 
 ```Go
@@ -6970,7 +6569,6 @@ const IPPROTO_IGP = 0x55
 
 ```
 searchKey: syscall.IPPROTO_IGRP
-tags: [exported]
 ```
 
 ```Go
@@ -6981,7 +6579,6 @@ const IPPROTO_IGRP = 0x58
 
 ```
 searchKey: syscall.IPPROTO_IL
-tags: [exported]
 ```
 
 ```Go
@@ -6992,7 +6589,6 @@ const IPPROTO_IL = 0x28
 
 ```
 searchKey: syscall.IPPROTO_INLSP
-tags: [exported]
 ```
 
 ```Go
@@ -7003,7 +6599,6 @@ const IPPROTO_INLSP = 0x34
 
 ```
 searchKey: syscall.IPPROTO_INP
-tags: [exported]
 ```
 
 ```Go
@@ -7014,7 +6609,6 @@ const IPPROTO_INP = 0x20
 
 ```
 searchKey: syscall.IPPROTO_IP
-tags: [exported]
 ```
 
 ```Go
@@ -7025,7 +6619,6 @@ const IPPROTO_IP = 0x0
 
 ```
 searchKey: syscall.IPPROTO_IPCOMP
-tags: [exported]
 ```
 
 ```Go
@@ -7036,7 +6629,6 @@ const IPPROTO_IPCOMP = 0x6c
 
 ```
 searchKey: syscall.IPPROTO_IPCV
-tags: [exported]
 ```
 
 ```Go
@@ -7047,7 +6639,6 @@ const IPPROTO_IPCV = 0x47
 
 ```
 searchKey: syscall.IPPROTO_IPEIP
-tags: [exported]
 ```
 
 ```Go
@@ -7058,7 +6649,6 @@ const IPPROTO_IPEIP = 0x5e
 
 ```
 searchKey: syscall.IPPROTO_IPIP
-tags: [exported]
 ```
 
 ```Go
@@ -7069,7 +6659,6 @@ const IPPROTO_IPIP = 0x4
 
 ```
 searchKey: syscall.IPPROTO_IPPC
-tags: [exported]
 ```
 
 ```Go
@@ -7080,7 +6669,6 @@ const IPPROTO_IPPC = 0x43
 
 ```
 searchKey: syscall.IPPROTO_IPV4
-tags: [exported]
 ```
 
 ```Go
@@ -7091,7 +6679,6 @@ const IPPROTO_IPV4 = 0x4
 
 ```
 searchKey: syscall.IPPROTO_IPV6
-tags: [exported]
 ```
 
 ```Go
@@ -7102,7 +6689,6 @@ const IPPROTO_IPV6 = 0x29
 
 ```
 searchKey: syscall.IPPROTO_IRTP
-tags: [exported]
 ```
 
 ```Go
@@ -7113,7 +6699,6 @@ const IPPROTO_IRTP = 0x1c
 
 ```
 searchKey: syscall.IPPROTO_KRYPTOLAN
-tags: [exported]
 ```
 
 ```Go
@@ -7124,7 +6709,6 @@ const IPPROTO_KRYPTOLAN = 0x41
 
 ```
 searchKey: syscall.IPPROTO_LARP
-tags: [exported]
 ```
 
 ```Go
@@ -7135,7 +6719,6 @@ const IPPROTO_LARP = 0x5b
 
 ```
 searchKey: syscall.IPPROTO_LEAF1
-tags: [exported]
 ```
 
 ```Go
@@ -7146,7 +6729,6 @@ const IPPROTO_LEAF1 = 0x19
 
 ```
 searchKey: syscall.IPPROTO_LEAF2
-tags: [exported]
 ```
 
 ```Go
@@ -7157,7 +6739,6 @@ const IPPROTO_LEAF2 = 0x1a
 
 ```
 searchKey: syscall.IPPROTO_MAX
-tags: [exported]
 ```
 
 ```Go
@@ -7168,7 +6749,6 @@ const IPPROTO_MAX = 0x100
 
 ```
 searchKey: syscall.IPPROTO_MAXID
-tags: [exported]
 ```
 
 ```Go
@@ -7179,7 +6759,6 @@ const IPPROTO_MAXID = 0x34
 
 ```
 searchKey: syscall.IPPROTO_MEAS
-tags: [exported]
 ```
 
 ```Go
@@ -7190,7 +6769,6 @@ const IPPROTO_MEAS = 0x13
 
 ```
 searchKey: syscall.IPPROTO_MHRP
-tags: [exported]
 ```
 
 ```Go
@@ -7201,7 +6779,6 @@ const IPPROTO_MHRP = 0x30
 
 ```
 searchKey: syscall.IPPROTO_MICP
-tags: [exported]
 ```
 
 ```Go
@@ -7212,7 +6789,6 @@ const IPPROTO_MICP = 0x5f
 
 ```
 searchKey: syscall.IPPROTO_MTP
-tags: [exported]
 ```
 
 ```Go
@@ -7223,7 +6799,6 @@ const IPPROTO_MTP = 0x5c
 
 ```
 searchKey: syscall.IPPROTO_MUX
-tags: [exported]
 ```
 
 ```Go
@@ -7234,7 +6809,6 @@ const IPPROTO_MUX = 0x12
 
 ```
 searchKey: syscall.IPPROTO_ND
-tags: [exported]
 ```
 
 ```Go
@@ -7245,7 +6819,6 @@ const IPPROTO_ND = 0x4d
 
 ```
 searchKey: syscall.IPPROTO_NHRP
-tags: [exported]
 ```
 
 ```Go
@@ -7256,7 +6829,6 @@ const IPPROTO_NHRP = 0x36
 
 ```
 searchKey: syscall.IPPROTO_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -7267,7 +6839,6 @@ const IPPROTO_NONE = 0x3b
 
 ```
 searchKey: syscall.IPPROTO_NSP
-tags: [exported]
 ```
 
 ```Go
@@ -7278,7 +6849,6 @@ const IPPROTO_NSP = 0x1f
 
 ```
 searchKey: syscall.IPPROTO_NVPII
-tags: [exported]
 ```
 
 ```Go
@@ -7289,7 +6859,6 @@ const IPPROTO_NVPII = 0xb
 
 ```
 searchKey: syscall.IPPROTO_OSPFIGP
-tags: [exported]
 ```
 
 ```Go
@@ -7300,7 +6869,6 @@ const IPPROTO_OSPFIGP = 0x59
 
 ```
 searchKey: syscall.IPPROTO_PGM
-tags: [exported]
 ```
 
 ```Go
@@ -7311,7 +6879,6 @@ const IPPROTO_PGM = 0x71
 
 ```
 searchKey: syscall.IPPROTO_PIGP
-tags: [exported]
 ```
 
 ```Go
@@ -7322,7 +6889,6 @@ const IPPROTO_PIGP = 0x9
 
 ```
 searchKey: syscall.IPPROTO_PIM
-tags: [exported]
 ```
 
 ```Go
@@ -7333,7 +6899,6 @@ const IPPROTO_PIM = 0x67
 
 ```
 searchKey: syscall.IPPROTO_PRM
-tags: [exported]
 ```
 
 ```Go
@@ -7344,7 +6909,6 @@ const IPPROTO_PRM = 0x15
 
 ```
 searchKey: syscall.IPPROTO_PUP
-tags: [exported]
 ```
 
 ```Go
@@ -7355,7 +6919,6 @@ const IPPROTO_PUP = 0xc
 
 ```
 searchKey: syscall.IPPROTO_PVP
-tags: [exported]
 ```
 
 ```Go
@@ -7366,7 +6929,6 @@ const IPPROTO_PVP = 0x4b
 
 ```
 searchKey: syscall.IPPROTO_RAW
-tags: [exported]
 ```
 
 ```Go
@@ -7377,7 +6939,6 @@ const IPPROTO_RAW = 0xff
 
 ```
 searchKey: syscall.IPPROTO_RCCMON
-tags: [exported]
 ```
 
 ```Go
@@ -7388,7 +6949,6 @@ const IPPROTO_RCCMON = 0xa
 
 ```
 searchKey: syscall.IPPROTO_RDP
-tags: [exported]
 ```
 
 ```Go
@@ -7399,7 +6959,6 @@ const IPPROTO_RDP = 0x1b
 
 ```
 searchKey: syscall.IPPROTO_ROUTING
-tags: [exported]
 ```
 
 ```Go
@@ -7410,7 +6969,6 @@ const IPPROTO_ROUTING = 0x2b
 
 ```
 searchKey: syscall.IPPROTO_RSVP
-tags: [exported]
 ```
 
 ```Go
@@ -7421,7 +6979,6 @@ const IPPROTO_RSVP = 0x2e
 
 ```
 searchKey: syscall.IPPROTO_RVD
-tags: [exported]
 ```
 
 ```Go
@@ -7432,7 +6989,6 @@ const IPPROTO_RVD = 0x42
 
 ```
 searchKey: syscall.IPPROTO_SATEXPAK
-tags: [exported]
 ```
 
 ```Go
@@ -7443,7 +6999,6 @@ const IPPROTO_SATEXPAK = 0x40
 
 ```
 searchKey: syscall.IPPROTO_SATMON
-tags: [exported]
 ```
 
 ```Go
@@ -7454,7 +7009,6 @@ const IPPROTO_SATMON = 0x45
 
 ```
 searchKey: syscall.IPPROTO_SCCSP
-tags: [exported]
 ```
 
 ```Go
@@ -7465,7 +7019,6 @@ const IPPROTO_SCCSP = 0x60
 
 ```
 searchKey: syscall.IPPROTO_SCTP
-tags: [exported]
 ```
 
 ```Go
@@ -7476,7 +7029,6 @@ const IPPROTO_SCTP = 0x84
 
 ```
 searchKey: syscall.IPPROTO_SDRP
-tags: [exported]
 ```
 
 ```Go
@@ -7487,7 +7039,6 @@ const IPPROTO_SDRP = 0x2a
 
 ```
 searchKey: syscall.IPPROTO_SEP
-tags: [exported]
 ```
 
 ```Go
@@ -7498,7 +7049,6 @@ const IPPROTO_SEP = 0x21
 
 ```
 searchKey: syscall.IPPROTO_SRPC
-tags: [exported]
 ```
 
 ```Go
@@ -7509,7 +7059,6 @@ const IPPROTO_SRPC = 0x5a
 
 ```
 searchKey: syscall.IPPROTO_ST
-tags: [exported]
 ```
 
 ```Go
@@ -7520,7 +7069,6 @@ const IPPROTO_ST = 0x7
 
 ```
 searchKey: syscall.IPPROTO_SVMTP
-tags: [exported]
 ```
 
 ```Go
@@ -7531,7 +7079,6 @@ const IPPROTO_SVMTP = 0x52
 
 ```
 searchKey: syscall.IPPROTO_SWIPE
-tags: [exported]
 ```
 
 ```Go
@@ -7542,7 +7089,6 @@ const IPPROTO_SWIPE = 0x35
 
 ```
 searchKey: syscall.IPPROTO_TCF
-tags: [exported]
 ```
 
 ```Go
@@ -7553,7 +7099,6 @@ const IPPROTO_TCF = 0x57
 
 ```
 searchKey: syscall.IPPROTO_TCP
-tags: [exported]
 ```
 
 ```Go
@@ -7564,7 +7109,6 @@ const IPPROTO_TCP = 0x6
 
 ```
 searchKey: syscall.IPPROTO_TP
-tags: [exported]
 ```
 
 ```Go
@@ -7575,7 +7119,6 @@ const IPPROTO_TP = 0x1d
 
 ```
 searchKey: syscall.IPPROTO_TPXX
-tags: [exported]
 ```
 
 ```Go
@@ -7586,7 +7129,6 @@ const IPPROTO_TPXX = 0x27
 
 ```
 searchKey: syscall.IPPROTO_TRUNK1
-tags: [exported]
 ```
 
 ```Go
@@ -7597,7 +7139,6 @@ const IPPROTO_TRUNK1 = 0x17
 
 ```
 searchKey: syscall.IPPROTO_TRUNK2
-tags: [exported]
 ```
 
 ```Go
@@ -7608,7 +7149,6 @@ const IPPROTO_TRUNK2 = 0x18
 
 ```
 searchKey: syscall.IPPROTO_TTP
-tags: [exported]
 ```
 
 ```Go
@@ -7619,7 +7159,6 @@ const IPPROTO_TTP = 0x54
 
 ```
 searchKey: syscall.IPPROTO_UDP
-tags: [exported]
 ```
 
 ```Go
@@ -7630,7 +7169,6 @@ const IPPROTO_UDP = 0x11
 
 ```
 searchKey: syscall.IPPROTO_VINES
-tags: [exported]
 ```
 
 ```Go
@@ -7641,7 +7179,6 @@ const IPPROTO_VINES = 0x53
 
 ```
 searchKey: syscall.IPPROTO_VISA
-tags: [exported]
 ```
 
 ```Go
@@ -7652,7 +7189,6 @@ const IPPROTO_VISA = 0x46
 
 ```
 searchKey: syscall.IPPROTO_VMTP
-tags: [exported]
 ```
 
 ```Go
@@ -7663,7 +7199,6 @@ const IPPROTO_VMTP = 0x51
 
 ```
 searchKey: syscall.IPPROTO_WBEXPAK
-tags: [exported]
 ```
 
 ```Go
@@ -7674,7 +7209,6 @@ const IPPROTO_WBEXPAK = 0x4f
 
 ```
 searchKey: syscall.IPPROTO_WBMON
-tags: [exported]
 ```
 
 ```Go
@@ -7685,7 +7219,6 @@ const IPPROTO_WBMON = 0x4e
 
 ```
 searchKey: syscall.IPPROTO_WSN
-tags: [exported]
 ```
 
 ```Go
@@ -7696,7 +7229,6 @@ const IPPROTO_WSN = 0x4a
 
 ```
 searchKey: syscall.IPPROTO_XNET
-tags: [exported]
 ```
 
 ```Go
@@ -7707,7 +7239,6 @@ const IPPROTO_XNET = 0xf
 
 ```
 searchKey: syscall.IPPROTO_XTP
-tags: [exported]
 ```
 
 ```Go
@@ -7718,7 +7249,6 @@ const IPPROTO_XTP = 0x24
 
 ```
 searchKey: syscall.IPV6_2292DSTOPTS
-tags: [exported]
 ```
 
 ```Go
@@ -7729,7 +7259,6 @@ const IPV6_2292DSTOPTS = 0x17
 
 ```
 searchKey: syscall.IPV6_2292HOPLIMIT
-tags: [exported]
 ```
 
 ```Go
@@ -7740,7 +7269,6 @@ const IPV6_2292HOPLIMIT = 0x14
 
 ```
 searchKey: syscall.IPV6_2292HOPOPTS
-tags: [exported]
 ```
 
 ```Go
@@ -7751,7 +7279,6 @@ const IPV6_2292HOPOPTS = 0x16
 
 ```
 searchKey: syscall.IPV6_2292NEXTHOP
-tags: [exported]
 ```
 
 ```Go
@@ -7762,7 +7289,6 @@ const IPV6_2292NEXTHOP = 0x15
 
 ```
 searchKey: syscall.IPV6_2292PKTINFO
-tags: [exported]
 ```
 
 ```Go
@@ -7773,7 +7299,6 @@ const IPV6_2292PKTINFO = 0x13
 
 ```
 searchKey: syscall.IPV6_2292PKTOPTIONS
-tags: [exported]
 ```
 
 ```Go
@@ -7784,7 +7309,6 @@ const IPV6_2292PKTOPTIONS = 0x19
 
 ```
 searchKey: syscall.IPV6_2292RTHDR
-tags: [exported]
 ```
 
 ```Go
@@ -7795,7 +7319,6 @@ const IPV6_2292RTHDR = 0x18
 
 ```
 searchKey: syscall.IPV6_BINDV6ONLY
-tags: [exported]
 ```
 
 ```Go
@@ -7806,7 +7329,6 @@ const IPV6_BINDV6ONLY = 0x1b
 
 ```
 searchKey: syscall.IPV6_BOUND_IF
-tags: [exported]
 ```
 
 ```Go
@@ -7817,7 +7339,6 @@ const IPV6_BOUND_IF = 0x7d
 
 ```
 searchKey: syscall.IPV6_CHECKSUM
-tags: [exported]
 ```
 
 ```Go
@@ -7828,7 +7349,6 @@ const IPV6_CHECKSUM = 0x1a
 
 ```
 searchKey: syscall.IPV6_DEFAULT_MULTICAST_HOPS
-tags: [exported]
 ```
 
 ```Go
@@ -7839,7 +7359,6 @@ const IPV6_DEFAULT_MULTICAST_HOPS = 0x1
 
 ```
 searchKey: syscall.IPV6_DEFAULT_MULTICAST_LOOP
-tags: [exported]
 ```
 
 ```Go
@@ -7850,7 +7369,6 @@ const IPV6_DEFAULT_MULTICAST_LOOP = 0x1
 
 ```
 searchKey: syscall.IPV6_DEFHLIM
-tags: [exported]
 ```
 
 ```Go
@@ -7861,7 +7379,6 @@ const IPV6_DEFHLIM = 0x40
 
 ```
 searchKey: syscall.IPV6_FAITH
-tags: [exported]
 ```
 
 ```Go
@@ -7872,7 +7389,6 @@ const IPV6_FAITH = 0x1d
 
 ```
 searchKey: syscall.IPV6_FLOWINFO_MASK
-tags: [exported]
 ```
 
 ```Go
@@ -7883,7 +7399,6 @@ const IPV6_FLOWINFO_MASK = 0xffffff0f
 
 ```
 searchKey: syscall.IPV6_FLOWLABEL_MASK
-tags: [exported]
 ```
 
 ```Go
@@ -7894,7 +7409,6 @@ const IPV6_FLOWLABEL_MASK = 0xffff0f00
 
 ```
 searchKey: syscall.IPV6_FRAGTTL
-tags: [exported]
 ```
 
 ```Go
@@ -7905,7 +7419,6 @@ const IPV6_FRAGTTL = 0x78
 
 ```
 searchKey: syscall.IPV6_FW_ADD
-tags: [exported]
 ```
 
 ```Go
@@ -7916,7 +7429,6 @@ const IPV6_FW_ADD = 0x1e
 
 ```
 searchKey: syscall.IPV6_FW_DEL
-tags: [exported]
 ```
 
 ```Go
@@ -7927,7 +7439,6 @@ const IPV6_FW_DEL = 0x1f
 
 ```
 searchKey: syscall.IPV6_FW_FLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -7938,7 +7449,6 @@ const IPV6_FW_FLUSH = 0x20
 
 ```
 searchKey: syscall.IPV6_FW_GET
-tags: [exported]
 ```
 
 ```Go
@@ -7949,7 +7459,6 @@ const IPV6_FW_GET = 0x22
 
 ```
 searchKey: syscall.IPV6_FW_ZERO
-tags: [exported]
 ```
 
 ```Go
@@ -7960,7 +7469,6 @@ const IPV6_FW_ZERO = 0x21
 
 ```
 searchKey: syscall.IPV6_HLIMDEC
-tags: [exported]
 ```
 
 ```Go
@@ -7971,7 +7479,6 @@ const IPV6_HLIMDEC = 0x1
 
 ```
 searchKey: syscall.IPV6_IPSEC_POLICY
-tags: [exported]
 ```
 
 ```Go
@@ -7982,7 +7489,6 @@ const IPV6_IPSEC_POLICY = 0x1c
 
 ```
 searchKey: syscall.IPV6_JOIN_GROUP
-tags: [exported]
 ```
 
 ```Go
@@ -7993,7 +7499,6 @@ const IPV6_JOIN_GROUP = 0xc
 
 ```
 searchKey: syscall.IPV6_LEAVE_GROUP
-tags: [exported]
 ```
 
 ```Go
@@ -8004,7 +7509,6 @@ const IPV6_LEAVE_GROUP = 0xd
 
 ```
 searchKey: syscall.IPV6_MAXHLIM
-tags: [exported]
 ```
 
 ```Go
@@ -8015,7 +7519,6 @@ const IPV6_MAXHLIM = 0xff
 
 ```
 searchKey: syscall.IPV6_MAXOPTHDR
-tags: [exported]
 ```
 
 ```Go
@@ -8026,7 +7529,6 @@ const IPV6_MAXOPTHDR = 0x800
 
 ```
 searchKey: syscall.IPV6_MAXPACKET
-tags: [exported]
 ```
 
 ```Go
@@ -8037,7 +7539,6 @@ const IPV6_MAXPACKET = 0xffff
 
 ```
 searchKey: syscall.IPV6_MAX_GROUP_SRC_FILTER
-tags: [exported]
 ```
 
 ```Go
@@ -8048,7 +7549,6 @@ const IPV6_MAX_GROUP_SRC_FILTER = 0x200
 
 ```
 searchKey: syscall.IPV6_MAX_MEMBERSHIPS
-tags: [exported]
 ```
 
 ```Go
@@ -8059,7 +7559,6 @@ const IPV6_MAX_MEMBERSHIPS = 0xfff
 
 ```
 searchKey: syscall.IPV6_MAX_SOCK_SRC_FILTER
-tags: [exported]
 ```
 
 ```Go
@@ -8070,7 +7569,6 @@ const IPV6_MAX_SOCK_SRC_FILTER = 0x80
 
 ```
 searchKey: syscall.IPV6_MIN_MEMBERSHIPS
-tags: [exported]
 ```
 
 ```Go
@@ -8081,7 +7579,6 @@ const IPV6_MIN_MEMBERSHIPS = 0x1f
 
 ```
 searchKey: syscall.IPV6_MMTU
-tags: [exported]
 ```
 
 ```Go
@@ -8092,7 +7589,6 @@ const IPV6_MMTU = 0x500
 
 ```
 searchKey: syscall.IPV6_MULTICAST_HOPS
-tags: [exported]
 ```
 
 ```Go
@@ -8103,7 +7599,6 @@ const IPV6_MULTICAST_HOPS = 0xa
 
 ```
 searchKey: syscall.IPV6_MULTICAST_IF
-tags: [exported]
 ```
 
 ```Go
@@ -8114,7 +7609,6 @@ const IPV6_MULTICAST_IF = 0x9
 
 ```
 searchKey: syscall.IPV6_MULTICAST_LOOP
-tags: [exported]
 ```
 
 ```Go
@@ -8125,7 +7619,6 @@ const IPV6_MULTICAST_LOOP = 0xb
 
 ```
 searchKey: syscall.IPV6_PORTRANGE
-tags: [exported]
 ```
 
 ```Go
@@ -8136,7 +7629,6 @@ const IPV6_PORTRANGE = 0xe
 
 ```
 searchKey: syscall.IPV6_PORTRANGE_DEFAULT
-tags: [exported]
 ```
 
 ```Go
@@ -8147,7 +7639,6 @@ const IPV6_PORTRANGE_DEFAULT = 0x0
 
 ```
 searchKey: syscall.IPV6_PORTRANGE_HIGH
-tags: [exported]
 ```
 
 ```Go
@@ -8158,7 +7649,6 @@ const IPV6_PORTRANGE_HIGH = 0x1
 
 ```
 searchKey: syscall.IPV6_PORTRANGE_LOW
-tags: [exported]
 ```
 
 ```Go
@@ -8169,7 +7659,6 @@ const IPV6_PORTRANGE_LOW = 0x2
 
 ```
 searchKey: syscall.IPV6_RECVTCLASS
-tags: [exported]
 ```
 
 ```Go
@@ -8180,7 +7669,6 @@ const IPV6_RECVTCLASS = 0x23
 
 ```
 searchKey: syscall.IPV6_RTHDR_LOOSE
-tags: [exported]
 ```
 
 ```Go
@@ -8191,7 +7679,6 @@ const IPV6_RTHDR_LOOSE = 0x0
 
 ```
 searchKey: syscall.IPV6_RTHDR_STRICT
-tags: [exported]
 ```
 
 ```Go
@@ -8202,7 +7689,6 @@ const IPV6_RTHDR_STRICT = 0x1
 
 ```
 searchKey: syscall.IPV6_RTHDR_TYPE_0
-tags: [exported]
 ```
 
 ```Go
@@ -8213,7 +7699,6 @@ const IPV6_RTHDR_TYPE_0 = 0x0
 
 ```
 searchKey: syscall.IPV6_SOCKOPT_RESERVED1
-tags: [exported]
 ```
 
 ```Go
@@ -8224,7 +7709,6 @@ const IPV6_SOCKOPT_RESERVED1 = 0x3
 
 ```
 searchKey: syscall.IPV6_TCLASS
-tags: [exported]
 ```
 
 ```Go
@@ -8235,7 +7719,6 @@ const IPV6_TCLASS = 0x24
 
 ```
 searchKey: syscall.IPV6_UNICAST_HOPS
-tags: [exported]
 ```
 
 ```Go
@@ -8246,7 +7729,6 @@ const IPV6_UNICAST_HOPS = 0x4
 
 ```
 searchKey: syscall.IPV6_V6ONLY
-tags: [exported]
 ```
 
 ```Go
@@ -8257,7 +7739,6 @@ const IPV6_V6ONLY = 0x1b
 
 ```
 searchKey: syscall.IPV6_VERSION
-tags: [exported]
 ```
 
 ```Go
@@ -8268,7 +7749,6 @@ const IPV6_VERSION = 0x60
 
 ```
 searchKey: syscall.IPV6_VERSION_MASK
-tags: [exported]
 ```
 
 ```Go
@@ -8279,7 +7759,6 @@ const IPV6_VERSION_MASK = 0xf0
 
 ```
 searchKey: syscall.IP_ADD_MEMBERSHIP
-tags: [exported]
 ```
 
 ```Go
@@ -8290,7 +7769,6 @@ const IP_ADD_MEMBERSHIP = 0xc
 
 ```
 searchKey: syscall.IP_ADD_SOURCE_MEMBERSHIP
-tags: [exported]
 ```
 
 ```Go
@@ -8301,7 +7779,6 @@ const IP_ADD_SOURCE_MEMBERSHIP = 0x46
 
 ```
 searchKey: syscall.IP_BLOCK_SOURCE
-tags: [exported]
 ```
 
 ```Go
@@ -8312,7 +7789,6 @@ const IP_BLOCK_SOURCE = 0x48
 
 ```
 searchKey: syscall.IP_BOUND_IF
-tags: [exported]
 ```
 
 ```Go
@@ -8323,7 +7799,6 @@ const IP_BOUND_IF = 0x19
 
 ```
 searchKey: syscall.IP_DEFAULT_MULTICAST_LOOP
-tags: [exported]
 ```
 
 ```Go
@@ -8334,7 +7809,6 @@ const IP_DEFAULT_MULTICAST_LOOP = 0x1
 
 ```
 searchKey: syscall.IP_DEFAULT_MULTICAST_TTL
-tags: [exported]
 ```
 
 ```Go
@@ -8345,7 +7819,6 @@ const IP_DEFAULT_MULTICAST_TTL = 0x1
 
 ```
 searchKey: syscall.IP_DF
-tags: [exported]
 ```
 
 ```Go
@@ -8356,7 +7829,6 @@ const IP_DF = 0x4000
 
 ```
 searchKey: syscall.IP_DROP_MEMBERSHIP
-tags: [exported]
 ```
 
 ```Go
@@ -8367,7 +7839,6 @@ const IP_DROP_MEMBERSHIP = 0xd
 
 ```
 searchKey: syscall.IP_DROP_SOURCE_MEMBERSHIP
-tags: [exported]
 ```
 
 ```Go
@@ -8378,7 +7849,6 @@ const IP_DROP_SOURCE_MEMBERSHIP = 0x47
 
 ```
 searchKey: syscall.IP_DUMMYNET_CONFIGURE
-tags: [exported]
 ```
 
 ```Go
@@ -8389,7 +7859,6 @@ const IP_DUMMYNET_CONFIGURE = 0x3c
 
 ```
 searchKey: syscall.IP_DUMMYNET_DEL
-tags: [exported]
 ```
 
 ```Go
@@ -8400,7 +7869,6 @@ const IP_DUMMYNET_DEL = 0x3d
 
 ```
 searchKey: syscall.IP_DUMMYNET_FLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -8411,7 +7879,6 @@ const IP_DUMMYNET_FLUSH = 0x3e
 
 ```
 searchKey: syscall.IP_DUMMYNET_GET
-tags: [exported]
 ```
 
 ```Go
@@ -8422,7 +7889,6 @@ const IP_DUMMYNET_GET = 0x40
 
 ```
 searchKey: syscall.IP_FAITH
-tags: [exported]
 ```
 
 ```Go
@@ -8433,7 +7899,6 @@ const IP_FAITH = 0x16
 
 ```
 searchKey: syscall.IP_FW_ADD
-tags: [exported]
 ```
 
 ```Go
@@ -8444,7 +7909,6 @@ const IP_FW_ADD = 0x28
 
 ```
 searchKey: syscall.IP_FW_DEL
-tags: [exported]
 ```
 
 ```Go
@@ -8455,7 +7919,6 @@ const IP_FW_DEL = 0x29
 
 ```
 searchKey: syscall.IP_FW_FLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -8466,7 +7929,6 @@ const IP_FW_FLUSH = 0x2a
 
 ```
 searchKey: syscall.IP_FW_GET
-tags: [exported]
 ```
 
 ```Go
@@ -8477,7 +7939,6 @@ const IP_FW_GET = 0x2c
 
 ```
 searchKey: syscall.IP_FW_RESETLOG
-tags: [exported]
 ```
 
 ```Go
@@ -8488,7 +7949,6 @@ const IP_FW_RESETLOG = 0x2d
 
 ```
 searchKey: syscall.IP_FW_ZERO
-tags: [exported]
 ```
 
 ```Go
@@ -8499,7 +7959,6 @@ const IP_FW_ZERO = 0x2b
 
 ```
 searchKey: syscall.IP_HDRINCL
-tags: [exported]
 ```
 
 ```Go
@@ -8510,7 +7969,6 @@ const IP_HDRINCL = 0x2
 
 ```
 searchKey: syscall.IP_IPSEC_POLICY
-tags: [exported]
 ```
 
 ```Go
@@ -8521,7 +7979,6 @@ const IP_IPSEC_POLICY = 0x15
 
 ```
 searchKey: syscall.IP_MAXPACKET
-tags: [exported]
 ```
 
 ```Go
@@ -8532,7 +7989,6 @@ const IP_MAXPACKET = 0xffff
 
 ```
 searchKey: syscall.IP_MAX_GROUP_SRC_FILTER
-tags: [exported]
 ```
 
 ```Go
@@ -8543,7 +7999,6 @@ const IP_MAX_GROUP_SRC_FILTER = 0x200
 
 ```
 searchKey: syscall.IP_MAX_MEMBERSHIPS
-tags: [exported]
 ```
 
 ```Go
@@ -8554,7 +8009,6 @@ const IP_MAX_MEMBERSHIPS = 0xfff
 
 ```
 searchKey: syscall.IP_MAX_SOCK_MUTE_FILTER
-tags: [exported]
 ```
 
 ```Go
@@ -8565,7 +8019,6 @@ const IP_MAX_SOCK_MUTE_FILTER = 0x80
 
 ```
 searchKey: syscall.IP_MAX_SOCK_SRC_FILTER
-tags: [exported]
 ```
 
 ```Go
@@ -8576,7 +8029,6 @@ const IP_MAX_SOCK_SRC_FILTER = 0x80
 
 ```
 searchKey: syscall.IP_MF
-tags: [exported]
 ```
 
 ```Go
@@ -8587,7 +8039,6 @@ const IP_MF = 0x2000
 
 ```
 searchKey: syscall.IP_MIN_MEMBERSHIPS
-tags: [exported]
 ```
 
 ```Go
@@ -8598,7 +8049,6 @@ const IP_MIN_MEMBERSHIPS = 0x1f
 
 ```
 searchKey: syscall.IP_MSFILTER
-tags: [exported]
 ```
 
 ```Go
@@ -8609,7 +8059,6 @@ const IP_MSFILTER = 0x4a
 
 ```
 searchKey: syscall.IP_MSS
-tags: [exported]
 ```
 
 ```Go
@@ -8620,7 +8069,6 @@ const IP_MSS = 0x240
 
 ```
 searchKey: syscall.IP_MULTICAST_IF
-tags: [exported]
 ```
 
 ```Go
@@ -8631,7 +8079,6 @@ const IP_MULTICAST_IF = 0x9
 
 ```
 searchKey: syscall.IP_MULTICAST_IFINDEX
-tags: [exported]
 ```
 
 ```Go
@@ -8642,7 +8089,6 @@ const IP_MULTICAST_IFINDEX = 0x42
 
 ```
 searchKey: syscall.IP_MULTICAST_LOOP
-tags: [exported]
 ```
 
 ```Go
@@ -8653,7 +8099,6 @@ const IP_MULTICAST_LOOP = 0xb
 
 ```
 searchKey: syscall.IP_MULTICAST_TTL
-tags: [exported]
 ```
 
 ```Go
@@ -8664,7 +8109,6 @@ const IP_MULTICAST_TTL = 0xa
 
 ```
 searchKey: syscall.IP_MULTICAST_VIF
-tags: [exported]
 ```
 
 ```Go
@@ -8675,7 +8119,6 @@ const IP_MULTICAST_VIF = 0xe
 
 ```
 searchKey: syscall.IP_NAT__XXX
-tags: [exported]
 ```
 
 ```Go
@@ -8686,7 +8129,6 @@ const IP_NAT__XXX = 0x37
 
 ```
 searchKey: syscall.IP_OFFMASK
-tags: [exported]
 ```
 
 ```Go
@@ -8697,7 +8139,6 @@ const IP_OFFMASK = 0x1fff
 
 ```
 searchKey: syscall.IP_OLD_FW_ADD
-tags: [exported]
 ```
 
 ```Go
@@ -8708,7 +8149,6 @@ const IP_OLD_FW_ADD = 0x32
 
 ```
 searchKey: syscall.IP_OLD_FW_DEL
-tags: [exported]
 ```
 
 ```Go
@@ -8719,7 +8159,6 @@ const IP_OLD_FW_DEL = 0x33
 
 ```
 searchKey: syscall.IP_OLD_FW_FLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -8730,7 +8169,6 @@ const IP_OLD_FW_FLUSH = 0x34
 
 ```
 searchKey: syscall.IP_OLD_FW_GET
-tags: [exported]
 ```
 
 ```Go
@@ -8741,7 +8179,6 @@ const IP_OLD_FW_GET = 0x36
 
 ```
 searchKey: syscall.IP_OLD_FW_RESETLOG
-tags: [exported]
 ```
 
 ```Go
@@ -8752,7 +8189,6 @@ const IP_OLD_FW_RESETLOG = 0x38
 
 ```
 searchKey: syscall.IP_OLD_FW_ZERO
-tags: [exported]
 ```
 
 ```Go
@@ -8763,7 +8199,6 @@ const IP_OLD_FW_ZERO = 0x35
 
 ```
 searchKey: syscall.IP_OPTIONS
-tags: [exported]
 ```
 
 ```Go
@@ -8774,7 +8209,6 @@ const IP_OPTIONS = 0x1
 
 ```
 searchKey: syscall.IP_PKTINFO
-tags: [exported]
 ```
 
 ```Go
@@ -8785,7 +8219,6 @@ const IP_PKTINFO = 0x1a
 
 ```
 searchKey: syscall.IP_PORTRANGE
-tags: [exported]
 ```
 
 ```Go
@@ -8796,7 +8229,6 @@ const IP_PORTRANGE = 0x13
 
 ```
 searchKey: syscall.IP_PORTRANGE_DEFAULT
-tags: [exported]
 ```
 
 ```Go
@@ -8807,7 +8239,6 @@ const IP_PORTRANGE_DEFAULT = 0x0
 
 ```
 searchKey: syscall.IP_PORTRANGE_HIGH
-tags: [exported]
 ```
 
 ```Go
@@ -8818,7 +8249,6 @@ const IP_PORTRANGE_HIGH = 0x1
 
 ```
 searchKey: syscall.IP_PORTRANGE_LOW
-tags: [exported]
 ```
 
 ```Go
@@ -8829,7 +8259,6 @@ const IP_PORTRANGE_LOW = 0x2
 
 ```
 searchKey: syscall.IP_RECVDSTADDR
-tags: [exported]
 ```
 
 ```Go
@@ -8840,7 +8269,6 @@ const IP_RECVDSTADDR = 0x7
 
 ```
 searchKey: syscall.IP_RECVIF
-tags: [exported]
 ```
 
 ```Go
@@ -8851,7 +8279,6 @@ const IP_RECVIF = 0x14
 
 ```
 searchKey: syscall.IP_RECVOPTS
-tags: [exported]
 ```
 
 ```Go
@@ -8862,7 +8289,6 @@ const IP_RECVOPTS = 0x5
 
 ```
 searchKey: syscall.IP_RECVPKTINFO
-tags: [exported]
 ```
 
 ```Go
@@ -8873,7 +8299,6 @@ const IP_RECVPKTINFO = 0x1a
 
 ```
 searchKey: syscall.IP_RECVRETOPTS
-tags: [exported]
 ```
 
 ```Go
@@ -8884,7 +8309,6 @@ const IP_RECVRETOPTS = 0x6
 
 ```
 searchKey: syscall.IP_RECVTTL
-tags: [exported]
 ```
 
 ```Go
@@ -8895,7 +8319,6 @@ const IP_RECVTTL = 0x18
 
 ```
 searchKey: syscall.IP_RETOPTS
-tags: [exported]
 ```
 
 ```Go
@@ -8906,7 +8329,6 @@ const IP_RETOPTS = 0x8
 
 ```
 searchKey: syscall.IP_RF
-tags: [exported]
 ```
 
 ```Go
@@ -8917,7 +8339,6 @@ const IP_RF = 0x8000
 
 ```
 searchKey: syscall.IP_RSVP_OFF
-tags: [exported]
 ```
 
 ```Go
@@ -8928,7 +8349,6 @@ const IP_RSVP_OFF = 0x10
 
 ```
 searchKey: syscall.IP_RSVP_ON
-tags: [exported]
 ```
 
 ```Go
@@ -8939,7 +8359,6 @@ const IP_RSVP_ON = 0xf
 
 ```
 searchKey: syscall.IP_RSVP_VIF_OFF
-tags: [exported]
 ```
 
 ```Go
@@ -8950,7 +8369,6 @@ const IP_RSVP_VIF_OFF = 0x12
 
 ```
 searchKey: syscall.IP_RSVP_VIF_ON
-tags: [exported]
 ```
 
 ```Go
@@ -8961,7 +8379,6 @@ const IP_RSVP_VIF_ON = 0x11
 
 ```
 searchKey: syscall.IP_STRIPHDR
-tags: [exported]
 ```
 
 ```Go
@@ -8972,7 +8389,6 @@ const IP_STRIPHDR = 0x17
 
 ```
 searchKey: syscall.IP_TOS
-tags: [exported]
 ```
 
 ```Go
@@ -8983,7 +8399,6 @@ const IP_TOS = 0x3
 
 ```
 searchKey: syscall.IP_TRAFFIC_MGT_BACKGROUND
-tags: [exported]
 ```
 
 ```Go
@@ -8994,7 +8409,6 @@ const IP_TRAFFIC_MGT_BACKGROUND = 0x41
 
 ```
 searchKey: syscall.IP_TTL
-tags: [exported]
 ```
 
 ```Go
@@ -9005,7 +8419,6 @@ const IP_TTL = 0x4
 
 ```
 searchKey: syscall.IP_UNBLOCK_SOURCE
-tags: [exported]
 ```
 
 ```Go
@@ -9016,7 +8429,6 @@ const IP_UNBLOCK_SOURCE = 0x49
 
 ```
 searchKey: syscall.ISIG
-tags: [exported]
 ```
 
 ```Go
@@ -9027,7 +8439,6 @@ const ISIG = 0x80
 
 ```
 searchKey: syscall.ISTRIP
-tags: [exported]
 ```
 
 ```Go
@@ -9038,7 +8449,6 @@ const ISTRIP = 0x20
 
 ```
 searchKey: syscall.IUTF8
-tags: [exported]
 ```
 
 ```Go
@@ -9049,7 +8459,6 @@ const IUTF8 = 0x4000
 
 ```
 searchKey: syscall.IXANY
-tags: [exported]
 ```
 
 ```Go
@@ -9060,7 +8469,6 @@ const IXANY = 0x800
 
 ```
 searchKey: syscall.IXOFF
-tags: [exported]
 ```
 
 ```Go
@@ -9071,7 +8479,6 @@ const IXOFF = 0x400
 
 ```
 searchKey: syscall.IXON
-tags: [exported]
 ```
 
 ```Go
@@ -9082,7 +8489,6 @@ const IXON = 0x200
 
 ```
 searchKey: syscall.LOCK_EX
-tags: [exported]
 ```
 
 ```Go
@@ -9093,7 +8499,6 @@ const LOCK_EX = 0x2
 
 ```
 searchKey: syscall.LOCK_NB
-tags: [exported]
 ```
 
 ```Go
@@ -9104,7 +8509,6 @@ const LOCK_NB = 0x4
 
 ```
 searchKey: syscall.LOCK_SH
-tags: [exported]
 ```
 
 ```Go
@@ -9115,7 +8519,6 @@ const LOCK_SH = 0x1
 
 ```
 searchKey: syscall.LOCK_UN
-tags: [exported]
 ```
 
 ```Go
@@ -9126,7 +8529,6 @@ const LOCK_UN = 0x8
 
 ```
 searchKey: syscall.MADV_CAN_REUSE
-tags: [exported]
 ```
 
 ```Go
@@ -9137,7 +8539,6 @@ const MADV_CAN_REUSE = 0x9
 
 ```
 searchKey: syscall.MADV_DONTNEED
-tags: [exported]
 ```
 
 ```Go
@@ -9148,7 +8549,6 @@ const MADV_DONTNEED = 0x4
 
 ```
 searchKey: syscall.MADV_FREE
-tags: [exported]
 ```
 
 ```Go
@@ -9159,7 +8559,6 @@ const MADV_FREE = 0x5
 
 ```
 searchKey: syscall.MADV_FREE_REUSABLE
-tags: [exported]
 ```
 
 ```Go
@@ -9170,7 +8569,6 @@ const MADV_FREE_REUSABLE = 0x7
 
 ```
 searchKey: syscall.MADV_FREE_REUSE
-tags: [exported]
 ```
 
 ```Go
@@ -9181,7 +8579,6 @@ const MADV_FREE_REUSE = 0x8
 
 ```
 searchKey: syscall.MADV_NORMAL
-tags: [exported]
 ```
 
 ```Go
@@ -9192,7 +8589,6 @@ const MADV_NORMAL = 0x0
 
 ```
 searchKey: syscall.MADV_RANDOM
-tags: [exported]
 ```
 
 ```Go
@@ -9203,7 +8599,6 @@ const MADV_RANDOM = 0x1
 
 ```
 searchKey: syscall.MADV_SEQUENTIAL
-tags: [exported]
 ```
 
 ```Go
@@ -9214,7 +8609,6 @@ const MADV_SEQUENTIAL = 0x2
 
 ```
 searchKey: syscall.MADV_WILLNEED
-tags: [exported]
 ```
 
 ```Go
@@ -9225,7 +8619,6 @@ const MADV_WILLNEED = 0x3
 
 ```
 searchKey: syscall.MADV_ZERO_WIRED_PAGES
-tags: [exported]
 ```
 
 ```Go
@@ -9236,7 +8629,6 @@ const MADV_ZERO_WIRED_PAGES = 0x6
 
 ```
 searchKey: syscall.MAP_ANON
-tags: [exported]
 ```
 
 ```Go
@@ -9247,7 +8639,6 @@ const MAP_ANON = 0x1000
 
 ```
 searchKey: syscall.MAP_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -9258,7 +8649,6 @@ const MAP_COPY = 0x2
 
 ```
 searchKey: syscall.MAP_FILE
-tags: [exported]
 ```
 
 ```Go
@@ -9269,7 +8659,6 @@ const MAP_FILE = 0x0
 
 ```
 searchKey: syscall.MAP_FIXED
-tags: [exported]
 ```
 
 ```Go
@@ -9280,7 +8669,6 @@ const MAP_FIXED = 0x10
 
 ```
 searchKey: syscall.MAP_HASSEMAPHORE
-tags: [exported]
 ```
 
 ```Go
@@ -9291,7 +8679,6 @@ const MAP_HASSEMAPHORE = 0x200
 
 ```
 searchKey: syscall.MAP_JIT
-tags: [exported]
 ```
 
 ```Go
@@ -9302,7 +8689,6 @@ const MAP_JIT = 0x800
 
 ```
 searchKey: syscall.MAP_NOCACHE
-tags: [exported]
 ```
 
 ```Go
@@ -9313,7 +8699,6 @@ const MAP_NOCACHE = 0x400
 
 ```
 searchKey: syscall.MAP_NOEXTEND
-tags: [exported]
 ```
 
 ```Go
@@ -9324,7 +8709,6 @@ const MAP_NOEXTEND = 0x100
 
 ```
 searchKey: syscall.MAP_NORESERVE
-tags: [exported]
 ```
 
 ```Go
@@ -9335,7 +8719,6 @@ const MAP_NORESERVE = 0x40
 
 ```
 searchKey: syscall.MAP_PRIVATE
-tags: [exported]
 ```
 
 ```Go
@@ -9346,7 +8729,6 @@ const MAP_PRIVATE = 0x2
 
 ```
 searchKey: syscall.MAP_RENAME
-tags: [exported]
 ```
 
 ```Go
@@ -9357,7 +8739,6 @@ const MAP_RENAME = 0x20
 
 ```
 searchKey: syscall.MAP_RESERVED0080
-tags: [exported]
 ```
 
 ```Go
@@ -9368,7 +8749,6 @@ const MAP_RESERVED0080 = 0x80
 
 ```
 searchKey: syscall.MAP_SHARED
-tags: [exported]
 ```
 
 ```Go
@@ -9379,7 +8759,6 @@ const MAP_SHARED = 0x1
 
 ```
 searchKey: syscall.MCL_CURRENT
-tags: [exported]
 ```
 
 ```Go
@@ -9390,7 +8769,6 @@ const MCL_CURRENT = 0x1
 
 ```
 searchKey: syscall.MCL_FUTURE
-tags: [exported]
 ```
 
 ```Go
@@ -9401,7 +8779,6 @@ const MCL_FUTURE = 0x2
 
 ```
 searchKey: syscall.MSG_CTRUNC
-tags: [exported]
 ```
 
 ```Go
@@ -9412,7 +8789,6 @@ const MSG_CTRUNC = 0x20
 
 ```
 searchKey: syscall.MSG_DONTROUTE
-tags: [exported]
 ```
 
 ```Go
@@ -9423,7 +8799,6 @@ const MSG_DONTROUTE = 0x4
 
 ```
 searchKey: syscall.MSG_DONTWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -9434,7 +8809,6 @@ const MSG_DONTWAIT = 0x80
 
 ```
 searchKey: syscall.MSG_EOF
-tags: [exported]
 ```
 
 ```Go
@@ -9445,7 +8819,6 @@ const MSG_EOF = 0x100
 
 ```
 searchKey: syscall.MSG_EOR
-tags: [exported]
 ```
 
 ```Go
@@ -9456,7 +8829,6 @@ const MSG_EOR = 0x8
 
 ```
 searchKey: syscall.MSG_FLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -9467,7 +8839,6 @@ const MSG_FLUSH = 0x400
 
 ```
 searchKey: syscall.MSG_HAVEMORE
-tags: [exported]
 ```
 
 ```Go
@@ -9478,7 +8849,6 @@ const MSG_HAVEMORE = 0x2000
 
 ```
 searchKey: syscall.MSG_HOLD
-tags: [exported]
 ```
 
 ```Go
@@ -9489,7 +8859,6 @@ const MSG_HOLD = 0x800
 
 ```
 searchKey: syscall.MSG_NEEDSA
-tags: [exported]
 ```
 
 ```Go
@@ -9500,7 +8869,6 @@ const MSG_NEEDSA = 0x10000
 
 ```
 searchKey: syscall.MSG_OOB
-tags: [exported]
 ```
 
 ```Go
@@ -9511,7 +8879,6 @@ const MSG_OOB = 0x1
 
 ```
 searchKey: syscall.MSG_PEEK
-tags: [exported]
 ```
 
 ```Go
@@ -9522,7 +8889,6 @@ const MSG_PEEK = 0x2
 
 ```
 searchKey: syscall.MSG_RCVMORE
-tags: [exported]
 ```
 
 ```Go
@@ -9533,7 +8899,6 @@ const MSG_RCVMORE = 0x4000
 
 ```
 searchKey: syscall.MSG_SEND
-tags: [exported]
 ```
 
 ```Go
@@ -9544,7 +8909,6 @@ const MSG_SEND = 0x1000
 
 ```
 searchKey: syscall.MSG_TRUNC
-tags: [exported]
 ```
 
 ```Go
@@ -9555,7 +8919,6 @@ const MSG_TRUNC = 0x10
 
 ```
 searchKey: syscall.MSG_WAITALL
-tags: [exported]
 ```
 
 ```Go
@@ -9566,7 +8929,6 @@ const MSG_WAITALL = 0x40
 
 ```
 searchKey: syscall.MSG_WAITSTREAM
-tags: [exported]
 ```
 
 ```Go
@@ -9577,7 +8939,6 @@ const MSG_WAITSTREAM = 0x200
 
 ```
 searchKey: syscall.MS_ASYNC
-tags: [exported]
 ```
 
 ```Go
@@ -9588,7 +8949,6 @@ const MS_ASYNC = 0x1
 
 ```
 searchKey: syscall.MS_DEACTIVATE
-tags: [exported]
 ```
 
 ```Go
@@ -9599,7 +8959,6 @@ const MS_DEACTIVATE = 0x8
 
 ```
 searchKey: syscall.MS_INVALIDATE
-tags: [exported]
 ```
 
 ```Go
@@ -9610,7 +8969,6 @@ const MS_INVALIDATE = 0x2
 
 ```
 searchKey: syscall.MS_KILLPAGES
-tags: [exported]
 ```
 
 ```Go
@@ -9621,7 +8979,6 @@ const MS_KILLPAGES = 0x4
 
 ```
 searchKey: syscall.MS_SYNC
-tags: [exported]
 ```
 
 ```Go
@@ -9632,7 +8989,6 @@ const MS_SYNC = 0x10
 
 ```
 searchKey: syscall.NAME_MAX
-tags: [exported]
 ```
 
 ```Go
@@ -9643,7 +8999,6 @@ const NAME_MAX = 0xff
 
 ```
 searchKey: syscall.NET_RT_DUMP
-tags: [exported]
 ```
 
 ```Go
@@ -9654,7 +9009,6 @@ const NET_RT_DUMP = 0x1
 
 ```
 searchKey: syscall.NET_RT_DUMP2
-tags: [exported]
 ```
 
 ```Go
@@ -9665,7 +9019,6 @@ const NET_RT_DUMP2 = 0x7
 
 ```
 searchKey: syscall.NET_RT_FLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -9676,7 +9029,6 @@ const NET_RT_FLAGS = 0x2
 
 ```
 searchKey: syscall.NET_RT_IFLIST
-tags: [exported]
 ```
 
 ```Go
@@ -9687,7 +9039,6 @@ const NET_RT_IFLIST = 0x3
 
 ```
 searchKey: syscall.NET_RT_IFLIST2
-tags: [exported]
 ```
 
 ```Go
@@ -9698,7 +9049,6 @@ const NET_RT_IFLIST2 = 0x6
 
 ```
 searchKey: syscall.NET_RT_MAXID
-tags: [exported]
 ```
 
 ```Go
@@ -9709,7 +9059,6 @@ const NET_RT_MAXID = 0xa
 
 ```
 searchKey: syscall.NET_RT_STAT
-tags: [exported]
 ```
 
 ```Go
@@ -9720,7 +9069,6 @@ const NET_RT_STAT = 0x4
 
 ```
 searchKey: syscall.NET_RT_TRASH
-tags: [exported]
 ```
 
 ```Go
@@ -9731,7 +9079,6 @@ const NET_RT_TRASH = 0x5
 
 ```
 searchKey: syscall.NOFLSH
-tags: [exported]
 ```
 
 ```Go
@@ -9742,7 +9089,6 @@ const NOFLSH = 0x80000000
 
 ```
 searchKey: syscall.NOTE_ABSOLUTE
-tags: [exported]
 ```
 
 ```Go
@@ -9753,7 +9099,6 @@ const NOTE_ABSOLUTE = 0x8
 
 ```
 searchKey: syscall.NOTE_ATTRIB
-tags: [exported]
 ```
 
 ```Go
@@ -9764,7 +9109,6 @@ const NOTE_ATTRIB = 0x8
 
 ```
 searchKey: syscall.NOTE_CHILD
-tags: [exported]
 ```
 
 ```Go
@@ -9775,7 +9119,6 @@ const NOTE_CHILD = 0x4
 
 ```
 searchKey: syscall.NOTE_DELETE
-tags: [exported]
 ```
 
 ```Go
@@ -9786,7 +9129,6 @@ const NOTE_DELETE = 0x1
 
 ```
 searchKey: syscall.NOTE_EXEC
-tags: [exported]
 ```
 
 ```Go
@@ -9797,7 +9139,6 @@ const NOTE_EXEC = 0x20000000
 
 ```
 searchKey: syscall.NOTE_EXIT
-tags: [exported]
 ```
 
 ```Go
@@ -9808,7 +9149,6 @@ const NOTE_EXIT = 0x80000000
 
 ```
 searchKey: syscall.NOTE_EXITSTATUS
-tags: [exported]
 ```
 
 ```Go
@@ -9819,7 +9159,6 @@ const NOTE_EXITSTATUS = 0x4000000
 
 ```
 searchKey: syscall.NOTE_EXTEND
-tags: [exported]
 ```
 
 ```Go
@@ -9830,7 +9169,6 @@ const NOTE_EXTEND = 0x4
 
 ```
 searchKey: syscall.NOTE_FFAND
-tags: [exported]
 ```
 
 ```Go
@@ -9841,7 +9179,6 @@ const NOTE_FFAND = 0x40000000
 
 ```
 searchKey: syscall.NOTE_FFCOPY
-tags: [exported]
 ```
 
 ```Go
@@ -9852,7 +9189,6 @@ const NOTE_FFCOPY = 0xc0000000
 
 ```
 searchKey: syscall.NOTE_FFCTRLMASK
-tags: [exported]
 ```
 
 ```Go
@@ -9863,7 +9199,6 @@ const NOTE_FFCTRLMASK = 0xc0000000
 
 ```
 searchKey: syscall.NOTE_FFLAGSMASK
-tags: [exported]
 ```
 
 ```Go
@@ -9874,7 +9209,6 @@ const NOTE_FFLAGSMASK = 0xffffff
 
 ```
 searchKey: syscall.NOTE_FFNOP
-tags: [exported]
 ```
 
 ```Go
@@ -9885,7 +9219,6 @@ const NOTE_FFNOP = 0x0
 
 ```
 searchKey: syscall.NOTE_FFOR
-tags: [exported]
 ```
 
 ```Go
@@ -9896,7 +9229,6 @@ const NOTE_FFOR = 0x80000000
 
 ```
 searchKey: syscall.NOTE_FORK
-tags: [exported]
 ```
 
 ```Go
@@ -9907,7 +9239,6 @@ const NOTE_FORK = 0x40000000
 
 ```
 searchKey: syscall.NOTE_LINK
-tags: [exported]
 ```
 
 ```Go
@@ -9918,7 +9249,6 @@ const NOTE_LINK = 0x10
 
 ```
 searchKey: syscall.NOTE_LOWAT
-tags: [exported]
 ```
 
 ```Go
@@ -9929,7 +9259,6 @@ const NOTE_LOWAT = 0x1
 
 ```
 searchKey: syscall.NOTE_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -9940,7 +9269,6 @@ const NOTE_NONE = 0x80
 
 ```
 searchKey: syscall.NOTE_NSECONDS
-tags: [exported]
 ```
 
 ```Go
@@ -9951,7 +9279,6 @@ const NOTE_NSECONDS = 0x4
 
 ```
 searchKey: syscall.NOTE_PCTRLMASK
-tags: [exported]
 ```
 
 ```Go
@@ -9962,7 +9289,6 @@ const NOTE_PCTRLMASK = -0x100000
 
 ```
 searchKey: syscall.NOTE_PDATAMASK
-tags: [exported]
 ```
 
 ```Go
@@ -9973,7 +9299,6 @@ const NOTE_PDATAMASK = 0xfffff
 
 ```
 searchKey: syscall.NOTE_REAP
-tags: [exported]
 ```
 
 ```Go
@@ -9984,7 +9309,6 @@ const NOTE_REAP = 0x10000000
 
 ```
 searchKey: syscall.NOTE_RENAME
-tags: [exported]
 ```
 
 ```Go
@@ -9995,7 +9319,6 @@ const NOTE_RENAME = 0x20
 
 ```
 searchKey: syscall.NOTE_RESOURCEEND
-tags: [exported]
 ```
 
 ```Go
@@ -10006,7 +9329,6 @@ const NOTE_RESOURCEEND = 0x2000000
 
 ```
 searchKey: syscall.NOTE_REVOKE
-tags: [exported]
 ```
 
 ```Go
@@ -10017,7 +9339,6 @@ const NOTE_REVOKE = 0x40
 
 ```
 searchKey: syscall.NOTE_SECONDS
-tags: [exported]
 ```
 
 ```Go
@@ -10028,7 +9349,6 @@ const NOTE_SECONDS = 0x1
 
 ```
 searchKey: syscall.NOTE_SIGNAL
-tags: [exported]
 ```
 
 ```Go
@@ -10039,7 +9359,6 @@ const NOTE_SIGNAL = 0x8000000
 
 ```
 searchKey: syscall.NOTE_TRACK
-tags: [exported]
 ```
 
 ```Go
@@ -10050,7 +9369,6 @@ const NOTE_TRACK = 0x1
 
 ```
 searchKey: syscall.NOTE_TRACKERR
-tags: [exported]
 ```
 
 ```Go
@@ -10061,7 +9379,6 @@ const NOTE_TRACKERR = 0x2
 
 ```
 searchKey: syscall.NOTE_TRIGGER
-tags: [exported]
 ```
 
 ```Go
@@ -10072,7 +9389,6 @@ const NOTE_TRIGGER = 0x1000000
 
 ```
 searchKey: syscall.NOTE_USECONDS
-tags: [exported]
 ```
 
 ```Go
@@ -10083,7 +9399,6 @@ const NOTE_USECONDS = 0x2
 
 ```
 searchKey: syscall.NOTE_VM_ERROR
-tags: [exported]
 ```
 
 ```Go
@@ -10094,7 +9409,6 @@ const NOTE_VM_ERROR = 0x10000000
 
 ```
 searchKey: syscall.NOTE_VM_PRESSURE
-tags: [exported]
 ```
 
 ```Go
@@ -10105,7 +9419,6 @@ const NOTE_VM_PRESSURE = 0x80000000
 
 ```
 searchKey: syscall.NOTE_VM_PRESSURE_SUDDEN_TERMINATE
-tags: [exported]
 ```
 
 ```Go
@@ -10116,7 +9429,6 @@ const NOTE_VM_PRESSURE_SUDDEN_TERMINATE = 0x20000000
 
 ```
 searchKey: syscall.NOTE_VM_PRESSURE_TERMINATE
-tags: [exported]
 ```
 
 ```Go
@@ -10127,7 +9439,6 @@ const NOTE_VM_PRESSURE_TERMINATE = 0x40000000
 
 ```
 searchKey: syscall.NOTE_WRITE
-tags: [exported]
 ```
 
 ```Go
@@ -10138,7 +9449,6 @@ const NOTE_WRITE = 0x2
 
 ```
 searchKey: syscall.OCRNL
-tags: [exported]
 ```
 
 ```Go
@@ -10149,7 +9459,6 @@ const OCRNL = 0x10
 
 ```
 searchKey: syscall.OFDEL
-tags: [exported]
 ```
 
 ```Go
@@ -10160,7 +9469,6 @@ const OFDEL = 0x20000
 
 ```
 searchKey: syscall.OFILL
-tags: [exported]
 ```
 
 ```Go
@@ -10171,7 +9479,6 @@ const OFILL = 0x80
 
 ```
 searchKey: syscall.ONLCR
-tags: [exported]
 ```
 
 ```Go
@@ -10182,7 +9489,6 @@ const ONLCR = 0x2
 
 ```
 searchKey: syscall.ONLRET
-tags: [exported]
 ```
 
 ```Go
@@ -10193,7 +9499,6 @@ const ONLRET = 0x40
 
 ```
 searchKey: syscall.ONOCR
-tags: [exported]
 ```
 
 ```Go
@@ -10204,7 +9509,6 @@ const ONOCR = 0x20
 
 ```
 searchKey: syscall.ONOEOT
-tags: [exported]
 ```
 
 ```Go
@@ -10215,7 +9519,6 @@ const ONOEOT = 0x8
 
 ```
 searchKey: syscall.OPOST
-tags: [exported]
 ```
 
 ```Go
@@ -10226,7 +9529,6 @@ const OPOST = 0x1
 
 ```
 searchKey: syscall.O_ACCMODE
-tags: [exported]
 ```
 
 ```Go
@@ -10237,7 +9539,6 @@ const O_ACCMODE = 0x3
 
 ```
 searchKey: syscall.O_ALERT
-tags: [exported]
 ```
 
 ```Go
@@ -10248,7 +9549,6 @@ const O_ALERT = 0x20000000
 
 ```
 searchKey: syscall.O_APPEND
-tags: [exported]
 ```
 
 ```Go
@@ -10259,7 +9559,6 @@ const O_APPEND = 0x8
 
 ```
 searchKey: syscall.O_ASYNC
-tags: [exported]
 ```
 
 ```Go
@@ -10270,7 +9569,6 @@ const O_ASYNC = 0x40
 
 ```
 searchKey: syscall.O_CLOEXEC
-tags: [exported]
 ```
 
 ```Go
@@ -10281,7 +9579,6 @@ const O_CLOEXEC = 0x1000000
 
 ```
 searchKey: syscall.O_CREAT
-tags: [exported]
 ```
 
 ```Go
@@ -10292,7 +9589,6 @@ const O_CREAT = 0x200
 
 ```
 searchKey: syscall.O_DIRECTORY
-tags: [exported]
 ```
 
 ```Go
@@ -10303,7 +9599,6 @@ const O_DIRECTORY = 0x100000
 
 ```
 searchKey: syscall.O_DSYNC
-tags: [exported]
 ```
 
 ```Go
@@ -10314,7 +9609,6 @@ const O_DSYNC = 0x400000
 
 ```
 searchKey: syscall.O_EVTONLY
-tags: [exported]
 ```
 
 ```Go
@@ -10325,7 +9619,6 @@ const O_EVTONLY = 0x8000
 
 ```
 searchKey: syscall.O_EXCL
-tags: [exported]
 ```
 
 ```Go
@@ -10336,7 +9629,6 @@ const O_EXCL = 0x800
 
 ```
 searchKey: syscall.O_EXLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -10347,7 +9639,6 @@ const O_EXLOCK = 0x20
 
 ```
 searchKey: syscall.O_FSYNC
-tags: [exported]
 ```
 
 ```Go
@@ -10358,7 +9649,6 @@ const O_FSYNC = 0x80
 
 ```
 searchKey: syscall.O_NDELAY
-tags: [exported]
 ```
 
 ```Go
@@ -10369,7 +9659,6 @@ const O_NDELAY = 0x4
 
 ```
 searchKey: syscall.O_NOCTTY
-tags: [exported]
 ```
 
 ```Go
@@ -10380,7 +9669,6 @@ const O_NOCTTY = 0x20000
 
 ```
 searchKey: syscall.O_NOFOLLOW
-tags: [exported]
 ```
 
 ```Go
@@ -10391,7 +9679,6 @@ const O_NOFOLLOW = 0x100
 
 ```
 searchKey: syscall.O_NONBLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -10402,7 +9689,6 @@ const O_NONBLOCK = 0x4
 
 ```
 searchKey: syscall.O_POPUP
-tags: [exported]
 ```
 
 ```Go
@@ -10413,7 +9699,6 @@ const O_POPUP = 0x80000000
 
 ```
 searchKey: syscall.O_RDONLY
-tags: [exported]
 ```
 
 ```Go
@@ -10424,7 +9709,6 @@ const O_RDONLY = 0x0
 
 ```
 searchKey: syscall.O_RDWR
-tags: [exported]
 ```
 
 ```Go
@@ -10435,7 +9719,6 @@ const O_RDWR = 0x2
 
 ```
 searchKey: syscall.O_SHLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -10446,7 +9729,6 @@ const O_SHLOCK = 0x10
 
 ```
 searchKey: syscall.O_SYMLINK
-tags: [exported]
 ```
 
 ```Go
@@ -10457,7 +9739,6 @@ const O_SYMLINK = 0x200000
 
 ```
 searchKey: syscall.O_SYNC
-tags: [exported]
 ```
 
 ```Go
@@ -10468,7 +9749,6 @@ const O_SYNC = 0x80
 
 ```
 searchKey: syscall.O_TRUNC
-tags: [exported]
 ```
 
 ```Go
@@ -10479,7 +9759,6 @@ const O_TRUNC = 0x400
 
 ```
 searchKey: syscall.O_WRONLY
-tags: [exported]
 ```
 
 ```Go
@@ -10490,7 +9769,6 @@ const O_WRONLY = 0x1
 
 ```
 searchKey: syscall.PARENB
-tags: [exported]
 ```
 
 ```Go
@@ -10501,7 +9779,6 @@ const PARENB = 0x1000
 
 ```
 searchKey: syscall.PARMRK
-tags: [exported]
 ```
 
 ```Go
@@ -10512,7 +9789,6 @@ const PARMRK = 0x8
 
 ```
 searchKey: syscall.PARODD
-tags: [exported]
 ```
 
 ```Go
@@ -10523,7 +9799,6 @@ const PARODD = 0x2000
 
 ```
 searchKey: syscall.PENDIN
-tags: [exported]
 ```
 
 ```Go
@@ -10534,7 +9809,6 @@ const PENDIN = 0x20000000
 
 ```
 searchKey: syscall.PRIO_PGRP
-tags: [exported]
 ```
 
 ```Go
@@ -10545,7 +9819,6 @@ const PRIO_PGRP = 0x1
 
 ```
 searchKey: syscall.PRIO_PROCESS
-tags: [exported]
 ```
 
 ```Go
@@ -10556,7 +9829,6 @@ const PRIO_PROCESS = 0x0
 
 ```
 searchKey: syscall.PRIO_USER
-tags: [exported]
 ```
 
 ```Go
@@ -10567,7 +9839,6 @@ const PRIO_USER = 0x2
 
 ```
 searchKey: syscall.PROT_EXEC
-tags: [exported]
 ```
 
 ```Go
@@ -10578,7 +9849,6 @@ const PROT_EXEC = 0x4
 
 ```
 searchKey: syscall.PROT_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -10589,7 +9859,6 @@ const PROT_NONE = 0x0
 
 ```
 searchKey: syscall.PROT_READ
-tags: [exported]
 ```
 
 ```Go
@@ -10600,7 +9869,6 @@ const PROT_READ = 0x1
 
 ```
 searchKey: syscall.PROT_WRITE
-tags: [exported]
 ```
 
 ```Go
@@ -10611,7 +9879,6 @@ const PROT_WRITE = 0x2
 
 ```
 searchKey: syscall.PT_ATTACH
-tags: [exported]
 ```
 
 ```Go
@@ -10622,7 +9889,6 @@ const PT_ATTACH = 0xa
 
 ```
 searchKey: syscall.PT_ATTACHEXC
-tags: [exported]
 ```
 
 ```Go
@@ -10633,7 +9899,6 @@ const PT_ATTACHEXC = 0xe
 
 ```
 searchKey: syscall.PT_CONTINUE
-tags: [exported]
 ```
 
 ```Go
@@ -10644,7 +9909,6 @@ const PT_CONTINUE = 0x7
 
 ```
 searchKey: syscall.PT_DENY_ATTACH
-tags: [exported]
 ```
 
 ```Go
@@ -10655,7 +9919,6 @@ const PT_DENY_ATTACH = 0x1f
 
 ```
 searchKey: syscall.PT_DETACH
-tags: [exported]
 ```
 
 ```Go
@@ -10666,7 +9929,6 @@ const PT_DETACH = 0xb
 
 ```
 searchKey: syscall.PT_FIRSTMACH
-tags: [exported]
 ```
 
 ```Go
@@ -10677,7 +9939,6 @@ const PT_FIRSTMACH = 0x20
 
 ```
 searchKey: syscall.PT_FORCEQUOTA
-tags: [exported]
 ```
 
 ```Go
@@ -10688,7 +9949,6 @@ const PT_FORCEQUOTA = 0x1e
 
 ```
 searchKey: syscall.PT_KILL
-tags: [exported]
 ```
 
 ```Go
@@ -10699,7 +9959,6 @@ const PT_KILL = 0x8
 
 ```
 searchKey: syscall.PT_READ_D
-tags: [exported]
 ```
 
 ```Go
@@ -10710,7 +9969,6 @@ const PT_READ_D = 0x2
 
 ```
 searchKey: syscall.PT_READ_I
-tags: [exported]
 ```
 
 ```Go
@@ -10721,7 +9979,6 @@ const PT_READ_I = 0x1
 
 ```
 searchKey: syscall.PT_READ_U
-tags: [exported]
 ```
 
 ```Go
@@ -10732,7 +9989,6 @@ const PT_READ_U = 0x3
 
 ```
 searchKey: syscall.PT_SIGEXC
-tags: [exported]
 ```
 
 ```Go
@@ -10743,7 +9999,6 @@ const PT_SIGEXC = 0xc
 
 ```
 searchKey: syscall.PT_STEP
-tags: [exported]
 ```
 
 ```Go
@@ -10754,7 +10009,6 @@ const PT_STEP = 0x9
 
 ```
 searchKey: syscall.PT_THUPDATE
-tags: [exported]
 ```
 
 ```Go
@@ -10765,7 +10019,6 @@ const PT_THUPDATE = 0xd
 
 ```
 searchKey: syscall.PT_TRACE_ME
-tags: [exported]
 ```
 
 ```Go
@@ -10776,7 +10029,6 @@ const PT_TRACE_ME = 0x0
 
 ```
 searchKey: syscall.PT_WRITE_D
-tags: [exported]
 ```
 
 ```Go
@@ -10787,7 +10039,6 @@ const PT_WRITE_D = 0x5
 
 ```
 searchKey: syscall.PT_WRITE_I
-tags: [exported]
 ```
 
 ```Go
@@ -10798,7 +10049,6 @@ const PT_WRITE_I = 0x4
 
 ```
 searchKey: syscall.PT_WRITE_U
-tags: [exported]
 ```
 
 ```Go
@@ -10809,7 +10059,6 @@ const PT_WRITE_U = 0x6
 
 ```
 searchKey: syscall.RLIMIT_AS
-tags: [exported]
 ```
 
 ```Go
@@ -10820,7 +10069,6 @@ const RLIMIT_AS = 0x5
 
 ```
 searchKey: syscall.RLIMIT_CORE
-tags: [exported]
 ```
 
 ```Go
@@ -10831,7 +10079,6 @@ const RLIMIT_CORE = 0x4
 
 ```
 searchKey: syscall.RLIMIT_CPU
-tags: [exported]
 ```
 
 ```Go
@@ -10842,7 +10089,6 @@ const RLIMIT_CPU = 0x0
 
 ```
 searchKey: syscall.RLIMIT_DATA
-tags: [exported]
 ```
 
 ```Go
@@ -10853,7 +10099,6 @@ const RLIMIT_DATA = 0x2
 
 ```
 searchKey: syscall.RLIMIT_FSIZE
-tags: [exported]
 ```
 
 ```Go
@@ -10864,7 +10109,6 @@ const RLIMIT_FSIZE = 0x1
 
 ```
 searchKey: syscall.RLIMIT_NOFILE
-tags: [exported]
 ```
 
 ```Go
@@ -10875,7 +10119,6 @@ const RLIMIT_NOFILE = 0x8
 
 ```
 searchKey: syscall.RLIMIT_STACK
-tags: [exported]
 ```
 
 ```Go
@@ -10886,7 +10129,6 @@ const RLIMIT_STACK = 0x3
 
 ```
 searchKey: syscall.RLIM_INFINITY
-tags: [exported]
 ```
 
 ```Go
@@ -10897,7 +10139,6 @@ const RLIM_INFINITY = 0x7fffffffffffffff
 
 ```
 searchKey: syscall.RTAX_AUTHOR
-tags: [exported]
 ```
 
 ```Go
@@ -10908,7 +10149,6 @@ const RTAX_AUTHOR = 0x6
 
 ```
 searchKey: syscall.RTAX_BRD
-tags: [exported]
 ```
 
 ```Go
@@ -10919,7 +10159,6 @@ const RTAX_BRD = 0x7
 
 ```
 searchKey: syscall.RTAX_DST
-tags: [exported]
 ```
 
 ```Go
@@ -10930,7 +10169,6 @@ const RTAX_DST = 0x0
 
 ```
 searchKey: syscall.RTAX_GATEWAY
-tags: [exported]
 ```
 
 ```Go
@@ -10941,7 +10179,6 @@ const RTAX_GATEWAY = 0x1
 
 ```
 searchKey: syscall.RTAX_GENMASK
-tags: [exported]
 ```
 
 ```Go
@@ -10952,7 +10189,6 @@ const RTAX_GENMASK = 0x3
 
 ```
 searchKey: syscall.RTAX_IFA
-tags: [exported]
 ```
 
 ```Go
@@ -10963,7 +10199,6 @@ const RTAX_IFA = 0x5
 
 ```
 searchKey: syscall.RTAX_IFP
-tags: [exported]
 ```
 
 ```Go
@@ -10974,7 +10209,6 @@ const RTAX_IFP = 0x4
 
 ```
 searchKey: syscall.RTAX_MAX
-tags: [exported]
 ```
 
 ```Go
@@ -10985,7 +10219,6 @@ const RTAX_MAX = 0x8
 
 ```
 searchKey: syscall.RTAX_NETMASK
-tags: [exported]
 ```
 
 ```Go
@@ -10996,7 +10229,6 @@ const RTAX_NETMASK = 0x2
 
 ```
 searchKey: syscall.RTA_AUTHOR
-tags: [exported]
 ```
 
 ```Go
@@ -11007,7 +10239,6 @@ const RTA_AUTHOR = 0x40
 
 ```
 searchKey: syscall.RTA_BRD
-tags: [exported]
 ```
 
 ```Go
@@ -11018,7 +10249,6 @@ const RTA_BRD = 0x80
 
 ```
 searchKey: syscall.RTA_DST
-tags: [exported]
 ```
 
 ```Go
@@ -11029,7 +10259,6 @@ const RTA_DST = 0x1
 
 ```
 searchKey: syscall.RTA_GATEWAY
-tags: [exported]
 ```
 
 ```Go
@@ -11040,7 +10269,6 @@ const RTA_GATEWAY = 0x2
 
 ```
 searchKey: syscall.RTA_GENMASK
-tags: [exported]
 ```
 
 ```Go
@@ -11051,7 +10279,6 @@ const RTA_GENMASK = 0x8
 
 ```
 searchKey: syscall.RTA_IFA
-tags: [exported]
 ```
 
 ```Go
@@ -11062,7 +10289,6 @@ const RTA_IFA = 0x20
 
 ```
 searchKey: syscall.RTA_IFP
-tags: [exported]
 ```
 
 ```Go
@@ -11073,7 +10299,6 @@ const RTA_IFP = 0x10
 
 ```
 searchKey: syscall.RTA_NETMASK
-tags: [exported]
 ```
 
 ```Go
@@ -11084,7 +10309,6 @@ const RTA_NETMASK = 0x4
 
 ```
 searchKey: syscall.RTF_BLACKHOLE
-tags: [exported]
 ```
 
 ```Go
@@ -11095,7 +10319,6 @@ const RTF_BLACKHOLE = 0x1000
 
 ```
 searchKey: syscall.RTF_BROADCAST
-tags: [exported]
 ```
 
 ```Go
@@ -11106,7 +10329,6 @@ const RTF_BROADCAST = 0x400000
 
 ```
 searchKey: syscall.RTF_CLONING
-tags: [exported]
 ```
 
 ```Go
@@ -11117,7 +10339,6 @@ const RTF_CLONING = 0x100
 
 ```
 searchKey: syscall.RTF_CONDEMNED
-tags: [exported]
 ```
 
 ```Go
@@ -11128,7 +10349,6 @@ const RTF_CONDEMNED = 0x2000000
 
 ```
 searchKey: syscall.RTF_DELCLONE
-tags: [exported]
 ```
 
 ```Go
@@ -11139,7 +10359,6 @@ const RTF_DELCLONE = 0x80
 
 ```
 searchKey: syscall.RTF_DONE
-tags: [exported]
 ```
 
 ```Go
@@ -11150,7 +10369,6 @@ const RTF_DONE = 0x40
 
 ```
 searchKey: syscall.RTF_DYNAMIC
-tags: [exported]
 ```
 
 ```Go
@@ -11161,7 +10379,6 @@ const RTF_DYNAMIC = 0x10
 
 ```
 searchKey: syscall.RTF_GATEWAY
-tags: [exported]
 ```
 
 ```Go
@@ -11172,7 +10389,6 @@ const RTF_GATEWAY = 0x2
 
 ```
 searchKey: syscall.RTF_HOST
-tags: [exported]
 ```
 
 ```Go
@@ -11183,7 +10399,6 @@ const RTF_HOST = 0x4
 
 ```
 searchKey: syscall.RTF_IFREF
-tags: [exported]
 ```
 
 ```Go
@@ -11194,7 +10409,6 @@ const RTF_IFREF = 0x4000000
 
 ```
 searchKey: syscall.RTF_IFSCOPE
-tags: [exported]
 ```
 
 ```Go
@@ -11205,7 +10419,6 @@ const RTF_IFSCOPE = 0x1000000
 
 ```
 searchKey: syscall.RTF_LLINFO
-tags: [exported]
 ```
 
 ```Go
@@ -11216,7 +10429,6 @@ const RTF_LLINFO = 0x400
 
 ```
 searchKey: syscall.RTF_LOCAL
-tags: [exported]
 ```
 
 ```Go
@@ -11227,7 +10439,6 @@ const RTF_LOCAL = 0x200000
 
 ```
 searchKey: syscall.RTF_MODIFIED
-tags: [exported]
 ```
 
 ```Go
@@ -11238,7 +10449,6 @@ const RTF_MODIFIED = 0x20
 
 ```
 searchKey: syscall.RTF_MULTICAST
-tags: [exported]
 ```
 
 ```Go
@@ -11249,7 +10459,6 @@ const RTF_MULTICAST = 0x800000
 
 ```
 searchKey: syscall.RTF_PINNED
-tags: [exported]
 ```
 
 ```Go
@@ -11260,7 +10469,6 @@ const RTF_PINNED = 0x100000
 
 ```
 searchKey: syscall.RTF_PRCLONING
-tags: [exported]
 ```
 
 ```Go
@@ -11271,7 +10479,6 @@ const RTF_PRCLONING = 0x10000
 
 ```
 searchKey: syscall.RTF_PROTO1
-tags: [exported]
 ```
 
 ```Go
@@ -11282,7 +10489,6 @@ const RTF_PROTO1 = 0x8000
 
 ```
 searchKey: syscall.RTF_PROTO2
-tags: [exported]
 ```
 
 ```Go
@@ -11293,7 +10499,6 @@ const RTF_PROTO2 = 0x4000
 
 ```
 searchKey: syscall.RTF_PROTO3
-tags: [exported]
 ```
 
 ```Go
@@ -11304,7 +10509,6 @@ const RTF_PROTO3 = 0x40000
 
 ```
 searchKey: syscall.RTF_REJECT
-tags: [exported]
 ```
 
 ```Go
@@ -11315,7 +10519,6 @@ const RTF_REJECT = 0x8
 
 ```
 searchKey: syscall.RTF_STATIC
-tags: [exported]
 ```
 
 ```Go
@@ -11326,7 +10529,6 @@ const RTF_STATIC = 0x800
 
 ```
 searchKey: syscall.RTF_UP
-tags: [exported]
 ```
 
 ```Go
@@ -11337,7 +10539,6 @@ const RTF_UP = 0x1
 
 ```
 searchKey: syscall.RTF_WASCLONED
-tags: [exported]
 ```
 
 ```Go
@@ -11348,7 +10549,6 @@ const RTF_WASCLONED = 0x20000
 
 ```
 searchKey: syscall.RTF_XRESOLVE
-tags: [exported]
 ```
 
 ```Go
@@ -11359,7 +10559,6 @@ const RTF_XRESOLVE = 0x200
 
 ```
 searchKey: syscall.RTM_ADD
-tags: [exported]
 ```
 
 ```Go
@@ -11370,7 +10569,6 @@ const RTM_ADD = 0x1
 
 ```
 searchKey: syscall.RTM_CHANGE
-tags: [exported]
 ```
 
 ```Go
@@ -11381,7 +10579,6 @@ const RTM_CHANGE = 0x3
 
 ```
 searchKey: syscall.RTM_DELADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11392,7 +10589,6 @@ const RTM_DELADDR = 0xd
 
 ```
 searchKey: syscall.RTM_DELETE
-tags: [exported]
 ```
 
 ```Go
@@ -11403,7 +10599,6 @@ const RTM_DELETE = 0x2
 
 ```
 searchKey: syscall.RTM_DELMADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11414,7 +10609,6 @@ const RTM_DELMADDR = 0x10
 
 ```
 searchKey: syscall.RTM_GET
-tags: [exported]
 ```
 
 ```Go
@@ -11425,7 +10619,6 @@ const RTM_GET = 0x4
 
 ```
 searchKey: syscall.RTM_GET2
-tags: [exported]
 ```
 
 ```Go
@@ -11436,7 +10629,6 @@ const RTM_GET2 = 0x14
 
 ```
 searchKey: syscall.RTM_IFINFO
-tags: [exported]
 ```
 
 ```Go
@@ -11447,7 +10639,6 @@ const RTM_IFINFO = 0xe
 
 ```
 searchKey: syscall.RTM_IFINFO2
-tags: [exported]
 ```
 
 ```Go
@@ -11458,7 +10649,6 @@ const RTM_IFINFO2 = 0x12
 
 ```
 searchKey: syscall.RTM_LOCK
-tags: [exported]
 ```
 
 ```Go
@@ -11469,7 +10659,6 @@ const RTM_LOCK = 0x8
 
 ```
 searchKey: syscall.RTM_LOSING
-tags: [exported]
 ```
 
 ```Go
@@ -11480,7 +10669,6 @@ const RTM_LOSING = 0x5
 
 ```
 searchKey: syscall.RTM_MISS
-tags: [exported]
 ```
 
 ```Go
@@ -11491,7 +10679,6 @@ const RTM_MISS = 0x7
 
 ```
 searchKey: syscall.RTM_NEWADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11502,7 +10689,6 @@ const RTM_NEWADDR = 0xc
 
 ```
 searchKey: syscall.RTM_NEWMADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11513,7 +10699,6 @@ const RTM_NEWMADDR = 0xf
 
 ```
 searchKey: syscall.RTM_NEWMADDR2
-tags: [exported]
 ```
 
 ```Go
@@ -11524,7 +10709,6 @@ const RTM_NEWMADDR2 = 0x13
 
 ```
 searchKey: syscall.RTM_OLDADD
-tags: [exported]
 ```
 
 ```Go
@@ -11535,7 +10719,6 @@ const RTM_OLDADD = 0x9
 
 ```
 searchKey: syscall.RTM_OLDDEL
-tags: [exported]
 ```
 
 ```Go
@@ -11546,7 +10729,6 @@ const RTM_OLDDEL = 0xa
 
 ```
 searchKey: syscall.RTM_REDIRECT
-tags: [exported]
 ```
 
 ```Go
@@ -11557,7 +10739,6 @@ const RTM_REDIRECT = 0x6
 
 ```
 searchKey: syscall.RTM_RESOLVE
-tags: [exported]
 ```
 
 ```Go
@@ -11568,7 +10749,6 @@ const RTM_RESOLVE = 0xb
 
 ```
 searchKey: syscall.RTM_RTTUNIT
-tags: [exported]
 ```
 
 ```Go
@@ -11579,7 +10759,6 @@ const RTM_RTTUNIT = 0xf4240
 
 ```
 searchKey: syscall.RTM_VERSION
-tags: [exported]
 ```
 
 ```Go
@@ -11590,7 +10769,6 @@ const RTM_VERSION = 0x5
 
 ```
 searchKey: syscall.RTV_EXPIRE
-tags: [exported]
 ```
 
 ```Go
@@ -11601,7 +10779,6 @@ const RTV_EXPIRE = 0x4
 
 ```
 searchKey: syscall.RTV_HOPCOUNT
-tags: [exported]
 ```
 
 ```Go
@@ -11612,7 +10789,6 @@ const RTV_HOPCOUNT = 0x2
 
 ```
 searchKey: syscall.RTV_MTU
-tags: [exported]
 ```
 
 ```Go
@@ -11623,7 +10799,6 @@ const RTV_MTU = 0x1
 
 ```
 searchKey: syscall.RTV_RPIPE
-tags: [exported]
 ```
 
 ```Go
@@ -11634,7 +10809,6 @@ const RTV_RPIPE = 0x8
 
 ```
 searchKey: syscall.RTV_RTT
-tags: [exported]
 ```
 
 ```Go
@@ -11645,7 +10819,6 @@ const RTV_RTT = 0x40
 
 ```
 searchKey: syscall.RTV_RTTVAR
-tags: [exported]
 ```
 
 ```Go
@@ -11656,7 +10829,6 @@ const RTV_RTTVAR = 0x80
 
 ```
 searchKey: syscall.RTV_SPIPE
-tags: [exported]
 ```
 
 ```Go
@@ -11667,7 +10839,6 @@ const RTV_SPIPE = 0x10
 
 ```
 searchKey: syscall.RTV_SSTHRESH
-tags: [exported]
 ```
 
 ```Go
@@ -11678,7 +10849,6 @@ const RTV_SSTHRESH = 0x20
 
 ```
 searchKey: syscall.RUSAGE_CHILDREN
-tags: [exported]
 ```
 
 ```Go
@@ -11689,7 +10859,6 @@ const RUSAGE_CHILDREN = -0x1
 
 ```
 searchKey: syscall.RUSAGE_SELF
-tags: [exported]
 ```
 
 ```Go
@@ -11700,7 +10869,6 @@ const RUSAGE_SELF = 0x0
 
 ```
 searchKey: syscall.SCM_CREDS
-tags: [exported]
 ```
 
 ```Go
@@ -11711,7 +10879,6 @@ const SCM_CREDS = 0x3
 
 ```
 searchKey: syscall.SCM_RIGHTS
-tags: [exported]
 ```
 
 ```Go
@@ -11722,7 +10889,6 @@ const SCM_RIGHTS = 0x1
 
 ```
 searchKey: syscall.SCM_TIMESTAMP
-tags: [exported]
 ```
 
 ```Go
@@ -11733,7 +10899,6 @@ const SCM_TIMESTAMP = 0x2
 
 ```
 searchKey: syscall.SCM_TIMESTAMP_MONOTONIC
-tags: [exported]
 ```
 
 ```Go
@@ -11744,7 +10909,6 @@ const SCM_TIMESTAMP_MONOTONIC = 0x4
 
 ```
 searchKey: syscall.SHUT_RD
-tags: [exported]
 ```
 
 ```Go
@@ -11755,7 +10919,6 @@ const SHUT_RD = 0x0
 
 ```
 searchKey: syscall.SHUT_RDWR
-tags: [exported]
 ```
 
 ```Go
@@ -11766,7 +10929,6 @@ const SHUT_RDWR = 0x2
 
 ```
 searchKey: syscall.SHUT_WR
-tags: [exported]
 ```
 
 ```Go
@@ -11777,7 +10939,6 @@ const SHUT_WR = 0x1
 
 ```
 searchKey: syscall.SIOCADDMULTI
-tags: [exported]
 ```
 
 ```Go
@@ -11788,7 +10949,6 @@ const SIOCADDMULTI = 0x80206931
 
 ```
 searchKey: syscall.SIOCAIFADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11799,7 +10959,6 @@ const SIOCAIFADDR = 0x8040691a
 
 ```
 searchKey: syscall.SIOCALIFADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11810,7 +10969,6 @@ const SIOCALIFADDR = 0x8118691d
 
 ```
 searchKey: syscall.SIOCARPIPLL
-tags: [exported]
 ```
 
 ```Go
@@ -11821,7 +10979,6 @@ const SIOCARPIPLL = 0xc0206928
 
 ```
 searchKey: syscall.SIOCATMARK
-tags: [exported]
 ```
 
 ```Go
@@ -11832,7 +10989,6 @@ const SIOCATMARK = 0x40047307
 
 ```
 searchKey: syscall.SIOCAUTOADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11843,7 +10999,6 @@ const SIOCAUTOADDR = 0xc0206926
 
 ```
 searchKey: syscall.SIOCAUTONETMASK
-tags: [exported]
 ```
 
 ```Go
@@ -11854,7 +11009,6 @@ const SIOCAUTONETMASK = 0x80206927
 
 ```
 searchKey: syscall.SIOCDELMULTI
-tags: [exported]
 ```
 
 ```Go
@@ -11865,7 +11019,6 @@ const SIOCDELMULTI = 0x80206932
 
 ```
 searchKey: syscall.SIOCDIFADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11876,7 +11029,6 @@ const SIOCDIFADDR = 0x80206919
 
 ```
 searchKey: syscall.SIOCDIFPHYADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11887,7 +11039,6 @@ const SIOCDIFPHYADDR = 0x80206941
 
 ```
 searchKey: syscall.SIOCDLIFADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11898,7 +11049,6 @@ const SIOCDLIFADDR = 0x8118691f
 
 ```
 searchKey: syscall.SIOCGDRVSPEC
-tags: [exported]
 ```
 
 ```Go
@@ -11909,7 +11059,6 @@ const SIOCGDRVSPEC = 0xc028697b
 
 ```
 searchKey: syscall.SIOCGETSGCNT
-tags: [exported]
 ```
 
 ```Go
@@ -11920,7 +11069,6 @@ const SIOCGETSGCNT = 0xc014721c
 
 ```
 searchKey: syscall.SIOCGETVIFCNT
-tags: [exported]
 ```
 
 ```Go
@@ -11931,7 +11079,6 @@ const SIOCGETVIFCNT = 0xc014721b
 
 ```
 searchKey: syscall.SIOCGETVLAN
-tags: [exported]
 ```
 
 ```Go
@@ -11942,7 +11089,6 @@ const SIOCGETVLAN = 0xc020697f
 
 ```
 searchKey: syscall.SIOCGHIWAT
-tags: [exported]
 ```
 
 ```Go
@@ -11953,7 +11099,6 @@ const SIOCGHIWAT = 0x40047301
 
 ```
 searchKey: syscall.SIOCGIFADDR
-tags: [exported]
 ```
 
 ```Go
@@ -11964,7 +11109,6 @@ const SIOCGIFADDR = 0xc0206921
 
 ```
 searchKey: syscall.SIOCGIFALTMTU
-tags: [exported]
 ```
 
 ```Go
@@ -11975,7 +11119,6 @@ const SIOCGIFALTMTU = 0xc0206948
 
 ```
 searchKey: syscall.SIOCGIFASYNCMAP
-tags: [exported]
 ```
 
 ```Go
@@ -11986,7 +11129,6 @@ const SIOCGIFASYNCMAP = 0xc020697c
 
 ```
 searchKey: syscall.SIOCGIFBOND
-tags: [exported]
 ```
 
 ```Go
@@ -11997,7 +11139,6 @@ const SIOCGIFBOND = 0xc0206947
 
 ```
 searchKey: syscall.SIOCGIFBRDADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12008,7 +11149,6 @@ const SIOCGIFBRDADDR = 0xc0206923
 
 ```
 searchKey: syscall.SIOCGIFCAP
-tags: [exported]
 ```
 
 ```Go
@@ -12019,7 +11159,6 @@ const SIOCGIFCAP = 0xc020695b
 
 ```
 searchKey: syscall.SIOCGIFCONF
-tags: [exported]
 ```
 
 ```Go
@@ -12030,7 +11169,6 @@ const SIOCGIFCONF = 0xc00c6924
 
 ```
 searchKey: syscall.SIOCGIFDEVMTU
-tags: [exported]
 ```
 
 ```Go
@@ -12041,7 +11179,6 @@ const SIOCGIFDEVMTU = 0xc0206944
 
 ```
 searchKey: syscall.SIOCGIFDSTADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12052,7 +11189,6 @@ const SIOCGIFDSTADDR = 0xc0206922
 
 ```
 searchKey: syscall.SIOCGIFFLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -12063,7 +11199,6 @@ const SIOCGIFFLAGS = 0xc0206911
 
 ```
 searchKey: syscall.SIOCGIFGENERIC
-tags: [exported]
 ```
 
 ```Go
@@ -12074,7 +11209,6 @@ const SIOCGIFGENERIC = 0xc020693a
 
 ```
 searchKey: syscall.SIOCGIFKPI
-tags: [exported]
 ```
 
 ```Go
@@ -12085,7 +11219,6 @@ const SIOCGIFKPI = 0xc0206987
 
 ```
 searchKey: syscall.SIOCGIFMAC
-tags: [exported]
 ```
 
 ```Go
@@ -12096,7 +11229,6 @@ const SIOCGIFMAC = 0xc0206982
 
 ```
 searchKey: syscall.SIOCGIFMEDIA
-tags: [exported]
 ```
 
 ```Go
@@ -12107,7 +11239,6 @@ const SIOCGIFMEDIA = 0xc02c6938
 
 ```
 searchKey: syscall.SIOCGIFMETRIC
-tags: [exported]
 ```
 
 ```Go
@@ -12118,7 +11249,6 @@ const SIOCGIFMETRIC = 0xc0206917
 
 ```
 searchKey: syscall.SIOCGIFMTU
-tags: [exported]
 ```
 
 ```Go
@@ -12129,7 +11259,6 @@ const SIOCGIFMTU = 0xc0206933
 
 ```
 searchKey: syscall.SIOCGIFNETMASK
-tags: [exported]
 ```
 
 ```Go
@@ -12140,7 +11269,6 @@ const SIOCGIFNETMASK = 0xc0206925
 
 ```
 searchKey: syscall.SIOCGIFPDSTADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12151,7 +11279,6 @@ const SIOCGIFPDSTADDR = 0xc0206940
 
 ```
 searchKey: syscall.SIOCGIFPHYS
-tags: [exported]
 ```
 
 ```Go
@@ -12162,7 +11289,6 @@ const SIOCGIFPHYS = 0xc0206935
 
 ```
 searchKey: syscall.SIOCGIFPSRCADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12173,7 +11299,6 @@ const SIOCGIFPSRCADDR = 0xc020693f
 
 ```
 searchKey: syscall.SIOCGIFSTATUS
-tags: [exported]
 ```
 
 ```Go
@@ -12184,7 +11309,6 @@ const SIOCGIFSTATUS = 0xc331693d
 
 ```
 searchKey: syscall.SIOCGIFVLAN
-tags: [exported]
 ```
 
 ```Go
@@ -12195,7 +11319,6 @@ const SIOCGIFVLAN = 0xc020697f
 
 ```
 searchKey: syscall.SIOCGIFWAKEFLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -12206,7 +11329,6 @@ const SIOCGIFWAKEFLAGS = 0xc0206988
 
 ```
 searchKey: syscall.SIOCGLIFADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12217,7 +11339,6 @@ const SIOCGLIFADDR = 0xc118691e
 
 ```
 searchKey: syscall.SIOCGLIFPHYADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12228,7 +11349,6 @@ const SIOCGLIFPHYADDR = 0xc1186943
 
 ```
 searchKey: syscall.SIOCGLOWAT
-tags: [exported]
 ```
 
 ```Go
@@ -12239,7 +11359,6 @@ const SIOCGLOWAT = 0x40047303
 
 ```
 searchKey: syscall.SIOCGPGRP
-tags: [exported]
 ```
 
 ```Go
@@ -12250,7 +11369,6 @@ const SIOCGPGRP = 0x40047309
 
 ```
 searchKey: syscall.SIOCIFCREATE
-tags: [exported]
 ```
 
 ```Go
@@ -12261,7 +11379,6 @@ const SIOCIFCREATE = 0xc0206978
 
 ```
 searchKey: syscall.SIOCIFCREATE2
-tags: [exported]
 ```
 
 ```Go
@@ -12272,7 +11389,6 @@ const SIOCIFCREATE2 = 0xc020697a
 
 ```
 searchKey: syscall.SIOCIFDESTROY
-tags: [exported]
 ```
 
 ```Go
@@ -12283,7 +11399,6 @@ const SIOCIFDESTROY = 0x80206979
 
 ```
 searchKey: syscall.SIOCRSLVMULTI
-tags: [exported]
 ```
 
 ```Go
@@ -12294,7 +11409,6 @@ const SIOCRSLVMULTI = 0xc010693b
 
 ```
 searchKey: syscall.SIOCSDRVSPEC
-tags: [exported]
 ```
 
 ```Go
@@ -12305,7 +11419,6 @@ const SIOCSDRVSPEC = 0x8028697b
 
 ```
 searchKey: syscall.SIOCSETVLAN
-tags: [exported]
 ```
 
 ```Go
@@ -12316,7 +11429,6 @@ const SIOCSETVLAN = 0x8020697e
 
 ```
 searchKey: syscall.SIOCSHIWAT
-tags: [exported]
 ```
 
 ```Go
@@ -12327,7 +11439,6 @@ const SIOCSHIWAT = 0x80047300
 
 ```
 searchKey: syscall.SIOCSIFADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12338,7 +11449,6 @@ const SIOCSIFADDR = 0x8020690c
 
 ```
 searchKey: syscall.SIOCSIFALTMTU
-tags: [exported]
 ```
 
 ```Go
@@ -12349,7 +11459,6 @@ const SIOCSIFALTMTU = 0x80206945
 
 ```
 searchKey: syscall.SIOCSIFASYNCMAP
-tags: [exported]
 ```
 
 ```Go
@@ -12360,7 +11469,6 @@ const SIOCSIFASYNCMAP = 0x8020697d
 
 ```
 searchKey: syscall.SIOCSIFBOND
-tags: [exported]
 ```
 
 ```Go
@@ -12371,7 +11479,6 @@ const SIOCSIFBOND = 0x80206946
 
 ```
 searchKey: syscall.SIOCSIFBRDADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12382,7 +11489,6 @@ const SIOCSIFBRDADDR = 0x80206913
 
 ```
 searchKey: syscall.SIOCSIFCAP
-tags: [exported]
 ```
 
 ```Go
@@ -12393,7 +11499,6 @@ const SIOCSIFCAP = 0x8020695a
 
 ```
 searchKey: syscall.SIOCSIFDSTADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12404,7 +11509,6 @@ const SIOCSIFDSTADDR = 0x8020690e
 
 ```
 searchKey: syscall.SIOCSIFFLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -12415,7 +11519,6 @@ const SIOCSIFFLAGS = 0x80206910
 
 ```
 searchKey: syscall.SIOCSIFGENERIC
-tags: [exported]
 ```
 
 ```Go
@@ -12426,7 +11529,6 @@ const SIOCSIFGENERIC = 0x80206939
 
 ```
 searchKey: syscall.SIOCSIFKPI
-tags: [exported]
 ```
 
 ```Go
@@ -12437,7 +11539,6 @@ const SIOCSIFKPI = 0x80206986
 
 ```
 searchKey: syscall.SIOCSIFLLADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12448,7 +11549,6 @@ const SIOCSIFLLADDR = 0x8020693c
 
 ```
 searchKey: syscall.SIOCSIFMAC
-tags: [exported]
 ```
 
 ```Go
@@ -12459,7 +11559,6 @@ const SIOCSIFMAC = 0x80206983
 
 ```
 searchKey: syscall.SIOCSIFMEDIA
-tags: [exported]
 ```
 
 ```Go
@@ -12470,7 +11569,6 @@ const SIOCSIFMEDIA = 0xc0206937
 
 ```
 searchKey: syscall.SIOCSIFMETRIC
-tags: [exported]
 ```
 
 ```Go
@@ -12481,7 +11579,6 @@ const SIOCSIFMETRIC = 0x80206918
 
 ```
 searchKey: syscall.SIOCSIFMTU
-tags: [exported]
 ```
 
 ```Go
@@ -12492,7 +11589,6 @@ const SIOCSIFMTU = 0x80206934
 
 ```
 searchKey: syscall.SIOCSIFNETMASK
-tags: [exported]
 ```
 
 ```Go
@@ -12503,7 +11599,6 @@ const SIOCSIFNETMASK = 0x80206916
 
 ```
 searchKey: syscall.SIOCSIFPHYADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12514,7 +11609,6 @@ const SIOCSIFPHYADDR = 0x8040693e
 
 ```
 searchKey: syscall.SIOCSIFPHYS
-tags: [exported]
 ```
 
 ```Go
@@ -12525,7 +11619,6 @@ const SIOCSIFPHYS = 0x80206936
 
 ```
 searchKey: syscall.SIOCSIFVLAN
-tags: [exported]
 ```
 
 ```Go
@@ -12536,7 +11629,6 @@ const SIOCSIFVLAN = 0x8020697e
 
 ```
 searchKey: syscall.SIOCSLIFPHYADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12547,7 +11639,6 @@ const SIOCSLIFPHYADDR = 0x81186942
 
 ```
 searchKey: syscall.SIOCSLOWAT
-tags: [exported]
 ```
 
 ```Go
@@ -12558,7 +11649,6 @@ const SIOCSLOWAT = 0x80047302
 
 ```
 searchKey: syscall.SIOCSPGRP
-tags: [exported]
 ```
 
 ```Go
@@ -12569,7 +11659,6 @@ const SIOCSPGRP = 0x80047308
 
 ```
 searchKey: syscall.SOCK_DGRAM
-tags: [exported]
 ```
 
 ```Go
@@ -12580,7 +11669,6 @@ const SOCK_DGRAM = 0x2
 
 ```
 searchKey: syscall.SOCK_MAXADDRLEN
-tags: [exported]
 ```
 
 ```Go
@@ -12591,7 +11679,6 @@ const SOCK_MAXADDRLEN = 0xff
 
 ```
 searchKey: syscall.SOCK_RAW
-tags: [exported]
 ```
 
 ```Go
@@ -12602,7 +11689,6 @@ const SOCK_RAW = 0x3
 
 ```
 searchKey: syscall.SOCK_RDM
-tags: [exported]
 ```
 
 ```Go
@@ -12613,7 +11699,6 @@ const SOCK_RDM = 0x4
 
 ```
 searchKey: syscall.SOCK_SEQPACKET
-tags: [exported]
 ```
 
 ```Go
@@ -12624,7 +11709,6 @@ const SOCK_SEQPACKET = 0x5
 
 ```
 searchKey: syscall.SOCK_STREAM
-tags: [exported]
 ```
 
 ```Go
@@ -12635,7 +11719,6 @@ const SOCK_STREAM = 0x1
 
 ```
 searchKey: syscall.SOL_SOCKET
-tags: [exported]
 ```
 
 ```Go
@@ -12646,7 +11729,6 @@ const SOL_SOCKET = 0xffff
 
 ```
 searchKey: syscall.SOMAXCONN
-tags: [exported]
 ```
 
 ```Go
@@ -12657,7 +11739,6 @@ const SOMAXCONN = 0x80
 
 ```
 searchKey: syscall.SO_ACCEPTCONN
-tags: [exported]
 ```
 
 ```Go
@@ -12668,7 +11749,6 @@ const SO_ACCEPTCONN = 0x2
 
 ```
 searchKey: syscall.SO_BROADCAST
-tags: [exported]
 ```
 
 ```Go
@@ -12679,7 +11759,6 @@ const SO_BROADCAST = 0x20
 
 ```
 searchKey: syscall.SO_DEBUG
-tags: [exported]
 ```
 
 ```Go
@@ -12690,7 +11769,6 @@ const SO_DEBUG = 0x1
 
 ```
 searchKey: syscall.SO_DONTROUTE
-tags: [exported]
 ```
 
 ```Go
@@ -12701,7 +11779,6 @@ const SO_DONTROUTE = 0x10
 
 ```
 searchKey: syscall.SO_DONTTRUNC
-tags: [exported]
 ```
 
 ```Go
@@ -12712,7 +11789,6 @@ const SO_DONTTRUNC = 0x2000
 
 ```
 searchKey: syscall.SO_ERROR
-tags: [exported]
 ```
 
 ```Go
@@ -12723,7 +11799,6 @@ const SO_ERROR = 0x1007
 
 ```
 searchKey: syscall.SO_KEEPALIVE
-tags: [exported]
 ```
 
 ```Go
@@ -12734,7 +11809,6 @@ const SO_KEEPALIVE = 0x8
 
 ```
 searchKey: syscall.SO_LABEL
-tags: [exported]
 ```
 
 ```Go
@@ -12745,7 +11819,6 @@ const SO_LABEL = 0x1010
 
 ```
 searchKey: syscall.SO_LINGER
-tags: [exported]
 ```
 
 ```Go
@@ -12756,7 +11829,6 @@ const SO_LINGER = 0x80
 
 ```
 searchKey: syscall.SO_LINGER_SEC
-tags: [exported]
 ```
 
 ```Go
@@ -12767,7 +11839,6 @@ const SO_LINGER_SEC = 0x1080
 
 ```
 searchKey: syscall.SO_NKE
-tags: [exported]
 ```
 
 ```Go
@@ -12778,7 +11849,6 @@ const SO_NKE = 0x1021
 
 ```
 searchKey: syscall.SO_NOADDRERR
-tags: [exported]
 ```
 
 ```Go
@@ -12789,7 +11859,6 @@ const SO_NOADDRERR = 0x1023
 
 ```
 searchKey: syscall.SO_NOSIGPIPE
-tags: [exported]
 ```
 
 ```Go
@@ -12800,7 +11869,6 @@ const SO_NOSIGPIPE = 0x1022
 
 ```
 searchKey: syscall.SO_NOTIFYCONFLICT
-tags: [exported]
 ```
 
 ```Go
@@ -12811,7 +11879,6 @@ const SO_NOTIFYCONFLICT = 0x1026
 
 ```
 searchKey: syscall.SO_NP_EXTENSIONS
-tags: [exported]
 ```
 
 ```Go
@@ -12822,7 +11889,6 @@ const SO_NP_EXTENSIONS = 0x1083
 
 ```
 searchKey: syscall.SO_NREAD
-tags: [exported]
 ```
 
 ```Go
@@ -12833,7 +11899,6 @@ const SO_NREAD = 0x1020
 
 ```
 searchKey: syscall.SO_NWRITE
-tags: [exported]
 ```
 
 ```Go
@@ -12844,7 +11909,6 @@ const SO_NWRITE = 0x1024
 
 ```
 searchKey: syscall.SO_OOBINLINE
-tags: [exported]
 ```
 
 ```Go
@@ -12855,7 +11919,6 @@ const SO_OOBINLINE = 0x100
 
 ```
 searchKey: syscall.SO_PEERLABEL
-tags: [exported]
 ```
 
 ```Go
@@ -12866,7 +11929,6 @@ const SO_PEERLABEL = 0x1011
 
 ```
 searchKey: syscall.SO_RANDOMPORT
-tags: [exported]
 ```
 
 ```Go
@@ -12877,7 +11939,6 @@ const SO_RANDOMPORT = 0x1082
 
 ```
 searchKey: syscall.SO_RCVBUF
-tags: [exported]
 ```
 
 ```Go
@@ -12888,7 +11949,6 @@ const SO_RCVBUF = 0x1002
 
 ```
 searchKey: syscall.SO_RCVLOWAT
-tags: [exported]
 ```
 
 ```Go
@@ -12899,7 +11959,6 @@ const SO_RCVLOWAT = 0x1004
 
 ```
 searchKey: syscall.SO_RCVTIMEO
-tags: [exported]
 ```
 
 ```Go
@@ -12910,7 +11969,6 @@ const SO_RCVTIMEO = 0x1006
 
 ```
 searchKey: syscall.SO_RESTRICTIONS
-tags: [exported]
 ```
 
 ```Go
@@ -12921,7 +11979,6 @@ const SO_RESTRICTIONS = 0x1081
 
 ```
 searchKey: syscall.SO_RESTRICT_DENYIN
-tags: [exported]
 ```
 
 ```Go
@@ -12932,7 +11989,6 @@ const SO_RESTRICT_DENYIN = 0x1
 
 ```
 searchKey: syscall.SO_RESTRICT_DENYOUT
-tags: [exported]
 ```
 
 ```Go
@@ -12943,7 +11999,6 @@ const SO_RESTRICT_DENYOUT = 0x2
 
 ```
 searchKey: syscall.SO_RESTRICT_DENYSET
-tags: [exported]
 ```
 
 ```Go
@@ -12954,7 +12009,6 @@ const SO_RESTRICT_DENYSET = 0x80000000
 
 ```
 searchKey: syscall.SO_REUSEADDR
-tags: [exported]
 ```
 
 ```Go
@@ -12965,7 +12019,6 @@ const SO_REUSEADDR = 0x4
 
 ```
 searchKey: syscall.SO_REUSEPORT
-tags: [exported]
 ```
 
 ```Go
@@ -12976,7 +12029,6 @@ const SO_REUSEPORT = 0x200
 
 ```
 searchKey: syscall.SO_REUSESHAREUID
-tags: [exported]
 ```
 
 ```Go
@@ -12987,7 +12039,6 @@ const SO_REUSESHAREUID = 0x1025
 
 ```
 searchKey: syscall.SO_SNDBUF
-tags: [exported]
 ```
 
 ```Go
@@ -12998,7 +12049,6 @@ const SO_SNDBUF = 0x1001
 
 ```
 searchKey: syscall.SO_SNDLOWAT
-tags: [exported]
 ```
 
 ```Go
@@ -13009,7 +12059,6 @@ const SO_SNDLOWAT = 0x1003
 
 ```
 searchKey: syscall.SO_SNDTIMEO
-tags: [exported]
 ```
 
 ```Go
@@ -13020,7 +12069,6 @@ const SO_SNDTIMEO = 0x1005
 
 ```
 searchKey: syscall.SO_TIMESTAMP
-tags: [exported]
 ```
 
 ```Go
@@ -13031,7 +12079,6 @@ const SO_TIMESTAMP = 0x400
 
 ```
 searchKey: syscall.SO_TIMESTAMP_MONOTONIC
-tags: [exported]
 ```
 
 ```Go
@@ -13042,7 +12089,6 @@ const SO_TIMESTAMP_MONOTONIC = 0x800
 
 ```
 searchKey: syscall.SO_TYPE
-tags: [exported]
 ```
 
 ```Go
@@ -13053,7 +12099,6 @@ const SO_TYPE = 0x1008
 
 ```
 searchKey: syscall.SO_UPCALLCLOSEWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -13064,7 +12109,6 @@ const SO_UPCALLCLOSEWAIT = 0x1027
 
 ```
 searchKey: syscall.SO_USELOOPBACK
-tags: [exported]
 ```
 
 ```Go
@@ -13075,7 +12119,6 @@ const SO_USELOOPBACK = 0x40
 
 ```
 searchKey: syscall.SO_WANTMORE
-tags: [exported]
 ```
 
 ```Go
@@ -13086,7 +12129,6 @@ const SO_WANTMORE = 0x4000
 
 ```
 searchKey: syscall.SO_WANTOOBFLAG
-tags: [exported]
 ```
 
 ```Go
@@ -13097,7 +12139,6 @@ const SO_WANTOOBFLAG = 0x8000
 
 ```
 searchKey: syscall.S_IEXEC
-tags: [exported]
 ```
 
 ```Go
@@ -13108,7 +12149,6 @@ const S_IEXEC = 0x40
 
 ```
 searchKey: syscall.S_IFBLK
-tags: [exported]
 ```
 
 ```Go
@@ -13119,7 +12159,6 @@ const S_IFBLK = 0x6000
 
 ```
 searchKey: syscall.S_IFCHR
-tags: [exported]
 ```
 
 ```Go
@@ -13130,7 +12169,6 @@ const S_IFCHR = 0x2000
 
 ```
 searchKey: syscall.S_IFDIR
-tags: [exported]
 ```
 
 ```Go
@@ -13141,7 +12179,6 @@ const S_IFDIR = 0x4000
 
 ```
 searchKey: syscall.S_IFIFO
-tags: [exported]
 ```
 
 ```Go
@@ -13152,7 +12189,6 @@ const S_IFIFO = 0x1000
 
 ```
 searchKey: syscall.S_IFLNK
-tags: [exported]
 ```
 
 ```Go
@@ -13163,7 +12199,6 @@ const S_IFLNK = 0xa000
 
 ```
 searchKey: syscall.S_IFMT
-tags: [exported]
 ```
 
 ```Go
@@ -13174,7 +12209,6 @@ const S_IFMT = 0xf000
 
 ```
 searchKey: syscall.S_IFREG
-tags: [exported]
 ```
 
 ```Go
@@ -13185,7 +12219,6 @@ const S_IFREG = 0x8000
 
 ```
 searchKey: syscall.S_IFSOCK
-tags: [exported]
 ```
 
 ```Go
@@ -13196,7 +12229,6 @@ const S_IFSOCK = 0xc000
 
 ```
 searchKey: syscall.S_IFWHT
-tags: [exported]
 ```
 
 ```Go
@@ -13207,7 +12239,6 @@ const S_IFWHT = 0xe000
 
 ```
 searchKey: syscall.S_IREAD
-tags: [exported]
 ```
 
 ```Go
@@ -13218,7 +12249,6 @@ const S_IREAD = 0x100
 
 ```
 searchKey: syscall.S_IRGRP
-tags: [exported]
 ```
 
 ```Go
@@ -13229,7 +12259,6 @@ const S_IRGRP = 0x20
 
 ```
 searchKey: syscall.S_IROTH
-tags: [exported]
 ```
 
 ```Go
@@ -13240,7 +12269,6 @@ const S_IROTH = 0x4
 
 ```
 searchKey: syscall.S_IRUSR
-tags: [exported]
 ```
 
 ```Go
@@ -13251,7 +12279,6 @@ const S_IRUSR = 0x100
 
 ```
 searchKey: syscall.S_IRWXG
-tags: [exported]
 ```
 
 ```Go
@@ -13262,7 +12289,6 @@ const S_IRWXG = 0x38
 
 ```
 searchKey: syscall.S_IRWXO
-tags: [exported]
 ```
 
 ```Go
@@ -13273,7 +12299,6 @@ const S_IRWXO = 0x7
 
 ```
 searchKey: syscall.S_IRWXU
-tags: [exported]
 ```
 
 ```Go
@@ -13284,7 +12309,6 @@ const S_IRWXU = 0x1c0
 
 ```
 searchKey: syscall.S_ISGID
-tags: [exported]
 ```
 
 ```Go
@@ -13295,7 +12319,6 @@ const S_ISGID = 0x400
 
 ```
 searchKey: syscall.S_ISTXT
-tags: [exported]
 ```
 
 ```Go
@@ -13306,7 +12329,6 @@ const S_ISTXT = 0x200
 
 ```
 searchKey: syscall.S_ISUID
-tags: [exported]
 ```
 
 ```Go
@@ -13317,7 +12339,6 @@ const S_ISUID = 0x800
 
 ```
 searchKey: syscall.S_ISVTX
-tags: [exported]
 ```
 
 ```Go
@@ -13328,7 +12349,6 @@ const S_ISVTX = 0x200
 
 ```
 searchKey: syscall.S_IWGRP
-tags: [exported]
 ```
 
 ```Go
@@ -13339,7 +12359,6 @@ const S_IWGRP = 0x10
 
 ```
 searchKey: syscall.S_IWOTH
-tags: [exported]
 ```
 
 ```Go
@@ -13350,7 +12369,6 @@ const S_IWOTH = 0x2
 
 ```
 searchKey: syscall.S_IWRITE
-tags: [exported]
 ```
 
 ```Go
@@ -13361,7 +12379,6 @@ const S_IWRITE = 0x80
 
 ```
 searchKey: syscall.S_IWUSR
-tags: [exported]
 ```
 
 ```Go
@@ -13372,7 +12389,6 @@ const S_IWUSR = 0x80
 
 ```
 searchKey: syscall.S_IXGRP
-tags: [exported]
 ```
 
 ```Go
@@ -13383,7 +12399,6 @@ const S_IXGRP = 0x8
 
 ```
 searchKey: syscall.S_IXOTH
-tags: [exported]
 ```
 
 ```Go
@@ -13394,7 +12409,6 @@ const S_IXOTH = 0x1
 
 ```
 searchKey: syscall.S_IXUSR
-tags: [exported]
 ```
 
 ```Go
@@ -13405,7 +12419,6 @@ const S_IXUSR = 0x40
 
 ```
 searchKey: syscall.TCIFLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -13416,7 +12429,6 @@ const TCIFLUSH = 0x1
 
 ```
 searchKey: syscall.TCIOFLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -13427,7 +12439,6 @@ const TCIOFLUSH = 0x3
 
 ```
 searchKey: syscall.TCOFLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -13438,7 +12449,6 @@ const TCOFLUSH = 0x2
 
 ```
 searchKey: syscall.TCP_CONNECTIONTIMEOUT
-tags: [exported]
 ```
 
 ```Go
@@ -13449,7 +12459,6 @@ const TCP_CONNECTIONTIMEOUT = 0x20
 
 ```
 searchKey: syscall.TCP_KEEPALIVE
-tags: [exported]
 ```
 
 ```Go
@@ -13460,7 +12469,6 @@ const TCP_KEEPALIVE = 0x10
 
 ```
 searchKey: syscall.TCP_MAXHLEN
-tags: [exported]
 ```
 
 ```Go
@@ -13471,7 +12479,6 @@ const TCP_MAXHLEN = 0x3c
 
 ```
 searchKey: syscall.TCP_MAXOLEN
-tags: [exported]
 ```
 
 ```Go
@@ -13482,7 +12489,6 @@ const TCP_MAXOLEN = 0x28
 
 ```
 searchKey: syscall.TCP_MAXSEG
-tags: [exported]
 ```
 
 ```Go
@@ -13493,7 +12499,6 @@ const TCP_MAXSEG = 0x2
 
 ```
 searchKey: syscall.TCP_MAXWIN
-tags: [exported]
 ```
 
 ```Go
@@ -13504,7 +12509,6 @@ const TCP_MAXWIN = 0xffff
 
 ```
 searchKey: syscall.TCP_MAX_SACK
-tags: [exported]
 ```
 
 ```Go
@@ -13515,7 +12519,6 @@ const TCP_MAX_SACK = 0x3
 
 ```
 searchKey: syscall.TCP_MAX_WINSHIFT
-tags: [exported]
 ```
 
 ```Go
@@ -13526,7 +12529,6 @@ const TCP_MAX_WINSHIFT = 0xe
 
 ```
 searchKey: syscall.TCP_MINMSS
-tags: [exported]
 ```
 
 ```Go
@@ -13537,7 +12539,6 @@ const TCP_MINMSS = 0xd8
 
 ```
 searchKey: syscall.TCP_MINMSSOVERLOAD
-tags: [exported]
 ```
 
 ```Go
@@ -13548,7 +12549,6 @@ const TCP_MINMSSOVERLOAD = 0x3e8
 
 ```
 searchKey: syscall.TCP_MSS
-tags: [exported]
 ```
 
 ```Go
@@ -13559,7 +12559,6 @@ const TCP_MSS = 0x200
 
 ```
 searchKey: syscall.TCP_NODELAY
-tags: [exported]
 ```
 
 ```Go
@@ -13570,7 +12569,6 @@ const TCP_NODELAY = 0x1
 
 ```
 searchKey: syscall.TCP_NOOPT
-tags: [exported]
 ```
 
 ```Go
@@ -13581,7 +12579,6 @@ const TCP_NOOPT = 0x8
 
 ```
 searchKey: syscall.TCP_NOPUSH
-tags: [exported]
 ```
 
 ```Go
@@ -13592,7 +12589,6 @@ const TCP_NOPUSH = 0x4
 
 ```
 searchKey: syscall.TCP_RXT_CONNDROPTIME
-tags: [exported]
 ```
 
 ```Go
@@ -13603,7 +12599,6 @@ const TCP_RXT_CONNDROPTIME = 0x80
 
 ```
 searchKey: syscall.TCP_RXT_FINDROP
-tags: [exported]
 ```
 
 ```Go
@@ -13614,7 +12609,6 @@ const TCP_RXT_FINDROP = 0x100
 
 ```
 searchKey: syscall.TCSAFLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -13625,7 +12619,6 @@ const TCSAFLUSH = 0x2
 
 ```
 searchKey: syscall.TIOCCBRK
-tags: [exported]
 ```
 
 ```Go
@@ -13636,7 +12629,6 @@ const TIOCCBRK = 0x2000747a
 
 ```
 searchKey: syscall.TIOCCDTR
-tags: [exported]
 ```
 
 ```Go
@@ -13647,7 +12639,6 @@ const TIOCCDTR = 0x20007478
 
 ```
 searchKey: syscall.TIOCCONS
-tags: [exported]
 ```
 
 ```Go
@@ -13658,7 +12649,6 @@ const TIOCCONS = 0x80047462
 
 ```
 searchKey: syscall.TIOCDCDTIMESTAMP
-tags: [exported]
 ```
 
 ```Go
@@ -13669,7 +12659,6 @@ const TIOCDCDTIMESTAMP = 0x40107458
 
 ```
 searchKey: syscall.TIOCDRAIN
-tags: [exported]
 ```
 
 ```Go
@@ -13680,7 +12669,6 @@ const TIOCDRAIN = 0x2000745e
 
 ```
 searchKey: syscall.TIOCDSIMICROCODE
-tags: [exported]
 ```
 
 ```Go
@@ -13691,7 +12679,6 @@ const TIOCDSIMICROCODE = 0x20007455
 
 ```
 searchKey: syscall.TIOCEXCL
-tags: [exported]
 ```
 
 ```Go
@@ -13702,7 +12689,6 @@ const TIOCEXCL = 0x2000740d
 
 ```
 searchKey: syscall.TIOCEXT
-tags: [exported]
 ```
 
 ```Go
@@ -13713,7 +12699,6 @@ const TIOCEXT = 0x80047460
 
 ```
 searchKey: syscall.TIOCFLUSH
-tags: [exported]
 ```
 
 ```Go
@@ -13724,7 +12709,6 @@ const TIOCFLUSH = 0x80047410
 
 ```
 searchKey: syscall.TIOCGDRAINWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -13735,7 +12719,6 @@ const TIOCGDRAINWAIT = 0x40047456
 
 ```
 searchKey: syscall.TIOCGETA
-tags: [exported]
 ```
 
 ```Go
@@ -13746,7 +12729,6 @@ const TIOCGETA = 0x40487413
 
 ```
 searchKey: syscall.TIOCGETD
-tags: [exported]
 ```
 
 ```Go
@@ -13757,7 +12739,6 @@ const TIOCGETD = 0x4004741a
 
 ```
 searchKey: syscall.TIOCGPGRP
-tags: [exported]
 ```
 
 ```Go
@@ -13768,7 +12749,6 @@ const TIOCGPGRP = 0x40047477
 
 ```
 searchKey: syscall.TIOCGWINSZ
-tags: [exported]
 ```
 
 ```Go
@@ -13779,7 +12759,6 @@ const TIOCGWINSZ = 0x40087468
 
 ```
 searchKey: syscall.TIOCIXOFF
-tags: [exported]
 ```
 
 ```Go
@@ -13790,7 +12769,6 @@ const TIOCIXOFF = 0x20007480
 
 ```
 searchKey: syscall.TIOCIXON
-tags: [exported]
 ```
 
 ```Go
@@ -13801,7 +12779,6 @@ const TIOCIXON = 0x20007481
 
 ```
 searchKey: syscall.TIOCMBIC
-tags: [exported]
 ```
 
 ```Go
@@ -13812,7 +12789,6 @@ const TIOCMBIC = 0x8004746b
 
 ```
 searchKey: syscall.TIOCMBIS
-tags: [exported]
 ```
 
 ```Go
@@ -13823,7 +12799,6 @@ const TIOCMBIS = 0x8004746c
 
 ```
 searchKey: syscall.TIOCMGDTRWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -13834,7 +12809,6 @@ const TIOCMGDTRWAIT = 0x4004745a
 
 ```
 searchKey: syscall.TIOCMGET
-tags: [exported]
 ```
 
 ```Go
@@ -13845,7 +12819,6 @@ const TIOCMGET = 0x4004746a
 
 ```
 searchKey: syscall.TIOCMODG
-tags: [exported]
 ```
 
 ```Go
@@ -13856,7 +12829,6 @@ const TIOCMODG = 0x40047403
 
 ```
 searchKey: syscall.TIOCMODS
-tags: [exported]
 ```
 
 ```Go
@@ -13867,7 +12839,6 @@ const TIOCMODS = 0x80047404
 
 ```
 searchKey: syscall.TIOCMSDTRWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -13878,7 +12849,6 @@ const TIOCMSDTRWAIT = 0x8004745b
 
 ```
 searchKey: syscall.TIOCMSET
-tags: [exported]
 ```
 
 ```Go
@@ -13889,7 +12859,6 @@ const TIOCMSET = 0x8004746d
 
 ```
 searchKey: syscall.TIOCM_CAR
-tags: [exported]
 ```
 
 ```Go
@@ -13900,7 +12869,6 @@ const TIOCM_CAR = 0x40
 
 ```
 searchKey: syscall.TIOCM_CD
-tags: [exported]
 ```
 
 ```Go
@@ -13911,7 +12879,6 @@ const TIOCM_CD = 0x40
 
 ```
 searchKey: syscall.TIOCM_CTS
-tags: [exported]
 ```
 
 ```Go
@@ -13922,7 +12889,6 @@ const TIOCM_CTS = 0x20
 
 ```
 searchKey: syscall.TIOCM_DSR
-tags: [exported]
 ```
 
 ```Go
@@ -13933,7 +12899,6 @@ const TIOCM_DSR = 0x100
 
 ```
 searchKey: syscall.TIOCM_DTR
-tags: [exported]
 ```
 
 ```Go
@@ -13944,7 +12909,6 @@ const TIOCM_DTR = 0x2
 
 ```
 searchKey: syscall.TIOCM_LE
-tags: [exported]
 ```
 
 ```Go
@@ -13955,7 +12919,6 @@ const TIOCM_LE = 0x1
 
 ```
 searchKey: syscall.TIOCM_RI
-tags: [exported]
 ```
 
 ```Go
@@ -13966,7 +12929,6 @@ const TIOCM_RI = 0x80
 
 ```
 searchKey: syscall.TIOCM_RNG
-tags: [exported]
 ```
 
 ```Go
@@ -13977,7 +12939,6 @@ const TIOCM_RNG = 0x80
 
 ```
 searchKey: syscall.TIOCM_RTS
-tags: [exported]
 ```
 
 ```Go
@@ -13988,7 +12949,6 @@ const TIOCM_RTS = 0x4
 
 ```
 searchKey: syscall.TIOCM_SR
-tags: [exported]
 ```
 
 ```Go
@@ -13999,7 +12959,6 @@ const TIOCM_SR = 0x10
 
 ```
 searchKey: syscall.TIOCM_ST
-tags: [exported]
 ```
 
 ```Go
@@ -14010,7 +12969,6 @@ const TIOCM_ST = 0x8
 
 ```
 searchKey: syscall.TIOCNOTTY
-tags: [exported]
 ```
 
 ```Go
@@ -14021,7 +12979,6 @@ const TIOCNOTTY = 0x20007471
 
 ```
 searchKey: syscall.TIOCNXCL
-tags: [exported]
 ```
 
 ```Go
@@ -14032,7 +12989,6 @@ const TIOCNXCL = 0x2000740e
 
 ```
 searchKey: syscall.TIOCOUTQ
-tags: [exported]
 ```
 
 ```Go
@@ -14043,7 +12999,6 @@ const TIOCOUTQ = 0x40047473
 
 ```
 searchKey: syscall.TIOCPKT
-tags: [exported]
 ```
 
 ```Go
@@ -14054,7 +13009,6 @@ const TIOCPKT = 0x80047470
 
 ```
 searchKey: syscall.TIOCPKT_DATA
-tags: [exported]
 ```
 
 ```Go
@@ -14065,7 +13019,6 @@ const TIOCPKT_DATA = 0x0
 
 ```
 searchKey: syscall.TIOCPKT_DOSTOP
-tags: [exported]
 ```
 
 ```Go
@@ -14076,7 +13029,6 @@ const TIOCPKT_DOSTOP = 0x20
 
 ```
 searchKey: syscall.TIOCPKT_FLUSHREAD
-tags: [exported]
 ```
 
 ```Go
@@ -14087,7 +13039,6 @@ const TIOCPKT_FLUSHREAD = 0x1
 
 ```
 searchKey: syscall.TIOCPKT_FLUSHWRITE
-tags: [exported]
 ```
 
 ```Go
@@ -14098,7 +13049,6 @@ const TIOCPKT_FLUSHWRITE = 0x2
 
 ```
 searchKey: syscall.TIOCPKT_IOCTL
-tags: [exported]
 ```
 
 ```Go
@@ -14109,7 +13059,6 @@ const TIOCPKT_IOCTL = 0x40
 
 ```
 searchKey: syscall.TIOCPKT_NOSTOP
-tags: [exported]
 ```
 
 ```Go
@@ -14120,7 +13069,6 @@ const TIOCPKT_NOSTOP = 0x10
 
 ```
 searchKey: syscall.TIOCPKT_START
-tags: [exported]
 ```
 
 ```Go
@@ -14131,7 +13079,6 @@ const TIOCPKT_START = 0x8
 
 ```
 searchKey: syscall.TIOCPKT_STOP
-tags: [exported]
 ```
 
 ```Go
@@ -14142,7 +13089,6 @@ const TIOCPKT_STOP = 0x4
 
 ```
 searchKey: syscall.TIOCPTYGNAME
-tags: [exported]
 ```
 
 ```Go
@@ -14153,7 +13099,6 @@ const TIOCPTYGNAME = 0x40807453
 
 ```
 searchKey: syscall.TIOCPTYGRANT
-tags: [exported]
 ```
 
 ```Go
@@ -14164,7 +13109,6 @@ const TIOCPTYGRANT = 0x20007454
 
 ```
 searchKey: syscall.TIOCPTYUNLK
-tags: [exported]
 ```
 
 ```Go
@@ -14175,7 +13119,6 @@ const TIOCPTYUNLK = 0x20007452
 
 ```
 searchKey: syscall.TIOCREMOTE
-tags: [exported]
 ```
 
 ```Go
@@ -14186,7 +13129,6 @@ const TIOCREMOTE = 0x80047469
 
 ```
 searchKey: syscall.TIOCSBRK
-tags: [exported]
 ```
 
 ```Go
@@ -14197,7 +13139,6 @@ const TIOCSBRK = 0x2000747b
 
 ```
 searchKey: syscall.TIOCSCONS
-tags: [exported]
 ```
 
 ```Go
@@ -14208,7 +13149,6 @@ const TIOCSCONS = 0x20007463
 
 ```
 searchKey: syscall.TIOCSCTTY
-tags: [exported]
 ```
 
 ```Go
@@ -14219,7 +13159,6 @@ const TIOCSCTTY = 0x20007461
 
 ```
 searchKey: syscall.TIOCSDRAINWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -14230,7 +13169,6 @@ const TIOCSDRAINWAIT = 0x80047457
 
 ```
 searchKey: syscall.TIOCSDTR
-tags: [exported]
 ```
 
 ```Go
@@ -14241,7 +13179,6 @@ const TIOCSDTR = 0x20007479
 
 ```
 searchKey: syscall.TIOCSETA
-tags: [exported]
 ```
 
 ```Go
@@ -14252,7 +13189,6 @@ const TIOCSETA = 0x80487414
 
 ```
 searchKey: syscall.TIOCSETAF
-tags: [exported]
 ```
 
 ```Go
@@ -14263,7 +13199,6 @@ const TIOCSETAF = 0x80487416
 
 ```
 searchKey: syscall.TIOCSETAW
-tags: [exported]
 ```
 
 ```Go
@@ -14274,7 +13209,6 @@ const TIOCSETAW = 0x80487415
 
 ```
 searchKey: syscall.TIOCSETD
-tags: [exported]
 ```
 
 ```Go
@@ -14285,7 +13219,6 @@ const TIOCSETD = 0x8004741b
 
 ```
 searchKey: syscall.TIOCSIG
-tags: [exported]
 ```
 
 ```Go
@@ -14296,7 +13229,6 @@ const TIOCSIG = 0x2000745f
 
 ```
 searchKey: syscall.TIOCSPGRP
-tags: [exported]
 ```
 
 ```Go
@@ -14307,7 +13239,6 @@ const TIOCSPGRP = 0x80047476
 
 ```
 searchKey: syscall.TIOCSTART
-tags: [exported]
 ```
 
 ```Go
@@ -14318,7 +13249,6 @@ const TIOCSTART = 0x2000746e
 
 ```
 searchKey: syscall.TIOCSTAT
-tags: [exported]
 ```
 
 ```Go
@@ -14329,7 +13259,6 @@ const TIOCSTAT = 0x20007465
 
 ```
 searchKey: syscall.TIOCSTI
-tags: [exported]
 ```
 
 ```Go
@@ -14340,7 +13269,6 @@ const TIOCSTI = 0x80017472
 
 ```
 searchKey: syscall.TIOCSTOP
-tags: [exported]
 ```
 
 ```Go
@@ -14351,7 +13279,6 @@ const TIOCSTOP = 0x2000746f
 
 ```
 searchKey: syscall.TIOCSWINSZ
-tags: [exported]
 ```
 
 ```Go
@@ -14362,7 +13289,6 @@ const TIOCSWINSZ = 0x80087467
 
 ```
 searchKey: syscall.TIOCTIMESTAMP
-tags: [exported]
 ```
 
 ```Go
@@ -14373,7 +13299,6 @@ const TIOCTIMESTAMP = 0x40107459
 
 ```
 searchKey: syscall.TIOCUCNTL
-tags: [exported]
 ```
 
 ```Go
@@ -14384,7 +13309,6 @@ const TIOCUCNTL = 0x80047466
 
 ```
 searchKey: syscall.TOSTOP
-tags: [exported]
 ```
 
 ```Go
@@ -14395,7 +13319,6 @@ const TOSTOP = 0x400000
 
 ```
 searchKey: syscall.VDISCARD
-tags: [exported]
 ```
 
 ```Go
@@ -14406,7 +13329,6 @@ const VDISCARD = 0xf
 
 ```
 searchKey: syscall.VDSUSP
-tags: [exported]
 ```
 
 ```Go
@@ -14417,7 +13339,6 @@ const VDSUSP = 0xb
 
 ```
 searchKey: syscall.VEOF
-tags: [exported]
 ```
 
 ```Go
@@ -14428,7 +13349,6 @@ const VEOF = 0x0
 
 ```
 searchKey: syscall.VEOL
-tags: [exported]
 ```
 
 ```Go
@@ -14439,7 +13359,6 @@ const VEOL = 0x1
 
 ```
 searchKey: syscall.VEOL2
-tags: [exported]
 ```
 
 ```Go
@@ -14450,7 +13369,6 @@ const VEOL2 = 0x2
 
 ```
 searchKey: syscall.VERASE
-tags: [exported]
 ```
 
 ```Go
@@ -14461,7 +13379,6 @@ const VERASE = 0x3
 
 ```
 searchKey: syscall.VINTR
-tags: [exported]
 ```
 
 ```Go
@@ -14472,7 +13389,6 @@ const VINTR = 0x8
 
 ```
 searchKey: syscall.VKILL
-tags: [exported]
 ```
 
 ```Go
@@ -14483,7 +13399,6 @@ const VKILL = 0x5
 
 ```
 searchKey: syscall.VLNEXT
-tags: [exported]
 ```
 
 ```Go
@@ -14494,7 +13409,6 @@ const VLNEXT = 0xe
 
 ```
 searchKey: syscall.VMIN
-tags: [exported]
 ```
 
 ```Go
@@ -14505,7 +13419,6 @@ const VMIN = 0x10
 
 ```
 searchKey: syscall.VQUIT
-tags: [exported]
 ```
 
 ```Go
@@ -14516,7 +13429,6 @@ const VQUIT = 0x9
 
 ```
 searchKey: syscall.VREPRINT
-tags: [exported]
 ```
 
 ```Go
@@ -14527,7 +13439,6 @@ const VREPRINT = 0x6
 
 ```
 searchKey: syscall.VSTART
-tags: [exported]
 ```
 
 ```Go
@@ -14538,7 +13449,6 @@ const VSTART = 0xc
 
 ```
 searchKey: syscall.VSTATUS
-tags: [exported]
 ```
 
 ```Go
@@ -14549,7 +13459,6 @@ const VSTATUS = 0x12
 
 ```
 searchKey: syscall.VSTOP
-tags: [exported]
 ```
 
 ```Go
@@ -14560,7 +13469,6 @@ const VSTOP = 0xd
 
 ```
 searchKey: syscall.VSUSP
-tags: [exported]
 ```
 
 ```Go
@@ -14571,7 +13479,6 @@ const VSUSP = 0xa
 
 ```
 searchKey: syscall.VT0
-tags: [exported]
 ```
 
 ```Go
@@ -14582,7 +13489,6 @@ const VT0 = 0x0
 
 ```
 searchKey: syscall.VT1
-tags: [exported]
 ```
 
 ```Go
@@ -14593,7 +13499,6 @@ const VT1 = 0x10000
 
 ```
 searchKey: syscall.VTDLY
-tags: [exported]
 ```
 
 ```Go
@@ -14604,7 +13509,6 @@ const VTDLY = 0x10000
 
 ```
 searchKey: syscall.VTIME
-tags: [exported]
 ```
 
 ```Go
@@ -14615,7 +13519,6 @@ const VTIME = 0x11
 
 ```
 searchKey: syscall.VWERASE
-tags: [exported]
 ```
 
 ```Go
@@ -14626,7 +13529,6 @@ const VWERASE = 0x4
 
 ```
 searchKey: syscall.WCONTINUED
-tags: [exported]
 ```
 
 ```Go
@@ -14637,7 +13539,6 @@ const WCONTINUED = 0x10
 
 ```
 searchKey: syscall.WCOREFLAG
-tags: [exported]
 ```
 
 ```Go
@@ -14648,7 +13549,6 @@ const WCOREFLAG = 0x80
 
 ```
 searchKey: syscall.WEXITED
-tags: [exported]
 ```
 
 ```Go
@@ -14659,7 +13559,6 @@ const WEXITED = 0x4
 
 ```
 searchKey: syscall.WNOHANG
-tags: [exported]
 ```
 
 ```Go
@@ -14670,7 +13569,6 @@ const WNOHANG = 0x1
 
 ```
 searchKey: syscall.WNOWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -14681,7 +13579,6 @@ const WNOWAIT = 0x20
 
 ```
 searchKey: syscall.WORDSIZE
-tags: [exported]
 ```
 
 ```Go
@@ -14692,7 +13589,6 @@ const WORDSIZE = 0x40
 
 ```
 searchKey: syscall.WSTOPPED
-tags: [exported]
 ```
 
 ```Go
@@ -14703,7 +13599,6 @@ const WSTOPPED = 0x8
 
 ```
 searchKey: syscall.WUNTRACED
-tags: [exported]
 ```
 
 ```Go
@@ -14714,7 +13609,6 @@ const WUNTRACED = 0x2
 
 ```
 searchKey: syscall.E2BIG
-tags: [exported]
 ```
 
 ```Go
@@ -14727,7 +13621,6 @@ Errors
 
 ```
 searchKey: syscall.EACCES
-tags: [exported]
 ```
 
 ```Go
@@ -14740,7 +13633,6 @@ Errors
 
 ```
 searchKey: syscall.EADDRINUSE
-tags: [exported]
 ```
 
 ```Go
@@ -14753,7 +13645,6 @@ Errors
 
 ```
 searchKey: syscall.EADDRNOTAVAIL
-tags: [exported]
 ```
 
 ```Go
@@ -14766,7 +13657,6 @@ Errors
 
 ```
 searchKey: syscall.EAFNOSUPPORT
-tags: [exported]
 ```
 
 ```Go
@@ -14779,7 +13669,6 @@ Errors
 
 ```
 searchKey: syscall.EAGAIN
-tags: [exported]
 ```
 
 ```Go
@@ -14792,7 +13681,6 @@ Errors
 
 ```
 searchKey: syscall.EALREADY
-tags: [exported]
 ```
 
 ```Go
@@ -14805,7 +13693,6 @@ Errors
 
 ```
 searchKey: syscall.EAUTH
-tags: [exported]
 ```
 
 ```Go
@@ -14818,7 +13705,6 @@ Errors
 
 ```
 searchKey: syscall.EBADARCH
-tags: [exported]
 ```
 
 ```Go
@@ -14831,7 +13717,6 @@ Errors
 
 ```
 searchKey: syscall.EBADEXEC
-tags: [exported]
 ```
 
 ```Go
@@ -14844,7 +13729,6 @@ Errors
 
 ```
 searchKey: syscall.EBADF
-tags: [exported]
 ```
 
 ```Go
@@ -14857,7 +13741,6 @@ Errors
 
 ```
 searchKey: syscall.EBADMACHO
-tags: [exported]
 ```
 
 ```Go
@@ -14870,7 +13753,6 @@ Errors
 
 ```
 searchKey: syscall.EBADMSG
-tags: [exported]
 ```
 
 ```Go
@@ -14883,7 +13765,6 @@ Errors
 
 ```
 searchKey: syscall.EBADRPC
-tags: [exported]
 ```
 
 ```Go
@@ -14896,7 +13777,6 @@ Errors
 
 ```
 searchKey: syscall.EBUSY
-tags: [exported]
 ```
 
 ```Go
@@ -14909,7 +13789,6 @@ Errors
 
 ```
 searchKey: syscall.ECANCELED
-tags: [exported]
 ```
 
 ```Go
@@ -14922,7 +13801,6 @@ Errors
 
 ```
 searchKey: syscall.ECHILD
-tags: [exported]
 ```
 
 ```Go
@@ -14935,7 +13813,6 @@ Errors
 
 ```
 searchKey: syscall.ECONNABORTED
-tags: [exported]
 ```
 
 ```Go
@@ -14948,7 +13825,6 @@ Errors
 
 ```
 searchKey: syscall.ECONNREFUSED
-tags: [exported]
 ```
 
 ```Go
@@ -14961,7 +13837,6 @@ Errors
 
 ```
 searchKey: syscall.ECONNRESET
-tags: [exported]
 ```
 
 ```Go
@@ -14974,7 +13849,6 @@ Errors
 
 ```
 searchKey: syscall.EDEADLK
-tags: [exported]
 ```
 
 ```Go
@@ -14987,7 +13861,6 @@ Errors
 
 ```
 searchKey: syscall.EDESTADDRREQ
-tags: [exported]
 ```
 
 ```Go
@@ -15000,7 +13873,6 @@ Errors
 
 ```
 searchKey: syscall.EDEVERR
-tags: [exported]
 ```
 
 ```Go
@@ -15013,7 +13885,6 @@ Errors
 
 ```
 searchKey: syscall.EDOM
-tags: [exported]
 ```
 
 ```Go
@@ -15026,7 +13897,6 @@ Errors
 
 ```
 searchKey: syscall.EDQUOT
-tags: [exported]
 ```
 
 ```Go
@@ -15039,7 +13909,6 @@ Errors
 
 ```
 searchKey: syscall.EEXIST
-tags: [exported]
 ```
 
 ```Go
@@ -15052,7 +13921,6 @@ Errors
 
 ```
 searchKey: syscall.EFAULT
-tags: [exported]
 ```
 
 ```Go
@@ -15065,7 +13933,6 @@ Errors
 
 ```
 searchKey: syscall.EFBIG
-tags: [exported]
 ```
 
 ```Go
@@ -15078,7 +13945,6 @@ Errors
 
 ```
 searchKey: syscall.EFTYPE
-tags: [exported]
 ```
 
 ```Go
@@ -15091,7 +13957,6 @@ Errors
 
 ```
 searchKey: syscall.EHOSTDOWN
-tags: [exported]
 ```
 
 ```Go
@@ -15104,7 +13969,6 @@ Errors
 
 ```
 searchKey: syscall.EHOSTUNREACH
-tags: [exported]
 ```
 
 ```Go
@@ -15117,7 +13981,6 @@ Errors
 
 ```
 searchKey: syscall.EIDRM
-tags: [exported]
 ```
 
 ```Go
@@ -15130,7 +13993,6 @@ Errors
 
 ```
 searchKey: syscall.EILSEQ
-tags: [exported]
 ```
 
 ```Go
@@ -15143,7 +14005,6 @@ Errors
 
 ```
 searchKey: syscall.EINPROGRESS
-tags: [exported]
 ```
 
 ```Go
@@ -15156,7 +14017,6 @@ Errors
 
 ```
 searchKey: syscall.EINTR
-tags: [exported]
 ```
 
 ```Go
@@ -15169,7 +14029,6 @@ Errors
 
 ```
 searchKey: syscall.EINVAL
-tags: [exported]
 ```
 
 ```Go
@@ -15182,7 +14041,6 @@ Errors
 
 ```
 searchKey: syscall.EIO
-tags: [exported]
 ```
 
 ```Go
@@ -15195,7 +14053,6 @@ Errors
 
 ```
 searchKey: syscall.EISCONN
-tags: [exported]
 ```
 
 ```Go
@@ -15208,7 +14065,6 @@ Errors
 
 ```
 searchKey: syscall.EISDIR
-tags: [exported]
 ```
 
 ```Go
@@ -15221,7 +14077,6 @@ Errors
 
 ```
 searchKey: syscall.ELAST
-tags: [exported]
 ```
 
 ```Go
@@ -15234,7 +14089,6 @@ Errors
 
 ```
 searchKey: syscall.ELOOP
-tags: [exported]
 ```
 
 ```Go
@@ -15247,7 +14101,6 @@ Errors
 
 ```
 searchKey: syscall.EMFILE
-tags: [exported]
 ```
 
 ```Go
@@ -15260,7 +14113,6 @@ Errors
 
 ```
 searchKey: syscall.EMLINK
-tags: [exported]
 ```
 
 ```Go
@@ -15273,7 +14125,6 @@ Errors
 
 ```
 searchKey: syscall.EMSGSIZE
-tags: [exported]
 ```
 
 ```Go
@@ -15286,7 +14137,6 @@ Errors
 
 ```
 searchKey: syscall.EMULTIHOP
-tags: [exported]
 ```
 
 ```Go
@@ -15299,7 +14149,6 @@ Errors
 
 ```
 searchKey: syscall.ENAMETOOLONG
-tags: [exported]
 ```
 
 ```Go
@@ -15312,7 +14161,6 @@ Errors
 
 ```
 searchKey: syscall.ENEEDAUTH
-tags: [exported]
 ```
 
 ```Go
@@ -15325,7 +14173,6 @@ Errors
 
 ```
 searchKey: syscall.ENETDOWN
-tags: [exported]
 ```
 
 ```Go
@@ -15338,7 +14185,6 @@ Errors
 
 ```
 searchKey: syscall.ENETRESET
-tags: [exported]
 ```
 
 ```Go
@@ -15351,7 +14197,6 @@ Errors
 
 ```
 searchKey: syscall.ENETUNREACH
-tags: [exported]
 ```
 
 ```Go
@@ -15364,7 +14209,6 @@ Errors
 
 ```
 searchKey: syscall.ENFILE
-tags: [exported]
 ```
 
 ```Go
@@ -15377,7 +14221,6 @@ Errors
 
 ```
 searchKey: syscall.ENOATTR
-tags: [exported]
 ```
 
 ```Go
@@ -15390,7 +14233,6 @@ Errors
 
 ```
 searchKey: syscall.ENOBUFS
-tags: [exported]
 ```
 
 ```Go
@@ -15403,7 +14245,6 @@ Errors
 
 ```
 searchKey: syscall.ENODATA
-tags: [exported]
 ```
 
 ```Go
@@ -15416,7 +14257,6 @@ Errors
 
 ```
 searchKey: syscall.ENODEV
-tags: [exported]
 ```
 
 ```Go
@@ -15429,7 +14269,6 @@ Errors
 
 ```
 searchKey: syscall.ENOENT
-tags: [exported]
 ```
 
 ```Go
@@ -15442,7 +14281,6 @@ Errors
 
 ```
 searchKey: syscall.ENOEXEC
-tags: [exported]
 ```
 
 ```Go
@@ -15455,7 +14293,6 @@ Errors
 
 ```
 searchKey: syscall.ENOLCK
-tags: [exported]
 ```
 
 ```Go
@@ -15468,7 +14305,6 @@ Errors
 
 ```
 searchKey: syscall.ENOLINK
-tags: [exported]
 ```
 
 ```Go
@@ -15481,7 +14317,6 @@ Errors
 
 ```
 searchKey: syscall.ENOMEM
-tags: [exported]
 ```
 
 ```Go
@@ -15494,7 +14329,6 @@ Errors
 
 ```
 searchKey: syscall.ENOMSG
-tags: [exported]
 ```
 
 ```Go
@@ -15507,7 +14341,6 @@ Errors
 
 ```
 searchKey: syscall.ENOPOLICY
-tags: [exported]
 ```
 
 ```Go
@@ -15520,7 +14353,6 @@ Errors
 
 ```
 searchKey: syscall.ENOPROTOOPT
-tags: [exported]
 ```
 
 ```Go
@@ -15533,7 +14365,6 @@ Errors
 
 ```
 searchKey: syscall.ENOSPC
-tags: [exported]
 ```
 
 ```Go
@@ -15546,7 +14377,6 @@ Errors
 
 ```
 searchKey: syscall.ENOSR
-tags: [exported]
 ```
 
 ```Go
@@ -15559,7 +14389,6 @@ Errors
 
 ```
 searchKey: syscall.ENOSTR
-tags: [exported]
 ```
 
 ```Go
@@ -15572,7 +14401,6 @@ Errors
 
 ```
 searchKey: syscall.ENOSYS
-tags: [exported]
 ```
 
 ```Go
@@ -15585,7 +14413,6 @@ Errors
 
 ```
 searchKey: syscall.ENOTBLK
-tags: [exported]
 ```
 
 ```Go
@@ -15598,7 +14425,6 @@ Errors
 
 ```
 searchKey: syscall.ENOTCONN
-tags: [exported]
 ```
 
 ```Go
@@ -15611,7 +14437,6 @@ Errors
 
 ```
 searchKey: syscall.ENOTDIR
-tags: [exported]
 ```
 
 ```Go
@@ -15624,7 +14449,6 @@ Errors
 
 ```
 searchKey: syscall.ENOTEMPTY
-tags: [exported]
 ```
 
 ```Go
@@ -15637,7 +14461,6 @@ Errors
 
 ```
 searchKey: syscall.ENOTRECOVERABLE
-tags: [exported]
 ```
 
 ```Go
@@ -15650,7 +14473,6 @@ Errors
 
 ```
 searchKey: syscall.ENOTSOCK
-tags: [exported]
 ```
 
 ```Go
@@ -15663,7 +14485,6 @@ Errors
 
 ```
 searchKey: syscall.ENOTSUP
-tags: [exported]
 ```
 
 ```Go
@@ -15676,7 +14497,6 @@ Errors
 
 ```
 searchKey: syscall.ENOTTY
-tags: [exported]
 ```
 
 ```Go
@@ -15689,7 +14509,6 @@ Errors
 
 ```
 searchKey: syscall.ENXIO
-tags: [exported]
 ```
 
 ```Go
@@ -15702,7 +14521,6 @@ Errors
 
 ```
 searchKey: syscall.EOPNOTSUPP
-tags: [exported]
 ```
 
 ```Go
@@ -15715,7 +14533,6 @@ Errors
 
 ```
 searchKey: syscall.EOVERFLOW
-tags: [exported]
 ```
 
 ```Go
@@ -15728,7 +14545,6 @@ Errors
 
 ```
 searchKey: syscall.EOWNERDEAD
-tags: [exported]
 ```
 
 ```Go
@@ -15741,7 +14557,6 @@ Errors
 
 ```
 searchKey: syscall.EPERM
-tags: [exported]
 ```
 
 ```Go
@@ -15754,7 +14569,6 @@ Errors
 
 ```
 searchKey: syscall.EPFNOSUPPORT
-tags: [exported]
 ```
 
 ```Go
@@ -15767,7 +14581,6 @@ Errors
 
 ```
 searchKey: syscall.EPIPE
-tags: [exported]
 ```
 
 ```Go
@@ -15780,7 +14593,6 @@ Errors
 
 ```
 searchKey: syscall.EPROCLIM
-tags: [exported]
 ```
 
 ```Go
@@ -15793,7 +14605,6 @@ Errors
 
 ```
 searchKey: syscall.EPROCUNAVAIL
-tags: [exported]
 ```
 
 ```Go
@@ -15806,7 +14617,6 @@ Errors
 
 ```
 searchKey: syscall.EPROGMISMATCH
-tags: [exported]
 ```
 
 ```Go
@@ -15819,7 +14629,6 @@ Errors
 
 ```
 searchKey: syscall.EPROGUNAVAIL
-tags: [exported]
 ```
 
 ```Go
@@ -15832,7 +14641,6 @@ Errors
 
 ```
 searchKey: syscall.EPROTO
-tags: [exported]
 ```
 
 ```Go
@@ -15845,7 +14653,6 @@ Errors
 
 ```
 searchKey: syscall.EPROTONOSUPPORT
-tags: [exported]
 ```
 
 ```Go
@@ -15858,7 +14665,6 @@ Errors
 
 ```
 searchKey: syscall.EPROTOTYPE
-tags: [exported]
 ```
 
 ```Go
@@ -15871,7 +14677,6 @@ Errors
 
 ```
 searchKey: syscall.EPWROFF
-tags: [exported]
 ```
 
 ```Go
@@ -15884,7 +14689,6 @@ Errors
 
 ```
 searchKey: syscall.ERANGE
-tags: [exported]
 ```
 
 ```Go
@@ -15897,7 +14701,6 @@ Errors
 
 ```
 searchKey: syscall.EREMOTE
-tags: [exported]
 ```
 
 ```Go
@@ -15910,7 +14713,6 @@ Errors
 
 ```
 searchKey: syscall.EROFS
-tags: [exported]
 ```
 
 ```Go
@@ -15923,7 +14725,6 @@ Errors
 
 ```
 searchKey: syscall.ERPCMISMATCH
-tags: [exported]
 ```
 
 ```Go
@@ -15936,7 +14737,6 @@ Errors
 
 ```
 searchKey: syscall.ESHLIBVERS
-tags: [exported]
 ```
 
 ```Go
@@ -15949,7 +14749,6 @@ Errors
 
 ```
 searchKey: syscall.ESHUTDOWN
-tags: [exported]
 ```
 
 ```Go
@@ -15962,7 +14761,6 @@ Errors
 
 ```
 searchKey: syscall.ESOCKTNOSUPPORT
-tags: [exported]
 ```
 
 ```Go
@@ -15975,7 +14773,6 @@ Errors
 
 ```
 searchKey: syscall.ESPIPE
-tags: [exported]
 ```
 
 ```Go
@@ -15988,7 +14785,6 @@ Errors
 
 ```
 searchKey: syscall.ESRCH
-tags: [exported]
 ```
 
 ```Go
@@ -16001,7 +14797,6 @@ Errors
 
 ```
 searchKey: syscall.ESTALE
-tags: [exported]
 ```
 
 ```Go
@@ -16014,7 +14809,6 @@ Errors
 
 ```
 searchKey: syscall.ETIME
-tags: [exported]
 ```
 
 ```Go
@@ -16027,7 +14821,6 @@ Errors
 
 ```
 searchKey: syscall.ETIMEDOUT
-tags: [exported]
 ```
 
 ```Go
@@ -16040,7 +14833,6 @@ Errors
 
 ```
 searchKey: syscall.ETOOMANYREFS
-tags: [exported]
 ```
 
 ```Go
@@ -16053,7 +14845,6 @@ Errors
 
 ```
 searchKey: syscall.ETXTBSY
-tags: [exported]
 ```
 
 ```Go
@@ -16066,7 +14857,6 @@ Errors
 
 ```
 searchKey: syscall.EUSERS
-tags: [exported]
 ```
 
 ```Go
@@ -16079,7 +14869,6 @@ Errors
 
 ```
 searchKey: syscall.EWOULDBLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -16092,7 +14881,6 @@ Errors
 
 ```
 searchKey: syscall.EXDEV
-tags: [exported]
 ```
 
 ```Go
@@ -16105,7 +14893,6 @@ Errors
 
 ```
 searchKey: syscall.SIGABRT
-tags: [exported]
 ```
 
 ```Go
@@ -16118,7 +14905,6 @@ Signals
 
 ```
 searchKey: syscall.SIGALRM
-tags: [exported]
 ```
 
 ```Go
@@ -16131,7 +14917,6 @@ Signals
 
 ```
 searchKey: syscall.SIGBUS
-tags: [exported]
 ```
 
 ```Go
@@ -16144,7 +14929,6 @@ Signals
 
 ```
 searchKey: syscall.SIGCHLD
-tags: [exported]
 ```
 
 ```Go
@@ -16157,7 +14941,6 @@ Signals
 
 ```
 searchKey: syscall.SIGCONT
-tags: [exported]
 ```
 
 ```Go
@@ -16170,7 +14953,6 @@ Signals
 
 ```
 searchKey: syscall.SIGEMT
-tags: [exported]
 ```
 
 ```Go
@@ -16183,7 +14965,6 @@ Signals
 
 ```
 searchKey: syscall.SIGFPE
-tags: [exported]
 ```
 
 ```Go
@@ -16196,7 +14977,6 @@ Signals
 
 ```
 searchKey: syscall.SIGHUP
-tags: [exported]
 ```
 
 ```Go
@@ -16209,7 +14989,6 @@ Signals
 
 ```
 searchKey: syscall.SIGILL
-tags: [exported]
 ```
 
 ```Go
@@ -16222,7 +15001,6 @@ Signals
 
 ```
 searchKey: syscall.SIGINFO
-tags: [exported]
 ```
 
 ```Go
@@ -16235,7 +15013,6 @@ Signals
 
 ```
 searchKey: syscall.SIGINT
-tags: [exported]
 ```
 
 ```Go
@@ -16248,7 +15025,6 @@ Signals
 
 ```
 searchKey: syscall.SIGIO
-tags: [exported]
 ```
 
 ```Go
@@ -16261,7 +15037,6 @@ Signals
 
 ```
 searchKey: syscall.SIGIOT
-tags: [exported]
 ```
 
 ```Go
@@ -16274,7 +15049,6 @@ Signals
 
 ```
 searchKey: syscall.SIGKILL
-tags: [exported]
 ```
 
 ```Go
@@ -16287,7 +15061,6 @@ Signals
 
 ```
 searchKey: syscall.SIGPIPE
-tags: [exported]
 ```
 
 ```Go
@@ -16300,7 +15073,6 @@ Signals
 
 ```
 searchKey: syscall.SIGPROF
-tags: [exported]
 ```
 
 ```Go
@@ -16313,7 +15085,6 @@ Signals
 
 ```
 searchKey: syscall.SIGQUIT
-tags: [exported]
 ```
 
 ```Go
@@ -16326,7 +15097,6 @@ Signals
 
 ```
 searchKey: syscall.SIGSEGV
-tags: [exported]
 ```
 
 ```Go
@@ -16339,7 +15109,6 @@ Signals
 
 ```
 searchKey: syscall.SIGSTOP
-tags: [exported]
 ```
 
 ```Go
@@ -16352,7 +15121,6 @@ Signals
 
 ```
 searchKey: syscall.SIGSYS
-tags: [exported]
 ```
 
 ```Go
@@ -16365,7 +15133,6 @@ Signals
 
 ```
 searchKey: syscall.SIGTERM
-tags: [exported]
 ```
 
 ```Go
@@ -16378,7 +15145,6 @@ Signals
 
 ```
 searchKey: syscall.SIGTRAP
-tags: [exported]
 ```
 
 ```Go
@@ -16391,7 +15157,6 @@ Signals
 
 ```
 searchKey: syscall.SIGTSTP
-tags: [exported]
 ```
 
 ```Go
@@ -16404,7 +15169,6 @@ Signals
 
 ```
 searchKey: syscall.SIGTTIN
-tags: [exported]
 ```
 
 ```Go
@@ -16417,7 +15181,6 @@ Signals
 
 ```
 searchKey: syscall.SIGTTOU
-tags: [exported]
 ```
 
 ```Go
@@ -16430,7 +15193,6 @@ Signals
 
 ```
 searchKey: syscall.SIGURG
-tags: [exported]
 ```
 
 ```Go
@@ -16443,7 +15205,6 @@ Signals
 
 ```
 searchKey: syscall.SIGUSR1
-tags: [exported]
 ```
 
 ```Go
@@ -16456,7 +15217,6 @@ Signals
 
 ```
 searchKey: syscall.SIGUSR2
-tags: [exported]
 ```
 
 ```Go
@@ -16469,7 +15229,6 @@ Signals
 
 ```
 searchKey: syscall.SIGVTALRM
-tags: [exported]
 ```
 
 ```Go
@@ -16482,7 +15241,6 @@ Signals
 
 ```
 searchKey: syscall.SIGWINCH
-tags: [exported]
 ```
 
 ```Go
@@ -16495,7 +15253,6 @@ Signals
 
 ```
 searchKey: syscall.SIGXCPU
-tags: [exported]
 ```
 
 ```Go
@@ -16508,7 +15265,6 @@ Signals
 
 ```
 searchKey: syscall.SIGXFSZ
-tags: [exported]
 ```
 
 ```Go
@@ -16521,7 +15277,6 @@ Signals
 
 ```
 searchKey: syscall.SYS_SYSCALL
-tags: [exported]
 ```
 
 ```Go
@@ -16532,7 +15287,6 @@ const SYS_SYSCALL = 0
 
 ```
 searchKey: syscall.SYS_EXIT
-tags: [exported]
 ```
 
 ```Go
@@ -16543,7 +15297,6 @@ const SYS_EXIT = 1
 
 ```
 searchKey: syscall.SYS_FORK
-tags: [exported]
 ```
 
 ```Go
@@ -16554,7 +15307,6 @@ const SYS_FORK = 2
 
 ```
 searchKey: syscall.SYS_READ
-tags: [exported]
 ```
 
 ```Go
@@ -16565,7 +15317,6 @@ const SYS_READ = 3
 
 ```
 searchKey: syscall.SYS_WRITE
-tags: [exported]
 ```
 
 ```Go
@@ -16576,7 +15327,6 @@ const SYS_WRITE = 4
 
 ```
 searchKey: syscall.SYS_OPEN
-tags: [exported]
 ```
 
 ```Go
@@ -16587,7 +15337,6 @@ const SYS_OPEN = 5
 
 ```
 searchKey: syscall.SYS_CLOSE
-tags: [exported]
 ```
 
 ```Go
@@ -16598,7 +15347,6 @@ const SYS_CLOSE = 6
 
 ```
 searchKey: syscall.SYS_WAIT4
-tags: [exported]
 ```
 
 ```Go
@@ -16609,7 +15357,6 @@ const SYS_WAIT4 = 7
 
 ```
 searchKey: syscall.SYS_LINK
-tags: [exported]
 ```
 
 ```Go
@@ -16620,7 +15367,6 @@ const SYS_LINK = 9
 
 ```
 searchKey: syscall.SYS_UNLINK
-tags: [exported]
 ```
 
 ```Go
@@ -16631,7 +15377,6 @@ const SYS_UNLINK = 10
 
 ```
 searchKey: syscall.SYS_CHDIR
-tags: [exported]
 ```
 
 ```Go
@@ -16642,7 +15387,6 @@ const SYS_CHDIR = 12
 
 ```
 searchKey: syscall.SYS_FCHDIR
-tags: [exported]
 ```
 
 ```Go
@@ -16653,7 +15397,6 @@ const SYS_FCHDIR = 13
 
 ```
 searchKey: syscall.SYS_MKNOD
-tags: [exported]
 ```
 
 ```Go
@@ -16664,7 +15407,6 @@ const SYS_MKNOD = 14
 
 ```
 searchKey: syscall.SYS_CHMOD
-tags: [exported]
 ```
 
 ```Go
@@ -16675,7 +15417,6 @@ const SYS_CHMOD = 15
 
 ```
 searchKey: syscall.SYS_CHOWN
-tags: [exported]
 ```
 
 ```Go
@@ -16686,7 +15427,6 @@ const SYS_CHOWN = 16
 
 ```
 searchKey: syscall.SYS_GETFSSTAT
-tags: [exported]
 ```
 
 ```Go
@@ -16697,7 +15437,6 @@ const SYS_GETFSSTAT = 18
 
 ```
 searchKey: syscall.SYS_GETPID
-tags: [exported]
 ```
 
 ```Go
@@ -16708,7 +15447,6 @@ const SYS_GETPID = 20
 
 ```
 searchKey: syscall.SYS_SETUID
-tags: [exported]
 ```
 
 ```Go
@@ -16719,7 +15457,6 @@ const SYS_SETUID = 23
 
 ```
 searchKey: syscall.SYS_GETUID
-tags: [exported]
 ```
 
 ```Go
@@ -16730,7 +15467,6 @@ const SYS_GETUID = 24
 
 ```
 searchKey: syscall.SYS_GETEUID
-tags: [exported]
 ```
 
 ```Go
@@ -16741,7 +15477,6 @@ const SYS_GETEUID = 25
 
 ```
 searchKey: syscall.SYS_PTRACE
-tags: [exported]
 ```
 
 ```Go
@@ -16752,7 +15487,6 @@ const SYS_PTRACE = 26
 
 ```
 searchKey: syscall.SYS_RECVMSG
-tags: [exported]
 ```
 
 ```Go
@@ -16763,7 +15497,6 @@ const SYS_RECVMSG = 27
 
 ```
 searchKey: syscall.SYS_SENDMSG
-tags: [exported]
 ```
 
 ```Go
@@ -16774,7 +15507,6 @@ const SYS_SENDMSG = 28
 
 ```
 searchKey: syscall.SYS_RECVFROM
-tags: [exported]
 ```
 
 ```Go
@@ -16785,7 +15517,6 @@ const SYS_RECVFROM = 29
 
 ```
 searchKey: syscall.SYS_ACCEPT
-tags: [exported]
 ```
 
 ```Go
@@ -16796,7 +15527,6 @@ const SYS_ACCEPT = 30
 
 ```
 searchKey: syscall.SYS_GETPEERNAME
-tags: [exported]
 ```
 
 ```Go
@@ -16807,7 +15537,6 @@ const SYS_GETPEERNAME = 31
 
 ```
 searchKey: syscall.SYS_GETSOCKNAME
-tags: [exported]
 ```
 
 ```Go
@@ -16818,7 +15547,6 @@ const SYS_GETSOCKNAME = 32
 
 ```
 searchKey: syscall.SYS_ACCESS
-tags: [exported]
 ```
 
 ```Go
@@ -16829,7 +15557,6 @@ const SYS_ACCESS = 33
 
 ```
 searchKey: syscall.SYS_CHFLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -16840,7 +15567,6 @@ const SYS_CHFLAGS = 34
 
 ```
 searchKey: syscall.SYS_FCHFLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -16851,7 +15577,6 @@ const SYS_FCHFLAGS = 35
 
 ```
 searchKey: syscall.SYS_SYNC
-tags: [exported]
 ```
 
 ```Go
@@ -16862,7 +15587,6 @@ const SYS_SYNC = 36
 
 ```
 searchKey: syscall.SYS_KILL
-tags: [exported]
 ```
 
 ```Go
@@ -16873,7 +15597,6 @@ const SYS_KILL = 37
 
 ```
 searchKey: syscall.SYS_GETPPID
-tags: [exported]
 ```
 
 ```Go
@@ -16884,7 +15607,6 @@ const SYS_GETPPID = 39
 
 ```
 searchKey: syscall.SYS_DUP
-tags: [exported]
 ```
 
 ```Go
@@ -16895,7 +15617,6 @@ const SYS_DUP = 41
 
 ```
 searchKey: syscall.SYS_PIPE
-tags: [exported]
 ```
 
 ```Go
@@ -16906,7 +15627,6 @@ const SYS_PIPE = 42
 
 ```
 searchKey: syscall.SYS_GETEGID
-tags: [exported]
 ```
 
 ```Go
@@ -16917,7 +15637,6 @@ const SYS_GETEGID = 43
 
 ```
 searchKey: syscall.SYS_PROFIL
-tags: [exported]
 ```
 
 ```Go
@@ -16928,7 +15647,6 @@ const SYS_PROFIL = 44
 
 ```
 searchKey: syscall.SYS_SIGACTION
-tags: [exported]
 ```
 
 ```Go
@@ -16939,7 +15657,6 @@ const SYS_SIGACTION = 46
 
 ```
 searchKey: syscall.SYS_GETGID
-tags: [exported]
 ```
 
 ```Go
@@ -16950,7 +15667,6 @@ const SYS_GETGID = 47
 
 ```
 searchKey: syscall.SYS_SIGPROCMASK
-tags: [exported]
 ```
 
 ```Go
@@ -16961,7 +15677,6 @@ const SYS_SIGPROCMASK = 48
 
 ```
 searchKey: syscall.SYS_GETLOGIN
-tags: [exported]
 ```
 
 ```Go
@@ -16972,7 +15687,6 @@ const SYS_GETLOGIN = 49
 
 ```
 searchKey: syscall.SYS_SETLOGIN
-tags: [exported]
 ```
 
 ```Go
@@ -16983,7 +15697,6 @@ const SYS_SETLOGIN = 50
 
 ```
 searchKey: syscall.SYS_ACCT
-tags: [exported]
 ```
 
 ```Go
@@ -16994,7 +15707,6 @@ const SYS_ACCT = 51
 
 ```
 searchKey: syscall.SYS_SIGPENDING
-tags: [exported]
 ```
 
 ```Go
@@ -17005,7 +15717,6 @@ const SYS_SIGPENDING = 52
 
 ```
 searchKey: syscall.SYS_SIGALTSTACK
-tags: [exported]
 ```
 
 ```Go
@@ -17016,7 +15727,6 @@ const SYS_SIGALTSTACK = 53
 
 ```
 searchKey: syscall.SYS_IOCTL
-tags: [exported]
 ```
 
 ```Go
@@ -17027,7 +15737,6 @@ const SYS_IOCTL = 54
 
 ```
 searchKey: syscall.SYS_REBOOT
-tags: [exported]
 ```
 
 ```Go
@@ -17038,7 +15747,6 @@ const SYS_REBOOT = 55
 
 ```
 searchKey: syscall.SYS_REVOKE
-tags: [exported]
 ```
 
 ```Go
@@ -17049,7 +15757,6 @@ const SYS_REVOKE = 56
 
 ```
 searchKey: syscall.SYS_SYMLINK
-tags: [exported]
 ```
 
 ```Go
@@ -17060,7 +15767,6 @@ const SYS_SYMLINK = 57
 
 ```
 searchKey: syscall.SYS_READLINK
-tags: [exported]
 ```
 
 ```Go
@@ -17071,7 +15777,6 @@ const SYS_READLINK = 58
 
 ```
 searchKey: syscall.SYS_EXECVE
-tags: [exported]
 ```
 
 ```Go
@@ -17082,7 +15787,6 @@ const SYS_EXECVE = 59
 
 ```
 searchKey: syscall.SYS_UMASK
-tags: [exported]
 ```
 
 ```Go
@@ -17093,7 +15797,6 @@ const SYS_UMASK = 60
 
 ```
 searchKey: syscall.SYS_CHROOT
-tags: [exported]
 ```
 
 ```Go
@@ -17104,7 +15807,6 @@ const SYS_CHROOT = 61
 
 ```
 searchKey: syscall.SYS_MSYNC
-tags: [exported]
 ```
 
 ```Go
@@ -17115,7 +15817,6 @@ const SYS_MSYNC = 65
 
 ```
 searchKey: syscall.SYS_VFORK
-tags: [exported]
 ```
 
 ```Go
@@ -17126,7 +15827,6 @@ const SYS_VFORK = 66
 
 ```
 searchKey: syscall.SYS_MUNMAP
-tags: [exported]
 ```
 
 ```Go
@@ -17137,7 +15837,6 @@ const SYS_MUNMAP = 73
 
 ```
 searchKey: syscall.SYS_MPROTECT
-tags: [exported]
 ```
 
 ```Go
@@ -17148,7 +15847,6 @@ const SYS_MPROTECT = 74
 
 ```
 searchKey: syscall.SYS_MADVISE
-tags: [exported]
 ```
 
 ```Go
@@ -17159,7 +15857,6 @@ const SYS_MADVISE = 75
 
 ```
 searchKey: syscall.SYS_MINCORE
-tags: [exported]
 ```
 
 ```Go
@@ -17170,7 +15867,6 @@ const SYS_MINCORE = 78
 
 ```
 searchKey: syscall.SYS_GETGROUPS
-tags: [exported]
 ```
 
 ```Go
@@ -17181,7 +15877,6 @@ const SYS_GETGROUPS = 79
 
 ```
 searchKey: syscall.SYS_SETGROUPS
-tags: [exported]
 ```
 
 ```Go
@@ -17192,7 +15887,6 @@ const SYS_SETGROUPS = 80
 
 ```
 searchKey: syscall.SYS_GETPGRP
-tags: [exported]
 ```
 
 ```Go
@@ -17203,7 +15897,6 @@ const SYS_GETPGRP = 81
 
 ```
 searchKey: syscall.SYS_SETPGID
-tags: [exported]
 ```
 
 ```Go
@@ -17214,7 +15907,6 @@ const SYS_SETPGID = 82
 
 ```
 searchKey: syscall.SYS_SETITIMER
-tags: [exported]
 ```
 
 ```Go
@@ -17225,7 +15917,6 @@ const SYS_SETITIMER = 83
 
 ```
 searchKey: syscall.SYS_SWAPON
-tags: [exported]
 ```
 
 ```Go
@@ -17236,7 +15927,6 @@ const SYS_SWAPON = 85
 
 ```
 searchKey: syscall.SYS_GETITIMER
-tags: [exported]
 ```
 
 ```Go
@@ -17247,7 +15937,6 @@ const SYS_GETITIMER = 86
 
 ```
 searchKey: syscall.SYS_GETDTABLESIZE
-tags: [exported]
 ```
 
 ```Go
@@ -17258,7 +15947,6 @@ const SYS_GETDTABLESIZE = 89
 
 ```
 searchKey: syscall.SYS_DUP2
-tags: [exported]
 ```
 
 ```Go
@@ -17269,7 +15957,6 @@ const SYS_DUP2 = 90
 
 ```
 searchKey: syscall.SYS_FCNTL
-tags: [exported]
 ```
 
 ```Go
@@ -17280,7 +15967,6 @@ const SYS_FCNTL = 92
 
 ```
 searchKey: syscall.SYS_SELECT
-tags: [exported]
 ```
 
 ```Go
@@ -17291,7 +15977,6 @@ const SYS_SELECT = 93
 
 ```
 searchKey: syscall.SYS_FSYNC
-tags: [exported]
 ```
 
 ```Go
@@ -17302,7 +15987,6 @@ const SYS_FSYNC = 95
 
 ```
 searchKey: syscall.SYS_SETPRIORITY
-tags: [exported]
 ```
 
 ```Go
@@ -17313,7 +15997,6 @@ const SYS_SETPRIORITY = 96
 
 ```
 searchKey: syscall.SYS_SOCKET
-tags: [exported]
 ```
 
 ```Go
@@ -17324,7 +16007,6 @@ const SYS_SOCKET = 97
 
 ```
 searchKey: syscall.SYS_CONNECT
-tags: [exported]
 ```
 
 ```Go
@@ -17335,7 +16017,6 @@ const SYS_CONNECT = 98
 
 ```
 searchKey: syscall.SYS_GETPRIORITY
-tags: [exported]
 ```
 
 ```Go
@@ -17346,7 +16027,6 @@ const SYS_GETPRIORITY = 100
 
 ```
 searchKey: syscall.SYS_BIND
-tags: [exported]
 ```
 
 ```Go
@@ -17357,7 +16037,6 @@ const SYS_BIND = 104
 
 ```
 searchKey: syscall.SYS_SETSOCKOPT
-tags: [exported]
 ```
 
 ```Go
@@ -17368,7 +16047,6 @@ const SYS_SETSOCKOPT = 105
 
 ```
 searchKey: syscall.SYS_LISTEN
-tags: [exported]
 ```
 
 ```Go
@@ -17379,7 +16057,6 @@ const SYS_LISTEN = 106
 
 ```
 searchKey: syscall.SYS_SIGSUSPEND
-tags: [exported]
 ```
 
 ```Go
@@ -17390,7 +16067,6 @@ const SYS_SIGSUSPEND = 111
 
 ```
 searchKey: syscall.SYS_GETTIMEOFDAY
-tags: [exported]
 ```
 
 ```Go
@@ -17401,7 +16077,6 @@ const SYS_GETTIMEOFDAY = 116
 
 ```
 searchKey: syscall.SYS_GETRUSAGE
-tags: [exported]
 ```
 
 ```Go
@@ -17412,7 +16087,6 @@ const SYS_GETRUSAGE = 117
 
 ```
 searchKey: syscall.SYS_GETSOCKOPT
-tags: [exported]
 ```
 
 ```Go
@@ -17423,7 +16097,6 @@ const SYS_GETSOCKOPT = 118
 
 ```
 searchKey: syscall.SYS_READV
-tags: [exported]
 ```
 
 ```Go
@@ -17434,7 +16107,6 @@ const SYS_READV = 120
 
 ```
 searchKey: syscall.SYS_WRITEV
-tags: [exported]
 ```
 
 ```Go
@@ -17445,7 +16117,6 @@ const SYS_WRITEV = 121
 
 ```
 searchKey: syscall.SYS_SETTIMEOFDAY
-tags: [exported]
 ```
 
 ```Go
@@ -17456,7 +16127,6 @@ const SYS_SETTIMEOFDAY = 122
 
 ```
 searchKey: syscall.SYS_FCHOWN
-tags: [exported]
 ```
 
 ```Go
@@ -17467,7 +16137,6 @@ const SYS_FCHOWN = 123
 
 ```
 searchKey: syscall.SYS_FCHMOD
-tags: [exported]
 ```
 
 ```Go
@@ -17478,7 +16147,6 @@ const SYS_FCHMOD = 124
 
 ```
 searchKey: syscall.SYS_SETREUID
-tags: [exported]
 ```
 
 ```Go
@@ -17489,7 +16157,6 @@ const SYS_SETREUID = 126
 
 ```
 searchKey: syscall.SYS_SETREGID
-tags: [exported]
 ```
 
 ```Go
@@ -17500,7 +16167,6 @@ const SYS_SETREGID = 127
 
 ```
 searchKey: syscall.SYS_RENAME
-tags: [exported]
 ```
 
 ```Go
@@ -17511,7 +16177,6 @@ const SYS_RENAME = 128
 
 ```
 searchKey: syscall.SYS_FLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -17522,7 +16187,6 @@ const SYS_FLOCK = 131
 
 ```
 searchKey: syscall.SYS_MKFIFO
-tags: [exported]
 ```
 
 ```Go
@@ -17533,7 +16197,6 @@ const SYS_MKFIFO = 132
 
 ```
 searchKey: syscall.SYS_SENDTO
-tags: [exported]
 ```
 
 ```Go
@@ -17544,7 +16207,6 @@ const SYS_SENDTO = 133
 
 ```
 searchKey: syscall.SYS_SHUTDOWN
-tags: [exported]
 ```
 
 ```Go
@@ -17555,7 +16217,6 @@ const SYS_SHUTDOWN = 134
 
 ```
 searchKey: syscall.SYS_SOCKETPAIR
-tags: [exported]
 ```
 
 ```Go
@@ -17566,7 +16227,6 @@ const SYS_SOCKETPAIR = 135
 
 ```
 searchKey: syscall.SYS_MKDIR
-tags: [exported]
 ```
 
 ```Go
@@ -17577,7 +16237,6 @@ const SYS_MKDIR = 136
 
 ```
 searchKey: syscall.SYS_RMDIR
-tags: [exported]
 ```
 
 ```Go
@@ -17588,7 +16247,6 @@ const SYS_RMDIR = 137
 
 ```
 searchKey: syscall.SYS_UTIMES
-tags: [exported]
 ```
 
 ```Go
@@ -17599,7 +16257,6 @@ const SYS_UTIMES = 138
 
 ```
 searchKey: syscall.SYS_FUTIMES
-tags: [exported]
 ```
 
 ```Go
@@ -17610,7 +16267,6 @@ const SYS_FUTIMES = 139
 
 ```
 searchKey: syscall.SYS_ADJTIME
-tags: [exported]
 ```
 
 ```Go
@@ -17621,7 +16277,6 @@ const SYS_ADJTIME = 140
 
 ```
 searchKey: syscall.SYS_GETHOSTUUID
-tags: [exported]
 ```
 
 ```Go
@@ -17632,7 +16287,6 @@ const SYS_GETHOSTUUID = 142
 
 ```
 searchKey: syscall.SYS_SETSID
-tags: [exported]
 ```
 
 ```Go
@@ -17643,7 +16297,6 @@ const SYS_SETSID = 147
 
 ```
 searchKey: syscall.SYS_GETPGID
-tags: [exported]
 ```
 
 ```Go
@@ -17654,7 +16307,6 @@ const SYS_GETPGID = 151
 
 ```
 searchKey: syscall.SYS_SETPRIVEXEC
-tags: [exported]
 ```
 
 ```Go
@@ -17665,7 +16317,6 @@ const SYS_SETPRIVEXEC = 152
 
 ```
 searchKey: syscall.SYS_PREAD
-tags: [exported]
 ```
 
 ```Go
@@ -17676,7 +16327,6 @@ const SYS_PREAD = 153
 
 ```
 searchKey: syscall.SYS_PWRITE
-tags: [exported]
 ```
 
 ```Go
@@ -17687,7 +16337,6 @@ const SYS_PWRITE = 154
 
 ```
 searchKey: syscall.SYS_NFSSVC
-tags: [exported]
 ```
 
 ```Go
@@ -17698,7 +16347,6 @@ const SYS_NFSSVC = 155
 
 ```
 searchKey: syscall.SYS_STATFS
-tags: [exported]
 ```
 
 ```Go
@@ -17709,7 +16357,6 @@ const SYS_STATFS = 157
 
 ```
 searchKey: syscall.SYS_FSTATFS
-tags: [exported]
 ```
 
 ```Go
@@ -17720,7 +16367,6 @@ const SYS_FSTATFS = 158
 
 ```
 searchKey: syscall.SYS_UNMOUNT
-tags: [exported]
 ```
 
 ```Go
@@ -17731,7 +16377,6 @@ const SYS_UNMOUNT = 159
 
 ```
 searchKey: syscall.SYS_GETFH
-tags: [exported]
 ```
 
 ```Go
@@ -17742,7 +16387,6 @@ const SYS_GETFH = 161
 
 ```
 searchKey: syscall.SYS_QUOTACTL
-tags: [exported]
 ```
 
 ```Go
@@ -17753,7 +16397,6 @@ const SYS_QUOTACTL = 165
 
 ```
 searchKey: syscall.SYS_MOUNT
-tags: [exported]
 ```
 
 ```Go
@@ -17764,7 +16407,6 @@ const SYS_MOUNT = 167
 
 ```
 searchKey: syscall.SYS_CSOPS
-tags: [exported]
 ```
 
 ```Go
@@ -17775,7 +16417,6 @@ const SYS_CSOPS = 169
 
 ```
 searchKey: syscall.SYS_WAITID
-tags: [exported]
 ```
 
 ```Go
@@ -17786,7 +16427,6 @@ const SYS_WAITID = 173
 
 ```
 searchKey: syscall.SYS_ADD_PROFIL
-tags: [exported]
 ```
 
 ```Go
@@ -17797,7 +16437,6 @@ const SYS_ADD_PROFIL = 176
 
 ```
 searchKey: syscall.SYS_KDEBUG_TRACE
-tags: [exported]
 ```
 
 ```Go
@@ -17808,7 +16447,6 @@ const SYS_KDEBUG_TRACE = 180
 
 ```
 searchKey: syscall.SYS_SETGID
-tags: [exported]
 ```
 
 ```Go
@@ -17819,7 +16457,6 @@ const SYS_SETGID = 181
 
 ```
 searchKey: syscall.SYS_SETEGID
-tags: [exported]
 ```
 
 ```Go
@@ -17830,7 +16467,6 @@ const SYS_SETEGID = 182
 
 ```
 searchKey: syscall.SYS_SETEUID
-tags: [exported]
 ```
 
 ```Go
@@ -17841,7 +16477,6 @@ const SYS_SETEUID = 183
 
 ```
 searchKey: syscall.SYS_SIGRETURN
-tags: [exported]
 ```
 
 ```Go
@@ -17852,7 +16487,6 @@ const SYS_SIGRETURN = 184
 
 ```
 searchKey: syscall.SYS_CHUD
-tags: [exported]
 ```
 
 ```Go
@@ -17863,7 +16497,6 @@ const SYS_CHUD = 185
 
 ```
 searchKey: syscall.SYS_FDATASYNC
-tags: [exported]
 ```
 
 ```Go
@@ -17874,7 +16507,6 @@ const SYS_FDATASYNC = 187
 
 ```
 searchKey: syscall.SYS_STAT
-tags: [exported]
 ```
 
 ```Go
@@ -17885,7 +16517,6 @@ const SYS_STAT = 188
 
 ```
 searchKey: syscall.SYS_FSTAT
-tags: [exported]
 ```
 
 ```Go
@@ -17896,7 +16527,6 @@ const SYS_FSTAT = 189
 
 ```
 searchKey: syscall.SYS_LSTAT
-tags: [exported]
 ```
 
 ```Go
@@ -17907,7 +16537,6 @@ const SYS_LSTAT = 190
 
 ```
 searchKey: syscall.SYS_PATHCONF
-tags: [exported]
 ```
 
 ```Go
@@ -17918,7 +16547,6 @@ const SYS_PATHCONF = 191
 
 ```
 searchKey: syscall.SYS_FPATHCONF
-tags: [exported]
 ```
 
 ```Go
@@ -17929,7 +16557,6 @@ const SYS_FPATHCONF = 192
 
 ```
 searchKey: syscall.SYS_GETRLIMIT
-tags: [exported]
 ```
 
 ```Go
@@ -17940,7 +16567,6 @@ const SYS_GETRLIMIT = 194
 
 ```
 searchKey: syscall.SYS_SETRLIMIT
-tags: [exported]
 ```
 
 ```Go
@@ -17951,7 +16577,6 @@ const SYS_SETRLIMIT = 195
 
 ```
 searchKey: syscall.SYS_GETDIRENTRIES
-tags: [exported]
 ```
 
 ```Go
@@ -17962,7 +16587,6 @@ const SYS_GETDIRENTRIES = 196
 
 ```
 searchKey: syscall.SYS_MMAP
-tags: [exported]
 ```
 
 ```Go
@@ -17973,7 +16597,6 @@ const SYS_MMAP = 197
 
 ```
 searchKey: syscall.SYS_LSEEK
-tags: [exported]
 ```
 
 ```Go
@@ -17984,7 +16607,6 @@ const SYS_LSEEK = 199
 
 ```
 searchKey: syscall.SYS_TRUNCATE
-tags: [exported]
 ```
 
 ```Go
@@ -17995,7 +16617,6 @@ const SYS_TRUNCATE = 200
 
 ```
 searchKey: syscall.SYS_FTRUNCATE
-tags: [exported]
 ```
 
 ```Go
@@ -18006,7 +16627,6 @@ const SYS_FTRUNCATE = 201
 
 ```
 searchKey: syscall.SYS___SYSCTL
-tags: [exported]
 ```
 
 ```Go
@@ -18017,7 +16637,6 @@ const SYS___SYSCTL = 202
 
 ```
 searchKey: syscall.SYS_MLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -18028,7 +16647,6 @@ const SYS_MLOCK = 203
 
 ```
 searchKey: syscall.SYS_MUNLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -18039,7 +16657,6 @@ const SYS_MUNLOCK = 204
 
 ```
 searchKey: syscall.SYS_UNDELETE
-tags: [exported]
 ```
 
 ```Go
@@ -18050,7 +16667,6 @@ const SYS_UNDELETE = 205
 
 ```
 searchKey: syscall.SYS_ATSOCKET
-tags: [exported]
 ```
 
 ```Go
@@ -18061,7 +16677,6 @@ const SYS_ATSOCKET = 206
 
 ```
 searchKey: syscall.SYS_ATGETMSG
-tags: [exported]
 ```
 
 ```Go
@@ -18072,7 +16687,6 @@ const SYS_ATGETMSG = 207
 
 ```
 searchKey: syscall.SYS_ATPUTMSG
-tags: [exported]
 ```
 
 ```Go
@@ -18083,7 +16697,6 @@ const SYS_ATPUTMSG = 208
 
 ```
 searchKey: syscall.SYS_ATPSNDREQ
-tags: [exported]
 ```
 
 ```Go
@@ -18094,7 +16707,6 @@ const SYS_ATPSNDREQ = 209
 
 ```
 searchKey: syscall.SYS_ATPSNDRSP
-tags: [exported]
 ```
 
 ```Go
@@ -18105,7 +16717,6 @@ const SYS_ATPSNDRSP = 210
 
 ```
 searchKey: syscall.SYS_ATPGETREQ
-tags: [exported]
 ```
 
 ```Go
@@ -18116,7 +16727,6 @@ const SYS_ATPGETREQ = 211
 
 ```
 searchKey: syscall.SYS_ATPGETRSP
-tags: [exported]
 ```
 
 ```Go
@@ -18127,7 +16737,6 @@ const SYS_ATPGETRSP = 212
 
 ```
 searchKey: syscall.SYS_MKCOMPLEX
-tags: [exported]
 ```
 
 ```Go
@@ -18138,7 +16747,6 @@ const SYS_MKCOMPLEX = 216
 
 ```
 searchKey: syscall.SYS_STATV
-tags: [exported]
 ```
 
 ```Go
@@ -18149,7 +16757,6 @@ const SYS_STATV = 217
 
 ```
 searchKey: syscall.SYS_LSTATV
-tags: [exported]
 ```
 
 ```Go
@@ -18160,7 +16767,6 @@ const SYS_LSTATV = 218
 
 ```
 searchKey: syscall.SYS_FSTATV
-tags: [exported]
 ```
 
 ```Go
@@ -18171,7 +16777,6 @@ const SYS_FSTATV = 219
 
 ```
 searchKey: syscall.SYS_GETATTRLIST
-tags: [exported]
 ```
 
 ```Go
@@ -18182,7 +16787,6 @@ const SYS_GETATTRLIST = 220
 
 ```
 searchKey: syscall.SYS_SETATTRLIST
-tags: [exported]
 ```
 
 ```Go
@@ -18193,7 +16797,6 @@ const SYS_SETATTRLIST = 221
 
 ```
 searchKey: syscall.SYS_GETDIRENTRIESATTR
-tags: [exported]
 ```
 
 ```Go
@@ -18204,7 +16807,6 @@ const SYS_GETDIRENTRIESATTR = 222
 
 ```
 searchKey: syscall.SYS_EXCHANGEDATA
-tags: [exported]
 ```
 
 ```Go
@@ -18215,7 +16817,6 @@ const SYS_EXCHANGEDATA = 223
 
 ```
 searchKey: syscall.SYS_SEARCHFS
-tags: [exported]
 ```
 
 ```Go
@@ -18226,7 +16827,6 @@ const SYS_SEARCHFS = 225
 
 ```
 searchKey: syscall.SYS_DELETE
-tags: [exported]
 ```
 
 ```Go
@@ -18237,7 +16837,6 @@ const SYS_DELETE = 226
 
 ```
 searchKey: syscall.SYS_COPYFILE
-tags: [exported]
 ```
 
 ```Go
@@ -18248,7 +16847,6 @@ const SYS_COPYFILE = 227
 
 ```
 searchKey: syscall.SYS_FGETATTRLIST
-tags: [exported]
 ```
 
 ```Go
@@ -18259,7 +16857,6 @@ const SYS_FGETATTRLIST = 228
 
 ```
 searchKey: syscall.SYS_FSETATTRLIST
-tags: [exported]
 ```
 
 ```Go
@@ -18270,7 +16867,6 @@ const SYS_FSETATTRLIST = 229
 
 ```
 searchKey: syscall.SYS_POLL
-tags: [exported]
 ```
 
 ```Go
@@ -18281,7 +16877,6 @@ const SYS_POLL = 230
 
 ```
 searchKey: syscall.SYS_WATCHEVENT
-tags: [exported]
 ```
 
 ```Go
@@ -18292,7 +16887,6 @@ const SYS_WATCHEVENT = 231
 
 ```
 searchKey: syscall.SYS_WAITEVENT
-tags: [exported]
 ```
 
 ```Go
@@ -18303,7 +16897,6 @@ const SYS_WAITEVENT = 232
 
 ```
 searchKey: syscall.SYS_MODWATCH
-tags: [exported]
 ```
 
 ```Go
@@ -18314,7 +16907,6 @@ const SYS_MODWATCH = 233
 
 ```
 searchKey: syscall.SYS_GETXATTR
-tags: [exported]
 ```
 
 ```Go
@@ -18325,7 +16917,6 @@ const SYS_GETXATTR = 234
 
 ```
 searchKey: syscall.SYS_FGETXATTR
-tags: [exported]
 ```
 
 ```Go
@@ -18336,7 +16927,6 @@ const SYS_FGETXATTR = 235
 
 ```
 searchKey: syscall.SYS_SETXATTR
-tags: [exported]
 ```
 
 ```Go
@@ -18347,7 +16937,6 @@ const SYS_SETXATTR = 236
 
 ```
 searchKey: syscall.SYS_FSETXATTR
-tags: [exported]
 ```
 
 ```Go
@@ -18358,7 +16947,6 @@ const SYS_FSETXATTR = 237
 
 ```
 searchKey: syscall.SYS_REMOVEXATTR
-tags: [exported]
 ```
 
 ```Go
@@ -18369,7 +16957,6 @@ const SYS_REMOVEXATTR = 238
 
 ```
 searchKey: syscall.SYS_FREMOVEXATTR
-tags: [exported]
 ```
 
 ```Go
@@ -18380,7 +16967,6 @@ const SYS_FREMOVEXATTR = 239
 
 ```
 searchKey: syscall.SYS_LISTXATTR
-tags: [exported]
 ```
 
 ```Go
@@ -18391,7 +16977,6 @@ const SYS_LISTXATTR = 240
 
 ```
 searchKey: syscall.SYS_FLISTXATTR
-tags: [exported]
 ```
 
 ```Go
@@ -18402,7 +16987,6 @@ const SYS_FLISTXATTR = 241
 
 ```
 searchKey: syscall.SYS_FSCTL
-tags: [exported]
 ```
 
 ```Go
@@ -18413,7 +16997,6 @@ const SYS_FSCTL = 242
 
 ```
 searchKey: syscall.SYS_INITGROUPS
-tags: [exported]
 ```
 
 ```Go
@@ -18424,7 +17007,6 @@ const SYS_INITGROUPS = 243
 
 ```
 searchKey: syscall.SYS_POSIX_SPAWN
-tags: [exported]
 ```
 
 ```Go
@@ -18435,7 +17017,6 @@ const SYS_POSIX_SPAWN = 244
 
 ```
 searchKey: syscall.SYS_FFSCTL
-tags: [exported]
 ```
 
 ```Go
@@ -18446,7 +17027,6 @@ const SYS_FFSCTL = 245
 
 ```
 searchKey: syscall.SYS_NFSCLNT
-tags: [exported]
 ```
 
 ```Go
@@ -18457,7 +17037,6 @@ const SYS_NFSCLNT = 247
 
 ```
 searchKey: syscall.SYS_FHOPEN
-tags: [exported]
 ```
 
 ```Go
@@ -18468,7 +17047,6 @@ const SYS_FHOPEN = 248
 
 ```
 searchKey: syscall.SYS_MINHERIT
-tags: [exported]
 ```
 
 ```Go
@@ -18479,7 +17057,6 @@ const SYS_MINHERIT = 250
 
 ```
 searchKey: syscall.SYS_SEMSYS
-tags: [exported]
 ```
 
 ```Go
@@ -18490,7 +17067,6 @@ const SYS_SEMSYS = 251
 
 ```
 searchKey: syscall.SYS_MSGSYS
-tags: [exported]
 ```
 
 ```Go
@@ -18501,7 +17077,6 @@ const SYS_MSGSYS = 252
 
 ```
 searchKey: syscall.SYS_SHMSYS
-tags: [exported]
 ```
 
 ```Go
@@ -18512,7 +17087,6 @@ const SYS_SHMSYS = 253
 
 ```
 searchKey: syscall.SYS_SEMCTL
-tags: [exported]
 ```
 
 ```Go
@@ -18523,7 +17097,6 @@ const SYS_SEMCTL = 254
 
 ```
 searchKey: syscall.SYS_SEMGET
-tags: [exported]
 ```
 
 ```Go
@@ -18534,7 +17107,6 @@ const SYS_SEMGET = 255
 
 ```
 searchKey: syscall.SYS_SEMOP
-tags: [exported]
 ```
 
 ```Go
@@ -18545,7 +17117,6 @@ const SYS_SEMOP = 256
 
 ```
 searchKey: syscall.SYS_MSGCTL
-tags: [exported]
 ```
 
 ```Go
@@ -18556,7 +17127,6 @@ const SYS_MSGCTL = 258
 
 ```
 searchKey: syscall.SYS_MSGGET
-tags: [exported]
 ```
 
 ```Go
@@ -18567,7 +17137,6 @@ const SYS_MSGGET = 259
 
 ```
 searchKey: syscall.SYS_MSGSND
-tags: [exported]
 ```
 
 ```Go
@@ -18578,7 +17147,6 @@ const SYS_MSGSND = 260
 
 ```
 searchKey: syscall.SYS_MSGRCV
-tags: [exported]
 ```
 
 ```Go
@@ -18589,7 +17157,6 @@ const SYS_MSGRCV = 261
 
 ```
 searchKey: syscall.SYS_SHMAT
-tags: [exported]
 ```
 
 ```Go
@@ -18600,7 +17167,6 @@ const SYS_SHMAT = 262
 
 ```
 searchKey: syscall.SYS_SHMCTL
-tags: [exported]
 ```
 
 ```Go
@@ -18611,7 +17177,6 @@ const SYS_SHMCTL = 263
 
 ```
 searchKey: syscall.SYS_SHMDT
-tags: [exported]
 ```
 
 ```Go
@@ -18622,7 +17187,6 @@ const SYS_SHMDT = 264
 
 ```
 searchKey: syscall.SYS_SHMGET
-tags: [exported]
 ```
 
 ```Go
@@ -18633,7 +17197,6 @@ const SYS_SHMGET = 265
 
 ```
 searchKey: syscall.SYS_SHM_OPEN
-tags: [exported]
 ```
 
 ```Go
@@ -18644,7 +17207,6 @@ const SYS_SHM_OPEN = 266
 
 ```
 searchKey: syscall.SYS_SHM_UNLINK
-tags: [exported]
 ```
 
 ```Go
@@ -18655,7 +17217,6 @@ const SYS_SHM_UNLINK = 267
 
 ```
 searchKey: syscall.SYS_SEM_OPEN
-tags: [exported]
 ```
 
 ```Go
@@ -18666,7 +17227,6 @@ const SYS_SEM_OPEN = 268
 
 ```
 searchKey: syscall.SYS_SEM_CLOSE
-tags: [exported]
 ```
 
 ```Go
@@ -18677,7 +17237,6 @@ const SYS_SEM_CLOSE = 269
 
 ```
 searchKey: syscall.SYS_SEM_UNLINK
-tags: [exported]
 ```
 
 ```Go
@@ -18688,7 +17247,6 @@ const SYS_SEM_UNLINK = 270
 
 ```
 searchKey: syscall.SYS_SEM_WAIT
-tags: [exported]
 ```
 
 ```Go
@@ -18699,7 +17257,6 @@ const SYS_SEM_WAIT = 271
 
 ```
 searchKey: syscall.SYS_SEM_TRYWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -18710,7 +17267,6 @@ const SYS_SEM_TRYWAIT = 272
 
 ```
 searchKey: syscall.SYS_SEM_POST
-tags: [exported]
 ```
 
 ```Go
@@ -18721,7 +17277,6 @@ const SYS_SEM_POST = 273
 
 ```
 searchKey: syscall.SYS_SEM_GETVALUE
-tags: [exported]
 ```
 
 ```Go
@@ -18732,7 +17287,6 @@ const SYS_SEM_GETVALUE = 274
 
 ```
 searchKey: syscall.SYS_SEM_INIT
-tags: [exported]
 ```
 
 ```Go
@@ -18743,7 +17297,6 @@ const SYS_SEM_INIT = 275
 
 ```
 searchKey: syscall.SYS_SEM_DESTROY
-tags: [exported]
 ```
 
 ```Go
@@ -18754,7 +17307,6 @@ const SYS_SEM_DESTROY = 276
 
 ```
 searchKey: syscall.SYS_OPEN_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -18765,7 +17317,6 @@ const SYS_OPEN_EXTENDED = 277
 
 ```
 searchKey: syscall.SYS_UMASK_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -18776,7 +17327,6 @@ const SYS_UMASK_EXTENDED = 278
 
 ```
 searchKey: syscall.SYS_STAT_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -18787,7 +17337,6 @@ const SYS_STAT_EXTENDED = 279
 
 ```
 searchKey: syscall.SYS_LSTAT_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -18798,7 +17347,6 @@ const SYS_LSTAT_EXTENDED = 280
 
 ```
 searchKey: syscall.SYS_FSTAT_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -18809,7 +17357,6 @@ const SYS_FSTAT_EXTENDED = 281
 
 ```
 searchKey: syscall.SYS_CHMOD_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -18820,7 +17367,6 @@ const SYS_CHMOD_EXTENDED = 282
 
 ```
 searchKey: syscall.SYS_FCHMOD_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -18831,7 +17377,6 @@ const SYS_FCHMOD_EXTENDED = 283
 
 ```
 searchKey: syscall.SYS_ACCESS_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -18842,7 +17387,6 @@ const SYS_ACCESS_EXTENDED = 284
 
 ```
 searchKey: syscall.SYS_SETTID
-tags: [exported]
 ```
 
 ```Go
@@ -18853,7 +17397,6 @@ const SYS_SETTID = 285
 
 ```
 searchKey: syscall.SYS_GETTID
-tags: [exported]
 ```
 
 ```Go
@@ -18864,7 +17407,6 @@ const SYS_GETTID = 286
 
 ```
 searchKey: syscall.SYS_SETSGROUPS
-tags: [exported]
 ```
 
 ```Go
@@ -18875,7 +17417,6 @@ const SYS_SETSGROUPS = 287
 
 ```
 searchKey: syscall.SYS_GETSGROUPS
-tags: [exported]
 ```
 
 ```Go
@@ -18886,7 +17427,6 @@ const SYS_GETSGROUPS = 288
 
 ```
 searchKey: syscall.SYS_SETWGROUPS
-tags: [exported]
 ```
 
 ```Go
@@ -18897,7 +17437,6 @@ const SYS_SETWGROUPS = 289
 
 ```
 searchKey: syscall.SYS_GETWGROUPS
-tags: [exported]
 ```
 
 ```Go
@@ -18908,7 +17447,6 @@ const SYS_GETWGROUPS = 290
 
 ```
 searchKey: syscall.SYS_MKFIFO_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -18919,7 +17457,6 @@ const SYS_MKFIFO_EXTENDED = 291
 
 ```
 searchKey: syscall.SYS_MKDIR_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -18930,7 +17467,6 @@ const SYS_MKDIR_EXTENDED = 292
 
 ```
 searchKey: syscall.SYS_IDENTITYSVC
-tags: [exported]
 ```
 
 ```Go
@@ -18941,7 +17477,6 @@ const SYS_IDENTITYSVC = 293
 
 ```
 searchKey: syscall.SYS_SHARED_REGION_CHECK_NP
-tags: [exported]
 ```
 
 ```Go
@@ -18952,7 +17487,6 @@ const SYS_SHARED_REGION_CHECK_NP = 294
 
 ```
 searchKey: syscall.SYS_VM_PRESSURE_MONITOR
-tags: [exported]
 ```
 
 ```Go
@@ -18963,7 +17497,6 @@ const SYS_VM_PRESSURE_MONITOR = 296
 
 ```
 searchKey: syscall.SYS_PSYNCH_RW_LONGRDLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -18974,7 +17507,6 @@ const SYS_PSYNCH_RW_LONGRDLOCK = 297
 
 ```
 searchKey: syscall.SYS_PSYNCH_RW_YIELDWRLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -18985,7 +17517,6 @@ const SYS_PSYNCH_RW_YIELDWRLOCK = 298
 
 ```
 searchKey: syscall.SYS_PSYNCH_RW_DOWNGRADE
-tags: [exported]
 ```
 
 ```Go
@@ -18996,7 +17527,6 @@ const SYS_PSYNCH_RW_DOWNGRADE = 299
 
 ```
 searchKey: syscall.SYS_PSYNCH_RW_UPGRADE
-tags: [exported]
 ```
 
 ```Go
@@ -19007,7 +17537,6 @@ const SYS_PSYNCH_RW_UPGRADE = 300
 
 ```
 searchKey: syscall.SYS_PSYNCH_MUTEXWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -19018,7 +17547,6 @@ const SYS_PSYNCH_MUTEXWAIT = 301
 
 ```
 searchKey: syscall.SYS_PSYNCH_MUTEXDROP
-tags: [exported]
 ```
 
 ```Go
@@ -19029,7 +17557,6 @@ const SYS_PSYNCH_MUTEXDROP = 302
 
 ```
 searchKey: syscall.SYS_PSYNCH_CVBROAD
-tags: [exported]
 ```
 
 ```Go
@@ -19040,7 +17567,6 @@ const SYS_PSYNCH_CVBROAD = 303
 
 ```
 searchKey: syscall.SYS_PSYNCH_CVSIGNAL
-tags: [exported]
 ```
 
 ```Go
@@ -19051,7 +17577,6 @@ const SYS_PSYNCH_CVSIGNAL = 304
 
 ```
 searchKey: syscall.SYS_PSYNCH_CVWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -19062,7 +17587,6 @@ const SYS_PSYNCH_CVWAIT = 305
 
 ```
 searchKey: syscall.SYS_PSYNCH_RW_RDLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -19073,7 +17597,6 @@ const SYS_PSYNCH_RW_RDLOCK = 306
 
 ```
 searchKey: syscall.SYS_PSYNCH_RW_WRLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -19084,7 +17607,6 @@ const SYS_PSYNCH_RW_WRLOCK = 307
 
 ```
 searchKey: syscall.SYS_PSYNCH_RW_UNLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -19095,7 +17617,6 @@ const SYS_PSYNCH_RW_UNLOCK = 308
 
 ```
 searchKey: syscall.SYS_PSYNCH_RW_UNLOCK2
-tags: [exported]
 ```
 
 ```Go
@@ -19106,7 +17627,6 @@ const SYS_PSYNCH_RW_UNLOCK2 = 309
 
 ```
 searchKey: syscall.SYS_GETSID
-tags: [exported]
 ```
 
 ```Go
@@ -19117,7 +17637,6 @@ const SYS_GETSID = 310
 
 ```
 searchKey: syscall.SYS_SETTID_WITH_PID
-tags: [exported]
 ```
 
 ```Go
@@ -19128,7 +17647,6 @@ const SYS_SETTID_WITH_PID = 311
 
 ```
 searchKey: syscall.SYS_PSYNCH_CVCLRPREPOST
-tags: [exported]
 ```
 
 ```Go
@@ -19139,7 +17657,6 @@ const SYS_PSYNCH_CVCLRPREPOST = 312
 
 ```
 searchKey: syscall.SYS_AIO_FSYNC
-tags: [exported]
 ```
 
 ```Go
@@ -19150,7 +17667,6 @@ const SYS_AIO_FSYNC = 313
 
 ```
 searchKey: syscall.SYS_AIO_RETURN
-tags: [exported]
 ```
 
 ```Go
@@ -19161,7 +17677,6 @@ const SYS_AIO_RETURN = 314
 
 ```
 searchKey: syscall.SYS_AIO_SUSPEND
-tags: [exported]
 ```
 
 ```Go
@@ -19172,7 +17687,6 @@ const SYS_AIO_SUSPEND = 315
 
 ```
 searchKey: syscall.SYS_AIO_CANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -19183,7 +17697,6 @@ const SYS_AIO_CANCEL = 316
 
 ```
 searchKey: syscall.SYS_AIO_ERROR
-tags: [exported]
 ```
 
 ```Go
@@ -19194,7 +17707,6 @@ const SYS_AIO_ERROR = 317
 
 ```
 searchKey: syscall.SYS_AIO_READ
-tags: [exported]
 ```
 
 ```Go
@@ -19205,7 +17717,6 @@ const SYS_AIO_READ = 318
 
 ```
 searchKey: syscall.SYS_AIO_WRITE
-tags: [exported]
 ```
 
 ```Go
@@ -19216,7 +17727,6 @@ const SYS_AIO_WRITE = 319
 
 ```
 searchKey: syscall.SYS_LIO_LISTIO
-tags: [exported]
 ```
 
 ```Go
@@ -19227,7 +17737,6 @@ const SYS_LIO_LISTIO = 320
 
 ```
 searchKey: syscall.SYS_IOPOLICYSYS
-tags: [exported]
 ```
 
 ```Go
@@ -19238,7 +17747,6 @@ const SYS_IOPOLICYSYS = 322
 
 ```
 searchKey: syscall.SYS_PROCESS_POLICY
-tags: [exported]
 ```
 
 ```Go
@@ -19249,7 +17757,6 @@ const SYS_PROCESS_POLICY = 323
 
 ```
 searchKey: syscall.SYS_MLOCKALL
-tags: [exported]
 ```
 
 ```Go
@@ -19260,7 +17767,6 @@ const SYS_MLOCKALL = 324
 
 ```
 searchKey: syscall.SYS_MUNLOCKALL
-tags: [exported]
 ```
 
 ```Go
@@ -19271,7 +17777,6 @@ const SYS_MUNLOCKALL = 325
 
 ```
 searchKey: syscall.SYS_ISSETUGID
-tags: [exported]
 ```
 
 ```Go
@@ -19282,7 +17787,6 @@ const SYS_ISSETUGID = 327
 
 ```
 searchKey: syscall.SYS___PTHREAD_KILL
-tags: [exported]
 ```
 
 ```Go
@@ -19293,7 +17797,6 @@ const SYS___PTHREAD_KILL = 328
 
 ```
 searchKey: syscall.SYS___PTHREAD_SIGMASK
-tags: [exported]
 ```
 
 ```Go
@@ -19304,7 +17807,6 @@ const SYS___PTHREAD_SIGMASK = 329
 
 ```
 searchKey: syscall.SYS___SIGWAIT
-tags: [exported]
 ```
 
 ```Go
@@ -19315,7 +17817,6 @@ const SYS___SIGWAIT = 330
 
 ```
 searchKey: syscall.SYS___DISABLE_THREADSIGNAL
-tags: [exported]
 ```
 
 ```Go
@@ -19326,7 +17827,6 @@ const SYS___DISABLE_THREADSIGNAL = 331
 
 ```
 searchKey: syscall.SYS___PTHREAD_MARKCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -19337,7 +17837,6 @@ const SYS___PTHREAD_MARKCANCEL = 332
 
 ```
 searchKey: syscall.SYS___PTHREAD_CANCELED
-tags: [exported]
 ```
 
 ```Go
@@ -19348,7 +17847,6 @@ const SYS___PTHREAD_CANCELED = 333
 
 ```
 searchKey: syscall.SYS___SEMWAIT_SIGNAL
-tags: [exported]
 ```
 
 ```Go
@@ -19359,7 +17857,6 @@ const SYS___SEMWAIT_SIGNAL = 334
 
 ```
 searchKey: syscall.SYS_PROC_INFO
-tags: [exported]
 ```
 
 ```Go
@@ -19370,7 +17867,6 @@ const SYS_PROC_INFO = 336
 
 ```
 searchKey: syscall.SYS_SENDFILE
-tags: [exported]
 ```
 
 ```Go
@@ -19381,7 +17877,6 @@ const SYS_SENDFILE = 337
 
 ```
 searchKey: syscall.SYS_STAT64
-tags: [exported]
 ```
 
 ```Go
@@ -19392,7 +17887,6 @@ const SYS_STAT64 = 338
 
 ```
 searchKey: syscall.SYS_FSTAT64
-tags: [exported]
 ```
 
 ```Go
@@ -19403,7 +17897,6 @@ const SYS_FSTAT64 = 339
 
 ```
 searchKey: syscall.SYS_LSTAT64
-tags: [exported]
 ```
 
 ```Go
@@ -19414,7 +17907,6 @@ const SYS_LSTAT64 = 340
 
 ```
 searchKey: syscall.SYS_STAT64_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -19425,7 +17917,6 @@ const SYS_STAT64_EXTENDED = 341
 
 ```
 searchKey: syscall.SYS_LSTAT64_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -19436,7 +17927,6 @@ const SYS_LSTAT64_EXTENDED = 342
 
 ```
 searchKey: syscall.SYS_FSTAT64_EXTENDED
-tags: [exported]
 ```
 
 ```Go
@@ -19447,7 +17937,6 @@ const SYS_FSTAT64_EXTENDED = 343
 
 ```
 searchKey: syscall.SYS_GETDIRENTRIES64
-tags: [exported]
 ```
 
 ```Go
@@ -19458,7 +17947,6 @@ const SYS_GETDIRENTRIES64 = 344
 
 ```
 searchKey: syscall.SYS_STATFS64
-tags: [exported]
 ```
 
 ```Go
@@ -19469,7 +17957,6 @@ const SYS_STATFS64 = 345
 
 ```
 searchKey: syscall.SYS_FSTATFS64
-tags: [exported]
 ```
 
 ```Go
@@ -19480,7 +17967,6 @@ const SYS_FSTATFS64 = 346
 
 ```
 searchKey: syscall.SYS_GETFSSTAT64
-tags: [exported]
 ```
 
 ```Go
@@ -19491,7 +17977,6 @@ const SYS_GETFSSTAT64 = 347
 
 ```
 searchKey: syscall.SYS___PTHREAD_CHDIR
-tags: [exported]
 ```
 
 ```Go
@@ -19502,7 +17987,6 @@ const SYS___PTHREAD_CHDIR = 348
 
 ```
 searchKey: syscall.SYS___PTHREAD_FCHDIR
-tags: [exported]
 ```
 
 ```Go
@@ -19513,7 +17997,6 @@ const SYS___PTHREAD_FCHDIR = 349
 
 ```
 searchKey: syscall.SYS_AUDIT
-tags: [exported]
 ```
 
 ```Go
@@ -19524,7 +18007,6 @@ const SYS_AUDIT = 350
 
 ```
 searchKey: syscall.SYS_AUDITON
-tags: [exported]
 ```
 
 ```Go
@@ -19535,7 +18017,6 @@ const SYS_AUDITON = 351
 
 ```
 searchKey: syscall.SYS_GETAUID
-tags: [exported]
 ```
 
 ```Go
@@ -19546,7 +18027,6 @@ const SYS_GETAUID = 353
 
 ```
 searchKey: syscall.SYS_SETAUID
-tags: [exported]
 ```
 
 ```Go
@@ -19557,7 +18037,6 @@ const SYS_SETAUID = 354
 
 ```
 searchKey: syscall.SYS_GETAUDIT
-tags: [exported]
 ```
 
 ```Go
@@ -19568,7 +18047,6 @@ const SYS_GETAUDIT = 355
 
 ```
 searchKey: syscall.SYS_SETAUDIT
-tags: [exported]
 ```
 
 ```Go
@@ -19579,7 +18057,6 @@ const SYS_SETAUDIT = 356
 
 ```
 searchKey: syscall.SYS_GETAUDIT_ADDR
-tags: [exported]
 ```
 
 ```Go
@@ -19590,7 +18067,6 @@ const SYS_GETAUDIT_ADDR = 357
 
 ```
 searchKey: syscall.SYS_SETAUDIT_ADDR
-tags: [exported]
 ```
 
 ```Go
@@ -19601,7 +18077,6 @@ const SYS_SETAUDIT_ADDR = 358
 
 ```
 searchKey: syscall.SYS_AUDITCTL
-tags: [exported]
 ```
 
 ```Go
@@ -19612,7 +18087,6 @@ const SYS_AUDITCTL = 359
 
 ```
 searchKey: syscall.SYS_BSDTHREAD_CREATE
-tags: [exported]
 ```
 
 ```Go
@@ -19623,7 +18097,6 @@ const SYS_BSDTHREAD_CREATE = 360
 
 ```
 searchKey: syscall.SYS_BSDTHREAD_TERMINATE
-tags: [exported]
 ```
 
 ```Go
@@ -19634,7 +18107,6 @@ const SYS_BSDTHREAD_TERMINATE = 361
 
 ```
 searchKey: syscall.SYS_KQUEUE
-tags: [exported]
 ```
 
 ```Go
@@ -19645,7 +18117,6 @@ const SYS_KQUEUE = 362
 
 ```
 searchKey: syscall.SYS_KEVENT
-tags: [exported]
 ```
 
 ```Go
@@ -19656,7 +18127,6 @@ const SYS_KEVENT = 363
 
 ```
 searchKey: syscall.SYS_LCHOWN
-tags: [exported]
 ```
 
 ```Go
@@ -19667,7 +18137,6 @@ const SYS_LCHOWN = 364
 
 ```
 searchKey: syscall.SYS_STACK_SNAPSHOT
-tags: [exported]
 ```
 
 ```Go
@@ -19678,7 +18147,6 @@ const SYS_STACK_SNAPSHOT = 365
 
 ```
 searchKey: syscall.SYS_BSDTHREAD_REGISTER
-tags: [exported]
 ```
 
 ```Go
@@ -19689,7 +18157,6 @@ const SYS_BSDTHREAD_REGISTER = 366
 
 ```
 searchKey: syscall.SYS_WORKQ_OPEN
-tags: [exported]
 ```
 
 ```Go
@@ -19700,7 +18167,6 @@ const SYS_WORKQ_OPEN = 367
 
 ```
 searchKey: syscall.SYS_WORKQ_KERNRETURN
-tags: [exported]
 ```
 
 ```Go
@@ -19711,7 +18177,6 @@ const SYS_WORKQ_KERNRETURN = 368
 
 ```
 searchKey: syscall.SYS_KEVENT64
-tags: [exported]
 ```
 
 ```Go
@@ -19722,7 +18187,6 @@ const SYS_KEVENT64 = 369
 
 ```
 searchKey: syscall.SYS___OLD_SEMWAIT_SIGNAL
-tags: [exported]
 ```
 
 ```Go
@@ -19733,7 +18197,6 @@ const SYS___OLD_SEMWAIT_SIGNAL = 370
 
 ```
 searchKey: syscall.SYS___OLD_SEMWAIT_SIGNAL_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -19744,7 +18207,6 @@ const SYS___OLD_SEMWAIT_SIGNAL_NOCANCEL = 371
 
 ```
 searchKey: syscall.SYS_THREAD_SELFID
-tags: [exported]
 ```
 
 ```Go
@@ -19755,7 +18217,6 @@ const SYS_THREAD_SELFID = 372
 
 ```
 searchKey: syscall.SYS___MAC_EXECVE
-tags: [exported]
 ```
 
 ```Go
@@ -19766,7 +18227,6 @@ const SYS___MAC_EXECVE = 380
 
 ```
 searchKey: syscall.SYS___MAC_SYSCALL
-tags: [exported]
 ```
 
 ```Go
@@ -19777,7 +18237,6 @@ const SYS___MAC_SYSCALL = 381
 
 ```
 searchKey: syscall.SYS___MAC_GET_FILE
-tags: [exported]
 ```
 
 ```Go
@@ -19788,7 +18247,6 @@ const SYS___MAC_GET_FILE = 382
 
 ```
 searchKey: syscall.SYS___MAC_SET_FILE
-tags: [exported]
 ```
 
 ```Go
@@ -19799,7 +18257,6 @@ const SYS___MAC_SET_FILE = 383
 
 ```
 searchKey: syscall.SYS___MAC_GET_LINK
-tags: [exported]
 ```
 
 ```Go
@@ -19810,7 +18267,6 @@ const SYS___MAC_GET_LINK = 384
 
 ```
 searchKey: syscall.SYS___MAC_SET_LINK
-tags: [exported]
 ```
 
 ```Go
@@ -19821,7 +18277,6 @@ const SYS___MAC_SET_LINK = 385
 
 ```
 searchKey: syscall.SYS___MAC_GET_PROC
-tags: [exported]
 ```
 
 ```Go
@@ -19832,7 +18287,6 @@ const SYS___MAC_GET_PROC = 386
 
 ```
 searchKey: syscall.SYS___MAC_SET_PROC
-tags: [exported]
 ```
 
 ```Go
@@ -19843,7 +18297,6 @@ const SYS___MAC_SET_PROC = 387
 
 ```
 searchKey: syscall.SYS___MAC_GET_FD
-tags: [exported]
 ```
 
 ```Go
@@ -19854,7 +18307,6 @@ const SYS___MAC_GET_FD = 388
 
 ```
 searchKey: syscall.SYS___MAC_SET_FD
-tags: [exported]
 ```
 
 ```Go
@@ -19865,7 +18317,6 @@ const SYS___MAC_SET_FD = 389
 
 ```
 searchKey: syscall.SYS___MAC_GET_PID
-tags: [exported]
 ```
 
 ```Go
@@ -19876,7 +18327,6 @@ const SYS___MAC_GET_PID = 390
 
 ```
 searchKey: syscall.SYS___MAC_GET_LCID
-tags: [exported]
 ```
 
 ```Go
@@ -19887,7 +18337,6 @@ const SYS___MAC_GET_LCID = 391
 
 ```
 searchKey: syscall.SYS___MAC_GET_LCTX
-tags: [exported]
 ```
 
 ```Go
@@ -19898,7 +18347,6 @@ const SYS___MAC_GET_LCTX = 392
 
 ```
 searchKey: syscall.SYS___MAC_SET_LCTX
-tags: [exported]
 ```
 
 ```Go
@@ -19909,7 +18357,6 @@ const SYS___MAC_SET_LCTX = 393
 
 ```
 searchKey: syscall.SYS_SETLCID
-tags: [exported]
 ```
 
 ```Go
@@ -19920,7 +18367,6 @@ const SYS_SETLCID = 394
 
 ```
 searchKey: syscall.SYS_GETLCID
-tags: [exported]
 ```
 
 ```Go
@@ -19931,7 +18377,6 @@ const SYS_GETLCID = 395
 
 ```
 searchKey: syscall.SYS_READ_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -19942,7 +18387,6 @@ const SYS_READ_NOCANCEL = 396
 
 ```
 searchKey: syscall.SYS_WRITE_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -19953,7 +18397,6 @@ const SYS_WRITE_NOCANCEL = 397
 
 ```
 searchKey: syscall.SYS_OPEN_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -19964,7 +18407,6 @@ const SYS_OPEN_NOCANCEL = 398
 
 ```
 searchKey: syscall.SYS_CLOSE_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -19975,7 +18417,6 @@ const SYS_CLOSE_NOCANCEL = 399
 
 ```
 searchKey: syscall.SYS_WAIT4_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -19986,7 +18427,6 @@ const SYS_WAIT4_NOCANCEL = 400
 
 ```
 searchKey: syscall.SYS_RECVMSG_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -19997,7 +18437,6 @@ const SYS_RECVMSG_NOCANCEL = 401
 
 ```
 searchKey: syscall.SYS_SENDMSG_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20008,7 +18447,6 @@ const SYS_SENDMSG_NOCANCEL = 402
 
 ```
 searchKey: syscall.SYS_RECVFROM_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20019,7 +18457,6 @@ const SYS_RECVFROM_NOCANCEL = 403
 
 ```
 searchKey: syscall.SYS_ACCEPT_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20030,7 +18467,6 @@ const SYS_ACCEPT_NOCANCEL = 404
 
 ```
 searchKey: syscall.SYS_MSYNC_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20041,7 +18477,6 @@ const SYS_MSYNC_NOCANCEL = 405
 
 ```
 searchKey: syscall.SYS_FCNTL_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20052,7 +18487,6 @@ const SYS_FCNTL_NOCANCEL = 406
 
 ```
 searchKey: syscall.SYS_SELECT_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20063,7 +18497,6 @@ const SYS_SELECT_NOCANCEL = 407
 
 ```
 searchKey: syscall.SYS_FSYNC_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20074,7 +18507,6 @@ const SYS_FSYNC_NOCANCEL = 408
 
 ```
 searchKey: syscall.SYS_CONNECT_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20085,7 +18517,6 @@ const SYS_CONNECT_NOCANCEL = 409
 
 ```
 searchKey: syscall.SYS_SIGSUSPEND_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20096,7 +18527,6 @@ const SYS_SIGSUSPEND_NOCANCEL = 410
 
 ```
 searchKey: syscall.SYS_READV_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20107,7 +18537,6 @@ const SYS_READV_NOCANCEL = 411
 
 ```
 searchKey: syscall.SYS_WRITEV_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20118,7 +18547,6 @@ const SYS_WRITEV_NOCANCEL = 412
 
 ```
 searchKey: syscall.SYS_SENDTO_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20129,7 +18557,6 @@ const SYS_SENDTO_NOCANCEL = 413
 
 ```
 searchKey: syscall.SYS_PREAD_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20140,7 +18567,6 @@ const SYS_PREAD_NOCANCEL = 414
 
 ```
 searchKey: syscall.SYS_PWRITE_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20151,7 +18577,6 @@ const SYS_PWRITE_NOCANCEL = 415
 
 ```
 searchKey: syscall.SYS_WAITID_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20162,7 +18587,6 @@ const SYS_WAITID_NOCANCEL = 416
 
 ```
 searchKey: syscall.SYS_POLL_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20173,7 +18597,6 @@ const SYS_POLL_NOCANCEL = 417
 
 ```
 searchKey: syscall.SYS_MSGSND_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20184,7 +18607,6 @@ const SYS_MSGSND_NOCANCEL = 418
 
 ```
 searchKey: syscall.SYS_MSGRCV_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20195,7 +18617,6 @@ const SYS_MSGRCV_NOCANCEL = 419
 
 ```
 searchKey: syscall.SYS_SEM_WAIT_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20206,7 +18627,6 @@ const SYS_SEM_WAIT_NOCANCEL = 420
 
 ```
 searchKey: syscall.SYS_AIO_SUSPEND_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20217,7 +18637,6 @@ const SYS_AIO_SUSPEND_NOCANCEL = 421
 
 ```
 searchKey: syscall.SYS___SIGWAIT_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20228,7 +18647,6 @@ const SYS___SIGWAIT_NOCANCEL = 422
 
 ```
 searchKey: syscall.SYS___SEMWAIT_SIGNAL_NOCANCEL
-tags: [exported]
 ```
 
 ```Go
@@ -20239,7 +18657,6 @@ const SYS___SEMWAIT_SIGNAL_NOCANCEL = 423
 
 ```
 searchKey: syscall.SYS___MAC_MOUNT
-tags: [exported]
 ```
 
 ```Go
@@ -20250,7 +18667,6 @@ const SYS___MAC_MOUNT = 424
 
 ```
 searchKey: syscall.SYS___MAC_GET_MOUNT
-tags: [exported]
 ```
 
 ```Go
@@ -20261,7 +18677,6 @@ const SYS___MAC_GET_MOUNT = 425
 
 ```
 searchKey: syscall.SYS___MAC_GETFSSTAT
-tags: [exported]
 ```
 
 ```Go
@@ -20272,7 +18687,6 @@ const SYS___MAC_GETFSSTAT = 426
 
 ```
 searchKey: syscall.SYS_FSGETPATH
-tags: [exported]
 ```
 
 ```Go
@@ -20283,7 +18697,6 @@ const SYS_FSGETPATH = 427
 
 ```
 searchKey: syscall.SYS_AUDIT_SESSION_SELF
-tags: [exported]
 ```
 
 ```Go
@@ -20294,7 +18707,6 @@ const SYS_AUDIT_SESSION_SELF = 428
 
 ```
 searchKey: syscall.SYS_AUDIT_SESSION_JOIN
-tags: [exported]
 ```
 
 ```Go
@@ -20305,7 +18717,6 @@ const SYS_AUDIT_SESSION_JOIN = 429
 
 ```
 searchKey: syscall.SYS_FILEPORT_MAKEPORT
-tags: [exported]
 ```
 
 ```Go
@@ -20316,7 +18727,6 @@ const SYS_FILEPORT_MAKEPORT = 430
 
 ```
 searchKey: syscall.SYS_FILEPORT_MAKEFD
-tags: [exported]
 ```
 
 ```Go
@@ -20327,7 +18737,6 @@ const SYS_FILEPORT_MAKEFD = 431
 
 ```
 searchKey: syscall.SYS_AUDIT_SESSION_PORT
-tags: [exported]
 ```
 
 ```Go
@@ -20338,7 +18747,6 @@ const SYS_AUDIT_SESSION_PORT = 432
 
 ```
 searchKey: syscall.SYS_PID_SUSPEND
-tags: [exported]
 ```
 
 ```Go
@@ -20349,7 +18757,6 @@ const SYS_PID_SUSPEND = 433
 
 ```
 searchKey: syscall.SYS_PID_RESUME
-tags: [exported]
 ```
 
 ```Go
@@ -20360,7 +18767,6 @@ const SYS_PID_RESUME = 434
 
 ```
 searchKey: syscall.SYS_PID_HIBERNATE
-tags: [exported]
 ```
 
 ```Go
@@ -20371,7 +18777,6 @@ const SYS_PID_HIBERNATE = 435
 
 ```
 searchKey: syscall.SYS_PID_SHUTDOWN_SOCKETS
-tags: [exported]
 ```
 
 ```Go
@@ -20382,7 +18787,6 @@ const SYS_PID_SHUTDOWN_SOCKETS = 436
 
 ```
 searchKey: syscall.SYS_SHARED_REGION_MAP_AND_SLIDE_NP
-tags: [exported]
 ```
 
 ```Go
@@ -20393,7 +18797,6 @@ const SYS_SHARED_REGION_MAP_AND_SLIDE_NP = 438
 
 ```
 searchKey: syscall.SYS_MAXSYSCALL
-tags: [exported]
 ```
 
 ```Go
@@ -20404,6 +18807,7 @@ const SYS_MAXSYSCALL = 439
 
 ```
 searchKey: syscall.sizeofPtr
+tags: [private]
 ```
 
 ```Go
@@ -20414,6 +18818,7 @@ const sizeofPtr = 0x8
 
 ```
 searchKey: syscall.sizeofShort
+tags: [private]
 ```
 
 ```Go
@@ -20424,6 +18829,7 @@ const sizeofShort = 0x2
 
 ```
 searchKey: syscall.sizeofInt
+tags: [private]
 ```
 
 ```Go
@@ -20434,6 +18840,7 @@ const sizeofInt = 0x4
 
 ```
 searchKey: syscall.sizeofLong
+tags: [private]
 ```
 
 ```Go
@@ -20444,6 +18851,7 @@ const sizeofLong = 0x8
 
 ```
 searchKey: syscall.sizeofLongLong
+tags: [private]
 ```
 
 ```Go
@@ -20454,6 +18862,7 @@ const sizeofLongLong = 0x8
 
 ```
 searchKey: syscall.pathMax
+tags: [private]
 ```
 
 ```Go
@@ -20464,7 +18873,6 @@ const pathMax = 0x400
 
 ```
 searchKey: syscall.SizeofSockaddrInet4
-tags: [exported]
 ```
 
 ```Go
@@ -20475,7 +18883,6 @@ const SizeofSockaddrInet4 = 0x10
 
 ```
 searchKey: syscall.SizeofSockaddrInet6
-tags: [exported]
 ```
 
 ```Go
@@ -20486,7 +18893,6 @@ const SizeofSockaddrInet6 = 0x1c
 
 ```
 searchKey: syscall.SizeofSockaddrAny
-tags: [exported]
 ```
 
 ```Go
@@ -20497,7 +18903,6 @@ const SizeofSockaddrAny = 0x6c
 
 ```
 searchKey: syscall.SizeofSockaddrUnix
-tags: [exported]
 ```
 
 ```Go
@@ -20508,7 +18913,6 @@ const SizeofSockaddrUnix = 0x6a
 
 ```
 searchKey: syscall.SizeofSockaddrDatalink
-tags: [exported]
 ```
 
 ```Go
@@ -20519,7 +18923,6 @@ const SizeofSockaddrDatalink = 0x14
 
 ```
 searchKey: syscall.SizeofLinger
-tags: [exported]
 ```
 
 ```Go
@@ -20530,7 +18933,6 @@ const SizeofLinger = 0x8
 
 ```
 searchKey: syscall.SizeofIPMreq
-tags: [exported]
 ```
 
 ```Go
@@ -20541,7 +18943,6 @@ const SizeofIPMreq = 0x8
 
 ```
 searchKey: syscall.SizeofIPv6Mreq
-tags: [exported]
 ```
 
 ```Go
@@ -20552,7 +18953,6 @@ const SizeofIPv6Mreq = 0x14
 
 ```
 searchKey: syscall.SizeofMsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -20563,7 +18963,6 @@ const SizeofMsghdr = 0x30
 
 ```
 searchKey: syscall.SizeofCmsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -20574,7 +18973,6 @@ const SizeofCmsghdr = 0xc
 
 ```
 searchKey: syscall.SizeofInet4Pktinfo
-tags: [exported]
 ```
 
 ```Go
@@ -20585,7 +18983,6 @@ const SizeofInet4Pktinfo = 0xc
 
 ```
 searchKey: syscall.SizeofInet6Pktinfo
-tags: [exported]
 ```
 
 ```Go
@@ -20596,7 +18993,6 @@ const SizeofInet6Pktinfo = 0x14
 
 ```
 searchKey: syscall.SizeofIPv6MTUInfo
-tags: [exported]
 ```
 
 ```Go
@@ -20607,7 +19003,6 @@ const SizeofIPv6MTUInfo = 0x20
 
 ```
 searchKey: syscall.SizeofICMPv6Filter
-tags: [exported]
 ```
 
 ```Go
@@ -20618,7 +19013,6 @@ const SizeofICMPv6Filter = 0x20
 
 ```
 searchKey: syscall.PTRACE_TRACEME
-tags: [exported]
 ```
 
 ```Go
@@ -20629,7 +19023,6 @@ const PTRACE_TRACEME = 0x0
 
 ```
 searchKey: syscall.PTRACE_CONT
-tags: [exported]
 ```
 
 ```Go
@@ -20640,7 +19033,6 @@ const PTRACE_CONT = 0x7
 
 ```
 searchKey: syscall.PTRACE_KILL
-tags: [exported]
 ```
 
 ```Go
@@ -20651,7 +19043,6 @@ const PTRACE_KILL = 0x8
 
 ```
 searchKey: syscall.SizeofIfMsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -20662,7 +19053,6 @@ const SizeofIfMsghdr = 0x70
 
 ```
 searchKey: syscall.SizeofIfData
-tags: [exported]
 ```
 
 ```Go
@@ -20673,7 +19063,6 @@ const SizeofIfData = 0x60
 
 ```
 searchKey: syscall.SizeofIfaMsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -20684,7 +19073,6 @@ const SizeofIfaMsghdr = 0x14
 
 ```
 searchKey: syscall.SizeofIfmaMsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -20695,7 +19083,6 @@ const SizeofIfmaMsghdr = 0x10
 
 ```
 searchKey: syscall.SizeofIfmaMsghdr2
-tags: [exported]
 ```
 
 ```Go
@@ -20706,7 +19093,6 @@ const SizeofIfmaMsghdr2 = 0x14
 
 ```
 searchKey: syscall.SizeofRtMsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -20717,7 +19103,6 @@ const SizeofRtMsghdr = 0x5c
 
 ```
 searchKey: syscall.SizeofRtMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -20728,7 +19113,6 @@ const SizeofRtMetrics = 0x38
 
 ```
 searchKey: syscall.SizeofBpfVersion
-tags: [exported]
 ```
 
 ```Go
@@ -20739,7 +19123,6 @@ const SizeofBpfVersion = 0x4
 
 ```
 searchKey: syscall.SizeofBpfStat
-tags: [exported]
 ```
 
 ```Go
@@ -20750,7 +19133,6 @@ const SizeofBpfStat = 0x8
 
 ```
 searchKey: syscall.SizeofBpfProgram
-tags: [exported]
 ```
 
 ```Go
@@ -20761,7 +19143,6 @@ const SizeofBpfProgram = 0x10
 
 ```
 searchKey: syscall.SizeofBpfInsn
-tags: [exported]
 ```
 
 ```Go
@@ -20772,7 +19153,6 @@ const SizeofBpfInsn = 0x8
 
 ```
 searchKey: syscall.SizeofBpfHdr
-tags: [exported]
 ```
 
 ```Go
@@ -20783,6 +19163,7 @@ const SizeofBpfHdr = 0x14
 
 ```
 searchKey: syscall._AT_FDCWD
+tags: [private]
 ```
 
 ```Go
@@ -20792,13 +19173,14 @@ const _AT_FDCWD = -0x2
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="envOnce" href="#envOnce">var envOnce</a>
 
 ```
 searchKey: syscall.envOnce
+tags: [private]
 ```
 
 ```Go
@@ -20811,6 +19193,7 @@ envOnce guards initialization by copyenv, which populates env.
 
 ```
 searchKey: syscall.envLock
+tags: [private]
 ```
 
 ```Go
@@ -20823,6 +19206,7 @@ envLock guards env and envs.
 
 ```
 searchKey: syscall.env
+tags: [private]
 ```
 
 ```Go
@@ -20835,6 +19219,7 @@ env maps from an environment variable to its first occurrence in envs.
 
 ```
 searchKey: syscall.envs
+tags: [private]
 ```
 
 ```Go
@@ -20847,7 +19232,6 @@ envs is provided by the runtime. elements are expected to be of the form "key=va
 
 ```
 searchKey: syscall.ForkLock
-tags: [exported]
 ```
 
 ```Go
@@ -20858,6 +19242,7 @@ var ForkLock sync.RWMutex
 
 ```
 searchKey: syscall.zeroProcAttr
+tags: [private]
 ```
 
 ```Go
@@ -20868,6 +19253,7 @@ var zeroProcAttr ProcAttr
 
 ```
 searchKey: syscall.zeroSysProcAttr
+tags: [private]
 ```
 
 ```Go
@@ -20878,6 +19264,7 @@ var zeroSysProcAttr SysProcAttr
 
 ```
 searchKey: syscall.execveLibc
+tags: [private]
 ```
 
 ```Go
@@ -20890,6 +19277,7 @@ execveLibc is non-nil on OS using libc syscall, set to execve in exec_libc.go; t
 
 ```
 searchKey: syscall.execveDarwin
+tags: [private]
 ```
 
 ```Go
@@ -20900,6 +19288,7 @@ var execveDarwin func(path *byte, argv **byte, envp **byte) error
 
 ```
 searchKey: syscall.execveOpenBSD
+tags: [private]
 ```
 
 ```Go
@@ -20910,6 +19299,7 @@ var execveOpenBSD func(path *byte, argv **byte, envp **byte) error
 
 ```
 searchKey: syscall.freebsdConfArch
+tags: [private]
 ```
 
 ```Go
@@ -20921,6 +19311,7 @@ var freebsdConfArch string // "machine $arch" line in kern.conftxt on freebsd
 
 ```
 searchKey: syscall.minRoutingSockaddrLen
+tags: [private]
 ```
 
 ```Go
@@ -20931,6 +19322,7 @@ var minRoutingSockaddrLen = rsaAlignOf(0)
 
 ```
 searchKey: syscall._zero
+tags: [private]
 ```
 
 ```Go
@@ -20943,6 +19335,7 @@ Single-word zero for use when we need a valid pointer to 0 bytes. See mksyscall.
 
 ```
 searchKey: syscall.mapper
+tags: [private]
 ```
 
 ```Go
@@ -20957,7 +19350,6 @@ var mapper = &mmapper{
 
 ```
 searchKey: syscall.Stdin
-tags: [exported]
 ```
 
 ```Go
@@ -20968,7 +19360,6 @@ var Stdin = 0
 
 ```
 searchKey: syscall.Stdout
-tags: [exported]
 ```
 
 ```Go
@@ -20979,7 +19370,6 @@ var Stdout = 1
 
 ```
 searchKey: syscall.Stderr
-tags: [exported]
 ```
 
 ```Go
@@ -20990,6 +19380,7 @@ var Stderr = 2
 
 ```
 searchKey: syscall.errEAGAIN
+tags: [private]
 ```
 
 ```Go
@@ -21002,6 +19393,7 @@ Do the interface allocations only once for common Errno values.
 
 ```
 searchKey: syscall.errEINVAL
+tags: [private]
 ```
 
 ```Go
@@ -21014,6 +19406,7 @@ Do the interface allocations only once for common Errno values.
 
 ```
 searchKey: syscall.errENOENT
+tags: [private]
 ```
 
 ```Go
@@ -21026,7 +19419,6 @@ Do the interface allocations only once for common Errno values.
 
 ```
 searchKey: syscall.SocketDisableIPv6
-tags: [exported]
 ```
 
 ```Go
@@ -21039,6 +19431,7 @@ For testing: clients can set this flag to force creation of IPv6 sockets to retu
 
 ```
 searchKey: syscall.ioSync
+tags: [private]
 ```
 
 ```Go
@@ -21049,6 +19442,7 @@ var ioSync int64
 
 ```
 searchKey: syscall.errors
+tags: [private]
 ```
 
 ```Go
@@ -21061,6 +19455,7 @@ Error table
 
 ```
 searchKey: syscall.signals
+tags: [private]
 ```
 
 ```Go
@@ -21072,13 +19467,14 @@ Signal table
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="ivalue" href="#ivalue">type ivalue struct</a>
 
 ```
 searchKey: syscall.ivalue
+tags: [private]
 ```
 
 ```Go
@@ -21092,7 +19488,6 @@ type ivalue struct {
 
 ```
 searchKey: syscall.SysProcAttr
-tags: [exported]
 ```
 
 ```Go
@@ -21125,7 +19520,6 @@ type SysProcAttr struct {
 
 ```
 searchKey: syscall.Credential
-tags: [exported]
 ```
 
 ```Go
@@ -21143,7 +19537,6 @@ Credential holds user and group identities to be assumed by a child process star
 
 ```
 searchKey: syscall.ProcAttr
-tags: [exported]
 ```
 
 ```Go
@@ -21161,7 +19554,6 @@ ProcAttr holds attributes that will be applied to a new process started by Start
 
 ```
 searchKey: syscall.RawConn
-tags: [exported]
 ```
 
 ```Go
@@ -21193,7 +19585,6 @@ A RawConn is a raw network connection.
 
 ```
 searchKey: syscall.Conn
-tags: [exported]
 ```
 
 ```Go
@@ -21209,7 +19600,6 @@ Conn is implemented by some types in the net and os packages to provide access t
 
 ```
 searchKey: syscall.RoutingMessage
-tags: [exported]
 ```
 
 ```Go
@@ -21226,6 +19616,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.anyMessage
+tags: [private]
 ```
 
 ```Go
@@ -21240,6 +19631,7 @@ type anyMessage struct {
 
 ```
 searchKey: syscall.anyMessage.toRoutingMessage
+tags: [private]
 ```
 
 ```Go
@@ -21250,7 +19642,6 @@ func (any *anyMessage) toRoutingMessage(b []byte) RoutingMessage
 
 ```
 searchKey: syscall.RouteMessage
-tags: [exported]
 ```
 
 ```Go
@@ -21268,6 +19659,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.RouteMessage.sockaddr
+tags: [private]
 ```
 
 ```Go
@@ -21278,7 +19670,6 @@ func (m *RouteMessage) sockaddr() ([]Sockaddr, error)
 
 ```
 searchKey: syscall.InterfaceMessage
-tags: [exported]
 ```
 
 ```Go
@@ -21296,6 +19687,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.InterfaceMessage.sockaddr
+tags: [private]
 ```
 
 ```Go
@@ -21306,7 +19698,6 @@ func (m *InterfaceMessage) sockaddr() ([]Sockaddr, error)
 
 ```
 searchKey: syscall.InterfaceAddrMessage
-tags: [exported]
 ```
 
 ```Go
@@ -21324,6 +19715,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.InterfaceAddrMessage.sockaddr
+tags: [private]
 ```
 
 ```Go
@@ -21334,7 +19726,6 @@ func (m *InterfaceAddrMessage) sockaddr() ([]Sockaddr, error)
 
 ```
 searchKey: syscall.InterfaceMulticastAddrMessage
-tags: [exported]
 ```
 
 ```Go
@@ -21352,6 +19743,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.InterfaceMulticastAddrMessage.sockaddr
+tags: [private]
 ```
 
 ```Go
@@ -21362,7 +19754,6 @@ func (m *InterfaceMulticastAddrMessage) sockaddr() ([]Sockaddr, error)
 
 ```
 searchKey: syscall.SocketControlMessage
-tags: [exported]
 ```
 
 ```Go
@@ -21378,7 +19769,6 @@ SocketControlMessage represents a socket control message.
 
 ```
 searchKey: syscall.WaitStatus
-tags: [exported]
 ```
 
 ```Go
@@ -21389,7 +19779,6 @@ type WaitStatus uint32
 
 ```
 searchKey: syscall.WaitStatus.Exited
-tags: [exported]
 ```
 
 ```Go
@@ -21400,7 +19789,6 @@ func (w WaitStatus) Exited() bool
 
 ```
 searchKey: syscall.WaitStatus.ExitStatus
-tags: [exported]
 ```
 
 ```Go
@@ -21411,7 +19799,6 @@ func (w WaitStatus) ExitStatus() int
 
 ```
 searchKey: syscall.WaitStatus.Signaled
-tags: [exported]
 ```
 
 ```Go
@@ -21422,7 +19809,6 @@ func (w WaitStatus) Signaled() bool
 
 ```
 searchKey: syscall.WaitStatus.Signal
-tags: [exported]
 ```
 
 ```Go
@@ -21433,7 +19819,6 @@ func (w WaitStatus) Signal() Signal
 
 ```
 searchKey: syscall.WaitStatus.CoreDump
-tags: [exported]
 ```
 
 ```Go
@@ -21444,7 +19829,6 @@ func (w WaitStatus) CoreDump() bool
 
 ```
 searchKey: syscall.WaitStatus.Stopped
-tags: [exported]
 ```
 
 ```Go
@@ -21455,7 +19839,6 @@ func (w WaitStatus) Stopped() bool
 
 ```
 searchKey: syscall.WaitStatus.Continued
-tags: [exported]
 ```
 
 ```Go
@@ -21466,7 +19849,6 @@ func (w WaitStatus) Continued() bool
 
 ```
 searchKey: syscall.WaitStatus.StopSignal
-tags: [exported]
 ```
 
 ```Go
@@ -21477,7 +19859,6 @@ func (w WaitStatus) StopSignal() Signal
 
 ```
 searchKey: syscall.WaitStatus.TrapCause
-tags: [exported]
 ```
 
 ```Go
@@ -21488,7 +19869,6 @@ func (w WaitStatus) TrapCause() int
 
 ```
 searchKey: syscall.SockaddrDatalink
-tags: [exported]
 ```
 
 ```Go
@@ -21509,6 +19889,7 @@ type SockaddrDatalink struct {
 
 ```
 searchKey: syscall.parseSockaddrLink
+tags: [private]
 ```
 
 ```Go
@@ -21521,6 +19902,7 @@ parseSockaddrLink parses b as a datalink socket address.
 
 ```
 searchKey: syscall.parseLinkLayerAddr
+tags: [private]
 ```
 
 ```Go
@@ -21533,6 +19915,7 @@ parseLinkLayerAddr parses b as a datalink socket address in conventional BSD ker
 
 ```
 searchKey: syscall.SockaddrDatalink.sockaddr
+tags: [private]
 ```
 
 ```Go
@@ -21543,6 +19926,7 @@ func (sa *SockaddrDatalink) sockaddr() (unsafe.Pointer, _Socklen, error)
 
 ```
 searchKey: syscall.attrList
+tags: [private]
 ```
 
 ```Go
@@ -21561,6 +19945,7 @@ type attrList struct {
 
 ```
 searchKey: syscall.mmapper
+tags: [private]
 ```
 
 ```Go
@@ -21576,6 +19961,7 @@ type mmapper struct {
 
 ```
 searchKey: syscall.mmapper.Mmap
+tags: [private]
 ```
 
 ```Go
@@ -21586,6 +19972,7 @@ func (m *mmapper) Mmap(fd int, offset int64, length int, prot int, flags int) (d
 
 ```
 searchKey: syscall.mmapper.Munmap
+tags: [private]
 ```
 
 ```Go
@@ -21596,7 +19983,6 @@ func (m *mmapper) Munmap(data []byte) (err error)
 
 ```
 searchKey: syscall.Errno
-tags: [exported]
 ```
 
 ```Go
@@ -21623,6 +20009,7 @@ if errors.Is(err, fs.ErrNotExist) ...
 
 ```
 searchKey: syscall.forkAndExecInChild
+tags: [private]
 ```
 
 ```Go
@@ -21635,6 +20022,7 @@ Fork, dup fd onto 0..len(fd), and exec(argv0, argvv, envv) in child. If a dup or
 
 ```
 searchKey: syscall.syscall
+tags: [private]
 ```
 
 ```Go
@@ -21647,6 +20035,7 @@ Implemented in the runtime package (runtime/sys_darwin.go)
 
 ```
 searchKey: syscall.syscall6
+tags: [private]
 ```
 
 ```Go
@@ -21657,6 +20046,7 @@ func syscall6(fn, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.syscall6X
+tags: [private]
 ```
 
 ```Go
@@ -21667,6 +20057,7 @@ func syscall6X(fn, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.rawSyscall
+tags: [private]
 ```
 
 ```Go
@@ -21677,6 +20068,7 @@ func rawSyscall(fn, a1, a2, a3 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.rawSyscall6
+tags: [private]
 ```
 
 ```Go
@@ -21687,6 +20079,7 @@ func rawSyscall6(fn, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.syscallPtr
+tags: [private]
 ```
 
 ```Go
@@ -21697,6 +20090,7 @@ func syscallPtr(fn, a1, a2, a3 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.syscallX
+tags: [private]
 ```
 
 ```Go
@@ -21709,7 +20103,6 @@ Implemented in the runtime package (runtime/sys_darwin_64.go)
 
 ```
 searchKey: syscall.Syscall9
-tags: [exported]
 ```
 
 ```Go
@@ -21720,7 +20113,6 @@ func Syscall9(trap, a1, a2, a3, a4, a5, a6, a7, a8, a9 uintptr) (r1, r2 uintptr,
 
 ```
 searchKey: syscall.Syscall
-tags: [exported]
 ```
 
 ```Go
@@ -21731,7 +20123,6 @@ func Syscall(trap, a1, a2, a3 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.Syscall6
-tags: [exported]
 ```
 
 ```Go
@@ -21742,7 +20133,6 @@ func Syscall6(trap, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.RawSyscall
-tags: [exported]
 ```
 
 ```Go
@@ -21753,7 +20143,6 @@ func RawSyscall(trap, a1, a2, a3 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.RawSyscall6
-tags: [exported]
 ```
 
 ```Go
@@ -21764,6 +20153,7 @@ func RawSyscall6(trap, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err Errn
 
 ```
 searchKey: syscall.readdir_r
+tags: [private]
 ```
 
 ```Go
@@ -21774,6 +20164,7 @@ func readdir_r(dir uintptr, entry *Dirent, result **Dirent) (res Errno)
 
 ```
 searchKey: syscall.Ioctl
+tags: [private]
 ```
 
 ```Go
@@ -21784,7 +20175,6 @@ func Ioctl(fd, req, arg uintptr) Errno
 
 ```
 searchKey: syscall.Errno.Error
-tags: [exported]
 ```
 
 ```Go
@@ -21795,7 +20185,6 @@ func (e Errno) Error() string
 
 ```
 searchKey: syscall.Errno.Is
-tags: [exported]
 ```
 
 ```Go
@@ -21806,7 +20195,6 @@ func (e Errno) Is(target error) bool
 
 ```
 searchKey: syscall.Errno.Temporary
-tags: [exported]
 ```
 
 ```Go
@@ -21817,7 +20205,6 @@ func (e Errno) Temporary() bool
 
 ```
 searchKey: syscall.Errno.Timeout
-tags: [exported]
 ```
 
 ```Go
@@ -21828,7 +20215,6 @@ func (e Errno) Timeout() bool
 
 ```
 searchKey: syscall.Signal
-tags: [exported]
 ```
 
 ```Go
@@ -21841,7 +20227,6 @@ A Signal is a number describing a process signal. It implements the os.Signal in
 
 ```
 searchKey: syscall.Signal.Signal
-tags: [exported]
 ```
 
 ```Go
@@ -21852,7 +20237,6 @@ func (s Signal) Signal()
 
 ```
 searchKey: syscall.Signal.String
-tags: [exported]
 ```
 
 ```Go
@@ -21863,7 +20247,6 @@ func (s Signal) String() string
 
 ```
 searchKey: syscall.Sockaddr
-tags: [exported]
 ```
 
 ```Go
@@ -21876,6 +20259,7 @@ type Sockaddr interface {
 
 ```
 searchKey: syscall.parseSockaddrInet
+tags: [private]
 ```
 
 ```Go
@@ -21888,6 +20272,7 @@ parseSockaddrInet parses b as an internet socket address.
 
 ```
 searchKey: syscall.parseNetworkLayerAddr
+tags: [private]
 ```
 
 ```Go
@@ -21900,6 +20285,7 @@ parseNetworkLayerAddr parses b as an internet socket address in conventional BSD
 
 ```
 searchKey: syscall.anyToSockaddr
+tags: [private]
 ```
 
 ```Go
@@ -21910,7 +20296,6 @@ func anyToSockaddr(rsa *RawSockaddrAny) (Sockaddr, error)
 
 ```
 searchKey: syscall.Accept
-tags: [exported]
 ```
 
 ```Go
@@ -21921,7 +20306,6 @@ func Accept(fd int) (nfd int, sa Sockaddr, err error)
 
 ```
 searchKey: syscall.Getsockname
-tags: [exported]
 ```
 
 ```Go
@@ -21932,7 +20316,6 @@ func Getsockname(fd int) (sa Sockaddr, err error)
 
 ```
 searchKey: syscall.Recvmsg
-tags: [exported]
 ```
 
 ```Go
@@ -21943,7 +20326,6 @@ func Recvmsg(fd int, p, oob []byte, flags int) (n, oobn int, recvflags int, from
 
 ```
 searchKey: syscall.Getpeername
-tags: [exported]
 ```
 
 ```Go
@@ -21954,7 +20336,6 @@ func Getpeername(fd int) (sa Sockaddr, err error)
 
 ```
 searchKey: syscall.Recvfrom
-tags: [exported]
 ```
 
 ```Go
@@ -21965,7 +20346,6 @@ func Recvfrom(fd int, p []byte, flags int) (n int, from Sockaddr, err error)
 
 ```
 searchKey: syscall.SockaddrInet4
-tags: [exported]
 ```
 
 ```Go
@@ -21980,6 +20360,7 @@ type SockaddrInet4 struct {
 
 ```
 searchKey: syscall.SockaddrInet4.sockaddr
+tags: [private]
 ```
 
 ```Go
@@ -21990,7 +20371,6 @@ func (sa *SockaddrInet4) sockaddr() (unsafe.Pointer, _Socklen, error)
 
 ```
 searchKey: syscall.SockaddrInet6
-tags: [exported]
 ```
 
 ```Go
@@ -22006,6 +20386,7 @@ type SockaddrInet6 struct {
 
 ```
 searchKey: syscall.SockaddrInet6.sockaddr
+tags: [private]
 ```
 
 ```Go
@@ -22016,7 +20397,6 @@ func (sa *SockaddrInet6) sockaddr() (unsafe.Pointer, _Socklen, error)
 
 ```
 searchKey: syscall.SockaddrUnix
-tags: [exported]
 ```
 
 ```Go
@@ -22030,6 +20410,7 @@ type SockaddrUnix struct {
 
 ```
 searchKey: syscall.SockaddrUnix.sockaddr
+tags: [private]
 ```
 
 ```Go
@@ -22040,6 +20421,7 @@ func (sa *SockaddrUnix) sockaddr() (unsafe.Pointer, _Socklen, error)
 
 ```
 searchKey: syscall._C_short
+tags: [private]
 ```
 
 ```Go
@@ -22050,6 +20432,7 @@ type _C_short int16
 
 ```
 searchKey: syscall._C_int
+tags: [private]
 ```
 
 ```Go
@@ -22060,6 +20443,7 @@ type _C_int int32
 
 ```
 searchKey: syscall._C_long
+tags: [private]
 ```
 
 ```Go
@@ -22070,6 +20454,7 @@ type _C_long int64
 
 ```
 searchKey: syscall._C_long_long
+tags: [private]
 ```
 
 ```Go
@@ -22080,7 +20465,6 @@ type _C_long_long int64
 
 ```
 searchKey: syscall.Timespec
-tags: [exported]
 ```
 
 ```Go
@@ -22094,6 +20478,7 @@ type Timespec struct {
 
 ```
 searchKey: syscall.setTimespec
+tags: [private]
 ```
 
 ```Go
@@ -22104,7 +20489,6 @@ func setTimespec(sec, nsec int64) Timespec
 
 ```
 searchKey: syscall.NsecToTimespec
-tags: [exported]
 ```
 
 ```Go
@@ -22117,7 +20501,6 @@ NsecToTimespec converts a number of nanoseconds into a Timespec.
 
 ```
 searchKey: syscall.Timespec.Unix
-tags: [exported]
 ```
 
 ```Go
@@ -22130,7 +20513,6 @@ Unix returns the time stored in ts as seconds plus nanoseconds.
 
 ```
 searchKey: syscall.Timespec.Nano
-tags: [exported]
 ```
 
 ```Go
@@ -22143,7 +20525,6 @@ Nano returns the time stored in ts as nanoseconds.
 
 ```
 searchKey: syscall.Timeval
-tags: [exported]
 ```
 
 ```Go
@@ -22158,7 +20539,7 @@ type Timeval struct {
 
 ```
 searchKey: syscall.BpfTimeout
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -22171,6 +20552,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.setTimeval
+tags: [private]
 ```
 
 ```Go
@@ -22181,7 +20563,6 @@ func setTimeval(sec, usec int64) Timeval
 
 ```
 searchKey: syscall.NsecToTimeval
-tags: [exported]
 ```
 
 ```Go
@@ -22194,7 +20575,6 @@ NsecToTimeval converts a number of nanoseconds into a Timeval.
 
 ```
 searchKey: syscall.Timeval.Unix
-tags: [exported]
 ```
 
 ```Go
@@ -22207,7 +20587,6 @@ Unix returns the time stored in tv as seconds plus nanoseconds.
 
 ```
 searchKey: syscall.Timeval.Nano
-tags: [exported]
 ```
 
 ```Go
@@ -22220,7 +20599,6 @@ Nano returns the time stored in tv as nanoseconds.
 
 ```
 searchKey: syscall.Timeval32
-tags: [exported]
 ```
 
 ```Go
@@ -22234,7 +20612,6 @@ type Timeval32 struct {
 
 ```
 searchKey: syscall.Rusage
-tags: [exported]
 ```
 
 ```Go
@@ -22262,7 +20639,6 @@ type Rusage struct {
 
 ```
 searchKey: syscall.Rlimit
-tags: [exported]
 ```
 
 ```Go
@@ -22276,6 +20652,7 @@ type Rlimit struct {
 
 ```
 searchKey: syscall._Gid_t
+tags: [private]
 ```
 
 ```Go
@@ -22286,7 +20663,6 @@ type _Gid_t uint32
 
 ```
 searchKey: syscall.Stat_t
-tags: [exported]
 ```
 
 ```Go
@@ -22317,7 +20693,6 @@ type Stat_t struct {
 
 ```
 searchKey: syscall.Statfs_t
-tags: [exported]
 ```
 
 ```Go
@@ -22345,7 +20720,6 @@ type Statfs_t struct {
 
 ```
 searchKey: syscall.Flock_t
-tags: [exported]
 ```
 
 ```Go
@@ -22362,7 +20736,6 @@ type Flock_t struct {
 
 ```
 searchKey: syscall.Fstore_t
-tags: [exported]
 ```
 
 ```Go
@@ -22379,7 +20752,6 @@ type Fstore_t struct {
 
 ```
 searchKey: syscall.Radvisory_t
-tags: [exported]
 ```
 
 ```Go
@@ -22394,7 +20766,6 @@ type Radvisory_t struct {
 
 ```
 searchKey: syscall.Fbootstraptransfer_t
-tags: [exported]
 ```
 
 ```Go
@@ -22409,7 +20780,6 @@ type Fbootstraptransfer_t struct {
 
 ```
 searchKey: syscall.Log2phys_t
-tags: [exported]
 ```
 
 ```Go
@@ -22424,7 +20794,6 @@ type Log2phys_t struct {
 
 ```
 searchKey: syscall.Fsid
-tags: [exported]
 ```
 
 ```Go
@@ -22437,7 +20806,6 @@ type Fsid struct {
 
 ```
 searchKey: syscall.Dirent
-tags: [exported]
 ```
 
 ```Go
@@ -22456,7 +20824,6 @@ type Dirent struct {
 
 ```
 searchKey: syscall.RawSockaddrInet4
-tags: [exported]
 ```
 
 ```Go
@@ -22473,7 +20840,6 @@ type RawSockaddrInet4 struct {
 
 ```
 searchKey: syscall.RawSockaddrInet6
-tags: [exported]
 ```
 
 ```Go
@@ -22491,7 +20857,6 @@ type RawSockaddrInet6 struct {
 
 ```
 searchKey: syscall.RawSockaddrUnix
-tags: [exported]
 ```
 
 ```Go
@@ -22506,7 +20871,6 @@ type RawSockaddrUnix struct {
 
 ```
 searchKey: syscall.RawSockaddrDatalink
-tags: [exported]
 ```
 
 ```Go
@@ -22526,7 +20890,6 @@ type RawSockaddrDatalink struct {
 
 ```
 searchKey: syscall.RawSockaddr
-tags: [exported]
 ```
 
 ```Go
@@ -22541,7 +20904,6 @@ type RawSockaddr struct {
 
 ```
 searchKey: syscall.RawSockaddrAny
-tags: [exported]
 ```
 
 ```Go
@@ -22555,6 +20917,7 @@ type RawSockaddrAny struct {
 
 ```
 searchKey: syscall._Socklen
+tags: [private]
 ```
 
 ```Go
@@ -22565,7 +20928,6 @@ type _Socklen uint32
 
 ```
 searchKey: syscall.Linger
-tags: [exported]
 ```
 
 ```Go
@@ -22579,7 +20941,6 @@ type Linger struct {
 
 ```
 searchKey: syscall.Iovec
-tags: [exported]
 ```
 
 ```Go
@@ -22593,7 +20954,6 @@ type Iovec struct {
 
 ```
 searchKey: syscall.Iovec.SetLen
-tags: [exported]
 ```
 
 ```Go
@@ -22604,7 +20964,6 @@ func (iov *Iovec) SetLen(length int)
 
 ```
 searchKey: syscall.IPMreq
-tags: [exported]
 ```
 
 ```Go
@@ -22618,7 +20977,6 @@ type IPMreq struct {
 
 ```
 searchKey: syscall.GetsockoptIPMreq
-tags: [exported]
 ```
 
 ```Go
@@ -22629,7 +20987,6 @@ func GetsockoptIPMreq(fd, level, opt int) (*IPMreq, error)
 
 ```
 searchKey: syscall.IPv6Mreq
-tags: [exported]
 ```
 
 ```Go
@@ -22643,7 +21000,6 @@ type IPv6Mreq struct {
 
 ```
 searchKey: syscall.GetsockoptIPv6Mreq
-tags: [exported]
 ```
 
 ```Go
@@ -22654,7 +21010,6 @@ func GetsockoptIPv6Mreq(fd, level, opt int) (*IPv6Mreq, error)
 
 ```
 searchKey: syscall.Msghdr
-tags: [exported]
 ```
 
 ```Go
@@ -22675,7 +21030,6 @@ type Msghdr struct {
 
 ```
 searchKey: syscall.Msghdr.SetControllen
-tags: [exported]
 ```
 
 ```Go
@@ -22686,7 +21040,6 @@ func (msghdr *Msghdr) SetControllen(length int)
 
 ```
 searchKey: syscall.Cmsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -22701,6 +21054,7 @@ type Cmsghdr struct {
 
 ```
 searchKey: syscall.socketControlMessageHeaderAndData
+tags: [private]
 ```
 
 ```Go
@@ -22711,6 +21065,7 @@ func socketControlMessageHeaderAndData(b []byte) (*Cmsghdr, []byte, error)
 
 ```
 searchKey: syscall.Cmsghdr.data
+tags: [private]
 ```
 
 ```Go
@@ -22721,7 +21076,6 @@ func (h *Cmsghdr) data(offset uintptr) unsafe.Pointer
 
 ```
 searchKey: syscall.Cmsghdr.SetLen
-tags: [exported]
 ```
 
 ```Go
@@ -22732,7 +21086,6 @@ func (cmsg *Cmsghdr) SetLen(length int)
 
 ```
 searchKey: syscall.Inet4Pktinfo
-tags: [exported]
 ```
 
 ```Go
@@ -22747,7 +21100,6 @@ type Inet4Pktinfo struct {
 
 ```
 searchKey: syscall.Inet6Pktinfo
-tags: [exported]
 ```
 
 ```Go
@@ -22761,7 +21113,6 @@ type Inet6Pktinfo struct {
 
 ```
 searchKey: syscall.IPv6MTUInfo
-tags: [exported]
 ```
 
 ```Go
@@ -22775,7 +21126,6 @@ type IPv6MTUInfo struct {
 
 ```
 searchKey: syscall.GetsockoptIPv6MTUInfo
-tags: [exported]
 ```
 
 ```Go
@@ -22786,7 +21136,6 @@ func GetsockoptIPv6MTUInfo(fd, level, opt int) (*IPv6MTUInfo, error)
 
 ```
 searchKey: syscall.ICMPv6Filter
-tags: [exported]
 ```
 
 ```Go
@@ -22799,7 +21148,6 @@ type ICMPv6Filter struct {
 
 ```
 searchKey: syscall.GetsockoptICMPv6Filter
-tags: [exported]
 ```
 
 ```Go
@@ -22810,7 +21158,6 @@ func GetsockoptICMPv6Filter(fd, level, opt int) (*ICMPv6Filter, error)
 
 ```
 searchKey: syscall.Kevent_t
-tags: [exported]
 ```
 
 ```Go
@@ -22828,7 +21175,6 @@ type Kevent_t struct {
 
 ```
 searchKey: syscall.FdSet
-tags: [exported]
 ```
 
 ```Go
@@ -22841,7 +21187,6 @@ type FdSet struct {
 
 ```
 searchKey: syscall.IfMsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -22861,7 +21206,6 @@ type IfMsghdr struct {
 
 ```
 searchKey: syscall.IfData
-tags: [exported]
 ```
 
 ```Go
@@ -22902,7 +21246,6 @@ type IfData struct {
 
 ```
 searchKey: syscall.IfaMsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -22922,7 +21265,6 @@ type IfaMsghdr struct {
 
 ```
 searchKey: syscall.IfmaMsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -22941,7 +21283,6 @@ type IfmaMsghdr struct {
 
 ```
 searchKey: syscall.IfmaMsghdr2
-tags: [exported]
 ```
 
 ```Go
@@ -22961,7 +21302,6 @@ type IfmaMsghdr2 struct {
 
 ```
 searchKey: syscall.RtMsghdr
-tags: [exported]
 ```
 
 ```Go
@@ -22986,7 +21326,6 @@ type RtMsghdr struct {
 
 ```
 searchKey: syscall.RtMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -23009,7 +21348,6 @@ type RtMetrics struct {
 
 ```
 searchKey: syscall.BpfVersion
-tags: [exported]
 ```
 
 ```Go
@@ -23023,7 +21361,6 @@ type BpfVersion struct {
 
 ```
 searchKey: syscall.BpfStat
-tags: [exported]
 ```
 
 ```Go
@@ -23037,7 +21374,7 @@ type BpfStat struct {
 
 ```
 searchKey: syscall.BpfStats
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23050,7 +21387,6 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BpfProgram
-tags: [exported]
 ```
 
 ```Go
@@ -23065,7 +21401,6 @@ type BpfProgram struct {
 
 ```
 searchKey: syscall.BpfInsn
-tags: [exported]
 ```
 
 ```Go
@@ -23081,7 +21416,7 @@ type BpfInsn struct {
 
 ```
 searchKey: syscall.BpfStmt
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23094,7 +21429,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BpfJump
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23107,7 +21442,6 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BpfHdr
-tags: [exported]
 ```
 
 ```Go
@@ -23124,7 +21458,6 @@ type BpfHdr struct {
 
 ```
 searchKey: syscall.Termios
-tags: [exported]
 ```
 
 ```Go
@@ -23143,14 +21476,14 @@ type Termios struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="BpfBuflen" href="#BpfBuflen">func BpfBuflen(fd int) (int, error)</a>
 
 ```
 searchKey: syscall.BpfBuflen
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23163,7 +21496,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfBuflen
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23176,7 +21509,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BpfDatalink
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23189,7 +21522,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfDatalink
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23202,7 +21535,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfPromisc
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23215,7 +21548,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.FlushBpf
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23228,7 +21561,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BpfInterface
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23241,7 +21574,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfInterface
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23254,7 +21587,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfTimeout
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23267,7 +21600,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfImmediate
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23280,7 +21613,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpf
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23293,7 +21626,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.CheckBpfVersion
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23306,7 +21639,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BpfHeadercmpl
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23319,7 +21652,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfHeadercmpl
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23332,6 +21665,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.readInt
+tags: [private]
 ```
 
 ```Go
@@ -23344,6 +21678,7 @@ readInt returns the size-bytes unsigned integer in native byte order at offset o
 
 ```
 searchKey: syscall.readIntBE
+tags: [private]
 ```
 
 ```Go
@@ -23354,6 +21689,7 @@ func readIntBE(b []byte, size uintptr) uint64
 
 ```
 searchKey: syscall.readIntLE
+tags: [private]
 ```
 
 ```Go
@@ -23364,7 +21700,6 @@ func readIntLE(b []byte, size uintptr) uint64
 
 ```
 searchKey: syscall.ParseDirent
-tags: [exported]
 ```
 
 ```Go
@@ -23377,6 +21712,7 @@ ParseDirent parses up to max directory entries in buf, appending the names to na
 
 ```
 searchKey: syscall.runtime_envs
+tags: [private]
 ```
 
 ```Go
@@ -23387,6 +21723,7 @@ func runtime_envs() []string
 
 ```
 searchKey: syscall.setenv_c
+tags: [private]
 ```
 
 ```Go
@@ -23399,6 +21736,7 @@ setenv_c and unsetenv_c are provided by the runtime but are no-ops if cgo isn't 
 
 ```
 searchKey: syscall.unsetenv_c
+tags: [private]
 ```
 
 ```Go
@@ -23409,6 +21747,7 @@ func unsetenv_c(k string)
 
 ```
 searchKey: syscall.copyenv
+tags: [private]
 ```
 
 ```Go
@@ -23419,7 +21758,6 @@ func copyenv()
 
 ```
 searchKey: syscall.Unsetenv
-tags: [exported]
 ```
 
 ```Go
@@ -23430,7 +21768,6 @@ func Unsetenv(key string) error
 
 ```
 searchKey: syscall.Getenv
-tags: [exported]
 ```
 
 ```Go
@@ -23441,7 +21778,6 @@ func Getenv(key string) (value string, found bool)
 
 ```
 searchKey: syscall.Setenv
-tags: [exported]
 ```
 
 ```Go
@@ -23452,7 +21788,6 @@ func Setenv(key, value string) error
 
 ```
 searchKey: syscall.Clearenv
-tags: [exported]
 ```
 
 ```Go
@@ -23463,7 +21798,6 @@ func Clearenv()
 
 ```
 searchKey: syscall.Environ
-tags: [exported]
 ```
 
 ```Go
@@ -23474,6 +21808,7 @@ func Environ() []string
 
 ```
 searchKey: syscall.runtime_BeforeFork
+tags: [private]
 ```
 
 ```Go
@@ -23486,6 +21821,7 @@ Implemented in runtime package.
 
 ```
 searchKey: syscall.runtime_AfterFork
+tags: [private]
 ```
 
 ```Go
@@ -23496,6 +21832,7 @@ func runtime_AfterFork()
 
 ```
 searchKey: syscall.runtime_AfterForkInChild
+tags: [private]
 ```
 
 ```Go
@@ -23506,7 +21843,7 @@ func runtime_AfterForkInChild()
 
 ```
 searchKey: syscall.StringSlicePtr
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23521,7 +21858,6 @@ Deprecated: Use SlicePtrFromStrings instead.
 
 ```
 searchKey: syscall.SlicePtrFromStrings
-tags: [exported]
 ```
 
 ```Go
@@ -23534,7 +21870,6 @@ SlicePtrFromStrings converts a slice of strings to a slice of pointers to NUL-te
 
 ```
 searchKey: syscall.CloseOnExec
-tags: [exported]
 ```
 
 ```Go
@@ -23545,7 +21880,6 @@ func CloseOnExec(fd int)
 
 ```
 searchKey: syscall.SetNonblock
-tags: [exported]
 ```
 
 ```Go
@@ -23556,6 +21890,7 @@ func SetNonblock(fd int, nonblocking bool) (err error)
 
 ```
 searchKey: syscall.forkExec
+tags: [private]
 ```
 
 ```Go
@@ -23566,7 +21901,6 @@ func forkExec(argv0 string, argv []string, attr *ProcAttr) (pid int, err error)
 
 ```
 searchKey: syscall.ForkExec
-tags: [exported]
 ```
 
 ```Go
@@ -23579,7 +21913,6 @@ Combination of fork and exec, careful to be thread safe.
 
 ```
 searchKey: syscall.StartProcess
-tags: [exported]
 ```
 
 ```Go
@@ -23592,6 +21925,7 @@ StartProcess wraps ForkExec for package os.
 
 ```
 searchKey: syscall.runtime_BeforeExec
+tags: [private]
 ```
 
 ```Go
@@ -23604,6 +21938,7 @@ Implemented in runtime package.
 
 ```
 searchKey: syscall.runtime_AfterExec
+tags: [private]
 ```
 
 ```Go
@@ -23614,7 +21949,6 @@ func runtime_AfterExec()
 
 ```
 searchKey: syscall.Exec
-tags: [exported]
 ```
 
 ```Go
@@ -23627,7 +21961,6 @@ Exec invokes the execve(2) system call.
 
 ```
 searchKey: syscall.FcntlFlock
-tags: [exported]
 ```
 
 ```Go
@@ -23640,6 +21973,7 @@ FcntlFlock performs a fcntl syscall for the F_GETLK, F_SETLK or F_SETLKW command
 
 ```
 searchKey: syscall.forkExecPipe
+tags: [private]
 ```
 
 ```Go
@@ -23652,6 +21986,7 @@ Try to open a pipe with O_CLOEXEC set on both file descriptors.
 
 ```
 searchKey: syscall.msanRead
+tags: [private]
 ```
 
 ```Go
@@ -23662,6 +21997,7 @@ func msanRead(addr unsafe.Pointer, len int)
 
 ```
 searchKey: syscall.msanWrite
+tags: [private]
 ```
 
 ```Go
@@ -23672,6 +22008,7 @@ func msanWrite(addr unsafe.Pointer, len int)
 
 ```
 searchKey: syscall.ptrace
+tags: [private]
 ```
 
 ```Go
@@ -23684,6 +22021,7 @@ Nosplit because it is called from forkAndExecInChild.
 
 ```
 searchKey: syscall.rsaAlignOf
+tags: [private]
 ```
 
 ```Go
@@ -23696,7 +22034,7 @@ Round the length of a raw sockaddr up to align it properly.
 
 ```
 searchKey: syscall.RouteRIB
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23711,7 +22049,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.ParseRoutingMessage
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23726,7 +22064,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.ParseRoutingSockaddr
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23741,7 +22079,6 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.CmsgLen
-tags: [exported]
 ```
 
 ```Go
@@ -23754,7 +22091,6 @@ CmsgLen returns the value to store in the Len field of the Cmsghdr structure, ta
 
 ```
 searchKey: syscall.CmsgSpace
-tags: [exported]
 ```
 
 ```Go
@@ -23767,7 +22103,6 @@ CmsgSpace returns the number of bytes an ancillary element with payload of the p
 
 ```
 searchKey: syscall.ParseSocketControlMessage
-tags: [exported]
 ```
 
 ```Go
@@ -23780,7 +22115,6 @@ ParseSocketControlMessage parses b as an array of socket control messages.
 
 ```
 searchKey: syscall.UnixRights
-tags: [exported]
 ```
 
 ```Go
@@ -23793,7 +22127,6 @@ UnixRights encodes a set of open file descriptors into a socket control message 
 
 ```
 searchKey: syscall.ParseUnixRights
-tags: [exported]
 ```
 
 ```Go
@@ -23806,6 +22139,7 @@ ParseUnixRights decodes a socket control message that contains an integer array 
 
 ```
 searchKey: syscall.cmsgAlignOf
+tags: [private]
 ```
 
 ```Go
@@ -23818,7 +22152,7 @@ Round the length of a raw sockaddr up to align it properly.
 
 ```
 searchKey: syscall.StringByteSlice
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23833,7 +22167,6 @@ Deprecated: Use ByteSliceFromString instead.
 
 ```
 searchKey: syscall.ByteSliceFromString
-tags: [exported]
 ```
 
 ```Go
@@ -23846,7 +22179,7 @@ ByteSliceFromString returns a NUL-terminated slice of bytes containing the text 
 
 ```
 searchKey: syscall.StringBytePtr
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -23861,7 +22194,6 @@ Deprecated: Use BytePtrFromString instead.
 
 ```
 searchKey: syscall.BytePtrFromString
-tags: [exported]
 ```
 
 ```Go
@@ -23874,7 +22206,6 @@ BytePtrFromString returns a pointer to a NUL-terminated array of bytes containin
 
 ```
 searchKey: syscall.Getpagesize
-tags: [exported]
 ```
 
 ```Go
@@ -23885,7 +22216,6 @@ func Getpagesize() int
 
 ```
 searchKey: syscall.Exit
-tags: [exported]
 ```
 
 ```Go
@@ -23896,7 +22226,6 @@ func Exit(code int)
 
 ```
 searchKey: syscall.Getwd
-tags: [exported]
 ```
 
 ```Go
@@ -23907,7 +22236,6 @@ func Getwd() (string, error)
 
 ```
 searchKey: syscall.Getgroups
-tags: [exported]
 ```
 
 ```Go
@@ -23918,7 +22246,6 @@ func Getgroups() (gids []int, err error)
 
 ```
 searchKey: syscall.Setgroups
-tags: [exported]
 ```
 
 ```Go
@@ -23929,7 +22256,6 @@ func Setgroups(gids []int) (err error)
 
 ```
 searchKey: syscall.ReadDirent
-tags: [exported]
 ```
 
 ```Go
@@ -23940,7 +22266,6 @@ func ReadDirent(fd int, buf []byte) (n int, err error)
 
 ```
 searchKey: syscall.Wait4
-tags: [exported]
 ```
 
 ```Go
@@ -23951,7 +22276,6 @@ func Wait4(pid int, wstatus *WaitStatus, options int, rusage *Rusage) (wpid int,
 
 ```
 searchKey: syscall.GetsockoptByte
-tags: [exported]
 ```
 
 ```Go
@@ -23962,7 +22286,6 @@ func GetsockoptByte(fd, level, opt int) (value byte, err error)
 
 ```
 searchKey: syscall.GetsockoptInet4Addr
-tags: [exported]
 ```
 
 ```Go
@@ -23973,7 +22296,6 @@ func GetsockoptInet4Addr(fd, level, opt int) (value [4]byte, err error)
 
 ```
 searchKey: syscall.Sendmsg
-tags: [exported]
 ```
 
 ```Go
@@ -23984,7 +22306,6 @@ func Sendmsg(fd int, p, oob []byte, to Sockaddr, flags int) (err error)
 
 ```
 searchKey: syscall.SendmsgN
-tags: [exported]
 ```
 
 ```Go
@@ -23995,7 +22316,6 @@ func SendmsgN(fd int, p, oob []byte, to Sockaddr, flags int) (n int, err error)
 
 ```
 searchKey: syscall.Kevent
-tags: [exported]
 ```
 
 ```Go
@@ -24006,7 +22326,6 @@ func Kevent(kq int, changes, events []Kevent_t, timeout *Timespec) (n int, err e
 
 ```
 searchKey: syscall.Sysctl
-tags: [exported]
 ```
 
 ```Go
@@ -24017,7 +22336,6 @@ func Sysctl(name string) (value string, err error)
 
 ```
 searchKey: syscall.SysctlUint32
-tags: [exported]
 ```
 
 ```Go
@@ -24028,7 +22346,6 @@ func SysctlUint32(name string) (value uint32, err error)
 
 ```
 searchKey: syscall.Utimes
-tags: [exported]
 ```
 
 ```Go
@@ -24039,7 +22356,6 @@ func Utimes(path string, tv []Timeval) (err error)
 
 ```
 searchKey: syscall.UtimesNano
-tags: [exported]
 ```
 
 ```Go
@@ -24050,7 +22366,6 @@ func UtimesNano(path string, ts []Timespec) error
 
 ```
 searchKey: syscall.Futimes
-tags: [exported]
 ```
 
 ```Go
@@ -24061,7 +22376,6 @@ func Futimes(fd int, tv []Timeval) (err error)
 
 ```
 searchKey: syscall.Mmap
-tags: [exported]
 ```
 
 ```Go
@@ -24072,7 +22386,6 @@ func Mmap(fd int, offset int64, length int, prot int, flags int) (data []byte, e
 
 ```
 searchKey: syscall.Munmap
-tags: [exported]
 ```
 
 ```Go
@@ -24083,6 +22396,7 @@ func Munmap(b []byte) (err error)
 
 ```
 searchKey: syscall.nametomib
+tags: [private]
 ```
 
 ```Go
@@ -24095,6 +22409,7 @@ Translate "kern.hostname" to []_C_int{0,1,2,3}.
 
 ```
 searchKey: syscall.direntIno
+tags: [private]
 ```
 
 ```Go
@@ -24105,6 +22420,7 @@ func direntIno(buf []byte) (uint64, bool)
 
 ```
 searchKey: syscall.direntReclen
+tags: [private]
 ```
 
 ```Go
@@ -24115,6 +22431,7 @@ func direntReclen(buf []byte) (uint64, bool)
 
 ```
 searchKey: syscall.direntNamlen
+tags: [private]
 ```
 
 ```Go
@@ -24125,7 +22442,6 @@ func direntNamlen(buf []byte) (uint64, bool)
 
 ```
 searchKey: syscall.PtraceAttach
-tags: [exported]
 ```
 
 ```Go
@@ -24136,7 +22452,6 @@ func PtraceAttach(pid int) (err error)
 
 ```
 searchKey: syscall.PtraceDetach
-tags: [exported]
 ```
 
 ```Go
@@ -24147,7 +22462,6 @@ func PtraceDetach(pid int) (err error)
 
 ```
 searchKey: syscall.Pipe
-tags: [exported]
 ```
 
 ```Go
@@ -24158,7 +22472,6 @@ func Pipe(p []int) (err error)
 
 ```
 searchKey: syscall.Getfsstat
-tags: [exported]
 ```
 
 ```Go
@@ -24169,6 +22482,7 @@ func Getfsstat(buf []Statfs_t, flags int) (n int, err error)
 
 ```
 searchKey: syscall.libc_getfsstat_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24179,6 +22493,7 @@ func libc_getfsstat_trampoline()
 
 ```
 searchKey: syscall.setattrlistTimes
+tags: [private]
 ```
 
 ```Go
@@ -24189,6 +22504,7 @@ func setattrlistTimes(path string, times []Timespec) error
 
 ```
 searchKey: syscall.libc_setattrlist_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24199,6 +22515,7 @@ func libc_setattrlist_trampoline()
 
 ```
 searchKey: syscall.utimensat
+tags: [private]
 ```
 
 ```Go
@@ -24209,17 +22526,17 @@ func utimensat(dirfd int, path string, times *[2]Timespec, flag int) error
 
 ```
 searchKey: syscall.Kill
-tags: [exported]
 ```
 
 ```Go
 func Kill(pid int, signum Signal) (err error)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.syscall_darwin.go" href="#init.syscall_darwin.go">func init()</a>
 
 ```
 searchKey: syscall.init
+tags: [private]
 ```
 
 ```Go
@@ -24230,6 +22547,7 @@ func init()
 
 ```
 searchKey: syscall.fdopendir
+tags: [private]
 ```
 
 ```Go
@@ -24240,6 +22558,7 @@ func fdopendir(fd int) (dir uintptr, err error)
 
 ```
 searchKey: syscall.libc_fdopendir_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24250,6 +22569,7 @@ func libc_fdopendir_trampoline()
 
 ```
 searchKey: syscall.readlen
+tags: [private]
 ```
 
 ```Go
@@ -24260,6 +22580,7 @@ func readlen(fd int, buf *byte, nbuf int) (n int, err error)
 
 ```
 searchKey: syscall.writelen
+tags: [private]
 ```
 
 ```Go
@@ -24270,7 +22591,6 @@ func writelen(fd int, buf *byte, nbuf int) (n int, err error)
 
 ```
 searchKey: syscall.Getdirentries
-tags: [exported]
 ```
 
 ```Go
@@ -24281,7 +22601,6 @@ func Getdirentries(fd int, buf []byte, basep *uintptr) (n int, err error)
 
 ```
 searchKey: syscall.SetKevent
-tags: [exported]
 ```
 
 ```Go
@@ -24292,6 +22611,7 @@ func SetKevent(k *Kevent_t, fd, mode, flags int)
 
 ```
 searchKey: syscall.sendfile
+tags: [private]
 ```
 
 ```Go
@@ -24302,6 +22622,7 @@ func sendfile(outfd int, infd int, offset *int64, count int) (written int, err e
 
 ```
 searchKey: syscall.libc_sendfile_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24312,6 +22633,7 @@ func libc_sendfile_trampoline()
 
 ```
 searchKey: syscall.clen
+tags: [private]
 ```
 
 ```Go
@@ -24324,6 +22646,7 @@ clen returns the index of the first NULL byte in n or len(n) if n contains no NU
 
 ```
 searchKey: syscall.errnoErr
+tags: [private]
 ```
 
 ```Go
@@ -24336,7 +22659,6 @@ errnoErr returns common boxed Errno values, to prevent allocations at runtime.
 
 ```
 searchKey: syscall.Read
-tags: [exported]
 ```
 
 ```Go
@@ -24347,7 +22669,6 @@ func Read(fd int, p []byte) (n int, err error)
 
 ```
 searchKey: syscall.Write
-tags: [exported]
 ```
 
 ```Go
@@ -24358,7 +22679,6 @@ func Write(fd int, p []byte) (n int, err error)
 
 ```
 searchKey: syscall.Bind
-tags: [exported]
 ```
 
 ```Go
@@ -24369,7 +22689,6 @@ func Bind(fd int, sa Sockaddr) (err error)
 
 ```
 searchKey: syscall.Connect
-tags: [exported]
 ```
 
 ```Go
@@ -24380,7 +22699,6 @@ func Connect(fd int, sa Sockaddr) (err error)
 
 ```
 searchKey: syscall.GetsockoptInt
-tags: [exported]
 ```
 
 ```Go
@@ -24391,7 +22709,6 @@ func GetsockoptInt(fd, level, opt int) (value int, err error)
 
 ```
 searchKey: syscall.Sendto
-tags: [exported]
 ```
 
 ```Go
@@ -24402,7 +22719,6 @@ func Sendto(fd int, p []byte, flags int, to Sockaddr) (err error)
 
 ```
 searchKey: syscall.SetsockoptByte
-tags: [exported]
 ```
 
 ```Go
@@ -24413,7 +22729,6 @@ func SetsockoptByte(fd, level, opt int, value byte) (err error)
 
 ```
 searchKey: syscall.SetsockoptInt
-tags: [exported]
 ```
 
 ```Go
@@ -24424,7 +22739,6 @@ func SetsockoptInt(fd, level, opt int, value int) (err error)
 
 ```
 searchKey: syscall.SetsockoptInet4Addr
-tags: [exported]
 ```
 
 ```Go
@@ -24435,7 +22749,6 @@ func SetsockoptInet4Addr(fd, level, opt int, value [4]byte) (err error)
 
 ```
 searchKey: syscall.SetsockoptIPMreq
-tags: [exported]
 ```
 
 ```Go
@@ -24446,7 +22759,6 @@ func SetsockoptIPMreq(fd, level, opt int, mreq *IPMreq) (err error)
 
 ```
 searchKey: syscall.SetsockoptIPv6Mreq
-tags: [exported]
 ```
 
 ```Go
@@ -24457,7 +22769,6 @@ func SetsockoptIPv6Mreq(fd, level, opt int, mreq *IPv6Mreq) (err error)
 
 ```
 searchKey: syscall.SetsockoptICMPv6Filter
-tags: [exported]
 ```
 
 ```Go
@@ -24468,7 +22779,6 @@ func SetsockoptICMPv6Filter(fd, level, opt int, filter *ICMPv6Filter) error
 
 ```
 searchKey: syscall.SetsockoptLinger
-tags: [exported]
 ```
 
 ```Go
@@ -24479,7 +22789,6 @@ func SetsockoptLinger(fd, level, opt int, l *Linger) (err error)
 
 ```
 searchKey: syscall.SetsockoptString
-tags: [exported]
 ```
 
 ```Go
@@ -24490,7 +22799,6 @@ func SetsockoptString(fd, level, opt int, s string) (err error)
 
 ```
 searchKey: syscall.SetsockoptTimeval
-tags: [exported]
 ```
 
 ```Go
@@ -24501,7 +22809,6 @@ func SetsockoptTimeval(fd, level, opt int, tv *Timeval) (err error)
 
 ```
 searchKey: syscall.Socket
-tags: [exported]
 ```
 
 ```Go
@@ -24512,7 +22819,6 @@ func Socket(domain, typ, proto int) (fd int, err error)
 
 ```
 searchKey: syscall.Socketpair
-tags: [exported]
 ```
 
 ```Go
@@ -24523,7 +22829,6 @@ func Socketpair(domain, typ, proto int) (fd [2]int, err error)
 
 ```
 searchKey: syscall.Sendfile
-tags: [exported]
 ```
 
 ```Go
@@ -24534,6 +22839,7 @@ func Sendfile(outfd int, infd int, offset *int64, count int) (written int, err e
 
 ```
 searchKey: syscall.faketimeWrite
+tags: [private]
 ```
 
 ```Go
@@ -24544,7 +22850,6 @@ func faketimeWrite(fd int, p []byte) int
 
 ```
 searchKey: syscall.TimespecToNsec
-tags: [exported]
 ```
 
 ```Go
@@ -24557,7 +22862,6 @@ TimespecToNSec returns the time stored in ts as nanoseconds.
 
 ```
 searchKey: syscall.TimevalToNsec
-tags: [exported]
 ```
 
 ```Go
@@ -24570,6 +22874,7 @@ TimevalToNsec returns the time stored in tv as nanoseconds.
 
 ```
 searchKey: syscall.getgroups
+tags: [private]
 ```
 
 ```Go
@@ -24580,6 +22885,7 @@ func getgroups(ngid int, gid *_Gid_t) (n int, err error)
 
 ```
 searchKey: syscall.libc_getgroups_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24590,6 +22896,7 @@ func libc_getgroups_trampoline()
 
 ```
 searchKey: syscall.setgroups
+tags: [private]
 ```
 
 ```Go
@@ -24600,6 +22907,7 @@ func setgroups(ngid int, gid *_Gid_t) (err error)
 
 ```
 searchKey: syscall.libc_setgroups_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24610,6 +22918,7 @@ func libc_setgroups_trampoline()
 
 ```
 searchKey: syscall.wait4
+tags: [private]
 ```
 
 ```Go
@@ -24620,6 +22929,7 @@ func wait4(pid int, wstatus *_C_int, options int, rusage *Rusage) (wpid int, err
 
 ```
 searchKey: syscall.libc_wait4_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24630,6 +22940,7 @@ func libc_wait4_trampoline()
 
 ```
 searchKey: syscall.accept
+tags: [private]
 ```
 
 ```Go
@@ -24640,6 +22951,7 @@ func accept(s int, rsa *RawSockaddrAny, addrlen *_Socklen) (fd int, err error)
 
 ```
 searchKey: syscall.libc_accept_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24650,6 +22962,7 @@ func libc_accept_trampoline()
 
 ```
 searchKey: syscall.bind
+tags: [private]
 ```
 
 ```Go
@@ -24660,6 +22973,7 @@ func bind(s int, addr unsafe.Pointer, addrlen _Socklen) (err error)
 
 ```
 searchKey: syscall.libc_bind_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24670,6 +22984,7 @@ func libc_bind_trampoline()
 
 ```
 searchKey: syscall.connect
+tags: [private]
 ```
 
 ```Go
@@ -24680,6 +22995,7 @@ func connect(s int, addr unsafe.Pointer, addrlen _Socklen) (err error)
 
 ```
 searchKey: syscall.libc_connect_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24690,6 +23006,7 @@ func libc_connect_trampoline()
 
 ```
 searchKey: syscall.socket
+tags: [private]
 ```
 
 ```Go
@@ -24700,6 +23017,7 @@ func socket(domain int, typ int, proto int) (fd int, err error)
 
 ```
 searchKey: syscall.libc_socket_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24710,6 +23028,7 @@ func libc_socket_trampoline()
 
 ```
 searchKey: syscall.getsockopt
+tags: [private]
 ```
 
 ```Go
@@ -24720,6 +23039,7 @@ func getsockopt(s int, level int, name int, val unsafe.Pointer, vallen *_Socklen
 
 ```
 searchKey: syscall.libc_getsockopt_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24730,6 +23050,7 @@ func libc_getsockopt_trampoline()
 
 ```
 searchKey: syscall.setsockopt
+tags: [private]
 ```
 
 ```Go
@@ -24740,6 +23061,7 @@ func setsockopt(s int, level int, name int, val unsafe.Pointer, vallen uintptr) 
 
 ```
 searchKey: syscall.libc_setsockopt_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24750,6 +23072,7 @@ func libc_setsockopt_trampoline()
 
 ```
 searchKey: syscall.getpeername
+tags: [private]
 ```
 
 ```Go
@@ -24760,6 +23083,7 @@ func getpeername(fd int, rsa *RawSockaddrAny, addrlen *_Socklen) (err error)
 
 ```
 searchKey: syscall.libc_getpeername_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24770,6 +23094,7 @@ func libc_getpeername_trampoline()
 
 ```
 searchKey: syscall.getsockname
+tags: [private]
 ```
 
 ```Go
@@ -24780,6 +23105,7 @@ func getsockname(fd int, rsa *RawSockaddrAny, addrlen *_Socklen) (err error)
 
 ```
 searchKey: syscall.libc_getsockname_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24790,7 +23116,6 @@ func libc_getsockname_trampoline()
 
 ```
 searchKey: syscall.Shutdown
-tags: [exported]
 ```
 
 ```Go
@@ -24801,6 +23126,7 @@ func Shutdown(s int, how int) (err error)
 
 ```
 searchKey: syscall.libc_shutdown_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24811,6 +23137,7 @@ func libc_shutdown_trampoline()
 
 ```
 searchKey: syscall.socketpair
+tags: [private]
 ```
 
 ```Go
@@ -24821,6 +23148,7 @@ func socketpair(domain int, typ int, proto int, fd *[2]int32) (err error)
 
 ```
 searchKey: syscall.libc_socketpair_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24831,6 +23159,7 @@ func libc_socketpair_trampoline()
 
 ```
 searchKey: syscall.recvfrom
+tags: [private]
 ```
 
 ```Go
@@ -24841,6 +23170,7 @@ func recvfrom(fd int, p []byte, flags int, from *RawSockaddrAny, fromlen *_Sockl
 
 ```
 searchKey: syscall.libc_recvfrom_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24851,6 +23181,7 @@ func libc_recvfrom_trampoline()
 
 ```
 searchKey: syscall.sendto
+tags: [private]
 ```
 
 ```Go
@@ -24861,6 +23192,7 @@ func sendto(s int, buf []byte, flags int, to unsafe.Pointer, addrlen _Socklen) (
 
 ```
 searchKey: syscall.libc_sendto_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24871,6 +23203,7 @@ func libc_sendto_trampoline()
 
 ```
 searchKey: syscall.recvmsg
+tags: [private]
 ```
 
 ```Go
@@ -24881,6 +23214,7 @@ func recvmsg(s int, msg *Msghdr, flags int) (n int, err error)
 
 ```
 searchKey: syscall.libc_recvmsg_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24891,6 +23225,7 @@ func libc_recvmsg_trampoline()
 
 ```
 searchKey: syscall.sendmsg
+tags: [private]
 ```
 
 ```Go
@@ -24901,6 +23236,7 @@ func sendmsg(s int, msg *Msghdr, flags int) (n int, err error)
 
 ```
 searchKey: syscall.libc_sendmsg_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24911,6 +23247,7 @@ func libc_sendmsg_trampoline()
 
 ```
 searchKey: syscall.kevent
+tags: [private]
 ```
 
 ```Go
@@ -24921,6 +23258,7 @@ func kevent(kq int, change unsafe.Pointer, nchange int, event unsafe.Pointer, ne
 
 ```
 searchKey: syscall.libc_kevent_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24931,6 +23269,7 @@ func libc_kevent_trampoline()
 
 ```
 searchKey: syscall.utimes
+tags: [private]
 ```
 
 ```Go
@@ -24941,6 +23280,7 @@ func utimes(path string, timeval *[2]Timeval) (err error)
 
 ```
 searchKey: syscall.libc_utimes_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24951,6 +23291,7 @@ func libc_utimes_trampoline()
 
 ```
 searchKey: syscall.futimes
+tags: [private]
 ```
 
 ```Go
@@ -24961,6 +23302,7 @@ func futimes(fd int, timeval *[2]Timeval) (err error)
 
 ```
 searchKey: syscall.libc_futimes_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24971,6 +23313,7 @@ func libc_futimes_trampoline()
 
 ```
 searchKey: syscall.fcntl
+tags: [private]
 ```
 
 ```Go
@@ -24981,6 +23324,7 @@ func fcntl(fd int, cmd int, arg int) (val int, err error)
 
 ```
 searchKey: syscall.libc_fcntl_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -24991,6 +23335,7 @@ func libc_fcntl_trampoline()
 
 ```
 searchKey: syscall.pipe
+tags: [private]
 ```
 
 ```Go
@@ -25001,6 +23346,7 @@ func pipe(p *[2]int32) (err error)
 
 ```
 searchKey: syscall.libc_pipe_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25011,6 +23357,7 @@ func libc_pipe_trampoline()
 
 ```
 searchKey: syscall.kill
+tags: [private]
 ```
 
 ```Go
@@ -25021,6 +23368,7 @@ func kill(pid int, signum int, posix int) (err error)
 
 ```
 searchKey: syscall.libc_kill_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25031,7 +23379,6 @@ func libc_kill_trampoline()
 
 ```
 searchKey: syscall.Access
-tags: [exported]
 ```
 
 ```Go
@@ -25042,6 +23389,7 @@ func Access(path string, mode uint32) (err error)
 
 ```
 searchKey: syscall.libc_access_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25052,7 +23400,6 @@ func libc_access_trampoline()
 
 ```
 searchKey: syscall.Adjtime
-tags: [exported]
 ```
 
 ```Go
@@ -25063,6 +23410,7 @@ func Adjtime(delta *Timeval, olddelta *Timeval) (err error)
 
 ```
 searchKey: syscall.libc_adjtime_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25073,7 +23421,6 @@ func libc_adjtime_trampoline()
 
 ```
 searchKey: syscall.Chdir
-tags: [exported]
 ```
 
 ```Go
@@ -25084,6 +23431,7 @@ func Chdir(path string) (err error)
 
 ```
 searchKey: syscall.libc_chdir_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25094,7 +23442,6 @@ func libc_chdir_trampoline()
 
 ```
 searchKey: syscall.Chflags
-tags: [exported]
 ```
 
 ```Go
@@ -25105,6 +23452,7 @@ func Chflags(path string, flags int) (err error)
 
 ```
 searchKey: syscall.libc_chflags_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25115,7 +23463,6 @@ func libc_chflags_trampoline()
 
 ```
 searchKey: syscall.Chmod
-tags: [exported]
 ```
 
 ```Go
@@ -25126,6 +23473,7 @@ func Chmod(path string, mode uint32) (err error)
 
 ```
 searchKey: syscall.libc_chmod_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25136,7 +23484,6 @@ func libc_chmod_trampoline()
 
 ```
 searchKey: syscall.Chown
-tags: [exported]
 ```
 
 ```Go
@@ -25147,6 +23494,7 @@ func Chown(path string, uid int, gid int) (err error)
 
 ```
 searchKey: syscall.libc_chown_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25157,7 +23505,6 @@ func libc_chown_trampoline()
 
 ```
 searchKey: syscall.Chroot
-tags: [exported]
 ```
 
 ```Go
@@ -25168,6 +23515,7 @@ func Chroot(path string) (err error)
 
 ```
 searchKey: syscall.libc_chroot_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25178,7 +23526,6 @@ func libc_chroot_trampoline()
 
 ```
 searchKey: syscall.Close
-tags: [exported]
 ```
 
 ```Go
@@ -25189,6 +23536,7 @@ func Close(fd int) (err error)
 
 ```
 searchKey: syscall.libc_close_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25199,6 +23547,7 @@ func libc_close_trampoline()
 
 ```
 searchKey: syscall.closedir
+tags: [private]
 ```
 
 ```Go
@@ -25209,6 +23558,7 @@ func closedir(dir uintptr) (err error)
 
 ```
 searchKey: syscall.libc_closedir_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25219,7 +23569,6 @@ func libc_closedir_trampoline()
 
 ```
 searchKey: syscall.Dup
-tags: [exported]
 ```
 
 ```Go
@@ -25230,6 +23579,7 @@ func Dup(fd int) (nfd int, err error)
 
 ```
 searchKey: syscall.libc_dup_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25240,7 +23590,6 @@ func libc_dup_trampoline()
 
 ```
 searchKey: syscall.Dup2
-tags: [exported]
 ```
 
 ```Go
@@ -25251,6 +23600,7 @@ func Dup2(from int, to int) (err error)
 
 ```
 searchKey: syscall.libc_dup2_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25261,7 +23611,6 @@ func libc_dup2_trampoline()
 
 ```
 searchKey: syscall.Exchangedata
-tags: [exported]
 ```
 
 ```Go
@@ -25272,6 +23621,7 @@ func Exchangedata(path1 string, path2 string, options int) (err error)
 
 ```
 searchKey: syscall.libc_exchangedata_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25282,7 +23632,6 @@ func libc_exchangedata_trampoline()
 
 ```
 searchKey: syscall.Fchdir
-tags: [exported]
 ```
 
 ```Go
@@ -25293,6 +23642,7 @@ func Fchdir(fd int) (err error)
 
 ```
 searchKey: syscall.libc_fchdir_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25303,7 +23653,6 @@ func libc_fchdir_trampoline()
 
 ```
 searchKey: syscall.Fchflags
-tags: [exported]
 ```
 
 ```Go
@@ -25314,6 +23663,7 @@ func Fchflags(fd int, flags int) (err error)
 
 ```
 searchKey: syscall.libc_fchflags_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25324,7 +23674,6 @@ func libc_fchflags_trampoline()
 
 ```
 searchKey: syscall.Fchmod
-tags: [exported]
 ```
 
 ```Go
@@ -25335,6 +23684,7 @@ func Fchmod(fd int, mode uint32) (err error)
 
 ```
 searchKey: syscall.libc_fchmod_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25345,7 +23695,6 @@ func libc_fchmod_trampoline()
 
 ```
 searchKey: syscall.Fchown
-tags: [exported]
 ```
 
 ```Go
@@ -25356,6 +23705,7 @@ func Fchown(fd int, uid int, gid int) (err error)
 
 ```
 searchKey: syscall.libc_fchown_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25366,7 +23716,6 @@ func libc_fchown_trampoline()
 
 ```
 searchKey: syscall.Flock
-tags: [exported]
 ```
 
 ```Go
@@ -25377,6 +23726,7 @@ func Flock(fd int, how int) (err error)
 
 ```
 searchKey: syscall.libc_flock_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25387,7 +23737,6 @@ func libc_flock_trampoline()
 
 ```
 searchKey: syscall.Fpathconf
-tags: [exported]
 ```
 
 ```Go
@@ -25398,6 +23747,7 @@ func Fpathconf(fd int, name int) (val int, err error)
 
 ```
 searchKey: syscall.libc_fpathconf_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25408,7 +23758,6 @@ func libc_fpathconf_trampoline()
 
 ```
 searchKey: syscall.Fsync
-tags: [exported]
 ```
 
 ```Go
@@ -25419,6 +23768,7 @@ func Fsync(fd int) (err error)
 
 ```
 searchKey: syscall.libc_fsync_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25429,7 +23779,6 @@ func libc_fsync_trampoline()
 
 ```
 searchKey: syscall.Ftruncate
-tags: [exported]
 ```
 
 ```Go
@@ -25440,6 +23789,7 @@ func Ftruncate(fd int, length int64) (err error)
 
 ```
 searchKey: syscall.libc_ftruncate_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25450,7 +23800,6 @@ func libc_ftruncate_trampoline()
 
 ```
 searchKey: syscall.Getdtablesize
-tags: [exported]
 ```
 
 ```Go
@@ -25461,6 +23810,7 @@ func Getdtablesize() (size int)
 
 ```
 searchKey: syscall.libc_getdtablesize_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25471,7 +23821,6 @@ func libc_getdtablesize_trampoline()
 
 ```
 searchKey: syscall.Getegid
-tags: [exported]
 ```
 
 ```Go
@@ -25482,6 +23831,7 @@ func Getegid() (egid int)
 
 ```
 searchKey: syscall.libc_getegid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25492,7 +23842,6 @@ func libc_getegid_trampoline()
 
 ```
 searchKey: syscall.Geteuid
-tags: [exported]
 ```
 
 ```Go
@@ -25503,6 +23852,7 @@ func Geteuid() (uid int)
 
 ```
 searchKey: syscall.libc_geteuid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25513,7 +23863,6 @@ func libc_geteuid_trampoline()
 
 ```
 searchKey: syscall.Getgid
-tags: [exported]
 ```
 
 ```Go
@@ -25524,6 +23873,7 @@ func Getgid() (gid int)
 
 ```
 searchKey: syscall.libc_getgid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25534,7 +23884,6 @@ func libc_getgid_trampoline()
 
 ```
 searchKey: syscall.Getpgid
-tags: [exported]
 ```
 
 ```Go
@@ -25545,6 +23894,7 @@ func Getpgid(pid int) (pgid int, err error)
 
 ```
 searchKey: syscall.libc_getpgid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25555,7 +23905,6 @@ func libc_getpgid_trampoline()
 
 ```
 searchKey: syscall.Getpgrp
-tags: [exported]
 ```
 
 ```Go
@@ -25566,6 +23915,7 @@ func Getpgrp() (pgrp int)
 
 ```
 searchKey: syscall.libc_getpgrp_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25576,7 +23926,6 @@ func libc_getpgrp_trampoline()
 
 ```
 searchKey: syscall.Getpid
-tags: [exported]
 ```
 
 ```Go
@@ -25587,6 +23936,7 @@ func Getpid() (pid int)
 
 ```
 searchKey: syscall.libc_getpid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25597,7 +23947,6 @@ func libc_getpid_trampoline()
 
 ```
 searchKey: syscall.Getppid
-tags: [exported]
 ```
 
 ```Go
@@ -25608,6 +23957,7 @@ func Getppid() (ppid int)
 
 ```
 searchKey: syscall.libc_getppid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25618,7 +23968,6 @@ func libc_getppid_trampoline()
 
 ```
 searchKey: syscall.Getpriority
-tags: [exported]
 ```
 
 ```Go
@@ -25629,6 +23978,7 @@ func Getpriority(which int, who int) (prio int, err error)
 
 ```
 searchKey: syscall.libc_getpriority_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25639,7 +23989,6 @@ func libc_getpriority_trampoline()
 
 ```
 searchKey: syscall.Getrlimit
-tags: [exported]
 ```
 
 ```Go
@@ -25650,6 +23999,7 @@ func Getrlimit(which int, lim *Rlimit) (err error)
 
 ```
 searchKey: syscall.libc_getrlimit_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25660,7 +24010,6 @@ func libc_getrlimit_trampoline()
 
 ```
 searchKey: syscall.Getrusage
-tags: [exported]
 ```
 
 ```Go
@@ -25671,6 +24020,7 @@ func Getrusage(who int, rusage *Rusage) (err error)
 
 ```
 searchKey: syscall.libc_getrusage_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25681,7 +24031,6 @@ func libc_getrusage_trampoline()
 
 ```
 searchKey: syscall.Getsid
-tags: [exported]
 ```
 
 ```Go
@@ -25692,6 +24041,7 @@ func Getsid(pid int) (sid int, err error)
 
 ```
 searchKey: syscall.libc_getsid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25702,7 +24052,6 @@ func libc_getsid_trampoline()
 
 ```
 searchKey: syscall.Getuid
-tags: [exported]
 ```
 
 ```Go
@@ -25713,6 +24062,7 @@ func Getuid() (uid int)
 
 ```
 searchKey: syscall.libc_getuid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25723,7 +24073,6 @@ func libc_getuid_trampoline()
 
 ```
 searchKey: syscall.Issetugid
-tags: [exported]
 ```
 
 ```Go
@@ -25734,6 +24083,7 @@ func Issetugid() (tainted bool)
 
 ```
 searchKey: syscall.libc_issetugid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25744,7 +24094,6 @@ func libc_issetugid_trampoline()
 
 ```
 searchKey: syscall.Kqueue
-tags: [exported]
 ```
 
 ```Go
@@ -25755,6 +24104,7 @@ func Kqueue() (fd int, err error)
 
 ```
 searchKey: syscall.libc_kqueue_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25765,7 +24115,6 @@ func libc_kqueue_trampoline()
 
 ```
 searchKey: syscall.Lchown
-tags: [exported]
 ```
 
 ```Go
@@ -25776,6 +24125,7 @@ func Lchown(path string, uid int, gid int) (err error)
 
 ```
 searchKey: syscall.libc_lchown_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25786,7 +24136,6 @@ func libc_lchown_trampoline()
 
 ```
 searchKey: syscall.Link
-tags: [exported]
 ```
 
 ```Go
@@ -25797,6 +24146,7 @@ func Link(path string, link string) (err error)
 
 ```
 searchKey: syscall.libc_link_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25807,7 +24157,6 @@ func libc_link_trampoline()
 
 ```
 searchKey: syscall.Listen
-tags: [exported]
 ```
 
 ```Go
@@ -25818,6 +24167,7 @@ func Listen(s int, backlog int) (err error)
 
 ```
 searchKey: syscall.libc_listen_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25828,7 +24178,6 @@ func libc_listen_trampoline()
 
 ```
 searchKey: syscall.Mkdir
-tags: [exported]
 ```
 
 ```Go
@@ -25839,6 +24188,7 @@ func Mkdir(path string, mode uint32) (err error)
 
 ```
 searchKey: syscall.libc_mkdir_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25849,7 +24199,6 @@ func libc_mkdir_trampoline()
 
 ```
 searchKey: syscall.Mkfifo
-tags: [exported]
 ```
 
 ```Go
@@ -25860,6 +24209,7 @@ func Mkfifo(path string, mode uint32) (err error)
 
 ```
 searchKey: syscall.libc_mkfifo_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25870,7 +24220,6 @@ func libc_mkfifo_trampoline()
 
 ```
 searchKey: syscall.Mknod
-tags: [exported]
 ```
 
 ```Go
@@ -25881,6 +24230,7 @@ func Mknod(path string, mode uint32, dev int) (err error)
 
 ```
 searchKey: syscall.libc_mknod_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25891,7 +24241,6 @@ func libc_mknod_trampoline()
 
 ```
 searchKey: syscall.Mlock
-tags: [exported]
 ```
 
 ```Go
@@ -25902,6 +24251,7 @@ func Mlock(b []byte) (err error)
 
 ```
 searchKey: syscall.libc_mlock_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25912,7 +24262,6 @@ func libc_mlock_trampoline()
 
 ```
 searchKey: syscall.Mlockall
-tags: [exported]
 ```
 
 ```Go
@@ -25923,6 +24272,7 @@ func Mlockall(flags int) (err error)
 
 ```
 searchKey: syscall.libc_mlockall_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25933,7 +24283,6 @@ func libc_mlockall_trampoline()
 
 ```
 searchKey: syscall.Mprotect
-tags: [exported]
 ```
 
 ```Go
@@ -25944,6 +24293,7 @@ func Mprotect(b []byte, prot int) (err error)
 
 ```
 searchKey: syscall.libc_mprotect_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25954,7 +24304,6 @@ func libc_mprotect_trampoline()
 
 ```
 searchKey: syscall.Munlock
-tags: [exported]
 ```
 
 ```Go
@@ -25965,6 +24314,7 @@ func Munlock(b []byte) (err error)
 
 ```
 searchKey: syscall.libc_munlock_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25975,7 +24325,6 @@ func libc_munlock_trampoline()
 
 ```
 searchKey: syscall.Munlockall
-tags: [exported]
 ```
 
 ```Go
@@ -25986,6 +24335,7 @@ func Munlockall() (err error)
 
 ```
 searchKey: syscall.libc_munlockall_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -25996,7 +24346,6 @@ func libc_munlockall_trampoline()
 
 ```
 searchKey: syscall.Open
-tags: [exported]
 ```
 
 ```Go
@@ -26007,6 +24356,7 @@ func Open(path string, mode int, perm uint32) (fd int, err error)
 
 ```
 searchKey: syscall.libc_open_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26017,7 +24367,6 @@ func libc_open_trampoline()
 
 ```
 searchKey: syscall.Pathconf
-tags: [exported]
 ```
 
 ```Go
@@ -26028,6 +24377,7 @@ func Pathconf(path string, name int) (val int, err error)
 
 ```
 searchKey: syscall.libc_pathconf_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26038,7 +24388,6 @@ func libc_pathconf_trampoline()
 
 ```
 searchKey: syscall.Pread
-tags: [exported]
 ```
 
 ```Go
@@ -26049,6 +24398,7 @@ func Pread(fd int, p []byte, offset int64) (n int, err error)
 
 ```
 searchKey: syscall.libc_pread_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26059,7 +24409,6 @@ func libc_pread_trampoline()
 
 ```
 searchKey: syscall.Pwrite
-tags: [exported]
 ```
 
 ```Go
@@ -26070,6 +24419,7 @@ func Pwrite(fd int, p []byte, offset int64) (n int, err error)
 
 ```
 searchKey: syscall.libc_pwrite_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26080,6 +24430,7 @@ func libc_pwrite_trampoline()
 
 ```
 searchKey: syscall.read
+tags: [private]
 ```
 
 ```Go
@@ -26090,6 +24441,7 @@ func read(fd int, p []byte) (n int, err error)
 
 ```
 searchKey: syscall.libc_read_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26100,6 +24452,7 @@ func libc_read_trampoline()
 
 ```
 searchKey: syscall.libc_readdir_r_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26110,7 +24463,6 @@ func libc_readdir_r_trampoline()
 
 ```
 searchKey: syscall.Readlink
-tags: [exported]
 ```
 
 ```Go
@@ -26121,6 +24473,7 @@ func Readlink(path string, buf []byte) (n int, err error)
 
 ```
 searchKey: syscall.libc_readlink_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26131,7 +24484,6 @@ func libc_readlink_trampoline()
 
 ```
 searchKey: syscall.Rename
-tags: [exported]
 ```
 
 ```Go
@@ -26142,6 +24494,7 @@ func Rename(from string, to string) (err error)
 
 ```
 searchKey: syscall.libc_rename_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26152,7 +24505,6 @@ func libc_rename_trampoline()
 
 ```
 searchKey: syscall.Revoke
-tags: [exported]
 ```
 
 ```Go
@@ -26163,6 +24515,7 @@ func Revoke(path string) (err error)
 
 ```
 searchKey: syscall.libc_revoke_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26173,7 +24526,6 @@ func libc_revoke_trampoline()
 
 ```
 searchKey: syscall.Rmdir
-tags: [exported]
 ```
 
 ```Go
@@ -26184,6 +24536,7 @@ func Rmdir(path string) (err error)
 
 ```
 searchKey: syscall.libc_rmdir_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26194,7 +24547,6 @@ func libc_rmdir_trampoline()
 
 ```
 searchKey: syscall.Seek
-tags: [exported]
 ```
 
 ```Go
@@ -26205,6 +24557,7 @@ func Seek(fd int, offset int64, whence int) (newoffset int64, err error)
 
 ```
 searchKey: syscall.libc_lseek_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26215,7 +24568,6 @@ func libc_lseek_trampoline()
 
 ```
 searchKey: syscall.Select
-tags: [exported]
 ```
 
 ```Go
@@ -26226,6 +24578,7 @@ func Select(n int, r *FdSet, w *FdSet, e *FdSet, timeout *Timeval) (err error)
 
 ```
 searchKey: syscall.libc_select_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26236,7 +24589,6 @@ func libc_select_trampoline()
 
 ```
 searchKey: syscall.Setegid
-tags: [exported]
 ```
 
 ```Go
@@ -26247,6 +24599,7 @@ func Setegid(egid int) (err error)
 
 ```
 searchKey: syscall.libc_setegid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26257,7 +24610,6 @@ func libc_setegid_trampoline()
 
 ```
 searchKey: syscall.Seteuid
-tags: [exported]
 ```
 
 ```Go
@@ -26268,6 +24620,7 @@ func Seteuid(euid int) (err error)
 
 ```
 searchKey: syscall.libc_seteuid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26278,7 +24631,6 @@ func libc_seteuid_trampoline()
 
 ```
 searchKey: syscall.Setgid
-tags: [exported]
 ```
 
 ```Go
@@ -26289,6 +24641,7 @@ func Setgid(gid int) (err error)
 
 ```
 searchKey: syscall.libc_setgid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26299,7 +24652,6 @@ func libc_setgid_trampoline()
 
 ```
 searchKey: syscall.Setlogin
-tags: [exported]
 ```
 
 ```Go
@@ -26310,6 +24662,7 @@ func Setlogin(name string) (err error)
 
 ```
 searchKey: syscall.libc_setlogin_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26320,7 +24673,6 @@ func libc_setlogin_trampoline()
 
 ```
 searchKey: syscall.Setpgid
-tags: [exported]
 ```
 
 ```Go
@@ -26331,6 +24683,7 @@ func Setpgid(pid int, pgid int) (err error)
 
 ```
 searchKey: syscall.libc_setpgid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26341,7 +24694,6 @@ func libc_setpgid_trampoline()
 
 ```
 searchKey: syscall.Setpriority
-tags: [exported]
 ```
 
 ```Go
@@ -26352,6 +24704,7 @@ func Setpriority(which int, who int, prio int) (err error)
 
 ```
 searchKey: syscall.libc_setpriority_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26362,7 +24715,6 @@ func libc_setpriority_trampoline()
 
 ```
 searchKey: syscall.Setprivexec
-tags: [exported]
 ```
 
 ```Go
@@ -26373,6 +24725,7 @@ func Setprivexec(flag int) (err error)
 
 ```
 searchKey: syscall.libc_setprivexec_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26383,7 +24736,6 @@ func libc_setprivexec_trampoline()
 
 ```
 searchKey: syscall.Setregid
-tags: [exported]
 ```
 
 ```Go
@@ -26394,6 +24746,7 @@ func Setregid(rgid int, egid int) (err error)
 
 ```
 searchKey: syscall.libc_setregid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26404,7 +24757,6 @@ func libc_setregid_trampoline()
 
 ```
 searchKey: syscall.Setreuid
-tags: [exported]
 ```
 
 ```Go
@@ -26415,6 +24767,7 @@ func Setreuid(ruid int, euid int) (err error)
 
 ```
 searchKey: syscall.libc_setreuid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26425,7 +24778,6 @@ func libc_setreuid_trampoline()
 
 ```
 searchKey: syscall.Setrlimit
-tags: [exported]
 ```
 
 ```Go
@@ -26436,6 +24788,7 @@ func Setrlimit(which int, lim *Rlimit) (err error)
 
 ```
 searchKey: syscall.libc_setrlimit_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26446,7 +24799,6 @@ func libc_setrlimit_trampoline()
 
 ```
 searchKey: syscall.Setsid
-tags: [exported]
 ```
 
 ```Go
@@ -26457,6 +24809,7 @@ func Setsid() (pid int, err error)
 
 ```
 searchKey: syscall.libc_setsid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26467,7 +24820,6 @@ func libc_setsid_trampoline()
 
 ```
 searchKey: syscall.Settimeofday
-tags: [exported]
 ```
 
 ```Go
@@ -26478,6 +24830,7 @@ func Settimeofday(tp *Timeval) (err error)
 
 ```
 searchKey: syscall.libc_settimeofday_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26488,7 +24841,6 @@ func libc_settimeofday_trampoline()
 
 ```
 searchKey: syscall.Setuid
-tags: [exported]
 ```
 
 ```Go
@@ -26499,6 +24851,7 @@ func Setuid(uid int) (err error)
 
 ```
 searchKey: syscall.libc_setuid_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26509,7 +24862,6 @@ func libc_setuid_trampoline()
 
 ```
 searchKey: syscall.Symlink
-tags: [exported]
 ```
 
 ```Go
@@ -26520,6 +24872,7 @@ func Symlink(path string, link string) (err error)
 
 ```
 searchKey: syscall.libc_symlink_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26530,7 +24883,6 @@ func libc_symlink_trampoline()
 
 ```
 searchKey: syscall.Sync
-tags: [exported]
 ```
 
 ```Go
@@ -26541,6 +24893,7 @@ func Sync() (err error)
 
 ```
 searchKey: syscall.libc_sync_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26551,7 +24904,6 @@ func libc_sync_trampoline()
 
 ```
 searchKey: syscall.Truncate
-tags: [exported]
 ```
 
 ```Go
@@ -26562,6 +24914,7 @@ func Truncate(path string, length int64) (err error)
 
 ```
 searchKey: syscall.libc_truncate_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26572,7 +24925,6 @@ func libc_truncate_trampoline()
 
 ```
 searchKey: syscall.Umask
-tags: [exported]
 ```
 
 ```Go
@@ -26583,6 +24935,7 @@ func Umask(newmask int) (oldmask int)
 
 ```
 searchKey: syscall.libc_umask_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26593,7 +24946,6 @@ func libc_umask_trampoline()
 
 ```
 searchKey: syscall.Undelete
-tags: [exported]
 ```
 
 ```Go
@@ -26604,6 +24956,7 @@ func Undelete(path string) (err error)
 
 ```
 searchKey: syscall.libc_undelete_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26614,7 +24967,6 @@ func libc_undelete_trampoline()
 
 ```
 searchKey: syscall.Unlink
-tags: [exported]
 ```
 
 ```Go
@@ -26625,6 +24977,7 @@ func Unlink(path string) (err error)
 
 ```
 searchKey: syscall.libc_unlink_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26635,7 +24988,6 @@ func libc_unlink_trampoline()
 
 ```
 searchKey: syscall.Unmount
-tags: [exported]
 ```
 
 ```Go
@@ -26646,6 +24998,7 @@ func Unmount(path string, flags int) (err error)
 
 ```
 searchKey: syscall.libc_unmount_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26656,6 +25009,7 @@ func libc_unmount_trampoline()
 
 ```
 searchKey: syscall.write
+tags: [private]
 ```
 
 ```Go
@@ -26666,6 +25020,7 @@ func write(fd int, p []byte) (n int, err error)
 
 ```
 searchKey: syscall.libc_write_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26676,6 +25031,7 @@ func libc_write_trampoline()
 
 ```
 searchKey: syscall.writev
+tags: [private]
 ```
 
 ```Go
@@ -26686,6 +25042,7 @@ func writev(fd int, iovecs []Iovec) (cnt uintptr, err error)
 
 ```
 searchKey: syscall.libc_writev_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26696,6 +25053,7 @@ func libc_writev_trampoline()
 
 ```
 searchKey: syscall.mmap
+tags: [private]
 ```
 
 ```Go
@@ -26706,6 +25064,7 @@ func mmap(addr uintptr, length uintptr, prot int, flag int, fd int, pos int64) (
 
 ```
 searchKey: syscall.libc_mmap_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26716,6 +25075,7 @@ func libc_mmap_trampoline()
 
 ```
 searchKey: syscall.munmap
+tags: [private]
 ```
 
 ```Go
@@ -26726,6 +25086,7 @@ func munmap(addr uintptr, length uintptr) (err error)
 
 ```
 searchKey: syscall.libc_munmap_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26736,6 +25097,7 @@ func libc_munmap_trampoline()
 
 ```
 searchKey: syscall.fork
+tags: [private]
 ```
 
 ```Go
@@ -26746,6 +25108,7 @@ func fork() (pid int, err error)
 
 ```
 searchKey: syscall.libc_fork_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26756,6 +25119,7 @@ func libc_fork_trampoline()
 
 ```
 searchKey: syscall.ioctl
+tags: [private]
 ```
 
 ```Go
@@ -26766,6 +25130,7 @@ func ioctl(fd int, req int, arg int) (err error)
 
 ```
 searchKey: syscall.libc_ioctl_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26776,6 +25141,7 @@ func libc_ioctl_trampoline()
 
 ```
 searchKey: syscall.ioctlPtr
+tags: [private]
 ```
 
 ```Go
@@ -26786,6 +25152,7 @@ func ioctlPtr(fd int, req uint, arg unsafe.Pointer) (err error)
 
 ```
 searchKey: syscall.execve
+tags: [private]
 ```
 
 ```Go
@@ -26796,6 +25163,7 @@ func execve(path *byte, argv **byte, envp **byte) (err error)
 
 ```
 searchKey: syscall.libc_execve_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26806,6 +25174,7 @@ func libc_execve_trampoline()
 
 ```
 searchKey: syscall.exit
+tags: [private]
 ```
 
 ```Go
@@ -26816,6 +25185,7 @@ func exit(res int) (err error)
 
 ```
 searchKey: syscall.libc_exit_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26826,6 +25196,7 @@ func libc_exit_trampoline()
 
 ```
 searchKey: syscall.sysctl
+tags: [private]
 ```
 
 ```Go
@@ -26836,6 +25207,7 @@ func sysctl(mib []_C_int, old *byte, oldlen *uintptr, new *byte, newlen uintptr)
 
 ```
 searchKey: syscall.libc_sysctl_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26846,6 +25218,7 @@ func libc_sysctl_trampoline()
 
 ```
 searchKey: syscall.fcntlPtr
+tags: [private]
 ```
 
 ```Go
@@ -26856,6 +25229,7 @@ func fcntlPtr(fd int, cmd int, arg unsafe.Pointer) (val int, err error)
 
 ```
 searchKey: syscall.unlinkat
+tags: [private]
 ```
 
 ```Go
@@ -26866,6 +25240,7 @@ func unlinkat(fd int, path string, flags int) (err error)
 
 ```
 searchKey: syscall.libc_unlinkat_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26876,6 +25251,7 @@ func libc_unlinkat_trampoline()
 
 ```
 searchKey: syscall.openat
+tags: [private]
 ```
 
 ```Go
@@ -26886,6 +25262,7 @@ func openat(fd int, path string, flags int, perm uint32) (fdret int, err error)
 
 ```
 searchKey: syscall.libc_openat_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26896,6 +25273,7 @@ func libc_openat_trampoline()
 
 ```
 searchKey: syscall.getcwd
+tags: [private]
 ```
 
 ```Go
@@ -26906,6 +25284,7 @@ func getcwd(buf []byte) (n int, err error)
 
 ```
 searchKey: syscall.libc_getcwd_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26916,7 +25295,6 @@ func libc_getcwd_trampoline()
 
 ```
 searchKey: syscall.Fstat
-tags: [exported]
 ```
 
 ```Go
@@ -26927,6 +25305,7 @@ func Fstat(fd int, stat *Stat_t) (err error)
 
 ```
 searchKey: syscall.libc_fstat64_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26937,7 +25316,6 @@ func libc_fstat64_trampoline()
 
 ```
 searchKey: syscall.Fstatfs
-tags: [exported]
 ```
 
 ```Go
@@ -26948,6 +25326,7 @@ func Fstatfs(fd int, stat *Statfs_t) (err error)
 
 ```
 searchKey: syscall.libc_fstatfs64_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26958,7 +25337,6 @@ func libc_fstatfs64_trampoline()
 
 ```
 searchKey: syscall.Gettimeofday
-tags: [exported]
 ```
 
 ```Go
@@ -26969,6 +25347,7 @@ func Gettimeofday(tp *Timeval) (err error)
 
 ```
 searchKey: syscall.libc_gettimeofday_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -26979,7 +25358,6 @@ func libc_gettimeofday_trampoline()
 
 ```
 searchKey: syscall.Lstat
-tags: [exported]
 ```
 
 ```Go
@@ -26990,6 +25368,7 @@ func Lstat(path string, stat *Stat_t) (err error)
 
 ```
 searchKey: syscall.libc_lstat64_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -27000,7 +25379,6 @@ func libc_lstat64_trampoline()
 
 ```
 searchKey: syscall.Stat
-tags: [exported]
 ```
 
 ```Go
@@ -27011,6 +25389,7 @@ func Stat(path string, stat *Stat_t) (err error)
 
 ```
 searchKey: syscall.libc_stat64_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -27021,7 +25400,6 @@ func libc_stat64_trampoline()
 
 ```
 searchKey: syscall.Statfs
-tags: [exported]
 ```
 
 ```Go
@@ -27032,6 +25410,7 @@ func Statfs(path string, stat *Statfs_t) (err error)
 
 ```
 searchKey: syscall.libc_statfs64_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -27042,6 +25421,7 @@ func libc_statfs64_trampoline()
 
 ```
 searchKey: syscall.fstatat
+tags: [private]
 ```
 
 ```Go
@@ -27052,6 +25432,7 @@ func fstatat(fd int, path string, stat *Stat_t, flags int) (err error)
 
 ```
 searchKey: syscall.libc_fstatat64_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -27062,6 +25443,7 @@ func libc_fstatat64_trampoline()
 
 ```
 searchKey: syscall.ptrace1
+tags: [private]
 ```
 
 ```Go
@@ -27072,6 +25454,7 @@ func ptrace1(request int, pid int, addr uintptr, data uintptr) (err error)
 
 ```
 searchKey: syscall.libc_ptrace_trampoline
+tags: [private]
 ```
 
 ```Go

@@ -34,11 +34,14 @@ Package ot wraps github.com/opentracing/opentracing-go and github.com./opentraci
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TraceNone" href="#TraceNone">const TraceNone</a>
 
 ```
 searchKey: ot.TraceNone
-tags: [exported]
 ```
 
 ```Go
@@ -51,7 +54,6 @@ TraceNone turns off tracing.
 
 ```
 searchKey: ot.TraceSelective
-tags: [exported]
 ```
 
 ```Go
@@ -64,7 +66,6 @@ TraceSelective turns on tracing only for requests with the X-Sourcegraph-Should-
 
 ```
 searchKey: ot.TraceAll
-tags: [exported]
 ```
 
 ```Go
@@ -77,6 +78,7 @@ Comprehensive turns on tracing for all requests.
 
 ```
 searchKey: ot.traceHeader
+tags: [private]
 ```
 
 ```Go
@@ -87,6 +89,7 @@ const traceHeader = "X-Sourcegraph-Should-Trace"
 
 ```
 searchKey: ot.traceQuery
+tags: [private]
 ```
 
 ```Go
@@ -97,6 +100,7 @@ const traceQuery = "trace"
 
 ```
 searchKey: ot.shouldTraceKey
+tags: [private]
 ```
 
 ```Go
@@ -105,10 +109,15 @@ const shouldTraceKey key = iota
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="trPolicy" href="#trPolicy">var trPolicy</a>
 
 ```
 searchKey: ot.trPolicy
+tags: [private]
 ```
 
 ```Go
@@ -117,10 +126,15 @@ var trPolicy = atomic.NewString(string(TraceNone))
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="tracePolicy" href="#tracePolicy">type tracePolicy string</a>
 
 ```
 searchKey: ot.tracePolicy
+tags: [private]
 ```
 
 ```Go
@@ -131,7 +145,6 @@ type tracePolicy string
 
 ```
 searchKey: ot.GetTracePolicy
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +155,6 @@ func GetTracePolicy() tracePolicy
 
 ```
 searchKey: ot.Transport
-tags: [exported]
 ```
 
 ```Go
@@ -157,7 +169,6 @@ Transport wraps an underlying HTTP RoundTripper, injecting the X-Sourcegraph-Sho
 
 ```
 searchKey: ot.Transport.RoundTrip
-tags: [exported]
 ```
 
 ```Go
@@ -168,6 +179,7 @@ func (r *Transport) RoundTrip(req *http.Request) (*http.Response, error)
 
 ```
 searchKey: ot.key
+tags: [private]
 ```
 
 ```Go
@@ -176,11 +188,14 @@ type key int
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SetTracePolicy" href="#SetTracePolicy">func SetTracePolicy(newTracePolicy tracePolicy)</a>
 
 ```
 searchKey: ot.SetTracePolicy
-tags: [exported]
 ```
 
 ```Go
@@ -191,7 +206,6 @@ func SetTracePolicy(newTracePolicy tracePolicy)
 
 ```
 searchKey: ot.Middleware
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +230,6 @@ the request handler from the global tracer.
 
 ```
 searchKey: ot.MiddlewareWithTracer
-tags: [exported]
 ```
 
 ```Go
@@ -229,6 +242,7 @@ MiddlewareWithTracer is like Middleware, but uses the specified tracer instead o
 
 ```
 searchKey: ot.requestWantsTracing
+tags: [private]
 ```
 
 ```Go
@@ -241,7 +255,6 @@ requestWantsTrace returns true if a request is opting into tracing either via ou
 
 ```
 searchKey: ot.ShouldTrace
-tags: [exported]
 ```
 
 ```Go
@@ -254,7 +267,6 @@ ShouldTrace returns true if the shouldTraceKey context value is true.
 
 ```
 searchKey: ot.WithShouldTrace
-tags: [exported]
 ```
 
 ```Go
@@ -267,7 +279,6 @@ WithShouldTrace sets the shouldTraceKey context value.
 
 ```
 searchKey: ot.GetTracer
-tags: [exported]
 ```
 
 ```Go
@@ -280,6 +291,7 @@ GetTracer returns the tracer to use for the given context. If ShouldTrace return
 
 ```
 searchKey: ot.getTracer
+tags: [private]
 ```
 
 ```Go
@@ -292,7 +304,6 @@ getTracer is like GetTracer, but accepts a tracer as an argument. If ShouldTrace
 
 ```
 searchKey: ot.StartSpanFromContext
-tags: [exported]
 ```
 
 ```Go
@@ -305,7 +316,6 @@ StartSpanFromContext starts a span using the tracer returned by GetTracer.
 
 ```
 searchKey: ot.StartSpanFromContextWithTracer
-tags: [exported]
 ```
 
 ```Go

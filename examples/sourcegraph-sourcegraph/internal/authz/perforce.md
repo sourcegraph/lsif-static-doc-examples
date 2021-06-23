@@ -29,11 +29,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Provider" href="#Provider">type Provider struct</a>
 
 ```
 searchKey: perforce.Provider
-tags: [exported]
 ```
 
 ```Go
@@ -58,7 +61,6 @@ Provider implements authz.Provider for Perforce depot permissions.
 
 ```
 searchKey: perforce.NewProvider
-tags: [exported]
 ```
 
 ```Go
@@ -71,7 +73,6 @@ NewProvider returns a new Perforce authorization provider that uses the given ho
 
 ```
 searchKey: perforce.Provider.FetchAccount
-tags: [exported]
 ```
 
 ```Go
@@ -84,6 +85,7 @@ FetchAccount uses given user's verified emails to match users on the Perforce Se
 
 ```
 searchKey: perforce.Provider.canRevokeReadAccess
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +98,7 @@ canRevokeReadAccess returns true if the given access level is able to revoke rea
 
 ```
 searchKey: perforce.Provider.canGrantReadAccess
+tags: [private]
 ```
 
 ```Go
@@ -108,7 +111,6 @@ canGrantReadAccess returns true if the given access level is able to grant read 
 
 ```
 searchKey: perforce.Provider.FetchUserPerms
-tags: [exported]
 ```
 
 ```Go
@@ -121,6 +123,7 @@ FetchUserPerms returns a list of depot prefixes that the given user has access t
 
 ```
 searchKey: perforce.Provider.getAllUserEmails
+tags: [private]
 ```
 
 ```Go
@@ -133,6 +136,7 @@ getAllUserEmails returns a set of username <-> email pairs of all users in the P
 
 ```
 searchKey: perforce.Provider.getAllUsers
+tags: [private]
 ```
 
 ```Go
@@ -145,6 +149,7 @@ getAllUsers returns a list of usernames of all users in the Perforce server.
 
 ```
 searchKey: perforce.Provider.getGroupMembers
+tags: [private]
 ```
 
 ```Go
@@ -157,7 +162,6 @@ getGroupMembers returns all members of the given group in the Perforce server.
 
 ```
 searchKey: perforce.Provider.FetchRepoPerms
-tags: [exported]
 ```
 
 ```Go
@@ -170,7 +174,6 @@ FetchRepoPerms returns a list of users that have access to the given repository 
 
 ```
 searchKey: perforce.Provider.ServiceType
-tags: [exported]
 ```
 
 ```Go
@@ -181,7 +184,6 @@ func (p *Provider) ServiceType() string
 
 ```
 searchKey: perforce.Provider.ServiceID
-tags: [exported]
 ```
 
 ```Go
@@ -192,7 +194,6 @@ func (p *Provider) ServiceID() string
 
 ```
 searchKey: perforce.Provider.URN
-tags: [exported]
 ```
 
 ```Go
@@ -203,7 +204,6 @@ func (p *Provider) URN() string
 
 ```
 searchKey: perforce.Provider.Validate
-tags: [exported]
 ```
 
 ```Go
@@ -212,11 +212,14 @@ func (p *Provider) Validate() (problems []string)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewAuthzProviders" href="#NewAuthzProviders">func NewAuthzProviders(conns []*types.PerforceConnection) (ps []authz.Provider, problems []string, warnings []string)</a>
 
 ```
 searchKey: perforce.NewAuthzProviders
-tags: [exported]
 ```
 
 ```Go
@@ -229,6 +232,7 @@ NewAuthzProviders returns the set of Perforce authz providers derived from the c
 
 ```
 searchKey: perforce.newAuthzProvider
+tags: [private]
 ```
 
 ```Go
@@ -243,7 +247,6 @@ func newAuthzProvider(
 
 ```
 searchKey: perforce.ValidateAuthz
-tags: [exported]
 ```
 
 ```Go
@@ -256,6 +259,7 @@ ValidateAuthz validates the authorization fields of the given Perforce external 
 
 ```
 searchKey: perforce.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -266,6 +270,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: perforce.TestProvider_FetchAccount
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +281,7 @@ func TestProvider_FetchAccount(t *testing.T)
 
 ```
 searchKey: perforce.TestProvider_FetchUserPerms
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +292,7 @@ func TestProvider_FetchUserPerms(t *testing.T)
 
 ```
 searchKey: perforce.TestProvider_FetchRepoPerms
+tags: [private]
 ```
 
 ```Go

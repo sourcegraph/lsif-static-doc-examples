@@ -4,7 +4,9 @@
     "identifier": "syncer",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/syncer",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "priorityNormal",
                 "newPage": false,
                 "searchKey": "syncer.priorityNormal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "priorityHigh",
                 "newPage": false,
                 "searchKey": "syncer.priorityHigh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "minSyncDelay",
                 "newPage": false,
                 "searchKey": "syncer.minSyncDelay",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "maxSyncDelay",
                 "newPage": false,
                 "searchKey": "syncer.maxSyncDelay",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "syncerMetrics",
                 "newPage": false,
                 "searchKey": "syncer.syncerMetrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +180,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -182,7 +200,9 @@
                 "identifier": "scheduledSync",
                 "newPage": false,
                 "searchKey": "syncer.scheduledSync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -202,7 +222,9 @@
                 "identifier": "changesetPriorityQueue",
                 "newPage": false,
                 "searchKey": "syncer.changesetPriorityQueue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +242,9 @@
                       "identifier": "newChangesetPriorityQueue",
                       "newPage": false,
                       "searchKey": "syncer.newChangesetPriorityQueue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -240,7 +264,9 @@
                       "identifier": "changesetPriorityQueue.Len",
                       "newPage": false,
                       "searchKey": "syncer.changesetPriorityQueue.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -260,7 +286,9 @@
                       "identifier": "changesetPriorityQueue.Less",
                       "newPage": false,
                       "searchKey": "syncer.changesetPriorityQueue.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -280,7 +308,9 @@
                       "identifier": "changesetPriorityQueue.Swap",
                       "newPage": false,
                       "searchKey": "syncer.changesetPriorityQueue.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -300,7 +330,9 @@
                       "identifier": "changesetPriorityQueue.Push",
                       "newPage": false,
                       "searchKey": "syncer.changesetPriorityQueue.Push",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -320,7 +352,9 @@
                       "identifier": "changesetPriorityQueue.Pop",
                       "newPage": false,
                       "searchKey": "syncer.changesetPriorityQueue.Pop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -340,7 +374,9 @@
                       "identifier": "changesetPriorityQueue.Peek",
                       "newPage": false,
                       "searchKey": "syncer.changesetPriorityQueue.Peek",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -360,7 +396,9 @@
                       "identifier": "changesetPriorityQueue.Upsert",
                       "newPage": false,
                       "searchKey": "syncer.changesetPriorityQueue.Upsert",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -380,7 +418,9 @@
                       "identifier": "changesetPriorityQueue.Get",
                       "newPage": false,
                       "searchKey": "syncer.changesetPriorityQueue.Get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -400,7 +440,9 @@
                       "identifier": "changesetPriorityQueue.Remove",
                       "newPage": false,
                       "searchKey": "syncer.changesetPriorityQueue.Remove",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -423,7 +465,9 @@
                 "identifier": "priority",
                 "newPage": false,
                 "searchKey": "syncer.priority",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -443,9 +487,7 @@
                 "identifier": "SyncRegistry",
                 "newPage": false,
                 "searchKey": "syncer.SyncRegistry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -463,9 +505,7 @@
                       "identifier": "NewSyncRegistry",
                       "newPage": false,
                       "searchKey": "syncer.NewSyncRegistry",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -485,9 +525,7 @@
                       "identifier": "SyncRegistry.Add",
                       "newPage": false,
                       "searchKey": "syncer.SyncRegistry.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -507,9 +545,7 @@
                       "identifier": "SyncRegistry.EnqueueChangesetSyncs",
                       "newPage": false,
                       "searchKey": "syncer.SyncRegistry.EnqueueChangesetSyncs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -529,9 +565,7 @@
                       "identifier": "SyncRegistry.HandleExternalServiceSync",
                       "newPage": false,
                       "searchKey": "syncer.SyncRegistry.HandleExternalServiceSync",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -551,7 +585,9 @@
                       "identifier": "SyncRegistry.handlePriorityItems",
                       "newPage": false,
                       "searchKey": "syncer.SyncRegistry.handlePriorityItems",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -571,7 +607,9 @@
                       "identifier": "SyncRegistry.syncCodeHosts",
                       "newPage": false,
                       "searchKey": "syncer.SyncRegistry.syncCodeHosts",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -594,9 +632,7 @@
                 "identifier": "SyncStore",
                 "newPage": false,
                 "searchKey": "syncer.SyncStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -616,7 +652,9 @@
                 "identifier": "changesetSyncer",
                 "newPage": false,
                 "searchKey": "syncer.changesetSyncer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -634,7 +672,9 @@
                       "identifier": "changesetSyncer.Run",
                       "newPage": false,
                       "searchKey": "syncer.changesetSyncer.Run",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -654,7 +694,9 @@
                       "identifier": "changesetSyncer.computeSchedule",
                       "newPage": false,
                       "searchKey": "syncer.changesetSyncer.computeSchedule",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -674,7 +716,9 @@
                       "identifier": "changesetSyncer.SyncChangeset",
                       "newPage": false,
                       "searchKey": "syncer.changesetSyncer.SyncChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -697,7 +741,9 @@
                 "identifier": "MockSyncStore",
                 "newPage": false,
                 "searchKey": "syncer.MockSyncStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -715,7 +761,9 @@
                       "identifier": "MockSyncStore.ListChangesetSyncData",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.ListChangesetSyncData",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -735,7 +783,9 @@
                       "identifier": "MockSyncStore.GetChangeset",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.GetChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -755,7 +805,9 @@
                       "identifier": "MockSyncStore.UpdateChangeset",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.UpdateChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -775,7 +827,9 @@
                       "identifier": "MockSyncStore.UpsertChangesetEvents",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.UpsertChangesetEvents",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -795,7 +849,9 @@
                       "identifier": "MockSyncStore.GetSiteCredential",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.GetSiteCredential",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -815,7 +871,9 @@
                       "identifier": "MockSyncStore.GetExternalServiceIDs",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.GetExternalServiceIDs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -835,7 +893,9 @@
                       "identifier": "MockSyncStore.Transact",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.Transact",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -855,7 +915,9 @@
                       "identifier": "MockSyncStore.Repos",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.Repos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -875,7 +937,9 @@
                       "identifier": "MockSyncStore.ExternalServices",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.ExternalServices",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -895,7 +959,9 @@
                       "identifier": "MockSyncStore.UserCredentials",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.UserCredentials",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -915,7 +981,9 @@
                       "identifier": "MockSyncStore.DB",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.DB",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -935,7 +1003,9 @@
                       "identifier": "MockSyncStore.Clock",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.Clock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -955,7 +1025,9 @@
                       "identifier": "MockSyncStore.ListCodeHosts",
                       "newPage": false,
                       "searchKey": "syncer.MockSyncStore.ListCodeHosts",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -981,7 +1053,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -999,9 +1073,7 @@
                 "identifier": "NextSync",
                 "newPage": false,
                 "searchKey": "syncer.NextSync",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1021,7 +1093,9 @@
                 "identifier": "maxTime",
                 "newPage": false,
                 "searchKey": "syncer.maxTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1041,7 +1115,9 @@
                 "identifier": "absDuration",
                 "newPage": false,
                 "searchKey": "syncer.absDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1056,12 +1132,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/syncer#init",
+              "pathID": "/enterprise/internal/batches/syncer#init.syncer.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.syncer.go",
                 "newPage": false,
                 "searchKey": "syncer.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1081,9 +1159,7 @@
                 "identifier": "SyncChangeset",
                 "newPage": false,
                 "searchKey": "syncer.SyncChangeset",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1103,7 +1179,9 @@
                 "identifier": "loadChangesetSource",
                 "newPage": false,
                 "searchKey": "syncer.loadChangesetSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1123,7 +1201,9 @@
                 "identifier": "TestChangesetPriorityQueue",
                 "newPage": false,
                 "searchKey": "syncer.TestChangesetPriorityQueue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1143,7 +1223,9 @@
                 "identifier": "TestNextSync",
                 "newPage": false,
                 "searchKey": "syncer.TestNextSync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1163,7 +1245,9 @@
                 "identifier": "TestSyncerRun",
                 "newPage": false,
                 "searchKey": "syncer.TestSyncerRun",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1183,7 +1267,9 @@
                 "identifier": "TestSyncRegistry",
                 "newPage": false,
                 "searchKey": "syncer.TestSyncRegistry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1203,7 +1289,9 @@
                 "identifier": "TestLoadChangesetSource",
                 "newPage": false,
                 "searchKey": "syncer.TestLoadChangesetSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

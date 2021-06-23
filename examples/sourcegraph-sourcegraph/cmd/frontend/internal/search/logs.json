@@ -4,7 +4,9 @@
     "identifier": "logs",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/search/logs",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "LogSlowSearchesThreshold",
                 "newPage": false,
                 "searchKey": "logs.LogSlowSearchesThreshold",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "MapToLog15Ctx",
                 "newPage": false,
                 "searchKey": "logs.MapToLog15Ctx",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

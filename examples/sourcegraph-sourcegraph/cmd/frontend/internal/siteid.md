@@ -21,10 +21,15 @@ The "site ID" was formerly known as the "app ID".
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="inited" href="#inited">var inited</a>
 
 ```
 searchKey: siteid.inited
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +40,7 @@ var inited bool
 
 ```
 searchKey: siteid.siteID
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +51,7 @@ var siteID string
 
 ```
 searchKey: siteid.fatalln
+tags: [private]
 ```
 
 ```Go
@@ -54,11 +61,14 @@ var fatalln = log.Fatalln // overridden in tests
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Init" href="#Init">func Init()</a>
 
 ```
 searchKey: siteid.Init
-tags: [exported]
 ```
 
 ```Go
@@ -71,7 +81,6 @@ Init reads (or generates) the site ID. This func must be called exactly once bef
 
 ```
 searchKey: siteid.Get
-tags: [exported]
 ```
 
 ```Go
@@ -86,6 +95,7 @@ Get may only be called after Init has been called.
 
 ```
 searchKey: siteid.TestNotInited
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +106,7 @@ func TestNotInited(t *testing.T)
 
 ```
 searchKey: siteid.TestGet
+tags: [private]
 ```
 
 ```Go

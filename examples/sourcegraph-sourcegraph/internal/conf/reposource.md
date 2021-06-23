@@ -45,7 +45,7 @@
     * [func parseCloneURL(cloneURL string) (*url.URL, error)](#parseCloneURL)
     * [func hostname(url *url.URL) string](#hostname)
     * [func parseURLs(cloneURL, baseURL string) (parsedCloneURL, parsedBaseURL *url.URL, equalHosts bool, err error)](#parseURLs)
-    * [func init()](#init)
+    * [func init()](#init.custom.go)
     * [func CustomCloneURLToRepoName(cloneURL string) (repoName api.RepoName)](#CustomCloneURLToRepoName)
     * [func mapString(r *regexp.Regexp, in string, outTmpl string) string](#mapString)
     * [func GitHubRepoName(repositoryPathPattern, host, nameWithOwner string) api.RepoName](#GitHubRepoName)
@@ -68,11 +68,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NameTransformationRegex" href="#NameTransformationRegex">const NameTransformationRegex</a>
 
 ```
 searchKey: reposource.NameTransformationRegex
-tags: [exported]
 ```
 
 ```Go
@@ -83,7 +86,6 @@ const NameTransformationRegex NameTransformationKind = "regex"
 
 ```
 searchKey: reposource.DefaultRepositoryPathPattern
-tags: [exported]
 ```
 
 ```Go
@@ -92,10 +94,15 @@ const DefaultRepositoryPathPattern = "{base}/{repo}"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="nonSCPURLRegex" href="#nonSCPURLRegex">var nonSCPURLRegex</a>
 
 ```
 searchKey: reposource.nonSCPURLRegex
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +113,7 @@ var nonSCPURLRegex = lazyregexp.New(`^(git\+)?(https?|ssh|rsync|file|git)://`)
 
 ```
 searchKey: reposource.cloneURLResolvers
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +126,7 @@ cloneURLResolvers is the list of clone-URL-to-repo-URI mappings, derived from th
 
 ```
 searchKey: reposource.otherRepoNameReplacer
+tags: [private]
 ```
 
 ```Go
@@ -126,11 +135,14 @@ var otherRepoNameReplacer = strings.NewReplacer(":", "-", "@", "-", "//", "")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AWS" href="#AWS">type AWS struct</a>
 
 ```
 searchKey: reposource.AWS
-tags: [exported]
 ```
 
 ```Go
@@ -143,7 +155,6 @@ type AWS struct {
 
 ```
 searchKey: reposource.AWS.CloneURLToRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -154,7 +165,6 @@ func (c AWS) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err err
 
 ```
 searchKey: reposource.BitbucketCloud
-tags: [exported]
 ```
 
 ```Go
@@ -167,7 +177,6 @@ type BitbucketCloud struct {
 
 ```
 searchKey: reposource.BitbucketCloud.CloneURLToRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -178,7 +187,6 @@ func (c BitbucketCloud) CloneURLToRepoName(cloneURL string) (repoName api.RepoNa
 
 ```
 searchKey: reposource.BitbucketServer
-tags: [exported]
 ```
 
 ```Go
@@ -191,7 +199,6 @@ type BitbucketServer struct {
 
 ```
 searchKey: reposource.BitbucketServer.CloneURLToRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -202,7 +209,6 @@ func (c BitbucketServer) CloneURLToRepoName(cloneURL string) (repoName api.RepoN
 
 ```
 searchKey: reposource.RepoSource
-tags: [exported]
 ```
 
 ```Go
@@ -225,7 +231,6 @@ RepoSource is a wrapper around a repository source (typically a code host config
 
 ```
 searchKey: reposource.NameTransformationKind
-tags: [exported]
 ```
 
 ```Go
@@ -236,7 +241,6 @@ type NameTransformationKind string
 
 ```
 searchKey: reposource.NameTransformation
-tags: [exported]
 ```
 
 ```Go
@@ -255,7 +259,6 @@ NameTransformation describes the rule to transform a repository name.
 
 ```
 searchKey: reposource.NewNameTransformation
-tags: [exported]
 ```
 
 ```Go
@@ -266,7 +269,6 @@ func NewNameTransformation(opts NameTransformationOptions) (NameTransformation, 
 
 ```
 searchKey: reposource.NameTransformation.Kind
-tags: [exported]
 ```
 
 ```Go
@@ -277,7 +279,6 @@ func (nt NameTransformation) Kind() NameTransformationKind
 
 ```
 searchKey: reposource.NameTransformation.Transform
-tags: [exported]
 ```
 
 ```Go
@@ -290,7 +291,6 @@ Transform performs the transformation to given string.
 
 ```
 searchKey: reposource.NameTransformationOptions
-tags: [exported]
 ```
 
 ```Go
@@ -305,7 +305,6 @@ type NameTransformationOptions struct {
 
 ```
 searchKey: reposource.NameTransformations
-tags: [exported]
 ```
 
 ```Go
@@ -318,7 +317,6 @@ NameTransformations is a list of transformation rules.
 
 ```
 searchKey: reposource.CompileGitLabNameTransformations
-tags: [exported]
 ```
 
 ```Go
@@ -331,7 +329,6 @@ CompileGitLabNameTransformations compiles a list of GitLabNameTransformation int
 
 ```
 searchKey: reposource.NameTransformations.Transform
-tags: [exported]
 ```
 
 ```Go
@@ -344,6 +341,7 @@ Transform iterates and performs the list of transformations.
 
 ```
 searchKey: reposource.cloneURLResolver
+tags: [private]
 ```
 
 ```Go
@@ -357,7 +355,6 @@ type cloneURLResolver struct {
 
 ```
 searchKey: reposource.GitHub
-tags: [exported]
 ```
 
 ```Go
@@ -370,7 +367,6 @@ type GitHub struct {
 
 ```
 searchKey: reposource.GitHub.CloneURLToRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -381,7 +377,6 @@ func (c GitHub) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err 
 
 ```
 searchKey: reposource.GitLab
-tags: [exported]
 ```
 
 ```Go
@@ -394,7 +389,6 @@ type GitLab struct {
 
 ```
 searchKey: reposource.GitLab.CloneURLToRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -405,7 +399,6 @@ func (c GitLab) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err 
 
 ```
 searchKey: reposource.Gitolite
-tags: [exported]
 ```
 
 ```Go
@@ -418,7 +411,6 @@ type Gitolite struct {
 
 ```
 searchKey: reposource.Gitolite.CloneURLToRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -429,7 +421,6 @@ func (c Gitolite) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, er
 
 ```
 searchKey: reposource.Other
-tags: [exported]
 ```
 
 ```Go
@@ -442,7 +433,6 @@ type Other struct {
 
 ```
 searchKey: reposource.Other.CloneURLToRepoURI
-tags: [exported]
 ```
 
 ```Go
@@ -453,7 +443,6 @@ func (c Other) CloneURLToRepoURI(cloneURL string) (string, error)
 
 ```
 searchKey: reposource.Other.CloneURLToRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -464,6 +453,7 @@ func (c Other) CloneURLToRepoName(cloneURL string) (api.RepoName, error)
 
 ```
 searchKey: reposource.urlToRepoName
+tags: [private]
 ```
 
 ```Go
@@ -479,6 +469,7 @@ urlToRepoName represents a cloneURL and expected corresponding repo name
 
 ```
 searchKey: reposource.urlToRepoNameErr
+tags: [private]
 ```
 
 ```Go
@@ -493,11 +484,14 @@ urlToRepoNameErr is similar to urlToRepoName, but with an expected error value
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AWSRepoName" href="#AWSRepoName">func AWSRepoName(repositoryPathPattern, name string) api.RepoName</a>
 
 ```
 searchKey: reposource.AWSRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -508,7 +502,6 @@ func AWSRepoName(repositoryPathPattern, name string) api.RepoName
 
 ```
 searchKey: reposource.BitbucketCloudRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -519,7 +512,6 @@ func BitbucketCloudRepoName(repositoryPathPattern, host, nameWithOwner string) a
 
 ```
 searchKey: reposource.BitbucketServerRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -530,6 +522,7 @@ func BitbucketServerRepoName(repositoryPathPattern, host, projectKey, repoSlug s
 
 ```
 searchKey: reposource.parseCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +535,7 @@ parseCloneURL parses a git clone URL into a URL struct. It supports the SCP-styl
 
 ```
 searchKey: reposource.hostname
+tags: [private]
 ```
 
 ```Go
@@ -554,6 +548,7 @@ hostname returns the hostname of a URL without www.
 
 ```
 searchKey: reposource.parseURLs
+tags: [private]
 ```
 
 ```Go
@@ -562,10 +557,11 @@ func parseURLs(cloneURL, baseURL string) (parsedCloneURL, parsedBaseURL *url.URL
 
 parseURLs parses the clone URL and repository host base URL into structs. It also returns a boolean indicating whether the hostnames of the URLs match. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.custom.go" href="#init.custom.go">func init()</a>
 
 ```
 searchKey: reposource.init
+tags: [private]
 ```
 
 ```Go
@@ -576,7 +572,6 @@ func init()
 
 ```
 searchKey: reposource.CustomCloneURLToRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -589,6 +584,7 @@ CustomCloneURLToRepoName maps from clone URL to repo name using custom mappings 
 
 ```
 searchKey: reposource.mapString
+tags: [private]
 ```
 
 ```Go
@@ -599,7 +595,6 @@ func mapString(r *regexp.Regexp, in string, outTmpl string) string
 
 ```
 searchKey: reposource.GitHubRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -610,7 +605,6 @@ func GitHubRepoName(repositoryPathPattern, host, nameWithOwner string) api.RepoN
 
 ```
 searchKey: reposource.GitLabRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -621,7 +615,6 @@ func GitLabRepoName(repositoryPathPattern, host, pathWithNamespace string, nts N
 
 ```
 searchKey: reposource.GitoliteRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -634,6 +627,7 @@ GitoliteRepoName returns the Sourcegraph name for a repository given the Gitolit
 
 ```
 searchKey: reposource.cloneURLToRepoName
+tags: [private]
 ```
 
 ```Go
@@ -644,7 +638,6 @@ func cloneURLToRepoName(cloneURL, baseURL, repositoryPathPattern string) (string
 
 ```
 searchKey: reposource.OtherRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -655,7 +648,6 @@ func OtherRepoName(repositoryPathPattern, base, relativeRepoPath string) string
 
 ```
 searchKey: reposource.PerforceRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -666,6 +658,7 @@ func PerforceRepoName(repositoryPathPattern, depot string) api.RepoName
 
 ```
 searchKey: reposource.TestAWS_cloneURLToRepoName
+tags: [private]
 ```
 
 ```Go
@@ -676,6 +669,7 @@ func TestAWS_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestBitbucketCloud_cloneURLToRepoName
+tags: [private]
 ```
 
 ```Go
@@ -686,6 +680,7 @@ func TestBitbucketCloud_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestBitbucketServer_cloneURLToRepoName
+tags: [private]
 ```
 
 ```Go
@@ -696,6 +691,7 @@ func TestBitbucketServer_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestParseCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -706,6 +702,7 @@ func TestParseCloneURL(t *testing.T)
 
 ```
 searchKey: reposource.TestNameTransformations
+tags: [private]
 ```
 
 ```Go
@@ -716,6 +713,7 @@ func TestNameTransformations(t *testing.T)
 
 ```
 searchKey: reposource.TestCustomCloneURLToRepoName
+tags: [private]
 ```
 
 ```Go
@@ -726,6 +724,7 @@ func TestCustomCloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestGitHub_cloneURLToRepoName
+tags: [private]
 ```
 
 ```Go
@@ -736,6 +735,7 @@ func TestGitHub_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestGitLab_cloneURLToRepoName
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +746,7 @@ func TestGitLab_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestGitolite_cloneURLToRepoName
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +757,7 @@ func TestGitolite_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestOtherCloneURLToRepoName
+tags: [private]
 ```
 
 ```Go

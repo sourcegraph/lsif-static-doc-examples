@@ -4,9 +4,7 @@
     "identifier": "rpc",
     "newPage": true,
     "searchKey": "net/rpc",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "debugText",
                 "newPage": false,
                 "searchKey": "rpc.debugText",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,9 +62,7 @@
                 "identifier": "DefaultRPCPath",
                 "newPage": false,
                 "searchKey": "rpc.DefaultRPCPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -86,9 +82,7 @@
                 "identifier": "DefaultDebugPath",
                 "newPage": false,
                 "searchKey": "rpc.DefaultDebugPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -108,7 +102,9 @@
                 "identifier": "newHttpPath",
                 "newPage": false,
                 "searchKey": "rpc.newHttpPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -131,9 +127,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -151,9 +145,7 @@
                 "identifier": "ErrShutdown",
                 "newPage": false,
                 "searchKey": "rpc.ErrShutdown",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -173,7 +165,9 @@
                 "identifier": "debug",
                 "newPage": false,
                 "searchKey": "rpc.debug",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -193,7 +187,9 @@
                 "identifier": "debugLog",
                 "newPage": false,
                 "searchKey": "rpc.debugLog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -213,7 +209,9 @@
                 "identifier": "typeOfError",
                 "newPage": false,
                 "searchKey": "rpc.typeOfError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -233,9 +231,7 @@
                 "identifier": "DefaultServer",
                 "newPage": false,
                 "searchKey": "rpc.DefaultServer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -255,7 +251,9 @@
                 "identifier": "invalidRequest",
                 "newPage": false,
                 "searchKey": "rpc.invalidRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -275,7 +273,9 @@
                 "identifier": "connected",
                 "newPage": false,
                 "searchKey": "rpc.connected",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -295,7 +295,9 @@
                 "identifier": "newServer",
                 "newPage": false,
                 "searchKey": "rpc.newServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -315,7 +317,9 @@
                 "identifier": "serverAddr",
                 "newPage": false,
                 "searchKey": "rpc.serverAddr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -335,7 +339,9 @@
                 "identifier": "newServerAddr",
                 "newPage": false,
                 "searchKey": "rpc.newServerAddr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -355,7 +361,9 @@
                 "identifier": "httpServerAddr",
                 "newPage": false,
                 "searchKey": "rpc.httpServerAddr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -375,7 +383,9 @@
                 "identifier": "once",
                 "newPage": false,
                 "searchKey": "rpc.once",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -395,7 +405,9 @@
                 "identifier": "newOnce",
                 "newPage": false,
                 "searchKey": "rpc.newOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -415,7 +427,9 @@
                 "identifier": "httpOnce",
                 "newPage": false,
                 "searchKey": "rpc.httpOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -438,9 +452,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -458,9 +470,7 @@
                 "identifier": "ServerError",
                 "newPage": false,
                 "searchKey": "rpc.ServerError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -478,9 +488,7 @@
                       "identifier": "ServerError.Error",
                       "newPage": false,
                       "searchKey": "rpc.ServerError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -503,9 +511,7 @@
                 "identifier": "Call",
                 "newPage": false,
                 "searchKey": "rpc.Call",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -523,7 +529,9 @@
                       "identifier": "Call.done",
                       "newPage": false,
                       "searchKey": "rpc.Call.done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -546,9 +554,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "rpc.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -566,9 +572,7 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "rpc.NewClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -588,9 +592,7 @@
                       "identifier": "NewClientWithCodec",
                       "newPage": false,
                       "searchKey": "rpc.NewClientWithCodec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -610,9 +612,7 @@
                       "identifier": "DialHTTP",
                       "newPage": false,
                       "searchKey": "rpc.DialHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -632,9 +632,7 @@
                       "identifier": "DialHTTPPath",
                       "newPage": false,
                       "searchKey": "rpc.DialHTTPPath",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -654,9 +652,7 @@
                       "identifier": "Dial",
                       "newPage": false,
                       "searchKey": "rpc.Dial",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -676,7 +672,9 @@
                       "identifier": "dialDirect",
                       "newPage": false,
                       "searchKey": "rpc.dialDirect",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -696,7 +694,9 @@
                       "identifier": "dialHTTP",
                       "newPage": false,
                       "searchKey": "rpc.dialHTTP",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -716,7 +716,9 @@
                       "identifier": "Client.send",
                       "newPage": false,
                       "searchKey": "rpc.Client.send",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -736,7 +738,9 @@
                       "identifier": "Client.input",
                       "newPage": false,
                       "searchKey": "rpc.Client.input",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -756,9 +760,7 @@
                       "identifier": "Client.Close",
                       "newPage": false,
                       "searchKey": "rpc.Client.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -778,9 +780,7 @@
                       "identifier": "Client.Go",
                       "newPage": false,
                       "searchKey": "rpc.Client.Go",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -800,9 +800,7 @@
                       "identifier": "Client.Call",
                       "newPage": false,
                       "searchKey": "rpc.Client.Call",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -825,9 +823,7 @@
                 "identifier": "ClientCodec",
                 "newPage": false,
                 "searchKey": "rpc.ClientCodec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -847,7 +843,9 @@
                 "identifier": "gobClientCodec",
                 "newPage": false,
                 "searchKey": "rpc.gobClientCodec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -865,7 +863,9 @@
                       "identifier": "gobClientCodec.WriteRequest",
                       "newPage": false,
                       "searchKey": "rpc.gobClientCodec.WriteRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -885,7 +885,9 @@
                       "identifier": "gobClientCodec.ReadResponseHeader",
                       "newPage": false,
                       "searchKey": "rpc.gobClientCodec.ReadResponseHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -905,7 +907,9 @@
                       "identifier": "gobClientCodec.ReadResponseBody",
                       "newPage": false,
                       "searchKey": "rpc.gobClientCodec.ReadResponseBody",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -925,7 +929,9 @@
                       "identifier": "gobClientCodec.Close",
                       "newPage": false,
                       "searchKey": "rpc.gobClientCodec.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -948,7 +954,9 @@
                 "identifier": "debugMethod",
                 "newPage": false,
                 "searchKey": "rpc.debugMethod",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -968,7 +976,9 @@
                 "identifier": "methodArray",
                 "newPage": false,
                 "searchKey": "rpc.methodArray",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -986,7 +996,9 @@
                       "identifier": "methodArray.Len",
                       "newPage": false,
                       "searchKey": "rpc.methodArray.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1006,7 +1018,9 @@
                       "identifier": "methodArray.Less",
                       "newPage": false,
                       "searchKey": "rpc.methodArray.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1026,7 +1040,9 @@
                       "identifier": "methodArray.Swap",
                       "newPage": false,
                       "searchKey": "rpc.methodArray.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1049,7 +1065,9 @@
                 "identifier": "debugService",
                 "newPage": false,
                 "searchKey": "rpc.debugService",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1069,7 +1087,9 @@
                 "identifier": "serviceArray",
                 "newPage": false,
                 "searchKey": "rpc.serviceArray",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1087,7 +1107,9 @@
                       "identifier": "serviceArray.Len",
                       "newPage": false,
                       "searchKey": "rpc.serviceArray.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1107,7 +1129,9 @@
                       "identifier": "serviceArray.Less",
                       "newPage": false,
                       "searchKey": "rpc.serviceArray.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1127,7 +1151,9 @@
                       "identifier": "serviceArray.Swap",
                       "newPage": false,
                       "searchKey": "rpc.serviceArray.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1150,7 +1176,9 @@
                 "identifier": "debugHTTP",
                 "newPage": false,
                 "searchKey": "rpc.debugHTTP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1168,7 +1196,9 @@
                       "identifier": "debugHTTP.ServeHTTP",
                       "newPage": false,
                       "searchKey": "rpc.debugHTTP.ServeHTTP",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1191,7 +1221,9 @@
                 "identifier": "methodType",
                 "newPage": false,
                 "searchKey": "rpc.methodType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1209,7 +1241,9 @@
                       "identifier": "methodType.NumCalls",
                       "newPage": false,
                       "searchKey": "rpc.methodType.NumCalls",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1232,7 +1266,9 @@
                 "identifier": "service",
                 "newPage": false,
                 "searchKey": "rpc.service",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1250,7 +1286,9 @@
                       "identifier": "service.call",
                       "newPage": false,
                       "searchKey": "rpc.service.call",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1273,9 +1311,7 @@
                 "identifier": "Request",
                 "newPage": false,
                 "searchKey": "rpc.Request",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1295,9 +1331,7 @@
                 "identifier": "Response",
                 "newPage": false,
                 "searchKey": "rpc.Response",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1317,9 +1351,7 @@
                 "identifier": "Server",
                 "newPage": false,
                 "searchKey": "rpc.Server",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1337,9 +1369,7 @@
                       "identifier": "NewServer",
                       "newPage": false,
                       "searchKey": "rpc.NewServer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1359,9 +1389,7 @@
                       "identifier": "Server.Register",
                       "newPage": false,
                       "searchKey": "rpc.Server.Register",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1381,9 +1409,7 @@
                       "identifier": "Server.RegisterName",
                       "newPage": false,
                       "searchKey": "rpc.Server.RegisterName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1403,7 +1429,9 @@
                       "identifier": "Server.register",
                       "newPage": false,
                       "searchKey": "rpc.Server.register",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1423,7 +1451,9 @@
                       "identifier": "Server.sendResponse",
                       "newPage": false,
                       "searchKey": "rpc.Server.sendResponse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1443,9 +1473,7 @@
                       "identifier": "Server.ServeConn",
                       "newPage": false,
                       "searchKey": "rpc.Server.ServeConn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1465,9 +1493,7 @@
                       "identifier": "Server.ServeCodec",
                       "newPage": false,
                       "searchKey": "rpc.Server.ServeCodec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1487,9 +1513,7 @@
                       "identifier": "Server.ServeRequest",
                       "newPage": false,
                       "searchKey": "rpc.Server.ServeRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1509,7 +1533,9 @@
                       "identifier": "Server.getRequest",
                       "newPage": false,
                       "searchKey": "rpc.Server.getRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1529,7 +1555,9 @@
                       "identifier": "Server.freeRequest",
                       "newPage": false,
                       "searchKey": "rpc.Server.freeRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1549,7 +1577,9 @@
                       "identifier": "Server.getResponse",
                       "newPage": false,
                       "searchKey": "rpc.Server.getResponse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1569,7 +1599,9 @@
                       "identifier": "Server.freeResponse",
                       "newPage": false,
                       "searchKey": "rpc.Server.freeResponse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1589,7 +1621,9 @@
                       "identifier": "Server.readRequest",
                       "newPage": false,
                       "searchKey": "rpc.Server.readRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1609,7 +1643,9 @@
                       "identifier": "Server.readRequestHeader",
                       "newPage": false,
                       "searchKey": "rpc.Server.readRequestHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1629,9 +1665,7 @@
                       "identifier": "Server.Accept",
                       "newPage": false,
                       "searchKey": "rpc.Server.Accept",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1651,9 +1685,7 @@
                       "identifier": "Server.ServeHTTP",
                       "newPage": false,
                       "searchKey": "rpc.Server.ServeHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1673,9 +1705,7 @@
                       "identifier": "Server.HandleHTTP",
                       "newPage": false,
                       "searchKey": "rpc.Server.HandleHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1698,7 +1728,9 @@
                 "identifier": "gobServerCodec",
                 "newPage": false,
                 "searchKey": "rpc.gobServerCodec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1716,7 +1748,9 @@
                       "identifier": "gobServerCodec.ReadRequestHeader",
                       "newPage": false,
                       "searchKey": "rpc.gobServerCodec.ReadRequestHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1736,7 +1770,9 @@
                       "identifier": "gobServerCodec.ReadRequestBody",
                       "newPage": false,
                       "searchKey": "rpc.gobServerCodec.ReadRequestBody",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1756,7 +1792,9 @@
                       "identifier": "gobServerCodec.WriteResponse",
                       "newPage": false,
                       "searchKey": "rpc.gobServerCodec.WriteResponse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1776,7 +1814,9 @@
                       "identifier": "gobServerCodec.Close",
                       "newPage": false,
                       "searchKey": "rpc.gobServerCodec.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1799,9 +1839,7 @@
                 "identifier": "ServerCodec",
                 "newPage": false,
                 "searchKey": "rpc.ServerCodec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1821,7 +1859,9 @@
                 "identifier": "shutdownCodec",
                 "newPage": false,
                 "searchKey": "rpc.shutdownCodec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1839,7 +1879,9 @@
                       "identifier": "shutdownCodec.WriteRequest",
                       "newPage": false,
                       "searchKey": "rpc.shutdownCodec.WriteRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1859,7 +1901,9 @@
                       "identifier": "shutdownCodec.ReadResponseBody",
                       "newPage": false,
                       "searchKey": "rpc.shutdownCodec.ReadResponseBody",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1879,7 +1923,9 @@
                       "identifier": "shutdownCodec.ReadResponseHeader",
                       "newPage": false,
                       "searchKey": "rpc.shutdownCodec.ReadResponseHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1899,7 +1945,9 @@
                       "identifier": "shutdownCodec.Close",
                       "newPage": false,
                       "searchKey": "rpc.shutdownCodec.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1922,7 +1970,9 @@
                 "identifier": "R",
                 "newPage": false,
                 "searchKey": "rpc.R",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1942,7 +1992,9 @@
                 "identifier": "S",
                 "newPage": false,
                 "searchKey": "rpc.S",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1960,7 +2012,9 @@
                       "identifier": "S.Recv",
                       "newPage": false,
                       "searchKey": "rpc.S.Recv",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1983,7 +2037,9 @@
                 "identifier": "Args",
                 "newPage": false,
                 "searchKey": "rpc.Args",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2003,7 +2059,9 @@
                 "identifier": "Reply",
                 "newPage": false,
                 "searchKey": "rpc.Reply",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2023,7 +2081,9 @@
                 "identifier": "Arith",
                 "newPage": false,
                 "searchKey": "rpc.Arith",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2041,7 +2101,9 @@
                       "identifier": "Arith.Add",
                       "newPage": false,
                       "searchKey": "rpc.Arith.Add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2061,7 +2123,9 @@
                       "identifier": "Arith.Mul",
                       "newPage": false,
                       "searchKey": "rpc.Arith.Mul",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2081,7 +2145,9 @@
                       "identifier": "Arith.Div",
                       "newPage": false,
                       "searchKey": "rpc.Arith.Div",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2101,7 +2167,9 @@
                       "identifier": "Arith.String",
                       "newPage": false,
                       "searchKey": "rpc.Arith.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2121,7 +2189,9 @@
                       "identifier": "Arith.Scan",
                       "newPage": false,
                       "searchKey": "rpc.Arith.Scan",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2141,7 +2211,9 @@
                       "identifier": "Arith.Error",
                       "newPage": false,
                       "searchKey": "rpc.Arith.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2161,7 +2233,9 @@
                       "identifier": "Arith.SleepMilli",
                       "newPage": false,
                       "searchKey": "rpc.Arith.SleepMilli",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2184,7 +2258,9 @@
                 "identifier": "hidden",
                 "newPage": false,
                 "searchKey": "rpc.hidden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2202,7 +2278,9 @@
                       "identifier": "hidden.Exported",
                       "newPage": false,
                       "searchKey": "rpc.hidden.Exported",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2225,7 +2303,9 @@
                 "identifier": "Embed",
                 "newPage": false,
                 "searchKey": "rpc.Embed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2245,7 +2325,9 @@
                 "identifier": "BuiltinTypes",
                 "newPage": false,
                 "searchKey": "rpc.BuiltinTypes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2263,7 +2345,9 @@
                       "identifier": "BuiltinTypes.Map",
                       "newPage": false,
                       "searchKey": "rpc.BuiltinTypes.Map",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2283,7 +2367,9 @@
                       "identifier": "BuiltinTypes.Slice",
                       "newPage": false,
                       "searchKey": "rpc.BuiltinTypes.Slice",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2303,7 +2389,9 @@
                       "identifier": "BuiltinTypes.Array",
                       "newPage": false,
                       "searchKey": "rpc.BuiltinTypes.Array",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2326,7 +2414,9 @@
                 "identifier": "CodecEmulator",
                 "newPage": false,
                 "searchKey": "rpc.CodecEmulator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2344,7 +2434,9 @@
                       "identifier": "CodecEmulator.Call",
                       "newPage": false,
                       "searchKey": "rpc.CodecEmulator.Call",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2364,7 +2456,9 @@
                       "identifier": "CodecEmulator.ReadRequestHeader",
                       "newPage": false,
                       "searchKey": "rpc.CodecEmulator.ReadRequestHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2384,7 +2478,9 @@
                       "identifier": "CodecEmulator.ReadRequestBody",
                       "newPage": false,
                       "searchKey": "rpc.CodecEmulator.ReadRequestBody",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2404,7 +2500,9 @@
                       "identifier": "CodecEmulator.WriteResponse",
                       "newPage": false,
                       "searchKey": "rpc.CodecEmulator.WriteResponse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2424,7 +2522,9 @@
                       "identifier": "CodecEmulator.Close",
                       "newPage": false,
                       "searchKey": "rpc.CodecEmulator.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2447,7 +2547,9 @@
                 "identifier": "ReplyNotPointer",
                 "newPage": false,
                 "searchKey": "rpc.ReplyNotPointer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2465,7 +2567,9 @@
                       "identifier": "ReplyNotPointer.ReplyNotPointer",
                       "newPage": false,
                       "searchKey": "rpc.ReplyNotPointer.ReplyNotPointer",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2488,7 +2592,9 @@
                 "identifier": "ArgNotPublic",
                 "newPage": false,
                 "searchKey": "rpc.ArgNotPublic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2506,7 +2612,9 @@
                       "identifier": "ArgNotPublic.ArgNotPublic",
                       "newPage": false,
                       "searchKey": "rpc.ArgNotPublic.ArgNotPublic",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2529,7 +2637,9 @@
                 "identifier": "ReplyNotPublic",
                 "newPage": false,
                 "searchKey": "rpc.ReplyNotPublic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2547,7 +2657,9 @@
                       "identifier": "ReplyNotPublic.ReplyNotPublic",
                       "newPage": false,
                       "searchKey": "rpc.ReplyNotPublic.ReplyNotPublic",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2570,7 +2682,9 @@
                 "identifier": "NeedsPtrType",
                 "newPage": false,
                 "searchKey": "rpc.NeedsPtrType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2588,7 +2702,9 @@
                       "identifier": "NeedsPtrType.NeedsPtrType",
                       "newPage": false,
                       "searchKey": "rpc.NeedsPtrType.NeedsPtrType",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2611,7 +2727,9 @@
                 "identifier": "local",
                 "newPage": false,
                 "searchKey": "rpc.local",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2631,7 +2749,9 @@
                 "identifier": "WriteFailCodec",
                 "newPage": false,
                 "searchKey": "rpc.WriteFailCodec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2649,7 +2769,9 @@
                       "identifier": "WriteFailCodec.WriteRequest",
                       "newPage": false,
                       "searchKey": "rpc.WriteFailCodec.WriteRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2669,7 +2791,9 @@
                       "identifier": "WriteFailCodec.ReadResponseHeader",
                       "newPage": false,
                       "searchKey": "rpc.WriteFailCodec.ReadResponseHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2689,7 +2813,9 @@
                       "identifier": "WriteFailCodec.ReadResponseBody",
                       "newPage": false,
                       "searchKey": "rpc.WriteFailCodec.ReadResponseBody",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2709,7 +2835,9 @@
                       "identifier": "WriteFailCodec.Close",
                       "newPage": false,
                       "searchKey": "rpc.WriteFailCodec.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2732,7 +2860,9 @@
                 "identifier": "writeCrasher",
                 "newPage": false,
                 "searchKey": "rpc.writeCrasher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2750,7 +2880,9 @@
                       "identifier": "writeCrasher.Close",
                       "newPage": false,
                       "searchKey": "rpc.writeCrasher.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2770,7 +2902,9 @@
                       "identifier": "writeCrasher.Read",
                       "newPage": false,
                       "searchKey": "rpc.writeCrasher.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2790,7 +2924,9 @@
                       "identifier": "writeCrasher.Write",
                       "newPage": false,
                       "searchKey": "rpc.writeCrasher.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2816,9 +2952,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2836,7 +2970,9 @@
                 "identifier": "isExportedOrBuiltinType",
                 "newPage": false,
                 "searchKey": "rpc.isExportedOrBuiltinType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2856,7 +2992,9 @@
                 "identifier": "suitableMethods",
                 "newPage": false,
                 "searchKey": "rpc.suitableMethods",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2876,9 +3014,7 @@
                 "identifier": "Register",
                 "newPage": false,
                 "searchKey": "rpc.Register",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2898,9 +3034,7 @@
                 "identifier": "RegisterName",
                 "newPage": false,
                 "searchKey": "rpc.RegisterName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2920,9 +3054,7 @@
                 "identifier": "ServeConn",
                 "newPage": false,
                 "searchKey": "rpc.ServeConn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2942,9 +3074,7 @@
                 "identifier": "ServeCodec",
                 "newPage": false,
                 "searchKey": "rpc.ServeCodec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2964,9 +3094,7 @@
                 "identifier": "ServeRequest",
                 "newPage": false,
                 "searchKey": "rpc.ServeRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2986,9 +3114,7 @@
                 "identifier": "Accept",
                 "newPage": false,
                 "searchKey": "rpc.Accept",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3008,9 +3134,7 @@
                 "identifier": "HandleHTTP",
                 "newPage": false,
                 "searchKey": "rpc.HandleHTTP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3030,7 +3154,9 @@
                 "identifier": "TestCloseCodec",
                 "newPage": false,
                 "searchKey": "rpc.TestCloseCodec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3050,7 +3176,9 @@
                 "identifier": "TestGobError",
                 "newPage": false,
                 "searchKey": "rpc.TestGobError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3070,7 +3198,9 @@
                 "identifier": "listenTCP",
                 "newPage": false,
                 "searchKey": "rpc.listenTCP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3090,7 +3220,9 @@
                 "identifier": "startServer",
                 "newPage": false,
                 "searchKey": "rpc.startServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3110,7 +3242,9 @@
                 "identifier": "startNewServer",
                 "newPage": false,
                 "searchKey": "rpc.startNewServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3130,7 +3264,9 @@
                 "identifier": "startHttpServer",
                 "newPage": false,
                 "searchKey": "rpc.startHttpServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3150,7 +3286,9 @@
                 "identifier": "TestRPC",
                 "newPage": false,
                 "searchKey": "rpc.TestRPC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3170,7 +3308,9 @@
                 "identifier": "testRPC",
                 "newPage": false,
                 "searchKey": "rpc.testRPC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3190,7 +3330,9 @@
                 "identifier": "testNewServerRPC",
                 "newPage": false,
                 "searchKey": "rpc.testNewServerRPC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3210,7 +3352,9 @@
                 "identifier": "TestHTTP",
                 "newPage": false,
                 "searchKey": "rpc.TestHTTP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3230,7 +3374,9 @@
                 "identifier": "testHTTPRPC",
                 "newPage": false,
                 "searchKey": "rpc.testHTTPRPC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3250,7 +3396,9 @@
                 "identifier": "TestBuiltinTypes",
                 "newPage": false,
                 "searchKey": "rpc.TestBuiltinTypes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3270,7 +3418,9 @@
                 "identifier": "TestServeRequest",
                 "newPage": false,
                 "searchKey": "rpc.TestServeRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3290,7 +3440,9 @@
                 "identifier": "testServeRequest",
                 "newPage": false,
                 "searchKey": "rpc.testServeRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3310,7 +3462,9 @@
                 "identifier": "TestRegistrationError",
                 "newPage": false,
                 "searchKey": "rpc.TestRegistrationError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3330,7 +3484,9 @@
                 "identifier": "TestSendDeadlock",
                 "newPage": false,
                 "searchKey": "rpc.TestSendDeadlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3350,7 +3506,9 @@
                 "identifier": "testSendDeadlock",
                 "newPage": false,
                 "searchKey": "rpc.testSendDeadlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3370,7 +3528,9 @@
                 "identifier": "countMallocs",
                 "newPage": false,
                 "searchKey": "rpc.countMallocs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3390,7 +3550,9 @@
                 "identifier": "TestCountMallocs",
                 "newPage": false,
                 "searchKey": "rpc.TestCountMallocs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3410,7 +3572,9 @@
                 "identifier": "TestCountMallocsOverHTTP",
                 "newPage": false,
                 "searchKey": "rpc.TestCountMallocsOverHTTP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3430,7 +3594,9 @@
                 "identifier": "TestClientWriteError",
                 "newPage": false,
                 "searchKey": "rpc.TestClientWriteError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3450,7 +3616,9 @@
                 "identifier": "TestTCPClose",
                 "newPage": false,
                 "searchKey": "rpc.TestTCPClose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3470,7 +3638,9 @@
                 "identifier": "TestErrorAfterClientClose",
                 "newPage": false,
                 "searchKey": "rpc.TestErrorAfterClientClose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3490,7 +3660,9 @@
                 "identifier": "TestAcceptExitAfterListenerClose",
                 "newPage": false,
                 "searchKey": "rpc.TestAcceptExitAfterListenerClose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3510,7 +3682,9 @@
                 "identifier": "TestShutdown",
                 "newPage": false,
                 "searchKey": "rpc.TestShutdown",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3530,7 +3704,9 @@
                 "identifier": "benchmarkEndToEnd",
                 "newPage": false,
                 "searchKey": "rpc.benchmarkEndToEnd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3550,7 +3726,9 @@
                 "identifier": "benchmarkEndToEndAsync",
                 "newPage": false,
                 "searchKey": "rpc.benchmarkEndToEndAsync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3570,7 +3748,9 @@
                 "identifier": "BenchmarkEndToEnd",
                 "newPage": false,
                 "searchKey": "rpc.BenchmarkEndToEnd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3590,7 +3770,9 @@
                 "identifier": "BenchmarkEndToEndHTTP",
                 "newPage": false,
                 "searchKey": "rpc.BenchmarkEndToEndHTTP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3610,7 +3792,9 @@
                 "identifier": "BenchmarkEndToEndAsync",
                 "newPage": false,
                 "searchKey": "rpc.BenchmarkEndToEndAsync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3630,7 +3814,9 @@
                 "identifier": "BenchmarkEndToEndAsyncHTTP",
                 "newPage": false,
                 "searchKey": "rpc.BenchmarkEndToEndAsyncHTTP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

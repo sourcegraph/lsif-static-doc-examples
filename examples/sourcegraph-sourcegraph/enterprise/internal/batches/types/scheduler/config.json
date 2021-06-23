@@ -4,7 +4,9 @@
     "identifier": "config",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/types/scheduler/config",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "config",
                 "newPage": false,
                 "searchKey": "config.config",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "mu",
                 "newPage": false,
                 "searchKey": "config.mu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "configuration",
                 "newPage": false,
                 "searchKey": "config.configuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -119,7 +131,9 @@
                       "identifier": "ensureConfig",
                       "newPage": false,
                       "searchKey": "config.ensureConfig",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -139,7 +153,9 @@
                       "identifier": "newConfiguration",
                       "newPage": false,
                       "searchKey": "config.newConfiguration",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -159,7 +175,9 @@
                       "identifier": "configuration.Active",
                       "newPage": false,
                       "searchKey": "config.configuration.Active",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -179,7 +197,9 @@
                       "identifier": "configuration.Subscribe",
                       "newPage": false,
                       "searchKey": "config.configuration.Subscribe",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -199,7 +219,9 @@
                       "identifier": "configuration.Unsubscribe",
                       "newPage": false,
                       "searchKey": "config.configuration.Unsubscribe",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -219,7 +241,9 @@
                       "identifier": "configuration.notify",
                       "newPage": false,
                       "searchKey": "config.configuration.notify",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -245,7 +269,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -263,9 +289,7 @@
                 "identifier": "ActiveWindow",
                 "newPage": false,
                 "searchKey": "config.ActiveWindow",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -285,9 +309,7 @@
                 "identifier": "Subscribe",
                 "newPage": false,
                 "searchKey": "config.Subscribe",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -307,9 +329,7 @@
                 "identifier": "Unsubscribe",
                 "newPage": false,
                 "searchKey": "config.Unsubscribe",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -329,9 +349,7 @@
                 "identifier": "Reset",
                 "newPage": false,
                 "searchKey": "config.Reset",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -351,7 +369,9 @@
                 "identifier": "sameConfiguration",
                 "newPage": false,
                 "searchKey": "config.sameConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -371,7 +391,9 @@
                 "identifier": "TestConfiguration",
                 "newPage": false,
                 "searchKey": "config.TestConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

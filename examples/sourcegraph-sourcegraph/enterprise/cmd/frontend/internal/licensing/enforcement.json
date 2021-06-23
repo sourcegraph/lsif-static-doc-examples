@@ -4,7 +4,9 @@
     "identifier": "enforcement",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/licensing/enforcement",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ExternalServicesStore",
                 "newPage": false,
                 "searchKey": "enforcement.ExternalServicesStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "fakeDB",
                 "newPage": false,
                 "searchKey": "enforcement.fakeDB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +84,9 @@
                       "identifier": "fakeDB.QueryContext",
                       "newPage": false,
                       "searchKey": "enforcement.fakeDB.QueryContext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -100,7 +106,9 @@
                       "identifier": "fakeDB.ExecContext",
                       "newPage": false,
                       "searchKey": "enforcement.fakeDB.ExecContext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -120,7 +128,9 @@
                       "identifier": "fakeDB.QueryRowContext",
                       "newPage": false,
                       "searchKey": "enforcement.fakeDB.QueryRowContext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -146,7 +156,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -164,9 +176,7 @@
                 "identifier": "WriteSubscriptionErrorResponseForFeature",
                 "newPage": false,
                 "searchKey": "enforcement.WriteSubscriptionErrorResponseForFeature",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -186,9 +196,7 @@
                 "identifier": "WriteSubscriptionErrorResponse",
                 "newPage": false,
                 "searchKey": "enforcement.WriteSubscriptionErrorResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -208,9 +216,7 @@
                 "identifier": "NewBeforeCreateExternalServiceHook",
                 "newPage": false,
                 "searchKey": "enforcement.NewBeforeCreateExternalServiceHook",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -230,9 +236,7 @@
                 "identifier": "NewPreMountGrafanaHook",
                 "newPage": false,
                 "searchKey": "enforcement.NewPreMountGrafanaHook",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -252,9 +256,7 @@
                 "identifier": "NewBeforeCreateUserHook",
                 "newPage": false,
                 "searchKey": "enforcement.NewBeforeCreateUserHook",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -274,9 +276,7 @@
                 "identifier": "NewAfterCreateUserHook",
                 "newPage": false,
                 "searchKey": "enforcement.NewAfterCreateUserHook",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -296,9 +296,7 @@
                 "identifier": "NewBeforeSetUserIsSiteAdmin",
                 "newPage": false,
                 "searchKey": "enforcement.NewBeforeSetUserIsSiteAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -318,7 +316,9 @@
                 "identifier": "TestNewPreCreateExternalServiceHook",
                 "newPage": false,
                 "searchKey": "enforcement.TestNewPreCreateExternalServiceHook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -338,7 +338,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "enforcement.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -358,7 +360,9 @@
                 "identifier": "TestEnforcement_PreCreateUser",
                 "newPage": false,
                 "searchKey": "enforcement.TestEnforcement_PreCreateUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -378,7 +382,9 @@
                 "identifier": "TestEnforcement_AfterCreateUser",
                 "newPage": false,
                 "searchKey": "enforcement.TestEnforcement_AfterCreateUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -398,7 +404,9 @@
                 "identifier": "TestEnforcement_PreSetUserIsSiteAdmin",
                 "newPage": false,
                 "searchKey": "enforcement.TestEnforcement_PreSetUserIsSiteAdmin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

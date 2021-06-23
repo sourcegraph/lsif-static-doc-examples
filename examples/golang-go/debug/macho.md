@@ -199,14 +199,11 @@ Package macho implements access to Mach-O object files.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="fatArchHeaderSize" href="#fatArchHeaderSize">const fatArchHeaderSize</a>
 
 ```
 searchKey: macho.fatArchHeaderSize
+tags: [private]
 ```
 
 ```Go
@@ -217,6 +214,7 @@ const fatArchHeaderSize = 5 * 4
 
 ```
 searchKey: macho.fileHeaderSize32
+tags: [private]
 ```
 
 ```Go
@@ -227,6 +225,7 @@ const fileHeaderSize32 = 7 * 4
 
 ```
 searchKey: macho.fileHeaderSize64
+tags: [private]
 ```
 
 ```Go
@@ -237,7 +236,6 @@ const fileHeaderSize64 = 8 * 4
 
 ```
 searchKey: macho.Magic32
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +246,6 @@ const Magic32 uint32 = 0xfeedface
 
 ```
 searchKey: macho.Magic64
-tags: [exported]
 ```
 
 ```Go
@@ -259,7 +256,6 @@ const Magic64 uint32 = 0xfeedfacf
 
 ```
 searchKey: macho.MagicFat
-tags: [exported]
 ```
 
 ```Go
@@ -270,7 +266,6 @@ const MagicFat uint32 = 0xcafebabe
 
 ```
 searchKey: macho.TypeObj
-tags: [exported]
 ```
 
 ```Go
@@ -281,7 +276,6 @@ const TypeObj Type = 1
 
 ```
 searchKey: macho.TypeExec
-tags: [exported]
 ```
 
 ```Go
@@ -292,7 +286,6 @@ const TypeExec Type = 2
 
 ```
 searchKey: macho.TypeDylib
-tags: [exported]
 ```
 
 ```Go
@@ -303,7 +296,6 @@ const TypeDylib Type = 6
 
 ```
 searchKey: macho.TypeBundle
-tags: [exported]
 ```
 
 ```Go
@@ -314,6 +306,7 @@ const TypeBundle Type = 8
 
 ```
 searchKey: macho.cpuArch64
+tags: [private]
 ```
 
 ```Go
@@ -324,7 +317,6 @@ const cpuArch64 = 0x01000000
 
 ```
 searchKey: macho.Cpu386
-tags: [exported]
 ```
 
 ```Go
@@ -335,7 +327,6 @@ const Cpu386 Cpu = 7
 
 ```
 searchKey: macho.CpuAmd64
-tags: [exported]
 ```
 
 ```Go
@@ -346,7 +337,6 @@ const CpuAmd64 Cpu = Cpu386 | cpuArch64
 
 ```
 searchKey: macho.CpuArm
-tags: [exported]
 ```
 
 ```Go
@@ -357,7 +347,6 @@ const CpuArm Cpu = 12
 
 ```
 searchKey: macho.CpuArm64
-tags: [exported]
 ```
 
 ```Go
@@ -368,7 +357,6 @@ const CpuArm64 Cpu = CpuArm | cpuArch64
 
 ```
 searchKey: macho.CpuPpc
-tags: [exported]
 ```
 
 ```Go
@@ -379,7 +367,6 @@ const CpuPpc Cpu = 18
 
 ```
 searchKey: macho.CpuPpc64
-tags: [exported]
 ```
 
 ```Go
@@ -390,7 +377,6 @@ const CpuPpc64 Cpu = CpuPpc | cpuArch64
 
 ```
 searchKey: macho.LoadCmdSegment
-tags: [exported]
 ```
 
 ```Go
@@ -401,7 +387,6 @@ const LoadCmdSegment LoadCmd = 0x1
 
 ```
 searchKey: macho.LoadCmdSymtab
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +397,6 @@ const LoadCmdSymtab LoadCmd = 0x2
 
 ```
 searchKey: macho.LoadCmdThread
-tags: [exported]
 ```
 
 ```Go
@@ -423,7 +407,6 @@ const LoadCmdThread LoadCmd = 0x4
 
 ```
 searchKey: macho.LoadCmdUnixThread
-tags: [exported]
 ```
 
 ```Go
@@ -435,7 +418,6 @@ const LoadCmdUnixThread LoadCmd = 0x5 // thread+stack
 
 ```
 searchKey: macho.LoadCmdDysymtab
-tags: [exported]
 ```
 
 ```Go
@@ -446,7 +428,6 @@ const LoadCmdDysymtab LoadCmd = 0xb
 
 ```
 searchKey: macho.LoadCmdDylib
-tags: [exported]
 ```
 
 ```Go
@@ -458,7 +439,6 @@ const LoadCmdDylib LoadCmd = 0xc // load dylib command
 
 ```
 searchKey: macho.LoadCmdDylinker
-tags: [exported]
 ```
 
 ```Go
@@ -470,7 +450,6 @@ const LoadCmdDylinker LoadCmd = 0xf // id dylinker command (not load dylinker co
 
 ```
 searchKey: macho.LoadCmdSegment64
-tags: [exported]
 ```
 
 ```Go
@@ -481,7 +460,6 @@ const LoadCmdSegment64 LoadCmd = 0x19
 
 ```
 searchKey: macho.LoadCmdRpath
-tags: [exported]
 ```
 
 ```Go
@@ -492,7 +470,6 @@ const LoadCmdRpath LoadCmd = 0x8000001c
 
 ```
 searchKey: macho.FlagNoUndefs
-tags: [exported]
 ```
 
 ```Go
@@ -503,7 +480,6 @@ const FlagNoUndefs uint32 = 0x1
 
 ```
 searchKey: macho.FlagIncrLink
-tags: [exported]
 ```
 
 ```Go
@@ -514,7 +490,6 @@ const FlagIncrLink uint32 = 0x2
 
 ```
 searchKey: macho.FlagDyldLink
-tags: [exported]
 ```
 
 ```Go
@@ -525,7 +500,6 @@ const FlagDyldLink uint32 = 0x4
 
 ```
 searchKey: macho.FlagBindAtLoad
-tags: [exported]
 ```
 
 ```Go
@@ -536,7 +510,6 @@ const FlagBindAtLoad uint32 = 0x8
 
 ```
 searchKey: macho.FlagPrebound
-tags: [exported]
 ```
 
 ```Go
@@ -547,7 +520,6 @@ const FlagPrebound uint32 = 0x10
 
 ```
 searchKey: macho.FlagSplitSegs
-tags: [exported]
 ```
 
 ```Go
@@ -558,7 +530,6 @@ const FlagSplitSegs uint32 = 0x20
 
 ```
 searchKey: macho.FlagLazyInit
-tags: [exported]
 ```
 
 ```Go
@@ -569,7 +540,6 @@ const FlagLazyInit uint32 = 0x40
 
 ```
 searchKey: macho.FlagTwoLevel
-tags: [exported]
 ```
 
 ```Go
@@ -580,7 +550,6 @@ const FlagTwoLevel uint32 = 0x80
 
 ```
 searchKey: macho.FlagForceFlat
-tags: [exported]
 ```
 
 ```Go
@@ -591,7 +560,6 @@ const FlagForceFlat uint32 = 0x100
 
 ```
 searchKey: macho.FlagNoMultiDefs
-tags: [exported]
 ```
 
 ```Go
@@ -602,7 +570,6 @@ const FlagNoMultiDefs uint32 = 0x200
 
 ```
 searchKey: macho.FlagNoFixPrebinding
-tags: [exported]
 ```
 
 ```Go
@@ -613,7 +580,6 @@ const FlagNoFixPrebinding uint32 = 0x400
 
 ```
 searchKey: macho.FlagPrebindable
-tags: [exported]
 ```
 
 ```Go
@@ -624,7 +590,6 @@ const FlagPrebindable uint32 = 0x800
 
 ```
 searchKey: macho.FlagAllModsBound
-tags: [exported]
 ```
 
 ```Go
@@ -635,7 +600,6 @@ const FlagAllModsBound uint32 = 0x1000
 
 ```
 searchKey: macho.FlagSubsectionsViaSymbols
-tags: [exported]
 ```
 
 ```Go
@@ -646,7 +610,6 @@ const FlagSubsectionsViaSymbols uint32 = 0x2000
 
 ```
 searchKey: macho.FlagCanonical
-tags: [exported]
 ```
 
 ```Go
@@ -657,7 +620,6 @@ const FlagCanonical uint32 = 0x4000
 
 ```
 searchKey: macho.FlagWeakDefines
-tags: [exported]
 ```
 
 ```Go
@@ -668,7 +630,6 @@ const FlagWeakDefines uint32 = 0x8000
 
 ```
 searchKey: macho.FlagBindsToWeak
-tags: [exported]
 ```
 
 ```Go
@@ -679,7 +640,6 @@ const FlagBindsToWeak uint32 = 0x10000
 
 ```
 searchKey: macho.FlagAllowStackExecution
-tags: [exported]
 ```
 
 ```Go
@@ -690,7 +650,6 @@ const FlagAllowStackExecution uint32 = 0x20000
 
 ```
 searchKey: macho.FlagRootSafe
-tags: [exported]
 ```
 
 ```Go
@@ -701,7 +660,6 @@ const FlagRootSafe uint32 = 0x40000
 
 ```
 searchKey: macho.FlagSetuidSafe
-tags: [exported]
 ```
 
 ```Go
@@ -712,7 +670,6 @@ const FlagSetuidSafe uint32 = 0x80000
 
 ```
 searchKey: macho.FlagNoReexportedDylibs
-tags: [exported]
 ```
 
 ```Go
@@ -723,7 +680,6 @@ const FlagNoReexportedDylibs uint32 = 0x100000
 
 ```
 searchKey: macho.FlagPIE
-tags: [exported]
 ```
 
 ```Go
@@ -734,7 +690,6 @@ const FlagPIE uint32 = 0x200000
 
 ```
 searchKey: macho.FlagDeadStrippableDylib
-tags: [exported]
 ```
 
 ```Go
@@ -745,7 +700,6 @@ const FlagDeadStrippableDylib uint32 = 0x400000
 
 ```
 searchKey: macho.FlagHasTLVDescriptors
-tags: [exported]
 ```
 
 ```Go
@@ -756,7 +710,6 @@ const FlagHasTLVDescriptors uint32 = 0x800000
 
 ```
 searchKey: macho.FlagNoHeapExecution
-tags: [exported]
 ```
 
 ```Go
@@ -767,7 +720,6 @@ const FlagNoHeapExecution uint32 = 0x1000000
 
 ```
 searchKey: macho.FlagAppExtensionSafe
-tags: [exported]
 ```
 
 ```Go
@@ -778,7 +730,6 @@ const FlagAppExtensionSafe uint32 = 0x2000000
 
 ```
 searchKey: macho.GENERIC_RELOC_VANILLA
-tags: [exported]
 ```
 
 ```Go
@@ -789,7 +740,6 @@ const GENERIC_RELOC_VANILLA RelocTypeGeneric = 0
 
 ```
 searchKey: macho.GENERIC_RELOC_PAIR
-tags: [exported]
 ```
 
 ```Go
@@ -800,7 +750,6 @@ const GENERIC_RELOC_PAIR RelocTypeGeneric = 1
 
 ```
 searchKey: macho.GENERIC_RELOC_SECTDIFF
-tags: [exported]
 ```
 
 ```Go
@@ -811,7 +760,6 @@ const GENERIC_RELOC_SECTDIFF RelocTypeGeneric = 2
 
 ```
 searchKey: macho.GENERIC_RELOC_PB_LA_PTR
-tags: [exported]
 ```
 
 ```Go
@@ -822,7 +770,6 @@ const GENERIC_RELOC_PB_LA_PTR RelocTypeGeneric = 3
 
 ```
 searchKey: macho.GENERIC_RELOC_LOCAL_SECTDIFF
-tags: [exported]
 ```
 
 ```Go
@@ -833,7 +780,6 @@ const GENERIC_RELOC_LOCAL_SECTDIFF RelocTypeGeneric = 4
 
 ```
 searchKey: macho.GENERIC_RELOC_TLV
-tags: [exported]
 ```
 
 ```Go
@@ -844,7 +790,6 @@ const GENERIC_RELOC_TLV RelocTypeGeneric = 5
 
 ```
 searchKey: macho.X86_64_RELOC_UNSIGNED
-tags: [exported]
 ```
 
 ```Go
@@ -855,7 +800,6 @@ const X86_64_RELOC_UNSIGNED RelocTypeX86_64 = 0
 
 ```
 searchKey: macho.X86_64_RELOC_SIGNED
-tags: [exported]
 ```
 
 ```Go
@@ -866,7 +810,6 @@ const X86_64_RELOC_SIGNED RelocTypeX86_64 = 1
 
 ```
 searchKey: macho.X86_64_RELOC_BRANCH
-tags: [exported]
 ```
 
 ```Go
@@ -877,7 +820,6 @@ const X86_64_RELOC_BRANCH RelocTypeX86_64 = 2
 
 ```
 searchKey: macho.X86_64_RELOC_GOT_LOAD
-tags: [exported]
 ```
 
 ```Go
@@ -888,7 +830,6 @@ const X86_64_RELOC_GOT_LOAD RelocTypeX86_64 = 3
 
 ```
 searchKey: macho.X86_64_RELOC_GOT
-tags: [exported]
 ```
 
 ```Go
@@ -899,7 +840,6 @@ const X86_64_RELOC_GOT RelocTypeX86_64 = 4
 
 ```
 searchKey: macho.X86_64_RELOC_SUBTRACTOR
-tags: [exported]
 ```
 
 ```Go
@@ -910,7 +850,6 @@ const X86_64_RELOC_SUBTRACTOR RelocTypeX86_64 = 5
 
 ```
 searchKey: macho.X86_64_RELOC_SIGNED_1
-tags: [exported]
 ```
 
 ```Go
@@ -921,7 +860,6 @@ const X86_64_RELOC_SIGNED_1 RelocTypeX86_64 = 6
 
 ```
 searchKey: macho.X86_64_RELOC_SIGNED_2
-tags: [exported]
 ```
 
 ```Go
@@ -932,7 +870,6 @@ const X86_64_RELOC_SIGNED_2 RelocTypeX86_64 = 7
 
 ```
 searchKey: macho.X86_64_RELOC_SIGNED_4
-tags: [exported]
 ```
 
 ```Go
@@ -943,7 +880,6 @@ const X86_64_RELOC_SIGNED_4 RelocTypeX86_64 = 8
 
 ```
 searchKey: macho.X86_64_RELOC_TLV
-tags: [exported]
 ```
 
 ```Go
@@ -954,7 +890,6 @@ const X86_64_RELOC_TLV RelocTypeX86_64 = 9
 
 ```
 searchKey: macho.ARM_RELOC_VANILLA
-tags: [exported]
 ```
 
 ```Go
@@ -965,7 +900,6 @@ const ARM_RELOC_VANILLA RelocTypeARM = 0
 
 ```
 searchKey: macho.ARM_RELOC_PAIR
-tags: [exported]
 ```
 
 ```Go
@@ -976,7 +910,6 @@ const ARM_RELOC_PAIR RelocTypeARM = 1
 
 ```
 searchKey: macho.ARM_RELOC_SECTDIFF
-tags: [exported]
 ```
 
 ```Go
@@ -987,7 +920,6 @@ const ARM_RELOC_SECTDIFF RelocTypeARM = 2
 
 ```
 searchKey: macho.ARM_RELOC_LOCAL_SECTDIFF
-tags: [exported]
 ```
 
 ```Go
@@ -998,7 +930,6 @@ const ARM_RELOC_LOCAL_SECTDIFF RelocTypeARM = 3
 
 ```
 searchKey: macho.ARM_RELOC_PB_LA_PTR
-tags: [exported]
 ```
 
 ```Go
@@ -1009,7 +940,6 @@ const ARM_RELOC_PB_LA_PTR RelocTypeARM = 4
 
 ```
 searchKey: macho.ARM_RELOC_BR24
-tags: [exported]
 ```
 
 ```Go
@@ -1020,7 +950,6 @@ const ARM_RELOC_BR24 RelocTypeARM = 5
 
 ```
 searchKey: macho.ARM_THUMB_RELOC_BR22
-tags: [exported]
 ```
 
 ```Go
@@ -1031,7 +960,6 @@ const ARM_THUMB_RELOC_BR22 RelocTypeARM = 6
 
 ```
 searchKey: macho.ARM_THUMB_32BIT_BRANCH
-tags: [exported]
 ```
 
 ```Go
@@ -1042,7 +970,6 @@ const ARM_THUMB_32BIT_BRANCH RelocTypeARM = 7
 
 ```
 searchKey: macho.ARM_RELOC_HALF
-tags: [exported]
 ```
 
 ```Go
@@ -1053,7 +980,6 @@ const ARM_RELOC_HALF RelocTypeARM = 8
 
 ```
 searchKey: macho.ARM_RELOC_HALF_SECTDIFF
-tags: [exported]
 ```
 
 ```Go
@@ -1064,7 +990,6 @@ const ARM_RELOC_HALF_SECTDIFF RelocTypeARM = 9
 
 ```
 searchKey: macho.ARM64_RELOC_UNSIGNED
-tags: [exported]
 ```
 
 ```Go
@@ -1075,7 +1000,6 @@ const ARM64_RELOC_UNSIGNED RelocTypeARM64 = 0
 
 ```
 searchKey: macho.ARM64_RELOC_SUBTRACTOR
-tags: [exported]
 ```
 
 ```Go
@@ -1086,7 +1010,6 @@ const ARM64_RELOC_SUBTRACTOR RelocTypeARM64 = 1
 
 ```
 searchKey: macho.ARM64_RELOC_BRANCH26
-tags: [exported]
 ```
 
 ```Go
@@ -1097,7 +1020,6 @@ const ARM64_RELOC_BRANCH26 RelocTypeARM64 = 2
 
 ```
 searchKey: macho.ARM64_RELOC_PAGE21
-tags: [exported]
 ```
 
 ```Go
@@ -1108,7 +1030,6 @@ const ARM64_RELOC_PAGE21 RelocTypeARM64 = 3
 
 ```
 searchKey: macho.ARM64_RELOC_PAGEOFF12
-tags: [exported]
 ```
 
 ```Go
@@ -1119,7 +1040,6 @@ const ARM64_RELOC_PAGEOFF12 RelocTypeARM64 = 4
 
 ```
 searchKey: macho.ARM64_RELOC_GOT_LOAD_PAGE21
-tags: [exported]
 ```
 
 ```Go
@@ -1130,7 +1050,6 @@ const ARM64_RELOC_GOT_LOAD_PAGE21 RelocTypeARM64 = 5
 
 ```
 searchKey: macho.ARM64_RELOC_GOT_LOAD_PAGEOFF12
-tags: [exported]
 ```
 
 ```Go
@@ -1141,7 +1060,6 @@ const ARM64_RELOC_GOT_LOAD_PAGEOFF12 RelocTypeARM64 = 6
 
 ```
 searchKey: macho.ARM64_RELOC_POINTER_TO_GOT
-tags: [exported]
 ```
 
 ```Go
@@ -1152,7 +1070,6 @@ const ARM64_RELOC_POINTER_TO_GOT RelocTypeARM64 = 7
 
 ```
 searchKey: macho.ARM64_RELOC_TLVP_LOAD_PAGE21
-tags: [exported]
 ```
 
 ```Go
@@ -1163,7 +1080,6 @@ const ARM64_RELOC_TLVP_LOAD_PAGE21 RelocTypeARM64 = 8
 
 ```
 searchKey: macho.ARM64_RELOC_TLVP_LOAD_PAGEOFF12
-tags: [exported]
 ```
 
 ```Go
@@ -1174,7 +1090,6 @@ const ARM64_RELOC_TLVP_LOAD_PAGEOFF12 RelocTypeARM64 = 9
 
 ```
 searchKey: macho.ARM64_RELOC_ADDEND
-tags: [exported]
 ```
 
 ```Go
@@ -1185,6 +1100,7 @@ const ARM64_RELOC_ADDEND RelocTypeARM64 = 10
 
 ```
 searchKey: macho._RelocTypeGeneric_name
+tags: [private]
 ```
 
 ```Go
@@ -1195,6 +1111,7 @@ const _RelocTypeGeneric_name = ...
 
 ```
 searchKey: macho._RelocTypeX86_64_name
+tags: [private]
 ```
 
 ```Go
@@ -1205,6 +1122,7 @@ const _RelocTypeX86_64_name = ...
 
 ```
 searchKey: macho._RelocTypeARM_name
+tags: [private]
 ```
 
 ```Go
@@ -1215,6 +1133,7 @@ const _RelocTypeARM_name = ...
 
 ```
 searchKey: macho._RelocTypeARM64_name
+tags: [private]
 ```
 
 ```Go
@@ -1223,15 +1142,10 @@ const _RelocTypeARM64_name = ...
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrNotFat" href="#ErrNotFat">var ErrNotFat</a>
 
 ```
 searchKey: macho.ErrNotFat
-tags: [exported]
 ```
 
 ```Go
@@ -1244,6 +1158,7 @@ ErrNotFat is returned from NewFatFile or OpenFat when the file is not a universa
 
 ```
 searchKey: macho.typeStrings
+tags: [private]
 ```
 
 ```Go
@@ -1254,6 +1169,7 @@ var typeStrings = ...
 
 ```
 searchKey: macho.cpuStrings
+tags: [private]
 ```
 
 ```Go
@@ -1264,6 +1180,7 @@ var cpuStrings = ...
 
 ```
 searchKey: macho.cmdStrings
+tags: [private]
 ```
 
 ```Go
@@ -1274,6 +1191,7 @@ var cmdStrings = ...
 
 ```
 searchKey: macho._RelocTypeGeneric_index
+tags: [private]
 ```
 
 ```Go
@@ -1284,6 +1202,7 @@ var _RelocTypeGeneric_index = [...]uint8{0, 21, 39, 61, 84, 112, 129}
 
 ```
 searchKey: macho._RelocTypeX86_64_index
+tags: [private]
 ```
 
 ```Go
@@ -1294,6 +1213,7 @@ var _RelocTypeX86_64_index = [...]uint8{0, 21, 40, 59, 80, 96, 119, 140, 161, 18
 
 ```
 searchKey: macho._RelocTypeARM_index
+tags: [private]
 ```
 
 ```Go
@@ -1304,6 +1224,7 @@ var _RelocTypeARM_index = [...]uint8{0, 17, 31, 49, 73, 92, 106, 126, 148, 162, 
 
 ```
 searchKey: macho._RelocTypeARM64_index
+tags: [private]
 ```
 
 ```Go
@@ -1314,6 +1235,7 @@ var _RelocTypeARM64_index = [...]uint16{0, 20, 42, 62, 80, 101, 128, 158, 184, 2
 
 ```
 searchKey: macho.fileTests
+tags: [private]
 ```
 
 ```Go
@@ -1322,15 +1244,10 @@ var fileTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="FatFile" href="#FatFile">type FatFile struct</a>
 
 ```
 searchKey: macho.FatFile
-tags: [exported]
 ```
 
 ```Go
@@ -1347,7 +1264,6 @@ A FatFile is a Mach-O universal binary that contains at least one architecture.
 
 ```
 searchKey: macho.NewFatFile
-tags: [exported]
 ```
 
 ```Go
@@ -1360,7 +1276,6 @@ NewFatFile creates a new FatFile for accessing all the Mach-O images in a univer
 
 ```
 searchKey: macho.OpenFat
-tags: [exported]
 ```
 
 ```Go
@@ -1373,6 +1288,7 @@ OpenFat opens the named file using os.Open and prepares it for use as a Mach-O u
 
 ```
 searchKey: macho.openFatObscured
+tags: [private]
 ```
 
 ```Go
@@ -1383,7 +1299,6 @@ func openFatObscured(name string) (*FatFile, error)
 
 ```
 searchKey: macho.FatFile.Close
-tags: [exported]
 ```
 
 ```Go
@@ -1394,7 +1309,6 @@ func (ff *FatFile) Close() error
 
 ```
 searchKey: macho.FatArchHeader
-tags: [exported]
 ```
 
 ```Go
@@ -1413,7 +1327,6 @@ A FatArchHeader represents a fat header for a specific image architecture.
 
 ```
 searchKey: macho.FatArch
-tags: [exported]
 ```
 
 ```Go
@@ -1429,7 +1342,6 @@ A FatArch is a Mach-O File inside a FatFile.
 
 ```
 searchKey: macho.File
-tags: [exported]
 ```
 
 ```Go
@@ -1452,7 +1364,6 @@ A File represents an open Mach-O file.
 
 ```
 searchKey: macho.Open
-tags: [exported]
 ```
 
 ```Go
@@ -1465,7 +1376,6 @@ Open opens the named file using os.Open and prepares it for use as a Mach-O bina
 
 ```
 searchKey: macho.NewFile
-tags: [exported]
 ```
 
 ```Go
@@ -1478,6 +1388,7 @@ NewFile creates a new File for accessing a Mach-O binary in an underlying reader
 
 ```
 searchKey: macho.openObscured
+tags: [private]
 ```
 
 ```Go
@@ -1488,7 +1399,6 @@ func openObscured(name string) (*File, error)
 
 ```
 searchKey: macho.File.Close
-tags: [exported]
 ```
 
 ```Go
@@ -1501,6 +1411,7 @@ Close closes the File. If the File was created using NewFile directly instead of
 
 ```
 searchKey: macho.File.parseSymtab
+tags: [private]
 ```
 
 ```Go
@@ -1511,6 +1422,7 @@ func (f *File) parseSymtab(symdat, strtab, cmddat []byte, hdr *SymtabCmd, offset
 
 ```
 searchKey: macho.File.pushSection
+tags: [private]
 ```
 
 ```Go
@@ -1521,7 +1433,6 @@ func (f *File) pushSection(sh *Section, r io.ReaderAt) error
 
 ```
 searchKey: macho.File.Segment
-tags: [exported]
 ```
 
 ```Go
@@ -1534,7 +1445,6 @@ Segment returns the first Segment with the given name, or nil if no such segment
 
 ```
 searchKey: macho.File.Section
-tags: [exported]
 ```
 
 ```Go
@@ -1547,7 +1457,6 @@ Section returns the first section with the given name, or nil if no such section
 
 ```
 searchKey: macho.File.DWARF
-tags: [exported]
 ```
 
 ```Go
@@ -1560,7 +1469,6 @@ DWARF returns the DWARF debug information for the Mach-O file.
 
 ```
 searchKey: macho.File.ImportedSymbols
-tags: [exported]
 ```
 
 ```Go
@@ -1573,7 +1481,6 @@ ImportedSymbols returns the names of all symbols referred to by the binary f tha
 
 ```
 searchKey: macho.File.ImportedLibraries
-tags: [exported]
 ```
 
 ```Go
@@ -1586,7 +1493,6 @@ ImportedLibraries returns the paths of all libraries referred to by the binary f
 
 ```
 searchKey: macho.Load
-tags: [exported]
 ```
 
 ```Go
@@ -1601,7 +1507,6 @@ A Load represents any Mach-O load command.
 
 ```
 searchKey: macho.LoadBytes
-tags: [exported]
 ```
 
 ```Go
@@ -1614,7 +1519,6 @@ A LoadBytes is the uninterpreted bytes of a Mach-O load command.
 
 ```
 searchKey: macho.LoadBytes.Raw
-tags: [exported]
 ```
 
 ```Go
@@ -1625,7 +1529,6 @@ func (b LoadBytes) Raw() []byte
 
 ```
 searchKey: macho.SegmentHeader
-tags: [exported]
 ```
 
 ```Go
@@ -1650,7 +1553,6 @@ A SegmentHeader is the header for a Mach-O 32-bit or 64-bit load segment command
 
 ```
 searchKey: macho.Segment
-tags: [exported]
 ```
 
 ```Go
@@ -1675,7 +1577,6 @@ A Segment represents a Mach-O 32-bit or 64-bit load segment command.
 
 ```
 searchKey: macho.Segment.Data
-tags: [exported]
 ```
 
 ```Go
@@ -1688,7 +1589,6 @@ Data reads and returns the contents of the segment.
 
 ```
 searchKey: macho.Segment.Open
-tags: [exported]
 ```
 
 ```Go
@@ -1701,7 +1601,6 @@ Open returns a new ReadSeeker reading the segment.
 
 ```
 searchKey: macho.SectionHeader
-tags: [exported]
 ```
 
 ```Go
@@ -1722,7 +1621,6 @@ type SectionHeader struct {
 
 ```
 searchKey: macho.Reloc
-tags: [exported]
 ```
 
 ```Go
@@ -1746,7 +1644,6 @@ A Reloc represents a Mach-O relocation.
 
 ```
 searchKey: macho.Section
-tags: [exported]
 ```
 
 ```Go
@@ -1769,7 +1666,6 @@ type Section struct {
 
 ```
 searchKey: macho.Section.Data
-tags: [exported]
 ```
 
 ```Go
@@ -1782,7 +1678,6 @@ Data reads and returns the contents of the Mach-O section.
 
 ```
 searchKey: macho.Section.Open
-tags: [exported]
 ```
 
 ```Go
@@ -1795,7 +1690,6 @@ Open returns a new ReadSeeker reading the Mach-O section.
 
 ```
 searchKey: macho.Dylib
-tags: [exported]
 ```
 
 ```Go
@@ -1814,7 +1708,6 @@ A Dylib represents a Mach-O load dynamic library command.
 
 ```
 searchKey: macho.Symtab
-tags: [exported]
 ```
 
 ```Go
@@ -1831,7 +1724,6 @@ A Symtab represents a Mach-O symbol table command.
 
 ```
 searchKey: macho.Dysymtab
-tags: [exported]
 ```
 
 ```Go
@@ -1848,7 +1740,6 @@ A Dysymtab represents a Mach-O dynamic symbol table command.
 
 ```
 searchKey: macho.Rpath
-tags: [exported]
 ```
 
 ```Go
@@ -1864,7 +1755,6 @@ A Rpath represents a Mach-O rpath command.
 
 ```
 searchKey: macho.Symbol
-tags: [exported]
 ```
 
 ```Go
@@ -1883,7 +1773,6 @@ A Symbol is a Mach-O 32-bit or 64-bit symbol table entry.
 
 ```
 searchKey: macho.FormatError
-tags: [exported]
 ```
 
 ```Go
@@ -1900,7 +1789,6 @@ FormatError is returned by some operations if the data does not have the correct
 
 ```
 searchKey: macho.FormatError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1911,6 +1799,7 @@ func (e *FormatError) Error() string
 
 ```
 searchKey: macho.relocInfo
+tags: [private]
 ```
 
 ```Go
@@ -1924,7 +1813,6 @@ type relocInfo struct {
 
 ```
 searchKey: macho.FileHeader
-tags: [exported]
 ```
 
 ```Go
@@ -1945,7 +1833,6 @@ A FileHeader represents a Mach-O file header.
 
 ```
 searchKey: macho.Type
-tags: [exported]
 ```
 
 ```Go
@@ -1958,7 +1845,6 @@ A Type is the Mach-O file type, e.g. an object file, executable, or dynamic libr
 
 ```
 searchKey: macho.Type.String
-tags: [exported]
 ```
 
 ```Go
@@ -1969,7 +1855,6 @@ func (t Type) String() string
 
 ```
 searchKey: macho.Type.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -1980,7 +1865,6 @@ func (t Type) GoString() string
 
 ```
 searchKey: macho.Cpu
-tags: [exported]
 ```
 
 ```Go
@@ -1993,7 +1877,6 @@ A Cpu is a Mach-O cpu type.
 
 ```
 searchKey: macho.Cpu.String
-tags: [exported]
 ```
 
 ```Go
@@ -2004,7 +1887,6 @@ func (i Cpu) String() string
 
 ```
 searchKey: macho.Cpu.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -2015,7 +1897,6 @@ func (i Cpu) GoString() string
 
 ```
 searchKey: macho.LoadCmd
-tags: [exported]
 ```
 
 ```Go
@@ -2028,7 +1909,6 @@ A LoadCmd is a Mach-O load command.
 
 ```
 searchKey: macho.LoadCmd.String
-tags: [exported]
 ```
 
 ```Go
@@ -2039,7 +1919,6 @@ func (i LoadCmd) String() string
 
 ```
 searchKey: macho.LoadCmd.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -2050,7 +1929,6 @@ func (i LoadCmd) GoString() string
 
 ```
 searchKey: macho.Segment32
-tags: [exported]
 ```
 
 ```Go
@@ -2075,7 +1953,6 @@ A Segment32 is a 32-bit Mach-O segment load command.
 
 ```
 searchKey: macho.Segment64
-tags: [exported]
 ```
 
 ```Go
@@ -2100,7 +1977,6 @@ A Segment64 is a 64-bit Mach-O segment load command.
 
 ```
 searchKey: macho.SymtabCmd
-tags: [exported]
 ```
 
 ```Go
@@ -2120,7 +1996,6 @@ A SymtabCmd is a Mach-O symbol table command.
 
 ```
 searchKey: macho.DysymtabCmd
-tags: [exported]
 ```
 
 ```Go
@@ -2154,7 +2029,6 @@ A DysymtabCmd is a Mach-O dynamic symbol table command.
 
 ```
 searchKey: macho.DylibCmd
-tags: [exported]
 ```
 
 ```Go
@@ -2174,7 +2048,6 @@ A DylibCmd is a Mach-O load dynamic library command.
 
 ```
 searchKey: macho.RpathCmd
-tags: [exported]
 ```
 
 ```Go
@@ -2191,7 +2064,6 @@ A RpathCmd is a Mach-O rpath command.
 
 ```
 searchKey: macho.Thread
-tags: [exported]
 ```
 
 ```Go
@@ -2209,7 +2081,6 @@ A Thread is a Mach-O thread state command.
 
 ```
 searchKey: macho.Section32
-tags: [exported]
 ```
 
 ```Go
@@ -2234,7 +2105,6 @@ A Section32 is a 32-bit Mach-O section header.
 
 ```
 searchKey: macho.Section64
-tags: [exported]
 ```
 
 ```Go
@@ -2260,7 +2130,6 @@ A Section64 is a 64-bit Mach-O section header.
 
 ```
 searchKey: macho.Nlist32
-tags: [exported]
 ```
 
 ```Go
@@ -2279,7 +2148,6 @@ An Nlist32 is a Mach-O 32-bit symbol table entry.
 
 ```
 searchKey: macho.Nlist64
-tags: [exported]
 ```
 
 ```Go
@@ -2298,7 +2166,6 @@ An Nlist64 is a Mach-O 64-bit symbol table entry.
 
 ```
 searchKey: macho.Regs386
-tags: [exported]
 ```
 
 ```Go
@@ -2328,7 +2195,6 @@ Regs386 is the Mach-O 386 register structure.
 
 ```
 searchKey: macho.RegsAMD64
-tags: [exported]
 ```
 
 ```Go
@@ -2363,6 +2229,7 @@ RegsAMD64 is the Mach-O AMD64 register structure.
 
 ```
 searchKey: macho.intName
+tags: [private]
 ```
 
 ```Go
@@ -2376,7 +2243,6 @@ type intName struct {
 
 ```
 searchKey: macho.RelocTypeGeneric
-tags: [exported]
 ```
 
 ```Go
@@ -2387,7 +2253,6 @@ type RelocTypeGeneric int
 
 ```
 searchKey: macho.RelocTypeGeneric.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -2398,7 +2263,6 @@ func (r RelocTypeGeneric) GoString() string
 
 ```
 searchKey: macho.RelocTypeGeneric.String
-tags: [exported]
 ```
 
 ```Go
@@ -2409,7 +2273,6 @@ func (i RelocTypeGeneric) String() string
 
 ```
 searchKey: macho.RelocTypeX86_64
-tags: [exported]
 ```
 
 ```Go
@@ -2420,7 +2283,6 @@ type RelocTypeX86_64 int
 
 ```
 searchKey: macho.RelocTypeX86_64.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -2431,7 +2293,6 @@ func (r RelocTypeX86_64) GoString() string
 
 ```
 searchKey: macho.RelocTypeX86_64.String
-tags: [exported]
 ```
 
 ```Go
@@ -2442,7 +2303,6 @@ func (i RelocTypeX86_64) String() string
 
 ```
 searchKey: macho.RelocTypeARM
-tags: [exported]
 ```
 
 ```Go
@@ -2453,7 +2313,6 @@ type RelocTypeARM int
 
 ```
 searchKey: macho.RelocTypeARM.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -2464,7 +2323,6 @@ func (r RelocTypeARM) GoString() string
 
 ```
 searchKey: macho.RelocTypeARM.String
-tags: [exported]
 ```
 
 ```Go
@@ -2475,7 +2333,6 @@ func (i RelocTypeARM) String() string
 
 ```
 searchKey: macho.RelocTypeARM64
-tags: [exported]
 ```
 
 ```Go
@@ -2486,7 +2343,6 @@ type RelocTypeARM64 int
 
 ```
 searchKey: macho.RelocTypeARM64.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -2497,7 +2353,6 @@ func (r RelocTypeARM64) GoString() string
 
 ```
 searchKey: macho.RelocTypeARM64.String
-tags: [exported]
 ```
 
 ```Go
@@ -2508,6 +2363,7 @@ func (i RelocTypeARM64) String() string
 
 ```
 searchKey: macho.fileTest
+tags: [private]
 ```
 
 ```Go
@@ -2522,14 +2378,11 @@ type fileTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="cstring" href="#cstring">func cstring(b []byte) string</a>
 
 ```
 searchKey: macho.cstring
+tags: [private]
 ```
 
 ```Go
@@ -2540,6 +2393,7 @@ func cstring(b []byte) string
 
 ```
 searchKey: macho.stringName
+tags: [private]
 ```
 
 ```Go
@@ -2550,6 +2404,7 @@ func stringName(i uint32, names []intName, goSyntax bool) string
 
 ```
 searchKey: macho.readerAtFromObscured
+tags: [private]
 ```
 
 ```Go
@@ -2560,6 +2415,7 @@ func readerAtFromObscured(name string) (io.ReaderAt, error)
 
 ```
 searchKey: macho.TestOpen
+tags: [private]
 ```
 
 ```Go
@@ -2570,6 +2426,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: macho.TestOpenFailure
+tags: [private]
 ```
 
 ```Go
@@ -2580,6 +2437,7 @@ func TestOpenFailure(t *testing.T)
 
 ```
 searchKey: macho.TestOpenFat
+tags: [private]
 ```
 
 ```Go
@@ -2590,6 +2448,7 @@ func TestOpenFat(t *testing.T)
 
 ```
 searchKey: macho.TestOpenFatFailure
+tags: [private]
 ```
 
 ```Go
@@ -2600,6 +2459,7 @@ func TestOpenFatFailure(t *testing.T)
 
 ```
 searchKey: macho.TestRelocTypeString
+tags: [private]
 ```
 
 ```Go
@@ -2610,6 +2470,7 @@ func TestRelocTypeString(t *testing.T)
 
 ```
 searchKey: macho.TestTypeString
+tags: [private]
 ```
 
 ```Go

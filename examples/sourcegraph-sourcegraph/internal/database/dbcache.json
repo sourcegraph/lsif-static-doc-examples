@@ -4,7 +4,9 @@
     "identifier": "dbcache",
     "newPage": true,
     "searchKey": "internal/database/dbcache",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "defaultReposMaxAge",
                 "newPage": false,
                 "searchKey": "dbcache.defaultReposMaxAge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "cachedRepos",
                 "newPage": false,
                 "searchKey": "dbcache.cachedRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -99,7 +109,9 @@
                       "identifier": "cachedRepos.Repos",
                       "newPage": false,
                       "searchKey": "dbcache.cachedRepos.Repos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -122,9 +134,7 @@
                 "identifier": "DefaultRepoLister",
                 "newPage": false,
                 "searchKey": "dbcache.DefaultRepoLister",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -142,9 +152,7 @@
                       "identifier": "NewDefaultRepoLister",
                       "newPage": false,
                       "searchKey": "dbcache.NewDefaultRepoLister",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -164,9 +172,7 @@
                       "identifier": "DefaultRepoLister.List",
                       "newPage": false,
                       "searchKey": "dbcache.DefaultRepoLister.List",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -186,9 +192,7 @@
                       "identifier": "DefaultRepoLister.ListPublic",
                       "newPage": false,
                       "searchKey": "dbcache.DefaultRepoLister.ListPublic",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -208,7 +212,9 @@
                       "identifier": "DefaultRepoLister.list",
                       "newPage": false,
                       "searchKey": "dbcache.DefaultRepoLister.list",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -228,7 +234,9 @@
                       "identifier": "DefaultRepoLister.refreshCache",
                       "newPage": false,
                       "searchKey": "dbcache.DefaultRepoLister.refreshCache",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -254,7 +262,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -272,7 +282,9 @@
                 "identifier": "TestListDefaultRepos",
                 "newPage": false,
                 "searchKey": "dbcache.TestListDefaultRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -292,7 +304,9 @@
                 "identifier": "BenchmarkDefaultRepos_List_Empty",
                 "newPage": false,
                 "searchKey": "dbcache.BenchmarkDefaultRepos_List_Empty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -307,12 +321,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/dbcache#init",
+              "pathID": "/internal/database/dbcache#init.main_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.main_test.go",
                 "newPage": false,
                 "searchKey": "dbcache.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

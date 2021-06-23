@@ -4,9 +4,7 @@
     "identifier": "fstest",
     "newPage": true,
     "searchKey": "testing/fstest",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "MapFS",
                 "newPage": false,
                 "searchKey": "fstest.MapFS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -64,9 +58,7 @@
                       "identifier": "MapFS.Open",
                       "newPage": false,
                       "searchKey": "fstest.MapFS.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -86,9 +78,7 @@
                       "identifier": "MapFS.ReadFile",
                       "newPage": false,
                       "searchKey": "fstest.MapFS.ReadFile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -108,9 +98,7 @@
                       "identifier": "MapFS.Stat",
                       "newPage": false,
                       "searchKey": "fstest.MapFS.Stat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -130,9 +118,7 @@
                       "identifier": "MapFS.ReadDir",
                       "newPage": false,
                       "searchKey": "fstest.MapFS.ReadDir",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -152,9 +138,7 @@
                       "identifier": "MapFS.Glob",
                       "newPage": false,
                       "searchKey": "fstest.MapFS.Glob",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -174,9 +158,7 @@
                       "identifier": "MapFS.Sub",
                       "newPage": false,
                       "searchKey": "fstest.MapFS.Sub",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -199,9 +181,7 @@
                 "identifier": "MapFile",
                 "newPage": false,
                 "searchKey": "fstest.MapFile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -221,7 +201,9 @@
                 "identifier": "fsOnly",
                 "newPage": false,
                 "searchKey": "fstest.fsOnly",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -241,7 +223,9 @@
                 "identifier": "noSub",
                 "newPage": false,
                 "searchKey": "fstest.noSub",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -259,7 +243,9 @@
                       "identifier": "noSub.Sub",
                       "newPage": false,
                       "searchKey": "fstest.noSub.Sub",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -282,7 +268,9 @@
                 "identifier": "mapFileInfo",
                 "newPage": false,
                 "searchKey": "fstest.mapFileInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -300,7 +288,9 @@
                       "identifier": "mapFileInfo.Name",
                       "newPage": false,
                       "searchKey": "fstest.mapFileInfo.Name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -320,7 +310,9 @@
                       "identifier": "mapFileInfo.Size",
                       "newPage": false,
                       "searchKey": "fstest.mapFileInfo.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -340,7 +332,9 @@
                       "identifier": "mapFileInfo.Mode",
                       "newPage": false,
                       "searchKey": "fstest.mapFileInfo.Mode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -360,7 +354,9 @@
                       "identifier": "mapFileInfo.Type",
                       "newPage": false,
                       "searchKey": "fstest.mapFileInfo.Type",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -380,7 +376,9 @@
                       "identifier": "mapFileInfo.ModTime",
                       "newPage": false,
                       "searchKey": "fstest.mapFileInfo.ModTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -400,7 +398,9 @@
                       "identifier": "mapFileInfo.IsDir",
                       "newPage": false,
                       "searchKey": "fstest.mapFileInfo.IsDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,7 +420,9 @@
                       "identifier": "mapFileInfo.Sys",
                       "newPage": false,
                       "searchKey": "fstest.mapFileInfo.Sys",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -440,7 +442,9 @@
                       "identifier": "mapFileInfo.Info",
                       "newPage": false,
                       "searchKey": "fstest.mapFileInfo.Info",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -463,7 +467,9 @@
                 "identifier": "openMapFile",
                 "newPage": false,
                 "searchKey": "fstest.openMapFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -481,7 +487,9 @@
                       "identifier": "openMapFile.Stat",
                       "newPage": false,
                       "searchKey": "fstest.openMapFile.Stat",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -501,7 +509,9 @@
                       "identifier": "openMapFile.Close",
                       "newPage": false,
                       "searchKey": "fstest.openMapFile.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -521,7 +531,9 @@
                       "identifier": "openMapFile.Read",
                       "newPage": false,
                       "searchKey": "fstest.openMapFile.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -541,7 +553,9 @@
                       "identifier": "openMapFile.Seek",
                       "newPage": false,
                       "searchKey": "fstest.openMapFile.Seek",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -561,7 +575,9 @@
                       "identifier": "openMapFile.ReadAt",
                       "newPage": false,
                       "searchKey": "fstest.openMapFile.ReadAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -584,7 +600,9 @@
                 "identifier": "mapDir",
                 "newPage": false,
                 "searchKey": "fstest.mapDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -602,7 +620,9 @@
                       "identifier": "mapDir.Stat",
                       "newPage": false,
                       "searchKey": "fstest.mapDir.Stat",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -622,7 +642,9 @@
                       "identifier": "mapDir.Close",
                       "newPage": false,
                       "searchKey": "fstest.mapDir.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -642,7 +664,9 @@
                       "identifier": "mapDir.Read",
                       "newPage": false,
                       "searchKey": "fstest.mapDir.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -662,7 +686,9 @@
                       "identifier": "mapDir.ReadDir",
                       "newPage": false,
                       "searchKey": "fstest.mapDir.ReadDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -685,7 +711,9 @@
                 "identifier": "fsTester",
                 "newPage": false,
                 "searchKey": "fstest.fsTester",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -703,7 +731,9 @@
                       "identifier": "fsTester.errorf",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.errorf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -723,7 +753,9 @@
                       "identifier": "fsTester.openDir",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.openDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -743,7 +775,9 @@
                       "identifier": "fsTester.checkDir",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -763,7 +797,9 @@
                       "identifier": "fsTester.checkGlob",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkGlob",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -783,7 +819,9 @@
                       "identifier": "fsTester.checkStat",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkStat",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -803,7 +841,9 @@
                       "identifier": "fsTester.checkDirList",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkDirList",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -823,7 +863,9 @@
                       "identifier": "fsTester.checkFile",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkFile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -843,7 +885,9 @@
                       "identifier": "fsTester.checkFileRead",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkFileRead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -863,7 +907,9 @@
                       "identifier": "fsTester.checkOpen",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkOpen",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -883,7 +929,9 @@
                       "identifier": "fsTester.checkBadPath",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkBadPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -909,9 +957,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -929,9 +975,7 @@
                 "identifier": "TestFS",
                 "newPage": false,
                 "searchKey": "fstest.TestFS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -951,7 +995,9 @@
                 "identifier": "testFS",
                 "newPage": false,
                 "searchKey": "fstest.testFS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -971,7 +1017,9 @@
                 "identifier": "formatEntry",
                 "newPage": false,
                 "searchKey": "fstest.formatEntry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -991,7 +1039,9 @@
                 "identifier": "formatInfoEntry",
                 "newPage": false,
                 "searchKey": "fstest.formatInfoEntry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1011,7 +1061,9 @@
                 "identifier": "formatInfo",
                 "newPage": false,
                 "searchKey": "fstest.formatInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1031,7 +1083,9 @@
                 "identifier": "TestMapFS",
                 "newPage": false,
                 "searchKey": "fstest.TestMapFS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1051,7 +1105,9 @@
                 "identifier": "TestSymlink",
                 "newPage": false,
                 "searchKey": "fstest.TestSymlink",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1071,7 +1127,9 @@
                 "identifier": "TestDash",
                 "newPage": false,
                 "searchKey": "fstest.TestDash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

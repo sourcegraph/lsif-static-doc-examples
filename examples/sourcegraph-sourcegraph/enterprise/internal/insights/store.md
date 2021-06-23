@@ -77,10 +77,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="countDataFmtstr" href="#countDataFmtstr">const countDataFmtstr</a>
 
 ```
 searchKey: store.countDataFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -93,6 +98,7 @@ SELECT COUNT(*) FROM series_points WHERE %s
 
 ```
 searchKey: store.upsertRepoNameFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -103,6 +109,7 @@ const upsertRepoNameFmtStr = ...
 
 ```
 searchKey: store.upsertMetadataFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -113,6 +120,7 @@ const upsertMetadataFmtStr = ...
 
 ```
 searchKey: store.recordSeriesPointFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -121,10 +129,15 @@ const recordSeriesPointFmtstr = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="seriesPointsQueryFmtstr" href="#seriesPointsQueryFmtstr">var seriesPointsQueryFmtstr</a>
 
 ```
 searchKey: store.seriesPointsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -170,11 +183,14 @@ Another goal of this query is to get e.g. "total # of services (value) deployed 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MockInterface" href="#MockInterface">type MockInterface struct</a>
 
 ```
 searchKey: store.MockInterface
-tags: [exported]
 ```
 
 ```Go
@@ -197,7 +213,6 @@ MockInterface is a mock implementation of the Interface interface (from the pack
 
 ```
 searchKey: store.NewMockInterface
-tags: [exported]
 ```
 
 ```Go
@@ -210,7 +225,6 @@ NewMockInterface creates a new mock of the Interface interface. All methods retu
 
 ```
 searchKey: store.NewMockInterfaceFrom
-tags: [exported]
 ```
 
 ```Go
@@ -223,7 +237,6 @@ NewMockInterfaceFrom creates a new mock of the MockInterface interface. All meth
 
 ```
 searchKey: store.MockInterface.CountData
-tags: [exported]
 ```
 
 ```Go
@@ -236,7 +249,6 @@ CountData delegates to the next hook function in the queue and stores the parame
 
 ```
 searchKey: store.MockInterface.RecordSeriesPoint
-tags: [exported]
 ```
 
 ```Go
@@ -249,7 +261,6 @@ RecordSeriesPoint delegates to the next hook function in the queue and stores th
 
 ```
 searchKey: store.MockInterface.SeriesPoints
-tags: [exported]
 ```
 
 ```Go
@@ -262,7 +273,6 @@ SeriesPoints delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: store.InterfaceCountDataFunc
-tags: [exported]
 ```
 
 ```Go
@@ -280,7 +290,6 @@ InterfaceCountDataFunc describes the behavior when the CountData method of the p
 
 ```
 searchKey: store.InterfaceCountDataFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +302,6 @@ SetDefaultHook sets function that is called when the CountData method of the par
 
 ```
 searchKey: store.InterfaceCountDataFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -306,7 +314,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the CountD
 
 ```
 searchKey: store.InterfaceCountDataFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -319,7 +326,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: store.InterfaceCountDataFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -332,6 +338,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: store.InterfaceCountDataFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +349,7 @@ func (f *InterfaceCountDataFunc) nextHook() func(context.Context, CountDataOpts)
 
 ```
 searchKey: store.InterfaceCountDataFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -352,7 +360,6 @@ func (f *InterfaceCountDataFunc) appendCall(r0 InterfaceCountDataFuncCall)
 
 ```
 searchKey: store.InterfaceCountDataFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -365,7 +372,6 @@ History returns a sequence of InterfaceCountDataFuncCall objects describing the 
 
 ```
 searchKey: store.InterfaceCountDataFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -391,7 +397,6 @@ InterfaceCountDataFuncCall is an object that describes an invocation of method C
 
 ```
 searchKey: store.InterfaceCountDataFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -404,7 +409,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: store.InterfaceCountDataFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -417,7 +421,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFunc
-tags: [exported]
 ```
 
 ```Go
@@ -435,7 +438,6 @@ InterfaceRecordSeriesPointFunc describes the behavior when the RecordSeriesPoint
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -448,7 +450,6 @@ SetDefaultHook sets function that is called when the RecordSeriesPoint method of
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -461,7 +462,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Record
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -474,7 +474,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -487,6 +486,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -497,6 +497,7 @@ func (f *InterfaceRecordSeriesPointFunc) nextHook() func(context.Context, Record
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -507,7 +508,6 @@ func (f *InterfaceRecordSeriesPointFunc) appendCall(r0 InterfaceRecordSeriesPoin
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -520,7 +520,6 @@ History returns a sequence of InterfaceRecordSeriesPointFuncCall objects describ
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -543,7 +542,6 @@ InterfaceRecordSeriesPointFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -556,7 +554,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -569,7 +566,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: store.InterfaceSeriesPointsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -587,7 +583,6 @@ InterfaceSeriesPointsFunc describes the behavior when the SeriesPoints method of
 
 ```
 searchKey: store.InterfaceSeriesPointsFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -600,7 +595,6 @@ SetDefaultHook sets function that is called when the SeriesPoints method of the 
 
 ```
 searchKey: store.InterfaceSeriesPointsFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -613,7 +607,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Series
 
 ```
 searchKey: store.InterfaceSeriesPointsFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -626,7 +619,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: store.InterfaceSeriesPointsFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -639,6 +631,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: store.InterfaceSeriesPointsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -649,6 +642,7 @@ func (f *InterfaceSeriesPointsFunc) nextHook() func(context.Context, SeriesPoint
 
 ```
 searchKey: store.InterfaceSeriesPointsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -659,7 +653,6 @@ func (f *InterfaceSeriesPointsFunc) appendCall(r0 InterfaceSeriesPointsFuncCall)
 
 ```
 searchKey: store.InterfaceSeriesPointsFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -672,7 +665,6 @@ History returns a sequence of InterfaceSeriesPointsFuncCall objects describing t
 
 ```
 searchKey: store.InterfaceSeriesPointsFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -698,7 +690,6 @@ InterfaceSeriesPointsFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: store.InterfaceSeriesPointsFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -711,7 +702,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: store.InterfaceSeriesPointsFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -724,7 +714,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: store.Interface
-tags: [exported]
 ```
 
 ```Go
@@ -741,7 +730,6 @@ Interface is the interface describing a code insights store. See the Store struc
 
 ```
 searchKey: store.Store
-tags: [exported]
 ```
 
 ```Go
@@ -757,7 +745,6 @@ Store exposes methods to read and write code insights domain models from persist
 
 ```
 searchKey: store.New
-tags: [exported]
 ```
 
 ```Go
@@ -770,7 +757,6 @@ New returns a new Store backed by the given Timescale db.
 
 ```
 searchKey: store.NewWithClock
-tags: [exported]
 ```
 
 ```Go
@@ -783,7 +769,6 @@ NewWithClock returns a new Store backed by the given db and clock for timestamps
 
 ```
 searchKey: store.Store.Handle
-tags: [exported]
 ```
 
 ```Go
@@ -796,7 +781,6 @@ Handle returns the underlying transactable database handle. Needed to implement 
 
 ```
 searchKey: store.Store.With
-tags: [exported]
 ```
 
 ```Go
@@ -809,7 +793,6 @@ With creates a new Store with the given basestore.Shareable store as the underly
 
 ```
 searchKey: store.Store.SeriesPoints
-tags: [exported]
 ```
 
 ```Go
@@ -822,7 +805,6 @@ SeriesPoints queries data points over time for a specific insights' series.
 
 ```
 searchKey: store.Store.CountData
-tags: [exported]
 ```
 
 ```Go
@@ -835,7 +817,6 @@ CountData counts the amount of data points in a given time range.
 
 ```
 searchKey: store.Store.RecordSeriesPoint
-tags: [exported]
 ```
 
 ```Go
@@ -848,6 +829,7 @@ RecordSeriesPoint records a data point for the specfied series ID (which is a un
 
 ```
 searchKey: store.Store.query
+tags: [private]
 ```
 
 ```Go
@@ -858,7 +840,6 @@ func (s *Store) query(ctx context.Context, q *sqlf.Query, sc scanFunc) error
 
 ```
 searchKey: store.SeriesPoint
-tags: [exported]
 ```
 
 ```Go
@@ -878,7 +859,6 @@ Some fields that could be queried (series ID, repo ID/names) are omitted as they
 
 ```
 searchKey: store.SeriesPoint.String
-tags: [exported]
 ```
 
 ```Go
@@ -889,7 +869,6 @@ func (s *SeriesPoint) String() string
 
 ```
 searchKey: store.SeriesPointsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -914,7 +893,6 @@ SeriesPointsOpts describes options for querying insights' series data points.
 
 ```
 searchKey: store.CountDataOpts
-tags: [exported]
 ```
 
 ```Go
@@ -934,7 +912,6 @@ type CountDataOpts struct {
 
 ```
 searchKey: store.RecordSeriesPointArgs
-tags: [exported]
 ```
 
 ```Go
@@ -966,6 +943,7 @@ RecordSeriesPointArgs describes arguments for the RecordSeriesPoint method.
 
 ```
 searchKey: store.scanner
+tags: [private]
 ```
 
 ```Go
@@ -980,6 +958,7 @@ scanner captures the Scan method of sql.Rows and sql.Row
 
 ```
 searchKey: store.scanFunc
+tags: [private]
 ```
 
 ```Go
@@ -990,10 +969,15 @@ a scanFunc scans one or more rows from a scanner, returning the last id column s
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="seriesPointsQuery" href="#seriesPointsQuery">func seriesPointsQuery(opts SeriesPointsOpts) *sqlf.Query</a>
 
 ```
 searchKey: store.seriesPointsQuery
+tags: [private]
 ```
 
 ```Go
@@ -1004,6 +988,7 @@ func seriesPointsQuery(opts SeriesPointsOpts) *sqlf.Query
 
 ```
 searchKey: store.countDataQuery
+tags: [private]
 ```
 
 ```Go
@@ -1014,6 +999,7 @@ func countDataQuery(opts CountDataOpts) *sqlf.Query
 
 ```
 searchKey: store.scanAll
+tags: [private]
 ```
 
 ```Go
@@ -1024,6 +1010,7 @@ func scanAll(rows *sql.Rows, scan scanFunc) (err error)
 
 ```
 searchKey: store.TestSeriesPoints
+tags: [private]
 ```
 
 ```Go
@@ -1034,6 +1021,7 @@ func TestSeriesPoints(t *testing.T)
 
 ```
 searchKey: store.TestCountData
+tags: [private]
 ```
 
 ```Go
@@ -1044,6 +1032,7 @@ func TestCountData(t *testing.T)
 
 ```
 searchKey: store.TestRecordSeriesPoints
+tags: [private]
 ```
 
 ```Go

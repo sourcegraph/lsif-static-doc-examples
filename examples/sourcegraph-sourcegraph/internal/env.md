@@ -34,7 +34,7 @@
 * [Functions](#func)
     * [func findName() (string, string)](#findName)
     * [func Ensure(name, defaultValue, description string) string](#Ensure)
-    * [func init()](#init)
+    * [func init()](#init.env.go)
     * [func Get(name, defaultValue, description string) string](#Get)
     * [func MustGetDuration(name string, defaultValue time.Duration, description string) time.Duration](#MustGetDuration)
     * [func MustGetInt(name string, defaultValue int, description string) int](#MustGetInt)
@@ -48,10 +48,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="env" href="#env">var env</a>
 
 ```
 searchKey: env.env
+tags: [private]
 ```
 
 ```Go
@@ -62,6 +67,7 @@ var env []envflag
 
 ```
 searchKey: env.environ
+tags: [private]
 ```
 
 ```Go
@@ -72,6 +78,7 @@ var environ map[string]string
 
 ```
 searchKey: env.locked
+tags: [private]
 ```
 
 ```Go
@@ -82,7 +89,6 @@ var locked = false
 
 ```
 searchKey: env.MyName
-tags: [exported]
 ```
 
 ```Go
@@ -95,6 +101,7 @@ MyName represents the name of the current process.
 
 ```
 searchKey: env.envVarName
+tags: [private]
 ```
 
 ```Go
@@ -107,7 +114,6 @@ MyName represents the name of the current process.
 
 ```
 searchKey: env.LogLevel
-tags: [exported]
 ```
 
 ```Go
@@ -118,7 +124,6 @@ var LogLevel = ...
 
 ```
 searchKey: env.LogFormat
-tags: [exported]
 ```
 
 ```Go
@@ -129,7 +134,6 @@ var LogFormat = Get("SRC_LOG_FORMAT", "logfmt", "log format (logfmt, condensed, 
 
 ```
 searchKey: env.InsecureDev
-tags: [exported]
 ```
 
 ```Go
@@ -140,7 +144,6 @@ var InsecureDev, _ = ...
 
 ```
 searchKey: env.DebugOut
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +156,6 @@ DebugOut is os.Stderr if LogLevel includes dbug
 
 ```
 searchKey: env.InfoOut
-tags: [exported]
 ```
 
 ```Go
@@ -166,7 +168,6 @@ InfoOut is os.Stderr if LogLevel includes info
 
 ```
 searchKey: env.WarnOut
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +180,6 @@ WarnOut is os.Stderr if LogLevel includes warn
 
 ```
 searchKey: env.ErrorOut
-tags: [exported]
 ```
 
 ```Go
@@ -192,7 +192,6 @@ ErrorOut is os.Stderr if LogLevel includes error
 
 ```
 searchKey: env.CritOut
-tags: [exported]
 ```
 
 ```Go
@@ -203,11 +202,14 @@ CritOut is os.Stderr if LogLevel includes crit
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Config" href="#Config">type Config interface</a>
 
 ```
 searchKey: env.Config
-tags: [exported]
 ```
 
 ```Go
@@ -228,7 +230,6 @@ type Config interface {
 
 ```
 searchKey: env.BaseConfig
-tags: [exported]
 ```
 
 ```Go
@@ -274,7 +275,6 @@ func applicationInit() {
 
 ```
 searchKey: env.BaseConfig.Validate
-tags: [exported]
 ```
 
 ```Go
@@ -287,7 +287,6 @@ Validate returns any errors constructed from a Get* method after the values have
 
 ```
 searchKey: env.BaseConfig.Get
-tags: [exported]
 ```
 
 ```Go
@@ -300,7 +299,6 @@ Get returns the value with the given name. If no value was supplied in the envir
 
 ```
 searchKey: env.BaseConfig.GetOptional
-tags: [exported]
 ```
 
 ```Go
@@ -313,7 +311,6 @@ GetOptional returns the value with the given name.
 
 ```
 searchKey: env.BaseConfig.GetInt
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +323,6 @@ GetInt returns the value with the given name interpreted as an integer. If no va
 
 ```
 searchKey: env.BaseConfig.GetPercent
-tags: [exported]
 ```
 
 ```Go
@@ -339,7 +335,6 @@ GetPercent returns the value with the given name interpreted as an integer betwe
 
 ```
 searchKey: env.BaseConfig.GetInterval
-tags: [exported]
 ```
 
 ```Go
@@ -350,7 +345,6 @@ func (c *BaseConfig) GetInterval(name, defaultValue, description string) time.Du
 
 ```
 searchKey: env.BaseConfig.GetBool
-tags: [exported]
 ```
 
 ```Go
@@ -363,7 +357,6 @@ GetBool returns the value with the given name interpreted as a boolean. If no va
 
 ```
 searchKey: env.BaseConfig.AddError
-tags: [exported]
 ```
 
 ```Go
@@ -376,6 +369,7 @@ AddError adds a validation error to the configuration object. This should be cal
 
 ```
 searchKey: env.BaseConfig.get
+tags: [private]
 ```
 
 ```Go
@@ -386,7 +380,6 @@ func (c *BaseConfig) get(name, defaultValue, description string) string
 
 ```
 searchKey: env.BaseConfig.SetMockGetter
-tags: [exported]
 ```
 
 ```Go
@@ -399,7 +392,6 @@ SetMockGetter sets mock to use in place of this packge's Get function.
 
 ```
 searchKey: env.GetterFunc
-tags: [exported]
 ```
 
 ```Go
@@ -410,6 +402,7 @@ type GetterFunc func(name, defaultValue, description string) string
 
 ```
 searchKey: env.envflag
+tags: [private]
 ```
 
 ```Go
@@ -422,10 +415,15 @@ type envflag struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="findName" href="#findName">func findName() (string, string)</a>
 
 ```
 searchKey: env.findName
+tags: [private]
 ```
 
 ```Go
@@ -438,7 +436,6 @@ findName returns the name of the current process, that being the part of argv[0]
 
 ```
 searchKey: env.Ensure
-tags: [exported]
 ```
 
 ```Go
@@ -447,10 +444,11 @@ func Ensure(name, defaultValue, description string) string
 
 Ensure behaves like Get except that it sets the environment variable if it doesn't exist. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.env.go" href="#init.env.go">func init()</a>
 
 ```
 searchKey: env.init
+tags: [private]
 ```
 
 ```Go
@@ -461,7 +459,6 @@ func init()
 
 ```
 searchKey: env.Get
-tags: [exported]
 ```
 
 ```Go
@@ -476,7 +473,6 @@ This should be used for only *internal* environment values. User-visible configu
 
 ```
 searchKey: env.MustGetDuration
-tags: [exported]
 ```
 
 ```Go
@@ -489,7 +485,6 @@ MustGetDuration is similar to Get but ensures that the value is a valid time.Dur
 
 ```
 searchKey: env.MustGetInt
-tags: [exported]
 ```
 
 ```Go
@@ -502,6 +497,7 @@ MustGetInt is similar to Get but ensures that the value is a valid int.
 
 ```
 searchKey: env.environMap
+tags: [private]
 ```
 
 ```Go
@@ -512,7 +508,6 @@ func environMap(environ []string) map[string]string
 
 ```
 searchKey: env.Lock
-tags: [exported]
 ```
 
 ```Go
@@ -525,7 +520,6 @@ Lock makes later calls to Get fail with a panic. Call this at the beginning of t
 
 ```
 searchKey: env.PrintHelp
-tags: [exported]
 ```
 
 ```Go
@@ -538,7 +532,6 @@ PrintHelp prints a list of all registered environment variables and their descri
 
 ```
 searchKey: env.HandleHelpFlag
-tags: [exported]
 ```
 
 ```Go
@@ -551,6 +544,7 @@ HandleHelpFlag looks at the first CLI argument. If it is "help", "-h" or "--help
 
 ```
 searchKey: env.TestEnvironMap
+tags: [private]
 ```
 
 ```Go
@@ -561,6 +555,7 @@ func TestEnvironMap(t *testing.T)
 
 ```
 searchKey: env.TestLock
+tags: [private]
 ```
 
 ```Go

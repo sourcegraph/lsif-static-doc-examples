@@ -158,15 +158,10 @@ A special Unknown value may be used when a value is unknown due to an error. Ope
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Unknown" href="#Unknown">const Unknown</a>
 
 ```
 searchKey: constant.Unknown
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +174,6 @@ unknown values
 
 ```
 searchKey: constant.Bool
-tags: [exported]
 ```
 
 ```Go
@@ -192,7 +186,6 @@ non-numeric values
 
 ```
 searchKey: constant.String
-tags: [exported]
 ```
 
 ```Go
@@ -203,7 +196,6 @@ const String
 
 ```
 searchKey: constant.Int
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +208,6 @@ numeric values
 
 ```
 searchKey: constant.Float
-tags: [exported]
 ```
 
 ```Go
@@ -227,7 +218,6 @@ const Float
 
 ```
 searchKey: constant.Complex
-tags: [exported]
 ```
 
 ```Go
@@ -238,6 +228,7 @@ const Complex
 
 ```
 searchKey: constant.prec
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +241,7 @@ Maximum supported mantissa precision. The spec requires at least 256 bits; typic
 
 ```
 searchKey: constant.maxExp
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +254,7 @@ Permit fractions with component sizes up to maxExp before switching to using flo
 
 ```
 searchKey: constant._m
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +267,7 @@ Compute the size of a Word in bytes.
 
 ```
 searchKey: constant._log
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +278,7 @@ const _log = _m>>8&1 + _m>>16&1 + _m>>32&1
 
 ```
 searchKey: constant.wordSize
+tags: [private]
 ```
 
 ```Go
@@ -292,14 +287,11 @@ const wordSize = 1 << _log
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="floatVal0" href="#floatVal0">var floatVal0</a>
 
 ```
 searchKey: constant.floatVal0
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +302,7 @@ var floatVal0 = floatVal{newFloat()}
 
 ```
 searchKey: constant.intTests
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +313,7 @@ var intTests = ...
 
 ```
 searchKey: constant.floatTests
+tags: [private]
 ```
 
 ```Go
@@ -332,6 +326,7 @@ The RHS operand may be a floating-point quotient n/d of two integer values n and
 
 ```
 searchKey: constant.imagTests
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +337,7 @@ var imagTests = ...
 
 ```
 searchKey: constant.opTests
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +348,7 @@ var opTests = ...
 
 ```
 searchKey: constant.xxx
+tags: [private]
 ```
 
 ```Go
@@ -362,6 +359,7 @@ var xxx = strings.Repeat("x", 68)
 
 ```
 searchKey: constant.issue14262
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +370,7 @@ var issue14262 = ...
 
 ```
 searchKey: constant.stringTests
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +381,7 @@ var stringTests = ...
 
 ```
 searchKey: constant.optab
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +392,7 @@ var optab = ...
 
 ```
 searchKey: constant.fracTests
+tags: [private]
 ```
 
 ```Go
@@ -402,6 +403,7 @@ var fracTests = ...
 
 ```
 searchKey: constant.bytesTests
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +414,7 @@ var bytesTests = ...
 
 ```
 searchKey: constant.bitLenTests
+tags: [private]
 ```
 
 ```Go
@@ -420,15 +423,10 @@ var bitLenTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Kind" href="#Kind">type Kind int</a>
 
 ```
 searchKey: constant.Kind
-tags: [exported]
 ```
 
 ```Go
@@ -441,7 +439,6 @@ Kind specifies the kind of value represented by a Value.
 
 ```
 searchKey: constant.Value
-tags: [exported]
 ```
 
 ```Go
@@ -470,6 +467,7 @@ A Value represents the value of a Go constant.
 
 ```
 searchKey: constant.makeInt
+tags: [private]
 ```
 
 ```Go
@@ -480,6 +478,7 @@ func makeInt(x *big.Int) Value
 
 ```
 searchKey: constant.makeRat
+tags: [private]
 ```
 
 ```Go
@@ -490,6 +489,7 @@ func makeRat(x *big.Rat) Value
 
 ```
 searchKey: constant.makeFloat
+tags: [private]
 ```
 
 ```Go
@@ -500,6 +500,7 @@ func makeFloat(x *big.Float) Value
 
 ```
 searchKey: constant.makeComplex
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +511,7 @@ func makeComplex(re, im Value) Value
 
 ```
 searchKey: constant.makeFloatFromLiteral
+tags: [private]
 ```
 
 ```Go
@@ -520,7 +522,6 @@ func makeFloatFromLiteral(lit string) Value
 
 ```
 searchKey: constant.MakeUnknown
-tags: [exported]
 ```
 
 ```Go
@@ -533,7 +534,6 @@ MakeUnknown returns the Unknown value.
 
 ```
 searchKey: constant.MakeBool
-tags: [exported]
 ```
 
 ```Go
@@ -546,7 +546,6 @@ MakeBool returns the Bool value for b.
 
 ```
 searchKey: constant.MakeString
-tags: [exported]
 ```
 
 ```Go
@@ -559,7 +558,6 @@ MakeString returns the String value for s.
 
 ```
 searchKey: constant.MakeInt64
-tags: [exported]
 ```
 
 ```Go
@@ -572,7 +570,6 @@ MakeInt64 returns the Int value for x.
 
 ```
 searchKey: constant.MakeUint64
-tags: [exported]
 ```
 
 ```Go
@@ -585,7 +582,6 @@ MakeUint64 returns the Int value for x.
 
 ```
 searchKey: constant.MakeFloat64
-tags: [exported]
 ```
 
 ```Go
@@ -598,7 +594,6 @@ MakeFloat64 returns the Float value for x. If x is -0.0, the result is 0.0. If x
 
 ```
 searchKey: constant.MakeFromLiteral
-tags: [exported]
 ```
 
 ```Go
@@ -611,7 +606,6 @@ MakeFromLiteral returns the corresponding integer, floating-point, imaginary, ch
 
 ```
 searchKey: constant.Make
-tags: [exported]
 ```
 
 ```Go
@@ -636,7 +630,6 @@ anything else    Unknown
 
 ```
 searchKey: constant.MakeFromBytes
-tags: [exported]
 ```
 
 ```Go
@@ -649,7 +642,6 @@ MakeFromBytes returns the Int value given the bytes of its little-endian binary 
 
 ```
 searchKey: constant.Num
-tags: [exported]
 ```
 
 ```Go
@@ -662,7 +654,6 @@ Num returns the numerator of x; x must be Int, Float, or Unknown. If x is Unknow
 
 ```
 searchKey: constant.Denom
-tags: [exported]
 ```
 
 ```Go
@@ -675,7 +666,6 @@ Denom returns the denominator of x; x must be Int, Float, or Unknown. If x is Un
 
 ```
 searchKey: constant.MakeImag
-tags: [exported]
 ```
 
 ```Go
@@ -688,7 +678,6 @@ MakeImag returns the Complex value x*i; x must be Int, Float, or Unknown. If x i
 
 ```
 searchKey: constant.Real
-tags: [exported]
 ```
 
 ```Go
@@ -701,7 +690,6 @@ Real returns the real part of x, which must be a numeric or unknown value. If x 
 
 ```
 searchKey: constant.Imag
-tags: [exported]
 ```
 
 ```Go
@@ -714,7 +702,6 @@ Imag returns the imaginary part of x, which must be a numeric or unknown value. 
 
 ```
 searchKey: constant.ToInt
-tags: [exported]
 ```
 
 ```Go
@@ -727,7 +714,6 @@ ToInt converts x to an Int value if x is representable as an Int. Otherwise it r
 
 ```
 searchKey: constant.ToFloat
-tags: [exported]
 ```
 
 ```Go
@@ -740,7 +726,6 @@ ToFloat converts x to a Float value if x is representable as a Float. Otherwise 
 
 ```
 searchKey: constant.ToComplex
-tags: [exported]
 ```
 
 ```Go
@@ -753,7 +738,6 @@ ToComplex converts x to a Complex value if x is representable as a Complex. Othe
 
 ```
 searchKey: constant.UnaryOp
-tags: [exported]
 ```
 
 ```Go
@@ -766,6 +750,7 @@ UnaryOp returns the result of the unary expression op y. The operation must be d
 
 ```
 searchKey: constant.match
+tags: [private]
 ```
 
 ```Go
@@ -778,6 +763,7 @@ match returns the matching representation (same type) with the smallest complexi
 
 ```
 searchKey: constant.match0
+tags: [private]
 ```
 
 ```Go
@@ -790,7 +776,6 @@ match0 must only be called by match. Invariant: ord(x) < ord(y)
 
 ```
 searchKey: constant.BinaryOp
-tags: [exported]
 ```
 
 ```Go
@@ -805,6 +790,7 @@ To force integer division of Int operands, use op == token.QUO_ASSIGN instead of
 
 ```
 searchKey: constant.add
+tags: [private]
 ```
 
 ```Go
@@ -815,6 +801,7 @@ func add(x, y Value) Value
 
 ```
 searchKey: constant.sub
+tags: [private]
 ```
 
 ```Go
@@ -825,6 +812,7 @@ func sub(x, y Value) Value
 
 ```
 searchKey: constant.mul
+tags: [private]
 ```
 
 ```Go
@@ -835,6 +823,7 @@ func mul(x, y Value) Value
 
 ```
 searchKey: constant.quo
+tags: [private]
 ```
 
 ```Go
@@ -845,7 +834,6 @@ func quo(x, y Value) Value
 
 ```
 searchKey: constant.Shift
-tags: [exported]
 ```
 
 ```Go
@@ -858,6 +846,7 @@ Shift returns the result of the shift expression x op s with op == token.SHL or 
 
 ```
 searchKey: constant.val
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +857,7 @@ func val(lit string) Value
 
 ```
 searchKey: constant.doOp
+tags: [private]
 ```
 
 ```Go
@@ -878,6 +868,7 @@ func doOp(x Value, op token.Token, y Value) (z Value)
 
 ```
 searchKey: constant.unknownVal
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +879,7 @@ type unknownVal struct{}
 
 ```
 searchKey: constant.unknownVal.Kind
+tags: [private]
 ```
 
 ```Go
@@ -898,6 +890,7 @@ func (unknownVal) Kind() Kind
 
 ```
 searchKey: constant.unknownVal.String
+tags: [private]
 ```
 
 ```Go
@@ -908,6 +901,7 @@ func (unknownVal) String() string
 
 ```
 searchKey: constant.unknownVal.ExactString
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +912,7 @@ func (x unknownVal) ExactString() string
 
 ```
 searchKey: constant.unknownVal.implementsValue
+tags: [private]
 ```
 
 ```Go
@@ -928,6 +923,7 @@ func (unknownVal) implementsValue()
 
 ```
 searchKey: constant.boolVal
+tags: [private]
 ```
 
 ```Go
@@ -938,6 +934,7 @@ type boolVal bool
 
 ```
 searchKey: constant.boolVal.Kind
+tags: [private]
 ```
 
 ```Go
@@ -948,6 +945,7 @@ func (boolVal) Kind() Kind
 
 ```
 searchKey: constant.boolVal.String
+tags: [private]
 ```
 
 ```Go
@@ -958,6 +956,7 @@ func (x boolVal) String() string
 
 ```
 searchKey: constant.boolVal.ExactString
+tags: [private]
 ```
 
 ```Go
@@ -968,6 +967,7 @@ func (x boolVal) ExactString() string
 
 ```
 searchKey: constant.boolVal.implementsValue
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +978,7 @@ func (boolVal) implementsValue()
 
 ```
 searchKey: constant.stringVal
+tags: [private]
 ```
 
 ```Go
@@ -993,6 +994,7 @@ type stringVal struct {
 
 ```
 searchKey: constant.stringVal.Kind
+tags: [private]
 ```
 
 ```Go
@@ -1003,6 +1005,7 @@ func (*stringVal) Kind() Kind
 
 ```
 searchKey: constant.stringVal.String
+tags: [private]
 ```
 
 ```Go
@@ -1015,6 +1018,7 @@ String returns a possibly shortened quoted form of the String value.
 
 ```
 searchKey: constant.stringVal.string
+tags: [private]
 ```
 
 ```Go
@@ -1027,6 +1031,7 @@ string constructs and returns the actual string literal value. If x represents a
 
 ```
 searchKey: constant.stringVal.appendReverse
+tags: [private]
 ```
 
 ```Go
@@ -1039,6 +1044,7 @@ appendReverse appends to list all of x's subpieces, but in reverse, and returns 
 
 ```
 searchKey: constant.stringVal.ExactString
+tags: [private]
 ```
 
 ```Go
@@ -1049,6 +1055,7 @@ func (x *stringVal) ExactString() string
 
 ```
 searchKey: constant.stringVal.implementsValue
+tags: [private]
 ```
 
 ```Go
@@ -1059,6 +1066,7 @@ func (*stringVal) implementsValue()
 
 ```
 searchKey: constant.int64Val
+tags: [private]
 ```
 
 ```Go
@@ -1070,6 +1078,7 @@ type int64Val int64 // Int values representable as an int64
 
 ```
 searchKey: constant.int64Val.Kind
+tags: [private]
 ```
 
 ```Go
@@ -1080,6 +1089,7 @@ func (int64Val) Kind() Kind
 
 ```
 searchKey: constant.int64Val.String
+tags: [private]
 ```
 
 ```Go
@@ -1090,6 +1100,7 @@ func (x int64Val) String() string
 
 ```
 searchKey: constant.int64Val.ExactString
+tags: [private]
 ```
 
 ```Go
@@ -1100,6 +1111,7 @@ func (x int64Val) ExactString() string
 
 ```
 searchKey: constant.int64Val.implementsValue
+tags: [private]
 ```
 
 ```Go
@@ -1110,6 +1122,7 @@ func (int64Val) implementsValue()
 
 ```
 searchKey: constant.intVal
+tags: [private]
 ```
 
 ```Go
@@ -1121,6 +1134,7 @@ type intVal struct{ val *big.Int } // Int values not representable as an int64
 
 ```
 searchKey: constant.i64toi
+tags: [private]
 ```
 
 ```Go
@@ -1131,6 +1145,7 @@ func i64toi(x int64Val) intVal
 
 ```
 searchKey: constant.intVal.Kind
+tags: [private]
 ```
 
 ```Go
@@ -1141,6 +1156,7 @@ func (intVal) Kind() Kind
 
 ```
 searchKey: constant.intVal.String
+tags: [private]
 ```
 
 ```Go
@@ -1151,6 +1167,7 @@ func (x intVal) String() string
 
 ```
 searchKey: constant.intVal.ExactString
+tags: [private]
 ```
 
 ```Go
@@ -1161,6 +1178,7 @@ func (x intVal) ExactString() string
 
 ```
 searchKey: constant.intVal.implementsValue
+tags: [private]
 ```
 
 ```Go
@@ -1171,6 +1189,7 @@ func (intVal) implementsValue()
 
 ```
 searchKey: constant.ratVal
+tags: [private]
 ```
 
 ```Go
@@ -1182,6 +1201,7 @@ type ratVal struct{ val *big.Rat } // Float values representable as a fraction
 
 ```
 searchKey: constant.i64tor
+tags: [private]
 ```
 
 ```Go
@@ -1192,6 +1212,7 @@ func i64tor(x int64Val) ratVal
 
 ```
 searchKey: constant.itor
+tags: [private]
 ```
 
 ```Go
@@ -1202,6 +1223,7 @@ func itor(x intVal) ratVal
 
 ```
 searchKey: constant.ratVal.Kind
+tags: [private]
 ```
 
 ```Go
@@ -1212,6 +1234,7 @@ func (ratVal) Kind() Kind
 
 ```
 searchKey: constant.ratVal.String
+tags: [private]
 ```
 
 ```Go
@@ -1222,6 +1245,7 @@ func (x ratVal) String() string
 
 ```
 searchKey: constant.ratVal.ExactString
+tags: [private]
 ```
 
 ```Go
@@ -1232,6 +1256,7 @@ func (x ratVal) ExactString() string
 
 ```
 searchKey: constant.ratVal.implementsValue
+tags: [private]
 ```
 
 ```Go
@@ -1242,6 +1267,7 @@ func (ratVal) implementsValue()
 
 ```
 searchKey: constant.floatVal
+tags: [private]
 ```
 
 ```Go
@@ -1253,6 +1279,7 @@ type floatVal struct{ val *big.Float } // Float values not representable as a fr
 
 ```
 searchKey: constant.i64tof
+tags: [private]
 ```
 
 ```Go
@@ -1263,6 +1290,7 @@ func i64tof(x int64Val) floatVal
 
 ```
 searchKey: constant.itof
+tags: [private]
 ```
 
 ```Go
@@ -1273,6 +1301,7 @@ func itof(x intVal) floatVal
 
 ```
 searchKey: constant.rtof
+tags: [private]
 ```
 
 ```Go
@@ -1283,6 +1312,7 @@ func rtof(x ratVal) floatVal
 
 ```
 searchKey: constant.floatVal.Kind
+tags: [private]
 ```
 
 ```Go
@@ -1293,6 +1323,7 @@ func (floatVal) Kind() Kind
 
 ```
 searchKey: constant.floatVal.String
+tags: [private]
 ```
 
 ```Go
@@ -1305,6 +1336,7 @@ String returns a decimal approximation of the Float value.
 
 ```
 searchKey: constant.floatVal.ExactString
+tags: [private]
 ```
 
 ```Go
@@ -1315,6 +1347,7 @@ func (x floatVal) ExactString() string
 
 ```
 searchKey: constant.floatVal.implementsValue
+tags: [private]
 ```
 
 ```Go
@@ -1325,6 +1358,7 @@ func (floatVal) implementsValue()
 
 ```
 searchKey: constant.complexVal
+tags: [private]
 ```
 
 ```Go
@@ -1335,6 +1369,7 @@ type complexVal struct{ re, im Value }
 
 ```
 searchKey: constant.vtoc
+tags: [private]
 ```
 
 ```Go
@@ -1345,6 +1380,7 @@ func vtoc(x Value) complexVal
 
 ```
 searchKey: constant.complexVal.Kind
+tags: [private]
 ```
 
 ```Go
@@ -1355,6 +1391,7 @@ func (complexVal) Kind() Kind
 
 ```
 searchKey: constant.complexVal.String
+tags: [private]
 ```
 
 ```Go
@@ -1365,6 +1402,7 @@ func (x complexVal) String() string
 
 ```
 searchKey: constant.complexVal.ExactString
+tags: [private]
 ```
 
 ```Go
@@ -1375,6 +1413,7 @@ func (x complexVal) ExactString() string
 
 ```
 searchKey: constant.complexVal.implementsValue
+tags: [private]
 ```
 
 ```Go
@@ -1385,6 +1424,7 @@ func (complexVal) implementsValue()
 
 ```
 searchKey: constant.makeTestCase
+tags: [private]
 ```
 
 ```Go
@@ -1398,6 +1438,7 @@ type makeTestCase struct {
 
 ```
 searchKey: constant.dup
+tags: [private]
 ```
 
 ```Go
@@ -1406,14 +1447,11 @@ func dup(k Kind, x interface{}) makeTestCase
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="reverse" href="#reverse">func reverse(x []string) []string</a>
 
 ```
 searchKey: constant.reverse
+tags: [private]
 ```
 
 ```Go
@@ -1426,6 +1464,7 @@ reverse reverses x in place and returns it.
 
 ```
 searchKey: constant.newInt
+tags: [private]
 ```
 
 ```Go
@@ -1436,6 +1475,7 @@ func newInt() *big.Int
 
 ```
 searchKey: constant.newRat
+tags: [private]
 ```
 
 ```Go
@@ -1446,6 +1486,7 @@ func newRat() *big.Rat
 
 ```
 searchKey: constant.newFloat
+tags: [private]
 ```
 
 ```Go
@@ -1456,6 +1497,7 @@ func newFloat() *big.Float
 
 ```
 searchKey: constant.smallInt
+tags: [private]
 ```
 
 ```Go
@@ -1468,6 +1510,7 @@ smallInt reports whether x would lead to "reasonably"-sized fraction if converte
 
 ```
 searchKey: constant.smallFloat64
+tags: [private]
 ```
 
 ```Go
@@ -1480,6 +1523,7 @@ smallFloat64 reports whether x would lead to "reasonably"-sized fraction if conv
 
 ```
 searchKey: constant.smallFloat
+tags: [private]
 ```
 
 ```Go
@@ -1492,7 +1536,6 @@ smallFloat reports whether x would lead to "reasonably"-sized fraction if conver
 
 ```
 searchKey: constant.BoolVal
-tags: [exported]
 ```
 
 ```Go
@@ -1505,7 +1548,6 @@ BoolVal returns the Go boolean value of x, which must be a Bool or an Unknown. I
 
 ```
 searchKey: constant.StringVal
-tags: [exported]
 ```
 
 ```Go
@@ -1518,7 +1560,6 @@ StringVal returns the Go string value of x, which must be a String or an Unknown
 
 ```
 searchKey: constant.Int64Val
-tags: [exported]
 ```
 
 ```Go
@@ -1531,7 +1572,6 @@ Int64Val returns the Go int64 value of x and whether the result is exact; x must
 
 ```
 searchKey: constant.Uint64Val
-tags: [exported]
 ```
 
 ```Go
@@ -1544,7 +1584,6 @@ Uint64Val returns the Go uint64 value of x and whether the result is exact; x mu
 
 ```
 searchKey: constant.Float32Val
-tags: [exported]
 ```
 
 ```Go
@@ -1557,7 +1596,6 @@ Float32Val is like Float64Val but for float32 instead of float64.
 
 ```
 searchKey: constant.Float64Val
-tags: [exported]
 ```
 
 ```Go
@@ -1570,7 +1608,6 @@ Float64Val returns the nearest Go float64 value of x and whether the result is e
 
 ```
 searchKey: constant.Val
-tags: [exported]
 ```
 
 ```Go
@@ -1593,7 +1630,6 @@ everything else    nil
 
 ```
 searchKey: constant.BitLen
-tags: [exported]
 ```
 
 ```Go
@@ -1606,7 +1642,6 @@ BitLen returns the number of bits required to represent the absolute value x in 
 
 ```
 searchKey: constant.Sign
-tags: [exported]
 ```
 
 ```Go
@@ -1619,7 +1654,6 @@ Sign returns -1, 0, or 1 depending on whether x < 0, x == 0, or x > 0; x must be
 
 ```
 searchKey: constant.Bytes
-tags: [exported]
 ```
 
 ```Go
@@ -1632,6 +1666,7 @@ Bytes returns the bytes for the absolute value of x in little- endian binary rep
 
 ```
 searchKey: constant.is32bit
+tags: [private]
 ```
 
 ```Go
@@ -1644,6 +1679,7 @@ is32bit reports whether x can be represented using 32 bits.
 
 ```
 searchKey: constant.is63bit
+tags: [private]
 ```
 
 ```Go
@@ -1656,6 +1692,7 @@ is63bit reports whether x can be represented using 63 bits.
 
 ```
 searchKey: constant.ord
+tags: [private]
 ```
 
 ```Go
@@ -1666,6 +1703,7 @@ func ord(x Value) int
 
 ```
 searchKey: constant.cmpZero
+tags: [private]
 ```
 
 ```Go
@@ -1676,7 +1714,6 @@ func cmpZero(x int, op token.Token) bool
 
 ```
 searchKey: constant.Compare
-tags: [exported]
 ```
 
 ```Go
@@ -1689,6 +1726,7 @@ Compare returns the result of the comparison x op y. The comparison must be defi
 
 ```
 searchKey: constant.testNumbers
+tags: [private]
 ```
 
 ```Go
@@ -1699,6 +1737,7 @@ func testNumbers(t *testing.T, kind token.Token, tests []string)
 
 ```
 searchKey: constant.TestNumbers
+tags: [private]
 ```
 
 ```Go
@@ -1711,6 +1750,7 @@ TestNumbers verifies that differently written literals representing the same num
 
 ```
 searchKey: constant.TestOps
+tags: [private]
 ```
 
 ```Go
@@ -1721,6 +1761,7 @@ func TestOps(t *testing.T)
 
 ```
 searchKey: constant.eql
+tags: [private]
 ```
 
 ```Go
@@ -1731,6 +1772,7 @@ func eql(x, y Value) bool
 
 ```
 searchKey: constant.TestString
+tags: [private]
 ```
 
 ```Go
@@ -1741,6 +1783,7 @@ func TestString(t *testing.T)
 
 ```
 searchKey: constant.panicHandler
+tags: [private]
 ```
 
 ```Go
@@ -1751,6 +1794,7 @@ func panicHandler(v *Value)
 
 ```
 searchKey: constant.TestFractions
+tags: [private]
 ```
 
 ```Go
@@ -1761,6 +1805,7 @@ func TestFractions(t *testing.T)
 
 ```
 searchKey: constant.TestBytes
+tags: [private]
 ```
 
 ```Go
@@ -1771,6 +1816,7 @@ func TestBytes(t *testing.T)
 
 ```
 searchKey: constant.TestUnknown
+tags: [private]
 ```
 
 ```Go
@@ -1781,6 +1827,7 @@ func TestUnknown(t *testing.T)
 
 ```
 searchKey: constant.TestMakeFloat64
+tags: [private]
 ```
 
 ```Go
@@ -1791,6 +1838,7 @@ func TestMakeFloat64(t *testing.T)
 
 ```
 searchKey: constant.TestMake
+tags: [private]
 ```
 
 ```Go
@@ -1801,6 +1849,7 @@ func TestMake(t *testing.T)
 
 ```
 searchKey: constant.BenchmarkStringAdd
+tags: [private]
 ```
 
 ```Go
@@ -1811,6 +1860,7 @@ func BenchmarkStringAdd(b *testing.B)
 
 ```
 searchKey: constant.TestBitLen
+tags: [private]
 ```
 
 ```Go

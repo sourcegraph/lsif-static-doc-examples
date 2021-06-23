@@ -27,10 +27,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="encodeTests" href="#encodeTests">var encodeTests</a>
 
 ```
 searchKey: utf16_test.encodeTests
+tags: [private]
 ```
 
 ```Go
@@ -41,6 +46,7 @@ var encodeTests = ...
 
 ```
 searchKey: utf16_test.decodeTests
+tags: [private]
 ```
 
 ```Go
@@ -51,6 +57,7 @@ var decodeTests = ...
 
 ```
 searchKey: utf16_test.decodeRuneTests
+tags: [private]
 ```
 
 ```Go
@@ -61,6 +68,7 @@ var decodeRuneTests = ...
 
 ```
 searchKey: utf16_test.surrogateTests
+tags: [private]
 ```
 
 ```Go
@@ -69,10 +77,15 @@ var surrogateTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="encodeTest" href="#encodeTest">type encodeTest struct</a>
 
 ```
 searchKey: utf16_test.encodeTest
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +99,7 @@ type encodeTest struct {
 
 ```
 searchKey: utf16_test.decodeTest
+tags: [private]
 ```
 
 ```Go
@@ -97,10 +111,15 @@ type decodeTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestConstants" href="#TestConstants">func TestConstants(t *testing.T)</a>
 
 ```
 searchKey: utf16_test.TestConstants
+tags: [private]
 ```
 
 ```Go
@@ -113,6 +132,7 @@ Validate the constants redefined from unicode.
 
 ```
 searchKey: utf16_test.TestEncode
+tags: [private]
 ```
 
 ```Go
@@ -123,6 +143,7 @@ func TestEncode(t *testing.T)
 
 ```
 searchKey: utf16_test.TestEncodeRune
+tags: [private]
 ```
 
 ```Go
@@ -133,6 +154,7 @@ func TestEncodeRune(t *testing.T)
 
 ```
 searchKey: utf16_test.TestDecode
+tags: [private]
 ```
 
 ```Go
@@ -143,6 +165,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: utf16_test.TestDecodeRune
+tags: [private]
 ```
 
 ```Go
@@ -153,6 +176,7 @@ func TestDecodeRune(t *testing.T)
 
 ```
 searchKey: utf16_test.TestIsSurrogate
+tags: [private]
 ```
 
 ```Go
@@ -163,6 +187,7 @@ func TestIsSurrogate(t *testing.T)
 
 ```
 searchKey: utf16_test.BenchmarkDecodeValidASCII
+tags: [private]
 ```
 
 ```Go
@@ -173,6 +198,7 @@ func BenchmarkDecodeValidASCII(b *testing.B)
 
 ```
 searchKey: utf16_test.BenchmarkDecodeValidJapaneseChars
+tags: [private]
 ```
 
 ```Go
@@ -183,6 +209,7 @@ func BenchmarkDecodeValidJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf16_test.BenchmarkDecodeRune
+tags: [private]
 ```
 
 ```Go
@@ -193,6 +220,7 @@ func BenchmarkDecodeRune(b *testing.B)
 
 ```
 searchKey: utf16_test.BenchmarkEncodeValidASCII
+tags: [private]
 ```
 
 ```Go
@@ -203,6 +231,7 @@ func BenchmarkEncodeValidASCII(b *testing.B)
 
 ```
 searchKey: utf16_test.BenchmarkEncodeValidJapaneseChars
+tags: [private]
 ```
 
 ```Go
@@ -213,6 +242,7 @@ func BenchmarkEncodeValidJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf16_test.BenchmarkEncodeRune
+tags: [private]
 ```
 
 ```Go

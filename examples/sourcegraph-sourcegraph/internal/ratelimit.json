@@ -4,7 +4,9 @@
     "identifier": "ratelimit",
     "newPage": true,
     "searchKey": "internal/ratelimit",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "DefaultMonitorRegistry",
                 "newPage": false,
                 "searchKey": "ratelimit.DefaultMonitorRegistry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "DefaultRegistry",
                 "newPage": false,
                 "searchKey": "ratelimit.DefaultRegistry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,9 +107,7 @@
                 "identifier": "MonitorRegistry",
                 "newPage": false,
                 "searchKey": "ratelimit.MonitorRegistry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -125,9 +125,7 @@
                       "identifier": "NewMonitorRegistry",
                       "newPage": false,
                       "searchKey": "ratelimit.NewMonitorRegistry",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -147,9 +145,7 @@
                       "identifier": "MonitorRegistry.GetOrSet",
                       "newPage": false,
                       "searchKey": "ratelimit.MonitorRegistry.GetOrSet",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -169,9 +165,7 @@
                       "identifier": "MonitorRegistry.Count",
                       "newPage": false,
                       "searchKey": "ratelimit.MonitorRegistry.Count",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -194,9 +188,7 @@
                 "identifier": "MetricsCollector",
                 "newPage": false,
                 "searchKey": "ratelimit.MetricsCollector",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -216,9 +208,7 @@
                 "identifier": "Monitor",
                 "newPage": false,
                 "searchKey": "ratelimit.Monitor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -236,9 +226,7 @@
                       "identifier": "Monitor.Get",
                       "newPage": false,
                       "searchKey": "ratelimit.Monitor.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -258,9 +246,7 @@
                       "identifier": "Monitor.RecommendedWaitForBackgroundOp",
                       "newPage": false,
                       "searchKey": "ratelimit.Monitor.RecommendedWaitForBackgroundOp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -280,9 +266,7 @@
                       "identifier": "Monitor.Update",
                       "newPage": false,
                       "searchKey": "ratelimit.Monitor.Update",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -302,9 +286,7 @@
                       "identifier": "Monitor.SetCollector",
                       "newPage": false,
                       "searchKey": "ratelimit.Monitor.SetCollector",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -324,7 +306,9 @@
                       "identifier": "Monitor.now",
                       "newPage": false,
                       "searchKey": "ratelimit.Monitor.now",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -347,9 +331,7 @@
                 "identifier": "Registry",
                 "newPage": false,
                 "searchKey": "ratelimit.Registry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -367,9 +349,7 @@
                       "identifier": "NewRegistry",
                       "newPage": false,
                       "searchKey": "ratelimit.NewRegistry",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -389,9 +369,7 @@
                       "identifier": "Registry.Get",
                       "newPage": false,
                       "searchKey": "ratelimit.Registry.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -411,9 +389,7 @@
                       "identifier": "Registry.GetOrSet",
                       "newPage": false,
                       "searchKey": "ratelimit.Registry.GetOrSet",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -433,9 +409,7 @@
                       "identifier": "Registry.Count",
                       "newPage": false,
                       "searchKey": "ratelimit.Registry.Count",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -461,7 +435,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -479,7 +455,9 @@
                 "identifier": "normaliseURL",
                 "newPage": false,
                 "searchKey": "ratelimit.normaliseURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -499,7 +477,9 @@
                 "identifier": "TestMonitor_RecommendedWaitForBackgroundOp",
                 "newPage": false,
                 "searchKey": "ratelimit.TestMonitor_RecommendedWaitForBackgroundOp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -519,7 +499,9 @@
                 "identifier": "TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter",
                 "newPage": false,
                 "searchKey": "ratelimit.TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -539,7 +521,9 @@
                 "identifier": "TestMonitor_Update",
                 "newPage": false,
                 "searchKey": "ratelimit.TestMonitor_Update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

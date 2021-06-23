@@ -8,10 +8,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleDial" href="#ExampleDial">func ExampleDial()</a>
 
 ```
 searchKey: syslog_test.ExampleDial
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "discovery",
     "newPage": true,
     "searchKey": "enterprise/internal/insights/discovery",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "settingsExample",
                 "newPage": false,
                 "searchKey": "discovery.settingsExample",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "DefaultRepoLister",
                 "newPage": false,
                 "searchKey": "discovery.DefaultRepoLister",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,9 +109,7 @@
                 "identifier": "RepoStore",
                 "newPage": false,
                 "searchKey": "discovery.RepoStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -125,9 +129,7 @@
                 "identifier": "AllReposIterator",
                 "newPage": false,
                 "searchKey": "discovery.AllReposIterator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -145,7 +147,9 @@
                       "identifier": "AllReposIterator.timeSince",
                       "newPage": false,
                       "searchKey": "discovery.AllReposIterator.timeSince",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -165,9 +169,7 @@
                       "identifier": "AllReposIterator.ForEach",
                       "newPage": false,
                       "searchKey": "discovery.AllReposIterator.ForEach",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -187,7 +189,9 @@
                       "identifier": "AllReposIterator.cachedRepoStoreList",
                       "newPage": false,
                       "searchKey": "discovery.AllReposIterator.cachedRepoStoreList",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -210,7 +214,9 @@
                 "identifier": "cachedPageRequest",
                 "newPage": false,
                 "searchKey": "discovery.cachedPageRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,9 +236,7 @@
                 "identifier": "SettingStore",
                 "newPage": false,
                 "searchKey": "discovery.SettingStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -252,9 +256,7 @@
                 "identifier": "MockDefaultRepoLister",
                 "newPage": false,
                 "searchKey": "discovery.MockDefaultRepoLister",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -272,9 +274,7 @@
                       "identifier": "NewMockDefaultRepoLister",
                       "newPage": false,
                       "searchKey": "discovery.NewMockDefaultRepoLister",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,9 +294,7 @@
                       "identifier": "NewMockDefaultRepoListerFrom",
                       "newPage": false,
                       "searchKey": "discovery.NewMockDefaultRepoListerFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -316,9 +314,7 @@
                       "identifier": "MockDefaultRepoLister.List",
                       "newPage": false,
                       "searchKey": "discovery.MockDefaultRepoLister.List",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -341,9 +337,7 @@
                 "identifier": "DefaultRepoListerListFunc",
                 "newPage": false,
                 "searchKey": "discovery.DefaultRepoListerListFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -361,9 +355,7 @@
                       "identifier": "DefaultRepoListerListFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -383,9 +375,7 @@
                       "identifier": "DefaultRepoListerListFunc.PushHook",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -405,9 +395,7 @@
                       "identifier": "DefaultRepoListerListFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -427,9 +415,7 @@
                       "identifier": "DefaultRepoListerListFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -449,7 +435,9 @@
                       "identifier": "DefaultRepoListerListFunc.nextHook",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -469,7 +457,9 @@
                       "identifier": "DefaultRepoListerListFunc.appendCall",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -489,9 +479,7 @@
                       "identifier": "DefaultRepoListerListFunc.History",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -514,9 +502,7 @@
                 "identifier": "DefaultRepoListerListFuncCall",
                 "newPage": false,
                 "searchKey": "discovery.DefaultRepoListerListFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -534,9 +520,7 @@
                       "identifier": "DefaultRepoListerListFuncCall.Args",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -556,9 +540,7 @@
                       "identifier": "DefaultRepoListerListFuncCall.Results",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -581,9 +563,7 @@
                 "identifier": "MockRepoStore",
                 "newPage": false,
                 "searchKey": "discovery.MockRepoStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -601,9 +581,7 @@
                       "identifier": "NewMockRepoStore",
                       "newPage": false,
                       "searchKey": "discovery.NewMockRepoStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -623,9 +601,7 @@
                       "identifier": "NewMockRepoStoreFrom",
                       "newPage": false,
                       "searchKey": "discovery.NewMockRepoStoreFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -645,9 +621,7 @@
                       "identifier": "MockRepoStore.List",
                       "newPage": false,
                       "searchKey": "discovery.MockRepoStore.List",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -670,9 +644,7 @@
                 "identifier": "RepoStoreListFunc",
                 "newPage": false,
                 "searchKey": "discovery.RepoStoreListFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -690,9 +662,7 @@
                       "identifier": "RepoStoreListFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "discovery.RepoStoreListFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -712,9 +682,7 @@
                       "identifier": "RepoStoreListFunc.PushHook",
                       "newPage": false,
                       "searchKey": "discovery.RepoStoreListFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -734,9 +702,7 @@
                       "identifier": "RepoStoreListFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "discovery.RepoStoreListFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -756,9 +722,7 @@
                       "identifier": "RepoStoreListFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "discovery.RepoStoreListFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -778,7 +742,9 @@
                       "identifier": "RepoStoreListFunc.nextHook",
                       "newPage": false,
                       "searchKey": "discovery.RepoStoreListFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -798,7 +764,9 @@
                       "identifier": "RepoStoreListFunc.appendCall",
                       "newPage": false,
                       "searchKey": "discovery.RepoStoreListFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -818,9 +786,7 @@
                       "identifier": "RepoStoreListFunc.History",
                       "newPage": false,
                       "searchKey": "discovery.RepoStoreListFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -843,9 +809,7 @@
                 "identifier": "RepoStoreListFuncCall",
                 "newPage": false,
                 "searchKey": "discovery.RepoStoreListFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -863,9 +827,7 @@
                       "identifier": "RepoStoreListFuncCall.Args",
                       "newPage": false,
                       "searchKey": "discovery.RepoStoreListFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -885,9 +847,7 @@
                       "identifier": "RepoStoreListFuncCall.Results",
                       "newPage": false,
                       "searchKey": "discovery.RepoStoreListFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -910,9 +870,7 @@
                 "identifier": "MockSettingStore",
                 "newPage": false,
                 "searchKey": "discovery.MockSettingStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -930,9 +888,7 @@
                       "identifier": "NewMockSettingStore",
                       "newPage": false,
                       "searchKey": "discovery.NewMockSettingStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -952,9 +908,7 @@
                       "identifier": "NewMockSettingStoreFrom",
                       "newPage": false,
                       "searchKey": "discovery.NewMockSettingStoreFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -974,9 +928,7 @@
                       "identifier": "MockSettingStore.GetLastestSchemaSettings",
                       "newPage": false,
                       "searchKey": "discovery.MockSettingStore.GetLastestSchemaSettings",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -996,9 +948,7 @@
                       "identifier": "MockSettingStore.GetLatest",
                       "newPage": false,
                       "searchKey": "discovery.MockSettingStore.GetLatest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1021,9 +971,7 @@
                 "identifier": "SettingStoreGetLastestSchemaSettingsFunc",
                 "newPage": false,
                 "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1041,9 +989,7 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1063,9 +1009,7 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1085,9 +1029,7 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1107,9 +1049,7 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1129,7 +1069,9 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1149,7 +1091,9 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1169,9 +1113,7 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFunc.History",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1194,9 +1136,7 @@
                 "identifier": "SettingStoreGetLastestSchemaSettingsFuncCall",
                 "newPage": false,
                 "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1214,9 +1154,7 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1236,9 +1174,7 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1261,9 +1197,7 @@
                 "identifier": "SettingStoreGetLatestFunc",
                 "newPage": false,
                 "searchKey": "discovery.SettingStoreGetLatestFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1281,9 +1215,7 @@
                       "identifier": "SettingStoreGetLatestFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1303,9 +1235,7 @@
                       "identifier": "SettingStoreGetLatestFunc.PushHook",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1325,9 +1255,7 @@
                       "identifier": "SettingStoreGetLatestFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1347,9 +1275,7 @@
                       "identifier": "SettingStoreGetLatestFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1369,7 +1295,9 @@
                       "identifier": "SettingStoreGetLatestFunc.nextHook",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1389,7 +1317,9 @@
                       "identifier": "SettingStoreGetLatestFunc.appendCall",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1409,9 +1339,7 @@
                       "identifier": "SettingStoreGetLatestFunc.History",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1434,9 +1362,7 @@
                 "identifier": "SettingStoreGetLatestFuncCall",
                 "newPage": false,
                 "searchKey": "discovery.SettingStoreGetLatestFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1454,9 +1380,7 @@
                       "identifier": "SettingStoreGetLatestFuncCall.Args",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1476,9 +1400,7 @@
                       "identifier": "SettingStoreGetLatestFuncCall.Results",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1504,7 +1426,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1522,9 +1446,7 @@
                 "identifier": "Discover",
                 "newPage": false,
                 "searchKey": "discovery.Discover",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1544,7 +1466,9 @@
                 "identifier": "parseUserSettings",
                 "newPage": false,
                 "searchKey": "discovery.parseUserSettings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1564,9 +1488,7 @@
                 "identifier": "EncodeSeriesID",
                 "newPage": false,
                 "searchKey": "discovery.EncodeSeriesID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1586,7 +1508,9 @@
                 "identifier": "sha256String",
                 "newPage": false,
                 "searchKey": "discovery.sha256String",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1606,7 +1530,9 @@
                 "identifier": "TestAllReposIterator",
                 "newPage": false,
                 "searchKey": "discovery.TestAllReposIterator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1626,7 +1552,9 @@
                 "identifier": "TestAllReposIterator_DotCom",
                 "newPage": false,
                 "searchKey": "discovery.TestAllReposIterator_DotCom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1646,7 +1574,9 @@
                 "identifier": "TestDiscover",
                 "newPage": false,
                 "searchKey": "discovery.TestDiscover",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1666,7 +1596,9 @@
                 "identifier": "Test_parseUserSettings",
                 "newPage": false,
                 "searchKey": "discovery.Test_parseUserSettings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1686,7 +1618,9 @@
                 "identifier": "TestEncodeSeriesID",
                 "newPage": false,
                 "searchKey": "discovery.TestEncodeSeriesID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

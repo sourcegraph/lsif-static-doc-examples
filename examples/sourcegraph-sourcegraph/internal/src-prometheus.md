@@ -36,11 +36,14 @@ Package srcprometheus defines an API to interact with Sourcegraph Prometheus, in
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="EndpointAlertsStatus" href="#EndpointAlertsStatus">const EndpointAlertsStatus</a>
 
 ```
 searchKey: srcprometheus.EndpointAlertsStatus
-tags: [exported]
 ```
 
 ```Go
@@ -51,7 +54,6 @@ const EndpointAlertsStatus = "/prom-wrapper/alerts-status"
 
 ```
 searchKey: srcprometheus.EndpointAlertsStatusHistory
-tags: [exported]
 ```
 
 ```Go
@@ -62,7 +64,6 @@ const EndpointAlertsStatusHistory = EndpointAlertsStatus + "/history"
 
 ```
 searchKey: srcprometheus.EndpointConfigSubscriber
-tags: [exported]
 ```
 
 ```Go
@@ -71,11 +72,14 @@ const EndpointConfigSubscriber = "/prom-wrapper/config-subscriber"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrPrometheusUnavailable" href="#ErrPrometheusUnavailable">var ErrPrometheusUnavailable</a>
 
 ```
 searchKey: srcprometheus.ErrPrometheusUnavailable
-tags: [exported]
 ```
 
 ```Go
@@ -88,7 +92,6 @@ ErrPrometheusUnavailable is raised specifically when prometheusURL is unset or w
 
 ```
 searchKey: srcprometheus.PrometheusURL
-tags: [exported]
 ```
 
 ```Go
@@ -99,11 +102,14 @@ PrometheusURL is the configured Prometheus instance.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Client" href="#Client">type Client interface</a>
 
 ```
 searchKey: srcprometheus.Client
-tags: [exported]
 ```
 
 ```Go
@@ -120,7 +126,6 @@ Client provides the interface for interacting with Sourcegraph Prometheus, inclu
 
 ```
 searchKey: srcprometheus.NewClient
-tags: [exported]
 ```
 
 ```Go
@@ -135,6 +140,7 @@ See [https://docs.sourcegraph.com/dev/background-information/observability/prome
 
 ```
 searchKey: srcprometheus.client
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +154,7 @@ type client struct {
 
 ```
 searchKey: srcprometheus.client.newRequest
+tags: [private]
 ```
 
 ```Go
@@ -158,6 +165,7 @@ func (c *client) newRequest(endpoint string, query url.Values) (*http.Request, e
 
 ```
 searchKey: srcprometheus.client.do
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +176,7 @@ func (c *client) do(ctx context.Context, req *http.Request) (*http.Response, err
 
 ```
 searchKey: srcprometheus.client.GetAlertsStatus
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +189,7 @@ GetAlertsStatus retrieves an overview of current alerts
 
 ```
 searchKey: srcprometheus.client.GetAlertsHistory
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +202,7 @@ GetAlertsHistory retrieves a historical summary of all alerts
 
 ```
 searchKey: srcprometheus.client.GetConfigStatus
+tags: [private]
 ```
 
 ```Go
@@ -202,6 +213,7 @@ func (c *client) GetConfigStatus(ctx context.Context) (*ConfigStatus, error)
 
 ```
 searchKey: srcprometheus.roundTripper
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +226,7 @@ roundTripper treats certain connection errors as `ErrPrometheusUnavailable` whic
 
 ```
 searchKey: srcprometheus.roundTripper.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -224,7 +237,6 @@ func (r *roundTripper) RoundTrip(req *http.Request) (*http.Response, error)
 
 ```
 searchKey: srcprometheus.AlertsStatus
-tags: [exported]
 ```
 
 ```Go
@@ -240,7 +252,6 @@ type AlertsStatus struct {
 
 ```
 searchKey: srcprometheus.MonitoringAlert
-tags: [exported]
 ```
 
 ```Go
@@ -262,7 +273,6 @@ Internal fields named to accomodate GraphQL getters and setters, see grapqhlback
 
 ```
 searchKey: srcprometheus.MonitoringAlerts
-tags: [exported]
 ```
 
 ```Go
@@ -273,7 +283,6 @@ type MonitoringAlerts []*MonitoringAlert
 
 ```
 searchKey: srcprometheus.MonitoringAlerts.Less
-tags: [exported]
 ```
 
 ```Go
@@ -286,7 +295,6 @@ Less determined by timestamp -> serviceName -> alert name
 
 ```
 searchKey: srcprometheus.MonitoringAlerts.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -297,7 +305,6 @@ func (a MonitoringAlerts) Swap(i, j int)
 
 ```
 searchKey: srcprometheus.MonitoringAlerts.Len
-tags: [exported]
 ```
 
 ```Go
@@ -308,7 +315,6 @@ func (a MonitoringAlerts) Len() int
 
 ```
 searchKey: srcprometheus.AlertsHistory
-tags: [exported]
 ```
 
 ```Go
@@ -321,7 +327,6 @@ type AlertsHistory struct {
 
 ```
 searchKey: srcprometheus.ConfigStatus
-tags: [exported]
 ```
 
 ```Go
@@ -332,10 +337,15 @@ type ConfigStatus struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Test_roundTripper_PrometheusUnavailable" href="#Test_roundTripper_PrometheusUnavailable">func Test_roundTripper_PrometheusUnavailable(t *testing.T)</a>
 
 ```
 searchKey: srcprometheus.Test_roundTripper_PrometheusUnavailable
+tags: [private]
 ```
 
 ```Go

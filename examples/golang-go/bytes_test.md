@@ -68,7 +68,7 @@
     * [type ReplaceTest struct](#ReplaceTest)
     * [type TitleTest struct](#TitleTest)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.buffer_test.go)
     * [func check(t *testing.T, testname string, buf *Buffer, s string)](#check)
     * [func fillString(t *testing.T, testname string, buf *Buffer, s string, n int, fus string) string](#fillString)
     * [func fillBytes(t *testing.T, testname string, buf *Buffer, s string, n int, fub []byte) string](#fillBytes)
@@ -283,10 +283,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="N" href="#N">const N</a>
 
 ```
 searchKey: bytes_test.N
+tags: [private]
 ```
 
 ```Go
@@ -298,6 +303,7 @@ const N = 10000 // make this bigger for a larger (and slower) test
 
 ```
 searchKey: bytes_test.space
+tags: [private]
 ```
 
 ```Go
@@ -306,10 +312,15 @@ const space = "\t\v\r\f\n\u0085\u00a0\u2000\u3000"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="testString" href="#testString">var testString</a>
 
 ```
 searchKey: bytes_test.testString
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +332,7 @@ var testString string // test data for write tests
 
 ```
 searchKey: bytes_test.testBytes
+tags: [private]
 ```
 
 ```Go
@@ -332,6 +344,7 @@ var testBytes []byte // test data; same as testString but as a slice.
 
 ```
 searchKey: bytes_test.readBytesTests
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +355,7 @@ var readBytesTests = ...
 
 ```
 searchKey: bytes_test.abcd
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +366,7 @@ var abcd = "abcd"
 
 ```
 searchKey: bytes_test.faces
+tags: [private]
 ```
 
 ```Go
@@ -362,6 +377,7 @@ var faces = "☺☻☹"
 
 ```
 searchKey: bytes_test.commas
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +388,7 @@ var commas = "1,2,3,4"
 
 ```
 searchKey: bytes_test.dots
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +399,7 @@ var dots = "1....2....3....4"
 
 ```
 searchKey: bytes_test.indexTests
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +410,7 @@ var indexTests = ...
 
 ```
 searchKey: bytes_test.lastIndexTests
+tags: [private]
 ```
 
 ```Go
@@ -402,6 +421,7 @@ var lastIndexTests = ...
 
 ```
 searchKey: bytes_test.indexAnyTests
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +432,7 @@ var indexAnyTests = ...
 
 ```
 searchKey: bytes_test.lastIndexAnyTests
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +443,7 @@ var lastIndexAnyTests = ...
 
 ```
 searchKey: bytes_test.bmbuf
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +454,7 @@ var bmbuf []byte
 
 ```
 searchKey: bytes_test.indexSizes
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +465,7 @@ var indexSizes = []int{10, 32, 4 << 10, 4 << 20, 64 << 20}
 
 ```
 searchKey: bytes_test.isRaceBuilder
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +476,7 @@ var isRaceBuilder = strings.HasSuffix(testenv.Builder(), "-race")
 
 ```
 searchKey: bytes_test.splittests
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +487,7 @@ var splittests = ...
 
 ```
 searchKey: bytes_test.splitaftertests
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +498,7 @@ var splitaftertests = ...
 
 ```
 searchKey: bytes_test.fieldstests
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +509,7 @@ var fieldstests = ...
 
 ```
 searchKey: bytes_test.upperTests
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +520,7 @@ var upperTests = ...
 
 ```
 searchKey: bytes_test.lowerTests
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +531,7 @@ var lowerTests = ...
 
 ```
 searchKey: bytes_test.trimSpaceTests
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +542,7 @@ var trimSpaceTests = ...
 
 ```
 searchKey: bytes_test.toValidUTF8Tests
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +553,7 @@ var toValidUTF8Tests = ...
 
 ```
 searchKey: bytes_test.RepeatTests
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +564,7 @@ var RepeatTests = ...
 
 ```
 searchKey: bytes_test.RunesTests
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +575,7 @@ var RunesTests = ...
 
 ```
 searchKey: bytes_test.trimTests
+tags: [private]
 ```
 
 ```Go
@@ -552,6 +586,7 @@ var trimTests = ...
 
 ```
 searchKey: bytes_test.isSpace
+tags: [private]
 ```
 
 ```Go
@@ -562,6 +597,7 @@ var isSpace = predicate{unicode.IsSpace, "IsSpace"}
 
 ```
 searchKey: bytes_test.isDigit
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +608,7 @@ var isDigit = predicate{unicode.IsDigit, "IsDigit"}
 
 ```
 searchKey: bytes_test.isUpper
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +619,7 @@ var isUpper = predicate{unicode.IsUpper, "IsUpper"}
 
 ```
 searchKey: bytes_test.isValidRune
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +635,7 @@ var isValidRune = predicate{
 
 ```
 searchKey: bytes_test.trimFuncTests
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +646,7 @@ var trimFuncTests = ...
 
 ```
 searchKey: bytes_test.indexFuncTests
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +657,7 @@ var indexFuncTests = ...
 
 ```
 searchKey: bytes_test.ReplaceTests
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +668,7 @@ var ReplaceTests = ...
 
 ```
 searchKey: bytes_test.TitleTests
+tags: [private]
 ```
 
 ```Go
@@ -637,6 +679,7 @@ var TitleTests = ...
 
 ```
 searchKey: bytes_test.ToTitleTests
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +690,7 @@ var ToTitleTests = ...
 
 ```
 searchKey: bytes_test.EqualFoldTests
+tags: [private]
 ```
 
 ```Go
@@ -657,6 +701,7 @@ var EqualFoldTests = ...
 
 ```
 searchKey: bytes_test.containsTests
+tags: [private]
 ```
 
 ```Go
@@ -667,6 +712,7 @@ var containsTests = ...
 
 ```
 searchKey: bytes_test.ContainsAnyTests
+tags: [private]
 ```
 
 ```Go
@@ -677,6 +723,7 @@ var ContainsAnyTests = ...
 
 ```
 searchKey: bytes_test.ContainsRuneTests
+tags: [private]
 ```
 
 ```Go
@@ -687,6 +734,7 @@ var ContainsRuneTests = ...
 
 ```
 searchKey: bytes_test.makeFieldsInput
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +745,7 @@ var makeFieldsInput = ...
 
 ```
 searchKey: bytes_test.makeFieldsInputASCII
+tags: [private]
 ```
 
 ```Go
@@ -707,6 +756,7 @@ var makeFieldsInputASCII = ...
 
 ```
 searchKey: bytes_test.bytesdata
+tags: [private]
 ```
 
 ```Go
@@ -717,6 +767,7 @@ var bytesdata = ...
 
 ```
 searchKey: bytes_test.benchInputHard
+tags: [private]
 ```
 
 ```Go
@@ -727,6 +778,7 @@ var benchInputHard = makeBenchInputHard()
 
 ```
 searchKey: bytes_test.compareTests
+tags: [private]
 ```
 
 ```Go
@@ -737,6 +789,7 @@ var compareTests = ...
 
 ```
 searchKey: bytes_test.UnreadRuneErrorTests
+tags: [private]
 ```
 
 ```Go
@@ -745,10 +798,15 @@ var UnreadRuneErrorTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="negativeReader" href="#negativeReader">type negativeReader struct{}</a>
 
 ```
 searchKey: bytes_test.negativeReader
+tags: [private]
 ```
 
 ```Go
@@ -759,6 +817,7 @@ type negativeReader struct{}
 
 ```
 searchKey: bytes_test.negativeReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -769,6 +828,7 @@ func (r *negativeReader) Read([]byte) (int, error)
 
 ```
 searchKey: bytes_test.panicReader
+tags: [private]
 ```
 
 ```Go
@@ -779,6 +839,7 @@ type panicReader struct{ panic bool }
 
 ```
 searchKey: bytes_test.panicReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -789,6 +850,7 @@ func (r panicReader) Read(p []byte) (int, error)
 
 ```
 searchKey: bytes_test.BinOpTest
+tags: [private]
 ```
 
 ```Go
@@ -803,6 +865,7 @@ type BinOpTest struct {
 
 ```
 searchKey: bytes_test.SplitTest
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +881,7 @@ type SplitTest struct {
 
 ```
 searchKey: bytes_test.FieldsTest
+tags: [private]
 ```
 
 ```Go
@@ -831,6 +895,7 @@ type FieldsTest struct {
 
 ```
 searchKey: bytes_test.StringTest
+tags: [private]
 ```
 
 ```Go
@@ -846,6 +911,7 @@ Test case for any function which accepts and returns a byte slice. For ease of c
 
 ```
 searchKey: bytes_test.RepeatTest
+tags: [private]
 ```
 
 ```Go
@@ -859,6 +925,7 @@ type RepeatTest struct {
 
 ```
 searchKey: bytes_test.RunesTest
+tags: [private]
 ```
 
 ```Go
@@ -873,6 +940,7 @@ type RunesTest struct {
 
 ```
 searchKey: bytes_test.TrimTest
+tags: [private]
 ```
 
 ```Go
@@ -886,6 +954,7 @@ type TrimTest struct {
 
 ```
 searchKey: bytes_test.predicate
+tags: [private]
 ```
 
 ```Go
@@ -899,6 +968,7 @@ type predicate struct {
 
 ```
 searchKey: bytes_test.not
+tags: [private]
 ```
 
 ```Go
@@ -909,6 +979,7 @@ func not(p predicate) predicate
 
 ```
 searchKey: bytes_test.TrimFuncTest
+tags: [private]
 ```
 
 ```Go
@@ -925,6 +996,7 @@ type TrimFuncTest struct {
 
 ```
 searchKey: bytes_test.IndexFuncTest
+tags: [private]
 ```
 
 ```Go
@@ -939,6 +1011,7 @@ type IndexFuncTest struct {
 
 ```
 searchKey: bytes_test.ReplaceTest
+tags: [private]
 ```
 
 ```Go
@@ -954,6 +1027,7 @@ type ReplaceTest struct {
 
 ```
 searchKey: bytes_test.TitleTest
+tags: [private]
 ```
 
 ```Go
@@ -964,10 +1038,15 @@ type TitleTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.buffer_test.go" href="#init.buffer_test.go">func init()</a>
 
 ```
 searchKey: bytes_test.init
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1057,7 @@ func init()
 
 ```
 searchKey: bytes_test.check
+tags: [private]
 ```
 
 ```Go
@@ -990,6 +1070,7 @@ Verify that contents of buf match the string s.
 
 ```
 searchKey: bytes_test.fillString
+tags: [private]
 ```
 
 ```Go
@@ -1002,6 +1083,7 @@ Fill buf through n writes of string fus. The initial contents of buf corresponds
 
 ```
 searchKey: bytes_test.fillBytes
+tags: [private]
 ```
 
 ```Go
@@ -1014,6 +1096,7 @@ Fill buf through n writes of byte slice fub. The initial contents of buf corresp
 
 ```
 searchKey: bytes_test.TestNewBuffer
+tags: [private]
 ```
 
 ```Go
@@ -1024,6 +1107,7 @@ func TestNewBuffer(t *testing.T)
 
 ```
 searchKey: bytes_test.TestNewBufferString
+tags: [private]
 ```
 
 ```Go
@@ -1034,6 +1118,7 @@ func TestNewBufferString(t *testing.T)
 
 ```
 searchKey: bytes_test.empty
+tags: [private]
 ```
 
 ```Go
@@ -1046,6 +1131,7 @@ Empty buf through repeated reads into fub. The initial contents of buf correspon
 
 ```
 searchKey: bytes_test.TestBasicOperations
+tags: [private]
 ```
 
 ```Go
@@ -1056,6 +1142,7 @@ func TestBasicOperations(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLargeStringWrites
+tags: [private]
 ```
 
 ```Go
@@ -1066,6 +1153,7 @@ func TestLargeStringWrites(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLargeByteWrites
+tags: [private]
 ```
 
 ```Go
@@ -1076,6 +1164,7 @@ func TestLargeByteWrites(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLargeStringReads
+tags: [private]
 ```
 
 ```Go
@@ -1086,6 +1175,7 @@ func TestLargeStringReads(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLargeByteReads
+tags: [private]
 ```
 
 ```Go
@@ -1096,6 +1186,7 @@ func TestLargeByteReads(t *testing.T)
 
 ```
 searchKey: bytes_test.TestMixedReadsAndWrites
+tags: [private]
 ```
 
 ```Go
@@ -1106,6 +1197,7 @@ func TestMixedReadsAndWrites(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCapWithPreallocatedSlice
+tags: [private]
 ```
 
 ```Go
@@ -1116,6 +1208,7 @@ func TestCapWithPreallocatedSlice(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCapWithSliceAndWrittenData
+tags: [private]
 ```
 
 ```Go
@@ -1126,6 +1219,7 @@ func TestCapWithSliceAndWrittenData(t *testing.T)
 
 ```
 searchKey: bytes_test.TestNil
+tags: [private]
 ```
 
 ```Go
@@ -1136,6 +1230,7 @@ func TestNil(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -1146,6 +1241,7 @@ func TestReadFrom(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReadFromPanicReader
+tags: [private]
 ```
 
 ```Go
@@ -1158,6 +1254,7 @@ Make sure that an empty Buffer remains empty when it is "grown" before a Read th
 
 ```
 searchKey: bytes_test.TestReadFromNegativeReader
+tags: [private]
 ```
 
 ```Go
@@ -1168,6 +1265,7 @@ func TestReadFromNegativeReader(t *testing.T)
 
 ```
 searchKey: bytes_test.TestWriteTo
+tags: [private]
 ```
 
 ```Go
@@ -1178,6 +1276,7 @@ func TestWriteTo(t *testing.T)
 
 ```
 searchKey: bytes_test.TestRuneIO
+tags: [private]
 ```
 
 ```Go
@@ -1188,6 +1287,7 @@ func TestRuneIO(t *testing.T)
 
 ```
 searchKey: bytes_test.TestWriteInvalidRune
+tags: [private]
 ```
 
 ```Go
@@ -1198,6 +1298,7 @@ func TestWriteInvalidRune(t *testing.T)
 
 ```
 searchKey: bytes_test.TestNext
+tags: [private]
 ```
 
 ```Go
@@ -1208,6 +1309,7 @@ func TestNext(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReadBytes
+tags: [private]
 ```
 
 ```Go
@@ -1218,6 +1320,7 @@ func TestReadBytes(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReadString
+tags: [private]
 ```
 
 ```Go
@@ -1228,6 +1331,7 @@ func TestReadString(t *testing.T)
 
 ```
 searchKey: bytes_test.BenchmarkReadString
+tags: [private]
 ```
 
 ```Go
@@ -1238,6 +1342,7 @@ func BenchmarkReadString(b *testing.B)
 
 ```
 searchKey: bytes_test.TestGrow
+tags: [private]
 ```
 
 ```Go
@@ -1248,6 +1353,7 @@ func TestGrow(t *testing.T)
 
 ```
 searchKey: bytes_test.TestGrowOverflow
+tags: [private]
 ```
 
 ```Go
@@ -1258,6 +1364,7 @@ func TestGrowOverflow(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReadEmptyAtEOF
+tags: [private]
 ```
 
 ```Go
@@ -1270,6 +1377,7 @@ Was a bug: used to give EOF reading empty slice at EOF.
 
 ```
 searchKey: bytes_test.TestUnreadByte
+tags: [private]
 ```
 
 ```Go
@@ -1280,6 +1388,7 @@ func TestUnreadByte(t *testing.T)
 
 ```
 searchKey: bytes_test.TestBufferGrowth
+tags: [private]
 ```
 
 ```Go
@@ -1292,6 +1401,7 @@ Tests that we occasionally compact. Issue 5154.
 
 ```
 searchKey: bytes_test.BenchmarkWriteByte
+tags: [private]
 ```
 
 ```Go
@@ -1302,6 +1412,7 @@ func BenchmarkWriteByte(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkWriteRune
+tags: [private]
 ```
 
 ```Go
@@ -1312,6 +1423,7 @@ func BenchmarkWriteRune(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkBufferNotEmptyWriteRead
+tags: [private]
 ```
 
 ```Go
@@ -1324,6 +1436,7 @@ From Issue 5154.
 
 ```
 searchKey: bytes_test.BenchmarkBufferFullSmallReads
+tags: [private]
 ```
 
 ```Go
@@ -1336,6 +1449,7 @@ Check that we don't compact too often. From Issue 5154.
 
 ```
 searchKey: bytes_test.eq
+tags: [private]
 ```
 
 ```Go
@@ -1346,6 +1460,7 @@ func eq(a, b []string) bool
 
 ```
 searchKey: bytes_test.sliceOfString
+tags: [private]
 ```
 
 ```Go
@@ -1356,6 +1471,7 @@ func sliceOfString(s [][]byte) []string
 
 ```
 searchKey: bytes_test.TestEqual
+tags: [private]
 ```
 
 ```Go
@@ -1366,6 +1482,7 @@ func TestEqual(t *testing.T)
 
 ```
 searchKey: bytes_test.TestEqualExhaustive
+tags: [private]
 ```
 
 ```Go
@@ -1376,6 +1493,7 @@ func TestEqualExhaustive(t *testing.T)
 
 ```
 searchKey: bytes_test.TestNotEqual
+tags: [private]
 ```
 
 ```Go
@@ -1388,6 +1506,7 @@ make sure Equal returns false for minimally different strings. The data is all z
 
 ```
 searchKey: bytes_test.runIndexTests
+tags: [private]
 ```
 
 ```Go
@@ -1400,6 +1519,7 @@ Execute f on each test case.  funcName should be the name of f; it's used in fai
 
 ```
 searchKey: bytes_test.runIndexAnyTests
+tags: [private]
 ```
 
 ```Go
@@ -1410,6 +1530,7 @@ func runIndexAnyTests(t *testing.T, f func(s []byte, chars string) int, funcName
 
 ```
 searchKey: bytes_test.TestIndex
+tags: [private]
 ```
 
 ```Go
@@ -1420,6 +1541,7 @@ func TestIndex(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLastIndex
+tags: [private]
 ```
 
 ```Go
@@ -1430,6 +1552,7 @@ func TestLastIndex(t *testing.T)
 
 ```
 searchKey: bytes_test.TestIndexAny
+tags: [private]
 ```
 
 ```Go
@@ -1440,6 +1563,7 @@ func TestIndexAny(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLastIndexAny
+tags: [private]
 ```
 
 ```Go
@@ -1450,6 +1574,7 @@ func TestLastIndexAny(t *testing.T)
 
 ```
 searchKey: bytes_test.TestIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -1460,6 +1585,7 @@ func TestIndexByte(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLastIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -1470,6 +1596,7 @@ func TestLastIndexByte(t *testing.T)
 
 ```
 searchKey: bytes_test.TestIndexByteBig
+tags: [private]
 ```
 
 ```Go
@@ -1482,6 +1609,7 @@ test a larger buffer with different sizes and alignments
 
 ```
 searchKey: bytes_test.TestIndexByteSmall
+tags: [private]
 ```
 
 ```Go
@@ -1494,6 +1622,7 @@ test a small index across all page offsets
 
 ```
 searchKey: bytes_test.TestIndexRune
+tags: [private]
 ```
 
 ```Go
@@ -1504,6 +1633,7 @@ func TestIndexRune(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCountByte
+tags: [private]
 ```
 
 ```Go
@@ -1516,6 +1646,7 @@ test count of a single byte across page offsets
 
 ```
 searchKey: bytes_test.TestCountByteNoMatch
+tags: [private]
 ```
 
 ```Go
@@ -1528,6 +1659,7 @@ Make sure we don't count bytes outside our window
 
 ```
 searchKey: bytes_test.valName
+tags: [private]
 ```
 
 ```Go
@@ -1538,6 +1670,7 @@ func valName(x int) string
 
 ```
 searchKey: bytes_test.benchBytes
+tags: [private]
 ```
 
 ```Go
@@ -1548,6 +1681,7 @@ func benchBytes(b *testing.B, sizes []int, f func(b *testing.B, n int))
 
 ```
 searchKey: bytes_test.BenchmarkIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -1558,6 +1692,7 @@ func BenchmarkIndexByte(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexBytePortable
+tags: [private]
 ```
 
 ```Go
@@ -1568,6 +1703,7 @@ func BenchmarkIndexBytePortable(b *testing.B)
 
 ```
 searchKey: bytes_test.bmIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -1578,6 +1714,7 @@ func bmIndexByte(index func([]byte, byte) int) func(b *testing.B, n int)
 
 ```
 searchKey: bytes_test.BenchmarkIndexRune
+tags: [private]
 ```
 
 ```Go
@@ -1588,6 +1725,7 @@ func BenchmarkIndexRune(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexRuneASCII
+tags: [private]
 ```
 
 ```Go
@@ -1598,6 +1736,7 @@ func BenchmarkIndexRuneASCII(b *testing.B)
 
 ```
 searchKey: bytes_test.bmIndexRuneASCII
+tags: [private]
 ```
 
 ```Go
@@ -1608,6 +1747,7 @@ func bmIndexRuneASCII(index func([]byte, rune) int) func(b *testing.B, n int)
 
 ```
 searchKey: bytes_test.bmIndexRune
+tags: [private]
 ```
 
 ```Go
@@ -1618,6 +1758,7 @@ func bmIndexRune(index func([]byte, rune) int) func(b *testing.B, n int)
 
 ```
 searchKey: bytes_test.BenchmarkEqual
+tags: [private]
 ```
 
 ```Go
@@ -1628,6 +1769,7 @@ func BenchmarkEqual(b *testing.B)
 
 ```
 searchKey: bytes_test.bmEqual
+tags: [private]
 ```
 
 ```Go
@@ -1638,6 +1780,7 @@ func bmEqual(equal func([]byte, []byte) bool) func(b *testing.B, n int)
 
 ```
 searchKey: bytes_test.BenchmarkIndex
+tags: [private]
 ```
 
 ```Go
@@ -1648,6 +1791,7 @@ func BenchmarkIndex(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexEasy
+tags: [private]
 ```
 
 ```Go
@@ -1658,6 +1802,7 @@ func BenchmarkIndexEasy(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCount
+tags: [private]
 ```
 
 ```Go
@@ -1668,6 +1813,7 @@ func BenchmarkCount(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCountEasy
+tags: [private]
 ```
 
 ```Go
@@ -1678,6 +1824,7 @@ func BenchmarkCountEasy(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCountSingle
+tags: [private]
 ```
 
 ```Go
@@ -1688,6 +1835,7 @@ func BenchmarkCountSingle(b *testing.B)
 
 ```
 searchKey: bytes_test.TestSplit
+tags: [private]
 ```
 
 ```Go
@@ -1698,6 +1846,7 @@ func TestSplit(t *testing.T)
 
 ```
 searchKey: bytes_test.TestSplitAfter
+tags: [private]
 ```
 
 ```Go
@@ -1708,6 +1857,7 @@ func TestSplitAfter(t *testing.T)
 
 ```
 searchKey: bytes_test.TestFields
+tags: [private]
 ```
 
 ```Go
@@ -1718,6 +1868,7 @@ func TestFields(t *testing.T)
 
 ```
 searchKey: bytes_test.TestFieldsFunc
+tags: [private]
 ```
 
 ```Go
@@ -1728,6 +1879,7 @@ func TestFieldsFunc(t *testing.T)
 
 ```
 searchKey: bytes_test.runStringTests
+tags: [private]
 ```
 
 ```Go
@@ -1740,6 +1892,7 @@ Execute f on each test case.  funcName should be the name of f; it's used in fai
 
 ```
 searchKey: bytes_test.tenRunes
+tags: [private]
 ```
 
 ```Go
@@ -1750,6 +1903,7 @@ func tenRunes(r rune) string
 
 ```
 searchKey: bytes_test.rot13
+tags: [private]
 ```
 
 ```Go
@@ -1762,6 +1916,7 @@ User-defined self-inverse mapping function
 
 ```
 searchKey: bytes_test.TestMap
+tags: [private]
 ```
 
 ```Go
@@ -1772,6 +1927,7 @@ func TestMap(t *testing.T)
 
 ```
 searchKey: bytes_test.TestToUpper
+tags: [private]
 ```
 
 ```Go
@@ -1782,6 +1938,7 @@ func TestToUpper(t *testing.T)
 
 ```
 searchKey: bytes_test.TestToLower
+tags: [private]
 ```
 
 ```Go
@@ -1792,6 +1949,7 @@ func TestToLower(t *testing.T)
 
 ```
 searchKey: bytes_test.BenchmarkToUpper
+tags: [private]
 ```
 
 ```Go
@@ -1802,6 +1960,7 @@ func BenchmarkToUpper(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkToLower
+tags: [private]
 ```
 
 ```Go
@@ -1812,6 +1971,7 @@ func BenchmarkToLower(b *testing.B)
 
 ```
 searchKey: bytes_test.TestToValidUTF8
+tags: [private]
 ```
 
 ```Go
@@ -1822,6 +1982,7 @@ func TestToValidUTF8(t *testing.T)
 
 ```
 searchKey: bytes_test.TestTrimSpace
+tags: [private]
 ```
 
 ```Go
@@ -1832,6 +1993,7 @@ func TestTrimSpace(t *testing.T)
 
 ```
 searchKey: bytes_test.TestRepeat
+tags: [private]
 ```
 
 ```Go
@@ -1842,6 +2004,7 @@ func TestRepeat(t *testing.T)
 
 ```
 searchKey: bytes_test.repeat
+tags: [private]
 ```
 
 ```Go
@@ -1852,6 +2015,7 @@ func repeat(b []byte, count int) (err error)
 
 ```
 searchKey: bytes_test.TestRepeatCatchesOverflow
+tags: [private]
 ```
 
 ```Go
@@ -1864,6 +2028,7 @@ See Issue golang.org/issue/16237
 
 ```
 searchKey: bytes_test.runesEqual
+tags: [private]
 ```
 
 ```Go
@@ -1874,6 +2039,7 @@ func runesEqual(a, b []rune) bool
 
 ```
 searchKey: bytes_test.TestRunes
+tags: [private]
 ```
 
 ```Go
@@ -1884,6 +2050,7 @@ func TestRunes(t *testing.T)
 
 ```
 searchKey: bytes_test.TestTrim
+tags: [private]
 ```
 
 ```Go
@@ -1894,6 +2061,7 @@ func TestTrim(t *testing.T)
 
 ```
 searchKey: bytes_test.TestTrimFunc
+tags: [private]
 ```
 
 ```Go
@@ -1904,6 +2072,7 @@ func TestTrimFunc(t *testing.T)
 
 ```
 searchKey: bytes_test.TestIndexFunc
+tags: [private]
 ```
 
 ```Go
@@ -1914,6 +2083,7 @@ func TestIndexFunc(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReplace
+tags: [private]
 ```
 
 ```Go
@@ -1924,6 +2094,7 @@ func TestReplace(t *testing.T)
 
 ```
 searchKey: bytes_test.TestTitle
+tags: [private]
 ```
 
 ```Go
@@ -1934,6 +2105,7 @@ func TestTitle(t *testing.T)
 
 ```
 searchKey: bytes_test.TestToTitle
+tags: [private]
 ```
 
 ```Go
@@ -1944,6 +2116,7 @@ func TestToTitle(t *testing.T)
 
 ```
 searchKey: bytes_test.TestEqualFold
+tags: [private]
 ```
 
 ```Go
@@ -1954,6 +2127,7 @@ func TestEqualFold(t *testing.T)
 
 ```
 searchKey: bytes_test.TestBufferGrowNegative
+tags: [private]
 ```
 
 ```Go
@@ -1964,6 +2138,7 @@ func TestBufferGrowNegative(t *testing.T)
 
 ```
 searchKey: bytes_test.TestBufferTruncateNegative
+tags: [private]
 ```
 
 ```Go
@@ -1974,6 +2149,7 @@ func TestBufferTruncateNegative(t *testing.T)
 
 ```
 searchKey: bytes_test.TestBufferTruncateOutOfRange
+tags: [private]
 ```
 
 ```Go
@@ -1984,6 +2160,7 @@ func TestBufferTruncateOutOfRange(t *testing.T)
 
 ```
 searchKey: bytes_test.TestContains
+tags: [private]
 ```
 
 ```Go
@@ -1994,6 +2171,7 @@ func TestContains(t *testing.T)
 
 ```
 searchKey: bytes_test.TestContainsAny
+tags: [private]
 ```
 
 ```Go
@@ -2004,6 +2182,7 @@ func TestContainsAny(t *testing.T)
 
 ```
 searchKey: bytes_test.TestContainsRune
+tags: [private]
 ```
 
 ```Go
@@ -2014,6 +2193,7 @@ func TestContainsRune(t *testing.T)
 
 ```
 searchKey: bytes_test.BenchmarkFields
+tags: [private]
 ```
 
 ```Go
@@ -2024,6 +2204,7 @@ func BenchmarkFields(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkFieldsFunc
+tags: [private]
 ```
 
 ```Go
@@ -2034,6 +2215,7 @@ func BenchmarkFieldsFunc(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkTrimSpace
+tags: [private]
 ```
 
 ```Go
@@ -2044,6 +2226,7 @@ func BenchmarkTrimSpace(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkToValidUTF8
+tags: [private]
 ```
 
 ```Go
@@ -2054,6 +2237,7 @@ func BenchmarkToValidUTF8(b *testing.B)
 
 ```
 searchKey: bytes_test.makeBenchInputHard
+tags: [private]
 ```
 
 ```Go
@@ -2064,6 +2248,7 @@ func makeBenchInputHard() []byte
 
 ```
 searchKey: bytes_test.benchmarkIndexHard
+tags: [private]
 ```
 
 ```Go
@@ -2074,6 +2259,7 @@ func benchmarkIndexHard(b *testing.B, sep []byte)
 
 ```
 searchKey: bytes_test.benchmarkLastIndexHard
+tags: [private]
 ```
 
 ```Go
@@ -2084,6 +2270,7 @@ func benchmarkLastIndexHard(b *testing.B, sep []byte)
 
 ```
 searchKey: bytes_test.benchmarkCountHard
+tags: [private]
 ```
 
 ```Go
@@ -2094,6 +2281,7 @@ func benchmarkCountHard(b *testing.B, sep []byte)
 
 ```
 searchKey: bytes_test.BenchmarkIndexHard1
+tags: [private]
 ```
 
 ```Go
@@ -2104,6 +2292,7 @@ func BenchmarkIndexHard1(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexHard2
+tags: [private]
 ```
 
 ```Go
@@ -2114,6 +2303,7 @@ func BenchmarkIndexHard2(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexHard3
+tags: [private]
 ```
 
 ```Go
@@ -2124,6 +2314,7 @@ func BenchmarkIndexHard3(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexHard4
+tags: [private]
 ```
 
 ```Go
@@ -2134,6 +2325,7 @@ func BenchmarkIndexHard4(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkLastIndexHard1
+tags: [private]
 ```
 
 ```Go
@@ -2144,6 +2336,7 @@ func BenchmarkLastIndexHard1(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkLastIndexHard2
+tags: [private]
 ```
 
 ```Go
@@ -2154,6 +2347,7 @@ func BenchmarkLastIndexHard2(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkLastIndexHard3
+tags: [private]
 ```
 
 ```Go
@@ -2164,6 +2358,7 @@ func BenchmarkLastIndexHard3(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCountHard1
+tags: [private]
 ```
 
 ```Go
@@ -2174,6 +2369,7 @@ func BenchmarkCountHard1(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCountHard2
+tags: [private]
 ```
 
 ```Go
@@ -2184,6 +2380,7 @@ func BenchmarkCountHard2(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCountHard3
+tags: [private]
 ```
 
 ```Go
@@ -2194,6 +2391,7 @@ func BenchmarkCountHard3(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkSplitEmptySeparator
+tags: [private]
 ```
 
 ```Go
@@ -2204,6 +2402,7 @@ func BenchmarkSplitEmptySeparator(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkSplitSingleByteSeparator
+tags: [private]
 ```
 
 ```Go
@@ -2214,6 +2413,7 @@ func BenchmarkSplitSingleByteSeparator(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkSplitMultiByteSeparator
+tags: [private]
 ```
 
 ```Go
@@ -2224,6 +2424,7 @@ func BenchmarkSplitMultiByteSeparator(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkSplitNSingleByteSeparator
+tags: [private]
 ```
 
 ```Go
@@ -2234,6 +2435,7 @@ func BenchmarkSplitNSingleByteSeparator(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkSplitNMultiByteSeparator
+tags: [private]
 ```
 
 ```Go
@@ -2244,6 +2446,7 @@ func BenchmarkSplitNMultiByteSeparator(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkRepeat
+tags: [private]
 ```
 
 ```Go
@@ -2254,6 +2457,7 @@ func BenchmarkRepeat(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkBytesCompare
+tags: [private]
 ```
 
 ```Go
@@ -2264,6 +2468,7 @@ func BenchmarkBytesCompare(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexAnyASCII
+tags: [private]
 ```
 
 ```Go
@@ -2274,6 +2479,7 @@ func BenchmarkIndexAnyASCII(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexAnyUTF8
+tags: [private]
 ```
 
 ```Go
@@ -2284,6 +2490,7 @@ func BenchmarkIndexAnyUTF8(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkLastIndexAnyASCII
+tags: [private]
 ```
 
 ```Go
@@ -2294,6 +2501,7 @@ func BenchmarkLastIndexAnyASCII(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkLastIndexAnyUTF8
+tags: [private]
 ```
 
 ```Go
@@ -2304,6 +2512,7 @@ func BenchmarkLastIndexAnyUTF8(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkTrimASCII
+tags: [private]
 ```
 
 ```Go
@@ -2314,6 +2523,7 @@ func BenchmarkTrimASCII(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexPeriodic
+tags: [private]
 ```
 
 ```Go
@@ -2324,6 +2534,7 @@ func BenchmarkIndexPeriodic(b *testing.B)
 
 ```
 searchKey: bytes_test.TestCompare
+tags: [private]
 ```
 
 ```Go
@@ -2334,6 +2545,7 @@ func TestCompare(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCompareIdenticalSlice
+tags: [private]
 ```
 
 ```Go
@@ -2344,6 +2556,7 @@ func TestCompareIdenticalSlice(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCompareBytes
+tags: [private]
 ```
 
 ```Go
@@ -2354,6 +2567,7 @@ func TestCompareBytes(t *testing.T)
 
 ```
 searchKey: bytes_test.TestEndianBaseCompare
+tags: [private]
 ```
 
 ```Go
@@ -2364,6 +2578,7 @@ func TestEndianBaseCompare(t *testing.T)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesEqual
+tags: [private]
 ```
 
 ```Go
@@ -2374,6 +2589,7 @@ func BenchmarkCompareBytesEqual(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesToNil
+tags: [private]
 ```
 
 ```Go
@@ -2384,6 +2600,7 @@ func BenchmarkCompareBytesToNil(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesEmpty
+tags: [private]
 ```
 
 ```Go
@@ -2394,6 +2611,7 @@ func BenchmarkCompareBytesEmpty(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesIdentical
+tags: [private]
 ```
 
 ```Go
@@ -2404,6 +2622,7 @@ func BenchmarkCompareBytesIdentical(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesSameLength
+tags: [private]
 ```
 
 ```Go
@@ -2414,6 +2633,7 @@ func BenchmarkCompareBytesSameLength(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesDifferentLength
+tags: [private]
 ```
 
 ```Go
@@ -2424,6 +2644,7 @@ func BenchmarkCompareBytesDifferentLength(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesBigUnaligned
+tags: [private]
 ```
 
 ```Go
@@ -2434,6 +2655,7 @@ func BenchmarkCompareBytesBigUnaligned(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesBig
+tags: [private]
 ```
 
 ```Go
@@ -2444,6 +2666,7 @@ func BenchmarkCompareBytesBig(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesBigIdentical
+tags: [private]
 ```
 
 ```Go
@@ -2454,6 +2677,7 @@ func BenchmarkCompareBytesBigIdentical(b *testing.B)
 
 ```
 searchKey: bytes_test.ExampleBuffer
+tags: [private]
 ```
 
 ```Go
@@ -2464,6 +2688,7 @@ func ExampleBuffer()
 
 ```
 searchKey: bytes_test.ExampleBuffer_reader
+tags: [private]
 ```
 
 ```Go
@@ -2474,6 +2699,7 @@ func ExampleBuffer_reader()
 
 ```
 searchKey: bytes_test.ExampleBuffer_Bytes
+tags: [private]
 ```
 
 ```Go
@@ -2484,6 +2710,7 @@ func ExampleBuffer_Bytes()
 
 ```
 searchKey: bytes_test.ExampleBuffer_Grow
+tags: [private]
 ```
 
 ```Go
@@ -2494,6 +2721,7 @@ func ExampleBuffer_Grow()
 
 ```
 searchKey: bytes_test.ExampleBuffer_Len
+tags: [private]
 ```
 
 ```Go
@@ -2504,6 +2732,7 @@ func ExampleBuffer_Len()
 
 ```
 searchKey: bytes_test.ExampleCompare
+tags: [private]
 ```
 
 ```Go
@@ -2514,6 +2743,7 @@ func ExampleCompare()
 
 ```
 searchKey: bytes_test.ExampleCompare_search
+tags: [private]
 ```
 
 ```Go
@@ -2524,6 +2754,7 @@ func ExampleCompare_search()
 
 ```
 searchKey: bytes_test.ExampleTrimSuffix
+tags: [private]
 ```
 
 ```Go
@@ -2534,6 +2765,7 @@ func ExampleTrimSuffix()
 
 ```
 searchKey: bytes_test.ExampleTrimPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2544,6 +2776,7 @@ func ExampleTrimPrefix()
 
 ```
 searchKey: bytes_test.ExampleFields
+tags: [private]
 ```
 
 ```Go
@@ -2554,6 +2787,7 @@ func ExampleFields()
 
 ```
 searchKey: bytes_test.ExampleFieldsFunc
+tags: [private]
 ```
 
 ```Go
@@ -2564,6 +2798,7 @@ func ExampleFieldsFunc()
 
 ```
 searchKey: bytes_test.ExampleContains
+tags: [private]
 ```
 
 ```Go
@@ -2574,6 +2809,7 @@ func ExampleContains()
 
 ```
 searchKey: bytes_test.ExampleContainsAny
+tags: [private]
 ```
 
 ```Go
@@ -2584,6 +2820,7 @@ func ExampleContainsAny()
 
 ```
 searchKey: bytes_test.ExampleContainsRune
+tags: [private]
 ```
 
 ```Go
@@ -2594,6 +2831,7 @@ func ExampleContainsRune()
 
 ```
 searchKey: bytes_test.ExampleCount
+tags: [private]
 ```
 
 ```Go
@@ -2604,6 +2842,7 @@ func ExampleCount()
 
 ```
 searchKey: bytes_test.ExampleEqual
+tags: [private]
 ```
 
 ```Go
@@ -2614,6 +2853,7 @@ func ExampleEqual()
 
 ```
 searchKey: bytes_test.ExampleEqualFold
+tags: [private]
 ```
 
 ```Go
@@ -2624,6 +2864,7 @@ func ExampleEqualFold()
 
 ```
 searchKey: bytes_test.ExampleHasPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2634,6 +2875,7 @@ func ExampleHasPrefix()
 
 ```
 searchKey: bytes_test.ExampleHasSuffix
+tags: [private]
 ```
 
 ```Go
@@ -2644,6 +2886,7 @@ func ExampleHasSuffix()
 
 ```
 searchKey: bytes_test.ExampleIndex
+tags: [private]
 ```
 
 ```Go
@@ -2654,6 +2897,7 @@ func ExampleIndex()
 
 ```
 searchKey: bytes_test.ExampleIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -2664,6 +2908,7 @@ func ExampleIndexByte()
 
 ```
 searchKey: bytes_test.ExampleIndexFunc
+tags: [private]
 ```
 
 ```Go
@@ -2674,6 +2919,7 @@ func ExampleIndexFunc()
 
 ```
 searchKey: bytes_test.ExampleIndexAny
+tags: [private]
 ```
 
 ```Go
@@ -2684,6 +2930,7 @@ func ExampleIndexAny()
 
 ```
 searchKey: bytes_test.ExampleIndexRune
+tags: [private]
 ```
 
 ```Go
@@ -2694,6 +2941,7 @@ func ExampleIndexRune()
 
 ```
 searchKey: bytes_test.ExampleLastIndex
+tags: [private]
 ```
 
 ```Go
@@ -2704,6 +2952,7 @@ func ExampleLastIndex()
 
 ```
 searchKey: bytes_test.ExampleLastIndexAny
+tags: [private]
 ```
 
 ```Go
@@ -2714,6 +2963,7 @@ func ExampleLastIndexAny()
 
 ```
 searchKey: bytes_test.ExampleLastIndexByte
+tags: [private]
 ```
 
 ```Go
@@ -2724,6 +2974,7 @@ func ExampleLastIndexByte()
 
 ```
 searchKey: bytes_test.ExampleLastIndexFunc
+tags: [private]
 ```
 
 ```Go
@@ -2734,6 +2985,7 @@ func ExampleLastIndexFunc()
 
 ```
 searchKey: bytes_test.ExampleJoin
+tags: [private]
 ```
 
 ```Go
@@ -2744,6 +2996,7 @@ func ExampleJoin()
 
 ```
 searchKey: bytes_test.ExampleRepeat
+tags: [private]
 ```
 
 ```Go
@@ -2754,6 +3007,7 @@ func ExampleRepeat()
 
 ```
 searchKey: bytes_test.ExampleReplace
+tags: [private]
 ```
 
 ```Go
@@ -2764,6 +3018,7 @@ func ExampleReplace()
 
 ```
 searchKey: bytes_test.ExampleReplaceAll
+tags: [private]
 ```
 
 ```Go
@@ -2774,6 +3029,7 @@ func ExampleReplaceAll()
 
 ```
 searchKey: bytes_test.ExampleRunes
+tags: [private]
 ```
 
 ```Go
@@ -2784,6 +3040,7 @@ func ExampleRunes()
 
 ```
 searchKey: bytes_test.ExampleSplit
+tags: [private]
 ```
 
 ```Go
@@ -2794,6 +3051,7 @@ func ExampleSplit()
 
 ```
 searchKey: bytes_test.ExampleSplitN
+tags: [private]
 ```
 
 ```Go
@@ -2804,6 +3062,7 @@ func ExampleSplitN()
 
 ```
 searchKey: bytes_test.ExampleSplitAfter
+tags: [private]
 ```
 
 ```Go
@@ -2814,6 +3073,7 @@ func ExampleSplitAfter()
 
 ```
 searchKey: bytes_test.ExampleSplitAfterN
+tags: [private]
 ```
 
 ```Go
@@ -2824,6 +3084,7 @@ func ExampleSplitAfterN()
 
 ```
 searchKey: bytes_test.ExampleTitle
+tags: [private]
 ```
 
 ```Go
@@ -2834,6 +3095,7 @@ func ExampleTitle()
 
 ```
 searchKey: bytes_test.ExampleToTitle
+tags: [private]
 ```
 
 ```Go
@@ -2844,6 +3106,7 @@ func ExampleToTitle()
 
 ```
 searchKey: bytes_test.ExampleToTitleSpecial
+tags: [private]
 ```
 
 ```Go
@@ -2854,6 +3117,7 @@ func ExampleToTitleSpecial()
 
 ```
 searchKey: bytes_test.ExampleTrim
+tags: [private]
 ```
 
 ```Go
@@ -2864,6 +3128,7 @@ func ExampleTrim()
 
 ```
 searchKey: bytes_test.ExampleTrimFunc
+tags: [private]
 ```
 
 ```Go
@@ -2874,6 +3139,7 @@ func ExampleTrimFunc()
 
 ```
 searchKey: bytes_test.ExampleMap
+tags: [private]
 ```
 
 ```Go
@@ -2884,6 +3150,7 @@ func ExampleMap()
 
 ```
 searchKey: bytes_test.ExampleTrimLeft
+tags: [private]
 ```
 
 ```Go
@@ -2894,6 +3161,7 @@ func ExampleTrimLeft()
 
 ```
 searchKey: bytes_test.ExampleTrimLeftFunc
+tags: [private]
 ```
 
 ```Go
@@ -2904,6 +3172,7 @@ func ExampleTrimLeftFunc()
 
 ```
 searchKey: bytes_test.ExampleTrimSpace
+tags: [private]
 ```
 
 ```Go
@@ -2914,6 +3183,7 @@ func ExampleTrimSpace()
 
 ```
 searchKey: bytes_test.ExampleTrimRight
+tags: [private]
 ```
 
 ```Go
@@ -2924,6 +3194,7 @@ func ExampleTrimRight()
 
 ```
 searchKey: bytes_test.ExampleTrimRightFunc
+tags: [private]
 ```
 
 ```Go
@@ -2934,6 +3205,7 @@ func ExampleTrimRightFunc()
 
 ```
 searchKey: bytes_test.ExampleToUpper
+tags: [private]
 ```
 
 ```Go
@@ -2944,6 +3216,7 @@ func ExampleToUpper()
 
 ```
 searchKey: bytes_test.ExampleToUpperSpecial
+tags: [private]
 ```
 
 ```Go
@@ -2954,6 +3227,7 @@ func ExampleToUpperSpecial()
 
 ```
 searchKey: bytes_test.ExampleToLower
+tags: [private]
 ```
 
 ```Go
@@ -2964,6 +3238,7 @@ func ExampleToLower()
 
 ```
 searchKey: bytes_test.ExampleToLowerSpecial
+tags: [private]
 ```
 
 ```Go
@@ -2974,6 +3249,7 @@ func ExampleToLowerSpecial()
 
 ```
 searchKey: bytes_test.ExampleReader_Len
+tags: [private]
 ```
 
 ```Go
@@ -2984,6 +3260,7 @@ func ExampleReader_Len()
 
 ```
 searchKey: bytes_test.TestReader
+tags: [private]
 ```
 
 ```Go
@@ -2994,6 +3271,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReadAfterBigSeek
+tags: [private]
 ```
 
 ```Go
@@ -3004,6 +3282,7 @@ func TestReadAfterBigSeek(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderAt
+tags: [private]
 ```
 
 ```Go
@@ -3014,6 +3293,7 @@ func TestReaderAt(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderAtConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -3024,6 +3304,7 @@ func TestReaderAtConcurrent(t *testing.T)
 
 ```
 searchKey: bytes_test.TestEmptyReaderConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -3034,6 +3315,7 @@ func TestEmptyReaderConcurrent(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderWriteTo
+tags: [private]
 ```
 
 ```Go
@@ -3044,6 +3326,7 @@ func TestReaderWriteTo(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderLen
+tags: [private]
 ```
 
 ```Go
@@ -3054,6 +3337,7 @@ func TestReaderLen(t *testing.T)
 
 ```
 searchKey: bytes_test.TestUnreadRuneError
+tags: [private]
 ```
 
 ```Go
@@ -3064,6 +3348,7 @@ func TestUnreadRuneError(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderDoubleUnreadRune
+tags: [private]
 ```
 
 ```Go
@@ -3074,6 +3359,7 @@ func TestReaderDoubleUnreadRune(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderCopyNothing
+tags: [private]
 ```
 
 ```Go
@@ -3086,6 +3372,7 @@ verify that copying from an empty reader always has the same results, regardless
 
 ```
 searchKey: bytes_test.TestReaderLenSize
+tags: [private]
 ```
 
 ```Go
@@ -3098,6 +3385,7 @@ tests that Len is affected by reads, but Size is not.
 
 ```
 searchKey: bytes_test.TestReaderReset
+tags: [private]
 ```
 
 ```Go
@@ -3108,6 +3396,7 @@ func TestReaderReset(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderZero
+tags: [private]
 ```
 
 ```Go

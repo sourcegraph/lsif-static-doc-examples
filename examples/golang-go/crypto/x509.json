@@ -4,9 +4,7 @@
     "identifier": "x509",
     "newPage": true,
     "searchKey": "crypto/x509",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -27,9 +25,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -47,9 +43,7 @@
                 "identifier": "PEMCipherDES",
                 "newPage": false,
                 "searchKey": "x509.PEMCipherDES",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -69,9 +63,7 @@
                 "identifier": "PEMCipher3DES",
                 "newPage": false,
                 "searchKey": "x509.PEMCipher3DES",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -91,9 +83,7 @@
                 "identifier": "PEMCipherAES128",
                 "newPage": false,
                 "searchKey": "x509.PEMCipherAES128",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -113,9 +103,7 @@
                 "identifier": "PEMCipherAES192",
                 "newPage": false,
                 "searchKey": "x509.PEMCipherAES192",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -135,9 +123,7 @@
                 "identifier": "PEMCipherAES256",
                 "newPage": false,
                 "searchKey": "x509.PEMCipherAES256",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -157,7 +143,9 @@
                 "identifier": "ecPrivKeyVersion",
                 "newPage": false,
                 "searchKey": "x509.ecPrivKeyVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -177,9 +165,7 @@
                 "identifier": "NotAuthorizedToSign",
                 "newPage": false,
                 "searchKey": "x509.NotAuthorizedToSign",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -199,9 +185,7 @@
                 "identifier": "Expired",
                 "newPage": false,
                 "searchKey": "x509.Expired",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -221,9 +205,7 @@
                 "identifier": "CANotAuthorizedForThisName",
                 "newPage": false,
                 "searchKey": "x509.CANotAuthorizedForThisName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -243,9 +225,7 @@
                 "identifier": "TooManyIntermediates",
                 "newPage": false,
                 "searchKey": "x509.TooManyIntermediates",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -265,9 +245,7 @@
                 "identifier": "IncompatibleUsage",
                 "newPage": false,
                 "searchKey": "x509.IncompatibleUsage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -287,9 +265,7 @@
                 "identifier": "NameMismatch",
                 "newPage": false,
                 "searchKey": "x509.NameMismatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -309,9 +285,7 @@
                 "identifier": "NameConstraintsWithoutSANs",
                 "newPage": false,
                 "searchKey": "x509.NameConstraintsWithoutSANs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -331,9 +305,7 @@
                 "identifier": "UnconstrainedName",
                 "newPage": false,
                 "searchKey": "x509.UnconstrainedName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -353,9 +325,7 @@
                 "identifier": "TooManyConstraints",
                 "newPage": false,
                 "searchKey": "x509.TooManyConstraints",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -375,9 +345,7 @@
                 "identifier": "CANotAuthorizedForExtKeyUsage",
                 "newPage": false,
                 "searchKey": "x509.CANotAuthorizedForExtKeyUsage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -397,7 +365,9 @@
                 "identifier": "leafCertificate",
                 "newPage": false,
                 "searchKey": "x509.leafCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -417,7 +387,9 @@
                 "identifier": "intermediateCertificate",
                 "newPage": false,
                 "searchKey": "x509.intermediateCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -437,7 +409,9 @@
                 "identifier": "rootCertificate",
                 "newPage": false,
                 "searchKey": "x509.rootCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -457,7 +431,9 @@
                 "identifier": "maxChainSignatureChecks",
                 "newPage": false,
                 "searchKey": "x509.maxChainSignatureChecks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -477,9 +453,7 @@
                 "identifier": "UnknownSignatureAlgorithm",
                 "newPage": false,
                 "searchKey": "x509.UnknownSignatureAlgorithm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -499,9 +473,7 @@
                 "identifier": "MD2WithRSA",
                 "newPage": false,
                 "searchKey": "x509.MD2WithRSA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -521,9 +493,7 @@
                 "identifier": "MD5WithRSA",
                 "newPage": false,
                 "searchKey": "x509.MD5WithRSA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -543,9 +513,7 @@
                 "identifier": "SHA1WithRSA",
                 "newPage": false,
                 "searchKey": "x509.SHA1WithRSA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -565,9 +533,7 @@
                 "identifier": "SHA256WithRSA",
                 "newPage": false,
                 "searchKey": "x509.SHA256WithRSA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -587,9 +553,7 @@
                 "identifier": "SHA384WithRSA",
                 "newPage": false,
                 "searchKey": "x509.SHA384WithRSA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -609,9 +573,7 @@
                 "identifier": "SHA512WithRSA",
                 "newPage": false,
                 "searchKey": "x509.SHA512WithRSA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -631,9 +593,7 @@
                 "identifier": "DSAWithSHA1",
                 "newPage": false,
                 "searchKey": "x509.DSAWithSHA1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -653,9 +613,7 @@
                 "identifier": "DSAWithSHA256",
                 "newPage": false,
                 "searchKey": "x509.DSAWithSHA256",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -675,9 +633,7 @@
                 "identifier": "ECDSAWithSHA1",
                 "newPage": false,
                 "searchKey": "x509.ECDSAWithSHA1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -697,9 +653,7 @@
                 "identifier": "ECDSAWithSHA256",
                 "newPage": false,
                 "searchKey": "x509.ECDSAWithSHA256",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -719,9 +673,7 @@
                 "identifier": "ECDSAWithSHA384",
                 "newPage": false,
                 "searchKey": "x509.ECDSAWithSHA384",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -741,9 +693,7 @@
                 "identifier": "ECDSAWithSHA512",
                 "newPage": false,
                 "searchKey": "x509.ECDSAWithSHA512",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -763,9 +713,7 @@
                 "identifier": "SHA256WithRSAPSS",
                 "newPage": false,
                 "searchKey": "x509.SHA256WithRSAPSS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -785,9 +733,7 @@
                 "identifier": "SHA384WithRSAPSS",
                 "newPage": false,
                 "searchKey": "x509.SHA384WithRSAPSS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -807,9 +753,7 @@
                 "identifier": "SHA512WithRSAPSS",
                 "newPage": false,
                 "searchKey": "x509.SHA512WithRSAPSS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -829,9 +773,7 @@
                 "identifier": "PureEd25519",
                 "newPage": false,
                 "searchKey": "x509.PureEd25519",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -851,9 +793,7 @@
                 "identifier": "UnknownPublicKeyAlgorithm",
                 "newPage": false,
                 "searchKey": "x509.UnknownPublicKeyAlgorithm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -873,9 +813,7 @@
                 "identifier": "RSA",
                 "newPage": false,
                 "searchKey": "x509.RSA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -895,9 +833,7 @@
                 "identifier": "DSA",
                 "newPage": false,
                 "searchKey": "x509.DSA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -917,9 +853,7 @@
                 "identifier": "ECDSA",
                 "newPage": false,
                 "searchKey": "x509.ECDSA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -939,9 +873,7 @@
                 "identifier": "Ed25519",
                 "newPage": false,
                 "searchKey": "x509.Ed25519",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -961,9 +893,7 @@
                 "identifier": "KeyUsageDigitalSignature",
                 "newPage": false,
                 "searchKey": "x509.KeyUsageDigitalSignature",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -983,9 +913,7 @@
                 "identifier": "KeyUsageContentCommitment",
                 "newPage": false,
                 "searchKey": "x509.KeyUsageContentCommitment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1005,9 +933,7 @@
                 "identifier": "KeyUsageKeyEncipherment",
                 "newPage": false,
                 "searchKey": "x509.KeyUsageKeyEncipherment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1027,9 +953,7 @@
                 "identifier": "KeyUsageDataEncipherment",
                 "newPage": false,
                 "searchKey": "x509.KeyUsageDataEncipherment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1049,9 +973,7 @@
                 "identifier": "KeyUsageKeyAgreement",
                 "newPage": false,
                 "searchKey": "x509.KeyUsageKeyAgreement",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1071,9 +993,7 @@
                 "identifier": "KeyUsageCertSign",
                 "newPage": false,
                 "searchKey": "x509.KeyUsageCertSign",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1093,9 +1013,7 @@
                 "identifier": "KeyUsageCRLSign",
                 "newPage": false,
                 "searchKey": "x509.KeyUsageCRLSign",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1115,9 +1033,7 @@
                 "identifier": "KeyUsageEncipherOnly",
                 "newPage": false,
                 "searchKey": "x509.KeyUsageEncipherOnly",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1137,9 +1053,7 @@
                 "identifier": "KeyUsageDecipherOnly",
                 "newPage": false,
                 "searchKey": "x509.KeyUsageDecipherOnly",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1159,9 +1073,7 @@
                 "identifier": "ExtKeyUsageAny",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageAny",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1181,9 +1093,7 @@
                 "identifier": "ExtKeyUsageServerAuth",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageServerAuth",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1203,9 +1113,7 @@
                 "identifier": "ExtKeyUsageClientAuth",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageClientAuth",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1225,9 +1133,7 @@
                 "identifier": "ExtKeyUsageCodeSigning",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageCodeSigning",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1247,9 +1153,7 @@
                 "identifier": "ExtKeyUsageEmailProtection",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageEmailProtection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1269,9 +1173,7 @@
                 "identifier": "ExtKeyUsageIPSECEndSystem",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageIPSECEndSystem",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1291,9 +1193,7 @@
                 "identifier": "ExtKeyUsageIPSECTunnel",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageIPSECTunnel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1313,9 +1213,7 @@
                 "identifier": "ExtKeyUsageIPSECUser",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageIPSECUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1335,9 +1233,7 @@
                 "identifier": "ExtKeyUsageTimeStamping",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageTimeStamping",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1357,9 +1253,7 @@
                 "identifier": "ExtKeyUsageOCSPSigning",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageOCSPSigning",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1379,9 +1273,7 @@
                 "identifier": "ExtKeyUsageMicrosoftServerGatedCrypto",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageMicrosoftServerGatedCrypto",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1401,9 +1293,7 @@
                 "identifier": "ExtKeyUsageNetscapeServerGatedCrypto",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageNetscapeServerGatedCrypto",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1423,9 +1313,7 @@
                 "identifier": "ExtKeyUsageMicrosoftCommercialCodeSigning",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageMicrosoftCommercialCodeSigning",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1445,9 +1333,7 @@
                 "identifier": "ExtKeyUsageMicrosoftKernelCodeSigning",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsageMicrosoftKernelCodeSigning",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1467,7 +1353,9 @@
                 "identifier": "nameTypeEmail",
                 "newPage": false,
                 "searchKey": "x509.nameTypeEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1487,7 +1375,9 @@
                 "identifier": "nameTypeDNS",
                 "newPage": false,
                 "searchKey": "x509.nameTypeDNS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1507,7 +1397,9 @@
                 "identifier": "nameTypeURI",
                 "newPage": false,
                 "searchKey": "x509.nameTypeURI",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1527,7 +1419,9 @@
                 "identifier": "nameTypeIP",
                 "newPage": false,
                 "searchKey": "x509.nameTypeIP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1547,7 +1441,9 @@
                 "identifier": "testNameConstraintsAgainstOpenSSL",
                 "newPage": false,
                 "searchKey": "x509.testNameConstraintsAgainstOpenSSL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1567,7 +1463,9 @@
                 "identifier": "debugOpenSSLFailure",
                 "newPage": false,
                 "searchKey": "x509.debugOpenSSLFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1587,7 +1485,9 @@
                 "identifier": "hexPKCS8TestPKCS1Key",
                 "newPage": false,
                 "searchKey": "x509.hexPKCS8TestPKCS1Key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1607,7 +1507,9 @@
                 "identifier": "hexPKCS8TestECKey",
                 "newPage": false,
                 "searchKey": "x509.hexPKCS8TestECKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1627,7 +1529,9 @@
                 "identifier": "hexECTestPKCS1Key",
                 "newPage": false,
                 "searchKey": "x509.hexECTestPKCS1Key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1647,7 +1551,9 @@
                 "identifier": "hexECTestPKCS8Key",
                 "newPage": false,
                 "searchKey": "x509.hexECTestPKCS8Key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1667,7 +1573,9 @@
                 "identifier": "geoTrustRoot",
                 "newPage": false,
                 "searchKey": "x509.geoTrustRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1687,7 +1595,9 @@
                 "identifier": "giag2Intermediate",
                 "newPage": false,
                 "searchKey": "x509.giag2Intermediate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1707,7 +1617,9 @@
                 "identifier": "googleLeaf",
                 "newPage": false,
                 "searchKey": "x509.googleLeaf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1727,7 +1639,9 @@
                 "identifier": "googleLeafWithInvalidHash",
                 "newPage": false,
                 "searchKey": "x509.googleLeafWithInvalidHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1747,7 +1661,9 @@
                 "identifier": "dnssecExpLeaf",
                 "newPage": false,
                 "searchKey": "x509.dnssecExpLeaf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1767,7 +1683,9 @@
                 "identifier": "startComIntermediate",
                 "newPage": false,
                 "searchKey": "x509.startComIntermediate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1787,7 +1705,9 @@
                 "identifier": "startComRoot",
                 "newPage": false,
                 "searchKey": "x509.startComRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1807,7 +1727,9 @@
                 "identifier": "smimeLeaf",
                 "newPage": false,
                 "searchKey": "x509.smimeLeaf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1827,7 +1749,9 @@
                 "identifier": "smimeIntermediate",
                 "newPage": false,
                 "searchKey": "x509.smimeIntermediate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1847,7 +1771,9 @@
                 "identifier": "smimeRoot",
                 "newPage": false,
                 "searchKey": "x509.smimeRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1867,7 +1793,9 @@
                 "identifier": "comodoRSAAuthority",
                 "newPage": false,
                 "searchKey": "x509.comodoRSAAuthority",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1887,7 +1815,9 @@
                 "identifier": "addTrustRoot",
                 "newPage": false,
                 "searchKey": "x509.addTrustRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1907,7 +1837,9 @@
                 "identifier": "selfSigned",
                 "newPage": false,
                 "searchKey": "x509.selfSigned",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1927,7 +1859,9 @@
                 "identifier": "issuerSubjectMatchRoot",
                 "newPage": false,
                 "searchKey": "x509.issuerSubjectMatchRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1947,7 +1881,9 @@
                 "identifier": "issuerSubjectMatchLeaf",
                 "newPage": false,
                 "searchKey": "x509.issuerSubjectMatchLeaf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1967,7 +1903,9 @@
                 "identifier": "x509v1TestRoot",
                 "newPage": false,
                 "searchKey": "x509.x509v1TestRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1987,7 +1925,9 @@
                 "identifier": "x509v1TestIntermediate",
                 "newPage": false,
                 "searchKey": "x509.x509v1TestIntermediate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2007,7 +1947,9 @@
                 "identifier": "x509v1TestLeaf",
                 "newPage": false,
                 "searchKey": "x509.x509v1TestLeaf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2027,7 +1969,9 @@
                 "identifier": "ignoreCNWithSANRoot",
                 "newPage": false,
                 "searchKey": "x509.ignoreCNWithSANRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2047,7 +1991,9 @@
                 "identifier": "ignoreCNWithSANLeaf",
                 "newPage": false,
                 "searchKey": "x509.ignoreCNWithSANLeaf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2067,7 +2013,9 @@
                 "identifier": "excludedNamesLeaf",
                 "newPage": false,
                 "searchKey": "x509.excludedNamesLeaf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2087,7 +2035,9 @@
                 "identifier": "excludedNamesIntermediate",
                 "newPage": false,
                 "searchKey": "x509.excludedNamesIntermediate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2107,7 +2057,9 @@
                 "identifier": "excludedNamesRoot",
                 "newPage": false,
                 "searchKey": "x509.excludedNamesRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2127,7 +2079,9 @@
                 "identifier": "invalidCNRoot",
                 "newPage": false,
                 "searchKey": "x509.invalidCNRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2147,7 +2101,9 @@
                 "identifier": "validCNWithoutSAN",
                 "newPage": false,
                 "searchKey": "x509.validCNWithoutSAN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2167,7 +2123,9 @@
                 "identifier": "rootWithoutSKID",
                 "newPage": false,
                 "searchKey": "x509.rootWithoutSKID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2187,7 +2145,9 @@
                 "identifier": "leafWithAKID",
                 "newPage": false,
                 "searchKey": "x509.leafWithAKID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2207,7 +2167,9 @@
                 "identifier": "rootMatchingSKIDMismatchingSubject",
                 "newPage": false,
                 "searchKey": "x509.rootMatchingSKIDMismatchingSubject",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2227,7 +2189,9 @@
                 "identifier": "rootMismatchingSKIDMatchingSubject",
                 "newPage": false,
                 "searchKey": "x509.rootMismatchingSKIDMatchingSubject",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2247,7 +2211,9 @@
                 "identifier": "leafMatchingAKIDMatchingIssuer",
                 "newPage": false,
                 "searchKey": "x509.leafMatchingAKIDMatchingIssuer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2267,7 +2233,9 @@
                 "identifier": "selfSignedWithCommonName",
                 "newPage": false,
                 "searchKey": "x509.selfSignedWithCommonName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2287,7 +2255,9 @@
                 "identifier": "selfSignedNoCommonNameWithOrgName",
                 "newPage": false,
                 "searchKey": "x509.selfSignedNoCommonNameWithOrgName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2307,7 +2277,9 @@
                 "identifier": "selfSignedNoCommonNameNoOrgName",
                 "newPage": false,
                 "searchKey": "x509.selfSignedNoCommonNameNoOrgName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2327,7 +2299,9 @@
                 "identifier": "criticalExtRoot",
                 "newPage": false,
                 "searchKey": "x509.criticalExtRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2347,7 +2321,9 @@
                 "identifier": "criticalExtIntermediate",
                 "newPage": false,
                 "searchKey": "x509.criticalExtIntermediate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2367,7 +2343,9 @@
                 "identifier": "criticalExtLeafWithExt",
                 "newPage": false,
                 "searchKey": "x509.criticalExtLeafWithExt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2387,7 +2365,9 @@
                 "identifier": "criticalExtIntermediateWithExt",
                 "newPage": false,
                 "searchKey": "x509.criticalExtIntermediateWithExt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2407,7 +2387,9 @@
                 "identifier": "criticalExtLeaf",
                 "newPage": false,
                 "searchKey": "x509.criticalExtLeaf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2427,7 +2409,9 @@
                 "identifier": "ed25519Certificate",
                 "newPage": false,
                 "searchKey": "x509.ed25519Certificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2447,7 +2431,9 @@
                 "identifier": "pemCertificate",
                 "newPage": false,
                 "searchKey": "x509.pemCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2467,7 +2453,9 @@
                 "identifier": "ed25519CRLCertificate",
                 "newPage": false,
                 "searchKey": "x509.ed25519CRLCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2487,7 +2475,9 @@
                 "identifier": "derCRLBase64",
                 "newPage": false,
                 "searchKey": "x509.derCRLBase64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2507,7 +2497,9 @@
                 "identifier": "pemCRLBase64",
                 "newPage": false,
                 "searchKey": "x509.pemCRLBase64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2527,7 +2519,9 @@
                 "identifier": "certMissingRSANULL",
                 "newPage": false,
                 "searchKey": "x509.certMissingRSANULL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2547,7 +2541,9 @@
                 "identifier": "certISOOID",
                 "newPage": false,
                 "searchKey": "x509.certISOOID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2567,7 +2563,9 @@
                 "identifier": "certMultipleRDN",
                 "newPage": false,
                 "searchKey": "x509.certMultipleRDN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2587,7 +2585,9 @@
                 "identifier": "emptyNameConstraintsPEM",
                 "newPage": false,
                 "searchKey": "x509.emptyNameConstraintsPEM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2607,7 +2607,9 @@
                 "identifier": "criticalNameConstraintWithUnknownTypePEM",
                 "newPage": false,
                 "searchKey": "x509.criticalNameConstraintWithUnknownTypePEM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2627,7 +2629,9 @@
                 "identifier": "badIPMaskPEM",
                 "newPage": false,
                 "searchKey": "x509.badIPMaskPEM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2647,7 +2651,9 @@
                 "identifier": "additionalGeneralSubtreePEM",
                 "newPage": false,
                 "searchKey": "x509.additionalGeneralSubtreePEM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2667,7 +2673,9 @@
                 "identifier": "multipleURLsInCRLDPPEM",
                 "newPage": false,
                 "searchKey": "x509.multipleURLsInCRLDPPEM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2687,7 +2695,9 @@
                 "identifier": "hexPKCS1TestPKCS8Key",
                 "newPage": false,
                 "searchKey": "x509.hexPKCS1TestPKCS8Key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2707,7 +2717,9 @@
                 "identifier": "hexPKCS1TestECKey",
                 "newPage": false,
                 "searchKey": "x509.hexPKCS1TestECKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2727,7 +2739,9 @@
                 "identifier": "mismatchingSigAlgIDPEM",
                 "newPage": false,
                 "searchKey": "x509.mismatchingSigAlgIDPEM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2747,7 +2761,9 @@
                 "identifier": "mismatchingSigAlgParamPEM",
                 "newPage": false,
                 "searchKey": "x509.mismatchingSigAlgParamPEM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2770,9 +2786,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2790,7 +2804,9 @@
                 "identifier": "rfc1423Algos",
                 "newPage": false,
                 "searchKey": "x509.rfc1423Algos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2810,9 +2826,7 @@
                 "identifier": "IncorrectPasswordError",
                 "newPage": false,
                 "searchKey": "x509.IncorrectPasswordError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2832,7 +2846,9 @@
                 "identifier": "once",
                 "newPage": false,
                 "searchKey": "x509.once",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2852,7 +2868,9 @@
                 "identifier": "systemRoots",
                 "newPage": false,
                 "searchKey": "x509.systemRoots",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2872,7 +2890,9 @@
                 "identifier": "systemRootsErr",
                 "newPage": false,
                 "searchKey": "x509.systemRootsErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2892,7 +2912,9 @@
                 "identifier": "debugDarwinRoots",
                 "newPage": false,
                 "searchKey": "x509.debugDarwinRoots",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2912,7 +2934,9 @@
                 "identifier": "errNotParsed",
                 "newPage": false,
                 "searchKey": "x509.errNotParsed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2932,7 +2956,9 @@
                 "identifier": "publicKeyAlgoName",
                 "newPage": false,
                 "searchKey": "x509.publicKeyAlgoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2952,7 +2978,9 @@
                 "identifier": "oidSignatureMD2WithRSA",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureMD2WithRSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2972,7 +3000,9 @@
                 "identifier": "oidSignatureMD5WithRSA",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureMD5WithRSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2992,7 +3022,9 @@
                 "identifier": "oidSignatureSHA1WithRSA",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureSHA1WithRSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3012,7 +3044,9 @@
                 "identifier": "oidSignatureSHA256WithRSA",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureSHA256WithRSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3032,7 +3066,9 @@
                 "identifier": "oidSignatureSHA384WithRSA",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureSHA384WithRSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3052,7 +3088,9 @@
                 "identifier": "oidSignatureSHA512WithRSA",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureSHA512WithRSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3072,7 +3110,9 @@
                 "identifier": "oidSignatureRSAPSS",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureRSAPSS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3092,7 +3132,9 @@
                 "identifier": "oidSignatureDSAWithSHA1",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureDSAWithSHA1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3112,7 +3154,9 @@
                 "identifier": "oidSignatureDSAWithSHA256",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureDSAWithSHA256",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3132,7 +3176,9 @@
                 "identifier": "oidSignatureECDSAWithSHA1",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureECDSAWithSHA1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3152,7 +3198,9 @@
                 "identifier": "oidSignatureECDSAWithSHA256",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureECDSAWithSHA256",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3172,7 +3220,9 @@
                 "identifier": "oidSignatureECDSAWithSHA384",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureECDSAWithSHA384",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3192,7 +3242,9 @@
                 "identifier": "oidSignatureECDSAWithSHA512",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureECDSAWithSHA512",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3212,7 +3264,9 @@
                 "identifier": "oidSignatureEd25519",
                 "newPage": false,
                 "searchKey": "x509.oidSignatureEd25519",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3232,7 +3286,9 @@
                 "identifier": "oidSHA256",
                 "newPage": false,
                 "searchKey": "x509.oidSHA256",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3252,7 +3308,9 @@
                 "identifier": "oidSHA384",
                 "newPage": false,
                 "searchKey": "x509.oidSHA384",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3272,7 +3330,9 @@
                 "identifier": "oidSHA512",
                 "newPage": false,
                 "searchKey": "x509.oidSHA512",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3292,7 +3352,9 @@
                 "identifier": "oidMGF1",
                 "newPage": false,
                 "searchKey": "x509.oidMGF1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3312,7 +3374,9 @@
                 "identifier": "oidISOSignatureSHA1WithRSA",
                 "newPage": false,
                 "searchKey": "x509.oidISOSignatureSHA1WithRSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3332,7 +3396,9 @@
                 "identifier": "signatureAlgorithmDetails",
                 "newPage": false,
                 "searchKey": "x509.signatureAlgorithmDetails",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3352,7 +3418,9 @@
                 "identifier": "hashToPSSParameters",
                 "newPage": false,
                 "searchKey": "x509.hashToPSSParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3372,7 +3440,9 @@
                 "identifier": "oidPublicKeyRSA",
                 "newPage": false,
                 "searchKey": "x509.oidPublicKeyRSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3392,7 +3462,9 @@
                 "identifier": "oidPublicKeyDSA",
                 "newPage": false,
                 "searchKey": "x509.oidPublicKeyDSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3412,7 +3484,9 @@
                 "identifier": "oidPublicKeyECDSA",
                 "newPage": false,
                 "searchKey": "x509.oidPublicKeyECDSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3432,7 +3506,9 @@
                 "identifier": "oidPublicKeyEd25519",
                 "newPage": false,
                 "searchKey": "x509.oidPublicKeyEd25519",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3452,7 +3528,9 @@
                 "identifier": "oidNamedCurveP224",
                 "newPage": false,
                 "searchKey": "x509.oidNamedCurveP224",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3472,7 +3550,9 @@
                 "identifier": "oidNamedCurveP256",
                 "newPage": false,
                 "searchKey": "x509.oidNamedCurveP256",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3492,7 +3572,9 @@
                 "identifier": "oidNamedCurveP384",
                 "newPage": false,
                 "searchKey": "x509.oidNamedCurveP384",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3512,7 +3594,9 @@
                 "identifier": "oidNamedCurveP521",
                 "newPage": false,
                 "searchKey": "x509.oidNamedCurveP521",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3532,7 +3616,9 @@
                 "identifier": "oidExtKeyUsageAny",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageAny",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3552,7 +3638,9 @@
                 "identifier": "oidExtKeyUsageServerAuth",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageServerAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3572,7 +3660,9 @@
                 "identifier": "oidExtKeyUsageClientAuth",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageClientAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3592,7 +3682,9 @@
                 "identifier": "oidExtKeyUsageCodeSigning",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageCodeSigning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3612,7 +3704,9 @@
                 "identifier": "oidExtKeyUsageEmailProtection",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageEmailProtection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3632,7 +3726,9 @@
                 "identifier": "oidExtKeyUsageIPSECEndSystem",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageIPSECEndSystem",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3652,7 +3748,9 @@
                 "identifier": "oidExtKeyUsageIPSECTunnel",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageIPSECTunnel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3672,7 +3770,9 @@
                 "identifier": "oidExtKeyUsageIPSECUser",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageIPSECUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3692,7 +3792,9 @@
                 "identifier": "oidExtKeyUsageTimeStamping",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageTimeStamping",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3712,7 +3814,9 @@
                 "identifier": "oidExtKeyUsageOCSPSigning",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageOCSPSigning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3732,7 +3836,9 @@
                 "identifier": "oidExtKeyUsageMicrosoftServerGatedCrypto",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageMicrosoftServerGatedCrypto",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3752,7 +3858,9 @@
                 "identifier": "oidExtKeyUsageNetscapeServerGatedCrypto",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageNetscapeServerGatedCrypto",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3772,7 +3880,9 @@
                 "identifier": "oidExtKeyUsageMicrosoftCommercialCodeSigning",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageMicrosoftCommercialCodeSigning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3792,7 +3902,9 @@
                 "identifier": "oidExtKeyUsageMicrosoftKernelCodeSigning",
                 "newPage": false,
                 "searchKey": "x509.oidExtKeyUsageMicrosoftKernelCodeSigning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3812,7 +3924,9 @@
                 "identifier": "extKeyUsageOIDs",
                 "newPage": false,
                 "searchKey": "x509.extKeyUsageOIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3832,9 +3946,7 @@
                 "identifier": "ErrUnsupportedAlgorithm",
                 "newPage": false,
                 "searchKey": "x509.ErrUnsupportedAlgorithm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3854,7 +3966,9 @@
                 "identifier": "oidExtensionSubjectKeyId",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionSubjectKeyId",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3874,7 +3988,9 @@
                 "identifier": "oidExtensionKeyUsage",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionKeyUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3894,7 +4010,9 @@
                 "identifier": "oidExtensionExtendedKeyUsage",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionExtendedKeyUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3914,7 +4032,9 @@
                 "identifier": "oidExtensionAuthorityKeyId",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionAuthorityKeyId",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3934,7 +4054,9 @@
                 "identifier": "oidExtensionBasicConstraints",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionBasicConstraints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3954,7 +4076,9 @@
                 "identifier": "oidExtensionSubjectAltName",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionSubjectAltName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3974,7 +4098,9 @@
                 "identifier": "oidExtensionCertificatePolicies",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionCertificatePolicies",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3994,7 +4120,9 @@
                 "identifier": "oidExtensionNameConstraints",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionNameConstraints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4014,7 +4142,9 @@
                 "identifier": "oidExtensionCRLDistributionPoints",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionCRLDistributionPoints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4034,7 +4164,9 @@
                 "identifier": "oidExtensionAuthorityInfoAccess",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionAuthorityInfoAccess",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4054,7 +4186,9 @@
                 "identifier": "oidExtensionCRLNumber",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionCRLNumber",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4074,7 +4208,9 @@
                 "identifier": "oidAuthorityInfoAccessOcsp",
                 "newPage": false,
                 "searchKey": "x509.oidAuthorityInfoAccessOcsp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4094,7 +4230,9 @@
                 "identifier": "oidAuthorityInfoAccessIssuers",
                 "newPage": false,
                 "searchKey": "x509.oidAuthorityInfoAccessIssuers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4114,7 +4252,9 @@
                 "identifier": "emptyASN1Subject",
                 "newPage": false,
                 "searchKey": "x509.emptyASN1Subject",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4134,7 +4274,9 @@
                 "identifier": "pemCRLPrefix",
                 "newPage": false,
                 "searchKey": "x509.pemCRLPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4154,7 +4296,9 @@
                 "identifier": "pemType",
                 "newPage": false,
                 "searchKey": "x509.pemType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4174,7 +4318,9 @@
                 "identifier": "oidExtensionRequest",
                 "newPage": false,
                 "searchKey": "x509.oidExtensionRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4194,7 +4340,9 @@
                 "identifier": "nameConstraintsTests",
                 "newPage": false,
                 "searchKey": "x509.nameConstraintsTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4214,7 +4362,9 @@
                 "identifier": "rfc2821Tests",
                 "newPage": false,
                 "searchKey": "x509.rfc2821Tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4234,7 +4384,9 @@
                 "identifier": "testData",
                 "newPage": false,
                 "searchKey": "x509.testData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4254,7 +4406,9 @@
                 "identifier": "incompleteBlockPEM",
                 "newPage": false,
                 "searchKey": "x509.incompleteBlockPEM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4274,7 +4428,9 @@
                 "identifier": "pkcs8RSAPrivateKeyHex",
                 "newPage": false,
                 "searchKey": "x509.pkcs8RSAPrivateKeyHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4294,7 +4450,9 @@
                 "identifier": "pkcs8P224PrivateKeyHex",
                 "newPage": false,
                 "searchKey": "x509.pkcs8P224PrivateKeyHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4314,7 +4472,9 @@
                 "identifier": "pkcs8P256PrivateKeyHex",
                 "newPage": false,
                 "searchKey": "x509.pkcs8P256PrivateKeyHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4334,7 +4494,9 @@
                 "identifier": "pkcs8P384PrivateKeyHex",
                 "newPage": false,
                 "searchKey": "x509.pkcs8P384PrivateKeyHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4354,7 +4516,9 @@
                 "identifier": "pkcs8P521PrivateKeyHex",
                 "newPage": false,
                 "searchKey": "x509.pkcs8P521PrivateKeyHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4374,7 +4538,9 @@
                 "identifier": "pkcs8Ed25519PrivateKeyHex",
                 "newPage": false,
                 "searchKey": "x509.pkcs8Ed25519PrivateKeyHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4394,7 +4560,9 @@
                 "identifier": "pkcs8MismatchKeyTests",
                 "newPage": false,
                 "searchKey": "x509.pkcs8MismatchKeyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4414,7 +4582,9 @@
                 "identifier": "ecKeyTests",
                 "newPage": false,
                 "searchKey": "x509.ecKeyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4434,7 +4604,9 @@
                 "identifier": "ecMismatchKeyTests",
                 "newPage": false,
                 "searchKey": "x509.ecMismatchKeyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4454,7 +4626,9 @@
                 "identifier": "verifyTests",
                 "newPage": false,
                 "searchKey": "x509.verifyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4474,7 +4648,9 @@
                 "identifier": "megaLeaf",
                 "newPage": false,
                 "searchKey": "x509.megaLeaf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4494,7 +4670,9 @@
                 "identifier": "comodoIntermediate1",
                 "newPage": false,
                 "searchKey": "x509.comodoIntermediate1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4514,7 +4692,9 @@
                 "identifier": "comodoRoot",
                 "newPage": false,
                 "searchKey": "x509.comodoRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4534,7 +4714,9 @@
                 "identifier": "nameConstraintsLeaf",
                 "newPage": false,
                 "searchKey": "x509.nameConstraintsLeaf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4554,7 +4736,9 @@
                 "identifier": "nameConstraintsIntermediate1",
                 "newPage": false,
                 "searchKey": "x509.nameConstraintsIntermediate1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4574,7 +4758,9 @@
                 "identifier": "nameConstraintsIntermediate2",
                 "newPage": false,
                 "searchKey": "x509.nameConstraintsIntermediate2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4594,7 +4780,9 @@
                 "identifier": "globalSignRoot",
                 "newPage": false,
                 "searchKey": "x509.globalSignRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4614,7 +4802,9 @@
                 "identifier": "moipLeafCert",
                 "newPage": false,
                 "searchKey": "x509.moipLeafCert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4634,7 +4824,9 @@
                 "identifier": "comodoIntermediateSHA384",
                 "newPage": false,
                 "searchKey": "x509.comodoIntermediateSHA384",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4654,7 +4846,9 @@
                 "identifier": "unknownAuthorityErrorTests",
                 "newPage": false,
                 "searchKey": "x509.unknownAuthorityErrorTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4674,7 +4868,9 @@
                 "identifier": "nameConstraintTests",
                 "newPage": false,
                 "searchKey": "x509.nameConstraintTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4694,7 +4890,9 @@
                 "identifier": "pemPublicKey",
                 "newPage": false,
                 "searchKey": "x509.pemPublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4714,7 +4912,9 @@
                 "identifier": "pemPrivateKey",
                 "newPage": false,
                 "searchKey": "x509.pemPrivateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4734,7 +4934,9 @@
                 "identifier": "pemEd25519Key",
                 "newPage": false,
                 "searchKey": "x509.pemEd25519Key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4754,7 +4956,9 @@
                 "identifier": "testPrivateKey",
                 "newPage": false,
                 "searchKey": "x509.testPrivateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4774,7 +4978,9 @@
                 "identifier": "rsaPrivateKey",
                 "newPage": false,
                 "searchKey": "x509.rsaPrivateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4794,7 +5000,9 @@
                 "identifier": "matchHostnamesTests",
                 "newPage": false,
                 "searchKey": "x509.matchHostnamesTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4814,7 +5022,9 @@
                 "identifier": "certBytes",
                 "newPage": false,
                 "searchKey": "x509.certBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4834,7 +5044,9 @@
                 "identifier": "ecdsaSHA1CertPem",
                 "newPage": false,
                 "searchKey": "x509.ecdsaSHA1CertPem",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4854,7 +5066,9 @@
                 "identifier": "ecdsaSHA256p256CertPem",
                 "newPage": false,
                 "searchKey": "x509.ecdsaSHA256p256CertPem",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4874,7 +5088,9 @@
                 "identifier": "ecdsaSHA256p384CertPem",
                 "newPage": false,
                 "searchKey": "x509.ecdsaSHA256p384CertPem",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4894,7 +5110,9 @@
                 "identifier": "ecdsaSHA384p521CertPem",
                 "newPage": false,
                 "searchKey": "x509.ecdsaSHA384p521CertPem",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4914,7 +5132,9 @@
                 "identifier": "ecdsaTests",
                 "newPage": false,
                 "searchKey": "x509.ecdsaTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4934,7 +5154,9 @@
                 "identifier": "dsaCertPem",
                 "newPage": false,
                 "searchKey": "x509.dsaCertPem",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4954,7 +5176,9 @@
                 "identifier": "rsaPSSSelfSignedPEM",
                 "newPage": false,
                 "searchKey": "x509.rsaPSSSelfSignedPEM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4974,7 +5198,9 @@
                 "identifier": "rsaPSSSelfSignedOpenSSL110PEM",
                 "newPage": false,
                 "searchKey": "x509.rsaPSSSelfSignedOpenSSL110PEM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4994,7 +5220,9 @@
                 "identifier": "ed25519CRLKey",
                 "newPage": false,
                 "searchKey": "x509.ed25519CRLKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5014,7 +5242,9 @@
                 "identifier": "csrBase64Array",
                 "newPage": false,
                 "searchKey": "x509.csrBase64Array",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5034,7 +5264,9 @@
                 "identifier": "md5cert",
                 "newPage": false,
                 "searchKey": "x509.md5cert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5054,7 +5286,9 @@
                 "identifier": "pkcs1MismatchKeyTests",
                 "newPage": false,
                 "searchKey": "x509.pkcs1MismatchKeyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5077,9 +5311,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -5097,7 +5329,9 @@
                 "identifier": "sum224",
                 "newPage": false,
                 "searchKey": "x509.sum224",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5117,9 +5351,7 @@
                 "identifier": "CertPool",
                 "newPage": false,
                 "searchKey": "x509.CertPool",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5137,9 +5369,7 @@
                       "identifier": "NewCertPool",
                       "newPage": false,
                       "searchKey": "x509.NewCertPool",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5159,9 +5389,7 @@
                       "identifier": "SystemCertPool",
                       "newPage": false,
                       "searchKey": "x509.SystemCertPool",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5181,7 +5409,9 @@
                       "identifier": "systemRootsPool",
                       "newPage": false,
                       "searchKey": "x509.systemRootsPool",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5201,7 +5431,9 @@
                       "identifier": "loadSystemRoots",
                       "newPage": false,
                       "searchKey": "x509.loadSystemRoots",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5221,7 +5453,9 @@
                       "identifier": "CertPool.len",
                       "newPage": false,
                       "searchKey": "x509.CertPool.len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5241,7 +5475,9 @@
                       "identifier": "CertPool.cert",
                       "newPage": false,
                       "searchKey": "x509.CertPool.cert",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5261,7 +5497,9 @@
                       "identifier": "CertPool.copy",
                       "newPage": false,
                       "searchKey": "x509.CertPool.copy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5281,7 +5519,9 @@
                       "identifier": "CertPool.findPotentialParents",
                       "newPage": false,
                       "searchKey": "x509.CertPool.findPotentialParents",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5301,7 +5541,9 @@
                       "identifier": "CertPool.contains",
                       "newPage": false,
                       "searchKey": "x509.CertPool.contains",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5321,9 +5563,7 @@
                       "identifier": "CertPool.AddCert",
                       "newPage": false,
                       "searchKey": "x509.CertPool.AddCert",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5343,7 +5583,9 @@
                       "identifier": "CertPool.addCertFunc",
                       "newPage": false,
                       "searchKey": "x509.CertPool.addCertFunc",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5363,9 +5605,7 @@
                       "identifier": "CertPool.AppendCertsFromPEM",
                       "newPage": false,
                       "searchKey": "x509.CertPool.AppendCertsFromPEM",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5385,9 +5625,7 @@
                       "identifier": "CertPool.Subjects",
                       "newPage": false,
                       "searchKey": "x509.CertPool.Subjects",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5407,7 +5645,9 @@
                       "identifier": "CertPool.mustCert",
                       "newPage": false,
                       "searchKey": "x509.CertPool.mustCert",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5430,7 +5670,9 @@
                 "identifier": "lazyCert",
                 "newPage": false,
                 "searchKey": "x509.lazyCert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5450,9 +5692,7 @@
                 "identifier": "PEMCipher",
                 "newPage": false,
                 "searchKey": "x509.PEMCipher",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5472,7 +5712,9 @@
                 "identifier": "rfc1423Algo",
                 "newPage": false,
                 "searchKey": "x509.rfc1423Algo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5490,7 +5732,9 @@
                       "identifier": "cipherByName",
                       "newPage": false,
                       "searchKey": "x509.cipherByName",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5510,7 +5754,9 @@
                       "identifier": "cipherByKey",
                       "newPage": false,
                       "searchKey": "x509.cipherByKey",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5530,7 +5776,9 @@
                       "identifier": "rfc1423Algo.deriveKey",
                       "newPage": false,
                       "searchKey": "x509.rfc1423Algo.deriveKey",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5553,7 +5801,9 @@
                 "identifier": "pkcs1PrivateKey",
                 "newPage": false,
                 "searchKey": "x509.pkcs1PrivateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5573,7 +5823,9 @@
                 "identifier": "pkcs1AdditionalRSAPrime",
                 "newPage": false,
                 "searchKey": "x509.pkcs1AdditionalRSAPrime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5593,7 +5845,9 @@
                 "identifier": "pkcs1PublicKey",
                 "newPage": false,
                 "searchKey": "x509.pkcs1PublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5613,7 +5867,9 @@
                 "identifier": "pkcs8",
                 "newPage": false,
                 "searchKey": "x509.pkcs8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5633,7 +5889,9 @@
                 "identifier": "ecPrivateKey",
                 "newPage": false,
                 "searchKey": "x509.ecPrivateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5653,9 +5911,7 @@
                 "identifier": "InvalidReason",
                 "newPage": false,
                 "searchKey": "x509.InvalidReason",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5675,9 +5931,7 @@
                 "identifier": "CertificateInvalidError",
                 "newPage": false,
                 "searchKey": "x509.CertificateInvalidError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5695,9 +5949,7 @@
                       "identifier": "CertificateInvalidError.Error",
                       "newPage": false,
                       "searchKey": "x509.CertificateInvalidError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5720,9 +5972,7 @@
                 "identifier": "HostnameError",
                 "newPage": false,
                 "searchKey": "x509.HostnameError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5740,9 +5990,7 @@
                       "identifier": "HostnameError.Error",
                       "newPage": false,
                       "searchKey": "x509.HostnameError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5765,9 +6013,7 @@
                 "identifier": "UnknownAuthorityError",
                 "newPage": false,
                 "searchKey": "x509.UnknownAuthorityError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5785,9 +6031,7 @@
                       "identifier": "UnknownAuthorityError.Error",
                       "newPage": false,
                       "searchKey": "x509.UnknownAuthorityError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5810,9 +6054,7 @@
                 "identifier": "SystemRootsError",
                 "newPage": false,
                 "searchKey": "x509.SystemRootsError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5830,9 +6072,7 @@
                       "identifier": "SystemRootsError.Error",
                       "newPage": false,
                       "searchKey": "x509.SystemRootsError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5852,9 +6092,7 @@
                       "identifier": "SystemRootsError.Unwrap",
                       "newPage": false,
                       "searchKey": "x509.SystemRootsError.Unwrap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5877,9 +6115,7 @@
                 "identifier": "VerifyOptions",
                 "newPage": false,
                 "searchKey": "x509.VerifyOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5899,7 +6135,9 @@
                 "identifier": "rfc2821Mailbox",
                 "newPage": false,
                 "searchKey": "x509.rfc2821Mailbox",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5917,7 +6155,9 @@
                       "identifier": "parseRFC2821Mailbox",
                       "newPage": false,
                       "searchKey": "x509.parseRFC2821Mailbox",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5940,7 +6180,9 @@
                 "identifier": "pkixPublicKey",
                 "newPage": false,
                 "searchKey": "x509.pkixPublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5960,7 +6202,9 @@
                 "identifier": "certificate",
                 "newPage": false,
                 "searchKey": "x509.certificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5980,7 +6224,9 @@
                 "identifier": "tbsCertificate",
                 "newPage": false,
                 "searchKey": "x509.tbsCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6000,7 +6246,9 @@
                 "identifier": "dsaAlgorithmParameters",
                 "newPage": false,
                 "searchKey": "x509.dsaAlgorithmParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6020,7 +6268,9 @@
                 "identifier": "validity",
                 "newPage": false,
                 "searchKey": "x509.validity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6040,7 +6290,9 @@
                 "identifier": "publicKeyInfo",
                 "newPage": false,
                 "searchKey": "x509.publicKeyInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6060,7 +6312,9 @@
                 "identifier": "authKeyId",
                 "newPage": false,
                 "searchKey": "x509.authKeyId",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6080,9 +6334,7 @@
                 "identifier": "SignatureAlgorithm",
                 "newPage": false,
                 "searchKey": "x509.SignatureAlgorithm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6100,7 +6352,9 @@
                       "identifier": "getSignatureAlgorithmFromAI",
                       "newPage": false,
                       "searchKey": "x509.getSignatureAlgorithmFromAI",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6120,7 +6374,9 @@
                       "identifier": "SignatureAlgorithm.isRSAPSS",
                       "newPage": false,
                       "searchKey": "x509.SignatureAlgorithm.isRSAPSS",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6140,9 +6396,7 @@
                       "identifier": "SignatureAlgorithm.String",
                       "newPage": false,
                       "searchKey": "x509.SignatureAlgorithm.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6165,9 +6419,7 @@
                 "identifier": "PublicKeyAlgorithm",
                 "newPage": false,
                 "searchKey": "x509.PublicKeyAlgorithm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6185,7 +6437,9 @@
                       "identifier": "getPublicKeyAlgorithmFromOID",
                       "newPage": false,
                       "searchKey": "x509.getPublicKeyAlgorithmFromOID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6205,9 +6459,7 @@
                       "identifier": "PublicKeyAlgorithm.String",
                       "newPage": false,
                       "searchKey": "x509.PublicKeyAlgorithm.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6230,7 +6482,9 @@
                 "identifier": "pssParameters",
                 "newPage": false,
                 "searchKey": "x509.pssParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6250,9 +6504,7 @@
                 "identifier": "KeyUsage",
                 "newPage": false,
                 "searchKey": "x509.KeyUsage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6270,7 +6522,9 @@
                       "identifier": "parseKeyUsageExtension",
                       "newPage": false,
                       "searchKey": "x509.parseKeyUsageExtension",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6293,9 +6547,7 @@
                 "identifier": "ExtKeyUsage",
                 "newPage": false,
                 "searchKey": "x509.ExtKeyUsage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6313,7 +6565,9 @@
                       "identifier": "extKeyUsageFromOID",
                       "newPage": false,
                       "searchKey": "x509.extKeyUsageFromOID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6336,9 +6590,7 @@
                 "identifier": "Certificate",
                 "newPage": false,
                 "searchKey": "x509.Certificate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6356,7 +6608,9 @@
                       "identifier": "parseCertificate",
                       "newPage": false,
                       "searchKey": "x509.parseCertificate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6376,9 +6630,7 @@
                       "identifier": "ParseCertificate",
                       "newPage": false,
                       "searchKey": "x509.ParseCertificate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6398,7 +6650,9 @@
                       "identifier": "exportCertificate",
                       "newPage": false,
                       "searchKey": "x509.exportCertificate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6418,7 +6672,9 @@
                       "identifier": "makeConstraintsCACert",
                       "newPage": false,
                       "searchKey": "x509.makeConstraintsCACert",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6438,7 +6694,9 @@
                       "identifier": "makeConstraintsLeafCert",
                       "newPage": false,
                       "searchKey": "x509.makeConstraintsLeafCert",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6458,7 +6716,9 @@
                       "identifier": "certificateFromPEM",
                       "newPage": false,
                       "searchKey": "x509.certificateFromPEM",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6478,7 +6738,9 @@
                       "identifier": "generateCert",
                       "newPage": false,
                       "searchKey": "x509.generateCert",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6498,7 +6760,9 @@
                       "identifier": "serialiseAndParse",
                       "newPage": false,
                       "searchKey": "x509.serialiseAndParse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6518,7 +6782,9 @@
                       "identifier": "Certificate.systemVerify",
                       "newPage": false,
                       "searchKey": "x509.Certificate.systemVerify",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6538,7 +6804,9 @@
                       "identifier": "Certificate.checkNameConstraints",
                       "newPage": false,
                       "searchKey": "x509.Certificate.checkNameConstraints",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6558,7 +6826,9 @@
                       "identifier": "Certificate.isValid",
                       "newPage": false,
                       "searchKey": "x509.Certificate.isValid",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6578,9 +6848,7 @@
                       "identifier": "Certificate.Verify",
                       "newPage": false,
                       "searchKey": "x509.Certificate.Verify",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6600,7 +6868,9 @@
                       "identifier": "Certificate.buildChains",
                       "newPage": false,
                       "searchKey": "x509.Certificate.buildChains",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6620,9 +6890,7 @@
                       "identifier": "Certificate.VerifyHostname",
                       "newPage": false,
                       "searchKey": "x509.Certificate.VerifyHostname",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6642,9 +6910,7 @@
                       "identifier": "Certificate.Equal",
                       "newPage": false,
                       "searchKey": "x509.Certificate.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6664,7 +6930,9 @@
                       "identifier": "Certificate.hasSANExtension",
                       "newPage": false,
                       "searchKey": "x509.Certificate.hasSANExtension",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6684,9 +6952,7 @@
                       "identifier": "Certificate.CheckSignatureFrom",
                       "newPage": false,
                       "searchKey": "x509.Certificate.CheckSignatureFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6706,9 +6972,7 @@
                       "identifier": "Certificate.CheckSignature",
                       "newPage": false,
                       "searchKey": "x509.Certificate.CheckSignature",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6728,7 +6992,9 @@
                       "identifier": "Certificate.hasNameConstraints",
                       "newPage": false,
                       "searchKey": "x509.Certificate.hasNameConstraints",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6748,7 +7014,9 @@
                       "identifier": "Certificate.getSANExtension",
                       "newPage": false,
                       "searchKey": "x509.Certificate.getSANExtension",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6768,9 +7036,7 @@
                       "identifier": "Certificate.CheckCRLSignature",
                       "newPage": false,
                       "searchKey": "x509.Certificate.CheckCRLSignature",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6790,9 +7056,7 @@
                       "identifier": "Certificate.CreateCRL",
                       "newPage": false,
                       "searchKey": "x509.Certificate.CreateCRL",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6815,9 +7079,7 @@
                 "identifier": "InsecureAlgorithmError",
                 "newPage": false,
                 "searchKey": "x509.InsecureAlgorithmError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6835,9 +7097,7 @@
                       "identifier": "InsecureAlgorithmError.Error",
                       "newPage": false,
                       "searchKey": "x509.InsecureAlgorithmError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6860,9 +7120,7 @@
                 "identifier": "ConstraintViolationError",
                 "newPage": false,
                 "searchKey": "x509.ConstraintViolationError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6880,9 +7138,7 @@
                       "identifier": "ConstraintViolationError.Error",
                       "newPage": false,
                       "searchKey": "x509.ConstraintViolationError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6905,9 +7161,7 @@
                 "identifier": "UnhandledCriticalExtension",
                 "newPage": false,
                 "searchKey": "x509.UnhandledCriticalExtension",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6925,9 +7179,7 @@
                       "identifier": "UnhandledCriticalExtension.Error",
                       "newPage": false,
                       "searchKey": "x509.UnhandledCriticalExtension.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6950,7 +7202,9 @@
                 "identifier": "basicConstraints",
                 "newPage": false,
                 "searchKey": "x509.basicConstraints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6970,7 +7224,9 @@
                 "identifier": "policyInformation",
                 "newPage": false,
                 "searchKey": "x509.policyInformation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6990,7 +7246,9 @@
                 "identifier": "authorityInfoAccess",
                 "newPage": false,
                 "searchKey": "x509.authorityInfoAccess",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7010,7 +7268,9 @@
                 "identifier": "distributionPoint",
                 "newPage": false,
                 "searchKey": "x509.distributionPoint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7030,7 +7290,9 @@
                 "identifier": "distributionPointName",
                 "newPage": false,
                 "searchKey": "x509.distributionPointName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7050,9 +7312,7 @@
                 "identifier": "CertificateRequest",
                 "newPage": false,
                 "searchKey": "x509.CertificateRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7070,9 +7330,7 @@
                       "identifier": "ParseCertificateRequest",
                       "newPage": false,
                       "searchKey": "x509.ParseCertificateRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7092,7 +7350,9 @@
                       "identifier": "parseCertificateRequest",
                       "newPage": false,
                       "searchKey": "x509.parseCertificateRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7112,7 +7372,9 @@
                       "identifier": "marshalAndParseCSR",
                       "newPage": false,
                       "searchKey": "x509.marshalAndParseCSR",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7132,9 +7394,7 @@
                       "identifier": "CertificateRequest.CheckSignature",
                       "newPage": false,
                       "searchKey": "x509.CertificateRequest.CheckSignature",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7157,7 +7417,9 @@
                 "identifier": "tbsCertificateRequest",
                 "newPage": false,
                 "searchKey": "x509.tbsCertificateRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7177,7 +7439,9 @@
                 "identifier": "certificateRequest",
                 "newPage": false,
                 "searchKey": "x509.certificateRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7197,9 +7461,7 @@
                 "identifier": "RevocationList",
                 "newPage": false,
                 "searchKey": "x509.RevocationList",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7219,7 +7481,9 @@
                 "identifier": "nameConstraintsTest",
                 "newPage": false,
                 "searchKey": "x509.nameConstraintsTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7239,7 +7503,9 @@
                 "identifier": "constraintsSpec",
                 "newPage": false,
                 "searchKey": "x509.constraintsSpec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7259,7 +7525,9 @@
                 "identifier": "leafSpec",
                 "newPage": false,
                 "searchKey": "x509.leafSpec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7279,7 +7547,9 @@
                 "identifier": "verifyTest",
                 "newPage": false,
                 "searchKey": "x509.verifyTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7299,7 +7569,9 @@
                 "identifier": "matchHostnamesTest",
                 "newPage": false,
                 "searchKey": "x509.matchHostnamesTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7319,7 +7591,9 @@
                 "identifier": "brokenSigner",
                 "newPage": false,
                 "searchKey": "x509.brokenSigner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7337,7 +7611,9 @@
                       "identifier": "brokenSigner.Public",
                       "newPage": false,
                       "searchKey": "x509.brokenSigner.Public",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7357,7 +7633,9 @@
                       "identifier": "brokenSigner.Sign",
                       "newPage": false,
                       "searchKey": "x509.brokenSigner.Sign",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7383,9 +7661,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -7403,7 +7679,9 @@
                 "identifier": "isPrintable",
                 "newPage": false,
                 "searchKey": "x509.isPrintable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7423,7 +7701,9 @@
                 "identifier": "parseASN1String",
                 "newPage": false,
                 "searchKey": "x509.parseASN1String",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7443,7 +7723,9 @@
                 "identifier": "parseName",
                 "newPage": false,
                 "searchKey": "x509.parseName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7463,7 +7745,9 @@
                 "identifier": "parseAI",
                 "newPage": false,
                 "searchKey": "x509.parseAI",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7483,7 +7767,9 @@
                 "identifier": "parseValidity",
                 "newPage": false,
                 "searchKey": "x509.parseValidity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7503,7 +7789,9 @@
                 "identifier": "parseExtension",
                 "newPage": false,
                 "searchKey": "x509.parseExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7523,7 +7811,9 @@
                 "identifier": "parsePublicKey",
                 "newPage": false,
                 "searchKey": "x509.parsePublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7543,7 +7833,9 @@
                 "identifier": "parseBasicConstraintsExtension",
                 "newPage": false,
                 "searchKey": "x509.parseBasicConstraintsExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7563,7 +7855,9 @@
                 "identifier": "forEachSAN",
                 "newPage": false,
                 "searchKey": "x509.forEachSAN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7583,7 +7877,9 @@
                 "identifier": "parseSANExtension",
                 "newPage": false,
                 "searchKey": "x509.parseSANExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7603,7 +7899,9 @@
                 "identifier": "parseExtKeyUsageExtension",
                 "newPage": false,
                 "searchKey": "x509.parseExtKeyUsageExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7623,7 +7921,9 @@
                 "identifier": "parseCertificatePoliciesExtension",
                 "newPage": false,
                 "searchKey": "x509.parseCertificatePoliciesExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7643,7 +7943,9 @@
                 "identifier": "isValidIPMask",
                 "newPage": false,
                 "searchKey": "x509.isValidIPMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7663,7 +7965,9 @@
                 "identifier": "parseNameConstraintsExtension",
                 "newPage": false,
                 "searchKey": "x509.parseNameConstraintsExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7683,7 +7987,9 @@
                 "identifier": "processExtensions",
                 "newPage": false,
                 "searchKey": "x509.processExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7703,9 +8009,7 @@
                 "identifier": "ParseCertificates",
                 "newPage": false,
                 "searchKey": "x509.ParseCertificates",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7726,7 +8030,6 @@
                 "newPage": false,
                 "searchKey": "x509.IsEncryptedPEMBlock",
                 "tags": [
-                  "exported",
                   "deprecated"
                 ]
               },
@@ -7749,7 +8052,6 @@
                 "newPage": false,
                 "searchKey": "x509.DecryptPEMBlock",
                 "tags": [
-                  "exported",
                   "deprecated"
                 ]
               },
@@ -7772,7 +8074,6 @@
                 "newPage": false,
                 "searchKey": "x509.EncryptPEMBlock",
                 "tags": [
-                  "exported",
                   "deprecated"
                 ]
               },
@@ -7794,9 +8095,7 @@
                 "identifier": "ParsePKCS1PrivateKey",
                 "newPage": false,
                 "searchKey": "x509.ParsePKCS1PrivateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7816,9 +8115,7 @@
                 "identifier": "MarshalPKCS1PrivateKey",
                 "newPage": false,
                 "searchKey": "x509.MarshalPKCS1PrivateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7838,9 +8135,7 @@
                 "identifier": "ParsePKCS1PublicKey",
                 "newPage": false,
                 "searchKey": "x509.ParsePKCS1PublicKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7860,9 +8155,7 @@
                 "identifier": "MarshalPKCS1PublicKey",
                 "newPage": false,
                 "searchKey": "x509.MarshalPKCS1PublicKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7882,9 +8175,7 @@
                 "identifier": "ParsePKCS8PrivateKey",
                 "newPage": false,
                 "searchKey": "x509.ParsePKCS8PrivateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7904,9 +8195,7 @@
                 "identifier": "MarshalPKCS8PrivateKey",
                 "newPage": false,
                 "searchKey": "x509.MarshalPKCS8PrivateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7926,7 +8215,9 @@
                 "identifier": "initSystemRoots",
                 "newPage": false,
                 "searchKey": "x509.initSystemRoots",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7946,7 +8237,9 @@
                 "identifier": "isRootCertificate",
                 "newPage": false,
                 "searchKey": "x509.isRootCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7966,7 +8259,9 @@
                 "identifier": "sslTrustSettingsResult",
                 "newPage": false,
                 "searchKey": "x509.sslTrustSettingsResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7986,9 +8281,7 @@
                 "identifier": "ParseECPrivateKey",
                 "newPage": false,
                 "searchKey": "x509.ParseECPrivateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8008,9 +8301,7 @@
                 "identifier": "MarshalECPrivateKey",
                 "newPage": false,
                 "searchKey": "x509.MarshalECPrivateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8030,7 +8321,9 @@
                 "identifier": "marshalECPrivateKeyWithOID",
                 "newPage": false,
                 "searchKey": "x509.marshalECPrivateKeyWithOID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8050,7 +8343,9 @@
                 "identifier": "parseECPrivateKey",
                 "newPage": false,
                 "searchKey": "x509.parseECPrivateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8070,7 +8365,9 @@
                 "identifier": "domainToReverseLabels",
                 "newPage": false,
                 "searchKey": "x509.domainToReverseLabels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8090,7 +8387,9 @@
                 "identifier": "matchEmailConstraint",
                 "newPage": false,
                 "searchKey": "x509.matchEmailConstraint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8110,7 +8409,9 @@
                 "identifier": "matchURIConstraint",
                 "newPage": false,
                 "searchKey": "x509.matchURIConstraint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8130,7 +8431,9 @@
                 "identifier": "matchIPConstraint",
                 "newPage": false,
                 "searchKey": "x509.matchIPConstraint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8150,7 +8453,9 @@
                 "identifier": "matchDomainConstraint",
                 "newPage": false,
                 "searchKey": "x509.matchDomainConstraint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8170,7 +8475,9 @@
                 "identifier": "appendToFreshChain",
                 "newPage": false,
                 "searchKey": "x509.appendToFreshChain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8190,7 +8497,9 @@
                 "identifier": "validHostnamePattern",
                 "newPage": false,
                 "searchKey": "x509.validHostnamePattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8210,7 +8519,9 @@
                 "identifier": "validHostnameInput",
                 "newPage": false,
                 "searchKey": "x509.validHostnameInput",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8230,7 +8541,9 @@
                 "identifier": "validHostname",
                 "newPage": false,
                 "searchKey": "x509.validHostname",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8250,7 +8563,9 @@
                 "identifier": "matchExactly",
                 "newPage": false,
                 "searchKey": "x509.matchExactly",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8270,7 +8585,9 @@
                 "identifier": "matchHostnames",
                 "newPage": false,
                 "searchKey": "x509.matchHostnames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8290,7 +8607,9 @@
                 "identifier": "toLowerCaseASCII",
                 "newPage": false,
                 "searchKey": "x509.toLowerCaseASCII",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8310,7 +8629,9 @@
                 "identifier": "checkChainForKeyUsage",
                 "newPage": false,
                 "searchKey": "x509.checkChainForKeyUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8330,9 +8651,7 @@
                 "identifier": "ParsePKIXPublicKey",
                 "newPage": false,
                 "searchKey": "x509.ParsePKIXPublicKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8352,7 +8671,9 @@
                 "identifier": "marshalPublicKey",
                 "newPage": false,
                 "searchKey": "x509.marshalPublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8372,9 +8693,7 @@
                 "identifier": "MarshalPKIXPublicKey",
                 "newPage": false,
                 "searchKey": "x509.MarshalPKIXPublicKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8394,7 +8713,9 @@
                 "identifier": "namedCurveFromOID",
                 "newPage": false,
                 "searchKey": "x509.namedCurveFromOID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8414,7 +8735,9 @@
                 "identifier": "oidFromNamedCurve",
                 "newPage": false,
                 "searchKey": "x509.oidFromNamedCurve",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8434,7 +8757,9 @@
                 "identifier": "oidFromExtKeyUsage",
                 "newPage": false,
                 "searchKey": "x509.oidFromExtKeyUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8454,7 +8779,9 @@
                 "identifier": "signaturePublicKeyAlgoMismatchError",
                 "newPage": false,
                 "searchKey": "x509.signaturePublicKeyAlgoMismatchError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8474,7 +8801,9 @@
                 "identifier": "checkSignature",
                 "newPage": false,
                 "searchKey": "x509.checkSignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8494,7 +8823,9 @@
                 "identifier": "reverseBitsInAByte",
                 "newPage": false,
                 "searchKey": "x509.reverseBitsInAByte",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8514,7 +8845,9 @@
                 "identifier": "asn1BitLength",
                 "newPage": false,
                 "searchKey": "x509.asn1BitLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8534,7 +8867,9 @@
                 "identifier": "oidInExtensions",
                 "newPage": false,
                 "searchKey": "x509.oidInExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8554,7 +8889,9 @@
                 "identifier": "marshalSANs",
                 "newPage": false,
                 "searchKey": "x509.marshalSANs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8574,7 +8911,9 @@
                 "identifier": "isIA5String",
                 "newPage": false,
                 "searchKey": "x509.isIA5String",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8594,7 +8933,9 @@
                 "identifier": "buildCertExtensions",
                 "newPage": false,
                 "searchKey": "x509.buildCertExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8614,7 +8955,9 @@
                 "identifier": "marshalKeyUsage",
                 "newPage": false,
                 "searchKey": "x509.marshalKeyUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8634,7 +8977,9 @@
                 "identifier": "marshalExtKeyUsage",
                 "newPage": false,
                 "searchKey": "x509.marshalExtKeyUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8654,7 +8999,9 @@
                 "identifier": "marshalBasicConstraints",
                 "newPage": false,
                 "searchKey": "x509.marshalBasicConstraints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8674,7 +9021,9 @@
                 "identifier": "marshalCertificatePolicies",
                 "newPage": false,
                 "searchKey": "x509.marshalCertificatePolicies",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8694,7 +9043,9 @@
                 "identifier": "buildCSRExtensions",
                 "newPage": false,
                 "searchKey": "x509.buildCSRExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8714,7 +9065,9 @@
                 "identifier": "subjectBytes",
                 "newPage": false,
                 "searchKey": "x509.subjectBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8734,7 +9087,9 @@
                 "identifier": "signingParamsForPublicKey",
                 "newPage": false,
                 "searchKey": "x509.signingParamsForPublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8754,9 +9109,7 @@
                 "identifier": "CreateCertificate",
                 "newPage": false,
                 "searchKey": "x509.CreateCertificate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8776,9 +9129,7 @@
                 "identifier": "ParseCRL",
                 "newPage": false,
                 "searchKey": "x509.ParseCRL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8798,9 +9149,7 @@
                 "identifier": "ParseDERCRL",
                 "newPage": false,
                 "searchKey": "x509.ParseDERCRL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8820,7 +9169,9 @@
                 "identifier": "newRawAttributes",
                 "newPage": false,
                 "searchKey": "x509.newRawAttributes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8840,7 +9191,9 @@
                 "identifier": "parseRawAttributes",
                 "newPage": false,
                 "searchKey": "x509.parseRawAttributes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8860,7 +9213,9 @@
                 "identifier": "parseCSRExtensions",
                 "newPage": false,
                 "searchKey": "x509.parseCSRExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8880,9 +9235,7 @@
                 "identifier": "CreateCertificateRequest",
                 "newPage": false,
                 "searchKey": "x509.CreateCertificateRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8902,9 +9255,7 @@
                 "identifier": "CreateRevocationList",
                 "newPage": false,
                 "searchKey": "x509.CreateRevocationList",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8924,7 +9275,9 @@
                 "identifier": "customConstraintsExtension",
                 "newPage": false,
                 "searchKey": "x509.customConstraintsExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8944,7 +9297,9 @@
                 "identifier": "addConstraintsToTemplate",
                 "newPage": false,
                 "searchKey": "x509.addConstraintsToTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8964,7 +9319,9 @@
                 "identifier": "parseEKUs",
                 "newPage": false,
                 "searchKey": "x509.parseEKUs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8984,7 +9341,9 @@
                 "identifier": "TestConstraintCases",
                 "newPage": false,
                 "searchKey": "x509.TestConstraintCases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9004,7 +9363,9 @@
                 "identifier": "writePEMsToTempFile",
                 "newPage": false,
                 "searchKey": "x509.writePEMsToTempFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9024,7 +9385,9 @@
                 "identifier": "testChainAgainstOpenSSL",
                 "newPage": false,
                 "searchKey": "x509.testChainAgainstOpenSSL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9044,7 +9407,9 @@
                 "identifier": "TestRFC2821Parsing",
                 "newPage": false,
                 "searchKey": "x509.TestRFC2821Parsing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9064,7 +9429,9 @@
                 "identifier": "TestBadNamesInConstraints",
                 "newPage": false,
                 "searchKey": "x509.TestBadNamesInConstraints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9084,7 +9451,9 @@
                 "identifier": "TestBadNamesInSANs",
                 "newPage": false,
                 "searchKey": "x509.TestBadNamesInSANs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9104,7 +9473,9 @@
                 "identifier": "TestDecrypt",
                 "newPage": false,
                 "searchKey": "x509.TestDecrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9124,7 +9495,9 @@
                 "identifier": "TestEncrypt",
                 "newPage": false,
                 "searchKey": "x509.TestEncrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9144,7 +9517,9 @@
                 "identifier": "TestIncompleteBlock",
                 "newPage": false,
                 "searchKey": "x509.TestIncompleteBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9164,7 +9539,9 @@
                 "identifier": "testingKey",
                 "newPage": false,
                 "searchKey": "x509.testingKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9184,7 +9561,9 @@
                 "identifier": "TestPKCS8",
                 "newPage": false,
                 "searchKey": "x509.TestPKCS8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9204,7 +9583,9 @@
                 "identifier": "TestPKCS8MismatchKeyFormat",
                 "newPage": false,
                 "searchKey": "x509.TestPKCS8MismatchKeyFormat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9224,7 +9605,9 @@
                 "identifier": "TestSystemRoots",
                 "newPage": false,
                 "searchKey": "x509.TestSystemRoots",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9244,7 +9627,9 @@
                 "identifier": "TestParseECPrivateKey",
                 "newPage": false,
                 "searchKey": "x509.TestParseECPrivateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9264,7 +9649,9 @@
                 "identifier": "TestECMismatchKeyFormat",
                 "newPage": false,
                 "searchKey": "x509.TestECMismatchKeyFormat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9284,7 +9671,9 @@
                 "identifier": "expectHostnameError",
                 "newPage": false,
                 "searchKey": "x509.expectHostnameError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9304,7 +9693,9 @@
                 "identifier": "expectExpired",
                 "newPage": false,
                 "searchKey": "x509.expectExpired",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9324,7 +9715,9 @@
                 "identifier": "expectUsageError",
                 "newPage": false,
                 "searchKey": "x509.expectUsageError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9344,7 +9737,9 @@
                 "identifier": "expectAuthorityUnknown",
                 "newPage": false,
                 "searchKey": "x509.expectAuthorityUnknown",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9364,7 +9759,9 @@
                 "identifier": "expectHashError",
                 "newPage": false,
                 "searchKey": "x509.expectHashError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9384,7 +9781,9 @@
                 "identifier": "expectNameConstraintsError",
                 "newPage": false,
                 "searchKey": "x509.expectNameConstraintsError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9404,7 +9803,9 @@
                 "identifier": "expectNotAuthorizedError",
                 "newPage": false,
                 "searchKey": "x509.expectNotAuthorizedError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9424,7 +9825,9 @@
                 "identifier": "expectUnhandledCriticalExtension",
                 "newPage": false,
                 "searchKey": "x509.expectUnhandledCriticalExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9444,7 +9847,9 @@
                 "identifier": "testVerify",
                 "newPage": false,
                 "searchKey": "x509.testVerify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9464,7 +9869,9 @@
                 "identifier": "TestGoVerify",
                 "newPage": false,
                 "searchKey": "x509.TestGoVerify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9484,7 +9891,9 @@
                 "identifier": "TestSystemVerify",
                 "newPage": false,
                 "searchKey": "x509.TestSystemVerify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9504,7 +9913,9 @@
                 "identifier": "chainToDebugString",
                 "newPage": false,
                 "searchKey": "x509.chainToDebugString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9524,7 +9935,9 @@
                 "identifier": "nameToKey",
                 "newPage": false,
                 "searchKey": "x509.nameToKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9544,7 +9957,9 @@
                 "identifier": "TestUnknownAuthorityError",
                 "newPage": false,
                 "searchKey": "x509.TestUnknownAuthorityError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9564,7 +9979,9 @@
                 "identifier": "TestNameConstraints",
                 "newPage": false,
                 "searchKey": "x509.TestNameConstraints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9584,7 +10001,9 @@
                 "identifier": "TestValidHostname",
                 "newPage": false,
                 "searchKey": "x509.TestValidHostname",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9604,7 +10023,9 @@
                 "identifier": "TestPathologicalChain",
                 "newPage": false,
                 "searchKey": "x509.TestPathologicalChain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9624,7 +10045,9 @@
                 "identifier": "TestLongChain",
                 "newPage": false,
                 "searchKey": "x509.TestLongChain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9644,7 +10067,9 @@
                 "identifier": "TestSystemRootsError",
                 "newPage": false,
                 "searchKey": "x509.TestSystemRootsError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9664,7 +10089,9 @@
                 "identifier": "TestSystemRootsErrorUnwrap",
                 "newPage": false,
                 "searchKey": "x509.TestSystemRootsErrorUnwrap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9684,7 +10111,9 @@
                 "identifier": "TestParsePKCS1PrivateKey",
                 "newPage": false,
                 "searchKey": "x509.TestParsePKCS1PrivateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9704,7 +10133,9 @@
                 "identifier": "TestPKCS1MismatchPublicKeyFormat",
                 "newPage": false,
                 "searchKey": "x509.TestPKCS1MismatchPublicKeyFormat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9724,7 +10155,9 @@
                 "identifier": "testParsePKIXPublicKey",
                 "newPage": false,
                 "searchKey": "x509.testParsePKIXPublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9744,7 +10177,9 @@
                 "identifier": "TestParsePKIXPublicKey",
                 "newPage": false,
                 "searchKey": "x509.TestParsePKIXPublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9764,7 +10199,9 @@
                 "identifier": "TestPKIXMismatchPublicKeyFormat",
                 "newPage": false,
                 "searchKey": "x509.TestPKIXMismatchPublicKeyFormat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9779,12 +10216,14 @@
           },
           {
             "node": {
-              "pathID": "/crypto/x509#init",
+              "pathID": "/crypto/x509#init.x509_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.x509_test.go",
                 "newPage": false,
                 "searchKey": "x509.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9804,7 +10243,9 @@
                 "identifier": "bigFromString",
                 "newPage": false,
                 "searchKey": "x509.bigFromString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9824,7 +10265,9 @@
                 "identifier": "fromBase10",
                 "newPage": false,
                 "searchKey": "x509.fromBase10",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9844,7 +10287,9 @@
                 "identifier": "bigFromHexString",
                 "newPage": false,
                 "searchKey": "x509.bigFromHexString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9864,7 +10309,9 @@
                 "identifier": "TestMarshalRSAPrivateKey",
                 "newPage": false,
                 "searchKey": "x509.TestMarshalRSAPrivateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9884,7 +10331,9 @@
                 "identifier": "TestMarshalRSAPublicKey",
                 "newPage": false,
                 "searchKey": "x509.TestMarshalRSAPublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9904,7 +10353,9 @@
                 "identifier": "TestMatchHostnames",
                 "newPage": false,
                 "searchKey": "x509.TestMatchHostnames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9924,7 +10375,9 @@
                 "identifier": "TestMatchIP",
                 "newPage": false,
                 "searchKey": "x509.TestMatchIP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9944,7 +10397,9 @@
                 "identifier": "TestCertificateParse",
                 "newPage": false,
                 "searchKey": "x509.TestCertificateParse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9964,7 +10419,9 @@
                 "identifier": "TestCertificateEqualOnNil",
                 "newPage": false,
                 "searchKey": "x509.TestCertificateEqualOnNil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -9984,7 +10441,9 @@
                 "identifier": "TestMismatchedSignatureAlgorithm",
                 "newPage": false,
                 "searchKey": "x509.TestMismatchedSignatureAlgorithm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10004,7 +10463,9 @@
                 "identifier": "parseCIDR",
                 "newPage": false,
                 "searchKey": "x509.parseCIDR",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10024,7 +10485,9 @@
                 "identifier": "parseURI",
                 "newPage": false,
                 "searchKey": "x509.parseURI",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10044,7 +10507,9 @@
                 "identifier": "TestCreateSelfSignedCertificate",
                 "newPage": false,
                 "searchKey": "x509.TestCreateSelfSignedCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10064,7 +10529,9 @@
                 "identifier": "TestECDSA",
                 "newPage": false,
                 "searchKey": "x509.TestECDSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10084,7 +10551,9 @@
                 "identifier": "TestParseCertificateWithDsaPublicKey",
                 "newPage": false,
                 "searchKey": "x509.TestParseCertificateWithDsaPublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10104,7 +10573,9 @@
                 "identifier": "TestParseCertificateWithDSASignatureAlgorithm",
                 "newPage": false,
                 "searchKey": "x509.TestParseCertificateWithDSASignatureAlgorithm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10124,7 +10595,9 @@
                 "identifier": "TestVerifyCertificateWithDSASignature",
                 "newPage": false,
                 "searchKey": "x509.TestVerifyCertificateWithDSASignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10144,7 +10617,9 @@
                 "identifier": "TestRSAPSSSelfSigned",
                 "newPage": false,
                 "searchKey": "x509.TestRSAPSSSelfSigned",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10164,7 +10639,9 @@
                 "identifier": "TestEd25519SelfSigned",
                 "newPage": false,
                 "searchKey": "x509.TestEd25519SelfSigned",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10184,7 +10661,9 @@
                 "identifier": "TestCRLCreation",
                 "newPage": false,
                 "searchKey": "x509.TestCRLCreation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10204,7 +10683,9 @@
                 "identifier": "fromBase64",
                 "newPage": false,
                 "searchKey": "x509.fromBase64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10224,7 +10705,9 @@
                 "identifier": "TestParseDERCRL",
                 "newPage": false,
                 "searchKey": "x509.TestParseDERCRL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10244,7 +10727,9 @@
                 "identifier": "TestCRLWithoutExpiry",
                 "newPage": false,
                 "searchKey": "x509.TestCRLWithoutExpiry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10264,7 +10749,9 @@
                 "identifier": "TestParsePEMCRL",
                 "newPage": false,
                 "searchKey": "x509.TestParsePEMCRL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10284,7 +10771,9 @@
                 "identifier": "TestImports",
                 "newPage": false,
                 "searchKey": "x509.TestImports",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10304,7 +10793,9 @@
                 "identifier": "TestCreateCertificateRequest",
                 "newPage": false,
                 "searchKey": "x509.TestCreateCertificateRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10324,7 +10815,9 @@
                 "identifier": "TestCertificateRequestOverrides",
                 "newPage": false,
                 "searchKey": "x509.TestCertificateRequestOverrides",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10344,7 +10837,9 @@
                 "identifier": "TestParseCertificateRequest",
                 "newPage": false,
                 "searchKey": "x509.TestParseCertificateRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10364,7 +10859,9 @@
                 "identifier": "TestCriticalFlagInCSRRequestedExtensions",
                 "newPage": false,
                 "searchKey": "x509.TestCriticalFlagInCSRRequestedExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10384,7 +10881,9 @@
                 "identifier": "TestMaxPathLenNotCA",
                 "newPage": false,
                 "searchKey": "x509.TestMaxPathLenNotCA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10404,7 +10903,9 @@
                 "identifier": "TestMaxPathLen",
                 "newPage": false,
                 "searchKey": "x509.TestMaxPathLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10424,7 +10925,9 @@
                 "identifier": "TestNoAuthorityKeyIdInSelfSignedCert",
                 "newPage": false,
                 "searchKey": "x509.TestNoAuthorityKeyIdInSelfSignedCert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10444,7 +10947,9 @@
                 "identifier": "TestNoSubjectKeyIdInCert",
                 "newPage": false,
                 "searchKey": "x509.TestNoSubjectKeyIdInCert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10464,7 +10969,9 @@
                 "identifier": "TestASN1BitLength",
                 "newPage": false,
                 "searchKey": "x509.TestASN1BitLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10484,7 +10991,9 @@
                 "identifier": "TestVerifyEmptyCertificate",
                 "newPage": false,
                 "searchKey": "x509.TestVerifyEmptyCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10504,7 +11013,9 @@
                 "identifier": "TestInsecureAlgorithmErrorString",
                 "newPage": false,
                 "searchKey": "x509.TestInsecureAlgorithmErrorString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10524,7 +11035,9 @@
                 "identifier": "TestMD5",
                 "newPage": false,
                 "searchKey": "x509.TestMD5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10544,7 +11057,9 @@
                 "identifier": "TestRSAMissingNULLParameters",
                 "newPage": false,
                 "searchKey": "x509.TestRSAMissingNULLParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10564,7 +11079,9 @@
                 "identifier": "TestISOOIDInCertificate",
                 "newPage": false,
                 "searchKey": "x509.TestISOOIDInCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10584,7 +11101,9 @@
                 "identifier": "TestMultipleRDN",
                 "newPage": false,
                 "searchKey": "x509.TestMultipleRDN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10604,7 +11123,9 @@
                 "identifier": "TestSystemCertPool",
                 "newPage": false,
                 "searchKey": "x509.TestSystemCertPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10624,7 +11145,9 @@
                 "identifier": "TestEmptyNameConstraints",
                 "newPage": false,
                 "searchKey": "x509.TestEmptyNameConstraints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10644,7 +11167,9 @@
                 "identifier": "TestPKIXNameString",
                 "newPage": false,
                 "searchKey": "x509.TestPKIXNameString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10664,7 +11189,9 @@
                 "identifier": "TestRDNSequenceString",
                 "newPage": false,
                 "searchKey": "x509.TestRDNSequenceString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10684,7 +11211,9 @@
                 "identifier": "TestCriticalNameConstraintWithUnknownType",
                 "newPage": false,
                 "searchKey": "x509.TestCriticalNameConstraintWithUnknownType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10704,7 +11233,9 @@
                 "identifier": "TestBadIPMask",
                 "newPage": false,
                 "searchKey": "x509.TestBadIPMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10724,7 +11255,9 @@
                 "identifier": "TestAdditionFieldsInGeneralSubtree",
                 "newPage": false,
                 "searchKey": "x509.TestAdditionFieldsInGeneralSubtree",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10744,7 +11277,9 @@
                 "identifier": "TestEmptySubject",
                 "newPage": false,
                 "searchKey": "x509.TestEmptySubject",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10764,7 +11299,9 @@
                 "identifier": "TestMultipleURLsInCRLDP",
                 "newPage": false,
                 "searchKey": "x509.TestMultipleURLsInCRLDP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10784,7 +11321,9 @@
                 "identifier": "TestPKCS1MismatchKeyFormat",
                 "newPage": false,
                 "searchKey": "x509.TestPKCS1MismatchKeyFormat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10804,7 +11343,9 @@
                 "identifier": "TestCreateRevocationList",
                 "newPage": false,
                 "searchKey": "x509.TestCreateRevocationList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10824,7 +11365,9 @@
                 "identifier": "TestRSAPSAParameters",
                 "newPage": false,
                 "searchKey": "x509.TestRSAPSAParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10844,7 +11387,9 @@
                 "identifier": "TestUnknownExtKey",
                 "newPage": false,
                 "searchKey": "x509.TestUnknownExtKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10864,7 +11409,9 @@
                 "identifier": "TestIA5SANEnforcement",
                 "newPage": false,
                 "searchKey": "x509.TestIA5SANEnforcement",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10884,7 +11431,9 @@
                 "identifier": "BenchmarkCreateCertificate",
                 "newPage": false,
                 "searchKey": "x509.BenchmarkCreateCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10904,7 +11453,9 @@
                 "identifier": "TestCreateCertificateBrokenSigner",
                 "newPage": false,
                 "searchKey": "x509.TestCreateCertificateBrokenSigner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10924,7 +11475,9 @@
                 "identifier": "TestCreateCertificateMD5",
                 "newPage": false,
                 "searchKey": "x509.TestCreateCertificateMD5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10944,7 +11497,9 @@
                 "identifier": "allCerts",
                 "newPage": false,
                 "searchKey": "x509.allCerts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10964,7 +11519,9 @@
                 "identifier": "certPoolEqual",
                 "newPage": false,
                 "searchKey": "x509.certPoolEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -10984,7 +11541,9 @@
                 "identifier": "TestCertificateRequestRoundtripFields",
                 "newPage": false,
                 "searchKey": "x509.TestCertificateRequestRoundtripFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -11004,7 +11563,9 @@
                 "identifier": "BenchmarkParseCertificate",
                 "newPage": false,
                 "searchKey": "x509.BenchmarkParseCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -11024,7 +11585,9 @@
                 "identifier": "TestParseCertificateRawEquals",
                 "newPage": false,
                 "searchKey": "x509.TestParseCertificateRawEquals",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -11044,7 +11607,9 @@
                 "identifier": "TestSigAlgMismatch",
                 "newPage": false,
                 "searchKey": "x509.TestSigAlgMismatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

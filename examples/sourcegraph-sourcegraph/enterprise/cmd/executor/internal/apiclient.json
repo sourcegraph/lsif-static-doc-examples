@@ -4,7 +4,9 @@
     "identifier": "apiclient",
     "newPage": true,
     "searchKey": "enterprise/cmd/executor/internal/apiclient",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "BaseClient",
                 "newPage": false,
                 "searchKey": "apiclient.BaseClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "NewBaseClient",
                       "newPage": false,
                       "searchKey": "apiclient.NewBaseClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "BaseClient.Do",
                       "newPage": false,
                       "searchKey": "apiclient.BaseClient.Do",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "BaseClient.DoAndDecode",
                       "newPage": false,
                       "searchKey": "apiclient.BaseClient.DoAndDecode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,9 +122,7 @@
                       "identifier": "BaseClient.DoAndDrop",
                       "newPage": false,
                       "searchKey": "apiclient.BaseClient.DoAndDrop",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -151,9 +145,7 @@
                 "identifier": "BaseClientOptions",
                 "newPage": false,
                 "searchKey": "apiclient.BaseClientOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -173,9 +165,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "apiclient.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -193,9 +183,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "apiclient.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -215,9 +203,7 @@
                       "identifier": "Client.Dequeue",
                       "newPage": false,
                       "searchKey": "apiclient.Client.Dequeue",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -237,9 +223,7 @@
                       "identifier": "Client.AddExecutionLogEntry",
                       "newPage": false,
                       "searchKey": "apiclient.Client.AddExecutionLogEntry",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -259,9 +243,7 @@
                       "identifier": "Client.MarkComplete",
                       "newPage": false,
                       "searchKey": "apiclient.Client.MarkComplete",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -281,9 +263,7 @@
                       "identifier": "Client.MarkErrored",
                       "newPage": false,
                       "searchKey": "apiclient.Client.MarkErrored",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -303,9 +283,7 @@
                       "identifier": "Client.MarkFailed",
                       "newPage": false,
                       "searchKey": "apiclient.Client.MarkFailed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -325,9 +303,7 @@
                       "identifier": "Client.Ping",
                       "newPage": false,
                       "searchKey": "apiclient.Client.Ping",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -347,9 +323,7 @@
                       "identifier": "Client.Heartbeat",
                       "newPage": false,
                       "searchKey": "apiclient.Client.Heartbeat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -369,7 +343,9 @@
                       "identifier": "Client.makeRequest",
                       "newPage": false,
                       "searchKey": "apiclient.Client.makeRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -392,9 +368,7 @@
                 "identifier": "Options",
                 "newPage": false,
                 "searchKey": "apiclient.Options",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -414,9 +388,7 @@
                 "identifier": "EndpointOptions",
                 "newPage": false,
                 "searchKey": "apiclient.EndpointOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -436,7 +408,9 @@
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "apiclient.operations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -454,7 +428,9 @@
                       "identifier": "newOperations",
                       "newPage": false,
                       "searchKey": "apiclient.newOperations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -477,7 +453,9 @@
                 "identifier": "routeSpec",
                 "newPage": false,
                 "searchKey": "apiclient.routeSpec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -500,7 +478,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -518,9 +498,7 @@
                 "identifier": "MakeJSONRequest",
                 "newPage": false,
                 "searchKey": "apiclient.MakeJSONRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -540,7 +518,9 @@
                 "identifier": "makeHTTPClient",
                 "newPage": false,
                 "searchKey": "apiclient.makeHTTPClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -560,7 +540,9 @@
                 "identifier": "makeURL",
                 "newPage": false,
                 "searchKey": "apiclient.makeURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -580,7 +562,9 @@
                 "identifier": "makeRelativeURL",
                 "newPage": false,
                 "searchKey": "apiclient.makeRelativeURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -600,7 +584,9 @@
                 "identifier": "intsToString",
                 "newPage": false,
                 "searchKey": "apiclient.intsToString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -620,7 +606,9 @@
                 "identifier": "TestDequeue",
                 "newPage": false,
                 "searchKey": "apiclient.TestDequeue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -640,7 +628,9 @@
                 "identifier": "TestDequeueNoRecord",
                 "newPage": false,
                 "searchKey": "apiclient.TestDequeueNoRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -660,7 +650,9 @@
                 "identifier": "TestDequeueBadResponse",
                 "newPage": false,
                 "searchKey": "apiclient.TestDequeueBadResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -680,7 +672,9 @@
                 "identifier": "TestAddExecutionLogEntry",
                 "newPage": false,
                 "searchKey": "apiclient.TestAddExecutionLogEntry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -700,7 +694,9 @@
                 "identifier": "TestAddExecutionLogEntryBadResponse",
                 "newPage": false,
                 "searchKey": "apiclient.TestAddExecutionLogEntryBadResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -720,7 +716,9 @@
                 "identifier": "TestMarkComplete",
                 "newPage": false,
                 "searchKey": "apiclient.TestMarkComplete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -740,7 +738,9 @@
                 "identifier": "TestMarkCompleteBadResponse",
                 "newPage": false,
                 "searchKey": "apiclient.TestMarkCompleteBadResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -760,7 +760,9 @@
                 "identifier": "TestMarkErrored",
                 "newPage": false,
                 "searchKey": "apiclient.TestMarkErrored",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -780,7 +782,9 @@
                 "identifier": "TestMarkErroredBadResponse",
                 "newPage": false,
                 "searchKey": "apiclient.TestMarkErroredBadResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -800,7 +804,9 @@
                 "identifier": "TestMarkFailed",
                 "newPage": false,
                 "searchKey": "apiclient.TestMarkFailed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -820,7 +826,9 @@
                 "identifier": "TestHeartbeat",
                 "newPage": false,
                 "searchKey": "apiclient.TestHeartbeat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -840,7 +848,9 @@
                 "identifier": "TestHeartbeatBadResponse",
                 "newPage": false,
                 "searchKey": "apiclient.TestHeartbeatBadResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -860,7 +870,9 @@
                 "identifier": "testRoute",
                 "newPage": false,
                 "searchKey": "apiclient.testRoute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -880,7 +892,9 @@
                 "identifier": "testServer",
                 "newPage": false,
                 "searchKey": "apiclient.testServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -900,7 +914,9 @@
                 "identifier": "normalizeJSON",
                 "newPage": false,
                 "searchKey": "apiclient.normalizeJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

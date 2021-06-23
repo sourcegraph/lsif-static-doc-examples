@@ -4,7 +4,9 @@
     "identifier": "confdefaults",
     "newPage": true,
     "searchKey": "internal/conf/confdefaults",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "DevAndTesting",
                 "newPage": false,
                 "searchKey": "confdefaults.DevAndTesting",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "DockerContainer",
                 "newPage": false,
                 "searchKey": "confdefaults.DockerContainer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "KubernetesOrDockerComposeOrPureDocker",
                 "newPage": false,
                 "searchKey": "confdefaults.KubernetesOrDockerComposeOrPureDocker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "Default",
                 "newPage": false,
                 "searchKey": "confdefaults.Default",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

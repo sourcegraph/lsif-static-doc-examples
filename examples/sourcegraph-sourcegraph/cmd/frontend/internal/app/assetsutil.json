@@ -4,7 +4,9 @@
     "identifier": "assetsutil",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app/assetsutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "assetsRoot",
                 "newPage": false,
                 "searchKey": "assetsutil.assetsRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "baseURL",
                 "newPage": false,
                 "searchKey": "assetsutil.baseURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,9 +111,7 @@
                 "identifier": "Mount",
                 "newPage": false,
                 "searchKey": "assetsutil.Mount",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -118,12 +126,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app/assetsutil#init",
+              "pathID": "/cmd/frontend/internal/app/assetsutil#init.handler.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.handler.go",
                 "newPage": false,
                 "searchKey": "assetsutil.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +153,9 @@
                 "identifier": "isPhabricatorAsset",
                 "newPage": false,
                 "searchKey": "assetsutil.isPhabricatorAsset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -163,9 +175,7 @@
                 "identifier": "URL",
                 "newPage": false,
                 "searchKey": "assetsutil.URL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

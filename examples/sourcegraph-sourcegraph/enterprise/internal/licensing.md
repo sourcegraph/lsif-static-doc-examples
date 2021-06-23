@@ -62,7 +62,7 @@ Package licensing handles parsing, verifying, and enforcing the product subscrip
         * [func (p Plan) MaxExternalServiceCount() int](#Plan.MaxExternalServiceCount)
     * [type UsersStore interface](#UsersStore)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.conf.go)
     * [func Check(feature Feature) error](#Check)
     * [func checkFeature(info *Info, feature Feature) error](#checkFeature)
     * [func TestingSkipFeatureChecks() func()](#TestingSkipFeatureChecks)
@@ -80,7 +80,7 @@ Package licensing handles parsing, verifying, and enforcing the product subscrip
     * [func ActualUserCountDate(ctx context.Context) (string, error)](#ActualUserCountDate)
     * [func StartMaxUserCount(s UsersStore)](#StartMaxUserCount)
     * [func TestCheckFeature(t *testing.T)](#TestCheckFeature)
-    * [func init()](#init)
+    * [func init()](#init.plans_test.go)
     * [func TestPlan_isKnown(t *testing.T)](#TestPlan_isKnown)
     * [func TestInfo_Plan(t *testing.T)](#TestInfo_Plan)
     * [func TestInfo_hasUnknownPlan(t *testing.T)](#TestInfo_hasUnknownPlan)
@@ -89,10 +89,15 @@ Package licensing handles parsing, verifying, and enforcing the product subscrip
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="oldEnterpriseStarter" href="#oldEnterpriseStarter">const oldEnterpriseStarter</a>
 
 ```
 searchKey: licensing.oldEnterpriseStarter
+tags: [private]
 ```
 
 ```Go
@@ -107,6 +112,7 @@ oldEnterpriseStarter is the old "Enterprise Starter" plan.
 
 ```
 searchKey: licensing.oldEnterprise
+tags: [private]
 ```
 
 ```Go
@@ -121,6 +127,7 @@ oldEnterprise is the old "Enterprise" plan.
 
 ```
 searchKey: licensing.team
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +142,7 @@ team is the "Team" plan.
 
 ```
 searchKey: licensing.enterprise
+tags: [private]
 ```
 
 ```Go
@@ -149,7 +157,6 @@ enterprise is the "Enterprise" plan.
 
 ```
 searchKey: licensing.FeatureACLs
-tags: [exported]
 ```
 
 ```Go
@@ -164,7 +171,6 @@ FeatureACLs is whether ACLs may be used, such as GitHub, GitLab or Bitbucket Ser
 
 ```
 searchKey: licensing.FeatureExtensionRegistry
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +185,6 @@ FeatureExtensionRegistry is whether publishing extensions to this Sourcegraph in
 
 ```
 searchKey: licensing.FeatureRemoteExtensionsAllowDisallow
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +199,6 @@ FeatureRemoteExtensionsAllowDisallow is whether explicitly specify a list of all
 
 ```
 searchKey: licensing.FeatureBranding
-tags: [exported]
 ```
 
 ```Go
@@ -209,7 +213,7 @@ FeatureBranding is whether custom branding of this Sourcegraph instance has been
 
 ```
 searchKey: licensing.FeatureCampaigns
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -226,7 +230,6 @@ DEPRECATED: See FeatureBatchChanges.
 
 ```
 searchKey: licensing.FeatureBatchChanges
-tags: [exported]
 ```
 
 ```Go
@@ -241,7 +244,6 @@ FeatureBatchChanges is whether Batch Changes on this Sourcegraph instance has be
 
 ```
 searchKey: licensing.FeatureMonitoring
-tags: [exported]
 ```
 
 ```Go
@@ -256,7 +258,6 @@ FeatureMonitoring is whether monitoring on this Sourcegraph instance has been pu
 
 ```
 searchKey: licensing.FeatureBackupAndRestore
-tags: [exported]
 ```
 
 ```Go
@@ -271,7 +272,6 @@ FeatureBackupAndRestore is whether builtin backup and restore on this Sourcegrap
 
 ```
 searchKey: licensing.NoLicenseMaximumExternalServiceCount
-tags: [exported]
 ```
 
 ```Go
@@ -284,6 +284,7 @@ NoLicenseMaximumExternalServiceCount is the maximum number of external services 
 
 ```
 searchKey: licensing.licenseGenerationPrivateKeyURL
+tags: [private]
 ```
 
 ```Go
@@ -298,6 +299,7 @@ NOTE: If you change this, use text search to replace other instances of it (in s
 
 ```
 searchKey: licensing.planTagPrefix
+tags: [private]
 ```
 
 ```Go
@@ -308,7 +310,6 @@ const planTagPrefix = "plan:"
 
 ```
 searchKey: licensing.TrueUpUserCountTag
-tags: [exported]
 ```
 
 ```Go
@@ -321,7 +322,6 @@ TrueUpUserCountTag is the license tag that indicates that the licensed user coun
 
 ```
 searchKey: licensing.NoLicenseMaximumAllowedUserCount
-tags: [exported]
 ```
 
 ```Go
@@ -334,7 +334,6 @@ NoLicenseMaximumAllowedUserCount is the maximum number of user accounts that may
 
 ```
 searchKey: licensing.NoLicenseWarningUserCount
-tags: [exported]
 ```
 
 ```Go
@@ -347,6 +346,7 @@ NoLicenseWarningUserCount is the number of user accounts when all users are show
 
 ```
 searchKey: licensing.testPlan
+tags: [private]
 ```
 
 ```Go
@@ -355,10 +355,15 @@ const testPlan Plan = "test"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="allPlans" href="#allPlans">var allPlans</a>
 
 ```
 searchKey: licensing.allPlans
+tags: [private]
 ```
 
 ```Go
@@ -374,6 +379,7 @@ var allPlans = []Plan{
 
 ```
 searchKey: licensing.planFeatures
+tags: [private]
 ```
 
 ```Go
@@ -386,7 +392,6 @@ planFeatures defines the features that are enabled for each plan.
 
 ```
 searchKey: licensing.EnforceTiers
-tags: [exported]
 ```
 
 ```Go
@@ -399,7 +404,6 @@ EnforceTiers is a temporary flag to indicate whether to enforce new license tier
 
 ```
 searchKey: licensing.MockCheckFeature
-tags: [exported]
 ```
 
 ```Go
@@ -412,6 +416,7 @@ MockCheckFeature is for mocking Check in tests.
 
 ```
 searchKey: licensing.publicKey
+tags: [private]
 ```
 
 ```Go
@@ -424,7 +429,6 @@ publicKey is the public key used to verify product license keys.
 
 ```
 searchKey: licensing.MockParseProductLicenseKeyWithBuiltinOrGenerationKey
-tags: [exported]
 ```
 
 ```Go
@@ -435,6 +439,7 @@ var MockParseProductLicenseKeyWithBuiltinOrGenerationKey func(licenseKey string)
 
 ```
 searchKey: licensing.mu
+tags: [private]
 ```
 
 ```Go
@@ -447,6 +452,7 @@ Cache the parsing of the license key because public key crypto can be slow.
 
 ```
 searchKey: licensing.lastKeyText
+tags: [private]
 ```
 
 ```Go
@@ -459,6 +465,7 @@ Cache the parsing of the license key because public key crypto can be slow.
 
 ```
 searchKey: licensing.lastInfo
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +478,7 @@ Cache the parsing of the license key because public key crypto can be slow.
 
 ```
 searchKey: licensing.lastSignature
+tags: [private]
 ```
 
 ```Go
@@ -483,7 +491,6 @@ Cache the parsing of the license key because public key crypto can be slow.
 
 ```
 searchKey: licensing.MockGetConfiguredProductLicenseInfo
-tags: [exported]
 ```
 
 ```Go
@@ -494,6 +501,7 @@ var MockGetConfiguredProductLicenseInfo func() (*license.Info, string, error)
 
 ```
 searchKey: licensing.envLicenseGenerationPrivateKey
+tags: [private]
 ```
 
 ```Go
@@ -506,6 +514,7 @@ envLicenseGenerationPrivateKey (the env var SOURCEGRAPH_LICENSE_GENERATION_KEY) 
 
 ```
 searchKey: licensing.licenseGenerationPrivateKey
+tags: [private]
 ```
 
 ```Go
@@ -518,6 +527,7 @@ licenseGenerationPrivateKey is the private key used to generate license keys.
 
 ```
 searchKey: licensing.pool
+tags: [private]
 ```
 
 ```Go
@@ -528,6 +538,7 @@ var pool = redispool.Store
 
 ```
 searchKey: licensing.keyPrefix
+tags: [private]
 ```
 
 ```Go
@@ -538,6 +549,7 @@ var keyPrefix = "license_user_count:"
 
 ```
 searchKey: licensing.started
+tags: [private]
 ```
 
 ```Go
@@ -546,11 +558,14 @@ var started bool
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Feature" href="#Feature">type Feature string</a>
 
 ```
 searchKey: licensing.Feature
-tags: [exported]
 ```
 
 ```Go
@@ -563,6 +578,7 @@ Feature is a product feature that is selectively activated based on the current 
 
 ```
 searchKey: licensing.featureNotActivatedError
+tags: [private]
 ```
 
 ```Go
@@ -573,7 +589,6 @@ type featureNotActivatedError struct{ errcode.PresentationError }
 
 ```
 searchKey: licensing.NewFeatureNotActivatedError
-tags: [exported]
 ```
 
 ```Go
@@ -584,7 +599,6 @@ func NewFeatureNotActivatedError(message string) featureNotActivatedError
 
 ```
 searchKey: licensing.Info
-tags: [exported]
 ```
 
 ```Go
@@ -599,6 +613,7 @@ Info wraps the lower-level license.Info and exposes plan and feature information
 
 ```
 searchKey: licensing.toInfo
+tags: [private]
 ```
 
 ```Go
@@ -611,7 +626,6 @@ toInfo converts from the return type of license.ParseSignedKey to the return typ
 
 ```
 searchKey: licensing.ParseProductLicenseKey
-tags: [exported]
 ```
 
 ```Go
@@ -624,7 +638,6 @@ ParseProductLicenseKey parses and verifies the license key using the license ver
 
 ```
 searchKey: licensing.ParseProductLicenseKeyWithBuiltinOrGenerationKey
-tags: [exported]
 ```
 
 ```Go
@@ -639,7 +652,6 @@ It is useful for local development when using a test license generation key (who
 
 ```
 searchKey: licensing.GetConfiguredProductLicenseInfo
-tags: [exported]
 ```
 
 ```Go
@@ -652,7 +664,6 @@ GetConfiguredProductLicenseInfo returns information about the current product li
 
 ```
 searchKey: licensing.GetConfiguredProductLicenseInfoWithSignature
-tags: [exported]
 ```
 
 ```Go
@@ -665,7 +676,6 @@ GetConfiguredProductLicenseInfoWithSignature returns information about the curre
 
 ```
 searchKey: licensing.Info.Plan
-tags: [exported]
 ```
 
 ```Go
@@ -678,6 +688,7 @@ Plan is the pricing plan of the license.
 
 ```
 searchKey: licensing.Info.hasUnknownPlan
+tags: [private]
 ```
 
 ```Go
@@ -690,7 +701,6 @@ hasUnknownPlan returns an error if the plan is presented in the license tags but
 
 ```
 searchKey: licensing.Plan
-tags: [exported]
 ```
 
 ```Go
@@ -703,7 +713,6 @@ A Plan is a pricing plan, with an associated set of features that it offers.
 
 ```
 searchKey: licensing.Plan.HasFeature
-tags: [exported]
 ```
 
 ```Go
@@ -716,6 +725,7 @@ HasFeature reports whether the plan has the given feature.
 
 ```
 searchKey: licensing.Plan.tag
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +738,7 @@ tag is the representation of the plan as a tag in a license key.
 
 ```
 searchKey: licensing.Plan.isKnown
+tags: [private]
 ```
 
 ```Go
@@ -740,7 +751,6 @@ isKnown reports whether the plan is a known plan.
 
 ```
 searchKey: licensing.Plan.MaxExternalServiceCount
-tags: [exported]
 ```
 
 ```Go
@@ -753,7 +763,6 @@ MaxExternalServiceCount returns the number of external services that the plan su
 
 ```
 searchKey: licensing.UsersStore
-tags: [exported]
 ```
 
 ```Go
@@ -767,10 +776,15 @@ A UsersStore captures the necessary methods for the licensing package to query S
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.conf.go" href="#init.conf.go">func init()</a>
 
 ```
 searchKey: licensing.init
+tags: [private]
 ```
 
 ```Go
@@ -781,7 +795,6 @@ func init()
 
 ```
 searchKey: licensing.Check
-tags: [exported]
 ```
 
 ```Go
@@ -796,6 +809,7 @@ The returned error may implement errcode.PresentationError to indicate that it c
 
 ```
 searchKey: licensing.checkFeature
+tags: [private]
 ```
 
 ```Go
@@ -806,7 +820,6 @@ func checkFeature(info *Info, feature Feature) error
 
 ```
 searchKey: licensing.TestingSkipFeatureChecks
-tags: [exported]
 ```
 
 ```Go
@@ -821,7 +834,6 @@ It returns a cleanup func so callers can use `defer TestingSkipFeatureChecks()()
 
 ```
 searchKey: licensing.IsFeatureNotActivated
-tags: [exported]
 ```
 
 ```Go
@@ -836,7 +848,6 @@ It is used to distinguish between the multiple reasons for errors from Check: ei
 
 ```
 searchKey: licensing.IsFeatureEnabledLenient
-tags: [exported]
 ```
 
 ```Go
@@ -851,7 +862,6 @@ This is useful for callers who don't want to handle errors (usually because the 
 
 ```
 searchKey: licensing.GenerateProductLicenseKey
-tags: [exported]
 ```
 
 ```Go
@@ -864,7 +874,6 @@ GenerateProductLicenseKey generates a product license key using the license gene
 
 ```
 searchKey: licensing.ProductNameWithBrand
-tags: [exported]
 ```
 
 ```Go
@@ -877,6 +886,7 @@ ProductNameWithBrand returns the product name with brand (e.g., "Sourcegraph Ent
 
 ```
 searchKey: licensing.setMaxUsers
+tags: [private]
 ```
 
 ```Go
@@ -889,7 +899,6 @@ setMaxUsers sets the max users associated with a license key if the new max coun
 
 ```
 searchKey: licensing.GetMaxUsers
-tags: [exported]
 ```
 
 ```Go
@@ -902,6 +911,7 @@ GetMaxUsers gets the max users associated with a license key.
 
 ```
 searchKey: licensing.getMaxUsers
+tags: [private]
 ```
 
 ```Go
@@ -912,6 +922,7 @@ func getMaxUsers(c redis.Conn, key string) (int, string, error)
 
 ```
 searchKey: licensing.checkMaxUsers
+tags: [private]
 ```
 
 ```Go
@@ -924,6 +935,7 @@ checkMaxUsers runs periodically, and if a license key is in use, updates the rec
 
 ```
 searchKey: licensing.maxUsersKey
+tags: [private]
 ```
 
 ```Go
@@ -934,6 +946,7 @@ func maxUsersKey() string
 
 ```
 searchKey: licensing.maxUsersTimeKey
+tags: [private]
 ```
 
 ```Go
@@ -944,7 +957,6 @@ func maxUsersTimeKey() string
 
 ```
 searchKey: licensing.ActualUserCount
-tags: [exported]
 ```
 
 ```Go
@@ -957,7 +969,6 @@ ActualUserCount returns the actual max number of users that have had accounts on
 
 ```
 searchKey: licensing.ActualUserCountDate
-tags: [exported]
 ```
 
 ```Go
@@ -970,7 +981,6 @@ ActualUserCountDate returns the timestamp when the actual max number of users th
 
 ```
 searchKey: licensing.StartMaxUserCount
-tags: [exported]
 ```
 
 ```Go
@@ -983,16 +993,18 @@ StartMaxUserCount starts checking for a new count of max user accounts periodica
 
 ```
 searchKey: licensing.TestCheckFeature
+tags: [private]
 ```
 
 ```Go
 func TestCheckFeature(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.plans_test.go" href="#init.plans_test.go">func init()</a>
 
 ```
 searchKey: licensing.init
+tags: [private]
 ```
 
 ```Go
@@ -1003,6 +1015,7 @@ func init()
 
 ```
 searchKey: licensing.TestPlan_isKnown
+tags: [private]
 ```
 
 ```Go
@@ -1013,6 +1026,7 @@ func TestPlan_isKnown(t *testing.T)
 
 ```
 searchKey: licensing.TestInfo_Plan
+tags: [private]
 ```
 
 ```Go
@@ -1023,6 +1037,7 @@ func TestInfo_Plan(t *testing.T)
 
 ```
 searchKey: licensing.TestInfo_hasUnknownPlan
+tags: [private]
 ```
 
 ```Go
@@ -1033,6 +1048,7 @@ func TestInfo_hasUnknownPlan(t *testing.T)
 
 ```
 searchKey: licensing.TestProductNameWithBrand
+tags: [private]
 ```
 
 ```Go

@@ -36,7 +36,7 @@ Package gzip implements reading and writing of gzip format compressed files, as 
     * [type Writer struct](#Writer)
         * [func NewWriter(w io.Writer) *Writer](#NewWriter)
         * [func NewWriterLevel(w io.Writer, level int) (*Writer, error)](#NewWriterLevel)
-        * [func (z *Writer) init(w io.Writer, level int)](#Writer.init)
+        * [func (z *Writer) init(w io.Writer, level int)](#Writer.init.gzip.go)
         * [func (z *Writer) Reset(w io.Writer)](#Writer.Reset)
         * [func (z *Writer) writeBytes(b []byte) error](#Writer.writeBytes)
         * [func (z *Writer) writeString(s string) (err error)](#Writer.writeString)
@@ -67,14 +67,11 @@ Package gzip implements reading and writing of gzip format compressed files, as 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="gzipID1" href="#gzipID1">const gzipID1</a>
 
 ```
 searchKey: gzip.gzipID1
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +82,7 @@ const gzipID1 = 0x1f
 
 ```
 searchKey: gzip.gzipID2
+tags: [private]
 ```
 
 ```Go
@@ -95,6 +93,7 @@ const gzipID2 = 0x8b
 
 ```
 searchKey: gzip.gzipDeflate
+tags: [private]
 ```
 
 ```Go
@@ -105,6 +104,7 @@ const gzipDeflate = 8
 
 ```
 searchKey: gzip.flagText
+tags: [private]
 ```
 
 ```Go
@@ -115,6 +115,7 @@ const flagText = 1 << 0
 
 ```
 searchKey: gzip.flagHdrCrc
+tags: [private]
 ```
 
 ```Go
@@ -125,6 +126,7 @@ const flagHdrCrc = 1 << 1
 
 ```
 searchKey: gzip.flagExtra
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +137,7 @@ const flagExtra = 1 << 2
 
 ```
 searchKey: gzip.flagName
+tags: [private]
 ```
 
 ```Go
@@ -145,6 +148,7 @@ const flagName = 1 << 3
 
 ```
 searchKey: gzip.flagComment
+tags: [private]
 ```
 
 ```Go
@@ -155,7 +159,6 @@ const flagComment = 1 << 4
 
 ```
 searchKey: gzip.NoCompression
-tags: [exported]
 ```
 
 ```Go
@@ -168,7 +171,6 @@ These constants are copied from the flate package, so that code that imports "co
 
 ```
 searchKey: gzip.BestSpeed
-tags: [exported]
 ```
 
 ```Go
@@ -181,7 +183,6 @@ These constants are copied from the flate package, so that code that imports "co
 
 ```
 searchKey: gzip.BestCompression
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +195,6 @@ These constants are copied from the flate package, so that code that imports "co
 
 ```
 searchKey: gzip.DefaultCompression
-tags: [exported]
 ```
 
 ```Go
@@ -207,7 +207,6 @@ These constants are copied from the flate package, so that code that imports "co
 
 ```
 searchKey: gzip.HuffmanOnly
-tags: [exported]
 ```
 
 ```Go
@@ -218,15 +217,10 @@ These constants are copied from the flate package, so that code that imports "co
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrChecksum" href="#ErrChecksum">var ErrChecksum</a>
 
 ```
 searchKey: gzip.ErrChecksum
-tags: [exported]
 ```
 
 ```Go
@@ -239,7 +233,6 @@ ErrChecksum is returned when reading GZIP data that has an invalid checksum.
 
 ```
 searchKey: gzip.ErrHeader
-tags: [exported]
 ```
 
 ```Go
@@ -252,6 +245,7 @@ ErrHeader is returned when reading GZIP data that has an invalid header.
 
 ```
 searchKey: gzip.le
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +256,7 @@ var le = binary.LittleEndian
 
 ```
 searchKey: gzip.gunzipTests
+tags: [private]
 ```
 
 ```Go
@@ -270,15 +265,10 @@ var gunzipTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Header" href="#Header">type Header struct</a>
 
 ```
 searchKey: gzip.Header
-tags: [exported]
 ```
 
 ```Go
@@ -299,7 +289,6 @@ Strings must be UTF-8 encoded and may only contain Unicode code points U+0001 th
 
 ```
 searchKey: gzip.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -325,7 +314,6 @@ Gzip files store a length and checksum of the uncompressed data. The Reader will
 
 ```
 searchKey: gzip.NewReader
-tags: [exported]
 ```
 
 ```Go
@@ -342,7 +330,6 @@ The Reader.Header fields will be valid in the Reader returned.
 
 ```
 searchKey: gzip.Reader.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -355,7 +342,6 @@ Reset discards the Reader z's state and makes it equivalent to the result of its
 
 ```
 searchKey: gzip.Reader.Multistream
-tags: [exported]
 ```
 
 ```Go
@@ -372,6 +358,7 @@ Calling Multistream(false) disables this behavior; disabling the behavior can be
 
 ```
 searchKey: gzip.Reader.readString
+tags: [private]
 ```
 
 ```Go
@@ -384,6 +371,7 @@ readString reads a NUL-terminated string from z.r. It treats the bytes read as b
 
 ```
 searchKey: gzip.Reader.readHeader
+tags: [private]
 ```
 
 ```Go
@@ -396,7 +384,6 @@ readHeader reads the GZIP header according to section 2.3.1. This method does no
 
 ```
 searchKey: gzip.Reader.Read
-tags: [exported]
 ```
 
 ```Go
@@ -409,7 +396,6 @@ Read implements io.Reader, reading uncompressed bytes from its underlying Reader
 
 ```
 searchKey: gzip.Reader.Close
-tags: [exported]
 ```
 
 ```Go
@@ -422,7 +408,6 @@ Close closes the Reader. It does not close the underlying io.Reader. In order fo
 
 ```
 searchKey: gzip.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -446,7 +431,6 @@ A Writer is an io.WriteCloser. Writes to a Writer are compressed and written to 
 
 ```
 searchKey: gzip.NewWriter
-tags: [exported]
 ```
 
 ```Go
@@ -463,7 +447,6 @@ Callers that wish to set the fields in Writer.Header must do so before the first
 
 ```
 searchKey: gzip.NewWriterLevel
-tags: [exported]
 ```
 
 ```Go
@@ -474,10 +457,11 @@ NewWriterLevel is like NewWriter but specifies the compression level instead of 
 
 The compression level can be DefaultCompression, NoCompression, HuffmanOnly or any integer value between BestSpeed and BestCompression inclusive. The error returned will be nil if the level is valid. 
 
-#### <a id="Writer.init" href="#Writer.init">func (z *Writer) init(w io.Writer, level int)</a>
+#### <a id="Writer.init.gzip.go" href="#Writer.init.gzip.go">func (z *Writer) init(w io.Writer, level int)</a>
 
 ```
 searchKey: gzip.Writer.init
+tags: [private]
 ```
 
 ```Go
@@ -488,7 +472,6 @@ func (z *Writer) init(w io.Writer, level int)
 
 ```
 searchKey: gzip.Writer.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -501,6 +484,7 @@ Reset discards the Writer z's state and makes it equivalent to the result of its
 
 ```
 searchKey: gzip.Writer.writeBytes
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +497,7 @@ writeBytes writes a length-prefixed byte slice to z.w.
 
 ```
 searchKey: gzip.Writer.writeString
+tags: [private]
 ```
 
 ```Go
@@ -525,7 +510,6 @@ writeString writes a UTF-8 string s in GZIP's format to z.w. GZIP (RFC 1952) spe
 
 ```
 searchKey: gzip.Writer.Write
-tags: [exported]
 ```
 
 ```Go
@@ -538,7 +522,6 @@ Write writes a compressed form of p to the underlying io.Writer. The compressed 
 
 ```
 searchKey: gzip.Writer.Flush
-tags: [exported]
 ```
 
 ```Go
@@ -555,7 +538,6 @@ In the terminology of the zlib library, Flush is equivalent to Z_SYNC_FLUSH.
 
 ```
 searchKey: gzip.Writer.Close
-tags: [exported]
 ```
 
 ```Go
@@ -568,6 +550,7 @@ Close closes the Writer by flushing any unwritten data to the underlying io.Writ
 
 ```
 searchKey: gzip.gunzipTest
+tags: [private]
 ```
 
 ```Go
@@ -584,6 +567,7 @@ type gunzipTest struct {
 
 ```
 searchKey: gzip.limitedWriter
+tags: [private]
 ```
 
 ```Go
@@ -596,6 +580,7 @@ type limitedWriter struct {
 
 ```
 searchKey: gzip.limitedWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -604,14 +589,11 @@ func (l *limitedWriter) Write(p []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="noEOF" href="#noEOF">func noEOF(err error) error</a>
 
 ```
 searchKey: gzip.noEOF
+tags: [private]
 ```
 
 ```Go
@@ -624,6 +606,7 @@ noEOF converts io.EOF to io.ErrUnexpectedEOF.
 
 ```
 searchKey: gzip.TestDecompressor
+tags: [private]
 ```
 
 ```Go
@@ -634,6 +617,7 @@ func TestDecompressor(t *testing.T)
 
 ```
 searchKey: gzip.TestIssue6550
+tags: [private]
 ```
 
 ```Go
@@ -644,6 +628,7 @@ func TestIssue6550(t *testing.T)
 
 ```
 searchKey: gzip.TestMultistreamFalse
+tags: [private]
 ```
 
 ```Go
@@ -654,6 +639,7 @@ func TestMultistreamFalse(t *testing.T)
 
 ```
 searchKey: gzip.TestNilStream
+tags: [private]
 ```
 
 ```Go
@@ -664,6 +650,7 @@ func TestNilStream(t *testing.T)
 
 ```
 searchKey: gzip.TestTruncatedStreams
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +661,7 @@ func TestTruncatedStreams(t *testing.T)
 
 ```
 searchKey: gzip.TestEmpty
+tags: [private]
 ```
 
 ```Go
@@ -686,6 +674,7 @@ TestEmpty tests that an empty payload still forms a valid GZIP stream.
 
 ```
 searchKey: gzip.TestRoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -698,6 +687,7 @@ TestRoundTrip tests that gzipping and then gunzipping is the identity function.
 
 ```
 searchKey: gzip.TestLatin1
+tags: [private]
 ```
 
 ```Go
@@ -710,6 +700,7 @@ TestLatin1 tests the internal functions for converting to and from Latin-1.
 
 ```
 searchKey: gzip.TestLatin1RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -722,6 +713,7 @@ TestLatin1RoundTrip tests that metadata that is representable in Latin-1 survive
 
 ```
 searchKey: gzip.TestWriterFlush
+tags: [private]
 ```
 
 ```Go
@@ -732,6 +724,7 @@ func TestWriterFlush(t *testing.T)
 
 ```
 searchKey: gzip.TestConcat
+tags: [private]
 ```
 
 ```Go
@@ -744,6 +737,7 @@ Multiple gzip files concatenated form a valid gzip file.
 
 ```
 searchKey: gzip.TestWriterReset
+tags: [private]
 ```
 
 ```Go
@@ -754,6 +748,7 @@ func TestWriterReset(t *testing.T)
 
 ```
 searchKey: gzip.TestLimitedWrite
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +761,7 @@ Write should never return more bytes than the input slice.
 
 ```
 searchKey: gzip.TestGZIPFilesHaveZeroMTimes
+tags: [private]
 ```
 
 ```Go
@@ -780,6 +776,7 @@ See [https://golang.org/issue/14937](https://golang.org/issue/14937).
 
 ```
 searchKey: gzip.checkZeroMTime
+tags: [private]
 ```
 
 ```Go

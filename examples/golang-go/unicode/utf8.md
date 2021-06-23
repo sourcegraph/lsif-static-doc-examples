@@ -59,15 +59,10 @@ Package utf8 implements functions and constants to support text encoded in UTF-8
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="RuneError" href="#RuneError">const RuneError</a>
 
 ```
 searchKey: utf8.RuneError
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +76,6 @@ Numbers fundamental to the encoding.
 
 ```
 searchKey: utf8.RuneSelf
-tags: [exported]
 ```
 
 ```Go
@@ -95,7 +89,6 @@ Numbers fundamental to the encoding.
 
 ```
 searchKey: utf8.MaxRune
-tags: [exported]
 ```
 
 ```Go
@@ -109,7 +102,6 @@ Numbers fundamental to the encoding.
 
 ```
 searchKey: utf8.UTFMax
-tags: [exported]
 ```
 
 ```Go
@@ -123,6 +115,7 @@ Numbers fundamental to the encoding.
 
 ```
 searchKey: utf8.surrogateMin
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +128,7 @@ Code points in the surrogate range are not valid for UTF-8.
 
 ```
 searchKey: utf8.surrogateMax
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +141,7 @@ Code points in the surrogate range are not valid for UTF-8.
 
 ```
 searchKey: utf8.t1
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +152,7 @@ const t1 = 0b00000000
 
 ```
 searchKey: utf8.tx
+tags: [private]
 ```
 
 ```Go
@@ -167,6 +163,7 @@ const tx = 0b10000000
 
 ```
 searchKey: utf8.t2
+tags: [private]
 ```
 
 ```Go
@@ -177,6 +174,7 @@ const t2 = 0b11000000
 
 ```
 searchKey: utf8.t3
+tags: [private]
 ```
 
 ```Go
@@ -187,6 +185,7 @@ const t3 = 0b11100000
 
 ```
 searchKey: utf8.t4
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +196,7 @@ const t4 = 0b11110000
 
 ```
 searchKey: utf8.t5
+tags: [private]
 ```
 
 ```Go
@@ -207,6 +207,7 @@ const t5 = 0b11111000
 
 ```
 searchKey: utf8.maskx
+tags: [private]
 ```
 
 ```Go
@@ -217,6 +218,7 @@ const maskx = 0b00111111
 
 ```
 searchKey: utf8.mask2
+tags: [private]
 ```
 
 ```Go
@@ -227,6 +229,7 @@ const mask2 = 0b00011111
 
 ```
 searchKey: utf8.mask3
+tags: [private]
 ```
 
 ```Go
@@ -237,6 +240,7 @@ const mask3 = 0b00001111
 
 ```
 searchKey: utf8.mask4
+tags: [private]
 ```
 
 ```Go
@@ -247,6 +251,7 @@ const mask4 = 0b00000111
 
 ```
 searchKey: utf8.rune1Max
+tags: [private]
 ```
 
 ```Go
@@ -257,6 +262,7 @@ const rune1Max = 1<<7 - 1
 
 ```
 searchKey: utf8.rune2Max
+tags: [private]
 ```
 
 ```Go
@@ -267,6 +273,7 @@ const rune2Max = 1<<11 - 1
 
 ```
 searchKey: utf8.rune3Max
+tags: [private]
 ```
 
 ```Go
@@ -277,6 +284,7 @@ const rune3Max = 1<<16 - 1
 
 ```
 searchKey: utf8.locb
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +297,7 @@ The default lowest and highest continuation byte.
 
 ```
 searchKey: utf8.hicb
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +308,7 @@ const hicb = 0b10111111
 
 ```
 searchKey: utf8.xx
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +322,7 @@ These names of these constants are chosen to give nice alignment in the table be
 
 ```
 searchKey: utf8.as
+tags: [private]
 ```
 
 ```Go
@@ -323,6 +334,7 @@ const as = 0xF0 // ASCII: size 1
 
 ```
 searchKey: utf8.s1
+tags: [private]
 ```
 
 ```Go
@@ -334,6 +346,7 @@ const s1 = 0x02 // accept 0, size 2
 
 ```
 searchKey: utf8.s2
+tags: [private]
 ```
 
 ```Go
@@ -345,6 +358,7 @@ const s2 = 0x13 // accept 1, size 3
 
 ```
 searchKey: utf8.s3
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +370,7 @@ const s3 = 0x03 // accept 0, size 3
 
 ```
 searchKey: utf8.s4
+tags: [private]
 ```
 
 ```Go
@@ -367,6 +382,7 @@ const s4 = 0x23 // accept 2, size 3
 
 ```
 searchKey: utf8.s5
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +394,7 @@ const s5 = 0x34 // accept 3, size 4
 
 ```
 searchKey: utf8.s6
+tags: [private]
 ```
 
 ```Go
@@ -389,6 +406,7 @@ const s6 = 0x04 // accept 0, size 4
 
 ```
 searchKey: utf8.s7
+tags: [private]
 ```
 
 ```Go
@@ -398,14 +416,11 @@ const s7 = 0x44 // accept 4, size 4
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="first" href="#first">var first</a>
 
 ```
 searchKey: utf8.first
+tags: [private]
 ```
 
 ```Go
@@ -418,6 +433,7 @@ first is information about the first byte in a UTF-8 sequence.
 
 ```
 searchKey: utf8.acceptRanges
+tags: [private]
 ```
 
 ```Go
@@ -428,14 +444,11 @@ acceptRanges has size 16 to avoid bounds checks in the code that uses it.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="acceptRange" href="#acceptRange">type acceptRange struct</a>
 
 ```
 searchKey: utf8.acceptRange
+tags: [private]
 ```
 
 ```Go
@@ -449,15 +462,10 @@ acceptRange gives the range of valid values for the second byte in a UTF-8 seque
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="FullRune" href="#FullRune">func FullRune(p []byte) bool</a>
 
 ```
 searchKey: utf8.FullRune
-tags: [exported]
 ```
 
 ```Go
@@ -470,7 +478,6 @@ FullRune reports whether the bytes in p begin with a full UTF-8 encoding of a ru
 
 ```
 searchKey: utf8.FullRuneInString
-tags: [exported]
 ```
 
 ```Go
@@ -483,7 +490,6 @@ FullRuneInString is like FullRune but its input is a string.
 
 ```
 searchKey: utf8.DecodeRune
-tags: [exported]
 ```
 
 ```Go
@@ -498,7 +504,6 @@ An encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of r
 
 ```
 searchKey: utf8.DecodeRuneInString
-tags: [exported]
 ```
 
 ```Go
@@ -513,7 +518,6 @@ An encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of r
 
 ```
 searchKey: utf8.DecodeLastRune
-tags: [exported]
 ```
 
 ```Go
@@ -528,7 +532,6 @@ An encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of r
 
 ```
 searchKey: utf8.DecodeLastRuneInString
-tags: [exported]
 ```
 
 ```Go
@@ -543,7 +546,6 @@ An encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of r
 
 ```
 searchKey: utf8.RuneLen
-tags: [exported]
 ```
 
 ```Go
@@ -556,7 +558,6 @@ RuneLen returns the number of bytes required to encode the rune. It returns -1 i
 
 ```
 searchKey: utf8.EncodeRune
-tags: [exported]
 ```
 
 ```Go
@@ -569,7 +570,6 @@ EncodeRune writes into p (which must be large enough) the UTF-8 encoding of the 
 
 ```
 searchKey: utf8.RuneCount
-tags: [exported]
 ```
 
 ```Go
@@ -582,7 +582,6 @@ RuneCount returns the number of runes in p. Erroneous and short encodings are tr
 
 ```
 searchKey: utf8.RuneCountInString
-tags: [exported]
 ```
 
 ```Go
@@ -595,7 +594,6 @@ RuneCountInString is like RuneCount but its input is a string.
 
 ```
 searchKey: utf8.RuneStart
-tags: [exported]
 ```
 
 ```Go
@@ -608,7 +606,6 @@ RuneStart reports whether the byte could be the first byte of an encoded, possib
 
 ```
 searchKey: utf8.Valid
-tags: [exported]
 ```
 
 ```Go
@@ -621,7 +618,6 @@ Valid reports whether p consists entirely of valid UTF-8-encoded runes.
 
 ```
 searchKey: utf8.ValidString
-tags: [exported]
 ```
 
 ```Go
@@ -634,7 +630,6 @@ ValidString reports whether s consists entirely of valid UTF-8-encoded runes.
 
 ```
 searchKey: utf8.ValidRune
-tags: [exported]
 ```
 
 ```Go

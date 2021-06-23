@@ -15,14 +15,11 @@ package migrations contains embedded migrate sources for our DB migrations.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="content" href="#content">var content</a>
 
 ```
 searchKey: migrations.content
+tags: [private]
 ```
 
 ```Go
@@ -33,7 +30,6 @@ var content embed.FS
 
 ```
 searchKey: migrations.CodeInsights
-tags: [exported]
 ```
 
 ```Go
@@ -44,7 +40,6 @@ var CodeInsights = mustSub("codeinsights")
 
 ```
 searchKey: migrations.CodeIntel
-tags: [exported]
 ```
 
 ```Go
@@ -55,7 +50,6 @@ var CodeIntel = mustSub("codeintel")
 
 ```
 searchKey: migrations.Frontend
-tags: [exported]
 ```
 
 ```Go
@@ -64,14 +58,11 @@ var Frontend = mustSub("frontend")
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="mustSub" href="#mustSub">func mustSub(dir string) fs.FS</a>
 
 ```
 searchKey: migrations.mustSub
+tags: [private]
 ```
 
 ```Go

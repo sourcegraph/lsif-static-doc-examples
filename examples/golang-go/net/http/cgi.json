@@ -4,9 +4,7 @@
     "identifier": "cgi",
     "newPage": true,
     "searchKey": "net/http/cgi",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "trailingPort",
                 "newPage": false,
                 "searchKey": "cgi.trailingPort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "osDefaultInheritEnv",
                 "newPage": false,
                 "searchKey": "cgi.osDefaultInheritEnv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "testHookStartProcess",
                 "newPage": false,
                 "searchKey": "cgi.testHookStartProcess",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "cgiTested",
                 "newPage": false,
                 "searchKey": "cgi.cgiTested",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "cgiWorks",
                 "newPage": false,
                 "searchKey": "cgi.cgiWorks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,9 +153,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "response",
                 "newPage": false,
                 "searchKey": "cgi.response",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -185,7 +191,9 @@
                       "identifier": "response.Flush",
                       "newPage": false,
                       "searchKey": "cgi.response.Flush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -205,7 +213,9 @@
                       "identifier": "response.Header",
                       "newPage": false,
                       "searchKey": "cgi.response.Header",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -225,7 +235,9 @@
                       "identifier": "response.Write",
                       "newPage": false,
                       "searchKey": "cgi.response.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -245,7 +257,9 @@
                       "identifier": "response.WriteHeader",
                       "newPage": false,
                       "searchKey": "cgi.response.WriteHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -265,7 +279,9 @@
                       "identifier": "response.writeCGIHeader",
                       "newPage": false,
                       "searchKey": "cgi.response.writeCGIHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -288,9 +304,7 @@
                 "identifier": "Handler",
                 "newPage": false,
                 "searchKey": "cgi.Handler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -308,7 +322,9 @@
                       "identifier": "Handler.stderr",
                       "newPage": false,
                       "searchKey": "cgi.Handler.stderr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,9 +344,7 @@
                       "identifier": "Handler.ServeHTTP",
                       "newPage": false,
                       "searchKey": "cgi.Handler.ServeHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -350,7 +364,9 @@
                       "identifier": "Handler.printf",
                       "newPage": false,
                       "searchKey": "cgi.Handler.printf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -370,7 +386,9 @@
                       "identifier": "Handler.handleInternalRedirect",
                       "newPage": false,
                       "searchKey": "cgi.Handler.handleInternalRedirect",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -393,7 +411,9 @@
                 "identifier": "customWriterRecorder",
                 "newPage": false,
                 "searchKey": "cgi.customWriterRecorder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -411,7 +431,9 @@
                       "identifier": "customWriterRecorder.Write",
                       "newPage": false,
                       "searchKey": "cgi.customWriterRecorder.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,7 +456,9 @@
                 "identifier": "limitWriter",
                 "newPage": false,
                 "searchKey": "cgi.limitWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -452,7 +476,9 @@
                       "identifier": "limitWriter.Write",
                       "newPage": false,
                       "searchKey": "cgi.limitWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -475,7 +501,9 @@
                 "identifier": "neverEnding",
                 "newPage": false,
                 "searchKey": "cgi.neverEnding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -493,7 +521,9 @@
                       "identifier": "neverEnding.Read",
                       "newPage": false,
                       "searchKey": "cgi.neverEnding.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -519,9 +549,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -539,9 +567,7 @@
                 "identifier": "Request",
                 "newPage": false,
                 "searchKey": "cgi.Request",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -561,7 +587,9 @@
                 "identifier": "envMap",
                 "newPage": false,
                 "searchKey": "cgi.envMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,9 +609,7 @@
                 "identifier": "RequestFromMap",
                 "newPage": false,
                 "searchKey": "cgi.RequestFromMap",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -603,9 +629,7 @@
                 "identifier": "Serve",
                 "newPage": false,
                 "searchKey": "cgi.Serve",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -625,7 +649,9 @@
                 "identifier": "removeLeadingDuplicates",
                 "newPage": false,
                 "searchKey": "cgi.removeLeadingDuplicates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -645,7 +671,9 @@
                 "identifier": "upperCaseAndUnderscore",
                 "newPage": false,
                 "searchKey": "cgi.upperCaseAndUnderscore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -665,7 +693,9 @@
                 "identifier": "TestRequest",
                 "newPage": false,
                 "searchKey": "cgi.TestRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -685,7 +715,9 @@
                 "identifier": "TestRequestWithTLS",
                 "newPage": false,
                 "searchKey": "cgi.TestRequestWithTLS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -705,7 +737,9 @@
                 "identifier": "TestRequestWithoutHost",
                 "newPage": false,
                 "searchKey": "cgi.TestRequestWithoutHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -725,7 +759,9 @@
                 "identifier": "TestRequestWithoutRequestURI",
                 "newPage": false,
                 "searchKey": "cgi.TestRequestWithoutRequestURI",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -745,7 +781,9 @@
                 "identifier": "TestRequestWithoutRemotePort",
                 "newPage": false,
                 "searchKey": "cgi.TestRequestWithoutRemotePort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -765,7 +803,9 @@
                 "identifier": "TestResponse",
                 "newPage": false,
                 "searchKey": "cgi.TestResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -785,7 +825,9 @@
                 "identifier": "newRequest",
                 "newPage": false,
                 "searchKey": "cgi.newRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -805,7 +847,9 @@
                 "identifier": "runCgiTest",
                 "newPage": false,
                 "searchKey": "cgi.runCgiTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -825,7 +869,9 @@
                 "identifier": "runResponseChecks",
                 "newPage": false,
                 "searchKey": "cgi.runResponseChecks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -845,7 +891,9 @@
                 "identifier": "check",
                 "newPage": false,
                 "searchKey": "cgi.check",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -865,7 +913,9 @@
                 "identifier": "TestCGIBasicGet",
                 "newPage": false,
                 "searchKey": "cgi.TestCGIBasicGet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -885,7 +935,9 @@
                 "identifier": "TestCGIEnvIPv6",
                 "newPage": false,
                 "searchKey": "cgi.TestCGIEnvIPv6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -905,7 +957,9 @@
                 "identifier": "TestCGIBasicGetAbsPath",
                 "newPage": false,
                 "searchKey": "cgi.TestCGIBasicGetAbsPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -925,7 +979,9 @@
                 "identifier": "TestPathInfo",
                 "newPage": false,
                 "searchKey": "cgi.TestPathInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -945,7 +1001,9 @@
                 "identifier": "TestPathInfoDirRoot",
                 "newPage": false,
                 "searchKey": "cgi.TestPathInfoDirRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -965,7 +1023,9 @@
                 "identifier": "TestDupHeaders",
                 "newPage": false,
                 "searchKey": "cgi.TestDupHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -985,7 +1045,9 @@
                 "identifier": "TestDropProxyHeader",
                 "newPage": false,
                 "searchKey": "cgi.TestDropProxyHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1005,7 +1067,9 @@
                 "identifier": "TestPathInfoNoRoot",
                 "newPage": false,
                 "searchKey": "cgi.TestPathInfoNoRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1025,7 +1089,9 @@
                 "identifier": "TestCGIBasicPost",
                 "newPage": false,
                 "searchKey": "cgi.TestCGIBasicPost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1045,7 +1111,9 @@
                 "identifier": "chunk",
                 "newPage": false,
                 "searchKey": "cgi.chunk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1065,7 +1133,9 @@
                 "identifier": "TestCGIPostChunked",
                 "newPage": false,
                 "searchKey": "cgi.TestCGIPostChunked",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1085,7 +1155,9 @@
                 "identifier": "TestRedirect",
                 "newPage": false,
                 "searchKey": "cgi.TestRedirect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1105,7 +1177,9 @@
                 "identifier": "TestInternalRedirect",
                 "newPage": false,
                 "searchKey": "cgi.TestInternalRedirect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1125,7 +1199,9 @@
                 "identifier": "TestCopyError",
                 "newPage": false,
                 "searchKey": "cgi.TestCopyError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1145,7 +1221,9 @@
                 "identifier": "TestDirUnix",
                 "newPage": false,
                 "searchKey": "cgi.TestDirUnix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1165,7 +1243,9 @@
                 "identifier": "findPerl",
                 "newPage": false,
                 "searchKey": "cgi.findPerl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1185,7 +1265,9 @@
                 "identifier": "TestDirWindows",
                 "newPage": false,
                 "searchKey": "cgi.TestDirWindows",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1205,7 +1287,9 @@
                 "identifier": "TestEnvOverride",
                 "newPage": false,
                 "searchKey": "cgi.TestEnvOverride",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1225,7 +1309,9 @@
                 "identifier": "TestHandlerStderr",
                 "newPage": false,
                 "searchKey": "cgi.TestHandlerStderr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1245,7 +1331,9 @@
                 "identifier": "TestRemoveLeadingDuplicates",
                 "newPage": false,
                 "searchKey": "cgi.TestRemoveLeadingDuplicates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1265,7 +1353,9 @@
                 "identifier": "TestHostingOurselves",
                 "newPage": false,
                 "searchKey": "cgi.TestHostingOurselves",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1285,7 +1375,9 @@
                 "identifier": "TestKillChildAfterCopyError",
                 "newPage": false,
                 "searchKey": "cgi.TestKillChildAfterCopyError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1305,7 +1397,9 @@
                 "identifier": "TestChildOnlyHeaders",
                 "newPage": false,
                 "searchKey": "cgi.TestChildOnlyHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1325,7 +1419,9 @@
                 "identifier": "TestNilRequestBody",
                 "newPage": false,
                 "searchKey": "cgi.TestNilRequestBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1345,7 +1441,9 @@
                 "identifier": "TestChildContentType",
                 "newPage": false,
                 "searchKey": "cgi.TestChildContentType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1365,7 +1463,9 @@
                 "identifier": "Test500WithNoHeaders",
                 "newPage": false,
                 "searchKey": "cgi.Test500WithNoHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1385,7 +1485,9 @@
                 "identifier": "Test500WithNoContentType",
                 "newPage": false,
                 "searchKey": "cgi.Test500WithNoContentType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1405,7 +1507,9 @@
                 "identifier": "Test500WithEmptyHeaders",
                 "newPage": false,
                 "searchKey": "cgi.Test500WithEmptyHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1425,7 +1529,9 @@
                 "identifier": "want500Test",
                 "newPage": false,
                 "searchKey": "cgi.want500Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1445,7 +1551,9 @@
                 "identifier": "TestBeChildCGIProcess",
                 "newPage": false,
                 "searchKey": "cgi.TestBeChildCGIProcess",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1465,7 +1573,9 @@
                 "identifier": "isProcessRunning",
                 "newPage": false,
                 "searchKey": "cgi.isProcessRunning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

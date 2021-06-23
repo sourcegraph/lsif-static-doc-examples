@@ -4,9 +4,7 @@
     "identifier": "ed25519",
     "newPage": true,
     "searchKey": "crypto/ed25519",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -27,9 +25,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -47,9 +43,7 @@
                 "identifier": "PublicKeySize",
                 "newPage": false,
                 "searchKey": "ed25519.PublicKeySize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -69,9 +63,7 @@
                 "identifier": "PrivateKeySize",
                 "newPage": false,
                 "searchKey": "ed25519.PrivateKeySize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -91,9 +83,7 @@
                 "identifier": "SignatureSize",
                 "newPage": false,
                 "searchKey": "ed25519.SignatureSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -113,9 +103,7 @@
                 "identifier": "SeedSize",
                 "newPage": false,
                 "searchKey": "ed25519.SeedSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -138,9 +126,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -158,9 +144,7 @@
                 "identifier": "PublicKey",
                 "newPage": false,
                 "searchKey": "ed25519.PublicKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -178,9 +162,7 @@
                       "identifier": "GenerateKey",
                       "newPage": false,
                       "searchKey": "ed25519.GenerateKey",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -200,9 +182,7 @@
                       "identifier": "PublicKey.Equal",
                       "newPage": false,
                       "searchKey": "ed25519.PublicKey.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -225,9 +205,7 @@
                 "identifier": "PrivateKey",
                 "newPage": false,
                 "searchKey": "ed25519.PrivateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -240,36 +218,12 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/ed25519#GenerateKey",
-                    "documentation": {
-                      "identifier": "GenerateKey",
-                      "newPage": false,
-                      "searchKey": "ed25519.GenerateKey",
-                      "tags": [
-                        "exported"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func GenerateKey(rand io.Reader) (PublicKey, PrivateKey, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc GenerateKey(rand io.Reader) (PublicKey, PrivateKey, error)\n```\n\nGenerateKey generates a public/private key pair using entropy from rand. If rand is nil, crypto/rand.Reader will be used. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/ed25519#NewKeyFromSeed",
                     "documentation": {
                       "identifier": "NewKeyFromSeed",
                       "newPage": false,
                       "searchKey": "ed25519.NewKeyFromSeed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -289,9 +243,7 @@
                       "identifier": "PrivateKey.Public",
                       "newPage": false,
                       "searchKey": "ed25519.PrivateKey.Public",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -311,9 +263,7 @@
                       "identifier": "PrivateKey.Equal",
                       "newPage": false,
                       "searchKey": "ed25519.PrivateKey.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -333,9 +283,7 @@
                       "identifier": "PrivateKey.Seed",
                       "newPage": false,
                       "searchKey": "ed25519.PrivateKey.Seed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -355,9 +303,7 @@
                       "identifier": "PrivateKey.Sign",
                       "newPage": false,
                       "searchKey": "ed25519.PrivateKey.Sign",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -380,7 +326,9 @@
                 "identifier": "zeroReader",
                 "newPage": false,
                 "searchKey": "ed25519.zeroReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -398,7 +346,9 @@
                       "identifier": "zeroReader.Read",
                       "newPage": false,
                       "searchKey": "ed25519.zeroReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -424,9 +374,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -444,7 +392,9 @@
                 "identifier": "newKeyFromSeed",
                 "newPage": false,
                 "searchKey": "ed25519.newKeyFromSeed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -464,9 +414,7 @@
                 "identifier": "Sign",
                 "newPage": false,
                 "searchKey": "ed25519.Sign",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -486,7 +434,9 @@
                 "identifier": "sign",
                 "newPage": false,
                 "searchKey": "ed25519.sign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -506,9 +456,7 @@
                 "identifier": "Verify",
                 "newPage": false,
                 "searchKey": "ed25519.Verify",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -528,7 +476,9 @@
                 "identifier": "TestSignVerify",
                 "newPage": false,
                 "searchKey": "ed25519.TestSignVerify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -548,7 +498,9 @@
                 "identifier": "TestCryptoSigner",
                 "newPage": false,
                 "searchKey": "ed25519.TestCryptoSigner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -568,7 +520,9 @@
                 "identifier": "TestEqual",
                 "newPage": false,
                 "searchKey": "ed25519.TestEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -588,7 +542,9 @@
                 "identifier": "TestGolden",
                 "newPage": false,
                 "searchKey": "ed25519.TestGolden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -608,7 +564,9 @@
                 "identifier": "TestMalleability",
                 "newPage": false,
                 "searchKey": "ed25519.TestMalleability",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -628,7 +586,9 @@
                 "identifier": "TestAllocations",
                 "newPage": false,
                 "searchKey": "ed25519.TestAllocations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -648,7 +608,9 @@
                 "identifier": "BenchmarkKeyGeneration",
                 "newPage": false,
                 "searchKey": "ed25519.BenchmarkKeyGeneration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -668,7 +630,9 @@
                 "identifier": "BenchmarkNewKeyFromSeed",
                 "newPage": false,
                 "searchKey": "ed25519.BenchmarkNewKeyFromSeed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -688,7 +652,9 @@
                 "identifier": "BenchmarkSigning",
                 "newPage": false,
                 "searchKey": "ed25519.BenchmarkSigning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -708,7 +674,9 @@
                 "identifier": "BenchmarkVerification",
                 "newPage": false,
                 "searchKey": "ed25519.BenchmarkVerification",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -20,10 +20,15 @@ Package singleflight provides a duplicate function call suppression mechanism.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="call" href="#call">type call struct</a>
 
 ```
 searchKey: singleflight.call
+tags: [private]
 ```
 
 ```Go
@@ -49,7 +54,6 @@ call is an in-flight or completed singleflight.Do call
 
 ```
 searchKey: singleflight.Group
-tags: [exported]
 ```
 
 ```Go
@@ -65,7 +69,6 @@ Group represents a class of work and forms a namespace in which units of work ca
 
 ```
 searchKey: singleflight.Group.Do
-tags: [exported]
 ```
 
 ```Go
@@ -78,7 +81,6 @@ Do executes and returns the results of the given function, making sure that only
 
 ```
 searchKey: singleflight.Group.DoChan
-tags: [exported]
 ```
 
 ```Go
@@ -91,6 +93,7 @@ DoChan is like Do but returns a channel that will receive the results when they 
 
 ```
 searchKey: singleflight.Group.doCall
+tags: [private]
 ```
 
 ```Go
@@ -103,7 +106,6 @@ doCall handles the single call for a key.
 
 ```
 searchKey: singleflight.Group.ForgetUnshared
-tags: [exported]
 ```
 
 ```Go
@@ -116,7 +118,6 @@ ForgetUnshared tells the singleflight to forget about a key if it is not shared 
 
 ```
 searchKey: singleflight.Result
-tags: [exported]
 ```
 
 ```Go
@@ -131,10 +132,15 @@ Result holds the results of Do, so they can be passed on a channel.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestDo" href="#TestDo">func TestDo(t *testing.T)</a>
 
 ```
 searchKey: singleflight.TestDo
+tags: [private]
 ```
 
 ```Go
@@ -145,6 +151,7 @@ func TestDo(t *testing.T)
 
 ```
 searchKey: singleflight.TestDoErr
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +162,7 @@ func TestDoErr(t *testing.T)
 
 ```
 searchKey: singleflight.TestDoDupSuppress
+tags: [private]
 ```
 
 ```Go

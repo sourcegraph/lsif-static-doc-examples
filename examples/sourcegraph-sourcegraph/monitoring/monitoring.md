@@ -117,15 +117,10 @@ To learn more about the generator, see the top-level program: [https://github.co
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Number" href="#Number">const Number</a>
 
 ```
 searchKey: monitoring.Number
-tags: [exported]
 ```
 
 ```Go
@@ -140,7 +135,6 @@ Number is the default unit type.
 
 ```
 searchKey: monitoring.Milliseconds
-tags: [exported]
 ```
 
 ```Go
@@ -155,7 +149,6 @@ Milliseconds for representing time.
 
 ```
 searchKey: monitoring.Seconds
-tags: [exported]
 ```
 
 ```Go
@@ -170,7 +163,6 @@ Seconds for representing time.
 
 ```
 searchKey: monitoring.Percentage
-tags: [exported]
 ```
 
 ```Go
@@ -185,7 +177,6 @@ Percentage in the range of 0-100.
 
 ```
 searchKey: monitoring.Bytes
-tags: [exported]
 ```
 
 ```Go
@@ -200,7 +191,6 @@ Bytes in IEC (1024) format, e.g. for representing storage sizes.
 
 ```
 searchKey: monitoring.BitsPerSecond
-tags: [exported]
 ```
 
 ```Go
@@ -215,7 +205,6 @@ BitsPerSecond, e.g. for representing network and disk IO.
 
 ```
 searchKey: monitoring.ReadsPerSecond
-tags: [exported]
 ```
 
 ```Go
@@ -230,7 +219,6 @@ ReadsPerSecond, e.g for representing disk IO.
 
 ```
 searchKey: monitoring.WritesPerSecond
-tags: [exported]
 ```
 
 ```Go
@@ -245,6 +233,7 @@ WritesPerSecond, e.g for representing disk IO.
 
 ```
 searchKey: monitoring.canonicalAlertSolutionsURL
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +244,7 @@ const canonicalAlertSolutionsURL = ...
 
 ```
 searchKey: monitoring.canonicalDashboardsDocsURL
+tags: [private]
 ```
 
 ```Go
@@ -265,6 +255,7 @@ const canonicalDashboardsDocsURL = "https://docs.sourcegraph.com/admin/observabi
 
 ```
 searchKey: monitoring.alertSolutionsFile
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +266,7 @@ const alertSolutionsFile = "alert_solutions.md"
 
 ```
 searchKey: monitoring.dashboardsDocsFile
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +277,7 @@ const dashboardsDocsFile = "dashboards.md"
 
 ```
 searchKey: monitoring.alertSolutionsHeader
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +288,7 @@ const alertSolutionsHeader = ...
 
 ```
 searchKey: monitoring.dashboardsHeader
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +299,7 @@ const dashboardsHeader = ...
 
 ```
 searchKey: monitoring.localGrafanaURL
+tags: [private]
 ```
 
 ```Go
@@ -315,6 +310,7 @@ const localGrafanaURL = "http://127.0.0.1:3370"
 
 ```
 searchKey: monitoring.localGrafanaCredentials
+tags: [private]
 ```
 
 ```Go
@@ -325,6 +321,7 @@ const localGrafanaCredentials = "admin:admin"
 
 ```
 searchKey: monitoring.localPrometheusURL
+tags: [private]
 ```
 
 ```Go
@@ -335,7 +332,6 @@ const localPrometheusURL = "http://127.0.0.1:9090"
 
 ```
 searchKey: monitoring.ObservableOwnerSearch
-tags: [exported]
 ```
 
 ```Go
@@ -346,7 +342,6 @@ const ObservableOwnerSearch ObservableOwner = "search"
 
 ```
 searchKey: monitoring.ObservableOwnerBatches
-tags: [exported]
 ```
 
 ```Go
@@ -357,7 +352,6 @@ const ObservableOwnerBatches ObservableOwner = "batches"
 
 ```
 searchKey: monitoring.ObservableOwnerCodeIntel
-tags: [exported]
 ```
 
 ```Go
@@ -368,7 +362,6 @@ const ObservableOwnerCodeIntel ObservableOwner = "code-intel"
 
 ```
 searchKey: monitoring.ObservableOwnerDistribution
-tags: [exported]
 ```
 
 ```Go
@@ -379,7 +372,6 @@ const ObservableOwnerDistribution ObservableOwner = "distribution"
 
 ```
 searchKey: monitoring.ObservableOwnerSecurity
-tags: [exported]
 ```
 
 ```Go
@@ -390,7 +382,6 @@ const ObservableOwnerSecurity ObservableOwner = "security"
 
 ```
 searchKey: monitoring.ObservableOwnerWeb
-tags: [exported]
 ```
 
 ```Go
@@ -401,7 +392,6 @@ const ObservableOwnerWeb ObservableOwner = "web"
 
 ```
 searchKey: monitoring.ObservableOwnerCoreApplication
-tags: [exported]
 ```
 
 ```Go
@@ -412,6 +402,7 @@ const ObservableOwnerCoreApplication ObservableOwner = "core application"
 
 ```
 searchKey: monitoring.alertRulesFileSuffix
+tags: [private]
 ```
 
 ```Go
@@ -420,15 +411,10 @@ const alertRulesFileSuffix = "_alert_rules.yml"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="PanelOptions" href="#PanelOptions">var PanelOptions</a>
 
 ```
 searchKey: monitoring.PanelOptions
-tags: [exported]
 ```
 
 ```Go
@@ -441,15 +427,10 @@ See `ObservablePanelOption` for more details.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="UnitType" href="#UnitType">type UnitType string</a>
 
 ```
 searchKey: monitoring.UnitType
-tags: [exported]
 ```
 
 ```Go
@@ -462,6 +443,7 @@ UnitType for controlling the unit type display on graphs.
 
 ```
 searchKey: monitoring.UnitType.short
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +456,7 @@ short returns the short string description of the unit, for qualifying a number 
 
 ```
 searchKey: monitoring.documentation
+tags: [private]
 ```
 
 ```Go
@@ -487,6 +470,7 @@ type documentation struct {
 
 ```
 searchKey: monitoring.renderDocumentation
+tags: [private]
 ```
 
 ```Go
@@ -497,6 +481,7 @@ func renderDocumentation(containers []*Container) (*documentation, error)
 
 ```
 searchKey: monitoring.documentation.renderAlertSolutionEntry
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +492,7 @@ func (d *documentation) renderAlertSolutionEntry(c *Container, o Observable) err
 
 ```
 searchKey: monitoring.documentation.renderDashboardPanelEntry
+tags: [private]
 ```
 
 ```Go
@@ -517,7 +503,6 @@ func (d *documentation) renderDashboardPanelEntry(c *Container, o Observable) er
 
 ```
 searchKey: monitoring.GenerateOptions
-tags: [exported]
 ```
 
 ```Go
@@ -542,7 +527,6 @@ GenerateOptions declares options for the monitoring generator.
 
 ```
 searchKey: monitoring.Container
-tags: [exported]
 ```
 
 ```Go
@@ -583,6 +567,7 @@ These correspond to dashboards in Grafana.
 
 ```
 searchKey: monitoring.Container.validate
+tags: [private]
 ```
 
 ```Go
@@ -593,6 +578,7 @@ func (c *Container) validate() error
 
 ```
 searchKey: monitoring.Container.renderDashboard
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +591,7 @@ renderDashboard generates the Grafana renderDashboard for this container.
 
 ```
 searchKey: monitoring.Container.alertDescription
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +604,7 @@ alertDescription generates an alert description for the specified coontainer's a
 
 ```
 searchKey: monitoring.Container.renderRules
+tags: [private]
 ```
 
 ```Go
@@ -631,7 +619,6 @@ renderRules generates the Prometheus rules file which defines our high-level ale
 
 ```
 searchKey: monitoring.Group
-tags: [exported]
 ```
 
 ```Go
@@ -661,6 +648,7 @@ These correspond to collapsible sections in a Grafana dashboard.
 
 ```
 searchKey: monitoring.Group.validate
+tags: [private]
 ```
 
 ```Go
@@ -671,7 +659,6 @@ func (g Group) validate() error
 
 ```
 searchKey: monitoring.Row
-tags: [exported]
 ```
 
 ```Go
@@ -686,6 +673,7 @@ These correspond to a row of Grafana graphs.
 
 ```
 searchKey: monitoring.Row.validate
+tags: [private]
 ```
 
 ```Go
@@ -696,7 +684,6 @@ func (r Row) validate() error
 
 ```
 searchKey: monitoring.ObservableOwner
-tags: [exported]
 ```
 
 ```Go
@@ -709,6 +696,7 @@ ObservableOwner denotes a team that owns an Observable. The current teams are de
 
 ```
 searchKey: monitoring.ObservableOwner.toMarkdown
+tags: [private]
 ```
 
 ```Go
@@ -721,7 +709,6 @@ toMarkdown returns a Markdown string that also links to the owner's team page
 
 ```
 searchKey: monitoring.Observable
-tags: [exported]
 ```
 
 ```Go
@@ -851,6 +838,7 @@ These correspond to Grafana graphs.
 
 ```
 searchKey: monitoring.Observable.validate
+tags: [private]
 ```
 
 ```Go
@@ -861,7 +849,6 @@ func (o Observable) validate() error
 
 ```
 searchKey: monitoring.ObservableAlertDefinition
-tags: [exported]
 ```
 
 ```Go
@@ -889,7 +876,6 @@ ObservableAlertDefinition defines when an alert would be considered firing.
 
 ```
 searchKey: monitoring.Alert
-tags: [exported]
 ```
 
 ```Go
@@ -902,7 +888,6 @@ Alert provides a builder for defining alerting on an Observable.
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.GreaterOrEqual
-tags: [exported]
 ```
 
 ```Go
@@ -915,7 +900,6 @@ GreaterOrEqual indicates the alert should fire when greater or equal the given v
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.LessOrEqual
-tags: [exported]
 ```
 
 ```Go
@@ -928,7 +912,6 @@ LessOrEqual indicates the alert should fire when less than or equal to the given
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.Greater
-tags: [exported]
 ```
 
 ```Go
@@ -941,7 +924,6 @@ Greater indicates the alert should fire when strictly greater to this value.
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.Less
-tags: [exported]
 ```
 
 ```Go
@@ -954,7 +936,6 @@ Less indicates the alert should fire when strictly less than this value.
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.For
-tags: [exported]
 ```
 
 ```Go
@@ -967,6 +948,7 @@ For indicates how long the given thresholds must be exceeded for this alert to b
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.isEmpty
+tags: [private]
 ```
 
 ```Go
@@ -977,6 +959,7 @@ func (a *ObservableAlertDefinition) isEmpty() bool
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.validate
+tags: [private]
 ```
 
 ```Go
@@ -987,7 +970,6 @@ func (a *ObservableAlertDefinition) validate() error
 
 ```
 searchKey: monitoring.ObservablePanel
-tags: [exported]
 ```
 
 ```Go
@@ -1008,7 +990,6 @@ ObservablePanel declares options for visualizing an Observable, as well as some 
 
 ```
 searchKey: monitoring.Panel
-tags: [exported]
 ```
 
 ```Go
@@ -1021,7 +1002,6 @@ Panel provides a builder for customizing an Observable visualization, starting w
 
 ```
 searchKey: monitoring.PanelMinimal
-tags: [exported]
 ```
 
 ```Go
@@ -1036,7 +1016,6 @@ In general, we advise using Panel() instead to start with recommended defaults.
 
 ```
 searchKey: monitoring.PanelHeatmap
-tags: [exported]
 ```
 
 ```Go
@@ -1049,7 +1028,6 @@ PanelHeatmap provides a builder for customizing an Observable visualization star
 
 ```
 searchKey: monitoring.ObservablePanel.Min
-tags: [exported]
 ```
 
 ```Go
@@ -1062,7 +1040,6 @@ Min sets the minimum value of the Y axis on the panel. The default is zero.
 
 ```
 searchKey: monitoring.ObservablePanel.MinAuto
-tags: [exported]
 ```
 
 ```Go
@@ -1077,7 +1054,6 @@ This is generally only useful if trying to show negative numbers.
 
 ```
 searchKey: monitoring.ObservablePanel.Max
-tags: [exported]
 ```
 
 ```Go
@@ -1090,7 +1066,6 @@ Max sets the maximum value of the Y axis on the panel. The default is auto.
 
 ```
 searchKey: monitoring.ObservablePanel.LegendFormat
-tags: [exported]
 ```
 
 ```Go
@@ -1103,7 +1078,6 @@ LegendFormat sets the panel's legend format, which may use Go template strings t
 
 ```
 searchKey: monitoring.ObservablePanel.Unit
-tags: [exported]
 ```
 
 ```Go
@@ -1116,7 +1090,6 @@ Unit sets the panel's Y axis unit type.
 
 ```
 searchKey: monitoring.ObservablePanel.Interval
-tags: [exported]
 ```
 
 ```Go
@@ -1129,7 +1102,6 @@ Interval declares the panel's interval in milliseconds.
 
 ```
 searchKey: monitoring.ObservablePanel.With
-tags: [exported]
 ```
 
 ```Go
@@ -1146,6 +1118,7 @@ Shared customizations are exported by `PanelOptions`, or you can write your opti
 
 ```
 searchKey: monitoring.ObservablePanel.build
+tags: [private]
 ```
 
 ```Go
@@ -1158,7 +1131,6 @@ build applies the configured options on this panel for the given `Observable`.
 
 ```
 searchKey: monitoring.ObservablePanelOption
-tags: [exported]
 ```
 
 ```Go
@@ -1195,6 +1167,7 @@ Using a shared prefix helps with discoverability of available options.
 
 ```
 searchKey: monitoring.panelOptionsLibrary
+tags: [private]
 ```
 
 ```Go
@@ -1209,6 +1182,7 @@ Shared panel options should be declared as functions on this struct - see the `O
 
 ```
 searchKey: monitoring.panelOptionsLibrary.basicPanel
+tags: [private]
 ```
 
 ```Go
@@ -1223,6 +1197,7 @@ All ObservablePanelOptions start with this option.
 
 ```
 searchKey: monitoring.panelOptionsLibrary.OpinionatedDefaults
+tags: [private]
 ```
 
 ```Go
@@ -1237,6 +1212,7 @@ It is applied in the default PanelOptions().
 
 ```
 searchKey: monitoring.panelOptionsLibrary.AlertThresholds
+tags: [private]
 ```
 
 ```Go
@@ -1251,6 +1227,7 @@ It is applied in the default PanelOptions().
 
 ```
 searchKey: monitoring.panelOptionsLibrary.ColorOverride
+tags: [private]
 ```
 
 ```Go
@@ -1263,6 +1240,7 @@ ColorOverride takes a seriesName (which can be a regex pattern) and a color in h
 
 ```
 searchKey: monitoring.panelOptionsLibrary.LegendOnRight
+tags: [private]
 ```
 
 ```Go
@@ -1275,6 +1253,7 @@ LegendOnRight moves the legend to the right side of the panel
 
 ```
 searchKey: monitoring.panelOptionsLibrary.HoverShowAll
+tags: [private]
 ```
 
 ```Go
@@ -1287,6 +1266,7 @@ HoverShowAll makes hover tooltips show all series rather than just the one being
 
 ```
 searchKey: monitoring.panelOptionsLibrary.HoverSort
+tags: [private]
 ```
 
 ```Go
@@ -1299,6 +1279,7 @@ HoverSort sorts the series either "ascending", "descending", or "none". Default 
 
 ```
 searchKey: monitoring.panelOptionsLibrary.Fill
+tags: [private]
 ```
 
 ```Go
@@ -1311,6 +1292,7 @@ Fill sets the fill opacity for all series on the panel. Set to 0 to disable fill
 
 ```
 searchKey: monitoring.panelOptionsLibrary.NoLegend
+tags: [private]
 ```
 
 ```Go
@@ -1323,6 +1305,7 @@ NoLegend disables the legend on the panel
 
 ```
 searchKey: monitoring.promRule
+tags: [private]
 ```
 
 ```Go
@@ -1345,6 +1328,7 @@ promRule is a subset of a Prometheus recording or alert rule definition.
 
 ```
 searchKey: monitoring.promRule.validate
+tags: [private]
 ```
 
 ```Go
@@ -1355,6 +1339,7 @@ func (r *promRule) validate() error
 
 ```
 searchKey: monitoring.promRulesFile
+tags: [private]
 ```
 
 ```Go
@@ -1371,6 +1356,7 @@ promRulesFile represents a Prometheus recording rules file (which we use for def
 
 ```
 searchKey: monitoring.promGroup
+tags: [private]
 ```
 
 ```Go
@@ -1384,6 +1370,7 @@ type promGroup struct {
 
 ```
 searchKey: monitoring.promGroup.validate
+tags: [private]
 ```
 
 ```Go
@@ -1394,6 +1381,7 @@ func (g *promGroup) validate() error
 
 ```
 searchKey: monitoring.promGroup.appendRow
+tags: [private]
 ```
 
 ```Go
@@ -1402,14 +1390,11 @@ func (g *promGroup) appendRow(alertQuery string, labels map[string]string, durat
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="setPanelSize" href="#setPanelSize">func setPanelSize(p *sdk.Panel, width, height int)</a>
 
 ```
 searchKey: monitoring.setPanelSize
+tags: [private]
 ```
 
 ```Go
@@ -1422,6 +1407,7 @@ setPanelSize is a helper to set a panel's size.
 
 ```
 searchKey: monitoring.setPanelPos
+tags: [private]
 ```
 
 ```Go
@@ -1434,6 +1420,7 @@ setPanelSize is a helper to set a panel's position.
 
 ```
 searchKey: monitoring.observablePanelID
+tags: [private]
 ```
 
 ```Go
@@ -1446,6 +1433,7 @@ observablePanelID generates a panel ID unique per dashboard for an observable at
 
 ```
 searchKey: monitoring.isValidGrafanaUID
+tags: [private]
 ```
 
 ```Go
@@ -1464,6 +1452,7 @@ Instead of having to describe all the steps to navigate there because the UID is
 
 ```
 searchKey: monitoring.fprintSubtitle
+tags: [private]
 ```
 
 ```Go
@@ -1476,6 +1465,7 @@ fprintSubtitle prints subtitle-class text
 
 ```
 searchKey: monitoring.fprintObservableHeader
+tags: [private]
 ```
 
 ```Go
@@ -1490,6 +1480,7 @@ See `observableAnchor`.
 
 ```
 searchKey: monitoring.fprintOwnedBy
+tags: [private]
 ```
 
 ```Go
@@ -1502,6 +1493,7 @@ fprintOwnedBy prints information about who owns a particular monitoring definiti
 
 ```
 searchKey: monitoring.observableDocAnchor
+tags: [private]
 ```
 
 ```Go
@@ -1516,7 +1508,6 @@ Must match Prometheus template in `docker-images/prometheus/cmd/prom-wrapper/rec
 
 ```
 searchKey: monitoring.Generate
-tags: [exported]
 ```
 
 ```Go
@@ -1529,6 +1520,7 @@ Generate is the main Sourcegraph monitoring generator entrypoint.
 
 ```
 searchKey: monitoring.prometheusAlertName
+tags: [private]
 ```
 
 ```Go
@@ -1541,6 +1533,7 @@ prometheusAlertName creates an alertname that is unique given the combination of
 
 ```
 searchKey: monitoring.pruneAssets
+tags: [private]
 ```
 
 ```Go
@@ -1551,6 +1544,7 @@ func pruneAssets(logger log15.Logger, filelist []string, grafanaDir, promDir str
 
 ```
 searchKey: monitoring.upperFirst
+tags: [private]
 ```
 
 ```Go
@@ -1563,6 +1557,7 @@ upperFirst returns s with an uppercase first rune.
 
 ```
 searchKey: monitoring.withPeriod
+tags: [private]
 ```
 
 ```Go
@@ -1575,7 +1570,6 @@ withPeriod returns s ending with a period.
 
 ```
 searchKey: monitoring.StringPtr
-tags: [exported]
 ```
 
 ```Go
@@ -1588,6 +1582,7 @@ StringPtr converts a string value to a pointer, useful for setting fields in som
 
 ```
 searchKey: monitoring.boolPtr
+tags: [private]
 ```
 
 ```Go
@@ -1600,7 +1595,6 @@ boolPtr converts a boolean value to a pointer, useful for setting fields in some
 
 ```
 searchKey: monitoring.Int64Ptr
-tags: [exported]
 ```
 
 ```Go
@@ -1613,6 +1607,7 @@ IntPtr converts an int64 value to a pointer, useful for setting fields in some A
 
 ```
 searchKey: monitoring.toMarkdown
+tags: [private]
 ```
 
 ```Go

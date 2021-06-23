@@ -4,9 +4,7 @@
     "identifier": "plan9obj",
     "newPage": true,
     "searchKey": "debug/plan9obj",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Magic64",
                 "newPage": false,
                 "searchKey": "plan9obj.Magic64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "Magic386",
                 "newPage": false,
                 "searchKey": "plan9obj.Magic386",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "MagicAMD64",
                 "newPage": false,
                 "searchKey": "plan9obj.MagicAMD64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "MagicARM",
                 "newPage": false,
                 "searchKey": "plan9obj.MagicARM",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -135,9 +123,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -155,7 +141,9 @@
                 "identifier": "fileTests",
                 "newPage": false,
                 "searchKey": "plan9obj.fileTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -178,9 +166,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -198,9 +184,7 @@
                 "identifier": "FileHeader",
                 "newPage": false,
                 "searchKey": "plan9obj.FileHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -220,9 +204,7 @@
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "plan9obj.File",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -240,9 +222,7 @@
                       "identifier": "Open",
                       "newPage": false,
                       "searchKey": "plan9obj.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -262,9 +242,7 @@
                       "identifier": "NewFile",
                       "newPage": false,
                       "searchKey": "plan9obj.NewFile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -284,9 +262,7 @@
                       "identifier": "File.Close",
                       "newPage": false,
                       "searchKey": "plan9obj.File.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -306,9 +282,7 @@
                       "identifier": "File.Symbols",
                       "newPage": false,
                       "searchKey": "plan9obj.File.Symbols",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,9 +302,7 @@
                       "identifier": "File.Section",
                       "newPage": false,
                       "searchKey": "plan9obj.File.Section",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -353,9 +325,7 @@
                 "identifier": "SectionHeader",
                 "newPage": false,
                 "searchKey": "plan9obj.SectionHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -375,9 +345,7 @@
                 "identifier": "Section",
                 "newPage": false,
                 "searchKey": "plan9obj.Section",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -395,9 +363,7 @@
                       "identifier": "Section.Data",
                       "newPage": false,
                       "searchKey": "plan9obj.Section.Data",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -417,9 +383,7 @@
                       "identifier": "Section.Open",
                       "newPage": false,
                       "searchKey": "plan9obj.Section.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -442,9 +406,7 @@
                 "identifier": "Sym",
                 "newPage": false,
                 "searchKey": "plan9obj.Sym",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -464,7 +426,9 @@
                 "identifier": "formatError",
                 "newPage": false,
                 "searchKey": "plan9obj.formatError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -482,7 +446,9 @@
                       "identifier": "formatError.Error",
                       "newPage": false,
                       "searchKey": "plan9obj.formatError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -505,7 +471,9 @@
                 "identifier": "prog",
                 "newPage": false,
                 "searchKey": "plan9obj.prog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -525,7 +493,9 @@
                 "identifier": "sym",
                 "newPage": false,
                 "searchKey": "plan9obj.sym",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -545,7 +515,9 @@
                 "identifier": "fileTest",
                 "newPage": false,
                 "searchKey": "plan9obj.fileTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -568,9 +540,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -588,7 +558,9 @@
                 "identifier": "parseMagic",
                 "newPage": false,
                 "searchKey": "plan9obj.parseMagic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -608,7 +580,9 @@
                 "identifier": "walksymtab",
                 "newPage": false,
                 "searchKey": "plan9obj.walksymtab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -628,7 +602,9 @@
                 "identifier": "newTable",
                 "newPage": false,
                 "searchKey": "plan9obj.newTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -648,7 +624,9 @@
                 "identifier": "TestOpen",
                 "newPage": false,
                 "searchKey": "plan9obj.TestOpen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -668,7 +646,9 @@
                 "identifier": "TestOpenFailure",
                 "newPage": false,
                 "searchKey": "plan9obj.TestOpenFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

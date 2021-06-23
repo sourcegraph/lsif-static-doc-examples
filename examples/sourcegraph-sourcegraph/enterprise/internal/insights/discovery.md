@@ -84,10 +84,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="settingsExample" href="#settingsExample">var settingsExample</a>
 
 ```
 searchKey: discovery.settingsExample
+tags: [private]
 ```
 
 ```Go
@@ -96,11 +101,14 @@ var settingsExample = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DefaultRepoLister" href="#DefaultRepoLister">type DefaultRepoLister interface</a>
 
 ```
 searchKey: discovery.DefaultRepoLister
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +123,6 @@ DefaultRepoLister is a subset of the API exposed by the backend.CachedDefaultRep
 
 ```
 searchKey: discovery.RepoStore
-tags: [exported]
 ```
 
 ```Go
@@ -130,7 +137,6 @@ RepoStore is a subset of the API exposed by the database.Repos() store.
 
 ```
 searchKey: discovery.AllReposIterator
-tags: [exported]
 ```
 
 ```Go
@@ -160,6 +166,7 @@ It caches multiple consecutive uses in order to ensure repository lists (which c
 
 ```
 searchKey: discovery.AllReposIterator.timeSince
+tags: [private]
 ```
 
 ```Go
@@ -170,7 +177,6 @@ func (a *AllReposIterator) timeSince(t time.Time) time.Duration
 
 ```
 searchKey: discovery.AllReposIterator.ForEach
-tags: [exported]
 ```
 
 ```Go
@@ -187,6 +193,7 @@ If the forEach function returns an error, pagination is stopped and the error re
 
 ```
 searchKey: discovery.AllReposIterator.cachedRepoStoreList
+tags: [private]
 ```
 
 ```Go
@@ -201,6 +208,7 @@ This is primarily useful because we call this function e.g. 1 time per 365 days.
 
 ```
 searchKey: discovery.cachedPageRequest
+tags: [private]
 ```
 
 ```Go
@@ -214,7 +222,6 @@ type cachedPageRequest struct {
 
 ```
 searchKey: discovery.SettingStore
-tags: [exported]
 ```
 
 ```Go
@@ -230,7 +237,6 @@ SettingStore is a subset of the API exposed by the database.Settings() store.
 
 ```
 searchKey: discovery.MockDefaultRepoLister
-tags: [exported]
 ```
 
 ```Go
@@ -247,7 +253,6 @@ MockDefaultRepoLister is a mock implementation of the DefaultRepoLister interfac
 
 ```
 searchKey: discovery.NewMockDefaultRepoLister
-tags: [exported]
 ```
 
 ```Go
@@ -260,7 +265,6 @@ NewMockDefaultRepoLister creates a new mock of the DefaultRepoLister interface. 
 
 ```
 searchKey: discovery.NewMockDefaultRepoListerFrom
-tags: [exported]
 ```
 
 ```Go
@@ -273,7 +277,6 @@ NewMockDefaultRepoListerFrom creates a new mock of the MockDefaultRepoLister int
 
 ```
 searchKey: discovery.MockDefaultRepoLister.List
-tags: [exported]
 ```
 
 ```Go
@@ -286,7 +289,6 @@ List delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: discovery.DefaultRepoListerListFunc
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +306,6 @@ DefaultRepoListerListFunc describes the behavior when the List method of the par
 
 ```
 searchKey: discovery.DefaultRepoListerListFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -317,7 +318,6 @@ SetDefaultHook sets function that is called when the List method of the parent M
 
 ```
 searchKey: discovery.DefaultRepoListerListFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -330,7 +330,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the List m
 
 ```
 searchKey: discovery.DefaultRepoListerListFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -343,7 +342,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: discovery.DefaultRepoListerListFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -356,6 +354,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: discovery.DefaultRepoListerListFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +365,7 @@ func (f *DefaultRepoListerListFunc) nextHook() func(context.Context) ([]types.Re
 
 ```
 searchKey: discovery.DefaultRepoListerListFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -376,7 +376,6 @@ func (f *DefaultRepoListerListFunc) appendCall(r0 DefaultRepoListerListFuncCall)
 
 ```
 searchKey: discovery.DefaultRepoListerListFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -389,7 +388,6 @@ History returns a sequence of DefaultRepoListerListFuncCall objects describing t
 
 ```
 searchKey: discovery.DefaultRepoListerListFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +410,6 @@ DefaultRepoListerListFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: discovery.DefaultRepoListerListFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -425,7 +422,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: discovery.DefaultRepoListerListFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -438,7 +434,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: discovery.MockRepoStore
-tags: [exported]
 ```
 
 ```Go
@@ -455,7 +450,6 @@ MockRepoStore is a mock implementation of the RepoStore interface (from the pack
 
 ```
 searchKey: discovery.NewMockRepoStore
-tags: [exported]
 ```
 
 ```Go
@@ -468,7 +462,6 @@ NewMockRepoStore creates a new mock of the RepoStore interface. All methods retu
 
 ```
 searchKey: discovery.NewMockRepoStoreFrom
-tags: [exported]
 ```
 
 ```Go
@@ -481,7 +474,6 @@ NewMockRepoStoreFrom creates a new mock of the MockRepoStore interface. All meth
 
 ```
 searchKey: discovery.MockRepoStore.List
-tags: [exported]
 ```
 
 ```Go
@@ -494,7 +486,6 @@ List delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: discovery.RepoStoreListFunc
-tags: [exported]
 ```
 
 ```Go
@@ -512,7 +503,6 @@ RepoStoreListFunc describes the behavior when the List method of the parent Mock
 
 ```
 searchKey: discovery.RepoStoreListFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -525,7 +515,6 @@ SetDefaultHook sets function that is called when the List method of the parent M
 
 ```
 searchKey: discovery.RepoStoreListFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -538,7 +527,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the List m
 
 ```
 searchKey: discovery.RepoStoreListFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -551,7 +539,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: discovery.RepoStoreListFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -564,6 +551,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: discovery.RepoStoreListFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -574,6 +562,7 @@ func (f *RepoStoreListFunc) nextHook() func(context.Context, database.ReposListO
 
 ```
 searchKey: discovery.RepoStoreListFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -584,7 +573,6 @@ func (f *RepoStoreListFunc) appendCall(r0 RepoStoreListFuncCall)
 
 ```
 searchKey: discovery.RepoStoreListFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -597,7 +585,6 @@ History returns a sequence of RepoStoreListFuncCall objects describing the invoc
 
 ```
 searchKey: discovery.RepoStoreListFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -623,7 +610,6 @@ RepoStoreListFuncCall is an object that describes an invocation of method List o
 
 ```
 searchKey: discovery.RepoStoreListFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -636,7 +622,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: discovery.RepoStoreListFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -649,7 +634,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: discovery.MockSettingStore
-tags: [exported]
 ```
 
 ```Go
@@ -669,7 +653,6 @@ MockSettingStore is a mock implementation of the SettingStore interface (from th
 
 ```
 searchKey: discovery.NewMockSettingStore
-tags: [exported]
 ```
 
 ```Go
@@ -682,7 +665,6 @@ NewMockSettingStore creates a new mock of the SettingStore interface. All method
 
 ```
 searchKey: discovery.NewMockSettingStoreFrom
-tags: [exported]
 ```
 
 ```Go
@@ -695,7 +677,6 @@ NewMockSettingStoreFrom creates a new mock of the MockSettingStore interface. Al
 
 ```
 searchKey: discovery.MockSettingStore.GetLastestSchemaSettings
-tags: [exported]
 ```
 
 ```Go
@@ -708,7 +689,6 @@ GetLastestSchemaSettings delegates to the next hook function in the queue and st
 
 ```
 searchKey: discovery.MockSettingStore.GetLatest
-tags: [exported]
 ```
 
 ```Go
@@ -721,7 +701,6 @@ GetLatest delegates to the next hook function in the queue and stores the parame
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -739,7 +718,6 @@ SettingStoreGetLastestSchemaSettingsFunc describes the behavior when the GetLast
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -752,7 +730,6 @@ SetDefaultHook sets function that is called when the GetLastestSchemaSettings me
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -765,7 +742,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetLas
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -778,7 +754,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -791,6 +766,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +777,7 @@ func (f *SettingStoreGetLastestSchemaSettingsFunc) nextHook() func(context.Conte
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -811,7 +788,6 @@ func (f *SettingStoreGetLastestSchemaSettingsFunc) appendCall(r0 SettingStoreGet
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -824,7 +800,6 @@ History returns a sequence of SettingStoreGetLastestSchemaSettingsFuncCall objec
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -850,7 +825,6 @@ SettingStoreGetLastestSchemaSettingsFuncCall is an object that describes an invo
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -863,7 +837,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -876,7 +849,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: discovery.SettingStoreGetLatestFunc
-tags: [exported]
 ```
 
 ```Go
@@ -894,7 +866,6 @@ SettingStoreGetLatestFunc describes the behavior when the GetLatest method of th
 
 ```
 searchKey: discovery.SettingStoreGetLatestFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -907,7 +878,6 @@ SetDefaultHook sets function that is called when the GetLatest method of the par
 
 ```
 searchKey: discovery.SettingStoreGetLatestFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -920,7 +890,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetLat
 
 ```
 searchKey: discovery.SettingStoreGetLatestFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -933,7 +902,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: discovery.SettingStoreGetLatestFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -946,6 +914,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: discovery.SettingStoreGetLatestFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -956,6 +925,7 @@ func (f *SettingStoreGetLatestFunc) nextHook() func(context.Context, api.Setting
 
 ```
 searchKey: discovery.SettingStoreGetLatestFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -966,7 +936,6 @@ func (f *SettingStoreGetLatestFunc) appendCall(r0 SettingStoreGetLatestFuncCall)
 
 ```
 searchKey: discovery.SettingStoreGetLatestFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -979,7 +948,6 @@ History returns a sequence of SettingStoreGetLatestFuncCall objects describing t
 
 ```
 searchKey: discovery.SettingStoreGetLatestFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1005,7 +973,6 @@ SettingStoreGetLatestFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: discovery.SettingStoreGetLatestFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1018,7 +985,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: discovery.SettingStoreGetLatestFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1029,11 +995,14 @@ Results returns an interface slice containing the results of this invocation.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Discover" href="#Discover">func Discover(ctx context.Context, settingStore SettingStore) ([]*schema.Insight, error)</a>
 
 ```
 searchKey: discovery.Discover
-tags: [exported]
 ```
 
 ```Go
@@ -1048,6 +1017,7 @@ TODO(slimsag): future: include user/org settings and consider security implicati
 
 ```
 searchKey: discovery.parseUserSettings
+tags: [private]
 ```
 
 ```Go
@@ -1058,7 +1028,6 @@ func parseUserSettings(settings *api.Settings) (*schema.Settings, error)
 
 ```
 searchKey: discovery.EncodeSeriesID
-tags: [exported]
 ```
 
 ```Go
@@ -1073,6 +1042,7 @@ Note that since the series ID hash is stored in the database, it must remain sta
 
 ```
 searchKey: discovery.sha256String
+tags: [private]
 ```
 
 ```Go
@@ -1083,6 +1053,7 @@ func sha256String(s string) string
 
 ```
 searchKey: discovery.TestAllReposIterator
+tags: [private]
 ```
 
 ```Go
@@ -1095,6 +1066,7 @@ TestAllReposIterator tests the AllReposIterator in the common use cases.
 
 ```
 searchKey: discovery.TestAllReposIterator_DotCom
+tags: [private]
 ```
 
 ```Go
@@ -1107,6 +1079,7 @@ TestAllReposIterator tests the AllReposIterator for Sourcegraph.com mode. Unfort
 
 ```
 searchKey: discovery.TestDiscover
+tags: [private]
 ```
 
 ```Go
@@ -1117,6 +1090,7 @@ func TestDiscover(t *testing.T)
 
 ```
 searchKey: discovery.Test_parseUserSettings
+tags: [private]
 ```
 
 ```Go
@@ -1127,6 +1101,7 @@ func Test_parseUserSettings(t *testing.T)
 
 ```
 searchKey: discovery.TestEncodeSeriesID
+tags: [private]
 ```
 
 ```Go

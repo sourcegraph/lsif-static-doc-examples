@@ -22,18 +22,21 @@
         * [func (s *TestStore) InsertTestMonitor(ctx context.Context, t *testing.T) (*codemonitors.Monitor, error)](#TestStore.InsertTestMonitor)
 * [Functions](#func)
     * [func quote(s string) *sqlf.Query](#quote)
-    * [func init()](#init)
+    * [func init()](#init.monitor_creator.go)
     * [func NewTestUser(ctx context.Context, t *testing.T) (name string, id int32, namespace graphql.ID, userContext context.Context)](#NewTestUser)
     * [func insertTestUser(t *testing.T, db *sql.DB, name string, isAdmin bool) (userID int32)](#insertTestUser)
 
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TriggerJobs" href="#TriggerJobs">const TriggerJobs</a>
 
 ```
 searchKey: storetest.TriggerJobs
-tags: [exported]
 ```
 
 ```Go
@@ -44,7 +47,6 @@ const TriggerJobs JobTable = iota
 
 ```
 searchKey: storetest.ActionJobs
-tags: [exported]
 ```
 
 ```Go
@@ -55,7 +57,6 @@ const ActionJobs
 
 ```
 searchKey: storetest.Queued
-tags: [exported]
 ```
 
 ```Go
@@ -66,7 +67,6 @@ const Queued JobState = iota
 
 ```
 searchKey: storetest.Processing
-tags: [exported]
 ```
 
 ```Go
@@ -77,7 +77,6 @@ const Processing
 
 ```
 searchKey: storetest.Completed
-tags: [exported]
 ```
 
 ```Go
@@ -88,7 +87,6 @@ const Completed
 
 ```
 searchKey: storetest.Errored
-tags: [exported]
 ```
 
 ```Go
@@ -99,7 +97,6 @@ const Errored
 
 ```
 searchKey: storetest.Failed
-tags: [exported]
 ```
 
 ```Go
@@ -110,6 +107,7 @@ const Failed
 
 ```
 searchKey: storetest.setStatusFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +118,7 @@ const setStatusFmtStr = ...
 
 ```
 searchKey: storetest.testQuery
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +129,7 @@ const testQuery = "repo:github\\.com/sourcegraph/sourcegraph func type:diff patt
 
 ```
 searchKey: storetest.testDescription
+tags: [private]
 ```
 
 ```Go
@@ -138,11 +138,14 @@ const testDescription = "test description"
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="JobTable" href="#JobTable">type JobTable int</a>
 
 ```
 searchKey: storetest.JobTable
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +156,6 @@ type JobTable int
 
 ```
 searchKey: storetest.JobState
-tags: [exported]
 ```
 
 ```Go
@@ -164,7 +166,6 @@ type JobState int
 
 ```
 searchKey: storetest.TestStore
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +178,6 @@ type TestStore struct {
 
 ```
 searchKey: storetest.NewTestStoreWithStore
-tags: [exported]
 ```
 
 ```Go
@@ -188,7 +188,6 @@ func NewTestStoreWithStore(t *testing.T, store *codemonitors.Store) (context.Con
 
 ```
 searchKey: storetest.TestStore.SetJobStatus
-tags: [exported]
 ```
 
 ```Go
@@ -199,7 +198,6 @@ func (s *TestStore) SetJobStatus(ctx context.Context, table JobTable, state JobS
 
 ```
 searchKey: storetest.TestStore.InsertTestMonitor
-tags: [exported]
 ```
 
 ```Go
@@ -208,10 +206,15 @@ func (s *TestStore) InsertTestMonitor(ctx context.Context, t *testing.T) (*codem
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="quote" href="#quote">func quote(s string) *sqlf.Query</a>
 
 ```
 searchKey: storetest.quote
+tags: [private]
 ```
 
 ```Go
@@ -220,10 +223,11 @@ func quote(s string) *sqlf.Query
 
 quote wraps the given string in a *sqlf.Query so that it is not passed to the database as a parameter. It is necessary to quote things such as table names, columns, and other expressions that are not simple values. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.monitor_creator.go" href="#init.monitor_creator.go">func init()</a>
 
 ```
 searchKey: storetest.init
+tags: [private]
 ```
 
 ```Go
@@ -234,7 +238,6 @@ func init()
 
 ```
 searchKey: storetest.NewTestUser
-tags: [exported]
 ```
 
 ```Go
@@ -245,6 +248,7 @@ func NewTestUser(ctx context.Context, t *testing.T) (name string, id int32, name
 
 ```
 searchKey: storetest.insertTestUser
+tags: [private]
 ```
 
 ```Go

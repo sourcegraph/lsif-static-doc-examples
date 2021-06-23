@@ -93,15 +93,10 @@ See [https://en.wikipedia.org/wiki/Mathematics_of_cyclic_redundancy_checks#Rever
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Size" href="#Size">const Size</a>
 
 ```
 searchKey: crc32.Size
-tags: [exported]
 ```
 
 ```Go
@@ -114,7 +109,6 @@ The size of a CRC-32 checksum in bytes.
 
 ```
 searchKey: crc32.IEEE
-tags: [exported]
 ```
 
 ```Go
@@ -129,7 +123,6 @@ IEEE is by far and away the most common CRC-32 polynomial. Used by ethernet (IEE
 
 ```
 searchKey: crc32.Castagnoli
-tags: [exported]
 ```
 
 ```Go
@@ -144,7 +137,6 @@ Castagnoli's polynomial, used in iSCSI. Has better error detection characteristi
 
 ```
 searchKey: crc32.Koopman
-tags: [exported]
 ```
 
 ```Go
@@ -159,6 +151,7 @@ Koopman's polynomial. Also has better error detection characteristics than IEEE.
 
 ```
 searchKey: crc32.magic
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +162,7 @@ const magic = "crc\x01"
 
 ```
 searchKey: crc32.marshaledSize
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +173,7 @@ const marshaledSize = len(magic) + 4 + 4
 
 ```
 searchKey: crc32.castagnoliK1
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +184,7 @@ const castagnoliK1 = 168
 
 ```
 searchKey: crc32.castagnoliK2
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +195,7 @@ const castagnoliK2 = 1344
 
 ```
 searchKey: crc32.slicing8Cutoff
+tags: [private]
 ```
 
 ```Go
@@ -209,14 +206,11 @@ Use slicing-by-8 when payload >= this value.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="castagnoliTable" href="#castagnoliTable">var castagnoliTable</a>
 
 ```
 searchKey: crc32.castagnoliTable
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +223,7 @@ castagnoliTable points to a lazily initialized Table for the Castagnoli polynomi
 
 ```
 searchKey: crc32.castagnoliTable8
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +234,7 @@ var castagnoliTable8 *slicing8Table
 
 ```
 searchKey: crc32.castagnoliArchImpl
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +245,7 @@ var castagnoliArchImpl bool
 
 ```
 searchKey: crc32.updateCastagnoli
+tags: [private]
 ```
 
 ```Go
@@ -259,6 +256,7 @@ var updateCastagnoli func(crc uint32, p []byte) uint32
 
 ```
 searchKey: crc32.castagnoliOnce
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +267,7 @@ var castagnoliOnce sync.Once
 
 ```
 searchKey: crc32.haveCastagnoli
+tags: [private]
 ```
 
 ```Go
@@ -279,7 +278,6 @@ var haveCastagnoli uint32
 
 ```
 searchKey: crc32.IEEETable
-tags: [exported]
 ```
 
 ```Go
@@ -292,6 +290,7 @@ IEEETable is the table for the IEEE polynomial.
 
 ```
 searchKey: crc32.ieeeTable8
+tags: [private]
 ```
 
 ```Go
@@ -304,6 +303,7 @@ ieeeTable8 is the slicing8Table for IEEE
 
 ```
 searchKey: crc32.ieeeArchImpl
+tags: [private]
 ```
 
 ```Go
@@ -314,6 +314,7 @@ var ieeeArchImpl bool
 
 ```
 searchKey: crc32.updateIEEE
+tags: [private]
 ```
 
 ```Go
@@ -324,6 +325,7 @@ var updateIEEE func(crc uint32, p []byte) uint32
 
 ```
 searchKey: crc32.ieeeOnce
+tags: [private]
 ```
 
 ```Go
@@ -334,6 +336,7 @@ var ieeeOnce sync.Once
 
 ```
 searchKey: crc32.castagnoliSSE42TableK1
+tags: [private]
 ```
 
 ```Go
@@ -344,6 +347,7 @@ var castagnoliSSE42TableK1 *sse42Table
 
 ```
 searchKey: crc32.castagnoliSSE42TableK2
+tags: [private]
 ```
 
 ```Go
@@ -354,6 +358,7 @@ var castagnoliSSE42TableK2 *sse42Table
 
 ```
 searchKey: crc32.archIeeeTable8
+tags: [private]
 ```
 
 ```Go
@@ -364,6 +369,7 @@ var archIeeeTable8 *slicing8Table
 
 ```
 searchKey: crc32.golden
+tags: [private]
 ```
 
 ```Go
@@ -372,15 +378,10 @@ var golden = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Table" href="#Table">type Table [256]uint32</a>
 
 ```
 searchKey: crc32.Table
-tags: [exported]
 ```
 
 ```Go
@@ -393,7 +394,6 @@ Table is a 256-word table representing the polynomial for efficient processing.
 
 ```
 searchKey: crc32.MakeTable
-tags: [exported]
 ```
 
 ```Go
@@ -406,6 +406,7 @@ MakeTable returns a Table constructed from the specified polynomial. The content
 
 ```
 searchKey: crc32.simpleMakeTable
+tags: [private]
 ```
 
 ```Go
@@ -418,6 +419,7 @@ simpleMakeTable allocates and constructs a Table for the specified polynomial. T
 
 ```
 searchKey: crc32.digest
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +435,7 @@ digest represents the partial evaluation of a checksum.
 
 ```
 searchKey: crc32.digest.Size
+tags: [private]
 ```
 
 ```Go
@@ -443,6 +446,7 @@ func (d *digest) Size() int
 
 ```
 searchKey: crc32.digest.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -453,6 +457,7 @@ func (d *digest) BlockSize() int
 
 ```
 searchKey: crc32.digest.Reset
+tags: [private]
 ```
 
 ```Go
@@ -463,6 +468,7 @@ func (d *digest) Reset()
 
 ```
 searchKey: crc32.digest.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -473,6 +479,7 @@ func (d *digest) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: crc32.digest.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -483,6 +490,7 @@ func (d *digest) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: crc32.digest.Write
+tags: [private]
 ```
 
 ```Go
@@ -493,6 +501,7 @@ func (d *digest) Write(p []byte) (n int, err error)
 
 ```
 searchKey: crc32.digest.Sum32
+tags: [private]
 ```
 
 ```Go
@@ -503,6 +512,7 @@ func (d *digest) Sum32() uint32
 
 ```
 searchKey: crc32.digest.Sum
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +523,7 @@ func (d *digest) Sum(in []byte) []byte
 
 ```
 searchKey: crc32.sse42Table
+tags: [private]
 ```
 
 ```Go
@@ -523,6 +534,7 @@ type sse42Table [4]Table
 
 ```
 searchKey: crc32.slicing8Table
+tags: [private]
 ```
 
 ```Go
@@ -535,6 +547,7 @@ slicing8Table is array of 8 Tables, used by the slicing-by-8 algorithm.
 
 ```
 searchKey: crc32.slicingMakeTable
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +560,7 @@ slicingMakeTable constructs a slicing8Table for the specified polynomial. The ta
 
 ```
 searchKey: crc32.test
+tags: [private]
 ```
 
 ```Go
@@ -560,14 +574,11 @@ type test struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="castagnoliInit" href="#castagnoliInit">func castagnoliInit()</a>
 
 ```
 searchKey: crc32.castagnoliInit
+tags: [private]
 ```
 
 ```Go
@@ -578,6 +589,7 @@ func castagnoliInit()
 
 ```
 searchKey: crc32.ieeeInit
+tags: [private]
 ```
 
 ```Go
@@ -588,7 +600,6 @@ func ieeeInit()
 
 ```
 searchKey: crc32.New
-tags: [exported]
 ```
 
 ```Go
@@ -601,7 +612,6 @@ New creates a new hash.Hash32 computing the CRC-32 checksum using the polynomial
 
 ```
 searchKey: crc32.NewIEEE
-tags: [exported]
 ```
 
 ```Go
@@ -614,6 +624,7 @@ NewIEEE creates a new hash.Hash32 computing the CRC-32 checksum using the IEEE p
 
 ```
 searchKey: crc32.appendUint32
+tags: [private]
 ```
 
 ```Go
@@ -624,6 +635,7 @@ func appendUint32(b []byte, x uint32) []byte
 
 ```
 searchKey: crc32.readUint32
+tags: [private]
 ```
 
 ```Go
@@ -634,7 +646,6 @@ func readUint32(b []byte) uint32
 
 ```
 searchKey: crc32.Update
-tags: [exported]
 ```
 
 ```Go
@@ -647,7 +658,6 @@ Update returns the result of adding the bytes in p to the crc.
 
 ```
 searchKey: crc32.Checksum
-tags: [exported]
 ```
 
 ```Go
@@ -660,7 +670,6 @@ Checksum returns the CRC-32 checksum of data using the polynomial represented by
 
 ```
 searchKey: crc32.ChecksumIEEE
-tags: [exported]
 ```
 
 ```Go
@@ -673,6 +682,7 @@ ChecksumIEEE returns the CRC-32 checksum of data using the IEEE polynomial.
 
 ```
 searchKey: crc32.tableSum
+tags: [private]
 ```
 
 ```Go
@@ -685,6 +695,7 @@ tableSum returns the IEEE checksum of table t.
 
 ```
 searchKey: crc32.castagnoliSSE42
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +708,7 @@ castagnoliSSE42 is defined in crc32_amd64.s and uses the SSE 4.2 CRC32 instructi
 
 ```
 searchKey: crc32.castagnoliSSE42Triple
+tags: [private]
 ```
 
 ```Go
@@ -713,6 +725,7 @@ castagnoliSSE42Triple is defined in crc32_amd64.s and uses the SSE 4.2 CRC32 ins
 
 ```
 searchKey: crc32.ieeeCLMUL
+tags: [private]
 ```
 
 ```Go
@@ -725,6 +738,7 @@ ieeeCLMUL is defined in crc_amd64.s and uses the PCLMULQDQ instruction as well a
 
 ```
 searchKey: crc32.archAvailableCastagnoli
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +749,7 @@ func archAvailableCastagnoli() bool
 
 ```
 searchKey: crc32.archInitCastagnoli
+tags: [private]
 ```
 
 ```Go
@@ -745,6 +760,7 @@ func archInitCastagnoli()
 
 ```
 searchKey: crc32.castagnoliShift
+tags: [private]
 ```
 
 ```Go
@@ -757,6 +773,7 @@ castagnoliShift computes the CRC32-C of K1 or K2 zeroes (depending on the table 
 
 ```
 searchKey: crc32.archUpdateCastagnoli
+tags: [private]
 ```
 
 ```Go
@@ -767,6 +784,7 @@ func archUpdateCastagnoli(crc uint32, p []byte) uint32
 
 ```
 searchKey: crc32.archAvailableIEEE
+tags: [private]
 ```
 
 ```Go
@@ -777,6 +795,7 @@ func archAvailableIEEE() bool
 
 ```
 searchKey: crc32.archInitIEEE
+tags: [private]
 ```
 
 ```Go
@@ -787,6 +806,7 @@ func archInitIEEE()
 
 ```
 searchKey: crc32.archUpdateIEEE
+tags: [private]
 ```
 
 ```Go
@@ -797,6 +817,7 @@ func archUpdateIEEE(crc uint32, p []byte) uint32
 
 ```
 searchKey: crc32.simplePopulateTable
+tags: [private]
 ```
 
 ```Go
@@ -809,6 +830,7 @@ simplePopulateTable constructs a Table for the specified polynomial, suitable fo
 
 ```
 searchKey: crc32.simpleUpdate
+tags: [private]
 ```
 
 ```Go
@@ -821,6 +843,7 @@ simpleUpdate uses the simple algorithm to update the CRC, given a table that was
 
 ```
 searchKey: crc32.slicingUpdate
+tags: [private]
 ```
 
 ```Go
@@ -833,6 +856,7 @@ slicingUpdate uses the slicing-by-8 algorithm to update the CRC, given a table t
 
 ```
 searchKey: crc32.TestCastagnoliRace
+tags: [private]
 ```
 
 ```Go
@@ -845,6 +869,7 @@ First test, so that it can be the one to initialize castagnoliTable.
 
 ```
 searchKey: crc32.testGoldenIEEE
+tags: [private]
 ```
 
 ```Go
@@ -857,6 +882,7 @@ testGoldenIEEE verifies that the given function returns correct IEEE checksums.
 
 ```
 searchKey: crc32.testGoldenCastagnoli
+tags: [private]
 ```
 
 ```Go
@@ -869,6 +895,7 @@ testGoldenCastagnoli verifies that the given function returns correct IEEE check
 
 ```
 searchKey: crc32.testCrossCheck
+tags: [private]
 ```
 
 ```Go
@@ -881,6 +908,7 @@ testCrossCheck generates random buffers of various lengths and verifies that the
 
 ```
 searchKey: crc32.TestSimple
+tags: [private]
 ```
 
 ```Go
@@ -893,6 +921,7 @@ TestSimple tests the simple generic algorithm.
 
 ```
 searchKey: crc32.TestGoldenMarshal
+tags: [private]
 ```
 
 ```Go
@@ -903,6 +932,7 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: crc32.TestMarshalTableMismatch
+tags: [private]
 ```
 
 ```Go
@@ -913,6 +943,7 @@ func TestMarshalTableMismatch(t *testing.T)
 
 ```
 searchKey: crc32.TestSlicing
+tags: [private]
 ```
 
 ```Go
@@ -925,6 +956,7 @@ TestSimple tests the slicing-by-8 algorithm.
 
 ```
 searchKey: crc32.TestArchIEEE
+tags: [private]
 ```
 
 ```Go
@@ -935,6 +967,7 @@ func TestArchIEEE(t *testing.T)
 
 ```
 searchKey: crc32.TestArchCastagnoli
+tags: [private]
 ```
 
 ```Go
@@ -945,6 +978,7 @@ func TestArchCastagnoli(t *testing.T)
 
 ```
 searchKey: crc32.TestGolden
+tags: [private]
 ```
 
 ```Go
@@ -955,6 +989,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: crc32.BenchmarkCRC32
+tags: [private]
 ```
 
 ```Go
@@ -965,6 +1000,7 @@ func BenchmarkCRC32(b *testing.B)
 
 ```
 searchKey: crc32.benchmarkAll
+tags: [private]
 ```
 
 ```Go
@@ -975,6 +1011,7 @@ func benchmarkAll(h hash.Hash32) func(b *testing.B)
 
 ```
 searchKey: crc32.benchmark
+tags: [private]
 ```
 
 ```Go

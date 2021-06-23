@@ -11,10 +11,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleDumpRequest" href="#ExampleDumpRequest">func ExampleDumpRequest()</a>
 
 ```
 searchKey: httputil_test.ExampleDumpRequest
+tags: [private]
 ```
 
 ```Go
@@ -25,6 +30,7 @@ func ExampleDumpRequest()
 
 ```
 searchKey: httputil_test.ExampleDumpRequestOut
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +41,7 @@ func ExampleDumpRequestOut()
 
 ```
 searchKey: httputil_test.ExampleDumpResponse
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +52,7 @@ func ExampleDumpResponse()
 
 ```
 searchKey: httputil_test.ExampleReverseProxy
+tags: [private]
 ```
 
 ```Go

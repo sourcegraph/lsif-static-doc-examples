@@ -92,10 +92,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="priorityLow" href="#priorityLow">const priorityLow</a>
 
 ```
 searchKey: authz.priorityLow
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +111,7 @@ const priorityLow priority = iota
 
 ```
 searchKey: authz.priorityHigh
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +122,7 @@ const priorityHigh
 
 ```
 searchKey: authz.requestTypeRepo
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +135,7 @@ A list of request types, the larger the value, the higher the priority. requestT
 
 ```
 searchKey: authz.requestTypeUser
+tags: [private]
 ```
 
 ```Go
@@ -138,10 +146,15 @@ A list of request types, the larger the value, the higher the priority. requestT
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="metricsNoPerms" href="#metricsNoPerms">var metricsNoPerms</a>
 
 ```
 searchKey: authz.metricsNoPerms
+tags: [private]
 ```
 
 ```Go
@@ -154,6 +167,7 @@ The metrics that are exposed to Prometheus.
 
 ```
 searchKey: authz.metricsStalePerms
+tags: [private]
 ```
 
 ```Go
@@ -166,6 +180,7 @@ The metrics that are exposed to Prometheus.
 
 ```
 searchKey: authz.metricsPermsGap
+tags: [private]
 ```
 
 ```Go
@@ -178,6 +193,7 @@ The metrics that are exposed to Prometheus.
 
 ```
 searchKey: authz.metricsSyncDuration
+tags: [private]
 ```
 
 ```Go
@@ -190,6 +206,7 @@ The metrics that are exposed to Prometheus.
 
 ```
 searchKey: authz.metricsSyncErrors
+tags: [private]
 ```
 
 ```Go
@@ -202,6 +219,7 @@ The metrics that are exposed to Prometheus.
 
 ```
 searchKey: authz.metricsQueueSize
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +232,7 @@ The metrics that are exposed to Prometheus.
 
 ```
 searchKey: authz.updateRegex
+tags: [private]
 ```
 
 ```Go
@@ -224,6 +243,7 @@ var updateRegex = flag.String("update", "", "Update testdata of tests matching t
 
 ```
 searchKey: authz.dsn
+tags: [private]
 ```
 
 ```Go
@@ -234,6 +254,7 @@ var dsn = flag.String("dsn", "", "Database connection string to use in integrati
 
 ```
 searchKey: authz.cmpOpts
+tags: [private]
 ```
 
 ```Go
@@ -244,11 +265,14 @@ The options to allow cmp to compare unexported fields.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="PermsSyncer" href="#PermsSyncer">type PermsSyncer struct</a>
 
 ```
 searchKey: authz.PermsSyncer
-tags: [exported]
 ```
 
 ```Go
@@ -276,7 +300,6 @@ It is meant to be running in the background.
 
 ```
 searchKey: authz.NewPermsSyncer
-tags: [exported]
 ```
 
 ```Go
@@ -294,7 +317,6 @@ NewPermsSyncer returns a new permissions syncing manager.
 
 ```
 searchKey: authz.PermsSyncer.ScheduleUsers
-tags: [exported]
 ```
 
 ```Go
@@ -309,6 +331,7 @@ This method implements the repoupdater.Server.PermsSyncer in the OSS namespace.
 
 ```
 searchKey: authz.PermsSyncer.scheduleUsers
+tags: [private]
 ```
 
 ```Go
@@ -319,7 +342,6 @@ func (s *PermsSyncer) scheduleUsers(ctx context.Context, users ...scheduledUser)
 
 ```
 searchKey: authz.PermsSyncer.ScheduleRepos
-tags: [exported]
 ```
 
 ```Go
@@ -334,6 +356,7 @@ This method implements the repoupdater.Server.PermsSyncer in the OSS namespace.
 
 ```
 searchKey: authz.PermsSyncer.scheduleRepos
+tags: [private]
 ```
 
 ```Go
@@ -344,6 +367,7 @@ func (s *PermsSyncer) scheduleRepos(ctx context.Context, repos ...scheduledRepo)
 
 ```
 searchKey: authz.PermsSyncer.providersByServiceID
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +380,7 @@ providersByServiceID returns a list of authz.Provider configured in the external
 
 ```
 searchKey: authz.PermsSyncer.providersByURNs
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +393,7 @@ providersByURNs returns a list of authz.Provider configured in the external serv
 
 ```
 searchKey: authz.PermsSyncer.syncUserPerms
+tags: [private]
 ```
 
 ```Go
@@ -380,6 +406,7 @@ syncUserPerms processes permissions syncing request in user-centric way. When `n
 
 ```
 searchKey: authz.PermsSyncer.syncRepoPerms
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +419,7 @@ syncRepoPerms processes permissions syncing request in repository-centric way. W
 
 ```
 searchKey: authz.PermsSyncer.waitForRateLimit
+tags: [private]
 ```
 
 ```Go
@@ -404,6 +432,7 @@ waitForRateLimit blocks until rate limit permits n events to happen. It returns 
 
 ```
 searchKey: authz.PermsSyncer.syncPerms
+tags: [private]
 ```
 
 ```Go
@@ -416,6 +445,7 @@ syncPerms processes the permissions syncing request and remove the request from 
 
 ```
 searchKey: authz.PermsSyncer.runSync
+tags: [private]
 ```
 
 ```Go
@@ -426,6 +456,7 @@ func (s *PermsSyncer) runSync(ctx context.Context)
 
 ```
 searchKey: authz.PermsSyncer.scheduleUsersWithNoPerms
+tags: [private]
 ```
 
 ```Go
@@ -438,6 +469,7 @@ scheduleUsersWithNoPerms returns computed schedules for users who have no permis
 
 ```
 searchKey: authz.PermsSyncer.scheduleReposWithNoPerms
+tags: [private]
 ```
 
 ```Go
@@ -450,6 +482,7 @@ scheduleReposWithNoPerms returns computed schedules for private repositories tha
 
 ```
 searchKey: authz.PermsSyncer.scheduleUsersWithOldestPerms
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +495,7 @@ scheduleUsersWithOldestPerms returns computed schedules for users who have oldes
 
 ```
 searchKey: authz.PermsSyncer.scheduleReposWithOldestPerms
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +508,7 @@ scheduleReposWithOldestPerms returns computed schedules for private repositories
 
 ```
 searchKey: authz.PermsSyncer.schedule
+tags: [private]
 ```
 
 ```Go
@@ -493,6 +528,7 @@ schedule computes schedule four lists in the following order:
 
 ```
 searchKey: authz.PermsSyncer.isDisabled
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +548,7 @@ isDisabled returns true if the background permissions syncing is not enabled. It
 
 ```
 searchKey: authz.PermsSyncer.runSchedule
+tags: [private]
 ```
 
 ```Go
@@ -522,7 +559,6 @@ func (s *PermsSyncer) runSchedule(ctx context.Context)
 
 ```
 searchKey: authz.PermsSyncer.DebugDump
-tags: [exported]
 ```
 
 ```Go
@@ -535,6 +571,7 @@ DebugDump returns the state of the permissions syncer for debugging.
 
 ```
 searchKey: authz.PermsSyncer.observe
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +582,7 @@ func (s *PermsSyncer) observe(ctx context.Context, family, title string) (contex
 
 ```
 searchKey: authz.PermsSyncer.collectMetrics
+tags: [private]
 ```
 
 ```Go
@@ -557,7 +595,6 @@ collectMetrics periodically collecting metrics values from both database and mem
 
 ```
 searchKey: authz.PermsSyncer.Run
-tags: [exported]
 ```
 
 ```Go
@@ -570,6 +607,7 @@ Run kicks off the permissions syncing process, this method is blocking and shoul
 
 ```
 searchKey: authz.schedule
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +623,7 @@ schedule contains information for scheduling users and repositories.
 
 ```
 searchKey: authz.scheduledUser
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +644,7 @@ scheduledUser contains information for scheduling a user.
 
 ```
 searchKey: authz.scheduledRepo
+tags: [private]
 ```
 
 ```Go
@@ -625,6 +665,7 @@ scheduledRepo contains for scheduling a repository.
 
 ```
 searchKey: authz.priority
+tags: [private]
 ```
 
 ```Go
@@ -637,6 +678,7 @@ priority defines how urgent the permissions syncing request is. Generally, if th
 
 ```
 searchKey: authz.requestType
+tags: [private]
 ```
 
 ```Go
@@ -649,6 +691,7 @@ requestType is the type of the permissions syncing request. It defines the permi
 
 ```
 searchKey: authz.requestType.higherPriorityThan
+tags: [private]
 ```
 
 ```Go
@@ -661,6 +704,7 @@ higherPriorityThan returns true if the current request type has higher priority 
 
 ```
 searchKey: authz.requestMeta
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +723,7 @@ requestMeta contains metadata of a permissions syncing request.
 
 ```
 searchKey: authz.syncRequest
+tags: [private]
 ```
 
 ```Go
@@ -696,6 +741,7 @@ syncRequest is a permissions syncing request with its current status in the queu
 
 ```
 searchKey: authz.requestQueueKey
+tags: [private]
 ```
 
 ```Go
@@ -711,6 +757,7 @@ requestQueueKey is the key type for index in a requestQueue.
 
 ```
 searchKey: authz.requestQueue
+tags: [private]
 ```
 
 ```Go
@@ -732,6 +779,7 @@ requestQueue is a priority queue of permissions syncing requests. Requests with 
 
 ```
 searchKey: authz.newRequestQueue
+tags: [private]
 ```
 
 ```Go
@@ -742,6 +790,7 @@ func newRequestQueue() *requestQueue
 
 ```
 searchKey: authz.requestQueue.enqueue
+tags: [private]
 ```
 
 ```Go
@@ -758,6 +807,7 @@ If the given priority is higher than the one in the queue, the sync request's po
 
 ```
 searchKey: authz.requestQueue.remove
+tags: [private]
 ```
 
 ```Go
@@ -770,6 +820,7 @@ remove removes the sync request from the queue if the request.acquired matches t
 
 ```
 searchKey: authz.requestQueue.acquireNext
+tags: [private]
 ```
 
 ```Go
@@ -782,6 +833,7 @@ acquireNext acquires the next sync request. The acquired request must be removed
 
 ```
 searchKey: authz.requestQueue.release
+tags: [private]
 ```
 
 ```Go
@@ -794,6 +846,7 @@ release releases the acquired sync request from the queue (i.e. sets the acquire
 
 ```
 searchKey: authz.requestQueue.Len
+tags: [private]
 ```
 
 ```Go
@@ -804,6 +857,7 @@ func (q *requestQueue) Len() int
 
 ```
 searchKey: authz.requestQueue.Less
+tags: [private]
 ```
 
 ```Go
@@ -814,6 +868,7 @@ func (q *requestQueue) Less(i, j int) bool
 
 ```
 searchKey: authz.requestQueue.Swap
+tags: [private]
 ```
 
 ```Go
@@ -824,6 +879,7 @@ func (q *requestQueue) Swap(i, j int)
 
 ```
 searchKey: authz.requestQueue.Push
+tags: [private]
 ```
 
 ```Go
@@ -834,6 +890,7 @@ func (q *requestQueue) Push(x interface{})
 
 ```
 searchKey: authz.requestQueue.Pop
+tags: [private]
 ```
 
 ```Go
@@ -844,6 +901,7 @@ func (q *requestQueue) Pop() interface{}
 
 ```
 searchKey: authz.mockProvider
+tags: [private]
 ```
 
 ```Go
@@ -861,6 +919,7 @@ type mockProvider struct {
 
 ```
 searchKey: authz.mockProvider.FetchAccount
+tags: [private]
 ```
 
 ```Go
@@ -871,6 +930,7 @@ func (*mockProvider) FetchAccount(context.Context, *types.User, []*extsvc.Accoun
 
 ```
 searchKey: authz.mockProvider.ServiceType
+tags: [private]
 ```
 
 ```Go
@@ -881,6 +941,7 @@ func (p *mockProvider) ServiceType() string
 
 ```
 searchKey: authz.mockProvider.ServiceID
+tags: [private]
 ```
 
 ```Go
@@ -891,6 +952,7 @@ func (p *mockProvider) ServiceID() string
 
 ```
 searchKey: authz.mockProvider.URN
+tags: [private]
 ```
 
 ```Go
@@ -901,6 +963,7 @@ func (p *mockProvider) URN() string
 
 ```
 searchKey: authz.mockProvider.Validate
+tags: [private]
 ```
 
 ```Go
@@ -911,6 +974,7 @@ func (*mockProvider) Validate() []string
 
 ```
 searchKey: authz.mockProvider.FetchUserPerms
+tags: [private]
 ```
 
 ```Go
@@ -921,6 +985,7 @@ func (p *mockProvider) FetchUserPerms(ctx context.Context, acct *extsvc.Account)
 
 ```
 searchKey: authz.mockProvider.FetchRepoPerms
+tags: [private]
 ```
 
 ```Go
@@ -929,10 +994,15 @@ func (p *mockProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Reposito
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="notify" href="#notify">func notify(ch chan struct{})</a>
 
 ```
 searchKey: authz.notify
+tags: [private]
 ```
 
 ```Go
@@ -945,6 +1015,7 @@ notify performs a non-blocking send to the channel, so the channel must be buffe
 
 ```
 searchKey: authz.update
+tags: [private]
 ```
 
 ```Go
@@ -955,6 +1026,7 @@ func update(name string) bool
 
 ```
 searchKey: authz.TestIntegration_GitHubPermissions
+tags: [private]
 ```
 
 ```Go
@@ -969,6 +1041,7 @@ NOTE: To update VCR for this test, please use the token of "sourcegraph-vcr" for
 
 ```
 searchKey: authz.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -979,6 +1052,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: authz.TestPermsSyncer_ScheduleUsers
+tags: [private]
 ```
 
 ```Go
@@ -989,6 +1063,7 @@ func TestPermsSyncer_ScheduleUsers(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_ScheduleRepos
+tags: [private]
 ```
 
 ```Go
@@ -999,6 +1074,7 @@ func TestPermsSyncer_ScheduleRepos(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_syncUserPerms
+tags: [private]
 ```
 
 ```Go
@@ -1009,6 +1085,7 @@ func TestPermsSyncer_syncUserPerms(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_syncUserPerms_tokenExpire
+tags: [private]
 ```
 
 ```Go
@@ -1019,6 +1096,7 @@ func TestPermsSyncer_syncUserPerms_tokenExpire(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_syncUserPerms_prefixSpecs
+tags: [private]
 ```
 
 ```Go
@@ -1029,6 +1107,7 @@ func TestPermsSyncer_syncUserPerms_prefixSpecs(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_syncRepoPerms
+tags: [private]
 ```
 
 ```Go
@@ -1039,6 +1118,7 @@ func TestPermsSyncer_syncRepoPerms(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_waitForRateLimit
+tags: [private]
 ```
 
 ```Go
@@ -1049,6 +1129,7 @@ func TestPermsSyncer_waitForRateLimit(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_syncPerms
+tags: [private]
 ```
 
 ```Go
@@ -1059,6 +1140,7 @@ func TestPermsSyncer_syncPerms(t *testing.T)
 
 ```
 searchKey: authz.Test_requestQueue_enqueue
+tags: [private]
 ```
 
 ```Go
@@ -1069,6 +1151,7 @@ func Test_requestQueue_enqueue(t *testing.T)
 
 ```
 searchKey: authz.Test_requestQueue_remove
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1162,7 @@ func Test_requestQueue_remove(t *testing.T)
 
 ```
 searchKey: authz.Test_requestQueue_acquireNext
+tags: [private]
 ```
 
 ```Go
@@ -1089,6 +1173,7 @@ func Test_requestQueue_acquireNext(t *testing.T)
 
 ```
 searchKey: authz.Test_requestQueue_release
+tags: [private]
 ```
 
 ```Go
@@ -1099,6 +1184,7 @@ func Test_requestQueue_release(t *testing.T)
 
 ```
 searchKey: authz.Test_requestQueue_Less
+tags: [private]
 ```
 
 ```Go

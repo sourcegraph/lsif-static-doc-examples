@@ -21,10 +21,15 @@ Package testlog provides a back-channel communication path between tests and pac
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="panicOnExit0" href="#panicOnExit0">var panicOnExit0</a>
 
 ```
 searchKey: testlog.panicOnExit0
+tags: [private]
 ```
 
 ```Go
@@ -40,6 +45,7 @@ panicOnExit0 is the flag used for PanicOnExit0. This uses a lock because the val
 
 ```
 searchKey: testlog.logger
+tags: [private]
 ```
 
 ```Go
@@ -50,11 +56,14 @@ logger is the current logger Interface. We use an atomic.Value in case test star
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Interface" href="#Interface">type Interface interface</a>
 
 ```
 searchKey: testlog.Interface
-tags: [exported]
 ```
 
 ```Go
@@ -72,7 +81,6 @@ Interface is the interface required of test loggers. The os package will invoke 
 
 ```
 searchKey: testlog.Logger
-tags: [exported]
 ```
 
 ```Go
@@ -83,11 +91,14 @@ Logger returns the current test logger implementation. It returns nil if there i
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="PanicOnExit0" href="#PanicOnExit0">func PanicOnExit0() bool</a>
 
 ```
 searchKey: testlog.PanicOnExit0
-tags: [exported]
 ```
 
 ```Go
@@ -100,7 +111,6 @@ PanicOnExit0 reports whether to panic on a call to os.Exit(0). This is in the te
 
 ```
 searchKey: testlog.SetPanicOnExit0
-tags: [exported]
 ```
 
 ```Go
@@ -113,7 +123,6 @@ SetPanicOnExit0 sets panicOnExit0 to v.
 
 ```
 searchKey: testlog.SetLogger
-tags: [exported]
 ```
 
 ```Go
@@ -126,7 +135,6 @@ SetLogger sets the test logger implementation for the current process. It must b
 
 ```
 searchKey: testlog.Getenv
-tags: [exported]
 ```
 
 ```Go
@@ -139,7 +147,6 @@ Getenv calls Logger().Getenv, if a logger has been set.
 
 ```
 searchKey: testlog.Open
-tags: [exported]
 ```
 
 ```Go
@@ -152,7 +159,6 @@ Open calls Logger().Open, if a logger has been set.
 
 ```
 searchKey: testlog.Stat
-tags: [exported]
 ```
 
 ```Go

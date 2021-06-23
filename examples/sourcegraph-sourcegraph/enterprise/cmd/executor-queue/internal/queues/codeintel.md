@@ -21,11 +21,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="StalledJobMaximumAge" href="#StalledJobMaximumAge">const StalledJobMaximumAge</a>
 
 ```
 searchKey: codeintel.StalledJobMaximumAge
-tags: [exported]
 ```
 
 ```Go
@@ -38,7 +41,6 @@ StalledJobMaximumAge is the maximum allowable duration between updating the stat
 
 ```
 searchKey: codeintel.MaximumNumResets
-tags: [exported]
 ```
 
 ```Go
@@ -51,6 +53,7 @@ MaximumNumResets is the maximum number of times a job can be reset. If a job's f
 
 ```
 searchKey: codeintel.defaultOutfile
+tags: [private]
 ```
 
 ```Go
@@ -61,6 +64,7 @@ const defaultOutfile = "dump.lsif"
 
 ```
 searchKey: codeintel.uploadRoute
+tags: [private]
 ```
 
 ```Go
@@ -69,11 +73,14 @@ const uploadRoute = "/.executors/lsif/upload"
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
 searchKey: codeintel.Config
-tags: [exported]
 ```
 
 ```Go
@@ -90,7 +97,6 @@ type Config struct {
 
 ```
 searchKey: codeintel.Config.Load
-tags: [exported]
 ```
 
 ```Go
@@ -99,11 +105,14 @@ func (c *Config) Load()
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="QueueOptions" href="#QueueOptions">func QueueOptions(db dbutil.DB, config *Config, observationContext *observation.Context) apiserver.QueueOptions</a>
 
 ```
 searchKey: codeintel.QueueOptions
-tags: [exported]
 ```
 
 ```Go
@@ -114,6 +123,7 @@ func QueueOptions(db dbutil.DB, config *Config, observationContext *observation.
 
 ```
 searchKey: codeintel.newWorkerStore
+tags: [private]
 ```
 
 ```Go
@@ -126,6 +136,7 @@ newWorkerStore creates a dbworker store that wraps the lsif_indexes table.
 
 ```
 searchKey: codeintel.transformRecord
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +147,7 @@ func transformRecord(index store.Index, config *Config) (apiclient.Job, error)
 
 ```
 searchKey: codeintel.makeURL
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +158,7 @@ func makeURL(base, username, password string) (string, error)
 
 ```
 searchKey: codeintel.TestTransformRecord
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +169,7 @@ func TestTransformRecord(t *testing.T)
 
 ```
 searchKey: codeintel.TestTransformRecordWithoutIndexer
+tags: [private]
 ```
 
 ```Go

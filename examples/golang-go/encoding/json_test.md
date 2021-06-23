@@ -34,10 +34,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Unknown" href="#Unknown">const Unknown</a>
 
 ```
 searchKey: json_test.Unknown
+tags: [private]
 ```
 
 ```Go
@@ -48,6 +53,7 @@ const Unknown Animal = iota
 
 ```
 searchKey: json_test.Gopher
+tags: [private]
 ```
 
 ```Go
@@ -58,6 +64,7 @@ const Gopher
 
 ```
 searchKey: json_test.Zebra
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +75,7 @@ const Zebra
 
 ```
 searchKey: json_test.Unrecognized
+tags: [private]
 ```
 
 ```Go
@@ -78,6 +86,7 @@ const Unrecognized Size = iota
 
 ```
 searchKey: json_test.Small
+tags: [private]
 ```
 
 ```Go
@@ -88,6 +97,7 @@ const Small
 
 ```
 searchKey: json_test.Large
+tags: [private]
 ```
 
 ```Go
@@ -96,10 +106,15 @@ const Large
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Animal" href="#Animal">type Animal int</a>
 
 ```
 searchKey: json_test.Animal
+tags: [private]
 ```
 
 ```Go
@@ -110,6 +125,7 @@ type Animal int
 
 ```
 searchKey: json_test.Animal.UnmarshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +136,7 @@ func (a *Animal) UnmarshalJSON(b []byte) error
 
 ```
 searchKey: json_test.Animal.MarshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +147,7 @@ func (a Animal) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: json_test.Size
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +158,7 @@ type Size int
 
 ```
 searchKey: json_test.Size.UnmarshalText
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +169,7 @@ func (s *Size) UnmarshalText(text []byte) error
 
 ```
 searchKey: json_test.Size.MarshalText
+tags: [private]
 ```
 
 ```Go
@@ -158,10 +178,15 @@ func (s Size) MarshalText() ([]byte, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example_customMarshalJSON" href="#Example_customMarshalJSON">func Example_customMarshalJSON()</a>
 
 ```
 searchKey: json_test.Example_customMarshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +197,7 @@ func Example_customMarshalJSON()
 
 ```
 searchKey: json_test.ExampleMarshal
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +208,7 @@ func ExampleMarshal()
 
 ```
 searchKey: json_test.ExampleUnmarshal
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +219,7 @@ func ExampleUnmarshal()
 
 ```
 searchKey: json_test.ExampleDecoder
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +232,7 @@ This example uses a Decoder to decode a stream of distinct JSON values.
 
 ```
 searchKey: json_test.ExampleDecoder_Token
+tags: [private]
 ```
 
 ```Go
@@ -216,6 +245,7 @@ This example uses a Decoder to decode a stream of distinct JSON values.
 
 ```
 searchKey: json_test.ExampleDecoder_Decode_stream
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +258,7 @@ This example uses a Decoder to decode a streaming array of JSON objects.
 
 ```
 searchKey: json_test.ExampleRawMessage_unmarshal
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +271,7 @@ This example uses RawMessage to delay parsing part of a JSON message.
 
 ```
 searchKey: json_test.ExampleRawMessage_marshal
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +284,7 @@ This example uses RawMessage to use a precomputed JSON during marshal.
 
 ```
 searchKey: json_test.ExampleIndent
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +295,7 @@ func ExampleIndent()
 
 ```
 searchKey: json_test.ExampleMarshalIndent
+tags: [private]
 ```
 
 ```Go
@@ -272,6 +306,7 @@ func ExampleMarshalIndent()
 
 ```
 searchKey: json_test.ExampleValid
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +317,7 @@ func ExampleValid()
 
 ```
 searchKey: json_test.ExampleHTMLEscape
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +328,7 @@ func ExampleHTMLEscape()
 
 ```
 searchKey: json_test.Example_textMarshalJSON
+tags: [private]
 ```
 
 ```Go

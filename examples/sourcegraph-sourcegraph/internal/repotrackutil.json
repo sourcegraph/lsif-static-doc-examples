@@ -4,7 +4,9 @@
     "identifier": "repotrackutil",
     "newPage": true,
     "searchKey": "internal/repotrackutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "trackedRepo",
                 "newPage": false,
                 "searchKey": "repotrackutil.trackedRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "trackedRepoRe",
                 "newPage": false,
                 "searchKey": "repotrackutil.trackedRepoRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,9 +111,7 @@
                 "identifier": "GetTrackedRepo",
                 "newPage": false,
                 "searchKey": "repotrackutil.GetTrackedRepo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +131,9 @@
                 "identifier": "TestGetTrackedRepo",
                 "newPage": false,
                 "searchKey": "repotrackutil.TestGetTrackedRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

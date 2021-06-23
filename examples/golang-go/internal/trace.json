@@ -4,7 +4,9 @@
     "identifier": "trace",
     "newPage": true,
     "searchKey": "internal/trace",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "UtilSTW",
                 "newPage": false,
                 "searchKey": "trace.UtilSTW",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "UtilBackground",
                 "newPage": false,
                 "searchKey": "trace.UtilBackground",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "UtilAssist",
                 "newPage": false,
                 "searchKey": "trace.UtilAssist",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "UtilSweep",
                 "newPage": false,
                 "searchKey": "trace.UtilSweep",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "UtilPerProc",
                 "newPage": false,
                 "searchKey": "trace.UtilPerProc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,7 +144,9 @@
                 "identifier": "mudDegree",
                 "newPage": false,
                 "searchKey": "trace.mudDegree",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -170,7 +166,9 @@
                 "identifier": "gDead",
                 "newPage": false,
                 "searchKey": "trace.gDead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -190,7 +188,9 @@
                 "identifier": "gRunnable",
                 "newPage": false,
                 "searchKey": "trace.gRunnable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,7 +210,9 @@
                 "identifier": "gRunning",
                 "newPage": false,
                 "searchKey": "trace.gRunning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,7 +232,9 @@
                 "identifier": "gWaiting",
                 "newPage": false,
                 "searchKey": "trace.gWaiting",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -250,7 +254,9 @@
                 "identifier": "unordered",
                 "newPage": false,
                 "searchKey": "trace.unordered",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -270,7 +276,9 @@
                 "identifier": "garbage",
                 "newPage": false,
                 "searchKey": "trace.garbage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -290,7 +298,9 @@
                 "identifier": "noseq",
                 "newPage": false,
                 "searchKey": "trace.noseq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -310,7 +320,9 @@
                 "identifier": "seqinc",
                 "newPage": false,
                 "searchKey": "trace.seqinc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -330,9 +342,7 @@
                 "identifier": "FakeP",
                 "newPage": false,
                 "searchKey": "trace.FakeP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -352,9 +362,7 @@
                 "identifier": "TimerP",
                 "newPage": false,
                 "searchKey": "trace.TimerP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -374,9 +382,7 @@
                 "identifier": "NetpollP",
                 "newPage": false,
                 "searchKey": "trace.NetpollP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -396,9 +402,7 @@
                 "identifier": "SyscallP",
                 "newPage": false,
                 "searchKey": "trace.SyscallP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -418,9 +422,7 @@
                 "identifier": "GCP",
                 "newPage": false,
                 "searchKey": "trace.GCP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -440,9 +442,7 @@
                 "identifier": "EvNone",
                 "newPage": false,
                 "searchKey": "trace.EvNone",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -462,9 +462,7 @@
                 "identifier": "EvBatch",
                 "newPage": false,
                 "searchKey": "trace.EvBatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -484,9 +482,7 @@
                 "identifier": "EvFrequency",
                 "newPage": false,
                 "searchKey": "trace.EvFrequency",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -506,9 +502,7 @@
                 "identifier": "EvStack",
                 "newPage": false,
                 "searchKey": "trace.EvStack",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -528,9 +522,7 @@
                 "identifier": "EvGomaxprocs",
                 "newPage": false,
                 "searchKey": "trace.EvGomaxprocs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -550,9 +542,7 @@
                 "identifier": "EvProcStart",
                 "newPage": false,
                 "searchKey": "trace.EvProcStart",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -572,9 +562,7 @@
                 "identifier": "EvProcStop",
                 "newPage": false,
                 "searchKey": "trace.EvProcStop",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -594,9 +582,7 @@
                 "identifier": "EvGCStart",
                 "newPage": false,
                 "searchKey": "trace.EvGCStart",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -616,9 +602,7 @@
                 "identifier": "EvGCDone",
                 "newPage": false,
                 "searchKey": "trace.EvGCDone",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -638,9 +622,7 @@
                 "identifier": "EvGCSTWStart",
                 "newPage": false,
                 "searchKey": "trace.EvGCSTWStart",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -660,9 +642,7 @@
                 "identifier": "EvGCSTWDone",
                 "newPage": false,
                 "searchKey": "trace.EvGCSTWDone",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -682,9 +662,7 @@
                 "identifier": "EvGCSweepStart",
                 "newPage": false,
                 "searchKey": "trace.EvGCSweepStart",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -704,9 +682,7 @@
                 "identifier": "EvGCSweepDone",
                 "newPage": false,
                 "searchKey": "trace.EvGCSweepDone",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -726,9 +702,7 @@
                 "identifier": "EvGoCreate",
                 "newPage": false,
                 "searchKey": "trace.EvGoCreate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -748,9 +722,7 @@
                 "identifier": "EvGoStart",
                 "newPage": false,
                 "searchKey": "trace.EvGoStart",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -770,9 +742,7 @@
                 "identifier": "EvGoEnd",
                 "newPage": false,
                 "searchKey": "trace.EvGoEnd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -792,9 +762,7 @@
                 "identifier": "EvGoStop",
                 "newPage": false,
                 "searchKey": "trace.EvGoStop",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -814,9 +782,7 @@
                 "identifier": "EvGoSched",
                 "newPage": false,
                 "searchKey": "trace.EvGoSched",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -836,9 +802,7 @@
                 "identifier": "EvGoPreempt",
                 "newPage": false,
                 "searchKey": "trace.EvGoPreempt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -858,9 +822,7 @@
                 "identifier": "EvGoSleep",
                 "newPage": false,
                 "searchKey": "trace.EvGoSleep",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -880,9 +842,7 @@
                 "identifier": "EvGoBlock",
                 "newPage": false,
                 "searchKey": "trace.EvGoBlock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -902,9 +862,7 @@
                 "identifier": "EvGoUnblock",
                 "newPage": false,
                 "searchKey": "trace.EvGoUnblock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -924,9 +882,7 @@
                 "identifier": "EvGoBlockSend",
                 "newPage": false,
                 "searchKey": "trace.EvGoBlockSend",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -946,9 +902,7 @@
                 "identifier": "EvGoBlockRecv",
                 "newPage": false,
                 "searchKey": "trace.EvGoBlockRecv",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -968,9 +922,7 @@
                 "identifier": "EvGoBlockSelect",
                 "newPage": false,
                 "searchKey": "trace.EvGoBlockSelect",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -990,9 +942,7 @@
                 "identifier": "EvGoBlockSync",
                 "newPage": false,
                 "searchKey": "trace.EvGoBlockSync",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1012,9 +962,7 @@
                 "identifier": "EvGoBlockCond",
                 "newPage": false,
                 "searchKey": "trace.EvGoBlockCond",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1034,9 +982,7 @@
                 "identifier": "EvGoBlockNet",
                 "newPage": false,
                 "searchKey": "trace.EvGoBlockNet",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1056,9 +1002,7 @@
                 "identifier": "EvGoSysCall",
                 "newPage": false,
                 "searchKey": "trace.EvGoSysCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1078,9 +1022,7 @@
                 "identifier": "EvGoSysExit",
                 "newPage": false,
                 "searchKey": "trace.EvGoSysExit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1100,9 +1042,7 @@
                 "identifier": "EvGoSysBlock",
                 "newPage": false,
                 "searchKey": "trace.EvGoSysBlock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1122,9 +1062,7 @@
                 "identifier": "EvGoWaiting",
                 "newPage": false,
                 "searchKey": "trace.EvGoWaiting",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1144,9 +1082,7 @@
                 "identifier": "EvGoInSyscall",
                 "newPage": false,
                 "searchKey": "trace.EvGoInSyscall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1166,9 +1102,7 @@
                 "identifier": "EvHeapAlloc",
                 "newPage": false,
                 "searchKey": "trace.EvHeapAlloc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1188,9 +1122,7 @@
                 "identifier": "EvHeapGoal",
                 "newPage": false,
                 "searchKey": "trace.EvHeapGoal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1210,9 +1142,7 @@
                 "identifier": "EvTimerGoroutine",
                 "newPage": false,
                 "searchKey": "trace.EvTimerGoroutine",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1232,9 +1162,7 @@
                 "identifier": "EvFutileWakeup",
                 "newPage": false,
                 "searchKey": "trace.EvFutileWakeup",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1254,9 +1182,7 @@
                 "identifier": "EvString",
                 "newPage": false,
                 "searchKey": "trace.EvString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1276,9 +1202,7 @@
                 "identifier": "EvGoStartLocal",
                 "newPage": false,
                 "searchKey": "trace.EvGoStartLocal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1298,9 +1222,7 @@
                 "identifier": "EvGoUnblockLocal",
                 "newPage": false,
                 "searchKey": "trace.EvGoUnblockLocal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1320,9 +1242,7 @@
                 "identifier": "EvGoSysExitLocal",
                 "newPage": false,
                 "searchKey": "trace.EvGoSysExitLocal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1342,9 +1262,7 @@
                 "identifier": "EvGoStartLabel",
                 "newPage": false,
                 "searchKey": "trace.EvGoStartLabel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1364,9 +1282,7 @@
                 "identifier": "EvGoBlockGC",
                 "newPage": false,
                 "searchKey": "trace.EvGoBlockGC",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1386,9 +1302,7 @@
                 "identifier": "EvGCMarkAssistStart",
                 "newPage": false,
                 "searchKey": "trace.EvGCMarkAssistStart",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1408,9 +1322,7 @@
                 "identifier": "EvGCMarkAssistDone",
                 "newPage": false,
                 "searchKey": "trace.EvGCMarkAssistDone",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1430,9 +1342,7 @@
                 "identifier": "EvUserTaskCreate",
                 "newPage": false,
                 "searchKey": "trace.EvUserTaskCreate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1452,9 +1362,7 @@
                 "identifier": "EvUserTaskEnd",
                 "newPage": false,
                 "searchKey": "trace.EvUserTaskEnd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1474,9 +1382,7 @@
                 "identifier": "EvUserRegion",
                 "newPage": false,
                 "searchKey": "trace.EvUserRegion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1496,9 +1402,7 @@
                 "identifier": "EvUserLog",
                 "newPage": false,
                 "searchKey": "trace.EvUserLog",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1518,9 +1422,7 @@
                 "identifier": "EvCount",
                 "newPage": false,
                 "searchKey": "trace.EvCount",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1543,7 +1445,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1561,7 +1465,9 @@
                 "identifier": "bandsPerSeries",
                 "newPage": false,
                 "searchKey": "trace.bandsPerSeries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1581,9 +1487,7 @@
                 "identifier": "ErrTimeOrder",
                 "newPage": false,
                 "searchKey": "trace.ErrTimeOrder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1603,9 +1507,7 @@
                 "identifier": "BreakTimestampsForTesting",
                 "newPage": false,
                 "searchKey": "trace.BreakTimestampsForTesting",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1625,9 +1527,7 @@
                 "identifier": "EventDescriptions",
                 "newPage": false,
                 "searchKey": "trace.EventDescriptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1650,7 +1550,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1668,9 +1570,7 @@
                 "identifier": "MutatorUtil",
                 "newPage": false,
                 "searchKey": "trace.MutatorUtil",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1690,9 +1590,7 @@
                 "identifier": "UtilFlags",
                 "newPage": false,
                 "searchKey": "trace.UtilFlags",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1712,7 +1610,9 @@
                 "identifier": "totalUtil",
                 "newPage": false,
                 "searchKey": "trace.totalUtil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1730,7 +1630,9 @@
                       "identifier": "totalUtilOf",
                       "newPage": false,
                       "searchKey": "trace.totalUtilOf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1750,7 +1652,9 @@
                       "identifier": "totalUtil.mean",
                       "newPage": false,
                       "searchKey": "trace.totalUtil.mean",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1773,9 +1677,7 @@
                 "identifier": "MMUCurve",
                 "newPage": false,
                 "searchKey": "trace.MMUCurve",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1793,9 +1695,7 @@
                       "identifier": "NewMMUCurve",
                       "newPage": false,
                       "searchKey": "trace.NewMMUCurve",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1815,9 +1715,7 @@
                       "identifier": "MMUCurve.MMU",
                       "newPage": false,
                       "searchKey": "trace.MMUCurve.MMU",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1837,9 +1735,7 @@
                       "identifier": "MMUCurve.Examples",
                       "newPage": false,
                       "searchKey": "trace.MMUCurve.Examples",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1859,9 +1755,7 @@
                       "identifier": "MMUCurve.MUD",
                       "newPage": false,
                       "searchKey": "trace.MMUCurve.MUD",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1881,7 +1775,9 @@
                       "identifier": "MMUCurve.mmu",
                       "newPage": false,
                       "searchKey": "trace.MMUCurve.mmu",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1904,7 +1800,9 @@
                 "identifier": "mmuSeries",
                 "newPage": false,
                 "searchKey": "trace.mmuSeries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1922,7 +1820,9 @@
                       "identifier": "newMMUSeries",
                       "newPage": false,
                       "searchKey": "trace.newMMUSeries",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1942,7 +1842,9 @@
                       "identifier": "mmuSeries.bandTime",
                       "newPage": false,
                       "searchKey": "trace.mmuSeries.bandTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1962,7 +1864,9 @@
                       "identifier": "mmuSeries.mkBandUtil",
                       "newPage": false,
                       "searchKey": "trace.mmuSeries.mkBandUtil",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1982,7 +1886,9 @@
                       "identifier": "mmuSeries.bandMMU",
                       "newPage": false,
                       "searchKey": "trace.mmuSeries.bandMMU",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2005,7 +1911,9 @@
                 "identifier": "mmuBand",
                 "newPage": false,
                 "searchKey": "trace.mmuBand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2025,7 +1933,9 @@
                 "identifier": "bandUtil",
                 "newPage": false,
                 "searchKey": "trace.bandUtil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2045,7 +1955,9 @@
                 "identifier": "bandUtilHeap",
                 "newPage": false,
                 "searchKey": "trace.bandUtilHeap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2063,7 +1975,9 @@
                       "identifier": "bandUtilHeap.Len",
                       "newPage": false,
                       "searchKey": "trace.bandUtilHeap.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2083,7 +1997,9 @@
                       "identifier": "bandUtilHeap.Less",
                       "newPage": false,
                       "searchKey": "trace.bandUtilHeap.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2103,7 +2019,9 @@
                       "identifier": "bandUtilHeap.Swap",
                       "newPage": false,
                       "searchKey": "trace.bandUtilHeap.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2123,7 +2041,9 @@
                       "identifier": "bandUtilHeap.Push",
                       "newPage": false,
                       "searchKey": "trace.bandUtilHeap.Push",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2143,7 +2063,9 @@
                       "identifier": "bandUtilHeap.Pop",
                       "newPage": false,
                       "searchKey": "trace.bandUtilHeap.Pop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2166,9 +2088,7 @@
                 "identifier": "UtilWindow",
                 "newPage": false,
                 "searchKey": "trace.UtilWindow",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2188,7 +2108,9 @@
                 "identifier": "utilHeap",
                 "newPage": false,
                 "searchKey": "trace.utilHeap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2206,7 +2128,9 @@
                       "identifier": "utilHeap.Len",
                       "newPage": false,
                       "searchKey": "trace.utilHeap.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2226,7 +2150,9 @@
                       "identifier": "utilHeap.Less",
                       "newPage": false,
                       "searchKey": "trace.utilHeap.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2246,7 +2172,9 @@
                       "identifier": "utilHeap.Swap",
                       "newPage": false,
                       "searchKey": "trace.utilHeap.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2266,7 +2194,9 @@
                       "identifier": "utilHeap.Push",
                       "newPage": false,
                       "searchKey": "trace.utilHeap.Push",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2286,7 +2216,9 @@
                       "identifier": "utilHeap.Pop",
                       "newPage": false,
                       "searchKey": "trace.utilHeap.Pop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2309,7 +2241,9 @@
                 "identifier": "accumulator",
                 "newPage": false,
                 "searchKey": "trace.accumulator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2327,7 +2261,9 @@
                       "identifier": "accumulator.resetTime",
                       "newPage": false,
                       "searchKey": "trace.accumulator.resetTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2347,7 +2283,9 @@
                       "identifier": "accumulator.addMU",
                       "newPage": false,
                       "searchKey": "trace.accumulator.addMU",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2370,7 +2308,9 @@
                 "identifier": "integrator",
                 "newPage": false,
                 "searchKey": "trace.integrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2388,7 +2328,9 @@
                       "identifier": "integrator.advance",
                       "newPage": false,
                       "searchKey": "trace.integrator.advance",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2408,7 +2350,9 @@
                       "identifier": "integrator.next",
                       "newPage": false,
                       "searchKey": "trace.integrator.next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2431,9 +2375,7 @@
                 "identifier": "GDesc",
                 "newPage": false,
                 "searchKey": "trace.GDesc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2451,7 +2393,9 @@
                       "identifier": "GDesc.snapshotStat",
                       "newPage": false,
                       "searchKey": "trace.GDesc.snapshotStat",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2471,7 +2415,9 @@
                       "identifier": "GDesc.finalize",
                       "newPage": false,
                       "searchKey": "trace.GDesc.finalize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2494,9 +2440,7 @@
                 "identifier": "UserRegionDesc",
                 "newPage": false,
                 "searchKey": "trace.UserRegionDesc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2516,9 +2460,7 @@
                 "identifier": "GExecutionStat",
                 "newPage": false,
                 "searchKey": "trace.GExecutionStat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2536,7 +2478,9 @@
                       "identifier": "GExecutionStat.sub",
                       "newPage": false,
                       "searchKey": "trace.GExecutionStat.sub",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2559,7 +2503,9 @@
                 "identifier": "gdesc",
                 "newPage": false,
                 "searchKey": "trace.gdesc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2579,7 +2525,9 @@
                 "identifier": "mud",
                 "newPage": false,
                 "searchKey": "trace.mud",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2597,7 +2545,9 @@
                       "identifier": "mud.add",
                       "newPage": false,
                       "searchKey": "trace.mud.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2617,7 +2567,9 @@
                       "identifier": "mud.setTrackMass",
                       "newPage": false,
                       "searchKey": "trace.mud.setTrackMass",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2637,7 +2589,9 @@
                       "identifier": "mud.approxInvCumulativeSum",
                       "newPage": false,
                       "searchKey": "trace.mud.approxInvCumulativeSum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2657,7 +2611,9 @@
                       "identifier": "mud.invCumulativeSum",
                       "newPage": false,
                       "searchKey": "trace.mud.invCumulativeSum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2680,7 +2636,9 @@
                 "identifier": "edge",
                 "newPage": false,
                 "searchKey": "trace.edge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2700,7 +2658,9 @@
                 "identifier": "eventBatch",
                 "newPage": false,
                 "searchKey": "trace.eventBatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2720,7 +2680,9 @@
                 "identifier": "orderEvent",
                 "newPage": false,
                 "searchKey": "trace.orderEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2740,7 +2702,9 @@
                 "identifier": "gStatus",
                 "newPage": false,
                 "searchKey": "trace.gStatus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2760,7 +2724,9 @@
                 "identifier": "gState",
                 "newPage": false,
                 "searchKey": "trace.gState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2778,7 +2744,9 @@
                       "identifier": "stateTransition",
                       "newPage": false,
                       "searchKey": "trace.stateTransition",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2801,7 +2769,9 @@
                 "identifier": "orderEventList",
                 "newPage": false,
                 "searchKey": "trace.orderEventList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2819,7 +2789,9 @@
                       "identifier": "orderEventList.Len",
                       "newPage": false,
                       "searchKey": "trace.orderEventList.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2839,7 +2811,9 @@
                       "identifier": "orderEventList.Less",
                       "newPage": false,
                       "searchKey": "trace.orderEventList.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2859,7 +2833,9 @@
                       "identifier": "orderEventList.Swap",
                       "newPage": false,
                       "searchKey": "trace.orderEventList.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2882,7 +2858,9 @@
                 "identifier": "eventList",
                 "newPage": false,
                 "searchKey": "trace.eventList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2900,7 +2878,9 @@
                       "identifier": "eventList.Len",
                       "newPage": false,
                       "searchKey": "trace.eventList.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2920,7 +2900,9 @@
                       "identifier": "eventList.Less",
                       "newPage": false,
                       "searchKey": "trace.eventList.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2940,7 +2922,9 @@
                       "identifier": "eventList.Swap",
                       "newPage": false,
                       "searchKey": "trace.eventList.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2963,7 +2947,9 @@
                 "identifier": "eventSeqList",
                 "newPage": false,
                 "searchKey": "trace.eventSeqList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2981,7 +2967,9 @@
                       "identifier": "eventSeqList.Len",
                       "newPage": false,
                       "searchKey": "trace.eventSeqList.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3001,7 +2989,9 @@
                       "identifier": "eventSeqList.Less",
                       "newPage": false,
                       "searchKey": "trace.eventSeqList.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3021,7 +3011,9 @@
                       "identifier": "eventSeqList.Swap",
                       "newPage": false,
                       "searchKey": "trace.eventSeqList.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3044,9 +3036,7 @@
                 "identifier": "Event",
                 "newPage": false,
                 "searchKey": "trace.Event",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3064,9 +3054,7 @@
                       "identifier": "Event.String",
                       "newPage": false,
                       "searchKey": "trace.Event.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3089,9 +3077,7 @@
                 "identifier": "Frame",
                 "newPage": false,
                 "searchKey": "trace.Frame",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3111,9 +3097,7 @@
                 "identifier": "ParseResult",
                 "newPage": false,
                 "searchKey": "trace.ParseResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3131,9 +3115,7 @@
                       "identifier": "Parse",
                       "newPage": false,
                       "searchKey": "trace.Parse",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3153,7 +3135,9 @@
                       "identifier": "parse",
                       "newPage": false,
                       "searchKey": "trace.parse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3176,7 +3160,9 @@
                 "identifier": "rawEvent",
                 "newPage": false,
                 "searchKey": "trace.rawEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3196,9 +3182,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "trace.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3216,9 +3200,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "trace.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3238,9 +3220,7 @@
                       "identifier": "Writer.Emit",
                       "newPage": false,
                       "searchKey": "trace.Writer.Emit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3266,7 +3246,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -3284,9 +3266,7 @@
                 "identifier": "MutatorUtilization",
                 "newPage": false,
                 "searchKey": "trace.MutatorUtilization",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3306,7 +3286,9 @@
                 "identifier": "addUtil",
                 "newPage": false,
                 "searchKey": "trace.addUtil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3326,9 +3308,7 @@
                 "identifier": "GoroutineStats",
                 "newPage": false,
                 "searchKey": "trace.GoroutineStats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3348,9 +3328,7 @@
                 "identifier": "RelatedGoroutines",
                 "newPage": false,
                 "searchKey": "trace.RelatedGoroutines",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3370,7 +3348,9 @@
                 "identifier": "order1007",
                 "newPage": false,
                 "searchKey": "trace.order1007",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3390,7 +3370,9 @@
                 "identifier": "transitionReady",
                 "newPage": false,
                 "searchKey": "trace.transitionReady",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3410,7 +3392,9 @@
                 "identifier": "transition",
                 "newPage": false,
                 "searchKey": "trace.transition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3430,7 +3414,9 @@
                 "identifier": "order1005",
                 "newPage": false,
                 "searchKey": "trace.order1005",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3450,7 +3436,9 @@
                 "identifier": "goCmd",
                 "newPage": false,
                 "searchKey": "trace.goCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3470,7 +3458,9 @@
                 "identifier": "readTrace",
                 "newPage": false,
                 "searchKey": "trace.readTrace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3490,7 +3480,9 @@
                 "identifier": "readStr",
                 "newPage": false,
                 "searchKey": "trace.readStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3510,7 +3502,9 @@
                 "identifier": "parseHeader",
                 "newPage": false,
                 "searchKey": "trace.parseHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3530,7 +3524,9 @@
                 "identifier": "parseEvents",
                 "newPage": false,
                 "searchKey": "trace.parseEvents",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3550,7 +3546,9 @@
                 "identifier": "removeFutile",
                 "newPage": false,
                 "searchKey": "trace.removeFutile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3570,7 +3568,9 @@
                 "identifier": "postProcessTrace",
                 "newPage": false,
                 "searchKey": "trace.postProcessTrace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3590,7 +3590,9 @@
                 "identifier": "symbolize",
                 "newPage": false,
                 "searchKey": "trace.symbolize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3610,7 +3612,9 @@
                 "identifier": "readVal",
                 "newPage": false,
                 "searchKey": "trace.readVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3630,9 +3634,7 @@
                 "identifier": "Print",
                 "newPage": false,
                 "searchKey": "trace.Print",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3652,9 +3654,7 @@
                 "identifier": "PrintEvent",
                 "newPage": false,
                 "searchKey": "trace.PrintEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3674,7 +3674,9 @@
                 "identifier": "argNum",
                 "newPage": false,
                 "searchKey": "trace.argNum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3694,7 +3696,9 @@
                 "identifier": "appendVarint",
                 "newPage": false,
                 "searchKey": "trace.appendVarint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3714,7 +3718,9 @@
                 "identifier": "aeq",
                 "newPage": false,
                 "searchKey": "trace.aeq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3734,7 +3740,9 @@
                 "identifier": "TestMMU",
                 "newPage": false,
                 "searchKey": "trace.TestMMU",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3754,7 +3762,9 @@
                 "identifier": "TestMMUTrace",
                 "newPage": false,
                 "searchKey": "trace.TestMMUTrace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3774,7 +3784,9 @@
                 "identifier": "BenchmarkMMU",
                 "newPage": false,
                 "searchKey": "trace.BenchmarkMMU",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3794,7 +3806,9 @@
                 "identifier": "mmuSlow",
                 "newPage": false,
                 "searchKey": "trace.mmuSlow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3814,7 +3828,9 @@
                 "identifier": "TestMUD",
                 "newPage": false,
                 "searchKey": "trace.TestMUD",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3834,7 +3850,9 @@
                 "identifier": "TestMUDTracking",
                 "newPage": false,
                 "searchKey": "trace.TestMUDTracking",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3854,7 +3872,9 @@
                 "identifier": "TestCorruptedInputs",
                 "newPage": false,
                 "searchKey": "trace.TestCorruptedInputs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3874,7 +3894,9 @@
                 "identifier": "TestParseCanned",
                 "newPage": false,
                 "searchKey": "trace.TestParseCanned",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3894,7 +3916,9 @@
                 "identifier": "TestParseVersion",
                 "newPage": false,
                 "searchKey": "trace.TestParseVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3914,7 +3938,9 @@
                 "identifier": "TestTimestampOverflow",
                 "newPage": false,
                 "searchKey": "trace.TestTimestampOverflow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

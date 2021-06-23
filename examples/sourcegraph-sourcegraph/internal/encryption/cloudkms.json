@@ -4,7 +4,9 @@
     "identifier": "cloudkms",
     "newPage": true,
     "searchKey": "internal/encryption/cloudkms",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Key",
                 "newPage": false,
                 "searchKey": "cloudkms.Key",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "Key.Version",
                       "newPage": false,
                       "searchKey": "cloudkms.Key.Version",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "Key.Decrypt",
                       "newPage": false,
                       "searchKey": "cloudkms.Key.Decrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "Key.Encrypt",
                       "newPage": false,
                       "searchKey": "cloudkms.Key.Encrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -129,7 +125,9 @@
                 "identifier": "encryptedValue",
                 "newPage": false,
                 "searchKey": "cloudkms.encryptedValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -152,7 +150,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -170,9 +170,7 @@
                 "identifier": "NewKey",
                 "newPage": false,
                 "searchKey": "cloudkms.NewKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -192,7 +190,9 @@
                 "identifier": "crc32Sum",
                 "newPage": false,
                 "searchKey": "cloudkms.crc32Sum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,7 +4,9 @@
     "identifier": "rewirer",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/rewirer",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ChangesetRewirer",
                 "newPage": false,
                 "searchKey": "rewirer.ChangesetRewirer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "rewirer.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "ChangesetRewirer.Rewire",
                       "newPage": false,
                       "searchKey": "rewirer.ChangesetRewirer.Rewire",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,7 +102,9 @@
                       "identifier": "ChangesetRewirer.createChangesetForSpec",
                       "newPage": false,
                       "searchKey": "rewirer.ChangesetRewirer.createChangesetForSpec",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -124,7 +124,9 @@
                       "identifier": "ChangesetRewirer.updateChangesetToNewSpec",
                       "newPage": false,
                       "searchKey": "rewirer.ChangesetRewirer.updateChangesetToNewSpec",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -144,7 +146,9 @@
                       "identifier": "ChangesetRewirer.createTrackingChangeset",
                       "newPage": false,
                       "searchKey": "rewirer.ChangesetRewirer.createTrackingChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -164,7 +168,9 @@
                       "identifier": "ChangesetRewirer.attachTrackingChangeset",
                       "newPage": false,
                       "searchKey": "rewirer.ChangesetRewirer.attachTrackingChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -184,7 +190,9 @@
                       "identifier": "ChangesetRewirer.closeChangeset",
                       "newPage": false,
                       "searchKey": "rewirer.ChangesetRewirer.closeChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -207,9 +215,7 @@
                 "identifier": "ErrRepoNotSupported",
                 "newPage": false,
                 "searchKey": "rewirer.ErrRepoNotSupported",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -227,9 +233,7 @@
                       "identifier": "ErrRepoNotSupported.Error",
                       "newPage": false,
                       "searchKey": "rewirer.ErrRepoNotSupported.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -255,7 +259,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -273,7 +279,9 @@
                 "identifier": "checkRepoSupported",
                 "newPage": false,
                 "searchKey": "rewirer.checkRepoSupported",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -293,7 +301,9 @@
                 "identifier": "TestRewirer_Rewire",
                 "newPage": false,
                 "searchKey": "rewirer.TestRewirer_Rewire",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -313,7 +323,9 @@
                 "identifier": "assertResetReconcilerState",
                 "newPage": false,
                 "searchKey": "rewirer.assertResetReconcilerState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

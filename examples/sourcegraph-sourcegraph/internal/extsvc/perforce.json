@@ -4,7 +4,9 @@
     "identifier": "perforce",
     "newPage": true,
     "searchKey": "internal/extsvc/perforce",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "AccountData",
                 "newPage": false,
                 "searchKey": "perforce.AccountData",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "GetExternalAccountData",
                       "newPage": false,
                       "searchKey": "perforce.GetExternalAccountData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -85,9 +85,7 @@
                 "identifier": "Depot",
                 "newPage": false,
                 "searchKey": "perforce.Depot",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

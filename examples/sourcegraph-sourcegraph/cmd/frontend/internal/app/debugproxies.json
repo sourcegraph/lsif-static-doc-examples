@@ -4,7 +4,9 @@
     "identifier": "debugproxies",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app/debugproxies",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "proxyEndpoint",
                 "newPage": false,
                 "searchKey": "debugproxies.proxyEndpoint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "ReverseProxyHandler",
                 "newPage": false,
                 "searchKey": "debugproxies.ReverseProxyHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -80,9 +84,7 @@
                       "identifier": "ReverseProxyHandler.AddToRouter",
                       "newPage": false,
                       "searchKey": "debugproxies.ReverseProxyHandler.AddToRouter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -102,7 +104,9 @@
                       "identifier": "ReverseProxyHandler.serveIndex",
                       "newPage": false,
                       "searchKey": "debugproxies.ReverseProxyHandler.serveIndex",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -122,7 +126,9 @@
                       "identifier": "ReverseProxyHandler.serveReverseProxy",
                       "newPage": false,
                       "searchKey": "debugproxies.ReverseProxyHandler.serveReverseProxy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -142,9 +148,7 @@
                       "identifier": "ReverseProxyHandler.Populate",
                       "newPage": false,
                       "searchKey": "debugproxies.ReverseProxyHandler.Populate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -167,9 +171,7 @@
                 "identifier": "Endpoint",
                 "newPage": false,
                 "searchKey": "debugproxies.Endpoint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -189,9 +191,7 @@
                 "identifier": "ScanConsumer",
                 "newPage": false,
                 "searchKey": "debugproxies.ScanConsumer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -211,7 +211,9 @@
                 "identifier": "clusterScanner",
                 "newPage": false,
                 "searchKey": "debugproxies.clusterScanner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -229,7 +231,9 @@
                       "identifier": "clusterScanner.runEventLoop",
                       "newPage": false,
                       "searchKey": "debugproxies.clusterScanner.runEventLoop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -249,7 +253,9 @@
                       "identifier": "clusterScanner.watchEndpointEvents",
                       "newPage": false,
                       "searchKey": "debugproxies.clusterScanner.watchEndpointEvents",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -269,7 +275,9 @@
                       "identifier": "clusterScanner.scanCluster",
                       "newPage": false,
                       "searchKey": "debugproxies.clusterScanner.scanCluster",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -295,7 +303,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -313,7 +323,9 @@
                 "identifier": "displayNameFromEndpoint",
                 "newPage": false,
                 "searchKey": "debugproxies.displayNameFromEndpoint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -333,7 +345,9 @@
                 "identifier": "reverseProxyFromHost",
                 "newPage": false,
                 "searchKey": "debugproxies.reverseProxyFromHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -353,7 +367,9 @@
                 "identifier": "adminOnly",
                 "newPage": false,
                 "searchKey": "debugproxies.adminOnly",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -373,7 +389,9 @@
                 "identifier": "startClusterScannerWithClient",
                 "newPage": false,
                 "searchKey": "debugproxies.startClusterScannerWithClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -393,9 +411,7 @@
                 "identifier": "StartClusterScanner",
                 "newPage": false,
                 "searchKey": "debugproxies.StartClusterScanner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -415,7 +431,9 @@
                 "identifier": "namespace",
                 "newPage": false,
                 "searchKey": "debugproxies.namespace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -435,7 +453,9 @@
                 "identifier": "TestReverseProxyRequestPaths",
                 "newPage": false,
                 "searchKey": "debugproxies.TestReverseProxyRequestPaths",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -455,7 +475,9 @@
                 "identifier": "TestIndexLinks",
                 "newPage": false,
                 "searchKey": "debugproxies.TestIndexLinks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -475,7 +497,9 @@
                 "identifier": "TestDisplayNameFromEndpoint",
                 "newPage": false,
                 "searchKey": "debugproxies.TestDisplayNameFromEndpoint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -495,7 +519,9 @@
                 "identifier": "TestClusterScan",
                 "newPage": false,
                 "searchKey": "debugproxies.TestClusterScan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,9 +4,7 @@
     "identifier": "queryrunnerapi",
     "newPage": true,
     "searchKey": "cmd/query-runner/queryrunnerapi",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "PathSavedQueryWasCreatedOrUpdated",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.PathSavedQueryWasCreatedOrUpdated",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "PathSavedQueryWasDeleted",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.PathSavedQueryWasDeleted",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "PathTestNotification",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.PathTestNotification",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -113,9 +103,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -133,7 +121,9 @@
                 "identifier": "queryRunnerURL",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.queryRunnerURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -153,9 +143,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -178,9 +166,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -198,9 +184,7 @@
                 "identifier": "SubjectAndConfig",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.SubjectAndConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -220,9 +204,7 @@
                 "identifier": "ErrorResponse",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.ErrorResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -242,7 +224,9 @@
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.client",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +244,9 @@
                       "identifier": "client.SavedQueryWasCreatedOrUpdated",
                       "newPage": false,
                       "searchKey": "queryrunnerapi.client.SavedQueryWasCreatedOrUpdated",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -280,7 +266,9 @@
                       "identifier": "client.SavedQueryWasDeleted",
                       "newPage": false,
                       "searchKey": "queryrunnerapi.client.SavedQueryWasDeleted",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -300,7 +288,9 @@
                       "identifier": "client.TestNotification",
                       "newPage": false,
                       "searchKey": "queryrunnerapi.client.TestNotification",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -320,7 +310,9 @@
                       "identifier": "client.post",
                       "newPage": false,
                       "searchKey": "queryrunnerapi.client.post",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -343,9 +335,7 @@
                 "identifier": "SavedQueryWasCreatedOrUpdatedArgs",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.SavedQueryWasCreatedOrUpdatedArgs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -365,9 +355,7 @@
                 "identifier": "SavedQueryWasDeletedArgs",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.SavedQueryWasDeletedArgs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -387,9 +375,7 @@
                 "identifier": "TestNotificationArgs",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.TestNotificationArgs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

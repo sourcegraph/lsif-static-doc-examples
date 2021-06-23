@@ -55,11 +55,14 @@ Package router contains the URL router for the HTTP API.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="LSIFUpload" href="#LSIFUpload">const LSIFUpload</a>
 
 ```
 searchKey: router.LSIFUpload
-tags: [exported]
 ```
 
 ```Go
@@ -70,7 +73,6 @@ const LSIFUpload = "lsif.upload"
 
 ```
 searchKey: router.GraphQL
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +83,6 @@ const GraphQL = "graphql"
 
 ```
 searchKey: router.SearchStream
-tags: [exported]
 ```
 
 ```Go
@@ -92,7 +93,6 @@ const SearchStream = "search.stream"
 
 ```
 searchKey: router.SrcCliVersion
-tags: [exported]
 ```
 
 ```Go
@@ -103,7 +103,6 @@ const SrcCliVersion = "src-cli.version"
 
 ```
 searchKey: router.SrcCliDownload
-tags: [exported]
 ```
 
 ```Go
@@ -114,7 +113,6 @@ const SrcCliDownload = "src-cli.download"
 
 ```
 searchKey: router.Registry
-tags: [exported]
 ```
 
 ```Go
@@ -125,7 +123,6 @@ const Registry = "registry"
 
 ```
 searchKey: router.RepoShield
-tags: [exported]
 ```
 
 ```Go
@@ -136,7 +133,6 @@ const RepoShield = "repo.shield"
 
 ```
 searchKey: router.RepoRefresh
-tags: [exported]
 ```
 
 ```Go
@@ -147,7 +143,6 @@ const RepoRefresh = "repo.refresh"
 
 ```
 searchKey: router.Telemetry
-tags: [exported]
 ```
 
 ```Go
@@ -158,7 +153,6 @@ const Telemetry = "telemetry"
 
 ```
 searchKey: router.GitHubWebhooks
-tags: [exported]
 ```
 
 ```Go
@@ -169,7 +163,6 @@ const GitHubWebhooks = "github.webhooks"
 
 ```
 searchKey: router.GitLabWebhooks
-tags: [exported]
 ```
 
 ```Go
@@ -180,7 +173,6 @@ const GitLabWebhooks = "gitlab.webhooks"
 
 ```
 searchKey: router.BitbucketServerWebhooks
-tags: [exported]
 ```
 
 ```Go
@@ -191,7 +183,6 @@ const BitbucketServerWebhooks = "bitbucketServer.webhooks"
 
 ```
 searchKey: router.SavedQueriesListAll
-tags: [exported]
 ```
 
 ```Go
@@ -202,7 +193,6 @@ const SavedQueriesListAll = "internal.saved-queries.list-all"
 
 ```
 searchKey: router.SavedQueriesGetInfo
-tags: [exported]
 ```
 
 ```Go
@@ -213,7 +203,6 @@ const SavedQueriesGetInfo = "internal.saved-queries.get-info"
 
 ```
 searchKey: router.SavedQueriesSetInfo
-tags: [exported]
 ```
 
 ```Go
@@ -224,7 +213,6 @@ const SavedQueriesSetInfo = "internal.saved-queries.set-info"
 
 ```
 searchKey: router.SavedQueriesDeleteInfo
-tags: [exported]
 ```
 
 ```Go
@@ -235,7 +223,6 @@ const SavedQueriesDeleteInfo = "internal.saved-queries.delete-info"
 
 ```
 searchKey: router.SettingsGetForSubject
-tags: [exported]
 ```
 
 ```Go
@@ -246,7 +233,6 @@ const SettingsGetForSubject = "internal.settings.get-for-subject"
 
 ```
 searchKey: router.OrgsListUsers
-tags: [exported]
 ```
 
 ```Go
@@ -257,7 +243,6 @@ const OrgsListUsers = "internal.orgs.list-users"
 
 ```
 searchKey: router.OrgsGetByName
-tags: [exported]
 ```
 
 ```Go
@@ -268,7 +253,6 @@ const OrgsGetByName = "internal.orgs.get-by-name"
 
 ```
 searchKey: router.UsersGetByUsername
-tags: [exported]
 ```
 
 ```Go
@@ -279,7 +263,6 @@ const UsersGetByUsername = "internal.users.get-by-username"
 
 ```
 searchKey: router.UserEmailsGetEmail
-tags: [exported]
 ```
 
 ```Go
@@ -290,7 +273,6 @@ const UserEmailsGetEmail = "internal.user-emails.get-email"
 
 ```
 searchKey: router.ExternalURL
-tags: [exported]
 ```
 
 ```Go
@@ -301,7 +283,6 @@ const ExternalURL = "internal.app-url"
 
 ```
 searchKey: router.CanSendEmail
-tags: [exported]
 ```
 
 ```Go
@@ -312,7 +293,6 @@ const CanSendEmail = "internal.can-send-email"
 
 ```
 searchKey: router.SendEmail
-tags: [exported]
 ```
 
 ```Go
@@ -323,7 +303,6 @@ const SendEmail = "internal.send-email"
 
 ```
 searchKey: router.Extension
-tags: [exported]
 ```
 
 ```Go
@@ -334,7 +313,6 @@ const Extension = "internal.extension"
 
 ```
 searchKey: router.GitExec
-tags: [exported]
 ```
 
 ```Go
@@ -345,7 +323,6 @@ const GitExec = "internal.git.exec"
 
 ```
 searchKey: router.GitInfoRefs
-tags: [exported]
 ```
 
 ```Go
@@ -356,7 +333,6 @@ const GitInfoRefs = "internal.git.info-refs"
 
 ```
 searchKey: router.GitResolveRevision
-tags: [exported]
 ```
 
 ```Go
@@ -367,7 +343,6 @@ const GitResolveRevision = "internal.git.resolve-revision"
 
 ```
 searchKey: router.GitTar
-tags: [exported]
 ```
 
 ```Go
@@ -378,7 +353,6 @@ const GitTar = "internal.git.tar"
 
 ```
 searchKey: router.GitUploadPack
-tags: [exported]
 ```
 
 ```Go
@@ -389,7 +363,6 @@ const GitUploadPack = "internal.git.upload-pack"
 
 ```
 searchKey: router.PhabricatorRepoCreate
-tags: [exported]
 ```
 
 ```Go
@@ -400,7 +373,6 @@ const PhabricatorRepoCreate = "internal.phabricator.repo.create"
 
 ```
 searchKey: router.ReposGetByName
-tags: [exported]
 ```
 
 ```Go
@@ -411,7 +383,6 @@ const ReposGetByName = "internal.repos.get-by-name"
 
 ```
 searchKey: router.ReposInventoryUncached
-tags: [exported]
 ```
 
 ```Go
@@ -422,7 +393,6 @@ const ReposInventoryUncached = "internal.repos.inventory-uncached"
 
 ```
 searchKey: router.ReposInventory
-tags: [exported]
 ```
 
 ```Go
@@ -433,7 +403,6 @@ const ReposInventory = "internal.repos.inventory"
 
 ```
 searchKey: router.ReposList
-tags: [exported]
 ```
 
 ```Go
@@ -444,7 +413,6 @@ const ReposList = "internal.repos.list"
 
 ```
 searchKey: router.ReposIndex
-tags: [exported]
 ```
 
 ```Go
@@ -455,7 +423,6 @@ const ReposIndex = "internal.repos.index"
 
 ```
 searchKey: router.ReposListEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -466,7 +433,6 @@ const ReposListEnabled = "internal.repos.list-enabled"
 
 ```
 searchKey: router.Configuration
-tags: [exported]
 ```
 
 ```Go
@@ -477,7 +443,6 @@ const Configuration = "internal.configuration"
 
 ```
 searchKey: router.SearchConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -488,7 +453,6 @@ const SearchConfiguration = "internal.search-configuration"
 
 ```
 searchKey: router.ExternalServiceConfigs
-tags: [exported]
 ```
 
 ```Go
@@ -499,7 +463,6 @@ const ExternalServiceConfigs = "internal.external-services.configs"
 
 ```
 searchKey: router.ExternalServicesList
-tags: [exported]
 ```
 
 ```Go
@@ -508,11 +471,14 @@ const ExternalServicesList = "internal.external-services.list"
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="New" href="#New">func New(base *mux.Router) *mux.Router</a>
 
 ```
 searchKey: router.New
-tags: [exported]
 ```
 
 ```Go
@@ -525,7 +491,6 @@ New creates a new API router with route URL pattern definitions but no handlers 
 
 ```
 searchKey: router.NewInternal
-tags: [exported]
 ```
 
 ```Go
@@ -538,6 +503,7 @@ NewInternal creates a new API router for internal endpoints.
 
 ```
 searchKey: router.addRegistryRoute
+tags: [private]
 ```
 
 ```Go
@@ -548,6 +514,7 @@ func addRegistryRoute(m *mux.Router)
 
 ```
 searchKey: router.addGraphQLRoute
+tags: [private]
 ```
 
 ```Go

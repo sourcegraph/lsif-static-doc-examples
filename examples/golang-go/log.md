@@ -80,15 +80,10 @@ Package log implements a simple logging package. It defines a type, Logger, with
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Ldate" href="#Ldate">const Ldate</a>
 
 ```
 searchKey: log.Ldate
-tags: [exported]
 ```
 
 ```Go
@@ -112,7 +107,6 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 
 ```
 searchKey: log.Ltime
-tags: [exported]
 ```
 
 ```Go
@@ -136,7 +130,6 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 
 ```
 searchKey: log.Lmicroseconds
-tags: [exported]
 ```
 
 ```Go
@@ -160,7 +153,6 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 
 ```
 searchKey: log.Llongfile
-tags: [exported]
 ```
 
 ```Go
@@ -184,7 +176,6 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 
 ```
 searchKey: log.Lshortfile
-tags: [exported]
 ```
 
 ```Go
@@ -208,7 +199,6 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 
 ```
 searchKey: log.LUTC
-tags: [exported]
 ```
 
 ```Go
@@ -232,7 +222,6 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 
 ```
 searchKey: log.Lmsgprefix
-tags: [exported]
 ```
 
 ```Go
@@ -256,7 +245,6 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 
 ```
 searchKey: log.LstdFlags
-tags: [exported]
 ```
 
 ```Go
@@ -280,6 +268,7 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 
 ```
 searchKey: log.Rdate
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +279,7 @@ const Rdate = `[0-9][0-9][0-9][0-9]/[0-9][0-9]/[0-9][0-9]`
 
 ```
 searchKey: log.Rtime
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +290,7 @@ const Rtime = `[0-9][0-9]:[0-9][0-9]:[0-9][0-9]`
 
 ```
 searchKey: log.Rmicroseconds
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +301,7 @@ const Rmicroseconds = `\.[0-9][0-9][0-9][0-9][0-9][0-9]`
 
 ```
 searchKey: log.Rline
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +313,7 @@ const Rline = `(60|62):` // must update if the calls to l.Printf / l.Print below
 
 ```
 searchKey: log.Rlongfile
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +324,7 @@ const Rlongfile = `.*/[A-Za-z0-9_\-]+\.go:` + Rline
 
 ```
 searchKey: log.Rshortfile
+tags: [private]
 ```
 
 ```Go
@@ -339,14 +333,11 @@ const Rshortfile = `[A-Za-z0-9_\-]+\.go:` + Rline
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="std" href="#std">var std</a>
 
 ```
 searchKey: log.std
+tags: [private]
 ```
 
 ```Go
@@ -357,6 +348,7 @@ var std = New(os.Stderr, "", LstdFlags)
 
 ```
 searchKey: log.tests
+tags: [private]
 ```
 
 ```Go
@@ -365,15 +357,10 @@ var tests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Logger" href="#Logger">type Logger struct</a>
 
 ```
 searchKey: log.Logger
-tags: [exported]
 ```
 
 ```Go
@@ -392,7 +379,6 @@ A Logger represents an active logging object that generates lines of output to a
 
 ```
 searchKey: log.New
-tags: [exported]
 ```
 
 ```Go
@@ -405,7 +391,6 @@ New creates a new Logger. The out variable sets the destination to which log dat
 
 ```
 searchKey: log.Default
-tags: [exported]
 ```
 
 ```Go
@@ -418,7 +403,6 @@ Default returns the standard logger used by the package-level output functions.
 
 ```
 searchKey: log.Logger.SetOutput
-tags: [exported]
 ```
 
 ```Go
@@ -431,6 +415,7 @@ SetOutput sets the output destination for the logger.
 
 ```
 searchKey: log.Logger.formatHeader
+tags: [private]
 ```
 
 ```Go
@@ -450,7 +435,6 @@ formatHeader writes log header to buf in following order:
 
 ```
 searchKey: log.Logger.Output
-tags: [exported]
 ```
 
 ```Go
@@ -463,7 +447,6 @@ Output writes the output for a logging event. The string s contains the text to 
 
 ```
 searchKey: log.Logger.Printf
-tags: [exported]
 ```
 
 ```Go
@@ -476,7 +459,6 @@ Printf calls l.Output to print to the logger. Arguments are handled in the manne
 
 ```
 searchKey: log.Logger.Print
-tags: [exported]
 ```
 
 ```Go
@@ -489,7 +471,6 @@ Print calls l.Output to print to the logger. Arguments are handled in the manner
 
 ```
 searchKey: log.Logger.Println
-tags: [exported]
 ```
 
 ```Go
@@ -502,7 +483,6 @@ Println calls l.Output to print to the logger. Arguments are handled in the mann
 
 ```
 searchKey: log.Logger.Fatal
-tags: [exported]
 ```
 
 ```Go
@@ -515,7 +495,6 @@ Fatal is equivalent to l.Print() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Logger.Fatalf
-tags: [exported]
 ```
 
 ```Go
@@ -528,7 +507,6 @@ Fatalf is equivalent to l.Printf() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Logger.Fatalln
-tags: [exported]
 ```
 
 ```Go
@@ -541,7 +519,6 @@ Fatalln is equivalent to l.Println() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Logger.Panic
-tags: [exported]
 ```
 
 ```Go
@@ -554,7 +531,6 @@ Panic is equivalent to l.Print() followed by a call to panic().
 
 ```
 searchKey: log.Logger.Panicf
-tags: [exported]
 ```
 
 ```Go
@@ -567,7 +543,6 @@ Panicf is equivalent to l.Printf() followed by a call to panic().
 
 ```
 searchKey: log.Logger.Panicln
-tags: [exported]
 ```
 
 ```Go
@@ -580,7 +555,6 @@ Panicln is equivalent to l.Println() followed by a call to panic().
 
 ```
 searchKey: log.Logger.Flags
-tags: [exported]
 ```
 
 ```Go
@@ -593,7 +567,6 @@ Flags returns the output flags for the logger. The flag bits are Ldate, Ltime, a
 
 ```
 searchKey: log.Logger.SetFlags
-tags: [exported]
 ```
 
 ```Go
@@ -606,7 +579,6 @@ SetFlags sets the output flags for the logger. The flag bits are Ldate, Ltime, a
 
 ```
 searchKey: log.Logger.Prefix
-tags: [exported]
 ```
 
 ```Go
@@ -619,7 +591,6 @@ Prefix returns the output prefix for the logger.
 
 ```
 searchKey: log.Logger.SetPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -632,7 +603,6 @@ SetPrefix sets the output prefix for the logger.
 
 ```
 searchKey: log.Logger.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -645,6 +615,7 @@ Writer returns the output destination for the logger.
 
 ```
 searchKey: log.tester
+tags: [private]
 ```
 
 ```Go
@@ -657,14 +628,11 @@ type tester struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="itoa" href="#itoa">func itoa(buf *[]byte, i int, wid int)</a>
 
 ```
 searchKey: log.itoa
+tags: [private]
 ```
 
 ```Go
@@ -677,7 +645,6 @@ Cheap integer to fixed-width decimal ASCII. Give a negative width to avoid zero-
 
 ```
 searchKey: log.SetOutput
-tags: [exported]
 ```
 
 ```Go
@@ -690,7 +657,6 @@ SetOutput sets the output destination for the standard logger.
 
 ```
 searchKey: log.Flags
-tags: [exported]
 ```
 
 ```Go
@@ -703,7 +669,6 @@ Flags returns the output flags for the standard logger. The flag bits are Ldate,
 
 ```
 searchKey: log.SetFlags
-tags: [exported]
 ```
 
 ```Go
@@ -716,7 +681,6 @@ SetFlags sets the output flags for the standard logger. The flag bits are Ldate,
 
 ```
 searchKey: log.Prefix
-tags: [exported]
 ```
 
 ```Go
@@ -729,7 +693,6 @@ Prefix returns the output prefix for the standard logger.
 
 ```
 searchKey: log.SetPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -742,7 +705,6 @@ SetPrefix sets the output prefix for the standard logger.
 
 ```
 searchKey: log.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -755,7 +717,6 @@ Writer returns the output destination for the standard logger.
 
 ```
 searchKey: log.Print
-tags: [exported]
 ```
 
 ```Go
@@ -768,7 +729,6 @@ Print calls Output to print to the standard logger. Arguments are handled in the
 
 ```
 searchKey: log.Printf
-tags: [exported]
 ```
 
 ```Go
@@ -781,7 +741,6 @@ Printf calls Output to print to the standard logger. Arguments are handled in th
 
 ```
 searchKey: log.Println
-tags: [exported]
 ```
 
 ```Go
@@ -794,7 +753,6 @@ Println calls Output to print to the standard logger. Arguments are handled in t
 
 ```
 searchKey: log.Fatal
-tags: [exported]
 ```
 
 ```Go
@@ -807,7 +765,6 @@ Fatal is equivalent to Print() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Fatalf
-tags: [exported]
 ```
 
 ```Go
@@ -820,7 +777,6 @@ Fatalf is equivalent to Printf() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Fatalln
-tags: [exported]
 ```
 
 ```Go
@@ -833,7 +789,6 @@ Fatalln is equivalent to Println() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Panic
-tags: [exported]
 ```
 
 ```Go
@@ -846,7 +801,6 @@ Panic is equivalent to Print() followed by a call to panic().
 
 ```
 searchKey: log.Panicf
-tags: [exported]
 ```
 
 ```Go
@@ -859,7 +813,6 @@ Panicf is equivalent to Printf() followed by a call to panic().
 
 ```
 searchKey: log.Panicln
-tags: [exported]
 ```
 
 ```Go
@@ -872,7 +825,6 @@ Panicln is equivalent to Println() followed by a call to panic().
 
 ```
 searchKey: log.Output
-tags: [exported]
 ```
 
 ```Go
@@ -885,6 +837,7 @@ Output writes the output for a logging event. The string s contains the text to 
 
 ```
 searchKey: log.testPrint
+tags: [private]
 ```
 
 ```Go
@@ -897,6 +850,7 @@ Test using Println("hello", 23, "world") or using Printf("hello %d world", 23)
 
 ```
 searchKey: log.TestDefault
+tags: [private]
 ```
 
 ```Go
@@ -907,6 +861,7 @@ func TestDefault(t *testing.T)
 
 ```
 searchKey: log.TestAll
+tags: [private]
 ```
 
 ```Go
@@ -917,6 +872,7 @@ func TestAll(t *testing.T)
 
 ```
 searchKey: log.TestOutput
+tags: [private]
 ```
 
 ```Go
@@ -927,6 +883,7 @@ func TestOutput(t *testing.T)
 
 ```
 searchKey: log.TestOutputRace
+tags: [private]
 ```
 
 ```Go
@@ -937,6 +894,7 @@ func TestOutputRace(t *testing.T)
 
 ```
 searchKey: log.TestFlagAndPrefixSetting
+tags: [private]
 ```
 
 ```Go
@@ -947,6 +905,7 @@ func TestFlagAndPrefixSetting(t *testing.T)
 
 ```
 searchKey: log.TestUTCFlag
+tags: [private]
 ```
 
 ```Go
@@ -957,6 +916,7 @@ func TestUTCFlag(t *testing.T)
 
 ```
 searchKey: log.TestEmptyPrintCreatesLine
+tags: [private]
 ```
 
 ```Go
@@ -967,6 +927,7 @@ func TestEmptyPrintCreatesLine(t *testing.T)
 
 ```
 searchKey: log.BenchmarkItoa
+tags: [private]
 ```
 
 ```Go
@@ -977,6 +938,7 @@ func BenchmarkItoa(b *testing.B)
 
 ```
 searchKey: log.BenchmarkPrintln
+tags: [private]
 ```
 
 ```Go
@@ -987,6 +949,7 @@ func BenchmarkPrintln(b *testing.B)
 
 ```
 searchKey: log.BenchmarkPrintlnNoFlags
+tags: [private]
 ```
 
 ```Go

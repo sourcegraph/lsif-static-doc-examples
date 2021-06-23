@@ -8,10 +8,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleParseFile" href="#ExampleParseFile">func ExampleParseFile()</a>
 
 ```
 searchKey: parser_test.ExampleParseFile
+tags: [private]
 ```
 
 ```Go

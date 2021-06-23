@@ -4,7 +4,9 @@
     "identifier": "router",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/httpapi/router",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "LSIFUpload",
                 "newPage": false,
                 "searchKey": "router.LSIFUpload",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "GraphQL",
                 "newPage": false,
                 "searchKey": "router.GraphQL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "SearchStream",
                 "newPage": false,
                 "searchKey": "router.SearchStream",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "SrcCliVersion",
                 "newPage": false,
                 "searchKey": "router.SrcCliVersion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "SrcCliDownload",
                 "newPage": false,
                 "searchKey": "router.SrcCliDownload",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "Registry",
                 "newPage": false,
                 "searchKey": "router.Registry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                 "identifier": "RepoShield",
                 "newPage": false,
                 "searchKey": "router.RepoShield",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,9 +184,7 @@
                 "identifier": "RepoRefresh",
                 "newPage": false,
                 "searchKey": "router.RepoRefresh",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -216,9 +204,7 @@
                 "identifier": "Telemetry",
                 "newPage": false,
                 "searchKey": "router.Telemetry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -238,9 +224,7 @@
                 "identifier": "GitHubWebhooks",
                 "newPage": false,
                 "searchKey": "router.GitHubWebhooks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -260,9 +244,7 @@
                 "identifier": "GitLabWebhooks",
                 "newPage": false,
                 "searchKey": "router.GitLabWebhooks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,9 +264,7 @@
                 "identifier": "BitbucketServerWebhooks",
                 "newPage": false,
                 "searchKey": "router.BitbucketServerWebhooks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -304,9 +284,7 @@
                 "identifier": "SavedQueriesListAll",
                 "newPage": false,
                 "searchKey": "router.SavedQueriesListAll",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +304,7 @@
                 "identifier": "SavedQueriesGetInfo",
                 "newPage": false,
                 "searchKey": "router.SavedQueriesGetInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -348,9 +324,7 @@
                 "identifier": "SavedQueriesSetInfo",
                 "newPage": false,
                 "searchKey": "router.SavedQueriesSetInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -370,9 +344,7 @@
                 "identifier": "SavedQueriesDeleteInfo",
                 "newPage": false,
                 "searchKey": "router.SavedQueriesDeleteInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -392,9 +364,7 @@
                 "identifier": "SettingsGetForSubject",
                 "newPage": false,
                 "searchKey": "router.SettingsGetForSubject",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -414,9 +384,7 @@
                 "identifier": "OrgsListUsers",
                 "newPage": false,
                 "searchKey": "router.OrgsListUsers",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -436,9 +404,7 @@
                 "identifier": "OrgsGetByName",
                 "newPage": false,
                 "searchKey": "router.OrgsGetByName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -458,9 +424,7 @@
                 "identifier": "UsersGetByUsername",
                 "newPage": false,
                 "searchKey": "router.UsersGetByUsername",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -480,9 +444,7 @@
                 "identifier": "UserEmailsGetEmail",
                 "newPage": false,
                 "searchKey": "router.UserEmailsGetEmail",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -502,9 +464,7 @@
                 "identifier": "ExternalURL",
                 "newPage": false,
                 "searchKey": "router.ExternalURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -524,9 +484,7 @@
                 "identifier": "CanSendEmail",
                 "newPage": false,
                 "searchKey": "router.CanSendEmail",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -546,9 +504,7 @@
                 "identifier": "SendEmail",
                 "newPage": false,
                 "searchKey": "router.SendEmail",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -568,9 +524,7 @@
                 "identifier": "Extension",
                 "newPage": false,
                 "searchKey": "router.Extension",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -590,9 +544,7 @@
                 "identifier": "GitExec",
                 "newPage": false,
                 "searchKey": "router.GitExec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -612,9 +564,7 @@
                 "identifier": "GitInfoRefs",
                 "newPage": false,
                 "searchKey": "router.GitInfoRefs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -634,9 +584,7 @@
                 "identifier": "GitResolveRevision",
                 "newPage": false,
                 "searchKey": "router.GitResolveRevision",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -656,9 +604,7 @@
                 "identifier": "GitTar",
                 "newPage": false,
                 "searchKey": "router.GitTar",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -678,9 +624,7 @@
                 "identifier": "GitUploadPack",
                 "newPage": false,
                 "searchKey": "router.GitUploadPack",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -700,9 +644,7 @@
                 "identifier": "PhabricatorRepoCreate",
                 "newPage": false,
                 "searchKey": "router.PhabricatorRepoCreate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -722,9 +664,7 @@
                 "identifier": "ReposGetByName",
                 "newPage": false,
                 "searchKey": "router.ReposGetByName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -744,9 +684,7 @@
                 "identifier": "ReposInventoryUncached",
                 "newPage": false,
                 "searchKey": "router.ReposInventoryUncached",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -766,9 +704,7 @@
                 "identifier": "ReposInventory",
                 "newPage": false,
                 "searchKey": "router.ReposInventory",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -788,9 +724,7 @@
                 "identifier": "ReposList",
                 "newPage": false,
                 "searchKey": "router.ReposList",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -810,9 +744,7 @@
                 "identifier": "ReposIndex",
                 "newPage": false,
                 "searchKey": "router.ReposIndex",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -832,9 +764,7 @@
                 "identifier": "ReposListEnabled",
                 "newPage": false,
                 "searchKey": "router.ReposListEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -854,9 +784,7 @@
                 "identifier": "Configuration",
                 "newPage": false,
                 "searchKey": "router.Configuration",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -876,9 +804,7 @@
                 "identifier": "SearchConfiguration",
                 "newPage": false,
                 "searchKey": "router.SearchConfiguration",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -898,9 +824,7 @@
                 "identifier": "ExternalServiceConfigs",
                 "newPage": false,
                 "searchKey": "router.ExternalServiceConfigs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -920,9 +844,7 @@
                 "identifier": "ExternalServicesList",
                 "newPage": false,
                 "searchKey": "router.ExternalServicesList",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -945,7 +867,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -963,9 +887,7 @@
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "router.New",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -985,9 +907,7 @@
                 "identifier": "NewInternal",
                 "newPage": false,
                 "searchKey": "router.NewInternal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1007,7 +927,9 @@
                 "identifier": "addRegistryRoute",
                 "newPage": false,
                 "searchKey": "router.addRegistryRoute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1027,7 +949,9 @@
                 "identifier": "addGraphQLRoute",
                 "newPage": false,
                 "searchKey": "router.addGraphQLRoute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

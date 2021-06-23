@@ -13,10 +13,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleEncode" href="#ExampleEncode">func ExampleEncode()</a>
 
 ```
 searchKey: hex_test.ExampleEncode
+tags: [private]
 ```
 
 ```Go
@@ -27,6 +32,7 @@ func ExampleEncode()
 
 ```
 searchKey: hex_test.ExampleDecode
+tags: [private]
 ```
 
 ```Go
@@ -37,6 +43,7 @@ func ExampleDecode()
 
 ```
 searchKey: hex_test.ExampleDecodeString
+tags: [private]
 ```
 
 ```Go
@@ -47,6 +54,7 @@ func ExampleDecodeString()
 
 ```
 searchKey: hex_test.ExampleDump
+tags: [private]
 ```
 
 ```Go
@@ -57,6 +65,7 @@ func ExampleDump()
 
 ```
 searchKey: hex_test.ExampleDumper
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +76,7 @@ func ExampleDumper()
 
 ```
 searchKey: hex_test.ExampleEncodeToString
+tags: [private]
 ```
 
 ```Go

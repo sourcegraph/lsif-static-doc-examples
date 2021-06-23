@@ -42,14 +42,11 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="client" href="#client">var client</a>
 
 ```
 searchKey: main.client
+tags: [private]
 ```
 
 ```Go
@@ -60,6 +57,7 @@ var client *gqltestutil.Client
 
 ```
 searchKey: main.long
+tags: [private]
 ```
 
 ```Go
@@ -70,6 +68,7 @@ var long = ...
 
 ```
 searchKey: main.baseURL
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +79,7 @@ var baseURL = ...
 
 ```
 searchKey: main.email
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +90,7 @@ var email = flag.String("email", "gqltest@sourcegraph.com", "The email of the ad
 
 ```
 searchKey: main.username
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +101,7 @@ var username = flag.String("username", "gqltest-admin", "The username of the adm
 
 ```
 searchKey: main.password
+tags: [private]
 ```
 
 ```Go
@@ -110,6 +112,7 @@ var password = flag.String("password", "supersecurepassword", "The password of t
 
 ```
 searchKey: main.githubToken
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +123,7 @@ var githubToken = ...
 
 ```
 searchKey: main.awsAccessKeyID
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +134,7 @@ var awsAccessKeyID = ...
 
 ```
 searchKey: main.awsSecretAccessKey
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +145,7 @@ var awsSecretAccessKey = ...
 
 ```
 searchKey: main.awsCodeCommitUsername
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +156,7 @@ var awsCodeCommitUsername = ...
 
 ```
 searchKey: main.awsCodeCommitPassword
+tags: [private]
 ```
 
 ```Go
@@ -160,6 +167,7 @@ var awsCodeCommitPassword = ...
 
 ```
 searchKey: main.bbsURL
+tags: [private]
 ```
 
 ```Go
@@ -170,6 +178,7 @@ var bbsURL = flag.String("bbs-url", os.Getenv("BITBUCKET_SERVER_URL"), "The Bitb
 
 ```
 searchKey: main.bbsToken
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +189,7 @@ var bbsToken = ...
 
 ```
 searchKey: main.bbsUsername
+tags: [private]
 ```
 
 ```Go
@@ -190,6 +200,7 @@ var bbsUsername = ...
 
 ```
 searchKey: main.azureDevOpsUsername
+tags: [private]
 ```
 
 ```Go
@@ -200,6 +211,7 @@ var azureDevOpsUsername = ...
 
 ```
 searchKey: main.azureDevOpsToken
+tags: [private]
 ```
 
 ```Go
@@ -208,14 +220,11 @@ var azureDevOpsToken = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="searchClient" href="#searchClient">type searchClient interface</a>
 
 ```
 searchKey: main.searchClient
+tags: [private]
 ```
 
 ```Go
@@ -233,14 +242,11 @@ searchClient is an interface so we can swap out a streaming vs graphql based sea
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="TestAccessToken" href="#TestAccessToken">func TestAccessToken(t *testing.T)</a>
 
 ```
 searchKey: main.TestAccessToken
+tags: [private]
 ```
 
 ```Go
@@ -251,6 +257,7 @@ func TestAccessToken(t *testing.T)
 
 ```
 searchKey: main.TestExternalService
+tags: [private]
 ```
 
 ```Go
@@ -261,6 +268,7 @@ func TestExternalService(t *testing.T)
 
 ```
 searchKey: main.TestExternalService_AWSCodeCommit
+tags: [private]
 ```
 
 ```Go
@@ -271,6 +279,7 @@ func TestExternalService_AWSCodeCommit(t *testing.T)
 
 ```
 searchKey: main.TestExternalService_BitbucketServer
+tags: [private]
 ```
 
 ```Go
@@ -281,6 +290,7 @@ func TestExternalService_BitbucketServer(t *testing.T)
 
 ```
 searchKey: main.TestFeatureFlags
+tags: [private]
 ```
 
 ```Go
@@ -291,6 +301,7 @@ func TestFeatureFlags(t *testing.T)
 
 ```
 searchKey: main.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +312,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: main.mustMarshalJSONString
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +323,7 @@ func mustMarshalJSONString(v interface{}) string
 
 ```
 searchKey: main.TestOrganization
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +334,7 @@ func TestOrganization(t *testing.T)
 
 ```
 searchKey: main.TestRepository
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +345,7 @@ func TestRepository(t *testing.T)
 
 ```
 searchKey: main.TestRepository_NameWithSpace
+tags: [private]
 ```
 
 ```Go
@@ -341,6 +356,7 @@ func TestRepository_NameWithSpace(t *testing.T)
 
 ```
 searchKey: main.TestSearch
+tags: [private]
 ```
 
 ```Go
@@ -351,6 +367,7 @@ func TestSearch(t *testing.T)
 
 ```
 searchKey: main.testSearchClient
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +378,7 @@ func testSearchClient(t *testing.T, client searchClient)
 
 ```
 searchKey: main.testSearchOther
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +391,7 @@ testSearchOther other contains search tests for parts of the GraphQL API which a
 
 ```
 searchKey: main.testSearchContextsCRUD
+tags: [private]
 ```
 
 ```Go
@@ -383,6 +402,7 @@ func testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)
 
 ```
 searchKey: main.testListingSearchContexts
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +413,7 @@ func testListingSearchContexts(t *testing.T, client *gqltestutil.Client)
 
 ```
 searchKey: main.TestSiteConfig
+tags: [private]
 ```
 
 ```Go

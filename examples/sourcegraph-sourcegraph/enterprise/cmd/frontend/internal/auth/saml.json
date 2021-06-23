@@ -4,7 +4,9 @@
     "identifier": "saml",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/auth/saml",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "authPrefix",
                 "newPage": false,
                 "searchKey": "saml.authPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "providerType",
                 "newPage": false,
                 "searchKey": "saml.providerType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "testSAMLSPCert",
                 "newPage": false,
                 "searchKey": "saml.testSAMLSPCert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "testSAMLSPKey",
                 "newPage": false,
                 "searchKey": "saml.testSAMLSPKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "testAuthnResponse",
                 "newPage": false,
                 "searchKey": "saml.testAuthnResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +157,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "mockGetProviderValue",
                 "newPage": false,
                 "searchKey": "saml.mockGetProviderValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "traceLogEnabled",
                 "newPage": false,
                 "searchKey": "saml.traceLogEnabled",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -201,9 +221,7 @@
                 "identifier": "Middleware",
                 "newPage": false,
                 "searchKey": "saml.Middleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -223,7 +241,9 @@
                 "identifier": "idpCert",
                 "newPage": false,
                 "searchKey": "saml.idpCert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -243,7 +263,9 @@
                 "identifier": "idpKey",
                 "newPage": false,
                 "searchKey": "saml.idpKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -263,7 +285,9 @@
                 "identifier": "idpCert2",
                 "newPage": false,
                 "searchKey": "saml.idpCert2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -286,7 +310,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -304,7 +330,9 @@
                 "identifier": "relayState",
                 "newPage": false,
                 "searchKey": "saml.relayState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -322,7 +350,9 @@
                       "identifier": "relayState.encode",
                       "newPage": false,
                       "searchKey": "saml.relayState.encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -342,7 +372,9 @@
                       "identifier": "relayState.decode",
                       "newPage": false,
                       "searchKey": "saml.relayState.decode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -365,7 +397,9 @@
                 "identifier": "provider",
                 "newPage": false,
                 "searchKey": "saml.provider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -383,7 +417,9 @@
                       "identifier": "getProvider",
                       "newPage": false,
                       "searchKey": "saml.getProvider",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -403,7 +439,9 @@
                       "identifier": "handleGetProvider",
                       "newPage": false,
                       "searchKey": "saml.handleGetProvider",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -423,7 +461,9 @@
                       "identifier": "provider.ConfigID",
                       "newPage": false,
                       "searchKey": "saml.provider.ConfigID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -443,7 +483,9 @@
                       "identifier": "provider.Config",
                       "newPage": false,
                       "searchKey": "saml.provider.Config",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -463,7 +505,9 @@
                       "identifier": "provider.Refresh",
                       "newPage": false,
                       "searchKey": "saml.provider.Refresh",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -483,7 +527,9 @@
                       "identifier": "provider.getCachedInfoAndError",
                       "newPage": false,
                       "searchKey": "saml.provider.getCachedInfoAndError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -503,7 +549,9 @@
                       "identifier": "provider.CachedInfo",
                       "newPage": false,
                       "searchKey": "saml.provider.CachedInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -526,7 +574,9 @@
                 "identifier": "entitiesDescriptor",
                 "newPage": false,
                 "searchKey": "saml.entitiesDescriptor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -546,7 +596,9 @@
                 "identifier": "providerConfig",
                 "newPage": false,
                 "searchKey": "saml.providerConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -564,7 +616,9 @@
                       "identifier": "readProviderConfig",
                       "newPage": false,
                       "searchKey": "saml.readProviderConfig",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -587,7 +641,9 @@
                 "identifier": "authnResponseInfo",
                 "newPage": false,
                 "searchKey": "saml.authnResponseInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -605,7 +661,9 @@
                       "identifier": "readAuthnResponse",
                       "newPage": false,
                       "searchKey": "saml.readAuthnResponse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -628,7 +686,9 @@
                 "identifier": "samlAssertionValues",
                 "newPage": false,
                 "searchKey": "saml.samlAssertionValues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -646,7 +706,9 @@
                       "identifier": "samlAssertionValues.Get",
                       "newPage": false,
                       "searchKey": "saml.samlAssertionValues.Get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -672,7 +734,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -685,12 +749,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#init",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#init.config.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.config.go",
                 "newPage": false,
                 "searchKey": "saml.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -710,7 +776,9 @@
                 "identifier": "validateConfig",
                 "newPage": false,
                 "searchKey": "saml.validateConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -730,7 +798,9 @@
                 "identifier": "withConfigDefaults",
                 "newPage": false,
                 "searchKey": "saml.withConfigDefaults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -750,7 +820,9 @@
                 "identifier": "getNameIDFormat",
                 "newPage": false,
                 "searchKey": "saml.getNameIDFormat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -770,7 +842,9 @@
                 "identifier": "providerConfigID",
                 "newPage": false,
                 "searchKey": "saml.providerConfigID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -790,7 +864,9 @@
                 "identifier": "traceLog",
                 "newPage": false,
                 "searchKey": "saml.traceLog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -810,7 +886,9 @@
                 "identifier": "getProviders",
                 "newPage": false,
                 "searchKey": "saml.getProviders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -825,12 +903,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#init",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#init.config_watch.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.config_watch.go",
                 "newPage": false,
                 "searchKey": "saml.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -850,7 +930,9 @@
                 "identifier": "authHandler",
                 "newPage": false,
                 "searchKey": "saml.authHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -870,7 +952,9 @@
                 "identifier": "samlSPHandler",
                 "newPage": false,
                 "searchKey": "saml.samlSPHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -890,7 +974,9 @@
                 "identifier": "redirectToAuthURL",
                 "newPage": false,
                 "searchKey": "saml.redirectToAuthURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -910,7 +996,9 @@
                 "identifier": "buildAuthURLRedirect",
                 "newPage": false,
                 "searchKey": "saml.buildAuthURLRedirect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -930,7 +1018,9 @@
                 "identifier": "providerIDQuery",
                 "newPage": false,
                 "searchKey": "saml.providerIDQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -950,7 +1040,9 @@
                 "identifier": "getServiceProvider",
                 "newPage": false,
                 "searchKey": "saml.getServiceProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -970,7 +1062,9 @@
                 "identifier": "unmarshalEntityDescriptor",
                 "newPage": false,
                 "searchKey": "saml.unmarshalEntityDescriptor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -990,7 +1084,9 @@
                 "identifier": "readIdentityProviderMetadata",
                 "newPage": false,
                 "searchKey": "saml.readIdentityProviderMetadata",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1010,9 +1106,7 @@
                 "identifier": "SignOut",
                 "newPage": false,
                 "searchKey": "saml.SignOut",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1032,7 +1126,9 @@
                 "identifier": "getFirstProviderConfig",
                 "newPage": false,
                 "searchKey": "saml.getFirstProviderConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1052,7 +1148,9 @@
                 "identifier": "newLogoutRequest",
                 "newPage": false,
                 "searchKey": "saml.newLogoutRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1072,7 +1170,9 @@
                 "identifier": "getOrCreateUser",
                 "newPage": false,
                 "searchKey": "saml.getOrCreateUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1092,7 +1192,9 @@
                 "identifier": "mightBeEmail",
                 "newPage": false,
                 "searchKey": "saml.mightBeEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1112,7 +1214,9 @@
                 "identifier": "TestValidateCustom",
                 "newPage": false,
                 "searchKey": "saml.TestValidateCustom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1132,7 +1236,9 @@
                 "identifier": "TestProviderConfigID",
                 "newPage": false,
                 "searchKey": "saml.TestProviderConfigID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1152,7 +1258,9 @@
                 "identifier": "newSAMLIDPServer",
                 "newPage": false,
                 "searchKey": "saml.newSAMLIDPServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1172,7 +1280,9 @@
                 "identifier": "TestMiddleware",
                 "newPage": false,
                 "searchKey": "saml.TestMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1192,7 +1302,9 @@
                 "identifier": "unexpiredCookies",
                 "newPage": false,
                 "searchKey": "saml.unexpiredCookies",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1212,7 +1324,9 @@
                 "identifier": "TestReadAuthnResponse",
                 "newPage": false,
                 "searchKey": "saml.TestReadAuthnResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

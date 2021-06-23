@@ -10,11 +10,14 @@ Package cfg holds configuration shared by the Go command and internal/testenv. D
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="KnownEnv" href="#KnownEnv">const KnownEnv</a>
 
 ```
 searchKey: cfg.KnownEnv
-tags: [exported]
 ```
 
 ```Go

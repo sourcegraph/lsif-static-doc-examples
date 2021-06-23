@@ -22,14 +22,11 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="client" href="#client">var client</a>
 
 ```
 searchKey: authtest.client
+tags: [private]
 ```
 
 ```Go
@@ -40,6 +37,7 @@ var client *gqltestutil.Client
 
 ```
 searchKey: authtest.long
+tags: [private]
 ```
 
 ```Go
@@ -50,6 +48,7 @@ var long = ...
 
 ```
 searchKey: authtest.baseURL
+tags: [private]
 ```
 
 ```Go
@@ -60,6 +59,7 @@ var baseURL = ...
 
 ```
 searchKey: authtest.email
+tags: [private]
 ```
 
 ```Go
@@ -70,6 +70,7 @@ var email = flag.String("email", "authtest@sourcegraph.com", "The email of the a
 
 ```
 searchKey: authtest.username
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +81,7 @@ var username = flag.String("username", "authtest-admin", "The username of the ad
 
 ```
 searchKey: authtest.password
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +92,7 @@ var password = flag.String("password", "supersecurepassword", "The password of t
 
 ```
 searchKey: authtest.githubToken
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +103,7 @@ var githubToken = ...
 
 ```
 searchKey: authtest.dotcom
+tags: [private]
 ```
 
 ```Go
@@ -108,14 +112,11 @@ var dotcom = flag.Bool("dotcom", false, "Whether to test dotcom specific constra
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="TestCodeIntelEndpoints" href="#TestCodeIntelEndpoints">func TestCodeIntelEndpoints(t *testing.T)</a>
 
 ```
 searchKey: authtest.TestCodeIntelEndpoints
+tags: [private]
 ```
 
 ```Go
@@ -126,6 +127,7 @@ func TestCodeIntelEndpoints(t *testing.T)
 
 ```
 searchKey: authtest.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +138,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: authtest.mustMarshalJSONString
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +149,7 @@ func mustMarshalJSONString(v interface{}) string
 
 ```
 searchKey: authtest.TestOrganization
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +160,7 @@ func TestOrganization(t *testing.T)
 
 ```
 searchKey: authtest.TestRepository
+tags: [private]
 ```
 
 ```Go
@@ -166,6 +171,7 @@ func TestRepository(t *testing.T)
 
 ```
 searchKey: authtest.TestSiteAdminEndpoints
+tags: [private]
 ```
 
 ```Go

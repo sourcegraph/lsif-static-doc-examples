@@ -74,10 +74,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="requestMeter" href="#requestMeter">var requestMeter</a>
 
 ```
 searchKey: gitserver.requestMeter
+tags: [private]
 ```
 
 ```Go
@@ -88,6 +93,7 @@ var requestMeter = ...
 
 ```
 searchKey: gitserver.defaultTransport
+tags: [private]
 ```
 
 ```Go
@@ -100,7 +106,6 @@ defaultTransport is the default transport used in the default client and the def
 
 ```
 searchKey: gitserver.DefaultClient
-tags: [exported]
 ```
 
 ```Go
@@ -113,6 +118,7 @@ DefaultClient is the default Client. Unless overwritten it is connected to serve
 
 ```
 searchKey: gitserver.deadlineExceededCounter
+tags: [private]
 ```
 
 ```Go
@@ -123,7 +129,6 @@ var deadlineExceededCounter = ...
 
 ```
 searchKey: gitserver.MockIsRepoCloneable
-tags: [exported]
 ```
 
 ```Go
@@ -136,7 +141,6 @@ MockIsRepoCloneable mocks (*Client).IsRepoCloneable for tests.
 
 ```
 searchKey: gitserver.DefaultReverseProxy
-tags: [exported]
 ```
 
 ```Go
@@ -147,11 +151,14 @@ DefaultReverseProxy is the default ReverseProxy. It uses the same transport and 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: gitserver.Client
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +186,6 @@ Client is a gitserver client.
 
 ```
 searchKey: gitserver.NewClient
-tags: [exported]
 ```
 
 ```Go
@@ -192,7 +198,6 @@ NewClient returns a new gitserver.Client instantiated with default arguments and
 
 ```
 searchKey: gitserver.Client.AddrForRepo
-tags: [exported]
 ```
 
 ```Go
@@ -205,6 +210,7 @@ AddrForRepo returns the gitserver address to use for the given repo name.
 
 ```
 searchKey: gitserver.Client.addrForKey
+tags: [private]
 ```
 
 ```Go
@@ -217,7 +223,6 @@ addrForKey returns the gitserver address to use for the given string key, which 
 
 ```
 searchKey: gitserver.Client.ArchiveURL
-tags: [exported]
 ```
 
 ```Go
@@ -230,7 +235,6 @@ ArchiveURL returns a URL from which an archive of the given Git repository can b
 
 ```
 searchKey: gitserver.Client.Archive
-tags: [exported]
 ```
 
 ```Go
@@ -243,7 +247,6 @@ Archive produces an archive from a Git repository.
 
 ```
 searchKey: gitserver.Client.P4Exec
-tags: [exported]
 ```
 
 ```Go
@@ -256,7 +259,6 @@ P4Exec sends a p4 command with given arguments and returns an io.ReadCloser for 
 
 ```
 searchKey: gitserver.Client.Command
-tags: [exported]
 ```
 
 ```Go
@@ -269,7 +271,6 @@ Command creates a new Cmd. Command name must be 'git', otherwise it panics.
 
 ```
 searchKey: gitserver.Client.WaitForGitServers
-tags: [exported]
 ```
 
 ```Go
@@ -282,6 +283,7 @@ WaitForGitServers retries a noop request to all gitserver instances until gettin
 
 ```
 searchKey: gitserver.Client.pingAll
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +294,7 @@ func (c *Client) pingAll(ctx context.Context) []error
 
 ```
 searchKey: gitserver.Client.ping
+tags: [private]
 ```
 
 ```Go
@@ -302,7 +305,6 @@ func (c *Client) ping(ctx context.Context, addr string) error
 
 ```
 searchKey: gitserver.Client.ListGitolite
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +317,6 @@ ListGitolite lists Gitolite repositories.
 
 ```
 searchKey: gitserver.Client.ListCloned
-tags: [exported]
 ```
 
 ```Go
@@ -328,7 +329,6 @@ ListCloned lists all cloned repositories
 
 ```
 searchKey: gitserver.Client.GetGitolitePhabricatorMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -341,6 +341,7 @@ GetGitolitePhabricatorMetadata returns Phabricator metadata for a Gitolite repos
 
 ```
 searchKey: gitserver.Client.doListOne
+tags: [private]
 ```
 
 ```Go
@@ -351,7 +352,6 @@ func (c *Client) doListOne(ctx context.Context, urlSuffix, addr string) ([]strin
 
 ```
 searchKey: gitserver.Client.RequestRepoUpdate
-tags: [exported]
 ```
 
 ```Go
@@ -366,7 +366,6 @@ Repo updates are not guaranteed to occur. If a repo has been updated recently (w
 
 ```
 searchKey: gitserver.Client.IsRepoCloneable
-tags: [exported]
 ```
 
 ```Go
@@ -379,7 +378,6 @@ IsRepoCloneable returns nil if the repository is cloneable.
 
 ```
 searchKey: gitserver.Client.IsRepoCloned
-tags: [exported]
 ```
 
 ```Go
@@ -390,7 +388,6 @@ func (c *Client) IsRepoCloned(ctx context.Context, repo api.RepoName) (bool, err
 
 ```
 searchKey: gitserver.Client.RepoCloneProgress
-tags: [exported]
 ```
 
 ```Go
@@ -401,7 +398,6 @@ func (c *Client) RepoCloneProgress(ctx context.Context, repos ...api.RepoName) (
 
 ```
 searchKey: gitserver.Client.RepoInfo
-tags: [exported]
 ```
 
 ```Go
@@ -418,7 +414,6 @@ If multiple errors occurred, an incomplete result is returned along with a *mult
 
 ```
 searchKey: gitserver.Client.ReposStats
-tags: [exported]
 ```
 
 ```Go
@@ -433,6 +428,7 @@ Note: If the statistics for a gitserver have not been computed, the UpdatedAt fi
 
 ```
 searchKey: gitserver.Client.doReposStats
+tags: [private]
 ```
 
 ```Go
@@ -443,7 +439,6 @@ func (c *Client) doReposStats(ctx context.Context, addr string) (*protocol.Repos
 
 ```
 searchKey: gitserver.Client.Remove
-tags: [exported]
 ```
 
 ```Go
@@ -456,6 +451,7 @@ Remove removes the repository clone from gitserver.
 
 ```
 searchKey: gitserver.Client.httpPost
+tags: [private]
 ```
 
 ```Go
@@ -466,6 +462,7 @@ func (c *Client) httpPost(ctx context.Context, repo api.RepoName, op string, pay
 
 ```
 searchKey: gitserver.Client.do
+tags: [private]
 ```
 
 ```Go
@@ -478,7 +475,6 @@ do performs a request to a gitserver, sharding based on the given repo name (the
 
 ```
 searchKey: gitserver.Client.CreateCommitFromPatch
-tags: [exported]
 ```
 
 ```Go
@@ -491,7 +487,6 @@ CreateCommitFromPatch will attempt to create a commit from a patch If possible, 
 
 ```
 searchKey: gitserver.ArchiveOptions
-tags: [exported]
 ```
 
 ```Go
@@ -508,6 +503,7 @@ ArchiveOptions contains options for the Archive func.
 
 ```
 searchKey: gitserver.archiveReader
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +520,7 @@ archiveReader wraps the StdoutReader yielded by gitserver's Cmd.StdoutReader wit
 
 ```
 searchKey: gitserver.archiveReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -536,6 +533,7 @@ Read checks the known output behavior of the StdoutReader.
 
 ```
 searchKey: gitserver.archiveReader.Close
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +544,7 @@ func (a *archiveReader) Close() error
 
 ```
 searchKey: gitserver.badRequestError
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +555,7 @@ type badRequestError struct{ error }
 
 ```
 searchKey: gitserver.badRequestError.BadRequest
+tags: [private]
 ```
 
 ```Go
@@ -566,7 +566,6 @@ func (e badRequestError) BadRequest() bool
 
 ```
 searchKey: gitserver.Cmd
-tags: [exported]
 ```
 
 ```Go
@@ -586,6 +585,7 @@ Cmd represents a command to be executed remotely.
 
 ```
 searchKey: gitserver.Cmd.sendExec
+tags: [private]
 ```
 
 ```Go
@@ -596,7 +596,6 @@ func (c *Cmd) sendExec(ctx context.Context) (_ io.ReadCloser, _ http.Header, err
 
 ```
 searchKey: gitserver.Cmd.DividedOutput
-tags: [exported]
 ```
 
 ```Go
@@ -609,7 +608,6 @@ DividedOutput runs the command and returns its standard output and standard erro
 
 ```
 searchKey: gitserver.Cmd.Run
-tags: [exported]
 ```
 
 ```Go
@@ -622,7 +620,6 @@ Run starts the specified command and waits for it to complete.
 
 ```
 searchKey: gitserver.Cmd.Output
-tags: [exported]
 ```
 
 ```Go
@@ -635,7 +632,6 @@ Output runs the command and returns its standard output.
 
 ```
 searchKey: gitserver.Cmd.CombinedOutput
-tags: [exported]
 ```
 
 ```Go
@@ -648,7 +644,6 @@ CombinedOutput runs the command and returns its combined standard output and sta
 
 ```
 searchKey: gitserver.Cmd.String
-tags: [exported]
 ```
 
 ```Go
@@ -659,6 +654,7 @@ func (c *Cmd) String() string
 
 ```
 searchKey: gitserver.cmdReader
+tags: [private]
 ```
 
 ```Go
@@ -672,6 +668,7 @@ type cmdReader struct {
 
 ```
 searchKey: gitserver.cmdReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -682,6 +679,7 @@ func (c *cmdReader) Read(p []byte) (int, error)
 
 ```
 searchKey: gitserver.cmdReader.Close
+tags: [private]
 ```
 
 ```Go
@@ -692,7 +690,6 @@ func (c *cmdReader) Close() error
 
 ```
 searchKey: gitserver.RepoNotCloneableErr
-tags: [exported]
 ```
 
 ```Go
@@ -709,7 +706,6 @@ RepoNotCloneableErr is the error that happens when a repository can not be clone
 
 ```
 searchKey: gitserver.RepoNotCloneableErr.NotFound
-tags: [exported]
 ```
 
 ```Go
@@ -722,7 +718,6 @@ NotFound returns true if the repo could not be cloned because it wasn't found. T
 
 ```
 searchKey: gitserver.RepoNotCloneableErr.Error
-tags: [exported]
 ```
 
 ```Go
@@ -733,7 +728,6 @@ func (e *RepoNotCloneableErr) Error() string
 
 ```
 searchKey: gitserver.RevisionNotFoundError
-tags: [exported]
 ```
 
 ```Go
@@ -749,7 +743,6 @@ RevisionNotFoundError is an error that reports a revision doesn't exist.
 
 ```
 searchKey: gitserver.RevisionNotFoundError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -760,7 +753,6 @@ func (e *RevisionNotFoundError) Error() string
 
 ```
 searchKey: gitserver.RevisionNotFoundError.HTTPStatusCode
-tags: [exported]
 ```
 
 ```Go
@@ -771,7 +763,6 @@ func (e *RevisionNotFoundError) HTTPStatusCode() int
 
 ```
 searchKey: gitserver.RevisionNotFoundError.NotFound
-tags: [exported]
 ```
 
 ```Go
@@ -782,7 +773,6 @@ func (RevisionNotFoundError) NotFound() bool
 
 ```
 searchKey: gitserver.ReverseProxy
-tags: [exported]
 ```
 
 ```Go
@@ -800,7 +790,6 @@ ReverseProxy is a gitserver reverse proxy.
 
 ```
 searchKey: gitserver.NewReverseProxy
-tags: [exported]
 ```
 
 ```Go
@@ -813,7 +802,6 @@ NewReverseProxy returns a new gitserver.ReverseProxy instantiated with the given
 
 ```
 searchKey: gitserver.ReverseProxy.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -824,11 +812,14 @@ ServeHTTP creates a one-shot proxy with the given director and proxies the given
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AddrForRepo" href="#AddrForRepo">func AddrForRepo(repo api.RepoName, addrs []string) string</a>
 
 ```
 searchKey: gitserver.AddrForRepo
-tags: [exported]
 ```
 
 ```Go
@@ -841,6 +832,7 @@ AddrForRepo returns the gitserver address to use for the given repo name. It sho
 
 ```
 searchKey: gitserver.addrForKey
+tags: [private]
 ```
 
 ```Go
@@ -853,7 +845,6 @@ addrForKey returns the gitserver address to use for the given string key, which 
 
 ```
 searchKey: gitserver.StdoutReader
-tags: [exported]
 ```
 
 ```Go
@@ -866,6 +857,7 @@ StdoutReader returns an io.ReadCloser of stdout of c. If the command has a non-z
 
 ```
 searchKey: gitserver.userFromContext
+tags: [private]
 ```
 
 ```Go
@@ -876,7 +868,6 @@ func userFromContext(ctx context.Context) string
 
 ```
 searchKey: gitserver.IsRevisionNotFound
-tags: [exported]
 ```
 
 ```Go

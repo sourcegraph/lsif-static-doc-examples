@@ -4,7 +4,9 @@
     "identifier": "bitbucketserver",
     "newPage": true,
     "searchKey": "internal/extsvc/bitbucketserver",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "defaultRateLimit",
                 "newPage": false,
                 "searchKey": "bitbucketserver.defaultRateLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "defaultRateLimitBurst",
                 "newPage": false,
                 "searchKey": "bitbucketserver.defaultRateLimitBurst",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "userFiltersLimit",
                 "newPage": false,
                 "searchKey": "bitbucketserver.userFiltersLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,9 +110,7 @@
                 "identifier": "PermSysAdmin",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermSysAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -122,9 +130,7 @@
                 "identifier": "PermAdmin",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -144,9 +150,7 @@
                 "identifier": "PermLicensedUser",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermLicensedUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -166,9 +170,7 @@
                 "identifier": "PermProjectCreate",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermProjectCreate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -188,9 +190,7 @@
                 "identifier": "PermProjectAdmin",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermProjectAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +210,7 @@
                 "identifier": "PermProjectWrite",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermProjectWrite",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -232,9 +230,7 @@
                 "identifier": "PermProjectView",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermProjectView",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -254,9 +250,7 @@
                 "identifier": "PermProjectRead",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermProjectRead",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -276,9 +270,7 @@
                 "identifier": "PermRepoAdmin",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermRepoAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -298,9 +290,7 @@
                 "identifier": "PermRepoRead",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermRepoRead",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -320,9 +310,7 @@
                 "identifier": "PermRepoWrite",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermRepoWrite",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -342,9 +330,7 @@
                 "identifier": "ApprovedActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ApprovedActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -364,9 +350,7 @@
                 "identifier": "UnapprovedActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.UnapprovedActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -386,9 +370,7 @@
                 "identifier": "DeclinedActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.DeclinedActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -408,9 +390,7 @@
                 "identifier": "ReviewedActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ReviewedActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -430,9 +410,7 @@
                 "identifier": "OpenedActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.OpenedActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -452,9 +430,7 @@
                 "identifier": "ReopenedActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ReopenedActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -474,9 +450,7 @@
                 "identifier": "RescopedActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.RescopedActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -496,9 +470,7 @@
                 "identifier": "UpdatedActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.UpdatedActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -518,9 +490,7 @@
                 "identifier": "CommentedActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.CommentedActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -540,9 +510,7 @@
                 "identifier": "MergedActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.MergedActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -562,7 +530,9 @@
                 "identifier": "bitbucketDuplicatePRException",
                 "newPage": false,
                 "searchKey": "bitbucketserver.bitbucketDuplicatePRException",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -582,7 +552,9 @@
                 "identifier": "bitbucketNoSuchLabelException",
                 "newPage": false,
                 "searchKey": "bitbucketserver.bitbucketNoSuchLabelException",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -602,7 +574,9 @@
                 "identifier": "bitbucketNoSuchPullRequestException",
                 "newPage": false,
                 "searchKey": "bitbucketserver.bitbucketNoSuchPullRequestException",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -622,7 +596,9 @@
                 "identifier": "eventTypeHeader",
                 "newPage": false,
                 "searchKey": "bitbucketserver.eventTypeHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -645,7 +621,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -663,7 +641,9 @@
                 "identifier": "requestCounter",
                 "newPage": false,
                 "searchKey": "bitbucketserver.requestCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -683,9 +663,7 @@
                 "identifier": "ErrUserFiltersLimit",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ErrUserFiltersLimit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -705,9 +683,7 @@
                 "identifier": "ErrPullRequestNotFound",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ErrPullRequestNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -727,9 +703,7 @@
                 "identifier": "ErrNotMergeable",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ErrNotMergeable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -749,7 +723,9 @@
                 "identifier": "normalizer",
                 "newPage": false,
                 "searchKey": "bitbucketserver.normalizer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -769,7 +745,9 @@
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "bitbucketserver.update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -792,7 +770,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -810,9 +790,7 @@
                 "identifier": "SudoableOAuthClient",
                 "newPage": false,
                 "searchKey": "bitbucketserver.SudoableOAuthClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -830,7 +808,9 @@
                       "identifier": "newSudoableOAuthClient",
                       "newPage": false,
                       "searchKey": "bitbucketserver.newSudoableOAuthClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -850,9 +830,7 @@
                       "identifier": "SudoableOAuthClient.Authenticate",
                       "newPage": false,
                       "searchKey": "bitbucketserver.SudoableOAuthClient.Authenticate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -872,9 +850,7 @@
                       "identifier": "SudoableOAuthClient.Hash",
                       "newPage": false,
                       "searchKey": "bitbucketserver.SudoableOAuthClient.Hash",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -897,9 +873,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -917,9 +891,7 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "bitbucketserver.NewClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -939,7 +911,9 @@
                       "identifier": "newClient",
                       "newPage": false,
                       "searchKey": "bitbucketserver.newClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -959,9 +933,7 @@
                       "identifier": "NewTestClient",
                       "newPage": false,
                       "searchKey": "bitbucketserver.NewTestClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -981,9 +953,7 @@
                       "identifier": "Client.WithAuthenticator",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.WithAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1003,9 +973,7 @@
                       "identifier": "Client.SetOAuth",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.SetOAuth",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1025,9 +993,7 @@
                       "identifier": "Client.Sudo",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.Sudo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1047,9 +1013,7 @@
                       "identifier": "Client.Username",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.Username",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1069,9 +1033,7 @@
                       "identifier": "Client.Users",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.Users",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1091,9 +1053,7 @@
                       "identifier": "Client.UserPermissions",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.UserPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1113,9 +1073,7 @@
                       "identifier": "Client.CreateUser",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreateUser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1135,9 +1093,7 @@
                       "identifier": "Client.LoadUser",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.LoadUser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1157,9 +1113,7 @@
                       "identifier": "Client.LoadGroup",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.LoadGroup",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1179,9 +1133,7 @@
                       "identifier": "Client.CreateGroup",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreateGroup",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1201,9 +1153,7 @@
                       "identifier": "Client.CreateGroupMembership",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreateGroupMembership",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1223,9 +1173,7 @@
                       "identifier": "Client.CreateUserRepoPermission",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreateUserRepoPermission",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1245,9 +1193,7 @@
                       "identifier": "Client.CreateUserProjectPermission",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreateUserProjectPermission",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1267,9 +1213,7 @@
                       "identifier": "Client.CreateGroupProjectPermission",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreateGroupProjectPermission",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1289,9 +1233,7 @@
                       "identifier": "Client.CreateGroupRepoPermission",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreateGroupRepoPermission",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1311,7 +1253,9 @@
                       "identifier": "Client.createPermission",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.createPermission",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1331,9 +1275,7 @@
                       "identifier": "Client.CreateRepo",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreateRepo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1353,9 +1295,7 @@
                       "identifier": "Client.LoadProject",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.LoadProject",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1375,9 +1315,7 @@
                       "identifier": "Client.CreateProject",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreateProject",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1397,9 +1335,7 @@
                       "identifier": "Client.LoadPullRequest",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.LoadPullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1419,9 +1355,7 @@
                       "identifier": "Client.UpdatePullRequest",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.UpdatePullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1441,9 +1375,7 @@
                       "identifier": "Client.CreatePullRequest",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreatePullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1463,9 +1395,7 @@
                       "identifier": "Client.FetchDefaultReviewers",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.FetchDefaultReviewers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1485,9 +1415,7 @@
                       "identifier": "Client.DeclinePullRequest",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.DeclinePullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1507,9 +1435,7 @@
                       "identifier": "Client.ReopenPullRequest",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.ReopenPullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1529,9 +1455,7 @@
                       "identifier": "Client.LoadPullRequestActivities",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.LoadPullRequestActivities",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1551,9 +1475,7 @@
                       "identifier": "Client.LoadPullRequestCommits",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.LoadPullRequestCommits",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1573,9 +1495,7 @@
                       "identifier": "Client.LoadPullRequestBuildStatuses",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.LoadPullRequestBuildStatuses",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1595,9 +1515,7 @@
                       "identifier": "Client.Repo",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.Repo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1617,9 +1535,7 @@
                       "identifier": "Client.Repos",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.Repos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1639,9 +1555,7 @@
                       "identifier": "Client.LabeledRepos",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.LabeledRepos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1661,9 +1575,7 @@
                       "identifier": "Client.RepoIDs",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.RepoIDs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1683,9 +1595,7 @@
                       "identifier": "Client.RecentRepos",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.RecentRepos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1705,7 +1615,9 @@
                       "identifier": "Client.page",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.page",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1725,7 +1637,9 @@
                       "identifier": "Client.send",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.send",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1745,7 +1659,9 @@
                       "identifier": "Client.do",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1765,9 +1681,7 @@
                       "identifier": "Client.AuthenticatedUsername",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.AuthenticatedUsername",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1787,9 +1701,7 @@
                       "identifier": "Client.CreatePullRequestComment",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.CreatePullRequestComment",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1809,9 +1721,7 @@
                       "identifier": "Client.MergePullRequest",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.MergePullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1834,9 +1744,7 @@
                 "identifier": "UserFilters",
                 "newPage": false,
                 "searchKey": "bitbucketserver.UserFilters",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1854,9 +1762,7 @@
                       "identifier": "UserFilters.EncodeTo",
                       "newPage": false,
                       "searchKey": "bitbucketserver.UserFilters.EncodeTo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1879,9 +1785,7 @@
                 "identifier": "UserFilter",
                 "newPage": false,
                 "searchKey": "bitbucketserver.UserFilter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1899,9 +1803,7 @@
                       "identifier": "UserFilter.EncodeTo",
                       "newPage": false,
                       "searchKey": "bitbucketserver.UserFilter.EncodeTo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1924,9 +1826,7 @@
                 "identifier": "PermissionFilter",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermissionFilter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1944,9 +1844,7 @@
                       "identifier": "PermissionFilter.EncodeTo",
                       "newPage": false,
                       "searchKey": "bitbucketserver.PermissionFilter.EncodeTo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1969,9 +1867,7 @@
                 "identifier": "UpdatePullRequestInput",
                 "newPage": false,
                 "searchKey": "bitbucketserver.UpdatePullRequestInput",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1991,9 +1887,7 @@
                 "identifier": "ErrAlreadyExists",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ErrAlreadyExists",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2011,9 +1905,7 @@
                       "identifier": "ErrAlreadyExists.Error",
                       "newPage": false,
                       "searchKey": "bitbucketserver.ErrAlreadyExists.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2036,9 +1928,7 @@
                 "identifier": "PageToken",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PageToken",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2056,9 +1946,7 @@
                       "identifier": "PageToken.HasMore",
                       "newPage": false,
                       "searchKey": "bitbucketserver.PageToken.HasMore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2078,9 +1966,7 @@
                       "identifier": "PageToken.Query",
                       "newPage": false,
                       "searchKey": "bitbucketserver.PageToken.Query",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2100,9 +1986,7 @@
                       "identifier": "PageToken.Values",
                       "newPage": false,
                       "searchKey": "bitbucketserver.PageToken.Values",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2125,9 +2009,7 @@
                 "identifier": "Perm",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Perm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2147,9 +2029,7 @@
                 "identifier": "User",
                 "newPage": false,
                 "searchKey": "bitbucketserver.User",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2169,9 +2049,7 @@
                 "identifier": "Group",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Group",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2191,9 +2069,7 @@
                 "identifier": "UserRepoPermission",
                 "newPage": false,
                 "searchKey": "bitbucketserver.UserRepoPermission",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2213,9 +2089,7 @@
                 "identifier": "GroupRepoPermission",
                 "newPage": false,
                 "searchKey": "bitbucketserver.GroupRepoPermission",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2235,9 +2109,7 @@
                 "identifier": "UserProjectPermission",
                 "newPage": false,
                 "searchKey": "bitbucketserver.UserProjectPermission",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2257,9 +2129,7 @@
                 "identifier": "GroupProjectPermission",
                 "newPage": false,
                 "searchKey": "bitbucketserver.GroupProjectPermission",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2279,9 +2149,7 @@
                 "identifier": "Repo",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Repo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2299,9 +2167,7 @@
                       "identifier": "Repo.IsPersonalRepository",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Repo.IsPersonalRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2324,9 +2190,7 @@
                 "identifier": "Project",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Project",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2346,9 +2210,7 @@
                 "identifier": "Ref",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Ref",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2368,9 +2230,7 @@
                 "identifier": "PullRequest",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PullRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2388,9 +2248,7 @@
                       "identifier": "ExtractDuplicatePullRequest",
                       "newPage": false,
                       "searchKey": "bitbucketserver.ExtractDuplicatePullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2413,9 +2271,7 @@
                 "identifier": "PullRequestAuthor",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PullRequestAuthor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2435,9 +2291,7 @@
                 "identifier": "Reviewer",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Reviewer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2457,9 +2311,7 @@
                 "identifier": "Participant",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Participant",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2479,9 +2331,7 @@
                 "identifier": "Activity",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Activity",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2499,9 +2349,7 @@
                       "identifier": "Activity.Key",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Activity.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2524,9 +2372,7 @@
                 "identifier": "BuildStatus",
                 "newPage": false,
                 "searchKey": "bitbucketserver.BuildStatus",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2546,9 +2392,7 @@
                 "identifier": "CommitStatus",
                 "newPage": false,
                 "searchKey": "bitbucketserver.CommitStatus",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2566,9 +2410,7 @@
                       "identifier": "CommitStatus.Key",
                       "newPage": false,
                       "searchKey": "bitbucketserver.CommitStatus.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2591,9 +2433,7 @@
                 "identifier": "ActivityAction",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ActivityAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2613,9 +2453,7 @@
                 "identifier": "Comment",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Comment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2635,9 +2473,7 @@
                 "identifier": "CommentAnchor",
                 "newPage": false,
                 "searchKey": "bitbucketserver.CommentAnchor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2657,9 +2493,7 @@
                 "identifier": "Task",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Task",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2679,9 +2513,7 @@
                 "identifier": "PermittedOperations",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PermittedOperations",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2701,9 +2533,7 @@
                 "identifier": "Commit",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Commit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2723,7 +2553,9 @@
                 "identifier": "httpError",
                 "newPage": false,
                 "searchKey": "bitbucketserver.httpError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2741,7 +2573,9 @@
                       "identifier": "httpError.Error",
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2761,7 +2595,9 @@
                       "identifier": "httpError.Unauthorized",
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.Unauthorized",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2781,7 +2617,9 @@
                       "identifier": "httpError.NotFound",
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.NotFound",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2801,7 +2639,9 @@
                       "identifier": "httpError.DuplicatePullRequest",
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.DuplicatePullRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2821,7 +2661,9 @@
                       "identifier": "httpError.NoSuchPullRequestException",
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.NoSuchPullRequestException",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2841,7 +2683,9 @@
                       "identifier": "httpError.NoSuchLabelException",
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.NoSuchLabelException",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2861,7 +2705,9 @@
                       "identifier": "httpError.MergePreconditionFailedException",
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.MergePreconditionFailedException",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2881,7 +2727,9 @@
                       "identifier": "httpError.ExtractExistingPullRequest",
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.ExtractExistingPullRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2904,9 +2752,7 @@
                 "identifier": "PingEvent",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PingEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2926,9 +2772,7 @@
                 "identifier": "PullRequestActivityEvent",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PullRequestActivityEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2948,9 +2792,7 @@
                 "identifier": "PullRequestParticipantStatusEvent",
                 "newPage": false,
                 "searchKey": "bitbucketserver.PullRequestParticipantStatusEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2970,9 +2812,7 @@
                 "identifier": "ParticipantStatusEvent",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ParticipantStatusEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2990,9 +2830,7 @@
                       "identifier": "ParticipantStatusEvent.Key",
                       "newPage": false,
                       "searchKey": "bitbucketserver.ParticipantStatusEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3015,9 +2853,7 @@
                 "identifier": "BuildStatusEvent",
                 "newPage": false,
                 "searchKey": "bitbucketserver.BuildStatusEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3040,7 +2876,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -3058,7 +2896,9 @@
                 "identifier": "parseQueryStrings",
                 "newPage": false,
                 "searchKey": "bitbucketserver.parseQueryStrings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3078,7 +2918,9 @@
                 "identifier": "categorize",
                 "newPage": false,
                 "searchKey": "bitbucketserver.categorize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3098,9 +2940,7 @@
                 "identifier": "IsNotFound",
                 "newPage": false,
                 "searchKey": "bitbucketserver.IsNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3120,9 +2960,7 @@
                 "identifier": "IsUnauthorized",
                 "newPage": false,
                 "searchKey": "bitbucketserver.IsUnauthorized",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3142,9 +2980,7 @@
                 "identifier": "IsNoSuchLabel",
                 "newPage": false,
                 "searchKey": "bitbucketserver.IsNoSuchLabel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3164,9 +3000,7 @@
                 "identifier": "IsDuplicatePullRequest",
                 "newPage": false,
                 "searchKey": "bitbucketserver.IsDuplicatePullRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3186,9 +3020,7 @@
                 "identifier": "WebhookEventType",
                 "newPage": false,
                 "searchKey": "bitbucketserver.WebhookEventType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3208,9 +3040,7 @@
                 "identifier": "ParseWebhookEvent",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ParseWebhookEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3230,7 +3060,9 @@
                 "identifier": "normalize",
                 "newPage": false,
                 "searchKey": "bitbucketserver.normalize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3250,7 +3082,9 @@
                 "identifier": "ignoreHostMatcher",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ignoreHostMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3270,7 +3104,9 @@
                 "identifier": "TestSudoableOAuthClient",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestSudoableOAuthClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3290,7 +3126,9 @@
                 "identifier": "TestParseQueryStrings",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestParseQueryStrings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3310,7 +3148,9 @@
                 "identifier": "TestUserFilters",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestUserFilters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3330,7 +3170,9 @@
                 "identifier": "TestClient_Users",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_Users",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3350,7 +3192,9 @@
                 "identifier": "TestClient_LabeledRepos",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_LabeledRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3370,7 +3214,9 @@
                 "identifier": "TestClient_LoadPullRequest",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_LoadPullRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3390,7 +3236,9 @@
                 "identifier": "TestClient_CreatePullRequest",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_CreatePullRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3410,7 +3258,9 @@
                 "identifier": "TestClient_FetchDefaultReviewers",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_FetchDefaultReviewers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3430,7 +3280,9 @@
                 "identifier": "TestClient_DeclinePullRequest",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_DeclinePullRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3450,7 +3302,9 @@
                 "identifier": "TestClient_LoadPullRequestActivities",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_LoadPullRequestActivities",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3470,7 +3324,9 @@
                 "identifier": "TestClient_CreatePullRequestComment",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_CreatePullRequestComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3490,7 +3346,9 @@
                 "identifier": "TestClient_MergePullRequest",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_MergePullRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3510,7 +3368,9 @@
                 "identifier": "TestClient_RepoIDs",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_RepoIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3530,7 +3390,9 @@
                 "identifier": "checkGolden",
                 "newPage": false,
                 "searchKey": "bitbucketserver.checkGolden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3550,7 +3412,9 @@
                 "identifier": "TestAuth",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3570,7 +3434,9 @@
                 "identifier": "TestClient_WithAuthenticator",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_WithAuthenticator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3590,7 +3456,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

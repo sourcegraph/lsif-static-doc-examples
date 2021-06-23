@@ -4,9 +4,7 @@
     "identifier": "executor-queue",
     "newPage": true,
     "searchKey": "enterprise/cmd/executor-queue",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -27,9 +25,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -47,7 +43,9 @@
                 "identifier": "port",
                 "newPage": false,
                 "searchKey": "main.port",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -70,9 +68,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -90,9 +86,7 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "main.Config",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +104,7 @@
                       "identifier": "Config.Load",
                       "newPage": false,
                       "searchKey": "main.Config.Load",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -132,9 +124,7 @@
                       "identifier": "Config.ServerOptions",
                       "newPage": false,
                       "searchKey": "main.Config.ServerOptions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -157,7 +147,9 @@
                 "identifier": "config",
                 "newPage": false,
                 "searchKey": "main.config",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -180,9 +172,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -200,7 +190,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +212,9 @@
                 "identifier": "connectToDatabase",
                 "newPage": false,
                 "searchKey": "main.connectToDatabase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

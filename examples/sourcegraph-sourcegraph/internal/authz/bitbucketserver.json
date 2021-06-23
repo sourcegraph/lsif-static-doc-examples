@@ -4,7 +4,9 @@
     "identifier": "bitbucketserver",
     "newPage": true,
     "searchKey": "internal/authz/bitbucketserver",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "errNoResults",
                 "newPage": false,
                 "searchKey": "bitbucketserver.errNoResults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "bitbucketserver.update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,9 +111,7 @@
                 "identifier": "Provider",
                 "newPage": false,
                 "searchKey": "bitbucketserver.Provider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -121,9 +129,7 @@
                       "identifier": "NewProvider",
                       "newPage": false,
                       "searchKey": "bitbucketserver.NewProvider",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -143,7 +149,9 @@
                       "identifier": "newProvider",
                       "newPage": false,
                       "searchKey": "bitbucketserver.newProvider",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -163,9 +171,7 @@
                       "identifier": "Provider.Validate",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.Validate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -185,9 +191,7 @@
                       "identifier": "Provider.URN",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.URN",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -207,9 +211,7 @@
                       "identifier": "Provider.ServiceID",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.ServiceID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -229,9 +231,7 @@
                       "identifier": "Provider.ServiceType",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.ServiceType",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -251,9 +251,7 @@
                       "identifier": "Provider.FetchAccount",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.FetchAccount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -273,9 +271,7 @@
                       "identifier": "Provider.FetchUserPerms",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.FetchUserPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -295,9 +291,7 @@
                       "identifier": "Provider.FetchRepoPerms",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.FetchRepoPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -317,7 +311,9 @@
                       "identifier": "Provider.repoIDs",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.repoIDs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -337,7 +333,9 @@
                       "identifier": "Provider.repoIDsFromAPI",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.repoIDsFromAPI",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -357,7 +355,9 @@
                       "identifier": "Provider.repoIDsFromPlugin",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.repoIDsFromPlugin",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -377,7 +377,9 @@
                       "identifier": "Provider.user",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.user",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -397,7 +399,9 @@
                       "identifier": "Provider.userIDs",
                       "newPage": false,
                       "searchKey": "bitbucketserver.Provider.userIDs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,7 +424,9 @@
                 "identifier": "fixtures",
                 "newPage": false,
                 "searchKey": "bitbucketserver.fixtures",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -438,7 +444,9 @@
                       "identifier": "newFixtures",
                       "newPage": false,
                       "searchKey": "bitbucketserver.newFixtures",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -458,7 +466,9 @@
                       "identifier": "fixtures.load",
                       "newPage": false,
                       "searchKey": "bitbucketserver.fixtures.load",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -481,7 +491,9 @@
                 "identifier": "codeHost",
                 "newPage": false,
                 "searchKey": "bitbucketserver.codeHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -499,7 +511,9 @@
                       "identifier": "codeHost.externalAccount",
                       "newPage": false,
                       "searchKey": "bitbucketserver.codeHost.externalAccount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -525,7 +539,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -543,9 +559,7 @@
                 "identifier": "NewAuthzProviders",
                 "newPage": false,
                 "searchKey": "bitbucketserver.NewAuthzProviders",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -565,7 +579,9 @@
                 "identifier": "newAuthzProvider",
                 "newPage": false,
                 "searchKey": "bitbucketserver.newAuthzProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -585,9 +601,7 @@
                 "identifier": "ValidateAuthz",
                 "newPage": false,
                 "searchKey": "bitbucketserver.ValidateAuthz",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -607,7 +621,9 @@
                 "identifier": "TestIntegration",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestIntegration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -627,7 +643,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -647,7 +665,9 @@
                 "identifier": "TestProvider_Validate",
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestProvider_Validate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -667,7 +687,9 @@
                 "identifier": "testProviderFetchAccount",
                 "newPage": false,
                 "searchKey": "bitbucketserver.testProviderFetchAccount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -687,7 +709,9 @@
                 "identifier": "testProviderFetchUserPerms",
                 "newPage": false,
                 "searchKey": "bitbucketserver.testProviderFetchUserPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -707,7 +731,9 @@
                 "identifier": "testProviderFetchRepoPerms",
                 "newPage": false,
                 "searchKey": "bitbucketserver.testProviderFetchRepoPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -727,7 +753,9 @@
                 "identifier": "marshalJSON",
                 "newPage": false,
                 "searchKey": "bitbucketserver.marshalJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -747,7 +775,9 @@
                 "identifier": "newClient",
                 "newPage": false,
                 "searchKey": "bitbucketserver.newClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

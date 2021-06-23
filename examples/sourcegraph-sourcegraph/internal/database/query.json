@@ -4,7 +4,9 @@
     "identifier": "query",
     "newPage": true,
     "searchKey": "internal/database/query",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Q",
                 "newPage": false,
                 "searchKey": "query.Q",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "And",
                       "newPage": false,
                       "searchKey": "query.And",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "Or",
                       "newPage": false,
                       "searchKey": "query.Or",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "Not",
                       "newPage": false,
                       "searchKey": "query.Not",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -129,7 +125,9 @@
                 "identifier": "and",
                 "newPage": false,
                 "searchKey": "query.and",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -149,7 +147,9 @@
                 "identifier": "or",
                 "newPage": false,
                 "searchKey": "query.or",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -169,7 +169,9 @@
                 "identifier": "not",
                 "newPage": false,
                 "searchKey": "query.not",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -189,7 +191,9 @@
                 "identifier": "printfBindVar",
                 "newPage": false,
                 "searchKey": "query.printfBindVar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,7 +211,9 @@
                       "identifier": "printfBindVar.BindVar",
                       "newPage": false,
                       "searchKey": "query.printfBindVar.BindVar",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -233,7 +239,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -251,9 +259,7 @@
                 "identifier": "Eval",
                 "newPage": false,
                 "searchKey": "query.Eval",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -273,9 +279,7 @@
                 "identifier": "Print",
                 "newPage": false,
                 "searchKey": "query.Print",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

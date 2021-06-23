@@ -28,10 +28,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="patternHasSeparator" href="#patternHasSeparator">const patternHasSeparator</a>
 
 ```
 searchKey: ioutil_test.patternHasSeparator
+tags: [private]
 ```
 
 ```Go
@@ -42,10 +47,15 @@ This string is from os.errPatternHasSeparator.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleReadAll" href="#ExampleReadAll">func ExampleReadAll()</a>
 
 ```
 searchKey: ioutil_test.ExampleReadAll
+tags: [private]
 ```
 
 ```Go
@@ -56,6 +66,7 @@ func ExampleReadAll()
 
 ```
 searchKey: ioutil_test.ExampleReadDir
+tags: [private]
 ```
 
 ```Go
@@ -66,6 +77,7 @@ func ExampleReadDir()
 
 ```
 searchKey: ioutil_test.ExampleTempDir
+tags: [private]
 ```
 
 ```Go
@@ -76,6 +88,7 @@ func ExampleTempDir()
 
 ```
 searchKey: ioutil_test.ExampleTempDir_suffix
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +99,7 @@ func ExampleTempDir_suffix()
 
 ```
 searchKey: ioutil_test.ExampleTempFile
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +110,7 @@ func ExampleTempFile()
 
 ```
 searchKey: ioutil_test.ExampleTempFile_suffix
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +121,7 @@ func ExampleTempFile_suffix()
 
 ```
 searchKey: ioutil_test.ExampleReadFile
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +132,7 @@ func ExampleReadFile()
 
 ```
 searchKey: ioutil_test.ExampleWriteFile
+tags: [private]
 ```
 
 ```Go
@@ -126,6 +143,7 @@ func ExampleWriteFile()
 
 ```
 searchKey: ioutil_test.checkSize
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +154,7 @@ func checkSize(t *testing.T, path string, size int64)
 
 ```
 searchKey: ioutil_test.TestReadFile
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +165,7 @@ func TestReadFile(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestWriteFile
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +176,7 @@ func TestWriteFile(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestReadOnlyWriteFile
+tags: [private]
 ```
 
 ```Go
@@ -166,6 +187,7 @@ func TestReadOnlyWriteFile(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestReadDir
+tags: [private]
 ```
 
 ```Go
@@ -176,6 +198,7 @@ func TestReadDir(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestTempFile
+tags: [private]
 ```
 
 ```Go
@@ -186,6 +209,7 @@ func TestTempFile(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestTempFile_pattern
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +220,7 @@ func TestTempFile_pattern(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestTempFile_BadPattern
+tags: [private]
 ```
 
 ```Go
@@ -206,6 +231,7 @@ func TestTempFile_BadPattern(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestTempDir
+tags: [private]
 ```
 
 ```Go
@@ -216,6 +242,7 @@ func TestTempDir(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestTempDir_BadDir
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +255,7 @@ test that we return a nice error message if the dir argument to TempDir doesn't 
 
 ```
 searchKey: ioutil_test.TestTempDir_BadPattern
+tags: [private]
 ```
 
 ```Go

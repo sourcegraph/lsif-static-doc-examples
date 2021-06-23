@@ -4,7 +4,9 @@
     "identifier": "service",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/service",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Mocks",
                 "newPage": false,
                 "searchKey": "service.Mocks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "ErrNoNamespace",
                 "newPage": false,
                 "searchKey": "service.ErrNoNamespace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "ErrChangesetsForJobNotFound",
                 "newPage": false,
                 "searchKey": "service.ErrChangesetsForJobNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "ErrApplyClosedBatchChange",
                 "newPage": false,
                 "searchKey": "service.ErrApplyClosedBatchChange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "ErrMatchingBatchChangeExists",
                 "newPage": false,
                 "searchKey": "service.ErrMatchingBatchChangeExists",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "ErrEnsureBatchChangeFailed",
                 "newPage": false,
                 "searchKey": "service.ErrEnsureBatchChangeFailed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -175,7 +167,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -193,9 +187,7 @@
                 "identifier": "ServiceMocks",
                 "newPage": false,
                 "searchKey": "service.ServiceMocks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -213,9 +205,7 @@
                       "identifier": "ServiceMocks.Reset",
                       "newPage": false,
                       "searchKey": "service.ServiceMocks.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -238,9 +228,7 @@
                 "identifier": "Service",
                 "newPage": false,
                 "searchKey": "service.Service",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -258,9 +246,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "service.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -280,9 +266,7 @@
                       "identifier": "NewWithClock",
                       "newPage": false,
                       "searchKey": "service.NewWithClock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -302,9 +286,7 @@
                       "identifier": "Service.WithStore",
                       "newPage": false,
                       "searchKey": "service.Service.WithStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -324,9 +306,7 @@
                       "identifier": "Service.CreateBatchSpec",
                       "newPage": false,
                       "searchKey": "service.Service.CreateBatchSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -346,9 +326,7 @@
                       "identifier": "Service.CreateChangesetSpec",
                       "newPage": false,
                       "searchKey": "service.Service.CreateChangesetSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -368,9 +346,7 @@
                       "identifier": "Service.GetBatchChangeMatchingBatchSpec",
                       "newPage": false,
                       "searchKey": "service.Service.GetBatchChangeMatchingBatchSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -390,9 +366,7 @@
                       "identifier": "Service.GetNewestBatchSpec",
                       "newPage": false,
                       "searchKey": "service.Service.GetNewestBatchSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -412,9 +386,7 @@
                       "identifier": "Service.MoveBatchChange",
                       "newPage": false,
                       "searchKey": "service.Service.MoveBatchChange",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,9 +406,7 @@
                       "identifier": "Service.CloseBatchChange",
                       "newPage": false,
                       "searchKey": "service.Service.CloseBatchChange",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -456,9 +426,7 @@
                       "identifier": "Service.DeleteBatchChange",
                       "newPage": false,
                       "searchKey": "service.Service.DeleteBatchChange",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -478,9 +446,7 @@
                       "identifier": "Service.EnqueueChangesetSync",
                       "newPage": false,
                       "searchKey": "service.Service.EnqueueChangesetSync",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -500,9 +466,7 @@
                       "identifier": "Service.ReenqueueChangeset",
                       "newPage": false,
                       "searchKey": "service.Service.ReenqueueChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -522,9 +486,7 @@
                       "identifier": "Service.FetchUsernameForBitbucketServerToken",
                       "newPage": false,
                       "searchKey": "service.Service.FetchUsernameForBitbucketServerToken",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -544,9 +506,7 @@
                       "identifier": "Service.ValidateAuthenticator",
                       "newPage": false,
                       "searchKey": "service.Service.ValidateAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -566,9 +526,7 @@
                       "identifier": "Service.CreateChangesetJobs",
                       "newPage": false,
                       "searchKey": "service.Service.CreateChangesetJobs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -588,9 +546,7 @@
                       "identifier": "Service.ApplyBatchChange",
                       "newPage": false,
                       "searchKey": "service.Service.ApplyBatchChange",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -610,9 +566,7 @@
                       "identifier": "Service.ReconcileBatchChange",
                       "newPage": false,
                       "searchKey": "service.Service.ReconcileBatchChange",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -635,9 +589,7 @@
                 "identifier": "CreateBatchSpecOpts",
                 "newPage": false,
                 "searchKey": "service.CreateBatchSpecOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -657,7 +609,9 @@
                 "identifier": "changesetSpecNotFoundErr",
                 "newPage": false,
                 "searchKey": "service.changesetSpecNotFoundErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -675,7 +629,9 @@
                       "identifier": "changesetSpecNotFoundErr.Error",
                       "newPage": false,
                       "searchKey": "service.changesetSpecNotFoundErr.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -695,7 +651,9 @@
                       "identifier": "changesetSpecNotFoundErr.NotFound",
                       "newPage": false,
                       "searchKey": "service.changesetSpecNotFoundErr.NotFound",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -718,9 +676,7 @@
                 "identifier": "MoveBatchChangeOpts",
                 "newPage": false,
                 "searchKey": "service.MoveBatchChangeOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -738,9 +694,7 @@
                       "identifier": "MoveBatchChangeOpts.String",
                       "newPage": false,
                       "searchKey": "service.MoveBatchChangeOpts.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -763,7 +717,9 @@
                 "identifier": "usernameSource",
                 "newPage": false,
                 "searchKey": "service.usernameSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -783,9 +739,7 @@
                 "identifier": "ApplyBatchChangeOpts",
                 "newPage": false,
                 "searchKey": "service.ApplyBatchChangeOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -803,9 +757,7 @@
                       "identifier": "ApplyBatchChangeOpts.String",
                       "newPage": false,
                       "searchKey": "service.ApplyBatchChangeOpts.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -831,7 +783,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -849,7 +803,9 @@
                 "identifier": "checkNamespaceAccess",
                 "newPage": false,
                 "searchKey": "service.checkNamespaceAccess",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -869,7 +825,9 @@
                 "identifier": "TestServiceApplyBatchChange",
                 "newPage": false,
                 "searchKey": "service.TestServiceApplyBatchChange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -889,7 +847,9 @@
                 "identifier": "applyAndListChangesets",
                 "newPage": false,
                 "searchKey": "service.applyAndListChangesets",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -909,7 +869,9 @@
                 "identifier": "TestServicePermissionLevels",
                 "newPage": false,
                 "searchKey": "service.TestServicePermissionLevels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -929,7 +891,9 @@
                 "identifier": "TestService",
                 "newPage": false,
                 "searchKey": "service.TestService",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -949,7 +913,9 @@
                 "identifier": "testBatchChange",
                 "newPage": false,
                 "searchKey": "service.testBatchChange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -969,7 +935,9 @@
                 "identifier": "testBatchSpec",
                 "newPage": false,
                 "searchKey": "service.testBatchSpec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -989,7 +957,9 @@
                 "identifier": "testChangeset",
                 "newPage": false,
                 "searchKey": "service.testChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

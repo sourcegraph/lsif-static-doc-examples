@@ -4,9 +4,7 @@
     "identifier": "draw",
     "newPage": true,
     "searchKey": "image/draw",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "m",
                 "newPage": false,
                 "searchKey": "draw.m",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,9 +62,7 @@
                 "identifier": "Over",
                 "newPage": false,
                 "searchKey": "draw.Over",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -86,9 +82,7 @@
                 "identifier": "Src",
                 "newPage": false,
                 "searchKey": "draw.Src",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -108,7 +102,9 @@
                 "identifier": "dstw",
                 "newPage": false,
                 "searchKey": "draw.dstw",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -128,7 +124,9 @@
                 "identifier": "dsth",
                 "newPage": false,
                 "searchKey": "draw.dsth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,7 +146,9 @@
                 "identifier": "srcw",
                 "newPage": false,
                 "searchKey": "draw.srcw",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +168,9 @@
                 "identifier": "srch",
                 "newPage": false,
                 "searchKey": "draw.srch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -191,9 +193,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -211,9 +211,7 @@
                 "identifier": "FloydSteinberg",
                 "newPage": false,
                 "searchKey": "draw.FloydSteinberg",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -233,7 +231,9 @@
                 "identifier": "palette",
                 "newPage": false,
                 "searchKey": "draw.palette",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -253,7 +253,9 @@
                 "identifier": "clipTests",
                 "newPage": false,
                 "searchKey": "draw.clipTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -273,7 +275,9 @@
                 "identifier": "drawTests",
                 "newPage": false,
                 "searchKey": "draw.drawTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -296,9 +300,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -316,9 +318,7 @@
                 "identifier": "Image",
                 "newPage": false,
                 "searchKey": "draw.Image",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -336,7 +336,9 @@
                       "identifier": "hgradRed",
                       "newPage": false,
                       "searchKey": "draw.hgradRed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -356,7 +358,9 @@
                       "identifier": "gradYellow",
                       "newPage": false,
                       "searchKey": "draw.gradYellow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -379,9 +383,7 @@
                 "identifier": "RGBA64Image",
                 "newPage": false,
                 "searchKey": "draw.RGBA64Image",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -401,9 +403,7 @@
                 "identifier": "Quantizer",
                 "newPage": false,
                 "searchKey": "draw.Quantizer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -423,9 +423,7 @@
                 "identifier": "Op",
                 "newPage": false,
                 "searchKey": "draw.Op",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -443,9 +441,7 @@
                       "identifier": "Op.Draw",
                       "newPage": false,
                       "searchKey": "draw.Op.Draw",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -468,9 +464,7 @@
                 "identifier": "Drawer",
                 "newPage": false,
                 "searchKey": "draw.Drawer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -490,7 +484,9 @@
                 "identifier": "floydSteinberg",
                 "newPage": false,
                 "searchKey": "draw.floydSteinberg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -508,7 +504,9 @@
                       "identifier": "floydSteinberg.Draw",
                       "newPage": false,
                       "searchKey": "draw.floydSteinberg.Draw",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -531,7 +529,9 @@
                 "identifier": "clipTest",
                 "newPage": false,
                 "searchKey": "draw.clipTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -551,7 +551,9 @@
                 "identifier": "drawTest",
                 "newPage": false,
                 "searchKey": "draw.drawTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -571,7 +573,9 @@
                 "identifier": "embeddedPaletted",
                 "newPage": false,
                 "searchKey": "draw.embeddedPaletted",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -594,9 +598,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -614,7 +616,9 @@
                 "identifier": "clip",
                 "newPage": false,
                 "searchKey": "draw.clip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -634,7 +638,9 @@
                 "identifier": "processBackward",
                 "newPage": false,
                 "searchKey": "draw.processBackward",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -654,9 +660,7 @@
                 "identifier": "Draw",
                 "newPage": false,
                 "searchKey": "draw.Draw",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -676,9 +680,7 @@
                 "identifier": "DrawMask",
                 "newPage": false,
                 "searchKey": "draw.DrawMask",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -698,7 +700,9 @@
                 "identifier": "drawFillOver",
                 "newPage": false,
                 "searchKey": "draw.drawFillOver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -718,7 +722,9 @@
                 "identifier": "drawFillSrc",
                 "newPage": false,
                 "searchKey": "draw.drawFillSrc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -738,7 +744,9 @@
                 "identifier": "drawCopyOver",
                 "newPage": false,
                 "searchKey": "draw.drawCopyOver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -758,7 +766,9 @@
                 "identifier": "drawCopySrc",
                 "newPage": false,
                 "searchKey": "draw.drawCopySrc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -778,7 +788,9 @@
                 "identifier": "drawNRGBAOver",
                 "newPage": false,
                 "searchKey": "draw.drawNRGBAOver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -798,7 +810,9 @@
                 "identifier": "drawNRGBASrc",
                 "newPage": false,
                 "searchKey": "draw.drawNRGBASrc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -818,7 +832,9 @@
                 "identifier": "drawGray",
                 "newPage": false,
                 "searchKey": "draw.drawGray",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -838,7 +854,9 @@
                 "identifier": "drawCMYK",
                 "newPage": false,
                 "searchKey": "draw.drawCMYK",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -858,7 +876,9 @@
                 "identifier": "drawGlyphOver",
                 "newPage": false,
                 "searchKey": "draw.drawGlyphOver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -878,7 +898,9 @@
                 "identifier": "drawRGBA",
                 "newPage": false,
                 "searchKey": "draw.drawRGBA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -898,7 +920,9 @@
                 "identifier": "clamp",
                 "newPage": false,
                 "searchKey": "draw.clamp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -918,7 +942,9 @@
                 "identifier": "sqDiff",
                 "newPage": false,
                 "searchKey": "draw.sqDiff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -938,7 +964,9 @@
                 "identifier": "drawPaletted",
                 "newPage": false,
                 "searchKey": "draw.drawPaletted",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -958,7 +986,9 @@
                 "identifier": "bench",
                 "newPage": false,
                 "searchKey": "draw.bench",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -978,7 +1008,9 @@
                 "identifier": "BenchmarkFillOver",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkFillOver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -998,7 +1030,9 @@
                 "identifier": "BenchmarkFillSrc",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkFillSrc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1018,7 +1052,9 @@
                 "identifier": "BenchmarkCopyOver",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkCopyOver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1038,7 +1074,9 @@
                 "identifier": "BenchmarkCopySrc",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkCopySrc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1058,7 +1096,9 @@
                 "identifier": "BenchmarkNRGBAOver",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkNRGBAOver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1078,7 +1118,9 @@
                 "identifier": "BenchmarkNRGBASrc",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkNRGBASrc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1098,7 +1140,9 @@
                 "identifier": "BenchmarkYCbCr",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkYCbCr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1118,7 +1162,9 @@
                 "identifier": "BenchmarkGray",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkGray",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1138,7 +1184,9 @@
                 "identifier": "BenchmarkCMYK",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkCMYK",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1158,7 +1206,9 @@
                 "identifier": "BenchmarkGlyphOver",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkGlyphOver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1178,7 +1228,9 @@
                 "identifier": "BenchmarkRGBA",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkRGBA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1198,7 +1250,9 @@
                 "identifier": "BenchmarkPalettedFill",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkPalettedFill",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1218,7 +1272,9 @@
                 "identifier": "BenchmarkPalettedRGBA",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkPalettedRGBA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1238,7 +1294,9 @@
                 "identifier": "BenchmarkGenericOver",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkGenericOver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1258,7 +1316,9 @@
                 "identifier": "BenchmarkGenericMaskOver",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkGenericMaskOver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1278,7 +1338,9 @@
                 "identifier": "BenchmarkGenericSrc",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkGenericSrc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1298,7 +1360,9 @@
                 "identifier": "BenchmarkGenericMaskSrc",
                 "newPage": false,
                 "searchKey": "draw.BenchmarkGenericMaskSrc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1318,7 +1382,9 @@
                 "identifier": "TestClip",
                 "newPage": false,
                 "searchKey": "draw.TestClip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1338,7 +1404,9 @@
                 "identifier": "eq",
                 "newPage": false,
                 "searchKey": "draw.eq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1358,7 +1426,9 @@
                 "identifier": "fillBlue",
                 "newPage": false,
                 "searchKey": "draw.fillBlue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1378,7 +1448,9 @@
                 "identifier": "fillAlpha",
                 "newPage": false,
                 "searchKey": "draw.fillAlpha",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1398,7 +1470,9 @@
                 "identifier": "vgradGreen",
                 "newPage": false,
                 "searchKey": "draw.vgradGreen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1418,7 +1492,9 @@
                 "identifier": "vgradAlpha",
                 "newPage": false,
                 "searchKey": "draw.vgradAlpha",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1438,7 +1514,9 @@
                 "identifier": "vgradGreenNRGBA",
                 "newPage": false,
                 "searchKey": "draw.vgradGreenNRGBA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1458,7 +1536,9 @@
                 "identifier": "vgradCr",
                 "newPage": false,
                 "searchKey": "draw.vgradCr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1478,7 +1558,9 @@
                 "identifier": "vgradGray",
                 "newPage": false,
                 "searchKey": "draw.vgradGray",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1498,7 +1580,9 @@
                 "identifier": "vgradMagenta",
                 "newPage": false,
                 "searchKey": "draw.vgradMagenta",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1518,7 +1602,9 @@
                 "identifier": "makeGolden",
                 "newPage": false,
                 "searchKey": "draw.makeGolden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1538,7 +1624,9 @@
                 "identifier": "TestDraw",
                 "newPage": false,
                 "searchKey": "draw.TestDraw",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1558,7 +1646,9 @@
                 "identifier": "TestDrawOverlap",
                 "newPage": false,
                 "searchKey": "draw.TestDrawOverlap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1578,7 +1668,9 @@
                 "identifier": "TestNonZeroSrcPt",
                 "newPage": false,
                 "searchKey": "draw.TestNonZeroSrcPt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1598,7 +1690,9 @@
                 "identifier": "TestFill",
                 "newPage": false,
                 "searchKey": "draw.TestFill",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1618,7 +1712,9 @@
                 "identifier": "TestFloydSteinbergCheckerboard",
                 "newPage": false,
                 "searchKey": "draw.TestFloydSteinbergCheckerboard",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1638,7 +1734,9 @@
                 "identifier": "TestPaletted",
                 "newPage": false,
                 "searchKey": "draw.TestPaletted",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1658,7 +1756,9 @@
                 "identifier": "TestSqDiff",
                 "newPage": false,
                 "searchKey": "draw.TestSqDiff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

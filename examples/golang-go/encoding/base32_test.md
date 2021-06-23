@@ -10,10 +10,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleEncoding_EncodeToString" href="#ExampleEncoding_EncodeToString">func ExampleEncoding_EncodeToString()</a>
 
 ```
 searchKey: base32_test.ExampleEncoding_EncodeToString
+tags: [private]
 ```
 
 ```Go
@@ -24,6 +29,7 @@ func ExampleEncoding_EncodeToString()
 
 ```
 searchKey: base32_test.ExampleEncoding_DecodeString
+tags: [private]
 ```
 
 ```Go
@@ -34,6 +40,7 @@ func ExampleEncoding_DecodeString()
 
 ```
 searchKey: base32_test.ExampleNewEncoder
+tags: [private]
 ```
 
 ```Go

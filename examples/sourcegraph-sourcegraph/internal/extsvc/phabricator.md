@@ -37,10 +37,15 @@ Package phabricator is a package to interact with a Phabricator instance and its
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="requestDuration" href="#requestDuration">var requestDuration</a>
 
 ```
 searchKey: phabricator.requestDuration
+tags: [private]
 ```
 
 ```Go
@@ -49,10 +54,15 @@ var requestDuration = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="meteredConn" href="#meteredConn">type meteredConn struct</a>
 
 ```
 searchKey: phabricator.meteredConn
+tags: [private]
 ```
 
 ```Go
@@ -65,6 +75,7 @@ type meteredConn struct {
 
 ```
 searchKey: phabricator.meteredConn.CallContext
+tags: [private]
 ```
 
 ```Go
@@ -80,7 +91,6 @@ func (mc *meteredConn) CallContext(
 
 ```
 searchKey: phabricator.Client
-tags: [exported]
 ```
 
 ```Go
@@ -95,7 +105,6 @@ A Client provides high level methods to a Phabricator Conduit API.
 
 ```
 searchKey: phabricator.NewClient
-tags: [exported]
 ```
 
 ```Go
@@ -108,7 +117,6 @@ NewClient returns an authenticated Client, using the given URL and token. If pro
 
 ```
 searchKey: phabricator.Client.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -121,7 +129,6 @@ ListRepos lists all repositories matching the given arguments.
 
 ```
 searchKey: phabricator.Client.GetRawDiff
-tags: [exported]
 ```
 
 ```Go
@@ -134,7 +141,6 @@ GetRawDiff retrieves the raw diff of the diff with the given id.
 
 ```
 searchKey: phabricator.Client.GetDiffInfo
-tags: [exported]
 ```
 
 ```Go
@@ -147,7 +153,6 @@ GetDiffInfo retrieves the DiffInfo of the diff with the given id.
 
 ```
 searchKey: phabricator.Repo
-tags: [exported]
 ```
 
 ```Go
@@ -173,7 +178,6 @@ Repo represents a single code repository.
 
 ```
 searchKey: phabricator.URI
-tags: [exported]
 ```
 
 ```Go
@@ -201,6 +205,7 @@ URI of a Repository
 
 ```
 searchKey: phabricator.apiRepo
+tags: [private]
 ```
 
 ```Go
@@ -216,6 +221,7 @@ type apiRepo struct {
 
 ```
 searchKey: phabricator.apiRepo.ToRepo
+tags: [private]
 ```
 
 ```Go
@@ -226,6 +232,7 @@ func (a *apiRepo) ToRepo() *Repo
 
 ```
 searchKey: phabricator.apiRepoFields
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +252,7 @@ type apiRepoFields struct {
 
 ```
 searchKey: phabricator.apiRepoPolicy
+tags: [private]
 ```
 
 ```Go
@@ -258,6 +266,7 @@ type apiRepoPolicy struct {
 
 ```
 searchKey: phabricator.apiRepoAttachments
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +279,7 @@ type apiRepoAttachments struct {
 
 ```
 searchKey: phabricator.apiURIsContainer
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +292,7 @@ type apiURIsContainer struct {
 
 ```
 searchKey: phabricator.apiURI
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +307,7 @@ type apiURI struct {
 
 ```
 searchKey: phabricator.apiURIFields
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +324,7 @@ type apiURIFields struct {
 
 ```
 searchKey: phabricator.apiURIs
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +339,7 @@ type apiURIs struct {
 
 ```
 searchKey: phabricator.apiURIBultin
+tags: [private]
 ```
 
 ```Go
@@ -339,7 +353,6 @@ type apiURIBultin struct {
 
 ```
 searchKey: phabricator.Cursor
-tags: [exported]
 ```
 
 ```Go
@@ -357,7 +370,6 @@ Cursor represents the pagination cursor on many responses.
 
 ```
 searchKey: phabricator.ListReposArgs
-tags: [exported]
 ```
 
 ```Go
@@ -372,7 +384,6 @@ ListReposArgs defines the constraints to be satisfied by the ListRepos method.
 
 ```
 searchKey: phabricator.DiffInfo
-tags: [exported]
 ```
 
 ```Go
@@ -391,6 +402,7 @@ DiffInfo contains information for a diff such as the author
 
 ```
 searchKey: phabricator.unixTime
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +413,7 @@ type unixTime struct{ t *time.Time }
 
 ```
 searchKey: phabricator.unixTime.UnmarshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -409,11 +422,14 @@ func (d *unixTime) UnmarshalJSON(data []byte) error
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ParseDate" href="#ParseDate">func ParseDate(secStr string) (*time.Time, error)</a>
 
 ```
 searchKey: phabricator.ParseDate
-tags: [exported]
 ```
 
 ```Go

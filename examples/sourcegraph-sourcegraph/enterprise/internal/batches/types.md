@@ -261,7 +261,7 @@
     * [func NewChangesetEventMetadata(k ChangesetEventKind) (interface{}, error)](#NewChangesetEventMetadata)
     * [func updateGitHubPullRequestReview(e, o *github.PullRequestReview)](#updateGitHubPullRequestReview)
     * [func updateGitHubCommit(e, o *github.Commit)](#updateGitHubCommit)
-    * [func init()](#init)
+    * [func init()](#init.config.go)
     * [func keyID(ctx context.Context, key encryption.Key) (string, error)](#keyID)
     * [func IsRepoSupported(spec *api.ExternalRepoSpec) bool](#IsRepoSupported)
     * [func IsKindSupported(extSvcKind string) bool](#IsKindSupported)
@@ -289,11 +289,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="BatchChangeStateAny" href="#BatchChangeStateAny">const BatchChangeStateAny</a>
 
 ```
 searchKey: types.BatchChangeStateAny
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +307,6 @@ const BatchChangeStateAny BatchChangeState = "ANY"
 
 ```
 searchKey: types.BatchChangeStateOpen
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +317,6 @@ const BatchChangeStateOpen BatchChangeState = "OPEN"
 
 ```
 searchKey: types.BatchChangeStateClosed
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +327,6 @@ const BatchChangeStateClosed BatchChangeState = "CLOSED"
 
 ```
 searchKey: types.BatchSpecTTL
-tags: [exported]
 ```
 
 ```Go
@@ -339,7 +339,6 @@ BatchSpecTTL specifies the TTL of BatchSpecs that haven't been applied yet. It's
 
 ```
 searchKey: types.BulkOperationStateProcessing
-tags: [exported]
 ```
 
 ```Go
@@ -352,7 +351,6 @@ BulkOperationState constants.
 
 ```
 searchKey: types.BulkOperationStateFailed
-tags: [exported]
 ```
 
 ```Go
@@ -365,7 +363,6 @@ BulkOperationState constants.
 
 ```
 searchKey: types.BulkOperationStateCompleted
-tags: [exported]
 ```
 
 ```Go
@@ -378,7 +375,6 @@ BulkOperationState constants.
 
 ```
 searchKey: types.ChangesetStateUnpublished
-tags: [exported]
 ```
 
 ```Go
@@ -391,7 +387,6 @@ ChangesetState constants.
 
 ```
 searchKey: types.ChangesetStateScheduled
-tags: [exported]
 ```
 
 ```Go
@@ -404,7 +399,6 @@ ChangesetState constants.
 
 ```
 searchKey: types.ChangesetStateProcessing
-tags: [exported]
 ```
 
 ```Go
@@ -417,7 +411,6 @@ ChangesetState constants.
 
 ```
 searchKey: types.ChangesetStateOpen
-tags: [exported]
 ```
 
 ```Go
@@ -430,7 +423,6 @@ ChangesetState constants.
 
 ```
 searchKey: types.ChangesetStateDraft
-tags: [exported]
 ```
 
 ```Go
@@ -443,7 +435,6 @@ ChangesetState constants.
 
 ```
 searchKey: types.ChangesetStateClosed
-tags: [exported]
 ```
 
 ```Go
@@ -456,7 +447,6 @@ ChangesetState constants.
 
 ```
 searchKey: types.ChangesetStateMerged
-tags: [exported]
 ```
 
 ```Go
@@ -469,7 +459,6 @@ ChangesetState constants.
 
 ```
 searchKey: types.ChangesetStateDeleted
-tags: [exported]
 ```
 
 ```Go
@@ -482,7 +471,6 @@ ChangesetState constants.
 
 ```
 searchKey: types.ChangesetStateRetrying
-tags: [exported]
 ```
 
 ```Go
@@ -495,7 +483,6 @@ ChangesetState constants.
 
 ```
 searchKey: types.ChangesetStateFailed
-tags: [exported]
 ```
 
 ```Go
@@ -508,7 +495,6 @@ ChangesetState constants.
 
 ```
 searchKey: types.ChangesetPublicationStateUnpublished
-tags: [exported]
 ```
 
 ```Go
@@ -521,7 +507,6 @@ ChangesetPublicationState constants.
 
 ```
 searchKey: types.ChangesetPublicationStatePublished
-tags: [exported]
 ```
 
 ```Go
@@ -534,7 +519,6 @@ ChangesetPublicationState constants.
 
 ```
 searchKey: types.ReconcilerStateScheduled
-tags: [exported]
 ```
 
 ```Go
@@ -547,7 +531,6 @@ ReconcilerState constants.
 
 ```
 searchKey: types.ReconcilerStateQueued
-tags: [exported]
 ```
 
 ```Go
@@ -560,7 +543,6 @@ ReconcilerState constants.
 
 ```
 searchKey: types.ReconcilerStateProcessing
-tags: [exported]
 ```
 
 ```Go
@@ -573,7 +555,6 @@ ReconcilerState constants.
 
 ```
 searchKey: types.ReconcilerStateErrored
-tags: [exported]
 ```
 
 ```Go
@@ -586,7 +567,6 @@ ReconcilerState constants.
 
 ```
 searchKey: types.ReconcilerStateFailed
-tags: [exported]
 ```
 
 ```Go
@@ -599,7 +579,6 @@ ReconcilerState constants.
 
 ```
 searchKey: types.ReconcilerStateCompleted
-tags: [exported]
 ```
 
 ```Go
@@ -612,7 +591,6 @@ ReconcilerState constants.
 
 ```
 searchKey: types.ChangesetExternalStateDraft
-tags: [exported]
 ```
 
 ```Go
@@ -625,7 +603,6 @@ ChangesetExternalState constants.
 
 ```
 searchKey: types.ChangesetExternalStateOpen
-tags: [exported]
 ```
 
 ```Go
@@ -638,7 +615,6 @@ ChangesetExternalState constants.
 
 ```
 searchKey: types.ChangesetExternalStateClosed
-tags: [exported]
 ```
 
 ```Go
@@ -651,7 +627,6 @@ ChangesetExternalState constants.
 
 ```
 searchKey: types.ChangesetExternalStateMerged
-tags: [exported]
 ```
 
 ```Go
@@ -664,7 +639,6 @@ ChangesetExternalState constants.
 
 ```
 searchKey: types.ChangesetExternalStateDeleted
-tags: [exported]
 ```
 
 ```Go
@@ -677,7 +651,6 @@ ChangesetExternalState constants.
 
 ```
 searchKey: types.ChangesetReviewStateApproved
-tags: [exported]
 ```
 
 ```Go
@@ -690,7 +663,6 @@ ChangesetReviewState constants.
 
 ```
 searchKey: types.ChangesetReviewStateChangesRequested
-tags: [exported]
 ```
 
 ```Go
@@ -703,7 +675,6 @@ ChangesetReviewState constants.
 
 ```
 searchKey: types.ChangesetReviewStatePending
-tags: [exported]
 ```
 
 ```Go
@@ -716,7 +687,6 @@ ChangesetReviewState constants.
 
 ```
 searchKey: types.ChangesetReviewStateCommented
-tags: [exported]
 ```
 
 ```Go
@@ -729,7 +699,6 @@ ChangesetReviewState constants.
 
 ```
 searchKey: types.ChangesetReviewStateDismissed
-tags: [exported]
 ```
 
 ```Go
@@ -742,7 +711,6 @@ ChangesetReviewState constants.
 
 ```
 searchKey: types.ChangesetCheckStateUnknown
-tags: [exported]
 ```
 
 ```Go
@@ -753,7 +721,6 @@ const ChangesetCheckStateUnknown ChangesetCheckState = "UNKNOWN"
 
 ```
 searchKey: types.ChangesetCheckStatePending
-tags: [exported]
 ```
 
 ```Go
@@ -764,7 +731,6 @@ const ChangesetCheckStatePending ChangesetCheckState = "PENDING"
 
 ```
 searchKey: types.ChangesetCheckStatePassed
-tags: [exported]
 ```
 
 ```Go
@@ -775,7 +741,6 @@ const ChangesetCheckStatePassed ChangesetCheckState = "PASSED"
 
 ```
 searchKey: types.ChangesetCheckStateFailed
-tags: [exported]
 ```
 
 ```Go
@@ -786,7 +751,6 @@ const ChangesetCheckStateFailed ChangesetCheckState = "FAILED"
 
 ```
 searchKey: types.ChangesetEventKindGitHubAssigned
-tags: [exported]
 ```
 
 ```Go
@@ -799,7 +763,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubClosed
-tags: [exported]
 ```
 
 ```Go
@@ -812,7 +775,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubCommented
-tags: [exported]
 ```
 
 ```Go
@@ -825,7 +787,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubRenamedTitle
-tags: [exported]
 ```
 
 ```Go
@@ -838,7 +799,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubMerged
-tags: [exported]
 ```
 
 ```Go
@@ -851,7 +811,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubReviewed
-tags: [exported]
 ```
 
 ```Go
@@ -864,7 +823,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubReopened
-tags: [exported]
 ```
 
 ```Go
@@ -877,7 +835,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubReviewDismissed
-tags: [exported]
 ```
 
 ```Go
@@ -890,7 +847,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubReviewRequestRemoved
-tags: [exported]
 ```
 
 ```Go
@@ -903,7 +859,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubReviewRequested
-tags: [exported]
 ```
 
 ```Go
@@ -916,7 +871,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubReviewCommented
-tags: [exported]
 ```
 
 ```Go
@@ -929,7 +883,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubReadyForReview
-tags: [exported]
 ```
 
 ```Go
@@ -942,7 +895,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubConvertToDraft
-tags: [exported]
 ```
 
 ```Go
@@ -955,7 +907,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubUnassigned
-tags: [exported]
 ```
 
 ```Go
@@ -968,7 +919,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubCommit
-tags: [exported]
 ```
 
 ```Go
@@ -981,7 +931,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubLabeled
-tags: [exported]
 ```
 
 ```Go
@@ -994,7 +943,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitHubUnlabeled
-tags: [exported]
 ```
 
 ```Go
@@ -1007,7 +955,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindCommitStatus
-tags: [exported]
 ```
 
 ```Go
@@ -1020,7 +967,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindCheckSuite
-tags: [exported]
 ```
 
 ```Go
@@ -1033,7 +979,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindCheckRun
-tags: [exported]
 ```
 
 ```Go
@@ -1046,7 +991,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerApproved
-tags: [exported]
 ```
 
 ```Go
@@ -1059,7 +1003,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerUnapproved
-tags: [exported]
 ```
 
 ```Go
@@ -1072,7 +1015,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerDeclined
-tags: [exported]
 ```
 
 ```Go
@@ -1085,7 +1027,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerReviewed
-tags: [exported]
 ```
 
 ```Go
@@ -1098,7 +1039,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerOpened
-tags: [exported]
 ```
 
 ```Go
@@ -1111,7 +1051,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerReopened
-tags: [exported]
 ```
 
 ```Go
@@ -1124,7 +1063,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerRescoped
-tags: [exported]
 ```
 
 ```Go
@@ -1137,7 +1075,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerUpdated
-tags: [exported]
 ```
 
 ```Go
@@ -1150,7 +1087,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerCommented
-tags: [exported]
 ```
 
 ```Go
@@ -1163,7 +1099,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerMerged
-tags: [exported]
 ```
 
 ```Go
@@ -1176,7 +1111,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerCommitStatus
-tags: [exported]
 ```
 
 ```Go
@@ -1189,7 +1123,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindBitbucketServerDismissed
-tags: [exported]
 ```
 
 ```Go
@@ -1204,7 +1137,6 @@ BitbucketServer calls this an Unapprove event but we've called it Dismissed to m
 
 ```
 searchKey: types.ChangesetEventKindGitLabApproved
-tags: [exported]
 ```
 
 ```Go
@@ -1217,7 +1149,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitLabClosed
-tags: [exported]
 ```
 
 ```Go
@@ -1230,7 +1161,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitLabMerged
-tags: [exported]
 ```
 
 ```Go
@@ -1243,7 +1173,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitLabPipeline
-tags: [exported]
 ```
 
 ```Go
@@ -1256,7 +1185,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitLabReopened
-tags: [exported]
 ```
 
 ```Go
@@ -1269,7 +1197,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitLabUnapproved
-tags: [exported]
 ```
 
 ```Go
@@ -1282,7 +1209,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitLabMarkWorkInProgress
-tags: [exported]
 ```
 
 ```Go
@@ -1295,7 +1221,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindGitLabUnmarkWorkInProgress
-tags: [exported]
 ```
 
 ```Go
@@ -1308,7 +1233,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetEventKindInvalid
-tags: [exported]
 ```
 
 ```Go
@@ -1321,7 +1245,6 @@ Valid ChangesetEvent kinds
 
 ```
 searchKey: types.ChangesetJobStateQueued
-tags: [exported]
 ```
 
 ```Go
@@ -1334,7 +1257,6 @@ ChangesetJobState constants.
 
 ```
 searchKey: types.ChangesetJobStateProcessing
-tags: [exported]
 ```
 
 ```Go
@@ -1347,7 +1269,6 @@ ChangesetJobState constants.
 
 ```
 searchKey: types.ChangesetJobStateErrored
-tags: [exported]
 ```
 
 ```Go
@@ -1360,7 +1281,6 @@ ChangesetJobState constants.
 
 ```
 searchKey: types.ChangesetJobStateFailed
-tags: [exported]
 ```
 
 ```Go
@@ -1373,7 +1293,6 @@ ChangesetJobState constants.
 
 ```
 searchKey: types.ChangesetJobStateCompleted
-tags: [exported]
 ```
 
 ```Go
@@ -1386,7 +1305,6 @@ ChangesetJobState constants.
 
 ```
 searchKey: types.ChangesetSpecTTL
-tags: [exported]
 ```
 
 ```Go
@@ -1399,7 +1317,6 @@ ChangesetSpecTTL specifies the TTL of ChangesetSpecs that haven't been attached 
 
 ```
 searchKey: types.ChangesetSpecDescriptionTypeExisting
-tags: [exported]
 ```
 
 ```Go
@@ -1412,7 +1329,6 @@ Valid ChangesetSpecDescriptionTypes kinds
 
 ```
 searchKey: types.ChangesetSpecDescriptionTypeBranch
-tags: [exported]
 ```
 
 ```Go
@@ -1425,7 +1341,6 @@ Valid ChangesetSpecDescriptionTypes kinds
 
 ```
 searchKey: types.ReconcilerOperationPush
-tags: [exported]
 ```
 
 ```Go
@@ -1436,7 +1351,6 @@ const ReconcilerOperationPush ReconcilerOperation = "PUSH"
 
 ```
 searchKey: types.ReconcilerOperationUpdate
-tags: [exported]
 ```
 
 ```Go
@@ -1447,7 +1361,6 @@ const ReconcilerOperationUpdate ReconcilerOperation = "UPDATE"
 
 ```
 searchKey: types.ReconcilerOperationUndraft
-tags: [exported]
 ```
 
 ```Go
@@ -1458,7 +1371,6 @@ const ReconcilerOperationUndraft ReconcilerOperation = "UNDRAFT"
 
 ```
 searchKey: types.ReconcilerOperationPublish
-tags: [exported]
 ```
 
 ```Go
@@ -1469,7 +1381,6 @@ const ReconcilerOperationPublish ReconcilerOperation = "PUBLISH"
 
 ```
 searchKey: types.ReconcilerOperationPublishDraft
-tags: [exported]
 ```
 
 ```Go
@@ -1480,7 +1391,6 @@ const ReconcilerOperationPublishDraft ReconcilerOperation = "PUBLISH_DRAFT"
 
 ```
 searchKey: types.ReconcilerOperationSync
-tags: [exported]
 ```
 
 ```Go
@@ -1491,7 +1401,6 @@ const ReconcilerOperationSync ReconcilerOperation = "SYNC"
 
 ```
 searchKey: types.ReconcilerOperationImport
-tags: [exported]
 ```
 
 ```Go
@@ -1502,7 +1411,6 @@ const ReconcilerOperationImport ReconcilerOperation = "IMPORT"
 
 ```
 searchKey: types.ReconcilerOperationClose
-tags: [exported]
 ```
 
 ```Go
@@ -1513,7 +1421,6 @@ const ReconcilerOperationClose ReconcilerOperation = "CLOSE"
 
 ```
 searchKey: types.ReconcilerOperationReopen
-tags: [exported]
 ```
 
 ```Go
@@ -1524,7 +1431,6 @@ const ReconcilerOperationReopen ReconcilerOperation = "REOPEN"
 
 ```
 searchKey: types.ReconcilerOperationSleep
-tags: [exported]
 ```
 
 ```Go
@@ -1535,7 +1441,6 @@ const ReconcilerOperationSleep ReconcilerOperation = "SLEEP"
 
 ```
 searchKey: types.ReconcilerOperationDetach
-tags: [exported]
 ```
 
 ```Go
@@ -1546,7 +1451,6 @@ const ReconcilerOperationDetach ReconcilerOperation = "DETACH"
 
 ```
 searchKey: types.ReconcilerOperationArchive
-tags: [exported]
 ```
 
 ```Go
@@ -1557,7 +1461,6 @@ const ReconcilerOperationArchive ReconcilerOperation = "ARCHIVE"
 
 ```
 searchKey: types.SiteCredentialPlaceholderEncryptionKeyID
-tags: [exported]
 ```
 
 ```Go
@@ -1568,7 +1471,6 @@ const SiteCredentialPlaceholderEncryptionKeyID = "previously-migrated"
 
 ```
 searchKey: types.CodehostCapabilityLabels
-tags: [exported]
 ```
 
 ```Go
@@ -1579,7 +1481,6 @@ const CodehostCapabilityLabels CodehostCapability = "Labels"
 
 ```
 searchKey: types.CodehostCapabilityDraftChangesets
-tags: [exported]
 ```
 
 ```Go
@@ -1588,11 +1489,14 @@ const CodehostCapabilityDraftChangesets CodehostCapability = "DraftChangesets"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ChangesetJobTypeComment" href="#ChangesetJobTypeComment">var ChangesetJobTypeComment</a>
 
 ```
 searchKey: types.ChangesetJobTypeComment
-tags: [exported]
 ```
 
 ```Go
@@ -1603,7 +1507,6 @@ var ChangesetJobTypeComment ChangesetJobType = "commentatore"
 
 ```
 searchKey: types.ChangesetJobTypeDetach
-tags: [exported]
 ```
 
 ```Go
@@ -1614,7 +1517,6 @@ var ChangesetJobTypeDetach ChangesetJobType = "detach"
 
 ```
 searchKey: types.ChangesetJobTypeReenqueue
-tags: [exported]
 ```
 
 ```Go
@@ -1625,7 +1527,6 @@ var ChangesetJobTypeReenqueue ChangesetJobType = "reenqueue"
 
 ```
 searchKey: types.ChangesetJobTypeMerge
-tags: [exported]
 ```
 
 ```Go
@@ -1636,7 +1537,6 @@ var ChangesetJobTypeMerge ChangesetJobType = "merge"
 
 ```
 searchKey: types.ErrHeadBaseMismatch
-tags: [exported]
 ```
 
 ```Go
@@ -1649,7 +1549,6 @@ ErrHeadBaseMismatch is returned by (*ChangesetSpec).UnmarshalValidate() if the h
 
 ```
 searchKey: types.ErrNoCommits
-tags: [exported]
 ```
 
 ```Go
@@ -1662,7 +1561,6 @@ ErrNoCommits is returned by (*ChangesetSpecDescription).Diff if the description 
 
 ```
 searchKey: types.SupportedExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -1673,11 +1571,14 @@ SupportedExternalServices are the external service types currently supported by 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="BatchChangeState" href="#BatchChangeState">type BatchChangeState string</a>
 
 ```
 searchKey: types.BatchChangeState
-tags: [exported]
 ```
 
 ```Go
@@ -1690,7 +1591,6 @@ BatchChangeState defines the possible states of a BatchChange
 
 ```
 searchKey: types.BatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -1721,7 +1621,6 @@ A BatchChange of changesets over multiple Repos over time.
 
 ```
 searchKey: types.BatchChange.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -1734,7 +1633,6 @@ Clone returns a clone of a BatchChange.
 
 ```
 searchKey: types.BatchChange.Closed
-tags: [exported]
 ```
 
 ```Go
@@ -1747,7 +1645,6 @@ Closed returns true when the ClosedAt timestamp has been set.
 
 ```
 searchKey: types.BatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -1772,7 +1669,6 @@ type BatchSpec struct {
 
 ```
 searchKey: types.NewBatchSpecFromRaw
-tags: [exported]
 ```
 
 ```Go
@@ -1783,7 +1679,6 @@ func NewBatchSpecFromRaw(rawSpec string) (*BatchSpec, error)
 
 ```
 searchKey: types.BatchSpec.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -1796,7 +1691,6 @@ Clone returns a clone of a BatchSpec.
 
 ```
 searchKey: types.BatchSpec.UnmarshalValidate
-tags: [exported]
 ```
 
 ```Go
@@ -1809,7 +1703,6 @@ UnmarshalValidate unmarshals the RawSpec into Spec and validates it against the 
 
 ```
 searchKey: types.BatchSpec.ExpiresAt
-tags: [exported]
 ```
 
 ```Go
@@ -1822,7 +1715,6 @@ ExpiresAt returns the time when the BatchSpec will be deleted if not applied.
 
 ```
 searchKey: types.BatchSpecFields
-tags: [exported]
 ```
 
 ```Go
@@ -1840,7 +1732,6 @@ type BatchSpecFields struct {
 
 ```
 searchKey: types.BatchSpecOn
-tags: [exported]
 ```
 
 ```Go
@@ -1854,7 +1745,6 @@ type BatchSpecOn struct {
 
 ```
 searchKey: types.BatchSpecStep
-tags: [exported]
 ```
 
 ```Go
@@ -1869,7 +1759,6 @@ type BatchSpecStep struct {
 
 ```
 searchKey: types.BatchChangeImportChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1883,7 +1772,6 @@ type BatchChangeImportChangeset struct {
 
 ```
 searchKey: types.ChangesetTemplate
-tags: [exported]
 ```
 
 ```Go
@@ -1900,7 +1788,6 @@ type ChangesetTemplate struct {
 
 ```
 searchKey: types.CommitTemplate
-tags: [exported]
 ```
 
 ```Go
@@ -1913,7 +1800,6 @@ type CommitTemplate struct {
 
 ```
 searchKey: types.BulkOperationState
-tags: [exported]
 ```
 
 ```Go
@@ -1926,7 +1812,6 @@ BulkOperationState defines the possible states of a bulk operation.
 
 ```
 searchKey: types.BulkOperationState.Valid
-tags: [exported]
 ```
 
 ```Go
@@ -1939,7 +1824,6 @@ Valid returns true if the given BulkOperationState is valid.
 
 ```
 searchKey: types.BulkOperation
-tags: [exported]
 ```
 
 ```Go
@@ -1964,7 +1848,6 @@ BulkOperation represents a virtual entity of a bulk operation, as represented in
 
 ```
 searchKey: types.BulkOperationError
-tags: [exported]
 ```
 
 ```Go
@@ -1980,7 +1863,6 @@ BulkOperationError represents an error on a changeset that occurred within a bul
 
 ```
 searchKey: types.ChangesetState
-tags: [exported]
 ```
 
 ```Go
@@ -1993,7 +1875,6 @@ ChangesetState defines the possible states of a Changeset. These are displayed i
 
 ```
 searchKey: types.ChangesetState.Valid
-tags: [exported]
 ```
 
 ```Go
@@ -2006,7 +1887,6 @@ Valid returns true if the given ChangesetState is valid.
 
 ```
 searchKey: types.ChangesetPublicationState
-tags: [exported]
 ```
 
 ```Go
@@ -2019,7 +1899,6 @@ ChangesetPublicationState defines the possible publication states of a Changeset
 
 ```
 searchKey: types.ChangesetPublicationState.Valid
-tags: [exported]
 ```
 
 ```Go
@@ -2032,7 +1911,6 @@ Valid returns true if the given ChangesetPublicationState is valid.
 
 ```
 searchKey: types.ChangesetPublicationState.Published
-tags: [exported]
 ```
 
 ```Go
@@ -2045,7 +1923,6 @@ Published returns true if the given state is ChangesetPublicationStatePublished.
 
 ```
 searchKey: types.ChangesetPublicationState.Unpublished
-tags: [exported]
 ```
 
 ```Go
@@ -2058,7 +1935,6 @@ Unpublished returns true if the given state is ChangesetPublicationStateUnpublis
 
 ```
 searchKey: types.ReconcilerState
-tags: [exported]
 ```
 
 ```Go
@@ -2071,7 +1947,6 @@ ReconcilerState defines the possible states of a Reconciler.
 
 ```
 searchKey: types.ReconcilerState.Valid
-tags: [exported]
 ```
 
 ```Go
@@ -2084,7 +1959,6 @@ Valid returns true if the given ReconcilerState is valid.
 
 ```
 searchKey: types.ReconcilerState.ToDB
-tags: [exported]
 ```
 
 ```Go
@@ -2097,7 +1971,6 @@ ToDB returns the database representation of the reconciler state. That's needed 
 
 ```
 searchKey: types.ChangesetExternalState
-tags: [exported]
 ```
 
 ```Go
@@ -2110,7 +1983,6 @@ ChangesetExternalState defines the possible states of a Changeset on a code host
 
 ```
 searchKey: types.ChangesetExternalState.Valid
-tags: [exported]
 ```
 
 ```Go
@@ -2123,7 +1995,6 @@ Valid returns true if the given ChangesetExternalState is valid.
 
 ```
 searchKey: types.ChangesetLabel
-tags: [exported]
 ```
 
 ```Go
@@ -2140,7 +2011,6 @@ ChangesetLabel represents a label applied to a changeset
 
 ```
 searchKey: types.ChangesetReviewState
-tags: [exported]
 ```
 
 ```Go
@@ -2153,7 +2023,6 @@ ChangesetReviewState defines the possible states of a Changeset's review.
 
 ```
 searchKey: types.ChangesetReviewState.Valid
-tags: [exported]
 ```
 
 ```Go
@@ -2166,7 +2035,6 @@ Valid returns true if the given Changeset review state is valid.
 
 ```
 searchKey: types.ChangesetCheckState
-tags: [exported]
 ```
 
 ```Go
@@ -2179,7 +2047,6 @@ ChangesetCheckState constants.
 
 ```
 searchKey: types.ChangesetCheckState.Valid
-tags: [exported]
 ```
 
 ```Go
@@ -2192,7 +2059,6 @@ Valid returns true if the given Changeset check state is valid.
 
 ```
 searchKey: types.BatchChangeAssoc
-tags: [exported]
 ```
 
 ```Go
@@ -2210,7 +2076,6 @@ BatchChangeAssoc stores the details of a association to a BatchChange.
 
 ```
 searchKey: types.Changeset
-tags: [exported]
 ```
 
 ```Go
@@ -2267,7 +2132,6 @@ A Changeset is a changeset on a code host belonging to a Repository and many Bat
 
 ```
 searchKey: types.Changeset.RecordID
-tags: [exported]
 ```
 
 ```Go
@@ -2280,7 +2144,6 @@ RecordID is needed to implement the workerutil.Record interface.
 
 ```
 searchKey: types.Changeset.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -2293,7 +2156,6 @@ Clone returns a clone of a Changeset.
 
 ```
 searchKey: types.Changeset.Closeable
-tags: [exported]
 ```
 
 ```Go
@@ -2306,7 +2168,6 @@ Closeable returns whether the Changeset is already closed or merged.
 
 ```
 searchKey: types.Changeset.Complete
-tags: [exported]
 ```
 
 ```Go
@@ -2319,7 +2180,6 @@ Complete returns whether the Changeset has been published and its ExternalState 
 
 ```
 searchKey: types.Changeset.Published
-tags: [exported]
 ```
 
 ```Go
@@ -2332,7 +2192,6 @@ Published returns whether the Changeset's PublicationState is Published.
 
 ```
 searchKey: types.Changeset.Unpublished
-tags: [exported]
 ```
 
 ```Go
@@ -2345,7 +2204,6 @@ Unpublished returns whether the Changeset's PublicationState is Unpublished.
 
 ```
 searchKey: types.Changeset.IsImporting
-tags: [exported]
 ```
 
 ```Go
@@ -2358,7 +2216,6 @@ IsImporting returns whether the Changeset is being imported but it's not finishe
 
 ```
 searchKey: types.Changeset.SetCurrentSpec
-tags: [exported]
 ```
 
 ```Go
@@ -2371,7 +2228,6 @@ SetCurrentSpec sets the CurrentSpecID field and copies the diff stat over from t
 
 ```
 searchKey: types.Changeset.DiffStat
-tags: [exported]
 ```
 
 ```Go
@@ -2384,7 +2240,6 @@ DiffStat returns a *diff.Stat if DiffStatAdded, DiffStatChanged, and DiffStatDel
 
 ```
 searchKey: types.Changeset.SetDiffStat
-tags: [exported]
 ```
 
 ```Go
@@ -2395,7 +2250,6 @@ func (c *Changeset) SetDiffStat(stat *diff.Stat)
 
 ```
 searchKey: types.Changeset.SetMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -2406,7 +2260,6 @@ func (c *Changeset) SetMetadata(meta interface{}) error
 
 ```
 searchKey: types.Changeset.RemoveBatchChangeID
-tags: [exported]
 ```
 
 ```Go
@@ -2419,7 +2272,6 @@ RemoveBatchChangeID removes the given id from the Changesets BatchChangesIDs sli
 
 ```
 searchKey: types.Changeset.Title
-tags: [exported]
 ```
 
 ```Go
@@ -2432,7 +2284,6 @@ Title of the Changeset.
 
 ```
 searchKey: types.Changeset.AuthorName
-tags: [exported]
 ```
 
 ```Go
@@ -2445,7 +2296,6 @@ AuthorName of the Changeset.
 
 ```
 searchKey: types.Changeset.AuthorEmail
-tags: [exported]
 ```
 
 ```Go
@@ -2458,7 +2308,6 @@ AuthorEmail of the Changeset.
 
 ```
 searchKey: types.Changeset.ExternalCreatedAt
-tags: [exported]
 ```
 
 ```Go
@@ -2471,7 +2320,6 @@ ExternalCreatedAt is when the Changeset was created on the codehost. When it can
 
 ```
 searchKey: types.Changeset.Body
-tags: [exported]
 ```
 
 ```Go
@@ -2484,7 +2332,6 @@ Body of the Changeset.
 
 ```
 searchKey: types.Changeset.SetDeleted
-tags: [exported]
 ```
 
 ```Go
@@ -2497,7 +2344,6 @@ SetDeleted sets the internal state of a Changeset so that its State is Changeset
 
 ```
 searchKey: types.Changeset.IsDeleted
-tags: [exported]
 ```
 
 ```Go
@@ -2510,7 +2356,6 @@ IsDeleted returns true when the Changeset's ExternalDeletedAt is a non-zero time
 
 ```
 searchKey: types.Changeset.HasDiff
-tags: [exported]
 ```
 
 ```Go
@@ -2523,7 +2368,6 @@ HasDiff returns true when the changeset is in an open state. That is because cur
 
 ```
 searchKey: types.Changeset.URL
-tags: [exported]
 ```
 
 ```Go
@@ -2536,7 +2380,6 @@ URL of a Changeset.
 
 ```
 searchKey: types.Changeset.Events
-tags: [exported]
 ```
 
 ```Go
@@ -2549,7 +2392,6 @@ Events returns the deduplicated list of ChangesetEvents from the Changeset's met
 
 ```
 searchKey: types.Changeset.HeadRefOid
-tags: [exported]
 ```
 
 ```Go
@@ -2562,7 +2404,6 @@ HeadRefOid returns the git ObjectID of the HEAD reference associated with Change
 
 ```
 searchKey: types.Changeset.HeadRef
-tags: [exported]
 ```
 
 ```Go
@@ -2575,7 +2416,6 @@ HeadRef returns the full ref (e.g. `refs/heads/my-branch`) of the HEAD reference
 
 ```
 searchKey: types.Changeset.BaseRefOid
-tags: [exported]
 ```
 
 ```Go
@@ -2588,7 +2428,6 @@ BaseRefOid returns the git ObjectID of the base reference associated with the Ch
 
 ```
 searchKey: types.Changeset.BaseRef
-tags: [exported]
 ```
 
 ```Go
@@ -2601,7 +2440,6 @@ BaseRef returns the full ref (e.g. `refs/heads/my-branch`) of the base ref assoc
 
 ```
 searchKey: types.Changeset.AttachedTo
-tags: [exported]
 ```
 
 ```Go
@@ -2614,7 +2452,6 @@ AttachedTo returns true if the changeset is currently attached to the batch chan
 
 ```
 searchKey: types.Changeset.Attach
-tags: [exported]
 ```
 
 ```Go
@@ -2627,7 +2464,6 @@ Attach attaches the batch change with the given ID to the changeset. If the batc
 
 ```
 searchKey: types.Changeset.Detach
-tags: [exported]
 ```
 
 ```Go
@@ -2640,7 +2476,6 @@ Detach marks the given batch change as to-be-detached. Returns true, if the batc
 
 ```
 searchKey: types.Changeset.Archive
-tags: [exported]
 ```
 
 ```Go
@@ -2653,7 +2488,6 @@ Archive marks the given batch change as to-be-archived. Returns true, if the bat
 
 ```
 searchKey: types.Changeset.ArchivedIn
-tags: [exported]
 ```
 
 ```Go
@@ -2666,7 +2500,6 @@ ArchivedIn checks whether the changeset is archived in the given batch change.
 
 ```
 searchKey: types.Changeset.SupportsLabels
-tags: [exported]
 ```
 
 ```Go
@@ -2679,7 +2512,6 @@ SupportsLabels returns whether the code host on which the changeset is hosted su
 
 ```
 searchKey: types.Changeset.SupportsDraft
-tags: [exported]
 ```
 
 ```Go
@@ -2692,7 +2524,6 @@ SupportsDraft returns whether the code host on which the changeset is hosted sup
 
 ```
 searchKey: types.Changeset.Labels
-tags: [exported]
 ```
 
 ```Go
@@ -2703,7 +2534,6 @@ func (c *Changeset) Labels() []ChangesetLabel
 
 ```
 searchKey: types.Changeset.ResetReconcilerState
-tags: [exported]
 ```
 
 ```Go
@@ -2716,7 +2546,6 @@ ResetReconcilerState resets the failure message and reset count and sets the cha
 
 ```
 searchKey: types.Changesets
-tags: [exported]
 ```
 
 ```Go
@@ -2729,7 +2558,6 @@ Changesets is a slice of *Changesets.
 
 ```
 searchKey: types.Changesets.IDs
-tags: [exported]
 ```
 
 ```Go
@@ -2742,7 +2570,6 @@ IDs returns the IDs of all changesets in the slice.
 
 ```
 searchKey: types.Changesets.RepoIDs
-tags: [exported]
 ```
 
 ```Go
@@ -2755,7 +2582,6 @@ IDs returns the unique RepoIDs of all changesets in the slice.
 
 ```
 searchKey: types.Changesets.Filter
-tags: [exported]
 ```
 
 ```Go
@@ -2768,7 +2594,6 @@ Filter returns a new Changesets slice in which changesets have been filtered out
 
 ```
 searchKey: types.Changesets.Find
-tags: [exported]
 ```
 
 ```Go
@@ -2781,7 +2606,6 @@ Find returns the first changeset in the slice for which the predicate returned t
 
 ```
 searchKey: types.ChangesetsStats
-tags: [exported]
 ```
 
 ```Go
@@ -2807,6 +2631,7 @@ ChangesetsStats holds stats information on a list of changesets.
 
 ```
 searchKey: types.changesetEventUpdateMismatchError
+tags: [private]
 ```
 
 ```Go
@@ -2821,6 +2646,7 @@ type changesetEventUpdateMismatchError struct {
 
 ```
 searchKey: types.changesetEventUpdateMismatchError.Error
+tags: [private]
 ```
 
 ```Go
@@ -2831,7 +2657,6 @@ func (e *changesetEventUpdateMismatchError) Error() string
 
 ```
 searchKey: types.ChangesetEventKind
-tags: [exported]
 ```
 
 ```Go
@@ -2844,7 +2669,6 @@ ChangesetEventKind defines the kind of a ChangesetEvent. This type is unexported
 
 ```
 searchKey: types.ChangesetEventKindFor
-tags: [exported]
 ```
 
 ```Go
@@ -2857,7 +2681,6 @@ ChangesetEventKindFor returns the ChangesetEventKind for the given specific code
 
 ```
 searchKey: types.ChangesetEvent
-tags: [exported]
 ```
 
 ```Go
@@ -2878,7 +2701,6 @@ A ChangesetEvent is an event that happened in the lifetime and context of a Chan
 
 ```
 searchKey: types.ChangesetEvent.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -2891,7 +2713,6 @@ Clone returns a clone of a ChangesetEvent.
 
 ```
 searchKey: types.ChangesetEvent.ReviewAuthor
-tags: [exported]
 ```
 
 ```Go
@@ -2904,7 +2725,6 @@ ReviewAuthor returns the author of the review if the ChangesetEvent is related t
 
 ```
 searchKey: types.ChangesetEvent.ReviewState
-tags: [exported]
 ```
 
 ```Go
@@ -2917,7 +2737,6 @@ ReviewState returns the review state of the ChangesetEvent if it is a review eve
 
 ```
 searchKey: types.ChangesetEvent.Type
-tags: [exported]
 ```
 
 ```Go
@@ -2930,7 +2749,6 @@ Type returns the ChangesetEventKind of the ChangesetEvent.
 
 ```
 searchKey: types.ChangesetEvent.Changeset
-tags: [exported]
 ```
 
 ```Go
@@ -2943,7 +2761,6 @@ Changeset returns the changeset ID of the ChangesetEvent.
 
 ```
 searchKey: types.ChangesetEvent.Timestamp
-tags: [exported]
 ```
 
 ```Go
@@ -2956,7 +2773,6 @@ Timestamp returns the time when the ChangesetEvent happened (or was updated) on 
 
 ```
 searchKey: types.ChangesetEvent.Update
-tags: [exported]
 ```
 
 ```Go
@@ -2969,7 +2785,6 @@ Update updates the metadata of e with new metadata in o.
 
 ```
 searchKey: types.ChangesetJobState
-tags: [exported]
 ```
 
 ```Go
@@ -2982,7 +2797,6 @@ ChangesetJobState defines the possible states of a changeset job.
 
 ```
 searchKey: types.ChangesetJobState.Valid
-tags: [exported]
 ```
 
 ```Go
@@ -2995,7 +2809,6 @@ Valid returns true if the given ChangesetJobState is valid.
 
 ```
 searchKey: types.ChangesetJobState.ToDB
-tags: [exported]
 ```
 
 ```Go
@@ -3008,7 +2821,6 @@ ToDB returns the database representation of the worker state. That's needed beca
 
 ```
 searchKey: types.ChangesetJobType
-tags: [exported]
 ```
 
 ```Go
@@ -3021,7 +2833,6 @@ ChangesetJobType specifies all valid type of jobs that the bulk processor unders
 
 ```
 searchKey: types.ChangesetJobCommentPayload
-tags: [exported]
 ```
 
 ```Go
@@ -3034,7 +2845,6 @@ type ChangesetJobCommentPayload struct {
 
 ```
 searchKey: types.ChangesetJobDetachPayload
-tags: [exported]
 ```
 
 ```Go
@@ -3045,7 +2855,6 @@ type ChangesetJobDetachPayload struct{}
 
 ```
 searchKey: types.ChangesetJobReenqueuePayload
-tags: [exported]
 ```
 
 ```Go
@@ -3056,7 +2865,6 @@ type ChangesetJobReenqueuePayload struct{}
 
 ```
 searchKey: types.ChangesetJobMergePayload
-tags: [exported]
 ```
 
 ```Go
@@ -3069,7 +2877,6 @@ type ChangesetJobMergePayload struct {
 
 ```
 searchKey: types.ChangesetJob
-tags: [exported]
 ```
 
 ```Go
@@ -3103,7 +2910,6 @@ ChangesetJob describes a one-time action to be taken on a changeset.
 
 ```
 searchKey: types.ChangesetJob.RecordID
-tags: [exported]
 ```
 
 ```Go
@@ -3114,7 +2920,6 @@ func (j *ChangesetJob) RecordID() int
 
 ```
 searchKey: types.ChangesetSpec
-tags: [exported]
 ```
 
 ```Go
@@ -3143,7 +2948,6 @@ type ChangesetSpec struct {
 
 ```
 searchKey: types.NewChangesetSpecFromRaw
-tags: [exported]
 ```
 
 ```Go
@@ -3154,7 +2958,6 @@ func NewChangesetSpecFromRaw(rawSpec string) (*ChangesetSpec, error)
 
 ```
 searchKey: types.ChangesetSpec.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -3167,6 +2970,7 @@ Clone returns a clone of a ChangesetSpec.
 
 ```
 searchKey: types.ChangesetSpec.computeDiffStat
+tags: [private]
 ```
 
 ```Go
@@ -3179,7 +2983,6 @@ computeDiffStat parses the Diff of the ChangesetSpecDescription and sets the dif
 
 ```
 searchKey: types.ChangesetSpec.DiffStat
-tags: [exported]
 ```
 
 ```Go
@@ -3192,7 +2995,6 @@ DiffStat returns a *diff.Stat.
 
 ```
 searchKey: types.ChangesetSpec.UnmarshalValidate
-tags: [exported]
 ```
 
 ```Go
@@ -3205,7 +3007,6 @@ UnmarshalValidate unmarshals the RawSpec into Spec and validates it against the 
 
 ```
 searchKey: types.ChangesetSpec.ExpiresAt
-tags: [exported]
 ```
 
 ```Go
@@ -3218,7 +3019,6 @@ ExpiresAt returns the time when the ChangesetSpec will be deleted if not attache
 
 ```
 searchKey: types.GitCommitDescription
-tags: [exported]
 ```
 
 ```Go
@@ -3234,7 +3034,6 @@ type GitCommitDescription struct {
 
 ```
 searchKey: types.ChangesetSpecs
-tags: [exported]
 ```
 
 ```Go
@@ -3247,7 +3046,6 @@ ChangesetSpecs is a slice of *ChangesetSpecs.
 
 ```
 searchKey: types.ChangesetSpecs.RepoIDs
-tags: [exported]
 ```
 
 ```Go
@@ -3260,7 +3058,6 @@ IDs returns the unique RepoIDs of all changeset specs in the slice.
 
 ```
 searchKey: types.ChangesetSpecDescription
-tags: [exported]
 ```
 
 ```Go
@@ -3290,7 +3087,6 @@ type ChangesetSpecDescription struct {
 
 ```
 searchKey: types.ChangesetSpecDescription.Type
-tags: [exported]
 ```
 
 ```Go
@@ -3303,7 +3099,6 @@ Type returns the ChangesetSpecDescriptionType of the ChangesetSpecDescription.
 
 ```
 searchKey: types.ChangesetSpecDescription.IsImportingExisting
-tags: [exported]
 ```
 
 ```Go
@@ -3316,7 +3111,6 @@ IsExisting returns whether the description is of type ChangesetSpecDescriptionTy
 
 ```
 searchKey: types.ChangesetSpecDescription.IsBranch
-tags: [exported]
 ```
 
 ```Go
@@ -3329,7 +3123,6 @@ IsBranch returns whether the description is of type ChangesetSpecDescriptionType
 
 ```
 searchKey: types.ChangesetSpecDescription.Diff
-tags: [exported]
 ```
 
 ```Go
@@ -3344,7 +3137,6 @@ We currently only support a single commit in Commits. Once we support more, this
 
 ```
 searchKey: types.ChangesetSpecDescription.CommitMessage
-tags: [exported]
 ```
 
 ```Go
@@ -3359,7 +3151,6 @@ We currently only support a single commit in Commits. Once we support more, this
 
 ```
 searchKey: types.ChangesetSpecDescription.AuthorName
-tags: [exported]
 ```
 
 ```Go
@@ -3374,7 +3165,6 @@ We currently only support a single commit in Commits. Once we support more, this
 
 ```
 searchKey: types.ChangesetSpecDescription.AuthorEmail
-tags: [exported]
 ```
 
 ```Go
@@ -3389,7 +3179,6 @@ We currently only support a single commit in Commits. Once we support more, this
 
 ```
 searchKey: types.ChangesetSpecDescriptionType
-tags: [exported]
 ```
 
 ```Go
@@ -3402,7 +3191,6 @@ ChangesetSpecDescriptionType tells the consumer what the type of a ChangesetSpec
 
 ```
 searchKey: types.CodeHost
-tags: [exported]
 ```
 
 ```Go
@@ -3419,7 +3207,6 @@ CodeHost represents one configured external code host available on this Sourcegr
 
 ```
 searchKey: types.CodeHost.IsSupported
-tags: [exported]
 ```
 
 ```Go
@@ -3432,7 +3219,6 @@ IsSupported returns true, when this code host is supported by the batch changes 
 
 ```
 searchKey: types.ReconcilerOperation
-tags: [exported]
 ```
 
 ```Go
@@ -3445,7 +3231,6 @@ ReconcilerOperation is an enum to distinguish between different reconciler opera
 
 ```
 searchKey: types.ReconcilerOperation.Valid
-tags: [exported]
 ```
 
 ```Go
@@ -3458,7 +3243,6 @@ Valid returns true if the given ReconcilerOperation is valid.
 
 ```
 searchKey: types.RewirerMapping
-tags: [exported]
 ```
 
 ```Go
@@ -3478,7 +3262,6 @@ RewirerMapping maps a connection between ChangesetSpec and Changeset. If the Cha
 
 ```
 searchKey: types.RewirerMappings
-tags: [exported]
 ```
 
 ```Go
@@ -3489,7 +3272,6 @@ type RewirerMappings []*RewirerMapping
 
 ```
 searchKey: types.RewirerMappings.ChangesetIDs
-tags: [exported]
 ```
 
 ```Go
@@ -3502,7 +3284,6 @@ ChangesetIDs returns a list of unique changeset IDs in the slice of mappings.
 
 ```
 searchKey: types.RewirerMappings.ChangesetSpecIDs
-tags: [exported]
 ```
 
 ```Go
@@ -3515,7 +3296,6 @@ ChangesetSpecIDs returns a list of unique changeset spec IDs in the slice of map
 
 ```
 searchKey: types.RewirerMappings.RepoIDs
-tags: [exported]
 ```
 
 ```Go
@@ -3528,7 +3308,6 @@ RepoIDs returns a list of unique repo IDs in the slice of mappings.
 
 ```
 searchKey: types.SiteCredential
-tags: [exported]
 ```
 
 ```Go
@@ -3549,7 +3328,6 @@ type SiteCredential struct {
 
 ```
 searchKey: types.SiteCredential.Authenticator
-tags: [exported]
 ```
 
 ```Go
@@ -3562,7 +3340,6 @@ Authenticator decrypts and creates the authenticator associated with the site cr
 
 ```
 searchKey: types.SiteCredential.SetAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -3575,7 +3352,6 @@ SetAuthenticator encrypts and sets the authenticator within the site credential.
 
 ```
 searchKey: types.ChangesetSyncState
-tags: [exported]
 ```
 
 ```Go
@@ -3594,7 +3370,6 @@ type ChangesetSyncState struct {
 
 ```
 searchKey: types.ChangesetSyncState.Equals
-tags: [exported]
 ```
 
 ```Go
@@ -3605,7 +3380,6 @@ func (state *ChangesetSyncState) Equals(old *ChangesetSyncState) bool
 
 ```
 searchKey: types.ChangesetSyncData
-tags: [exported]
 ```
 
 ```Go
@@ -3629,7 +3403,6 @@ ChangesetSyncData represents data about the sync status of a changeset
 
 ```
 searchKey: types.CodehostCapability
-tags: [exported]
 ```
 
 ```Go
@@ -3640,7 +3413,6 @@ type CodehostCapability string
 
 ```
 searchKey: types.CodehostCapabilities
-tags: [exported]
 ```
 
 ```Go
@@ -3651,7 +3423,6 @@ type CodehostCapabilities map[CodehostCapability]bool
 
 ```
 searchKey: types.Keyer
-tags: [exported]
 ```
 
 ```Go
@@ -3666,6 +3437,7 @@ Keyer represents items that return a unique key
 
 ```
 searchKey: types.changesetSyncStateTestCase
+tags: [private]
 ```
 
 ```Go
@@ -3677,11 +3449,14 @@ type changesetSyncStateTestCase struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="WithCurrentSpecID" href="#WithCurrentSpecID">func WithCurrentSpecID(id int64) func(*Changeset) bool</a>
 
 ```
 searchKey: types.WithCurrentSpecID
-tags: [exported]
 ```
 
 ```Go
@@ -3694,7 +3469,6 @@ WithCurrentSpecID returns a predicate function that can be passed to Changesets.
 
 ```
 searchKey: types.WithExternalID
-tags: [exported]
 ```
 
 ```Go
@@ -3707,7 +3481,6 @@ WithExternalID returns a predicate function that can be passed to Changesets.Fil
 
 ```
 searchKey: types.NewChangesetEventMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -3720,6 +3493,7 @@ NewChangesetEventMetadata returns a new metadata object for the given ChangesetE
 
 ```
 searchKey: types.updateGitHubPullRequestReview
+tags: [private]
 ```
 
 ```Go
@@ -3730,16 +3504,18 @@ func updateGitHubPullRequestReview(e, o *github.PullRequestReview)
 
 ```
 searchKey: types.updateGitHubCommit
+tags: [private]
 ```
 
 ```Go
 func updateGitHubCommit(e, o *github.Commit)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.config.go" href="#init.config.go">func init()</a>
 
 ```
 searchKey: types.init
+tags: [private]
 ```
 
 ```Go
@@ -3750,6 +3526,7 @@ func init()
 
 ```
 searchKey: types.keyID
+tags: [private]
 ```
 
 ```Go
@@ -3760,7 +3537,6 @@ func keyID(ctx context.Context, key encryption.Key) (string, error)
 
 ```
 searchKey: types.IsRepoSupported
-tags: [exported]
 ```
 
 ```Go
@@ -3773,7 +3549,6 @@ IsRepoSupported returns whether the given ExternalRepoSpec is supported by the b
 
 ```
 searchKey: types.IsKindSupported
-tags: [exported]
 ```
 
 ```Go
@@ -3786,7 +3561,6 @@ IsKindSupported returns whether the given extsvc Kind is supported by batch chan
 
 ```
 searchKey: types.ExternalServiceSupports
-tags: [exported]
 ```
 
 ```Go
@@ -3797,6 +3571,7 @@ func ExternalServiceSupports(extSvcType string, capability CodehostCapability) b
 
 ```
 searchKey: types.unixMilliToTime
+tags: [private]
 ```
 
 ```Go
@@ -3807,6 +3582,7 @@ func unixMilliToTime(ms int64) time.Time
 
 ```
 searchKey: types.TestBatchSpecUnmarshalValidate
+tags: [private]
 ```
 
 ```Go
@@ -3817,6 +3593,7 @@ func TestBatchSpecUnmarshalValidate(t *testing.T)
 
 ```
 searchKey: types.TestChangesetEvent
+tags: [private]
 ```
 
 ```Go
@@ -3827,6 +3604,7 @@ func TestChangesetEvent(t *testing.T)
 
 ```
 searchKey: types.TestChangesetSpecUnmarshalValidate
+tags: [private]
 ```
 
 ```Go
@@ -3837,6 +3615,7 @@ func TestChangesetSpecUnmarshalValidate(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_Clone
+tags: [private]
 ```
 
 ```Go
@@ -3847,6 +3626,7 @@ func TestChangeset_Clone(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_DiffStat
+tags: [private]
 ```
 
 ```Go
@@ -3857,6 +3637,7 @@ func TestChangeset_DiffStat(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_SetMetadata
+tags: [private]
 ```
 
 ```Go
@@ -3867,6 +3648,7 @@ func TestChangeset_SetMetadata(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_Title
+tags: [private]
 ```
 
 ```Go
@@ -3877,6 +3659,7 @@ func TestChangeset_Title(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_ExternalCreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -3887,6 +3670,7 @@ func TestChangeset_ExternalCreatedAt(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_Body
+tags: [private]
 ```
 
 ```Go
@@ -3897,6 +3681,7 @@ func TestChangeset_Body(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_URL
+tags: [private]
 ```
 
 ```Go
@@ -3907,6 +3692,7 @@ func TestChangeset_URL(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_HeadRefOid
+tags: [private]
 ```
 
 ```Go
@@ -3917,6 +3703,7 @@ func TestChangeset_HeadRefOid(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_HeadRef
+tags: [private]
 ```
 
 ```Go
@@ -3927,6 +3714,7 @@ func TestChangeset_HeadRef(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_BaseRefOid
+tags: [private]
 ```
 
 ```Go
@@ -3937,6 +3725,7 @@ func TestChangeset_BaseRefOid(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_BaseRef
+tags: [private]
 ```
 
 ```Go
@@ -3947,6 +3736,7 @@ func TestChangeset_BaseRef(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_Labels
+tags: [private]
 ```
 
 ```Go
@@ -3957,6 +3747,7 @@ func TestChangeset_Labels(t *testing.T)
 
 ```
 searchKey: types.TestChangesetMetadata
+tags: [private]
 ```
 
 ```Go
@@ -3967,6 +3758,7 @@ func TestChangesetMetadata(t *testing.T)
 
 ```
 searchKey: types.TestChangeset_ResetReconcilerState
+tags: [private]
 ```
 
 ```Go
@@ -3977,6 +3769,7 @@ func TestChangeset_ResetReconcilerState(t *testing.T)
 
 ```
 searchKey: types.TestChangesetSyncStateEquals
+tags: [private]
 ```
 
 ```Go

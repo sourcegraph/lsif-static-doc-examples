@@ -4,9 +4,7 @@
     "identifier": "textproto",
     "newPage": true,
     "searchKey": "net/textproto",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "toLower",
                 "newPage": false,
                 "searchKey": "textproto.toLower",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "wstateBegin",
                 "newPage": false,
                 "searchKey": "textproto.wstateBegin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "wstateBeginLine",
                 "newPage": false,
                 "searchKey": "textproto.wstateBeginLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "wstateCR",
                 "newPage": false,
                 "searchKey": "textproto.wstateCR",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "wstateData",
                 "newPage": false,
                 "searchKey": "textproto.wstateData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,9 +153,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "commonHeader",
                 "newPage": false,
                 "searchKey": "textproto.commonHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "commonHeaderOnce",
                 "newPage": false,
                 "searchKey": "textproto.commonHeaderOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "isTokenTable",
                 "newPage": false,
                 "searchKey": "textproto.isTokenTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -227,7 +237,9 @@
                 "identifier": "crnl",
                 "newPage": false,
                 "searchKey": "textproto.crnl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "dotcrnl",
                 "newPage": false,
                 "searchKey": "textproto.dotcrnl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "canonicalHeaderKeyTests",
                 "newPage": false,
                 "searchKey": "textproto.canonicalHeaderKeyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -287,7 +303,9 @@
                 "identifier": "readResponseTests",
                 "newPage": false,
                 "searchKey": "textproto.readResponseTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -307,7 +325,9 @@
                 "identifier": "clientHeaders",
                 "newPage": false,
                 "searchKey": "textproto.clientHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -327,7 +347,9 @@
                 "identifier": "serverHeaders",
                 "newPage": false,
                 "searchKey": "textproto.serverHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -350,9 +372,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -370,9 +390,7 @@
                 "identifier": "MIMEHeader",
                 "newPage": false,
                 "searchKey": "textproto.MIMEHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -390,9 +408,7 @@
                       "identifier": "MIMEHeader.Add",
                       "newPage": false,
                       "searchKey": "textproto.MIMEHeader.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -412,9 +428,7 @@
                       "identifier": "MIMEHeader.Set",
                       "newPage": false,
                       "searchKey": "textproto.MIMEHeader.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,9 +448,7 @@
                       "identifier": "MIMEHeader.Get",
                       "newPage": false,
                       "searchKey": "textproto.MIMEHeader.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -456,9 +468,7 @@
                       "identifier": "MIMEHeader.Values",
                       "newPage": false,
                       "searchKey": "textproto.MIMEHeader.Values",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -478,9 +488,7 @@
                       "identifier": "MIMEHeader.Del",
                       "newPage": false,
                       "searchKey": "textproto.MIMEHeader.Del",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -503,9 +511,7 @@
                 "identifier": "Pipeline",
                 "newPage": false,
                 "searchKey": "textproto.Pipeline",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -523,9 +529,7 @@
                       "identifier": "Pipeline.Next",
                       "newPage": false,
                       "searchKey": "textproto.Pipeline.Next",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -545,9 +549,7 @@
                       "identifier": "Pipeline.StartRequest",
                       "newPage": false,
                       "searchKey": "textproto.Pipeline.StartRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -567,9 +569,7 @@
                       "identifier": "Pipeline.EndRequest",
                       "newPage": false,
                       "searchKey": "textproto.Pipeline.EndRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -589,9 +589,7 @@
                       "identifier": "Pipeline.StartResponse",
                       "newPage": false,
                       "searchKey": "textproto.Pipeline.StartResponse",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -611,9 +609,7 @@
                       "identifier": "Pipeline.EndResponse",
                       "newPage": false,
                       "searchKey": "textproto.Pipeline.EndResponse",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -636,7 +632,9 @@
                 "identifier": "sequencer",
                 "newPage": false,
                 "searchKey": "textproto.sequencer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -654,7 +652,9 @@
                       "identifier": "sequencer.Start",
                       "newPage": false,
                       "searchKey": "textproto.sequencer.Start",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -674,7 +674,9 @@
                       "identifier": "sequencer.End",
                       "newPage": false,
                       "searchKey": "textproto.sequencer.End",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -697,9 +699,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "textproto.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -717,9 +717,7 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "textproto.NewReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -739,7 +737,9 @@
                       "identifier": "reader",
                       "newPage": false,
                       "searchKey": "textproto.reader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -759,9 +759,7 @@
                       "identifier": "Reader.ReadLine",
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadLine",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -781,9 +779,7 @@
                       "identifier": "Reader.ReadLineBytes",
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadLineBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -803,7 +799,9 @@
                       "identifier": "Reader.readLineSlice",
                       "newPage": false,
                       "searchKey": "textproto.Reader.readLineSlice",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -823,9 +821,7 @@
                       "identifier": "Reader.ReadContinuedLine",
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadContinuedLine",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -845,9 +841,7 @@
                       "identifier": "Reader.ReadContinuedLineBytes",
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadContinuedLineBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -867,7 +861,9 @@
                       "identifier": "Reader.readContinuedLineSlice",
                       "newPage": false,
                       "searchKey": "textproto.Reader.readContinuedLineSlice",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -887,7 +883,9 @@
                       "identifier": "Reader.skipSpace",
                       "newPage": false,
                       "searchKey": "textproto.Reader.skipSpace",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -907,7 +905,9 @@
                       "identifier": "Reader.readCodeLine",
                       "newPage": false,
                       "searchKey": "textproto.Reader.readCodeLine",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -927,9 +927,7 @@
                       "identifier": "Reader.ReadCodeLine",
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadCodeLine",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -949,9 +947,7 @@
                       "identifier": "Reader.ReadResponse",
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadResponse",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -971,9 +967,7 @@
                       "identifier": "Reader.DotReader",
                       "newPage": false,
                       "searchKey": "textproto.Reader.DotReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -993,7 +987,9 @@
                       "identifier": "Reader.closeDot",
                       "newPage": false,
                       "searchKey": "textproto.Reader.closeDot",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1013,9 +1009,7 @@
                       "identifier": "Reader.ReadDotBytes",
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadDotBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1035,9 +1029,7 @@
                       "identifier": "Reader.ReadDotLines",
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadDotLines",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1057,9 +1049,7 @@
                       "identifier": "Reader.ReadMIMEHeader",
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadMIMEHeader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1079,7 +1069,9 @@
                       "identifier": "Reader.upcomingHeaderNewlines",
                       "newPage": false,
                       "searchKey": "textproto.Reader.upcomingHeaderNewlines",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1102,7 +1094,9 @@
                 "identifier": "dotReader",
                 "newPage": false,
                 "searchKey": "textproto.dotReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1120,7 +1114,9 @@
                       "identifier": "dotReader.Read",
                       "newPage": false,
                       "searchKey": "textproto.dotReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1143,9 +1139,7 @@
                 "identifier": "Error",
                 "newPage": false,
                 "searchKey": "textproto.Error",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1163,9 +1157,7 @@
                       "identifier": "Error.Error",
                       "newPage": false,
                       "searchKey": "textproto.Error.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1188,9 +1180,7 @@
                 "identifier": "ProtocolError",
                 "newPage": false,
                 "searchKey": "textproto.ProtocolError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1208,9 +1198,7 @@
                       "identifier": "ProtocolError.Error",
                       "newPage": false,
                       "searchKey": "textproto.ProtocolError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1233,9 +1221,7 @@
                 "identifier": "Conn",
                 "newPage": false,
                 "searchKey": "textproto.Conn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1253,9 +1239,7 @@
                       "identifier": "NewConn",
                       "newPage": false,
                       "searchKey": "textproto.NewConn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1275,9 +1259,7 @@
                       "identifier": "Dial",
                       "newPage": false,
                       "searchKey": "textproto.Dial",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1297,9 +1279,7 @@
                       "identifier": "Conn.Close",
                       "newPage": false,
                       "searchKey": "textproto.Conn.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1319,9 +1299,7 @@
                       "identifier": "Conn.Cmd",
                       "newPage": false,
                       "searchKey": "textproto.Conn.Cmd",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1344,9 +1322,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "textproto.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1364,9 +1340,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "textproto.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1386,9 +1360,7 @@
                       "identifier": "Writer.PrintfLine",
                       "newPage": false,
                       "searchKey": "textproto.Writer.PrintfLine",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1408,9 +1380,7 @@
                       "identifier": "Writer.DotWriter",
                       "newPage": false,
                       "searchKey": "textproto.Writer.DotWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1430,7 +1400,9 @@
                       "identifier": "Writer.closeDot",
                       "newPage": false,
                       "searchKey": "textproto.Writer.closeDot",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1453,7 +1425,9 @@
                 "identifier": "dotWriter",
                 "newPage": false,
                 "searchKey": "textproto.dotWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1471,7 +1445,9 @@
                       "identifier": "dotWriter.Write",
                       "newPage": false,
                       "searchKey": "textproto.dotWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1491,7 +1467,9 @@
                       "identifier": "dotWriter.Close",
                       "newPage": false,
                       "searchKey": "textproto.dotWriter.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1514,7 +1492,9 @@
                 "identifier": "canonicalHeaderKeyTest",
                 "newPage": false,
                 "searchKey": "textproto.canonicalHeaderKeyTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1534,7 +1514,9 @@
                 "identifier": "readResponseTest",
                 "newPage": false,
                 "searchKey": "textproto.readResponseTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1557,9 +1539,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1577,7 +1557,9 @@
                 "identifier": "trim",
                 "newPage": false,
                 "searchKey": "textproto.trim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1597,7 +1579,9 @@
                 "identifier": "parseCodeLine",
                 "newPage": false,
                 "searchKey": "textproto.parseCodeLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1617,7 +1601,9 @@
                 "identifier": "noValidation",
                 "newPage": false,
                 "searchKey": "textproto.noValidation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1637,7 +1623,9 @@
                 "identifier": "mustHaveFieldNameColon",
                 "newPage": false,
                 "searchKey": "textproto.mustHaveFieldNameColon",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1657,9 +1645,7 @@
                 "identifier": "CanonicalMIMEHeaderKey",
                 "newPage": false,
                 "searchKey": "textproto.CanonicalMIMEHeaderKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1679,7 +1665,9 @@
                 "identifier": "validHeaderFieldByte",
                 "newPage": false,
                 "searchKey": "textproto.validHeaderFieldByte",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1699,7 +1687,9 @@
                 "identifier": "canonicalMIMEHeaderKey",
                 "newPage": false,
                 "searchKey": "textproto.canonicalMIMEHeaderKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1719,7 +1709,9 @@
                 "identifier": "initCommonHeader",
                 "newPage": false,
                 "searchKey": "textproto.initCommonHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1739,9 +1731,7 @@
                 "identifier": "TrimString",
                 "newPage": false,
                 "searchKey": "textproto.TrimString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1761,9 +1751,7 @@
                 "identifier": "TrimBytes",
                 "newPage": false,
                 "searchKey": "textproto.TrimBytes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1783,7 +1771,9 @@
                 "identifier": "isASCIISpace",
                 "newPage": false,
                 "searchKey": "textproto.isASCIISpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1803,7 +1793,9 @@
                 "identifier": "isASCIILetter",
                 "newPage": false,
                 "searchKey": "textproto.isASCIILetter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1823,7 +1815,9 @@
                 "identifier": "TestCanonicalMIMEHeaderKey",
                 "newPage": false,
                 "searchKey": "textproto.TestCanonicalMIMEHeaderKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1843,7 +1837,9 @@
                 "identifier": "TestMIMEHeaderMultipleValues",
                 "newPage": false,
                 "searchKey": "textproto.TestMIMEHeaderMultipleValues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1863,7 +1859,9 @@
                 "identifier": "TestReadLine",
                 "newPage": false,
                 "searchKey": "textproto.TestReadLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1883,7 +1881,9 @@
                 "identifier": "TestReadContinuedLine",
                 "newPage": false,
                 "searchKey": "textproto.TestReadContinuedLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1903,7 +1903,9 @@
                 "identifier": "TestReadCodeLine",
                 "newPage": false,
                 "searchKey": "textproto.TestReadCodeLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1923,7 +1925,9 @@
                 "identifier": "TestReadDotLines",
                 "newPage": false,
                 "searchKey": "textproto.TestReadDotLines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1943,7 +1947,9 @@
                 "identifier": "TestReadDotBytes",
                 "newPage": false,
                 "searchKey": "textproto.TestReadDotBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1963,7 +1969,9 @@
                 "identifier": "TestReadMIMEHeader",
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1983,7 +1991,9 @@
                 "identifier": "TestReadMIMEHeaderSingle",
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeaderSingle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2003,7 +2013,9 @@
                 "identifier": "TestReadMIMEHeaderNoKey",
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeaderNoKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2023,7 +2035,9 @@
                 "identifier": "TestLargeReadMIMEHeader",
                 "newPage": false,
                 "searchKey": "textproto.TestLargeReadMIMEHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2043,7 +2057,9 @@
                 "identifier": "TestReadMIMEHeaderNonCompliant",
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeaderNonCompliant",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2063,7 +2079,9 @@
                 "identifier": "TestReadMIMEHeaderMalformed",
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeaderMalformed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2083,7 +2101,9 @@
                 "identifier": "TestReadMIMEHeaderTrimContinued",
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeaderTrimContinued",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2103,7 +2123,9 @@
                 "identifier": "TestRFC959Lines",
                 "newPage": false,
                 "searchKey": "textproto.TestRFC959Lines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2123,7 +2145,9 @@
                 "identifier": "TestReadMultiLineError",
                 "newPage": false,
                 "searchKey": "textproto.TestReadMultiLineError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2143,7 +2167,9 @@
                 "identifier": "TestCommonHeaders",
                 "newPage": false,
                 "searchKey": "textproto.TestCommonHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2163,7 +2189,9 @@
                 "identifier": "BenchmarkReadMIMEHeader",
                 "newPage": false,
                 "searchKey": "textproto.BenchmarkReadMIMEHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2183,7 +2211,9 @@
                 "identifier": "BenchmarkUncommon",
                 "newPage": false,
                 "searchKey": "textproto.BenchmarkUncommon",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2203,7 +2233,9 @@
                 "identifier": "TestPrintfLine",
                 "newPage": false,
                 "searchKey": "textproto.TestPrintfLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2223,7 +2255,9 @@
                 "identifier": "TestDotWriter",
                 "newPage": false,
                 "searchKey": "textproto.TestDotWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2243,7 +2277,9 @@
                 "identifier": "TestDotWriterCloseEmptyWrite",
                 "newPage": false,
                 "searchKey": "textproto.TestDotWriterCloseEmptyWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2263,7 +2299,9 @@
                 "identifier": "TestDotWriterCloseNoWrite",
                 "newPage": false,
                 "searchKey": "textproto.TestDotWriterCloseNoWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

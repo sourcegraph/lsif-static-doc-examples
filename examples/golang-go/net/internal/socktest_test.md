@@ -16,10 +16,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="sw" href="#sw">var sw</a>
 
 ```
 searchKey: socktest_test.sw
+tags: [private]
 ```
 
 ```Go
@@ -30,6 +35,7 @@ var sw socktest.Switch
 
 ```
 searchKey: socktest_test.socketFunc
+tags: [private]
 ```
 
 ```Go
@@ -40,6 +46,7 @@ var socketFunc func(int, int, int) (int, error)
 
 ```
 searchKey: socktest_test.closeFunc
+tags: [private]
 ```
 
 ```Go
@@ -48,10 +55,15 @@ var closeFunc func(int) error
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestMain" href="#TestMain">func TestMain(m *testing.M)</a>
 
 ```
 searchKey: socktest_test.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -62,6 +74,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: socktest_test.TestSwitch
+tags: [private]
 ```
 
 ```Go
@@ -72,6 +85,7 @@ func TestSwitch(t *testing.T)
 
 ```
 searchKey: socktest_test.TestSocket
+tags: [private]
 ```
 
 ```Go
@@ -82,6 +96,7 @@ func TestSocket(t *testing.T)
 
 ```
 searchKey: socktest_test.installTestHooks
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +107,7 @@ func installTestHooks()
 
 ```
 searchKey: socktest_test.uninstallTestHooks
+tags: [private]
 ```
 
 ```Go

@@ -17,8 +17,6 @@
         * [func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)](#fetchMeta)
         * [func parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)](#parseMeta)
     * [type sourceMeta struct](#sourceMeta)
-        * [func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)](#fetchMeta)
-        * [func parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)](#parseMeta)
     * [type testTransport map[string]string](#testTransport)
         * [func (t testTransport) RoundTrip(req *http.Request) (*http.Response, error)](#testTransport.RoundTrip)
 * [Functions](#func)
@@ -29,11 +27,14 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="RuntimeVersion" href="#RuntimeVersion">var RuntimeVersion</a>
 
 ```
 searchKey: gosrc.RuntimeVersion
-tags: [exported]
 ```
 
 ```Go
@@ -46,6 +47,7 @@ RuntimeVersion is the version of go stdlib to use. We allow it to be different t
 
 ```
 searchKey: gosrc.errNoMatch
+tags: [private]
 ```
 
 ```Go
@@ -56,6 +58,7 @@ var errNoMatch = errors.New("no match")
 
 ```
 searchKey: gosrc.gopkgSrcTemplate
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +71,7 @@ gopkgSrcTemplate matches the go-source dir templates specified by the popular go
 
 ```
 searchKey: gosrc.stdlibInternalPackagePrefixes
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +84,7 @@ find path/to/golang/source -name internal | awk -F '/' '{ print "\"" $2 "/\"," }
 
 ```
 searchKey: gosrc.stdlibPackagePaths
+tags: [private]
 ```
 
 ```Go
@@ -90,11 +95,14 @@ go list std | awk '{ print "\"" $1 "\": struct{}{}," }'
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Directory" href="#Directory">type Directory struct</a>
 
 ```
 searchKey: gosrc.Directory
-tags: [exported]
 ```
 
 ```Go
@@ -112,7 +120,6 @@ type Directory struct {
 
 ```
 searchKey: gosrc.ResolveImportPath
-tags: [exported]
 ```
 
 ```Go
@@ -123,6 +130,7 @@ func ResolveImportPath(client httpcli.Doer, importPath string) (*Directory, erro
 
 ```
 searchKey: gosrc.resolveStaticImportPath
+tags: [private]
 ```
 
 ```Go
@@ -133,6 +141,7 @@ func resolveStaticImportPath(importPath string) (*Directory, error)
 
 ```
 searchKey: gosrc.resolveDynamicImportPath
+tags: [private]
 ```
 
 ```Go
@@ -143,6 +152,7 @@ func resolveDynamicImportPath(client httpcli.Doer, importPath string) (*Director
 
 ```
 searchKey: gosrc.importMeta
+tags: [private]
 ```
 
 ```Go
@@ -161,6 +171,7 @@ See [https://golang.org/cmd/go/#hdr-Remote_import_paths](https://golang.org/cmd/
 
 ```
 searchKey: gosrc.fetchMeta
+tags: [private]
 ```
 
 ```Go
@@ -171,6 +182,7 @@ func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *impor
 
 ```
 searchKey: gosrc.parseMeta
+tags: [private]
 ```
 
 ```Go
@@ -181,6 +193,7 @@ func parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sour
 
 ```
 searchKey: gosrc.sourceMeta
+tags: [private]
 ```
 
 ```Go
@@ -194,30 +207,11 @@ type sourceMeta struct {
 
 sourceMeta represents the values in a go-source meta tag. 
 
-#### <a id="fetchMeta" href="#fetchMeta">func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)</a>
-
-```
-searchKey: gosrc.fetchMeta
-```
-
-```Go
-func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)
-```
-
-#### <a id="parseMeta" href="#parseMeta">func parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)</a>
-
-```
-searchKey: gosrc.parseMeta
-```
-
-```Go
-func parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)
-```
-
 ### <a id="testTransport" href="#testTransport">type testTransport map[string]string</a>
 
 ```
 searchKey: gosrc.testTransport
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +222,7 @@ type testTransport map[string]string
 
 ```
 searchKey: gosrc.testTransport.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -236,10 +231,15 @@ func (t testTransport) RoundTrip(req *http.Request) (*http.Response, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="attrValue" href="#attrValue">func attrValue(attrs []xml.Attr, name string) string</a>
 
 ```
 searchKey: gosrc.attrValue
+tags: [private]
 ```
 
 ```Go
@@ -250,7 +250,6 @@ func attrValue(attrs []xml.Attr, name string) string
 
 ```
 searchKey: gosrc.IsStdlibPkg
-tags: [exported]
 ```
 
 ```Go
@@ -263,6 +262,7 @@ IsStdlibPkg returns true if the package path is part of the stdlib. This uses a 
 
 ```
 searchKey: gosrc.TestResolveImportPath
+tags: [private]
 ```
 
 ```Go

@@ -64,14 +64,11 @@ Package shared provides the entrypoint to Sourcegraph's single docker image. It 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="prometheusProcLine" href="#prometheusProcLine">const prometheusProcLine</a>
 
 ```
 searchKey: shared.prometheusProcLine
+tags: [private]
 ```
 
 ```Go
@@ -82,6 +79,7 @@ const prometheusProcLine = ...
 
 ```
 searchKey: shared.grafanaProcLine
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +90,7 @@ const grafanaProcLine = ...
 
 ```
 searchKey: shared.jaegerProcLine
+tags: [private]
 ```
 
 ```Go
@@ -102,7 +101,6 @@ const jaegerProcLine = ...
 
 ```
 searchKey: shared.FrontendInternalHost
-tags: [exported]
 ```
 
 ```Go
@@ -113,15 +111,10 @@ FrontendInternalHost is the value of SRC_FRONTEND_INTERNAL.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="SrcProfServices" href="#SrcProfServices">var SrcProfServices</a>
 
 ```
 searchKey: shared.SrcProfServices
-tags: [exported]
 ```
 
 ```Go
@@ -138,7 +131,6 @@ This should be kept in sync with dev/src-prof-services.json.
 
 ```
 searchKey: shared.ProcfileAdditions
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +145,6 @@ If it is modified by an external package, it must be modified immediately on sta
 
 ```
 searchKey: shared.DataDir
-tags: [exported]
 ```
 
 ```Go
@@ -166,6 +157,7 @@ DataDir is the root directory for storing persistent data. It should NOT be modi
 
 ```
 searchKey: shared.databases
+tags: [private]
 ```
 
 ```Go
@@ -176,6 +168,7 @@ var databases = ...
 
 ```
 searchKey: shared.logLevelConverter
+tags: [private]
 ```
 
 ```Go
@@ -186,6 +179,7 @@ var logLevelConverter = ...
 
 ```
 searchKey: shared.redisStoreConfTmpl
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +190,7 @@ var redisStoreConfTmpl = ...
 
 ```
 searchKey: shared.redisCacheConfTmpl
+tags: [private]
 ```
 
 ```Go
@@ -206,7 +201,6 @@ var redisCacheConfTmpl = ...
 
 ```
 searchKey: shared.DefaultEnv
-tags: [exported]
 ```
 
 ```Go
@@ -221,6 +215,7 @@ If it is modified by an external package, it must be modified immediately on sta
 
 ```
 searchKey: shared.verbose
+tags: [private]
 ```
 
 ```Go
@@ -231,14 +226,11 @@ Set verbosity based on simple interpretation of env var to avoid external depend
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="execer" href="#execer">type execer struct</a>
 
 ```
 searchKey: shared.execer
+tags: [private]
 ```
 
 ```Go
@@ -258,6 +250,7 @@ execer wraps exec.Command, but acts like "set -x". If a command fails, all futur
 
 ```
 searchKey: shared.execer.Command
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +263,7 @@ Command creates an exec.Command connected to stdout/stderr and runs it.
 
 ```
 searchKey: shared.execer.Run
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +274,7 @@ func (e *execer) Run(cmd *exec.Cmd)
 
 ```
 searchKey: shared.execer.CommandWithFilter
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +287,7 @@ CommandWithFilter is like Command but will not set an error on the command objec
 
 ```
 searchKey: shared.execer.RunWithFilter
+tags: [private]
 ```
 
 ```Go
@@ -304,6 +300,7 @@ RunWithFilter is like Run but will not set an error on the command object if the
 
 ```
 searchKey: shared.execer.Error
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +313,7 @@ Error returns the first error encountered.
 
 ```
 searchKey: shared.errorFilter
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +324,7 @@ type errorFilter func(err error, out string) bool
 
 ```
 searchKey: shared.redisProcfileConfig
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +341,7 @@ type redisProcfileConfig struct {
 
 ```
 searchKey: shared.yesReader
+tags: [private]
 ```
 
 ```Go
@@ -359,6 +359,7 @@ It is equivalent to bytes.NewReader(bytes.Repeat(Expletive, infinity))
 
 ```
 searchKey: shared.yesReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -367,15 +368,10 @@ func (r *yesReader) Read(p []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="SetDefaultEnv" href="#SetDefaultEnv">func SetDefaultEnv(k, v string) string</a>
 
 ```
 searchKey: shared.SetDefaultEnv
-tags: [exported]
 ```
 
 ```Go
@@ -388,6 +384,7 @@ SetDefaultEnv will set the environment variable if it is not set.
 
 ```
 searchKey: shared.copyConfigs
+tags: [private]
 ```
 
 ```Go
@@ -400,6 +397,7 @@ copyConfigs will copy /etc/sourcegraph/{netrc,gitconfig} to locations read by ot
 
 ```
 searchKey: shared.copySSH
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +410,7 @@ copySSH will copy the files at /etc/sourcegraph/ssh and put them into ~/.ssh
 
 ```
 searchKey: shared.defaultErrorFilter
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +421,7 @@ func defaultErrorFilter(err error, out string) bool
 
 ```
 searchKey: shared.maybeMinio
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +432,7 @@ func maybeMinio() []string
 
 ```
 searchKey: shared.maybeMonitoring
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +443,7 @@ func maybeMonitoring() ([]string, error)
 
 ```
 searchKey: shared.nginxProcFile
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +456,7 @@ nginxProcFile will return a procfile entry for nginx, as well as setup configura
 
 ```
 searchKey: shared.nginxWriteFiles
+tags: [private]
 ```
 
 ```Go
@@ -466,6 +469,7 @@ nginxWriteFiles writes the nginx related configuration files to configDir. It re
 
 ```
 searchKey: shared.maybePostgresProcFile
+tags: [private]
 ```
 
 ```Go
@@ -476,6 +480,7 @@ func maybePostgresProcFile() (string, error)
 
 ```
 searchKey: shared.postgresProcfile
+tags: [private]
 ```
 
 ```Go
@@ -486,6 +491,7 @@ func postgresProcfile() (string, error)
 
 ```
 searchKey: shared.fileExists
+tags: [private]
 ```
 
 ```Go
@@ -496,6 +502,7 @@ func fileExists(path string) (bool, error)
 
 ```
 searchKey: shared.isPostgresConfigured
+tags: [private]
 ```
 
 ```Go
@@ -506,6 +513,7 @@ func isPostgresConfigured(prefix string) bool
 
 ```
 searchKey: shared.pgPrintf
+tags: [private]
 ```
 
 ```Go
@@ -516,6 +524,7 @@ func pgPrintf(format string, args ...interface{})
 
 ```
 searchKey: shared.convertLogLevel
+tags: [private]
 ```
 
 ```Go
@@ -528,6 +537,7 @@ convertLogLevel converts a sourcegraph log level (dbug, info, warn, error, crit)
 
 ```
 searchKey: shared.maybeRedisStoreProcFile
+tags: [private]
 ```
 
 ```Go
@@ -538,6 +548,7 @@ func maybeRedisStoreProcFile() (string, error)
 
 ```
 searchKey: shared.maybeRedisCacheProcFile
+tags: [private]
 ```
 
 ```Go
@@ -548,6 +559,7 @@ func maybeRedisCacheProcFile() (string, error)
 
 ```
 searchKey: shared.maybeRedisProcFile
+tags: [private]
 ```
 
 ```Go
@@ -558,6 +570,7 @@ func maybeRedisProcFile(c redisProcfileConfig) (string, error)
 
 ```
 searchKey: shared.tryCreateRedisConf
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +581,7 @@ func tryCreateRedisConf(c redisProcfileConfig) (string, error)
 
 ```
 searchKey: shared.redisProcFileEntry
+tags: [private]
 ```
 
 ```Go
@@ -578,6 +592,7 @@ func redisProcFileEntry(name, conf string) string
 
 ```
 searchKey: shared.redisFixAOF
+tags: [private]
 ```
 
 ```Go
@@ -590,7 +605,6 @@ redisFixAOF does a best-effort repair of the AOF file in case it is corrupted [h
 
 ```
 searchKey: shared.Main
-tags: [exported]
 ```
 
 ```Go
@@ -603,6 +617,7 @@ Main is the main server command function which is shared between Sourcegraph ser
 
 ```
 searchKey: shared.maybeZoektProcFile
+tags: [private]
 ```
 
 ```Go
@@ -613,6 +628,7 @@ func maybeZoektProcFile() []string
 
 ```
 searchKey: shared.TestNginx
+tags: [private]
 ```
 
 ```Go
@@ -623,6 +639,7 @@ func TestNginx(t *testing.T)
 
 ```
 searchKey: shared.TestRedisFixAOF
+tags: [private]
 ```
 
 ```Go
@@ -633,6 +650,7 @@ func TestRedisFixAOF(t *testing.T)
 
 ```
 searchKey: shared.redisCmd
+tags: [private]
 ```
 
 ```Go
@@ -643,6 +661,7 @@ func redisCmd(out io.Writer, parts ...string)
 
 ```
 searchKey: shared.TestYesReader
+tags: [private]
 ```
 
 ```Go
@@ -653,6 +672,7 @@ func TestYesReader(t *testing.T)
 
 ```
 searchKey: shared.TestMain
+tags: [private]
 ```
 
 ```Go

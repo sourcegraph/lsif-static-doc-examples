@@ -110,10 +110,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="pipeTests" href="#pipeTests">var pipeTests</a>
 
 ```
 searchKey: io_test.pipeTests
+tags: [private]
 ```
 
 ```Go
@@ -122,10 +127,15 @@ var pipeTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Buffer" href="#Buffer">type Buffer struct</a>
 
 ```
 searchKey: io_test.Buffer
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +152,7 @@ A version of bytes.Buffer without ReadFrom and WriteTo
 
 ```
 searchKey: io_test.writeToChecker
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +168,7 @@ Version of bytes.Buffer that checks whether WriteTo was called or not
 
 ```
 searchKey: io_test.writeToChecker.WriteTo
+tags: [private]
 ```
 
 ```Go
@@ -167,6 +179,7 @@ func (wt *writeToChecker) WriteTo(w Writer) (int64, error)
 
 ```
 searchKey: io_test.zeroErrReader
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +192,7 @@ type zeroErrReader struct {
 
 ```
 searchKey: io_test.zeroErrReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +203,7 @@ func (r zeroErrReader) Read(p []byte) (int, error)
 
 ```
 searchKey: io_test.errWriter
+tags: [private]
 ```
 
 ```Go
@@ -201,6 +216,7 @@ type errWriter struct {
 
 ```
 searchKey: io_test.errWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -211,6 +227,7 @@ func (w errWriter) Write([]byte) (int, error)
 
 ```
 searchKey: io_test.noReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +240,7 @@ type noReadFrom struct {
 
 ```
 searchKey: io_test.noReadFrom.Write
+tags: [private]
 ```
 
 ```Go
@@ -233,6 +251,7 @@ func (w *noReadFrom) Write(p []byte) (n int, err error)
 
 ```
 searchKey: io_test.wantedAndErrReader
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +262,7 @@ type wantedAndErrReader struct{}
 
 ```
 searchKey: io_test.wantedAndErrReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +273,7 @@ func (wantedAndErrReader) Read(p []byte) (int, error)
 
 ```
 searchKey: io_test.dataAndErrorBuffer
+tags: [private]
 ```
 
 ```Go
@@ -268,6 +289,7 @@ A version of bytes.Buffer that returns n > 0, err on Read when the input is exha
 
 ```
 searchKey: io_test.dataAndErrorBuffer.Read
+tags: [private]
 ```
 
 ```Go
@@ -278,6 +300,7 @@ func (r *dataAndErrorBuffer) Read(p []byte) (n int, err error)
 
 ```
 searchKey: io_test.largeWriter
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +315,7 @@ largeWriter returns an invalid count that is larger than the number of bytes pro
 
 ```
 searchKey: io_test.largeWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -302,6 +326,7 @@ func (w largeWriter) Write(p []byte) (int, error)
 
 ```
 searchKey: io_test.writeStringChecker
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +337,7 @@ type writeStringChecker struct{ called bool }
 
 ```
 searchKey: io_test.writeStringChecker.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +348,7 @@ func (c *writeStringChecker) WriteString(s string) (n int, err error)
 
 ```
 searchKey: io_test.writeStringChecker.Write
+tags: [private]
 ```
 
 ```Go
@@ -332,6 +359,7 @@ func (c *writeStringChecker) Write(p []byte) (n int, err error)
 
 ```
 searchKey: io_test.writerFunc
+tags: [private]
 ```
 
 ```Go
@@ -344,6 +372,7 @@ writerFunc is an Writer implemented by the underlying func.
 
 ```
 searchKey: io_test.writerFunc.Write
+tags: [private]
 ```
 
 ```Go
@@ -354,6 +383,7 @@ func (f writerFunc) Write(p []byte) (int, error)
 
 ```
 searchKey: io_test.readerFunc
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +396,7 @@ readerFunc is an Reader implemented by the underlying func.
 
 ```
 searchKey: io_test.readerFunc.Read
+tags: [private]
 ```
 
 ```Go
@@ -376,6 +407,7 @@ func (f readerFunc) Read(p []byte) (int, error)
 
 ```
 searchKey: io_test.byteAndEOFReader
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +420,7 @@ byteAndEOFReader is a Reader which reads one byte (the underlying byte) and EOF 
 
 ```
 searchKey: io_test.byteAndEOFReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -398,6 +431,7 @@ func (b byteAndEOFReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: io_test.pipeReturn
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +445,7 @@ type pipeReturn struct {
 
 ```
 searchKey: io_test.closer
+tags: [private]
 ```
 
 ```Go
@@ -424,6 +459,7 @@ type closer interface {
 
 ```
 searchKey: io_test.pipeTest
+tags: [private]
 ```
 
 ```Go
@@ -438,6 +474,7 @@ type pipeTest struct {
 
 ```
 searchKey: io_test.pipeTest.String
+tags: [private]
 ```
 
 ```Go
@@ -446,10 +483,15 @@ func (p pipeTest) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleCopy" href="#ExampleCopy">func ExampleCopy()</a>
 
 ```
 searchKey: io_test.ExampleCopy
+tags: [private]
 ```
 
 ```Go
@@ -460,6 +502,7 @@ func ExampleCopy()
 
 ```
 searchKey: io_test.ExampleCopyBuffer
+tags: [private]
 ```
 
 ```Go
@@ -470,6 +513,7 @@ func ExampleCopyBuffer()
 
 ```
 searchKey: io_test.ExampleCopyN
+tags: [private]
 ```
 
 ```Go
@@ -480,6 +524,7 @@ func ExampleCopyN()
 
 ```
 searchKey: io_test.ExampleReadAtLeast
+tags: [private]
 ```
 
 ```Go
@@ -490,6 +535,7 @@ func ExampleReadAtLeast()
 
 ```
 searchKey: io_test.ExampleReadFull
+tags: [private]
 ```
 
 ```Go
@@ -500,6 +546,7 @@ func ExampleReadFull()
 
 ```
 searchKey: io_test.ExampleWriteString
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +557,7 @@ func ExampleWriteString()
 
 ```
 searchKey: io_test.ExampleLimitReader
+tags: [private]
 ```
 
 ```Go
@@ -520,6 +568,7 @@ func ExampleLimitReader()
 
 ```
 searchKey: io_test.ExampleMultiReader
+tags: [private]
 ```
 
 ```Go
@@ -530,6 +579,7 @@ func ExampleMultiReader()
 
 ```
 searchKey: io_test.ExampleTeeReader
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +590,7 @@ func ExampleTeeReader()
 
 ```
 searchKey: io_test.ExampleSectionReader
+tags: [private]
 ```
 
 ```Go
@@ -550,6 +601,7 @@ func ExampleSectionReader()
 
 ```
 searchKey: io_test.ExampleSectionReader_ReadAt
+tags: [private]
 ```
 
 ```Go
@@ -560,6 +612,7 @@ func ExampleSectionReader_ReadAt()
 
 ```
 searchKey: io_test.ExampleSectionReader_Seek
+tags: [private]
 ```
 
 ```Go
@@ -570,6 +623,7 @@ func ExampleSectionReader_Seek()
 
 ```
 searchKey: io_test.ExampleSeeker_Seek
+tags: [private]
 ```
 
 ```Go
@@ -580,6 +634,7 @@ func ExampleSeeker_Seek()
 
 ```
 searchKey: io_test.ExampleMultiWriter
+tags: [private]
 ```
 
 ```Go
@@ -590,6 +645,7 @@ func ExampleMultiWriter()
 
 ```
 searchKey: io_test.ExamplePipe
+tags: [private]
 ```
 
 ```Go
@@ -600,6 +656,7 @@ func ExamplePipe()
 
 ```
 searchKey: io_test.ExampleReadAll
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +667,7 @@ func ExampleReadAll()
 
 ```
 searchKey: io_test.TestCopy
+tags: [private]
 ```
 
 ```Go
@@ -620,6 +678,7 @@ func TestCopy(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyNegative
+tags: [private]
 ```
 
 ```Go
@@ -630,6 +689,7 @@ func TestCopyNegative(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyBuffer
+tags: [private]
 ```
 
 ```Go
@@ -640,6 +700,7 @@ func TestCopyBuffer(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyBufferNil
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +711,7 @@ func TestCopyBufferNil(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -660,6 +722,7 @@ func TestCopyReadFrom(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyWriteTo
+tags: [private]
 ```
 
 ```Go
@@ -670,6 +733,7 @@ func TestCopyWriteTo(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyPriority
+tags: [private]
 ```
 
 ```Go
@@ -682,6 +746,7 @@ It's preferable to choose WriterTo over ReaderFrom, since a WriterTo can issue o
 
 ```
 searchKey: io_test.TestCopyReadErrWriteErr
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +759,7 @@ In case a Read results in an error with non-zero bytes read, and the subsequent 
 
 ```
 searchKey: io_test.TestCopyN
+tags: [private]
 ```
 
 ```Go
@@ -704,6 +770,7 @@ func TestCopyN(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyNReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -714,6 +781,7 @@ func TestCopyNReadFrom(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyNWriteTo
+tags: [private]
 ```
 
 ```Go
@@ -724,6 +792,7 @@ func TestCopyNWriteTo(t *testing.T)
 
 ```
 searchKey: io_test.BenchmarkCopyNSmall
+tags: [private]
 ```
 
 ```Go
@@ -734,6 +803,7 @@ func BenchmarkCopyNSmall(b *testing.B)
 
 ```
 searchKey: io_test.BenchmarkCopyNLarge
+tags: [private]
 ```
 
 ```Go
@@ -744,6 +814,7 @@ func BenchmarkCopyNLarge(b *testing.B)
 
 ```
 searchKey: io_test.TestCopyNEOF
+tags: [private]
 ```
 
 ```Go
@@ -754,6 +825,7 @@ func TestCopyNEOF(t *testing.T)
 
 ```
 searchKey: io_test.TestReadAtLeast
+tags: [private]
 ```
 
 ```Go
@@ -764,6 +836,7 @@ func TestReadAtLeast(t *testing.T)
 
 ```
 searchKey: io_test.TestReadAtLeastWithDataAndEOF
+tags: [private]
 ```
 
 ```Go
@@ -774,6 +847,7 @@ func TestReadAtLeastWithDataAndEOF(t *testing.T)
 
 ```
 searchKey: io_test.TestReadAtLeastWithDataAndError
+tags: [private]
 ```
 
 ```Go
@@ -784,6 +858,7 @@ func TestReadAtLeastWithDataAndError(t *testing.T)
 
 ```
 searchKey: io_test.testReadAtLeast
+tags: [private]
 ```
 
 ```Go
@@ -794,6 +869,7 @@ func testReadAtLeast(t *testing.T, rb ReadWriter)
 
 ```
 searchKey: io_test.TestTeeReader
+tags: [private]
 ```
 
 ```Go
@@ -804,6 +880,7 @@ func TestTeeReader(t *testing.T)
 
 ```
 searchKey: io_test.TestSectionReader_ReadAt
+tags: [private]
 ```
 
 ```Go
@@ -814,6 +891,7 @@ func TestSectionReader_ReadAt(t *testing.T)
 
 ```
 searchKey: io_test.TestSectionReader_Seek
+tags: [private]
 ```
 
 ```Go
@@ -824,6 +902,7 @@ func TestSectionReader_Seek(t *testing.T)
 
 ```
 searchKey: io_test.TestSectionReader_Size
+tags: [private]
 ```
 
 ```Go
@@ -834,6 +913,7 @@ func TestSectionReader_Size(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyLargeWriter
+tags: [private]
 ```
 
 ```Go
@@ -844,6 +924,7 @@ func TestCopyLargeWriter(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiReader
+tags: [private]
 ```
 
 ```Go
@@ -854,6 +935,7 @@ func TestMultiReader(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiWriter
+tags: [private]
 ```
 
 ```Go
@@ -864,6 +946,7 @@ func TestMultiWriter(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiWriter_String
+tags: [private]
 ```
 
 ```Go
@@ -874,6 +957,7 @@ func TestMultiWriter_String(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiWriter_WriteStringSingleAlloc
+tags: [private]
 ```
 
 ```Go
@@ -886,6 +970,7 @@ Test that a multiWriter.WriteString calls results in at most 1 allocation, even 
 
 ```
 searchKey: io_test.TestMultiWriter_StringCheckCall
+tags: [private]
 ```
 
 ```Go
@@ -896,6 +981,7 @@ func TestMultiWriter_StringCheckCall(t *testing.T)
 
 ```
 searchKey: io_test.testMultiWriter
+tags: [private]
 ```
 
 ```Go
@@ -909,6 +995,7 @@ func testMultiWriter(t *testing.T, sink interface {
 
 ```
 searchKey: io_test.TestMultiWriterSingleChainFlatten
+tags: [private]
 ```
 
 ```Go
@@ -921,6 +1008,7 @@ Test that MultiWriter properly flattens chained multiWriters.
 
 ```
 searchKey: io_test.TestMultiWriterError
+tags: [private]
 ```
 
 ```Go
@@ -931,6 +1019,7 @@ func TestMultiWriterError(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiReaderCopy
+tags: [private]
 ```
 
 ```Go
@@ -943,6 +1032,7 @@ Test that MultiReader copies the input slice and is insulated from future modifi
 
 ```
 searchKey: io_test.TestMultiWriterCopy
+tags: [private]
 ```
 
 ```Go
@@ -955,6 +1045,7 @@ Test that MultiWriter copies the input slice and is insulated from future modifi
 
 ```
 searchKey: io_test.callDepth
+tags: [private]
 ```
 
 ```Go
@@ -967,6 +1058,7 @@ callDepth returns the logical call depth for the given PCs.
 
 ```
 searchKey: io_test.TestMultiReaderFlatten
+tags: [private]
 ```
 
 ```Go
@@ -979,6 +1071,7 @@ Test that MultiReader properly flattens chained multiReaders when Read is called
 
 ```
 searchKey: io_test.TestMultiReaderSingleByteWithEOF
+tags: [private]
 ```
 
 ```Go
@@ -991,6 +1084,7 @@ This used to yield bytes forever; issue 16795.
 
 ```
 searchKey: io_test.TestMultiReaderFinalEOF
+tags: [private]
 ```
 
 ```Go
@@ -1003,6 +1097,7 @@ Test that a reader returning (n, EOF) at the end of a MultiReader chain continue
 
 ```
 searchKey: io_test.TestMultiReaderFreesExhaustedReaders
+tags: [private]
 ```
 
 ```Go
@@ -1013,6 +1108,7 @@ func TestMultiReaderFreesExhaustedReaders(t *testing.T)
 
 ```
 searchKey: io_test.TestInterleavedMultiReader
+tags: [private]
 ```
 
 ```Go
@@ -1023,6 +1119,7 @@ func TestInterleavedMultiReader(t *testing.T)
 
 ```
 searchKey: io_test.checkWrite
+tags: [private]
 ```
 
 ```Go
@@ -1033,6 +1130,7 @@ func checkWrite(t *testing.T, w Writer, data []byte, c chan int)
 
 ```
 searchKey: io_test.TestPipe1
+tags: [private]
 ```
 
 ```Go
@@ -1045,6 +1143,7 @@ Test a single read/write pair.
 
 ```
 searchKey: io_test.reader
+tags: [private]
 ```
 
 ```Go
@@ -1055,6 +1154,7 @@ func reader(t *testing.T, r Reader, c chan int)
 
 ```
 searchKey: io_test.TestPipe2
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1167,7 @@ Test a sequence of read/write pairs.
 
 ```
 searchKey: io_test.writer
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1180,7 @@ Test a large write that requires multiple reads to satisfy.
 
 ```
 searchKey: io_test.TestPipe3
+tags: [private]
 ```
 
 ```Go
@@ -1089,6 +1191,7 @@ func TestPipe3(t *testing.T)
 
 ```
 searchKey: io_test.delayClose
+tags: [private]
 ```
 
 ```Go
@@ -1099,6 +1202,7 @@ func delayClose(t *testing.T, cl closer, ch chan int, tt pipeTest)
 
 ```
 searchKey: io_test.TestPipeReadClose
+tags: [private]
 ```
 
 ```Go
@@ -1109,6 +1213,7 @@ func TestPipeReadClose(t *testing.T)
 
 ```
 searchKey: io_test.TestPipeReadClose2
+tags: [private]
 ```
 
 ```Go
@@ -1121,6 +1226,7 @@ Test close on Read side during Read.
 
 ```
 searchKey: io_test.TestPipeWriteClose
+tags: [private]
 ```
 
 ```Go
@@ -1131,6 +1237,7 @@ func TestPipeWriteClose(t *testing.T)
 
 ```
 searchKey: io_test.TestPipeWriteClose2
+tags: [private]
 ```
 
 ```Go
@@ -1143,6 +1250,7 @@ Test close on Write side during Write.
 
 ```
 searchKey: io_test.TestWriteEmpty
+tags: [private]
 ```
 
 ```Go
@@ -1153,6 +1261,7 @@ func TestWriteEmpty(t *testing.T)
 
 ```
 searchKey: io_test.TestWriteNil
+tags: [private]
 ```
 
 ```Go
@@ -1163,6 +1272,7 @@ func TestWriteNil(t *testing.T)
 
 ```
 searchKey: io_test.TestWriteAfterWriterClose
+tags: [private]
 ```
 
 ```Go
@@ -1173,6 +1283,7 @@ func TestWriteAfterWriterClose(t *testing.T)
 
 ```
 searchKey: io_test.TestPipeCloseError
+tags: [private]
 ```
 
 ```Go
@@ -1183,6 +1294,7 @@ func TestPipeCloseError(t *testing.T)
 
 ```
 searchKey: io_test.TestPipeConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -1193,6 +1305,7 @@ func TestPipeConcurrent(t *testing.T)
 
 ```
 searchKey: io_test.sortBytesInGroups
+tags: [private]
 ```
 
 ```Go

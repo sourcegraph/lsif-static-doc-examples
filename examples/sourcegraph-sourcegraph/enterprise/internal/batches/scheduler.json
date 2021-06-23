@@ -4,7 +4,9 @@
     "identifier": "scheduler",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/scheduler",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Scheduler",
                 "newPage": false,
                 "searchKey": "scheduler.Scheduler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "NewScheduler",
                       "newPage": false,
                       "searchKey": "scheduler.NewScheduler",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "Scheduler.Start",
                       "newPage": false,
                       "searchKey": "scheduler.Scheduler.Start",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "Scheduler.Stop",
                       "newPage": false,
                       "searchKey": "scheduler.Scheduler.Stop",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,7 +122,9 @@
                       "identifier": "Scheduler.enqueueChangeset",
                       "newPage": false,
                       "searchKey": "scheduler.Scheduler.enqueueChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -149,7 +147,9 @@
                 "identifier": "backoff",
                 "newPage": false,
                 "searchKey": "scheduler.backoff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +167,9 @@
                       "identifier": "newBackoff",
                       "newPage": false,
                       "searchKey": "scheduler.newBackoff",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -187,7 +189,9 @@
                       "identifier": "backoff.next",
                       "newPage": false,
                       "searchKey": "scheduler.backoff.next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -207,7 +211,9 @@
                       "identifier": "backoff.reset",
                       "newPage": false,
                       "searchKey": "scheduler.backoff.reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -230,7 +236,9 @@
                 "identifier": "ticker",
                 "newPage": false,
                 "searchKey": "scheduler.ticker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -248,7 +256,9 @@
                       "identifier": "newTicker",
                       "newPage": false,
                       "searchKey": "scheduler.newTicker",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -268,7 +278,9 @@
                       "identifier": "ticker.stop",
                       "newPage": false,
                       "searchKey": "scheduler.ticker.stop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,7 +306,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -312,7 +326,9 @@
                 "identifier": "TestTickerGoBrrr",
                 "newPage": false,
                 "searchKey": "scheduler.TestTickerGoBrrr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -332,7 +348,9 @@
                 "identifier": "TestTickerRateLimited",
                 "newPage": false,
                 "searchKey": "scheduler.TestTickerRateLimited",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -352,7 +370,9 @@
                 "identifier": "TestTickerZero",
                 "newPage": false,
                 "searchKey": "scheduler.TestTickerZero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

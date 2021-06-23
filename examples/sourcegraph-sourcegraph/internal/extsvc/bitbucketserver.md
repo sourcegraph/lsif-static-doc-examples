@@ -173,10 +173,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="defaultRateLimit" href="#defaultRateLimit">const defaultRateLimit</a>
 
 ```
 searchKey: bitbucketserver.defaultRateLimit
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +203,7 @@ These are our default values, they can be changed in configuration
 
 ```
 searchKey: bitbucketserver.defaultRateLimitBurst
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +224,7 @@ These are our default values, they can be changed in configuration
 
 ```
 searchKey: bitbucketserver.userFiltersLimit
+tags: [private]
 ```
 
 ```Go
@@ -230,7 +237,6 @@ userFiltersLimit defines the maximum number of UserFilters that can be passed to
 
 ```
 searchKey: bitbucketserver.PermSysAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -243,7 +249,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.PermAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -256,7 +261,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.PermLicensedUser
-tags: [exported]
 ```
 
 ```Go
@@ -269,7 +273,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.PermProjectCreate
-tags: [exported]
 ```
 
 ```Go
@@ -282,7 +285,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.PermProjectAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -295,7 +297,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.PermProjectWrite
-tags: [exported]
 ```
 
 ```Go
@@ -308,7 +309,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.PermProjectView
-tags: [exported]
 ```
 
 ```Go
@@ -321,7 +321,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.PermProjectRead
-tags: [exported]
 ```
 
 ```Go
@@ -334,7 +333,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.PermRepoAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -347,7 +345,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.PermRepoRead
-tags: [exported]
 ```
 
 ```Go
@@ -360,7 +357,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.PermRepoWrite
-tags: [exported]
 ```
 
 ```Go
@@ -373,7 +369,6 @@ Permission constants.
 
 ```
 searchKey: bitbucketserver.ApprovedActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -386,7 +381,6 @@ Known ActivityActions
 
 ```
 searchKey: bitbucketserver.UnapprovedActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -399,7 +393,6 @@ Known ActivityActions
 
 ```
 searchKey: bitbucketserver.DeclinedActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +405,6 @@ Known ActivityActions
 
 ```
 searchKey: bitbucketserver.ReviewedActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -425,7 +417,6 @@ Known ActivityActions
 
 ```
 searchKey: bitbucketserver.OpenedActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -438,7 +429,6 @@ Known ActivityActions
 
 ```
 searchKey: bitbucketserver.ReopenedActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -451,7 +441,6 @@ Known ActivityActions
 
 ```
 searchKey: bitbucketserver.RescopedActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -464,7 +453,6 @@ Known ActivityActions
 
 ```
 searchKey: bitbucketserver.UpdatedActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -477,7 +465,6 @@ Known ActivityActions
 
 ```
 searchKey: bitbucketserver.CommentedActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -490,7 +477,6 @@ Known ActivityActions
 
 ```
 searchKey: bitbucketserver.MergedActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -503,6 +489,7 @@ Known ActivityActions
 
 ```
 searchKey: bitbucketserver.bitbucketDuplicatePRException
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +500,7 @@ const bitbucketDuplicatePRException = "com.atlassian.bitbucket.pull.DuplicatePul
 
 ```
 searchKey: bitbucketserver.bitbucketNoSuchLabelException
+tags: [private]
 ```
 
 ```Go
@@ -523,6 +511,7 @@ const bitbucketNoSuchLabelException = "com.atlassian.bitbucket.label.NoSuchLabel
 
 ```
 searchKey: bitbucketserver.bitbucketNoSuchPullRequestException
+tags: [private]
 ```
 
 ```Go
@@ -533,6 +522,7 @@ const bitbucketNoSuchPullRequestException = ...
 
 ```
 searchKey: bitbucketserver.eventTypeHeader
+tags: [private]
 ```
 
 ```Go
@@ -541,10 +531,15 @@ const eventTypeHeader = "X-Event-Key"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="requestCounter" href="#requestCounter">var requestCounter</a>
 
 ```
 searchKey: bitbucketserver.requestCounter
+tags: [private]
 ```
 
 ```Go
@@ -555,7 +550,6 @@ var requestCounter = ...
 
 ```
 searchKey: bitbucketserver.ErrUserFiltersLimit
-tags: [exported]
 ```
 
 ```Go
@@ -568,7 +562,6 @@ ErrUserFiltersLimit is returned by Client.Users when the UserFiltersLimit is exc
 
 ```
 searchKey: bitbucketserver.ErrPullRequestNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -581,7 +574,6 @@ ErrPullRequestNotFound is returned by LoadPullRequest when the pull request has 
 
 ```
 searchKey: bitbucketserver.ErrNotMergeable
-tags: [exported]
 ```
 
 ```Go
@@ -594,6 +586,7 @@ ErrNotMergeable is returned by MergePullRequest when the pull request failed to 
 
 ```
 searchKey: bitbucketserver.normalizer
+tags: [private]
 ```
 
 ```Go
@@ -604,6 +597,7 @@ var normalizer = lazyregexp.New("[^A-Za-z0-9-]+")
 
 ```
 searchKey: bitbucketserver.update
+tags: [private]
 ```
 
 ```Go
@@ -612,11 +606,14 @@ var update = flag.Bool("update", false, "update testdata")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SudoableOAuthClient" href="#SudoableOAuthClient">type SudoableOAuthClient struct</a>
 
 ```
 searchKey: bitbucketserver.SudoableOAuthClient
-tags: [exported]
 ```
 
 ```Go
@@ -632,6 +629,7 @@ SudoableOAuthClient extends the generic OAuthClient type to allow for an optiona
 
 ```
 searchKey: bitbucketserver.newSudoableOAuthClient
+tags: [private]
 ```
 
 ```Go
@@ -642,7 +640,6 @@ func newSudoableOAuthClient(token, secret, username string) *SudoableOAuthClient
 
 ```
 searchKey: bitbucketserver.SudoableOAuthClient.Authenticate
-tags: [exported]
 ```
 
 ```Go
@@ -653,7 +650,6 @@ func (c *SudoableOAuthClient) Authenticate(req *http.Request) error
 
 ```
 searchKey: bitbucketserver.SudoableOAuthClient.Hash
-tags: [exported]
 ```
 
 ```Go
@@ -664,7 +660,6 @@ func (c *SudoableOAuthClient) Hash() string
 
 ```
 searchKey: bitbucketserver.Client
-tags: [exported]
 ```
 
 ```Go
@@ -698,7 +693,6 @@ Client access a Bitbucket Server via the REST API.
 
 ```
 searchKey: bitbucketserver.NewClient
-tags: [exported]
 ```
 
 ```Go
@@ -711,6 +705,7 @@ NewClient returns an authenticated Bitbucket Server API client with the provided
 
 ```
 searchKey: bitbucketserver.newClient
+tags: [private]
 ```
 
 ```Go
@@ -721,7 +716,6 @@ func newClient(config *schema.BitbucketServerConnection, httpClient httpcli.Doer
 
 ```
 searchKey: bitbucketserver.NewTestClient
-tags: [exported]
 ```
 
 ```Go
@@ -734,7 +728,6 @@ NewTestClient returns a bitbucketserver.Client that records its interactions to 
 
 ```
 searchKey: bitbucketserver.Client.WithAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -747,7 +740,6 @@ WithAuthenticator returns a new Client that uses the same configuration, HTTPCli
 
 ```
 searchKey: bitbucketserver.Client.SetOAuth
-tags: [exported]
 ```
 
 ```Go
@@ -762,7 +754,6 @@ When using OAuth authentication, it's possible to impersonate any Bitbucket Serv
 
 ```
 searchKey: bitbucketserver.Client.Sudo
-tags: [exported]
 ```
 
 ```Go
@@ -775,7 +766,6 @@ Sudo returns a copy of the Client authenticated as the Bitbucket Server user wit
 
 ```
 searchKey: bitbucketserver.Client.Username
-tags: [exported]
 ```
 
 ```Go
@@ -788,7 +778,6 @@ Username returns the username that will be used when communicating with Bitbucke
 
 ```
 searchKey: bitbucketserver.Client.Users
-tags: [exported]
 ```
 
 ```Go
@@ -801,7 +790,6 @@ Users retrieves a page of users, optionally run through provided filters.
 
 ```
 searchKey: bitbucketserver.Client.UserPermissions
-tags: [exported]
 ```
 
 ```Go
@@ -814,7 +802,6 @@ UserPermissions retrieves the global permissions assigned to the user with the g
 
 ```
 searchKey: bitbucketserver.Client.CreateUser
-tags: [exported]
 ```
 
 ```Go
@@ -827,7 +814,6 @@ CreateUser creates the given User returning an error in case of failure.
 
 ```
 searchKey: bitbucketserver.Client.LoadUser
-tags: [exported]
 ```
 
 ```Go
@@ -840,7 +826,6 @@ LoadUser loads the given User returning an error in case of failure.
 
 ```
 searchKey: bitbucketserver.Client.LoadGroup
-tags: [exported]
 ```
 
 ```Go
@@ -853,7 +838,6 @@ LoadGroup loads the given Group returning an error in case of failure.
 
 ```
 searchKey: bitbucketserver.Client.CreateGroup
-tags: [exported]
 ```
 
 ```Go
@@ -866,7 +850,6 @@ CreateGroup creates the given Group returning an error in case of failure.
 
 ```
 searchKey: bitbucketserver.Client.CreateGroupMembership
-tags: [exported]
 ```
 
 ```Go
@@ -879,7 +862,6 @@ CreateGroupMembership creates the given Group's membership returning an error in
 
 ```
 searchKey: bitbucketserver.Client.CreateUserRepoPermission
-tags: [exported]
 ```
 
 ```Go
@@ -892,7 +874,6 @@ CreateUserRepoPermission creates the given permission returning an error in case
 
 ```
 searchKey: bitbucketserver.Client.CreateUserProjectPermission
-tags: [exported]
 ```
 
 ```Go
@@ -905,7 +886,6 @@ CreateUserProjectPermission creates the given permission returning an error in c
 
 ```
 searchKey: bitbucketserver.Client.CreateGroupProjectPermission
-tags: [exported]
 ```
 
 ```Go
@@ -918,7 +898,6 @@ CreateGroupProjectPermission creates the given permission returning an error in 
 
 ```
 searchKey: bitbucketserver.Client.CreateGroupRepoPermission
-tags: [exported]
 ```
 
 ```Go
@@ -931,6 +910,7 @@ CreateGroupRepoPermission creates the given permission returning an error in cas
 
 ```
 searchKey: bitbucketserver.Client.createPermission
+tags: [private]
 ```
 
 ```Go
@@ -941,7 +921,6 @@ func (c *Client) createPermission(ctx context.Context, path, name string, p Perm
 
 ```
 searchKey: bitbucketserver.Client.CreateRepo
-tags: [exported]
 ```
 
 ```Go
@@ -954,7 +933,6 @@ CreateRepo creates the given Repo returning an error in case of failure.
 
 ```
 searchKey: bitbucketserver.Client.LoadProject
-tags: [exported]
 ```
 
 ```Go
@@ -967,7 +945,6 @@ LoadProject loads the given Project returning an error in case of failure.
 
 ```
 searchKey: bitbucketserver.Client.CreateProject
-tags: [exported]
 ```
 
 ```Go
@@ -980,7 +957,6 @@ CreateProject creates the given Project returning an error in case of failure.
 
 ```
 searchKey: bitbucketserver.Client.LoadPullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -993,7 +969,6 @@ LoadPullRequest loads the given PullRequest returning an error in case of failur
 
 ```
 searchKey: bitbucketserver.Client.UpdatePullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -1004,7 +979,6 @@ func (c *Client) UpdatePullRequest(ctx context.Context, in *UpdatePullRequestInp
 
 ```
 searchKey: bitbucketserver.Client.CreatePullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -1017,7 +991,6 @@ CreatePullRequest creates the given PullRequest returning an error in case of fa
 
 ```
 searchKey: bitbucketserver.Client.FetchDefaultReviewers
-tags: [exported]
 ```
 
 ```Go
@@ -1030,7 +1003,6 @@ FetchDefaultReviewers loads the suggested default reviewers for the given PR.
 
 ```
 searchKey: bitbucketserver.Client.DeclinePullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -1043,7 +1015,6 @@ DeclinePullRequest declines and closes the given PullRequest, returning an error
 
 ```
 searchKey: bitbucketserver.Client.ReopenPullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -1056,7 +1027,6 @@ ReopenPullRequest reopens a previously declined & closed PullRequest, returning 
 
 ```
 searchKey: bitbucketserver.Client.LoadPullRequestActivities
-tags: [exported]
 ```
 
 ```Go
@@ -1069,7 +1039,6 @@ LoadPullRequestActivities loads the given PullRequest's timeline of activities, 
 
 ```
 searchKey: bitbucketserver.Client.LoadPullRequestCommits
-tags: [exported]
 ```
 
 ```Go
@@ -1080,7 +1049,6 @@ func (c *Client) LoadPullRequestCommits(ctx context.Context, pr *PullRequest) (e
 
 ```
 searchKey: bitbucketserver.Client.LoadPullRequestBuildStatuses
-tags: [exported]
 ```
 
 ```Go
@@ -1091,7 +1059,6 @@ func (c *Client) LoadPullRequestBuildStatuses(ctx context.Context, pr *PullReque
 
 ```
 searchKey: bitbucketserver.Client.Repo
-tags: [exported]
 ```
 
 ```Go
@@ -1102,7 +1069,6 @@ func (c *Client) Repo(ctx context.Context, projectKey, repoSlug string) (*Repo, 
 
 ```
 searchKey: bitbucketserver.Client.Repos
-tags: [exported]
 ```
 
 ```Go
@@ -1113,7 +1079,6 @@ func (c *Client) Repos(ctx context.Context, pageToken *PageToken, searchQueries 
 
 ```
 searchKey: bitbucketserver.Client.LabeledRepos
-tags: [exported]
 ```
 
 ```Go
@@ -1124,7 +1089,6 @@ func (c *Client) LabeledRepos(ctx context.Context, pageToken *PageToken, label s
 
 ```
 searchKey: bitbucketserver.Client.RepoIDs
-tags: [exported]
 ```
 
 ```Go
@@ -1137,7 +1101,6 @@ RepoIDs fetches a list of repository IDs that the user token has permission for.
 
 ```
 searchKey: bitbucketserver.Client.RecentRepos
-tags: [exported]
 ```
 
 ```Go
@@ -1148,6 +1111,7 @@ func (c *Client) RecentRepos(ctx context.Context, pageToken *PageToken) ([]*Repo
 
 ```
 searchKey: bitbucketserver.Client.page
+tags: [private]
 ```
 
 ```Go
@@ -1158,6 +1122,7 @@ func (c *Client) page(ctx context.Context, path string, qry url.Values, token *P
 
 ```
 searchKey: bitbucketserver.Client.send
+tags: [private]
 ```
 
 ```Go
@@ -1168,6 +1133,7 @@ func (c *Client) send(ctx context.Context, method, path string, qry url.Values, 
 
 ```
 searchKey: bitbucketserver.Client.do
+tags: [private]
 ```
 
 ```Go
@@ -1178,7 +1144,6 @@ func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) 
 
 ```
 searchKey: bitbucketserver.Client.AuthenticatedUsername
-tags: [exported]
 ```
 
 ```Go
@@ -1191,7 +1156,6 @@ AuthenticatedUsername returns the username associated with the credentials used 
 
 ```
 searchKey: bitbucketserver.Client.CreatePullRequestComment
-tags: [exported]
 ```
 
 ```Go
@@ -1202,7 +1166,6 @@ func (c *Client) CreatePullRequestComment(ctx context.Context, pr *PullRequest, 
 
 ```
 searchKey: bitbucketserver.Client.MergePullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -1213,7 +1176,6 @@ func (c *Client) MergePullRequest(ctx context.Context, pr *PullRequest) error
 
 ```
 searchKey: bitbucketserver.UserFilters
-tags: [exported]
 ```
 
 ```Go
@@ -1226,7 +1188,6 @@ UserFilters is a list of UserFilter that is ANDed together.
 
 ```
 searchKey: bitbucketserver.UserFilters.EncodeTo
-tags: [exported]
 ```
 
 ```Go
@@ -1239,7 +1200,6 @@ EncodeTo encodes the UserFilter to the given url.Values.
 
 ```
 searchKey: bitbucketserver.UserFilter
-tags: [exported]
 ```
 
 ```Go
@@ -1262,7 +1222,6 @@ UserFilter defines a sum type of filters to be used when listing users.
 
 ```
 searchKey: bitbucketserver.UserFilter.EncodeTo
-tags: [exported]
 ```
 
 ```Go
@@ -1275,7 +1234,6 @@ EncodeTo encodes the UserFilter to the given url.Values.
 
 ```
 searchKey: bitbucketserver.PermissionFilter
-tags: [exported]
 ```
 
 ```Go
@@ -1296,7 +1254,6 @@ A PermissionFilter is a filter used to list users that have specific permissions
 
 ```
 searchKey: bitbucketserver.PermissionFilter.EncodeTo
-tags: [exported]
 ```
 
 ```Go
@@ -1309,7 +1266,6 @@ EncodeTo encodes the PermissionFilter to the given url.Values.
 
 ```
 searchKey: bitbucketserver.UpdatePullRequestInput
-tags: [exported]
 ```
 
 ```Go
@@ -1327,7 +1283,6 @@ type UpdatePullRequestInput struct {
 
 ```
 searchKey: bitbucketserver.ErrAlreadyExists
-tags: [exported]
 ```
 
 ```Go
@@ -1342,7 +1297,6 @@ ErrAlreadyExists is returned by Client.CreatePullRequest when a Pull Request for
 
 ```
 searchKey: bitbucketserver.ErrAlreadyExists.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1353,7 +1307,6 @@ func (e ErrAlreadyExists) Error() string
 
 ```
 searchKey: bitbucketserver.PageToken
-tags: [exported]
 ```
 
 ```Go
@@ -1370,7 +1323,6 @@ type PageToken struct {
 
 ```
 searchKey: bitbucketserver.PageToken.HasMore
-tags: [exported]
 ```
 
 ```Go
@@ -1381,7 +1333,6 @@ func (t *PageToken) HasMore() bool
 
 ```
 searchKey: bitbucketserver.PageToken.Query
-tags: [exported]
 ```
 
 ```Go
@@ -1392,7 +1343,6 @@ func (t *PageToken) Query() string
 
 ```
 searchKey: bitbucketserver.PageToken.Values
-tags: [exported]
 ```
 
 ```Go
@@ -1403,7 +1353,6 @@ func (t *PageToken) Values() url.Values
 
 ```
 searchKey: bitbucketserver.Perm
-tags: [exported]
 ```
 
 ```Go
@@ -1416,7 +1365,6 @@ Perm represents a Bitbucket Server permission.
 
 ```
 searchKey: bitbucketserver.User
-tags: [exported]
 ```
 
 ```Go
@@ -1438,7 +1386,6 @@ User account in a Bitbucket Server instance.
 
 ```
 searchKey: bitbucketserver.Group
-tags: [exported]
 ```
 
 ```Go
@@ -1454,7 +1401,6 @@ Group of users in a Bitbucket Server instance.
 
 ```
 searchKey: bitbucketserver.UserRepoPermission
-tags: [exported]
 ```
 
 ```Go
@@ -1471,7 +1417,6 @@ A UserRepoPermission of a User to perform certain actions on a Repo.
 
 ```
 searchKey: bitbucketserver.GroupRepoPermission
-tags: [exported]
 ```
 
 ```Go
@@ -1488,7 +1433,6 @@ A GroupRepoPermission of a Group to perform certain actions on a Repo.
 
 ```
 searchKey: bitbucketserver.UserProjectPermission
-tags: [exported]
 ```
 
 ```Go
@@ -1505,7 +1449,6 @@ A UserProjectPermission of a User to perform certain actions on a Project.
 
 ```
 searchKey: bitbucketserver.GroupProjectPermission
-tags: [exported]
 ```
 
 ```Go
@@ -1522,7 +1465,6 @@ A GroupProjectPermission of a Group to perform certain actions on a Project.
 
 ```
 searchKey: bitbucketserver.Repo
-tags: [exported]
 ```
 
 ```Go
@@ -1553,7 +1495,6 @@ type Repo struct {
 
 ```
 searchKey: bitbucketserver.Repo.IsPersonalRepository
-tags: [exported]
 ```
 
 ```Go
@@ -1566,7 +1507,6 @@ IsPersonalRepository tells if the repository is a personal one.
 
 ```
 searchKey: bitbucketserver.Project
-tags: [exported]
 ```
 
 ```Go
@@ -1588,7 +1528,6 @@ type Project struct {
 
 ```
 searchKey: bitbucketserver.Ref
-tags: [exported]
 ```
 
 ```Go
@@ -1608,7 +1547,6 @@ type Ref struct {
 
 ```
 searchKey: bitbucketserver.PullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -1647,7 +1585,6 @@ type PullRequest struct {
 
 ```
 searchKey: bitbucketserver.ExtractDuplicatePullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -1660,7 +1597,6 @@ ExtractDuplicatePullRequest will attempt to extract a duplicate PR
 
 ```
 searchKey: bitbucketserver.PullRequestAuthor
-tags: [exported]
 ```
 
 ```Go
@@ -1678,7 +1614,6 @@ PullRequestAuthor is the author of a pull request.
 
 ```
 searchKey: bitbucketserver.Reviewer
-tags: [exported]
 ```
 
 ```Go
@@ -1697,7 +1632,6 @@ Reviewer is a user that left feedback on a pull request.
 
 ```
 searchKey: bitbucketserver.Participant
-tags: [exported]
 ```
 
 ```Go
@@ -1715,7 +1649,6 @@ Participant is a user that was involved in a pull request.
 
 ```
 searchKey: bitbucketserver.Activity
-tags: [exported]
 ```
 
 ```Go
@@ -1745,7 +1678,6 @@ Activity is a union type of all supported pull request activity items.
 
 ```
 searchKey: bitbucketserver.Activity.Key
-tags: [exported]
 ```
 
 ```Go
@@ -1758,7 +1690,6 @@ Key is a unique key identifying this activity in the context of its pull request
 
 ```
 searchKey: bitbucketserver.BuildStatus
-tags: [exported]
 ```
 
 ```Go
@@ -1778,7 +1709,6 @@ BuildStatus represents the build status of a commit
 
 ```
 searchKey: bitbucketserver.CommitStatus
-tags: [exported]
 ```
 
 ```Go
@@ -1794,7 +1724,6 @@ Commit status is the build status for a specific commit
 
 ```
 searchKey: bitbucketserver.CommitStatus.Key
-tags: [exported]
 ```
 
 ```Go
@@ -1805,7 +1734,6 @@ func (s *CommitStatus) Key() string
 
 ```
 searchKey: bitbucketserver.ActivityAction
-tags: [exported]
 ```
 
 ```Go
@@ -1818,7 +1746,6 @@ ActivityAction defines the action taken in an Activity.
 
 ```
 searchKey: bitbucketserver.Comment
-tags: [exported]
 ```
 
 ```Go
@@ -1841,7 +1768,6 @@ A Comment in a PullRequest.
 
 ```
 searchKey: bitbucketserver.CommentAnchor
-tags: [exported]
 ```
 
 ```Go
@@ -1863,7 +1789,6 @@ A CommentAnchor captures the location of a code comment in a PullRequest.
 
 ```
 searchKey: bitbucketserver.Task
-tags: [exported]
 ```
 
 ```Go
@@ -1883,7 +1808,6 @@ A Task in a PullRequest.
 
 ```
 searchKey: bitbucketserver.PermittedOperations
-tags: [exported]
 ```
 
 ```Go
@@ -1900,7 +1824,6 @@ PermittedOperations of a Comment or Task.
 
 ```
 searchKey: bitbucketserver.Commit
-tags: [exported]
 ```
 
 ```Go
@@ -1922,6 +1845,7 @@ A Commit in a Repository.
 
 ```
 searchKey: bitbucketserver.httpError
+tags: [private]
 ```
 
 ```Go
@@ -1936,6 +1860,7 @@ type httpError struct {
 
 ```
 searchKey: bitbucketserver.httpError.Error
+tags: [private]
 ```
 
 ```Go
@@ -1946,6 +1871,7 @@ func (e *httpError) Error() string
 
 ```
 searchKey: bitbucketserver.httpError.Unauthorized
+tags: [private]
 ```
 
 ```Go
@@ -1956,6 +1882,7 @@ func (e *httpError) Unauthorized() bool
 
 ```
 searchKey: bitbucketserver.httpError.NotFound
+tags: [private]
 ```
 
 ```Go
@@ -1966,6 +1893,7 @@ func (e *httpError) NotFound() bool
 
 ```
 searchKey: bitbucketserver.httpError.DuplicatePullRequest
+tags: [private]
 ```
 
 ```Go
@@ -1976,6 +1904,7 @@ func (e *httpError) DuplicatePullRequest() bool
 
 ```
 searchKey: bitbucketserver.httpError.NoSuchPullRequestException
+tags: [private]
 ```
 
 ```Go
@@ -1986,6 +1915,7 @@ func (e *httpError) NoSuchPullRequestException() bool
 
 ```
 searchKey: bitbucketserver.httpError.NoSuchLabelException
+tags: [private]
 ```
 
 ```Go
@@ -1996,6 +1926,7 @@ func (e *httpError) NoSuchLabelException() bool
 
 ```
 searchKey: bitbucketserver.httpError.MergePreconditionFailedException
+tags: [private]
 ```
 
 ```Go
@@ -2006,6 +1937,7 @@ func (e *httpError) MergePreconditionFailedException() bool
 
 ```
 searchKey: bitbucketserver.httpError.ExtractExistingPullRequest
+tags: [private]
 ```
 
 ```Go
@@ -2016,7 +1948,6 @@ func (e *httpError) ExtractExistingPullRequest() (*PullRequest, error)
 
 ```
 searchKey: bitbucketserver.PingEvent
-tags: [exported]
 ```
 
 ```Go
@@ -2027,7 +1958,6 @@ type PingEvent struct{}
 
 ```
 searchKey: bitbucketserver.PullRequestActivityEvent
-tags: [exported]
 ```
 
 ```Go
@@ -2044,7 +1974,6 @@ type PullRequestActivityEvent struct {
 
 ```
 searchKey: bitbucketserver.PullRequestParticipantStatusEvent
-tags: [exported]
 ```
 
 ```Go
@@ -2058,7 +1987,6 @@ type PullRequestParticipantStatusEvent struct {
 
 ```
 searchKey: bitbucketserver.ParticipantStatusEvent
-tags: [exported]
 ```
 
 ```Go
@@ -2073,7 +2001,6 @@ type ParticipantStatusEvent struct {
 
 ```
 searchKey: bitbucketserver.ParticipantStatusEvent.Key
-tags: [exported]
 ```
 
 ```Go
@@ -2084,7 +2011,6 @@ func (a *ParticipantStatusEvent) Key() string
 
 ```
 searchKey: bitbucketserver.BuildStatusEvent
-tags: [exported]
 ```
 
 ```Go
@@ -2097,10 +2023,15 @@ type BuildStatusEvent struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="parseQueryStrings" href="#parseQueryStrings">func parseQueryStrings(qs ...string) (url.Values, error)</a>
 
 ```
 searchKey: bitbucketserver.parseQueryStrings
+tags: [private]
 ```
 
 ```Go
@@ -2111,6 +2042,7 @@ func parseQueryStrings(qs ...string) (url.Values, error)
 
 ```
 searchKey: bitbucketserver.categorize
+tags: [private]
 ```
 
 ```Go
@@ -2123,7 +2055,6 @@ categorize returns a category for an API URL. Used by metrics.
 
 ```
 searchKey: bitbucketserver.IsNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -2136,7 +2067,6 @@ IsNotFound reports whether err is a Bitbucket Server API not found error.
 
 ```
 searchKey: bitbucketserver.IsUnauthorized
-tags: [exported]
 ```
 
 ```Go
@@ -2149,7 +2079,6 @@ IsUnauthorized reports whether err is a Bitbucket Server API 401 error.
 
 ```
 searchKey: bitbucketserver.IsNoSuchLabel
-tags: [exported]
 ```
 
 ```Go
@@ -2162,7 +2091,6 @@ IsNoSuchLabel reports whether err is a Bitbucket Server API "No Such Label" erro
 
 ```
 searchKey: bitbucketserver.IsDuplicatePullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -2175,7 +2103,6 @@ IsDuplicatePullRequest reports whether err is a Bitbucket Server API "Duplicate 
 
 ```
 searchKey: bitbucketserver.WebhookEventType
-tags: [exported]
 ```
 
 ```Go
@@ -2186,7 +2113,6 @@ func WebhookEventType(r *http.Request) string
 
 ```
 searchKey: bitbucketserver.ParseWebhookEvent
-tags: [exported]
 ```
 
 ```Go
@@ -2197,6 +2123,7 @@ func ParseWebhookEvent(eventType string, payload []byte) (e interface{}, err err
 
 ```
 searchKey: bitbucketserver.normalize
+tags: [private]
 ```
 
 ```Go
@@ -2207,6 +2134,7 @@ func normalize(path string) string
 
 ```
 searchKey: bitbucketserver.ignoreHostMatcher
+tags: [private]
 ```
 
 ```Go
@@ -2217,6 +2145,7 @@ func ignoreHostMatcher(r *http.Request, i cassette.Request) bool
 
 ```
 searchKey: bitbucketserver.TestSudoableOAuthClient
+tags: [private]
 ```
 
 ```Go
@@ -2227,6 +2156,7 @@ func TestSudoableOAuthClient(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestParseQueryStrings
+tags: [private]
 ```
 
 ```Go
@@ -2237,6 +2167,7 @@ func TestParseQueryStrings(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestUserFilters
+tags: [private]
 ```
 
 ```Go
@@ -2247,6 +2178,7 @@ func TestUserFilters(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_Users
+tags: [private]
 ```
 
 ```Go
@@ -2257,6 +2189,7 @@ func TestClient_Users(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_LabeledRepos
+tags: [private]
 ```
 
 ```Go
@@ -2267,6 +2200,7 @@ func TestClient_LabeledRepos(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_LoadPullRequest
+tags: [private]
 ```
 
 ```Go
@@ -2277,6 +2211,7 @@ func TestClient_LoadPullRequest(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_CreatePullRequest
+tags: [private]
 ```
 
 ```Go
@@ -2287,6 +2222,7 @@ func TestClient_CreatePullRequest(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_FetchDefaultReviewers
+tags: [private]
 ```
 
 ```Go
@@ -2297,6 +2233,7 @@ func TestClient_FetchDefaultReviewers(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_DeclinePullRequest
+tags: [private]
 ```
 
 ```Go
@@ -2307,6 +2244,7 @@ func TestClient_DeclinePullRequest(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_LoadPullRequestActivities
+tags: [private]
 ```
 
 ```Go
@@ -2317,6 +2255,7 @@ func TestClient_LoadPullRequestActivities(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_CreatePullRequestComment
+tags: [private]
 ```
 
 ```Go
@@ -2327,6 +2266,7 @@ func TestClient_CreatePullRequestComment(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_MergePullRequest
+tags: [private]
 ```
 
 ```Go
@@ -2337,6 +2277,7 @@ func TestClient_MergePullRequest(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_RepoIDs
+tags: [private]
 ```
 
 ```Go
@@ -2349,6 +2290,7 @@ NOTE: This test validates that correct repository IDs are returned from the roar
 
 ```
 searchKey: bitbucketserver.checkGolden
+tags: [private]
 ```
 
 ```Go
@@ -2359,6 +2301,7 @@ func checkGolden(t *testing.T, name string, got interface{})
 
 ```
 searchKey: bitbucketserver.TestAuth
+tags: [private]
 ```
 
 ```Go
@@ -2369,6 +2312,7 @@ func TestAuth(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_WithAuthenticator
+tags: [private]
 ```
 
 ```Go
@@ -2379,6 +2323,7 @@ func TestClient_WithAuthenticator(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestMain
+tags: [private]
 ```
 
 ```Go

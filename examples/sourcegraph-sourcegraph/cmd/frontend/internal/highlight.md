@@ -16,7 +16,7 @@
     * [type Metadata struct](#Metadata)
     * [type LineRange struct](#LineRange)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.highlight.go)
     * [func IsBinary(content []byte) bool](#IsBinary)
     * [func Code(ctx context.Context, p Params) (h template.HTML, aborted bool, err error)](#Code)
     * [func firstCharacters(s string, n int) string](#firstCharacters)
@@ -36,10 +36,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="syntectServer" href="#syntectServer">var syntectServer</a>
 
 ```
 searchKey: highlight.syntectServer
+tags: [private]
 ```
 
 ```Go
@@ -50,6 +55,7 @@ var syntectServer = ...
 
 ```
 searchKey: highlight.client
+tags: [private]
 ```
 
 ```Go
@@ -60,7 +66,6 @@ var client *gosyntect.Client
 
 ```
 searchKey: highlight.ErrBinary
-tags: [exported]
 ```
 
 ```Go
@@ -73,6 +78,7 @@ ErrBinary is returned when a binary file was attempted to be highlighted.
 
 ```
 searchKey: highlight.requestCounter
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +91,7 @@ TODO (Dax): Determine if Histogram provides value and either use only histogram 
 
 ```
 searchKey: highlight.metricRequestHistogram
+tags: [private]
 ```
 
 ```Go
@@ -95,7 +102,6 @@ var metricRequestHistogram = ...
 
 ```
 searchKey: highlight.Mocks
-tags: [exported]
 ```
 
 ```Go
@@ -112,6 +118,7 @@ Mocks is used to mock behavior in tests. Tests must call ResetMocks() when finis
 
 ```
 searchKey: highlight.emptyMocks
+tags: [private]
 ```
 
 ```Go
@@ -128,7 +135,6 @@ Mocks is used to mock behavior in tests. Tests must call ResetMocks() when finis
 
 ```
 searchKey: highlight.SyntectLanguageMap
-tags: [exported]
 ```
 
 ```Go
@@ -139,11 +145,14 @@ SyntectLanguageMap is a map that maps language identifiers that may be provided 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Params" href="#Params">type Params struct</a>
 
 ```
 searchKey: highlight.Params
-tags: [exported]
 ```
 
 ```Go
@@ -184,7 +193,6 @@ Params defines mandatory and optional parameters to use when highlighting code.
 
 ```
 searchKey: highlight.Metadata
-tags: [exported]
 ```
 
 ```Go
@@ -202,7 +210,6 @@ All fields are optional.
 
 ```
 searchKey: highlight.LineRange
-tags: [exported]
 ```
 
 ```Go
@@ -221,10 +228,15 @@ It uses int32 for GraphQL compatability.
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.highlight.go" href="#init.highlight.go">func init()</a>
 
 ```
 searchKey: highlight.init
+tags: [private]
 ```
 
 ```Go
@@ -235,7 +247,6 @@ func init()
 
 ```
 searchKey: highlight.IsBinary
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +259,6 @@ IsBinary is a helper to tell if the content of a file is binary or not.
 
 ```
 searchKey: highlight.Code
-tags: [exported]
 ```
 
 ```Go
@@ -265,6 +275,7 @@ In the event the input content is binary, ErrBinary is returned.
 
 ```
 searchKey: highlight.firstCharacters
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +286,7 @@ func firstCharacters(s string, n int) string
 
 ```
 searchKey: highlight.generatePlainTable
+tags: [private]
 ```
 
 ```Go
@@ -285,7 +297,6 @@ func generatePlainTable(code string) (template.HTML, error)
 
 ```
 searchKey: highlight.CodeAsLines
-tags: [exported]
 ```
 
 ```Go
@@ -300,6 +311,7 @@ In the event the input content is binary, ErrBinary is returned.
 
 ```
 searchKey: highlight.splitHighlightedLines
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +324,7 @@ splitHighlightedLines takes the highlighted HTML table and returns a slice of hi
 
 ```
 searchKey: highlight.normalizeFilepath
+tags: [private]
 ```
 
 ```Go
@@ -340,7 +353,6 @@ It expects the filepath uses forward slashes always.
 
 ```
 searchKey: highlight.SplitLineRanges
-tags: [exported]
 ```
 
 ```Go
@@ -355,7 +367,6 @@ Input line ranges will automatically be clamped within the bounds of the file.
 
 ```
 searchKey: highlight.ResetMocks
-tags: [exported]
 ```
 
 ```Go
@@ -368,6 +379,7 @@ ResetMocks clears the mock functions set on Mocks (so that subsequent tests don'
 
 ```
 searchKey: highlight.TestGeneratePlainTable
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +390,7 @@ func TestGeneratePlainTable(t *testing.T)
 
 ```
 searchKey: highlight.TestGeneratePlainTableSecurity
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +401,7 @@ func TestGeneratePlainTableSecurity(t *testing.T)
 
 ```
 searchKey: highlight.TestSplitHighlightedLines
+tags: [private]
 ```
 
 ```Go
@@ -398,6 +412,7 @@ func TestSplitHighlightedLines(t *testing.T)
 
 ```
 searchKey: highlight.TestCodeAsLines
+tags: [private]
 ```
 
 ```Go
@@ -408,6 +423,7 @@ func TestCodeAsLines(t *testing.T)
 
 ```
 searchKey: highlight.Test_normalizeFilepath
+tags: [private]
 ```
 
 ```Go
@@ -418,6 +434,7 @@ func Test_normalizeFilepath(t *testing.T)
 
 ```
 searchKey: highlight.TestSplitLineRanges
+tags: [private]
 ```
 
 ```Go

@@ -20,10 +20,15 @@ Package searcher provides a client for our just in time text searching service "
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="requestCounter" href="#requestCounter">var requestCounter</a>
 
 ```
 searchKey: searcher.requestCounter
+tags: [private]
 ```
 
 ```Go
@@ -34,6 +39,7 @@ var requestCounter = ...
 
 ```
 searchKey: searcher.searchHTTPClient
+tags: [private]
 ```
 
 ```Go
@@ -44,7 +50,6 @@ var searchHTTPClient = ...
 
 ```
 searchKey: searcher.MockSearch
-tags: [exported]
 ```
 
 ```Go
@@ -53,10 +58,15 @@ var MockSearch func(ctx context.Context, repo api.RepoName, commit api.CommitID,
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="searcherError" href="#searcherError">type searcherError struct</a>
 
 ```
 searchKey: searcher.searcherError
+tags: [private]
 ```
 
 ```Go
@@ -70,6 +80,7 @@ type searcherError struct {
 
 ```
 searchKey: searcher.searcherError.BadRequest
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +91,7 @@ func (e *searcherError) BadRequest() bool
 
 ```
 searchKey: searcher.searcherError.Temporary
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +102,7 @@ func (e *searcherError) Temporary() bool
 
 ```
 searchKey: searcher.searcherError.Error
+tags: [private]
 ```
 
 ```Go
@@ -98,11 +111,14 @@ func (e *searcherError) Error() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Search" href="#Search">func Search(ctx context.Context, searcherURLs *endpoint.Map, repo api.RepoName, branch string, commit api.CommitID, indexed bool, p *search.TextPatternInfo, fetchTimeout time.Duration, indexerEndpoints []string) (matches []*protocol.FileMatch, limitHit bool, err error)</a>
 
 ```
 searchKey: searcher.Search
-tags: [exported]
 ```
 
 ```Go
@@ -115,6 +131,7 @@ Search searches repo@commit with p.
 
 ```
 searchKey: searcher.textSearchURL
+tags: [private]
 ```
 
 ```Go

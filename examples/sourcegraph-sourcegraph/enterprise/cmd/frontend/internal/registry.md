@@ -104,12 +104,12 @@ Package registry contains the implementation of the extension registry.
         * [func (err releaseNotFoundError) Error() string](#releaseNotFoundError.Error)
     * [type mockReleases struct](#mockReleases)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.allow.go)
     * [func getAllowedExtensionsFromSiteConfig() []string](#getAllowedExtensionsFromSiteConfig)
-    * [func init()](#init)
+    * [func init()](#init.extension_bundle.go)
     * [func handleRegistryExtensionBundle(w http.ResponseWriter, r *http.Request)](#handleRegistryExtensionBundle)
     * [func parseExtensionBundleFilename(filename string) (int64, error)](#parseExtensionBundleFilename)
-    * [func init()](#init)
+    * [func init()](#init.extension_connection_graphql.go)
     * [func listLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) ([]graphqlbackend.RegistryExtension, error)](#listLocalRegistryExtensions)
     * [func countLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) (int, error)](#countLocalRegistryExtensions)
     * [func parseExtensionQuery(q string) (text, category, tag string)](#parseExtensionQuery)
@@ -119,20 +119,20 @@ Package registry contains the implementation of the extension registry.
     * [func getLatestForBatch(ctx context.Context, vs []*dbExtension) (map[int32]*dbRelease, error)](#getLatestForBatch)
     * [func prepReleaseManifest(extensionID string, release *dbRelease) error](#prepReleaseManifest)
     * [func makeExtensionBundleURL(registryExtensionReleaseID int64, timestamp int64, extensionIDHint string) (string, error)](#makeExtensionBundleURL)
-    * [func init()](#init)
+    * [func init()](#init.extensions.go)
     * [func prefixLocalExtensionID(xs ...*dbExtension) error](#prefixLocalExtensionID)
-    * [func init()](#init)
+    * [func init()](#init.http_api.go)
     * [func toRegistryAPIExtension(ctx context.Context, v *dbExtension) (*registry.Extension, error)](#toRegistryAPIExtension)
     * [func toRegistryAPIExtensionBatch(ctx context.Context, vs []*dbExtension) ([]*registry.Extension, error)](#toRegistryAPIExtensionBatch)
     * [func newExtension(v *dbExtension, manifest *string, publishedAt time.Time) *registry.Extension](#newExtension)
     * [func handleRegistry(w http.ResponseWriter, r *http.Request) (err error)](#handleRegistry)
-    * [func init()](#init)
+    * [func init()](#init.http_api.go.0xc06f6623d8)
     * [func resetMocks()](#resetMocks)
-    * [func init()](#init)
+    * [func init()](#init.publisher_connection_graphql.go)
     * [func extensionRegistryPublishers(ctx context.Context, db dbutil.DB, args *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)](#extensionRegistryPublishers)
-    * [func init()](#init)
+    * [func init()](#init.publisher_graphql.go)
     * [func extensionRegistryViewerPublishers(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryPublisher, error)](#extensionRegistryViewerPublishers)
-    * [func init()](#init)
+    * [func init()](#init.registry_graphql.go)
     * [func registryExtensionByIDInt32(ctx context.Context, db dbutil.DB, id int32) (graphqlbackend.RegistryExtension, error)](#registryExtensionByIDInt32)
     * [func extensionRegistryCreateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryCreateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)](#extensionRegistryCreateExtension)
     * [func viewerCanAdministerExtension(ctx context.Context, db dbutil.DB, id frontendregistry.RegistryExtensionID) error](#viewerCanAdministerExtension)
@@ -142,7 +142,7 @@ Package registry contains the implementation of the extension registry.
     * [func TestIsRemoteExtensionAllowed(t *testing.T)](#TestIsRemoteExtensionAllowed)
     * [func sameElements(a, b []string) bool](#sameElements)
     * [func TestFilterRemoteExtensions(t *testing.T)](#TestFilterRemoteExtensions)
-    * [func init()](#init)
+    * [func init()](#init.db_test.go)
     * [func TestParseExtensionBundleFilename(t *testing.T)](#TestParseExtensionBundleFilename)
     * [func TestFilteringExtensionIDs(t *testing.T)](#TestFilteringExtensionIDs)
     * [func TestToDBExtensionsListOptions(t *testing.T)](#TestToDBExtensionsListOptions)
@@ -159,10 +159,15 @@ Package registry contains the implementation of the extension registry.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="extensionPublisherNameExpr" href="#extensionPublisherNameExpr">const extensionPublisherNameExpr</a>
 
 ```
 searchKey: registry.extensionPublisherNameExpr
+tags: [private]
 ```
 
 ```Go
@@ -175,6 +180,7 @@ extensionPublisherNameExpr is the SQL expression for the extension's publisher's
 
 ```
 searchKey: registry.extensionIDExpr
+tags: [private]
 ```
 
 ```Go
@@ -185,10 +191,15 @@ extensionIDExpr is the SQL expression for the extension ID (using the table alia
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="sourceMappingURLLineRegex" href="#sourceMappingURLLineRegex">var sourceMappingURLLineRegex</a>
 
 ```
 searchKey: registry.sourceMappingURLLineRegex
+tags: [private]
 ```
 
 ```Go
@@ -201,6 +212,7 @@ sourceMappingURLLineRegex is a regular expression that matches all lines with a 
 
 ```
 searchKey: registry.nonLettersDigits
+tags: [private]
 ```
 
 ```Go
@@ -211,6 +223,7 @@ var nonLettersDigits = lazyregexp.New(`[^a-zA-Z0-9-]`)
 
 ```
 searchKey: registry.featuredExtensionIDs
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +236,7 @@ Temporary: we manually set these. Featured extensions live on sourcegraph.com, a
 
 ```
 searchKey: registry.extensionIsWIPExpr
+tags: [private]
 ```
 
 ```Go
@@ -237,6 +251,7 @@ BACKCOMPAT: It still reads the title property even though extensions no longer h
 
 ```
 searchKey: registry.registryList
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +264,7 @@ Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, 
 
 ```
 searchKey: registry.registryGetByUUID
+tags: [private]
 ```
 
 ```Go
@@ -261,6 +277,7 @@ Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, 
 
 ```
 searchKey: registry.registryGetByExtensionID
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +290,7 @@ Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, 
 
 ```
 searchKey: registry.registryGetFeaturedExtensions
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +303,7 @@ Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, 
 
 ```
 searchKey: registry.registryRequestsDuration
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +314,7 @@ var registryRequestsDuration = ...
 
 ```
 searchKey: registry.mocks
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +325,7 @@ var mocks dbMocks
 
 ```
 searchKey: registry.errRegistryUnknownPublisher
+tags: [private]
 ```
 
 ```Go
@@ -315,6 +336,7 @@ var errRegistryUnknownPublisher = errors.New("unknown registry extension publish
 
 ```
 searchKey: registry.errInvalidJSONInManifest
+tags: [private]
 ```
 
 ```Go
@@ -325,6 +347,7 @@ var errInvalidJSONInManifest = errors.New("invalid syntax in extension manifest 
 
 ```
 searchKey: registry.registryExtensionNamesForTests
+tags: [private]
 ```
 
 ```Go
@@ -335,10 +358,15 @@ registryExtensionNamesForTests is a list of test cases containing valid and inva
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="extensionDBResolver" href="#extensionDBResolver">type extensionDBResolver struct</a>
 
 ```
 searchKey: registry.extensionDBResolver
+tags: [private]
 ```
 
 ```Go
@@ -358,6 +386,7 @@ extensionDBResolver implements the GraphQL type RegistryExtension.
 
 ```
 searchKey: registry.extensionDBResolver.ID
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +397,7 @@ func (r *extensionDBResolver) ID() graphql.ID
 
 ```
 searchKey: registry.extensionDBResolver.UUID
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +408,7 @@ func (r *extensionDBResolver) UUID() string
 
 ```
 searchKey: registry.extensionDBResolver.ExtensionID
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +419,7 @@ func (r *extensionDBResolver) ExtensionID() string
 
 ```
 searchKey: registry.extensionDBResolver.ExtensionIDWithoutRegistry
+tags: [private]
 ```
 
 ```Go
@@ -398,6 +430,7 @@ func (r *extensionDBResolver) ExtensionIDWithoutRegistry() string
 
 ```
 searchKey: registry.extensionDBResolver.Publisher
+tags: [private]
 ```
 
 ```Go
@@ -408,6 +441,7 @@ func (r *extensionDBResolver) Publisher(ctx context.Context) (graphqlbackend.Reg
 
 ```
 searchKey: registry.extensionDBResolver.Name
+tags: [private]
 ```
 
 ```Go
@@ -418,6 +452,7 @@ func (r *extensionDBResolver) Name() string
 
 ```
 searchKey: registry.extensionDBResolver.Manifest
+tags: [private]
 ```
 
 ```Go
@@ -428,6 +463,7 @@ func (r *extensionDBResolver) Manifest(ctx context.Context) (graphqlbackend.Exte
 
 ```
 searchKey: registry.extensionDBResolver.CreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -438,6 +474,7 @@ func (r *extensionDBResolver) CreatedAt() *graphqlbackend.DateTime
 
 ```
 searchKey: registry.extensionDBResolver.UpdatedAt
+tags: [private]
 ```
 
 ```Go
@@ -448,6 +485,7 @@ func (r *extensionDBResolver) UpdatedAt() *graphqlbackend.DateTime
 
 ```
 searchKey: registry.extensionDBResolver.PublishedAt
+tags: [private]
 ```
 
 ```Go
@@ -458,6 +496,7 @@ func (r *extensionDBResolver) PublishedAt(ctx context.Context) (*graphqlbackend.
 
 ```
 searchKey: registry.extensionDBResolver.URL
+tags: [private]
 ```
 
 ```Go
@@ -468,6 +507,7 @@ func (r *extensionDBResolver) URL() string
 
 ```
 searchKey: registry.extensionDBResolver.RemoteURL
+tags: [private]
 ```
 
 ```Go
@@ -478,6 +518,7 @@ func (r *extensionDBResolver) RemoteURL() *string
 
 ```
 searchKey: registry.extensionDBResolver.RegistryName
+tags: [private]
 ```
 
 ```Go
@@ -488,6 +529,7 @@ func (r *extensionDBResolver) RegistryName() (string, error)
 
 ```
 searchKey: registry.extensionDBResolver.IsLocal
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +540,7 @@ func (r *extensionDBResolver) IsLocal() bool
 
 ```
 searchKey: registry.extensionDBResolver.IsWorkInProgress
+tags: [private]
 ```
 
 ```Go
@@ -508,6 +551,7 @@ func (r *extensionDBResolver) IsWorkInProgress() bool
 
 ```
 searchKey: registry.extensionDBResolver.ViewerCanAdminister
+tags: [private]
 ```
 
 ```Go
@@ -518,6 +562,7 @@ func (r *extensionDBResolver) ViewerCanAdminister(ctx context.Context) (bool, er
 
 ```
 searchKey: registry.extensionDBResolver.release
+tags: [private]
 ```
 
 ```Go
@@ -528,6 +573,7 @@ func (r *extensionDBResolver) release(ctx context.Context) (*dbRelease, error)
 
 ```
 searchKey: registry.dbExtension
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +618,7 @@ It is the internal form of github.com/sourcegraph/sourcegraph/internal/registry.
 
 ```
 searchKey: registry.dbExtensions
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +629,7 @@ type dbExtensions struct{}
 
 ```
 searchKey: registry.dbExtensions.Create
+tags: [private]
 ```
 
 ```Go
@@ -594,6 +642,7 @@ Create creates a new extension in the extension registry. Exactly 1 of publisher
 
 ```
 searchKey: registry.dbExtensions.GetByID
+tags: [private]
 ```
 
 ```Go
@@ -608,6 +657,7 @@ GetByID retrieves the registry extension (if any) given its ID.
 
 ```
 searchKey: registry.dbExtensions.GetByUUID
+tags: [private]
 ```
 
 ```Go
@@ -622,6 +672,7 @@ GetByUUID retrieves the registry extension (if any) given its UUID.
 
 ```
 searchKey: registry.dbExtensions.GetByExtensionID
+tags: [private]
 ```
 
 ```Go
@@ -636,6 +687,7 @@ GetByExtensionID retrieves the registry extension (if any) given its extension I
 
 ```
 searchKey: registry.dbExtensions.GetFeaturedExtensions
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +702,7 @@ GetFeaturedExtensions retrieves the set of currently featured extensions. This s
 
 ```
 searchKey: registry.dbExtensions.getFeaturedExtensions
+tags: [private]
 ```
 
 ```Go
@@ -660,6 +713,7 @@ func (s dbExtensions) getFeaturedExtensions(ctx context.Context, featuredExtensi
 
 ```
 searchKey: registry.dbExtensions.List
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +728,7 @@ List lists all registry extensions that satisfy the options.
 
 ```
 searchKey: registry.dbExtensions.listCountSQL
+tags: [private]
 ```
 
 ```Go
@@ -684,6 +739,7 @@ func (dbExtensions) listCountSQL(conds []*sqlf.Query) *sqlf.Query
 
 ```
 searchKey: registry.dbExtensions.list
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +750,7 @@ func (s dbExtensions) list(ctx context.Context, conds, order []*sqlf.Query, limi
 
 ```
 searchKey: registry.dbExtensions.Count
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +765,7 @@ Count counts all registry extensions that satisfy the options (ignoring limit an
 
 ```
 searchKey: registry.dbExtensions.Update
+tags: [private]
 ```
 
 ```Go
@@ -720,6 +778,7 @@ Update updates information about the registry extension.
 
 ```
 searchKey: registry.dbExtensions.Delete
+tags: [private]
 ```
 
 ```Go
@@ -732,6 +791,7 @@ Delete marks an registry extension as deleted.
 
 ```
 searchKey: registry.dbExtensions.ListPublishers
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +806,7 @@ ListPublishers lists all publishers of extensions to the registry.
 
 ```
 searchKey: registry.dbExtensions.publishersSQLCTE
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +817,7 @@ func (dbExtensions) publishersSQLCTE() *sqlf.Query
 
 ```
 searchKey: registry.dbExtensions.listPublishers
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +828,7 @@ func (s dbExtensions) listPublishers(ctx context.Context, conds []*sqlf.Query, l
 
 ```
 searchKey: registry.dbExtensions.CountPublishers
+tags: [private]
 ```
 
 ```Go
@@ -780,6 +843,7 @@ CountPublishers counts all registry publishers that satisfy the options (ignorin
 
 ```
 searchKey: registry.dbExtensions.GetPublisher
+tags: [private]
 ```
 
 ```Go
@@ -792,6 +856,7 @@ GePublisher gets the registry publisher with the given name.
 
 ```
 searchKey: registry.extensionNotFoundError
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +871,7 @@ extensionNotFoundError occurs when an extension is not found in the extension re
 
 ```
 searchKey: registry.extensionNotFoundError.NotFound
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +884,7 @@ NotFound implements errcode.NotFounder.
 
 ```
 searchKey: registry.extensionNotFoundError.Error
+tags: [private]
 ```
 
 ```Go
@@ -828,6 +895,7 @@ func (err extensionNotFoundError) Error() string
 
 ```
 searchKey: registry.dbExtensionsListOptions
+tags: [private]
 ```
 
 ```Go
@@ -847,6 +915,7 @@ dbExtensionsListOptions contains options for listing registry extensions.
 
 ```
 searchKey: registry.toDBExtensionsListOptions
+tags: [private]
 ```
 
 ```Go
@@ -857,6 +926,7 @@ func toDBExtensionsListOptions(args graphqlbackend.RegistryExtensionConnectionAr
 
 ```
 searchKey: registry.dbExtensionsListOptions.sqlConditions
+tags: [private]
 ```
 
 ```Go
@@ -867,6 +937,7 @@ func (o dbExtensionsListOptions) sqlConditions() []*sqlf.Query
 
 ```
 searchKey: registry.dbExtensionsListOptions.sqlOrder
+tags: [private]
 ```
 
 ```Go
@@ -877,6 +948,7 @@ func (o dbExtensionsListOptions) sqlOrder() []*sqlf.Query
 
 ```
 searchKey: registry.mockExtensions
+tags: [private]
 ```
 
 ```Go
@@ -897,6 +969,7 @@ mockExtensions mocks the registry extensions store.
 
 ```
 searchKey: registry.responseRecorder
+tags: [private]
 ```
 
 ```Go
@@ -910,6 +983,7 @@ type responseRecorder struct {
 
 ```
 searchKey: registry.responseRecorder.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -920,6 +994,7 @@ func (r *responseRecorder) WriteHeader(code int)
 
 ```
 searchKey: registry.dbMocks
+tags: [private]
 ```
 
 ```Go
@@ -933,6 +1008,7 @@ type dbMocks struct {
 
 ```
 searchKey: registry.registryPublisherConnection
+tags: [private]
 ```
 
 ```Go
@@ -953,6 +1029,7 @@ registryPublisherConnection resolves a list of registry publishers.
 
 ```
 searchKey: registry.registryPublisherConnection.compute
+tags: [private]
 ```
 
 ```Go
@@ -963,6 +1040,7 @@ func (r *registryPublisherConnection) compute(ctx context.Context) ([]*dbPublish
 
 ```
 searchKey: registry.registryPublisherConnection.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -973,6 +1051,7 @@ func (r *registryPublisherConnection) Nodes(ctx context.Context) ([]graphqlbacke
 
 ```
 searchKey: registry.registryPublisherConnection.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -983,6 +1062,7 @@ func (r *registryPublisherConnection) TotalCount(ctx context.Context) (int32, er
 
 ```
 searchKey: registry.registryPublisherConnection.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -993,6 +1073,7 @@ func (r *registryPublisherConnection) PageInfo(ctx context.Context) (*graphqluti
 
 ```
 searchKey: registry.registryPublisher
+tags: [private]
 ```
 
 ```Go
@@ -1008,6 +1089,7 @@ registryPublisher implements the GraphQL type RegistryPublisher.
 
 ```
 searchKey: registry.getRegistryPublisher
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1100,7 @@ func getRegistryPublisher(ctx context.Context, db dbutil.DB, publisher dbPublish
 
 ```
 searchKey: registry.registryPublisher.ToUser
+tags: [private]
 ```
 
 ```Go
@@ -1028,6 +1111,7 @@ func (r *registryPublisher) ToUser() (*graphqlbackend.UserResolver, bool)
 
 ```
 searchKey: registry.registryPublisher.ToOrg
+tags: [private]
 ```
 
 ```Go
@@ -1038,6 +1122,7 @@ func (r *registryPublisher) ToOrg() (*graphqlbackend.OrgResolver, bool)
 
 ```
 searchKey: registry.registryPublisher.toDBRegistryPublisher
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1133,7 @@ func (r *registryPublisher) toDBRegistryPublisher() dbPublisher
 
 ```
 searchKey: registry.registryPublisher.RegistryExtensionConnectionURL
+tags: [private]
 ```
 
 ```Go
@@ -1058,6 +1144,7 @@ func (r *registryPublisher) RegistryExtensionConnectionURL() (*string, error)
 
 ```
 searchKey: registry.registryPublisherID
+tags: [private]
 ```
 
 ```Go
@@ -1070,6 +1157,7 @@ type registryPublisherID struct {
 
 ```
 searchKey: registry.toRegistryPublisherID
+tags: [private]
 ```
 
 ```Go
@@ -1080,6 +1168,7 @@ func toRegistryPublisherID(extension *dbExtension) *registryPublisherID
 
 ```
 searchKey: registry.unmarshalRegistryPublisherID
+tags: [private]
 ```
 
 ```Go
@@ -1094,6 +1183,7 @@ unmarshalRegistryPublisherID unmarshals the GraphQL ID into the possible publish
 
 ```
 searchKey: registry.registryPublisherID.viewerCanAdminister
+tags: [private]
 ```
 
 ```Go
@@ -1108,6 +1198,7 @@ viewerCanAdminister returns whether the current user is allowed to perform mutat
 
 ```
 searchKey: registry.dbPublisher
+tags: [private]
 ```
 
 ```Go
@@ -1126,6 +1217,7 @@ dbPublisher is a publisher of extensions to the registry.
 
 ```
 searchKey: registry.dbPublisher.IsZero
+tags: [private]
 ```
 
 ```Go
@@ -1138,6 +1230,7 @@ IsZero reports whether p is the zero value.
 
 ```
 searchKey: registry.publisherNotFoundError
+tags: [private]
 ```
 
 ```Go
@@ -1152,6 +1245,7 @@ publisherNotFoundError occurs when a registry extension publisher is not found.
 
 ```
 searchKey: registry.publisherNotFoundError.NotFound
+tags: [private]
 ```
 
 ```Go
@@ -1164,6 +1258,7 @@ NotFound implements errcode.NotFounder.
 
 ```
 searchKey: registry.publisherNotFoundError.Error
+tags: [private]
 ```
 
 ```Go
@@ -1174,6 +1269,7 @@ func (err publisherNotFoundError) Error() string
 
 ```
 searchKey: registry.dbPublishersListOptions
+tags: [private]
 ```
 
 ```Go
@@ -1188,6 +1284,7 @@ dbPublishersListOptions contains options for listing publishers of extensions in
 
 ```
 searchKey: registry.dbPublishersListOptions.sqlConditions
+tags: [private]
 ```
 
 ```Go
@@ -1198,6 +1295,7 @@ func (o dbPublishersListOptions) sqlConditions() []*sqlf.Query
 
 ```
 searchKey: registry.dbRelease
+tags: [private]
 ```
 
 ```Go
@@ -1220,6 +1318,7 @@ dbRelease describes a release of an extension in the extension registry.
 
 ```
 searchKey: registry.getLatestRelease
+tags: [private]
 ```
 
 ```Go
@@ -1232,6 +1331,7 @@ getLatestRelease returns the release with the extension manifest as JSON. If the
 
 ```
 searchKey: registry.dbReleases
+tags: [private]
 ```
 
 ```Go
@@ -1242,6 +1342,7 @@ type dbReleases struct{}
 
 ```
 searchKey: registry.dbReleases.Create
+tags: [private]
 ```
 
 ```Go
@@ -1254,6 +1355,7 @@ Create creates a new release of an extension in the extension registry. The rele
 
 ```
 searchKey: registry.dbReleases.GetLatest
+tags: [private]
 ```
 
 ```Go
@@ -1266,6 +1368,7 @@ GetLatest gets the latest release for the extension with the given release tag (
 
 ```
 searchKey: registry.dbReleases.GetLatestBatch
+tags: [private]
 ```
 
 ```Go
@@ -1278,6 +1381,7 @@ GetLatestBatch gets the latest releases for the extensions with the given releas
 
 ```
 searchKey: registry.dbReleases.GetArtifacts
+tags: [private]
 ```
 
 ```Go
@@ -1290,6 +1394,7 @@ GetArtifacts gets the bundled JavaScript source file contents and the source map
 
 ```
 searchKey: registry.releaseNotFoundError
+tags: [private]
 ```
 
 ```Go
@@ -1304,6 +1409,7 @@ releaseNotFoundError occurs when an extension release is not found in the extens
 
 ```
 searchKey: registry.releaseNotFoundError.NotFound
+tags: [private]
 ```
 
 ```Go
@@ -1316,6 +1422,7 @@ NotFound implements errcode.NotFounder.
 
 ```
 searchKey: registry.releaseNotFoundError.Error
+tags: [private]
 ```
 
 ```Go
@@ -1326,6 +1433,7 @@ func (err releaseNotFoundError) Error() string
 
 ```
 searchKey: registry.mockReleases
+tags: [private]
 ```
 
 ```Go
@@ -1340,10 +1448,15 @@ mockReleases mocks the registry extension releases store.
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.allow.go" href="#init.allow.go">func init()</a>
 
 ```
 searchKey: registry.init
+tags: [private]
 ```
 
 ```Go
@@ -1354,16 +1467,18 @@ func init()
 
 ```
 searchKey: registry.getAllowedExtensionsFromSiteConfig
+tags: [private]
 ```
 
 ```Go
 func getAllowedExtensionsFromSiteConfig() []string
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.extension_bundle.go" href="#init.extension_bundle.go">func init()</a>
 
 ```
 searchKey: registry.init
+tags: [private]
 ```
 
 ```Go
@@ -1374,6 +1489,7 @@ func init()
 
 ```
 searchKey: registry.handleRegistryExtensionBundle
+tags: [private]
 ```
 
 ```Go
@@ -1386,6 +1502,7 @@ handleRegistryExtensionBundle serves the bundled JavaScript source file or the s
 
 ```
 searchKey: registry.parseExtensionBundleFilename
+tags: [private]
 ```
 
 ```Go
@@ -1394,10 +1511,11 @@ func parseExtensionBundleFilename(filename string) (int64, error)
 
 parseExtensionBundleFilename parses the release ID from the extension bundle's filename, which is of the form "1234-publisher-extension-id.js" or ".map". The part of the filename after the "-" and before the extension is ignored; it exists to help distinguish log messages from different extensions in debugging. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.extension_connection_graphql.go" href="#init.extension_connection_graphql.go">func init()</a>
 
 ```
 searchKey: registry.init
+tags: [private]
 ```
 
 ```Go
@@ -1408,6 +1526,7 @@ func init()
 
 ```
 searchKey: registry.listLocalRegistryExtensions
+tags: [private]
 ```
 
 ```Go
@@ -1418,6 +1537,7 @@ func listLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphql
 
 ```
 searchKey: registry.countLocalRegistryExtensions
+tags: [private]
 ```
 
 ```Go
@@ -1428,6 +1548,7 @@ func countLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphq
 
 ```
 searchKey: registry.parseExtensionQuery
+tags: [private]
 ```
 
 ```Go
@@ -1442,6 +1563,7 @@ This is an intentionally simple, unoptimized parser.
 
 ```
 searchKey: registry.filterStripLocalExtensionIDs
+tags: [private]
 ```
 
 ```Go
@@ -1454,6 +1576,7 @@ filterStripLocalExtensionIDs filters to local extension IDs and strips the host 
 
 ```
 searchKey: registry.strptr
+tags: [private]
 ```
 
 ```Go
@@ -1464,6 +1587,7 @@ func strptr(s string) *string
 
 ```
 searchKey: registry.validateExtensionManifest
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1602,7 @@ TODO(sqs): Also validate it against the JSON Schema.
 
 ```
 searchKey: registry.getLatestForBatch
+tags: [private]
 ```
 
 ```Go
@@ -1490,6 +1615,7 @@ getLatestForBatch returns a map from extension identifiers to the latest DB rele
 
 ```
 searchKey: registry.prepReleaseManifest
+tags: [private]
 ```
 
 ```Go
@@ -1502,16 +1628,18 @@ prepReleaseManifest will set the Manifest field of the release. If the manifest 
 
 ```
 searchKey: registry.makeExtensionBundleURL
+tags: [private]
 ```
 
 ```Go
 func makeExtensionBundleURL(registryExtensionReleaseID int64, timestamp int64, extensionIDHint string) (string, error)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.extensions.go" href="#init.extensions.go">func init()</a>
 
 ```
 searchKey: registry.init
+tags: [private]
 ```
 
 ```Go
@@ -1522,6 +1650,7 @@ func init()
 
 ```
 searchKey: registry.prefixLocalExtensionID
+tags: [private]
 ```
 
 ```Go
@@ -1530,10 +1659,11 @@ func prefixLocalExtensionID(xs ...*dbExtension) error
 
 prefixLocalExtensionID adds the local registry's extension ID prefix (from GetLocalRegistryExtensionIDPrefix) to all extensions' extension IDs in the list. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.http_api.go" href="#init.http_api.go">func init()</a>
 
 ```
 searchKey: registry.init
+tags: [private]
 ```
 
 ```Go
@@ -1544,6 +1674,7 @@ func init()
 
 ```
 searchKey: registry.toRegistryAPIExtension
+tags: [private]
 ```
 
 ```Go
@@ -1554,6 +1685,7 @@ func toRegistryAPIExtension(ctx context.Context, v *dbExtension) (*registry.Exte
 
 ```
 searchKey: registry.toRegistryAPIExtensionBatch
+tags: [private]
 ```
 
 ```Go
@@ -1564,6 +1696,7 @@ func toRegistryAPIExtensionBatch(ctx context.Context, vs []*dbExtension) ([]*reg
 
 ```
 searchKey: registry.newExtension
+tags: [private]
 ```
 
 ```Go
@@ -1574,6 +1707,7 @@ func newExtension(v *dbExtension, manifest *string, publishedAt time.Time) *regi
 
 ```
 searchKey: registry.handleRegistry
+tags: [private]
 ```
 
 ```Go
@@ -1582,10 +1716,11 @@ func handleRegistry(w http.ResponseWriter, r *http.Request) (err error)
 
 handleRegistry serves the external HTTP API for the extension registry. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.http_api.go.0xc06f6623d8" href="#init.http_api.go.0xc06f6623d8">func init()</a>
 
 ```
 searchKey: registry.init
+tags: [private]
 ```
 
 ```Go
@@ -1596,16 +1731,18 @@ func init()
 
 ```
 searchKey: registry.resetMocks
+tags: [private]
 ```
 
 ```Go
 func resetMocks()
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.publisher_connection_graphql.go" href="#init.publisher_connection_graphql.go">func init()</a>
 
 ```
 searchKey: registry.init
+tags: [private]
 ```
 
 ```Go
@@ -1616,16 +1753,18 @@ func init()
 
 ```
 searchKey: registry.extensionRegistryPublishers
+tags: [private]
 ```
 
 ```Go
 func extensionRegistryPublishers(ctx context.Context, db dbutil.DB, args *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.publisher_graphql.go" href="#init.publisher_graphql.go">func init()</a>
 
 ```
 searchKey: registry.init
+tags: [private]
 ```
 
 ```Go
@@ -1636,16 +1775,18 @@ func init()
 
 ```
 searchKey: registry.extensionRegistryViewerPublishers
+tags: [private]
 ```
 
 ```Go
 func extensionRegistryViewerPublishers(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryPublisher, error)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.registry_graphql.go" href="#init.registry_graphql.go">func init()</a>
 
 ```
 searchKey: registry.init
+tags: [private]
 ```
 
 ```Go
@@ -1656,6 +1797,7 @@ func init()
 
 ```
 searchKey: registry.registryExtensionByIDInt32
+tags: [private]
 ```
 
 ```Go
@@ -1666,6 +1808,7 @@ func registryExtensionByIDInt32(ctx context.Context, db dbutil.DB, id int32) (gr
 
 ```
 searchKey: registry.extensionRegistryCreateExtension
+tags: [private]
 ```
 
 ```Go
@@ -1676,6 +1819,7 @@ func extensionRegistryCreateExtension(ctx context.Context, db dbutil.DB, args *g
 
 ```
 searchKey: registry.viewerCanAdministerExtension
+tags: [private]
 ```
 
 ```Go
@@ -1686,6 +1830,7 @@ func viewerCanAdministerExtension(ctx context.Context, db dbutil.DB, id frontend
 
 ```
 searchKey: registry.extensionRegistryUpdateExtension
+tags: [private]
 ```
 
 ```Go
@@ -1696,6 +1841,7 @@ func extensionRegistryUpdateExtension(ctx context.Context, db dbutil.DB, args *g
 
 ```
 searchKey: registry.extensionRegistryDeleteExtension
+tags: [private]
 ```
 
 ```Go
@@ -1706,6 +1852,7 @@ func extensionRegistryDeleteExtension(ctx context.Context, db dbutil.DB, args *g
 
 ```
 searchKey: registry.extensionRegistryPublishExtension
+tags: [private]
 ```
 
 ```Go
@@ -1716,6 +1863,7 @@ func extensionRegistryPublishExtension(ctx context.Context, db dbutil.DB, args *
 
 ```
 searchKey: registry.TestIsRemoteExtensionAllowed
+tags: [private]
 ```
 
 ```Go
@@ -1726,6 +1874,7 @@ func TestIsRemoteExtensionAllowed(t *testing.T)
 
 ```
 searchKey: registry.sameElements
+tags: [private]
 ```
 
 ```Go
@@ -1736,16 +1885,18 @@ func sameElements(a, b []string) bool
 
 ```
 searchKey: registry.TestFilterRemoteExtensions
+tags: [private]
 ```
 
 ```Go
 func TestFilterRemoteExtensions(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
 
 ```
 searchKey: registry.init
+tags: [private]
 ```
 
 ```Go
@@ -1756,6 +1907,7 @@ func init()
 
 ```
 searchKey: registry.TestParseExtensionBundleFilename
+tags: [private]
 ```
 
 ```Go
@@ -1766,6 +1918,7 @@ func TestParseExtensionBundleFilename(t *testing.T)
 
 ```
 searchKey: registry.TestFilteringExtensionIDs
+tags: [private]
 ```
 
 ```Go
@@ -1776,6 +1929,7 @@ func TestFilteringExtensionIDs(t *testing.T)
 
 ```
 searchKey: registry.TestToDBExtensionsListOptions
+tags: [private]
 ```
 
 ```Go
@@ -1786,6 +1940,7 @@ func TestToDBExtensionsListOptions(t *testing.T)
 
 ```
 searchKey: registry.strarrayptr
+tags: [private]
 ```
 
 ```Go
@@ -1796,6 +1951,7 @@ func strarrayptr(values []string) *[]string
 
 ```
 searchKey: registry.TestGetExtensionManifestWithBundleURL
+tags: [private]
 ```
 
 ```Go
@@ -1806,6 +1962,7 @@ func TestGetExtensionManifestWithBundleURL(t *testing.T)
 
 ```
 searchKey: registry.jsonDeepEqual
+tags: [private]
 ```
 
 ```Go
@@ -1816,6 +1973,7 @@ func jsonDeepEqual(a, b string) bool
 
 ```
 searchKey: registry.TestRegistryExtensions_validNames
+tags: [private]
 ```
 
 ```Go
@@ -1826,6 +1984,7 @@ func TestRegistryExtensions_validNames(t *testing.T)
 
 ```
 searchKey: registry.TestRegistryExtensions
+tags: [private]
 ```
 
 ```Go
@@ -1836,6 +1995,7 @@ func TestRegistryExtensions(t *testing.T)
 
 ```
 searchKey: registry.TestRegistryExtensions_ListCount
+tags: [private]
 ```
 
 ```Go
@@ -1846,6 +2006,7 @@ func TestRegistryExtensions_ListCount(t *testing.T)
 
 ```
 searchKey: registry.TestFeaturedExtensions
+tags: [private]
 ```
 
 ```Go
@@ -1856,6 +2017,7 @@ func TestFeaturedExtensions(t *testing.T)
 
 ```
 searchKey: registry.asJSON
+tags: [private]
 ```
 
 ```Go
@@ -1866,6 +2028,7 @@ func asJSON(t *testing.T, v interface{}) string
 
 ```
 searchKey: registry.TestRegistryExtensionReleases
+tags: [private]
 ```
 
 ```Go

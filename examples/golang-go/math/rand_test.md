@@ -76,10 +76,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="numTestSamples" href="#numTestSamples">const numTestSamples</a>
 
 ```
 searchKey: rand_test.numTestSamples
+tags: [private]
 ```
 
 ```Go
@@ -88,10 +93,15 @@ const numTestSamples = 10000
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="rn" href="#rn">var rn</a>
 
 ```
 searchKey: rand_test.rn
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +112,7 @@ var rn, kn, wn, fn = GetNormalDistributionParameters()
 
 ```
 searchKey: rand_test.kn
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +123,7 @@ var rn, kn, wn, fn = GetNormalDistributionParameters()
 
 ```
 searchKey: rand_test.wn
+tags: [private]
 ```
 
 ```Go
@@ -122,6 +134,7 @@ var rn, kn, wn, fn = GetNormalDistributionParameters()
 
 ```
 searchKey: rand_test.fn
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +145,7 @@ var rn, kn, wn, fn = GetNormalDistributionParameters()
 
 ```
 searchKey: rand_test.re
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +156,7 @@ var re, ke, we, fe = GetExponentialDistributionParameters()
 
 ```
 searchKey: rand_test.ke
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +167,7 @@ var re, ke, we, fe = GetExponentialDistributionParameters()
 
 ```
 searchKey: rand_test.we
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +178,7 @@ var re, ke, we, fe = GetExponentialDistributionParameters()
 
 ```
 searchKey: rand_test.fe
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +189,7 @@ var re, ke, we, fe = GetExponentialDistributionParameters()
 
 ```
 searchKey: rand_test.testSeeds
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +200,7 @@ var testSeeds = []int64{1, 1754801282, 1698661970, 1550503961}
 
 ```
 searchKey: rand_test.printgolden
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +211,7 @@ var printgolden = flag.Bool("printgolden", false, "print golden results for regr
 
 ```
 searchKey: rand_test.regressGolden
+tags: [private]
 ```
 
 ```Go
@@ -200,10 +220,15 @@ var regressGolden = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="statsResults" href="#statsResults">type statsResults struct</a>
 
 ```
 searchKey: rand_test.statsResults
+tags: [private]
 ```
 
 ```Go
@@ -219,6 +244,7 @@ type statsResults struct {
 
 ```
 searchKey: rand_test.getStatsResults
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +255,7 @@ func getStatsResults(samples []float64) *statsResults
 
 ```
 searchKey: rand_test.statsResults.checkSimilarDistribution
+tags: [private]
 ```
 
 ```Go
@@ -239,10 +266,15 @@ checkSimilarDistribution returns success if the mean and stddev of the two stats
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example" href="#Example">func Example()</a>
 
 ```
 searchKey: rand_test.Example
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +285,7 @@ func Example()
 
 ```
 searchKey: rand_test.Example_rand
+tags: [private]
 ```
 
 ```Go
@@ -265,6 +298,7 @@ This example shows the use of each of the methods on a *Rand. The use of the glo
 
 ```
 searchKey: rand_test.ExamplePerm
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +309,7 @@ func ExamplePerm()
 
 ```
 searchKey: rand_test.ExampleShuffle
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +320,7 @@ func ExampleShuffle()
 
 ```
 searchKey: rand_test.ExampleShuffle_slicesInUnison
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +331,7 @@ func ExampleShuffle_slicesInUnison()
 
 ```
 searchKey: rand_test.ExampleIntn
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +342,7 @@ func ExampleIntn()
 
 ```
 searchKey: rand_test.TestConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -317,6 +355,7 @@ TestConcurrent exercises the rand API concurrently, triggering situations where 
 
 ```
 searchKey: rand_test.max
+tags: [private]
 ```
 
 ```Go
@@ -327,6 +366,7 @@ func max(a, b float64) float64
 
 ```
 searchKey: rand_test.nearEqual
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +377,7 @@ func nearEqual(a, b, closeEnough, maxError float64) bool
 
 ```
 searchKey: rand_test.checkSampleDistribution
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +388,7 @@ func checkSampleDistribution(t *testing.T, samples []float64, expected *statsRes
 
 ```
 searchKey: rand_test.checkSampleSliceDistributions
+tags: [private]
 ```
 
 ```Go
@@ -357,6 +399,7 @@ func checkSampleSliceDistributions(t *testing.T, samples []float64, nslices int,
 
 ```
 searchKey: rand_test.generateNormalSamples
+tags: [private]
 ```
 
 ```Go
@@ -367,6 +410,7 @@ func generateNormalSamples(nsamples int, mean, stddev float64, seed int64) []flo
 
 ```
 searchKey: rand_test.testNormalDistribution
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +421,7 @@ func testNormalDistribution(t *testing.T, nsamples int, mean, stddev float64, se
 
 ```
 searchKey: rand_test.TestStandardNormalValues
+tags: [private]
 ```
 
 ```Go
@@ -387,6 +432,7 @@ func TestStandardNormalValues(t *testing.T)
 
 ```
 searchKey: rand_test.TestNonStandardNormalValues
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +443,7 @@ func TestNonStandardNormalValues(t *testing.T)
 
 ```
 searchKey: rand_test.generateExponentialSamples
+tags: [private]
 ```
 
 ```Go
@@ -407,6 +454,7 @@ func generateExponentialSamples(nsamples int, rate float64, seed int64) []float6
 
 ```
 searchKey: rand_test.testExponentialDistribution
+tags: [private]
 ```
 
 ```Go
@@ -417,6 +465,7 @@ func testExponentialDistribution(t *testing.T, nsamples int, rate float64, seed 
 
 ```
 searchKey: rand_test.TestStandardExponentialValues
+tags: [private]
 ```
 
 ```Go
@@ -427,6 +476,7 @@ func TestStandardExponentialValues(t *testing.T)
 
 ```
 searchKey: rand_test.TestNonStandardExponentialValues
+tags: [private]
 ```
 
 ```Go
@@ -437,6 +487,7 @@ func TestNonStandardExponentialValues(t *testing.T)
 
 ```
 searchKey: rand_test.initNorm
+tags: [private]
 ```
 
 ```Go
@@ -447,6 +498,7 @@ func initNorm() (testKn []uint32, testWn, testFn []float32)
 
 ```
 searchKey: rand_test.initExp
+tags: [private]
 ```
 
 ```Go
@@ -457,6 +509,7 @@ func initExp() (testKe []uint32, testWe, testFe []float32)
 
 ```
 searchKey: rand_test.compareUint32Slices
+tags: [private]
 ```
 
 ```Go
@@ -469,6 +522,7 @@ compareUint32Slices returns the first index where the two slices disagree, or <0
 
 ```
 searchKey: rand_test.compareFloat32Slices
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +535,7 @@ compareFloat32Slices returns the first index where the two slices disagree, or <
 
 ```
 searchKey: rand_test.TestNormTables
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +546,7 @@ func TestNormTables(t *testing.T)
 
 ```
 searchKey: rand_test.TestExpTables
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +557,7 @@ func TestExpTables(t *testing.T)
 
 ```
 searchKey: rand_test.hasSlowFloatingPoint
+tags: [private]
 ```
 
 ```Go
@@ -511,6 +568,7 @@ func hasSlowFloatingPoint() bool
 
 ```
 searchKey: rand_test.TestFloat32
+tags: [private]
 ```
 
 ```Go
@@ -521,6 +579,7 @@ func TestFloat32(t *testing.T)
 
 ```
 searchKey: rand_test.testReadUniformity
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +590,7 @@ func testReadUniformity(t *testing.T, n int, seed int64)
 
 ```
 searchKey: rand_test.TestReadUniformity
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +601,7 @@ func TestReadUniformity(t *testing.T)
 
 ```
 searchKey: rand_test.TestReadEmpty
+tags: [private]
 ```
 
 ```Go
@@ -551,6 +612,7 @@ func TestReadEmpty(t *testing.T)
 
 ```
 searchKey: rand_test.TestReadByOneByte
+tags: [private]
 ```
 
 ```Go
@@ -561,6 +623,7 @@ func TestReadByOneByte(t *testing.T)
 
 ```
 searchKey: rand_test.TestReadSeedReset
+tags: [private]
 ```
 
 ```Go
@@ -571,6 +634,7 @@ func TestReadSeedReset(t *testing.T)
 
 ```
 searchKey: rand_test.TestShuffleSmall
+tags: [private]
 ```
 
 ```Go
@@ -581,6 +645,7 @@ func TestShuffleSmall(t *testing.T)
 
 ```
 searchKey: rand_test.encodePerm
+tags: [private]
 ```
 
 ```Go
@@ -593,6 +658,7 @@ encodePerm converts from a permuted slice of length n, such as Perm generates, t
 
 ```
 searchKey: rand_test.TestUniformFactorial
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +671,7 @@ TestUniformFactorial tests several ways of generating a uniform value in [0, n!)
 
 ```
 searchKey: rand_test.BenchmarkInt63Threadsafe
+tags: [private]
 ```
 
 ```Go
@@ -615,6 +682,7 @@ func BenchmarkInt63Threadsafe(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkInt63ThreadsafeParallel
+tags: [private]
 ```
 
 ```Go
@@ -625,6 +693,7 @@ func BenchmarkInt63ThreadsafeParallel(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkInt63Unthreadsafe
+tags: [private]
 ```
 
 ```Go
@@ -635,6 +704,7 @@ func BenchmarkInt63Unthreadsafe(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkIntn1000
+tags: [private]
 ```
 
 ```Go
@@ -645,6 +715,7 @@ func BenchmarkIntn1000(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkInt63n1000
+tags: [private]
 ```
 
 ```Go
@@ -655,6 +726,7 @@ func BenchmarkInt63n1000(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkInt31n1000
+tags: [private]
 ```
 
 ```Go
@@ -665,6 +737,7 @@ func BenchmarkInt31n1000(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkFloat32
+tags: [private]
 ```
 
 ```Go
@@ -675,6 +748,7 @@ func BenchmarkFloat32(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkFloat64
+tags: [private]
 ```
 
 ```Go
@@ -685,6 +759,7 @@ func BenchmarkFloat64(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkPerm3
+tags: [private]
 ```
 
 ```Go
@@ -695,6 +770,7 @@ func BenchmarkPerm3(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkPerm30
+tags: [private]
 ```
 
 ```Go
@@ -705,6 +781,7 @@ func BenchmarkPerm30(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkPerm30ViaShuffle
+tags: [private]
 ```
 
 ```Go
@@ -715,6 +792,7 @@ func BenchmarkPerm30ViaShuffle(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkShuffleOverhead
+tags: [private]
 ```
 
 ```Go
@@ -727,6 +805,7 @@ BenchmarkShuffleOverhead uses a minimal swap function to measure just the shuffl
 
 ```
 searchKey: rand_test.BenchmarkRead3
+tags: [private]
 ```
 
 ```Go
@@ -737,6 +816,7 @@ func BenchmarkRead3(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkRead64
+tags: [private]
 ```
 
 ```Go
@@ -747,6 +827,7 @@ func BenchmarkRead64(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkRead1000
+tags: [private]
 ```
 
 ```Go
@@ -757,6 +838,7 @@ func BenchmarkRead1000(b *testing.B)
 
 ```
 searchKey: rand_test.TestRegress
+tags: [private]
 ```
 
 ```Go

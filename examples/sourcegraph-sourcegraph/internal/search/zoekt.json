@@ -4,7 +4,9 @@
     "identifier": "zoekt",
     "newPage": true,
     "searchKey": "internal/search/zoekt",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "TextRequest",
                 "newPage": false,
                 "searchKey": "zoekt.TextRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "SymbolRequest",
                 "newPage": false,
                 "searchKey": "zoekt.SymbolRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "maxUnindexedRepoRevSearchesPerQuery",
                 "newPage": false,
                 "searchKey": "zoekt.maxUnindexedRepoRevSearchesPerQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "defaultMaxSearchResults",
                 "newPage": false,
                 "searchKey": "zoekt.defaultMaxSearchResults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +131,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -145,7 +151,9 @@
                 "identifier": "headBranch",
                 "newPage": false,
                 "searchKey": "zoekt.headBranch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -165,7 +173,9 @@
                 "identifier": "defaultTimeout",
                 "newPage": false,
                 "searchKey": "zoekt.defaultTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -188,7 +198,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -206,9 +218,7 @@
                 "identifier": "IndexedRequestType",
                 "newPage": false,
                 "searchKey": "zoekt.IndexedRequestType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -228,9 +238,7 @@
                 "identifier": "IndexedRepoRevs",
                 "newPage": false,
                 "searchKey": "zoekt.IndexedRepoRevs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -248,7 +256,9 @@
                       "identifier": "zoektIndexedRepos",
                       "newPage": false,
                       "searchKey": "zoekt.zoektIndexedRepos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -268,7 +278,9 @@
                       "identifier": "IndexedRepoRevs.add",
                       "newPage": false,
                       "searchKey": "zoekt.IndexedRepoRevs.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -288,7 +300,9 @@
                       "identifier": "IndexedRepoRevs.getRepoInputRev",
                       "newPage": false,
                       "searchKey": "zoekt.IndexedRepoRevs.getRepoInputRev",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -311,9 +325,7 @@
                 "identifier": "IndexedSearchRequest",
                 "newPage": false,
                 "searchKey": "zoekt.IndexedSearchRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -331,9 +343,7 @@
                       "identifier": "NewIndexedSearchRequest",
                       "newPage": false,
                       "searchKey": "zoekt.NewIndexedSearchRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -353,9 +363,7 @@
                       "identifier": "IndexedSearchRequest.Repos",
                       "newPage": false,
                       "searchKey": "zoekt.IndexedSearchRequest.Repos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -375,9 +383,7 @@
                       "identifier": "IndexedSearchRequest.Search",
                       "newPage": false,
                       "searchKey": "zoekt.IndexedSearchRequest.Search",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -400,7 +406,9 @@
                 "identifier": "repoRevFunc",
                 "newPage": false,
                 "searchKey": "zoekt.repoRevFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -423,7 +431,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -441,7 +451,9 @@
                 "identifier": "zoektSearch",
                 "newPage": false,
                 "searchKey": "zoekt.zoektSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -461,7 +473,9 @@
                 "identifier": "getRepos",
                 "newPage": false,
                 "searchKey": "zoekt.getRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -481,7 +495,9 @@
                 "identifier": "bufferedSender",
                 "newPage": false,
                 "searchKey": "zoekt.bufferedSender",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -501,7 +517,9 @@
                 "identifier": "zoektSearchReposOnly",
                 "newPage": false,
                 "searchKey": "zoekt.zoektSearchReposOnly",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -521,7 +539,9 @@
                 "identifier": "zoektFileMatchToLineMatches",
                 "newPage": false,
                 "searchKey": "zoekt.zoektFileMatchToLineMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -541,7 +561,9 @@
                 "identifier": "escape",
                 "newPage": false,
                 "searchKey": "zoekt.escape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -561,7 +583,9 @@
                 "identifier": "zoektFileMatchToSymbolResults",
                 "newPage": false,
                 "searchKey": "zoekt.zoektFileMatchToSymbolResults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,7 +605,9 @@
                 "identifier": "contextWithoutDeadline",
                 "newPage": false,
                 "searchKey": "zoekt.contextWithoutDeadline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -601,7 +627,9 @@
                 "identifier": "queryToZoektQuery",
                 "newPage": false,
                 "searchKey": "zoekt.queryToZoektQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -621,7 +649,9 @@
                 "identifier": "limitUnindexedRepos",
                 "newPage": false,
                 "searchKey": "zoekt.limitUnindexedRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -641,9 +671,7 @@
                 "identifier": "FileRe",
                 "newPage": false,
                 "searchKey": "zoekt.FileRe",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -663,7 +691,9 @@
                 "identifier": "noOpAnyChar",
                 "newPage": false,
                 "searchKey": "zoekt.noOpAnyChar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -683,7 +713,9 @@
                 "identifier": "parseRe",
                 "newPage": false,
                 "searchKey": "zoekt.parseRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -703,7 +735,9 @@
                 "identifier": "getSpanContext",
                 "newPage": false,
                 "searchKey": "zoekt.getSpanContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -723,9 +757,7 @@
                 "identifier": "SearchOpts",
                 "newPage": false,
                 "searchKey": "zoekt.SearchOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -745,9 +777,7 @@
                 "identifier": "ResultCountFactor",
                 "newPage": false,
                 "searchKey": "zoekt.ResultCountFactor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -767,7 +797,9 @@
                 "identifier": "TestIndexedSearch",
                 "newPage": false,
                 "searchKey": "zoekt.TestIndexedSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -787,7 +819,9 @@
                 "identifier": "mkStatusMap",
                 "newPage": false,
                 "searchKey": "zoekt.mkStatusMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -807,7 +841,9 @@
                 "identifier": "TestZoektIndexedRepos",
                 "newPage": false,
                 "searchKey": "zoekt.TestZoektIndexedRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -827,7 +863,9 @@
                 "identifier": "TestZoektResultCountFactor",
                 "newPage": false,
                 "searchKey": "zoekt.TestZoektResultCountFactor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -847,7 +885,9 @@
                 "identifier": "TestQueryToZoektQuery",
                 "newPage": false,
                 "searchKey": "zoekt.TestQueryToZoektQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -867,7 +907,9 @@
                 "identifier": "queryEqual",
                 "newPage": false,
                 "searchKey": "zoekt.queryEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -887,7 +929,9 @@
                 "identifier": "generateZoektMatches",
                 "newPage": false,
                 "searchKey": "zoekt.generateZoektMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -907,7 +951,9 @@
                 "identifier": "TestZoektIndexedRepos_single",
                 "newPage": false,
                 "searchKey": "zoekt.TestZoektIndexedRepos_single",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -927,7 +973,9 @@
                 "identifier": "TestZoektFileMatchToSymbolResults",
                 "newPage": false,
                 "searchKey": "zoekt.TestZoektFileMatchToSymbolResults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -947,7 +995,9 @@
                 "identifier": "repoRevsSliceToMap",
                 "newPage": false,
                 "searchKey": "zoekt.repoRevsSliceToMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -967,7 +1017,9 @@
                 "identifier": "TestContextWithoutDeadline",
                 "newPage": false,
                 "searchKey": "zoekt.TestContextWithoutDeadline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -987,7 +1039,9 @@
                 "identifier": "TestContextWithoutDeadline_cancel",
                 "newPage": false,
                 "searchKey": "zoekt.TestContextWithoutDeadline_cancel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1007,7 +1061,9 @@
                 "identifier": "TestBufferedSender",
                 "newPage": false,
                 "searchKey": "zoekt.TestBufferedSender",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1027,7 +1083,9 @@
                 "identifier": "makeRepositoryRevisions",
                 "newPage": false,
                 "searchKey": "zoekt.makeRepositoryRevisions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1047,7 +1105,9 @@
                 "identifier": "mkRepos",
                 "newPage": false,
                 "searchKey": "zoekt.mkRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1067,7 +1127,9 @@
                 "identifier": "matchesToFileMatches",
                 "newPage": false,
                 "searchKey": "zoekt.matchesToFileMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

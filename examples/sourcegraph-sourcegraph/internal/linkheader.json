@@ -4,7 +4,9 @@
     "identifier": "linkheader",
     "newPage": true,
     "searchKey": "internal/linkheader",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ExtractNextURL",
                 "newPage": false,
                 "searchKey": "linkheader.ExtractNextURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "ExtractURL",
                 "newPage": false,
                 "searchKey": "linkheader.ExtractURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

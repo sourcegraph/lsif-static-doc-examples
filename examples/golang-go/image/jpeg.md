@@ -131,7 +131,7 @@ JPEG is defined in ITU-T T.81: [https://www.w3.org/Graphics/JPEG/itu-t81.pdf](ht
     * [type huffIndex int](#huffIndex)
     * [type huffmanSpec struct](#huffmanSpec)
     * [type huffmanLUT []uint32](#huffmanLUT)
-        * [func (h *huffmanLUT) init(s huffmanSpec)](#huffmanLUT.init)
+        * [func (h *huffmanLUT) init(s huffmanSpec)](#huffmanLUT.init.writer.go)
     * [type writer interface](#writer)
     * [type encoder struct](#encoder)
         * [func (e *encoder) flush()](#encoder.flush)
@@ -154,10 +154,10 @@ JPEG is defined in ITU-T T.81: [https://www.w3.org/Graphics/JPEG/itu-t81.pdf](ht
     * [func idct(src *block)](#idct)
     * [func Decode(r io.Reader) (image.Image, error)](#Decode)
     * [func DecodeConfig(r io.Reader) (image.Config, error)](#DecodeConfig)
-    * [func init()](#init)
+    * [func init()](#init.reader.go)
     * [func min(x, y int) int](#min)
     * [func div(a, b int32) int32](#div)
-    * [func init()](#init)
+    * [func init()](#init.writer.go.0xc05ac482e8)
     * [func toYCbCr(m image.Image, p image.Point, yBlock, cbBlock, crBlock *block)](#toYCbCr)
     * [func grayToY(m *image.Gray, p image.Point, yBlock *block)](#grayToY)
     * [func rgbaToYCbCr(m *image.RGBA, p image.Point, yBlock, cbBlock, crBlock *block)](#rgbaToYCbCr)
@@ -170,7 +170,7 @@ JPEG is defined in ITU-T T.81: [https://www.w3.org/Graphics/JPEG/itu-t81.pdf](ht
     * [func TestDCT(t *testing.T)](#TestDCT)
     * [func differ(b0, b1 *block) bool](#differ)
     * [func alpha(i int) float64](#alpha)
-    * [func init()](#init)
+    * [func init()](#init.dct_test.go)
     * [func slowFDCT(b *block)](#slowFDCT)
     * [func slowIDCT(b *block)](#slowIDCT)
     * [func TestDecodeProgressive(t *testing.T)](#TestDecodeProgressive)
@@ -199,14 +199,11 @@ JPEG is defined in ITU-T T.81: [https://www.w3.org/Graphics/JPEG/itu-t81.pdf](ht
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="fix_0_298631336" href="#fix_0_298631336">const fix_0_298631336</a>
 
 ```
 searchKey: jpeg.fix_0_298631336
+tags: [private]
 ```
 
 ```Go
@@ -219,6 +216,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_0_390180644
+tags: [private]
 ```
 
 ```Go
@@ -231,6 +229,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_0_541196100
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +242,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_0_765366865
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +255,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_0_899976223
+tags: [private]
 ```
 
 ```Go
@@ -267,6 +268,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_1_175875602
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +281,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_1_501321110
+tags: [private]
 ```
 
 ```Go
@@ -291,6 +294,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_1_847759065
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +307,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_1_961570560
+tags: [private]
 ```
 
 ```Go
@@ -315,6 +320,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_2_053119869
+tags: [private]
 ```
 
 ```Go
@@ -327,6 +333,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_2_562915447
+tags: [private]
 ```
 
 ```Go
@@ -339,6 +346,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.fix_3_072711026
+tags: [private]
 ```
 
 ```Go
@@ -351,6 +359,7 @@ Trigonometric constants in 13-bit fixed point format.
 
 ```
 searchKey: jpeg.constBits
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +370,7 @@ const constBits = 13
 
 ```
 searchKey: jpeg.pass1Bits
+tags: [private]
 ```
 
 ```Go
@@ -371,6 +381,7 @@ const pass1Bits = 2
 
 ```
 searchKey: jpeg.centerJSample
+tags: [private]
 ```
 
 ```Go
@@ -381,6 +392,7 @@ const centerJSample = 128
 
 ```
 searchKey: jpeg.maxCodeLength
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +405,7 @@ maxCodeLength is the maximum (inclusive) number of bits in a Huffman code.
 
 ```
 searchKey: jpeg.maxNCodes
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +418,7 @@ maxNCodes is the maximum (inclusive) number of codes in a Huffman tree.
 
 ```
 searchKey: jpeg.lutSize
+tags: [private]
 ```
 
 ```Go
@@ -417,6 +431,7 @@ lutSize is the log-2 size of the Huffman decoder's look-up table.
 
 ```
 searchKey: jpeg.blockSize
+tags: [private]
 ```
 
 ```Go
@@ -428,6 +443,7 @@ const blockSize = 64 // A DCT block is 8x8.
 
 ```
 searchKey: jpeg.w1
+tags: [private]
 ```
 
 ```Go
@@ -439,6 +455,7 @@ const w1 = 2841 // 2048*sqrt(2)*cos(1*pi/16)
 
 ```
 searchKey: jpeg.w2
+tags: [private]
 ```
 
 ```Go
@@ -450,6 +467,7 @@ const w2 = 2676 // 2048*sqrt(2)*cos(2*pi/16)
 
 ```
 searchKey: jpeg.w3
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +479,7 @@ const w3 = 2408 // 2048*sqrt(2)*cos(3*pi/16)
 
 ```
 searchKey: jpeg.w5
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +491,7 @@ const w5 = 1609 // 2048*sqrt(2)*cos(5*pi/16)
 
 ```
 searchKey: jpeg.w6
+tags: [private]
 ```
 
 ```Go
@@ -483,6 +503,7 @@ const w6 = 1108 // 2048*sqrt(2)*cos(6*pi/16)
 
 ```
 searchKey: jpeg.w7
+tags: [private]
 ```
 
 ```Go
@@ -494,6 +515,7 @@ const w7 = 565 // 2048*sqrt(2)*cos(7*pi/16)
 
 ```
 searchKey: jpeg.w1pw7
+tags: [private]
 ```
 
 ```Go
@@ -504,6 +526,7 @@ const w1pw7 = w1 + w7
 
 ```
 searchKey: jpeg.w1mw7
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +537,7 @@ const w1mw7 = w1 - w7
 
 ```
 searchKey: jpeg.w2pw6
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +548,7 @@ const w2pw6 = w2 + w6
 
 ```
 searchKey: jpeg.w2mw6
+tags: [private]
 ```
 
 ```Go
@@ -534,6 +559,7 @@ const w2mw6 = w2 - w6
 
 ```
 searchKey: jpeg.w3pw5
+tags: [private]
 ```
 
 ```Go
@@ -544,6 +570,7 @@ const w3pw5 = w3 + w5
 
 ```
 searchKey: jpeg.w3mw5
+tags: [private]
 ```
 
 ```Go
@@ -554,6 +581,7 @@ const w3mw5 = w3 - w5
 
 ```
 searchKey: jpeg.r2
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +593,7 @@ const r2 = 181 // 256/sqrt(2)
 
 ```
 searchKey: jpeg.dcTable
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +604,7 @@ const dcTable = 0
 
 ```
 searchKey: jpeg.acTable
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +615,7 @@ const acTable = 1
 
 ```
 searchKey: jpeg.maxTc
+tags: [private]
 ```
 
 ```Go
@@ -595,6 +626,7 @@ const maxTc = 1
 
 ```
 searchKey: jpeg.maxTh
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +637,7 @@ const maxTh = 3
 
 ```
 searchKey: jpeg.maxTq
+tags: [private]
 ```
 
 ```Go
@@ -615,6 +648,7 @@ const maxTq = 3
 
 ```
 searchKey: jpeg.maxComponents
+tags: [private]
 ```
 
 ```Go
@@ -625,6 +659,7 @@ const maxComponents = 4
 
 ```
 searchKey: jpeg.sof0Marker
+tags: [private]
 ```
 
 ```Go
@@ -636,6 +671,7 @@ const sof0Marker = 0xc0 // Start Of Frame (Baseline Sequential).
 
 ```
 searchKey: jpeg.sof1Marker
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +683,7 @@ const sof1Marker = 0xc1 // Start Of Frame (Extended Sequential).
 
 ```
 searchKey: jpeg.sof2Marker
+tags: [private]
 ```
 
 ```Go
@@ -658,6 +695,7 @@ const sof2Marker = 0xc2 // Start Of Frame (Progressive).
 
 ```
 searchKey: jpeg.dhtMarker
+tags: [private]
 ```
 
 ```Go
@@ -669,6 +707,7 @@ const dhtMarker = 0xc4 // Define Huffman Table.
 
 ```
 searchKey: jpeg.rst0Marker
+tags: [private]
 ```
 
 ```Go
@@ -680,6 +719,7 @@ const rst0Marker = 0xd0 // ReSTart (0).
 
 ```
 searchKey: jpeg.rst7Marker
+tags: [private]
 ```
 
 ```Go
@@ -691,6 +731,7 @@ const rst7Marker = 0xd7 // ReSTart (7).
 
 ```
 searchKey: jpeg.soiMarker
+tags: [private]
 ```
 
 ```Go
@@ -702,6 +743,7 @@ const soiMarker = 0xd8 // Start Of Image.
 
 ```
 searchKey: jpeg.eoiMarker
+tags: [private]
 ```
 
 ```Go
@@ -713,6 +755,7 @@ const eoiMarker = 0xd9 // End Of Image.
 
 ```
 searchKey: jpeg.sosMarker
+tags: [private]
 ```
 
 ```Go
@@ -724,6 +767,7 @@ const sosMarker = 0xda // Start Of Scan.
 
 ```
 searchKey: jpeg.dqtMarker
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +779,7 @@ const dqtMarker = 0xdb // Define Quantization Table.
 
 ```
 searchKey: jpeg.driMarker
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +791,7 @@ const driMarker = 0xdd // Define Restart Interval.
 
 ```
 searchKey: jpeg.comMarker
+tags: [private]
 ```
 
 ```Go
@@ -757,6 +803,7 @@ const comMarker = 0xfe // COMment.
 
 ```
 searchKey: jpeg.app0Marker
+tags: [private]
 ```
 
 ```Go
@@ -769,6 +816,7 @@ const app0Marker = 0xe0
 
 ```
 searchKey: jpeg.app14Marker
+tags: [private]
 ```
 
 ```Go
@@ -779,6 +827,7 @@ const app14Marker = 0xee
 
 ```
 searchKey: jpeg.app15Marker
+tags: [private]
 ```
 
 ```Go
@@ -789,6 +838,7 @@ const app15Marker = 0xef
 
 ```
 searchKey: jpeg.adobeTransformUnknown
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +851,7 @@ See [https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html#Adobe](htt
 
 ```
 searchKey: jpeg.adobeTransformYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -813,6 +864,7 @@ See [https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html#Adobe](htt
 
 ```
 searchKey: jpeg.adobeTransformYCbCrK
+tags: [private]
 ```
 
 ```Go
@@ -825,6 +877,7 @@ See [https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html#Adobe](htt
 
 ```
 searchKey: jpeg.quantIndexLuminance
+tags: [private]
 ```
 
 ```Go
@@ -835,6 +888,7 @@ const quantIndexLuminance quantIndex = iota
 
 ```
 searchKey: jpeg.quantIndexChrominance
+tags: [private]
 ```
 
 ```Go
@@ -845,6 +899,7 @@ const quantIndexChrominance
 
 ```
 searchKey: jpeg.nQuantIndex
+tags: [private]
 ```
 
 ```Go
@@ -855,6 +910,7 @@ const nQuantIndex
 
 ```
 searchKey: jpeg.huffIndexLuminanceDC
+tags: [private]
 ```
 
 ```Go
@@ -865,6 +921,7 @@ const huffIndexLuminanceDC huffIndex = iota
 
 ```
 searchKey: jpeg.huffIndexLuminanceAC
+tags: [private]
 ```
 
 ```Go
@@ -875,6 +932,7 @@ const huffIndexLuminanceAC
 
 ```
 searchKey: jpeg.huffIndexChrominanceDC
+tags: [private]
 ```
 
 ```Go
@@ -885,6 +943,7 @@ const huffIndexChrominanceDC
 
 ```
 searchKey: jpeg.huffIndexChrominanceAC
+tags: [private]
 ```
 
 ```Go
@@ -895,6 +954,7 @@ const huffIndexChrominanceAC
 
 ```
 searchKey: jpeg.nHuffIndex
+tags: [private]
 ```
 
 ```Go
@@ -905,7 +965,6 @@ const nHuffIndex
 
 ```
 searchKey: jpeg.DefaultQuality
-tags: [exported]
 ```
 
 ```Go
@@ -916,14 +975,11 @@ DefaultQuality is the default quality encoding parameter.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="errShortHuffmanData" href="#errShortHuffmanData">var errShortHuffmanData</a>
 
 ```
 searchKey: jpeg.errShortHuffmanData
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +992,7 @@ errShortHuffmanData means that an unexpected EOF occurred while decoding Huffman
 
 ```
 searchKey: jpeg.errUnsupportedSubsamplingRatio
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +1003,7 @@ var errUnsupportedSubsamplingRatio = UnsupportedError("luma/chroma subsampling r
 
 ```
 searchKey: jpeg.unzig
+tags: [private]
 ```
 
 ```Go
@@ -958,6 +1016,7 @@ unzig maps from the zig-zag ordering to the natural ordering. For example, unzig
 
 ```
 searchKey: jpeg.errMissingFF00
+tags: [private]
 ```
 
 ```Go
@@ -970,6 +1029,7 @@ errMissingFF00 means that readByteStuffedByte encountered an 0xff byte (a marker
 
 ```
 searchKey: jpeg.bitCount
+tags: [private]
 ```
 
 ```Go
@@ -982,6 +1042,7 @@ bitCount counts the number of bits needed to hold an integer.
 
 ```
 searchKey: jpeg.unscaledQuant
+tags: [private]
 ```
 
 ```Go
@@ -994,6 +1055,7 @@ unscaledQuant are the unscaled quantization tables in zig-zag order. Each encode
 
 ```
 searchKey: jpeg.theHuffmanSpec
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +1068,7 @@ theHuffmanSpec is the Huffman encoding specifications. This encoder uses the sam
 
 ```
 searchKey: jpeg.theHuffmanLUT
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1081,7 @@ theHuffmanLUT are compiled representations of theHuffmanSpec.
 
 ```
 searchKey: jpeg.sosHeaderY
+tags: [private]
 ```
 
 ```Go
@@ -1041,6 +1105,7 @@ sosHeaderY is the SOS marker "\xff\xda" followed by 8 bytes:
 
 ```
 searchKey: jpeg.sosHeaderYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -1064,6 +1129,7 @@ sosHeaderYCbCr is the SOS marker "\xff\xda" followed by 12 bytes:
 
 ```
 searchKey: jpeg.cosines
+tags: [private]
 ```
 
 ```Go
@@ -1075,6 +1141,7 @@ var cosines [32]float64 // cosines[k] = cos(π/2 * k/8)
 
 ```
 searchKey: jpeg.testBlocks
+tags: [private]
 ```
 
 ```Go
@@ -1087,6 +1154,7 @@ testBlocks are the first 10 pre-IDCT blocks from ../testdata/video-001.jpeg.
 
 ```
 searchKey: jpeg.zigzag
+tags: [private]
 ```
 
 ```Go
@@ -1099,6 +1167,7 @@ zigzag maps from the natural ordering to the zig-zag ordering. For example, zigz
 
 ```
 searchKey: jpeg.unscaledQuantInNaturalOrder
+tags: [private]
 ```
 
 ```Go
@@ -1111,6 +1180,7 @@ unscaledQuantInNaturalOrder are the unscaled quantization tables in natural (not
 
 ```
 searchKey: jpeg.testCase
+tags: [private]
 ```
 
 ```Go
@@ -1119,14 +1189,11 @@ var testCase = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="huffman" href="#huffman">type huffman struct</a>
 
 ```
 searchKey: jpeg.huffman
+tags: [private]
 ```
 
 ```Go
@@ -1157,6 +1224,7 @@ huffman is a Huffman decoder, specified in section C.
 
 ```
 searchKey: jpeg.block
+tags: [private]
 ```
 
 ```Go
@@ -1167,6 +1235,7 @@ type block [blockSize]int32
 
 ```
 searchKey: jpeg.block.String
+tags: [private]
 ```
 
 ```Go
@@ -1177,7 +1246,6 @@ func (b *block) String() string
 
 ```
 searchKey: jpeg.FormatError
-tags: [exported]
 ```
 
 ```Go
@@ -1190,7 +1258,6 @@ A FormatError reports that the input is not a valid JPEG.
 
 ```
 searchKey: jpeg.FormatError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1201,7 +1268,6 @@ func (e FormatError) Error() string
 
 ```
 searchKey: jpeg.UnsupportedError
-tags: [exported]
 ```
 
 ```Go
@@ -1214,7 +1280,6 @@ An UnsupportedError reports that the input uses a valid but unimplemented JPEG f
 
 ```
 searchKey: jpeg.UnsupportedError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1225,6 +1290,7 @@ func (e UnsupportedError) Error() string
 
 ```
 searchKey: jpeg.component
+tags: [private]
 ```
 
 ```Go
@@ -1242,7 +1308,6 @@ Component specification, specified in section B.2.2.
 
 ```
 searchKey: jpeg.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -1258,6 +1323,7 @@ Deprecated: Reader is not used by the image/jpeg package and should not be used 
 
 ```
 searchKey: jpeg.bits
+tags: [private]
 ```
 
 ```Go
@@ -1274,6 +1340,7 @@ bits holds the unprocessed bits that have been taken from the byte-stream. The n
 
 ```
 searchKey: jpeg.decoder
+tags: [private]
 ```
 
 ```Go
@@ -1327,6 +1394,7 @@ type decoder struct {
 
 ```
 searchKey: jpeg.decoder.ensureNBits
+tags: [private]
 ```
 
 ```Go
@@ -1339,6 +1407,7 @@ ensureNBits reads bytes from the byte buffer to ensure that d.bits.n is at least
 
 ```
 searchKey: jpeg.decoder.receiveExtend
+tags: [private]
 ```
 
 ```Go
@@ -1351,6 +1420,7 @@ receiveExtend is the composition of RECEIVE and EXTEND, specified in section F.2
 
 ```
 searchKey: jpeg.decoder.processDHT
+tags: [private]
 ```
 
 ```Go
@@ -1363,6 +1433,7 @@ processDHT processes a Define Huffman Table marker, and initializes a huffman st
 
 ```
 searchKey: jpeg.decoder.decodeHuffman
+tags: [private]
 ```
 
 ```Go
@@ -1375,6 +1446,7 @@ decodeHuffman returns the next Huffman-coded value from the bit-stream, decoded 
 
 ```
 searchKey: jpeg.decoder.decodeBit
+tags: [private]
 ```
 
 ```Go
@@ -1385,6 +1457,7 @@ func (d *decoder) decodeBit() (bool, error)
 
 ```
 searchKey: jpeg.decoder.decodeBits
+tags: [private]
 ```
 
 ```Go
@@ -1395,6 +1468,7 @@ func (d *decoder) decodeBits(n int32) (uint32, error)
 
 ```
 searchKey: jpeg.decoder.fill
+tags: [private]
 ```
 
 ```Go
@@ -1407,6 +1481,7 @@ fill fills up the d.bytes.buf buffer from the underlying io.Reader. It should on
 
 ```
 searchKey: jpeg.decoder.unreadByteStuffedByte
+tags: [private]
 ```
 
 ```Go
@@ -1419,6 +1494,7 @@ unreadByteStuffedByte undoes the most recent readByteStuffedByte call, giving a 
 
 ```
 searchKey: jpeg.decoder.readByte
+tags: [private]
 ```
 
 ```Go
@@ -1431,6 +1507,7 @@ readByte returns the next byte, whether buffered or not buffered. It does not ca
 
 ```
 searchKey: jpeg.decoder.readByteStuffedByte
+tags: [private]
 ```
 
 ```Go
@@ -1443,6 +1520,7 @@ readByteStuffedByte is like readByte but is for byte-stuffed Huffman data.
 
 ```
 searchKey: jpeg.decoder.readFull
+tags: [private]
 ```
 
 ```Go
@@ -1455,6 +1533,7 @@ readFull reads exactly len(p) bytes into p. It does not care about byte stuffing
 
 ```
 searchKey: jpeg.decoder.ignore
+tags: [private]
 ```
 
 ```Go
@@ -1467,6 +1546,7 @@ ignore ignores the next n bytes.
 
 ```
 searchKey: jpeg.decoder.processSOF
+tags: [private]
 ```
 
 ```Go
@@ -1479,6 +1559,7 @@ Specified in section B.2.2.
 
 ```
 searchKey: jpeg.decoder.processDQT
+tags: [private]
 ```
 
 ```Go
@@ -1491,6 +1572,7 @@ Specified in section B.2.4.1.
 
 ```
 searchKey: jpeg.decoder.processDRI
+tags: [private]
 ```
 
 ```Go
@@ -1503,6 +1585,7 @@ Specified in section B.2.4.4.
 
 ```
 searchKey: jpeg.decoder.processApp0Marker
+tags: [private]
 ```
 
 ```Go
@@ -1513,6 +1596,7 @@ func (d *decoder) processApp0Marker(n int) error
 
 ```
 searchKey: jpeg.decoder.processApp14Marker
+tags: [private]
 ```
 
 ```Go
@@ -1523,6 +1607,7 @@ func (d *decoder) processApp14Marker(n int) error
 
 ```
 searchKey: jpeg.decoder.decode
+tags: [private]
 ```
 
 ```Go
@@ -1535,6 +1620,7 @@ decode reads a JPEG image from r and returns it as an image.Image.
 
 ```
 searchKey: jpeg.decoder.applyBlack
+tags: [private]
 ```
 
 ```Go
@@ -1549,6 +1635,7 @@ Adobe CMYK JPEG images are inverted, where 255 means no ink instead of full ink,
 
 ```
 searchKey: jpeg.decoder.isRGB
+tags: [private]
 ```
 
 ```Go
@@ -1559,6 +1646,7 @@ func (d *decoder) isRGB() bool
 
 ```
 searchKey: jpeg.decoder.convertToRGB
+tags: [private]
 ```
 
 ```Go
@@ -1569,6 +1657,7 @@ func (d *decoder) convertToRGB() (image.Image, error)
 
 ```
 searchKey: jpeg.decoder.makeImg
+tags: [private]
 ```
 
 ```Go
@@ -1581,6 +1670,7 @@ makeImg allocates and initializes the destination image.
 
 ```
 searchKey: jpeg.decoder.processSOS
+tags: [private]
 ```
 
 ```Go
@@ -1593,6 +1683,7 @@ Specified in section B.2.3.
 
 ```
 searchKey: jpeg.decoder.refine
+tags: [private]
 ```
 
 ```Go
@@ -1605,6 +1696,7 @@ refine decodes a successive approximation refinement block, as specified in sect
 
 ```
 searchKey: jpeg.decoder.refineNonZeroes
+tags: [private]
 ```
 
 ```Go
@@ -1617,6 +1709,7 @@ refineNonZeroes refines non-zero entries of b in zig-zag order. If nz >= 0, the 
 
 ```
 searchKey: jpeg.decoder.reconstructProgressiveImage
+tags: [private]
 ```
 
 ```Go
@@ -1627,6 +1720,7 @@ func (d *decoder) reconstructProgressiveImage() error
 
 ```
 searchKey: jpeg.decoder.reconstructBlock
+tags: [private]
 ```
 
 ```Go
@@ -1639,6 +1733,7 @@ reconstructBlock dequantizes, performs the inverse DCT and stores the block to t
 
 ```
 searchKey: jpeg.quantIndex
+tags: [private]
 ```
 
 ```Go
@@ -1649,6 +1744,7 @@ type quantIndex int
 
 ```
 searchKey: jpeg.huffIndex
+tags: [private]
 ```
 
 ```Go
@@ -1659,6 +1755,7 @@ type huffIndex int
 
 ```
 searchKey: jpeg.huffmanSpec
+tags: [private]
 ```
 
 ```Go
@@ -1676,6 +1773,7 @@ huffmanSpec specifies a Huffman encoding.
 
 ```
 searchKey: jpeg.huffmanLUT
+tags: [private]
 ```
 
 ```Go
@@ -1684,10 +1782,11 @@ type huffmanLUT []uint32
 
 huffmanLUT is a compiled look-up table representation of a huffmanSpec. Each value maps to a uint32 of which the 8 most significant bits hold the codeword size in bits and the 24 least significant bits hold the codeword. The maximum codeword size is 16 bits. 
 
-#### <a id="huffmanLUT.init" href="#huffmanLUT.init">func (h *huffmanLUT) init(s huffmanSpec)</a>
+#### <a id="huffmanLUT.init.writer.go" href="#huffmanLUT.init.writer.go">func (h *huffmanLUT) init(s huffmanSpec)</a>
 
 ```
 searchKey: jpeg.huffmanLUT.init
+tags: [private]
 ```
 
 ```Go
@@ -1698,6 +1797,7 @@ func (h *huffmanLUT) init(s huffmanSpec)
 
 ```
 searchKey: jpeg.writer
+tags: [private]
 ```
 
 ```Go
@@ -1714,6 +1814,7 @@ writer is a buffered writer.
 
 ```
 searchKey: jpeg.encoder
+tags: [private]
 ```
 
 ```Go
@@ -1737,6 +1838,7 @@ encoder encodes an image to the JPEG format.
 
 ```
 searchKey: jpeg.encoder.flush
+tags: [private]
 ```
 
 ```Go
@@ -1747,6 +1849,7 @@ func (e *encoder) flush()
 
 ```
 searchKey: jpeg.encoder.write
+tags: [private]
 ```
 
 ```Go
@@ -1757,6 +1860,7 @@ func (e *encoder) write(p []byte)
 
 ```
 searchKey: jpeg.encoder.writeByte
+tags: [private]
 ```
 
 ```Go
@@ -1767,6 +1871,7 @@ func (e *encoder) writeByte(b byte)
 
 ```
 searchKey: jpeg.encoder.emit
+tags: [private]
 ```
 
 ```Go
@@ -1779,6 +1884,7 @@ emit emits the least significant nBits bits of bits to the bit-stream. The preco
 
 ```
 searchKey: jpeg.encoder.emitHuff
+tags: [private]
 ```
 
 ```Go
@@ -1791,6 +1897,7 @@ emitHuff emits the given value with the given Huffman encoder.
 
 ```
 searchKey: jpeg.encoder.emitHuffRLE
+tags: [private]
 ```
 
 ```Go
@@ -1803,6 +1910,7 @@ emitHuffRLE emits a run of runLength copies of value encoded with the given Huff
 
 ```
 searchKey: jpeg.encoder.writeMarkerHeader
+tags: [private]
 ```
 
 ```Go
@@ -1815,6 +1923,7 @@ writeMarkerHeader writes the header for a marker with the given length.
 
 ```
 searchKey: jpeg.encoder.writeDQT
+tags: [private]
 ```
 
 ```Go
@@ -1827,6 +1936,7 @@ writeDQT writes the Define Quantization Table marker.
 
 ```
 searchKey: jpeg.encoder.writeSOF0
+tags: [private]
 ```
 
 ```Go
@@ -1839,6 +1949,7 @@ writeSOF0 writes the Start Of Frame (Baseline Sequential) marker.
 
 ```
 searchKey: jpeg.encoder.writeDHT
+tags: [private]
 ```
 
 ```Go
@@ -1851,6 +1962,7 @@ writeDHT writes the Define Huffman Table marker.
 
 ```
 searchKey: jpeg.encoder.writeBlock
+tags: [private]
 ```
 
 ```Go
@@ -1863,6 +1975,7 @@ writeBlock writes a block of pixel data using the given quantization table, retu
 
 ```
 searchKey: jpeg.encoder.writeSOS
+tags: [private]
 ```
 
 ```Go
@@ -1875,7 +1988,6 @@ writeSOS writes the StartOfScan marker.
 
 ```
 searchKey: jpeg.Options
-tags: [exported]
 ```
 
 ```Go
@@ -1890,6 +2002,7 @@ Options are the encoding parameters. Quality ranges from 1 to 100 inclusive, hig
 
 ```
 searchKey: jpeg.eofReader
+tags: [private]
 ```
 
 ```Go
@@ -1904,6 +2017,7 @@ type eofReader struct {
 
 ```
 searchKey: jpeg.eofReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -1912,14 +2026,11 @@ func (r *eofReader) Read(b []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="fdct" href="#fdct">func fdct(b *block)</a>
 
 ```
 searchKey: jpeg.fdct
+tags: [private]
 ```
 
 ```Go
@@ -1932,6 +2043,7 @@ fdct performs a forward DCT on an 8x8 block of coefficients, including a level s
 
 ```
 searchKey: jpeg.idct
+tags: [private]
 ```
 
 ```Go
@@ -1948,7 +2060,6 @@ For more on the actual algorithm, see Z. Wang, "Fast algorithms for the discrete
 
 ```
 searchKey: jpeg.Decode
-tags: [exported]
 ```
 
 ```Go
@@ -1961,7 +2072,6 @@ Decode reads a JPEG image from r and returns it as an image.Image.
 
 ```
 searchKey: jpeg.DecodeConfig
-tags: [exported]
 ```
 
 ```Go
@@ -1970,10 +2080,11 @@ func DecodeConfig(r io.Reader) (image.Config, error)
 
 DecodeConfig returns the color model and dimensions of a JPEG image without decoding the entire image. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.reader.go" href="#init.reader.go">func init()</a>
 
 ```
 searchKey: jpeg.init
+tags: [private]
 ```
 
 ```Go
@@ -1984,6 +2095,7 @@ func init()
 
 ```
 searchKey: jpeg.min
+tags: [private]
 ```
 
 ```Go
@@ -1996,6 +2108,7 @@ min returns the minimum of two integers.
 
 ```
 searchKey: jpeg.div
+tags: [private]
 ```
 
 ```Go
@@ -2004,10 +2117,11 @@ func div(a, b int32) int32
 
 div returns a/b rounded to the nearest integer, instead of rounded to zero. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.writer.go.0xc05ac482e8" href="#init.writer.go.0xc05ac482e8">func init()</a>
 
 ```
 searchKey: jpeg.init
+tags: [private]
 ```
 
 ```Go
@@ -2018,6 +2132,7 @@ func init()
 
 ```
 searchKey: jpeg.toYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -2030,6 +2145,7 @@ toYCbCr converts the 8x8 region of m whose top-left corner is p to its YCbCr val
 
 ```
 searchKey: jpeg.grayToY
+tags: [private]
 ```
 
 ```Go
@@ -2042,6 +2158,7 @@ grayToY stores the 8x8 region of m whose top-left corner is p in yBlock.
 
 ```
 searchKey: jpeg.rgbaToYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -2054,6 +2171,7 @@ rgbaToYCbCr is a specialized version of toYCbCr for image.RGBA images.
 
 ```
 searchKey: jpeg.yCbCrToYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -2066,6 +2184,7 @@ yCbCrToYCbCr is a specialized version of toYCbCr for image.YCbCr images.
 
 ```
 searchKey: jpeg.scale
+tags: [private]
 ```
 
 ```Go
@@ -2078,7 +2197,6 @@ scale scales the 16x16 region represented by the 4 src blocks to the 8x8 dst blo
 
 ```
 searchKey: jpeg.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -2091,6 +2209,7 @@ Encode writes the Image m to w in JPEG 4:2:0 baseline format with the given opti
 
 ```
 searchKey: jpeg.benchmarkDCT
+tags: [private]
 ```
 
 ```Go
@@ -2101,6 +2220,7 @@ func benchmarkDCT(b *testing.B, f func(*block))
 
 ```
 searchKey: jpeg.BenchmarkFDCT
+tags: [private]
 ```
 
 ```Go
@@ -2111,6 +2231,7 @@ func BenchmarkFDCT(b *testing.B)
 
 ```
 searchKey: jpeg.BenchmarkIDCT
+tags: [private]
 ```
 
 ```Go
@@ -2121,6 +2242,7 @@ func BenchmarkIDCT(b *testing.B)
 
 ```
 searchKey: jpeg.TestDCT
+tags: [private]
 ```
 
 ```Go
@@ -2131,6 +2253,7 @@ func TestDCT(t *testing.T)
 
 ```
 searchKey: jpeg.differ
+tags: [private]
 ```
 
 ```Go
@@ -2143,6 +2266,7 @@ differ reports whether any pair-wise elements in b0 and b1 differ by 2 or more. 
 
 ```
 searchKey: jpeg.alpha
+tags: [private]
 ```
 
 ```Go
@@ -2151,10 +2275,11 @@ func alpha(i int) float64
 
 alpha returns 1 if i is 0 and returns √2 otherwise. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.dct_test.go" href="#init.dct_test.go">func init()</a>
 
 ```
 searchKey: jpeg.init
+tags: [private]
 ```
 
 ```Go
@@ -2165,6 +2290,7 @@ func init()
 
 ```
 searchKey: jpeg.slowFDCT
+tags: [private]
 ```
 
 ```Go
@@ -2187,6 +2313,7 @@ b acts as both dst and src.
 
 ```
 searchKey: jpeg.slowIDCT
+tags: [private]
 ```
 
 ```Go
@@ -2209,6 +2336,7 @@ b acts as both dst and src.
 
 ```
 searchKey: jpeg.TestDecodeProgressive
+tags: [private]
 ```
 
 ```Go
@@ -2221,6 +2349,7 @@ TestDecodeProgressive tests that decoding the baseline and progressive versions 
 
 ```
 searchKey: jpeg.decodeFile
+tags: [private]
 ```
 
 ```Go
@@ -2231,6 +2360,7 @@ func decodeFile(filename string) (image.Image, error)
 
 ```
 searchKey: jpeg.TestDecodeEOF
+tags: [private]
 ```
 
 ```Go
@@ -2241,6 +2371,7 @@ func TestDecodeEOF(t *testing.T)
 
 ```
 searchKey: jpeg.check
+tags: [private]
 ```
 
 ```Go
@@ -2253,6 +2384,7 @@ check checks that the two pix data are equal, within the given bounds.
 
 ```
 searchKey: jpeg.pixString
+tags: [private]
 ```
 
 ```Go
@@ -2263,6 +2395,7 @@ func pixString(pix []byte, stride, x, y int) string
 
 ```
 searchKey: jpeg.TestTruncatedSOSDataDoesntPanic
+tags: [private]
 ```
 
 ```Go
@@ -2273,6 +2406,7 @@ func TestTruncatedSOSDataDoesntPanic(t *testing.T)
 
 ```
 searchKey: jpeg.TestLargeImageWithShortData
+tags: [private]
 ```
 
 ```Go
@@ -2283,6 +2417,7 @@ func TestLargeImageWithShortData(t *testing.T)
 
 ```
 searchKey: jpeg.TestPaddedRSTMarker
+tags: [private]
 ```
 
 ```Go
@@ -2293,6 +2428,7 @@ func TestPaddedRSTMarker(t *testing.T)
 
 ```
 searchKey: jpeg.TestExtraneousData
+tags: [private]
 ```
 
 ```Go
@@ -2303,6 +2439,7 @@ func TestExtraneousData(t *testing.T)
 
 ```
 searchKey: jpeg.benchmarkDecode
+tags: [private]
 ```
 
 ```Go
@@ -2313,6 +2450,7 @@ func benchmarkDecode(b *testing.B, filename string)
 
 ```
 searchKey: jpeg.BenchmarkDecodeBaseline
+tags: [private]
 ```
 
 ```Go
@@ -2323,6 +2461,7 @@ func BenchmarkDecodeBaseline(b *testing.B)
 
 ```
 searchKey: jpeg.BenchmarkDecodeProgressive
+tags: [private]
 ```
 
 ```Go
@@ -2333,6 +2472,7 @@ func BenchmarkDecodeProgressive(b *testing.B)
 
 ```
 searchKey: jpeg.TestZigUnzig
+tags: [private]
 ```
 
 ```Go
@@ -2343,6 +2483,7 @@ func TestZigUnzig(t *testing.T)
 
 ```
 searchKey: jpeg.TestUnscaledQuant
+tags: [private]
 ```
 
 ```Go
@@ -2353,6 +2494,7 @@ func TestUnscaledQuant(t *testing.T)
 
 ```
 searchKey: jpeg.delta
+tags: [private]
 ```
 
 ```Go
@@ -2363,6 +2505,7 @@ func delta(u0, u1 uint32) int64
 
 ```
 searchKey: jpeg.readPng
+tags: [private]
 ```
 
 ```Go
@@ -2373,6 +2516,7 @@ func readPng(filename string) (image.Image, error)
 
 ```
 searchKey: jpeg.TestWriter
+tags: [private]
 ```
 
 ```Go
@@ -2383,6 +2527,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: jpeg.TestWriteGrayscale
+tags: [private]
 ```
 
 ```Go
@@ -2395,6 +2540,7 @@ TestWriteGrayscale tests that a grayscale images survives a round-trip through e
 
 ```
 searchKey: jpeg.averageDelta
+tags: [private]
 ```
 
 ```Go
@@ -2407,6 +2553,7 @@ averageDelta returns the average delta in RGB space. The two images must have th
 
 ```
 searchKey: jpeg.TestEncodeYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -2417,6 +2564,7 @@ func TestEncodeYCbCr(t *testing.T)
 
 ```
 searchKey: jpeg.BenchmarkEncodeRGBA
+tags: [private]
 ```
 
 ```Go
@@ -2427,6 +2575,7 @@ func BenchmarkEncodeRGBA(b *testing.B)
 
 ```
 searchKey: jpeg.BenchmarkEncodeYCbCr
+tags: [private]
 ```
 
 ```Go

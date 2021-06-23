@@ -117,14 +117,11 @@ The AES operations in this package are not implemented using constant-time algor
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="gcmBlockSize" href="#gcmBlockSize">const gcmBlockSize</a>
 
 ```
 searchKey: aes.gcmBlockSize
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +132,7 @@ const gcmBlockSize = 16
 
 ```
 searchKey: aes.gcmTagSize
+tags: [private]
 ```
 
 ```Go
@@ -145,6 +143,7 @@ const gcmTagSize = 16
 
 ```
 searchKey: aes.gcmMinimumTagSize
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +155,7 @@ const gcmMinimumTagSize = 12 // NIST SP 800-38D recommends tags with 12 or more 
 
 ```
 searchKey: aes.gcmStandardNonceSize
+tags: [private]
 ```
 
 ```Go
@@ -166,7 +166,6 @@ const gcmStandardNonceSize = 12
 
 ```
 searchKey: aes.BlockSize
-tags: [exported]
 ```
 
 ```Go
@@ -179,6 +178,7 @@ The AES block size in bytes.
 
 ```
 searchKey: aes.poly
+tags: [private]
 ```
 
 ```Go
@@ -190,14 +190,11 @@ AES is based on the mathematical behavior of binary polynomials (polynomials ove
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="errOpen" href="#errOpen">var errOpen</a>
 
 ```
 searchKey: aes.errOpen
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +205,7 @@ var errOpen = errors.New("cipher: message authentication failed")
 
 ```
 searchKey: aes.supportsAES
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +216,7 @@ var supportsAES = cpu.X86.HasAES || cpu.ARM64.HasAES
 
 ```
 searchKey: aes.supportsGFMUL
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +227,7 @@ var supportsGFMUL = cpu.X86.HasPCLMULQDQ || cpu.ARM64.HasPMULL
 
 ```
 searchKey: aes.powx
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +240,7 @@ Powers of x mod poly in GF(2).
 
 ```
 searchKey: aes.sbox0
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +253,7 @@ FIPS-197 Figure 7. S-box substitution values in hexadecimal format.
 
 ```
 searchKey: aes.sbox1
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +266,7 @@ FIPS-197 Figure 14.  Inverse S-box substitution values in hexadecimal format.
 
 ```
 searchKey: aes.te0
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +277,7 @@ var te0 = ...
 
 ```
 searchKey: aes.te1
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +288,7 @@ var te1 = ...
 
 ```
 searchKey: aes.te2
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +299,7 @@ var te2 = ...
 
 ```
 searchKey: aes.te3
+tags: [private]
 ```
 
 ```Go
@@ -304,6 +310,7 @@ var te3 = ...
 
 ```
 searchKey: aes.td0
+tags: [private]
 ```
 
 ```Go
@@ -314,6 +321,7 @@ var td0 = ...
 
 ```
 searchKey: aes.td1
+tags: [private]
 ```
 
 ```Go
@@ -324,6 +332,7 @@ var td1 = ...
 
 ```
 searchKey: aes.td2
+tags: [private]
 ```
 
 ```Go
@@ -334,6 +343,7 @@ var td2 = ...
 
 ```
 searchKey: aes.td3
+tags: [private]
 ```
 
 ```Go
@@ -344,6 +354,7 @@ var td3 = ...
 
 ```
 searchKey: aes.keyTests
+tags: [private]
 ```
 
 ```Go
@@ -354,6 +365,7 @@ var keyTests = ...
 
 ```
 searchKey: aes.encryptTests
+tags: [private]
 ```
 
 ```Go
@@ -362,14 +374,11 @@ var encryptTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="aesCipherGCM" href="#aesCipherGCM">type aesCipherGCM struct</a>
 
 ```
 searchKey: aes.aesCipherGCM
+tags: [private]
 ```
 
 ```Go
@@ -384,6 +393,7 @@ aesCipherGCM implements crypto/cipher.gcmAble so that crypto/cipher.NewGCM will 
 
 ```
 searchKey: aes.aesCipherGCM.NewGCM
+tags: [private]
 ```
 
 ```Go
@@ -396,6 +406,7 @@ NewGCM returns the AES cipher wrapped in Galois Counter Mode. This is only calle
 
 ```
 searchKey: aes.gcmAsm
+tags: [private]
 ```
 
 ```Go
@@ -417,6 +428,7 @@ type gcmAsm struct {
 
 ```
 searchKey: aes.gcmAsm.NonceSize
+tags: [private]
 ```
 
 ```Go
@@ -427,6 +439,7 @@ func (g *gcmAsm) NonceSize() int
 
 ```
 searchKey: aes.gcmAsm.Overhead
+tags: [private]
 ```
 
 ```Go
@@ -437,6 +450,7 @@ func (g *gcmAsm) Overhead() int
 
 ```
 searchKey: aes.gcmAsm.Seal
+tags: [private]
 ```
 
 ```Go
@@ -449,6 +463,7 @@ Seal encrypts and authenticates plaintext. See the cipher.AEAD interface for det
 
 ```
 searchKey: aes.gcmAsm.Open
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +476,7 @@ Open authenticates and decrypts ciphertext. See the cipher.AEAD interface for de
 
 ```
 searchKey: aes.aesCipher
+tags: [private]
 ```
 
 ```Go
@@ -476,6 +492,7 @@ A cipher is an instance of AES encryption using a particular key.
 
 ```
 searchKey: aes.aesCipher.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -486,6 +503,7 @@ func (c *aesCipher) BlockSize() int
 
 ```
 searchKey: aes.aesCipher.Encrypt
+tags: [private]
 ```
 
 ```Go
@@ -496,6 +514,7 @@ func (c *aesCipher) Encrypt(dst, src []byte)
 
 ```
 searchKey: aes.aesCipher.Decrypt
+tags: [private]
 ```
 
 ```Go
@@ -506,7 +525,6 @@ func (c *aesCipher) Decrypt(dst, src []byte)
 
 ```
 searchKey: aes.KeySizeError
-tags: [exported]
 ```
 
 ```Go
@@ -517,7 +535,6 @@ type KeySizeError int
 
 ```
 searchKey: aes.KeySizeError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -528,6 +545,7 @@ func (k KeySizeError) Error() string
 
 ```
 searchKey: aes.aesCipherAsm
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +558,7 @@ type aesCipherAsm struct {
 
 ```
 searchKey: aes.aesCipherAsm.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -550,6 +569,7 @@ func (c *aesCipherAsm) BlockSize() int
 
 ```
 searchKey: aes.aesCipherAsm.Encrypt
+tags: [private]
 ```
 
 ```Go
@@ -560,6 +580,7 @@ func (c *aesCipherAsm) Encrypt(dst, src []byte)
 
 ```
 searchKey: aes.aesCipherAsm.Decrypt
+tags: [private]
 ```
 
 ```Go
@@ -570,6 +591,7 @@ func (c *aesCipherAsm) Decrypt(dst, src []byte)
 
 ```
 searchKey: aes.gcmAble
+tags: [private]
 ```
 
 ```Go
@@ -584,6 +606,7 @@ gcmAble is implemented by cipher.Blocks that can provide an optimized implementa
 
 ```
 searchKey: aes.cbcEncAble
+tags: [private]
 ```
 
 ```Go
@@ -598,6 +621,7 @@ cbcEncAble is implemented by cipher.Blocks that can provide an optimized impleme
 
 ```
 searchKey: aes.cbcDecAble
+tags: [private]
 ```
 
 ```Go
@@ -612,6 +636,7 @@ cbcDecAble is implemented by cipher.Blocks that can provide an optimized impleme
 
 ```
 searchKey: aes.ctrAble
+tags: [private]
 ```
 
 ```Go
@@ -626,6 +651,7 @@ ctrAble is implemented by cipher.Blocks that can provide an optimized implementa
 
 ```
 searchKey: aes.KeyTest
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +668,7 @@ Appendix A of FIPS 197: Key expansion examples
 
 ```
 searchKey: aes.CryptTest
+tags: [private]
 ```
 
 ```Go
@@ -658,6 +685,7 @@ Appendix B, C of FIPS 197: Cipher examples, Example vectors.
 
 ```
 searchKey: aes.testInterface
+tags: [private]
 ```
 
 ```Go
@@ -672,6 +700,7 @@ testInterface can be asserted to check that a type originates from this test gro
 
 ```
 searchKey: aes.testBlock
+tags: [private]
 ```
 
 ```Go
@@ -684,6 +713,7 @@ testBlock implements the cipher.Block interface and any *Able interfaces that ne
 
 ```
 searchKey: aes.testBlock.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +724,7 @@ func (*testBlock) BlockSize() int
 
 ```
 searchKey: aes.testBlock.Encrypt
+tags: [private]
 ```
 
 ```Go
@@ -704,6 +735,7 @@ func (*testBlock) Encrypt(a, b []byte)
 
 ```
 searchKey: aes.testBlock.Decrypt
+tags: [private]
 ```
 
 ```Go
@@ -714,6 +746,7 @@ func (*testBlock) Decrypt(a, b []byte)
 
 ```
 searchKey: aes.testBlock.NewGCM
+tags: [private]
 ```
 
 ```Go
@@ -724,6 +757,7 @@ func (*testBlock) NewGCM(int, int) (cipher.AEAD, error)
 
 ```
 searchKey: aes.testBlock.NewCBCEncrypter
+tags: [private]
 ```
 
 ```Go
@@ -734,6 +768,7 @@ func (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode
 
 ```
 searchKey: aes.testBlock.NewCBCDecrypter
+tags: [private]
 ```
 
 ```Go
@@ -744,6 +779,7 @@ func (*testBlock) NewCBCDecrypter([]byte) cipher.BlockMode
 
 ```
 searchKey: aes.testBlock.NewCTR
+tags: [private]
 ```
 
 ```Go
@@ -754,6 +790,7 @@ func (*testBlock) NewCTR([]byte) cipher.Stream
 
 ```
 searchKey: aes.testAEAD
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +803,7 @@ testAEAD implements the cipher.AEAD interface.
 
 ```
 searchKey: aes.testAEAD.NonceSize
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +814,7 @@ func (*testAEAD) NonceSize() int
 
 ```
 searchKey: aes.testAEAD.Overhead
+tags: [private]
 ```
 
 ```Go
@@ -786,6 +825,7 @@ func (*testAEAD) Overhead() int
 
 ```
 searchKey: aes.testAEAD.Seal
+tags: [private]
 ```
 
 ```Go
@@ -796,6 +836,7 @@ func (*testAEAD) Seal(a, b, c, d []byte) []byte
 
 ```
 searchKey: aes.testAEAD.Open
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +847,7 @@ func (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)
 
 ```
 searchKey: aes.testAEAD.InAESPackage
+tags: [private]
 ```
 
 ```Go
@@ -816,6 +858,7 @@ func (*testAEAD) InAESPackage() bool
 
 ```
 searchKey: aes.testBlockMode
+tags: [private]
 ```
 
 ```Go
@@ -828,6 +871,7 @@ testBlockMode implements the cipher.BlockMode interface.
 
 ```
 searchKey: aes.testBlockMode.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +882,7 @@ func (*testBlockMode) BlockSize() int
 
 ```
 searchKey: aes.testBlockMode.CryptBlocks
+tags: [private]
 ```
 
 ```Go
@@ -848,6 +893,7 @@ func (*testBlockMode) CryptBlocks(a, b []byte)
 
 ```
 searchKey: aes.testBlockMode.InAESPackage
+tags: [private]
 ```
 
 ```Go
@@ -858,6 +904,7 @@ func (*testBlockMode) InAESPackage() bool
 
 ```
 searchKey: aes.testStream
+tags: [private]
 ```
 
 ```Go
@@ -870,6 +917,7 @@ testStream implements the cipher.Stream interface.
 
 ```
 searchKey: aes.testStream.XORKeyStream
+tags: [private]
 ```
 
 ```Go
@@ -880,6 +928,7 @@ func (*testStream) XORKeyStream(a, b []byte)
 
 ```
 searchKey: aes.testStream.InAESPackage
+tags: [private]
 ```
 
 ```Go
@@ -888,14 +937,11 @@ func (*testStream) InAESPackage() bool
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="gcmAesInit" href="#gcmAesInit">func gcmAesInit(productTable *[256]byte, ks []uint32)</a>
 
 ```
 searchKey: aes.gcmAesInit
+tags: [private]
 ```
 
 ```Go
@@ -906,6 +952,7 @@ func gcmAesInit(productTable *[256]byte, ks []uint32)
 
 ```
 searchKey: aes.gcmAesData
+tags: [private]
 ```
 
 ```Go
@@ -916,6 +963,7 @@ func gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)
 
 ```
 searchKey: aes.gcmAesEnc
+tags: [private]
 ```
 
 ```Go
@@ -926,6 +974,7 @@ func gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []
 
 ```
 searchKey: aes.gcmAesDec
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +985,7 @@ func gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []
 
 ```
 searchKey: aes.gcmAesFinish
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +996,7 @@ func gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint
 
 ```
 searchKey: aes.sliceForAppend
+tags: [private]
 ```
 
 ```Go
@@ -958,6 +1009,7 @@ sliceForAppend takes a slice and a requested number of bytes. It returns a slice
 
 ```
 searchKey: aes.encryptBlockGo
+tags: [private]
 ```
 
 ```Go
@@ -970,6 +1022,7 @@ Encrypt one block from src into dst, using the expanded key xk.
 
 ```
 searchKey: aes.decryptBlockGo
+tags: [private]
 ```
 
 ```Go
@@ -982,6 +1035,7 @@ Decrypt one block from src into dst, using the expanded key xk.
 
 ```
 searchKey: aes.subw
+tags: [private]
 ```
 
 ```Go
@@ -994,6 +1048,7 @@ Apply sbox0 to each byte in w.
 
 ```
 searchKey: aes.rotw
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +1061,7 @@ Rotate
 
 ```
 searchKey: aes.expandKeyGo
+tags: [private]
 ```
 
 ```Go
@@ -1018,7 +1074,6 @@ Key expansion algorithm. See FIPS-197, Figure 11. Their rcon[i] is our powx[i-1]
 
 ```
 searchKey: aes.NewCipher
-tags: [exported]
 ```
 
 ```Go
@@ -1031,6 +1086,7 @@ NewCipher creates and returns a new cipher.Block. The key argument should be the
 
 ```
 searchKey: aes.newCipherGeneric
+tags: [private]
 ```
 
 ```Go
@@ -1043,6 +1099,7 @@ newCipherGeneric creates and returns a new cipher.Block implemented in pure Go.
 
 ```
 searchKey: aes.encryptBlockAsm
+tags: [private]
 ```
 
 ```Go
@@ -1053,6 +1110,7 @@ func encryptBlockAsm(nr int, xk *uint32, dst, src *byte)
 
 ```
 searchKey: aes.decryptBlockAsm
+tags: [private]
 ```
 
 ```Go
@@ -1063,6 +1121,7 @@ func decryptBlockAsm(nr int, xk *uint32, dst, src *byte)
 
 ```
 searchKey: aes.expandKeyAsm
+tags: [private]
 ```
 
 ```Go
@@ -1073,6 +1132,7 @@ func expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)
 
 ```
 searchKey: aes.newCipher
+tags: [private]
 ```
 
 ```Go
@@ -1083,6 +1143,7 @@ func newCipher(key []byte) (cipher.Block, error)
 
 ```
 searchKey: aes.expandKey
+tags: [private]
 ```
 
 ```Go
@@ -1095,6 +1156,7 @@ expandKey is used by BenchmarkExpand to ensure that the asm implementation of ke
 
 ```
 searchKey: aes.TestPowx
+tags: [private]
 ```
 
 ```Go
@@ -1107,6 +1169,7 @@ Test that powx is initialized correctly. (Can adapt this code to generate it too
 
 ```
 searchKey: aes.mul
+tags: [private]
 ```
 
 ```Go
@@ -1119,6 +1182,7 @@ Multiply b and c as GF(2) polynomials modulo poly
 
 ```
 searchKey: aes.TestMul
+tags: [private]
 ```
 
 ```Go
@@ -1131,6 +1195,7 @@ Test all mul inputs against bit-by-bit n² algorithm.
 
 ```
 searchKey: aes.TestSboxes
+tags: [private]
 ```
 
 ```Go
@@ -1143,6 +1208,7 @@ Check that S-boxes are inverses of each other. They have more structure that we 
 
 ```
 searchKey: aes.TestTe
+tags: [private]
 ```
 
 ```Go
@@ -1155,6 +1221,7 @@ Test that encryption tables are correct. (Can adapt this code to generate them t
 
 ```
 searchKey: aes.TestTd
+tags: [private]
 ```
 
 ```Go
@@ -1167,6 +1234,7 @@ Test that decryption tables are correct. (Can adapt this code to generate them t
 
 ```
 searchKey: aes.TestExpandKey
+tags: [private]
 ```
 
 ```Go
@@ -1179,6 +1247,7 @@ Test key expansion against FIPS 197 examples.
 
 ```
 searchKey: aes.TestCipherEncrypt
+tags: [private]
 ```
 
 ```Go
@@ -1191,6 +1260,7 @@ Test Cipher Encrypt method against FIPS 197 examples.
 
 ```
 searchKey: aes.TestCipherDecrypt
+tags: [private]
 ```
 
 ```Go
@@ -1203,6 +1273,7 @@ Test Cipher Decrypt against FIPS 197 examples.
 
 ```
 searchKey: aes.TestShortBlocks
+tags: [private]
 ```
 
 ```Go
@@ -1215,6 +1286,7 @@ Test short input/output. Assembly used to not notice. See issue 7928.
 
 ```
 searchKey: aes.mustPanic
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1297,7 @@ func mustPanic(t *testing.T, msg string, f func())
 
 ```
 searchKey: aes.BenchmarkEncrypt
+tags: [private]
 ```
 
 ```Go
@@ -1235,6 +1308,7 @@ func BenchmarkEncrypt(b *testing.B)
 
 ```
 searchKey: aes.BenchmarkDecrypt
+tags: [private]
 ```
 
 ```Go
@@ -1245,6 +1319,7 @@ func BenchmarkDecrypt(b *testing.B)
 
 ```
 searchKey: aes.BenchmarkExpand
+tags: [private]
 ```
 
 ```Go
@@ -1255,6 +1330,7 @@ func BenchmarkExpand(b *testing.B)
 
 ```
 searchKey: aes.TestGCMAble
+tags: [private]
 ```
 
 ```Go
@@ -1267,6 +1343,7 @@ Test the gcmAble interface is detected correctly by the cipher package.
 
 ```
 searchKey: aes.TestCBCEncAble
+tags: [private]
 ```
 
 ```Go
@@ -1279,6 +1356,7 @@ Test the cbcEncAble interface is detected correctly by the cipher package.
 
 ```
 searchKey: aes.TestCBCDecAble
+tags: [private]
 ```
 
 ```Go
@@ -1291,6 +1369,7 @@ Test the cbcDecAble interface is detected correctly by the cipher package.
 
 ```
 searchKey: aes.TestCTRAble
+tags: [private]
 ```
 
 ```Go

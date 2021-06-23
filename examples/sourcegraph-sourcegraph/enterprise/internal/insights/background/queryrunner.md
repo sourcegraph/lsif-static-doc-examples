@@ -44,16 +44,21 @@
     * [func EnqueueJob(ctx context.Context, workerBaseStore *basestore.Store, job *Job) (id int, err error)](#EnqueueJob)
     * [func scanJobs(rows *sql.Rows, err error) (workerutil.Record, bool, error)](#scanJobs)
     * [func doScanJobs(rows *sql.Rows, err error) ([]*Job, error)](#doScanJobs)
-    * [func init()](#init)
+    * [func init()](#init.worker_test.go)
     * [func TestJobQueue(t *testing.T)](#TestJobQueue)
 
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="cleanJobsFmtStr" href="#cleanJobsFmtStr">const cleanJobsFmtStr</a>
 
 ```
 searchKey: queryrunner.cleanJobsFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -64,6 +69,7 @@ const cleanJobsFmtStr = ...
 
 ```
 searchKey: queryrunner.gqlSearchQuery
+tags: [private]
 ```
 
 ```Go
@@ -74,6 +80,7 @@ const gqlSearchQuery = ...
 
 ```
 searchKey: queryrunner.enqueueJobFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -84,6 +91,7 @@ const enqueueJobFmtStr = ...
 
 ```
 searchKey: queryrunner.dequeueJobFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -94,6 +102,7 @@ const dequeueJobFmtStr = ...
 
 ```
 searchKey: queryrunner.queryJobsStatusFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -102,10 +111,15 @@ const queryJobsStatusFmtStr = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="jobsColumns" href="#jobsColumns">var jobsColumns</a>
 
 ```
 searchKey: queryrunner.jobsColumns
+tags: [private]
 ```
 
 ```Go
@@ -114,10 +128,15 @@ var jobsColumns = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="graphQLQuery" href="#graphQLQuery">type graphQLQuery struct</a>
 
 ```
 searchKey: queryrunner.graphQLQuery
+tags: [private]
 ```
 
 ```Go
@@ -133,6 +152,7 @@ graphQLQuery describes a general GraphQL query and its variables.
 
 ```
 searchKey: queryrunner.gqlSearchVars
+tags: [private]
 ```
 
 ```Go
@@ -145,6 +165,7 @@ type gqlSearchVars struct {
 
 ```
 searchKey: queryrunner.gqlSearchResponse
+tags: [private]
 ```
 
 ```Go
@@ -173,6 +194,7 @@ type gqlSearchResponse struct {
 
 ```
 searchKey: queryrunner.search
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +207,7 @@ search executes the given search query.
 
 ```
 searchKey: queryrunner.result
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +221,7 @@ type result interface {
 
 ```
 searchKey: queryrunner.decodeResult
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +232,7 @@ func decodeResult(result json.RawMessage) (result, error)
 
 ```
 searchKey: queryrunner.fileMatch
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +253,7 @@ type fileMatch struct {
 
 ```
 searchKey: queryrunner.fileMatch.matchCount
+tags: [private]
 ```
 
 ```Go
@@ -238,6 +264,7 @@ func (r *fileMatch) matchCount() int
 
 ```
 searchKey: queryrunner.fileMatch.repoID
+tags: [private]
 ```
 
 ```Go
@@ -248,6 +275,7 @@ func (r *fileMatch) repoID() string
 
 ```
 searchKey: queryrunner.commitSearchResult
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +297,7 @@ type commitSearchResult struct {
 
 ```
 searchKey: queryrunner.commitSearchResult.repoID
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +308,7 @@ func (r *commitSearchResult) repoID() string
 
 ```
 searchKey: queryrunner.commitSearchResult.matchCount
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +319,7 @@ func (r *commitSearchResult) matchCount() int
 
 ```
 searchKey: queryrunner.repository
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +332,7 @@ type repository struct {
 
 ```
 searchKey: queryrunner.repository.repoID
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +343,7 @@ func (r *repository) repoID() string
 
 ```
 searchKey: queryrunner.repository.matchCount
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +354,7 @@ func (r *repository) matchCount() int
 
 ```
 searchKey: queryrunner.workHandler
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +371,7 @@ workHandler implements the dbworker.Handler interface by executing search querie
 
 ```
 searchKey: queryrunner.workHandler.Handle
+tags: [private]
 ```
 
 ```Go
@@ -347,7 +382,6 @@ func (r *workHandler) Handle(ctx context.Context, workerStore dbworkerstore.Stor
 
 ```
 searchKey: queryrunner.JobsStatus
-tags: [exported]
 ```
 
 ```Go
@@ -362,7 +396,6 @@ type JobsStatus struct {
 
 ```
 searchKey: queryrunner.QueryJobsStatus
-tags: [exported]
 ```
 
 ```Go
@@ -375,7 +408,6 @@ QueryJobsStatus queries the current status of jobs for the specified series.
 
 ```
 searchKey: queryrunner.Job
-tags: [exported]
 ```
 
 ```Go
@@ -408,6 +440,7 @@ See internal/workerutil/dbworker for more information about dbworkers.
 
 ```
 searchKey: queryrunner.dequeueJob
+tags: [private]
 ```
 
 ```Go
@@ -418,7 +451,6 @@ func dequeueJob(ctx context.Context, workerBaseStore *basestore.Store, recordID 
 
 ```
 searchKey: queryrunner.Job.RecordID
-tags: [exported]
 ```
 
 ```Go
@@ -429,11 +461,14 @@ Implements the internal/workerutil.Record interface, used by the work handler to
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewCleaner" href="#NewCleaner">func NewCleaner(ctx context.Context, workerBaseStore *basestore.Store, observationContext *observation.Context) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: queryrunner.NewCleaner
-tags: [exported]
 ```
 
 ```Go
@@ -448,6 +483,7 @@ This is particularly important because the historical enqueuer can produce e.g. 
 
 ```
 searchKey: queryrunner.cleanJobs
+tags: [private]
 ```
 
 ```Go
@@ -460,6 +496,7 @@ cleanJobs
 
 ```
 searchKey: queryrunner.gqlURL
+tags: [private]
 ```
 
 ```Go
@@ -472,7 +509,6 @@ gqlURL returns the frontend's internal GraphQL API URL, with the given ?queryNam
 
 ```
 searchKey: queryrunner.NewWorker
-tags: [exported]
 ```
 
 ```Go
@@ -485,6 +521,7 @@ NewWorker returns a worker that will execute search queries and insert informati
 
 ```
 searchKey: queryrunner.getRateLimit
+tags: [private]
 ```
 
 ```Go
@@ -495,7 +532,6 @@ func getRateLimit(defaultValue rate.Limit) func() rate.Limit
 
 ```
 searchKey: queryrunner.NewResetter
-tags: [exported]
 ```
 
 ```Go
@@ -508,6 +544,7 @@ NewResetter returns a resetter that will reset pending query runner jobs if they
 
 ```
 searchKey: queryrunner.createDBWorkerStore
+tags: [private]
 ```
 
 ```Go
@@ -522,7 +559,6 @@ See internal/workerutil/dbworker for more information about dbworkers.
 
 ```
 searchKey: queryrunner.EnqueueJob
-tags: [exported]
 ```
 
 ```Go
@@ -535,6 +571,7 @@ EnqueueJob enqueues a job for the query runner worker to execute later.
 
 ```
 searchKey: queryrunner.scanJobs
+tags: [private]
 ```
 
 ```Go
@@ -545,16 +582,18 @@ func scanJobs(rows *sql.Rows, err error) (workerutil.Record, bool, error)
 
 ```
 searchKey: queryrunner.doScanJobs
+tags: [private]
 ```
 
 ```Go
 func doScanJobs(rows *sql.Rows, err error) ([]*Job, error)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.worker_test.go" href="#init.worker_test.go">func init()</a>
 
 ```
 searchKey: queryrunner.init
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +604,7 @@ func init()
 
 ```
 searchKey: queryrunner.TestJobQueue
+tags: [private]
 ```
 
 ```Go

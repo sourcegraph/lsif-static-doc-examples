@@ -4,7 +4,9 @@
     "identifier": "app",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "errMonitoringNotLicensed",
                 "newPage": false,
                 "searchKey": "app.errMonitoringNotLicensed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "grafanaURLFromEnv",
                 "newPage": false,
                 "searchKey": "app.grafanaURLFromEnv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "jaegerURLFromEnv",
                 "newPage": false,
                 "searchKey": "app.jaegerURLFromEnv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,9 +133,7 @@
                 "identifier": "PreMountGrafanaHook",
                 "newPage": false,
                 "searchKey": "app.PreMountGrafanaHook",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +153,9 @@
                 "identifier": "regDriveLetter",
                 "newPage": false,
                 "searchKey": "app.regDriveLetter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -163,7 +175,9 @@
                 "identifier": "allowRobotsVar",
                 "newPage": false,
                 "searchKey": "app.allowRobotsVar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -183,7 +197,9 @@
                 "identifier": "openSearchDescription",
                 "newPage": false,
                 "searchKey": "app.openSearchDescription",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -203,7 +219,9 @@
                 "identifier": "ssoSignOutHandler",
                 "newPage": false,
                 "searchKey": "app.ssoSignOutHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -226,7 +244,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -244,7 +264,9 @@
                 "identifier": "editorRequest",
                 "newPage": false,
                 "searchKey": "app.editorRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -262,7 +284,9 @@
                       "identifier": "parseEditorRequest",
                       "newPage": false,
                       "searchKey": "app.parseEditorRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -282,7 +306,9 @@
                       "identifier": "editorRequest.addTracking",
                       "newPage": false,
                       "searchKey": "app.editorRequest.addTracking",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -302,7 +328,9 @@
                       "identifier": "editorRequest.searchRedirect",
                       "newPage": false,
                       "searchKey": "app.editorRequest.searchRedirect",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -322,7 +350,9 @@
                       "identifier": "editorRequest.openFileRedirect",
                       "newPage": false,
                       "searchKey": "app.editorRequest.openFileRedirect",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -342,7 +372,9 @@
                       "identifier": "editorRequest.redirectURL",
                       "newPage": false,
                       "searchKey": "app.editorRequest.redirectURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -365,7 +397,9 @@
                 "identifier": "editorOpenFileRequest",
                 "newPage": false,
                 "searchKey": "app.editorOpenFileRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -385,7 +419,9 @@
                 "identifier": "editorSearchRequest",
                 "newPage": false,
                 "searchKey": "app.editorSearchRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -405,7 +441,9 @@
                 "identifier": "goSymbolSpec",
                 "newPage": false,
                 "searchKey": "app.goSymbolSpec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -423,7 +461,9 @@
                       "identifier": "parseGoSymbolURLPath",
                       "newPage": false,
                       "searchKey": "app.parseGoSymbolURLPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -446,7 +486,9 @@
                 "identifier": "invalidSymbolURLPathError",
                 "newPage": false,
                 "searchKey": "app.invalidSymbolURLPathError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -464,7 +506,9 @@
                       "identifier": "invalidSymbolURLPathError.Error",
                       "newPage": false,
                       "searchKey": "app.invalidSymbolURLPathError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -487,9 +531,7 @@
                 "identifier": "SignOutURL",
                 "newPage": false,
                 "searchKey": "app.SignOutURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -509,7 +551,9 @@
                 "identifier": "symbolLocationArgs",
                 "newPage": false,
                 "searchKey": "app.symbolLocationArgs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -529,7 +573,9 @@
                 "identifier": "test",
                 "newPage": false,
                 "searchKey": "app.test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -549,7 +595,9 @@
                 "identifier": "stringMapFS",
                 "newPage": false,
                 "searchKey": "app.stringMapFS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -567,7 +615,9 @@
                       "identifier": "mapFS",
                       "newPage": false,
                       "searchKey": "app.mapFS",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -587,7 +637,9 @@
                       "identifier": "stringMapFS.ListAllFiles",
                       "newPage": false,
                       "searchKey": "app.stringMapFS.ListAllFiles",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -613,7 +665,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -631,9 +685,7 @@
                 "identifier": "NewHandler",
                 "newPage": false,
                 "searchKey": "app.NewHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -653,7 +705,9 @@
                 "identifier": "badgeValue",
                 "newPage": false,
                 "searchKey": "app.badgeValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -673,7 +727,9 @@
                 "identifier": "badgeValueFmt",
                 "newPage": false,
                 "searchKey": "app.badgeValueFmt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -693,7 +749,9 @@
                 "identifier": "serveRepoBadge",
                 "newPage": false,
                 "searchKey": "app.serveRepoBadge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -708,12 +766,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#init",
+              "pathID": "/cmd/frontend/internal/app#init.debug.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.debug.go",
                 "newPage": false,
                 "searchKey": "app.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -733,7 +793,9 @@
                 "identifier": "addNoK8sClientHandler",
                 "newPage": false,
                 "searchKey": "app.addNoK8sClientHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -753,7 +815,9 @@
                 "identifier": "addDebugHandlers",
                 "newPage": false,
                 "searchKey": "app.addDebugHandlers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -773,7 +837,9 @@
                 "identifier": "addNoGrafanaHandler",
                 "newPage": false,
                 "searchKey": "app.addNoGrafanaHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -793,7 +859,9 @@
                 "identifier": "addGrafanaNotLicensedHandler",
                 "newPage": false,
                 "searchKey": "app.addGrafanaNotLicensedHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -813,7 +881,9 @@
                 "identifier": "addGrafana",
                 "newPage": false,
                 "searchKey": "app.addGrafana",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -833,7 +903,9 @@
                 "identifier": "addNoJaegerHandler",
                 "newPage": false,
                 "searchKey": "app.addNoJaegerHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -853,7 +925,9 @@
                 "identifier": "addJaeger",
                 "newPage": false,
                 "searchKey": "app.addJaeger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -873,7 +947,9 @@
                 "identifier": "adminOnly",
                 "newPage": false,
                 "searchKey": "app.adminOnly",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -893,7 +969,9 @@
                 "identifier": "newPrometheusValidator",
                 "newPage": false,
                 "searchKey": "app.newPrometheusValidator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -913,7 +991,9 @@
                 "identifier": "editorRev",
                 "newPage": false,
                 "searchKey": "app.editorRev",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -933,7 +1013,9 @@
                 "identifier": "serveEditor",
                 "newPage": false,
                 "searchKey": "app.serveEditor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -953,7 +1035,9 @@
                 "identifier": "isGoRepoPath",
                 "newPage": false,
                 "searchKey": "app.isGoRepoPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -973,7 +1057,9 @@
                 "identifier": "serveGDDORefs",
                 "newPage": false,
                 "searchKey": "app.serveGDDORefs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -993,7 +1079,9 @@
                 "identifier": "serveGoSymbolURL",
                 "newPage": false,
                 "searchKey": "app.serveGoSymbolURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1013,7 +1101,9 @@
                 "identifier": "symbolLocation",
                 "newPage": false,
                 "searchKey": "app.symbolLocation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1033,7 +1123,9 @@
                 "identifier": "buildContextFromVFS",
                 "newPage": false,
                 "searchKey": "app.buildContextFromVFS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1053,7 +1145,9 @@
                 "identifier": "repoVFS",
                 "newPage": false,
                 "searchKey": "app.repoVFS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1073,7 +1167,9 @@
                 "identifier": "parseFiles",
                 "newPage": false,
                 "searchKey": "app.parseFiles",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1093,9 +1189,7 @@
                 "identifier": "PrepareContext",
                 "newPage": false,
                 "searchKey": "app.PrepareContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1115,7 +1209,9 @@
                 "identifier": "trimFilePrefix",
                 "newPage": false,
                 "searchKey": "app.trimFilePrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1135,7 +1231,9 @@
                 "identifier": "normalizePath",
                 "newPage": false,
                 "searchKey": "app.normalizePath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1155,9 +1253,7 @@
                 "identifier": "PathHasPrefix",
                 "newPage": false,
                 "searchKey": "app.PathHasPrefix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1177,9 +1273,7 @@
                 "identifier": "PathTrimPrefix",
                 "newPage": false,
                 "searchKey": "app.PathTrimPrefix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1199,9 +1293,7 @@
                 "identifier": "PathEqual",
                 "newPage": false,
                 "searchKey": "app.PathEqual",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1221,9 +1313,7 @@
                 "identifier": "IsVendorDir",
                 "newPage": false,
                 "searchKey": "app.IsVendorDir",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1243,9 +1333,7 @@
                 "identifier": "IsURI",
                 "newPage": false,
                 "searchKey": "app.IsURI",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1265,7 +1353,9 @@
                 "identifier": "isURI",
                 "newPage": false,
                 "searchKey": "app.isURI",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1285,9 +1375,7 @@
                 "identifier": "PathToURI",
                 "newPage": false,
                 "searchKey": "app.PathToURI",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1307,9 +1395,7 @@
                 "identifier": "UriToPath",
                 "newPage": false,
                 "searchKey": "app.UriToPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1329,9 +1415,7 @@
                 "identifier": "UriToRealPath",
                 "newPage": false,
                 "searchKey": "app.UriToRealPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1351,9 +1435,7 @@
                 "identifier": "IsAbs",
                 "newPage": false,
                 "searchKey": "app.IsAbs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1373,9 +1455,7 @@
                 "identifier": "Panicf",
                 "newPage": false,
                 "searchKey": "app.Panicf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1395,7 +1475,9 @@
                 "identifier": "robotsTxt",
                 "newPage": false,
                 "searchKey": "app.robotsTxt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1415,7 +1497,9 @@
                 "identifier": "robotsTxtHelper",
                 "newPage": false,
                 "searchKey": "app.robotsTxtHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1435,7 +1519,9 @@
                 "identifier": "favicon",
                 "newPage": false,
                 "searchKey": "app.favicon",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1455,7 +1541,9 @@
                 "identifier": "openSearch",
                 "newPage": false,
                 "searchKey": "app.openSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1475,7 +1563,9 @@
                 "identifier": "latestPingHandler",
                 "newPage": false,
                 "searchKey": "app.latestPingHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1495,9 +1585,7 @@
                 "identifier": "RegisterSSOSignOutHandler",
                 "newPage": false,
                 "searchKey": "app.RegisterSSOSignOutHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1517,7 +1605,9 @@
                 "identifier": "serveSignOutHandler",
                 "newPage": false,
                 "searchKey": "app.serveSignOutHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1537,7 +1627,9 @@
                 "identifier": "logSignOutEvent",
                 "newPage": false,
                 "searchKey": "app.logSignOutEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1557,7 +1649,9 @@
                 "identifier": "usageStatsArchiveHandler",
                 "newPage": false,
                 "searchKey": "app.usageStatsArchiveHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1577,7 +1671,9 @@
                 "identifier": "serveVerifyEmail",
                 "newPage": false,
                 "searchKey": "app.serveVerifyEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1597,7 +1693,9 @@
                 "identifier": "httpLogAndError",
                 "newPage": false,
                 "searchKey": "app.httpLogAndError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1612,12 +1710,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#init",
+              "pathID": "/cmd/frontend/internal/app#init.app_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.app_test.go",
                 "newPage": false,
                 "searchKey": "app.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1637,7 +1737,9 @@
                 "identifier": "Test_prometheusValidator",
                 "newPage": false,
                 "searchKey": "app.Test_prometheusValidator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1657,7 +1759,9 @@
                 "identifier": "TestGrafanaLicensing",
                 "newPage": false,
                 "searchKey": "app.TestGrafanaLicensing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1677,7 +1781,9 @@
                 "identifier": "TestEditorRev",
                 "newPage": false,
                 "searchKey": "app.TestEditorRev",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1697,7 +1803,9 @@
                 "identifier": "TestEditorRedirect",
                 "newPage": false,
                 "searchKey": "app.TestEditorRedirect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1717,7 +1825,9 @@
                 "identifier": "TestParseGoSymbolURLPath",
                 "newPage": false,
                 "searchKey": "app.TestParseGoSymbolURLPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1737,7 +1847,9 @@
                 "identifier": "mkLocation",
                 "newPage": false,
                 "searchKey": "app.mkLocation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1757,7 +1869,9 @@
                 "identifier": "strptr",
                 "newPage": false,
                 "searchKey": "app.strptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1777,7 +1891,9 @@
                 "identifier": "TestSymbolLocation",
                 "newPage": false,
                 "searchKey": "app.TestSymbolLocation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1797,7 +1913,9 @@
                 "identifier": "TestRobotsTxt",
                 "newPage": false,
                 "searchKey": "app.TestRobotsTxt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1812,12 +1930,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#init",
+              "pathID": "/cmd/frontend/internal/app#init.ping_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.ping_test.go",
                 "newPage": false,
                 "searchKey": "app.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1837,7 +1957,9 @@
                 "identifier": "TestLatestPingHandler",
                 "newPage": false,
                 "searchKey": "app.TestLatestPingHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1852,12 +1974,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#init",
+              "pathID": "/cmd/frontend/internal/app#init.usage_stats_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.usage_stats_test.go",
                 "newPage": false,
                 "searchKey": "app.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1877,7 +2001,9 @@
                 "identifier": "TestUsageStatsArchiveHandler",
                 "newPage": false,
                 "searchKey": "app.TestUsageStatsArchiveHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

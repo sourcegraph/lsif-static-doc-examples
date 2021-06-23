@@ -208,11 +208,14 @@ Package xcoff implements access to XCOFF (Extended Common Object File Format) fi
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SAIAMAG" href="#SAIAMAG">const SAIAMAG</a>
 
 ```
 searchKey: xcoff.SAIAMAG
-tags: [exported]
 ```
 
 ```Go
@@ -223,7 +226,6 @@ const SAIAMAG = 0x8
 
 ```
 searchKey: xcoff.AIAFMAG
-tags: [exported]
 ```
 
 ```Go
@@ -234,7 +236,6 @@ const AIAFMAG = "`\n"
 
 ```
 searchKey: xcoff.AIAMAG
-tags: [exported]
 ```
 
 ```Go
@@ -245,7 +246,6 @@ const AIAMAG = "<aiaff>\n"
 
 ```
 searchKey: xcoff.AIAMAGBIG
-tags: [exported]
 ```
 
 ```Go
@@ -256,7 +256,6 @@ const AIAMAGBIG = "<bigaf>\n"
 
 ```
 searchKey: xcoff.FL_HSZ_BIG
-tags: [exported]
 ```
 
 ```Go
@@ -269,7 +268,6 @@ Sizeof
 
 ```
 searchKey: xcoff.AR_HSZ_BIG
-tags: [exported]
 ```
 
 ```Go
@@ -280,7 +278,6 @@ const AR_HSZ_BIG = 0x70
 
 ```
 searchKey: xcoff.FILHSZ_32
-tags: [exported]
 ```
 
 ```Go
@@ -291,7 +288,6 @@ const FILHSZ_32 = 20
 
 ```
 searchKey: xcoff.FILHSZ_64
-tags: [exported]
 ```
 
 ```Go
@@ -302,7 +298,6 @@ const FILHSZ_64 = 24
 
 ```
 searchKey: xcoff.U802TOCMAGIC
-tags: [exported]
 ```
 
 ```Go
@@ -314,7 +309,6 @@ const U802TOCMAGIC = 0737 // AIX 32-bit XCOFF
 
 ```
 searchKey: xcoff.U64_TOCMAGIC
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +320,6 @@ const U64_TOCMAGIC = 0767 // AIX 64-bit XCOFF
 
 ```
 searchKey: xcoff.F_RELFLG
-tags: [exported]
 ```
 
 ```Go
@@ -339,7 +332,6 @@ Flags that describe the type of the object file.
 
 ```
 searchKey: xcoff.F_EXEC
-tags: [exported]
 ```
 
 ```Go
@@ -352,7 +344,6 @@ Flags that describe the type of the object file.
 
 ```
 searchKey: xcoff.F_LNNO
-tags: [exported]
 ```
 
 ```Go
@@ -365,7 +356,6 @@ Flags that describe the type of the object file.
 
 ```
 searchKey: xcoff.F_FDPR_PROF
-tags: [exported]
 ```
 
 ```Go
@@ -378,7 +368,6 @@ Flags that describe the type of the object file.
 
 ```
 searchKey: xcoff.F_FDPR_OPTI
-tags: [exported]
 ```
 
 ```Go
@@ -391,7 +380,6 @@ Flags that describe the type of the object file.
 
 ```
 searchKey: xcoff.F_DSA
-tags: [exported]
 ```
 
 ```Go
@@ -404,7 +392,6 @@ Flags that describe the type of the object file.
 
 ```
 searchKey: xcoff.F_VARPG
-tags: [exported]
 ```
 
 ```Go
@@ -417,7 +404,6 @@ Flags that describe the type of the object file.
 
 ```
 searchKey: xcoff.F_DYNLOAD
-tags: [exported]
 ```
 
 ```Go
@@ -430,7 +416,6 @@ Flags that describe the type of the object file.
 
 ```
 searchKey: xcoff.F_SHROBJ
-tags: [exported]
 ```
 
 ```Go
@@ -443,7 +428,6 @@ Flags that describe the type of the object file.
 
 ```
 searchKey: xcoff.F_LOADONLY
-tags: [exported]
 ```
 
 ```Go
@@ -456,7 +440,6 @@ Flags that describe the type of the object file.
 
 ```
 searchKey: xcoff.STYP_DWARF
-tags: [exported]
 ```
 
 ```Go
@@ -469,7 +452,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_TEXT
-tags: [exported]
 ```
 
 ```Go
@@ -482,7 +464,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_DATA
-tags: [exported]
 ```
 
 ```Go
@@ -495,7 +476,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_BSS
-tags: [exported]
 ```
 
 ```Go
@@ -508,7 +488,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_EXCEPT
-tags: [exported]
 ```
 
 ```Go
@@ -521,7 +500,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_INFO
-tags: [exported]
 ```
 
 ```Go
@@ -534,7 +512,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_TDATA
-tags: [exported]
 ```
 
 ```Go
@@ -547,7 +524,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_TBSS
-tags: [exported]
 ```
 
 ```Go
@@ -560,7 +536,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_LOADER
-tags: [exported]
 ```
 
 ```Go
@@ -573,7 +548,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_DEBUG
-tags: [exported]
 ```
 
 ```Go
@@ -586,7 +560,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_TYPCHK
-tags: [exported]
 ```
 
 ```Go
@@ -599,7 +572,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.STYP_OVRFLO
-tags: [exported]
 ```
 
 ```Go
@@ -612,7 +584,6 @@ Flags defining the section type.
 
 ```
 searchKey: xcoff.SSUBTYP_DWINFO
-tags: [exported]
 ```
 
 ```Go
@@ -624,7 +595,6 @@ const SSUBTYP_DWINFO = 0x10000 // DWARF info section
 
 ```
 searchKey: xcoff.SSUBTYP_DWLINE
-tags: [exported]
 ```
 
 ```Go
@@ -636,7 +606,6 @@ const SSUBTYP_DWLINE = 0x20000 // DWARF line-number section
 
 ```
 searchKey: xcoff.SSUBTYP_DWPBNMS
-tags: [exported]
 ```
 
 ```Go
@@ -648,7 +617,6 @@ const SSUBTYP_DWPBNMS = 0x30000 // DWARF public names section
 
 ```
 searchKey: xcoff.SSUBTYP_DWPBTYP
-tags: [exported]
 ```
 
 ```Go
@@ -660,7 +628,6 @@ const SSUBTYP_DWPBTYP = 0x40000 // DWARF public types section
 
 ```
 searchKey: xcoff.SSUBTYP_DWARNGE
-tags: [exported]
 ```
 
 ```Go
@@ -672,7 +639,6 @@ const SSUBTYP_DWARNGE = 0x50000 // DWARF aranges section
 
 ```
 searchKey: xcoff.SSUBTYP_DWABREV
-tags: [exported]
 ```
 
 ```Go
@@ -684,7 +650,6 @@ const SSUBTYP_DWABREV = 0x60000 // DWARF abbreviation section
 
 ```
 searchKey: xcoff.SSUBTYP_DWSTR
-tags: [exported]
 ```
 
 ```Go
@@ -696,7 +661,6 @@ const SSUBTYP_DWSTR = 0x70000 // DWARF strings section
 
 ```
 searchKey: xcoff.SSUBTYP_DWRNGES
-tags: [exported]
 ```
 
 ```Go
@@ -708,7 +672,6 @@ const SSUBTYP_DWRNGES = 0x80000 // DWARF ranges section
 
 ```
 searchKey: xcoff.SSUBTYP_DWLOC
-tags: [exported]
 ```
 
 ```Go
@@ -720,7 +683,6 @@ const SSUBTYP_DWLOC = 0x90000 // DWARF location lists section
 
 ```
 searchKey: xcoff.SSUBTYP_DWFRAME
-tags: [exported]
 ```
 
 ```Go
@@ -732,7 +694,6 @@ const SSUBTYP_DWFRAME = 0xA0000 // DWARF frames section
 
 ```
 searchKey: xcoff.SSUBTYP_DWMAC
-tags: [exported]
 ```
 
 ```Go
@@ -744,7 +705,6 @@ const SSUBTYP_DWMAC = 0xB0000 // DWARF macros section
 
 ```
 searchKey: xcoff.SYMESZ
-tags: [exported]
 ```
 
 ```Go
@@ -755,7 +715,6 @@ const SYMESZ = 18
 
 ```
 searchKey: xcoff.N_DEBUG
-tags: [exported]
 ```
 
 ```Go
@@ -768,7 +727,6 @@ Nscnum
 
 ```
 searchKey: xcoff.N_ABS
-tags: [exported]
 ```
 
 ```Go
@@ -779,7 +737,6 @@ const N_ABS = -1
 
 ```
 searchKey: xcoff.N_UNDEF
-tags: [exported]
 ```
 
 ```Go
@@ -790,7 +747,6 @@ const N_UNDEF = 0
 
 ```
 searchKey: xcoff.SYM_V_INTERNAL
-tags: [exported]
 ```
 
 ```Go
@@ -803,7 +759,6 @@ Ntype
 
 ```
 searchKey: xcoff.SYM_V_HIDDEN
-tags: [exported]
 ```
 
 ```Go
@@ -814,7 +769,6 @@ const SYM_V_HIDDEN = 0x2000
 
 ```
 searchKey: xcoff.SYM_V_PROTECTED
-tags: [exported]
 ```
 
 ```Go
@@ -825,7 +779,6 @@ const SYM_V_PROTECTED = 0x3000
 
 ```
 searchKey: xcoff.SYM_V_EXPORTED
-tags: [exported]
 ```
 
 ```Go
@@ -836,7 +789,6 @@ const SYM_V_EXPORTED = 0x4000
 
 ```
 searchKey: xcoff.SYM_TYPE_FUNC
-tags: [exported]
 ```
 
 ```Go
@@ -848,7 +800,6 @@ const SYM_TYPE_FUNC = 0x0020 // is function
 
 ```
 searchKey: xcoff.C_NULL
-tags: [exported]
 ```
 
 ```Go
@@ -862,7 +813,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_EXT
-tags: [exported]
 ```
 
 ```Go
@@ -876,7 +826,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_STAT
-tags: [exported]
 ```
 
 ```Go
@@ -890,7 +839,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_BLOCK
-tags: [exported]
 ```
 
 ```Go
@@ -904,7 +852,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_FCN
-tags: [exported]
 ```
 
 ```Go
@@ -918,7 +865,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_FILE
-tags: [exported]
 ```
 
 ```Go
@@ -932,7 +878,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_HIDEXT
-tags: [exported]
 ```
 
 ```Go
@@ -946,7 +891,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_BINCL
-tags: [exported]
 ```
 
 ```Go
@@ -960,7 +904,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_EINCL
-tags: [exported]
 ```
 
 ```Go
@@ -974,7 +917,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_WEAKEXT
-tags: [exported]
 ```
 
 ```Go
@@ -988,7 +930,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_DWARF
-tags: [exported]
 ```
 
 ```Go
@@ -1002,7 +943,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_GSYM
-tags: [exported]
 ```
 
 ```Go
@@ -1016,7 +956,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_LSYM
-tags: [exported]
 ```
 
 ```Go
@@ -1030,7 +969,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_PSYM
-tags: [exported]
 ```
 
 ```Go
@@ -1044,7 +982,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_RSYM
-tags: [exported]
 ```
 
 ```Go
@@ -1058,7 +995,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_RPSYM
-tags: [exported]
 ```
 
 ```Go
@@ -1072,7 +1008,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_STSYM
-tags: [exported]
 ```
 
 ```Go
@@ -1086,7 +1021,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_BCOMM
-tags: [exported]
 ```
 
 ```Go
@@ -1100,7 +1034,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_ECOML
-tags: [exported]
 ```
 
 ```Go
@@ -1114,7 +1047,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_ECOMM
-tags: [exported]
 ```
 
 ```Go
@@ -1128,7 +1060,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_DECL
-tags: [exported]
 ```
 
 ```Go
@@ -1142,7 +1073,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_ENTRY
-tags: [exported]
 ```
 
 ```Go
@@ -1156,7 +1086,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_FUN
-tags: [exported]
 ```
 
 ```Go
@@ -1170,7 +1099,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_BSTAT
-tags: [exported]
 ```
 
 ```Go
@@ -1184,7 +1112,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_ESTAT
-tags: [exported]
 ```
 
 ```Go
@@ -1198,7 +1125,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_GTLS
-tags: [exported]
 ```
 
 ```Go
@@ -1212,7 +1138,6 @@ Storage Class.
 
 ```
 searchKey: xcoff.C_STTLS
-tags: [exported]
 ```
 
 ```Go
@@ -1226,6 +1151,7 @@ Storage Class.
 
 ```
 searchKey: xcoff._AUX_EXCEPT
+tags: [private]
 ```
 
 ```Go
@@ -1238,6 +1164,7 @@ Auxiliary type
 
 ```
 searchKey: xcoff._AUX_FCN
+tags: [private]
 ```
 
 ```Go
@@ -1250,6 +1177,7 @@ Auxiliary type
 
 ```
 searchKey: xcoff._AUX_SYM
+tags: [private]
 ```
 
 ```Go
@@ -1262,6 +1190,7 @@ Auxiliary type
 
 ```
 searchKey: xcoff._AUX_FILE
+tags: [private]
 ```
 
 ```Go
@@ -1274,6 +1203,7 @@ Auxiliary type
 
 ```
 searchKey: xcoff._AUX_CSECT
+tags: [private]
 ```
 
 ```Go
@@ -1286,6 +1216,7 @@ Auxiliary type
 
 ```
 searchKey: xcoff._AUX_SECT
+tags: [private]
 ```
 
 ```Go
@@ -1298,7 +1229,6 @@ Auxiliary type
 
 ```
 searchKey: xcoff.XTY_ER
-tags: [exported]
 ```
 
 ```Go
@@ -1312,7 +1242,6 @@ Symbol type field.
 
 ```
 searchKey: xcoff.XTY_SD
-tags: [exported]
 ```
 
 ```Go
@@ -1326,7 +1255,6 @@ Symbol type field.
 
 ```
 searchKey: xcoff.XTY_LD
-tags: [exported]
 ```
 
 ```Go
@@ -1340,7 +1268,6 @@ Symbol type field.
 
 ```
 searchKey: xcoff.XTY_CM
-tags: [exported]
 ```
 
 ```Go
@@ -1354,7 +1281,6 @@ Symbol type field.
 
 ```
 searchKey: xcoff.XFT_FN
-tags: [exported]
 ```
 
 ```Go
@@ -1368,7 +1294,6 @@ Defines for File auxiliary definitions: x_ftype field of x_file
 
 ```
 searchKey: xcoff.XFT_CT
-tags: [exported]
 ```
 
 ```Go
@@ -1382,7 +1307,6 @@ Defines for File auxiliary definitions: x_ftype field of x_file
 
 ```
 searchKey: xcoff.XFT_CV
-tags: [exported]
 ```
 
 ```Go
@@ -1396,7 +1320,6 @@ Defines for File auxiliary definitions: x_ftype field of x_file
 
 ```
 searchKey: xcoff.XFT_CD
-tags: [exported]
 ```
 
 ```Go
@@ -1410,7 +1333,6 @@ Defines for File auxiliary definitions: x_ftype field of x_file
 
 ```
 searchKey: xcoff.XMC_PR
-tags: [exported]
 ```
 
 ```Go
@@ -1424,7 +1346,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_RO
-tags: [exported]
 ```
 
 ```Go
@@ -1438,7 +1359,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_DB
-tags: [exported]
 ```
 
 ```Go
@@ -1452,7 +1372,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_TC
-tags: [exported]
 ```
 
 ```Go
@@ -1466,7 +1385,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_UA
-tags: [exported]
 ```
 
 ```Go
@@ -1480,7 +1398,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_RW
-tags: [exported]
 ```
 
 ```Go
@@ -1494,7 +1411,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_GL
-tags: [exported]
 ```
 
 ```Go
@@ -1508,7 +1424,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_XO
-tags: [exported]
 ```
 
 ```Go
@@ -1522,7 +1437,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_SV
-tags: [exported]
 ```
 
 ```Go
@@ -1536,7 +1450,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_BS
-tags: [exported]
 ```
 
 ```Go
@@ -1550,7 +1463,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_DS
-tags: [exported]
 ```
 
 ```Go
@@ -1564,7 +1476,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_UC
-tags: [exported]
 ```
 
 ```Go
@@ -1578,7 +1489,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_TC0
-tags: [exported]
 ```
 
 ```Go
@@ -1592,7 +1502,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_TD
-tags: [exported]
 ```
 
 ```Go
@@ -1606,7 +1515,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_SV64
-tags: [exported]
 ```
 
 ```Go
@@ -1620,7 +1528,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_SV3264
-tags: [exported]
 ```
 
 ```Go
@@ -1634,7 +1541,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_TL
-tags: [exported]
 ```
 
 ```Go
@@ -1648,7 +1554,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_UL
-tags: [exported]
 ```
 
 ```Go
@@ -1662,7 +1567,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.XMC_TE
-tags: [exported]
 ```
 
 ```Go
@@ -1676,7 +1580,6 @@ Storage-mapping class.
 
 ```
 searchKey: xcoff.LDHDRSZ_32
-tags: [exported]
 ```
 
 ```Go
@@ -1687,7 +1590,6 @@ const LDHDRSZ_32 = 32
 
 ```
 searchKey: xcoff.LDHDRSZ_64
-tags: [exported]
 ```
 
 ```Go
@@ -1698,7 +1600,6 @@ const LDHDRSZ_64 = 56
 
 ```
 searchKey: xcoff.R_POS
-tags: [exported]
 ```
 
 ```Go
@@ -1710,7 +1611,6 @@ const R_POS = 0x00 // A(sym) Positive Relocation
 
 ```
 searchKey: xcoff.R_NEG
-tags: [exported]
 ```
 
 ```Go
@@ -1722,7 +1622,6 @@ const R_NEG = 0x01 // -A(sym) Negative Relocation
 
 ```
 searchKey: xcoff.R_REL
-tags: [exported]
 ```
 
 ```Go
@@ -1734,7 +1633,6 @@ const R_REL = 0x02 // A(sym-*) Relative to self
 
 ```
 searchKey: xcoff.R_TOC
-tags: [exported]
 ```
 
 ```Go
@@ -1746,7 +1644,6 @@ const R_TOC = 0x03 // A(sym-TOC) Relative to TOC
 
 ```
 searchKey: xcoff.R_TRL
-tags: [exported]
 ```
 
 ```Go
@@ -1758,7 +1655,6 @@ const R_TRL = 0x12 // A(sym-TOC) TOC Relative indirect load.
 
 ```
 searchKey: xcoff.R_TRLA
-tags: [exported]
 ```
 
 ```Go
@@ -1770,7 +1666,6 @@ const R_TRLA = 0x13 // A(sym-TOC) TOC Rel load address. modifiable inst
 
 ```
 searchKey: xcoff.R_GL
-tags: [exported]
 ```
 
 ```Go
@@ -1782,7 +1677,6 @@ const R_GL = 0x05 // A(external TOC of sym) Global Linkage
 
 ```
 searchKey: xcoff.R_TCL
-tags: [exported]
 ```
 
 ```Go
@@ -1794,7 +1688,6 @@ const R_TCL = 0x06 // A(local TOC of sym) Local object TOC address
 
 ```
 searchKey: xcoff.R_RL
-tags: [exported]
 ```
 
 ```Go
@@ -1806,7 +1699,6 @@ const R_RL = 0x0C // A(sym) Pos indirect load. modifiable instruction
 
 ```
 searchKey: xcoff.R_RLA
-tags: [exported]
 ```
 
 ```Go
@@ -1818,7 +1710,6 @@ const R_RLA = 0x0D // A(sym) Pos Load Address. modifiable instruction
 
 ```
 searchKey: xcoff.R_REF
-tags: [exported]
 ```
 
 ```Go
@@ -1830,7 +1721,6 @@ const R_REF = 0x0F // AL0(sym) Non relocating ref. No garbage collect
 
 ```
 searchKey: xcoff.R_BA
-tags: [exported]
 ```
 
 ```Go
@@ -1842,7 +1732,6 @@ const R_BA = 0x08 // A(sym) Branch absolute. Cannot modify instruction
 
 ```
 searchKey: xcoff.R_RBA
-tags: [exported]
 ```
 
 ```Go
@@ -1854,7 +1743,6 @@ const R_RBA = 0x18 // A(sym) Branch absolute. modifiable instruction
 
 ```
 searchKey: xcoff.R_BR
-tags: [exported]
 ```
 
 ```Go
@@ -1866,7 +1754,6 @@ const R_BR = 0x0A // A(sym-*) Branch rel to self. non modifiable
 
 ```
 searchKey: xcoff.R_RBR
-tags: [exported]
 ```
 
 ```Go
@@ -1878,7 +1765,6 @@ const R_RBR = 0x1A // A(sym-*) Branch rel to self. modifiable instr
 
 ```
 searchKey: xcoff.R_TLS
-tags: [exported]
 ```
 
 ```Go
@@ -1890,7 +1776,6 @@ const R_TLS = 0x20 // General-dynamic reference to TLS symbol
 
 ```
 searchKey: xcoff.R_TLS_IE
-tags: [exported]
 ```
 
 ```Go
@@ -1902,7 +1787,6 @@ const R_TLS_IE = 0x21 // Initial-exec reference to TLS symbol
 
 ```
 searchKey: xcoff.R_TLS_LD
-tags: [exported]
 ```
 
 ```Go
@@ -1914,7 +1798,6 @@ const R_TLS_LD = 0x22 // Local-dynamic reference to TLS symbol
 
 ```
 searchKey: xcoff.R_TLS_LE
-tags: [exported]
 ```
 
 ```Go
@@ -1926,7 +1809,6 @@ const R_TLS_LE = 0x23 // Local-exec reference to TLS symbol
 
 ```
 searchKey: xcoff.R_TLSM
-tags: [exported]
 ```
 
 ```Go
@@ -1938,7 +1820,6 @@ const R_TLSM = 0x24 // Module reference to TLS symbol
 
 ```
 searchKey: xcoff.R_TLSML
-tags: [exported]
 ```
 
 ```Go
@@ -1950,7 +1831,6 @@ const R_TLSML = 0x25 // Module reference to local (own) module
 
 ```
 searchKey: xcoff.R_TOCU
-tags: [exported]
 ```
 
 ```Go
@@ -1962,7 +1842,6 @@ const R_TOCU = 0x30 // Relative to TOC - high order bits
 
 ```
 searchKey: xcoff.R_TOCL
-tags: [exported]
 ```
 
 ```Go
@@ -1972,10 +1851,15 @@ const R_TOCL = 0x31 // Relative to TOC - low order bits
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="archTest" href="#archTest">var archTest</a>
 
 ```
 searchKey: xcoff.archTest
+tags: [private]
 ```
 
 ```Go
@@ -1986,6 +1870,7 @@ var archTest = ...
 
 ```
 searchKey: xcoff.fileTests
+tags: [private]
 ```
 
 ```Go
@@ -1994,10 +1879,15 @@ var fileTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="bigarFileHeader" href="#bigarFileHeader">type bigarFileHeader struct</a>
 
 ```
 searchKey: xcoff.bigarFileHeader
+tags: [private]
 ```
 
 ```Go
@@ -2016,6 +1906,7 @@ type bigarFileHeader struct {
 
 ```
 searchKey: xcoff.bigarMemberHeader
+tags: [private]
 ```
 
 ```Go
@@ -2036,7 +1927,6 @@ type bigarMemberHeader struct {
 
 ```
 searchKey: xcoff.Archive
-tags: [exported]
 ```
 
 ```Go
@@ -2054,7 +1944,6 @@ Archive represents an open AIX big archive.
 
 ```
 searchKey: xcoff.OpenArchive
-tags: [exported]
 ```
 
 ```Go
@@ -2067,7 +1956,6 @@ OpenArchive opens the named archive using os.Open and prepares it for use as an 
 
 ```
 searchKey: xcoff.NewArchive
-tags: [exported]
 ```
 
 ```Go
@@ -2080,7 +1968,6 @@ NewArchive creates a new Archive for accessing an AIX big archive in an underlyi
 
 ```
 searchKey: xcoff.Archive.Close
-tags: [exported]
 ```
 
 ```Go
@@ -2093,7 +1980,6 @@ Close closes the Archive. If the Archive was created using NewArchive directly i
 
 ```
 searchKey: xcoff.Archive.GetFile
-tags: [exported]
 ```
 
 ```Go
@@ -2106,7 +1992,6 @@ GetFile returns the XCOFF file defined by member name. FIXME: This doesn't work 
 
 ```
 searchKey: xcoff.ArchiveHeader
-tags: [exported]
 ```
 
 ```Go
@@ -2121,7 +2006,6 @@ MemberHeader holds information about a big archive file header
 
 ```
 searchKey: xcoff.Member
-tags: [exported]
 ```
 
 ```Go
@@ -2137,7 +2021,6 @@ Member represents a member of an AIX big archive.
 
 ```
 searchKey: xcoff.MemberHeader
-tags: [exported]
 ```
 
 ```Go
@@ -2153,7 +2036,6 @@ MemberHeader holds information about a big archive member
 
 ```
 searchKey: xcoff.SectionHeader
-tags: [exported]
 ```
 
 ```Go
@@ -2173,7 +2055,6 @@ SectionHeader holds information about an XCOFF section header.
 
 ```
 searchKey: xcoff.Section
-tags: [exported]
 ```
 
 ```Go
@@ -2189,7 +2070,6 @@ type Section struct {
 
 ```
 searchKey: xcoff.Section.Data
-tags: [exported]
 ```
 
 ```Go
@@ -2202,7 +2082,6 @@ Data reads and returns the contents of the XCOFF section s.
 
 ```
 searchKey: xcoff.AuxiliaryCSect
-tags: [exported]
 ```
 
 ```Go
@@ -2219,7 +2098,6 @@ AuxiliaryCSect holds information about an XCOFF symbol in an AUX_CSECT entry.
 
 ```
 searchKey: xcoff.AuxiliaryFcn
-tags: [exported]
 ```
 
 ```Go
@@ -2234,7 +2112,6 @@ AuxiliaryFcn holds information about an XCOFF symbol in an AUX_FCN entry.
 
 ```
 searchKey: xcoff.Symbol
-tags: [exported]
 ```
 
 ```Go
@@ -2252,7 +2129,6 @@ type Symbol struct {
 
 ```
 searchKey: xcoff.Reloc
-tags: [exported]
 ```
 
 ```Go
@@ -2270,7 +2146,6 @@ type Reloc struct {
 
 ```
 searchKey: xcoff.ImportedSymbol
-tags: [exported]
 ```
 
 ```Go
@@ -2286,7 +2161,6 @@ ImportedSymbol holds information about an imported XCOFF symbol.
 
 ```
 searchKey: xcoff.FileHeader
-tags: [exported]
 ```
 
 ```Go
@@ -2301,7 +2175,6 @@ FileHeader holds information about an XCOFF file header.
 
 ```
 searchKey: xcoff.File
-tags: [exported]
 ```
 
 ```Go
@@ -2322,7 +2195,6 @@ A File represents an open XCOFF file.
 
 ```
 searchKey: xcoff.Open
-tags: [exported]
 ```
 
 ```Go
@@ -2335,7 +2207,6 @@ Open opens the named file using os.Open and prepares it for use as an XCOFF bina
 
 ```
 searchKey: xcoff.NewFile
-tags: [exported]
 ```
 
 ```Go
@@ -2348,7 +2219,6 @@ NewFile creates a new File for accessing an XCOFF binary in an underlying reader
 
 ```
 searchKey: xcoff.File.Close
-tags: [exported]
 ```
 
 ```Go
@@ -2361,7 +2231,6 @@ Close closes the File. If the File was created using NewFile directly instead of
 
 ```
 searchKey: xcoff.File.Section
-tags: [exported]
 ```
 
 ```Go
@@ -2374,7 +2243,6 @@ Section returns the first section with the given name, or nil if no such section
 
 ```
 searchKey: xcoff.File.SectionByType
-tags: [exported]
 ```
 
 ```Go
@@ -2387,7 +2255,6 @@ SectionByType returns the first section in f with the given type, or nil if ther
 
 ```
 searchKey: xcoff.File.CSect
-tags: [exported]
 ```
 
 ```Go
@@ -2400,7 +2267,6 @@ CSect reads and returns the contents of a csect.
 
 ```
 searchKey: xcoff.File.DWARF
-tags: [exported]
 ```
 
 ```Go
@@ -2411,6 +2277,7 @@ func (f *File) DWARF() (*dwarf.Data, error)
 
 ```
 searchKey: xcoff.File.readImportIDs
+tags: [private]
 ```
 
 ```Go
@@ -2423,7 +2290,6 @@ readImportID returns the import file IDs stored inside the .loader section. Libr
 
 ```
 searchKey: xcoff.File.ImportedSymbols
-tags: [exported]
 ```
 
 ```Go
@@ -2436,7 +2302,6 @@ ImportedSymbols returns the names of all symbols referred to by the binary f tha
 
 ```
 searchKey: xcoff.File.ImportedLibraries
-tags: [exported]
 ```
 
 ```Go
@@ -2449,6 +2314,7 @@ ImportedLibraries returns the names of all libraries referred to by the binary f
 
 ```
 searchKey: xcoff.zeroReaderAt
+tags: [private]
 ```
 
 ```Go
@@ -2461,6 +2327,7 @@ zeroReaderAt is ReaderAt that reads 0s.
 
 ```
 searchKey: xcoff.zeroReaderAt.ReadAt
+tags: [private]
 ```
 
 ```Go
@@ -2473,7 +2340,6 @@ ReadAt writes len(p) 0s into p.
 
 ```
 searchKey: xcoff.FileHeader32
-tags: [exported]
 ```
 
 ```Go
@@ -2494,7 +2360,6 @@ File Header.
 
 ```
 searchKey: xcoff.FileHeader64
-tags: [exported]
 ```
 
 ```Go
@@ -2513,7 +2378,6 @@ type FileHeader64 struct {
 
 ```
 searchKey: xcoff.SectionHeader32
-tags: [exported]
 ```
 
 ```Go
@@ -2537,7 +2401,6 @@ Section Header.
 
 ```
 searchKey: xcoff.SectionHeader64
-tags: [exported]
 ```
 
 ```Go
@@ -2560,7 +2423,6 @@ type SectionHeader64 struct {
 
 ```
 searchKey: xcoff.SymEnt32
-tags: [exported]
 ```
 
 ```Go
@@ -2580,7 +2442,6 @@ Symbol Table Entry.
 
 ```
 searchKey: xcoff.SymEnt64
-tags: [exported]
 ```
 
 ```Go
@@ -2598,7 +2459,6 @@ type SymEnt64 struct {
 
 ```
 searchKey: xcoff.AuxFile64
-tags: [exported]
 ```
 
 ```Go
@@ -2615,7 +2475,6 @@ File Auxiliary Entry
 
 ```
 searchKey: xcoff.AuxFcn32
-tags: [exported]
 ```
 
 ```Go
@@ -2634,7 +2493,6 @@ Function Auxiliary Entry
 
 ```
 searchKey: xcoff.AuxFcn64
-tags: [exported]
 ```
 
 ```Go
@@ -2651,7 +2509,6 @@ type AuxFcn64 struct {
 
 ```
 searchKey: xcoff.AuxSect64
-tags: [exported]
 ```
 
 ```Go
@@ -2667,7 +2524,6 @@ type AuxSect64 struct {
 
 ```
 searchKey: xcoff.AuxCSect32
-tags: [exported]
 ```
 
 ```Go
@@ -2688,7 +2544,6 @@ csect Auxiliary Entry.
 
 ```
 searchKey: xcoff.AuxCSect64
-tags: [exported]
 ```
 
 ```Go
@@ -2708,7 +2563,6 @@ type AuxCSect64 struct {
 
 ```
 searchKey: xcoff.LoaderHeader32
-tags: [exported]
 ```
 
 ```Go
@@ -2730,7 +2584,6 @@ Loader Header.
 
 ```
 searchKey: xcoff.LoaderHeader64
-tags: [exported]
 ```
 
 ```Go
@@ -2752,7 +2605,6 @@ type LoaderHeader64 struct {
 
 ```
 searchKey: xcoff.LoaderSymbol32
-tags: [exported]
 ```
 
 ```Go
@@ -2773,7 +2625,6 @@ Loader Symbol.
 
 ```
 searchKey: xcoff.LoaderSymbol64
-tags: [exported]
 ```
 
 ```Go
@@ -2792,7 +2643,6 @@ type LoaderSymbol64 struct {
 
 ```
 searchKey: xcoff.Reloc32
-tags: [exported]
 ```
 
 ```Go
@@ -2808,7 +2658,6 @@ type Reloc32 struct {
 
 ```
 searchKey: xcoff.Reloc64
-tags: [exported]
 ```
 
 ```Go
@@ -2824,6 +2673,7 @@ type Reloc64 struct {
 
 ```
 searchKey: xcoff.archiveTest
+tags: [private]
 ```
 
 ```Go
@@ -2839,6 +2689,7 @@ type archiveTest struct {
 
 ```
 searchKey: xcoff.fileTest
+tags: [private]
 ```
 
 ```Go
@@ -2852,10 +2703,15 @@ type fileTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="cstring" href="#cstring">func cstring(b []byte) string</a>
 
 ```
 searchKey: xcoff.cstring
+tags: [private]
 ```
 
 ```Go
@@ -2868,6 +2724,7 @@ cstring converts ASCII byte sequence b to string. It stops once it finds 0 or re
 
 ```
 searchKey: xcoff.getString
+tags: [private]
 ```
 
 ```Go
@@ -2880,6 +2737,7 @@ getString extracts a string from an XCOFF string table.
 
 ```
 searchKey: xcoff.TestOpenArchive
+tags: [private]
 ```
 
 ```Go
@@ -2890,6 +2748,7 @@ func TestOpenArchive(t *testing.T)
 
 ```
 searchKey: xcoff.TestOpen
+tags: [private]
 ```
 
 ```Go
@@ -2900,6 +2759,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: xcoff.TestOpenFailure
+tags: [private]
 ```
 
 ```Go

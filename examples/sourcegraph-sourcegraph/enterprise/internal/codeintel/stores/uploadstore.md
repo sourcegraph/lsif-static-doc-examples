@@ -398,10 +398,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="maxZeroReads" href="#maxZeroReads">const maxZeroReads</a>
 
 ```
 searchKey: uploadstore.maxZeroReads
+tags: [private]
 ```
 
 ```Go
@@ -412,10 +417,15 @@ maxZeroReads is the maximum number of no-progress iterations (due to connection 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="errNoDownloadProgress" href="#errNoDownloadProgress">var errNoDownloadProgress</a>
 
 ```
 searchKey: uploadstore.errNoDownloadProgress
+tags: [private]
 ```
 
 ```Go
@@ -428,6 +438,7 @@ errNoDownloadProgress is returned from Get after multiple connection reset error
 
 ```
 searchKey: uploadstore.ioCopyHook
+tags: [private]
 ```
 
 ```Go
@@ -440,6 +451,7 @@ ioCopyHook is a pointer to io.Copy. This function is replaced in unit tests so t
 
 ```
 searchKey: uploadstore.storeConstructors
+tags: [private]
 ```
 
 ```Go
@@ -450,6 +462,7 @@ var storeConstructors = ...
 
 ```
 searchKey: uploadstore.bytesPattern
+tags: [private]
 ```
 
 ```Go
@@ -460,6 +473,7 @@ var bytesPattern = regexp.MustCompile(`bytes=(\d+)-`)
 
 ```
 searchKey: uploadstore.fullContents
+tags: [private]
 ```
 
 ```Go
@@ -468,11 +482,14 @@ var fullContents = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
 searchKey: uploadstore.Config
-tags: [exported]
 ```
 
 ```Go
@@ -492,7 +509,6 @@ type Config struct {
 
 ```
 searchKey: uploadstore.Config.Load
-tags: [exported]
 ```
 
 ```Go
@@ -503,6 +519,7 @@ func (c *Config) Load()
 
 ```
 searchKey: uploadstore.loader
+tags: [private]
 ```
 
 ```Go
@@ -515,6 +532,7 @@ type loader interface {
 
 ```
 searchKey: uploadstore.gcsAPI
+tags: [private]
 ```
 
 ```Go
@@ -527,6 +545,7 @@ type gcsAPI interface {
 
 ```
 searchKey: uploadstore.gcsBucketHandle
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +561,7 @@ type gcsBucketHandle interface {
 
 ```
 searchKey: uploadstore.gcsObjectHandle
+tags: [private]
 ```
 
 ```Go
@@ -557,6 +577,7 @@ type gcsObjectHandle interface {
 
 ```
 searchKey: uploadstore.gcsComposer
+tags: [private]
 ```
 
 ```Go
@@ -569,6 +590,7 @@ type gcsComposer interface {
 
 ```
 searchKey: uploadstore.gcsAPIShim
+tags: [private]
 ```
 
 ```Go
@@ -579,6 +601,7 @@ type gcsAPIShim struct{ client *storage.Client }
 
 ```
 searchKey: uploadstore.gcsAPIShim.Bucket
+tags: [private]
 ```
 
 ```Go
@@ -589,6 +612,7 @@ func (s *gcsAPIShim) Bucket(name string) gcsBucketHandle
 
 ```
 searchKey: uploadstore.bucketHandleShim
+tags: [private]
 ```
 
 ```Go
@@ -599,6 +623,7 @@ type bucketHandleShim struct{ handle *storage.BucketHandle }
 
 ```
 searchKey: uploadstore.bucketHandleShim.Attrs
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +634,7 @@ func (s *bucketHandleShim) Attrs(ctx context.Context) (*storage.BucketAttrs, err
 
 ```
 searchKey: uploadstore.bucketHandleShim.Create
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +645,7 @@ func (s *bucketHandleShim) Create(ctx context.Context, projectID string, attrs *
 
 ```
 searchKey: uploadstore.bucketHandleShim.Update
+tags: [private]
 ```
 
 ```Go
@@ -629,6 +656,7 @@ func (s *bucketHandleShim) Update(ctx context.Context, attrs storage.BucketAttrs
 
 ```
 searchKey: uploadstore.bucketHandleShim.Object
+tags: [private]
 ```
 
 ```Go
@@ -639,6 +667,7 @@ func (s *bucketHandleShim) Object(name string) gcsObjectHandle
 
 ```
 searchKey: uploadstore.objectHandleShim
+tags: [private]
 ```
 
 ```Go
@@ -649,6 +678,7 @@ type objectHandleShim struct{ handle *storage.ObjectHandle }
 
 ```
 searchKey: uploadstore.objectHandleShim.Delete
+tags: [private]
 ```
 
 ```Go
@@ -659,6 +689,7 @@ func (s *objectHandleShim) Delete(ctx context.Context) error
 
 ```
 searchKey: uploadstore.objectHandleShim.NewRangeReader
+tags: [private]
 ```
 
 ```Go
@@ -669,6 +700,7 @@ func (s *objectHandleShim) NewRangeReader(ctx context.Context, offset, length in
 
 ```
 searchKey: uploadstore.objectHandleShim.NewWriter
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +711,7 @@ func (s *objectHandleShim) NewWriter(ctx context.Context) io.WriteCloser
 
 ```
 searchKey: uploadstore.objectHandleShim.ComposerFrom
+tags: [private]
 ```
 
 ```Go
@@ -689,6 +722,7 @@ func (s *objectHandleShim) ComposerFrom(sources ...gcsObjectHandle) gcsComposer
 
 ```
 searchKey: uploadstore.composerShim
+tags: [private]
 ```
 
 ```Go
@@ -702,6 +736,7 @@ type composerShim struct {
 
 ```
 searchKey: uploadstore.composerShim.Run
+tags: [private]
 ```
 
 ```Go
@@ -712,6 +747,7 @@ func (s *composerShim) Run(ctx context.Context) (*storage.ObjectAttrs, error)
 
 ```
 searchKey: uploadstore.gcsStore
+tags: [private]
 ```
 
 ```Go
@@ -729,6 +765,7 @@ type gcsStore struct {
 
 ```
 searchKey: uploadstore.newGCSWithClient
+tags: [private]
 ```
 
 ```Go
@@ -739,6 +776,7 @@ func newGCSWithClient(client gcsAPI, bucket string, ttl time.Duration, manageBuc
 
 ```
 searchKey: uploadstore.rawGCSClient
+tags: [private]
 ```
 
 ```Go
@@ -749,6 +787,7 @@ func rawGCSClient(client gcsAPI, manageBucket bool) *gcsStore
 
 ```
 searchKey: uploadstore.gcsStore.Init
+tags: [private]
 ```
 
 ```Go
@@ -759,6 +798,7 @@ func (s *gcsStore) Init(ctx context.Context) error
 
 ```
 searchKey: uploadstore.gcsStore.Get
+tags: [private]
 ```
 
 ```Go
@@ -769,6 +809,7 @@ func (s *gcsStore) Get(ctx context.Context, key string) (_ io.ReadCloser, err er
 
 ```
 searchKey: uploadstore.gcsStore.Upload
+tags: [private]
 ```
 
 ```Go
@@ -779,6 +820,7 @@ func (s *gcsStore) Upload(ctx context.Context, key string, r io.Reader) (_ int64
 
 ```
 searchKey: uploadstore.gcsStore.Compose
+tags: [private]
 ```
 
 ```Go
@@ -789,6 +831,7 @@ func (s *gcsStore) Compose(ctx context.Context, destination string, sources ...s
 
 ```
 searchKey: uploadstore.gcsStore.Delete
+tags: [private]
 ```
 
 ```Go
@@ -799,6 +842,7 @@ func (s *gcsStore) Delete(ctx context.Context, key string) (err error)
 
 ```
 searchKey: uploadstore.gcsStore.create
+tags: [private]
 ```
 
 ```Go
@@ -809,6 +853,7 @@ func (s *gcsStore) create(ctx context.Context, bucket gcsBucketHandle) error
 
 ```
 searchKey: uploadstore.gcsStore.update
+tags: [private]
 ```
 
 ```Go
@@ -819,6 +864,7 @@ func (s *gcsStore) update(ctx context.Context, bucket gcsBucketHandle) error
 
 ```
 searchKey: uploadstore.gcsStore.lifecycle
+tags: [private]
 ```
 
 ```Go
@@ -829,6 +875,7 @@ func (s *gcsStore) lifecycle() storage.Lifecycle
 
 ```
 searchKey: uploadstore.gcsStore.deleteSources
+tags: [private]
 ```
 
 ```Go
@@ -839,7 +886,6 @@ func (s *gcsStore) deleteSources(ctx context.Context, bucket gcsBucketHandle, so
 
 ```
 searchKey: uploadstore.GCSConfig
-tags: [exported]
 ```
 
 ```Go
@@ -854,6 +900,7 @@ type GCSConfig struct {
 
 ```
 searchKey: uploadstore.GCSConfig.load
+tags: [private]
 ```
 
 ```Go
@@ -864,6 +911,7 @@ func (c *GCSConfig) load(parent *env.BaseConfig)
 
 ```
 searchKey: uploadstore.lazyStore
+tags: [private]
 ```
 
 ```Go
@@ -878,6 +926,7 @@ type lazyStore struct {
 
 ```
 searchKey: uploadstore.lazyStore.Init
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +937,7 @@ func (s *lazyStore) Init(ctx context.Context) error
 
 ```
 searchKey: uploadstore.lazyStore.Get
+tags: [private]
 ```
 
 ```Go
@@ -898,6 +948,7 @@ func (s *lazyStore) Get(ctx context.Context, key string) (io.ReadCloser, error)
 
 ```
 searchKey: uploadstore.lazyStore.Upload
+tags: [private]
 ```
 
 ```Go
@@ -908,6 +959,7 @@ func (s *lazyStore) Upload(ctx context.Context, key string, r io.Reader) (int64,
 
 ```
 searchKey: uploadstore.lazyStore.Compose
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +970,7 @@ func (s *lazyStore) Compose(ctx context.Context, destination string, sources ...
 
 ```
 searchKey: uploadstore.lazyStore.Delete
+tags: [private]
 ```
 
 ```Go
@@ -928,6 +981,7 @@ func (s *lazyStore) Delete(ctx context.Context, key string) error
 
 ```
 searchKey: uploadstore.lazyStore.initOnce
+tags: [private]
 ```
 
 ```Go
@@ -940,6 +994,7 @@ initOnce serializes access to the underlying store's Init method. If the Init me
 
 ```
 searchKey: uploadstore.operations
+tags: [private]
 ```
 
 ```Go
@@ -955,6 +1010,7 @@ type operations struct {
 
 ```
 searchKey: uploadstore.newOperations
+tags: [private]
 ```
 
 ```Go
@@ -965,6 +1021,7 @@ func newOperations(observationContext *observation.Context) *operations
 
 ```
 searchKey: uploadstore.s3API
+tags: [private]
 ```
 
 ```Go
@@ -985,6 +1042,7 @@ type s3API interface {
 
 ```
 searchKey: uploadstore.s3Uploader
+tags: [private]
 ```
 
 ```Go
@@ -997,6 +1055,7 @@ type s3Uploader interface {
 
 ```
 searchKey: uploadstore.s3APIShim
+tags: [private]
 ```
 
 ```Go
@@ -1007,6 +1066,7 @@ type s3APIShim struct{ *s3.Client }
 
 ```
 searchKey: uploadstore.s3APIShim.CreateBucket
+tags: [private]
 ```
 
 ```Go
@@ -1017,6 +1077,7 @@ func (s *s3APIShim) CreateBucket(ctx context.Context, input *s3.CreateBucketInpu
 
 ```
 searchKey: uploadstore.s3APIShim.PutBucketLifecycleConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -1027,6 +1088,7 @@ func (s *s3APIShim) PutBucketLifecycleConfiguration(ctx context.Context, input *
 
 ```
 searchKey: uploadstore.s3APIShim.HeadObject
+tags: [private]
 ```
 
 ```Go
@@ -1037,6 +1099,7 @@ func (s *s3APIShim) HeadObject(ctx context.Context, input *s3.HeadObjectInput) (
 
 ```
 searchKey: uploadstore.s3APIShim.GetObject
+tags: [private]
 ```
 
 ```Go
@@ -1047,6 +1110,7 @@ func (s *s3APIShim) GetObject(ctx context.Context, input *s3.GetObjectInput) (*s
 
 ```
 searchKey: uploadstore.s3APIShim.DeleteObject
+tags: [private]
 ```
 
 ```Go
@@ -1057,6 +1121,7 @@ func (s *s3APIShim) DeleteObject(ctx context.Context, input *s3.DeleteObjectInpu
 
 ```
 searchKey: uploadstore.s3APIShim.CreateMultipartUpload
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1132,7 @@ func (s *s3APIShim) CreateMultipartUpload(ctx context.Context, input *s3.CreateM
 
 ```
 searchKey: uploadstore.s3APIShim.AbortMultipartUpload
+tags: [private]
 ```
 
 ```Go
@@ -1077,6 +1143,7 @@ func (s *s3APIShim) AbortMultipartUpload(ctx context.Context, input *s3.AbortMul
 
 ```
 searchKey: uploadstore.s3APIShim.UploadPartCopy
+tags: [private]
 ```
 
 ```Go
@@ -1087,6 +1154,7 @@ func (s *s3APIShim) UploadPartCopy(ctx context.Context, input *s3.UploadPartCopy
 
 ```
 searchKey: uploadstore.s3APIShim.CompleteMultipartUpload
+tags: [private]
 ```
 
 ```Go
@@ -1097,6 +1165,7 @@ func (s *s3APIShim) CompleteMultipartUpload(ctx context.Context, input *s3.Compl
 
 ```
 searchKey: uploadstore.s3UploaderShim
+tags: [private]
 ```
 
 ```Go
@@ -1107,6 +1176,7 @@ type s3UploaderShim struct{ *manager.Uploader }
 
 ```
 searchKey: uploadstore.s3UploaderShim.Upload
+tags: [private]
 ```
 
 ```Go
@@ -1117,6 +1187,7 @@ func (s *s3UploaderShim) Upload(ctx context.Context, input *s3.PutObjectInput) e
 
 ```
 searchKey: uploadstore.s3Store
+tags: [private]
 ```
 
 ```Go
@@ -1134,6 +1205,7 @@ type s3Store struct {
 
 ```
 searchKey: uploadstore.newS3WithClients
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1216,7 @@ func newS3WithClients(client s3API, uploader s3Uploader, bucket string, manageBu
 
 ```
 searchKey: uploadstore.rawS3Client
+tags: [private]
 ```
 
 ```Go
@@ -1154,6 +1227,7 @@ func rawS3Client(client s3API, uploader s3Uploader) *s3Store
 
 ```
 searchKey: uploadstore.s3Store.Init
+tags: [private]
 ```
 
 ```Go
@@ -1164,6 +1238,7 @@ func (s *s3Store) Init(ctx context.Context) error
 
 ```
 searchKey: uploadstore.s3Store.Get
+tags: [private]
 ```
 
 ```Go
@@ -1174,6 +1249,7 @@ func (s *s3Store) Get(ctx context.Context, key string) (_ io.ReadCloser, err err
 
 ```
 searchKey: uploadstore.s3Store.readObjectInto
+tags: [private]
 ```
 
 ```Go
@@ -1186,6 +1262,7 @@ readObjectInto reads the content of the given key starting at the given byte off
 
 ```
 searchKey: uploadstore.s3Store.Upload
+tags: [private]
 ```
 
 ```Go
@@ -1196,6 +1273,7 @@ func (s *s3Store) Upload(ctx context.Context, key string, r io.Reader) (_ int64,
 
 ```
 searchKey: uploadstore.s3Store.Compose
+tags: [private]
 ```
 
 ```Go
@@ -1206,6 +1284,7 @@ func (s *s3Store) Compose(ctx context.Context, destination string, sources ...st
 
 ```
 searchKey: uploadstore.s3Store.Delete
+tags: [private]
 ```
 
 ```Go
@@ -1216,6 +1295,7 @@ func (s *s3Store) Delete(ctx context.Context, key string) (err error)
 
 ```
 searchKey: uploadstore.s3Store.create
+tags: [private]
 ```
 
 ```Go
@@ -1226,6 +1306,7 @@ func (s *s3Store) create(ctx context.Context) error
 
 ```
 searchKey: uploadstore.s3Store.update
+tags: [private]
 ```
 
 ```Go
@@ -1236,6 +1317,7 @@ func (s *s3Store) update(ctx context.Context) error
 
 ```
 searchKey: uploadstore.s3Store.deleteSources
+tags: [private]
 ```
 
 ```Go
@@ -1246,7 +1328,6 @@ func (s *s3Store) deleteSources(ctx context.Context, bucket string, sources []st
 
 ```
 searchKey: uploadstore.S3Config
-tags: [exported]
 ```
 
 ```Go
@@ -1263,6 +1344,7 @@ type S3Config struct {
 
 ```
 searchKey: uploadstore.S3Config.load
+tags: [private]
 ```
 
 ```Go
@@ -1273,6 +1355,7 @@ func (c *S3Config) load(parent *env.BaseConfig)
 
 ```
 searchKey: uploadstore.countingReader
+tags: [private]
 ```
 
 ```Go
@@ -1288,6 +1371,7 @@ countingReader is an io.Reader that counts the number of bytes sent back to the 
 
 ```
 searchKey: uploadstore.countingReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -1298,7 +1382,6 @@ func (r *countingReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: uploadstore.Store
-tags: [exported]
 ```
 
 ```Go
@@ -1329,6 +1412,7 @@ Store is an expiring key/value store backed by a managed blob store.
 
 ```
 searchKey: uploadstore.newGCSFromConfig
+tags: [private]
 ```
 
 ```Go
@@ -1341,6 +1425,7 @@ newGCSFromConfig creates a new store backed by GCP storage.
 
 ```
 searchKey: uploadstore.newLazyStore
+tags: [private]
 ```
 
 ```Go
@@ -1351,6 +1436,7 @@ func newLazyStore(store Store) Store
 
 ```
 searchKey: uploadstore.newS3FromConfig
+tags: [private]
 ```
 
 ```Go
@@ -1363,7 +1449,6 @@ newS3FromConfig creates a new store backed by AWS Simple Storage Service.
 
 ```
 searchKey: uploadstore.CreateLazy
-tags: [exported]
 ```
 
 ```Go
@@ -1376,6 +1461,7 @@ CreateLazy initialize a new store from the given configuration that is initializ
 
 ```
 searchKey: uploadstore.create
+tags: [private]
 ```
 
 ```Go
@@ -1388,6 +1474,7 @@ create creates but does not initialize a new store from the given configuration.
 
 ```
 searchKey: uploadstore.testGCSClient
+tags: [private]
 ```
 
 ```Go
@@ -1398,6 +1485,7 @@ func testGCSClient(client gcsAPI, manageBucket bool) Store
 
 ```
 searchKey: uploadstore.testS3Client
+tags: [private]
 ```
 
 ```Go
@@ -1408,6 +1496,7 @@ func testS3Client(client s3API, uploader s3Uploader) Store
 
 ```
 searchKey: uploadstore.nopCloser
+tags: [private]
 ```
 
 ```Go
@@ -1420,6 +1509,7 @@ type nopCloser struct {
 
 ```
 searchKey: uploadstore.nopCloser.Close
+tags: [private]
 ```
 
 ```Go
@@ -1430,6 +1520,7 @@ func (nopCloser) Close() error
 
 ```
 searchKey: uploadstore.MockGcsAPI
+tags: [private]
 ```
 
 ```Go
@@ -1446,6 +1537,7 @@ MockGcsAPI is a mock implementation of the gcsAPI interface (from the package gi
 
 ```
 searchKey: uploadstore.NewMockGcsAPI
+tags: [private]
 ```
 
 ```Go
@@ -1458,6 +1550,7 @@ NewMockGcsAPI creates a new mock of the gcsAPI interface. All methods return zer
 
 ```
 searchKey: uploadstore.NewMockGcsAPIFrom
+tags: [private]
 ```
 
 ```Go
@@ -1470,6 +1563,7 @@ NewMockGcsAPIFrom creates a new mock of the MockGcsAPI interface. All methods de
 
 ```
 searchKey: uploadstore.MockGcsAPI.Bucket
+tags: [private]
 ```
 
 ```Go
@@ -1482,6 +1576,7 @@ Bucket delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: uploadstore.surrogateMockGcsAPI
+tags: [private]
 ```
 
 ```Go
@@ -1496,6 +1591,7 @@ surrogateMockGcsAPI is a copy of the gcsAPI interface (from the package github.c
 
 ```
 searchKey: uploadstore.GcsAPIBucketFunc
+tags: [private]
 ```
 
 ```Go
@@ -1513,6 +1609,7 @@ GcsAPIBucketFunc describes the behavior when the Bucket method of the parent Moc
 
 ```
 searchKey: uploadstore.GcsAPIBucketFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1525,6 +1622,7 @@ SetDefaultHook sets function that is called when the Bucket method of the parent
 
 ```
 searchKey: uploadstore.GcsAPIBucketFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1537,6 +1635,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Bucket
 
 ```
 searchKey: uploadstore.GcsAPIBucketFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1549,6 +1648,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.GcsAPIBucketFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1561,6 +1661,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.GcsAPIBucketFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1571,6 +1672,7 @@ func (f *GcsAPIBucketFunc) nextHook() func(string) gcsBucketHandle
 
 ```
 searchKey: uploadstore.GcsAPIBucketFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1581,6 +1683,7 @@ func (f *GcsAPIBucketFunc) appendCall(r0 GcsAPIBucketFuncCall)
 
 ```
 searchKey: uploadstore.GcsAPIBucketFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1593,6 +1696,7 @@ History returns a sequence of GcsAPIBucketFuncCall objects describing the invoca
 
 ```
 searchKey: uploadstore.GcsAPIBucketFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1612,6 +1716,7 @@ GcsAPIBucketFuncCall is an object that describes an invocation of method Bucket 
 
 ```
 searchKey: uploadstore.GcsAPIBucketFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1624,6 +1729,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.GcsAPIBucketFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1636,6 +1742,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.MockGcsBucketHandle
+tags: [private]
 ```
 
 ```Go
@@ -1661,6 +1768,7 @@ MockGcsBucketHandle is a mock implementation of the gcsBucketHandle interface (f
 
 ```
 searchKey: uploadstore.NewMockGcsBucketHandle
+tags: [private]
 ```
 
 ```Go
@@ -1673,6 +1781,7 @@ NewMockGcsBucketHandle creates a new mock of the gcsBucketHandle interface. All 
 
 ```
 searchKey: uploadstore.NewMockGcsBucketHandleFrom
+tags: [private]
 ```
 
 ```Go
@@ -1685,6 +1794,7 @@ NewMockGcsBucketHandleFrom creates a new mock of the MockGcsBucketHandle interfa
 
 ```
 searchKey: uploadstore.MockGcsBucketHandle.Attrs
+tags: [private]
 ```
 
 ```Go
@@ -1697,6 +1807,7 @@ Attrs delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: uploadstore.MockGcsBucketHandle.Create
+tags: [private]
 ```
 
 ```Go
@@ -1709,6 +1820,7 @@ Create delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: uploadstore.MockGcsBucketHandle.Object
+tags: [private]
 ```
 
 ```Go
@@ -1721,6 +1833,7 @@ Object delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: uploadstore.MockGcsBucketHandle.Update
+tags: [private]
 ```
 
 ```Go
@@ -1733,6 +1846,7 @@ Update delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: uploadstore.surrogateMockGcsBucketHandle
+tags: [private]
 ```
 
 ```Go
@@ -1750,6 +1864,7 @@ surrogateMockGcsBucketHandle is a copy of the gcsBucketHandle interface (from th
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFunc
+tags: [private]
 ```
 
 ```Go
@@ -1767,6 +1882,7 @@ GcsBucketHandleAttrsFunc describes the behavior when the Attrs method of the par
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1779,6 +1895,7 @@ SetDefaultHook sets function that is called when the Attrs method of the parent 
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1791,6 +1908,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Attrs 
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1803,6 +1921,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1815,6 +1934,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1825,6 +1945,7 @@ func (f *GcsBucketHandleAttrsFunc) nextHook() func(context.Context) (*storage.Bu
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1835,6 +1956,7 @@ func (f *GcsBucketHandleAttrsFunc) appendCall(r0 GcsBucketHandleAttrsFuncCall)
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1847,6 +1969,7 @@ History returns a sequence of GcsBucketHandleAttrsFuncCall objects describing th
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1869,6 +1992,7 @@ GcsBucketHandleAttrsFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1881,6 +2005,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.GcsBucketHandleAttrsFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1893,6 +2018,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFunc
+tags: [private]
 ```
 
 ```Go
@@ -1910,6 +2036,7 @@ GcsBucketHandleCreateFunc describes the behavior when the Create method of the p
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1922,6 +2049,7 @@ SetDefaultHook sets function that is called when the Create method of the parent
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1934,6 +2062,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Create
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1946,6 +2075,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1958,6 +2088,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1968,6 +2099,7 @@ func (f *GcsBucketHandleCreateFunc) nextHook() func(context.Context, string, *st
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1978,6 +2110,7 @@ func (f *GcsBucketHandleCreateFunc) appendCall(r0 GcsBucketHandleCreateFuncCall)
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1990,6 +2123,7 @@ History returns a sequence of GcsBucketHandleCreateFuncCall objects describing t
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2015,6 +2149,7 @@ GcsBucketHandleCreateFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2027,6 +2162,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.GcsBucketHandleCreateFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2039,6 +2175,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFunc
+tags: [private]
 ```
 
 ```Go
@@ -2056,6 +2193,7 @@ GcsBucketHandleObjectFunc describes the behavior when the Object method of the p
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2068,6 +2206,7 @@ SetDefaultHook sets function that is called when the Object method of the parent
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2080,6 +2219,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Object
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2092,6 +2232,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2104,6 +2245,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2114,6 +2256,7 @@ func (f *GcsBucketHandleObjectFunc) nextHook() func(string) gcsObjectHandle
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2124,6 +2267,7 @@ func (f *GcsBucketHandleObjectFunc) appendCall(r0 GcsBucketHandleObjectFuncCall)
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2136,6 +2280,7 @@ History returns a sequence of GcsBucketHandleObjectFuncCall objects describing t
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2155,6 +2300,7 @@ GcsBucketHandleObjectFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2167,6 +2313,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.GcsBucketHandleObjectFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2179,6 +2326,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFunc
+tags: [private]
 ```
 
 ```Go
@@ -2196,6 +2344,7 @@ GcsBucketHandleUpdateFunc describes the behavior when the Update method of the p
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2208,6 +2357,7 @@ SetDefaultHook sets function that is called when the Update method of the parent
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2220,6 +2370,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Update
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2232,6 +2383,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2244,6 +2396,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2254,6 +2407,7 @@ func (f *GcsBucketHandleUpdateFunc) nextHook() func(context.Context, storage.Buc
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2264,6 +2418,7 @@ func (f *GcsBucketHandleUpdateFunc) appendCall(r0 GcsBucketHandleUpdateFuncCall)
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2276,6 +2431,7 @@ History returns a sequence of GcsBucketHandleUpdateFuncCall objects describing t
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2298,6 +2454,7 @@ GcsBucketHandleUpdateFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2310,6 +2467,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.GcsBucketHandleUpdateFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2322,6 +2480,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.MockGcsComposer
+tags: [private]
 ```
 
 ```Go
@@ -2338,6 +2497,7 @@ MockGcsComposer is a mock implementation of the gcsComposer interface (from the 
 
 ```
 searchKey: uploadstore.NewMockGcsComposer
+tags: [private]
 ```
 
 ```Go
@@ -2350,6 +2510,7 @@ NewMockGcsComposer creates a new mock of the gcsComposer interface. All methods 
 
 ```
 searchKey: uploadstore.NewMockGcsComposerFrom
+tags: [private]
 ```
 
 ```Go
@@ -2362,6 +2523,7 @@ NewMockGcsComposerFrom creates a new mock of the MockGcsComposer interface. All 
 
 ```
 searchKey: uploadstore.MockGcsComposer.Run
+tags: [private]
 ```
 
 ```Go
@@ -2374,6 +2536,7 @@ Run delegates to the next hook function in the queue and stores the parameter an
 
 ```
 searchKey: uploadstore.surrogateMockGcsComposer
+tags: [private]
 ```
 
 ```Go
@@ -2388,6 +2551,7 @@ surrogateMockGcsComposer is a copy of the gcsComposer interface (from the packag
 
 ```
 searchKey: uploadstore.GcsComposerRunFunc
+tags: [private]
 ```
 
 ```Go
@@ -2405,6 +2569,7 @@ GcsComposerRunFunc describes the behavior when the Run method of the parent Mock
 
 ```
 searchKey: uploadstore.GcsComposerRunFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2417,6 +2582,7 @@ SetDefaultHook sets function that is called when the Run method of the parent Mo
 
 ```
 searchKey: uploadstore.GcsComposerRunFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2429,6 +2595,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Run me
 
 ```
 searchKey: uploadstore.GcsComposerRunFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2441,6 +2608,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.GcsComposerRunFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2453,6 +2621,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.GcsComposerRunFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2463,6 +2632,7 @@ func (f *GcsComposerRunFunc) nextHook() func(context.Context) (*storage.ObjectAt
 
 ```
 searchKey: uploadstore.GcsComposerRunFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2473,6 +2643,7 @@ func (f *GcsComposerRunFunc) appendCall(r0 GcsComposerRunFuncCall)
 
 ```
 searchKey: uploadstore.GcsComposerRunFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2485,6 +2656,7 @@ History returns a sequence of GcsComposerRunFuncCall objects describing the invo
 
 ```
 searchKey: uploadstore.GcsComposerRunFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2507,6 +2679,7 @@ GcsComposerRunFuncCall is an object that describes an invocation of method Run o
 
 ```
 searchKey: uploadstore.GcsComposerRunFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2519,6 +2692,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.GcsComposerRunFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2531,6 +2705,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.MockGcsObjectHandle
+tags: [private]
 ```
 
 ```Go
@@ -2556,6 +2731,7 @@ MockGcsObjectHandle is a mock implementation of the gcsObjectHandle interface (f
 
 ```
 searchKey: uploadstore.NewMockGcsObjectHandle
+tags: [private]
 ```
 
 ```Go
@@ -2568,6 +2744,7 @@ NewMockGcsObjectHandle creates a new mock of the gcsObjectHandle interface. All 
 
 ```
 searchKey: uploadstore.NewMockGcsObjectHandleFrom
+tags: [private]
 ```
 
 ```Go
@@ -2580,6 +2757,7 @@ NewMockGcsObjectHandleFrom creates a new mock of the MockGcsObjectHandle interfa
 
 ```
 searchKey: uploadstore.MockGcsObjectHandle.ComposerFrom
+tags: [private]
 ```
 
 ```Go
@@ -2592,6 +2770,7 @@ ComposerFrom delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: uploadstore.MockGcsObjectHandle.Delete
+tags: [private]
 ```
 
 ```Go
@@ -2604,6 +2783,7 @@ Delete delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: uploadstore.MockGcsObjectHandle.NewRangeReader
+tags: [private]
 ```
 
 ```Go
@@ -2616,6 +2796,7 @@ NewRangeReader delegates to the next hook function in the queue and stores the p
 
 ```
 searchKey: uploadstore.MockGcsObjectHandle.NewWriter
+tags: [private]
 ```
 
 ```Go
@@ -2628,6 +2809,7 @@ NewWriter delegates to the next hook function in the queue and stores the parame
 
 ```
 searchKey: uploadstore.surrogateMockGcsObjectHandle
+tags: [private]
 ```
 
 ```Go
@@ -2645,6 +2827,7 @@ surrogateMockGcsObjectHandle is a copy of the gcsObjectHandle interface (from th
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFunc
+tags: [private]
 ```
 
 ```Go
@@ -2662,6 +2845,7 @@ GcsObjectHandleComposerFromFunc describes the behavior when the ComposerFrom met
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2674,6 +2858,7 @@ SetDefaultHook sets function that is called when the ComposerFrom method of the 
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2686,6 +2871,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Compos
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2698,6 +2884,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2710,6 +2897,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2720,6 +2908,7 @@ func (f *GcsObjectHandleComposerFromFunc) nextHook() func(...gcsObjectHandle) gc
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2730,6 +2919,7 @@ func (f *GcsObjectHandleComposerFromFunc) appendCall(r0 GcsObjectHandleComposerF
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2742,6 +2932,7 @@ History returns a sequence of GcsObjectHandleComposerFromFuncCall objects descri
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2761,6 +2952,7 @@ GcsObjectHandleComposerFromFuncCall is an object that describes an invocation of
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2773,6 +2965,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: uploadstore.GcsObjectHandleComposerFromFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2785,6 +2978,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFunc
+tags: [private]
 ```
 
 ```Go
@@ -2802,6 +2996,7 @@ GcsObjectHandleDeleteFunc describes the behavior when the Delete method of the p
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2814,6 +3009,7 @@ SetDefaultHook sets function that is called when the Delete method of the parent
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2826,6 +3022,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Delete
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2838,6 +3035,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2850,6 +3048,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2860,6 +3059,7 @@ func (f *GcsObjectHandleDeleteFunc) nextHook() func(context.Context) error
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2870,6 +3070,7 @@ func (f *GcsObjectHandleDeleteFunc) appendCall(r0 GcsObjectHandleDeleteFuncCall)
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2882,6 +3083,7 @@ History returns a sequence of GcsObjectHandleDeleteFuncCall objects describing t
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2901,6 +3103,7 @@ GcsObjectHandleDeleteFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2913,6 +3116,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.GcsObjectHandleDeleteFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2925,6 +3129,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFunc
+tags: [private]
 ```
 
 ```Go
@@ -2942,6 +3147,7 @@ GcsObjectHandleNewRangeReaderFunc describes the behavior when the NewRangeReader
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2954,6 +3160,7 @@ SetDefaultHook sets function that is called when the NewRangeReader method of th
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2966,6 +3173,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the NewRan
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2978,6 +3186,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2990,6 +3199,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3000,6 +3210,7 @@ func (f *GcsObjectHandleNewRangeReaderFunc) nextHook() func(context.Context, int
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3010,6 +3221,7 @@ func (f *GcsObjectHandleNewRangeReaderFunc) appendCall(r0 GcsObjectHandleNewRang
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3022,6 +3234,7 @@ History returns a sequence of GcsObjectHandleNewRangeReaderFuncCall objects desc
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3050,6 +3263,7 @@ GcsObjectHandleNewRangeReaderFuncCall is an object that describes an invocation 
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3062,6 +3276,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewRangeReaderFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3074,6 +3289,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFunc
+tags: [private]
 ```
 
 ```Go
@@ -3091,6 +3307,7 @@ GcsObjectHandleNewWriterFunc describes the behavior when the NewWriter method of
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3103,6 +3320,7 @@ SetDefaultHook sets function that is called when the NewWriter method of the par
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3115,6 +3333,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the NewWri
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3127,6 +3346,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3139,6 +3359,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3149,6 +3370,7 @@ func (f *GcsObjectHandleNewWriterFunc) nextHook() func(context.Context) io.Write
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3159,6 +3381,7 @@ func (f *GcsObjectHandleNewWriterFunc) appendCall(r0 GcsObjectHandleNewWriterFun
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3171,6 +3394,7 @@ History returns a sequence of GcsObjectHandleNewWriterFuncCall objects describin
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3190,6 +3414,7 @@ GcsObjectHandleNewWriterFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3202,6 +3427,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.GcsObjectHandleNewWriterFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3214,6 +3440,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.MockS3API
+tags: [private]
 ```
 
 ```Go
@@ -3255,6 +3482,7 @@ MockS3API is a mock implementation of the s3API interface (from the package gith
 
 ```
 searchKey: uploadstore.NewMockS3API
+tags: [private]
 ```
 
 ```Go
@@ -3267,6 +3495,7 @@ NewMockS3API creates a new mock of the s3API interface. All methods return zero 
 
 ```
 searchKey: uploadstore.NewMockS3APIFrom
+tags: [private]
 ```
 
 ```Go
@@ -3279,6 +3508,7 @@ NewMockS3APIFrom creates a new mock of the MockS3API interface. All methods dele
 
 ```
 searchKey: uploadstore.fullContentsS3API
+tags: [private]
 ```
 
 ```Go
@@ -3289,6 +3519,7 @@ func fullContentsS3API() *MockS3API
 
 ```
 searchKey: uploadstore.MockS3API.AbortMultipartUpload
+tags: [private]
 ```
 
 ```Go
@@ -3301,6 +3532,7 @@ AbortMultipartUpload delegates to the next hook function in the queue and stores
 
 ```
 searchKey: uploadstore.MockS3API.CompleteMultipartUpload
+tags: [private]
 ```
 
 ```Go
@@ -3313,6 +3545,7 @@ CompleteMultipartUpload delegates to the next hook function in the queue and sto
 
 ```
 searchKey: uploadstore.MockS3API.CreateBucket
+tags: [private]
 ```
 
 ```Go
@@ -3325,6 +3558,7 @@ CreateBucket delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: uploadstore.MockS3API.CreateMultipartUpload
+tags: [private]
 ```
 
 ```Go
@@ -3337,6 +3571,7 @@ CreateMultipartUpload delegates to the next hook function in the queue and store
 
 ```
 searchKey: uploadstore.MockS3API.DeleteObject
+tags: [private]
 ```
 
 ```Go
@@ -3349,6 +3584,7 @@ DeleteObject delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: uploadstore.MockS3API.GetObject
+tags: [private]
 ```
 
 ```Go
@@ -3361,6 +3597,7 @@ GetObject delegates to the next hook function in the queue and stores the parame
 
 ```
 searchKey: uploadstore.MockS3API.HeadObject
+tags: [private]
 ```
 
 ```Go
@@ -3373,6 +3610,7 @@ HeadObject delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: uploadstore.MockS3API.PutBucketLifecycleConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -3385,6 +3623,7 @@ PutBucketLifecycleConfiguration delegates to the next hook function in the queue
 
 ```
 searchKey: uploadstore.MockS3API.UploadPartCopy
+tags: [private]
 ```
 
 ```Go
@@ -3397,6 +3636,7 @@ UploadPartCopy delegates to the next hook function in the queue and stores the p
 
 ```
 searchKey: uploadstore.surrogateMockS3API
+tags: [private]
 ```
 
 ```Go
@@ -3419,6 +3659,7 @@ surrogateMockS3API is a copy of the s3API interface (from the package github.com
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFunc
+tags: [private]
 ```
 
 ```Go
@@ -3436,6 +3677,7 @@ S3APIAbortMultipartUploadFunc describes the behavior when the AbortMultipartUplo
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3448,6 +3690,7 @@ SetDefaultHook sets function that is called when the AbortMultipartUpload method
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3460,6 +3703,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the AbortM
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3472,6 +3716,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3484,6 +3729,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3494,6 +3740,7 @@ func (f *S3APIAbortMultipartUploadFunc) nextHook() func(context.Context, *s3.Abo
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3504,6 +3751,7 @@ func (f *S3APIAbortMultipartUploadFunc) appendCall(r0 S3APIAbortMultipartUploadF
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3516,6 +3764,7 @@ History returns a sequence of S3APIAbortMultipartUploadFuncCall objects describi
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3541,6 +3790,7 @@ S3APIAbortMultipartUploadFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3553,6 +3803,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.S3APIAbortMultipartUploadFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3565,6 +3816,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFunc
+tags: [private]
 ```
 
 ```Go
@@ -3582,6 +3834,7 @@ S3APICompleteMultipartUploadFunc describes the behavior when the CompleteMultipa
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3594,6 +3847,7 @@ SetDefaultHook sets function that is called when the CompleteMultipartUpload met
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3606,6 +3860,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Comple
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3618,6 +3873,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3630,6 +3886,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3640,6 +3897,7 @@ func (f *S3APICompleteMultipartUploadFunc) nextHook() func(context.Context, *s3.
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3650,6 +3908,7 @@ func (f *S3APICompleteMultipartUploadFunc) appendCall(r0 S3APICompleteMultipartU
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3662,6 +3921,7 @@ History returns a sequence of S3APICompleteMultipartUploadFuncCall objects descr
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3687,6 +3947,7 @@ S3APICompleteMultipartUploadFuncCall is an object that describes an invocation o
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3699,6 +3960,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.S3APICompleteMultipartUploadFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3711,6 +3973,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.S3APICreateBucketFunc
+tags: [private]
 ```
 
 ```Go
@@ -3728,6 +3991,7 @@ S3APICreateBucketFunc describes the behavior when the CreateBucket method of the
 
 ```
 searchKey: uploadstore.S3APICreateBucketFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3740,6 +4004,7 @@ SetDefaultHook sets function that is called when the CreateBucket method of the 
 
 ```
 searchKey: uploadstore.S3APICreateBucketFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3752,6 +4017,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Create
 
 ```
 searchKey: uploadstore.S3APICreateBucketFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3764,6 +4030,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.S3APICreateBucketFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3776,6 +4043,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.S3APICreateBucketFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3786,6 +4054,7 @@ func (f *S3APICreateBucketFunc) nextHook() func(context.Context, *s3.CreateBucke
 
 ```
 searchKey: uploadstore.S3APICreateBucketFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3796,6 +4065,7 @@ func (f *S3APICreateBucketFunc) appendCall(r0 S3APICreateBucketFuncCall)
 
 ```
 searchKey: uploadstore.S3APICreateBucketFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3808,6 +4078,7 @@ History returns a sequence of S3APICreateBucketFuncCall objects describing the i
 
 ```
 searchKey: uploadstore.S3APICreateBucketFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3833,6 +4104,7 @@ S3APICreateBucketFuncCall is an object that describes an invocation of method Cr
 
 ```
 searchKey: uploadstore.S3APICreateBucketFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3845,6 +4117,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.S3APICreateBucketFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3857,6 +4130,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFunc
+tags: [private]
 ```
 
 ```Go
@@ -3874,6 +4148,7 @@ S3APICreateMultipartUploadFunc describes the behavior when the CreateMultipartUp
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3886,6 +4161,7 @@ SetDefaultHook sets function that is called when the CreateMultipartUpload metho
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3898,6 +4174,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Create
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3910,6 +4187,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3922,6 +4200,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3932,6 +4211,7 @@ func (f *S3APICreateMultipartUploadFunc) nextHook() func(context.Context, *s3.Cr
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3942,6 +4222,7 @@ func (f *S3APICreateMultipartUploadFunc) appendCall(r0 S3APICreateMultipartUploa
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3954,6 +4235,7 @@ History returns a sequence of S3APICreateMultipartUploadFuncCall objects describ
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3979,6 +4261,7 @@ S3APICreateMultipartUploadFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3991,6 +4274,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.S3APICreateMultipartUploadFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4003,6 +4287,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFunc
+tags: [private]
 ```
 
 ```Go
@@ -4020,6 +4305,7 @@ S3APIDeleteObjectFunc describes the behavior when the DeleteObject method of the
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4032,6 +4318,7 @@ SetDefaultHook sets function that is called when the DeleteObject method of the 
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4044,6 +4331,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Delete
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4056,6 +4344,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4068,6 +4357,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4078,6 +4368,7 @@ func (f *S3APIDeleteObjectFunc) nextHook() func(context.Context, *s3.DeleteObjec
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4088,6 +4379,7 @@ func (f *S3APIDeleteObjectFunc) appendCall(r0 S3APIDeleteObjectFuncCall)
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4100,6 +4392,7 @@ History returns a sequence of S3APIDeleteObjectFuncCall objects describing the i
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4125,6 +4418,7 @@ S3APIDeleteObjectFuncCall is an object that describes an invocation of method De
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4137,6 +4431,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.S3APIDeleteObjectFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4149,6 +4444,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.S3APIGetObjectFunc
+tags: [private]
 ```
 
 ```Go
@@ -4166,6 +4462,7 @@ S3APIGetObjectFunc describes the behavior when the GetObject method of the paren
 
 ```
 searchKey: uploadstore.S3APIGetObjectFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4178,6 +4475,7 @@ SetDefaultHook sets function that is called when the GetObject method of the par
 
 ```
 searchKey: uploadstore.S3APIGetObjectFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4190,6 +4488,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetObj
 
 ```
 searchKey: uploadstore.S3APIGetObjectFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4202,6 +4501,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.S3APIGetObjectFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4214,6 +4514,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.S3APIGetObjectFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4224,6 +4525,7 @@ func (f *S3APIGetObjectFunc) nextHook() func(context.Context, *s3.GetObjectInput
 
 ```
 searchKey: uploadstore.S3APIGetObjectFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4234,6 +4536,7 @@ func (f *S3APIGetObjectFunc) appendCall(r0 S3APIGetObjectFuncCall)
 
 ```
 searchKey: uploadstore.S3APIGetObjectFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4246,6 +4549,7 @@ History returns a sequence of S3APIGetObjectFuncCall objects describing the invo
 
 ```
 searchKey: uploadstore.S3APIGetObjectFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4271,6 +4575,7 @@ S3APIGetObjectFuncCall is an object that describes an invocation of method GetOb
 
 ```
 searchKey: uploadstore.S3APIGetObjectFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4283,6 +4588,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.S3APIGetObjectFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4295,6 +4601,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFunc
+tags: [private]
 ```
 
 ```Go
@@ -4312,6 +4619,7 @@ S3APIHeadObjectFunc describes the behavior when the HeadObject method of the par
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4324,6 +4632,7 @@ SetDefaultHook sets function that is called when the HeadObject method of the pa
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4336,6 +4645,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the HeadOb
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4348,6 +4658,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4360,6 +4671,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4370,6 +4682,7 @@ func (f *S3APIHeadObjectFunc) nextHook() func(context.Context, *s3.HeadObjectInp
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4380,6 +4693,7 @@ func (f *S3APIHeadObjectFunc) appendCall(r0 S3APIHeadObjectFuncCall)
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4392,6 +4706,7 @@ History returns a sequence of S3APIHeadObjectFuncCall objects describing the inv
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4417,6 +4732,7 @@ S3APIHeadObjectFuncCall is an object that describes an invocation of method Head
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4429,6 +4745,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.S3APIHeadObjectFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4441,6 +4758,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFunc
+tags: [private]
 ```
 
 ```Go
@@ -4458,6 +4776,7 @@ S3APIPutBucketLifecycleConfigurationFunc describes the behavior when the PutBuck
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4470,6 +4789,7 @@ SetDefaultHook sets function that is called when the PutBucketLifecycleConfigura
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4482,6 +4802,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the PutBuc
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4494,6 +4815,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4506,6 +4828,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4516,6 +4839,7 @@ func (f *S3APIPutBucketLifecycleConfigurationFunc) nextHook() func(context.Conte
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4526,6 +4850,7 @@ func (f *S3APIPutBucketLifecycleConfigurationFunc) appendCall(r0 S3APIPutBucketL
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4538,6 +4863,7 @@ History returns a sequence of S3APIPutBucketLifecycleConfigurationFuncCall objec
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4563,6 +4889,7 @@ S3APIPutBucketLifecycleConfigurationFuncCall is an object that describes an invo
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4575,6 +4902,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.S3APIPutBucketLifecycleConfigurationFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4587,6 +4915,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFunc
+tags: [private]
 ```
 
 ```Go
@@ -4604,6 +4933,7 @@ S3APIUploadPartCopyFunc describes the behavior when the UploadPartCopy method of
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4616,6 +4946,7 @@ SetDefaultHook sets function that is called when the UploadPartCopy method of th
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4628,6 +4959,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Upload
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4640,6 +4972,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4652,6 +4985,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4662,6 +4996,7 @@ func (f *S3APIUploadPartCopyFunc) nextHook() func(context.Context, *s3.UploadPar
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4672,6 +5007,7 @@ func (f *S3APIUploadPartCopyFunc) appendCall(r0 S3APIUploadPartCopyFuncCall)
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4684,6 +5020,7 @@ History returns a sequence of S3APIUploadPartCopyFuncCall objects describing the
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4709,6 +5046,7 @@ S3APIUploadPartCopyFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4721,6 +5059,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.S3APIUploadPartCopyFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4733,6 +5072,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: uploadstore.MockS3Uploader
+tags: [private]
 ```
 
 ```Go
@@ -4749,6 +5089,7 @@ MockS3Uploader is a mock implementation of the s3Uploader interface (from the pa
 
 ```
 searchKey: uploadstore.NewMockS3Uploader
+tags: [private]
 ```
 
 ```Go
@@ -4761,6 +5102,7 @@ NewMockS3Uploader creates a new mock of the s3Uploader interface. All methods re
 
 ```
 searchKey: uploadstore.NewMockS3UploaderFrom
+tags: [private]
 ```
 
 ```Go
@@ -4773,6 +5115,7 @@ NewMockS3UploaderFrom creates a new mock of the MockS3Uploader interface. All me
 
 ```
 searchKey: uploadstore.MockS3Uploader.Upload
+tags: [private]
 ```
 
 ```Go
@@ -4785,6 +5128,7 @@ Upload delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: uploadstore.surrogateMockS3Uploader
+tags: [private]
 ```
 
 ```Go
@@ -4799,6 +5143,7 @@ surrogateMockS3Uploader is a copy of the s3Uploader interface (from the package 
 
 ```
 searchKey: uploadstore.S3UploaderUploadFunc
+tags: [private]
 ```
 
 ```Go
@@ -4816,6 +5161,7 @@ S3UploaderUploadFunc describes the behavior when the Upload method of the parent
 
 ```
 searchKey: uploadstore.S3UploaderUploadFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4828,6 +5174,7 @@ SetDefaultHook sets function that is called when the Upload method of the parent
 
 ```
 searchKey: uploadstore.S3UploaderUploadFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4840,6 +5187,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Upload
 
 ```
 searchKey: uploadstore.S3UploaderUploadFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4852,6 +5200,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: uploadstore.S3UploaderUploadFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4864,6 +5213,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: uploadstore.S3UploaderUploadFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4874,6 +5224,7 @@ func (f *S3UploaderUploadFunc) nextHook() func(context.Context, *s3.PutObjectInp
 
 ```
 searchKey: uploadstore.S3UploaderUploadFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4884,6 +5235,7 @@ func (f *S3UploaderUploadFunc) appendCall(r0 S3UploaderUploadFuncCall)
 
 ```
 searchKey: uploadstore.S3UploaderUploadFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4896,6 +5248,7 @@ History returns a sequence of S3UploaderUploadFuncCall objects describing the in
 
 ```
 searchKey: uploadstore.S3UploaderUploadFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4918,6 +5271,7 @@ S3UploaderUploadFuncCall is an object that describes an invocation of method Upl
 
 ```
 searchKey: uploadstore.S3UploaderUploadFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4930,6 +5284,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: uploadstore.S3UploaderUploadFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4940,10 +5295,15 @@ Results returns an interface slice containing the results of this invocation.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="gcsClientOptions" href="#gcsClientOptions">func gcsClientOptions(config GCSConfig) []option.ClientOption</a>
 
 ```
 searchKey: uploadstore.gcsClientOptions
+tags: [private]
 ```
 
 ```Go
@@ -4954,6 +5314,7 @@ func gcsClientOptions(config GCSConfig) []option.ClientOption
 
 ```
 searchKey: uploadstore.s3ClientConfig
+tags: [private]
 ```
 
 ```Go
@@ -4964,6 +5325,7 @@ func s3ClientConfig(ctx context.Context, s3config S3Config) (aws.Config, error)
 
 ```
 searchKey: uploadstore.s3ClientOptions
+tags: [private]
 ```
 
 ```Go
@@ -4974,6 +5336,7 @@ func s3ClientOptions(backend string, config S3Config) func(o *s3.Options)
 
 ```
 searchKey: uploadstore.writeToPipe
+tags: [private]
 ```
 
 ```Go
@@ -4986,6 +5349,7 @@ writeToPipe invokes the given function with a pipe writer in a goroutine and ret
 
 ```
 searchKey: uploadstore.isConnectionResetError
+tags: [private]
 ```
 
 ```Go
@@ -4996,6 +5360,7 @@ func isConnectionResetError(err error) bool
 
 ```
 searchKey: uploadstore.s3BucketLifecycleConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -5006,6 +5371,7 @@ func s3BucketLifecycleConfiguration(backend string, ttl time.Duration) *s3types.
 
 ```
 searchKey: uploadstore.TestConfigDefaults
+tags: [private]
 ```
 
 ```Go
@@ -5016,6 +5382,7 @@ func TestConfigDefaults(t *testing.T)
 
 ```
 searchKey: uploadstore.TestConfigS3
+tags: [private]
 ```
 
 ```Go
@@ -5026,6 +5393,7 @@ func TestConfigS3(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3ClientOptions
+tags: [private]
 ```
 
 ```Go
@@ -5036,6 +5404,7 @@ func TestS3ClientOptions(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3ClientConfig
+tags: [private]
 ```
 
 ```Go
@@ -5046,6 +5415,7 @@ func TestS3ClientConfig(t *testing.T)
 
 ```
 searchKey: uploadstore.TestConfigGCS
+tags: [private]
 ```
 
 ```Go
@@ -5056,6 +5426,7 @@ func TestConfigGCS(t *testing.T)
 
 ```
 searchKey: uploadstore.mapGetter
+tags: [private]
 ```
 
 ```Go
@@ -5066,6 +5437,7 @@ func mapGetter(env map[string]string) func(name, defaultValue, description strin
 
 ```
 searchKey: uploadstore.TestGCSInit
+tags: [private]
 ```
 
 ```Go
@@ -5076,6 +5448,7 @@ func TestGCSInit(t *testing.T)
 
 ```
 searchKey: uploadstore.TestGCSInitBucketExists
+tags: [private]
 ```
 
 ```Go
@@ -5086,6 +5459,7 @@ func TestGCSInitBucketExists(t *testing.T)
 
 ```
 searchKey: uploadstore.TestGCSUnmanagedInit
+tags: [private]
 ```
 
 ```Go
@@ -5096,6 +5470,7 @@ func TestGCSUnmanagedInit(t *testing.T)
 
 ```
 searchKey: uploadstore.TestGCSGet
+tags: [private]
 ```
 
 ```Go
@@ -5106,6 +5481,7 @@ func TestGCSGet(t *testing.T)
 
 ```
 searchKey: uploadstore.TestGCSUpload
+tags: [private]
 ```
 
 ```Go
@@ -5116,6 +5492,7 @@ func TestGCSUpload(t *testing.T)
 
 ```
 searchKey: uploadstore.TestGCSCombine
+tags: [private]
 ```
 
 ```Go
@@ -5126,6 +5503,7 @@ func TestGCSCombine(t *testing.T)
 
 ```
 searchKey: uploadstore.TestGCSDelete
+tags: [private]
 ```
 
 ```Go
@@ -5136,6 +5514,7 @@ func TestGCSDelete(t *testing.T)
 
 ```
 searchKey: uploadstore.TestGCSLifecycle
+tags: [private]
 ```
 
 ```Go
@@ -5146,6 +5525,7 @@ func TestGCSLifecycle(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3Init
+tags: [private]
 ```
 
 ```Go
@@ -5156,6 +5536,7 @@ func TestS3Init(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3InitBucketExists
+tags: [private]
 ```
 
 ```Go
@@ -5166,6 +5547,7 @@ func TestS3InitBucketExists(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3UnmanagedInit
+tags: [private]
 ```
 
 ```Go
@@ -5176,6 +5558,7 @@ func TestS3UnmanagedInit(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3Get
+tags: [private]
 ```
 
 ```Go
@@ -5186,6 +5569,7 @@ func TestS3Get(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3GetTransientErrors
+tags: [private]
 ```
 
 ```Go
@@ -5196,6 +5580,7 @@ func TestS3GetTransientErrors(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3GetReadNothingLoop
+tags: [private]
 ```
 
 ```Go
@@ -5206,6 +5591,7 @@ func TestS3GetReadNothingLoop(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3Upload
+tags: [private]
 ```
 
 ```Go
@@ -5216,6 +5602,7 @@ func TestS3Upload(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3Combine
+tags: [private]
 ```
 
 ```Go
@@ -5226,6 +5613,7 @@ func TestS3Combine(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3Delete
+tags: [private]
 ```
 
 ```Go
@@ -5236,6 +5624,7 @@ func TestS3Delete(t *testing.T)
 
 ```
 searchKey: uploadstore.TestS3BucketLifecycleConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -5246,6 +5635,7 @@ func TestS3BucketLifecycleConfiguration(t *testing.T)
 
 ```
 searchKey: uploadstore.TestMain
+tags: [private]
 ```
 
 ```Go

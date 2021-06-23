@@ -17,10 +17,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="templateFile" href="#templateFile">type templateFile struct</a>
 
 ```
 searchKey: template_test.templateFile
+tags: [private]
 ```
 
 ```Go
@@ -34,10 +39,15 @@ templateFile defines the contents of a template to be stored in a file, for test
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleTemplate" href="#ExampleTemplate">func ExampleTemplate()</a>
 
 ```
 searchKey: template_test.ExampleTemplate
+tags: [private]
 ```
 
 ```Go
@@ -48,6 +58,7 @@ func ExampleTemplate()
 
 ```
 searchKey: template_test.ExampleTemplate_block
+tags: [private]
 ```
 
 ```Go
@@ -58,6 +69,7 @@ func ExampleTemplate_block()
 
 ```
 searchKey: template_test.createTestDir
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +80,7 @@ func createTestDir(files []templateFile) string
 
 ```
 searchKey: template_test.ExampleTemplate_glob
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +93,7 @@ Here we demonstrate loading a set of templates from a directory.
 
 ```
 searchKey: template_test.ExampleTemplate_helpers
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +106,7 @@ This example demonstrates one way to share some templates and use them in differ
 
 ```
 searchKey: template_test.ExampleTemplate_share
+tags: [private]
 ```
 
 ```Go
@@ -104,6 +119,7 @@ This example demonstrates how to use one group of driver templates with distinct
 
 ```
 searchKey: template_test.ExampleTemplate_func
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +132,7 @@ This example demonstrates a custom function to process template text. It install
 
 ```
 searchKey: template_test.TestLinkerGC
+tags: [private]
 ```
 
 ```Go

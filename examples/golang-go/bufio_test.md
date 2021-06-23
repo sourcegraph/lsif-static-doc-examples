@@ -182,10 +182,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="minReadBufferSize" href="#minReadBufferSize">const minReadBufferSize</a>
 
 ```
 searchKey: bufio_test.minReadBufferSize
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +201,7 @@ const minReadBufferSize = 16
 
 ```
 searchKey: bufio_test.smallMaxTokenSize
+tags: [private]
 ```
 
 ```Go
@@ -205,10 +211,15 @@ const smallMaxTokenSize = 256 // Much smaller for more efficient testing.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="readMakers" href="#readMakers">var readMakers</a>
 
 ```
 searchKey: bufio_test.readMakers
+tags: [private]
 ```
 
 ```Go
@@ -219,6 +230,7 @@ var readMakers = ...
 
 ```
 searchKey: bufio_test.bufreaders
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +241,7 @@ var bufreaders = ...
 
 ```
 searchKey: bufio_test.bufsizes
+tags: [private]
 ```
 
 ```Go
@@ -241,6 +254,7 @@ var bufsizes = []int{
 
 ```
 searchKey: bufio_test.segmentList
+tags: [private]
 ```
 
 ```Go
@@ -251,6 +265,7 @@ var segmentList = ...
 
 ```
 searchKey: bufio_test.errorWriterTests
+tags: [private]
 ```
 
 ```Go
@@ -261,6 +276,7 @@ var errorWriterTests = ...
 
 ```
 searchKey: bufio_test.testOutput
+tags: [private]
 ```
 
 ```Go
@@ -271,6 +287,7 @@ var testOutput = []byte("0123456789abcdefghijklmnopqrstuvwxy")
 
 ```
 searchKey: bufio_test.testInput
+tags: [private]
 ```
 
 ```Go
@@ -281,6 +298,7 @@ var testInput = []byte("012\n345\n678\n9ab\ncde\nfgh\nijk\nlmn\nopq\nrst\nuvw\nx
 
 ```
 searchKey: bufio_test.testInputrn
+tags: [private]
 ```
 
 ```Go
@@ -291,6 +309,7 @@ var testInputrn = ...
 
 ```
 searchKey: bufio_test.readLineNewlinesTests
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +320,7 @@ var readLineNewlinesTests = ...
 
 ```
 searchKey: bufio_test.errorWriterToTests
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +331,7 @@ var errorWriterToTests = ...
 
 ```
 searchKey: bufio_test.errorReaderFromTests
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +342,7 @@ var errorReaderFromTests = ...
 
 ```
 searchKey: bufio_test.errFake
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +353,7 @@ var errFake = errors.New("fake error")
 
 ```
 searchKey: bufio_test.scanTests
+tags: [private]
 ```
 
 ```Go
@@ -341,6 +364,7 @@ var scanTests = ...
 
 ```
 searchKey: bufio_test.wordScanTests
+tags: [private]
 ```
 
 ```Go
@@ -351,6 +375,7 @@ var wordScanTests = ...
 
 ```
 searchKey: bufio_test.testError
+tags: [private]
 ```
 
 ```Go
@@ -359,10 +384,15 @@ var testError = errors.New("testError")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="rot13Reader" href="#rot13Reader">type rot13Reader struct</a>
 
 ```
 searchKey: bufio_test.rot13Reader
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +407,7 @@ Reads from a reader and rot13s the result.
 
 ```
 searchKey: bufio_test.newRot13Reader
+tags: [private]
 ```
 
 ```Go
@@ -387,6 +418,7 @@ func newRot13Reader(r io.Reader) *rot13Reader
 
 ```
 searchKey: bufio_test.rot13Reader.Read
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +429,7 @@ func (r13 *rot13Reader) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.readMaker
+tags: [private]
 ```
 
 ```Go
@@ -410,6 +443,7 @@ type readMaker struct {
 
 ```
 searchKey: bufio_test.bufReader
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +457,7 @@ type bufReader struct {
 
 ```
 searchKey: bufio_test.zeroReader
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +468,7 @@ type zeroReader struct{}
 
 ```
 searchKey: bufio_test.zeroReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -443,6 +479,7 @@ func (zeroReader) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.StringReader
+tags: [private]
 ```
 
 ```Go
@@ -458,6 +495,7 @@ A StringReader delivers its data one string segment at a time via Read.
 
 ```
 searchKey: bufio_test.StringReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -468,6 +506,7 @@ func (r *StringReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: bufio_test.errorWriterTest
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +521,7 @@ type errorWriterTest struct {
 
 ```
 searchKey: bufio_test.errorWriterTest.Write
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +532,7 @@ func (w errorWriterTest) Write(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.dataAndEOFReader
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +543,7 @@ type dataAndEOFReader string
 
 ```
 searchKey: bufio_test.dataAndEOFReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +554,7 @@ func (r dataAndEOFReader) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.testReader
+tags: [private]
 ```
 
 ```Go
@@ -527,6 +570,7 @@ TestReader wraps a []byte and returns reads of a specific length.
 
 ```
 searchKey: bufio_test.testReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -537,6 +581,7 @@ func (t *testReader) Read(buf []byte) (n int, err error)
 
 ```
 searchKey: bufio_test.readLineResult
+tags: [private]
 ```
 
 ```Go
@@ -551,6 +596,7 @@ type readLineResult struct {
 
 ```
 searchKey: bufio_test.errorWriterToTest
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +611,7 @@ type errorWriterToTest struct {
 
 ```
 searchKey: bufio_test.errorWriterToTest.Read
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +622,7 @@ func (r errorWriterToTest) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.errorWriterToTest.Write
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +633,7 @@ func (w errorWriterToTest) Write(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.errorReaderFromTest
+tags: [private]
 ```
 
 ```Go
@@ -599,6 +648,7 @@ type errorReaderFromTest struct {
 
 ```
 searchKey: bufio_test.errorReaderFromTest.Read
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +659,7 @@ func (r errorReaderFromTest) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.errorReaderFromTest.Write
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +670,7 @@ func (w errorReaderFromTest) Write(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.writeCountingDiscard
+tags: [private]
 ```
 
 ```Go
@@ -631,6 +683,7 @@ A writeCountingDiscard is like io.Discard and counts the number of times Write i
 
 ```
 searchKey: bufio_test.writeCountingDiscard.Write
+tags: [private]
 ```
 
 ```Go
@@ -641,6 +694,7 @@ func (w *writeCountingDiscard) Write(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.negativeReader
+tags: [private]
 ```
 
 ```Go
@@ -651,6 +705,7 @@ type negativeReader int
 
 ```
 searchKey: bufio_test.negativeReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -661,6 +716,7 @@ func (r *negativeReader) Read([]byte) (int, error)
 
 ```
 searchKey: bufio_test.errorThenGoodReader
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +730,7 @@ type errorThenGoodReader struct {
 
 ```
 searchKey: bufio_test.errorThenGoodReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -684,6 +741,7 @@ func (r *errorThenGoodReader) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.emptyThenNonEmptyReader
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +755,7 @@ type emptyThenNonEmptyReader struct {
 
 ```
 searchKey: bufio_test.emptyThenNonEmptyReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -707,6 +766,7 @@ func (r *emptyThenNonEmptyReader) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.onlyReader
+tags: [private]
 ```
 
 ```Go
@@ -721,6 +781,7 @@ An onlyReader only implements io.Reader, no matter what other methods the underl
 
 ```
 searchKey: bufio_test.onlyWriter
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +796,7 @@ An onlyWriter only implements io.Writer, no matter what other methods the underl
 
 ```
 searchKey: bufio_test.scriptedReader
+tags: [private]
 ```
 
 ```Go
@@ -747,6 +809,7 @@ A scriptedReader is an io.Reader that executes its steps sequentially.
 
 ```
 searchKey: bufio_test.scriptedReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -757,6 +820,7 @@ func (sr *scriptedReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: bufio_test.eofReader
+tags: [private]
 ```
 
 ```Go
@@ -771,6 +835,7 @@ eofReader returns the number of bytes read and io.EOF for the read that consumes
 
 ```
 searchKey: bufio_test.eofReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -781,6 +846,7 @@ func (r *eofReader) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.writerWithReadFromError
+tags: [private]
 ```
 
 ```Go
@@ -791,6 +857,7 @@ type writerWithReadFromError struct{}
 
 ```
 searchKey: bufio_test.writerWithReadFromError.ReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +868,7 @@ func (w writerWithReadFromError) ReadFrom(r io.Reader) (int64, error)
 
 ```
 searchKey: bufio_test.writerWithReadFromError.Write
+tags: [private]
 ```
 
 ```Go
@@ -811,6 +879,7 @@ func (w writerWithReadFromError) Write(b []byte) (n int, err error)
 
 ```
 searchKey: bufio_test.writeErrorOnlyWriter
+tags: [private]
 ```
 
 ```Go
@@ -821,6 +890,7 @@ type writeErrorOnlyWriter struct{}
 
 ```
 searchKey: bufio_test.writeErrorOnlyWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -831,6 +901,7 @@ func (w writeErrorOnlyWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: bufio_test.slowReader
+tags: [private]
 ```
 
 ```Go
@@ -846,6 +917,7 @@ slowReader is a reader that returns only a few bytes at a time, to test the incr
 
 ```
 searchKey: bufio_test.slowReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -856,6 +928,7 @@ func (sr *slowReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: bufio_test.alwaysError
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +941,7 @@ Test for issue 5268.
 
 ```
 searchKey: bufio_test.alwaysError.Read
+tags: [private]
 ```
 
 ```Go
@@ -878,6 +952,7 @@ func (alwaysError) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.endlessZeros
+tags: [private]
 ```
 
 ```Go
@@ -890,6 +965,7 @@ Test that Scan finishes if we have endless empty reads.
 
 ```
 searchKey: bufio_test.endlessZeros.Read
+tags: [private]
 ```
 
 ```Go
@@ -900,6 +976,7 @@ func (endlessZeros) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.countdown
+tags: [private]
 ```
 
 ```Go
@@ -910,6 +987,7 @@ type countdown int
 
 ```
 searchKey: bufio_test.countdown.split
+tags: [private]
 ```
 
 ```Go
@@ -920,6 +998,7 @@ func (c *countdown) split(data []byte, atEOF bool) (advance int, token []byte, e
 
 ```
 searchKey: bufio_test.negativeEOFReader
+tags: [private]
 ```
 
 ```Go
@@ -932,6 +1011,7 @@ negativeEOFReader returns an invalid -1 at the end, as though it were wrapping t
 
 ```
 searchKey: bufio_test.negativeEOFReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -942,6 +1022,7 @@ func (r *negativeEOFReader) Read(p []byte) (int, error)
 
 ```
 searchKey: bufio_test.largeReader
+tags: [private]
 ```
 
 ```Go
@@ -954,6 +1035,7 @@ largeReader returns an invalid count that is larger than the number of bytes req
 
 ```
 searchKey: bufio_test.largeReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -962,10 +1044,15 @@ func (largeReader) Read(p []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="readBytes" href="#readBytes">func readBytes(buf *Reader) string</a>
 
 ```
 searchKey: bufio_test.readBytes
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1065,7 @@ Call ReadByte to accumulate the text of a file
 
 ```
 searchKey: bufio_test.TestReaderSimple
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +1076,7 @@ func TestReaderSimple(t *testing.T)
 
 ```
 searchKey: bufio_test.readLines
+tags: [private]
 ```
 
 ```Go
@@ -1000,6 +1089,7 @@ Call ReadString (which ends up calling everything else) to accumulate the text o
 
 ```
 searchKey: bufio_test.reads
+tags: [private]
 ```
 
 ```Go
@@ -1012,6 +1102,7 @@ Call Read to accumulate the text of a file
 
 ```
 searchKey: bufio_test.TestReader
+tags: [private]
 ```
 
 ```Go
@@ -1022,6 +1113,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: bufio_test.TestZeroReader
+tags: [private]
 ```
 
 ```Go
@@ -1032,6 +1124,7 @@ func TestZeroReader(t *testing.T)
 
 ```
 searchKey: bufio_test.readRuneSegments
+tags: [private]
 ```
 
 ```Go
@@ -1042,6 +1135,7 @@ func readRuneSegments(t *testing.T, segments []string)
 
 ```
 searchKey: bufio_test.TestReadRune
+tags: [private]
 ```
 
 ```Go
@@ -1052,6 +1146,7 @@ func TestReadRune(t *testing.T)
 
 ```
 searchKey: bufio_test.TestUnreadRune
+tags: [private]
 ```
 
 ```Go
@@ -1062,6 +1157,7 @@ func TestUnreadRune(t *testing.T)
 
 ```
 searchKey: bufio_test.TestNoUnreadRuneAfterPeek
+tags: [private]
 ```
 
 ```Go
@@ -1072,6 +1168,7 @@ func TestNoUnreadRuneAfterPeek(t *testing.T)
 
 ```
 searchKey: bufio_test.TestNoUnreadByteAfterPeek
+tags: [private]
 ```
 
 ```Go
@@ -1082,6 +1179,7 @@ func TestNoUnreadByteAfterPeek(t *testing.T)
 
 ```
 searchKey: bufio_test.TestUnreadByte
+tags: [private]
 ```
 
 ```Go
@@ -1092,6 +1190,7 @@ func TestUnreadByte(t *testing.T)
 
 ```
 searchKey: bufio_test.TestUnreadByteMultiple
+tags: [private]
 ```
 
 ```Go
@@ -1102,6 +1201,7 @@ func TestUnreadByteMultiple(t *testing.T)
 
 ```
 searchKey: bufio_test.TestUnreadByteOthers
+tags: [private]
 ```
 
 ```Go
@@ -1112,6 +1212,7 @@ func TestUnreadByteOthers(t *testing.T)
 
 ```
 searchKey: bufio_test.TestUnreadRuneError
+tags: [private]
 ```
 
 ```Go
@@ -1124,6 +1225,7 @@ Test that UnreadRune fails if the preceding operation was not a ReadRune.
 
 ```
 searchKey: bufio_test.TestUnreadRuneAtEOF
+tags: [private]
 ```
 
 ```Go
@@ -1134,6 +1236,7 @@ func TestUnreadRuneAtEOF(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReadWriteRune
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1247,7 @@ func TestReadWriteRune(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriteInvalidRune
+tags: [private]
 ```
 
 ```Go
@@ -1154,6 +1258,7 @@ func TestWriteInvalidRune(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReadStringAllocs
+tags: [private]
 ```
 
 ```Go
@@ -1164,6 +1269,7 @@ func TestReadStringAllocs(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriter
+tags: [private]
 ```
 
 ```Go
@@ -1174,6 +1280,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriteErrors
+tags: [private]
 ```
 
 ```Go
@@ -1184,6 +1291,7 @@ func TestWriteErrors(t *testing.T)
 
 ```
 searchKey: bufio_test.TestNewReaderSizeIdempotent
+tags: [private]
 ```
 
 ```Go
@@ -1194,6 +1302,7 @@ func TestNewReaderSizeIdempotent(t *testing.T)
 
 ```
 searchKey: bufio_test.TestNewWriterSizeIdempotent
+tags: [private]
 ```
 
 ```Go
@@ -1204,6 +1313,7 @@ func TestNewWriterSizeIdempotent(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriteString
+tags: [private]
 ```
 
 ```Go
@@ -1214,6 +1324,7 @@ func TestWriteString(t *testing.T)
 
 ```
 searchKey: bufio_test.TestBufferFull
+tags: [private]
 ```
 
 ```Go
@@ -1224,6 +1335,7 @@ func TestBufferFull(t *testing.T)
 
 ```
 searchKey: bufio_test.TestPeek
+tags: [private]
 ```
 
 ```Go
@@ -1234,6 +1346,7 @@ func TestPeek(t *testing.T)
 
 ```
 searchKey: bufio_test.TestPeekThenUnreadRune
+tags: [private]
 ```
 
 ```Go
@@ -1244,6 +1357,7 @@ func TestPeekThenUnreadRune(t *testing.T)
 
 ```
 searchKey: bufio_test.testReadLine
+tags: [private]
 ```
 
 ```Go
@@ -1254,6 +1368,7 @@ func testReadLine(t *testing.T, input []byte)
 
 ```
 searchKey: bufio_test.TestReadLine
+tags: [private]
 ```
 
 ```Go
@@ -1264,6 +1379,7 @@ func TestReadLine(t *testing.T)
 
 ```
 searchKey: bufio_test.TestLineTooLong
+tags: [private]
 ```
 
 ```Go
@@ -1274,6 +1390,7 @@ func TestLineTooLong(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReadAfterLines
+tags: [private]
 ```
 
 ```Go
@@ -1284,6 +1401,7 @@ func TestReadAfterLines(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReadEmptyBuffer
+tags: [private]
 ```
 
 ```Go
@@ -1294,6 +1412,7 @@ func TestReadEmptyBuffer(t *testing.T)
 
 ```
 searchKey: bufio_test.TestLinesAfterRead
+tags: [private]
 ```
 
 ```Go
@@ -1304,6 +1423,7 @@ func TestLinesAfterRead(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReadLineNonNilLineOrError
+tags: [private]
 ```
 
 ```Go
@@ -1314,6 +1434,7 @@ func TestReadLineNonNilLineOrError(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReadLineNewlines
+tags: [private]
 ```
 
 ```Go
@@ -1324,6 +1445,7 @@ func TestReadLineNewlines(t *testing.T)
 
 ```
 searchKey: bufio_test.testReadLineNewlines
+tags: [private]
 ```
 
 ```Go
@@ -1334,6 +1456,7 @@ func testReadLineNewlines(t *testing.T, input string, expect []readLineResult)
 
 ```
 searchKey: bufio_test.createTestInput
+tags: [private]
 ```
 
 ```Go
@@ -1344,6 +1467,7 @@ func createTestInput(n int) []byte
 
 ```
 searchKey: bufio_test.TestReaderWriteTo
+tags: [private]
 ```
 
 ```Go
@@ -1354,6 +1478,7 @@ func TestReaderWriteTo(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReaderWriteToErrors
+tags: [private]
 ```
 
 ```Go
@@ -1364,6 +1489,7 @@ func TestReaderWriteToErrors(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriterReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -1374,6 +1500,7 @@ func TestWriterReadFrom(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriterReadFromErrors
+tags: [private]
 ```
 
 ```Go
@@ -1384,6 +1511,7 @@ func TestWriterReadFromErrors(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriterReadFromCounts
+tags: [private]
 ```
 
 ```Go
@@ -1396,6 +1524,7 @@ TestWriterReadFromCounts tests that using io.Copy to copy into a bufio.Writer do
 
 ```
 searchKey: bufio_test.TestNegativeRead
+tags: [private]
 ```
 
 ```Go
@@ -1406,6 +1535,7 @@ func TestNegativeRead(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReaderClearError
+tags: [private]
 ```
 
 ```Go
@@ -1416,6 +1546,7 @@ func TestReaderClearError(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriterReadFromWhileFull
+tags: [private]
 ```
 
 ```Go
@@ -1428,6 +1559,7 @@ Test for golang.org/issue/5947
 
 ```
 searchKey: bufio_test.TestWriterReadFromUntilEOF
+tags: [private]
 ```
 
 ```Go
@@ -1440,6 +1572,7 @@ Test for golang.org/issue/7611
 
 ```
 searchKey: bufio_test.TestWriterReadFromErrNoProgress
+tags: [private]
 ```
 
 ```Go
@@ -1450,6 +1583,7 @@ func TestWriterReadFromErrNoProgress(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReadZero
+tags: [private]
 ```
 
 ```Go
@@ -1460,6 +1594,7 @@ func TestReadZero(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReaderReset
+tags: [private]
 ```
 
 ```Go
@@ -1470,6 +1605,7 @@ func TestReaderReset(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriterReset
+tags: [private]
 ```
 
 ```Go
@@ -1480,6 +1616,7 @@ func TestWriterReset(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReaderDiscard
+tags: [private]
 ```
 
 ```Go
@@ -1490,6 +1627,7 @@ func TestReaderDiscard(t *testing.T)
 
 ```
 searchKey: bufio_test.TestReaderSize
+tags: [private]
 ```
 
 ```Go
@@ -1500,6 +1638,7 @@ func TestReaderSize(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriterSize
+tags: [private]
 ```
 
 ```Go
@@ -1510,6 +1649,7 @@ func TestWriterSize(t *testing.T)
 
 ```
 searchKey: bufio_test.newScriptedReader
+tags: [private]
 ```
 
 ```Go
@@ -1520,6 +1660,7 @@ func newScriptedReader(steps ...func(p []byte) (n int, err error)) io.Reader
 
 ```
 searchKey: bufio_test.TestPartialReadEOF
+tags: [private]
 ```
 
 ```Go
@@ -1530,6 +1671,7 @@ func TestPartialReadEOF(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriterReadFromMustSetUnderlyingError
+tags: [private]
 ```
 
 ```Go
@@ -1540,6 +1682,7 @@ func TestWriterReadFromMustSetUnderlyingError(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWriterReadFromMustReturnUnderlyingError
+tags: [private]
 ```
 
 ```Go
@@ -1552,6 +1695,7 @@ Ensure that previous Write errors are immediately returned on any ReadFrom. See 
 
 ```
 searchKey: bufio_test.BenchmarkReaderCopyOptimal
+tags: [private]
 ```
 
 ```Go
@@ -1562,6 +1706,7 @@ func BenchmarkReaderCopyOptimal(b *testing.B)
 
 ```
 searchKey: bufio_test.BenchmarkReaderCopyUnoptimal
+tags: [private]
 ```
 
 ```Go
@@ -1572,6 +1717,7 @@ func BenchmarkReaderCopyUnoptimal(b *testing.B)
 
 ```
 searchKey: bufio_test.BenchmarkReaderCopyNoWriteTo
+tags: [private]
 ```
 
 ```Go
@@ -1582,6 +1728,7 @@ func BenchmarkReaderCopyNoWriteTo(b *testing.B)
 
 ```
 searchKey: bufio_test.BenchmarkReaderWriteToOptimal
+tags: [private]
 ```
 
 ```Go
@@ -1592,6 +1739,7 @@ func BenchmarkReaderWriteToOptimal(b *testing.B)
 
 ```
 searchKey: bufio_test.BenchmarkReaderReadString
+tags: [private]
 ```
 
 ```Go
@@ -1602,6 +1750,7 @@ func BenchmarkReaderReadString(b *testing.B)
 
 ```
 searchKey: bufio_test.BenchmarkWriterCopyOptimal
+tags: [private]
 ```
 
 ```Go
@@ -1612,6 +1761,7 @@ func BenchmarkWriterCopyOptimal(b *testing.B)
 
 ```
 searchKey: bufio_test.BenchmarkWriterCopyUnoptimal
+tags: [private]
 ```
 
 ```Go
@@ -1622,6 +1772,7 @@ func BenchmarkWriterCopyUnoptimal(b *testing.B)
 
 ```
 searchKey: bufio_test.BenchmarkWriterCopyNoReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -1632,6 +1783,7 @@ func BenchmarkWriterCopyNoReadFrom(b *testing.B)
 
 ```
 searchKey: bufio_test.BenchmarkReaderEmpty
+tags: [private]
 ```
 
 ```Go
@@ -1642,6 +1794,7 @@ func BenchmarkReaderEmpty(b *testing.B)
 
 ```
 searchKey: bufio_test.BenchmarkWriterEmpty
+tags: [private]
 ```
 
 ```Go
@@ -1652,6 +1805,7 @@ func BenchmarkWriterEmpty(b *testing.B)
 
 ```
 searchKey: bufio_test.BenchmarkWriterFlush
+tags: [private]
 ```
 
 ```Go
@@ -1662,6 +1816,7 @@ func BenchmarkWriterFlush(b *testing.B)
 
 ```
 searchKey: bufio_test.ExampleWriter
+tags: [private]
 ```
 
 ```Go
@@ -1672,6 +1827,7 @@ func ExampleWriter()
 
 ```
 searchKey: bufio_test.ExampleScanner_lines
+tags: [private]
 ```
 
 ```Go
@@ -1684,6 +1840,7 @@ The simplest use of a Scanner, to read standard input as a set of lines.
 
 ```
 searchKey: bufio_test.ExampleScanner_Bytes
+tags: [private]
 ```
 
 ```Go
@@ -1696,6 +1853,7 @@ Return the most recent call to Scan as a []byte.
 
 ```
 searchKey: bufio_test.ExampleScanner_words
+tags: [private]
 ```
 
 ```Go
@@ -1708,6 +1866,7 @@ Use a Scanner to implement a simple word-count utility by scanning the input as 
 
 ```
 searchKey: bufio_test.ExampleScanner_custom
+tags: [private]
 ```
 
 ```Go
@@ -1720,6 +1879,7 @@ Use a Scanner with a custom split function (built by wrapping ScanWords) to vali
 
 ```
 searchKey: bufio_test.ExampleScanner_emptyFinalToken
+tags: [private]
 ```
 
 ```Go
@@ -1732,6 +1892,7 @@ Use a Scanner with a custom split function to parse a comma-separated list with 
 
 ```
 searchKey: bufio_test.TestSpace
+tags: [private]
 ```
 
 ```Go
@@ -1744,6 +1905,7 @@ Test white space table matches the Unicode definition.
 
 ```
 searchKey: bufio_test.TestScanByte
+tags: [private]
 ```
 
 ```Go
@@ -1754,6 +1916,7 @@ func TestScanByte(t *testing.T)
 
 ```
 searchKey: bufio_test.TestScanRune
+tags: [private]
 ```
 
 ```Go
@@ -1766,6 +1929,7 @@ Test that the rune splitter returns same sequence of runes (not bytes) as for ra
 
 ```
 searchKey: bufio_test.TestScanWords
+tags: [private]
 ```
 
 ```Go
@@ -1778,6 +1942,7 @@ Test that the word splitter returns the same data as strings.Fields.
 
 ```
 searchKey: bufio_test.genLine
+tags: [private]
 ```
 
 ```Go
@@ -1790,6 +1955,7 @@ genLine writes to buf a predictable but non-trivial line of text of length n, in
 
 ```
 searchKey: bufio_test.TestScanLongLines
+tags: [private]
 ```
 
 ```Go
@@ -1802,6 +1968,7 @@ Test the line splitter, including some carriage returns but no long lines.
 
 ```
 searchKey: bufio_test.TestScanLineTooLong
+tags: [private]
 ```
 
 ```Go
@@ -1814,6 +1981,7 @@ Test that the line splitter errors out on a long line.
 
 ```
 searchKey: bufio_test.testNoNewline
+tags: [private]
 ```
 
 ```Go
@@ -1826,6 +1994,7 @@ Test that the line splitter handles a final line without a newline.
 
 ```
 searchKey: bufio_test.TestScanLineNoNewline
+tags: [private]
 ```
 
 ```Go
@@ -1838,6 +2007,7 @@ Test that the line splitter handles a final line without a newline.
 
 ```
 searchKey: bufio_test.TestScanLineReturnButNoNewline
+tags: [private]
 ```
 
 ```Go
@@ -1850,6 +2020,7 @@ Test that the line splitter handles a final line with a carriage return but no n
 
 ```
 searchKey: bufio_test.TestScanLineEmptyFinalLine
+tags: [private]
 ```
 
 ```Go
@@ -1862,6 +2033,7 @@ Test that the line splitter handles a final empty line.
 
 ```
 searchKey: bufio_test.TestScanLineEmptyFinalLineWithCR
+tags: [private]
 ```
 
 ```Go
@@ -1874,6 +2046,7 @@ Test that the line splitter handles a final empty line with a carriage return bu
 
 ```
 searchKey: bufio_test.TestSplitError
+tags: [private]
 ```
 
 ```Go
@@ -1886,6 +2059,7 @@ Test the correct error is returned when the split function errors out.
 
 ```
 searchKey: bufio_test.TestErrAtEOF
+tags: [private]
 ```
 
 ```Go
@@ -1898,6 +2072,7 @@ Test that an EOF is overridden by a user-generated scan error.
 
 ```
 searchKey: bufio_test.TestNonEOFWithEmptyRead
+tags: [private]
 ```
 
 ```Go
@@ -1908,6 +2083,7 @@ func TestNonEOFWithEmptyRead(t *testing.T)
 
 ```
 searchKey: bufio_test.TestBadReader
+tags: [private]
 ```
 
 ```Go
@@ -1918,6 +2094,7 @@ func TestBadReader(t *testing.T)
 
 ```
 searchKey: bufio_test.TestScanWordsExcessiveWhiteSpace
+tags: [private]
 ```
 
 ```Go
@@ -1928,6 +2105,7 @@ func TestScanWordsExcessiveWhiteSpace(t *testing.T)
 
 ```
 searchKey: bufio_test.commaSplit
+tags: [private]
 ```
 
 ```Go
@@ -1938,6 +2116,7 @@ func commaSplit(data []byte, atEOF bool) (advance int, token []byte, err error)
 
 ```
 searchKey: bufio_test.testEmptyTokens
+tags: [private]
 ```
 
 ```Go
@@ -1948,6 +2127,7 @@ func testEmptyTokens(t *testing.T, text string, values []string)
 
 ```
 searchKey: bufio_test.TestEmptyTokens
+tags: [private]
 ```
 
 ```Go
@@ -1958,6 +2138,7 @@ func TestEmptyTokens(t *testing.T)
 
 ```
 searchKey: bufio_test.TestWithNoEmptyTokens
+tags: [private]
 ```
 
 ```Go
@@ -1968,6 +2149,7 @@ func TestWithNoEmptyTokens(t *testing.T)
 
 ```
 searchKey: bufio_test.loopAtEOFSplit
+tags: [private]
 ```
 
 ```Go
@@ -1978,6 +2160,7 @@ func loopAtEOFSplit(data []byte, atEOF bool) (advance int, token []byte, err err
 
 ```
 searchKey: bufio_test.TestDontLoopForever
+tags: [private]
 ```
 
 ```Go
@@ -1988,6 +2171,7 @@ func TestDontLoopForever(t *testing.T)
 
 ```
 searchKey: bufio_test.TestBlankLines
+tags: [private]
 ```
 
 ```Go
@@ -1998,6 +2182,7 @@ func TestBlankLines(t *testing.T)
 
 ```
 searchKey: bufio_test.TestEmptyLinesOK
+tags: [private]
 ```
 
 ```Go
@@ -2010,6 +2195,7 @@ Check that the looping-at-EOF check doesn't trigger for merely empty tokens.
 
 ```
 searchKey: bufio_test.TestHugeBuffer
+tags: [private]
 ```
 
 ```Go
@@ -2022,6 +2208,7 @@ Make sure we can read a huge token if a big enough buffer is provided.
 
 ```
 searchKey: bufio_test.TestNegativeEOFReader
+tags: [private]
 ```
 
 ```Go
@@ -2034,6 +2221,7 @@ Test that the scanner doesn't panic and returns ErrBadReadCount on a reader that
 
 ```
 searchKey: bufio_test.TestLargeReader
+tags: [private]
 ```
 
 ```Go

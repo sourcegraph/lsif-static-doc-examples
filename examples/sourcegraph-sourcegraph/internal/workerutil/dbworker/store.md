@@ -68,7 +68,7 @@
     * [func assertDequeueRecordViewResult(t *testing.T, expectedID, expectedNewField int, record interface{}, tx Store, ok bool, err error)](#assertDequeueRecordViewResult)
     * [func assertDequeueRecordRetryResult(t *testing.T, expectedID, record interface{}, tx Store, ok bool, err error)](#assertDequeueRecordRetryResult)
     * [func testNow() time.Time](#testNow)
-    * [func init()](#init)
+    * [func init()](#init.main_test.go)
     * [func TestStoreQueuedCount(t *testing.T)](#TestStoreQueuedCount)
     * [func TestStoreQueuedCountFailed(t *testing.T)](#TestStoreQueuedCountFailed)
     * [func TestStoreQueuedCountConditions(t *testing.T)](#TestStoreQueuedCountConditions)
@@ -94,10 +94,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="queuedCountQuery" href="#queuedCountQuery">const queuedCountQuery</a>
 
 ```
 searchKey: store.queuedCountQuery
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +113,7 @@ const queuedCountQuery = ...
 
 ```
 searchKey: store.selectCandidateQuery
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +124,7 @@ const selectCandidateQuery = ...
 
 ```
 searchKey: store.lockQuery
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +135,7 @@ const lockQuery = ...
 
 ```
 searchKey: store.selectRecordQuery
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +146,7 @@ const selectRecordQuery = ...
 
 ```
 searchKey: store.requeueQuery
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +157,7 @@ const requeueQuery = ...
 
 ```
 searchKey: store.addExecutionLogEntryQuery
+tags: [private]
 ```
 
 ```Go
@@ -158,6 +168,7 @@ const addExecutionLogEntryQuery = ...
 
 ```
 searchKey: store.markCompleteQuery
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +179,7 @@ const markCompleteQuery = ...
 
 ```
 searchKey: store.markErroredQuery
+tags: [private]
 ```
 
 ```Go
@@ -178,6 +190,7 @@ const markErroredQuery = ...
 
 ```
 searchKey: store.markFailedQuery
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +201,7 @@ const markFailedQuery = ...
 
 ```
 searchKey: store.resetStalledQuery
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +212,7 @@ const resetStalledQuery = ...
 
 ```
 searchKey: store.resetStalledMaxResetsQuery
+tags: [private]
 ```
 
 ```Go
@@ -206,11 +221,14 @@ const resetStalledMaxResetsQuery = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrDequeueTransaction" href="#ErrDequeueTransaction">var ErrDequeueTransaction</a>
 
 ```
 searchKey: store.ErrDequeueTransaction
-tags: [exported]
 ```
 
 ```Go
@@ -223,7 +241,6 @@ ErrDequeueTransaction occurs when Dequeue is called from inside a transaction.
 
 ```
 searchKey: store.ErrDequeueRace
-tags: [exported]
 ```
 
 ```Go
@@ -236,7 +253,6 @@ ErrDequeueRace occurs when a record selected for dequeue has been locked by anot
 
 ```
 searchKey: store.ErrNoRecord
-tags: [exported]
 ```
 
 ```Go
@@ -249,6 +265,7 @@ ErrNoRecord occurs when a record cannot be selected after it has been locked.
 
 ```
 searchKey: store.columnNames
+tags: [private]
 ```
 
 ```Go
@@ -261,6 +278,7 @@ ColumnNames are the names of the columns expected to be defined by the target ta
 
 ```
 searchKey: store.defaultTestStoreOptions
+tags: [private]
 ```
 
 ```Go
@@ -269,10 +287,15 @@ var defaultTestStoreOptions = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="operations" href="#operations">type operations struct</a>
 
 ```
 searchKey: store.operations
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +315,7 @@ type operations struct {
 
 ```
 searchKey: store.newOperations
+tags: [private]
 ```
 
 ```Go
@@ -302,7 +326,6 @@ func newOperations(storeName string, observationContext *observation.Context) *o
 
 ```
 searchKey: store.Store
-tags: [exported]
 ```
 
 ```Go
@@ -367,7 +390,6 @@ Store is the persistence layer for the dbworker package that handles worker-side
 
 ```
 searchKey: store.New
-tags: [exported]
 ```
 
 ```Go
@@ -380,7 +402,6 @@ New creates a new store with the given database handle and options.
 
 ```
 searchKey: store.NewWithMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -391,7 +412,6 @@ func NewWithMetrics(handle *basestore.TransactableHandle, options Options, obser
 
 ```
 searchKey: store.ExecutionLogEntry
-tags: [exported]
 ```
 
 ```Go
@@ -402,7 +422,6 @@ type ExecutionLogEntry workerutil.ExecutionLogEntry
 
 ```
 searchKey: store.ExecutionLogEntry.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -413,7 +432,6 @@ func (e *ExecutionLogEntry) Scan(value interface{}) error
 
 ```
 searchKey: store.ExecutionLogEntry.Value
-tags: [exported]
 ```
 
 ```Go
@@ -424,6 +442,7 @@ func (e ExecutionLogEntry) Value() (driver.Value, error)
 
 ```
 searchKey: store.store
+tags: [private]
 ```
 
 ```Go
@@ -439,6 +458,7 @@ type store struct {
 
 ```
 searchKey: store.newStore
+tags: [private]
 ```
 
 ```Go
@@ -449,6 +469,7 @@ func newStore(handle *basestore.TransactableHandle, options Options, observation
 
 ```
 searchKey: store.testStore
+tags: [private]
 ```
 
 ```Go
@@ -459,6 +480,7 @@ func testStore(db dbutil.DB, options Options) *store
 
 ```
 searchKey: store.store.Transact
+tags: [private]
 ```
 
 ```Go
@@ -469,6 +491,7 @@ func (s *store) Transact(ctx context.Context) (*store, error)
 
 ```
 searchKey: store.store.QueuedCount
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +504,7 @@ QueuedCount returns the number of records in the queued state matching the given
 
 ```
 searchKey: store.store.Dequeue
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +519,7 @@ The supplied conditions may use the alias provided in `ViewName`, if one was sup
 
 ```
 searchKey: store.store.DequeueWithIndependentTransactionContext
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +532,7 @@ DequeueWithIndependentTransactionContext is like Dequeue, but will use a context
 
 ```
 searchKey: store.store.dequeue
+tags: [private]
 ```
 
 ```Go
@@ -517,6 +543,7 @@ func (s *store) dequeue(ctx context.Context, conditions []*sqlf.Query, independe
 
 ```
 searchKey: store.store.Requeue
+tags: [private]
 ```
 
 ```Go
@@ -529,6 +556,7 @@ Requeue updates the state of the record with the given identifier to queued and 
 
 ```
 searchKey: store.store.AddExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +569,7 @@ AddExecutionLogEntry adds an executor log entry to the record.
 
 ```
 searchKey: store.store.MarkComplete
+tags: [private]
 ```
 
 ```Go
@@ -553,6 +582,7 @@ MarkComplete attempts to update the state of the record to complete. If this rec
 
 ```
 searchKey: store.store.MarkErrored
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +595,7 @@ MarkErrored attempts to update the state of the record to errored. This method w
 
 ```
 searchKey: store.store.MarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -577,6 +608,7 @@ MarkFailed attempts to update the state of the record to failed. This method wil
 
 ```
 searchKey: store.store.ResetStalled
+tags: [private]
 ```
 
 ```Go
@@ -589,6 +621,7 @@ ResetStalled moves all unlocked records in the processing state for more than `S
 
 ```
 searchKey: store.store.resetStalled
+tags: [private]
 ```
 
 ```Go
@@ -599,6 +632,7 @@ func (s *store) resetStalled(ctx context.Context, q string) ([]int, error)
 
 ```
 searchKey: store.store.formatQuery
+tags: [private]
 ```
 
 ```Go
@@ -609,7 +643,6 @@ func (s *store) formatQuery(query string, args ...interface{}) *sqlf.Query
 
 ```
 searchKey: store.Options
-tags: [exported]
 ```
 
 ```Go
@@ -707,7 +740,6 @@ Options configure the behavior of Store over a particular set of tables, columns
 
 ```
 searchKey: store.RecordScanFn
-tags: [exported]
 ```
 
 ```Go
@@ -722,6 +754,7 @@ See the `CloseRows` function in the store/base package for suggested implementat
 
 ```
 searchKey: store.TestRecord
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +768,7 @@ type TestRecord struct {
 
 ```
 searchKey: store.TestRecord.RecordID
+tags: [private]
 ```
 
 ```Go
@@ -745,6 +779,7 @@ func (v TestRecord) RecordID() int
 
 ```
 searchKey: store.TestRecordView
+tags: [private]
 ```
 
 ```Go
@@ -759,6 +794,7 @@ type TestRecordView struct {
 
 ```
 searchKey: store.TestRecordView.RecordID
+tags: [private]
 ```
 
 ```Go
@@ -769,6 +805,7 @@ func (v TestRecordView) RecordID() int
 
 ```
 searchKey: store.TestRecordRetry
+tags: [private]
 ```
 
 ```Go
@@ -783,6 +820,7 @@ type TestRecordRetry struct {
 
 ```
 searchKey: store.TestRecordRetry.RecordID
+tags: [private]
 ```
 
 ```Go
@@ -791,11 +829,14 @@ func (v TestRecordRetry) RecordID() int
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExecutionLogEntries" href="#ExecutionLogEntries">func ExecutionLogEntries(raw []workerutil.ExecutionLogEntry) (entries []ExecutionLogEntry)</a>
 
 ```
 searchKey: store.ExecutionLogEntries
-tags: [exported]
 ```
 
 ```Go
@@ -806,7 +847,6 @@ func ExecutionLogEntries(raw []workerutil.ExecutionLogEntry) (entries []Executio
 
 ```
 searchKey: store.DefaultColumnExpressions
-tags: [exported]
 ```
 
 ```Go
@@ -819,6 +859,7 @@ DefaultColumnExpressions returns a slice of expressions for the default column n
 
 ```
 searchKey: store.quote
+tags: [private]
 ```
 
 ```Go
@@ -831,6 +872,7 @@ quote wraps the given string in a *sqlf.Query so that it is not passed to the da
 
 ```
 searchKey: store.makeConditionSuffix
+tags: [private]
 ```
 
 ```Go
@@ -843,6 +885,7 @@ makeConditionSuffix returns a *sqlf.Query containing "AND {c1 AND c2 AND ...}" w
 
 ```
 searchKey: store.testScanFirstRecord
+tags: [private]
 ```
 
 ```Go
@@ -853,6 +896,7 @@ func testScanFirstRecord(rows *sql.Rows, queryErr error) (v workerutil.Record, _
 
 ```
 searchKey: store.testScanFirstRecordView
+tags: [private]
 ```
 
 ```Go
@@ -863,6 +907,7 @@ func testScanFirstRecordView(rows *sql.Rows, queryErr error) (v workerutil.Recor
 
 ```
 searchKey: store.testScanFirstRecordRetry
+tags: [private]
 ```
 
 ```Go
@@ -873,6 +918,7 @@ func testScanFirstRecordRetry(rows *sql.Rows, queryErr error) (v workerutil.Reco
 
 ```
 searchKey: store.setupStoreTest
+tags: [private]
 ```
 
 ```Go
@@ -883,6 +929,7 @@ func setupStoreTest(t *testing.T) dbutil.DB
 
 ```
 searchKey: store.assertDequeueRecordResult
+tags: [private]
 ```
 
 ```Go
@@ -893,6 +940,7 @@ func assertDequeueRecordResult(t *testing.T, expectedID int, record interface{},
 
 ```
 searchKey: store.assertDequeueRecordViewResult
+tags: [private]
 ```
 
 ```Go
@@ -903,6 +951,7 @@ func assertDequeueRecordViewResult(t *testing.T, expectedID, expectedNewField in
 
 ```
 searchKey: store.assertDequeueRecordRetryResult
+tags: [private]
 ```
 
 ```Go
@@ -913,16 +962,18 @@ func assertDequeueRecordRetryResult(t *testing.T, expectedID, record interface{}
 
 ```
 searchKey: store.testNow
+tags: [private]
 ```
 
 ```Go
 func testNow() time.Time
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.main_test.go" href="#init.main_test.go">func init()</a>
 
 ```
 searchKey: store.init
+tags: [private]
 ```
 
 ```Go
@@ -933,6 +984,7 @@ func init()
 
 ```
 searchKey: store.TestStoreQueuedCount
+tags: [private]
 ```
 
 ```Go
@@ -943,6 +995,7 @@ func TestStoreQueuedCount(t *testing.T)
 
 ```
 searchKey: store.TestStoreQueuedCountFailed
+tags: [private]
 ```
 
 ```Go
@@ -953,6 +1006,7 @@ func TestStoreQueuedCountFailed(t *testing.T)
 
 ```
 searchKey: store.TestStoreQueuedCountConditions
+tags: [private]
 ```
 
 ```Go
@@ -963,6 +1017,7 @@ func TestStoreQueuedCountConditions(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueState
+tags: [private]
 ```
 
 ```Go
@@ -973,6 +1028,7 @@ func TestStoreDequeueState(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueOrder
+tags: [private]
 ```
 
 ```Go
@@ -983,6 +1039,7 @@ func TestStoreDequeueOrder(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueConditions
+tags: [private]
 ```
 
 ```Go
@@ -993,6 +1050,7 @@ func TestStoreDequeueConditions(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueDelay
+tags: [private]
 ```
 
 ```Go
@@ -1003,6 +1061,7 @@ func TestStoreDequeueDelay(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueView
+tags: [private]
 ```
 
 ```Go
@@ -1013,6 +1072,7 @@ func TestStoreDequeueView(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -1023,6 +1083,7 @@ func TestStoreDequeueConcurrent(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueRetryAfter
+tags: [private]
 ```
 
 ```Go
@@ -1033,6 +1094,7 @@ func TestStoreDequeueRetryAfter(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueRetryAfterDisabled
+tags: [private]
 ```
 
 ```Go
@@ -1043,6 +1105,7 @@ func TestStoreDequeueRetryAfterDisabled(t *testing.T)
 
 ```
 searchKey: store.TestStoreRequeue
+tags: [private]
 ```
 
 ```Go
@@ -1053,6 +1116,7 @@ func TestStoreRequeue(t *testing.T)
 
 ```
 searchKey: store.TestStoreAddExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -1063,6 +1127,7 @@ func TestStoreAddExecutionLogEntry(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkComplete
+tags: [private]
 ```
 
 ```Go
@@ -1073,6 +1138,7 @@ func TestStoreMarkComplete(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkCompleteNotProcessing
+tags: [private]
 ```
 
 ```Go
@@ -1083,6 +1149,7 @@ func TestStoreMarkCompleteNotProcessing(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkErrored
+tags: [private]
 ```
 
 ```Go
@@ -1093,6 +1160,7 @@ func TestStoreMarkErrored(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -1103,6 +1171,7 @@ func TestStoreMarkFailed(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkErroredAlreadyCompleted
+tags: [private]
 ```
 
 ```Go
@@ -1113,6 +1182,7 @@ func TestStoreMarkErroredAlreadyCompleted(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkErroredAlreadyErrored
+tags: [private]
 ```
 
 ```Go
@@ -1123,6 +1193,7 @@ func TestStoreMarkErroredAlreadyErrored(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkErroredRetriesExhausted
+tags: [private]
 ```
 
 ```Go
@@ -1133,6 +1204,7 @@ func TestStoreMarkErroredRetriesExhausted(t *testing.T)
 
 ```
 searchKey: store.TestStoreResetStalled
+tags: [private]
 ```
 
 ```Go

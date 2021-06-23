@@ -4,7 +4,9 @@
     "identifier": "executor",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/executor",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "queueURL",
                 "newPage": false,
                 "searchKey": "executor.queueURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "sharedUsername",
                 "newPage": false,
                 "searchKey": "executor.sharedUsername",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "sharedPassword",
                 "newPage": false,
                 "searchKey": "executor.sharedPassword",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "executor.client",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "getRest",
                 "newPage": false,
                 "searchKey": "executor.getRest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +157,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -161,9 +177,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "executor.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -183,7 +197,9 @@
                 "identifier": "newInternalProxyHandler",
                 "newPage": false,
                 "searchKey": "executor.newInternalProxyHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -203,7 +219,9 @@
                 "identifier": "basicAuthMiddleware",
                 "newPage": false,
                 "searchKey": "executor.basicAuthMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -223,7 +241,9 @@
                 "identifier": "reverseProxy",
                 "newPage": false,
                 "searchKey": "executor.reverseProxy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -243,7 +263,9 @@
                 "identifier": "makeProxyRequest",
                 "newPage": false,
                 "searchKey": "executor.makeProxyRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -263,7 +285,9 @@
                 "identifier": "copyHeader",
                 "newPage": false,
                 "searchKey": "executor.copyHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -278,12 +302,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#init",
+              "pathID": "/enterprise/cmd/frontend/internal/executor#init.internal_proxy_handler_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.internal_proxy_handler_test.go",
                 "newPage": false,
                 "searchKey": "executor.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -303,7 +329,9 @@
                 "identifier": "TestInternalProxyAuthTokenMiddleware",
                 "newPage": false,
                 "searchKey": "executor.TestInternalProxyAuthTokenMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -323,7 +351,9 @@
                 "identifier": "TestReverseProxySimple",
                 "newPage": false,
                 "searchKey": "executor.TestReverseProxySimple",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -343,7 +373,9 @@
                 "identifier": "TestReverseProxyTargetPath",
                 "newPage": false,
                 "searchKey": "executor.TestReverseProxyTargetPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -363,7 +395,9 @@
                 "identifier": "TestReverseProxyHeaders",
                 "newPage": false,
                 "searchKey": "executor.TestReverseProxyHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -383,7 +417,9 @@
                 "identifier": "TestReverseProxyRedirectWithPayload",
                 "newPage": false,
                 "searchKey": "executor.TestReverseProxyRedirectWithPayload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

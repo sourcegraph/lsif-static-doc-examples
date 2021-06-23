@@ -4,9 +4,7 @@
     "identifier": "httputil",
     "newPage": true,
     "searchKey": "net/http/httputil",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "fakeHopHeader",
                 "newPage": false,
                 "searchKey": "httputil.fakeHopHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,7 +83,9 @@
                 "identifier": "reqWriteExcludeHeaderDump",
                 "newPage": false,
                 "searchKey": "httputil.reqWriteExcludeHeaderDump",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "errNoBody",
                 "newPage": false,
                 "searchKey": "httputil.errNoBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "emptyBody",
                 "newPage": false,
                 "searchKey": "httputil.emptyBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,9 +149,7 @@
                 "identifier": "ErrLineTooLong",
                 "newPage": false,
                 "searchKey": "httputil.ErrLineTooLong",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -170,7 +170,6 @@
                 "newPage": false,
                 "searchKey": "httputil.ErrPersistEOF",
                 "tags": [
-                  "exported",
                   "deprecated"
                 ]
               },
@@ -193,7 +192,6 @@
                 "newPage": false,
                 "searchKey": "httputil.ErrClosed",
                 "tags": [
-                  "exported",
                   "deprecated"
                 ]
               },
@@ -216,7 +214,6 @@
                 "newPage": false,
                 "searchKey": "httputil.ErrPipeline",
                 "tags": [
-                  "exported",
                   "deprecated"
                 ]
               },
@@ -238,7 +235,9 @@
                 "identifier": "errClosed",
                 "newPage": false,
                 "searchKey": "httputil.errClosed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -258,7 +257,9 @@
                 "identifier": "hopHeaders",
                 "newPage": false,
                 "searchKey": "httputil.hopHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -278,7 +279,9 @@
                 "identifier": "inOurTests",
                 "newPage": false,
                 "searchKey": "httputil.inOurTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -298,7 +301,9 @@
                 "identifier": "dumpTests",
                 "newPage": false,
                 "searchKey": "httputil.dumpTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -318,7 +323,9 @@
                 "identifier": "dumpResTests",
                 "newPage": false,
                 "searchKey": "httputil.dumpResTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -338,7 +345,9 @@
                 "identifier": "proxyQueryTests",
                 "newPage": false,
                 "searchKey": "httputil.proxyQueryTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -361,9 +370,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -381,7 +388,9 @@
                 "identifier": "dumpConn",
                 "newPage": false,
                 "searchKey": "httputil.dumpConn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -399,7 +408,9 @@
                       "identifier": "dumpConn.Close",
                       "newPage": false,
                       "searchKey": "httputil.dumpConn.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -419,7 +430,9 @@
                       "identifier": "dumpConn.LocalAddr",
                       "newPage": false,
                       "searchKey": "httputil.dumpConn.LocalAddr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -439,7 +452,9 @@
                       "identifier": "dumpConn.RemoteAddr",
                       "newPage": false,
                       "searchKey": "httputil.dumpConn.RemoteAddr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -459,7 +474,9 @@
                       "identifier": "dumpConn.SetDeadline",
                       "newPage": false,
                       "searchKey": "httputil.dumpConn.SetDeadline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -479,7 +496,9 @@
                       "identifier": "dumpConn.SetReadDeadline",
                       "newPage": false,
                       "searchKey": "httputil.dumpConn.SetReadDeadline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -499,7 +518,9 @@
                       "identifier": "dumpConn.SetWriteDeadline",
                       "newPage": false,
                       "searchKey": "httputil.dumpConn.SetWriteDeadline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -522,7 +543,9 @@
                 "identifier": "neverEnding",
                 "newPage": false,
                 "searchKey": "httputil.neverEnding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -540,7 +563,9 @@
                       "identifier": "neverEnding.Read",
                       "newPage": false,
                       "searchKey": "httputil.neverEnding.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -563,7 +588,9 @@
                 "identifier": "delegateReader",
                 "newPage": false,
                 "searchKey": "httputil.delegateReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,7 +608,9 @@
                       "identifier": "delegateReader.Read",
                       "newPage": false,
                       "searchKey": "httputil.delegateReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -604,7 +633,9 @@
                 "identifier": "failureToReadBody",
                 "newPage": false,
                 "searchKey": "httputil.failureToReadBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -622,7 +653,9 @@
                       "identifier": "failureToReadBody.Read",
                       "newPage": false,
                       "searchKey": "httputil.failureToReadBody.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -642,7 +675,9 @@
                       "identifier": "failureToReadBody.Close",
                       "newPage": false,
                       "searchKey": "httputil.failureToReadBody.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -665,9 +700,7 @@
                 "identifier": "ServerConn",
                 "newPage": false,
                 "searchKey": "httputil.ServerConn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -686,7 +719,6 @@
                       "newPage": false,
                       "searchKey": "httputil.NewServerConn",
                       "tags": [
-                        "exported",
                         "deprecated"
                       ]
                     },
@@ -708,9 +740,7 @@
                       "identifier": "ServerConn.Hijack",
                       "newPage": false,
                       "searchKey": "httputil.ServerConn.Hijack",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -730,9 +760,7 @@
                       "identifier": "ServerConn.Close",
                       "newPage": false,
                       "searchKey": "httputil.ServerConn.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -752,9 +780,7 @@
                       "identifier": "ServerConn.Read",
                       "newPage": false,
                       "searchKey": "httputil.ServerConn.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -774,9 +800,7 @@
                       "identifier": "ServerConn.Pending",
                       "newPage": false,
                       "searchKey": "httputil.ServerConn.Pending",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -796,9 +820,7 @@
                       "identifier": "ServerConn.Write",
                       "newPage": false,
                       "searchKey": "httputil.ServerConn.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -821,9 +843,7 @@
                 "identifier": "ClientConn",
                 "newPage": false,
                 "searchKey": "httputil.ClientConn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -842,7 +862,6 @@
                       "newPage": false,
                       "searchKey": "httputil.NewClientConn",
                       "tags": [
-                        "exported",
                         "deprecated"
                       ]
                     },
@@ -865,7 +884,6 @@
                       "newPage": false,
                       "searchKey": "httputil.NewProxyClientConn",
                       "tags": [
-                        "exported",
                         "deprecated"
                       ]
                     },
@@ -887,9 +905,7 @@
                       "identifier": "ClientConn.Hijack",
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Hijack",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -909,9 +925,7 @@
                       "identifier": "ClientConn.Close",
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -931,9 +945,7 @@
                       "identifier": "ClientConn.Write",
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -953,9 +965,7 @@
                       "identifier": "ClientConn.Pending",
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Pending",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -975,9 +985,7 @@
                       "identifier": "ClientConn.Read",
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -997,9 +1005,7 @@
                       "identifier": "ClientConn.Do",
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Do",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1022,9 +1028,7 @@
                 "identifier": "ReverseProxy",
                 "newPage": false,
                 "searchKey": "httputil.ReverseProxy",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1042,9 +1046,7 @@
                       "identifier": "NewSingleHostReverseProxy",
                       "newPage": false,
                       "searchKey": "httputil.NewSingleHostReverseProxy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1064,7 +1066,9 @@
                       "identifier": "ReverseProxy.defaultErrorHandler",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.defaultErrorHandler",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1084,7 +1088,9 @@
                       "identifier": "ReverseProxy.getErrorHandler",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.getErrorHandler",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1104,7 +1110,9 @@
                       "identifier": "ReverseProxy.modifyResponse",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.modifyResponse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1124,9 +1132,7 @@
                       "identifier": "ReverseProxy.ServeHTTP",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.ServeHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1146,7 +1152,9 @@
                       "identifier": "ReverseProxy.flushInterval",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.flushInterval",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1166,7 +1174,9 @@
                       "identifier": "ReverseProxy.copyResponse",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.copyResponse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1186,7 +1196,9 @@
                       "identifier": "ReverseProxy.copyBuffer",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.copyBuffer",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1206,7 +1218,9 @@
                       "identifier": "ReverseProxy.logf",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.logf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1226,7 +1240,9 @@
                       "identifier": "ReverseProxy.handleUpgradeResponse",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.handleUpgradeResponse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1249,9 +1265,7 @@
                 "identifier": "BufferPool",
                 "newPage": false,
                 "searchKey": "httputil.BufferPool",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1271,7 +1285,9 @@
                 "identifier": "writeFlusher",
                 "newPage": false,
                 "searchKey": "httputil.writeFlusher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1291,7 +1307,9 @@
                 "identifier": "maxLatencyWriter",
                 "newPage": false,
                 "searchKey": "httputil.maxLatencyWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1309,7 +1327,9 @@
                       "identifier": "maxLatencyWriter.Write",
                       "newPage": false,
                       "searchKey": "httputil.maxLatencyWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1329,7 +1349,9 @@
                       "identifier": "maxLatencyWriter.delayedFlush",
                       "newPage": false,
                       "searchKey": "httputil.maxLatencyWriter.delayedFlush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1349,7 +1371,9 @@
                       "identifier": "maxLatencyWriter.stop",
                       "newPage": false,
                       "searchKey": "httputil.maxLatencyWriter.stop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1372,7 +1396,9 @@
                 "identifier": "switchProtocolCopier",
                 "newPage": false,
                 "searchKey": "httputil.switchProtocolCopier",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1390,7 +1416,9 @@
                       "identifier": "switchProtocolCopier.copyFromBackend",
                       "newPage": false,
                       "searchKey": "httputil.switchProtocolCopier.copyFromBackend",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1410,7 +1438,9 @@
                       "identifier": "switchProtocolCopier.copyToBackend",
                       "newPage": false,
                       "searchKey": "httputil.switchProtocolCopier.copyToBackend",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1433,7 +1463,9 @@
                 "identifier": "eofReader",
                 "newPage": false,
                 "searchKey": "httputil.eofReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1451,7 +1483,9 @@
                       "identifier": "eofReader.Close",
                       "newPage": false,
                       "searchKey": "httputil.eofReader.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1471,7 +1505,9 @@
                       "identifier": "eofReader.Read",
                       "newPage": false,
                       "searchKey": "httputil.eofReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1494,7 +1530,9 @@
                 "identifier": "dumpTest",
                 "newPage": false,
                 "searchKey": "httputil.dumpTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1514,7 +1552,9 @@
                 "identifier": "bufferPool",
                 "newPage": false,
                 "searchKey": "httputil.bufferPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1532,7 +1572,9 @@
                       "identifier": "bufferPool.Get",
                       "newPage": false,
                       "searchKey": "httputil.bufferPool.Get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1552,7 +1594,9 @@
                       "identifier": "bufferPool.Put",
                       "newPage": false,
                       "searchKey": "httputil.bufferPool.Put",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1575,7 +1619,9 @@
                 "identifier": "RoundTripperFunc",
                 "newPage": false,
                 "searchKey": "httputil.RoundTripperFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1593,7 +1639,9 @@
                       "identifier": "RoundTripperFunc.RoundTrip",
                       "newPage": false,
                       "searchKey": "httputil.RoundTripperFunc.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1616,7 +1664,9 @@
                 "identifier": "failingRoundTripper",
                 "newPage": false,
                 "searchKey": "httputil.failingRoundTripper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1634,7 +1684,9 @@
                       "identifier": "failingRoundTripper.RoundTrip",
                       "newPage": false,
                       "searchKey": "httputil.failingRoundTripper.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1657,7 +1709,9 @@
                 "identifier": "staticResponseRoundTripper",
                 "newPage": false,
                 "searchKey": "httputil.staticResponseRoundTripper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1675,7 +1729,9 @@
                       "identifier": "staticResponseRoundTripper.RoundTrip",
                       "newPage": false,
                       "searchKey": "httputil.staticResponseRoundTripper.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1698,7 +1754,9 @@
                 "identifier": "staticTransport",
                 "newPage": false,
                 "searchKey": "httputil.staticTransport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1716,7 +1774,9 @@
                       "identifier": "staticTransport.RoundTrip",
                       "newPage": false,
                       "searchKey": "httputil.staticTransport.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1739,7 +1799,9 @@
                 "identifier": "roundTripperFunc",
                 "newPage": false,
                 "searchKey": "httputil.roundTripperFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1757,7 +1819,9 @@
                       "identifier": "roundTripperFunc.RoundTrip",
                       "newPage": false,
                       "searchKey": "httputil.roundTripperFunc.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1780,7 +1844,9 @@
                 "identifier": "checkCloser",
                 "newPage": false,
                 "searchKey": "httputil.checkCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1798,7 +1864,9 @@
                       "identifier": "checkCloser.Close",
                       "newPage": false,
                       "searchKey": "httputil.checkCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1818,7 +1886,9 @@
                       "identifier": "checkCloser.Read",
                       "newPage": false,
                       "searchKey": "httputil.checkCloser.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1844,9 +1914,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1864,7 +1932,9 @@
                 "identifier": "drainBody",
                 "newPage": false,
                 "searchKey": "httputil.drainBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1884,7 +1954,9 @@
                 "identifier": "outgoingLength",
                 "newPage": false,
                 "searchKey": "httputil.outgoingLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1904,9 +1976,7 @@
                 "identifier": "DumpRequestOut",
                 "newPage": false,
                 "searchKey": "httputil.DumpRequestOut",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1926,7 +1996,9 @@
                 "identifier": "valueOrDefault",
                 "newPage": false,
                 "searchKey": "httputil.valueOrDefault",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1946,9 +2018,7 @@
                 "identifier": "DumpRequest",
                 "newPage": false,
                 "searchKey": "httputil.DumpRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1968,9 +2038,7 @@
                 "identifier": "DumpResponse",
                 "newPage": false,
                 "searchKey": "httputil.DumpResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1990,9 +2058,7 @@
                 "identifier": "NewChunkedReader",
                 "newPage": false,
                 "searchKey": "httputil.NewChunkedReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2012,9 +2078,7 @@
                 "identifier": "NewChunkedWriter",
                 "newPage": false,
                 "searchKey": "httputil.NewChunkedWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2034,7 +2098,9 @@
                 "identifier": "singleJoiningSlash",
                 "newPage": false,
                 "searchKey": "httputil.singleJoiningSlash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2054,7 +2120,9 @@
                 "identifier": "joinURLPath",
                 "newPage": false,
                 "searchKey": "httputil.joinURLPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2074,7 +2142,9 @@
                 "identifier": "copyHeader",
                 "newPage": false,
                 "searchKey": "httputil.copyHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2094,7 +2164,9 @@
                 "identifier": "shouldPanicOnCopyError",
                 "newPage": false,
                 "searchKey": "httputil.shouldPanicOnCopyError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2114,7 +2186,9 @@
                 "identifier": "removeConnectionHeaders",
                 "newPage": false,
                 "searchKey": "httputil.removeConnectionHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2134,7 +2208,9 @@
                 "identifier": "upgradeType",
                 "newPage": false,
                 "searchKey": "httputil.upgradeType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2154,7 +2230,9 @@
                 "identifier": "TestDumpRequest",
                 "newPage": false,
                 "searchKey": "httputil.TestDumpRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2174,7 +2252,9 @@
                 "identifier": "deadline",
                 "newPage": false,
                 "searchKey": "httputil.deadline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2194,7 +2274,9 @@
                 "identifier": "chunk",
                 "newPage": false,
                 "searchKey": "httputil.chunk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2214,7 +2296,9 @@
                 "identifier": "mustParseURL",
                 "newPage": false,
                 "searchKey": "httputil.mustParseURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2234,7 +2318,9 @@
                 "identifier": "mustNewRequest",
                 "newPage": false,
                 "searchKey": "httputil.mustNewRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2254,7 +2340,9 @@
                 "identifier": "mustReadRequest",
                 "newPage": false,
                 "searchKey": "httputil.mustReadRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2274,7 +2362,9 @@
                 "identifier": "TestDumpResponse",
                 "newPage": false,
                 "searchKey": "httputil.TestDumpResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2294,7 +2384,9 @@
                 "identifier": "TestDumpRequestOutIssue38352",
                 "newPage": false,
                 "searchKey": "httputil.TestDumpRequestOutIssue38352",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2309,12 +2401,14 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#init",
+              "pathID": "/net/http/httputil#init.reverseproxy_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.reverseproxy_test.go",
                 "newPage": false,
                 "searchKey": "httputil.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2334,7 +2428,9 @@
                 "identifier": "TestReverseProxy",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2354,7 +2450,9 @@
                 "identifier": "TestReverseProxyStripHeadersPresentInConnection",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyStripHeadersPresentInConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2374,7 +2472,9 @@
                 "identifier": "TestReverseProxyStripEmptyConnection",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyStripEmptyConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2394,7 +2494,9 @@
                 "identifier": "TestXForwardedFor",
                 "newPage": false,
                 "searchKey": "httputil.TestXForwardedFor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2414,7 +2516,9 @@
                 "identifier": "TestXForwardedFor_Omit",
                 "newPage": false,
                 "searchKey": "httputil.TestXForwardedFor_Omit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2434,7 +2538,9 @@
                 "identifier": "TestReverseProxyQuery",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2454,7 +2560,9 @@
                 "identifier": "TestReverseProxyFlushInterval",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyFlushInterval",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2474,7 +2582,9 @@
                 "identifier": "TestReverseProxyFlushIntervalHeaders",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyFlushIntervalHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2494,7 +2604,9 @@
                 "identifier": "TestReverseProxyCancellation",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyCancellation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2514,7 +2626,9 @@
                 "identifier": "req",
                 "newPage": false,
                 "searchKey": "httputil.req",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2534,7 +2648,9 @@
                 "identifier": "TestNilBody",
                 "newPage": false,
                 "searchKey": "httputil.TestNilBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2554,7 +2670,9 @@
                 "identifier": "TestUserAgentHeader",
                 "newPage": false,
                 "searchKey": "httputil.TestUserAgentHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2574,7 +2692,9 @@
                 "identifier": "TestReverseProxyGetPutBuffer",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyGetPutBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2594,7 +2714,9 @@
                 "identifier": "TestReverseProxy_Post",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy_Post",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2614,7 +2736,9 @@
                 "identifier": "TestReverseProxy_NilBody",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy_NilBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2634,7 +2758,9 @@
                 "identifier": "TestReverseProxy_AllocatedHeader",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy_AllocatedHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2654,7 +2780,9 @@
                 "identifier": "TestReverseProxyModifyResponse",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyModifyResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2674,7 +2802,9 @@
                 "identifier": "TestReverseProxyErrorHandler",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyErrorHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2694,7 +2824,9 @@
                 "identifier": "TestReverseProxy_CopyBuffer",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy_CopyBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2714,7 +2846,9 @@
                 "identifier": "BenchmarkServeHTTP",
                 "newPage": false,
                 "searchKey": "httputil.BenchmarkServeHTTP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2734,7 +2868,9 @@
                 "identifier": "TestServeHTTPDeepCopy",
                 "newPage": false,
                 "searchKey": "httputil.TestServeHTTPDeepCopy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2754,7 +2890,9 @@
                 "identifier": "TestClonesRequestHeaders",
                 "newPage": false,
                 "searchKey": "httputil.TestClonesRequestHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2774,7 +2912,9 @@
                 "identifier": "TestModifyResponseClosesBody",
                 "newPage": false,
                 "searchKey": "httputil.TestModifyResponseClosesBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2794,7 +2934,9 @@
                 "identifier": "TestReverseProxy_PanicBodyError",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy_PanicBodyError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2814,7 +2956,9 @@
                 "identifier": "TestSelectFlushInterval",
                 "newPage": false,
                 "searchKey": "httputil.TestSelectFlushInterval",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2834,7 +2978,9 @@
                 "identifier": "TestReverseProxyWebSocket",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyWebSocket",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2854,7 +3000,9 @@
                 "identifier": "TestReverseProxyWebSocketCancellation",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyWebSocketCancellation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2874,7 +3022,9 @@
                 "identifier": "TestUnannouncedTrailer",
                 "newPage": false,
                 "searchKey": "httputil.TestUnannouncedTrailer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2894,7 +3044,9 @@
                 "identifier": "TestSingleJoinSlash",
                 "newPage": false,
                 "searchKey": "httputil.TestSingleJoinSlash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2914,7 +3066,9 @@
                 "identifier": "TestJoinURLPath",
                 "newPage": false,
                 "searchKey": "httputil.TestJoinURLPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

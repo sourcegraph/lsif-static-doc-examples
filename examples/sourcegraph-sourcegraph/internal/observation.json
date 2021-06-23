@@ -4,7 +4,9 @@
     "identifier": "observation",
     "newPage": true,
     "searchKey": "internal/observation",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "TestContext",
                 "newPage": false,
                 "searchKey": "observation.TestContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "commonAcronyms",
                 "newPage": false,
                 "searchKey": "observation.commonAcronyms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -82,7 +86,9 @@
                 "identifier": "acronymsReplacer",
                 "newPage": false,
                 "searchKey": "observation.acronymsReplacer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -105,7 +111,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -123,9 +131,7 @@
                 "identifier": "Context",
                 "newPage": false,
                 "searchKey": "observation.Context",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -143,9 +149,7 @@
                       "identifier": "Context.Operation",
                       "newPage": false,
                       "searchKey": "observation.Context.Operation",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -168,9 +172,7 @@
                 "identifier": "Op",
                 "newPage": false,
                 "searchKey": "observation.Op",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -190,9 +192,7 @@
                 "identifier": "Operation",
                 "newPage": false,
                 "searchKey": "observation.Operation",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +210,7 @@
                       "identifier": "Operation.With",
                       "newPage": false,
                       "searchKey": "observation.Operation.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -232,9 +230,7 @@
                       "identifier": "Operation.WithAndLogger",
                       "newPage": false,
                       "searchKey": "observation.Operation.WithAndLogger",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -254,7 +250,9 @@
                       "identifier": "Operation.trace",
                       "newPage": false,
                       "searchKey": "observation.Operation.trace",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -274,7 +272,9 @@
                       "identifier": "Operation.emitErrorLogs",
                       "newPage": false,
                       "searchKey": "observation.Operation.emitErrorLogs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,7 +294,9 @@
                       "identifier": "Operation.emitMetrics",
                       "newPage": false,
                       "searchKey": "observation.Operation.emitMetrics",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -314,7 +316,9 @@
                       "identifier": "Operation.finishTrace",
                       "newPage": false,
                       "searchKey": "observation.Operation.finishTrace",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -334,7 +338,9 @@
                       "identifier": "Operation.applyErrorFilter",
                       "newPage": false,
                       "searchKey": "observation.Operation.applyErrorFilter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -357,9 +363,7 @@
                 "identifier": "TraceLogger",
                 "newPage": false,
                 "searchKey": "observation.TraceLogger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -379,9 +383,7 @@
                 "identifier": "FinishFunc",
                 "newPage": false,
                 "searchKey": "observation.FinishFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -401,9 +403,7 @@
                 "identifier": "Args",
                 "newPage": false,
                 "searchKey": "observation.Args",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -421,9 +421,7 @@
                       "identifier": "Args.LogFieldMap",
                       "newPage": false,
                       "searchKey": "observation.Args.LogFieldMap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -443,9 +441,7 @@
                       "identifier": "Args.LogFieldPairs",
                       "newPage": false,
                       "searchKey": "observation.Args.LogFieldPairs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -471,7 +467,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -489,7 +487,9 @@
                 "identifier": "mergeLabels",
                 "newPage": false,
                 "searchKey": "observation.mergeLabels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -509,7 +509,9 @@
                 "identifier": "mergeLogFields",
                 "newPage": false,
                 "searchKey": "observation.mergeLogFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -524,12 +526,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/observation#init",
+              "pathID": "/internal/observation#init.util.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.util.go",
                 "newPage": false,
                 "searchKey": "observation.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -549,7 +553,9 @@
                 "identifier": "kebabCase",
                 "newPage": false,
                 "searchKey": "observation.kebabCase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -569,7 +575,9 @@
                 "identifier": "TestKebabCase",
                 "newPage": false,
                 "searchKey": "observation.TestKebabCase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

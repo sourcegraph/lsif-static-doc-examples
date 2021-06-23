@@ -4,9 +4,7 @@
     "identifier": "expvar",
     "newPage": true,
     "searchKey": "expvar",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "vars",
                 "newPage": false,
                 "searchKey": "expvar.vars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "varKeysMu",
                 "newPage": false,
                 "searchKey": "expvar.varKeysMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "varKeys",
                 "newPage": false,
                 "searchKey": "expvar.varKeys",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,9 +109,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -127,9 +127,7 @@
                 "identifier": "Var",
                 "newPage": false,
                 "searchKey": "expvar.Var",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -147,9 +145,7 @@
                       "identifier": "Get",
                       "newPage": false,
                       "searchKey": "expvar.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -172,9 +168,7 @@
                 "identifier": "Int",
                 "newPage": false,
                 "searchKey": "expvar.Int",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -192,9 +186,7 @@
                       "identifier": "NewInt",
                       "newPage": false,
                       "searchKey": "expvar.NewInt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -214,9 +206,7 @@
                       "identifier": "Int.Value",
                       "newPage": false,
                       "searchKey": "expvar.Int.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -236,9 +226,7 @@
                       "identifier": "Int.String",
                       "newPage": false,
                       "searchKey": "expvar.Int.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -258,9 +246,7 @@
                       "identifier": "Int.Add",
                       "newPage": false,
                       "searchKey": "expvar.Int.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -280,9 +266,7 @@
                       "identifier": "Int.Set",
                       "newPage": false,
                       "searchKey": "expvar.Int.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -305,9 +289,7 @@
                 "identifier": "Float",
                 "newPage": false,
                 "searchKey": "expvar.Float",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -325,9 +307,7 @@
                       "identifier": "NewFloat",
                       "newPage": false,
                       "searchKey": "expvar.NewFloat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -347,9 +327,7 @@
                       "identifier": "Float.Value",
                       "newPage": false,
                       "searchKey": "expvar.Float.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -369,9 +347,7 @@
                       "identifier": "Float.String",
                       "newPage": false,
                       "searchKey": "expvar.Float.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -391,9 +367,7 @@
                       "identifier": "Float.Add",
                       "newPage": false,
                       "searchKey": "expvar.Float.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -413,9 +387,7 @@
                       "identifier": "Float.Set",
                       "newPage": false,
                       "searchKey": "expvar.Float.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -438,9 +410,7 @@
                 "identifier": "Map",
                 "newPage": false,
                 "searchKey": "expvar.Map",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -458,9 +428,7 @@
                       "identifier": "NewMap",
                       "newPage": false,
                       "searchKey": "expvar.NewMap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -480,9 +448,7 @@
                       "identifier": "Map.String",
                       "newPage": false,
                       "searchKey": "expvar.Map.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -502,9 +468,7 @@
                       "identifier": "Map.Init",
                       "newPage": false,
                       "searchKey": "expvar.Map.Init",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -524,7 +488,9 @@
                       "identifier": "Map.addKey",
                       "newPage": false,
                       "searchKey": "expvar.Map.addKey",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -544,9 +510,7 @@
                       "identifier": "Map.Get",
                       "newPage": false,
                       "searchKey": "expvar.Map.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -566,9 +530,7 @@
                       "identifier": "Map.Set",
                       "newPage": false,
                       "searchKey": "expvar.Map.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -588,9 +550,7 @@
                       "identifier": "Map.Add",
                       "newPage": false,
                       "searchKey": "expvar.Map.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -610,9 +570,7 @@
                       "identifier": "Map.AddFloat",
                       "newPage": false,
                       "searchKey": "expvar.Map.AddFloat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -632,9 +590,7 @@
                       "identifier": "Map.Delete",
                       "newPage": false,
                       "searchKey": "expvar.Map.Delete",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -654,9 +610,7 @@
                       "identifier": "Map.Do",
                       "newPage": false,
                       "searchKey": "expvar.Map.Do",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -679,9 +633,7 @@
                 "identifier": "KeyValue",
                 "newPage": false,
                 "searchKey": "expvar.KeyValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -701,9 +653,7 @@
                 "identifier": "String",
                 "newPage": false,
                 "searchKey": "expvar.String",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -721,9 +671,7 @@
                       "identifier": "NewString",
                       "newPage": false,
                       "searchKey": "expvar.NewString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -743,9 +691,7 @@
                       "identifier": "String.Value",
                       "newPage": false,
                       "searchKey": "expvar.String.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -765,9 +711,7 @@
                       "identifier": "String.String",
                       "newPage": false,
                       "searchKey": "expvar.String.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -787,9 +731,7 @@
                       "identifier": "String.Set",
                       "newPage": false,
                       "searchKey": "expvar.String.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -812,9 +754,7 @@
                 "identifier": "Func",
                 "newPage": false,
                 "searchKey": "expvar.Func",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -832,9 +772,7 @@
                       "identifier": "Func.Value",
                       "newPage": false,
                       "searchKey": "expvar.Func.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -854,9 +792,7 @@
                       "identifier": "Func.String",
                       "newPage": false,
                       "searchKey": "expvar.Func.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -882,9 +818,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -902,9 +836,7 @@
                 "identifier": "Publish",
                 "newPage": false,
                 "searchKey": "expvar.Publish",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -924,9 +856,7 @@
                 "identifier": "Do",
                 "newPage": false,
                 "searchKey": "expvar.Do",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -946,7 +876,9 @@
                 "identifier": "expvarHandler",
                 "newPage": false,
                 "searchKey": "expvar.expvarHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -966,9 +898,7 @@
                 "identifier": "Handler",
                 "newPage": false,
                 "searchKey": "expvar.Handler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -988,7 +918,9 @@
                 "identifier": "cmdline",
                 "newPage": false,
                 "searchKey": "expvar.cmdline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1008,7 +940,9 @@
                 "identifier": "memstats",
                 "newPage": false,
                 "searchKey": "expvar.memstats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1023,12 +957,14 @@
           },
           {
             "node": {
-              "pathID": "/expvar#init",
+              "pathID": "/expvar#init.expvar.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.expvar.go",
                 "newPage": false,
                 "searchKey": "expvar.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1048,7 +984,9 @@
                 "identifier": "RemoveAll",
                 "newPage": false,
                 "searchKey": "expvar.RemoveAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1068,7 +1006,9 @@
                 "identifier": "TestNil",
                 "newPage": false,
                 "searchKey": "expvar.TestNil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1088,7 +1028,9 @@
                 "identifier": "TestInt",
                 "newPage": false,
                 "searchKey": "expvar.TestInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1108,7 +1050,9 @@
                 "identifier": "BenchmarkIntAdd",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkIntAdd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1128,7 +1072,9 @@
                 "identifier": "BenchmarkIntSet",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkIntSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1148,7 +1094,9 @@
                 "identifier": "TestFloat",
                 "newPage": false,
                 "searchKey": "expvar.TestFloat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1168,7 +1116,9 @@
                 "identifier": "BenchmarkFloatAdd",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkFloatAdd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1188,7 +1138,9 @@
                 "identifier": "BenchmarkFloatSet",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkFloatSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1208,7 +1160,9 @@
                 "identifier": "TestString",
                 "newPage": false,
                 "searchKey": "expvar.TestString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1228,7 +1182,9 @@
                 "identifier": "BenchmarkStringSet",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkStringSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1248,7 +1204,9 @@
                 "identifier": "TestMapInit",
                 "newPage": false,
                 "searchKey": "expvar.TestMapInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1268,7 +1226,9 @@
                 "identifier": "TestMapDelete",
                 "newPage": false,
                 "searchKey": "expvar.TestMapDelete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1288,7 +1248,9 @@
                 "identifier": "TestMapCounter",
                 "newPage": false,
                 "searchKey": "expvar.TestMapCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1308,7 +1270,9 @@
                 "identifier": "BenchmarkMapSet",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkMapSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1328,7 +1292,9 @@
                 "identifier": "BenchmarkMapSetDifferent",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkMapSetDifferent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1348,7 +1314,9 @@
                 "identifier": "BenchmarkMapSetDifferentRandom",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkMapSetDifferentRandom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1368,7 +1336,9 @@
                 "identifier": "BenchmarkMapSetString",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkMapSetString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1388,7 +1358,9 @@
                 "identifier": "BenchmarkMapAddSame",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkMapAddSame",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1408,7 +1380,9 @@
                 "identifier": "BenchmarkMapAddDifferent",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkMapAddDifferent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1428,7 +1402,9 @@
                 "identifier": "BenchmarkMapAddDifferentRandom",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkMapAddDifferentRandom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1448,7 +1424,9 @@
                 "identifier": "BenchmarkMapAddSameSteadyState",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkMapAddSameSteadyState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1468,7 +1446,9 @@
                 "identifier": "BenchmarkMapAddDifferentSteadyState",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkMapAddDifferentSteadyState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1488,7 +1468,9 @@
                 "identifier": "TestFunc",
                 "newPage": false,
                 "searchKey": "expvar.TestFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1508,7 +1490,9 @@
                 "identifier": "TestHandler",
                 "newPage": false,
                 "searchKey": "expvar.TestHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1528,7 +1512,9 @@
                 "identifier": "BenchmarkRealworldExpvarUsage",
                 "newPage": false,
                 "searchKey": "expvar.BenchmarkRealworldExpvarUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

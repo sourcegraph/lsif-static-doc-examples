@@ -88,14 +88,11 @@ Package gosym implements access to the Go symbol and line number tables embedded
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="verUnknown" href="#verUnknown">const verUnknown</a>
 
 ```
 searchKey: gosym.verUnknown
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +103,7 @@ const verUnknown version = iota
 
 ```
 searchKey: gosym.ver11
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +114,7 @@ const ver11
 
 ```
 searchKey: gosym.ver12
+tags: [private]
 ```
 
 ```Go
@@ -126,6 +125,7 @@ const ver12
 
 ```
 searchKey: gosym.ver116
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +136,7 @@ const ver116
 
 ```
 searchKey: gosym.oldQuantum
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +149,7 @@ NOTE(rsc): This is wrong for GOARCH=arm, which uses a quantum of 4, but we have 
 
 ```
 searchKey: gosym.go12magic
+tags: [private]
 ```
 
 ```Go
@@ -158,6 +160,7 @@ const go12magic = 0xfffffffb
 
 ```
 searchKey: gosym.go116magic
+tags: [private]
 ```
 
 ```Go
@@ -166,14 +169,11 @@ const go116magic = 0xfffffffa
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="littleEndianSymtab" href="#littleEndianSymtab">var littleEndianSymtab</a>
 
 ```
 searchKey: gosym.littleEndianSymtab
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +184,7 @@ var littleEndianSymtab = []byte{0xFD, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00}
 
 ```
 searchKey: gosym.bigEndianSymtab
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +195,7 @@ var bigEndianSymtab = []byte{0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x00, 0x00}
 
 ```
 searchKey: gosym.oldLittleEndianSymtab
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +206,7 @@ var oldLittleEndianSymtab = []byte{0xFE, 0xFF, 0xFF, 0xFF, 0x00, 0x00}
 
 ```
 searchKey: gosym.pclineTempDir
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +217,7 @@ var pclineTempDir string
 
 ```
 searchKey: gosym.pclinetestBinary
+tags: [private]
 ```
 
 ```Go
@@ -222,14 +226,11 @@ var pclinetestBinary string
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="version" href="#version">type version int</a>
 
 ```
 searchKey: gosym.version
+tags: [private]
 ```
 
 ```Go
@@ -242,7 +243,6 @@ version of the pclntab
 
 ```
 searchKey: gosym.LineTable
-tags: [exported]
 ```
 
 ```Go
@@ -290,7 +290,6 @@ For the most part, LineTable's methods should be treated as an internal detail o
 
 ```
 searchKey: gosym.NewLineTable
-tags: [exported]
 ```
 
 ```Go
@@ -303,6 +302,7 @@ NewLineTable returns a new PC/line table corresponding to the encoded data. Text
 
 ```
 searchKey: gosym.LineTable.parse
+tags: [private]
 ```
 
 ```Go
@@ -313,6 +313,7 @@ func (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64,
 
 ```
 searchKey: gosym.LineTable.slice
+tags: [private]
 ```
 
 ```Go
@@ -323,7 +324,7 @@ func (t *LineTable) slice(pc uint64) *LineTable
 
 ```
 searchKey: gosym.LineTable.PCToLine
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -338,7 +339,7 @@ Deprecated: Use Table's PCToLine method instead.
 
 ```
 searchKey: gosym.LineTable.LineToPC
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -353,6 +354,7 @@ Deprecated: Use Table's LineToPC method instead.
 
 ```
 searchKey: gosym.LineTable.isGo12
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +367,7 @@ isGo12 reports whether this is a Go 1.2 (or later) symbol table.
 
 ```
 searchKey: gosym.LineTable.uintptr
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +380,7 @@ uintptr returns the pointer-sized value encoded at b. The pointer size is dictat
 
 ```
 searchKey: gosym.LineTable.parsePclnTab
+tags: [private]
 ```
 
 ```Go
@@ -389,6 +393,7 @@ parsePclnTab parses the pclntab, setting the version.
 
 ```
 searchKey: gosym.LineTable.go12Funcs
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +406,7 @@ go12Funcs returns a slice of Funcs derived from the Go 1.2 pcln table.
 
 ```
 searchKey: gosym.LineTable.findFunc
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +419,7 @@ findFunc returns the func corresponding to the given program counter.
 
 ```
 searchKey: gosym.LineTable.readvarint
+tags: [private]
 ```
 
 ```Go
@@ -425,6 +432,7 @@ readvarint reads, removes, and returns a varint from *pp.
 
 ```
 searchKey: gosym.LineTable.funcName
+tags: [private]
 ```
 
 ```Go
@@ -437,6 +445,7 @@ funcName returns the name of the function found at off.
 
 ```
 searchKey: gosym.LineTable.stringFrom
+tags: [private]
 ```
 
 ```Go
@@ -449,6 +458,7 @@ stringFrom returns a Go string found at off from a position.
 
 ```
 searchKey: gosym.LineTable.string
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +471,7 @@ string returns a Go string found at off.
 
 ```
 searchKey: gosym.LineTable.step
+tags: [private]
 ```
 
 ```Go
@@ -473,6 +484,7 @@ step advances to the next pc, value pair in the encoded table.
 
 ```
 searchKey: gosym.LineTable.pcvalue
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +497,7 @@ pcvalue reports the value associated with the target pc. off is the offset to th
 
 ```
 searchKey: gosym.LineTable.findFileLine
+tags: [private]
 ```
 
 ```Go
@@ -497,6 +510,7 @@ findFileLine scans one function in the binary looking for a program counter in t
 
 ```
 searchKey: gosym.LineTable.go12PCToLine
+tags: [private]
 ```
 
 ```Go
@@ -509,6 +523,7 @@ go12PCToLine maps program counter to line number for the Go 1.2 pcln table.
 
 ```
 searchKey: gosym.LineTable.go12PCToFile
+tags: [private]
 ```
 
 ```Go
@@ -521,6 +536,7 @@ go12PCToFile maps program counter to file name for the Go 1.2 pcln table.
 
 ```
 searchKey: gosym.LineTable.go12LineToPC
+tags: [private]
 ```
 
 ```Go
@@ -533,6 +549,7 @@ go12LineToPC maps a (file, line) pair to a program counter for the Go 1.2/1.16 p
 
 ```
 searchKey: gosym.LineTable.initFileMap
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +562,7 @@ initFileMap initializes the map from file name to file number.
 
 ```
 searchKey: gosym.LineTable.go12MapFiles
+tags: [private]
 ```
 
 ```Go
@@ -557,7 +575,6 @@ go12MapFiles adds to m a key for every file in the Go 1.2 LineTable. Every key m
 
 ```
 searchKey: gosym.Sym
-tags: [exported]
 ```
 
 ```Go
@@ -577,7 +594,6 @@ A Sym represents a single symbol table entry.
 
 ```
 searchKey: gosym.Sym.Static
-tags: [exported]
 ```
 
 ```Go
@@ -590,7 +606,6 @@ Static reports whether this symbol is static (not visible outside its file).
 
 ```
 searchKey: gosym.Sym.PackageName
-tags: [exported]
 ```
 
 ```Go
@@ -603,7 +618,6 @@ PackageName returns the package part of the symbol name, or the empty string if 
 
 ```
 searchKey: gosym.Sym.ReceiverName
-tags: [exported]
 ```
 
 ```Go
@@ -616,7 +630,6 @@ ReceiverName returns the receiver type name of this symbol, or the empty string 
 
 ```
 searchKey: gosym.Sym.BaseName
-tags: [exported]
 ```
 
 ```Go
@@ -629,7 +642,6 @@ BaseName returns the symbol name without the package or receiver name.
 
 ```
 searchKey: gosym.Func
-tags: [exported]
 ```
 
 ```Go
@@ -651,7 +663,6 @@ A Func collects information about a single function.
 
 ```
 searchKey: gosym.Obj
-tags: [exported]
 ```
 
 ```Go
@@ -681,6 +692,7 @@ In Go 1.2, there is a single Obj for the entire program.
 
 ```
 searchKey: gosym.Obj.lineFromAline
+tags: [private]
 ```
 
 ```Go
@@ -691,6 +703,7 @@ func (o *Obj) lineFromAline(aline int) (string, int)
 
 ```
 searchKey: gosym.Obj.alineFromLine
+tags: [private]
 ```
 
 ```Go
@@ -701,7 +714,6 @@ func (o *Obj) alineFromLine(path string, line int) (int, error)
 
 ```
 searchKey: gosym.Table
-tags: [exported]
 ```
 
 ```Go
@@ -721,7 +733,6 @@ Table represents a Go symbol table. It stores all of the symbols decoded from th
 
 ```
 searchKey: gosym.NewTable
-tags: [exported]
 ```
 
 ```Go
@@ -734,6 +745,7 @@ NewTable decodes the Go symbol table (the ".gosymtab" section in ELF), returning
 
 ```
 searchKey: gosym.getTable
+tags: [private]
 ```
 
 ```Go
@@ -744,6 +756,7 @@ func getTable(t *testing.T) *Table
 
 ```
 searchKey: gosym.crack
+tags: [private]
 ```
 
 ```Go
@@ -754,6 +767,7 @@ func crack(file string, t *testing.T) (*elf.File, *Table)
 
 ```
 searchKey: gosym.parse
+tags: [private]
 ```
 
 ```Go
@@ -764,7 +778,6 @@ func parse(file string, f *elf.File, t *testing.T) (*elf.File, *Table)
 
 ```
 searchKey: gosym.Table.PCToFunc
-tags: [exported]
 ```
 
 ```Go
@@ -777,7 +790,6 @@ PCToFunc returns the function containing the program counter pc, or nil if there
 
 ```
 searchKey: gosym.Table.PCToLine
-tags: [exported]
 ```
 
 ```Go
@@ -790,7 +802,6 @@ PCToLine looks up line number information for a program counter. If there is no 
 
 ```
 searchKey: gosym.Table.LineToPC
-tags: [exported]
 ```
 
 ```Go
@@ -803,7 +814,6 @@ LineToPC looks up the first program counter on the given line in the named file.
 
 ```
 searchKey: gosym.Table.LookupSym
-tags: [exported]
 ```
 
 ```Go
@@ -816,7 +826,6 @@ LookupSym returns the text, data, or bss symbol with the given name, or nil if n
 
 ```
 searchKey: gosym.Table.LookupFunc
-tags: [exported]
 ```
 
 ```Go
@@ -829,7 +838,6 @@ LookupFunc returns the text, data, or bss symbol with the given name, or nil if 
 
 ```
 searchKey: gosym.Table.SymByAddr
-tags: [exported]
 ```
 
 ```Go
@@ -842,6 +850,7 @@ SymByAddr returns the text, data, or bss symbol starting at the given address.
 
 ```
 searchKey: gosym.sym
+tags: [private]
 ```
 
 ```Go
@@ -857,7 +866,6 @@ type sym struct {
 
 ```
 searchKey: gosym.UnknownFileError
-tags: [exported]
 ```
 
 ```Go
@@ -870,7 +878,6 @@ UnknownFileError represents a failure to find the specific file in the symbol ta
 
 ```
 searchKey: gosym.UnknownFileError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -881,7 +888,6 @@ func (e UnknownFileError) Error() string
 
 ```
 searchKey: gosym.UnknownLineError
-tags: [exported]
 ```
 
 ```Go
@@ -897,7 +903,6 @@ UnknownLineError represents a failure to map a line to a program counter, either
 
 ```
 searchKey: gosym.UnknownLineError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -908,7 +913,6 @@ func (e *UnknownLineError) Error() string
 
 ```
 searchKey: gosym.DecodingError
-tags: [exported]
 ```
 
 ```Go
@@ -925,7 +929,6 @@ DecodingError represents an error during the decoding of the symbol table.
 
 ```
 searchKey: gosym.DecodingError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -934,14 +937,11 @@ func (e *DecodingError) Error() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="walksymtab" href="#walksymtab">func walksymtab(data []byte, fn func(sym) error) error</a>
 
 ```
 searchKey: gosym.walksymtab
+tags: [private]
 ```
 
 ```Go
@@ -952,6 +952,7 @@ func walksymtab(data []byte, fn func(sym) error) error
 
 ```
 searchKey: gosym.dotest
+tags: [private]
 ```
 
 ```Go
@@ -962,6 +963,7 @@ func dotest(t *testing.T)
 
 ```
 searchKey: gosym.endtest
+tags: [private]
 ```
 
 ```Go
@@ -972,6 +974,7 @@ func endtest()
 
 ```
 searchKey: gosym.skipIfNotELF
+tags: [private]
 ```
 
 ```Go
@@ -984,6 +987,7 @@ skipIfNotELF skips the test if we are not running on an ELF system. These tests 
 
 ```
 searchKey: gosym.TestLineFromAline
+tags: [private]
 ```
 
 ```Go
@@ -994,6 +998,7 @@ func TestLineFromAline(t *testing.T)
 
 ```
 searchKey: gosym.TestLineAline
+tags: [private]
 ```
 
 ```Go
@@ -1004,6 +1009,7 @@ func TestLineAline(t *testing.T)
 
 ```
 searchKey: gosym.TestPCLine
+tags: [private]
 ```
 
 ```Go
@@ -1014,6 +1020,7 @@ func TestPCLine(t *testing.T)
 
 ```
 searchKey: gosym.Test115PclnParsing
+tags: [private]
 ```
 
 ```Go
@@ -1034,6 +1041,7 @@ println("hello")
 
 ```
 searchKey: gosym.assertString
+tags: [private]
 ```
 
 ```Go
@@ -1044,6 +1052,7 @@ func assertString(t *testing.T, dsc, out, tgt string)
 
 ```
 searchKey: gosym.TestStandardLibPackage
+tags: [private]
 ```
 
 ```Go
@@ -1054,6 +1063,7 @@ func TestStandardLibPackage(t *testing.T)
 
 ```
 searchKey: gosym.TestStandardLibPathPackage
+tags: [private]
 ```
 
 ```Go
@@ -1064,6 +1074,7 @@ func TestStandardLibPathPackage(t *testing.T)
 
 ```
 searchKey: gosym.TestRemotePackage
+tags: [private]
 ```
 
 ```Go
@@ -1074,6 +1085,7 @@ func TestRemotePackage(t *testing.T)
 
 ```
 searchKey: gosym.TestIssue29551
+tags: [private]
 ```
 
 ```Go

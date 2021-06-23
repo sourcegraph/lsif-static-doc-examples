@@ -171,15 +171,10 @@ Below is the full list of supported metrics, ordered lexicographically.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="KindBad" href="#KindBad">const KindBad</a>
 
 ```
 searchKey: metrics.KindBad
-tags: [exported]
 ```
 
 ```Go
@@ -192,7 +187,6 @@ KindBad indicates that the Value has no type and should not be used.
 
 ```
 searchKey: metrics.KindUint64
-tags: [exported]
 ```
 
 ```Go
@@ -205,7 +199,6 @@ KindUint64 indicates that the type of the Value is a uint64.
 
 ```
 searchKey: metrics.KindFloat64
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +211,6 @@ KindFloat64 indicates that the type of the Value is a float64.
 
 ```
 searchKey: metrics.KindFloat64Histogram
-tags: [exported]
 ```
 
 ```Go
@@ -229,14 +221,11 @@ KindFloat64Histogram indicates that the type of the Value is a *Float64Histogram
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="allDesc" href="#allDesc">var allDesc</a>
 
 ```
 searchKey: metrics.allDesc
+tags: [private]
 ```
 
 ```Go
@@ -247,15 +236,10 @@ The English language descriptions below must be kept in sync with the descriptio
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Description" href="#Description">type Description struct</a>
 
 ```
 searchKey: metrics.Description
-tags: [exported]
 ```
 
 ```Go
@@ -309,7 +293,6 @@ Description describes a runtime metric.
 
 ```
 searchKey: metrics.Float64Histogram
-tags: [exported]
 ```
 
 ```Go
@@ -347,7 +330,6 @@ Float64Histogram represents a distribution of float64 values.
 
 ```
 searchKey: metrics.Sample
-tags: [exported]
 ```
 
 ```Go
@@ -369,7 +351,6 @@ Sample captures a single metric sample.
 
 ```
 searchKey: metrics.ValueKind
-tags: [exported]
 ```
 
 ```Go
@@ -382,7 +363,6 @@ ValueKind is a tag for a metric Value which indicates its type.
 
 ```
 searchKey: metrics.Value
-tags: [exported]
 ```
 
 ```Go
@@ -399,7 +379,6 @@ Value represents a metric value returned by the runtime.
 
 ```
 searchKey: metrics.Value.Kind
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +391,6 @@ Kind returns the tag representing the kind of value this is.
 
 ```
 searchKey: metrics.Value.Uint64
-tags: [exported]
 ```
 
 ```Go
@@ -427,7 +405,6 @@ If v.Kind() != KindUint64, this method panics.
 
 ```
 searchKey: metrics.Value.Float64
-tags: [exported]
 ```
 
 ```Go
@@ -442,7 +419,6 @@ If v.Kind() != KindFloat64, this method panics.
 
 ```
 searchKey: metrics.Value.Float64Histogram
-tags: [exported]
 ```
 
 ```Go
@@ -455,15 +431,10 @@ If v.Kind() != KindFloat64Histogram, this method panics.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="All" href="#All">func All() []Description</a>
 
 ```
 searchKey: metrics.All
-tags: [exported]
 ```
 
 ```Go
@@ -476,6 +447,7 @@ All returns a slice of containing metric descriptions for all supported metrics.
 
 ```
 searchKey: metrics.runtime_readMetrics
+tags: [private]
 ```
 
 ```Go
@@ -488,7 +460,6 @@ Implemented in the runtime.
 
 ```
 searchKey: metrics.Read
-tags: [exported]
 ```
 
 ```Go

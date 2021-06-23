@@ -4,9 +4,7 @@
     "identifier": "build",
     "newPage": true,
     "searchKey": "go/build",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "FindOnly",
                 "newPage": false,
                 "searchKey": "build.FindOnly",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -67,7 +61,6 @@
                 "newPage": false,
                 "searchKey": "build.AllowBinary",
                 "tags": [
-                  "exported",
                   "deprecated"
                 ]
               },
@@ -89,9 +82,7 @@
                 "identifier": "ImportComment",
                 "newPage": false,
                 "searchKey": "build.ImportComment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -111,9 +102,7 @@
                 "identifier": "IgnoreVendor",
                 "newPage": false,
                 "searchKey": "build.IgnoreVendor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -133,7 +122,9 @@
                 "identifier": "safeString",
                 "newPage": false,
                 "searchKey": "build.safeString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -153,7 +144,9 @@
                 "identifier": "goosList",
                 "newPage": false,
                 "searchKey": "build.goosList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -173,7 +166,9 @@
                 "identifier": "goarchList",
                 "newPage": false,
                 "searchKey": "build.goarchList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -193,7 +188,9 @@
                 "identifier": "quote",
                 "newPage": false,
                 "searchKey": "build.quote",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -216,9 +213,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -236,9 +231,7 @@
                 "identifier": "Default",
                 "newPage": false,
                 "searchKey": "build.Default",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -258,7 +251,9 @@
                 "identifier": "defaultToolTags",
                 "newPage": false,
                 "searchKey": "build.defaultToolTags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -278,7 +273,9 @@
                 "identifier": "defaultReleaseTags",
                 "newPage": false,
                 "searchKey": "build.defaultReleaseTags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -298,7 +295,9 @@
                 "identifier": "errNoModules",
                 "newPage": false,
                 "searchKey": "build.errNoModules",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -318,7 +317,9 @@
                 "identifier": "slashSlash",
                 "newPage": false,
                 "searchKey": "build.slashSlash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -338,7 +339,9 @@
                 "identifier": "slashStar",
                 "newPage": false,
                 "searchKey": "build.slashStar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -358,7 +361,9 @@
                 "identifier": "starSlash",
                 "newPage": false,
                 "searchKey": "build.starSlash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -378,7 +383,9 @@
                 "identifier": "newline",
                 "newPage": false,
                 "searchKey": "build.newline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -398,7 +405,9 @@
                 "identifier": "dummyPkg",
                 "newPage": false,
                 "searchKey": "build.dummyPkg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -418,7 +427,9 @@
                 "identifier": "bSlashSlash",
                 "newPage": false,
                 "searchKey": "build.bSlashSlash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -438,7 +449,9 @@
                 "identifier": "bStarSlash",
                 "newPage": false,
                 "searchKey": "build.bStarSlash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -458,7 +471,9 @@
                 "identifier": "bSlashStar",
                 "newPage": false,
                 "searchKey": "build.bSlashStar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -478,7 +493,9 @@
                 "identifier": "bPlusBuild",
                 "newPage": false,
                 "searchKey": "build.bPlusBuild",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -498,7 +515,9 @@
                 "identifier": "goBuildComment",
                 "newPage": false,
                 "searchKey": "build.goBuildComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -518,7 +537,9 @@
                 "identifier": "errGoBuildWithoutBuild",
                 "newPage": false,
                 "searchKey": "build.errGoBuildWithoutBuild",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -538,7 +559,9 @@
                 "identifier": "errMultipleGoBuild",
                 "newPage": false,
                 "searchKey": "build.errMultipleGoBuild",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -558,7 +581,9 @@
                 "identifier": "binaryOnlyComment",
                 "newPage": false,
                 "searchKey": "build.binaryOnlyComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -578,7 +603,9 @@
                 "identifier": "knownOS",
                 "newPage": false,
                 "searchKey": "build.knownOS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -598,7 +625,9 @@
                 "identifier": "knownArch",
                 "newPage": false,
                 "searchKey": "build.knownArch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -618,9 +647,7 @@
                 "identifier": "ToolDir",
                 "newPage": false,
                 "searchKey": "build.ToolDir",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -640,7 +667,9 @@
                 "identifier": "bom",
                 "newPage": false,
                 "searchKey": "build.bom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -660,7 +689,9 @@
                 "identifier": "errSyntax",
                 "newPage": false,
                 "searchKey": "build.errSyntax",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -680,7 +711,9 @@
                 "identifier": "errNUL",
                 "newPage": false,
                 "searchKey": "build.errNUL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -700,7 +733,9 @@
                 "identifier": "goEmbed",
                 "newPage": false,
                 "searchKey": "build.goEmbed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -720,7 +755,9 @@
                 "identifier": "shouldBuildTests",
                 "newPage": false,
                 "searchKey": "build.shouldBuildTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -740,7 +777,9 @@
                 "identifier": "ctxtP9",
                 "newPage": false,
                 "searchKey": "build.ctxtP9",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -760,7 +799,9 @@
                 "identifier": "ctxtAndroid",
                 "newPage": false,
                 "searchKey": "build.ctxtAndroid",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -780,7 +821,9 @@
                 "identifier": "matchFileTests",
                 "newPage": false,
                 "searchKey": "build.matchFileTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -800,7 +843,9 @@
                 "identifier": "expandSrcDirPath",
                 "newPage": false,
                 "searchKey": "build.expandSrcDirPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -820,7 +865,9 @@
                 "identifier": "expandSrcDirTests",
                 "newPage": false,
                 "searchKey": "build.expandSrcDirTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -840,7 +887,9 @@
                 "identifier": "depsRules",
                 "newPage": false,
                 "searchKey": "build.depsRules",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -860,7 +909,9 @@
                 "identifier": "buildIgnore",
                 "newPage": false,
                 "searchKey": "build.buildIgnore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -880,7 +931,9 @@
                 "identifier": "readGoInfoTests",
                 "newPage": false,
                 "searchKey": "build.readGoInfoTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -900,7 +953,9 @@
                 "identifier": "readCommentsTests",
                 "newPage": false,
                 "searchKey": "build.readCommentsTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -920,7 +975,9 @@
                 "identifier": "readFailuresTests",
                 "newPage": false,
                 "searchKey": "build.readFailuresTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -940,7 +997,9 @@
                 "identifier": "readEmbedTests",
                 "newPage": false,
                 "searchKey": "build.readEmbedTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -960,7 +1019,9 @@
                 "identifier": "thisOS",
                 "newPage": false,
                 "searchKey": "build.thisOS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -980,7 +1041,9 @@
                 "identifier": "thisArch",
                 "newPage": false,
                 "searchKey": "build.thisArch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1000,7 +1063,9 @@
                 "identifier": "otherOS",
                 "newPage": false,
                 "searchKey": "build.otherOS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1020,7 +1085,9 @@
                 "identifier": "otherArch",
                 "newPage": false,
                 "searchKey": "build.otherArch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1040,7 +1107,9 @@
                 "identifier": "tests",
                 "newPage": false,
                 "searchKey": "build.tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1063,9 +1132,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1083,9 +1150,7 @@
                 "identifier": "Context",
                 "newPage": false,
                 "searchKey": "build.Context",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1103,7 +1168,9 @@
                       "identifier": "defaultContext",
                       "newPage": false,
                       "searchKey": "build.defaultContext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1123,7 +1190,9 @@
                       "identifier": "Context.joinPath",
                       "newPage": false,
                       "searchKey": "build.Context.joinPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1143,7 +1212,9 @@
                       "identifier": "Context.splitPathList",
                       "newPage": false,
                       "searchKey": "build.Context.splitPathList",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1163,7 +1234,9 @@
                       "identifier": "Context.isAbsPath",
                       "newPage": false,
                       "searchKey": "build.Context.isAbsPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1183,7 +1256,9 @@
                       "identifier": "Context.isDir",
                       "newPage": false,
                       "searchKey": "build.Context.isDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1203,7 +1278,9 @@
                       "identifier": "Context.hasSubdir",
                       "newPage": false,
                       "searchKey": "build.Context.hasSubdir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1223,7 +1300,9 @@
                       "identifier": "Context.readDir",
                       "newPage": false,
                       "searchKey": "build.Context.readDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1243,7 +1322,9 @@
                       "identifier": "Context.openFile",
                       "newPage": false,
                       "searchKey": "build.Context.openFile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1263,7 +1344,9 @@
                       "identifier": "Context.isFile",
                       "newPage": false,
                       "searchKey": "build.Context.isFile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1283,7 +1366,9 @@
                       "identifier": "Context.gopath",
                       "newPage": false,
                       "searchKey": "build.Context.gopath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1303,9 +1388,7 @@
                       "identifier": "Context.SrcDirs",
                       "newPage": false,
                       "searchKey": "build.Context.SrcDirs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1325,9 +1408,7 @@
                       "identifier": "Context.ImportDir",
                       "newPage": false,
                       "searchKey": "build.Context.ImportDir",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1347,9 +1428,7 @@
                       "identifier": "Context.Import",
                       "newPage": false,
                       "searchKey": "build.Context.Import",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1369,7 +1448,9 @@
                       "identifier": "Context.importGo",
                       "newPage": false,
                       "searchKey": "build.Context.importGo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1389,9 +1470,7 @@
                       "identifier": "Context.MatchFile",
                       "newPage": false,
                       "searchKey": "build.Context.MatchFile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1411,7 +1490,9 @@
                       "identifier": "Context.matchFile",
                       "newPage": false,
                       "searchKey": "build.Context.matchFile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1431,7 +1512,9 @@
                       "identifier": "Context.shouldBuild",
                       "newPage": false,
                       "searchKey": "build.Context.shouldBuild",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1451,7 +1534,9 @@
                       "identifier": "Context.saveCgo",
                       "newPage": false,
                       "searchKey": "build.Context.saveCgo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1471,7 +1556,9 @@
                       "identifier": "Context.makePathsAbsolute",
                       "newPage": false,
                       "searchKey": "build.Context.makePathsAbsolute",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1491,7 +1578,9 @@
                       "identifier": "Context.matchAuto",
                       "newPage": false,
                       "searchKey": "build.Context.matchAuto",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1511,7 +1600,9 @@
                       "identifier": "Context.eval",
                       "newPage": false,
                       "searchKey": "build.Context.eval",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1531,7 +1622,9 @@
                       "identifier": "Context.matchTag",
                       "newPage": false,
                       "searchKey": "build.Context.matchTag",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1551,7 +1644,9 @@
                       "identifier": "Context.goodOSArchFile",
                       "newPage": false,
                       "searchKey": "build.Context.goodOSArchFile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1574,9 +1669,7 @@
                 "identifier": "ImportMode",
                 "newPage": false,
                 "searchKey": "build.ImportMode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1596,9 +1689,7 @@
                 "identifier": "Package",
                 "newPage": false,
                 "searchKey": "build.Package",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1616,9 +1707,7 @@
                       "identifier": "Import",
                       "newPage": false,
                       "searchKey": "build.Import",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1638,9 +1727,7 @@
                       "identifier": "ImportDir",
                       "newPage": false,
                       "searchKey": "build.ImportDir",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1660,9 +1747,7 @@
                       "identifier": "Package.IsCommand",
                       "newPage": false,
                       "searchKey": "build.Package.IsCommand",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1685,9 +1770,7 @@
                 "identifier": "NoGoError",
                 "newPage": false,
                 "searchKey": "build.NoGoError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1705,9 +1788,7 @@
                       "identifier": "NoGoError.Error",
                       "newPage": false,
                       "searchKey": "build.NoGoError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1730,9 +1811,7 @@
                 "identifier": "MultiplePackageError",
                 "newPage": false,
                 "searchKey": "build.MultiplePackageError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1750,9 +1829,7 @@
                       "identifier": "MultiplePackageError.Error",
                       "newPage": false,
                       "searchKey": "build.MultiplePackageError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1775,7 +1852,9 @@
                 "identifier": "fileInfo",
                 "newPage": false,
                 "searchKey": "build.fileInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1795,7 +1874,9 @@
                 "identifier": "fileImport",
                 "newPage": false,
                 "searchKey": "build.fileImport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1815,7 +1896,9 @@
                 "identifier": "fileEmbed",
                 "newPage": false,
                 "searchKey": "build.fileEmbed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1835,7 +1918,9 @@
                 "identifier": "importReader",
                 "newPage": false,
                 "searchKey": "build.importReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1853,7 +1938,9 @@
                       "identifier": "newImportReader",
                       "newPage": false,
                       "searchKey": "build.newImportReader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1873,7 +1960,9 @@
                       "identifier": "importReader.syntaxError",
                       "newPage": false,
                       "searchKey": "build.importReader.syntaxError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1893,7 +1982,9 @@
                       "identifier": "importReader.readByte",
                       "newPage": false,
                       "searchKey": "build.importReader.readByte",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1913,7 +2004,9 @@
                       "identifier": "importReader.readByteNoBuf",
                       "newPage": false,
                       "searchKey": "build.importReader.readByteNoBuf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1933,7 +2026,9 @@
                       "identifier": "importReader.peekByte",
                       "newPage": false,
                       "searchKey": "build.importReader.peekByte",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1953,7 +2048,9 @@
                       "identifier": "importReader.nextByte",
                       "newPage": false,
                       "searchKey": "build.importReader.nextByte",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1973,7 +2070,9 @@
                       "identifier": "importReader.findEmbed",
                       "newPage": false,
                       "searchKey": "build.importReader.findEmbed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1993,7 +2092,9 @@
                       "identifier": "importReader.readKeyword",
                       "newPage": false,
                       "searchKey": "build.importReader.readKeyword",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2013,7 +2114,9 @@
                       "identifier": "importReader.readIdent",
                       "newPage": false,
                       "searchKey": "build.importReader.readIdent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2033,7 +2136,9 @@
                       "identifier": "importReader.readString",
                       "newPage": false,
                       "searchKey": "build.importReader.readString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2053,7 +2158,9 @@
                       "identifier": "importReader.readImport",
                       "newPage": false,
                       "searchKey": "build.importReader.readImport",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2076,7 +2183,9 @@
                 "identifier": "readNopCloser",
                 "newPage": false,
                 "searchKey": "build.readNopCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2094,7 +2203,9 @@
                       "identifier": "readNopCloser.Close",
                       "newPage": false,
                       "searchKey": "build.readNopCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2117,7 +2228,9 @@
                 "identifier": "depsParser",
                 "newPage": false,
                 "searchKey": "build.depsParser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2135,7 +2248,9 @@
                       "identifier": "depsParser.syntaxError",
                       "newPage": false,
                       "searchKey": "build.depsParser.syntaxError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2155,7 +2270,9 @@
                       "identifier": "depsParser.nextList",
                       "newPage": false,
                       "searchKey": "build.depsParser.nextList",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2175,7 +2292,9 @@
                       "identifier": "depsParser.nextToken",
                       "newPage": false,
                       "searchKey": "build.depsParser.nextToken",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2198,7 +2317,9 @@
                 "identifier": "readTest",
                 "newPage": false,
                 "searchKey": "build.readTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2218,7 +2339,9 @@
                 "identifier": "GoodFileTest",
                 "newPage": false,
                 "searchKey": "build.GoodFileTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2241,9 +2364,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2261,7 +2382,9 @@
                 "identifier": "hasSubdir",
                 "newPage": false,
                 "searchKey": "build.hasSubdir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2281,7 +2404,9 @@
                 "identifier": "defaultGOPATH",
                 "newPage": false,
                 "searchKey": "build.defaultGOPATH",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2301,7 +2426,9 @@
                 "identifier": "envOr",
                 "newPage": false,
                 "searchKey": "build.envOr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2321,7 +2448,9 @@
                 "identifier": "nameExt",
                 "newPage": false,
                 "searchKey": "build.nameExt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2341,7 +2470,9 @@
                 "identifier": "fileListForExt",
                 "newPage": false,
                 "searchKey": "build.fileListForExt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2361,7 +2492,9 @@
                 "identifier": "uniq",
                 "newPage": false,
                 "searchKey": "build.uniq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2381,7 +2514,9 @@
                 "identifier": "equal",
                 "newPage": false,
                 "searchKey": "build.equal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2401,7 +2536,9 @@
                 "identifier": "hasGoFiles",
                 "newPage": false,
                 "searchKey": "build.hasGoFiles",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2421,7 +2558,9 @@
                 "identifier": "findImportComment",
                 "newPage": false,
                 "searchKey": "build.findImportComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2441,7 +2580,9 @@
                 "identifier": "skipSpaceOrComment",
                 "newPage": false,
                 "searchKey": "build.skipSpaceOrComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2461,7 +2602,9 @@
                 "identifier": "parseWord",
                 "newPage": false,
                 "searchKey": "build.parseWord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2481,7 +2624,9 @@
                 "identifier": "cleanDecls",
                 "newPage": false,
                 "searchKey": "build.cleanDecls",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2501,7 +2646,9 @@
                 "identifier": "isGoBuildComment",
                 "newPage": false,
                 "searchKey": "build.isGoBuildComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2521,7 +2668,9 @@
                 "identifier": "parseFileHeader",
                 "newPage": false,
                 "searchKey": "build.parseFileHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2541,7 +2690,9 @@
                 "identifier": "expandSrcDir",
                 "newPage": false,
                 "searchKey": "build.expandSrcDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2561,7 +2712,9 @@
                 "identifier": "safeCgoName",
                 "newPage": false,
                 "searchKey": "build.safeCgoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2581,7 +2734,9 @@
                 "identifier": "splitQuoted",
                 "newPage": false,
                 "searchKey": "build.splitQuoted",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2596,12 +2751,14 @@
           },
           {
             "node": {
-              "pathID": "/go/build#init",
+              "pathID": "/go/build#init.build.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.build.go",
                 "newPage": false,
                 "searchKey": "build.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2621,9 +2778,7 @@
                 "identifier": "IsLocalImport",
                 "newPage": false,
                 "searchKey": "build.IsLocalImport",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2643,9 +2798,7 @@
                 "identifier": "ArchChar",
                 "newPage": false,
                 "searchKey": "build.ArchChar",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2665,7 +2818,9 @@
                 "identifier": "getToolDir",
                 "newPage": false,
                 "searchKey": "build.getToolDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2685,7 +2840,9 @@
                 "identifier": "isIdent",
                 "newPage": false,
                 "searchKey": "build.isIdent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2705,7 +2862,9 @@
                 "identifier": "readComments",
                 "newPage": false,
                 "searchKey": "build.readComments",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2725,7 +2884,9 @@
                 "identifier": "readGoInfo",
                 "newPage": false,
                 "searchKey": "build.readGoInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2745,7 +2906,9 @@
                 "identifier": "parseGoEmbed",
                 "newPage": false,
                 "searchKey": "build.parseGoEmbed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2765,7 +2928,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "build.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2785,7 +2950,9 @@
                 "identifier": "TestMatch",
                 "newPage": false,
                 "searchKey": "build.TestMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2805,7 +2972,9 @@
                 "identifier": "TestDotSlashImport",
                 "newPage": false,
                 "searchKey": "build.TestDotSlashImport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2825,7 +2994,9 @@
                 "identifier": "TestEmptyImport",
                 "newPage": false,
                 "searchKey": "build.TestEmptyImport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2845,7 +3016,9 @@
                 "identifier": "TestEmptyFolderImport",
                 "newPage": false,
                 "searchKey": "build.TestEmptyFolderImport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2865,7 +3038,9 @@
                 "identifier": "TestMultiplePackageImport",
                 "newPage": false,
                 "searchKey": "build.TestMultiplePackageImport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2885,7 +3060,9 @@
                 "identifier": "TestLocalDirectory",
                 "newPage": false,
                 "searchKey": "build.TestLocalDirectory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2905,7 +3082,9 @@
                 "identifier": "TestShouldBuild",
                 "newPage": false,
                 "searchKey": "build.TestShouldBuild",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2925,7 +3104,9 @@
                 "identifier": "TestGoodOSArchFile",
                 "newPage": false,
                 "searchKey": "build.TestGoodOSArchFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2945,7 +3126,9 @@
                 "identifier": "TestMatchFile",
                 "newPage": false,
                 "searchKey": "build.TestMatchFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2965,7 +3148,9 @@
                 "identifier": "TestImportCmd",
                 "newPage": false,
                 "searchKey": "build.TestImportCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2985,7 +3170,9 @@
                 "identifier": "TestExpandSrcDir",
                 "newPage": false,
                 "searchKey": "build.TestExpandSrcDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3005,7 +3192,9 @@
                 "identifier": "TestShellSafety",
                 "newPage": false,
                 "searchKey": "build.TestShellSafety",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3025,7 +3214,9 @@
                 "identifier": "TestImportDirNotExist",
                 "newPage": false,
                 "searchKey": "build.TestImportDirNotExist",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3045,7 +3236,9 @@
                 "identifier": "TestImportVendor",
                 "newPage": false,
                 "searchKey": "build.TestImportVendor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3065,7 +3258,9 @@
                 "identifier": "TestImportVendorFailure",
                 "newPage": false,
                 "searchKey": "build.TestImportVendorFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3085,7 +3280,9 @@
                 "identifier": "TestImportVendorParentFailure",
                 "newPage": false,
                 "searchKey": "build.TestImportVendorParentFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3105,7 +3302,9 @@
                 "identifier": "TestImportPackageOutsideModule",
                 "newPage": false,
                 "searchKey": "build.TestImportPackageOutsideModule",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3125,7 +3324,9 @@
                 "identifier": "TestImportDirTarget",
                 "newPage": false,
                 "searchKey": "build.TestImportDirTarget",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3145,7 +3346,9 @@
                 "identifier": "TestIssue23594",
                 "newPage": false,
                 "searchKey": "build.TestIssue23594",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3165,7 +3368,9 @@
                 "identifier": "TestMissingImportErrorRepetition",
                 "newPage": false,
                 "searchKey": "build.TestMissingImportErrorRepetition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3185,7 +3390,9 @@
                 "identifier": "TestCgoImportsIgnored",
                 "newPage": false,
                 "searchKey": "build.TestCgoImportsIgnored",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3205,7 +3412,9 @@
                 "identifier": "listStdPkgs",
                 "newPage": false,
                 "searchKey": "build.listStdPkgs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3225,7 +3434,9 @@
                 "identifier": "TestDependencies",
                 "newPage": false,
                 "searchKey": "build.TestDependencies",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3245,7 +3456,9 @@
                 "identifier": "findImports",
                 "newPage": false,
                 "searchKey": "build.findImports",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3265,7 +3478,9 @@
                 "identifier": "depsPolicy",
                 "newPage": false,
                 "searchKey": "build.depsPolicy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3285,7 +3500,9 @@
                 "identifier": "parseDepsRules",
                 "newPage": false,
                 "searchKey": "build.parseDepsRules",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3305,7 +3522,9 @@
                 "identifier": "TestStdlibLowercase",
                 "newPage": false,
                 "searchKey": "build.TestStdlibLowercase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3325,7 +3544,9 @@
                 "identifier": "TestFindImports",
                 "newPage": false,
                 "searchKey": "build.TestFindImports",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3345,7 +3566,9 @@
                 "identifier": "testRead",
                 "newPage": false,
                 "searchKey": "build.testRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3365,7 +3588,9 @@
                 "identifier": "TestReadGoInfo",
                 "newPage": false,
                 "searchKey": "build.TestReadGoInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3385,7 +3610,9 @@
                 "identifier": "TestReadComments",
                 "newPage": false,
                 "searchKey": "build.TestReadComments",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3405,7 +3632,9 @@
                 "identifier": "TestReadFailuresIgnored",
                 "newPage": false,
                 "searchKey": "build.TestReadFailuresIgnored",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3425,7 +3654,9 @@
                 "identifier": "TestReadEmbed",
                 "newPage": false,
                 "searchKey": "build.TestReadEmbed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3445,7 +3676,9 @@
                 "identifier": "anotherOS",
                 "newPage": false,
                 "searchKey": "build.anotherOS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3465,7 +3698,9 @@
                 "identifier": "anotherArch",
                 "newPage": false,
                 "searchKey": "build.anotherArch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3485,7 +3720,9 @@
                 "identifier": "TestGoodOSArch",
                 "newPage": false,
                 "searchKey": "build.TestGoodOSArch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -45,11 +45,14 @@ package http contains Sourcegraph's streaming HTTP protocol, which is based on S
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="FileMatchType" href="#FileMatchType">const FileMatchType</a>
 
 ```
 searchKey: http.FileMatchType
-tags: [exported]
 ```
 
 ```Go
@@ -60,7 +63,6 @@ const FileMatchType MatchType = iota
 
 ```
 searchKey: http.RepoMatchType
-tags: [exported]
 ```
 
 ```Go
@@ -71,7 +73,6 @@ const RepoMatchType
 
 ```
 searchKey: http.SymbolMatchType
-tags: [exported]
 ```
 
 ```Go
@@ -82,7 +83,6 @@ const SymbolMatchType
 
 ```
 searchKey: http.CommitMatchType
-tags: [exported]
 ```
 
 ```Go
@@ -91,11 +91,14 @@ const CommitMatchType
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Decoder" href="#Decoder">type Decoder struct</a>
 
 ```
 searchKey: http.Decoder
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +118,6 @@ Decoder decodes streaming events from a Server Sent Event stream. We only suppor
 
 ```
 searchKey: http.Decoder.ReadAll
-tags: [exported]
 ```
 
 ```Go
@@ -126,6 +128,7 @@ func (rr Decoder) ReadAll(r io.Reader) error
 
 ```
 searchKey: http.eventMatchUnmarshaller
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +141,7 @@ type eventMatchUnmarshaller struct {
 
 ```
 searchKey: http.eventMatchUnmarshaller.UnmarshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -148,7 +152,6 @@ func (r *eventMatchUnmarshaller) UnmarshalJSON(b []byte) error
 
 ```
 searchKey: http.EventMatch
-tags: [exported]
 ```
 
 ```Go
@@ -164,7 +167,6 @@ EventMatch is an interface which only the top level match event types implement.
 
 ```
 searchKey: http.EventFileMatch
-tags: [exported]
 ```
 
 ```Go
@@ -188,6 +190,7 @@ EventFileMatch is a subset of zoekt.FileMatch for our Event API.
 
 ```
 searchKey: http.EventFileMatch.eventMatch
+tags: [private]
 ```
 
 ```Go
@@ -198,7 +201,6 @@ func (e *EventFileMatch) eventMatch()
 
 ```
 searchKey: http.EventLineMatch
-tags: [exported]
 ```
 
 ```Go
@@ -215,7 +217,6 @@ EventLineMatch is a subset of zoekt.LineMatch for our Event API.
 
 ```
 searchKey: http.EventRepoMatch
-tags: [exported]
 ```
 
 ```Go
@@ -238,6 +239,7 @@ EventRepoMatch is a subset of zoekt.FileMatch for our Event API.
 
 ```
 searchKey: http.EventRepoMatch.eventMatch
+tags: [private]
 ```
 
 ```Go
@@ -248,7 +250,6 @@ func (e *EventRepoMatch) eventMatch()
 
 ```
 searchKey: http.EventSymbolMatch
-tags: [exported]
 ```
 
 ```Go
@@ -272,6 +273,7 @@ EventSymbolMatch is EventFileMatch but with Symbols instead of LineMatches
 
 ```
 searchKey: http.EventSymbolMatch.eventMatch
+tags: [private]
 ```
 
 ```Go
@@ -282,7 +284,6 @@ func (e *EventSymbolMatch) eventMatch()
 
 ```
 searchKey: http.Symbol
-tags: [exported]
 ```
 
 ```Go
@@ -298,7 +299,6 @@ type Symbol struct {
 
 ```
 searchKey: http.EventCommitMatch
-tags: [exported]
 ```
 
 ```Go
@@ -323,6 +323,7 @@ EventCommitMatch is the generic results interface from GQL. There is a lot of po
 
 ```
 searchKey: http.EventCommitMatch.eventMatch
+tags: [private]
 ```
 
 ```Go
@@ -333,7 +334,6 @@ func (e *EventCommitMatch) eventMatch()
 
 ```
 searchKey: http.EventFilter
-tags: [exported]
 ```
 
 ```Go
@@ -352,7 +352,6 @@ EventFilter is a suggestion for a search filter. Currently has a 1-1 corresponda
 
 ```
 searchKey: http.EventAlert
-tags: [exported]
 ```
 
 ```Go
@@ -369,7 +368,6 @@ EventAlert is GQL.SearchAlert. It replaces when sent to match existing behaviour
 
 ```
 searchKey: http.ProposedQuery
-tags: [exported]
 ```
 
 ```Go
@@ -385,7 +383,6 @@ ProposedQuery is a suggested query to run when we emit an alert.
 
 ```
 searchKey: http.EventError
-tags: [exported]
 ```
 
 ```Go
@@ -400,7 +397,6 @@ EventError emulates a JavaScript error with a message property as is returned wh
 
 ```
 searchKey: http.MatchType
-tags: [exported]
 ```
 
 ```Go
@@ -411,7 +407,6 @@ type MatchType int
 
 ```
 searchKey: http.MatchType.MarshalJSON
-tags: [exported]
 ```
 
 ```Go
@@ -422,7 +417,6 @@ func (t MatchType) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: http.MatchType.UnmarshalJSON
-tags: [exported]
 ```
 
 ```Go
@@ -433,7 +427,6 @@ func (t *MatchType) UnmarshalJSON(b []byte) error
 
 ```
 searchKey: http.WriterStat
-tags: [exported]
 ```
 
 ```Go
@@ -449,7 +442,6 @@ type WriterStat struct {
 
 ```
 searchKey: http.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -465,7 +457,6 @@ type Writer struct {
 
 ```
 searchKey: http.NewWriter
-tags: [exported]
 ```
 
 ```Go
@@ -476,7 +467,6 @@ func NewWriter(w http.ResponseWriter) (*Writer, error)
 
 ```
 searchKey: http.Writer.Event
-tags: [exported]
 ```
 
 ```Go
@@ -489,7 +479,6 @@ Event writes event with data json marshalled.
 
 ```
 searchKey: http.Writer.EventBytes
-tags: [exported]
 ```
 
 ```Go
@@ -500,11 +489,14 @@ EventBytes writes dataLine as an event. dataLine is not allowed to contain a new
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewRequest" href="#NewRequest">func NewRequest(baseURL string, query string) (*http.Request, error)</a>
 
 ```
 searchKey: http.NewRequest
-tags: [exported]
 ```
 
 ```Go
@@ -517,6 +509,7 @@ NewRequest returns an http.Request against the streaming API for query.
 
 ```
 searchKey: http.splitColon
+tags: [private]
 ```
 
 ```Go
@@ -527,6 +520,7 @@ func splitColon(data []byte) ([]byte, []byte)
 
 ```
 searchKey: http.TestDecoder
+tags: [private]
 ```
 
 ```Go

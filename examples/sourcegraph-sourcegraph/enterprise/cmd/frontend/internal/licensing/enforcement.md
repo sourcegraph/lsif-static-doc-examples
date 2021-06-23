@@ -27,11 +27,14 @@ Package enforcement provides hooks that enforce validations on a per-tier basis.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExternalServicesStore" href="#ExternalServicesStore">type ExternalServicesStore interface</a>
 
 ```
 searchKey: enforcement.ExternalServicesStore
-tags: [exported]
 ```
 
 ```Go
@@ -46,6 +49,7 @@ ExternalServicesStore is implemented by any type that can act as a repository fo
 
 ```
 searchKey: enforcement.fakeDB
+tags: [private]
 ```
 
 ```Go
@@ -58,6 +62,7 @@ type fakeDB struct {
 
 ```
 searchKey: enforcement.fakeDB.QueryContext
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +73,7 @@ func (db *fakeDB) QueryContext(ctx context.Context, q string, args ...interface{
 
 ```
 searchKey: enforcement.fakeDB.ExecContext
+tags: [private]
 ```
 
 ```Go
@@ -78,6 +84,7 @@ func (db *fakeDB) ExecContext(ctx context.Context, query string, args ...interfa
 
 ```
 searchKey: enforcement.fakeDB.QueryRowContext
+tags: [private]
 ```
 
 ```Go
@@ -86,11 +93,14 @@ func (db *fakeDB) QueryRowContext(ctx context.Context, query string, args ...int
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="WriteSubscriptionErrorResponseForFeature" href="#WriteSubscriptionErrorResponseForFeature">func WriteSubscriptionErrorResponseForFeature(w http.ResponseWriter, featureNameHumanReadable string)</a>
 
 ```
 searchKey: enforcement.WriteSubscriptionErrorResponseForFeature
-tags: [exported]
 ```
 
 ```Go
@@ -103,7 +113,6 @@ WriteSubscriptionErrorResponseForFeature is a wrapper around WriteSubscriptionEr
 
 ```
 searchKey: enforcement.WriteSubscriptionErrorResponse
-tags: [exported]
 ```
 
 ```Go
@@ -118,7 +127,6 @@ The title and message should be full sentences that describe the problem and how
 
 ```
 searchKey: enforcement.NewBeforeCreateExternalServiceHook
-tags: [exported]
 ```
 
 ```Go
@@ -131,7 +139,6 @@ NewBeforeCreateExternalServiceHook enforces any per-tier validations prior to cr
 
 ```
 searchKey: enforcement.NewPreMountGrafanaHook
-tags: [exported]
 ```
 
 ```Go
@@ -144,7 +151,6 @@ NewPreMountGrafanaHook enforces any per-tier validations prior to mounting the G
 
 ```
 searchKey: enforcement.NewBeforeCreateUserHook
-tags: [exported]
 ```
 
 ```Go
@@ -157,7 +163,6 @@ NewBeforeCreateUserHook returns a BeforeCreateUserHook closure with the given Us
 
 ```
 searchKey: enforcement.NewAfterCreateUserHook
-tags: [exported]
 ```
 
 ```Go
@@ -170,7 +175,6 @@ NewAfterCreateUserHook returns a AfterCreateUserHook closure that determines whe
 
 ```
 searchKey: enforcement.NewBeforeSetUserIsSiteAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -183,6 +187,7 @@ NewBeforeSetUserIsSiteAdmin returns a BeforeSetUserIsSiteAdmin closure that dete
 
 ```
 searchKey: enforcement.TestNewPreCreateExternalServiceHook
+tags: [private]
 ```
 
 ```Go
@@ -193,6 +198,7 @@ func TestNewPreCreateExternalServiceHook(t *testing.T)
 
 ```
 searchKey: enforcement.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -203,6 +209,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: enforcement.TestEnforcement_PreCreateUser
+tags: [private]
 ```
 
 ```Go
@@ -213,6 +220,7 @@ func TestEnforcement_PreCreateUser(t *testing.T)
 
 ```
 searchKey: enforcement.TestEnforcement_AfterCreateUser
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +231,7 @@ func TestEnforcement_AfterCreateUser(t *testing.T)
 
 ```
 searchKey: enforcement.TestEnforcement_PreSetUserIsSiteAdmin
+tags: [private]
 ```
 
 ```Go

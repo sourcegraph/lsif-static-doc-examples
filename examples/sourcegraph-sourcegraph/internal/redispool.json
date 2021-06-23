@@ -4,7 +4,9 @@
     "identifier": "redispool",
     "newPage": true,
     "searchKey": "internal/redispool",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "addrCache",
                 "newPage": false,
                 "searchKey": "redispool.addrCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "addrStore",
                 "newPage": false,
                 "searchKey": "redispool.addrStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "schemeMatcher",
                 "newPage": false,
                 "searchKey": "redispool.schemeMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,9 +110,7 @@
                 "identifier": "Cache",
                 "newPage": false,
                 "searchKey": "redispool.Cache",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -122,9 +130,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "redispool.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "timeout",
                 "newPage": false,
                 "searchKey": "redispool.timeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +175,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -180,12 +190,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/redispool#init",
+              "pathID": "/internal/redispool#init.redispool.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.redispool.go",
                 "newPage": false,
                 "searchKey": "redispool.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -205,7 +217,9 @@
                 "identifier": "dialRedis",
                 "newPage": false,
                 "searchKey": "redispool.dialRedis",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -220,12 +234,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/redispool#init",
+              "pathID": "/internal/redispool#init.sysreq.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.sysreq.go",
                 "newPage": false,
                 "searchKey": "redispool.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -245,7 +261,9 @@
                 "identifier": "redisCheck",
                 "newPage": false,
                 "searchKey": "redispool.redisCheck",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -265,7 +283,9 @@
                 "identifier": "TestSchemeMatcher",
                 "newPage": false,
                 "searchKey": "redispool.TestSchemeMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

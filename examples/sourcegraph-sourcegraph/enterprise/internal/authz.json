@@ -4,7 +4,9 @@
     "identifier": "authz",
     "newPage": true,
     "searchKey": "enterprise/internal/authz",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ExternalServicesStore",
                 "newPage": false,
                 "searchKey": "authz.ExternalServicesStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "gitlabAuthzProviderParams",
                 "newPage": false,
                 "searchKey": "authz.gitlabAuthzProviderParams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +84,9 @@
                       "identifier": "gitlabAuthzProviderParams.Repos",
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.Repos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -100,7 +106,9 @@
                       "identifier": "gitlabAuthzProviderParams.FetchAccount",
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.FetchAccount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -120,7 +128,9 @@
                       "identifier": "gitlabAuthzProviderParams.ServiceID",
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.ServiceID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -140,7 +150,9 @@
                       "identifier": "gitlabAuthzProviderParams.ServiceType",
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.ServiceType",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -160,7 +172,9 @@
                       "identifier": "gitlabAuthzProviderParams.URN",
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.URN",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -180,7 +194,9 @@
                       "identifier": "gitlabAuthzProviderParams.Validate",
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.Validate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -200,7 +216,9 @@
                       "identifier": "gitlabAuthzProviderParams.FetchUserPerms",
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.FetchUserPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -220,7 +238,9 @@
                       "identifier": "gitlabAuthzProviderParams.FetchRepoPerms",
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.FetchRepoPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -243,7 +263,9 @@
                 "identifier": "fakeStore",
                 "newPage": false,
                 "searchKey": "authz.fakeStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,7 +283,9 @@
                       "identifier": "fakeStore.List",
                       "newPage": false,
                       "searchKey": "authz.fakeStore.List",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -287,7 +311,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -305,9 +331,7 @@
                 "identifier": "ProvidersFromConfig",
                 "newPage": false,
                 "searchKey": "authz.ProvidersFromConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -327,7 +351,9 @@
                 "identifier": "TestAuthzProvidersFromConfig",
                 "newPage": false,
                 "searchKey": "authz.TestAuthzProvidersFromConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,7 +373,9 @@
                 "identifier": "mustURLParse",
                 "newPage": false,
                 "searchKey": "authz.mustURLParse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +395,9 @@
                 "identifier": "asJSON",
                 "newPage": false,
                 "searchKey": "authz.asJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +417,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "authz.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

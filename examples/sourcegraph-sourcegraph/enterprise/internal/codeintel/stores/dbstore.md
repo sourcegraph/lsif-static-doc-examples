@@ -301,7 +301,7 @@
     * [func TestUpdatePackageReferencesEmpty(t *testing.T)](#TestUpdatePackageReferencesEmpty)
     * [func TestUpdatePackageReferencesWithDuplicates(t *testing.T)](#TestUpdatePackageReferencesWithDuplicates)
     * [func TestRepoName(t *testing.T)](#TestRepoName)
-    * [func init()](#init)
+    * [func init()](#init.store_test.go)
     * [func TestGetUploadByID(t *testing.T)](#TestGetUploadByID)
     * [func TestGetUploadByIDDeleted(t *testing.T)](#TestGetUploadByIDDeleted)
     * [func TestGetQueuedUploadRank(t *testing.T)](#TestGetQueuedUploadRank)
@@ -331,10 +331,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="hasRepositoryQuery" href="#hasRepositoryQuery">const hasRepositoryQuery</a>
 
 ```
 searchKey: dbstore.hasRepositoryQuery
+tags: [private]
 ```
 
 ```Go
@@ -345,6 +350,7 @@ const hasRepositoryQuery = ...
 
 ```
 searchKey: dbstore.hasCommitQuery
+tags: [private]
 ```
 
 ```Go
@@ -355,6 +361,7 @@ const hasCommitQuery = ...
 
 ```
 searchKey: dbstore.markRepositoryAsDirtyQuery
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +372,7 @@ const markRepositoryAsDirtyQuery = ...
 
 ```
 searchKey: dbstore.dirtyRepositoriesQuery
+tags: [private]
 ```
 
 ```Go
@@ -375,6 +383,7 @@ const dirtyRepositoriesQuery = ...
 
 ```
 searchKey: dbstore.commitGraphQuery
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +394,7 @@ const commitGraphQuery = ...
 
 ```
 searchKey: dbstore.calculateVisibleUploadsCommitGraphQuery
+tags: [private]
 ```
 
 ```Go
@@ -395,6 +405,7 @@ const calculateVisibleUploadsCommitGraphQuery = ...
 
 ```
 searchKey: dbstore.calculateVisibleUploadsDirtyRepositoryQuery
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +416,7 @@ const calculateVisibleUploadsDirtyRepositoryQuery = ...
 
 ```
 searchKey: dbstore.temporaryNearestUploadsTableQuery
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +427,7 @@ const temporaryNearestUploadsTableQuery = ...
 
 ```
 searchKey: dbstore.temporaryNearestUploadsLinksTableQuery
+tags: [private]
 ```
 
 ```Go
@@ -425,6 +438,7 @@ const temporaryNearestUploadsLinksTableQuery = ...
 
 ```
 searchKey: dbstore.temporaryUploadsVisibleAtTipTableQuery
+tags: [private]
 ```
 
 ```Go
@@ -435,6 +449,7 @@ const temporaryUploadsVisibleAtTipTableQuery = ...
 
 ```
 searchKey: dbstore.nearestUploadsInsertQuery
+tags: [private]
 ```
 
 ```Go
@@ -445,6 +460,7 @@ const nearestUploadsInsertQuery = ...
 
 ```
 searchKey: dbstore.nearestUploadsUpdateQuery
+tags: [private]
 ```
 
 ```Go
@@ -455,6 +471,7 @@ const nearestUploadsUpdateQuery = ...
 
 ```
 searchKey: dbstore.nearestUploadsDeleteQuery
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +482,7 @@ const nearestUploadsDeleteQuery = ...
 
 ```
 searchKey: dbstore.nearestUploadsLinksInsertQuery
+tags: [private]
 ```
 
 ```Go
@@ -475,6 +493,7 @@ const nearestUploadsLinksInsertQuery = ...
 
 ```
 searchKey: dbstore.nearestUploadsLinksUpdateQuery
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +504,7 @@ const nearestUploadsLinksUpdateQuery = ...
 
 ```
 searchKey: dbstore.nearestUploadsLinksDeleteQuery
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +515,7 @@ const nearestUploadsLinksDeleteQuery = ...
 
 ```
 searchKey: dbstore.uploadsVisibleAtTipInsertQuery
+tags: [private]
 ```
 
 ```Go
@@ -505,6 +526,7 @@ const uploadsVisibleAtTipInsertQuery = ...
 
 ```
 searchKey: dbstore.uploadsVisibleAtTipDeleteQuery
+tags: [private]
 ```
 
 ```Go
@@ -515,6 +537,7 @@ const uploadsVisibleAtTipDeleteQuery = ...
 
 ```
 searchKey: dbstore.bulkTransferQuery
+tags: [private]
 ```
 
 ```Go
@@ -525,6 +548,7 @@ const bulkTransferQuery = ...
 
 ```
 searchKey: dbstore.insertDependencyIndexingJobQuery
+tags: [private]
 ```
 
 ```Go
@@ -535,6 +559,7 @@ const insertDependencyIndexingJobQuery = ...
 
 ```
 searchKey: dbstore.getDumpsByIDsQuery
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +570,7 @@ const getDumpsByIDsQuery = ...
 
 ```
 searchKey: dbstore.findClosestDumpsQuery
+tags: [private]
 ```
 
 ```Go
@@ -555,6 +581,7 @@ const findClosestDumpsQuery = ...
 
 ```
 searchKey: dbstore.findClosestDumpsFromGraphFragmentCommitGraphQuery
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +592,7 @@ const findClosestDumpsFromGraphFragmentCommitGraphQuery = ...
 
 ```
 searchKey: dbstore.findClosestDumpsFromGraphFragmentQuery
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +603,7 @@ const findClosestDumpsFromGraphFragmentQuery = ...
 
 ```
 searchKey: dbstore.visibleUploadCandidatesQuery
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +614,7 @@ const visibleUploadCandidatesQuery = ...
 
 ```
 searchKey: dbstore.visibleUploadsQuery
+tags: [private]
 ```
 
 ```Go
@@ -595,6 +625,7 @@ const visibleUploadsQuery = ...
 
 ```
 searchKey: dbstore.deleteOverlappingDumpsQuery
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +636,7 @@ const deleteOverlappingDumpsQuery = ...
 
 ```
 searchKey: dbstore.getRepositoriesWithIndexConfigurationQuery
+tags: [private]
 ```
 
 ```Go
@@ -615,6 +647,7 @@ const getRepositoriesWithIndexConfigurationQuery = ...
 
 ```
 searchKey: dbstore.getAutoIndexDisabledRepositoriesQuery
+tags: [private]
 ```
 
 ```Go
@@ -625,6 +658,7 @@ const getAutoIndexDisabledRepositoriesQuery = ...
 
 ```
 searchKey: dbstore.getIndexConfigurationByRepositoryIDQuery
+tags: [private]
 ```
 
 ```Go
@@ -635,6 +669,7 @@ const getIndexConfigurationByRepositoryIDQuery = ...
 
 ```
 searchKey: dbstore.updateIndexConfigurationByRepositoryIDQuery
+tags: [private]
 ```
 
 ```Go
@@ -645,6 +680,7 @@ const updateIndexConfigurationByRepositoryIDQuery = ...
 
 ```
 searchKey: dbstore.indexAssociatedUploadIDQueryFragment
+tags: [private]
 ```
 
 ```Go
@@ -655,6 +691,7 @@ const indexAssociatedUploadIDQueryFragment = ...
 
 ```
 searchKey: dbstore.indexRankQueryFragment
+tags: [private]
 ```
 
 ```Go
@@ -665,6 +702,7 @@ const indexRankQueryFragment = ...
 
 ```
 searchKey: dbstore.getIndexByIDQuery
+tags: [private]
 ```
 
 ```Go
@@ -675,6 +713,7 @@ const getIndexByIDQuery = ...
 
 ```
 searchKey: dbstore.getIndexesByIDsQuery
+tags: [private]
 ```
 
 ```Go
@@ -685,6 +724,7 @@ const getIndexesByIDsQuery = ...
 
 ```
 searchKey: dbstore.getIndexesCountQuery
+tags: [private]
 ```
 
 ```Go
@@ -695,6 +735,7 @@ const getIndexesCountQuery = ...
 
 ```
 searchKey: dbstore.getIndexesQuery
+tags: [private]
 ```
 
 ```Go
@@ -705,6 +746,7 @@ const getIndexesQuery = ...
 
 ```
 searchKey: dbstore.isQueuedQuery
+tags: [private]
 ```
 
 ```Go
@@ -715,6 +757,7 @@ const isQueuedQuery = ...
 
 ```
 searchKey: dbstore.insertIndexQuery
+tags: [private]
 ```
 
 ```Go
@@ -725,6 +768,7 @@ const insertIndexQuery = ...
 
 ```
 searchKey: dbstore.deleteIndexByIDQuery
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +779,7 @@ const deleteIndexByIDQuery = ...
 
 ```
 searchKey: dbstore.deleteIndexesWithoutRepositoryQuery
+tags: [private]
 ```
 
 ```Go
@@ -745,6 +790,7 @@ const deleteIndexesWithoutRepositoryQuery = ...
 
 ```
 searchKey: dbstore.deleteOldIndexesQuery
+tags: [private]
 ```
 
 ```Go
@@ -755,6 +801,7 @@ const deleteOldIndexesQuery = ...
 
 ```
 searchKey: dbstore.staleSourcedCommitsQuery
+tags: [private]
 ```
 
 ```Go
@@ -765,6 +812,7 @@ const staleSourcedCommitsQuery = ...
 
 ```
 searchKey: dbstore.staleSourcedCommitsSubquery
+tags: [private]
 ```
 
 ```Go
@@ -775,6 +823,7 @@ const staleSourcedCommitsSubquery = ...
 
 ```
 searchKey: dbstore.refreshCommitResolvabilityQuery
+tags: [private]
 ```
 
 ```Go
@@ -785,6 +834,7 @@ const refreshCommitResolvabilityQuery = ...
 
 ```
 searchKey: dbstore.updatePackagesTemporaryTableQuery
+tags: [private]
 ```
 
 ```Go
@@ -795,6 +845,7 @@ const updatePackagesTemporaryTableQuery = ...
 
 ```
 searchKey: dbstore.updatePackagesInsertQuery
+tags: [private]
 ```
 
 ```Go
@@ -805,6 +856,7 @@ const updatePackagesInsertQuery = ...
 
 ```
 searchKey: dbstore.updateReferencesTemporaryTableQuery
+tags: [private]
 ```
 
 ```Go
@@ -815,6 +867,7 @@ const updateReferencesTemporaryTableQuery = ...
 
 ```
 searchKey: dbstore.updateReferencesInsertQuery
+tags: [private]
 ```
 
 ```Go
@@ -825,6 +878,7 @@ const updateReferencesInsertQuery = ...
 
 ```
 searchKey: dbstore.repoNameQuery
+tags: [private]
 ```
 
 ```Go
@@ -835,6 +889,7 @@ const repoNameQuery = ...
 
 ```
 searchKey: dbstore.uploadRankQueryFragment
+tags: [private]
 ```
 
 ```Go
@@ -845,6 +900,7 @@ const uploadRankQueryFragment = ...
 
 ```
 searchKey: dbstore.getUploadByIDQuery
+tags: [private]
 ```
 
 ```Go
@@ -855,6 +911,7 @@ const getUploadByIDQuery = ...
 
 ```
 searchKey: dbstore.visibleAtTipSubselectQuery
+tags: [private]
 ```
 
 ```Go
@@ -865,6 +922,7 @@ const visibleAtTipSubselectQuery = ...
 
 ```
 searchKey: dbstore.getUploadsByIDsQuery
+tags: [private]
 ```
 
 ```Go
@@ -875,6 +933,7 @@ const getUploadsByIDsQuery = ...
 
 ```
 searchKey: dbstore.deleteUploadsStuckUploadingQuery
+tags: [private]
 ```
 
 ```Go
@@ -885,6 +944,7 @@ const deleteUploadsStuckUploadingQuery = ...
 
 ```
 searchKey: dbstore.getUploadsCountQuery
+tags: [private]
 ```
 
 ```Go
@@ -895,6 +955,7 @@ const getUploadsCountQuery = ...
 
 ```
 searchKey: dbstore.getUploadsQuery
+tags: [private]
 ```
 
 ```Go
@@ -905,6 +966,7 @@ const getUploadsQuery = ...
 
 ```
 searchKey: dbstore.insertUploadQuery
+tags: [private]
 ```
 
 ```Go
@@ -915,6 +977,7 @@ const insertUploadQuery = ...
 
 ```
 searchKey: dbstore.addUploadPartQuery
+tags: [private]
 ```
 
 ```Go
@@ -925,6 +988,7 @@ const addUploadPartQuery = ...
 
 ```
 searchKey: dbstore.markQueuedQuery
+tags: [private]
 ```
 
 ```Go
@@ -935,6 +999,7 @@ const markQueuedQuery = ...
 
 ```
 searchKey: dbstore.markFailedQuery
+tags: [private]
 ```
 
 ```Go
@@ -945,6 +1010,7 @@ const markFailedQuery = ...
 
 ```
 searchKey: dbstore.deleteUploadByIDQuery
+tags: [private]
 ```
 
 ```Go
@@ -955,7 +1021,6 @@ const deleteUploadByIDQuery = ...
 
 ```
 searchKey: dbstore.DeletedRepositoryGracePeriod
-tags: [exported]
 ```
 
 ```Go
@@ -968,6 +1033,7 @@ DeletedRepositoryGracePeriod is the minimum allowable duration between a repo de
 
 ```
 searchKey: dbstore.deleteUploadsWithoutRepositoryQuery
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1044,7 @@ const deleteUploadsWithoutRepositoryQuery = ...
 
 ```
 searchKey: dbstore.hardDeleteUploadByIDQuery
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +1055,7 @@ const hardDeleteUploadByIDQuery = ...
 
 ```
 searchKey: dbstore.softDeleteOldUploadsQuery
+tags: [private]
 ```
 
 ```Go
@@ -998,6 +1066,7 @@ const softDeleteOldUploadsQuery = ...
 
 ```
 searchKey: dbstore.getOldestCommitDateQuery
+tags: [private]
 ```
 
 ```Go
@@ -1010,6 +1079,7 @@ Note: we check against '-infinity' here, as the backfill operation will use this
 
 ```
 searchKey: dbstore.updateCommitedAtQuery
+tags: [private]
 ```
 
 ```Go
@@ -1020,7 +1090,6 @@ const updateCommitedAtQuery = ...
 
 ```
 searchKey: dbstore.StalledUploadMaxAge
-tags: [exported]
 ```
 
 ```Go
@@ -1033,7 +1102,6 @@ StalledUploadMaxAge is the maximum allowable duration between updating the state
 
 ```
 searchKey: dbstore.UploadMaxNumResets
-tags: [exported]
 ```
 
 ```Go
@@ -1046,7 +1114,6 @@ UploadMaxNumResets is the maximum number of times an upload can be reset. If an 
 
 ```
 searchKey: dbstore.StalledIndexMaxAge
-tags: [exported]
 ```
 
 ```Go
@@ -1059,7 +1126,6 @@ StalledIndexMaxAge is the maximum allowable duration between updating the state 
 
 ```
 searchKey: dbstore.IndexMaxNumResets
-tags: [exported]
 ```
 
 ```Go
@@ -1072,7 +1138,6 @@ IndexMaxNumResets is the maximum number of times an index can be reset. If an in
 
 ```
 searchKey: dbstore.StalledDependencyIndexingJobMaxAge
-tags: [exported]
 ```
 
 ```Go
@@ -1085,7 +1150,6 @@ StalledDependencyIndexingJobMaxAge is the maximum allowable duration between upd
 
 ```
 searchKey: dbstore.DependencyIndexingJobMaxNumResets
-tags: [exported]
 ```
 
 ```Go
@@ -1098,7 +1162,6 @@ DependencyIndexingJobMaxNumResets is the maximum number of times a dependency in
 
 ```
 searchKey: dbstore.DefinitionDumpsLimit
-tags: [exported]
 ```
 
 ```Go
@@ -1111,6 +1174,7 @@ DefinitionDumpsLimit is the maximum number of records that can be returned from 
 
 ```
 searchKey: dbstore.definitionDumpsQuery
+tags: [private]
 ```
 
 ```Go
@@ -1121,6 +1185,7 @@ const definitionDumpsQuery = ...
 
 ```
 searchKey: dbstore.referenceIDsAndFiltersCTEDefinitions
+tags: [private]
 ```
 
 ```Go
@@ -1131,6 +1196,7 @@ const referenceIDsAndFiltersCTEDefinitions = ...
 
 ```
 searchKey: dbstore.referenceIDsAndFiltersBaseQuery
+tags: [private]
 ```
 
 ```Go
@@ -1141,6 +1207,7 @@ const referenceIDsAndFiltersBaseQuery = ...
 
 ```
 searchKey: dbstore.referenceIDsAndFiltersQuery
+tags: [private]
 ```
 
 ```Go
@@ -1151,6 +1218,7 @@ const referenceIDsAndFiltersQuery = ...
 
 ```
 searchKey: dbstore.referenceIDsAndFiltersCountQuery
+tags: [private]
 ```
 
 ```Go
@@ -1161,6 +1229,7 @@ const referenceIDsAndFiltersCountQuery = ...
 
 ```
 searchKey: dbstore.referencesForUploadQuery
+tags: [private]
 ```
 
 ```Go
@@ -1169,10 +1238,15 @@ const referencesForUploadQuery = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="dependencyIndexingJobColumns" href="#dependencyIndexingJobColumns">var dependencyIndexingJobColumns</a>
 
 ```
 searchKey: dbstore.dependencyIndexingJobColumns
+tags: [private]
 ```
 
 ```Go
@@ -1183,7 +1257,6 @@ var dependencyIndexingJobColumns = ...
 
 ```
 searchKey: dbstore.ErrNotTransactable
-tags: [exported]
 ```
 
 ```Go
@@ -1196,7 +1269,6 @@ ErrNotTransactable occurs when Transact is called on a store whose underlying st
 
 ```
 searchKey: dbstore.ErrNoTransaction
-tags: [exported]
 ```
 
 ```Go
@@ -1209,7 +1281,6 @@ ErrNoTransaction occurs when Savepoint or RollbackToSavepoint is called outside 
 
 ```
 searchKey: dbstore.ErrDequeueTransaction
-tags: [exported]
 ```
 
 ```Go
@@ -1222,7 +1293,6 @@ ErrDequeueTransaction occurs when Dequeue is called from inside a transaction.
 
 ```
 searchKey: dbstore.ErrDequeueRace
-tags: [exported]
 ```
 
 ```Go
@@ -1235,7 +1305,6 @@ ErrDequeueRace occurs when an upload selected for dequeue has been locked by ano
 
 ```
 searchKey: dbstore.ErrNoSavepoint
-tags: [exported]
 ```
 
 ```Go
@@ -1248,7 +1317,6 @@ ErrNoSavepoint occurs when there is no savepont to rollback to.
 
 ```
 searchKey: dbstore.ErrUnknownRepository
-tags: [exported]
 ```
 
 ```Go
@@ -1261,7 +1329,6 @@ ErrUnknownRepository occurs when a repository does not exist.
 
 ```
 searchKey: dbstore.ErrIllegalLimit
-tags: [exported]
 ```
 
 ```Go
@@ -1274,7 +1341,6 @@ ErrIllegalLimit occurs when a limit is not strictly positive.
 
 ```
 searchKey: dbstore.ScanFirstIndexRecord
-tags: [exported]
 ```
 
 ```Go
@@ -1285,6 +1351,7 @@ var ScanFirstIndexRecord = scanFirstIndexRecord
 
 ```
 searchKey: dbstore.indexColumnsWithNullRank
+tags: [private]
 ```
 
 ```Go
@@ -1295,7 +1362,6 @@ var indexColumnsWithNullRank = ...
 
 ```
 searchKey: dbstore.IndexColumnsWithNullRank
-tags: [exported]
 ```
 
 ```Go
@@ -1306,6 +1372,7 @@ var IndexColumnsWithNullRank = indexColumnsWithNullRank
 
 ```
 searchKey: dbstore.uploadColumnsWithNullRank
+tags: [private]
 ```
 
 ```Go
@@ -1316,6 +1383,7 @@ var uploadColumnsWithNullRank = ...
 
 ```
 searchKey: dbstore.uploadWorkerStoreOptions
+tags: [private]
 ```
 
 ```Go
@@ -1326,6 +1394,7 @@ var uploadWorkerStoreOptions = ...
 
 ```
 searchKey: dbstore.indexWorkerStoreOptions
+tags: [private]
 ```
 
 ```Go
@@ -1336,6 +1405,7 @@ var indexWorkerStoreOptions = ...
 
 ```
 searchKey: dbstore.dependencyIndexingJobWorkerStoreOptions
+tags: [private]
 ```
 
 ```Go
@@ -1344,10 +1414,15 @@ var dependencyIndexingJobWorkerStoreOptions = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="uploadMetaListSerializer" href="#uploadMetaListSerializer">type uploadMetaListSerializer struct</a>
 
 ```
 searchKey: dbstore.uploadMetaListSerializer
+tags: [private]
 ```
 
 ```Go
@@ -1361,7 +1436,6 @@ type uploadMetaListSerializer struct {
 
 ```
 searchKey: dbstore.NewUploadMetaListSerializer
-tags: [exported]
 ```
 
 ```Go
@@ -1372,6 +1446,7 @@ func NewUploadMetaListSerializer() *uploadMetaListSerializer
 
 ```
 searchKey: dbstore.uploadMetaListSerializer.Serialize
+tags: [private]
 ```
 
 ```Go
@@ -1390,6 +1465,7 @@ This method is not safe for concurrent use.
 
 ```
 searchKey: dbstore.uploadMetaListSerializer.write
+tags: [private]
 ```
 
 ```Go
@@ -1400,6 +1476,7 @@ func (s *uploadMetaListSerializer) write(uploadMetas []commitgraph.UploadMeta)
 
 ```
 searchKey: dbstore.uploadMetaListSerializer.writeUploadMeta
+tags: [private]
 ```
 
 ```Go
@@ -1410,6 +1487,7 @@ func (s *uploadMetaListSerializer) writeUploadMeta(uploadMeta commitgraph.Upload
 
 ```
 searchKey: dbstore.uploadMetaListSerializer.writeInteger
+tags: [private]
 ```
 
 ```Go
@@ -1420,6 +1498,7 @@ func (s *uploadMetaListSerializer) writeInteger(value int)
 
 ```
 searchKey: dbstore.uploadMetaListSerializer.take
+tags: [private]
 ```
 
 ```Go
@@ -1430,6 +1509,7 @@ func (s *uploadMetaListSerializer) take() []byte
 
 ```
 searchKey: dbstore.sanitizedCommitInput
+tags: [private]
 ```
 
 ```Go
@@ -1447,6 +1527,7 @@ type sanitizedCommitInput struct {
 
 ```
 searchKey: dbstore.sanitizeCommitInput
+tags: [private]
 ```
 
 ```Go
@@ -1459,7 +1540,6 @@ sanitizeCommitInput reads the data that needs to be persisted from the given gra
 
 ```
 searchKey: dbstore.DependencyIndexingJob
-tags: [exported]
 ```
 
 ```Go
@@ -1482,6 +1562,7 @@ DependencyIndexingJob is a subset of the lsif_dependency_indexing_jobs table and
 
 ```
 searchKey: dbstore.scanFirstDependencyIndexingJob
+tags: [private]
 ```
 
 ```Go
@@ -1494,7 +1575,6 @@ scanFirstDependencyIndexingJob scans a slice of dependency indexing jobs from th
 
 ```
 searchKey: dbstore.DependencyIndexingJob.RecordID
-tags: [exported]
 ```
 
 ```Go
@@ -1505,7 +1585,6 @@ func (u DependencyIndexingJob) RecordID() int
 
 ```
 searchKey: dbstore.DockerStep
-tags: [exported]
 ```
 
 ```Go
@@ -1520,7 +1599,6 @@ type DockerStep struct {
 
 ```
 searchKey: dbstore.DockerStep.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -1531,7 +1609,6 @@ func (s *DockerStep) Scan(value interface{}) error
 
 ```
 searchKey: dbstore.DockerStep.Value
-tags: [exported]
 ```
 
 ```Go
@@ -1542,7 +1619,6 @@ func (s DockerStep) Value() (driver.Value, error)
 
 ```
 searchKey: dbstore.Dump
-tags: [exported]
 ```
 
 ```Go
@@ -1572,7 +1648,6 @@ Dump is a subset of the lsif_uploads table (queried via the lsif_dumps_with_repo
 
 ```
 searchKey: dbstore.IndexConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -1589,6 +1664,7 @@ IndexConfiguration stores the index configuration for a repository.
 
 ```
 searchKey: dbstore.scanFirstIndexConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -1601,7 +1677,6 @@ scanFirstIndexConfiguration scans a slice of index configurations from the retur
 
 ```
 searchKey: dbstore.Index
-tags: [exported]
 ```
 
 ```Go
@@ -1636,6 +1711,7 @@ Index is a subset of the lsif_indexes table and stores both processed and unproc
 
 ```
 searchKey: dbstore.scanFirstIndex
+tags: [private]
 ```
 
 ```Go
@@ -1648,7 +1724,6 @@ scanFirstIndex scans a slice of indexes from the return value of `*Store.query` 
 
 ```
 searchKey: dbstore.Index.RecordID
-tags: [exported]
 ```
 
 ```Go
@@ -1659,7 +1734,6 @@ func (i Index) RecordID() int
 
 ```
 searchKey: dbstore.GetIndexesOptions
-tags: [exported]
 ```
 
 ```Go
@@ -1676,7 +1750,6 @@ type GetIndexesOptions struct {
 
 ```
 searchKey: dbstore.SourcedCommits
-tags: [exported]
 ```
 
 ```Go
@@ -1691,6 +1764,7 @@ type SourcedCommits struct {
 
 ```
 searchKey: dbstore.operations
+tags: [private]
 ```
 
 ```Go
@@ -1762,6 +1836,7 @@ type operations struct {
 
 ```
 searchKey: dbstore.newOperations
+tags: [private]
 ```
 
 ```Go
@@ -1772,7 +1847,6 @@ func newOperations(observationContext *observation.Context) *operations
 
 ```
 searchKey: dbstore.Store
-tags: [exported]
 ```
 
 ```Go
@@ -1786,7 +1860,6 @@ type Store struct {
 
 ```
 searchKey: dbstore.NewWithDB
-tags: [exported]
 ```
 
 ```Go
@@ -1797,6 +1870,7 @@ func NewWithDB(db dbutil.DB, observationContext *observation.Context) *Store
 
 ```
 searchKey: dbstore.testStore
+tags: [private]
 ```
 
 ```Go
@@ -1807,7 +1881,6 @@ func testStore(db dbutil.DB) *Store
 
 ```
 searchKey: dbstore.Store.HasRepository
-tags: [exported]
 ```
 
 ```Go
@@ -1820,7 +1893,6 @@ HasRepository determines if there is LSIF data for the given repository.
 
 ```
 searchKey: dbstore.Store.HasCommit
-tags: [exported]
 ```
 
 ```Go
@@ -1833,7 +1905,6 @@ HasCommit determines if the given commit is known for the given repository.
 
 ```
 searchKey: dbstore.Store.MarkRepositoryAsDirty
-tags: [exported]
 ```
 
 ```Go
@@ -1846,7 +1917,6 @@ MarkRepositoryAsDirty marks the given repository's commit graph as out of date.
 
 ```
 searchKey: dbstore.Store.DirtyRepositories
-tags: [exported]
 ```
 
 ```Go
@@ -1859,7 +1929,6 @@ DirtyRepositories returns a map from repository identifiers to a dirty token for
 
 ```
 searchKey: dbstore.Store.CommitGraphMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -1872,7 +1941,6 @@ CommitGraphMetadata returns whether or not the commit graph for the given reposi
 
 ```
 searchKey: dbstore.Store.CalculateVisibleUploads
-tags: [exported]
 ```
 
 ```Go
@@ -1887,6 +1955,7 @@ If dirtyToken is supplied, the repository will be unmarked when the supplied tok
 
 ```
 searchKey: dbstore.Store.writeVisibleUploads
+tags: [private]
 ```
 
 ```Go
@@ -1907,6 +1976,7 @@ The data in these temporary tables can then be moved into a persisted/permanent 
 
 ```
 searchKey: dbstore.Store.createTemporaryNearestUploadsTables
+tags: [private]
 ```
 
 ```Go
@@ -1917,6 +1987,7 @@ func (s *Store) createTemporaryNearestUploadsTables(ctx context.Context) error
 
 ```
 searchKey: dbstore.Store.persistNearestUploads
+tags: [private]
 ```
 
 ```Go
@@ -1929,6 +2000,7 @@ persistNearestUploads modifies the lsif_nearest_uploads table so that it has sam
 
 ```
 searchKey: dbstore.Store.persistNearestUploadsLinks
+tags: [private]
 ```
 
 ```Go
@@ -1941,6 +2013,7 @@ persistNearestUploadsLinks modifies the lsif_nearest_uploads_links table so that
 
 ```
 searchKey: dbstore.Store.persistUploadsVisibleAtTip
+tags: [private]
 ```
 
 ```Go
@@ -1953,6 +2026,7 @@ persistUploadsVisibleAtTip modifies the lsif_uploads_visible_at_tip table so tha
 
 ```
 searchKey: dbstore.Store.bulkTransfer
+tags: [private]
 ```
 
 ```Go
@@ -1965,7 +2039,6 @@ bulkTransfer performs the given insert, update, and delete queries and returns t
 
 ```
 searchKey: dbstore.Store.InsertDependencyIndexingJob
-tags: [exported]
 ```
 
 ```Go
@@ -1978,7 +2051,6 @@ InsertDependencyIndexingJob inserts a new dependency indexing job and returns it
 
 ```
 searchKey: dbstore.Store.GetDumpsByIDs
-tags: [exported]
 ```
 
 ```Go
@@ -1991,7 +2063,6 @@ GetDumpsByIDs returns a set of dumps by identifiers.
 
 ```
 searchKey: dbstore.Store.FindClosestDumps
-tags: [exported]
 ```
 
 ```Go
@@ -2010,7 +2081,6 @@ The graph supplied to FindClosestDumpsFromGraphFragment will also determine whet
 
 ```
 searchKey: dbstore.Store.FindClosestDumpsFromGraphFragment
-tags: [exported]
 ```
 
 ```Go
@@ -2023,7 +2093,6 @@ FindClosestDumpsFromGraphFragment returns the set of dumps that can most accurat
 
 ```
 searchKey: dbstore.Store.DeleteOverlappingDumps
-tags: [exported]
 ```
 
 ```Go
@@ -2036,7 +2105,6 @@ DeleteOverlapapingDumps deletes all completed uploads for the given repository w
 
 ```
 searchKey: dbstore.Store.GetRepositoriesWithIndexConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -2049,7 +2117,6 @@ GetRepositoriesWithIndexConfiguration returns the ids of repositories explicit i
 
 ```
 searchKey: dbstore.Store.GetAutoindexDisabledRepositories
-tags: [exported]
 ```
 
 ```Go
@@ -2060,7 +2127,6 @@ func (s *Store) GetAutoindexDisabledRepositories(ctx context.Context) (_ []int, 
 
 ```
 searchKey: dbstore.Store.GetIndexConfigurationByRepositoryID
-tags: [exported]
 ```
 
 ```Go
@@ -2073,7 +2139,6 @@ GetIndexConfigurationByRepositoryID returns the index configuration for a reposi
 
 ```
 searchKey: dbstore.Store.UpdateIndexConfigurationByRepositoryID
-tags: [exported]
 ```
 
 ```Go
@@ -2086,7 +2151,6 @@ UpdateIndexConfigurationByRepositoryID updates the index configuration for a rep
 
 ```
 searchKey: dbstore.Store.GetIndexByID
-tags: [exported]
 ```
 
 ```Go
@@ -2099,7 +2163,6 @@ GetIndexByID returns an index by its identifier and boolean flag indicating its 
 
 ```
 searchKey: dbstore.Store.GetIndexesByIDs
-tags: [exported]
 ```
 
 ```Go
@@ -2112,7 +2175,6 @@ GetIndexesByIDs returns an index for each of the given identifiers. Not all give
 
 ```
 searchKey: dbstore.Store.GetIndexes
-tags: [exported]
 ```
 
 ```Go
@@ -2125,7 +2187,6 @@ GetIndexes returns a list of indexes and the total count of records matching the
 
 ```
 searchKey: dbstore.Store.IsQueued
-tags: [exported]
 ```
 
 ```Go
@@ -2138,7 +2199,6 @@ IsQueued returns true if there is an index or an upload for the repository and c
 
 ```
 searchKey: dbstore.Store.InsertIndex
-tags: [exported]
 ```
 
 ```Go
@@ -2151,7 +2211,6 @@ InsertIndex inserts a new index and returns its identifier.
 
 ```
 searchKey: dbstore.Store.DeleteIndexByID
-tags: [exported]
 ```
 
 ```Go
@@ -2164,7 +2223,6 @@ DeleteIndexByID deletes an index by its identifier.
 
 ```
 searchKey: dbstore.Store.DeleteIndexesWithoutRepository
-tags: [exported]
 ```
 
 ```Go
@@ -2177,7 +2235,6 @@ DeleteIndexesWithoutRepository deletes indexes associated with repositories that
 
 ```
 searchKey: dbstore.Store.DeleteOldIndexes
-tags: [exported]
 ```
 
 ```Go
@@ -2190,7 +2247,6 @@ DeleteOldIndexes deletes indexes older than the given age.
 
 ```
 searchKey: dbstore.Store.StaleSourcedCommits
-tags: [exported]
 ```
 
 ```Go
@@ -2203,7 +2259,6 @@ StaleSourcedCommits returns a set of commits attached to repositories that have 
 
 ```
 searchKey: dbstore.Store.RefreshCommitResolvability
-tags: [exported]
 ```
 
 ```Go
@@ -2216,7 +2271,6 @@ RefreshCommitResolvability will update each upload and index record belonging to
 
 ```
 searchKey: dbstore.Store.UpdatePackages
-tags: [exported]
 ```
 
 ```Go
@@ -2229,7 +2283,6 @@ UpdatePackages upserts package data tied to the given upload.
 
 ```
 searchKey: dbstore.Store.UpdatePackageReferences
-tags: [exported]
 ```
 
 ```Go
@@ -2242,7 +2295,6 @@ UpdatePackageReferences inserts reference data tied to the given upload.
 
 ```
 searchKey: dbstore.Store.RepoName
-tags: [exported]
 ```
 
 ```Go
@@ -2255,7 +2307,6 @@ RepoName returns the name for the repo with the given identifier.
 
 ```
 searchKey: dbstore.Store.With
-tags: [exported]
 ```
 
 ```Go
@@ -2266,7 +2317,6 @@ func (s *Store) With(other basestore.ShareableStore) *Store
 
 ```
 searchKey: dbstore.Store.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -2277,6 +2327,7 @@ func (s *Store) Transact(ctx context.Context) (*Store, error)
 
 ```
 searchKey: dbstore.Store.transact
+tags: [private]
 ```
 
 ```Go
@@ -2287,7 +2338,6 @@ func (s *Store) transact(ctx context.Context) (*Store, error)
 
 ```
 searchKey: dbstore.Store.GetUploadByID
-tags: [exported]
 ```
 
 ```Go
@@ -2300,7 +2350,6 @@ GetUploadByID returns an upload by its identifier and boolean flag indicating it
 
 ```
 searchKey: dbstore.Store.GetUploadsByIDs
-tags: [exported]
 ```
 
 ```Go
@@ -2313,7 +2362,6 @@ GetUploadsByIDs returns an upload for each of the given identifiers. Not all giv
 
 ```
 searchKey: dbstore.Store.DeleteUploadsStuckUploading
-tags: [exported]
 ```
 
 ```Go
@@ -2326,7 +2374,6 @@ DeleteUploadsStuckUploading soft deletes any upload record that has been uploadi
 
 ```
 searchKey: dbstore.Store.GetUploads
-tags: [exported]
 ```
 
 ```Go
@@ -2339,7 +2386,6 @@ GetUploads returns a list of uploads and the total count of records matching the
 
 ```
 searchKey: dbstore.Store.InsertUpload
-tags: [exported]
 ```
 
 ```Go
@@ -2352,7 +2398,6 @@ InsertUpload inserts a new upload and returns its identifier.
 
 ```
 searchKey: dbstore.Store.AddUploadPart
-tags: [exported]
 ```
 
 ```Go
@@ -2365,7 +2410,6 @@ AddUploadPart adds the part index to the given upload's uploaded parts array. Th
 
 ```
 searchKey: dbstore.Store.MarkQueued
-tags: [exported]
 ```
 
 ```Go
@@ -2378,7 +2422,6 @@ MarkQueued updates the state of the upload to queued and updates the upload size
 
 ```
 searchKey: dbstore.Store.MarkFailed
-tags: [exported]
 ```
 
 ```Go
@@ -2391,7 +2434,6 @@ MarkFailed updates the state of the upload to failed, increments the num_failure
 
 ```
 searchKey: dbstore.Store.DeleteUploadByID
-tags: [exported]
 ```
 
 ```Go
@@ -2404,7 +2446,6 @@ DeleteUploadByID deletes an upload by its identifier. This method returns a true
 
 ```
 searchKey: dbstore.Store.DeleteUploadsWithoutRepository
-tags: [exported]
 ```
 
 ```Go
@@ -2417,7 +2458,6 @@ DeleteUploadsWithoutRepository deletes uploads associated with repositories that
 
 ```
 searchKey: dbstore.Store.HardDeleteUploadByID
-tags: [exported]
 ```
 
 ```Go
@@ -2430,7 +2470,6 @@ HardDeleteUploadByID deletes the upload record with the given identifier.
 
 ```
 searchKey: dbstore.Store.SoftDeleteOldUploads
-tags: [exported]
 ```
 
 ```Go
@@ -2443,7 +2482,6 @@ SoftDeleteOldUploads marks uploads older than the given age that are not visible
 
 ```
 searchKey: dbstore.Store.GetOldestCommitDate
-tags: [exported]
 ```
 
 ```Go
@@ -2456,7 +2494,6 @@ GetOldestCommitDate returns the oldest commit date for all uploads for the given
 
 ```
 searchKey: dbstore.Store.UpdateCommitedAt
-tags: [exported]
 ```
 
 ```Go
@@ -2469,7 +2506,6 @@ UpdateCommitedAt updates the commit date for the given repository.
 
 ```
 searchKey: dbstore.Store.DefinitionDumps
-tags: [exported]
 ```
 
 ```Go
@@ -2482,7 +2518,6 @@ DefinitionDumps returns the set of dumps that define at least one of the given m
 
 ```
 searchKey: dbstore.Store.ReferenceIDsAndFilters
-tags: [exported]
 ```
 
 ```Go
@@ -2497,7 +2532,6 @@ Visibility is determined in two parts: if the index belongs to the given reposit
 
 ```
 searchKey: dbstore.Store.ReferencesForUpload
-tags: [exported]
 ```
 
 ```Go
@@ -2510,7 +2544,6 @@ ReferencesForUpload returns the set of import monikers attached to the given upl
 
 ```
 searchKey: dbstore.Upload
-tags: [exported]
 ```
 
 ```Go
@@ -2544,6 +2577,7 @@ Upload is a subset of the lsif_uploads table and stores both processed and unpro
 
 ```
 searchKey: dbstore.scanFirstUpload
+tags: [private]
 ```
 
 ```Go
@@ -2556,6 +2590,7 @@ scanFirstUpload scans a slice of uploads from the return value of `*Store.query`
 
 ```
 searchKey: dbstore.dumpToUpload
+tags: [private]
 ```
 
 ```Go
@@ -2566,7 +2601,6 @@ func dumpToUpload(expected Dump) Upload
 
 ```
 searchKey: dbstore.Upload.RecordID
-tags: [exported]
 ```
 
 ```Go
@@ -2577,7 +2611,6 @@ func (u Upload) RecordID() int
 
 ```
 searchKey: dbstore.GetUploadsOptions
-tags: [exported]
 ```
 
 ```Go
@@ -2598,7 +2631,6 @@ type GetUploadsOptions struct {
 
 ```
 searchKey: dbstore.PackageReferenceScanner
-tags: [exported]
 ```
 
 ```Go
@@ -2619,6 +2651,7 @@ A scanner for this type was introduced as a memory optimization. Instead of read
 
 ```
 searchKey: dbstore.packageReferenceScannerFromRows
+tags: [private]
 ```
 
 ```Go
@@ -2631,7 +2664,6 @@ packageReferenceScannerFromRows creates a PackageReferenceScanner that feeds the
 
 ```
 searchKey: dbstore.PackageReferenceScannerFromSlice
-tags: [exported]
 ```
 
 ```Go
@@ -2644,6 +2676,7 @@ PackageReferenceScannerFromSlice creates a PackageReferenceScanner that feeds th
 
 ```
 searchKey: dbstore.rowScanner
+tags: [private]
 ```
 
 ```Go
@@ -2656,6 +2689,7 @@ type rowScanner struct {
 
 ```
 searchKey: dbstore.rowScanner.Next
+tags: [private]
 ```
 
 ```Go
@@ -2668,6 +2702,7 @@ Next reads the next package reference value from the database cursor.
 
 ```
 searchKey: dbstore.rowScanner.Close
+tags: [private]
 ```
 
 ```Go
@@ -2680,6 +2715,7 @@ Close the underlying row object.
 
 ```
 searchKey: dbstore.sliceScanner
+tags: [private]
 ```
 
 ```Go
@@ -2692,6 +2728,7 @@ type sliceScanner struct {
 
 ```
 searchKey: dbstore.sliceScanner.Next
+tags: [private]
 ```
 
 ```Go
@@ -2702,6 +2739,7 @@ func (s *sliceScanner) Next() (lsifstore.PackageReference, bool, error)
 
 ```
 searchKey: dbstore.sliceScanner.Close
+tags: [private]
 ```
 
 ```Go
@@ -2712,6 +2750,7 @@ func (s *sliceScanner) Close() error
 
 ```
 searchKey: dbstore.FindClosestDumpsTestCase
+tags: [private]
 ```
 
 ```Go
@@ -2731,6 +2770,7 @@ type FindClosestDumpsTestCase struct {
 
 ```
 searchKey: dbstore.printableRank
+tags: [private]
 ```
 
 ```Go
@@ -2741,6 +2781,7 @@ type printableRank struct{ value *int }
 
 ```
 searchKey: dbstore.printableRank.String
+tags: [private]
 ```
 
 ```Go
@@ -2749,10 +2790,15 @@ func (r printableRank) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="scanCommitGraphView" href="#scanCommitGraphView">func scanCommitGraphView(rows *sql.Rows, queryErr error) (_ *commitgraph.CommitGraphView, err error)</a>
 
 ```
 searchKey: dbstore.scanCommitGraphView
+tags: [private]
 ```
 
 ```Go
@@ -2765,6 +2811,7 @@ scanCommitGraphView scans a commit graph view from the return value of `*Store.q
 
 ```
 searchKey: dbstore.scanIntPairs
+tags: [private]
 ```
 
 ```Go
@@ -2775,6 +2822,7 @@ func scanIntPairs(rows *sql.Rows, queryErr error) (_ map[int]int, err error)
 
 ```
 searchKey: dbstore.scanCommitGraphMetadata
+tags: [private]
 ```
 
 ```Go
@@ -2787,6 +2835,7 @@ scanCommitGraphMetadata scans a a commit graph metadata row from the return valu
 
 ```
 searchKey: dbstore.countingWrite
+tags: [private]
 ```
 
 ```Go
@@ -2799,6 +2848,7 @@ countingWrite writes the given slice of interfaces to the given channel. This fu
 
 ```
 searchKey: dbstore.scanDependencyIndexingJobs
+tags: [private]
 ```
 
 ```Go
@@ -2811,6 +2861,7 @@ scanDependencyIndexingJob scans a slice of dependency indexing jobs from the ret
 
 ```
 searchKey: dbstore.scanFirstDependencyIndexingJobRecord
+tags: [private]
 ```
 
 ```Go
@@ -2823,6 +2874,7 @@ scanFirstDependencyIndexingJobRecord scans a slice of dependency indexing jobs f
 
 ```
 searchKey: dbstore.scanDumps
+tags: [private]
 ```
 
 ```Go
@@ -2835,6 +2887,7 @@ scanDumps scans a slice of dumps from the return value of `*Store.query`.
 
 ```
 searchKey: dbstore.makeVisibleUploadCandidatesQuery
+tags: [private]
 ```
 
 ```Go
@@ -2849,6 +2902,7 @@ NB: A commit should be present in at most one of these tables.
 
 ```
 searchKey: dbstore.makeVisibleUploadsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2861,6 +2915,7 @@ makeVisibleUploadsQuery returns a SQL query returning the set of identifiers of 
 
 ```
 searchKey: dbstore.makeFindClosestDumpConditions
+tags: [private]
 ```
 
 ```Go
@@ -2871,6 +2926,7 @@ func makeFindClosestDumpConditions(path string, rootMustEnclosePath bool, indexe
 
 ```
 searchKey: dbstore.scanIndexConfigurations
+tags: [private]
 ```
 
 ```Go
@@ -2883,6 +2939,7 @@ scanIndexConfigurations scans a slice of index configurations from the return va
 
 ```
 searchKey: dbstore.scanIndexes
+tags: [private]
 ```
 
 ```Go
@@ -2895,6 +2952,7 @@ scanIndexes scans a slice of indexes from the return value of `*Store.query`.
 
 ```
 searchKey: dbstore.scanFirstIndexRecord
+tags: [private]
 ```
 
 ```Go
@@ -2907,6 +2965,7 @@ scanFirstIndexInterface scans a slice of indexes from the return value of `*Stor
 
 ```
 searchKey: dbstore.makeIndexSearchCondition
+tags: [private]
 ```
 
 ```Go
@@ -2919,7 +2978,6 @@ makeIndexSearchCondition returns a disjunction of LIKE clauses against all searc
 
 ```
 searchKey: dbstore.ScanSourcedCommits
-tags: [exported]
 ```
 
 ```Go
@@ -2932,6 +2990,7 @@ ScanSourcedCommits scans triples of repository ids/repository names/commits from
 
 ```
 searchKey: dbstore.loadPackagesChannel
+tags: [private]
 ```
 
 ```Go
@@ -2942,6 +3001,7 @@ func loadPackagesChannel(packages []semantic.Package) <-chan []interface{}
 
 ```
 searchKey: dbstore.loadReferencesChannel
+tags: [private]
 ```
 
 ```Go
@@ -2952,6 +3012,7 @@ func loadReferencesChannel(references []semantic.PackageReference) <-chan []inte
 
 ```
 searchKey: dbstore.intsToQueries
+tags: [private]
 ```
 
 ```Go
@@ -2964,6 +3025,7 @@ intsToQueries converts a slice of ints into a slice of queries.
 
 ```
 searchKey: dbstore.scanUploads
+tags: [private]
 ```
 
 ```Go
@@ -2976,6 +3038,7 @@ scanUploads scans a slice of uploads from the return value of `*Store.query`.
 
 ```
 searchKey: dbstore.scanFirstUploadRecord
+tags: [private]
 ```
 
 ```Go
@@ -2988,6 +3051,7 @@ scanFirstUploadRecord scans a slice of uploads from the return value of `*Store.
 
 ```
 searchKey: dbstore.scanCounts
+tags: [private]
 ```
 
 ```Go
@@ -3000,6 +3064,7 @@ scanCounts scans pairs of id/counts from the return value of `*Store.query`.
 
 ```
 searchKey: dbstore.makeSearchCondition
+tags: [private]
 ```
 
 ```Go
@@ -3012,6 +3077,7 @@ makeSearchCondition returns a disjunction of LIKE clauses against all searchable
 
 ```
 searchKey: dbstore.intsToString
+tags: [private]
 ```
 
 ```Go
@@ -3022,6 +3088,7 @@ func intsToString(vs []int) string
 
 ```
 searchKey: dbstore.nilTimeToString
+tags: [private]
 ```
 
 ```Go
@@ -3032,7 +3099,6 @@ func nilTimeToString(t *time.Time) string
 
 ```
 searchKey: dbstore.WorkerutilUploadStore
-tags: [exported]
 ```
 
 ```Go
@@ -3043,7 +3109,6 @@ func WorkerutilUploadStore(s basestore.ShareableStore, observationContext *obser
 
 ```
 searchKey: dbstore.WorkerutilIndexStore
-tags: [exported]
 ```
 
 ```Go
@@ -3054,7 +3119,6 @@ func WorkerutilIndexStore(s basestore.ShareableStore, observationContext *observ
 
 ```
 searchKey: dbstore.WorkerutilDependencyIndexingJobStore
-tags: [exported]
 ```
 
 ```Go
@@ -3065,6 +3129,7 @@ func WorkerutilDependencyIndexingJobStore(s basestore.ShareableStore, observatio
 
 ```
 searchKey: dbstore.monikersToString
+tags: [private]
 ```
 
 ```Go
@@ -3075,6 +3140,7 @@ func monikersToString(vs []semantic.QualifiedMonikerData) string
 
 ```
 searchKey: dbstore.TestHasRepository
+tags: [private]
 ```
 
 ```Go
@@ -3085,6 +3151,7 @@ func TestHasRepository(t *testing.T)
 
 ```
 searchKey: dbstore.TestHasCommit
+tags: [private]
 ```
 
 ```Go
@@ -3095,6 +3162,7 @@ func TestHasCommit(t *testing.T)
 
 ```
 searchKey: dbstore.TestMarkRepositoryAsDirty
+tags: [private]
 ```
 
 ```Go
@@ -3105,6 +3173,7 @@ func TestMarkRepositoryAsDirty(t *testing.T)
 
 ```
 searchKey: dbstore.TestSkipsDeletedRepositories
+tags: [private]
 ```
 
 ```Go
@@ -3115,6 +3184,7 @@ func TestSkipsDeletedRepositories(t *testing.T)
 
 ```
 searchKey: dbstore.TestCommitGraphMetadata
+tags: [private]
 ```
 
 ```Go
@@ -3125,6 +3195,7 @@ func TestCommitGraphMetadata(t *testing.T)
 
 ```
 searchKey: dbstore.TestCalculateVisibleUploads
+tags: [private]
 ```
 
 ```Go
@@ -3135,6 +3206,7 @@ func TestCalculateVisibleUploads(t *testing.T)
 
 ```
 searchKey: dbstore.TestCalculateVisibleUploadsAlternateCommitGraph
+tags: [private]
 ```
 
 ```Go
@@ -3145,6 +3217,7 @@ func TestCalculateVisibleUploadsAlternateCommitGraph(t *testing.T)
 
 ```
 searchKey: dbstore.TestCalculateVisibleUploadsDistinctRoots
+tags: [private]
 ```
 
 ```Go
@@ -3155,6 +3228,7 @@ func TestCalculateVisibleUploadsDistinctRoots(t *testing.T)
 
 ```
 searchKey: dbstore.TestCalculateVisibleUploadsOverlappingRoots
+tags: [private]
 ```
 
 ```Go
@@ -3165,6 +3239,7 @@ func TestCalculateVisibleUploadsOverlappingRoots(t *testing.T)
 
 ```
 searchKey: dbstore.TestCalculateVisibleUploadsIndexerName
+tags: [private]
 ```
 
 ```Go
@@ -3175,6 +3250,7 @@ func TestCalculateVisibleUploadsIndexerName(t *testing.T)
 
 ```
 searchKey: dbstore.TestCalculateVisibleUploadsResetsDirtyFlag
+tags: [private]
 ```
 
 ```Go
@@ -3185,6 +3261,7 @@ func TestCalculateVisibleUploadsResetsDirtyFlag(t *testing.T)
 
 ```
 searchKey: dbstore.keysOf
+tags: [private]
 ```
 
 ```Go
@@ -3195,6 +3272,7 @@ func keysOf(m map[string][]int) (keys []string)
 
 ```
 searchKey: dbstore.BenchmarkCalculateVisibleUploads
+tags: [private]
 ```
 
 ```Go
@@ -3205,6 +3283,7 @@ func BenchmarkCalculateVisibleUploads(b *testing.B)
 
 ```
 searchKey: dbstore.readBenchmarkCommitGraph
+tags: [private]
 ```
 
 ```Go
@@ -3215,6 +3294,7 @@ func readBenchmarkCommitGraph() (*gitserver.CommitGraph, error)
 
 ```
 searchKey: dbstore.readBenchmarkCommitGraphView
+tags: [private]
 ```
 
 ```Go
@@ -3225,6 +3305,7 @@ func readBenchmarkCommitGraphView() ([]Upload, error)
 
 ```
 searchKey: dbstore.readBenchmarkFile
+tags: [private]
 ```
 
 ```Go
@@ -3235,6 +3316,7 @@ func readBenchmarkFile(path string) ([]byte, error)
 
 ```
 searchKey: dbstore.TestInsertDependencyIndexingJob
+tags: [private]
 ```
 
 ```Go
@@ -3245,6 +3327,7 @@ func TestInsertDependencyIndexingJob(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetDumpsByIDs
+tags: [private]
 ```
 
 ```Go
@@ -3255,6 +3338,7 @@ func TestGetDumpsByIDs(t *testing.T)
 
 ```
 searchKey: dbstore.TestFindClosestDumps
+tags: [private]
 ```
 
 ```Go
@@ -3265,6 +3349,7 @@ func TestFindClosestDumps(t *testing.T)
 
 ```
 searchKey: dbstore.TestFindClosestDumpsAlternateCommitGraph
+tags: [private]
 ```
 
 ```Go
@@ -3275,6 +3360,7 @@ func TestFindClosestDumpsAlternateCommitGraph(t *testing.T)
 
 ```
 searchKey: dbstore.TestFindClosestDumpsAlternateCommitGraphWithOverwrittenVisibleUploads
+tags: [private]
 ```
 
 ```Go
@@ -3285,6 +3371,7 @@ func TestFindClosestDumpsAlternateCommitGraphWithOverwrittenVisibleUploads(t *te
 
 ```
 searchKey: dbstore.TestFindClosestDumpsDistinctRoots
+tags: [private]
 ```
 
 ```Go
@@ -3295,6 +3382,7 @@ func TestFindClosestDumpsDistinctRoots(t *testing.T)
 
 ```
 searchKey: dbstore.TestFindClosestDumpsOverlappingRoots
+tags: [private]
 ```
 
 ```Go
@@ -3305,6 +3393,7 @@ func TestFindClosestDumpsOverlappingRoots(t *testing.T)
 
 ```
 searchKey: dbstore.TestFindClosestDumpsIndexerName
+tags: [private]
 ```
 
 ```Go
@@ -3315,6 +3404,7 @@ func TestFindClosestDumpsIndexerName(t *testing.T)
 
 ```
 searchKey: dbstore.TestFindClosestDumpsIntersectingPath
+tags: [private]
 ```
 
 ```Go
@@ -3325,6 +3415,7 @@ func TestFindClosestDumpsIntersectingPath(t *testing.T)
 
 ```
 searchKey: dbstore.TestFindClosestDumpsFromGraphFragment
+tags: [private]
 ```
 
 ```Go
@@ -3335,6 +3426,7 @@ func TestFindClosestDumpsFromGraphFragment(t *testing.T)
 
 ```
 searchKey: dbstore.testFindClosestDumps
+tags: [private]
 ```
 
 ```Go
@@ -3345,6 +3437,7 @@ func testFindClosestDumps(t *testing.T, store *Store, testCases []FindClosestDum
 
 ```
 searchKey: dbstore.testAnyOf
+tags: [private]
 ```
 
 ```Go
@@ -3355,6 +3448,7 @@ func testAnyOf(t *testing.T, dumps []Dump, expectedIDs []int)
 
 ```
 searchKey: dbstore.testAllOf
+tags: [private]
 ```
 
 ```Go
@@ -3365,6 +3459,7 @@ func testAllOf(t *testing.T, dumps []Dump, expectedIDs []int)
 
 ```
 searchKey: dbstore.testPresence
+tags: [private]
 ```
 
 ```Go
@@ -3375,6 +3470,7 @@ func testPresence(needle int, haystack []int) bool
 
 ```
 searchKey: dbstore.TestDeleteOverlappingDumps
+tags: [private]
 ```
 
 ```Go
@@ -3385,6 +3481,7 @@ func TestDeleteOverlappingDumps(t *testing.T)
 
 ```
 searchKey: dbstore.TestDeleteOverlappingDumpsNoMatches
+tags: [private]
 ```
 
 ```Go
@@ -3395,6 +3492,7 @@ func TestDeleteOverlappingDumpsNoMatches(t *testing.T)
 
 ```
 searchKey: dbstore.TestDeleteOverlappingDumpsIgnoresIncompleteUploads
+tags: [private]
 ```
 
 ```Go
@@ -3405,6 +3503,7 @@ func TestDeleteOverlappingDumpsIgnoresIncompleteUploads(t *testing.T)
 
 ```
 searchKey: dbstore.makeCommit
+tags: [private]
 ```
 
 ```Go
@@ -3417,6 +3516,7 @@ makeCommit formats an integer as a 40-character git commit hash.
 
 ```
 searchKey: dbstore.insertUploads
+tags: [private]
 ```
 
 ```Go
@@ -3429,6 +3529,7 @@ insertUploads populates the lsif_uploads table with the given upload models.
 
 ```
 searchKey: dbstore.insertIndexes
+tags: [private]
 ```
 
 ```Go
@@ -3441,6 +3542,7 @@ insertIndexes populates the lsif_indexes table with the given index models.
 
 ```
 searchKey: dbstore.insertRepo
+tags: [private]
 ```
 
 ```Go
@@ -3453,6 +3555,7 @@ insertRepo creates a repository record with the given id and name. If there is a
 
 ```
 searchKey: dbstore.deleteRepo
+tags: [private]
 ```
 
 ```Go
@@ -3465,6 +3568,7 @@ Marks a repo as deleted
 
 ```
 searchKey: dbstore.insertPackageReferences
+tags: [private]
 ```
 
 ```Go
@@ -3477,6 +3581,7 @@ insertPackageReferences populates the lsif_references table with the given packa
 
 ```
 searchKey: dbstore.insertVisibleAtTip
+tags: [private]
 ```
 
 ```Go
@@ -3489,6 +3594,7 @@ insertVisibleAtTip populates rows of the lsif_uploads_visible_at_tip table for t
 
 ```
 searchKey: dbstore.insertNearestUploads
+tags: [private]
 ```
 
 ```Go
@@ -3501,6 +3607,7 @@ insertNearestUploads populates the lsif_nearest_uploads table with the given upl
 
 ```
 searchKey: dbstore.insertLinks
+tags: [private]
 ```
 
 ```Go
@@ -3511,6 +3618,7 @@ func insertLinks(t testing.TB, db *sql.DB, repositoryID int, links map[string]co
 
 ```
 searchKey: dbstore.toCommitGraphView
+tags: [private]
 ```
 
 ```Go
@@ -3521,6 +3629,7 @@ func toCommitGraphView(uploads []Upload) *commitgraph.CommitGraphView
 
 ```
 searchKey: dbstore.getVisibleUploads
+tags: [private]
 ```
 
 ```Go
@@ -3531,6 +3640,7 @@ func getVisibleUploads(t testing.TB, db *sql.DB, repositoryID int, commits []str
 
 ```
 searchKey: dbstore.getUploadsVisibleAtTip
+tags: [private]
 ```
 
 ```Go
@@ -3541,6 +3651,7 @@ func getUploadsVisibleAtTip(t testing.TB, db *sql.DB, repositoryID int) []int
 
 ```
 searchKey: dbstore.normalizeVisibleUploads
+tags: [private]
 ```
 
 ```Go
@@ -3551,6 +3662,7 @@ func normalizeVisibleUploads(uploadMetas map[string][]commitgraph.UploadMeta) ma
 
 ```
 searchKey: dbstore.getUploadStates
+tags: [private]
 ```
 
 ```Go
@@ -3561,6 +3673,7 @@ func getUploadStates(db dbutil.DB, ids ...int) (map[int]string, error)
 
 ```
 searchKey: dbstore.getIndexStates
+tags: [private]
 ```
 
 ```Go
@@ -3571,6 +3684,7 @@ func getIndexStates(db dbutil.DB, ids ...int) (map[int]string, error)
 
 ```
 searchKey: dbstore.scanStates
+tags: [private]
 ```
 
 ```Go
@@ -3583,6 +3697,7 @@ scanStates scans pairs of id/states from the return value of `*Store.query`.
 
 ```
 searchKey: dbstore.TestGetRepositoriesWithIndexConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -3593,6 +3708,7 @@ func TestGetRepositoriesWithIndexConfiguration(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetIndexConfigurationByRepositoryID
+tags: [private]
 ```
 
 ```Go
@@ -3603,6 +3719,7 @@ func TestGetIndexConfigurationByRepositoryID(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetRepositoriesWithIndexConfigurationIgnoresDisabledRepos
+tags: [private]
 ```
 
 ```Go
@@ -3613,6 +3730,7 @@ func TestGetRepositoriesWithIndexConfigurationIgnoresDisabledRepos(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetIndexByID
+tags: [private]
 ```
 
 ```Go
@@ -3623,6 +3741,7 @@ func TestGetIndexByID(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetQueuedIndexRank
+tags: [private]
 ```
 
 ```Go
@@ -3633,6 +3752,7 @@ func TestGetQueuedIndexRank(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetIndexesByIDs
+tags: [private]
 ```
 
 ```Go
@@ -3643,6 +3763,7 @@ func TestGetIndexesByIDs(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetIndexes
+tags: [private]
 ```
 
 ```Go
@@ -3653,6 +3774,7 @@ func TestGetIndexes(t *testing.T)
 
 ```
 searchKey: dbstore.TestIsQueued
+tags: [private]
 ```
 
 ```Go
@@ -3663,6 +3785,7 @@ func TestIsQueued(t *testing.T)
 
 ```
 searchKey: dbstore.TestInsertIndex
+tags: [private]
 ```
 
 ```Go
@@ -3673,6 +3796,7 @@ func TestInsertIndex(t *testing.T)
 
 ```
 searchKey: dbstore.TestDeleteIndexByID
+tags: [private]
 ```
 
 ```Go
@@ -3683,6 +3807,7 @@ func TestDeleteIndexByID(t *testing.T)
 
 ```
 searchKey: dbstore.TestDeleteIndexByIDMissingRow
+tags: [private]
 ```
 
 ```Go
@@ -3693,6 +3818,7 @@ func TestDeleteIndexByIDMissingRow(t *testing.T)
 
 ```
 searchKey: dbstore.TestDeleteIndexesWithoutRepository
+tags: [private]
 ```
 
 ```Go
@@ -3703,6 +3829,7 @@ func TestDeleteIndexesWithoutRepository(t *testing.T)
 
 ```
 searchKey: dbstore.TestDeleteOldIndexes
+tags: [private]
 ```
 
 ```Go
@@ -3713,6 +3840,7 @@ func TestDeleteOldIndexes(t *testing.T)
 
 ```
 searchKey: dbstore.TestStaleSourcedCommits
+tags: [private]
 ```
 
 ```Go
@@ -3723,6 +3851,7 @@ func TestStaleSourcedCommits(t *testing.T)
 
 ```
 searchKey: dbstore.TestRefreshCommitResolvability
+tags: [private]
 ```
 
 ```Go
@@ -3733,6 +3862,7 @@ func TestRefreshCommitResolvability(t *testing.T)
 
 ```
 searchKey: dbstore.TestUpdatePackages
+tags: [private]
 ```
 
 ```Go
@@ -3743,6 +3873,7 @@ func TestUpdatePackages(t *testing.T)
 
 ```
 searchKey: dbstore.TestUpdatePackagesEmpty
+tags: [private]
 ```
 
 ```Go
@@ -3753,6 +3884,7 @@ func TestUpdatePackagesEmpty(t *testing.T)
 
 ```
 searchKey: dbstore.TestUpdatePackageReferences
+tags: [private]
 ```
 
 ```Go
@@ -3763,6 +3895,7 @@ func TestUpdatePackageReferences(t *testing.T)
 
 ```
 searchKey: dbstore.TestUpdatePackageReferencesEmpty
+tags: [private]
 ```
 
 ```Go
@@ -3773,6 +3906,7 @@ func TestUpdatePackageReferencesEmpty(t *testing.T)
 
 ```
 searchKey: dbstore.TestUpdatePackageReferencesWithDuplicates
+tags: [private]
 ```
 
 ```Go
@@ -3783,16 +3917,18 @@ func TestUpdatePackageReferencesWithDuplicates(t *testing.T)
 
 ```
 searchKey: dbstore.TestRepoName
+tags: [private]
 ```
 
 ```Go
 func TestRepoName(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.store_test.go" href="#init.store_test.go">func init()</a>
 
 ```
 searchKey: dbstore.init
+tags: [private]
 ```
 
 ```Go
@@ -3803,6 +3939,7 @@ func init()
 
 ```
 searchKey: dbstore.TestGetUploadByID
+tags: [private]
 ```
 
 ```Go
@@ -3813,6 +3950,7 @@ func TestGetUploadByID(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetUploadByIDDeleted
+tags: [private]
 ```
 
 ```Go
@@ -3823,6 +3961,7 @@ func TestGetUploadByIDDeleted(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetQueuedUploadRank
+tags: [private]
 ```
 
 ```Go
@@ -3833,6 +3972,7 @@ func TestGetQueuedUploadRank(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetUploadsByIDs
+tags: [private]
 ```
 
 ```Go
@@ -3843,6 +3983,7 @@ func TestGetUploadsByIDs(t *testing.T)
 
 ```
 searchKey: dbstore.TestDeleteUploadsStuckUploading
+tags: [private]
 ```
 
 ```Go
@@ -3853,6 +3994,7 @@ func TestDeleteUploadsStuckUploading(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetUploads
+tags: [private]
 ```
 
 ```Go
@@ -3863,6 +4005,7 @@ func TestGetUploads(t *testing.T)
 
 ```
 searchKey: dbstore.TestInsertUploadUploading
+tags: [private]
 ```
 
 ```Go
@@ -3873,6 +4016,7 @@ func TestInsertUploadUploading(t *testing.T)
 
 ```
 searchKey: dbstore.TestInsertUploadQueued
+tags: [private]
 ```
 
 ```Go
@@ -3883,6 +4027,7 @@ func TestInsertUploadQueued(t *testing.T)
 
 ```
 searchKey: dbstore.TestInsertUploadWithAssociatedIndexID
+tags: [private]
 ```
 
 ```Go
@@ -3893,6 +4038,7 @@ func TestInsertUploadWithAssociatedIndexID(t *testing.T)
 
 ```
 searchKey: dbstore.TestMarkQueued
+tags: [private]
 ```
 
 ```Go
@@ -3903,6 +4049,7 @@ func TestMarkQueued(t *testing.T)
 
 ```
 searchKey: dbstore.TestMarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -3913,6 +4060,7 @@ func TestMarkFailed(t *testing.T)
 
 ```
 searchKey: dbstore.TestAddUploadPart
+tags: [private]
 ```
 
 ```Go
@@ -3923,6 +4071,7 @@ func TestAddUploadPart(t *testing.T)
 
 ```
 searchKey: dbstore.TestDeleteUploadByID
+tags: [private]
 ```
 
 ```Go
@@ -3933,6 +4082,7 @@ func TestDeleteUploadByID(t *testing.T)
 
 ```
 searchKey: dbstore.TestDeleteUploadByIDMissingRow
+tags: [private]
 ```
 
 ```Go
@@ -3943,6 +4093,7 @@ func TestDeleteUploadByIDMissingRow(t *testing.T)
 
 ```
 searchKey: dbstore.TestDeleteUploadsWithoutRepository
+tags: [private]
 ```
 
 ```Go
@@ -3953,6 +4104,7 @@ func TestDeleteUploadsWithoutRepository(t *testing.T)
 
 ```
 searchKey: dbstore.TestHardDeleteUploadByID
+tags: [private]
 ```
 
 ```Go
@@ -3963,6 +4115,7 @@ func TestHardDeleteUploadByID(t *testing.T)
 
 ```
 searchKey: dbstore.TestSoftDeleteOldUploads
+tags: [private]
 ```
 
 ```Go
@@ -3973,6 +4126,7 @@ func TestSoftDeleteOldUploads(t *testing.T)
 
 ```
 searchKey: dbstore.TestGetOldestCommitDate
+tags: [private]
 ```
 
 ```Go
@@ -3983,6 +4137,7 @@ func TestGetOldestCommitDate(t *testing.T)
 
 ```
 searchKey: dbstore.TestUpdateCommitedAt
+tags: [private]
 ```
 
 ```Go
@@ -3993,6 +4148,7 @@ func TestUpdateCommitedAt(t *testing.T)
 
 ```
 searchKey: dbstore.TestDefinitionDumps
+tags: [private]
 ```
 
 ```Go
@@ -4003,6 +4159,7 @@ func TestDefinitionDumps(t *testing.T)
 
 ```
 searchKey: dbstore.TestReferenceIDsAndFilters
+tags: [private]
 ```
 
 ```Go
@@ -4013,6 +4170,7 @@ func TestReferenceIDsAndFilters(t *testing.T)
 
 ```
 searchKey: dbstore.TestReferenceIDsAndFiltersVisibility
+tags: [private]
 ```
 
 ```Go
@@ -4023,6 +4181,7 @@ func TestReferenceIDsAndFiltersVisibility(t *testing.T)
 
 ```
 searchKey: dbstore.TestReferenceIDsAndFiltersRemoteVisibility
+tags: [private]
 ```
 
 ```Go
@@ -4033,6 +4192,7 @@ func TestReferenceIDsAndFiltersRemoteVisibility(t *testing.T)
 
 ```
 searchKey: dbstore.TestReferencesForUpload
+tags: [private]
 ```
 
 ```Go
@@ -4043,6 +4203,7 @@ func TestReferencesForUpload(t *testing.T)
 
 ```
 searchKey: dbstore.consumeScanner
+tags: [private]
 ```
 
 ```Go

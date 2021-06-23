@@ -14,10 +14,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="debug" href="#debug">var debug</a>
 
 ```
 searchKey: format_test.debug
+tags: [private]
 ```
 
 ```Go
@@ -28,6 +33,7 @@ var debug = flag.Bool("debug", false, "write .src files containing formatting in
 
 ```
 searchKey: format_test.tests
+tags: [private]
 ```
 
 ```Go
@@ -38,6 +44,7 @@ var tests = ...
 
 ```
 searchKey: format_test.sink
+tags: [private]
 ```
 
 ```Go
@@ -46,10 +53,15 @@ var sink []byte
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="array1" href="#array1">func array1(buf *bytes.Buffer, n int)</a>
 
 ```
 searchKey: format_test.array1
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +89,7 @@ var _ = [...]byte{
 
 ```
 searchKey: format_test.BenchmarkFormat
+tags: [private]
 ```
 
 ```Go
@@ -87,6 +100,7 @@ func BenchmarkFormat(b *testing.B)
 
 ```
 searchKey: format_test.ExampleNode
+tags: [private]
 ```
 
 ```Go

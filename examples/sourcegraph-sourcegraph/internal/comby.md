@@ -45,10 +45,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="combyPath" href="#combyPath">const combyPath</a>
 
 ```
 searchKey: comby.combyPath
+tags: [private]
 ```
 
 ```Go
@@ -57,11 +62,14 @@ const combyPath = "comby"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MatchHoleRegexp" href="#MatchHoleRegexp">var MatchHoleRegexp</a>
 
 ```
 searchKey: comby.MatchHoleRegexp
-tags: [exported]
 ```
 
 ```Go
@@ -72,6 +80,7 @@ var MatchHoleRegexp = lazyregexp.New(splitOnHolesPattern())
 
 ```
 searchKey: comby.matchRegexpPattern
+tags: [private]
 ```
 
 ```Go
@@ -82,6 +91,7 @@ var matchRegexpPattern = lazyregexp.New(`:\[(\w+)?~(.*)\]`)
 
 ```
 searchKey: comby.onMatchWhitespace
+tags: [private]
 ```
 
 ```Go
@@ -90,11 +100,14 @@ var onMatchWhitespace = lazyregexp.New(`[\s]+`)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Term" href="#Term">type Term interface</a>
 
 ```
 searchKey: comby.Term
-tags: [exported]
 ```
 
 ```Go
@@ -108,7 +121,6 @@ type Term interface {
 
 ```
 searchKey: comby.Literal
-tags: [exported]
 ```
 
 ```Go
@@ -119,6 +131,7 @@ type Literal string
 
 ```
 searchKey: comby.Literal.term
+tags: [private]
 ```
 
 ```Go
@@ -129,7 +142,6 @@ func (Literal) term()
 
 ```
 searchKey: comby.Literal.String
-tags: [exported]
 ```
 
 ```Go
@@ -140,7 +152,6 @@ func (t Literal) String() string
 
 ```
 searchKey: comby.Hole
-tags: [exported]
 ```
 
 ```Go
@@ -151,6 +162,7 @@ type Hole string
 
 ```
 searchKey: comby.Hole.term
+tags: [private]
 ```
 
 ```Go
@@ -161,7 +173,6 @@ func (Hole) term()
 
 ```
 searchKey: comby.Hole.String
-tags: [exported]
 ```
 
 ```Go
@@ -172,7 +183,6 @@ func (t Hole) String() string
 
 ```
 searchKey: comby.Input
-tags: [exported]
 ```
 
 ```Go
@@ -185,7 +195,6 @@ type Input interface {
 
 ```
 searchKey: comby.ZipPath
-tags: [exported]
 ```
 
 ```Go
@@ -196,7 +205,6 @@ type ZipPath string
 
 ```
 searchKey: comby.ZipPath.Value
-tags: [exported]
 ```
 
 ```Go
@@ -207,7 +215,6 @@ func (ZipPath) Value()
 
 ```
 searchKey: comby.DirPath
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +225,6 @@ type DirPath string
 
 ```
 searchKey: comby.DirPath.Value
-tags: [exported]
 ```
 
 ```Go
@@ -229,7 +235,6 @@ func (DirPath) Value()
 
 ```
 searchKey: comby.Args
-tags: [exported]
 ```
 
 ```Go
@@ -264,7 +269,6 @@ type Args struct {
 
 ```
 searchKey: comby.Args.String
-tags: [exported]
 ```
 
 ```Go
@@ -275,7 +279,6 @@ func (args Args) String() string
 
 ```
 searchKey: comby.Location
-tags: [exported]
 ```
 
 ```Go
@@ -292,7 +295,6 @@ Location is the location in a file
 
 ```
 searchKey: comby.Range
-tags: [exported]
 ```
 
 ```Go
@@ -308,7 +310,6 @@ Range is a range of start location to end location
 
 ```
 searchKey: comby.Match
-tags: [exported]
 ```
 
 ```Go
@@ -324,7 +325,6 @@ Match represents a range of matched characters and the matched content
 
 ```
 searchKey: comby.FileMatch
-tags: [exported]
 ```
 
 ```Go
@@ -340,7 +340,6 @@ FileMatch represents all the matches in a single file
 
 ```
 searchKey: comby.FileDiff
-tags: [exported]
 ```
 
 ```Go
@@ -354,10 +353,15 @@ FileDiff represents a diff for a file
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="exists" href="#exists">func exists() bool</a>
 
 ```
 searchKey: comby.exists
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +372,7 @@ func exists() bool
 
 ```
 searchKey: comby.rawArgs
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +383,7 @@ func rawArgs(args Args) (rawArgs []string)
 
 ```
 searchKey: comby.waitForCompletion
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +394,7 @@ func waitForCompletion(cmd *exec.Cmd, stdout, stderr io.ReadCloser, w io.Writer)
 
 ```
 searchKey: comby.kill
+tags: [private]
 ```
 
 ```Go
@@ -398,7 +405,6 @@ func kill(pid int)
 
 ```
 searchKey: comby.PipeTo
-tags: [exported]
 ```
 
 ```Go
@@ -409,7 +415,6 @@ func PipeTo(ctx context.Context, args Args, w io.Writer) (err error)
 
 ```
 searchKey: comby.Matches
-tags: [exported]
 ```
 
 ```Go
@@ -422,6 +427,7 @@ Matches returns all matches in all files for which comby finds matches.
 
 ```
 searchKey: comby.splitOnHolesPattern
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +438,7 @@ func splitOnHolesPattern() string
 
 ```
 searchKey: comby.parseTemplate
+tags: [private]
 ```
 
 ```Go
@@ -444,7 +451,6 @@ parseTemplate parses a comby pattern to a list of Terms where a Term is either a
 
 ```
 searchKey: comby.StructuralPatToRegexpQuery
-tags: [exported]
 ```
 
 ```Go
@@ -459,6 +465,7 @@ Example: "ParseInt(:[args]) if err != nil" -> "ParseInt(.*)\s+if\s+err!=\s+nil"
 
 ```
 searchKey: comby.TestMatchesUnmarshalling
+tags: [private]
 ```
 
 ```Go
@@ -469,6 +476,7 @@ func TestMatchesUnmarshalling(t *testing.T)
 
 ```
 searchKey: comby.TestMatchesInZip
+tags: [private]
 ```
 
 ```Go
@@ -479,6 +487,7 @@ func TestMatchesInZip(t *testing.T)
 
 ```
 searchKey: comby.TestStructuralPatToRegexpQuery
+tags: [private]
 ```
 
 ```Go

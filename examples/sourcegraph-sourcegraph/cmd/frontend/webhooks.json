@@ -4,9 +4,7 @@
     "identifier": "webhooks",
     "newPage": true,
     "searchKey": "cmd/frontend/webhooks",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "dsn",
                 "newPage": false,
                 "searchKey": "webhooks.dsn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "eventPayload",
                 "newPage": false,
                 "searchKey": "webhooks.eventPayload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,9 +87,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -107,9 +105,7 @@
                 "identifier": "Registerer",
                 "newPage": false,
                 "searchKey": "webhooks.Registerer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -129,9 +125,7 @@
                 "identifier": "WebhookHandler",
                 "newPage": false,
                 "searchKey": "webhooks.WebhookHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -151,9 +145,7 @@
                 "identifier": "GitHubWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.GitHubWebhook",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -171,9 +163,7 @@
                       "identifier": "GitHubWebhook.ServeHTTP",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.ServeHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -193,9 +183,7 @@
                       "identifier": "GitHubWebhook.Dispatch",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.Dispatch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -215,9 +203,7 @@
                       "identifier": "GitHubWebhook.Register",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.Register",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -237,7 +223,9 @@
                       "identifier": "GitHubWebhook.getExternalService",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.getExternalService",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -257,7 +245,9 @@
                       "identifier": "GitHubWebhook.findAndValidateExternalService",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.findAndValidateExternalService",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -283,9 +273,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -303,7 +291,9 @@
                 "identifier": "TestGithubWebhookDispatchSuccess",
                 "newPage": false,
                 "searchKey": "webhooks.TestGithubWebhookDispatchSuccess",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -323,7 +313,9 @@
                 "identifier": "TestGithubWebhookDispatchNoHandler",
                 "newPage": false,
                 "searchKey": "webhooks.TestGithubWebhookDispatchNoHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -343,7 +335,9 @@
                 "identifier": "TestGithubWebhookDispatchSuccessMultiple",
                 "newPage": false,
                 "searchKey": "webhooks.TestGithubWebhookDispatchSuccessMultiple",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -363,7 +357,9 @@
                 "identifier": "TestGithubWebhookDispatchError",
                 "newPage": false,
                 "searchKey": "webhooks.TestGithubWebhookDispatchError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -383,7 +379,9 @@
                 "identifier": "errString",
                 "newPage": false,
                 "searchKey": "webhooks.errString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -403,7 +401,9 @@
                 "identifier": "TestGithubWebhookExternalServices",
                 "newPage": false,
                 "searchKey": "webhooks.TestGithubWebhookExternalServices",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -423,7 +423,9 @@
                 "identifier": "marshalJSON",
                 "newPage": false,
                 "searchKey": "webhooks.marshalJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -443,7 +445,9 @@
                 "identifier": "sign",
                 "newPage": false,
                 "searchKey": "webhooks.sign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

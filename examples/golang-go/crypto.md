@@ -85,15 +85,10 @@ Package crypto collects common cryptographic constants.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="MD4" href="#MD4">const MD4</a>
 
 ```
 searchKey: crypto.MD4
-tags: [exported]
 ```
 
 ```Go
@@ -105,7 +100,6 @@ const MD4 Hash = 1 + iota // import golang.org/x/crypto/md4
 
 ```
 searchKey: crypto.MD5
-tags: [exported]
 ```
 
 ```Go
@@ -117,7 +111,6 @@ const MD5 // import crypto/md5
 
 ```
 searchKey: crypto.SHA1
-tags: [exported]
 ```
 
 ```Go
@@ -129,7 +122,6 @@ const SHA1 // import crypto/sha1
 
 ```
 searchKey: crypto.SHA224
-tags: [exported]
 ```
 
 ```Go
@@ -141,7 +133,6 @@ const SHA224 // import crypto/sha256
 
 ```
 searchKey: crypto.SHA256
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +144,6 @@ const SHA256 // import crypto/sha256
 
 ```
 searchKey: crypto.SHA384
-tags: [exported]
 ```
 
 ```Go
@@ -165,7 +155,6 @@ const SHA384 // import crypto/sha512
 
 ```
 searchKey: crypto.SHA512
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +166,6 @@ const SHA512 // import crypto/sha512
 
 ```
 searchKey: crypto.MD5SHA1
-tags: [exported]
 ```
 
 ```Go
@@ -189,7 +177,6 @@ const MD5SHA1 // no implementation; MD5+SHA1 used for TLS RSA
 
 ```
 searchKey: crypto.RIPEMD160
-tags: [exported]
 ```
 
 ```Go
@@ -201,7 +188,6 @@ const RIPEMD160 // import golang.org/x/crypto/ripemd160
 
 ```
 searchKey: crypto.SHA3_224
-tags: [exported]
 ```
 
 ```Go
@@ -213,7 +199,6 @@ const SHA3_224 // import golang.org/x/crypto/sha3
 
 ```
 searchKey: crypto.SHA3_256
-tags: [exported]
 ```
 
 ```Go
@@ -225,7 +210,6 @@ const SHA3_256 // import golang.org/x/crypto/sha3
 
 ```
 searchKey: crypto.SHA3_384
-tags: [exported]
 ```
 
 ```Go
@@ -237,7 +221,6 @@ const SHA3_384 // import golang.org/x/crypto/sha3
 
 ```
 searchKey: crypto.SHA3_512
-tags: [exported]
 ```
 
 ```Go
@@ -249,7 +232,6 @@ const SHA3_512 // import golang.org/x/crypto/sha3
 
 ```
 searchKey: crypto.SHA512_224
-tags: [exported]
 ```
 
 ```Go
@@ -261,7 +243,6 @@ const SHA512_224 // import crypto/sha512
 
 ```
 searchKey: crypto.SHA512_256
-tags: [exported]
 ```
 
 ```Go
@@ -273,7 +254,6 @@ const SHA512_256 // import crypto/sha512
 
 ```
 searchKey: crypto.BLAKE2s_256
-tags: [exported]
 ```
 
 ```Go
@@ -285,7 +265,6 @@ const BLAKE2s_256 // import golang.org/x/crypto/blake2s
 
 ```
 searchKey: crypto.BLAKE2b_256
-tags: [exported]
 ```
 
 ```Go
@@ -297,7 +276,6 @@ const BLAKE2b_256 // import golang.org/x/crypto/blake2b
 
 ```
 searchKey: crypto.BLAKE2b_384
-tags: [exported]
 ```
 
 ```Go
@@ -309,7 +287,6 @@ const BLAKE2b_384 // import golang.org/x/crypto/blake2b
 
 ```
 searchKey: crypto.BLAKE2b_512
-tags: [exported]
 ```
 
 ```Go
@@ -321,6 +298,7 @@ const BLAKE2b_512 // import golang.org/x/crypto/blake2b
 
 ```
 searchKey: crypto.maxHash
+tags: [private]
 ```
 
 ```Go
@@ -329,14 +307,11 @@ const maxHash
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="digestSizes" href="#digestSizes">var digestSizes</a>
 
 ```
 searchKey: crypto.digestSizes
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +322,7 @@ var digestSizes = ...
 
 ```
 searchKey: crypto.hashes
+tags: [private]
 ```
 
 ```Go
@@ -355,15 +331,10 @@ var hashes = make([]func() hash.Hash, maxHash)
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Hash" href="#Hash">type Hash uint</a>
 
 ```
 searchKey: crypto.Hash
-tags: [exported]
 ```
 
 ```Go
@@ -376,7 +347,6 @@ Hash identifies a cryptographic hash function that is implemented in another pac
 
 ```
 searchKey: crypto.Hash.HashFunc
-tags: [exported]
 ```
 
 ```Go
@@ -389,7 +359,6 @@ HashFunc simply returns the value of h so that Hash implements SignerOpts.
 
 ```
 searchKey: crypto.Hash.String
-tags: [exported]
 ```
 
 ```Go
@@ -400,7 +369,6 @@ func (h Hash) String() string
 
 ```
 searchKey: crypto.Hash.Size
-tags: [exported]
 ```
 
 ```Go
@@ -413,7 +381,6 @@ Size returns the length, in bytes, of a digest resulting from the given hash fun
 
 ```
 searchKey: crypto.Hash.New
-tags: [exported]
 ```
 
 ```Go
@@ -426,7 +393,6 @@ New returns a new hash.Hash calculating the given hash function. New panics if t
 
 ```
 searchKey: crypto.Hash.Available
-tags: [exported]
 ```
 
 ```Go
@@ -439,7 +405,6 @@ Available reports whether the given hash function is linked into the binary.
 
 ```
 searchKey: crypto.PublicKey
-tags: [exported]
 ```
 
 ```Go
@@ -452,7 +417,6 @@ PublicKey represents a public key using an unspecified algorithm.
 
 ```
 searchKey: crypto.PrivateKey
-tags: [exported]
 ```
 
 ```Go
@@ -465,7 +429,6 @@ PrivateKey represents a private key using an unspecified algorithm.
 
 ```
 searchKey: crypto.Signer
-tags: [exported]
 ```
 
 ```Go
@@ -497,7 +460,6 @@ Signer is an interface for an opaque private key that can be used for signing op
 
 ```
 searchKey: crypto.SignerOpts
-tags: [exported]
 ```
 
 ```Go
@@ -515,7 +477,6 @@ SignerOpts contains options for signing with a Signer.
 
 ```
 searchKey: crypto.Decrypter
-tags: [exported]
 ```
 
 ```Go
@@ -537,7 +498,6 @@ Decrypter is an interface for an opaque private key that can be used for asymmet
 
 ```
 searchKey: crypto.DecrypterOpts
-tags: [exported]
 ```
 
 ```Go
@@ -546,15 +506,10 @@ type DecrypterOpts interface{}
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="RegisterHash" href="#RegisterHash">func RegisterHash(h Hash, f func() hash.Hash)</a>
 
 ```
 searchKey: crypto.RegisterHash
-tags: [exported]
 ```
 
 ```Go
@@ -567,6 +522,7 @@ RegisterHash registers a function that returns a new instance of the given hash 
 
 ```
 searchKey: crypto.TestRC4OutOfBoundsWrite
+tags: [private]
 ```
 
 ```Go
@@ -577,6 +533,7 @@ func TestRC4OutOfBoundsWrite(t *testing.T)
 
 ```
 searchKey: crypto.TestCTROutOfBoundsWrite
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +544,7 @@ func TestCTROutOfBoundsWrite(t *testing.T)
 
 ```
 searchKey: crypto.TestOFBOutOfBoundsWrite
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +555,7 @@ func TestOFBOutOfBoundsWrite(t *testing.T)
 
 ```
 searchKey: crypto.TestCFBEncryptOutOfBoundsWrite
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +566,7 @@ func TestCFBEncryptOutOfBoundsWrite(t *testing.T)
 
 ```
 searchKey: crypto.TestCFBDecryptOutOfBoundsWrite
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +577,7 @@ func TestCFBDecryptOutOfBoundsWrite(t *testing.T)
 
 ```
 searchKey: crypto.testBlock
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +588,7 @@ func testBlock(t *testing.T, name string, newCipher func(cipher.Block, []byte) c
 
 ```
 searchKey: crypto.test
+tags: [private]
 ```
 
 ```Go

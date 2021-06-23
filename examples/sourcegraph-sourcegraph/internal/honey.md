@@ -13,16 +13,21 @@ package honey is a lightweight wrapper around libhoney which initializes honeyco
     * [func Event(dataset string) *libhoney.Event](#Event)
     * [func EventWithFields(dataset string, fields map[string]interface{}) *libhoney.Event](#EventWithFields)
     * [func Builder(dataset string) *libhoney.Builder](#Builder)
-    * [func init()](#init)
+    * [func init()](#init.honey.go)
     * [func SearchEvent(ctx context.Context, args SearchEventArgs) *libhoney.Event](#SearchEvent)
 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="apiKey" href="#apiKey">var apiKey</a>
 
 ```
 searchKey: honey.apiKey
+tags: [private]
 ```
 
 ```Go
@@ -31,11 +36,14 @@ var apiKey = env.Get("HONEYCOMB_TEAM", "", "The key used for Honeycomb event tra
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SearchEventArgs" href="#SearchEventArgs">type SearchEventArgs struct</a>
 
 ```
 searchKey: honey.SearchEventArgs
-tags: [exported]
 ```
 
 ```Go
@@ -52,11 +60,14 @@ type SearchEventArgs struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Enabled" href="#Enabled">func Enabled() bool</a>
 
 ```
 searchKey: honey.Enabled
-tags: [exported]
 ```
 
 ```Go
@@ -69,7 +80,6 @@ Enabled returns true if honeycomb has been configured to run.
 
 ```
 searchKey: honey.Event
-tags: [exported]
 ```
 
 ```Go
@@ -82,7 +92,6 @@ Event creates an event for logging to dataset. Event.Send will only work if Enab
 
 ```
 searchKey: honey.EventWithFields
-tags: [exported]
 ```
 
 ```Go
@@ -95,7 +104,6 @@ EventWithFields creates an event for logging to the given dataset. The given fie
 
 ```
 searchKey: honey.Builder
-tags: [exported]
 ```
 
 ```Go
@@ -104,10 +112,11 @@ func Builder(dataset string) *libhoney.Builder
 
 Builder creates a builder for logging to a dataset. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.honey.go" href="#init.honey.go">func init()</a>
 
 ```
 searchKey: honey.init
+tags: [private]
 ```
 
 ```Go
@@ -118,7 +127,6 @@ func init()
 
 ```
 searchKey: honey.SearchEvent
-tags: [exported]
 ```
 
 ```Go

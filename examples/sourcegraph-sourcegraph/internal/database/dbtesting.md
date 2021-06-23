@@ -26,11 +26,14 @@ Package dbtesting provides database test helpers.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MockHashPassword" href="#MockHashPassword">var MockHashPassword</a>
 
 ```
 searchKey: dbtesting.MockHashPassword
-tags: [exported]
 ```
 
 ```Go
@@ -43,7 +46,6 @@ MockHashPassword if non-nil is used instead of database.hashPassword. This is us
 
 ```
 searchKey: dbtesting.MockValidPassword
-tags: [exported]
 ```
 
 ```Go
@@ -54,7 +56,6 @@ var MockValidPassword func(hash, password string) bool
 
 ```
 searchKey: dbtesting.BeforeTest
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +68,6 @@ BeforeTest functions are called before each test is run (by SetupGlobalTestDB).
 
 ```
 searchKey: dbtesting.DBNameSuffix
-tags: [exported]
 ```
 
 ```Go
@@ -80,6 +80,7 @@ DBNameSuffix must be set by DB test packages at init time to a value that is uni
 
 ```
 searchKey: dbtesting.connectOnce
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +91,7 @@ var connectOnce sync.Once
 
 ```
 searchKey: dbtesting.connectErr
+tags: [private]
 ```
 
 ```Go
@@ -98,11 +100,14 @@ var connectErr error
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MockDB" href="#MockDB">type MockDB struct{}</a>
 
 ```
 searchKey: dbtesting.MockDB
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +120,6 @@ MockDB implements the dbutil.DB interface and is intended to be used in tests th
 
 ```
 searchKey: dbtesting.MockDB.QueryContext
-tags: [exported]
 ```
 
 ```Go
@@ -126,7 +130,6 @@ func (db *MockDB) QueryContext(ctx context.Context, q string, args ...interface{
 
 ```
 searchKey: dbtesting.MockDB.ExecContext
-tags: [exported]
 ```
 
 ```Go
@@ -137,7 +140,6 @@ func (db *MockDB) ExecContext(ctx context.Context, query string, args ...interfa
 
 ```
 searchKey: dbtesting.MockDB.QueryRowContext
-tags: [exported]
 ```
 
 ```Go
@@ -146,10 +148,15 @@ func (db *MockDB) QueryRowContext(ctx context.Context, query string, args ...int
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="useFastPasswordMocks" href="#useFastPasswordMocks">func useFastPasswordMocks()</a>
 
 ```
 searchKey: dbtesting.useFastPasswordMocks
+tags: [private]
 ```
 
 ```Go
@@ -160,7 +167,6 @@ func useFastPasswordMocks()
 
 ```
 searchKey: dbtesting.SetupGlobalTestDB
-tags: [exported]
 ```
 
 ```Go
@@ -175,7 +181,6 @@ Callers (other than github.com/sourcegraph/sourcegraph/internal/database) must s
 
 ```
 searchKey: dbtesting.GetDB
-tags: [exported]
 ```
 
 ```Go
@@ -190,6 +195,7 @@ New callers and callers actually wishing to migrate fully away from a global DB 
 
 ```
 searchKey: dbtesting.emptyDBPreserveSchema
+tags: [private]
 ```
 
 ```Go
@@ -200,6 +206,7 @@ func emptyDBPreserveSchema(t testing.TB, d *sql.DB)
 
 ```
 searchKey: dbtesting.initTest
+tags: [private]
 ```
 
 ```Go

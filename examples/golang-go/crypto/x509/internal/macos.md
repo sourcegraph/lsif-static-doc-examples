@@ -66,10 +66,15 @@ Package macOS provides cgo-less wrappers for Core Foundation and Security.framew
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="kCFAllocatorDefault" href="#kCFAllocatorDefault">const kCFAllocatorDefault</a>
 
 ```
 searchKey: macOS.kCFAllocatorDefault
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +85,7 @@ const kCFAllocatorDefault = 0
 
 ```
 searchKey: macOS.kCFStringEncodingUTF8
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +96,7 @@ const kCFStringEncodingUTF8 = 0x08000100
 
 ```
 searchKey: macOS.kCFNumberSInt32Type
+tags: [private]
 ```
 
 ```Go
@@ -100,7 +107,6 @@ const kCFNumberSInt32Type = 3
 
 ```
 searchKey: macOS.SecTrustSettingsResultInvalid
-tags: [exported]
 ```
 
 ```Go
@@ -111,7 +117,6 @@ const SecTrustSettingsResultInvalid SecTrustSettingsResult = iota
 
 ```
 searchKey: macOS.SecTrustSettingsResultTrustRoot
-tags: [exported]
 ```
 
 ```Go
@@ -122,7 +127,6 @@ const SecTrustSettingsResultTrustRoot
 
 ```
 searchKey: macOS.SecTrustSettingsResultTrustAsRoot
-tags: [exported]
 ```
 
 ```Go
@@ -133,7 +137,6 @@ const SecTrustSettingsResultTrustAsRoot
 
 ```
 searchKey: macOS.SecTrustSettingsResultDeny
-tags: [exported]
 ```
 
 ```Go
@@ -144,7 +147,6 @@ const SecTrustSettingsResultDeny
 
 ```
 searchKey: macOS.SecTrustSettingsResultUnspecified
-tags: [exported]
 ```
 
 ```Go
@@ -155,7 +157,6 @@ const SecTrustSettingsResultUnspecified
 
 ```
 searchKey: macOS.SecTrustSettingsDomainUser
-tags: [exported]
 ```
 
 ```Go
@@ -166,7 +167,6 @@ const SecTrustSettingsDomainUser SecTrustSettingsDomain = iota
 
 ```
 searchKey: macOS.SecTrustSettingsDomainAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +177,6 @@ const SecTrustSettingsDomainAdmin
 
 ```
 searchKey: macOS.SecTrustSettingsDomainSystem
-tags: [exported]
 ```
 
 ```Go
@@ -188,6 +187,7 @@ const SecTrustSettingsDomainSystem
 
 ```
 searchKey: macOS.errSecNoTrustSettings
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +198,7 @@ const errSecNoTrustSettings = -25263
 
 ```
 searchKey: macOS.kSecFormatX509Cert
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +209,7 @@ const kSecFormatX509Cert int32 = 9
 
 ```
 searchKey: macOS.errSecItemNotFound
+tags: [private]
 ```
 
 ```Go
@@ -216,11 +218,14 @@ const errSecItemNotFound = -25300
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SecTrustSettingsResultKey" href="#SecTrustSettingsResultKey">var SecTrustSettingsResultKey</a>
 
 ```
 searchKey: macOS.SecTrustSettingsResultKey
-tags: [exported]
 ```
 
 ```Go
@@ -231,7 +236,6 @@ var SecTrustSettingsResultKey = StringToCFString("kSecTrustSettingsResult")
 
 ```
 searchKey: macOS.SecTrustSettingsPolicy
-tags: [exported]
 ```
 
 ```Go
@@ -242,7 +246,6 @@ var SecTrustSettingsPolicy = StringToCFString("kSecTrustSettingsPolicy")
 
 ```
 searchKey: macOS.SecTrustSettingsPolicyString
-tags: [exported]
 ```
 
 ```Go
@@ -253,7 +256,6 @@ var SecTrustSettingsPolicyString = StringToCFString("kSecTrustSettingsPolicyStri
 
 ```
 searchKey: macOS.SecPolicyOid
-tags: [exported]
 ```
 
 ```Go
@@ -264,7 +266,6 @@ var SecPolicyOid = StringToCFString("SecPolicyOid")
 
 ```
 searchKey: macOS.SecPolicyAppleSSL
-tags: [exported]
 ```
 
 ```Go
@@ -276,7 +277,6 @@ var SecPolicyAppleSSL = StringToCFString("1.2.840.113635.100.1.3") // defined by
 
 ```
 searchKey: macOS.ErrNoTrustSettings
-tags: [exported]
 ```
 
 ```Go
@@ -285,11 +285,14 @@ var ErrNoTrustSettings = errors.New("no trust settings found")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="CFRef" href="#CFRef">type CFRef uintptr</a>
 
 ```
 searchKey: macOS.CFRef
-tags: [exported]
 ```
 
 ```Go
@@ -302,7 +305,6 @@ CFRef is an opaque reference to a Core Foundation object. It is a pointer, but t
 
 ```
 searchKey: macOS.CFDictionaryGetValueIfPresent
-tags: [exported]
 ```
 
 ```Go
@@ -313,7 +315,6 @@ func CFDictionaryGetValueIfPresent(dict CFRef, key CFString) (value CFRef, ok bo
 
 ```
 searchKey: macOS.CFArrayGetValueAtIndex
-tags: [exported]
 ```
 
 ```Go
@@ -324,7 +325,6 @@ func CFArrayGetValueAtIndex(array CFRef, index int) CFRef
 
 ```
 searchKey: macOS.SecTrustSettingsCopyCertificates
-tags: [exported]
 ```
 
 ```Go
@@ -335,7 +335,6 @@ func SecTrustSettingsCopyCertificates(domain SecTrustSettingsDomain) (certArray 
 
 ```
 searchKey: macOS.SecItemExport
-tags: [exported]
 ```
 
 ```Go
@@ -346,7 +345,6 @@ func SecItemExport(cert CFRef) (data CFRef, err error)
 
 ```
 searchKey: macOS.SecTrustSettingsCopyTrustSettings
-tags: [exported]
 ```
 
 ```Go
@@ -357,7 +355,6 @@ func SecTrustSettingsCopyTrustSettings(cert CFRef, domain SecTrustSettingsDomain
 
 ```
 searchKey: macOS.SecPolicyCopyProperties
-tags: [exported]
 ```
 
 ```Go
@@ -368,7 +365,6 @@ func SecPolicyCopyProperties(policy CFRef) CFRef
 
 ```
 searchKey: macOS.CFString
-tags: [exported]
 ```
 
 ```Go
@@ -379,7 +375,6 @@ type CFString CFRef
 
 ```
 searchKey: macOS.StringToCFString
-tags: [exported]
 ```
 
 ```Go
@@ -392,7 +387,6 @@ StringToCFString returns a copy of the UTF-8 contents of s as a new CFString.
 
 ```
 searchKey: macOS.SecTrustSettingsResult
-tags: [exported]
 ```
 
 ```Go
@@ -403,7 +397,6 @@ type SecTrustSettingsResult int32
 
 ```
 searchKey: macOS.SecTrustSettingsDomain
-tags: [exported]
 ```
 
 ```Go
@@ -414,7 +407,6 @@ type SecTrustSettingsDomain int32
 
 ```
 searchKey: macOS.OSStatus
-tags: [exported]
 ```
 
 ```Go
@@ -428,7 +420,6 @@ type OSStatus struct {
 
 ```
 searchKey: macOS.OSStatus.Error
-tags: [exported]
 ```
 
 ```Go
@@ -437,11 +428,14 @@ func (s OSStatus) Error() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="CFDataToSlice" href="#CFDataToSlice">func CFDataToSlice(data CFRef) []byte</a>
 
 ```
 searchKey: macOS.CFDataToSlice
-tags: [exported]
 ```
 
 ```Go
@@ -454,6 +448,7 @@ CFDataToSlice returns a copy of the contents of data as a bytes slice.
 
 ```
 searchKey: macOS.x509_CFStringCreateWithBytes_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -464,6 +459,7 @@ func x509_CFStringCreateWithBytes_trampoline()
 
 ```
 searchKey: macOS.x509_CFDictionaryGetValueIfPresent_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -474,7 +470,6 @@ func x509_CFDictionaryGetValueIfPresent_trampoline()
 
 ```
 searchKey: macOS.CFNumberGetValue
-tags: [exported]
 ```
 
 ```Go
@@ -485,6 +480,7 @@ func CFNumberGetValue(num CFRef) (int32, error)
 
 ```
 searchKey: macOS.x509_CFNumberGetValue_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -495,7 +491,6 @@ func x509_CFNumberGetValue_trampoline()
 
 ```
 searchKey: macOS.CFDataGetLength
-tags: [exported]
 ```
 
 ```Go
@@ -506,6 +501,7 @@ func CFDataGetLength(data CFRef) int
 
 ```
 searchKey: macOS.x509_CFDataGetLength_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -516,7 +512,6 @@ func x509_CFDataGetLength_trampoline()
 
 ```
 searchKey: macOS.CFDataGetBytePtr
-tags: [exported]
 ```
 
 ```Go
@@ -527,6 +522,7 @@ func CFDataGetBytePtr(data CFRef) uintptr
 
 ```
 searchKey: macOS.x509_CFDataGetBytePtr_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -537,7 +533,6 @@ func x509_CFDataGetBytePtr_trampoline()
 
 ```
 searchKey: macOS.CFArrayGetCount
-tags: [exported]
 ```
 
 ```Go
@@ -548,6 +543,7 @@ func CFArrayGetCount(array CFRef) int
 
 ```
 searchKey: macOS.x509_CFArrayGetCount_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -558,6 +554,7 @@ func x509_CFArrayGetCount_trampoline()
 
 ```
 searchKey: macOS.x509_CFArrayGetValueAtIndex_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -568,7 +565,6 @@ func x509_CFArrayGetValueAtIndex_trampoline()
 
 ```
 searchKey: macOS.CFEqual
-tags: [exported]
 ```
 
 ```Go
@@ -579,6 +575,7 @@ func CFEqual(a, b CFRef) bool
 
 ```
 searchKey: macOS.x509_CFEqual_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -589,7 +586,6 @@ func x509_CFEqual_trampoline()
 
 ```
 searchKey: macOS.CFRelease
-tags: [exported]
 ```
 
 ```Go
@@ -600,6 +596,7 @@ func CFRelease(ref CFRef)
 
 ```
 searchKey: macOS.x509_CFRelease_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +607,7 @@ func x509_CFRelease_trampoline()
 
 ```
 searchKey: macOS.syscall
+tags: [private]
 ```
 
 ```Go
@@ -622,6 +620,7 @@ syscall is implemented in the runtime package (runtime/sys_darwin.go)
 
 ```
 searchKey: macOS.x509_SecTrustSettingsCopyCertificates_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -632,6 +631,7 @@ func x509_SecTrustSettingsCopyCertificates_trampoline()
 
 ```
 searchKey: macOS.x509_SecItemExport_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +642,7 @@ func x509_SecItemExport_trampoline()
 
 ```
 searchKey: macOS.x509_SecTrustSettingsCopyTrustSettings_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -652,6 +653,7 @@ func x509_SecTrustSettingsCopyTrustSettings_trampoline()
 
 ```
 searchKey: macOS.x509_SecPolicyCopyProperties_trampoline
+tags: [private]
 ```
 
 ```Go

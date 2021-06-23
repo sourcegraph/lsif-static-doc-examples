@@ -10,10 +10,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleSum256" href="#ExampleSum256">func ExampleSum256()</a>
 
 ```
 searchKey: sha256_test.ExampleSum256
+tags: [private]
 ```
 
 ```Go
@@ -24,6 +29,7 @@ func ExampleSum256()
 
 ```
 searchKey: sha256_test.ExampleNew
+tags: [private]
 ```
 
 ```Go
@@ -34,6 +40,7 @@ func ExampleNew()
 
 ```
 searchKey: sha256_test.ExampleNew_file
+tags: [private]
 ```
 
 ```Go

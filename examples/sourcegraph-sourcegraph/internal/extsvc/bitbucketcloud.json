@@ -4,7 +4,9 @@
     "identifier": "bitbucketcloud",
     "newPage": true,
     "searchKey": "internal/extsvc/bitbucketcloud",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "rateLimitRequestsPerSecond",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.rateLimitRequestsPerSecond",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "RateLimitMaxBurstRequests",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.RateLimitMaxBurstRequests",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -85,7 +89,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "requestCounter",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.requestCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +131,9 @@
                 "identifier": "normalizer",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.normalizer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +153,9 @@
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -166,7 +178,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -184,9 +198,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -204,9 +216,7 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.NewClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -226,9 +236,7 @@
                       "identifier": "NewTestClient",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.NewTestClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -248,9 +256,7 @@
                       "identifier": "Client.Repos",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.Client.Repos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -270,7 +276,9 @@
                       "identifier": "Client.page",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.Client.page",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -290,7 +298,9 @@
                       "identifier": "Client.reqPage",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.Client.reqPage",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -310,7 +320,9 @@
                       "identifier": "Client.do",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.Client.do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -330,7 +342,9 @@
                       "identifier": "Client.authenticate",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.Client.authenticate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -353,9 +367,7 @@
                 "identifier": "PageToken",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.PageToken",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -373,9 +385,7 @@
                       "identifier": "PageToken.HasMore",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.PageToken.HasMore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -395,9 +405,7 @@
                       "identifier": "PageToken.Values",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.PageToken.Values",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,9 +428,7 @@
                 "identifier": "Repo",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.Repo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -442,9 +448,7 @@
                 "identifier": "Links",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.Links",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -464,9 +468,7 @@
                 "identifier": "CloneLinks",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.CloneLinks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -484,9 +486,7 @@
                       "identifier": "CloneLinks.HTTPS",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.CloneLinks.HTTPS",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -509,9 +509,7 @@
                 "identifier": "Link",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.Link",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -531,7 +529,9 @@
                 "identifier": "httpError",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.httpError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -549,7 +549,9 @@
                       "identifier": "httpError.Error",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.httpError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -569,7 +571,9 @@
                       "identifier": "httpError.Unauthorized",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.httpError.Unauthorized",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -589,7 +593,9 @@
                       "identifier": "httpError.NotFound",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.httpError.NotFound",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -615,7 +621,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -633,9 +641,7 @@
                 "identifier": "GetenvTestBitbucketCloudUsername",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.GetenvTestBitbucketCloudUsername",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -655,7 +661,9 @@
                 "identifier": "normalize",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.normalize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -675,7 +683,9 @@
                 "identifier": "TestClient_Repos",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.TestClient_Repos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

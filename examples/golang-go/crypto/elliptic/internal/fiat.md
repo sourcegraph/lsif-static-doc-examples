@@ -42,10 +42,15 @@ Package fiat implements prime order fields using formally verified algorithms fr
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="p521ZeroEncoding" href="#p521ZeroEncoding">var p521ZeroEncoding</a>
 
 ```
 searchKey: fiat.p521ZeroEncoding
+tags: [private]
 ```
 
 ```Go
@@ -54,11 +59,14 @@ var p521ZeroEncoding = new(P521Element).Bytes()
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="P521Element" href="#P521Element">type P521Element struct</a>
 
 ```
 searchKey: fiat.P521Element
-tags: [exported]
 ```
 
 ```Go
@@ -82,7 +90,6 @@ The zero value is a valid zero element.
 
 ```
 searchKey: fiat.P521Element.One
-tags: [exported]
 ```
 
 ```Go
@@ -95,7 +102,6 @@ One sets e = 1, and returns e.
 
 ```
 searchKey: fiat.P521Element.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -108,7 +114,6 @@ Equal returns 1 if e == t, and zero otherwise.
 
 ```
 searchKey: fiat.P521Element.IsZero
-tags: [exported]
 ```
 
 ```Go
@@ -121,7 +126,6 @@ IsZero returns 1 if e == 0, and zero otherwise.
 
 ```
 searchKey: fiat.P521Element.Set
-tags: [exported]
 ```
 
 ```Go
@@ -134,7 +138,6 @@ Set sets e = t, and returns e.
 
 ```
 searchKey: fiat.P521Element.Bytes
-tags: [exported]
 ```
 
 ```Go
@@ -147,7 +150,6 @@ Bytes returns the 66-byte little-endian encoding of e.
 
 ```
 searchKey: fiat.P521Element.SetBytes
-tags: [exported]
 ```
 
 ```Go
@@ -160,7 +162,6 @@ SetBytes sets e = v, where v is a little-endian 66-byte encoding, and returns e.
 
 ```
 searchKey: fiat.P521Element.Add
-tags: [exported]
 ```
 
 ```Go
@@ -173,7 +174,6 @@ Add sets e = t1 + t2, and returns e.
 
 ```
 searchKey: fiat.P521Element.Sub
-tags: [exported]
 ```
 
 ```Go
@@ -186,7 +186,6 @@ Sub sets e = t1 - t2, and returns e.
 
 ```
 searchKey: fiat.P521Element.Mul
-tags: [exported]
 ```
 
 ```Go
@@ -199,7 +198,6 @@ Mul sets e = t1 * t2, and returns e.
 
 ```
 searchKey: fiat.P521Element.Square
-tags: [exported]
 ```
 
 ```Go
@@ -212,7 +210,6 @@ Square sets e = t * t, and returns e.
 
 ```
 searchKey: fiat.P521Element.Select
-tags: [exported]
 ```
 
 ```Go
@@ -225,7 +222,6 @@ Select sets e to a if cond == 1, and to b if cond == 0.
 
 ```
 searchKey: fiat.P521Element.Invert
-tags: [exported]
 ```
 
 ```Go
@@ -240,6 +236,7 @@ If t == 0, Invert returns e = 0.
 
 ```
 searchKey: fiat.p521Uint1
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +247,7 @@ type p521Uint1 uint8
 
 ```
 searchKey: fiat.p521AddcarryxU64
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +260,7 @@ p521AddcarryxU64 is a thin wrapper around bits.Add64 that uses p521Uint1 rather 
 
 ```
 searchKey: fiat.p521SubborrowxU64
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +273,7 @@ p521SubborrowxU64 is a thin wrapper around bits.Sub64 that uses p521Uint1 rather
 
 ```
 searchKey: fiat.p521Int1
+tags: [private]
 ```
 
 ```Go
@@ -282,10 +282,15 @@ type p521Int1 int8
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="p521AddcarryxU58" href="#p521AddcarryxU58">func p521AddcarryxU58(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)</a>
 
 ```
 searchKey: fiat.p521AddcarryxU58
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +325,7 @@ out2: [0x0 ~> 0x1]
 
 ```
 searchKey: fiat.p521SubborrowxU58
+tags: [private]
 ```
 
 ```Go
@@ -354,6 +360,7 @@ out2: [0x0 ~> 0x1]
 
 ```
 searchKey: fiat.p521AddcarryxU57
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +395,7 @@ out2: [0x0 ~> 0x1]
 
 ```
 searchKey: fiat.p521SubborrowxU57
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +430,7 @@ out2: [0x0 ~> 0x1]
 
 ```
 searchKey: fiat.p521CmovznzU64
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +463,7 @@ out1: [0x0 ~> 0xffffffffffffffff]
 
 ```
 searchKey: fiat.p521CarryMul
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +495,7 @@ out1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x4000000
 
 ```
 searchKey: fiat.p521CarrySquare
+tags: [private]
 ```
 
 ```Go
@@ -515,6 +526,7 @@ out1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x4000000
 
 ```
 searchKey: fiat.p521Carry
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +557,7 @@ out1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x4000000
 
 ```
 searchKey: fiat.p521Add
+tags: [private]
 ```
 
 ```Go
@@ -576,6 +589,7 @@ out1: [[0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc000000
 
 ```
 searchKey: fiat.p521Sub
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +621,7 @@ out1: [[0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc000000
 
 ```
 searchKey: fiat.p521ToBytes
+tags: [private]
 ```
 
 ```Go
@@ -637,6 +652,7 @@ out1: [[0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff]
 
 ```
 searchKey: fiat.p521FromBytes
+tags: [private]
 ```
 
 ```Go
@@ -667,6 +683,7 @@ out1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x4000000
 
 ```
 searchKey: fiat.p521Selectznz
+tags: [private]
 ```
 
 ```Go

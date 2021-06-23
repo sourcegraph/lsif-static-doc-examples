@@ -4,7 +4,9 @@
     "identifier": "goroot",
     "newPage": true,
     "searchKey": "internal/goroot",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "gccgoSearch",
                 "newPage": false,
                 "searchKey": "goroot.gccgoSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "gccgoDirs",
                 "newPage": false,
                 "searchKey": "goroot.gccgoDirs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -94,12 +104,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/goroot#gccgoDirs.init",
+                    "pathID": "/internal/goroot#gccgoDirs.init.gc.go",
                     "documentation": {
-                      "identifier": "gccgoDirs.init",
+                      "identifier": "gccgoDirs.init.gc.go",
                       "newPage": false,
                       "searchKey": "goroot.gccgoDirs.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -119,7 +131,9 @@
                       "identifier": "gccgoDirs.isStandard",
                       "newPage": false,
                       "searchKey": "goroot.gccgoDirs.isStandard",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -145,7 +159,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -163,9 +179,7 @@
                 "identifier": "IsStandardPackage",
                 "newPage": false,
                 "searchKey": "goroot.IsStandardPackage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

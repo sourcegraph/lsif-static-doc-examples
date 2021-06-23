@@ -39,15 +39,10 @@ Package plan9obj implements access to Plan 9 a.out object files.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Magic64" href="#Magic64">const Magic64</a>
 
 ```
 searchKey: plan9obj.Magic64
-tags: [exported]
 ```
 
 ```Go
@@ -59,7 +54,6 @@ const Magic64 = 0x8000 // 64-bit expanded header
 
 ```
 searchKey: plan9obj.Magic386
-tags: [exported]
 ```
 
 ```Go
@@ -70,7 +64,6 @@ const Magic386 = (4*11+0)*11 + 7
 
 ```
 searchKey: plan9obj.MagicAMD64
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +74,6 @@ const MagicAMD64 = (4*26+0)*26 + 7 + Magic64
 
 ```
 searchKey: plan9obj.MagicARM
-tags: [exported]
 ```
 
 ```Go
@@ -90,14 +82,11 @@ const MagicARM = (4*20+0)*20 + 7
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="fileTests" href="#fileTests">var fileTests</a>
 
 ```
 searchKey: plan9obj.fileTests
+tags: [private]
 ```
 
 ```Go
@@ -106,15 +95,10 @@ var fileTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="FileHeader" href="#FileHeader">type FileHeader struct</a>
 
 ```
 searchKey: plan9obj.FileHeader
-tags: [exported]
 ```
 
 ```Go
@@ -134,7 +118,6 @@ A FileHeader represents a Plan 9 a.out file header.
 
 ```
 searchKey: plan9obj.File
-tags: [exported]
 ```
 
 ```Go
@@ -151,7 +134,6 @@ A File represents an open Plan 9 a.out file.
 
 ```
 searchKey: plan9obj.Open
-tags: [exported]
 ```
 
 ```Go
@@ -164,7 +146,6 @@ Open opens the named file using os.Open and prepares it for use as a Plan 9 a.ou
 
 ```
 searchKey: plan9obj.NewFile
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +158,6 @@ NewFile creates a new File for accessing a Plan 9 binary in an underlying reader
 
 ```
 searchKey: plan9obj.File.Close
-tags: [exported]
 ```
 
 ```Go
@@ -190,7 +170,6 @@ Close closes the File. If the File was created using NewFile directly instead of
 
 ```
 searchKey: plan9obj.File.Symbols
-tags: [exported]
 ```
 
 ```Go
@@ -203,7 +182,6 @@ Symbols returns the symbol table for f.
 
 ```
 searchKey: plan9obj.File.Section
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +194,6 @@ Section returns a section with the given name, or nil if no such section exists.
 
 ```
 searchKey: plan9obj.SectionHeader
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +210,6 @@ A SectionHeader represents a single Plan 9 a.out section header. This structure 
 
 ```
 searchKey: plan9obj.Section
-tags: [exported]
 ```
 
 ```Go
@@ -257,7 +233,6 @@ A Section represents a single section in a Plan 9 a.out file.
 
 ```
 searchKey: plan9obj.Section.Data
-tags: [exported]
 ```
 
 ```Go
@@ -270,7 +245,6 @@ Data reads and returns the contents of the Plan 9 a.out section.
 
 ```
 searchKey: plan9obj.Section.Open
-tags: [exported]
 ```
 
 ```Go
@@ -283,7 +257,6 @@ Open returns a new ReadSeeker reading the Plan 9 a.out section.
 
 ```
 searchKey: plan9obj.Sym
-tags: [exported]
 ```
 
 ```Go
@@ -300,6 +273,7 @@ A Symbol represents an entry in a Plan 9 a.out symbol table section.
 
 ```
 searchKey: plan9obj.formatError
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +290,7 @@ formatError is returned by some operations if the data does not have the correct
 
 ```
 searchKey: plan9obj.formatError.Error
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +301,7 @@ func (e *formatError) Error() string
 
 ```
 searchKey: plan9obj.prog
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +323,7 @@ Plan 9 Program header.
 
 ```
 searchKey: plan9obj.sym
+tags: [private]
 ```
 
 ```Go
@@ -363,6 +340,7 @@ Plan 9 symbol table entries.
 
 ```
 searchKey: plan9obj.fileTest
+tags: [private]
 ```
 
 ```Go
@@ -375,14 +353,11 @@ type fileTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="parseMagic" href="#parseMagic">func parseMagic(magic []byte) (uint32, error)</a>
 
 ```
 searchKey: plan9obj.parseMagic
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +368,7 @@ func parseMagic(magic []byte) (uint32, error)
 
 ```
 searchKey: plan9obj.walksymtab
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +379,7 @@ func walksymtab(data []byte, ptrsz int, fn func(sym) error) error
 
 ```
 searchKey: plan9obj.newTable
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +392,7 @@ NewTable decodes the Go symbol table in data, returning an in-memory representat
 
 ```
 searchKey: plan9obj.TestOpen
+tags: [private]
 ```
 
 ```Go
@@ -425,6 +403,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: plan9obj.TestOpenFailure
+tags: [private]
 ```
 
 ```Go

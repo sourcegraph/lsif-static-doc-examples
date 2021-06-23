@@ -4,7 +4,9 @@
     "identifier": "siteid",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/siteid",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "inited",
                 "newPage": false,
                 "searchKey": "siteid.inited",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "siteID",
                 "newPage": false,
                 "searchKey": "siteid.siteID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "fatalln",
                 "newPage": false,
                 "searchKey": "siteid.fatalln",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +113,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -121,9 +133,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "siteid.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -143,9 +153,7 @@
                 "identifier": "Get",
                 "newPage": false,
                 "searchKey": "siteid.Get",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -165,7 +173,9 @@
                 "identifier": "TestNotInited",
                 "newPage": false,
                 "searchKey": "siteid.TestNotInited",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -185,7 +195,9 @@
                 "identifier": "TestGet",
                 "newPage": false,
                 "searchKey": "siteid.TestGet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

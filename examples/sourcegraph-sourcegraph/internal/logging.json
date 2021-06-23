@@ -4,7 +4,9 @@
     "identifier": "logging",
     "newPage": true,
     "searchKey": "internal/logging",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "logColors",
                 "newPage": false,
                 "searchKey": "logging.logColors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "logLabels",
                 "newPage": false,
                 "searchKey": "logging.logLabels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,9 +111,7 @@
                 "identifier": "ErrorLogger",
                 "newPage": false,
                 "searchKey": "logging.ErrorLogger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -123,9 +131,7 @@
                 "identifier": "Options",
                 "newPage": false,
                 "searchKey": "logging.Options",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -145,9 +151,7 @@
                 "identifier": "Option",
                 "newPage": false,
                 "searchKey": "logging.Option",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -165,9 +169,7 @@
                       "identifier": "ServiceName",
                       "newPage": false,
                       "searchKey": "logging.ServiceName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -187,9 +189,7 @@
                       "identifier": "Filter",
                       "newPage": false,
                       "searchKey": "logging.Filter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -215,7 +215,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -233,9 +235,7 @@
                 "identifier": "Log",
                 "newPage": false,
                 "searchKey": "logging.Log",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -255,7 +255,9 @@
                 "identifier": "condensedFormat",
                 "newPage": false,
                 "searchKey": "logging.condensedFormat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -270,12 +272,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/logging#init",
+              "pathID": "/internal/logging#init.main.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.main.go",
                 "newPage": false,
                 "searchKey": "logging.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -295,9 +299,7 @@
                 "identifier": "LogEntryLevelString",
                 "newPage": false,
                 "searchKey": "logging.LogEntryLevelString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -317,9 +319,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "logging.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

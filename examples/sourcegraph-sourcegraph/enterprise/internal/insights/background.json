@@ -4,7 +4,9 @@
     "identifier": "background",
     "newPage": true,
     "searchKey": "enterprise/internal/insights/background",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "queryJobOffsetTime",
                 "newPage": false,
                 "searchKey": "background.queryJobOffsetTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "testRealGlobalSettings",
                 "newPage": false,
                 "searchKey": "background.testRealGlobalSettings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +114,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -122,9 +134,7 @@
                 "identifier": "RepoStore",
                 "newPage": false,
                 "searchKey": "background.RepoStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +154,9 @@
                 "identifier": "historicalEnqueuer",
                 "newPage": false,
                 "searchKey": "background.historicalEnqueuer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -162,7 +174,9 @@
                       "identifier": "historicalEnqueuer.Handler",
                       "newPage": false,
                       "searchKey": "background.historicalEnqueuer.Handler",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -182,7 +196,9 @@
                       "identifier": "historicalEnqueuer.buildFrames",
                       "newPage": false,
                       "searchKey": "background.historicalEnqueuer.buildFrames",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -202,7 +218,9 @@
                       "identifier": "historicalEnqueuer.buildFrame",
                       "newPage": false,
                       "searchKey": "background.historicalEnqueuer.buildFrame",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -222,7 +240,9 @@
                       "identifier": "historicalEnqueuer.buildSeries",
                       "newPage": false,
                       "searchKey": "background.historicalEnqueuer.buildSeries",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -245,7 +265,9 @@
                 "identifier": "buildSeriesContext",
                 "newPage": false,
                 "searchKey": "background.buildSeriesContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -265,7 +287,9 @@
                 "identifier": "cachedGitFirstEverCommit",
                 "newPage": false,
                 "searchKey": "background.cachedGitFirstEverCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -283,7 +307,9 @@
                       "identifier": "cachedGitFirstEverCommit.gitFirstEverCommit",
                       "newPage": false,
                       "searchKey": "background.cachedGitFirstEverCommit.gitFirstEverCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -306,9 +332,7 @@
                 "identifier": "MockRepoStore",
                 "newPage": false,
                 "searchKey": "background.MockRepoStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +350,7 @@
                       "identifier": "NewMockRepoStore",
                       "newPage": false,
                       "searchKey": "background.NewMockRepoStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -348,9 +370,7 @@
                       "identifier": "NewMockRepoStoreFrom",
                       "newPage": false,
                       "searchKey": "background.NewMockRepoStoreFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -370,9 +390,7 @@
                       "identifier": "MockRepoStore.GetByName",
                       "newPage": false,
                       "searchKey": "background.MockRepoStore.GetByName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -395,9 +413,7 @@
                 "identifier": "RepoStoreGetByNameFunc",
                 "newPage": false,
                 "searchKey": "background.RepoStoreGetByNameFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -415,9 +431,7 @@
                       "identifier": "RepoStoreGetByNameFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "background.RepoStoreGetByNameFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -437,9 +451,7 @@
                       "identifier": "RepoStoreGetByNameFunc.PushHook",
                       "newPage": false,
                       "searchKey": "background.RepoStoreGetByNameFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -459,9 +471,7 @@
                       "identifier": "RepoStoreGetByNameFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "background.RepoStoreGetByNameFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -481,9 +491,7 @@
                       "identifier": "RepoStoreGetByNameFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "background.RepoStoreGetByNameFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -503,7 +511,9 @@
                       "identifier": "RepoStoreGetByNameFunc.nextHook",
                       "newPage": false,
                       "searchKey": "background.RepoStoreGetByNameFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -523,7 +533,9 @@
                       "identifier": "RepoStoreGetByNameFunc.appendCall",
                       "newPage": false,
                       "searchKey": "background.RepoStoreGetByNameFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -543,9 +555,7 @@
                       "identifier": "RepoStoreGetByNameFunc.History",
                       "newPage": false,
                       "searchKey": "background.RepoStoreGetByNameFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -568,9 +578,7 @@
                 "identifier": "RepoStoreGetByNameFuncCall",
                 "newPage": false,
                 "searchKey": "background.RepoStoreGetByNameFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -588,9 +596,7 @@
                       "identifier": "RepoStoreGetByNameFuncCall.Args",
                       "newPage": false,
                       "searchKey": "background.RepoStoreGetByNameFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -610,9 +616,7 @@
                       "identifier": "RepoStoreGetByNameFuncCall.Results",
                       "newPage": false,
                       "searchKey": "background.RepoStoreGetByNameFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -635,7 +639,9 @@
                 "identifier": "testParams",
                 "newPage": false,
                 "searchKey": "background.testParams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -655,7 +661,9 @@
                 "identifier": "testResults",
                 "newPage": false,
                 "searchKey": "background.testResults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -673,7 +681,9 @@
                       "identifier": "testHistoricalEnqueuer",
                       "newPage": false,
                       "searchKey": "background.testHistoricalEnqueuer",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -699,7 +709,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -717,9 +729,7 @@
                 "identifier": "StartBackgroundJobs",
                 "newPage": false,
                 "searchKey": "background.StartBackgroundJobs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -739,7 +749,9 @@
                 "identifier": "newWorkerMetrics",
                 "newPage": false,
                 "searchKey": "background.newWorkerMetrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -759,7 +771,9 @@
                 "identifier": "newInsightHistoricalEnqueuer",
                 "newPage": false,
                 "searchKey": "background.newInsightHistoricalEnqueuer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -779,7 +793,9 @@
                 "identifier": "getRateLimit",
                 "newPage": false,
                 "searchKey": "background.getRateLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -799,7 +815,9 @@
                 "identifier": "newInsightEnqueuer",
                 "newPage": false,
                 "searchKey": "background.newInsightEnqueuer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -819,7 +837,9 @@
                 "identifier": "discoverAndEnqueueInsights",
                 "newPage": false,
                 "searchKey": "background.discoverAndEnqueueInsights",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -839,7 +859,9 @@
                 "identifier": "withCountUnlimited",
                 "newPage": false,
                 "searchKey": "background.withCountUnlimited",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -859,7 +881,9 @@
                 "identifier": "Test_historicalEnqueuer",
                 "newPage": false,
                 "searchKey": "background.Test_historicalEnqueuer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -879,7 +903,9 @@
                 "identifier": "Test_discoverAndEnqueueInsights",
                 "newPage": false,
                 "searchKey": "background.Test_discoverAndEnqueueInsights",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

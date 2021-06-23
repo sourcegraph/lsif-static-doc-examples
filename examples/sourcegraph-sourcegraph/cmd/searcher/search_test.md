@@ -23,10 +23,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="sortByPath" href="#sortByPath">type sortByPath []protocol.FileMatch</a>
 
 ```
 searchKey: search_test.sortByPath
+tags: [private]
 ```
 
 ```Go
@@ -37,6 +42,7 @@ type sortByPath []protocol.FileMatch
 
 ```
 searchKey: search_test.sortByPath.Len
+tags: [private]
 ```
 
 ```Go
@@ -47,6 +53,7 @@ func (m sortByPath) Len() int
 
 ```
 searchKey: search_test.sortByPath.Less
+tags: [private]
 ```
 
 ```Go
@@ -57,6 +64,7 @@ func (m sortByPath) Less(i, j int) bool
 
 ```
 searchKey: search_test.sortByPath.Swap
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +75,7 @@ func (m sortByPath) Swap(i, j int)
 
 ```
 searchKey: search_test.sortByLineNumber
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +86,7 @@ type sortByLineNumber []protocol.LineMatch
 
 ```
 searchKey: search_test.sortByLineNumber.Len
+tags: [private]
 ```
 
 ```Go
@@ -87,6 +97,7 @@ func (m sortByLineNumber) Len() int
 
 ```
 searchKey: search_test.sortByLineNumber.Less
+tags: [private]
 ```
 
 ```Go
@@ -97,6 +108,7 @@ func (m sortByLineNumber) Less(i, j int) bool
 
 ```
 searchKey: search_test.sortByLineNumber.Swap
+tags: [private]
 ```
 
 ```Go
@@ -105,10 +117,15 @@ func (m sortByLineNumber) Swap(i, j int)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="addpaxheader" href="#addpaxheader">func addpaxheader(w *tar.Writer, body string) error</a>
 
 ```
 searchKey: search_test.addpaxheader
+tags: [private]
 ```
 
 ```Go
@@ -119,6 +136,7 @@ func addpaxheader(w *tar.Writer, body string) error
 
 ```
 searchKey: search_test.TestSearch
+tags: [private]
 ```
 
 ```Go
@@ -129,6 +147,7 @@ func TestSearch(t *testing.T)
 
 ```
 searchKey: search_test.TestSearch_badrequest
+tags: [private]
 ```
 
 ```Go
@@ -139,6 +158,7 @@ func TestSearch_badrequest(t *testing.T)
 
 ```
 searchKey: search_test.doSearch
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +169,7 @@ func doSearch(u string, p *protocol.Request) ([]protocol.FileMatch, error)
 
 ```
 searchKey: search_test.newStore
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +180,7 @@ func newStore(files map[string]string) (*store.Store, func(), error)
 
 ```
 searchKey: search_test.toString
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +191,7 @@ func toString(m []protocol.FileMatch) string
 
 ```
 searchKey: search_test.sanityCheckSorted
+tags: [private]
 ```
 
 ```Go

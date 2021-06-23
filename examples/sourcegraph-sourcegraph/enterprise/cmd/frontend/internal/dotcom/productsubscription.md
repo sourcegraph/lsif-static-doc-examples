@@ -113,7 +113,7 @@ Package productsubscription handles product subscriptions and licensing.
     * [func generateProductLicenseForSubscription(ctx context.Context, db dbutil.DB, subscriptionID string, input *graphqlbackend.ProductLicenseInput) (id string, err error)](#generateProductLicenseForSubscription)
     * [func marshalProductSubscriptionID(id string) graphql.ID](#marshalProductSubscriptionID)
     * [func unmarshalProductSubscriptionID(id graphql.ID) (productSubscriptionID string, err error)](#unmarshalProductSubscriptionID)
-    * [func init()](#init)
+    * [func init()](#init.db_test.go)
     * [func TestCheckForUpcomingLicenseExpirations(t *testing.T)](#TestCheckForUpcomingLicenseExpirations)
     * [func TestProductLicenses_Create(t *testing.T)](#TestProductLicenses_Create)
     * [func TestProductLicenses_List(t *testing.T)](#TestProductLicenses_List)
@@ -124,10 +124,15 @@ Package productsubscription handles product subscriptions and licensing.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="lastLicenseExpirationCheckKey" href="#lastLicenseExpirationCheckKey">const lastLicenseExpirationCheckKey</a>
 
 ```
 searchKey: productsubscription.lastLicenseExpirationCheckKey
+tags: [private]
 ```
 
 ```Go
@@ -138,7 +143,6 @@ const lastLicenseExpirationCheckKey = "last_license_expiration_check"
 
 ```
 searchKey: productsubscription.ProductLicenseIDKind
-tags: [exported]
 ```
 
 ```Go
@@ -149,7 +153,6 @@ const ProductLicenseIDKind = "ProductLicense"
 
 ```
 searchKey: productsubscription.ProductSubscriptionIDKind
-tags: [exported]
 ```
 
 ```Go
@@ -158,10 +161,15 @@ const ProductSubscriptionIDKind = "ProductSubscription"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="licenseExpirationCheckers" href="#licenseExpirationCheckers">var licenseExpirationCheckers</a>
 
 ```
 searchKey: productsubscription.licenseExpirationCheckers
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +180,7 @@ var licenseExpirationCheckers uint32
 
 ```
 searchKey: productsubscription.errLicenseNotFound
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +193,7 @@ errLicenseNotFound occurs when a database operation expects a specific Sourcegra
 
 ```
 searchKey: productsubscription.mocks
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +204,7 @@ var mocks dbMocks
 
 ```
 searchKey: productsubscription.emailQueries
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +215,7 @@ var emailQueries = ...
 
 ```
 searchKey: productsubscription.errSubscriptionNotFound
+tags: [private]
 ```
 
 ```Go
@@ -214,11 +226,14 @@ errSubscriptionNotFound occurs when a database operation expects a specific Sour
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ProductSubscriptionLicensingResolver" href="#ProductSubscriptionLicensingResolver">type ProductSubscriptionLicensingResolver struct</a>
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +248,6 @@ ProductSubscriptionLicensingResolver implements the GraphQL Query and Mutation f
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.PreviewProductSubscriptionInvoice
-tags: [exported]
 ```
 
 ```Go
@@ -244,7 +258,6 @@ func (r ProductSubscriptionLicensingResolver) PreviewProductSubscriptionInvoice(
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.ProductLicenseByID
-tags: [exported]
 ```
 
 ```Go
@@ -257,7 +270,6 @@ ProductLicenseByID looks up and returns the ProductLicense with the given GraphQ
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.GenerateProductLicenseForSubscription
-tags: [exported]
 ```
 
 ```Go
@@ -268,7 +280,6 @@ func (r ProductSubscriptionLicensingResolver) GenerateProductLicenseForSubscript
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.ProductLicenses
-tags: [exported]
 ```
 
 ```Go
@@ -279,7 +290,6 @@ func (r ProductSubscriptionLicensingResolver) ProductLicenses(ctx context.Contex
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.ProductSubscriptionByID
-tags: [exported]
 ```
 
 ```Go
@@ -292,7 +302,6 @@ ProductSubscriptionByID looks up and returns the ProductSubscription with the gi
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.CreateProductSubscription
-tags: [exported]
 ```
 
 ```Go
@@ -303,7 +312,6 @@ func (r ProductSubscriptionLicensingResolver) CreateProductSubscription(ctx cont
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.SetProductSubscriptionBilling
-tags: [exported]
 ```
 
 ```Go
@@ -314,7 +322,6 @@ func (r ProductSubscriptionLicensingResolver) SetProductSubscriptionBilling(ctx 
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.CreatePaidProductSubscription
-tags: [exported]
 ```
 
 ```Go
@@ -325,7 +332,6 @@ func (r ProductSubscriptionLicensingResolver) CreatePaidProductSubscription(ctx 
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.UpdatePaidProductSubscription
-tags: [exported]
 ```
 
 ```Go
@@ -336,7 +342,6 @@ func (r ProductSubscriptionLicensingResolver) UpdatePaidProductSubscription(ctx 
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.ArchiveProductSubscription
-tags: [exported]
 ```
 
 ```Go
@@ -347,7 +352,6 @@ func (r ProductSubscriptionLicensingResolver) ArchiveProductSubscription(ctx con
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.ProductSubscription
-tags: [exported]
 ```
 
 ```Go
@@ -358,7 +362,6 @@ func (r ProductSubscriptionLicensingResolver) ProductSubscription(ctx context.Co
 
 ```
 searchKey: productsubscription.ProductSubscriptionLicensingResolver.ProductSubscriptions
-tags: [exported]
 ```
 
 ```Go
@@ -369,6 +372,7 @@ func (r ProductSubscriptionLicensingResolver) ProductSubscriptions(ctx context.C
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice
+tags: [private]
 ```
 
 ```Go
@@ -384,6 +388,7 @@ type productSubscriptionPreviewInvoice struct {
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.Price
+tags: [private]
 ```
 
 ```Go
@@ -394,6 +399,7 @@ func (r *productSubscriptionPreviewInvoice) Price() int32
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.AmountDue
+tags: [private]
 ```
 
 ```Go
@@ -404,6 +410,7 @@ func (r *productSubscriptionPreviewInvoice) AmountDue() int32
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.ProrationDate
+tags: [private]
 ```
 
 ```Go
@@ -414,6 +421,7 @@ func (r *productSubscriptionPreviewInvoice) ProrationDate() *string
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.IsDowngradeRequiringManualIntervention
+tags: [private]
 ```
 
 ```Go
@@ -424,6 +432,7 @@ func (r *productSubscriptionPreviewInvoice) IsDowngradeRequiringManualInterventi
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.BeforeInvoiceItem
+tags: [private]
 ```
 
 ```Go
@@ -434,6 +443,7 @@ func (r *productSubscriptionPreviewInvoice) BeforeInvoiceItem() graphqlbackend.P
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.AfterInvoiceItem
+tags: [private]
 ```
 
 ```Go
@@ -444,6 +454,7 @@ func (r *productSubscriptionPreviewInvoice) AfterInvoiceItem() graphqlbackend.Pr
 
 ```
 searchKey: productsubscription.slackClient
+tags: [private]
 ```
 
 ```Go
@@ -456,6 +467,7 @@ type slackClient interface {
 
 ```
 searchKey: productsubscription.dbLicense
+tags: [private]
 ```
 
 ```Go
@@ -473,6 +485,7 @@ dbLicense describes an product license row in the product_licenses DB table.
 
 ```
 searchKey: productsubscription.dbLicenses
+tags: [private]
 ```
 
 ```Go
@@ -487,6 +500,7 @@ dbLicenses exposes product licenses in the product_licenses DB table.
 
 ```
 searchKey: productsubscription.dbLicenses.Create
+tags: [private]
 ```
 
 ```Go
@@ -499,6 +513,7 @@ Create creates a new product license entry given a license key.
 
 ```
 searchKey: productsubscription.dbLicenses.GetByID
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +528,7 @@ GetByID retrieves the product license (if any) given its ID.
 
 ```
 searchKey: productsubscription.dbLicenses.GetByLicenseKey
+tags: [private]
 ```
 
 ```Go
@@ -525,6 +541,7 @@ GetByID retrieves the product license (if any) given its license key.
 
 ```
 searchKey: productsubscription.dbLicenses.List
+tags: [private]
 ```
 
 ```Go
@@ -537,6 +554,7 @@ List lists all product licenses that satisfy the options.
 
 ```
 searchKey: productsubscription.dbLicenses.list
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +565,7 @@ func (s dbLicenses) list(ctx context.Context, conds []*sqlf.Query, limitOffset *
 
 ```
 searchKey: productsubscription.dbLicenses.Count
+tags: [private]
 ```
 
 ```Go
@@ -559,6 +578,7 @@ Count counts all product licenses that satisfy the options (ignoring limit and o
 
 ```
 searchKey: productsubscription.dbLicensesListOptions
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +595,7 @@ dbLicensesListOptions contains options for listing product licenses.
 
 ```
 searchKey: productsubscription.dbLicensesListOptions.sqlConditions
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +606,7 @@ func (o dbLicensesListOptions) sqlConditions() []*sqlf.Query
 
 ```
 searchKey: productsubscription.mockLicenses
+tags: [private]
 ```
 
 ```Go
@@ -600,6 +622,7 @@ type mockLicenses struct {
 
 ```
 searchKey: productsubscription.productLicense
+tags: [private]
 ```
 
 ```Go
@@ -615,6 +638,7 @@ productLicense implements the GraphQL type ProductLicense.
 
 ```
 searchKey: productsubscription.productLicenseByID
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +651,7 @@ productLicenseByID looks up and returns the ProductLicense with the given GraphQ
 
 ```
 searchKey: productsubscription.productLicenseByDBID
+tags: [private]
 ```
 
 ```Go
@@ -639,6 +664,7 @@ productLicenseByDBID looks up and returns the ProductLicense with the given data
 
 ```
 searchKey: productsubscription.productLicense.ID
+tags: [private]
 ```
 
 ```Go
@@ -649,6 +675,7 @@ func (r *productLicense) ID() graphql.ID
 
 ```
 searchKey: productsubscription.productLicense.Subscription
+tags: [private]
 ```
 
 ```Go
@@ -659,6 +686,7 @@ func (r *productLicense) Subscription(ctx context.Context) (graphqlbackend.Produ
 
 ```
 searchKey: productsubscription.productLicense.Info
+tags: [private]
 ```
 
 ```Go
@@ -669,6 +697,7 @@ func (r *productLicense) Info() (*graphqlbackend.ProductLicenseInfo, error)
 
 ```
 searchKey: productsubscription.productLicense.LicenseKey
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +708,7 @@ func (r *productLicense) LicenseKey() string
 
 ```
 searchKey: productsubscription.productLicense.CreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -689,6 +719,7 @@ func (r *productLicense) CreatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: productsubscription.productLicenseConnection
+tags: [private]
 ```
 
 ```Go
@@ -711,6 +742,7 @@ productLicenseConnection implements the GraphQL type ProductLicenseConnection.
 
 ```
 searchKey: productsubscription.productLicenseConnection.compute
+tags: [private]
 ```
 
 ```Go
@@ -721,6 +753,7 @@ func (r *productLicenseConnection) compute(ctx context.Context) ([]*dbLicense, e
 
 ```
 searchKey: productsubscription.productLicenseConnection.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -731,6 +764,7 @@ func (r *productLicenseConnection) Nodes(ctx context.Context) ([]graphqlbackend.
 
 ```
 searchKey: productsubscription.productLicenseConnection.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +775,7 @@ func (r *productLicenseConnection) TotalCount(ctx context.Context) (int32, error
 
 ```
 searchKey: productsubscription.productLicenseConnection.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -751,6 +786,7 @@ func (r *productLicenseConnection) PageInfo(ctx context.Context) (*graphqlutil.P
 
 ```
 searchKey: productsubscription.dbMocks
+tags: [private]
 ```
 
 ```Go
@@ -764,6 +800,7 @@ type dbMocks struct {
 
 ```
 searchKey: productsubscription.productSubscriptionInvoiceItem
+tags: [private]
 ```
 
 ```Go
@@ -778,6 +815,7 @@ type productSubscriptionInvoiceItem struct {
 
 ```
 searchKey: productsubscription.productSubscriptionInvoiceItem.Plan
+tags: [private]
 ```
 
 ```Go
@@ -788,6 +826,7 @@ func (r *productSubscriptionInvoiceItem) Plan() (graphqlbackend.ProductPlan, err
 
 ```
 searchKey: productsubscription.productSubscriptionInvoiceItem.UserCount
+tags: [private]
 ```
 
 ```Go
@@ -798,6 +837,7 @@ func (r *productSubscriptionInvoiceItem) UserCount() int32
 
 ```
 searchKey: productsubscription.productSubscriptionInvoiceItem.ExpiresAt
+tags: [private]
 ```
 
 ```Go
@@ -808,6 +848,7 @@ func (r *productSubscriptionInvoiceItem) ExpiresAt() graphqlbackend.DateTime
 
 ```
 searchKey: productsubscription.dbSubscription
+tags: [private]
 ```
 
 ```Go
@@ -826,6 +867,7 @@ dbSubscription describes an product subscription row in the product_subscription
 
 ```
 searchKey: productsubscription.dbSubscriptions
+tags: [private]
 ```
 
 ```Go
@@ -840,6 +882,7 @@ dbSubscriptions exposes product subscriptions in the product_subscriptions DB ta
 
 ```
 searchKey: productsubscription.dbSubscriptions.Create
+tags: [private]
 ```
 
 ```Go
@@ -852,6 +895,7 @@ Create creates a new product subscription entry given a license key.
 
 ```
 searchKey: productsubscription.dbSubscriptions.GetByID
+tags: [private]
 ```
 
 ```Go
@@ -866,6 +910,7 @@ GetByID retrieves the product subscription (if any) given its ID.
 
 ```
 searchKey: productsubscription.dbSubscriptions.List
+tags: [private]
 ```
 
 ```Go
@@ -878,6 +923,7 @@ List lists all product subscriptions that satisfy the options.
 
 ```
 searchKey: productsubscription.dbSubscriptions.list
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +934,7 @@ func (s dbSubscriptions) list(ctx context.Context, conds []*sqlf.Query, limitOff
 
 ```
 searchKey: productsubscription.dbSubscriptions.Count
+tags: [private]
 ```
 
 ```Go
@@ -900,6 +947,7 @@ Count counts all product subscriptions that satisfy the options (ignoring limit 
 
 ```
 searchKey: productsubscription.dbSubscriptions.Update
+tags: [private]
 ```
 
 ```Go
@@ -912,6 +960,7 @@ Update updates a product subscription.
 
 ```
 searchKey: productsubscription.dbSubscriptions.Archive
+tags: [private]
 ```
 
 ```Go
@@ -926,6 +975,7 @@ Archive marks a product subscription as archived given its ID.
 
 ```
 searchKey: productsubscription.dbSubscriptionsListOptions
+tags: [private]
 ```
 
 ```Go
@@ -943,6 +993,7 @@ dbSubscriptionsListOptions contains options for listing product subscriptions.
 
 ```
 searchKey: productsubscription.dbSubscriptionsListOptions.sqlConditions
+tags: [private]
 ```
 
 ```Go
@@ -953,6 +1004,7 @@ func (o dbSubscriptionsListOptions) sqlConditions() []*sqlf.Query
 
 ```
 searchKey: productsubscription.dbSubscriptionUpdate
+tags: [private]
 ```
 
 ```Go
@@ -967,6 +1019,7 @@ dbSubscriptionsUpdate represents an update to a product subscription in the data
 
 ```
 searchKey: productsubscription.mockSubscriptions
+tags: [private]
 ```
 
 ```Go
@@ -982,6 +1035,7 @@ type mockSubscriptions struct {
 
 ```
 searchKey: productsubscription.productSubscription
+tags: [private]
 ```
 
 ```Go
@@ -997,6 +1051,7 @@ productSubscription implements the GraphQL type ProductSubscription.
 
 ```
 searchKey: productsubscription.productSubscriptionByID
+tags: [private]
 ```
 
 ```Go
@@ -1009,6 +1064,7 @@ productSubscriptionByID looks up and returns the ProductSubscription with the gi
 
 ```
 searchKey: productsubscription.productSubscriptionByDBID
+tags: [private]
 ```
 
 ```Go
@@ -1021,6 +1077,7 @@ productSubscriptionByDBID looks up and returns the ProductSubscription with the 
 
 ```
 searchKey: productsubscription.productSubscription.InvoiceItem
+tags: [private]
 ```
 
 ```Go
@@ -1031,6 +1088,7 @@ func (r *productSubscription) InvoiceItem(ctx context.Context) (graphqlbackend.P
 
 ```
 searchKey: productsubscription.productSubscription.ID
+tags: [private]
 ```
 
 ```Go
@@ -1041,6 +1099,7 @@ func (r *productSubscription) ID() graphql.ID
 
 ```
 searchKey: productsubscription.productSubscription.UUID
+tags: [private]
 ```
 
 ```Go
@@ -1051,6 +1110,7 @@ func (r *productSubscription) UUID() string
 
 ```
 searchKey: productsubscription.productSubscription.Name
+tags: [private]
 ```
 
 ```Go
@@ -1061,6 +1121,7 @@ func (r *productSubscription) Name() string
 
 ```
 searchKey: productsubscription.productSubscription.Account
+tags: [private]
 ```
 
 ```Go
@@ -1071,6 +1132,7 @@ func (r *productSubscription) Account(ctx context.Context) (*graphqlbackend.User
 
 ```
 searchKey: productsubscription.productSubscription.Events
+tags: [private]
 ```
 
 ```Go
@@ -1081,6 +1143,7 @@ func (r *productSubscription) Events(ctx context.Context) ([]graphqlbackend.Prod
 
 ```
 searchKey: productsubscription.productSubscription.ActiveLicense
+tags: [private]
 ```
 
 ```Go
@@ -1091,6 +1154,7 @@ func (r *productSubscription) ActiveLicense(ctx context.Context) (graphqlbackend
 
 ```
 searchKey: productsubscription.productSubscription.ProductLicenses
+tags: [private]
 ```
 
 ```Go
@@ -1101,6 +1165,7 @@ func (r *productSubscription) ProductLicenses(ctx context.Context, args *graphql
 
 ```
 searchKey: productsubscription.productSubscription.CreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -1111,6 +1176,7 @@ func (r *productSubscription) CreatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: productsubscription.productSubscription.IsArchived
+tags: [private]
 ```
 
 ```Go
@@ -1121,6 +1187,7 @@ func (r *productSubscription) IsArchived() bool
 
 ```
 searchKey: productsubscription.productSubscription.URL
+tags: [private]
 ```
 
 ```Go
@@ -1131,6 +1198,7 @@ func (r *productSubscription) URL(ctx context.Context) (string, error)
 
 ```
 searchKey: productsubscription.productSubscription.URLForSiteAdmin
+tags: [private]
 ```
 
 ```Go
@@ -1141,6 +1209,7 @@ func (r *productSubscription) URLForSiteAdmin(ctx context.Context) *string
 
 ```
 searchKey: productsubscription.productSubscription.URLForSiteAdminBilling
+tags: [private]
 ```
 
 ```Go
@@ -1151,6 +1220,7 @@ func (r *productSubscription) URLForSiteAdminBilling(ctx context.Context) (*stri
 
 ```
 searchKey: productsubscription.productSubscriptionConnection
+tags: [private]
 ```
 
 ```Go
@@ -1173,6 +1243,7 @@ productSubscriptionConnection implements the GraphQL type ProductSubscriptionCon
 
 ```
 searchKey: productsubscription.productSubscriptionConnection.compute
+tags: [private]
 ```
 
 ```Go
@@ -1183,6 +1254,7 @@ func (r *productSubscriptionConnection) compute(ctx context.Context) ([]*dbSubsc
 
 ```
 searchKey: productsubscription.productSubscriptionConnection.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -1193,6 +1265,7 @@ func (r *productSubscriptionConnection) Nodes(ctx context.Context) ([]graphqlbac
 
 ```
 searchKey: productsubscription.productSubscriptionConnection.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -1203,6 +1276,7 @@ func (r *productSubscriptionConnection) TotalCount(ctx context.Context) (int32, 
 
 ```
 searchKey: productsubscription.productSubscriptionConnection.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -1213,6 +1287,7 @@ func (r *productSubscriptionConnection) PageInfo(ctx context.Context) (*graphqlu
 
 ```
 searchKey: productsubscription.fakeSlackClient
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1300,7 @@ type fakeSlackClient struct {
 
 ```
 searchKey: productsubscription.fakeSlackClient.Post
+tags: [private]
 ```
 
 ```Go
@@ -1233,10 +1309,15 @@ func (c *fakeSlackClient) Post(ctx context.Context, payload *slack.Payload) erro
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="isDowngradeRequiringManualIntervention" href="#isDowngradeRequiringManualIntervention">func isDowngradeRequiringManualIntervention(beforeUserCount int32, beforePlanPrice int64, afterUserCount int32, afterPlanPrice int64) bool</a>
 
 ```
 searchKey: productsubscription.isDowngradeRequiringManualIntervention
+tags: [private]
 ```
 
 ```Go
@@ -1247,6 +1328,7 @@ func isDowngradeRequiringManualIntervention(beforeUserCount int32, beforePlanPri
 
 ```
 searchKey: productsubscription.userCountExceedsPlanMaxError
+tags: [private]
 ```
 
 ```Go
@@ -1257,7 +1339,6 @@ func userCountExceedsPlanMaxError(userCount, max int32) error
 
 ```
 searchKey: productsubscription.StartCheckForUpcomingLicenseExpirations
-tags: [exported]
 ```
 
 ```Go
@@ -1270,6 +1351,7 @@ StartCheckForUpcomingLicenseExpirations checks for upcoming license expirations 
 
 ```
 searchKey: productsubscription.checkLicensesIfNeeded
+tags: [private]
 ```
 
 ```Go
@@ -1282,6 +1364,7 @@ checkLicensesIfNeeded checks whether a day has passed since the last license che
 
 ```
 searchKey: productsubscription.checkForUpcomingLicenseExpirations
+tags: [private]
 ```
 
 ```Go
@@ -1292,6 +1375,7 @@ func checkForUpcomingLicenseExpirations(db dbutil.DB, clock glock.Clock, client 
 
 ```
 searchKey: productsubscription.checkLastSubscriptionLicense
+tags: [private]
 ```
 
 ```Go
@@ -1302,6 +1386,7 @@ func checkLastSubscriptionLicense(ctx context.Context, db dbutil.DB, s *dbSubscr
 
 ```
 searchKey: productsubscription.marshalProductLicenseID
+tags: [private]
 ```
 
 ```Go
@@ -1312,6 +1397,7 @@ func marshalProductLicenseID(id string) graphql.ID
 
 ```
 searchKey: productsubscription.unmarshalProductLicenseID
+tags: [private]
 ```
 
 ```Go
@@ -1322,6 +1408,7 @@ func unmarshalProductLicenseID(id graphql.ID) (productLicenseID string, err erro
 
 ```
 searchKey: productsubscription.generateProductLicenseForSubscription
+tags: [private]
 ```
 
 ```Go
@@ -1332,6 +1419,7 @@ func generateProductLicenseForSubscription(ctx context.Context, db dbutil.DB, su
 
 ```
 searchKey: productsubscription.marshalProductSubscriptionID
+tags: [private]
 ```
 
 ```Go
@@ -1342,16 +1430,18 @@ func marshalProductSubscriptionID(id string) graphql.ID
 
 ```
 searchKey: productsubscription.unmarshalProductSubscriptionID
+tags: [private]
 ```
 
 ```Go
 func unmarshalProductSubscriptionID(id graphql.ID) (productSubscriptionID string, err error)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
 
 ```
 searchKey: productsubscription.init
+tags: [private]
 ```
 
 ```Go
@@ -1362,6 +1452,7 @@ func init()
 
 ```
 searchKey: productsubscription.TestCheckForUpcomingLicenseExpirations
+tags: [private]
 ```
 
 ```Go
@@ -1372,6 +1463,7 @@ func TestCheckForUpcomingLicenseExpirations(t *testing.T)
 
 ```
 searchKey: productsubscription.TestProductLicenses_Create
+tags: [private]
 ```
 
 ```Go
@@ -1382,6 +1474,7 @@ func TestProductLicenses_Create(t *testing.T)
 
 ```
 searchKey: productsubscription.TestProductLicenses_List
+tags: [private]
 ```
 
 ```Go
@@ -1392,6 +1485,7 @@ func TestProductLicenses_List(t *testing.T)
 
 ```
 searchKey: productsubscription.TestProductSubscriptions_Create
+tags: [private]
 ```
 
 ```Go
@@ -1402,6 +1496,7 @@ func TestProductSubscriptions_Create(t *testing.T)
 
 ```
 searchKey: productsubscription.TestProductSubscriptions_List
+tags: [private]
 ```
 
 ```Go
@@ -1412,6 +1507,7 @@ func TestProductSubscriptions_List(t *testing.T)
 
 ```
 searchKey: productsubscription.TestProductSubscriptions_Update
+tags: [private]
 ```
 
 ```Go

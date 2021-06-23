@@ -26,10 +26,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="handlerTransport" href="#handlerTransport">type handlerTransport struct</a>
 
 ```
 searchKey: httptestutil.handlerTransport
+tags: [private]
 ```
 
 ```Go
@@ -42,6 +47,7 @@ type handlerTransport struct {
 
 ```
 searchKey: httptestutil.handlerTransport.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -52,7 +58,6 @@ func (t handlerTransport) RoundTrip(req *http.Request) (*http.Response, error)
 
 ```
 searchKey: httptestutil.Client
-tags: [exported]
 ```
 
 ```Go
@@ -63,7 +68,6 @@ type Client struct{ http.Client }
 
 ```
 searchKey: httptestutil.NewTest
-tags: [exported]
 ```
 
 ```Go
@@ -74,7 +78,6 @@ func NewTest(h http.Handler) *Client
 
 ```
 searchKey: httptestutil.Client.Get
-tags: [exported]
 ```
 
 ```Go
@@ -87,7 +90,6 @@ Get buffers the response body so that callers need not call resp.Body.Close().
 
 ```
 searchKey: httptestutil.Client.Do
-tags: [exported]
 ```
 
 ```Go
@@ -100,7 +102,6 @@ Do buffers the response body so that callers need not call resp.Body.Close().
 
 ```
 searchKey: httptestutil.Client.DoOK
-tags: [exported]
 ```
 
 ```Go
@@ -113,7 +114,6 @@ DoOK checks that the response is HTTP 200.
 
 ```
 searchKey: httptestutil.Client.GetOK
-tags: [exported]
 ```
 
 ```Go
@@ -126,7 +126,6 @@ GetOK checks that the response is HTTP 200.
 
 ```
 searchKey: httptestutil.Client.PostOK
-tags: [exported]
 ```
 
 ```Go
@@ -139,7 +138,6 @@ PostOK checks that the response is HTTP 200.
 
 ```
 searchKey: httptestutil.Client.DoNoFollowRedirects
-tags: [exported]
 ```
 
 ```Go
@@ -150,7 +148,6 @@ func (c Client) DoNoFollowRedirects(req *http.Request) (*http.Response, error)
 
 ```
 searchKey: httptestutil.Client.GetNoFollowRedirects
-tags: [exported]
 ```
 
 ```Go
@@ -161,7 +158,6 @@ func (c Client) GetNoFollowRedirects(url_ string) (*http.Response, error)
 
 ```
 searchKey: httptestutil.Client.GetJSON
-tags: [exported]
 ```
 
 ```Go
@@ -172,7 +168,6 @@ func (c *Client) GetJSON(url string, v interface{}) error
 
 ```
 searchKey: httptestutil.Client.DoJSON
-tags: [exported]
 ```
 
 ```Go
@@ -183,7 +178,6 @@ func (c *Client) DoJSON(method, url string, in, out interface{}) error
 
 ```
 searchKey: httptestutil.Client.PostFormNoFollowRedirects
-tags: [exported]
 ```
 
 ```Go
@@ -192,11 +186,14 @@ func (c *Client) PostFormNoFollowRedirects(url string, data url.Values) (*http.R
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewRecorder" href="#NewRecorder">func NewRecorder(file string, record bool, filters ...cassette.Filter) (*recorder.Recorder, error)</a>
 
 ```
 searchKey: httptestutil.NewRecorder
-tags: [exported]
 ```
 
 ```Go
@@ -209,7 +206,6 @@ NewRecorder returns an HTTP interaction recorder with the given record mode and 
 
 ```
 searchKey: httptestutil.NewRecorderOpt
-tags: [exported]
 ```
 
 ```Go
@@ -222,7 +218,6 @@ NewRecorderOpt returns an httpcli.Opt that wraps the Transport of an http.Client
 
 ```
 searchKey: httptestutil.NewGitHubRecorderFactory
-tags: [exported]
 ```
 
 ```Go
@@ -237,7 +232,6 @@ If update is true, the HTTP requests are recorded, otherwise they're replayed fr
 
 ```
 searchKey: httptestutil.NewRecorderFactory
-tags: [exported]
 ```
 
 ```Go

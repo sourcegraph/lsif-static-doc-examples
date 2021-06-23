@@ -14,15 +14,20 @@ Because there can be multiple frontend processes running, these tasks must be id
     * [func DeleteOldCacheDataInRedis()](#DeleteOldCacheDataInRedis)
     * [func DeleteOldEventLogsInPostgres(ctx context.Context, db dbutil.DB)](#DeleteOldEventLogsInPostgres)
     * [func DeleteOldSecurityEventLogsInPostgres(ctx context.Context, db dbutil.DB)](#DeleteOldSecurityEventLogsInPostgres)
-    * [func init()](#init)
+    * [func init()](#init.db_test.go)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [private]
+```
 
 ### <a id="recommendedPolicy" href="#recommendedPolicy">const recommendedPolicy</a>
 
 ```
 searchKey: bg.recommendedPolicy
+tags: [private]
 ```
 
 ```Go
@@ -31,11 +36,14 @@ const recommendedPolicy = "allkeys-lru"
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="CheckRedisCacheEvictionPolicy" href="#CheckRedisCacheEvictionPolicy">func CheckRedisCacheEvictionPolicy()</a>
 
 ```
 searchKey: bg.CheckRedisCacheEvictionPolicy
-tags: [exported]
 ```
 
 ```Go
@@ -46,6 +54,7 @@ func CheckRedisCacheEvictionPolicy()
 
 ```
 searchKey: bg.getRunID
+tags: [private]
 ```
 
 ```Go
@@ -56,7 +65,6 @@ func getRunID(c redis.Conn) (string, error)
 
 ```
 searchKey: bg.DeleteOldCacheDataInRedis
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +75,6 @@ func DeleteOldCacheDataInRedis()
 
 ```
 searchKey: bg.DeleteOldEventLogsInPostgres
-tags: [exported]
 ```
 
 ```Go
@@ -78,17 +85,17 @@ func DeleteOldEventLogsInPostgres(ctx context.Context, db dbutil.DB)
 
 ```
 searchKey: bg.DeleteOldSecurityEventLogsInPostgres
-tags: [exported]
 ```
 
 ```Go
 func DeleteOldSecurityEventLogsInPostgres(ctx context.Context, db dbutil.DB)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
 
 ```
 searchKey: bg.init
+tags: [private]
 ```
 
 ```Go

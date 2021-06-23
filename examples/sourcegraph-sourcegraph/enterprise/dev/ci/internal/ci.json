@@ -4,7 +4,9 @@
     "identifier": "ci",
     "newPage": true,
     "searchKey": "enterprise/dev/ci/internal/ci",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "ignoredRootFiles",
                 "newPage": false,
                 "searchKey": "ci.ignoredRootFiles",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "ci.Config",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -101,9 +107,7 @@
                       "identifier": "ComputeConfig",
                       "newPage": false,
                       "searchKey": "ci.ComputeConfig",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -123,7 +127,9 @@
                       "identifier": "Config.shortCommit",
                       "newPage": false,
                       "searchKey": "ci.Config.shortCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -143,7 +149,9 @@
                       "identifier": "Config.isMainBranch",
                       "newPage": false,
                       "searchKey": "ci.Config.isMainBranch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -163,7 +171,9 @@
                       "identifier": "Config.ensureCommit",
                       "newPage": false,
                       "searchKey": "ci.Config.ensureCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -183,7 +193,9 @@
                       "identifier": "Config.isPR",
                       "newPage": false,
                       "searchKey": "ci.Config.isPR",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -203,7 +215,9 @@
                       "identifier": "Config.isDocsOnly",
                       "newPage": false,
                       "searchKey": "ci.Config.isDocsOnly",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -223,7 +237,9 @@
                       "identifier": "Config.isSgOnly",
                       "newPage": false,
                       "searchKey": "ci.Config.isSgOnly",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -243,7 +259,9 @@
                       "identifier": "Config.isGoOnly",
                       "newPage": false,
                       "searchKey": "ci.Config.isGoOnly",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -263,7 +281,9 @@
                       "identifier": "Config.shouldRunE2EandQA",
                       "newPage": false,
                       "searchKey": "ci.Config.shouldRunE2EandQA",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -283,7 +303,9 @@
                       "identifier": "Config.candidateImageTag",
                       "newPage": false,
                       "searchKey": "ci.Config.candidateImageTag",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -303,7 +325,9 @@
                       "identifier": "Config.isStorybookAffected",
                       "newPage": false,
                       "searchKey": "ci.Config.isStorybookAffected",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -329,7 +353,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -347,7 +373,9 @@
                 "identifier": "contains",
                 "newPage": false,
                 "searchKey": "ci.contains",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +395,9 @@
                 "identifier": "isAllowedRootFile",
                 "newPage": false,
                 "searchKey": "ci.isAllowedRootFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +417,9 @@
                 "identifier": "addDocs",
                 "newPage": false,
                 "searchKey": "ci.addDocs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,7 +439,9 @@
                 "identifier": "addCheck",
                 "newPage": false,
                 "searchKey": "ci.addCheck",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -427,7 +461,9 @@
                 "identifier": "addLint",
                 "newPage": false,
                 "searchKey": "ci.addLint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,7 +483,9 @@
                 "identifier": "addWebApp",
                 "newPage": false,
                 "searchKey": "ci.addWebApp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,7 +505,9 @@
                 "identifier": "addBrowserExt",
                 "newPage": false,
                 "searchKey": "ci.addBrowserExt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,7 +527,9 @@
                 "identifier": "addSharedTests",
                 "newPage": false,
                 "searchKey": "ci.addSharedTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +549,9 @@
                 "identifier": "addBrandedTests",
                 "newPage": false,
                 "searchKey": "ci.addBrandedTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,7 +571,9 @@
                 "identifier": "addPostgresBackcompat",
                 "newPage": false,
                 "searchKey": "ci.addPostgresBackcompat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -547,7 +593,9 @@
                 "identifier": "addGoTests",
                 "newPage": false,
                 "searchKey": "ci.addGoTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -567,7 +615,9 @@
                 "identifier": "addGoBuild",
                 "newPage": false,
                 "searchKey": "ci.addGoBuild",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -587,7 +637,9 @@
                 "identifier": "addDockerfileLint",
                 "newPage": false,
                 "searchKey": "ci.addDockerfileLint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -607,7 +659,9 @@
                 "identifier": "addBackendIntegrationTests",
                 "newPage": false,
                 "searchKey": "ci.addBackendIntegrationTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -627,7 +681,9 @@
                 "identifier": "addBrowserExtensionE2ESteps",
                 "newPage": false,
                 "searchKey": "ci.addBrowserExtensionE2ESteps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -647,7 +703,9 @@
                 "identifier": "addBrowserExtensionReleaseSteps",
                 "newPage": false,
                 "searchKey": "ci.addBrowserExtensionReleaseSteps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -667,7 +725,9 @@
                 "identifier": "wait",
                 "newPage": false,
                 "searchKey": "ci.wait",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -687,7 +747,9 @@
                 "identifier": "triggerAsync",
                 "newPage": false,
                 "searchKey": "ci.triggerAsync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -707,7 +769,9 @@
                 "identifier": "triggerUpdaterPipeline",
                 "newPage": false,
                 "searchKey": "ci.triggerUpdaterPipeline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -727,7 +791,9 @@
                 "identifier": "clusterDockerImages",
                 "newPage": false,
                 "searchKey": "ci.clusterDockerImages",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -747,7 +813,9 @@
                 "identifier": "triggerE2EandQA",
                 "newPage": false,
                 "searchKey": "ci.triggerE2EandQA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -767,7 +835,9 @@
                 "identifier": "copyEnv",
                 "newPage": false,
                 "searchKey": "ci.copyEnv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -787,7 +857,9 @@
                 "identifier": "addDockerImages",
                 "newPage": false,
                 "searchKey": "ci.addDockerImages",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -807,7 +879,9 @@
                 "identifier": "addCandidateDockerImage",
                 "newPage": false,
                 "searchKey": "ci.addCandidateDockerImage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -827,7 +901,9 @@
                 "identifier": "addFinalDockerImage",
                 "newPage": false,
                 "searchKey": "ci.addFinalDockerImage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -847,9 +923,7 @@
                 "identifier": "GeneratePipeline",
                 "newPage": false,
                 "searchKey": "ci.GeneratePipeline",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

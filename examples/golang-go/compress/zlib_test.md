@@ -9,10 +9,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleNewWriter" href="#ExampleNewWriter">func ExampleNewWriter()</a>
 
 ```
 searchKey: zlib_test.ExampleNewWriter
+tags: [private]
 ```
 
 ```Go
@@ -23,6 +28,7 @@ func ExampleNewWriter()
 
 ```
 searchKey: zlib_test.ExampleNewReader
+tags: [private]
 ```
 
 ```Go

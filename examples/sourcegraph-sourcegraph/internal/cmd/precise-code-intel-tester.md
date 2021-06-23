@@ -62,10 +62,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="uploadQueryFragment" href="#uploadQueryFragment">const uploadQueryFragment</a>
 
 ```
 searchKey: main.uploadQueryFragment
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +85,7 @@ const uploadQueryFragment = `
 
 ```
 searchKey: main.repositoryQueryFragment
+tags: [private]
 ```
 
 ```Go
@@ -88,10 +94,15 @@ const repositoryQueryFragment = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="endpoint" href="#endpoint">var endpoint</a>
 
 ```
 searchKey: main.endpoint
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +113,7 @@ var endpoint = ...
 
 ```
 searchKey: main.token
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +124,7 @@ var token = env.Get("SOURCEGRAPH_SUDO_TOKEN", "", "Access token")
 
 ```
 searchKey: main.indexDir
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +137,7 @@ Flags
 
 ```
 searchKey: main.numConcurrentUploads
+tags: [private]
 ```
 
 ```Go
@@ -134,6 +148,7 @@ var numConcurrentUploads int
 
 ```
 searchKey: main.numConcurrentRequests
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +159,7 @@ var numConcurrentRequests int
 
 ```
 searchKey: main.checkQueryResult
+tags: [private]
 ```
 
 ```Go
@@ -154,6 +170,7 @@ var checkQueryResult bool
 
 ```
 searchKey: main.queryReferencesOfReferences
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +181,7 @@ var queryReferencesOfReferences bool
 
 ```
 searchKey: main.commands
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +197,7 @@ Entrypoints
 
 ```
 searchKey: main.queryGenerators
+tags: [private]
 ```
 
 ```Go
@@ -191,6 +210,7 @@ queryGenerators is the list of functions that create query test functions.
 
 ```
 searchKey: main.testCases
+tags: [private]
 ```
 
 ```Go
@@ -201,6 +221,7 @@ var testCases = ...
 
 ```
 searchKey: main.indexFilenamePattern
+tags: [private]
 ```
 
 ```Go
@@ -213,7 +234,6 @@ indexFilenamePattern extracts a repo name and rev from the index filename. We as
 
 ```
 searchKey: main.ErrProcessingFailed
-tags: [exported]
 ```
 
 ```Go
@@ -226,6 +246,7 @@ ErrProcessingFailed occurs when an upload enters the ERRORED state.
 
 ```
 searchKey: main.uploadIDPattern
+tags: [private]
 ```
 
 ```Go
@@ -236,11 +257,14 @@ uploadIDPattern extracts a GraphQL identifier from the output of the `src lsif u
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="QueryFunc" href="#QueryFunc">type QueryFunc func(context.Context, github.com/sourcegraph/sourcegraph/internal/cmd/precise-code-intel-tester.Location) ([]github.com/sourcegraph/sourcegraph/internal/cmd/precise-code-intel-tester.Location, error)</a>
 
 ```
 searchKey: main.QueryFunc
-tags: [exported]
 ```
 
 ```Go
@@ -253,7 +277,6 @@ QueryFunc performs a GraphQL query (definition or references) given the source l
 
 ```
 searchKey: main.QueryResponse
-tags: [exported]
 ```
 
 ```Go
@@ -277,7 +300,6 @@ type QueryResponse struct {
 
 ```
 searchKey: main.Definitions
-tags: [exported]
 ```
 
 ```Go
@@ -290,7 +312,6 @@ type Definitions struct {
 
 ```
 searchKey: main.References
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +325,6 @@ type References struct {
 
 ```
 searchKey: main.Node
-tags: [exported]
 ```
 
 ```Go
@@ -318,7 +338,6 @@ type Node struct {
 
 ```
 searchKey: main.Resource
-tags: [exported]
 ```
 
 ```Go
@@ -333,7 +352,6 @@ type Resource struct {
 
 ```
 searchKey: main.Repository
-tags: [exported]
 ```
 
 ```Go
@@ -346,7 +364,6 @@ type Repository struct {
 
 ```
 searchKey: main.Commit
-tags: [exported]
 ```
 
 ```Go
@@ -359,7 +376,6 @@ type Commit struct {
 
 ```
 searchKey: main.Range
-tags: [exported]
 ```
 
 ```Go
@@ -373,7 +389,6 @@ type Range struct {
 
 ```
 searchKey: main.Position
-tags: [exported]
 ```
 
 ```Go
@@ -387,7 +402,6 @@ type Position struct {
 
 ```
 searchKey: main.PageInfo
-tags: [exported]
 ```
 
 ```Go
@@ -400,7 +414,6 @@ type PageInfo struct {
 
 ```
 searchKey: main.Location
-tags: [exported]
 ```
 
 ```Go
@@ -419,7 +432,6 @@ Location specifies the first position in a source range.
 
 ```
 searchKey: main.Upload
-tags: [exported]
 ```
 
 ```Go
@@ -437,6 +449,7 @@ Upload represents a fully uploaded (but possibly unprocessed) LSIF index.
 
 ```
 searchKey: main.refreshState
+tags: [private]
 ```
 
 ```Go
@@ -448,10 +461,15 @@ type refreshState struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +480,7 @@ func main()
 
 ```
 searchKey: main.commandNameList
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +493,7 @@ commandNameList returns a comma-separated list of valid command names.
 
 ```
 searchKey: main.queryCommand
+tags: [private]
 ```
 
 ```Go
@@ -486,6 +506,7 @@ queryCommand runs the "query" command.
 
 ```
 searchKey: main.referencesFromDefinitionsQueries
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +519,7 @@ referencesFromDefinitionsQueries returns a list of test functions that queries t
 
 ```
 searchKey: main.definitionsFromReferencesQueries
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +532,7 @@ definitionsFromReferencesQueries returns a list of test functions that queries t
 
 ```
 searchKey: main.referencesFromReferencesQueries
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +545,7 @@ referencesFromReferencesQueries returns a list of test functions that queries th
 
 ```
 searchKey: main.makeTestQueryFunction
+tags: [private]
 ```
 
 ```Go
@@ -534,6 +558,7 @@ makeTestQueryFunction constructs a function for RunParallel that invokes the giv
 
 ```
 searchKey: main.queryDefinitions
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +571,7 @@ queryDefinitions returns all of the LSIF definitions for the given location.
 
 ```
 searchKey: main.queryReferences
+tags: [private]
 ```
 
 ```Go
@@ -558,6 +584,7 @@ queryReferences returns all of the LSIF references for the given location.
 
 ```
 searchKey: main.sortLocations
+tags: [private]
 ```
 
 ```Go
@@ -570,6 +597,7 @@ sortLocations sorts a slice of Locations by repo, rev, path, line, then characte
 
 ```
 searchKey: main.compareLocations
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +610,7 @@ Compare returns an integer comparing two locations. The result will be 0 if a ==
 
 ```
 searchKey: main.uploadCommand
+tags: [private]
 ```
 
 ```Go
@@ -594,6 +623,7 @@ uploadCommand runs the "upload" command.
 
 ```
 searchKey: main.uploadIndexes
+tags: [private]
 ```
 
 ```Go
@@ -606,6 +636,7 @@ uploadIndexes uploads each file in the index directory and blocks until each upl
 
 ```
 searchKey: main.readRevsByRepo
+tags: [private]
 ```
 
 ```Go
@@ -618,6 +649,7 @@ readRevsByRepo returns a list of revisions by repository names for which there i
 
 ```
 searchKey: main.countRevs
+tags: [private]
 ```
 
 ```Go
@@ -630,6 +662,7 @@ countRevs returns the total number of revision.
 
 ```
 searchKey: main.makeProcessedSignals
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +675,7 @@ makeProcessedSignals returns a map of error channels for each revision.
 
 ```
 searchKey: main.makeRefreshedSignals
+tags: [private]
 ```
 
 ```Go
@@ -654,6 +688,7 @@ refreshedSignals returns a map of error channels for each repository.
 
 ```
 searchKey: main.watchStateChanges
+tags: [private]
 ```
 
 ```Go
@@ -671,6 +706,7 @@ watchStateChanges maintains a list of uploaded but nonterminal upload records. T
 
 ```
 searchKey: main.uploadStates
+tags: [private]
 ```
 
 ```Go
@@ -683,6 +719,7 @@ uploadStates returns a map from upload identifier to its current state.
 
 ```
 searchKey: main.makeTestUploadForRepositoryFunction
+tags: [private]
 ```
 
 ```Go
@@ -702,6 +739,7 @@ makeTestUploadForRepositoryFunction constructs a function for RunParallel that u
 
 ```
 searchKey: main.upload
+tags: [private]
 ```
 
 ```Go

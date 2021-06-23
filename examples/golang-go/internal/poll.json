@@ -4,7 +4,9 @@
     "identifier": "poll",
     "newPage": true,
     "searchKey": "internal/poll",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "mutexClosed",
                 "newPage": false,
                 "searchKey": "poll.mutexClosed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "mutexRLock",
                 "newPage": false,
                 "searchKey": "poll.mutexRLock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "mutexWLock",
                 "newPage": false,
                 "searchKey": "poll.mutexWLock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "mutexRef",
                 "newPage": false,
                 "searchKey": "poll.mutexRef",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "mutexRefMask",
                 "newPage": false,
                 "searchKey": "poll.mutexRefMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -140,7 +154,9 @@
                 "identifier": "mutexRWait",
                 "newPage": false,
                 "searchKey": "poll.mutexRWait",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -160,7 +176,9 @@
                 "identifier": "mutexRMask",
                 "newPage": false,
                 "searchKey": "poll.mutexRMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -180,7 +198,9 @@
                 "identifier": "mutexWWait",
                 "newPage": false,
                 "searchKey": "poll.mutexWWait",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -200,7 +220,9 @@
                 "identifier": "mutexWMask",
                 "newPage": false,
                 "searchKey": "poll.mutexWMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +242,9 @@
                 "identifier": "overflowMsg",
                 "newPage": false,
                 "searchKey": "poll.overflowMsg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -240,7 +264,9 @@
                 "identifier": "pollNoError",
                 "newPage": false,
                 "searchKey": "poll.pollNoError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +286,9 @@
                 "identifier": "pollErrClosing",
                 "newPage": false,
                 "searchKey": "poll.pollErrClosing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -280,7 +308,9 @@
                 "identifier": "pollErrTimeout",
                 "newPage": false,
                 "searchKey": "poll.pollErrTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -300,7 +330,9 @@
                 "identifier": "pollErrNotPollable",
                 "newPage": false,
                 "searchKey": "poll.pollErrNotPollable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -320,7 +352,9 @@
                 "identifier": "maxRW",
                 "newPage": false,
                 "searchKey": "poll.maxRW",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -343,7 +377,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -361,7 +397,9 @@
                 "identifier": "errEAGAIN",
                 "newPage": false,
                 "searchKey": "poll.errEAGAIN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -381,7 +419,9 @@
                 "identifier": "errEINVAL",
                 "newPage": false,
                 "searchKey": "poll.errEINVAL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -401,7 +441,9 @@
                 "identifier": "errENOENT",
                 "newPage": false,
                 "searchKey": "poll.errENOENT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -421,9 +463,7 @@
                 "identifier": "ErrNetClosing",
                 "newPage": false,
                 "searchKey": "poll.ErrNetClosing",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -443,9 +483,7 @@
                 "identifier": "ErrFileClosing",
                 "newPage": false,
                 "searchKey": "poll.ErrFileClosing",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -465,9 +503,7 @@
                 "identifier": "ErrNoDeadline",
                 "newPage": false,
                 "searchKey": "poll.ErrNoDeadline",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -487,9 +523,7 @@
                 "identifier": "ErrDeadlineExceeded",
                 "newPage": false,
                 "searchKey": "poll.ErrDeadlineExceeded",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -509,9 +543,7 @@
                 "identifier": "ErrNotPollable",
                 "newPage": false,
                 "searchKey": "poll.ErrNotPollable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -531,9 +563,7 @@
                 "identifier": "TestHookDidWritev",
                 "newPage": false,
                 "searchKey": "poll.TestHookDidWritev",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -553,7 +583,9 @@
                 "identifier": "serverInit",
                 "newPage": false,
                 "searchKey": "poll.serverInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -573,7 +605,9 @@
                 "identifier": "tryDupCloexec",
                 "newPage": false,
                 "searchKey": "poll.tryDupCloexec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -593,9 +627,7 @@
                 "identifier": "CloseFunc",
                 "newPage": false,
                 "searchKey": "poll.CloseFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -615,9 +647,7 @@
                 "identifier": "AcceptFunc",
                 "newPage": false,
                 "searchKey": "poll.AcceptFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -637,7 +667,9 @@
                 "identifier": "Consume",
                 "newPage": false,
                 "searchKey": "poll.Consume",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -660,7 +692,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -678,7 +712,9 @@
                 "identifier": "errNetClosing",
                 "newPage": false,
                 "searchKey": "poll.errNetClosing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -696,7 +732,9 @@
                       "identifier": "errNetClosing.Error",
                       "newPage": false,
                       "searchKey": "poll.errNetClosing.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -716,7 +754,9 @@
                       "identifier": "errNetClosing.Timeout",
                       "newPage": false,
                       "searchKey": "poll.errNetClosing.Timeout",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -736,7 +776,9 @@
                       "identifier": "errNetClosing.Temporary",
                       "newPage": false,
                       "searchKey": "poll.errNetClosing.Temporary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -759,9 +801,7 @@
                 "identifier": "DeadlineExceededError",
                 "newPage": false,
                 "searchKey": "poll.DeadlineExceededError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -779,9 +819,7 @@
                       "identifier": "DeadlineExceededError.Error",
                       "newPage": false,
                       "searchKey": "poll.DeadlineExceededError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -801,9 +839,7 @@
                       "identifier": "DeadlineExceededError.Timeout",
                       "newPage": false,
                       "searchKey": "poll.DeadlineExceededError.Timeout",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -823,9 +859,7 @@
                       "identifier": "DeadlineExceededError.Temporary",
                       "newPage": false,
                       "searchKey": "poll.DeadlineExceededError.Temporary",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -848,7 +882,9 @@
                 "identifier": "fdMutex",
                 "newPage": false,
                 "searchKey": "poll.fdMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -866,7 +902,9 @@
                       "identifier": "fdMutex.incref",
                       "newPage": false,
                       "searchKey": "poll.fdMutex.incref",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -886,7 +924,9 @@
                       "identifier": "fdMutex.increfAndClose",
                       "newPage": false,
                       "searchKey": "poll.fdMutex.increfAndClose",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -906,7 +946,9 @@
                       "identifier": "fdMutex.decref",
                       "newPage": false,
                       "searchKey": "poll.fdMutex.decref",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -926,7 +968,9 @@
                       "identifier": "fdMutex.rwlock",
                       "newPage": false,
                       "searchKey": "poll.fdMutex.rwlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -946,7 +990,9 @@
                       "identifier": "fdMutex.rwunlock",
                       "newPage": false,
                       "searchKey": "poll.fdMutex.rwunlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -969,7 +1015,9 @@
                 "identifier": "pollDesc",
                 "newPage": false,
                 "searchKey": "poll.pollDesc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -982,12 +1030,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/poll#pollDesc.init",
+                    "pathID": "/internal/poll#pollDesc.init.fd_poll_runtime.go",
                     "documentation": {
-                      "identifier": "pollDesc.init",
+                      "identifier": "pollDesc.init.fd_poll_runtime.go",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1007,7 +1057,9 @@
                       "identifier": "pollDesc.close",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1027,7 +1079,9 @@
                       "identifier": "pollDesc.evict",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.evict",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1047,7 +1101,9 @@
                       "identifier": "pollDesc.prepare",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.prepare",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1067,7 +1123,9 @@
                       "identifier": "pollDesc.prepareRead",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.prepareRead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1087,7 +1145,9 @@
                       "identifier": "pollDesc.prepareWrite",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.prepareWrite",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1107,7 +1167,9 @@
                       "identifier": "pollDesc.wait",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.wait",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1127,7 +1189,9 @@
                       "identifier": "pollDesc.waitRead",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.waitRead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1147,7 +1211,9 @@
                       "identifier": "pollDesc.waitWrite",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.waitWrite",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1167,7 +1233,9 @@
                       "identifier": "pollDesc.waitCanceled",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.waitCanceled",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1187,7 +1255,9 @@
                       "identifier": "pollDesc.pollable",
                       "newPage": false,
                       "searchKey": "poll.pollDesc.pollable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1210,9 +1280,7 @@
                 "identifier": "FD",
                 "newPage": false,
                 "searchKey": "poll.FD",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1230,9 +1298,7 @@
                       "identifier": "FD.Fsync",
                       "newPage": false,
                       "searchKey": "poll.FD.Fsync",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1252,7 +1318,9 @@
                       "identifier": "FD.incref",
                       "newPage": false,
                       "searchKey": "poll.FD.incref",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1272,7 +1340,9 @@
                       "identifier": "FD.decref",
                       "newPage": false,
                       "searchKey": "poll.FD.decref",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1292,7 +1362,9 @@
                       "identifier": "FD.readLock",
                       "newPage": false,
                       "searchKey": "poll.FD.readLock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1312,7 +1384,9 @@
                       "identifier": "FD.readUnlock",
                       "newPage": false,
                       "searchKey": "poll.FD.readUnlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1332,7 +1406,9 @@
                       "identifier": "FD.writeLock",
                       "newPage": false,
                       "searchKey": "poll.FD.writeLock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1352,7 +1428,9 @@
                       "identifier": "FD.writeUnlock",
                       "newPage": false,
                       "searchKey": "poll.FD.writeUnlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1372,9 +1450,7 @@
                       "identifier": "FD.OpenDir",
                       "newPage": false,
                       "searchKey": "poll.FD.OpenDir",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1394,9 +1470,7 @@
                       "identifier": "FD.SetDeadline",
                       "newPage": false,
                       "searchKey": "poll.FD.SetDeadline",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1416,9 +1490,7 @@
                       "identifier": "FD.SetReadDeadline",
                       "newPage": false,
                       "searchKey": "poll.FD.SetReadDeadline",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1438,9 +1510,7 @@
                       "identifier": "FD.SetWriteDeadline",
                       "newPage": false,
                       "searchKey": "poll.FD.SetWriteDeadline",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1460,7 +1530,9 @@
                       "identifier": "FD.eofError",
                       "newPage": false,
                       "searchKey": "poll.FD.eofError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1480,9 +1552,7 @@
                       "identifier": "FD.Shutdown",
                       "newPage": false,
                       "searchKey": "poll.FD.Shutdown",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1502,9 +1572,7 @@
                       "identifier": "FD.Fchown",
                       "newPage": false,
                       "searchKey": "poll.FD.Fchown",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1524,9 +1592,7 @@
                       "identifier": "FD.Ftruncate",
                       "newPage": false,
                       "searchKey": "poll.FD.Ftruncate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1546,9 +1612,7 @@
                       "identifier": "FD.RawControl",
                       "newPage": false,
                       "searchKey": "poll.FD.RawControl",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1568,9 +1632,7 @@
                       "identifier": "FD.Init",
                       "newPage": false,
                       "searchKey": "poll.FD.Init",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1590,7 +1652,9 @@
                       "identifier": "FD.destroy",
                       "newPage": false,
                       "searchKey": "poll.FD.destroy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1610,9 +1674,7 @@
                       "identifier": "FD.Close",
                       "newPage": false,
                       "searchKey": "poll.FD.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1632,9 +1694,7 @@
                       "identifier": "FD.SetBlocking",
                       "newPage": false,
                       "searchKey": "poll.FD.SetBlocking",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1654,9 +1714,7 @@
                       "identifier": "FD.Read",
                       "newPage": false,
                       "searchKey": "poll.FD.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1676,9 +1734,7 @@
                       "identifier": "FD.Pread",
                       "newPage": false,
                       "searchKey": "poll.FD.Pread",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1698,9 +1754,7 @@
                       "identifier": "FD.ReadFrom",
                       "newPage": false,
                       "searchKey": "poll.FD.ReadFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1720,9 +1774,7 @@
                       "identifier": "FD.ReadMsg",
                       "newPage": false,
                       "searchKey": "poll.FD.ReadMsg",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1742,9 +1794,7 @@
                       "identifier": "FD.Write",
                       "newPage": false,
                       "searchKey": "poll.FD.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1764,9 +1814,7 @@
                       "identifier": "FD.Pwrite",
                       "newPage": false,
                       "searchKey": "poll.FD.Pwrite",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1786,9 +1834,7 @@
                       "identifier": "FD.WriteTo",
                       "newPage": false,
                       "searchKey": "poll.FD.WriteTo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1808,9 +1854,7 @@
                       "identifier": "FD.WriteMsg",
                       "newPage": false,
                       "searchKey": "poll.FD.WriteMsg",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1830,9 +1874,7 @@
                       "identifier": "FD.Accept",
                       "newPage": false,
                       "searchKey": "poll.FD.Accept",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1852,9 +1894,7 @@
                       "identifier": "FD.Seek",
                       "newPage": false,
                       "searchKey": "poll.FD.Seek",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1874,9 +1914,7 @@
                       "identifier": "FD.ReadDirent",
                       "newPage": false,
                       "searchKey": "poll.FD.ReadDirent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1896,9 +1934,7 @@
                       "identifier": "FD.Fchmod",
                       "newPage": false,
                       "searchKey": "poll.FD.Fchmod",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1918,9 +1954,7 @@
                       "identifier": "FD.Fchdir",
                       "newPage": false,
                       "searchKey": "poll.FD.Fchdir",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1940,9 +1974,7 @@
                       "identifier": "FD.Fstat",
                       "newPage": false,
                       "searchKey": "poll.FD.Fstat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1962,9 +1994,7 @@
                       "identifier": "FD.Dup",
                       "newPage": false,
                       "searchKey": "poll.FD.Dup",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1984,9 +2014,7 @@
                       "identifier": "FD.WaitWrite",
                       "newPage": false,
                       "searchKey": "poll.FD.WaitWrite",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2006,9 +2034,7 @@
                       "identifier": "FD.WriteOnce",
                       "newPage": false,
                       "searchKey": "poll.FD.WriteOnce",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2028,9 +2054,7 @@
                       "identifier": "FD.RawRead",
                       "newPage": false,
                       "searchKey": "poll.FD.RawRead",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2050,9 +2074,7 @@
                       "identifier": "FD.RawWrite",
                       "newPage": false,
                       "searchKey": "poll.FD.RawWrite",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2072,9 +2094,7 @@
                       "identifier": "FD.SetsockoptInt",
                       "newPage": false,
                       "searchKey": "poll.FD.SetsockoptInt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2094,9 +2114,7 @@
                       "identifier": "FD.SetsockoptInet4Addr",
                       "newPage": false,
                       "searchKey": "poll.FD.SetsockoptInet4Addr",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2116,9 +2134,7 @@
                       "identifier": "FD.SetsockoptLinger",
                       "newPage": false,
                       "searchKey": "poll.FD.SetsockoptLinger",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2138,9 +2154,7 @@
                       "identifier": "FD.SetsockoptByte",
                       "newPage": false,
                       "searchKey": "poll.FD.SetsockoptByte",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2160,9 +2174,7 @@
                       "identifier": "FD.SetsockoptIPMreq",
                       "newPage": false,
                       "searchKey": "poll.FD.SetsockoptIPMreq",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2182,9 +2194,7 @@
                       "identifier": "FD.SetsockoptIPv6Mreq",
                       "newPage": false,
                       "searchKey": "poll.FD.SetsockoptIPv6Mreq",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2204,9 +2214,7 @@
                       "identifier": "FD.Writev",
                       "newPage": false,
                       "searchKey": "poll.FD.Writev",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2226,7 +2234,9 @@
                       "identifier": "FD.EOFError",
                       "newPage": false,
                       "searchKey": "poll.FD.EOFError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2249,7 +2259,9 @@
                 "identifier": "FDMutex",
                 "newPage": false,
                 "searchKey": "poll.FDMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2267,7 +2279,9 @@
                       "identifier": "FDMutex.Incref",
                       "newPage": false,
                       "searchKey": "poll.FDMutex.Incref",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2287,7 +2301,9 @@
                       "identifier": "FDMutex.IncrefAndClose",
                       "newPage": false,
                       "searchKey": "poll.FDMutex.IncrefAndClose",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2307,7 +2323,9 @@
                       "identifier": "FDMutex.Decref",
                       "newPage": false,
                       "searchKey": "poll.FDMutex.Decref",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2327,7 +2345,9 @@
                       "identifier": "FDMutex.RWLock",
                       "newPage": false,
                       "searchKey": "poll.FDMutex.RWLock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2347,7 +2367,9 @@
                       "identifier": "FDMutex.RWUnlock",
                       "newPage": false,
                       "searchKey": "poll.FDMutex.RWUnlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2373,7 +2395,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2391,7 +2415,9 @@
                 "identifier": "errnoErr",
                 "newPage": false,
                 "searchKey": "poll.errnoErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2411,7 +2437,9 @@
                 "identifier": "fcntl",
                 "newPage": false,
                 "searchKey": "poll.fcntl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2431,7 +2459,9 @@
                 "identifier": "errClosing",
                 "newPage": false,
                 "searchKey": "poll.errClosing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2451,7 +2481,9 @@
                 "identifier": "consume",
                 "newPage": false,
                 "searchKey": "poll.consume",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2471,7 +2503,9 @@
                 "identifier": "runtime_Semacquire",
                 "newPage": false,
                 "searchKey": "poll.runtime_Semacquire",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2491,7 +2525,9 @@
                 "identifier": "runtime_Semrelease",
                 "newPage": false,
                 "searchKey": "poll.runtime_Semrelease",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2511,7 +2547,9 @@
                 "identifier": "fdopendir",
                 "newPage": false,
                 "searchKey": "poll.fdopendir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2531,7 +2569,9 @@
                 "identifier": "runtimeNano",
                 "newPage": false,
                 "searchKey": "poll.runtimeNano",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2551,7 +2591,9 @@
                 "identifier": "runtime_pollServerInit",
                 "newPage": false,
                 "searchKey": "poll.runtime_pollServerInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2571,7 +2613,9 @@
                 "identifier": "runtime_pollOpen",
                 "newPage": false,
                 "searchKey": "poll.runtime_pollOpen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2591,7 +2635,9 @@
                 "identifier": "runtime_pollClose",
                 "newPage": false,
                 "searchKey": "poll.runtime_pollClose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2611,7 +2657,9 @@
                 "identifier": "runtime_pollWait",
                 "newPage": false,
                 "searchKey": "poll.runtime_pollWait",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2631,7 +2679,9 @@
                 "identifier": "runtime_pollWaitCanceled",
                 "newPage": false,
                 "searchKey": "poll.runtime_pollWaitCanceled",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2651,7 +2701,9 @@
                 "identifier": "runtime_pollReset",
                 "newPage": false,
                 "searchKey": "poll.runtime_pollReset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2671,7 +2723,9 @@
                 "identifier": "runtime_pollSetDeadline",
                 "newPage": false,
                 "searchKey": "poll.runtime_pollSetDeadline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2691,7 +2745,9 @@
                 "identifier": "runtime_pollUnblock",
                 "newPage": false,
                 "searchKey": "poll.runtime_pollUnblock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2711,7 +2767,9 @@
                 "identifier": "runtime_isPollServerDescriptor",
                 "newPage": false,
                 "searchKey": "poll.runtime_isPollServerDescriptor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2731,7 +2789,9 @@
                 "identifier": "convertErr",
                 "newPage": false,
                 "searchKey": "poll.convertErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2751,7 +2811,9 @@
                 "identifier": "setDeadlineImpl",
                 "newPage": false,
                 "searchKey": "poll.setDeadlineImpl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2771,9 +2833,7 @@
                 "identifier": "IsPollDescriptor",
                 "newPage": false,
                 "searchKey": "poll.IsPollDescriptor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2793,7 +2853,9 @@
                 "identifier": "ignoringEINTR",
                 "newPage": false,
                 "searchKey": "poll.ignoringEINTR",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2813,9 +2875,7 @@
                 "identifier": "DupCloseOnExec",
                 "newPage": false,
                 "searchKey": "poll.DupCloseOnExec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2835,7 +2895,9 @@
                 "identifier": "dupCloseOnExecOld",
                 "newPage": false,
                 "searchKey": "poll.dupCloseOnExecOld",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2855,7 +2917,9 @@
                 "identifier": "ignoringEINTRIO",
                 "newPage": false,
                 "searchKey": "poll.ignoringEINTRIO",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2875,7 +2939,9 @@
                 "identifier": "writev",
                 "newPage": false,
                 "searchKey": "poll.writev",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2895,7 +2961,9 @@
                 "identifier": "newIovecWithBase",
                 "newPage": false,
                 "searchKey": "poll.newIovecWithBase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2915,7 +2983,9 @@
                 "identifier": "accept",
                 "newPage": false,
                 "searchKey": "poll.accept",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,7 +4,9 @@
     "identifier": "router",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app/router",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "revSuffixNoDots",
                 "newPage": false,
                 "searchKey": "router.revSuffixNoDots",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "RobotsTxt",
                 "newPage": false,
                 "searchKey": "router.RobotsTxt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -82,9 +86,7 @@
                 "identifier": "Favicon",
                 "newPage": false,
                 "searchKey": "router.Favicon",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -104,9 +106,7 @@
                 "identifier": "OpenSearch",
                 "newPage": false,
                 "searchKey": "router.OpenSearch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -126,9 +126,7 @@
                 "identifier": "RepoBadge",
                 "newPage": false,
                 "searchKey": "router.RepoBadge",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -148,9 +146,7 @@
                 "identifier": "Logout",
                 "newPage": false,
                 "searchKey": "router.Logout",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -170,9 +166,7 @@
                 "identifier": "SignIn",
                 "newPage": false,
                 "searchKey": "router.SignIn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -192,9 +186,7 @@
                 "identifier": "SignOut",
                 "newPage": false,
                 "searchKey": "router.SignOut",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -214,9 +206,7 @@
                 "identifier": "SignUp",
                 "newPage": false,
                 "searchKey": "router.SignUp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -236,9 +226,7 @@
                 "identifier": "SiteInit",
                 "newPage": false,
                 "searchKey": "router.SiteInit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -258,9 +246,7 @@
                 "identifier": "VerifyEmail",
                 "newPage": false,
                 "searchKey": "router.VerifyEmail",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -280,9 +266,7 @@
                 "identifier": "ResetPasswordInit",
                 "newPage": false,
                 "searchKey": "router.ResetPasswordInit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -302,9 +286,7 @@
                 "identifier": "ResetPasswordCode",
                 "newPage": false,
                 "searchKey": "router.ResetPasswordCode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -324,9 +306,7 @@
                 "identifier": "CheckUsernameTaken",
                 "newPage": false,
                 "searchKey": "router.CheckUsernameTaken",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -346,9 +326,7 @@
                 "identifier": "RegistryExtensionBundle",
                 "newPage": false,
                 "searchKey": "router.RegistryExtensionBundle",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -368,9 +346,7 @@
                 "identifier": "UsageStatsDownload",
                 "newPage": false,
                 "searchKey": "router.UsageStatsDownload",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -390,9 +366,7 @@
                 "identifier": "LatestPing",
                 "newPage": false,
                 "searchKey": "router.LatestPing",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -412,9 +386,7 @@
                 "identifier": "OldToolsRedirect",
                 "newPage": false,
                 "searchKey": "router.OldToolsRedirect",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -434,9 +406,7 @@
                 "identifier": "OldTreeRedirect",
                 "newPage": false,
                 "searchKey": "router.OldTreeRedirect",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -456,9 +426,7 @@
                 "identifier": "GDDORefs",
                 "newPage": false,
                 "searchKey": "router.GDDORefs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -478,9 +446,7 @@
                 "identifier": "Editor",
                 "newPage": false,
                 "searchKey": "router.Editor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -500,9 +466,7 @@
                 "identifier": "Debug",
                 "newPage": false,
                 "searchKey": "router.Debug",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -522,9 +486,7 @@
                 "identifier": "DebugHeaders",
                 "newPage": false,
                 "searchKey": "router.DebugHeaders",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -544,9 +506,7 @@
                 "identifier": "GopherconLiveBlog",
                 "newPage": false,
                 "searchKey": "router.GopherconLiveBlog",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -566,9 +526,7 @@
                 "identifier": "GoSymbolURL",
                 "newPage": false,
                 "searchKey": "router.GoSymbolURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -588,9 +546,7 @@
                 "identifier": "UI",
                 "newPage": false,
                 "searchKey": "router.UI",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -613,7 +569,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -631,7 +589,9 @@
                 "identifier": "router",
                 "newPage": false,
                 "searchKey": "router.router",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -654,7 +614,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -672,9 +634,7 @@
                 "identifier": "URLToRepoTreeEntry",
                 "newPage": false,
                 "searchKey": "router.URLToRepoTreeEntry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -694,7 +654,9 @@
                 "identifier": "revStr",
                 "newPage": false,
                 "searchKey": "router.revStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -714,7 +676,9 @@
                 "identifier": "addOldTreeRedirectRoute",
                 "newPage": false,
                 "searchKey": "router.addOldTreeRedirectRoute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -734,9 +698,7 @@
                 "identifier": "Router",
                 "newPage": false,
                 "searchKey": "router.Router",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -756,7 +718,9 @@
                 "identifier": "newRouter",
                 "newPage": false,
                 "searchKey": "router.newRouter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -776,7 +740,9 @@
                 "identifier": "TestOldTreesRedirect",
                 "newPage": false,
                 "searchKey": "router.TestOldTreesRedirect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

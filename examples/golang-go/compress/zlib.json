@@ -4,9 +4,7 @@
     "identifier": "zlib",
     "newPage": true,
     "searchKey": "compress/zlib",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "zlibDeflate",
                 "newPage": false,
                 "searchKey": "zlib.zlibDeflate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,9 +62,7 @@
                 "identifier": "NoCompression",
                 "newPage": false,
                 "searchKey": "zlib.NoCompression",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -86,9 +82,7 @@
                 "identifier": "BestSpeed",
                 "newPage": false,
                 "searchKey": "zlib.BestSpeed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -108,9 +102,7 @@
                 "identifier": "BestCompression",
                 "newPage": false,
                 "searchKey": "zlib.BestCompression",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -130,9 +122,7 @@
                 "identifier": "DefaultCompression",
                 "newPage": false,
                 "searchKey": "zlib.DefaultCompression",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -152,9 +142,7 @@
                 "identifier": "HuffmanOnly",
                 "newPage": false,
                 "searchKey": "zlib.HuffmanOnly",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -177,9 +165,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -197,9 +183,7 @@
                 "identifier": "ErrChecksum",
                 "newPage": false,
                 "searchKey": "zlib.ErrChecksum",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -219,9 +203,7 @@
                 "identifier": "ErrDictionary",
                 "newPage": false,
                 "searchKey": "zlib.ErrDictionary",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -241,9 +223,7 @@
                 "identifier": "ErrHeader",
                 "newPage": false,
                 "searchKey": "zlib.ErrHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -263,7 +243,9 @@
                 "identifier": "zlibTests",
                 "newPage": false,
                 "searchKey": "zlib.zlibTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -283,7 +265,9 @@
                 "identifier": "filenames",
                 "newPage": false,
                 "searchKey": "zlib.filenames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -303,7 +287,9 @@
                 "identifier": "data",
                 "newPage": false,
                 "searchKey": "zlib.data",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +312,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -346,7 +330,9 @@
                 "identifier": "reader",
                 "newPage": false,
                 "searchKey": "zlib.reader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,7 +350,9 @@
                       "identifier": "reader.Read",
                       "newPage": false,
                       "searchKey": "zlib.reader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -384,7 +372,9 @@
                       "identifier": "reader.Close",
                       "newPage": false,
                       "searchKey": "zlib.reader.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -404,7 +394,9 @@
                       "identifier": "reader.Reset",
                       "newPage": false,
                       "searchKey": "zlib.reader.Reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -427,9 +419,7 @@
                 "identifier": "Resetter",
                 "newPage": false,
                 "searchKey": "zlib.Resetter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -449,9 +439,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "zlib.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -469,9 +457,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "zlib.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -491,9 +477,7 @@
                       "identifier": "NewWriterLevel",
                       "newPage": false,
                       "searchKey": "zlib.NewWriterLevel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -513,9 +497,7 @@
                       "identifier": "NewWriterLevelDict",
                       "newPage": false,
                       "searchKey": "zlib.NewWriterLevelDict",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -535,9 +517,7 @@
                       "identifier": "Writer.Reset",
                       "newPage": false,
                       "searchKey": "zlib.Writer.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -557,7 +537,9 @@
                       "identifier": "Writer.writeHeader",
                       "newPage": false,
                       "searchKey": "zlib.Writer.writeHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -577,9 +559,7 @@
                       "identifier": "Writer.Write",
                       "newPage": false,
                       "searchKey": "zlib.Writer.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -599,9 +579,7 @@
                       "identifier": "Writer.Flush",
                       "newPage": false,
                       "searchKey": "zlib.Writer.Flush",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -621,9 +599,7 @@
                       "identifier": "Writer.Close",
                       "newPage": false,
                       "searchKey": "zlib.Writer.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -646,7 +622,9 @@
                 "identifier": "zlibTest",
                 "newPage": false,
                 "searchKey": "zlib.zlibTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -669,9 +647,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -689,9 +665,7 @@
                 "identifier": "NewReader",
                 "newPage": false,
                 "searchKey": "zlib.NewReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -711,9 +685,7 @@
                 "identifier": "NewReaderDict",
                 "newPage": false,
                 "searchKey": "zlib.NewReaderDict",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -733,7 +705,9 @@
                 "identifier": "TestDecompressor",
                 "newPage": false,
                 "searchKey": "zlib.TestDecompressor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -753,7 +727,9 @@
                 "identifier": "testFileLevelDict",
                 "newPage": false,
                 "searchKey": "zlib.testFileLevelDict",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -773,7 +749,9 @@
                 "identifier": "testLevelDict",
                 "newPage": false,
                 "searchKey": "zlib.testLevelDict",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -793,7 +771,9 @@
                 "identifier": "testFileLevelDictReset",
                 "newPage": false,
                 "searchKey": "zlib.testFileLevelDictReset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -813,7 +793,9 @@
                 "identifier": "TestWriter",
                 "newPage": false,
                 "searchKey": "zlib.TestWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -833,7 +815,9 @@
                 "identifier": "TestWriterBig",
                 "newPage": false,
                 "searchKey": "zlib.TestWriterBig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -853,7 +837,9 @@
                 "identifier": "TestWriterDict",
                 "newPage": false,
                 "searchKey": "zlib.TestWriterDict",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -873,7 +859,9 @@
                 "identifier": "TestWriterReset",
                 "newPage": false,
                 "searchKey": "zlib.TestWriterReset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -893,7 +881,9 @@
                 "identifier": "TestWriterDictIsUsed",
                 "newPage": false,
                 "searchKey": "zlib.TestWriterDictIsUsed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

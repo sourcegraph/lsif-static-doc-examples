@@ -10,17 +10,20 @@ Package pubsub is a lightweight wrapper around pubsub which initializes pubsub b
     * [var client](#client)
 * [Functions](#func)
     * [func Enabled() bool](#Enabled)
-    * [func init()](#init)
+    * [func init()](#init.publish.go)
     * [func Publish(topic string, msg string) error](#Publish)
 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="PubSubProjectID" href="#PubSubProjectID">var PubSubProjectID</a>
 
 ```
 searchKey: pubsub.PubSubProjectID
-tags: [exported]
 ```
 
 ```Go
@@ -33,7 +36,6 @@ PubSubProjectID is used to create a new pubsub client.
 
 ```
 searchKey: pubsub.PubSubCredentialsFile
-tags: [exported]
 ```
 
 ```Go
@@ -44,6 +46,7 @@ var PubSubCredentialsFile = ...
 
 ```
 searchKey: pubsub.client
+tags: [private]
 ```
 
 ```Go
@@ -52,11 +55,14 @@ var client *pubsub.Client
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Enabled" href="#Enabled">func Enabled() bool</a>
 
 ```
 searchKey: pubsub.Enabled
-tags: [exported]
 ```
 
 ```Go
@@ -65,10 +71,11 @@ func Enabled() bool
 
 Enabled returns true if pubsub has been configured to run. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.publish.go" href="#init.publish.go">func init()</a>
 
 ```
 searchKey: pubsub.init
+tags: [private]
 ```
 
 ```Go
@@ -79,7 +86,6 @@ func init()
 
 ```
 searchKey: pubsub.Publish
-tags: [exported]
 ```
 
 ```Go

@@ -53,7 +53,7 @@
     * [func NextSync(clock func() time.Time, h *btypes.ChangesetSyncData) time.Time](#NextSync)
     * [func maxTime(a, b time.Time) time.Time](#maxTime)
     * [func absDuration(d time.Duration) time.Duration](#absDuration)
-    * [func init()](#init)
+    * [func init()](#init.syncer.go)
     * [func SyncChangeset(ctx context.Context, syncStore SyncStore, source sources.ChangesetSource, repo *types.Repo, c *btypes.Changeset) (err error)](#SyncChangeset)
     * [func loadChangesetSource(ctx context.Context, cf *httpcli.Factory, syncStore SyncStore, repo *types.Repo) (sources.ChangesetSource, error)](#loadChangesetSource)
     * [func TestChangesetPriorityQueue(t *testing.T)](#TestChangesetPriorityQueue)
@@ -65,10 +65,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="priorityNormal" href="#priorityNormal">const priorityNormal</a>
 
 ```
 searchKey: syncer.priorityNormal
+tags: [private]
 ```
 
 ```Go
@@ -79,6 +84,7 @@ const priorityNormal priority = iota
 
 ```
 searchKey: syncer.priorityHigh
+tags: [private]
 ```
 
 ```Go
@@ -87,10 +93,15 @@ const priorityHigh
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="minSyncDelay" href="#minSyncDelay">var minSyncDelay</a>
 
 ```
 searchKey: syncer.minSyncDelay
+tags: [private]
 ```
 
 ```Go
@@ -101,6 +112,7 @@ var minSyncDelay = 2 * time.Minute
 
 ```
 searchKey: syncer.maxSyncDelay
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +123,7 @@ var maxSyncDelay = 8 * time.Hour
 
 ```
 searchKey: syncer.syncerMetrics
+tags: [private]
 ```
 
 ```Go
@@ -119,10 +132,15 @@ var syncerMetrics = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="scheduledSync" href="#scheduledSync">type scheduledSync struct</a>
 
 ```
 searchKey: syncer.scheduledSync
+tags: [private]
 ```
 
 ```Go
@@ -137,6 +155,7 @@ type scheduledSync struct {
 
 ```
 searchKey: syncer.changesetPriorityQueue
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +171,7 @@ changesetPriorityQueue is a min heap that sorts syncs by priority and time of ne
 
 ```
 searchKey: syncer.newChangesetPriorityQueue
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +184,7 @@ newChangesetPriorityQueue creates a new queue for holding changeset sync instruc
 
 ```
 searchKey: syncer.changesetPriorityQueue.Len
+tags: [private]
 ```
 
 ```Go
@@ -174,6 +195,7 @@ func (pq *changesetPriorityQueue) Len() int
 
 ```
 searchKey: syncer.changesetPriorityQueue.Less
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +206,7 @@ func (pq *changesetPriorityQueue) Less(i, j int) bool
 
 ```
 searchKey: syncer.changesetPriorityQueue.Swap
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +217,7 @@ func (pq *changesetPriorityQueue) Swap(i, j int)
 
 ```
 searchKey: syncer.changesetPriorityQueue.Push
+tags: [private]
 ```
 
 ```Go
@@ -206,6 +230,7 @@ Push is here to implement the Heap interface, please use Upsert
 
 ```
 searchKey: syncer.changesetPriorityQueue.Pop
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +243,7 @@ Pop is not to be used directly, use heap.Pop(pq)
 
 ```
 searchKey: syncer.changesetPriorityQueue.Peek
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +256,7 @@ Peek fetches the highest priority item without removing it.
 
 ```
 searchKey: syncer.changesetPriorityQueue.Upsert
+tags: [private]
 ```
 
 ```Go
@@ -242,6 +269,7 @@ Upsert modifies at item if it exists or adds a new item if not. NOTE: If an exis
 
 ```
 searchKey: syncer.changesetPriorityQueue.Get
+tags: [private]
 ```
 
 ```Go
@@ -254,6 +282,7 @@ Get fetches the item with the supplied id without removing it.
 
 ```
 searchKey: syncer.changesetPriorityQueue.Remove
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +293,7 @@ func (pq *changesetPriorityQueue) Remove(id int64)
 
 ```
 searchKey: syncer.priority
+tags: [private]
 ```
 
 ```Go
@@ -274,7 +304,6 @@ type priority int
 
 ```
 searchKey: syncer.SyncRegistry
-tags: [exported]
 ```
 
 ```Go
@@ -298,7 +327,6 @@ SyncRegistry manages a changesetSyncer per code host
 
 ```
 searchKey: syncer.NewSyncRegistry
-tags: [exported]
 ```
 
 ```Go
@@ -311,7 +339,6 @@ NewSyncRegistry creates a new sync registry which starts a syncer for each code 
 
 ```
 searchKey: syncer.SyncRegistry.Add
-tags: [exported]
 ```
 
 ```Go
@@ -324,7 +351,6 @@ Add adds a syncer for the code host associated with the supplied code host if th
 
 ```
 searchKey: syncer.SyncRegistry.EnqueueChangesetSyncs
-tags: [exported]
 ```
 
 ```Go
@@ -337,7 +363,6 @@ EnqueueChangesetSyncs will enqueue the changesets with the supplied ids for high
 
 ```
 searchKey: syncer.SyncRegistry.HandleExternalServiceSync
-tags: [exported]
 ```
 
 ```Go
@@ -350,6 +375,7 @@ HandleExternalServiceSync handles changes to external services.
 
 ```
 searchKey: syncer.SyncRegistry.handlePriorityItems
+tags: [private]
 ```
 
 ```Go
@@ -362,6 +388,7 @@ handlePriorityItems fetches changesets in the priority queue from the database a
 
 ```
 searchKey: syncer.SyncRegistry.syncCodeHosts
+tags: [private]
 ```
 
 ```Go
@@ -374,7 +401,6 @@ syncCodeHosts fetches the list of currently active code hosts on the Sourcegraph
 
 ```
 searchKey: syncer.SyncStore
-tags: [exported]
 ```
 
 ```Go
@@ -399,6 +425,7 @@ type SyncStore interface {
 
 ```
 searchKey: syncer.changesetSyncer
+tags: [private]
 ```
 
 ```Go
@@ -429,6 +456,7 @@ A changesetSyncer periodically syncs metadata of changesets saved in the databas
 
 ```
 searchKey: syncer.changesetSyncer.Run
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +469,7 @@ Run will start the process of changeset syncing. It is long running and is expec
 
 ```
 searchKey: syncer.changesetSyncer.computeSchedule
+tags: [private]
 ```
 
 ```Go
@@ -451,6 +480,7 @@ func (s *changesetSyncer) computeSchedule(ctx context.Context) ([]scheduledSync,
 
 ```
 searchKey: syncer.changesetSyncer.SyncChangeset
+tags: [private]
 ```
 
 ```Go
@@ -463,6 +493,7 @@ SyncChangeset will sync a single changeset given its id.
 
 ```
 searchKey: syncer.MockSyncStore
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +513,7 @@ type MockSyncStore struct {
 
 ```
 searchKey: syncer.MockSyncStore.ListChangesetSyncData
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +524,7 @@ func (m MockSyncStore) ListChangesetSyncData(ctx context.Context, opts store.Lis
 
 ```
 searchKey: syncer.MockSyncStore.GetChangeset
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +535,7 @@ func (m MockSyncStore) GetChangeset(ctx context.Context, opts store.GetChangeset
 
 ```
 searchKey: syncer.MockSyncStore.UpdateChangeset
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +546,7 @@ func (m MockSyncStore) UpdateChangeset(ctx context.Context, c *btypes.Changeset)
 
 ```
 searchKey: syncer.MockSyncStore.UpsertChangesetEvents
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +557,7 @@ func (m MockSyncStore) UpsertChangesetEvents(ctx context.Context, cs ...*btypes.
 
 ```
 searchKey: syncer.MockSyncStore.GetSiteCredential
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +568,7 @@ func (m MockSyncStore) GetSiteCredential(ctx context.Context, opts store.GetSite
 
 ```
 searchKey: syncer.MockSyncStore.GetExternalServiceIDs
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +579,7 @@ func (m MockSyncStore) GetExternalServiceIDs(ctx context.Context, opts store.Get
 
 ```
 searchKey: syncer.MockSyncStore.Transact
+tags: [private]
 ```
 
 ```Go
@@ -552,6 +590,7 @@ func (m MockSyncStore) Transact(ctx context.Context) (*store.Store, error)
 
 ```
 searchKey: syncer.MockSyncStore.Repos
+tags: [private]
 ```
 
 ```Go
@@ -562,6 +601,7 @@ func (m MockSyncStore) Repos() *database.RepoStore
 
 ```
 searchKey: syncer.MockSyncStore.ExternalServices
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +612,7 @@ func (m MockSyncStore) ExternalServices() *database.ExternalServiceStore
 
 ```
 searchKey: syncer.MockSyncStore.UserCredentials
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +623,7 @@ func (m MockSyncStore) UserCredentials() *database.UserCredentialsStore
 
 ```
 searchKey: syncer.MockSyncStore.DB
+tags: [private]
 ```
 
 ```Go
@@ -592,6 +634,7 @@ func (m MockSyncStore) DB() dbutil.DB
 
 ```
 searchKey: syncer.MockSyncStore.Clock
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +645,7 @@ func (m MockSyncStore) Clock() func() time.Time
 
 ```
 searchKey: syncer.MockSyncStore.ListCodeHosts
+tags: [private]
 ```
 
 ```Go
@@ -610,11 +654,14 @@ func (m MockSyncStore) ListCodeHosts(ctx context.Context, opts store.ListCodeHos
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NextSync" href="#NextSync">func NextSync(clock func() time.Time, h *btypes.ChangesetSyncData) time.Time</a>
 
 ```
 searchKey: syncer.NextSync
-tags: [exported]
 ```
 
 ```Go
@@ -627,6 +674,7 @@ NextSync computes the time we want the next sync to happen.
 
 ```
 searchKey: syncer.maxTime
+tags: [private]
 ```
 
 ```Go
@@ -637,16 +685,18 @@ func maxTime(a, b time.Time) time.Time
 
 ```
 searchKey: syncer.absDuration
+tags: [private]
 ```
 
 ```Go
 func absDuration(d time.Duration) time.Duration
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.syncer.go" href="#init.syncer.go">func init()</a>
 
 ```
 searchKey: syncer.init
+tags: [private]
 ```
 
 ```Go
@@ -657,7 +707,6 @@ func init()
 
 ```
 searchKey: syncer.SyncChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -670,6 +719,7 @@ SyncChangeset refreshes the metadata of the given changeset and updates them in 
 
 ```
 searchKey: syncer.loadChangesetSource
+tags: [private]
 ```
 
 ```Go
@@ -680,6 +730,7 @@ func loadChangesetSource(ctx context.Context, cf *httpcli.Factory, syncStore Syn
 
 ```
 searchKey: syncer.TestChangesetPriorityQueue
+tags: [private]
 ```
 
 ```Go
@@ -690,6 +741,7 @@ func TestChangesetPriorityQueue(t *testing.T)
 
 ```
 searchKey: syncer.TestNextSync
+tags: [private]
 ```
 
 ```Go
@@ -700,6 +752,7 @@ func TestNextSync(t *testing.T)
 
 ```
 searchKey: syncer.TestSyncerRun
+tags: [private]
 ```
 
 ```Go
@@ -710,6 +763,7 @@ func TestSyncerRun(t *testing.T)
 
 ```
 searchKey: syncer.TestSyncRegistry
+tags: [private]
 ```
 
 ```Go
@@ -720,6 +774,7 @@ func TestSyncRegistry(t *testing.T)
 
 ```
 searchKey: syncer.TestLoadChangesetSource
+tags: [private]
 ```
 
 ```Go

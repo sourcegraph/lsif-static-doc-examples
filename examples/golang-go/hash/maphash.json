@@ -4,9 +4,7 @@
     "identifier": "maphash",
     "newPage": true,
     "searchKey": "hash/maphash",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "bufSize",
                 "newPage": false,
                 "searchKey": "maphash.bufSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "hashSize",
                 "newPage": false,
                 "searchKey": "maphash.hashSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,9 +87,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "fixedSeed",
                 "newPage": false,
                 "searchKey": "maphash.fixedSeed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -130,9 +130,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -150,9 +148,7 @@
                 "identifier": "Seed",
                 "newPage": false,
                 "searchKey": "maphash.Seed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -170,9 +166,7 @@
                       "identifier": "MakeSeed",
                       "newPage": false,
                       "searchKey": "maphash.MakeSeed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -195,9 +189,7 @@
                 "identifier": "Hash",
                 "newPage": false,
                 "searchKey": "maphash.Hash",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -215,7 +207,9 @@
                       "identifier": "Hash.initSeed",
                       "newPage": false,
                       "searchKey": "maphash.Hash.initSeed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -235,9 +229,7 @@
                       "identifier": "Hash.WriteByte",
                       "newPage": false,
                       "searchKey": "maphash.Hash.WriteByte",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -257,9 +249,7 @@
                       "identifier": "Hash.Write",
                       "newPage": false,
                       "searchKey": "maphash.Hash.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -279,9 +269,7 @@
                       "identifier": "Hash.WriteString",
                       "newPage": false,
                       "searchKey": "maphash.Hash.WriteString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -301,9 +289,7 @@
                       "identifier": "Hash.Seed",
                       "newPage": false,
                       "searchKey": "maphash.Hash.Seed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -323,9 +309,7 @@
                       "identifier": "Hash.SetSeed",
                       "newPage": false,
                       "searchKey": "maphash.Hash.SetSeed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -345,9 +329,7 @@
                       "identifier": "Hash.Reset",
                       "newPage": false,
                       "searchKey": "maphash.Hash.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -367,7 +349,9 @@
                       "identifier": "Hash.flush",
                       "newPage": false,
                       "searchKey": "maphash.Hash.flush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -387,9 +371,7 @@
                       "identifier": "Hash.Sum64",
                       "newPage": false,
                       "searchKey": "maphash.Hash.Sum64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -409,9 +391,7 @@
                       "identifier": "Hash.Sum",
                       "newPage": false,
                       "searchKey": "maphash.Hash.Sum",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -431,9 +411,7 @@
                       "identifier": "Hash.Size",
                       "newPage": false,
                       "searchKey": "maphash.Hash.Size",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -453,9 +431,7 @@
                       "identifier": "Hash.BlockSize",
                       "newPage": false,
                       "searchKey": "maphash.Hash.BlockSize",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -478,7 +454,9 @@
                 "identifier": "hashSet",
                 "newPage": false,
                 "searchKey": "maphash.hashSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -496,7 +474,9 @@
                       "identifier": "newHashSet",
                       "newPage": false,
                       "searchKey": "maphash.newHashSet",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -516,7 +496,9 @@
                       "identifier": "hashSet.add",
                       "newPage": false,
                       "searchKey": "maphash.hashSet.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -536,7 +518,9 @@
                       "identifier": "hashSet.addS",
                       "newPage": false,
                       "searchKey": "maphash.hashSet.addS",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -556,7 +540,9 @@
                       "identifier": "hashSet.addB",
                       "newPage": false,
                       "searchKey": "maphash.hashSet.addB",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -576,7 +562,9 @@
                       "identifier": "hashSet.addS_seed",
                       "newPage": false,
                       "searchKey": "maphash.hashSet.addS_seed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -596,7 +584,9 @@
                       "identifier": "hashSet.check",
                       "newPage": false,
                       "searchKey": "maphash.hashSet.check",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -619,7 +609,9 @@
                 "identifier": "key",
                 "newPage": false,
                 "searchKey": "maphash.key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -639,7 +631,9 @@
                 "identifier": "bytesKey",
                 "newPage": false,
                 "searchKey": "maphash.bytesKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -657,7 +651,9 @@
                       "identifier": "bytesKey.clear",
                       "newPage": false,
                       "searchKey": "maphash.bytesKey.clear",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -677,7 +673,9 @@
                       "identifier": "bytesKey.random",
                       "newPage": false,
                       "searchKey": "maphash.bytesKey.random",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -697,7 +695,9 @@
                       "identifier": "bytesKey.bits",
                       "newPage": false,
                       "searchKey": "maphash.bytesKey.bits",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -717,7 +717,9 @@
                       "identifier": "bytesKey.flipBit",
                       "newPage": false,
                       "searchKey": "maphash.bytesKey.flipBit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -737,7 +739,9 @@
                       "identifier": "bytesKey.hash",
                       "newPage": false,
                       "searchKey": "maphash.bytesKey.hash",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -757,7 +761,9 @@
                       "identifier": "bytesKey.name",
                       "newPage": false,
                       "searchKey": "maphash.bytesKey.name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -783,9 +789,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -803,7 +807,9 @@
                 "identifier": "runtime_fastrand",
                 "newPage": false,
                 "searchKey": "maphash.runtime_fastrand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -823,7 +829,9 @@
                 "identifier": "rthash",
                 "newPage": false,
                 "searchKey": "maphash.rthash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -843,7 +851,9 @@
                 "identifier": "runtime_memhash",
                 "newPage": false,
                 "searchKey": "maphash.runtime_memhash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -863,7 +873,9 @@
                 "identifier": "TestUnseededHash",
                 "newPage": false,
                 "searchKey": "maphash.TestUnseededHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -883,7 +895,9 @@
                 "identifier": "TestSeededHash",
                 "newPage": false,
                 "searchKey": "maphash.TestSeededHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -903,7 +917,9 @@
                 "identifier": "TestHashGrouping",
                 "newPage": false,
                 "searchKey": "maphash.TestHashGrouping",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -923,7 +939,9 @@
                 "identifier": "TestHashBytesVsString",
                 "newPage": false,
                 "searchKey": "maphash.TestHashBytesVsString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -943,7 +961,9 @@
                 "identifier": "TestHashHighBytes",
                 "newPage": false,
                 "searchKey": "maphash.TestHashHighBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -963,7 +983,9 @@
                 "identifier": "TestRepeat",
                 "newPage": false,
                 "searchKey": "maphash.TestRepeat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -983,7 +1005,9 @@
                 "identifier": "TestSeedFromSum64",
                 "newPage": false,
                 "searchKey": "maphash.TestSeedFromSum64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1003,7 +1027,9 @@
                 "identifier": "TestSeedFromSeed",
                 "newPage": false,
                 "searchKey": "maphash.TestSeedFromSeed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1023,7 +1049,9 @@
                 "identifier": "TestSeedFromFlush",
                 "newPage": false,
                 "searchKey": "maphash.TestSeedFromFlush",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1043,7 +1071,9 @@
                 "identifier": "TestSeedFromReset",
                 "newPage": false,
                 "searchKey": "maphash.TestSeedFromReset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1063,7 +1093,9 @@
                 "identifier": "benchmarkSize",
                 "newPage": false,
                 "searchKey": "maphash.benchmarkSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1083,7 +1115,9 @@
                 "identifier": "BenchmarkHash8Bytes",
                 "newPage": false,
                 "searchKey": "maphash.BenchmarkHash8Bytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1103,7 +1137,9 @@
                 "identifier": "BenchmarkHash320Bytes",
                 "newPage": false,
                 "searchKey": "maphash.BenchmarkHash320Bytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1123,7 +1159,9 @@
                 "identifier": "BenchmarkHash1K",
                 "newPage": false,
                 "searchKey": "maphash.BenchmarkHash1K",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1143,7 +1181,9 @@
                 "identifier": "BenchmarkHash8K",
                 "newPage": false,
                 "searchKey": "maphash.BenchmarkHash8K",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1163,7 +1203,9 @@
                 "identifier": "TestSmhasherSanity",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherSanity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1183,7 +1225,9 @@
                 "identifier": "bytesHash",
                 "newPage": false,
                 "searchKey": "maphash.bytesHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1203,7 +1247,9 @@
                 "identifier": "stringHash",
                 "newPage": false,
                 "searchKey": "maphash.stringHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1223,7 +1269,9 @@
                 "identifier": "randBytes",
                 "newPage": false,
                 "searchKey": "maphash.randBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1243,7 +1291,9 @@
                 "identifier": "TestSmhasherAppendedZeros",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherAppendedZeros",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1263,7 +1313,9 @@
                 "identifier": "TestSmhasherSmallKeys",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherSmallKeys",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1283,7 +1335,9 @@
                 "identifier": "TestSmhasherZeros",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherZeros",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1303,7 +1357,9 @@
                 "identifier": "TestSmhasherTwoNonzero",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherTwoNonzero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1323,7 +1379,9 @@
                 "identifier": "twoNonZero",
                 "newPage": false,
                 "searchKey": "maphash.twoNonZero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1343,7 +1401,9 @@
                 "identifier": "TestSmhasherCyclic",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherCyclic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1363,7 +1423,9 @@
                 "identifier": "TestSmhasherSparse",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherSparse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1383,7 +1445,9 @@
                 "identifier": "sparse",
                 "newPage": false,
                 "searchKey": "maphash.sparse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1403,7 +1467,9 @@
                 "identifier": "setbits",
                 "newPage": false,
                 "searchKey": "maphash.setbits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1423,7 +1489,9 @@
                 "identifier": "TestSmhasherPermutation",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherPermutation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1443,7 +1511,9 @@
                 "identifier": "permutation",
                 "newPage": false,
                 "searchKey": "maphash.permutation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1463,7 +1533,9 @@
                 "identifier": "genPerm",
                 "newPage": false,
                 "searchKey": "maphash.genPerm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1483,7 +1555,9 @@
                 "identifier": "TestSmhasherAvalanche",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherAvalanche",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1503,7 +1577,9 @@
                 "identifier": "avalancheTest1",
                 "newPage": false,
                 "searchKey": "maphash.avalancheTest1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1523,7 +1599,9 @@
                 "identifier": "TestSmhasherWindowed",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherWindowed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1543,7 +1621,9 @@
                 "identifier": "windowed",
                 "newPage": false,
                 "searchKey": "maphash.windowed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1563,7 +1643,9 @@
                 "identifier": "TestSmhasherText",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherText",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1583,7 +1665,9 @@
                 "identifier": "text",
                 "newPage": false,
                 "searchKey": "maphash.text",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1603,7 +1687,9 @@
                 "identifier": "TestSmhasherSeed",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherSeed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

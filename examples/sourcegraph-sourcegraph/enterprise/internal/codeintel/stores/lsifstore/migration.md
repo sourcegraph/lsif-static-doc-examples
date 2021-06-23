@@ -50,17 +50,20 @@
     * [func TestDiagnosticsCountMigrator(t *testing.T)](#TestDiagnosticsCountMigrator)
     * [func TestDocumentColumnSplitMigrator(t *testing.T)](#TestDocumentColumnSplitMigrator)
     * [func TestLocationsCountMigrator(t *testing.T)](#TestLocationsCountMigrator)
-    * [func init()](#init)
+    * [func init()](#init.migration_test.go)
     * [func TestMigratorRemovesBoundsWithoutData(t *testing.T)](#TestMigratorRemovesBoundsWithoutData)
 
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DiagnosticsCountMigrationID" href="#DiagnosticsCountMigrationID">const DiagnosticsCountMigrationID</a>
 
 ```
 searchKey: migration.DiagnosticsCountMigrationID
-tags: [exported]
 ```
 
 ```Go
@@ -73,7 +76,6 @@ DiagnosticsCountMigrationID is the primary key of the migration record handled b
 
 ```
 searchKey: migration.DefinitionsCountMigrationID
-tags: [exported]
 ```
 
 ```Go
@@ -86,7 +88,6 @@ DefinitionsCountMigrationID is the primary key of the migration record handled b
 
 ```
 searchKey: migration.ReferencesCountMigrationID
-tags: [exported]
 ```
 
 ```Go
@@ -99,7 +100,6 @@ ReferencesCountMigrationID is the primary key of the migration record handled by
 
 ```
 searchKey: migration.DocumentColumnSplitMigrationID
-tags: [exported]
 ```
 
 ```Go
@@ -112,6 +112,7 @@ DocumentColumnSplitMigrationID is the primary key of the migration record handle
 
 ```
 searchKey: migration.migratorProgressQuery
+tags: [private]
 ```
 
 ```Go
@@ -122,6 +123,7 @@ const migratorProgressQuery = ...
 
 ```
 searchKey: migration.runUpdateBoundsQuery
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +134,7 @@ const runUpdateBoundsQuery = ...
 
 ```
 searchKey: migration.selectAndLockDumpQuery
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +145,7 @@ const selectAndLockDumpQuery = ...
 
 ```
 searchKey: migration.processRowsQuery
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +156,7 @@ const processRowsQuery = ...
 
 ```
 searchKey: migration.updateBatchTemporaryTableQuery
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +167,7 @@ const updateBatchTemporaryTableQuery = ...
 
 ```
 searchKey: migration.updateBatchUpdateQuery
+tags: [private]
 ```
 
 ```Go
@@ -170,10 +176,15 @@ const updateBatchUpdateQuery = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="temporaryTableName" href="#temporaryTableName">var temporaryTableName</a>
 
 ```
 searchKey: migration.temporaryTableName
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +195,7 @@ var temporaryTableName = "t_migration_payload"
 
 ```
 searchKey: migration.temporaryTableExpression
+tags: [private]
 ```
 
 ```Go
@@ -192,10 +204,15 @@ var temporaryTableExpression = sqlf.Sprintf(temporaryTableName)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="diagnosticsCountMigrator" href="#diagnosticsCountMigrator">type diagnosticsCountMigrator struct</a>
 
 ```
 searchKey: migration.diagnosticsCountMigrator
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +225,7 @@ type diagnosticsCountMigrator struct {
 
 ```
 searchKey: migration.diagnosticsCountMigrator.MigrateRowUp
+tags: [private]
 ```
 
 ```Go
@@ -220,6 +238,7 @@ MigrateRowUp reads the payload of the given row and returns an updateSpec on how
 
 ```
 searchKey: migration.diagnosticsCountMigrator.MigrateRowDown
+tags: [private]
 ```
 
 ```Go
@@ -232,6 +251,7 @@ MigrateRowDown sets num_diagnostics back to zero to undo the migration up direct
 
 ```
 searchKey: migration.documentColumnSplitMigrator
+tags: [private]
 ```
 
 ```Go
@@ -244,6 +264,7 @@ type documentColumnSplitMigrator struct {
 
 ```
 searchKey: migration.documentColumnSplitMigrator.MigrateRowUp
+tags: [private]
 ```
 
 ```Go
@@ -256,6 +277,7 @@ MigrateRowUp reads the payload of the given row and returns an updateSpec on how
 
 ```
 searchKey: migration.documentColumnSplitMigrator.MigrateRowDown
+tags: [private]
 ```
 
 ```Go
@@ -268,6 +290,7 @@ MigrateRowDown sets num_diagnostics back to zero to undo the migration up direct
 
 ```
 searchKey: migration.locationsCountMigrator
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +303,7 @@ type locationsCountMigrator struct {
 
 ```
 searchKey: migration.locationsCountMigrator.MigrateRowUp
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +316,7 @@ MigrateRowUp reads the payload of the given row and returns an updateSpec on how
 
 ```
 searchKey: migration.locationsCountMigrator.MigrateRowDown
+tags: [private]
 ```
 
 ```Go
@@ -304,7 +329,6 @@ MigrateRowDown sets num_locations back to zero to undo the migration up directio
 
 ```
 searchKey: migration.Migrator
-tags: [exported]
 ```
 
 ```Go
@@ -348,7 +372,6 @@ When selecting a set of candidate records to migrate, we first use the each uplo
 
 ```
 searchKey: migration.Migrator.Progress
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +384,6 @@ Progress returns the ratio between the number of upload records that have been c
 
 ```
 searchKey: migration.Migrator.Up
-tags: [exported]
 ```
 
 ```Go
@@ -374,7 +396,6 @@ Up runs a batch of the migration.
 
 ```
 searchKey: migration.Migrator.Down
-tags: [exported]
 ```
 
 ```Go
@@ -387,6 +408,7 @@ Down runs a batch of the migration in reverse.
 
 ```
 searchKey: migration.Migrator.run
+tags: [private]
 ```
 
 ```Go
@@ -399,6 +421,7 @@ run performs a batch of updates with the given driver function. Records with the
 
 ```
 searchKey: migration.Migrator.selectAndLockDump
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +434,7 @@ selectAndLockDump chooses and row-locks a schema version row associated with a p
 
 ```
 searchKey: migration.Migrator.processRows
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +447,7 @@ processRows selects a batch of rows from the target table associated with the gi
 
 ```
 searchKey: migration.Migrator.updateBatch
+tags: [private]
 ```
 
 ```Go
@@ -435,6 +460,7 @@ updateBatch creates a temporary table symmetric to the target table but without 
 
 ```
 searchKey: migration.migratorOptions
+tags: [private]
 ```
 
 ```Go
@@ -457,6 +483,7 @@ type migratorOptions struct {
 
 ```
 searchKey: migration.fieldSpec
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +509,7 @@ type fieldSpec struct {
 
 ```
 searchKey: migration.migrationDriver
+tags: [private]
 ```
 
 ```Go
@@ -505,6 +533,7 @@ type migrationDriver interface {
 
 ```
 searchKey: migration.driverFunc
+tags: [private]
 ```
 
 ```Go
@@ -517,6 +546,7 @@ driverFunc is the type of MigrateRowUp and MigrateRowDown.
 
 ```
 searchKey: migration.scanner
+tags: [private]
 ```
 
 ```Go
@@ -529,6 +559,7 @@ type scanner interface {
 
 ```
 searchKey: migration.testMigrationDriver
+tags: [private]
 ```
 
 ```Go
@@ -539,6 +570,7 @@ type testMigrationDriver struct{}
 
 ```
 searchKey: migration.testMigrationDriver.MigrateRowUp
+tags: [private]
 ```
 
 ```Go
@@ -549,6 +581,7 @@ func (m *testMigrationDriver) MigrateRowUp(scanner scanner) ([]interface{}, erro
 
 ```
 searchKey: migration.testMigrationDriver.MigrateRowDown
+tags: [private]
 ```
 
 ```Go
@@ -557,11 +590,14 @@ func (m *testMigrationDriver) MigrateRowDown(scanner scanner) ([]interface{}, er
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewDiagnosticsCountMigrator" href="#NewDiagnosticsCountMigrator">func NewDiagnosticsCountMigrator(store *lsifstore.Store, batchSize int) oobmigration.Migrator</a>
 
 ```
 searchKey: migration.NewDiagnosticsCountMigrator
-tags: [exported]
 ```
 
 ```Go
@@ -574,7 +610,6 @@ NewDiagnosticsCountMigrator creates a new Migrator instance that reads records f
 
 ```
 searchKey: migration.NewDocumentColumnSplitMigrator
-tags: [exported]
 ```
 
 ```Go
@@ -587,7 +622,6 @@ NewDocumentColumnSplitMigrator creates a new Migrator instance that reads record
 
 ```
 searchKey: migration.NewLocationsCountMigrator
-tags: [exported]
 ```
 
 ```Go
@@ -600,6 +634,7 @@ NewLocationsCountMigrator creates a new Migrator instance that reads records fro
 
 ```
 searchKey: migration.newMigrator
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +645,7 @@ func newMigrator(store *lsifstore.Store, driver migrationDriver, options migrato
 
 ```
 searchKey: migration.TestDiagnosticsCountMigrator
+tags: [private]
 ```
 
 ```Go
@@ -620,6 +656,7 @@ func TestDiagnosticsCountMigrator(t *testing.T)
 
 ```
 searchKey: migration.TestDocumentColumnSplitMigrator
+tags: [private]
 ```
 
 ```Go
@@ -630,16 +667,18 @@ func TestDocumentColumnSplitMigrator(t *testing.T)
 
 ```
 searchKey: migration.TestLocationsCountMigrator
+tags: [private]
 ```
 
 ```Go
 func TestLocationsCountMigrator(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.migration_test.go" href="#init.migration_test.go">func init()</a>
 
 ```
 searchKey: migration.init
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +689,7 @@ func init()
 
 ```
 searchKey: migration.TestMigratorRemovesBoundsWithoutData
+tags: [private]
 ```
 
 ```Go

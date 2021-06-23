@@ -67,7 +67,7 @@ nolint
     * [func minIntOrZero(a, b int) int](#minIntOrZero)
     * [func incrementUserCounter(userID int32, isAuthenticated bool, counterKey string) error](#incrementUserCounter)
     * [func keyFromStage(stage string) string](#keyFromStage)
-    * [func init()](#init)
+    * [func init()](#init.usage_stats_test.go)
     * [func TestUserUsageStatistics_None(t *testing.T)](#TestUserUsageStatistics_None)
     * [func TestUserUsageStatistics_LogPageView(t *testing.T)](#TestUserUsageStatistics_LogPageView)
     * [func TestUserUsageStatistics_LogSearchQuery(t *testing.T)](#TestUserUsageStatistics_LogSearchQuery)
@@ -84,10 +84,15 @@ nolint
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="fSearchOccurred" href="#fSearchOccurred">const fSearchOccurred</a>
 
 ```
 searchKey: usagestatsdeprecated.fSearchOccurred
+tags: [private]
 ```
 
 ```Go
@@ -98,6 +103,7 @@ const fSearchOccurred = "searchoccurred"
 
 ```
 searchKey: usagestatsdeprecated.fFindRefsOccurred
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +114,7 @@ const fFindRefsOccurred = "findrefsoccurred"
 
 ```
 searchKey: usagestatsdeprecated.fPageViews
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +125,7 @@ const fPageViews = "pageviews"
 
 ```
 searchKey: usagestatsdeprecated.fLastActive
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +136,7 @@ const fLastActive = "lastactive"
 
 ```
 searchKey: usagestatsdeprecated.fSearchQueries
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +147,7 @@ const fSearchQueries = "searchqueries"
 
 ```
 searchKey: usagestatsdeprecated.fCodeIntelActions
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +158,7 @@ const fCodeIntelActions = "codeintelactions"
 
 ```
 searchKey: usagestatsdeprecated.fFindRefsActions
+tags: [private]
 ```
 
 ```Go
@@ -158,6 +169,7 @@ const fFindRefsActions = "codeintelactions:findrefs"
 
 ```
 searchKey: usagestatsdeprecated.fLastActiveCodeHostIntegration
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +180,7 @@ const fLastActiveCodeHostIntegration = "lastactivecodehostintegration"
 
 ```
 searchKey: usagestatsdeprecated.fUsersActive
+tags: [private]
 ```
 
 ```Go
@@ -178,6 +191,7 @@ const fUsersActive = "usersactive"
 
 ```
 searchKey: usagestatsdeprecated.defaultDays
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +202,7 @@ const defaultDays = 14
 
 ```
 searchKey: usagestatsdeprecated.defaultWeeks
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +213,7 @@ const defaultWeeks = 10
 
 ```
 searchKey: usagestatsdeprecated.defaultMonths
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +224,7 @@ const defaultMonths = 3
 
 ```
 searchKey: usagestatsdeprecated.maxStorageDays
+tags: [private]
 ```
 
 ```Go
@@ -216,10 +233,15 @@ const maxStorageDays = 93
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="searchOccurred" href="#searchOccurred">var searchOccurred</a>
 
 ```
 searchKey: usagestatsdeprecated.searchOccurred
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +252,7 @@ var searchOccurred = false
 
 ```
 searchKey: usagestatsdeprecated.findRefsOccurred
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +263,7 @@ var findRefsOccurred = false
 
 ```
 searchKey: usagestatsdeprecated.eventHandlers
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +274,7 @@ var eventHandlers = ...
 
 ```
 searchKey: usagestatsdeprecated.logSiteSearchOccurred
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +287,7 @@ logSiteSearchOccurred records that a search has occurred on the Sourcegraph inst
 
 ```
 searchKey: usagestatsdeprecated.logSiteFindRefsOccurred
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +300,7 @@ logSiteFindRefsOccurred records that a search has occurred on the Sourcegraph in
 
 ```
 searchKey: usagestatsdeprecated.logSearchQuery
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +313,7 @@ logSearchQuery increments a user's search query count.
 
 ```
 searchKey: usagestatsdeprecated.logPageView
+tags: [private]
 ```
 
 ```Go
@@ -298,6 +326,7 @@ logPageView increments a user's pageview count.
 
 ```
 searchKey: usagestatsdeprecated.logCodeIntelAction
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +339,7 @@ logCodeIntelAction increments a user's code intelligence usage count.
 
 ```
 searchKey: usagestatsdeprecated.logCodeIntelRefsAction
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +352,7 @@ logCodeIntelRefsAction increments a user's code intelligence usage count. and th
 
 ```
 searchKey: usagestatsdeprecated.logCodeHostIntegrationUsage
+tags: [private]
 ```
 
 ```Go
@@ -334,6 +365,7 @@ logCodeHostIntegrationUsage logs the last time a user was active on a code host 
 
 ```
 searchKey: usagestatsdeprecated.logStageEvent
+tags: [private]
 ```
 
 ```Go
@@ -346,6 +378,7 @@ logStageEvent logs the last time a user did an action from a specific stage.
 
 ```
 searchKey: usagestatsdeprecated.keyPrefix
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +389,7 @@ var keyPrefix = "user_activity:"
 
 ```
 searchKey: usagestatsdeprecated.gcOnce
+tags: [private]
 ```
 
 ```Go
@@ -367,6 +401,7 @@ var gcOnce sync.Once // ensures we only have 1 redis gc goroutine
 
 ```
 searchKey: usagestatsdeprecated.pool
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +412,7 @@ var pool = redispool.Store
 
 ```
 searchKey: usagestatsdeprecated.timeNow
+tags: [private]
 ```
 
 ```Go
@@ -387,7 +423,6 @@ var timeNow = time.Now
 
 ```
 searchKey: usagestatsdeprecated.MockGetByUserID
-tags: [exported]
 ```
 
 ```Go
@@ -396,10 +431,15 @@ var MockGetByUserID func(userID int32) (*types.UserUsageStatistics, error)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="eventHandler" href="#eventHandler">type eventHandler func(userID int32, event string, isAuthenticated bool) error</a>
 
 ```
 searchKey: usagestatsdeprecated.eventHandler
+tags: [private]
 ```
 
 ```Go
@@ -412,7 +452,6 @@ Custom event handlers
 
 ```
 searchKey: usagestatsdeprecated.SiteUsageStatisticsOptions
-tags: [exported]
 ```
 
 ```Go
@@ -429,7 +468,6 @@ SiteUsageStatisticsOptions contains options for the number of daily, weekly, and
 
 ```
 searchKey: usagestatsdeprecated.UsageDuration
-tags: [exported]
 ```
 
 ```Go
@@ -445,7 +483,6 @@ UsageDuration in aggregate represents a duration of time over which to calculate
 
 ```
 searchKey: usagestatsdeprecated.ActiveUsers
-tags: [exported]
 ```
 
 ```Go
@@ -463,6 +500,7 @@ ActiveUsers contains sets of unique user IDs.
 
 ```
 searchKey: usagestatsdeprecated.uniques
+tags: [private]
 ```
 
 ```Go
@@ -473,11 +511,14 @@ uniques calculates the list of unique users starting at 00:00:00 on a given UTC 
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="LogActivity" href="#LogActivity">func LogActivity(isAuthenticated bool, userID int32, userCookieID, event string) error</a>
 
 ```
 searchKey: usagestatsdeprecated.LogActivity
-tags: [exported]
 ```
 
 ```Go
@@ -490,7 +531,6 @@ LogActivity logs any user activity (page view, integration usage, etc) to their 
 
 ```
 searchKey: usagestatsdeprecated.LogEvent
-tags: [exported]
 ```
 
 ```Go
@@ -503,7 +543,6 @@ LogEvent logs users events.
 
 ```
 searchKey: usagestatsdeprecated.GetByUserID
-tags: [exported]
 ```
 
 ```Go
@@ -516,7 +555,6 @@ GetByUserID returns a single user's UserUsageStatistics.
 
 ```
 searchKey: usagestatsdeprecated.GetSiteUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -529,7 +567,6 @@ GetSiteUsageStatistics returns the current site's SiteActivity.
 
 ```
 searchKey: usagestatsdeprecated.GetUsersActiveTodayCount
-tags: [exported]
 ```
 
 ```Go
@@ -542,6 +579,7 @@ GetUsersActiveTodayCount returns a count of users that have been active today.
 
 ```
 searchKey: usagestatsdeprecated.uniquesCount
+tags: [private]
 ```
 
 ```Go
@@ -554,6 +592,7 @@ uniquesCount calculates the number of unique users starting at 00:00:00 on a giv
 
 ```
 searchKey: usagestatsdeprecated.daus
+tags: [private]
 ```
 
 ```Go
@@ -566,6 +605,7 @@ daus returns a count of daily active users for the last daysCount days (includin
 
 ```
 searchKey: usagestatsdeprecated.waus
+tags: [private]
 ```
 
 ```Go
@@ -578,6 +618,7 @@ waus returns a count of daily active users for the last weeksCount calendar week
 
 ```
 searchKey: usagestatsdeprecated.maus
+tags: [private]
 ```
 
 ```Go
@@ -590,6 +631,7 @@ maus returns a count of daily active users for the last monthsCount calendar mon
 
 ```
 searchKey: usagestatsdeprecated.gc
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +644,7 @@ gc expires active user sets after the max of daysOfHistory, weeksOfHistory, and 
 
 ```
 searchKey: usagestatsdeprecated.keyFromDate
+tags: [private]
 ```
 
 ```Go
@@ -612,6 +655,7 @@ func keyFromDate(activity string, date time.Time) string
 
 ```
 searchKey: usagestatsdeprecated.usersActiveKeyFromDate
+tags: [private]
 ```
 
 ```Go
@@ -622,6 +666,7 @@ func usersActiveKeyFromDate(date time.Time) string
 
 ```
 searchKey: usagestatsdeprecated.usersActiveKeyFromDaysAgo
+tags: [private]
 ```
 
 ```Go
@@ -632,6 +677,7 @@ func usersActiveKeyFromDaysAgo(daysAgo int) string
 
 ```
 searchKey: usagestatsdeprecated.startOfWeek
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +688,7 @@ func startOfWeek(weeksAgo int) time.Time
 
 ```
 searchKey: usagestatsdeprecated.startOfMonth
+tags: [private]
 ```
 
 ```Go
@@ -652,6 +699,7 @@ func startOfMonth(monthsAgo int) time.Time
 
 ```
 searchKey: usagestatsdeprecated.keys
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +710,7 @@ func keys(m map[string]bool) []string
 
 ```
 searchKey: usagestatsdeprecated.minIntOrZero
+tags: [private]
 ```
 
 ```Go
@@ -672,6 +721,7 @@ func minIntOrZero(a, b int) int
 
 ```
 searchKey: usagestatsdeprecated.incrementUserCounter
+tags: [private]
 ```
 
 ```Go
@@ -682,16 +732,18 @@ func incrementUserCounter(userID int32, isAuthenticated bool, counterKey string)
 
 ```
 searchKey: usagestatsdeprecated.keyFromStage
+tags: [private]
 ```
 
 ```Go
 func keyFromStage(stage string) string
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.usage_stats_test.go" href="#init.usage_stats_test.go">func init()</a>
 
 ```
 searchKey: usagestatsdeprecated.init
+tags: [private]
 ```
 
 ```Go
@@ -702,6 +754,7 @@ func init()
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_None
+tags: [private]
 ```
 
 ```Go
@@ -712,6 +765,7 @@ func TestUserUsageStatistics_None(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_LogPageView
+tags: [private]
 ```
 
 ```Go
@@ -722,6 +776,7 @@ func TestUserUsageStatistics_LogPageView(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_LogSearchQuery
+tags: [private]
 ```
 
 ```Go
@@ -732,6 +787,7 @@ func TestUserUsageStatistics_LogSearchQuery(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_LogCodeIntelAction
+tags: [private]
 ```
 
 ```Go
@@ -742,6 +798,7 @@ func TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_LogCodeHostIntegrationUsage
+tags: [private]
 ```
 
 ```Go
@@ -752,6 +809,7 @@ func TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_getUsersActiveToday
+tags: [private]
 ```
 
 ```Go
@@ -762,6 +820,7 @@ func TestUserUsageStatistics_getUsersActiveToday(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_DAUs_WAUs_MAUs
+tags: [private]
 ```
 
 ```Go
@@ -772,6 +831,7 @@ func TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.setupForTest
+tags: [private]
 ```
 
 ```Go
@@ -782,6 +842,7 @@ func setupForTest(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.mockTimeNow
+tags: [private]
 ```
 
 ```Go
@@ -792,6 +853,7 @@ func mockTimeNow(t time.Time)
 
 ```
 searchKey: usagestatsdeprecated.siteActivityCompare
+tags: [private]
 ```
 
 ```Go
@@ -802,6 +864,7 @@ func siteActivityCompare(a, b *types.SiteUsageStatistics) error
 
 ```
 searchKey: usagestatsdeprecated.siteActivityPeriodSliceCompare
+tags: [private]
 ```
 
 ```Go
@@ -812,6 +875,7 @@ func siteActivityPeriodSliceCompare(label string, a, b []*types.SiteActivityPeri
 
 ```
 searchKey: usagestatsdeprecated.siteActivityPeriodCompare
+tags: [private]
 ```
 
 ```Go

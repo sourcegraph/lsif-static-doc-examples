@@ -5,7 +5,6 @@
     "newPage": true,
     "searchKey": "crypto/dsa",
     "tags": [
-      "exported",
       "deprecated"
     ]
   },
@@ -26,7 +25,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "exported",
             "deprecated"
           ]
         },
@@ -46,9 +44,7 @@
                 "identifier": "L1024N160",
                 "newPage": false,
                 "searchKey": "dsa.L1024N160",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -68,9 +64,7 @@
                 "identifier": "L2048N224",
                 "newPage": false,
                 "searchKey": "dsa.L2048N224",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -90,9 +84,7 @@
                 "identifier": "L2048N256",
                 "newPage": false,
                 "searchKey": "dsa.L2048N256",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -112,9 +104,7 @@
                 "identifier": "L3072N256",
                 "newPage": false,
                 "searchKey": "dsa.L3072N256",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -134,7 +124,9 @@
                 "identifier": "numMRTests",
                 "newPage": false,
                 "searchKey": "dsa.numMRTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -158,7 +150,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "exported",
             "deprecated"
           ]
         },
@@ -178,9 +169,7 @@
                 "identifier": "ErrInvalidPublicKey",
                 "newPage": false,
                 "searchKey": "dsa.ErrInvalidPublicKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +193,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "exported",
             "deprecated"
           ]
         },
@@ -224,9 +212,7 @@
                 "identifier": "Parameters",
                 "newPage": false,
                 "searchKey": "dsa.Parameters",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -246,9 +232,7 @@
                 "identifier": "PublicKey",
                 "newPage": false,
                 "searchKey": "dsa.PublicKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -268,9 +252,7 @@
                 "identifier": "PrivateKey",
                 "newPage": false,
                 "searchKey": "dsa.PrivateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -290,9 +272,7 @@
                 "identifier": "ParameterSizes",
                 "newPage": false,
                 "searchKey": "dsa.ParameterSizes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -316,7 +296,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "exported",
             "deprecated"
           ]
         },
@@ -336,9 +315,7 @@
                 "identifier": "GenerateParameters",
                 "newPage": false,
                 "searchKey": "dsa.GenerateParameters",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -358,9 +335,7 @@
                 "identifier": "GenerateKey",
                 "newPage": false,
                 "searchKey": "dsa.GenerateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -380,7 +355,9 @@
                 "identifier": "fermatInverse",
                 "newPage": false,
                 "searchKey": "dsa.fermatInverse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -400,9 +377,7 @@
                 "identifier": "Sign",
                 "newPage": false,
                 "searchKey": "dsa.Sign",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -422,9 +397,7 @@
                 "identifier": "Verify",
                 "newPage": false,
                 "searchKey": "dsa.Verify",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -444,7 +417,9 @@
                 "identifier": "testSignAndVerify",
                 "newPage": false,
                 "searchKey": "dsa.testSignAndVerify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -464,7 +439,9 @@
                 "identifier": "testParameterGeneration",
                 "newPage": false,
                 "searchKey": "dsa.testParameterGeneration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -484,7 +461,9 @@
                 "identifier": "TestParameterGeneration",
                 "newPage": false,
                 "searchKey": "dsa.TestParameterGeneration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -504,7 +483,9 @@
                 "identifier": "fromHex",
                 "newPage": false,
                 "searchKey": "dsa.fromHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -524,7 +505,9 @@
                 "identifier": "TestSignAndVerify",
                 "newPage": false,
                 "searchKey": "dsa.TestSignAndVerify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -544,7 +527,9 @@
                 "identifier": "TestSignAndVerifyWithBadPublicKey",
                 "newPage": false,
                 "searchKey": "dsa.TestSignAndVerifyWithBadPublicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -564,7 +549,9 @@
                 "identifier": "TestSigningWithDegenerateKeys",
                 "newPage": false,
                 "searchKey": "dsa.TestSigningWithDegenerateKeys",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

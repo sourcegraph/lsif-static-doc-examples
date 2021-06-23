@@ -4,7 +4,9 @@
     "identifier": "loghandlers",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/cli/loghandlers",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "noiseyRPC",
                 "newPage": false,
                 "searchKey": "loghandlers.noiseyRPC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "traces",
                 "newPage": false,
                 "searchKey": "loghandlers.traces",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,9 +111,7 @@
                 "identifier": "Trace",
                 "newPage": false,
                 "searchKey": "loghandlers.Trace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -123,9 +131,7 @@
                 "identifier": "NotNoisey",
                 "newPage": false,
                 "searchKey": "loghandlers.NotNoisey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -145,7 +151,9 @@
                 "identifier": "TestNotNoisey",
                 "newPage": false,
                 "searchKey": "loghandlers.TestNotNoisey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -165,7 +173,9 @@
                 "identifier": "TestTrace_All",
                 "newPage": false,
                 "searchKey": "loghandlers.TestTrace_All",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -185,7 +195,9 @@
                 "identifier": "TestTrace_None",
                 "newPage": false,
                 "searchKey": "loghandlers.TestTrace_None",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -205,7 +217,9 @@
                 "identifier": "TestTrace_Specific",
                 "newPage": false,
                 "searchKey": "loghandlers.TestTrace_Specific",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -225,7 +239,9 @@
                 "identifier": "TestTrace_Threshold",
                 "newPage": false,
                 "searchKey": "loghandlers.TestTrace_Threshold",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -245,7 +261,9 @@
                 "identifier": "mkRecord",
                 "newPage": false,
                 "searchKey": "loghandlers.mkRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

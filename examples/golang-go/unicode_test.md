@@ -62,10 +62,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="testDigit" href="#testDigit">var testDigit</a>
 
 ```
 searchKey: unicode_test.testDigit
+tags: [private]
 ```
 
 ```Go
@@ -76,6 +81,7 @@ var testDigit = ...
 
 ```
 searchKey: unicode_test.testLetter
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +92,7 @@ var testLetter = ...
 
 ```
 searchKey: unicode_test.upperTest
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +103,7 @@ var upperTest = ...
 
 ```
 searchKey: unicode_test.notupperTest
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +114,7 @@ var notupperTest = ...
 
 ```
 searchKey: unicode_test.letterTest
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +125,7 @@ var letterTest = ...
 
 ```
 searchKey: unicode_test.notletterTest
+tags: [private]
 ```
 
 ```Go
@@ -126,6 +136,7 @@ var notletterTest = ...
 
 ```
 searchKey: unicode_test.spaceTest
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +160,7 @@ Contains all the special cased Latin-1 chars.
 
 ```
 searchKey: unicode_test.caseTest
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +171,7 @@ var caseTest = ...
 
 ```
 searchKey: unicode_test.simpleFoldTests
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +182,7 @@ var simpleFoldTests = ...
 
 ```
 searchKey: unicode_test.calibrate
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +193,7 @@ var calibrate = flag.Bool("calibrate", false, "compute crossover for linear vs. 
 
 ```
 searchKey: unicode_test.inCategoryTest
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +204,7 @@ var inCategoryTest = ...
 
 ```
 searchKey: unicode_test.inPropTest
+tags: [private]
 ```
 
 ```Go
@@ -197,10 +213,15 @@ var inPropTest = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="caseT" href="#caseT">type caseT struct</a>
 
 ```
 searchKey: unicode_test.caseT
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +235,7 @@ type caseT struct {
 
 ```
 searchKey: unicode_test.T
+tags: [private]
 ```
 
 ```Go
@@ -225,10 +247,15 @@ type T struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestDigit" href="#TestDigit">func TestDigit(t *testing.T)</a>
 
 ```
 searchKey: unicode_test.TestDigit
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +266,7 @@ func TestDigit(t *testing.T)
 
 ```
 searchKey: unicode_test.TestDigitOptimization
+tags: [private]
 ```
 
 ```Go
@@ -251,6 +279,7 @@ Test that the special case in IsDigit agrees with the table
 
 ```
 searchKey: unicode_test.Example_is
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +292,7 @@ Functions starting with "Is" can be used to inspect which table of range a rune 
 
 ```
 searchKey: unicode_test.ExampleSimpleFold
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +303,7 @@ func ExampleSimpleFold()
 
 ```
 searchKey: unicode_test.ExampleTo
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +314,7 @@ func ExampleTo()
 
 ```
 searchKey: unicode_test.ExampleToLower
+tags: [private]
 ```
 
 ```Go
@@ -293,6 +325,7 @@ func ExampleToLower()
 
 ```
 searchKey: unicode_test.ExampleToTitle
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +336,7 @@ func ExampleToTitle()
 
 ```
 searchKey: unicode_test.ExampleToUpper
+tags: [private]
 ```
 
 ```Go
@@ -313,6 +347,7 @@ func ExampleToUpper()
 
 ```
 searchKey: unicode_test.ExampleSpecialCase
+tags: [private]
 ```
 
 ```Go
@@ -323,6 +358,7 @@ func ExampleSpecialCase()
 
 ```
 searchKey: unicode_test.TestIsControlLatin1
+tags: [private]
 ```
 
 ```Go
@@ -333,6 +369,7 @@ func TestIsControlLatin1(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsLetterLatin1
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +380,7 @@ func TestIsLetterLatin1(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsUpperLatin1
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +391,7 @@ func TestIsUpperLatin1(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsLowerLatin1
+tags: [private]
 ```
 
 ```Go
@@ -363,6 +402,7 @@ func TestIsLowerLatin1(t *testing.T)
 
 ```
 searchKey: unicode_test.TestNumberLatin1
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +413,7 @@ func TestNumberLatin1(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsPrintLatin1
+tags: [private]
 ```
 
 ```Go
@@ -383,6 +424,7 @@ func TestIsPrintLatin1(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsGraphicLatin1
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +435,7 @@ func TestIsGraphicLatin1(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsPunctLatin1
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +446,7 @@ func TestIsPunctLatin1(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsSpaceLatin1
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +457,7 @@ func TestIsSpaceLatin1(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsSymbolLatin1
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +468,7 @@ func TestIsSymbolLatin1(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsLetter
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +479,7 @@ func TestIsLetter(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsUpper
+tags: [private]
 ```
 
 ```Go
@@ -443,6 +490,7 @@ func TestIsUpper(t *testing.T)
 
 ```
 searchKey: unicode_test.caseString
+tags: [private]
 ```
 
 ```Go
@@ -453,6 +501,7 @@ func caseString(c int) string
 
 ```
 searchKey: unicode_test.TestTo
+tags: [private]
 ```
 
 ```Go
@@ -463,6 +512,7 @@ func TestTo(t *testing.T)
 
 ```
 searchKey: unicode_test.TestToUpperCase
+tags: [private]
 ```
 
 ```Go
@@ -473,6 +523,7 @@ func TestToUpperCase(t *testing.T)
 
 ```
 searchKey: unicode_test.TestToLowerCase
+tags: [private]
 ```
 
 ```Go
@@ -483,6 +534,7 @@ func TestToLowerCase(t *testing.T)
 
 ```
 searchKey: unicode_test.TestToTitleCase
+tags: [private]
 ```
 
 ```Go
@@ -493,6 +545,7 @@ func TestToTitleCase(t *testing.T)
 
 ```
 searchKey: unicode_test.TestIsSpace
+tags: [private]
 ```
 
 ```Go
@@ -503,6 +556,7 @@ func TestIsSpace(t *testing.T)
 
 ```
 searchKey: unicode_test.TestLetterOptimizations
+tags: [private]
 ```
 
 ```Go
@@ -515,6 +569,7 @@ Check that the optimizations for IsLetter etc. agree with the tables. We only ne
 
 ```
 searchKey: unicode_test.TestTurkishCase
+tags: [private]
 ```
 
 ```Go
@@ -525,6 +580,7 @@ func TestTurkishCase(t *testing.T)
 
 ```
 searchKey: unicode_test.TestSimpleFold
+tags: [private]
 ```
 
 ```Go
@@ -535,6 +591,7 @@ func TestSimpleFold(t *testing.T)
 
 ```
 searchKey: unicode_test.TestCalibrate
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +602,7 @@ func TestCalibrate(t *testing.T)
 
 ```
 searchKey: unicode_test.fakeTable
+tags: [private]
 ```
 
 ```Go
@@ -555,6 +613,7 @@ func fakeTable(n int) []Range16
 
 ```
 searchKey: unicode_test.linear
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +624,7 @@ func linear(ranges []Range16, r uint16) bool
 
 ```
 searchKey: unicode_test.binary
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +635,7 @@ func binary(ranges []Range16, r uint16) bool
 
 ```
 searchKey: unicode_test.TestLatinOffset
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +646,7 @@ func TestLatinOffset(t *testing.T)
 
 ```
 searchKey: unicode_test.TestSpecialCaseNoMapping
+tags: [private]
 ```
 
 ```Go
@@ -595,6 +657,7 @@ func TestSpecialCaseNoMapping(t *testing.T)
 
 ```
 searchKey: unicode_test.TestNegativeRune
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +668,7 @@ func TestNegativeRune(t *testing.T)
 
 ```
 searchKey: unicode_test.TestCategories
+tags: [private]
 ```
 
 ```Go
@@ -615,6 +679,7 @@ func TestCategories(t *testing.T)
 
 ```
 searchKey: unicode_test.TestProperties
+tags: [private]
 ```
 
 ```Go

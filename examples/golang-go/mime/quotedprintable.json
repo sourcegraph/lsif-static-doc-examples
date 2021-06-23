@@ -4,9 +4,7 @@
     "identifier": "quotedprintable",
     "newPage": true,
     "searchKey": "mime/quotedprintable",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "lineMaxLen",
                 "newPage": false,
                 "searchKey": "quotedprintable.lineMaxLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "upperhex",
                 "newPage": false,
                 "searchKey": "quotedprintable.upperhex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,9 +87,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "crlf",
                 "newPage": false,
                 "searchKey": "quotedprintable.crlf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "lf",
                 "newPage": false,
                 "searchKey": "quotedprintable.lf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "softSuffix",
                 "newPage": false,
                 "searchKey": "quotedprintable.softSuffix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "useQprint",
                 "newPage": false,
                 "searchKey": "quotedprintable.useQprint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "badSoftRx",
                 "newPage": false,
                 "searchKey": "quotedprintable.badSoftRx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "testMsg",
                 "newPage": false,
                 "searchKey": "quotedprintable.testMsg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,9 +240,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -250,9 +258,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "quotedprintable.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -270,9 +276,7 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "quotedprintable.NewReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -292,9 +296,7 @@
                       "identifier": "Reader.Read",
                       "newPage": false,
                       "searchKey": "quotedprintable.Reader.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -317,9 +319,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "quotedprintable.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -337,9 +337,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "quotedprintable.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -359,9 +357,7 @@
                       "identifier": "Writer.Write",
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -381,9 +377,7 @@
                       "identifier": "Writer.Close",
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -403,7 +397,9 @@
                       "identifier": "Writer.write",
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -423,7 +419,9 @@
                       "identifier": "Writer.encode",
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -443,7 +441,9 @@
                       "identifier": "Writer.checkLastByte",
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.checkLastByte",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -463,7 +463,9 @@
                       "identifier": "Writer.insertSoftLineBreak",
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.insertSoftLineBreak",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -483,7 +485,9 @@
                       "identifier": "Writer.insertCRLF",
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.insertCRLF",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -503,7 +507,9 @@
                       "identifier": "Writer.flush",
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.flush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -529,9 +535,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -549,7 +553,9 @@
                 "identifier": "fromHex",
                 "newPage": false,
                 "searchKey": "quotedprintable.fromHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -569,7 +575,9 @@
                 "identifier": "readHexByte",
                 "newPage": false,
                 "searchKey": "quotedprintable.readHexByte",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -589,7 +597,9 @@
                 "identifier": "isQPDiscardWhitespace",
                 "newPage": false,
                 "searchKey": "quotedprintable.isQPDiscardWhitespace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -609,7 +619,9 @@
                 "identifier": "isWhitespace",
                 "newPage": false,
                 "searchKey": "quotedprintable.isWhitespace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -629,7 +641,9 @@
                 "identifier": "TestReader",
                 "newPage": false,
                 "searchKey": "quotedprintable.TestReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -649,7 +663,9 @@
                 "identifier": "everySequence",
                 "newPage": false,
                 "searchKey": "quotedprintable.everySequence",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -669,7 +685,9 @@
                 "identifier": "TestExhaustive",
                 "newPage": false,
                 "searchKey": "quotedprintable.TestExhaustive",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -689,7 +707,9 @@
                 "identifier": "TestWriter",
                 "newPage": false,
                 "searchKey": "quotedprintable.TestWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -709,7 +729,9 @@
                 "identifier": "TestWriterBinary",
                 "newPage": false,
                 "searchKey": "quotedprintable.TestWriterBinary",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -729,7 +751,9 @@
                 "identifier": "testWriter",
                 "newPage": false,
                 "searchKey": "quotedprintable.testWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -749,7 +773,9 @@
                 "identifier": "TestRoundTrip",
                 "newPage": false,
                 "searchKey": "quotedprintable.TestRoundTrip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -769,7 +795,9 @@
                 "identifier": "BenchmarkWriter",
                 "newPage": false,
                 "searchKey": "quotedprintable.BenchmarkWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

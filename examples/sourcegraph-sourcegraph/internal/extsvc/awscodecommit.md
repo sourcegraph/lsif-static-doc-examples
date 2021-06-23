@@ -39,11 +39,14 @@ Package awscodecommit implements an AWS CodeCommit API client.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MaxMetadataBatch" href="#MaxMetadataBatch">const MaxMetadataBatch</a>
 
 ```
 searchKey: awscodecommit.MaxMetadataBatch
-tags: [exported]
 ```
 
 ```Go
@@ -54,11 +57,14 @@ We can only fetch the metadata in batches of 25 as documented here: [https://doc
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrNotFound" href="#ErrNotFound">var ErrNotFound</a>
 
 ```
 searchKey: awscodecommit.ErrNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -71,7 +77,6 @@ ErrNotFound is when the requested AWS CodeCommit repository is not found.
 
 ```
 searchKey: awscodecommit.GetRepositoryMock
-tags: [exported]
 ```
 
 ```Go
@@ -84,6 +89,7 @@ GetRepositoryMock is set by tests to mock (*Client).GetRepository.
 
 ```
 searchKey: awscodecommit.reposCacheCounter
+tags: [private]
 ```
 
 ```Go
@@ -92,11 +98,14 @@ var reposCacheCounter = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: awscodecommit.Client
-tags: [exported]
 ```
 
 ```Go
@@ -112,7 +121,6 @@ Client is a AWS CodeCommit API client.
 
 ```
 searchKey: awscodecommit.NewClient
-tags: [exported]
 ```
 
 ```Go
@@ -125,6 +133,7 @@ NewClient creates a new AWS CodeCommit API client.
 
 ```
 searchKey: awscodecommit.Client.cacheKeyPrefix
+tags: [private]
 ```
 
 ```Go
@@ -137,6 +146,7 @@ cacheKeyPrefix returns the cache key prefix to use. It incorporates the credenti
 
 ```
 searchKey: awscodecommit.Client.repositoryCacheKey
+tags: [private]
 ```
 
 ```Go
@@ -147,7 +157,6 @@ func (c *Client) repositoryCacheKey(ctx context.Context, arn string) (string, er
 
 ```
 searchKey: awscodecommit.Client.GetRepository
-tags: [exported]
 ```
 
 ```Go
@@ -160,6 +169,7 @@ GetRepository gets a repository from AWS CodeCommit by ARN (Amazon Resource Name
 
 ```
 searchKey: awscodecommit.Client.cachedGetRepository
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +182,7 @@ cachedGetRepository caches the getRepositoryFromAPI call.
 
 ```
 searchKey: awscodecommit.Client.getRepositoryFromCache
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +195,7 @@ getRepositoryFromCache attempts to get a response from the redis cache. It retur
 
 ```
 searchKey: awscodecommit.Client.addRepositoryToCache
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +208,7 @@ addRepositoryToCache will cache the value for repo. The caller can provide multi
 
 ```
 searchKey: awscodecommit.Client.getRepositoryFromAPI
+tags: [private]
 ```
 
 ```Go
@@ -208,7 +221,6 @@ getRepositoryFromAPI attempts to fetch a repository from the GitHub API without 
 
 ```
 searchKey: awscodecommit.Client.ListRepositories
-tags: [exported]
 ```
 
 ```Go
@@ -221,6 +233,7 @@ ListRepositories calls the ListRepositories API method of AWS CodeCommit.
 
 ```
 searchKey: awscodecommit.Client.getRepositories
+tags: [private]
 ```
 
 ```Go
@@ -231,7 +244,6 @@ func (c *Client) getRepositories(ctx context.Context, svc *codecommit.Client, re
 
 ```
 searchKey: awscodecommit.Repository
-tags: [exported]
 ```
 
 ```Go
@@ -252,6 +264,7 @@ Repository is an AWS CodeCommit repository.
 
 ```
 searchKey: awscodecommit.fromRepoMetadata
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +275,7 @@ func fromRepoMetadata(m *codecommittypes.RepositoryMetadata) *Repository
 
 ```
 searchKey: awscodecommit.cachedRepo
+tags: [private]
 ```
 
 ```Go
@@ -278,6 +292,7 @@ type cachedRepo struct {
 
 ```
 searchKey: awscodecommit.wrappedError
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +305,7 @@ type wrappedError struct {
 
 ```
 searchKey: awscodecommit.wrappedError.Error
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +316,7 @@ func (w *wrappedError) Error() string
 
 ```
 searchKey: awscodecommit.wrappedError.NotFound
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +327,7 @@ func (w *wrappedError) NotFound() bool
 
 ```
 searchKey: awscodecommit.wrappedError.Unauthorized
+tags: [private]
 ```
 
 ```Go
@@ -318,11 +336,14 @@ func (w *wrappedError) Unauthorized() bool
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IsNotFound" href="#IsNotFound">func IsNotFound(err error) bool</a>
 
 ```
 searchKey: awscodecommit.IsNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -335,7 +356,6 @@ IsNotFound reports whether err is a AWS CodeCommit API not-found error or the eq
 
 ```
 searchKey: awscodecommit.IsUnauthorized
-tags: [exported]
 ```
 
 ```Go
@@ -348,7 +368,6 @@ IsUnauthorized reports whether err is a AWS CodeCommit API unauthorized error.
 
 ```
 searchKey: awscodecommit.ExternalRepoSpec
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +380,6 @@ ExternalRepoSpec returns an api.ExternalRepoSpec that refers to the specified AW
 
 ```
 searchKey: awscodecommit.ServiceID
-tags: [exported]
 ```
 
 ```Go
@@ -376,7 +394,6 @@ This value uniquely identifies the most specific namespace in which AWS CodeComm
 
 ```
 searchKey: awscodecommit.MockGetRepository_Return
-tags: [exported]
 ```
 
 ```Go

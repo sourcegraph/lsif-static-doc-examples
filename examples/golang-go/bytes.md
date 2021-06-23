@@ -126,14 +126,11 @@ Package bytes implements functions for the manipulation of byte slices. It is an
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="smallBufferSize" href="#smallBufferSize">const smallBufferSize</a>
 
 ```
 searchKey: bytes.smallBufferSize
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +143,7 @@ smallBufferSize is an initial allocation minimal capacity.
 
 ```
 searchKey: bytes.opRead
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +157,7 @@ Don't use iota for these, as the values need to correspond with the names and co
 
 ```
 searchKey: bytes.opInvalid
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +171,7 @@ Don't use iota for these, as the values need to correspond with the names and co
 
 ```
 searchKey: bytes.opReadRune1
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +185,7 @@ Don't use iota for these, as the values need to correspond with the names and co
 
 ```
 searchKey: bytes.opReadRune2
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +199,7 @@ Don't use iota for these, as the values need to correspond with the names and co
 
 ```
 searchKey: bytes.opReadRune3
+tags: [private]
 ```
 
 ```Go
@@ -211,6 +213,7 @@ Don't use iota for these, as the values need to correspond with the names and co
 
 ```
 searchKey: bytes.opReadRune4
+tags: [private]
 ```
 
 ```Go
@@ -224,6 +227,7 @@ Don't use iota for these, as the values need to correspond with the names and co
 
 ```
 searchKey: bytes.maxInt
+tags: [private]
 ```
 
 ```Go
@@ -234,7 +238,6 @@ const maxInt = int(^uint(0) >> 1)
 
 ```
 searchKey: bytes.MinRead
-tags: [exported]
 ```
 
 ```Go
@@ -245,15 +248,10 @@ MinRead is the minimum slice size passed to a Read call by Buffer.ReadFrom. As l
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrTooLarge" href="#ErrTooLarge">var ErrTooLarge</a>
 
 ```
 searchKey: bytes.ErrTooLarge
-tags: [exported]
 ```
 
 ```Go
@@ -266,6 +264,7 @@ ErrTooLarge is passed to panic if memory cannot be allocated to store data in a 
 
 ```
 searchKey: bytes.errNegativeRead
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +275,7 @@ var errNegativeRead = errors.New("bytes.Buffer: reader returned negative count f
 
 ```
 searchKey: bytes.errUnreadByte
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +286,7 @@ var errUnreadByte = ...
 
 ```
 searchKey: bytes.asciiSpace
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +297,7 @@ var asciiSpace = [256]uint8{'\t': 1, '\n': 1, '\v': 1, '\f': 1, '\r': 1, ' ': 1}
 
 ```
 searchKey: bytes.IndexBytePortable
+tags: [private]
 ```
 
 ```Go
@@ -306,15 +308,10 @@ Export func for testing
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Buffer" href="#Buffer">type Buffer struct</a>
 
 ```
 searchKey: bytes.Buffer
-tags: [exported]
 ```
 
 ```Go
@@ -331,7 +328,6 @@ A Buffer is a variable-sized buffer of bytes with Read and Write methods. The ze
 
 ```
 searchKey: bytes.NewBuffer
-tags: [exported]
 ```
 
 ```Go
@@ -346,7 +342,6 @@ In most cases, new(Buffer) (or just declaring a Buffer variable) is sufficient t
 
 ```
 searchKey: bytes.NewBufferString
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +356,6 @@ In most cases, new(Buffer) (or just declaring a Buffer variable) is sufficient t
 
 ```
 searchKey: bytes.Buffer.Bytes
-tags: [exported]
 ```
 
 ```Go
@@ -374,7 +368,6 @@ Bytes returns a slice of length b.Len() holding the unread portion of the buffer
 
 ```
 searchKey: bytes.Buffer.String
-tags: [exported]
 ```
 
 ```Go
@@ -389,6 +382,7 @@ To build strings more efficiently, see the strings.Builder type.
 
 ```
 searchKey: bytes.Buffer.empty
+tags: [private]
 ```
 
 ```Go
@@ -401,7 +395,6 @@ empty reports whether the unread portion of the buffer is empty.
 
 ```
 searchKey: bytes.Buffer.Len
-tags: [exported]
 ```
 
 ```Go
@@ -414,7 +407,6 @@ Len returns the number of bytes of the unread portion of the buffer; b.Len() == 
 
 ```
 searchKey: bytes.Buffer.Cap
-tags: [exported]
 ```
 
 ```Go
@@ -427,7 +419,6 @@ Cap returns the capacity of the buffer's underlying byte slice, that is, the tot
 
 ```
 searchKey: bytes.Buffer.Truncate
-tags: [exported]
 ```
 
 ```Go
@@ -440,7 +431,6 @@ Truncate discards all but the first n unread bytes from the buffer but continues
 
 ```
 searchKey: bytes.Buffer.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -453,6 +443,7 @@ Reset resets the buffer to be empty, but it retains the underlying storage for u
 
 ```
 searchKey: bytes.Buffer.tryGrowByReslice
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +456,7 @@ tryGrowByReslice is a inlineable version of grow for the fast-case where the int
 
 ```
 searchKey: bytes.Buffer.grow
+tags: [private]
 ```
 
 ```Go
@@ -477,7 +469,6 @@ grow grows the buffer to guarantee space for n more bytes. It returns the index 
 
 ```
 searchKey: bytes.Buffer.Grow
-tags: [exported]
 ```
 
 ```Go
@@ -490,7 +481,6 @@ Grow grows the buffer's capacity, if necessary, to guarantee space for another n
 
 ```
 searchKey: bytes.Buffer.Write
-tags: [exported]
 ```
 
 ```Go
@@ -503,7 +493,6 @@ Write appends the contents of p to the buffer, growing the buffer as needed. The
 
 ```
 searchKey: bytes.Buffer.WriteString
-tags: [exported]
 ```
 
 ```Go
@@ -516,7 +505,6 @@ WriteString appends the contents of s to the buffer, growing the buffer as neede
 
 ```
 searchKey: bytes.Buffer.ReadFrom
-tags: [exported]
 ```
 
 ```Go
@@ -529,7 +517,6 @@ ReadFrom reads data from r until EOF and appends it to the buffer, growing the b
 
 ```
 searchKey: bytes.Buffer.WriteTo
-tags: [exported]
 ```
 
 ```Go
@@ -542,7 +529,6 @@ WriteTo writes data to w until the buffer is drained or an error occurs. The ret
 
 ```
 searchKey: bytes.Buffer.WriteByte
-tags: [exported]
 ```
 
 ```Go
@@ -555,7 +541,6 @@ WriteByte appends the byte c to the buffer, growing the buffer as needed. The re
 
 ```
 searchKey: bytes.Buffer.WriteRune
-tags: [exported]
 ```
 
 ```Go
@@ -568,7 +553,6 @@ WriteRune appends the UTF-8 encoding of Unicode code point r to the buffer, retu
 
 ```
 searchKey: bytes.Buffer.Read
-tags: [exported]
 ```
 
 ```Go
@@ -581,7 +565,6 @@ Read reads the next len(p) bytes from the buffer or until the buffer is drained.
 
 ```
 searchKey: bytes.Buffer.Next
-tags: [exported]
 ```
 
 ```Go
@@ -594,7 +577,6 @@ Next returns a slice containing the next n bytes from the buffer, advancing the 
 
 ```
 searchKey: bytes.Buffer.ReadByte
-tags: [exported]
 ```
 
 ```Go
@@ -607,7 +589,6 @@ ReadByte reads and returns the next byte from the buffer. If no byte is availabl
 
 ```
 searchKey: bytes.Buffer.ReadRune
-tags: [exported]
 ```
 
 ```Go
@@ -620,7 +601,6 @@ ReadRune reads and returns the next UTF-8-encoded Unicode code point from the bu
 
 ```
 searchKey: bytes.Buffer.UnreadRune
-tags: [exported]
 ```
 
 ```Go
@@ -633,7 +613,6 @@ UnreadRune unreads the last rune returned by ReadRune. If the most recent read o
 
 ```
 searchKey: bytes.Buffer.UnreadByte
-tags: [exported]
 ```
 
 ```Go
@@ -646,7 +625,6 @@ UnreadByte unreads the last byte returned by the most recent successful read ope
 
 ```
 searchKey: bytes.Buffer.ReadBytes
-tags: [exported]
 ```
 
 ```Go
@@ -659,6 +637,7 @@ ReadBytes reads until the first occurrence of delim in the input, returning a sl
 
 ```
 searchKey: bytes.Buffer.readSlice
+tags: [private]
 ```
 
 ```Go
@@ -671,7 +650,6 @@ readSlice is like ReadBytes but returns a reference to internal buffer data.
 
 ```
 searchKey: bytes.Buffer.ReadString
-tags: [exported]
 ```
 
 ```Go
@@ -684,6 +662,7 @@ ReadString reads until the first occurrence of delim in the input, returning a s
 
 ```
 searchKey: bytes.readOp
+tags: [private]
 ```
 
 ```Go
@@ -696,6 +675,7 @@ The readOp constants describe the last action performed on the buffer, so that U
 
 ```
 searchKey: bytes.asciiSet
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +688,7 @@ asciiSet is a 32-byte value, where each bit represents the presence of a given A
 
 ```
 searchKey: bytes.makeASCIISet
+tags: [private]
 ```
 
 ```Go
@@ -720,6 +701,7 @@ makeASCIISet creates a set of ASCII characters and reports whether all character
 
 ```
 searchKey: bytes.asciiSet.contains
+tags: [private]
 ```
 
 ```Go
@@ -732,7 +714,6 @@ contains reports whether c is inside the set.
 
 ```
 searchKey: bytes.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -749,7 +730,6 @@ A Reader implements the io.Reader, io.ReaderAt, io.WriterTo, io.Seeker, io.ByteS
 
 ```
 searchKey: bytes.NewReader
-tags: [exported]
 ```
 
 ```Go
@@ -762,7 +742,6 @@ NewReader returns a new Reader reading from b.
 
 ```
 searchKey: bytes.Reader.Len
-tags: [exported]
 ```
 
 ```Go
@@ -775,7 +754,6 @@ Len returns the number of bytes of the unread portion of the slice.
 
 ```
 searchKey: bytes.Reader.Size
-tags: [exported]
 ```
 
 ```Go
@@ -788,7 +766,6 @@ Size returns the original length of the underlying byte slice. Size is the numbe
 
 ```
 searchKey: bytes.Reader.Read
-tags: [exported]
 ```
 
 ```Go
@@ -801,7 +778,6 @@ Read implements the io.Reader interface.
 
 ```
 searchKey: bytes.Reader.ReadAt
-tags: [exported]
 ```
 
 ```Go
@@ -814,7 +790,6 @@ ReadAt implements the io.ReaderAt interface.
 
 ```
 searchKey: bytes.Reader.ReadByte
-tags: [exported]
 ```
 
 ```Go
@@ -827,7 +802,6 @@ ReadByte implements the io.ByteReader interface.
 
 ```
 searchKey: bytes.Reader.UnreadByte
-tags: [exported]
 ```
 
 ```Go
@@ -840,7 +814,6 @@ UnreadByte complements ReadByte in implementing the io.ByteScanner interface.
 
 ```
 searchKey: bytes.Reader.ReadRune
-tags: [exported]
 ```
 
 ```Go
@@ -853,7 +826,6 @@ ReadRune implements the io.RuneReader interface.
 
 ```
 searchKey: bytes.Reader.UnreadRune
-tags: [exported]
 ```
 
 ```Go
@@ -866,7 +838,6 @@ UnreadRune complements ReadRune in implementing the io.RuneScanner interface.
 
 ```
 searchKey: bytes.Reader.Seek
-tags: [exported]
 ```
 
 ```Go
@@ -879,7 +850,6 @@ Seek implements the io.Seeker interface.
 
 ```
 searchKey: bytes.Reader.WriteTo
-tags: [exported]
 ```
 
 ```Go
@@ -892,7 +862,6 @@ WriteTo implements the io.WriterTo interface.
 
 ```
 searchKey: bytes.Reader.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -903,14 +872,11 @@ Reset resets the Reader to be reading from b.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="makeSlice" href="#makeSlice">func makeSlice(n int) []byte</a>
 
 ```
 searchKey: bytes.makeSlice
+tags: [private]
 ```
 
 ```Go
@@ -923,7 +889,6 @@ makeSlice allocates a slice of size n. If the allocation fails, it panics with E
 
 ```
 searchKey: bytes.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -936,7 +901,6 @@ Equal reports whether a and b are the same length and contain the same bytes. A 
 
 ```
 searchKey: bytes.Compare
-tags: [exported]
 ```
 
 ```Go
@@ -949,6 +913,7 @@ Compare returns an integer comparing two byte slices lexicographically. The resu
 
 ```
 searchKey: bytes.explode
+tags: [private]
 ```
 
 ```Go
@@ -961,7 +926,6 @@ explode splits s into a slice of UTF-8 sequences, one per Unicode code point (st
 
 ```
 searchKey: bytes.Count
-tags: [exported]
 ```
 
 ```Go
@@ -974,7 +938,6 @@ Count counts the number of non-overlapping instances of sep in s. If sep is an e
 
 ```
 searchKey: bytes.Contains
-tags: [exported]
 ```
 
 ```Go
@@ -987,7 +950,6 @@ Contains reports whether subslice is within b.
 
 ```
 searchKey: bytes.ContainsAny
-tags: [exported]
 ```
 
 ```Go
@@ -1000,7 +962,6 @@ ContainsAny reports whether any of the UTF-8-encoded code points in chars are wi
 
 ```
 searchKey: bytes.ContainsRune
-tags: [exported]
 ```
 
 ```Go
@@ -1013,7 +974,6 @@ ContainsRune reports whether the rune is contained in the UTF-8-encoded byte sli
 
 ```
 searchKey: bytes.IndexByte
-tags: [exported]
 ```
 
 ```Go
@@ -1026,6 +986,7 @@ IndexByte returns the index of the first instance of c in b, or -1 if c is not p
 
 ```
 searchKey: bytes.indexBytePortable
+tags: [private]
 ```
 
 ```Go
@@ -1036,7 +997,6 @@ func indexBytePortable(s []byte, c byte) int
 
 ```
 searchKey: bytes.LastIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1049,7 +1009,6 @@ LastIndex returns the index of the last instance of sep in s, or -1 if sep is no
 
 ```
 searchKey: bytes.LastIndexByte
-tags: [exported]
 ```
 
 ```Go
@@ -1062,7 +1021,6 @@ LastIndexByte returns the index of the last instance of c in s, or -1 if c is no
 
 ```
 searchKey: bytes.IndexRune
-tags: [exported]
 ```
 
 ```Go
@@ -1075,7 +1033,6 @@ IndexRune interprets s as a sequence of UTF-8-encoded code points. It returns th
 
 ```
 searchKey: bytes.IndexAny
-tags: [exported]
 ```
 
 ```Go
@@ -1088,7 +1045,6 @@ IndexAny interprets s as a sequence of UTF-8-encoded Unicode code points. It ret
 
 ```
 searchKey: bytes.LastIndexAny
-tags: [exported]
 ```
 
 ```Go
@@ -1101,6 +1057,7 @@ LastIndexAny interprets s as a sequence of UTF-8-encoded Unicode code points. It
 
 ```
 searchKey: bytes.genSplit
+tags: [private]
 ```
 
 ```Go
@@ -1113,7 +1070,6 @@ Generic split: splits after each instance of sep, including sepSave bytes of sep
 
 ```
 searchKey: bytes.SplitN
-tags: [exported]
 ```
 
 ```Go
@@ -1132,7 +1088,6 @@ n < 0: all subslices
 
 ```
 searchKey: bytes.SplitAfterN
-tags: [exported]
 ```
 
 ```Go
@@ -1151,7 +1106,6 @@ n < 0: all subslices
 
 ```
 searchKey: bytes.Split
-tags: [exported]
 ```
 
 ```Go
@@ -1164,7 +1118,6 @@ Split slices s into all subslices separated by sep and returns a slice of the su
 
 ```
 searchKey: bytes.SplitAfter
-tags: [exported]
 ```
 
 ```Go
@@ -1177,7 +1130,6 @@ SplitAfter slices s into all subslices after each instance of sep and returns a 
 
 ```
 searchKey: bytes.Fields
-tags: [exported]
 ```
 
 ```Go
@@ -1190,7 +1142,6 @@ Fields interprets s as a sequence of UTF-8-encoded code points. It splits the sl
 
 ```
 searchKey: bytes.FieldsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1205,7 +1156,6 @@ FieldsFunc makes no guarantees about the order in which it calls f(c) and assume
 
 ```
 searchKey: bytes.Join
-tags: [exported]
 ```
 
 ```Go
@@ -1218,7 +1168,6 @@ Join concatenates the elements of s to create a new byte slice. The separator se
 
 ```
 searchKey: bytes.HasPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -1231,7 +1180,6 @@ HasPrefix tests whether the byte slice s begins with prefix.
 
 ```
 searchKey: bytes.HasSuffix
-tags: [exported]
 ```
 
 ```Go
@@ -1244,7 +1192,6 @@ HasSuffix tests whether the byte slice s ends with suffix.
 
 ```
 searchKey: bytes.Map
-tags: [exported]
 ```
 
 ```Go
@@ -1257,7 +1204,6 @@ Map returns a copy of the byte slice s with all its characters modified accordin
 
 ```
 searchKey: bytes.Repeat
-tags: [exported]
 ```
 
 ```Go
@@ -1272,7 +1218,6 @@ It panics if count is negative or if the result of (len(b) * count) overflows.
 
 ```
 searchKey: bytes.ToUpper
-tags: [exported]
 ```
 
 ```Go
@@ -1285,7 +1230,6 @@ ToUpper returns a copy of the byte slice s with all Unicode letters mapped to th
 
 ```
 searchKey: bytes.ToLower
-tags: [exported]
 ```
 
 ```Go
@@ -1298,7 +1242,6 @@ ToLower returns a copy of the byte slice s with all Unicode letters mapped to th
 
 ```
 searchKey: bytes.ToTitle
-tags: [exported]
 ```
 
 ```Go
@@ -1311,7 +1254,6 @@ ToTitle treats s as UTF-8-encoded bytes and returns a copy with all the Unicode 
 
 ```
 searchKey: bytes.ToUpperSpecial
-tags: [exported]
 ```
 
 ```Go
@@ -1324,7 +1266,6 @@ ToUpperSpecial treats s as UTF-8-encoded bytes and returns a copy with all the U
 
 ```
 searchKey: bytes.ToLowerSpecial
-tags: [exported]
 ```
 
 ```Go
@@ -1337,7 +1278,6 @@ ToLowerSpecial treats s as UTF-8-encoded bytes and returns a copy with all the U
 
 ```
 searchKey: bytes.ToTitleSpecial
-tags: [exported]
 ```
 
 ```Go
@@ -1350,7 +1290,6 @@ ToTitleSpecial treats s as UTF-8-encoded bytes and returns a copy with all the U
 
 ```
 searchKey: bytes.ToValidUTF8
-tags: [exported]
 ```
 
 ```Go
@@ -1363,6 +1302,7 @@ ToValidUTF8 treats s as UTF-8-encoded bytes and returns a copy with each run of 
 
 ```
 searchKey: bytes.isSeparator
+tags: [private]
 ```
 
 ```Go
@@ -1375,7 +1315,6 @@ isSeparator reports whether the rune could mark a word boundary. TODO: update wh
 
 ```
 searchKey: bytes.Title
-tags: [exported]
 ```
 
 ```Go
@@ -1390,7 +1329,6 @@ BUG(rsc): The rule Title uses for word boundaries does not handle Unicode punctu
 
 ```
 searchKey: bytes.TrimLeftFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1403,7 +1341,6 @@ TrimLeftFunc treats s as UTF-8-encoded bytes and returns a subslice of s by slic
 
 ```
 searchKey: bytes.TrimRightFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1416,7 +1353,6 @@ TrimRightFunc returns a subslice of s by slicing off all trailing UTF-8-encoded 
 
 ```
 searchKey: bytes.TrimFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1429,7 +1365,6 @@ TrimFunc returns a subslice of s by slicing off all leading and trailing UTF-8-e
 
 ```
 searchKey: bytes.TrimPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -1442,7 +1377,6 @@ TrimPrefix returns s without the provided leading prefix string. If s doesn't st
 
 ```
 searchKey: bytes.TrimSuffix
-tags: [exported]
 ```
 
 ```Go
@@ -1455,7 +1389,6 @@ TrimSuffix returns s without the provided trailing suffix string. If s doesn't e
 
 ```
 searchKey: bytes.IndexFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1468,7 +1401,6 @@ IndexFunc interprets s as a sequence of UTF-8-encoded code points. It returns th
 
 ```
 searchKey: bytes.LastIndexFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1481,6 +1413,7 @@ LastIndexFunc interprets s as a sequence of UTF-8-encoded code points. It return
 
 ```
 searchKey: bytes.indexFunc
+tags: [private]
 ```
 
 ```Go
@@ -1493,6 +1426,7 @@ indexFunc is the same as IndexFunc except that if truth==false, the sense of the
 
 ```
 searchKey: bytes.lastIndexFunc
+tags: [private]
 ```
 
 ```Go
@@ -1505,6 +1439,7 @@ lastIndexFunc is the same as LastIndexFunc except that if truth==false, the sens
 
 ```
 searchKey: bytes.makeCutsetFunc
+tags: [private]
 ```
 
 ```Go
@@ -1515,7 +1450,6 @@ func makeCutsetFunc(cutset string) func(r rune) bool
 
 ```
 searchKey: bytes.Trim
-tags: [exported]
 ```
 
 ```Go
@@ -1528,7 +1462,6 @@ Trim returns a subslice of s by slicing off all leading and trailing UTF-8-encod
 
 ```
 searchKey: bytes.TrimLeft
-tags: [exported]
 ```
 
 ```Go
@@ -1541,7 +1474,6 @@ TrimLeft returns a subslice of s by slicing off all leading UTF-8-encoded code p
 
 ```
 searchKey: bytes.TrimRight
-tags: [exported]
 ```
 
 ```Go
@@ -1554,7 +1486,6 @@ TrimRight returns a subslice of s by slicing off all trailing UTF-8-encoded code
 
 ```
 searchKey: bytes.TrimSpace
-tags: [exported]
 ```
 
 ```Go
@@ -1567,7 +1498,6 @@ TrimSpace returns a subslice of s by slicing off all leading and trailing white 
 
 ```
 searchKey: bytes.Runes
-tags: [exported]
 ```
 
 ```Go
@@ -1580,7 +1510,6 @@ Runes interprets s as a sequence of UTF-8-encoded code points. It returns a slic
 
 ```
 searchKey: bytes.Replace
-tags: [exported]
 ```
 
 ```Go
@@ -1593,7 +1522,6 @@ Replace returns a copy of the slice s with the first n non-overlapping instances
 
 ```
 searchKey: bytes.ReplaceAll
-tags: [exported]
 ```
 
 ```Go
@@ -1606,7 +1534,6 @@ ReplaceAll returns a copy of the slice s with all non-overlapping instances of o
 
 ```
 searchKey: bytes.EqualFold
-tags: [exported]
 ```
 
 ```Go
@@ -1619,7 +1546,6 @@ EqualFold reports whether s and t, interpreted as UTF-8 strings, are equal under
 
 ```
 searchKey: bytes.Index
-tags: [exported]
 ```
 
 ```Go

@@ -12,10 +12,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleWordEncoder_Encode" href="#ExampleWordEncoder_Encode">func ExampleWordEncoder_Encode()</a>
 
 ```
 searchKey: mime_test.ExampleWordEncoder_Encode
+tags: [private]
 ```
 
 ```Go
@@ -26,6 +31,7 @@ func ExampleWordEncoder_Encode()
 
 ```
 searchKey: mime_test.ExampleWordDecoder_Decode
+tags: [private]
 ```
 
 ```Go
@@ -36,6 +42,7 @@ func ExampleWordDecoder_Decode()
 
 ```
 searchKey: mime_test.ExampleWordDecoder_DecodeHeader
+tags: [private]
 ```
 
 ```Go
@@ -46,6 +53,7 @@ func ExampleWordDecoder_DecodeHeader()
 
 ```
 searchKey: mime_test.ExampleFormatMediaType
+tags: [private]
 ```
 
 ```Go
@@ -56,6 +64,7 @@ func ExampleFormatMediaType()
 
 ```
 searchKey: mime_test.ExampleParseMediaType
+tags: [private]
 ```
 
 ```Go

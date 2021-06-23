@@ -4,7 +4,9 @@
     "identifier": "global",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/global",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "DefaultReconcilerEnqueueState",
                 "newPage": false,
                 "searchKey": "global.DefaultReconcilerEnqueueState",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "TestDefaultReconcilerEnqueueState",
                 "newPage": false,
                 "searchKey": "global.TestDefaultReconcilerEnqueueState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

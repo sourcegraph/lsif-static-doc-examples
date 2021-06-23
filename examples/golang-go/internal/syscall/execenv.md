@@ -8,11 +8,14 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Default" href="#Default">func Default(sys *syscall.SysProcAttr) ([]string, error)</a>
 
 ```
 searchKey: execenv.Default
-tags: [exported]
 ```
 
 ```Go

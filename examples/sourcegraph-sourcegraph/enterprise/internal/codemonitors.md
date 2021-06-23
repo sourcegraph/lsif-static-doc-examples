@@ -142,7 +142,7 @@
     * [func TestEnqueueActionEmailsForQueryIDInt64QueryByRecordID(t *testing.T)](#TestEnqueueActionEmailsForQueryIDInt64QueryByRecordID)
     * [func TestGetActionJobMetadata(t *testing.T)](#TestGetActionJobMetadata)
     * [func TestScanActionJobs(t *testing.T)](#TestScanActionJobs)
-    * [func init()](#init)
+    * [func init()](#init.main_test.go)
     * [func newTestUser(ctx context.Context, t *testing.T) (name string, id int32, namespace graphql.ID, userContext context.Context)](#newTestUser)
     * [func insertTestUser(t *testing.T, db *sql.DB, name string, isAdmin bool) (userID int32)](#insertTestUser)
     * [func TestQueryByRecordID(t *testing.T)](#TestQueryByRecordID)
@@ -154,10 +154,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="totalCountActionEmailsFmtStr" href="#totalCountActionEmailsFmtStr">const totalCountActionEmailsFmtStr</a>
 
 ```
 searchKey: codemonitors.totalCountActionEmailsFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +177,7 @@ WHERE monitor = %s;
 
 ```
 searchKey: codemonitors.actionEmailByIDFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +188,7 @@ const actionEmailByIDFmtStr = ...
 
 ```
 searchKey: codemonitors.updateActionEmailFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +199,7 @@ const updateActionEmailFmtStr = ...
 
 ```
 searchKey: codemonitors.readActionEmailFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -202,6 +210,7 @@ const readActionEmailFmtStr = ...
 
 ```
 searchKey: codemonitors.createActionEmailFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -212,6 +221,7 @@ const createActionEmailFmtStr = ...
 
 ```
 searchKey: codemonitors.deleteActionEmailFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -222,6 +232,7 @@ const deleteActionEmailFmtStr = `DELETE FROM cm_emails WHERE id in (%s) AND MONI
 
 ```
 searchKey: codemonitors.readActionEmailEventsFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -232,6 +243,7 @@ const readActionEmailEventsFmtStr = ...
 
 ```
 searchKey: codemonitors.totalActionEmailEventsFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -246,6 +258,7 @@ WHERE %s
 
 ```
 searchKey: codemonitors.enqueueActionEmailFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -256,6 +269,7 @@ const enqueueActionEmailFmtStr = ...
 
 ```
 searchKey: codemonitors.getActionJobMetadataFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -266,6 +280,7 @@ const getActionJobMetadataFmtStr = ...
 
 ```
 searchKey: codemonitors.actionJobForIDFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +291,7 @@ const actionJobForIDFmtStr = ...
 
 ```
 searchKey: codemonitors.monitorByIDFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +302,7 @@ const monitorByIDFmtStr = ...
 
 ```
 searchKey: codemonitors.totalCountMonitorsFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +317,7 @@ WHERE namespace_user_id = %s;
 
 ```
 searchKey: codemonitors.monitorsFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +328,7 @@ const monitorsFmtStr = ...
 
 ```
 searchKey: codemonitors.toggleCodeMonitorFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +339,7 @@ const toggleCodeMonitorFmtStr = ...
 
 ```
 searchKey: codemonitors.insertCodeMonitorFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +350,7 @@ const insertCodeMonitorFmtStr = ...
 
 ```
 searchKey: codemonitors.updateCodeMonitorFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -340,6 +361,7 @@ const updateCodeMonitorFmtStr = ...
 
 ```
 searchKey: codemonitors.deleteMonitorFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -350,6 +372,7 @@ const deleteMonitorFmtStr = `DELETE FROM cm_monitors WHERE id = %s`
 
 ```
 searchKey: codemonitors.triggerQueryByMonitorFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -360,6 +383,7 @@ const triggerQueryByMonitorFmtStr = ...
 
 ```
 searchKey: codemonitors.triggerQueryByIDFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -370,6 +394,7 @@ const triggerQueryByIDFmtStr = ...
 
 ```
 searchKey: codemonitors.resetTriggerQueryTimestamps
+tags: [private]
 ```
 
 ```Go
@@ -380,6 +405,7 @@ const resetTriggerQueryTimestamps = ...
 
 ```
 searchKey: codemonitors.createTriggerQueryFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -390,6 +416,7 @@ const createTriggerQueryFmtStr = ...
 
 ```
 searchKey: codemonitors.updateTriggerQueryFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -400,6 +427,7 @@ const updateTriggerQueryFmtStr = ...
 
 ```
 searchKey: codemonitors.getQueryByRecordIDFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -410,6 +438,7 @@ const getQueryByRecordIDFmtStr = ...
 
 ```
 searchKey: codemonitors.setTriggerQueryNextRunFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +449,7 @@ const setTriggerQueryNextRunFmtStr = ...
 
 ```
 searchKey: codemonitors.allRecipientsForEmailIDInt64FmtStr
+tags: [private]
 ```
 
 ```Go
@@ -430,6 +460,7 @@ const allRecipientsForEmailIDInt64FmtStr = ...
 
 ```
 searchKey: codemonitors.createRecipientFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -440,6 +471,7 @@ const createRecipientFmtStr = ...
 
 ```
 searchKey: codemonitors.totalCountRecipientsFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +486,7 @@ WHERE email = %s
 
 ```
 searchKey: codemonitors.deleteRecipientFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -464,6 +497,7 @@ const deleteRecipientFmtStr = `DELETE FROM cm_recipients WHERE email = %s`
 
 ```
 searchKey: codemonitors.readRecipientQueryFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +508,7 @@ const readRecipientQueryFmtStr = ...
 
 ```
 searchKey: codemonitors.enqueueTriggerQueryFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -484,6 +519,7 @@ const enqueueTriggerQueryFmtStr = ...
 
 ```
 searchKey: codemonitors.logSearchFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -494,6 +530,7 @@ const logSearchFmtStr = ...
 
 ```
 searchKey: codemonitors.deleteObsoleteJobLogsFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -504,6 +541,7 @@ const deleteObsoleteJobLogsFmtStr = ...
 
 ```
 searchKey: codemonitors.deleteOldJobLogsFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +552,7 @@ const deleteOldJobLogsFmtStr = ...
 
 ```
 searchKey: codemonitors.getEventsForQueryIDInt64FmtStr
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +563,7 @@ const getEventsForQueryIDInt64FmtStr = ...
 
 ```
 searchKey: codemonitors.totalCountEventsForQueryIDInt64FmtStr
+tags: [private]
 ```
 
 ```Go
@@ -534,6 +574,7 @@ const totalCountEventsForQueryIDInt64FmtStr = ...
 
 ```
 searchKey: codemonitors.testQuery
+tags: [private]
 ```
 
 ```Go
@@ -544,6 +585,7 @@ const testQuery = "repo:github\\.com/sourcegraph/sourcegraph func type:diff patt
 
 ```
 searchKey: codemonitors.testDescription
+tags: [private]
 ```
 
 ```Go
@@ -554,6 +596,7 @@ const testDescription = "test description"
 
 ```
 searchKey: codemonitors.setToCompletedFmtStr
+tags: [private]
 ```
 
 ```Go
@@ -564,6 +607,7 @@ const setToCompletedFmtStr = ...
 
 ```
 searchKey: codemonitors.getJobIDs
+tags: [private]
 ```
 
 ```Go
@@ -575,11 +619,14 @@ FROM cm_trigger_jobs;
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="EmailsColumns" href="#EmailsColumns">var EmailsColumns</a>
 
 ```
 searchKey: codemonitors.EmailsColumns
-tags: [exported]
 ```
 
 ```Go
@@ -590,7 +637,6 @@ var EmailsColumns = ...
 
 ```
 searchKey: codemonitors.ActionJobsColumns
-tags: [exported]
 ```
 
 ```Go
@@ -601,6 +647,7 @@ var ActionJobsColumns = ...
 
 ```
 searchKey: codemonitors.monitorColumns
+tags: [private]
 ```
 
 ```Go
@@ -611,6 +658,7 @@ var monitorColumns = ...
 
 ```
 searchKey: codemonitors.queryColumns
+tags: [private]
 ```
 
 ```Go
@@ -621,7 +669,6 @@ var queryColumns = ...
 
 ```
 searchKey: codemonitors.TriggerJobsColumns
-tags: [exported]
 ```
 
 ```Go
@@ -630,11 +677,14 @@ var TriggerJobsColumns = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MonitorEmail" href="#MonitorEmail">type MonitorEmail struct</a>
 
 ```
 searchKey: codemonitors.MonitorEmail
-tags: [exported]
 ```
 
 ```Go
@@ -655,7 +705,6 @@ type MonitorEmail struct {
 
 ```
 searchKey: codemonitors.ActionJob
-tags: [exported]
 ```
 
 ```Go
@@ -680,7 +729,6 @@ type ActionJob struct {
 
 ```
 searchKey: codemonitors.ActionJob.RecordID
-tags: [exported]
 ```
 
 ```Go
@@ -691,7 +739,6 @@ func (a *ActionJob) RecordID() int
 
 ```
 searchKey: codemonitors.ActionJobMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -709,7 +756,6 @@ type ActionJobMetadata struct {
 
 ```
 searchKey: codemonitors.Monitor
-tags: [exported]
 ```
 
 ```Go
@@ -730,7 +776,6 @@ type Monitor struct {
 
 ```
 searchKey: codemonitors.MonitorQuery
-tags: [exported]
 ```
 
 ```Go
@@ -751,7 +796,6 @@ type MonitorQuery struct {
 
 ```
 searchKey: codemonitors.Recipient
-tags: [exported]
 ```
 
 ```Go
@@ -767,7 +811,6 @@ type Recipient struct {
 
 ```
 searchKey: codemonitors.Store
-tags: [exported]
 ```
 
 ```Go
@@ -783,7 +826,6 @@ Store exposes methods to read and write codemonitors domain models from persiste
 
 ```
 searchKey: codemonitors.NewStore
-tags: [exported]
 ```
 
 ```Go
@@ -796,7 +838,6 @@ NewStore returns a new Store backed by the given database.
 
 ```
 searchKey: codemonitors.NewStoreWithClock
-tags: [exported]
 ```
 
 ```Go
@@ -809,6 +850,7 @@ NewStoreWithClock returns a new Store backed by the given database and clock for
 
 ```
 searchKey: codemonitors.newTestStore
+tags: [private]
 ```
 
 ```Go
@@ -819,7 +861,6 @@ func newTestStore(t *testing.T) (context.Context, *Store)
 
 ```
 searchKey: codemonitors.Store.UpdateActionEmail
-tags: [exported]
 ```
 
 ```Go
@@ -830,7 +871,6 @@ func (s *Store) UpdateActionEmail(ctx context.Context, monitorID int64, action *
 
 ```
 searchKey: codemonitors.Store.CreateActionEmail
-tags: [exported]
 ```
 
 ```Go
@@ -841,7 +881,6 @@ func (s *Store) CreateActionEmail(ctx context.Context, monitorID int64, action *
 
 ```
 searchKey: codemonitors.Store.DeleteActionsInt64
-tags: [exported]
 ```
 
 ```Go
@@ -852,7 +891,6 @@ func (s *Store) DeleteActionsInt64(ctx context.Context, actionIDs []int64, monit
 
 ```
 searchKey: codemonitors.Store.TotalCountActionEmails
-tags: [exported]
 ```
 
 ```Go
@@ -863,7 +901,6 @@ func (s *Store) TotalCountActionEmails(ctx context.Context, monitorID int64) (co
 
 ```
 searchKey: codemonitors.Store.ActionEmailByIDInt64
-tags: [exported]
 ```
 
 ```Go
@@ -874,6 +911,7 @@ func (s *Store) ActionEmailByIDInt64(ctx context.Context, emailID int64) (m *Mon
 
 ```
 searchKey: codemonitors.Store.runEmailQuery
+tags: [private]
 ```
 
 ```Go
@@ -884,6 +922,7 @@ func (s *Store) runEmailQuery(ctx context.Context, q *sqlf.Query) (*MonitorEmail
 
 ```
 searchKey: codemonitors.Store.updateActionEmailQuery
+tags: [private]
 ```
 
 ```Go
@@ -894,7 +933,6 @@ func (s *Store) updateActionEmailQuery(ctx context.Context, monitorID int64, arg
 
 ```
 searchKey: codemonitors.Store.ReadActionEmailQuery
-tags: [exported]
 ```
 
 ```Go
@@ -905,6 +943,7 @@ func (s *Store) ReadActionEmailQuery(ctx context.Context, monitorID int64, args 
 
 ```
 searchKey: codemonitors.Store.createActionEmailQuery
+tags: [private]
 ```
 
 ```Go
@@ -915,7 +954,6 @@ func (s *Store) createActionEmailQuery(ctx context.Context, monitorID int64, arg
 
 ```
 searchKey: codemonitors.Store.ReadActionEmailEvents
-tags: [exported]
 ```
 
 ```Go
@@ -926,7 +964,6 @@ func (s *Store) ReadActionEmailEvents(ctx context.Context, emailID int64, trigge
 
 ```
 searchKey: codemonitors.Store.TotalActionEmailEvents
-tags: [exported]
 ```
 
 ```Go
@@ -937,7 +974,6 @@ func (s *Store) TotalActionEmailEvents(ctx context.Context, emailID int64, trigg
 
 ```
 searchKey: codemonitors.Store.EnqueueActionEmailsForQueryIDInt64
-tags: [exported]
 ```
 
 ```Go
@@ -948,7 +984,6 @@ func (s *Store) EnqueueActionEmailsForQueryIDInt64(ctx context.Context, queryID 
 
 ```
 searchKey: codemonitors.Store.GetActionJobMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -959,7 +994,6 @@ func (s *Store) GetActionJobMetadata(ctx context.Context, recordID int) (m *Acti
 
 ```
 searchKey: codemonitors.Store.ActionJobForIDInt
-tags: [exported]
 ```
 
 ```Go
@@ -970,6 +1004,7 @@ func (s *Store) ActionJobForIDInt(ctx context.Context, recordID int) (*ActionJob
 
 ```
 searchKey: codemonitors.Store.runActionJobQuery
+tags: [private]
 ```
 
 ```Go
@@ -980,7 +1015,6 @@ func (s *Store) runActionJobQuery(ctx context.Context, q *sqlf.Query) (ajs *Acti
 
 ```
 searchKey: codemonitors.Store.CreateActions
-tags: [exported]
 ```
 
 ```Go
@@ -991,7 +1025,6 @@ func (s *Store) CreateActions(ctx context.Context, args []*graphqlbackend.Create
 
 ```
 searchKey: codemonitors.Store.CreateCodeMonitor
-tags: [exported]
 ```
 
 ```Go
@@ -1002,7 +1035,6 @@ func (s *Store) CreateCodeMonitor(ctx context.Context, args *graphqlbackend.Crea
 
 ```
 searchKey: codemonitors.Store.CreateMonitor
-tags: [exported]
 ```
 
 ```Go
@@ -1013,7 +1045,6 @@ func (s *Store) CreateMonitor(ctx context.Context, args *graphqlbackend.CreateMo
 
 ```
 searchKey: codemonitors.Store.UpdateMonitor
-tags: [exported]
 ```
 
 ```Go
@@ -1024,7 +1055,6 @@ func (s *Store) UpdateMonitor(ctx context.Context, args *graphqlbackend.UpdateCo
 
 ```
 searchKey: codemonitors.Store.ToggleMonitor
-tags: [exported]
 ```
 
 ```Go
@@ -1035,7 +1065,6 @@ func (s *Store) ToggleMonitor(ctx context.Context, args *graphqlbackend.ToggleCo
 
 ```
 searchKey: codemonitors.Store.DeleteMonitor
-tags: [exported]
 ```
 
 ```Go
@@ -1046,7 +1075,6 @@ func (s *Store) DeleteMonitor(ctx context.Context, args *graphqlbackend.DeleteCo
 
 ```
 searchKey: codemonitors.Store.Monitors
-tags: [exported]
 ```
 
 ```Go
@@ -1057,7 +1085,6 @@ func (s *Store) Monitors(ctx context.Context, userID int32, args *graphqlbackend
 
 ```
 searchKey: codemonitors.Store.MonitorByIDInt64
-tags: [exported]
 ```
 
 ```Go
@@ -1068,7 +1095,6 @@ func (s *Store) MonitorByIDInt64(ctx context.Context, monitorID int64) (m *Monit
 
 ```
 searchKey: codemonitors.Store.TotalCountMonitors
-tags: [exported]
 ```
 
 ```Go
@@ -1079,6 +1105,7 @@ func (s *Store) TotalCountMonitors(ctx context.Context, userID int32) (count int
 
 ```
 searchKey: codemonitors.Store.toggleCodeMonitorQuery
+tags: [private]
 ```
 
 ```Go
@@ -1089,6 +1116,7 @@ func (s *Store) toggleCodeMonitorQuery(ctx context.Context, args *graphqlbackend
 
 ```
 searchKey: codemonitors.Store.createCodeMonitorQuery
+tags: [private]
 ```
 
 ```Go
@@ -1099,6 +1127,7 @@ func (s *Store) createCodeMonitorQuery(ctx context.Context, args *graphqlbackend
 
 ```
 searchKey: codemonitors.Store.updateCodeMonitorQuery
+tags: [private]
 ```
 
 ```Go
@@ -1109,6 +1138,7 @@ func (s *Store) updateCodeMonitorQuery(ctx context.Context, args *graphqlbackend
 
 ```
 searchKey: codemonitors.Store.deleteMonitorQuery
+tags: [private]
 ```
 
 ```Go
@@ -1119,6 +1149,7 @@ func (s *Store) deleteMonitorQuery(ctx context.Context, args *graphqlbackend.Del
 
 ```
 searchKey: codemonitors.Store.runMonitorQuery
+tags: [private]
 ```
 
 ```Go
@@ -1129,7 +1160,6 @@ func (s *Store) runMonitorQuery(ctx context.Context, q *sqlf.Query) (*Monitor, e
 
 ```
 searchKey: codemonitors.Store.CreateTriggerQuery
-tags: [exported]
 ```
 
 ```Go
@@ -1140,7 +1170,6 @@ func (s *Store) CreateTriggerQuery(ctx context.Context, monitorID int64, args *g
 
 ```
 searchKey: codemonitors.Store.UpdateTriggerQuery
-tags: [exported]
 ```
 
 ```Go
@@ -1151,7 +1180,6 @@ func (s *Store) UpdateTriggerQuery(ctx context.Context, args *graphqlbackend.Upd
 
 ```
 searchKey: codemonitors.Store.TriggerQueryByMonitorIDInt64
-tags: [exported]
 ```
 
 ```Go
@@ -1162,6 +1190,7 @@ func (s *Store) TriggerQueryByMonitorIDInt64(ctx context.Context, monitorID int6
 
 ```
 searchKey: codemonitors.Store.triggerQueryByIDInt64
+tags: [private]
 ```
 
 ```Go
@@ -1172,7 +1201,6 @@ func (s *Store) triggerQueryByIDInt64(ctx context.Context, queryID int64) (*Moni
 
 ```
 searchKey: codemonitors.Store.ResetTriggerQueryTimestamps
-tags: [exported]
 ```
 
 ```Go
@@ -1183,6 +1211,7 @@ func (s *Store) ResetTriggerQueryTimestamps(ctx context.Context, queryID int64) 
 
 ```
 searchKey: codemonitors.Store.createTriggerQueryQuery
+tags: [private]
 ```
 
 ```Go
@@ -1193,6 +1222,7 @@ func (s *Store) createTriggerQueryQuery(ctx context.Context, monitorID int64, ar
 
 ```
 searchKey: codemonitors.Store.updateTriggerQueryQuery
+tags: [private]
 ```
 
 ```Go
@@ -1203,7 +1233,6 @@ func (s *Store) updateTriggerQueryQuery(ctx context.Context, args *graphqlbacken
 
 ```
 searchKey: codemonitors.Store.GetQueryByRecordID
-tags: [exported]
 ```
 
 ```Go
@@ -1214,7 +1243,6 @@ func (s *Store) GetQueryByRecordID(ctx context.Context, recordID int) (query *Mo
 
 ```
 searchKey: codemonitors.Store.SetTriggerQueryNextRun
-tags: [exported]
 ```
 
 ```Go
@@ -1225,6 +1253,7 @@ func (s *Store) SetTriggerQueryNextRun(ctx context.Context, triggerQueryID int64
 
 ```
 searchKey: codemonitors.Store.runTriggerQuery
+tags: [private]
 ```
 
 ```Go
@@ -1235,7 +1264,6 @@ func (s *Store) runTriggerQuery(ctx context.Context, q *sqlf.Query) (*MonitorQue
 
 ```
 searchKey: codemonitors.Store.CreateRecipients
-tags: [exported]
 ```
 
 ```Go
@@ -1246,7 +1274,6 @@ func (s *Store) CreateRecipients(ctx context.Context, recipients []graphql.ID, e
 
 ```
 searchKey: codemonitors.Store.DeleteRecipients
-tags: [exported]
 ```
 
 ```Go
@@ -1257,7 +1284,6 @@ func (s *Store) DeleteRecipients(ctx context.Context, emailID int64) (err error)
 
 ```
 searchKey: codemonitors.Store.RecipientsForEmailIDInt64
-tags: [exported]
 ```
 
 ```Go
@@ -1268,7 +1294,6 @@ func (s *Store) RecipientsForEmailIDInt64(ctx context.Context, emailID int64, ar
 
 ```
 searchKey: codemonitors.Store.AllRecipientsForEmailIDInt64
-tags: [exported]
 ```
 
 ```Go
@@ -1279,6 +1304,7 @@ func (s *Store) AllRecipientsForEmailIDInt64(ctx context.Context, emailID int64)
 
 ```
 searchKey: codemonitors.Store.createRecipient
+tags: [private]
 ```
 
 ```Go
@@ -1289,7 +1315,6 @@ func (s *Store) createRecipient(ctx context.Context, recipient graphql.ID, email
 
 ```
 searchKey: codemonitors.Store.TotalCountRecipients
-tags: [exported]
 ```
 
 ```Go
@@ -1300,7 +1325,6 @@ func (s *Store) TotalCountRecipients(ctx context.Context, emailID int64) (count 
 
 ```
 searchKey: codemonitors.Store.With
-tags: [exported]
 ```
 
 ```Go
@@ -1313,7 +1337,6 @@ With creates a new store with the underlying database handle from the given stor
 
 ```
 searchKey: codemonitors.Store.Clock
-tags: [exported]
 ```
 
 ```Go
@@ -1326,7 +1349,6 @@ Clock returns the clock of the underlying store.
 
 ```
 searchKey: codemonitors.Store.Now
-tags: [exported]
 ```
 
 ```Go
@@ -1337,7 +1359,6 @@ func (s *Store) Now() time.Time
 
 ```
 searchKey: codemonitors.Store.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -1350,7 +1371,6 @@ Transact creates a new transaction. It's required to implement this method and w
 
 ```
 searchKey: codemonitors.Store.EnqueueTriggerQueries
-tags: [exported]
 ```
 
 ```Go
@@ -1361,7 +1381,6 @@ func (s *Store) EnqueueTriggerQueries(ctx context.Context) (err error)
 
 ```
 searchKey: codemonitors.Store.LogSearch
-tags: [exported]
 ```
 
 ```Go
@@ -1372,7 +1391,6 @@ func (s *Store) LogSearch(ctx context.Context, queryString string, numResults in
 
 ```
 searchKey: codemonitors.Store.DeleteObsoleteJobLogs
-tags: [exported]
 ```
 
 ```Go
@@ -1385,7 +1403,6 @@ DeleteObsoleteJobLogs deletes all runs which are marked as completed and did not
 
 ```
 searchKey: codemonitors.Store.DeleteOldJobLogs
-tags: [exported]
 ```
 
 ```Go
@@ -1398,7 +1415,6 @@ DeleteOldJobLogs deletes trigger jobs which have finished and are older than 're
 
 ```
 searchKey: codemonitors.Store.GetEventsForQueryIDInt64
-tags: [exported]
 ```
 
 ```Go
@@ -1409,7 +1425,6 @@ func (s *Store) GetEventsForQueryIDInt64(ctx context.Context, queryID int64, arg
 
 ```
 searchKey: codemonitors.Store.TotalCountEventsForQueryIDInt64
-tags: [exported]
 ```
 
 ```Go
@@ -1420,6 +1435,7 @@ func (s *Store) TotalCountEventsForQueryIDInt64(ctx context.Context, queryID int
 
 ```
 searchKey: codemonitors.Store.insertTestMonitor
+tags: [private]
 ```
 
 ```Go
@@ -1430,7 +1446,6 @@ func (s *Store) insertTestMonitor(ctx context.Context, t *testing.T) (*Monitor, 
 
 ```
 searchKey: codemonitors.TriggerJobs
-tags: [exported]
 ```
 
 ```Go
@@ -1461,7 +1476,6 @@ type TriggerJobs struct {
 
 ```
 searchKey: codemonitors.TriggerJobs.RecordID
-tags: [exported]
 ```
 
 ```Go
@@ -1470,10 +1484,15 @@ func (r *TriggerJobs) RecordID() int
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="deleteActionsEmailQuery" href="#deleteActionsEmailQuery">func deleteActionsEmailQuery(ctx context.Context, actionIDs []int64, monitorID int64) (*sqlf.Query, error)</a>
 
 ```
 searchKey: codemonitors.deleteActionsEmailQuery
+tags: [private]
 ```
 
 ```Go
@@ -1484,7 +1503,6 @@ func deleteActionsEmailQuery(ctx context.Context, actionIDs []int64, monitorID i
 
 ```
 searchKey: codemonitors.ScanEmails
-tags: [exported]
 ```
 
 ```Go
@@ -1495,7 +1513,6 @@ func ScanEmails(rows *sql.Rows) (ms []*MonitorEmail, err error)
 
 ```
 searchKey: codemonitors.ScanActionJobs
-tags: [exported]
 ```
 
 ```Go
@@ -1506,6 +1523,7 @@ func ScanActionJobs(rows *sql.Rows, err error) (workerutil.Record, bool, error)
 
 ```
 searchKey: codemonitors.scanActionJobs
+tags: [private]
 ```
 
 ```Go
@@ -1516,6 +1534,7 @@ func scanActionJobs(rows *sql.Rows, err error) ([]*ActionJob, error)
 
 ```
 searchKey: codemonitors.monitorsQuery
+tags: [private]
 ```
 
 ```Go
@@ -1526,6 +1545,7 @@ func monitorsQuery(userID int32, args *graphqlbackend.ListMonitorsArgs) (*sqlf.Q
 
 ```
 searchKey: codemonitors.scanMonitors
+tags: [private]
 ```
 
 ```Go
@@ -1536,6 +1556,7 @@ func scanMonitors(rows *sql.Rows) ([]*Monitor, error)
 
 ```
 searchKey: codemonitors.scanTriggerQueries
+tags: [private]
 ```
 
 ```Go
@@ -1546,6 +1567,7 @@ func scanTriggerQueries(rows *sql.Rows) (ms []*MonitorQuery, err error)
 
 ```
 searchKey: codemonitors.scanRecipients
+tags: [private]
 ```
 
 ```Go
@@ -1556,6 +1578,7 @@ func scanRecipients(rows *sql.Rows) (ms []*Recipient, err error)
 
 ```
 searchKey: codemonitors.deleteRecipientsQuery
+tags: [private]
 ```
 
 ```Go
@@ -1566,6 +1589,7 @@ func deleteRecipientsQuery(ctx context.Context, emailId int64) (*sqlf.Query, err
 
 ```
 searchKey: codemonitors.readRecipientQuery
+tags: [private]
 ```
 
 ```Go
@@ -1576,6 +1600,7 @@ func readRecipientQuery(ctx context.Context, emailId int64, args *graphqlbackend
 
 ```
 searchKey: codemonitors.nilOrInt32
+tags: [private]
 ```
 
 ```Go
@@ -1586,7 +1611,6 @@ func nilOrInt32(n int32) *int32
 
 ```
 searchKey: codemonitors.ScanTriggerJobs
-tags: [exported]
 ```
 
 ```Go
@@ -1597,6 +1621,7 @@ func ScanTriggerJobs(rows *sql.Rows, err error) (workerutil.Record, bool, error)
 
 ```
 searchKey: codemonitors.scanTriggerJobs
+tags: [private]
 ```
 
 ```Go
@@ -1607,6 +1632,7 @@ func scanTriggerJobs(rows *sql.Rows, err error) ([]*TriggerJobs, error)
 
 ```
 searchKey: codemonitors.unmarshalAfter
+tags: [private]
 ```
 
 ```Go
@@ -1617,6 +1643,7 @@ func unmarshalAfter(after *string) (int64, error)
 
 ```
 searchKey: codemonitors.TestEnqueueActionEmailsForQueryIDInt64QueryByRecordID
+tags: [private]
 ```
 
 ```Go
@@ -1627,6 +1654,7 @@ func TestEnqueueActionEmailsForQueryIDInt64QueryByRecordID(t *testing.T)
 
 ```
 searchKey: codemonitors.TestGetActionJobMetadata
+tags: [private]
 ```
 
 ```Go
@@ -1637,16 +1665,18 @@ func TestGetActionJobMetadata(t *testing.T)
 
 ```
 searchKey: codemonitors.TestScanActionJobs
+tags: [private]
 ```
 
 ```Go
 func TestScanActionJobs(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.main_test.go" href="#init.main_test.go">func init()</a>
 
 ```
 searchKey: codemonitors.init
+tags: [private]
 ```
 
 ```Go
@@ -1657,6 +1687,7 @@ func init()
 
 ```
 searchKey: codemonitors.newTestUser
+tags: [private]
 ```
 
 ```Go
@@ -1667,6 +1698,7 @@ func newTestUser(ctx context.Context, t *testing.T) (name string, id int32, name
 
 ```
 searchKey: codemonitors.insertTestUser
+tags: [private]
 ```
 
 ```Go
@@ -1677,6 +1709,7 @@ func insertTestUser(t *testing.T, db *sql.DB, name string, isAdmin bool) (userID
 
 ```
 searchKey: codemonitors.TestQueryByRecordID
+tags: [private]
 ```
 
 ```Go
@@ -1687,6 +1720,7 @@ func TestQueryByRecordID(t *testing.T)
 
 ```
 searchKey: codemonitors.TestTriggerQueryNextRun
+tags: [private]
 ```
 
 ```Go
@@ -1697,6 +1731,7 @@ func TestTriggerQueryNextRun(t *testing.T)
 
 ```
 searchKey: codemonitors.TestResetTriggerQueryTimestamps
+tags: [private]
 ```
 
 ```Go
@@ -1707,6 +1742,7 @@ func TestResetTriggerQueryTimestamps(t *testing.T)
 
 ```
 searchKey: codemonitors.TestAllRecipientsForEmailIDInt64
+tags: [private]
 ```
 
 ```Go
@@ -1717,6 +1753,7 @@ func TestAllRecipientsForEmailIDInt64(t *testing.T)
 
 ```
 searchKey: codemonitors.TestDeleteOldJobLogs
+tags: [private]
 ```
 
 ```Go

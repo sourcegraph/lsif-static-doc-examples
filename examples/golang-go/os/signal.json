@@ -4,9 +4,7 @@
     "identifier": "signal",
     "newPage": true,
     "searchKey": "os/signal",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -27,9 +25,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -47,7 +43,9 @@
                 "identifier": "numSig",
                 "newPage": false,
                 "searchKey": "signal.numSig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -70,9 +68,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -90,7 +86,9 @@
                 "identifier": "handlers",
                 "newPage": false,
                 "searchKey": "signal.handlers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -110,7 +108,9 @@
                 "identifier": "watchSignalLoopOnce",
                 "newPage": false,
                 "searchKey": "signal.watchSignalLoopOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -130,7 +130,9 @@
                 "identifier": "watchSignalLoop",
                 "newPage": false,
                 "searchKey": "signal.watchSignalLoop",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -150,7 +152,9 @@
                 "identifier": "settleTime",
                 "newPage": false,
                 "searchKey": "signal.settleTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -170,7 +174,9 @@
                 "identifier": "checkSighupIgnored",
                 "newPage": false,
                 "searchKey": "signal.checkSighupIgnored",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -190,7 +196,9 @@
                 "identifier": "sendUncaughtSighup",
                 "newPage": false,
                 "searchKey": "signal.sendUncaughtSighup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,7 +218,9 @@
                 "identifier": "dieFromSighup",
                 "newPage": false,
                 "searchKey": "signal.dieFromSighup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,7 +240,9 @@
                 "identifier": "checkNotifyContext",
                 "newPage": false,
                 "searchKey": "signal.checkNotifyContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -250,7 +262,9 @@
                 "identifier": "ctxNotifyTimes",
                 "newPage": false,
                 "searchKey": "signal.ctxNotifyTimes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -273,9 +287,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -293,7 +305,9 @@
                 "identifier": "stopping",
                 "newPage": false,
                 "searchKey": "signal.stopping",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -313,7 +327,9 @@
                 "identifier": "handler",
                 "newPage": false,
                 "searchKey": "signal.handler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -331,7 +347,9 @@
                       "identifier": "handler.want",
                       "newPage": false,
                       "searchKey": "signal.handler.want",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -351,7 +369,9 @@
                       "identifier": "handler.set",
                       "newPage": false,
                       "searchKey": "signal.handler.set",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -371,7 +391,9 @@
                       "identifier": "handler.clear",
                       "newPage": false,
                       "searchKey": "signal.handler.clear",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -394,7 +416,9 @@
                 "identifier": "signalCtx",
                 "newPage": false,
                 "searchKey": "signal.signalCtx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -412,7 +436,9 @@
                       "identifier": "signalCtx.stop",
                       "newPage": false,
                       "searchKey": "signal.signalCtx.stop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -432,7 +458,9 @@
                       "identifier": "signalCtx.String",
                       "newPage": false,
                       "searchKey": "signal.signalCtx.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -455,7 +483,9 @@
                 "identifier": "stringer",
                 "newPage": false,
                 "searchKey": "signal.stringer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -478,9 +508,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -498,7 +526,9 @@
                 "identifier": "cancel",
                 "newPage": false,
                 "searchKey": "signal.cancel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -518,9 +548,7 @@
                 "identifier": "Ignore",
                 "newPage": false,
                 "searchKey": "signal.Ignore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -540,9 +568,7 @@
                 "identifier": "Ignored",
                 "newPage": false,
                 "searchKey": "signal.Ignored",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -562,9 +588,7 @@
                 "identifier": "Notify",
                 "newPage": false,
                 "searchKey": "signal.Notify",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -584,9 +608,7 @@
                 "identifier": "Reset",
                 "newPage": false,
                 "searchKey": "signal.Reset",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -606,9 +628,7 @@
                 "identifier": "Stop",
                 "newPage": false,
                 "searchKey": "signal.Stop",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -628,7 +648,9 @@
                 "identifier": "signalWaitUntilIdle",
                 "newPage": false,
                 "searchKey": "signal.signalWaitUntilIdle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -648,7 +670,9 @@
                 "identifier": "process",
                 "newPage": false,
                 "searchKey": "signal.process",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -668,9 +692,7 @@
                 "identifier": "NotifyContext",
                 "newPage": false,
                 "searchKey": "signal.NotifyContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -690,7 +712,9 @@
                 "identifier": "signal_disable",
                 "newPage": false,
                 "searchKey": "signal.signal_disable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -710,7 +734,9 @@
                 "identifier": "signal_enable",
                 "newPage": false,
                 "searchKey": "signal.signal_enable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -730,7 +756,9 @@
                 "identifier": "signal_ignore",
                 "newPage": false,
                 "searchKey": "signal.signal_ignore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -750,7 +778,9 @@
                 "identifier": "signal_ignored",
                 "newPage": false,
                 "searchKey": "signal.signal_ignored",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -770,7 +800,9 @@
                 "identifier": "signal_recv",
                 "newPage": false,
                 "searchKey": "signal.signal_recv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -790,7 +822,9 @@
                 "identifier": "loop",
                 "newPage": false,
                 "searchKey": "signal.loop",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -805,12 +839,14 @@
           },
           {
             "node": {
-              "pathID": "/os/signal#init",
+              "pathID": "/os/signal#init.signal_unix.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.signal_unix.go",
                 "newPage": false,
                 "searchKey": "signal.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -830,7 +866,9 @@
                 "identifier": "signum",
                 "newPage": false,
                 "searchKey": "signal.signum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -850,7 +888,9 @@
                 "identifier": "enableSignal",
                 "newPage": false,
                 "searchKey": "signal.enableSignal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -870,7 +910,9 @@
                 "identifier": "disableSignal",
                 "newPage": false,
                 "searchKey": "signal.disableSignal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -890,7 +932,9 @@
                 "identifier": "ignoreSignal",
                 "newPage": false,
                 "searchKey": "signal.ignoreSignal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -910,7 +954,9 @@
                 "identifier": "signalIgnored",
                 "newPage": false,
                 "searchKey": "signal.signalIgnored",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -925,12 +971,14 @@
           },
           {
             "node": {
-              "pathID": "/os/signal#init",
+              "pathID": "/os/signal#init.signal_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.signal_test.go",
                 "newPage": false,
                 "searchKey": "signal.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -950,7 +998,9 @@
                 "identifier": "waitSig",
                 "newPage": false,
                 "searchKey": "signal.waitSig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -970,7 +1020,9 @@
                 "identifier": "waitSigAll",
                 "newPage": false,
                 "searchKey": "signal.waitSigAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -990,7 +1042,9 @@
                 "identifier": "waitSig1",
                 "newPage": false,
                 "searchKey": "signal.waitSig1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1010,7 +1064,9 @@
                 "identifier": "quiesce",
                 "newPage": false,
                 "searchKey": "signal.quiesce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1030,7 +1086,9 @@
                 "identifier": "TestSignal",
                 "newPage": false,
                 "searchKey": "signal.TestSignal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1050,7 +1108,9 @@
                 "identifier": "TestStress",
                 "newPage": false,
                 "searchKey": "signal.TestStress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1070,7 +1130,9 @@
                 "identifier": "testCancel",
                 "newPage": false,
                 "searchKey": "signal.testCancel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1090,7 +1152,9 @@
                 "identifier": "TestReset",
                 "newPage": false,
                 "searchKey": "signal.TestReset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1110,7 +1174,9 @@
                 "identifier": "TestIgnore",
                 "newPage": false,
                 "searchKey": "signal.TestIgnore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1130,7 +1196,9 @@
                 "identifier": "TestIgnored",
                 "newPage": false,
                 "searchKey": "signal.TestIgnored",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1150,7 +1218,9 @@
                 "identifier": "TestDetectNohup",
                 "newPage": false,
                 "searchKey": "signal.TestDetectNohup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1170,7 +1240,9 @@
                 "identifier": "TestStop",
                 "newPage": false,
                 "searchKey": "signal.TestStop",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1190,7 +1262,9 @@
                 "identifier": "TestNohup",
                 "newPage": false,
                 "searchKey": "signal.TestNohup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1210,7 +1284,9 @@
                 "identifier": "TestSIGCONT",
                 "newPage": false,
                 "searchKey": "signal.TestSIGCONT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1230,7 +1306,9 @@
                 "identifier": "TestAtomicStop",
                 "newPage": false,
                 "searchKey": "signal.TestAtomicStop",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1250,7 +1328,9 @@
                 "identifier": "atomicStopTestProgram",
                 "newPage": false,
                 "searchKey": "signal.atomicStopTestProgram",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1270,7 +1350,9 @@
                 "identifier": "TestTime",
                 "newPage": false,
                 "searchKey": "signal.TestTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1290,7 +1372,9 @@
                 "identifier": "TestNotifyContextNotifications",
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextNotifications",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1310,7 +1394,9 @@
                 "identifier": "TestNotifyContextStop",
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextStop",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1330,7 +1416,9 @@
                 "identifier": "TestNotifyContextCancelParent",
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextCancelParent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1350,7 +1438,9 @@
                 "identifier": "TestNotifyContextPrematureCancelParent",
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextPrematureCancelParent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1370,7 +1460,9 @@
                 "identifier": "TestNotifyContextSimultaneousStop",
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextSimultaneousStop",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1390,7 +1482,9 @@
                 "identifier": "TestNotifyContextStringer",
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextStringer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1410,7 +1504,9 @@
                 "identifier": "TestSignalTrace",
                 "newPage": false,
                 "searchKey": "signal.TestSignalTrace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

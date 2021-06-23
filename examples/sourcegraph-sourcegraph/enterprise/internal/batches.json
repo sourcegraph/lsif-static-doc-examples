@@ -4,7 +4,9 @@
     "identifier": "batches",
     "newPage": true,
     "searchKey": "enterprise/internal/batches",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "InitBackgroundJobs",
                 "newPage": false,
                 "searchKey": "batches.InitBackgroundJobs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "InitFrontend",
                 "newPage": false,
                 "searchKey": "batches.InitFrontend",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

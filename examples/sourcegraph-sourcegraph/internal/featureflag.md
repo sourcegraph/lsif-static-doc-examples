@@ -25,11 +25,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="FeatureFlag" href="#FeatureFlag">type FeatureFlag struct</a>
 
 ```
 searchKey: featureflag.FeatureFlag
-tags: [exported]
 ```
 
 ```Go
@@ -51,7 +54,6 @@ type FeatureFlag struct {
 
 ```
 searchKey: featureflag.FeatureFlag.EvaluateForUser
-tags: [exported]
 ```
 
 ```Go
@@ -64,7 +66,6 @@ EvaluateForUser evaluates the feature flag for a userID.
 
 ```
 searchKey: featureflag.FeatureFlag.EvaluateForAnonymousUser
-tags: [exported]
 ```
 
 ```Go
@@ -77,7 +78,6 @@ EvaluateForAnonymousUser evaluates the feature flag for an anonymous user ID.
 
 ```
 searchKey: featureflag.FeatureFlag.EvaluateGlobal
-tags: [exported]
 ```
 
 ```Go
@@ -90,7 +90,6 @@ EvaluateGlobal returns the evaluated feature flag for a global context (no user 
 
 ```
 searchKey: featureflag.FeatureFlagBool
-tags: [exported]
 ```
 
 ```Go
@@ -103,7 +102,6 @@ type FeatureFlagBool struct {
 
 ```
 searchKey: featureflag.FeatureFlagRollout
-tags: [exported]
 ```
 
 ```Go
@@ -119,7 +117,6 @@ type FeatureFlagRollout struct {
 
 ```
 searchKey: featureflag.Override
-tags: [exported]
 ```
 
 ```Go
@@ -135,7 +132,6 @@ type Override struct {
 
 ```
 searchKey: featureflag.FlagSet
-tags: [exported]
 ```
 
 ```Go
@@ -146,7 +142,6 @@ type FlagSet map[string]bool
 
 ```
 searchKey: featureflag.FromContext
-tags: [exported]
 ```
 
 ```Go
@@ -159,7 +154,6 @@ FromContext retrieves the current set of flags from the current request's contex
 
 ```
 searchKey: featureflag.FlagSet.GetBool
-tags: [exported]
 ```
 
 ```Go
@@ -170,7 +164,6 @@ func (f FlagSet) GetBool(flag string) (bool, bool)
 
 ```
 searchKey: featureflag.FlagSet.GetBoolOr
-tags: [exported]
 ```
 
 ```Go
@@ -181,6 +174,7 @@ func (f FlagSet) GetBoolOr(flag string, defaultVal bool) bool
 
 ```
 searchKey: featureflag.flagContextKey
+tags: [private]
 ```
 
 ```Go
@@ -191,7 +185,6 @@ type flagContextKey struct{}
 
 ```
 searchKey: featureflag.FeatureFlagStore
-tags: [exported]
 ```
 
 ```Go
@@ -204,10 +197,15 @@ type FeatureFlagStore interface {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="hashUserAndFlag" href="#hashUserAndFlag">func hashUserAndFlag(userID int32, flagName string) uint32</a>
 
 ```
 searchKey: featureflag.hashUserAndFlag
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +216,7 @@ func hashUserAndFlag(userID int32, flagName string) uint32
 
 ```
 searchKey: featureflag.hashAnonymousUserAndFlag
+tags: [private]
 ```
 
 ```Go
@@ -228,7 +227,6 @@ func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32
 
 ```
 searchKey: featureflag.Middleware
-tags: [exported]
 ```
 
 ```Go
@@ -241,6 +239,7 @@ Middleware evaluates the feature flags for the current user and adds the feature
 
 ```
 searchKey: featureflag.contextWithFeatureFlags
+tags: [private]
 ```
 
 ```Go

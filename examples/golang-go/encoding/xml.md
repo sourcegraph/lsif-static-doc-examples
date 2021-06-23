@@ -446,15 +446,10 @@ Package xml implements a simple XML 1.0 parser that understands XML name spaces.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Header" href="#Header">const Header</a>
 
 ```
 searchKey: xml.Header
-tags: [exported]
 ```
 
 ```Go
@@ -467,6 +462,7 @@ Header is a generic XML header suitable for use with the output of Marshal. This
 
 ```
 searchKey: xml.fElement
+tags: [private]
 ```
 
 ```Go
@@ -477,6 +473,7 @@ const fElement fieldFlags = 1 << iota
 
 ```
 searchKey: xml.fAttr
+tags: [private]
 ```
 
 ```Go
@@ -487,6 +484,7 @@ const fAttr
 
 ```
 searchKey: xml.fCDATA
+tags: [private]
 ```
 
 ```Go
@@ -497,6 +495,7 @@ const fCDATA
 
 ```
 searchKey: xml.fCharData
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +506,7 @@ const fCharData
 
 ```
 searchKey: xml.fInnerXML
+tags: [private]
 ```
 
 ```Go
@@ -517,6 +517,7 @@ const fInnerXML
 
 ```
 searchKey: xml.fComment
+tags: [private]
 ```
 
 ```Go
@@ -527,6 +528,7 @@ const fComment
 
 ```
 searchKey: xml.fAny
+tags: [private]
 ```
 
 ```Go
@@ -537,6 +539,7 @@ const fAny
 
 ```
 searchKey: xml.fOmitEmpty
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +550,7 @@ const fOmitEmpty
 
 ```
 searchKey: xml.fMode
+tags: [private]
 ```
 
 ```Go
@@ -557,6 +561,7 @@ const fMode = fElement | fAttr | fCDATA | fCharData | fInnerXML | fComment | fAn
 
 ```
 searchKey: xml.xmlName
+tags: [private]
 ```
 
 ```Go
@@ -567,6 +572,7 @@ const xmlName = "XMLName"
 
 ```
 searchKey: xml.initNilPointers
+tags: [private]
 ```
 
 ```Go
@@ -577,6 +583,7 @@ const initNilPointers = true
 
 ```
 searchKey: xml.dontInitNilPointers
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +594,7 @@ const dontInitNilPointers = false
 
 ```
 searchKey: xml.xmlURL
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +605,7 @@ const xmlURL = "http://www.w3.org/XML/1998/namespace"
 
 ```
 searchKey: xml.xmlnsPrefix
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +616,7 @@ const xmlnsPrefix = "xmlns"
 
 ```
 searchKey: xml.xmlPrefix
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +627,7 @@ const xmlPrefix = "xml"
 
 ```
 searchKey: xml.stkStart
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +638,7 @@ const stkStart = iota
 
 ```
 searchKey: xml.stkNs
+tags: [private]
 ```
 
 ```Go
@@ -637,6 +649,7 @@ const stkNs
 
 ```
 searchKey: xml.stkEOF
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +660,7 @@ const stkEOF
 
 ```
 searchKey: xml.HyperDrive
+tags: [private]
 ```
 
 ```Go
@@ -657,6 +671,7 @@ const HyperDrive DriveType = iota
 
 ```
 searchKey: xml.ImprobabilityDrive
+tags: [private]
 ```
 
 ```Go
@@ -667,6 +682,7 @@ const ImprobabilityDrive
 
 ```
 searchKey: xml.atomFeedString
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +695,7 @@ hget [http://codereview.appspot.com/rss/mine/rsc](http://codereview.appspot.com/
 
 ```
 searchKey: xml.pathTestString
+tags: [private]
 ```
 
 ```Go
@@ -689,6 +706,7 @@ const pathTestString = ...
 
 ```
 searchKey: xml.OK
+tags: [private]
 ```
 
 ```Go
@@ -699,6 +717,7 @@ const OK = "OK"
 
 ```
 searchKey: xml.withoutNameTypeData
+tags: [private]
 ```
 
 ```Go
@@ -711,6 +730,7 @@ const withoutNameTypeData = `
 
 ```
 searchKey: xml.emptyXML
+tags: [private]
 ```
 
 ```Go
@@ -721,6 +741,7 @@ const emptyXML = ...
 
 ```
 searchKey: xml.whitespaceValuesXML
+tags: [private]
 ```
 
 ```Go
@@ -731,6 +752,7 @@ const whitespaceValuesXML = ...
 
 ```
 searchKey: xml.whitespaceAttrsXML
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +763,7 @@ const whitespaceAttrsXML = ...
 
 ```
 searchKey: xml.testInput
+tags: [private]
 ```
 
 ```Go
@@ -751,6 +774,7 @@ const testInput = ...
 
 ```
 searchKey: xml.testInputAltEncoding
+tags: [private]
 ```
 
 ```Go
@@ -761,6 +785,7 @@ const testInputAltEncoding = ...
 
 ```
 searchKey: xml.nonStrictInput
+tags: [private]
 ```
 
 ```Go
@@ -771,6 +796,7 @@ const nonStrictInput = ...
 
 ```
 searchKey: xml.testScalarsInput
+tags: [private]
 ```
 
 ```Go
@@ -779,14 +805,11 @@ const testScalarsInput = ...
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="begComment" href="#begComment">var begComment</a>
 
 ```
 searchKey: xml.begComment
+tags: [private]
 ```
 
 ```Go
@@ -797,6 +820,7 @@ var begComment = []byte("<!--")
 
 ```
 searchKey: xml.endComment
+tags: [private]
 ```
 
 ```Go
@@ -807,6 +831,7 @@ var endComment = []byte("-->")
 
 ```
 searchKey: xml.endProcInst
+tags: [private]
 ```
 
 ```Go
@@ -817,6 +842,7 @@ var endProcInst = []byte("?>")
 
 ```
 searchKey: xml.marshalerType
+tags: [private]
 ```
 
 ```Go
@@ -827,6 +853,7 @@ var marshalerType = reflect.TypeOf((*Marshaler)(nil)).Elem()
 
 ```
 searchKey: xml.marshalerAttrType
+tags: [private]
 ```
 
 ```Go
@@ -837,6 +864,7 @@ var marshalerAttrType = reflect.TypeOf((*MarshalerAttr)(nil)).Elem()
 
 ```
 searchKey: xml.textMarshalerType
+tags: [private]
 ```
 
 ```Go
@@ -847,6 +875,7 @@ var textMarshalerType = reflect.TypeOf((*encoding.TextMarshaler)(nil)).Elem()
 
 ```
 searchKey: xml.ddBytes
+tags: [private]
 ```
 
 ```Go
@@ -857,6 +886,7 @@ var ddBytes = []byte("--")
 
 ```
 searchKey: xml.attrType
+tags: [private]
 ```
 
 ```Go
@@ -867,6 +897,7 @@ var attrType = reflect.TypeOf(Attr{})
 
 ```
 searchKey: xml.unmarshalerType
+tags: [private]
 ```
 
 ```Go
@@ -877,6 +908,7 @@ var unmarshalerType = reflect.TypeOf((*Unmarshaler)(nil)).Elem()
 
 ```
 searchKey: xml.unmarshalerAttrType
+tags: [private]
 ```
 
 ```Go
@@ -887,6 +919,7 @@ var unmarshalerAttrType = reflect.TypeOf((*UnmarshalerAttr)(nil)).Elem()
 
 ```
 searchKey: xml.textUnmarshalerType
+tags: [private]
 ```
 
 ```Go
@@ -897,6 +930,7 @@ var textUnmarshalerType = reflect.TypeOf((*encoding.TextUnmarshaler)(nil)).Elem(
 
 ```
 searchKey: xml.tinfoMap
+tags: [private]
 ```
 
 ```Go
@@ -908,6 +942,7 @@ var tinfoMap sync.Map // map[reflect.Type]*typeInfo
 
 ```
 searchKey: xml.nameType
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +953,7 @@ var nameType = reflect.TypeOf(Name{})
 
 ```
 searchKey: xml.errRawToken
+tags: [private]
 ```
 
 ```Go
@@ -928,6 +964,7 @@ var errRawToken = errors.New("xml: cannot use RawToken from UnmarshalXML method"
 
 ```
 searchKey: xml.entity
+tags: [private]
 ```
 
 ```Go
@@ -938,6 +975,7 @@ var entity = ...
 
 ```
 searchKey: xml.first
+tags: [private]
 ```
 
 ```Go
@@ -948,6 +986,7 @@ var first = ...
 
 ```
 searchKey: xml.second
+tags: [private]
 ```
 
 ```Go
@@ -958,7 +997,6 @@ var second = ...
 
 ```
 searchKey: xml.HTMLEntity
-tags: [exported]
 ```
 
 ```Go
@@ -973,6 +1011,7 @@ See the Decoder.Strict and Decoder.Entity fields' documentation.
 
 ```
 searchKey: xml.htmlEntity
+tags: [private]
 ```
 
 ```Go
@@ -983,7 +1022,6 @@ var htmlEntity = ...
 
 ```
 searchKey: xml.HTMLAutoClose
-tags: [exported]
 ```
 
 ```Go
@@ -998,6 +1036,7 @@ See the Decoder.Strict and Decoder.Entity fields' documentation.
 
 ```
 searchKey: xml.htmlAutoClose
+tags: [private]
 ```
 
 ```Go
@@ -1008,6 +1047,7 @@ var htmlAutoClose = ...
 
 ```
 searchKey: xml.escQuot
+tags: [private]
 ```
 
 ```Go
@@ -1019,6 +1059,7 @@ var escQuot = []byte("&#34;") // shorter than "&quot;"
 
 ```
 searchKey: xml.escApos
+tags: [private]
 ```
 
 ```Go
@@ -1030,6 +1071,7 @@ var escApos = []byte("&#39;") // shorter than "&apos;"
 
 ```
 searchKey: xml.escAmp
+tags: [private]
 ```
 
 ```Go
@@ -1040,6 +1082,7 @@ var escAmp = []byte("&amp;")
 
 ```
 searchKey: xml.escLT
+tags: [private]
 ```
 
 ```Go
@@ -1050,6 +1093,7 @@ var escLT = []byte("&lt;")
 
 ```
 searchKey: xml.escGT
+tags: [private]
 ```
 
 ```Go
@@ -1060,6 +1104,7 @@ var escGT = []byte("&gt;")
 
 ```
 searchKey: xml.escTab
+tags: [private]
 ```
 
 ```Go
@@ -1070,6 +1115,7 @@ var escTab = []byte("&#x9;")
 
 ```
 searchKey: xml.escNL
+tags: [private]
 ```
 
 ```Go
@@ -1080,6 +1126,7 @@ var escNL = []byte("&#xA;")
 
 ```
 searchKey: xml.escCR
+tags: [private]
 ```
 
 ```Go
@@ -1090,6 +1137,7 @@ var escCR = []byte("&#xD;")
 
 ```
 searchKey: xml.escFFFD
+tags: [private]
 ```
 
 ```Go
@@ -1101,6 +1149,7 @@ var escFFFD = []byte("\uFFFD") // Unicode replacement character
 
 ```
 searchKey: xml.cdataStart
+tags: [private]
 ```
 
 ```Go
@@ -1111,6 +1160,7 @@ var cdataStart = []byte("<![CDATA[")
 
 ```
 searchKey: xml.cdataEnd
+tags: [private]
 ```
 
 ```Go
@@ -1121,6 +1171,7 @@ var cdataEnd = []byte("]]>")
 
 ```
 searchKey: xml.cdataEscape
+tags: [private]
 ```
 
 ```Go
@@ -1131,6 +1182,7 @@ var cdataEscape = []byte("]]]]><![CDATA[>")
 
 ```
 searchKey: xml.atomValue
+tags: [private]
 ```
 
 ```Go
@@ -1141,6 +1193,7 @@ var atomValue = ...
 
 ```
 searchKey: xml.atomXML
+tags: [private]
 ```
 
 ```Go
@@ -1151,6 +1204,7 @@ var atomXML = ...
 
 ```
 searchKey: xml.nilStruct
+tags: [private]
 ```
 
 ```Go
@@ -1161,6 +1215,7 @@ var nilStruct *Ship
 
 ```
 searchKey: xml.nameAttr
+tags: [private]
 ```
 
 ```Go
@@ -1171,6 +1226,7 @@ var nameAttr = "Sarah"
 
 ```
 searchKey: xml.ageAttr
+tags: [private]
 ```
 
 ```Go
@@ -1181,6 +1237,7 @@ var ageAttr = uint(12)
 
 ```
 searchKey: xml.contentsAttr
+tags: [private]
 ```
 
 ```Go
@@ -1191,6 +1248,7 @@ var contentsAttr = "lorem ipsum"
 
 ```
 searchKey: xml.empty
+tags: [private]
 ```
 
 ```Go
@@ -1201,6 +1259,7 @@ var empty = ""
 
 ```
 searchKey: xml.marshalTests
+tags: [private]
 ```
 
 ```Go
@@ -1213,6 +1272,7 @@ Unless explicitly stated as such (or *Plain), all of the tests below are two-way
 
 ```
 searchKey: xml.marshalErrorTests
+tags: [private]
 ```
 
 ```Go
@@ -1223,6 +1283,7 @@ var marshalErrorTests = ...
 
 ```
 searchKey: xml.marshalIndentTests
+tags: [private]
 ```
 
 ```Go
@@ -1233,6 +1294,7 @@ var marshalIndentTests = ...
 
 ```
 searchKey: xml.encodeTokenTests
+tags: [private]
 ```
 
 ```Go
@@ -1243,6 +1305,7 @@ var encodeTokenTests = ...
 
 ```
 searchKey: xml.atomFeed
+tags: [private]
 ```
 
 ```Go
@@ -1253,6 +1316,7 @@ var atomFeed = ...
 
 ```
 searchKey: xml.pathTests
+tags: [private]
 ```
 
 ```Go
@@ -1263,6 +1327,7 @@ var pathTests = ...
 
 ```
 searchKey: xml.badPathTests
+tags: [private]
 ```
 
 ```Go
@@ -1273,6 +1338,7 @@ var badPathTests = ...
 
 ```
 searchKey: xml.tables
+tags: [private]
 ```
 
 ```Go
@@ -1283,6 +1349,7 @@ var tables = ...
 
 ```
 searchKey: xml.tableAttrs
+tags: [private]
 ```
 
 ```Go
@@ -1293,6 +1360,7 @@ var tableAttrs = ...
 
 ```
 searchKey: xml.testEntity
+tags: [private]
 ```
 
 ```Go
@@ -1303,6 +1371,7 @@ var testEntity = map[string]string{"何": "What", "is-it": "is it?"}
 
 ```
 searchKey: xml.rawTokens
+tags: [private]
 ```
 
 ```Go
@@ -1313,6 +1382,7 @@ var rawTokens = ...
 
 ```
 searchKey: xml.cookedTokens
+tags: [private]
 ```
 
 ```Go
@@ -1323,6 +1393,7 @@ var cookedTokens = ...
 
 ```
 searchKey: xml.rawTokensAltEncoding
+tags: [private]
 ```
 
 ```Go
@@ -1333,6 +1404,7 @@ var rawTokensAltEncoding = ...
 
 ```
 searchKey: xml.xmlInput
+tags: [private]
 ```
 
 ```Go
@@ -1343,6 +1415,7 @@ var xmlInput = ...
 
 ```
 searchKey: xml.nonStrictTokens
+tags: [private]
 ```
 
 ```Go
@@ -1353,6 +1426,7 @@ var nonStrictTokens = ...
 
 ```
 searchKey: xml.nestedDirectivesInput
+tags: [private]
 ```
 
 ```Go
@@ -1363,6 +1437,7 @@ var nestedDirectivesInput = ...
 
 ```
 searchKey: xml.nestedDirectivesTokens
+tags: [private]
 ```
 
 ```Go
@@ -1373,6 +1448,7 @@ var nestedDirectivesTokens = ...
 
 ```
 searchKey: xml.all
+tags: [private]
 ```
 
 ```Go
@@ -1383,6 +1459,7 @@ var all = ...
 
 ```
 searchKey: xml.sixteen
+tags: [private]
 ```
 
 ```Go
@@ -1393,6 +1470,7 @@ var sixteen = "16"
 
 ```
 searchKey: xml.characterTests
+tags: [private]
 ```
 
 ```Go
@@ -1403,6 +1481,7 @@ var characterTests = ...
 
 ```
 searchKey: xml.procInstTests
+tags: [private]
 ```
 
 ```Go
@@ -1413,6 +1492,7 @@ var procInstTests = ...
 
 ```
 searchKey: xml.directivesWithCommentsInput
+tags: [private]
 ```
 
 ```Go
@@ -1423,6 +1503,7 @@ var directivesWithCommentsInput = ...
 
 ```
 searchKey: xml.directivesWithCommentsTokens
+tags: [private]
 ```
 
 ```Go
@@ -1431,15 +1512,10 @@ var directivesWithCommentsTokens = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Marshaler" href="#Marshaler">type Marshaler interface</a>
 
 ```
 searchKey: xml.Marshaler
-tags: [exported]
 ```
 
 ```Go
@@ -1456,7 +1532,6 @@ MarshalXML encodes the receiver as zero or more XML elements. By convention, arr
 
 ```
 searchKey: xml.MarshalerAttr
-tags: [exported]
 ```
 
 ```Go
@@ -1473,7 +1548,6 @@ MarshalXMLAttr returns an XML attribute with the encoded value of the receiver. 
 
 ```
 searchKey: xml.Encoder
-tags: [exported]
 ```
 
 ```Go
@@ -1488,7 +1562,6 @@ An Encoder writes XML data to an output stream.
 
 ```
 searchKey: xml.NewEncoder
-tags: [exported]
 ```
 
 ```Go
@@ -1501,7 +1574,6 @@ NewEncoder returns a new encoder that writes to w.
 
 ```
 searchKey: xml.Encoder.Indent
-tags: [exported]
 ```
 
 ```Go
@@ -1514,7 +1586,6 @@ Indent sets the encoder to generate XML in which each element begins on a new in
 
 ```
 searchKey: xml.Encoder.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -1531,7 +1602,6 @@ Encode calls Flush before returning.
 
 ```
 searchKey: xml.Encoder.EncodeElement
-tags: [exported]
 ```
 
 ```Go
@@ -1548,7 +1618,6 @@ EncodeElement calls Flush before returning.
 
 ```
 searchKey: xml.Encoder.EncodeToken
-tags: [exported]
 ```
 
 ```Go
@@ -1565,7 +1634,6 @@ EncodeToken allows writing a ProcInst with Target set to "xml" only as the first
 
 ```
 searchKey: xml.Encoder.Flush
-tags: [exported]
 ```
 
 ```Go
@@ -1578,6 +1646,7 @@ Flush flushes any buffered XML to the underlying writer. See the EncodeToken doc
 
 ```
 searchKey: xml.printer
+tags: [private]
 ```
 
 ```Go
@@ -1601,6 +1670,7 @@ type printer struct {
 
 ```
 searchKey: xml.printer.createAttrPrefix
+tags: [private]
 ```
 
 ```Go
@@ -1613,6 +1683,7 @@ createAttrPrefix finds the name space prefix attribute to use for the given name
 
 ```
 searchKey: xml.printer.deleteAttrPrefix
+tags: [private]
 ```
 
 ```Go
@@ -1625,6 +1696,7 @@ deleteAttrPrefix removes an attribute name space prefix.
 
 ```
 searchKey: xml.printer.markPrefix
+tags: [private]
 ```
 
 ```Go
@@ -1635,6 +1707,7 @@ func (p *printer) markPrefix()
 
 ```
 searchKey: xml.printer.popPrefix
+tags: [private]
 ```
 
 ```Go
@@ -1645,6 +1718,7 @@ func (p *printer) popPrefix()
 
 ```
 searchKey: xml.printer.marshalValue
+tags: [private]
 ```
 
 ```Go
@@ -1657,6 +1731,7 @@ marshalValue writes one or more XML elements representing val. If val was obtain
 
 ```
 searchKey: xml.printer.marshalAttr
+tags: [private]
 ```
 
 ```Go
@@ -1669,6 +1744,7 @@ marshalAttr marshals an attribute with the given name and value, adding to start
 
 ```
 searchKey: xml.printer.marshalInterface
+tags: [private]
 ```
 
 ```Go
@@ -1681,6 +1757,7 @@ marshalInterface marshals a Marshaler interface value.
 
 ```
 searchKey: xml.printer.marshalTextInterface
+tags: [private]
 ```
 
 ```Go
@@ -1693,6 +1770,7 @@ marshalTextInterface marshals a TextMarshaler interface value.
 
 ```
 searchKey: xml.printer.writeStart
+tags: [private]
 ```
 
 ```Go
@@ -1705,6 +1783,7 @@ writeStart writes the given start element.
 
 ```
 searchKey: xml.printer.writeEnd
+tags: [private]
 ```
 
 ```Go
@@ -1715,6 +1794,7 @@ func (p *printer) writeEnd(name Name) error
 
 ```
 searchKey: xml.printer.marshalSimple
+tags: [private]
 ```
 
 ```Go
@@ -1725,6 +1805,7 @@ func (p *printer) marshalSimple(typ reflect.Type, val reflect.Value) (string, []
 
 ```
 searchKey: xml.printer.marshalStruct
+tags: [private]
 ```
 
 ```Go
@@ -1735,6 +1816,7 @@ func (p *printer) marshalStruct(tinfo *typeInfo, val reflect.Value) error
 
 ```
 searchKey: xml.printer.cachedWriteError
+tags: [private]
 ```
 
 ```Go
@@ -1747,6 +1829,7 @@ return the bufio Writer's cached write error
 
 ```
 searchKey: xml.printer.writeIndent
+tags: [private]
 ```
 
 ```Go
@@ -1757,6 +1840,7 @@ func (p *printer) writeIndent(depthDelta int)
 
 ```
 searchKey: xml.printer.EscapeString
+tags: [private]
 ```
 
 ```Go
@@ -1769,6 +1853,7 @@ EscapeString writes to p the properly escaped XML equivalent of the plain text d
 
 ```
 searchKey: xml.parentStack
+tags: [private]
 ```
 
 ```Go
@@ -1782,6 +1867,7 @@ type parentStack struct {
 
 ```
 searchKey: xml.parentStack.trim
+tags: [private]
 ```
 
 ```Go
@@ -1794,6 +1880,7 @@ trim updates the XML context to match the longest common prefix of the stack and
 
 ```
 searchKey: xml.parentStack.push
+tags: [private]
 ```
 
 ```Go
@@ -1806,7 +1893,6 @@ push adds parent elements to the stack and writes open tags.
 
 ```
 searchKey: xml.UnsupportedTypeError
-tags: [exported]
 ```
 
 ```Go
@@ -1821,7 +1907,6 @@ UnsupportedTypeError is returned when Marshal encounters a type that cannot be c
 
 ```
 searchKey: xml.UnsupportedTypeError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1832,7 +1917,6 @@ func (e *UnsupportedTypeError) Error() string
 
 ```
 searchKey: xml.UnmarshalError
-tags: [exported]
 ```
 
 ```Go
@@ -1845,7 +1929,6 @@ An UnmarshalError represents an error in the unmarshaling process.
 
 ```
 searchKey: xml.UnmarshalError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1856,7 +1939,6 @@ func (e UnmarshalError) Error() string
 
 ```
 searchKey: xml.Unmarshaler
-tags: [exported]
 ```
 
 ```Go
@@ -1873,7 +1955,6 @@ UnmarshalXML decodes a single XML element beginning with the given start element
 
 ```
 searchKey: xml.UnmarshalerAttr
-tags: [exported]
 ```
 
 ```Go
@@ -1890,6 +1971,7 @@ UnmarshalXMLAttr decodes a single XML attribute. If it returns an error, the out
 
 ```
 searchKey: xml.typeInfo
+tags: [private]
 ```
 
 ```Go
@@ -1905,6 +1987,7 @@ typeInfo holds details for the xml representation of a type.
 
 ```
 searchKey: xml.getTypeInfo
+tags: [private]
 ```
 
 ```Go
@@ -1917,6 +2000,7 @@ getTypeInfo returns the typeInfo structure with details necessary for marshaling
 
 ```
 searchKey: xml.fieldInfo
+tags: [private]
 ```
 
 ```Go
@@ -1935,6 +2019,7 @@ fieldInfo holds details for the xml representation of a single field.
 
 ```
 searchKey: xml.structFieldInfo
+tags: [private]
 ```
 
 ```Go
@@ -1947,6 +2032,7 @@ structFieldInfo builds and returns a fieldInfo for f.
 
 ```
 searchKey: xml.lookupXMLName
+tags: [private]
 ```
 
 ```Go
@@ -1959,6 +2045,7 @@ lookupXMLName returns the fieldInfo for typ's XMLName field in case it exists an
 
 ```
 searchKey: xml.fieldInfo.value
+tags: [private]
 ```
 
 ```Go
@@ -1971,6 +2058,7 @@ value returns v's field value corresponding to finfo. It's equivalent to v.Field
 
 ```
 searchKey: xml.fieldFlags
+tags: [private]
 ```
 
 ```Go
@@ -1981,7 +2069,6 @@ type fieldFlags int
 
 ```
 searchKey: xml.TagPathError
-tags: [exported]
 ```
 
 ```Go
@@ -1998,7 +2085,6 @@ A TagPathError represents an error in the unmarshaling process caused by the use
 
 ```
 searchKey: xml.TagPathError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -2009,7 +2095,6 @@ func (e *TagPathError) Error() string
 
 ```
 searchKey: xml.SyntaxError
-tags: [exported]
 ```
 
 ```Go
@@ -2025,7 +2110,6 @@ A SyntaxError represents a syntax error in the XML input stream.
 
 ```
 searchKey: xml.SyntaxError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -2036,7 +2120,6 @@ func (e *SyntaxError) Error() string
 
 ```
 searchKey: xml.Name
-tags: [exported]
 ```
 
 ```Go
@@ -2051,7 +2134,6 @@ A Name represents an XML name (Local) annotated with a name space identifier (Sp
 
 ```
 searchKey: xml.Attr
-tags: [exported]
 ```
 
 ```Go
@@ -2067,7 +2149,6 @@ An Attr represents an attribute in an XML element (Name=Value).
 
 ```
 searchKey: xml.Token
-tags: [exported]
 ```
 
 ```Go
@@ -2080,7 +2161,6 @@ A Token is an interface holding one of the token types: StartElement, EndElement
 
 ```
 searchKey: xml.CopyToken
-tags: [exported]
 ```
 
 ```Go
@@ -2093,7 +2173,6 @@ CopyToken returns a copy of a Token.
 
 ```
 searchKey: xml.StartElement
-tags: [exported]
 ```
 
 ```Go
@@ -2109,6 +2188,7 @@ A StartElement represents an XML start element.
 
 ```
 searchKey: xml.defaultStart
+tags: [private]
 ```
 
 ```Go
@@ -2121,7 +2201,6 @@ defaultStart returns the default start element to use, given the reflect type, f
 
 ```
 searchKey: xml.StartElement.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2134,7 +2213,6 @@ Copy creates a new copy of StartElement.
 
 ```
 searchKey: xml.StartElement.End
-tags: [exported]
 ```
 
 ```Go
@@ -2147,7 +2225,6 @@ End returns the corresponding XML end element.
 
 ```
 searchKey: xml.EndElement
-tags: [exported]
 ```
 
 ```Go
@@ -2162,7 +2239,6 @@ An EndElement represents an XML end element.
 
 ```
 searchKey: xml.CharData
-tags: [exported]
 ```
 
 ```Go
@@ -2175,7 +2251,6 @@ A CharData represents XML character data (raw text), in which XML escape sequenc
 
 ```
 searchKey: xml.CharData.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2188,7 +2263,6 @@ Copy creates a new copy of CharData.
 
 ```
 searchKey: xml.Comment
-tags: [exported]
 ```
 
 ```Go
@@ -2201,7 +2275,6 @@ A Comment represents an XML comment of the form <!--comment-->. The bytes do not
 
 ```
 searchKey: xml.Comment.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2214,7 +2287,6 @@ Copy creates a new copy of Comment.
 
 ```
 searchKey: xml.ProcInst
-tags: [exported]
 ```
 
 ```Go
@@ -2230,7 +2302,6 @@ A ProcInst represents an XML processing instruction of the form <?target inst?>
 
 ```
 searchKey: xml.ProcInst.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2243,7 +2314,6 @@ Copy creates a new copy of ProcInst.
 
 ```
 searchKey: xml.Directive
-tags: [exported]
 ```
 
 ```Go
@@ -2256,7 +2326,6 @@ A Directive represents an XML directive of the form <!text>. The bytes do not in
 
 ```
 searchKey: xml.Directive.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2269,7 +2338,6 @@ Copy creates a new copy of Directive.
 
 ```
 searchKey: xml.TokenReader
-tags: [exported]
 ```
 
 ```Go
@@ -2288,7 +2356,6 @@ Implementations of Token are discouraged from returning a nil token with a nil e
 
 ```
 searchKey: xml.Decoder
-tags: [exported]
 ```
 
 ```Go
@@ -2368,7 +2435,6 @@ A Decoder represents an XML parser reading a particular input stream. The parser
 
 ```
 searchKey: xml.NewDecoder
-tags: [exported]
 ```
 
 ```Go
@@ -2381,7 +2447,6 @@ NewDecoder creates a new XML parser reading from r. If r does not implement io.B
 
 ```
 searchKey: xml.NewTokenDecoder
-tags: [exported]
 ```
 
 ```Go
@@ -2394,7 +2459,6 @@ NewTokenDecoder creates a new XML parser using an underlying token stream.
 
 ```
 searchKey: xml.Decoder.Decode
-tags: [exported]
 ```
 
 ```Go
@@ -2407,7 +2471,6 @@ Decode works like Unmarshal, except it reads the decoder stream to find the star
 
 ```
 searchKey: xml.Decoder.DecodeElement
-tags: [exported]
 ```
 
 ```Go
@@ -2420,6 +2483,7 @@ DecodeElement works like Unmarshal except that it takes a pointer to the start X
 
 ```
 searchKey: xml.Decoder.unmarshalInterface
+tags: [private]
 ```
 
 ```Go
@@ -2432,6 +2496,7 @@ unmarshalInterface unmarshals a single XML element into val. start is the openin
 
 ```
 searchKey: xml.Decoder.unmarshalTextInterface
+tags: [private]
 ```
 
 ```Go
@@ -2444,6 +2509,7 @@ unmarshalTextInterface unmarshals a single XML element into val. The chardata co
 
 ```
 searchKey: xml.Decoder.unmarshalAttr
+tags: [private]
 ```
 
 ```Go
@@ -2456,6 +2522,7 @@ unmarshalAttr unmarshals a single XML attribute into val.
 
 ```
 searchKey: xml.Decoder.unmarshal
+tags: [private]
 ```
 
 ```Go
@@ -2468,6 +2535,7 @@ Unmarshal a single XML element into val.
 
 ```
 searchKey: xml.Decoder.unmarshalPath
+tags: [private]
 ```
 
 ```Go
@@ -2480,7 +2548,6 @@ unmarshalPath walks down an XML structure looking for wanted paths, and calls un
 
 ```
 searchKey: xml.Decoder.Skip
-tags: [exported]
 ```
 
 ```Go
@@ -2493,7 +2560,6 @@ Skip reads tokens until it has consumed the end element matching the most recent
 
 ```
 searchKey: xml.Decoder.Token
-tags: [exported]
 ```
 
 ```Go
@@ -2514,6 +2580,7 @@ Token implements XML name spaces as described by [https://www.w3.org/TR/REC-xml-
 
 ```
 searchKey: xml.Decoder.translate
+tags: [private]
 ```
 
 ```Go
@@ -2526,6 +2593,7 @@ Apply name space translation to name n. The default name space (for Space=="") a
 
 ```
 searchKey: xml.Decoder.switchToReader
+tags: [private]
 ```
 
 ```Go
@@ -2536,6 +2604,7 @@ func (d *Decoder) switchToReader(r io.Reader)
 
 ```
 searchKey: xml.Decoder.push
+tags: [private]
 ```
 
 ```Go
@@ -2546,6 +2615,7 @@ func (d *Decoder) push(kind int) *stack
 
 ```
 searchKey: xml.Decoder.pop
+tags: [private]
 ```
 
 ```Go
@@ -2556,6 +2626,7 @@ func (d *Decoder) pop() *stack
 
 ```
 searchKey: xml.Decoder.pushEOF
+tags: [private]
 ```
 
 ```Go
@@ -2568,6 +2639,7 @@ Record that after the current element is finished (that element is already pushe
 
 ```
 searchKey: xml.Decoder.popEOF
+tags: [private]
 ```
 
 ```Go
@@ -2580,6 +2652,7 @@ Undo a pushEOF. The element must have been finished, so the EOF should be at the
 
 ```
 searchKey: xml.Decoder.pushElement
+tags: [private]
 ```
 
 ```Go
@@ -2592,6 +2665,7 @@ Record that we are starting an element with the given name.
 
 ```
 searchKey: xml.Decoder.pushNs
+tags: [private]
 ```
 
 ```Go
@@ -2604,6 +2678,7 @@ Record that we are changing the value of ns[local]. The old value is url, ok.
 
 ```
 searchKey: xml.Decoder.syntaxError
+tags: [private]
 ```
 
 ```Go
@@ -2616,6 +2691,7 @@ Creates a SyntaxError with the current line number.
 
 ```
 searchKey: xml.Decoder.popElement
+tags: [private]
 ```
 
 ```Go
@@ -2628,6 +2704,7 @@ Record that we are ending an element with the given name. The name must match th
 
 ```
 searchKey: xml.Decoder.autoClose
+tags: [private]
 ```
 
 ```Go
@@ -2640,7 +2717,6 @@ If the top element on the stack is autoclosing and t is not the end tag, invent 
 
 ```
 searchKey: xml.Decoder.RawToken
-tags: [exported]
 ```
 
 ```Go
@@ -2653,6 +2729,7 @@ RawToken is like Token but does not verify that start and end elements match and
 
 ```
 searchKey: xml.Decoder.rawToken
+tags: [private]
 ```
 
 ```Go
@@ -2663,6 +2740,7 @@ func (d *Decoder) rawToken() (Token, error)
 
 ```
 searchKey: xml.Decoder.attrval
+tags: [private]
 ```
 
 ```Go
@@ -2673,6 +2751,7 @@ func (d *Decoder) attrval() []byte
 
 ```
 searchKey: xml.Decoder.space
+tags: [private]
 ```
 
 ```Go
@@ -2685,6 +2764,7 @@ Skip spaces if any
 
 ```
 searchKey: xml.Decoder.getc
+tags: [private]
 ```
 
 ```Go
@@ -2697,7 +2777,6 @@ Read a single byte. If there is no byte to read, return ok==false and leave the 
 
 ```
 searchKey: xml.Decoder.InputOffset
-tags: [exported]
 ```
 
 ```Go
@@ -2710,6 +2789,7 @@ InputOffset returns the input stream byte offset of the current decoder position
 
 ```
 searchKey: xml.Decoder.savedOffset
+tags: [private]
 ```
 
 ```Go
@@ -2722,6 +2802,7 @@ Return saved offset. If we did ungetc (nextByte >= 0), have to back up one.
 
 ```
 searchKey: xml.Decoder.mustgetc
+tags: [private]
 ```
 
 ```Go
@@ -2734,6 +2815,7 @@ Must read a single byte. If there is no byte to read, set d.err to SyntaxError("
 
 ```
 searchKey: xml.Decoder.ungetc
+tags: [private]
 ```
 
 ```Go
@@ -2746,6 +2828,7 @@ Unread a single byte.
 
 ```
 searchKey: xml.Decoder.text
+tags: [private]
 ```
 
 ```Go
@@ -2758,6 +2841,7 @@ Read plain text section (XML calls it character data). If quote >= 0, we are in 
 
 ```
 searchKey: xml.Decoder.nsname
+tags: [private]
 ```
 
 ```Go
@@ -2770,6 +2854,7 @@ Get name space name: name with a : stuck in the middle. The part before the : is
 
 ```
 searchKey: xml.Decoder.name
+tags: [private]
 ```
 
 ```Go
@@ -2782,6 +2867,7 @@ Get name: /first(first|second)*/ Do not set d.err if the name is missing (unless
 
 ```
 searchKey: xml.Decoder.readName
+tags: [private]
 ```
 
 ```Go
@@ -2794,6 +2880,7 @@ Read a name and append its bytes to d.buf. The name is delimited by any single-b
 
 ```
 searchKey: xml.stack
+tags: [private]
 ```
 
 ```Go
@@ -2811,6 +2898,7 @@ Parsing state - stack holds old name space translations and the current set of o
 
 ```
 searchKey: xml.DriveType
+tags: [private]
 ```
 
 ```Go
@@ -2821,6 +2909,7 @@ type DriveType int
 
 ```
 searchKey: xml.Passenger
+tags: [private]
 ```
 
 ```Go
@@ -2834,6 +2923,7 @@ type Passenger struct {
 
 ```
 searchKey: xml.Ship
+tags: [private]
 ```
 
 ```Go
@@ -2853,6 +2943,7 @@ type Ship struct {
 
 ```
 searchKey: xml.NamedType
+tags: [private]
 ```
 
 ```Go
@@ -2863,6 +2954,7 @@ type NamedType string
 
 ```
 searchKey: xml.Port
+tags: [private]
 ```
 
 ```Go
@@ -2878,6 +2970,7 @@ type Port struct {
 
 ```
 searchKey: xml.Domain
+tags: [private]
 ```
 
 ```Go
@@ -2893,6 +2986,7 @@ type Domain struct {
 
 ```
 searchKey: xml.Book
+tags: [private]
 ```
 
 ```Go
@@ -2906,6 +3000,7 @@ type Book struct {
 
 ```
 searchKey: xml.Event
+tags: [private]
 ```
 
 ```Go
@@ -2919,6 +3014,7 @@ type Event struct {
 
 ```
 searchKey: xml.Movie
+tags: [private]
 ```
 
 ```Go
@@ -2932,6 +3028,7 @@ type Movie struct {
 
 ```
 searchKey: xml.Pi
+tags: [private]
 ```
 
 ```Go
@@ -2945,6 +3042,7 @@ type Pi struct {
 
 ```
 searchKey: xml.Universe
+tags: [private]
 ```
 
 ```Go
@@ -2958,6 +3056,7 @@ type Universe struct {
 
 ```
 searchKey: xml.Particle
+tags: [private]
 ```
 
 ```Go
@@ -2971,6 +3070,7 @@ type Particle struct {
 
 ```
 searchKey: xml.Departure
+tags: [private]
 ```
 
 ```Go
@@ -2984,6 +3084,7 @@ type Departure struct {
 
 ```
 searchKey: xml.SecretAgent
+tags: [private]
 ```
 
 ```Go
@@ -2999,6 +3100,7 @@ type SecretAgent struct {
 
 ```
 searchKey: xml.NestedItems
+tags: [private]
 ```
 
 ```Go
@@ -3013,6 +3115,7 @@ type NestedItems struct {
 
 ```
 searchKey: xml.NestedOrder
+tags: [private]
 ```
 
 ```Go
@@ -3028,6 +3131,7 @@ type NestedOrder struct {
 
 ```
 searchKey: xml.MixedNested
+tags: [private]
 ```
 
 ```Go
@@ -3044,6 +3148,7 @@ type MixedNested struct {
 
 ```
 searchKey: xml.NilTest
+tags: [private]
 ```
 
 ```Go
@@ -3058,6 +3163,7 @@ type NilTest struct {
 
 ```
 searchKey: xml.Service
+tags: [private]
 ```
 
 ```Go
@@ -3074,6 +3180,7 @@ type Service struct {
 
 ```
 searchKey: xml.EmbedA
+tags: [private]
 ```
 
 ```Go
@@ -3089,6 +3196,7 @@ type EmbedA struct {
 
 ```
 searchKey: xml.EmbedB
+tags: [private]
 ```
 
 ```Go
@@ -3102,6 +3210,7 @@ type EmbedB struct {
 
 ```
 searchKey: xml.EmbedC
+tags: [private]
 ```
 
 ```Go
@@ -3117,6 +3226,7 @@ type EmbedC struct {
 
 ```
 searchKey: xml.embedD
+tags: [private]
 ```
 
 ```Go
@@ -3130,6 +3240,7 @@ type embedD struct {
 
 ```
 searchKey: xml.NameCasing
+tags: [private]
 ```
 
 ```Go
@@ -3146,6 +3257,7 @@ type NameCasing struct {
 
 ```
 searchKey: xml.NamePrecedence
+tags: [private]
 ```
 
 ```Go
@@ -3162,6 +3274,7 @@ type NamePrecedence struct {
 
 ```
 searchKey: xml.XMLNameWithTag
+tags: [private]
 ```
 
 ```Go
@@ -3175,6 +3288,7 @@ type XMLNameWithTag struct {
 
 ```
 searchKey: xml.XMLNameWithoutTag
+tags: [private]
 ```
 
 ```Go
@@ -3188,6 +3302,7 @@ type XMLNameWithoutTag struct {
 
 ```
 searchKey: xml.NameInField
+tags: [private]
 ```
 
 ```Go
@@ -3200,6 +3315,7 @@ type NameInField struct {
 
 ```
 searchKey: xml.AttrTest
+tags: [private]
 ```
 
 ```Go
@@ -3218,6 +3334,7 @@ type AttrTest struct {
 
 ```
 searchKey: xml.AttrsTest
+tags: [private]
 ```
 
 ```Go
@@ -3237,6 +3354,7 @@ type AttrsTest struct {
 
 ```
 searchKey: xml.OmitAttrTest
+tags: [private]
 ```
 
 ```Go
@@ -3256,6 +3374,7 @@ type OmitAttrTest struct {
 
 ```
 searchKey: xml.OmitFieldTest
+tags: [private]
 ```
 
 ```Go
@@ -3276,6 +3395,7 @@ type OmitFieldTest struct {
 
 ```
 searchKey: xml.AnyTest
+tags: [private]
 ```
 
 ```Go
@@ -3290,6 +3410,7 @@ type AnyTest struct {
 
 ```
 searchKey: xml.AnyOmitTest
+tags: [private]
 ```
 
 ```Go
@@ -3304,6 +3425,7 @@ type AnyOmitTest struct {
 
 ```
 searchKey: xml.AnySliceTest
+tags: [private]
 ```
 
 ```Go
@@ -3318,6 +3440,7 @@ type AnySliceTest struct {
 
 ```
 searchKey: xml.AnyHolder
+tags: [private]
 ```
 
 ```Go
@@ -3331,6 +3454,7 @@ type AnyHolder struct {
 
 ```
 searchKey: xml.RecurseA
+tags: [private]
 ```
 
 ```Go
@@ -3344,6 +3468,7 @@ type RecurseA struct {
 
 ```
 searchKey: xml.RecurseB
+tags: [private]
 ```
 
 ```Go
@@ -3357,6 +3482,7 @@ type RecurseB struct {
 
 ```
 searchKey: xml.PresenceTest
+tags: [private]
 ```
 
 ```Go
@@ -3369,6 +3495,7 @@ type PresenceTest struct {
 
 ```
 searchKey: xml.IgnoreTest
+tags: [private]
 ```
 
 ```Go
@@ -3381,6 +3508,7 @@ type IgnoreTest struct {
 
 ```
 searchKey: xml.MyBytes
+tags: [private]
 ```
 
 ```Go
@@ -3391,6 +3519,7 @@ type MyBytes []byte
 
 ```
 searchKey: xml.Data
+tags: [private]
 ```
 
 ```Go
@@ -3405,6 +3534,7 @@ type Data struct {
 
 ```
 searchKey: xml.Plain
+tags: [private]
 ```
 
 ```Go
@@ -3417,6 +3547,7 @@ type Plain struct {
 
 ```
 searchKey: xml.MyInt
+tags: [private]
 ```
 
 ```Go
@@ -3427,6 +3558,7 @@ type MyInt int
 
 ```
 searchKey: xml.EmbedInt
+tags: [private]
 ```
 
 ```Go
@@ -3439,6 +3571,7 @@ type EmbedInt struct {
 
 ```
 searchKey: xml.Strings
+tags: [private]
 ```
 
 ```Go
@@ -3451,6 +3584,7 @@ type Strings struct {
 
 ```
 searchKey: xml.PointerFieldsTest
+tags: [private]
 ```
 
 ```Go
@@ -3467,6 +3601,7 @@ type PointerFieldsTest struct {
 
 ```
 searchKey: xml.ChardataEmptyTest
+tags: [private]
 ```
 
 ```Go
@@ -3480,6 +3615,7 @@ type ChardataEmptyTest struct {
 
 ```
 searchKey: xml.PointerAnonFields
+tags: [private]
 ```
 
 ```Go
@@ -3493,6 +3629,7 @@ type PointerAnonFields struct {
 
 ```
 searchKey: xml.MyMarshalerTest
+tags: [private]
 ```
 
 ```Go
@@ -3504,6 +3641,7 @@ type MyMarshalerTest struct {
 
 ```
 searchKey: xml.MyMarshalerTest.MarshalXML
+tags: [private]
 ```
 
 ```Go
@@ -3514,6 +3652,7 @@ func (m *MyMarshalerTest) MarshalXML(e *Encoder, start StartElement) error
 
 ```
 searchKey: xml.MyMarshalerAttrTest
+tags: [private]
 ```
 
 ```Go
@@ -3525,6 +3664,7 @@ type MyMarshalerAttrTest struct {
 
 ```
 searchKey: xml.MyMarshalerAttrTest.MarshalXMLAttr
+tags: [private]
 ```
 
 ```Go
@@ -3535,6 +3675,7 @@ func (m *MyMarshalerAttrTest) MarshalXMLAttr(name Name) (Attr, error)
 
 ```
 searchKey: xml.MyMarshalerAttrTest.UnmarshalXMLAttr
+tags: [private]
 ```
 
 ```Go
@@ -3545,6 +3686,7 @@ func (m *MyMarshalerAttrTest) UnmarshalXMLAttr(attr Attr) error
 
 ```
 searchKey: xml.MarshalerStruct
+tags: [private]
 ```
 
 ```Go
@@ -3557,6 +3699,7 @@ type MarshalerStruct struct {
 
 ```
 searchKey: xml.InnerStruct
+tags: [private]
 ```
 
 ```Go
@@ -3569,6 +3712,7 @@ type InnerStruct struct {
 
 ```
 searchKey: xml.OuterStruct
+tags: [private]
 ```
 
 ```Go
@@ -3582,6 +3726,7 @@ type OuterStruct struct {
 
 ```
 searchKey: xml.OuterNamedStruct
+tags: [private]
 ```
 
 ```Go
@@ -3596,6 +3741,7 @@ type OuterNamedStruct struct {
 
 ```
 searchKey: xml.OuterNamedOrderedStruct
+tags: [private]
 ```
 
 ```Go
@@ -3610,6 +3756,7 @@ type OuterNamedOrderedStruct struct {
 
 ```
 searchKey: xml.OuterOuterStruct
+tags: [private]
 ```
 
 ```Go
@@ -3622,6 +3769,7 @@ type OuterOuterStruct struct {
 
 ```
 searchKey: xml.NestedAndChardata
+tags: [private]
 ```
 
 ```Go
@@ -3635,6 +3783,7 @@ type NestedAndChardata struct {
 
 ```
 searchKey: xml.NestedAndComment
+tags: [private]
 ```
 
 ```Go
@@ -3648,6 +3797,7 @@ type NestedAndComment struct {
 
 ```
 searchKey: xml.CDataTest
+tags: [private]
 ```
 
 ```Go
@@ -3660,6 +3810,7 @@ type CDataTest struct {
 
 ```
 searchKey: xml.NestedAndCData
+tags: [private]
 ```
 
 ```Go
@@ -3673,6 +3824,7 @@ type NestedAndCData struct {
 
 ```
 searchKey: xml.T1
+tags: [private]
 ```
 
 ```Go
@@ -3683,6 +3835,7 @@ type T1 struct{}
 
 ```
 searchKey: xml.T2
+tags: [private]
 ```
 
 ```Go
@@ -3693,6 +3846,7 @@ type T2 struct{}
 
 ```
 searchKey: xml.IndirComment
+tags: [private]
 ```
 
 ```Go
@@ -3707,6 +3861,7 @@ type IndirComment struct {
 
 ```
 searchKey: xml.DirectComment
+tags: [private]
 ```
 
 ```Go
@@ -3721,6 +3876,7 @@ type DirectComment struct {
 
 ```
 searchKey: xml.IfaceComment
+tags: [private]
 ```
 
 ```Go
@@ -3735,6 +3891,7 @@ type IfaceComment struct {
 
 ```
 searchKey: xml.IndirChardata
+tags: [private]
 ```
 
 ```Go
@@ -3749,6 +3906,7 @@ type IndirChardata struct {
 
 ```
 searchKey: xml.DirectChardata
+tags: [private]
 ```
 
 ```Go
@@ -3763,6 +3921,7 @@ type DirectChardata struct {
 
 ```
 searchKey: xml.IfaceChardata
+tags: [private]
 ```
 
 ```Go
@@ -3777,6 +3936,7 @@ type IfaceChardata struct {
 
 ```
 searchKey: xml.IndirCDATA
+tags: [private]
 ```
 
 ```Go
@@ -3791,6 +3951,7 @@ type IndirCDATA struct {
 
 ```
 searchKey: xml.DirectCDATA
+tags: [private]
 ```
 
 ```Go
@@ -3805,6 +3966,7 @@ type DirectCDATA struct {
 
 ```
 searchKey: xml.IfaceCDATA
+tags: [private]
 ```
 
 ```Go
@@ -3819,6 +3981,7 @@ type IfaceCDATA struct {
 
 ```
 searchKey: xml.IndirInnerXML
+tags: [private]
 ```
 
 ```Go
@@ -3833,6 +3996,7 @@ type IndirInnerXML struct {
 
 ```
 searchKey: xml.DirectInnerXML
+tags: [private]
 ```
 
 ```Go
@@ -3847,6 +4011,7 @@ type DirectInnerXML struct {
 
 ```
 searchKey: xml.IfaceInnerXML
+tags: [private]
 ```
 
 ```Go
@@ -3861,6 +4026,7 @@ type IfaceInnerXML struct {
 
 ```
 searchKey: xml.IndirElement
+tags: [private]
 ```
 
 ```Go
@@ -3875,6 +4041,7 @@ type IndirElement struct {
 
 ```
 searchKey: xml.DirectElement
+tags: [private]
 ```
 
 ```Go
@@ -3889,6 +4056,7 @@ type DirectElement struct {
 
 ```
 searchKey: xml.IfaceElement
+tags: [private]
 ```
 
 ```Go
@@ -3903,6 +4071,7 @@ type IfaceElement struct {
 
 ```
 searchKey: xml.IndirOmitEmpty
+tags: [private]
 ```
 
 ```Go
@@ -3917,6 +4086,7 @@ type IndirOmitEmpty struct {
 
 ```
 searchKey: xml.DirectOmitEmpty
+tags: [private]
 ```
 
 ```Go
@@ -3931,6 +4101,7 @@ type DirectOmitEmpty struct {
 
 ```
 searchKey: xml.IfaceOmitEmpty
+tags: [private]
 ```
 
 ```Go
@@ -3945,6 +4116,7 @@ type IfaceOmitEmpty struct {
 
 ```
 searchKey: xml.IndirAny
+tags: [private]
 ```
 
 ```Go
@@ -3959,6 +4131,7 @@ type IndirAny struct {
 
 ```
 searchKey: xml.DirectAny
+tags: [private]
 ```
 
 ```Go
@@ -3973,6 +4146,7 @@ type DirectAny struct {
 
 ```
 searchKey: xml.IfaceAny
+tags: [private]
 ```
 
 ```Go
@@ -3987,6 +4161,7 @@ type IfaceAny struct {
 
 ```
 searchKey: xml.AttrParent
+tags: [private]
 ```
 
 ```Go
@@ -3999,6 +4174,7 @@ type AttrParent struct {
 
 ```
 searchKey: xml.BadAttr
+tags: [private]
 ```
 
 ```Go
@@ -4011,6 +4187,7 @@ type BadAttr struct {
 
 ```
 searchKey: xml.limitedBytesWriter
+tags: [private]
 ```
 
 ```Go
@@ -4024,6 +4201,7 @@ type limitedBytesWriter struct {
 
 ```
 searchKey: xml.limitedBytesWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -4034,6 +4212,7 @@ func (lw *limitedBytesWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: xml.InvalidXMLName
+tags: [private]
 ```
 
 ```Go
@@ -4049,6 +4228,7 @@ type InvalidXMLName struct {
 
 ```
 searchKey: xml.Feed
+tags: [private]
 ```
 
 ```Go
@@ -4067,6 +4247,7 @@ type Feed struct {
 
 ```
 searchKey: xml.Entry
+tags: [private]
 ```
 
 ```Go
@@ -4084,6 +4265,7 @@ type Entry struct {
 
 ```
 searchKey: xml.Link
+tags: [private]
 ```
 
 ```Go
@@ -4097,6 +4279,7 @@ type Link struct {
 
 ```
 searchKey: xml.Person
+tags: [private]
 ```
 
 ```Go
@@ -4112,6 +4295,7 @@ type Person struct {
 
 ```
 searchKey: xml.Text
+tags: [private]
 ```
 
 ```Go
@@ -4125,6 +4309,7 @@ type Text struct {
 
 ```
 searchKey: xml.NewText
+tags: [private]
 ```
 
 ```Go
@@ -4135,6 +4320,7 @@ func NewText(text string) Text
 
 ```
 searchKey: xml.PathTestItem
+tags: [private]
 ```
 
 ```Go
@@ -4147,6 +4333,7 @@ type PathTestItem struct {
 
 ```
 searchKey: xml.PathTestA
+tags: [private]
 ```
 
 ```Go
@@ -4160,6 +4347,7 @@ type PathTestA struct {
 
 ```
 searchKey: xml.PathTestB
+tags: [private]
 ```
 
 ```Go
@@ -4173,6 +4361,7 @@ type PathTestB struct {
 
 ```
 searchKey: xml.PathTestC
+tags: [private]
 ```
 
 ```Go
@@ -4187,6 +4376,7 @@ type PathTestC struct {
 
 ```
 searchKey: xml.PathTestSet
+tags: [private]
 ```
 
 ```Go
@@ -4199,6 +4389,7 @@ type PathTestSet struct {
 
 ```
 searchKey: xml.PathTestD
+tags: [private]
 ```
 
 ```Go
@@ -4212,6 +4403,7 @@ type PathTestD struct {
 
 ```
 searchKey: xml.PathTestE
+tags: [private]
 ```
 
 ```Go
@@ -4225,6 +4417,7 @@ type PathTestE struct {
 
 ```
 searchKey: xml.BadPathTestA
+tags: [private]
 ```
 
 ```Go
@@ -4239,6 +4432,7 @@ type BadPathTestA struct {
 
 ```
 searchKey: xml.BadPathTestB
+tags: [private]
 ```
 
 ```Go
@@ -4253,6 +4447,7 @@ type BadPathTestB struct {
 
 ```
 searchKey: xml.BadPathTestC
+tags: [private]
 ```
 
 ```Go
@@ -4266,6 +4461,7 @@ type BadPathTestC struct {
 
 ```
 searchKey: xml.BadPathTestD
+tags: [private]
 ```
 
 ```Go
@@ -4279,6 +4475,7 @@ type BadPathTestD struct {
 
 ```
 searchKey: xml.BadPathEmbeddedA
+tags: [private]
 ```
 
 ```Go
@@ -4291,6 +4488,7 @@ type BadPathEmbeddedA struct {
 
 ```
 searchKey: xml.BadPathEmbeddedB
+tags: [private]
 ```
 
 ```Go
@@ -4303,6 +4501,7 @@ type BadPathEmbeddedB struct {
 
 ```
 searchKey: xml.TestThree
+tags: [private]
 ```
 
 ```Go
@@ -4316,6 +4515,7 @@ type TestThree struct {
 
 ```
 searchKey: xml.Tables
+tags: [private]
 ```
 
 ```Go
@@ -4329,6 +4529,7 @@ type Tables struct {
 
 ```
 searchKey: xml.TableAttrs
+tags: [private]
 ```
 
 ```Go
@@ -4341,6 +4542,7 @@ type TableAttrs struct {
 
 ```
 searchKey: xml.TAttr
+tags: [private]
 ```
 
 ```Go
@@ -4359,6 +4561,7 @@ type TAttr struct {
 
 ```
 searchKey: xml.MyCharData
+tags: [private]
 ```
 
 ```Go
@@ -4371,6 +4574,7 @@ type MyCharData struct {
 
 ```
 searchKey: xml.MyCharData.UnmarshalXML
+tags: [private]
 ```
 
 ```Go
@@ -4381,6 +4585,7 @@ func (m *MyCharData) UnmarshalXML(d *Decoder, start StartElement) error
 
 ```
 searchKey: xml.MyCharData.UnmarshalXMLAttr
+tags: [private]
 ```
 
 ```Go
@@ -4391,6 +4596,7 @@ func (m *MyCharData) UnmarshalXMLAttr(attr Attr) error
 
 ```
 searchKey: xml.MyAttr
+tags: [private]
 ```
 
 ```Go
@@ -4403,6 +4609,7 @@ type MyAttr struct {
 
 ```
 searchKey: xml.MyAttr.UnmarshalXMLAttr
+tags: [private]
 ```
 
 ```Go
@@ -4413,6 +4620,7 @@ func (m *MyAttr) UnmarshalXMLAttr(attr Attr) error
 
 ```
 searchKey: xml.MyStruct
+tags: [private]
 ```
 
 ```Go
@@ -4429,6 +4637,7 @@ type MyStruct struct {
 
 ```
 searchKey: xml.Pea
+tags: [private]
 ```
 
 ```Go
@@ -4441,6 +4650,7 @@ type Pea struct {
 
 ```
 searchKey: xml.Pod
+tags: [private]
 ```
 
 ```Go
@@ -4453,6 +4663,7 @@ type Pod struct {
 
 ```
 searchKey: xml.X
+tags: [private]
 ```
 
 ```Go
@@ -4465,6 +4676,7 @@ type X struct {
 
 ```
 searchKey: xml.IXField
+tags: [private]
 ```
 
 ```Go
@@ -4478,6 +4690,7 @@ type IXField struct {
 
 ```
 searchKey: xml.Child
+tags: [private]
 ```
 
 ```Go
@@ -4492,6 +4705,7 @@ type Child struct {
 
 ```
 searchKey: xml.ChildToEmbed
+tags: [private]
 ```
 
 ```Go
@@ -4504,6 +4718,7 @@ type ChildToEmbed struct {
 
 ```
 searchKey: xml.Parent
+tags: [private]
 ```
 
 ```Go
@@ -4538,6 +4753,7 @@ type Parent struct {
 
 ```
 searchKey: xml.WhitespaceValuesParent
+tags: [private]
 ```
 
 ```Go
@@ -4570,6 +4786,7 @@ type WhitespaceValuesParent struct {
 
 ```
 searchKey: xml.WhitespaceAttrsParent
+tags: [private]
 ```
 
 ```Go
@@ -4602,6 +4819,7 @@ type WhitespaceAttrsParent struct {
 
 ```
 searchKey: xml.toks
+tags: [private]
 ```
 
 ```Go
@@ -4615,6 +4833,7 @@ type toks struct {
 
 ```
 searchKey: xml.toks.Token
+tags: [private]
 ```
 
 ```Go
@@ -4625,6 +4844,7 @@ func (t *toks) Token() (Token, error)
 
 ```
 searchKey: xml.toksNil
+tags: [private]
 ```
 
 ```Go
@@ -4638,6 +4858,7 @@ type toksNil struct {
 
 ```
 searchKey: xml.toksNil.Token
+tags: [private]
 ```
 
 ```Go
@@ -4648,6 +4869,7 @@ func (t *toksNil) Token() (Token, error)
 
 ```
 searchKey: xml.downCaser
+tags: [private]
 ```
 
 ```Go
@@ -4661,6 +4883,7 @@ type downCaser struct {
 
 ```
 searchKey: xml.downCaser.ReadByte
+tags: [private]
 ```
 
 ```Go
@@ -4671,6 +4894,7 @@ func (d *downCaser) ReadByte() (c byte, err error)
 
 ```
 searchKey: xml.downCaser.Read
+tags: [private]
 ```
 
 ```Go
@@ -4681,6 +4905,7 @@ func (d *downCaser) Read(p []byte) (int, error)
 
 ```
 searchKey: xml.allScalars
+tags: [private]
 ```
 
 ```Go
@@ -4711,6 +4936,7 @@ type allScalars struct {
 
 ```
 searchKey: xml.item
+tags: [private]
 ```
 
 ```Go
@@ -4723,6 +4949,7 @@ type item struct {
 
 ```
 searchKey: xml.errWriter
+tags: [private]
 ```
 
 ```Go
@@ -4735,6 +4962,7 @@ Writer whose Write method always returns an error.
 
 ```
 searchKey: xml.errWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -4745,6 +4973,7 @@ func (errWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: xml.mapper
+tags: [private]
 ```
 
 ```Go
@@ -4758,6 +4987,7 @@ type mapper struct {
 
 ```
 searchKey: xml.mapper.Token
+tags: [private]
 ```
 
 ```Go
@@ -4768,6 +4998,7 @@ func (m mapper) Token() (Token, error)
 
 ```
 searchKey: xml.tokReader
+tags: [private]
 ```
 
 ```Go
@@ -4778,6 +5009,7 @@ type tokReader struct{}
 
 ```
 searchKey: xml.tokReader.Token
+tags: [private]
 ```
 
 ```Go
@@ -4788,6 +5020,7 @@ func (tokReader) Token() (Token, error)
 
 ```
 searchKey: xml.Failure
+tags: [private]
 ```
 
 ```Go
@@ -4798,6 +5031,7 @@ type Failure struct{}
 
 ```
 searchKey: xml.Failure.UnmarshalXML
+tags: [private]
 ```
 
 ```Go
@@ -4806,15 +5040,10 @@ func (Failure) UnmarshalXML(*Decoder, StartElement) error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Marshal" href="#Marshal">func Marshal(v interface{}) ([]byte, error)</a>
 
 ```
 searchKey: xml.Marshal
-tags: [exported]
 ```
 
 ```Go
@@ -4877,7 +5106,6 @@ Marshal will return an error if asked to marshal a channel, function, or map.
 
 ```
 searchKey: xml.MarshalIndent
-tags: [exported]
 ```
 
 ```Go
@@ -4890,6 +5118,7 @@ MarshalIndent works like Marshal, but each XML element begins on a new indented 
 
 ```
 searchKey: xml.isValidDirective
+tags: [private]
 ```
 
 ```Go
@@ -4902,6 +5131,7 @@ isValidDirective reports whether dir is a valid directive text, meaning angle br
 
 ```
 searchKey: xml.indirect
+tags: [private]
 ```
 
 ```Go
@@ -4914,6 +5144,7 @@ indirect drills into interfaces and pointers, returning the pointed-at value. If
 
 ```
 searchKey: xml.isEmptyValue
+tags: [private]
 ```
 
 ```Go
@@ -4924,7 +5155,6 @@ func isEmptyValue(v reflect.Value) bool
 
 ```
 searchKey: xml.Unmarshal
-tags: [exported]
 ```
 
 ```Go
@@ -5020,6 +5250,7 @@ A missing element or empty attribute value will be unmarshaled as a zero value. 
 
 ```
 searchKey: xml.receiverType
+tags: [private]
 ```
 
 ```Go
@@ -5032,6 +5263,7 @@ receiverType returns the receiver type to use in an expression like "%s.MethodNa
 
 ```
 searchKey: xml.copyValue
+tags: [private]
 ```
 
 ```Go
@@ -5042,6 +5274,7 @@ func copyValue(dst reflect.Value, src []byte) (err error)
 
 ```
 searchKey: xml.min
+tags: [private]
 ```
 
 ```Go
@@ -5052,6 +5285,7 @@ func min(a, b int) int
 
 ```
 searchKey: xml.addFieldInfo
+tags: [private]
 ```
 
 ```Go
@@ -5064,6 +5298,7 @@ addFieldInfo adds finfo to tinfo.fields if there are no conflicts, or if conflic
 
 ```
 searchKey: xml.makeCopy
+tags: [private]
 ```
 
 ```Go
@@ -5074,6 +5309,7 @@ func makeCopy(b []byte) []byte
 
 ```
 searchKey: xml.isInCharacterRange
+tags: [private]
 ```
 
 ```Go
@@ -5086,6 +5322,7 @@ Decide whether the given rune is in the XML Character Range, per the Char produc
 
 ```
 searchKey: xml.isNameByte
+tags: [private]
 ```
 
 ```Go
@@ -5096,6 +5333,7 @@ func isNameByte(c byte) bool
 
 ```
 searchKey: xml.isName
+tags: [private]
 ```
 
 ```Go
@@ -5106,6 +5344,7 @@ func isName(s []byte) bool
 
 ```
 searchKey: xml.isNameString
+tags: [private]
 ```
 
 ```Go
@@ -5116,7 +5355,6 @@ func isNameString(s string) bool
 
 ```
 searchKey: xml.EscapeText
-tags: [exported]
 ```
 
 ```Go
@@ -5129,6 +5367,7 @@ EscapeText writes to w the properly escaped XML equivalent of the plain text dat
 
 ```
 searchKey: xml.escapeText
+tags: [private]
 ```
 
 ```Go
@@ -5141,7 +5380,6 @@ escapeText writes to w the properly escaped XML equivalent of the plain text dat
 
 ```
 searchKey: xml.Escape
-tags: [exported]
 ```
 
 ```Go
@@ -5154,6 +5392,7 @@ Escape is like EscapeText but omits the error return value. It is provided for b
 
 ```
 searchKey: xml.emitCDATA
+tags: [private]
 ```
 
 ```Go
@@ -5166,6 +5405,7 @@ emitCDATA writes to w the CDATA-wrapped plain text data s. It escapes CDATA dire
 
 ```
 searchKey: xml.procInst
+tags: [private]
 ```
 
 ```Go
@@ -5178,6 +5418,7 @@ procInst parses the `param="..."` or `param='...'` value out of the provided str
 
 ```
 searchKey: xml.ParseTime
+tags: [private]
 ```
 
 ```Go
@@ -5188,6 +5429,7 @@ func ParseTime(str string) time.Time
 
 ```
 searchKey: xml.ifaceptr
+tags: [private]
 ```
 
 ```Go
@@ -5198,6 +5440,7 @@ func ifaceptr(x interface{}) interface{}
 
 ```
 searchKey: xml.stringptr
+tags: [private]
 ```
 
 ```Go
@@ -5208,6 +5451,7 @@ func stringptr(x string) *string
 
 ```
 searchKey: xml.TestMarshal
+tags: [private]
 ```
 
 ```Go
@@ -5218,6 +5462,7 @@ func TestMarshal(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalErrors
+tags: [private]
 ```
 
 ```Go
@@ -5228,6 +5473,7 @@ func TestMarshalErrors(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshal
+tags: [private]
 ```
 
 ```Go
@@ -5240,6 +5486,7 @@ Do invertibility testing on the various structures that we test
 
 ```
 searchKey: xml.TestMarshalIndent
+tags: [private]
 ```
 
 ```Go
@@ -5250,6 +5497,7 @@ func TestMarshalIndent(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalWriteErrors
+tags: [private]
 ```
 
 ```Go
@@ -5260,6 +5508,7 @@ func TestMarshalWriteErrors(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalWriteIOErrors
+tags: [private]
 ```
 
 ```Go
@@ -5270,6 +5519,7 @@ func TestMarshalWriteIOErrors(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalFlush
+tags: [private]
 ```
 
 ```Go
@@ -5280,6 +5530,7 @@ func TestMarshalFlush(t *testing.T)
 
 ```
 searchKey: xml.BenchmarkMarshal
+tags: [private]
 ```
 
 ```Go
@@ -5290,6 +5541,7 @@ func BenchmarkMarshal(b *testing.B)
 
 ```
 searchKey: xml.BenchmarkUnmarshal
+tags: [private]
 ```
 
 ```Go
@@ -5300,6 +5552,7 @@ func BenchmarkUnmarshal(b *testing.B)
 
 ```
 searchKey: xml.TestStructPointerMarshal
+tags: [private]
 ```
 
 ```Go
@@ -5312,6 +5565,7 @@ golang.org/issue/6556
 
 ```
 searchKey: xml.TestEncodeToken
+tags: [private]
 ```
 
 ```Go
@@ -5322,6 +5576,7 @@ func TestEncodeToken(t *testing.T)
 
 ```
 searchKey: xml.TestProcInstEncodeToken
+tags: [private]
 ```
 
 ```Go
@@ -5332,6 +5587,7 @@ func TestProcInstEncodeToken(t *testing.T)
 
 ```
 searchKey: xml.TestDecodeEncode
+tags: [private]
 ```
 
 ```Go
@@ -5342,6 +5598,7 @@ func TestDecodeEncode(t *testing.T)
 
 ```
 searchKey: xml.TestRace9796
+tags: [private]
 ```
 
 ```Go
@@ -5354,6 +5611,7 @@ Issue 9796. Used to fail with GORACE="halt_on_error=1" -race.
 
 ```
 searchKey: xml.TestIsValidDirective
+tags: [private]
 ```
 
 ```Go
@@ -5364,6 +5622,7 @@ func TestIsValidDirective(t *testing.T)
 
 ```
 searchKey: xml.TestSimpleUseOfEncodeToken
+tags: [private]
 ```
 
 ```Go
@@ -5376,6 +5635,7 @@ Issue 11719. EncodeToken used to silently eat tokens with an invalid type.
 
 ```
 searchKey: xml.TestIssue16158
+tags: [private]
 ```
 
 ```Go
@@ -5388,6 +5648,7 @@ Issue 16158. Decoder.unmarshalAttr ignores the return value of copyValue.
 
 ```
 searchKey: xml.TestInvalidXMLName
+tags: [private]
 ```
 
 ```Go
@@ -5398,6 +5659,7 @@ func TestInvalidXMLName(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalFeed
+tags: [private]
 ```
 
 ```Go
@@ -5408,6 +5670,7 @@ func TestUnmarshalFeed(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalPaths
+tags: [private]
 ```
 
 ```Go
@@ -5418,6 +5681,7 @@ func TestUnmarshalPaths(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalBadPaths
+tags: [private]
 ```
 
 ```Go
@@ -5428,6 +5692,7 @@ func TestUnmarshalBadPaths(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalWithoutNameType
+tags: [private]
 ```
 
 ```Go
@@ -5438,6 +5703,7 @@ func TestUnmarshalWithoutNameType(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalAttr
+tags: [private]
 ```
 
 ```Go
@@ -5448,6 +5714,7 @@ func TestUnmarshalAttr(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalNS
+tags: [private]
 ```
 
 ```Go
@@ -5458,6 +5725,7 @@ func TestUnmarshalNS(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalNS
+tags: [private]
 ```
 
 ```Go
@@ -5468,6 +5736,7 @@ func TestMarshalNS(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalNSAttr
+tags: [private]
 ```
 
 ```Go
@@ -5478,6 +5747,7 @@ func TestUnmarshalNSAttr(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalNSAttr
+tags: [private]
 ```
 
 ```Go
@@ -5488,6 +5758,7 @@ func TestMarshalNSAttr(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshaler
+tags: [private]
 ```
 
 ```Go
@@ -5498,6 +5769,7 @@ func TestUnmarshaler(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalIntoInterface
+tags: [private]
 ```
 
 ```Go
@@ -5510,6 +5782,7 @@ func TestUnmarshalIntoInterface(t *testing.T)
 
 ```
 searchKey: xml.TestMalformedComment
+tags: [private]
 ```
 
 ```Go
@@ -5522,6 +5795,7 @@ Issue 11112. Unmarshal must reject invalid comments.
 
 ```
 searchKey: xml.TestInvalidInnerXMLType
+tags: [private]
 ```
 
 ```Go
@@ -5534,6 +5808,7 @@ Issue 15600. ",innerxml" on a field that can't hold it.
 
 ```
 searchKey: xml.TestUnmarshalEmptyValues
+tags: [private]
 ```
 
 ```Go
@@ -5546,6 +5821,7 @@ golang.org/issues/13417
 
 ```
 searchKey: xml.TestUnmarshalWhitespaceValues
+tags: [private]
 ```
 
 ```Go
@@ -5558,6 +5834,7 @@ golang.org/issues/22146
 
 ```
 searchKey: xml.TestUnmarshalWhitespaceAttrs
+tags: [private]
 ```
 
 ```Go
@@ -5570,6 +5847,7 @@ golang.org/issues/22146
 
 ```
 searchKey: xml.TestDecodeEOF
+tags: [private]
 ```
 
 ```Go
@@ -5580,6 +5858,7 @@ func TestDecodeEOF(t *testing.T)
 
 ```
 searchKey: xml.TestDecodeNilToken
+tags: [private]
 ```
 
 ```Go
@@ -5590,6 +5869,7 @@ func TestDecodeNilToken(t *testing.T)
 
 ```
 searchKey: xml.TestRawToken
+tags: [private]
 ```
 
 ```Go
@@ -5600,6 +5880,7 @@ func TestRawToken(t *testing.T)
 
 ```
 searchKey: xml.TestNonStrictRawToken
+tags: [private]
 ```
 
 ```Go
@@ -5610,6 +5891,7 @@ func TestNonStrictRawToken(t *testing.T)
 
 ```
 searchKey: xml.TestRawTokenAltEncoding
+tags: [private]
 ```
 
 ```Go
@@ -5620,6 +5902,7 @@ func TestRawTokenAltEncoding(t *testing.T)
 
 ```
 searchKey: xml.TestRawTokenAltEncodingNoConverter
+tags: [private]
 ```
 
 ```Go
@@ -5630,6 +5913,7 @@ func TestRawTokenAltEncodingNoConverter(t *testing.T)
 
 ```
 searchKey: xml.testRawToken
+tags: [private]
 ```
 
 ```Go
@@ -5640,6 +5924,7 @@ func testRawToken(t *testing.T, d *Decoder, raw string, rawTokens []Token)
 
 ```
 searchKey: xml.TestNestedDirectives
+tags: [private]
 ```
 
 ```Go
@@ -5650,6 +5935,7 @@ func TestNestedDirectives(t *testing.T)
 
 ```
 searchKey: xml.TestToken
+tags: [private]
 ```
 
 ```Go
@@ -5660,6 +5946,7 @@ func TestToken(t *testing.T)
 
 ```
 searchKey: xml.TestSyntax
+tags: [private]
 ```
 
 ```Go
@@ -5670,6 +5957,7 @@ func TestSyntax(t *testing.T)
 
 ```
 searchKey: xml.TestAllScalars
+tags: [private]
 ```
 
 ```Go
@@ -5680,6 +5968,7 @@ func TestAllScalars(t *testing.T)
 
 ```
 searchKey: xml.TestIssue569
+tags: [private]
 ```
 
 ```Go
@@ -5690,6 +5979,7 @@ func TestIssue569(t *testing.T)
 
 ```
 searchKey: xml.TestUnquotedAttrs
+tags: [private]
 ```
 
 ```Go
@@ -5700,6 +5990,7 @@ func TestUnquotedAttrs(t *testing.T)
 
 ```
 searchKey: xml.TestValuelessAttrs
+tags: [private]
 ```
 
 ```Go
@@ -5710,6 +6001,7 @@ func TestValuelessAttrs(t *testing.T)
 
 ```
 searchKey: xml.TestCopyTokenCharData
+tags: [private]
 ```
 
 ```Go
@@ -5720,6 +6012,7 @@ func TestCopyTokenCharData(t *testing.T)
 
 ```
 searchKey: xml.TestCopyTokenStartElement
+tags: [private]
 ```
 
 ```Go
@@ -5730,6 +6023,7 @@ func TestCopyTokenStartElement(t *testing.T)
 
 ```
 searchKey: xml.TestSyntaxErrorLineNum
+tags: [private]
 ```
 
 ```Go
@@ -5740,6 +6034,7 @@ func TestSyntaxErrorLineNum(t *testing.T)
 
 ```
 searchKey: xml.TestTrailingRawToken
+tags: [private]
 ```
 
 ```Go
@@ -5750,6 +6045,7 @@ func TestTrailingRawToken(t *testing.T)
 
 ```
 searchKey: xml.TestTrailingToken
+tags: [private]
 ```
 
 ```Go
@@ -5760,6 +6056,7 @@ func TestTrailingToken(t *testing.T)
 
 ```
 searchKey: xml.TestEntityInsideCDATA
+tags: [private]
 ```
 
 ```Go
@@ -5770,6 +6067,7 @@ func TestEntityInsideCDATA(t *testing.T)
 
 ```
 searchKey: xml.TestDisallowedCharacters
+tags: [private]
 ```
 
 ```Go
@@ -5780,6 +6078,7 @@ func TestDisallowedCharacters(t *testing.T)
 
 ```
 searchKey: xml.TestIsInCharacterRange
+tags: [private]
 ```
 
 ```Go
@@ -5790,6 +6089,7 @@ func TestIsInCharacterRange(t *testing.T)
 
 ```
 searchKey: xml.TestProcInstEncoding
+tags: [private]
 ```
 
 ```Go
@@ -5800,6 +6100,7 @@ func TestProcInstEncoding(t *testing.T)
 
 ```
 searchKey: xml.TestDirectivesWithComments
+tags: [private]
 ```
 
 ```Go
@@ -5810,6 +6111,7 @@ func TestDirectivesWithComments(t *testing.T)
 
 ```
 searchKey: xml.TestEscapeTextIOErrors
+tags: [private]
 ```
 
 ```Go
@@ -5820,6 +6122,7 @@ func TestEscapeTextIOErrors(t *testing.T)
 
 ```
 searchKey: xml.TestEscapeTextInvalidChar
+tags: [private]
 ```
 
 ```Go
@@ -5830,6 +6133,7 @@ func TestEscapeTextInvalidChar(t *testing.T)
 
 ```
 searchKey: xml.TestIssue5880
+tags: [private]
 ```
 
 ```Go
@@ -5840,6 +6144,7 @@ func TestIssue5880(t *testing.T)
 
 ```
 searchKey: xml.TestIssue11405
+tags: [private]
 ```
 
 ```Go
@@ -5850,6 +6155,7 @@ func TestIssue11405(t *testing.T)
 
 ```
 searchKey: xml.TestIssue12417
+tags: [private]
 ```
 
 ```Go
@@ -5860,6 +6166,7 @@ func TestIssue12417(t *testing.T)
 
 ```
 searchKey: xml.tokenMap
+tags: [private]
 ```
 
 ```Go
@@ -5870,6 +6177,7 @@ func tokenMap(mapping func(t Token) Token) func(TokenReader) TokenReader
 
 ```
 searchKey: xml.TestNewTokenDecoderIdempotent
+tags: [private]
 ```
 
 ```Go
@@ -5880,6 +6188,7 @@ func TestNewTokenDecoderIdempotent(t *testing.T)
 
 ```
 searchKey: xml.TestWrapDecoder
+tags: [private]
 ```
 
 ```Go
@@ -5890,6 +6199,7 @@ func TestWrapDecoder(t *testing.T)
 
 ```
 searchKey: xml.TestTokenUnmarshaler
+tags: [private]
 ```
 
 ```Go
@@ -5900,6 +6210,7 @@ func TestTokenUnmarshaler(t *testing.T)
 
 ```
 searchKey: xml.testRoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -5910,6 +6221,7 @@ func testRoundTrip(t *testing.T, input string)
 
 ```
 searchKey: xml.TestRoundTrip
+tags: [private]
 ```
 
 ```Go

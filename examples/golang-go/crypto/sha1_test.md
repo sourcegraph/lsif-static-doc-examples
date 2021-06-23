@@ -11,10 +11,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleNew" href="#ExampleNew">func ExampleNew()</a>
 
 ```
 searchKey: sha1_test.ExampleNew
+tags: [private]
 ```
 
 ```Go
@@ -25,6 +30,7 @@ func ExampleNew()
 
 ```
 searchKey: sha1_test.ExampleSum
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +41,7 @@ func ExampleSum()
 
 ```
 searchKey: sha1_test.ExampleNew_file
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +52,7 @@ func ExampleNew_file()
 
 ```
 searchKey: sha1_test.TestOutOfBoundsRead
+tags: [private]
 ```
 
 ```Go

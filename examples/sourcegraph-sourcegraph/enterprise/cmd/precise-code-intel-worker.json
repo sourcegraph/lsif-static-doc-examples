@@ -4,9 +4,7 @@
     "identifier": "precise-code-intel-worker",
     "newPage": true,
     "searchKey": "enterprise/cmd/precise-code-intel-worker",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -27,9 +25,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -47,7 +43,9 @@
                 "identifier": "addr",
                 "newPage": false,
                 "searchKey": "main.addr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -70,9 +68,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -90,9 +86,7 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "main.Config",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +104,7 @@
                       "identifier": "Config.Load",
                       "newPage": false,
                       "searchKey": "main.Config.Load",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -138,9 +130,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -158,7 +148,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -178,7 +170,9 @@
                 "identifier": "mustInitializeDB",
                 "newPage": false,
                 "searchKey": "main.mustInitializeDB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -198,7 +192,9 @@
                 "identifier": "mustInitializeCodeIntelDB",
                 "newPage": false,
                 "searchKey": "main.mustInitializeCodeIntelDB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -218,7 +214,9 @@
                 "identifier": "mustRegisterQueueMetric",
                 "newPage": false,
                 "searchKey": "main.mustRegisterQueueMetric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -238,7 +236,9 @@
                 "identifier": "makeWorkerMetrics",
                 "newPage": false,
                 "searchKey": "main.makeWorkerMetrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -258,7 +258,9 @@
                 "identifier": "initializeUploadStore",
                 "newPage": false,
                 "searchKey": "main.initializeUploadStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -278,7 +280,9 @@
                 "identifier": "isRequestError",
                 "newPage": false,
                 "searchKey": "main.isRequestError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

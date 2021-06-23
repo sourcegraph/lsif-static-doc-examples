@@ -26,14 +26,11 @@ gitserver is the gitserver server.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="reposDir" href="#reposDir">var reposDir</a>
 
 ```
 searchKey: main.reposDir
+tags: [private]
 ```
 
 ```Go
@@ -44,6 +41,7 @@ var reposDir = env.Get("SRC_REPOS_DIR", "/data/repos", "Root dir containing repo
 
 ```
 searchKey: main.wantPctFree
+tags: [private]
 ```
 
 ```Go
@@ -54,6 +52,7 @@ var wantPctFree = ...
 
 ```
 searchKey: main.janitorInterval
+tags: [private]
 ```
 
 ```Go
@@ -64,6 +63,7 @@ var janitorInterval = ...
 
 ```
 searchKey: main.syncRepoStateInterval
+tags: [private]
 ```
 
 ```Go
@@ -74,6 +74,7 @@ var syncRepoStateInterval = ...
 
 ```
 searchKey: main.syncRepoStateBatchSize
+tags: [private]
 ```
 
 ```Go
@@ -84,6 +85,7 @@ var syncRepoStateBatchSize = ...
 
 ```
 searchKey: main.syncRepoStateUpsertPerSecond
+tags: [private]
 ```
 
 ```Go
@@ -94,6 +96,7 @@ var syncRepoStateUpsertPerSecond = ...
 
 ```
 searchKey: main.envHostname
+tags: [private]
 ```
 
 ```Go
@@ -102,14 +105,11 @@ var envHostname = env.Get("HOSTNAME", "", "Hostname override")
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +120,7 @@ func main()
 
 ```
 searchKey: main.hostnameBestEffort
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +131,7 @@ func hostnameBestEffort() string
 
 ```
 searchKey: main.getPercent
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +142,7 @@ func getPercent(p int) (int, error)
 
 ```
 searchKey: main.getDB
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +155,7 @@ getStores initializes a connection to the database and returns RepoStore and Ext
 
 ```
 searchKey: main.TestParsePercent
+tags: [private]
 ```
 
 ```Go

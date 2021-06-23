@@ -89,11 +89,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="KindAWSCodeCommit" href="#KindAWSCodeCommit">const KindAWSCodeCommit</a>
 
 ```
 searchKey: extsvc.KindAWSCodeCommit
-tags: [exported]
 ```
 
 ```Go
@@ -104,7 +107,6 @@ const KindAWSCodeCommit = "AWSCODECOMMIT"
 
 ```
 searchKey: extsvc.KindBitbucketServer
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +117,6 @@ const KindBitbucketServer = "BITBUCKETSERVER"
 
 ```
 searchKey: extsvc.KindBitbucketCloud
-tags: [exported]
 ```
 
 ```Go
@@ -126,7 +127,6 @@ const KindBitbucketCloud = "BITBUCKETCLOUD"
 
 ```
 searchKey: extsvc.KindGitHub
-tags: [exported]
 ```
 
 ```Go
@@ -137,7 +137,6 @@ const KindGitHub = "GITHUB"
 
 ```
 searchKey: extsvc.KindGitLab
-tags: [exported]
 ```
 
 ```Go
@@ -148,7 +147,6 @@ const KindGitLab = "GITLAB"
 
 ```
 searchKey: extsvc.KindGitolite
-tags: [exported]
 ```
 
 ```Go
@@ -159,7 +157,6 @@ const KindGitolite = "GITOLITE"
 
 ```
 searchKey: extsvc.KindPerforce
-tags: [exported]
 ```
 
 ```Go
@@ -170,7 +167,6 @@ const KindPerforce = "PERFORCE"
 
 ```
 searchKey: extsvc.KindPhabricator
-tags: [exported]
 ```
 
 ```Go
@@ -181,7 +177,6 @@ const KindPhabricator = "PHABRICATOR"
 
 ```
 searchKey: extsvc.KindOther
-tags: [exported]
 ```
 
 ```Go
@@ -192,7 +187,6 @@ const KindOther = "OTHER"
 
 ```
 searchKey: extsvc.TypeAWSCodeCommit
-tags: [exported]
 ```
 
 ```Go
@@ -205,7 +199,6 @@ TypeAWSCodeCommit is the (api.ExternalRepoSpec).ServiceType value for AWS CodeCo
 
 ```
 searchKey: extsvc.TypeBitbucketServer
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +211,6 @@ TypeBitbucketServer is the (api.ExternalRepoSpec).ServiceType value for Bitbucke
 
 ```
 searchKey: extsvc.TypeBitbucketCloud
-tags: [exported]
 ```
 
 ```Go
@@ -231,7 +223,6 @@ TypeBitbucketCloud is the (api.ExternalRepoSpec).ServiceType value for Bitbucket
 
 ```
 searchKey: extsvc.TypeGitHub
-tags: [exported]
 ```
 
 ```Go
@@ -244,7 +235,6 @@ TypeGitHub is the (api.ExternalRepoSpec).ServiceType value for GitHub repositori
 
 ```
 searchKey: extsvc.TypeGitLab
-tags: [exported]
 ```
 
 ```Go
@@ -257,7 +247,6 @@ TypeGitLab is the (api.ExternalRepoSpec).ServiceType value for GitLab projects. 
 
 ```
 searchKey: extsvc.TypeGitolite
-tags: [exported]
 ```
 
 ```Go
@@ -270,7 +259,6 @@ TypeGitolite is the (api.ExternalRepoSpec).ServiceType value for Gitolite projec
 
 ```
 searchKey: extsvc.TypePerforce
-tags: [exported]
 ```
 
 ```Go
@@ -283,7 +271,6 @@ TypePerforce is the (api.ExternalRepoSpec).ServiceType value for Perforce projec
 
 ```
 searchKey: extsvc.TypePhabricator
-tags: [exported]
 ```
 
 ```Go
@@ -296,7 +283,6 @@ TypePhabricator is the (api.ExternalRepoSpec).ServiceType value for Phabricator 
 
 ```
 searchKey: extsvc.TypeOther
-tags: [exported]
 ```
 
 ```Go
@@ -309,7 +295,6 @@ TypeOther is the (api.ExternalRepoSpec).ServiceType value for other projects.
 
 ```
 searchKey: extsvc.IDParam
-tags: [exported]
 ```
 
 ```Go
@@ -318,11 +303,14 @@ const IDParam = "externalServiceID"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="GitHubDotComURL" href="#GitHubDotComURL">var GitHubDotComURL</a>
 
 ```
 searchKey: extsvc.GitHubDotComURL
-tags: [exported]
 ```
 
 ```Go
@@ -335,7 +323,6 @@ Known public code hosts and their URLs
 
 ```
 searchKey: extsvc.GitHubDotCom
-tags: [exported]
 ```
 
 ```Go
@@ -348,7 +335,6 @@ Known public code hosts and their URLs
 
 ```
 searchKey: extsvc.GitLabDotComURL
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +347,6 @@ Known public code hosts and their URLs
 
 ```
 searchKey: extsvc.GitLabDotCom
-tags: [exported]
 ```
 
 ```Go
@@ -374,7 +359,6 @@ Known public code hosts and their URLs
 
 ```
 searchKey: extsvc.PublicCodeHosts
-tags: [exported]
 ```
 
 ```Go
@@ -390,6 +374,7 @@ Known public code hosts and their URLs
 
 ```
 searchKey: extsvc.bbsLower
+tags: [private]
 ```
 
 ```Go
@@ -402,6 +387,7 @@ Precompute these for use in ParseServiceType below since the constants are mixed
 
 ```
 searchKey: extsvc.bbcLower
+tags: [private]
 ```
 
 ```Go
@@ -410,11 +396,14 @@ var bbcLower = strings.ToLower(TypeBitbucketCloud)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="CodeHost" href="#CodeHost">type CodeHost struct</a>
 
 ```
 searchKey: extsvc.CodeHost
-tags: [exported]
 ```
 
 ```Go
@@ -429,7 +418,6 @@ type CodeHost struct {
 
 ```
 searchKey: extsvc.NewCodeHost
-tags: [exported]
 ```
 
 ```Go
@@ -440,7 +428,6 @@ func NewCodeHost(baseURL *url.URL, serviceType string) *CodeHost
 
 ```
 searchKey: extsvc.CodeHostOf
-tags: [exported]
 ```
 
 ```Go
@@ -453,6 +440,7 @@ CodeHostOf returns the CodeHost of the given repo, if any, as determined by a co
 
 ```
 searchKey: extsvc.jsonError
+tags: [private]
 ```
 
 ```Go
@@ -465,7 +453,6 @@ type jsonError struct {
 
 ```
 searchKey: extsvc.Account
-tags: [exported]
 ```
 
 ```Go
@@ -485,7 +472,6 @@ Account represents a row in the `user_external_accounts` table. See the GraphQL 
 
 ```
 searchKey: extsvc.AccountSpec
-tags: [exported]
 ```
 
 ```Go
@@ -503,7 +489,6 @@ AccountSpec specifies a user external account by its external identifier (i.e., 
 
 ```
 searchKey: extsvc.AccountData
-tags: [exported]
 ```
 
 ```Go
@@ -519,7 +504,6 @@ AccountData contains data that can be freely updated in the user external accoun
 
 ```
 searchKey: extsvc.AccountData.SetAccountData
-tags: [exported]
 ```
 
 ```Go
@@ -532,7 +516,6 @@ SetAccountData sets the Data field to the (JSON-encoded) value. If an error occu
 
 ```
 searchKey: extsvc.AccountData.SetAuthData
-tags: [exported]
 ```
 
 ```Go
@@ -545,7 +528,6 @@ SetAuthData sets the AuthData field to the (JSON-encoded) value. If an error occ
 
 ```
 searchKey: extsvc.AccountData.GetAccountData
-tags: [exported]
 ```
 
 ```Go
@@ -558,7 +540,6 @@ GetAccountData reads the Data field into the value. The value should be a pointe
 
 ```
 searchKey: extsvc.AccountData.GetAuthData
-tags: [exported]
 ```
 
 ```Go
@@ -571,7 +552,6 @@ GetAuthData reads the AuthData field into the value. The value should be a point
 
 ```
 searchKey: extsvc.Repository
-tags: [exported]
 ```
 
 ```Go
@@ -588,7 +568,6 @@ Repository contains necessary information to identify an external repository on 
 
 ```
 searchKey: extsvc.Accounts
-tags: [exported]
 ```
 
 ```Go
@@ -605,7 +584,6 @@ Accounts contains a list of accounts that belong to the same external service. A
 
 ```
 searchKey: extsvc.Accounts.TracingFields
-tags: [exported]
 ```
 
 ```Go
@@ -618,7 +596,6 @@ TracingFields returns tracing fields for the opentracing log.
 
 ```
 searchKey: extsvc.AccountID
-tags: [exported]
 ```
 
 ```Go
@@ -631,7 +608,6 @@ AccountID is a descriptive type for the external identifier of an external accou
 
 ```
 searchKey: extsvc.RepoID
-tags: [exported]
 ```
 
 ```Go
@@ -644,7 +620,6 @@ RepoID is a descriptive type for the external identifier of an external reposito
 
 ```
 searchKey: extsvc.RepoIDType
-tags: [exported]
 ```
 
 ```Go
@@ -657,7 +632,6 @@ RepoIDType indicates the type of the RepoID.
 
 ```
 searchKey: extsvc.RateLimitConfig
-tags: [exported]
 ```
 
 ```Go
@@ -675,7 +649,6 @@ RateLimitConfig represents the internal rate limit configured for an external se
 
 ```
 searchKey: extsvc.ExtractRateLimitConfig
-tags: [exported]
 ```
 
 ```Go
@@ -688,7 +661,6 @@ ExtractRateLimitConfig extracts the rate limit config from the given args. If ra
 
 ```
 searchKey: extsvc.GetLimitFromConfig
-tags: [exported]
 ```
 
 ```Go
@@ -701,7 +673,6 @@ GetLimitFromConfig gets RateLimitConfig from an already parsed config schema.
 
 ```
 searchKey: extsvc.ErrRateLimitUnsupported
-tags: [exported]
 ```
 
 ```Go
@@ -714,7 +685,6 @@ type ErrRateLimitUnsupported struct {
 
 ```
 searchKey: extsvc.ErrRateLimitUnsupported.Error
-tags: [exported]
 ```
 
 ```Go
@@ -725,7 +695,6 @@ func (e ErrRateLimitUnsupported) Error() string
 
 ```
 searchKey: extsvc.OtherRepoMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -738,11 +707,14 @@ type OtherRepoMetadata struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IsHostOfRepo" href="#IsHostOfRepo">func IsHostOfRepo(c *CodeHost, repo *api.ExternalRepoSpec) bool</a>
 
 ```
 searchKey: extsvc.IsHostOfRepo
-tags: [exported]
 ```
 
 ```Go
@@ -755,7 +727,6 @@ IsHostOfRepo returns true if the repository belongs to given code host.
 
 ```
 searchKey: extsvc.IsHostOfAccount
-tags: [exported]
 ```
 
 ```Go
@@ -768,7 +739,6 @@ IsHostOfAccount returns true if the account belongs to given code host.
 
 ```
 searchKey: extsvc.NormalizeBaseURL
-tags: [exported]
 ```
 
 ```Go
@@ -781,6 +751,7 @@ NormalizeBaseURL modifies the input and returns a normalized form of the a base 
 
 ```
 searchKey: extsvc.mustParseURL
+tags: [private]
 ```
 
 ```Go
@@ -791,6 +762,7 @@ func mustParseURL(rawurl string) *url.URL
 
 ```
 searchKey: extsvc.setJSONOrError
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +773,7 @@ func setJSONOrError(field **json.RawMessage, value interface{})
 
 ```
 searchKey: extsvc.getJSONOrError
+tags: [private]
 ```
 
 ```Go
@@ -811,7 +784,6 @@ func getJSONOrError(field *json.RawMessage, v interface{}) error
 
 ```
 searchKey: extsvc.KindToType
-tags: [exported]
 ```
 
 ```Go
@@ -824,7 +796,6 @@ KindToType returns a Type constants given a Kind It will panic when given an unk
 
 ```
 searchKey: extsvc.TypeToKind
-tags: [exported]
 ```
 
 ```Go
@@ -837,7 +808,6 @@ TypeToKind returns a Kind constants given a Type It will panic when given an unk
 
 ```
 searchKey: extsvc.ParseServiceType
-tags: [exported]
 ```
 
 ```Go
@@ -850,7 +820,6 @@ ParseServiceType will return a ServiceType constant after doing a case insensiti
 
 ```
 searchKey: extsvc.ParseServiceKind
-tags: [exported]
 ```
 
 ```Go
@@ -863,7 +832,6 @@ ParseServiceKind will return a ServiceKind constant after doing a case insensiti
 
 ```
 searchKey: extsvc.ParseConfig
-tags: [exported]
 ```
 
 ```Go
@@ -876,7 +844,6 @@ ParseConfig attempts to unmarshal the given JSON config into a configuration str
 
 ```
 searchKey: extsvc.WebhookURL
-tags: [exported]
 ```
 
 ```Go
@@ -887,6 +854,7 @@ func WebhookURL(kind string, externalServiceID int64, externalURL string) string
 
 ```
 searchKey: extsvc.limitOrInf
+tags: [private]
 ```
 
 ```Go
@@ -897,7 +865,6 @@ func limitOrInf(enabled bool, perHour float64) rate.Limit
 
 ```
 searchKey: extsvc.URN
-tags: [exported]
 ```
 
 ```Go
@@ -910,7 +877,6 @@ URN returns a unique resource identifier of an external service by given kind an
 
 ```
 searchKey: extsvc.DecodeURN
-tags: [exported]
 ```
 
 ```Go
@@ -923,6 +889,7 @@ DecodeURN returns the kind of the external service and its ID.
 
 ```
 searchKey: extsvc.TestCodeHostOf
+tags: [private]
 ```
 
 ```Go
@@ -933,6 +900,7 @@ func TestCodeHostOf(t *testing.T)
 
 ```
 searchKey: extsvc.TestExtractRateLimitConfig
+tags: [private]
 ```
 
 ```Go
@@ -943,6 +911,7 @@ func TestExtractRateLimitConfig(t *testing.T)
 
 ```
 searchKey: extsvc.TestEncodeURN
+tags: [private]
 ```
 
 ```Go
@@ -953,6 +922,7 @@ func TestEncodeURN(t *testing.T)
 
 ```
 searchKey: extsvc.TestDecodeURN
+tags: [private]
 ```
 
 ```Go

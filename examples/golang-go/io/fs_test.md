@@ -43,10 +43,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="isValidPathTests" href="#isValidPathTests">var isValidPathTests</a>
 
 ```
 searchKey: fs_test.isValidPathTests
+tags: [private]
 ```
 
 ```Go
@@ -57,6 +62,7 @@ var isValidPathTests = ...
 
 ```
 searchKey: fs_test.globTests
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +73,7 @@ var globTests = ...
 
 ```
 searchKey: fs_test.testFsys
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +84,7 @@ var testFsys = ...
 
 ```
 searchKey: fs_test.sysValue
+tags: [private]
 ```
 
 ```Go
@@ -87,6 +95,7 @@ var sysValue int
 
 ```
 searchKey: fs_test.tree
+tags: [private]
 ```
 
 ```Go
@@ -95,10 +104,15 @@ var tree = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="globOnly" href="#globOnly">type globOnly struct</a>
 
 ```
 searchKey: fs_test.globOnly
+tags: [private]
 ```
 
 ```Go
@@ -109,6 +123,7 @@ type globOnly struct{ GlobFS }
 
 ```
 searchKey: fs_test.globOnly.Open
+tags: [private]
 ```
 
 ```Go
@@ -119,6 +134,7 @@ func (globOnly) Open(name string) (File, error)
 
 ```
 searchKey: fs_test.readDirOnly
+tags: [private]
 ```
 
 ```Go
@@ -129,6 +145,7 @@ type readDirOnly struct{ ReadDirFS }
 
 ```
 searchKey: fs_test.readDirOnly.Open
+tags: [private]
 ```
 
 ```Go
@@ -139,6 +156,7 @@ func (readDirOnly) Open(name string) (File, error)
 
 ```
 searchKey: fs_test.readFileOnly
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +167,7 @@ type readFileOnly struct{ ReadFileFS }
 
 ```
 searchKey: fs_test.readFileOnly.Open
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +178,7 @@ func (readFileOnly) Open(name string) (File, error)
 
 ```
 searchKey: fs_test.openOnly
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +189,7 @@ type openOnly struct{ FS }
 
 ```
 searchKey: fs_test.statOnly
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +200,7 @@ type statOnly struct{ StatFS }
 
 ```
 searchKey: fs_test.statOnly.Open
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +211,7 @@ func (statOnly) Open(name string) (File, error)
 
 ```
 searchKey: fs_test.subOnly
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +222,7 @@ type subOnly struct{ SubFS }
 
 ```
 searchKey: fs_test.subOnly.Open
+tags: [private]
 ```
 
 ```Go
@@ -209,6 +233,7 @@ func (subOnly) Open(name string) (File, error)
 
 ```
 searchKey: fs_test.Node
+tags: [private]
 ```
 
 ```Go
@@ -221,10 +246,15 @@ type Node struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleWalkDir" href="#ExampleWalkDir">func ExampleWalkDir()</a>
 
 ```
 searchKey: fs_test.ExampleWalkDir
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +265,7 @@ func ExampleWalkDir()
 
 ```
 searchKey: fs_test.TestValidPath
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +276,7 @@ func TestValidPath(t *testing.T)
 
 ```
 searchKey: fs_test.TestGlob
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +287,7 @@ func TestGlob(t *testing.T)
 
 ```
 searchKey: fs_test.TestGlobError
+tags: [private]
 ```
 
 ```Go
@@ -265,6 +298,7 @@ func TestGlobError(t *testing.T)
 
 ```
 searchKey: fs_test.contains
+tags: [private]
 ```
 
 ```Go
@@ -277,6 +311,7 @@ contains reports whether vector contains the string s.
 
 ```
 searchKey: fs_test.TestGlobMethod
+tags: [private]
 ```
 
 ```Go
@@ -287,6 +322,7 @@ func TestGlobMethod(t *testing.T)
 
 ```
 searchKey: fs_test.TestReadDir
+tags: [private]
 ```
 
 ```Go
@@ -297,6 +333,7 @@ func TestReadDir(t *testing.T)
 
 ```
 searchKey: fs_test.TestFileInfoToDirEntry
+tags: [private]
 ```
 
 ```Go
@@ -307,6 +344,7 @@ func TestFileInfoToDirEntry(t *testing.T)
 
 ```
 searchKey: fs_test.TestReadFile
+tags: [private]
 ```
 
 ```Go
@@ -317,6 +355,7 @@ func TestReadFile(t *testing.T)
 
 ```
 searchKey: fs_test.TestStat
+tags: [private]
 ```
 
 ```Go
@@ -327,6 +366,7 @@ func TestStat(t *testing.T)
 
 ```
 searchKey: fs_test.TestSub
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +377,7 @@ func TestSub(t *testing.T)
 
 ```
 searchKey: fs_test.walkTree
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +388,7 @@ func walkTree(n *Node, path string, f func(path string, n *Node))
 
 ```
 searchKey: fs_test.makeTree
+tags: [private]
 ```
 
 ```Go
@@ -357,6 +399,7 @@ func makeTree(t *testing.T) FS
 
 ```
 searchKey: fs_test.markTree
+tags: [private]
 ```
 
 ```Go
@@ -367,6 +410,7 @@ func markTree(n *Node)
 
 ```
 searchKey: fs_test.checkMarks
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +421,7 @@ func checkMarks(t *testing.T, report bool)
 
 ```
 searchKey: fs_test.mark
+tags: [private]
 ```
 
 ```Go
@@ -389,6 +434,7 @@ Assumes that each node name is unique. Good enough for a test. If clear is true,
 
 ```
 searchKey: fs_test.TestWalkDir
+tags: [private]
 ```
 
 ```Go

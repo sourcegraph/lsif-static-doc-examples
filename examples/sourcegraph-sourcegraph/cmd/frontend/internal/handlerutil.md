@@ -12,7 +12,7 @@ Package handlerutil contains common helper functions used by both the app and AP
     * [type HandlerWithErrorReturn struct](#HandlerWithErrorReturn)
         * [func (h HandlerWithErrorReturn) ServeHTTP(w http.ResponseWriter, r *http.Request)](#HandlerWithErrorReturn.ServeHTTP)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.error_reporting.go)
     * [func reportError(r *http.Request, status int, err error, panicked bool)](#reportError)
     * [func httpErrCode(r *http.Request, err error) int](#httpErrCode)
     * [func collapseMultipleErrors(err error) error](#collapseMultipleErrors)
@@ -26,10 +26,15 @@ Package handlerutil contains common helper functions used by both the app and AP
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ravenClient" href="#ravenClient">var ravenClient</a>
 
 ```
 searchKey: handlerutil.ravenClient
+tags: [private]
 ```
 
 ```Go
@@ -38,11 +43,14 @@ var ravenClient *raven.Client
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="URLMovedError" href="#URLMovedError">type URLMovedError struct</a>
 
 ```
 searchKey: handlerutil.URLMovedError
-tags: [exported]
 ```
 
 ```Go
@@ -57,7 +65,6 @@ URLMovedError should be returned when a requested resource has moved to a new ad
 
 ```
 searchKey: handlerutil.URLMovedError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -68,7 +75,6 @@ func (e *URLMovedError) Error() string
 
 ```
 searchKey: handlerutil.HandlerWithErrorReturn
-tags: [exported]
 ```
 
 ```Go
@@ -88,7 +94,6 @@ Error must never panic. If it has to execute something that may panic (for examp
 
 ```
 searchKey: handlerutil.HandlerWithErrorReturn.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -97,10 +102,15 @@ func (h HandlerWithErrorReturn) ServeHTTP(w http.ResponseWriter, r *http.Request
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.error_reporting.go" href="#init.error_reporting.go">func init()</a>
 
 ```
 searchKey: handlerutil.init
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +121,7 @@ func init()
 
 ```
 searchKey: handlerutil.reportError
+tags: [private]
 ```
 
 ```Go
@@ -123,6 +134,7 @@ reportError reports an error to Sentry.
 
 ```
 searchKey: handlerutil.httpErrCode
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +147,7 @@ httpErrCode maps an error to a status code. If the client canceled the request w
 
 ```
 searchKey: handlerutil.collapseMultipleErrors
+tags: [private]
 ```
 
 ```Go
@@ -147,7 +160,6 @@ collapseMultipleErrors returns the first err if err is a parallel.Errors list of
 
 ```
 searchKey: handlerutil.CSRFMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -160,7 +172,6 @@ CSRFMiddleware is HTTP middleware that helps prevent cross-site request forgery.
 
 ```
 searchKey: handlerutil.GetRepo
-tags: [exported]
 ```
 
 ```Go
@@ -173,6 +184,7 @@ GetRepo gets the repo (from the reposSvc) specified in the URL's Repo route para
 
 ```
 searchKey: handlerutil.getRepoRev
+tags: [private]
 ```
 
 ```Go
@@ -185,7 +197,6 @@ getRepoRev resolves the repository and commit specified in the route vars.
 
 ```
 searchKey: handlerutil.GetRepoAndRev
-tags: [exported]
 ```
 
 ```Go
@@ -198,7 +209,6 @@ GetRepoAndRev returns the repo object and the commit ID for a repository. It may
 
 ```
 searchKey: handlerutil.RedirectToNewRepoName
-tags: [exported]
 ```
 
 ```Go
@@ -211,6 +221,7 @@ RedirectToNewRepoName writes an HTTP redirect response with a Location that matc
 
 ```
 searchKey: handlerutil.TestGetRepo
+tags: [private]
 ```
 
 ```Go

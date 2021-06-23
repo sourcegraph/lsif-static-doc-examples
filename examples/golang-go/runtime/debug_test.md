@@ -27,10 +27,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="big" href="#big">var big</a>
 
 ```
 searchKey: debug_test.big
+tags: [private]
 ```
 
 ```Go
@@ -41,6 +46,7 @@ var big = make([]byte, 1<<20)
 
 ```
 searchKey: debug_test.setGCPercentBallast
+tags: [private]
 ```
 
 ```Go
@@ -51,6 +57,7 @@ var setGCPercentBallast interface{}
 
 ```
 searchKey: debug_test.setGCPercentSink
+tags: [private]
 ```
 
 ```Go
@@ -59,10 +66,15 @@ var setGCPercentSink interface{}
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Obj" href="#Obj">type Obj struct</a>
 
 ```
 searchKey: debug_test.Obj
+tags: [private]
 ```
 
 ```Go
@@ -75,6 +87,7 @@ type Obj struct {
 
 ```
 searchKey: debug_test.T
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +98,7 @@ type T int
 
 ```
 searchKey: debug_test.T.ptrmethod
+tags: [private]
 ```
 
 ```Go
@@ -95,6 +109,7 @@ func (t *T) ptrmethod() []byte
 
 ```
 searchKey: debug_test.T.method
+tags: [private]
 ```
 
 ```Go
@@ -103,10 +118,15 @@ func (t T) method() []byte
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestReadGCStats" href="#TestReadGCStats">func TestReadGCStats(t *testing.T)</a>
 
 ```
 searchKey: debug_test.TestReadGCStats
+tags: [private]
 ```
 
 ```Go
@@ -117,6 +137,7 @@ func TestReadGCStats(t *testing.T)
 
 ```
 searchKey: debug_test.TestFreeOSMemory
+tags: [private]
 ```
 
 ```Go
@@ -127,6 +148,7 @@ func TestFreeOSMemory(t *testing.T)
 
 ```
 searchKey: debug_test.TestSetGCPercent
+tags: [private]
 ```
 
 ```Go
@@ -137,6 +159,7 @@ func TestSetGCPercent(t *testing.T)
 
 ```
 searchKey: debug_test.abs64
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +170,7 @@ func abs64(a int64) int64
 
 ```
 searchKey: debug_test.TestSetMaxThreadsOvf
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +181,7 @@ func TestSetMaxThreadsOvf(t *testing.T)
 
 ```
 searchKey: debug_test.TestWriteHeapDumpNonempty
+tags: [private]
 ```
 
 ```Go
@@ -167,6 +192,7 @@ func TestWriteHeapDumpNonempty(t *testing.T)
 
 ```
 searchKey: debug_test.objfin
+tags: [private]
 ```
 
 ```Go
@@ -177,6 +203,7 @@ func objfin(x *Obj)
 
 ```
 searchKey: debug_test.TestWriteHeapDumpFinalizers
+tags: [private]
 ```
 
 ```Go
@@ -187,6 +214,7 @@ func TestWriteHeapDumpFinalizers(t *testing.T)
 
 ```
 searchKey: debug_test.TestPanicOnFault
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +225,7 @@ func TestPanicOnFault(t *testing.T)
 
 ```
 searchKey: debug_test.TestStack
+tags: [private]
 ```
 
 ```Go
@@ -225,6 +254,7 @@ created by testing.RunTests
 
 ```
 searchKey: debug_test.check
+tags: [private]
 ```
 
 ```Go

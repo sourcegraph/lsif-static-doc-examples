@@ -4,7 +4,9 @@
     "identifier": "dbworker",
     "newPage": true,
     "searchKey": "internal/workerutil/dbworker",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ErrNotConditions",
                 "newPage": false,
                 "searchKey": "dbworker.ErrNotConditions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +67,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,9 +87,7 @@
                 "identifier": "Handler",
                 "newPage": false,
                 "searchKey": "dbworker.Handler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -105,9 +107,7 @@
                 "identifier": "HandlerFunc",
                 "newPage": false,
                 "searchKey": "dbworker.HandlerFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -125,9 +125,7 @@
                       "identifier": "HandlerFunc.Handle",
                       "newPage": false,
                       "searchKey": "dbworker.HandlerFunc.Handle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -150,7 +148,9 @@
                 "identifier": "handlerShim",
                 "newPage": false,
                 "searchKey": "dbworker.handlerShim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +168,9 @@
                       "identifier": "handlerShim.Handle",
                       "newPage": false,
                       "searchKey": "dbworker.handlerShim.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -188,7 +190,9 @@
                       "identifier": "handlerShim.PreDequeue",
                       "newPage": false,
                       "searchKey": "dbworker.handlerShim.PreDequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -208,7 +212,9 @@
                       "identifier": "handlerShim.PreHandle",
                       "newPage": false,
                       "searchKey": "dbworker.handlerShim.PreHandle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -228,7 +234,9 @@
                       "identifier": "handlerShim.PostHandle",
                       "newPage": false,
                       "searchKey": "dbworker.handlerShim.PostHandle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -251,9 +259,7 @@
                 "identifier": "Resetter",
                 "newPage": false,
                 "searchKey": "dbworker.Resetter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -271,9 +277,7 @@
                       "identifier": "NewResetter",
                       "newPage": false,
                       "searchKey": "dbworker.NewResetter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -293,7 +297,9 @@
                       "identifier": "newResetter",
                       "newPage": false,
                       "searchKey": "dbworker.newResetter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -313,9 +319,7 @@
                       "identifier": "Resetter.Start",
                       "newPage": false,
                       "searchKey": "dbworker.Resetter.Start",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -335,9 +339,7 @@
                       "identifier": "Resetter.Stop",
                       "newPage": false,
                       "searchKey": "dbworker.Resetter.Stop",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -360,9 +362,7 @@
                 "identifier": "ResetterOptions",
                 "newPage": false,
                 "searchKey": "dbworker.ResetterOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -382,9 +382,7 @@
                 "identifier": "ResetterMetrics",
                 "newPage": false,
                 "searchKey": "dbworker.ResetterMetrics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -404,7 +402,9 @@
                 "identifier": "storeShim",
                 "newPage": false,
                 "searchKey": "dbworker.storeShim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -422,7 +422,9 @@
                       "identifier": "storeShim.QueuedCount",
                       "newPage": false,
                       "searchKey": "dbworker.storeShim.QueuedCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -442,7 +444,9 @@
                       "identifier": "storeShim.Dequeue",
                       "newPage": false,
                       "searchKey": "dbworker.storeShim.Dequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -468,7 +472,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -486,7 +492,9 @@
                 "identifier": "newHandlerShim",
                 "newPage": false,
                 "searchKey": "dbworker.newHandlerShim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -506,7 +514,9 @@
                 "identifier": "newStoreShim",
                 "newPage": false,
                 "searchKey": "dbworker.newStoreShim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -526,7 +536,9 @@
                 "identifier": "convertArguments",
                 "newPage": false,
                 "searchKey": "dbworker.convertArguments",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -546,9 +558,7 @@
                 "identifier": "NewWorker",
                 "newPage": false,
                 "searchKey": "dbworker.NewWorker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -568,7 +578,9 @@
                 "identifier": "TestResetter",
                 "newPage": false,
                 "searchKey": "dbworker.TestResetter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

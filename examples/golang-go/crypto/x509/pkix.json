@@ -4,9 +4,7 @@
     "identifier": "pkix",
     "newPage": true,
     "searchKey": "crypto/x509/pkix",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "attributeTypeNames",
                 "newPage": false,
                 "searchKey": "pkix.attributeTypeNames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "oidCountry",
                 "newPage": false,
                 "searchKey": "pkix.oidCountry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "oidOrganization",
                 "newPage": false,
                 "searchKey": "pkix.oidOrganization",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "oidOrganizationalUnit",
                 "newPage": false,
                 "searchKey": "pkix.oidOrganizationalUnit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "oidCommonName",
                 "newPage": false,
                 "searchKey": "pkix.oidCommonName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "oidSerialNumber",
                 "newPage": false,
                 "searchKey": "pkix.oidSerialNumber",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "oidLocality",
                 "newPage": false,
                 "searchKey": "pkix.oidLocality",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "oidProvince",
                 "newPage": false,
                 "searchKey": "pkix.oidProvince",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                 "identifier": "oidStreetAddress",
                 "newPage": false,
                 "searchKey": "pkix.oidStreetAddress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +238,9 @@
                 "identifier": "oidPostalCode",
                 "newPage": false,
                 "searchKey": "pkix.oidPostalCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,9 +263,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -267,9 +281,7 @@
                 "identifier": "AlgorithmIdentifier",
                 "newPage": false,
                 "searchKey": "pkix.AlgorithmIdentifier",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -289,9 +301,7 @@
                 "identifier": "RDNSequence",
                 "newPage": false,
                 "searchKey": "pkix.RDNSequence",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -309,9 +319,7 @@
                       "identifier": "RDNSequence.String",
                       "newPage": false,
                       "searchKey": "pkix.RDNSequence.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -334,9 +342,7 @@
                 "identifier": "RelativeDistinguishedNameSET",
                 "newPage": false,
                 "searchKey": "pkix.RelativeDistinguishedNameSET",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -356,9 +362,7 @@
                 "identifier": "AttributeTypeAndValue",
                 "newPage": false,
                 "searchKey": "pkix.AttributeTypeAndValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -378,9 +382,7 @@
                 "identifier": "AttributeTypeAndValueSET",
                 "newPage": false,
                 "searchKey": "pkix.AttributeTypeAndValueSET",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -400,9 +402,7 @@
                 "identifier": "Extension",
                 "newPage": false,
                 "searchKey": "pkix.Extension",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -422,9 +422,7 @@
                 "identifier": "Name",
                 "newPage": false,
                 "searchKey": "pkix.Name",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -442,9 +440,7 @@
                       "identifier": "Name.FillFromRDNSequence",
                       "newPage": false,
                       "searchKey": "pkix.Name.FillFromRDNSequence",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -464,7 +460,9 @@
                       "identifier": "Name.appendRDNs",
                       "newPage": false,
                       "searchKey": "pkix.Name.appendRDNs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -484,9 +482,7 @@
                       "identifier": "Name.ToRDNSequence",
                       "newPage": false,
                       "searchKey": "pkix.Name.ToRDNSequence",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -506,9 +502,7 @@
                       "identifier": "Name.String",
                       "newPage": false,
                       "searchKey": "pkix.Name.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -531,9 +525,7 @@
                 "identifier": "CertificateList",
                 "newPage": false,
                 "searchKey": "pkix.CertificateList",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -551,9 +543,7 @@
                       "identifier": "CertificateList.HasExpired",
                       "newPage": false,
                       "searchKey": "pkix.CertificateList.HasExpired",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -576,9 +566,7 @@
                 "identifier": "TBSCertificateList",
                 "newPage": false,
                 "searchKey": "pkix.TBSCertificateList",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -598,9 +586,7 @@
                 "identifier": "RevokedCertificate",
                 "newPage": false,
                 "searchKey": "pkix.RevokedCertificate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -623,9 +609,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -643,7 +627,9 @@
                 "identifier": "oidInAttributeTypeAndValue",
                 "newPage": false,
                 "searchKey": "pkix.oidInAttributeTypeAndValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

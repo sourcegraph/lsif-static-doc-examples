@@ -63,7 +63,7 @@ Currently only the responder role is supported.
         * [func (c *child) cleanUp()](#child.cleanUp)
     * [type recType uint8](#recType)
     * [type header struct](#header)
-        * [func (h *header) init(recType recType, reqId uint16, contentLength int)](#header.init)
+        * [func (h *header) init(recType recType, reqId uint16, contentLength int)](#header.init.fcgi.go)
     * [type beginRequest struct](#beginRequest)
         * [func (br *beginRequest) read(content []byte) error](#beginRequest.read)
     * [type conn struct](#conn)
@@ -117,14 +117,11 @@ Currently only the responder role is supported.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="typeBeginRequest" href="#typeBeginRequest">const typeBeginRequest</a>
 
 ```
 searchKey: fcgi.typeBeginRequest
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +132,7 @@ const typeBeginRequest recType = 1
 
 ```
 searchKey: fcgi.typeAbortRequest
+tags: [private]
 ```
 
 ```Go
@@ -145,6 +143,7 @@ const typeAbortRequest recType = 2
 
 ```
 searchKey: fcgi.typeEndRequest
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +154,7 @@ const typeEndRequest recType = 3
 
 ```
 searchKey: fcgi.typeParams
+tags: [private]
 ```
 
 ```Go
@@ -165,6 +165,7 @@ const typeParams recType = 4
 
 ```
 searchKey: fcgi.typeStdin
+tags: [private]
 ```
 
 ```Go
@@ -175,6 +176,7 @@ const typeStdin recType = 5
 
 ```
 searchKey: fcgi.typeStdout
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +187,7 @@ const typeStdout recType = 6
 
 ```
 searchKey: fcgi.typeStderr
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +198,7 @@ const typeStderr recType = 7
 
 ```
 searchKey: fcgi.typeData
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +209,7 @@ const typeData recType = 8
 
 ```
 searchKey: fcgi.typeGetValues
+tags: [private]
 ```
 
 ```Go
@@ -215,6 +220,7 @@ const typeGetValues recType = 9
 
 ```
 searchKey: fcgi.typeGetValuesResult
+tags: [private]
 ```
 
 ```Go
@@ -225,6 +231,7 @@ const typeGetValuesResult recType = 10
 
 ```
 searchKey: fcgi.typeUnknownType
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +242,7 @@ const typeUnknownType recType = 11
 
 ```
 searchKey: fcgi.flagKeepConn
+tags: [private]
 ```
 
 ```Go
@@ -247,6 +255,7 @@ keep the connection between web-server and responder open after request
 
 ```
 searchKey: fcgi.maxWrite
+tags: [private]
 ```
 
 ```Go
@@ -258,6 +267,7 @@ const maxWrite = 65535 // maximum record body
 
 ```
 searchKey: fcgi.maxPad
+tags: [private]
 ```
 
 ```Go
@@ -268,6 +278,7 @@ const maxPad = 255
 
 ```
 searchKey: fcgi.roleResponder
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +290,7 @@ const roleResponder = iota + 1 // only Responders are implemented.
 
 ```
 searchKey: fcgi.roleAuthorizer
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +301,7 @@ const roleAuthorizer
 
 ```
 searchKey: fcgi.roleFilter
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +312,7 @@ const roleFilter
 
 ```
 searchKey: fcgi.statusRequestComplete
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +323,7 @@ const statusRequestComplete = iota
 
 ```
 searchKey: fcgi.statusCantMultiplex
+tags: [private]
 ```
 
 ```Go
@@ -319,6 +334,7 @@ const statusCantMultiplex
 
 ```
 searchKey: fcgi.statusOverloaded
+tags: [private]
 ```
 
 ```Go
@@ -329,6 +345,7 @@ const statusOverloaded
 
 ```
 searchKey: fcgi.statusUnknownRole
+tags: [private]
 ```
 
 ```Go
@@ -337,14 +354,11 @@ const statusUnknownRole
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="errCloseConn" href="#errCloseConn">var errCloseConn</a>
 
 ```
 searchKey: fcgi.errCloseConn
+tags: [private]
 ```
 
 ```Go
@@ -355,6 +369,7 @@ var errCloseConn = errors.New("fcgi: connection should be closed")
 
 ```
 searchKey: fcgi.emptyBody
+tags: [private]
 ```
 
 ```Go
@@ -365,7 +380,6 @@ var emptyBody = io.NopCloser(strings.NewReader(""))
 
 ```
 searchKey: fcgi.ErrRequestAborted
-tags: [exported]
 ```
 
 ```Go
@@ -378,7 +392,6 @@ ErrRequestAborted is returned by Read when a handler attempts to read the body o
 
 ```
 searchKey: fcgi.ErrConnClosed
-tags: [exported]
 ```
 
 ```Go
@@ -391,6 +404,7 @@ ErrConnClosed is returned by Read when a handler attempts to read the body of a 
 
 ```
 searchKey: fcgi.pad
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +417,7 @@ for padding so we don't have to allocate all the time not synchronized because w
 
 ```
 searchKey: fcgi.sizeTests
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +428,7 @@ var sizeTests = ...
 
 ```
 searchKey: fcgi.streamTests
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +439,7 @@ var streamTests = ...
 
 ```
 searchKey: fcgi.streamBeginTypeStdin
+tags: [private]
 ```
 
 ```Go
@@ -435,6 +452,7 @@ a series of FastCGI records that start a request and begin sending the request b
 
 ```
 searchKey: fcgi.cleanUpTests
+tags: [private]
 ```
 
 ```Go
@@ -445,6 +463,7 @@ var cleanUpTests = ...
 
 ```
 searchKey: fcgi.streamFullRequestStdin
+tags: [private]
 ```
 
 ```Go
@@ -457,6 +476,7 @@ a series of FastCGI records that start and end a request
 
 ```
 searchKey: fcgi.envVarTests
+tags: [private]
 ```
 
 ```Go
@@ -465,14 +485,11 @@ var envVarTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="request" href="#request">type request struct</a>
 
 ```
 searchKey: fcgi.request
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +509,7 @@ request holds the state for an in-progress request. As soon as it's complete, it
 
 ```
 searchKey: fcgi.newRequest
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +520,7 @@ func newRequest(reqId uint16, flags uint8) *request
 
 ```
 searchKey: fcgi.request.parseParams
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +533,7 @@ parseParams reads an encoded []byte into Params.
 
 ```
 searchKey: fcgi.envVarsContextKey
+tags: [private]
 ```
 
 ```Go
@@ -526,6 +546,7 @@ envVarsContextKey uniquely identifies a mapping of CGI environment variables to 
 
 ```
 searchKey: fcgi.response
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +566,7 @@ response implements http.ResponseWriter.
 
 ```
 searchKey: fcgi.newResponse
+tags: [private]
 ```
 
 ```Go
@@ -555,6 +577,7 @@ func newResponse(c *child, req *request) *response
 
 ```
 searchKey: fcgi.response.Header
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +588,7 @@ func (r *response) Header() http.Header
 
 ```
 searchKey: fcgi.response.Write
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +599,7 @@ func (r *response) Write(p []byte) (n int, err error)
 
 ```
 searchKey: fcgi.response.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +610,7 @@ func (r *response) WriteHeader(code int)
 
 ```
 searchKey: fcgi.response.writeCGIHeader
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +623,7 @@ writeCGIHeader finalizes the header sent to the client and writes it to the outp
 
 ```
 searchKey: fcgi.response.Flush
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +634,7 @@ func (r *response) Flush()
 
 ```
 searchKey: fcgi.response.Close
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +645,7 @@ func (r *response) Close() error
 
 ```
 searchKey: fcgi.child
+tags: [private]
 ```
 
 ```Go
@@ -632,6 +661,7 @@ type child struct {
 
 ```
 searchKey: fcgi.newChild
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +672,7 @@ func newChild(rwc io.ReadWriteCloser, handler http.Handler) *child
 
 ```
 searchKey: fcgi.child.serve
+tags: [private]
 ```
 
 ```Go
@@ -652,6 +683,7 @@ func (c *child) serve()
 
 ```
 searchKey: fcgi.child.handleRecord
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +694,7 @@ func (c *child) handleRecord(rec *record) error
 
 ```
 searchKey: fcgi.child.serveRequest
+tags: [private]
 ```
 
 ```Go
@@ -672,6 +705,7 @@ func (c *child) serveRequest(req *request, body io.ReadCloser)
 
 ```
 searchKey: fcgi.child.cleanUp
+tags: [private]
 ```
 
 ```Go
@@ -682,6 +716,7 @@ func (c *child) cleanUp()
 
 ```
 searchKey: fcgi.recType
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +729,7 @@ recType is a record type, as defined by [https://web.archive.org/web/20150420080
 
 ```
 searchKey: fcgi.header
+tags: [private]
 ```
 
 ```Go
@@ -707,10 +743,11 @@ type header struct {
 }
 ```
 
-#### <a id="header.init" href="#header.init">func (h *header) init(recType recType, reqId uint16, contentLength int)</a>
+#### <a id="header.init.fcgi.go" href="#header.init.fcgi.go">func (h *header) init(recType recType, reqId uint16, contentLength int)</a>
 
 ```
 searchKey: fcgi.header.init
+tags: [private]
 ```
 
 ```Go
@@ -721,6 +758,7 @@ func (h *header) init(recType recType, reqId uint16, contentLength int)
 
 ```
 searchKey: fcgi.beginRequest
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +773,7 @@ type beginRequest struct {
 
 ```
 searchKey: fcgi.beginRequest.read
+tags: [private]
 ```
 
 ```Go
@@ -745,6 +784,7 @@ func (br *beginRequest) read(content []byte) error
 
 ```
 searchKey: fcgi.conn
+tags: [private]
 ```
 
 ```Go
@@ -764,6 +804,7 @@ conn sends records over rwc
 
 ```
 searchKey: fcgi.newConn
+tags: [private]
 ```
 
 ```Go
@@ -774,6 +815,7 @@ func newConn(rwc io.ReadWriteCloser) *conn
 
 ```
 searchKey: fcgi.conn.Close
+tags: [private]
 ```
 
 ```Go
@@ -784,6 +826,7 @@ func (c *conn) Close() error
 
 ```
 searchKey: fcgi.conn.writeRecord
+tags: [private]
 ```
 
 ```Go
@@ -796,6 +839,7 @@ writeRecord writes and sends a single record.
 
 ```
 searchKey: fcgi.conn.writeEndRequest
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +850,7 @@ func (c *conn) writeEndRequest(reqId uint16, appStatus int, protocolStatus uint8
 
 ```
 searchKey: fcgi.conn.writePairs
+tags: [private]
 ```
 
 ```Go
@@ -816,6 +861,7 @@ func (c *conn) writePairs(recType recType, reqId uint16, pairs map[string]string
 
 ```
 searchKey: fcgi.record
+tags: [private]
 ```
 
 ```Go
@@ -829,6 +875,7 @@ type record struct {
 
 ```
 searchKey: fcgi.record.read
+tags: [private]
 ```
 
 ```Go
@@ -839,6 +886,7 @@ func (rec *record) read(r io.Reader) (err error)
 
 ```
 searchKey: fcgi.record.content
+tags: [private]
 ```
 
 ```Go
@@ -849,6 +897,7 @@ func (r *record) content() []byte
 
 ```
 searchKey: fcgi.bufWriter
+tags: [private]
 ```
 
 ```Go
@@ -864,6 +913,7 @@ bufWriter encapsulates bufio.Writer but also closes the underlying stream when C
 
 ```
 searchKey: fcgi.newWriter
+tags: [private]
 ```
 
 ```Go
@@ -874,6 +924,7 @@ func newWriter(c *conn, recType recType, reqId uint16) *bufWriter
 
 ```
 searchKey: fcgi.bufWriter.Close
+tags: [private]
 ```
 
 ```Go
@@ -884,6 +935,7 @@ func (w *bufWriter) Close() error
 
 ```
 searchKey: fcgi.streamWriter
+tags: [private]
 ```
 
 ```Go
@@ -900,6 +952,7 @@ streamWriter abstracts out the separation of a stream into discrete records. It 
 
 ```
 searchKey: fcgi.streamWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -910,6 +963,7 @@ func (w *streamWriter) Write(p []byte) (int, error)
 
 ```
 searchKey: fcgi.streamWriter.Close
+tags: [private]
 ```
 
 ```Go
@@ -920,6 +974,7 @@ func (w *streamWriter) Close() error
 
 ```
 searchKey: fcgi.nilCloser
+tags: [private]
 ```
 
 ```Go
@@ -932,6 +987,7 @@ type nilCloser struct {
 
 ```
 searchKey: fcgi.nilCloser.Close
+tags: [private]
 ```
 
 ```Go
@@ -942,6 +998,7 @@ func (c *nilCloser) Close() error
 
 ```
 searchKey: fcgi.writeOnlyConn
+tags: [private]
 ```
 
 ```Go
@@ -954,6 +1011,7 @@ type writeOnlyConn struct {
 
 ```
 searchKey: fcgi.writeOnlyConn.Write
+tags: [private]
 ```
 
 ```Go
@@ -964,6 +1022,7 @@ func (c *writeOnlyConn) Write(p []byte) (int, error)
 
 ```
 searchKey: fcgi.writeOnlyConn.Read
+tags: [private]
 ```
 
 ```Go
@@ -974,6 +1033,7 @@ func (c *writeOnlyConn) Read(p []byte) (int, error)
 
 ```
 searchKey: fcgi.writeOnlyConn.Close
+tags: [private]
 ```
 
 ```Go
@@ -984,6 +1044,7 @@ func (c *writeOnlyConn) Close() error
 
 ```
 searchKey: fcgi.nopWriteCloser
+tags: [private]
 ```
 
 ```Go
@@ -996,6 +1057,7 @@ type nopWriteCloser struct {
 
 ```
 searchKey: fcgi.nopWriteCloser.Write
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +1068,7 @@ func (nopWriteCloser) Write(buf []byte) (int, error)
 
 ```
 searchKey: fcgi.nopWriteCloser.Close
+tags: [private]
 ```
 
 ```Go
@@ -1016,6 +1079,7 @@ func (nopWriteCloser) Close() error
 
 ```
 searchKey: fcgi.rwNopCloser
+tags: [private]
 ```
 
 ```Go
@@ -1029,6 +1093,7 @@ type rwNopCloser struct {
 
 ```
 searchKey: fcgi.rwNopCloser.Close
+tags: [private]
 ```
 
 ```Go
@@ -1039,6 +1104,7 @@ func (rwNopCloser) Close() error
 
 ```
 searchKey: fcgi.signallingNopCloser
+tags: [private]
 ```
 
 ```Go
@@ -1052,6 +1118,7 @@ type signallingNopCloser struct {
 
 ```
 searchKey: fcgi.signallingNopCloser.Write
+tags: [private]
 ```
 
 ```Go
@@ -1062,6 +1129,7 @@ func (*signallingNopCloser) Write(buf []byte) (int, error)
 
 ```
 searchKey: fcgi.signallingNopCloser.Close
+tags: [private]
 ```
 
 ```Go
@@ -1070,14 +1138,11 @@ func (rc *signallingNopCloser) Close() error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="filterOutUsedEnvVars" href="#filterOutUsedEnvVars">func filterOutUsedEnvVars(envVars map[string]string) map[string]string</a>
 
 ```
 searchKey: fcgi.filterOutUsedEnvVars
+tags: [private]
 ```
 
 ```Go
@@ -1090,7 +1155,6 @@ filterOutUsedEnvVars returns a new map of env vars without the variables in the 
 
 ```
 searchKey: fcgi.Serve
-tags: [exported]
 ```
 
 ```Go
@@ -1103,7 +1167,6 @@ Serve accepts incoming FastCGI connections on the listener l, creating a new gor
 
 ```
 searchKey: fcgi.ProcessEnv
-tags: [exported]
 ```
 
 ```Go
@@ -1116,6 +1179,7 @@ ProcessEnv returns FastCGI environment variables associated with the request r f
 
 ```
 searchKey: fcgi.addFastCGIEnvToContext
+tags: [private]
 ```
 
 ```Go
@@ -1128,6 +1192,7 @@ addFastCGIEnvToContext reports whether to include the FastCGI environment variab
 
 ```
 searchKey: fcgi.readSize
+tags: [private]
 ```
 
 ```Go
@@ -1138,6 +1203,7 @@ func readSize(s []byte) (uint32, int)
 
 ```
 searchKey: fcgi.readString
+tags: [private]
 ```
 
 ```Go
@@ -1148,6 +1214,7 @@ func readString(s []byte, size uint32) string
 
 ```
 searchKey: fcgi.encodeSize
+tags: [private]
 ```
 
 ```Go
@@ -1158,6 +1225,7 @@ func encodeSize(b []byte, size uint32) int
 
 ```
 searchKey: fcgi.TestSize
+tags: [private]
 ```
 
 ```Go
@@ -1168,6 +1236,7 @@ func TestSize(t *testing.T)
 
 ```
 searchKey: fcgi.TestStreams
+tags: [private]
 ```
 
 ```Go
@@ -1178,6 +1247,7 @@ func TestStreams(t *testing.T)
 
 ```
 searchKey: fcgi.TestGetValues
+tags: [private]
 ```
 
 ```Go
@@ -1188,6 +1258,7 @@ func TestGetValues(t *testing.T)
 
 ```
 searchKey: fcgi.nameValuePair11
+tags: [private]
 ```
 
 ```Go
@@ -1198,6 +1269,7 @@ func nameValuePair11(nameData, valueData string) []byte
 
 ```
 searchKey: fcgi.makeRecord
+tags: [private]
 ```
 
 ```Go
@@ -1212,6 +1284,7 @@ func makeRecord(
 
 ```
 searchKey: fcgi.TestChildServeCleansUp
+tags: [private]
 ```
 
 ```Go
@@ -1224,6 +1297,7 @@ Test that child.serve closes the bodies of aborted requests and closes the bodie
 
 ```
 searchKey: fcgi.TestMalformedParams
+tags: [private]
 ```
 
 ```Go
@@ -1236,6 +1310,7 @@ Verifies it doesn't crash. 	Issue 11824.
 
 ```
 searchKey: fcgi.TestChildServeReadsEnvVars
+tags: [private]
 ```
 
 ```Go
@@ -1248,6 +1323,7 @@ Test that environment variables set for a request can be read by a handler. Ensu
 
 ```
 searchKey: fcgi.TestResponseWriterSniffsContentType
+tags: [private]
 ```
 
 ```Go
@@ -1258,6 +1334,7 @@ func TestResponseWriterSniffsContentType(t *testing.T)
 
 ```
 searchKey: fcgi.TestSlowRequest
+tags: [private]
 ```
 
 ```Go

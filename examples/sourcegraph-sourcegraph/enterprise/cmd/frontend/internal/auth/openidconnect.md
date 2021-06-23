@@ -37,11 +37,11 @@ Package openidconnect implements auth via OIDC.
     * [type sessionData struct](#sessionData)
     * [type providerJSON struct](#providerJSON)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.config.go)
     * [func validateConfig(c conf.Unified) (problems conf.Problems)](#validateConfig)
     * [func providerConfigID(pc *schema.OpenIDConnectAuthProvider) string](#providerConfigID)
     * [func getProviders() []providers.Provider](#getProviders)
-    * [func init()](#init)
+    * [func init()](#init.config_watch.go)
     * [func handleOpenIDConnectAuth(w http.ResponseWriter, r *http.Request, next http.Handler, isAPIRequest bool)](#handleOpenIDConnectAuth)
     * [func authHandler(w http.ResponseWriter, r *http.Request)](#authHandler)
     * [func redirectToAuthRequest(w http.ResponseWriter, r *http.Request, p *provider, returnToURL string)](#redirectToAuthRequest)
@@ -57,10 +57,15 @@ Package openidconnect implements auth via OIDC.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="stateCookieName" href="#stateCookieName">const stateCookieName</a>
 
 ```
 searchKey: openidconnect.stateCookieName
+tags: [private]
 ```
 
 ```Go
@@ -71,6 +76,7 @@ const stateCookieName = "sg-oidc-state"
 
 ```
 searchKey: openidconnect.authPrefix
+tags: [private]
 ```
 
 ```Go
@@ -83,6 +89,7 @@ All OpenID Connect endpoints are under this path prefix.
 
 ```
 searchKey: openidconnect.stateCookieTimeout
+tags: [private]
 ```
 
 ```Go
@@ -93,6 +100,7 @@ const stateCookieTimeout = time.Minute * 15
 
 ```
 searchKey: openidconnect.providerType
+tags: [private]
 ```
 
 ```Go
@@ -103,6 +111,7 @@ const providerType = "openidconnect"
 
 ```
 searchKey: openidconnect.sessionKey
+tags: [private]
 ```
 
 ```Go
@@ -111,10 +120,15 @@ const sessionKey = "oidc@0"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="mockGetProviderValue" href="#mockGetProviderValue">var mockGetProviderValue</a>
 
 ```
 searchKey: openidconnect.mockGetProviderValue
+tags: [private]
 ```
 
 ```Go
@@ -125,7 +139,6 @@ var mockGetProviderValue *provider
 
 ```
 searchKey: openidconnect.Middleware
-tags: [exported]
 ```
 
 ```Go
@@ -144,6 +157,7 @@ This middleware implements two things: (1) the OIDC Authorization Code Flow ([ht
 
 ```
 searchKey: openidconnect.mockVerifyIDToken
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +170,7 @@ mockVerifyIDToken mocks the OIDC ID Token verification step. It should only be s
 
 ```
 searchKey: openidconnect.mockNewProvider
+tags: [private]
 ```
 
 ```Go
@@ -166,6 +181,7 @@ var mockNewProvider func(issuerURL string) (*oidcProvider, error)
 
 ```
 searchKey: openidconnect.testOIDCUser
+tags: [private]
 ```
 
 ```Go
@@ -176,6 +192,7 @@ var testOIDCUser = "bob-test-user"
 
 ```
 searchKey: openidconnect.testClientID
+tags: [private]
 ```
 
 ```Go
@@ -184,10 +201,15 @@ var testClientID = "aaaaaaaaaaaaaa"
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="userClaims" href="#userClaims">type userClaims struct</a>
 
 ```
 searchKey: openidconnect.userClaims
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +227,7 @@ type userClaims struct {
 
 ```
 searchKey: openidconnect.authnState
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +246,7 @@ authnState is the state parameter passed to the Authn request and returned in th
 
 ```
 searchKey: openidconnect.authnState.Encode
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +259,7 @@ Encode returns the base64-encoded JSON representation of the authn state.
 
 ```
 searchKey: openidconnect.authnState.Decode
+tags: [private]
 ```
 
 ```Go
@@ -247,6 +272,7 @@ Decode decodes the base64-encoded JSON representation of the authn state into th
 
 ```
 searchKey: openidconnect.provider
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +289,7 @@ type provider struct {
 
 ```
 searchKey: openidconnect.getProvider
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +302,7 @@ getProvider looks up the registered openidconnect auth provider with the given I
 
 ```
 searchKey: openidconnect.handleGetProvider
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +313,7 @@ func handleGetProvider(ctx context.Context, w http.ResponseWriter, id string) (p
 
 ```
 searchKey: openidconnect.provider.ConfigID
+tags: [private]
 ```
 
 ```Go
@@ -297,6 +326,7 @@ ConfigID implements providers.Provider.
 
 ```
 searchKey: openidconnect.provider.Config
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +339,7 @@ Config implements providers.Provider.
 
 ```
 searchKey: openidconnect.provider.Refresh
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +352,7 @@ Refresh implements providers.Provider.
 
 ```
 searchKey: openidconnect.provider.getCachedInfoAndError
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +363,7 @@ func (p *provider) getCachedInfoAndError() (*providers.Info, error)
 
 ```
 searchKey: openidconnect.provider.CachedInfo
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +376,7 @@ CachedInfo implements providers.Provider.
 
 ```
 searchKey: openidconnect.provider.oauth2Config
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +387,7 @@ func (p *provider) oauth2Config() *oauth2.Config
 
 ```
 searchKey: openidconnect.oidcProvider
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +403,7 @@ oidcProvider is an OpenID Connect oidcProvider with additional claims parsed fro
 
 ```
 searchKey: openidconnect.newProvider
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +414,7 @@ func newProvider(ctx context.Context, issuerURL string) (*oidcProvider, error)
 
 ```
 searchKey: openidconnect.providerExtraClaims
+tags: [private]
 ```
 
 ```Go
@@ -399,6 +436,7 @@ type providerExtraClaims struct {
 
 ```
 searchKey: openidconnect.sessionData
+tags: [private]
 ```
 
 ```Go
@@ -416,6 +454,7 @@ type sessionData struct {
 
 ```
 searchKey: openidconnect.providerJSON
+tags: [private]
 ```
 
 ```Go
@@ -432,10 +471,15 @@ providerJSON is the JSON structure the OIDC provider returns at its discovery en
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.config.go" href="#init.config.go">func init()</a>
 
 ```
 searchKey: openidconnect.init
+tags: [private]
 ```
 
 ```Go
@@ -446,6 +490,7 @@ func init()
 
 ```
 searchKey: openidconnect.validateConfig
+tags: [private]
 ```
 
 ```Go
@@ -456,6 +501,7 @@ func validateConfig(c conf.Unified) (problems conf.Problems)
 
 ```
 searchKey: openidconnect.providerConfigID
+tags: [private]
 ```
 
 ```Go
@@ -468,16 +514,18 @@ providerConfigID produces a semi-stable identifier for an openidconnect auth pro
 
 ```
 searchKey: openidconnect.getProviders
+tags: [private]
 ```
 
 ```Go
 func getProviders() []providers.Provider
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.config_watch.go" href="#init.config_watch.go">func init()</a>
 
 ```
 searchKey: openidconnect.init
+tags: [private]
 ```
 
 ```Go
@@ -488,6 +536,7 @@ func init()
 
 ```
 searchKey: openidconnect.handleOpenIDConnectAuth
+tags: [private]
 ```
 
 ```Go
@@ -500,6 +549,7 @@ handleOpenIDConnectAuth performs OpenID Connect authentication (if configured) f
 
 ```
 searchKey: openidconnect.authHandler
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +564,7 @@ authHandler handles the OIDC Authentication Code Flow ([http://openid.net/specs/
 
 ```
 searchKey: openidconnect.redirectToAuthRequest
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +575,7 @@ func redirectToAuthRequest(w http.ResponseWriter, r *http.Request, p *provider, 
 
 ```
 searchKey: openidconnect.revokeToken
+tags: [private]
 ```
 
 ```Go
@@ -536,7 +588,6 @@ revokeToken implements Token Revocation. See [https://tools.ietf.org/html/rfc700
 
 ```
 searchKey: openidconnect.SignOut
-tags: [exported]
 ```
 
 ```Go
@@ -549,6 +600,7 @@ SignOut clears OpenID Connect-related data from the session. If possible, it rev
 
 ```
 searchKey: openidconnect.getOrCreateUser
+tags: [private]
 ```
 
 ```Go
@@ -561,6 +613,7 @@ getOrCreateUser gets or creates a user account based on the OpenID Connect token
 
 ```
 searchKey: openidconnect.TestValidateCustom
+tags: [private]
 ```
 
 ```Go
@@ -571,6 +624,7 @@ func TestValidateCustom(t *testing.T)
 
 ```
 searchKey: openidconnect.TestProviderConfigID
+tags: [private]
 ```
 
 ```Go
@@ -581,6 +635,7 @@ func TestProviderConfigID(t *testing.T)
 
 ```
 searchKey: openidconnect.newOIDCIDServer
+tags: [private]
 ```
 
 ```Go
@@ -593,6 +648,7 @@ new OIDCIDServer returns a new running mock OIDC ID Provider service. It is the 
 
 ```
 searchKey: openidconnect.TestMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -603,6 +659,7 @@ func TestMiddleware(t *testing.T)
 
 ```
 searchKey: openidconnect.TestMiddleware_NoOpenRedirect
+tags: [private]
 ```
 
 ```Go

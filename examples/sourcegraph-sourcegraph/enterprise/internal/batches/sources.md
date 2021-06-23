@@ -168,10 +168,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="fakeNotImplemented" href="#fakeNotImplemented">var fakeNotImplemented</a>
 
 ```
 searchKey: sources.fakeNotImplemented
+tags: [private]
 ```
 
 ```Go
@@ -182,7 +187,6 @@ var fakeNotImplemented = errors.New("not implemented in FakeChangesetSource")
 
 ```
 searchKey: sources.NoReposErr
-tags: [exported]
 ```
 
 ```Go
@@ -193,7 +197,6 @@ var NoReposErr = errors.New("no repository set on Changeset")
 
 ```
 searchKey: sources.ErrMissingCredentials
-tags: [exported]
 ```
 
 ```Go
@@ -206,7 +209,6 @@ ErrMissingCredentials is returned by WithAuthenticatorForUser, if the user that 
 
 ```
 searchKey: sources.ErrNoSSHCredential
-tags: [exported]
 ```
 
 ```Go
@@ -219,6 +221,7 @@ ErrNoSSHCredential is returned by gitserverPushConfig, if the clone URL of the r
 
 ```
 searchKey: sources.updateRegex
+tags: [private]
 ```
 
 ```Go
@@ -227,11 +230,14 @@ var updateRegex = flag.String("update", "", "Update testdata of tests matching t
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="BitbucketServerSource" href="#BitbucketServerSource">type BitbucketServerSource struct</a>
 
 ```
 searchKey: sources.BitbucketServerSource
-tags: [exported]
 ```
 
 ```Go
@@ -245,7 +251,6 @@ type BitbucketServerSource struct {
 
 ```
 searchKey: sources.NewBitbucketServerSource
-tags: [exported]
 ```
 
 ```Go
@@ -258,6 +263,7 @@ NewBitbucketServerSource returns a new BitbucketServerSource from the given exte
 
 ```
 searchKey: sources.newBitbucketServerSource
+tags: [private]
 ```
 
 ```Go
@@ -268,7 +274,6 @@ func newBitbucketServerSource(c *schema.BitbucketServerConnection, cf *httpcli.F
 
 ```
 searchKey: sources.BitbucketServerSource.GitserverPushConfig
-tags: [exported]
 ```
 
 ```Go
@@ -279,7 +284,6 @@ func (s BitbucketServerSource) GitserverPushConfig(ctx context.Context, store *d
 
 ```
 searchKey: sources.BitbucketServerSource.WithAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -290,7 +294,6 @@ func (s BitbucketServerSource) WithAuthenticator(a auth.Authenticator) (Changese
 
 ```
 searchKey: sources.BitbucketServerSource.AuthenticatedUsername
-tags: [exported]
 ```
 
 ```Go
@@ -303,7 +306,6 @@ AuthenticatedUsername uses the underlying bitbucketserver.Client to get the user
 
 ```
 searchKey: sources.BitbucketServerSource.ValidateAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -314,7 +316,6 @@ func (s BitbucketServerSource) ValidateAuthenticator(ctx context.Context) error
 
 ```
 searchKey: sources.BitbucketServerSource.CreateChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -327,7 +328,6 @@ CreateChangeset creates the given *Changeset in the code host.
 
 ```
 searchKey: sources.BitbucketServerSource.CloseChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -340,7 +340,6 @@ CloseChangeset closes the given *Changeset on the code host and updates the Meta
 
 ```
 searchKey: sources.BitbucketServerSource.LoadChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -353,6 +352,7 @@ LoadChangeset loads the latest state of the given Changeset from the codehost.
 
 ```
 searchKey: sources.BitbucketServerSource.loadPullRequestData
+tags: [private]
 ```
 
 ```Go
@@ -363,7 +363,6 @@ func (s BitbucketServerSource) loadPullRequestData(ctx context.Context, pr *bitb
 
 ```
 searchKey: sources.BitbucketServerSource.UpdateChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -374,7 +373,6 @@ func (s BitbucketServerSource) UpdateChangeset(ctx context.Context, c *Changeset
 
 ```
 searchKey: sources.BitbucketServerSource.ReopenChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -387,7 +385,6 @@ ReopenChangeset reopens the *Changeset on the code host and updates the Metadata
 
 ```
 searchKey: sources.BitbucketServerSource.CreateComment
-tags: [exported]
 ```
 
 ```Go
@@ -400,7 +397,6 @@ CreateComment posts a comment on the Changeset.
 
 ```
 searchKey: sources.BitbucketServerSource.MergeChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -413,7 +409,6 @@ MergeChangeset merges a Changeset on the code host, if in a mergeable state. The
 
 ```
 searchKey: sources.ChangesetNotFoundError
-tags: [exported]
 ```
 
 ```Go
@@ -428,7 +423,6 @@ ChangesetNotFoundError is returned by LoadChangeset if the changeset could not b
 
 ```
 searchKey: sources.ChangesetNotFoundError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -439,7 +433,6 @@ func (e ChangesetNotFoundError) Error() string
 
 ```
 searchKey: sources.ChangesetNotFoundError.NonRetryable
-tags: [exported]
 ```
 
 ```Go
@@ -450,7 +443,6 @@ func (e ChangesetNotFoundError) NonRetryable() bool
 
 ```
 searchKey: sources.DraftChangesetSource
-tags: [exported]
 ```
 
 ```Go
@@ -470,7 +462,6 @@ A DraftChangesetSource can create draft changesets and undraft them.
 
 ```
 searchKey: sources.ToDraftChangesetSource
-tags: [exported]
 ```
 
 ```Go
@@ -483,7 +474,6 @@ DraftChangesetSource returns a DraftChangesetSource, if the underlying source su
 
 ```
 searchKey: sources.ChangesetSource
-tags: [exported]
 ```
 
 ```Go
@@ -532,7 +522,6 @@ A ChangesetSource can load the latest state of a list of Changesets.
 
 ```
 searchKey: sources.WithAuthenticatorForUser
-tags: [exported]
 ```
 
 ```Go
@@ -545,7 +534,6 @@ WithAuthenticatorForUser authenticates the given ChangesetSource with a credenti
 
 ```
 searchKey: sources.WithSiteAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -558,6 +546,7 @@ WithSiteAuthenticator uses the site credential of the code host of the passed-in
 
 ```
 searchKey: sources.buildChangesetSource
+tags: [private]
 ```
 
 ```Go
@@ -570,7 +559,6 @@ buildChangesetSource get an authenticated ChangesetSource for the given repo to 
 
 ```
 searchKey: sources.ChangesetNotMergeableError
-tags: [exported]
 ```
 
 ```Go
@@ -585,7 +573,6 @@ ChangesetNotMergeableError is returned by MergeChangeset if the changeset could 
 
 ```
 searchKey: sources.ChangesetNotMergeableError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -596,7 +583,6 @@ func (e ChangesetNotMergeableError) Error() string
 
 ```
 searchKey: sources.ChangesetNotMergeableError.NonRetryable
-tags: [exported]
 ```
 
 ```Go
@@ -607,7 +593,6 @@ func (e ChangesetNotMergeableError) NonRetryable() bool
 
 ```
 searchKey: sources.Changeset
-tags: [exported]
 ```
 
 ```Go
@@ -628,7 +613,6 @@ A Changeset of an existing Repo.
 
 ```
 searchKey: sources.Changeset.IsOutdated
-tags: [exported]
 ```
 
 ```Go
@@ -641,6 +625,7 @@ IsOutdated returns true when the attributes of the nested batches.Changeset do n
 
 ```
 searchKey: sources.fakeSourcer
+tags: [private]
 ```
 
 ```Go
@@ -654,6 +639,7 @@ type fakeSourcer struct {
 
 ```
 searchKey: sources.fakeSourcer.ForChangeset
+tags: [private]
 ```
 
 ```Go
@@ -664,6 +650,7 @@ func (s *fakeSourcer) ForChangeset(ctx context.Context, tx SourcerStore, ch *bty
 
 ```
 searchKey: sources.fakeSourcer.ForRepo
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +661,7 @@ func (s *fakeSourcer) ForRepo(ctx context.Context, tx SourcerStore, repo *types.
 
 ```
 searchKey: sources.fakeSourcer.ForExternalService
+tags: [private]
 ```
 
 ```Go
@@ -684,7 +672,6 @@ func (s *fakeSourcer) ForExternalService(ctx context.Context, tx SourcerStore, o
 
 ```
 searchKey: sources.FakeChangesetSource
-tags: [exported]
 ```
 
 ```Go
@@ -757,7 +744,6 @@ FakeChangesetSource is a fake implementation of the ChangesetSource interface to
 
 ```
 searchKey: sources.FakeChangesetSource.CreateDraftChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -768,7 +754,6 @@ func (s *FakeChangesetSource) CreateDraftChangeset(ctx context.Context, c *Chang
 
 ```
 searchKey: sources.FakeChangesetSource.UndraftChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -779,7 +764,6 @@ func (s *FakeChangesetSource) UndraftChangeset(ctx context.Context, c *Changeset
 
 ```
 searchKey: sources.FakeChangesetSource.CreateChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -790,7 +774,6 @@ func (s *FakeChangesetSource) CreateChangeset(ctx context.Context, c *Changeset)
 
 ```
 searchKey: sources.FakeChangesetSource.UpdateChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -801,7 +784,6 @@ func (s *FakeChangesetSource) UpdateChangeset(ctx context.Context, c *Changeset)
 
 ```
 searchKey: sources.FakeChangesetSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -812,7 +794,6 @@ func (s *FakeChangesetSource) ListRepos(ctx context.Context, results chan repos.
 
 ```
 searchKey: sources.FakeChangesetSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -823,7 +804,6 @@ func (s *FakeChangesetSource) ExternalServices() types.ExternalServices
 
 ```
 searchKey: sources.FakeChangesetSource.LoadChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -834,7 +814,6 @@ func (s *FakeChangesetSource) LoadChangeset(ctx context.Context, c *Changeset) e
 
 ```
 searchKey: sources.FakeChangesetSource.CloseChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -845,7 +824,6 @@ func (s *FakeChangesetSource) CloseChangeset(ctx context.Context, c *Changeset) 
 
 ```
 searchKey: sources.FakeChangesetSource.ReopenChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -856,7 +834,6 @@ func (s *FakeChangesetSource) ReopenChangeset(ctx context.Context, c *Changeset)
 
 ```
 searchKey: sources.FakeChangesetSource.CreateComment
-tags: [exported]
 ```
 
 ```Go
@@ -867,7 +844,6 @@ func (s *FakeChangesetSource) CreateComment(ctx context.Context, c *Changeset, b
 
 ```
 searchKey: sources.FakeChangesetSource.GitserverPushConfig
-tags: [exported]
 ```
 
 ```Go
@@ -878,7 +854,6 @@ func (s *FakeChangesetSource) GitserverPushConfig(ctx context.Context, store *da
 
 ```
 searchKey: sources.FakeChangesetSource.WithAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -889,7 +864,6 @@ func (s *FakeChangesetSource) WithAuthenticator(a auth.Authenticator) (Changeset
 
 ```
 searchKey: sources.FakeChangesetSource.ValidateAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -900,7 +874,6 @@ func (s *FakeChangesetSource) ValidateAuthenticator(context.Context) error
 
 ```
 searchKey: sources.FakeChangesetSource.AuthenticatedUsername
-tags: [exported]
 ```
 
 ```Go
@@ -911,7 +884,6 @@ func (s *FakeChangesetSource) AuthenticatedUsername(ctx context.Context) (string
 
 ```
 searchKey: sources.FakeChangesetSource.MergeChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -922,7 +894,6 @@ func (s *FakeChangesetSource) MergeChangeset(ctx context.Context, c *Changeset, 
 
 ```
 searchKey: sources.GithubSource
-tags: [exported]
 ```
 
 ```Go
@@ -936,7 +907,6 @@ type GithubSource struct {
 
 ```
 searchKey: sources.NewGithubSource
-tags: [exported]
 ```
 
 ```Go
@@ -947,6 +917,7 @@ func NewGithubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GithubSo
 
 ```
 searchKey: sources.newGithubSource
+tags: [private]
 ```
 
 ```Go
@@ -957,7 +928,6 @@ func newGithubSource(c *schema.GitHubConnection, cf *httpcli.Factory, au auth.Au
 
 ```
 searchKey: sources.GithubSource.GitserverPushConfig
-tags: [exported]
 ```
 
 ```Go
@@ -968,7 +938,6 @@ func (s GithubSource) GitserverPushConfig(ctx context.Context, store *database.E
 
 ```
 searchKey: sources.GithubSource.WithAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -979,7 +948,6 @@ func (s GithubSource) WithAuthenticator(a auth.Authenticator) (ChangesetSource, 
 
 ```
 searchKey: sources.GithubSource.ValidateAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -990,7 +958,6 @@ func (s GithubSource) ValidateAuthenticator(ctx context.Context) error
 
 ```
 searchKey: sources.GithubSource.CreateChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1003,7 +970,6 @@ CreateChangeset creates the given changeset on the code host.
 
 ```
 searchKey: sources.GithubSource.CreateDraftChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1016,6 +982,7 @@ CreateDraftChangeset creates the given changeset on the code host in draft mode.
 
 ```
 searchKey: sources.GithubSource.createChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1026,7 +993,6 @@ func (s GithubSource) createChangeset(ctx context.Context, c *Changeset, prInput
 
 ```
 searchKey: sources.GithubSource.CloseChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1039,7 +1005,6 @@ CloseChangeset closes the given *Changeset on the code host and updates the Meta
 
 ```
 searchKey: sources.GithubSource.UndraftChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1052,7 +1017,6 @@ UndraftChangeset will update the Changeset on the source to be not in draft mode
 
 ```
 searchKey: sources.GithubSource.LoadChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1065,7 +1029,6 @@ LoadChangeset loads the latest state of the given Changeset from the codehost.
 
 ```
 searchKey: sources.GithubSource.UpdateChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1078,7 +1041,6 @@ UpdateChangeset updates the given *Changeset in the code host.
 
 ```
 searchKey: sources.GithubSource.ReopenChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1091,7 +1053,6 @@ ReopenChangeset reopens the given *Changeset on the code host.
 
 ```
 searchKey: sources.GithubSource.CreateComment
-tags: [exported]
 ```
 
 ```Go
@@ -1104,7 +1065,6 @@ CreateComment posts a comment on the Changeset.
 
 ```
 searchKey: sources.GithubSource.MergeChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1117,7 +1077,6 @@ MergeChangeset merges a Changeset on the code host, if in a mergeable state. If 
 
 ```
 searchKey: sources.GitLabSource
-tags: [exported]
 ```
 
 ```Go
@@ -1131,7 +1090,6 @@ type GitLabSource struct {
 
 ```
 searchKey: sources.NewGitLabSource
-tags: [exported]
 ```
 
 ```Go
@@ -1144,6 +1102,7 @@ NewGitLabSource returns a new GitLabSource from the given external service.
 
 ```
 searchKey: sources.newGitLabSource
+tags: [private]
 ```
 
 ```Go
@@ -1154,7 +1113,6 @@ func newGitLabSource(c *schema.GitLabConnection, cf *httpcli.Factory, au auth.Au
 
 ```
 searchKey: sources.GitLabSource.GitserverPushConfig
-tags: [exported]
 ```
 
 ```Go
@@ -1165,7 +1123,6 @@ func (s GitLabSource) GitserverPushConfig(ctx context.Context, store *database.E
 
 ```
 searchKey: sources.GitLabSource.WithAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -1176,7 +1133,6 @@ func (s GitLabSource) WithAuthenticator(a auth.Authenticator) (ChangesetSource, 
 
 ```
 searchKey: sources.GitLabSource.ValidateAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -1187,7 +1143,6 @@ func (s GitLabSource) ValidateAuthenticator(ctx context.Context) error
 
 ```
 searchKey: sources.GitLabSource.CreateChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1200,7 +1155,6 @@ CreateChangeset creates a GitLab merge request. If it already exists, *Changeset
 
 ```
 searchKey: sources.GitLabSource.CreateDraftChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1213,7 +1167,6 @@ CreateDraftChangeset creates a GitLab merge request. If it already exists, *Chan
 
 ```
 searchKey: sources.GitLabSource.CloseChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1226,7 +1179,6 @@ CloseChangeset closes the merge request on GitLab, leaving it unlocked.
 
 ```
 searchKey: sources.GitLabSource.LoadChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1239,7 +1191,6 @@ LoadChangeset loads the given merge request from GitLab and updates it.
 
 ```
 searchKey: sources.GitLabSource.ReopenChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1252,6 +1203,7 @@ ReopenChangeset closes the merge request on GitLab, leaving it unlocked.
 
 ```
 searchKey: sources.GitLabSource.decorateMergeRequestData
+tags: [private]
 ```
 
 ```Go
@@ -1262,6 +1214,7 @@ func (s *GitLabSource) decorateMergeRequestData(ctx context.Context, project *gi
 
 ```
 searchKey: sources.GitLabSource.getMergeRequestNotes
+tags: [private]
 ```
 
 ```Go
@@ -1274,6 +1227,7 @@ getMergeRequestNotes retrieves the notes attached to a merge request in descendi
 
 ```
 searchKey: sources.GitLabSource.getMergeRequestResourceStateEvents
+tags: [private]
 ```
 
 ```Go
@@ -1286,6 +1240,7 @@ getMergeRequestResourceStateEvents retrieves the events attached to a merge requ
 
 ```
 searchKey: sources.GitLabSource.getMergeRequestPipelines
+tags: [private]
 ```
 
 ```Go
@@ -1298,7 +1253,6 @@ getMergeRequestPipelines retrieves the pipelines attached to a merge request in 
 
 ```
 searchKey: sources.GitLabSource.UpdateChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1311,7 +1265,6 @@ UpdateChangeset updates the merge request on GitLab to reflect the local state o
 
 ```
 searchKey: sources.GitLabSource.UndraftChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1324,7 +1277,6 @@ UndraftChangeset marks the changeset as *not* work in progress anymore.
 
 ```
 searchKey: sources.GitLabSource.CreateComment
-tags: [exported]
 ```
 
 ```Go
@@ -1337,7 +1289,6 @@ CreateComment posts a comment on the Changeset.
 
 ```
 searchKey: sources.GitLabSource.MergeChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -1350,7 +1301,6 @@ MergeChangeset merges a Changeset on the code host, if in a mergeable state. If 
 
 ```
 searchKey: sources.ErrNoPushCredentials
-tags: [exported]
 ```
 
 ```Go
@@ -1363,7 +1313,6 @@ ErrNoPushCredentials is returned by gitserverPushConfig if the authenticator can
 
 ```
 searchKey: sources.ErrNoPushCredentials.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1374,7 +1323,6 @@ func (e ErrNoPushCredentials) Error() string
 
 ```
 searchKey: sources.SourcerStore
-tags: [exported]
 ```
 
 ```Go
@@ -1392,7 +1340,6 @@ type SourcerStore interface {
 
 ```
 searchKey: sources.Sourcer
-tags: [exported]
 ```
 
 ```Go
@@ -1409,7 +1356,6 @@ Sourcer exposes methods to get a ChangesetSource based on a changeset, repo or e
 
 ```
 searchKey: sources.NewSourcer
-tags: [exported]
 ```
 
 ```Go
@@ -1422,7 +1368,6 @@ NewSourcer returns a new Sourcer to be used in Batch Changes.
 
 ```
 searchKey: sources.NewFakeSourcer
-tags: [exported]
 ```
 
 ```Go
@@ -1435,6 +1380,7 @@ NewFakeSourcer returns a new faked Sourcer to be used for testing Batch Changes.
 
 ```
 searchKey: sources.sourcer
+tags: [private]
 ```
 
 ```Go
@@ -1447,6 +1393,7 @@ type sourcer struct {
 
 ```
 searchKey: sources.sourcer.ForChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1459,6 +1406,7 @@ ForChangeset returns a ChangesetSource for the given changeset. The changeset.Re
 
 ```
 searchKey: sources.sourcer.ForRepo
+tags: [private]
 ```
 
 ```Go
@@ -1471,6 +1419,7 @@ ForRepo returns a ChangesetSource for the given repo.
 
 ```
 searchKey: sources.sourcer.ForExternalService
+tags: [private]
 ```
 
 ```Go
@@ -1483,6 +1432,7 @@ ForExternalService returns a ChangesetSource based on the provided external serv
 
 ```
 searchKey: sources.sourcer.loadBatchesSource
+tags: [private]
 ```
 
 ```Go
@@ -1493,7 +1443,6 @@ func (s *sourcer) loadBatchesSource(ctx context.Context, tx SourcerStore, extern
 
 ```
 searchKey: sources.UnsupportedAuthenticatorError
-tags: [exported]
 ```
 
 ```Go
@@ -1509,6 +1458,7 @@ UnsupportedAuthenticatorError is returned by WithAuthenticator if the authentica
 
 ```
 searchKey: sources.newUnsupportedAuthenticatorError
+tags: [private]
 ```
 
 ```Go
@@ -1519,7 +1469,6 @@ func newUnsupportedAuthenticatorError(source string, a auth.Authenticator) Unsup
 
 ```
 searchKey: sources.UnsupportedAuthenticatorError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1530,6 +1479,7 @@ func (e UnsupportedAuthenticatorError) Error() string
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider
+tags: [private]
 ```
 
 ```Go
@@ -1546,6 +1496,7 @@ type gitLabChangesetSourceTestProvider struct {
 
 ```
 searchKey: sources.newGitLabChangesetSourceTestProvider
+tags: [private]
 ```
 
 ```Go
@@ -1558,6 +1509,7 @@ newGitLabChangesetSourceTestProvider provides a set of useful pre-canned objects
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider.testCommonParams
+tags: [private]
 ```
 
 ```Go
@@ -1568,6 +1520,7 @@ func (p *gitLabChangesetSourceTestProvider) testCommonParams(ctx context.Context
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider.mockCreateMergeRequest
+tags: [private]
 ```
 
 ```Go
@@ -1580,6 +1533,7 @@ mockCreateMergeRequest mocks a gitlab.CreateMergeRequest call. Note that only th
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider.mockGetMergeRequest
+tags: [private]
 ```
 
 ```Go
@@ -1590,6 +1544,7 @@ func (p *gitLabChangesetSourceTestProvider) mockGetMergeRequest(expected gitlab.
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider.mockGetMergeRequestNotes
+tags: [private]
 ```
 
 ```Go
@@ -1600,6 +1555,7 @@ func (p *gitLabChangesetSourceTestProvider) mockGetMergeRequestNotes(expectedIID
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider.mockGetMergeRequestResourceStateEvents
+tags: [private]
 ```
 
 ```Go
@@ -1610,6 +1566,7 @@ func (p *gitLabChangesetSourceTestProvider) mockGetMergeRequestResourceStateEven
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider.mockGetMergeRequestPipelines
+tags: [private]
 ```
 
 ```Go
@@ -1620,6 +1577,7 @@ func (p *gitLabChangesetSourceTestProvider) mockGetMergeRequestPipelines(expecte
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider.mockGetOpenMergeRequestByRefs
+tags: [private]
 ```
 
 ```Go
@@ -1630,6 +1588,7 @@ func (p *gitLabChangesetSourceTestProvider) mockGetOpenMergeRequestByRefs(mr *gi
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider.mockUpdateMergeRequest
+tags: [private]
 ```
 
 ```Go
@@ -1640,6 +1599,7 @@ func (p *gitLabChangesetSourceTestProvider) mockUpdateMergeRequest(expectedMR, u
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider.mockCreateComment
+tags: [private]
 ```
 
 ```Go
@@ -1650,6 +1610,7 @@ func (p *gitLabChangesetSourceTestProvider) mockCreateComment(expected string, m
 
 ```
 searchKey: sources.gitLabChangesetSourceTestProvider.unmock
+tags: [private]
 ```
 
 ```Go
@@ -1660,6 +1621,7 @@ func (p *gitLabChangesetSourceTestProvider) unmock()
 
 ```
 searchKey: sources.panicDoer
+tags: [private]
 ```
 
 ```Go
@@ -1672,6 +1634,7 @@ panicDoer provides a httpcli.Doer implementation that panics if any attempt is m
 
 ```
 searchKey: sources.panicDoer.Do
+tags: [private]
 ```
 
 ```Go
@@ -1680,10 +1643,15 @@ func (d *panicDoer) Do(r *http.Request) (*http.Response, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="buildCreatePullRequestInput" href="#buildCreatePullRequestInput">func buildCreatePullRequestInput(c *Changeset) *github.CreatePullRequestInput</a>
 
 ```
 searchKey: sources.buildCreatePullRequestInput
+tags: [private]
 ```
 
 ```Go
@@ -1694,6 +1662,7 @@ func buildCreatePullRequestInput(c *Changeset) *github.CreatePullRequestInput
 
 ```
 searchKey: sources.readSystemNotes
+tags: [private]
 ```
 
 ```Go
@@ -1704,6 +1673,7 @@ func readSystemNotes(it func() ([]*gitlab.Note, error)) ([]*gitlab.Note, error)
 
 ```
 searchKey: sources.readMergeRequestResourceStateEvents
+tags: [private]
 ```
 
 ```Go
@@ -1714,6 +1684,7 @@ func readMergeRequestResourceStateEvents(it func() ([]*gitlab.ResourceStateEvent
 
 ```
 searchKey: sources.readPipelines
+tags: [private]
 ```
 
 ```Go
@@ -1724,6 +1695,7 @@ func readPipelines(it func() ([]*gitlab.Pipeline, error)) ([]*gitlab.Pipeline, e
 
 ```
 searchKey: sources.gitserverPushConfig
+tags: [private]
 ```
 
 ```Go
@@ -1734,6 +1706,7 @@ func gitserverPushConfig(ctx context.Context, store *database.ExternalServiceSto
 
 ```
 searchKey: sources.loadExternalService
+tags: [private]
 ```
 
 ```Go
@@ -1746,6 +1719,7 @@ loadExternalService looks up all external services that are connected to the giv
 
 ```
 searchKey: sources.loadUserCredential
+tags: [private]
 ```
 
 ```Go
@@ -1758,6 +1732,7 @@ loadUserCredential attempts to find a user credential for the given repo. When n
 
 ```
 searchKey: sources.loadSiteCredential
+tags: [private]
 ```
 
 ```Go
@@ -1770,6 +1745,7 @@ loadSiteCredential attempts to find a site credential for the given repo. When n
 
 ```
 searchKey: sources.setOAuthTokenAuth
+tags: [private]
 ```
 
 ```Go
@@ -1782,6 +1758,7 @@ setOAuthTokenAuth sets the user part of the given URL to use the provided OAuth 
 
 ```
 searchKey: sources.setBasicAuth
+tags: [private]
 ```
 
 ```Go
@@ -1794,6 +1771,7 @@ setBasicAuth sets the user part of the given URL to use the provided username/ p
 
 ```
 searchKey: sources.extractCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -1806,6 +1784,7 @@ extractCloneURL returns a remote URL from the repo, preferring HTTPS over SSH.
 
 ```
 searchKey: sources.TestBitbucketServerSource_LoadChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1816,6 +1795,7 @@ func TestBitbucketServerSource_LoadChangeset(t *testing.T)
 
 ```
 searchKey: sources.TestBitbucketServerSource_CreateChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1826,6 +1806,7 @@ func TestBitbucketServerSource_CreateChangeset(t *testing.T)
 
 ```
 searchKey: sources.TestBitbucketServerSource_CloseChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1836,6 +1817,7 @@ func TestBitbucketServerSource_CloseChangeset(t *testing.T)
 
 ```
 searchKey: sources.TestBitbucketServerSource_ReopenChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1846,6 +1828,7 @@ func TestBitbucketServerSource_ReopenChangeset(t *testing.T)
 
 ```
 searchKey: sources.TestBitbucketServerSource_UpdateChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1856,6 +1839,7 @@ func TestBitbucketServerSource_UpdateChangeset(t *testing.T)
 
 ```
 searchKey: sources.TestBitbucketServerSource_CreateComment
+tags: [private]
 ```
 
 ```Go
@@ -1866,6 +1850,7 @@ func TestBitbucketServerSource_CreateComment(t *testing.T)
 
 ```
 searchKey: sources.TestBitbucketServerSource_WithAuthenticator
+tags: [private]
 ```
 
 ```Go
@@ -1876,6 +1861,7 @@ func TestBitbucketServerSource_WithAuthenticator(t *testing.T)
 
 ```
 searchKey: sources.TestGithubSource_CreateChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1886,6 +1872,7 @@ func TestGithubSource_CreateChangeset(t *testing.T)
 
 ```
 searchKey: sources.TestGithubSource_CloseChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1896,6 +1883,7 @@ func TestGithubSource_CloseChangeset(t *testing.T)
 
 ```
 searchKey: sources.TestGithubSource_ReopenChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1906,6 +1894,7 @@ func TestGithubSource_ReopenChangeset(t *testing.T)
 
 ```
 searchKey: sources.TestGithubSource_CreateComment
+tags: [private]
 ```
 
 ```Go
@@ -1916,6 +1905,7 @@ func TestGithubSource_CreateComment(t *testing.T)
 
 ```
 searchKey: sources.TestGithubSource_UpdateChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1926,6 +1916,7 @@ func TestGithubSource_UpdateChangeset(t *testing.T)
 
 ```
 searchKey: sources.TestGithubSource_LoadChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1936,6 +1927,7 @@ func TestGithubSource_LoadChangeset(t *testing.T)
 
 ```
 searchKey: sources.TestGithubSource_WithAuthenticator
+tags: [private]
 ```
 
 ```Go
@@ -1946,6 +1938,7 @@ func TestGithubSource_WithAuthenticator(t *testing.T)
 
 ```
 searchKey: sources.TestGitLabSource_ChangesetSource
+tags: [private]
 ```
 
 ```Go
@@ -1958,6 +1951,7 @@ TestGitLabSource_ChangesetSource tests the various Changeset functions that impl
 
 ```
 searchKey: sources.TestReadNotesUntilSeen
+tags: [private]
 ```
 
 ```Go
@@ -1968,6 +1962,7 @@ func TestReadNotesUntilSeen(t *testing.T)
 
 ```
 searchKey: sources.TestReadPipelinesUntilSeen
+tags: [private]
 ```
 
 ```Go
@@ -1978,6 +1973,7 @@ func TestReadPipelinesUntilSeen(t *testing.T)
 
 ```
 searchKey: sources.paginatedNoteIterator
+tags: [private]
 ```
 
 ```Go
@@ -1990,6 +1986,7 @@ paginatedNoteIterator essentially fakes the pagination behaviour implemented by 
 
 ```
 searchKey: sources.paginatedResourceStateEventIterator
+tags: [private]
 ```
 
 ```Go
@@ -2002,6 +1999,7 @@ paginatedResourceStateEventIterator essentially fakes the pagination behaviour i
 
 ```
 searchKey: sources.paginatedPipelineIterator
+tags: [private]
 ```
 
 ```Go
@@ -2014,6 +2012,7 @@ paginatedPipelineIterator essentially fakes the pagination behaviour implemented
 
 ```
 searchKey: sources.TestGitLabSource_WithAuthenticator
+tags: [private]
 ```
 
 ```Go
@@ -2024,6 +2023,7 @@ func TestGitLabSource_WithAuthenticator(t *testing.T)
 
 ```
 searchKey: sources.update
+tags: [private]
 ```
 
 ```Go
@@ -2034,6 +2034,7 @@ func update(name string) bool
 
 ```
 searchKey: sources.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -2044,6 +2045,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: sources.newClientFactory
+tags: [private]
 ```
 
 ```Go
@@ -2054,6 +2056,7 @@ func newClientFactory(t testing.TB, name string, mws ...httpcli.Middleware) (*ht
 
 ```
 searchKey: sources.gitserverRedirectMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -2064,6 +2067,7 @@ func gitserverRedirectMiddleware(cli httpcli.Doer) httpcli.Doer
 
 ```
 searchKey: sources.newRecorder
+tags: [private]
 ```
 
 ```Go
@@ -2074,6 +2078,7 @@ func newRecorder(t testing.TB, file string, record bool) *recorder.Recorder
 
 ```
 searchKey: sources.save
+tags: [private]
 ```
 
 ```Go
@@ -2084,6 +2089,7 @@ func save(t testing.TB, rec *recorder.Recorder)
 
 ```
 searchKey: sources.marshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -2094,6 +2100,7 @@ func marshalJSON(t testing.TB, v interface{}) string
 
 ```
 searchKey: sources.TestExtractCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -2104,6 +2111,7 @@ func TestExtractCloneURL(t *testing.T)
 
 ```
 searchKey: sources.TestLoadExternalService
+tags: [private]
 ```
 
 ```Go
@@ -2114,6 +2122,7 @@ func TestLoadExternalService(t *testing.T)
 
 ```
 searchKey: sources.TestGitserverPushConfig
+tags: [private]
 ```
 
 ```Go

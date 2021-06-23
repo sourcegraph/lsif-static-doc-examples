@@ -4,9 +4,7 @@
     "identifier": "shared",
     "newPage": true,
     "searchKey": "cmd/repo-updater/shared",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "port",
                 "newPage": false,
                 "searchKey": "shared.port",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,7 +83,9 @@
                 "identifier": "stateHTMLTemplate",
                 "newPage": false,
                 "searchKey": "shared.stateHTMLTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +108,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -130,9 +126,7 @@
                 "identifier": "EnterpriseInit",
                 "newPage": false,
                 "searchKey": "shared.EnterpriseInit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -152,7 +146,9 @@
                 "identifier": "scheduler",
                 "newPage": false,
                 "searchKey": "shared.scheduler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -175,9 +171,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -195,9 +189,7 @@
                 "identifier": "Main",
                 "newPage": false,
                 "searchKey": "shared.Main",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -217,7 +209,9 @@
                 "identifier": "watchSyncer",
                 "newPage": false,
                 "searchKey": "shared.watchSyncer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -237,7 +231,9 @@
                 "identifier": "syncScheduler",
                 "newPage": false,
                 "searchKey": "shared.syncScheduler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

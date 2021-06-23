@@ -133,7 +133,7 @@
     * [func RunWorkersOverStrings(values []string, worker func(index int, value string) error) error](#RunWorkersOverStrings)
     * [func RunWorkersOverStringsN(n int, values []string, worker func(index int, value string) error) error](#RunWorkersOverStringsN)
     * [func loadIndexedStringChannel(values []string) <-chan indexedString](#loadIndexedStringChannel)
-    * [func init()](#init)
+    * [func init()](#init.background_test.go)
     * [func TestMonitorBackgroundRoutinesSignal(t *testing.T)](#TestMonitorBackgroundRoutinesSignal)
     * [func TestMonitorBackgroundRoutinesContextCancel(t *testing.T)](#TestMonitorBackgroundRoutinesContextCancel)
     * [func TestBounded(t *testing.T)](#TestBounded)
@@ -151,10 +151,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="exiter" href="#exiter">var exiter</a>
 
 ```
 searchKey: goroutine.exiter
+tags: [private]
 ```
 
 ```Go
@@ -165,11 +170,14 @@ exiter exits the process with a status code of zero. This is declared here so it
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="StartableRoutine" href="#StartableRoutine">type StartableRoutine interface</a>
 
 ```
 searchKey: goroutine.StartableRoutine
-tags: [exported]
 ```
 
 ```Go
@@ -187,7 +195,6 @@ StartableRoutine represents a component of a binary that consists of a long runn
 
 ```
 searchKey: goroutine.BackgroundRoutine
-tags: [exported]
 ```
 
 ```Go
@@ -209,7 +216,6 @@ See [https://docs.sourcegraph.com/dev/background-information/backgroundroutine](
 
 ```
 searchKey: goroutine.NoopRoutine
-tags: [exported]
 ```
 
 ```Go
@@ -222,7 +228,6 @@ NoopRoutine does nothing for start or stop.
 
 ```
 searchKey: goroutine.CombinedRoutine
-tags: [exported]
 ```
 
 ```Go
@@ -235,7 +240,6 @@ CombinedRoutine is a list of routines which are started and stopped in unison.
 
 ```
 searchKey: goroutine.CombinedRoutine.Start
-tags: [exported]
 ```
 
 ```Go
@@ -246,7 +250,6 @@ func (r CombinedRoutine) Start()
 
 ```
 searchKey: goroutine.CombinedRoutine.Stop
-tags: [exported]
 ```
 
 ```Go
@@ -257,6 +260,7 @@ func (r CombinedRoutine) Stop()
 
 ```
 searchKey: goroutine.noopRoutine
+tags: [private]
 ```
 
 ```Go
@@ -267,6 +271,7 @@ type noopRoutine struct{}
 
 ```
 searchKey: goroutine.noopRoutine.Start
+tags: [private]
 ```
 
 ```Go
@@ -277,6 +282,7 @@ func (r noopRoutine) Start()
 
 ```
 searchKey: goroutine.noopRoutine.Stop
+tags: [private]
 ```
 
 ```Go
@@ -287,7 +293,6 @@ func (r noopRoutine) Stop()
 
 ```
 searchKey: goroutine.Bounded
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +309,6 @@ Bounded runs a bounded number of goroutines. It supports waiting for them all to
 
 ```
 searchKey: goroutine.NewBounded
-tags: [exported]
 ```
 
 ```Go
@@ -317,7 +321,6 @@ NewBounded initializes Bounded with a capacity.
 
 ```
 searchKey: goroutine.Bounded.Go
-tags: [exported]
 ```
 
 ```Go
@@ -332,7 +335,6 @@ The first f to return a non-nil error will have that error returned by Wait. If 
 
 ```
 searchKey: goroutine.Bounded.Wait
-tags: [exported]
 ```
 
 ```Go
@@ -345,7 +347,6 @@ Wait until all goroutines have finished running. If a goroutine returns a non-ni
 
 ```
 searchKey: goroutine.PeriodicGoroutine
-tags: [exported]
 ```
 
 ```Go
@@ -368,7 +369,6 @@ See [https://docs.sourcegraph.com/dev/background-information/backgroundroutine](
 
 ```
 searchKey: goroutine.NewPeriodicGoroutine
-tags: [exported]
 ```
 
 ```Go
@@ -381,7 +381,6 @@ NewPeriodicGoroutine creates a new PeriodicGoroutine with the given handler.
 
 ```
 searchKey: goroutine.NewPeriodicGoroutineWithMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -394,6 +393,7 @@ NewPeriodicGoroutine creates a new PeriodicGoroutine with the given handler.
 
 ```
 searchKey: goroutine.newPeriodicGoroutine
+tags: [private]
 ```
 
 ```Go
@@ -404,7 +404,6 @@ func newPeriodicGoroutine(ctx context.Context, interval time.Duration, handler H
 
 ```
 searchKey: goroutine.PeriodicGoroutine.Start
-tags: [exported]
 ```
 
 ```Go
@@ -417,7 +416,6 @@ Start begins the process of calling the registered handler in a loop. This proce
 
 ```
 searchKey: goroutine.PeriodicGoroutine.Stop
-tags: [exported]
 ```
 
 ```Go
@@ -430,7 +428,6 @@ Stop will cancel the context passed to the handler function to stop the current 
 
 ```
 searchKey: goroutine.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -446,7 +443,6 @@ Handler represents the main behavior of a PeriodicGoroutine.
 
 ```
 searchKey: goroutine.NewHandlerWithErrorMessage
-tags: [exported]
 ```
 
 ```Go
@@ -459,7 +455,6 @@ NewHandlerWithErrorMessage wraps the given function to be used as a handler, and
 
 ```
 searchKey: goroutine.ErrorHandler
-tags: [exported]
 ```
 
 ```Go
@@ -477,7 +472,6 @@ ErrorHandler is an optional extension of the Handler interface.
 
 ```
 searchKey: goroutine.Finalizer
-tags: [exported]
 ```
 
 ```Go
@@ -493,7 +487,6 @@ Finalizer is an optional extension of the Handler interface.
 
 ```
 searchKey: goroutine.HandlerFunc
-tags: [exported]
 ```
 
 ```Go
@@ -506,7 +499,6 @@ HandlerFunc wraps a function so it can be used as a Handler.
 
 ```
 searchKey: goroutine.HandlerFunc.Handle
-tags: [exported]
 ```
 
 ```Go
@@ -517,6 +509,7 @@ func (f HandlerFunc) Handle(ctx context.Context) error
 
 ```
 searchKey: goroutine.simpleHandler
+tags: [private]
 ```
 
 ```Go
@@ -530,6 +523,7 @@ type simpleHandler struct {
 
 ```
 searchKey: goroutine.simpleHandler.Handle
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +534,7 @@ func (h *simpleHandler) Handle(ctx context.Context) error
 
 ```
 searchKey: goroutine.simpleHandler.HandleError
+tags: [private]
 ```
 
 ```Go
@@ -550,7 +545,6 @@ func (h *simpleHandler) HandleError(err error)
 
 ```
 searchKey: goroutine.PoolWorker
-tags: [exported]
 ```
 
 ```Go
@@ -563,7 +557,6 @@ Pool worker is a function invoked by RunWorkers that sends any errors that occur
 
 ```
 searchKey: goroutine.SimplePoolWorker
-tags: [exported]
 ```
 
 ```Go
@@ -576,6 +569,7 @@ SimplePoolWorker converts a function returning a single error value into a PoolW
 
 ```
 searchKey: goroutine.indexedStringWorker
+tags: [private]
 ```
 
 ```Go
@@ -586,6 +580,7 @@ func indexedStringWorker(ch <-chan indexedString, worker func(index int, value s
 
 ```
 searchKey: goroutine.indexedString
+tags: [private]
 ```
 
 ```Go
@@ -599,6 +594,7 @@ type indexedString struct {
 
 ```
 searchKey: goroutine.exampleRoutine
+tags: [private]
 ```
 
 ```Go
@@ -611,6 +607,7 @@ type exampleRoutine struct {
 
 ```
 searchKey: goroutine.exampleRoutine.Start
+tags: [private]
 ```
 
 ```Go
@@ -621,6 +618,7 @@ func (m *exampleRoutine) Start()
 
 ```
 searchKey: goroutine.exampleRoutine.Stop
+tags: [private]
 ```
 
 ```Go
@@ -631,6 +629,7 @@ func (m *exampleRoutine) Stop()
 
 ```
 searchKey: goroutine.closeOnError
+tags: [private]
 ```
 
 ```Go
@@ -641,6 +640,7 @@ type closeOnError chan bool
 
 ```
 searchKey: goroutine.closeOnError.Error
+tags: [private]
 ```
 
 ```Go
@@ -651,6 +651,7 @@ func (e closeOnError) Error() string
 
 ```
 searchKey: goroutine.MockBackgroundRoutine
+tags: [private]
 ```
 
 ```Go
@@ -670,6 +671,7 @@ MockBackgroundRoutine is a mock implementation of the BackgroundRoutine interfac
 
 ```
 searchKey: goroutine.NewMockBackgroundRoutine
+tags: [private]
 ```
 
 ```Go
@@ -682,6 +684,7 @@ NewMockBackgroundRoutine creates a new mock of the BackgroundRoutine interface. 
 
 ```
 searchKey: goroutine.NewMockBackgroundRoutineFrom
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +697,7 @@ NewMockBackgroundRoutineFrom creates a new mock of the MockBackgroundRoutine int
 
 ```
 searchKey: goroutine.MockBackgroundRoutine.Start
+tags: [private]
 ```
 
 ```Go
@@ -706,6 +710,7 @@ Start delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: goroutine.MockBackgroundRoutine.Stop
+tags: [private]
 ```
 
 ```Go
@@ -718,6 +723,7 @@ Stop delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFunc
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +741,7 @@ BackgroundRoutineStartFunc describes the behavior when the Start method of the p
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -747,6 +754,7 @@ SetDefaultHook sets function that is called when the Start method of the parent 
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -759,6 +767,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Start 
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -771,6 +780,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -783,6 +793,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -793,6 +804,7 @@ func (f *BackgroundRoutineStartFunc) nextHook() func()
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -803,6 +815,7 @@ func (f *BackgroundRoutineStartFunc) appendCall(r0 BackgroundRoutineStartFuncCal
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -815,6 +828,7 @@ History returns a sequence of BackgroundRoutineStartFuncCall objects describing 
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -827,6 +841,7 @@ BackgroundRoutineStartFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -839,6 +854,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: goroutine.BackgroundRoutineStartFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -851,6 +867,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFunc
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +885,7 @@ BackgroundRoutineStopFunc describes the behavior when the Stop method of the par
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -880,6 +898,7 @@ SetDefaultHook sets function that is called when the Stop method of the parent M
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -892,6 +911,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Stop m
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -904,6 +924,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -916,6 +937,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -926,6 +948,7 @@ func (f *BackgroundRoutineStopFunc) nextHook() func()
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +959,7 @@ func (f *BackgroundRoutineStopFunc) appendCall(r0 BackgroundRoutineStopFuncCall)
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -948,6 +972,7 @@ History returns a sequence of BackgroundRoutineStopFuncCall objects describing t
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -960,6 +985,7 @@ BackgroundRoutineStopFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -972,6 +998,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: goroutine.BackgroundRoutineStopFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -984,6 +1011,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: goroutine.MockErrorHandler
+tags: [private]
 ```
 
 ```Go
@@ -1000,6 +1028,7 @@ MockErrorHandler is a mock implementation of the ErrorHandler interface (from th
 
 ```
 searchKey: goroutine.NewMockErrorHandler
+tags: [private]
 ```
 
 ```Go
@@ -1012,6 +1041,7 @@ NewMockErrorHandler creates a new mock of the ErrorHandler interface. All method
 
 ```
 searchKey: goroutine.NewMockErrorHandlerFrom
+tags: [private]
 ```
 
 ```Go
@@ -1024,6 +1054,7 @@ NewMockErrorHandlerFrom creates a new mock of the MockErrorHandler interface. Al
 
 ```
 searchKey: goroutine.MockErrorHandler.HandleError
+tags: [private]
 ```
 
 ```Go
@@ -1036,6 +1067,7 @@ HandleError delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFunc
+tags: [private]
 ```
 
 ```Go
@@ -1053,6 +1085,7 @@ ErrorHandlerHandleErrorFunc describes the behavior when the HandleError method o
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1065,6 +1098,7 @@ SetDefaultHook sets function that is called when the HandleError method of the p
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1077,6 +1111,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Handle
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1089,6 +1124,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1101,6 +1137,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1111,6 +1148,7 @@ func (f *ErrorHandlerHandleErrorFunc) nextHook() func(error)
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1121,6 +1159,7 @@ func (f *ErrorHandlerHandleErrorFunc) appendCall(r0 ErrorHandlerHandleErrorFuncC
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1133,6 +1172,7 @@ History returns a sequence of ErrorHandlerHandleErrorFuncCall objects describing
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1149,6 +1189,7 @@ ErrorHandlerHandleErrorFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1161,6 +1202,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: goroutine.ErrorHandlerHandleErrorFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1173,6 +1215,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: goroutine.MockFinalizer
+tags: [private]
 ```
 
 ```Go
@@ -1189,6 +1232,7 @@ MockFinalizer is a mock implementation of the Finalizer interface (from the pack
 
 ```
 searchKey: goroutine.NewMockFinalizer
+tags: [private]
 ```
 
 ```Go
@@ -1201,6 +1245,7 @@ NewMockFinalizer creates a new mock of the Finalizer interface. All methods retu
 
 ```
 searchKey: goroutine.NewMockFinalizerFrom
+tags: [private]
 ```
 
 ```Go
@@ -1213,6 +1258,7 @@ NewMockFinalizerFrom creates a new mock of the MockFinalizer interface. All meth
 
 ```
 searchKey: goroutine.MockFinalizer.OnShutdown
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1271,7 @@ OnShutdown delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFunc
+tags: [private]
 ```
 
 ```Go
@@ -1242,6 +1289,7 @@ FinalizerOnShutdownFunc describes the behavior when the OnShutdown method of the
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1254,6 +1302,7 @@ SetDefaultHook sets function that is called when the OnShutdown method of the pa
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1266,6 +1315,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the OnShut
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1278,6 +1328,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1290,6 +1341,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1300,6 +1352,7 @@ func (f *FinalizerOnShutdownFunc) nextHook() func()
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1310,6 +1363,7 @@ func (f *FinalizerOnShutdownFunc) appendCall(r0 FinalizerOnShutdownFuncCall)
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1322,6 +1376,7 @@ History returns a sequence of FinalizerOnShutdownFuncCall objects describing the
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1334,6 +1389,7 @@ FinalizerOnShutdownFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1346,6 +1402,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: goroutine.FinalizerOnShutdownFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1358,6 +1415,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: goroutine.MockHandler
+tags: [private]
 ```
 
 ```Go
@@ -1374,6 +1432,7 @@ MockHandler is a mock implementation of the Handler interface (from the package 
 
 ```
 searchKey: goroutine.NewMockHandler
+tags: [private]
 ```
 
 ```Go
@@ -1386,6 +1445,7 @@ NewMockHandler creates a new mock of the Handler interface. All methods return z
 
 ```
 searchKey: goroutine.NewMockHandlerFrom
+tags: [private]
 ```
 
 ```Go
@@ -1398,6 +1458,7 @@ NewMockHandlerFrom creates a new mock of the MockHandler interface. All methods 
 
 ```
 searchKey: goroutine.MockHandler.Handle
+tags: [private]
 ```
 
 ```Go
@@ -1410,6 +1471,7 @@ Handle delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: goroutine.HandlerHandleFunc
+tags: [private]
 ```
 
 ```Go
@@ -1427,6 +1489,7 @@ HandlerHandleFunc describes the behavior when the Handle method of the parent Mo
 
 ```
 searchKey: goroutine.HandlerHandleFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1439,6 +1502,7 @@ SetDefaultHook sets function that is called when the Handle method of the parent
 
 ```
 searchKey: goroutine.HandlerHandleFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1451,6 +1515,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Handle
 
 ```
 searchKey: goroutine.HandlerHandleFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1463,6 +1528,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: goroutine.HandlerHandleFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1475,6 +1541,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: goroutine.HandlerHandleFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1485,6 +1552,7 @@ func (f *HandlerHandleFunc) nextHook() func(context.Context) error
 
 ```
 searchKey: goroutine.HandlerHandleFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1495,6 +1563,7 @@ func (f *HandlerHandleFunc) appendCall(r0 HandlerHandleFuncCall)
 
 ```
 searchKey: goroutine.HandlerHandleFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1507,6 +1576,7 @@ History returns a sequence of HandlerHandleFuncCall objects describing the invoc
 
 ```
 searchKey: goroutine.HandlerHandleFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1526,6 +1596,7 @@ HandlerHandleFuncCall is an object that describes an invocation of method Handle
 
 ```
 searchKey: goroutine.HandlerHandleFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1538,6 +1609,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: goroutine.HandlerHandleFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1550,6 +1622,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: goroutine.MockHandlerWithErrorHandler
+tags: [private]
 ```
 
 ```Go
@@ -1563,6 +1636,7 @@ type MockHandlerWithErrorHandler struct {
 
 ```
 searchKey: goroutine.NewMockHandlerWithErrorHandler
+tags: [private]
 ```
 
 ```Go
@@ -1573,6 +1647,7 @@ func NewMockHandlerWithErrorHandler() *MockHandlerWithErrorHandler
 
 ```
 searchKey: goroutine.MockHandlerWithFinalizer
+tags: [private]
 ```
 
 ```Go
@@ -1586,6 +1661,7 @@ type MockHandlerWithFinalizer struct {
 
 ```
 searchKey: goroutine.NewMockHandlerWithFinalizer
+tags: [private]
 ```
 
 ```Go
@@ -1594,11 +1670,14 @@ func NewMockHandlerWithFinalizer() *MockHandlerWithFinalizer
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MonitorBackgroundRoutines" href="#MonitorBackgroundRoutines">func MonitorBackgroundRoutines(ctx context.Context, routines ...BackgroundRoutine)</a>
 
 ```
 searchKey: goroutine.MonitorBackgroundRoutines
-tags: [exported]
 ```
 
 ```Go
@@ -1611,6 +1690,7 @@ MonitorBackgroundRoutines will start the given background routines in their own 
 
 ```
 searchKey: goroutine.monitorBackgroundRoutines
+tags: [private]
 ```
 
 ```Go
@@ -1621,6 +1701,7 @@ func monitorBackgroundRoutines(ctx context.Context, signals <-chan os.Signal, ro
 
 ```
 searchKey: goroutine.startAll
+tags: [private]
 ```
 
 ```Go
@@ -1633,6 +1714,7 @@ startAll calls each routine's Start method in its own goroutine and registers ea
 
 ```
 searchKey: goroutine.stopAll
+tags: [private]
 ```
 
 ```Go
@@ -1645,6 +1727,7 @@ stopAll calls each routine's Stop method in its own goroutine and and registers 
 
 ```
 searchKey: goroutine.waitForSignal
+tags: [private]
 ```
 
 ```Go
@@ -1657,6 +1740,7 @@ waitForSignal blocks until the given context is canceled or signal has been rece
 
 ```
 searchKey: goroutine.exitAfterSignals
+tags: [private]
 ```
 
 ```Go
@@ -1669,7 +1753,6 @@ exitAfterSignals waits for a number of signals on the given channel, then calls 
 
 ```
 searchKey: goroutine.Go
-tags: [exported]
 ```
 
 ```Go
@@ -1686,7 +1769,6 @@ More advanced use cases should copy this implementation and modify it.
 
 ```
 searchKey: goroutine.Parallel
-tags: [exported]
 ```
 
 ```Go
@@ -1699,6 +1781,7 @@ Parallel calls each of the given functions in a goroutine. This method blocks un
 
 ```
 searchKey: goroutine.runPeriodicHandler
+tags: [private]
 ```
 
 ```Go
@@ -1709,7 +1792,6 @@ func runPeriodicHandler(ctx context.Context, handler Handler, operation *observa
 
 ```
 searchKey: goroutine.RunWorkers
-tags: [exported]
 ```
 
 ```Go
@@ -1722,7 +1804,6 @@ RunWorkers invokes the given worker a number of times proportional to the maximu
 
 ```
 searchKey: goroutine.RunWorkersN
-tags: [exported]
 ```
 
 ```Go
@@ -1735,7 +1816,6 @@ RunWorkersN invokes the given worker n times and collects the errors from each i
 
 ```
 searchKey: goroutine.RunWorkersOverStrings
-tags: [exported]
 ```
 
 ```Go
@@ -1748,7 +1828,6 @@ RunWorkersOverStrings invokes the given worker once for each of the given string
 
 ```
 searchKey: goroutine.RunWorkersOverStringsN
-tags: [exported]
 ```
 
 ```Go
@@ -1761,16 +1840,18 @@ RunWorkersOverStrings invokes the given worker once for each of the given string
 
 ```
 searchKey: goroutine.loadIndexedStringChannel
+tags: [private]
 ```
 
 ```Go
 func loadIndexedStringChannel(values []string) <-chan indexedString
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.background_test.go" href="#init.background_test.go">func init()</a>
 
 ```
 searchKey: goroutine.init
+tags: [private]
 ```
 
 ```Go
@@ -1783,6 +1864,7 @@ Make the exiter a no-op in tests
 
 ```
 searchKey: goroutine.TestMonitorBackgroundRoutinesSignal
+tags: [private]
 ```
 
 ```Go
@@ -1793,6 +1875,7 @@ func TestMonitorBackgroundRoutinesSignal(t *testing.T)
 
 ```
 searchKey: goroutine.TestMonitorBackgroundRoutinesContextCancel
+tags: [private]
 ```
 
 ```Go
@@ -1803,6 +1886,7 @@ func TestMonitorBackgroundRoutinesContextCancel(t *testing.T)
 
 ```
 searchKey: goroutine.TestBounded
+tags: [private]
 ```
 
 ```Go
@@ -1813,6 +1897,7 @@ func TestBounded(t *testing.T)
 
 ```
 searchKey: goroutine.TestBounded_error
+tags: [private]
 ```
 
 ```Go
@@ -1823,6 +1908,7 @@ func TestBounded_error(t *testing.T)
 
 ```
 searchKey: goroutine.ExampleBackgroundRoutine
+tags: [private]
 ```
 
 ```Go
@@ -1833,6 +1919,7 @@ func ExampleBackgroundRoutine()
 
 ```
 searchKey: goroutine.ExamplePeriodicGoroutine
+tags: [private]
 ```
 
 ```Go
@@ -1843,6 +1930,7 @@ func ExamplePeriodicGoroutine()
 
 ```
 searchKey: goroutine.TestGo
+tags: [private]
 ```
 
 ```Go
@@ -1853,6 +1941,7 @@ func TestGo(t *testing.T)
 
 ```
 searchKey: goroutine.TestParallel
+tags: [private]
 ```
 
 ```Go
@@ -1863,6 +1952,7 @@ func TestParallel(t *testing.T)
 
 ```
 searchKey: goroutine.TestPeriodicGoroutine
+tags: [private]
 ```
 
 ```Go
@@ -1873,6 +1963,7 @@ func TestPeriodicGoroutine(t *testing.T)
 
 ```
 searchKey: goroutine.TestPeriodicGoroutineError
+tags: [private]
 ```
 
 ```Go
@@ -1883,6 +1974,7 @@ func TestPeriodicGoroutineError(t *testing.T)
 
 ```
 searchKey: goroutine.TestPeriodicGoroutineContextError
+tags: [private]
 ```
 
 ```Go
@@ -1893,6 +1985,7 @@ func TestPeriodicGoroutineContextError(t *testing.T)
 
 ```
 searchKey: goroutine.TestPeriodicGoroutineFinalizer
+tags: [private]
 ```
 
 ```Go
@@ -1903,6 +1996,7 @@ func TestPeriodicGoroutineFinalizer(t *testing.T)
 
 ```
 searchKey: goroutine.TestRunWorkersN
+tags: [private]
 ```
 
 ```Go

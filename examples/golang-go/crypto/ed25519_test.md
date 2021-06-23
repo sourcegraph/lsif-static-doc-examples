@@ -10,10 +10,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestEd25519Vectors" href="#TestEd25519Vectors">func TestEd25519Vectors(t *testing.T)</a>
 
 ```
 searchKey: ed25519_test.TestEd25519Vectors
+tags: [private]
 ```
 
 ```Go
@@ -32,6 +37,7 @@ See [https://hdevalence.ca/blog/2020-10-04-its-25519am](https://hdevalence.ca/bl
 
 ```
 searchKey: ed25519_test.downloadEd25519Vectors
+tags: [private]
 ```
 
 ```Go
@@ -42,6 +48,7 @@ func downloadEd25519Vectors(t *testing.T) []byte
 
 ```
 searchKey: ed25519_test.decodeHex
+tags: [private]
 ```
 
 ```Go

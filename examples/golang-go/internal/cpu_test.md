@@ -18,10 +18,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestMinimalFeatures" href="#TestMinimalFeatures">func TestMinimalFeatures(t *testing.T)</a>
 
 ```
 searchKey: cpu_test.TestMinimalFeatures
+tags: [private]
 ```
 
 ```Go
@@ -32,6 +37,7 @@ func TestMinimalFeatures(t *testing.T)
 
 ```
 searchKey: cpu_test.MustHaveDebugOptionsSupport
+tags: [private]
 ```
 
 ```Go
@@ -42,6 +48,7 @@ func MustHaveDebugOptionsSupport(t *testing.T)
 
 ```
 searchKey: cpu_test.MustSupportFeatureDectection
+tags: [private]
 ```
 
 ```Go
@@ -52,6 +59,7 @@ func MustSupportFeatureDectection(t *testing.T)
 
 ```
 searchKey: cpu_test.runDebugOptionsTest
+tags: [private]
 ```
 
 ```Go
@@ -62,6 +70,7 @@ func runDebugOptionsTest(t *testing.T, test string, options string)
 
 ```
 searchKey: cpu_test.TestDisableAllCapabilities
+tags: [private]
 ```
 
 ```Go
@@ -72,6 +81,7 @@ func TestDisableAllCapabilities(t *testing.T)
 
 ```
 searchKey: cpu_test.TestAllCapabilitiesDisabled
+tags: [private]
 ```
 
 ```Go
@@ -82,6 +92,7 @@ func TestAllCapabilitiesDisabled(t *testing.T)
 
 ```
 searchKey: cpu_test.TestX86ifAVX2hasAVX
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +103,7 @@ func TestX86ifAVX2hasAVX(t *testing.T)
 
 ```
 searchKey: cpu_test.TestDisableSSE2
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +114,7 @@ func TestDisableSSE2(t *testing.T)
 
 ```
 searchKey: cpu_test.TestSSE2DebugOption
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +125,7 @@ func TestSSE2DebugOption(t *testing.T)
 
 ```
 searchKey: cpu_test.TestDisableSSE3
+tags: [private]
 ```
 
 ```Go
@@ -122,6 +136,7 @@ func TestDisableSSE3(t *testing.T)
 
 ```
 searchKey: cpu_test.TestSSE3DebugOption
+tags: [private]
 ```
 
 ```Go

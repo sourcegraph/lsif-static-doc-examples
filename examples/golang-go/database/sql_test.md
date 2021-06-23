@@ -32,10 +32,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="pool" href="#pool">var pool</a>
 
 ```
 searchKey: sql_test.pool
+tags: [private]
 ```
 
 ```Go
@@ -47,6 +52,7 @@ var pool *sql.DB // Database connection pool.
 
 ```
 searchKey: sql_test.ctx
+tags: [private]
 ```
 
 ```Go
@@ -57,6 +63,7 @@ var ctx context.Context
 
 ```
 searchKey: sql_test.db
+tags: [private]
 ```
 
 ```Go
@@ -65,10 +72,15 @@ var db *sql.DB
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Service" href="#Service">type Service struct</a>
 
 ```
 searchKey: sql_test.Service
+tags: [private]
 ```
 
 ```Go
@@ -81,6 +93,7 @@ type Service struct {
 
 ```
 searchKey: sql_test.Service.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -89,10 +102,15 @@ func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example_openDBCLI" href="#Example_openDBCLI">func Example_openDBCLI()</a>
 
 ```
 searchKey: sql_test.Example_openDBCLI
+tags: [private]
 ```
 
 ```Go
@@ -103,6 +121,7 @@ func Example_openDBCLI()
 
 ```
 searchKey: sql_test.Ping
+tags: [private]
 ```
 
 ```Go
@@ -115,6 +134,7 @@ Ping the database to verify DSN provided by the user is valid and the server acc
 
 ```
 searchKey: sql_test.Query
+tags: [private]
 ```
 
 ```Go
@@ -127,6 +147,7 @@ Query the database for the information requested and prints the results. If the 
 
 ```
 searchKey: sql_test.Example_openDBService
+tags: [private]
 ```
 
 ```Go
@@ -137,6 +158,7 @@ func Example_openDBService()
 
 ```
 searchKey: sql_test.ExampleDB_QueryContext
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +169,7 @@ func ExampleDB_QueryContext()
 
 ```
 searchKey: sql_test.ExampleDB_QueryRowContext
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +180,7 @@ func ExampleDB_QueryRowContext()
 
 ```
 searchKey: sql_test.ExampleDB_ExecContext
+tags: [private]
 ```
 
 ```Go
@@ -167,6 +191,7 @@ func ExampleDB_ExecContext()
 
 ```
 searchKey: sql_test.ExampleDB_Query_multipleResultSets
+tags: [private]
 ```
 
 ```Go
@@ -177,6 +202,7 @@ func ExampleDB_Query_multipleResultSets()
 
 ```
 searchKey: sql_test.ExampleDB_PingContext
+tags: [private]
 ```
 
 ```Go
@@ -187,6 +213,7 @@ func ExampleDB_PingContext()
 
 ```
 searchKey: sql_test.ExampleDB_Prepare
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +224,7 @@ func ExampleDB_Prepare()
 
 ```
 searchKey: sql_test.ExampleTx_Prepare
+tags: [private]
 ```
 
 ```Go
@@ -207,6 +235,7 @@ func ExampleTx_Prepare()
 
 ```
 searchKey: sql_test.ExampleDB_BeginTx
+tags: [private]
 ```
 
 ```Go
@@ -217,6 +246,7 @@ func ExampleDB_BeginTx()
 
 ```
 searchKey: sql_test.ExampleConn_ExecContext
+tags: [private]
 ```
 
 ```Go
@@ -227,6 +257,7 @@ func ExampleConn_ExecContext()
 
 ```
 searchKey: sql_test.ExampleTx_ExecContext
+tags: [private]
 ```
 
 ```Go
@@ -237,6 +268,7 @@ func ExampleTx_ExecContext()
 
 ```
 searchKey: sql_test.ExampleTx_Rollback
+tags: [private]
 ```
 
 ```Go
@@ -247,6 +279,7 @@ func ExampleTx_Rollback()
 
 ```
 searchKey: sql_test.ExampleStmt
+tags: [private]
 ```
 
 ```Go
@@ -257,6 +290,7 @@ func ExampleStmt()
 
 ```
 searchKey: sql_test.ExampleStmt_QueryRowContext
+tags: [private]
 ```
 
 ```Go
@@ -267,6 +301,7 @@ func ExampleStmt_QueryRowContext()
 
 ```
 searchKey: sql_test.ExampleRows
+tags: [private]
 ```
 
 ```Go

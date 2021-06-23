@@ -15,10 +15,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="stripeSecretKey" href="#stripeSecretKey">var stripeSecretKey</a>
 
 ```
 searchKey: stripeutil.stripeSecretKey
+tags: [private]
 ```
 
 ```Go
@@ -29,6 +34,7 @@ var stripeSecretKey = env.Get("STRIPE_SECRET_KEY", "", "billing: Stripe API secr
 
 ```
 searchKey: stripeutil.stripePublishableKey
+tags: [private]
 ```
 
 ```Go
@@ -37,11 +43,14 @@ var stripePublishableKey = ...
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ValidateAndPublishConfig" href="#ValidateAndPublishConfig">func ValidateAndPublishConfig() bool</a>
 
 ```
 searchKey: stripeutil.ValidateAndPublishConfig
-tags: [exported]
 ```
 
 ```Go
@@ -54,6 +63,7 @@ ValidateAndPublishConfig check for and validates config for Stripe and exposes t
 
 ```
 searchKey: stripeutil.isTest
+tags: [private]
 ```
 
 ```Go
@@ -64,6 +74,7 @@ func isTest() bool
 
 ```
 searchKey: stripeutil.baseURL
+tags: [private]
 ```
 
 ```Go
@@ -74,7 +85,6 @@ func baseURL() string
 
 ```
 searchKey: stripeutil.CustomerURL
-tags: [exported]
 ```
 
 ```Go
@@ -87,7 +97,6 @@ CustomerURL returns the URL to the customer with the given ID on the billing sys
 
 ```
 searchKey: stripeutil.SubscriptionURL
-tags: [exported]
 ```
 
 ```Go

@@ -363,14 +363,11 @@ Package parse builds parse trees for templates as defined by text/template and h
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="itemError" href="#itemError">const itemError</a>
 
 ```
 searchKey: parse.itemError
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +379,7 @@ const itemError itemType = iota // error occurred; value is text of error
 
 ```
 searchKey: parse.itemBool
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +391,7 @@ const itemBool // boolean constant
 
 ```
 searchKey: parse.itemChar
+tags: [private]
 ```
 
 ```Go
@@ -404,6 +403,7 @@ const itemChar // printable ASCII character; grab bag for comma etc.
 
 ```
 searchKey: parse.itemCharConstant
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +415,7 @@ const itemCharConstant // character constant
 
 ```
 searchKey: parse.itemComment
+tags: [private]
 ```
 
 ```Go
@@ -426,6 +427,7 @@ const itemComment // comment text
 
 ```
 searchKey: parse.itemComplex
+tags: [private]
 ```
 
 ```Go
@@ -437,6 +439,7 @@ const itemComplex // complex constant (1+2i); imaginary is just a number
 
 ```
 searchKey: parse.itemAssign
+tags: [private]
 ```
 
 ```Go
@@ -448,6 +451,7 @@ const itemAssign // equals ('=') introducing an assignment
 
 ```
 searchKey: parse.itemDeclare
+tags: [private]
 ```
 
 ```Go
@@ -459,6 +463,7 @@ const itemDeclare // colon-equals (':=') introducing a declaration
 
 ```
 searchKey: parse.itemEOF
+tags: [private]
 ```
 
 ```Go
@@ -469,6 +474,7 @@ const itemEOF
 
 ```
 searchKey: parse.itemField
+tags: [private]
 ```
 
 ```Go
@@ -480,6 +486,7 @@ const itemField // alphanumeric identifier starting with '.'
 
 ```
 searchKey: parse.itemIdentifier
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +498,7 @@ const itemIdentifier // alphanumeric identifier not starting with '.'
 
 ```
 searchKey: parse.itemLeftDelim
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +510,7 @@ const itemLeftDelim // left action delimiter
 
 ```
 searchKey: parse.itemLeftParen
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +522,7 @@ const itemLeftParen // '(' inside action
 
 ```
 searchKey: parse.itemNumber
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +534,7 @@ const itemNumber // simple number, including imaginary
 
 ```
 searchKey: parse.itemPipe
+tags: [private]
 ```
 
 ```Go
@@ -535,6 +546,7 @@ const itemPipe // pipe symbol
 
 ```
 searchKey: parse.itemRawString
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +558,7 @@ const itemRawString // raw quoted string (includes quotes)
 
 ```
 searchKey: parse.itemRightDelim
+tags: [private]
 ```
 
 ```Go
@@ -557,6 +570,7 @@ const itemRightDelim // right action delimiter
 
 ```
 searchKey: parse.itemRightParen
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +582,7 @@ const itemRightParen // ')' inside action
 
 ```
 searchKey: parse.itemSpace
+tags: [private]
 ```
 
 ```Go
@@ -579,6 +594,7 @@ const itemSpace // run of spaces separating arguments
 
 ```
 searchKey: parse.itemString
+tags: [private]
 ```
 
 ```Go
@@ -590,6 +606,7 @@ const itemString // quoted string (includes quotes)
 
 ```
 searchKey: parse.itemText
+tags: [private]
 ```
 
 ```Go
@@ -601,6 +618,7 @@ const itemText // plain text
 
 ```
 searchKey: parse.itemVariable
+tags: [private]
 ```
 
 ```Go
@@ -612,6 +630,7 @@ const itemVariable // variable starting with '$', such as '$' or  '$1' or '$hell
 
 ```
 searchKey: parse.itemKeyword
+tags: [private]
 ```
 
 ```Go
@@ -625,6 +644,7 @@ Keywords appear after all the rest.
 
 ```
 searchKey: parse.itemBlock
+tags: [private]
 ```
 
 ```Go
@@ -636,6 +656,7 @@ const itemBlock // block keyword
 
 ```
 searchKey: parse.itemDot
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +668,7 @@ const itemDot // the cursor, spelled '.'
 
 ```
 searchKey: parse.itemDefine
+tags: [private]
 ```
 
 ```Go
@@ -658,6 +680,7 @@ const itemDefine // define keyword
 
 ```
 searchKey: parse.itemElse
+tags: [private]
 ```
 
 ```Go
@@ -669,6 +692,7 @@ const itemElse // else keyword
 
 ```
 searchKey: parse.itemEnd
+tags: [private]
 ```
 
 ```Go
@@ -680,6 +704,7 @@ const itemEnd // end keyword
 
 ```
 searchKey: parse.itemIf
+tags: [private]
 ```
 
 ```Go
@@ -691,6 +716,7 @@ const itemIf // if keyword
 
 ```
 searchKey: parse.itemNil
+tags: [private]
 ```
 
 ```Go
@@ -702,6 +728,7 @@ const itemNil // the untyped nil constant, easiest to treat as a keyword
 
 ```
 searchKey: parse.itemRange
+tags: [private]
 ```
 
 ```Go
@@ -713,6 +740,7 @@ const itemRange // range keyword
 
 ```
 searchKey: parse.itemTemplate
+tags: [private]
 ```
 
 ```Go
@@ -724,6 +752,7 @@ const itemTemplate // template keyword
 
 ```
 searchKey: parse.itemWith
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +764,7 @@ const itemWith // with keyword
 
 ```
 searchKey: parse.eof
+tags: [private]
 ```
 
 ```Go
@@ -745,6 +775,7 @@ const eof = -1
 
 ```
 searchKey: parse.spaceChars
+tags: [private]
 ```
 
 ```Go
@@ -758,6 +789,7 @@ Trimming spaces. If the action begins "{{- " rather than "{{", then all space/ta
 
 ```
 searchKey: parse.trimMarker
+tags: [private]
 ```
 
 ```Go
@@ -771,6 +803,7 @@ Trimming spaces. If the action begins "{{- " rather than "{{", then all space/ta
 
 ```
 searchKey: parse.trimMarkerLen
+tags: [private]
 ```
 
 ```Go
@@ -784,6 +817,7 @@ Trimming spaces. If the action begins "{{- " rather than "{{", then all space/ta
 
 ```
 searchKey: parse.leftDelim
+tags: [private]
 ```
 
 ```Go
@@ -794,6 +828,7 @@ const leftDelim = "{{"
 
 ```
 searchKey: parse.rightDelim
+tags: [private]
 ```
 
 ```Go
@@ -804,6 +839,7 @@ const rightDelim = "}}"
 
 ```
 searchKey: parse.leftComment
+tags: [private]
 ```
 
 ```Go
@@ -814,6 +850,7 @@ const leftComment = "/*"
 
 ```
 searchKey: parse.rightComment
+tags: [private]
 ```
 
 ```Go
@@ -824,7 +861,6 @@ const rightComment = "*/"
 
 ```
 searchKey: parse.NodeText
-tags: [exported]
 ```
 
 ```Go
@@ -836,7 +872,6 @@ const NodeText NodeType = iota // Plain text.
 
 ```
 searchKey: parse.NodeAction
-tags: [exported]
 ```
 
 ```Go
@@ -848,7 +883,6 @@ const NodeAction // A non-control action such as a field evaluation.
 
 ```
 searchKey: parse.NodeBool
-tags: [exported]
 ```
 
 ```Go
@@ -860,7 +894,6 @@ const NodeBool // A boolean constant.
 
 ```
 searchKey: parse.NodeChain
-tags: [exported]
 ```
 
 ```Go
@@ -872,7 +905,6 @@ const NodeChain // A sequence of field accesses.
 
 ```
 searchKey: parse.NodeCommand
-tags: [exported]
 ```
 
 ```Go
@@ -884,7 +916,6 @@ const NodeCommand // An element of a pipeline.
 
 ```
 searchKey: parse.NodeDot
-tags: [exported]
 ```
 
 ```Go
@@ -896,6 +927,7 @@ const NodeDot // The cursor, dot.
 
 ```
 searchKey: parse.nodeElse
+tags: [private]
 ```
 
 ```Go
@@ -907,6 +939,7 @@ const nodeElse // An else action. Not added to tree.
 
 ```
 searchKey: parse.nodeEnd
+tags: [private]
 ```
 
 ```Go
@@ -918,7 +951,6 @@ const nodeEnd // An end action. Not added to tree.
 
 ```
 searchKey: parse.NodeField
-tags: [exported]
 ```
 
 ```Go
@@ -930,7 +962,6 @@ const NodeField // A field or method name.
 
 ```
 searchKey: parse.NodeIdentifier
-tags: [exported]
 ```
 
 ```Go
@@ -942,7 +973,6 @@ const NodeIdentifier // An identifier; always a function name.
 
 ```
 searchKey: parse.NodeIf
-tags: [exported]
 ```
 
 ```Go
@@ -954,7 +984,6 @@ const NodeIf // An if action.
 
 ```
 searchKey: parse.NodeList
-tags: [exported]
 ```
 
 ```Go
@@ -966,7 +995,6 @@ const NodeList // A list of Nodes.
 
 ```
 searchKey: parse.NodeNil
-tags: [exported]
 ```
 
 ```Go
@@ -978,7 +1006,6 @@ const NodeNil // An untyped nil constant.
 
 ```
 searchKey: parse.NodeNumber
-tags: [exported]
 ```
 
 ```Go
@@ -990,7 +1017,6 @@ const NodeNumber // A numerical constant.
 
 ```
 searchKey: parse.NodePipe
-tags: [exported]
 ```
 
 ```Go
@@ -1002,7 +1028,6 @@ const NodePipe // A pipeline of commands.
 
 ```
 searchKey: parse.NodeRange
-tags: [exported]
 ```
 
 ```Go
@@ -1014,7 +1039,6 @@ const NodeRange // A range action.
 
 ```
 searchKey: parse.NodeString
-tags: [exported]
 ```
 
 ```Go
@@ -1026,7 +1050,6 @@ const NodeString // A string constant.
 
 ```
 searchKey: parse.NodeTemplate
-tags: [exported]
 ```
 
 ```Go
@@ -1038,7 +1061,6 @@ const NodeTemplate // A template invocation action.
 
 ```
 searchKey: parse.NodeVariable
-tags: [exported]
 ```
 
 ```Go
@@ -1050,7 +1072,6 @@ const NodeVariable // A $ variable.
 
 ```
 searchKey: parse.NodeWith
-tags: [exported]
 ```
 
 ```Go
@@ -1062,7 +1083,6 @@ const NodeWith // A with action.
 
 ```
 searchKey: parse.NodeComment
-tags: [exported]
 ```
 
 ```Go
@@ -1074,7 +1094,6 @@ const NodeComment // A comment.
 
 ```
 searchKey: parse.ParseComments
-tags: [exported]
 ```
 
 ```Go
@@ -1086,7 +1105,6 @@ const ParseComments Mode = 1 << iota // parse comments and add them to AST
 
 ```
 searchKey: parse.SkipFuncCheck
-tags: [exported]
 ```
 
 ```Go
@@ -1098,6 +1116,7 @@ const SkipFuncCheck // do not check that functions are defined
 
 ```
 searchKey: parse.noError
+tags: [private]
 ```
 
 ```Go
@@ -1108,6 +1127,7 @@ const noError = true
 
 ```
 searchKey: parse.hasError
+tags: [private]
 ```
 
 ```Go
@@ -1116,14 +1136,11 @@ const hasError = false
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="key" href="#key">var key</a>
 
 ```
 searchKey: parse.key
+tags: [private]
 ```
 
 ```Go
@@ -1134,6 +1151,7 @@ var key = ...
 
 ```
 searchKey: parse.textFormat
+tags: [private]
 ```
 
 ```Go
@@ -1145,6 +1163,7 @@ var textFormat = "%s" // Changed to "%q" in tests for better error messages.
 
 ```
 searchKey: parse.itemName
+tags: [private]
 ```
 
 ```Go
@@ -1157,6 +1176,7 @@ Make the types prettyprint.
 
 ```
 searchKey: parse.tDot
+tags: [private]
 ```
 
 ```Go
@@ -1167,6 +1187,7 @@ var tDot = mkItem(itemDot, ".")
 
 ```
 searchKey: parse.tBlock
+tags: [private]
 ```
 
 ```Go
@@ -1177,6 +1198,7 @@ var tBlock = mkItem(itemBlock, "block")
 
 ```
 searchKey: parse.tEOF
+tags: [private]
 ```
 
 ```Go
@@ -1187,6 +1209,7 @@ var tEOF = mkItem(itemEOF, "")
 
 ```
 searchKey: parse.tFor
+tags: [private]
 ```
 
 ```Go
@@ -1197,6 +1220,7 @@ var tFor = mkItem(itemIdentifier, "for")
 
 ```
 searchKey: parse.tLeft
+tags: [private]
 ```
 
 ```Go
@@ -1207,6 +1231,7 @@ var tLeft = mkItem(itemLeftDelim, "{{")
 
 ```
 searchKey: parse.tLpar
+tags: [private]
 ```
 
 ```Go
@@ -1217,6 +1242,7 @@ var tLpar = mkItem(itemLeftParen, "(")
 
 ```
 searchKey: parse.tPipe
+tags: [private]
 ```
 
 ```Go
@@ -1227,6 +1253,7 @@ var tPipe = mkItem(itemPipe, "|")
 
 ```
 searchKey: parse.tQuote
+tags: [private]
 ```
 
 ```Go
@@ -1237,6 +1264,7 @@ var tQuote = mkItem(itemString, `"abc \n\t\" "`)
 
 ```
 searchKey: parse.tRange
+tags: [private]
 ```
 
 ```Go
@@ -1247,6 +1275,7 @@ var tRange = mkItem(itemRange, "range")
 
 ```
 searchKey: parse.tRight
+tags: [private]
 ```
 
 ```Go
@@ -1257,6 +1286,7 @@ var tRight = mkItem(itemRightDelim, "}}")
 
 ```
 searchKey: parse.tRpar
+tags: [private]
 ```
 
 ```Go
@@ -1267,6 +1297,7 @@ var tRpar = mkItem(itemRightParen, ")")
 
 ```
 searchKey: parse.tSpace
+tags: [private]
 ```
 
 ```Go
@@ -1277,6 +1308,7 @@ var tSpace = mkItem(itemSpace, " ")
 
 ```
 searchKey: parse.raw
+tags: [private]
 ```
 
 ```Go
@@ -1287,6 +1319,7 @@ var raw = "`" + `abc\n\t\" ` + "`"
 
 ```
 searchKey: parse.rawNL
+tags: [private]
 ```
 
 ```Go
@@ -1298,6 +1331,7 @@ var rawNL = "`now is{{\n}}the time`" // Contains newline inside raw quote.
 
 ```
 searchKey: parse.tRawQuote
+tags: [private]
 ```
 
 ```Go
@@ -1308,6 +1342,7 @@ var tRawQuote = mkItem(itemRawString, raw)
 
 ```
 searchKey: parse.tRawQuoteNL
+tags: [private]
 ```
 
 ```Go
@@ -1318,6 +1353,7 @@ var tRawQuoteNL = mkItem(itemRawString, rawNL)
 
 ```
 searchKey: parse.lexTests
+tags: [private]
 ```
 
 ```Go
@@ -1328,6 +1364,7 @@ var lexTests = ...
 
 ```
 searchKey: parse.lexDelimTests
+tags: [private]
 ```
 
 ```Go
@@ -1340,6 +1377,7 @@ Some easy cases from above, but with delimiters $$ and @@
 
 ```
 searchKey: parse.tLeftDelim
+tags: [private]
 ```
 
 ```Go
@@ -1350,6 +1388,7 @@ var tLeftDelim = mkItem(itemLeftDelim, "$$")
 
 ```
 searchKey: parse.tRightDelim
+tags: [private]
 ```
 
 ```Go
@@ -1360,6 +1399,7 @@ var tRightDelim = mkItem(itemRightDelim, "@@")
 
 ```
 searchKey: parse.lexPosTests
+tags: [private]
 ```
 
 ```Go
@@ -1370,6 +1410,7 @@ var lexPosTests = ...
 
 ```
 searchKey: parse.debug
+tags: [private]
 ```
 
 ```Go
@@ -1380,6 +1421,7 @@ var debug = flag.Bool("debug", false, "show the errors produced by the main test
 
 ```
 searchKey: parse.numberTests
+tags: [private]
 ```
 
 ```Go
@@ -1390,6 +1432,7 @@ var numberTests = ...
 
 ```
 searchKey: parse.parseTests
+tags: [private]
 ```
 
 ```Go
@@ -1400,6 +1443,7 @@ var parseTests = ...
 
 ```
 searchKey: parse.builtins
+tags: [private]
 ```
 
 ```Go
@@ -1413,6 +1457,7 @@ var builtins = map[string]interface{}{
 
 ```
 searchKey: parse.isEmptyTests
+tags: [private]
 ```
 
 ```Go
@@ -1423,6 +1468,7 @@ var isEmptyTests = ...
 
 ```
 searchKey: parse.errorTests
+tags: [private]
 ```
 
 ```Go
@@ -1435,6 +1481,7 @@ All failures, and the result is a string that must appear in the error message.
 
 ```
 searchKey: parse.sinkv
+tags: [private]
 ```
 
 ```Go
@@ -1445,6 +1492,7 @@ var sinkv, sinkl string
 
 ```
 searchKey: parse.sinkl
+tags: [private]
 ```
 
 ```Go
@@ -1453,14 +1501,11 @@ var sinkv, sinkl string
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="item" href="#item">type item struct</a>
 
 ```
 searchKey: parse.item
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1523,7 @@ item represents a token or text string returned from the scanner.
 
 ```
 searchKey: parse.mkItem
+tags: [private]
 ```
 
 ```Go
@@ -1488,6 +1534,7 @@ func mkItem(typ itemType, text string) item
 
 ```
 searchKey: parse.item.String
+tags: [private]
 ```
 
 ```Go
@@ -1498,6 +1545,7 @@ func (i item) String() string
 
 ```
 searchKey: parse.itemType
+tags: [private]
 ```
 
 ```Go
@@ -1510,6 +1558,7 @@ itemType identifies the type of lex items.
 
 ```
 searchKey: parse.itemType.String
+tags: [private]
 ```
 
 ```Go
@@ -1520,6 +1569,7 @@ func (i itemType) String() string
 
 ```
 searchKey: parse.stateFn
+tags: [private]
 ```
 
 ```Go
@@ -1532,6 +1582,7 @@ stateFn represents the state of the scanner as a function that returns the next 
 
 ```
 searchKey: parse.lexText
+tags: [private]
 ```
 
 ```Go
@@ -1544,6 +1595,7 @@ lexText scans until an opening action delimiter, "{{".
 
 ```
 searchKey: parse.lexLeftDelim
+tags: [private]
 ```
 
 ```Go
@@ -1556,6 +1608,7 @@ lexLeftDelim scans the left delimiter, which is known to be present, possibly wi
 
 ```
 searchKey: parse.lexComment
+tags: [private]
 ```
 
 ```Go
@@ -1568,6 +1621,7 @@ lexComment scans a comment. The left comment marker is known to be present.
 
 ```
 searchKey: parse.lexRightDelim
+tags: [private]
 ```
 
 ```Go
@@ -1580,6 +1634,7 @@ lexRightDelim scans the right delimiter, which is known to be present, possibly 
 
 ```
 searchKey: parse.lexInsideAction
+tags: [private]
 ```
 
 ```Go
@@ -1592,6 +1647,7 @@ lexInsideAction scans the elements inside action delimiters.
 
 ```
 searchKey: parse.lexSpace
+tags: [private]
 ```
 
 ```Go
@@ -1604,6 +1660,7 @@ lexSpace scans a run of space characters. We have not consumed the first space, 
 
 ```
 searchKey: parse.lexIdentifier
+tags: [private]
 ```
 
 ```Go
@@ -1616,6 +1673,7 @@ lexIdentifier scans an alphanumeric.
 
 ```
 searchKey: parse.lexField
+tags: [private]
 ```
 
 ```Go
@@ -1628,6 +1686,7 @@ lexField scans a field: .Alphanumeric. The . has been scanned.
 
 ```
 searchKey: parse.lexVariable
+tags: [private]
 ```
 
 ```Go
@@ -1640,6 +1699,7 @@ lexVariable scans a Variable: $Alphanumeric. The $ has been scanned.
 
 ```
 searchKey: parse.lexFieldOrVariable
+tags: [private]
 ```
 
 ```Go
@@ -1652,6 +1712,7 @@ lexVariable scans a field or variable: [.$]Alphanumeric. The . or $ has been sca
 
 ```
 searchKey: parse.lexChar
+tags: [private]
 ```
 
 ```Go
@@ -1664,6 +1725,7 @@ lexChar scans a character constant. The initial quote is already scanned. Syntax
 
 ```
 searchKey: parse.lexNumber
+tags: [private]
 ```
 
 ```Go
@@ -1676,6 +1738,7 @@ lexNumber scans a number: decimal, octal, hex, float, or imaginary. This isn't a
 
 ```
 searchKey: parse.lexQuote
+tags: [private]
 ```
 
 ```Go
@@ -1688,6 +1751,7 @@ lexQuote scans a quoted string.
 
 ```
 searchKey: parse.lexRawQuote
+tags: [private]
 ```
 
 ```Go
@@ -1700,6 +1764,7 @@ lexRawQuote scans a raw quoted string.
 
 ```
 searchKey: parse.lexer
+tags: [private]
 ```
 
 ```Go
@@ -1725,6 +1790,7 @@ lexer holds the state of the scanner.
 
 ```
 searchKey: parse.lex
+tags: [private]
 ```
 
 ```Go
@@ -1737,6 +1803,7 @@ lex creates a new scanner for the input string.
 
 ```
 searchKey: parse.lexer.next
+tags: [private]
 ```
 
 ```Go
@@ -1749,6 +1816,7 @@ next returns the next rune in the input.
 
 ```
 searchKey: parse.lexer.peek
+tags: [private]
 ```
 
 ```Go
@@ -1761,6 +1829,7 @@ peek returns but does not consume the next rune in the input.
 
 ```
 searchKey: parse.lexer.backup
+tags: [private]
 ```
 
 ```Go
@@ -1773,6 +1842,7 @@ backup steps back one rune. Can only be called once per call of next.
 
 ```
 searchKey: parse.lexer.emit
+tags: [private]
 ```
 
 ```Go
@@ -1785,6 +1855,7 @@ emit passes an item back to the client.
 
 ```
 searchKey: parse.lexer.ignore
+tags: [private]
 ```
 
 ```Go
@@ -1797,6 +1868,7 @@ ignore skips over the pending input before this point.
 
 ```
 searchKey: parse.lexer.accept
+tags: [private]
 ```
 
 ```Go
@@ -1809,6 +1881,7 @@ accept consumes the next rune if it's from the valid set.
 
 ```
 searchKey: parse.lexer.acceptRun
+tags: [private]
 ```
 
 ```Go
@@ -1821,6 +1894,7 @@ acceptRun consumes a run of runes from the valid set.
 
 ```
 searchKey: parse.lexer.errorf
+tags: [private]
 ```
 
 ```Go
@@ -1833,6 +1907,7 @@ errorf returns an error token and terminates the scan by passing back a nil poin
 
 ```
 searchKey: parse.lexer.nextItem
+tags: [private]
 ```
 
 ```Go
@@ -1845,6 +1920,7 @@ nextItem returns the next item from the input. Called by the parser, not in the 
 
 ```
 searchKey: parse.lexer.drain
+tags: [private]
 ```
 
 ```Go
@@ -1857,6 +1933,7 @@ drain drains the output so the lexing goroutine will exit. Called by the parser,
 
 ```
 searchKey: parse.lexer.run
+tags: [private]
 ```
 
 ```Go
@@ -1869,6 +1946,7 @@ run runs the state machine for the lexer.
 
 ```
 searchKey: parse.lexer.atRightDelim
+tags: [private]
 ```
 
 ```Go
@@ -1881,6 +1959,7 @@ atRightDelim reports whether the lexer is at a right delimiter, possibly precede
 
 ```
 searchKey: parse.lexer.atTerminator
+tags: [private]
 ```
 
 ```Go
@@ -1893,6 +1972,7 @@ atTerminator reports whether the input is at valid termination character to appe
 
 ```
 searchKey: parse.lexer.scanNumber
+tags: [private]
 ```
 
 ```Go
@@ -1903,7 +1983,6 @@ func (l *lexer) scanNumber() bool
 
 ```
 searchKey: parse.Node
-tags: [exported]
 ```
 
 ```Go
@@ -1929,7 +2008,6 @@ A Node is an element in the parse tree. The interface is trivial. The interface 
 
 ```
 searchKey: parse.NodeType
-tags: [exported]
 ```
 
 ```Go
@@ -1942,7 +2020,6 @@ NodeType identifies the type of a parse tree node.
 
 ```
 searchKey: parse.NodeType.Type
-tags: [exported]
 ```
 
 ```Go
@@ -1955,7 +2032,6 @@ Type returns itself and provides an easy default implementation for embedding in
 
 ```
 searchKey: parse.Pos
-tags: [exported]
 ```
 
 ```Go
@@ -1968,6 +2044,7 @@ Pos represents a byte position in the original input text from which this templa
 
 ```
 searchKey: parse.rightTrimLength
+tags: [private]
 ```
 
 ```Go
@@ -1980,6 +2057,7 @@ rightTrimLength returns the length of the spaces at the end of the string.
 
 ```
 searchKey: parse.leftTrimLength
+tags: [private]
 ```
 
 ```Go
@@ -1992,7 +2070,6 @@ leftTrimLength returns the length of the spaces at the beginning of the string.
 
 ```
 searchKey: parse.Pos.Position
-tags: [exported]
 ```
 
 ```Go
@@ -2003,7 +2080,6 @@ func (p Pos) Position() Pos
 
 ```
 searchKey: parse.ListNode
-tags: [exported]
 ```
 
 ```Go
@@ -2021,6 +2097,7 @@ ListNode holds a sequence of nodes.
 
 ```
 searchKey: parse.ListNode.append
+tags: [private]
 ```
 
 ```Go
@@ -2031,6 +2108,7 @@ func (l *ListNode) append(n Node)
 
 ```
 searchKey: parse.ListNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2041,7 +2119,6 @@ func (l *ListNode) tree() *Tree
 
 ```
 searchKey: parse.ListNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2052,6 +2129,7 @@ func (l *ListNode) String() string
 
 ```
 searchKey: parse.ListNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2062,7 +2140,6 @@ func (l *ListNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.ListNode.CopyList
-tags: [exported]
 ```
 
 ```Go
@@ -2073,7 +2150,6 @@ func (l *ListNode) CopyList() *ListNode
 
 ```
 searchKey: parse.ListNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2084,7 +2160,6 @@ func (l *ListNode) Copy() Node
 
 ```
 searchKey: parse.TextNode
-tags: [exported]
 ```
 
 ```Go
@@ -2102,7 +2177,6 @@ TextNode holds plain text.
 
 ```
 searchKey: parse.TextNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2113,6 +2187,7 @@ func (t *TextNode) String() string
 
 ```
 searchKey: parse.TextNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2123,6 +2198,7 @@ func (t *TextNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.TextNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2133,7 +2209,6 @@ func (t *TextNode) tree() *Tree
 
 ```
 searchKey: parse.TextNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2144,7 +2219,6 @@ func (t *TextNode) Copy() Node
 
 ```
 searchKey: parse.CommentNode
-tags: [exported]
 ```
 
 ```Go
@@ -2162,7 +2236,6 @@ CommentNode holds a comment.
 
 ```
 searchKey: parse.CommentNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2173,6 +2246,7 @@ func (c *CommentNode) String() string
 
 ```
 searchKey: parse.CommentNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2183,6 +2257,7 @@ func (c *CommentNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.CommentNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2193,7 +2268,6 @@ func (c *CommentNode) tree() *Tree
 
 ```
 searchKey: parse.CommentNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2204,7 +2278,6 @@ func (c *CommentNode) Copy() Node
 
 ```
 searchKey: parse.PipeNode
-tags: [exported]
 ```
 
 ```Go
@@ -2225,6 +2298,7 @@ PipeNode holds a pipeline with optional declaration
 
 ```
 searchKey: parse.PipeNode.append
+tags: [private]
 ```
 
 ```Go
@@ -2235,7 +2309,6 @@ func (p *PipeNode) append(command *CommandNode)
 
 ```
 searchKey: parse.PipeNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2246,6 +2319,7 @@ func (p *PipeNode) String() string
 
 ```
 searchKey: parse.PipeNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2256,6 +2330,7 @@ func (p *PipeNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.PipeNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2266,7 +2341,6 @@ func (p *PipeNode) tree() *Tree
 
 ```
 searchKey: parse.PipeNode.CopyPipe
-tags: [exported]
 ```
 
 ```Go
@@ -2277,7 +2351,6 @@ func (p *PipeNode) CopyPipe() *PipeNode
 
 ```
 searchKey: parse.PipeNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2288,7 +2361,6 @@ func (p *PipeNode) Copy() Node
 
 ```
 searchKey: parse.ActionNode
-tags: [exported]
 ```
 
 ```Go
@@ -2307,7 +2379,6 @@ ActionNode holds an action (something bounded by delimiters). Control actions ha
 
 ```
 searchKey: parse.ActionNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2318,6 +2389,7 @@ func (a *ActionNode) String() string
 
 ```
 searchKey: parse.ActionNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2328,6 +2400,7 @@ func (a *ActionNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.ActionNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2338,7 +2411,6 @@ func (a *ActionNode) tree() *Tree
 
 ```
 searchKey: parse.ActionNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2349,7 +2421,6 @@ func (a *ActionNode) Copy() Node
 
 ```
 searchKey: parse.CommandNode
-tags: [exported]
 ```
 
 ```Go
@@ -2367,6 +2438,7 @@ CommandNode holds a command (a pipeline inside an evaluating action).
 
 ```
 searchKey: parse.CommandNode.append
+tags: [private]
 ```
 
 ```Go
@@ -2377,7 +2449,6 @@ func (c *CommandNode) append(arg Node)
 
 ```
 searchKey: parse.CommandNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2388,6 +2459,7 @@ func (c *CommandNode) String() string
 
 ```
 searchKey: parse.CommandNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2398,6 +2470,7 @@ func (c *CommandNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.CommandNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2408,7 +2481,6 @@ func (c *CommandNode) tree() *Tree
 
 ```
 searchKey: parse.CommandNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2419,7 +2491,6 @@ func (c *CommandNode) Copy() Node
 
 ```
 searchKey: parse.IdentifierNode
-tags: [exported]
 ```
 
 ```Go
@@ -2437,7 +2508,6 @@ IdentifierNode holds an identifier.
 
 ```
 searchKey: parse.NewIdentifier
-tags: [exported]
 ```
 
 ```Go
@@ -2450,7 +2520,6 @@ NewIdentifier returns a new IdentifierNode with the given identifier name.
 
 ```
 searchKey: parse.IdentifierNode.SetPos
-tags: [exported]
 ```
 
 ```Go
@@ -2463,7 +2532,6 @@ SetPos sets the position. NewIdentifier is a public method so we can't modify it
 
 ```
 searchKey: parse.IdentifierNode.SetTree
-tags: [exported]
 ```
 
 ```Go
@@ -2476,7 +2544,6 @@ SetTree sets the parent tree for the node. NewIdentifier is a public method so w
 
 ```
 searchKey: parse.IdentifierNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2487,6 +2554,7 @@ func (i *IdentifierNode) String() string
 
 ```
 searchKey: parse.IdentifierNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2497,6 +2565,7 @@ func (i *IdentifierNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.IdentifierNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2507,7 +2576,6 @@ func (i *IdentifierNode) tree() *Tree
 
 ```
 searchKey: parse.IdentifierNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2518,7 +2586,6 @@ func (i *IdentifierNode) Copy() Node
 
 ```
 searchKey: parse.VariableNode
-tags: [exported]
 ```
 
 ```Go
@@ -2536,7 +2603,6 @@ VariableNode holds a list of variable names, possibly with chained field accesse
 
 ```
 searchKey: parse.VariableNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2547,6 +2613,7 @@ func (v *VariableNode) String() string
 
 ```
 searchKey: parse.VariableNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2557,6 +2624,7 @@ func (v *VariableNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.VariableNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2567,7 +2635,6 @@ func (v *VariableNode) tree() *Tree
 
 ```
 searchKey: parse.VariableNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2578,7 +2645,6 @@ func (v *VariableNode) Copy() Node
 
 ```
 searchKey: parse.DotNode
-tags: [exported]
 ```
 
 ```Go
@@ -2595,7 +2661,6 @@ DotNode holds the special identifier '.'.
 
 ```
 searchKey: parse.DotNode.Type
-tags: [exported]
 ```
 
 ```Go
@@ -2606,7 +2671,6 @@ func (d *DotNode) Type() NodeType
 
 ```
 searchKey: parse.DotNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2617,6 +2681,7 @@ func (d *DotNode) String() string
 
 ```
 searchKey: parse.DotNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2627,6 +2692,7 @@ func (d *DotNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.DotNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2637,7 +2703,6 @@ func (d *DotNode) tree() *Tree
 
 ```
 searchKey: parse.DotNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2648,7 +2713,6 @@ func (d *DotNode) Copy() Node
 
 ```
 searchKey: parse.NilNode
-tags: [exported]
 ```
 
 ```Go
@@ -2665,7 +2729,6 @@ NilNode holds the special identifier 'nil' representing an untyped nil constant.
 
 ```
 searchKey: parse.NilNode.Type
-tags: [exported]
 ```
 
 ```Go
@@ -2676,7 +2739,6 @@ func (n *NilNode) Type() NodeType
 
 ```
 searchKey: parse.NilNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2687,6 +2749,7 @@ func (n *NilNode) String() string
 
 ```
 searchKey: parse.NilNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2697,6 +2760,7 @@ func (n *NilNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.NilNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2707,7 +2771,6 @@ func (n *NilNode) tree() *Tree
 
 ```
 searchKey: parse.NilNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2718,7 +2781,6 @@ func (n *NilNode) Copy() Node
 
 ```
 searchKey: parse.FieldNode
-tags: [exported]
 ```
 
 ```Go
@@ -2736,7 +2798,6 @@ FieldNode holds a field (identifier starting with '.'). The names may be chained
 
 ```
 searchKey: parse.FieldNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2747,6 +2808,7 @@ func (f *FieldNode) String() string
 
 ```
 searchKey: parse.FieldNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2757,6 +2819,7 @@ func (f *FieldNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.FieldNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2767,7 +2830,6 @@ func (f *FieldNode) tree() *Tree
 
 ```
 searchKey: parse.FieldNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2778,7 +2840,6 @@ func (f *FieldNode) Copy() Node
 
 ```
 searchKey: parse.ChainNode
-tags: [exported]
 ```
 
 ```Go
@@ -2797,7 +2858,6 @@ ChainNode holds a term followed by a chain of field accesses (identifier startin
 
 ```
 searchKey: parse.ChainNode.Add
-tags: [exported]
 ```
 
 ```Go
@@ -2810,7 +2870,6 @@ Add adds the named field (which should start with a period) to the end of the ch
 
 ```
 searchKey: parse.ChainNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2821,6 +2880,7 @@ func (c *ChainNode) String() string
 
 ```
 searchKey: parse.ChainNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2831,6 +2891,7 @@ func (c *ChainNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.ChainNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2841,7 +2902,6 @@ func (c *ChainNode) tree() *Tree
 
 ```
 searchKey: parse.ChainNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2852,7 +2912,6 @@ func (c *ChainNode) Copy() Node
 
 ```
 searchKey: parse.BoolNode
-tags: [exported]
 ```
 
 ```Go
@@ -2870,7 +2929,6 @@ BoolNode holds a boolean constant.
 
 ```
 searchKey: parse.BoolNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2881,6 +2939,7 @@ func (b *BoolNode) String() string
 
 ```
 searchKey: parse.BoolNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2891,6 +2950,7 @@ func (b *BoolNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.BoolNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2901,7 +2961,6 @@ func (b *BoolNode) tree() *Tree
 
 ```
 searchKey: parse.BoolNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2912,7 +2971,6 @@ func (b *BoolNode) Copy() Node
 
 ```
 searchKey: parse.NumberNode
-tags: [exported]
 ```
 
 ```Go
@@ -2938,6 +2996,7 @@ NumberNode holds a number: signed or unsigned integer, float, or complex. The va
 
 ```
 searchKey: parse.NumberNode.simplifyComplex
+tags: [private]
 ```
 
 ```Go
@@ -2950,7 +3009,6 @@ simplifyComplex pulls out any other types that are represented by the complex nu
 
 ```
 searchKey: parse.NumberNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -2961,6 +3019,7 @@ func (n *NumberNode) String() string
 
 ```
 searchKey: parse.NumberNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2971,6 +3030,7 @@ func (n *NumberNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.NumberNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -2981,7 +3041,6 @@ func (n *NumberNode) tree() *Tree
 
 ```
 searchKey: parse.NumberNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -2992,7 +3051,6 @@ func (n *NumberNode) Copy() Node
 
 ```
 searchKey: parse.StringNode
-tags: [exported]
 ```
 
 ```Go
@@ -3011,7 +3069,6 @@ StringNode holds a string constant. The value has been "unquoted".
 
 ```
 searchKey: parse.StringNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -3022,6 +3079,7 @@ func (s *StringNode) String() string
 
 ```
 searchKey: parse.StringNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -3032,6 +3090,7 @@ func (s *StringNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.StringNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -3042,7 +3101,6 @@ func (s *StringNode) tree() *Tree
 
 ```
 searchKey: parse.StringNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -3053,6 +3111,7 @@ func (s *StringNode) Copy() Node
 
 ```
 searchKey: parse.endNode
+tags: [private]
 ```
 
 ```Go
@@ -3069,6 +3128,7 @@ endNode represents an {{end}} action. It does not appear in the final parse tree
 
 ```
 searchKey: parse.endNode.String
+tags: [private]
 ```
 
 ```Go
@@ -3079,6 +3139,7 @@ func (e *endNode) String() string
 
 ```
 searchKey: parse.endNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -3089,6 +3150,7 @@ func (e *endNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.endNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -3099,6 +3161,7 @@ func (e *endNode) tree() *Tree
 
 ```
 searchKey: parse.endNode.Copy
+tags: [private]
 ```
 
 ```Go
@@ -3109,6 +3172,7 @@ func (e *endNode) Copy() Node
 
 ```
 searchKey: parse.elseNode
+tags: [private]
 ```
 
 ```Go
@@ -3126,6 +3190,7 @@ elseNode represents an {{else}} action. Does not appear in the final tree.
 
 ```
 searchKey: parse.elseNode.Type
+tags: [private]
 ```
 
 ```Go
@@ -3136,6 +3201,7 @@ func (e *elseNode) Type() NodeType
 
 ```
 searchKey: parse.elseNode.String
+tags: [private]
 ```
 
 ```Go
@@ -3146,6 +3212,7 @@ func (e *elseNode) String() string
 
 ```
 searchKey: parse.elseNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -3156,6 +3223,7 @@ func (e *elseNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.elseNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -3166,6 +3234,7 @@ func (e *elseNode) tree() *Tree
 
 ```
 searchKey: parse.elseNode.Copy
+tags: [private]
 ```
 
 ```Go
@@ -3176,7 +3245,6 @@ func (e *elseNode) Copy() Node
 
 ```
 searchKey: parse.BranchNode
-tags: [exported]
 ```
 
 ```Go
@@ -3197,7 +3265,6 @@ BranchNode is the common representation of if, range, and with.
 
 ```
 searchKey: parse.BranchNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -3208,6 +3275,7 @@ func (b *BranchNode) String() string
 
 ```
 searchKey: parse.BranchNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -3218,6 +3286,7 @@ func (b *BranchNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.BranchNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -3228,7 +3297,6 @@ func (b *BranchNode) tree() *Tree
 
 ```
 searchKey: parse.BranchNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -3239,7 +3307,6 @@ func (b *BranchNode) Copy() Node
 
 ```
 searchKey: parse.IfNode
-tags: [exported]
 ```
 
 ```Go
@@ -3254,7 +3321,6 @@ IfNode represents an {{if}} action and its commands.
 
 ```
 searchKey: parse.IfNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -3265,7 +3331,6 @@ func (i *IfNode) Copy() Node
 
 ```
 searchKey: parse.RangeNode
-tags: [exported]
 ```
 
 ```Go
@@ -3280,7 +3345,6 @@ RangeNode represents a {{range}} action and its commands.
 
 ```
 searchKey: parse.RangeNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -3291,7 +3355,6 @@ func (r *RangeNode) Copy() Node
 
 ```
 searchKey: parse.WithNode
-tags: [exported]
 ```
 
 ```Go
@@ -3306,7 +3369,6 @@ WithNode represents a {{with}} action and its commands.
 
 ```
 searchKey: parse.WithNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -3317,7 +3379,6 @@ func (w *WithNode) Copy() Node
 
 ```
 searchKey: parse.TemplateNode
-tags: [exported]
 ```
 
 ```Go
@@ -3337,7 +3398,6 @@ TemplateNode represents a {{template}} action.
 
 ```
 searchKey: parse.TemplateNode.String
-tags: [exported]
 ```
 
 ```Go
@@ -3348,6 +3408,7 @@ func (t *TemplateNode) String() string
 
 ```
 searchKey: parse.TemplateNode.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -3358,6 +3419,7 @@ func (t *TemplateNode) writeTo(sb *strings.Builder)
 
 ```
 searchKey: parse.TemplateNode.tree
+tags: [private]
 ```
 
 ```Go
@@ -3368,7 +3430,6 @@ func (t *TemplateNode) tree() *Tree
 
 ```
 searchKey: parse.TemplateNode.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -3379,7 +3440,6 @@ func (t *TemplateNode) Copy() Node
 
 ```
 searchKey: parse.Tree
-tags: [exported]
 ```
 
 ```Go
@@ -3407,7 +3467,6 @@ Tree is the representation of a single parsed template.
 
 ```
 searchKey: parse.New
-tags: [exported]
 ```
 
 ```Go
@@ -3420,6 +3479,7 @@ New allocates a new parse tree with the given name.
 
 ```
 searchKey: parse.Tree.newList
+tags: [private]
 ```
 
 ```Go
@@ -3430,6 +3490,7 @@ func (t *Tree) newList(pos Pos) *ListNode
 
 ```
 searchKey: parse.Tree.newText
+tags: [private]
 ```
 
 ```Go
@@ -3440,6 +3501,7 @@ func (t *Tree) newText(pos Pos, text string) *TextNode
 
 ```
 searchKey: parse.Tree.newComment
+tags: [private]
 ```
 
 ```Go
@@ -3450,6 +3512,7 @@ func (t *Tree) newComment(pos Pos, text string) *CommentNode
 
 ```
 searchKey: parse.Tree.newPipeline
+tags: [private]
 ```
 
 ```Go
@@ -3460,6 +3523,7 @@ func (t *Tree) newPipeline(pos Pos, line int, vars []*VariableNode) *PipeNode
 
 ```
 searchKey: parse.Tree.newAction
+tags: [private]
 ```
 
 ```Go
@@ -3470,6 +3534,7 @@ func (t *Tree) newAction(pos Pos, line int, pipe *PipeNode) *ActionNode
 
 ```
 searchKey: parse.Tree.newCommand
+tags: [private]
 ```
 
 ```Go
@@ -3480,6 +3545,7 @@ func (t *Tree) newCommand(pos Pos) *CommandNode
 
 ```
 searchKey: parse.Tree.newVariable
+tags: [private]
 ```
 
 ```Go
@@ -3490,6 +3556,7 @@ func (t *Tree) newVariable(pos Pos, ident string) *VariableNode
 
 ```
 searchKey: parse.Tree.newDot
+tags: [private]
 ```
 
 ```Go
@@ -3500,6 +3567,7 @@ func (t *Tree) newDot(pos Pos) *DotNode
 
 ```
 searchKey: parse.Tree.newNil
+tags: [private]
 ```
 
 ```Go
@@ -3510,6 +3578,7 @@ func (t *Tree) newNil(pos Pos) *NilNode
 
 ```
 searchKey: parse.Tree.newField
+tags: [private]
 ```
 
 ```Go
@@ -3520,6 +3589,7 @@ func (t *Tree) newField(pos Pos, ident string) *FieldNode
 
 ```
 searchKey: parse.Tree.newChain
+tags: [private]
 ```
 
 ```Go
@@ -3530,6 +3600,7 @@ func (t *Tree) newChain(pos Pos, node Node) *ChainNode
 
 ```
 searchKey: parse.Tree.newBool
+tags: [private]
 ```
 
 ```Go
@@ -3540,6 +3611,7 @@ func (t *Tree) newBool(pos Pos, true bool) *BoolNode
 
 ```
 searchKey: parse.Tree.newNumber
+tags: [private]
 ```
 
 ```Go
@@ -3550,6 +3622,7 @@ func (t *Tree) newNumber(pos Pos, text string, typ itemType) (*NumberNode, error
 
 ```
 searchKey: parse.Tree.newString
+tags: [private]
 ```
 
 ```Go
@@ -3560,6 +3633,7 @@ func (t *Tree) newString(pos Pos, orig, text string) *StringNode
 
 ```
 searchKey: parse.Tree.newEnd
+tags: [private]
 ```
 
 ```Go
@@ -3570,6 +3644,7 @@ func (t *Tree) newEnd(pos Pos) *endNode
 
 ```
 searchKey: parse.Tree.newElse
+tags: [private]
 ```
 
 ```Go
@@ -3580,6 +3655,7 @@ func (t *Tree) newElse(pos Pos, line int) *elseNode
 
 ```
 searchKey: parse.Tree.newIf
+tags: [private]
 ```
 
 ```Go
@@ -3590,6 +3666,7 @@ func (t *Tree) newIf(pos Pos, line int, pipe *PipeNode, list, elseList *ListNode
 
 ```
 searchKey: parse.Tree.newRange
+tags: [private]
 ```
 
 ```Go
@@ -3600,6 +3677,7 @@ func (t *Tree) newRange(pos Pos, line int, pipe *PipeNode, list, elseList *ListN
 
 ```
 searchKey: parse.Tree.newWith
+tags: [private]
 ```
 
 ```Go
@@ -3610,6 +3688,7 @@ func (t *Tree) newWith(pos Pos, line int, pipe *PipeNode, list, elseList *ListNo
 
 ```
 searchKey: parse.Tree.newTemplate
+tags: [private]
 ```
 
 ```Go
@@ -3620,7 +3699,6 @@ func (t *Tree) newTemplate(pos Pos, line int, name string, pipe *PipeNode) *Temp
 
 ```
 searchKey: parse.Tree.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -3633,6 +3711,7 @@ Copy returns a copy of the Tree. Any parsing state is discarded.
 
 ```
 searchKey: parse.Tree.next
+tags: [private]
 ```
 
 ```Go
@@ -3645,6 +3724,7 @@ next returns the next token.
 
 ```
 searchKey: parse.Tree.backup
+tags: [private]
 ```
 
 ```Go
@@ -3657,6 +3737,7 @@ backup backs the input stream up one token.
 
 ```
 searchKey: parse.Tree.backup2
+tags: [private]
 ```
 
 ```Go
@@ -3669,6 +3750,7 @@ backup2 backs the input stream up two tokens. The zeroth token is already there.
 
 ```
 searchKey: parse.Tree.backup3
+tags: [private]
 ```
 
 ```Go
@@ -3681,6 +3763,7 @@ backup3 backs the input stream up three tokens The zeroth token is already there
 
 ```
 searchKey: parse.Tree.peek
+tags: [private]
 ```
 
 ```Go
@@ -3693,6 +3776,7 @@ peek returns but does not consume the next token.
 
 ```
 searchKey: parse.Tree.nextNonSpace
+tags: [private]
 ```
 
 ```Go
@@ -3705,6 +3789,7 @@ nextNonSpace returns the next non-space token.
 
 ```
 searchKey: parse.Tree.peekNonSpace
+tags: [private]
 ```
 
 ```Go
@@ -3717,7 +3802,6 @@ peekNonSpace returns but does not consume the next non-space token.
 
 ```
 searchKey: parse.Tree.ErrorContext
-tags: [exported]
 ```
 
 ```Go
@@ -3730,6 +3814,7 @@ ErrorContext returns a textual representation of the location of the node in the
 
 ```
 searchKey: parse.Tree.errorf
+tags: [private]
 ```
 
 ```Go
@@ -3742,6 +3827,7 @@ errorf formats the error and terminates processing.
 
 ```
 searchKey: parse.Tree.error
+tags: [private]
 ```
 
 ```Go
@@ -3754,6 +3840,7 @@ error terminates processing.
 
 ```
 searchKey: parse.Tree.expect
+tags: [private]
 ```
 
 ```Go
@@ -3766,6 +3853,7 @@ expect consumes the next token and guarantees it has the required type.
 
 ```
 searchKey: parse.Tree.expectOneOf
+tags: [private]
 ```
 
 ```Go
@@ -3778,6 +3866,7 @@ expectOneOf consumes the next token and guarantees it has one of the required ty
 
 ```
 searchKey: parse.Tree.unexpected
+tags: [private]
 ```
 
 ```Go
@@ -3790,6 +3879,7 @@ unexpected complains about the token and terminates processing.
 
 ```
 searchKey: parse.Tree.recover
+tags: [private]
 ```
 
 ```Go
@@ -3802,6 +3892,7 @@ recover is the handler that turns panics into returns from the top level of Pars
 
 ```
 searchKey: parse.Tree.startParse
+tags: [private]
 ```
 
 ```Go
@@ -3814,6 +3905,7 @@ startParse initializes the parser, using the lexer.
 
 ```
 searchKey: parse.Tree.stopParse
+tags: [private]
 ```
 
 ```Go
@@ -3826,7 +3918,6 @@ stopParse terminates parsing.
 
 ```
 searchKey: parse.Tree.Parse
-tags: [exported]
 ```
 
 ```Go
@@ -3839,6 +3930,7 @@ Parse parses the template definition string to construct a representation of the
 
 ```
 searchKey: parse.Tree.add
+tags: [private]
 ```
 
 ```Go
@@ -3851,6 +3943,7 @@ add adds tree to t.treeSet.
 
 ```
 searchKey: parse.Tree.parse
+tags: [private]
 ```
 
 ```Go
@@ -3863,6 +3956,7 @@ parse is the top-level parser for a template, essentially the same as itemList e
 
 ```
 searchKey: parse.Tree.parseDefinition
+tags: [private]
 ```
 
 ```Go
@@ -3875,6 +3969,7 @@ parseDefinition parses a {{define}} ...  {{end}} template definition and install
 
 ```
 searchKey: parse.Tree.itemList
+tags: [private]
 ```
 
 ```Go
@@ -3893,6 +3988,7 @@ Terminates at {{end}} or {{else}}, returned separately.
 
 ```
 searchKey: parse.Tree.textOrAction
+tags: [private]
 ```
 
 ```Go
@@ -3909,6 +4005,7 @@ text | comment | action
 
 ```
 searchKey: parse.Tree.clearActionLine
+tags: [private]
 ```
 
 ```Go
@@ -3919,6 +4016,7 @@ func (t *Tree) clearActionLine()
 
 ```
 searchKey: parse.Tree.action
+tags: [private]
 ```
 
 ```Go
@@ -3938,6 +4036,7 @@ Left delim is past. Now get actions. First word could be a keyword such as range
 
 ```
 searchKey: parse.Tree.pipeline
+tags: [private]
 ```
 
 ```Go
@@ -3954,6 +4053,7 @@ declarations? command ('|' command)*
 
 ```
 searchKey: parse.Tree.checkPipeline
+tags: [private]
 ```
 
 ```Go
@@ -3964,6 +4064,7 @@ func (t *Tree) checkPipeline(pipe *PipeNode, context string)
 
 ```
 searchKey: parse.Tree.parseControl
+tags: [private]
 ```
 
 ```Go
@@ -3974,6 +4075,7 @@ func (t *Tree) parseControl(allowElseIf bool, context string) (pos Pos, line int
 
 ```
 searchKey: parse.Tree.ifControl
+tags: [private]
 ```
 
 ```Go
@@ -3993,6 +4095,7 @@ If keyword is past.
 
 ```
 searchKey: parse.Tree.rangeControl
+tags: [private]
 ```
 
 ```Go
@@ -4012,6 +4115,7 @@ Range keyword is past.
 
 ```
 searchKey: parse.Tree.withControl
+tags: [private]
 ```
 
 ```Go
@@ -4031,6 +4135,7 @@ If keyword is past.
 
 ```
 searchKey: parse.Tree.endControl
+tags: [private]
 ```
 
 ```Go
@@ -4049,6 +4154,7 @@ End keyword is past.
 
 ```
 searchKey: parse.Tree.elseControl
+tags: [private]
 ```
 
 ```Go
@@ -4067,6 +4173,7 @@ Else keyword is past.
 
 ```
 searchKey: parse.Tree.blockControl
+tags: [private]
 ```
 
 ```Go
@@ -4085,6 +4192,7 @@ Block keyword is past. The name must be something that can evaluate to a string.
 
 ```
 searchKey: parse.Tree.templateControl
+tags: [private]
 ```
 
 ```Go
@@ -4103,6 +4211,7 @@ Template keyword is past. The name must be something that can evaluate to a stri
 
 ```
 searchKey: parse.Tree.parseTemplateName
+tags: [private]
 ```
 
 ```Go
@@ -4113,6 +4222,7 @@ func (t *Tree) parseTemplateName(token item, context string) (name string)
 
 ```
 searchKey: parse.Tree.command
+tags: [private]
 ```
 
 ```Go
@@ -4131,6 +4241,7 @@ space-separated arguments up to a pipeline character or right delimiter. we cons
 
 ```
 searchKey: parse.Tree.operand
+tags: [private]
 ```
 
 ```Go
@@ -4149,6 +4260,7 @@ An operand is a space-separated component of a command, a term possibly followed
 
 ```
 searchKey: parse.Tree.term
+tags: [private]
 ```
 
 ```Go
@@ -4172,6 +4284,7 @@ A term is a simple "expression". A nil return means the next item is not a term.
 
 ```
 searchKey: parse.Tree.hasFunction
+tags: [private]
 ```
 
 ```Go
@@ -4184,6 +4297,7 @@ hasFunction reports if a function name exists in the Tree's maps.
 
 ```
 searchKey: parse.Tree.popVars
+tags: [private]
 ```
 
 ```Go
@@ -4196,6 +4310,7 @@ popVars trims the variable list to the specified length
 
 ```
 searchKey: parse.Tree.useVar
+tags: [private]
 ```
 
 ```Go
@@ -4208,6 +4323,7 @@ useVar returns a node for a variable reference. It errors if the variable is not
 
 ```
 searchKey: parse.Tree.parseLexer
+tags: [private]
 ```
 
 ```Go
@@ -4220,7 +4336,6 @@ parseLexer is a local version of parse that lets us pass in the lexer instead of
 
 ```
 searchKey: parse.Mode
-tags: [exported]
 ```
 
 ```Go
@@ -4233,6 +4348,7 @@ A mode value is a set of flags (or 0). Modes control parser behavior.
 
 ```
 searchKey: parse.lexTest
+tags: [private]
 ```
 
 ```Go
@@ -4247,6 +4363,7 @@ type lexTest struct {
 
 ```
 searchKey: parse.numberTest
+tags: [private]
 ```
 
 ```Go
@@ -4267,6 +4384,7 @@ type numberTest struct {
 
 ```
 searchKey: parse.parseTest
+tags: [private]
 ```
 
 ```Go
@@ -4282,6 +4400,7 @@ type parseTest struct {
 
 ```
 searchKey: parse.isEmptyTest
+tags: [private]
 ```
 
 ```Go
@@ -4294,14 +4413,11 @@ type isEmptyTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="isSpace" href="#isSpace">func isSpace(r rune) bool</a>
 
 ```
 searchKey: parse.isSpace
+tags: [private]
 ```
 
 ```Go
@@ -4314,6 +4430,7 @@ isSpace reports whether r is a space character.
 
 ```
 searchKey: parse.isAlphaNumeric
+tags: [private]
 ```
 
 ```Go
@@ -4326,6 +4443,7 @@ isAlphaNumeric reports whether r is an alphabetic, digit, or underscore.
 
 ```
 searchKey: parse.hasLeftTrimMarker
+tags: [private]
 ```
 
 ```Go
@@ -4336,6 +4454,7 @@ func hasLeftTrimMarker(s string) bool
 
 ```
 searchKey: parse.hasRightTrimMarker
+tags: [private]
 ```
 
 ```Go
@@ -4346,7 +4465,6 @@ func hasRightTrimMarker(s string) bool
 
 ```
 searchKey: parse.Parse
-tags: [exported]
 ```
 
 ```Go
@@ -4359,7 +4477,6 @@ Parse returns a map from template name to parse.Tree, created by parsing the tem
 
 ```
 searchKey: parse.IsEmptyTree
-tags: [exported]
 ```
 
 ```Go
@@ -4372,6 +4489,7 @@ IsEmptyTree reports whether this tree (node) is empty of everything but space or
 
 ```
 searchKey: parse.collect
+tags: [private]
 ```
 
 ```Go
@@ -4384,6 +4502,7 @@ collect gathers the emitted items into a slice.
 
 ```
 searchKey: parse.equal
+tags: [private]
 ```
 
 ```Go
@@ -4394,6 +4513,7 @@ func equal(i1, i2 []item, checkPos bool) bool
 
 ```
 searchKey: parse.TestLex
+tags: [private]
 ```
 
 ```Go
@@ -4404,6 +4524,7 @@ func TestLex(t *testing.T)
 
 ```
 searchKey: parse.TestDelims
+tags: [private]
 ```
 
 ```Go
@@ -4414,6 +4535,7 @@ func TestDelims(t *testing.T)
 
 ```
 searchKey: parse.TestPos
+tags: [private]
 ```
 
 ```Go
@@ -4426,6 +4548,7 @@ The other tests don't check position, to make the test cases easier to construct
 
 ```
 searchKey: parse.TestShutdown
+tags: [private]
 ```
 
 ```Go
@@ -4438,6 +4561,7 @@ Test that an error shuts down the lexing goroutine.
 
 ```
 searchKey: parse.TestNumberParse
+tags: [private]
 ```
 
 ```Go
@@ -4448,6 +4572,7 @@ func TestNumberParse(t *testing.T)
 
 ```
 searchKey: parse.testParse
+tags: [private]
 ```
 
 ```Go
@@ -4458,6 +4583,7 @@ func testParse(doCopy bool, t *testing.T)
 
 ```
 searchKey: parse.TestParse
+tags: [private]
 ```
 
 ```Go
@@ -4468,6 +4594,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: parse.TestParseCopy
+tags: [private]
 ```
 
 ```Go
@@ -4480,6 +4607,7 @@ Same as TestParse, but we copy the node first
 
 ```
 searchKey: parse.TestParseWithComments
+tags: [private]
 ```
 
 ```Go
@@ -4490,6 +4618,7 @@ func TestParseWithComments(t *testing.T)
 
 ```
 searchKey: parse.TestSkipFuncCheck
+tags: [private]
 ```
 
 ```Go
@@ -4500,6 +4629,7 @@ func TestSkipFuncCheck(t *testing.T)
 
 ```
 searchKey: parse.TestIsEmpty
+tags: [private]
 ```
 
 ```Go
@@ -4510,6 +4640,7 @@ func TestIsEmpty(t *testing.T)
 
 ```
 searchKey: parse.TestErrorContextWithTreeCopy
+tags: [private]
 ```
 
 ```Go
@@ -4520,6 +4651,7 @@ func TestErrorContextWithTreeCopy(t *testing.T)
 
 ```
 searchKey: parse.TestErrors
+tags: [private]
 ```
 
 ```Go
@@ -4530,6 +4662,7 @@ func TestErrors(t *testing.T)
 
 ```
 searchKey: parse.TestBlock
+tags: [private]
 ```
 
 ```Go
@@ -4540,6 +4673,7 @@ func TestBlock(t *testing.T)
 
 ```
 searchKey: parse.TestLineNum
+tags: [private]
 ```
 
 ```Go
@@ -4550,6 +4684,7 @@ func TestLineNum(t *testing.T)
 
 ```
 searchKey: parse.BenchmarkParseLarge
+tags: [private]
 ```
 
 ```Go
@@ -4560,6 +4695,7 @@ func BenchmarkParseLarge(b *testing.B)
 
 ```
 searchKey: parse.BenchmarkVariableString
+tags: [private]
 ```
 
 ```Go
@@ -4570,6 +4706,7 @@ func BenchmarkVariableString(b *testing.B)
 
 ```
 searchKey: parse.BenchmarkListString
+tags: [private]
 ```
 
 ```Go

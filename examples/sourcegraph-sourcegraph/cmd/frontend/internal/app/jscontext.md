@@ -20,11 +20,14 @@ Package jscontext contains functionality for information we pass down into the J
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="BillingPublishableKey" href="#BillingPublishableKey">var BillingPublishableKey</a>
 
 ```
 searchKey: jscontext.BillingPublishableKey
-tags: [exported]
 ```
 
 ```Go
@@ -37,6 +40,7 @@ BillingPublishableKey is the publishable (non-secret) API key for the billing sy
 
 ```
 searchKey: jscontext.isBotPat
+tags: [private]
 ```
 
 ```Go
@@ -45,10 +49,15 @@ var isBotPat = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="authProviderInfo" href="#authProviderInfo">type authProviderInfo struct</a>
 
 ```
 searchKey: jscontext.authProviderInfo
+tags: [private]
 ```
 
 ```Go
@@ -64,7 +73,6 @@ type authProviderInfo struct {
 
 ```
 searchKey: jscontext.JSContext
-tags: [exported]
 ```
 
 ```Go
@@ -125,7 +133,6 @@ JSContext is made available to JavaScript code via the "sourcegraph/app/context"
 
 ```
 searchKey: jscontext.NewJSContextFromRequest
-tags: [exported]
 ```
 
 ```Go
@@ -136,10 +143,15 @@ NewJSContextFromRequest populates a JSContext struct from the HTTP request.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="publicSiteConfiguration" href="#publicSiteConfiguration">func publicSiteConfiguration() schema.SiteConfiguration</a>
 
 ```
 searchKey: jscontext.publicSiteConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +164,7 @@ publicSiteConfiguration is the subset of the site.schema.json site configuration
 
 ```
 searchKey: jscontext.isBot
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +175,7 @@ func isBot(userAgent string) bool
 
 ```
 searchKey: jscontext.likelyDockerOnMac
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +186,7 @@ func likelyDockerOnMac() bool
 
 ```
 searchKey: jscontext.TestIsBot
+tags: [private]
 ```
 
 ```Go

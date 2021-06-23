@@ -4,7 +4,9 @@
     "identifier": "dbtest",
     "newPage": true,
     "searchKey": "internal/database/dbtest",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "killClientConnsQuery",
                 "newPage": false,
                 "searchKey": "dbtest.killClientConnsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "rng",
                 "newPage": false,
                 "searchKey": "dbtest.rng",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "rngLock",
                 "newPage": false,
                 "searchKey": "dbtest.rngLock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "templateOnce",
                 "newPage": false,
                 "searchKey": "dbtest.templateOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +158,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -162,9 +178,7 @@
                 "identifier": "NewTx",
                 "newPage": false,
                 "searchKey": "dbtest.NewTx",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -184,9 +198,7 @@
                 "identifier": "NewDB",
                 "newPage": false,
                 "searchKey": "dbtest.NewDB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -206,7 +218,9 @@
                 "identifier": "initTemplateDB",
                 "newPage": false,
                 "searchKey": "dbtest.initTemplateDB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -226,7 +240,9 @@
                 "identifier": "templateDBName",
                 "newPage": false,
                 "searchKey": "dbtest.templateDBName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -246,7 +262,9 @@
                 "identifier": "wdHash",
                 "newPage": false,
                 "searchKey": "dbtest.wdHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -266,7 +284,9 @@
                 "identifier": "dbConn",
                 "newPage": false,
                 "searchKey": "dbtest.dbConn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -286,7 +306,9 @@
                 "identifier": "dbExec",
                 "newPage": false,
                 "searchKey": "dbtest.dbExec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -306,7 +328,9 @@
                 "identifier": "updateDSNFromEnv",
                 "newPage": false,
                 "searchKey": "dbtest.updateDSNFromEnv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,7 +4,9 @@
     "identifier": "database",
     "newPage": true,
     "searchKey": "enterprise/internal/database",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Mocks",
                 "newPage": false,
                 "searchKey": "database.Mocks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "ErrPermsUpdatedAtNotSet",
                 "newPage": false,
                 "searchKey": "database.ErrPermsUpdatedAtNotSet",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "ErrPermsSyncedAtNotSet",
                 "newPage": false,
                 "searchKey": "database.ErrPermsSyncedAtNotSet",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +104,9 @@
                 "identifier": "dsn",
                 "newPage": false,
                 "searchKey": "database.dsn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -126,7 +126,9 @@
                 "identifier": "now",
                 "newPage": false,
                 "searchKey": "database.now",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -149,7 +151,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "authzStore",
                 "newPage": false,
                 "searchKey": "database.authzStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -185,7 +191,9 @@
                       "identifier": "authzStore.GrantPendingPermissions",
                       "newPage": false,
                       "searchKey": "database.authzStore.GrantPendingPermissions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -205,7 +213,9 @@
                       "identifier": "authzStore.AuthorizedRepos",
                       "newPage": false,
                       "searchKey": "database.authzStore.AuthorizedRepos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -225,7 +235,9 @@
                       "identifier": "authzStore.RevokeUserPermissions",
                       "newPage": false,
                       "searchKey": "database.authzStore.RevokeUserPermissions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -248,9 +260,7 @@
                 "identifier": "MockStores",
                 "newPage": false,
                 "searchKey": "database.MockStores",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -270,9 +280,7 @@
                 "identifier": "PermsStore",
                 "newPage": false,
                 "searchKey": "database.PermsStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -290,9 +298,7 @@
                       "identifier": "Perms",
                       "newPage": false,
                       "searchKey": "database.Perms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -312,9 +318,7 @@
                       "identifier": "PermsStore.With",
                       "newPage": false,
                       "searchKey": "database.PermsStore.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -334,9 +338,7 @@
                       "identifier": "PermsStore.Transact",
                       "newPage": false,
                       "searchKey": "database.PermsStore.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -356,9 +358,7 @@
                       "identifier": "PermsStore.Done",
                       "newPage": false,
                       "searchKey": "database.PermsStore.Done",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -378,9 +378,7 @@
                       "identifier": "PermsStore.LoadUserPermissions",
                       "newPage": false,
                       "searchKey": "database.PermsStore.LoadUserPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -400,9 +398,7 @@
                       "identifier": "PermsStore.LoadRepoPermissions",
                       "newPage": false,
                       "searchKey": "database.PermsStore.LoadRepoPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -422,9 +418,7 @@
                       "identifier": "PermsStore.SetUserPermissions",
                       "newPage": false,
                       "searchKey": "database.PermsStore.SetUserPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -444,9 +438,7 @@
                       "identifier": "PermsStore.SetRepoPermissions",
                       "newPage": false,
                       "searchKey": "database.PermsStore.SetRepoPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -466,9 +458,7 @@
                       "identifier": "PermsStore.TouchRepoPermissions",
                       "newPage": false,
                       "searchKey": "database.PermsStore.TouchRepoPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -488,9 +478,7 @@
                       "identifier": "PermsStore.LoadUserPendingPermissions",
                       "newPage": false,
                       "searchKey": "database.PermsStore.LoadUserPendingPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -510,9 +498,7 @@
                       "identifier": "PermsStore.SetRepoPendingPermissions",
                       "newPage": false,
                       "searchKey": "database.PermsStore.SetRepoPendingPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -532,7 +518,9 @@
                       "identifier": "PermsStore.loadUserPendingPermissionsIDs",
                       "newPage": false,
                       "searchKey": "database.PermsStore.loadUserPendingPermissionsIDs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -552,9 +540,7 @@
                       "identifier": "PermsStore.GrantPendingPermissions",
                       "newPage": false,
                       "searchKey": "database.PermsStore.GrantPendingPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -574,9 +560,7 @@
                       "identifier": "PermsStore.ListPendingUsers",
                       "newPage": false,
                       "searchKey": "database.PermsStore.ListPendingUsers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -596,9 +580,7 @@
                       "identifier": "PermsStore.DeleteAllUserPermissions",
                       "newPage": false,
                       "searchKey": "database.PermsStore.DeleteAllUserPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -618,9 +600,7 @@
                       "identifier": "PermsStore.DeleteAllUserPendingPermissions",
                       "newPage": false,
                       "searchKey": "database.PermsStore.DeleteAllUserPendingPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -640,7 +620,9 @@
                       "identifier": "PermsStore.execute",
                       "newPage": false,
                       "searchKey": "database.PermsStore.execute",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -660,7 +642,9 @@
                       "identifier": "PermsStore.load",
                       "newPage": false,
                       "searchKey": "database.PermsStore.load",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -680,9 +664,7 @@
                       "identifier": "PermsStore.ListExternalAccounts",
                       "newPage": false,
                       "searchKey": "database.PermsStore.ListExternalAccounts",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -702,9 +684,7 @@
                       "identifier": "PermsStore.GetUserIDsByExternalAccounts",
                       "newPage": false,
                       "searchKey": "database.PermsStore.GetUserIDsByExternalAccounts",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -724,9 +704,7 @@
                       "identifier": "PermsStore.UserIDsWithNoPerms",
                       "newPage": false,
                       "searchKey": "database.PermsStore.UserIDsWithNoPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -746,9 +724,7 @@
                       "identifier": "PermsStore.RepoIDsWithNoPerms",
                       "newPage": false,
                       "searchKey": "database.PermsStore.RepoIDsWithNoPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -768,9 +744,7 @@
                       "identifier": "PermsStore.UserIDsWithOldestPerms",
                       "newPage": false,
                       "searchKey": "database.PermsStore.UserIDsWithOldestPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -790,9 +764,7 @@
                       "identifier": "PermsStore.ReposIDsWithOldestPerms",
                       "newPage": false,
                       "searchKey": "database.PermsStore.ReposIDsWithOldestPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -812,7 +784,9 @@
                       "identifier": "PermsStore.loadIDsWithTime",
                       "newPage": false,
                       "searchKey": "database.PermsStore.loadIDsWithTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -832,9 +806,7 @@
                       "identifier": "PermsStore.Metrics",
                       "newPage": false,
                       "searchKey": "database.PermsStore.Metrics",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -854,7 +826,9 @@
                       "identifier": "PermsStore.observe",
                       "newPage": false,
                       "searchKey": "database.PermsStore.observe",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -877,7 +851,9 @@
                 "identifier": "permsLoadValues",
                 "newPage": false,
                 "searchKey": "database.permsLoadValues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -897,9 +873,7 @@
                 "identifier": "PermsMetrics",
                 "newPage": false,
                 "searchKey": "database.PermsMetrics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -919,9 +893,7 @@
                 "identifier": "MockPerms",
                 "newPage": false,
                 "searchKey": "database.MockPerms",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -944,7 +916,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -962,9 +936,7 @@
                 "identifier": "NewAuthzStore",
                 "newPage": false,
                 "searchKey": "database.NewAuthzStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -984,9 +956,7 @@
                 "identifier": "NewExternalServicesStore",
                 "newPage": false,
                 "searchKey": "database.NewExternalServicesStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1006,7 +976,9 @@
                 "identifier": "loadUserPermissionsQuery",
                 "newPage": false,
                 "searchKey": "database.loadUserPermissionsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1026,7 +998,9 @@
                 "identifier": "loadRepoPermissionsQuery",
                 "newPage": false,
                 "searchKey": "database.loadRepoPermissionsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1046,7 +1020,9 @@
                 "identifier": "upsertUserPermissionsQuery",
                 "newPage": false,
                 "searchKey": "database.upsertUserPermissionsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1066,7 +1042,9 @@
                 "identifier": "upsertUserPermissionsBatchQuery",
                 "newPage": false,
                 "searchKey": "database.upsertUserPermissionsBatchQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1086,7 +1064,9 @@
                 "identifier": "upsertRepoPermissionsQuery",
                 "newPage": false,
                 "searchKey": "database.upsertRepoPermissionsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1106,7 +1086,9 @@
                 "identifier": "loadUserPendingPermissionsQuery",
                 "newPage": false,
                 "searchKey": "database.loadUserPendingPermissionsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1126,7 +1108,9 @@
                 "identifier": "insertUserPendingPermissionsBatchQuery",
                 "newPage": false,
                 "searchKey": "database.insertUserPendingPermissionsBatchQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1146,7 +1130,9 @@
                 "identifier": "loadRepoPendingPermissionsQuery",
                 "newPage": false,
                 "searchKey": "database.loadRepoPendingPermissionsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1166,7 +1152,9 @@
                 "identifier": "updateUserPendingPermissionsBatchQuery",
                 "newPage": false,
                 "searchKey": "database.updateUserPendingPermissionsBatchQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1186,7 +1174,9 @@
                 "identifier": "upsertRepoPendingPermissionsBatchQuery",
                 "newPage": false,
                 "searchKey": "database.upsertRepoPendingPermissionsBatchQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1206,7 +1196,9 @@
                 "identifier": "upsertRepoPermissionsBatchQuery",
                 "newPage": false,
                 "searchKey": "database.upsertRepoPermissionsBatchQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1226,7 +1218,9 @@
                 "identifier": "deleteUserPendingPermissionsQuery",
                 "newPage": false,
                 "searchKey": "database.deleteUserPendingPermissionsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1246,7 +1240,9 @@
                 "identifier": "TestAuthzStore_GrantPendingPermissions",
                 "newPage": false,
                 "searchKey": "database.TestAuthzStore_GrantPendingPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1266,7 +1262,9 @@
                 "identifier": "TestAuthzStore_AuthorizedRepos",
                 "newPage": false,
                 "searchKey": "database.TestAuthzStore_AuthorizedRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1286,7 +1284,9 @@
                 "identifier": "TestAuthzStore_RevokeUserPermissions",
                 "newPage": false,
                 "searchKey": "database.TestAuthzStore_RevokeUserPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1301,12 +1301,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/database#init",
+              "pathID": "/enterprise/internal/database#init.db_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "database.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1326,7 +1328,9 @@
                 "identifier": "equal",
                 "newPage": false,
                 "searchKey": "database.equal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1346,7 +1350,9 @@
                 "identifier": "TestExternalServices_ValidateConfig",
                 "newPage": false,
                 "searchKey": "database.TestExternalServices_ValidateConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1366,7 +1372,9 @@
                 "identifier": "TestIntegration_PermsStore",
                 "newPage": false,
                 "searchKey": "database.TestIntegration_PermsStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1386,7 +1394,9 @@
                 "identifier": "cleanupPermsTables",
                 "newPage": false,
                 "searchKey": "database.cleanupPermsTables",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1406,7 +1416,9 @@
                 "identifier": "bitmapToArray",
                 "newPage": false,
                 "searchKey": "database.bitmapToArray",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1426,7 +1438,9 @@
                 "identifier": "toBitmap",
                 "newPage": false,
                 "searchKey": "database.toBitmap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1446,7 +1460,9 @@
                 "identifier": "clock",
                 "newPage": false,
                 "searchKey": "database.clock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1466,7 +1482,9 @@
                 "identifier": "testPermsStore_LoadUserPermissions",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_LoadUserPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1486,7 +1504,9 @@
                 "identifier": "testPermsStore_LoadRepoPermissions",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_LoadRepoPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1506,7 +1526,9 @@
                 "identifier": "checkRegularPermsTable",
                 "newPage": false,
                 "searchKey": "database.checkRegularPermsTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1526,7 +1548,9 @@
                 "identifier": "testPermsStore_SetUserPermissions",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_SetUserPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1546,7 +1570,9 @@
                 "identifier": "testPermsStore_SetRepoPermissions",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_SetRepoPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1566,7 +1592,9 @@
                 "identifier": "testPermsStore_TouchRepoPermissions",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_TouchRepoPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1586,7 +1614,9 @@
                 "identifier": "testPermsStore_LoadUserPendingPermissions",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_LoadUserPendingPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1606,7 +1636,9 @@
                 "identifier": "checkUserPendingPermsTable",
                 "newPage": false,
                 "searchKey": "database.checkUserPendingPermsTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1626,7 +1658,9 @@
                 "identifier": "checkRepoPendingPermsTable",
                 "newPage": false,
                 "searchKey": "database.checkRepoPendingPermsTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1646,7 +1680,9 @@
                 "identifier": "testPermsStore_SetRepoPendingPermissions",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_SetRepoPendingPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1666,7 +1702,9 @@
                 "identifier": "testPermsStore_ListPendingUsers",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_ListPendingUsers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1686,7 +1724,9 @@
                 "identifier": "testPermsStore_GrantPendingPermissions",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_GrantPendingPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1706,7 +1746,9 @@
                 "identifier": "testPermsStore_SetPendingPermissionsAfterGrant",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_SetPendingPermissionsAfterGrant",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1726,7 +1768,9 @@
                 "identifier": "testPermsStore_DeleteAllUserPermissions",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_DeleteAllUserPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1746,7 +1790,9 @@
                 "identifier": "testPermsStore_DeleteAllUserPendingPermissions",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_DeleteAllUserPendingPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1766,7 +1812,9 @@
                 "identifier": "testPermsStore_DatabaseDeadlocks",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_DatabaseDeadlocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1786,7 +1834,9 @@
                 "identifier": "cleanupUsersTable",
                 "newPage": false,
                 "searchKey": "database.cleanupUsersTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1806,7 +1856,9 @@
                 "identifier": "testPermsStore_ListExternalAccounts",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_ListExternalAccounts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1826,7 +1878,9 @@
                 "identifier": "testPermsStore_GetUserIDsByExternalAccounts",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_GetUserIDsByExternalAccounts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1846,7 +1900,9 @@
                 "identifier": "testPermsStore_UserIDsWithNoPerms",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_UserIDsWithNoPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1866,7 +1922,9 @@
                 "identifier": "cleanupReposTable",
                 "newPage": false,
                 "searchKey": "database.cleanupReposTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1886,7 +1944,9 @@
                 "identifier": "testPermsStore_RepoIDsWithNoPerms",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_RepoIDsWithNoPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1906,7 +1966,9 @@
                 "identifier": "testPermsStore_UserIDsWithOldestPerms",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_UserIDsWithOldestPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1926,7 +1988,9 @@
                 "identifier": "testPermsStore_ReposIDsWithOldestPerms",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_ReposIDsWithOldestPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1946,7 +2010,9 @@
                 "identifier": "testPermsStore_Metrics",
                 "newPage": false,
                 "searchKey": "database.testPermsStore_Metrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

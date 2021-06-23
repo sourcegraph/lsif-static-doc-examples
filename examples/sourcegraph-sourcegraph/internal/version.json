@@ -4,7 +4,9 @@
     "identifier": "version",
     "newPage": true,
     "searchKey": "internal/version",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "devVersion",
                 "newPage": false,
                 "searchKey": "version.devVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "devTimestamp",
                 "newPage": false,
                 "searchKey": "version.devTimestamp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "version",
                 "newPage": false,
                 "searchKey": "version.version",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "timestamp",
                 "newPage": false,
                 "searchKey": "version.timestamp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +158,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -157,12 +173,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/version#init",
+              "pathID": "/internal/version#init.version.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.version.go",
                 "newPage": false,
                 "searchKey": "version.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -182,9 +200,7 @@
                 "identifier": "Version",
                 "newPage": false,
                 "searchKey": "version.Version",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -204,9 +220,7 @@
                 "identifier": "IsDev",
                 "newPage": false,
                 "searchKey": "version.IsDev",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -226,9 +240,7 @@
                 "identifier": "Mock",
                 "newPage": false,
                 "searchKey": "version.Mock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -248,9 +260,7 @@
                 "identifier": "MockTimestamp",
                 "newPage": false,
                 "searchKey": "version.MockTimestamp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -270,9 +280,7 @@
                 "identifier": "HowLongOutOfDate",
                 "newPage": false,
                 "searchKey": "version.HowLongOutOfDate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -292,7 +300,9 @@
                 "identifier": "monthsFromDays",
                 "newPage": false,
                 "searchKey": "version.monthsFromDays",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -312,7 +322,9 @@
                 "identifier": "TestVersion",
                 "newPage": false,
                 "searchKey": "version.TestVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -332,7 +344,9 @@
                 "identifier": "TestIsDev",
                 "newPage": false,
                 "searchKey": "version.TestIsDev",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -352,7 +366,9 @@
                 "identifier": "Test_monthsFromDays",
                 "newPage": false,
                 "searchKey": "version.Test_monthsFromDays",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -372,7 +388,9 @@
                 "identifier": "TestHowLongOutOfDate",
                 "newPage": false,
                 "searchKey": "version.TestHowLongOutOfDate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

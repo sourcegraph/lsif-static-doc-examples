@@ -71,14 +71,11 @@ When cgo is available, cgo-based (libc-backed) code is used by default. This can
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="userBuffer" href="#userBuffer">const userBuffer</a>
 
 ```
 searchKey: user.userBuffer
+tags: [private]
 ```
 
 ```Go
@@ -89,6 +86,7 @@ const userBuffer = bufferKind((_Ciconst__SC_GETPW_R_SIZE_MAX))
 
 ```
 searchKey: user.groupBuffer
+tags: [private]
 ```
 
 ```Go
@@ -99,6 +97,7 @@ const groupBuffer = bufferKind((_Ciconst__SC_GETGR_R_SIZE_MAX))
 
 ```
 searchKey: user.maxBufferSize
+tags: [private]
 ```
 
 ```Go
@@ -109,6 +108,7 @@ const maxBufferSize = 1 << 20
 
 ```
 searchKey: user.maxGroups
+tags: [private]
 ```
 
 ```Go
@@ -117,14 +117,11 @@ const maxGroups = 2048
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="cache" href="#cache">var cache</a>
 
 ```
 searchKey: user.cache
+tags: [private]
 ```
 
 ```Go
@@ -141,6 +138,7 @@ cache of the current user
 
 ```
 searchKey: user.userImplemented
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +150,7 @@ var userImplemented = true // set to false by lookup_stubs.go's init
 
 ```
 searchKey: user.groupImplemented
+tags: [private]
 ```
 
 ```Go
@@ -161,15 +160,10 @@ var groupImplemented = true // set to false by lookup_stubs.go's init
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="User" href="#User">type User struct</a>
 
 ```
 searchKey: user.User
-tags: [exported]
 ```
 
 ```Go
@@ -204,7 +198,6 @@ User represents a user account.
 
 ```
 searchKey: user.Current
-tags: [exported]
 ```
 
 ```Go
@@ -219,7 +212,6 @@ The first call will cache the current user information. Subsequent calls will re
 
 ```
 searchKey: user.Lookup
-tags: [exported]
 ```
 
 ```Go
@@ -232,7 +224,6 @@ Lookup looks up a user by username. If the user cannot be found, the returned er
 
 ```
 searchKey: user.LookupId
-tags: [exported]
 ```
 
 ```Go
@@ -245,6 +236,7 @@ LookupId looks up a user by userid. If the user cannot be found, the returned er
 
 ```
 searchKey: user.current
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +247,7 @@ func current() (*User, error)
 
 ```
 searchKey: user.lookupUser
+tags: [private]
 ```
 
 ```Go
@@ -265,6 +258,7 @@ func lookupUser(username string) (*User, error)
 
 ```
 searchKey: user.lookupUserId
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +269,7 @@ func lookupUserId(uid string) (*User, error)
 
 ```
 searchKey: user.lookupUnixUid
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +280,7 @@ func lookupUnixUid(uid int) (*User, error)
 
 ```
 searchKey: user.buildUser
+tags: [private]
 ```
 
 ```Go
@@ -295,7 +291,6 @@ func buildUser(pwd *_Ctype_struct_passwd) *User
 
 ```
 searchKey: user.User.GroupIds
-tags: [exported]
 ```
 
 ```Go
@@ -308,7 +303,6 @@ GroupIds returns the list of group IDs that the user is a member of.
 
 ```
 searchKey: user.Group
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +320,6 @@ On POSIX systems Gid contains a decimal number representing the group ID.
 
 ```
 searchKey: user.LookupGroup
-tags: [exported]
 ```
 
 ```Go
@@ -339,7 +332,6 @@ LookupGroup looks up a group by name. If the group cannot be found, the returned
 
 ```
 searchKey: user.LookupGroupId
-tags: [exported]
 ```
 
 ```Go
@@ -352,6 +344,7 @@ LookupGroupId looks up a group by groupid. If the group cannot be found, the ret
 
 ```
 searchKey: user.lookupGroup
+tags: [private]
 ```
 
 ```Go
@@ -362,6 +355,7 @@ func lookupGroup(groupname string) (*Group, error)
 
 ```
 searchKey: user.lookupGroupId
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +366,7 @@ func lookupGroupId(gid string) (*Group, error)
 
 ```
 searchKey: user.lookupUnixGid
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +377,7 @@ func lookupUnixGid(gid int) (*Group, error)
 
 ```
 searchKey: user.buildGroup
+tags: [private]
 ```
 
 ```Go
@@ -392,7 +388,6 @@ func buildGroup(grp *_Ctype_struct_group) *Group
 
 ```
 searchKey: user.UnknownUserIdError
-tags: [exported]
 ```
 
 ```Go
@@ -405,7 +400,6 @@ UnknownUserIdError is returned by LookupId when a user cannot be found.
 
 ```
 searchKey: user.UnknownUserIdError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -416,7 +410,6 @@ func (e UnknownUserIdError) Error() string
 
 ```
 searchKey: user.UnknownUserError
-tags: [exported]
 ```
 
 ```Go
@@ -429,7 +422,6 @@ UnknownUserError is returned by Lookup when a user cannot be found.
 
 ```
 searchKey: user.UnknownUserError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -440,7 +432,6 @@ func (e UnknownUserError) Error() string
 
 ```
 searchKey: user.UnknownGroupIdError
-tags: [exported]
 ```
 
 ```Go
@@ -453,7 +444,6 @@ UnknownGroupIdError is returned by LookupGroupId when a group cannot be found.
 
 ```
 searchKey: user.UnknownGroupIdError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -464,7 +454,6 @@ func (e UnknownGroupIdError) Error() string
 
 ```
 searchKey: user.UnknownGroupError
-tags: [exported]
 ```
 
 ```Go
@@ -477,7 +466,6 @@ UnknownGroupError is returned by LookupGroup when a group cannot be found.
 
 ```
 searchKey: user.UnknownGroupError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -488,6 +476,7 @@ func (e UnknownGroupError) Error() string
 
 ```
 searchKey: user.bufferKind
+tags: [private]
 ```
 
 ```Go
@@ -499,6 +488,7 @@ type bufferKind _Ctype_int /*line :200:22*/
 
 ```
 searchKey: user.bufferKind.initialSize
+tags: [private]
 ```
 
 ```Go
@@ -509,6 +499,7 @@ func (k bufferKind) initialSize() _Ctype_size_t
 
 ```
 searchKey: user.memBuffer
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +513,7 @@ type memBuffer struct {
 
 ```
 searchKey: user.alloc
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +524,7 @@ func alloc(kind bufferKind) *memBuffer
 
 ```
 searchKey: user.memBuffer.resize
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +535,7 @@ func (mb *memBuffer) resize(newSize _Ctype_size_t)
 
 ```
 searchKey: user.memBuffer.free
+tags: [private]
 ```
 
 ```Go
@@ -550,14 +544,11 @@ func (mb *memBuffer) free()
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="TestNegativeUid" href="#TestNegativeUid">func TestNegativeUid(t *testing.T)</a>
 
 ```
 searchKey: user.TestNegativeUid
+tags: [private]
 ```
 
 ```Go
@@ -570,6 +561,7 @@ Issue 22739
 
 ```
 searchKey: user.checkUser
+tags: [private]
 ```
 
 ```Go
@@ -580,6 +572,7 @@ func checkUser(t *testing.T)
 
 ```
 searchKey: user.TestCurrent
+tags: [private]
 ```
 
 ```Go
@@ -590,6 +583,7 @@ func TestCurrent(t *testing.T)
 
 ```
 searchKey: user.BenchmarkCurrent
+tags: [private]
 ```
 
 ```Go
@@ -600,6 +594,7 @@ func BenchmarkCurrent(b *testing.B)
 
 ```
 searchKey: user.compare
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +605,7 @@ func compare(t *testing.T, want, got *User)
 
 ```
 searchKey: user.TestLookup
+tags: [private]
 ```
 
 ```Go
@@ -620,6 +616,7 @@ func TestLookup(t *testing.T)
 
 ```
 searchKey: user.TestLookupId
+tags: [private]
 ```
 
 ```Go
@@ -630,6 +627,7 @@ func TestLookupId(t *testing.T)
 
 ```
 searchKey: user.checkGroup
+tags: [private]
 ```
 
 ```Go
@@ -640,6 +638,7 @@ func checkGroup(t *testing.T)
 
 ```
 searchKey: user.TestLookupGroup
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +649,7 @@ func TestLookupGroup(t *testing.T)
 
 ```
 searchKey: user.TestGroupIds
+tags: [private]
 ```
 
 ```Go
@@ -660,6 +660,7 @@ func TestGroupIds(t *testing.T)
 
 ```
 searchKey: user.containsID
+tags: [private]
 ```
 
 ```Go
@@ -670,6 +671,7 @@ func containsID(ids []string, id string) bool
 
 ```
 searchKey: user.retryWithBuffer
+tags: [private]
 ```
 
 ```Go
@@ -682,6 +684,7 @@ retryWithBuffer repeatedly calls f(), increasing the size of the buffer each tim
 
 ```
 searchKey: user.isSizeReasonable
+tags: [private]
 ```
 
 ```Go
@@ -692,6 +695,7 @@ func isSizeReasonable(sz int64) bool
 
 ```
 searchKey: user.structPasswdForNegativeTest
+tags: [private]
 ```
 
 ```Go
@@ -704,6 +708,7 @@ Because we can't use cgo in tests:
 
 ```
 searchKey: user.getGroupList
+tags: [private]
 ```
 
 ```Go
@@ -714,6 +719,7 @@ func getGroupList(name *_Ctype_char, userGID _Ctype_gid_t, gids *_Ctype_gid_t, n
 
 ```
 searchKey: user.groupRetry
+tags: [private]
 ```
 
 ```Go
@@ -726,6 +732,7 @@ groupRetry retries getGroupList with an increasingly large size for n. The resul
 
 ```
 searchKey: user.listGroups
+tags: [private]
 ```
 
 ```Go

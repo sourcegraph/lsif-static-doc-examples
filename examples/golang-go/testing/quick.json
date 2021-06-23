@@ -4,9 +4,7 @@
     "identifier": "quick",
     "newPage": true,
     "searchKey": "testing/quick",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "complexSize",
                 "newPage": false,
                 "searchKey": "quick.complexSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,7 +83,9 @@
                 "identifier": "defaultMaxCount",
                 "newPage": false,
                 "searchKey": "quick.defaultMaxCount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "defaultConfig",
                 "newPage": false,
                 "searchKey": "quick.defaultConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -130,9 +130,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -150,9 +148,7 @@
                 "identifier": "Generator",
                 "newPage": false,
                 "searchKey": "quick.Generator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +168,7 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "quick.Config",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -192,7 +186,9 @@
                       "identifier": "Config.getRand",
                       "newPage": false,
                       "searchKey": "quick.Config.getRand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -212,7 +208,9 @@
                       "identifier": "Config.getMaxCount",
                       "newPage": false,
                       "searchKey": "quick.Config.getMaxCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -235,9 +233,7 @@
                 "identifier": "SetupError",
                 "newPage": false,
                 "searchKey": "quick.SetupError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -255,9 +251,7 @@
                       "identifier": "SetupError.Error",
                       "newPage": false,
                       "searchKey": "quick.SetupError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -280,9 +274,7 @@
                 "identifier": "CheckError",
                 "newPage": false,
                 "searchKey": "quick.CheckError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -300,9 +292,7 @@
                       "identifier": "CheckError.Error",
                       "newPage": false,
                       "searchKey": "quick.CheckError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -325,9 +315,7 @@
                 "identifier": "CheckEqualError",
                 "newPage": false,
                 "searchKey": "quick.CheckEqualError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -345,9 +333,7 @@
                       "identifier": "CheckEqualError.Error",
                       "newPage": false,
                       "searchKey": "quick.CheckEqualError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -370,7 +356,9 @@
                 "identifier": "TestArrayAlias",
                 "newPage": false,
                 "searchKey": "quick.TestArrayAlias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -388,7 +376,9 @@
                       "identifier": "fArrayAlias",
                       "newPage": false,
                       "searchKey": "quick.fArrayAlias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -411,7 +401,9 @@
                 "identifier": "TestBoolAlias",
                 "newPage": false,
                 "searchKey": "quick.TestBoolAlias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -429,7 +421,9 @@
                       "identifier": "fBoolAlias",
                       "newPage": false,
                       "searchKey": "quick.fBoolAlias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -452,7 +446,9 @@
                 "identifier": "TestFloat32Alias",
                 "newPage": false,
                 "searchKey": "quick.TestFloat32Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -470,7 +466,9 @@
                       "identifier": "fFloat32Alias",
                       "newPage": false,
                       "searchKey": "quick.fFloat32Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -493,7 +491,9 @@
                 "identifier": "TestFloat64Alias",
                 "newPage": false,
                 "searchKey": "quick.TestFloat64Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -511,7 +511,9 @@
                       "identifier": "fFloat64Alias",
                       "newPage": false,
                       "searchKey": "quick.fFloat64Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -534,7 +536,9 @@
                 "identifier": "TestComplex64Alias",
                 "newPage": false,
                 "searchKey": "quick.TestComplex64Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -552,7 +556,9 @@
                       "identifier": "fComplex64Alias",
                       "newPage": false,
                       "searchKey": "quick.fComplex64Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -575,7 +581,9 @@
                 "identifier": "TestComplex128Alias",
                 "newPage": false,
                 "searchKey": "quick.TestComplex128Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -593,7 +601,9 @@
                       "identifier": "fComplex128Alias",
                       "newPage": false,
                       "searchKey": "quick.fComplex128Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -616,7 +626,9 @@
                 "identifier": "TestInt16Alias",
                 "newPage": false,
                 "searchKey": "quick.TestInt16Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -634,7 +646,9 @@
                       "identifier": "fInt16Alias",
                       "newPage": false,
                       "searchKey": "quick.fInt16Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -657,7 +671,9 @@
                 "identifier": "TestInt32Alias",
                 "newPage": false,
                 "searchKey": "quick.TestInt32Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -675,7 +691,9 @@
                       "identifier": "fInt32Alias",
                       "newPage": false,
                       "searchKey": "quick.fInt32Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -698,7 +716,9 @@
                 "identifier": "TestInt64Alias",
                 "newPage": false,
                 "searchKey": "quick.TestInt64Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -716,7 +736,9 @@
                       "identifier": "fInt64Alias",
                       "newPage": false,
                       "searchKey": "quick.fInt64Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -739,7 +761,9 @@
                 "identifier": "TestInt8Alias",
                 "newPage": false,
                 "searchKey": "quick.TestInt8Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -757,7 +781,9 @@
                       "identifier": "fInt8Alias",
                       "newPage": false,
                       "searchKey": "quick.fInt8Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -780,7 +806,9 @@
                 "identifier": "TestIntAlias",
                 "newPage": false,
                 "searchKey": "quick.TestIntAlias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -798,7 +826,9 @@
                       "identifier": "fIntAlias",
                       "newPage": false,
                       "searchKey": "quick.fIntAlias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -821,7 +851,9 @@
                 "identifier": "TestMapAlias",
                 "newPage": false,
                 "searchKey": "quick.TestMapAlias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -839,7 +871,9 @@
                       "identifier": "fMapAlias",
                       "newPage": false,
                       "searchKey": "quick.fMapAlias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -862,7 +896,9 @@
                 "identifier": "TestPtrAlias",
                 "newPage": false,
                 "searchKey": "quick.TestPtrAlias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -880,7 +916,9 @@
                       "identifier": "fPtrAlias",
                       "newPage": false,
                       "searchKey": "quick.fPtrAlias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -903,7 +941,9 @@
                 "identifier": "TestSliceAlias",
                 "newPage": false,
                 "searchKey": "quick.TestSliceAlias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -921,7 +961,9 @@
                       "identifier": "fSliceAlias",
                       "newPage": false,
                       "searchKey": "quick.fSliceAlias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -944,7 +986,9 @@
                 "identifier": "TestStringAlias",
                 "newPage": false,
                 "searchKey": "quick.TestStringAlias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -962,7 +1006,9 @@
                       "identifier": "fStringAlias",
                       "newPage": false,
                       "searchKey": "quick.fStringAlias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -985,7 +1031,9 @@
                 "identifier": "TestStruct",
                 "newPage": false,
                 "searchKey": "quick.TestStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1003,7 +1051,9 @@
                       "identifier": "fStruct",
                       "newPage": false,
                       "searchKey": "quick.fStruct",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1026,7 +1076,9 @@
                 "identifier": "TestStructAlias",
                 "newPage": false,
                 "searchKey": "quick.TestStructAlias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1044,7 +1096,9 @@
                       "identifier": "fStructAlias",
                       "newPage": false,
                       "searchKey": "quick.fStructAlias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1067,7 +1121,9 @@
                 "identifier": "TestUint16Alias",
                 "newPage": false,
                 "searchKey": "quick.TestUint16Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1085,7 +1141,9 @@
                       "identifier": "fUint16Alias",
                       "newPage": false,
                       "searchKey": "quick.fUint16Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1108,7 +1166,9 @@
                 "identifier": "TestUint32Alias",
                 "newPage": false,
                 "searchKey": "quick.TestUint32Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1126,7 +1186,9 @@
                       "identifier": "fUint32Alias",
                       "newPage": false,
                       "searchKey": "quick.fUint32Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1149,7 +1211,9 @@
                 "identifier": "TestUint64Alias",
                 "newPage": false,
                 "searchKey": "quick.TestUint64Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1167,7 +1231,9 @@
                       "identifier": "fUint64Alias",
                       "newPage": false,
                       "searchKey": "quick.fUint64Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1190,7 +1256,9 @@
                 "identifier": "TestUint8Alias",
                 "newPage": false,
                 "searchKey": "quick.TestUint8Alias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1208,7 +1276,9 @@
                       "identifier": "fUint8Alias",
                       "newPage": false,
                       "searchKey": "quick.fUint8Alias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1231,7 +1301,9 @@
                 "identifier": "TestUintAlias",
                 "newPage": false,
                 "searchKey": "quick.TestUintAlias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1249,7 +1321,9 @@
                       "identifier": "fUintAlias",
                       "newPage": false,
                       "searchKey": "quick.fUintAlias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1272,7 +1346,9 @@
                 "identifier": "TestUintptrAlias",
                 "newPage": false,
                 "searchKey": "quick.TestUintptrAlias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1290,7 +1366,9 @@
                       "identifier": "fUintptrAlias",
                       "newPage": false,
                       "searchKey": "quick.fUintptrAlias",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1313,7 +1391,9 @@
                 "identifier": "myStruct",
                 "newPage": false,
                 "searchKey": "quick.myStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1331,7 +1411,9 @@
                       "identifier": "myStruct.Generate",
                       "newPage": false,
                       "searchKey": "quick.myStruct.Generate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1354,7 +1436,9 @@
                 "identifier": "A",
                 "newPage": false,
                 "searchKey": "quick.A",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1374,7 +1458,9 @@
                 "identifier": "B",
                 "newPage": false,
                 "searchKey": "quick.B",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1397,9 +1483,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1417,7 +1501,9 @@
                 "identifier": "randFloat32",
                 "newPage": false,
                 "searchKey": "quick.randFloat32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1437,7 +1523,9 @@
                 "identifier": "randFloat64",
                 "newPage": false,
                 "searchKey": "quick.randFloat64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1457,7 +1545,9 @@
                 "identifier": "randInt64",
                 "newPage": false,
                 "searchKey": "quick.randInt64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1477,9 +1567,7 @@
                 "identifier": "Value",
                 "newPage": false,
                 "searchKey": "quick.Value",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1499,7 +1587,9 @@
                 "identifier": "sizedValue",
                 "newPage": false,
                 "searchKey": "quick.sizedValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1519,9 +1609,7 @@
                 "identifier": "Check",
                 "newPage": false,
                 "searchKey": "quick.Check",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1541,9 +1629,7 @@
                 "identifier": "CheckEqual",
                 "newPage": false,
                 "searchKey": "quick.CheckEqual",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1563,7 +1649,9 @@
                 "identifier": "arbitraryValues",
                 "newPage": false,
                 "searchKey": "quick.arbitraryValues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1583,7 +1671,9 @@
                 "identifier": "functionAndType",
                 "newPage": false,
                 "searchKey": "quick.functionAndType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1603,7 +1693,9 @@
                 "identifier": "toInterfaces",
                 "newPage": false,
                 "searchKey": "quick.toInterfaces",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1623,7 +1715,9 @@
                 "identifier": "toString",
                 "newPage": false,
                 "searchKey": "quick.toString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1643,7 +1737,9 @@
                 "identifier": "fArray",
                 "newPage": false,
                 "searchKey": "quick.fArray",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1663,7 +1759,9 @@
                 "identifier": "fBool",
                 "newPage": false,
                 "searchKey": "quick.fBool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1683,7 +1781,9 @@
                 "identifier": "fFloat32",
                 "newPage": false,
                 "searchKey": "quick.fFloat32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1703,7 +1803,9 @@
                 "identifier": "fFloat64",
                 "newPage": false,
                 "searchKey": "quick.fFloat64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1723,7 +1825,9 @@
                 "identifier": "fComplex64",
                 "newPage": false,
                 "searchKey": "quick.fComplex64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1743,7 +1847,9 @@
                 "identifier": "fComplex128",
                 "newPage": false,
                 "searchKey": "quick.fComplex128",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1763,7 +1869,9 @@
                 "identifier": "fInt16",
                 "newPage": false,
                 "searchKey": "quick.fInt16",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1783,7 +1891,9 @@
                 "identifier": "fInt32",
                 "newPage": false,
                 "searchKey": "quick.fInt32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1803,7 +1913,9 @@
                 "identifier": "fInt64",
                 "newPage": false,
                 "searchKey": "quick.fInt64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1823,7 +1935,9 @@
                 "identifier": "fInt8",
                 "newPage": false,
                 "searchKey": "quick.fInt8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1843,7 +1957,9 @@
                 "identifier": "fInt",
                 "newPage": false,
                 "searchKey": "quick.fInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1863,7 +1979,9 @@
                 "identifier": "fMap",
                 "newPage": false,
                 "searchKey": "quick.fMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1883,7 +2001,9 @@
                 "identifier": "fPtr",
                 "newPage": false,
                 "searchKey": "quick.fPtr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1903,7 +2023,9 @@
                 "identifier": "fSlice",
                 "newPage": false,
                 "searchKey": "quick.fSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1923,7 +2045,9 @@
                 "identifier": "fString",
                 "newPage": false,
                 "searchKey": "quick.fString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1943,7 +2067,9 @@
                 "identifier": "fUint16",
                 "newPage": false,
                 "searchKey": "quick.fUint16",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1963,7 +2089,9 @@
                 "identifier": "fUint32",
                 "newPage": false,
                 "searchKey": "quick.fUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1983,7 +2111,9 @@
                 "identifier": "fUint64",
                 "newPage": false,
                 "searchKey": "quick.fUint64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2003,7 +2133,9 @@
                 "identifier": "fUint8",
                 "newPage": false,
                 "searchKey": "quick.fUint8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2023,7 +2155,9 @@
                 "identifier": "fUint",
                 "newPage": false,
                 "searchKey": "quick.fUint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2043,7 +2177,9 @@
                 "identifier": "fUintptr",
                 "newPage": false,
                 "searchKey": "quick.fUintptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2063,7 +2199,9 @@
                 "identifier": "reportError",
                 "newPage": false,
                 "searchKey": "quick.reportError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2083,7 +2221,9 @@
                 "identifier": "TestCheckEqual",
                 "newPage": false,
                 "searchKey": "quick.TestCheckEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2103,7 +2243,9 @@
                 "identifier": "myStructProperty",
                 "newPage": false,
                 "searchKey": "quick.myStructProperty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2123,7 +2265,9 @@
                 "identifier": "TestCheckProperty",
                 "newPage": false,
                 "searchKey": "quick.TestCheckProperty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2143,7 +2287,9 @@
                 "identifier": "TestFailure",
                 "newPage": false,
                 "searchKey": "quick.TestFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2163,7 +2309,9 @@
                 "identifier": "TestRecursive",
                 "newPage": false,
                 "searchKey": "quick.TestRecursive",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2183,7 +2331,9 @@
                 "identifier": "TestEmptyStruct",
                 "newPage": false,
                 "searchKey": "quick.TestEmptyStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2203,7 +2353,9 @@
                 "identifier": "TestMutuallyRecursive",
                 "newPage": false,
                 "searchKey": "quick.TestMutuallyRecursive",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2223,7 +2375,9 @@
                 "identifier": "TestNonZeroSliceAndMap",
                 "newPage": false,
                 "searchKey": "quick.TestNonZeroSliceAndMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2243,7 +2397,9 @@
                 "identifier": "TestInt64",
                 "newPage": false,
                 "searchKey": "quick.TestInt64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

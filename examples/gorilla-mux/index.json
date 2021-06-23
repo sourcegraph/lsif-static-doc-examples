@@ -4,9 +4,7 @@
     "identifier": "mux",
     "newPage": true,
     "searchKey": "",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "varsKey",
                 "newPage": false,
                 "searchKey": "mux.varsKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "routeKey",
                 "newPage": false,
                 "searchKey": "mux.routeKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "regexpTypePath",
                 "newPage": false,
                 "searchKey": "mux.regexpTypePath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "regexpTypeHost",
                 "newPage": false,
                 "searchKey": "mux.regexpTypeHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "regexpTypePrefix",
                 "newPage": false,
                 "searchKey": "mux.regexpTypePrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "regexpTypeQuery",
                 "newPage": false,
                 "searchKey": "mux.regexpTypeQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,9 +175,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -187,9 +193,7 @@
                 "identifier": "ErrMethodMismatch",
                 "newPage": false,
                 "searchKey": "mux.ErrMethodMismatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -209,9 +213,7 @@
                 "identifier": "ErrNotFound",
                 "newPage": false,
                 "searchKey": "mux.ErrNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -231,9 +233,7 @@
                 "identifier": "SkipRouter",
                 "newPage": false,
                 "searchKey": "mux.SkipRouter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -253,7 +253,9 @@
                 "identifier": "headerMatcherTests",
                 "newPage": false,
                 "searchKey": "mux.headerMatcherTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -273,7 +275,9 @@
                 "identifier": "hostMatcherTests",
                 "newPage": false,
                 "searchKey": "mux.hostMatcherTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -293,7 +297,9 @@
                 "identifier": "methodMatcherTests",
                 "newPage": false,
                 "searchKey": "mux.methodMatcherTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -313,7 +319,9 @@
                 "identifier": "pathMatcherTests",
                 "newPage": false,
                 "searchKey": "mux.pathMatcherTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -333,7 +341,9 @@
                 "identifier": "schemeMatcherTests",
                 "newPage": false,
                 "searchKey": "mux.schemeMatcherTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -353,7 +363,9 @@
                 "identifier": "urlBuildingTests",
                 "newPage": false,
                 "searchKey": "mux.urlBuildingTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -376,9 +388,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -396,9 +406,7 @@
                 "identifier": "MiddlewareFunc",
                 "newPage": false,
                 "searchKey": "mux.MiddlewareFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -416,9 +424,7 @@
                       "identifier": "CORSMethodMiddleware",
                       "newPage": false,
                       "searchKey": "mux.CORSMethodMiddleware",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -438,9 +444,7 @@
                       "identifier": "MiddlewareFunc.Middleware",
                       "newPage": false,
                       "searchKey": "mux.MiddlewareFunc.Middleware",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -463,7 +467,9 @@
                 "identifier": "middleware",
                 "newPage": false,
                 "searchKey": "mux.middleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -483,9 +489,7 @@
                 "identifier": "Router",
                 "newPage": false,
                 "searchKey": "mux.Router",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -503,9 +507,7 @@
                       "identifier": "NewRouter",
                       "newPage": false,
                       "searchKey": "mux.NewRouter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -525,9 +527,7 @@
                       "identifier": "Router.Use",
                       "newPage": false,
                       "searchKey": "mux.Router.Use",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -547,7 +547,9 @@
                       "identifier": "Router.useInterface",
                       "newPage": false,
                       "searchKey": "mux.Router.useInterface",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -567,9 +569,7 @@
                       "identifier": "Router.Match",
                       "newPage": false,
                       "searchKey": "mux.Router.Match",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -589,9 +589,7 @@
                       "identifier": "Router.ServeHTTP",
                       "newPage": false,
                       "searchKey": "mux.Router.ServeHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -611,9 +609,7 @@
                       "identifier": "Router.Get",
                       "newPage": false,
                       "searchKey": "mux.Router.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -633,9 +629,7 @@
                       "identifier": "Router.GetRoute",
                       "newPage": false,
                       "searchKey": "mux.Router.GetRoute",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -655,9 +649,7 @@
                       "identifier": "Router.StrictSlash",
                       "newPage": false,
                       "searchKey": "mux.Router.StrictSlash",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -677,9 +669,7 @@
                       "identifier": "Router.SkipClean",
                       "newPage": false,
                       "searchKey": "mux.Router.SkipClean",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -699,9 +689,7 @@
                       "identifier": "Router.UseEncodedPath",
                       "newPage": false,
                       "searchKey": "mux.Router.UseEncodedPath",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -721,9 +709,7 @@
                       "identifier": "Router.NewRoute",
                       "newPage": false,
                       "searchKey": "mux.Router.NewRoute",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -743,9 +729,7 @@
                       "identifier": "Router.Name",
                       "newPage": false,
                       "searchKey": "mux.Router.Name",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -765,9 +749,7 @@
                       "identifier": "Router.Handle",
                       "newPage": false,
                       "searchKey": "mux.Router.Handle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -787,9 +769,7 @@
                       "identifier": "Router.HandleFunc",
                       "newPage": false,
                       "searchKey": "mux.Router.HandleFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -809,9 +789,7 @@
                       "identifier": "Router.Headers",
                       "newPage": false,
                       "searchKey": "mux.Router.Headers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -831,9 +809,7 @@
                       "identifier": "Router.Host",
                       "newPage": false,
                       "searchKey": "mux.Router.Host",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -853,9 +829,7 @@
                       "identifier": "Router.MatcherFunc",
                       "newPage": false,
                       "searchKey": "mux.Router.MatcherFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -875,9 +849,7 @@
                       "identifier": "Router.Methods",
                       "newPage": false,
                       "searchKey": "mux.Router.Methods",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -897,9 +869,7 @@
                       "identifier": "Router.Path",
                       "newPage": false,
                       "searchKey": "mux.Router.Path",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -919,9 +889,7 @@
                       "identifier": "Router.PathPrefix",
                       "newPage": false,
                       "searchKey": "mux.Router.PathPrefix",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -941,9 +909,7 @@
                       "identifier": "Router.Queries",
                       "newPage": false,
                       "searchKey": "mux.Router.Queries",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -963,9 +929,7 @@
                       "identifier": "Router.Schemes",
                       "newPage": false,
                       "searchKey": "mux.Router.Schemes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -985,9 +949,7 @@
                       "identifier": "Router.BuildVarsFunc",
                       "newPage": false,
                       "searchKey": "mux.Router.BuildVarsFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1007,9 +969,7 @@
                       "identifier": "Router.Walk",
                       "newPage": false,
                       "searchKey": "mux.Router.Walk",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1029,7 +989,9 @@
                       "identifier": "Router.walk",
                       "newPage": false,
                       "searchKey": "mux.Router.walk",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1052,7 +1014,9 @@
                 "identifier": "routeConf",
                 "newPage": false,
                 "searchKey": "mux.routeConf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1070,7 +1034,9 @@
                       "identifier": "copyRouteConf",
                       "newPage": false,
                       "searchKey": "mux.copyRouteConf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1093,9 +1059,7 @@
                 "identifier": "WalkFunc",
                 "newPage": false,
                 "searchKey": "mux.WalkFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1115,9 +1079,7 @@
                 "identifier": "RouteMatch",
                 "newPage": false,
                 "searchKey": "mux.RouteMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1137,7 +1099,9 @@
                 "identifier": "contextKey",
                 "newPage": false,
                 "searchKey": "mux.contextKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1157,7 +1121,9 @@
                 "identifier": "routeRegexpOptions",
                 "newPage": false,
                 "searchKey": "mux.routeRegexpOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1177,7 +1143,9 @@
                 "identifier": "regexpType",
                 "newPage": false,
                 "searchKey": "mux.regexpType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1197,7 +1165,9 @@
                 "identifier": "routeRegexp",
                 "newPage": false,
                 "searchKey": "mux.routeRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1215,7 +1185,9 @@
                       "identifier": "copyRouteRegexp",
                       "newPage": false,
                       "searchKey": "mux.copyRouteRegexp",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1235,7 +1207,9 @@
                       "identifier": "newRouteRegexp",
                       "newPage": false,
                       "searchKey": "mux.newRouteRegexp",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1255,7 +1229,9 @@
                       "identifier": "routeRegexp.Match",
                       "newPage": false,
                       "searchKey": "mux.routeRegexp.Match",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1275,7 +1251,9 @@
                       "identifier": "routeRegexp.url",
                       "newPage": false,
                       "searchKey": "mux.routeRegexp.url",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1295,7 +1273,9 @@
                       "identifier": "routeRegexp.getURLQuery",
                       "newPage": false,
                       "searchKey": "mux.routeRegexp.getURLQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1315,7 +1295,9 @@
                       "identifier": "routeRegexp.matchQueryString",
                       "newPage": false,
                       "searchKey": "mux.routeRegexp.matchQueryString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1335,7 +1317,9 @@
                       "identifier": "routeRegexp.GoString",
                       "newPage": false,
                       "searchKey": "mux.routeRegexp.GoString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1358,7 +1342,9 @@
                 "identifier": "routeRegexpGroup",
                 "newPage": false,
                 "searchKey": "mux.routeRegexpGroup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1376,7 +1362,9 @@
                       "identifier": "routeRegexpGroup.setMatch",
                       "newPage": false,
                       "searchKey": "mux.routeRegexpGroup.setMatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1399,9 +1387,7 @@
                 "identifier": "Route",
                 "newPage": false,
                 "searchKey": "mux.Route",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1419,9 +1405,7 @@
                       "identifier": "CurrentRoute",
                       "newPage": false,
                       "searchKey": "mux.CurrentRoute",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1441,9 +1425,7 @@
                       "identifier": "Route.SkipClean",
                       "newPage": false,
                       "searchKey": "mux.Route.SkipClean",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1463,9 +1445,7 @@
                       "identifier": "Route.Match",
                       "newPage": false,
                       "searchKey": "mux.Route.Match",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1485,9 +1465,7 @@
                       "identifier": "Route.GetError",
                       "newPage": false,
                       "searchKey": "mux.Route.GetError",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1507,9 +1485,7 @@
                       "identifier": "Route.BuildOnly",
                       "newPage": false,
                       "searchKey": "mux.Route.BuildOnly",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1529,9 +1505,7 @@
                       "identifier": "Route.Handler",
                       "newPage": false,
                       "searchKey": "mux.Route.Handler",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1551,9 +1525,7 @@
                       "identifier": "Route.HandlerFunc",
                       "newPage": false,
                       "searchKey": "mux.Route.HandlerFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1573,9 +1545,7 @@
                       "identifier": "Route.GetHandler",
                       "newPage": false,
                       "searchKey": "mux.Route.GetHandler",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1595,9 +1565,7 @@
                       "identifier": "Route.Name",
                       "newPage": false,
                       "searchKey": "mux.Route.Name",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1617,9 +1585,7 @@
                       "identifier": "Route.GetName",
                       "newPage": false,
                       "searchKey": "mux.Route.GetName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1639,7 +1605,9 @@
                       "identifier": "Route.addMatcher",
                       "newPage": false,
                       "searchKey": "mux.Route.addMatcher",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1659,7 +1627,9 @@
                       "identifier": "Route.addRegexpMatcher",
                       "newPage": false,
                       "searchKey": "mux.Route.addRegexpMatcher",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1679,9 +1649,7 @@
                       "identifier": "Route.Headers",
                       "newPage": false,
                       "searchKey": "mux.Route.Headers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1701,9 +1669,7 @@
                       "identifier": "Route.HeadersRegexp",
                       "newPage": false,
                       "searchKey": "mux.Route.HeadersRegexp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1723,9 +1689,7 @@
                       "identifier": "Route.Host",
                       "newPage": false,
                       "searchKey": "mux.Route.Host",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1745,9 +1709,7 @@
                       "identifier": "Route.MatcherFunc",
                       "newPage": false,
                       "searchKey": "mux.Route.MatcherFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1767,9 +1729,7 @@
                       "identifier": "Route.Methods",
                       "newPage": false,
                       "searchKey": "mux.Route.Methods",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1789,9 +1749,7 @@
                       "identifier": "Route.Path",
                       "newPage": false,
                       "searchKey": "mux.Route.Path",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1811,9 +1769,7 @@
                       "identifier": "Route.PathPrefix",
                       "newPage": false,
                       "searchKey": "mux.Route.PathPrefix",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1833,9 +1789,7 @@
                       "identifier": "Route.Queries",
                       "newPage": false,
                       "searchKey": "mux.Route.Queries",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1855,9 +1809,7 @@
                       "identifier": "Route.Schemes",
                       "newPage": false,
                       "searchKey": "mux.Route.Schemes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1877,9 +1829,7 @@
                       "identifier": "Route.BuildVarsFunc",
                       "newPage": false,
                       "searchKey": "mux.Route.BuildVarsFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1899,9 +1849,7 @@
                       "identifier": "Route.Subrouter",
                       "newPage": false,
                       "searchKey": "mux.Route.Subrouter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1921,9 +1869,7 @@
                       "identifier": "Route.URL",
                       "newPage": false,
                       "searchKey": "mux.Route.URL",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1943,9 +1889,7 @@
                       "identifier": "Route.URLHost",
                       "newPage": false,
                       "searchKey": "mux.Route.URLHost",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1965,9 +1909,7 @@
                       "identifier": "Route.URLPath",
                       "newPage": false,
                       "searchKey": "mux.Route.URLPath",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1987,9 +1929,7 @@
                       "identifier": "Route.GetPathTemplate",
                       "newPage": false,
                       "searchKey": "mux.Route.GetPathTemplate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2009,9 +1949,7 @@
                       "identifier": "Route.GetPathRegexp",
                       "newPage": false,
                       "searchKey": "mux.Route.GetPathRegexp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2031,9 +1969,7 @@
                       "identifier": "Route.GetQueriesRegexp",
                       "newPage": false,
                       "searchKey": "mux.Route.GetQueriesRegexp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2053,9 +1989,7 @@
                       "identifier": "Route.GetQueriesTemplates",
                       "newPage": false,
                       "searchKey": "mux.Route.GetQueriesTemplates",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2075,9 +2009,7 @@
                       "identifier": "Route.GetMethods",
                       "newPage": false,
                       "searchKey": "mux.Route.GetMethods",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2097,9 +2029,7 @@
                       "identifier": "Route.GetHostTemplate",
                       "newPage": false,
                       "searchKey": "mux.Route.GetHostTemplate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2119,7 +2049,9 @@
                       "identifier": "Route.prepareVars",
                       "newPage": false,
                       "searchKey": "mux.Route.prepareVars",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2139,7 +2071,9 @@
                       "identifier": "Route.buildVars",
                       "newPage": false,
                       "searchKey": "mux.Route.buildVars",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2159,7 +2093,9 @@
                       "identifier": "Route.GoString",
                       "newPage": false,
                       "searchKey": "mux.Route.GoString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2182,7 +2118,9 @@
                 "identifier": "matcher",
                 "newPage": false,
                 "searchKey": "mux.matcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2202,7 +2140,9 @@
                 "identifier": "headerMatcher",
                 "newPage": false,
                 "searchKey": "mux.headerMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2220,7 +2160,9 @@
                       "identifier": "headerMatcher.Match",
                       "newPage": false,
                       "searchKey": "mux.headerMatcher.Match",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2243,7 +2185,9 @@
                 "identifier": "headerRegexMatcher",
                 "newPage": false,
                 "searchKey": "mux.headerRegexMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2261,7 +2205,9 @@
                       "identifier": "headerRegexMatcher.Match",
                       "newPage": false,
                       "searchKey": "mux.headerRegexMatcher.Match",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2284,9 +2230,7 @@
                 "identifier": "MatcherFunc",
                 "newPage": false,
                 "searchKey": "mux.MatcherFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2304,9 +2248,7 @@
                       "identifier": "MatcherFunc.Match",
                       "newPage": false,
                       "searchKey": "mux.MatcherFunc.Match",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2329,7 +2271,9 @@
                 "identifier": "methodMatcher",
                 "newPage": false,
                 "searchKey": "mux.methodMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2347,7 +2291,9 @@
                       "identifier": "methodMatcher.Match",
                       "newPage": false,
                       "searchKey": "mux.methodMatcher.Match",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2370,7 +2316,9 @@
                 "identifier": "schemeMatcher",
                 "newPage": false,
                 "searchKey": "mux.schemeMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2388,7 +2336,9 @@
                       "identifier": "schemeMatcher.Match",
                       "newPage": false,
                       "searchKey": "mux.schemeMatcher.Match",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2411,9 +2361,7 @@
                 "identifier": "BuildVarsFunc",
                 "newPage": false,
                 "searchKey": "mux.BuildVarsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2433,7 +2381,9 @@
                 "identifier": "testMiddleware",
                 "newPage": false,
                 "searchKey": "mux.testMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2451,7 +2401,9 @@
                       "identifier": "testMiddleware.Middleware",
                       "newPage": false,
                       "searchKey": "mux.testMiddleware.Middleware",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2474,7 +2426,9 @@
                 "identifier": "routeTest",
                 "newPage": false,
                 "searchKey": "mux.routeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2494,7 +2448,9 @@
                 "identifier": "TestA301ResponseWriter",
                 "newPage": false,
                 "searchKey": "mux.TestA301ResponseWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2512,7 +2468,9 @@
                       "identifier": "TestA301ResponseWriter.Header",
                       "newPage": false,
                       "searchKey": "mux.TestA301ResponseWriter.Header",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2532,7 +2490,9 @@
                       "identifier": "TestA301ResponseWriter.Write",
                       "newPage": false,
                       "searchKey": "mux.TestA301ResponseWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2552,7 +2512,9 @@
                       "identifier": "TestA301ResponseWriter.WriteHeader",
                       "newPage": false,
                       "searchKey": "mux.TestA301ResponseWriter.WriteHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2575,7 +2537,9 @@
                 "identifier": "methodsSubrouterTest",
                 "newPage": false,
                 "searchKey": "mux.methodsSubrouterTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2595,7 +2559,9 @@
                 "identifier": "customMethodNotAllowedHandler",
                 "newPage": false,
                 "searchKey": "mux.customMethodNotAllowedHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2613,7 +2579,9 @@
                       "identifier": "customMethodNotAllowedHandler.ServeHTTP",
                       "newPage": false,
                       "searchKey": "mux.customMethodNotAllowedHandler.ServeHTTP",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2636,7 +2604,9 @@
                 "identifier": "ResponseRecorder",
                 "newPage": false,
                 "searchKey": "mux.ResponseRecorder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2654,7 +2624,9 @@
                       "identifier": "NewRecorder",
                       "newPage": false,
                       "searchKey": "mux.NewRecorder",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2674,7 +2646,9 @@
                       "identifier": "ResponseRecorder.Header",
                       "newPage": false,
                       "searchKey": "mux.ResponseRecorder.Header",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2694,7 +2668,9 @@
                       "identifier": "ResponseRecorder.Write",
                       "newPage": false,
                       "searchKey": "mux.ResponseRecorder.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2714,7 +2690,9 @@
                       "identifier": "ResponseRecorder.WriteHeader",
                       "newPage": false,
                       "searchKey": "mux.ResponseRecorder.WriteHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2734,7 +2712,9 @@
                       "identifier": "ResponseRecorder.Flush",
                       "newPage": false,
                       "searchKey": "mux.ResponseRecorder.Flush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2757,7 +2737,9 @@
                 "identifier": "headerMatcherTest",
                 "newPage": false,
                 "searchKey": "mux.headerMatcherTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2777,7 +2759,9 @@
                 "identifier": "hostMatcherTest",
                 "newPage": false,
                 "searchKey": "mux.hostMatcherTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2797,7 +2781,9 @@
                 "identifier": "methodMatcherTest",
                 "newPage": false,
                 "searchKey": "mux.methodMatcherTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2817,7 +2803,9 @@
                 "identifier": "pathMatcherTest",
                 "newPage": false,
                 "searchKey": "mux.pathMatcherTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2837,7 +2825,9 @@
                 "identifier": "schemeMatcherTest",
                 "newPage": false,
                 "searchKey": "mux.schemeMatcherTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2857,7 +2847,9 @@
                 "identifier": "urlBuildingTest",
                 "newPage": false,
                 "searchKey": "mux.urlBuildingTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2880,9 +2872,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2900,7 +2890,9 @@
                 "identifier": "getAllMethodsForRoute",
                 "newPage": false,
                 "searchKey": "mux.getAllMethodsForRoute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2920,9 +2912,7 @@
                 "identifier": "Vars",
                 "newPage": false,
                 "searchKey": "mux.Vars",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2942,7 +2932,9 @@
                 "identifier": "requestWithVars",
                 "newPage": false,
                 "searchKey": "mux.requestWithVars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2962,7 +2954,9 @@
                 "identifier": "requestWithRoute",
                 "newPage": false,
                 "searchKey": "mux.requestWithRoute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2982,7 +2976,9 @@
                 "identifier": "cleanPath",
                 "newPage": false,
                 "searchKey": "mux.cleanPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3002,7 +2998,9 @@
                 "identifier": "uniqueVars",
                 "newPage": false,
                 "searchKey": "mux.uniqueVars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3022,7 +3020,9 @@
                 "identifier": "checkPairs",
                 "newPage": false,
                 "searchKey": "mux.checkPairs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3042,7 +3042,9 @@
                 "identifier": "mapFromPairsToString",
                 "newPage": false,
                 "searchKey": "mux.mapFromPairsToString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3062,7 +3064,9 @@
                 "identifier": "mapFromPairsToRegex",
                 "newPage": false,
                 "searchKey": "mux.mapFromPairsToRegex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3082,7 +3086,9 @@
                 "identifier": "matchInArray",
                 "newPage": false,
                 "searchKey": "mux.matchInArray",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3102,7 +3108,9 @@
                 "identifier": "matchMapWithString",
                 "newPage": false,
                 "searchKey": "mux.matchMapWithString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3122,7 +3130,9 @@
                 "identifier": "matchMapWithRegex",
                 "newPage": false,
                 "searchKey": "mux.matchMapWithRegex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3142,7 +3152,9 @@
                 "identifier": "methodNotAllowed",
                 "newPage": false,
                 "searchKey": "mux.methodNotAllowed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3162,7 +3174,9 @@
                 "identifier": "methodNotAllowedHandler",
                 "newPage": false,
                 "searchKey": "mux.methodNotAllowedHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3182,7 +3196,9 @@
                 "identifier": "findFirstQueryKey",
                 "newPage": false,
                 "searchKey": "mux.findFirstQueryKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3202,7 +3218,9 @@
                 "identifier": "braceIndices",
                 "newPage": false,
                 "searchKey": "mux.braceIndices",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3222,7 +3240,9 @@
                 "identifier": "varGroupName",
                 "newPage": false,
                 "searchKey": "mux.varGroupName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3242,7 +3262,9 @@
                 "identifier": "getHost",
                 "newPage": false,
                 "searchKey": "mux.getHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3262,7 +3284,9 @@
                 "identifier": "extractVars",
                 "newPage": false,
                 "searchKey": "mux.extractVars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3282,9 +3306,7 @@
                 "identifier": "SetURLVars",
                 "newPage": false,
                 "searchKey": "mux.SetURLVars",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3304,7 +3326,9 @@
                 "identifier": "BenchmarkMux",
                 "newPage": false,
                 "searchKey": "mux.BenchmarkMux",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3324,7 +3348,9 @@
                 "identifier": "BenchmarkMuxAlternativeInRegexp",
                 "newPage": false,
                 "searchKey": "mux.BenchmarkMuxAlternativeInRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3344,7 +3370,9 @@
                 "identifier": "BenchmarkManyPathVariables",
                 "newPage": false,
                 "searchKey": "mux.BenchmarkManyPathVariables",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3364,7 +3392,9 @@
                 "identifier": "dummyHandler",
                 "newPage": false,
                 "searchKey": "mux.dummyHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3384,7 +3414,9 @@
                 "identifier": "TestMiddlewareAdd",
                 "newPage": false,
                 "searchKey": "mux.TestMiddlewareAdd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3404,7 +3436,9 @@
                 "identifier": "TestMiddleware",
                 "newPage": false,
                 "searchKey": "mux.TestMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3424,7 +3458,9 @@
                 "identifier": "TestMiddlewareSubrouter",
                 "newPage": false,
                 "searchKey": "mux.TestMiddlewareSubrouter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3444,7 +3480,9 @@
                 "identifier": "TestMiddlewareExecution",
                 "newPage": false,
                 "searchKey": "mux.TestMiddlewareExecution",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3464,7 +3502,9 @@
                 "identifier": "TestMiddlewareNotFound",
                 "newPage": false,
                 "searchKey": "mux.TestMiddlewareNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3484,7 +3524,9 @@
                 "identifier": "TestMiddlewareMethodMismatch",
                 "newPage": false,
                 "searchKey": "mux.TestMiddlewareMethodMismatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3504,7 +3546,9 @@
                 "identifier": "TestMiddlewareNotFoundSubrouter",
                 "newPage": false,
                 "searchKey": "mux.TestMiddlewareNotFoundSubrouter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3524,7 +3568,9 @@
                 "identifier": "TestMiddlewareMethodMismatchSubrouter",
                 "newPage": false,
                 "searchKey": "mux.TestMiddlewareMethodMismatchSubrouter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3544,7 +3590,9 @@
                 "identifier": "TestCORSMethodMiddleware",
                 "newPage": false,
                 "searchKey": "mux.TestCORSMethodMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3564,7 +3612,9 @@
                 "identifier": "TestCORSMethodMiddlewareSubrouter",
                 "newPage": false,
                 "searchKey": "mux.TestCORSMethodMiddlewareSubrouter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3584,7 +3634,9 @@
                 "identifier": "TestMiddlewareOnMultiSubrouter",
                 "newPage": false,
                 "searchKey": "mux.TestMiddlewareOnMultiSubrouter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3604,7 +3656,9 @@
                 "identifier": "TestSchemeMatchers",
                 "newPage": false,
                 "searchKey": "mux.TestSchemeMatchers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3624,7 +3678,9 @@
                 "identifier": "TestHost",
                 "newPage": false,
                 "searchKey": "mux.TestHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3644,7 +3700,9 @@
                 "identifier": "TestPath",
                 "newPage": false,
                 "searchKey": "mux.TestPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3664,7 +3722,9 @@
                 "identifier": "TestPathPrefix",
                 "newPage": false,
                 "searchKey": "mux.TestPathPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3684,7 +3744,9 @@
                 "identifier": "TestSchemeHostPath",
                 "newPage": false,
                 "searchKey": "mux.TestSchemeHostPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3704,7 +3766,9 @@
                 "identifier": "TestHeaders",
                 "newPage": false,
                 "searchKey": "mux.TestHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3724,7 +3788,9 @@
                 "identifier": "TestMethods",
                 "newPage": false,
                 "searchKey": "mux.TestMethods",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3744,7 +3810,9 @@
                 "identifier": "TestQueries",
                 "newPage": false,
                 "searchKey": "mux.TestQueries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3764,7 +3832,9 @@
                 "identifier": "TestSchemes",
                 "newPage": false,
                 "searchKey": "mux.TestSchemes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3784,7 +3854,9 @@
                 "identifier": "TestMatcherFunc",
                 "newPage": false,
                 "searchKey": "mux.TestMatcherFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3804,7 +3876,9 @@
                 "identifier": "TestBuildVarsFunc",
                 "newPage": false,
                 "searchKey": "mux.TestBuildVarsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3824,7 +3898,9 @@
                 "identifier": "TestSubRouter",
                 "newPage": false,
                 "searchKey": "mux.TestSubRouter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3844,7 +3920,9 @@
                 "identifier": "TestNamedRoutes",
                 "newPage": false,
                 "searchKey": "mux.TestNamedRoutes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3864,7 +3942,9 @@
                 "identifier": "TestNameMultipleCalls",
                 "newPage": false,
                 "searchKey": "mux.TestNameMultipleCalls",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3884,7 +3964,9 @@
                 "identifier": "TestStrictSlash",
                 "newPage": false,
                 "searchKey": "mux.TestStrictSlash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3904,7 +3986,9 @@
                 "identifier": "TestUseEncodedPath",
                 "newPage": false,
                 "searchKey": "mux.TestUseEncodedPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3924,7 +4008,9 @@
                 "identifier": "TestWalkSingleDepth",
                 "newPage": false,
                 "searchKey": "mux.TestWalkSingleDepth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3944,7 +4030,9 @@
                 "identifier": "TestWalkNested",
                 "newPage": false,
                 "searchKey": "mux.TestWalkNested",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3964,7 +4052,9 @@
                 "identifier": "TestWalkSubrouters",
                 "newPage": false,
                 "searchKey": "mux.TestWalkSubrouters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3984,7 +4074,9 @@
                 "identifier": "TestWalkErrorRoute",
                 "newPage": false,
                 "searchKey": "mux.TestWalkErrorRoute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4004,7 +4096,9 @@
                 "identifier": "TestWalkErrorMatcher",
                 "newPage": false,
                 "searchKey": "mux.TestWalkErrorMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4024,7 +4118,9 @@
                 "identifier": "TestWalkErrorHandler",
                 "newPage": false,
                 "searchKey": "mux.TestWalkErrorHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4044,7 +4140,9 @@
                 "identifier": "TestSubrouterErrorHandling",
                 "newPage": false,
                 "searchKey": "mux.TestSubrouterErrorHandling",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4064,7 +4162,9 @@
                 "identifier": "TestPanicOnCapturingGroups",
                 "newPage": false,
                 "searchKey": "mux.TestPanicOnCapturingGroups",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4084,7 +4184,9 @@
                 "identifier": "getRouteTemplate",
                 "newPage": false,
                 "searchKey": "mux.getRouteTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4104,7 +4206,9 @@
                 "identifier": "testRoute",
                 "newPage": false,
                 "searchKey": "mux.testRoute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4124,7 +4228,9 @@
                 "identifier": "testUseEscapedRoute",
                 "newPage": false,
                 "searchKey": "mux.testUseEscapedRoute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4144,7 +4250,9 @@
                 "identifier": "testTemplate",
                 "newPage": false,
                 "searchKey": "mux.testTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4164,7 +4272,9 @@
                 "identifier": "testMethods",
                 "newPage": false,
                 "searchKey": "mux.testMethods",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4184,7 +4294,9 @@
                 "identifier": "testRegexp",
                 "newPage": false,
                 "searchKey": "mux.testRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4204,7 +4316,9 @@
                 "identifier": "testQueriesRegexp",
                 "newPage": false,
                 "searchKey": "mux.testQueriesRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4224,7 +4338,9 @@
                 "identifier": "testQueriesTemplates",
                 "newPage": false,
                 "searchKey": "mux.testQueriesTemplates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4244,7 +4360,9 @@
                 "identifier": "Test301Redirect",
                 "newPage": false,
                 "searchKey": "mux.Test301Redirect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4264,7 +4382,9 @@
                 "identifier": "TestSkipClean",
                 "newPage": false,
                 "searchKey": "mux.TestSkipClean",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4284,7 +4404,9 @@
                 "identifier": "TestSubrouterHeader",
                 "newPage": false,
                 "searchKey": "mux.TestSubrouterHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4304,7 +4426,9 @@
                 "identifier": "TestNoMatchMethodErrorHandler",
                 "newPage": false,
                 "searchKey": "mux.TestNoMatchMethodErrorHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4324,7 +4448,9 @@
                 "identifier": "TestErrMatchNotFound",
                 "newPage": false,
                 "searchKey": "mux.TestErrMatchNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4344,7 +4470,9 @@
                 "identifier": "methodHandler",
                 "newPage": false,
                 "searchKey": "mux.methodHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4364,7 +4492,9 @@
                 "identifier": "TestMethodsSubrouterCatchall",
                 "newPage": false,
                 "searchKey": "mux.TestMethodsSubrouterCatchall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4384,7 +4514,9 @@
                 "identifier": "TestMethodsSubrouterStrictSlash",
                 "newPage": false,
                 "searchKey": "mux.TestMethodsSubrouterStrictSlash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4404,7 +4536,9 @@
                 "identifier": "TestMethodsSubrouterPathPrefix",
                 "newPage": false,
                 "searchKey": "mux.TestMethodsSubrouterPathPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4424,7 +4558,9 @@
                 "identifier": "TestMethodsSubrouterSubrouter",
                 "newPage": false,
                 "searchKey": "mux.TestMethodsSubrouterSubrouter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4444,7 +4580,9 @@
                 "identifier": "TestMethodsSubrouterPathVariable",
                 "newPage": false,
                 "searchKey": "mux.TestMethodsSubrouterPathVariable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4464,7 +4602,9 @@
                 "identifier": "ExampleSetURLVars",
                 "newPage": false,
                 "searchKey": "mux.ExampleSetURLVars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4484,7 +4624,9 @@
                 "identifier": "testMethodsSubrouter",
                 "newPage": false,
                 "searchKey": "mux.testMethodsSubrouter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4504,7 +4646,9 @@
                 "identifier": "TestSubrouterMatching",
                 "newPage": false,
                 "searchKey": "mux.TestSubrouterMatching",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4524,7 +4668,9 @@
                 "identifier": "Test_copyRouteConf",
                 "newPage": false,
                 "searchKey": "mux.Test_copyRouteConf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4544,7 +4690,9 @@
                 "identifier": "TestMethodNotAllowed",
                 "newPage": false,
                 "searchKey": "mux.TestMethodNotAllowed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4564,7 +4712,9 @@
                 "identifier": "TestSubrouterCustomMethodNotAllowed",
                 "newPage": false,
                 "searchKey": "mux.TestSubrouterCustomMethodNotAllowed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4584,7 +4734,9 @@
                 "identifier": "TestSubrouterNotFound",
                 "newPage": false,
                 "searchKey": "mux.TestSubrouterNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4604,7 +4756,9 @@
                 "identifier": "TestContextMiddleware",
                 "newPage": false,
                 "searchKey": "mux.TestContextMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4624,7 +4778,9 @@
                 "identifier": "mapToPairs",
                 "newPage": false,
                 "searchKey": "mux.mapToPairs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4644,7 +4800,9 @@
                 "identifier": "stringMapEqual",
                 "newPage": false,
                 "searchKey": "mux.stringMapEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4664,7 +4822,9 @@
                 "identifier": "stringHandler",
                 "newPage": false,
                 "searchKey": "mux.stringHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4684,7 +4844,9 @@
                 "identifier": "newRequest",
                 "newPage": false,
                 "searchKey": "mux.newRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4704,7 +4866,9 @@
                 "identifier": "newRequestWithHeaders",
                 "newPage": false,
                 "searchKey": "mux.newRequestWithHeaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4724,7 +4888,9 @@
                 "identifier": "newRequestHost",
                 "newPage": false,
                 "searchKey": "mux.newRequestHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4744,7 +4910,9 @@
                 "identifier": "TestRouteMatchers",
                 "newPage": false,
                 "searchKey": "mux.TestRouteMatchers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4764,7 +4932,9 @@
                 "identifier": "TestHeaderMatcher",
                 "newPage": false,
                 "searchKey": "mux.TestHeaderMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4784,7 +4954,9 @@
                 "identifier": "TestHostMatcher",
                 "newPage": false,
                 "searchKey": "mux.TestHostMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4804,7 +4976,9 @@
                 "identifier": "TestMethodMatcher",
                 "newPage": false,
                 "searchKey": "mux.TestMethodMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4824,7 +4998,9 @@
                 "identifier": "TestPathMatcher",
                 "newPage": false,
                 "searchKey": "mux.TestPathMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4844,7 +5020,9 @@
                 "identifier": "TestSchemeMatcher",
                 "newPage": false,
                 "searchKey": "mux.TestSchemeMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4864,7 +5042,9 @@
                 "identifier": "TestUrlBuilding",
                 "newPage": false,
                 "searchKey": "mux.TestUrlBuilding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4884,7 +5064,9 @@
                 "identifier": "TestMatchedRouteName",
                 "newPage": false,
                 "searchKey": "mux.TestMatchedRouteName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4904,7 +5086,9 @@
                 "identifier": "TestSubRouting",
                 "newPage": false,
                 "searchKey": "mux.TestSubRouting",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4924,7 +5108,9 @@
                 "identifier": "TestVariableNames",
                 "newPage": false,
                 "searchKey": "mux.TestVariableNames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4944,7 +5130,9 @@
                 "identifier": "TestRedirectSlash",
                 "newPage": false,
                 "searchKey": "mux.TestRedirectSlash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4964,7 +5152,9 @@
                 "identifier": "TestNewRegexp",
                 "newPage": false,
                 "searchKey": "mux.TestNewRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4984,7 +5174,9 @@
                 "identifier": "Test_findFirstQueryKey",
                 "newPage": false,
                 "searchKey": "mux.Test_findFirstQueryKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5004,7 +5196,9 @@
                 "identifier": "Benchmark_findQueryKey",
                 "newPage": false,
                 "searchKey": "mux.Benchmark_findQueryKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5024,7 +5218,9 @@
                 "identifier": "Benchmark_findQueryKeyGoLib",
                 "newPage": false,
                 "searchKey": "mux.Benchmark_findQueryKeyGoLib",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

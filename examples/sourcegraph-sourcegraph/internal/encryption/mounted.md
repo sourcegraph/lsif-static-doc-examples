@@ -18,10 +18,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="theScriptOfBeeMovie" href="#theScriptOfBeeMovie">var theScriptOfBeeMovie</a>
 
 ```
 searchKey: mounted.theScriptOfBeeMovie
+tags: [private]
 ```
 
 ```Go
@@ -30,11 +35,14 @@ var theScriptOfBeeMovie = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Key" href="#Key">type Key struct</a>
 
 ```
 searchKey: mounted.Key
-tags: [exported]
 ```
 
 ```Go
@@ -51,7 +59,6 @@ Key is an encryption.Key implementation that uses AES GCM encryption, using a se
 
 ```
 searchKey: mounted.NewKey
-tags: [exported]
 ```
 
 ```Go
@@ -62,7 +69,6 @@ func NewKey(ctx context.Context, k schema.MountedEncryptionKey) (*Key, error)
 
 ```
 searchKey: mounted.Key.Version
-tags: [exported]
 ```
 
 ```Go
@@ -73,7 +79,6 @@ func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)
 
 ```
 searchKey: mounted.Key.Encrypt
-tags: [exported]
 ```
 
 ```Go
@@ -84,7 +89,6 @@ func (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)
 
 ```
 searchKey: mounted.Key.Decrypt
-tags: [exported]
 ```
 
 ```Go
@@ -95,6 +99,7 @@ func (k *Key) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secre
 
 ```
 searchKey: mounted.encryptedValue
+tags: [private]
 ```
 
 ```Go
@@ -107,10 +112,15 @@ type encryptedValue struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="crc32Sum" href="#crc32Sum">func crc32Sum(data []byte) uint32</a>
 
 ```
 searchKey: mounted.crc32Sum
+tags: [private]
 ```
 
 ```Go
@@ -121,6 +131,7 @@ func crc32Sum(data []byte) uint32
 
 ```
 searchKey: mounted.TestRoundTrip
+tags: [private]
 ```
 
 ```Go

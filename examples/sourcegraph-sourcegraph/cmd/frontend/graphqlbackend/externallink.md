@@ -29,14 +29,11 @@ For example, a GitHub.com repository that also has Phabricator configured has ex
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="linksForRepositoryFailed" href="#linksForRepositoryFailed">var linksForRepositoryFailed</a>
 
 ```
 searchKey: externallink.linksForRepositoryFailed
+tags: [private]
 ```
 
 ```Go
@@ -45,15 +42,10 @@ var linksForRepositoryFailed = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Resolver" href="#Resolver">type Resolver struct</a>
 
 ```
 searchKey: externallink.Resolver
-tags: [exported]
 ```
 
 ```Go
@@ -72,7 +64,6 @@ For example, a repository might have 2 external links, one to its origin reposit
 
 ```
 searchKey: externallink.NewResolver
-tags: [exported]
 ```
 
 ```Go
@@ -83,7 +74,6 @@ func NewResolver(url, serviceType string) *Resolver
 
 ```
 searchKey: externallink.Resolver.URL
-tags: [exported]
 ```
 
 ```Go
@@ -94,7 +84,6 @@ func (r *Resolver) URL() string
 
 ```
 searchKey: externallink.Resolver.ServiceKind
-tags: [exported]
 ```
 
 ```Go
@@ -105,7 +94,6 @@ func (r *Resolver) ServiceKind() *string
 
 ```
 searchKey: externallink.Resolver.ServiceType
-tags: [exported]
 ```
 
 ```Go
@@ -116,7 +104,6 @@ func (r *Resolver) ServiceType() *string
 
 ```
 searchKey: externallink.Resolver.String
-tags: [exported]
 ```
 
 ```Go
@@ -125,15 +112,10 @@ func (r *Resolver) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Repository" href="#Repository">func Repository(ctx context.Context, db dbutil.DB, repo *types.Repo) (links []*Resolver, err error)</a>
 
 ```
 searchKey: externallink.Repository
-tags: [exported]
 ```
 
 ```Go
@@ -148,7 +130,6 @@ For example, a repository might have 2 external links, one to its origin reposit
 
 ```
 searchKey: externallink.FileOrDir
-tags: [exported]
 ```
 
 ```Go
@@ -161,7 +142,6 @@ FileOrDir returns the external links for a file or directory in a repository.
 
 ```
 searchKey: externallink.Commit
-tags: [exported]
 ```
 
 ```Go
@@ -174,6 +154,7 @@ Commit returns the external links for a commit in a repository.
 
 ```
 searchKey: externallink.linksForRepository
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +169,7 @@ It logs errors to the trace but does not return errors, because external links a
 
 ```
 searchKey: externallink.typeToMaybeEmptyKind
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +180,7 @@ func typeToMaybeEmptyKind(st string) string
 
 ```
 searchKey: externallink.TestRepository
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +191,7 @@ func TestRepository(t *testing.T)
 
 ```
 searchKey: externallink.TestFileOrDir
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +202,7 @@ func TestFileOrDir(t *testing.T)
 
 ```
 searchKey: externallink.TestCommit
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +213,7 @@ func TestCommit(t *testing.T)
 
 ```
 searchKey: externallink.resetMocks
+tags: [private]
 ```
 
 ```Go

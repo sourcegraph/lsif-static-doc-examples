@@ -4,7 +4,9 @@
     "identifier": "execabs",
     "newPage": true,
     "searchKey": "internal/execabs",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ErrNotFound",
                 "newPage": false,
                 "searchKey": "execabs.ErrNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +67,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,9 +87,7 @@
                 "identifier": "Cmd",
                 "newPage": false,
                 "searchKey": "execabs.Cmd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,9 +105,7 @@
                       "identifier": "CommandContext",
                       "newPage": false,
                       "searchKey": "execabs.CommandContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -125,9 +125,7 @@
                       "identifier": "Command",
                       "newPage": false,
                       "searchKey": "execabs.Command",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -150,9 +148,7 @@
                 "identifier": "Error",
                 "newPage": false,
                 "searchKey": "execabs.Error",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +168,7 @@
                 "identifier": "ExitError",
                 "newPage": false,
                 "searchKey": "execabs.ExitError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -197,7 +191,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -215,7 +211,9 @@
                 "identifier": "relError",
                 "newPage": false,
                 "searchKey": "execabs.relError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -235,9 +233,7 @@
                 "identifier": "LookPath",
                 "newPage": false,
                 "searchKey": "execabs.LookPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -257,7 +253,9 @@
                 "identifier": "fixCmd",
                 "newPage": false,
                 "searchKey": "execabs.fixCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -277,7 +275,9 @@
                 "identifier": "TestFixCmd",
                 "newPage": false,
                 "searchKey": "execabs.TestFixCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -297,7 +297,9 @@
                 "identifier": "TestCommand",
                 "newPage": false,
                 "searchKey": "execabs.TestCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -317,7 +319,9 @@
                 "identifier": "TestLookPath",
                 "newPage": false,
                 "searchKey": "execabs.TestLookPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

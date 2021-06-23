@@ -22,14 +22,11 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="gqlSearch" href="#gqlSearch">const gqlSearch</a>
 
 ```
 searchKey: main.gqlSearch
+tags: [private]
 ```
 
 ```Go
@@ -38,15 +35,10 @@ const gqlSearch = ...
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="FrontendHost" href="#FrontendHost">var FrontendHost</a>
 
 ```
 searchKey: main.FrontendHost
-tags: [exported]
 ```
 
 ```Go
@@ -57,7 +49,6 @@ var FrontendHost = ...
 
 ```
 searchKey: main.FrontendPort
-tags: [exported]
 ```
 
 ```Go
@@ -68,7 +59,6 @@ var FrontendPort = ...
 
 ```
 searchKey: main.SearchQueriesEnv
-tags: [exported]
 ```
 
 ```Go
@@ -79,7 +69,6 @@ var SearchQueriesEnv = env.Get("loadTestSearches", "[]", "Search queries to use 
 
 ```
 searchKey: main.QueryPeriodMSEnv
-tags: [exported]
 ```
 
 ```Go
@@ -88,15 +77,10 @@ var QueryPeriodMSEnv = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="GQLSearchVars" href="#GQLSearchVars">type GQLSearchVars struct</a>
 
 ```
 searchKey: main.GQLSearchVars
-tags: [exported]
 ```
 
 ```Go
@@ -109,7 +93,6 @@ type GQLSearchVars struct {
 
 ```
 searchKey: main.GraphQLResponseSearch
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +111,6 @@ type GraphQLResponseSearch struct {
 
 ```
 searchKey: main.GraphQLQuery
-tags: [exported]
 ```
 
 ```Go
@@ -140,14 +122,11 @@ type GraphQLQuery struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -158,6 +137,7 @@ func main()
 
 ```
 searchKey: main.frontendURL
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +148,7 @@ func frontendURL(thePath string) string
 
 ```
 searchKey: main.run
+tags: [private]
 ```
 
 ```Go
@@ -178,6 +159,7 @@ func run() error
 
 ```
 searchKey: main.search
+tags: [private]
 ```
 
 ```Go

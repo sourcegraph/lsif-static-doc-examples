@@ -10,10 +10,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Test" href="#Test">func Test(*testing.T)</a>
 
 ```
 searchKey: printer_test.Test
+tags: [private]
 ```
 
 ```Go
@@ -26,6 +31,7 @@ Dummy test function so that godoc does not use the entire file as example.
 
 ```
 searchKey: printer_test.parseFunc
+tags: [private]
 ```
 
 ```Go
@@ -36,6 +42,7 @@ func parseFunc(filename, functionname string) (fun *ast.FuncDecl, fset *token.Fi
 
 ```
 searchKey: printer_test.ExampleFprint
+tags: [private]
 ```
 
 ```Go

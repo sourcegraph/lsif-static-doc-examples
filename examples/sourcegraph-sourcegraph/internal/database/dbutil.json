@@ -4,7 +4,9 @@
     "identifier": "dbutil",
     "newPage": true,
     "searchKey": "internal/database/dbutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "DB",
                 "newPage": false,
                 "searchKey": "dbutil.DB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "Tx",
                 "newPage": false,
                 "searchKey": "dbutil.Tx",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "TxBeginner",
                 "newPage": false,
                 "searchKey": "dbutil.TxBeginner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "NullTime",
                 "newPage": false,
                 "searchKey": "dbutil.NullTime",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -126,9 +122,7 @@
                       "identifier": "NullTime.Scan",
                       "newPage": false,
                       "searchKey": "dbutil.NullTime.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -148,9 +142,7 @@
                       "identifier": "NullTime.Value",
                       "newPage": false,
                       "searchKey": "dbutil.NullTime.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -173,9 +165,7 @@
                 "identifier": "NullString",
                 "newPage": false,
                 "searchKey": "dbutil.NullString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -193,9 +183,7 @@
                       "identifier": "NewNullString",
                       "newPage": false,
                       "searchKey": "dbutil.NewNullString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -215,9 +203,7 @@
                       "identifier": "NullString.Scan",
                       "newPage": false,
                       "searchKey": "dbutil.NullString.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -237,9 +223,7 @@
                       "identifier": "NullString.Value",
                       "newPage": false,
                       "searchKey": "dbutil.NullString.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -262,9 +246,7 @@
                 "identifier": "NullInt32",
                 "newPage": false,
                 "searchKey": "dbutil.NullInt32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,9 +264,7 @@
                       "identifier": "NullInt32.Scan",
                       "newPage": false,
                       "searchKey": "dbutil.NullInt32.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -304,9 +284,7 @@
                       "identifier": "NullInt32.Value",
                       "newPage": false,
                       "searchKey": "dbutil.NullInt32.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -329,9 +307,7 @@
                 "identifier": "NullInt64",
                 "newPage": false,
                 "searchKey": "dbutil.NullInt64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -349,9 +325,7 @@
                       "identifier": "NewNullInt64",
                       "newPage": false,
                       "searchKey": "dbutil.NewNullInt64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -371,9 +345,7 @@
                       "identifier": "NullInt64.Scan",
                       "newPage": false,
                       "searchKey": "dbutil.NullInt64.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -393,9 +365,7 @@
                       "identifier": "NullInt64.Value",
                       "newPage": false,
                       "searchKey": "dbutil.NullInt64.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -418,9 +388,7 @@
                 "identifier": "NullInt",
                 "newPage": false,
                 "searchKey": "dbutil.NullInt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -438,9 +406,7 @@
                       "identifier": "NewNullInt",
                       "newPage": false,
                       "searchKey": "dbutil.NewNullInt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -460,9 +426,7 @@
                       "identifier": "NullInt.Scan",
                       "newPage": false,
                       "searchKey": "dbutil.NullInt.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -482,9 +446,7 @@
                       "identifier": "NullInt.Value",
                       "newPage": false,
                       "searchKey": "dbutil.NullInt.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -507,9 +469,7 @@
                 "identifier": "JSONInt64Set",
                 "newPage": false,
                 "searchKey": "dbutil.JSONInt64Set",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -527,9 +487,7 @@
                       "identifier": "JSONInt64Set.Scan",
                       "newPage": false,
                       "searchKey": "dbutil.JSONInt64Set.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -549,9 +507,7 @@
                       "identifier": "JSONInt64Set.Value",
                       "newPage": false,
                       "searchKey": "dbutil.JSONInt64Set.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -574,9 +530,7 @@
                 "identifier": "NullJSONRawMessage",
                 "newPage": false,
                 "searchKey": "dbutil.NullJSONRawMessage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -594,9 +548,7 @@
                       "identifier": "NullJSONRawMessage.Scan",
                       "newPage": false,
                       "searchKey": "dbutil.NullJSONRawMessage.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -616,9 +568,7 @@
                       "identifier": "NullJSONRawMessage.Value",
                       "newPage": false,
                       "searchKey": "dbutil.NullJSONRawMessage.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -641,9 +591,7 @@
                 "identifier": "CommitBytea",
                 "newPage": false,
                 "searchKey": "dbutil.CommitBytea",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -661,9 +609,7 @@
                       "identifier": "CommitBytea.Scan",
                       "newPage": false,
                       "searchKey": "dbutil.CommitBytea.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -683,9 +629,7 @@
                       "identifier": "CommitBytea.Value",
                       "newPage": false,
                       "searchKey": "dbutil.CommitBytea.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -708,9 +652,7 @@
                 "identifier": "Scanner",
                 "newPage": false,
                 "searchKey": "dbutil.Scanner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -730,9 +672,7 @@
                 "identifier": "ScanFunc",
                 "newPage": false,
                 "searchKey": "dbutil.ScanFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -755,7 +695,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -773,9 +715,7 @@
                 "identifier": "Transaction",
                 "newPage": false,
                 "searchKey": "dbutil.Transaction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -795,9 +735,7 @@
                 "identifier": "IsPostgresError",
                 "newPage": false,
                 "searchKey": "dbutil.IsPostgresError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -817,9 +755,7 @@
                 "identifier": "PostgresDSN",
                 "newPage": false,
                 "searchKey": "dbutil.PostgresDSN",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -839,7 +775,9 @@
                 "identifier": "TestPostgresDSN",
                 "newPage": false,
                 "searchKey": "dbutil.TestPostgresDSN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

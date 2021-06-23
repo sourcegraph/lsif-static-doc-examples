@@ -4,9 +4,7 @@
     "identifier": "bytes",
     "newPage": true,
     "searchKey": "bytes",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "smallBufferSize",
                 "newPage": false,
                 "searchKey": "bytes.smallBufferSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "opRead",
                 "newPage": false,
                 "searchKey": "bytes.opRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "opInvalid",
                 "newPage": false,
                 "searchKey": "bytes.opInvalid",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "opReadRune1",
                 "newPage": false,
                 "searchKey": "bytes.opReadRune1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "opReadRune2",
                 "newPage": false,
                 "searchKey": "bytes.opReadRune2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "opReadRune3",
                 "newPage": false,
                 "searchKey": "bytes.opReadRune3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "opReadRune4",
                 "newPage": false,
                 "searchKey": "bytes.opReadRune4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "maxInt",
                 "newPage": false,
                 "searchKey": "bytes.maxInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,9 +216,7 @@
                 "identifier": "MinRead",
                 "newPage": false,
                 "searchKey": "bytes.MinRead",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -229,9 +239,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -249,9 +257,7 @@
                 "identifier": "ErrTooLarge",
                 "newPage": false,
                 "searchKey": "bytes.ErrTooLarge",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -271,7 +277,9 @@
                 "identifier": "errNegativeRead",
                 "newPage": false,
                 "searchKey": "bytes.errNegativeRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -291,7 +299,9 @@
                 "identifier": "errUnreadByte",
                 "newPage": false,
                 "searchKey": "bytes.errUnreadByte",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -311,7 +321,9 @@
                 "identifier": "asciiSpace",
                 "newPage": false,
                 "searchKey": "bytes.asciiSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -331,7 +343,9 @@
                 "identifier": "IndexBytePortable",
                 "newPage": false,
                 "searchKey": "bytes.IndexBytePortable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -354,9 +368,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -374,9 +386,7 @@
                 "identifier": "Buffer",
                 "newPage": false,
                 "searchKey": "bytes.Buffer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -394,9 +404,7 @@
                       "identifier": "NewBuffer",
                       "newPage": false,
                       "searchKey": "bytes.NewBuffer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -416,9 +424,7 @@
                       "identifier": "NewBufferString",
                       "newPage": false,
                       "searchKey": "bytes.NewBufferString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -438,9 +444,7 @@
                       "identifier": "Buffer.Bytes",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.Bytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -460,9 +464,7 @@
                       "identifier": "Buffer.String",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -482,7 +484,9 @@
                       "identifier": "Buffer.empty",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.empty",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -502,9 +506,7 @@
                       "identifier": "Buffer.Len",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -524,9 +526,7 @@
                       "identifier": "Buffer.Cap",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.Cap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -546,9 +546,7 @@
                       "identifier": "Buffer.Truncate",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.Truncate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -568,9 +566,7 @@
                       "identifier": "Buffer.Reset",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -590,7 +586,9 @@
                       "identifier": "Buffer.tryGrowByReslice",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.tryGrowByReslice",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -610,7 +608,9 @@
                       "identifier": "Buffer.grow",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.grow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -630,9 +630,7 @@
                       "identifier": "Buffer.Grow",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.Grow",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -652,9 +650,7 @@
                       "identifier": "Buffer.Write",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -674,9 +670,7 @@
                       "identifier": "Buffer.WriteString",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.WriteString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -696,9 +690,7 @@
                       "identifier": "Buffer.ReadFrom",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.ReadFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -718,9 +710,7 @@
                       "identifier": "Buffer.WriteTo",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.WriteTo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -740,9 +730,7 @@
                       "identifier": "Buffer.WriteByte",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.WriteByte",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -762,9 +750,7 @@
                       "identifier": "Buffer.WriteRune",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.WriteRune",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -784,9 +770,7 @@
                       "identifier": "Buffer.Read",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -806,9 +790,7 @@
                       "identifier": "Buffer.Next",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.Next",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -828,9 +810,7 @@
                       "identifier": "Buffer.ReadByte",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.ReadByte",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -850,9 +830,7 @@
                       "identifier": "Buffer.ReadRune",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.ReadRune",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -872,9 +850,7 @@
                       "identifier": "Buffer.UnreadRune",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.UnreadRune",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -894,9 +870,7 @@
                       "identifier": "Buffer.UnreadByte",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.UnreadByte",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -916,9 +890,7 @@
                       "identifier": "Buffer.ReadBytes",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.ReadBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -938,7 +910,9 @@
                       "identifier": "Buffer.readSlice",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.readSlice",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -958,9 +932,7 @@
                       "identifier": "Buffer.ReadString",
                       "newPage": false,
                       "searchKey": "bytes.Buffer.ReadString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -983,7 +955,9 @@
                 "identifier": "readOp",
                 "newPage": false,
                 "searchKey": "bytes.readOp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1003,7 +977,9 @@
                 "identifier": "asciiSet",
                 "newPage": false,
                 "searchKey": "bytes.asciiSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1021,7 +997,9 @@
                       "identifier": "makeASCIISet",
                       "newPage": false,
                       "searchKey": "bytes.makeASCIISet",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1041,7 +1019,9 @@
                       "identifier": "asciiSet.contains",
                       "newPage": false,
                       "searchKey": "bytes.asciiSet.contains",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1064,9 +1044,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "bytes.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1084,9 +1062,7 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "bytes.NewReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1106,9 +1082,7 @@
                       "identifier": "Reader.Len",
                       "newPage": false,
                       "searchKey": "bytes.Reader.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1128,9 +1102,7 @@
                       "identifier": "Reader.Size",
                       "newPage": false,
                       "searchKey": "bytes.Reader.Size",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1150,9 +1122,7 @@
                       "identifier": "Reader.Read",
                       "newPage": false,
                       "searchKey": "bytes.Reader.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1172,9 +1142,7 @@
                       "identifier": "Reader.ReadAt",
                       "newPage": false,
                       "searchKey": "bytes.Reader.ReadAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1194,9 +1162,7 @@
                       "identifier": "Reader.ReadByte",
                       "newPage": false,
                       "searchKey": "bytes.Reader.ReadByte",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1216,9 +1182,7 @@
                       "identifier": "Reader.UnreadByte",
                       "newPage": false,
                       "searchKey": "bytes.Reader.UnreadByte",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1238,9 +1202,7 @@
                       "identifier": "Reader.ReadRune",
                       "newPage": false,
                       "searchKey": "bytes.Reader.ReadRune",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1260,9 +1222,7 @@
                       "identifier": "Reader.UnreadRune",
                       "newPage": false,
                       "searchKey": "bytes.Reader.UnreadRune",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1282,9 +1242,7 @@
                       "identifier": "Reader.Seek",
                       "newPage": false,
                       "searchKey": "bytes.Reader.Seek",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1304,9 +1262,7 @@
                       "identifier": "Reader.WriteTo",
                       "newPage": false,
                       "searchKey": "bytes.Reader.WriteTo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1326,9 +1282,7 @@
                       "identifier": "Reader.Reset",
                       "newPage": false,
                       "searchKey": "bytes.Reader.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1354,9 +1308,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1374,7 +1326,9 @@
                 "identifier": "makeSlice",
                 "newPage": false,
                 "searchKey": "bytes.makeSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1394,9 +1348,7 @@
                 "identifier": "Equal",
                 "newPage": false,
                 "searchKey": "bytes.Equal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1416,9 +1368,7 @@
                 "identifier": "Compare",
                 "newPage": false,
                 "searchKey": "bytes.Compare",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1438,7 +1388,9 @@
                 "identifier": "explode",
                 "newPage": false,
                 "searchKey": "bytes.explode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1458,9 +1410,7 @@
                 "identifier": "Count",
                 "newPage": false,
                 "searchKey": "bytes.Count",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1480,9 +1430,7 @@
                 "identifier": "Contains",
                 "newPage": false,
                 "searchKey": "bytes.Contains",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1502,9 +1450,7 @@
                 "identifier": "ContainsAny",
                 "newPage": false,
                 "searchKey": "bytes.ContainsAny",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1524,9 +1470,7 @@
                 "identifier": "ContainsRune",
                 "newPage": false,
                 "searchKey": "bytes.ContainsRune",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1546,9 +1490,7 @@
                 "identifier": "IndexByte",
                 "newPage": false,
                 "searchKey": "bytes.IndexByte",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1568,7 +1510,9 @@
                 "identifier": "indexBytePortable",
                 "newPage": false,
                 "searchKey": "bytes.indexBytePortable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1588,9 +1532,7 @@
                 "identifier": "LastIndex",
                 "newPage": false,
                 "searchKey": "bytes.LastIndex",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1610,9 +1552,7 @@
                 "identifier": "LastIndexByte",
                 "newPage": false,
                 "searchKey": "bytes.LastIndexByte",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1632,9 +1572,7 @@
                 "identifier": "IndexRune",
                 "newPage": false,
                 "searchKey": "bytes.IndexRune",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1654,9 +1592,7 @@
                 "identifier": "IndexAny",
                 "newPage": false,
                 "searchKey": "bytes.IndexAny",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1676,9 +1612,7 @@
                 "identifier": "LastIndexAny",
                 "newPage": false,
                 "searchKey": "bytes.LastIndexAny",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1698,7 +1632,9 @@
                 "identifier": "genSplit",
                 "newPage": false,
                 "searchKey": "bytes.genSplit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1718,9 +1654,7 @@
                 "identifier": "SplitN",
                 "newPage": false,
                 "searchKey": "bytes.SplitN",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1740,9 +1674,7 @@
                 "identifier": "SplitAfterN",
                 "newPage": false,
                 "searchKey": "bytes.SplitAfterN",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1762,9 +1694,7 @@
                 "identifier": "Split",
                 "newPage": false,
                 "searchKey": "bytes.Split",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1784,9 +1714,7 @@
                 "identifier": "SplitAfter",
                 "newPage": false,
                 "searchKey": "bytes.SplitAfter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1806,9 +1734,7 @@
                 "identifier": "Fields",
                 "newPage": false,
                 "searchKey": "bytes.Fields",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1828,9 +1754,7 @@
                 "identifier": "FieldsFunc",
                 "newPage": false,
                 "searchKey": "bytes.FieldsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1850,9 +1774,7 @@
                 "identifier": "Join",
                 "newPage": false,
                 "searchKey": "bytes.Join",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1872,9 +1794,7 @@
                 "identifier": "HasPrefix",
                 "newPage": false,
                 "searchKey": "bytes.HasPrefix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1894,9 +1814,7 @@
                 "identifier": "HasSuffix",
                 "newPage": false,
                 "searchKey": "bytes.HasSuffix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1916,9 +1834,7 @@
                 "identifier": "Map",
                 "newPage": false,
                 "searchKey": "bytes.Map",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1938,9 +1854,7 @@
                 "identifier": "Repeat",
                 "newPage": false,
                 "searchKey": "bytes.Repeat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1960,9 +1874,7 @@
                 "identifier": "ToUpper",
                 "newPage": false,
                 "searchKey": "bytes.ToUpper",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1982,9 +1894,7 @@
                 "identifier": "ToLower",
                 "newPage": false,
                 "searchKey": "bytes.ToLower",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2004,9 +1914,7 @@
                 "identifier": "ToTitle",
                 "newPage": false,
                 "searchKey": "bytes.ToTitle",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2026,9 +1934,7 @@
                 "identifier": "ToUpperSpecial",
                 "newPage": false,
                 "searchKey": "bytes.ToUpperSpecial",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2048,9 +1954,7 @@
                 "identifier": "ToLowerSpecial",
                 "newPage": false,
                 "searchKey": "bytes.ToLowerSpecial",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2070,9 +1974,7 @@
                 "identifier": "ToTitleSpecial",
                 "newPage": false,
                 "searchKey": "bytes.ToTitleSpecial",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2092,9 +1994,7 @@
                 "identifier": "ToValidUTF8",
                 "newPage": false,
                 "searchKey": "bytes.ToValidUTF8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2114,7 +2014,9 @@
                 "identifier": "isSeparator",
                 "newPage": false,
                 "searchKey": "bytes.isSeparator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2134,9 +2036,7 @@
                 "identifier": "Title",
                 "newPage": false,
                 "searchKey": "bytes.Title",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2156,9 +2056,7 @@
                 "identifier": "TrimLeftFunc",
                 "newPage": false,
                 "searchKey": "bytes.TrimLeftFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2178,9 +2076,7 @@
                 "identifier": "TrimRightFunc",
                 "newPage": false,
                 "searchKey": "bytes.TrimRightFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2200,9 +2096,7 @@
                 "identifier": "TrimFunc",
                 "newPage": false,
                 "searchKey": "bytes.TrimFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2222,9 +2116,7 @@
                 "identifier": "TrimPrefix",
                 "newPage": false,
                 "searchKey": "bytes.TrimPrefix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2244,9 +2136,7 @@
                 "identifier": "TrimSuffix",
                 "newPage": false,
                 "searchKey": "bytes.TrimSuffix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2266,9 +2156,7 @@
                 "identifier": "IndexFunc",
                 "newPage": false,
                 "searchKey": "bytes.IndexFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2288,9 +2176,7 @@
                 "identifier": "LastIndexFunc",
                 "newPage": false,
                 "searchKey": "bytes.LastIndexFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2310,7 +2196,9 @@
                 "identifier": "indexFunc",
                 "newPage": false,
                 "searchKey": "bytes.indexFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2330,7 +2218,9 @@
                 "identifier": "lastIndexFunc",
                 "newPage": false,
                 "searchKey": "bytes.lastIndexFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2350,7 +2240,9 @@
                 "identifier": "makeCutsetFunc",
                 "newPage": false,
                 "searchKey": "bytes.makeCutsetFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2370,9 +2262,7 @@
                 "identifier": "Trim",
                 "newPage": false,
                 "searchKey": "bytes.Trim",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2392,9 +2282,7 @@
                 "identifier": "TrimLeft",
                 "newPage": false,
                 "searchKey": "bytes.TrimLeft",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2414,9 +2302,7 @@
                 "identifier": "TrimRight",
                 "newPage": false,
                 "searchKey": "bytes.TrimRight",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2436,9 +2322,7 @@
                 "identifier": "TrimSpace",
                 "newPage": false,
                 "searchKey": "bytes.TrimSpace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2458,9 +2342,7 @@
                 "identifier": "Runes",
                 "newPage": false,
                 "searchKey": "bytes.Runes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2480,9 +2362,7 @@
                 "identifier": "Replace",
                 "newPage": false,
                 "searchKey": "bytes.Replace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2502,9 +2382,7 @@
                 "identifier": "ReplaceAll",
                 "newPage": false,
                 "searchKey": "bytes.ReplaceAll",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2524,9 +2402,7 @@
                 "identifier": "EqualFold",
                 "newPage": false,
                 "searchKey": "bytes.EqualFold",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2546,9 +2422,7 @@
                 "identifier": "Index",
                 "newPage": false,
                 "searchKey": "bytes.Index",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

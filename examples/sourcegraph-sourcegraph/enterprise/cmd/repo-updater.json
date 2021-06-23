@@ -4,9 +4,7 @@
     "identifier": "repo-updater",
     "newPage": true,
     "searchKey": "enterprise/cmd/repo-updater",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -27,9 +25,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -47,7 +43,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,7 +65,9 @@
                 "identifier": "enterpriseInit",
                 "newPage": false,
                 "searchKey": "main.enterpriseInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
                 "identifier": "startBackgroundPermsSync",
                 "newPage": false,
                 "searchKey": "main.startBackgroundPermsSync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

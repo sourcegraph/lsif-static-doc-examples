@@ -41,11 +41,14 @@ pipeline.AddStep("check_mark", buildkite.Cmd("./dev/check/all.sh"))
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Plugins" href="#Plugins">var Plugins</a>
 
 ```
 searchKey: buildkite.Plugins
-tags: [exported]
 ```
 
 ```Go
@@ -56,7 +59,6 @@ var Plugins = make(map[string]interface{})
 
 ```
 searchKey: buildkite.BeforeEveryStepOpts
-tags: [exported]
 ```
 
 ```Go
@@ -69,7 +71,6 @@ BeforeEveryStepOpts are e.g. commands that are run before every AddStep, similar
 
 ```
 searchKey: buildkite.AfterEveryStepOpts
-tags: [exported]
 ```
 
 ```Go
@@ -80,11 +81,14 @@ AfterEveryStepOpts are e.g. that are run at the end of every AddStep, helpful fo
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Pipeline" href="#Pipeline">type Pipeline struct</a>
 
 ```
 searchKey: buildkite.Pipeline
-tags: [exported]
 ```
 
 ```Go
@@ -98,7 +102,6 @@ type Pipeline struct {
 
 ```
 searchKey: buildkite.Pipeline.AddStep
-tags: [exported]
 ```
 
 ```Go
@@ -109,7 +112,6 @@ func (p *Pipeline) AddStep(label string, opts ...StepOpt)
 
 ```
 searchKey: buildkite.Pipeline.AddTrigger
-tags: [exported]
 ```
 
 ```Go
@@ -120,7 +122,6 @@ func (p *Pipeline) AddTrigger(label string, opts ...StepOpt)
 
 ```
 searchKey: buildkite.Pipeline.WriteTo
-tags: [exported]
 ```
 
 ```Go
@@ -131,7 +132,6 @@ func (p *Pipeline) WriteTo(w io.Writer) (int64, error)
 
 ```
 searchKey: buildkite.Pipeline.AddWait
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +142,6 @@ func (p *Pipeline) AddWait()
 
 ```
 searchKey: buildkite.BuildOptions
-tags: [exported]
 ```
 
 ```Go
@@ -159,7 +158,6 @@ type BuildOptions struct {
 
 ```
 searchKey: buildkite.Step
-tags: [exported]
 ```
 
 ```Go
@@ -185,7 +183,6 @@ type Step struct {
 
 ```
 searchKey: buildkite.RetryOptions
-tags: [exported]
 ```
 
 ```Go
@@ -198,7 +195,6 @@ type RetryOptions struct {
 
 ```
 searchKey: buildkite.AutomaticRetryOptions
-tags: [exported]
 ```
 
 ```Go
@@ -211,7 +207,6 @@ type AutomaticRetryOptions struct {
 
 ```
 searchKey: buildkite.StepOpt
-tags: [exported]
 ```
 
 ```Go
@@ -222,7 +217,6 @@ type StepOpt func(step *Step)
 
 ```
 searchKey: buildkite.Cmd
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +227,6 @@ func Cmd(command string) StepOpt
 
 ```
 searchKey: buildkite.Trigger
-tags: [exported]
 ```
 
 ```Go
@@ -244,7 +237,6 @@ func Trigger(pipeline string) StepOpt
 
 ```
 searchKey: buildkite.Async
-tags: [exported]
 ```
 
 ```Go
@@ -255,7 +247,6 @@ func Async(async bool) StepOpt
 
 ```
 searchKey: buildkite.Build
-tags: [exported]
 ```
 
 ```Go
@@ -266,7 +257,6 @@ func Build(buildOptions BuildOptions) StepOpt
 
 ```
 searchKey: buildkite.ConcurrencyGroup
-tags: [exported]
 ```
 
 ```Go
@@ -277,7 +267,6 @@ func ConcurrencyGroup(group string) StepOpt
 
 ```
 searchKey: buildkite.Concurrency
-tags: [exported]
 ```
 
 ```Go
@@ -288,7 +277,6 @@ func Concurrency(limit int) StepOpt
 
 ```
 searchKey: buildkite.Env
-tags: [exported]
 ```
 
 ```Go
@@ -299,7 +287,6 @@ func Env(name, value string) StepOpt
 
 ```
 searchKey: buildkite.SoftFail
-tags: [exported]
 ```
 
 ```Go
@@ -310,7 +297,6 @@ func SoftFail(softFail bool) StepOpt
 
 ```
 searchKey: buildkite.AutomaticRetry
-tags: [exported]
 ```
 
 ```Go
@@ -321,7 +307,6 @@ func AutomaticRetry(limit int) StepOpt
 
 ```
 searchKey: buildkite.ArtifactPaths
-tags: [exported]
 ```
 
 ```Go
@@ -332,7 +317,6 @@ func ArtifactPaths(paths string) StepOpt
 
 ```
 searchKey: buildkite.Agent
-tags: [exported]
 ```
 
 ```Go

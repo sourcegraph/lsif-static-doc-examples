@@ -4,9 +4,7 @@
     "identifier": "io",
     "newPage": true,
     "searchKey": "io",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "SeekStart",
                 "newPage": false,
                 "searchKey": "io.SeekStart",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "SeekCurrent",
                 "newPage": false,
                 "searchKey": "io.SeekCurrent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "SeekEnd",
                 "newPage": false,
                 "searchKey": "io.SeekEnd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -113,9 +103,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -133,9 +121,7 @@
                 "identifier": "ErrShortWrite",
                 "newPage": false,
                 "searchKey": "io.ErrShortWrite",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -155,7 +141,9 @@
                 "identifier": "errInvalidWrite",
                 "newPage": false,
                 "searchKey": "io.errInvalidWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -175,9 +163,7 @@
                 "identifier": "ErrShortBuffer",
                 "newPage": false,
                 "searchKey": "io.ErrShortBuffer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -197,9 +183,7 @@
                 "identifier": "EOF",
                 "newPage": false,
                 "searchKey": "io.EOF",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -219,9 +203,7 @@
                 "identifier": "ErrUnexpectedEOF",
                 "newPage": false,
                 "searchKey": "io.ErrUnexpectedEOF",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -241,9 +223,7 @@
                 "identifier": "ErrNoProgress",
                 "newPage": false,
                 "searchKey": "io.ErrNoProgress",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -263,7 +243,9 @@
                 "identifier": "errWhence",
                 "newPage": false,
                 "searchKey": "io.errWhence",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -283,7 +265,9 @@
                 "identifier": "errOffset",
                 "newPage": false,
                 "searchKey": "io.errOffset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -303,9 +287,7 @@
                 "identifier": "Discard",
                 "newPage": false,
                 "searchKey": "io.Discard",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -325,7 +307,9 @@
                 "identifier": "blackHolePool",
                 "newPage": false,
                 "searchKey": "io.blackHolePool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -345,9 +329,7 @@
                 "identifier": "ErrClosedPipe",
                 "newPage": false,
                 "searchKey": "io.ErrClosedPipe",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +349,9 @@
                 "identifier": "ErrInvalidWrite",
                 "newPage": false,
                 "searchKey": "io.ErrInvalidWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -390,9 +374,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -410,9 +392,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "io.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -430,9 +410,7 @@
                       "identifier": "LimitReader",
                       "newPage": false,
                       "searchKey": "io.LimitReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -452,9 +430,7 @@
                       "identifier": "TeeReader",
                       "newPage": false,
                       "searchKey": "io.TeeReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -474,9 +450,7 @@
                       "identifier": "MultiReader",
                       "newPage": false,
                       "searchKey": "io.MultiReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -499,9 +473,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "io.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -519,9 +491,7 @@
                       "identifier": "MultiWriter",
                       "newPage": false,
                       "searchKey": "io.MultiWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -544,9 +514,7 @@
                 "identifier": "Closer",
                 "newPage": false,
                 "searchKey": "io.Closer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -566,9 +534,7 @@
                 "identifier": "Seeker",
                 "newPage": false,
                 "searchKey": "io.Seeker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -588,9 +554,7 @@
                 "identifier": "ReadWriter",
                 "newPage": false,
                 "searchKey": "io.ReadWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -610,9 +574,7 @@
                 "identifier": "ReadCloser",
                 "newPage": false,
                 "searchKey": "io.ReadCloser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -630,9 +592,7 @@
                       "identifier": "NopCloser",
                       "newPage": false,
                       "searchKey": "io.NopCloser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -655,9 +615,7 @@
                 "identifier": "WriteCloser",
                 "newPage": false,
                 "searchKey": "io.WriteCloser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -677,9 +635,7 @@
                 "identifier": "ReadWriteCloser",
                 "newPage": false,
                 "searchKey": "io.ReadWriteCloser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -699,9 +655,7 @@
                 "identifier": "ReadSeeker",
                 "newPage": false,
                 "searchKey": "io.ReadSeeker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -721,9 +675,7 @@
                 "identifier": "ReadSeekCloser",
                 "newPage": false,
                 "searchKey": "io.ReadSeekCloser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -743,9 +695,7 @@
                 "identifier": "WriteSeeker",
                 "newPage": false,
                 "searchKey": "io.WriteSeeker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -765,9 +715,7 @@
                 "identifier": "ReadWriteSeeker",
                 "newPage": false,
                 "searchKey": "io.ReadWriteSeeker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -787,9 +735,7 @@
                 "identifier": "ReaderFrom",
                 "newPage": false,
                 "searchKey": "io.ReaderFrom",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -809,9 +755,7 @@
                 "identifier": "WriterTo",
                 "newPage": false,
                 "searchKey": "io.WriterTo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -831,9 +775,7 @@
                 "identifier": "ReaderAt",
                 "newPage": false,
                 "searchKey": "io.ReaderAt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -853,9 +795,7 @@
                 "identifier": "WriterAt",
                 "newPage": false,
                 "searchKey": "io.WriterAt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -875,9 +815,7 @@
                 "identifier": "ByteReader",
                 "newPage": false,
                 "searchKey": "io.ByteReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -897,9 +835,7 @@
                 "identifier": "ByteScanner",
                 "newPage": false,
                 "searchKey": "io.ByteScanner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -919,9 +855,7 @@
                 "identifier": "ByteWriter",
                 "newPage": false,
                 "searchKey": "io.ByteWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -941,9 +875,7 @@
                 "identifier": "RuneReader",
                 "newPage": false,
                 "searchKey": "io.RuneReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -963,9 +895,7 @@
                 "identifier": "RuneScanner",
                 "newPage": false,
                 "searchKey": "io.RuneScanner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -985,9 +915,7 @@
                 "identifier": "StringWriter",
                 "newPage": false,
                 "searchKey": "io.StringWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1007,9 +935,7 @@
                 "identifier": "LimitedReader",
                 "newPage": false,
                 "searchKey": "io.LimitedReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1027,9 +953,7 @@
                       "identifier": "LimitedReader.Read",
                       "newPage": false,
                       "searchKey": "io.LimitedReader.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1052,9 +976,7 @@
                 "identifier": "SectionReader",
                 "newPage": false,
                 "searchKey": "io.SectionReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1072,9 +994,7 @@
                       "identifier": "NewSectionReader",
                       "newPage": false,
                       "searchKey": "io.NewSectionReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1094,9 +1014,7 @@
                       "identifier": "SectionReader.Read",
                       "newPage": false,
                       "searchKey": "io.SectionReader.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1116,9 +1034,7 @@
                       "identifier": "SectionReader.Seek",
                       "newPage": false,
                       "searchKey": "io.SectionReader.Seek",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1138,9 +1054,7 @@
                       "identifier": "SectionReader.ReadAt",
                       "newPage": false,
                       "searchKey": "io.SectionReader.ReadAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1160,9 +1074,7 @@
                       "identifier": "SectionReader.Size",
                       "newPage": false,
                       "searchKey": "io.SectionReader.Size",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1185,7 +1097,9 @@
                 "identifier": "teeReader",
                 "newPage": false,
                 "searchKey": "io.teeReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1203,7 +1117,9 @@
                       "identifier": "teeReader.Read",
                       "newPage": false,
                       "searchKey": "io.teeReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1226,7 +1142,9 @@
                 "identifier": "discard",
                 "newPage": false,
                 "searchKey": "io.discard",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1244,7 +1162,9 @@
                       "identifier": "discard.Write",
                       "newPage": false,
                       "searchKey": "io.discard.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1264,7 +1184,9 @@
                       "identifier": "discard.WriteString",
                       "newPage": false,
                       "searchKey": "io.discard.WriteString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1284,7 +1206,9 @@
                       "identifier": "discard.ReadFrom",
                       "newPage": false,
                       "searchKey": "io.discard.ReadFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1307,7 +1231,9 @@
                 "identifier": "nopCloser",
                 "newPage": false,
                 "searchKey": "io.nopCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1325,7 +1251,9 @@
                       "identifier": "nopCloser.Close",
                       "newPage": false,
                       "searchKey": "io.nopCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1348,7 +1276,9 @@
                 "identifier": "eofReader",
                 "newPage": false,
                 "searchKey": "io.eofReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1366,7 +1296,9 @@
                       "identifier": "eofReader.Read",
                       "newPage": false,
                       "searchKey": "io.eofReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1389,7 +1321,9 @@
                 "identifier": "multiReader",
                 "newPage": false,
                 "searchKey": "io.multiReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1407,7 +1341,9 @@
                       "identifier": "multiReader.Read",
                       "newPage": false,
                       "searchKey": "io.multiReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1430,7 +1366,9 @@
                 "identifier": "multiWriter",
                 "newPage": false,
                 "searchKey": "io.multiWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1448,7 +1386,9 @@
                       "identifier": "multiWriter.Write",
                       "newPage": false,
                       "searchKey": "io.multiWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1468,7 +1408,9 @@
                       "identifier": "multiWriter.WriteString",
                       "newPage": false,
                       "searchKey": "io.multiWriter.WriteString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1491,7 +1433,9 @@
                 "identifier": "onceError",
                 "newPage": false,
                 "searchKey": "io.onceError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1509,7 +1453,9 @@
                       "identifier": "onceError.Store",
                       "newPage": false,
                       "searchKey": "io.onceError.Store",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1529,7 +1475,9 @@
                       "identifier": "onceError.Load",
                       "newPage": false,
                       "searchKey": "io.onceError.Load",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1552,7 +1500,9 @@
                 "identifier": "pipe",
                 "newPage": false,
                 "searchKey": "io.pipe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1570,7 +1520,9 @@
                       "identifier": "pipe.Read",
                       "newPage": false,
                       "searchKey": "io.pipe.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1590,7 +1542,9 @@
                       "identifier": "pipe.readCloseError",
                       "newPage": false,
                       "searchKey": "io.pipe.readCloseError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1610,7 +1564,9 @@
                       "identifier": "pipe.CloseRead",
                       "newPage": false,
                       "searchKey": "io.pipe.CloseRead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1630,7 +1586,9 @@
                       "identifier": "pipe.Write",
                       "newPage": false,
                       "searchKey": "io.pipe.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1650,7 +1608,9 @@
                       "identifier": "pipe.writeCloseError",
                       "newPage": false,
                       "searchKey": "io.pipe.writeCloseError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1670,7 +1630,9 @@
                       "identifier": "pipe.CloseWrite",
                       "newPage": false,
                       "searchKey": "io.pipe.CloseWrite",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1693,9 +1655,7 @@
                 "identifier": "PipeReader",
                 "newPage": false,
                 "searchKey": "io.PipeReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1713,9 +1673,7 @@
                       "identifier": "Pipe",
                       "newPage": false,
                       "searchKey": "io.Pipe",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1735,9 +1693,7 @@
                       "identifier": "PipeReader.Read",
                       "newPage": false,
                       "searchKey": "io.PipeReader.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1757,9 +1713,7 @@
                       "identifier": "PipeReader.Close",
                       "newPage": false,
                       "searchKey": "io.PipeReader.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1779,9 +1733,7 @@
                       "identifier": "PipeReader.CloseWithError",
                       "newPage": false,
                       "searchKey": "io.PipeReader.CloseWithError",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1804,9 +1756,7 @@
                 "identifier": "PipeWriter",
                 "newPage": false,
                 "searchKey": "io.PipeWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1819,36 +1769,12 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/io#Pipe",
-                    "documentation": {
-                      "identifier": "Pipe",
-                      "newPage": false,
-                      "searchKey": "io.Pipe",
-                      "tags": [
-                        "exported"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Pipe() (*PipeReader, *PipeWriter)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Pipe() (*PipeReader, *PipeWriter)\n```\n\nPipe creates a synchronous in-memory pipe. It can be used to connect code expecting an io.Reader with code expecting an io.Writer. \n\nReads and Writes on the pipe are matched one to one except when multiple Reads are needed to consume a single Write. That is, each Write to the PipeWriter blocks until it has satisfied one or more Reads from the PipeReader that fully consume the written data. The data is copied directly from the Write to the corresponding Read (or Reads); there is no internal buffering. \n\nIt is safe to call Read and Write in parallel with each other or with Close. Parallel calls to Read and parallel calls to Write are also safe: the individual calls will be gated sequentially. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/io#PipeWriter.Write",
                     "documentation": {
                       "identifier": "PipeWriter.Write",
                       "newPage": false,
                       "searchKey": "io.PipeWriter.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1868,9 +1794,7 @@
                       "identifier": "PipeWriter.Close",
                       "newPage": false,
                       "searchKey": "io.PipeWriter.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1890,9 +1814,7 @@
                       "identifier": "PipeWriter.CloseWithError",
                       "newPage": false,
                       "searchKey": "io.PipeWriter.CloseWithError",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1918,9 +1840,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1938,9 +1858,7 @@
                 "identifier": "WriteString",
                 "newPage": false,
                 "searchKey": "io.WriteString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1960,9 +1878,7 @@
                 "identifier": "ReadAtLeast",
                 "newPage": false,
                 "searchKey": "io.ReadAtLeast",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1982,9 +1898,7 @@
                 "identifier": "ReadFull",
                 "newPage": false,
                 "searchKey": "io.ReadFull",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2004,9 +1918,7 @@
                 "identifier": "CopyN",
                 "newPage": false,
                 "searchKey": "io.CopyN",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2026,9 +1938,7 @@
                 "identifier": "Copy",
                 "newPage": false,
                 "searchKey": "io.Copy",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2048,9 +1958,7 @@
                 "identifier": "CopyBuffer",
                 "newPage": false,
                 "searchKey": "io.CopyBuffer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2070,7 +1978,9 @@
                 "identifier": "copyBuffer",
                 "newPage": false,
                 "searchKey": "io.copyBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2090,9 +2000,7 @@
                 "identifier": "ReadAll",
                 "newPage": false,
                 "searchKey": "io.ReadAll",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

@@ -8,10 +8,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestEqual" href="#TestEqual">func TestEqual(t *testing.T)</a>
 
 ```
 searchKey: rsa_test.TestEqual
+tags: [private]
 ```
 
 ```Go

@@ -14,10 +14,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleRing_Len" href="#ExampleRing_Len">func ExampleRing_Len()</a>
 
 ```
 searchKey: ring_test.ExampleRing_Len
+tags: [private]
 ```
 
 ```Go
@@ -28,6 +33,7 @@ func ExampleRing_Len()
 
 ```
 searchKey: ring_test.ExampleRing_Next
+tags: [private]
 ```
 
 ```Go
@@ -38,6 +44,7 @@ func ExampleRing_Next()
 
 ```
 searchKey: ring_test.ExampleRing_Prev
+tags: [private]
 ```
 
 ```Go
@@ -48,6 +55,7 @@ func ExampleRing_Prev()
 
 ```
 searchKey: ring_test.ExampleRing_Do
+tags: [private]
 ```
 
 ```Go
@@ -58,6 +66,7 @@ func ExampleRing_Do()
 
 ```
 searchKey: ring_test.ExampleRing_Move
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +77,7 @@ func ExampleRing_Move()
 
 ```
 searchKey: ring_test.ExampleRing_Link
+tags: [private]
 ```
 
 ```Go
@@ -78,6 +88,7 @@ func ExampleRing_Link()
 
 ```
 searchKey: ring_test.ExampleRing_Unlink
+tags: [private]
 ```
 
 ```Go

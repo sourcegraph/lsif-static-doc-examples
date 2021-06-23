@@ -4,7 +4,9 @@
     "identifier": "encryption",
     "newPage": true,
     "searchKey": "internal/encryption",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "MockGenerateRSAKey",
                 "newPage": false,
                 "searchKey": "encryption.MockGenerateRSAKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +67,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,9 +87,7 @@
                 "identifier": "Key",
                 "newPage": false,
                 "searchKey": "encryption.Key",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -105,9 +107,7 @@
                 "identifier": "KeyVersion",
                 "newPage": false,
                 "searchKey": "encryption.KeyVersion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -125,9 +125,7 @@
                       "identifier": "KeyVersion.JSON",
                       "newPage": false,
                       "searchKey": "encryption.KeyVersion.JSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -150,9 +148,7 @@
                 "identifier": "Encrypter",
                 "newPage": false,
                 "searchKey": "encryption.Encrypter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +168,7 @@
                 "identifier": "Decrypter",
                 "newPage": false,
                 "searchKey": "encryption.Decrypter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,9 +188,7 @@
                 "identifier": "Secret",
                 "newPage": false,
                 "searchKey": "encryption.Secret",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -214,9 +206,7 @@
                       "identifier": "NewSecret",
                       "newPage": false,
                       "searchKey": "encryption.NewSecret",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -236,9 +226,7 @@
                       "identifier": "Secret.String",
                       "newPage": false,
                       "searchKey": "encryption.Secret.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -258,9 +246,7 @@
                       "identifier": "Secret.Secret",
                       "newPage": false,
                       "searchKey": "encryption.Secret.Secret",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -280,9 +266,7 @@
                       "identifier": "Secret.MarshalJSON",
                       "newPage": false,
                       "searchKey": "encryption.Secret.MarshalJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -305,9 +289,7 @@
                 "identifier": "NoopKey",
                 "newPage": false,
                 "searchKey": "encryption.NoopKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -325,9 +307,7 @@
                       "identifier": "NoopKey.Version",
                       "newPage": false,
                       "searchKey": "encryption.NoopKey.Version",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -347,9 +327,7 @@
                       "identifier": "NoopKey.Encrypt",
                       "newPage": false,
                       "searchKey": "encryption.NoopKey.Encrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -369,9 +347,7 @@
                       "identifier": "NoopKey.Decrypt",
                       "newPage": false,
                       "searchKey": "encryption.NoopKey.Decrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -394,9 +370,7 @@
                 "identifier": "RSAKey",
                 "newPage": false,
                 "searchKey": "encryption.RSAKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -414,9 +388,7 @@
                       "identifier": "GenerateRSAKey",
                       "newPage": false,
                       "searchKey": "encryption.GenerateRSAKey",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -442,7 +414,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -460,7 +434,9 @@
                 "identifier": "TestGenerateKey",
                 "newPage": false,
                 "searchKey": "encryption.TestGenerateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

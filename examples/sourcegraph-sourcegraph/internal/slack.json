@@ -4,7 +4,9 @@
     "identifier": "slack",
     "newPage": true,
     "searchKey": "internal/slack",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "slack.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "slack.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "Client.Post",
                       "newPage": false,
                       "searchKey": "slack.Client.Post",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -107,9 +105,7 @@
                 "identifier": "Payload",
                 "newPage": false,
                 "searchKey": "slack.Payload",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -129,9 +125,7 @@
                 "identifier": "Attachment",
                 "newPage": false,
                 "searchKey": "slack.Attachment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -151,9 +145,7 @@
                 "identifier": "Field",
                 "newPage": false,
                 "searchKey": "slack.Field",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

@@ -11,10 +11,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestCtz64" href="#TestCtz64">func TestCtz64(t *testing.T)</a>
 
 ```
 searchKey: sys_test.TestCtz64
+tags: [private]
 ```
 
 ```Go
@@ -25,6 +30,7 @@ func TestCtz64(t *testing.T)
 
 ```
 searchKey: sys_test.TestCtz32
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +41,7 @@ func TestCtz32(t *testing.T)
 
 ```
 searchKey: sys_test.TestBswap64
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +52,7 @@ func TestBswap64(t *testing.T)
 
 ```
 searchKey: sys_test.TestBswap32
+tags: [private]
 ```
 
 ```Go

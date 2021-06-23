@@ -34,7 +34,7 @@
     * [func ExampleValid()](#ExampleValid)
     * [func ExampleValidRune()](#ExampleValidRune)
     * [func ExampleValidString()](#ExampleValidString)
-    * [func init()](#init)
+    * [func init()](#init.utf8_test.go)
     * [func TestConstants(t *testing.T)](#TestConstants)
     * [func TestFullRune(t *testing.T)](#TestFullRune)
     * [func TestEncodeRune(t *testing.T)](#TestEncodeRune)
@@ -68,10 +68,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="utf8map" href="#utf8map">var utf8map</a>
 
 ```
 searchKey: utf8_test.utf8map
+tags: [private]
 ```
 
 ```Go
@@ -82,6 +87,7 @@ var utf8map = ...
 
 ```
 searchKey: utf8_test.surrogateMap
+tags: [private]
 ```
 
 ```Go
@@ -95,6 +101,7 @@ var surrogateMap = []Utf8Map{
 
 ```
 searchKey: utf8_test.testStrings
+tags: [private]
 ```
 
 ```Go
@@ -105,6 +112,7 @@ var testStrings = ...
 
 ```
 searchKey: utf8_test.invalidSequenceTests
+tags: [private]
 ```
 
 ```Go
@@ -115,6 +123,7 @@ var invalidSequenceTests = ...
 
 ```
 searchKey: utf8_test.runecounttests
+tags: [private]
 ```
 
 ```Go
@@ -125,6 +134,7 @@ var runecounttests = ...
 
 ```
 searchKey: utf8_test.runelentests
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +145,7 @@ var runelentests = ...
 
 ```
 searchKey: utf8_test.validTests
+tags: [private]
 ```
 
 ```Go
@@ -145,6 +156,7 @@ var validTests = ...
 
 ```
 searchKey: utf8_test.validrunetests
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +167,7 @@ var validrunetests = ...
 
 ```
 searchKey: utf8_test.boolSink
+tags: [private]
 ```
 
 ```Go
@@ -165,10 +178,15 @@ boolSink is used to reference the return value of benchmarked functions to avoid
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Utf8Map" href="#Utf8Map">type Utf8Map struct</a>
 
 ```
 searchKey: utf8_test.Utf8Map
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +200,7 @@ type Utf8Map struct {
 
 ```
 searchKey: utf8_test.RuneCountTest
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +214,7 @@ type RuneCountTest struct {
 
 ```
 searchKey: utf8_test.RuneLenTest
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +228,7 @@ type RuneLenTest struct {
 
 ```
 searchKey: utf8_test.ValidTest
+tags: [private]
 ```
 
 ```Go
@@ -221,6 +242,7 @@ type ValidTest struct {
 
 ```
 searchKey: utf8_test.ValidRuneTest
+tags: [private]
 ```
 
 ```Go
@@ -232,10 +254,15 @@ type ValidRuneTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleDecodeLastRune" href="#ExampleDecodeLastRune">func ExampleDecodeLastRune()</a>
 
 ```
 searchKey: utf8_test.ExampleDecodeLastRune
+tags: [private]
 ```
 
 ```Go
@@ -246,6 +273,7 @@ func ExampleDecodeLastRune()
 
 ```
 searchKey: utf8_test.ExampleDecodeLastRuneInString
+tags: [private]
 ```
 
 ```Go
@@ -256,6 +284,7 @@ func ExampleDecodeLastRuneInString()
 
 ```
 searchKey: utf8_test.ExampleDecodeRune
+tags: [private]
 ```
 
 ```Go
@@ -266,6 +295,7 @@ func ExampleDecodeRune()
 
 ```
 searchKey: utf8_test.ExampleDecodeRuneInString
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +306,7 @@ func ExampleDecodeRuneInString()
 
 ```
 searchKey: utf8_test.ExampleEncodeRune
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +317,7 @@ func ExampleEncodeRune()
 
 ```
 searchKey: utf8_test.ExampleEncodeRune_outOfRange
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +328,7 @@ func ExampleEncodeRune_outOfRange()
 
 ```
 searchKey: utf8_test.ExampleFullRune
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +339,7 @@ func ExampleFullRune()
 
 ```
 searchKey: utf8_test.ExampleFullRuneInString
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +350,7 @@ func ExampleFullRuneInString()
 
 ```
 searchKey: utf8_test.ExampleRuneCount
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +361,7 @@ func ExampleRuneCount()
 
 ```
 searchKey: utf8_test.ExampleRuneCountInString
+tags: [private]
 ```
 
 ```Go
@@ -336,6 +372,7 @@ func ExampleRuneCountInString()
 
 ```
 searchKey: utf8_test.ExampleRuneLen
+tags: [private]
 ```
 
 ```Go
@@ -346,6 +383,7 @@ func ExampleRuneLen()
 
 ```
 searchKey: utf8_test.ExampleRuneStart
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +394,7 @@ func ExampleRuneStart()
 
 ```
 searchKey: utf8_test.ExampleValid
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +405,7 @@ func ExampleValid()
 
 ```
 searchKey: utf8_test.ExampleValidRune
+tags: [private]
 ```
 
 ```Go
@@ -376,16 +416,18 @@ func ExampleValidRune()
 
 ```
 searchKey: utf8_test.ExampleValidString
+tags: [private]
 ```
 
 ```Go
 func ExampleValidString()
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.utf8_test.go" href="#init.utf8_test.go">func init()</a>
 
 ```
 searchKey: utf8_test.init
+tags: [private]
 ```
 
 ```Go
@@ -398,6 +440,7 @@ Validate the constants redefined from unicode.
 
 ```
 searchKey: utf8_test.TestConstants
+tags: [private]
 ```
 
 ```Go
@@ -410,6 +453,7 @@ Validate the constants redefined from unicode.
 
 ```
 searchKey: utf8_test.TestFullRune
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +464,7 @@ func TestFullRune(t *testing.T)
 
 ```
 searchKey: utf8_test.TestEncodeRune
+tags: [private]
 ```
 
 ```Go
@@ -430,6 +475,7 @@ func TestEncodeRune(t *testing.T)
 
 ```
 searchKey: utf8_test.TestDecodeRune
+tags: [private]
 ```
 
 ```Go
@@ -440,6 +486,7 @@ func TestDecodeRune(t *testing.T)
 
 ```
 searchKey: utf8_test.TestDecodeSurrogateRune
+tags: [private]
 ```
 
 ```Go
@@ -450,6 +497,7 @@ func TestDecodeSurrogateRune(t *testing.T)
 
 ```
 searchKey: utf8_test.TestSequencing
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +510,7 @@ Check that DecodeRune and DecodeLastRune correspond to the equivalent range loop
 
 ```
 searchKey: utf8_test.runtimeRuneCount
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +521,7 @@ func runtimeRuneCount(s string) int
 
 ```
 searchKey: utf8_test.TestRuntimeConversion
+tags: [private]
 ```
 
 ```Go
@@ -484,6 +534,7 @@ Check that a range loop, len([]rune(string)) optimization and []rune conversions
 
 ```
 searchKey: utf8_test.runtimeDecodeRune
+tags: [private]
 ```
 
 ```Go
@@ -494,6 +545,7 @@ func runtimeDecodeRune(s string) rune
 
 ```
 searchKey: utf8_test.TestDecodeInvalidSequence
+tags: [private]
 ```
 
 ```Go
@@ -504,6 +556,7 @@ func TestDecodeInvalidSequence(t *testing.T)
 
 ```
 searchKey: utf8_test.testSequence
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +567,7 @@ func testSequence(t *testing.T, s string)
 
 ```
 searchKey: utf8_test.TestNegativeRune
+tags: [private]
 ```
 
 ```Go
@@ -526,6 +580,7 @@ Check that negative runes encode as U+FFFD.
 
 ```
 searchKey: utf8_test.TestRuneCount
+tags: [private]
 ```
 
 ```Go
@@ -536,6 +591,7 @@ func TestRuneCount(t *testing.T)
 
 ```
 searchKey: utf8_test.TestRuneLen
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +602,7 @@ func TestRuneLen(t *testing.T)
 
 ```
 searchKey: utf8_test.TestValid
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +613,7 @@ func TestValid(t *testing.T)
 
 ```
 searchKey: utf8_test.TestValidRune
+tags: [private]
 ```
 
 ```Go
@@ -566,6 +624,7 @@ func TestValidRune(t *testing.T)
 
 ```
 searchKey: utf8_test.BenchmarkRuneCountTenASCIIChars
+tags: [private]
 ```
 
 ```Go
@@ -576,6 +635,7 @@ func BenchmarkRuneCountTenASCIIChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkRuneCountTenJapaneseChars
+tags: [private]
 ```
 
 ```Go
@@ -586,6 +646,7 @@ func BenchmarkRuneCountTenJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkRuneCountInStringTenASCIIChars
+tags: [private]
 ```
 
 ```Go
@@ -596,6 +657,7 @@ func BenchmarkRuneCountInStringTenASCIIChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkRuneCountInStringTenJapaneseChars
+tags: [private]
 ```
 
 ```Go
@@ -606,6 +668,7 @@ func BenchmarkRuneCountInStringTenJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkValidTenASCIIChars
+tags: [private]
 ```
 
 ```Go
@@ -616,6 +679,7 @@ func BenchmarkValidTenASCIIChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkValidTenJapaneseChars
+tags: [private]
 ```
 
 ```Go
@@ -626,6 +690,7 @@ func BenchmarkValidTenJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkValidStringTenASCIIChars
+tags: [private]
 ```
 
 ```Go
@@ -636,6 +701,7 @@ func BenchmarkValidStringTenASCIIChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkValidStringTenJapaneseChars
+tags: [private]
 ```
 
 ```Go
@@ -646,6 +712,7 @@ func BenchmarkValidStringTenJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkEncodeASCIIRune
+tags: [private]
 ```
 
 ```Go
@@ -656,6 +723,7 @@ func BenchmarkEncodeASCIIRune(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkEncodeJapaneseRune
+tags: [private]
 ```
 
 ```Go
@@ -666,6 +734,7 @@ func BenchmarkEncodeJapaneseRune(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkDecodeASCIIRune
+tags: [private]
 ```
 
 ```Go
@@ -676,6 +745,7 @@ func BenchmarkDecodeASCIIRune(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkDecodeJapaneseRune
+tags: [private]
 ```
 
 ```Go
@@ -686,6 +756,7 @@ func BenchmarkDecodeJapaneseRune(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkFullRune
+tags: [private]
 ```
 
 ```Go

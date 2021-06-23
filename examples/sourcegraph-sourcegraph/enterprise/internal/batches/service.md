@@ -52,11 +52,14 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Mocks" href="#Mocks">var Mocks</a>
 
 ```
 searchKey: service.Mocks
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +70,6 @@ var Mocks = ServiceMocks{}
 
 ```
 searchKey: service.ErrNoNamespace
-tags: [exported]
 ```
 
 ```Go
@@ -80,7 +82,6 @@ ErrNoNamespace is returned by checkNamespaceAccess if no valid namespace ID is g
 
 ```
 searchKey: service.ErrChangesetsForJobNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -93,7 +94,6 @@ ErrChangesetsForJobNotFound can be returned by (*Service).CreateChangesetJobs if
 
 ```
 searchKey: service.ErrApplyClosedBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -106,7 +106,6 @@ ErrApplyClosedBatchChange is returned by ApplyBatchChange when the batch change 
 
 ```
 searchKey: service.ErrMatchingBatchChangeExists
-tags: [exported]
 ```
 
 ```Go
@@ -119,7 +118,6 @@ ErrMatchingBatchChangeExists is returned by ApplyBatchChange if a batch change m
 
 ```
 searchKey: service.ErrEnsureBatchChangeFailed
-tags: [exported]
 ```
 
 ```Go
@@ -130,11 +128,14 @@ ErrEnsureBatchChangeFailed is returned by AppplyBatchChange when a ensureBatchCh
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ServiceMocks" href="#ServiceMocks">type ServiceMocks struct</a>
 
 ```
 searchKey: service.ServiceMocks
-tags: [exported]
 ```
 
 ```Go
@@ -147,7 +148,6 @@ type ServiceMocks struct {
 
 ```
 searchKey: service.ServiceMocks.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -158,7 +158,6 @@ func (sm ServiceMocks) Reset()
 
 ```
 searchKey: service.Service
-tags: [exported]
 ```
 
 ```Go
@@ -175,7 +174,6 @@ type Service struct {
 
 ```
 searchKey: service.New
-tags: [exported]
 ```
 
 ```Go
@@ -188,7 +186,6 @@ New returns a Service.
 
 ```
 searchKey: service.NewWithClock
-tags: [exported]
 ```
 
 ```Go
@@ -201,7 +198,6 @@ NewWithClock returns a Service the given clock used to generate timestamps.
 
 ```
 searchKey: service.Service.WithStore
-tags: [exported]
 ```
 
 ```Go
@@ -214,7 +210,6 @@ WithStore returns a copy of the Service with its store attribute set to the give
 
 ```
 searchKey: service.Service.CreateBatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -227,7 +222,6 @@ CreateBatchSpec creates the BatchSpec.
 
 ```
 searchKey: service.Service.CreateChangesetSpec
-tags: [exported]
 ```
 
 ```Go
@@ -240,7 +234,6 @@ CreateChangesetSpec validates the given raw spec input and creates the Changeset
 
 ```
 searchKey: service.Service.GetBatchChangeMatchingBatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -253,7 +246,6 @@ GetBatchChangeMatchingBatchSpec returns the batch change that the BatchSpec appl
 
 ```
 searchKey: service.Service.GetNewestBatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -266,7 +258,6 @@ GetNewestBatchSpec returns the newest batch spec that matches the given spec's n
 
 ```
 searchKey: service.Service.MoveBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -279,7 +270,6 @@ MoveBatchChange moves the batch change from one namespace to another and/or rena
 
 ```
 searchKey: service.Service.CloseBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -292,7 +282,6 @@ CloseBatchChange closes the BatchChange with the given ID if it has not been clo
 
 ```
 searchKey: service.Service.DeleteBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -305,7 +294,6 @@ DeleteBatchChange deletes the BatchChange with the given ID if it hasn't been de
 
 ```
 searchKey: service.Service.EnqueueChangesetSync
-tags: [exported]
 ```
 
 ```Go
@@ -318,7 +306,6 @@ EnqueueChangesetSync loads the given changeset from the database, checks whether
 
 ```
 searchKey: service.Service.ReenqueueChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -331,7 +318,6 @@ ReenqueueChangeset loads the given changeset from the database, checks whether t
 
 ```
 searchKey: service.Service.FetchUsernameForBitbucketServerToken
-tags: [exported]
 ```
 
 ```Go
@@ -350,7 +336,6 @@ Since Bitbucket sends the username as a header in REST responses, we can take it
 
 ```
 searchKey: service.Service.ValidateAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -363,7 +348,6 @@ ValidateAuthenticator creates a ChangesetSource, configures it with the given au
 
 ```
 searchKey: service.Service.CreateChangesetJobs
-tags: [exported]
 ```
 
 ```Go
@@ -376,7 +360,6 @@ CreateChangesetJobs creates one changeset job for each given Changeset in the gi
 
 ```
 searchKey: service.Service.ApplyBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -389,7 +372,6 @@ ApplyBatchChange creates the BatchChange.
 
 ```
 searchKey: service.Service.ReconcileBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -400,7 +382,6 @@ func (s *Service) ReconcileBatchChange(ctx context.Context, batchSpec *btypes.Ba
 
 ```
 searchKey: service.CreateBatchSpecOpts
-tags: [exported]
 ```
 
 ```Go
@@ -418,6 +399,7 @@ type CreateBatchSpecOpts struct {
 
 ```
 searchKey: service.changesetSpecNotFoundErr
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +414,7 @@ changesetSpecNotFoundErr is returned by CreateBatchSpec if a ChangesetSpec with 
 
 ```
 searchKey: service.changesetSpecNotFoundErr.Error
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +425,7 @@ func (e *changesetSpecNotFoundErr) Error() string
 
 ```
 searchKey: service.changesetSpecNotFoundErr.NotFound
+tags: [private]
 ```
 
 ```Go
@@ -452,7 +436,6 @@ func (e *changesetSpecNotFoundErr) NotFound() bool
 
 ```
 searchKey: service.MoveBatchChangeOpts
-tags: [exported]
 ```
 
 ```Go
@@ -470,7 +453,6 @@ type MoveBatchChangeOpts struct {
 
 ```
 searchKey: service.MoveBatchChangeOpts.String
-tags: [exported]
 ```
 
 ```Go
@@ -481,6 +463,7 @@ func (o MoveBatchChangeOpts) String() string
 
 ```
 searchKey: service.usernameSource
+tags: [private]
 ```
 
 ```Go
@@ -498,7 +481,6 @@ A usernameSource can fetch the username associated with the credentials used by 
 
 ```
 searchKey: service.ApplyBatchChangeOpts
-tags: [exported]
 ```
 
 ```Go
@@ -516,7 +498,6 @@ type ApplyBatchChangeOpts struct {
 
 ```
 searchKey: service.ApplyBatchChangeOpts.String
-tags: [exported]
 ```
 
 ```Go
@@ -525,10 +506,15 @@ func (o ApplyBatchChangeOpts) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="checkNamespaceAccess" href="#checkNamespaceAccess">func checkNamespaceAccess(ctx context.Context, db dbutil.DB, namespaceUserID, namespaceOrgID int32) error</a>
 
 ```
 searchKey: service.checkNamespaceAccess
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +527,7 @@ checkNamespaceAccess checks whether the current user in the ctx has access to ei
 
 ```
 searchKey: service.TestServiceApplyBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -551,6 +538,7 @@ func TestServiceApplyBatchChange(t *testing.T)
 
 ```
 searchKey: service.applyAndListChangesets
+tags: [private]
 ```
 
 ```Go
@@ -561,6 +549,7 @@ func applyAndListChangesets(ctx context.Context, t *testing.T, svc *Service, bat
 
 ```
 searchKey: service.TestServicePermissionLevels
+tags: [private]
 ```
 
 ```Go
@@ -571,6 +560,7 @@ func TestServicePermissionLevels(t *testing.T)
 
 ```
 searchKey: service.TestService
+tags: [private]
 ```
 
 ```Go
@@ -581,6 +571,7 @@ func TestService(t *testing.T)
 
 ```
 searchKey: service.testBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -591,6 +582,7 @@ func testBatchChange(user int32, spec *btypes.BatchSpec) *btypes.BatchChange
 
 ```
 searchKey: service.testBatchSpec
+tags: [private]
 ```
 
 ```Go
@@ -601,6 +593,7 @@ func testBatchSpec(user int32) *btypes.BatchSpec
 
 ```
 searchKey: service.testChangeset
+tags: [private]
 ```
 
 ```Go

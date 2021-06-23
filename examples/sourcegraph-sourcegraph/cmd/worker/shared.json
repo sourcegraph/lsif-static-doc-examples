@@ -4,9 +4,7 @@
     "identifier": "shared",
     "newPage": true,
     "searchKey": "cmd/worker/shared",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "addr",
                 "newPage": false,
                 "searchKey": "shared.addr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,7 +83,9 @@
                 "identifier": "config",
                 "newPage": false,
                 "searchKey": "shared.config",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "initDatabaseMemo",
                 "newPage": false,
                 "searchKey": "shared.initDatabaseMemo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "builtins",
                 "newPage": false,
                 "searchKey": "shared.builtins",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +152,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -170,9 +170,7 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "shared.Config",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -190,9 +188,7 @@
                       "identifier": "Config.Load",
                       "newPage": false,
                       "searchKey": "shared.Config.Load",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -212,9 +208,7 @@
                       "identifier": "Config.Validate",
                       "newPage": false,
                       "searchKey": "shared.Config.Validate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -237,9 +231,7 @@
                 "identifier": "Job",
                 "newPage": false,
                 "searchKey": "shared.Job",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -259,7 +251,9 @@
                 "identifier": "routinesResult",
                 "newPage": false,
                 "searchKey": "shared.routinesResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -279,9 +273,7 @@
                 "identifier": "MemoizedConstructor",
                 "newPage": false,
                 "searchKey": "shared.MemoizedConstructor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -299,9 +291,7 @@
                       "identifier": "NewMemoizedConstructor",
                       "newPage": false,
                       "searchKey": "shared.NewMemoizedConstructor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -321,9 +311,7 @@
                       "identifier": "MemoizedConstructor.Init",
                       "newPage": false,
                       "searchKey": "shared.MemoizedConstructor.Init",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -349,9 +337,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -369,7 +355,9 @@
                 "identifier": "shouldRunJob",
                 "newPage": false,
                 "searchKey": "shared.shouldRunJob",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -389,7 +377,9 @@
                 "identifier": "safeSplit",
                 "newPage": false,
                 "searchKey": "shared.safeSplit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -409,9 +399,7 @@
                 "identifier": "InitDatabase",
                 "newPage": false,
                 "searchKey": "shared.InitDatabase",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -431,9 +419,7 @@
                 "identifier": "Start",
                 "newPage": false,
                 "searchKey": "shared.Start",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -453,7 +439,9 @@
                 "identifier": "loadConfigs",
                 "newPage": false,
                 "searchKey": "shared.loadConfigs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -473,7 +461,9 @@
                 "identifier": "mustValidateConfigs",
                 "newPage": false,
                 "searchKey": "shared.mustValidateConfigs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -493,7 +483,9 @@
                 "identifier": "emitJobCountMetrics",
                 "newPage": false,
                 "searchKey": "shared.emitJobCountMetrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -513,7 +505,9 @@
                 "identifier": "mustCreateBackgroundRoutines",
                 "newPage": false,
                 "searchKey": "shared.mustCreateBackgroundRoutines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -533,7 +527,9 @@
                 "identifier": "runRoutinesConcurrently",
                 "newPage": false,
                 "searchKey": "shared.runRoutinesConcurrently",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -553,7 +549,9 @@
                 "identifier": "jobNames",
                 "newPage": false,
                 "searchKey": "shared.jobNames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -573,9 +571,7 @@
                 "identifier": "WatchServiceConnectionValue",
                 "newPage": false,
                 "searchKey": "shared.WatchServiceConnectionValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

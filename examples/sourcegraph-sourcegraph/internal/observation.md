@@ -79,18 +79,21 @@ Log fields and metric labels can be supplied at construction of an Operation, at
 * [Functions](#func)
     * [func mergeLabels(groups ...[]string) []string](#mergeLabels)
     * [func mergeLogFields(groups ...[]log.Field) []log.Field](#mergeLogFields)
-    * [func init()](#init)
+    * [func init()](#init.util.go)
     * [func kebabCase(s string) string](#kebabCase)
     * [func TestKebabCase(t *testing.T)](#TestKebabCase)
 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestContext" href="#TestContext">var TestContext</a>
 
 ```
 searchKey: observation.TestContext
-tags: [exported]
 ```
 
 ```Go
@@ -103,6 +106,7 @@ TestContext is a behaviorless Context usable for unit tests.
 
 ```
 searchKey: observation.commonAcronyms
+tags: [private]
 ```
 
 ```Go
@@ -119,6 +123,7 @@ commonAcronyms includes acronyms that malform the expected output of kebabCase d
 
 ```
 searchKey: observation.acronymsReplacer
+tags: [private]
 ```
 
 ```Go
@@ -129,11 +134,14 @@ acronymsReplacer is a string replacer that normalizes the acronyms above. For ex
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Context" href="#Context">type Context struct</a>
 
 ```
 searchKey: observation.Context
-tags: [exported]
 ```
 
 ```Go
@@ -150,7 +158,6 @@ Context carries context about where to send logs, trace spans, and register metr
 
 ```
 searchKey: observation.Context.Operation
-tags: [exported]
 ```
 
 ```Go
@@ -163,7 +170,6 @@ Operation combines the state of the parent context to create a new operation. Th
 
 ```
 searchKey: observation.Op
-tags: [exported]
 ```
 
 ```Go
@@ -195,7 +201,6 @@ Op configures an Operation instance.
 
 ```
 searchKey: observation.Operation
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +221,6 @@ Operation represents an interesting section of code that can be invoked.
 
 ```
 searchKey: observation.Operation.With
-tags: [exported]
 ```
 
 ```Go
@@ -229,7 +233,6 @@ With prepares the necessary timers, loggers, and metrics to observe the invocati
 
 ```
 searchKey: observation.Operation.WithAndLogger
-tags: [exported]
 ```
 
 ```Go
@@ -242,6 +245,7 @@ WithAndLogger prepares the necessary timers, loggers, and metrics to observe the
 
 ```
 searchKey: observation.Operation.trace
+tags: [private]
 ```
 
 ```Go
@@ -254,6 +258,7 @@ trace creates a new Trace object and returns the wrapped context. If any log fie
 
 ```
 searchKey: observation.Operation.emitErrorLogs
+tags: [private]
 ```
 
 ```Go
@@ -266,6 +271,7 @@ emitErrorLogs will log as message if the operation has failed. This log contains
 
 ```
 searchKey: observation.Operation.emitMetrics
+tags: [private]
 ```
 
 ```Go
@@ -278,6 +284,7 @@ emitMetrics will emit observe the duration, operation/result, and error counter 
 
 ```
 searchKey: observation.Operation.finishTrace
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +297,7 @@ finishTrace will set the error value, log additional fields supplied after the o
 
 ```
 searchKey: observation.Operation.applyErrorFilter
+tags: [private]
 ```
 
 ```Go
@@ -302,7 +310,6 @@ applyErrorFilter returns nil if the given error does not pass the registered err
 
 ```
 searchKey: observation.TraceLogger
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +322,6 @@ TraceLogger is returned from WithAndLogger and can be used to add timestamped ke
 
 ```
 searchKey: observation.FinishFunc
-tags: [exported]
 ```
 
 ```Go
@@ -328,7 +334,6 @@ FinishFunc is the shape of the function returned by With and should be invoked w
 
 ```
 searchKey: observation.Args
-tags: [exported]
 ```
 
 ```Go
@@ -346,7 +351,6 @@ Args configures the observation behavior of an invocation of an operation.
 
 ```
 searchKey: observation.Args.LogFieldMap
-tags: [exported]
 ```
 
 ```Go
@@ -359,7 +363,6 @@ LogFieldMap returns a string-to-interface map containing the contents of this Ar
 
 ```
 searchKey: observation.Args.LogFieldPairs
-tags: [exported]
 ```
 
 ```Go
@@ -370,10 +373,15 @@ LogFieldPairs returns a slice of key, value, key, value, ... pairs containing th
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="mergeLabels" href="#mergeLabels">func mergeLabels(groups ...[]string) []string</a>
 
 ```
 searchKey: observation.mergeLabels
+tags: [private]
 ```
 
 ```Go
@@ -386,6 +394,7 @@ mergeLabels flattens slices of slices of strings.
 
 ```
 searchKey: observation.mergeLogFields
+tags: [private]
 ```
 
 ```Go
@@ -394,10 +403,11 @@ func mergeLogFields(groups ...[]log.Field) []log.Field
 
 mergeLogFields flattens slices of slices of log fields. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.util.go" href="#init.util.go">func init()</a>
 
 ```
 searchKey: observation.init
+tags: [private]
 ```
 
 ```Go
@@ -408,6 +418,7 @@ func init()
 
 ```
 searchKey: observation.kebabCase
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +431,7 @@ kebab transforms a string into lower-kebab-case.
 
 ```
 searchKey: observation.TestKebabCase
+tags: [private]
 ```
 
 ```Go

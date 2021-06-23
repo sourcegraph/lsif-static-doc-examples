@@ -262,7 +262,7 @@ Tape archives (tar) are a file format for storing a sequence of files that can b
     * [func discard(r io.Reader, n int64) error](#discard)
     * [func statAtime(st *syscall.Stat_t) time.Time](#statAtime)
     * [func statCtime(st *syscall.Stat_t) time.Time](#statCtime)
-    * [func init()](#init)
+    * [func init()](#init.stat_unix.go)
     * [func statUnix(fi fs.FileInfo, h *Header) error](#statUnix)
     * [func hasNUL(s string) bool](#hasNUL)
     * [func isASCII(s string) bool](#isASCII)
@@ -320,15 +320,10 @@ Tape archives (tar) are a file format for storing a sequence of files that can b
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="TypeReg" href="#TypeReg">const TypeReg</a>
 
 ```
 searchKey: tar.TypeReg
-tags: [exported]
 ```
 
 ```Go
@@ -343,7 +338,6 @@ Type '0' indicates a regular file.
 
 ```
 searchKey: tar.TypeRegA
-tags: [exported]
 ```
 
 ```Go
@@ -357,7 +351,6 @@ Type flags for Header.Typeflag.
 
 ```
 searchKey: tar.TypeLink
-tags: [exported]
 ```
 
 ```Go
@@ -373,7 +366,6 @@ Type '1' to '6' are header-only flags and may not have a data body.
 
 ```
 searchKey: tar.TypeSymlink
-tags: [exported]
 ```
 
 ```Go
@@ -387,7 +379,6 @@ Type flags for Header.Typeflag.
 
 ```
 searchKey: tar.TypeChar
-tags: [exported]
 ```
 
 ```Go
@@ -401,7 +392,6 @@ Type flags for Header.Typeflag.
 
 ```
 searchKey: tar.TypeBlock
-tags: [exported]
 ```
 
 ```Go
@@ -415,7 +405,6 @@ Type flags for Header.Typeflag.
 
 ```
 searchKey: tar.TypeDir
-tags: [exported]
 ```
 
 ```Go
@@ -429,7 +418,6 @@ Type flags for Header.Typeflag.
 
 ```
 searchKey: tar.TypeFifo
-tags: [exported]
 ```
 
 ```Go
@@ -443,7 +431,6 @@ Type flags for Header.Typeflag.
 
 ```
 searchKey: tar.TypeCont
-tags: [exported]
 ```
 
 ```Go
@@ -458,7 +445,6 @@ Type '7' is reserved.
 
 ```
 searchKey: tar.TypeXHeader
-tags: [exported]
 ```
 
 ```Go
@@ -473,7 +459,6 @@ Type 'x' is used by the PAX format to store key-value records that are only rele
 
 ```
 searchKey: tar.TypeXGlobalHeader
-tags: [exported]
 ```
 
 ```Go
@@ -488,7 +473,6 @@ Type 'g' is used by the PAX format to store key-value records that are relevant 
 
 ```
 searchKey: tar.TypeGNUSparse
-tags: [exported]
 ```
 
 ```Go
@@ -503,7 +487,6 @@ Type 'S' indicates a sparse file in the GNU format.
 
 ```
 searchKey: tar.TypeGNULongName
-tags: [exported]
 ```
 
 ```Go
@@ -518,7 +501,6 @@ Types 'L' and 'K' are used by the GNU format for a meta file used to store the p
 
 ```
 searchKey: tar.TypeGNULongLink
-tags: [exported]
 ```
 
 ```Go
@@ -531,6 +513,7 @@ Type flags for Header.Typeflag.
 
 ```
 searchKey: tar.paxNone
+tags: [private]
 ```
 
 ```Go
@@ -544,6 +527,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxPath
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +540,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxLinkpath
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +553,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxSize
+tags: [private]
 ```
 
 ```Go
@@ -580,6 +566,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxUid
+tags: [private]
 ```
 
 ```Go
@@ -592,6 +579,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGid
+tags: [private]
 ```
 
 ```Go
@@ -604,6 +592,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxUname
+tags: [private]
 ```
 
 ```Go
@@ -616,6 +605,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGname
+tags: [private]
 ```
 
 ```Go
@@ -628,6 +618,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxMtime
+tags: [private]
 ```
 
 ```Go
@@ -640,6 +631,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxAtime
+tags: [private]
 ```
 
 ```Go
@@ -652,6 +644,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxCtime
+tags: [private]
 ```
 
 ```Go
@@ -665,6 +658,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxCharset
+tags: [private]
 ```
 
 ```Go
@@ -678,6 +672,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxComment
+tags: [private]
 ```
 
 ```Go
@@ -691,6 +686,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxSchilyXattr
+tags: [private]
 ```
 
 ```Go
@@ -703,6 +699,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGNUSparse
+tags: [private]
 ```
 
 ```Go
@@ -717,6 +714,7 @@ Keywords for GNU sparse files in a PAX extended header.
 
 ```
 searchKey: tar.paxGNUSparseNumBlocks
+tags: [private]
 ```
 
 ```Go
@@ -729,6 +727,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGNUSparseOffset
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +740,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGNUSparseNumBytes
+tags: [private]
 ```
 
 ```Go
@@ -753,6 +753,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGNUSparseMap
+tags: [private]
 ```
 
 ```Go
@@ -765,6 +766,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGNUSparseName
+tags: [private]
 ```
 
 ```Go
@@ -777,6 +779,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGNUSparseMajor
+tags: [private]
 ```
 
 ```Go
@@ -789,6 +792,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGNUSparseMinor
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +805,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGNUSparseSize
+tags: [private]
 ```
 
 ```Go
@@ -813,6 +818,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.paxGNUSparseRealSize
+tags: [private]
 ```
 
 ```Go
@@ -825,6 +831,7 @@ Keywords for PAX extended header records.
 
 ```
 searchKey: tar.c_ISUID
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +845,7 @@ Mode constants from the USTAR spec: See [http://pubs.opengroup.org/onlinepubs/96
 
 ```
 searchKey: tar.c_ISGID
+tags: [private]
 ```
 
 ```Go
@@ -849,6 +857,7 @@ const c_ISGID = 02000 // Set gid
 
 ```
 searchKey: tar.c_ISVTX
+tags: [private]
 ```
 
 ```Go
@@ -860,6 +869,7 @@ const c_ISVTX = 01000 // Save text (sticky bit)
 
 ```
 searchKey: tar.c_ISDIR
+tags: [private]
 ```
 
 ```Go
@@ -873,6 +883,7 @@ Common Unix mode constants; these are not defined in any common tar standard. He
 
 ```
 searchKey: tar.c_ISFIFO
+tags: [private]
 ```
 
 ```Go
@@ -884,6 +895,7 @@ const c_ISFIFO = 010000 // FIFO
 
 ```
 searchKey: tar.c_ISREG
+tags: [private]
 ```
 
 ```Go
@@ -895,6 +907,7 @@ const c_ISREG = 0100000 // Regular file
 
 ```
 searchKey: tar.c_ISLNK
+tags: [private]
 ```
 
 ```Go
@@ -906,6 +919,7 @@ const c_ISLNK = 0120000 // Symbolic link
 
 ```
 searchKey: tar.c_ISBLK
+tags: [private]
 ```
 
 ```Go
@@ -917,6 +931,7 @@ const c_ISBLK = 060000 // Block special file
 
 ```
 searchKey: tar.c_ISCHR
+tags: [private]
 ```
 
 ```Go
@@ -928,6 +943,7 @@ const c_ISCHR = 020000 // Character special file
 
 ```
 searchKey: tar.c_ISSOCK
+tags: [private]
 ```
 
 ```Go
@@ -939,7 +955,6 @@ const c_ISSOCK = 0140000 // Socket
 
 ```
 searchKey: tar.FormatUnknown
-tags: [exported]
 ```
 
 ```Go
@@ -954,6 +969,7 @@ FormatUnknown indicates that the format is unknown.
 
 ```
 searchKey: tar.formatV7
+tags: [private]
 ```
 
 ```Go
@@ -968,7 +984,6 @@ The format of the original Unix V7 tar tool prior to standardization.
 
 ```
 searchKey: tar.FormatUSTAR
-tags: [exported]
 ```
 
 ```Go
@@ -991,7 +1006,6 @@ Reference:
 
 ```
 searchKey: tar.FormatPAX
-tags: [exported]
 ```
 
 ```Go
@@ -1016,7 +1030,6 @@ Reference:
 
 ```
 searchKey: tar.FormatGNU
-tags: [exported]
 ```
 
 ```Go
@@ -1041,6 +1054,7 @@ Reference:
 
 ```
 searchKey: tar.formatSTAR
+tags: [private]
 ```
 
 ```Go
@@ -1055,6 +1069,7 @@ Schily's tar format, which is incompatible with USTAR. This does not cover STAR 
 
 ```
 searchKey: tar.formatMax
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1082,7 @@ Constants to identify various tar formats.
 
 ```
 searchKey: tar.magicGNU
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1095,7 @@ Magics used to identify various formats.
 
 ```
 searchKey: tar.versionGNU
+tags: [private]
 ```
 
 ```Go
@@ -1091,6 +1108,7 @@ Magics used to identify various formats.
 
 ```
 searchKey: tar.magicUSTAR
+tags: [private]
 ```
 
 ```Go
@@ -1103,6 +1121,7 @@ Magics used to identify various formats.
 
 ```
 searchKey: tar.versionUSTAR
+tags: [private]
 ```
 
 ```Go
@@ -1115,6 +1134,7 @@ Magics used to identify various formats.
 
 ```
 searchKey: tar.trailerSTAR
+tags: [private]
 ```
 
 ```Go
@@ -1127,6 +1147,7 @@ Magics used to identify various formats.
 
 ```
 searchKey: tar.blockSize
+tags: [private]
 ```
 
 ```Go
@@ -1140,6 +1161,7 @@ Size constants from various tar specifications.
 
 ```
 searchKey: tar.nameSize
+tags: [private]
 ```
 
 ```Go
@@ -1153,6 +1175,7 @@ Size constants from various tar specifications.
 
 ```
 searchKey: tar.prefixSize
+tags: [private]
 ```
 
 ```Go
@@ -1164,15 +1187,10 @@ Size constants from various tar specifications.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrHeader" href="#ErrHeader">var ErrHeader</a>
 
 ```
 searchKey: tar.ErrHeader
-tags: [exported]
 ```
 
 ```Go
@@ -1183,7 +1201,6 @@ var ErrHeader = errors.New("archive/tar: invalid tar header")
 
 ```
 searchKey: tar.ErrWriteTooLong
-tags: [exported]
 ```
 
 ```Go
@@ -1194,7 +1211,6 @@ var ErrWriteTooLong = errors.New("archive/tar: write too long")
 
 ```
 searchKey: tar.ErrFieldTooLong
-tags: [exported]
 ```
 
 ```Go
@@ -1205,7 +1221,6 @@ var ErrFieldTooLong = errors.New("archive/tar: header field too long")
 
 ```
 searchKey: tar.ErrWriteAfterClose
-tags: [exported]
 ```
 
 ```Go
@@ -1216,6 +1231,7 @@ var ErrWriteAfterClose = errors.New("archive/tar: write after close")
 
 ```
 searchKey: tar.errMissData
+tags: [private]
 ```
 
 ```Go
@@ -1226,6 +1242,7 @@ var errMissData = errors.New("archive/tar: sparse file references non-existent d
 
 ```
 searchKey: tar.errUnrefData
+tags: [private]
 ```
 
 ```Go
@@ -1236,6 +1253,7 @@ var errUnrefData = errors.New("archive/tar: sparse file contains unreferenced da
 
 ```
 searchKey: tar.errWriteHole
+tags: [private]
 ```
 
 ```Go
@@ -1246,6 +1264,7 @@ var errWriteHole = errors.New("archive/tar: write non-NUL byte in sparse hole")
 
 ```
 searchKey: tar.basicKeys
+tags: [private]
 ```
 
 ```Go
@@ -1258,6 +1277,7 @@ basicKeys is a set of the PAX keys for which we have built-in support. This does
 
 ```
 searchKey: tar.sysStat
+tags: [private]
 ```
 
 ```Go
@@ -1270,6 +1290,7 @@ sysStat, if non-nil, populates h from system-dependent fields of fi.
 
 ```
 searchKey: tar.formatNames
+tags: [private]
 ```
 
 ```Go
@@ -1280,6 +1301,7 @@ var formatNames = ...
 
 ```
 searchKey: tar.zeroBlock
+tags: [private]
 ```
 
 ```Go
@@ -1290,6 +1312,7 @@ var zeroBlock block
 
 ```
 searchKey: tar.userMap
+tags: [private]
 ```
 
 ```Go
@@ -1303,6 +1326,7 @@ userMap and groupMap caches UID and GID lookups for performance reasons. The dow
 
 ```
 searchKey: tar.groupMap
+tags: [private]
 ```
 
 ```Go
@@ -1314,14 +1338,11 @@ userMap and groupMap caches UID and GID lookups for performance reasons. The dow
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="headerError" href="#headerError">type headerError []string</a>
 
 ```
 searchKey: tar.headerError
+tags: [private]
 ```
 
 ```Go
@@ -1332,6 +1353,7 @@ type headerError []string
 
 ```
 searchKey: tar.headerError.Error
+tags: [private]
 ```
 
 ```Go
@@ -1342,7 +1364,6 @@ func (he headerError) Error() string
 
 ```
 searchKey: tar.Header
-tags: [exported]
 ```
 
 ```Go
@@ -1420,7 +1441,6 @@ For forward compatibility, users that retrieve a Header from Reader.Next, mutate
 
 ```
 searchKey: tar.FileInfoHeader
-tags: [exported]
 ```
 
 ```Go
@@ -1435,6 +1455,7 @@ Since fs.FileInfo's Name method only returns the base name of the file it descri
 
 ```
 searchKey: tar.Header.allowedFormats
+tags: [private]
 ```
 
 ```Go
@@ -1449,7 +1470,6 @@ As a by-product of checking the fields, this function returns paxHdrs, which con
 
 ```
 searchKey: tar.Header.FileInfo
-tags: [exported]
 ```
 
 ```Go
@@ -1462,6 +1482,7 @@ FileInfo returns an fs.FileInfo for the Header.
 
 ```
 searchKey: tar.sparseEntry
+tags: [private]
 ```
 
 ```Go
@@ -1474,6 +1495,7 @@ sparseEntry represents a Length-sized fragment at Offset in the file.
 
 ```
 searchKey: tar.sparseEntry.endOffset
+tags: [private]
 ```
 
 ```Go
@@ -1484,6 +1506,7 @@ func (s sparseEntry) endOffset() int64
 
 ```
 searchKey: tar.sparseDatas
+tags: [private]
 ```
 
 ```Go
@@ -1524,6 +1547,7 @@ var sparseFile = "\x00"*2 + "abcde" + "\x00"*11 + "fgh" + "\x00"*4
 
 ```
 searchKey: tar.readGNUSparseMap1x0
+tags: [private]
 ```
 
 ```Go
@@ -1538,6 +1562,7 @@ Note that the GNU manual says that numeric values should be encoded in octal for
 
 ```
 searchKey: tar.readGNUSparseMap0x1
+tags: [private]
 ```
 
 ```Go
@@ -1550,6 +1575,7 @@ readGNUSparseMap0x1 reads the sparse map as stored in GNU's PAX sparse format ve
 
 ```
 searchKey: tar.sparseHoles
+tags: [private]
 ```
 
 ```Go
@@ -1590,6 +1616,7 @@ var sparseFile = "\x00"*2 + "abcde" + "\x00"*11 + "fgh" + "\x00"*4
 
 ```
 searchKey: tar.fileState
+tags: [private]
 ```
 
 ```Go
@@ -1607,6 +1634,7 @@ Invariant: LogicalRemaining >= PhysicalRemaining
 
 ```
 searchKey: tar.headerFileInfo
+tags: [private]
 ```
 
 ```Go
@@ -1621,6 +1649,7 @@ headerFileInfo implements fs.FileInfo.
 
 ```
 searchKey: tar.headerFileInfo.Size
+tags: [private]
 ```
 
 ```Go
@@ -1631,6 +1660,7 @@ func (fi headerFileInfo) Size() int64
 
 ```
 searchKey: tar.headerFileInfo.IsDir
+tags: [private]
 ```
 
 ```Go
@@ -1641,6 +1671,7 @@ func (fi headerFileInfo) IsDir() bool
 
 ```
 searchKey: tar.headerFileInfo.ModTime
+tags: [private]
 ```
 
 ```Go
@@ -1651,6 +1682,7 @@ func (fi headerFileInfo) ModTime() time.Time
 
 ```
 searchKey: tar.headerFileInfo.Sys
+tags: [private]
 ```
 
 ```Go
@@ -1661,6 +1693,7 @@ func (fi headerFileInfo) Sys() interface{}
 
 ```
 searchKey: tar.headerFileInfo.Name
+tags: [private]
 ```
 
 ```Go
@@ -1673,6 +1706,7 @@ Name returns the base name of the file.
 
 ```
 searchKey: tar.headerFileInfo.Mode
+tags: [private]
 ```
 
 ```Go
@@ -1685,7 +1719,6 @@ Mode returns the permission and mode bits for the headerFileInfo.
 
 ```
 searchKey: tar.Format
-tags: [exported]
 ```
 
 ```Go
@@ -1727,6 +1760,7 @@ The Writer currently provides no support for sparse files.
 
 ```
 searchKey: tar.Format.has
+tags: [private]
 ```
 
 ```Go
@@ -1737,6 +1771,7 @@ func (f Format) has(f2 Format) bool
 
 ```
 searchKey: tar.Format.mayBe
+tags: [private]
 ```
 
 ```Go
@@ -1747,6 +1782,7 @@ func (f *Format) mayBe(f2 Format)
 
 ```
 searchKey: tar.Format.mayOnlyBe
+tags: [private]
 ```
 
 ```Go
@@ -1757,6 +1793,7 @@ func (f *Format) mayOnlyBe(f2 Format)
 
 ```
 searchKey: tar.Format.mustNotBe
+tags: [private]
 ```
 
 ```Go
@@ -1767,7 +1804,6 @@ func (f *Format) mustNotBe(f2 Format)
 
 ```
 searchKey: tar.Format.String
-tags: [exported]
 ```
 
 ```Go
@@ -1778,6 +1814,7 @@ func (f Format) String() string
 
 ```
 searchKey: tar.block
+tags: [private]
 ```
 
 ```Go
@@ -1788,6 +1825,7 @@ type block [blockSize]byte
 
 ```
 searchKey: tar.block.V7
+tags: [private]
 ```
 
 ```Go
@@ -1800,6 +1838,7 @@ Convert block to any number of formats.
 
 ```
 searchKey: tar.block.GNU
+tags: [private]
 ```
 
 ```Go
@@ -1810,6 +1849,7 @@ func (b *block) GNU() *headerGNU
 
 ```
 searchKey: tar.block.STAR
+tags: [private]
 ```
 
 ```Go
@@ -1820,6 +1860,7 @@ func (b *block) STAR() *headerSTAR
 
 ```
 searchKey: tar.block.USTAR
+tags: [private]
 ```
 
 ```Go
@@ -1830,6 +1871,7 @@ func (b *block) USTAR() *headerUSTAR
 
 ```
 searchKey: tar.block.Sparse
+tags: [private]
 ```
 
 ```Go
@@ -1840,6 +1882,7 @@ func (b *block) Sparse() sparseArray
 
 ```
 searchKey: tar.block.GetFormat
+tags: [private]
 ```
 
 ```Go
@@ -1852,6 +1895,7 @@ GetFormat checks that the block is a valid tar header based on the checksum. It 
 
 ```
 searchKey: tar.block.SetFormat
+tags: [private]
 ```
 
 ```Go
@@ -1864,6 +1908,7 @@ SetFormat writes the magic values necessary for specified format and then update
 
 ```
 searchKey: tar.block.ComputeChecksum
+tags: [private]
 ```
 
 ```Go
@@ -1876,6 +1921,7 @@ ComputeChecksum computes the checksum for the header block. POSIX specifies a su
 
 ```
 searchKey: tar.block.Reset
+tags: [private]
 ```
 
 ```Go
@@ -1888,6 +1934,7 @@ Reset clears the block with all zeros.
 
 ```
 searchKey: tar.headerV7
+tags: [private]
 ```
 
 ```Go
@@ -1898,6 +1945,7 @@ type headerV7 [blockSize]byte
 
 ```
 searchKey: tar.headerV7.Name
+tags: [private]
 ```
 
 ```Go
@@ -1908,6 +1956,7 @@ func (h *headerV7) Name() []byte
 
 ```
 searchKey: tar.headerV7.Mode
+tags: [private]
 ```
 
 ```Go
@@ -1918,6 +1967,7 @@ func (h *headerV7) Mode() []byte
 
 ```
 searchKey: tar.headerV7.UID
+tags: [private]
 ```
 
 ```Go
@@ -1928,6 +1978,7 @@ func (h *headerV7) UID() []byte
 
 ```
 searchKey: tar.headerV7.GID
+tags: [private]
 ```
 
 ```Go
@@ -1938,6 +1989,7 @@ func (h *headerV7) GID() []byte
 
 ```
 searchKey: tar.headerV7.Size
+tags: [private]
 ```
 
 ```Go
@@ -1948,6 +2000,7 @@ func (h *headerV7) Size() []byte
 
 ```
 searchKey: tar.headerV7.ModTime
+tags: [private]
 ```
 
 ```Go
@@ -1958,6 +2011,7 @@ func (h *headerV7) ModTime() []byte
 
 ```
 searchKey: tar.headerV7.Chksum
+tags: [private]
 ```
 
 ```Go
@@ -1968,6 +2022,7 @@ func (h *headerV7) Chksum() []byte
 
 ```
 searchKey: tar.headerV7.TypeFlag
+tags: [private]
 ```
 
 ```Go
@@ -1978,6 +2033,7 @@ func (h *headerV7) TypeFlag() []byte
 
 ```
 searchKey: tar.headerV7.LinkName
+tags: [private]
 ```
 
 ```Go
@@ -1988,6 +2044,7 @@ func (h *headerV7) LinkName() []byte
 
 ```
 searchKey: tar.headerGNU
+tags: [private]
 ```
 
 ```Go
@@ -1998,6 +2055,7 @@ type headerGNU [blockSize]byte
 
 ```
 searchKey: tar.headerGNU.V7
+tags: [private]
 ```
 
 ```Go
@@ -2008,6 +2066,7 @@ func (h *headerGNU) V7() *headerV7
 
 ```
 searchKey: tar.headerGNU.Magic
+tags: [private]
 ```
 
 ```Go
@@ -2018,6 +2077,7 @@ func (h *headerGNU) Magic() []byte
 
 ```
 searchKey: tar.headerGNU.Version
+tags: [private]
 ```
 
 ```Go
@@ -2028,6 +2088,7 @@ func (h *headerGNU) Version() []byte
 
 ```
 searchKey: tar.headerGNU.UserName
+tags: [private]
 ```
 
 ```Go
@@ -2038,6 +2099,7 @@ func (h *headerGNU) UserName() []byte
 
 ```
 searchKey: tar.headerGNU.GroupName
+tags: [private]
 ```
 
 ```Go
@@ -2048,6 +2110,7 @@ func (h *headerGNU) GroupName() []byte
 
 ```
 searchKey: tar.headerGNU.DevMajor
+tags: [private]
 ```
 
 ```Go
@@ -2058,6 +2121,7 @@ func (h *headerGNU) DevMajor() []byte
 
 ```
 searchKey: tar.headerGNU.DevMinor
+tags: [private]
 ```
 
 ```Go
@@ -2068,6 +2132,7 @@ func (h *headerGNU) DevMinor() []byte
 
 ```
 searchKey: tar.headerGNU.AccessTime
+tags: [private]
 ```
 
 ```Go
@@ -2078,6 +2143,7 @@ func (h *headerGNU) AccessTime() []byte
 
 ```
 searchKey: tar.headerGNU.ChangeTime
+tags: [private]
 ```
 
 ```Go
@@ -2088,6 +2154,7 @@ func (h *headerGNU) ChangeTime() []byte
 
 ```
 searchKey: tar.headerGNU.Sparse
+tags: [private]
 ```
 
 ```Go
@@ -2098,6 +2165,7 @@ func (h *headerGNU) Sparse() sparseArray
 
 ```
 searchKey: tar.headerGNU.RealSize
+tags: [private]
 ```
 
 ```Go
@@ -2108,6 +2176,7 @@ func (h *headerGNU) RealSize() []byte
 
 ```
 searchKey: tar.headerSTAR
+tags: [private]
 ```
 
 ```Go
@@ -2118,6 +2187,7 @@ type headerSTAR [blockSize]byte
 
 ```
 searchKey: tar.headerSTAR.V7
+tags: [private]
 ```
 
 ```Go
@@ -2128,6 +2198,7 @@ func (h *headerSTAR) V7() *headerV7
 
 ```
 searchKey: tar.headerSTAR.Magic
+tags: [private]
 ```
 
 ```Go
@@ -2138,6 +2209,7 @@ func (h *headerSTAR) Magic() []byte
 
 ```
 searchKey: tar.headerSTAR.Version
+tags: [private]
 ```
 
 ```Go
@@ -2148,6 +2220,7 @@ func (h *headerSTAR) Version() []byte
 
 ```
 searchKey: tar.headerSTAR.UserName
+tags: [private]
 ```
 
 ```Go
@@ -2158,6 +2231,7 @@ func (h *headerSTAR) UserName() []byte
 
 ```
 searchKey: tar.headerSTAR.GroupName
+tags: [private]
 ```
 
 ```Go
@@ -2168,6 +2242,7 @@ func (h *headerSTAR) GroupName() []byte
 
 ```
 searchKey: tar.headerSTAR.DevMajor
+tags: [private]
 ```
 
 ```Go
@@ -2178,6 +2253,7 @@ func (h *headerSTAR) DevMajor() []byte
 
 ```
 searchKey: tar.headerSTAR.DevMinor
+tags: [private]
 ```
 
 ```Go
@@ -2188,6 +2264,7 @@ func (h *headerSTAR) DevMinor() []byte
 
 ```
 searchKey: tar.headerSTAR.Prefix
+tags: [private]
 ```
 
 ```Go
@@ -2198,6 +2275,7 @@ func (h *headerSTAR) Prefix() []byte
 
 ```
 searchKey: tar.headerSTAR.AccessTime
+tags: [private]
 ```
 
 ```Go
@@ -2208,6 +2286,7 @@ func (h *headerSTAR) AccessTime() []byte
 
 ```
 searchKey: tar.headerSTAR.ChangeTime
+tags: [private]
 ```
 
 ```Go
@@ -2218,6 +2297,7 @@ func (h *headerSTAR) ChangeTime() []byte
 
 ```
 searchKey: tar.headerSTAR.Trailer
+tags: [private]
 ```
 
 ```Go
@@ -2228,6 +2308,7 @@ func (h *headerSTAR) Trailer() []byte
 
 ```
 searchKey: tar.headerUSTAR
+tags: [private]
 ```
 
 ```Go
@@ -2238,6 +2319,7 @@ type headerUSTAR [blockSize]byte
 
 ```
 searchKey: tar.headerUSTAR.V7
+tags: [private]
 ```
 
 ```Go
@@ -2248,6 +2330,7 @@ func (h *headerUSTAR) V7() *headerV7
 
 ```
 searchKey: tar.headerUSTAR.Magic
+tags: [private]
 ```
 
 ```Go
@@ -2258,6 +2341,7 @@ func (h *headerUSTAR) Magic() []byte
 
 ```
 searchKey: tar.headerUSTAR.Version
+tags: [private]
 ```
 
 ```Go
@@ -2268,6 +2352,7 @@ func (h *headerUSTAR) Version() []byte
 
 ```
 searchKey: tar.headerUSTAR.UserName
+tags: [private]
 ```
 
 ```Go
@@ -2278,6 +2363,7 @@ func (h *headerUSTAR) UserName() []byte
 
 ```
 searchKey: tar.headerUSTAR.GroupName
+tags: [private]
 ```
 
 ```Go
@@ -2288,6 +2374,7 @@ func (h *headerUSTAR) GroupName() []byte
 
 ```
 searchKey: tar.headerUSTAR.DevMajor
+tags: [private]
 ```
 
 ```Go
@@ -2298,6 +2385,7 @@ func (h *headerUSTAR) DevMajor() []byte
 
 ```
 searchKey: tar.headerUSTAR.DevMinor
+tags: [private]
 ```
 
 ```Go
@@ -2308,6 +2396,7 @@ func (h *headerUSTAR) DevMinor() []byte
 
 ```
 searchKey: tar.headerUSTAR.Prefix
+tags: [private]
 ```
 
 ```Go
@@ -2318,6 +2407,7 @@ func (h *headerUSTAR) Prefix() []byte
 
 ```
 searchKey: tar.sparseArray
+tags: [private]
 ```
 
 ```Go
@@ -2328,6 +2418,7 @@ type sparseArray []byte
 
 ```
 searchKey: tar.sparseArray.Entry
+tags: [private]
 ```
 
 ```Go
@@ -2338,6 +2429,7 @@ func (s sparseArray) Entry(i int) sparseElem
 
 ```
 searchKey: tar.sparseArray.IsExtended
+tags: [private]
 ```
 
 ```Go
@@ -2348,6 +2440,7 @@ func (s sparseArray) IsExtended() []byte
 
 ```
 searchKey: tar.sparseArray.MaxEntries
+tags: [private]
 ```
 
 ```Go
@@ -2358,6 +2451,7 @@ func (s sparseArray) MaxEntries() int
 
 ```
 searchKey: tar.sparseElem
+tags: [private]
 ```
 
 ```Go
@@ -2368,6 +2462,7 @@ type sparseElem []byte
 
 ```
 searchKey: tar.sparseElem.Offset
+tags: [private]
 ```
 
 ```Go
@@ -2378,6 +2473,7 @@ func (s sparseElem) Offset() []byte
 
 ```
 searchKey: tar.sparseElem.Length
+tags: [private]
 ```
 
 ```Go
@@ -2388,7 +2484,6 @@ func (s sparseElem) Length() []byte
 
 ```
 searchKey: tar.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -2411,7 +2506,6 @@ Reader provides sequential access to the contents of a tar archive. Reader.Next 
 
 ```
 searchKey: tar.NewReader
-tags: [exported]
 ```
 
 ```Go
@@ -2424,7 +2518,6 @@ NewReader creates a new Reader reading from r.
 
 ```
 searchKey: tar.Reader.Next
-tags: [exported]
 ```
 
 ```Go
@@ -2439,6 +2532,7 @@ io.EOF is returned at the end of the input.
 
 ```
 searchKey: tar.Reader.next
+tags: [private]
 ```
 
 ```Go
@@ -2449,6 +2543,7 @@ func (tr *Reader) next() (*Header, error)
 
 ```
 searchKey: tar.Reader.handleRegularFile
+tags: [private]
 ```
 
 ```Go
@@ -2461,6 +2556,7 @@ handleRegularFile sets up the current file reader and padding such that it can o
 
 ```
 searchKey: tar.Reader.handleSparseFile
+tags: [private]
 ```
 
 ```Go
@@ -2473,6 +2569,7 @@ handleSparseFile checks if the current file is a sparse format of any type and s
 
 ```
 searchKey: tar.Reader.readGNUSparsePAXHeaders
+tags: [private]
 ```
 
 ```Go
@@ -2485,6 +2582,7 @@ readGNUSparsePAXHeaders checks the PAX headers for GNU sparse headers. If they a
 
 ```
 searchKey: tar.Reader.readHeader
+tags: [private]
 ```
 
 ```Go
@@ -2505,6 +2603,7 @@ The err will be set to io.EOF only when one of the following occurs:
 
 ```
 searchKey: tar.Reader.readOldGNUSparseMap
+tags: [private]
 ```
 
 ```Go
@@ -2519,7 +2618,6 @@ The Header.Size does not reflect the size of any extended headers used. Thus, th
 
 ```
 searchKey: tar.Reader.Read
-tags: [exported]
 ```
 
 ```Go
@@ -2536,6 +2634,7 @@ Calling Read on special types like TypeLink, TypeSymlink, TypeChar, TypeBlock, T
 
 ```
 searchKey: tar.Reader.writeTo
+tags: [private]
 ```
 
 ```Go
@@ -2552,6 +2651,7 @@ TODO(dsnet): Re-export this when adding sparse file support. See [https://golang
 
 ```
 searchKey: tar.fileReader
+tags: [private]
 ```
 
 ```Go
@@ -2567,6 +2667,7 @@ type fileReader interface {
 
 ```
 searchKey: tar.regFileReader
+tags: [private]
 ```
 
 ```Go
@@ -2582,6 +2683,7 @@ regFileReader is a fileReader for reading data from a regular file entry.
 
 ```
 searchKey: tar.regFileReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -2592,6 +2694,7 @@ func (fr *regFileReader) Read(b []byte) (n int, err error)
 
 ```
 searchKey: tar.regFileReader.WriteTo
+tags: [private]
 ```
 
 ```Go
@@ -2602,6 +2705,7 @@ func (fr *regFileReader) WriteTo(w io.Writer) (int64, error)
 
 ```
 searchKey: tar.regFileReader.LogicalRemaining
+tags: [private]
 ```
 
 ```Go
@@ -2612,6 +2716,7 @@ func (fr regFileReader) LogicalRemaining() int64
 
 ```
 searchKey: tar.regFileReader.PhysicalRemaining
+tags: [private]
 ```
 
 ```Go
@@ -2622,6 +2727,7 @@ func (fr regFileReader) PhysicalRemaining() int64
 
 ```
 searchKey: tar.sparseFileReader
+tags: [private]
 ```
 
 ```Go
@@ -2638,6 +2744,7 @@ sparseFileReader is a fileReader for reading data from a sparse file entry.
 
 ```
 searchKey: tar.sparseFileReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -2648,6 +2755,7 @@ func (sr *sparseFileReader) Read(b []byte) (n int, err error)
 
 ```
 searchKey: tar.sparseFileReader.WriteTo
+tags: [private]
 ```
 
 ```Go
@@ -2658,6 +2766,7 @@ func (sr *sparseFileReader) WriteTo(w io.Writer) (n int64, err error)
 
 ```
 searchKey: tar.sparseFileReader.LogicalRemaining
+tags: [private]
 ```
 
 ```Go
@@ -2668,6 +2777,7 @@ func (sr sparseFileReader) LogicalRemaining() int64
 
 ```
 searchKey: tar.sparseFileReader.PhysicalRemaining
+tags: [private]
 ```
 
 ```Go
@@ -2678,6 +2788,7 @@ func (sr sparseFileReader) PhysicalRemaining() int64
 
 ```
 searchKey: tar.zeroReader
+tags: [private]
 ```
 
 ```Go
@@ -2688,6 +2799,7 @@ type zeroReader struct{}
 
 ```
 searchKey: tar.zeroReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -2698,6 +2810,7 @@ func (zeroReader) Read(b []byte) (int, error)
 
 ```
 searchKey: tar.parser
+tags: [private]
 ```
 
 ```Go
@@ -2710,6 +2823,7 @@ type parser struct {
 
 ```
 searchKey: tar.parser.parseString
+tags: [private]
 ```
 
 ```Go
@@ -2722,6 +2836,7 @@ parseString parses bytes as a NUL-terminated C-style string. If a NUL byte is no
 
 ```
 searchKey: tar.parser.parseNumeric
+tags: [private]
 ```
 
 ```Go
@@ -2734,6 +2849,7 @@ parseNumeric parses the input as being encoded in either base-256 or octal. This
 
 ```
 searchKey: tar.parser.parseOctal
+tags: [private]
 ```
 
 ```Go
@@ -2744,6 +2860,7 @@ func (p *parser) parseOctal(b []byte) int64
 
 ```
 searchKey: tar.formatter
+tags: [private]
 ```
 
 ```Go
@@ -2756,6 +2873,7 @@ type formatter struct {
 
 ```
 searchKey: tar.formatter.formatString
+tags: [private]
 ```
 
 ```Go
@@ -2768,6 +2886,7 @@ formatString copies s into b, NUL-terminating if possible.
 
 ```
 searchKey: tar.formatter.formatNumeric
+tags: [private]
 ```
 
 ```Go
@@ -2780,6 +2899,7 @@ formatNumeric encodes x into b using base-8 (octal) encoding if possible. Otherw
 
 ```
 searchKey: tar.formatter.formatOctal
+tags: [private]
 ```
 
 ```Go
@@ -2790,7 +2910,6 @@ func (f *formatter) formatOctal(b []byte, x int64)
 
 ```
 searchKey: tar.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -2814,7 +2933,6 @@ Writer provides sequential writing of a tar archive. Write.WriteHeader begins a 
 
 ```
 searchKey: tar.NewWriter
-tags: [exported]
 ```
 
 ```Go
@@ -2827,7 +2945,6 @@ NewWriter creates a new Writer writing to w.
 
 ```
 searchKey: tar.Writer.Flush
-tags: [exported]
 ```
 
 ```Go
@@ -2842,7 +2959,6 @@ This is unnecessary as the next call to WriteHeader or Close will implicitly flu
 
 ```
 searchKey: tar.Writer.WriteHeader
-tags: [exported]
 ```
 
 ```Go
@@ -2855,6 +2971,7 @@ WriteHeader writes hdr and prepares to accept the file's contents. The Header.Si
 
 ```
 searchKey: tar.Writer.writeUSTARHeader
+tags: [private]
 ```
 
 ```Go
@@ -2865,6 +2982,7 @@ func (tw *Writer) writeUSTARHeader(hdr *Header) error
 
 ```
 searchKey: tar.Writer.writePAXHeader
+tags: [private]
 ```
 
 ```Go
@@ -2875,6 +2993,7 @@ func (tw *Writer) writePAXHeader(hdr *Header, paxHdrs map[string]string) error
 
 ```
 searchKey: tar.Writer.writeGNUHeader
+tags: [private]
 ```
 
 ```Go
@@ -2885,6 +3004,7 @@ func (tw *Writer) writeGNUHeader(hdr *Header) error
 
 ```
 searchKey: tar.Writer.templateV7Plus
+tags: [private]
 ```
 
 ```Go
@@ -2899,6 +3019,7 @@ The block returned is only valid until the next call to templateV7Plus or writeR
 
 ```
 searchKey: tar.Writer.writeRawFile
+tags: [private]
 ```
 
 ```Go
@@ -2911,6 +3032,7 @@ writeRawFile writes a minimal file with the given name and flag type. It uses fo
 
 ```
 searchKey: tar.Writer.writeRawHeader
+tags: [private]
 ```
 
 ```Go
@@ -2923,7 +3045,6 @@ writeRawHeader writes the value of blk, regardless of its value. It sets up the 
 
 ```
 searchKey: tar.Writer.Write
-tags: [exported]
 ```
 
 ```Go
@@ -2938,6 +3059,7 @@ Calling Write on special types like TypeLink, TypeSymlink, TypeChar, TypeBlock, 
 
 ```
 searchKey: tar.Writer.readFrom
+tags: [private]
 ```
 
 ```Go
@@ -2954,7 +3076,6 @@ TODO(dsnet): Re-export this when adding sparse file support. See [https://golang
 
 ```
 searchKey: tar.Writer.Close
-tags: [exported]
 ```
 
 ```Go
@@ -2967,6 +3088,7 @@ Close closes the tar archive by flushing the padding, and writing the footer. If
 
 ```
 searchKey: tar.fileWriter
+tags: [private]
 ```
 
 ```Go
@@ -2982,6 +3104,7 @@ type fileWriter interface {
 
 ```
 searchKey: tar.stringFormatter
+tags: [private]
 ```
 
 ```Go
@@ -2992,6 +3115,7 @@ type stringFormatter func([]byte, string)
 
 ```
 searchKey: tar.numberFormatter
+tags: [private]
 ```
 
 ```Go
@@ -3002,6 +3126,7 @@ type numberFormatter func([]byte, int64)
 
 ```
 searchKey: tar.regFileWriter
+tags: [private]
 ```
 
 ```Go
@@ -3017,6 +3142,7 @@ regFileWriter is a fileWriter for writing data to a regular file entry.
 
 ```
 searchKey: tar.regFileWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -3027,6 +3153,7 @@ func (fw *regFileWriter) Write(b []byte) (n int, err error)
 
 ```
 searchKey: tar.regFileWriter.ReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -3037,6 +3164,7 @@ func (fw *regFileWriter) ReadFrom(r io.Reader) (int64, error)
 
 ```
 searchKey: tar.regFileWriter.LogicalRemaining
+tags: [private]
 ```
 
 ```Go
@@ -3047,6 +3175,7 @@ func (fw regFileWriter) LogicalRemaining() int64
 
 ```
 searchKey: tar.regFileWriter.PhysicalRemaining
+tags: [private]
 ```
 
 ```Go
@@ -3057,6 +3186,7 @@ func (fw regFileWriter) PhysicalRemaining() int64
 
 ```
 searchKey: tar.sparseFileWriter
+tags: [private]
 ```
 
 ```Go
@@ -3073,6 +3203,7 @@ sparseFileWriter is a fileWriter for writing data to a sparse file entry.
 
 ```
 searchKey: tar.sparseFileWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -3083,6 +3214,7 @@ func (sw *sparseFileWriter) Write(b []byte) (n int, err error)
 
 ```
 searchKey: tar.sparseFileWriter.ReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -3093,6 +3225,7 @@ func (sw *sparseFileWriter) ReadFrom(r io.Reader) (n int64, err error)
 
 ```
 searchKey: tar.sparseFileWriter.LogicalRemaining
+tags: [private]
 ```
 
 ```Go
@@ -3103,6 +3236,7 @@ func (sw sparseFileWriter) LogicalRemaining() int64
 
 ```
 searchKey: tar.sparseFileWriter.PhysicalRemaining
+tags: [private]
 ```
 
 ```Go
@@ -3113,6 +3247,7 @@ func (sw sparseFileWriter) PhysicalRemaining() int64
 
 ```
 searchKey: tar.zeroWriter
+tags: [private]
 ```
 
 ```Go
@@ -3125,6 +3260,7 @@ zeroWriter may only be written with NULs, otherwise it returns errWriteHole.
 
 ```
 searchKey: tar.zeroWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -3135,6 +3271,7 @@ func (zeroWriter) Write(b []byte) (int, error)
 
 ```
 searchKey: tar.reader
+tags: [private]
 ```
 
 ```Go
@@ -3145,6 +3282,7 @@ type reader struct{ io.Reader }
 
 ```
 searchKey: tar.readSeeker
+tags: [private]
 ```
 
 ```Go
@@ -3155,6 +3293,7 @@ type readSeeker struct{ io.ReadSeeker }
 
 ```
 searchKey: tar.readBadSeeker
+tags: [private]
 ```
 
 ```Go
@@ -3165,6 +3304,7 @@ type readBadSeeker struct{ io.ReadSeeker }
 
 ```
 searchKey: tar.readBadSeeker.Seek
+tags: [private]
 ```
 
 ```Go
@@ -3175,6 +3315,7 @@ func (rbs *readBadSeeker) Seek(int64, int) (int64, error)
 
 ```
 searchKey: tar.testNonEmptyReader
+tags: [private]
 ```
 
 ```Go
@@ -3187,6 +3328,7 @@ testNonEmptyReader wraps an io.Reader and ensures that Read is never called with
 
 ```
 searchKey: tar.testNonEmptyReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -3197,6 +3339,7 @@ func (r testNonEmptyReader) Read(b []byte) (int, error)
 
 ```
 searchKey: tar.testError
+tags: [private]
 ```
 
 ```Go
@@ -3207,6 +3350,7 @@ type testError struct{ error }
 
 ```
 searchKey: tar.fileOps
+tags: [private]
 ```
 
 ```Go
@@ -3218,6 +3362,7 @@ type fileOps []interface{} // []T where T is (string | int64)
 
 ```
 searchKey: tar.testFile
+tags: [private]
 ```
 
 ```Go
@@ -3233,6 +3378,7 @@ testFile is an io.ReadWriteSeeker where the IO operations performed on it must m
 
 ```
 searchKey: tar.testFile.Read
+tags: [private]
 ```
 
 ```Go
@@ -3243,6 +3389,7 @@ func (f *testFile) Read(b []byte) (int, error)
 
 ```
 searchKey: tar.testFile.Write
+tags: [private]
 ```
 
 ```Go
@@ -3253,6 +3400,7 @@ func (f *testFile) Write(b []byte) (int, error)
 
 ```
 searchKey: tar.testFile.Seek
+tags: [private]
 ```
 
 ```Go
@@ -3263,6 +3411,7 @@ func (f *testFile) Seek(pos int64, whence int) (int64, error)
 
 ```
 searchKey: tar.headerRoundTripTest
+tags: [private]
 ```
 
 ```Go
@@ -3276,6 +3425,7 @@ type headerRoundTripTest struct {
 
 ```
 searchKey: tar.failOnceWriter
+tags: [private]
 ```
 
 ```Go
@@ -3288,6 +3438,7 @@ failOnceWriter fails exactly once and then always reports success.
 
 ```
 searchKey: tar.failOnceWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -3298,6 +3449,7 @@ func (w *failOnceWriter) Write(b []byte) (int, error)
 
 ```
 searchKey: tar.testNonEmptyWriter
+tags: [private]
 ```
 
 ```Go
@@ -3310,6 +3462,7 @@ testNonEmptyWriter wraps an io.Writer and ensures that Write is never called wit
 
 ```
 searchKey: tar.testNonEmptyWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -3318,14 +3471,11 @@ func (w testNonEmptyWriter) Write(b []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="validateSparseEntries" href="#validateSparseEntries">func validateSparseEntries(sp []sparseEntry, size int64) bool</a>
 
 ```
 searchKey: tar.validateSparseEntries
+tags: [private]
 ```
 
 ```Go
@@ -3338,6 +3488,7 @@ validateSparseEntries reports whether sp is a valid sparse map. It does not matt
 
 ```
 searchKey: tar.alignSparseEntries
+tags: [private]
 ```
 
 ```Go
@@ -3352,6 +3503,7 @@ Even though the Go tar Reader and the BSD tar utility can handle entries with ar
 
 ```
 searchKey: tar.invertSparseEntries
+tags: [private]
 ```
 
 ```Go
@@ -3372,6 +3524,7 @@ This function mutates src and returns a normalized map where:
 
 ```
 searchKey: tar.isHeaderOnlyType
+tags: [private]
 ```
 
 ```Go
@@ -3384,6 +3537,7 @@ isHeaderOnlyType checks if the given type flag is of the type that has no data s
 
 ```
 searchKey: tar.min
+tags: [private]
 ```
 
 ```Go
@@ -3394,6 +3548,7 @@ func min(a, b int64) int64
 
 ```
 searchKey: tar.blockPadding
+tags: [private]
 ```
 
 ```Go
@@ -3406,6 +3561,7 @@ blockPadding computes the number of bytes needed to pad offset up to the nearest
 
 ```
 searchKey: tar.mergePAX
+tags: [private]
 ```
 
 ```Go
@@ -3418,6 +3574,7 @@ mergePAX merges paxHdrs into hdr for all relevant fields of Header.
 
 ```
 searchKey: tar.parsePAX
+tags: [private]
 ```
 
 ```Go
@@ -3430,6 +3587,7 @@ parsePAX parses PAX headers. If an extended header (type 'x') is invalid, ErrHea
 
 ```
 searchKey: tar.mustReadFull
+tags: [private]
 ```
 
 ```Go
@@ -3442,6 +3600,7 @@ mustReadFull is like io.ReadFull except it returns io.ErrUnexpectedEOF when io.E
 
 ```
 searchKey: tar.tryReadFull
+tags: [private]
 ```
 
 ```Go
@@ -3454,6 +3613,7 @@ tryReadFull is like io.ReadFull except it returns io.EOF when it is hit before l
 
 ```
 searchKey: tar.discard
+tags: [private]
 ```
 
 ```Go
@@ -3466,6 +3626,7 @@ discard skips n bytes in r, reporting an error if unable to do so.
 
 ```
 searchKey: tar.statAtime
+tags: [private]
 ```
 
 ```Go
@@ -3476,16 +3637,18 @@ func statAtime(st *syscall.Stat_t) time.Time
 
 ```
 searchKey: tar.statCtime
+tags: [private]
 ```
 
 ```Go
 func statCtime(st *syscall.Stat_t) time.Time
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.stat_unix.go" href="#init.stat_unix.go">func init()</a>
 
 ```
 searchKey: tar.init
+tags: [private]
 ```
 
 ```Go
@@ -3496,6 +3659,7 @@ func init()
 
 ```
 searchKey: tar.statUnix
+tags: [private]
 ```
 
 ```Go
@@ -3506,6 +3670,7 @@ func statUnix(fi fs.FileInfo, h *Header) error
 
 ```
 searchKey: tar.hasNUL
+tags: [private]
 ```
 
 ```Go
@@ -3518,6 +3683,7 @@ hasNUL reports whether the NUL character exists within s.
 
 ```
 searchKey: tar.isASCII
+tags: [private]
 ```
 
 ```Go
@@ -3530,6 +3696,7 @@ isASCII reports whether the input is an ASCII C-style string.
 
 ```
 searchKey: tar.toASCII
+tags: [private]
 ```
 
 ```Go
@@ -3542,6 +3709,7 @@ toASCII converts the input to an ASCII C-style string. This is a best effort con
 
 ```
 searchKey: tar.fitsInBase256
+tags: [private]
 ```
 
 ```Go
@@ -3556,6 +3724,7 @@ If operating in binary mode, this assumes strict GNU binary mode; which means th
 
 ```
 searchKey: tar.fitsInOctal
+tags: [private]
 ```
 
 ```Go
@@ -3568,6 +3737,7 @@ fitsInOctal reports whether the integer x fits in a field n-bytes long using oct
 
 ```
 searchKey: tar.parsePAXTime
+tags: [private]
 ```
 
 ```Go
@@ -3580,6 +3750,7 @@ parsePAXTime takes a string of the form %d.%d as described in the PAX specificat
 
 ```
 searchKey: tar.formatPAXTime
+tags: [private]
 ```
 
 ```Go
@@ -3592,6 +3763,7 @@ formatPAXTime converts ts into a time of the form %d.%d as described in the PAX 
 
 ```
 searchKey: tar.parsePAXRecord
+tags: [private]
 ```
 
 ```Go
@@ -3604,6 +3776,7 @@ parsePAXRecord parses the input PAX record string into a key-value pair. If pars
 
 ```
 searchKey: tar.formatPAXRecord
+tags: [private]
 ```
 
 ```Go
@@ -3616,6 +3789,7 @@ formatPAXRecord formats a single PAX record, prefixing it with the appropriate l
 
 ```
 searchKey: tar.validPAXRecord
+tags: [private]
 ```
 
 ```Go
@@ -3634,6 +3808,7 @@ Keys and values should be UTF-8, but the number of bad writers out there forces 
 
 ```
 searchKey: tar.splitUSTARPath
+tags: [private]
 ```
 
 ```Go
@@ -3646,6 +3821,7 @@ splitUSTARPath splits a path according to USTAR prefix and suffix rules. If the 
 
 ```
 searchKey: tar.ensureEOF
+tags: [private]
 ```
 
 ```Go
@@ -3658,6 +3834,7 @@ ensureEOF checks whether r is at EOF, reporting ErrWriteTooLong if not so.
 
 ```
 searchKey: tar.TestReader
+tags: [private]
 ```
 
 ```Go
@@ -3668,6 +3845,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: tar.TestPartialRead
+tags: [private]
 ```
 
 ```Go
@@ -3678,6 +3856,7 @@ func TestPartialRead(t *testing.T)
 
 ```
 searchKey: tar.TestUninitializedRead
+tags: [private]
 ```
 
 ```Go
@@ -3688,6 +3867,7 @@ func TestUninitializedRead(t *testing.T)
 
 ```
 searchKey: tar.TestReadTruncation
+tags: [private]
 ```
 
 ```Go
@@ -3700,6 +3880,7 @@ TestReadTruncation test the ending condition on various truncated files and that
 
 ```
 searchKey: tar.TestReadHeaderOnly
+tags: [private]
 ```
 
 ```Go
@@ -3712,6 +3893,7 @@ TestReadHeaderOnly tests that Reader does not attempt to read special header-onl
 
 ```
 searchKey: tar.TestMergePAX
+tags: [private]
 ```
 
 ```Go
@@ -3722,6 +3904,7 @@ func TestMergePAX(t *testing.T)
 
 ```
 searchKey: tar.TestParsePAX
+tags: [private]
 ```
 
 ```Go
@@ -3732,6 +3915,7 @@ func TestParsePAX(t *testing.T)
 
 ```
 searchKey: tar.TestReadOldGNUSparseMap
+tags: [private]
 ```
 
 ```Go
@@ -3742,6 +3926,7 @@ func TestReadOldGNUSparseMap(t *testing.T)
 
 ```
 searchKey: tar.TestReadGNUSparsePAXHeaders
+tags: [private]
 ```
 
 ```Go
@@ -3752,6 +3937,7 @@ func TestReadGNUSparsePAXHeaders(t *testing.T)
 
 ```
 searchKey: tar.TestFileReader
+tags: [private]
 ```
 
 ```Go
@@ -3762,6 +3948,7 @@ func TestFileReader(t *testing.T)
 
 ```
 searchKey: tar.TestFitsInBase256
+tags: [private]
 ```
 
 ```Go
@@ -3772,6 +3959,7 @@ func TestFitsInBase256(t *testing.T)
 
 ```
 searchKey: tar.TestParseNumeric
+tags: [private]
 ```
 
 ```Go
@@ -3782,6 +3970,7 @@ func TestParseNumeric(t *testing.T)
 
 ```
 searchKey: tar.TestFormatNumeric
+tags: [private]
 ```
 
 ```Go
@@ -3792,6 +3981,7 @@ func TestFormatNumeric(t *testing.T)
 
 ```
 searchKey: tar.TestFitsInOctal
+tags: [private]
 ```
 
 ```Go
@@ -3802,6 +3992,7 @@ func TestFitsInOctal(t *testing.T)
 
 ```
 searchKey: tar.TestParsePAXTime
+tags: [private]
 ```
 
 ```Go
@@ -3812,6 +4003,7 @@ func TestParsePAXTime(t *testing.T)
 
 ```
 searchKey: tar.TestFormatPAXTime
+tags: [private]
 ```
 
 ```Go
@@ -3822,6 +4014,7 @@ func TestFormatPAXTime(t *testing.T)
 
 ```
 searchKey: tar.TestParsePAXRecord
+tags: [private]
 ```
 
 ```Go
@@ -3832,6 +4025,7 @@ func TestParsePAXRecord(t *testing.T)
 
 ```
 searchKey: tar.TestFormatPAXRecord
+tags: [private]
 ```
 
 ```Go
@@ -3842,6 +4036,7 @@ func TestFormatPAXRecord(t *testing.T)
 
 ```
 searchKey: tar.equalSparseEntries
+tags: [private]
 ```
 
 ```Go
@@ -3852,6 +4047,7 @@ func equalSparseEntries(x, y []sparseEntry) bool
 
 ```
 searchKey: tar.TestSparseEntries
+tags: [private]
 ```
 
 ```Go
@@ -3862,6 +4058,7 @@ func TestSparseEntries(t *testing.T)
 
 ```
 searchKey: tar.TestFileInfoHeader
+tags: [private]
 ```
 
 ```Go
@@ -3872,6 +4069,7 @@ func TestFileInfoHeader(t *testing.T)
 
 ```
 searchKey: tar.TestFileInfoHeaderDir
+tags: [private]
 ```
 
 ```Go
@@ -3882,6 +4080,7 @@ func TestFileInfoHeaderDir(t *testing.T)
 
 ```
 searchKey: tar.TestFileInfoHeaderSymlink
+tags: [private]
 ```
 
 ```Go
@@ -3892,6 +4091,7 @@ func TestFileInfoHeaderSymlink(t *testing.T)
 
 ```
 searchKey: tar.TestRoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -3902,6 +4102,7 @@ func TestRoundTrip(t *testing.T)
 
 ```
 searchKey: tar.TestHeaderRoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -3912,6 +4113,7 @@ func TestHeaderRoundTrip(t *testing.T)
 
 ```
 searchKey: tar.TestHeaderAllowedFormats
+tags: [private]
 ```
 
 ```Go
@@ -3922,6 +4124,7 @@ func TestHeaderAllowedFormats(t *testing.T)
 
 ```
 searchKey: tar.Benchmark
+tags: [private]
 ```
 
 ```Go
@@ -3932,6 +4135,7 @@ func Benchmark(b *testing.B)
 
 ```
 searchKey: tar.bytediff
+tags: [private]
 ```
 
 ```Go
@@ -3942,6 +4146,7 @@ func bytediff(a, b []byte) string
 
 ```
 searchKey: tar.TestWriter
+tags: [private]
 ```
 
 ```Go
@@ -3952,6 +4157,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: tar.TestPax
+tags: [private]
 ```
 
 ```Go
@@ -3962,6 +4168,7 @@ func TestPax(t *testing.T)
 
 ```
 searchKey: tar.TestPaxSymlink
+tags: [private]
 ```
 
 ```Go
@@ -3972,6 +4179,7 @@ func TestPaxSymlink(t *testing.T)
 
 ```
 searchKey: tar.TestPaxNonAscii
+tags: [private]
 ```
 
 ```Go
@@ -3982,6 +4190,7 @@ func TestPaxNonAscii(t *testing.T)
 
 ```
 searchKey: tar.TestPaxXattrs
+tags: [private]
 ```
 
 ```Go
@@ -3992,6 +4201,7 @@ func TestPaxXattrs(t *testing.T)
 
 ```
 searchKey: tar.TestPaxHeadersSorted
+tags: [private]
 ```
 
 ```Go
@@ -4002,6 +4212,7 @@ func TestPaxHeadersSorted(t *testing.T)
 
 ```
 searchKey: tar.TestUSTARLongName
+tags: [private]
 ```
 
 ```Go
@@ -4012,6 +4223,7 @@ func TestUSTARLongName(t *testing.T)
 
 ```
 searchKey: tar.TestValidTypeflagWithPAXHeader
+tags: [private]
 ```
 
 ```Go
@@ -4022,6 +4234,7 @@ func TestValidTypeflagWithPAXHeader(t *testing.T)
 
 ```
 searchKey: tar.TestWriterErrors
+tags: [private]
 ```
 
 ```Go
@@ -4032,6 +4245,7 @@ func TestWriterErrors(t *testing.T)
 
 ```
 searchKey: tar.TestSplitUSTARPath
+tags: [private]
 ```
 
 ```Go
@@ -4042,6 +4256,7 @@ func TestSplitUSTARPath(t *testing.T)
 
 ```
 searchKey: tar.TestIssue12594
+tags: [private]
 ```
 
 ```Go
@@ -4054,6 +4269,7 @@ TestIssue12594 tests that the Writer does not attempt to populate the prefix fie
 
 ```
 searchKey: tar.TestFileWriter
+tags: [private]
 ```
 
 ```Go

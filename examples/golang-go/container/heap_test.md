@@ -28,10 +28,15 @@ This example demonstrates a priority queue built using the heap interface.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IntHeap" href="#IntHeap">type IntHeap []int</a>
 
 ```
 searchKey: heap_test.IntHeap
+tags: [private]
 ```
 
 ```Go
@@ -44,6 +49,7 @@ An IntHeap is a min-heap of ints.
 
 ```
 searchKey: heap_test.IntHeap.Len
+tags: [private]
 ```
 
 ```Go
@@ -54,6 +60,7 @@ func (h IntHeap) Len() int
 
 ```
 searchKey: heap_test.IntHeap.Less
+tags: [private]
 ```
 
 ```Go
@@ -64,6 +71,7 @@ func (h IntHeap) Less(i, j int) bool
 
 ```
 searchKey: heap_test.IntHeap.Swap
+tags: [private]
 ```
 
 ```Go
@@ -74,6 +82,7 @@ func (h IntHeap) Swap(i, j int)
 
 ```
 searchKey: heap_test.IntHeap.Push
+tags: [private]
 ```
 
 ```Go
@@ -84,6 +93,7 @@ func (h *IntHeap) Push(x interface{})
 
 ```
 searchKey: heap_test.IntHeap.Pop
+tags: [private]
 ```
 
 ```Go
@@ -94,6 +104,7 @@ func (h *IntHeap) Pop() interface{}
 
 ```
 searchKey: heap_test.Item
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +122,7 @@ An Item is something we manage in a priority queue.
 
 ```
 searchKey: heap_test.PriorityQueue
+tags: [private]
 ```
 
 ```Go
@@ -123,6 +135,7 @@ A PriorityQueue implements heap.Interface and holds Items.
 
 ```
 searchKey: heap_test.PriorityQueue.Len
+tags: [private]
 ```
 
 ```Go
@@ -133,6 +146,7 @@ func (pq PriorityQueue) Len() int
 
 ```
 searchKey: heap_test.PriorityQueue.Less
+tags: [private]
 ```
 
 ```Go
@@ -143,6 +157,7 @@ func (pq PriorityQueue) Less(i, j int) bool
 
 ```
 searchKey: heap_test.PriorityQueue.Swap
+tags: [private]
 ```
 
 ```Go
@@ -153,6 +168,7 @@ func (pq PriorityQueue) Swap(i, j int)
 
 ```
 searchKey: heap_test.PriorityQueue.Push
+tags: [private]
 ```
 
 ```Go
@@ -163,6 +179,7 @@ func (pq *PriorityQueue) Push(x interface{})
 
 ```
 searchKey: heap_test.PriorityQueue.Pop
+tags: [private]
 ```
 
 ```Go
@@ -173,6 +190,7 @@ func (pq *PriorityQueue) Pop() interface{}
 
 ```
 searchKey: heap_test.PriorityQueue.update
+tags: [private]
 ```
 
 ```Go
@@ -183,10 +201,15 @@ update modifies the priority and value of an Item in the queue.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example_intHeap" href="#Example_intHeap">func Example_intHeap()</a>
 
 ```
 searchKey: heap_test.Example_intHeap
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +222,7 @@ This example inserts several ints into an IntHeap, checks the minimum, and remov
 
 ```
 searchKey: heap_test.Example_priorityQueue
+tags: [private]
 ```
 
 ```Go

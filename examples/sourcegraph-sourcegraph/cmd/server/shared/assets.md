@@ -11,15 +11,10 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NginxConf" href="#NginxConf">var NginxConf</a>
 
 ```
 searchKey: assets.NginxConf
-tags: [exported]
 ```
 
 ```Go
@@ -30,7 +25,6 @@ var NginxConf string
 
 ```
 searchKey: assets.NginxDir
-tags: [exported]
 ```
 
 ```Go
@@ -41,7 +35,6 @@ var NginxDir embed.FS
 
 ```
 searchKey: assets.RedisCacheConf
-tags: [exported]
 ```
 
 ```Go
@@ -52,7 +45,6 @@ var RedisCacheConf string
 
 ```
 searchKey: assets.RedisStoreConf
-tags: [exported]
 ```
 
 ```Go

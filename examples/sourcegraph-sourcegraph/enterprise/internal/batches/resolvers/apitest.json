@@ -4,7 +4,9 @@
     "identifier": "apitest",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/resolvers/apitest",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "GitTarget",
                 "newPage": false,
                 "searchKey": "apitest.GitTarget",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "DiffRange",
                 "newPage": false,
                 "searchKey": "apitest.DiffRange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "DiffStat",
                 "newPage": false,
                 "searchKey": "apitest.DiffStat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "DiffStat.ToDiffStat",
                       "newPage": false,
                       "searchKey": "apitest.DiffStat.ToDiffStat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -129,9 +125,7 @@
                 "identifier": "FileDiffHunk",
                 "newPage": false,
                 "searchKey": "apitest.FileDiffHunk",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -151,9 +145,7 @@
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "apitest.File",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -173,9 +165,7 @@
                 "identifier": "FileDiff",
                 "newPage": false,
                 "searchKey": "apitest.FileDiff",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -195,9 +185,7 @@
                 "identifier": "FileDiffs",
                 "newPage": false,
                 "searchKey": "apitest.FileDiffs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -217,9 +205,7 @@
                 "identifier": "User",
                 "newPage": false,
                 "searchKey": "apitest.User",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -239,9 +225,7 @@
                 "identifier": "Org",
                 "newPage": false,
                 "searchKey": "apitest.Org",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -261,9 +245,7 @@
                 "identifier": "UserOrg",
                 "newPage": false,
                 "searchKey": "apitest.UserOrg",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -283,9 +265,7 @@
                 "identifier": "BatchChange",
                 "newPage": false,
                 "searchKey": "apitest.BatchChange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -305,9 +285,7 @@
                 "identifier": "BatchChangeConnection",
                 "newPage": false,
                 "searchKey": "apitest.BatchChangeConnection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -327,9 +305,7 @@
                 "identifier": "ChangesetEvent",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -349,9 +325,7 @@
                 "identifier": "ChangesetEventConnection",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetEventConnection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -371,9 +345,7 @@
                 "identifier": "Repository",
                 "newPage": false,
                 "searchKey": "apitest.Repository",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -393,9 +365,7 @@
                 "identifier": "ExternalURL",
                 "newPage": false,
                 "searchKey": "apitest.ExternalURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -415,9 +385,7 @@
                 "identifier": "Changeset",
                 "newPage": false,
                 "searchKey": "apitest.Changeset",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -437,9 +405,7 @@
                 "identifier": "Comparison",
                 "newPage": false,
                 "searchKey": "apitest.Comparison",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -459,9 +425,7 @@
                 "identifier": "Label",
                 "newPage": false,
                 "searchKey": "apitest.Label",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -481,9 +445,7 @@
                 "identifier": "ChangesetConnection",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetConnection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -503,9 +465,7 @@
                 "identifier": "ChangesetsStats",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetsStats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -525,9 +485,7 @@
                 "identifier": "ChangesetCounts",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetCounts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -547,9 +505,7 @@
                 "identifier": "BatchSpec",
                 "newPage": false,
                 "searchKey": "apitest.BatchSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -569,9 +525,7 @@
                 "identifier": "ChangesetSpecDelta",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetSpecDelta",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -591,9 +545,7 @@
                 "identifier": "ChangesetSpec",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -613,9 +565,7 @@
                 "identifier": "ChangesetSpecConnection",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetSpecConnection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -635,9 +585,7 @@
                 "identifier": "ChangesetApplyPreviewConnection",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetApplyPreviewConnection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -657,9 +605,7 @@
                 "identifier": "ChangesetApplyPreviewConnectionStats",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetApplyPreviewConnectionStats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -679,9 +625,7 @@
                 "identifier": "ChangesetApplyPreview",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetApplyPreview",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -701,9 +645,7 @@
                 "identifier": "ChangesetApplyPreviewTargets",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetApplyPreviewTargets",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -723,9 +665,7 @@
                 "identifier": "ChangesetSpecDescription",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetSpecDescription",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -745,9 +685,7 @@
                 "identifier": "GitCommitDescription",
                 "newPage": false,
                 "searchKey": "apitest.GitCommitDescription",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -767,9 +705,7 @@
                 "identifier": "PageInfo",
                 "newPage": false,
                 "searchKey": "apitest.PageInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -789,9 +725,7 @@
                 "identifier": "Person",
                 "newPage": false,
                 "searchKey": "apitest.Person",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -811,9 +745,7 @@
                 "identifier": "BatchChangesCredential",
                 "newPage": false,
                 "searchKey": "apitest.BatchChangesCredential",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -833,9 +765,7 @@
                 "identifier": "EmptyResponse",
                 "newPage": false,
                 "searchKey": "apitest.EmptyResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -855,9 +785,7 @@
                 "identifier": "BatchChangesCodeHostsConnection",
                 "newPage": false,
                 "searchKey": "apitest.BatchChangesCodeHostsConnection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -877,9 +805,7 @@
                 "identifier": "BatchChangesCodeHost",
                 "newPage": false,
                 "searchKey": "apitest.BatchChangesCodeHost",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -899,9 +825,7 @@
                 "identifier": "BulkOperation",
                 "newPage": false,
                 "searchKey": "apitest.BulkOperation",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -921,9 +845,7 @@
                 "identifier": "ChangesetJobError",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetJobError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -943,9 +865,7 @@
                 "identifier": "BulkOperationConnection",
                 "newPage": false,
                 "searchKey": "apitest.BulkOperationConnection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -968,7 +888,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -986,9 +908,7 @@
                 "identifier": "MustExec",
                 "newPage": false,
                 "searchKey": "apitest.MustExec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1008,9 +928,7 @@
                 "identifier": "Exec",
                 "newPage": false,
                 "searchKey": "apitest.Exec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1030,7 +948,9 @@
                 "identifier": "toJSON",
                 "newPage": false,
                 "searchKey": "apitest.toJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

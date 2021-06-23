@@ -23,14 +23,11 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="curProviders" href="#curProviders">var curProviders</a>
 
 ```
 searchKey: providers.curProviders
+tags: [private]
 ```
 
 ```Go
@@ -43,6 +40,7 @@ curProviders is a map (package name -> (config string -> Provider)). The first k
 
 ```
 searchKey: providers.curProvidersMu
+tags: [private]
 ```
 
 ```Go
@@ -53,7 +51,6 @@ var curProvidersMu sync.RWMutex
 
 ```
 searchKey: providers.MockProviders
-tags: [exported]
 ```
 
 ```Go
@@ -62,15 +59,10 @@ var MockProviders []Provider
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Provider" href="#Provider">type Provider interface</a>
 
 ```
 searchKey: providers.Provider
-tags: [exported]
 ```
 
 ```Go
@@ -105,7 +97,6 @@ An authentication provider implementation can have multiple Provider instances. 
 
 ```
 searchKey: providers.GetProviderByConfigID
-tags: [exported]
 ```
 
 ```Go
@@ -116,7 +107,6 @@ func GetProviderByConfigID(id ConfigID) Provider
 
 ```
 searchKey: providers.ConfigID
-tags: [exported]
 ```
 
 ```Go
@@ -146,7 +136,6 @@ ConfigID identifies a provider config object in the auth.providers site configur
 
 ```
 searchKey: providers.Info
-tags: [exported]
 ```
 
 ```Go
@@ -173,6 +162,7 @@ Info contains information about an authentication provider.
 
 ```
 searchKey: providers.sortProviders
+tags: [private]
 ```
 
 ```Go
@@ -183,6 +173,7 @@ type sortProviders []Provider
 
 ```
 searchKey: providers.sortProviders.Len
+tags: [private]
 ```
 
 ```Go
@@ -193,6 +184,7 @@ func (p sortProviders) Len() int
 
 ```
 searchKey: providers.sortProviders.Less
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +197,7 @@ Less puts the builtin provider first and sorts the others alphabetically by type
 
 ```
 searchKey: providers.sortProviders.Swap
+tags: [private]
 ```
 
 ```Go
@@ -213,15 +206,10 @@ func (p sortProviders) Swap(i, j int)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Update" href="#Update">func Update(pkgName string, providers []Provider)</a>
 
 ```
 searchKey: providers.Update
-tags: [exported]
 ```
 
 ```Go
@@ -234,7 +222,6 @@ Update updates the set of active authentication provider instances. It replaces 
 
 ```
 searchKey: providers.Providers
-tags: [exported]
 ```
 
 ```Go
@@ -247,7 +234,6 @@ Providers returns the set of currently registered authentication providers. When
 
 ```
 searchKey: providers.BuiltinAuthEnabled
-tags: [exported]
 ```
 
 ```Go

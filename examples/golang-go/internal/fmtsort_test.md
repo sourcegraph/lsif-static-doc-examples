@@ -25,10 +25,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="compareTests" href="#compareTests">var compareTests</a>
 
 ```
 searchKey: fmtsort_test.compareTests
+tags: [private]
 ```
 
 ```Go
@@ -39,6 +44,7 @@ var compareTests = ...
 
 ```
 searchKey: fmtsort_test.iFace
+tags: [private]
 ```
 
 ```Go
@@ -49,6 +55,7 @@ var iFace interface{}
 
 ```
 searchKey: fmtsort_test.sortTests
+tags: [private]
 ```
 
 ```Go
@@ -59,6 +66,7 @@ var sortTests = ...
 
 ```
 searchKey: fmtsort_test.ints
+tags: [private]
 ```
 
 ```Go
@@ -69,6 +77,7 @@ var ints [3]int
 
 ```
 searchKey: fmtsort_test.chans
+tags: [private]
 ```
 
 ```Go
@@ -77,10 +86,15 @@ var chans = [3]chan int{make(chan int), make(chan int), make(chan int)}
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="sortTest" href="#sortTest">type sortTest struct</a>
 
 ```
 searchKey: fmtsort_test.sortTest
+tags: [private]
 ```
 
 ```Go
@@ -94,6 +108,7 @@ type sortTest struct {
 
 ```
 searchKey: fmtsort_test.toy
+tags: [private]
 ```
 
 ```Go
@@ -105,10 +120,15 @@ type toy struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ct" href="#ct">func ct(typ reflect.Type, args ...interface{}) []reflect.Value</a>
 
 ```
 searchKey: fmtsort_test.ct
+tags: [private]
 ```
 
 ```Go
@@ -119,6 +139,7 @@ func ct(typ reflect.Type, args ...interface{}) []reflect.Value
 
 ```
 searchKey: fmtsort_test.TestCompare
+tags: [private]
 ```
 
 ```Go
@@ -129,6 +150,7 @@ func TestCompare(t *testing.T)
 
 ```
 searchKey: fmtsort_test.sprint
+tags: [private]
 ```
 
 ```Go
@@ -139,6 +161,7 @@ func sprint(data interface{}) string
 
 ```
 searchKey: fmtsort_test.sprintKey
+tags: [private]
 ```
 
 ```Go
@@ -151,6 +174,7 @@ sprintKey formats a reflect.Value but gives reproducible values for some problem
 
 ```
 searchKey: fmtsort_test.pointerMap
+tags: [private]
 ```
 
 ```Go
@@ -161,6 +185,7 @@ func pointerMap() map[*int]string
 
 ```
 searchKey: fmtsort_test.unsafePointerMap
+tags: [private]
 ```
 
 ```Go
@@ -171,6 +196,7 @@ func unsafePointerMap() map[unsafe.Pointer]string
 
 ```
 searchKey: fmtsort_test.chanMap
+tags: [private]
 ```
 
 ```Go
@@ -181,6 +207,7 @@ func chanMap() map[chan int]string
 
 ```
 searchKey: fmtsort_test.TestOrder
+tags: [private]
 ```
 
 ```Go
@@ -191,6 +218,7 @@ func TestOrder(t *testing.T)
 
 ```
 searchKey: fmtsort_test.TestInterface
+tags: [private]
 ```
 
 ```Go

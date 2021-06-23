@@ -4,9 +4,7 @@
     "identifier": "cgo",
     "newPage": true,
     "searchKey": "runtime/cgo",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "x_cgo_init",
                 "newPage": false,
                 "searchKey": "cgo.x_cgo_init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "_cgo_init",
                 "newPage": false,
                 "searchKey": "cgo._cgo_init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "x_cgo_thread_start",
                 "newPage": false,
                 "searchKey": "cgo.x_cgo_thread_start",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "_cgo_thread_start",
                 "newPage": false,
                 "searchKey": "cgo._cgo_thread_start",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "x_cgo_sys_thread_create",
                 "newPage": false,
                 "searchKey": "cgo.x_cgo_sys_thread_create",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "_cgo_sys_thread_create",
                 "newPage": false,
                 "searchKey": "cgo._cgo_sys_thread_create",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "x_cgo_notify_runtime_init_done",
                 "newPage": false,
                 "searchKey": "cgo.x_cgo_notify_runtime_init_done",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "_cgo_notify_runtime_init_done",
                 "newPage": false,
                 "searchKey": "cgo._cgo_notify_runtime_init_done",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                 "identifier": "x_cgo_set_context_function",
                 "newPage": false,
                 "searchKey": "cgo.x_cgo_set_context_function",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +238,9 @@
                 "identifier": "_cgo_set_context_function",
                 "newPage": false,
                 "searchKey": "cgo._cgo_set_context_function",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -244,7 +260,9 @@
                 "identifier": "_cgo_yield",
                 "newPage": false,
                 "searchKey": "cgo._cgo_yield",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -264,7 +282,9 @@
                 "identifier": "x_cgo_callers",
                 "newPage": false,
                 "searchKey": "cgo.x_cgo_callers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -284,7 +304,9 @@
                 "identifier": "_cgo_callers",
                 "newPage": false,
                 "searchKey": "cgo._cgo_callers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,7 +326,9 @@
                 "identifier": "handles",
                 "newPage": false,
                 "searchKey": "cgo.handles",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -324,7 +348,9 @@
                 "identifier": "handleIdx",
                 "newPage": false,
                 "searchKey": "cgo.handleIdx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -344,7 +370,9 @@
                 "identifier": "_iscgo",
                 "newPage": false,
                 "searchKey": "cgo._iscgo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,7 +392,9 @@
                 "identifier": "x_cgo_setenv",
                 "newPage": false,
                 "searchKey": "cgo.x_cgo_setenv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -384,7 +414,9 @@
                 "identifier": "_cgo_setenv",
                 "newPage": false,
                 "searchKey": "cgo._cgo_setenv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -404,7 +436,9 @@
                 "identifier": "x_cgo_unsetenv",
                 "newPage": false,
                 "searchKey": "cgo.x_cgo_unsetenv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -424,7 +458,9 @@
                 "identifier": "_cgo_unsetenv",
                 "newPage": false,
                 "searchKey": "cgo._cgo_unsetenv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,9 +483,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -467,9 +501,7 @@
                 "identifier": "Handle",
                 "newPage": false,
                 "searchKey": "cgo.Handle",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -487,9 +519,7 @@
                       "identifier": "NewHandle",
                       "newPage": false,
                       "searchKey": "cgo.NewHandle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -509,9 +539,7 @@
                       "identifier": "Handle.Value",
                       "newPage": false,
                       "searchKey": "cgo.Handle.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -531,9 +559,7 @@
                       "identifier": "Handle.Delete",
                       "newPage": false,
                       "searchKey": "cgo.Handle.Delete",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -559,9 +585,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -579,7 +603,9 @@
                 "identifier": "_runtime_cgo_panic_internal",
                 "newPage": false,
                 "searchKey": "cgo._runtime_cgo_panic_internal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -599,7 +625,9 @@
                 "identifier": "_cgo_panic",
                 "newPage": false,
                 "searchKey": "cgo._cgo_panic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -619,7 +647,9 @@
                 "identifier": "TestHandle",
                 "newPage": false,
                 "searchKey": "cgo.TestHandle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -639,7 +669,9 @@
                 "identifier": "TestInvalidHandle",
                 "newPage": false,
                 "searchKey": "cgo.TestInvalidHandle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -659,7 +691,9 @@
                 "identifier": "BenchmarkHandle",
                 "newPage": false,
                 "searchKey": "cgo.BenchmarkHandle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

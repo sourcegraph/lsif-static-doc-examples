@@ -52,11 +52,14 @@ Package cpu implements processor feature detection used by the Go standard libra
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="GOARCH" href="#GOARCH">const GOARCH</a>
 
 ```
 searchKey: cpu.GOARCH
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +70,6 @@ const GOARCH = "amd64"
 
 ```
 searchKey: cpu.CacheLinePadSize
-tags: [exported]
 ```
 
 ```Go
@@ -78,6 +80,7 @@ const CacheLinePadSize = 64
 
 ```
 searchKey: cpu.cpuid_SSE2
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +93,7 @@ edx bits
 
 ```
 searchKey: cpu.cpuid_SSE3
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +106,7 @@ ecx bits
 
 ```
 searchKey: cpu.cpuid_PCLMULQDQ
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +117,7 @@ const cpuid_PCLMULQDQ = 1 << 1
 
 ```
 searchKey: cpu.cpuid_SSSE3
+tags: [private]
 ```
 
 ```Go
@@ -122,6 +128,7 @@ const cpuid_SSSE3 = 1 << 9
 
 ```
 searchKey: cpu.cpuid_FMA
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +139,7 @@ const cpuid_FMA = 1 << 12
 
 ```
 searchKey: cpu.cpuid_SSE41
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +150,7 @@ const cpuid_SSE41 = 1 << 19
 
 ```
 searchKey: cpu.cpuid_SSE42
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +161,7 @@ const cpuid_SSE42 = 1 << 20
 
 ```
 searchKey: cpu.cpuid_POPCNT
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +172,7 @@ const cpuid_POPCNT = 1 << 23
 
 ```
 searchKey: cpu.cpuid_AES
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +183,7 @@ const cpuid_AES = 1 << 25
 
 ```
 searchKey: cpu.cpuid_OSXSAVE
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +194,7 @@ const cpuid_OSXSAVE = 1 << 27
 
 ```
 searchKey: cpu.cpuid_AVX
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +205,7 @@ const cpuid_AVX = 1 << 28
 
 ```
 searchKey: cpu.cpuid_BMI1
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +218,7 @@ ebx bits
 
 ```
 searchKey: cpu.cpuid_AVX2
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +229,7 @@ const cpuid_AVX2 = 1 << 5
 
 ```
 searchKey: cpu.cpuid_BMI2
+tags: [private]
 ```
 
 ```Go
@@ -224,6 +240,7 @@ const cpuid_BMI2 = 1 << 8
 
 ```
 searchKey: cpu.cpuid_ERMS
+tags: [private]
 ```
 
 ```Go
@@ -234,6 +251,7 @@ const cpuid_ERMS = 1 << 9
 
 ```
 searchKey: cpu.cpuid_ADX
+tags: [private]
 ```
 
 ```Go
@@ -242,11 +260,14 @@ const cpuid_ADX = 1 << 19
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DebugOptions" href="#DebugOptions">var DebugOptions</a>
 
 ```
 searchKey: cpu.DebugOptions
-tags: [exported]
 ```
 
 ```Go
@@ -259,7 +280,6 @@ DebugOptions is set to true by the runtime if the OS supports reading GODEBUG ea
 
 ```
 searchKey: cpu.CacheLineSize
-tags: [exported]
 ```
 
 ```Go
@@ -272,7 +292,6 @@ CacheLineSize is the CPU's assumed cache line size. There is currently no runtim
 
 ```
 searchKey: cpu.X86
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +323,6 @@ The booleans in X86 contain the correspondingly named cpuid feature bit. HasAVX 
 
 ```
 searchKey: cpu.ARM
-tags: [exported]
 ```
 
 ```Go
@@ -322,7 +340,6 @@ The booleans in ARM contain the correspondingly named cpu feature bit. The struc
 
 ```
 searchKey: cpu.ARM64
-tags: [exported]
 ```
 
 ```Go
@@ -347,7 +364,6 @@ The booleans in ARM64 contain the correspondingly named cpu feature bit. The str
 
 ```
 searchKey: cpu.MIPS64X
-tags: [exported]
 ```
 
 ```Go
@@ -362,7 +378,6 @@ var MIPS64X struct {
 
 ```
 searchKey: cpu.PPC64
-tags: [exported]
 ```
 
 ```Go
@@ -382,7 +397,6 @@ For ppc64(le), it is safe to check only for ISA level starting on ISA v3.00, sin
 
 ```
 searchKey: cpu.S390X
-tags: [exported]
 ```
 
 ```Go
@@ -417,6 +431,7 @@ var S390X struct {
 
 ```
 searchKey: cpu.options
+tags: [private]
 ```
 
 ```Go
@@ -429,6 +444,7 @@ options contains the cpu debug options that can be used in GODEBUG. Options are 
 
 ```
 searchKey: cpu.maxExtendedFunctionInformation
+tags: [private]
 ```
 
 ```Go
@@ -439,6 +455,7 @@ var maxExtendedFunctionInformation uint32
 
 ```
 searchKey: cpu.Options
+tags: [private]
 ```
 
 ```Go
@@ -447,11 +464,14 @@ var Options = options
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="CacheLinePad" href="#CacheLinePad">type CacheLinePad struct</a>
 
 ```
 searchKey: cpu.CacheLinePad
-tags: [exported]
 ```
 
 ```Go
@@ -464,6 +484,7 @@ CacheLinePad is used to pad structs to avoid false sharing.
 
 ```
 searchKey: cpu.option
+tags: [private]
 ```
 
 ```Go
@@ -480,11 +501,14 @@ Option names should be lower case. e.g. avx instead of AVX.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Initialize" href="#Initialize">func Initialize(env string)</a>
 
 ```
 searchKey: cpu.Initialize
-tags: [exported]
 ```
 
 ```Go
@@ -497,6 +521,7 @@ Initialize examines the processor and sets the relevant variables above. This is
 
 ```
 searchKey: cpu.processOptions
+tags: [private]
 ```
 
 ```Go
@@ -509,6 +534,7 @@ processOptions enables or disables CPU feature values based on the parsed env st
 
 ```
 searchKey: cpu.indexByte
+tags: [private]
 ```
 
 ```Go
@@ -521,6 +547,7 @@ indexByte returns the index of the first instance of c in s, or -1 if c is not p
 
 ```
 searchKey: cpu.cpuid
+tags: [private]
 ```
 
 ```Go
@@ -533,6 +560,7 @@ cpuid is implemented in cpu_x86.s.
 
 ```
 searchKey: cpu.xgetbv
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +573,7 @@ xgetbv with ecx = 0 is implemented in cpu_x86.s.
 
 ```
 searchKey: cpu.doinit
+tags: [private]
 ```
 
 ```Go
@@ -555,6 +584,7 @@ func doinit()
 
 ```
 searchKey: cpu.isSet
+tags: [private]
 ```
 
 ```Go
@@ -565,7 +595,6 @@ func isSet(hwc uint32, value uint32) bool
 
 ```
 searchKey: cpu.Name
-tags: [exported]
 ```
 
 ```Go
@@ -578,6 +607,7 @@ Name returns the CPU name given by the vendor. If the CPU name can not be determ
 
 ```
 searchKey: cpu.appendBytes
+tags: [private]
 ```
 
 ```Go

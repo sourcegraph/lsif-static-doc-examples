@@ -14,15 +14,10 @@ Package session exports symbols from frontend/internal/session. See the parent p
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ResetMockSessionStore" href="#ResetMockSessionStore">var ResetMockSessionStore</a>
 
 ```
 searchKey: session.ResetMockSessionStore
-tags: [exported]
 ```
 
 ```Go
@@ -33,7 +28,6 @@ var ResetMockSessionStore = session.ResetMockSessionStore
 
 ```
 searchKey: session.SetActor
-tags: [exported]
 ```
 
 ```Go
@@ -44,7 +38,6 @@ var SetActor = session.SetActor
 
 ```
 searchKey: session.SetData
-tags: [exported]
 ```
 
 ```Go
@@ -55,7 +48,6 @@ var SetData = session.SetData
 
 ```
 searchKey: session.GetData
-tags: [exported]
 ```
 
 ```Go
@@ -66,7 +58,6 @@ var GetData = session.GetData
 
 ```
 searchKey: session.InvalidateSessionsByID
-tags: [exported]
 ```
 
 ```Go

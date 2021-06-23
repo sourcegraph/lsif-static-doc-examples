@@ -37,14 +37,11 @@ Package ascii85 implements the ascii85 data encoding as used in the btoa tool an
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="bigtest" href="#bigtest">var bigtest</a>
 
 ```
 searchKey: ascii85.bigtest
+tags: [private]
 ```
 
 ```Go
@@ -55,6 +52,7 @@ var bigtest = ...
 
 ```
 searchKey: ascii85.pairs
+tags: [private]
 ```
 
 ```Go
@@ -76,14 +74,11 @@ var pairs = []testpair{
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="encoder" href="#encoder">type encoder struct</a>
 
 ```
 searchKey: ascii85.encoder
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +95,7 @@ type encoder struct {
 
 ```
 searchKey: ascii85.encoder.Write
+tags: [private]
 ```
 
 ```Go
@@ -110,6 +106,7 @@ func (e *encoder) Write(p []byte) (n int, err error)
 
 ```
 searchKey: ascii85.encoder.Close
+tags: [private]
 ```
 
 ```Go
@@ -122,7 +119,6 @@ Close flushes any pending output from the encoder. It is an error to call Write 
 
 ```
 searchKey: ascii85.CorruptInputError
-tags: [exported]
 ```
 
 ```Go
@@ -133,7 +129,6 @@ type CorruptInputError int64
 
 ```
 searchKey: ascii85.CorruptInputError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -144,6 +139,7 @@ func (e CorruptInputError) Error() string
 
 ```
 searchKey: ascii85.decoder
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +158,7 @@ type decoder struct {
 
 ```
 searchKey: ascii85.decoder.Read
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +169,7 @@ func (d *decoder) Read(p []byte) (n int, err error)
 
 ```
 searchKey: ascii85.testpair
+tags: [private]
 ```
 
 ```Go
@@ -182,15 +180,10 @@ type testpair struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Encode" href="#Encode">func Encode(dst, src []byte) int</a>
 
 ```
 searchKey: ascii85.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -207,7 +200,6 @@ Often, ascii85-encoded data is wrapped in <~ and ~> symbols. Encode does not add
 
 ```
 searchKey: ascii85.MaxEncodedLen
-tags: [exported]
 ```
 
 ```Go
@@ -220,7 +212,6 @@ MaxEncodedLen returns the maximum length of an encoding of n source bytes.
 
 ```
 searchKey: ascii85.NewEncoder
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +224,6 @@ NewEncoder returns a new ascii85 stream encoder. Data written to the returned wr
 
 ```
 searchKey: ascii85.Decode
-tags: [exported]
 ```
 
 ```Go
@@ -250,7 +240,6 @@ NewDecoder wraps an io.Reader interface around Decode.
 
 ```
 searchKey: ascii85.NewDecoder
-tags: [exported]
 ```
 
 ```Go
@@ -263,6 +252,7 @@ NewDecoder constructs a new ascii85 stream decoder.
 
 ```
 searchKey: ascii85.testEqual
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +263,7 @@ func testEqual(t *testing.T, msg string, args ...interface{}) bool
 
 ```
 searchKey: ascii85.strip85
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +274,7 @@ func strip85(s string) string
 
 ```
 searchKey: ascii85.TestEncode
+tags: [private]
 ```
 
 ```Go
@@ -293,6 +285,7 @@ func TestEncode(t *testing.T)
 
 ```
 searchKey: ascii85.TestEncoder
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +296,7 @@ func TestEncoder(t *testing.T)
 
 ```
 searchKey: ascii85.TestEncoderBuffering
+tags: [private]
 ```
 
 ```Go
@@ -313,6 +307,7 @@ func TestEncoderBuffering(t *testing.T)
 
 ```
 searchKey: ascii85.TestDecode
+tags: [private]
 ```
 
 ```Go
@@ -323,6 +318,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: ascii85.TestDecoder
+tags: [private]
 ```
 
 ```Go
@@ -333,6 +329,7 @@ func TestDecoder(t *testing.T)
 
 ```
 searchKey: ascii85.TestDecoderBuffering
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +340,7 @@ func TestDecoderBuffering(t *testing.T)
 
 ```
 searchKey: ascii85.TestDecodeCorrupt
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +351,7 @@ func TestDecodeCorrupt(t *testing.T)
 
 ```
 searchKey: ascii85.TestBig
+tags: [private]
 ```
 
 ```Go
@@ -363,6 +362,7 @@ func TestBig(t *testing.T)
 
 ```
 searchKey: ascii85.TestDecoderInternalWhitespace
+tags: [private]
 ```
 
 ```Go

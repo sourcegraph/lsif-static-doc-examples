@@ -53,10 +53,15 @@ Most services should connect to the frontend for DB access instead, using api.In
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="bulkInsertionKey" href="#bulkInsertionKey">const bulkInsertionKey</a>
 
 ```
 searchKey: dbconn.bulkInsertionKey
+tags: [private]
 ```
 
 ```Go
@@ -65,11 +70,14 @@ const bulkInsertionKey key = iota
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Global" href="#Global">var Global</a>
 
 ```
 searchKey: dbconn.Global
-tags: [exported]
 ```
 
 ```Go
@@ -82,6 +90,7 @@ Global is the global DB connection. Only use this after a call to SetupGlobalCon
 
 ```
 searchKey: dbconn.defaultDataSource
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +101,7 @@ var defaultDataSource = ...
 
 ```
 searchKey: dbconn.defaultApplicationName
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +112,7 @@ var defaultApplicationName = ...
 
 ```
 searchKey: dbconn.versionPattern
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +123,7 @@ var versionPattern = lazyregexp.New(`^PostgreSQL (\d+)\.`)
 
 ```
 searchKey: dbconn.startupTimeout
+tags: [private]
 ```
 
 ```Go
@@ -122,6 +134,7 @@ var startupTimeout = ...
 
 ```
 searchKey: dbconn.registerOnce
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +145,7 @@ var registerOnce sync.Once
 
 ```
 searchKey: dbconn.postgresBulkInsertRowsPattern
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +158,7 @@ postgresBulkInsertRowsPattern matches `($1, $2, $3), ($4, $5, $6), ...` which we
 
 ```
 searchKey: dbconn.postgresBulkInsertRowsReplacement
+tags: [private]
 ```
 
 ```Go
@@ -156,7 +171,6 @@ postgresBulkInsertRowsReplacement replaces the all-placeholder rows matched by t
 
 ```
 searchKey: dbconn.Frontend
-tags: [exported]
 ```
 
 ```Go
@@ -167,7 +181,6 @@ var Frontend = ...
 
 ```
 searchKey: dbconn.CodeIntel
-tags: [exported]
 ```
 
 ```Go
@@ -178,7 +191,6 @@ var CodeIntel = ...
 
 ```
 searchKey: dbconn.CodeInsights
-tags: [exported]
 ```
 
 ```Go
@@ -187,10 +199,15 @@ var CodeInsights = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="key" href="#key">type key int</a>
 
 ```
 searchKey: dbconn.key
+tags: [private]
 ```
 
 ```Go
@@ -201,6 +218,7 @@ type key int
 
 ```
 searchKey: dbconn.hook
+tags: [private]
 ```
 
 ```Go
@@ -211,6 +229,7 @@ type hook struct{}
 
 ```
 searchKey: dbconn.hook.Before
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +242,7 @@ Before implements sqlhooks.Hooks
 
 ```
 searchKey: dbconn.hook.After
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +255,7 @@ After implements sqlhooks.Hooks
 
 ```
 searchKey: dbconn.hook.OnError
+tags: [private]
 ```
 
 ```Go
@@ -247,7 +268,6 @@ After implements sqlhooks.OnErroer
 
 ```
 searchKey: dbconn.Database
-tags: [exported]
 ```
 
 ```Go
@@ -273,6 +293,7 @@ Database describes one of our Postgres (or Postgres-like) databases.
 
 ```
 searchKey: dbconn.stdoutLogger
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +304,7 @@ type stdoutLogger struct{}
 
 ```
 searchKey: dbconn.stdoutLogger.Printf
+tags: [private]
 ```
 
 ```Go
@@ -293,6 +315,7 @@ func (stdoutLogger) Printf(format string, v ...interface{})
 
 ```
 searchKey: dbconn.stdoutLogger.Verbose
+tags: [private]
 ```
 
 ```Go
@@ -301,11 +324,14 @@ func (logger stdoutLogger) Verbose() bool
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SetupGlobalConnection" href="#SetupGlobalConnection">func SetupGlobalConnection(dataSource string) (err error)</a>
 
 ```
 searchKey: dbconn.SetupGlobalConnection
-tags: [exported]
 ```
 
 ```Go
@@ -320,7 +346,6 @@ Note: github.com/jackc/pgx parses the environment as well. This function will al
 
 ```
 searchKey: dbconn.New
-tags: [exported]
 ```
 
 ```Go
@@ -335,7 +360,6 @@ Note: github.com/jackc/pgx parses the environment as well. This function will al
 
 ```
 searchKey: dbconn.NewRaw
-tags: [exported]
 ```
 
 ```Go
@@ -350,6 +374,7 @@ Prefer to call New as it also configures a connection pool and metrics. Use this
 
 ```
 searchKey: dbconn.checkVersion
+tags: [private]
 ```
 
 ```Go
@@ -360,6 +385,7 @@ func checkVersion(db *sql.DB) error
 
 ```
 searchKey: dbconn.buildConfig
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +398,7 @@ buildConfig takes either a Postgres connection string or connection URI, parses 
 
 ```
 searchKey: dbconn.openDBWithStartupWait
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +409,7 @@ func openDBWithStartupWait(cfg *pgx.ConnConfig) (db *sql.DB, err error)
 
 ```
 searchKey: dbconn.isDatabaseLikelyStartingUp
+tags: [private]
 ```
 
 ```Go
@@ -394,7 +422,6 @@ isDatabaseLikelyStartingUp returns whether the err likely just means the Postgre
 
 ```
 searchKey: dbconn.Open
-tags: [exported]
 ```
 
 ```Go
@@ -409,6 +436,7 @@ Open assumes that the database already exists.
 
 ```
 searchKey: dbconn.open
+tags: [private]
 ```
 
 ```Go
@@ -419,7 +447,6 @@ func open(cfg *pgx.ConnConfig) (*sql.DB, error)
 
 ```
 searchKey: dbconn.Ping
-tags: [exported]
 ```
 
 ```Go
@@ -432,7 +459,6 @@ Ping attempts to contact the database and returns a non-nil error upon failure. 
 
 ```
 searchKey: dbconn.BulkInsertion
-tags: [exported]
 ```
 
 ```Go
@@ -445,7 +471,6 @@ BulkInsertion returns true if the bulkInsertionKey context value is true.
 
 ```
 searchKey: dbconn.WithBulkInsertion
-tags: [exported]
 ```
 
 ```Go
@@ -458,6 +483,7 @@ WithBulkInsertion sets the bulkInsertionKey context value.
 
 ```
 searchKey: dbconn.registerPrometheusCollector
+tags: [private]
 ```
 
 ```Go
@@ -468,6 +494,7 @@ func registerPrometheusCollector(db *sql.DB, dbNameSuffix string)
 
 ```
 searchKey: dbconn.configureConnectionPool
+tags: [private]
 ```
 
 ```Go
@@ -480,7 +507,6 @@ configureConnectionPool sets reasonable sizes on the built in DB queue. By defau
 
 ```
 searchKey: dbconn.MigrateDB
-tags: [exported]
 ```
 
 ```Go
@@ -491,7 +517,6 @@ func MigrateDB(db *sql.DB, database *Database) error
 
 ```
 searchKey: dbconn.NewMigrate
-tags: [exported]
 ```
 
 ```Go
@@ -504,7 +529,6 @@ NewMigrate returns a new configured migration object for the given database. The
 
 ```
 searchKey: dbconn.DoMigrate
-tags: [exported]
 ```
 
 ```Go
@@ -517,6 +541,7 @@ DoMigrate runs all up migrations.
 
 ```
 searchKey: dbconn.TestBuildConfig
+tags: [private]
 ```
 
 ```Go

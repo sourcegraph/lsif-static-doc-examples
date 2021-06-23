@@ -4,9 +4,7 @@
     "identifier": "monitoring",
     "newPage": true,
     "searchKey": "monitoring/monitoring",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Number",
                 "newPage": false,
                 "searchKey": "monitoring.Number",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "Milliseconds",
                 "newPage": false,
                 "searchKey": "monitoring.Milliseconds",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "Seconds",
                 "newPage": false,
                 "searchKey": "monitoring.Seconds",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "Percentage",
                 "newPage": false,
                 "searchKey": "monitoring.Percentage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -132,9 +120,7 @@
                 "identifier": "Bytes",
                 "newPage": false,
                 "searchKey": "monitoring.Bytes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -154,9 +140,7 @@
                 "identifier": "BitsPerSecond",
                 "newPage": false,
                 "searchKey": "monitoring.BitsPerSecond",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -176,9 +160,7 @@
                 "identifier": "ReadsPerSecond",
                 "newPage": false,
                 "searchKey": "monitoring.ReadsPerSecond",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -198,9 +180,7 @@
                 "identifier": "WritesPerSecond",
                 "newPage": false,
                 "searchKey": "monitoring.WritesPerSecond",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +200,9 @@
                 "identifier": "canonicalAlertSolutionsURL",
                 "newPage": false,
                 "searchKey": "monitoring.canonicalAlertSolutionsURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -240,7 +222,9 @@
                 "identifier": "canonicalDashboardsDocsURL",
                 "newPage": false,
                 "searchKey": "monitoring.canonicalDashboardsDocsURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +244,9 @@
                 "identifier": "alertSolutionsFile",
                 "newPage": false,
                 "searchKey": "monitoring.alertSolutionsFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -280,7 +266,9 @@
                 "identifier": "dashboardsDocsFile",
                 "newPage": false,
                 "searchKey": "monitoring.dashboardsDocsFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -300,7 +288,9 @@
                 "identifier": "alertSolutionsHeader",
                 "newPage": false,
                 "searchKey": "monitoring.alertSolutionsHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -320,7 +310,9 @@
                 "identifier": "dashboardsHeader",
                 "newPage": false,
                 "searchKey": "monitoring.dashboardsHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -340,7 +332,9 @@
                 "identifier": "localGrafanaURL",
                 "newPage": false,
                 "searchKey": "monitoring.localGrafanaURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -360,7 +354,9 @@
                 "identifier": "localGrafanaCredentials",
                 "newPage": false,
                 "searchKey": "monitoring.localGrafanaCredentials",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -380,7 +376,9 @@
                 "identifier": "localPrometheusURL",
                 "newPage": false,
                 "searchKey": "monitoring.localPrometheusURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -400,9 +398,7 @@
                 "identifier": "ObservableOwnerSearch",
                 "newPage": false,
                 "searchKey": "monitoring.ObservableOwnerSearch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -422,9 +418,7 @@
                 "identifier": "ObservableOwnerBatches",
                 "newPage": false,
                 "searchKey": "monitoring.ObservableOwnerBatches",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -444,9 +438,7 @@
                 "identifier": "ObservableOwnerCodeIntel",
                 "newPage": false,
                 "searchKey": "monitoring.ObservableOwnerCodeIntel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -466,9 +458,7 @@
                 "identifier": "ObservableOwnerDistribution",
                 "newPage": false,
                 "searchKey": "monitoring.ObservableOwnerDistribution",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -488,9 +478,7 @@
                 "identifier": "ObservableOwnerSecurity",
                 "newPage": false,
                 "searchKey": "monitoring.ObservableOwnerSecurity",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -510,9 +498,7 @@
                 "identifier": "ObservableOwnerWeb",
                 "newPage": false,
                 "searchKey": "monitoring.ObservableOwnerWeb",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -532,9 +518,7 @@
                 "identifier": "ObservableOwnerCoreApplication",
                 "newPage": false,
                 "searchKey": "monitoring.ObservableOwnerCoreApplication",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -554,7 +538,9 @@
                 "identifier": "alertRulesFileSuffix",
                 "newPage": false,
                 "searchKey": "monitoring.alertRulesFileSuffix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -577,9 +563,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -597,9 +581,7 @@
                 "identifier": "PanelOptions",
                 "newPage": false,
                 "searchKey": "monitoring.PanelOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -622,9 +604,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -642,9 +622,7 @@
                 "identifier": "UnitType",
                 "newPage": false,
                 "searchKey": "monitoring.UnitType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -662,7 +640,9 @@
                       "identifier": "UnitType.short",
                       "newPage": false,
                       "searchKey": "monitoring.UnitType.short",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -685,7 +665,9 @@
                 "identifier": "documentation",
                 "newPage": false,
                 "searchKey": "monitoring.documentation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -703,7 +685,9 @@
                       "identifier": "renderDocumentation",
                       "newPage": false,
                       "searchKey": "monitoring.renderDocumentation",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -723,7 +707,9 @@
                       "identifier": "documentation.renderAlertSolutionEntry",
                       "newPage": false,
                       "searchKey": "monitoring.documentation.renderAlertSolutionEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -743,7 +729,9 @@
                       "identifier": "documentation.renderDashboardPanelEntry",
                       "newPage": false,
                       "searchKey": "monitoring.documentation.renderDashboardPanelEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -766,9 +754,7 @@
                 "identifier": "GenerateOptions",
                 "newPage": false,
                 "searchKey": "monitoring.GenerateOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -788,9 +774,7 @@
                 "identifier": "Container",
                 "newPage": false,
                 "searchKey": "monitoring.Container",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -808,7 +792,9 @@
                       "identifier": "Container.validate",
                       "newPage": false,
                       "searchKey": "monitoring.Container.validate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -828,7 +814,9 @@
                       "identifier": "Container.renderDashboard",
                       "newPage": false,
                       "searchKey": "monitoring.Container.renderDashboard",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -848,7 +836,9 @@
                       "identifier": "Container.alertDescription",
                       "newPage": false,
                       "searchKey": "monitoring.Container.alertDescription",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -868,7 +858,9 @@
                       "identifier": "Container.renderRules",
                       "newPage": false,
                       "searchKey": "monitoring.Container.renderRules",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -891,9 +883,7 @@
                 "identifier": "Group",
                 "newPage": false,
                 "searchKey": "monitoring.Group",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -911,7 +901,9 @@
                       "identifier": "Group.validate",
                       "newPage": false,
                       "searchKey": "monitoring.Group.validate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -934,9 +926,7 @@
                 "identifier": "Row",
                 "newPage": false,
                 "searchKey": "monitoring.Row",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -954,7 +944,9 @@
                       "identifier": "Row.validate",
                       "newPage": false,
                       "searchKey": "monitoring.Row.validate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -977,9 +969,7 @@
                 "identifier": "ObservableOwner",
                 "newPage": false,
                 "searchKey": "monitoring.ObservableOwner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -997,7 +987,9 @@
                       "identifier": "ObservableOwner.toMarkdown",
                       "newPage": false,
                       "searchKey": "monitoring.ObservableOwner.toMarkdown",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1020,9 +1012,7 @@
                 "identifier": "Observable",
                 "newPage": false,
                 "searchKey": "monitoring.Observable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1040,7 +1030,9 @@
                       "identifier": "Observable.validate",
                       "newPage": false,
                       "searchKey": "monitoring.Observable.validate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1063,9 +1055,7 @@
                 "identifier": "ObservableAlertDefinition",
                 "newPage": false,
                 "searchKey": "monitoring.ObservableAlertDefinition",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1083,9 +1073,7 @@
                       "identifier": "Alert",
                       "newPage": false,
                       "searchKey": "monitoring.Alert",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1105,9 +1093,7 @@
                       "identifier": "ObservableAlertDefinition.GreaterOrEqual",
                       "newPage": false,
                       "searchKey": "monitoring.ObservableAlertDefinition.GreaterOrEqual",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1127,9 +1113,7 @@
                       "identifier": "ObservableAlertDefinition.LessOrEqual",
                       "newPage": false,
                       "searchKey": "monitoring.ObservableAlertDefinition.LessOrEqual",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1149,9 +1133,7 @@
                       "identifier": "ObservableAlertDefinition.Greater",
                       "newPage": false,
                       "searchKey": "monitoring.ObservableAlertDefinition.Greater",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1171,9 +1153,7 @@
                       "identifier": "ObservableAlertDefinition.Less",
                       "newPage": false,
                       "searchKey": "monitoring.ObservableAlertDefinition.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1193,9 +1173,7 @@
                       "identifier": "ObservableAlertDefinition.For",
                       "newPage": false,
                       "searchKey": "monitoring.ObservableAlertDefinition.For",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1215,7 +1193,9 @@
                       "identifier": "ObservableAlertDefinition.isEmpty",
                       "newPage": false,
                       "searchKey": "monitoring.ObservableAlertDefinition.isEmpty",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1235,7 +1215,9 @@
                       "identifier": "ObservableAlertDefinition.validate",
                       "newPage": false,
                       "searchKey": "monitoring.ObservableAlertDefinition.validate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1258,9 +1240,7 @@
                 "identifier": "ObservablePanel",
                 "newPage": false,
                 "searchKey": "monitoring.ObservablePanel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1278,9 +1258,7 @@
                       "identifier": "Panel",
                       "newPage": false,
                       "searchKey": "monitoring.Panel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1300,9 +1278,7 @@
                       "identifier": "PanelMinimal",
                       "newPage": false,
                       "searchKey": "monitoring.PanelMinimal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1322,9 +1298,7 @@
                       "identifier": "PanelHeatmap",
                       "newPage": false,
                       "searchKey": "monitoring.PanelHeatmap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1344,9 +1318,7 @@
                       "identifier": "ObservablePanel.Min",
                       "newPage": false,
                       "searchKey": "monitoring.ObservablePanel.Min",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1366,9 +1338,7 @@
                       "identifier": "ObservablePanel.MinAuto",
                       "newPage": false,
                       "searchKey": "monitoring.ObservablePanel.MinAuto",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1388,9 +1358,7 @@
                       "identifier": "ObservablePanel.Max",
                       "newPage": false,
                       "searchKey": "monitoring.ObservablePanel.Max",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1410,9 +1378,7 @@
                       "identifier": "ObservablePanel.LegendFormat",
                       "newPage": false,
                       "searchKey": "monitoring.ObservablePanel.LegendFormat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1432,9 +1398,7 @@
                       "identifier": "ObservablePanel.Unit",
                       "newPage": false,
                       "searchKey": "monitoring.ObservablePanel.Unit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1454,9 +1418,7 @@
                       "identifier": "ObservablePanel.Interval",
                       "newPage": false,
                       "searchKey": "monitoring.ObservablePanel.Interval",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1476,9 +1438,7 @@
                       "identifier": "ObservablePanel.With",
                       "newPage": false,
                       "searchKey": "monitoring.ObservablePanel.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1498,7 +1458,9 @@
                       "identifier": "ObservablePanel.build",
                       "newPage": false,
                       "searchKey": "monitoring.ObservablePanel.build",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1521,9 +1483,7 @@
                 "identifier": "ObservablePanelOption",
                 "newPage": false,
                 "searchKey": "monitoring.ObservablePanelOption",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1543,7 +1503,9 @@
                 "identifier": "panelOptionsLibrary",
                 "newPage": false,
                 "searchKey": "monitoring.panelOptionsLibrary",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1561,7 +1523,9 @@
                       "identifier": "panelOptionsLibrary.basicPanel",
                       "newPage": false,
                       "searchKey": "monitoring.panelOptionsLibrary.basicPanel",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1581,7 +1545,9 @@
                       "identifier": "panelOptionsLibrary.OpinionatedDefaults",
                       "newPage": false,
                       "searchKey": "monitoring.panelOptionsLibrary.OpinionatedDefaults",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1601,7 +1567,9 @@
                       "identifier": "panelOptionsLibrary.AlertThresholds",
                       "newPage": false,
                       "searchKey": "monitoring.panelOptionsLibrary.AlertThresholds",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1621,7 +1589,9 @@
                       "identifier": "panelOptionsLibrary.ColorOverride",
                       "newPage": false,
                       "searchKey": "monitoring.panelOptionsLibrary.ColorOverride",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1641,7 +1611,9 @@
                       "identifier": "panelOptionsLibrary.LegendOnRight",
                       "newPage": false,
                       "searchKey": "monitoring.panelOptionsLibrary.LegendOnRight",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1661,7 +1633,9 @@
                       "identifier": "panelOptionsLibrary.HoverShowAll",
                       "newPage": false,
                       "searchKey": "monitoring.panelOptionsLibrary.HoverShowAll",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1681,7 +1655,9 @@
                       "identifier": "panelOptionsLibrary.HoverSort",
                       "newPage": false,
                       "searchKey": "monitoring.panelOptionsLibrary.HoverSort",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1701,7 +1677,9 @@
                       "identifier": "panelOptionsLibrary.Fill",
                       "newPage": false,
                       "searchKey": "monitoring.panelOptionsLibrary.Fill",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1721,7 +1699,9 @@
                       "identifier": "panelOptionsLibrary.NoLegend",
                       "newPage": false,
                       "searchKey": "monitoring.panelOptionsLibrary.NoLegend",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1744,7 +1724,9 @@
                 "identifier": "promRule",
                 "newPage": false,
                 "searchKey": "monitoring.promRule",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1762,7 +1744,9 @@
                       "identifier": "promRule.validate",
                       "newPage": false,
                       "searchKey": "monitoring.promRule.validate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1785,7 +1769,9 @@
                 "identifier": "promRulesFile",
                 "newPage": false,
                 "searchKey": "monitoring.promRulesFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1805,7 +1791,9 @@
                 "identifier": "promGroup",
                 "newPage": false,
                 "searchKey": "monitoring.promGroup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1823,7 +1811,9 @@
                       "identifier": "promGroup.validate",
                       "newPage": false,
                       "searchKey": "monitoring.promGroup.validate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1843,7 +1833,9 @@
                       "identifier": "promGroup.appendRow",
                       "newPage": false,
                       "searchKey": "monitoring.promGroup.appendRow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1869,9 +1861,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1889,7 +1879,9 @@
                 "identifier": "setPanelSize",
                 "newPage": false,
                 "searchKey": "monitoring.setPanelSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1909,7 +1901,9 @@
                 "identifier": "setPanelPos",
                 "newPage": false,
                 "searchKey": "monitoring.setPanelPos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1929,7 +1923,9 @@
                 "identifier": "observablePanelID",
                 "newPage": false,
                 "searchKey": "monitoring.observablePanelID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1949,7 +1945,9 @@
                 "identifier": "isValidGrafanaUID",
                 "newPage": false,
                 "searchKey": "monitoring.isValidGrafanaUID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1969,7 +1967,9 @@
                 "identifier": "fprintSubtitle",
                 "newPage": false,
                 "searchKey": "monitoring.fprintSubtitle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1989,7 +1989,9 @@
                 "identifier": "fprintObservableHeader",
                 "newPage": false,
                 "searchKey": "monitoring.fprintObservableHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2009,7 +2011,9 @@
                 "identifier": "fprintOwnedBy",
                 "newPage": false,
                 "searchKey": "monitoring.fprintOwnedBy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2029,7 +2033,9 @@
                 "identifier": "observableDocAnchor",
                 "newPage": false,
                 "searchKey": "monitoring.observableDocAnchor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2049,9 +2055,7 @@
                 "identifier": "Generate",
                 "newPage": false,
                 "searchKey": "monitoring.Generate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2071,7 +2075,9 @@
                 "identifier": "prometheusAlertName",
                 "newPage": false,
                 "searchKey": "monitoring.prometheusAlertName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2091,7 +2097,9 @@
                 "identifier": "pruneAssets",
                 "newPage": false,
                 "searchKey": "monitoring.pruneAssets",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2111,7 +2119,9 @@
                 "identifier": "upperFirst",
                 "newPage": false,
                 "searchKey": "monitoring.upperFirst",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2131,7 +2141,9 @@
                 "identifier": "withPeriod",
                 "newPage": false,
                 "searchKey": "monitoring.withPeriod",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2151,9 +2163,7 @@
                 "identifier": "StringPtr",
                 "newPage": false,
                 "searchKey": "monitoring.StringPtr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2173,7 +2183,9 @@
                 "identifier": "boolPtr",
                 "newPage": false,
                 "searchKey": "monitoring.boolPtr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2193,9 +2205,7 @@
                 "identifier": "Int64Ptr",
                 "newPage": false,
                 "searchKey": "monitoring.Int64Ptr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2215,7 +2225,9 @@
                 "identifier": "toMarkdown",
                 "newPage": false,
                 "searchKey": "monitoring.toMarkdown",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

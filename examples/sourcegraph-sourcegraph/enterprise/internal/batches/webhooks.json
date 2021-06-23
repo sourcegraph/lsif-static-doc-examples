@@ -4,7 +4,9 @@
     "identifier": "webhooks",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/webhooks",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "githubEvents",
                 "newPage": false,
                 "searchKey": "webhooks.githubEvents",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "errExternalServiceNotFound",
                 "newPage": false,
                 "searchKey": "webhooks.errExternalServiceNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "errExternalServiceWrongKind",
                 "newPage": false,
                 "searchKey": "webhooks.errExternalServiceWrongKind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "errPipelineMissingMergeRequest",
                 "newPage": false,
                 "searchKey": "webhooks.errPipelineMissingMergeRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "webhooks.update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +157,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -161,9 +177,7 @@
                 "identifier": "BitbucketServerWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.BitbucketServerWebhook",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -181,9 +195,7 @@
                       "identifier": "NewBitbucketServerWebhook",
                       "newPage": false,
                       "searchKey": "webhooks.NewBitbucketServerWebhook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -203,9 +215,7 @@
                       "identifier": "BitbucketServerWebhook.ServeHTTP",
                       "newPage": false,
                       "searchKey": "webhooks.BitbucketServerWebhook.ServeHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -225,7 +235,9 @@
                       "identifier": "BitbucketServerWebhook.parseEvent",
                       "newPage": false,
                       "searchKey": "webhooks.BitbucketServerWebhook.parseEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -245,7 +257,9 @@
                       "identifier": "BitbucketServerWebhook.convertEvent",
                       "newPage": false,
                       "searchKey": "webhooks.BitbucketServerWebhook.convertEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -268,9 +282,7 @@
                 "identifier": "GitHubWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.GitHubWebhook",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -288,9 +300,7 @@
                       "identifier": "NewGitHubWebhook",
                       "newPage": false,
                       "searchKey": "webhooks.NewGitHubWebhook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -310,9 +320,7 @@
                       "identifier": "GitHubWebhook.Register",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.Register",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -332,7 +340,9 @@
                       "identifier": "GitHubWebhook.handleGitHubWebhook",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.handleGitHubWebhook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -352,7 +362,9 @@
                       "identifier": "GitHubWebhook.convertEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.convertEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -372,7 +384,9 @@
                       "identifier": "GitHubWebhook.issueComment",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.issueComment",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -392,7 +406,9 @@
                       "identifier": "GitHubWebhook.labeledEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.labeledEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -412,7 +428,9 @@
                       "identifier": "GitHubWebhook.readyForReviewEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.readyForReviewEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -432,7 +450,9 @@
                       "identifier": "GitHubWebhook.convertToDraftEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.convertToDraftEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -452,7 +472,9 @@
                       "identifier": "GitHubWebhook.assignedEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.assignedEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -472,7 +494,9 @@
                       "identifier": "GitHubWebhook.unassignedEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.unassignedEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -492,7 +516,9 @@
                       "identifier": "GitHubWebhook.reviewRequestedEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.reviewRequestedEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -512,7 +538,9 @@
                       "identifier": "GitHubWebhook.reviewRequestRemovedEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.reviewRequestRemovedEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -532,7 +560,9 @@
                       "identifier": "GitHubWebhook.renamedTitleEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.renamedTitleEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -552,7 +582,9 @@
                       "identifier": "GitHubWebhook.closedOrMergeEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.closedOrMergeEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -572,7 +604,9 @@
                       "identifier": "GitHubWebhook.reopenedEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.reopenedEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -592,7 +626,9 @@
                       "identifier": "GitHubWebhook.pullRequestReviewEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.pullRequestReviewEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -612,7 +648,9 @@
                       "identifier": "GitHubWebhook.pullRequestReviewCommentEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.pullRequestReviewCommentEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -632,7 +670,9 @@
                       "identifier": "GitHubWebhook.commitStatusEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.commitStatusEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -652,7 +692,9 @@
                       "identifier": "GitHubWebhook.checkSuiteEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.checkSuiteEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -672,7 +714,9 @@
                       "identifier": "GitHubWebhook.checkRunEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.checkRunEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -695,9 +739,7 @@
                 "identifier": "GitLabWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.GitLabWebhook",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -715,9 +757,7 @@
                       "identifier": "NewGitLabWebhook",
                       "newPage": false,
                       "searchKey": "webhooks.NewGitLabWebhook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -737,9 +777,7 @@
                       "identifier": "GitLabWebhook.ServeHTTP",
                       "newPage": false,
                       "searchKey": "webhooks.GitLabWebhook.ServeHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -759,7 +797,9 @@
                       "identifier": "GitLabWebhook.getExternalServiceFromRawID",
                       "newPage": false,
                       "searchKey": "webhooks.GitLabWebhook.getExternalServiceFromRawID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -779,7 +819,9 @@
                       "identifier": "GitLabWebhook.handleEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitLabWebhook.handleEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -799,7 +841,9 @@
                       "identifier": "GitLabWebhook.enqueueChangesetSyncFromEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitLabWebhook.enqueueChangesetSyncFromEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -819,7 +863,9 @@
                       "identifier": "GitLabWebhook.handlePipelineEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitLabWebhook.handlePipelineEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -839,7 +885,9 @@
                       "identifier": "GitLabWebhook.getChangesetForPR",
                       "newPage": false,
                       "searchKey": "webhooks.GitLabWebhook.getChangesetForPR",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -862,9 +910,7 @@
                 "identifier": "Webhook",
                 "newPage": false,
                 "searchKey": "webhooks.Webhook",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -882,7 +928,9 @@
                       "identifier": "Webhook.getRepoForPR",
                       "newPage": false,
                       "searchKey": "webhooks.Webhook.getRepoForPR",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -902,7 +950,9 @@
                       "identifier": "Webhook.upsertChangesetEvent",
                       "newPage": false,
                       "searchKey": "webhooks.Webhook.upsertChangesetEvent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -925,9 +975,7 @@
                 "identifier": "PR",
                 "newPage": false,
                 "searchKey": "webhooks.PR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -945,7 +993,9 @@
                       "identifier": "gitlabToPR",
                       "newPage": false,
                       "searchKey": "webhooks.gitlabToPR",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -968,7 +1018,9 @@
                 "identifier": "keyer",
                 "newPage": false,
                 "searchKey": "webhooks.keyer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -988,7 +1040,9 @@
                 "identifier": "httpError",
                 "newPage": false,
                 "searchKey": "webhooks.httpError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1006,7 +1060,9 @@
                       "identifier": "httpError.Error",
                       "newPage": false,
                       "searchKey": "webhooks.httpError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1029,7 +1085,9 @@
                 "identifier": "brokenDB",
                 "newPage": false,
                 "searchKey": "webhooks.brokenDB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1047,7 +1105,9 @@
                       "identifier": "brokenDB.QueryContext",
                       "newPage": false,
                       "searchKey": "webhooks.brokenDB.QueryContext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1067,7 +1127,9 @@
                       "identifier": "brokenDB.ExecContext",
                       "newPage": false,
                       "searchKey": "webhooks.brokenDB.ExecContext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1087,7 +1149,9 @@
                       "identifier": "brokenDB.QueryRowContext",
                       "newPage": false,
                       "searchKey": "webhooks.brokenDB.QueryRowContext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1110,7 +1174,9 @@
                 "identifier": "brokenReader",
                 "newPage": false,
                 "searchKey": "webhooks.brokenReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1128,7 +1194,9 @@
                       "identifier": "brokenReader.Close",
                       "newPage": false,
                       "searchKey": "webhooks.brokenReader.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1148,7 +1216,9 @@
                       "identifier": "brokenReader.Read",
                       "newPage": false,
                       "searchKey": "webhooks.brokenReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1171,7 +1241,9 @@
                 "identifier": "nestedTx",
                 "newPage": false,
                 "searchKey": "webhooks.nestedTx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1189,7 +1261,9 @@
                       "identifier": "nestedTx.Rollback",
                       "newPage": false,
                       "searchKey": "webhooks.nestedTx.Rollback",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1209,7 +1283,9 @@
                       "identifier": "nestedTx.Commit",
                       "newPage": false,
                       "searchKey": "webhooks.nestedTx.Commit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1229,7 +1305,9 @@
                       "identifier": "nestedTx.BeginTx",
                       "newPage": false,
                       "searchKey": "webhooks.nestedTx.BeginTx",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1252,7 +1330,9 @@
                 "identifier": "noNestingTx",
                 "newPage": false,
                 "searchKey": "webhooks.noNestingTx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1270,7 +1350,9 @@
                       "identifier": "noNestingTx.BeginTx",
                       "newPage": false,
                       "searchKey": "webhooks.noNestingTx.BeginTx",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1293,7 +1375,9 @@
                 "identifier": "webhookTestCase",
                 "newPage": false,
                 "searchKey": "webhooks.webhookTestCase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1311,7 +1395,9 @@
                       "identifier": "loadWebhookTestCase",
                       "newPage": false,
                       "searchKey": "webhooks.loadWebhookTestCase",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1337,7 +1423,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1355,7 +1443,9 @@
                 "identifier": "validateGitLabSecret",
                 "newPage": false,
                 "searchKey": "webhooks.validateGitLabSecret",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1375,7 +1465,9 @@
                 "identifier": "extractExternalServiceID",
                 "newPage": false,
                 "searchKey": "webhooks.extractExternalServiceID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1395,7 +1487,9 @@
                 "identifier": "respond",
                 "newPage": false,
                 "searchKey": "webhooks.respond",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1415,7 +1509,9 @@
                 "identifier": "testBitbucketWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.testBitbucketWebhook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1435,7 +1531,9 @@
                 "identifier": "testGitHubWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.testGitHubWebhook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1455,7 +1553,9 @@
                 "identifier": "testGitLabWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.testGitLabWebhook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1475,7 +1575,9 @@
                 "identifier": "TestValidateGitLabSecret",
                 "newPage": false,
                 "searchKey": "webhooks.TestValidateGitLabSecret",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1495,7 +1597,9 @@
                 "identifier": "gitLabTestSetup",
                 "newPage": false,
                 "searchKey": "webhooks.gitLabTestSetup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1515,7 +1619,9 @@
                 "identifier": "assertBodyIncludes",
                 "newPage": false,
                 "searchKey": "webhooks.assertBodyIncludes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1535,7 +1641,9 @@
                 "identifier": "assertChangesetEventForChangeset",
                 "newPage": false,
                 "searchKey": "webhooks.assertChangesetEventForChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1555,7 +1663,9 @@
                 "identifier": "createGitLabExternalService",
                 "newPage": false,
                 "searchKey": "webhooks.createGitLabExternalService",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1575,7 +1685,9 @@
                 "identifier": "createGitLabRepo",
                 "newPage": false,
                 "searchKey": "webhooks.createGitLabRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1595,7 +1707,9 @@
                 "identifier": "createGitLabChangeset",
                 "newPage": false,
                 "searchKey": "webhooks.createGitLabChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1615,7 +1729,9 @@
                 "identifier": "createMergeRequestPayload",
                 "newPage": false,
                 "searchKey": "webhooks.createMergeRequestPayload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1635,7 +1751,9 @@
                 "identifier": "createPipelinePayload",
                 "newPage": false,
                 "searchKey": "webhooks.createPipelinePayload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1655,7 +1773,9 @@
                 "identifier": "getSingleRepo",
                 "newPage": false,
                 "searchKey": "webhooks.getSingleRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1675,7 +1795,9 @@
                 "identifier": "sign",
                 "newPage": false,
                 "searchKey": "webhooks.sign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1695,7 +1817,9 @@
                 "identifier": "TestWebhooksIntegration",
                 "newPage": false,
                 "searchKey": "webhooks.TestWebhooksIntegration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -26,10 +26,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="urlMusMu" href="#urlMusMu">var urlMusMu</a>
 
 ```
 searchKey: diskcache.urlMusMu
+tags: [private]
 ```
 
 ```Go
@@ -40,6 +45,7 @@ var urlMusMu sync.Mutex
 
 ```
 searchKey: diskcache.urlMus
+tags: [private]
 ```
 
 ```Go
@@ -48,11 +54,14 @@ var urlMus = map[string]*sync.Mutex{}
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Store" href="#Store">type Store struct</a>
 
 ```
 searchKey: diskcache.Store
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +90,6 @@ Store is an on disk cache, with items cached via calls to Open.
 
 ```
 searchKey: diskcache.Store.Open
-tags: [exported]
 ```
 
 ```Go
@@ -94,7 +102,6 @@ Open will open a file from the local cache with key. If missing, fetcher will fi
 
 ```
 searchKey: diskcache.Store.OpenWithPath
-tags: [exported]
 ```
 
 ```Go
@@ -107,6 +114,7 @@ OpenWithPath will open a file from the local cache with key. If missing, fetcher
 
 ```
 searchKey: diskcache.Store.path
+tags: [private]
 ```
 
 ```Go
@@ -119,7 +127,6 @@ path returns the path for key.
 
 ```
 searchKey: diskcache.Store.Evict
-tags: [exported]
 ```
 
 ```Go
@@ -132,7 +139,6 @@ Evict will remove files from Store.Dir until it is smaller than maxCacheSizeByte
 
 ```
 searchKey: diskcache.File
-tags: [exported]
 ```
 
 ```Go
@@ -150,6 +156,7 @@ File is an os.File, but includes the Path
 
 ```
 searchKey: diskcache.doFetch
+tags: [private]
 ```
 
 ```Go
@@ -160,7 +167,6 @@ func doFetch(ctx context.Context, path string, fetcher FetcherWithPath) (file *F
 
 ```
 searchKey: diskcache.Fetcher
-tags: [exported]
 ```
 
 ```Go
@@ -173,7 +179,6 @@ Fetcher returns a ReadCloser. It is used by Open if the key is not in the cache.
 
 ```
 searchKey: diskcache.FetcherWithPath
-tags: [exported]
 ```
 
 ```Go
@@ -186,7 +191,6 @@ FetcherWithPath writes a cache entry to the given file. It is used by Open if th
 
 ```
 searchKey: diskcache.EvictStats
-tags: [exported]
 ```
 
 ```Go
@@ -203,10 +207,15 @@ EvictStats is information gathered during Evict.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="copyAndClose" href="#copyAndClose">func copyAndClose(dst io.WriteCloser, src io.ReadCloser) error</a>
 
 ```
 searchKey: diskcache.copyAndClose
+tags: [private]
 ```
 
 ```Go
@@ -217,6 +226,7 @@ func copyAndClose(dst io.WriteCloser, src io.ReadCloser) error
 
 ```
 searchKey: diskcache.touch
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +239,7 @@ touch updates the modified time to time.Now(). It is best-effort, and will log i
 
 ```
 searchKey: diskcache.fsync
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +250,7 @@ func fsync(path string) error
 
 ```
 searchKey: diskcache.urlMu
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +261,7 @@ func urlMu(path string) *sync.Mutex
 
 ```
 searchKey: diskcache.TestOpen
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "commitgraph",
     "newPage": true,
     "searchKey": "enterprise/cmd/worker/internal/codeintel/commitgraph",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "DBStore",
                 "newPage": false,
                 "searchKey": "commitgraph.DBStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "Locker",
                 "newPage": false,
                 "searchKey": "commitgraph.Locker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "GitserverClient",
                 "newPage": false,
                 "searchKey": "commitgraph.GitserverClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +104,9 @@
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "commitgraph.operations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +124,9 @@
                       "identifier": "newOperations",
                       "newPage": false,
                       "searchKey": "commitgraph.newOperations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -147,9 +149,7 @@
                 "identifier": "Updater",
                 "newPage": false,
                 "searchKey": "commitgraph.Updater",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -167,9 +167,7 @@
                       "identifier": "Updater.Handle",
                       "newPage": false,
                       "searchKey": "commitgraph.Updater.Handle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -189,9 +187,7 @@
                       "identifier": "Updater.HandleError",
                       "newPage": false,
                       "searchKey": "commitgraph.Updater.HandleError",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -211,7 +207,9 @@
                       "identifier": "Updater.tryUpdate",
                       "newPage": false,
                       "searchKey": "commitgraph.Updater.tryUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -231,7 +229,9 @@
                       "identifier": "Updater.update",
                       "newPage": false,
                       "searchKey": "commitgraph.Updater.update",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -251,7 +251,9 @@
                       "identifier": "Updater.getCommitGraph",
                       "newPage": false,
                       "searchKey": "commitgraph.Updater.getCommitGraph",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -274,7 +276,9 @@
                 "identifier": "MockDBStore",
                 "newPage": false,
                 "searchKey": "commitgraph.MockDBStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -292,7 +296,9 @@
                       "identifier": "NewMockDBStore",
                       "newPage": false,
                       "searchKey": "commitgraph.NewMockDBStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -312,7 +318,9 @@
                       "identifier": "NewMockDBStoreFrom",
                       "newPage": false,
                       "searchKey": "commitgraph.NewMockDBStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -332,7 +340,9 @@
                       "identifier": "MockDBStore.CalculateVisibleUploads",
                       "newPage": false,
                       "searchKey": "commitgraph.MockDBStore.CalculateVisibleUploads",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -352,7 +362,9 @@
                       "identifier": "MockDBStore.DirtyRepositories",
                       "newPage": false,
                       "searchKey": "commitgraph.MockDBStore.DirtyRepositories",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -372,7 +384,9 @@
                       "identifier": "MockDBStore.GetOldestCommitDate",
                       "newPage": false,
                       "searchKey": "commitgraph.MockDBStore.GetOldestCommitDate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -395,7 +409,9 @@
                 "identifier": "DBStoreCalculateVisibleUploadsFunc",
                 "newPage": false,
                 "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -413,7 +429,9 @@
                       "identifier": "DBStoreCalculateVisibleUploadsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -433,7 +451,9 @@
                       "identifier": "DBStoreCalculateVisibleUploadsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -453,7 +473,9 @@
                       "identifier": "DBStoreCalculateVisibleUploadsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -473,7 +495,9 @@
                       "identifier": "DBStoreCalculateVisibleUploadsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -493,7 +517,9 @@
                       "identifier": "DBStoreCalculateVisibleUploadsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -513,7 +539,9 @@
                       "identifier": "DBStoreCalculateVisibleUploadsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -533,7 +561,9 @@
                       "identifier": "DBStoreCalculateVisibleUploadsFunc.History",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -556,7 +586,9 @@
                 "identifier": "DBStoreCalculateVisibleUploadsFuncCall",
                 "newPage": false,
                 "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -574,7 +606,9 @@
                       "identifier": "DBStoreCalculateVisibleUploadsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -594,7 +628,9 @@
                       "identifier": "DBStoreCalculateVisibleUploadsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -617,7 +653,9 @@
                 "identifier": "DBStoreDirtyRepositoriesFunc",
                 "newPage": false,
                 "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -635,7 +673,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -655,7 +695,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -675,7 +717,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -695,7 +739,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -715,7 +761,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -735,7 +783,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -755,7 +805,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.History",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -778,7 +830,9 @@
                 "identifier": "DBStoreDirtyRepositoriesFuncCall",
                 "newPage": false,
                 "searchKey": "commitgraph.DBStoreDirtyRepositoriesFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -796,7 +850,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreDirtyRepositoriesFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -816,7 +872,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreDirtyRepositoriesFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -839,7 +897,9 @@
                 "identifier": "DBStoreGetOldestCommitDateFunc",
                 "newPage": false,
                 "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -857,7 +917,9 @@
                       "identifier": "DBStoreGetOldestCommitDateFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -877,7 +939,9 @@
                       "identifier": "DBStoreGetOldestCommitDateFunc.PushHook",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -897,7 +961,9 @@
                       "identifier": "DBStoreGetOldestCommitDateFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -917,7 +983,9 @@
                       "identifier": "DBStoreGetOldestCommitDateFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -937,7 +1005,9 @@
                       "identifier": "DBStoreGetOldestCommitDateFunc.nextHook",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -957,7 +1027,9 @@
                       "identifier": "DBStoreGetOldestCommitDateFunc.appendCall",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -977,7 +1049,9 @@
                       "identifier": "DBStoreGetOldestCommitDateFunc.History",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1000,7 +1074,9 @@
                 "identifier": "DBStoreGetOldestCommitDateFuncCall",
                 "newPage": false,
                 "searchKey": "commitgraph.DBStoreGetOldestCommitDateFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1018,7 +1094,9 @@
                       "identifier": "DBStoreGetOldestCommitDateFuncCall.Args",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreGetOldestCommitDateFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1038,7 +1116,9 @@
                       "identifier": "DBStoreGetOldestCommitDateFuncCall.Results",
                       "newPage": false,
                       "searchKey": "commitgraph.DBStoreGetOldestCommitDateFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1061,7 +1141,9 @@
                 "identifier": "MockGitserverClient",
                 "newPage": false,
                 "searchKey": "commitgraph.MockGitserverClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1079,7 +1161,9 @@
                       "identifier": "NewMockGitserverClient",
                       "newPage": false,
                       "searchKey": "commitgraph.NewMockGitserverClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1099,7 +1183,9 @@
                       "identifier": "NewMockGitserverClientFrom",
                       "newPage": false,
                       "searchKey": "commitgraph.NewMockGitserverClientFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1119,7 +1205,9 @@
                       "identifier": "MockGitserverClient.CommitGraph",
                       "newPage": false,
                       "searchKey": "commitgraph.MockGitserverClient.CommitGraph",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1139,7 +1227,9 @@
                       "identifier": "MockGitserverClient.Head",
                       "newPage": false,
                       "searchKey": "commitgraph.MockGitserverClient.Head",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1162,7 +1252,9 @@
                 "identifier": "GitserverClientCommitGraphFunc",
                 "newPage": false,
                 "searchKey": "commitgraph.GitserverClientCommitGraphFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1180,7 +1272,9 @@
                       "identifier": "GitserverClientCommitGraphFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientCommitGraphFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1200,7 +1294,9 @@
                       "identifier": "GitserverClientCommitGraphFunc.PushHook",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientCommitGraphFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1220,7 +1316,9 @@
                       "identifier": "GitserverClientCommitGraphFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientCommitGraphFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1240,7 +1338,9 @@
                       "identifier": "GitserverClientCommitGraphFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientCommitGraphFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1260,7 +1360,9 @@
                       "identifier": "GitserverClientCommitGraphFunc.nextHook",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientCommitGraphFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1280,7 +1382,9 @@
                       "identifier": "GitserverClientCommitGraphFunc.appendCall",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientCommitGraphFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1300,7 +1404,9 @@
                       "identifier": "GitserverClientCommitGraphFunc.History",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientCommitGraphFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1323,7 +1429,9 @@
                 "identifier": "GitserverClientCommitGraphFuncCall",
                 "newPage": false,
                 "searchKey": "commitgraph.GitserverClientCommitGraphFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1341,7 +1449,9 @@
                       "identifier": "GitserverClientCommitGraphFuncCall.Args",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientCommitGraphFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1361,7 +1471,9 @@
                       "identifier": "GitserverClientCommitGraphFuncCall.Results",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientCommitGraphFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1384,7 +1496,9 @@
                 "identifier": "GitserverClientHeadFunc",
                 "newPage": false,
                 "searchKey": "commitgraph.GitserverClientHeadFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1402,7 +1516,9 @@
                       "identifier": "GitserverClientHeadFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientHeadFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1422,7 +1538,9 @@
                       "identifier": "GitserverClientHeadFunc.PushHook",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientHeadFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1442,7 +1560,9 @@
                       "identifier": "GitserverClientHeadFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientHeadFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1462,7 +1582,9 @@
                       "identifier": "GitserverClientHeadFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientHeadFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1482,7 +1604,9 @@
                       "identifier": "GitserverClientHeadFunc.nextHook",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientHeadFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1502,7 +1626,9 @@
                       "identifier": "GitserverClientHeadFunc.appendCall",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientHeadFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1522,7 +1648,9 @@
                       "identifier": "GitserverClientHeadFunc.History",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientHeadFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1545,7 +1673,9 @@
                 "identifier": "GitserverClientHeadFuncCall",
                 "newPage": false,
                 "searchKey": "commitgraph.GitserverClientHeadFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1563,7 +1693,9 @@
                       "identifier": "GitserverClientHeadFuncCall.Args",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientHeadFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1583,7 +1715,9 @@
                       "identifier": "GitserverClientHeadFuncCall.Results",
                       "newPage": false,
                       "searchKey": "commitgraph.GitserverClientHeadFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1606,7 +1740,9 @@
                 "identifier": "MockLocker",
                 "newPage": false,
                 "searchKey": "commitgraph.MockLocker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1624,7 +1760,9 @@
                       "identifier": "NewMockLocker",
                       "newPage": false,
                       "searchKey": "commitgraph.NewMockLocker",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1644,7 +1782,9 @@
                       "identifier": "NewMockLockerFrom",
                       "newPage": false,
                       "searchKey": "commitgraph.NewMockLockerFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1664,7 +1804,9 @@
                       "identifier": "MockLocker.Lock",
                       "newPage": false,
                       "searchKey": "commitgraph.MockLocker.Lock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1687,7 +1829,9 @@
                 "identifier": "LockerLockFunc",
                 "newPage": false,
                 "searchKey": "commitgraph.LockerLockFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1705,7 +1849,9 @@
                       "identifier": "LockerLockFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "commitgraph.LockerLockFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1725,7 +1871,9 @@
                       "identifier": "LockerLockFunc.PushHook",
                       "newPage": false,
                       "searchKey": "commitgraph.LockerLockFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1745,7 +1893,9 @@
                       "identifier": "LockerLockFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.LockerLockFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1765,7 +1915,9 @@
                       "identifier": "LockerLockFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "commitgraph.LockerLockFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1785,7 +1937,9 @@
                       "identifier": "LockerLockFunc.nextHook",
                       "newPage": false,
                       "searchKey": "commitgraph.LockerLockFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1805,7 +1959,9 @@
                       "identifier": "LockerLockFunc.appendCall",
                       "newPage": false,
                       "searchKey": "commitgraph.LockerLockFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1825,7 +1981,9 @@
                       "identifier": "LockerLockFunc.History",
                       "newPage": false,
                       "searchKey": "commitgraph.LockerLockFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1848,7 +2006,9 @@
                 "identifier": "LockerLockFuncCall",
                 "newPage": false,
                 "searchKey": "commitgraph.LockerLockFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1866,7 +2026,9 @@
                       "identifier": "LockerLockFuncCall.Args",
                       "newPage": false,
                       "searchKey": "commitgraph.LockerLockFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1886,7 +2048,9 @@
                       "identifier": "LockerLockFuncCall.Results",
                       "newPage": false,
                       "searchKey": "commitgraph.LockerLockFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1912,7 +2076,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1930,9 +2096,7 @@
                 "identifier": "NewUpdater",
                 "newPage": false,
                 "searchKey": "commitgraph.NewUpdater",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1952,7 +2116,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "commitgraph.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1972,7 +2138,9 @@
                 "identifier": "TestUpdater",
                 "newPage": false,
                 "searchKey": "commitgraph.TestUpdater",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1992,7 +2160,9 @@
                 "identifier": "TestUpdaterNoUploads",
                 "newPage": false,
                 "searchKey": "commitgraph.TestUpdaterNoUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2012,7 +2182,9 @@
                 "identifier": "TestUpdaterLocked",
                 "newPage": false,
                 "searchKey": "commitgraph.TestUpdaterLocked",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

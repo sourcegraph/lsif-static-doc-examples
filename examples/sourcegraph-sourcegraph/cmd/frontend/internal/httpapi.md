@@ -39,7 +39,7 @@ Package httpapi contains the HTTP API.
     * [func writeJSON(w http.ResponseWriter, v interface{}) error](#writeJSON)
     * [func NewHandler(db dbutil.DB, m *mux.Router, schema *graphql.Schema, githubWebhook webhooks.Registerer, gitlabWebhook, bitbucketServerWebhook http.Handler, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimiter graphqlbackend.LimitWatcher) http.Handler](#NewHandler)
     * [func NewInternalHandler(m *mux.Router, db dbutil.DB, schema *graphql.Schema, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimitWatcher graphqlbackend.LimitWatcher) http.Handler](#NewInternalHandler)
-    * [func init()](#init)
+    * [func init()](#init.httpapi.go)
     * [func jsonMiddleware(errorHandler *errorHandler) func(func(http.ResponseWriter, *http.Request) error) http.Handler](#jsonMiddleware)
     * [func serveReposGetByName(w http.ResponseWriter, r *http.Request) error](#serveReposGetByName)
     * [func servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#servePhabricatorRepoCreate)
@@ -74,10 +74,10 @@ Package httpapi contains the HTTP API.
     * [func srcCliVersion() string](#srcCliVersion)
     * [func isExpectedRelease(filename string) bool](#isExpectedRelease)
     * [func telemetryHandler(db dbutil.DB) http.Handler](#telemetryHandler)
-    * [func init()](#init)
+    * [func init()](#init.api_test.go)
     * [func newTest() *httptestutil.Client](#newTest)
     * [func TestAccessTokenAuthMiddleware(t *testing.T)](#TestAccessTokenAuthMiddleware)
-    * [func init()](#init)
+    * [func init()](#init.db_test.go)
     * [func TestGitServiceHandlers(t *testing.T)](#TestGitServiceHandlers)
     * [func TestReposIndex(t *testing.T)](#TestReposIndex)
     * [func TestRepoRankFromConfig(t *testing.T)](#TestRepoRankFromConfig)
@@ -88,10 +88,15 @@ Package httpapi contains the HTTP API.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="traceGraphQLQueriesSample" href="#traceGraphQLQueriesSample">var traceGraphQLQueriesSample</a>
 
 ```
 searchKey: httpapi.traceGraphQLQueriesSample
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +107,7 @@ var traceGraphQLQueriesSample = ...
 
 ```
 searchKey: httpapi.schemaDecoder
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +118,7 @@ var schemaDecoder = schema.NewDecoder()
 
 ```
 searchKey: httpapi.srcCliDownloadsURL
+tags: [private]
 ```
 
 ```Go
@@ -122,6 +129,7 @@ var srcCliDownloadsURL = "https://github.com/sourcegraph/src-cli/releases/downlo
 
 ```
 searchKey: httpapi.allowedFilenames
+tags: [private]
 ```
 
 ```Go
@@ -130,10 +138,15 @@ var allowedFilenames = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="graphQLQueryParams" href="#graphQLQueryParams">type graphQLQueryParams struct</a>
 
 ```
 searchKey: httpapi.graphQLQueryParams
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +161,7 @@ type graphQLQueryParams struct {
 
 ```
 searchKey: httpapi.traceData
+tags: [private]
 ```
 
 ```Go
@@ -174,6 +188,7 @@ type traceData struct {
 
 ```
 searchKey: httpapi.errorHandler
+tags: [private]
 ```
 
 ```Go
@@ -186,6 +201,7 @@ type errorHandler struct {
 
 ```
 searchKey: httpapi.errorHandler.Handle
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +212,7 @@ func (h *errorHandler) Handle(w http.ResponseWriter, r *http.Request, status int
 
 ```
 searchKey: httpapi.reposListServer
+tags: [private]
 ```
 
 ```Go
@@ -231,6 +248,7 @@ type reposListServer struct {
 
 ```
 searchKey: httpapi.reposListServer.serveIndex
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +261,7 @@ serveIndex is used by zoekt to get the list of repositories for it to index.
 
 ```
 searchKey: httpapi.gitServiceHandler
+tags: [private]
 ```
 
 ```Go
@@ -259,6 +278,7 @@ gitServiceHandler are handlers which redirect git clone requests to the gitserve
 
 ```
 searchKey: httpapi.gitServiceHandler.serveInfoRefs
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +289,7 @@ func (s *gitServiceHandler) serveInfoRefs(w http.ResponseWriter, r *http.Request
 
 ```
 searchKey: httpapi.gitServiceHandler.serveGitUploadPack
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +300,7 @@ func (s *gitServiceHandler) serveGitUploadPack(w http.ResponseWriter, r *http.Re
 
 ```
 searchKey: httpapi.gitServiceHandler.redirectToGitServer
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +311,7 @@ func (s *gitServiceHandler) redirectToGitServer(w http.ResponseWriter, r *http.R
 
 ```
 searchKey: httpapi.mockAddrForRepo
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +322,7 @@ type mockAddrForRepo struct{}
 
 ```
 searchKey: httpapi.mockAddrForRepo.AddrForRepo
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +333,7 @@ func (mockAddrForRepo) AddrForRepo(name api.RepoName) string
 
 ```
 searchKey: httpapi.mockRepos
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +347,7 @@ type mockRepos struct {
 
 ```
 searchKey: httpapi.mockRepos.ListIndexable
+tags: [private]
 ```
 
 ```Go
@@ -332,6 +358,7 @@ func (r *mockRepos) ListIndexable(context.Context) ([]types.RepoName, error)
 
 ```
 searchKey: httpapi.mockRepos.List
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +369,7 @@ func (r *mockRepos) List(ctx context.Context, opt database.ReposListOptions) ([]
 
 ```
 searchKey: httpapi.suffixIndexers
+tags: [private]
 ```
 
 ```Go
@@ -354,6 +382,7 @@ suffixIndexers mocks Indexers. ReposSubset will return all repoNames with the su
 
 ```
 searchKey: httpapi.suffixIndexers.ReposSubset
+tags: [private]
 ```
 
 ```Go
@@ -364,6 +393,7 @@ func (b suffixIndexers) ReposSubset(ctx context.Context, hostname string, indexe
 
 ```
 searchKey: httpapi.suffixIndexers.Enabled
+tags: [private]
 ```
 
 ```Go
@@ -372,11 +402,14 @@ func (b suffixIndexers) Enabled() bool
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AccessTokenAuthMiddleware" href="#AccessTokenAuthMiddleware">func AccessTokenAuthMiddleware(db dbutil.DB, next http.Handler) http.Handler</a>
 
 ```
 searchKey: httpapi.AccessTokenAuthMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -389,6 +422,7 @@ AccessTokenAuthMiddleware authenticates the user based on the token query parame
 
 ```
 searchKey: httpapi.serveGraphQL
+tags: [private]
 ```
 
 ```Go
@@ -399,6 +433,7 @@ func serveGraphQL(schema *graphql.Schema, rlw graphqlbackend.LimitWatcher, isInt
 
 ```
 searchKey: httpapi.traceGraphQL
+tags: [private]
 ```
 
 ```Go
@@ -409,6 +444,7 @@ func traceGraphQL(data traceData)
 
 ```
 searchKey: httpapi.getUID
+tags: [private]
 ```
 
 ```Go
@@ -419,6 +455,7 @@ func getUID(r *http.Request) (uid string, ip bool, anonymous bool)
 
 ```
 searchKey: httpapi.writeJSON
+tags: [private]
 ```
 
 ```Go
@@ -431,7 +468,6 @@ writeJSON writes a JSON Content-Type header and a JSON-encoded object to the htt
 
 ```
 searchKey: httpapi.NewHandler
-tags: [exported]
 ```
 
 ```Go
@@ -446,7 +482,6 @@ NewHandler returns a new API handler that uses the provided API router, which mu
 
 ```
 searchKey: httpapi.NewInternalHandler
-tags: [exported]
 ```
 
 ```Go
@@ -457,10 +492,11 @@ NewInternalHandler returns a new API handler for internal endpoints that uses th
 
 🚨 SECURITY: This handler should not be served on a publicly exposed port. 🚨 This handler is not guaranteed to provide the same authorization checks as public API handlers. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.httpapi.go" href="#init.httpapi.go">func init()</a>
 
 ```
 searchKey: httpapi.init
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +507,7 @@ func init()
 
 ```
 searchKey: httpapi.jsonMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +518,7 @@ func jsonMiddleware(errorHandler *errorHandler) func(func(http.ResponseWriter, *
 
 ```
 searchKey: httpapi.serveReposGetByName
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +529,7 @@ func serveReposGetByName(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.servePhabricatorRepoCreate
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +540,7 @@ func servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *htt
 
 ```
 searchKey: httpapi.serveExternalServiceConfigs
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +553,7 @@ serveExternalServiceConfigs serves a JSON response that is an array of all exter
 
 ```
 searchKey: httpapi.serveExternalServicesList
+tags: [private]
 ```
 
 ```Go
@@ -525,6 +566,7 @@ serveExternalServicesList serves a JSON response that is an array of all externa
 
 ```
 searchKey: httpapi.serveConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -535,6 +577,7 @@ func serveConfiguration(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.repoRankFromConfig
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +588,7 @@ func repoRankFromConfig(siteConfig schema.SiteConfiguration, repoName string) fl
 
 ```
 searchKey: httpapi.serveSearchConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -559,6 +603,7 @@ This endpoint also supports batch requests to avoid managing concurrency in zoek
 
 ```
 searchKey: httpapi.serveReposListEnabled
+tags: [private]
 ```
 
 ```Go
@@ -569,6 +614,7 @@ func serveReposListEnabled(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveSavedQueriesListAll
+tags: [private]
 ```
 
 ```Go
@@ -579,6 +625,7 @@ func serveSavedQueriesListAll(db dbutil.DB) func(w http.ResponseWriter, r *http.
 
 ```
 searchKey: httpapi.serveSavedQueriesGetInfo
+tags: [private]
 ```
 
 ```Go
@@ -589,6 +636,7 @@ func serveSavedQueriesGetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.
 
 ```
 searchKey: httpapi.serveSavedQueriesSetInfo
+tags: [private]
 ```
 
 ```Go
@@ -599,6 +647,7 @@ func serveSavedQueriesSetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.
 
 ```
 searchKey: httpapi.serveSavedQueriesDeleteInfo
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +658,7 @@ func serveSavedQueriesDeleteInfo(db dbutil.DB) func(w http.ResponseWriter, r *ht
 
 ```
 searchKey: httpapi.serveSettingsGetForSubject
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +669,7 @@ func serveSettingsGetForSubject(db dbutil.DB) func(w http.ResponseWriter, r *htt
 
 ```
 searchKey: httpapi.serveOrgsListUsers
+tags: [private]
 ```
 
 ```Go
@@ -629,6 +680,7 @@ func serveOrgsListUsers(db dbutil.DB) func(w http.ResponseWriter, r *http.Reques
 
 ```
 searchKey: httpapi.serveOrgsGetByName
+tags: [private]
 ```
 
 ```Go
@@ -639,6 +691,7 @@ func serveOrgsGetByName(db dbutil.DB) func(w http.ResponseWriter, r *http.Reques
 
 ```
 searchKey: httpapi.serveUsersGetByUsername
+tags: [private]
 ```
 
 ```Go
@@ -649,6 +702,7 @@ func serveUsersGetByUsername(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveUserEmailsGetEmail
+tags: [private]
 ```
 
 ```Go
@@ -659,6 +713,7 @@ func serveUserEmailsGetEmail(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveExternalURL
+tags: [private]
 ```
 
 ```Go
@@ -669,6 +724,7 @@ func serveExternalURL(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveCanSendEmail
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +735,7 @@ func serveCanSendEmail(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveSendEmail
+tags: [private]
 ```
 
 ```Go
@@ -689,6 +746,7 @@ func serveSendEmail(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveGitResolveRevision
+tags: [private]
 ```
 
 ```Go
@@ -699,6 +757,7 @@ func serveGitResolveRevision(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveGitTar
+tags: [private]
 ```
 
 ```Go
@@ -709,6 +768,7 @@ func serveGitTar(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveGitExec
+tags: [private]
 ```
 
 ```Go
@@ -719,6 +779,7 @@ func serveGitExec(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.handlePing
+tags: [private]
 ```
 
 ```Go
@@ -729,6 +790,7 @@ func handlePing(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: httpapi.serveRepoRefresh
+tags: [private]
 ```
 
 ```Go
@@ -739,6 +801,7 @@ func serveRepoRefresh(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.badgeValue
+tags: [private]
 ```
 
 ```Go
@@ -751,6 +814,7 @@ NOTE: Keep in sync with services/backend/httpapi/repo_shield.go
 
 ```
 searchKey: httpapi.badgeValueFmt
+tags: [private]
 ```
 
 ```Go
@@ -763,6 +827,7 @@ NOTE: Keep in sync with services/backend/httpapi/repo_shield.go
 
 ```
 searchKey: httpapi.serveRepoShield
+tags: [private]
 ```
 
 ```Go
@@ -773,6 +838,7 @@ func serveRepoShield(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.srcCliVersionServe
+tags: [private]
 ```
 
 ```Go
@@ -783,6 +849,7 @@ func srcCliVersionServe(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.srcCliDownloadServe
+tags: [private]
 ```
 
 ```Go
@@ -793,6 +860,7 @@ func srcCliDownloadServe(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.srcCliVersion
+tags: [private]
 ```
 
 ```Go
@@ -803,6 +871,7 @@ func srcCliVersion() string
 
 ```
 searchKey: httpapi.isExpectedRelease
+tags: [private]
 ```
 
 ```Go
@@ -813,16 +882,18 @@ func isExpectedRelease(filename string) bool
 
 ```
 searchKey: httpapi.telemetryHandler
+tags: [private]
 ```
 
 ```Go
 func telemetryHandler(db dbutil.DB) http.Handler
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.api_test.go" href="#init.api_test.go">func init()</a>
 
 ```
 searchKey: httpapi.init
+tags: [private]
 ```
 
 ```Go
@@ -833,6 +904,7 @@ func init()
 
 ```
 searchKey: httpapi.newTest
+tags: [private]
 ```
 
 ```Go
@@ -843,16 +915,18 @@ func newTest() *httptestutil.Client
 
 ```
 searchKey: httpapi.TestAccessTokenAuthMiddleware
+tags: [private]
 ```
 
 ```Go
 func TestAccessTokenAuthMiddleware(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
 
 ```
 searchKey: httpapi.init
+tags: [private]
 ```
 
 ```Go
@@ -863,6 +937,7 @@ func init()
 
 ```
 searchKey: httpapi.TestGitServiceHandlers
+tags: [private]
 ```
 
 ```Go
@@ -873,6 +948,7 @@ func TestGitServiceHandlers(t *testing.T)
 
 ```
 searchKey: httpapi.TestReposIndex
+tags: [private]
 ```
 
 ```Go
@@ -883,6 +959,7 @@ func TestReposIndex(t *testing.T)
 
 ```
 searchKey: httpapi.TestRepoRankFromConfig
+tags: [private]
 ```
 
 ```Go
@@ -893,6 +970,7 @@ func TestRepoRankFromConfig(t *testing.T)
 
 ```
 searchKey: httpapi.TestRepoRefresh
+tags: [private]
 ```
 
 ```Go
@@ -903,6 +981,7 @@ func TestRepoRefresh(t *testing.T)
 
 ```
 searchKey: httpapi.TestRepoShieldFmt
+tags: [private]
 ```
 
 ```Go
@@ -913,6 +992,7 @@ func TestRepoShieldFmt(t *testing.T)
 
 ```
 searchKey: httpapi.TestRepoShield
+tags: [private]
 ```
 
 ```Go

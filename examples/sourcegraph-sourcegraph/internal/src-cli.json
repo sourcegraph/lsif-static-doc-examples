@@ -4,7 +4,9 @@
     "identifier": "src-cli",
     "newPage": true,
     "searchKey": "internal/src-cli",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "MinimumVersion",
                 "newPage": false,
                 "searchKey": "srccli.MinimumVersion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "githubAPIReleasesEndpoint",
                 "newPage": false,
                 "searchKey": "srccli.githubAPIReleasesEndpoint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -85,7 +89,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "releaseMeta",
                 "newPage": false,
                 "searchKey": "srccli.releaseMeta",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -126,7 +134,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -144,9 +154,7 @@
                 "identifier": "Version",
                 "newPage": false,
                 "searchKey": "srccli.Version",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -166,7 +174,9 @@
                 "identifier": "highestMatchingVersion",
                 "newPage": false,
                 "searchKey": "srccli.highestMatchingVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -186,7 +196,9 @@
                 "identifier": "releaseVersions",
                 "newPage": false,
                 "searchKey": "srccli.releaseVersions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -206,7 +218,9 @@
                 "identifier": "releaseVersionsPage",
                 "newPage": false,
                 "searchKey": "srccli.releaseVersionsPage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -226,7 +240,9 @@
                 "identifier": "TestHighestMatchingVersion",
                 "newPage": false,
                 "searchKey": "srccli.TestHighestMatchingVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -246,7 +262,9 @@
                 "identifier": "TestReleaseVersions",
                 "newPage": false,
                 "searchKey": "srccli.TestReleaseVersions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

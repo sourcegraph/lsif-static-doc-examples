@@ -68,14 +68,11 @@ Command query-runner runs saved queries and notifies subscribers when the querie
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="gqlSearchQuery" href="#gqlSearchQuery">const gqlSearchQuery</a>
 
 ```
 searchKey: main.gqlSearchQuery
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +83,7 @@ const gqlSearchQuery = ...
 
 ```
 searchKey: main.port
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +94,7 @@ const port = "3183"
 
 ```
 searchKey: main.utmSourceEmail
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +105,7 @@ const utmSourceEmail = "saved-search-email"
 
 ```
 searchKey: main.utmSourceSlack
+tags: [private]
 ```
 
 ```Go
@@ -114,14 +114,11 @@ const utmSourceSlack = "saved-search-slack"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="testNotificationMu" href="#testNotificationMu">var testNotificationMu</a>
 
 ```
 searchKey: main.testNotificationMu
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +129,7 @@ var testNotificationMu sync.Mutex
 
 ```
 searchKey: main.newSearchResultsEmailTemplates
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +140,7 @@ var newSearchResultsEmailTemplates = ...
 
 ```
 searchKey: main.notifySubscribedTemplate
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +151,7 @@ var notifySubscribedTemplate = ...
 
 ```
 searchKey: main.notifyUnsubscribedTemplate
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +162,7 @@ var notifyUnsubscribedTemplate = ...
 
 ```
 searchKey: main.forceRunInterval
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +173,7 @@ var forceRunInterval = ...
 
 ```
 searchKey: main.debugPretendSavedQueryResultsExist
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +186,7 @@ Useful for debugging e.g. email and slack notifications. Set it to true and it w
 
 ```
 searchKey: main.executor
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +197,7 @@ var executor = &executorT{}
 
 ```
 searchKey: main.externalURL
+tags: [private]
 ```
 
 ```Go
@@ -202,14 +206,11 @@ var externalURL *url.URL
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="graphQLQuery" href="#graphQLQuery">type graphQLQuery struct</a>
 
 ```
 searchKey: main.graphQLQuery
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +224,7 @@ type graphQLQuery struct {
 
 ```
 searchKey: main.gqlSearchVars
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +237,7 @@ type gqlSearchVars struct {
 
 ```
 searchKey: main.gqlSearchResponse
+tags: [private]
 ```
 
 ```Go
@@ -257,6 +260,7 @@ type gqlSearchResponse struct {
 
 ```
 searchKey: main.search
+tags: [private]
 ```
 
 ```Go
@@ -267,6 +271,7 @@ func search(ctx context.Context, query string) (*gqlSearchResponse, error)
 
 ```
 searchKey: main.performSearch
+tags: [private]
 ```
 
 ```Go
@@ -277,6 +282,7 @@ func performSearch(ctx context.Context, query string) (v *gqlSearchResponse, exe
 
 ```
 searchKey: main.executorT
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +295,7 @@ type executorT struct {
 
 ```
 searchKey: main.executorT.run
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +306,7 @@ func (e *executorT) run(ctx context.Context) error
 
 ```
 searchKey: main.executorT.runQuery
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +319,7 @@ runQuery runs the given query if an appropriate amount of time has elapsed since
 
 ```
 searchKey: main.notifier
+tags: [private]
 ```
 
 ```Go
@@ -327,6 +336,7 @@ type notifier struct {
 
 ```
 searchKey: main.notifier.emailNotify
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +347,7 @@ func (n *notifier) emailNotify(ctx context.Context)
 
 ```
 searchKey: main.notifier.slackNotify
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +358,7 @@ func (n *notifier) slackNotify(ctx context.Context)
 
 ```
 searchKey: main.recipientSpec
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +373,7 @@ recipientSpec identifies a recipient of a saved search notification. Exactly one
 
 ```
 searchKey: main.recipientSpec.String
+tags: [private]
 ```
 
 ```Go
@@ -371,6 +384,7 @@ func (r recipientSpec) String() string
 
 ```
 searchKey: main.recipient
+tags: [private]
 ```
 
 ```Go
@@ -387,6 +401,7 @@ recipient describes a recipient of a saved search notification and the type of n
 
 ```
 searchKey: main.recipient.String
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +412,7 @@ func (r *recipient) String() string
 
 ```
 searchKey: main.recipients
+tags: [private]
 ```
 
 ```Go
@@ -407,6 +423,7 @@ type recipients []*recipient
 
 ```
 searchKey: main.diffNotificationRecipients
+tags: [private]
 ```
 
 ```Go
@@ -419,6 +436,7 @@ diffNotificationRecipients diffs old against new, returning the removed and adde
 
 ```
 searchKey: main.recipients.add
+tags: [private]
 ```
 
 ```Go
@@ -431,6 +449,7 @@ add adds the new recipient, merging it into an existing slice element if one alr
 
 ```
 searchKey: main.recipients.get
+tags: [private]
 ```
 
 ```Go
@@ -441,14 +460,11 @@ get returns the recipient with the given spec, if any, or else nil.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="diffSavedQueryConfigs" href="#diffSavedQueryConfigs">func diffSavedQueryConfigs(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery) (deleted, updated, created map[api.SavedQuerySpecAndConfig]api.SavedQuerySpecAndConfig)</a>
 
 ```
 searchKey: main.diffSavedQueryConfigs
+tags: [private]
 ```
 
 ```Go
@@ -463,6 +479,7 @@ It returns maps whose keys represent the old value and value represent the new v
 
 ```
 searchKey: main.sendNotificationsForCreatedOrUpdatedOrDeleted
+tags: [private]
 ```
 
 ```Go
@@ -473,6 +490,7 @@ func sendNotificationsForCreatedOrUpdatedOrDeleted(oldList, newList map[api.Save
 
 ```
 searchKey: main.notifySavedQueryWasCreatedOrUpdated
+tags: [private]
 ```
 
 ```Go
@@ -483,6 +501,7 @@ func notifySavedQueryWasCreatedOrUpdated(oldValue, newValue api.SavedQuerySpecAn
 
 ```
 searchKey: main.serveTestNotification
+tags: [private]
 ```
 
 ```Go
@@ -493,6 +512,7 @@ func serveTestNotification(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: main.canSendEmail
+tags: [private]
 ```
 
 ```Go
@@ -503,6 +523,7 @@ func canSendEmail(ctx context.Context) error
 
 ```
 searchKey: main.emailNotifySubscribeUnsubscribe
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +534,7 @@ func emailNotifySubscribeUnsubscribe(ctx context.Context, recipient *recipient, 
 
 ```
 searchKey: main.sendEmail
+tags: [private]
 ```
 
 ```Go
@@ -523,6 +545,7 @@ func sendEmail(ctx context.Context, userID int32, eventType string, template txt
 
 ```
 searchKey: main.gqlURL
+tags: [private]
 ```
 
 ```Go
@@ -533,6 +556,7 @@ func gqlURL(queryName string) (string, error)
 
 ```
 searchKey: main.extractTime
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +569,7 @@ extractTime extracts the time from the given search result.
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -555,6 +580,7 @@ func main()
 
 ```
 searchKey: main.writeError
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +591,7 @@ func writeError(w http.ResponseWriter, err error)
 
 ```
 searchKey: main.latestResultTime
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +602,7 @@ func latestResultTime(prevInfo *api.SavedQueryInfo, v *gqlSearchResponse, search
 
 ```
 searchKey: main.notify
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +615,7 @@ notify handles sending notifications for new search results.
 
 ```
 searchKey: main.searchURL
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +626,7 @@ func searchURL(query, utmSource string) string
 
 ```
 searchKey: main.savedSearchListPageURL
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +637,7 @@ func savedSearchListPageURL(utmSource string) string
 
 ```
 searchKey: main.sourcegraphURL
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +648,7 @@ func sourcegraphURL(path, query, utmSource string) string
 
 ```
 searchKey: main.logEvent
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +659,7 @@ func logEvent(userID int32, eventName, eventType string)
 
 ```
 searchKey: main.getNotificationRecipients
+tags: [private]
 ```
 
 ```Go
@@ -639,6 +672,7 @@ getNotificationRecipients retrieves the list of recipients who should receive no
 
 ```
 searchKey: main.slackNotifySubscribed
+tags: [private]
 ```
 
 ```Go
@@ -649,6 +683,7 @@ func slackNotifySubscribed(ctx context.Context, recipient *recipient, query api.
 
 ```
 searchKey: main.slackNotifyUnsubscribed
+tags: [private]
 ```
 
 ```Go
@@ -659,6 +694,7 @@ func slackNotifyUnsubscribed(ctx context.Context, recipient *recipient, query ap
 
 ```
 searchKey: main.slackNotify
+tags: [private]
 ```
 
 ```Go
@@ -669,6 +705,7 @@ func slackNotify(ctx context.Context, recipient *recipient, text string, slackWe
 
 ```
 searchKey: main.TestGetNotificationRecipients
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +716,7 @@ func TestGetNotificationRecipients(t *testing.T)
 
 ```
 searchKey: main.TestDiffNotificationRecipients
+tags: [private]
 ```
 
 ```Go

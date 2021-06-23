@@ -11,7 +11,7 @@
 * [Variables](#var)
     * [var envOverrideAuthSecret](#envOverrideAuthSecret)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.config.go)
     * [func validateConfig(c conf.Unified) (problems conf.Problems)](#validateConfig)
     * [func ForbidAllRequestsMiddleware(next http.Handler) http.Handler](#ForbidAllRequestsMiddleware)
     * [func OverrideAuthMiddleware(next http.Handler) http.Handler](#OverrideAuthMiddleware)
@@ -22,10 +22,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="overrideSecretHeader" href="#overrideSecretHeader">const overrideSecretHeader</a>
 
 ```
 searchKey: auth.overrideSecretHeader
+tags: [private]
 ```
 
 ```Go
@@ -36,6 +41,7 @@ const overrideSecretHeader = "X-Override-Auth-Secret"
 
 ```
 searchKey: auth.overrideUsernameHeader
+tags: [private]
 ```
 
 ```Go
@@ -46,6 +52,7 @@ const overrideUsernameHeader = "X-Override-Auth-Username"
 
 ```
 searchKey: auth.defaultUsername
+tags: [private]
 ```
 
 ```Go
@@ -54,10 +61,15 @@ const defaultUsername = "override-auth-user"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="envOverrideAuthSecret" href="#envOverrideAuthSecret">var envOverrideAuthSecret</a>
 
 ```
 searchKey: auth.envOverrideAuthSecret
+tags: [private]
 ```
 
 ```Go
@@ -68,10 +80,15 @@ envOverrideAuthSecret (the env var OVERRIDE_AUTH_SECRET) is the preferred source
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.config.go" href="#init.config.go">func init()</a>
 
 ```
 searchKey: auth.init
+tags: [private]
 ```
 
 ```Go
@@ -82,6 +99,7 @@ func init()
 
 ```
 searchKey: auth.validateConfig
+tags: [private]
 ```
 
 ```Go
@@ -92,7 +110,6 @@ func validateConfig(c conf.Unified) (problems conf.Problems)
 
 ```
 searchKey: auth.ForbidAllRequestsMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -105,7 +122,6 @@ ForbidAllRequestsMiddleware forbids all requests. It is used when no auth provid
 
 ```
 searchKey: auth.OverrideAuthMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -120,6 +136,7 @@ It is used to enable our e2e tests to authenticate to [https://sourcegraph.sgdev
 
 ```
 searchKey: auth.TestValidateCustom
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +147,7 @@ func TestValidateCustom(t *testing.T)
 
 ```
 searchKey: auth.TestForbidAllMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +158,7 @@ func TestForbidAllMiddleware(t *testing.T)
 
 ```
 searchKey: auth.TestOverrideAuthMiddleware
+tags: [private]
 ```
 
 ```Go

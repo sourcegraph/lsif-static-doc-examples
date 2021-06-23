@@ -389,11 +389,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="FieldDefault" href="#FieldDefault">const FieldDefault</a>
 
 ```
 searchKey: query.FieldDefault
-tags: [exported]
 ```
 
 ```Go
@@ -406,7 +409,6 @@ All field names.
 
 ```
 searchKey: query.FieldCase
-tags: [exported]
 ```
 
 ```Go
@@ -419,7 +421,6 @@ All field names.
 
 ```
 searchKey: query.FieldRepo
-tags: [exported]
 ```
 
 ```Go
@@ -432,7 +433,6 @@ All field names.
 
 ```
 searchKey: query.FieldRepoGroup
-tags: [exported]
 ```
 
 ```Go
@@ -445,7 +445,6 @@ All field names.
 
 ```
 searchKey: query.FieldFile
-tags: [exported]
 ```
 
 ```Go
@@ -458,7 +457,6 @@ All field names.
 
 ```
 searchKey: query.FieldFork
-tags: [exported]
 ```
 
 ```Go
@@ -471,7 +469,6 @@ All field names.
 
 ```
 searchKey: query.FieldArchived
-tags: [exported]
 ```
 
 ```Go
@@ -484,7 +481,6 @@ All field names.
 
 ```
 searchKey: query.FieldLang
-tags: [exported]
 ```
 
 ```Go
@@ -497,7 +493,6 @@ All field names.
 
 ```
 searchKey: query.FieldType
-tags: [exported]
 ```
 
 ```Go
@@ -510,7 +505,6 @@ All field names.
 
 ```
 searchKey: query.FieldRepoHasFile
-tags: [exported]
 ```
 
 ```Go
@@ -523,7 +517,6 @@ All field names.
 
 ```
 searchKey: query.FieldRepoHasCommitAfter
-tags: [exported]
 ```
 
 ```Go
@@ -536,7 +529,6 @@ All field names.
 
 ```
 searchKey: query.FieldPatternType
-tags: [exported]
 ```
 
 ```Go
@@ -549,7 +541,6 @@ All field names.
 
 ```
 searchKey: query.FieldContent
-tags: [exported]
 ```
 
 ```Go
@@ -562,7 +553,6 @@ All field names.
 
 ```
 searchKey: query.FieldVisibility
-tags: [exported]
 ```
 
 ```Go
@@ -575,7 +565,6 @@ All field names.
 
 ```
 searchKey: query.FieldRev
-tags: [exported]
 ```
 
 ```Go
@@ -588,7 +577,6 @@ All field names.
 
 ```
 searchKey: query.FieldContext
-tags: [exported]
 ```
 
 ```Go
@@ -601,7 +589,6 @@ All field names.
 
 ```
 searchKey: query.FieldBefore
-tags: [exported]
 ```
 
 ```Go
@@ -616,7 +603,6 @@ For diff and commit search only:
 
 ```
 searchKey: query.FieldAfter
-tags: [exported]
 ```
 
 ```Go
@@ -629,7 +615,6 @@ All field names.
 
 ```
 searchKey: query.FieldAuthor
-tags: [exported]
 ```
 
 ```Go
@@ -642,7 +627,6 @@ All field names.
 
 ```
 searchKey: query.FieldCommitter
-tags: [exported]
 ```
 
 ```Go
@@ -655,7 +639,6 @@ All field names.
 
 ```
 searchKey: query.FieldMessage
-tags: [exported]
 ```
 
 ```Go
@@ -668,7 +651,6 @@ All field names.
 
 ```
 searchKey: query.FieldIndex
-tags: [exported]
 ```
 
 ```Go
@@ -683,7 +665,6 @@ Temporary experimental fields:
 
 ```
 searchKey: query.FieldCount
-tags: [exported]
 ```
 
 ```Go
@@ -697,7 +678,6 @@ All field names.
 
 ```
 searchKey: query.FieldStable
-tags: [exported]
 ```
 
 ```Go
@@ -711,7 +691,6 @@ All field names.
 
 ```
 searchKey: query.FieldTimeout
-tags: [exported]
 ```
 
 ```Go
@@ -724,7 +703,6 @@ All field names.
 
 ```
 searchKey: query.FieldCombyRule
-tags: [exported]
 ```
 
 ```Go
@@ -737,7 +715,6 @@ All field names.
 
 ```
 searchKey: query.FieldSelect
-tags: [exported]
 ```
 
 ```Go
@@ -750,7 +727,6 @@ All field names.
 
 ```
 searchKey: query.None
-tags: [exported]
 ```
 
 ```Go
@@ -761,7 +737,6 @@ const None labels = 0
 
 ```
 searchKey: query.Literal
-tags: [exported]
 ```
 
 ```Go
@@ -772,7 +747,6 @@ const Literal = 1 << iota
 
 ```
 searchKey: query.Regexp
-tags: [exported]
 ```
 
 ```Go
@@ -783,7 +757,6 @@ const Regexp
 
 ```
 searchKey: query.Quoted
-tags: [exported]
 ```
 
 ```Go
@@ -794,7 +767,6 @@ const Quoted
 
 ```
 searchKey: query.HeuristicParensAsPatterns
-tags: [exported]
 ```
 
 ```Go
@@ -805,7 +777,6 @@ const HeuristicParensAsPatterns
 
 ```
 searchKey: query.HeuristicDanglingParens
-tags: [exported]
 ```
 
 ```Go
@@ -816,7 +787,6 @@ const HeuristicDanglingParens
 
 ```
 searchKey: query.HeuristicHoisted
-tags: [exported]
 ```
 
 ```Go
@@ -827,7 +797,6 @@ const HeuristicHoisted
 
 ```
 searchKey: query.Structural
-tags: [exported]
 ```
 
 ```Go
@@ -838,7 +807,6 @@ const Structural
 
 ```
 searchKey: query.IsPredicate
-tags: [exported]
 ```
 
 ```Go
@@ -849,7 +817,6 @@ const IsPredicate
 
 ```
 searchKey: query.Or
-tags: [exported]
 ```
 
 ```Go
@@ -860,7 +827,6 @@ const Or operatorKind = iota
 
 ```
 searchKey: query.And
-tags: [exported]
 ```
 
 ```Go
@@ -871,7 +837,6 @@ const And
 
 ```
 searchKey: query.Concat
-tags: [exported]
 ```
 
 ```Go
@@ -882,7 +847,6 @@ const Concat
 
 ```
 searchKey: query.AND
-tags: [exported]
 ```
 
 ```Go
@@ -895,7 +859,6 @@ Reserved keyword syntax.
 
 ```
 searchKey: query.OR
-tags: [exported]
 ```
 
 ```Go
@@ -908,7 +871,6 @@ Reserved keyword syntax.
 
 ```
 searchKey: query.LPAREN
-tags: [exported]
 ```
 
 ```Go
@@ -921,7 +883,6 @@ Reserved keyword syntax.
 
 ```
 searchKey: query.RPAREN
-tags: [exported]
 ```
 
 ```Go
@@ -934,7 +895,6 @@ Reserved keyword syntax.
 
 ```
 searchKey: query.SQUOTE
-tags: [exported]
 ```
 
 ```Go
@@ -947,7 +907,6 @@ Reserved keyword syntax.
 
 ```
 searchKey: query.DQUOTE
-tags: [exported]
 ```
 
 ```Go
@@ -960,7 +919,6 @@ Reserved keyword syntax.
 
 ```
 searchKey: query.SLASH
-tags: [exported]
 ```
 
 ```Go
@@ -973,7 +931,6 @@ Reserved keyword syntax.
 
 ```
 searchKey: query.NOT
-tags: [exported]
 ```
 
 ```Go
@@ -986,6 +943,7 @@ Reserved keyword syntax.
 
 ```
 searchKey: query.parensAsPatterns
+tags: [private]
 ```
 
 ```Go
@@ -998,6 +956,7 @@ If set, balanced parentheses, which would normally be treated as delimiting expr
 
 ```
 searchKey: query.allowDanglingParens
+tags: [private]
 ```
 
 ```Go
@@ -1010,6 +969,7 @@ If set, all parentheses, whether balanced or unbalanced, are parsed as literal s
 
 ```
 searchKey: query.disambiguated
+tags: [private]
 ```
 
 ```Go
@@ -1022,7 +982,6 @@ If set, implies that at least one expression was disambiguated by explicit paren
 
 ```
 searchKey: query.SearchTypeRegex
-tags: [exported]
 ```
 
 ```Go
@@ -1033,7 +992,6 @@ const SearchTypeRegex SearchType = iota
 
 ```
 searchKey: query.SearchTypeLiteral
-tags: [exported]
 ```
 
 ```Go
@@ -1044,7 +1002,6 @@ const SearchTypeLiteral
 
 ```
 searchKey: query.SearchTypeStructural
-tags: [exported]
 ```
 
 ```Go
@@ -1055,7 +1012,6 @@ const SearchTypeStructural
 
 ```
 searchKey: query.Yes
-tags: [exported]
 ```
 
 ```Go
@@ -1066,7 +1022,6 @@ const Yes YesNoOnly = "yes"
 
 ```
 searchKey: query.No
-tags: [exported]
 ```
 
 ```Go
@@ -1077,7 +1032,6 @@ const No YesNoOnly = "no"
 
 ```
 searchKey: query.Only
-tags: [exported]
 ```
 
 ```Go
@@ -1088,7 +1042,6 @@ const Only YesNoOnly = "only"
 
 ```
 searchKey: query.Invalid
-tags: [exported]
 ```
 
 ```Go
@@ -1099,7 +1052,6 @@ const Invalid YesNoOnly = "invalid"
 
 ```
 searchKey: query.StringType
-tags: [exported]
 ```
 
 ```Go
@@ -1112,7 +1064,6 @@ All ValueType values.
 
 ```
 searchKey: query.RegexpType
-tags: [exported]
 ```
 
 ```Go
@@ -1125,7 +1076,6 @@ All ValueType values.
 
 ```
 searchKey: query.BoolType
-tags: [exported]
 ```
 
 ```Go
@@ -1138,7 +1088,6 @@ All ValueType values.
 
 ```
 searchKey: query.Any
-tags: [exported]
 ```
 
 ```Go
@@ -1149,7 +1098,6 @@ const Any repoVisibility = "any"
 
 ```
 searchKey: query.Private
-tags: [exported]
 ```
 
 ```Go
@@ -1160,7 +1108,6 @@ const Private repoVisibility = "private"
 
 ```
 searchKey: query.Public
-tags: [exported]
 ```
 
 ```Go
@@ -1169,10 +1116,15 @@ const Public repoVisibility = "public"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="empty" href="#empty">var empty</a>
 
 ```
 searchKey: query.empty
+tags: [private]
 ```
 
 ```Go
@@ -1183,6 +1135,7 @@ var empty = struct{}{}
 
 ```
 searchKey: query.allFields
+tags: [private]
 ```
 
 ```Go
@@ -1193,6 +1146,7 @@ var allFields = ...
 
 ```
 searchKey: query.aliases
+tags: [private]
 ```
 
 ```Go
@@ -1203,6 +1157,7 @@ var aliases = ...
 
 ```
 searchKey: query.allLabels
+tags: [private]
 ```
 
 ```Go
@@ -1213,7 +1168,6 @@ var allLabels = ...
 
 ```
 searchKey: query.DefaultPredicateRegistry
-tags: [exported]
 ```
 
 ```Go
@@ -1224,6 +1178,7 @@ var DefaultPredicateRegistry = ...
 
 ```
 searchKey: query.predicateRegexp
+tags: [private]
 ```
 
 ```Go
@@ -1234,6 +1189,7 @@ var predicateRegexp = regexp.MustCompile(`^(?P<name>[a-z\.]+)\((?s:(?P<params>.*
 
 ```
 searchKey: query.nameIndex
+tags: [private]
 ```
 
 ```Go
@@ -1244,6 +1200,7 @@ var nameIndex = predicateRegexp.SubexpIndex("name")
 
 ```
 searchKey: query.paramsIndex
+tags: [private]
 ```
 
 ```Go
@@ -1254,7 +1211,6 @@ var paramsIndex = predicateRegexp.SubexpIndex("params")
 
 ```
 searchKey: query.ErrBadGlobPattern
-tags: [exported]
 ```
 
 ```Go
@@ -1265,6 +1221,7 @@ var ErrBadGlobPattern = errors.New("syntax error in glob pattern")
 
 ```
 searchKey: query.globSpecialSymbols
+tags: [private]
 ```
 
 ```Go
@@ -1280,6 +1237,7 @@ var globSpecialSymbols = map[rune]struct{}{
 
 ```
 searchKey: query.globSyntax
+tags: [private]
 ```
 
 ```Go
@@ -1290,6 +1248,7 @@ var globSyntax = lazyregexp.New(`[][*?]`)
 
 ```
 searchKey: query.gitHubRepoPath
+tags: [private]
 ```
 
 ```Go
@@ -1298,10 +1257,15 @@ var gitHubRepoPath = lazyregexp.New(`github\.com\/([a-z\d]+-)*[a-z\d]+\/(.+)`)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="labels" href="#labels">type labels uint16</a>
 
 ```
 searchKey: query.labels
+tags: [private]
 ```
 
 ```Go
@@ -1314,6 +1278,7 @@ Labels are general-purpose annotations that store information about a node.
 
 ```
 searchKey: query.collectLabels
+tags: [private]
 ```
 
 ```Go
@@ -1324,6 +1289,7 @@ func collectLabels(nodes []Node) (result labels)
 
 ```
 searchKey: query.labels.IsSet
+tags: [private]
 ```
 
 ```Go
@@ -1334,6 +1300,7 @@ func (l *labels) IsSet(label labels) bool
 
 ```
 searchKey: query.labels.set
+tags: [private]
 ```
 
 ```Go
@@ -1344,6 +1311,7 @@ func (l *labels) set(label labels)
 
 ```
 searchKey: query.labels.unset
+tags: [private]
 ```
 
 ```Go
@@ -1354,6 +1322,7 @@ func (l *labels) unset(label labels)
 
 ```
 searchKey: query.labels.String
+tags: [private]
 ```
 
 ```Go
@@ -1364,7 +1333,6 @@ func (l *labels) String() []string
 
 ```
 searchKey: query.Mapper
-tags: [exported]
 ```
 
 ```Go
@@ -1382,7 +1350,6 @@ The Mapper interface allows to replace nodes for each respective part of the que
 
 ```
 searchKey: query.BaseMapper
-tags: [exported]
 ```
 
 ```Go
@@ -1395,7 +1362,6 @@ The BaseMapper is a mapper that recursively visits each node in a query and maps
 
 ```
 searchKey: query.BaseMapper.MapNodes
-tags: [exported]
 ```
 
 ```Go
@@ -1406,7 +1372,6 @@ func (*BaseMapper) MapNodes(mapper Mapper, nodes []Node) []Node
 
 ```
 searchKey: query.BaseMapper.MapOperator
-tags: [exported]
 ```
 
 ```Go
@@ -1419,7 +1384,6 @@ Base mapper for Operators. Reduces operands if changed.
 
 ```
 searchKey: query.BaseMapper.MapParameter
-tags: [exported]
 ```
 
 ```Go
@@ -1432,7 +1396,6 @@ Base mapper for Parameters. It is the identity function.
 
 ```
 searchKey: query.BaseMapper.MapPattern
-tags: [exported]
 ```
 
 ```Go
@@ -1445,7 +1408,6 @@ Base mapper for Patterns. It is the identity function.
 
 ```
 searchKey: query.OperatorMapper
-tags: [exported]
 ```
 
 ```Go
@@ -1461,7 +1423,6 @@ OperatorMapper is a helper mapper that maps operators in a query. It takes as st
 
 ```
 searchKey: query.OperatorMapper.MapOperator
-tags: [exported]
 ```
 
 ```Go
@@ -1474,7 +1435,6 @@ MapOperator implements OperatorMapper by overriding the BaseMapper's value to su
 
 ```
 searchKey: query.ParameterMapper
-tags: [exported]
 ```
 
 ```Go
@@ -1490,7 +1450,6 @@ ParameterMapper is a helper mapper that only maps parameters in a query. It take
 
 ```
 searchKey: query.ParameterMapper.MapParameter
-tags: [exported]
 ```
 
 ```Go
@@ -1503,7 +1462,6 @@ MapParameter implements ParameterMapper by overriding the BaseMapper's value to 
 
 ```
 searchKey: query.PatternMapper
-tags: [exported]
 ```
 
 ```Go
@@ -1519,7 +1477,6 @@ PatternMapper is a helper mapper that only maps patterns in a query. It takes as
 
 ```
 searchKey: query.PatternMapper.MapPattern
-tags: [exported]
 ```
 
 ```Go
@@ -1530,7 +1487,6 @@ func (s *PatternMapper) MapPattern(mapper Mapper, value string, negated bool, an
 
 ```
 searchKey: query.FieldMapper
-tags: [exported]
 ```
 
 ```Go
@@ -1547,7 +1503,6 @@ FieldMapper is a helper mapper that only maps patterns in a query, for a field s
 
 ```
 searchKey: query.FieldMapper.MapParameter
-tags: [exported]
 ```
 
 ```Go
@@ -1558,7 +1513,6 @@ func (s *FieldMapper) MapParameter(mapper Mapper, field, value string, negated b
 
 ```
 searchKey: query.Node
-tags: [exported]
 ```
 
 ```Go
@@ -1572,7 +1526,6 @@ type Node interface {
 
 ```
 searchKey: query.PartitionSearchPattern
-tags: [exported]
 ```
 
 ```Go
@@ -1585,7 +1538,6 @@ PartitionSearchPattern partitions an and/or query into (1) a single search patte
 
 ```
 searchKey: query.Annotation
-tags: [exported]
 ```
 
 ```Go
@@ -1601,7 +1553,6 @@ An annotation stores information associated with a node.
 
 ```
 searchKey: query.Pattern
-tags: [exported]
 ```
 
 ```Go
@@ -1618,6 +1569,7 @@ Pattern is a leaf node of expressions representing a search pattern fragment.
 
 ```
 searchKey: query.newPattern
+tags: [private]
 ```
 
 ```Go
@@ -1628,6 +1580,7 @@ func newPattern(value string, negated bool, labels labels, range_ Range) Pattern
 
 ```
 searchKey: query.fuzzyRegexp
+tags: [private]
 ```
 
 ```Go
@@ -1640,6 +1593,7 @@ fuzzyRegexp interpolates patterns with .*? regular expressions and concatenates 
 
 ```
 searchKey: query.space
+tags: [private]
 ```
 
 ```Go
@@ -1652,6 +1606,7 @@ fuzzyRegexp interpolates patterns with spaces and concatenates them. Invariant: 
 
 ```
 searchKey: query.Pattern.node
+tags: [private]
 ```
 
 ```Go
@@ -1664,7 +1619,6 @@ All terms that implement Node.
 
 ```
 searchKey: query.Pattern.String
-tags: [exported]
 ```
 
 ```Go
@@ -1675,7 +1629,6 @@ func (node Pattern) String() string
 
 ```
 searchKey: query.Parameter
-tags: [exported]
 ```
 
 ```Go
@@ -1693,6 +1646,7 @@ Parameter is a leaf node of expressions representing a parameter of format "repo
 
 ```
 searchKey: query.Parameter.node
+tags: [private]
 ```
 
 ```Go
@@ -1703,7 +1657,6 @@ func (Parameter) node()
 
 ```
 searchKey: query.Parameter.String
-tags: [exported]
 ```
 
 ```Go
@@ -1714,6 +1667,7 @@ func (node Parameter) String() string
 
 ```
 searchKey: query.operatorKind
+tags: [private]
 ```
 
 ```Go
@@ -1724,7 +1678,6 @@ type operatorKind int
 
 ```
 searchKey: query.Operator
-tags: [exported]
 ```
 
 ```Go
@@ -1741,6 +1694,7 @@ Operator is a nonterminal node of kind Kind with child nodes Operands.
 
 ```
 searchKey: query.Operator.node
+tags: [private]
 ```
 
 ```Go
@@ -1751,7 +1705,6 @@ func (Operator) node()
 
 ```
 searchKey: query.Operator.String
-tags: [exported]
 ```
 
 ```Go
@@ -1762,6 +1715,7 @@ func (node Operator) String() string
 
 ```
 searchKey: query.keyword
+tags: [private]
 ```
 
 ```Go
@@ -1772,6 +1726,7 @@ type keyword string
 
 ```
 searchKey: query.heuristics
+tags: [private]
 ```
 
 ```Go
@@ -1782,6 +1737,7 @@ type heuristics uint8
 
 ```
 searchKey: query.parser
+tags: [private]
 ```
 
 ```Go
@@ -1798,6 +1754,7 @@ type parser struct {
 
 ```
 searchKey: query.parser.done
+tags: [private]
 ```
 
 ```Go
@@ -1808,6 +1765,7 @@ func (p *parser) done() bool
 
 ```
 searchKey: query.parser.next
+tags: [private]
 ```
 
 ```Go
@@ -1818,6 +1776,7 @@ func (p *parser) next() rune
 
 ```
 searchKey: query.parser.peek
+tags: [private]
 ```
 
 ```Go
@@ -1830,6 +1789,7 @@ peek looks ahead n runes in the input and returns a string if it succeeds, or an
 
 ```
 searchKey: query.parser.match
+tags: [private]
 ```
 
 ```Go
@@ -1842,6 +1802,7 @@ match returns whether it succeeded matching a keyword at the current position. I
 
 ```
 searchKey: query.parser.expect
+tags: [private]
 ```
 
 ```Go
@@ -1854,6 +1815,7 @@ expect returns the result of match, and advances the position if it succeeds.
 
 ```
 searchKey: query.parser.matchKeyword
+tags: [private]
 ```
 
 ```Go
@@ -1866,6 +1828,7 @@ matchKeyword is like match but expects the keyword to be preceded and followed b
 
 ```
 searchKey: query.parser.matchUnaryKeyword
+tags: [private]
 ```
 
 ```Go
@@ -1878,6 +1841,7 @@ matchUnaryKeyword is like match but expects the keyword to be followed by whites
 
 ```
 searchKey: query.parser.skipSpaces
+tags: [private]
 ```
 
 ```Go
@@ -1890,6 +1854,7 @@ skipSpaces advances the input and places the parser position at the next non-spa
 
 ```
 searchKey: query.parser.TryParseDelimiter
+tags: [private]
 ```
 
 ```Go
@@ -1902,6 +1867,7 @@ TryParseDelimiter tries to parse a delimited string, returning the interpreted (
 
 ```
 searchKey: query.parser.ParseFieldValue
+tags: [private]
 ```
 
 ```Go
@@ -1914,6 +1880,7 @@ ParseFieldValue parses a value after a field like "repo:". It returns the parsed
 
 ```
 searchKey: query.parser.TryParseDelimitedPattern
+tags: [private]
 ```
 
 ```Go
@@ -1926,6 +1893,7 @@ Try parse a delimited pattern, quoted as "...", '...', or /.../.
 
 ```
 searchKey: query.parser.TryScanBalancedPattern
+tags: [private]
 ```
 
 ```Go
@@ -1936,6 +1904,7 @@ func (p *parser) TryScanBalancedPattern(label labels) (Pattern, bool)
 
 ```
 searchKey: query.parser.ParsePattern
+tags: [private]
 ```
 
 ```Go
@@ -1948,6 +1917,7 @@ ParsePattern parses a leaf node Pattern that corresponds to a search pattern. No
 
 ```
 searchKey: query.parser.ParseParameter
+tags: [private]
 ```
 
 ```Go
@@ -1960,6 +1930,7 @@ ParseParameter returns a leaf node corresponding to the syntax (-?)field:<string
 
 ```
 searchKey: query.parser.parseLeaves
+tags: [private]
 ```
 
 ```Go
@@ -1972,6 +1943,7 @@ parseLeaves scans for consecutive leaf nodes and applies label to patterns.
 
 ```
 searchKey: query.parser.parseAnd
+tags: [private]
 ```
 
 ```Go
@@ -1984,6 +1956,7 @@ parseAnd parses and-expressions.
 
 ```
 searchKey: query.parser.parseOr
+tags: [private]
 ```
 
 ```Go
@@ -1996,6 +1969,7 @@ parseOr parses or-expressions. Or operators have lower precedence than And opera
 
 ```
 searchKey: query.parser.tryFallbackParser
+tags: [private]
 ```
 
 ```Go
@@ -2006,7 +1980,6 @@ func (p *parser) tryFallbackParser(in string) ([]Node, error)
 
 ```
 searchKey: query.Predicate
-tags: [exported]
 ```
 
 ```Go
@@ -2033,6 +2006,7 @@ type Predicate interface {
 
 ```
 searchKey: query.predicateRegistry
+tags: [private]
 ```
 
 ```Go
@@ -2043,6 +2017,7 @@ type predicateRegistry map[string]map[string]func() Predicate
 
 ```
 searchKey: query.predicateRegistry.Get
+tags: [private]
 ```
 
 ```Go
@@ -2055,7 +2030,6 @@ Get returns a predicate for the given field with the given name. It assumes it e
 
 ```
 searchKey: query.RepoContainsPredicate
-tags: [exported]
 ```
 
 ```Go
@@ -2071,7 +2045,6 @@ RepoContainsPredicate represents the `repo:contains()` predicate, which filters 
 
 ```
 searchKey: query.RepoContainsPredicate.ParseParams
-tags: [exported]
 ```
 
 ```Go
@@ -2082,6 +2055,7 @@ func (f *RepoContainsPredicate) ParseParams(params string) error
 
 ```
 searchKey: query.RepoContainsPredicate.parseNode
+tags: [private]
 ```
 
 ```Go
@@ -2092,7 +2066,6 @@ func (f *RepoContainsPredicate) parseNode(n Node) error
 
 ```
 searchKey: query.RepoContainsPredicate.Field
-tags: [exported]
 ```
 
 ```Go
@@ -2103,7 +2076,6 @@ func (f *RepoContainsPredicate) Field() string
 
 ```
 searchKey: query.RepoContainsPredicate.Name
-tags: [exported]
 ```
 
 ```Go
@@ -2114,7 +2086,6 @@ func (f *RepoContainsPredicate) Name() string
 
 ```
 searchKey: query.RepoContainsPredicate.Plan
-tags: [exported]
 ```
 
 ```Go
@@ -2125,7 +2096,6 @@ func (f *RepoContainsPredicate) Plan(parent Basic) (Plan, error)
 
 ```
 searchKey: query.RepoContainsContentPredicate
-tags: [exported]
 ```
 
 ```Go
@@ -2138,7 +2108,6 @@ type RepoContainsContentPredicate struct {
 
 ```
 searchKey: query.RepoContainsContentPredicate.ParseParams
-tags: [exported]
 ```
 
 ```Go
@@ -2149,7 +2118,6 @@ func (f *RepoContainsContentPredicate) ParseParams(params string) error
 
 ```
 searchKey: query.RepoContainsContentPredicate.Field
-tags: [exported]
 ```
 
 ```Go
@@ -2160,7 +2128,6 @@ func (f *RepoContainsContentPredicate) Field() string
 
 ```
 searchKey: query.RepoContainsContentPredicate.Name
-tags: [exported]
 ```
 
 ```Go
@@ -2171,7 +2138,6 @@ func (f *RepoContainsContentPredicate) Name() string
 
 ```
 searchKey: query.RepoContainsContentPredicate.Plan
-tags: [exported]
 ```
 
 ```Go
@@ -2182,7 +2148,6 @@ func (f *RepoContainsContentPredicate) Plan(parent Basic) (Plan, error)
 
 ```
 searchKey: query.RepoContainsFilePredicate
-tags: [exported]
 ```
 
 ```Go
@@ -2195,7 +2160,6 @@ type RepoContainsFilePredicate struct {
 
 ```
 searchKey: query.RepoContainsFilePredicate.ParseParams
-tags: [exported]
 ```
 
 ```Go
@@ -2206,7 +2170,6 @@ func (f *RepoContainsFilePredicate) ParseParams(params string) error
 
 ```
 searchKey: query.RepoContainsFilePredicate.Field
-tags: [exported]
 ```
 
 ```Go
@@ -2217,7 +2180,6 @@ func (f *RepoContainsFilePredicate) Field() string
 
 ```
 searchKey: query.RepoContainsFilePredicate.Name
-tags: [exported]
 ```
 
 ```Go
@@ -2228,7 +2190,6 @@ func (f *RepoContainsFilePredicate) Name() string
 
 ```
 searchKey: query.RepoContainsFilePredicate.Plan
-tags: [exported]
 ```
 
 ```Go
@@ -2239,7 +2200,6 @@ func (f *RepoContainsFilePredicate) Plan(parent Basic) (Plan, error)
 
 ```
 searchKey: query.RepoContainsCommitAfterPredicate
-tags: [exported]
 ```
 
 ```Go
@@ -2252,7 +2212,6 @@ type RepoContainsCommitAfterPredicate struct {
 
 ```
 searchKey: query.RepoContainsCommitAfterPredicate.ParseParams
-tags: [exported]
 ```
 
 ```Go
@@ -2263,7 +2222,6 @@ func (f *RepoContainsCommitAfterPredicate) ParseParams(params string) error
 
 ```
 searchKey: query.RepoContainsCommitAfterPredicate.Field
-tags: [exported]
 ```
 
 ```Go
@@ -2274,7 +2232,6 @@ func (f RepoContainsCommitAfterPredicate) Field() string
 
 ```
 searchKey: query.RepoContainsCommitAfterPredicate.Name
-tags: [exported]
 ```
 
 ```Go
@@ -2285,7 +2242,6 @@ func (f RepoContainsCommitAfterPredicate) Name() string
 
 ```
 searchKey: query.RepoContainsCommitAfterPredicate.Plan
-tags: [exported]
 ```
 
 ```Go
@@ -2296,6 +2252,7 @@ func (f *RepoContainsCommitAfterPredicate) Plan(parent Basic) (Plan, error)
 
 ```
 searchKey: query.step
+tags: [private]
 ```
 
 ```Go
@@ -2308,6 +2265,7 @@ A step performs a transformation on nodes, which may fail.
 
 ```
 searchKey: query.sequence
+tags: [private]
 ```
 
 ```Go
@@ -2320,6 +2278,7 @@ sequence sequences zero or more steps to create a single step.
 
 ```
 searchKey: query.succeeds
+tags: [private]
 ```
 
 ```Go
@@ -2332,7 +2291,6 @@ succeeds converts a sequence of passes into a single step.
 
 ```
 searchKey: query.With
-tags: [exported]
 ```
 
 ```Go
@@ -2345,7 +2303,6 @@ With returns step if enabled is true. Use it to compose a pipeline that conditio
 
 ```
 searchKey: query.For
-tags: [exported]
 ```
 
 ```Go
@@ -2358,7 +2315,6 @@ For runs processing steps for a given search type. This includes normalization, 
 
 ```
 searchKey: query.Init
-tags: [exported]
 ```
 
 ```Go
@@ -2371,7 +2327,6 @@ Init creates a step from an input string and search type. It parses the initial 
 
 ```
 searchKey: query.InitLiteral
-tags: [exported]
 ```
 
 ```Go
@@ -2384,7 +2339,6 @@ InitLiteral is Init where SearchType is Literal.
 
 ```
 searchKey: query.InitRegexp
-tags: [exported]
 ```
 
 ```Go
@@ -2397,7 +2351,6 @@ InitRegexp is Init where SearchType is Regex.
 
 ```
 searchKey: query.InitStructural
-tags: [exported]
 ```
 
 ```Go
@@ -2410,6 +2363,7 @@ InitStructural is Init where SearchType is Structural.
 
 ```
 searchKey: query.pass
+tags: [private]
 ```
 
 ```Go
@@ -2422,7 +2376,6 @@ A pass is a step that never fails.
 
 ```
 searchKey: query.BasicPass
-tags: [exported]
 ```
 
 ```Go
@@ -2435,6 +2388,7 @@ A BasicPass is a transformation on Basic queries.
 
 ```
 searchKey: query.position
+tags: [private]
 ```
 
 ```Go
@@ -2448,7 +2402,6 @@ type position struct {
 
 ```
 searchKey: query.Range
-tags: [exported]
 ```
 
 ```Go
@@ -2462,6 +2415,7 @@ type Range struct {
 
 ```
 searchKey: query.newRange
+tags: [private]
 ```
 
 ```Go
@@ -2474,7 +2428,6 @@ Returns a new range that assumes the string happens on one line. Column position
 
 ```
 searchKey: query.Range.String
-tags: [exported]
 ```
 
 ```Go
@@ -2485,6 +2438,7 @@ func (rrange Range) String() string
 
 ```
 searchKey: query.globError
+tags: [private]
 ```
 
 ```Go
@@ -2500,6 +2454,7 @@ globError carries the error message and the name of field where the error occurr
 
 ```
 searchKey: query.globError.Error
+tags: [private]
 ```
 
 ```Go
@@ -2510,7 +2465,6 @@ func (g globError) Error() string
 
 ```
 searchKey: query.ExpectedOperand
-tags: [exported]
 ```
 
 ```Go
@@ -2523,7 +2477,6 @@ type ExpectedOperand struct {
 
 ```
 searchKey: query.ExpectedOperand.Error
-tags: [exported]
 ```
 
 ```Go
@@ -2534,7 +2487,6 @@ func (e *ExpectedOperand) Error() string
 
 ```
 searchKey: query.UnsupportedError
-tags: [exported]
 ```
 
 ```Go
@@ -2547,7 +2499,6 @@ type UnsupportedError struct {
 
 ```
 searchKey: query.UnsupportedError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -2558,7 +2509,6 @@ func (e *UnsupportedError) Error() string
 
 ```
 searchKey: query.SearchType
-tags: [exported]
 ```
 
 ```Go
@@ -2569,7 +2519,6 @@ type SearchType int
 
 ```
 searchKey: query.SearchType.String
-tags: [exported]
 ```
 
 ```Go
@@ -2580,7 +2529,6 @@ func (s SearchType) String() string
 
 ```
 searchKey: query.QueryInfo
-tags: [exported]
 ```
 
 ```Go
@@ -2606,7 +2554,6 @@ QueryInfo is an interface for accessing query values that drive our search logic
 
 ```
 searchKey: query.Plan
-tags: [exported]
 ```
 
 ```Go
@@ -2619,7 +2566,6 @@ A query plan represents a set of disjoint queries for the search engine to execu
 
 ```
 searchKey: query.MapPlan
-tags: [exported]
 ```
 
 ```Go
@@ -2632,7 +2578,6 @@ MapPlan applies a conversion to all Basic queries in a plan. It expects a valid 
 
 ```
 searchKey: query.ToPlan
-tags: [exported]
 ```
 
 ```Go
@@ -2643,7 +2588,6 @@ func ToPlan(disjuncts [][]Node) (Plan, error)
 
 ```
 searchKey: query.Pipeline
-tags: [exported]
 ```
 
 ```Go
@@ -2656,7 +2600,6 @@ Pipeline processes zero or more steps to produce a query. The first step must be
 
 ```
 searchKey: query.Plan.ToParseTree
-tags: [exported]
 ```
 
 ```Go
@@ -2669,7 +2612,6 @@ ToParseTree models a plan as a parse tree of an Or-expression on plan queries.
 
 ```
 searchKey: query.Basic
-tags: [exported]
 ```
 
 ```Go
@@ -2692,7 +2634,6 @@ Basic represents a leaf expression to evaluate in our search engine. A basic que
 
 ```
 searchKey: query.ConcatRevFilters
-tags: [exported]
 ```
 
 ```Go
@@ -2705,7 +2646,6 @@ concatRevFilters removes rev: filters from parameters and attaches their value a
 
 ```
 searchKey: query.ToBasicQuery
-tags: [exported]
 ```
 
 ```Go
@@ -2718,7 +2658,6 @@ Converts a parse tree to a basic query by attempting to obtain a valid partition
 
 ```
 searchKey: query.Identity
-tags: [exported]
 ```
 
 ```Go
@@ -2731,7 +2670,6 @@ Identity is the identity transformer for basic queries.
 
 ```
 searchKey: query.PatternToFile
-tags: [exported]
 ```
 
 ```Go
@@ -2744,7 +2682,6 @@ PatternToFile transforms a search query such that `file:` is prefixed to the pat
 
 ```
 searchKey: query.Basic.ToParseTree
-tags: [exported]
 ```
 
 ```Go
@@ -2755,7 +2692,6 @@ func (b Basic) ToParseTree() Q
 
 ```
 searchKey: query.Basic.MapPattern
-tags: [exported]
 ```
 
 ```Go
@@ -2768,7 +2704,6 @@ MapPattern returns a copy of a basic query with updated pattern.
 
 ```
 searchKey: query.Basic.MapParameters
-tags: [exported]
 ```
 
 ```Go
@@ -2781,7 +2716,6 @@ MapParameters returns a copy of a basic query with updated parameters.
 
 ```
 searchKey: query.Basic.AddCount
-tags: [exported]
 ```
 
 ```Go
@@ -2794,7 +2728,6 @@ AddCount adds a count parameter to a basic query. Behavior of AddCount on a quer
 
 ```
 searchKey: query.Basic.GetCount
-tags: [exported]
 ```
 
 ```Go
@@ -2807,7 +2740,6 @@ GetCount returns the string value of the "count:" field. Returns empty string if
 
 ```
 searchKey: query.Basic.MapCount
-tags: [exported]
 ```
 
 ```Go
@@ -2820,7 +2752,6 @@ MapCount returns a copy of a basic query with a count parameter set.
 
 ```
 searchKey: query.Basic.String
-tags: [exported]
 ```
 
 ```Go
@@ -2831,7 +2762,6 @@ func (b Basic) String() string
 
 ```
 searchKey: query.Basic.VisitParameter
-tags: [exported]
 ```
 
 ```Go
@@ -2842,7 +2772,6 @@ func (b Basic) VisitParameter(field string, f func(value string, negated bool, a
 
 ```
 searchKey: query.Basic.HasPatternLabel
-tags: [exported]
 ```
 
 ```Go
@@ -2855,7 +2784,6 @@ HasPatternLabel returns whether a pattern atom has a specified label.
 
 ```
 searchKey: query.Basic.IsLiteral
-tags: [exported]
 ```
 
 ```Go
@@ -2866,7 +2794,6 @@ func (b Basic) IsLiteral() bool
 
 ```
 searchKey: query.Basic.IsRegexp
-tags: [exported]
 ```
 
 ```Go
@@ -2877,7 +2804,6 @@ func (b Basic) IsRegexp() bool
 
 ```
 searchKey: query.Basic.IsStructural
-tags: [exported]
 ```
 
 ```Go
@@ -2888,7 +2814,6 @@ func (b Basic) IsStructural() bool
 
 ```
 searchKey: query.Basic.FindParameter
-tags: [exported]
 ```
 
 ```Go
@@ -2901,7 +2826,6 @@ FindParameter calls f on parameters matching field in b.
 
 ```
 searchKey: query.Basic.FindValue
-tags: [exported]
 ```
 
 ```Go
@@ -2914,7 +2838,6 @@ FindValue returns the first value of a parameter matching field in b. It doesn't
 
 ```
 searchKey: query.Basic.IsCaseSensitive
-tags: [exported]
 ```
 
 ```Go
@@ -2925,7 +2848,6 @@ func (b Basic) IsCaseSensitive() bool
 
 ```
 searchKey: query.Basic.Index
-tags: [exported]
 ```
 
 ```Go
@@ -2936,7 +2858,6 @@ func (b Basic) Index() YesNoOnly
 
 ```
 searchKey: query.Q
-tags: [exported]
 ```
 
 ```Go
@@ -2949,7 +2870,6 @@ A query is a tree of Nodes. We choose the type name Q so that external uses like
 
 ```
 searchKey: query.ParseSearchType
-tags: [exported]
 ```
 
 ```Go
@@ -2960,7 +2880,6 @@ func ParseSearchType(in string, searchType SearchType) (Q, error)
 
 ```
 searchKey: query.ParseLiteral
-tags: [exported]
 ```
 
 ```Go
@@ -2971,7 +2890,6 @@ func ParseLiteral(in string) (Q, error)
 
 ```
 searchKey: query.ParseRegexp
-tags: [exported]
 ```
 
 ```Go
@@ -2982,7 +2900,6 @@ func ParseRegexp(in string) (Q, error)
 
 ```
 searchKey: query.Q.String
-tags: [exported]
 ```
 
 ```Go
@@ -2993,7 +2910,6 @@ func (q Q) String() string
 
 ```
 searchKey: query.Q.RegexpPatterns
-tags: [exported]
 ```
 
 ```Go
@@ -3004,7 +2920,6 @@ func (q Q) RegexpPatterns(field string) (values, negatedValues []string)
 
 ```
 searchKey: query.Q.StringValues
-tags: [exported]
 ```
 
 ```Go
@@ -3015,7 +2930,6 @@ func (q Q) StringValues(field string) (values, negatedValues []string)
 
 ```
 searchKey: query.Q.StringValue
-tags: [exported]
 ```
 
 ```Go
@@ -3026,7 +2940,6 @@ func (q Q) StringValue(field string) (value, negatedValue string)
 
 ```
 searchKey: query.Q.Values
-tags: [exported]
 ```
 
 ```Go
@@ -3037,7 +2950,6 @@ func (q Q) Values(field string) []*Value
 
 ```
 searchKey: query.Q.Fields
-tags: [exported]
 ```
 
 ```Go
@@ -3048,7 +2960,6 @@ func (q Q) Fields() map[string][]*Value
 
 ```
 searchKey: query.Q.BoolValue
-tags: [exported]
 ```
 
 ```Go
@@ -3059,7 +2970,6 @@ func (q Q) BoolValue(field string) bool
 
 ```
 searchKey: query.Q.Count
-tags: [exported]
 ```
 
 ```Go
@@ -3070,7 +2980,6 @@ func (q Q) Count() *int
 
 ```
 searchKey: query.Q.Archived
-tags: [exported]
 ```
 
 ```Go
@@ -3081,7 +2990,6 @@ func (q Q) Archived() *YesNoOnly
 
 ```
 searchKey: query.Q.Fork
-tags: [exported]
 ```
 
 ```Go
@@ -3092,6 +3000,7 @@ func (q Q) Fork() *YesNoOnly
 
 ```
 searchKey: query.Q.yesNoOnlyValue
+tags: [private]
 ```
 
 ```Go
@@ -3102,7 +3011,6 @@ func (q Q) yesNoOnlyValue(field string) *YesNoOnly
 
 ```
 searchKey: query.Q.Timeout
-tags: [exported]
 ```
 
 ```Go
@@ -3113,7 +3021,6 @@ func (q Q) Timeout() *time.Duration
 
 ```
 searchKey: query.Q.IsCaseSensitive
-tags: [exported]
 ```
 
 ```Go
@@ -3124,7 +3031,6 @@ func (q Q) IsCaseSensitive() bool
 
 ```
 searchKey: query.Q.Repositories
-tags: [exported]
 ```
 
 ```Go
@@ -3135,6 +3041,7 @@ func (q Q) Repositories() (repos []string, negatedRepos []string)
 
 ```
 searchKey: query.Q.valueToTypedValue
+tags: [private]
 ```
 
 ```Go
@@ -3147,7 +3054,6 @@ valueToTypedValue approximately preserves the field validation of our previous q
 
 ```
 searchKey: query.YesNoOnly
-tags: [exported]
 ```
 
 ```Go
@@ -3158,7 +3064,6 @@ type YesNoOnly string
 
 ```
 searchKey: query.ParseYesNoOnly
-tags: [exported]
 ```
 
 ```Go
@@ -3169,7 +3074,6 @@ func ParseYesNoOnly(s string) YesNoOnly
 
 ```
 searchKey: query.ValueType
-tags: [exported]
 ```
 
 ```Go
@@ -3182,7 +3086,6 @@ ValueType is the set of types of values in queries.
 
 ```
 searchKey: query.Value
-tags: [exported]
 ```
 
 ```Go
@@ -3199,7 +3102,6 @@ A Value is a field value in a query.
 
 ```
 searchKey: query.Value.Value
-tags: [exported]
 ```
 
 ```Go
@@ -3212,7 +3114,6 @@ Value returns the value as an interface{}.
 
 ```
 searchKey: query.Value.ToString
-tags: [exported]
 ```
 
 ```Go
@@ -3223,6 +3124,7 @@ func (v *Value) ToString() string
 
 ```
 searchKey: query.repoVisibility
+tags: [private]
 ```
 
 ```Go
@@ -3233,7 +3135,6 @@ type repoVisibility string
 
 ```
 searchKey: query.ParseVisibility
-tags: [exported]
 ```
 
 ```Go
@@ -3244,7 +3145,6 @@ func ParseVisibility(s string) repoVisibility
 
 ```
 searchKey: query.Visitor
-tags: [exported]
 ```
 
 ```Go
@@ -3262,7 +3162,6 @@ The Visitor interface allows to visit nodes for each respective part of the quer
 
 ```
 searchKey: query.BaseVisitor
-tags: [exported]
 ```
 
 ```Go
@@ -3275,7 +3174,6 @@ BaseVisitor is a visitor that recursively visits each node in a query. A BaseVis
 
 ```
 searchKey: query.BaseVisitor.VisitNodes
-tags: [exported]
 ```
 
 ```Go
@@ -3286,7 +3184,6 @@ func (*BaseVisitor) VisitNodes(visitor Visitor, nodes []Node)
 
 ```
 searchKey: query.BaseVisitor.VisitOperator
-tags: [exported]
 ```
 
 ```Go
@@ -3297,7 +3194,6 @@ func (*BaseVisitor) VisitOperator(visitor Visitor, kind operatorKind, operands [
 
 ```
 searchKey: query.BaseVisitor.VisitParameter
-tags: [exported]
 ```
 
 ```Go
@@ -3308,7 +3204,6 @@ func (*BaseVisitor) VisitParameter(visitor Visitor, field, value string, negated
 
 ```
 searchKey: query.BaseVisitor.VisitPattern
-tags: [exported]
 ```
 
 ```Go
@@ -3319,7 +3214,6 @@ func (*BaseVisitor) VisitPattern(visitor Visitor, value string, negated bool, an
 
 ```
 searchKey: query.OperatorVisitor
-tags: [exported]
 ```
 
 ```Go
@@ -3335,7 +3229,6 @@ ParameterVisitor is a helper visitor that only visits operators in a query, and 
 
 ```
 searchKey: query.OperatorVisitor.VisitOperator
-tags: [exported]
 ```
 
 ```Go
@@ -3346,7 +3239,6 @@ func (s *OperatorVisitor) VisitOperator(visitor Visitor, kind operatorKind, oper
 
 ```
 searchKey: query.ParameterVisitor
-tags: [exported]
 ```
 
 ```Go
@@ -3362,7 +3254,6 @@ ParameterVisitor is a helper visitor that only visits parameters in a query, and
 
 ```
 searchKey: query.ParameterVisitor.VisitParameter
-tags: [exported]
 ```
 
 ```Go
@@ -3373,7 +3264,6 @@ func (s *ParameterVisitor) VisitParameter(visitor Visitor, field, value string, 
 
 ```
 searchKey: query.PatternVisitor
-tags: [exported]
 ```
 
 ```Go
@@ -3389,7 +3279,6 @@ PatternVisitor is a helper visitor that only visits patterns in a query, and sup
 
 ```
 searchKey: query.PatternVisitor.VisitPattern
-tags: [exported]
 ```
 
 ```Go
@@ -3400,7 +3289,6 @@ func (s *PatternVisitor) VisitPattern(visitor Visitor, value string, negated boo
 
 ```
 searchKey: query.FieldVisitor
-tags: [exported]
 ```
 
 ```Go
@@ -3417,7 +3305,6 @@ FieldVisitor is a helper visitor that only visits parameter fields in a query, f
 
 ```
 searchKey: query.FieldVisitor.VisitParameter
-tags: [exported]
 ```
 
 ```Go
@@ -3426,10 +3313,15 @@ func (s *FieldVisitor) VisitParameter(visitor Visitor, field, value string, nega
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="resolveFieldAlias" href="#resolveFieldAlias">func resolveFieldAlias(field string) string</a>
 
 ```
 searchKey: query.resolveFieldAlias
+tags: [private]
 ```
 
 ```Go
@@ -3442,7 +3334,6 @@ resolveFieldAlias resolves an aliased field like `r:` to its canonical name like
 
 ```
 searchKey: query.MapOperator
-tags: [exported]
 ```
 
 ```Go
@@ -3455,7 +3346,6 @@ MapOperator is a convenience function that calls callback on all operator nodes,
 
 ```
 searchKey: query.MapParameter
-tags: [exported]
 ```
 
 ```Go
@@ -3468,7 +3358,6 @@ MapParameter is a convenience function that calls callback on all parameter node
 
 ```
 searchKey: query.MapPattern
-tags: [exported]
 ```
 
 ```Go
@@ -3481,7 +3370,6 @@ MapPattern is a convenience function that calls callback on all pattern nodes, s
 
 ```
 searchKey: query.MapField
-tags: [exported]
 ```
 
 ```Go
@@ -3494,6 +3382,7 @@ MapField is a convenience function that calls callback on all parameter nodes wh
 
 ```
 searchKey: query.isSpace
+tags: [private]
 ```
 
 ```Go
@@ -3504,6 +3393,7 @@ func isSpace(buf []byte) bool
 
 ```
 searchKey: query.skipSpace
+tags: [private]
 ```
 
 ```Go
@@ -3516,6 +3406,7 @@ skipSpace returns the number of whitespace bytes skipped from the beginning of a
 
 ```
 searchKey: query.isSet
+tags: [private]
 ```
 
 ```Go
@@ -3526,7 +3417,6 @@ func isSet(h, heuristic heuristics) bool
 
 ```
 searchKey: query.ScanAnyPattern
-tags: [exported]
 ```
 
 ```Go
@@ -3539,7 +3429,6 @@ ScanAnyPattern consumes all characters up to a whitespace character and returns 
 
 ```
 searchKey: query.ScanBalancedPattern
-tags: [exported]
 ```
 
 ```Go
@@ -3562,7 +3451,6 @@ So, this scanner detects parentheses as patterns without needing the user to exp
 
 ```
 searchKey: query.ScanPredicate
-tags: [exported]
 ```
 
 ```Go
@@ -3575,7 +3463,6 @@ ScanPredicate scans for a predicate that exists in the predicate registry. It ta
 
 ```
 searchKey: query.ScanPredicateName
-tags: [exported]
 ```
 
 ```Go
@@ -3588,7 +3475,6 @@ ScanPredicateName scans for a well-known predicate name for he given field
 
 ```
 searchKey: query.ScanBalancedParens
-tags: [exported]
 ```
 
 ```Go
@@ -3601,7 +3487,6 @@ ScanBalancedParens will return the full string including and inside the paranthe
 
 ```
 searchKey: query.ScanDelimited
-tags: [exported]
 ```
 
 ```Go
@@ -3614,7 +3499,6 @@ ScanDelimited takes a delimited (e.g., quoted) value for some arbitrary delimite
 
 ```
 searchKey: query.ScanField
-tags: [exported]
 ```
 
 ```Go
@@ -3627,7 +3511,6 @@ ScanField scans an optional '-' at the beginning of a string, and then scans one
 
 ```
 searchKey: query.ScanValue
-tags: [exported]
 ```
 
 ```Go
@@ -3640,6 +3523,7 @@ ScanValue scans for a value (e.g., of a parameter, or a string corresponding to 
 
 ```
 searchKey: query.partitionParameters
+tags: [private]
 ```
 
 ```Go
@@ -3654,6 +3538,7 @@ The resulting tree defines an ordering relation on nodes in the following cases:
 
 ```
 searchKey: query.reduce
+tags: [private]
 ```
 
 ```Go
@@ -3666,6 +3551,7 @@ reduce takes lists of left and right nodes and reduces them if possible. For exa
 
 ```
 searchKey: query.newOperator
+tags: [private]
 ```
 
 ```Go
@@ -3678,7 +3564,6 @@ newOperator constructs a new node of kind operatorKind with operands nodes, redu
 
 ```
 searchKey: query.Parse
-tags: [exported]
 ```
 
 ```Go
@@ -3691,7 +3576,6 @@ Parse parses a raw input string into a parse tree comprising Nodes.
 
 ```
 searchKey: query.ParseAsPredicate
-tags: [exported]
 ```
 
 ```Go
@@ -3704,6 +3588,7 @@ ParsePredicate returns the name and value of syntax conforming to name(value). I
 
 ```
 searchKey: query.nonPredicateRepos
+tags: [private]
 ```
 
 ```Go
@@ -3716,6 +3601,7 @@ nonPredicateRepos returns the repo nodes in a query that aren't predicates, resp
 
 ```
 searchKey: query.stringHumanPattern
+tags: [private]
 ```
 
 ```Go
@@ -3726,6 +3612,7 @@ func stringHumanPattern(nodes []Node) string
 
 ```
 searchKey: query.stringHumanParameters
+tags: [private]
 ```
 
 ```Go
@@ -3736,7 +3623,6 @@ func stringHumanParameters(parameters []Parameter) string
 
 ```
 searchKey: query.StringHuman
-tags: [exported]
 ```
 
 ```Go
@@ -3753,6 +3639,7 @@ It strives to be syntax preserving, but may in some cases affect whitespace, ope
 
 ```
 searchKey: query.toString
+tags: [private]
 ```
 
 ```Go
@@ -3765,7 +3652,6 @@ toString returns a string representation of a query's structure.
 
 ```
 searchKey: query.Run
-tags: [exported]
 ```
 
 ```Go
@@ -3776,7 +3662,6 @@ func Run(step step) ([]Node, error)
 
 ```
 searchKey: query.Validate
-tags: [exported]
 ```
 
 ```Go
@@ -3787,7 +3672,6 @@ func Validate(disjuncts [][]Node) error
 
 ```
 searchKey: query.SubstituteAliases
-tags: [exported]
 ```
 
 ```Go
@@ -3800,7 +3684,6 @@ SubstituteAliases substitutes field name aliases for their canonical names, and 
 
 ```
 searchKey: query.LowercaseFieldNames
-tags: [exported]
 ```
 
 ```Go
@@ -3813,7 +3696,6 @@ LowercaseFieldNames performs strings.ToLower on every field name.
 
 ```
 searchKey: query.SubstituteCountAll
-tags: [exported]
 ```
 
 ```Go
@@ -3826,6 +3708,7 @@ SubstituteCountAll replaces count:all with count:99999999.
 
 ```
 searchKey: query.translateCharacterClass
+tags: [private]
 ```
 
 ```Go
@@ -3838,6 +3721,7 @@ translateCharacterClass translates character classes like [a-zA-Z].
 
 ```
 searchKey: query.globToRegex
+tags: [private]
 ```
 
 ```Go
@@ -3850,6 +3734,7 @@ globToRegex converts a glob string to a regular expression. We support: *, ?, an
 
 ```
 searchKey: query.reporevToRegex
+tags: [private]
 ```
 
 ```Go
@@ -3862,7 +3747,6 @@ reporevToRegex is a wrapper around globToRegex that takes care of treating repo 
 
 ```
 searchKey: query.ContainsNoGlobSyntax
-tags: [exported]
 ```
 
 ```Go
@@ -3873,7 +3757,6 @@ func ContainsNoGlobSyntax(value string) bool
 
 ```
 searchKey: query.LooksLikeGitHubRepo
-tags: [exported]
 ```
 
 ```Go
@@ -3886,6 +3769,7 @@ LooksLikeGitHubRepo returns whether string value looks like a valid GitHub repo 
 
 ```
 searchKey: query.fuzzifyGlobPattern
+tags: [private]
 ```
 
 ```Go
@@ -3896,7 +3780,6 @@ func fuzzifyGlobPattern(value string) string
 
 ```
 searchKey: query.Globbing
-tags: [exported]
 ```
 
 ```Go
@@ -3909,7 +3792,6 @@ Globbing translates glob to regexp for fields repo, file, and repohasfile.
 
 ```
 searchKey: query.ToNodes
-tags: [exported]
 ```
 
 ```Go
@@ -3920,6 +3802,7 @@ func ToNodes(parameters []Parameter) []Node
 
 ```
 searchKey: query.toParameters
+tags: [private]
 ```
 
 ```Go
@@ -3932,7 +3815,6 @@ Converts a flat list of nodes to parameters. Invariant: nodes are parameters. Th
 
 ```
 searchKey: query.Hoist
-tags: [exported]
 ```
 
 ```Go
@@ -3955,6 +3837,7 @@ repo:foo a or b or repo:bar c => (repo:foo a) or (b) or (repo:bar c)
 
 ```
 searchKey: query.partition
+tags: [private]
 ```
 
 ```Go
@@ -3967,6 +3850,7 @@ partition partitions nodes into left and right groups. A node is put in the left
 
 ```
 searchKey: query.product
+tags: [private]
 ```
 
 ```Go
@@ -3979,6 +3863,7 @@ product appends the list of n elements in right to each of the m rows in left. I
 
 ```
 searchKey: query.distribute
+tags: [private]
 ```
 
 ```Go
@@ -3991,7 +3876,6 @@ distribute applies the distributed property to nodes. See the dnf function for c
 
 ```
 searchKey: query.Dnf
-tags: [exported]
 ```
 
 ```Go
@@ -4008,6 +3892,7 @@ Using the DNF expression makes it easy to support general nested queries that im
 
 ```
 searchKey: query.substituteOrForRegexp
+tags: [private]
 ```
 
 ```Go
@@ -4018,6 +3903,7 @@ func substituteOrForRegexp(nodes []Node) []Node
 
 ```
 searchKey: query.substituteConcat
+tags: [private]
 ```
 
 ```Go
@@ -4032,6 +3918,7 @@ The callback parameter defines how the function concatenates patterns. The retur
 
 ```
 searchKey: query.escapeParens
+tags: [private]
 ```
 
 ```Go
@@ -4050,6 +3937,7 @@ Any other forms are ignored, for example, foo.*(bar is unchanged. In the parser 
 
 ```
 searchKey: query.escapeParensHeuristic
+tags: [private]
 ```
 
 ```Go
@@ -4062,7 +3950,6 @@ escapeParensHeuristic escapes certain parentheses in search patterns (see escape
 
 ```
 searchKey: query.Map
-tags: [exported]
 ```
 
 ```Go
@@ -4075,7 +3962,6 @@ Map pipes query through one or more query transformer functions.
 
 ```
 searchKey: query.FuzzifyRegexPatterns
-tags: [exported]
 ```
 
 ```Go
@@ -4086,6 +3972,7 @@ func FuzzifyRegexPatterns(nodes []Node) []Node
 
 ```
 searchKey: query.labelStructural
+tags: [private]
 ```
 
 ```Go
@@ -4098,6 +3985,7 @@ labelStructural converts Literal labels to Structural labels. Structural queries
 
 ```
 searchKey: query.ellipsesForHoles
+tags: [private]
 ```
 
 ```Go
@@ -4110,7 +3998,6 @@ ellipsesForHoles substitutes ellipses ... for :[_] holes in structural search qu
 
 ```
 searchKey: query.OverrideField
-tags: [exported]
 ```
 
 ```Go
@@ -4121,7 +4008,6 @@ func OverrideField(nodes []Node, field, value string) []Node
 
 ```
 searchKey: query.OmitField
-tags: [exported]
 ```
 
 ```Go
@@ -4134,7 +4020,6 @@ OmitField removes all fields `field` from a query. The `field` string should be 
 
 ```
 searchKey: query.AddRegexpField
-tags: [exported]
 ```
 
 ```Go
@@ -4149,6 +4034,7 @@ It tries to remove redundancy in the result. For example, given a query like "x:
 
 ```
 searchKey: query.identity
+tags: [private]
 ```
 
 ```Go
@@ -4159,6 +4045,7 @@ func identity(nodes []Node) ([]Node, error)
 
 ```
 searchKey: query.parseRegexpOrPanic
+tags: [private]
 ```
 
 ```Go
@@ -4169,7 +4056,6 @@ func parseRegexpOrPanic(field, value string) *regexp.Regexp
 
 ```
 searchKey: query.IsBasic
-tags: [exported]
 ```
 
 ```Go
@@ -4182,7 +4068,6 @@ IsBasic returns whether a query is a basic query. A basic query is one which doe
 
 ```
 searchKey: query.IsPatternAtom
-tags: [exported]
 ```
 
 ```Go
@@ -4195,7 +4080,6 @@ IsPatternAtom returns whether a node is a non-negated pattern atom.
 
 ```
 searchKey: query.IsStreamingCompatible
-tags: [exported]
 ```
 
 ```Go
@@ -4208,6 +4092,7 @@ IsStreamingCompatible returns whether a backend search process may immediately s
 
 ```
 searchKey: query.exists
+tags: [private]
 ```
 
 ```Go
@@ -4220,6 +4105,7 @@ exists traverses every node in nodes and returns early as soon as fn is satisfie
 
 ```
 searchKey: query.forAll
+tags: [private]
 ```
 
 ```Go
@@ -4232,6 +4118,7 @@ forAll traverses every node in nodes and returns whether all nodes satisfy fn.
 
 ```
 searchKey: query.isPatternExpression
+tags: [private]
 ```
 
 ```Go
@@ -4244,6 +4131,7 @@ isPatternExpression returns true if every leaf node in nodes is a search pattern
 
 ```
 searchKey: query.containsPattern
+tags: [private]
 ```
 
 ```Go
@@ -4256,7 +4144,6 @@ containsPattern returns true if any descendent of nodes is a search pattern.
 
 ```
 searchKey: query.ContainsRegexpMetasyntax
-tags: [exported]
 ```
 
 ```Go
@@ -4269,6 +4156,7 @@ ContainsRegexpMetasyntax returns true if a string is a valid regular expression 
 
 ```
 searchKey: query.processTopLevel
+tags: [private]
 ```
 
 ```Go
@@ -4281,6 +4169,7 @@ processTopLevel processes the top level of a query. It validates that we can pro
 
 ```
 searchKey: query.parseBool
+tags: [private]
 ```
 
 ```Go
@@ -4293,6 +4182,7 @@ parseBool is like strconv.ParseBool except that it also accepts y, Y, yes, YES, 
 
 ```
 searchKey: query.validateField
+tags: [private]
 ```
 
 ```Go
@@ -4303,6 +4193,7 @@ func validateField(field, value string, negated bool, seen map[string]struct{}) 
 
 ```
 searchKey: query.validateRepoRevPair
+tags: [private]
 ```
 
 ```Go
@@ -4315,6 +4206,7 @@ A query is invalid if it contains a rev: filter and a repo is specified with @.
 
 ```
 searchKey: query.validateCommitParameters
+tags: [private]
 ```
 
 ```Go
@@ -4327,6 +4219,7 @@ Queries containing commit parameters without type:diff or type:commit are not va
 
 ```
 searchKey: query.validateTypeStructural
+tags: [private]
 ```
 
 ```Go
@@ -4337,6 +4230,7 @@ func validateTypeStructural(nodes []Node) error
 
 ```
 searchKey: query.validatePredicates
+tags: [private]
 ```
 
 ```Go
@@ -4349,6 +4243,7 @@ validatePredicates validates predicate parameters with respect to their validati
 
 ```
 searchKey: query.validateRepoHasFile
+tags: [private]
 ```
 
 ```Go
@@ -4361,6 +4256,7 @@ validateRepoHasFile validates that the repohasfile parameter can be executed. A 
 
 ```
 searchKey: query.validatePureLiteralPattern
+tags: [private]
 ```
 
 ```Go
@@ -4373,6 +4269,7 @@ validatePureLiteralPattern checks that no pattern expression contains and/or ope
 
 ```
 searchKey: query.validateParameters
+tags: [private]
 ```
 
 ```Go
@@ -4383,6 +4280,7 @@ func validateParameters(nodes []Node) error
 
 ```
 searchKey: query.validatePattern
+tags: [private]
 ```
 
 ```Go
@@ -4393,6 +4291,7 @@ func validatePattern(nodes []Node) error
 
 ```
 searchKey: query.validate
+tags: [private]
 ```
 
 ```Go
@@ -4403,7 +4302,6 @@ func validate(nodes []Node) error
 
 ```
 searchKey: query.ContainsRefGlobs
-tags: [exported]
 ```
 
 ```Go
@@ -4414,7 +4312,6 @@ func ContainsRefGlobs(q Q) bool
 
 ```
 searchKey: query.HasTypeRepo
-tags: [exported]
 ```
 
 ```Go
@@ -4425,7 +4322,6 @@ func HasTypeRepo(q Q) bool
 
 ```
 searchKey: query.VisitOperator
-tags: [exported]
 ```
 
 ```Go
@@ -4438,7 +4334,6 @@ VisitOperator is a convenience function that calls callback on all operator node
 
 ```
 searchKey: query.VisitParameter
-tags: [exported]
 ```
 
 ```Go
@@ -4451,7 +4346,6 @@ VisitParameter is a convenience function that calls callback on all parameter no
 
 ```
 searchKey: query.VisitPattern
-tags: [exported]
 ```
 
 ```Go
@@ -4464,7 +4358,6 @@ VisitPattern is a convenience function that calls callback on all pattern nodes.
 
 ```
 searchKey: query.VisitField
-tags: [exported]
 ```
 
 ```Go
@@ -4477,6 +4370,7 @@ VisitField convenience function that calls callback on all parameter nodes whose
 
 ```
 searchKey: query.TestMapOperator
+tags: [private]
 ```
 
 ```Go
@@ -4487,6 +4381,7 @@ func TestMapOperator(t *testing.T)
 
 ```
 searchKey: query.TestMapField
+tags: [private]
 ```
 
 ```Go
@@ -4497,6 +4392,7 @@ func TestMapField(t *testing.T)
 
 ```
 searchKey: query.labelsToString
+tags: [private]
 ```
 
 ```Go
@@ -4507,6 +4403,7 @@ func labelsToString(nodes []Node) string
 
 ```
 searchKey: query.TestParseParameterList
+tags: [private]
 ```
 
 ```Go
@@ -4517,6 +4414,7 @@ func TestParseParameterList(t *testing.T)
 
 ```
 searchKey: query.TestScanPredicate
+tags: [private]
 ```
 
 ```Go
@@ -4527,6 +4425,7 @@ func TestScanPredicate(t *testing.T)
 
 ```
 searchKey: query.TestScanField
+tags: [private]
 ```
 
 ```Go
@@ -4537,6 +4436,7 @@ func TestScanField(t *testing.T)
 
 ```
 searchKey: query.parseAndOrGrammar
+tags: [private]
 ```
 
 ```Go
@@ -4547,6 +4447,7 @@ func parseAndOrGrammar(in string) ([]Node, error)
 
 ```
 searchKey: query.TestParse
+tags: [private]
 ```
 
 ```Go
@@ -4557,6 +4458,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: query.TestScanDelimited
+tags: [private]
 ```
 
 ```Go
@@ -4567,6 +4469,7 @@ func TestScanDelimited(t *testing.T)
 
 ```
 searchKey: query.TestMergePatterns
+tags: [private]
 ```
 
 ```Go
@@ -4577,6 +4480,7 @@ func TestMergePatterns(t *testing.T)
 
 ```
 searchKey: query.TestMatchUnaryKeyword
+tags: [private]
 ```
 
 ```Go
@@ -4587,6 +4491,7 @@ func TestMatchUnaryKeyword(t *testing.T)
 
 ```
 searchKey: query.TestParseAndOrLiteral
+tags: [private]
 ```
 
 ```Go
@@ -4597,6 +4502,7 @@ func TestParseAndOrLiteral(t *testing.T)
 
 ```
 searchKey: query.TestScanBalancedPattern
+tags: [private]
 ```
 
 ```Go
@@ -4607,6 +4513,7 @@ func TestScanBalancedPattern(t *testing.T)
 
 ```
 searchKey: query.TestRepoContainsPredicate
+tags: [private]
 ```
 
 ```Go
@@ -4617,6 +4524,7 @@ func TestRepoContainsPredicate(t *testing.T)
 
 ```
 searchKey: query.TestParseAsPredicate
+tags: [private]
 ```
 
 ```Go
@@ -4627,6 +4535,7 @@ func TestParseAsPredicate(t *testing.T)
 
 ```
 searchKey: query.TestStringHuman
+tags: [private]
 ```
 
 ```Go
@@ -4637,6 +4546,7 @@ func TestStringHuman(t *testing.T)
 
 ```
 searchKey: query.planToString
+tags: [private]
 ```
 
 ```Go
@@ -4647,6 +4557,7 @@ func planToString(disjuncts [][]Node) string
 
 ```
 searchKey: query.TestPipeline_equivalence
+tags: [private]
 ```
 
 ```Go
@@ -4657,6 +4568,7 @@ func TestPipeline_equivalence(t *testing.T)
 
 ```
 searchKey: query.TestPipeline
+tags: [private]
 ```
 
 ```Go
@@ -4667,6 +4579,7 @@ func TestPipeline(t *testing.T)
 
 ```
 searchKey: query.toJSON
+tags: [private]
 ```
 
 ```Go
@@ -4677,6 +4590,7 @@ func toJSON(node Node) interface{}
 
 ```
 searchKey: query.nodesToJSON
+tags: [private]
 ```
 
 ```Go
@@ -4687,6 +4601,7 @@ func nodesToJSON(nodes []Node) string
 
 ```
 searchKey: query.TestSubstituteAliases
+tags: [private]
 ```
 
 ```Go
@@ -4697,6 +4612,7 @@ func TestSubstituteAliases(t *testing.T)
 
 ```
 searchKey: query.TestLowercaseFieldNames
+tags: [private]
 ```
 
 ```Go
@@ -4707,6 +4623,7 @@ func TestLowercaseFieldNames(t *testing.T)
 
 ```
 searchKey: query.TestHoist
+tags: [private]
 ```
 
 ```Go
@@ -4717,6 +4634,7 @@ func TestHoist(t *testing.T)
 
 ```
 searchKey: query.TestSubstituteOrForRegexp
+tags: [private]
 ```
 
 ```Go
@@ -4727,6 +4645,7 @@ func TestSubstituteOrForRegexp(t *testing.T)
 
 ```
 searchKey: query.TestSubstituteConcat
+tags: [private]
 ```
 
 ```Go
@@ -4737,6 +4656,7 @@ func TestSubstituteConcat(t *testing.T)
 
 ```
 searchKey: query.TestEllipsesForHoles
+tags: [private]
 ```
 
 ```Go
@@ -4747,6 +4667,7 @@ func TestEllipsesForHoles(t *testing.T)
 
 ```
 searchKey: query.TestConvertEmptyGroupsToLiteral
+tags: [private]
 ```
 
 ```Go
@@ -4757,6 +4678,7 @@ func TestConvertEmptyGroupsToLiteral(t *testing.T)
 
 ```
 searchKey: query.TestExpandOr
+tags: [private]
 ```
 
 ```Go
@@ -4767,6 +4689,7 @@ func TestExpandOr(t *testing.T)
 
 ```
 searchKey: query.TestMap
+tags: [private]
 ```
 
 ```Go
@@ -4777,6 +4700,7 @@ func TestMap(t *testing.T)
 
 ```
 searchKey: query.TestTranslateGlobToRegex
+tags: [private]
 ```
 
 ```Go
@@ -4787,6 +4711,7 @@ func TestTranslateGlobToRegex(t *testing.T)
 
 ```
 searchKey: query.TestTranslateBadGlobPattern
+tags: [private]
 ```
 
 ```Go
@@ -4797,6 +4722,7 @@ func TestTranslateBadGlobPattern(t *testing.T)
 
 ```
 searchKey: query.TestReporevToRegex
+tags: [private]
 ```
 
 ```Go
@@ -4807,6 +4733,7 @@ func TestReporevToRegex(t *testing.T)
 
 ```
 searchKey: query.TestFuzzifyRegexPatterns
+tags: [private]
 ```
 
 ```Go
@@ -4817,6 +4744,7 @@ func TestFuzzifyRegexPatterns(t *testing.T)
 
 ```
 searchKey: query.TestContainsNoGlobSyntax
+tags: [private]
 ```
 
 ```Go
@@ -4827,6 +4755,7 @@ func TestContainsNoGlobSyntax(t *testing.T)
 
 ```
 searchKey: query.TestFuzzifyGlobPattern
+tags: [private]
 ```
 
 ```Go
@@ -4837,6 +4766,7 @@ func TestFuzzifyGlobPattern(t *testing.T)
 
 ```
 searchKey: query.TestMapGlobToRegex
+tags: [private]
 ```
 
 ```Go
@@ -4847,6 +4777,7 @@ func TestMapGlobToRegex(t *testing.T)
 
 ```
 searchKey: query.TestConcatRevFilters
+tags: [private]
 ```
 
 ```Go
@@ -4857,6 +4788,7 @@ func TestConcatRevFilters(t *testing.T)
 
 ```
 searchKey: query.TestConcatRevFiltersTopLevelAnd
+tags: [private]
 ```
 
 ```Go
@@ -4867,6 +4799,7 @@ func TestConcatRevFiltersTopLevelAnd(t *testing.T)
 
 ```
 searchKey: query.TestQueryField
+tags: [private]
 ```
 
 ```Go
@@ -4877,6 +4810,7 @@ func TestQueryField(t *testing.T)
 
 ```
 searchKey: query.TestSubstituteCountAll
+tags: [private]
 ```
 
 ```Go
@@ -4887,6 +4821,7 @@ func TestSubstituteCountAll(t *testing.T)
 
 ```
 searchKey: query.TestAndOrQuery_Validation
+tags: [private]
 ```
 
 ```Go
@@ -4897,6 +4832,7 @@ func TestAndOrQuery_Validation(t *testing.T)
 
 ```
 searchKey: query.TestAndOrQuery_IsCaseSensitive
+tags: [private]
 ```
 
 ```Go
@@ -4907,6 +4843,7 @@ func TestAndOrQuery_IsCaseSensitive(t *testing.T)
 
 ```
 searchKey: query.TestAndOrQuery_RegexpPatterns
+tags: [private]
 ```
 
 ```Go
@@ -4917,6 +4854,7 @@ func TestAndOrQuery_RegexpPatterns(t *testing.T)
 
 ```
 searchKey: query.TestPartitionSearchPattern
+tags: [private]
 ```
 
 ```Go
@@ -4927,6 +4865,7 @@ func TestPartitionSearchPattern(t *testing.T)
 
 ```
 searchKey: query.TestForAll
+tags: [private]
 ```
 
 ```Go
@@ -4937,6 +4876,7 @@ func TestForAll(t *testing.T)
 
 ```
 searchKey: query.TestContainsRefGlobs
+tags: [private]
 ```
 
 ```Go
@@ -4947,6 +4887,7 @@ func TestContainsRefGlobs(t *testing.T)
 
 ```
 searchKey: query.TestHasTypeRepo
+tags: [private]
 ```
 
 ```Go

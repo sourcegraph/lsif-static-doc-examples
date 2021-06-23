@@ -4,7 +4,9 @@
     "identifier": "storetest",
     "newPage": true,
     "searchKey": "enterprise/internal/codemonitors/storetest",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "TriggerJobs",
                 "newPage": false,
                 "searchKey": "storetest.TriggerJobs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "ActionJobs",
                 "newPage": false,
                 "searchKey": "storetest.ActionJobs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "Queued",
                 "newPage": false,
                 "searchKey": "storetest.Queued",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "Processing",
                 "newPage": false,
                 "searchKey": "storetest.Processing",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "Completed",
                 "newPage": false,
                 "searchKey": "storetest.Completed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "Errored",
                 "newPage": false,
                 "searchKey": "storetest.Errored",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                 "identifier": "Failed",
                 "newPage": false,
                 "searchKey": "storetest.Failed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,7 +184,9 @@
                 "identifier": "setStatusFmtStr",
                 "newPage": false,
                 "searchKey": "storetest.setStatusFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -214,7 +206,9 @@
                 "identifier": "testQuery",
                 "newPage": false,
                 "searchKey": "storetest.testQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -234,7 +228,9 @@
                 "identifier": "testDescription",
                 "newPage": false,
                 "searchKey": "storetest.testDescription",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -257,7 +253,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -275,9 +273,7 @@
                 "identifier": "JobTable",
                 "newPage": false,
                 "searchKey": "storetest.JobTable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -297,9 +293,7 @@
                 "identifier": "JobState",
                 "newPage": false,
                 "searchKey": "storetest.JobState",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -319,9 +313,7 @@
                 "identifier": "TestStore",
                 "newPage": false,
                 "searchKey": "storetest.TestStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -339,9 +331,7 @@
                       "identifier": "NewTestStoreWithStore",
                       "newPage": false,
                       "searchKey": "storetest.NewTestStoreWithStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -361,9 +351,7 @@
                       "identifier": "TestStore.SetJobStatus",
                       "newPage": false,
                       "searchKey": "storetest.TestStore.SetJobStatus",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -383,9 +371,7 @@
                       "identifier": "TestStore.InsertTestMonitor",
                       "newPage": false,
                       "searchKey": "storetest.TestStore.InsertTestMonitor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -411,7 +397,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -429,7 +417,9 @@
                 "identifier": "quote",
                 "newPage": false,
                 "searchKey": "storetest.quote",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -444,12 +434,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codemonitors/storetest#init",
+              "pathID": "/enterprise/internal/codemonitors/storetest#init.monitor_creator.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.monitor_creator.go",
                 "newPage": false,
                 "searchKey": "storetest.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -469,9 +461,7 @@
                 "identifier": "NewTestUser",
                 "newPage": false,
                 "searchKey": "storetest.NewTestUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -491,7 +481,9 @@
                 "identifier": "insertTestUser",
                 "newPage": false,
                 "searchKey": "storetest.insertTestUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

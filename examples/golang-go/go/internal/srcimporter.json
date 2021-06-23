@@ -4,7 +4,9 @@
     "identifier": "srcimporter",
     "newPage": true,
     "searchKey": "go/internal/srcimporter",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "maxTime",
                 "newPage": false,
                 "searchKey": "srcimporter.maxTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "importing",
                 "newPage": false,
                 "searchKey": "srcimporter.importing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "importer",
                 "newPage": false,
                 "searchKey": "srcimporter.importer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "importedObjectTests",
                 "newPage": false,
                 "searchKey": "srcimporter.importedObjectTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +158,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -162,9 +178,7 @@
                 "identifier": "Importer",
                 "newPage": false,
                 "searchKey": "srcimporter.Importer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -182,9 +196,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "srcimporter.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -204,9 +216,7 @@
                       "identifier": "Importer.Import",
                       "newPage": false,
                       "searchKey": "srcimporter.Importer.Import",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -226,9 +236,7 @@
                       "identifier": "Importer.ImportFrom",
                       "newPage": false,
                       "searchKey": "srcimporter.Importer.ImportFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -248,7 +256,9 @@
                       "identifier": "Importer.parseFiles",
                       "newPage": false,
                       "searchKey": "srcimporter.Importer.parseFiles",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -268,7 +278,9 @@
                       "identifier": "Importer.cgo",
                       "newPage": false,
                       "searchKey": "srcimporter.Importer.cgo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -288,7 +300,9 @@
                       "identifier": "Importer.absPath",
                       "newPage": false,
                       "searchKey": "srcimporter.Importer.absPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -308,7 +322,9 @@
                       "identifier": "Importer.isAbsPath",
                       "newPage": false,
                       "searchKey": "srcimporter.Importer.isAbsPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,7 +344,9 @@
                       "identifier": "Importer.joinPath",
                       "newPage": false,
                       "searchKey": "srcimporter.Importer.joinPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -354,7 +372,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -372,7 +392,9 @@
                 "identifier": "setUsesCgo",
                 "newPage": false,
                 "searchKey": "srcimporter.setUsesCgo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -392,7 +414,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "srcimporter.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -412,7 +436,9 @@
                 "identifier": "doImport",
                 "newPage": false,
                 "searchKey": "srcimporter.doImport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -432,7 +458,9 @@
                 "identifier": "walkDir",
                 "newPage": false,
                 "searchKey": "srcimporter.walkDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -452,7 +480,9 @@
                 "identifier": "TestImportStdLib",
                 "newPage": false,
                 "searchKey": "srcimporter.TestImportStdLib",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -472,7 +502,9 @@
                 "identifier": "TestImportedTypes",
                 "newPage": false,
                 "searchKey": "srcimporter.TestImportedTypes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -492,7 +524,9 @@
                 "identifier": "verifyInterfaceMethodRecvs",
                 "newPage": false,
                 "searchKey": "srcimporter.verifyInterfaceMethodRecvs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -512,7 +546,9 @@
                 "identifier": "TestReimport",
                 "newPage": false,
                 "searchKey": "srcimporter.TestReimport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -532,7 +568,9 @@
                 "identifier": "TestIssue20855",
                 "newPage": false,
                 "searchKey": "srcimporter.TestIssue20855",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -552,7 +590,9 @@
                 "identifier": "testImportPath",
                 "newPage": false,
                 "searchKey": "srcimporter.testImportPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -572,7 +612,9 @@
                 "identifier": "TestIssue23092",
                 "newPage": false,
                 "searchKey": "srcimporter.TestIssue23092",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -592,7 +634,9 @@
                 "identifier": "TestIssue24392",
                 "newPage": false,
                 "searchKey": "srcimporter.TestIssue24392",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -612,7 +656,9 @@
                 "identifier": "TestCgo",
                 "newPage": false,
                 "searchKey": "srcimporter.TestCgo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

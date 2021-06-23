@@ -38,11 +38,14 @@ Package errcode maps Go errors to HTTP status codes as well as other useful func
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="HTTPErr" href="#HTTPErr">type HTTPErr struct</a>
 
 ```
 searchKey: errcode.HTTPErr
-tags: [exported]
 ```
 
 ```Go
@@ -56,7 +59,6 @@ type HTTPErr struct {
 
 ```
 searchKey: errcode.HTTPErr.Error
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +69,6 @@ func (err *HTTPErr) Error() string
 
 ```
 searchKey: errcode.HTTPErr.HTTPStatusCode
-tags: [exported]
 ```
 
 ```Go
@@ -78,7 +79,6 @@ func (err *HTTPErr) HTTPStatusCode() int
 
 ```
 searchKey: errcode.Mock
-tags: [exported]
 ```
 
 ```Go
@@ -97,7 +97,6 @@ Mock is a convenience error which makes it easy to satisfy the optional interfac
 
 ```
 searchKey: errcode.Mock.Error
-tags: [exported]
 ```
 
 ```Go
@@ -108,7 +107,6 @@ func (e *Mock) Error() string
 
 ```
 searchKey: errcode.Mock.NotFound
-tags: [exported]
 ```
 
 ```Go
@@ -119,6 +117,7 @@ func (e *Mock) NotFound() bool
 
 ```
 searchKey: errcode.nonRetryableError
+tags: [private]
 ```
 
 ```Go
@@ -129,6 +128,7 @@ type nonRetryableError struct{ error }
 
 ```
 searchKey: errcode.nonRetryableError.NonRetryable
+tags: [private]
 ```
 
 ```Go
@@ -139,7 +139,6 @@ func (nonRetryableError) NonRetryable() bool
 
 ```
 searchKey: errcode.PresentationError
-tags: [exported]
 ```
 
 ```Go
@@ -159,6 +158,7 @@ A PresentationError is an error with a message (returned by the PresentationErro
 
 ```
 searchKey: errcode.presentationError
+tags: [private]
 ```
 
 ```Go
@@ -174,6 +174,7 @@ presentationError implements PresentationError.
 
 ```
 searchKey: errcode.presentationError.Error
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +185,7 @@ func (e *presentationError) Error() string
 
 ```
 searchKey: errcode.presentationError.PresentationError
+tags: [private]
 ```
 
 ```Go
@@ -192,11 +194,14 @@ func (e *presentationError) PresentationError() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="HTTP" href="#HTTP">func HTTP(err error) int</a>
 
 ```
 searchKey: errcode.HTTP
-tags: [exported]
 ```
 
 ```Go
@@ -209,7 +214,6 @@ HTTP returns the most appropriate HTTP status code that describes err. It contai
 
 ```
 searchKey: errcode.IsHTTPErrorCode
-tags: [exported]
 ```
 
 ```Go
@@ -220,7 +224,6 @@ func IsHTTPErrorCode(err error, statusCode int) bool
 
 ```
 searchKey: errcode.IsNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +236,6 @@ IsNotFound will check if err or one of its causes is a not found error. Note: Th
 
 ```
 searchKey: errcode.IsUnauthorized
-tags: [exported]
 ```
 
 ```Go
@@ -246,7 +248,6 @@ IsUnauthorized will check if err or one of its causes is an unauthorized error.
 
 ```
 searchKey: errcode.IsForbidden
-tags: [exported]
 ```
 
 ```Go
@@ -259,7 +260,6 @@ IsForbidden will check if err or one of its causes is a forbidden error.
 
 ```
 searchKey: errcode.IsAccountSuspended
-tags: [exported]
 ```
 
 ```Go
@@ -272,7 +272,6 @@ IsAccountSuspended will check if err or one of its causes was due to the account
 
 ```
 searchKey: errcode.IsBadRequest
-tags: [exported]
 ```
 
 ```Go
@@ -285,7 +284,6 @@ IsBadRequest will check if err or one of its causes is a bad request.
 
 ```
 searchKey: errcode.IsTemporary
-tags: [exported]
 ```
 
 ```Go
@@ -298,7 +296,6 @@ IsTemporary will check if err or one of its causes is temporary. A temporary err
 
 ```
 searchKey: errcode.IsTimeout
-tags: [exported]
 ```
 
 ```Go
@@ -311,7 +308,6 @@ IsTimeout will check if err or one of its causes is a timeout. Many errors in th
 
 ```
 searchKey: errcode.IsNonRetryable
-tags: [exported]
 ```
 
 ```Go
@@ -324,7 +320,6 @@ IsNonRetryable will check if err or one of its causes is a error that cannot be 
 
 ```
 searchKey: errcode.MakeNonRetryable
-tags: [exported]
 ```
 
 ```Go
@@ -337,6 +332,7 @@ MakeNonRetryable makes any error non-retryable.
 
 ```
 searchKey: errcode.isErrorPredicate
+tags: [private]
 ```
 
 ```Go
@@ -349,7 +345,6 @@ isErrorPredicate returns true if err or one of its causes returns true when pass
 
 ```
 searchKey: errcode.WithPresentationMessage
-tags: [exported]
 ```
 
 ```Go
@@ -364,7 +359,6 @@ The message should be written in full sentences and must not contain any informa
 
 ```
 searchKey: errcode.NewPresentationError
-tags: [exported]
 ```
 
 ```Go
@@ -379,7 +373,6 @@ If there is an underlying error associated with this message, use WithPresentati
 
 ```
 searchKey: errcode.PresentationMessage
-tags: [exported]
 ```
 
 ```Go
@@ -392,6 +385,7 @@ PresentationMessage returns the message, if any, suitable for presentation to th
 
 ```
 searchKey: errcode.TestPresentationError
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "sqliteutil",
     "newPage": true,
     "searchKey": "cmd/symbols/internal/sqliteutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "libSqlite3Pcre",
                 "newPage": false,
                 "searchKey": "sqliteutil.libSqlite3Pcre",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "MustRegisterSqlite3WithPcre",
                 "newPage": false,
                 "searchKey": "sqliteutil.MustRegisterSqlite3WithPcre",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,9 +109,7 @@
                 "identifier": "SetLocalLibpath",
                 "newPage": false,
                 "searchKey": "sqliteutil.SetLocalLibpath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

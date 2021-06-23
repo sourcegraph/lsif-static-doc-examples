@@ -46,7 +46,7 @@ Package app contains the front-end Web application.
     * [func badgeValue(r *http.Request) (int, error)](#badgeValue)
     * [func badgeValueFmt(totalRefs int) string](#badgeValueFmt)
     * [func serveRepoBadge(w http.ResponseWriter, r *http.Request) error](#serveRepoBadge)
-    * [func init()](#init)
+    * [func init()](#init.debug.go)
     * [func addNoK8sClientHandler(r *mux.Router, db dbutil.DB)](#addNoK8sClientHandler)
     * [func addDebugHandlers(r *mux.Router, db dbutil.DB)](#addDebugHandlers)
     * [func addNoGrafanaHandler(r *mux.Router, db dbutil.DB)](#addNoGrafanaHandler)
@@ -90,7 +90,7 @@ Package app contains the front-end Web application.
     * [func usageStatsArchiveHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)](#usageStatsArchiveHandler)
     * [func serveVerifyEmail(w http.ResponseWriter, r *http.Request)](#serveVerifyEmail)
     * [func httpLogAndError(w http.ResponseWriter, msg string, code int, errArgs ...interface{})](#httpLogAndError)
-    * [func init()](#init)
+    * [func init()](#init.app_test.go)
     * [func Test_prometheusValidator(t *testing.T)](#Test_prometheusValidator)
     * [func TestGrafanaLicensing(t *testing.T)](#TestGrafanaLicensing)
     * [func TestEditorRev(t *testing.T)](#TestEditorRev)
@@ -100,18 +100,23 @@ Package app contains the front-end Web application.
     * [func strptr(s string) *string](#strptr)
     * [func TestSymbolLocation(t *testing.T)](#TestSymbolLocation)
     * [func TestRobotsTxt(t *testing.T)](#TestRobotsTxt)
-    * [func init()](#init)
+    * [func init()](#init.ping_test.go)
     * [func TestLatestPingHandler(t *testing.T)](#TestLatestPingHandler)
-    * [func init()](#init)
+    * [func init()](#init.usage_stats_test.go)
     * [func TestUsageStatsArchiveHandler(t *testing.T)](#TestUsageStatsArchiveHandler)
 
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="errMonitoringNotLicensed" href="#errMonitoringNotLicensed">const errMonitoringNotLicensed</a>
 
 ```
 searchKey: app.errMonitoringNotLicensed
+tags: [private]
 ```
 
 ```Go
@@ -122,10 +127,15 @@ This error is returned if the current license does not support monitoring.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="grafanaURLFromEnv" href="#grafanaURLFromEnv">var grafanaURLFromEnv</a>
 
 ```
 searchKey: app.grafanaURLFromEnv
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +146,7 @@ var grafanaURLFromEnv = env.Get("GRAFANA_SERVER_URL", "", "URL at which Grafana 
 
 ```
 searchKey: app.jaegerURLFromEnv
+tags: [private]
 ```
 
 ```Go
@@ -146,7 +157,6 @@ var jaegerURLFromEnv = env.Get("JAEGER_SERVER_URL", "", "URL at which Jaeger UI 
 
 ```
 searchKey: app.PreMountGrafanaHook
-tags: [exported]
 ```
 
 ```Go
@@ -159,6 +169,7 @@ PreMountGrafanaHook (if set) is invoked as a hook prior to mounting a the Grafan
 
 ```
 searchKey: app.regDriveLetter
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +180,7 @@ var regDriveLetter = lazyregexp.New("^/[a-zA-Z]:")
 
 ```
 searchKey: app.allowRobotsVar
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +191,7 @@ var allowRobotsVar = env.Get("ROBOTS_TXT_ALLOW", "false", "allow search engines 
 
 ```
 searchKey: app.openSearchDescription
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +202,7 @@ var openSearchDescription = ...
 
 ```
 searchKey: app.ssoSignOutHandler
+tags: [private]
 ```
 
 ```Go
@@ -197,10 +211,15 @@ var ssoSignOutHandler func(w http.ResponseWriter, r *http.Request)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="editorRequest" href="#editorRequest">type editorRequest struct</a>
 
 ```
 searchKey: app.editorRequest
+tags: [private]
 ```
 
 ```Go
@@ -227,6 +246,7 @@ editorRequest represents the parameters to a Sourcegraph "open file", "search", 
 
 ```
 searchKey: app.parseEditorRequest
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +259,7 @@ parseEditorRequest parses an editor request from the search query values.
 
 ```
 searchKey: app.editorRequest.addTracking
+tags: [private]
 ```
 
 ```Go
@@ -251,6 +272,7 @@ addTracking adds the tracking ?utm_... parameters to the given query values.
 
 ```
 searchKey: app.editorRequest.searchRedirect
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +285,7 @@ searchRedirect returns the redirect URL for the pre-validated search request.
 
 ```
 searchKey: app.editorRequest.openFileRedirect
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +298,7 @@ openFile returns the redirect URL for the pre-validated open-file request.
 
 ```
 searchKey: app.editorRequest.redirectURL
+tags: [private]
 ```
 
 ```Go
@@ -287,6 +311,7 @@ openFile returns the redirect URL for the pre-validated request.
 
 ```
 searchKey: app.editorOpenFileRequest
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +334,7 @@ editorSearchRequest represents parameters for "open file on Sourcegraph" editor 
 
 ```
 searchKey: app.editorSearchRequest
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +363,7 @@ editorSearchRequest represents parameters for "search on Sourcegraph" editor req
 
 ```
 searchKey: app.goSymbolSpec
+tags: [private]
 ```
 
 ```Go
@@ -351,6 +378,7 @@ type goSymbolSpec struct {
 
 ```
 searchKey: app.parseGoSymbolURLPath
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +389,7 @@ func parseGoSymbolURLPath(path string) (*goSymbolSpec, error)
 
 ```
 searchKey: app.invalidSymbolURLPathError
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +402,7 @@ type invalidSymbolURLPathError struct {
 
 ```
 searchKey: app.invalidSymbolURLPathError.Error
+tags: [private]
 ```
 
 ```Go
@@ -383,7 +413,6 @@ func (s *invalidSymbolURLPathError) Error() string
 
 ```
 searchKey: app.SignOutURL
-tags: [exported]
 ```
 
 ```Go
@@ -398,6 +427,7 @@ type SignOutURL struct {
 
 ```
 searchKey: app.symbolLocationArgs
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +445,7 @@ type symbolLocationArgs struct {
 
 ```
 searchKey: app.test
+tags: [private]
 ```
 
 ```Go
@@ -428,6 +459,7 @@ type test struct {
 
 ```
 searchKey: app.stringMapFS
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +473,7 @@ type stringMapFS struct {
 
 ```
 searchKey: app.mapFS
+tags: [private]
 ```
 
 ```Go
@@ -453,6 +486,7 @@ mapFS lets us easily instantiate a VFS with a map[string]string (which is less n
 
 ```
 searchKey: app.stringMapFS.ListAllFiles
+tags: [private]
 ```
 
 ```Go
@@ -461,11 +495,14 @@ func (fs *stringMapFS) ListAllFiles(ctx context.Context) ([]string, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewHandler" href="#NewHandler">func NewHandler(db dbutil.DB) http.Handler</a>
 
 ```
 searchKey: app.NewHandler
-tags: [exported]
 ```
 
 ```Go
@@ -480,6 +517,7 @@ NewHandler returns a new app handler that uses the app router.
 
 ```
 searchKey: app.badgeValue
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +530,7 @@ NOTE: Keep in sync with services/backend/httpapi/repo_shield.go
 
 ```
 searchKey: app.badgeValueFmt
+tags: [private]
 ```
 
 ```Go
@@ -504,16 +543,18 @@ NOTE: Keep in sync with services/backend/httpapi/repo_shield.go
 
 ```
 searchKey: app.serveRepoBadge
+tags: [private]
 ```
 
 ```Go
 func serveRepoBadge(w http.ResponseWriter, r *http.Request) error
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.debug.go" href="#init.debug.go">func init()</a>
 
 ```
 searchKey: app.init
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +565,7 @@ func init()
 
 ```
 searchKey: app.addNoK8sClientHandler
+tags: [private]
 ```
 
 ```Go
@@ -534,6 +576,7 @@ func addNoK8sClientHandler(r *mux.Router, db dbutil.DB)
 
 ```
 searchKey: app.addDebugHandlers
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +589,7 @@ addDebugHandlers registers the reverse proxies to each services debug endpoints.
 
 ```
 searchKey: app.addNoGrafanaHandler
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +600,7 @@ func addNoGrafanaHandler(r *mux.Router, db dbutil.DB)
 
 ```
 searchKey: app.addGrafanaNotLicensedHandler
+tags: [private]
 ```
 
 ```Go
@@ -566,6 +611,7 @@ func addGrafanaNotLicensedHandler(r *mux.Router, db dbutil.DB)
 
 ```
 searchKey: app.addGrafana
+tags: [private]
 ```
 
 ```Go
@@ -578,6 +624,7 @@ addReverseProxyForService registers a reverse proxy for the specified service.
 
 ```
 searchKey: app.addNoJaegerHandler
+tags: [private]
 ```
 
 ```Go
@@ -588,6 +635,7 @@ func addNoJaegerHandler(r *mux.Router, db dbutil.DB)
 
 ```
 searchKey: app.addJaeger
+tags: [private]
 ```
 
 ```Go
@@ -598,6 +646,7 @@ func addJaeger(r *mux.Router, db dbutil.DB)
 
 ```
 searchKey: app.adminOnly
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +659,7 @@ adminOnly is a HTTP middleware which only allows requests by admins.
 
 ```
 searchKey: app.newPrometheusValidator
+tags: [private]
 ```
 
 ```Go
@@ -624,6 +674,7 @@ It also accepts the error from creating `srcprometheus.Client` as an parameter, 
 
 ```
 searchKey: app.editorRev
+tags: [private]
 ```
 
 ```Go
@@ -634,6 +685,7 @@ func editorRev(ctx context.Context, repoName api.RepoName, rev string, beExplici
 
 ```
 searchKey: app.serveEditor
+tags: [private]
 ```
 
 ```Go
@@ -644,6 +696,7 @@ func serveEditor(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: app.isGoRepoPath
+tags: [private]
 ```
 
 ```Go
@@ -656,6 +709,7 @@ isGoRepoPath returns whether pkg is (likely to be) a Go stdlib package import pa
 
 ```
 searchKey: app.serveGDDORefs
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +722,7 @@ serveGDDORefs handles requests referred from godoc.org refs links.
 
 ```
 searchKey: app.serveGoSymbolURL
+tags: [private]
 ```
 
 ```Go
@@ -680,6 +735,7 @@ serveGoSymbolURL handles Go symbol URLs (e.g., [https://sourcegraph.com/go/githu
 
 ```
 searchKey: app.symbolLocation
+tags: [private]
 ```
 
 ```Go
@@ -690,6 +746,7 @@ func symbolLocation(ctx context.Context, vfs ctxvfs.FileSystem, commitID api.Com
 
 ```
 searchKey: app.buildContextFromVFS
+tags: [private]
 ```
 
 ```Go
@@ -700,6 +757,7 @@ func buildContextFromVFS(ctx context.Context, vfs ctxvfs.FileSystem) build.Conte
 
 ```
 searchKey: app.repoVFS
+tags: [private]
 ```
 
 ```Go
@@ -710,6 +768,7 @@ func repoVFS(ctx context.Context, name api.RepoName, rev api.CommitID) (ctxvfs.F
 
 ```
 searchKey: app.parseFiles
+tags: [private]
 ```
 
 ```Go
@@ -720,7 +779,6 @@ func parseFiles(fset *token.FileSet, bctx *build.Context, importPath, srcDir str
 
 ```
 searchKey: app.PrepareContext
-tags: [exported]
 ```
 
 ```Go
@@ -731,6 +789,7 @@ func PrepareContext(bctx *build.Context, ctx context.Context, vfs ctxvfs.FileSys
 
 ```
 searchKey: app.trimFilePrefix
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +800,7 @@ func trimFilePrefix(s string) string
 
 ```
 searchKey: app.normalizePath
+tags: [private]
 ```
 
 ```Go
@@ -751,7 +811,6 @@ func normalizePath(s string) string
 
 ```
 searchKey: app.PathHasPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -764,7 +823,6 @@ PathHasPrefix returns true if s is starts with the given prefix
 
 ```
 searchKey: app.PathTrimPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -777,7 +835,6 @@ PathTrimPrefix removes the prefix from s
 
 ```
 searchKey: app.PathEqual
-tags: [exported]
 ```
 
 ```Go
@@ -790,7 +847,6 @@ PathEqual returns true if both a and b are equal
 
 ```
 searchKey: app.IsVendorDir
-tags: [exported]
 ```
 
 ```Go
@@ -803,7 +859,6 @@ IsVendorDir tells if the specified directory is a vendor directory.
 
 ```
 searchKey: app.IsURI
-tags: [exported]
 ```
 
 ```Go
@@ -816,6 +871,7 @@ IsURI tells if s denotes an URI
 
 ```
 searchKey: app.isURI
+tags: [private]
 ```
 
 ```Go
@@ -826,7 +882,6 @@ func isURI(s string) bool
 
 ```
 searchKey: app.PathToURI
-tags: [exported]
 ```
 
 ```Go
@@ -839,7 +894,6 @@ PathToURI converts given absolute path to file URI
 
 ```
 searchKey: app.UriToPath
-tags: [exported]
 ```
 
 ```Go
@@ -852,7 +906,6 @@ UriToPath converts given file URI to path
 
 ```
 searchKey: app.UriToRealPath
-tags: [exported]
 ```
 
 ```Go
@@ -865,7 +918,6 @@ UriToRealPath converts the given file URI to the platform specific path
 
 ```
 searchKey: app.IsAbs
-tags: [exported]
 ```
 
 ```Go
@@ -878,7 +930,6 @@ IsAbs returns true if the given path is absolute
 
 ```
 searchKey: app.Panicf
-tags: [exported]
 ```
 
 ```Go
@@ -891,6 +942,7 @@ Panicf takes the return value of recover() and outputs data to the log with the 
 
 ```
 searchKey: app.robotsTxt
+tags: [private]
 ```
 
 ```Go
@@ -901,6 +953,7 @@ func robotsTxt(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: app.robotsTxtHelper
+tags: [private]
 ```
 
 ```Go
@@ -911,6 +964,7 @@ func robotsTxtHelper(w io.Writer, allowRobots bool)
 
 ```
 searchKey: app.favicon
+tags: [private]
 ```
 
 ```Go
@@ -921,6 +975,7 @@ func favicon(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: app.openSearch
+tags: [private]
 ```
 
 ```Go
@@ -931,6 +986,7 @@ func openSearch(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: app.latestPingHandler
+tags: [private]
 ```
 
 ```Go
@@ -943,7 +999,6 @@ latestPingHandler fetches the most recent ping data from the event log (if any i
 
 ```
 searchKey: app.RegisterSSOSignOutHandler
-tags: [exported]
 ```
 
 ```Go
@@ -956,6 +1011,7 @@ RegisterSSOSignOutHandler registers a SSO sign-out handler that takes care of cl
 
 ```
 searchKey: app.serveSignOutHandler
+tags: [private]
 ```
 
 ```Go
@@ -966,6 +1022,7 @@ func serveSignOutHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Reque
 
 ```
 searchKey: app.logSignOutEvent
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1035,7 @@ logSignOutEvent records an event into the security event log.
 
 ```
 searchKey: app.usageStatsArchiveHandler
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +1046,7 @@ func usageStatsArchiveHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.
 
 ```
 searchKey: app.serveVerifyEmail
+tags: [private]
 ```
 
 ```Go
@@ -998,16 +1057,18 @@ func serveVerifyEmail(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: app.httpLogAndError
+tags: [private]
 ```
 
 ```Go
 func httpLogAndError(w http.ResponseWriter, msg string, code int, errArgs ...interface{})
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.app_test.go" href="#init.app_test.go">func init()</a>
 
 ```
 searchKey: app.init
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1079,7 @@ func init()
 
 ```
 searchKey: app.Test_prometheusValidator
+tags: [private]
 ```
 
 ```Go
@@ -1028,6 +1090,7 @@ func Test_prometheusValidator(t *testing.T)
 
 ```
 searchKey: app.TestGrafanaLicensing
+tags: [private]
 ```
 
 ```Go
@@ -1038,6 +1101,7 @@ func TestGrafanaLicensing(t *testing.T)
 
 ```
 searchKey: app.TestEditorRev
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1112,7 @@ func TestEditorRev(t *testing.T)
 
 ```
 searchKey: app.TestEditorRedirect
+tags: [private]
 ```
 
 ```Go
@@ -1058,6 +1123,7 @@ func TestEditorRedirect(t *testing.T)
 
 ```
 searchKey: app.TestParseGoSymbolURLPath
+tags: [private]
 ```
 
 ```Go
@@ -1068,6 +1134,7 @@ func TestParseGoSymbolURLPath(t *testing.T)
 
 ```
 searchKey: app.mkLocation
+tags: [private]
 ```
 
 ```Go
@@ -1078,6 +1145,7 @@ func mkLocation(uri string, line, character int) *lsp.Location
 
 ```
 searchKey: app.strptr
+tags: [private]
 ```
 
 ```Go
@@ -1088,6 +1156,7 @@ func strptr(s string) *string
 
 ```
 searchKey: app.TestSymbolLocation
+tags: [private]
 ```
 
 ```Go
@@ -1098,16 +1167,18 @@ func TestSymbolLocation(t *testing.T)
 
 ```
 searchKey: app.TestRobotsTxt
+tags: [private]
 ```
 
 ```Go
 func TestRobotsTxt(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.ping_test.go" href="#init.ping_test.go">func init()</a>
 
 ```
 searchKey: app.init
+tags: [private]
 ```
 
 ```Go
@@ -1118,16 +1189,18 @@ func init()
 
 ```
 searchKey: app.TestLatestPingHandler
+tags: [private]
 ```
 
 ```Go
 func TestLatestPingHandler(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.usage_stats_test.go" href="#init.usage_stats_test.go">func init()</a>
 
 ```
 searchKey: app.init
+tags: [private]
 ```
 
 ```Go
@@ -1138,6 +1211,7 @@ func init()
 
 ```
 searchKey: app.TestUsageStatsArchiveHandler
+tags: [private]
 ```
 
 ```Go

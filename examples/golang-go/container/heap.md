@@ -37,15 +37,10 @@ A heap is a common way to implement a priority queue. To build a priority queue,
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Interface" href="#Interface">type Interface interface</a>
 
 ```
 searchKey: heap.Interface
-tags: [exported]
 ```
 
 ```Go
@@ -68,6 +63,7 @@ Note that Push and Pop in this interface are for package heap's implementation t
 
 ```
 searchKey: heap.myHeap
+tags: [private]
 ```
 
 ```Go
@@ -78,6 +74,7 @@ type myHeap []int
 
 ```
 searchKey: heap.myHeap.Less
+tags: [private]
 ```
 
 ```Go
@@ -88,6 +85,7 @@ func (h *myHeap) Less(i, j int) bool
 
 ```
 searchKey: heap.myHeap.Swap
+tags: [private]
 ```
 
 ```Go
@@ -98,6 +96,7 @@ func (h *myHeap) Swap(i, j int)
 
 ```
 searchKey: heap.myHeap.Len
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +107,7 @@ func (h *myHeap) Len() int
 
 ```
 searchKey: heap.myHeap.Pop
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +118,7 @@ func (h *myHeap) Pop() (v interface{})
 
 ```
 searchKey: heap.myHeap.Push
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +129,7 @@ func (h *myHeap) Push(v interface{})
 
 ```
 searchKey: heap.myHeap.verify
+tags: [private]
 ```
 
 ```Go
@@ -136,15 +138,10 @@ func (h myHeap) verify(t *testing.T, i int)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Init" href="#Init">func Init(h Interface)</a>
 
 ```
 searchKey: heap.Init
-tags: [exported]
 ```
 
 ```Go
@@ -157,7 +154,6 @@ Init establishes the heap invariants required by the other routines in this pack
 
 ```
 searchKey: heap.Push
-tags: [exported]
 ```
 
 ```Go
@@ -170,7 +166,6 @@ Push pushes the element x onto the heap. The complexity is O(log n) where n = h.
 
 ```
 searchKey: heap.Pop
-tags: [exported]
 ```
 
 ```Go
@@ -183,7 +178,6 @@ Pop removes and returns the minimum element (according to Less) from the heap. T
 
 ```
 searchKey: heap.Remove
-tags: [exported]
 ```
 
 ```Go
@@ -196,7 +190,6 @@ Remove removes and returns the element at index i from the heap. The complexity 
 
 ```
 searchKey: heap.Fix
-tags: [exported]
 ```
 
 ```Go
@@ -209,6 +202,7 @@ Fix re-establishes the heap ordering after the element at index i has changed it
 
 ```
 searchKey: heap.up
+tags: [private]
 ```
 
 ```Go
@@ -219,6 +213,7 @@ func up(h Interface, j int)
 
 ```
 searchKey: heap.down
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +224,7 @@ func down(h Interface, i0, n int) bool
 
 ```
 searchKey: heap.TestInit0
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +235,7 @@ func TestInit0(t *testing.T)
 
 ```
 searchKey: heap.TestInit1
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +246,7 @@ func TestInit1(t *testing.T)
 
 ```
 searchKey: heap.Test
+tags: [private]
 ```
 
 ```Go
@@ -259,6 +257,7 @@ func Test(t *testing.T)
 
 ```
 searchKey: heap.TestRemove0
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +268,7 @@ func TestRemove0(t *testing.T)
 
 ```
 searchKey: heap.TestRemove1
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +279,7 @@ func TestRemove1(t *testing.T)
 
 ```
 searchKey: heap.TestRemove2
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +290,7 @@ func TestRemove2(t *testing.T)
 
 ```
 searchKey: heap.BenchmarkDup
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +301,7 @@ func BenchmarkDup(b *testing.B)
 
 ```
 searchKey: heap.TestFix
+tags: [private]
 ```
 
 ```Go

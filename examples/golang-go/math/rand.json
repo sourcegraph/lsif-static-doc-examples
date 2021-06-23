@@ -4,9 +4,7 @@
     "identifier": "rand",
     "newPage": true,
     "searchKey": "math/rand",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "re",
                 "newPage": false,
                 "searchKey": "rand.re",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "rn",
                 "newPage": false,
                 "searchKey": "rand.rn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "rngLen",
                 "newPage": false,
                 "searchKey": "rand.rngLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "rngTap",
                 "newPage": false,
                 "searchKey": "rand.rngTap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "rngMax",
                 "newPage": false,
                 "searchKey": "rand.rngMax",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "rngMask",
                 "newPage": false,
                 "searchKey": "rand.rngMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "int32max",
                 "newPage": false,
                 "searchKey": "rand.int32max",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,9 +197,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "ke",
                 "newPage": false,
                 "searchKey": "rand.ke",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -227,7 +237,9 @@
                 "identifier": "we",
                 "newPage": false,
                 "searchKey": "rand.we",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "fe",
                 "newPage": false,
                 "searchKey": "rand.fe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "kn",
                 "newPage": false,
                 "searchKey": "rand.kn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -287,7 +303,9 @@
                 "identifier": "wn",
                 "newPage": false,
                 "searchKey": "rand.wn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -307,7 +325,9 @@
                 "identifier": "fn",
                 "newPage": false,
                 "searchKey": "rand.fn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -327,7 +347,9 @@
                 "identifier": "globalRand",
                 "newPage": false,
                 "searchKey": "rand.globalRand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,7 +369,9 @@
                 "identifier": "rngCooked",
                 "newPage": false,
                 "searchKey": "rand.rngCooked",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -370,9 +394,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -390,9 +412,7 @@
                 "identifier": "Source",
                 "newPage": false,
                 "searchKey": "rand.Source",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -410,9 +430,7 @@
                       "identifier": "NewSource",
                       "newPage": false,
                       "searchKey": "rand.NewSource",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -435,9 +453,7 @@
                 "identifier": "Source64",
                 "newPage": false,
                 "searchKey": "rand.Source64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -457,9 +473,7 @@
                 "identifier": "Rand",
                 "newPage": false,
                 "searchKey": "rand.Rand",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -477,9 +491,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "rand.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -499,9 +511,7 @@
                       "identifier": "Rand.ExpFloat64",
                       "newPage": false,
                       "searchKey": "rand.Rand.ExpFloat64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -521,9 +531,7 @@
                       "identifier": "Rand.NormFloat64",
                       "newPage": false,
                       "searchKey": "rand.Rand.NormFloat64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -543,9 +551,7 @@
                       "identifier": "Rand.Seed",
                       "newPage": false,
                       "searchKey": "rand.Rand.Seed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -565,9 +571,7 @@
                       "identifier": "Rand.Int63",
                       "newPage": false,
                       "searchKey": "rand.Rand.Int63",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -587,9 +591,7 @@
                       "identifier": "Rand.Uint32",
                       "newPage": false,
                       "searchKey": "rand.Rand.Uint32",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -609,9 +611,7 @@
                       "identifier": "Rand.Uint64",
                       "newPage": false,
                       "searchKey": "rand.Rand.Uint64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -631,9 +631,7 @@
                       "identifier": "Rand.Int31",
                       "newPage": false,
                       "searchKey": "rand.Rand.Int31",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -653,9 +651,7 @@
                       "identifier": "Rand.Int",
                       "newPage": false,
                       "searchKey": "rand.Rand.Int",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -675,9 +671,7 @@
                       "identifier": "Rand.Int63n",
                       "newPage": false,
                       "searchKey": "rand.Rand.Int63n",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -697,9 +691,7 @@
                       "identifier": "Rand.Int31n",
                       "newPage": false,
                       "searchKey": "rand.Rand.Int31n",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -719,7 +711,9 @@
                       "identifier": "Rand.int31n",
                       "newPage": false,
                       "searchKey": "rand.Rand.int31n",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -739,9 +733,7 @@
                       "identifier": "Rand.Intn",
                       "newPage": false,
                       "searchKey": "rand.Rand.Intn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -761,9 +753,7 @@
                       "identifier": "Rand.Float64",
                       "newPage": false,
                       "searchKey": "rand.Rand.Float64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -783,9 +773,7 @@
                       "identifier": "Rand.Float32",
                       "newPage": false,
                       "searchKey": "rand.Rand.Float32",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -805,9 +793,7 @@
                       "identifier": "Rand.Perm",
                       "newPage": false,
                       "searchKey": "rand.Rand.Perm",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -827,9 +813,7 @@
                       "identifier": "Rand.Shuffle",
                       "newPage": false,
                       "searchKey": "rand.Rand.Shuffle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -849,9 +833,7 @@
                       "identifier": "Rand.Read",
                       "newPage": false,
                       "searchKey": "rand.Rand.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -874,7 +856,9 @@
                 "identifier": "lockedSource",
                 "newPage": false,
                 "searchKey": "rand.lockedSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -892,7 +876,9 @@
                       "identifier": "lockedSource.Int63",
                       "newPage": false,
                       "searchKey": "rand.lockedSource.Int63",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -912,7 +898,9 @@
                       "identifier": "lockedSource.Uint64",
                       "newPage": false,
                       "searchKey": "rand.lockedSource.Uint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -932,7 +920,9 @@
                       "identifier": "lockedSource.Seed",
                       "newPage": false,
                       "searchKey": "rand.lockedSource.Seed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -952,7 +942,9 @@
                       "identifier": "lockedSource.seedPos",
                       "newPage": false,
                       "searchKey": "rand.lockedSource.seedPos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -972,7 +964,9 @@
                       "identifier": "lockedSource.read",
                       "newPage": false,
                       "searchKey": "rand.lockedSource.read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -995,7 +989,9 @@
                 "identifier": "rngSource",
                 "newPage": false,
                 "searchKey": "rand.rngSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1013,7 +1009,9 @@
                       "identifier": "rngSource.Seed",
                       "newPage": false,
                       "searchKey": "rand.rngSource.Seed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1033,7 +1031,9 @@
                       "identifier": "rngSource.Int63",
                       "newPage": false,
                       "searchKey": "rand.rngSource.Int63",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1053,7 +1053,9 @@
                       "identifier": "rngSource.Uint64",
                       "newPage": false,
                       "searchKey": "rand.rngSource.Uint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1076,9 +1078,7 @@
                 "identifier": "Zipf",
                 "newPage": false,
                 "searchKey": "rand.Zipf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1096,9 +1096,7 @@
                       "identifier": "NewZipf",
                       "newPage": false,
                       "searchKey": "rand.NewZipf",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1118,7 +1116,9 @@
                       "identifier": "Zipf.h",
                       "newPage": false,
                       "searchKey": "rand.Zipf.h",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1138,7 +1138,9 @@
                       "identifier": "Zipf.hinv",
                       "newPage": false,
                       "searchKey": "rand.Zipf.hinv",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1158,9 +1160,7 @@
                       "identifier": "Zipf.Uint64",
                       "newPage": false,
                       "searchKey": "rand.Zipf.Uint64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1186,9 +1186,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1206,7 +1204,9 @@
                 "identifier": "absInt32",
                 "newPage": false,
                 "searchKey": "rand.absInt32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1226,7 +1226,9 @@
                 "identifier": "read",
                 "newPage": false,
                 "searchKey": "rand.read",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1246,9 +1248,7 @@
                 "identifier": "Seed",
                 "newPage": false,
                 "searchKey": "rand.Seed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1268,9 +1268,7 @@
                 "identifier": "Int63",
                 "newPage": false,
                 "searchKey": "rand.Int63",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1290,9 +1288,7 @@
                 "identifier": "Uint32",
                 "newPage": false,
                 "searchKey": "rand.Uint32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1312,9 +1308,7 @@
                 "identifier": "Uint64",
                 "newPage": false,
                 "searchKey": "rand.Uint64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1334,9 +1328,7 @@
                 "identifier": "Int31",
                 "newPage": false,
                 "searchKey": "rand.Int31",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1356,9 +1348,7 @@
                 "identifier": "Int",
                 "newPage": false,
                 "searchKey": "rand.Int",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1378,9 +1368,7 @@
                 "identifier": "Int63n",
                 "newPage": false,
                 "searchKey": "rand.Int63n",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1400,9 +1388,7 @@
                 "identifier": "Int31n",
                 "newPage": false,
                 "searchKey": "rand.Int31n",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1422,9 +1408,7 @@
                 "identifier": "Intn",
                 "newPage": false,
                 "searchKey": "rand.Intn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1444,9 +1428,7 @@
                 "identifier": "Float64",
                 "newPage": false,
                 "searchKey": "rand.Float64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1466,9 +1448,7 @@
                 "identifier": "Float32",
                 "newPage": false,
                 "searchKey": "rand.Float32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1488,9 +1468,7 @@
                 "identifier": "Perm",
                 "newPage": false,
                 "searchKey": "rand.Perm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1510,9 +1488,7 @@
                 "identifier": "Shuffle",
                 "newPage": false,
                 "searchKey": "rand.Shuffle",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1532,9 +1508,7 @@
                 "identifier": "Read",
                 "newPage": false,
                 "searchKey": "rand.Read",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1554,9 +1528,7 @@
                 "identifier": "NormFloat64",
                 "newPage": false,
                 "searchKey": "rand.NormFloat64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1576,9 +1548,7 @@
                 "identifier": "ExpFloat64",
                 "newPage": false,
                 "searchKey": "rand.ExpFloat64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1598,7 +1568,9 @@
                 "identifier": "seedrand",
                 "newPage": false,
                 "searchKey": "rand.seedrand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1618,7 +1590,9 @@
                 "identifier": "Int31nForTest",
                 "newPage": false,
                 "searchKey": "rand.Int31nForTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1638,7 +1612,9 @@
                 "identifier": "GetNormalDistributionParameters",
                 "newPage": false,
                 "searchKey": "rand.GetNormalDistributionParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1658,7 +1634,9 @@
                 "identifier": "GetExponentialDistributionParameters",
                 "newPage": false,
                 "searchKey": "rand.GetExponentialDistributionParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

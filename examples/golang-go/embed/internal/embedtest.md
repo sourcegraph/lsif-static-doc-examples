@@ -21,10 +21,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="global" href="#global">var global</a>
 
 ```
 searchKey: embedtest.global
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +40,7 @@ var global embed.FS
 
 ```
 searchKey: embedtest.concurrency
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +51,7 @@ var concurrency string
 
 ```
 searchKey: embedtest.glass
+tags: [private]
 ```
 
 ```Go
@@ -55,6 +62,7 @@ var glass []byte
 
 ```
 searchKey: embedtest.testDirAll
+tags: [private]
 ```
 
 ```Go
@@ -65,6 +73,7 @@ var testDirAll embed.FS
 
 ```
 searchKey: embedtest.testHiddenDir
+tags: [private]
 ```
 
 ```Go
@@ -75,6 +84,7 @@ var testHiddenDir embed.FS
 
 ```
 searchKey: embedtest.testHiddenStar
+tags: [private]
 ```
 
 ```Go
@@ -83,10 +93,15 @@ var testHiddenStar embed.FS
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="testFiles" href="#testFiles">func testFiles(t *testing.T, f embed.FS, name, data string)</a>
 
 ```
 searchKey: embedtest.testFiles
+tags: [private]
 ```
 
 ```Go
@@ -97,6 +112,7 @@ func testFiles(t *testing.T, f embed.FS, name, data string)
 
 ```
 searchKey: embedtest.testString
+tags: [private]
 ```
 
 ```Go
@@ -107,6 +123,7 @@ func testString(t *testing.T, s, name, data string)
 
 ```
 searchKey: embedtest.testDir
+tags: [private]
 ```
 
 ```Go
@@ -117,6 +134,7 @@ func testDir(t *testing.T, f embed.FS, name string, expect ...string)
 
 ```
 searchKey: embedtest.TestGlobal
+tags: [private]
 ```
 
 ```Go
@@ -127,6 +145,7 @@ func TestGlobal(t *testing.T)
 
 ```
 searchKey: embedtest.TestDir
+tags: [private]
 ```
 
 ```Go
@@ -137,6 +156,7 @@ func TestDir(t *testing.T)
 
 ```
 searchKey: embedtest.TestHidden
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +167,7 @@ func TestHidden(t *testing.T)
 
 ```
 searchKey: embedtest.TestUninitialized
+tags: [private]
 ```
 
 ```Go

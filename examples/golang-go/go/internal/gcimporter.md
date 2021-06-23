@@ -102,10 +102,15 @@ Package gcimporter implements Import for gc-generated object files.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="debug" href="#debug">const debug</a>
 
 ```
 searchKey: gcimporter.debug
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +123,7 @@ debugging/development support
 
 ```
 searchKey: gcimporter.predeclReserved
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +134,7 @@ const predeclReserved = 32
 
 ```
 searchKey: gcimporter.definedType
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +147,7 @@ Types
 
 ```
 searchKey: gcimporter.pointerType
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +158,7 @@ const pointerType
 
 ```
 searchKey: gcimporter.sliceType
+tags: [private]
 ```
 
 ```Go
@@ -160,6 +169,7 @@ const sliceType
 
 ```
 searchKey: gcimporter.arrayType
+tags: [private]
 ```
 
 ```Go
@@ -170,6 +180,7 @@ const arrayType
 
 ```
 searchKey: gcimporter.chanType
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +191,7 @@ const chanType
 
 ```
 searchKey: gcimporter.mapType
+tags: [private]
 ```
 
 ```Go
@@ -190,6 +202,7 @@ const mapType
 
 ```
 searchKey: gcimporter.signatureType
+tags: [private]
 ```
 
 ```Go
@@ -200,6 +213,7 @@ const signatureType
 
 ```
 searchKey: gcimporter.structType
+tags: [private]
 ```
 
 ```Go
@@ -210,6 +224,7 @@ const structType
 
 ```
 searchKey: gcimporter.interfaceType
+tags: [private]
 ```
 
 ```Go
@@ -220,6 +235,7 @@ const interfaceType
 
 ```
 searchKey: gcimporter.deltaNewFile
+tags: [private]
 ```
 
 ```Go
@@ -232,6 +248,7 @@ deltaNewFile is a magic line delta offset indicating a new file. We use -64 beca
 
 ```
 searchKey: gcimporter.maxTime
+tags: [private]
 ```
 
 ```Go
@@ -240,10 +257,15 @@ const maxTime = 30 * time.Second
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="pkgExts" href="#pkgExts">var pkgExts</a>
 
 ```
 searchKey: gcimporter.pkgExts
+tags: [private]
 ```
 
 ```Go
@@ -254,6 +276,7 @@ var pkgExts = [...]string{".a", ".o"}
 
 ```
 searchKey: gcimporter.fakeLines
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +287,7 @@ var fakeLines []int
 
 ```
 searchKey: gcimporter.fakeLinesOnce
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +298,7 @@ var fakeLinesOnce sync.Once
 
 ```
 searchKey: gcimporter.predeclared
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +309,7 @@ var predeclared = ...
 
 ```
 searchKey: gcimporter.importedObjectTests
+tags: [private]
 ```
 
 ```Go
@@ -292,10 +318,15 @@ var importedObjectTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="byPath" href="#byPath">type byPath []*types.Package</a>
 
 ```
 searchKey: gcimporter.byPath
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +337,7 @@ type byPath []*types.Package
 
 ```
 searchKey: gcimporter.byPath.Len
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +348,7 @@ func (a byPath) Len() int
 
 ```
 searchKey: gcimporter.byPath.Swap
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +359,7 @@ func (a byPath) Swap(i, j int)
 
 ```
 searchKey: gcimporter.byPath.Less
+tags: [private]
 ```
 
 ```Go
@@ -336,6 +370,7 @@ func (a byPath) Less(i, j int) bool
 
 ```
 searchKey: gcimporter.intReader
+tags: [private]
 ```
 
 ```Go
@@ -349,6 +384,7 @@ type intReader struct {
 
 ```
 searchKey: gcimporter.intReader.int64
+tags: [private]
 ```
 
 ```Go
@@ -359,6 +395,7 @@ func (r *intReader) int64() int64
 
 ```
 searchKey: gcimporter.intReader.uint64
+tags: [private]
 ```
 
 ```Go
@@ -369,6 +406,7 @@ func (r *intReader) uint64() uint64
 
 ```
 searchKey: gcimporter.itag
+tags: [private]
 ```
 
 ```Go
@@ -379,6 +417,7 @@ type itag uint64
 
 ```
 searchKey: gcimporter.iimporter
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +442,7 @@ type iimporter struct {
 
 ```
 searchKey: gcimporter.iimporter.doDecl
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +453,7 @@ func (p *iimporter) doDecl(pkg *types.Package, name string)
 
 ```
 searchKey: gcimporter.iimporter.stringAt
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +464,7 @@ func (p *iimporter) stringAt(off uint64) string
 
 ```
 searchKey: gcimporter.iimporter.pkgAt
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +475,7 @@ func (p *iimporter) pkgAt(off uint64) *types.Package
 
 ```
 searchKey: gcimporter.iimporter.typAt
+tags: [private]
 ```
 
 ```Go
@@ -443,6 +486,7 @@ func (p *iimporter) typAt(off uint64, base *types.Named) types.Type
 
 ```
 searchKey: gcimporter.importReader
+tags: [private]
 ```
 
 ```Go
@@ -460,6 +504,7 @@ type importReader struct {
 
 ```
 searchKey: gcimporter.importReader.obj
+tags: [private]
 ```
 
 ```Go
@@ -470,6 +515,7 @@ func (r *importReader) obj(name string)
 
 ```
 searchKey: gcimporter.importReader.declare
+tags: [private]
 ```
 
 ```Go
@@ -480,6 +526,7 @@ func (r *importReader) declare(obj types.Object)
 
 ```
 searchKey: gcimporter.importReader.value
+tags: [private]
 ```
 
 ```Go
@@ -490,6 +537,7 @@ func (r *importReader) value() (typ types.Type, val constant.Value)
 
 ```
 searchKey: gcimporter.importReader.mpint
+tags: [private]
 ```
 
 ```Go
@@ -500,6 +548,7 @@ func (r *importReader) mpint(x *big.Int, typ *types.Basic)
 
 ```
 searchKey: gcimporter.importReader.mpfloat
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +559,7 @@ func (r *importReader) mpfloat(typ *types.Basic) constant.Value
 
 ```
 searchKey: gcimporter.importReader.ident
+tags: [private]
 ```
 
 ```Go
@@ -520,6 +570,7 @@ func (r *importReader) ident() string
 
 ```
 searchKey: gcimporter.importReader.qualifiedIdent
+tags: [private]
 ```
 
 ```Go
@@ -530,6 +581,7 @@ func (r *importReader) qualifiedIdent() (*types.Package, string)
 
 ```
 searchKey: gcimporter.importReader.pos
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +592,7 @@ func (r *importReader) pos() token.Pos
 
 ```
 searchKey: gcimporter.importReader.posv0
+tags: [private]
 ```
 
 ```Go
@@ -550,6 +603,7 @@ func (r *importReader) posv0()
 
 ```
 searchKey: gcimporter.importReader.posv1
+tags: [private]
 ```
 
 ```Go
@@ -560,6 +614,7 @@ func (r *importReader) posv1()
 
 ```
 searchKey: gcimporter.importReader.typ
+tags: [private]
 ```
 
 ```Go
@@ -570,6 +625,7 @@ func (r *importReader) typ() types.Type
 
 ```
 searchKey: gcimporter.importReader.pkg
+tags: [private]
 ```
 
 ```Go
@@ -580,6 +636,7 @@ func (r *importReader) pkg() *types.Package
 
 ```
 searchKey: gcimporter.importReader.string
+tags: [private]
 ```
 
 ```Go
@@ -590,6 +647,7 @@ func (r *importReader) string() string
 
 ```
 searchKey: gcimporter.importReader.doType
+tags: [private]
 ```
 
 ```Go
@@ -600,6 +658,7 @@ func (r *importReader) doType(base *types.Named) types.Type
 
 ```
 searchKey: gcimporter.importReader.kind
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +669,7 @@ func (r *importReader) kind() itag
 
 ```
 searchKey: gcimporter.importReader.signature
+tags: [private]
 ```
 
 ```Go
@@ -620,6 +680,7 @@ func (r *importReader) signature(recv *types.Var) *types.Signature
 
 ```
 searchKey: gcimporter.importReader.paramList
+tags: [private]
 ```
 
 ```Go
@@ -630,6 +691,7 @@ func (r *importReader) paramList() *types.Tuple
 
 ```
 searchKey: gcimporter.importReader.param
+tags: [private]
 ```
 
 ```Go
@@ -640,6 +702,7 @@ func (r *importReader) param() *types.Var
 
 ```
 searchKey: gcimporter.importReader.bool
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +713,7 @@ func (r *importReader) bool() bool
 
 ```
 searchKey: gcimporter.importReader.int64
+tags: [private]
 ```
 
 ```Go
@@ -660,6 +724,7 @@ func (r *importReader) int64() int64
 
 ```
 searchKey: gcimporter.importReader.uint64
+tags: [private]
 ```
 
 ```Go
@@ -670,6 +735,7 @@ func (r *importReader) uint64() uint64
 
 ```
 searchKey: gcimporter.importReader.byte
+tags: [private]
 ```
 
 ```Go
@@ -680,6 +746,7 @@ func (r *importReader) byte() byte
 
 ```
 searchKey: gcimporter.fakeFileSet
+tags: [private]
 ```
 
 ```Go
@@ -695,6 +762,7 @@ Synthesize a token.Pos
 
 ```
 searchKey: gcimporter.fakeFileSet.pos
+tags: [private]
 ```
 
 ```Go
@@ -705,6 +773,7 @@ func (s *fakeFileSet) pos(file string, line, column int) token.Pos
 
 ```
 searchKey: gcimporter.anyType
+tags: [private]
 ```
 
 ```Go
@@ -715,6 +784,7 @@ type anyType struct{}
 
 ```
 searchKey: gcimporter.anyType.Underlying
+tags: [private]
 ```
 
 ```Go
@@ -725,6 +795,7 @@ func (t anyType) Underlying() types.Type
 
 ```
 searchKey: gcimporter.anyType.String
+tags: [private]
 ```
 
 ```Go
@@ -733,10 +804,15 @@ func (t anyType) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="readGopackHeader" href="#readGopackHeader">func readGopackHeader(r *bufio.Reader) (name string, size int, err error)</a>
 
 ```
 searchKey: gcimporter.readGopackHeader
+tags: [private]
 ```
 
 ```Go
@@ -747,7 +823,6 @@ func readGopackHeader(r *bufio.Reader) (name string, size int, err error)
 
 ```
 searchKey: gcimporter.FindExportData
-tags: [exported]
 ```
 
 ```Go
@@ -760,7 +835,6 @@ FindExportData positions the reader r at the beginning of the export data sectio
 
 ```
 searchKey: gcimporter.FindPkg
-tags: [exported]
 ```
 
 ```Go
@@ -773,7 +847,6 @@ FindPkg returns the filename and unique package id for an import path based on p
 
 ```
 searchKey: gcimporter.Import
-tags: [exported]
 ```
 
 ```Go
@@ -786,6 +859,7 @@ Import imports a gc-generated package given its import path and srcDir, adds the
 
 ```
 searchKey: gcimporter.iImportData
+tags: [private]
 ```
 
 ```Go
@@ -798,6 +872,7 @@ iImportData imports a package from the serialized package data and returns the n
 
 ```
 searchKey: gcimporter.intSize
+tags: [private]
 ```
 
 ```Go
@@ -808,6 +883,7 @@ func intSize(b *types.Basic) (signed bool, maxBytes uint)
 
 ```
 searchKey: gcimporter.isInterface
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +894,7 @@ func isInterface(t types.Type) bool
 
 ```
 searchKey: gcimporter.errorf
+tags: [private]
 ```
 
 ```Go
@@ -828,6 +905,7 @@ func errorf(format string, args ...interface{})
 
 ```
 searchKey: gcimporter.chanDir
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +916,7 @@ func chanDir(d int) types.ChanDir
 
 ```
 searchKey: gcimporter.skipSpecialPlatforms
+tags: [private]
 ```
 
 ```Go
@@ -850,6 +929,7 @@ skipSpecialPlatforms causes the test to be skipped for platforms where builders 
 
 ```
 searchKey: gcimporter.compile
+tags: [private]
 ```
 
 ```Go
@@ -862,6 +942,7 @@ compile runs the compiler on filename, with dirname as the working directory, an
 
 ```
 searchKey: gcimporter.testPath
+tags: [private]
 ```
 
 ```Go
@@ -872,6 +953,7 @@ func testPath(t *testing.T, path, srcDir string) *types.Package
 
 ```
 searchKey: gcimporter.testDir
+tags: [private]
 ```
 
 ```Go
@@ -882,6 +964,7 @@ func testDir(t *testing.T, dir string, endTime time.Time) (nimports int)
 
 ```
 searchKey: gcimporter.mktmpdir
+tags: [private]
 ```
 
 ```Go
@@ -892,6 +975,7 @@ func mktmpdir(t *testing.T) string
 
 ```
 searchKey: gcimporter.TestImportTestdata
+tags: [private]
 ```
 
 ```Go
@@ -902,6 +986,7 @@ func TestImportTestdata(t *testing.T)
 
 ```
 searchKey: gcimporter.TestVersionHandling
+tags: [private]
 ```
 
 ```Go
@@ -912,6 +997,7 @@ func TestVersionHandling(t *testing.T)
 
 ```
 searchKey: gcimporter.TestImportStdLib
+tags: [private]
 ```
 
 ```Go
@@ -922,6 +1008,7 @@ func TestImportStdLib(t *testing.T)
 
 ```
 searchKey: gcimporter.TestImportedTypes
+tags: [private]
 ```
 
 ```Go
@@ -932,6 +1019,7 @@ func TestImportedTypes(t *testing.T)
 
 ```
 searchKey: gcimporter.verifyInterfaceMethodRecvs
+tags: [private]
 ```
 
 ```Go
@@ -944,6 +1032,7 @@ verifyInterfaceMethodRecvs verifies that method receiver types are named if the 
 
 ```
 searchKey: gcimporter.TestIssue5815
+tags: [private]
 ```
 
 ```Go
@@ -954,6 +1043,7 @@ func TestIssue5815(t *testing.T)
 
 ```
 searchKey: gcimporter.TestCorrectMethodPackage
+tags: [private]
 ```
 
 ```Go
@@ -966,6 +1056,7 @@ Smoke test to ensure that imported methods get the correct package.
 
 ```
 searchKey: gcimporter.TestIssue13566
+tags: [private]
 ```
 
 ```Go
@@ -976,6 +1067,7 @@ func TestIssue13566(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue13898
+tags: [private]
 ```
 
 ```Go
@@ -986,6 +1078,7 @@ func TestIssue13898(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue15517
+tags: [private]
 ```
 
 ```Go
@@ -996,6 +1089,7 @@ func TestIssue15517(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue15920
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +1100,7 @@ func TestIssue15920(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue20046
+tags: [private]
 ```
 
 ```Go
@@ -1016,6 +1111,7 @@ func TestIssue20046(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue25301
+tags: [private]
 ```
 
 ```Go
@@ -1026,6 +1122,7 @@ func TestIssue25301(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue25596
+tags: [private]
 ```
 
 ```Go
@@ -1036,6 +1133,7 @@ func TestIssue25596(t *testing.T)
 
 ```
 searchKey: gcimporter.importPkg
+tags: [private]
 ```
 
 ```Go
@@ -1046,6 +1144,7 @@ func importPkg(t *testing.T, path, srcDir string) *types.Package
 
 ```
 searchKey: gcimporter.compileAndImportPkg
+tags: [private]
 ```
 
 ```Go
@@ -1056,6 +1155,7 @@ func compileAndImportPkg(t *testing.T, name string) *types.Package
 
 ```
 searchKey: gcimporter.lookupObj
+tags: [private]
 ```
 
 ```Go

@@ -710,14 +710,11 @@ Least Surprise Property: "A developer (or code reviewer) familiar with HTML, CSS
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="_attr_name" href="#_attr_name">const _attr_name</a>
 
 ```
 searchKey: template._attr_name
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +725,7 @@ const _attr_name = "attrNoneattrScriptattrScriptTypeattrStyleattrURLattrSrcset"
 
 ```
 searchKey: template.contentTypePlain
+tags: [private]
 ```
 
 ```Go
@@ -738,6 +736,7 @@ const contentTypePlain contentType = iota
 
 ```
 searchKey: template.contentTypeCSS
+tags: [private]
 ```
 
 ```Go
@@ -748,6 +747,7 @@ const contentTypeCSS
 
 ```
 searchKey: template.contentTypeHTML
+tags: [private]
 ```
 
 ```Go
@@ -758,6 +758,7 @@ const contentTypeHTML
 
 ```
 searchKey: template.contentTypeHTMLAttr
+tags: [private]
 ```
 
 ```Go
@@ -768,6 +769,7 @@ const contentTypeHTMLAttr
 
 ```
 searchKey: template.contentTypeJS
+tags: [private]
 ```
 
 ```Go
@@ -778,6 +780,7 @@ const contentTypeJS
 
 ```
 searchKey: template.contentTypeJSStr
+tags: [private]
 ```
 
 ```Go
@@ -788,6 +791,7 @@ const contentTypeJSStr
 
 ```
 searchKey: template.contentTypeURL
+tags: [private]
 ```
 
 ```Go
@@ -798,6 +802,7 @@ const contentTypeURL
 
 ```
 searchKey: template.contentTypeSrcset
+tags: [private]
 ```
 
 ```Go
@@ -808,6 +813,7 @@ const contentTypeSrcset
 
 ```
 searchKey: template.contentTypeUnsafe
+tags: [private]
 ```
 
 ```Go
@@ -820,6 +826,7 @@ contentTypeUnsafe is used in attr.go for values that affect how embedded content
 
 ```
 searchKey: template.stateText
+tags: [private]
 ```
 
 ```Go
@@ -832,6 +839,7 @@ stateText is parsed character data. An HTML parser is in this state when its par
 
 ```
 searchKey: template.stateTag
+tags: [private]
 ```
 
 ```Go
@@ -844,6 +852,7 @@ stateTag occurs before an HTML attribute or the end of a tag.
 
 ```
 searchKey: template.stateAttrName
+tags: [private]
 ```
 
 ```Go
@@ -856,6 +865,7 @@ stateAttrName occurs inside an attribute name. It occurs between the ^'s in ` ^n
 
 ```
 searchKey: template.stateAfterName
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +878,7 @@ stateAfterName occurs after an attr name has ended but before any equals sign. I
 
 ```
 searchKey: template.stateBeforeValue
+tags: [private]
 ```
 
 ```Go
@@ -880,6 +891,7 @@ stateBeforeValue occurs after the equals sign but before the value. It occurs be
 
 ```
 searchKey: template.stateHTMLCmt
+tags: [private]
 ```
 
 ```Go
@@ -892,6 +904,7 @@ stateHTMLCmt occurs inside an <!-- HTML comment -->.
 
 ```
 searchKey: template.stateRCDATA
+tags: [private]
 ```
 
 ```Go
@@ -904,6 +917,7 @@ stateRCDATA occurs inside an RCDATA element (<textarea> or <title>) as described
 
 ```
 searchKey: template.stateAttr
+tags: [private]
 ```
 
 ```Go
@@ -916,6 +930,7 @@ stateAttr occurs inside an HTML attribute whose content is text.
 
 ```
 searchKey: template.stateURL
+tags: [private]
 ```
 
 ```Go
@@ -928,6 +943,7 @@ stateURL occurs inside an HTML attribute whose content is a URL.
 
 ```
 searchKey: template.stateSrcset
+tags: [private]
 ```
 
 ```Go
@@ -940,6 +956,7 @@ stateSrcset occurs inside an HTML srcset attribute.
 
 ```
 searchKey: template.stateJS
+tags: [private]
 ```
 
 ```Go
@@ -952,6 +969,7 @@ stateJS occurs inside an event handler or script element.
 
 ```
 searchKey: template.stateJSDqStr
+tags: [private]
 ```
 
 ```Go
@@ -964,6 +982,7 @@ stateJSDqStr occurs inside a JavaScript double quoted string.
 
 ```
 searchKey: template.stateJSSqStr
+tags: [private]
 ```
 
 ```Go
@@ -976,6 +995,7 @@ stateJSSqStr occurs inside a JavaScript single quoted string.
 
 ```
 searchKey: template.stateJSRegexp
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +1008,7 @@ stateJSRegexp occurs inside a JavaScript regexp literal.
 
 ```
 searchKey: template.stateJSBlockCmt
+tags: [private]
 ```
 
 ```Go
@@ -1000,6 +1021,7 @@ stateJSBlockCmt occurs inside a JavaScript /* block comment */.
 
 ```
 searchKey: template.stateJSLineCmt
+tags: [private]
 ```
 
 ```Go
@@ -1012,6 +1034,7 @@ stateJSLineCmt occurs inside a JavaScript // line comment.
 
 ```
 searchKey: template.stateCSS
+tags: [private]
 ```
 
 ```Go
@@ -1024,6 +1047,7 @@ stateCSS occurs inside a <style> element or style attribute.
 
 ```
 searchKey: template.stateCSSDqStr
+tags: [private]
 ```
 
 ```Go
@@ -1036,6 +1060,7 @@ stateCSSDqStr occurs inside a CSS double quoted string.
 
 ```
 searchKey: template.stateCSSSqStr
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1073,7 @@ stateCSSSqStr occurs inside a CSS single quoted string.
 
 ```
 searchKey: template.stateCSSDqURL
+tags: [private]
 ```
 
 ```Go
@@ -1060,6 +1086,7 @@ stateCSSDqURL occurs inside a CSS double quoted url("...").
 
 ```
 searchKey: template.stateCSSSqURL
+tags: [private]
 ```
 
 ```Go
@@ -1072,6 +1099,7 @@ stateCSSSqURL occurs inside a CSS single quoted url('...').
 
 ```
 searchKey: template.stateCSSURL
+tags: [private]
 ```
 
 ```Go
@@ -1084,6 +1112,7 @@ stateCSSURL occurs inside a CSS unquoted url(...).
 
 ```
 searchKey: template.stateCSSBlockCmt
+tags: [private]
 ```
 
 ```Go
@@ -1096,6 +1125,7 @@ stateCSSBlockCmt occurs inside a CSS /* block comment */.
 
 ```
 searchKey: template.stateCSSLineCmt
+tags: [private]
 ```
 
 ```Go
@@ -1108,6 +1138,7 @@ stateCSSLineCmt occurs inside a CSS // line comment.
 
 ```
 searchKey: template.stateError
+tags: [private]
 ```
 
 ```Go
@@ -1120,6 +1151,7 @@ stateError is an infectious error state outside any valid HTML/CSS/JS construct.
 
 ```
 searchKey: template.delimNone
+tags: [private]
 ```
 
 ```Go
@@ -1132,6 +1164,7 @@ delimNone occurs outside any attribute.
 
 ```
 searchKey: template.delimDoubleQuote
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1177,7 @@ delimDoubleQuote occurs when a double quote (") closes the attribute.
 
 ```
 searchKey: template.delimSingleQuote
+tags: [private]
 ```
 
 ```Go
@@ -1156,6 +1190,7 @@ delimSingleQuote occurs when a single quote (') closes the attribute.
 
 ```
 searchKey: template.delimSpaceOrTagEnd
+tags: [private]
 ```
 
 ```Go
@@ -1168,6 +1203,7 @@ delimSpaceOrTagEnd occurs when a space or right angle bracket (>) closes the att
 
 ```
 searchKey: template.urlPartNone
+tags: [private]
 ```
 
 ```Go
@@ -1180,6 +1216,7 @@ urlPartNone occurs when not in a URL, or possibly at the start: ^ in "^[http://a
 
 ```
 searchKey: template.urlPartPreQuery
+tags: [private]
 ```
 
 ```Go
@@ -1192,6 +1229,7 @@ urlPartPreQuery occurs in the scheme, authority, or path; between the ^s in "h^t
 
 ```
 searchKey: template.urlPartQueryOrFrag
+tags: [private]
 ```
 
 ```Go
@@ -1204,6 +1242,7 @@ urlPartQueryOrFrag occurs in the query portion between the ^s in "[http://auth/p
 
 ```
 searchKey: template.urlPartUnknown
+tags: [private]
 ```
 
 ```Go
@@ -1216,6 +1255,7 @@ urlPartUnknown occurs due to joining of contexts both before and after the query
 
 ```
 searchKey: template.jsCtxRegexp
+tags: [private]
 ```
 
 ```Go
@@ -1228,6 +1268,7 @@ jsCtxRegexp occurs where a '/' would start a regexp literal.
 
 ```
 searchKey: template.jsCtxDivOp
+tags: [private]
 ```
 
 ```Go
@@ -1240,6 +1281,7 @@ jsCtxDivOp occurs where a '/' would start a division operator.
 
 ```
 searchKey: template.jsCtxUnknown
+tags: [private]
 ```
 
 ```Go
@@ -1252,6 +1294,7 @@ jsCtxUnknown occurs where a '/' is ambiguous due to context joining.
 
 ```
 searchKey: template.elementNone
+tags: [private]
 ```
 
 ```Go
@@ -1264,6 +1307,7 @@ elementNone occurs outside a special tag or special element body.
 
 ```
 searchKey: template.elementScript
+tags: [private]
 ```
 
 ```Go
@@ -1276,6 +1320,7 @@ elementScript corresponds to the raw text <script> element with JS MIME type or 
 
 ```
 searchKey: template.elementStyle
+tags: [private]
 ```
 
 ```Go
@@ -1288,6 +1333,7 @@ elementStyle corresponds to the raw text <style> element.
 
 ```
 searchKey: template.elementTextarea
+tags: [private]
 ```
 
 ```Go
@@ -1300,6 +1346,7 @@ elementTextarea corresponds to the RCDATA <textarea> element.
 
 ```
 searchKey: template.elementTitle
+tags: [private]
 ```
 
 ```Go
@@ -1312,6 +1359,7 @@ elementTitle corresponds to the RCDATA <title> element.
 
 ```
 searchKey: template.attrNone
+tags: [private]
 ```
 
 ```Go
@@ -1324,6 +1372,7 @@ attrNone corresponds to a normal attribute or no attribute.
 
 ```
 searchKey: template.attrScript
+tags: [private]
 ```
 
 ```Go
@@ -1336,6 +1385,7 @@ attrScript corresponds to an event handler attribute.
 
 ```
 searchKey: template.attrScriptType
+tags: [private]
 ```
 
 ```Go
@@ -1348,6 +1398,7 @@ attrScriptType corresponds to the type attribute in script HTML element
 
 ```
 searchKey: template.attrStyle
+tags: [private]
 ```
 
 ```Go
@@ -1360,6 +1411,7 @@ attrStyle corresponds to the style attribute whose value is CSS.
 
 ```
 searchKey: template.attrURL
+tags: [private]
 ```
 
 ```Go
@@ -1372,6 +1424,7 @@ attrURL corresponds to an attribute whose value is a URL.
 
 ```
 searchKey: template.attrSrcset
+tags: [private]
 ```
 
 ```Go
@@ -1384,6 +1437,7 @@ attrSrcset corresponds to a srcset attribute.
 
 ```
 searchKey: template._delim_name
+tags: [private]
 ```
 
 ```Go
@@ -1394,6 +1448,7 @@ const _delim_name = "delimNonedelimDoubleQuotedelimSingleQuotedelimSpaceOrTagEnd
 
 ```
 searchKey: template._element_name
+tags: [private]
 ```
 
 ```Go
@@ -1404,7 +1459,6 @@ const _element_name = "elementNoneelementScriptelementStyleelementTextareaelemen
 
 ```
 searchKey: template.OK
-tags: [exported]
 ```
 
 ```Go
@@ -1436,7 +1490,6 @@ OK indicates the lack of an error.
 
 ```
 searchKey: template.ErrAmbigContext
-tags: [exported]
 ```
 
 ```Go
@@ -1488,7 +1541,6 @@ it may be either a URL suffix or a query parameter.
 
 ```
 searchKey: template.ErrBadHTML
-tags: [exported]
 ```
 
 ```Go
@@ -1542,7 +1594,6 @@ Quoting all attributes is the best policy.
 
 ```
 searchKey: template.ErrBranchEnd
-tags: [exported]
 ```
 
 ```Go
@@ -1595,7 +1646,6 @@ adding a dummy {{else}} can help.
 
 ```
 searchKey: template.ErrEndContext
-tags: [exported]
 ```
 
 ```Go
@@ -1648,7 +1698,6 @@ not be Executed directly.
 
 ```
 searchKey: template.ErrNoSuchTemplate
-tags: [exported]
 ```
 
 ```Go
@@ -1695,7 +1744,6 @@ when "main" is parsed.
 
 ```
 searchKey: template.ErrOutputContext
-tags: [exported]
 ```
 
 ```Go
@@ -1742,7 +1790,6 @@ Maybe refactor recursive templates to not be recursive.
 
 ```
 searchKey: template.ErrPartialCharset
-tags: [exported]
 ```
 
 ```Go
@@ -1785,7 +1832,6 @@ expression literal character sets.
 
 ```
 searchKey: template.ErrPartialEscape
-tags: [exported]
 ```
 
 ```Go
@@ -1833,7 +1879,6 @@ should work, and if {{.X}} is a partial escape sequence such as
 
 ```
 searchKey: template.ErrRangeLoopReentry
-tags: [exported]
 ```
 
 ```Go
@@ -1881,7 +1926,6 @@ context. The second iteration would produce something like
 
 ```
 searchKey: template.ErrSlashAmbig
-tags: [exported]
 ```
 
 ```Go
@@ -1931,7 +1975,6 @@ parentheses to make it clear which interpretation you intend.
 
 ```
 searchKey: template.ErrPredefinedEscaper
-tags: [exported]
 ```
 
 ```Go
@@ -1994,6 +2037,7 @@ disallowed. Avoid using "html" and "urlquery" entirely in new templates.
 
 ```
 searchKey: template.filterFailsafe
+tags: [private]
 ```
 
 ```Go
@@ -2006,6 +2050,7 @@ filterFailsafe is an innocuous word that is emitted in place of unsafe values by
 
 ```
 searchKey: template._jsCtx_name
+tags: [private]
 ```
 
 ```Go
@@ -2016,6 +2061,7 @@ const _jsCtx_name = "jsCtxRegexpjsCtxDivOpjsCtxUnknown"
 
 ```
 searchKey: template._state_name
+tags: [private]
 ```
 
 ```Go
@@ -2026,6 +2072,7 @@ const _state_name = ...
 
 ```
 searchKey: template.htmlSpaceAndASCIIAlnumBytes
+tags: [private]
 ```
 
 ```Go
@@ -2038,6 +2085,7 @@ Derived from [https://play.golang.org/p/Dhmj7FORT5](https://play.golang.org/p/Dh
 
 ```
 searchKey: template._urlPart_name
+tags: [private]
 ```
 
 ```Go
@@ -2048,6 +2096,7 @@ const _urlPart_name = "urlPartNoneurlPartPreQueryurlPartQueryOrFragurlPartUnknow
 
 ```
 searchKey: template.execErrorText
+tags: [private]
 ```
 
 ```Go
@@ -2058,6 +2107,7 @@ const execErrorText = ...
 
 ```
 searchKey: template.treeTemplate
+tags: [private]
 ```
 
 ```Go
@@ -2070,6 +2120,7 @@ Use different delimiters to test Set.Delims. Also test the trimming of leading a
 
 ```
 searchKey: template.testTemplates
+tags: [private]
 ```
 
 ```Go
@@ -2080,6 +2131,7 @@ const testTemplates = `{{define "one"}}one{{end}}{{define "two"}}two{{end}}`
 
 ```
 searchKey: template.alwaysErrorText
+tags: [private]
 ```
 
 ```Go
@@ -2090,6 +2142,7 @@ const alwaysErrorText = "always be failing"
 
 ```
 searchKey: template.raceText
+tags: [private]
 ```
 
 ```Go
@@ -2100,6 +2153,7 @@ const raceText = ...
 
 ```
 searchKey: template.multiText1
+tags: [private]
 ```
 
 ```Go
@@ -2115,6 +2169,7 @@ These strings are also in testdata/*.
 
 ```
 searchKey: template.multiText2
+tags: [private]
 ```
 
 ```Go
@@ -2128,6 +2183,7 @@ const multiText2 = `
 
 ```
 searchKey: template.cloneText1
+tags: [private]
 ```
 
 ```Go
@@ -2138,6 +2194,7 @@ const cloneText1 = `{{define "a"}}{{template "b"}}{{template "c"}}{{end}}`
 
 ```
 searchKey: template.cloneText2
+tags: [private]
 ```
 
 ```Go
@@ -2148,6 +2205,7 @@ const cloneText2 = `{{define "b"}}b{{end}}`
 
 ```
 searchKey: template.cloneText3
+tags: [private]
 ```
 
 ```Go
@@ -2158,6 +2216,7 @@ const cloneText3 = `{{define "c"}}root{{end}}`
 
 ```
 searchKey: template.cloneText4
+tags: [private]
 ```
 
 ```Go
@@ -2166,14 +2225,11 @@ const cloneText4 = `{{define "c"}}clone{{end}}`
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="attrTypeMap" href="#attrTypeMap">var attrTypeMap</a>
 
 ```
 searchKey: template.attrTypeMap
+tags: [private]
 ```
 
 ```Go
@@ -2186,6 +2242,7 @@ attrTypeMap[n] describes the value of the given attribute. If an attribute affec
 
 ```
 searchKey: template._attr_index
+tags: [private]
 ```
 
 ```Go
@@ -2196,6 +2253,7 @@ var _attr_index = [...]uint8{0, 8, 18, 32, 41, 48, 58}
 
 ```
 searchKey: template.errorType
+tags: [private]
 ```
 
 ```Go
@@ -2206,6 +2264,7 @@ var errorType = reflect.TypeOf((*error)(nil)).Elem()
 
 ```
 searchKey: template.fmtStringerType
+tags: [private]
 ```
 
 ```Go
@@ -2216,6 +2275,7 @@ var fmtStringerType = reflect.TypeOf((*fmt.Stringer)(nil)).Elem()
 
 ```
 searchKey: template.cssReplacementTable
+tags: [private]
 ```
 
 ```Go
@@ -2226,6 +2286,7 @@ var cssReplacementTable = ...
 
 ```
 searchKey: template.expressionBytes
+tags: [private]
 ```
 
 ```Go
@@ -2236,6 +2297,7 @@ var expressionBytes = []byte("expression")
 
 ```
 searchKey: template.mozBindingBytes
+tags: [private]
 ```
 
 ```Go
@@ -2246,6 +2308,7 @@ var mozBindingBytes = []byte("mozbinding")
 
 ```
 searchKey: template._delim_index
+tags: [private]
 ```
 
 ```Go
@@ -2256,6 +2319,7 @@ var _delim_index = [...]uint8{0, 9, 25, 41, 59}
 
 ```
 searchKey: template._element_index
+tags: [private]
 ```
 
 ```Go
@@ -2266,6 +2330,7 @@ var _element_index = [...]uint8{0, 11, 24, 36, 51, 63}
 
 ```
 searchKey: template.funcMap
+tags: [private]
 ```
 
 ```Go
@@ -2278,6 +2343,7 @@ funcMap maps command names to functions that render their inputs safe.
 
 ```
 searchKey: template.predefinedEscapers
+tags: [private]
 ```
 
 ```Go
@@ -2293,6 +2359,7 @@ predefinedEscapers contains template predefined escapers that are equivalent to 
 
 ```
 searchKey: template.equivEscapers
+tags: [private]
 ```
 
 ```Go
@@ -2305,6 +2372,7 @@ equivEscapers matches contextual escapers to equivalent predefined template esca
 
 ```
 searchKey: template.redundantFuncs
+tags: [private]
 ```
 
 ```Go
@@ -2317,6 +2385,7 @@ redundantFuncs[a][b] implies that funcMap[b](funcMap[a](x)) == funcMap[a](x) for
 
 ```
 searchKey: template.delimEnds
+tags: [private]
 ```
 
 ```Go
@@ -2329,6 +2398,7 @@ delimEnds maps each delim to a string of characters that terminate it.
 
 ```
 searchKey: template.doctypeBytes
+tags: [private]
 ```
 
 ```Go
@@ -2339,6 +2409,7 @@ var doctypeBytes = []byte("<!DOCTYPE")
 
 ```
 searchKey: template.htmlReplacementTable
+tags: [private]
 ```
 
 ```Go
@@ -2351,6 +2422,7 @@ htmlReplacementTable contains the runes that need to be escaped inside a quoted 
 
 ```
 searchKey: template.htmlNormReplacementTable
+tags: [private]
 ```
 
 ```Go
@@ -2363,6 +2435,7 @@ htmlNormReplacementTable is like htmlReplacementTable but without '&' to avoid o
 
 ```
 searchKey: template.htmlNospaceReplacementTable
+tags: [private]
 ```
 
 ```Go
@@ -2384,6 +2457,7 @@ if (!s || s.title !== c + "lt" + c) { a.push(i.toString(16)); }
 
 ```
 searchKey: template.htmlNospaceNormReplacementTable
+tags: [private]
 ```
 
 ```Go
@@ -2396,6 +2470,7 @@ htmlNospaceNormReplacementTable is like htmlNospaceReplacementTable but without 
 
 ```
 searchKey: template.regexpPrecederKeywords
+tags: [private]
 ```
 
 ```Go
@@ -2408,6 +2483,7 @@ regexpPrecederKeywords is a set of reserved JS keywords that can precede a regul
 
 ```
 searchKey: template.jsonMarshalType
+tags: [private]
 ```
 
 ```Go
@@ -2418,6 +2494,7 @@ var jsonMarshalType = reflect.TypeOf((*json.Marshaler)(nil)).Elem()
 
 ```
 searchKey: template.lowUnicodeReplacementTable
+tags: [private]
 ```
 
 ```Go
@@ -2428,6 +2505,7 @@ var lowUnicodeReplacementTable = ...
 
 ```
 searchKey: template.jsStrReplacementTable
+tags: [private]
 ```
 
 ```Go
@@ -2438,6 +2516,7 @@ var jsStrReplacementTable = ...
 
 ```
 searchKey: template.jsStrNormReplacementTable
+tags: [private]
 ```
 
 ```Go
@@ -2450,6 +2529,7 @@ jsStrNormReplacementTable is like jsStrReplacementTable but does not overencode 
 
 ```
 searchKey: template.jsRegexpReplacementTable
+tags: [private]
 ```
 
 ```Go
@@ -2460,6 +2540,7 @@ var jsRegexpReplacementTable = ...
 
 ```
 searchKey: template._jsCtx_index
+tags: [private]
 ```
 
 ```Go
@@ -2470,6 +2551,7 @@ var _jsCtx_index = [...]uint8{0, 11, 21, 33}
 
 ```
 searchKey: template._state_index
+tags: [private]
 ```
 
 ```Go
@@ -2480,6 +2562,7 @@ var _state_index = ...
 
 ```
 searchKey: template.escapeOK
+tags: [private]
 ```
 
 ```Go
@@ -2492,6 +2575,7 @@ escapeOK is a sentinel value used to indicate valid escaping.
 
 ```
 searchKey: template.transitionFunc
+tags: [private]
 ```
 
 ```Go
@@ -2504,6 +2588,7 @@ transitionFunc is the array of context transition functions for text nodes. A tr
 
 ```
 searchKey: template.commentStart
+tags: [private]
 ```
 
 ```Go
@@ -2514,6 +2599,7 @@ var commentStart = []byte("<!--")
 
 ```
 searchKey: template.commentEnd
+tags: [private]
 ```
 
 ```Go
@@ -2524,6 +2610,7 @@ var commentEnd = []byte("-->")
 
 ```
 searchKey: template.elementContentType
+tags: [private]
 ```
 
 ```Go
@@ -2534,6 +2621,7 @@ var elementContentType = ...
 
 ```
 searchKey: template.attrStartStates
+tags: [private]
 ```
 
 ```Go
@@ -2544,6 +2632,7 @@ var attrStartStates = ...
 
 ```
 searchKey: template.specialTagEndMarkers
+tags: [private]
 ```
 
 ```Go
@@ -2556,6 +2645,7 @@ specialTagEndMarkers maps element types to the character sequence that case-inse
 
 ```
 searchKey: template.specialTagEndPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2566,6 +2656,7 @@ var specialTagEndPrefix = []byte("</")
 
 ```
 searchKey: template.tagEndSeparators
+tags: [private]
 ```
 
 ```Go
@@ -2576,6 +2667,7 @@ var tagEndSeparators = []byte("> \t\n\f/")
 
 ```
 searchKey: template.blockCommentEnd
+tags: [private]
 ```
 
 ```Go
@@ -2586,6 +2678,7 @@ var blockCommentEnd = []byte("*/")
 
 ```
 searchKey: template.elementNameMap
+tags: [private]
 ```
 
 ```Go
@@ -2596,6 +2689,7 @@ var elementNameMap = ...
 
 ```
 searchKey: template._urlPart_index
+tags: [private]
 ```
 
 ```Go
@@ -2606,6 +2700,7 @@ var _urlPart_index = [...]uint8{0, 11, 26, 44, 58}
 
 ```
 searchKey: template.debug
+tags: [private]
 ```
 
 ```Go
@@ -2616,6 +2711,7 @@ var debug = flag.Bool("debug", false, "show the errors produced by the tests")
 
 ```
 searchKey: template.siVal
+tags: [private]
 ```
 
 ```Go
@@ -2626,6 +2722,7 @@ var siVal = I(S{"a", "b"})
 
 ```
 searchKey: template.tVal
+tags: [private]
 ```
 
 ```Go
@@ -2636,6 +2733,7 @@ var tVal = ...
 
 ```
 searchKey: template.tSliceOfNil
+tags: [private]
 ```
 
 ```Go
@@ -2646,6 +2744,7 @@ var tSliceOfNil = []*T{nil}
 
 ```
 searchKey: template.iVal
+tags: [private]
 ```
 
 ```Go
@@ -2656,6 +2755,7 @@ var iVal I = tVal
 
 ```
 searchKey: template.myError
+tags: [private]
 ```
 
 ```Go
@@ -2666,6 +2766,7 @@ var myError = errors.New("my error")
 
 ```
 searchKey: template.bigInt
+tags: [private]
 ```
 
 ```Go
@@ -2678,6 +2779,7 @@ bigInt and bigUint are hex string representing numbers either side of the max in
 
 ```
 searchKey: template.bigUint
+tags: [private]
 ```
 
 ```Go
@@ -2690,6 +2792,7 @@ bigInt and bigUint are hex string representing numbers either side of the max in
 
 ```
 searchKey: template.execTests
+tags: [private]
 ```
 
 ```Go
@@ -2700,6 +2803,7 @@ var execTests = ...
 
 ```
 searchKey: template.delimPairs
+tags: [private]
 ```
 
 ```Go
@@ -2715,6 +2819,7 @@ var delimPairs = []string{
 
 ```
 searchKey: template.cmpTests
+tags: [private]
 ```
 
 ```Go
@@ -2725,6 +2830,7 @@ var cmpTests = ...
 
 ```
 searchKey: template.alwaysError
+tags: [private]
 ```
 
 ```Go
@@ -2735,6 +2841,7 @@ var alwaysError = errors.New(alwaysErrorText)
 
 ```
 searchKey: template.multiExecTests
+tags: [private]
 ```
 
 ```Go
@@ -2745,6 +2852,7 @@ var multiExecTests = ...
 
 ```
 searchKey: template.templateFileExecTests
+tags: [private]
 ```
 
 ```Go
@@ -2753,15 +2861,10 @@ var templateFileExecTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="CSS" href="#CSS">type CSS string</a>
 
 ```
 searchKey: template.CSS
-tags: [exported]
 ```
 
 ```Go
@@ -2787,7 +2890,6 @@ Use of this type presents a security risk: the encapsulated content should come 
 
 ```
 searchKey: template.HTML
-tags: [exported]
 ```
 
 ```Go
@@ -2804,7 +2906,6 @@ Use of this type presents a security risk: the encapsulated content should come 
 
 ```
 searchKey: template.HTMLAttr
-tags: [exported]
 ```
 
 ```Go
@@ -2821,7 +2922,6 @@ Use of this type presents a security risk: the encapsulated content should come 
 
 ```
 searchKey: template.JS
-tags: [exported]
 ```
 
 ```Go
@@ -2840,7 +2940,6 @@ Using JS to include valid but untrusted JSON is not safe. A safe alternative is 
 
 ```
 searchKey: template.JSStr
-tags: [exported]
 ```
 
 ```Go
@@ -2864,7 +2963,6 @@ Use of this type presents a security risk: the encapsulated content should come 
 
 ```
 searchKey: template.URL
-tags: [exported]
 ```
 
 ```Go
@@ -2881,7 +2979,6 @@ Use of this type presents a security risk: the encapsulated content should come 
 
 ```
 searchKey: template.Srcset
-tags: [exported]
 ```
 
 ```Go
@@ -2898,6 +2995,7 @@ Use of this type presents a security risk: the encapsulated content should come 
 
 ```
 searchKey: template.contentType
+tags: [private]
 ```
 
 ```Go
@@ -2908,6 +3006,7 @@ type contentType uint8
 
 ```
 searchKey: template.attrType
+tags: [private]
 ```
 
 ```Go
@@ -2920,6 +3019,7 @@ attrType returns a conservative (upper-bound on authority) guess at the type of 
 
 ```
 searchKey: template.stringify
+tags: [private]
 ```
 
 ```Go
@@ -2932,6 +3032,7 @@ stringify converts its arguments to a string and the type of the content. All po
 
 ```
 searchKey: template.context
+tags: [private]
 ```
 
 ```Go
@@ -2954,6 +3055,7 @@ The zero value of type context is the start context for a template that produces
 
 ```
 searchKey: template.nudge
+tags: [private]
 ```
 
 ```Go
@@ -2984,6 +3086,7 @@ consuming any character.
 
 ```
 searchKey: template.join
+tags: [private]
 ```
 
 ```Go
@@ -2996,6 +3099,7 @@ join joins the two contexts of a branch template node. The result is an error co
 
 ```
 searchKey: template.contextAfterText
+tags: [private]
 ```
 
 ```Go
@@ -3008,6 +3112,7 @@ contextAfterText starts in context c, consumes some tokens from the front of s, 
 
 ```
 searchKey: template.tText
+tags: [private]
 ```
 
 ```Go
@@ -3020,6 +3125,7 @@ tText is the context transition function for the text state.
 
 ```
 searchKey: template.tTag
+tags: [private]
 ```
 
 ```Go
@@ -3032,6 +3138,7 @@ tTag is the context transition function for the tag state.
 
 ```
 searchKey: template.tAttrName
+tags: [private]
 ```
 
 ```Go
@@ -3044,6 +3151,7 @@ tAttrName is the context transition function for stateAttrName.
 
 ```
 searchKey: template.tAfterName
+tags: [private]
 ```
 
 ```Go
@@ -3056,6 +3164,7 @@ tAfterName is the context transition function for stateAfterName.
 
 ```
 searchKey: template.tBeforeValue
+tags: [private]
 ```
 
 ```Go
@@ -3068,6 +3177,7 @@ tBeforeValue is the context transition function for stateBeforeValue.
 
 ```
 searchKey: template.tHTMLCmt
+tags: [private]
 ```
 
 ```Go
@@ -3080,6 +3190,7 @@ tHTMLCmt is the context transition function for stateHTMLCmt.
 
 ```
 searchKey: template.tSpecialTagEnd
+tags: [private]
 ```
 
 ```Go
@@ -3092,6 +3203,7 @@ tSpecialTagEnd is the context transition function for raw text and RCDATA elemen
 
 ```
 searchKey: template.tAttr
+tags: [private]
 ```
 
 ```Go
@@ -3104,6 +3216,7 @@ tAttr is the context transition function for the attribute state.
 
 ```
 searchKey: template.tURL
+tags: [private]
 ```
 
 ```Go
@@ -3116,6 +3229,7 @@ tURL is the context transition function for the URL state.
 
 ```
 searchKey: template.tJS
+tags: [private]
 ```
 
 ```Go
@@ -3128,6 +3242,7 @@ tJS is the context transition function for the JS state.
 
 ```
 searchKey: template.tJSDelimited
+tags: [private]
 ```
 
 ```Go
@@ -3140,6 +3255,7 @@ tJSDelimited is the context transition function for the JS string and regexp sta
 
 ```
 searchKey: template.tBlockCmt
+tags: [private]
 ```
 
 ```Go
@@ -3152,6 +3268,7 @@ tBlockCmt is the context transition function for /*comment*/ states.
 
 ```
 searchKey: template.tLineCmt
+tags: [private]
 ```
 
 ```Go
@@ -3164,6 +3281,7 @@ tLineCmt is the context transition function for //comment states.
 
 ```
 searchKey: template.tCSS
+tags: [private]
 ```
 
 ```Go
@@ -3176,6 +3294,7 @@ tCSS is the context transition function for the CSS state.
 
 ```
 searchKey: template.tCSSStr
+tags: [private]
 ```
 
 ```Go
@@ -3188,6 +3307,7 @@ tCSSStr is the context transition function for the CSS string and URL states.
 
 ```
 searchKey: template.tError
+tags: [private]
 ```
 
 ```Go
@@ -3200,6 +3320,7 @@ tError is the context transition function for the error state.
 
 ```
 searchKey: template.context.String
+tags: [private]
 ```
 
 ```Go
@@ -3210,6 +3331,7 @@ func (c context) String() string
 
 ```
 searchKey: template.context.eq
+tags: [private]
 ```
 
 ```Go
@@ -3222,6 +3344,7 @@ eq reports whether two contexts are equal.
 
 ```
 searchKey: template.context.mangle
+tags: [private]
 ```
 
 ```Go
@@ -3234,6 +3357,7 @@ mangle produces an identifier that includes a suffix that distinguishes it from 
 
 ```
 searchKey: template.state
+tags: [private]
 ```
 
 ```Go
@@ -3254,6 +3378,7 @@ is a single token in HTML's grammar but in a template spans several nodes.
 
 ```
 searchKey: template.state.String
+tags: [private]
 ```
 
 ```Go
@@ -3264,6 +3389,7 @@ func (i state) String() string
 
 ```
 searchKey: template.delim
+tags: [private]
 ```
 
 ```Go
@@ -3276,6 +3402,7 @@ delim is the delimiter that will end the current HTML attribute.
 
 ```
 searchKey: template.delim.String
+tags: [private]
 ```
 
 ```Go
@@ -3286,6 +3413,7 @@ func (i delim) String() string
 
 ```
 searchKey: template.urlPart
+tags: [private]
 ```
 
 ```Go
@@ -3298,6 +3426,7 @@ urlPart identifies a part in an RFC 3986 hierarchical URL to allow different enc
 
 ```
 searchKey: template.urlPart.String
+tags: [private]
 ```
 
 ```Go
@@ -3308,6 +3437,7 @@ func (i urlPart) String() string
 
 ```
 searchKey: template.jsCtx
+tags: [private]
 ```
 
 ```Go
@@ -3320,6 +3450,7 @@ jsCtx determines whether a '/' starts a regular expression literal or a division
 
 ```
 searchKey: template.nextJSCtx
+tags: [private]
 ```
 
 ```Go
@@ -3336,6 +3467,7 @@ This fails on some valid but nonsensical JavaScript programs like "x = ++/foo/i"
 
 ```
 searchKey: template.jsCtx.String
+tags: [private]
 ```
 
 ```Go
@@ -3346,6 +3478,7 @@ func (i jsCtx) String() string
 
 ```
 searchKey: template.element
+tags: [private]
 ```
 
 ```Go
@@ -3358,6 +3491,7 @@ element identifies the HTML element when inside a start tag or special body. Cer
 
 ```
 searchKey: template.eatTagName
+tags: [private]
 ```
 
 ```Go
@@ -3370,6 +3504,7 @@ eatTagName returns the largest j such that s[i:j] is a tag name and the tag type
 
 ```
 searchKey: template.element.String
+tags: [private]
 ```
 
 ```Go
@@ -3380,6 +3515,7 @@ func (i element) String() string
 
 ```
 searchKey: template.attr
+tags: [private]
 ```
 
 ```Go
@@ -3392,6 +3528,7 @@ attr identifies the current HTML attribute when inside the attribute, that is, s
 
 ```
 searchKey: template.attr.String
+tags: [private]
 ```
 
 ```Go
@@ -3402,7 +3539,6 @@ func (i attr) String() string
 
 ```
 searchKey: template.Error
-tags: [exported]
 ```
 
 ```Go
@@ -3427,6 +3563,7 @@ Error describes a problem encountered during template Escaping.
 
 ```
 searchKey: template.errorf
+tags: [private]
 ```
 
 ```Go
@@ -3439,6 +3576,7 @@ errorf creates an error given a format string f and args. The template Name stil
 
 ```
 searchKey: template.eatAttrName
+tags: [private]
 ```
 
 ```Go
@@ -3451,7 +3589,6 @@ eatAttrName returns the largest j such that s[i:j] is an attribute name. It retu
 
 ```
 searchKey: template.Error.Error
-tags: [exported]
 ```
 
 ```Go
@@ -3462,7 +3599,6 @@ func (e *Error) Error() string
 
 ```
 searchKey: template.ErrorCode
-tags: [exported]
 ```
 
 ```Go
@@ -3475,6 +3611,7 @@ ErrorCode is a code for a kind of error.
 
 ```
 searchKey: template.escaper
+tags: [private]
 ```
 
 ```Go
@@ -3504,6 +3641,7 @@ escaper collects type inferences about templates and changes needed to make temp
 
 ```
 searchKey: template.makeEscaper
+tags: [private]
 ```
 
 ```Go
@@ -3516,6 +3654,7 @@ makeEscaper creates a blank escaper for the given set.
 
 ```
 searchKey: template.escaper.escape
+tags: [private]
 ```
 
 ```Go
@@ -3528,6 +3667,7 @@ escape escapes a template node.
 
 ```
 searchKey: template.escaper.escapeAction
+tags: [private]
 ```
 
 ```Go
@@ -3540,6 +3680,7 @@ escapeAction escapes an action template node.
 
 ```
 searchKey: template.escaper.escapeBranch
+tags: [private]
 ```
 
 ```Go
@@ -3552,6 +3693,7 @@ escapeBranch escapes a branch template node: "if", "range" and "with".
 
 ```
 searchKey: template.escaper.escapeList
+tags: [private]
 ```
 
 ```Go
@@ -3564,6 +3706,7 @@ escapeList escapes a list template node.
 
 ```
 searchKey: template.escaper.escapeListConditionally
+tags: [private]
 ```
 
 ```Go
@@ -3576,6 +3719,7 @@ escapeListConditionally escapes a list node but only preserves edits and inferen
 
 ```
 searchKey: template.escaper.escapeTemplate
+tags: [private]
 ```
 
 ```Go
@@ -3588,6 +3732,7 @@ escapeTemplate escapes a {{template}} call node.
 
 ```
 searchKey: template.escaper.escapeTree
+tags: [private]
 ```
 
 ```Go
@@ -3600,6 +3745,7 @@ escapeTree escapes the named template starting in the given context as necessary
 
 ```
 searchKey: template.escaper.computeOutCtx
+tags: [private]
 ```
 
 ```Go
@@ -3612,6 +3758,7 @@ computeOutCtx takes a template and its start context and computes the output con
 
 ```
 searchKey: template.escaper.escapeTemplateBody
+tags: [private]
 ```
 
 ```Go
@@ -3624,6 +3771,7 @@ escapeTemplateBody escapes the given template assuming the given output context,
 
 ```
 searchKey: template.escaper.escapeText
+tags: [private]
 ```
 
 ```Go
@@ -3636,6 +3784,7 @@ escapeText escapes a text template node.
 
 ```
 searchKey: template.escaper.editActionNode
+tags: [private]
 ```
 
 ```Go
@@ -3648,6 +3797,7 @@ editActionNode records a change to an action pipeline for later commit.
 
 ```
 searchKey: template.escaper.editTemplateNode
+tags: [private]
 ```
 
 ```Go
@@ -3660,6 +3810,7 @@ editTemplateNode records a change to a {{template}} callee for later commit.
 
 ```
 searchKey: template.escaper.editTextNode
+tags: [private]
 ```
 
 ```Go
@@ -3672,6 +3823,7 @@ editTextNode records a change to a text node for later commit.
 
 ```
 searchKey: template.escaper.commit
+tags: [private]
 ```
 
 ```Go
@@ -3684,6 +3836,7 @@ commit applies changes to actions and template calls needed to contextually auto
 
 ```
 searchKey: template.escaper.template
+tags: [private]
 ```
 
 ```Go
@@ -3696,6 +3849,7 @@ template returns the named template given a mangled template name.
 
 ```
 searchKey: template.escaper.arbitraryTemplate
+tags: [private]
 ```
 
 ```Go
@@ -3708,7 +3862,6 @@ arbitraryTemplate returns an arbitrary template from the name space associated w
 
 ```
 searchKey: template.Template
-tags: [exported]
 ```
 
 ```Go
@@ -3731,7 +3884,6 @@ Template is a specialized Template from "text/template" that produces a safe HTM
 
 ```
 searchKey: template.New
-tags: [exported]
 ```
 
 ```Go
@@ -3744,7 +3896,6 @@ New allocates a new HTML template with the given name.
 
 ```
 searchKey: template.Must
-tags: [exported]
 ```
 
 ```Go
@@ -3761,7 +3912,6 @@ var t = template.Must(template.New("name").Parse("html"))
 
 ```
 searchKey: template.ParseFiles
-tags: [exported]
 ```
 
 ```Go
@@ -3776,6 +3926,7 @@ When parsing multiple files with the same name in different directories, the las
 
 ```
 searchKey: template.parseFiles
+tags: [private]
 ```
 
 ```Go
@@ -3788,7 +3939,6 @@ parseFiles is the helper for the method and function. If the argument template i
 
 ```
 searchKey: template.ParseGlob
-tags: [exported]
 ```
 
 ```Go
@@ -3803,6 +3953,7 @@ When parsing multiple files with the same name in different directories, the las
 
 ```
 searchKey: template.parseGlob
+tags: [private]
 ```
 
 ```Go
@@ -3815,7 +3966,6 @@ parseGlob is the implementation of the function and method ParseGlob.
 
 ```
 searchKey: template.ParseFS
-tags: [exported]
 ```
 
 ```Go
@@ -3828,6 +3978,7 @@ ParseFS is like ParseFiles or ParseGlob but reads from the file system fs instea
 
 ```
 searchKey: template.parseFS
+tags: [private]
 ```
 
 ```Go
@@ -3838,7 +3989,6 @@ func parseFS(t *Template, fsys fs.FS, patterns []string) (*Template, error)
 
 ```
 searchKey: template.Template.Templates
-tags: [exported]
 ```
 
 ```Go
@@ -3851,7 +4001,6 @@ Templates returns a slice of the templates associated with t, including t itself
 
 ```
 searchKey: template.Template.Option
-tags: [exported]
 ```
 
 ```Go
@@ -3879,6 +4028,7 @@ missingkey: Control the behavior during execution if a map is indexed with a key
 
 ```
 searchKey: template.Template.checkCanParse
+tags: [private]
 ```
 
 ```Go
@@ -3891,6 +4041,7 @@ checkCanParse checks whether it is OK to parse templates. If not, it returns an 
 
 ```
 searchKey: template.Template.escape
+tags: [private]
 ```
 
 ```Go
@@ -3903,7 +4054,6 @@ escape escapes all associated templates.
 
 ```
 searchKey: template.Template.Execute
-tags: [exported]
 ```
 
 ```Go
@@ -3916,7 +4066,6 @@ Execute applies a parsed template to the specified data object, writing the outp
 
 ```
 searchKey: template.Template.ExecuteTemplate
-tags: [exported]
 ```
 
 ```Go
@@ -3929,6 +4078,7 @@ ExecuteTemplate applies the template associated with t that has the given name t
 
 ```
 searchKey: template.Template.lookupAndEscapeTemplate
+tags: [private]
 ```
 
 ```Go
@@ -3941,7 +4091,6 @@ lookupAndEscapeTemplate guarantees that the template with the given name is esca
 
 ```
 searchKey: template.Template.DefinedTemplates
-tags: [exported]
 ```
 
 ```Go
@@ -3954,7 +4103,6 @@ DefinedTemplates returns a string listing the defined templates, prefixed by the
 
 ```
 searchKey: template.Template.Parse
-tags: [exported]
 ```
 
 ```Go
@@ -3969,7 +4117,6 @@ Templates can be redefined in successive calls to Parse, before the first use of
 
 ```
 searchKey: template.Template.AddParseTree
-tags: [exported]
 ```
 
 ```Go
@@ -3984,7 +4131,6 @@ It returns an error if t or any associated template has already been executed.
 
 ```
 searchKey: template.Template.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -3999,7 +4145,6 @@ It returns an error if t has already been executed.
 
 ```
 searchKey: template.Template.New
-tags: [exported]
 ```
 
 ```Go
@@ -4014,6 +4159,7 @@ If a template with the given name already exists, the new HTML template will rep
 
 ```
 searchKey: template.Template.new
+tags: [private]
 ```
 
 ```Go
@@ -4026,7 +4172,6 @@ new is the implementation of New, without the lock.
 
 ```
 searchKey: template.Template.Name
-tags: [exported]
 ```
 
 ```Go
@@ -4039,7 +4184,6 @@ Name returns the name of the template.
 
 ```
 searchKey: template.Template.Funcs
-tags: [exported]
 ```
 
 ```Go
@@ -4052,7 +4196,6 @@ Funcs adds the elements of the argument map to the template's function map. It m
 
 ```
 searchKey: template.Template.Delims
-tags: [exported]
 ```
 
 ```Go
@@ -4065,7 +4208,6 @@ Delims sets the action delimiters to the specified strings, to be used in subseq
 
 ```
 searchKey: template.Template.Lookup
-tags: [exported]
 ```
 
 ```Go
@@ -4078,7 +4220,6 @@ Lookup returns the template with the given name that is associated with t, or ni
 
 ```
 searchKey: template.Template.ParseFiles
-tags: [exported]
 ```
 
 ```Go
@@ -4095,7 +4236,6 @@ ParseFiles returns an error if t or any associated template has already been exe
 
 ```
 searchKey: template.Template.ParseGlob
-tags: [exported]
 ```
 
 ```Go
@@ -4112,7 +4252,6 @@ ParseGlob returns an error if t or any associated template has already been exec
 
 ```
 searchKey: template.Template.ParseFS
-tags: [exported]
 ```
 
 ```Go
@@ -4125,6 +4264,7 @@ ParseFS is like ParseFiles or ParseGlob but reads from the file system fs instea
 
 ```
 searchKey: template.nameSpace
+tags: [private]
 ```
 
 ```Go
@@ -4142,7 +4282,6 @@ nameSpace is the data structure shared by all templates in an association.
 
 ```
 searchKey: template.FuncMap
-tags: [exported]
 ```
 
 ```Go
@@ -4155,6 +4294,7 @@ FuncMap is the type of the map defining the mapping from names to functions. Eac
 
 ```
 searchKey: template.myStringer
+tags: [private]
 ```
 
 ```Go
@@ -4169,6 +4309,7 @@ Test that we print using the String method. Was issue 3073.
 
 ```
 searchKey: template.myStringer.String
+tags: [private]
 ```
 
 ```Go
@@ -4179,6 +4320,7 @@ func (s *myStringer) String() string
 
 ```
 searchKey: template.errorer
+tags: [private]
 ```
 
 ```Go
@@ -4191,6 +4333,7 @@ type errorer struct {
 
 ```
 searchKey: template.errorer.Error
+tags: [private]
 ```
 
 ```Go
@@ -4201,6 +4344,7 @@ func (s *errorer) Error() string
 
 ```
 searchKey: template.badMarshaler
+tags: [private]
 ```
 
 ```Go
@@ -4211,6 +4355,7 @@ type badMarshaler struct{}
 
 ```
 searchKey: template.badMarshaler.MarshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -4221,6 +4366,7 @@ func (x *badMarshaler) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: template.goodMarshaler
+tags: [private]
 ```
 
 ```Go
@@ -4231,6 +4377,7 @@ type goodMarshaler struct{}
 
 ```
 searchKey: template.goodMarshaler.MarshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -4241,6 +4388,7 @@ func (x *goodMarshaler) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: template.Issue7379
+tags: [private]
 ```
 
 ```Go
@@ -4251,6 +4399,7 @@ type Issue7379 int
 
 ```
 searchKey: template.Issue7379.SomeMethod
+tags: [private]
 ```
 
 ```Go
@@ -4261,6 +4410,7 @@ func (Issue7379) SomeMethod(x int) string
 
 ```
 searchKey: template.T
+tags: [private]
 ```
 
 ```Go
@@ -4339,6 +4489,7 @@ T has lots of interesting pieces to use to test execution.
 
 ```
 searchKey: template.T.Method0
+tags: [private]
 ```
 
 ```Go
@@ -4351,6 +4502,7 @@ Simple methods with and without arguments.
 
 ```
 searchKey: template.T.Method1
+tags: [private]
 ```
 
 ```Go
@@ -4361,6 +4513,7 @@ func (t *T) Method1(a int) int
 
 ```
 searchKey: template.T.Method2
+tags: [private]
 ```
 
 ```Go
@@ -4371,6 +4524,7 @@ func (t *T) Method2(a uint16, b string) string
 
 ```
 searchKey: template.T.Method3
+tags: [private]
 ```
 
 ```Go
@@ -4381,6 +4535,7 @@ func (t *T) Method3(v interface{}) string
 
 ```
 searchKey: template.T.Copy
+tags: [private]
 ```
 
 ```Go
@@ -4391,6 +4546,7 @@ func (t *T) Copy() *T
 
 ```
 searchKey: template.T.MAdd
+tags: [private]
 ```
 
 ```Go
@@ -4401,6 +4557,7 @@ func (t *T) MAdd(a int, b []int) []int
 
 ```
 searchKey: template.T.MyError
+tags: [private]
 ```
 
 ```Go
@@ -4413,6 +4570,7 @@ MyError returns a value and an error according to its argument.
 
 ```
 searchKey: template.T.GetU
+tags: [private]
 ```
 
 ```Go
@@ -4425,6 +4583,7 @@ A few methods to test chaining.
 
 ```
 searchKey: template.S
+tags: [private]
 ```
 
 ```Go
@@ -4435,6 +4594,7 @@ type S []string
 
 ```
 searchKey: template.S.Method0
+tags: [private]
 ```
 
 ```Go
@@ -4445,6 +4605,7 @@ func (S) Method0() string
 
 ```
 searchKey: template.U
+tags: [private]
 ```
 
 ```Go
@@ -4457,6 +4618,7 @@ type U struct {
 
 ```
 searchKey: template.U.TrueFalse
+tags: [private]
 ```
 
 ```Go
@@ -4467,6 +4629,7 @@ func (u *U) TrueFalse(b bool) string
 
 ```
 searchKey: template.V
+tags: [private]
 ```
 
 ```Go
@@ -4479,6 +4642,7 @@ type V struct {
 
 ```
 searchKey: template.V.String
+tags: [private]
 ```
 
 ```Go
@@ -4489,6 +4653,7 @@ func (v *V) String() string
 
 ```
 searchKey: template.W
+tags: [private]
 ```
 
 ```Go
@@ -4501,6 +4666,7 @@ type W struct {
 
 ```
 searchKey: template.W.Error
+tags: [private]
 ```
 
 ```Go
@@ -4511,6 +4677,7 @@ func (w *W) Error() string
 
 ```
 searchKey: template.I
+tags: [private]
 ```
 
 ```Go
@@ -4525,6 +4692,7 @@ A non-empty interface.
 
 ```
 searchKey: template.execTest
+tags: [private]
 ```
 
 ```Go
@@ -4541,6 +4709,7 @@ type execTest struct {
 
 ```
 searchKey: template.Tree
+tags: [private]
 ```
 
 ```Go
@@ -4554,6 +4723,7 @@ type Tree struct {
 
 ```
 searchKey: template.cmpTest
+tags: [private]
 ```
 
 ```Go
@@ -4568,6 +4738,7 @@ type cmpTest struct {
 
 ```
 searchKey: template.ErrorWriter
+tags: [private]
 ```
 
 ```Go
@@ -4578,6 +4749,7 @@ type ErrorWriter int
 
 ```
 searchKey: template.ErrorWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -4588,6 +4760,7 @@ func (e ErrorWriter) Write(p []byte) (int, error)
 
 ```
 searchKey: template.recursiveInvoker
+tags: [private]
 ```
 
 ```Go
@@ -4603,6 +4776,7 @@ recursiveInvoker is for TestRecursiveExecuteViaMethod.
 
 ```
 searchKey: template.recursiveInvoker.Recur
+tags: [private]
 ```
 
 ```Go
@@ -4611,14 +4785,11 @@ func (r *recursiveInvoker) Recur() (string, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="indirect" href="#indirect">func indirect(a interface{}) interface{}</a>
 
 ```
 searchKey: template.indirect
+tags: [private]
 ```
 
 ```Go
@@ -4631,6 +4802,7 @@ indirect returns the value, after dereferencing as many times as necessary to re
 
 ```
 searchKey: template.indirectToStringerOrError
+tags: [private]
 ```
 
 ```Go
@@ -4643,6 +4815,7 @@ indirectToStringerOrError returns the value, after dereferencing as many times a
 
 ```
 searchKey: template.isComment
+tags: [private]
 ```
 
 ```Go
@@ -4655,6 +4828,7 @@ isComment is true for any state that contains content meant for template authors
 
 ```
 searchKey: template.isInTag
+tags: [private]
 ```
 
 ```Go
@@ -4667,6 +4841,7 @@ isInTag return whether s occurs solely inside an HTML tag.
 
 ```
 searchKey: template.endsWithCSSKeyword
+tags: [private]
 ```
 
 ```Go
@@ -4679,6 +4854,7 @@ endsWithCSSKeyword reports whether b ends with an ident that case-insensitively 
 
 ```
 searchKey: template.isCSSNmchar
+tags: [private]
 ```
 
 ```Go
@@ -4691,6 +4867,7 @@ isCSSNmchar reports whether rune is allowed anywhere in a CSS identifier.
 
 ```
 searchKey: template.decodeCSS
+tags: [private]
 ```
 
 ```Go
@@ -4703,6 +4880,7 @@ decodeCSS decodes CSS3 escapes given a sequence of stringchars. If there is no c
 
 ```
 searchKey: template.isHex
+tags: [private]
 ```
 
 ```Go
@@ -4715,6 +4893,7 @@ isHex reports whether the given character is a hex digit.
 
 ```
 searchKey: template.hexDecode
+tags: [private]
 ```
 
 ```Go
@@ -4727,6 +4906,7 @@ hexDecode decodes a short hex digit sequence: "10" -> 16.
 
 ```
 searchKey: template.skipCSSSpace
+tags: [private]
 ```
 
 ```Go
@@ -4739,6 +4919,7 @@ skipCSSSpace returns a suffix of c, skipping over a single space.
 
 ```
 searchKey: template.isCSSSpace
+tags: [private]
 ```
 
 ```Go
@@ -4751,6 +4932,7 @@ isCSSSpace reports whether b is a CSS space char as defined in wc.
 
 ```
 searchKey: template.cssEscaper
+tags: [private]
 ```
 
 ```Go
@@ -4763,6 +4945,7 @@ cssEscaper escapes HTML and CSS special characters using \<hex>+ escapes.
 
 ```
 searchKey: template.cssValueFilter
+tags: [private]
 ```
 
 ```Go
@@ -4775,6 +4958,7 @@ cssValueFilter allows innocuous CSS values in the output including CSS quantitie
 
 ```
 searchKey: template.escapeTemplate
+tags: [private]
 ```
 
 ```Go
@@ -4787,6 +4971,7 @@ escapeTemplate rewrites the named template, which must be associated with t, to 
 
 ```
 searchKey: template.evalArgs
+tags: [private]
 ```
 
 ```Go
@@ -4799,6 +4984,7 @@ evalArgs formats the list of arguments into a string. It is equivalent to fmt.Sp
 
 ```
 searchKey: template.ensurePipelineContains
+tags: [private]
 ```
 
 ```Go
@@ -4811,6 +4997,7 @@ ensurePipelineContains ensures that the pipeline ends with the commands with the
 
 ```
 searchKey: template.escFnsEq
+tags: [private]
 ```
 
 ```Go
@@ -4823,6 +5010,7 @@ escFnsEq reports whether the two escaping functions are equivalent.
 
 ```
 searchKey: template.normalizeEscFn
+tags: [private]
 ```
 
 ```Go
@@ -4835,6 +5023,7 @@ normalizeEscFn(a) is equal to normalizeEscFn(b) for any pair of names of escaper
 
 ```
 searchKey: template.appendCmd
+tags: [private]
 ```
 
 ```Go
@@ -4847,6 +5036,7 @@ appendCmd appends the given command to the end of the command pipeline unless it
 
 ```
 searchKey: template.newIdentCmd
+tags: [private]
 ```
 
 ```Go
@@ -4859,7 +5049,6 @@ newIdentCmd produces a command containing a single identifier node.
 
 ```
 searchKey: template.HTMLEscape
-tags: [exported]
 ```
 
 ```Go
@@ -4872,7 +5061,6 @@ HTMLEscape writes to w the escaped HTML equivalent of the plain text data b.
 
 ```
 searchKey: template.HTMLEscapeString
-tags: [exported]
 ```
 
 ```Go
@@ -4885,7 +5073,6 @@ HTMLEscapeString returns the escaped HTML equivalent of the plain text data s.
 
 ```
 searchKey: template.HTMLEscaper
-tags: [exported]
 ```
 
 ```Go
@@ -4898,7 +5085,6 @@ HTMLEscaper returns the escaped HTML equivalent of the textual representation of
 
 ```
 searchKey: template.JSEscape
-tags: [exported]
 ```
 
 ```Go
@@ -4911,7 +5097,6 @@ JSEscape writes to w the escaped JavaScript equivalent of the plain text data b.
 
 ```
 searchKey: template.JSEscapeString
-tags: [exported]
 ```
 
 ```Go
@@ -4924,7 +5109,6 @@ JSEscapeString returns the escaped JavaScript equivalent of the plain text data 
 
 ```
 searchKey: template.JSEscaper
-tags: [exported]
 ```
 
 ```Go
@@ -4937,7 +5121,6 @@ JSEscaper returns the escaped JavaScript equivalent of the textual representatio
 
 ```
 searchKey: template.URLQueryEscaper
-tags: [exported]
 ```
 
 ```Go
@@ -4950,6 +5133,7 @@ URLQueryEscaper returns the escaped value of the textual representation of its a
 
 ```
 searchKey: template.htmlNospaceEscaper
+tags: [private]
 ```
 
 ```Go
@@ -4962,6 +5146,7 @@ htmlNospaceEscaper escapes for inclusion in unquoted attribute values.
 
 ```
 searchKey: template.attrEscaper
+tags: [private]
 ```
 
 ```Go
@@ -4974,6 +5159,7 @@ attrEscaper escapes for inclusion in quoted attribute values.
 
 ```
 searchKey: template.rcdataEscaper
+tags: [private]
 ```
 
 ```Go
@@ -4986,6 +5172,7 @@ rcdataEscaper escapes for inclusion in an RCDATA element body.
 
 ```
 searchKey: template.htmlEscaper
+tags: [private]
 ```
 
 ```Go
@@ -4998,6 +5185,7 @@ htmlEscaper escapes for inclusion in HTML text.
 
 ```
 searchKey: template.htmlReplacer
+tags: [private]
 ```
 
 ```Go
@@ -5010,6 +5198,7 @@ htmlReplacer returns s with runes replaced according to replacementTable and whe
 
 ```
 searchKey: template.stripTags
+tags: [private]
 ```
 
 ```Go
@@ -5022,6 +5211,7 @@ stripTags takes a snippet of HTML and returns only the text content. For example
 
 ```
 searchKey: template.htmlNameFilter
+tags: [private]
 ```
 
 ```Go
@@ -5034,6 +5224,7 @@ htmlNameFilter accepts valid parts of an HTML attribute or tag name or a known-s
 
 ```
 searchKey: template.commentEscaper
+tags: [private]
 ```
 
 ```Go
@@ -5046,6 +5237,7 @@ commentEscaper returns the empty string regardless of input. Comment content doe
 
 ```
 searchKey: template.indirectToJSONMarshaler
+tags: [private]
 ```
 
 ```Go
@@ -5058,6 +5250,7 @@ indirectToJSONMarshaler returns the value, after dereferencing as many times as 
 
 ```
 searchKey: template.jsValEscaper
+tags: [private]
 ```
 
 ```Go
@@ -5070,6 +5263,7 @@ jsValEscaper escapes its inputs to a JS Expression (section 11.14) that has neit
 
 ```
 searchKey: template.jsStrEscaper
+tags: [private]
 ```
 
 ```Go
@@ -5082,6 +5276,7 @@ jsStrEscaper produces a string that can be included between quotes in JavaScript
 
 ```
 searchKey: template.jsRegexpEscaper
+tags: [private]
 ```
 
 ```Go
@@ -5094,6 +5289,7 @@ jsRegexpEscaper behaves like jsStrEscaper but escapes regular expression special
 
 ```
 searchKey: template.replace
+tags: [private]
 ```
 
 ```Go
@@ -5106,6 +5302,7 @@ replace replaces each rune r of s with replacementTable[r], provided that r < le
 
 ```
 searchKey: template.isJSIdentPart
+tags: [private]
 ```
 
 ```Go
@@ -5118,6 +5315,7 @@ isJSIdentPart reports whether the given rune is a JS identifier part. It does no
 
 ```
 searchKey: template.isJSType
+tags: [private]
 ```
 
 ```Go
@@ -5132,7 +5330,6 @@ It is used to determine whether a script tag with a type attribute is a javascri
 
 ```
 searchKey: template.IsTrue
-tags: [exported]
 ```
 
 ```Go
@@ -5145,6 +5342,7 @@ IsTrue reports whether the value is 'true', in the sense of not the zero of its 
 
 ```
 searchKey: template.readFileOS
+tags: [private]
 ```
 
 ```Go
@@ -5155,6 +5353,7 @@ func readFileOS(file string) (name string, b []byte, err error)
 
 ```
 searchKey: template.readFileFS
+tags: [private]
 ```
 
 ```Go
@@ -5165,6 +5364,7 @@ func readFileFS(fsys fs.FS) func(string) (string, []byte, error)
 
 ```
 searchKey: template.indexTagEnd
+tags: [private]
 ```
 
 ```Go
@@ -5177,6 +5377,7 @@ indexTagEnd finds the index of a special tag end in a case insensitive way, or r
 
 ```
 searchKey: template.asciiAlpha
+tags: [private]
 ```
 
 ```Go
@@ -5189,6 +5390,7 @@ asciiAlpha reports whether c is an ASCII letter.
 
 ```
 searchKey: template.asciiAlphaNum
+tags: [private]
 ```
 
 ```Go
@@ -5201,6 +5403,7 @@ asciiAlphaNum reports whether c is an ASCII letter or digit.
 
 ```
 searchKey: template.eatWhiteSpace
+tags: [private]
 ```
 
 ```Go
@@ -5213,6 +5416,7 @@ eatWhiteSpace returns the largest j such that s[i:j] is white space.
 
 ```
 searchKey: template.urlFilter
+tags: [private]
 ```
 
 ```Go
@@ -5243,6 +5447,7 @@ To allow URLs containing other schemes to bypass this filter, developers must ex
 
 ```
 searchKey: template.isSafeURL
+tags: [private]
 ```
 
 ```Go
@@ -5255,6 +5460,7 @@ isSafeURL is true if s is a relative URL or if URL has a protocol in (http, http
 
 ```
 searchKey: template.urlEscaper
+tags: [private]
 ```
 
 ```Go
@@ -5267,6 +5473,7 @@ urlEscaper produces an output that can be embedded in a URL query. The output ca
 
 ```
 searchKey: template.urlNormalizer
+tags: [private]
 ```
 
 ```Go
@@ -5279,6 +5486,7 @@ urlNormalizer normalizes URL content so it can be embedded in a quote-delimited 
 
 ```
 searchKey: template.urlProcessor
+tags: [private]
 ```
 
 ```Go
@@ -5291,6 +5499,7 @@ urlProcessor normalizes (when norm is true) or escapes its input to produce a va
 
 ```
 searchKey: template.processURLOnto
+tags: [private]
 ```
 
 ```Go
@@ -5303,6 +5512,7 @@ processURLOnto appends a normalized URL corresponding to its input to b and repo
 
 ```
 searchKey: template.srcsetFilterAndEscaper
+tags: [private]
 ```
 
 ```Go
@@ -5315,6 +5525,7 @@ Filters and normalizes srcset values which are comma separated URLs followed by 
 
 ```
 searchKey: template.isHTMLSpace
+tags: [private]
 ```
 
 ```Go
@@ -5327,6 +5538,7 @@ isHTMLSpace is true iff c is a whitespace character per [https://infra.spec.what
 
 ```
 searchKey: template.isHTMLSpaceOrASCIIAlnum
+tags: [private]
 ```
 
 ```Go
@@ -5337,6 +5549,7 @@ func isHTMLSpaceOrASCIIAlnum(c byte) bool
 
 ```
 searchKey: template.filterSrcsetElement
+tags: [private]
 ```
 
 ```Go
@@ -5347,6 +5560,7 @@ func filterSrcsetElement(s string, left int, right int, b *bytes.Buffer)
 
 ```
 searchKey: template.TestAddParseTreeHTML
+tags: [private]
 ```
 
 ```Go
@@ -5357,6 +5571,7 @@ func TestAddParseTreeHTML(t *testing.T)
 
 ```
 searchKey: template.TestClone
+tags: [private]
 ```
 
 ```Go
@@ -5367,6 +5582,7 @@ func TestClone(t *testing.T)
 
 ```
 searchKey: template.TestTemplates
+tags: [private]
 ```
 
 ```Go
@@ -5377,6 +5593,7 @@ func TestTemplates(t *testing.T)
 
 ```
 searchKey: template.TestCloneCrash
+tags: [private]
 ```
 
 ```Go
@@ -5389,6 +5606,7 @@ This used to crash; [https://golang.org/issue/3281](https://golang.org/issue/328
 
 ```
 searchKey: template.TestCloneThenParse
+tags: [private]
 ```
 
 ```Go
@@ -5401,6 +5619,7 @@ Ensure that this guarantee from the docs is upheld: "Further calls to Parse in t
 
 ```
 searchKey: template.TestFuncMapWorksAfterClone
+tags: [private]
 ```
 
 ```Go
@@ -5413,6 +5632,7 @@ func TestFuncMapWorksAfterClone(t *testing.T)
 
 ```
 searchKey: template.TestTemplateCloneExecuteRace
+tags: [private]
 ```
 
 ```Go
@@ -5425,6 +5645,7 @@ func TestTemplateCloneExecuteRace(t *testing.T)
 
 ```
 searchKey: template.TestTemplateCloneLookup
+tags: [private]
 ```
 
 ```Go
@@ -5435,6 +5656,7 @@ func TestTemplateCloneLookup(t *testing.T)
 
 ```
 searchKey: template.TestCloneGrowth
+tags: [private]
 ```
 
 ```Go
@@ -5445,6 +5667,7 @@ func TestCloneGrowth(t *testing.T)
 
 ```
 searchKey: template.TestCloneRedefinedName
+tags: [private]
 ```
 
 ```Go
@@ -5457,6 +5680,7 @@ func TestCloneRedefinedName(t *testing.T)
 
 ```
 searchKey: template.TestClonePipe
+tags: [private]
 ```
 
 ```Go
@@ -5469,6 +5693,7 @@ Issue 24791.
 
 ```
 searchKey: template.TestTypedContent
+tags: [private]
 ```
 
 ```Go
@@ -5479,6 +5704,7 @@ func TestTypedContent(t *testing.T)
 
 ```
 searchKey: template.TestStringer
+tags: [private]
 ```
 
 ```Go
@@ -5489,6 +5715,7 @@ func TestStringer(t *testing.T)
 
 ```
 searchKey: template.TestEscapingNilNonemptyInterfaces
+tags: [private]
 ```
 
 ```Go
@@ -5501,6 +5728,7 @@ func TestEscapingNilNonemptyInterfaces(t *testing.T)
 
 ```
 searchKey: template.TestEndsWithCSSKeyword
+tags: [private]
 ```
 
 ```Go
@@ -5511,6 +5739,7 @@ func TestEndsWithCSSKeyword(t *testing.T)
 
 ```
 searchKey: template.TestIsCSSNmchar
+tags: [private]
 ```
 
 ```Go
@@ -5521,6 +5750,7 @@ func TestIsCSSNmchar(t *testing.T)
 
 ```
 searchKey: template.TestDecodeCSS
+tags: [private]
 ```
 
 ```Go
@@ -5531,6 +5761,7 @@ func TestDecodeCSS(t *testing.T)
 
 ```
 searchKey: template.TestHexDecode
+tags: [private]
 ```
 
 ```Go
@@ -5541,6 +5772,7 @@ func TestHexDecode(t *testing.T)
 
 ```
 searchKey: template.TestSkipCSSSpace
+tags: [private]
 ```
 
 ```Go
@@ -5551,6 +5783,7 @@ func TestSkipCSSSpace(t *testing.T)
 
 ```
 searchKey: template.TestCSSEscaper
+tags: [private]
 ```
 
 ```Go
@@ -5561,6 +5794,7 @@ func TestCSSEscaper(t *testing.T)
 
 ```
 searchKey: template.TestCSSValueFilter
+tags: [private]
 ```
 
 ```Go
@@ -5571,6 +5805,7 @@ func TestCSSValueFilter(t *testing.T)
 
 ```
 searchKey: template.BenchmarkCSSEscaper
+tags: [private]
 ```
 
 ```Go
@@ -5581,6 +5816,7 @@ func BenchmarkCSSEscaper(b *testing.B)
 
 ```
 searchKey: template.BenchmarkCSSEscaperNoSpecials
+tags: [private]
 ```
 
 ```Go
@@ -5591,6 +5827,7 @@ func BenchmarkCSSEscaperNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkDecodeCSS
+tags: [private]
 ```
 
 ```Go
@@ -5601,6 +5838,7 @@ func BenchmarkDecodeCSS(b *testing.B)
 
 ```
 searchKey: template.BenchmarkDecodeCSSNoSpecials
+tags: [private]
 ```
 
 ```Go
@@ -5611,6 +5849,7 @@ func BenchmarkDecodeCSSNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkCSSValueFilter
+tags: [private]
 ```
 
 ```Go
@@ -5621,6 +5860,7 @@ func BenchmarkCSSValueFilter(b *testing.B)
 
 ```
 searchKey: template.BenchmarkCSSValueFilterOk
+tags: [private]
 ```
 
 ```Go
@@ -5631,6 +5871,7 @@ func BenchmarkCSSValueFilterOk(b *testing.B)
 
 ```
 searchKey: template.TestEscape
+tags: [private]
 ```
 
 ```Go
@@ -5641,6 +5882,7 @@ func TestEscape(t *testing.T)
 
 ```
 searchKey: template.TestEscapeMap
+tags: [private]
 ```
 
 ```Go
@@ -5651,6 +5893,7 @@ func TestEscapeMap(t *testing.T)
 
 ```
 searchKey: template.TestEscapeSet
+tags: [private]
 ```
 
 ```Go
@@ -5661,6 +5904,7 @@ func TestEscapeSet(t *testing.T)
 
 ```
 searchKey: template.TestErrors
+tags: [private]
 ```
 
 ```Go
@@ -5671,6 +5915,7 @@ func TestErrors(t *testing.T)
 
 ```
 searchKey: template.TestEscapeText
+tags: [private]
 ```
 
 ```Go
@@ -5681,6 +5926,7 @@ func TestEscapeText(t *testing.T)
 
 ```
 searchKey: template.TestEnsurePipelineContains
+tags: [private]
 ```
 
 ```Go
@@ -5691,6 +5937,7 @@ func TestEnsurePipelineContains(t *testing.T)
 
 ```
 searchKey: template.TestEscapeMalformedPipelines
+tags: [private]
 ```
 
 ```Go
@@ -5701,6 +5948,7 @@ func TestEscapeMalformedPipelines(t *testing.T)
 
 ```
 searchKey: template.TestEscapeErrorsNotIgnorable
+tags: [private]
 ```
 
 ```Go
@@ -5711,6 +5959,7 @@ func TestEscapeErrorsNotIgnorable(t *testing.T)
 
 ```
 searchKey: template.TestEscapeSetErrorsNotIgnorable
+tags: [private]
 ```
 
 ```Go
@@ -5721,6 +5970,7 @@ func TestEscapeSetErrorsNotIgnorable(t *testing.T)
 
 ```
 searchKey: template.TestRedundantFuncs
+tags: [private]
 ```
 
 ```Go
@@ -5731,6 +5981,7 @@ func TestRedundantFuncs(t *testing.T)
 
 ```
 searchKey: template.TestIndirectPrint
+tags: [private]
 ```
 
 ```Go
@@ -5741,6 +5992,7 @@ func TestIndirectPrint(t *testing.T)
 
 ```
 searchKey: template.TestEmptyTemplateHTML
+tags: [private]
 ```
 
 ```Go
@@ -5753,6 +6005,7 @@ This is a test for issue 3272.
 
 ```
 searchKey: template.TestPipeToMethodIsEscaped
+tags: [private]
 ```
 
 ```Go
@@ -5765,6 +6018,7 @@ This is a test for issue 7379: type assertion error caused panic, and then the c
 
 ```
 searchKey: template.TestErrorOnUndefined
+tags: [private]
 ```
 
 ```Go
@@ -5777,6 +6031,7 @@ Unlike text/template, html/template crashed if given an incomplete template, tha
 
 ```
 searchKey: template.TestIdempotentExecute
+tags: [private]
 ```
 
 ```Go
@@ -5789,6 +6044,7 @@ This covers issue #20842.
 
 ```
 searchKey: template.BenchmarkEscapedExecute
+tags: [private]
 ```
 
 ```Go
@@ -5799,6 +6055,7 @@ func BenchmarkEscapedExecute(b *testing.B)
 
 ```
 searchKey: template.TestOrphanedTemplate
+tags: [private]
 ```
 
 ```Go
@@ -5811,6 +6068,7 @@ Covers issue 22780.
 
 ```
 searchKey: template.TestAliasedParseTreeDoesNotOverescape
+tags: [private]
 ```
 
 ```Go
@@ -5823,6 +6081,7 @@ Covers issue 21844.
 
 ```
 searchKey: template.newInt
+tags: [private]
 ```
 
 ```Go
@@ -5835,6 +6094,7 @@ Helpers for creation.
 
 ```
 searchKey: template.newString
+tags: [private]
 ```
 
 ```Go
@@ -5845,6 +6105,7 @@ func newString(s string) *string
 
 ```
 searchKey: template.newIntSlice
+tags: [private]
 ```
 
 ```Go
@@ -5855,6 +6116,7 @@ func newIntSlice(n ...int) *[]int
 
 ```
 searchKey: template.typeOf
+tags: [private]
 ```
 
 ```Go
@@ -5865,6 +6127,7 @@ func typeOf(arg interface{}) string
 
 ```
 searchKey: template.zeroArgs
+tags: [private]
 ```
 
 ```Go
@@ -5875,6 +6138,7 @@ func zeroArgs() string
 
 ```
 searchKey: template.oneArg
+tags: [private]
 ```
 
 ```Go
@@ -5885,6 +6149,7 @@ func oneArg(a string) string
 
 ```
 searchKey: template.twoArgs
+tags: [private]
 ```
 
 ```Go
@@ -5895,6 +6160,7 @@ func twoArgs(a, b string) string
 
 ```
 searchKey: template.dddArg
+tags: [private]
 ```
 
 ```Go
@@ -5905,6 +6171,7 @@ func dddArg(a int, b ...string) string
 
 ```
 searchKey: template.count
+tags: [private]
 ```
 
 ```Go
@@ -5917,6 +6184,7 @@ count returns a channel that will deliver n sequential 1-letter strings starting
 
 ```
 searchKey: template.vfunc
+tags: [private]
 ```
 
 ```Go
@@ -5929,6 +6197,7 @@ vfunc takes a *V and a V
 
 ```
 searchKey: template.valueString
+tags: [private]
 ```
 
 ```Go
@@ -5941,6 +6210,7 @@ valueString takes a string, not a pointer.
 
 ```
 searchKey: template.returnInt
+tags: [private]
 ```
 
 ```Go
@@ -5953,6 +6223,7 @@ returnInt returns an int
 
 ```
 searchKey: template.add
+tags: [private]
 ```
 
 ```Go
@@ -5963,6 +6234,7 @@ func add(args ...int) int
 
 ```
 searchKey: template.echo
+tags: [private]
 ```
 
 ```Go
@@ -5973,6 +6245,7 @@ func echo(arg interface{}) interface{}
 
 ```
 searchKey: template.makemap
+tags: [private]
 ```
 
 ```Go
@@ -5983,6 +6256,7 @@ func makemap(arg ...string) map[string]string
 
 ```
 searchKey: template.stringer
+tags: [private]
 ```
 
 ```Go
@@ -5993,6 +6267,7 @@ func stringer(s fmt.Stringer) string
 
 ```
 searchKey: template.mapOfThree
+tags: [private]
 ```
 
 ```Go
@@ -6003,6 +6278,7 @@ func mapOfThree() interface{}
 
 ```
 searchKey: template.testExecute
+tags: [private]
 ```
 
 ```Go
@@ -6013,6 +6289,7 @@ func testExecute(execTests []execTest, template *Template, t *testing.T)
 
 ```
 searchKey: template.TestExecute
+tags: [private]
 ```
 
 ```Go
@@ -6023,6 +6300,7 @@ func TestExecute(t *testing.T)
 
 ```
 searchKey: template.TestDelims
+tags: [private]
 ```
 
 ```Go
@@ -6033,6 +6311,7 @@ func TestDelims(t *testing.T)
 
 ```
 searchKey: template.TestExecuteError
+tags: [private]
 ```
 
 ```Go
@@ -6045,6 +6324,7 @@ Check that an error from a method flows back to the top.
 
 ```
 searchKey: template.TestExecError
+tags: [private]
 ```
 
 ```Go
@@ -6057,6 +6337,7 @@ Check that an error from a nested template contains all the relevant information
 
 ```
 searchKey: template.TestJSEscaping
+tags: [private]
 ```
 
 ```Go
@@ -6067,6 +6348,7 @@ func TestJSEscaping(t *testing.T)
 
 ```
 searchKey: template.TestTree
+tags: [private]
 ```
 
 ```Go
@@ -6077,6 +6359,7 @@ func TestTree(t *testing.T)
 
 ```
 searchKey: template.TestExecuteOnNewTemplate
+tags: [private]
 ```
 
 ```Go
@@ -6087,6 +6370,7 @@ func TestExecuteOnNewTemplate(t *testing.T)
 
 ```
 searchKey: template.TestMessageForExecuteEmpty
+tags: [private]
 ```
 
 ```Go
@@ -6097,6 +6381,7 @@ func TestMessageForExecuteEmpty(t *testing.T)
 
 ```
 searchKey: template.TestFinalForPrintf
+tags: [private]
 ```
 
 ```Go
@@ -6107,6 +6392,7 @@ func TestFinalForPrintf(t *testing.T)
 
 ```
 searchKey: template.TestComparison
+tags: [private]
 ```
 
 ```Go
@@ -6117,6 +6403,7 @@ func TestComparison(t *testing.T)
 
 ```
 searchKey: template.TestMissingMapKey
+tags: [private]
 ```
 
 ```Go
@@ -6127,6 +6414,7 @@ func TestMissingMapKey(t *testing.T)
 
 ```
 searchKey: template.TestUnterminatedStringError
+tags: [private]
 ```
 
 ```Go
@@ -6139,6 +6427,7 @@ Test that the error message for multiline unterminated string refers to the line
 
 ```
 searchKey: template.TestExecuteGivesExecError
+tags: [private]
 ```
 
 ```Go
@@ -6149,6 +6438,7 @@ func TestExecuteGivesExecError(t *testing.T)
 
 ```
 searchKey: template.funcNameTestFunc
+tags: [private]
 ```
 
 ```Go
@@ -6159,6 +6449,7 @@ func funcNameTestFunc() int
 
 ```
 searchKey: template.TestGoodFuncNames
+tags: [private]
 ```
 
 ```Go
@@ -6169,6 +6460,7 @@ func TestGoodFuncNames(t *testing.T)
 
 ```
 searchKey: template.TestBadFuncNames
+tags: [private]
 ```
 
 ```Go
@@ -6179,6 +6471,7 @@ func TestBadFuncNames(t *testing.T)
 
 ```
 searchKey: template.testBadFuncName
+tags: [private]
 ```
 
 ```Go
@@ -6189,6 +6482,7 @@ func testBadFuncName(name string, t *testing.T)
 
 ```
 searchKey: template.TestBlock
+tags: [private]
 ```
 
 ```Go
@@ -6199,6 +6493,7 @@ func TestBlock(t *testing.T)
 
 ```
 searchKey: template.TestEvalFieldErrors
+tags: [private]
 ```
 
 ```Go
@@ -6209,6 +6504,7 @@ func TestEvalFieldErrors(t *testing.T)
 
 ```
 searchKey: template.TestMaxExecDepth
+tags: [private]
 ```
 
 ```Go
@@ -6219,6 +6515,7 @@ func TestMaxExecDepth(t *testing.T)
 
 ```
 searchKey: template.TestAddrOfIndex
+tags: [private]
 ```
 
 ```Go
@@ -6229,6 +6526,7 @@ func TestAddrOfIndex(t *testing.T)
 
 ```
 searchKey: template.TestInterfaceValues
+tags: [private]
 ```
 
 ```Go
@@ -6239,6 +6537,7 @@ func TestInterfaceValues(t *testing.T)
 
 ```
 searchKey: template.TestExecutePanicDuringCall
+tags: [private]
 ```
 
 ```Go
@@ -6251,6 +6550,7 @@ Check that panics during calls are recovered and returned as errors.
 
 ```
 searchKey: template.TestIssue31810
+tags: [private]
 ```
 
 ```Go
@@ -6263,6 +6563,7 @@ Issue 31810. Check that a parenthesized first argument behaves properly.
 
 ```
 searchKey: template.TestEscapeRace
+tags: [private]
 ```
 
 ```Go
@@ -6273,6 +6574,7 @@ func TestEscapeRace(t *testing.T)
 
 ```
 searchKey: template.TestRecursiveExecute
+tags: [private]
 ```
 
 ```Go
@@ -6283,6 +6585,7 @@ func TestRecursiveExecute(t *testing.T)
 
 ```
 searchKey: template.TestRecursiveExecuteViaMethod
+tags: [private]
 ```
 
 ```Go
@@ -6293,6 +6596,7 @@ func TestRecursiveExecuteViaMethod(t *testing.T)
 
 ```
 searchKey: template.TestTemplateFuncsAfterClone
+tags: [private]
 ```
 
 ```Go
@@ -6305,6 +6609,7 @@ Issue 43295.
 
 ```
 searchKey: template.TestHTMLNospaceEscaper
+tags: [private]
 ```
 
 ```Go
@@ -6315,6 +6620,7 @@ func TestHTMLNospaceEscaper(t *testing.T)
 
 ```
 searchKey: template.TestStripTags
+tags: [private]
 ```
 
 ```Go
@@ -6325,6 +6631,7 @@ func TestStripTags(t *testing.T)
 
 ```
 searchKey: template.BenchmarkHTMLNospaceEscaper
+tags: [private]
 ```
 
 ```Go
@@ -6335,6 +6642,7 @@ func BenchmarkHTMLNospaceEscaper(b *testing.B)
 
 ```
 searchKey: template.BenchmarkHTMLNospaceEscaperNoSpecials
+tags: [private]
 ```
 
 ```Go
@@ -6345,6 +6653,7 @@ func BenchmarkHTMLNospaceEscaperNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkStripTags
+tags: [private]
 ```
 
 ```Go
@@ -6355,6 +6664,7 @@ func BenchmarkStripTags(b *testing.B)
 
 ```
 searchKey: template.BenchmarkStripTagsNoSpecials
+tags: [private]
 ```
 
 ```Go
@@ -6365,6 +6675,7 @@ func BenchmarkStripTagsNoSpecials(b *testing.B)
 
 ```
 searchKey: template.TestNextJsCtx
+tags: [private]
 ```
 
 ```Go
@@ -6375,6 +6686,7 @@ func TestNextJsCtx(t *testing.T)
 
 ```
 searchKey: template.TestJSValEscaper
+tags: [private]
 ```
 
 ```Go
@@ -6385,6 +6697,7 @@ func TestJSValEscaper(t *testing.T)
 
 ```
 searchKey: template.TestJSStrEscaper
+tags: [private]
 ```
 
 ```Go
@@ -6395,6 +6708,7 @@ func TestJSStrEscaper(t *testing.T)
 
 ```
 searchKey: template.TestJSRegexpEscaper
+tags: [private]
 ```
 
 ```Go
@@ -6405,6 +6719,7 @@ func TestJSRegexpEscaper(t *testing.T)
 
 ```
 searchKey: template.TestEscapersOnLower7AndSelectHighCodepoints
+tags: [private]
 ```
 
 ```Go
@@ -6415,6 +6730,7 @@ func TestEscapersOnLower7AndSelectHighCodepoints(t *testing.T)
 
 ```
 searchKey: template.TestIsJsMimeType
+tags: [private]
 ```
 
 ```Go
@@ -6425,6 +6741,7 @@ func TestIsJsMimeType(t *testing.T)
 
 ```
 searchKey: template.BenchmarkJSValEscaperWithNum
+tags: [private]
 ```
 
 ```Go
@@ -6435,6 +6752,7 @@ func BenchmarkJSValEscaperWithNum(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSValEscaperWithStr
+tags: [private]
 ```
 
 ```Go
@@ -6445,6 +6763,7 @@ func BenchmarkJSValEscaperWithStr(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSValEscaperWithStrNoSpecials
+tags: [private]
 ```
 
 ```Go
@@ -6455,6 +6774,7 @@ func BenchmarkJSValEscaperWithStrNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSValEscaperWithObj
+tags: [private]
 ```
 
 ```Go
@@ -6465,6 +6785,7 @@ func BenchmarkJSValEscaperWithObj(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSValEscaperWithObjNoSpecials
+tags: [private]
 ```
 
 ```Go
@@ -6475,6 +6796,7 @@ func BenchmarkJSValEscaperWithObjNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSStrEscaperNoSpecials
+tags: [private]
 ```
 
 ```Go
@@ -6485,6 +6807,7 @@ func BenchmarkJSStrEscaperNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSStrEscaper
+tags: [private]
 ```
 
 ```Go
@@ -6495,6 +6818,7 @@ func BenchmarkJSStrEscaper(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSRegexpEscaperNoSpecials
+tags: [private]
 ```
 
 ```Go
@@ -6505,6 +6829,7 @@ func BenchmarkJSRegexpEscaperNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSRegexpEscaper
+tags: [private]
 ```
 
 ```Go
@@ -6515,6 +6840,7 @@ func BenchmarkJSRegexpEscaper(b *testing.B)
 
 ```
 searchKey: template.TestMultiExecute
+tags: [private]
 ```
 
 ```Go
@@ -6525,6 +6851,7 @@ func TestMultiExecute(t *testing.T)
 
 ```
 searchKey: template.TestParseFiles
+tags: [private]
 ```
 
 ```Go
@@ -6535,6 +6862,7 @@ func TestParseFiles(t *testing.T)
 
 ```
 searchKey: template.TestParseGlob
+tags: [private]
 ```
 
 ```Go
@@ -6545,6 +6873,7 @@ func TestParseGlob(t *testing.T)
 
 ```
 searchKey: template.TestParseFS
+tags: [private]
 ```
 
 ```Go
@@ -6555,6 +6884,7 @@ func TestParseFS(t *testing.T)
 
 ```
 searchKey: template.TestParseFilesWithData
+tags: [private]
 ```
 
 ```Go
@@ -6565,6 +6895,7 @@ func TestParseFilesWithData(t *testing.T)
 
 ```
 searchKey: template.TestParseGlobWithData
+tags: [private]
 ```
 
 ```Go
@@ -6575,6 +6906,7 @@ func TestParseGlobWithData(t *testing.T)
 
 ```
 searchKey: template.TestParseZipFS
+tags: [private]
 ```
 
 ```Go
@@ -6585,6 +6917,7 @@ func TestParseZipFS(t *testing.T)
 
 ```
 searchKey: template.TestAddParseTreeToUnparsedTemplate
+tags: [private]
 ```
 
 ```Go
@@ -6597,6 +6930,7 @@ Issue 7032
 
 ```
 searchKey: template.TestRedefinition
+tags: [private]
 ```
 
 ```Go
@@ -6607,6 +6941,7 @@ func TestRedefinition(t *testing.T)
 
 ```
 searchKey: template.TestEmptyTemplateCloneCrash
+tags: [private]
 ```
 
 ```Go
@@ -6619,6 +6954,7 @@ Issue 10879
 
 ```
 searchKey: template.TestTemplateLookUp
+tags: [private]
 ```
 
 ```Go
@@ -6631,6 +6967,7 @@ Issue 10910, 10926
 
 ```
 searchKey: template.TestParse
+tags: [private]
 ```
 
 ```Go
@@ -6641,6 +6978,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: template.TestEmptyTemplate
+tags: [private]
 ```
 
 ```Go
@@ -6651,6 +6989,7 @@ func TestEmptyTemplate(t *testing.T)
 
 ```
 searchKey: template.TestIssue19294
+tags: [private]
 ```
 
 ```Go
@@ -6663,6 +7002,7 @@ Issue 19249 was a regression in 1.8 caused by the handling of empty templates ad
 
 ```
 searchKey: template.TestFindEndTag
+tags: [private]
 ```
 
 ```Go
@@ -6673,6 +7013,7 @@ func TestFindEndTag(t *testing.T)
 
 ```
 searchKey: template.BenchmarkTemplateSpecialTags
+tags: [private]
 ```
 
 ```Go
@@ -6683,6 +7024,7 @@ func BenchmarkTemplateSpecialTags(b *testing.B)
 
 ```
 searchKey: template.TestURLNormalizer
+tags: [private]
 ```
 
 ```Go
@@ -6693,6 +7035,7 @@ func TestURLNormalizer(t *testing.T)
 
 ```
 searchKey: template.TestURLFilters
+tags: [private]
 ```
 
 ```Go
@@ -6703,6 +7046,7 @@ func TestURLFilters(t *testing.T)
 
 ```
 searchKey: template.TestSrcsetFilter
+tags: [private]
 ```
 
 ```Go
@@ -6713,6 +7057,7 @@ func TestSrcsetFilter(t *testing.T)
 
 ```
 searchKey: template.BenchmarkURLEscaper
+tags: [private]
 ```
 
 ```Go
@@ -6723,6 +7068,7 @@ func BenchmarkURLEscaper(b *testing.B)
 
 ```
 searchKey: template.BenchmarkURLEscaperNoSpecials
+tags: [private]
 ```
 
 ```Go
@@ -6733,6 +7079,7 @@ func BenchmarkURLEscaperNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkURLNormalizer
+tags: [private]
 ```
 
 ```Go
@@ -6743,6 +7090,7 @@ func BenchmarkURLNormalizer(b *testing.B)
 
 ```
 searchKey: template.BenchmarkURLNormalizerNoSpecials
+tags: [private]
 ```
 
 ```Go
@@ -6753,6 +7101,7 @@ func BenchmarkURLNormalizerNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkSrcsetFilter
+tags: [private]
 ```
 
 ```Go
@@ -6763,6 +7112,7 @@ func BenchmarkSrcsetFilter(b *testing.B)
 
 ```
 searchKey: template.BenchmarkSrcsetFilterNoSpecials
+tags: [private]
 ```
 
 ```Go

@@ -16,11 +16,14 @@ These types are defined here to permit the syscall package to reference them.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrInvalid" href="#ErrInvalid">var ErrInvalid</a>
 
 ```
 searchKey: oserror.ErrInvalid
-tags: [exported]
 ```
 
 ```Go
@@ -31,7 +34,6 @@ var ErrInvalid = errors.New("invalid argument")
 
 ```
 searchKey: oserror.ErrPermission
-tags: [exported]
 ```
 
 ```Go
@@ -42,7 +44,6 @@ var ErrPermission = errors.New("permission denied")
 
 ```
 searchKey: oserror.ErrExist
-tags: [exported]
 ```
 
 ```Go
@@ -53,7 +54,6 @@ var ErrExist = errors.New("file already exists")
 
 ```
 searchKey: oserror.ErrNotExist
-tags: [exported]
 ```
 
 ```Go
@@ -64,7 +64,6 @@ var ErrNotExist = errors.New("file does not exist")
 
 ```
 searchKey: oserror.ErrClosed
-tags: [exported]
 ```
 
 ```Go

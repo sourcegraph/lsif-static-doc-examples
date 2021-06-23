@@ -4,7 +4,9 @@
     "identifier": "searcher",
     "newPage": true,
     "searchKey": "internal/search/searcher",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "requestCounter",
                 "newPage": false,
                 "searchKey": "searcher.requestCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "searchHTTPClient",
                 "newPage": false,
                 "searchKey": "searcher.searchHTTPClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,9 +88,7 @@
                 "identifier": "MockSearch",
                 "newPage": false,
                 "searchKey": "searcher.MockSearch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -105,7 +111,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -123,7 +131,9 @@
                 "identifier": "searcherError",
                 "newPage": false,
                 "searchKey": "searcher.searcherError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +151,9 @@
                       "identifier": "searcherError.BadRequest",
                       "newPage": false,
                       "searchKey": "searcher.searcherError.BadRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -161,7 +173,9 @@
                       "identifier": "searcherError.Temporary",
                       "newPage": false,
                       "searchKey": "searcher.searcherError.Temporary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -181,7 +195,9 @@
                       "identifier": "searcherError.Error",
                       "newPage": false,
                       "searchKey": "searcher.searcherError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -207,7 +223,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -225,9 +243,7 @@
                 "identifier": "Search",
                 "newPage": false,
                 "searchKey": "searcher.Search",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +263,9 @@
                 "identifier": "textSearchURL",
                 "newPage": false,
                 "searchKey": "searcher.textSearchURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

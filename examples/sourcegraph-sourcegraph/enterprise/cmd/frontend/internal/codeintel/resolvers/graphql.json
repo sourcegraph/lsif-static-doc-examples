@@ -4,7 +4,9 @@
     "identifier": "graphql",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/codeintel/resolvers/graphql",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "DefaultReferencesPageSize",
                 "newPage": false,
                 "searchKey": "graphql.DefaultReferencesPageSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "DefaultDiagnosticsPageSize",
                 "newPage": false,
                 "searchKey": "graphql.DefaultDiagnosticsPageSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "DefaultUploadPageSize",
                 "newPage": false,
                 "searchKey": "graphql.DefaultUploadPageSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "DefaultIndexPageSize",
                 "newPage": false,
                 "searchKey": "graphql.DefaultIndexPageSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,7 +124,9 @@
                 "identifier": "numRoutines",
                 "newPage": false,
                 "searchKey": "graphql.numRoutines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,7 +146,9 @@
                 "identifier": "numRepositories",
                 "newPage": false,
                 "searchKey": "graphql.numRepositories",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +168,9 @@
                 "identifier": "numCommits",
                 "newPage": false,
                 "searchKey": "graphql.numCommits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -188,7 +190,9 @@
                 "identifier": "numPaths",
                 "newPage": false,
                 "searchKey": "graphql.numPaths",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -211,7 +215,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -229,7 +235,9 @@
                 "identifier": "severities",
                 "newPage": false,
                 "searchKey": "graphql.severities",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -249,9 +257,7 @@
                 "identifier": "ErrIllegalLimit",
                 "newPage": false,
                 "searchKey": "graphql.ErrIllegalLimit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -271,9 +277,7 @@
                 "identifier": "ErrIllegalBounds",
                 "newPage": false,
                 "searchKey": "graphql.ErrIllegalBounds",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -293,7 +297,9 @@
                 "identifier": "errAutoIndexingNotEnabled",
                 "newPage": false,
                 "searchKey": "graphql.errAutoIndexingNotEnabled",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -313,7 +319,9 @@
                 "identifier": "autoIndexingEnabled",
                 "newPage": false,
                 "searchKey": "graphql.autoIndexingEnabled",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -336,7 +344,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -354,9 +364,7 @@
                 "identifier": "DiagnosticResolver",
                 "newPage": false,
                 "searchKey": "graphql.DiagnosticResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -374,9 +382,7 @@
                       "identifier": "DiagnosticResolver.Severity",
                       "newPage": false,
                       "searchKey": "graphql.DiagnosticResolver.Severity",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -396,9 +402,7 @@
                       "identifier": "DiagnosticResolver.Code",
                       "newPage": false,
                       "searchKey": "graphql.DiagnosticResolver.Code",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -418,9 +422,7 @@
                       "identifier": "DiagnosticResolver.Source",
                       "newPage": false,
                       "searchKey": "graphql.DiagnosticResolver.Source",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -440,9 +442,7 @@
                       "identifier": "DiagnosticResolver.Message",
                       "newPage": false,
                       "searchKey": "graphql.DiagnosticResolver.Message",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -462,9 +462,7 @@
                       "identifier": "DiagnosticResolver.Location",
                       "newPage": false,
                       "searchKey": "graphql.DiagnosticResolver.Location",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -487,9 +485,7 @@
                 "identifier": "DiagnosticConnectionResolver",
                 "newPage": false,
                 "searchKey": "graphql.DiagnosticConnectionResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -507,9 +503,7 @@
                       "identifier": "DiagnosticConnectionResolver.Nodes",
                       "newPage": false,
                       "searchKey": "graphql.DiagnosticConnectionResolver.Nodes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -529,9 +523,7 @@
                       "identifier": "DiagnosticConnectionResolver.TotalCount",
                       "newPage": false,
                       "searchKey": "graphql.DiagnosticConnectionResolver.TotalCount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -551,9 +543,7 @@
                       "identifier": "DiagnosticConnectionResolver.PageInfo",
                       "newPage": false,
                       "searchKey": "graphql.DiagnosticConnectionResolver.PageInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -576,7 +566,9 @@
                 "identifier": "executionLogEntryResolver",
                 "newPage": false,
                 "searchKey": "graphql.executionLogEntryResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -594,7 +586,9 @@
                       "identifier": "executionLogEntryResolver.Key",
                       "newPage": false,
                       "searchKey": "graphql.executionLogEntryResolver.Key",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -614,7 +608,9 @@
                       "identifier": "executionLogEntryResolver.Command",
                       "newPage": false,
                       "searchKey": "graphql.executionLogEntryResolver.Command",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -634,7 +630,9 @@
                       "identifier": "executionLogEntryResolver.ExitCode",
                       "newPage": false,
                       "searchKey": "graphql.executionLogEntryResolver.ExitCode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -654,7 +652,9 @@
                       "identifier": "executionLogEntryResolver.StartTime",
                       "newPage": false,
                       "searchKey": "graphql.executionLogEntryResolver.StartTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -674,7 +674,9 @@
                       "identifier": "executionLogEntryResolver.DurationMilliseconds",
                       "newPage": false,
                       "searchKey": "graphql.executionLogEntryResolver.DurationMilliseconds",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -694,7 +696,9 @@
                       "identifier": "executionLogEntryResolver.Out",
                       "newPage": false,
                       "searchKey": "graphql.executionLogEntryResolver.Out",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -717,9 +721,7 @@
                 "identifier": "HoverResolver",
                 "newPage": false,
                 "searchKey": "graphql.HoverResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -737,9 +739,7 @@
                       "identifier": "HoverResolver.Markdown",
                       "newPage": false,
                       "searchKey": "graphql.HoverResolver.Markdown",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -759,9 +759,7 @@
                       "identifier": "HoverResolver.Range",
                       "newPage": false,
                       "searchKey": "graphql.HoverResolver.Range",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -784,9 +782,7 @@
                 "identifier": "IndexResolver",
                 "newPage": false,
                 "searchKey": "graphql.IndexResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -804,9 +800,7 @@
                       "identifier": "IndexResolver.ID",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.ID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -826,9 +820,7 @@
                       "identifier": "IndexResolver.InputCommit",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.InputCommit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -848,9 +840,7 @@
                       "identifier": "IndexResolver.InputRoot",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.InputRoot",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -870,9 +860,7 @@
                       "identifier": "IndexResolver.InputIndexer",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.InputIndexer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -892,9 +880,7 @@
                       "identifier": "IndexResolver.QueuedAt",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.QueuedAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -914,9 +900,7 @@
                       "identifier": "IndexResolver.Failure",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.Failure",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -936,9 +920,7 @@
                       "identifier": "IndexResolver.StartedAt",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.StartedAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -958,9 +940,7 @@
                       "identifier": "IndexResolver.FinishedAt",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.FinishedAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -980,9 +960,7 @@
                       "identifier": "IndexResolver.Steps",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.Steps",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1002,9 +980,7 @@
                       "identifier": "IndexResolver.PlaceInQueue",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.PlaceInQueue",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1024,9 +1000,7 @@
                       "identifier": "IndexResolver.State",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.State",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1046,9 +1020,7 @@
                       "identifier": "IndexResolver.AssociatedUpload",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.AssociatedUpload",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1068,9 +1040,7 @@
                       "identifier": "IndexResolver.ProjectRoot",
                       "newPage": false,
                       "searchKey": "graphql.IndexResolver.ProjectRoot",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1093,9 +1063,7 @@
                 "identifier": "IndexConfigurationResolver",
                 "newPage": false,
                 "searchKey": "graphql.IndexConfigurationResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1113,9 +1081,7 @@
                       "identifier": "IndexConfigurationResolver.Configuration",
                       "newPage": false,
                       "searchKey": "graphql.IndexConfigurationResolver.Configuration",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1138,9 +1104,7 @@
                 "identifier": "IndexConnectionResolver",
                 "newPage": false,
                 "searchKey": "graphql.IndexConnectionResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1158,9 +1122,7 @@
                       "identifier": "IndexConnectionResolver.Nodes",
                       "newPage": false,
                       "searchKey": "graphql.IndexConnectionResolver.Nodes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1180,9 +1142,7 @@
                       "identifier": "IndexConnectionResolver.TotalCount",
                       "newPage": false,
                       "searchKey": "graphql.IndexConnectionResolver.TotalCount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1202,9 +1162,7 @@
                       "identifier": "IndexConnectionResolver.PageInfo",
                       "newPage": false,
                       "searchKey": "graphql.IndexConnectionResolver.PageInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1227,7 +1185,9 @@
                 "identifier": "indexStepsResolver",
                 "newPage": false,
                 "searchKey": "graphql.indexStepsResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1245,7 +1205,9 @@
                       "identifier": "indexStepsResolver.Setup",
                       "newPage": false,
                       "searchKey": "graphql.indexStepsResolver.Setup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1265,7 +1227,9 @@
                       "identifier": "indexStepsResolver.PreIndex",
                       "newPage": false,
                       "searchKey": "graphql.indexStepsResolver.PreIndex",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1285,7 +1249,9 @@
                       "identifier": "indexStepsResolver.Index",
                       "newPage": false,
                       "searchKey": "graphql.indexStepsResolver.Index",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1305,7 +1271,9 @@
                       "identifier": "indexStepsResolver.Upload",
                       "newPage": false,
                       "searchKey": "graphql.indexStepsResolver.Upload",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1325,7 +1293,9 @@
                       "identifier": "indexStepsResolver.Teardown",
                       "newPage": false,
                       "searchKey": "graphql.indexStepsResolver.Teardown",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1345,7 +1315,9 @@
                       "identifier": "indexStepsResolver.findExecutionLogEntry",
                       "newPage": false,
                       "searchKey": "graphql.indexStepsResolver.findExecutionLogEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1365,7 +1337,9 @@
                       "identifier": "indexStepsResolver.executionLogEntryResolversWithPrefix",
                       "newPage": false,
                       "searchKey": "graphql.indexStepsResolver.executionLogEntryResolversWithPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1388,7 +1362,9 @@
                 "identifier": "indexStepResolver",
                 "newPage": false,
                 "searchKey": "graphql.indexStepResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1406,7 +1382,9 @@
                       "identifier": "indexStepResolver.IndexerArgs",
                       "newPage": false,
                       "searchKey": "graphql.indexStepResolver.IndexerArgs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1426,7 +1404,9 @@
                       "identifier": "indexStepResolver.Outfile",
                       "newPage": false,
                       "searchKey": "graphql.indexStepResolver.Outfile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1446,7 +1426,9 @@
                       "identifier": "indexStepResolver.LogEntry",
                       "newPage": false,
                       "searchKey": "graphql.indexStepResolver.LogEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1469,7 +1451,9 @@
                 "identifier": "preIndexStepResolver",
                 "newPage": false,
                 "searchKey": "graphql.preIndexStepResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1487,7 +1471,9 @@
                       "identifier": "preIndexStepResolver.Root",
                       "newPage": false,
                       "searchKey": "graphql.preIndexStepResolver.Root",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1507,7 +1493,9 @@
                       "identifier": "preIndexStepResolver.Image",
                       "newPage": false,
                       "searchKey": "graphql.preIndexStepResolver.Image",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1527,7 +1515,9 @@
                       "identifier": "preIndexStepResolver.Commands",
                       "newPage": false,
                       "searchKey": "graphql.preIndexStepResolver.Commands",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1547,7 +1537,9 @@
                       "identifier": "preIndexStepResolver.LogEntry",
                       "newPage": false,
                       "searchKey": "graphql.preIndexStepResolver.LogEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1570,9 +1562,7 @@
                 "identifier": "LocationConnectionResolver",
                 "newPage": false,
                 "searchKey": "graphql.LocationConnectionResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1590,9 +1580,7 @@
                       "identifier": "LocationConnectionResolver.Nodes",
                       "newPage": false,
                       "searchKey": "graphql.LocationConnectionResolver.Nodes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1612,9 +1600,7 @@
                       "identifier": "LocationConnectionResolver.PageInfo",
                       "newPage": false,
                       "searchKey": "graphql.LocationConnectionResolver.PageInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1637,9 +1623,7 @@
                 "identifier": "CachedLocationResolver",
                 "newPage": false,
                 "searchKey": "graphql.CachedLocationResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1657,9 +1641,7 @@
                       "identifier": "NewCachedLocationResolver",
                       "newPage": false,
                       "searchKey": "graphql.NewCachedLocationResolver",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1679,9 +1661,7 @@
                       "identifier": "CachedLocationResolver.Repository",
                       "newPage": false,
                       "searchKey": "graphql.CachedLocationResolver.Repository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1701,9 +1681,7 @@
                       "identifier": "CachedLocationResolver.Commit",
                       "newPage": false,
                       "searchKey": "graphql.CachedLocationResolver.Commit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1723,9 +1701,7 @@
                       "identifier": "CachedLocationResolver.Path",
                       "newPage": false,
                       "searchKey": "graphql.CachedLocationResolver.Path",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1745,7 +1721,9 @@
                       "identifier": "CachedLocationResolver.cachedRepository",
                       "newPage": false,
                       "searchKey": "graphql.CachedLocationResolver.cachedRepository",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1765,7 +1743,9 @@
                       "identifier": "CachedLocationResolver.cachedCommit",
                       "newPage": false,
                       "searchKey": "graphql.CachedLocationResolver.cachedCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1785,7 +1765,9 @@
                       "identifier": "CachedLocationResolver.cachedPath",
                       "newPage": false,
                       "searchKey": "graphql.CachedLocationResolver.cachedPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1805,7 +1787,9 @@
                       "identifier": "CachedLocationResolver.resolveRepository",
                       "newPage": false,
                       "searchKey": "graphql.CachedLocationResolver.resolveRepository",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1825,7 +1809,9 @@
                       "identifier": "CachedLocationResolver.resolveCommit",
                       "newPage": false,
                       "searchKey": "graphql.CachedLocationResolver.resolveCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1845,7 +1831,9 @@
                       "identifier": "CachedLocationResolver.resolvePath",
                       "newPage": false,
                       "searchKey": "graphql.CachedLocationResolver.resolvePath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1868,7 +1856,9 @@
                 "identifier": "cachedRepositoryResolver",
                 "newPage": false,
                 "searchKey": "graphql.cachedRepositoryResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1888,7 +1878,9 @@
                 "identifier": "cachedCommitResolver",
                 "newPage": false,
                 "searchKey": "graphql.cachedCommitResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1908,9 +1900,7 @@
                 "identifier": "Prefetcher",
                 "newPage": false,
                 "searchKey": "graphql.Prefetcher",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1928,9 +1918,7 @@
                       "identifier": "NewPrefetcher",
                       "newPage": false,
                       "searchKey": "graphql.NewPrefetcher",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1950,9 +1938,7 @@
                       "identifier": "Prefetcher.MarkUpload",
                       "newPage": false,
                       "searchKey": "graphql.Prefetcher.MarkUpload",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1972,9 +1958,7 @@
                       "identifier": "Prefetcher.GetUploadByID",
                       "newPage": false,
                       "searchKey": "graphql.Prefetcher.GetUploadByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1994,9 +1978,7 @@
                       "identifier": "Prefetcher.MarkIndex",
                       "newPage": false,
                       "searchKey": "graphql.Prefetcher.MarkIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2016,9 +1998,7 @@
                       "identifier": "Prefetcher.GetIndexByID",
                       "newPage": false,
                       "searchKey": "graphql.Prefetcher.GetIndexByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2041,9 +2021,7 @@
                 "identifier": "QueryResolver",
                 "newPage": false,
                 "searchKey": "graphql.QueryResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2061,9 +2039,7 @@
                       "identifier": "QueryResolver.ToGitTreeLSIFData",
                       "newPage": false,
                       "searchKey": "graphql.QueryResolver.ToGitTreeLSIFData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2083,9 +2059,7 @@
                       "identifier": "QueryResolver.ToGitBlobLSIFData",
                       "newPage": false,
                       "searchKey": "graphql.QueryResolver.ToGitBlobLSIFData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2105,9 +2079,7 @@
                       "identifier": "QueryResolver.Ranges",
                       "newPage": false,
                       "searchKey": "graphql.QueryResolver.Ranges",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2127,9 +2099,7 @@
                       "identifier": "QueryResolver.Definitions",
                       "newPage": false,
                       "searchKey": "graphql.QueryResolver.Definitions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2149,9 +2119,7 @@
                       "identifier": "QueryResolver.References",
                       "newPage": false,
                       "searchKey": "graphql.QueryResolver.References",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2171,9 +2139,7 @@
                       "identifier": "QueryResolver.Hover",
                       "newPage": false,
                       "searchKey": "graphql.QueryResolver.Hover",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2193,9 +2159,7 @@
                       "identifier": "QueryResolver.Diagnostics",
                       "newPage": false,
                       "searchKey": "graphql.QueryResolver.Diagnostics",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2215,9 +2179,7 @@
                       "identifier": "QueryResolver.DocumentationPage",
                       "newPage": false,
                       "searchKey": "graphql.QueryResolver.DocumentationPage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2240,9 +2202,7 @@
                 "identifier": "DocumentationPageResolver",
                 "newPage": false,
                 "searchKey": "graphql.DocumentationPageResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2260,9 +2220,7 @@
                       "identifier": "DocumentationPageResolver.Tree",
                       "newPage": false,
                       "searchKey": "graphql.DocumentationPageResolver.Tree",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2285,9 +2243,7 @@
                 "identifier": "CodeIntelligenceRangeResolver",
                 "newPage": false,
                 "searchKey": "graphql.CodeIntelligenceRangeResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2305,9 +2261,7 @@
                       "identifier": "CodeIntelligenceRangeResolver.Range",
                       "newPage": false,
                       "searchKey": "graphql.CodeIntelligenceRangeResolver.Range",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2327,9 +2281,7 @@
                       "identifier": "CodeIntelligenceRangeResolver.Definitions",
                       "newPage": false,
                       "searchKey": "graphql.CodeIntelligenceRangeResolver.Definitions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2349,9 +2301,7 @@
                       "identifier": "CodeIntelligenceRangeResolver.References",
                       "newPage": false,
                       "searchKey": "graphql.CodeIntelligenceRangeResolver.References",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2371,9 +2321,7 @@
                       "identifier": "CodeIntelligenceRangeResolver.Hover",
                       "newPage": false,
                       "searchKey": "graphql.CodeIntelligenceRangeResolver.Hover",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2396,9 +2344,7 @@
                 "identifier": "CodeIntelligenceRangeConnectionResolver",
                 "newPage": false,
                 "searchKey": "graphql.CodeIntelligenceRangeConnectionResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2416,9 +2362,7 @@
                       "identifier": "CodeIntelligenceRangeConnectionResolver.Nodes",
                       "newPage": false,
                       "searchKey": "graphql.CodeIntelligenceRangeConnectionResolver.Nodes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2441,9 +2385,7 @@
                 "identifier": "Resolver",
                 "newPage": false,
                 "searchKey": "graphql.Resolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2461,9 +2403,7 @@
                       "identifier": "Resolver.NodeResolvers",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.NodeResolvers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2483,9 +2423,7 @@
                       "identifier": "Resolver.LSIFUploadByID",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.LSIFUploadByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2505,9 +2443,7 @@
                       "identifier": "Resolver.LSIFUploads",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.LSIFUploads",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2527,9 +2463,7 @@
                       "identifier": "Resolver.LSIFUploadsByRepo",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.LSIFUploadsByRepo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2549,9 +2483,7 @@
                       "identifier": "Resolver.DeleteLSIFUpload",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.DeleteLSIFUpload",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2571,9 +2503,7 @@
                       "identifier": "Resolver.LSIFIndexByID",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.LSIFIndexByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2593,9 +2523,7 @@
                       "identifier": "Resolver.LSIFIndexes",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.LSIFIndexes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2615,9 +2543,7 @@
                       "identifier": "Resolver.LSIFIndexesByRepo",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.LSIFIndexesByRepo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2637,9 +2563,7 @@
                       "identifier": "Resolver.DeleteLSIFIndex",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.DeleteLSIFIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2659,9 +2583,7 @@
                       "identifier": "Resolver.IndexConfiguration",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.IndexConfiguration",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2681,9 +2603,7 @@
                       "identifier": "Resolver.UpdateRepositoryIndexConfiguration",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.UpdateRepositoryIndexConfiguration",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2703,9 +2623,7 @@
                       "identifier": "Resolver.CommitGraph",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.CommitGraph",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2725,9 +2643,7 @@
                       "identifier": "Resolver.QueueAutoIndexJobForRepo",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.QueueAutoIndexJobForRepo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2747,9 +2663,7 @@
                       "identifier": "Resolver.GitBlobLSIFData",
                       "newPage": false,
                       "searchKey": "graphql.Resolver.GitBlobLSIFData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2772,9 +2686,7 @@
                 "identifier": "UploadResolver",
                 "newPage": false,
                 "searchKey": "graphql.UploadResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2792,9 +2704,7 @@
                       "identifier": "UploadResolver.ID",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.ID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2814,9 +2724,7 @@
                       "identifier": "UploadResolver.InputCommit",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.InputCommit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2836,9 +2744,7 @@
                       "identifier": "UploadResolver.InputRoot",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.InputRoot",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2858,9 +2764,7 @@
                       "identifier": "UploadResolver.IsLatestForRepo",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.IsLatestForRepo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2880,9 +2784,7 @@
                       "identifier": "UploadResolver.UploadedAt",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.UploadedAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2902,9 +2804,7 @@
                       "identifier": "UploadResolver.Failure",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.Failure",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2924,9 +2824,7 @@
                       "identifier": "UploadResolver.StartedAt",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.StartedAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2946,9 +2844,7 @@
                       "identifier": "UploadResolver.FinishedAt",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.FinishedAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2968,9 +2864,7 @@
                       "identifier": "UploadResolver.InputIndexer",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.InputIndexer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2990,9 +2884,7 @@
                       "identifier": "UploadResolver.PlaceInQueue",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.PlaceInQueue",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3012,9 +2904,7 @@
                       "identifier": "UploadResolver.State",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.State",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3034,9 +2924,7 @@
                       "identifier": "UploadResolver.AssociatedIndex",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.AssociatedIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3056,9 +2944,7 @@
                       "identifier": "UploadResolver.ProjectRoot",
                       "newPage": false,
                       "searchKey": "graphql.UploadResolver.ProjectRoot",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3081,9 +2967,7 @@
                 "identifier": "UploadConnectionResolver",
                 "newPage": false,
                 "searchKey": "graphql.UploadConnectionResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3101,9 +2985,7 @@
                       "identifier": "UploadConnectionResolver.Nodes",
                       "newPage": false,
                       "searchKey": "graphql.UploadConnectionResolver.Nodes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3123,9 +3005,7 @@
                       "identifier": "UploadConnectionResolver.TotalCount",
                       "newPage": false,
                       "searchKey": "graphql.UploadConnectionResolver.TotalCount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3145,9 +3025,7 @@
                       "identifier": "UploadConnectionResolver.PageInfo",
                       "newPage": false,
                       "searchKey": "graphql.UploadConnectionResolver.PageInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3173,7 +3051,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -3191,7 +3071,9 @@
                 "identifier": "encodeCursor",
                 "newPage": false,
                 "searchKey": "graphql.encodeCursor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3211,7 +3093,9 @@
                 "identifier": "decodeCursor",
                 "newPage": false,
                 "searchKey": "graphql.decodeCursor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3231,7 +3115,9 @@
                 "identifier": "encodeIntCursor",
                 "newPage": false,
                 "searchKey": "graphql.encodeIntCursor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3251,7 +3137,9 @@
                 "identifier": "decodeIntCursor",
                 "newPage": false,
                 "searchKey": "graphql.decodeIntCursor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3271,9 +3159,7 @@
                 "identifier": "NewDiagnosticResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewDiagnosticResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3293,7 +3179,9 @@
                 "identifier": "toSeverity",
                 "newPage": false,
                 "searchKey": "graphql.toSeverity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3313,9 +3201,7 @@
                 "identifier": "NewDiagnosticConnectionResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewDiagnosticConnectionResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3335,9 +3221,7 @@
                 "identifier": "NewHoverResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewHoverResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3357,7 +3241,9 @@
                 "identifier": "marshalLSIFUploadGQLID",
                 "newPage": false,
                 "searchKey": "graphql.marshalLSIFUploadGQLID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3377,7 +3263,9 @@
                 "identifier": "unmarshalLSIFUploadGQLID",
                 "newPage": false,
                 "searchKey": "graphql.unmarshalLSIFUploadGQLID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3397,7 +3285,9 @@
                 "identifier": "marshalLSIFIndexGQLID",
                 "newPage": false,
                 "searchKey": "graphql.marshalLSIFIndexGQLID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3417,7 +3307,9 @@
                 "identifier": "unmarshalLSIFIndexGQLID",
                 "newPage": false,
                 "searchKey": "graphql.unmarshalLSIFIndexGQLID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3437,9 +3329,7 @@
                 "identifier": "NewIndexResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewIndexResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3459,9 +3349,7 @@
                 "identifier": "NewIndexConfigurationResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewIndexConfigurationResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3481,9 +3369,7 @@
                 "identifier": "NewIndexConnectionResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewIndexConnectionResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3503,9 +3389,7 @@
                 "identifier": "NewLocationConnectionResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewLocationConnectionResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3525,7 +3409,9 @@
                 "identifier": "resolveLocations",
                 "newPage": false,
                 "searchKey": "graphql.resolveLocations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3545,7 +3431,9 @@
                 "identifier": "resolveLocation",
                 "newPage": false,
                 "searchKey": "graphql.resolveLocation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3565,9 +3453,7 @@
                 "identifier": "NewQueryResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewQueryResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3587,9 +3473,7 @@
                 "identifier": "NewResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3609,7 +3493,9 @@
                 "identifier": "makeGetUploadsOptions",
                 "newPage": false,
                 "searchKey": "graphql.makeGetUploadsOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3629,7 +3515,9 @@
                 "identifier": "makeGetIndexesOptions",
                 "newPage": false,
                 "searchKey": "graphql.makeGetIndexesOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3649,7 +3537,9 @@
                 "identifier": "resolveRepositoryID",
                 "newPage": false,
                 "searchKey": "graphql.resolveRepositoryID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3669,9 +3559,7 @@
                 "identifier": "NewUploadResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewUploadResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3691,9 +3579,7 @@
                 "identifier": "NewUploadConnectionResolver",
                 "newPage": false,
                 "searchKey": "graphql.NewUploadConnectionResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3713,7 +3599,9 @@
                 "identifier": "strPtr",
                 "newPage": false,
                 "searchKey": "graphql.strPtr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3733,7 +3621,9 @@
                 "identifier": "intPtr",
                 "newPage": false,
                 "searchKey": "graphql.intPtr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3753,7 +3643,9 @@
                 "identifier": "boolPtr",
                 "newPage": false,
                 "searchKey": "graphql.boolPtr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3773,7 +3665,9 @@
                 "identifier": "toInt32",
                 "newPage": false,
                 "searchKey": "graphql.toInt32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3793,7 +3687,9 @@
                 "identifier": "derefString",
                 "newPage": false,
                 "searchKey": "graphql.derefString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3813,7 +3709,9 @@
                 "identifier": "derefInt32",
                 "newPage": false,
                 "searchKey": "graphql.derefInt32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3833,7 +3731,9 @@
                 "identifier": "derefBool",
                 "newPage": false,
                 "searchKey": "graphql.derefBool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3853,7 +3753,9 @@
                 "identifier": "convertRange",
                 "newPage": false,
                 "searchKey": "graphql.convertRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3873,7 +3775,9 @@
                 "identifier": "convertPosition",
                 "newPage": false,
                 "searchKey": "graphql.convertPosition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3893,7 +3797,9 @@
                 "identifier": "TestCursor",
                 "newPage": false,
                 "searchKey": "graphql.TestCursor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3913,7 +3819,9 @@
                 "identifier": "TestCursorEmpty",
                 "newPage": false,
                 "searchKey": "graphql.TestCursorEmpty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3933,7 +3841,9 @@
                 "identifier": "TestIntCursor",
                 "newPage": false,
                 "searchKey": "graphql.TestIntCursor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3953,7 +3863,9 @@
                 "identifier": "TestIntCursorEmpty",
                 "newPage": false,
                 "searchKey": "graphql.TestIntCursorEmpty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3973,7 +3885,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "graphql.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3993,7 +3907,9 @@
                 "identifier": "TestUploadID",
                 "newPage": false,
                 "searchKey": "graphql.TestUploadID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4013,7 +3929,9 @@
                 "identifier": "TestUnmarshalUploadIDString",
                 "newPage": false,
                 "searchKey": "graphql.TestUnmarshalUploadIDString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4033,7 +3951,9 @@
                 "identifier": "TestIndexID",
                 "newPage": false,
                 "searchKey": "graphql.TestIndexID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4053,7 +3973,9 @@
                 "identifier": "TestCachedLocationResolver",
                 "newPage": false,
                 "searchKey": "graphql.TestCachedLocationResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4073,7 +3995,9 @@
                 "identifier": "TestCachedLocationResolverUnknownRepository",
                 "newPage": false,
                 "searchKey": "graphql.TestCachedLocationResolverUnknownRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4093,7 +4017,9 @@
                 "identifier": "TestCachedLocationResolverUnknownCommit",
                 "newPage": false,
                 "searchKey": "graphql.TestCachedLocationResolverUnknownCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4113,7 +4039,9 @@
                 "identifier": "TestResolveLocations",
                 "newPage": false,
                 "searchKey": "graphql.TestResolveLocations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4133,7 +4061,9 @@
                 "identifier": "TestPrefetcherUploads",
                 "newPage": false,
                 "searchKey": "graphql.TestPrefetcherUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4153,7 +4083,9 @@
                 "identifier": "TestPrefetcherIndexes",
                 "newPage": false,
                 "searchKey": "graphql.TestPrefetcherIndexes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4173,7 +4105,9 @@
                 "identifier": "TestRanges",
                 "newPage": false,
                 "searchKey": "graphql.TestRanges",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4193,7 +4127,9 @@
                 "identifier": "TestDefinitions",
                 "newPage": false,
                 "searchKey": "graphql.TestDefinitions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4213,7 +4149,9 @@
                 "identifier": "TestReferences",
                 "newPage": false,
                 "searchKey": "graphql.TestReferences",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4233,7 +4171,9 @@
                 "identifier": "TestReferencesDefaultLimit",
                 "newPage": false,
                 "searchKey": "graphql.TestReferencesDefaultLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4253,7 +4193,9 @@
                 "identifier": "TestReferencesDefaultIllegalLimit",
                 "newPage": false,
                 "searchKey": "graphql.TestReferencesDefaultIllegalLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4273,7 +4215,9 @@
                 "identifier": "TestHover",
                 "newPage": false,
                 "searchKey": "graphql.TestHover",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4293,7 +4237,9 @@
                 "identifier": "TestDiagnostics",
                 "newPage": false,
                 "searchKey": "graphql.TestDiagnostics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4313,7 +4259,9 @@
                 "identifier": "TestDiagnosticsDefaultLimit",
                 "newPage": false,
                 "searchKey": "graphql.TestDiagnosticsDefaultLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4333,7 +4281,9 @@
                 "identifier": "TestDiagnosticsDefaultIllegalLimit",
                 "newPage": false,
                 "searchKey": "graphql.TestDiagnosticsDefaultIllegalLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4348,12 +4298,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/resolvers/graphql#init",
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/resolvers/graphql#init.resolver_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.resolver_test.go",
                 "newPage": false,
                 "searchKey": "graphql.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4373,7 +4325,9 @@
                 "identifier": "TestDeleteLSIFUpload",
                 "newPage": false,
                 "searchKey": "graphql.TestDeleteLSIFUpload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4393,7 +4347,9 @@
                 "identifier": "TestDeleteLSIFUploadUnauthenticated",
                 "newPage": false,
                 "searchKey": "graphql.TestDeleteLSIFUploadUnauthenticated",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4413,7 +4369,9 @@
                 "identifier": "TestDeleteLSIFIndex",
                 "newPage": false,
                 "searchKey": "graphql.TestDeleteLSIFIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4433,7 +4391,9 @@
                 "identifier": "TestDeleteLSIFIndexUnauthenticated",
                 "newPage": false,
                 "searchKey": "graphql.TestDeleteLSIFIndexUnauthenticated",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4453,7 +4413,9 @@
                 "identifier": "TestMakeGetUploadsOptions",
                 "newPage": false,
                 "searchKey": "graphql.TestMakeGetUploadsOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4473,7 +4435,9 @@
                 "identifier": "TestMakeGetUploadsOptionsDefaults",
                 "newPage": false,
                 "searchKey": "graphql.TestMakeGetUploadsOptionsDefaults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4493,7 +4457,9 @@
                 "identifier": "TestMakeGetIndexesOptions",
                 "newPage": false,
                 "searchKey": "graphql.TestMakeGetIndexesOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4513,7 +4479,9 @@
                 "identifier": "TestMakeGetIndexesOptionsDefaults",
                 "newPage": false,
                 "searchKey": "graphql.TestMakeGetIndexesOptionsDefaults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4533,7 +4501,9 @@
                 "identifier": "TestDerefString",
                 "newPage": false,
                 "searchKey": "graphql.TestDerefString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4553,7 +4523,9 @@
                 "identifier": "TestDerefInt32",
                 "newPage": false,
                 "searchKey": "graphql.TestDerefInt32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4573,7 +4545,9 @@
                 "identifier": "TestDerefBool",
                 "newPage": false,
                 "searchKey": "graphql.TestDerefBool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

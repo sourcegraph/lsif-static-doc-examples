@@ -4,7 +4,9 @@
     "identifier": "gitserver",
     "newPage": true,
     "searchKey": "enterprise/internal/codeintel/gitserver",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "RefTypeUnknown",
                 "newPage": false,
                 "searchKey": "gitserver.RefTypeUnknown",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "RefTypeBranch",
                 "newPage": false,
                 "searchKey": "gitserver.RefTypeBranch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "RefTypeTag",
                 "newPage": false,
                 "searchKey": "gitserver.RefTypeTag",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -109,7 +107,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "refPrefixes",
                 "newPage": false,
                 "searchKey": "gitserver.refPrefixes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -150,7 +152,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -168,9 +172,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "gitserver.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -188,9 +190,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "gitserver.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -210,9 +210,7 @@
                       "identifier": "Client.CommitExists",
                       "newPage": false,
                       "searchKey": "gitserver.Client.CommitExists",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -232,9 +230,7 @@
                       "identifier": "Client.Head",
                       "newPage": false,
                       "searchKey": "gitserver.Client.Head",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -254,9 +250,7 @@
                       "identifier": "Client.CommitDate",
                       "newPage": false,
                       "searchKey": "gitserver.Client.CommitDate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -276,9 +270,7 @@
                       "identifier": "Client.CommitGraph",
                       "newPage": false,
                       "searchKey": "gitserver.Client.CommitGraph",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -298,9 +290,7 @@
                       "identifier": "Client.RefDescriptions",
                       "newPage": false,
                       "searchKey": "gitserver.Client.RefDescriptions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -320,9 +310,7 @@
                       "identifier": "Client.RawContents",
                       "newPage": false,
                       "searchKey": "gitserver.Client.RawContents",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -342,9 +330,7 @@
                       "identifier": "Client.DirectoryChildren",
                       "newPage": false,
                       "searchKey": "gitserver.Client.DirectoryChildren",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -364,9 +350,7 @@
                       "identifier": "Client.FileExists",
                       "newPage": false,
                       "searchKey": "gitserver.Client.FileExists",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -386,9 +370,7 @@
                       "identifier": "Client.ListFiles",
                       "newPage": false,
                       "searchKey": "gitserver.Client.ListFiles",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -408,9 +390,7 @@
                       "identifier": "Client.ResolveRevision",
                       "newPage": false,
                       "searchKey": "gitserver.Client.ResolveRevision",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -430,7 +410,9 @@
                       "identifier": "Client.execGitCommand",
                       "newPage": false,
                       "searchKey": "gitserver.Client.execGitCommand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -450,7 +432,9 @@
                       "identifier": "Client.execResolveRevGitCommand",
                       "newPage": false,
                       "searchKey": "gitserver.Client.execResolveRevGitCommand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -470,7 +454,9 @@
                       "identifier": "Client.repositoryIDToRepo",
                       "newPage": false,
                       "searchKey": "gitserver.Client.repositoryIDToRepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -493,9 +479,7 @@
                 "identifier": "CommitGraph",
                 "newPage": false,
                 "searchKey": "gitserver.CommitGraph",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -513,9 +497,7 @@
                       "identifier": "ParseCommitGraph",
                       "newPage": false,
                       "searchKey": "gitserver.ParseCommitGraph",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -535,9 +517,7 @@
                       "identifier": "CommitGraph.Graph",
                       "newPage": false,
                       "searchKey": "gitserver.CommitGraph.Graph",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -557,9 +537,7 @@
                       "identifier": "CommitGraph.Order",
                       "newPage": false,
                       "searchKey": "gitserver.CommitGraph.Order",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -582,9 +560,7 @@
                 "identifier": "CommitGraphOptions",
                 "newPage": false,
                 "searchKey": "gitserver.CommitGraphOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -604,9 +580,7 @@
                 "identifier": "RefDescription",
                 "newPage": false,
                 "searchKey": "gitserver.RefDescription",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -626,9 +600,7 @@
                 "identifier": "RefType",
                 "newPage": false,
                 "searchKey": "gitserver.RefType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -648,9 +620,7 @@
                 "identifier": "DBStore",
                 "newPage": false,
                 "searchKey": "gitserver.DBStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -670,7 +640,9 @@
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "gitserver.operations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -688,7 +660,9 @@
                       "identifier": "newOperations",
                       "newPage": false,
                       "searchKey": "gitserver.newOperations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -714,7 +688,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -732,7 +708,9 @@
                 "identifier": "parseRefDescriptions",
                 "newPage": false,
                 "searchKey": "gitserver.parseRefDescriptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -752,7 +730,9 @@
                 "identifier": "TestParseCommitGraph",
                 "newPage": false,
                 "searchKey": "gitserver.TestParseCommitGraph",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -772,7 +752,9 @@
                 "identifier": "TestParseCommitGraphPartial",
                 "newPage": false,
                 "searchKey": "gitserver.TestParseCommitGraphPartial",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -792,7 +774,9 @@
                 "identifier": "TestParseRefDescriptions",
                 "newPage": false,
                 "searchKey": "gitserver.TestParseRefDescriptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -30,7 +30,7 @@ Key rotation, license key revocation, etc., are not implemented.
     * [func ParseTagsInput(tagsStr string) []string](#ParseTagsInput)
     * [func GenerateSignedKey(info Info, privateKey ssh.Signer) (string, error)](#GenerateSignedKey)
     * [func TestParseTagsInput(t *testing.T)](#TestParseTagsInput)
-    * [func init()](#init)
+    * [func init()](#init.license_test.go)
     * [func TestInfo_EncodeDecode(t *testing.T)](#TestInfo_EncodeDecode)
     * [func TestGenerateParseSignedKey(t *testing.T)](#TestGenerateParseSignedKey)
     * [func TestParseSignedKey(t *testing.T)](#TestParseSignedKey)
@@ -38,10 +38,15 @@ Key rotation, license key revocation, etc., are not implemented.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="formatVersion" href="#formatVersion">const formatVersion</a>
 
 ```
 searchKey: license.formatVersion
+tags: [private]
 ```
 
 ```Go
@@ -51,10 +56,15 @@ const formatVersion = 1 // (encodedInfo).Version value
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="privateKey" href="#privateKey">var privateKey</a>
 
 ```
 searchKey: license.privateKey
+tags: [private]
 ```
 
 ```Go
@@ -65,6 +75,7 @@ var privateKey ssh.Signer
 
 ```
 searchKey: license.publicKey
+tags: [private]
 ```
 
 ```Go
@@ -75,6 +86,7 @@ var publicKey ssh.PublicKey
 
 ```
 searchKey: license.timeFixture
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +97,7 @@ var timeFixture = time.Date(2018, time.September, 22, 21, 33, 44, 0, time.UTC)
 
 ```
 searchKey: license.infoFixture
+tags: [private]
 ```
 
 ```Go
@@ -93,11 +106,14 @@ var infoFixture = Info{Tags: []string{"a"}, UserCount: 123, ExpiresAt: timeFixtu
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Info" href="#Info">type Info struct</a>
 
 ```
 searchKey: license.Info
-tags: [exported]
 ```
 
 ```Go
@@ -116,7 +132,6 @@ NOTE: If you change these fields, you MUST handle backward compatibility. Existi
 
 ```
 searchKey: license.ParseSignedKey
-tags: [exported]
 ```
 
 ```Go
@@ -129,7 +144,6 @@ ParseSignedKey parses and verifies the signed license key. If parsing or verific
 
 ```
 searchKey: license.Info.IsExpired
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +156,6 @@ IsExpired reports whether the license has expired.
 
 ```
 searchKey: license.Info.IsExpiredWithGracePeriod
-tags: [exported]
 ```
 
 ```Go
@@ -155,7 +168,6 @@ IsExpiredWithGracePeriod reports whether the license has expired, adding a grace
 
 ```
 searchKey: license.Info.HasTag
-tags: [exported]
 ```
 
 ```Go
@@ -168,7 +180,6 @@ HasTag reports whether tag is in l's list of tags.
 
 ```
 searchKey: license.Info.String
-tags: [exported]
 ```
 
 ```Go
@@ -179,6 +190,7 @@ func (l *Info) String() string
 
 ```
 searchKey: license.Info.encode
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +201,7 @@ func (l Info) encode() ([]byte, error)
 
 ```
 searchKey: license.Info.decode
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +212,7 @@ func (l *Info) decode(data []byte) error
 
 ```
 searchKey: license.encodedInfo
+tags: [private]
 ```
 
 ```Go
@@ -213,6 +227,7 @@ type encodedInfo struct {
 
 ```
 searchKey: license.signedKey
+tags: [private]
 ```
 
 ```Go
@@ -224,11 +239,14 @@ type signedKey struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ParseTagsInput" href="#ParseTagsInput">func ParseTagsInput(tagsStr string) []string</a>
 
 ```
 searchKey: license.ParseTagsInput
-tags: [exported]
 ```
 
 ```Go
@@ -241,7 +259,6 @@ ParseTagsInput parses a string of comma-separated tags. It removes whitespace ar
 
 ```
 searchKey: license.GenerateSignedKey
-tags: [exported]
 ```
 
 ```Go
@@ -254,16 +271,18 @@ GenerateSignedKey generates a new signed license key with the given license info
 
 ```
 searchKey: license.TestParseTagsInput
+tags: [private]
 ```
 
 ```Go
 func TestParseTagsInput(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.license_test.go" href="#init.license_test.go">func init()</a>
 
 ```
 searchKey: license.init
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +293,7 @@ func init()
 
 ```
 searchKey: license.TestInfo_EncodeDecode
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +304,7 @@ func TestInfo_EncodeDecode(t *testing.T)
 
 ```
 searchKey: license.TestGenerateParseSignedKey
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +315,7 @@ func TestGenerateParseSignedKey(t *testing.T)
 
 ```
 searchKey: license.TestParseSignedKey
+tags: [private]
 ```
 
 ```Go

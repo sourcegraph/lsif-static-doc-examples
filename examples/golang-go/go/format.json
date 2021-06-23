@@ -4,9 +4,7 @@
     "identifier": "format",
     "newPage": true,
     "searchKey": "go/format",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "tabWidth",
                 "newPage": false,
                 "searchKey": "format.tabWidth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "printerMode",
                 "newPage": false,
                 "searchKey": "format.printerMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "printerNormalizeNumbers",
                 "newPage": false,
                 "searchKey": "format.printerNormalizeNumbers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "parserMode",
                 "newPage": false,
                 "searchKey": "format.parserMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "testfile",
                 "newPage": false,
                 "searchKey": "format.testfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,9 +153,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "config",
                 "newPage": false,
                 "searchKey": "format.config",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "tests",
                 "newPage": false,
                 "searchKey": "format.tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +218,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -230,9 +236,7 @@
                 "identifier": "Node",
                 "newPage": false,
                 "searchKey": "format.Node",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -252,9 +256,7 @@
                 "identifier": "Source",
                 "newPage": false,
                 "searchKey": "format.Source",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -274,7 +276,9 @@
                 "identifier": "hasUnsortedImports",
                 "newPage": false,
                 "searchKey": "format.hasUnsortedImports",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -294,7 +298,9 @@
                 "identifier": "parse",
                 "newPage": false,
                 "searchKey": "format.parse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -314,7 +320,9 @@
                 "identifier": "format",
                 "newPage": false,
                 "searchKey": "format.format",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -334,7 +342,9 @@
                 "identifier": "isSpace",
                 "newPage": false,
                 "searchKey": "format.isSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -354,7 +364,9 @@
                 "identifier": "diff",
                 "newPage": false,
                 "searchKey": "format.diff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -374,7 +386,9 @@
                 "identifier": "TestNode",
                 "newPage": false,
                 "searchKey": "format.TestNode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -394,7 +408,9 @@
                 "identifier": "TestNodeNoModify",
                 "newPage": false,
                 "searchKey": "format.TestNodeNoModify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -414,7 +430,9 @@
                 "identifier": "TestSource",
                 "newPage": false,
                 "searchKey": "format.TestSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -434,7 +452,9 @@
                 "identifier": "String",
                 "newPage": false,
                 "searchKey": "format.String",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -454,7 +474,9 @@
                 "identifier": "TestPartial",
                 "newPage": false,
                 "searchKey": "format.TestPartial",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

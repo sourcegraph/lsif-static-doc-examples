@@ -107,14 +107,11 @@ The trace tool computes the latency of a task by measuring the time between the 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="regionStartCode" href="#regionStartCode">const regionStartCode</a>
 
 ```
 searchKey: trace.regionStartCode
+tags: [private]
 ```
 
 ```Go
@@ -125,6 +122,7 @@ const regionStartCode = uint64(0)
 
 ```
 searchKey: trace.regionEndCode
+tags: [private]
 ```
 
 ```Go
@@ -133,14 +131,11 @@ const regionEndCode = uint64(1)
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="lastTaskID" href="#lastTaskID">var lastTaskID</a>
 
 ```
 searchKey: trace.lastTaskID
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +147,7 @@ var lastTaskID uint64 = 0 // task id issued last time
 
 ```
 searchKey: trace.bgTask
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +158,7 @@ var bgTask = Task{id: uint64(0)}
 
 ```
 searchKey: trace.noopRegion
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +169,7 @@ var noopRegion = &Region{}
 
 ```
 searchKey: trace.tracing
+tags: [private]
 ```
 
 ```Go
@@ -183,14 +181,11 @@ var tracing struct {
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="traceContextKey" href="#traceContextKey">type traceContextKey struct{}</a>
 
 ```
 searchKey: trace.traceContextKey
+tags: [private]
 ```
 
 ```Go
@@ -201,7 +196,6 @@ type traceContextKey struct{}
 
 ```
 searchKey: trace.Task
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +210,6 @@ Task is a data type for tracing a user-defined, logical operation.
 
 ```
 searchKey: trace.NewTask
-tags: [exported]
 ```
 
 ```Go
@@ -243,6 +236,7 @@ go func() {  // continue processing the task in a separate goroutine.
 
 ```
 searchKey: trace.fromContext
+tags: [private]
 ```
 
 ```Go
@@ -253,7 +247,6 @@ func fromContext(ctx context.Context) *Task
 
 ```
 searchKey: trace.Task.End
-tags: [exported]
 ```
 
 ```Go
@@ -266,7 +259,6 @@ End marks the end of the operation represented by the Task.
 
 ```
 searchKey: trace.Region
-tags: [exported]
 ```
 
 ```Go
@@ -282,7 +274,6 @@ Region is a region of code whose execution time interval is traced.
 
 ```
 searchKey: trace.StartRegion
-tags: [exported]
 ```
 
 ```Go
@@ -299,7 +290,6 @@ defer trace.StartRegion(ctx, "myTracedRegion").End()
 
 ```
 searchKey: trace.Region.End
-tags: [exported]
 ```
 
 ```Go
@@ -310,14 +300,11 @@ End marks the end of the traced code region.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="newID" href="#newID">func newID() uint64</a>
 
 ```
 searchKey: trace.newID
+tags: [private]
 ```
 
 ```Go
@@ -328,7 +315,6 @@ func newID() uint64
 
 ```
 searchKey: trace.Log
-tags: [exported]
 ```
 
 ```Go
@@ -341,7 +327,6 @@ Log emits a one-off event with the given category and message. Category can be e
 
 ```
 searchKey: trace.Logf
-tags: [exported]
 ```
 
 ```Go
@@ -354,7 +339,6 @@ Logf is like Log, but the value is formatted using the specified format spec.
 
 ```
 searchKey: trace.WithRegion
-tags: [exported]
 ```
 
 ```Go
@@ -369,7 +353,6 @@ The regionType is used to classify regions, so there should be only a handful of
 
 ```
 searchKey: trace.IsEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -382,6 +365,7 @@ IsEnabled reports whether tracing is enabled. The information is advisory only. 
 
 ```
 searchKey: trace.userTaskCreate
+tags: [private]
 ```
 
 ```Go
@@ -394,6 +378,7 @@ emits UserTaskCreate event.
 
 ```
 searchKey: trace.userTaskEnd
+tags: [private]
 ```
 
 ```Go
@@ -406,6 +391,7 @@ emits UserTaskEnd event.
 
 ```
 searchKey: trace.userRegion
+tags: [private]
 ```
 
 ```Go
@@ -418,6 +404,7 @@ emits UserRegion event.
 
 ```
 searchKey: trace.userLog
+tags: [private]
 ```
 
 ```Go
@@ -430,7 +417,6 @@ emits UserLog event.
 
 ```
 searchKey: trace.Start
-tags: [exported]
 ```
 
 ```Go
@@ -443,7 +429,6 @@ Start enables tracing for the current program. While tracing, the trace will be 
 
 ```
 searchKey: trace.Stop
-tags: [exported]
 ```
 
 ```Go

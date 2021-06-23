@@ -4,7 +4,9 @@
     "identifier": "cache",
     "newPage": true,
     "searchKey": "internal/encryption/cache",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Key",
                 "newPage": false,
                 "searchKey": "cache.Key",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "cache.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "Key.Decrypt",
                       "newPage": false,
                       "searchKey": "cache.Key.Decrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "testKey",
                 "newPage": false,
                 "searchKey": "cache.testKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +125,9 @@
                       "identifier": "testKey.Decrypt",
                       "newPage": false,
                       "searchKey": "cache.testKey.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -151,7 +153,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -169,7 +173,9 @@
                 "identifier": "hash",
                 "newPage": false,
                 "searchKey": "cache.hash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -189,7 +195,9 @@
                 "identifier": "TestCacheKey",
                 "newPage": false,
                 "searchKey": "cache.TestCacheKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

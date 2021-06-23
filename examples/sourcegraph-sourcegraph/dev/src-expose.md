@@ -52,14 +52,11 @@ Command "src-expose" serves directories as git repositories over HTTP.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="testAddress" href="#testAddress">const testAddress</a>
 
 ```
 searchKey: main.testAddress
+tags: [private]
 ```
 
 ```Go
@@ -68,14 +65,11 @@ const testAddress = "test.local:3939"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="errSilent" href="#errSilent">var errSilent</a>
 
 ```
 searchKey: main.errSilent
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +80,7 @@ var errSilent = errors.New("silent error")
 
 ```
 searchKey: main.indexHTML
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +91,7 @@ var indexHTML = ...
 
 ```
 searchKey: main.postUpdateHook
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +102,7 @@ var postUpdateHook = []byte("#!/bin/sh\nexec git update-server-info\n")
 
 ```
 searchKey: main.discardLogger
+tags: [private]
 ```
 
 ```Go
@@ -114,14 +111,11 @@ var discardLogger = log.New(io.Discard, "", log.LstdFlags)
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="usageError" href="#usageError">type usageError struct</a>
 
 ```
 searchKey: main.usageError
+tags: [private]
 ```
 
 ```Go
@@ -134,6 +128,7 @@ type usageError struct {
 
 ```
 searchKey: main.usageError.Error
+tags: [private]
 ```
 
 ```Go
@@ -144,7 +139,6 @@ func (e *usageError) Error() string
 
 ```
 searchKey: main.Serve
-tags: [exported]
 ```
 
 ```Go
@@ -164,7 +158,6 @@ type Serve struct {
 
 ```
 searchKey: main.Serve.Start
-tags: [exported]
 ```
 
 ```Go
@@ -175,6 +168,7 @@ func (s *Serve) Start() error
 
 ```
 searchKey: main.Serve.handler
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +179,7 @@ func (s *Serve) handler() (http.Handler, error)
 
 ```
 searchKey: main.Serve.configureRepos
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +192,7 @@ configureRepos finds all .git directories and configures them to be served. It r
 
 ```
 searchKey: main.Serve.allUpdateServerInfo
+tags: [private]
 ```
 
 ```Go
@@ -209,7 +205,6 @@ allUpdateServerInfo will run updateServerInfo on each gitDirs. To prevent too ma
 
 ```
 searchKey: main.Repo
-tags: [exported]
 ```
 
 ```Go
@@ -223,6 +218,7 @@ type Repo struct {
 
 ```
 searchKey: main.httpDir
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +231,7 @@ type httpDir struct {
 
 ```
 searchKey: main.httpDir.Open
+tags: [private]
 ```
 
 ```Go
@@ -247,6 +244,7 @@ Wraps the http.Dir to inject subdir "/.git" to the path.
 
 ```
 searchKey: main.lineCountWriter
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +261,7 @@ type lineCountWriter struct {
 
 ```
 searchKey: main.lineCountWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +272,7 @@ func (w *lineCountWriter) Write(b []byte) (int, error)
 
 ```
 searchKey: main.lineCountWriter.Close
+tags: [private]
 ```
 
 ```Go
@@ -283,7 +283,6 @@ func (w *lineCountWriter) Close() error
 
 ```
 searchKey: main.SyncDir
-tags: [exported]
 ```
 
 ```Go
@@ -312,7 +311,6 @@ SyncDir creates a commit of Dir into the bare git repo Destination.
 
 ```
 searchKey: main.Snapshotter
-tags: [exported]
 ```
 
 ```Go
@@ -350,7 +348,6 @@ Snapshotter manages the running over several syncs.
 
 ```
 searchKey: main.Snapshotter.SetDefaults
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +358,6 @@ func (o *Snapshotter) SetDefaults() error
 
 ```
 searchKey: main.Snapshotter.Run
-tags: [exported]
 ```
 
 ```Go
@@ -372,6 +368,7 @@ func (o *Snapshotter) Run(logger *log.Logger) error
 
 ```
 searchKey: main.testWriter
+tags: [private]
 ```
 
 ```Go
@@ -384,6 +381,7 @@ type testWriter struct {
 
 ```
 searchKey: main.testWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -392,14 +390,11 @@ func (tw testWriter) Write(p []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="explainAddr" href="#explainAddr">func explainAddr(addr string) string</a>
 
 ```
 searchKey: main.explainAddr
+tags: [private]
 ```
 
 ```Go
@@ -410,6 +405,7 @@ func explainAddr(addr string) string
 
 ```
 searchKey: main.explainSnapshotter
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +416,7 @@ func explainSnapshotter(s *Snapshotter) string
 
 ```
 searchKey: main.usageErrorOutput
+tags: [private]
 ```
 
 ```Go
@@ -430,6 +427,7 @@ func usageErrorOutput(cmd *ffcli.Command, cmdPath string, err error) string
 
 ```
 searchKey: main.shortenErrHelp
+tags: [private]
 ```
 
 ```Go
@@ -440,6 +438,7 @@ func shortenErrHelp(cmd *ffcli.Command, cmdPath string)
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -450,6 +449,7 @@ func main()
 
 ```
 searchKey: main.configurePostUpdateHook
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +462,7 @@ configureOneRepos tweaks a .git repo such that it can be git cloned. See [https:
 
 ```
 searchKey: main.updateServerInfo
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +473,7 @@ func updateServerInfo(gitDir string) error
 
 ```
 searchKey: main.snapshot
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +484,7 @@ func snapshot(logger *log.Logger, src, dst string) error
 
 ```
 searchKey: main.run
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +495,7 @@ func run(logger *log.Logger, name string, cmd *exec.Cmd) (int, error)
 
 ```
 searchKey: main.abs
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +506,7 @@ func abs(root, dir string) (string, error)
 
 ```
 searchKey: main.TestExplain
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +517,7 @@ func TestExplain(t *testing.T)
 
 ```
 searchKey: main.TestReposHandler
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +528,7 @@ func TestReposHandler(t *testing.T)
 
 ```
 searchKey: main.testReposHandler
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +539,7 @@ func testReposHandler(t *testing.T, h http.Handler, repos []Repo)
 
 ```
 searchKey: main.gitInitRepos
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +550,7 @@ func gitInitRepos(t *testing.T, names ...string) string
 
 ```
 searchKey: main.TestIgnoreGitSubmodules
+tags: [private]
 ```
 
 ```Go
@@ -552,6 +561,7 @@ func TestIgnoreGitSubmodules(t *testing.T)
 
 ```
 searchKey: main.testLogger
+tags: [private]
 ```
 
 ```Go

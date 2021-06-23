@@ -4,7 +4,9 @@
     "identifier": "authz",
     "newPage": true,
     "searchKey": "internal/authz",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "SourcegraphServiceType",
                 "newPage": false,
                 "searchKey": "authz.SourcegraphServiceType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "SourcegraphServiceID",
                 "newPage": false,
                 "searchKey": "authz.SourcegraphServiceID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "SchemeToken",
                 "newPage": false,
                 "searchKey": "authz.SchemeToken",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "SchemeTokenSudo",
                 "newPage": false,
                 "searchKey": "authz.SchemeTokenSudo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "None",
                 "newPage": false,
                 "searchKey": "authz.None",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "Read",
                 "newPage": false,
                 "searchKey": "authz.Read",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                 "identifier": "Write",
                 "newPage": false,
                 "searchKey": "authz.Write",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,9 +184,7 @@
                 "identifier": "PermRepos",
                 "newPage": false,
                 "searchKey": "authz.PermRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -216,9 +204,7 @@
                 "identifier": "ScopeUserAll",
                 "newPage": false,
                 "searchKey": "authz.ScopeUserAll",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -238,9 +224,7 @@
                 "identifier": "ScopeSiteAdminSudo",
                 "newPage": false,
                 "searchKey": "authz.ScopeSiteAdminSudo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -263,7 +247,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -281,7 +267,9 @@
                 "identifier": "errUnrecognizedScheme",
                 "newPage": false,
                 "searchKey": "authz.errUnrecognizedScheme",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,7 +289,9 @@
                 "identifier": "errHTTPAuthParamsDuplicateKey",
                 "newPage": false,
                 "searchKey": "authz.errHTTPAuthParamsDuplicateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -321,7 +311,9 @@
                 "identifier": "errHTTPAuthParamsNoEquals",
                 "newPage": false,
                 "searchKey": "authz.errHTTPAuthParamsNoEquals",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -341,9 +333,7 @@
                 "identifier": "ErrPermsNotFound",
                 "newPage": false,
                 "searchKey": "authz.ErrPermsNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -363,7 +353,9 @@
                 "identifier": "allowAccessByDefault",
                 "newPage": false,
                 "searchKey": "authz.allowAccessByDefault",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -383,7 +375,9 @@
                 "identifier": "authzProvidersReadyOnce",
                 "newPage": false,
                 "searchKey": "authz.authzProvidersReadyOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -403,7 +397,9 @@
                 "identifier": "authzProvidersReady",
                 "newPage": false,
                 "searchKey": "authz.authzProvidersReady",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -423,7 +419,9 @@
                 "identifier": "authzProviders",
                 "newPage": false,
                 "searchKey": "authz.authzProviders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -443,7 +441,9 @@
                 "identifier": "authzMu",
                 "newPage": false,
                 "searchKey": "authz.authzMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -463,7 +463,9 @@
                 "identifier": "isTest",
                 "newPage": false,
                 "searchKey": "authz.isTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -483,9 +485,7 @@
                 "identifier": "AllScopes",
                 "newPage": false,
                 "searchKey": "authz.AllScopes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -508,7 +508,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -526,9 +528,7 @@
                 "identifier": "ExternalUserPermissions",
                 "newPage": false,
                 "searchKey": "authz.ExternalUserPermissions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -548,9 +548,7 @@
                 "identifier": "Provider",
                 "newPage": false,
                 "searchKey": "authz.Provider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -570,9 +568,7 @@
                 "identifier": "RepoPerms",
                 "newPage": false,
                 "searchKey": "authz.RepoPerms",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -592,9 +588,7 @@
                 "identifier": "Perms",
                 "newPage": false,
                 "searchKey": "authz.Perms",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -612,9 +606,7 @@
                       "identifier": "Perms.Include",
                       "newPage": false,
                       "searchKey": "authz.Perms.Include",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -634,9 +626,7 @@
                       "identifier": "Perms.String",
                       "newPage": false,
                       "searchKey": "authz.Perms.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -659,9 +649,7 @@
                 "identifier": "PermType",
                 "newPage": false,
                 "searchKey": "authz.PermType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -681,9 +669,7 @@
                 "identifier": "RepoPermsSort",
                 "newPage": false,
                 "searchKey": "authz.RepoPermsSort",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -701,9 +687,7 @@
                       "identifier": "RepoPermsSort.Len",
                       "newPage": false,
                       "searchKey": "authz.RepoPermsSort.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -723,9 +707,7 @@
                       "identifier": "RepoPermsSort.Swap",
                       "newPage": false,
                       "searchKey": "authz.RepoPermsSort.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -745,9 +727,7 @@
                       "identifier": "RepoPermsSort.Less",
                       "newPage": false,
                       "searchKey": "authz.RepoPermsSort.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -770,9 +750,7 @@
                 "identifier": "ErrStalePermissions",
                 "newPage": false,
                 "searchKey": "authz.ErrStalePermissions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -790,9 +768,7 @@
                       "identifier": "ErrStalePermissions.Error",
                       "newPage": false,
                       "searchKey": "authz.ErrStalePermissions.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -815,9 +791,7 @@
                 "identifier": "UserPermissions",
                 "newPage": false,
                 "searchKey": "authz.UserPermissions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -835,9 +809,7 @@
                       "identifier": "UserPermissions.Expired",
                       "newPage": false,
                       "searchKey": "authz.UserPermissions.Expired",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -857,9 +829,7 @@
                       "identifier": "UserPermissions.AuthorizedRepos",
                       "newPage": false,
                       "searchKey": "authz.UserPermissions.AuthorizedRepos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -879,9 +849,7 @@
                       "identifier": "UserPermissions.TracingFields",
                       "newPage": false,
                       "searchKey": "authz.UserPermissions.TracingFields",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -904,9 +872,7 @@
                 "identifier": "RepoPermissions",
                 "newPage": false,
                 "searchKey": "authz.RepoPermissions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -924,9 +890,7 @@
                       "identifier": "RepoPermissions.Expired",
                       "newPage": false,
                       "searchKey": "authz.RepoPermissions.Expired",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -946,9 +910,7 @@
                       "identifier": "RepoPermissions.TracingFields",
                       "newPage": false,
                       "searchKey": "authz.RepoPermissions.TracingFields",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -971,9 +933,7 @@
                 "identifier": "UserPendingPermissions",
                 "newPage": false,
                 "searchKey": "authz.UserPendingPermissions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -991,9 +951,7 @@
                       "identifier": "UserPendingPermissions.TracingFields",
                       "newPage": false,
                       "searchKey": "authz.UserPendingPermissions.TracingFields",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1019,7 +977,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1037,9 +997,7 @@
                 "identifier": "IsUnrecognizedScheme",
                 "newPage": false,
                 "searchKey": "authz.IsUnrecognizedScheme",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1059,9 +1017,7 @@
                 "identifier": "ParseAuthorizationHeader",
                 "newPage": false,
                 "searchKey": "authz.ParseAuthorizationHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1081,7 +1037,9 @@
                 "identifier": "parseHTTPCredentials",
                 "newPage": false,
                 "searchKey": "authz.parseHTTPCredentials",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1101,7 +1059,9 @@
                 "identifier": "parseHTTPAuthParams",
                 "newPage": false,
                 "searchKey": "authz.parseHTTPAuthParams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1121,7 +1081,9 @@
                 "identifier": "parseHTTPHeaderList",
                 "newPage": false,
                 "searchKey": "authz.parseHTTPHeaderList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1141,9 +1103,7 @@
                 "identifier": "SetProviders",
                 "newPage": false,
                 "searchKey": "authz.SetProviders",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1163,9 +1123,7 @@
                 "identifier": "GetProviders",
                 "newPage": false,
                 "searchKey": "authz.GetProviders",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1185,7 +1143,9 @@
                 "identifier": "TestParseAuthorizationHeader",
                 "newPage": false,
                 "searchKey": "authz.TestParseAuthorizationHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1205,7 +1165,9 @@
                 "identifier": "TestParseHTTPCredentials",
                 "newPage": false,
                 "searchKey": "authz.TestParseHTTPCredentials",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1225,7 +1187,9 @@
                 "identifier": "TestPermsInclude",
                 "newPage": false,
                 "searchKey": "authz.TestPermsInclude",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1245,7 +1209,9 @@
                 "identifier": "BenchmarkPermsInclude",
                 "newPage": false,
                 "searchKey": "authz.BenchmarkPermsInclude",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1265,7 +1231,9 @@
                 "identifier": "TestPermsString",
                 "newPage": false,
                 "searchKey": "authz.TestPermsString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1285,7 +1253,9 @@
                 "identifier": "BenchmarkPermsString",
                 "newPage": false,
                 "searchKey": "authz.BenchmarkPermsString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1305,7 +1275,9 @@
                 "identifier": "bitmap",
                 "newPage": false,
                 "searchKey": "authz.bitmap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1325,7 +1297,9 @@
                 "identifier": "TestUserPermissions_AuthorizedRepos",
                 "newPage": false,
                 "searchKey": "authz.TestUserPermissions_AuthorizedRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

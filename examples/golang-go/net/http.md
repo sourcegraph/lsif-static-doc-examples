@@ -1935,7 +1935,7 @@ The http package's Transport and Server both automatically enable HTTP/2 support
     * [func http2buildCommonHeaderMapsOnce()](#http2buildCommonHeaderMapsOnce)
     * [func http2buildCommonHeaderMaps()](#http2buildCommonHeaderMaps)
     * [func http2lowerHeader(v string) (lower string, ascii bool)](#http2lowerHeader)
-    * [func init()](#init)
+    * [func init()](#init.h2_bundle.go)
     * [func http2validWireHeaderFieldName(v string) bool](#http2validWireHeaderFieldName)
     * [func http2httpCodeString(code int) string](#http2httpCodeString)
     * [func http2mustUint31(v int32) uint32](#http2mustUint31)
@@ -2075,7 +2075,7 @@ The http package's Transport and Server both automatically enable HTTP/2 support
     * [func BenchmarkCookieString(b *testing.B)](#BenchmarkCookieString)
     * [func BenchmarkReadSetCookies(b *testing.B)](#BenchmarkReadSetCookies)
     * [func BenchmarkReadCookies(b *testing.B)](#BenchmarkReadCookies)
-    * [func init()](#init)
+    * [func init()](#init.export_test.go)
     * [func CondSkipHTTP2(t *testing.T)](#CondSkipHTTP2)
     * [func SetReadLoopBeforeNextReadHook(f func())](#SetReadLoopBeforeNextReadHook)
     * [func SetPendingDialHooks(before, after func())](#SetPendingDialHooks)
@@ -2143,15 +2143,10 @@ The http package's Transport and Server both automatically enable HTTP/2 support
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="SameSiteDefaultMode" href="#SameSiteDefaultMode">const SameSiteDefaultMode</a>
 
 ```
 searchKey: http.SameSiteDefaultMode
-tags: [exported]
 ```
 
 ```Go
@@ -2162,7 +2157,6 @@ const SameSiteDefaultMode SameSite = iota + 1
 
 ```
 searchKey: http.SameSiteLaxMode
-tags: [exported]
 ```
 
 ```Go
@@ -2173,7 +2167,6 @@ const SameSiteLaxMode
 
 ```
 searchKey: http.SameSiteStrictMode
-tags: [exported]
 ```
 
 ```Go
@@ -2184,7 +2177,6 @@ const SameSiteStrictMode
 
 ```
 searchKey: http.SameSiteNoneMode
-tags: [exported]
 ```
 
 ```Go
@@ -2195,6 +2187,7 @@ const SameSiteNoneMode
 
 ```
 searchKey: http.condNone
+tags: [private]
 ```
 
 ```Go
@@ -2205,6 +2198,7 @@ const condNone condResult = iota
 
 ```
 searchKey: http.condTrue
+tags: [private]
 ```
 
 ```Go
@@ -2215,6 +2209,7 @@ const condTrue
 
 ```
 searchKey: http.condFalse
+tags: [private]
 ```
 
 ```Go
@@ -2225,6 +2220,7 @@ const condFalse
 
 ```
 searchKey: http.http2cipher_TLS_NULL_WITH_NULL_NULL
+tags: [private]
 ```
 
 ```Go
@@ -2235,6 +2231,7 @@ const http2cipher_TLS_NULL_WITH_NULL_NULL uint16 = 0x0000
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_NULL_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2245,6 +2242,7 @@ const http2cipher_TLS_RSA_WITH_NULL_MD5 uint16 = 0x0001
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_NULL_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2255,6 +2253,7 @@ const http2cipher_TLS_RSA_WITH_NULL_SHA uint16 = 0x0002
 
 ```
 searchKey: http.http2cipher_TLS_RSA_EXPORT_WITH_RC4_40_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2265,6 +2264,7 @@ const http2cipher_TLS_RSA_EXPORT_WITH_RC4_40_MD5 uint16 = 0x0003
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_RC4_128_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2275,6 +2275,7 @@ const http2cipher_TLS_RSA_WITH_RC4_128_MD5 uint16 = 0x0004
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2285,6 +2286,7 @@ const http2cipher_TLS_RSA_WITH_RC4_128_SHA uint16 = 0x0005
 
 ```
 searchKey: http.http2cipher_TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2295,6 +2297,7 @@ const http2cipher_TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 uint16 = 0x0006
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_IDEA_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2305,6 +2308,7 @@ const http2cipher_TLS_RSA_WITH_IDEA_CBC_SHA uint16 = 0x0007
 
 ```
 searchKey: http.http2cipher_TLS_RSA_EXPORT_WITH_DES40_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2315,6 +2319,7 @@ const http2cipher_TLS_RSA_EXPORT_WITH_DES40_CBC_SHA uint16 = 0x0008
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_DES_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2325,6 +2330,7 @@ const http2cipher_TLS_RSA_WITH_DES_CBC_SHA uint16 = 0x0009
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2335,6 +2341,7 @@ const http2cipher_TLS_RSA_WITH_3DES_EDE_CBC_SHA uint16 = 0x000A
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_EXPORT_WITH_DES40_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2345,6 +2352,7 @@ const http2cipher_TLS_DH_DSS_EXPORT_WITH_DES40_CBC_SHA uint16 = 0x000B
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_DES_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2355,6 +2363,7 @@ const http2cipher_TLS_DH_DSS_WITH_DES_CBC_SHA uint16 = 0x000C
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2365,6 +2374,7 @@ const http2cipher_TLS_DH_DSS_WITH_3DES_EDE_CBC_SHA uint16 = 0x000D
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_EXPORT_WITH_DES40_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2375,6 +2385,7 @@ const http2cipher_TLS_DH_RSA_EXPORT_WITH_DES40_CBC_SHA uint16 = 0x000E
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_DES_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2385,6 +2396,7 @@ const http2cipher_TLS_DH_RSA_WITH_DES_CBC_SHA uint16 = 0x000F
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2395,6 +2407,7 @@ const http2cipher_TLS_DH_RSA_WITH_3DES_EDE_CBC_SHA uint16 = 0x0010
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2405,6 +2418,7 @@ const http2cipher_TLS_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA uint16 = 0x0011
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_DES_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2415,6 +2429,7 @@ const http2cipher_TLS_DHE_DSS_WITH_DES_CBC_SHA uint16 = 0x0012
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2425,6 +2440,7 @@ const http2cipher_TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA uint16 = 0x0013
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2435,6 +2451,7 @@ const http2cipher_TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA uint16 = 0x0014
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_DES_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2445,6 +2462,7 @@ const http2cipher_TLS_DHE_RSA_WITH_DES_CBC_SHA uint16 = 0x0015
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2455,6 +2473,7 @@ const http2cipher_TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA uint16 = 0x0016
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_EXPORT_WITH_RC4_40_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2465,6 +2484,7 @@ const http2cipher_TLS_DH_anon_EXPORT_WITH_RC4_40_MD5 uint16 = 0x0017
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_RC4_128_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2475,6 +2495,7 @@ const http2cipher_TLS_DH_anon_WITH_RC4_128_MD5 uint16 = 0x0018
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_EXPORT_WITH_DES40_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2485,6 +2506,7 @@ const http2cipher_TLS_DH_anon_EXPORT_WITH_DES40_CBC_SHA uint16 = 0x0019
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_DES_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2495,6 +2517,7 @@ const http2cipher_TLS_DH_anon_WITH_DES_CBC_SHA uint16 = 0x001A
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2505,6 +2528,7 @@ const http2cipher_TLS_DH_anon_WITH_3DES_EDE_CBC_SHA uint16 = 0x001B
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_WITH_DES_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2517,6 +2541,7 @@ Reserved uint16 =  0x001C-1D
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2527,6 +2552,7 @@ const http2cipher_TLS_KRB5_WITH_3DES_EDE_CBC_SHA uint16 = 0x001F
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2537,6 +2563,7 @@ const http2cipher_TLS_KRB5_WITH_RC4_128_SHA uint16 = 0x0020
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_WITH_IDEA_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2547,6 +2574,7 @@ const http2cipher_TLS_KRB5_WITH_IDEA_CBC_SHA uint16 = 0x0021
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_WITH_DES_CBC_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2557,6 +2585,7 @@ const http2cipher_TLS_KRB5_WITH_DES_CBC_MD5 uint16 = 0x0022
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_WITH_3DES_EDE_CBC_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2567,6 +2596,7 @@ const http2cipher_TLS_KRB5_WITH_3DES_EDE_CBC_MD5 uint16 = 0x0023
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_WITH_RC4_128_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2577,6 +2607,7 @@ const http2cipher_TLS_KRB5_WITH_RC4_128_MD5 uint16 = 0x0024
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_WITH_IDEA_CBC_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2587,6 +2618,7 @@ const http2cipher_TLS_KRB5_WITH_IDEA_CBC_MD5 uint16 = 0x0025
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2597,6 +2629,7 @@ const http2cipher_TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA uint16 = 0x0026
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_EXPORT_WITH_RC2_CBC_40_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2607,6 +2640,7 @@ const http2cipher_TLS_KRB5_EXPORT_WITH_RC2_CBC_40_SHA uint16 = 0x0027
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_EXPORT_WITH_RC4_40_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2617,6 +2651,7 @@ const http2cipher_TLS_KRB5_EXPORT_WITH_RC4_40_SHA uint16 = 0x0028
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2627,6 +2662,7 @@ const http2cipher_TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5 uint16 = 0x0029
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_EXPORT_WITH_RC2_CBC_40_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2637,6 +2673,7 @@ const http2cipher_TLS_KRB5_EXPORT_WITH_RC2_CBC_40_MD5 uint16 = 0x002A
 
 ```
 searchKey: http.http2cipher_TLS_KRB5_EXPORT_WITH_RC4_40_MD5
+tags: [private]
 ```
 
 ```Go
@@ -2647,6 +2684,7 @@ const http2cipher_TLS_KRB5_EXPORT_WITH_RC4_40_MD5 uint16 = 0x002B
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_NULL_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2657,6 +2695,7 @@ const http2cipher_TLS_PSK_WITH_NULL_SHA uint16 = 0x002C
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_NULL_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2667,6 +2706,7 @@ const http2cipher_TLS_DHE_PSK_WITH_NULL_SHA uint16 = 0x002D
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_NULL_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2677,6 +2717,7 @@ const http2cipher_TLS_RSA_PSK_WITH_NULL_SHA uint16 = 0x002E
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2687,6 +2728,7 @@ const http2cipher_TLS_RSA_WITH_AES_128_CBC_SHA uint16 = 0x002F
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2697,6 +2739,7 @@ const http2cipher_TLS_DH_DSS_WITH_AES_128_CBC_SHA uint16 = 0x0030
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2707,6 +2750,7 @@ const http2cipher_TLS_DH_RSA_WITH_AES_128_CBC_SHA uint16 = 0x0031
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2717,6 +2761,7 @@ const http2cipher_TLS_DHE_DSS_WITH_AES_128_CBC_SHA uint16 = 0x0032
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2727,6 +2772,7 @@ const http2cipher_TLS_DHE_RSA_WITH_AES_128_CBC_SHA uint16 = 0x0033
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2737,6 +2783,7 @@ const http2cipher_TLS_DH_anon_WITH_AES_128_CBC_SHA uint16 = 0x0034
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2747,6 +2794,7 @@ const http2cipher_TLS_RSA_WITH_AES_256_CBC_SHA uint16 = 0x0035
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2757,6 +2805,7 @@ const http2cipher_TLS_DH_DSS_WITH_AES_256_CBC_SHA uint16 = 0x0036
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2767,6 +2816,7 @@ const http2cipher_TLS_DH_RSA_WITH_AES_256_CBC_SHA uint16 = 0x0037
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2777,6 +2827,7 @@ const http2cipher_TLS_DHE_DSS_WITH_AES_256_CBC_SHA uint16 = 0x0038
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2787,6 +2838,7 @@ const http2cipher_TLS_DHE_RSA_WITH_AES_256_CBC_SHA uint16 = 0x0039
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2797,6 +2849,7 @@ const http2cipher_TLS_DH_anon_WITH_AES_256_CBC_SHA uint16 = 0x003A
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_NULL_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2807,6 +2860,7 @@ const http2cipher_TLS_RSA_WITH_NULL_SHA256 uint16 = 0x003B
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2817,6 +2871,7 @@ const http2cipher_TLS_RSA_WITH_AES_128_CBC_SHA256 uint16 = 0x003C
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_AES_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2827,6 +2882,7 @@ const http2cipher_TLS_RSA_WITH_AES_256_CBC_SHA256 uint16 = 0x003D
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2837,6 +2893,7 @@ const http2cipher_TLS_DH_DSS_WITH_AES_128_CBC_SHA256 uint16 = 0x003E
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2847,6 +2904,7 @@ const http2cipher_TLS_DH_RSA_WITH_AES_128_CBC_SHA256 uint16 = 0x003F
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2857,6 +2915,7 @@ const http2cipher_TLS_DHE_DSS_WITH_AES_128_CBC_SHA256 uint16 = 0x0040
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_CAMELLIA_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2867,6 +2926,7 @@ const http2cipher_TLS_RSA_WITH_CAMELLIA_128_CBC_SHA uint16 = 0x0041
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2877,6 +2937,7 @@ const http2cipher_TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA uint16 = 0x0042
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2887,6 +2948,7 @@ const http2cipher_TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA uint16 = 0x0043
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2897,6 +2959,7 @@ const http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA uint16 = 0x0044
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2907,6 +2970,7 @@ const http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA uint16 = 0x0045
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -2917,6 +2981,7 @@ const http2cipher_TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA uint16 = 0x0046
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2929,6 +2994,7 @@ Reserved uint16 =  0x0047-4F Reserved uint16 =  0x0050-58 Reserved uint16 =  0x0
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_AES_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2939,6 +3005,7 @@ const http2cipher_TLS_DH_DSS_WITH_AES_256_CBC_SHA256 uint16 = 0x0068
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_AES_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2949,6 +3016,7 @@ const http2cipher_TLS_DH_RSA_WITH_AES_256_CBC_SHA256 uint16 = 0x0069
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2959,6 +3027,7 @@ const http2cipher_TLS_DHE_DSS_WITH_AES_256_CBC_SHA256 uint16 = 0x006A
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2969,6 +3038,7 @@ const http2cipher_TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 uint16 = 0x006B
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2979,6 +3049,7 @@ const http2cipher_TLS_DH_anon_WITH_AES_128_CBC_SHA256 uint16 = 0x006C
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_AES_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -2989,6 +3060,7 @@ const http2cipher_TLS_DH_anon_WITH_AES_256_CBC_SHA256 uint16 = 0x006D
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_CAMELLIA_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3001,6 +3073,7 @@ Unassigned uint16 =  0x006E-83
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3011,6 +3084,7 @@ const http2cipher_TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA uint16 = 0x0085
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3021,6 +3095,7 @@ const http2cipher_TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA uint16 = 0x0086
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3031,6 +3106,7 @@ const http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA uint16 = 0x0087
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3041,6 +3117,7 @@ const http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA uint16 = 0x0088
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3051,6 +3128,7 @@ const http2cipher_TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA uint16 = 0x0089
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3061,6 +3139,7 @@ const http2cipher_TLS_PSK_WITH_RC4_128_SHA uint16 = 0x008A
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3071,6 +3150,7 @@ const http2cipher_TLS_PSK_WITH_3DES_EDE_CBC_SHA uint16 = 0x008B
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3081,6 +3161,7 @@ const http2cipher_TLS_PSK_WITH_AES_128_CBC_SHA uint16 = 0x008C
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3091,6 +3172,7 @@ const http2cipher_TLS_PSK_WITH_AES_256_CBC_SHA uint16 = 0x008D
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3101,6 +3183,7 @@ const http2cipher_TLS_DHE_PSK_WITH_RC4_128_SHA uint16 = 0x008E
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3111,6 +3194,7 @@ const http2cipher_TLS_DHE_PSK_WITH_3DES_EDE_CBC_SHA uint16 = 0x008F
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3121,6 +3205,7 @@ const http2cipher_TLS_DHE_PSK_WITH_AES_128_CBC_SHA uint16 = 0x0090
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3131,6 +3216,7 @@ const http2cipher_TLS_DHE_PSK_WITH_AES_256_CBC_SHA uint16 = 0x0091
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3141,6 +3227,7 @@ const http2cipher_TLS_RSA_PSK_WITH_RC4_128_SHA uint16 = 0x0092
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3151,6 +3238,7 @@ const http2cipher_TLS_RSA_PSK_WITH_3DES_EDE_CBC_SHA uint16 = 0x0093
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3161,6 +3249,7 @@ const http2cipher_TLS_RSA_PSK_WITH_AES_128_CBC_SHA uint16 = 0x0094
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3171,6 +3260,7 @@ const http2cipher_TLS_RSA_PSK_WITH_AES_256_CBC_SHA uint16 = 0x0095
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_SEED_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3181,6 +3271,7 @@ const http2cipher_TLS_RSA_WITH_SEED_CBC_SHA uint16 = 0x0096
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_SEED_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3191,6 +3282,7 @@ const http2cipher_TLS_DH_DSS_WITH_SEED_CBC_SHA uint16 = 0x0097
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_SEED_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3201,6 +3293,7 @@ const http2cipher_TLS_DH_RSA_WITH_SEED_CBC_SHA uint16 = 0x0098
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_SEED_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3211,6 +3304,7 @@ const http2cipher_TLS_DHE_DSS_WITH_SEED_CBC_SHA uint16 = 0x0099
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_SEED_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3221,6 +3315,7 @@ const http2cipher_TLS_DHE_RSA_WITH_SEED_CBC_SHA uint16 = 0x009A
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_SEED_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3231,6 +3326,7 @@ const http2cipher_TLS_DH_anon_WITH_SEED_CBC_SHA uint16 = 0x009B
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3241,6 +3337,7 @@ const http2cipher_TLS_RSA_WITH_AES_128_GCM_SHA256 uint16 = 0x009C
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3251,6 +3348,7 @@ const http2cipher_TLS_RSA_WITH_AES_256_GCM_SHA384 uint16 = 0x009D
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3261,6 +3359,7 @@ const http2cipher_TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 uint16 = 0x009E
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3271,6 +3370,7 @@ const http2cipher_TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 uint16 = 0x009F
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3281,6 +3381,7 @@ const http2cipher_TLS_DH_RSA_WITH_AES_128_GCM_SHA256 uint16 = 0x00A0
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3291,6 +3392,7 @@ const http2cipher_TLS_DH_RSA_WITH_AES_256_GCM_SHA384 uint16 = 0x00A1
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3301,6 +3403,7 @@ const http2cipher_TLS_DHE_DSS_WITH_AES_128_GCM_SHA256 uint16 = 0x00A2
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3311,6 +3414,7 @@ const http2cipher_TLS_DHE_DSS_WITH_AES_256_GCM_SHA384 uint16 = 0x00A3
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3321,6 +3425,7 @@ const http2cipher_TLS_DH_DSS_WITH_AES_128_GCM_SHA256 uint16 = 0x00A4
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3331,6 +3436,7 @@ const http2cipher_TLS_DH_DSS_WITH_AES_256_GCM_SHA384 uint16 = 0x00A5
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3341,6 +3447,7 @@ const http2cipher_TLS_DH_anon_WITH_AES_128_GCM_SHA256 uint16 = 0x00A6
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3351,6 +3458,7 @@ const http2cipher_TLS_DH_anon_WITH_AES_256_GCM_SHA384 uint16 = 0x00A7
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3361,6 +3469,7 @@ const http2cipher_TLS_PSK_WITH_AES_128_GCM_SHA256 uint16 = 0x00A8
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3371,6 +3480,7 @@ const http2cipher_TLS_PSK_WITH_AES_256_GCM_SHA384 uint16 = 0x00A9
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3381,6 +3491,7 @@ const http2cipher_TLS_DHE_PSK_WITH_AES_128_GCM_SHA256 uint16 = 0x00AA
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3391,6 +3502,7 @@ const http2cipher_TLS_DHE_PSK_WITH_AES_256_GCM_SHA384 uint16 = 0x00AB
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3401,6 +3513,7 @@ const http2cipher_TLS_RSA_PSK_WITH_AES_128_GCM_SHA256 uint16 = 0x00AC
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3411,6 +3524,7 @@ const http2cipher_TLS_RSA_PSK_WITH_AES_256_GCM_SHA384 uint16 = 0x00AD
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3421,6 +3535,7 @@ const http2cipher_TLS_PSK_WITH_AES_128_CBC_SHA256 uint16 = 0x00AE
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_AES_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3431,6 +3546,7 @@ const http2cipher_TLS_PSK_WITH_AES_256_CBC_SHA384 uint16 = 0x00AF
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_NULL_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3441,6 +3557,7 @@ const http2cipher_TLS_PSK_WITH_NULL_SHA256 uint16 = 0x00B0
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_NULL_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3451,6 +3568,7 @@ const http2cipher_TLS_PSK_WITH_NULL_SHA384 uint16 = 0x00B1
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3461,6 +3579,7 @@ const http2cipher_TLS_DHE_PSK_WITH_AES_128_CBC_SHA256 uint16 = 0x00B2
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_AES_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3471,6 +3590,7 @@ const http2cipher_TLS_DHE_PSK_WITH_AES_256_CBC_SHA384 uint16 = 0x00B3
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_NULL_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3481,6 +3601,7 @@ const http2cipher_TLS_DHE_PSK_WITH_NULL_SHA256 uint16 = 0x00B4
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_NULL_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3491,6 +3612,7 @@ const http2cipher_TLS_DHE_PSK_WITH_NULL_SHA384 uint16 = 0x00B5
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3501,6 +3623,7 @@ const http2cipher_TLS_RSA_PSK_WITH_AES_128_CBC_SHA256 uint16 = 0x00B6
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_AES_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3511,6 +3634,7 @@ const http2cipher_TLS_RSA_PSK_WITH_AES_256_CBC_SHA384 uint16 = 0x00B7
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_NULL_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3521,6 +3645,7 @@ const http2cipher_TLS_RSA_PSK_WITH_NULL_SHA256 uint16 = 0x00B8
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_NULL_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -3531,6 +3656,7 @@ const http2cipher_TLS_RSA_PSK_WITH_NULL_SHA384 uint16 = 0x00B9
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3541,6 +3667,7 @@ const http2cipher_TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0x00BA
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3551,6 +3678,7 @@ const http2cipher_TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0x00BB
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3561,6 +3689,7 @@ const http2cipher_TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0x00BC
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3571,6 +3700,7 @@ const http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0x00BD
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3581,6 +3711,7 @@ const http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0x00BE
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3591,6 +3722,7 @@ const http2cipher_TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0x00BF
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3601,6 +3733,7 @@ const http2cipher_TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 uint16 = 0x00C0
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3611,6 +3744,7 @@ const http2cipher_TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA256 uint16 = 0x00C1
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3621,6 +3755,7 @@ const http2cipher_TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA256 uint16 = 0x00C2
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3631,6 +3766,7 @@ const http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA256 uint16 = 0x00C3
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3641,6 +3777,7 @@ const http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 uint16 = 0x00C4
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -3651,6 +3788,7 @@ const http2cipher_TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA256 uint16 = 0x00C5
 
 ```
 searchKey: http.http2cipher_TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+tags: [private]
 ```
 
 ```Go
@@ -3663,6 +3801,7 @@ Unassigned uint16 =  0x00C6-FE
 
 ```
 searchKey: http.http2cipher_TLS_FALLBACK_SCSV
+tags: [private]
 ```
 
 ```Go
@@ -3675,6 +3814,7 @@ Unassigned uint16 =  0x01-55,*
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_NULL_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3687,6 +3827,7 @@ Unassigned                                   uint16 = 0x5601 - 0xC000
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3697,6 +3838,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_RC4_128_SHA uint16 = 0xC002
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3707,6 +3849,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA uint16 = 0xC003
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3717,6 +3860,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA uint16 = 0xC004
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3727,6 +3871,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA uint16 = 0xC005
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_NULL_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3737,6 +3882,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_NULL_SHA uint16 = 0xC006
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3747,6 +3893,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_RC4_128_SHA uint16 = 0xC007
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3757,6 +3904,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA uint16 = 0xC008
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3767,6 +3915,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA uint16 = 0xC009
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3777,6 +3926,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA uint16 = 0xC00A
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_NULL_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3787,6 +3937,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_NULL_SHA uint16 = 0xC00B
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3797,6 +3948,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_RC4_128_SHA uint16 = 0xC00C
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3807,6 +3959,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA uint16 = 0xC00D
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3817,6 +3970,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_AES_128_CBC_SHA uint16 = 0xC00E
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3827,6 +3981,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_AES_256_CBC_SHA uint16 = 0xC00F
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_NULL_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3837,6 +3992,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_NULL_SHA uint16 = 0xC010
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3847,6 +4003,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_RC4_128_SHA uint16 = 0xC011
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3857,6 +4014,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA uint16 = 0xC012
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3867,6 +4025,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA uint16 = 0xC013
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3877,6 +4036,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA uint16 = 0xC014
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_anon_WITH_NULL_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3887,6 +4047,7 @@ const http2cipher_TLS_ECDH_anon_WITH_NULL_SHA uint16 = 0xC015
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_anon_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3897,6 +4058,7 @@ const http2cipher_TLS_ECDH_anon_WITH_RC4_128_SHA uint16 = 0xC016
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3907,6 +4069,7 @@ const http2cipher_TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA uint16 = 0xC017
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_anon_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3917,6 +4080,7 @@ const http2cipher_TLS_ECDH_anon_WITH_AES_128_CBC_SHA uint16 = 0xC018
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_anon_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3927,6 +4091,7 @@ const http2cipher_TLS_ECDH_anon_WITH_AES_256_CBC_SHA uint16 = 0xC019
 
 ```
 searchKey: http.http2cipher_TLS_SRP_SHA_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3937,6 +4102,7 @@ const http2cipher_TLS_SRP_SHA_WITH_3DES_EDE_CBC_SHA uint16 = 0xC01A
 
 ```
 searchKey: http.http2cipher_TLS_SRP_SHA_RSA_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3947,6 +4113,7 @@ const http2cipher_TLS_SRP_SHA_RSA_WITH_3DES_EDE_CBC_SHA uint16 = 0xC01B
 
 ```
 searchKey: http.http2cipher_TLS_SRP_SHA_DSS_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3957,6 +4124,7 @@ const http2cipher_TLS_SRP_SHA_DSS_WITH_3DES_EDE_CBC_SHA uint16 = 0xC01C
 
 ```
 searchKey: http.http2cipher_TLS_SRP_SHA_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3967,6 +4135,7 @@ const http2cipher_TLS_SRP_SHA_WITH_AES_128_CBC_SHA uint16 = 0xC01D
 
 ```
 searchKey: http.http2cipher_TLS_SRP_SHA_RSA_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3977,6 +4146,7 @@ const http2cipher_TLS_SRP_SHA_RSA_WITH_AES_128_CBC_SHA uint16 = 0xC01E
 
 ```
 searchKey: http.http2cipher_TLS_SRP_SHA_DSS_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3987,6 +4157,7 @@ const http2cipher_TLS_SRP_SHA_DSS_WITH_AES_128_CBC_SHA uint16 = 0xC01F
 
 ```
 searchKey: http.http2cipher_TLS_SRP_SHA_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -3997,6 +4168,7 @@ const http2cipher_TLS_SRP_SHA_WITH_AES_256_CBC_SHA uint16 = 0xC020
 
 ```
 searchKey: http.http2cipher_TLS_SRP_SHA_RSA_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -4007,6 +4179,7 @@ const http2cipher_TLS_SRP_SHA_RSA_WITH_AES_256_CBC_SHA uint16 = 0xC021
 
 ```
 searchKey: http.http2cipher_TLS_SRP_SHA_DSS_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -4017,6 +4190,7 @@ const http2cipher_TLS_SRP_SHA_DSS_WITH_AES_256_CBC_SHA uint16 = 0xC022
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4027,6 +4201,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 uint16 = 0xC023
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4037,6 +4212,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 uint16 = 0xC024
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4047,6 +4223,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 uint16 = 0xC025
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4057,6 +4234,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384 uint16 = 0xC026
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4067,6 +4245,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 uint16 = 0xC027
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4077,6 +4256,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 uint16 = 0xC028
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4087,6 +4267,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256 uint16 = 0xC029
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4097,6 +4278,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384 uint16 = 0xC02A
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4107,6 +4289,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 uint16 = 0xC02B
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4117,6 +4300,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 uint16 = 0xC02C
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4127,6 +4311,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256 uint16 = 0xC02D
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4137,6 +4322,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384 uint16 = 0xC02E
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4147,6 +4333,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 uint16 = 0xC02F
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4157,6 +4344,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 uint16 = 0xC030
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4167,6 +4355,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256 uint16 = 0xC031
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4177,6 +4366,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384 uint16 = 0xC032
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_RC4_128_SHA
+tags: [private]
 ```
 
 ```Go
@@ -4187,6 +4377,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_RC4_128_SHA uint16 = 0xC033
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_3DES_EDE_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -4197,6 +4388,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_3DES_EDE_CBC_SHA uint16 = 0xC034
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -4207,6 +4399,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA uint16 = 0xC035
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA
+tags: [private]
 ```
 
 ```Go
@@ -4217,6 +4410,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA uint16 = 0xC036
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4227,6 +4421,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256 uint16 = 0xC037
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4237,6 +4432,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA384 uint16 = 0xC038
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_NULL_SHA
+tags: [private]
 ```
 
 ```Go
@@ -4247,6 +4443,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_NULL_SHA uint16 = 0xC039
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_NULL_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4257,6 +4454,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_NULL_SHA256 uint16 = 0xC03A
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_NULL_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4267,6 +4465,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_NULL_SHA384 uint16 = 0xC03B
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4277,6 +4476,7 @@ const http2cipher_TLS_RSA_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC03C
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4287,6 +4487,7 @@ const http2cipher_TLS_RSA_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC03D
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4297,6 +4498,7 @@ const http2cipher_TLS_DH_DSS_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC03E
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4307,6 +4509,7 @@ const http2cipher_TLS_DH_DSS_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC03F
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4317,6 +4520,7 @@ const http2cipher_TLS_DH_RSA_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC040
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4327,6 +4531,7 @@ const http2cipher_TLS_DH_RSA_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC041
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4337,6 +4542,7 @@ const http2cipher_TLS_DHE_DSS_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC042
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4347,6 +4553,7 @@ const http2cipher_TLS_DHE_DSS_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC043
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4357,6 +4564,7 @@ const http2cipher_TLS_DHE_RSA_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC044
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4367,6 +4575,7 @@ const http2cipher_TLS_DHE_RSA_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC045
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4377,6 +4586,7 @@ const http2cipher_TLS_DH_anon_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC046
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4387,6 +4597,7 @@ const http2cipher_TLS_DH_anon_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC047
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4397,6 +4608,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC048
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4407,6 +4619,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC049
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4417,6 +4630,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC04A
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4427,6 +4641,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC04B
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4437,6 +4652,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC04C
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4447,6 +4663,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC04D
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4457,6 +4674,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC04E
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4467,6 +4685,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC04F
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4477,6 +4696,7 @@ const http2cipher_TLS_RSA_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC050
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4487,6 +4707,7 @@ const http2cipher_TLS_RSA_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC051
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4497,6 +4718,7 @@ const http2cipher_TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC052
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4507,6 +4729,7 @@ const http2cipher_TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC053
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4517,6 +4740,7 @@ const http2cipher_TLS_DH_RSA_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC054
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4527,6 +4751,7 @@ const http2cipher_TLS_DH_RSA_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC055
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4537,6 +4762,7 @@ const http2cipher_TLS_DHE_DSS_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC056
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4547,6 +4773,7 @@ const http2cipher_TLS_DHE_DSS_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC057
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4557,6 +4784,7 @@ const http2cipher_TLS_DH_DSS_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC058
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4567,6 +4795,7 @@ const http2cipher_TLS_DH_DSS_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC059
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4577,6 +4806,7 @@ const http2cipher_TLS_DH_anon_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC05A
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4587,6 +4817,7 @@ const http2cipher_TLS_DH_anon_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC05B
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4597,6 +4828,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC05C
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4607,6 +4839,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC05D
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4617,6 +4850,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC05E
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4627,6 +4861,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC05F
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4637,6 +4872,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC060
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4647,6 +4883,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC061
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4657,6 +4894,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC062
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4667,6 +4905,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC063
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4677,6 +4916,7 @@ const http2cipher_TLS_PSK_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC064
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4687,6 +4927,7 @@ const http2cipher_TLS_PSK_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC065
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4697,6 +4938,7 @@ const http2cipher_TLS_DHE_PSK_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC066
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4707,6 +4949,7 @@ const http2cipher_TLS_DHE_PSK_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC067
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4717,6 +4960,7 @@ const http2cipher_TLS_RSA_PSK_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC068
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4727,6 +4971,7 @@ const http2cipher_TLS_RSA_PSK_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC069
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4737,6 +4982,7 @@ const http2cipher_TLS_PSK_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC06A
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4747,6 +4993,7 @@ const http2cipher_TLS_PSK_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC06B
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4757,6 +5004,7 @@ const http2cipher_TLS_DHE_PSK_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC06C
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4767,6 +5015,7 @@ const http2cipher_TLS_DHE_PSK_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC06D
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_ARIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4777,6 +5026,7 @@ const http2cipher_TLS_RSA_PSK_WITH_ARIA_128_GCM_SHA256 uint16 = 0xC06E
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_ARIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4787,6 +5037,7 @@ const http2cipher_TLS_RSA_PSK_WITH_ARIA_256_GCM_SHA384 uint16 = 0xC06F
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_ARIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4797,6 +5048,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_ARIA_128_CBC_SHA256 uint16 = 0xC070
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_ARIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4807,6 +5059,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_ARIA_256_CBC_SHA384 uint16 = 0xC071
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4817,6 +5070,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0xC072
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4827,6 +5081,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_CBC_SHA384 uint16 = 0xC073
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4837,6 +5092,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0xC074
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_CAMELLIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4847,6 +5103,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_CAMELLIA_256_CBC_SHA384 uint16 = 0xC075
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4857,6 +5114,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0xC076
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4867,6 +5125,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 uint16 = 0xC077
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4877,6 +5136,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0xC078
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_CAMELLIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4887,6 +5147,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_CAMELLIA_256_CBC_SHA384 uint16 = 0xC079
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4897,6 +5158,7 @@ const http2cipher_TLS_RSA_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC07A
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4907,6 +5169,7 @@ const http2cipher_TLS_RSA_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC07B
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4917,6 +5180,7 @@ const http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC07C
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4927,6 +5191,7 @@ const http2cipher_TLS_DHE_RSA_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC07D
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4937,6 +5202,7 @@ const http2cipher_TLS_DH_RSA_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC07E
 
 ```
 searchKey: http.http2cipher_TLS_DH_RSA_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4947,6 +5213,7 @@ const http2cipher_TLS_DH_RSA_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC07F
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4957,6 +5224,7 @@ const http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC080
 
 ```
 searchKey: http.http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4967,6 +5235,7 @@ const http2cipher_TLS_DHE_DSS_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC081
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4977,6 +5246,7 @@ const http2cipher_TLS_DH_DSS_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC082
 
 ```
 searchKey: http.http2cipher_TLS_DH_DSS_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -4987,6 +5257,7 @@ const http2cipher_TLS_DH_DSS_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC083
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -4997,6 +5268,7 @@ const http2cipher_TLS_DH_anon_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC084
 
 ```
 searchKey: http.http2cipher_TLS_DH_anon_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5007,6 +5279,7 @@ const http2cipher_TLS_DH_anon_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC085
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5017,6 +5290,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC086
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5027,6 +5301,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC087
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5037,6 +5312,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC088
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_ECDSA_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5047,6 +5323,7 @@ const http2cipher_TLS_ECDH_ECDSA_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC089
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5057,6 +5334,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC08A
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5067,6 +5345,7 @@ const http2cipher_TLS_ECDHE_RSA_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC08B
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5077,6 +5356,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC08C
 
 ```
 searchKey: http.http2cipher_TLS_ECDH_RSA_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5087,6 +5367,7 @@ const http2cipher_TLS_ECDH_RSA_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC08D
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5097,6 +5378,7 @@ const http2cipher_TLS_PSK_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC08E
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5107,6 +5389,7 @@ const http2cipher_TLS_PSK_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC08F
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5117,6 +5400,7 @@ const http2cipher_TLS_DHE_PSK_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC090
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5127,6 +5411,7 @@ const http2cipher_TLS_DHE_PSK_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC091
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_CAMELLIA_128_GCM_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5137,6 +5422,7 @@ const http2cipher_TLS_RSA_PSK_WITH_CAMELLIA_128_GCM_SHA256 uint16 = 0xC092
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_CAMELLIA_256_GCM_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5147,6 +5433,7 @@ const http2cipher_TLS_RSA_PSK_WITH_CAMELLIA_256_GCM_SHA384 uint16 = 0xC093
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5157,6 +5444,7 @@ const http2cipher_TLS_PSK_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0xC094
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_CAMELLIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5167,6 +5455,7 @@ const http2cipher_TLS_PSK_WITH_CAMELLIA_256_CBC_SHA384 uint16 = 0xC095
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5177,6 +5466,7 @@ const http2cipher_TLS_DHE_PSK_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0xC096
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_CAMELLIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5187,6 +5477,7 @@ const http2cipher_TLS_DHE_PSK_WITH_CAMELLIA_256_CBC_SHA384 uint16 = 0xC097
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5197,6 +5488,7 @@ const http2cipher_TLS_RSA_PSK_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0xC098
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_CAMELLIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5207,6 +5499,7 @@ const http2cipher_TLS_RSA_PSK_WITH_CAMELLIA_256_CBC_SHA384 uint16 = 0xC099
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_CAMELLIA_128_CBC_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5217,6 +5510,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_CAMELLIA_128_CBC_SHA256 uint16 = 0xC09A
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_CAMELLIA_256_CBC_SHA384
+tags: [private]
 ```
 
 ```Go
@@ -5227,6 +5521,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_CAMELLIA_256_CBC_SHA384 uint16 = 0xC09B
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_AES_128_CCM
+tags: [private]
 ```
 
 ```Go
@@ -5237,6 +5532,7 @@ const http2cipher_TLS_RSA_WITH_AES_128_CCM uint16 = 0xC09C
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_AES_256_CCM
+tags: [private]
 ```
 
 ```Go
@@ -5247,6 +5543,7 @@ const http2cipher_TLS_RSA_WITH_AES_256_CCM uint16 = 0xC09D
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_AES_128_CCM
+tags: [private]
 ```
 
 ```Go
@@ -5257,6 +5554,7 @@ const http2cipher_TLS_DHE_RSA_WITH_AES_128_CCM uint16 = 0xC09E
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_AES_256_CCM
+tags: [private]
 ```
 
 ```Go
@@ -5267,6 +5565,7 @@ const http2cipher_TLS_DHE_RSA_WITH_AES_256_CCM uint16 = 0xC09F
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_AES_128_CCM_8
+tags: [private]
 ```
 
 ```Go
@@ -5277,6 +5576,7 @@ const http2cipher_TLS_RSA_WITH_AES_128_CCM_8 uint16 = 0xC0A0
 
 ```
 searchKey: http.http2cipher_TLS_RSA_WITH_AES_256_CCM_8
+tags: [private]
 ```
 
 ```Go
@@ -5287,6 +5587,7 @@ const http2cipher_TLS_RSA_WITH_AES_256_CCM_8 uint16 = 0xC0A1
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_AES_128_CCM_8
+tags: [private]
 ```
 
 ```Go
@@ -5297,6 +5598,7 @@ const http2cipher_TLS_DHE_RSA_WITH_AES_128_CCM_8 uint16 = 0xC0A2
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_AES_256_CCM_8
+tags: [private]
 ```
 
 ```Go
@@ -5307,6 +5609,7 @@ const http2cipher_TLS_DHE_RSA_WITH_AES_256_CCM_8 uint16 = 0xC0A3
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_AES_128_CCM
+tags: [private]
 ```
 
 ```Go
@@ -5317,6 +5620,7 @@ const http2cipher_TLS_PSK_WITH_AES_128_CCM uint16 = 0xC0A4
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_AES_256_CCM
+tags: [private]
 ```
 
 ```Go
@@ -5327,6 +5631,7 @@ const http2cipher_TLS_PSK_WITH_AES_256_CCM uint16 = 0xC0A5
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_AES_128_CCM
+tags: [private]
 ```
 
 ```Go
@@ -5337,6 +5642,7 @@ const http2cipher_TLS_DHE_PSK_WITH_AES_128_CCM uint16 = 0xC0A6
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_AES_256_CCM
+tags: [private]
 ```
 
 ```Go
@@ -5347,6 +5653,7 @@ const http2cipher_TLS_DHE_PSK_WITH_AES_256_CCM uint16 = 0xC0A7
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_AES_128_CCM_8
+tags: [private]
 ```
 
 ```Go
@@ -5357,6 +5664,7 @@ const http2cipher_TLS_PSK_WITH_AES_128_CCM_8 uint16 = 0xC0A8
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_AES_256_CCM_8
+tags: [private]
 ```
 
 ```Go
@@ -5367,6 +5675,7 @@ const http2cipher_TLS_PSK_WITH_AES_256_CCM_8 uint16 = 0xC0A9
 
 ```
 searchKey: http.http2cipher_TLS_PSK_DHE_WITH_AES_128_CCM_8
+tags: [private]
 ```
 
 ```Go
@@ -5377,6 +5686,7 @@ const http2cipher_TLS_PSK_DHE_WITH_AES_128_CCM_8 uint16 = 0xC0AA
 
 ```
 searchKey: http.http2cipher_TLS_PSK_DHE_WITH_AES_256_CCM_8
+tags: [private]
 ```
 
 ```Go
@@ -5387,6 +5697,7 @@ const http2cipher_TLS_PSK_DHE_WITH_AES_256_CCM_8 uint16 = 0xC0AB
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_AES_128_CCM
+tags: [private]
 ```
 
 ```Go
@@ -5397,6 +5708,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_AES_128_CCM uint16 = 0xC0AC
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_AES_256_CCM
+tags: [private]
 ```
 
 ```Go
@@ -5407,6 +5719,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_AES_256_CCM uint16 = 0xC0AD
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8
+tags: [private]
 ```
 
 ```Go
@@ -5417,6 +5730,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 uint16 = 0xC0AE
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8
+tags: [private]
 ```
 
 ```Go
@@ -5427,6 +5741,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8 uint16 = 0xC0AF
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5439,6 +5754,7 @@ Unassigned uint16 =  0xC0B0-FF Unassigned uint16 =  0xC1-CB,* Unassigned uint16 
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5449,6 +5765,7 @@ const http2cipher_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 uint16 = 0xCCA9
 
 ```
 searchKey: http.http2cipher_TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5459,6 +5776,7 @@ const http2cipher_TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 uint16 = 0xCCAA
 
 ```
 searchKey: http.http2cipher_TLS_PSK_WITH_CHACHA20_POLY1305_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5469,6 +5787,7 @@ const http2cipher_TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 uint16 = 0xCCAB
 
 ```
 searchKey: http.http2cipher_TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5479,6 +5798,7 @@ const http2cipher_TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 uint16 = 0xCCAC
 
 ```
 searchKey: http.http2cipher_TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5489,6 +5809,7 @@ const http2cipher_TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256 uint16 = 0xCCAD
 
 ```
 searchKey: http.http2cipher_TLS_RSA_PSK_WITH_CHACHA20_POLY1305_SHA256
+tags: [private]
 ```
 
 ```Go
@@ -5499,6 +5820,7 @@ const http2cipher_TLS_RSA_PSK_WITH_CHACHA20_POLY1305_SHA256 uint16 = 0xCCAE
 
 ```
 searchKey: http.http2dialOnMiss
+tags: [private]
 ```
 
 ```Go
@@ -5509,6 +5831,7 @@ const http2dialOnMiss = true
 
 ```
 searchKey: http.http2noDialOnMiss
+tags: [private]
 ```
 
 ```Go
@@ -5519,6 +5842,7 @@ const http2noDialOnMiss = false
 
 ```
 searchKey: http.http2ErrCodeNo
+tags: [private]
 ```
 
 ```Go
@@ -5529,6 +5853,7 @@ const http2ErrCodeNo http2ErrCode = 0x0
 
 ```
 searchKey: http.http2ErrCodeProtocol
+tags: [private]
 ```
 
 ```Go
@@ -5539,6 +5864,7 @@ const http2ErrCodeProtocol http2ErrCode = 0x1
 
 ```
 searchKey: http.http2ErrCodeInternal
+tags: [private]
 ```
 
 ```Go
@@ -5549,6 +5875,7 @@ const http2ErrCodeInternal http2ErrCode = 0x2
 
 ```
 searchKey: http.http2ErrCodeFlowControl
+tags: [private]
 ```
 
 ```Go
@@ -5559,6 +5886,7 @@ const http2ErrCodeFlowControl http2ErrCode = 0x3
 
 ```
 searchKey: http.http2ErrCodeSettingsTimeout
+tags: [private]
 ```
 
 ```Go
@@ -5569,6 +5897,7 @@ const http2ErrCodeSettingsTimeout http2ErrCode = 0x4
 
 ```
 searchKey: http.http2ErrCodeStreamClosed
+tags: [private]
 ```
 
 ```Go
@@ -5579,6 +5908,7 @@ const http2ErrCodeStreamClosed http2ErrCode = 0x5
 
 ```
 searchKey: http.http2ErrCodeFrameSize
+tags: [private]
 ```
 
 ```Go
@@ -5589,6 +5919,7 @@ const http2ErrCodeFrameSize http2ErrCode = 0x6
 
 ```
 searchKey: http.http2ErrCodeRefusedStream
+tags: [private]
 ```
 
 ```Go
@@ -5599,6 +5930,7 @@ const http2ErrCodeRefusedStream http2ErrCode = 0x7
 
 ```
 searchKey: http.http2ErrCodeCancel
+tags: [private]
 ```
 
 ```Go
@@ -5609,6 +5941,7 @@ const http2ErrCodeCancel http2ErrCode = 0x8
 
 ```
 searchKey: http.http2ErrCodeCompression
+tags: [private]
 ```
 
 ```Go
@@ -5619,6 +5952,7 @@ const http2ErrCodeCompression http2ErrCode = 0x9
 
 ```
 searchKey: http.http2ErrCodeConnect
+tags: [private]
 ```
 
 ```Go
@@ -5629,6 +5963,7 @@ const http2ErrCodeConnect http2ErrCode = 0xa
 
 ```
 searchKey: http.http2ErrCodeEnhanceYourCalm
+tags: [private]
 ```
 
 ```Go
@@ -5639,6 +5974,7 @@ const http2ErrCodeEnhanceYourCalm http2ErrCode = 0xb
 
 ```
 searchKey: http.http2ErrCodeInadequateSecurity
+tags: [private]
 ```
 
 ```Go
@@ -5649,6 +5985,7 @@ const http2ErrCodeInadequateSecurity http2ErrCode = 0xc
 
 ```
 searchKey: http.http2ErrCodeHTTP11Required
+tags: [private]
 ```
 
 ```Go
@@ -5659,6 +5996,7 @@ const http2ErrCodeHTTP11Required http2ErrCode = 0xd
 
 ```
 searchKey: http.http2frameHeaderLen
+tags: [private]
 ```
 
 ```Go
@@ -5669,6 +6007,7 @@ const http2frameHeaderLen = 9
 
 ```
 searchKey: http.http2FrameData
+tags: [private]
 ```
 
 ```Go
@@ -5679,6 +6018,7 @@ const http2FrameData http2FrameType = 0x0
 
 ```
 searchKey: http.http2FrameHeaders
+tags: [private]
 ```
 
 ```Go
@@ -5689,6 +6029,7 @@ const http2FrameHeaders http2FrameType = 0x1
 
 ```
 searchKey: http.http2FramePriority
+tags: [private]
 ```
 
 ```Go
@@ -5699,6 +6040,7 @@ const http2FramePriority http2FrameType = 0x2
 
 ```
 searchKey: http.http2FrameRSTStream
+tags: [private]
 ```
 
 ```Go
@@ -5709,6 +6051,7 @@ const http2FrameRSTStream http2FrameType = 0x3
 
 ```
 searchKey: http.http2FrameSettings
+tags: [private]
 ```
 
 ```Go
@@ -5719,6 +6062,7 @@ const http2FrameSettings http2FrameType = 0x4
 
 ```
 searchKey: http.http2FramePushPromise
+tags: [private]
 ```
 
 ```Go
@@ -5729,6 +6073,7 @@ const http2FramePushPromise http2FrameType = 0x5
 
 ```
 searchKey: http.http2FramePing
+tags: [private]
 ```
 
 ```Go
@@ -5739,6 +6084,7 @@ const http2FramePing http2FrameType = 0x6
 
 ```
 searchKey: http.http2FrameGoAway
+tags: [private]
 ```
 
 ```Go
@@ -5749,6 +6095,7 @@ const http2FrameGoAway http2FrameType = 0x7
 
 ```
 searchKey: http.http2FrameWindowUpdate
+tags: [private]
 ```
 
 ```Go
@@ -5759,6 +6106,7 @@ const http2FrameWindowUpdate http2FrameType = 0x8
 
 ```
 searchKey: http.http2FrameContinuation
+tags: [private]
 ```
 
 ```Go
@@ -5769,6 +6117,7 @@ const http2FrameContinuation http2FrameType = 0x9
 
 ```
 searchKey: http.http2FlagDataEndStream
+tags: [private]
 ```
 
 ```Go
@@ -5783,6 +6132,7 @@ Data Frame
 
 ```
 searchKey: http.http2FlagDataPadded
+tags: [private]
 ```
 
 ```Go
@@ -5795,6 +6145,7 @@ Frame-specific FrameHeader flag bits.
 
 ```
 searchKey: http.http2FlagHeadersEndStream
+tags: [private]
 ```
 
 ```Go
@@ -5809,6 +6160,7 @@ Headers Frame
 
 ```
 searchKey: http.http2FlagHeadersEndHeaders
+tags: [private]
 ```
 
 ```Go
@@ -5821,6 +6173,7 @@ Frame-specific FrameHeader flag bits.
 
 ```
 searchKey: http.http2FlagHeadersPadded
+tags: [private]
 ```
 
 ```Go
@@ -5833,6 +6186,7 @@ Frame-specific FrameHeader flag bits.
 
 ```
 searchKey: http.http2FlagHeadersPriority
+tags: [private]
 ```
 
 ```Go
@@ -5845,6 +6199,7 @@ Frame-specific FrameHeader flag bits.
 
 ```
 searchKey: http.http2FlagSettingsAck
+tags: [private]
 ```
 
 ```Go
@@ -5859,6 +6214,7 @@ Settings Frame
 
 ```
 searchKey: http.http2FlagPingAck
+tags: [private]
 ```
 
 ```Go
@@ -5873,6 +6229,7 @@ Ping Frame
 
 ```
 searchKey: http.http2FlagContinuationEndHeaders
+tags: [private]
 ```
 
 ```Go
@@ -5887,6 +6244,7 @@ Continuation Frame
 
 ```
 searchKey: http.http2FlagPushPromiseEndHeaders
+tags: [private]
 ```
 
 ```Go
@@ -5899,6 +6257,7 @@ Frame-specific FrameHeader flag bits.
 
 ```
 searchKey: http.http2FlagPushPromisePadded
+tags: [private]
 ```
 
 ```Go
@@ -5911,6 +6270,7 @@ Frame-specific FrameHeader flag bits.
 
 ```
 searchKey: http.http2minMaxFrameSize
+tags: [private]
 ```
 
 ```Go
@@ -5921,6 +6281,7 @@ const http2minMaxFrameSize = 1 << 14
 
 ```
 searchKey: http.http2maxFrameSize
+tags: [private]
 ```
 
 ```Go
@@ -5931,6 +6292,7 @@ const http2maxFrameSize = 1<<24 - 1
 
 ```
 searchKey: http.http2ClientPreface
+tags: [private]
 ```
 
 ```Go
@@ -5943,6 +6305,7 @@ ClientPreface is the string that must be sent by new connections from clients.
 
 ```
 searchKey: http.http2initialMaxFrameSize
+tags: [private]
 ```
 
 ```Go
@@ -5955,6 +6318,7 @@ SETTINGS_MAX_FRAME_SIZE default [http://http2.github.io/http2-spec/#rfc.section.
 
 ```
 searchKey: http.http2NextProtoTLS
+tags: [private]
 ```
 
 ```Go
@@ -5967,6 +6331,7 @@ NextProtoTLS is the NPN/ALPN protocol negotiated during HTTP/2's TLS setup.
 
 ```
 searchKey: http.http2initialHeaderTableSize
+tags: [private]
 ```
 
 ```Go
@@ -5979,6 +6344,7 @@ const http2initialHeaderTableSize = 4096
 
 ```
 searchKey: http.http2initialWindowSize
+tags: [private]
 ```
 
 ```Go
@@ -5990,6 +6356,7 @@ const http2initialWindowSize = 65535 // 6.9.2 Initial Flow Control Window Size
 
 ```
 searchKey: http.http2defaultMaxReadFrameSize
+tags: [private]
 ```
 
 ```Go
@@ -6000,6 +6367,7 @@ const http2defaultMaxReadFrameSize = 1 << 20
 
 ```
 searchKey: http.http2stateIdle
+tags: [private]
 ```
 
 ```Go
@@ -6018,6 +6386,7 @@ For simplicity, the server code merges "reserved (local)" into "half-closed (rem
 
 ```
 searchKey: http.http2stateOpen
+tags: [private]
 ```
 
 ```Go
@@ -6036,6 +6405,7 @@ For simplicity, the server code merges "reserved (local)" into "half-closed (rem
 
 ```
 searchKey: http.http2stateHalfClosedLocal
+tags: [private]
 ```
 
 ```Go
@@ -6054,6 +6424,7 @@ For simplicity, the server code merges "reserved (local)" into "half-closed (rem
 
 ```
 searchKey: http.http2stateHalfClosedRemote
+tags: [private]
 ```
 
 ```Go
@@ -6072,6 +6443,7 @@ For simplicity, the server code merges "reserved (local)" into "half-closed (rem
 
 ```
 searchKey: http.http2stateClosed
+tags: [private]
 ```
 
 ```Go
@@ -6090,6 +6462,7 @@ For simplicity, the server code merges "reserved (local)" into "half-closed (rem
 
 ```
 searchKey: http.http2SettingHeaderTableSize
+tags: [private]
 ```
 
 ```Go
@@ -6100,6 +6473,7 @@ const http2SettingHeaderTableSize http2SettingID = 0x1
 
 ```
 searchKey: http.http2SettingEnablePush
+tags: [private]
 ```
 
 ```Go
@@ -6110,6 +6484,7 @@ const http2SettingEnablePush http2SettingID = 0x2
 
 ```
 searchKey: http.http2SettingMaxConcurrentStreams
+tags: [private]
 ```
 
 ```Go
@@ -6120,6 +6495,7 @@ const http2SettingMaxConcurrentStreams http2SettingID = 0x3
 
 ```
 searchKey: http.http2SettingInitialWindowSize
+tags: [private]
 ```
 
 ```Go
@@ -6130,6 +6506,7 @@ const http2SettingInitialWindowSize http2SettingID = 0x4
 
 ```
 searchKey: http.http2SettingMaxFrameSize
+tags: [private]
 ```
 
 ```Go
@@ -6140,6 +6517,7 @@ const http2SettingMaxFrameSize http2SettingID = 0x5
 
 ```
 searchKey: http.http2SettingMaxHeaderListSize
+tags: [private]
 ```
 
 ```Go
@@ -6150,6 +6528,7 @@ const http2SettingMaxHeaderListSize http2SettingID = 0x6
 
 ```
 searchKey: http.http2bufWriterPoolBufferSize
+tags: [private]
 ```
 
 ```Go
@@ -6164,6 +6543,7 @@ TODO: pick a less arbitrary value? this is a bit under (3 x typical 1500 byte MT
 
 ```
 searchKey: http.http2prefaceTimeout
+tags: [private]
 ```
 
 ```Go
@@ -6174,6 +6554,7 @@ const http2prefaceTimeout = 10 * time.Second
 
 ```
 searchKey: http.http2firstSettingsTimeout
+tags: [private]
 ```
 
 ```Go
@@ -6185,6 +6566,7 @@ const http2firstSettingsTimeout = 2 * time.Second // should be in-flight with pr
 
 ```
 searchKey: http.http2handlerChunkWriteSize
+tags: [private]
 ```
 
 ```Go
@@ -6195,6 +6577,7 @@ const http2handlerChunkWriteSize = 4 << 10
 
 ```
 searchKey: http.http2defaultMaxStreams
+tags: [private]
 ```
 
 ```Go
@@ -6206,6 +6589,7 @@ const http2defaultMaxStreams = 250 // TODO: make this 100 as the GFE seems to?
 
 ```
 searchKey: http.http2maxQueuedControlFrames
+tags: [private]
 ```
 
 ```Go
@@ -6216,6 +6600,7 @@ const http2maxQueuedControlFrames = 10000
 
 ```
 searchKey: http.http2TrailerPrefix
+tags: [private]
 ```
 
 ```Go
@@ -6235,6 +6620,7 @@ This mechanism is intended only for trailers that are not known prior to the hea
 
 ```
 searchKey: http.http2transportDefaultConnFlow
+tags: [private]
 ```
 
 ```Go
@@ -6247,6 +6633,7 @@ transportDefaultConnFlow is how many connection-level flow control tokens we giv
 
 ```
 searchKey: http.http2transportDefaultStreamFlow
+tags: [private]
 ```
 
 ```Go
@@ -6259,6 +6646,7 @@ transportDefaultStreamFlow is how many stream-level flow control tokens we annou
 
 ```
 searchKey: http.http2transportDefaultStreamMinRefresh
+tags: [private]
 ```
 
 ```Go
@@ -6271,6 +6659,7 @@ transportDefaultStreamMinRefresh is the minimum number of bytes we'll send a str
 
 ```
 searchKey: http.http2defaultUserAgent
+tags: [private]
 ```
 
 ```Go
@@ -6281,6 +6670,7 @@ const http2defaultUserAgent = "Go-http-client/2.0"
 
 ```
 searchKey: http.http2maxAllocFrameSize
+tags: [private]
 ```
 
 ```Go
@@ -6291,6 +6681,7 @@ const http2maxAllocFrameSize = 512 << 10
 
 ```
 searchKey: http.http2priorityDefaultWeight
+tags: [private]
 ```
 
 ```Go
@@ -6304,6 +6695,7 @@ RFC 7540, Section 5.3.5: the default weight is 16.
 
 ```
 searchKey: http.http2priorityNodeOpen
+tags: [private]
 ```
 
 ```Go
@@ -6314,6 +6706,7 @@ const http2priorityNodeOpen http2priorityNodeState = iota
 
 ```
 searchKey: http.http2priorityNodeClosed
+tags: [private]
 ```
 
 ```Go
@@ -6324,6 +6717,7 @@ const http2priorityNodeClosed
 
 ```
 searchKey: http.http2priorityNodeIdle
+tags: [private]
 ```
 
 ```Go
@@ -6334,6 +6728,7 @@ const http2priorityNodeIdle
 
 ```
 searchKey: http.maxInt64
+tags: [private]
 ```
 
 ```Go
@@ -6346,7 +6741,6 @@ maxInt64 is the effective "infinite" value for the Server and Transport's byte-l
 
 ```
 searchKey: http.MethodGet
-tags: [exported]
 ```
 
 ```Go
@@ -6361,7 +6755,6 @@ Unless otherwise noted, these are defined in RFC 7231 section 4.3.
 
 ```
 searchKey: http.MethodHead
-tags: [exported]
 ```
 
 ```Go
@@ -6376,7 +6769,6 @@ Unless otherwise noted, these are defined in RFC 7231 section 4.3.
 
 ```
 searchKey: http.MethodPost
-tags: [exported]
 ```
 
 ```Go
@@ -6391,7 +6783,6 @@ Unless otherwise noted, these are defined in RFC 7231 section 4.3.
 
 ```
 searchKey: http.MethodPut
-tags: [exported]
 ```
 
 ```Go
@@ -6406,7 +6797,6 @@ Unless otherwise noted, these are defined in RFC 7231 section 4.3.
 
 ```
 searchKey: http.MethodPatch
-tags: [exported]
 ```
 
 ```Go
@@ -6422,7 +6812,6 @@ Unless otherwise noted, these are defined in RFC 7231 section 4.3.
 
 ```
 searchKey: http.MethodDelete
-tags: [exported]
 ```
 
 ```Go
@@ -6437,7 +6826,6 @@ Unless otherwise noted, these are defined in RFC 7231 section 4.3.
 
 ```
 searchKey: http.MethodConnect
-tags: [exported]
 ```
 
 ```Go
@@ -6452,7 +6840,6 @@ Unless otherwise noted, these are defined in RFC 7231 section 4.3.
 
 ```
 searchKey: http.MethodOptions
-tags: [exported]
 ```
 
 ```Go
@@ -6467,7 +6854,6 @@ Unless otherwise noted, these are defined in RFC 7231 section 4.3.
 
 ```
 searchKey: http.MethodTrace
-tags: [exported]
 ```
 
 ```Go
@@ -6482,6 +6868,7 @@ Unless otherwise noted, these are defined in RFC 7231 section 4.3.
 
 ```
 searchKey: http.defaultMaxMemory
+tags: [private]
 ```
 
 ```Go
@@ -6493,6 +6880,7 @@ const defaultMaxMemory = 32 << 20 // 32 MB
 
 ```
 searchKey: http.defaultUserAgent
+tags: [private]
 ```
 
 ```Go
@@ -6505,6 +6893,7 @@ NOTE: This is not intended to reflect the actual Go version being used. It was c
 
 ```
 searchKey: http.bufferBeforeChunkingSize
+tags: [private]
 ```
 
 ```Go
@@ -6517,7 +6906,6 @@ This should be >= 512 bytes for DetectContentType, but otherwise it's somewhat a
 
 ```
 searchKey: http.TrailerPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -6537,6 +6925,7 @@ This mechanism is intended only for trailers that are not known prior to the hea
 
 ```
 searchKey: http.debugServerConnections
+tags: [private]
 ```
 
 ```Go
@@ -6549,7 +6938,6 @@ debugServerConnections controls whether all server connections are wrapped with 
 
 ```
 searchKey: http.DefaultMaxHeaderBytes
-tags: [exported]
 ```
 
 ```Go
@@ -6563,7 +6951,6 @@ DefaultMaxHeaderBytes is the maximum permitted size of the headers in an HTTP re
 
 ```
 searchKey: http.TimeFormat
-tags: [exported]
 ```
 
 ```Go
@@ -6578,6 +6965,7 @@ For parsing this time format, see ParseTime.
 
 ```
 searchKey: http.maxPostHandlerReadBytes
+tags: [private]
 ```
 
 ```Go
@@ -6592,6 +6980,7 @@ This number is approximately what a typical machine's TCP buffer size is anyway.
 
 ```
 searchKey: http.rstAvoidanceDelay
+tags: [private]
 ```
 
 ```Go
@@ -6604,6 +6993,7 @@ rstAvoidanceDelay is the amount of time we sleep after closing the write side of
 
 ```
 searchKey: http.runHooks
+tags: [private]
 ```
 
 ```Go
@@ -6614,6 +7004,7 @@ const runHooks = true
 
 ```
 searchKey: http.skipHooks
+tags: [private]
 ```
 
 ```Go
@@ -6624,6 +7015,7 @@ const skipHooks = false
 
 ```
 searchKey: http.shutdownPollIntervalMax
+tags: [private]
 ```
 
 ```Go
@@ -6636,7 +7028,6 @@ shutdownPollIntervalMax is the max polling interval when checking quiescence dur
 
 ```
 searchKey: http.StateNew
-tags: [exported]
 ```
 
 ```Go
@@ -6649,7 +7040,6 @@ StateNew represents a new connection that is expected to send a request immediat
 
 ```
 searchKey: http.StateActive
-tags: [exported]
 ```
 
 ```Go
@@ -6662,7 +7052,6 @@ StateActive represents a connection that has read 1 or more bytes of a request. 
 
 ```
 searchKey: http.StateIdle
-tags: [exported]
 ```
 
 ```Go
@@ -6675,7 +7064,6 @@ StateIdle represents a connection that has finished handling a request and is in
 
 ```
 searchKey: http.StateHijacked
-tags: [exported]
 ```
 
 ```Go
@@ -6688,7 +7076,6 @@ StateHijacked represents a hijacked connection. This is a terminal state. It doe
 
 ```
 searchKey: http.StateClosed
-tags: [exported]
 ```
 
 ```Go
@@ -6701,6 +7088,7 @@ StateClosed represents a closed connection. This is a terminal state. Hijacked c
 
 ```
 searchKey: http.sniffLen
+tags: [private]
 ```
 
 ```Go
@@ -6713,6 +7101,7 @@ The algorithm uses at most sniffLen bytes to make its decision.
 
 ```
 searchKey: http.socksVersion5
+tags: [private]
 ```
 
 ```Go
@@ -6725,6 +7114,7 @@ Wire protocol constants.
 
 ```
 searchKey: http.socksAddrTypeIPv4
+tags: [private]
 ```
 
 ```Go
@@ -6737,6 +7127,7 @@ Wire protocol constants.
 
 ```
 searchKey: http.socksAddrTypeFQDN
+tags: [private]
 ```
 
 ```Go
@@ -6749,6 +7140,7 @@ Wire protocol constants.
 
 ```
 searchKey: http.socksAddrTypeIPv6
+tags: [private]
 ```
 
 ```Go
@@ -6761,6 +7153,7 @@ Wire protocol constants.
 
 ```
 searchKey: http.socksCmdConnect
+tags: [private]
 ```
 
 ```Go
@@ -6774,6 +7167,7 @@ Wire protocol constants.
 
 ```
 searchKey: http.sockscmdBind
+tags: [private]
 ```
 
 ```Go
@@ -6787,6 +7181,7 @@ Wire protocol constants.
 
 ```
 searchKey: http.socksAuthMethodNotRequired
+tags: [private]
 ```
 
 ```Go
@@ -6800,6 +7195,7 @@ Wire protocol constants.
 
 ```
 searchKey: http.socksAuthMethodUsernamePassword
+tags: [private]
 ```
 
 ```Go
@@ -6813,6 +7209,7 @@ Wire protocol constants.
 
 ```
 searchKey: http.socksAuthMethodNoAcceptableMethods
+tags: [private]
 ```
 
 ```Go
@@ -6826,6 +7223,7 @@ Wire protocol constants.
 
 ```
 searchKey: http.socksStatusSucceeded
+tags: [private]
 ```
 
 ```Go
@@ -6838,6 +7236,7 @@ Wire protocol constants.
 
 ```
 searchKey: http.socksauthUsernamePasswordVersion
+tags: [private]
 ```
 
 ```Go
@@ -6848,6 +7247,7 @@ const socksauthUsernamePasswordVersion = 0x01
 
 ```
 searchKey: http.socksauthStatusSucceeded
+tags: [private]
 ```
 
 ```Go
@@ -6858,7 +7258,6 @@ const socksauthStatusSucceeded = 0x00
 
 ```
 searchKey: http.StatusContinue
-tags: [exported]
 ```
 
 ```Go
@@ -6872,7 +7271,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusSwitchingProtocols
-tags: [exported]
 ```
 
 ```Go
@@ -6886,7 +7284,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusProcessing
-tags: [exported]
 ```
 
 ```Go
@@ -6900,7 +7297,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusEarlyHints
-tags: [exported]
 ```
 
 ```Go
@@ -6914,7 +7310,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusOK
-tags: [exported]
 ```
 
 ```Go
@@ -6928,7 +7323,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusCreated
-tags: [exported]
 ```
 
 ```Go
@@ -6942,7 +7336,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusAccepted
-tags: [exported]
 ```
 
 ```Go
@@ -6956,7 +7349,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusNonAuthoritativeInfo
-tags: [exported]
 ```
 
 ```Go
@@ -6970,7 +7362,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusNoContent
-tags: [exported]
 ```
 
 ```Go
@@ -6984,7 +7375,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusResetContent
-tags: [exported]
 ```
 
 ```Go
@@ -6998,7 +7388,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusPartialContent
-tags: [exported]
 ```
 
 ```Go
@@ -7012,7 +7401,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusMultiStatus
-tags: [exported]
 ```
 
 ```Go
@@ -7026,7 +7414,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusAlreadyReported
-tags: [exported]
 ```
 
 ```Go
@@ -7040,7 +7427,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusIMUsed
-tags: [exported]
 ```
 
 ```Go
@@ -7054,7 +7440,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusMultipleChoices
-tags: [exported]
 ```
 
 ```Go
@@ -7068,7 +7453,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusMovedPermanently
-tags: [exported]
 ```
 
 ```Go
@@ -7082,7 +7466,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusFound
-tags: [exported]
 ```
 
 ```Go
@@ -7096,7 +7479,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusSeeOther
-tags: [exported]
 ```
 
 ```Go
@@ -7110,7 +7492,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusNotModified
-tags: [exported]
 ```
 
 ```Go
@@ -7124,7 +7505,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusUseProxy
-tags: [exported]
 ```
 
 ```Go
@@ -7138,7 +7518,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusTemporaryRedirect
-tags: [exported]
 ```
 
 ```Go
@@ -7152,7 +7531,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusPermanentRedirect
-tags: [exported]
 ```
 
 ```Go
@@ -7166,7 +7544,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusBadRequest
-tags: [exported]
 ```
 
 ```Go
@@ -7180,7 +7557,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusUnauthorized
-tags: [exported]
 ```
 
 ```Go
@@ -7194,7 +7570,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusPaymentRequired
-tags: [exported]
 ```
 
 ```Go
@@ -7208,7 +7583,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusForbidden
-tags: [exported]
 ```
 
 ```Go
@@ -7222,7 +7596,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -7236,7 +7609,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusMethodNotAllowed
-tags: [exported]
 ```
 
 ```Go
@@ -7250,7 +7622,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusNotAcceptable
-tags: [exported]
 ```
 
 ```Go
@@ -7264,7 +7635,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusProxyAuthRequired
-tags: [exported]
 ```
 
 ```Go
@@ -7278,7 +7648,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusRequestTimeout
-tags: [exported]
 ```
 
 ```Go
@@ -7292,7 +7661,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusConflict
-tags: [exported]
 ```
 
 ```Go
@@ -7306,7 +7674,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusGone
-tags: [exported]
 ```
 
 ```Go
@@ -7320,7 +7687,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusLengthRequired
-tags: [exported]
 ```
 
 ```Go
@@ -7334,7 +7700,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusPreconditionFailed
-tags: [exported]
 ```
 
 ```Go
@@ -7348,7 +7713,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusRequestEntityTooLarge
-tags: [exported]
 ```
 
 ```Go
@@ -7362,7 +7726,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusRequestURITooLong
-tags: [exported]
 ```
 
 ```Go
@@ -7376,7 +7739,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusUnsupportedMediaType
-tags: [exported]
 ```
 
 ```Go
@@ -7390,7 +7752,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusRequestedRangeNotSatisfiable
-tags: [exported]
 ```
 
 ```Go
@@ -7404,7 +7765,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusExpectationFailed
-tags: [exported]
 ```
 
 ```Go
@@ -7418,7 +7778,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusTeapot
-tags: [exported]
 ```
 
 ```Go
@@ -7432,7 +7791,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusMisdirectedRequest
-tags: [exported]
 ```
 
 ```Go
@@ -7446,7 +7804,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusUnprocessableEntity
-tags: [exported]
 ```
 
 ```Go
@@ -7460,7 +7817,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusLocked
-tags: [exported]
 ```
 
 ```Go
@@ -7474,7 +7830,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusFailedDependency
-tags: [exported]
 ```
 
 ```Go
@@ -7488,7 +7843,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusTooEarly
-tags: [exported]
 ```
 
 ```Go
@@ -7502,7 +7856,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusUpgradeRequired
-tags: [exported]
 ```
 
 ```Go
@@ -7516,7 +7869,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusPreconditionRequired
-tags: [exported]
 ```
 
 ```Go
@@ -7530,7 +7882,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusTooManyRequests
-tags: [exported]
 ```
 
 ```Go
@@ -7544,7 +7895,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusRequestHeaderFieldsTooLarge
-tags: [exported]
 ```
 
 ```Go
@@ -7558,7 +7908,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusUnavailableForLegalReasons
-tags: [exported]
 ```
 
 ```Go
@@ -7572,7 +7921,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusInternalServerError
-tags: [exported]
 ```
 
 ```Go
@@ -7586,7 +7934,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusNotImplemented
-tags: [exported]
 ```
 
 ```Go
@@ -7600,7 +7947,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusBadGateway
-tags: [exported]
 ```
 
 ```Go
@@ -7614,7 +7960,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusServiceUnavailable
-tags: [exported]
 ```
 
 ```Go
@@ -7628,7 +7973,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusGatewayTimeout
-tags: [exported]
 ```
 
 ```Go
@@ -7642,7 +7986,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusHTTPVersionNotSupported
-tags: [exported]
 ```
 
 ```Go
@@ -7656,7 +7999,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusVariantAlsoNegotiates
-tags: [exported]
 ```
 
 ```Go
@@ -7670,7 +8012,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusInsufficientStorage
-tags: [exported]
 ```
 
 ```Go
@@ -7684,7 +8025,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusLoopDetected
-tags: [exported]
 ```
 
 ```Go
@@ -7698,7 +8038,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusNotExtended
-tags: [exported]
 ```
 
 ```Go
@@ -7712,7 +8051,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.StatusNetworkAuthenticationRequired
-tags: [exported]
 ```
 
 ```Go
@@ -7726,7 +8064,6 @@ HTTP status codes as registered with IANA. See: [https://www.iana.org/assignment
 
 ```
 searchKey: http.DefaultMaxIdleConnsPerHost
-tags: [exported]
 ```
 
 ```Go
@@ -7739,6 +8076,7 @@ DefaultMaxIdleConnsPerHost is the default value of Transport's MaxIdleConnsPerHo
 
 ```
 searchKey: http.maxWriteWaitBeforeConnReuse
+tags: [private]
 ```
 
 ```Go
@@ -7751,6 +8089,7 @@ maxWriteWaitBeforeConnReuse is how long the a Transport RoundTrip will wait to s
 
 ```
 searchKey: http.MaxWriteWaitBeforeConnReuse
+tags: [private]
 ```
 
 ```Go
@@ -7759,15 +8098,10 @@ const MaxWriteWaitBeforeConnReuse = maxWriteWaitBeforeConnReuse
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="DefaultClient" href="#DefaultClient">var DefaultClient</a>
 
 ```
 searchKey: http.DefaultClient
-tags: [exported]
 ```
 
 ```Go
@@ -7780,7 +8114,6 @@ DefaultClient is the default Client and is used by Get, Head, and Post.
 
 ```
 searchKey: http.ErrUseLastResponse
-tags: [exported]
 ```
 
 ```Go
@@ -7793,6 +8126,7 @@ ErrUseLastResponse can be returned by Client.CheckRedirect hooks to control how 
 
 ```
 searchKey: http.testHookClientDoResult
+tags: [private]
 ```
 
 ```Go
@@ -7803,6 +8137,7 @@ var testHookClientDoResult func(retres *Response, reterr error)
 
 ```
 searchKey: http.cookieNameSanitizer
+tags: [private]
 ```
 
 ```Go
@@ -7813,6 +8148,7 @@ var cookieNameSanitizer = strings.NewReplacer("\n", "-", "\r", "-")
 
 ```
 searchKey: http.errSeeker
+tags: [private]
 ```
 
 ```Go
@@ -7825,6 +8161,7 @@ errSeeker is returned by ServeContent's sizeFunc when the content doesn't seek p
 
 ```
 searchKey: http.errNoOverlap
+tags: [private]
 ```
 
 ```Go
@@ -7837,6 +8174,7 @@ errNoOverlap is returned by serveContent's parseRange if first-byte-pos of all o
 
 ```
 searchKey: http.unixEpochTime
+tags: [private]
 ```
 
 ```Go
@@ -7847,6 +8185,7 @@ var unixEpochTime = time.Unix(0, 0)
 
 ```
 searchKey: http.errMissingSeek
+tags: [private]
 ```
 
 ```Go
@@ -7857,6 +8196,7 @@ var errMissingSeek = errors.New("io.File missing Seek method")
 
 ```
 searchKey: http.errMissingReadDir
+tags: [private]
 ```
 
 ```Go
@@ -7867,6 +8207,7 @@ var errMissingReadDir = errors.New("io.File directory missing ReadDir method")
 
 ```
 searchKey: http.http2dataChunkSizeClasses
+tags: [private]
 ```
 
 ```Go
@@ -7887,6 +8228,7 @@ TODO: Benchmark to determine if the pools are necessary. The GC may have improve
 
 ```
 searchKey: http.http2dataChunkPools
+tags: [private]
 ```
 
 ```Go
@@ -7901,6 +8243,7 @@ TODO: Benchmark to determine if the pools are necessary. The GC may have improve
 
 ```
 searchKey: http.http2errReadEmpty
+tags: [private]
 ```
 
 ```Go
@@ -7911,6 +8254,7 @@ var http2errReadEmpty = errors.New("read from empty dataBuffer")
 
 ```
 searchKey: http.http2errCodeName
+tags: [private]
 ```
 
 ```Go
@@ -7921,6 +8265,7 @@ var http2errCodeName = ...
 
 ```
 searchKey: http.http2errMixPseudoHeaderTypes
+tags: [private]
 ```
 
 ```Go
@@ -7931,6 +8276,7 @@ var http2errMixPseudoHeaderTypes = errors.New("mix of request and response pseud
 
 ```
 searchKey: http.http2errPseudoAfterRegular
+tags: [private]
 ```
 
 ```Go
@@ -7941,6 +8287,7 @@ var http2errPseudoAfterRegular = errors.New("pseudo header field after regular")
 
 ```
 searchKey: http.http2padZeros
+tags: [private]
 ```
 
 ```Go
@@ -7952,6 +8299,7 @@ var http2padZeros = make([]byte, 255) // zeros for padding
 
 ```
 searchKey: http.http2frameName
+tags: [private]
 ```
 
 ```Go
@@ -7962,6 +8310,7 @@ var http2frameName = ...
 
 ```
 searchKey: http.http2flagName
+tags: [private]
 ```
 
 ```Go
@@ -7972,6 +8321,7 @@ var http2flagName = ...
 
 ```
 searchKey: http.http2frameParsers
+tags: [private]
 ```
 
 ```Go
@@ -7982,6 +8332,7 @@ var http2frameParsers = ...
 
 ```
 searchKey: http.http2fhBytes
+tags: [private]
 ```
 
 ```Go
@@ -7994,6 +8345,7 @@ frame header bytes. Used only by ReadFrameHeader.
 
 ```
 searchKey: http.http2ErrFrameTooLarge
+tags: [private]
 ```
 
 ```Go
@@ -8006,6 +8358,7 @@ ErrFrameTooLarge is returned from Framer.ReadFrame when the peer sends a frame t
 
 ```
 searchKey: http.http2errStreamID
+tags: [private]
 ```
 
 ```Go
@@ -8016,6 +8369,7 @@ var http2errStreamID = errors.New("invalid stream ID")
 
 ```
 searchKey: http.http2errDepStreamID
+tags: [private]
 ```
 
 ```Go
@@ -8026,6 +8380,7 @@ var http2errDepStreamID = errors.New("invalid dependent stream ID")
 
 ```
 searchKey: http.http2errPadLength
+tags: [private]
 ```
 
 ```Go
@@ -8036,6 +8391,7 @@ var http2errPadLength = errors.New("pad length too large")
 
 ```
 searchKey: http.http2errPadBytes
+tags: [private]
 ```
 
 ```Go
@@ -8046,6 +8402,7 @@ var http2errPadBytes = ...
 
 ```
 searchKey: http.http2DebugGoroutines
+tags: [private]
 ```
 
 ```Go
@@ -8056,6 +8413,7 @@ var http2DebugGoroutines = os.Getenv("DEBUG_HTTP2_GOROUTINES") == "1"
 
 ```
 searchKey: http.http2goroutineSpace
+tags: [private]
 ```
 
 ```Go
@@ -8066,6 +8424,7 @@ var http2goroutineSpace = []byte("goroutine ")
 
 ```
 searchKey: http.http2littleBuf
+tags: [private]
 ```
 
 ```Go
@@ -8076,6 +8435,7 @@ var http2littleBuf = ...
 
 ```
 searchKey: http.http2commonBuildOnce
+tags: [private]
 ```
 
 ```Go
@@ -8086,6 +8446,7 @@ var http2commonBuildOnce sync.Once
 
 ```
 searchKey: http.http2commonLowerHeader
+tags: [private]
 ```
 
 ```Go
@@ -8097,6 +8458,7 @@ var http2commonLowerHeader map[string]string // Go-Canonical-Case -> lower-case
 
 ```
 searchKey: http.http2commonCanonHeader
+tags: [private]
 ```
 
 ```Go
@@ -8108,6 +8470,7 @@ var http2commonCanonHeader map[string]string // lower-case -> Go-Canonical-Case
 
 ```
 searchKey: http.http2VerboseLogs
+tags: [private]
 ```
 
 ```Go
@@ -8118,6 +8481,7 @@ var http2VerboseLogs bool
 
 ```
 searchKey: http.http2logFrameWrites
+tags: [private]
 ```
 
 ```Go
@@ -8128,6 +8492,7 @@ var http2logFrameWrites bool
 
 ```
 searchKey: http.http2logFrameReads
+tags: [private]
 ```
 
 ```Go
@@ -8138,6 +8503,7 @@ var http2logFrameReads bool
 
 ```
 searchKey: http.http2inTests
+tags: [private]
 ```
 
 ```Go
@@ -8148,6 +8514,7 @@ var http2inTests bool
 
 ```
 searchKey: http.http2clientPreface
+tags: [private]
 ```
 
 ```Go
@@ -8158,6 +8525,7 @@ var http2clientPreface = []byte(http2ClientPreface)
 
 ```
 searchKey: http.http2stateName
+tags: [private]
 ```
 
 ```Go
@@ -8168,6 +8536,7 @@ var http2stateName = ...
 
 ```
 searchKey: http.http2settingName
+tags: [private]
 ```
 
 ```Go
@@ -8178,6 +8547,7 @@ var http2settingName = ...
 
 ```
 searchKey: http.http2bufWriterPool
+tags: [private]
 ```
 
 ```Go
@@ -8188,6 +8558,7 @@ var http2bufWriterPool = ...
 
 ```
 searchKey: http.http2errTimeout
+tags: [private]
 ```
 
 ```Go
@@ -8198,6 +8569,7 @@ var http2errTimeout error = ...
 
 ```
 searchKey: http.http2sorterPool
+tags: [private]
 ```
 
 ```Go
@@ -8208,6 +8580,7 @@ var http2sorterPool = sync.Pool{New: func() interface{} { return new(http2sorter
 
 ```
 searchKey: http.http2errClosedPipeWrite
+tags: [private]
 ```
 
 ```Go
@@ -8218,6 +8591,7 @@ var http2errClosedPipeWrite = errors.New("write on closed buffer")
 
 ```
 searchKey: http.http2errClientDisconnected
+tags: [private]
 ```
 
 ```Go
@@ -8228,6 +8602,7 @@ var http2errClientDisconnected = errors.New("client disconnected")
 
 ```
 searchKey: http.http2errClosedBody
+tags: [private]
 ```
 
 ```Go
@@ -8238,6 +8613,7 @@ var http2errClosedBody = errors.New("body closed by handler")
 
 ```
 searchKey: http.http2errHandlerComplete
+tags: [private]
 ```
 
 ```Go
@@ -8248,6 +8624,7 @@ var http2errHandlerComplete = errors.New("http2: request body closed due to hand
 
 ```
 searchKey: http.http2errStreamClosed
+tags: [private]
 ```
 
 ```Go
@@ -8258,6 +8635,7 @@ var http2errStreamClosed = errors.New("http2: stream closed")
 
 ```
 searchKey: http.http2responseWriterStatePool
+tags: [private]
 ```
 
 ```Go
@@ -8268,6 +8646,7 @@ var http2responseWriterStatePool = ...
 
 ```
 searchKey: http.http2testHookOnConn
+tags: [private]
 ```
 
 ```Go
@@ -8280,6 +8659,7 @@ Test hooks.
 
 ```
 searchKey: http.http2testHookGetServerConn
+tags: [private]
 ```
 
 ```Go
@@ -8292,6 +8672,7 @@ Test hooks.
 
 ```
 searchKey: http.http2testHookOnPanicMu
+tags: [private]
 ```
 
 ```Go
@@ -8305,6 +8686,7 @@ Test hooks.
 
 ```
 searchKey: http.http2testHookOnPanic
+tags: [private]
 ```
 
 ```Go
@@ -8317,6 +8699,7 @@ Test hooks.
 
 ```
 searchKey: http.http2settingsTimerMsg
+tags: [private]
 ```
 
 ```Go
@@ -8329,6 +8712,7 @@ Message values sent to serveMsgCh.
 
 ```
 searchKey: http.http2idleTimerMsg
+tags: [private]
 ```
 
 ```Go
@@ -8341,6 +8725,7 @@ Message values sent to serveMsgCh.
 
 ```
 searchKey: http.http2shutdownTimerMsg
+tags: [private]
 ```
 
 ```Go
@@ -8353,6 +8738,7 @@ Message values sent to serveMsgCh.
 
 ```
 searchKey: http.http2gracefulShutdownMsg
+tags: [private]
 ```
 
 ```Go
@@ -8365,6 +8751,7 @@ Message values sent to serveMsgCh.
 
 ```
 searchKey: http.http2errPrefaceTimeout
+tags: [private]
 ```
 
 ```Go
@@ -8375,6 +8762,7 @@ var http2errPrefaceTimeout = errors.New("timeout waiting for client preface")
 
 ```
 searchKey: http.http2errChanPool
+tags: [private]
 ```
 
 ```Go
@@ -8387,6 +8775,7 @@ var http2errChanPool = sync.Pool{
 
 ```
 searchKey: http.http2writeDataPool
+tags: [private]
 ```
 
 ```Go
@@ -8399,6 +8788,7 @@ var http2writeDataPool = sync.Pool{
 
 ```
 searchKey: http.http2errHandlerPanicked
+tags: [private]
 ```
 
 ```Go
@@ -8411,6 +8801,7 @@ errHandlerPanicked is the error given to any callers blocked in a read from Requ
 
 ```
 searchKey: http.http2goAwayTimeout
+tags: [private]
 ```
 
 ```Go
@@ -8431,6 +8822,7 @@ TODO: configurable?
 
 ```
 searchKey: http.http2ErrRecursivePush
+tags: [private]
 ```
 
 ```Go
@@ -8443,6 +8835,7 @@ Push errors.
 
 ```
 searchKey: http.http2ErrPushLimitReached
+tags: [private]
 ```
 
 ```Go
@@ -8455,6 +8848,7 @@ Push errors.
 
 ```
 searchKey: http.http2connHeaders
+tags: [private]
 ```
 
 ```Go
@@ -8467,6 +8861,7 @@ From [http://httpwg.org/specs/rfc7540.html#rfc.section.8.1.2.2](http://httpwg.or
 
 ```
 searchKey: http.http2got1xxFuncForTests
+tags: [private]
 ```
 
 ```Go
@@ -8477,6 +8872,7 @@ var http2got1xxFuncForTests func(int, textproto.MIMEHeader) error
 
 ```
 searchKey: http.http2ErrNoCachedConn
+tags: [private]
 ```
 
 ```Go
@@ -8487,6 +8883,7 @@ var http2ErrNoCachedConn error = http2noCachedConnError{}
 
 ```
 searchKey: http.http2errClientConnClosed
+tags: [private]
 ```
 
 ```Go
@@ -8497,6 +8894,7 @@ var http2errClientConnClosed = errors.New("http2: client conn is closed")
 
 ```
 searchKey: http.http2errClientConnUnusable
+tags: [private]
 ```
 
 ```Go
@@ -8507,6 +8905,7 @@ var http2errClientConnUnusable = errors.New("http2: client conn not usable")
 
 ```
 searchKey: http.http2errClientConnGotGoAway
+tags: [private]
 ```
 
 ```Go
@@ -8517,6 +8916,7 @@ var http2errClientConnGotGoAway = ...
 
 ```
 searchKey: http.http2shutdownEnterWaitStateHook
+tags: [private]
 ```
 
 ```Go
@@ -8527,6 +8927,7 @@ var http2shutdownEnterWaitStateHook = func() {}
 
 ```
 searchKey: http.http2errRequestCanceled
+tags: [private]
 ```
 
 ```Go
@@ -8539,6 +8940,7 @@ errRequestCanceled is a copy of net/http's errRequestCanceled because it's not e
 
 ```
 searchKey: http.http2errStopReqBodyWrite
+tags: [private]
 ```
 
 ```Go
@@ -8553,6 +8955,7 @@ abort request body write; don't send cancel
 
 ```
 searchKey: http.http2errStopReqBodyWriteAndCancel
+tags: [private]
 ```
 
 ```Go
@@ -8567,6 +8970,7 @@ abort request body write, but send stream reset of cancel.
 
 ```
 searchKey: http.http2errReqBodyTooLong
+tags: [private]
 ```
 
 ```Go
@@ -8579,6 +8983,7 @@ internal error values; they don't escape to callers
 
 ```
 searchKey: http.http2errClosedResponseBody
+tags: [private]
 ```
 
 ```Go
@@ -8589,6 +8994,7 @@ var http2errClosedResponseBody = errors.New("http2: response body closed")
 
 ```
 searchKey: http.http2errResponseHeaderListSize
+tags: [private]
 ```
 
 ```Go
@@ -8599,6 +9005,7 @@ var http2errResponseHeaderListSize = ...
 
 ```
 searchKey: http.http2errRequestHeaderListSize
+tags: [private]
 ```
 
 ```Go
@@ -8609,6 +9016,7 @@ var http2errRequestHeaderListSize = ...
 
 ```
 searchKey: http.http2noBody
+tags: [private]
 ```
 
 ```Go
@@ -8619,6 +9027,7 @@ var http2noBody io.ReadCloser = ioutil.NopCloser(bytes.NewReader(nil))
 
 ```
 searchKey: http.timeFormats
+tags: [private]
 ```
 
 ```Go
@@ -8633,6 +9042,7 @@ var timeFormats = []string{
 
 ```
 searchKey: http.headerNewlineToSpace
+tags: [private]
 ```
 
 ```Go
@@ -8643,6 +9053,7 @@ var headerNewlineToSpace = strings.NewReplacer("\n", " ", "\r", " ")
 
 ```
 searchKey: http.headerSorterPool
+tags: [private]
 ```
 
 ```Go
@@ -8655,6 +9066,7 @@ var headerSorterPool = sync.Pool{
 
 ```
 searchKey: http.aLongTimeAgo
+tags: [private]
 ```
 
 ```Go
@@ -8667,6 +9079,7 @@ aLongTimeAgo is a non-zero time, far in the past, used for immediate cancellatio
 
 ```
 searchKey: http.omitBundledHTTP2
+tags: [private]
 ```
 
 ```Go
@@ -8679,7 +9092,6 @@ omitBundledHTTP2 is set by omithttp2.go when the nethttpomithttp2 build tag is s
 
 ```
 searchKey: http.NoBody
-tags: [exported]
 ```
 
 ```Go
@@ -8692,7 +9104,6 @@ NoBody is an io.ReadCloser with no bytes. Read always returns EOF and Close alwa
 
 ```
 searchKey: http.ErrMissingFile
-tags: [exported]
 ```
 
 ```Go
@@ -8705,7 +9116,6 @@ ErrMissingFile is returned by FormFile when the provided file field name is eith
 
 ```
 searchKey: http.ErrNotSupported
-tags: [exported]
 ```
 
 ```Go
@@ -8718,7 +9128,7 @@ ErrNotSupported is returned by the Push method of Pusher implementations to indi
 
 ```
 searchKey: http.ErrUnexpectedTrailer
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -8731,7 +9141,6 @@ Deprecated: ErrUnexpectedTrailer is no longer returned by anything in the net/ht
 
 ```
 searchKey: http.ErrMissingBoundary
-tags: [exported]
 ```
 
 ```Go
@@ -8744,7 +9153,6 @@ ErrMissingBoundary is returned by Request.MultipartReader when the request's Con
 
 ```
 searchKey: http.ErrNotMultipart
-tags: [exported]
 ```
 
 ```Go
@@ -8757,7 +9165,7 @@ ErrNotMultipart is returned by Request.MultipartReader when the request's Conten
 
 ```
 searchKey: http.ErrHeaderTooLong
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -8770,7 +9178,7 @@ Deprecated: ErrHeaderTooLong is no longer returned by anything in the net/http p
 
 ```
 searchKey: http.ErrShortBody
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -8783,7 +9191,7 @@ Deprecated: ErrShortBody is no longer returned by anything in the net/http packa
 
 ```
 searchKey: http.ErrMissingContentLength
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -8796,6 +9204,7 @@ Deprecated: ErrMissingContentLength is no longer returned by anything in the net
 
 ```
 searchKey: http.reqWriteExcludeHeader
+tags: [private]
 ```
 
 ```Go
@@ -8808,7 +9217,6 @@ Headers that Request.Write handles itself and should be skipped.
 
 ```
 searchKey: http.ErrNoCookie
-tags: [exported]
 ```
 
 ```Go
@@ -8821,6 +9229,7 @@ ErrNoCookie is returned by Request's Cookie method when a cookie is not found.
 
 ```
 searchKey: http.multipartByReader
+tags: [private]
 ```
 
 ```Go
@@ -8833,6 +9242,7 @@ multipartByReader is a sentinel value. Its presence in Request.MultipartForm ind
 
 ```
 searchKey: http.errMissingHost
+tags: [private]
 ```
 
 ```Go
@@ -8845,6 +9255,7 @@ errMissingHost is returned by Write when there is no Host or URL present in the 
 
 ```
 searchKey: http.textprotoReaderPool
+tags: [private]
 ```
 
 ```Go
@@ -8855,6 +9266,7 @@ var textprotoReaderPool sync.Pool
 
 ```
 searchKey: http.respExcludeHeader
+tags: [private]
 ```
 
 ```Go
@@ -8865,7 +9277,6 @@ var respExcludeHeader = ...
 
 ```
 searchKey: http.ErrNoLocation
-tags: [exported]
 ```
 
 ```Go
@@ -8878,7 +9289,6 @@ ErrNoLocation is returned by Response's Location method when no Location header 
 
 ```
 searchKey: http.ErrBodyNotAllowed
-tags: [exported]
 ```
 
 ```Go
@@ -8893,7 +9303,6 @@ ErrBodyNotAllowed is returned by ResponseWriter.Write calls when the HTTP method
 
 ```
 searchKey: http.ErrHijacked
-tags: [exported]
 ```
 
 ```Go
@@ -8908,7 +9317,6 @@ ErrHijacked is returned by ResponseWriter.Write calls when the underlying connec
 
 ```
 searchKey: http.ErrContentLength
-tags: [exported]
 ```
 
 ```Go
@@ -8923,7 +9331,7 @@ ErrContentLength is returned by ResponseWriter.Write calls when a Handler set a 
 
 ```
 searchKey: http.ErrWriteAfterFlush
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -8938,7 +9346,6 @@ Deprecated: ErrWriteAfterFlush is no longer returned by anything in the net/http
 
 ```
 searchKey: http.ServerContextKey
-tags: [exported]
 ```
 
 ```Go
@@ -8951,7 +9358,6 @@ ServerContextKey is a context key. It can be used in HTTP handlers with Context.
 
 ```
 searchKey: http.LocalAddrContextKey
-tags: [exported]
 ```
 
 ```Go
@@ -8964,6 +9370,7 @@ LocalAddrContextKey is a context key. It can be used in HTTP handlers with Conte
 
 ```
 searchKey: http.crlf
+tags: [private]
 ```
 
 ```Go
@@ -8974,6 +9381,7 @@ var crlf = []byte("\r\n")
 
 ```
 searchKey: http.colonSpace
+tags: [private]
 ```
 
 ```Go
@@ -8984,6 +9392,7 @@ var colonSpace = []byte(": ")
 
 ```
 searchKey: http.bufioReaderPool
+tags: [private]
 ```
 
 ```Go
@@ -8994,6 +9403,7 @@ var bufioReaderPool sync.Pool
 
 ```
 searchKey: http.bufioWriter2kPool
+tags: [private]
 ```
 
 ```Go
@@ -9004,6 +9414,7 @@ var bufioWriter2kPool sync.Pool
 
 ```
 searchKey: http.bufioWriter4kPool
+tags: [private]
 ```
 
 ```Go
@@ -9014,6 +9425,7 @@ var bufioWriter4kPool sync.Pool
 
 ```
 searchKey: http.copyBufPool
+tags: [private]
 ```
 
 ```Go
@@ -9024,6 +9436,7 @@ var copyBufPool = ...
 
 ```
 searchKey: http.errTooLarge
+tags: [private]
 ```
 
 ```Go
@@ -9034,6 +9447,7 @@ var errTooLarge = errors.New("http: request too large")
 
 ```
 searchKey: http.extraHeaderKeys
+tags: [private]
 ```
 
 ```Go
@@ -9046,6 +9460,7 @@ Sorted the same as extraHeader.Write's loop.
 
 ```
 searchKey: http.headerContentLength
+tags: [private]
 ```
 
 ```Go
@@ -9056,6 +9471,7 @@ var headerContentLength = []byte("Content-Length: ")
 
 ```
 searchKey: http.headerDate
+tags: [private]
 ```
 
 ```Go
@@ -9066,7 +9482,6 @@ var headerDate = []byte("Date: ")
 
 ```
 searchKey: http.ErrAbortHandler
-tags: [exported]
 ```
 
 ```Go
@@ -9079,6 +9494,7 @@ ErrAbortHandler is a sentinel panic value to abort a handler. While any panic fr
 
 ```
 searchKey: http.htmlReplacer
+tags: [private]
 ```
 
 ```Go
@@ -9089,7 +9505,6 @@ var htmlReplacer = ...
 
 ```
 searchKey: http.DefaultServeMux
-tags: [exported]
 ```
 
 ```Go
@@ -9102,6 +9517,7 @@ DefaultServeMux is the default ServeMux used by Serve.
 
 ```
 searchKey: http.defaultServeMux
+tags: [private]
 ```
 
 ```Go
@@ -9112,6 +9528,7 @@ var defaultServeMux ServeMux
 
 ```
 searchKey: http.stateName
+tags: [private]
 ```
 
 ```Go
@@ -9122,6 +9539,7 @@ var stateName = ...
 
 ```
 searchKey: http.silenceSemWarnContextKey
+tags: [private]
 ```
 
 ```Go
@@ -9132,6 +9550,7 @@ var silenceSemWarnContextKey = &contextKey{"silence-semicolons"}
 
 ```
 searchKey: http.testHookServerServe
+tags: [private]
 ```
 
 ```Go
@@ -9143,7 +9562,6 @@ var testHookServerServe func(*Server, net.Listener) // used if non-nil
 
 ```
 searchKey: http.ErrServerClosed
-tags: [exported]
 ```
 
 ```Go
@@ -9156,7 +9574,6 @@ ErrServerClosed is returned by the Server's Serve, ServeTLS, ListenAndServe, and
 
 ```
 searchKey: http.ErrHandlerTimeout
-tags: [exported]
 ```
 
 ```Go
@@ -9169,6 +9586,7 @@ ErrHandlerTimeout is returned on ResponseWriter Write calls in handlers which ha
 
 ```
 searchKey: http.uniqNameMu
+tags: [private]
 ```
 
 ```Go
@@ -9179,6 +9597,7 @@ var uniqNameMu sync.Mutex
 
 ```
 searchKey: http.uniqNameNext
+tags: [private]
 ```
 
 ```Go
@@ -9189,6 +9608,7 @@ var uniqNameNext = make(map[string]int)
 
 ```
 searchKey: http.sniffSignatures
+tags: [private]
 ```
 
 ```Go
@@ -9201,6 +9621,7 @@ Data matching the table in section 6.
 
 ```
 searchKey: http.mp4ftype
+tags: [private]
 ```
 
 ```Go
@@ -9211,6 +9632,7 @@ var mp4ftype = []byte("ftyp")
 
 ```
 searchKey: http.mp4
+tags: [private]
 ```
 
 ```Go
@@ -9221,6 +9643,7 @@ var mp4 = []byte("mp4")
 
 ```
 searchKey: http.socksnoDeadline
+tags: [private]
 ```
 
 ```Go
@@ -9231,6 +9654,7 @@ var socksnoDeadline = time.Time{}
 
 ```
 searchKey: http.socksaLongTimeAgo
+tags: [private]
 ```
 
 ```Go
@@ -9241,6 +9665,7 @@ var socksaLongTimeAgo = time.Unix(1, 0)
 
 ```
 searchKey: http.statusText
+tags: [private]
 ```
 
 ```Go
@@ -9251,7 +9676,6 @@ var statusText = ...
 
 ```
 searchKey: http.ErrLineTooLong
-tags: [exported]
 ```
 
 ```Go
@@ -9264,6 +9688,7 @@ ErrLineTooLong is returned when reading request or response bodies with malforme
 
 ```
 searchKey: http.suppressedHeaders304
+tags: [private]
 ```
 
 ```Go
@@ -9274,6 +9699,7 @@ var suppressedHeaders304 = []string{"Content-Type", "Content-Length", "Transfer-
 
 ```
 searchKey: http.suppressedHeadersNoBody
+tags: [private]
 ```
 
 ```Go
@@ -9284,7 +9710,6 @@ var suppressedHeadersNoBody = []string{"Content-Length", "Transfer-Encoding"}
 
 ```
 searchKey: http.ErrBodyReadAfterClose
-tags: [exported]
 ```
 
 ```Go
@@ -9297,6 +9722,7 @@ ErrBodyReadAfterClose is returned when reading a Request or Response Body after 
 
 ```
 searchKey: http.singleCRLF
+tags: [private]
 ```
 
 ```Go
@@ -9307,6 +9733,7 @@ var singleCRLF = []byte("\r\n")
 
 ```
 searchKey: http.doubleCRLF
+tags: [private]
 ```
 
 ```Go
@@ -9317,6 +9744,7 @@ var doubleCRLF = []byte("\r\n\r\n")
 
 ```
 searchKey: http.errTrailerEOF
+tags: [private]
 ```
 
 ```Go
@@ -9327,6 +9755,7 @@ var errTrailerEOF = errors.New("http: unexpected EOF reading trailer")
 
 ```
 searchKey: http.nopCloserType
+tags: [private]
 ```
 
 ```Go
@@ -9337,7 +9766,6 @@ var nopCloserType = reflect.TypeOf(io.NopCloser(nil))
 
 ```
 searchKey: http.DefaultTransport
-tags: [exported]
 ```
 
 ```Go
@@ -9350,6 +9778,7 @@ DefaultTransport is the default implementation of Transport and is used by Defau
 
 ```
 searchKey: http.errCannotRewind
+tags: [private]
 ```
 
 ```Go
@@ -9360,7 +9789,6 @@ var errCannotRewind = errors.New("net/http: cannot rewind body after connection 
 
 ```
 searchKey: http.ErrSkipAltProtocol
-tags: [exported]
 ```
 
 ```Go
@@ -9373,6 +9801,7 @@ ErrSkipAltProtocol is a sentinel error value defined by Transport.RegisterProtoc
 
 ```
 searchKey: http.envProxyOnce
+tags: [private]
 ```
 
 ```Go
@@ -9385,6 +9814,7 @@ proxyConfigOnce guards proxyConfig
 
 ```
 searchKey: http.envProxyFuncValue
+tags: [private]
 ```
 
 ```Go
@@ -9395,6 +9825,7 @@ var envProxyFuncValue func(*url.URL) (*url.URL, error)
 
 ```
 searchKey: http.errKeepAlivesDisabled
+tags: [private]
 ```
 
 ```Go
@@ -9407,6 +9838,7 @@ error values for debugging and testing, not seen by users.
 
 ```
 searchKey: http.errConnBroken
+tags: [private]
 ```
 
 ```Go
@@ -9419,6 +9851,7 @@ error values for debugging and testing, not seen by users.
 
 ```
 searchKey: http.errCloseIdle
+tags: [private]
 ```
 
 ```Go
@@ -9431,6 +9864,7 @@ error values for debugging and testing, not seen by users.
 
 ```
 searchKey: http.errTooManyIdle
+tags: [private]
 ```
 
 ```Go
@@ -9443,6 +9877,7 @@ error values for debugging and testing, not seen by users.
 
 ```
 searchKey: http.errTooManyIdleHost
+tags: [private]
 ```
 
 ```Go
@@ -9455,6 +9890,7 @@ error values for debugging and testing, not seen by users.
 
 ```
 searchKey: http.errCloseIdleConns
+tags: [private]
 ```
 
 ```Go
@@ -9467,6 +9903,7 @@ error values for debugging and testing, not seen by users.
 
 ```
 searchKey: http.errReadLoopExiting
+tags: [private]
 ```
 
 ```Go
@@ -9479,6 +9916,7 @@ error values for debugging and testing, not seen by users.
 
 ```
 searchKey: http.errIdleConnTimeout
+tags: [private]
 ```
 
 ```Go
@@ -9491,6 +9929,7 @@ error values for debugging and testing, not seen by users.
 
 ```
 searchKey: http.errServerClosedIdle
+tags: [private]
 ```
 
 ```Go
@@ -9505,6 +9944,7 @@ errServerClosedIdle is not seen by users for idempotent requests, but may be see
 
 ```
 searchKey: http.zeroDialer
+tags: [private]
 ```
 
 ```Go
@@ -9515,6 +9955,7 @@ var zeroDialer net.Dialer
 
 ```
 searchKey: http.errCallerOwnsConn
+tags: [private]
 ```
 
 ```Go
@@ -9527,6 +9968,7 @@ errCallerOwnsConn is an internal sentinel error used when we hand off a writable
 
 ```
 searchKey: http.errTimeout
+tags: [private]
 ```
 
 ```Go
@@ -9537,6 +9979,7 @@ var errTimeout error = &httpError{err: "net/http: timeout awaiting response head
 
 ```
 searchKey: http.errRequestCanceled
+tags: [private]
 ```
 
 ```Go
@@ -9549,6 +9992,7 @@ errRequestCanceled is set to be identical to the one from h2 to facilitate testi
 
 ```
 searchKey: http.errRequestCanceledConn
+tags: [private]
 ```
 
 ```Go
@@ -9560,6 +10004,7 @@ var errRequestCanceledConn // TODO: unify?
 
 ```
 searchKey: http.testHookEnterRoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -9572,6 +10017,7 @@ testHooks. Always non-nil.
 
 ```
 searchKey: http.testHookWaitResLoop
+tags: [private]
 ```
 
 ```Go
@@ -9584,6 +10030,7 @@ testHooks. Always non-nil.
 
 ```
 searchKey: http.testHookRoundTripRetried
+tags: [private]
 ```
 
 ```Go
@@ -9596,6 +10043,7 @@ testHooks. Always non-nil.
 
 ```
 searchKey: http.testHookPrePendingDial
+tags: [private]
 ```
 
 ```Go
@@ -9608,6 +10056,7 @@ testHooks. Always non-nil.
 
 ```
 searchKey: http.testHookPostPendingDial
+tags: [private]
 ```
 
 ```Go
@@ -9620,6 +10069,7 @@ testHooks. Always non-nil.
 
 ```
 searchKey: http.testHookMu
+tags: [private]
 ```
 
 ```Go
@@ -9633,6 +10083,7 @@ testHooks. Always non-nil.
 
 ```
 searchKey: http.testHookReadLoopBeforeNextRead
+tags: [private]
 ```
 
 ```Go
@@ -9645,6 +10096,7 @@ testHooks. Always non-nil.
 
 ```
 searchKey: http.portMap
+tags: [private]
 ```
 
 ```Go
@@ -9659,6 +10111,7 @@ var portMap = map[string]string{
 
 ```
 searchKey: http.errReadOnClosedResBody
+tags: [private]
 ```
 
 ```Go
@@ -9669,6 +10122,7 @@ var errReadOnClosedResBody = errors.New("http: read on closed response body")
 
 ```
 searchKey: http.writeSetCookiesTests
+tags: [private]
 ```
 
 ```Go
@@ -9679,6 +10133,7 @@ var writeSetCookiesTests = ...
 
 ```
 searchKey: http.addCookieTests
+tags: [private]
 ```
 
 ```Go
@@ -9689,6 +10144,7 @@ var addCookieTests = ...
 
 ```
 searchKey: http.readSetCookiesTests
+tags: [private]
 ```
 
 ```Go
@@ -9699,6 +10155,7 @@ var readSetCookiesTests = ...
 
 ```
 searchKey: http.readCookiesTests
+tags: [private]
 ```
 
 ```Go
@@ -9709,6 +10166,7 @@ var readCookiesTests = ...
 
 ```
 searchKey: http.DefaultUserAgent
+tags: [private]
 ```
 
 ```Go
@@ -9719,6 +10177,7 @@ var DefaultUserAgent = defaultUserAgent
 
 ```
 searchKey: http.NewLoggingConn
+tags: [private]
 ```
 
 ```Go
@@ -9729,6 +10188,7 @@ var NewLoggingConn = newLoggingConn
 
 ```
 searchKey: http.ExportAppendTime
+tags: [private]
 ```
 
 ```Go
@@ -9739,6 +10199,7 @@ var ExportAppendTime = appendTime
 
 ```
 searchKey: http.ExportRefererForURL
+tags: [private]
 ```
 
 ```Go
@@ -9749,6 +10210,7 @@ var ExportRefererForURL = refererForURL
 
 ```
 searchKey: http.ExportServerNewConn
+tags: [private]
 ```
 
 ```Go
@@ -9759,6 +10221,7 @@ var ExportServerNewConn = (*Server).newConn
 
 ```
 searchKey: http.ExportCloseWriteAndWait
+tags: [private]
 ```
 
 ```Go
@@ -9769,6 +10232,7 @@ var ExportCloseWriteAndWait = (*conn).closeWriteAndWait
 
 ```
 searchKey: http.ExportErrRequestCanceled
+tags: [private]
 ```
 
 ```Go
@@ -9779,6 +10243,7 @@ var ExportErrRequestCanceled = errRequestCanceled
 
 ```
 searchKey: http.ExportErrRequestCanceledConn
+tags: [private]
 ```
 
 ```Go
@@ -9789,6 +10254,7 @@ var ExportErrRequestCanceledConn = errRequestCanceledConn
 
 ```
 searchKey: http.ExportErrServerClosedIdle
+tags: [private]
 ```
 
 ```Go
@@ -9799,6 +10265,7 @@ var ExportErrServerClosedIdle = errServerClosedIdle
 
 ```
 searchKey: http.ExportServeFile
+tags: [private]
 ```
 
 ```Go
@@ -9809,6 +10276,7 @@ var ExportServeFile = serveFile
 
 ```
 searchKey: http.ExportScanETag
+tags: [private]
 ```
 
 ```Go
@@ -9819,6 +10287,7 @@ var ExportScanETag = scanETag
 
 ```
 searchKey: http.ExportHttp2ConfigureServer
+tags: [private]
 ```
 
 ```Go
@@ -9829,6 +10298,7 @@ var ExportHttp2ConfigureServer = http2ConfigureServer
 
 ```
 searchKey: http.Export_shouldCopyHeaderOnRedirect
+tags: [private]
 ```
 
 ```Go
@@ -9839,6 +10309,7 @@ var Export_shouldCopyHeaderOnRedirect = shouldCopyHeaderOnRedirect
 
 ```
 searchKey: http.Export_writeStatusLine
+tags: [private]
 ```
 
 ```Go
@@ -9849,6 +10320,7 @@ var Export_writeStatusLine = writeStatusLine
 
 ```
 searchKey: http.Export_is408Message
+tags: [private]
 ```
 
 ```Go
@@ -9859,6 +10331,7 @@ var Export_is408Message = is408Message
 
 ```
 searchKey: http.SetEnterRoundTripHook
+tags: [private]
 ```
 
 ```Go
@@ -9869,6 +10342,7 @@ var SetEnterRoundTripHook = hookSetter(&testHookEnterRoundTrip)
 
 ```
 searchKey: http.SetRoundTripRetried
+tags: [private]
 ```
 
 ```Go
@@ -9879,6 +10353,7 @@ var SetRoundTripRetried = hookSetter(&testHookRoundTripRetried)
 
 ```
 searchKey: http.headerWriteTests
+tags: [private]
 ```
 
 ```Go
@@ -9889,6 +10364,7 @@ var headerWriteTests = ...
 
 ```
 searchKey: http.parseTimeTests
+tags: [private]
 ```
 
 ```Go
@@ -9899,6 +10375,7 @@ var parseTimeTests = ...
 
 ```
 searchKey: http.hasTokenTests
+tags: [private]
 ```
 
 ```Go
@@ -9909,6 +10386,7 @@ var hasTokenTests = ...
 
 ```
 searchKey: http.testHeader
+tags: [private]
 ```
 
 ```Go
@@ -9919,6 +10397,7 @@ var testHeader = ...
 
 ```
 searchKey: http.buf
+tags: [private]
 ```
 
 ```Go
@@ -9929,6 +10408,7 @@ var buf bytes.Buffer
 
 ```
 searchKey: http.valuesCount
+tags: [private]
 ```
 
 ```Go
@@ -9939,6 +10419,7 @@ var valuesCount int
 
 ```
 searchKey: http.forbiddenStringsFunctions
+tags: [private]
 ```
 
 ```Go
@@ -9949,6 +10430,7 @@ var forbiddenStringsFunctions = ...
 
 ```
 searchKey: http.cacheKeysTests
+tags: [private]
 ```
 
 ```Go
@@ -9959,6 +10441,7 @@ var cacheKeysTests = ...
 
 ```
 searchKey: http.ParseRangeTests
+tags: [private]
 ```
 
 ```Go
@@ -9969,6 +10452,7 @@ var ParseRangeTests = ...
 
 ```
 searchKey: http.noError
+tags: [private]
 ```
 
 ```Go
@@ -9979,6 +10463,7 @@ var noError = ""
 
 ```
 searchKey: http.noBodyStr
+tags: [private]
 ```
 
 ```Go
@@ -9989,6 +10474,7 @@ var noBodyStr = ""
 
 ```
 searchKey: http.noTrailer
+tags: [private]
 ```
 
 ```Go
@@ -9999,6 +10485,7 @@ var noTrailer Header = nil
 
 ```
 searchKey: http.reqTests
+tags: [private]
 ```
 
 ```Go
@@ -10009,6 +10496,7 @@ var reqTests = ...
 
 ```
 searchKey: http.badRequestTests
+tags: [private]
 ```
 
 ```Go
@@ -10019,6 +10507,7 @@ var badRequestTests = ...
 
 ```
 searchKey: http.reqWriteTests
+tags: [private]
 ```
 
 ```Go
@@ -10029,6 +10518,7 @@ var reqWriteTests = ...
 
 ```
 searchKey: http.respTests
+tags: [private]
 ```
 
 ```Go
@@ -10039,6 +10529,7 @@ var respTests = ...
 
 ```
 searchKey: http.readResponseCloseInMiddleTests
+tags: [private]
 ```
 
 ```Go
@@ -10049,6 +10540,7 @@ var readResponseCloseInMiddleTests = ...
 
 ```
 searchKey: http.responseLocationTests
+tags: [private]
 ```
 
 ```Go
@@ -10057,15 +10549,10 @@ var responseLocationTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: http.Client
-tags: [exported]
 ```
 
 ```Go
@@ -10137,6 +10624,7 @@ When following redirects, the Client will forward all headers set on the initial
 
 ```
 searchKey: http.Client.send
+tags: [private]
 ```
 
 ```Go
@@ -10149,6 +10637,7 @@ didTimeout is non-nil only if err != nil.
 
 ```
 searchKey: http.Client.deadline
+tags: [private]
 ```
 
 ```Go
@@ -10159,6 +10648,7 @@ func (c *Client) deadline() time.Time
 
 ```
 searchKey: http.Client.transport
+tags: [private]
 ```
 
 ```Go
@@ -10169,7 +10659,6 @@ func (c *Client) transport() RoundTripper
 
 ```
 searchKey: http.Client.Get
-tags: [exported]
 ```
 
 ```Go
@@ -10198,6 +10687,7 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.Client.checkRedirect
+tags: [private]
 ```
 
 ```Go
@@ -10210,7 +10700,6 @@ checkRedirect calls either the user's configured CheckRedirect function, or the 
 
 ```
 searchKey: http.Client.Do
-tags: [exported]
 ```
 
 ```Go
@@ -10237,6 +10726,7 @@ Any returned error will be of type *url.Error. The url.Error value's Timeout met
 
 ```
 searchKey: http.Client.do
+tags: [private]
 ```
 
 ```Go
@@ -10247,6 +10737,7 @@ func (c *Client) do(req *Request) (retres *Response, reterr error)
 
 ```
 searchKey: http.Client.makeHeadersCopier
+tags: [private]
 ```
 
 ```Go
@@ -10259,7 +10750,6 @@ makeHeadersCopier makes a function that copies headers from the initial Request,
 
 ```
 searchKey: http.Client.Post
-tags: [exported]
 ```
 
 ```Go
@@ -10282,7 +10772,6 @@ See the Client.Do method documentation for details on how redirects are handled.
 
 ```
 searchKey: http.Client.PostForm
-tags: [exported]
 ```
 
 ```Go
@@ -10303,7 +10792,6 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.Client.Head
-tags: [exported]
 ```
 
 ```Go
@@ -10326,7 +10814,6 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.Client.CloseIdleConnections
-tags: [exported]
 ```
 
 ```Go
@@ -10341,7 +10828,6 @@ If the Client's Transport does not have a CloseIdleConnections method then this 
 
 ```
 searchKey: http.RoundTripper
-tags: [exported]
 ```
 
 ```Go
@@ -10382,7 +10868,6 @@ A RoundTripper must be safe for concurrent use by multiple goroutines.
 
 ```
 searchKey: http.NewFileTransport
-tags: [exported]
 ```
 
 ```Go
@@ -10405,6 +10890,7 @@ res, err := c.Get("file:///etc/passwd")
 
 ```
 searchKey: http.cancelTimerBody
+tags: [private]
 ```
 
 ```Go
@@ -10425,6 +10911,7 @@ marked as net.Error that hit its timeout.
 
 ```
 searchKey: http.cancelTimerBody.Read
+tags: [private]
 ```
 
 ```Go
@@ -10435,6 +10922,7 @@ func (b *cancelTimerBody) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.cancelTimerBody.Close
+tags: [private]
 ```
 
 ```Go
@@ -10445,7 +10933,6 @@ func (b *cancelTimerBody) Close() error
 
 ```
 searchKey: http.Cookie
-tags: [exported]
 ```
 
 ```Go
@@ -10478,7 +10965,6 @@ See [https://tools.ietf.org/html/rfc6265](https://tools.ietf.org/html/rfc6265) f
 
 ```
 searchKey: http.Cookie.String
-tags: [exported]
 ```
 
 ```Go
@@ -10491,7 +10977,6 @@ String returns the serialization of the cookie for use in a Cookie header (if on
 
 ```
 searchKey: http.SameSite
-tags: [exported]
 ```
 
 ```Go
@@ -10506,6 +10991,7 @@ See [https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00](https:/
 
 ```
 searchKey: http.fileTransport
+tags: [private]
 ```
 
 ```Go
@@ -10520,6 +11006,7 @@ fileTransport implements RoundTripper for the 'file' protocol.
 
 ```
 searchKey: http.fileTransport.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -10530,6 +11017,7 @@ func (t fileTransport) RoundTrip(req *Request) (resp *Response, err error)
 
 ```
 searchKey: http.populateResponse
+tags: [private]
 ```
 
 ```Go
@@ -10549,6 +11037,7 @@ populateResponse is a ResponseWriter that populates the *Response in res, and wr
 
 ```
 searchKey: http.newPopulateResponseWriter
+tags: [private]
 ```
 
 ```Go
@@ -10559,6 +11048,7 @@ func newPopulateResponseWriter() (*populateResponse, <-chan *Response)
 
 ```
 searchKey: http.populateResponse.finish
+tags: [private]
 ```
 
 ```Go
@@ -10569,6 +11059,7 @@ func (pr *populateResponse) finish()
 
 ```
 searchKey: http.populateResponse.sendResponse
+tags: [private]
 ```
 
 ```Go
@@ -10579,6 +11070,7 @@ func (pr *populateResponse) sendResponse()
 
 ```
 searchKey: http.populateResponse.Header
+tags: [private]
 ```
 
 ```Go
@@ -10589,6 +11081,7 @@ func (pr *populateResponse) Header() Header
 
 ```
 searchKey: http.populateResponse.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -10599,6 +11092,7 @@ func (pr *populateResponse) WriteHeader(code int)
 
 ```
 searchKey: http.populateResponse.Write
+tags: [private]
 ```
 
 ```Go
@@ -10609,7 +11103,6 @@ func (pr *populateResponse) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.Dir
-tags: [exported]
 ```
 
 ```Go
@@ -10628,7 +11121,6 @@ An empty Dir is treated as ".".
 
 ```
 searchKey: http.Dir.Open
-tags: [exported]
 ```
 
 ```Go
@@ -10641,7 +11133,6 @@ Open implements FileSystem using os.Open, opening files for reading rooted and r
 
 ```
 searchKey: http.FileSystem
-tags: [exported]
 ```
 
 ```Go
@@ -10658,7 +11149,6 @@ This interface predates the fs.FS interface, which can be used instead: the FS a
 
 ```
 searchKey: http.FS
-tags: [exported]
 ```
 
 ```Go
@@ -10671,7 +11161,6 @@ FS converts fsys to a FileSystem implementation, for use with FileServer and New
 
 ```
 searchKey: http.File
-tags: [exported]
 ```
 
 ```Go
@@ -10692,6 +11181,7 @@ The methods should behave the same as those on an *os.File.
 
 ```
 searchKey: http.anyDirs
+tags: [private]
 ```
 
 ```Go
@@ -10706,6 +11196,7 @@ type anyDirs interface {
 
 ```
 searchKey: http.fileInfoDirs
+tags: [private]
 ```
 
 ```Go
@@ -10716,6 +11207,7 @@ type fileInfoDirs []fs.FileInfo
 
 ```
 searchKey: http.fileInfoDirs.len
+tags: [private]
 ```
 
 ```Go
@@ -10726,6 +11218,7 @@ func (d fileInfoDirs) len() int
 
 ```
 searchKey: http.fileInfoDirs.isDir
+tags: [private]
 ```
 
 ```Go
@@ -10736,6 +11229,7 @@ func (d fileInfoDirs) isDir(i int) bool
 
 ```
 searchKey: http.fileInfoDirs.name
+tags: [private]
 ```
 
 ```Go
@@ -10746,6 +11240,7 @@ func (d fileInfoDirs) name(i int) string
 
 ```
 searchKey: http.dirEntryDirs
+tags: [private]
 ```
 
 ```Go
@@ -10756,6 +11251,7 @@ type dirEntryDirs []fs.DirEntry
 
 ```
 searchKey: http.dirEntryDirs.len
+tags: [private]
 ```
 
 ```Go
@@ -10766,6 +11262,7 @@ func (d dirEntryDirs) len() int
 
 ```
 searchKey: http.dirEntryDirs.isDir
+tags: [private]
 ```
 
 ```Go
@@ -10776,6 +11273,7 @@ func (d dirEntryDirs) isDir(i int) bool
 
 ```
 searchKey: http.dirEntryDirs.name
+tags: [private]
 ```
 
 ```Go
@@ -10786,6 +11284,7 @@ func (d dirEntryDirs) name(i int) string
 
 ```
 searchKey: http.condResult
+tags: [private]
 ```
 
 ```Go
@@ -10798,6 +11297,7 @@ condResult is the result of an HTTP request precondition check. See [https://too
 
 ```
 searchKey: http.checkIfMatch
+tags: [private]
 ```
 
 ```Go
@@ -10808,6 +11308,7 @@ func checkIfMatch(w ResponseWriter, r *Request) condResult
 
 ```
 searchKey: http.checkIfUnmodifiedSince
+tags: [private]
 ```
 
 ```Go
@@ -10818,6 +11319,7 @@ func checkIfUnmodifiedSince(r *Request, modtime time.Time) condResult
 
 ```
 searchKey: http.checkIfNoneMatch
+tags: [private]
 ```
 
 ```Go
@@ -10828,6 +11330,7 @@ func checkIfNoneMatch(w ResponseWriter, r *Request) condResult
 
 ```
 searchKey: http.checkIfModifiedSince
+tags: [private]
 ```
 
 ```Go
@@ -10838,6 +11341,7 @@ func checkIfModifiedSince(r *Request, modtime time.Time) condResult
 
 ```
 searchKey: http.checkIfRange
+tags: [private]
 ```
 
 ```Go
@@ -10848,6 +11352,7 @@ func checkIfRange(w ResponseWriter, r *Request, modtime time.Time) condResult
 
 ```
 searchKey: http.fileHandler
+tags: [private]
 ```
 
 ```Go
@@ -10860,6 +11365,7 @@ type fileHandler struct {
 
 ```
 searchKey: http.fileHandler.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -10870,6 +11376,7 @@ func (f *fileHandler) ServeHTTP(w ResponseWriter, r *Request)
 
 ```
 searchKey: http.ioFS
+tags: [private]
 ```
 
 ```Go
@@ -10882,6 +11389,7 @@ type ioFS struct {
 
 ```
 searchKey: http.ioFS.Open
+tags: [private]
 ```
 
 ```Go
@@ -10892,6 +11400,7 @@ func (f ioFS) Open(name string) (File, error)
 
 ```
 searchKey: http.ioFile
+tags: [private]
 ```
 
 ```Go
@@ -10904,6 +11413,7 @@ type ioFile struct {
 
 ```
 searchKey: http.ioFile.Close
+tags: [private]
 ```
 
 ```Go
@@ -10914,6 +11424,7 @@ func (f ioFile) Close() error
 
 ```
 searchKey: http.ioFile.Read
+tags: [private]
 ```
 
 ```Go
@@ -10924,6 +11435,7 @@ func (f ioFile) Read(b []byte) (int, error)
 
 ```
 searchKey: http.ioFile.Stat
+tags: [private]
 ```
 
 ```Go
@@ -10934,6 +11446,7 @@ func (f ioFile) Stat() (fs.FileInfo, error)
 
 ```
 searchKey: http.ioFile.Seek
+tags: [private]
 ```
 
 ```Go
@@ -10944,6 +11457,7 @@ func (f ioFile) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: http.ioFile.ReadDir
+tags: [private]
 ```
 
 ```Go
@@ -10954,6 +11468,7 @@ func (f ioFile) ReadDir(count int) ([]fs.DirEntry, error)
 
 ```
 searchKey: http.ioFile.Readdir
+tags: [private]
 ```
 
 ```Go
@@ -10964,6 +11479,7 @@ func (f ioFile) Readdir(count int) ([]fs.FileInfo, error)
 
 ```
 searchKey: http.httpRange
+tags: [private]
 ```
 
 ```Go
@@ -10978,6 +11494,7 @@ httpRange specifies the byte range to be sent to the client.
 
 ```
 searchKey: http.httpRange.contentRange
+tags: [private]
 ```
 
 ```Go
@@ -10988,6 +11505,7 @@ func (r httpRange) contentRange(size int64) string
 
 ```
 searchKey: http.httpRange.mimeHeader
+tags: [private]
 ```
 
 ```Go
@@ -10998,6 +11516,7 @@ func (r httpRange) mimeHeader(contentType string, size int64) textproto.MIMEHead
 
 ```
 searchKey: http.countingWriter
+tags: [private]
 ```
 
 ```Go
@@ -11010,6 +11529,7 @@ countingWriter counts how many bytes have been written to it.
 
 ```
 searchKey: http.countingWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -11020,6 +11540,7 @@ func (w *countingWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.http2ClientConnPool
+tags: [private]
 ```
 
 ```Go
@@ -11035,6 +11556,7 @@ ClientConnPool manages a pool of HTTP/2 client connections.
 
 ```
 searchKey: http.http2clientConnPoolIdleCloser
+tags: [private]
 ```
 
 ```Go
@@ -11050,6 +11572,7 @@ clientConnPoolIdleCloser is the interface implemented by ClientConnPool implemen
 
 ```
 searchKey: http.http2clientConnPool
+tags: [private]
 ```
 
 ```Go
@@ -11072,6 +11595,7 @@ TODO: use singleflight for dialing and addConnCalls?
 
 ```
 searchKey: http.http2clientConnPool.GetClientConn
+tags: [private]
 ```
 
 ```Go
@@ -11082,6 +11606,7 @@ func (p *http2clientConnPool) GetClientConn(req *Request, addr string) (*http2Cl
 
 ```
 searchKey: http.http2clientConnPool.shouldTraceGetConn
+tags: [private]
 ```
 
 ```Go
@@ -11096,6 +11621,7 @@ This complexity is needed to avoid double calls of the GetConn hook during the b
 
 ```
 searchKey: http.http2clientConnPool.getClientConn
+tags: [private]
 ```
 
 ```Go
@@ -11106,6 +11632,7 @@ func (p *http2clientConnPool) getClientConn(req *Request, addr string, dialOnMis
 
 ```
 searchKey: http.http2clientConnPool.getStartDialLocked
+tags: [private]
 ```
 
 ```Go
@@ -11118,6 +11645,7 @@ requires p.mu is held.
 
 ```
 searchKey: http.http2clientConnPool.addConnIfNeeded
+tags: [private]
 ```
 
 ```Go
@@ -11130,6 +11658,7 @@ addConnIfNeeded makes a NewClientConn out of c if a connection for key doesn't a
 
 ```
 searchKey: http.http2clientConnPool.addConnLocked
+tags: [private]
 ```
 
 ```Go
@@ -11142,6 +11671,7 @@ p.mu must be held
 
 ```
 searchKey: http.http2clientConnPool.MarkDead
+tags: [private]
 ```
 
 ```Go
@@ -11152,6 +11682,7 @@ func (p *http2clientConnPool) MarkDead(cc *http2ClientConn)
 
 ```
 searchKey: http.http2clientConnPool.closeIdleConnections
+tags: [private]
 ```
 
 ```Go
@@ -11162,6 +11693,7 @@ func (p *http2clientConnPool) closeIdleConnections()
 
 ```
 searchKey: http.http2dialCall
+tags: [private]
 ```
 
 ```Go
@@ -11183,6 +11715,7 @@ dialCall is an in-flight Transport dial call to a host.
 
 ```
 searchKey: http.http2dialCall.dial
+tags: [private]
 ```
 
 ```Go
@@ -11195,6 +11728,7 @@ run in its own goroutine.
 
 ```
 searchKey: http.http2addConnCall
+tags: [private]
 ```
 
 ```Go
@@ -11210,6 +11744,7 @@ type http2addConnCall struct {
 
 ```
 searchKey: http.http2addConnCall.run
+tags: [private]
 ```
 
 ```Go
@@ -11220,6 +11755,7 @@ func (c *http2addConnCall) run(t *http2Transport, key string, tc *tls.Conn)
 
 ```
 searchKey: http.http2noDialClientConnPool
+tags: [private]
 ```
 
 ```Go
@@ -11232,6 +11768,7 @@ noDialClientConnPool is an implementation of http2.ClientConnPool which never di
 
 ```
 searchKey: http.http2noDialClientConnPool.GetClientConn
+tags: [private]
 ```
 
 ```Go
@@ -11242,6 +11779,7 @@ func (p http2noDialClientConnPool) GetClientConn(req *Request, addr string) (*ht
 
 ```
 searchKey: http.http2dataBuffer
+tags: [private]
 ```
 
 ```Go
@@ -11260,6 +11798,7 @@ dataBuffer is an io.ReadWriter backed by a list of data chunks. Each dataBuffer 
 
 ```
 searchKey: http.http2dataBuffer.Read
+tags: [private]
 ```
 
 ```Go
@@ -11272,6 +11811,7 @@ Read copies bytes from the buffer into p. It is an error to read when no data is
 
 ```
 searchKey: http.http2dataBuffer.bytesFromFirstChunk
+tags: [private]
 ```
 
 ```Go
@@ -11282,6 +11822,7 @@ func (b *http2dataBuffer) bytesFromFirstChunk() []byte
 
 ```
 searchKey: http.http2dataBuffer.Len
+tags: [private]
 ```
 
 ```Go
@@ -11294,6 +11835,7 @@ Len returns the number of bytes of the unread portion of the buffer.
 
 ```
 searchKey: http.http2dataBuffer.Write
+tags: [private]
 ```
 
 ```Go
@@ -11306,6 +11848,7 @@ Write appends p to the buffer.
 
 ```
 searchKey: http.http2dataBuffer.lastChunkOrAlloc
+tags: [private]
 ```
 
 ```Go
@@ -11316,6 +11859,7 @@ func (b *http2dataBuffer) lastChunkOrAlloc(want int64) []byte
 
 ```
 searchKey: http.http2ErrCode
+tags: [private]
 ```
 
 ```Go
@@ -11328,6 +11872,7 @@ An ErrCode is an unsigned 32-bit error code as defined in the HTTP/2 spec.
 
 ```
 searchKey: http.http2ErrCode.String
+tags: [private]
 ```
 
 ```Go
@@ -11338,6 +11883,7 @@ func (e http2ErrCode) String() string
 
 ```
 searchKey: http.http2ConnectionError
+tags: [private]
 ```
 
 ```Go
@@ -11350,6 +11896,7 @@ ConnectionError is an error that results in the termination of the entire connec
 
 ```
 searchKey: http.http2ConnectionError.Error
+tags: [private]
 ```
 
 ```Go
@@ -11360,6 +11907,7 @@ func (e http2ConnectionError) Error() string
 
 ```
 searchKey: http.http2StreamError
+tags: [private]
 ```
 
 ```Go
@@ -11376,6 +11924,7 @@ StreamError is an error that only affects one stream within an HTTP/2 connection
 
 ```
 searchKey: http.http2streamError
+tags: [private]
 ```
 
 ```Go
@@ -11386,6 +11935,7 @@ func http2streamError(id uint32, code http2ErrCode) http2StreamError
 
 ```
 searchKey: http.http2StreamError.Error
+tags: [private]
 ```
 
 ```Go
@@ -11396,6 +11946,7 @@ func (e http2StreamError) Error() string
 
 ```
 searchKey: http.http2StreamError.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -11406,6 +11957,7 @@ func (se http2StreamError) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2StreamError.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -11416,6 +11968,7 @@ func (se http2StreamError) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2goAwayFlowError
+tags: [private]
 ```
 
 ```Go
@@ -11428,6 +11981,7 @@ type http2goAwayFlowError struct{}
 
 ```
 searchKey: http.http2goAwayFlowError.Error
+tags: [private]
 ```
 
 ```Go
@@ -11438,6 +11992,7 @@ func (http2goAwayFlowError) Error() string
 
 ```
 searchKey: http.http2connError
+tags: [private]
 ```
 
 ```Go
@@ -11455,6 +12010,7 @@ Errors of this type are only returned by the frame parser functions and converte
 
 ```
 searchKey: http.http2connError.Error
+tags: [private]
 ```
 
 ```Go
@@ -11465,6 +12021,7 @@ func (e http2connError) Error() string
 
 ```
 searchKey: http.http2pseudoHeaderError
+tags: [private]
 ```
 
 ```Go
@@ -11475,6 +12032,7 @@ type http2pseudoHeaderError string
 
 ```
 searchKey: http.http2pseudoHeaderError.Error
+tags: [private]
 ```
 
 ```Go
@@ -11485,6 +12043,7 @@ func (e http2pseudoHeaderError) Error() string
 
 ```
 searchKey: http.http2duplicatePseudoHeaderError
+tags: [private]
 ```
 
 ```Go
@@ -11495,6 +12054,7 @@ type http2duplicatePseudoHeaderError string
 
 ```
 searchKey: http.http2duplicatePseudoHeaderError.Error
+tags: [private]
 ```
 
 ```Go
@@ -11505,6 +12065,7 @@ func (e http2duplicatePseudoHeaderError) Error() string
 
 ```
 searchKey: http.http2headerFieldNameError
+tags: [private]
 ```
 
 ```Go
@@ -11515,6 +12076,7 @@ type http2headerFieldNameError string
 
 ```
 searchKey: http.http2headerFieldNameError.Error
+tags: [private]
 ```
 
 ```Go
@@ -11525,6 +12087,7 @@ func (e http2headerFieldNameError) Error() string
 
 ```
 searchKey: http.http2headerFieldValueError
+tags: [private]
 ```
 
 ```Go
@@ -11535,6 +12098,7 @@ type http2headerFieldValueError string
 
 ```
 searchKey: http.http2headerFieldValueError.Error
+tags: [private]
 ```
 
 ```Go
@@ -11545,6 +12109,7 @@ func (e http2headerFieldValueError) Error() string
 
 ```
 searchKey: http.http2flow
+tags: [private]
 ```
 
 ```Go
@@ -11568,6 +12133,7 @@ flow is the flow control window's size.
 
 ```
 searchKey: http.http2flow.setConnFlow
+tags: [private]
 ```
 
 ```Go
@@ -11578,6 +12144,7 @@ func (f *http2flow) setConnFlow(cf *http2flow)
 
 ```
 searchKey: http.http2flow.available
+tags: [private]
 ```
 
 ```Go
@@ -11588,6 +12155,7 @@ func (f *http2flow) available() int32
 
 ```
 searchKey: http.http2flow.take
+tags: [private]
 ```
 
 ```Go
@@ -11598,6 +12166,7 @@ func (f *http2flow) take(n int32)
 
 ```
 searchKey: http.http2flow.add
+tags: [private]
 ```
 
 ```Go
@@ -11610,6 +12179,7 @@ add adds n bytes (positive or negative) to the flow control window. It returns f
 
 ```
 searchKey: http.http2FrameType
+tags: [private]
 ```
 
 ```Go
@@ -11622,6 +12192,7 @@ A FrameType is a registered frame type as defined in [http://http2.github.io/htt
 
 ```
 searchKey: http.http2FrameType.String
+tags: [private]
 ```
 
 ```Go
@@ -11632,6 +12203,7 @@ func (t http2FrameType) String() string
 
 ```
 searchKey: http.http2Flags
+tags: [private]
 ```
 
 ```Go
@@ -11644,6 +12216,7 @@ Flags is a bitmask of HTTP/2 flags. The meaning of flags varies depending on the
 
 ```
 searchKey: http.http2Flags.Has
+tags: [private]
 ```
 
 ```Go
@@ -11656,6 +12229,7 @@ Has reports whether f contains all (0 or more) flags in v.
 
 ```
 searchKey: http.http2frameParser
+tags: [private]
 ```
 
 ```Go
@@ -11668,6 +12242,7 @@ a frameParser parses a frame given its FrameHeader and payload bytes. The length
 
 ```
 searchKey: http.http2typeFrameParser
+tags: [private]
 ```
 
 ```Go
@@ -11678,6 +12253,7 @@ func http2typeFrameParser(t http2FrameType) http2frameParser
 
 ```
 searchKey: http.http2FrameHeader
+tags: [private]
 ```
 
 ```Go
@@ -11712,6 +12288,7 @@ See [http://http2.github.io/http2-spec/#FrameHeader](http://http2.github.io/http
 
 ```
 searchKey: http.http2ReadFrameHeader
+tags: [private]
 ```
 
 ```Go
@@ -11724,6 +12301,7 @@ ReadFrameHeader reads 9 bytes from r and returns a FrameHeader. Most users shoul
 
 ```
 searchKey: http.http2readFrameHeader
+tags: [private]
 ```
 
 ```Go
@@ -11734,6 +12312,7 @@ func http2readFrameHeader(buf []byte, r io.Reader) (http2FrameHeader, error)
 
 ```
 searchKey: http.http2FrameHeader.Header
+tags: [private]
 ```
 
 ```Go
@@ -11746,6 +12325,7 @@ Header returns h. It exists so FrameHeaders can be embedded in other specific fr
 
 ```
 searchKey: http.http2FrameHeader.String
+tags: [private]
 ```
 
 ```Go
@@ -11756,6 +12336,7 @@ func (h http2FrameHeader) String() string
 
 ```
 searchKey: http.http2FrameHeader.writeDebug
+tags: [private]
 ```
 
 ```Go
@@ -11766,6 +12347,7 @@ func (h http2FrameHeader) writeDebug(buf *bytes.Buffer)
 
 ```
 searchKey: http.http2FrameHeader.checkValid
+tags: [private]
 ```
 
 ```Go
@@ -11776,6 +12358,7 @@ func (h *http2FrameHeader) checkValid()
 
 ```
 searchKey: http.http2FrameHeader.invalidate
+tags: [private]
 ```
 
 ```Go
@@ -11786,6 +12369,7 @@ func (h *http2FrameHeader) invalidate()
 
 ```
 searchKey: http.http2Frame
+tags: [private]
 ```
 
 ```Go
@@ -11807,6 +12391,7 @@ Frames are only valid until the next call to Framer.ReadFrame.
 
 ```
 searchKey: http.http2parseDataFrame
+tags: [private]
 ```
 
 ```Go
@@ -11817,6 +12402,7 @@ func http2parseDataFrame(fc *http2frameCache, fh http2FrameHeader, payload []byt
 
 ```
 searchKey: http.http2parseSettingsFrame
+tags: [private]
 ```
 
 ```Go
@@ -11827,6 +12413,7 @@ func http2parseSettingsFrame(_ *http2frameCache, fh http2FrameHeader, p []byte) 
 
 ```
 searchKey: http.http2parsePingFrame
+tags: [private]
 ```
 
 ```Go
@@ -11837,6 +12424,7 @@ func http2parsePingFrame(_ *http2frameCache, fh http2FrameHeader, payload []byte
 
 ```
 searchKey: http.http2parseGoAwayFrame
+tags: [private]
 ```
 
 ```Go
@@ -11847,6 +12435,7 @@ func http2parseGoAwayFrame(_ *http2frameCache, fh http2FrameHeader, p []byte) (h
 
 ```
 searchKey: http.http2parseUnknownFrame
+tags: [private]
 ```
 
 ```Go
@@ -11857,6 +12446,7 @@ func http2parseUnknownFrame(_ *http2frameCache, fh http2FrameHeader, p []byte) (
 
 ```
 searchKey: http.http2parseWindowUpdateFrame
+tags: [private]
 ```
 
 ```Go
@@ -11867,6 +12457,7 @@ func http2parseWindowUpdateFrame(_ *http2frameCache, fh http2FrameHeader, p []by
 
 ```
 searchKey: http.http2parseHeadersFrame
+tags: [private]
 ```
 
 ```Go
@@ -11877,6 +12468,7 @@ func http2parseHeadersFrame(_ *http2frameCache, fh http2FrameHeader, p []byte) (
 
 ```
 searchKey: http.http2parsePriorityFrame
+tags: [private]
 ```
 
 ```Go
@@ -11887,6 +12479,7 @@ func http2parsePriorityFrame(_ *http2frameCache, fh http2FrameHeader, payload []
 
 ```
 searchKey: http.http2parseRSTStreamFrame
+tags: [private]
 ```
 
 ```Go
@@ -11897,6 +12490,7 @@ func http2parseRSTStreamFrame(_ *http2frameCache, fh http2FrameHeader, p []byte)
 
 ```
 searchKey: http.http2parseContinuationFrame
+tags: [private]
 ```
 
 ```Go
@@ -11907,6 +12501,7 @@ func http2parseContinuationFrame(_ *http2frameCache, fh http2FrameHeader, p []by
 
 ```
 searchKey: http.http2parsePushPromise
+tags: [private]
 ```
 
 ```Go
@@ -11917,6 +12512,7 @@ func http2parsePushPromise(_ *http2frameCache, fh http2FrameHeader, p []byte) (_
 
 ```
 searchKey: http.http2Framer
+tags: [private]
 ```
 
 ```Go
@@ -11986,6 +12582,7 @@ A Framer reads and writes Frames.
 
 ```
 searchKey: http.http2NewFramer
+tags: [private]
 ```
 
 ```Go
@@ -11998,6 +12595,7 @@ NewFramer returns a Framer that writes frames to w and reads them from r.
 
 ```
 searchKey: http.http2Framer.maxHeaderListSize
+tags: [private]
 ```
 
 ```Go
@@ -12008,6 +12606,7 @@ func (fr *http2Framer) maxHeaderListSize() uint32
 
 ```
 searchKey: http.http2Framer.startWrite
+tags: [private]
 ```
 
 ```Go
@@ -12018,6 +12617,7 @@ func (f *http2Framer) startWrite(ftype http2FrameType, flags http2Flags, streamI
 
 ```
 searchKey: http.http2Framer.endWrite
+tags: [private]
 ```
 
 ```Go
@@ -12028,6 +12628,7 @@ func (f *http2Framer) endWrite() error
 
 ```
 searchKey: http.http2Framer.logWrite
+tags: [private]
 ```
 
 ```Go
@@ -12038,6 +12639,7 @@ func (f *http2Framer) logWrite()
 
 ```
 searchKey: http.http2Framer.writeByte
+tags: [private]
 ```
 
 ```Go
@@ -12048,6 +12650,7 @@ func (f *http2Framer) writeByte(v byte)
 
 ```
 searchKey: http.http2Framer.writeBytes
+tags: [private]
 ```
 
 ```Go
@@ -12058,6 +12661,7 @@ func (f *http2Framer) writeBytes(v []byte)
 
 ```
 searchKey: http.http2Framer.writeUint16
+tags: [private]
 ```
 
 ```Go
@@ -12068,6 +12672,7 @@ func (f *http2Framer) writeUint16(v uint16)
 
 ```
 searchKey: http.http2Framer.writeUint32
+tags: [private]
 ```
 
 ```Go
@@ -12078,6 +12683,7 @@ func (f *http2Framer) writeUint32(v uint32)
 
 ```
 searchKey: http.http2Framer.SetReuseFrames
+tags: [private]
 ```
 
 ```Go
@@ -12090,6 +12696,7 @@ SetReuseFrames allows the Framer to reuse Frames. If called on a Framer, Frames 
 
 ```
 searchKey: http.http2Framer.SetMaxReadFrameSize
+tags: [private]
 ```
 
 ```Go
@@ -12102,6 +12709,7 @@ SetMaxReadFrameSize sets the maximum size of a frame that will be read by a subs
 
 ```
 searchKey: http.http2Framer.ErrorDetail
+tags: [private]
 ```
 
 ```Go
@@ -12114,6 +12722,7 @@ ErrorDetail returns a more detailed error of the last error returned by Framer.R
 
 ```
 searchKey: http.http2Framer.ReadFrame
+tags: [private]
 ```
 
 ```Go
@@ -12128,6 +12737,7 @@ If the frame is larger than previously set with SetMaxReadFrameSize, the returne
 
 ```
 searchKey: http.http2Framer.connError
+tags: [private]
 ```
 
 ```Go
@@ -12140,6 +12750,7 @@ connError returns ConnectionError(code) but first stashes away a public reason t
 
 ```
 searchKey: http.http2Framer.checkFrameOrder
+tags: [private]
 ```
 
 ```Go
@@ -12152,6 +12763,7 @@ checkFrameOrder reports an error if f is an invalid frame to return next from Re
 
 ```
 searchKey: http.http2Framer.WriteData
+tags: [private]
 ```
 
 ```Go
@@ -12166,6 +12778,7 @@ It will perform exactly one Write to the underlying Writer. It is the caller's r
 
 ```
 searchKey: http.http2Framer.WriteDataPadded
+tags: [private]
 ```
 
 ```Go
@@ -12182,6 +12795,7 @@ It will perform exactly one Write to the underlying Writer. It is the caller's r
 
 ```
 searchKey: http.http2Framer.WriteSettings
+tags: [private]
 ```
 
 ```Go
@@ -12196,6 +12810,7 @@ It will perform exactly one Write to the underlying Writer. It is the caller's r
 
 ```
 searchKey: http.http2Framer.WriteSettingsAck
+tags: [private]
 ```
 
 ```Go
@@ -12210,6 +12825,7 @@ It will perform exactly one Write to the underlying Writer. It is the caller's r
 
 ```
 searchKey: http.http2Framer.WritePing
+tags: [private]
 ```
 
 ```Go
@@ -12220,6 +12836,7 @@ func (f *http2Framer) WritePing(ack bool, data [8]byte) error
 
 ```
 searchKey: http.http2Framer.WriteGoAway
+tags: [private]
 ```
 
 ```Go
@@ -12230,6 +12847,7 @@ func (f *http2Framer) WriteGoAway(maxStreamID uint32, code http2ErrCode, debugDa
 
 ```
 searchKey: http.http2Framer.WriteWindowUpdate
+tags: [private]
 ```
 
 ```Go
@@ -12242,6 +12860,7 @@ WriteWindowUpdate writes a WINDOW_UPDATE frame. The increment value must be betw
 
 ```
 searchKey: http.http2Framer.WriteHeaders
+tags: [private]
 ```
 
 ```Go
@@ -12258,6 +12877,7 @@ It will perform exactly one Write to the underlying Writer. It is the caller's r
 
 ```
 searchKey: http.http2Framer.WritePriority
+tags: [private]
 ```
 
 ```Go
@@ -12272,6 +12892,7 @@ It will perform exactly one Write to the underlying Writer. It is the caller's r
 
 ```
 searchKey: http.http2Framer.WriteRSTStream
+tags: [private]
 ```
 
 ```Go
@@ -12286,6 +12907,7 @@ It will perform exactly one Write to the underlying Writer. It is the caller's r
 
 ```
 searchKey: http.http2Framer.WriteContinuation
+tags: [private]
 ```
 
 ```Go
@@ -12300,6 +12922,7 @@ It will perform exactly one Write to the underlying Writer. It is the caller's r
 
 ```
 searchKey: http.http2Framer.WritePushPromise
+tags: [private]
 ```
 
 ```Go
@@ -12316,6 +12939,7 @@ It will perform exactly one Write to the underlying Writer. It is the caller's r
 
 ```
 searchKey: http.http2Framer.WriteRawFrame
+tags: [private]
 ```
 
 ```Go
@@ -12328,6 +12952,7 @@ WriteRawFrame writes a raw frame. This can be used to write extension frames unk
 
 ```
 searchKey: http.http2Framer.maxHeaderStringLen
+tags: [private]
 ```
 
 ```Go
@@ -12338,6 +12963,7 @@ func (fr *http2Framer) maxHeaderStringLen() int
 
 ```
 searchKey: http.http2Framer.readMetaFrame
+tags: [private]
 ```
 
 ```Go
@@ -12350,6 +12976,7 @@ readMetaFrame returns 0 or more CONTINUATION frames from fr and merge them into 
 
 ```
 searchKey: http.http2frameCache
+tags: [private]
 ```
 
 ```Go
@@ -12362,6 +12989,7 @@ type http2frameCache struct {
 
 ```
 searchKey: http.http2frameCache.getDataFrame
+tags: [private]
 ```
 
 ```Go
@@ -12372,6 +13000,7 @@ func (fc *http2frameCache) getDataFrame() *http2DataFrame
 
 ```
 searchKey: http.http2DataFrame
+tags: [private]
 ```
 
 ```Go
@@ -12387,6 +13016,7 @@ A DataFrame conveys arbitrary, variable-length sequences of octets associated wi
 
 ```
 searchKey: http.http2DataFrame.StreamEnded
+tags: [private]
 ```
 
 ```Go
@@ -12397,6 +13027,7 @@ func (f *http2DataFrame) StreamEnded() bool
 
 ```
 searchKey: http.http2DataFrame.Data
+tags: [private]
 ```
 
 ```Go
@@ -12409,6 +13040,7 @@ Data returns the frame's data octets, not including any padding size byte or pad
 
 ```
 searchKey: http.http2SettingsFrame
+tags: [private]
 ```
 
 ```Go
@@ -12426,6 +13058,7 @@ See [http://http2.github.io/http2-spec/#SETTINGS](http://http2.github.io/http2-s
 
 ```
 searchKey: http.http2SettingsFrame.IsAck
+tags: [private]
 ```
 
 ```Go
@@ -12436,6 +13069,7 @@ func (f *http2SettingsFrame) IsAck() bool
 
 ```
 searchKey: http.http2SettingsFrame.Value
+tags: [private]
 ```
 
 ```Go
@@ -12446,6 +13080,7 @@ func (f *http2SettingsFrame) Value(id http2SettingID) (v uint32, ok bool)
 
 ```
 searchKey: http.http2SettingsFrame.Setting
+tags: [private]
 ```
 
 ```Go
@@ -12458,6 +13093,7 @@ Setting returns the setting from the frame at the given 0-based index. The index
 
 ```
 searchKey: http.http2SettingsFrame.NumSettings
+tags: [private]
 ```
 
 ```Go
@@ -12468,6 +13104,7 @@ func (f *http2SettingsFrame) NumSettings() int
 
 ```
 searchKey: http.http2SettingsFrame.HasDuplicates
+tags: [private]
 ```
 
 ```Go
@@ -12480,6 +13117,7 @@ HasDuplicates reports whether f contains any duplicate setting IDs.
 
 ```
 searchKey: http.http2SettingsFrame.ForeachSetting
+tags: [private]
 ```
 
 ```Go
@@ -12492,6 +13130,7 @@ ForeachSetting runs fn for each setting. It stops and returns the first error.
 
 ```
 searchKey: http.http2PingFrame
+tags: [private]
 ```
 
 ```Go
@@ -12507,6 +13146,7 @@ A PingFrame is a mechanism for measuring a minimal round trip time from the send
 
 ```
 searchKey: http.http2PingFrame.IsAck
+tags: [private]
 ```
 
 ```Go
@@ -12517,6 +13157,7 @@ func (f *http2PingFrame) IsAck() bool
 
 ```
 searchKey: http.http2GoAwayFrame
+tags: [private]
 ```
 
 ```Go
@@ -12534,6 +13175,7 @@ A GoAwayFrame informs the remote peer to stop creating streams on this connectio
 
 ```
 searchKey: http.http2GoAwayFrame.DebugData
+tags: [private]
 ```
 
 ```Go
@@ -12546,6 +13188,7 @@ DebugData returns any debug data in the GOAWAY frame. Its contents are not defin
 
 ```
 searchKey: http.http2UnknownFrame
+tags: [private]
 ```
 
 ```Go
@@ -12561,6 +13204,7 @@ An UnknownFrame is the frame type returned when the frame type is unknown or no 
 
 ```
 searchKey: http.http2UnknownFrame.Payload
+tags: [private]
 ```
 
 ```Go
@@ -12573,6 +13217,7 @@ Payload returns the frame's payload (after the header).  It is not valid to call
 
 ```
 searchKey: http.http2WindowUpdateFrame
+tags: [private]
 ```
 
 ```Go
@@ -12588,6 +13233,7 @@ A WindowUpdateFrame is used to implement flow control. See [http://http2.github.
 
 ```
 searchKey: http.http2HeadersFrame
+tags: [private]
 ```
 
 ```Go
@@ -12607,6 +13253,7 @@ A HeadersFrame is used to open a stream and additionally carries a header block 
 
 ```
 searchKey: http.http2HeadersFrame.HeaderBlockFragment
+tags: [private]
 ```
 
 ```Go
@@ -12617,6 +13264,7 @@ func (f *http2HeadersFrame) HeaderBlockFragment() []byte
 
 ```
 searchKey: http.http2HeadersFrame.HeadersEnded
+tags: [private]
 ```
 
 ```Go
@@ -12627,6 +13275,7 @@ func (f *http2HeadersFrame) HeadersEnded() bool
 
 ```
 searchKey: http.http2HeadersFrame.StreamEnded
+tags: [private]
 ```
 
 ```Go
@@ -12637,6 +13286,7 @@ func (f *http2HeadersFrame) StreamEnded() bool
 
 ```
 searchKey: http.http2HeadersFrame.HasPriority
+tags: [private]
 ```
 
 ```Go
@@ -12647,6 +13297,7 @@ func (f *http2HeadersFrame) HasPriority() bool
 
 ```
 searchKey: http.http2HeadersFrameParam
+tags: [private]
 ```
 
 ```Go
@@ -12683,6 +13334,7 @@ HeadersFrameParam are the parameters for writing a HEADERS frame.
 
 ```
 searchKey: http.http2PriorityFrame
+tags: [private]
 ```
 
 ```Go
@@ -12698,6 +13350,7 @@ A PriorityFrame specifies the sender-advised priority of a stream. See [http://h
 
 ```
 searchKey: http.http2PriorityParam
+tags: [private]
 ```
 
 ```Go
@@ -12724,6 +13377,7 @@ PriorityParam are the stream prioritzation parameters.
 
 ```
 searchKey: http.http2PriorityParam.IsZero
+tags: [private]
 ```
 
 ```Go
@@ -12734,6 +13388,7 @@ func (p http2PriorityParam) IsZero() bool
 
 ```
 searchKey: http.http2RSTStreamFrame
+tags: [private]
 ```
 
 ```Go
@@ -12749,6 +13404,7 @@ A RSTStreamFrame allows for abnormal termination of a stream. See [http://http2.
 
 ```
 searchKey: http.http2ContinuationFrame
+tags: [private]
 ```
 
 ```Go
@@ -12764,6 +13420,7 @@ A ContinuationFrame is used to continue a sequence of header block fragments. Se
 
 ```
 searchKey: http.http2ContinuationFrame.HeaderBlockFragment
+tags: [private]
 ```
 
 ```Go
@@ -12774,6 +13431,7 @@ func (f *http2ContinuationFrame) HeaderBlockFragment() []byte
 
 ```
 searchKey: http.http2ContinuationFrame.HeadersEnded
+tags: [private]
 ```
 
 ```Go
@@ -12784,6 +13442,7 @@ func (f *http2ContinuationFrame) HeadersEnded() bool
 
 ```
 searchKey: http.http2PushPromiseFrame
+tags: [private]
 ```
 
 ```Go
@@ -12800,6 +13459,7 @@ A PushPromiseFrame is used to initiate a server stream. See [http://http2.github
 
 ```
 searchKey: http.http2PushPromiseFrame.HeaderBlockFragment
+tags: [private]
 ```
 
 ```Go
@@ -12810,6 +13470,7 @@ func (f *http2PushPromiseFrame) HeaderBlockFragment() []byte
 
 ```
 searchKey: http.http2PushPromiseFrame.HeadersEnded
+tags: [private]
 ```
 
 ```Go
@@ -12820,6 +13481,7 @@ func (f *http2PushPromiseFrame) HeadersEnded() bool
 
 ```
 searchKey: http.http2PushPromiseParam
+tags: [private]
 ```
 
 ```Go
@@ -12851,6 +13513,7 @@ PushPromiseParam are the parameters for writing a PUSH_PROMISE frame.
 
 ```
 searchKey: http.http2streamEnder
+tags: [private]
 ```
 
 ```Go
@@ -12863,6 +13526,7 @@ type http2streamEnder interface {
 
 ```
 searchKey: http.http2headersEnder
+tags: [private]
 ```
 
 ```Go
@@ -12875,6 +13539,7 @@ type http2headersEnder interface {
 
 ```
 searchKey: http.http2headersOrContinuation
+tags: [private]
 ```
 
 ```Go
@@ -12888,6 +13553,7 @@ type http2headersOrContinuation interface {
 
 ```
 searchKey: http.http2MetaHeadersFrame
+tags: [private]
 ```
 
 ```Go
@@ -12921,6 +13587,7 @@ This type of frame does not appear on the wire and is only returned by the Frame
 
 ```
 searchKey: http.http2MetaHeadersFrame.PseudoValue
+tags: [private]
 ```
 
 ```Go
@@ -12933,6 +13600,7 @@ PseudoValue returns the given pseudo header field's value. The provided pseudo f
 
 ```
 searchKey: http.http2MetaHeadersFrame.RegularFields
+tags: [private]
 ```
 
 ```Go
@@ -12945,6 +13613,7 @@ RegularFields returns the regular (non-pseudo) header fields of mh. The caller d
 
 ```
 searchKey: http.http2MetaHeadersFrame.PseudoFields
+tags: [private]
 ```
 
 ```Go
@@ -12957,6 +13626,7 @@ PseudoFields returns the pseudo header fields of mh. The caller does not own the
 
 ```
 searchKey: http.http2MetaHeadersFrame.checkPseudos
+tags: [private]
 ```
 
 ```Go
@@ -12967,6 +13637,7 @@ func (mh *http2MetaHeadersFrame) checkPseudos() error
 
 ```
 searchKey: http.http2goroutineLock
+tags: [private]
 ```
 
 ```Go
@@ -12977,6 +13648,7 @@ type http2goroutineLock uint64
 
 ```
 searchKey: http.http2newGoroutineLock
+tags: [private]
 ```
 
 ```Go
@@ -12987,6 +13659,7 @@ func http2newGoroutineLock() http2goroutineLock
 
 ```
 searchKey: http.http2goroutineLock.check
+tags: [private]
 ```
 
 ```Go
@@ -12997,6 +13670,7 @@ func (g http2goroutineLock) check()
 
 ```
 searchKey: http.http2goroutineLock.checkNotOn
+tags: [private]
 ```
 
 ```Go
@@ -13007,6 +13681,7 @@ func (g http2goroutineLock) checkNotOn()
 
 ```
 searchKey: http.http2streamState
+tags: [private]
 ```
 
 ```Go
@@ -13017,6 +13692,7 @@ type http2streamState int
 
 ```
 searchKey: http.http2streamState.String
+tags: [private]
 ```
 
 ```Go
@@ -13027,6 +13703,7 @@ func (st http2streamState) String() string
 
 ```
 searchKey: http.http2Setting
+tags: [private]
 ```
 
 ```Go
@@ -13046,6 +13723,7 @@ Setting is a setting parameter: which setting it is, and its value.
 
 ```
 searchKey: http.http2Setting.String
+tags: [private]
 ```
 
 ```Go
@@ -13056,6 +13734,7 @@ func (s http2Setting) String() string
 
 ```
 searchKey: http.http2Setting.Valid
+tags: [private]
 ```
 
 ```Go
@@ -13068,6 +13747,7 @@ Valid reports whether the setting is valid.
 
 ```
 searchKey: http.http2SettingID
+tags: [private]
 ```
 
 ```Go
@@ -13080,6 +13760,7 @@ A SettingID is an HTTP/2 setting as defined in [http://http2.github.io/http2-spe
 
 ```
 searchKey: http.http2SettingID.String
+tags: [private]
 ```
 
 ```Go
@@ -13090,6 +13771,7 @@ func (s http2SettingID) String() string
 
 ```
 searchKey: http.http2stringWriter
+tags: [private]
 ```
 
 ```Go
@@ -13104,6 +13786,7 @@ from pkg io
 
 ```
 searchKey: http.http2gate
+tags: [private]
 ```
 
 ```Go
@@ -13116,6 +13799,7 @@ A gate lets two goroutines coordinate their activities.
 
 ```
 searchKey: http.http2gate.Done
+tags: [private]
 ```
 
 ```Go
@@ -13126,6 +13810,7 @@ func (g http2gate) Done()
 
 ```
 searchKey: http.http2gate.Wait
+tags: [private]
 ```
 
 ```Go
@@ -13136,6 +13821,7 @@ func (g http2gate) Wait()
 
 ```
 searchKey: http.http2closeWaiter
+tags: [private]
 ```
 
 ```Go
@@ -13148,6 +13834,7 @@ A closeWaiter is like a sync.WaitGroup but only goes 1 to 0 (open to closed).
 
 ```
 searchKey: http.http2closeWaiter.Init
+tags: [private]
 ```
 
 ```Go
@@ -13160,6 +13847,7 @@ Init makes a closeWaiter usable. It exists because so a closeWaiter value can be
 
 ```
 searchKey: http.http2closeWaiter.Close
+tags: [private]
 ```
 
 ```Go
@@ -13172,6 +13860,7 @@ Close marks the closeWaiter as closed and unblocks any waiters.
 
 ```
 searchKey: http.http2closeWaiter.Wait
+tags: [private]
 ```
 
 ```Go
@@ -13184,6 +13873,7 @@ Wait waits for the closeWaiter to become closed.
 
 ```
 searchKey: http.http2bufferedWriter
+tags: [private]
 ```
 
 ```Go
@@ -13200,6 +13890,7 @@ bufferedWriter is a buffered writer that writes to w. Its buffered writer is laz
 
 ```
 searchKey: http.http2newBufferedWriter
+tags: [private]
 ```
 
 ```Go
@@ -13210,6 +13901,7 @@ func http2newBufferedWriter(w io.Writer) *http2bufferedWriter
 
 ```
 searchKey: http.http2bufferedWriter.Available
+tags: [private]
 ```
 
 ```Go
@@ -13220,6 +13912,7 @@ func (w *http2bufferedWriter) Available() int
 
 ```
 searchKey: http.http2bufferedWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -13230,6 +13923,7 @@ func (w *http2bufferedWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.http2bufferedWriter.Flush
+tags: [private]
 ```
 
 ```Go
@@ -13240,6 +13934,7 @@ func (w *http2bufferedWriter) Flush() error
 
 ```
 searchKey: http.http2httpError
+tags: [private]
 ```
 
 ```Go
@@ -13254,6 +13949,7 @@ type http2httpError struct {
 
 ```
 searchKey: http.http2httpError.Error
+tags: [private]
 ```
 
 ```Go
@@ -13264,6 +13960,7 @@ func (e *http2httpError) Error() string
 
 ```
 searchKey: http.http2httpError.Timeout
+tags: [private]
 ```
 
 ```Go
@@ -13274,6 +13971,7 @@ func (e *http2httpError) Timeout() bool
 
 ```
 searchKey: http.http2httpError.Temporary
+tags: [private]
 ```
 
 ```Go
@@ -13284,6 +13982,7 @@ func (e *http2httpError) Temporary() bool
 
 ```
 searchKey: http.http2connectionStater
+tags: [private]
 ```
 
 ```Go
@@ -13296,6 +13995,7 @@ type http2connectionStater interface {
 
 ```
 searchKey: http.http2sorter
+tags: [private]
 ```
 
 ```Go
@@ -13308,6 +14008,7 @@ type http2sorter struct {
 
 ```
 searchKey: http.http2sorter.Len
+tags: [private]
 ```
 
 ```Go
@@ -13318,6 +14019,7 @@ func (s *http2sorter) Len() int
 
 ```
 searchKey: http.http2sorter.Swap
+tags: [private]
 ```
 
 ```Go
@@ -13328,6 +14030,7 @@ func (s *http2sorter) Swap(i, j int)
 
 ```
 searchKey: http.http2sorter.Less
+tags: [private]
 ```
 
 ```Go
@@ -13338,6 +14041,7 @@ func (s *http2sorter) Less(i, j int) bool
 
 ```
 searchKey: http.http2sorter.Keys
+tags: [private]
 ```
 
 ```Go
@@ -13352,6 +14056,7 @@ The returned slice is only valid until s used again or returned to its pool.
 
 ```
 searchKey: http.http2sorter.SortStrings
+tags: [private]
 ```
 
 ```Go
@@ -13362,6 +14067,7 @@ func (s *http2sorter) SortStrings(ss []string)
 
 ```
 searchKey: http.http2incomparable
+tags: [private]
 ```
 
 ```Go
@@ -13374,6 +14080,7 @@ incomparable is a zero-width, non-comparable type. Adding it to a struct makes t
 
 ```
 searchKey: http.http2pipe
+tags: [private]
 ```
 
 ```Go
@@ -13395,6 +14102,7 @@ pipe is a goroutine-safe io.Reader/io.Writer pair. It's like io.Pipe except ther
 
 ```
 searchKey: http.http2pipe.Len
+tags: [private]
 ```
 
 ```Go
@@ -13405,6 +14113,7 @@ func (p *http2pipe) Len() int
 
 ```
 searchKey: http.http2pipe.Read
+tags: [private]
 ```
 
 ```Go
@@ -13417,6 +14126,7 @@ Read waits until data is available and copies bytes from the buffer into p.
 
 ```
 searchKey: http.http2pipe.Write
+tags: [private]
 ```
 
 ```Go
@@ -13429,6 +14139,7 @@ Write copies bytes from p into the buffer and wakes a reader. It is an error to 
 
 ```
 searchKey: http.http2pipe.CloseWithError
+tags: [private]
 ```
 
 ```Go
@@ -13443,6 +14154,7 @@ The error must be non-nil.
 
 ```
 searchKey: http.http2pipe.BreakWithError
+tags: [private]
 ```
 
 ```Go
@@ -13455,6 +14167,7 @@ BreakWithError causes the next Read (waking up a current blocked Read if needed)
 
 ```
 searchKey: http.http2pipe.closeWithErrorAndCode
+tags: [private]
 ```
 
 ```Go
@@ -13467,6 +14180,7 @@ closeWithErrorAndCode is like CloseWithError but also sets some code to run in t
 
 ```
 searchKey: http.http2pipe.closeWithError
+tags: [private]
 ```
 
 ```Go
@@ -13477,6 +14191,7 @@ func (p *http2pipe) closeWithError(dst *error, err error, fn func())
 
 ```
 searchKey: http.http2pipe.closeDoneLocked
+tags: [private]
 ```
 
 ```Go
@@ -13489,6 +14204,7 @@ requires p.mu be held.
 
 ```
 searchKey: http.http2pipe.Err
+tags: [private]
 ```
 
 ```Go
@@ -13501,6 +14217,7 @@ Err returns the error (if any) first set by BreakWithError or CloseWithError.
 
 ```
 searchKey: http.http2pipe.Done
+tags: [private]
 ```
 
 ```Go
@@ -13513,6 +14230,7 @@ Done returns a channel which is closed if and when this pipe is closed with Clos
 
 ```
 searchKey: http.http2pipeBuffer
+tags: [private]
 ```
 
 ```Go
@@ -13527,6 +14245,7 @@ type http2pipeBuffer interface {
 
 ```
 searchKey: http.http2Server
+tags: [private]
 ```
 
 ```Go
@@ -13590,6 +14309,7 @@ Server is an HTTP/2 server.
 
 ```
 searchKey: http.http2Server.initialConnRecvWindowSize
+tags: [private]
 ```
 
 ```Go
@@ -13600,6 +14320,7 @@ func (s *http2Server) initialConnRecvWindowSize() int32
 
 ```
 searchKey: http.http2Server.initialStreamRecvWindowSize
+tags: [private]
 ```
 
 ```Go
@@ -13610,6 +14331,7 @@ func (s *http2Server) initialStreamRecvWindowSize() int32
 
 ```
 searchKey: http.http2Server.maxReadFrameSize
+tags: [private]
 ```
 
 ```Go
@@ -13620,6 +14342,7 @@ func (s *http2Server) maxReadFrameSize() uint32
 
 ```
 searchKey: http.http2Server.maxConcurrentStreams
+tags: [private]
 ```
 
 ```Go
@@ -13630,6 +14353,7 @@ func (s *http2Server) maxConcurrentStreams() uint32
 
 ```
 searchKey: http.http2Server.maxQueuedControlFrames
+tags: [private]
 ```
 
 ```Go
@@ -13642,6 +14366,7 @@ maxQueuedControlFrames is the maximum number of control frames like SETTINGS, PI
 
 ```
 searchKey: http.http2Server.ServeConn
+tags: [private]
 ```
 
 ```Go
@@ -13660,6 +14385,7 @@ The opts parameter is optional. If nil, default values are used.
 
 ```
 searchKey: http.http2serverInternalState
+tags: [private]
 ```
 
 ```Go
@@ -13673,6 +14399,7 @@ type http2serverInternalState struct {
 
 ```
 searchKey: http.http2serverInternalState.registerConn
+tags: [private]
 ```
 
 ```Go
@@ -13683,6 +14410,7 @@ func (s *http2serverInternalState) registerConn(sc *http2serverConn)
 
 ```
 searchKey: http.http2serverInternalState.unregisterConn
+tags: [private]
 ```
 
 ```Go
@@ -13693,6 +14421,7 @@ func (s *http2serverInternalState) unregisterConn(sc *http2serverConn)
 
 ```
 searchKey: http.http2serverInternalState.startGracefulShutdown
+tags: [private]
 ```
 
 ```Go
@@ -13703,6 +14432,7 @@ func (s *http2serverInternalState) startGracefulShutdown()
 
 ```
 searchKey: http.http2ServeConnOpts
+tags: [private]
 ```
 
 ```Go
@@ -13728,6 +14458,7 @@ ServeConnOpts are options for the Server.ServeConn method.
 
 ```
 searchKey: http.http2ServeConnOpts.context
+tags: [private]
 ```
 
 ```Go
@@ -13738,6 +14469,7 @@ func (o *http2ServeConnOpts) context() context.Context
 
 ```
 searchKey: http.http2ServeConnOpts.baseConfig
+tags: [private]
 ```
 
 ```Go
@@ -13748,6 +14480,7 @@ func (o *http2ServeConnOpts) baseConfig() *Server
 
 ```
 searchKey: http.http2ServeConnOpts.handler
+tags: [private]
 ```
 
 ```Go
@@ -13758,6 +14491,7 @@ func (o *http2ServeConnOpts) handler() Handler
 
 ```
 searchKey: http.http2serverConn
+tags: [private]
 ```
 
 ```Go
@@ -13824,6 +14558,7 @@ type http2serverConn struct {
 
 ```
 searchKey: http.http2serverConn.rejectConn
+tags: [private]
 ```
 
 ```Go
@@ -13834,6 +14569,7 @@ func (sc *http2serverConn) rejectConn(err http2ErrCode, debug string)
 
 ```
 searchKey: http.http2serverConn.maxHeaderListSize
+tags: [private]
 ```
 
 ```Go
@@ -13844,6 +14580,7 @@ func (sc *http2serverConn) maxHeaderListSize() uint32
 
 ```
 searchKey: http.http2serverConn.curOpenStreams
+tags: [private]
 ```
 
 ```Go
@@ -13854,6 +14591,7 @@ func (sc *http2serverConn) curOpenStreams() uint32
 
 ```
 searchKey: http.http2serverConn.Framer
+tags: [private]
 ```
 
 ```Go
@@ -13864,6 +14602,7 @@ func (sc *http2serverConn) Framer() *http2Framer
 
 ```
 searchKey: http.http2serverConn.CloseConn
+tags: [private]
 ```
 
 ```Go
@@ -13874,6 +14613,7 @@ func (sc *http2serverConn) CloseConn() error
 
 ```
 searchKey: http.http2serverConn.Flush
+tags: [private]
 ```
 
 ```Go
@@ -13884,6 +14624,7 @@ func (sc *http2serverConn) Flush() error
 
 ```
 searchKey: http.http2serverConn.HeaderEncoder
+tags: [private]
 ```
 
 ```Go
@@ -13894,6 +14635,7 @@ func (sc *http2serverConn) HeaderEncoder() (*hpack.Encoder, *bytes.Buffer)
 
 ```
 searchKey: http.http2serverConn.state
+tags: [private]
 ```
 
 ```Go
@@ -13904,6 +14646,7 @@ func (sc *http2serverConn) state(streamID uint32) (http2streamState, *http2strea
 
 ```
 searchKey: http.http2serverConn.setConnState
+tags: [private]
 ```
 
 ```Go
@@ -13916,6 +14659,7 @@ setConnState calls the net/http ConnState hook for this connection, if configure
 
 ```
 searchKey: http.http2serverConn.vlogf
+tags: [private]
 ```
 
 ```Go
@@ -13926,6 +14670,7 @@ func (sc *http2serverConn) vlogf(format string, args ...interface{})
 
 ```
 searchKey: http.http2serverConn.logf
+tags: [private]
 ```
 
 ```Go
@@ -13936,6 +14681,7 @@ func (sc *http2serverConn) logf(format string, args ...interface{})
 
 ```
 searchKey: http.http2serverConn.condlogf
+tags: [private]
 ```
 
 ```Go
@@ -13946,6 +14692,7 @@ func (sc *http2serverConn) condlogf(err error, format string, args ...interface{
 
 ```
 searchKey: http.http2serverConn.canonicalHeader
+tags: [private]
 ```
 
 ```Go
@@ -13956,6 +14703,7 @@ func (sc *http2serverConn) canonicalHeader(v string) string
 
 ```
 searchKey: http.http2serverConn.readFrames
+tags: [private]
 ```
 
 ```Go
@@ -13968,6 +14716,7 @@ readFrames is the loop that reads incoming frames. It takes care to only read on
 
 ```
 searchKey: http.http2serverConn.writeFrameAsync
+tags: [private]
 ```
 
 ```Go
@@ -13980,6 +14729,7 @@ writeFrameAsync runs in its own goroutine and writes a single frame and then rep
 
 ```
 searchKey: http.http2serverConn.closeAllStreamsOnConnClose
+tags: [private]
 ```
 
 ```Go
@@ -13990,6 +14740,7 @@ func (sc *http2serverConn) closeAllStreamsOnConnClose()
 
 ```
 searchKey: http.http2serverConn.stopShutdownTimer
+tags: [private]
 ```
 
 ```Go
@@ -14000,6 +14751,7 @@ func (sc *http2serverConn) stopShutdownTimer()
 
 ```
 searchKey: http.http2serverConn.notePanic
+tags: [private]
 ```
 
 ```Go
@@ -14010,6 +14762,7 @@ func (sc *http2serverConn) notePanic()
 
 ```
 searchKey: http.http2serverConn.serve
+tags: [private]
 ```
 
 ```Go
@@ -14020,6 +14773,7 @@ func (sc *http2serverConn) serve()
 
 ```
 searchKey: http.http2serverConn.awaitGracefulShutdown
+tags: [private]
 ```
 
 ```Go
@@ -14030,6 +14784,7 @@ func (sc *http2serverConn) awaitGracefulShutdown(sharedCh <-chan struct{}, priva
 
 ```
 searchKey: http.http2serverConn.onSettingsTimer
+tags: [private]
 ```
 
 ```Go
@@ -14040,6 +14795,7 @@ func (sc *http2serverConn) onSettingsTimer()
 
 ```
 searchKey: http.http2serverConn.onIdleTimer
+tags: [private]
 ```
 
 ```Go
@@ -14050,6 +14806,7 @@ func (sc *http2serverConn) onIdleTimer()
 
 ```
 searchKey: http.http2serverConn.onShutdownTimer
+tags: [private]
 ```
 
 ```Go
@@ -14060,6 +14817,7 @@ func (sc *http2serverConn) onShutdownTimer()
 
 ```
 searchKey: http.http2serverConn.sendServeMsg
+tags: [private]
 ```
 
 ```Go
@@ -14070,6 +14828,7 @@ func (sc *http2serverConn) sendServeMsg(msg interface{})
 
 ```
 searchKey: http.http2serverConn.readPreface
+tags: [private]
 ```
 
 ```Go
@@ -14082,6 +14841,7 @@ readPreface reads the ClientPreface greeting from the peer or returns errPreface
 
 ```
 searchKey: http.http2serverConn.writeDataFromHandler
+tags: [private]
 ```
 
 ```Go
@@ -14094,6 +14854,7 @@ writeDataFromHandler writes DATA response frames from a handler on the given str
 
 ```
 searchKey: http.http2serverConn.writeFrameFromHandler
+tags: [private]
 ```
 
 ```Go
@@ -14108,6 +14869,7 @@ This must not be run from the serve goroutine itself, else it might deadlock wri
 
 ```
 searchKey: http.http2serverConn.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -14124,6 +14886,7 @@ If you're not on the serve goroutine, use writeFrameFromHandler instead.
 
 ```
 searchKey: http.http2serverConn.startFrameWrite
+tags: [private]
 ```
 
 ```Go
@@ -14136,6 +14899,7 @@ startFrameWrite starts a goroutine to write wr (in a separate goroutine since th
 
 ```
 searchKey: http.http2serverConn.wroteFrame
+tags: [private]
 ```
 
 ```Go
@@ -14148,6 +14912,7 @@ wroteFrame is called on the serve goroutine with the result of whatever happened
 
 ```
 searchKey: http.http2serverConn.scheduleFrameWrite
+tags: [private]
 ```
 
 ```Go
@@ -14166,6 +14931,7 @@ If a frame isn't being written and there's nothing else to send, we flush the wr
 
 ```
 searchKey: http.http2serverConn.startGracefulShutdown
+tags: [private]
 ```
 
 ```Go
@@ -14180,6 +14946,7 @@ startGracefulShutdown returns immediately; it does not wait until the connection
 
 ```
 searchKey: http.http2serverConn.startGracefulShutdownInternal
+tags: [private]
 ```
 
 ```Go
@@ -14190,6 +14957,7 @@ func (sc *http2serverConn) startGracefulShutdownInternal()
 
 ```
 searchKey: http.http2serverConn.goAway
+tags: [private]
 ```
 
 ```Go
@@ -14200,6 +14968,7 @@ func (sc *http2serverConn) goAway(code http2ErrCode)
 
 ```
 searchKey: http.http2serverConn.shutDownIn
+tags: [private]
 ```
 
 ```Go
@@ -14210,6 +14979,7 @@ func (sc *http2serverConn) shutDownIn(d time.Duration)
 
 ```
 searchKey: http.http2serverConn.resetStream
+tags: [private]
 ```
 
 ```Go
@@ -14220,6 +14990,7 @@ func (sc *http2serverConn) resetStream(se http2StreamError)
 
 ```
 searchKey: http.http2serverConn.processFrameFromReader
+tags: [private]
 ```
 
 ```Go
@@ -14232,6 +15003,7 @@ processFrameFromReader processes the serve loop's read from readFrameCh from the
 
 ```
 searchKey: http.http2serverConn.processFrame
+tags: [private]
 ```
 
 ```Go
@@ -14242,6 +15014,7 @@ func (sc *http2serverConn) processFrame(f http2Frame) error
 
 ```
 searchKey: http.http2serverConn.processPing
+tags: [private]
 ```
 
 ```Go
@@ -14252,6 +15025,7 @@ func (sc *http2serverConn) processPing(f *http2PingFrame) error
 
 ```
 searchKey: http.http2serverConn.processWindowUpdate
+tags: [private]
 ```
 
 ```Go
@@ -14262,6 +15036,7 @@ func (sc *http2serverConn) processWindowUpdate(f *http2WindowUpdateFrame) error
 
 ```
 searchKey: http.http2serverConn.processResetStream
+tags: [private]
 ```
 
 ```Go
@@ -14272,6 +15047,7 @@ func (sc *http2serverConn) processResetStream(f *http2RSTStreamFrame) error
 
 ```
 searchKey: http.http2serverConn.closeStream
+tags: [private]
 ```
 
 ```Go
@@ -14282,6 +15058,7 @@ func (sc *http2serverConn) closeStream(st *http2stream, err error)
 
 ```
 searchKey: http.http2serverConn.processSettings
+tags: [private]
 ```
 
 ```Go
@@ -14292,6 +15069,7 @@ func (sc *http2serverConn) processSettings(f *http2SettingsFrame) error
 
 ```
 searchKey: http.http2serverConn.processSetting
+tags: [private]
 ```
 
 ```Go
@@ -14302,6 +15080,7 @@ func (sc *http2serverConn) processSetting(s http2Setting) error
 
 ```
 searchKey: http.http2serverConn.processSettingInitialWindowSize
+tags: [private]
 ```
 
 ```Go
@@ -14312,6 +15091,7 @@ func (sc *http2serverConn) processSettingInitialWindowSize(val uint32) error
 
 ```
 searchKey: http.http2serverConn.processData
+tags: [private]
 ```
 
 ```Go
@@ -14322,6 +15102,7 @@ func (sc *http2serverConn) processData(f *http2DataFrame) error
 
 ```
 searchKey: http.http2serverConn.processGoAway
+tags: [private]
 ```
 
 ```Go
@@ -14332,6 +15113,7 @@ func (sc *http2serverConn) processGoAway(f *http2GoAwayFrame) error
 
 ```
 searchKey: http.http2serverConn.processHeaders
+tags: [private]
 ```
 
 ```Go
@@ -14342,6 +15124,7 @@ func (sc *http2serverConn) processHeaders(f *http2MetaHeadersFrame) error
 
 ```
 searchKey: http.http2serverConn.processPriority
+tags: [private]
 ```
 
 ```Go
@@ -14352,6 +15135,7 @@ func (sc *http2serverConn) processPriority(f *http2PriorityFrame) error
 
 ```
 searchKey: http.http2serverConn.newStream
+tags: [private]
 ```
 
 ```Go
@@ -14362,6 +15146,7 @@ func (sc *http2serverConn) newStream(id, pusherID uint32, state http2streamState
 
 ```
 searchKey: http.http2serverConn.newWriterAndRequest
+tags: [private]
 ```
 
 ```Go
@@ -14372,6 +15157,7 @@ func (sc *http2serverConn) newWriterAndRequest(st *http2stream, f *http2MetaHead
 
 ```
 searchKey: http.http2serverConn.newWriterAndRequestNoBody
+tags: [private]
 ```
 
 ```Go
@@ -14382,6 +15168,7 @@ func (sc *http2serverConn) newWriterAndRequestNoBody(st *http2stream, rp http2re
 
 ```
 searchKey: http.http2serverConn.runHandler
+tags: [private]
 ```
 
 ```Go
@@ -14394,6 +15181,7 @@ Run on its own goroutine.
 
 ```
 searchKey: http.http2serverConn.writeHeaders
+tags: [private]
 ```
 
 ```Go
@@ -14406,6 +15194,7 @@ called from handler goroutines. h may be nil.
 
 ```
 searchKey: http.http2serverConn.write100ContinueHeaders
+tags: [private]
 ```
 
 ```Go
@@ -14418,6 +15207,7 @@ called from handler goroutines.
 
 ```
 searchKey: http.http2serverConn.noteBodyReadFromHandler
+tags: [private]
 ```
 
 ```Go
@@ -14430,6 +15220,7 @@ called from handler goroutines. Notes that the handler for the given stream ID r
 
 ```
 searchKey: http.http2serverConn.noteBodyRead
+tags: [private]
 ```
 
 ```Go
@@ -14440,6 +15231,7 @@ func (sc *http2serverConn) noteBodyRead(st *http2stream, n int)
 
 ```
 searchKey: http.http2serverConn.sendWindowUpdate
+tags: [private]
 ```
 
 ```Go
@@ -14452,6 +15244,7 @@ st may be nil for conn-level
 
 ```
 searchKey: http.http2serverConn.sendWindowUpdate32
+tags: [private]
 ```
 
 ```Go
@@ -14464,6 +15257,7 @@ st may be nil for conn-level
 
 ```
 searchKey: http.http2serverConn.startPush
+tags: [private]
 ```
 
 ```Go
@@ -14474,6 +15268,7 @@ func (sc *http2serverConn) startPush(msg *http2startPushRequest)
 
 ```
 searchKey: http.http2stream
+tags: [private]
 ```
 
 ```Go
@@ -14508,6 +15303,7 @@ stream represents a stream. This is the minimal metadata needed by the serve gor
 
 ```
 searchKey: http.http2stream.isPushed
+tags: [private]
 ```
 
 ```Go
@@ -14520,6 +15316,7 @@ isPushed reports whether the stream is server-initiated.
 
 ```
 searchKey: http.http2stream.endStream
+tags: [private]
 ```
 
 ```Go
@@ -14532,6 +15329,7 @@ endStream closes a Request.Body's pipe. It is called when a DATA frame says a re
 
 ```
 searchKey: http.http2stream.copyTrailersToHandlerRequest
+tags: [private]
 ```
 
 ```Go
@@ -14544,6 +15342,7 @@ copyTrailersToHandlerRequest is run in the Handler's goroutine in its Request.Bo
 
 ```
 searchKey: http.http2stream.onWriteTimeout
+tags: [private]
 ```
 
 ```Go
@@ -14556,6 +15355,7 @@ onWriteTimeout is run on its own goroutine (from time.AfterFunc) when the stream
 
 ```
 searchKey: http.http2stream.processTrailerHeaders
+tags: [private]
 ```
 
 ```Go
@@ -14566,6 +15366,7 @@ func (st *http2stream) processTrailerHeaders(f *http2MetaHeadersFrame) error
 
 ```
 searchKey: http.http2readFrameResult
+tags: [private]
 ```
 
 ```Go
@@ -14584,6 +15385,7 @@ type http2readFrameResult struct {
 
 ```
 searchKey: http.http2frameWriteResult
+tags: [private]
 ```
 
 ```Go
@@ -14600,6 +15402,7 @@ frameWriteResult is the message passed from writeFrameAsync to the serve gorouti
 
 ```
 searchKey: http.http2serverMessage
+tags: [private]
 ```
 
 ```Go
@@ -14610,6 +15413,7 @@ type http2serverMessage int
 
 ```
 searchKey: http.http2requestParam
+tags: [private]
 ```
 
 ```Go
@@ -14624,6 +15428,7 @@ type http2requestParam struct {
 
 ```
 searchKey: http.http2bodyReadMsg
+tags: [private]
 ```
 
 ```Go
@@ -14639,6 +15444,7 @@ A bodyReadMsg tells the server loop that the http.Handler read n bytes of the DA
 
 ```
 searchKey: http.http2requestBody
+tags: [private]
 ```
 
 ```Go
@@ -14659,6 +15465,7 @@ requestBody is the Handler's Request.Body type. Read and Close may be called con
 
 ```
 searchKey: http.http2requestBody.Close
+tags: [private]
 ```
 
 ```Go
@@ -14669,6 +15476,7 @@ func (b *http2requestBody) Close() error
 
 ```
 searchKey: http.http2requestBody.Read
+tags: [private]
 ```
 
 ```Go
@@ -14679,6 +15487,7 @@ func (b *http2requestBody) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.http2responseWriter
+tags: [private]
 ```
 
 ```Go
@@ -14693,6 +15502,7 @@ responseWriter is the http.ResponseWriter implementation. It's intentionally sma
 
 ```
 searchKey: http.http2responseWriter.Flush
+tags: [private]
 ```
 
 ```Go
@@ -14703,6 +15513,7 @@ func (w *http2responseWriter) Flush()
 
 ```
 searchKey: http.http2responseWriter.CloseNotify
+tags: [private]
 ```
 
 ```Go
@@ -14713,6 +15524,7 @@ func (w *http2responseWriter) CloseNotify() <-chan bool
 
 ```
 searchKey: http.http2responseWriter.Header
+tags: [private]
 ```
 
 ```Go
@@ -14723,6 +15535,7 @@ func (w *http2responseWriter) Header() Header
 
 ```
 searchKey: http.http2responseWriter.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -14733,6 +15546,7 @@ func (w *http2responseWriter) WriteHeader(code int)
 
 ```
 searchKey: http.http2responseWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -14747,6 +15561,7 @@ The Life Of A Write is like this:
 
 ```
 searchKey: http.http2responseWriter.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -14757,6 +15572,7 @@ func (w *http2responseWriter) WriteString(s string) (n int, err error)
 
 ```
 searchKey: http.http2responseWriter.write
+tags: [private]
 ```
 
 ```Go
@@ -14769,6 +15585,7 @@ either dataB or dataS is non-zero.
 
 ```
 searchKey: http.http2responseWriter.handlerDone
+tags: [private]
 ```
 
 ```Go
@@ -14779,6 +15596,7 @@ func (w *http2responseWriter) handlerDone()
 
 ```
 searchKey: http.http2responseWriter.Push
+tags: [private]
 ```
 
 ```Go
@@ -14789,6 +15607,7 @@ func (w *http2responseWriter) Push(target string, opts *PushOptions) error
 
 ```
 searchKey: http.http2responseWriterState
+tags: [private]
 ```
 
 ```Go
@@ -14824,6 +15643,7 @@ type http2responseWriterState struct {
 
 ```
 searchKey: http.http2responseWriterState.hasTrailers
+tags: [private]
 ```
 
 ```Go
@@ -14834,6 +15654,7 @@ func (rws *http2responseWriterState) hasTrailers() bool
 
 ```
 searchKey: http.http2responseWriterState.hasNonemptyTrailers
+tags: [private]
 ```
 
 ```Go
@@ -14844,6 +15665,7 @@ func (rws *http2responseWriterState) hasNonemptyTrailers() bool
 
 ```
 searchKey: http.http2responseWriterState.declareTrailer
+tags: [private]
 ```
 
 ```Go
@@ -14856,6 +15678,7 @@ declareTrailer is called for each Trailer header when the response header is wri
 
 ```
 searchKey: http.http2responseWriterState.writeChunk
+tags: [private]
 ```
 
 ```Go
@@ -14870,6 +15693,7 @@ writeChunk is also responsible (on the first chunk) for sending the HEADER respo
 
 ```
 searchKey: http.http2responseWriterState.promoteUndeclaredTrailers
+tags: [private]
 ```
 
 ```Go
@@ -14884,6 +15708,7 @@ This method runs after the Handler is done and promotes any Header fields to be 
 
 ```
 searchKey: http.http2responseWriterState.writeHeader
+tags: [private]
 ```
 
 ```Go
@@ -14894,6 +15719,7 @@ func (rws *http2responseWriterState) writeHeader(code int)
 
 ```
 searchKey: http.http2chunkWriter
+tags: [private]
 ```
 
 ```Go
@@ -14904,6 +15730,7 @@ type http2chunkWriter struct{ rws *http2responseWriterState }
 
 ```
 searchKey: http.http2chunkWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -14914,6 +15741,7 @@ func (cw http2chunkWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.http2startPushRequest
+tags: [private]
 ```
 
 ```Go
@@ -14930,6 +15758,7 @@ type http2startPushRequest struct {
 
 ```
 searchKey: http.http2Transport
+tags: [private]
 ```
 
 ```Go
@@ -15015,6 +15844,7 @@ A Transport internally caches connections to servers. It is safe for concurrent 
 
 ```
 searchKey: http.http2ConfigureTransports
+tags: [private]
 ```
 
 ```Go
@@ -15027,6 +15857,7 @@ ConfigureTransports configures a net/http HTTP/1 Transport to use HTTP/2. It ret
 
 ```
 searchKey: http.http2configureTransports
+tags: [private]
 ```
 
 ```Go
@@ -15037,6 +15868,7 @@ func http2configureTransports(t1 *Transport) (*http2Transport, error)
 
 ```
 searchKey: http.http2Transport.dialTLSWithContext
+tags: [private]
 ```
 
 ```Go
@@ -15049,6 +15881,7 @@ dialTLSWithContext uses tls.Dialer, added in Go 1.15, to open a TLS connection.
 
 ```
 searchKey: http.http2Transport.maxHeaderListSize
+tags: [private]
 ```
 
 ```Go
@@ -15059,6 +15892,7 @@ func (t *http2Transport) maxHeaderListSize() uint32
 
 ```
 searchKey: http.http2Transport.disableCompression
+tags: [private]
 ```
 
 ```Go
@@ -15069,6 +15903,7 @@ func (t *http2Transport) disableCompression() bool
 
 ```
 searchKey: http.http2Transport.pingTimeout
+tags: [private]
 ```
 
 ```Go
@@ -15079,6 +15914,7 @@ func (t *http2Transport) pingTimeout() time.Duration
 
 ```
 searchKey: http.http2Transport.connPool
+tags: [private]
 ```
 
 ```Go
@@ -15089,6 +15925,7 @@ func (t *http2Transport) connPool() http2ClientConnPool
 
 ```
 searchKey: http.http2Transport.initConnPool
+tags: [private]
 ```
 
 ```Go
@@ -15099,6 +15936,7 @@ func (t *http2Transport) initConnPool()
 
 ```
 searchKey: http.http2Transport.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -15109,6 +15947,7 @@ func (t *http2Transport) RoundTrip(req *Request) (*Response, error)
 
 ```
 searchKey: http.http2Transport.RoundTripOpt
+tags: [private]
 ```
 
 ```Go
@@ -15121,6 +15960,7 @@ RoundTripOpt is like RoundTrip, but takes options.
 
 ```
 searchKey: http.http2Transport.CloseIdleConnections
+tags: [private]
 ```
 
 ```Go
@@ -15133,6 +15973,7 @@ CloseIdleConnections closes any connections which were previously connected from
 
 ```
 searchKey: http.http2Transport.dialClientConn
+tags: [private]
 ```
 
 ```Go
@@ -15143,6 +15984,7 @@ func (t *http2Transport) dialClientConn(ctx context.Context, addr string, single
 
 ```
 searchKey: http.http2Transport.newTLSConfig
+tags: [private]
 ```
 
 ```Go
@@ -15153,6 +15995,7 @@ func (t *http2Transport) newTLSConfig(host string) *tls.Config
 
 ```
 searchKey: http.http2Transport.dialTLS
+tags: [private]
 ```
 
 ```Go
@@ -15163,6 +16006,7 @@ func (t *http2Transport) dialTLS(ctx context.Context) func(string, string, *tls.
 
 ```
 searchKey: http.http2Transport.disableKeepAlives
+tags: [private]
 ```
 
 ```Go
@@ -15175,6 +16019,7 @@ disableKeepAlives reports whether connections should be closed as soon as possib
 
 ```
 searchKey: http.http2Transport.expectContinueTimeout
+tags: [private]
 ```
 
 ```Go
@@ -15185,6 +16030,7 @@ func (t *http2Transport) expectContinueTimeout() time.Duration
 
 ```
 searchKey: http.http2Transport.NewClientConn
+tags: [private]
 ```
 
 ```Go
@@ -15195,6 +16041,7 @@ func (t *http2Transport) NewClientConn(c net.Conn) (*http2ClientConn, error)
 
 ```
 searchKey: http.http2Transport.newClientConn
+tags: [private]
 ```
 
 ```Go
@@ -15205,6 +16052,7 @@ func (t *http2Transport) newClientConn(c net.Conn, singleUse bool) (*http2Client
 
 ```
 searchKey: http.http2Transport.vlogf
+tags: [private]
 ```
 
 ```Go
@@ -15215,6 +16063,7 @@ func (t *http2Transport) vlogf(format string, args ...interface{})
 
 ```
 searchKey: http.http2Transport.logf
+tags: [private]
 ```
 
 ```Go
@@ -15225,6 +16074,7 @@ func (t *http2Transport) logf(format string, args ...interface{})
 
 ```
 searchKey: http.http2Transport.getBodyWriterState
+tags: [private]
 ```
 
 ```Go
@@ -15235,6 +16085,7 @@ func (t *http2Transport) getBodyWriterState(cs *http2clientStream, body io.Reade
 
 ```
 searchKey: http.http2Transport.idleConnTimeout
+tags: [private]
 ```
 
 ```Go
@@ -15245,6 +16096,7 @@ func (t *http2Transport) idleConnTimeout() time.Duration
 
 ```
 searchKey: http.http2ClientConn
+tags: [private]
 ```
 
 ```Go
@@ -15301,6 +16153,7 @@ ClientConn is the state of a single HTTP/2 client connection to an HTTP/2 server
 
 ```
 searchKey: http.http2ClientConn.healthCheck
+tags: [private]
 ```
 
 ```Go
@@ -15311,6 +16164,7 @@ func (cc *http2ClientConn) healthCheck()
 
 ```
 searchKey: http.http2ClientConn.setGoAway
+tags: [private]
 ```
 
 ```Go
@@ -15321,6 +16175,7 @@ func (cc *http2ClientConn) setGoAway(f *http2GoAwayFrame)
 
 ```
 searchKey: http.http2ClientConn.CanTakeNewRequest
+tags: [private]
 ```
 
 ```Go
@@ -15333,6 +16188,7 @@ CanTakeNewRequest reports whether the connection can take a new request, meaning
 
 ```
 searchKey: http.http2ClientConn.idleState
+tags: [private]
 ```
 
 ```Go
@@ -15343,6 +16199,7 @@ func (cc *http2ClientConn) idleState() http2clientConnIdleState
 
 ```
 searchKey: http.http2ClientConn.idleStateLocked
+tags: [private]
 ```
 
 ```Go
@@ -15353,6 +16210,7 @@ func (cc *http2ClientConn) idleStateLocked() (st http2clientConnIdleState)
 
 ```
 searchKey: http.http2ClientConn.canTakeNewRequestLocked
+tags: [private]
 ```
 
 ```Go
@@ -15363,6 +16221,7 @@ func (cc *http2ClientConn) canTakeNewRequestLocked() bool
 
 ```
 searchKey: http.http2ClientConn.tooIdleLocked
+tags: [private]
 ```
 
 ```Go
@@ -15375,6 +16234,7 @@ tooIdleLocked reports whether this connection has been been sitting idle for too
 
 ```
 searchKey: http.http2ClientConn.onIdleTimeout
+tags: [private]
 ```
 
 ```Go
@@ -15387,6 +16247,7 @@ onIdleTimeout is called from a time.AfterFunc goroutine. It will only be called 
 
 ```
 searchKey: http.http2ClientConn.closeIfIdle
+tags: [private]
 ```
 
 ```Go
@@ -15397,6 +16258,7 @@ func (cc *http2ClientConn) closeIfIdle()
 
 ```
 searchKey: http.http2ClientConn.Shutdown
+tags: [private]
 ```
 
 ```Go
@@ -15409,6 +16271,7 @@ Shutdown gracefully close the client connection, waiting for running streams to 
 
 ```
 searchKey: http.http2ClientConn.sendGoAway
+tags: [private]
 ```
 
 ```Go
@@ -15419,6 +16282,7 @@ func (cc *http2ClientConn) sendGoAway() error
 
 ```
 searchKey: http.http2ClientConn.closeForError
+tags: [private]
 ```
 
 ```Go
@@ -15431,6 +16295,7 @@ closes the client connection immediately. In-flight requests are interrupted. er
 
 ```
 searchKey: http.http2ClientConn.Close
+tags: [private]
 ```
 
 ```Go
@@ -15445,6 +16310,7 @@ In-flight requests are interrupted. For a graceful shutdown, use Shutdown instea
 
 ```
 searchKey: http.http2ClientConn.closeForLostPing
+tags: [private]
 ```
 
 ```Go
@@ -15457,6 +16323,7 @@ closes the client connection immediately. In-flight requests are interrupted.
 
 ```
 searchKey: http.http2ClientConn.frameScratchBuffer
+tags: [private]
 ```
 
 ```Go
@@ -15469,6 +16336,7 @@ frameBuffer returns a scratch buffer suitable for writing DATA frames. They're c
 
 ```
 searchKey: http.http2ClientConn.putFrameScratchBuffer
+tags: [private]
 ```
 
 ```Go
@@ -15479,6 +16347,7 @@ func (cc *http2ClientConn) putFrameScratchBuffer(buf []byte)
 
 ```
 searchKey: http.http2ClientConn.responseHeaderTimeout
+tags: [private]
 ```
 
 ```Go
@@ -15489,6 +16358,7 @@ func (cc *http2ClientConn) responseHeaderTimeout() time.Duration
 
 ```
 searchKey: http.http2ClientConn.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -15499,6 +16369,7 @@ func (cc *http2ClientConn) RoundTrip(req *Request) (*Response, error)
 
 ```
 searchKey: http.http2ClientConn.roundTrip
+tags: [private]
 ```
 
 ```Go
@@ -15509,6 +16380,7 @@ func (cc *http2ClientConn) roundTrip(req *Request) (res *Response, gotErrAfterRe
 
 ```
 searchKey: http.http2ClientConn.awaitOpenSlotForRequest
+tags: [private]
 ```
 
 ```Go
@@ -15521,6 +16393,7 @@ awaitOpenSlotForRequest waits until len(streams) < maxConcurrentStreams. Must ho
 
 ```
 searchKey: http.http2ClientConn.writeHeaders
+tags: [private]
 ```
 
 ```Go
@@ -15533,6 +16406,7 @@ requires cc.wmu be held
 
 ```
 searchKey: http.http2ClientConn.encodeHeaders
+tags: [private]
 ```
 
 ```Go
@@ -15545,6 +16419,7 @@ requires cc.mu be held.
 
 ```
 searchKey: http.http2ClientConn.encodeTrailers
+tags: [private]
 ```
 
 ```Go
@@ -15557,6 +16432,7 @@ requires cc.mu be held.
 
 ```
 searchKey: http.http2ClientConn.writeHeader
+tags: [private]
 ```
 
 ```Go
@@ -15567,6 +16443,7 @@ func (cc *http2ClientConn) writeHeader(name, value string)
 
 ```
 searchKey: http.http2ClientConn.newStream
+tags: [private]
 ```
 
 ```Go
@@ -15579,6 +16456,7 @@ requires cc.mu be held.
 
 ```
 searchKey: http.http2ClientConn.forgetStreamID
+tags: [private]
 ```
 
 ```Go
@@ -15589,6 +16467,7 @@ func (cc *http2ClientConn) forgetStreamID(id uint32)
 
 ```
 searchKey: http.http2ClientConn.streamByID
+tags: [private]
 ```
 
 ```Go
@@ -15599,6 +16478,7 @@ func (cc *http2ClientConn) streamByID(id uint32, andRemove bool) *http2clientStr
 
 ```
 searchKey: http.http2ClientConn.readLoop
+tags: [private]
 ```
 
 ```Go
@@ -15611,6 +16491,7 @@ readLoop runs in its own goroutine and reads and dispatches frames.
 
 ```
 searchKey: http.http2ClientConn.Ping
+tags: [private]
 ```
 
 ```Go
@@ -15623,6 +16504,7 @@ Ping sends a PING frame to the server and waits for the ack.
 
 ```
 searchKey: http.http2ClientConn.writeStreamReset
+tags: [private]
 ```
 
 ```Go
@@ -15633,6 +16515,7 @@ func (cc *http2ClientConn) writeStreamReset(streamID uint32, code http2ErrCode, 
 
 ```
 searchKey: http.http2ClientConn.logf
+tags: [private]
 ```
 
 ```Go
@@ -15643,6 +16526,7 @@ func (cc *http2ClientConn) logf(format string, args ...interface{})
 
 ```
 searchKey: http.http2ClientConn.vlogf
+tags: [private]
 ```
 
 ```Go
@@ -15653,6 +16537,7 @@ func (cc *http2ClientConn) vlogf(format string, args ...interface{})
 
 ```
 searchKey: http.http2clientStream
+tags: [private]
 ```
 
 ```Go
@@ -15696,6 +16581,7 @@ clientStream is the state for a single HTTP/2 stream. One of these is created fo
 
 ```
 searchKey: http.http2clientStream.get1xxTraceFunc
+tags: [private]
 ```
 
 ```Go
@@ -15708,6 +16594,7 @@ get1xxTraceFunc returns the value of request's httptrace.ClientTrace.Got1xxRespo
 
 ```
 searchKey: http.http2clientStream.awaitRequestCancel
+tags: [private]
 ```
 
 ```Go
@@ -15720,6 +16607,7 @@ awaitRequestCancel waits for the user to cancel a request, its context to expire
 
 ```
 searchKey: http.http2clientStream.cancelStream
+tags: [private]
 ```
 
 ```Go
@@ -15730,6 +16618,7 @@ func (cs *http2clientStream) cancelStream()
 
 ```
 searchKey: http.http2clientStream.checkResetOrDone
+tags: [private]
 ```
 
 ```Go
@@ -15742,6 +16631,7 @@ checkResetOrDone reports any error sent in a RST_STREAM frame by the server, or 
 
 ```
 searchKey: http.http2clientStream.getStartedWrite
+tags: [private]
 ```
 
 ```Go
@@ -15752,6 +16642,7 @@ func (cs *http2clientStream) getStartedWrite() bool
 
 ```
 searchKey: http.http2clientStream.abortRequestBodyWrite
+tags: [private]
 ```
 
 ```Go
@@ -15762,6 +16653,7 @@ func (cs *http2clientStream) abortRequestBodyWrite(err error)
 
 ```
 searchKey: http.http2clientStream.writeRequestBody
+tags: [private]
 ```
 
 ```Go
@@ -15772,6 +16664,7 @@ func (cs *http2clientStream) writeRequestBody(body io.Reader, bodyCloser io.Clos
 
 ```
 searchKey: http.http2clientStream.awaitFlowControl
+tags: [private]
 ```
 
 ```Go
@@ -15784,6 +16677,7 @@ awaitFlowControl waits for [1, min(maxBytes, cc.cs.maxFrameSize)] flow control t
 
 ```
 searchKey: http.http2clientStream.copyTrailers
+tags: [private]
 ```
 
 ```Go
@@ -15794,6 +16688,7 @@ func (cs *http2clientStream) copyTrailers()
 
 ```
 searchKey: http.http2stickyErrWriter
+tags: [private]
 ```
 
 ```Go
@@ -15807,6 +16702,7 @@ type http2stickyErrWriter struct {
 
 ```
 searchKey: http.http2stickyErrWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -15817,6 +16713,7 @@ func (sew http2stickyErrWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.http2noCachedConnError
+tags: [private]
 ```
 
 ```Go
@@ -15829,6 +16726,7 @@ noCachedConnError is the concrete type of ErrNoCachedConn, which needs to be det
 
 ```
 searchKey: http.http2noCachedConnError.IsHTTP2NoCachedConnError
+tags: [private]
 ```
 
 ```Go
@@ -15839,6 +16737,7 @@ func (http2noCachedConnError) IsHTTP2NoCachedConnError()
 
 ```
 searchKey: http.http2noCachedConnError.Error
+tags: [private]
 ```
 
 ```Go
@@ -15849,6 +16748,7 @@ func (http2noCachedConnError) Error() string
 
 ```
 searchKey: http.http2RoundTripOpt
+tags: [private]
 ```
 
 ```Go
@@ -15867,6 +16767,7 @@ RoundTripOpt are options for the Transport.RoundTripOpt method.
 
 ```
 searchKey: http.http2clientConnIdleState
+tags: [private]
 ```
 
 ```Go
@@ -15882,6 +16783,7 @@ clientConnIdleState describes the suitability of a client connection to initiate
 
 ```
 searchKey: http.http2resAndError
+tags: [private]
 ```
 
 ```Go
@@ -15896,6 +16798,7 @@ type http2resAndError struct {
 
 ```
 searchKey: http.http2clientConnReadLoop
+tags: [private]
 ```
 
 ```Go
@@ -15912,6 +16815,7 @@ clientConnReadLoop is the state owned by the clientConn's frame-reading readLoop
 
 ```
 searchKey: http.http2clientConnReadLoop.cleanup
+tags: [private]
 ```
 
 ```Go
@@ -15922,6 +16826,7 @@ func (rl *http2clientConnReadLoop) cleanup()
 
 ```
 searchKey: http.http2clientConnReadLoop.run
+tags: [private]
 ```
 
 ```Go
@@ -15932,6 +16837,7 @@ func (rl *http2clientConnReadLoop) run() error
 
 ```
 searchKey: http.http2clientConnReadLoop.processHeaders
+tags: [private]
 ```
 
 ```Go
@@ -15942,6 +16848,7 @@ func (rl *http2clientConnReadLoop) processHeaders(f *http2MetaHeadersFrame) erro
 
 ```
 searchKey: http.http2clientConnReadLoop.handleResponse
+tags: [private]
 ```
 
 ```Go
@@ -15956,6 +16863,7 @@ As a special case, handleResponse may return (nil, nil) to skip the frame (curre
 
 ```
 searchKey: http.http2clientConnReadLoop.processTrailers
+tags: [private]
 ```
 
 ```Go
@@ -15966,6 +16874,7 @@ func (rl *http2clientConnReadLoop) processTrailers(cs *http2clientStream, f *htt
 
 ```
 searchKey: http.http2clientConnReadLoop.processData
+tags: [private]
 ```
 
 ```Go
@@ -15976,6 +16885,7 @@ func (rl *http2clientConnReadLoop) processData(f *http2DataFrame) error
 
 ```
 searchKey: http.http2clientConnReadLoop.endStream
+tags: [private]
 ```
 
 ```Go
@@ -15986,6 +16896,7 @@ func (rl *http2clientConnReadLoop) endStream(cs *http2clientStream)
 
 ```
 searchKey: http.http2clientConnReadLoop.endStreamError
+tags: [private]
 ```
 
 ```Go
@@ -15996,6 +16907,7 @@ func (rl *http2clientConnReadLoop) endStreamError(cs *http2clientStream, err err
 
 ```
 searchKey: http.http2clientConnReadLoop.processGoAway
+tags: [private]
 ```
 
 ```Go
@@ -16006,6 +16918,7 @@ func (rl *http2clientConnReadLoop) processGoAway(f *http2GoAwayFrame) error
 
 ```
 searchKey: http.http2clientConnReadLoop.processSettings
+tags: [private]
 ```
 
 ```Go
@@ -16016,6 +16929,7 @@ func (rl *http2clientConnReadLoop) processSettings(f *http2SettingsFrame) error
 
 ```
 searchKey: http.http2clientConnReadLoop.processWindowUpdate
+tags: [private]
 ```
 
 ```Go
@@ -16026,6 +16940,7 @@ func (rl *http2clientConnReadLoop) processWindowUpdate(f *http2WindowUpdateFrame
 
 ```
 searchKey: http.http2clientConnReadLoop.processResetStream
+tags: [private]
 ```
 
 ```Go
@@ -16036,6 +16951,7 @@ func (rl *http2clientConnReadLoop) processResetStream(f *http2RSTStreamFrame) er
 
 ```
 searchKey: http.http2clientConnReadLoop.processPing
+tags: [private]
 ```
 
 ```Go
@@ -16046,6 +16962,7 @@ func (rl *http2clientConnReadLoop) processPing(f *http2PingFrame) error
 
 ```
 searchKey: http.http2clientConnReadLoop.processPushPromise
+tags: [private]
 ```
 
 ```Go
@@ -16056,6 +16973,7 @@ func (rl *http2clientConnReadLoop) processPushPromise(f *http2PushPromiseFrame) 
 
 ```
 searchKey: http.http2GoAwayError
+tags: [private]
 ```
 
 ```Go
@@ -16072,6 +16990,7 @@ GoAwayError is returned by the Transport when the server closes the TCP connecti
 
 ```
 searchKey: http.http2GoAwayError.Error
+tags: [private]
 ```
 
 ```Go
@@ -16082,6 +17001,7 @@ func (e http2GoAwayError) Error() string
 
 ```
 searchKey: http.http2transportResponseBody
+tags: [private]
 ```
 
 ```Go
@@ -16096,6 +17016,7 @@ transportResponseBody is the concrete type of Transport.RoundTrip's Response.Bod
 
 ```
 searchKey: http.http2transportResponseBody.Read
+tags: [private]
 ```
 
 ```Go
@@ -16106,6 +17027,7 @@ func (b http2transportResponseBody) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.http2transportResponseBody.Close
+tags: [private]
 ```
 
 ```Go
@@ -16116,6 +17038,7 @@ func (b http2transportResponseBody) Close() error
 
 ```
 searchKey: http.http2erringRoundTripper
+tags: [private]
 ```
 
 ```Go
@@ -16126,6 +17049,7 @@ type http2erringRoundTripper struct{ err error }
 
 ```
 searchKey: http.http2erringRoundTripper.RoundTripErr
+tags: [private]
 ```
 
 ```Go
@@ -16136,6 +17060,7 @@ func (rt http2erringRoundTripper) RoundTripErr() error
 
 ```
 searchKey: http.http2erringRoundTripper.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -16146,6 +17071,7 @@ func (rt http2erringRoundTripper) RoundTrip(*Request) (*Response, error)
 
 ```
 searchKey: http.http2gzipReader
+tags: [private]
 ```
 
 ```Go
@@ -16163,6 +17089,7 @@ gzipReader wraps a response body so it can lazily call gzip.NewReader on the fir
 
 ```
 searchKey: http.http2gzipReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -16173,6 +17100,7 @@ func (gz *http2gzipReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.http2gzipReader.Close
+tags: [private]
 ```
 
 ```Go
@@ -16183,6 +17111,7 @@ func (gz *http2gzipReader) Close() error
 
 ```
 searchKey: http.http2errorReader
+tags: [private]
 ```
 
 ```Go
@@ -16193,6 +17122,7 @@ type http2errorReader struct{ err error }
 
 ```
 searchKey: http.http2errorReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -16203,6 +17133,7 @@ func (r http2errorReader) Read(p []byte) (int, error)
 
 ```
 searchKey: http.http2bodyWriterState
+tags: [private]
 ```
 
 ```Go
@@ -16222,6 +17153,7 @@ bodyWriterState encapsulates various state around the Transport's writing of the
 
 ```
 searchKey: http.http2bodyWriterState.cancel
+tags: [private]
 ```
 
 ```Go
@@ -16232,6 +17164,7 @@ func (s http2bodyWriterState) cancel()
 
 ```
 searchKey: http.http2bodyWriterState.on100
+tags: [private]
 ```
 
 ```Go
@@ -16242,6 +17175,7 @@ func (s http2bodyWriterState) on100()
 
 ```
 searchKey: http.http2bodyWriterState.scheduleBodyWrite
+tags: [private]
 ```
 
 ```Go
@@ -16254,6 +17188,7 @@ scheduleBodyWrite starts writing the body, either immediately (in the common cas
 
 ```
 searchKey: http.http2noDialH2RoundTripper
+tags: [private]
 ```
 
 ```Go
@@ -16266,6 +17201,7 @@ noDialH2RoundTripper is a RoundTripper which only tries to complete the request 
 
 ```
 searchKey: http.http2noDialH2RoundTripper.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -16276,6 +17212,7 @@ func (rt http2noDialH2RoundTripper) RoundTrip(req *Request) (*Response, error)
 
 ```
 searchKey: http.http2writeFramer
+tags: [private]
 ```
 
 ```Go
@@ -16295,6 +17232,7 @@ writeFramer is implemented by any type that is used to write frames.
 
 ```
 searchKey: http.http2writeContext
+tags: [private]
 ```
 
 ```Go
@@ -16318,6 +17256,7 @@ TODO: decide whether to a) use this in the client code (which didn't end up usin
 
 ```
 searchKey: http.http2flushFrameWriter
+tags: [private]
 ```
 
 ```Go
@@ -16328,6 +17267,7 @@ type http2flushFrameWriter struct{}
 
 ```
 searchKey: http.http2flushFrameWriter.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16338,6 +17278,7 @@ func (http2flushFrameWriter) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2flushFrameWriter.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16348,6 +17289,7 @@ func (http2flushFrameWriter) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2writeSettings
+tags: [private]
 ```
 
 ```Go
@@ -16358,6 +17300,7 @@ type http2writeSettings []http2Setting
 
 ```
 searchKey: http.http2writeSettings.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16368,6 +17311,7 @@ func (s http2writeSettings) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2writeSettings.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16378,6 +17322,7 @@ func (s http2writeSettings) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2writeGoAway
+tags: [private]
 ```
 
 ```Go
@@ -16391,6 +17336,7 @@ type http2writeGoAway struct {
 
 ```
 searchKey: http.http2writeGoAway.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16401,6 +17347,7 @@ func (p *http2writeGoAway) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2writeGoAway.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16411,6 +17358,7 @@ func (*http2writeGoAway) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2writeData
+tags: [private]
 ```
 
 ```Go
@@ -16425,6 +17373,7 @@ type http2writeData struct {
 
 ```
 searchKey: http.http2writeData.String
+tags: [private]
 ```
 
 ```Go
@@ -16435,6 +17384,7 @@ func (w *http2writeData) String() string
 
 ```
 searchKey: http.http2writeData.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16445,6 +17395,7 @@ func (w *http2writeData) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2writeData.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16455,6 +17406,7 @@ func (w *http2writeData) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2handlerPanicRST
+tags: [private]
 ```
 
 ```Go
@@ -16469,6 +17421,7 @@ handlerPanicRST is the message sent from handler goroutines when the handler pan
 
 ```
 searchKey: http.http2handlerPanicRST.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16479,6 +17432,7 @@ func (hp http2handlerPanicRST) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2handlerPanicRST.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16489,6 +17443,7 @@ func (hp http2handlerPanicRST) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2writePingAck
+tags: [private]
 ```
 
 ```Go
@@ -16499,6 +17454,7 @@ type http2writePingAck struct{ pf *http2PingFrame }
 
 ```
 searchKey: http.http2writePingAck.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16509,6 +17465,7 @@ func (w http2writePingAck) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2writePingAck.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16519,6 +17476,7 @@ func (w http2writePingAck) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2writeSettingsAck
+tags: [private]
 ```
 
 ```Go
@@ -16529,6 +17487,7 @@ type http2writeSettingsAck struct{}
 
 ```
 searchKey: http.http2writeSettingsAck.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16539,6 +17498,7 @@ func (http2writeSettingsAck) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2writeSettingsAck.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16549,6 +17509,7 @@ func (http2writeSettingsAck) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2writeResHeaders
+tags: [private]
 ```
 
 ```Go
@@ -16571,6 +17532,7 @@ writeResHeaders is a request to write a HEADERS and 0+ CONTINUATION frames for H
 
 ```
 searchKey: http.http2writeResHeaders.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16581,6 +17543,7 @@ func (w *http2writeResHeaders) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2writeResHeaders.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16591,6 +17554,7 @@ func (w *http2writeResHeaders) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2writeResHeaders.writeHeaderBlock
+tags: [private]
 ```
 
 ```Go
@@ -16601,6 +17565,7 @@ func (w *http2writeResHeaders) writeHeaderBlock(ctx http2writeContext, frag []by
 
 ```
 searchKey: http.http2writePushPromise
+tags: [private]
 ```
 
 ```Go
@@ -16623,6 +17588,7 @@ writePushPromise is a request to write a PUSH_PROMISE and 0+ CONTINUATION frames
 
 ```
 searchKey: http.http2writePushPromise.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16633,6 +17599,7 @@ func (w *http2writePushPromise) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2writePushPromise.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16643,6 +17610,7 @@ func (w *http2writePushPromise) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2writePushPromise.writeHeaderBlock
+tags: [private]
 ```
 
 ```Go
@@ -16653,6 +17621,7 @@ func (w *http2writePushPromise) writeHeaderBlock(ctx http2writeContext, frag []b
 
 ```
 searchKey: http.http2write100ContinueHeadersFrame
+tags: [private]
 ```
 
 ```Go
@@ -16665,6 +17634,7 @@ type http2write100ContinueHeadersFrame struct {
 
 ```
 searchKey: http.http2write100ContinueHeadersFrame.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16675,6 +17645,7 @@ func (w http2write100ContinueHeadersFrame) writeFrame(ctx http2writeContext) err
 
 ```
 searchKey: http.http2write100ContinueHeadersFrame.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16685,6 +17656,7 @@ func (w http2write100ContinueHeadersFrame) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2writeWindowUpdate
+tags: [private]
 ```
 
 ```Go
@@ -16698,6 +17670,7 @@ type http2writeWindowUpdate struct {
 
 ```
 searchKey: http.http2writeWindowUpdate.staysWithinBuffer
+tags: [private]
 ```
 
 ```Go
@@ -16708,6 +17681,7 @@ func (wu http2writeWindowUpdate) staysWithinBuffer(max int) bool
 
 ```
 searchKey: http.http2writeWindowUpdate.writeFrame
+tags: [private]
 ```
 
 ```Go
@@ -16718,6 +17692,7 @@ func (wu http2writeWindowUpdate) writeFrame(ctx http2writeContext) error
 
 ```
 searchKey: http.http2WriteScheduler
+tags: [private]
 ```
 
 ```Go
@@ -16756,6 +17731,7 @@ WriteScheduler is the interface implemented by HTTP/2 write schedulers. Methods 
 
 ```
 searchKey: http.http2NewPriorityWriteScheduler
+tags: [private]
 ```
 
 ```Go
@@ -16768,6 +17744,7 @@ NewPriorityWriteScheduler constructs a WriteScheduler that schedules frames by f
 
 ```
 searchKey: http.http2NewRandomWriteScheduler
+tags: [private]
 ```
 
 ```Go
@@ -16780,6 +17757,7 @@ NewRandomWriteScheduler constructs a WriteScheduler that ignores HTTP/2 prioriti
 
 ```
 searchKey: http.http2OpenStreamOptions
+tags: [private]
 ```
 
 ```Go
@@ -16796,6 +17774,7 @@ OpenStreamOptions specifies extra options for WriteScheduler.OpenStream.
 
 ```
 searchKey: http.http2FrameWriteRequest
+tags: [private]
 ```
 
 ```Go
@@ -16822,6 +17801,7 @@ FrameWriteRequest is a request to write a frame.
 
 ```
 searchKey: http.http2FrameWriteRequest.StreamID
+tags: [private]
 ```
 
 ```Go
@@ -16834,6 +17814,7 @@ StreamID returns the id of the stream this frame will be written to. 0 is used f
 
 ```
 searchKey: http.http2FrameWriteRequest.isControl
+tags: [private]
 ```
 
 ```Go
@@ -16846,6 +17827,7 @@ isControl reports whether wr is a control frame for MaxQueuedControlFrames purpo
 
 ```
 searchKey: http.http2FrameWriteRequest.DataSize
+tags: [private]
 ```
 
 ```Go
@@ -16858,6 +17840,7 @@ DataSize returns the number of flow control bytes that must be consumed to write
 
 ```
 searchKey: http.http2FrameWriteRequest.Consume
+tags: [private]
 ```
 
 ```Go
@@ -16872,6 +17855,7 @@ If flow control prevents consuming any bytes, this returns (_, _, 0). If the ent
 
 ```
 searchKey: http.http2FrameWriteRequest.String
+tags: [private]
 ```
 
 ```Go
@@ -16884,6 +17868,7 @@ String is for debugging only.
 
 ```
 searchKey: http.http2FrameWriteRequest.replyToWriter
+tags: [private]
 ```
 
 ```Go
@@ -16896,6 +17881,7 @@ replyToWriter sends err to wr.done and panics if the send must block This does n
 
 ```
 searchKey: http.http2writeQueue
+tags: [private]
 ```
 
 ```Go
@@ -16910,6 +17896,7 @@ writeQueue is used by implementations of WriteScheduler.
 
 ```
 searchKey: http.http2writeQueue.empty
+tags: [private]
 ```
 
 ```Go
@@ -16920,6 +17907,7 @@ func (q *http2writeQueue) empty() bool
 
 ```
 searchKey: http.http2writeQueue.push
+tags: [private]
 ```
 
 ```Go
@@ -16930,6 +17918,7 @@ func (q *http2writeQueue) push(wr http2FrameWriteRequest)
 
 ```
 searchKey: http.http2writeQueue.shift
+tags: [private]
 ```
 
 ```Go
@@ -16940,6 +17929,7 @@ func (q *http2writeQueue) shift() http2FrameWriteRequest
 
 ```
 searchKey: http.http2writeQueue.consume
+tags: [private]
 ```
 
 ```Go
@@ -16952,6 +17942,7 @@ consume consumes up to n bytes from q.s[0]. If the frame is entirely consumed, i
 
 ```
 searchKey: http.http2writeQueuePool
+tags: [private]
 ```
 
 ```Go
@@ -16962,6 +17953,7 @@ type http2writeQueuePool []*http2writeQueue
 
 ```
 searchKey: http.http2writeQueuePool.put
+tags: [private]
 ```
 
 ```Go
@@ -16974,6 +17966,7 @@ put inserts an unused writeQueue into the pool.
 
 ```
 searchKey: http.http2writeQueuePool.get
+tags: [private]
 ```
 
 ```Go
@@ -16986,6 +17979,7 @@ get returns an empty writeQueue.
 
 ```
 searchKey: http.http2PriorityWriteSchedulerConfig
+tags: [private]
 ```
 
 ```Go
@@ -17034,6 +18028,7 @@ PriorityWriteSchedulerConfig configures a priorityWriteScheduler.
 
 ```
 searchKey: http.http2priorityNodeState
+tags: [private]
 ```
 
 ```Go
@@ -17044,6 +18039,7 @@ type http2priorityNodeState int
 
 ```
 searchKey: http.http2priorityNode
+tags: [private]
 ```
 
 ```Go
@@ -17068,6 +18064,7 @@ priorityNode is a node in an HTTP/2 priority tree. Each node is associated with 
 
 ```
 searchKey: http.http2priorityNode.setParent
+tags: [private]
 ```
 
 ```Go
@@ -17078,6 +18075,7 @@ func (n *http2priorityNode) setParent(parent *http2priorityNode)
 
 ```
 searchKey: http.http2priorityNode.addBytes
+tags: [private]
 ```
 
 ```Go
@@ -17088,6 +18086,7 @@ func (n *http2priorityNode) addBytes(b int64)
 
 ```
 searchKey: http.http2priorityNode.walkReadyInOrder
+tags: [private]
 ```
 
 ```Go
@@ -17102,6 +18101,7 @@ f(n, openParent) takes two arguments: the node to visit, n, and a bool that is t
 
 ```
 searchKey: http.http2sortPriorityNodeSiblings
+tags: [private]
 ```
 
 ```Go
@@ -17112,6 +18112,7 @@ type http2sortPriorityNodeSiblings []*http2priorityNode
 
 ```
 searchKey: http.http2sortPriorityNodeSiblings.Len
+tags: [private]
 ```
 
 ```Go
@@ -17122,6 +18123,7 @@ func (z http2sortPriorityNodeSiblings) Len() int
 
 ```
 searchKey: http.http2sortPriorityNodeSiblings.Swap
+tags: [private]
 ```
 
 ```Go
@@ -17132,6 +18134,7 @@ func (z http2sortPriorityNodeSiblings) Swap(i, k int)
 
 ```
 searchKey: http.http2sortPriorityNodeSiblings.Less
+tags: [private]
 ```
 
 ```Go
@@ -17142,6 +18145,7 @@ func (z http2sortPriorityNodeSiblings) Less(i, k int) bool
 
 ```
 searchKey: http.http2priorityWriteScheduler
+tags: [private]
 ```
 
 ```Go
@@ -17179,6 +18183,7 @@ type http2priorityWriteScheduler struct {
 
 ```
 searchKey: http.http2priorityWriteScheduler.OpenStream
+tags: [private]
 ```
 
 ```Go
@@ -17189,6 +18194,7 @@ func (ws *http2priorityWriteScheduler) OpenStream(streamID uint32, options http2
 
 ```
 searchKey: http.http2priorityWriteScheduler.CloseStream
+tags: [private]
 ```
 
 ```Go
@@ -17199,6 +18205,7 @@ func (ws *http2priorityWriteScheduler) CloseStream(streamID uint32)
 
 ```
 searchKey: http.http2priorityWriteScheduler.AdjustStream
+tags: [private]
 ```
 
 ```Go
@@ -17209,6 +18216,7 @@ func (ws *http2priorityWriteScheduler) AdjustStream(streamID uint32, priority ht
 
 ```
 searchKey: http.http2priorityWriteScheduler.Push
+tags: [private]
 ```
 
 ```Go
@@ -17219,6 +18227,7 @@ func (ws *http2priorityWriteScheduler) Push(wr http2FrameWriteRequest)
 
 ```
 searchKey: http.http2priorityWriteScheduler.Pop
+tags: [private]
 ```
 
 ```Go
@@ -17229,6 +18238,7 @@ func (ws *http2priorityWriteScheduler) Pop() (wr http2FrameWriteRequest, ok bool
 
 ```
 searchKey: http.http2priorityWriteScheduler.addClosedOrIdleNode
+tags: [private]
 ```
 
 ```Go
@@ -17239,6 +18249,7 @@ func (ws *http2priorityWriteScheduler) addClosedOrIdleNode(list *[]*http2priorit
 
 ```
 searchKey: http.http2priorityWriteScheduler.removeNode
+tags: [private]
 ```
 
 ```Go
@@ -17249,6 +18260,7 @@ func (ws *http2priorityWriteScheduler) removeNode(n *http2priorityNode)
 
 ```
 searchKey: http.http2randomWriteScheduler
+tags: [private]
 ```
 
 ```Go
@@ -17270,6 +18282,7 @@ type http2randomWriteScheduler struct {
 
 ```
 searchKey: http.http2randomWriteScheduler.OpenStream
+tags: [private]
 ```
 
 ```Go
@@ -17280,6 +18293,7 @@ func (ws *http2randomWriteScheduler) OpenStream(streamID uint32, options http2Op
 
 ```
 searchKey: http.http2randomWriteScheduler.CloseStream
+tags: [private]
 ```
 
 ```Go
@@ -17290,6 +18304,7 @@ func (ws *http2randomWriteScheduler) CloseStream(streamID uint32)
 
 ```
 searchKey: http.http2randomWriteScheduler.AdjustStream
+tags: [private]
 ```
 
 ```Go
@@ -17300,6 +18315,7 @@ func (ws *http2randomWriteScheduler) AdjustStream(streamID uint32, priority http
 
 ```
 searchKey: http.http2randomWriteScheduler.Push
+tags: [private]
 ```
 
 ```Go
@@ -17310,6 +18326,7 @@ func (ws *http2randomWriteScheduler) Push(wr http2FrameWriteRequest)
 
 ```
 searchKey: http.http2randomWriteScheduler.Pop
+tags: [private]
 ```
 
 ```Go
@@ -17320,7 +18337,6 @@ func (ws *http2randomWriteScheduler) Pop() (http2FrameWriteRequest, bool)
 
 ```
 searchKey: http.Header
-tags: [exported]
 ```
 
 ```Go
@@ -17335,6 +18351,7 @@ The keys should be in canonical form, as returned by CanonicalHeaderKey.
 
 ```
 searchKey: http.cloneOrMakeHeader
+tags: [private]
 ```
 
 ```Go
@@ -17347,6 +18364,7 @@ cloneOrMakeHeader invokes Header.Clone but if the result is nil, it'll instead m
 
 ```
 searchKey: http.http2cloneHeader
+tags: [private]
 ```
 
 ```Go
@@ -17357,6 +18375,7 @@ func http2cloneHeader(h Header) Header
 
 ```
 searchKey: http.fixTrailer
+tags: [private]
 ```
 
 ```Go
@@ -17369,7 +18388,6 @@ Parse the trailer header
 
 ```
 searchKey: http.Header.Add
-tags: [exported]
 ```
 
 ```Go
@@ -17382,7 +18400,6 @@ Add adds the key, value pair to the header. It appends to any existing values as
 
 ```
 searchKey: http.Header.Set
-tags: [exported]
 ```
 
 ```Go
@@ -17395,7 +18412,6 @@ Set sets the header entries associated with key to the single element value. It 
 
 ```
 searchKey: http.Header.Get
-tags: [exported]
 ```
 
 ```Go
@@ -17408,7 +18424,6 @@ Get gets the first value associated with the given key. If there are no values a
 
 ```
 searchKey: http.Header.Values
-tags: [exported]
 ```
 
 ```Go
@@ -17421,6 +18436,7 @@ Values returns all values associated with the given key. It is case insensitive;
 
 ```
 searchKey: http.Header.get
+tags: [private]
 ```
 
 ```Go
@@ -17433,6 +18449,7 @@ get is like Get, but key must already be in CanonicalHeaderKey form.
 
 ```
 searchKey: http.Header.has
+tags: [private]
 ```
 
 ```Go
@@ -17445,7 +18462,6 @@ has reports whether h has the provided key defined, even if it's set to 0-length
 
 ```
 searchKey: http.Header.Del
-tags: [exported]
 ```
 
 ```Go
@@ -17458,7 +18474,6 @@ Del deletes the values associated with key. The key is case insensitive; it is c
 
 ```
 searchKey: http.Header.Write
-tags: [exported]
 ```
 
 ```Go
@@ -17471,6 +18486,7 @@ Write writes a header in wire format.
 
 ```
 searchKey: http.Header.write
+tags: [private]
 ```
 
 ```Go
@@ -17481,7 +18497,6 @@ func (h Header) write(w io.Writer, trace *httptrace.ClientTrace) error
 
 ```
 searchKey: http.Header.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -17494,6 +18509,7 @@ Clone returns a copy of h or nil if h is nil.
 
 ```
 searchKey: http.Header.sortedKeyValues
+tags: [private]
 ```
 
 ```Go
@@ -17506,7 +18522,6 @@ sortedKeyValues returns h's keys sorted in the returned kvs slice. The headerSor
 
 ```
 searchKey: http.Header.WriteSubset
-tags: [exported]
 ```
 
 ```Go
@@ -17519,6 +18534,7 @@ WriteSubset writes a header in wire format. If exclude is not nil, keys where ex
 
 ```
 searchKey: http.Header.writeSubset
+tags: [private]
 ```
 
 ```Go
@@ -17529,6 +18545,7 @@ func (h Header) writeSubset(w io.Writer, exclude map[string]bool, trace *httptra
 
 ```
 searchKey: http.stringWriter
+tags: [private]
 ```
 
 ```Go
@@ -17543,6 +18560,7 @@ stringWriter implements WriteString on a Writer.
 
 ```
 searchKey: http.stringWriter.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -17553,6 +18571,7 @@ func (w stringWriter) WriteString(s string) (n int, err error)
 
 ```
 searchKey: http.keyValues
+tags: [private]
 ```
 
 ```Go
@@ -17566,6 +18585,7 @@ type keyValues struct {
 
 ```
 searchKey: http.headerSorter
+tags: [private]
 ```
 
 ```Go
@@ -17580,6 +18600,7 @@ A headerSorter implements sort.Interface by sorting a []keyValues by key. It's u
 
 ```
 searchKey: http.headerSorter.Len
+tags: [private]
 ```
 
 ```Go
@@ -17590,6 +18611,7 @@ func (s *headerSorter) Len() int
 
 ```
 searchKey: http.headerSorter.Swap
+tags: [private]
 ```
 
 ```Go
@@ -17600,6 +18622,7 @@ func (s *headerSorter) Swap(i, j int)
 
 ```
 searchKey: http.headerSorter.Less
+tags: [private]
 ```
 
 ```Go
@@ -17610,6 +18633,7 @@ func (s *headerSorter) Less(i, j int) bool
 
 ```
 searchKey: http.incomparable
+tags: [private]
 ```
 
 ```Go
@@ -17622,6 +18646,7 @@ incomparable is a zero-width, non-comparable type. Adding it to a struct makes t
 
 ```
 searchKey: http.contextKey
+tags: [private]
 ```
 
 ```Go
@@ -17636,6 +18661,7 @@ contextKey is a value for use with context.WithValue. It's used as a pointer so 
 
 ```
 searchKey: http.contextKey.String
+tags: [private]
 ```
 
 ```Go
@@ -17646,6 +18672,7 @@ func (k *contextKey) String() string
 
 ```
 searchKey: http.noBody
+tags: [private]
 ```
 
 ```Go
@@ -17656,6 +18683,7 @@ type noBody struct{}
 
 ```
 searchKey: http.noBody.Read
+tags: [private]
 ```
 
 ```Go
@@ -17666,6 +18694,7 @@ func (noBody) Read([]byte) (int, error)
 
 ```
 searchKey: http.noBody.Close
+tags: [private]
 ```
 
 ```Go
@@ -17676,6 +18705,7 @@ func (noBody) Close() error
 
 ```
 searchKey: http.noBody.WriteTo
+tags: [private]
 ```
 
 ```Go
@@ -17686,7 +18716,6 @@ func (noBody) WriteTo(io.Writer) (int64, error)
 
 ```
 searchKey: http.PushOptions
-tags: [exported]
 ```
 
 ```Go
@@ -17708,7 +18737,6 @@ PushOptions describes options for Pusher.Push.
 
 ```
 searchKey: http.Pusher
-tags: [exported]
 ```
 
 ```Go
@@ -17747,7 +18775,6 @@ Pusher is the interface implemented by ResponseWriters that support HTTP/2 serve
 
 ```
 searchKey: http.CookieJar
-tags: [exported]
 ```
 
 ```Go
@@ -17774,7 +18801,6 @@ The net/http/cookiejar package provides a CookieJar implementation.
 
 ```
 searchKey: http.ProtocolError
-tags: [exported]
 ```
 
 ```Go
@@ -17791,7 +18817,6 @@ Deprecated: Not all errors in the http package related to protocol errors are of
 
 ```
 searchKey: http.ProtocolError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -17802,7 +18827,6 @@ func (pe *ProtocolError) Error() string
 
 ```
 searchKey: http.Request
-tags: [exported]
 ```
 
 ```Go
@@ -18038,6 +19062,7 @@ The field semantics differ slightly between client and server usage. In addition
 
 ```
 searchKey: http.http2shouldRetryRequest
+tags: [private]
 ```
 
 ```Go
@@ -18050,7 +19075,6 @@ shouldRetryRequest is called by RoundTrip when a request fails to get response h
 
 ```
 searchKey: http.NewRequest
-tags: [exported]
 ```
 
 ```Go
@@ -18063,7 +19087,6 @@ NewRequest wraps NewRequestWithContext using context.Background.
 
 ```
 searchKey: http.NewRequestWithContext
-tags: [exported]
 ```
 
 ```Go
@@ -18082,7 +19105,6 @@ If body is of type *bytes.Buffer, *bytes.Reader, or *strings.Reader, the returne
 
 ```
 searchKey: http.ReadRequest
-tags: [exported]
 ```
 
 ```Go
@@ -18097,6 +19119,7 @@ ReadRequest is a low-level function and should only be used for specialized appl
 
 ```
 searchKey: http.readRequest
+tags: [private]
 ```
 
 ```Go
@@ -18107,6 +19130,7 @@ func readRequest(b *bufio.Reader) (req *Request, err error)
 
 ```
 searchKey: http.setupRewindBody
+tags: [private]
 ```
 
 ```Go
@@ -18119,6 +19143,7 @@ setupRewindBody returns a new request with a custom body wrapper that can report
 
 ```
 searchKey: http.rewindBody
+tags: [private]
 ```
 
 ```Go
@@ -18131,6 +19156,7 @@ rewindBody returns a new request with the body rewound. It returns req unmodifie
 
 ```
 searchKey: http.dummyReq
+tags: [private]
 ```
 
 ```Go
@@ -18141,6 +19167,7 @@ func dummyReq(method string) *Request
 
 ```
 searchKey: http.dummyReq11
+tags: [private]
 ```
 
 ```Go
@@ -18151,6 +19178,7 @@ func dummyReq11(method string) *Request
 
 ```
 searchKey: http.dummyRequest
+tags: [private]
 ```
 
 ```Go
@@ -18161,6 +19189,7 @@ func dummyRequest(method string) *Request
 
 ```
 searchKey: http.dummyRequestWithBody
+tags: [private]
 ```
 
 ```Go
@@ -18171,6 +19200,7 @@ func dummyRequestWithBody(method string) *Request
 
 ```
 searchKey: http.dummyRequestWithBodyNoGetBody
+tags: [private]
 ```
 
 ```Go
@@ -18181,7 +19211,6 @@ func dummyRequestWithBodyNoGetBody(method string) *Request
 
 ```
 searchKey: http.Request.Context
-tags: [exported]
 ```
 
 ```Go
@@ -18200,7 +19229,6 @@ For incoming server requests, the context is canceled when the client's connecti
 
 ```
 searchKey: http.Request.WithContext
-tags: [exported]
 ```
 
 ```Go
@@ -18217,7 +19245,6 @@ To create a new request with a context, use NewRequestWithContext. To change the
 
 ```
 searchKey: http.Request.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -18232,7 +19259,6 @@ For an outgoing client request, the context controls the entire lifetime of a re
 
 ```
 searchKey: http.Request.ProtoAtLeast
-tags: [exported]
 ```
 
 ```Go
@@ -18245,7 +19271,6 @@ ProtoAtLeast reports whether the HTTP protocol used in the request is at least m
 
 ```
 searchKey: http.Request.UserAgent
-tags: [exported]
 ```
 
 ```Go
@@ -18258,7 +19283,6 @@ UserAgent returns the client's User-Agent, if sent in the request.
 
 ```
 searchKey: http.Request.Cookies
-tags: [exported]
 ```
 
 ```Go
@@ -18271,7 +19295,6 @@ Cookies parses and returns the HTTP cookies sent with the request.
 
 ```
 searchKey: http.Request.Cookie
-tags: [exported]
 ```
 
 ```Go
@@ -18284,7 +19307,6 @@ Cookie returns the named cookie provided in the request or ErrNoCookie if not fo
 
 ```
 searchKey: http.Request.AddCookie
-tags: [exported]
 ```
 
 ```Go
@@ -18297,7 +19319,6 @@ AddCookie adds a cookie to the request. Per RFC 6265 section 5.4, AddCookie does
 
 ```
 searchKey: http.Request.Referer
-tags: [exported]
 ```
 
 ```Go
@@ -18312,7 +19333,6 @@ Referer is misspelled as in the request itself, a mistake from the earliest days
 
 ```
 searchKey: http.Request.MultipartReader
-tags: [exported]
 ```
 
 ```Go
@@ -18325,6 +19345,7 @@ MultipartReader returns a MIME multipart reader if this is a multipart/form-data
 
 ```
 searchKey: http.Request.multipartReader
+tags: [private]
 ```
 
 ```Go
@@ -18335,6 +19356,7 @@ func (r *Request) multipartReader(allowMixed bool) (*multipart.Reader, error)
 
 ```
 searchKey: http.Request.isH2Upgrade
+tags: [private]
 ```
 
 ```Go
@@ -18347,7 +19369,6 @@ isH2Upgrade reports whether r represents the http2 "client preface" magic string
 
 ```
 searchKey: http.Request.Write
-tags: [exported]
 ```
 
 ```Go
@@ -18372,7 +19393,6 @@ If Body is present, Content-Length is <= 0 and TransferEncoding hasn't been set 
 
 ```
 searchKey: http.Request.WriteProxy
-tags: [exported]
 ```
 
 ```Go
@@ -18385,6 +19405,7 @@ WriteProxy is like Write but writes the request in the form expected by an HTTP 
 
 ```
 searchKey: http.Request.write
+tags: [private]
 ```
 
 ```Go
@@ -18397,7 +19418,6 @@ extraHeaders may be nil waitForContinue may be nil always closes body
 
 ```
 searchKey: http.Request.BasicAuth
-tags: [exported]
 ```
 
 ```Go
@@ -18410,7 +19430,6 @@ BasicAuth returns the username and password provided in the request's Authorizat
 
 ```
 searchKey: http.Request.SetBasicAuth
-tags: [exported]
 ```
 
 ```Go
@@ -18427,7 +19446,6 @@ Some protocols may impose additional requirements on pre-escaping the username a
 
 ```
 searchKey: http.Request.ParseForm
-tags: [exported]
 ```
 
 ```Go
@@ -18450,7 +19468,6 @@ ParseMultipartForm calls ParseForm automatically. ParseForm is idempotent.
 
 ```
 searchKey: http.Request.ParseMultipartForm
-tags: [exported]
 ```
 
 ```Go
@@ -18463,7 +19480,6 @@ ParseMultipartForm parses a request body as multipart/form-data. The whole reque
 
 ```
 searchKey: http.Request.FormValue
-tags: [exported]
 ```
 
 ```Go
@@ -18476,7 +19492,6 @@ FormValue returns the first value for the named component of the query. POST and
 
 ```
 searchKey: http.Request.PostFormValue
-tags: [exported]
 ```
 
 ```Go
@@ -18489,7 +19504,6 @@ PostFormValue returns the first value for the named component of the POST, PATCH
 
 ```
 searchKey: http.Request.FormFile
-tags: [exported]
 ```
 
 ```Go
@@ -18502,6 +19516,7 @@ FormFile returns the first file for the provided form key. FormFile calls ParseM
 
 ```
 searchKey: http.Request.expectsContinue
+tags: [private]
 ```
 
 ```Go
@@ -18512,6 +19527,7 @@ func (r *Request) expectsContinue() bool
 
 ```
 searchKey: http.Request.wantsHttp10KeepAlive
+tags: [private]
 ```
 
 ```Go
@@ -18522,6 +19538,7 @@ func (r *Request) wantsHttp10KeepAlive() bool
 
 ```
 searchKey: http.Request.wantsClose
+tags: [private]
 ```
 
 ```Go
@@ -18532,6 +19549,7 @@ func (r *Request) wantsClose() bool
 
 ```
 searchKey: http.Request.closeBody
+tags: [private]
 ```
 
 ```Go
@@ -18542,6 +19560,7 @@ func (r *Request) closeBody() error
 
 ```
 searchKey: http.Request.isReplayable
+tags: [private]
 ```
 
 ```Go
@@ -18552,6 +19571,7 @@ func (r *Request) isReplayable() bool
 
 ```
 searchKey: http.Request.outgoingLength
+tags: [private]
 ```
 
 ```Go
@@ -18564,6 +19584,7 @@ outgoingLength reports the Content-Length of this outgoing (Client) request. It 
 
 ```
 searchKey: http.Request.requiresHTTP1
+tags: [private]
 ```
 
 ```Go
@@ -18576,6 +19597,7 @@ requiresHTTP1 reports whether this request requires being sent on an HTTP/1 conn
 
 ```
 searchKey: http.Request.WithT
+tags: [private]
 ```
 
 ```Go
@@ -18586,6 +19608,7 @@ func (r *Request) WithT(t *testing.T) *Request
 
 ```
 searchKey: http.Request.ExportIsReplayable
+tags: [private]
 ```
 
 ```Go
@@ -18596,6 +19619,7 @@ func (r *Request) ExportIsReplayable() bool
 
 ```
 searchKey: http.requestBodyReadError
+tags: [private]
 ```
 
 ```Go
@@ -18608,6 +19632,7 @@ requestBodyReadError wraps an error from (*Request).write to indicate that the e
 
 ```
 searchKey: http.maxBytesReader
+tags: [private]
 ```
 
 ```Go
@@ -18623,6 +19648,7 @@ type maxBytesReader struct {
 
 ```
 searchKey: http.maxBytesReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -18633,6 +19659,7 @@ func (l *maxBytesReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.maxBytesReader.Close
+tags: [private]
 ```
 
 ```Go
@@ -18643,7 +19670,6 @@ func (l *maxBytesReader) Close() error
 
 ```
 searchKey: http.Response
-tags: [exported]
 ```
 
 ```Go
@@ -18745,6 +19771,7 @@ The Client and Transport return Responses from servers once the response headers
 
 ```
 searchKey: http.send
+tags: [private]
 ```
 
 ```Go
@@ -18757,7 +19784,6 @@ send issues an HTTP request. Caller should close resp.Body when done reading fro
 
 ```
 searchKey: http.Get
-tags: [exported]
 ```
 
 ```Go
@@ -18788,7 +19814,6 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.Post
-tags: [exported]
 ```
 
 ```Go
@@ -18813,7 +19838,6 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.PostForm
-tags: [exported]
 ```
 
 ```Go
@@ -18836,7 +19860,6 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.Head
-tags: [exported]
 ```
 
 ```Go
@@ -18861,7 +19884,6 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.ReadResponse
-tags: [exported]
 ```
 
 ```Go
@@ -18874,7 +19896,6 @@ ReadResponse reads and returns an HTTP response from r. The req parameter option
 
 ```
 searchKey: http.Response.Cookies
-tags: [exported]
 ```
 
 ```Go
@@ -18887,7 +19908,6 @@ Cookies parses and returns the cookies set in the Set-Cookie headers.
 
 ```
 searchKey: http.Response.Location
-tags: [exported]
 ```
 
 ```Go
@@ -18900,7 +19920,6 @@ Location returns the URL of the response's "Location" header, if present. Relati
 
 ```
 searchKey: http.Response.ProtoAtLeast
-tags: [exported]
 ```
 
 ```Go
@@ -18913,7 +19932,6 @@ ProtoAtLeast reports whether the HTTP protocol used in the response is at least 
 
 ```
 searchKey: http.Response.Write
-tags: [exported]
 ```
 
 ```Go
@@ -18942,6 +19960,7 @@ The Response Body is closed after it is sent.
 
 ```
 searchKey: http.Response.closeBody
+tags: [private]
 ```
 
 ```Go
@@ -18952,6 +19971,7 @@ func (r *Response) closeBody()
 
 ```
 searchKey: http.Response.bodyIsWritable
+tags: [private]
 ```
 
 ```Go
@@ -18964,6 +19984,7 @@ bodyIsWritable reports whether the Body supports writing. The Transport returns 
 
 ```
 searchKey: http.Response.isProtocolSwitch
+tags: [private]
 ```
 
 ```Go
@@ -18976,7 +19997,6 @@ isProtocolSwitch reports whether the response code and header indicate a success
 
 ```
 searchKey: http.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -18999,7 +20019,6 @@ If ServeHTTP panics, the server (the caller of ServeHTTP) assumes that the effec
 
 ```
 searchKey: http.FileServer
-tags: [exported]
 ```
 
 ```Go
@@ -19026,7 +20045,6 @@ http.Handle("/", http.FileServer(http.FS(fsys)))
 
 ```
 searchKey: http.NotFoundHandler
-tags: [exported]
 ```
 
 ```Go
@@ -19039,7 +20057,6 @@ NotFoundHandler returns a simple request handler that replies to each request wi
 
 ```
 searchKey: http.StripPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -19052,7 +20069,6 @@ StripPrefix returns a handler that serves HTTP requests by removing the given pr
 
 ```
 searchKey: http.RedirectHandler
-tags: [exported]
 ```
 
 ```Go
@@ -19067,7 +20083,6 @@ The provided code should be in the 3xx range and is usually StatusMovedPermanent
 
 ```
 searchKey: http.AllowQuerySemicolons
-tags: [exported]
 ```
 
 ```Go
@@ -19084,7 +20099,6 @@ AllowQuerySemicolons should be invoked before Request.ParseForm is called.
 
 ```
 searchKey: http.TimeoutHandler
-tags: [exported]
 ```
 
 ```Go
@@ -19101,6 +20115,7 @@ TimeoutHandler supports the Pusher interface but does not support the Hijacker o
 
 ```
 searchKey: http.NewTestTimeoutHandler
+tags: [private]
 ```
 
 ```Go
@@ -19111,7 +20126,6 @@ func NewTestTimeoutHandler(handler Handler, ch <-chan time.Time) Handler
 
 ```
 searchKey: http.ResponseWriter
-tags: [exported]
 ```
 
 ```Go
@@ -19186,7 +20200,6 @@ A ResponseWriter may not be used after the Handler.ServeHTTP method has returned
 
 ```
 searchKey: http.Flusher
-tags: [exported]
 ```
 
 ```Go
@@ -19206,7 +20219,6 @@ Note that even for ResponseWriters that support Flush, if the client is connecte
 
 ```
 searchKey: http.Hijacker
-tags: [exported]
 ```
 
 ```Go
@@ -19242,7 +20254,6 @@ The default ResponseWriter for HTTP/1.x connections supports Hijacker, but HTTP/
 
 ```
 searchKey: http.CloseNotifier
-tags: [exported]
 ```
 
 ```Go
@@ -19279,6 +20290,7 @@ Deprecated: the CloseNotifier interface predates Go's context package. New code 
 
 ```
 searchKey: http.conn
+tags: [private]
 ```
 
 ```Go
@@ -19345,6 +20357,7 @@ A conn represents the server side of an HTTP connection.
 
 ```
 searchKey: http.conn.hijacked
+tags: [private]
 ```
 
 ```Go
@@ -19355,6 +20368,7 @@ func (c *conn) hijacked() bool
 
 ```
 searchKey: http.conn.hijackLocked
+tags: [private]
 ```
 
 ```Go
@@ -19367,6 +20381,7 @@ c.mu must be held.
 
 ```
 searchKey: http.conn.readRequest
+tags: [private]
 ```
 
 ```Go
@@ -19379,6 +20394,7 @@ Read next request from connection.
 
 ```
 searchKey: http.conn.finalFlush
+tags: [private]
 ```
 
 ```Go
@@ -19389,6 +20405,7 @@ func (c *conn) finalFlush()
 
 ```
 searchKey: http.conn.close
+tags: [private]
 ```
 
 ```Go
@@ -19401,6 +20418,7 @@ Close the connection.
 
 ```
 searchKey: http.conn.closeWriteAndWait
+tags: [private]
 ```
 
 ```Go
@@ -19415,6 +20433,7 @@ See [https://golang.org/issue/3595](https://golang.org/issue/3595)
 
 ```
 searchKey: http.conn.setState
+tags: [private]
 ```
 
 ```Go
@@ -19425,6 +20444,7 @@ func (c *conn) setState(nc net.Conn, state ConnState, runHook bool)
 
 ```
 searchKey: http.conn.getState
+tags: [private]
 ```
 
 ```Go
@@ -19435,6 +20455,7 @@ func (c *conn) getState() (state ConnState, unixSec int64)
 
 ```
 searchKey: http.conn.serve
+tags: [private]
 ```
 
 ```Go
@@ -19447,6 +20468,7 @@ Serve a new connection.
 
 ```
 searchKey: http.chunkWriter
+tags: [private]
 ```
 
 ```Go
@@ -19480,6 +20502,7 @@ See the comment above (*response).Write for the entire write flow.
 
 ```
 searchKey: http.chunkWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -19490,6 +20513,7 @@ func (cw *chunkWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.chunkWriter.flush
+tags: [private]
 ```
 
 ```Go
@@ -19500,6 +20524,7 @@ func (cw *chunkWriter) flush()
 
 ```
 searchKey: http.chunkWriter.close
+tags: [private]
 ```
 
 ```Go
@@ -19510,6 +20535,7 @@ func (cw *chunkWriter) close()
 
 ```
 searchKey: http.chunkWriter.writeHeader
+tags: [private]
 ```
 
 ```Go
@@ -19524,6 +20550,7 @@ p is not written by writeHeader, but is the first chunk of the body that will be
 
 ```
 searchKey: http.response
+tags: [private]
 ```
 
 ```Go
@@ -19603,6 +20630,7 @@ A response represents the server side of an HTTP response.
 
 ```
 searchKey: http.response.finalTrailers
+tags: [private]
 ```
 
 ```Go
@@ -19615,6 +20643,7 @@ finalTrailers is called after the Handler exits and returns a non-nil value if t
 
 ```
 searchKey: http.response.declareTrailer
+tags: [private]
 ```
 
 ```Go
@@ -19627,6 +20656,7 @@ declareTrailer is called for each Trailer header when the response header is wri
 
 ```
 searchKey: http.response.requestTooLarge
+tags: [private]
 ```
 
 ```Go
@@ -19639,6 +20669,7 @@ requestTooLarge is called by maxBytesReader when too much input has been read fr
 
 ```
 searchKey: http.response.needsSniff
+tags: [private]
 ```
 
 ```Go
@@ -19651,6 +20682,7 @@ needsSniff reports whether a Content-Type still needs to be sniffed.
 
 ```
 searchKey: http.response.ReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -19663,6 +20695,7 @@ ReadFrom is here to optimize copying from an *os.File regular file to a *net.TCP
 
 ```
 searchKey: http.response.Header
+tags: [private]
 ```
 
 ```Go
@@ -19673,6 +20706,7 @@ func (w *response) Header() Header
 
 ```
 searchKey: http.response.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -19683,6 +20717,7 @@ func (w *response) WriteHeader(code int)
 
 ```
 searchKey: http.response.bodyAllowed
+tags: [private]
 ```
 
 ```Go
@@ -19695,6 +20730,7 @@ bodyAllowed reports whether a Write is allowed for this response type. It's ille
 
 ```
 searchKey: http.response.Write
+tags: [private]
 ```
 
 ```Go
@@ -19731,6 +20767,7 @@ TODO(bradfitz): short-circuit some of the buffering when the initial header cont
 
 ```
 searchKey: http.response.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -19741,6 +20778,7 @@ func (w *response) WriteString(data string) (n int, err error)
 
 ```
 searchKey: http.response.write
+tags: [private]
 ```
 
 ```Go
@@ -19753,6 +20791,7 @@ either dataB or dataS is non-zero.
 
 ```
 searchKey: http.response.finishRequest
+tags: [private]
 ```
 
 ```Go
@@ -19763,6 +20802,7 @@ func (w *response) finishRequest()
 
 ```
 searchKey: http.response.shouldReuseConnection
+tags: [private]
 ```
 
 ```Go
@@ -19775,6 +20815,7 @@ shouldReuseConnection reports whether the underlying TCP connection can be reuse
 
 ```
 searchKey: http.response.closedRequestBodyEarly
+tags: [private]
 ```
 
 ```Go
@@ -19785,6 +20826,7 @@ func (w *response) closedRequestBodyEarly() bool
 
 ```
 searchKey: http.response.Flush
+tags: [private]
 ```
 
 ```Go
@@ -19795,6 +20837,7 @@ func (w *response) Flush()
 
 ```
 searchKey: http.response.sendExpectationFailed
+tags: [private]
 ```
 
 ```Go
@@ -19805,6 +20848,7 @@ func (w *response) sendExpectationFailed()
 
 ```
 searchKey: http.response.Hijack
+tags: [private]
 ```
 
 ```Go
@@ -19817,6 +20861,7 @@ Hijack implements the Hijacker.Hijack method. Our response is both a ResponseWri
 
 ```
 searchKey: http.response.CloseNotify
+tags: [private]
 ```
 
 ```Go
@@ -19827,6 +20872,7 @@ func (w *response) CloseNotify() <-chan bool
 
 ```
 searchKey: http.atomicBool
+tags: [private]
 ```
 
 ```Go
@@ -19837,6 +20883,7 @@ type atomicBool int32
 
 ```
 searchKey: http.atomicBool.isSet
+tags: [private]
 ```
 
 ```Go
@@ -19847,6 +20894,7 @@ func (b *atomicBool) isSet() bool
 
 ```
 searchKey: http.atomicBool.setTrue
+tags: [private]
 ```
 
 ```Go
@@ -19857,6 +20905,7 @@ func (b *atomicBool) setTrue()
 
 ```
 searchKey: http.atomicBool.setFalse
+tags: [private]
 ```
 
 ```Go
@@ -19867,6 +20916,7 @@ func (b *atomicBool) setFalse()
 
 ```
 searchKey: http.writerOnly
+tags: [private]
 ```
 
 ```Go
@@ -19881,6 +20931,7 @@ writerOnly hides an io.Writer value's optional ReadFrom method from io.Copy.
 
 ```
 searchKey: http.readResult
+tags: [private]
 ```
 
 ```Go
@@ -19896,6 +20947,7 @@ type readResult struct {
 
 ```
 searchKey: http.connReader
+tags: [private]
 ```
 
 ```Go
@@ -19918,6 +20970,7 @@ connReader is the io.Reader wrapper used by *conn. It combines a selectively-act
 
 ```
 searchKey: http.connReader.lock
+tags: [private]
 ```
 
 ```Go
@@ -19928,6 +20981,7 @@ func (cr *connReader) lock()
 
 ```
 searchKey: http.connReader.unlock
+tags: [private]
 ```
 
 ```Go
@@ -19938,6 +20992,7 @@ func (cr *connReader) unlock()
 
 ```
 searchKey: http.connReader.startBackgroundRead
+tags: [private]
 ```
 
 ```Go
@@ -19948,6 +21003,7 @@ func (cr *connReader) startBackgroundRead()
 
 ```
 searchKey: http.connReader.backgroundRead
+tags: [private]
 ```
 
 ```Go
@@ -19958,6 +21014,7 @@ func (cr *connReader) backgroundRead()
 
 ```
 searchKey: http.connReader.abortPendingRead
+tags: [private]
 ```
 
 ```Go
@@ -19968,6 +21025,7 @@ func (cr *connReader) abortPendingRead()
 
 ```
 searchKey: http.connReader.setReadLimit
+tags: [private]
 ```
 
 ```Go
@@ -19978,6 +21036,7 @@ func (cr *connReader) setReadLimit(remain int64)
 
 ```
 searchKey: http.connReader.setInfiniteReadLimit
+tags: [private]
 ```
 
 ```Go
@@ -19988,6 +21047,7 @@ func (cr *connReader) setInfiniteReadLimit()
 
 ```
 searchKey: http.connReader.hitReadLimit
+tags: [private]
 ```
 
 ```Go
@@ -19998,6 +21058,7 @@ func (cr *connReader) hitReadLimit() bool
 
 ```
 searchKey: http.connReader.handleReadError
+tags: [private]
 ```
 
 ```Go
@@ -20014,6 +21075,7 @@ It may be called from multiple goroutines.
 
 ```
 searchKey: http.connReader.closeNotify
+tags: [private]
 ```
 
 ```Go
@@ -20026,6 +21088,7 @@ may be called from multiple goroutines.
 
 ```
 searchKey: http.connReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -20036,6 +21099,7 @@ func (cr *connReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.expectContinueReader
+tags: [private]
 ```
 
 ```Go
@@ -20053,6 +21117,7 @@ wrapper around io.ReadCloser which on first read, sends an HTTP/1.1 100 Continue
 
 ```
 searchKey: http.expectContinueReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -20063,6 +21128,7 @@ func (ecr *expectContinueReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.expectContinueReader.Close
+tags: [private]
 ```
 
 ```Go
@@ -20073,6 +21139,7 @@ func (ecr *expectContinueReader) Close() error
 
 ```
 searchKey: http.extraHeader
+tags: [private]
 ```
 
 ```Go
@@ -20091,6 +21158,7 @@ extraHeader is the set of headers sometimes added by chunkWriter.writeHeader. Th
 
 ```
 searchKey: http.extraHeader.Write
+tags: [private]
 ```
 
 ```Go
@@ -20105,6 +21173,7 @@ This method has a value receiver, despite the somewhat large size of h, because 
 
 ```
 searchKey: http.closeWriter
+tags: [private]
 ```
 
 ```Go
@@ -20117,6 +21186,7 @@ type closeWriter interface {
 
 ```
 searchKey: http.statusError
+tags: [private]
 ```
 
 ```Go
@@ -20132,6 +21202,7 @@ statusError is an error used to respond to a request with an HTTP status. The te
 
 ```
 searchKey: http.statusError.Error
+tags: [private]
 ```
 
 ```Go
@@ -20142,7 +21213,6 @@ func (e statusError) Error() string
 
 ```
 searchKey: http.HandlerFunc
-tags: [exported]
 ```
 
 ```Go
@@ -20155,6 +21225,7 @@ The HandlerFunc type is an adapter to allow the use of ordinary functions as HTT
 
 ```
 searchKey: http.http2new400Handler
+tags: [private]
 ```
 
 ```Go
@@ -20165,7 +21236,6 @@ func http2new400Handler(err error) HandlerFunc
 
 ```
 searchKey: http.HandlerFunc.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -20178,6 +21248,7 @@ ServeHTTP calls f(w, r).
 
 ```
 searchKey: http.redirectHandler
+tags: [private]
 ```
 
 ```Go
@@ -20193,6 +21264,7 @@ Redirect to a fixed URL
 
 ```
 searchKey: http.redirectHandler.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -20203,7 +21275,6 @@ func (rh *redirectHandler) ServeHTTP(w ResponseWriter, r *Request)
 
 ```
 searchKey: http.ServeMux
-tags: [exported]
 ```
 
 ```Go
@@ -20231,7 +21302,6 @@ ServeMux also takes care of sanitizing the URL request path and the Host header,
 
 ```
 searchKey: http.NewServeMux
-tags: [exported]
 ```
 
 ```Go
@@ -20244,6 +21314,7 @@ NewServeMux allocates and returns a new ServeMux.
 
 ```
 searchKey: http.ServeMux.match
+tags: [private]
 ```
 
 ```Go
@@ -20256,6 +21327,7 @@ Find a handler on a handler map given a path string. Most-specific (longest) pat
 
 ```
 searchKey: http.ServeMux.redirectToPathSlash
+tags: [private]
 ```
 
 ```Go
@@ -20268,6 +21340,7 @@ redirectToPathSlash determines if the given path needs appending "/" to it. This
 
 ```
 searchKey: http.ServeMux.shouldRedirectRLocked
+tags: [private]
 ```
 
 ```Go
@@ -20280,7 +21353,6 @@ shouldRedirectRLocked reports whether the given path and host should be redirect
 
 ```
 searchKey: http.ServeMux.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -20299,6 +21371,7 @@ If there is no registered handler that applies to the request, Handler returns a
 
 ```
 searchKey: http.ServeMux.handler
+tags: [private]
 ```
 
 ```Go
@@ -20311,7 +21384,6 @@ handler is the main implementation of Handler. The path is known to be in canoni
 
 ```
 searchKey: http.ServeMux.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -20324,7 +21396,6 @@ ServeHTTP dispatches the request to the handler whose pattern most closely match
 
 ```
 searchKey: http.ServeMux.Handle
-tags: [exported]
 ```
 
 ```Go
@@ -20337,7 +21408,6 @@ Handle registers the handler for the given pattern. If a handler already exists 
 
 ```
 searchKey: http.ServeMux.HandleFunc
-tags: [exported]
 ```
 
 ```Go
@@ -20350,6 +21420,7 @@ HandleFunc registers the handler function for the given pattern.
 
 ```
 searchKey: http.muxEntry
+tags: [private]
 ```
 
 ```Go
@@ -20363,7 +21434,6 @@ type muxEntry struct {
 
 ```
 searchKey: http.Server
-tags: [exported]
 ```
 
 ```Go
@@ -20479,6 +21549,7 @@ A Server defines parameters for running an HTTP server. The zero value for Serve
 
 ```
 searchKey: http.Server.newConn
+tags: [private]
 ```
 
 ```Go
@@ -20491,6 +21562,7 @@ Create new connection from rwc.
 
 ```
 searchKey: http.Server.maxHeaderBytes
+tags: [private]
 ```
 
 ```Go
@@ -20501,6 +21573,7 @@ func (srv *Server) maxHeaderBytes() int
 
 ```
 searchKey: http.Server.initialReadLimitSize
+tags: [private]
 ```
 
 ```Go
@@ -20511,6 +21584,7 @@ func (srv *Server) initialReadLimitSize() int64
 
 ```
 searchKey: http.Server.getDoneChan
+tags: [private]
 ```
 
 ```Go
@@ -20521,6 +21595,7 @@ func (s *Server) getDoneChan() <-chan struct{}
 
 ```
 searchKey: http.Server.getDoneChanLocked
+tags: [private]
 ```
 
 ```Go
@@ -20531,6 +21606,7 @@ func (s *Server) getDoneChanLocked() chan struct{}
 
 ```
 searchKey: http.Server.closeDoneChanLocked
+tags: [private]
 ```
 
 ```Go
@@ -20541,7 +21617,6 @@ func (s *Server) closeDoneChanLocked()
 
 ```
 searchKey: http.Server.Close
-tags: [exported]
 ```
 
 ```Go
@@ -20558,7 +21633,6 @@ Close returns any error returned from closing the Server's underlying Listener(s
 
 ```
 searchKey: http.Server.Shutdown
-tags: [exported]
 ```
 
 ```Go
@@ -20577,7 +21651,6 @@ Once Shutdown has been called on a server, it may not be reused; future calls to
 
 ```
 searchKey: http.Server.RegisterOnShutdown
-tags: [exported]
 ```
 
 ```Go
@@ -20590,6 +21663,7 @@ RegisterOnShutdown registers a function to call on Shutdown. This can be used to
 
 ```
 searchKey: http.Server.numListeners
+tags: [private]
 ```
 
 ```Go
@@ -20600,6 +21674,7 @@ func (s *Server) numListeners() int
 
 ```
 searchKey: http.Server.closeIdleConns
+tags: [private]
 ```
 
 ```Go
@@ -20612,6 +21687,7 @@ closeIdleConns closes all idle connections and reports whether the server is qui
 
 ```
 searchKey: http.Server.closeListenersLocked
+tags: [private]
 ```
 
 ```Go
@@ -20622,7 +21698,6 @@ func (s *Server) closeListenersLocked() error
 
 ```
 searchKey: http.Server.ListenAndServe
-tags: [exported]
 ```
 
 ```Go
@@ -20639,6 +21714,7 @@ ListenAndServe always returns a non-nil error. After Shutdown or Close, the retu
 
 ```
 searchKey: http.Server.shouldConfigureHTTP2ForServe
+tags: [private]
 ```
 
 ```Go
@@ -20651,7 +21727,6 @@ shouldDoServeHTTP2 reports whether Server.Serve should configure automatic HTTP/
 
 ```
 searchKey: http.Server.Serve
-tags: [exported]
 ```
 
 ```Go
@@ -20668,7 +21743,6 @@ Serve always returns a non-nil error and closes l. After Shutdown or Close, the 
 
 ```
 searchKey: http.Server.ServeTLS
-tags: [exported]
 ```
 
 ```Go
@@ -20685,6 +21759,7 @@ ServeTLS always returns a non-nil error. After Shutdown or Close, the returned e
 
 ```
 searchKey: http.Server.trackListener
+tags: [private]
 ```
 
 ```Go
@@ -20701,6 +21776,7 @@ It reports whether the server is still up (not Shutdown or Closed).
 
 ```
 searchKey: http.Server.trackConn
+tags: [private]
 ```
 
 ```Go
@@ -20711,6 +21787,7 @@ func (s *Server) trackConn(c *conn, add bool)
 
 ```
 searchKey: http.Server.idleTimeout
+tags: [private]
 ```
 
 ```Go
@@ -20721,6 +21798,7 @@ func (s *Server) idleTimeout() time.Duration
 
 ```
 searchKey: http.Server.readHeaderTimeout
+tags: [private]
 ```
 
 ```Go
@@ -20731,6 +21809,7 @@ func (s *Server) readHeaderTimeout() time.Duration
 
 ```
 searchKey: http.Server.doKeepAlives
+tags: [private]
 ```
 
 ```Go
@@ -20741,6 +21820,7 @@ func (s *Server) doKeepAlives() bool
 
 ```
 searchKey: http.Server.shuttingDown
+tags: [private]
 ```
 
 ```Go
@@ -20751,7 +21831,6 @@ func (s *Server) shuttingDown() bool
 
 ```
 searchKey: http.Server.SetKeepAlivesEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -20764,6 +21843,7 @@ SetKeepAlivesEnabled controls whether HTTP keep-alives are enabled. By default, 
 
 ```
 searchKey: http.Server.logf
+tags: [private]
 ```
 
 ```Go
@@ -20774,7 +21854,6 @@ func (s *Server) logf(format string, args ...interface{})
 
 ```
 searchKey: http.Server.ListenAndServeTLS
-tags: [exported]
 ```
 
 ```Go
@@ -20793,6 +21872,7 @@ ListenAndServeTLS always returns a non-nil error. After Shutdown or Close, the r
 
 ```
 searchKey: http.Server.setupHTTP2_ServeTLS
+tags: [private]
 ```
 
 ```Go
@@ -20805,6 +21885,7 @@ setupHTTP2_ServeTLS conditionally configures HTTP/2 on srv and reports whether t
 
 ```
 searchKey: http.Server.setupHTTP2_Serve
+tags: [private]
 ```
 
 ```Go
@@ -20819,6 +21900,7 @@ The tests named TestTransportAutomaticHTTP2* and TestConcurrentServerServe in se
 
 ```
 searchKey: http.Server.onceSetNextProtoDefaults_Serve
+tags: [private]
 ```
 
 ```Go
@@ -20829,6 +21911,7 @@ func (srv *Server) onceSetNextProtoDefaults_Serve()
 
 ```
 searchKey: http.Server.onceSetNextProtoDefaults
+tags: [private]
 ```
 
 ```Go
@@ -20841,6 +21924,7 @@ onceSetNextProtoDefaults configures HTTP/2, if the user hasn't configured otherw
 
 ```
 searchKey: http.Server.ExportAllConnsIdle
+tags: [private]
 ```
 
 ```Go
@@ -20851,6 +21935,7 @@ func (s *Server) ExportAllConnsIdle() bool
 
 ```
 searchKey: http.Server.ExportAllConnsByState
+tags: [private]
 ```
 
 ```Go
@@ -20861,7 +21946,6 @@ func (s *Server) ExportAllConnsByState() map[ConnState]int
 
 ```
 searchKey: http.ConnState
-tags: [exported]
 ```
 
 ```Go
@@ -20874,7 +21958,6 @@ A ConnState represents the state of a client connection to a server. It's used b
 
 ```
 searchKey: http.ConnState.String
-tags: [exported]
 ```
 
 ```Go
@@ -20885,6 +21968,7 @@ func (c ConnState) String() string
 
 ```
 searchKey: http.serverHandler
+tags: [private]
 ```
 
 ```Go
@@ -20899,6 +21983,7 @@ serverHandler delegates to either the server's Handler or DefaultServeMux and al
 
 ```
 searchKey: http.serverHandler.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -20909,6 +21994,7 @@ func (sh serverHandler) ServeHTTP(rw ResponseWriter, req *Request)
 
 ```
 searchKey: http.timeoutHandler
+tags: [private]
 ```
 
 ```Go
@@ -20927,6 +22013,7 @@ type timeoutHandler struct {
 
 ```
 searchKey: http.timeoutHandler.errorBody
+tags: [private]
 ```
 
 ```Go
@@ -20937,6 +22024,7 @@ func (h *timeoutHandler) errorBody() string
 
 ```
 searchKey: http.timeoutHandler.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -20947,6 +22035,7 @@ func (h *timeoutHandler) ServeHTTP(w ResponseWriter, r *Request)
 
 ```
 searchKey: http.timeoutWriter
+tags: [private]
 ```
 
 ```Go
@@ -20967,6 +22056,7 @@ type timeoutWriter struct {
 
 ```
 searchKey: http.timeoutWriter.Push
+tags: [private]
 ```
 
 ```Go
@@ -20979,6 +22069,7 @@ Push implements the Pusher interface.
 
 ```
 searchKey: http.timeoutWriter.Header
+tags: [private]
 ```
 
 ```Go
@@ -20989,6 +22080,7 @@ func (tw *timeoutWriter) Header() Header
 
 ```
 searchKey: http.timeoutWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -20999,6 +22091,7 @@ func (tw *timeoutWriter) Write(p []byte) (int, error)
 
 ```
 searchKey: http.timeoutWriter.writeHeaderLocked
+tags: [private]
 ```
 
 ```Go
@@ -21009,6 +22102,7 @@ func (tw *timeoutWriter) writeHeaderLocked(code int)
 
 ```
 searchKey: http.timeoutWriter.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -21019,6 +22113,7 @@ func (tw *timeoutWriter) WriteHeader(code int)
 
 ```
 searchKey: http.onceCloseListener
+tags: [private]
 ```
 
 ```Go
@@ -21035,6 +22130,7 @@ onceCloseListener wraps a net.Listener, protecting it from multiple Close calls.
 
 ```
 searchKey: http.onceCloseListener.Close
+tags: [private]
 ```
 
 ```Go
@@ -21045,6 +22141,7 @@ func (oc *onceCloseListener) Close() error
 
 ```
 searchKey: http.onceCloseListener.close
+tags: [private]
 ```
 
 ```Go
@@ -21055,6 +22152,7 @@ func (oc *onceCloseListener) close()
 
 ```
 searchKey: http.globalOptionsHandler
+tags: [private]
 ```
 
 ```Go
@@ -21067,6 +22165,7 @@ globalOptionsHandler responds to "OPTIONS *" requests.
 
 ```
 searchKey: http.globalOptionsHandler.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -21077,6 +22176,7 @@ func (globalOptionsHandler) ServeHTTP(w ResponseWriter, r *Request)
 
 ```
 searchKey: http.initALPNRequest
+tags: [private]
 ```
 
 ```Go
@@ -21093,6 +22193,7 @@ initALPNRequest is an HTTP handler that initializes certain uninitialized fields
 
 ```
 searchKey: http.initALPNRequest.BaseContext
+tags: [private]
 ```
 
 ```Go
@@ -21105,6 +22206,7 @@ BaseContext is an exported but unadvertised http.Handler method recognized by x/
 
 ```
 searchKey: http.initALPNRequest.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -21115,6 +22217,7 @@ func (h initALPNRequest) ServeHTTP(rw ResponseWriter, req *Request)
 
 ```
 searchKey: http.loggingConn
+tags: [private]
 ```
 
 ```Go
@@ -21130,6 +22233,7 @@ loggingConn is used for debugging.
 
 ```
 searchKey: http.loggingConn.Write
+tags: [private]
 ```
 
 ```Go
@@ -21140,6 +22244,7 @@ func (c *loggingConn) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.loggingConn.Read
+tags: [private]
 ```
 
 ```Go
@@ -21150,6 +22255,7 @@ func (c *loggingConn) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.loggingConn.Close
+tags: [private]
 ```
 
 ```Go
@@ -21160,6 +22266,7 @@ func (c *loggingConn) Close() (err error)
 
 ```
 searchKey: http.checkConnErrorWriter
+tags: [private]
 ```
 
 ```Go
@@ -21174,6 +22281,7 @@ checkConnErrorWriter writes to c.rwc and records any write errors to c.werr. It 
 
 ```
 searchKey: http.checkConnErrorWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -21184,6 +22292,7 @@ func (w checkConnErrorWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.sniffSig
+tags: [private]
 ```
 
 ```Go
@@ -21197,6 +22306,7 @@ type sniffSig interface {
 
 ```
 searchKey: http.exactSig
+tags: [private]
 ```
 
 ```Go
@@ -21210,6 +22320,7 @@ type exactSig struct {
 
 ```
 searchKey: http.exactSig.match
+tags: [private]
 ```
 
 ```Go
@@ -21220,6 +22331,7 @@ func (e *exactSig) match(data []byte, firstNonWS int) string
 
 ```
 searchKey: http.maskedSig
+tags: [private]
 ```
 
 ```Go
@@ -21234,6 +22346,7 @@ type maskedSig struct {
 
 ```
 searchKey: http.maskedSig.match
+tags: [private]
 ```
 
 ```Go
@@ -21244,6 +22357,7 @@ func (m *maskedSig) match(data []byte, firstNonWS int) string
 
 ```
 searchKey: http.htmlSig
+tags: [private]
 ```
 
 ```Go
@@ -21254,6 +22368,7 @@ type htmlSig []byte
 
 ```
 searchKey: http.htmlSig.match
+tags: [private]
 ```
 
 ```Go
@@ -21264,6 +22379,7 @@ func (h htmlSig) match(data []byte, firstNonWS int) string
 
 ```
 searchKey: http.mp4Sig
+tags: [private]
 ```
 
 ```Go
@@ -21274,6 +22390,7 @@ type mp4Sig struct{}
 
 ```
 searchKey: http.mp4Sig.match
+tags: [private]
 ```
 
 ```Go
@@ -21284,6 +22401,7 @@ func (mp4Sig) match(data []byte, firstNonWS int) string
 
 ```
 searchKey: http.textSig
+tags: [private]
 ```
 
 ```Go
@@ -21294,6 +22412,7 @@ type textSig struct{}
 
 ```
 searchKey: http.textSig.match
+tags: [private]
 ```
 
 ```Go
@@ -21304,6 +22423,7 @@ func (textSig) match(data []byte, firstNonWS int) string
 
 ```
 searchKey: http.socksCommand
+tags: [private]
 ```
 
 ```Go
@@ -21316,6 +22436,7 @@ A Command represents a SOCKS command.
 
 ```
 searchKey: http.socksCommand.String
+tags: [private]
 ```
 
 ```Go
@@ -21326,6 +22447,7 @@ func (cmd socksCommand) String() string
 
 ```
 searchKey: http.socksAuthMethod
+tags: [private]
 ```
 
 ```Go
@@ -21338,6 +22460,7 @@ An AuthMethod represents a SOCKS authentication method.
 
 ```
 searchKey: http.socksReply
+tags: [private]
 ```
 
 ```Go
@@ -21350,6 +22473,7 @@ A Reply represents a SOCKS command reply code.
 
 ```
 searchKey: http.socksReply.String
+tags: [private]
 ```
 
 ```Go
@@ -21360,6 +22484,7 @@ func (code socksReply) String() string
 
 ```
 searchKey: http.socksAddr
+tags: [private]
 ```
 
 ```Go
@@ -21376,6 +22501,7 @@ An Addr represents a SOCKS-specific address. Either Name or IP is used exclusive
 
 ```
 searchKey: http.socksAddr.Network
+tags: [private]
 ```
 
 ```Go
@@ -21386,6 +22512,7 @@ func (a *socksAddr) Network() string
 
 ```
 searchKey: http.socksAddr.String
+tags: [private]
 ```
 
 ```Go
@@ -21396,6 +22523,7 @@ func (a *socksAddr) String() string
 
 ```
 searchKey: http.socksConn
+tags: [private]
 ```
 
 ```Go
@@ -21412,6 +22540,7 @@ A Conn represents a forward proxy connection.
 
 ```
 searchKey: http.socksConn.BoundAddr
+tags: [private]
 ```
 
 ```Go
@@ -21424,6 +22553,7 @@ BoundAddr returns the address assigned by the proxy server for connecting to the
 
 ```
 searchKey: http.socksDialer
+tags: [private]
 ```
 
 ```Go
@@ -21454,6 +22584,7 @@ A Dialer holds SOCKS-specific options.
 
 ```
 searchKey: http.socksNewDialer
+tags: [private]
 ```
 
 ```Go
@@ -21466,6 +22597,7 @@ NewDialer returns a new Dialer that dials through the provided proxy server's ne
 
 ```
 searchKey: http.socksDialer.connect
+tags: [private]
 ```
 
 ```Go
@@ -21476,6 +22608,7 @@ func (d *socksDialer) connect(ctx context.Context, c net.Conn, address string) (
 
 ```
 searchKey: http.socksDialer.DialContext
+tags: [private]
 ```
 
 ```Go
@@ -21492,6 +22625,7 @@ See func Dial of the net package of standard library for a description of the ne
 
 ```
 searchKey: http.socksDialer.DialWithConn
+tags: [private]
 ```
 
 ```Go
@@ -21506,7 +22640,7 @@ It returns the connection's local address assigned by the SOCKS server.
 
 ```
 searchKey: http.socksDialer.Dial
-tags: [deprecated]
+tags: [private deprecated]
 ```
 
 ```Go
@@ -21523,6 +22657,7 @@ Deprecated: Use DialContext or DialWithConn instead.
 
 ```
 searchKey: http.socksDialer.validateTarget
+tags: [private]
 ```
 
 ```Go
@@ -21533,6 +22668,7 @@ func (d *socksDialer) validateTarget(network, address string) error
 
 ```
 searchKey: http.socksDialer.pathAddrs
+tags: [private]
 ```
 
 ```Go
@@ -21543,6 +22679,7 @@ func (d *socksDialer) pathAddrs(address string) (proxy, dst net.Addr, err error)
 
 ```
 searchKey: http.socksUsernamePassword
+tags: [private]
 ```
 
 ```Go
@@ -21558,6 +22695,7 @@ UsernamePassword are the credentials for the username/password authentication me
 
 ```
 searchKey: http.socksUsernamePassword.Authenticate
+tags: [private]
 ```
 
 ```Go
@@ -21570,6 +22708,7 @@ Authenticate authenticates a pair of username and password with the proxy server
 
 ```
 searchKey: http.errorReader
+tags: [private]
 ```
 
 ```Go
@@ -21582,6 +22721,7 @@ type errorReader struct {
 
 ```
 searchKey: http.errorReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -21592,6 +22732,7 @@ func (r errorReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.byteReader
+tags: [private]
 ```
 
 ```Go
@@ -21605,6 +22746,7 @@ type byteReader struct {
 
 ```
 searchKey: http.byteReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -21615,6 +22757,7 @@ func (br *byteReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.transferWriter
+tags: [private]
 ```
 
 ```Go
@@ -21642,6 +22785,7 @@ transferWriter inspects the fields of a user-supplied Request or Response, sanit
 
 ```
 searchKey: http.newTransferWriter
+tags: [private]
 ```
 
 ```Go
@@ -21652,6 +22796,7 @@ func newTransferWriter(r interface{}) (t *transferWriter, err error)
 
 ```
 searchKey: http.transferWriter.shouldSendChunkedRequestBody
+tags: [private]
 ```
 
 ```Go
@@ -21668,6 +22813,7 @@ This code tries to read a byte from the Request.Body in such cases to see whethe
 
 ```
 searchKey: http.transferWriter.probeRequestBody
+tags: [private]
 ```
 
 ```Go
@@ -21691,6 +22837,7 @@ In other words, this delay will not normally affect anybody, and there are worka
 
 ```
 searchKey: http.transferWriter.shouldSendContentLength
+tags: [private]
 ```
 
 ```Go
@@ -21701,6 +22848,7 @@ func (t *transferWriter) shouldSendContentLength() bool
 
 ```
 searchKey: http.transferWriter.writeHeader
+tags: [private]
 ```
 
 ```Go
@@ -21711,6 +22859,7 @@ func (t *transferWriter) writeHeader(w io.Writer, trace *httptrace.ClientTrace) 
 
 ```
 searchKey: http.transferWriter.writeBody
+tags: [private]
 ```
 
 ```Go
@@ -21723,6 +22872,7 @@ always closes t.BodyCloser
 
 ```
 searchKey: http.transferWriter.doBodyCopy
+tags: [private]
 ```
 
 ```Go
@@ -21737,6 +22887,7 @@ This function is only intended for use in writeBody.
 
 ```
 searchKey: http.transferWriter.unwrapBody
+tags: [private]
 ```
 
 ```Go
@@ -21751,6 +22902,7 @@ This function is only intended for use in writeBody.
 
 ```
 searchKey: http.transferReader
+tags: [private]
 ```
 
 ```Go
@@ -21774,6 +22926,7 @@ type transferReader struct {
 
 ```
 searchKey: http.transferReader.protoAtLeast
+tags: [private]
 ```
 
 ```Go
@@ -21784,6 +22937,7 @@ func (t *transferReader) protoAtLeast(m, n int) bool
 
 ```
 searchKey: http.transferReader.parseTransferEncoding
+tags: [private]
 ```
 
 ```Go
@@ -21796,6 +22950,7 @@ parseTransferEncoding sets t.Chunked based on the Transfer-Encoding header.
 
 ```
 searchKey: http.unsupportedTEError
+tags: [private]
 ```
 
 ```Go
@@ -21810,6 +22965,7 @@ unsupportedTEError reports unsupported transfer-encodings.
 
 ```
 searchKey: http.unsupportedTEError.Error
+tags: [private]
 ```
 
 ```Go
@@ -21820,6 +22976,7 @@ func (uste *unsupportedTEError) Error() string
 
 ```
 searchKey: http.body
+tags: [private]
 ```
 
 ```Go
@@ -21844,6 +23001,7 @@ body turns a Reader into a ReadCloser. Close ensures that the body has been full
 
 ```
 searchKey: http.body.Read
+tags: [private]
 ```
 
 ```Go
@@ -21854,6 +23012,7 @@ func (b *body) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.body.readLocked
+tags: [private]
 ```
 
 ```Go
@@ -21866,6 +23025,7 @@ Must hold b.mu.
 
 ```
 searchKey: http.body.readTrailer
+tags: [private]
 ```
 
 ```Go
@@ -21876,6 +23036,7 @@ func (b *body) readTrailer() error
 
 ```
 searchKey: http.body.unreadDataSizeLocked
+tags: [private]
 ```
 
 ```Go
@@ -21888,6 +23049,7 @@ unreadDataSizeLocked returns the number of bytes of unread input. It returns -1 
 
 ```
 searchKey: http.body.Close
+tags: [private]
 ```
 
 ```Go
@@ -21898,6 +23060,7 @@ func (b *body) Close() error
 
 ```
 searchKey: http.body.didEarlyClose
+tags: [private]
 ```
 
 ```Go
@@ -21908,6 +23071,7 @@ func (b *body) didEarlyClose() bool
 
 ```
 searchKey: http.body.bodyRemains
+tags: [private]
 ```
 
 ```Go
@@ -21920,6 +23084,7 @@ bodyRemains reports whether future Read calls might yield data.
 
 ```
 searchKey: http.body.registerOnHitEOF
+tags: [private]
 ```
 
 ```Go
@@ -21930,6 +23095,7 @@ func (b *body) registerOnHitEOF(fn func())
 
 ```
 searchKey: http.bodyLocked
+tags: [private]
 ```
 
 ```Go
@@ -21944,6 +23110,7 @@ bodyLocked is a io.Reader reading from a *body when its mutex is already held.
 
 ```
 searchKey: http.bodyLocked.Read
+tags: [private]
 ```
 
 ```Go
@@ -21954,6 +23121,7 @@ func (bl bodyLocked) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.finishAsyncByteRead
+tags: [private]
 ```
 
 ```Go
@@ -21968,6 +23136,7 @@ finishAsyncByteRead finishes reading the 1-byte sniff from the ContentLength==0,
 
 ```
 searchKey: http.finishAsyncByteRead.Read
+tags: [private]
 ```
 
 ```Go
@@ -21978,6 +23147,7 @@ func (fr finishAsyncByteRead) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.bufioFlushWriter
+tags: [private]
 ```
 
 ```Go
@@ -21990,6 +23160,7 @@ bufioFlushWriter is an io.Writer wrapper that flushes all writes on its wrapped 
 
 ```
 searchKey: http.bufioFlushWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -22000,7 +23171,6 @@ func (fw bufioFlushWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.Transport
-tags: [exported]
 ```
 
 ```Go
@@ -22214,7 +23384,6 @@ Transport only retries a request upon encountering a network error if the reques
 
 ```
 searchKey: http.Transport.RoundTrip
-tags: [exported]
 ```
 
 ```Go
@@ -22231,6 +23400,7 @@ Like the RoundTripper interface, the error types returned by RoundTrip are unspe
 
 ```
 searchKey: http.Transport.writeBufferSize
+tags: [private]
 ```
 
 ```Go
@@ -22241,6 +23411,7 @@ func (t *Transport) writeBufferSize() int
 
 ```
 searchKey: http.Transport.readBufferSize
+tags: [private]
 ```
 
 ```Go
@@ -22251,7 +23422,6 @@ func (t *Transport) readBufferSize() int
 
 ```
 searchKey: http.Transport.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -22264,6 +23434,7 @@ Clone returns a deep copy of t's exported fields.
 
 ```
 searchKey: http.Transport.hasCustomTLSDialer
+tags: [private]
 ```
 
 ```Go
@@ -22274,6 +23445,7 @@ func (t *Transport) hasCustomTLSDialer() bool
 
 ```
 searchKey: http.Transport.onceSetNextProtoDefaults
+tags: [private]
 ```
 
 ```Go
@@ -22286,6 +23458,7 @@ onceSetNextProtoDefaults initializes TLSNextProto. It must be called via t.nextP
 
 ```
 searchKey: http.Transport.useRegisteredProtocol
+tags: [private]
 ```
 
 ```Go
@@ -22298,6 +23471,7 @@ useRegisteredProtocol reports whether an alternate protocol (as registered with 
 
 ```
 searchKey: http.Transport.alternateRoundTripper
+tags: [private]
 ```
 
 ```Go
@@ -22310,6 +23484,7 @@ alternateRoundTripper returns the alternate RoundTripper to use for this request
 
 ```
 searchKey: http.Transport.roundTrip
+tags: [private]
 ```
 
 ```Go
@@ -22322,7 +23497,6 @@ roundTrip implements a RoundTripper over HTTP.
 
 ```
 searchKey: http.Transport.RegisterProtocol
-tags: [exported]
 ```
 
 ```Go
@@ -22339,7 +23513,6 @@ If rt.RoundTrip returns ErrSkipAltProtocol, the Transport will handle the RoundT
 
 ```
 searchKey: http.Transport.CloseIdleConnections
-tags: [exported]
 ```
 
 ```Go
@@ -22352,7 +23525,7 @@ CloseIdleConnections closes any connections which were previously connected from
 
 ```
 searchKey: http.Transport.CancelRequest
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -22367,6 +23540,7 @@ Deprecated: Use Request.WithContext to create a request with a cancelable contex
 
 ```
 searchKey: http.Transport.cancelRequest
+tags: [private]
 ```
 
 ```Go
@@ -22379,6 +23553,7 @@ Cancel an in-flight request, recording the error value. Returns whether the requ
 
 ```
 searchKey: http.Transport.connectMethodForRequest
+tags: [private]
 ```
 
 ```Go
@@ -22389,6 +23564,7 @@ func (t *Transport) connectMethodForRequest(treq *transportRequest) (cm connectM
 
 ```
 searchKey: http.Transport.putOrCloseIdleConn
+tags: [private]
 ```
 
 ```Go
@@ -22399,6 +23575,7 @@ func (t *Transport) putOrCloseIdleConn(pconn *persistConn)
 
 ```
 searchKey: http.Transport.maxIdleConnsPerHost
+tags: [private]
 ```
 
 ```Go
@@ -22409,6 +23586,7 @@ func (t *Transport) maxIdleConnsPerHost() int
 
 ```
 searchKey: http.Transport.tryPutIdleConn
+tags: [private]
 ```
 
 ```Go
@@ -22421,6 +23599,7 @@ tryPutIdleConn adds pconn to the list of idle persistent connections awaiting a 
 
 ```
 searchKey: http.Transport.queueForIdleConn
+tags: [private]
 ```
 
 ```Go
@@ -22433,6 +23612,7 @@ queueForIdleConn queues w to receive the next idle connection for w.cm. As an op
 
 ```
 searchKey: http.Transport.removeIdleConn
+tags: [private]
 ```
 
 ```Go
@@ -22445,6 +23625,7 @@ removeIdleConn marks pconn as dead.
 
 ```
 searchKey: http.Transport.removeIdleConnLocked
+tags: [private]
 ```
 
 ```Go
@@ -22457,6 +23638,7 @@ t.idleMu must be held.
 
 ```
 searchKey: http.Transport.setReqCanceler
+tags: [private]
 ```
 
 ```Go
@@ -22467,6 +23649,7 @@ func (t *Transport) setReqCanceler(key cancelKey, fn func(error))
 
 ```
 searchKey: http.Transport.replaceReqCanceler
+tags: [private]
 ```
 
 ```Go
@@ -22479,6 +23662,7 @@ replaceReqCanceler replaces an existing cancel function. If there is no cancel f
 
 ```
 searchKey: http.Transport.dial
+tags: [private]
 ```
 
 ```Go
@@ -22489,6 +23673,7 @@ func (t *Transport) dial(ctx context.Context, network, addr string) (net.Conn, e
 
 ```
 searchKey: http.Transport.customDialTLS
+tags: [private]
 ```
 
 ```Go
@@ -22499,6 +23684,7 @@ func (t *Transport) customDialTLS(ctx context.Context, network, addr string) (co
 
 ```
 searchKey: http.Transport.getConn
+tags: [private]
 ```
 
 ```Go
@@ -22511,6 +23697,7 @@ getConn dials and creates a new persistConn to the target as specified in the co
 
 ```
 searchKey: http.Transport.queueForDial
+tags: [private]
 ```
 
 ```Go
@@ -22523,6 +23710,7 @@ queueForDial queues w to wait for permission to begin dialing. Once w receives p
 
 ```
 searchKey: http.Transport.dialConnFor
+tags: [private]
 ```
 
 ```Go
@@ -22535,6 +23723,7 @@ dialConnFor dials on behalf of w and delivers the result to w. dialConnFor has r
 
 ```
 searchKey: http.Transport.decConnsPerHost
+tags: [private]
 ```
 
 ```Go
@@ -22547,6 +23736,7 @@ decConnsPerHost decrements the per-host connection count for key, which may in t
 
 ```
 searchKey: http.Transport.dialConn
+tags: [private]
 ```
 
 ```Go
@@ -22557,6 +23747,7 @@ func (t *Transport) dialConn(ctx context.Context, cm connectMethod) (pconn *pers
 
 ```
 searchKey: http.Transport.NumPendingRequestsForTesting
+tags: [private]
 ```
 
 ```Go
@@ -22567,6 +23758,7 @@ func (t *Transport) NumPendingRequestsForTesting() int
 
 ```
 searchKey: http.Transport.IdleConnKeysForTesting
+tags: [private]
 ```
 
 ```Go
@@ -22577,6 +23769,7 @@ func (t *Transport) IdleConnKeysForTesting() (keys []string)
 
 ```
 searchKey: http.Transport.IdleConnKeyCountForTesting
+tags: [private]
 ```
 
 ```Go
@@ -22587,6 +23780,7 @@ func (t *Transport) IdleConnKeyCountForTesting() int
 
 ```
 searchKey: http.Transport.IdleConnStrsForTesting
+tags: [private]
 ```
 
 ```Go
@@ -22597,6 +23791,7 @@ func (t *Transport) IdleConnStrsForTesting() []string
 
 ```
 searchKey: http.Transport.IdleConnStrsForTesting_h2
+tags: [private]
 ```
 
 ```Go
@@ -22607,6 +23802,7 @@ func (t *Transport) IdleConnStrsForTesting_h2() []string
 
 ```
 searchKey: http.Transport.IdleConnCountForTesting
+tags: [private]
 ```
 
 ```Go
@@ -22617,6 +23813,7 @@ func (t *Transport) IdleConnCountForTesting(scheme, addr string) int
 
 ```
 searchKey: http.Transport.IdleConnWaitMapSizeForTesting
+tags: [private]
 ```
 
 ```Go
@@ -22627,6 +23824,7 @@ func (t *Transport) IdleConnWaitMapSizeForTesting() int
 
 ```
 searchKey: http.Transport.IsIdleForTesting
+tags: [private]
 ```
 
 ```Go
@@ -22637,6 +23835,7 @@ func (t *Transport) IsIdleForTesting() bool
 
 ```
 searchKey: http.Transport.QueueForIdleConnForTesting
+tags: [private]
 ```
 
 ```Go
@@ -22647,6 +23846,7 @@ func (t *Transport) QueueForIdleConnForTesting()
 
 ```
 searchKey: http.Transport.PutIdleTestConn
+tags: [private]
 ```
 
 ```Go
@@ -22659,6 +23859,7 @@ PutIdleTestConn reports whether it was able to insert a fresh persistConn for sc
 
 ```
 searchKey: http.Transport.PutIdleTestConnH2
+tags: [private]
 ```
 
 ```Go
@@ -22671,6 +23872,7 @@ PutIdleTestConnH2 reports whether it was able to insert a fresh HTTP/2 persistCo
 
 ```
 searchKey: http.cancelKey
+tags: [private]
 ```
 
 ```Go
@@ -22685,6 +23887,7 @@ A cancelKey is the key of the reqCanceler map. We wrap the *Request in this type
 
 ```
 searchKey: http.h2Transport
+tags: [private]
 ```
 
 ```Go
@@ -22701,6 +23904,7 @@ We name it with the "h2" prefix to stay out of the "http2" prefix namespace used
 
 ```
 searchKey: http.transportRequest
+tags: [private]
 ```
 
 ```Go
@@ -22721,6 +23925,7 @@ transportRequest is a wrapper around a *Request that adds optional extra headers
 
 ```
 searchKey: http.transportRequest.extraHeaders
+tags: [private]
 ```
 
 ```Go
@@ -22731,6 +23936,7 @@ func (tr *transportRequest) extraHeaders() Header
 
 ```
 searchKey: http.transportRequest.setError
+tags: [private]
 ```
 
 ```Go
@@ -22741,6 +23947,7 @@ func (tr *transportRequest) setError(err error)
 
 ```
 searchKey: http.transportRequest.logf
+tags: [private]
 ```
 
 ```Go
@@ -22751,6 +23958,7 @@ func (tr *transportRequest) logf(format string, args ...interface{})
 
 ```
 searchKey: http.readTrackingBody
+tags: [private]
 ```
 
 ```Go
@@ -22765,6 +23973,7 @@ type readTrackingBody struct {
 
 ```
 searchKey: http.readTrackingBody.Read
+tags: [private]
 ```
 
 ```Go
@@ -22775,6 +23984,7 @@ func (r *readTrackingBody) Read(data []byte) (int, error)
 
 ```
 searchKey: http.readTrackingBody.Close
+tags: [private]
 ```
 
 ```Go
@@ -22785,6 +23995,7 @@ func (r *readTrackingBody) Close() error
 
 ```
 searchKey: http.transportReadFromServerError
+tags: [private]
 ```
 
 ```Go
@@ -22799,6 +24010,7 @@ transportReadFromServerError is used by Transport.readLoop when the 1 byte peek 
 
 ```
 searchKey: http.transportReadFromServerError.Unwrap
+tags: [private]
 ```
 
 ```Go
@@ -22809,6 +24021,7 @@ func (e transportReadFromServerError) Unwrap() error
 
 ```
 searchKey: http.transportReadFromServerError.Error
+tags: [private]
 ```
 
 ```Go
@@ -22819,6 +24032,7 @@ func (e transportReadFromServerError) Error() string
 
 ```
 searchKey: http.wantConn
+tags: [private]
 ```
 
 ```Go
@@ -22846,6 +24060,7 @@ A wantConn records state about a wanted connection (that is, an active call to g
 
 ```
 searchKey: http.wantConn.waiting
+tags: [private]
 ```
 
 ```Go
@@ -22858,6 +24073,7 @@ waiting reports whether w is still waiting for an answer (connection or error).
 
 ```
 searchKey: http.wantConn.tryDeliver
+tags: [private]
 ```
 
 ```Go
@@ -22870,6 +24086,7 @@ tryDeliver attempts to deliver pc, err to w and reports whether it succeeded.
 
 ```
 searchKey: http.wantConn.cancel
+tags: [private]
 ```
 
 ```Go
@@ -22882,6 +24099,7 @@ cancel marks w as no longer wanting a result (for example, due to cancellation).
 
 ```
 searchKey: http.wantConnQueue
+tags: [private]
 ```
 
 ```Go
@@ -22908,6 +24126,7 @@ A wantConnQueue is a queue of wantConns.
 
 ```
 searchKey: http.wantConnQueue.len
+tags: [private]
 ```
 
 ```Go
@@ -22920,6 +24139,7 @@ len returns the number of items in the queue.
 
 ```
 searchKey: http.wantConnQueue.pushBack
+tags: [private]
 ```
 
 ```Go
@@ -22932,6 +24152,7 @@ pushBack adds w to the back of the queue.
 
 ```
 searchKey: http.wantConnQueue.popFront
+tags: [private]
 ```
 
 ```Go
@@ -22944,6 +24165,7 @@ popFront removes and returns the wantConn at the front of the queue.
 
 ```
 searchKey: http.wantConnQueue.peekFront
+tags: [private]
 ```
 
 ```Go
@@ -22956,6 +24178,7 @@ peekFront returns the wantConn at the front of the queue without removing it.
 
 ```
 searchKey: http.wantConnQueue.cleanFront
+tags: [private]
 ```
 
 ```Go
@@ -22968,6 +24191,7 @@ cleanFront pops any wantConns that are no longer waiting from the head of the qu
 
 ```
 searchKey: http.erringRoundTripper
+tags: [private]
 ```
 
 ```Go
@@ -22980,6 +24204,7 @@ type erringRoundTripper interface {
 
 ```
 searchKey: http.persistConnWriter
+tags: [private]
 ```
 
 ```Go
@@ -22994,6 +24219,7 @@ persistConnWriter is the io.Writer written to by pc.bw. It accumulates the numbe
 
 ```
 searchKey: http.persistConnWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -23004,6 +24230,7 @@ func (w persistConnWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.persistConnWriter.ReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -23016,6 +24243,7 @@ ReadFrom exposes persistConnWriter's underlying Conn to io.Copy and if the Conn 
 
 ```
 searchKey: http.connectMethod
+tags: [private]
 ```
 
 ```Go
@@ -23053,6 +24281,7 @@ socks5://proxy.com|https|foo.com  socks5 to proxy, then https to foo.com
 
 ```
 searchKey: http.connectMethod.proxyAuth
+tags: [private]
 ```
 
 ```Go
@@ -23065,6 +24294,7 @@ proxyAuth returns the Proxy-Authorization header to set on requests, if applicab
 
 ```
 searchKey: http.connectMethod.key
+tags: [private]
 ```
 
 ```Go
@@ -23075,6 +24305,7 @@ func (cm *connectMethod) key() connectMethodKey
 
 ```
 searchKey: http.connectMethod.scheme
+tags: [private]
 ```
 
 ```Go
@@ -23087,6 +24318,7 @@ scheme returns the first hop scheme: http, https, or socks5
 
 ```
 searchKey: http.connectMethod.addr
+tags: [private]
 ```
 
 ```Go
@@ -23099,6 +24331,7 @@ addr returns the first hop "host:port" to which we need to TCP connect.
 
 ```
 searchKey: http.connectMethod.tlsHost
+tags: [private]
 ```
 
 ```Go
@@ -23111,6 +24344,7 @@ tlsHost returns the host name to match against the peer's TLS certificate.
 
 ```
 searchKey: http.connectMethodKey
+tags: [private]
 ```
 
 ```Go
@@ -23126,6 +24360,7 @@ connectMethodKey is the map key version of connectMethod, with a stringified pro
 
 ```
 searchKey: http.connectMethodKey.String
+tags: [private]
 ```
 
 ```Go
@@ -23136,6 +24371,7 @@ func (k connectMethodKey) String() string
 
 ```
 searchKey: http.persistConn
+tags: [private]
 ```
 
 ```Go
@@ -23189,6 +24425,7 @@ persistConn wraps a connection, usually a persistent one (but may be used for no
 
 ```
 searchKey: http.persistConn.shouldRetryRequest
+tags: [private]
 ```
 
 ```Go
@@ -23201,6 +24438,7 @@ shouldRetryRequest reports whether we should retry sending a failed HTTP request
 
 ```
 searchKey: http.persistConn.addTLS
+tags: [private]
 ```
 
 ```Go
@@ -23213,6 +24451,7 @@ Add TLS to a persistent connection, i.e. negotiate a TLS session. If pconn is al
 
 ```
 searchKey: http.persistConn.maxHeaderResponseSize
+tags: [private]
 ```
 
 ```Go
@@ -23223,6 +24462,7 @@ func (pc *persistConn) maxHeaderResponseSize() int64
 
 ```
 searchKey: http.persistConn.Read
+tags: [private]
 ```
 
 ```Go
@@ -23233,6 +24473,7 @@ func (pc *persistConn) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.persistConn.isBroken
+tags: [private]
 ```
 
 ```Go
@@ -23245,6 +24486,7 @@ isBroken reports whether this connection is in a known broken state.
 
 ```
 searchKey: http.persistConn.canceled
+tags: [private]
 ```
 
 ```Go
@@ -23257,6 +24499,7 @@ canceled returns non-nil if the connection was closed due to CancelRequest or du
 
 ```
 searchKey: http.persistConn.isReused
+tags: [private]
 ```
 
 ```Go
@@ -23269,6 +24512,7 @@ isReused reports whether this connection has been used before.
 
 ```
 searchKey: http.persistConn.gotIdleConnTrace
+tags: [private]
 ```
 
 ```Go
@@ -23279,6 +24523,7 @@ func (pc *persistConn) gotIdleConnTrace(idleAt time.Time) (t httptrace.GotConnIn
 
 ```
 searchKey: http.persistConn.cancelRequest
+tags: [private]
 ```
 
 ```Go
@@ -23289,6 +24534,7 @@ func (pc *persistConn) cancelRequest(err error)
 
 ```
 searchKey: http.persistConn.closeConnIfStillIdle
+tags: [private]
 ```
 
 ```Go
@@ -23301,6 +24547,7 @@ closeConnIfStillIdle closes the connection if it's still sitting idle. This is w
 
 ```
 searchKey: http.persistConn.mapRoundTripError
+tags: [private]
 ```
 
 ```Go
@@ -23317,6 +24564,7 @@ The startBytesWritten value should be the value of pc.nwrite before the roundTri
 
 ```
 searchKey: http.persistConn.readLoop
+tags: [private]
 ```
 
 ```Go
@@ -23327,6 +24575,7 @@ func (pc *persistConn) readLoop()
 
 ```
 searchKey: http.persistConn.readLoopPeekFailLocked
+tags: [private]
 ```
 
 ```Go
@@ -23337,6 +24586,7 @@ func (pc *persistConn) readLoopPeekFailLocked(peekErr error)
 
 ```
 searchKey: http.persistConn.readResponse
+tags: [private]
 ```
 
 ```Go
@@ -23349,6 +24599,7 @@ readResponse reads an HTTP response (or two, in the case of "Expect: 100-continu
 
 ```
 searchKey: http.persistConn.waitForContinue
+tags: [private]
 ```
 
 ```Go
@@ -23361,6 +24612,7 @@ waitForContinue returns the function to block until any response, timeout or con
 
 ```
 searchKey: http.persistConn.writeLoop
+tags: [private]
 ```
 
 ```Go
@@ -23371,6 +24623,7 @@ func (pc *persistConn) writeLoop()
 
 ```
 searchKey: http.persistConn.wroteRequest
+tags: [private]
 ```
 
 ```Go
@@ -23383,6 +24636,7 @@ wroteRequest is a check before recycling a connection that the previous write (f
 
 ```
 searchKey: http.persistConn.roundTrip
+tags: [private]
 ```
 
 ```Go
@@ -23393,6 +24647,7 @@ func (pc *persistConn) roundTrip(req *transportRequest) (resp *Response, err err
 
 ```
 searchKey: http.persistConn.markReused
+tags: [private]
 ```
 
 ```Go
@@ -23405,6 +24660,7 @@ markReused marks this connection as having been successfully used for a request 
 
 ```
 searchKey: http.persistConn.close
+tags: [private]
 ```
 
 ```Go
@@ -23419,6 +24675,7 @@ The provided err is only for testing and debugging; in normal circumstances it s
 
 ```
 searchKey: http.persistConn.closeLocked
+tags: [private]
 ```
 
 ```Go
@@ -23429,6 +24686,7 @@ func (pc *persistConn) closeLocked(err error)
 
 ```
 searchKey: http.readWriteCloserBody
+tags: [private]
 ```
 
 ```Go
@@ -23445,6 +24703,7 @@ readWriteCloserBody is the Response.Body type used when we want to give users wr
 
 ```
 searchKey: http.readWriteCloserBody.Read
+tags: [private]
 ```
 
 ```Go
@@ -23455,6 +24714,7 @@ func (b *readWriteCloserBody) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.nothingWrittenError
+tags: [private]
 ```
 
 ```Go
@@ -23469,6 +24729,7 @@ nothingWrittenError wraps a write errors which ended up writing zero bytes.
 
 ```
 searchKey: http.responseAndError
+tags: [private]
 ```
 
 ```Go
@@ -23485,6 +24746,7 @@ responseAndError is how the goroutine reading from an HTTP/1 server communicates
 
 ```
 searchKey: http.requestAndChan
+tags: [private]
 ```
 
 ```Go
@@ -23513,6 +24775,7 @@ type requestAndChan struct {
 
 ```
 searchKey: http.writeRequest
+tags: [private]
 ```
 
 ```Go
@@ -23533,6 +24796,7 @@ A writeRequest is sent by the readLoop's goroutine to the writeLoop's goroutine 
 
 ```
 searchKey: http.httpError
+tags: [private]
 ```
 
 ```Go
@@ -23546,6 +24810,7 @@ type httpError struct {
 
 ```
 searchKey: http.httpError.Error
+tags: [private]
 ```
 
 ```Go
@@ -23556,6 +24821,7 @@ func (e *httpError) Error() string
 
 ```
 searchKey: http.httpError.Timeout
+tags: [private]
 ```
 
 ```Go
@@ -23566,6 +24832,7 @@ func (e *httpError) Timeout() bool
 
 ```
 searchKey: http.httpError.Temporary
+tags: [private]
 ```
 
 ```Go
@@ -23576,6 +24843,7 @@ func (e *httpError) Temporary() bool
 
 ```
 searchKey: http.tLogKey
+tags: [private]
 ```
 
 ```Go
@@ -23588,6 +24856,7 @@ tLogKey is a context WithValue key for test debugging contexts containing a t.Lo
 
 ```
 searchKey: http.bodyEOFSignal
+tags: [private]
 ```
 
 ```Go
@@ -23611,6 +24880,7 @@ If earlyCloseFn is non-nil and Close is called before io.EOF is seen, earlyClose
 
 ```
 searchKey: http.bodyEOFSignal.Read
+tags: [private]
 ```
 
 ```Go
@@ -23621,6 +24891,7 @@ func (es *bodyEOFSignal) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.bodyEOFSignal.Close
+tags: [private]
 ```
 
 ```Go
@@ -23631,6 +24902,7 @@ func (es *bodyEOFSignal) Close() error
 
 ```
 searchKey: http.bodyEOFSignal.condfn
+tags: [private]
 ```
 
 ```Go
@@ -23643,6 +24915,7 @@ caller must hold es.mu.
 
 ```
 searchKey: http.gzipReader
+tags: [private]
 ```
 
 ```Go
@@ -23660,6 +24933,7 @@ gzipReader wraps a response body so it can lazily call gzip.NewReader on the fir
 
 ```
 searchKey: http.gzipReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -23670,6 +24944,7 @@ func (gz *gzipReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.gzipReader.Close
+tags: [private]
 ```
 
 ```Go
@@ -23680,6 +24955,7 @@ func (gz *gzipReader) Close() error
 
 ```
 searchKey: http.tlsHandshakeTimeoutError
+tags: [private]
 ```
 
 ```Go
@@ -23690,6 +24966,7 @@ type tlsHandshakeTimeoutError struct{}
 
 ```
 searchKey: http.tlsHandshakeTimeoutError.Timeout
+tags: [private]
 ```
 
 ```Go
@@ -23700,6 +24977,7 @@ func (tlsHandshakeTimeoutError) Timeout() bool
 
 ```
 searchKey: http.tlsHandshakeTimeoutError.Temporary
+tags: [private]
 ```
 
 ```Go
@@ -23710,6 +24988,7 @@ func (tlsHandshakeTimeoutError) Temporary() bool
 
 ```
 searchKey: http.tlsHandshakeTimeoutError.Error
+tags: [private]
 ```
 
 ```Go
@@ -23720,6 +24999,7 @@ func (tlsHandshakeTimeoutError) Error() string
 
 ```
 searchKey: http.fakeLocker
+tags: [private]
 ```
 
 ```Go
@@ -23732,6 +25012,7 @@ fakeLocker is a sync.Locker which does nothing. It's used to guard test-only fie
 
 ```
 searchKey: http.fakeLocker.Lock
+tags: [private]
 ```
 
 ```Go
@@ -23742,6 +25023,7 @@ func (fakeLocker) Lock()
 
 ```
 searchKey: http.fakeLocker.Unlock
+tags: [private]
 ```
 
 ```Go
@@ -23752,6 +25034,7 @@ func (fakeLocker) Unlock()
 
 ```
 searchKey: http.connLRU
+tags: [private]
 ```
 
 ```Go
@@ -23765,6 +25048,7 @@ type connLRU struct {
 
 ```
 searchKey: http.connLRU.add
+tags: [private]
 ```
 
 ```Go
@@ -23777,6 +25061,7 @@ add adds pc to the head of the linked list.
 
 ```
 searchKey: http.connLRU.removeOldest
+tags: [private]
 ```
 
 ```Go
@@ -23787,6 +25072,7 @@ func (cl *connLRU) removeOldest() *persistConn
 
 ```
 searchKey: http.connLRU.remove
+tags: [private]
 ```
 
 ```Go
@@ -23799,6 +25085,7 @@ remove removes pc from cl.
 
 ```
 searchKey: http.connLRU.len
+tags: [private]
 ```
 
 ```Go
@@ -23811,6 +25098,7 @@ len returns the number of items in the cache.
 
 ```
 searchKey: http.headerOnlyResponseWriter
+tags: [private]
 ```
 
 ```Go
@@ -23821,6 +25109,7 @@ type headerOnlyResponseWriter Header
 
 ```
 searchKey: http.headerOnlyResponseWriter.Header
+tags: [private]
 ```
 
 ```Go
@@ -23831,6 +25120,7 @@ func (ho headerOnlyResponseWriter) Header() Header
 
 ```
 searchKey: http.headerOnlyResponseWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -23841,6 +25131,7 @@ func (ho headerOnlyResponseWriter) Write([]byte) (int, error)
 
 ```
 searchKey: http.headerOnlyResponseWriter.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -23851,6 +25142,7 @@ func (ho headerOnlyResponseWriter) WriteHeader(int)
 
 ```
 searchKey: http.hasTokenTest
+tags: [private]
 ```
 
 ```Go
@@ -23865,6 +25157,7 @@ type hasTokenTest struct {
 
 ```
 searchKey: http.reqTest
+tags: [private]
 ```
 
 ```Go
@@ -23881,6 +25174,7 @@ type reqTest struct {
 
 ```
 searchKey: http.reqWriteTest
+tags: [private]
 ```
 
 ```Go
@@ -23900,6 +25194,7 @@ type reqWriteTest struct {
 
 ```
 searchKey: http.closeChecker
+tags: [private]
 ```
 
 ```Go
@@ -23913,6 +25208,7 @@ type closeChecker struct {
 
 ```
 searchKey: http.closeChecker.Close
+tags: [private]
 ```
 
 ```Go
@@ -23923,6 +25219,7 @@ func (rc *closeChecker) Close() error
 
 ```
 searchKey: http.writerFunc
+tags: [private]
 ```
 
 ```Go
@@ -23933,6 +25230,7 @@ type writerFunc func([]byte) (int, error)
 
 ```
 searchKey: http.writerFunc.Write
+tags: [private]
 ```
 
 ```Go
@@ -23943,6 +25241,7 @@ func (f writerFunc) Write(p []byte) (int, error)
 
 ```
 searchKey: http.delegateReader
+tags: [private]
 ```
 
 ```Go
@@ -23958,6 +25257,7 @@ delegateReader is a reader that delegates to another reader, once it arrives on 
 
 ```
 searchKey: http.delegateReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -23968,6 +25268,7 @@ func (r *delegateReader) Read(p []byte) (int, error)
 
 ```
 searchKey: http.dumpConn
+tags: [private]
 ```
 
 ```Go
@@ -23983,6 +25284,7 @@ dumpConn is a net.Conn that writes to Writer and reads from Reader.
 
 ```
 searchKey: http.dumpConn.Close
+tags: [private]
 ```
 
 ```Go
@@ -23993,6 +25295,7 @@ func (c *dumpConn) Close() error
 
 ```
 searchKey: http.dumpConn.LocalAddr
+tags: [private]
 ```
 
 ```Go
@@ -24003,6 +25306,7 @@ func (c *dumpConn) LocalAddr() net.Addr
 
 ```
 searchKey: http.dumpConn.RemoteAddr
+tags: [private]
 ```
 
 ```Go
@@ -24013,6 +25317,7 @@ func (c *dumpConn) RemoteAddr() net.Addr
 
 ```
 searchKey: http.dumpConn.SetDeadline
+tags: [private]
 ```
 
 ```Go
@@ -24023,6 +25328,7 @@ func (c *dumpConn) SetDeadline(t time.Time) error
 
 ```
 searchKey: http.dumpConn.SetReadDeadline
+tags: [private]
 ```
 
 ```Go
@@ -24033,6 +25339,7 @@ func (c *dumpConn) SetReadDeadline(t time.Time) error
 
 ```
 searchKey: http.dumpConn.SetWriteDeadline
+tags: [private]
 ```
 
 ```Go
@@ -24043,6 +25350,7 @@ func (c *dumpConn) SetWriteDeadline(t time.Time) error
 
 ```
 searchKey: http.respTest
+tags: [private]
 ```
 
 ```Go
@@ -24057,6 +25365,7 @@ type respTest struct {
 
 ```
 searchKey: http.readerAndCloser
+tags: [private]
 ```
 
 ```Go
@@ -24070,6 +25379,7 @@ type readerAndCloser struct {
 
 ```
 searchKey: http.responseLocationTest
+tags: [private]
 ```
 
 ```Go
@@ -24085,6 +25395,7 @@ type responseLocationTest struct {
 
 ```
 searchKey: http.respWriteTest
+tags: [private]
 ```
 
 ```Go
@@ -24098,6 +25409,7 @@ type respWriteTest struct {
 
 ```
 searchKey: http.mockTransferWriter
+tags: [private]
 ```
 
 ```Go
@@ -24111,6 +25423,7 @@ type mockTransferWriter struct {
 
 ```
 searchKey: http.mockTransferWriter.ReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -24121,6 +25434,7 @@ func (w *mockTransferWriter) ReadFrom(r io.Reader) (int64, error)
 
 ```
 searchKey: http.mockTransferWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -24131,6 +25445,7 @@ func (w *mockTransferWriter) Write(p []byte) (int, error)
 
 ```
 searchKey: http.issue22091Error
+tags: [private]
 ```
 
 ```Go
@@ -24143,6 +25458,7 @@ issue22091Error acts like a golang.org/x/net/http2.ErrNoCachedConn.
 
 ```
 searchKey: http.issue22091Error.IsHTTP2NoCachedConnError
+tags: [private]
 ```
 
 ```Go
@@ -24153,6 +25469,7 @@ func (issue22091Error) IsHTTP2NoCachedConnError()
 
 ```
 searchKey: http.issue22091Error.Error
+tags: [private]
 ```
 
 ```Go
@@ -24163,6 +25480,7 @@ func (issue22091Error) Error() string
 
 ```
 searchKey: http.roundTripFunc
+tags: [private]
 ```
 
 ```Go
@@ -24173,6 +25491,7 @@ type roundTripFunc func(r *Request) (*Response, error)
 
 ```
 searchKey: http.roundTripFunc.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -24181,14 +25500,11 @@ func (f roundTripFunc) RoundTrip(r *Request) (*Response, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="refererForURL" href="#refererForURL">func refererForURL(lastReq, newReq *url.URL) string</a>
 
 ```
 searchKey: http.refererForURL
+tags: [private]
 ```
 
 ```Go
@@ -24201,6 +25517,7 @@ refererForURL returns a referer without any authentication info or an empty stri
 
 ```
 searchKey: http.timeBeforeContextDeadline
+tags: [private]
 ```
 
 ```Go
@@ -24213,6 +25530,7 @@ timeBeforeContextDeadline reports whether the non-zero Time t is before ctx's de
 
 ```
 searchKey: http.knownRoundTripperImpl
+tags: [private]
 ```
 
 ```Go
@@ -24225,6 +25543,7 @@ knownRoundTripperImpl reports whether rt is a RoundTripper that's maintained by 
 
 ```
 searchKey: http.setRequestCancel
+tags: [private]
 ```
 
 ```Go
@@ -24239,6 +25558,7 @@ As background, there are three ways to cancel a request: First was Transport.Can
 
 ```
 searchKey: http.basicAuth
+tags: [private]
 ```
 
 ```Go
@@ -24251,6 +25571,7 @@ See 2 (end of page 4) [https://www.ietf.org/rfc/rfc2617.txt](https://www.ietf.or
 
 ```
 searchKey: http.alwaysFalse
+tags: [private]
 ```
 
 ```Go
@@ -24261,6 +25582,7 @@ func alwaysFalse() bool
 
 ```
 searchKey: http.redirectBehavior
+tags: [private]
 ```
 
 ```Go
@@ -24273,6 +25595,7 @@ redirectBehavior describes what should happen when the client encounters a 3xx s
 
 ```
 searchKey: http.urlErrorOp
+tags: [private]
 ```
 
 ```Go
@@ -24285,6 +25608,7 @@ urlErrorOp returns the (*url.Error).Op value to use for the provided (*Request).
 
 ```
 searchKey: http.defaultCheckRedirect
+tags: [private]
 ```
 
 ```Go
@@ -24295,6 +25619,7 @@ func defaultCheckRedirect(req *Request, via []*Request) error
 
 ```
 searchKey: http.shouldCopyHeaderOnRedirect
+tags: [private]
 ```
 
 ```Go
@@ -24305,6 +25630,7 @@ func shouldCopyHeaderOnRedirect(headerKey string, initial, dest *url.URL) bool
 
 ```
 searchKey: http.isDomainOrSubdomain
+tags: [private]
 ```
 
 ```Go
@@ -24319,6 +25645,7 @@ Both domains must already be in canonical form.
 
 ```
 searchKey: http.stripPassword
+tags: [private]
 ```
 
 ```Go
@@ -24329,6 +25656,7 @@ func stripPassword(u *url.URL) string
 
 ```
 searchKey: http.cloneURLValues
+tags: [private]
 ```
 
 ```Go
@@ -24339,6 +25667,7 @@ func cloneURLValues(v url.Values) url.Values
 
 ```
 searchKey: http.cloneURL
+tags: [private]
 ```
 
 ```Go
@@ -24349,6 +25678,7 @@ func cloneURL(u *url.URL) *url.URL
 
 ```
 searchKey: http.cloneMultipartForm
+tags: [private]
 ```
 
 ```Go
@@ -24359,6 +25689,7 @@ func cloneMultipartForm(f *multipart.Form) *multipart.Form
 
 ```
 searchKey: http.cloneMultipartFileHeader
+tags: [private]
 ```
 
 ```Go
@@ -24369,6 +25700,7 @@ func cloneMultipartFileHeader(fh *multipart.FileHeader) *multipart.FileHeader
 
 ```
 searchKey: http.readSetCookies
+tags: [private]
 ```
 
 ```Go
@@ -24381,7 +25713,6 @@ readSetCookies parses all "Set-Cookie" values from the header h and returns the 
 
 ```
 searchKey: http.SetCookie
-tags: [exported]
 ```
 
 ```Go
@@ -24394,6 +25725,7 @@ SetCookie adds a Set-Cookie header to the provided ResponseWriter's headers. The
 
 ```
 searchKey: http.readCookies
+tags: [private]
 ```
 
 ```Go
@@ -24408,6 +25740,7 @@ if filter isn't empty, only cookies of that name are returned
 
 ```
 searchKey: http.validCookieDomain
+tags: [private]
 ```
 
 ```Go
@@ -24420,6 +25753,7 @@ validCookieDomain reports whether v is a valid cookie domain-value.
 
 ```
 searchKey: http.validCookieExpires
+tags: [private]
 ```
 
 ```Go
@@ -24432,6 +25766,7 @@ validCookieExpires reports whether v is a valid cookie expires-value.
 
 ```
 searchKey: http.isCookieDomainName
+tags: [private]
 ```
 
 ```Go
@@ -24444,6 +25779,7 @@ isCookieDomainName reports whether s is a valid domain name or a valid domain na
 
 ```
 searchKey: http.sanitizeCookieName
+tags: [private]
 ```
 
 ```Go
@@ -24454,6 +25790,7 @@ func sanitizeCookieName(n string) string
 
 ```
 searchKey: http.sanitizeCookieValue
+tags: [private]
 ```
 
 ```Go
@@ -24474,6 +25811,7 @@ We loosen this as spaces and commas are common in cookie values but we produce a
 
 ```
 searchKey: http.validCookieValueByte
+tags: [private]
 ```
 
 ```Go
@@ -24484,6 +25822,7 @@ func validCookieValueByte(b byte) bool
 
 ```
 searchKey: http.sanitizeCookiePath
+tags: [private]
 ```
 
 ```Go
@@ -24496,6 +25835,7 @@ path-av           = "Path=" path-value path-value        = <any CHAR except CTLs
 
 ```
 searchKey: http.validCookiePathByte
+tags: [private]
 ```
 
 ```Go
@@ -24506,6 +25846,7 @@ func validCookiePathByte(b byte) bool
 
 ```
 searchKey: http.sanitizeOrWarn
+tags: [private]
 ```
 
 ```Go
@@ -24516,6 +25857,7 @@ func sanitizeOrWarn(fieldName string, valid func(byte) bool, v string) string
 
 ```
 searchKey: http.parseCookieValue
+tags: [private]
 ```
 
 ```Go
@@ -24526,6 +25868,7 @@ func parseCookieValue(raw string, allowDoubleQuote bool) (string, bool)
 
 ```
 searchKey: http.isCookieNameValid
+tags: [private]
 ```
 
 ```Go
@@ -24536,6 +25879,7 @@ func isCookieNameValid(raw string) bool
 
 ```
 searchKey: http.mapDirOpenError
+tags: [private]
 ```
 
 ```Go
@@ -24548,6 +25892,7 @@ mapDirOpenError maps the provided non-nil error from opening name to a possibly 
 
 ```
 searchKey: http.dirList
+tags: [private]
 ```
 
 ```Go
@@ -24558,7 +25903,6 @@ func dirList(w ResponseWriter, r *Request, f File)
 
 ```
 searchKey: http.ServeContent
-tags: [exported]
 ```
 
 ```Go
@@ -24581,6 +25925,7 @@ Note that *os.File implements the io.ReadSeeker interface.
 
 ```
 searchKey: http.serveContent
+tags: [private]
 ```
 
 ```Go
@@ -24593,6 +25938,7 @@ if name is empty, filename is unknown. (used for mime type, before sniffing) if 
 
 ```
 searchKey: http.scanETag
+tags: [private]
 ```
 
 ```Go
@@ -24605,6 +25951,7 @@ scanETag determines if a syntactically valid ETag is present at s. If so, the ET
 
 ```
 searchKey: http.etagStrongMatch
+tags: [private]
 ```
 
 ```Go
@@ -24617,6 +25964,7 @@ etagStrongMatch reports whether a and b match using strong ETag comparison. Assu
 
 ```
 searchKey: http.etagWeakMatch
+tags: [private]
 ```
 
 ```Go
@@ -24629,6 +25977,7 @@ etagWeakMatch reports whether a and b match using weak ETag comparison. Assumes 
 
 ```
 searchKey: http.isZeroTime
+tags: [private]
 ```
 
 ```Go
@@ -24641,6 +25990,7 @@ isZeroTime reports whether t is obviously unspecified (either zero or Unix()=0).
 
 ```
 searchKey: http.setLastModified
+tags: [private]
 ```
 
 ```Go
@@ -24651,6 +26001,7 @@ func setLastModified(w ResponseWriter, modtime time.Time)
 
 ```
 searchKey: http.writeNotModified
+tags: [private]
 ```
 
 ```Go
@@ -24661,6 +26012,7 @@ func writeNotModified(w ResponseWriter)
 
 ```
 searchKey: http.checkPreconditions
+tags: [private]
 ```
 
 ```Go
@@ -24673,6 +26025,7 @@ checkPreconditions evaluates request preconditions and reports whether a precond
 
 ```
 searchKey: http.serveFile
+tags: [private]
 ```
 
 ```Go
@@ -24685,6 +26038,7 @@ name is '/'-separated, not filepath.Separator.
 
 ```
 searchKey: http.toHTTPError
+tags: [private]
 ```
 
 ```Go
@@ -24697,6 +26051,7 @@ toHTTPError returns a non-specific HTTP error message and status code for a give
 
 ```
 searchKey: http.localRedirect
+tags: [private]
 ```
 
 ```Go
@@ -24709,7 +26064,6 @@ localRedirect gives a Moved Permanently response. It does not convert relative p
 
 ```
 searchKey: http.ServeFile
-tags: [exported]
 ```
 
 ```Go
@@ -24730,6 +26084,7 @@ Outside of those two special cases, ServeFile does not use r.URL.Path for select
 
 ```
 searchKey: http.containsDotDot
+tags: [private]
 ```
 
 ```Go
@@ -24740,6 +26095,7 @@ func containsDotDot(v string) bool
 
 ```
 searchKey: http.isSlashRune
+tags: [private]
 ```
 
 ```Go
@@ -24750,6 +26106,7 @@ func isSlashRune(r rune) bool
 
 ```
 searchKey: http.parseRange
+tags: [private]
 ```
 
 ```Go
@@ -24762,6 +26119,7 @@ parseRange parses a Range header string as per RFC 7233. errNoOverlap is returne
 
 ```
 searchKey: http.rangesMIMESize
+tags: [private]
 ```
 
 ```Go
@@ -24774,6 +26132,7 @@ rangesMIMESize returns the number of bytes it takes to encode the provided range
 
 ```
 searchKey: http.sumRangesSize
+tags: [private]
 ```
 
 ```Go
@@ -24784,6 +26143,7 @@ func sumRangesSize(ranges []httpRange) (size int64)
 
 ```
 searchKey: http.http2asciiEqualFold
+tags: [private]
 ```
 
 ```Go
@@ -24796,6 +26156,7 @@ asciiEqualFold is strings.EqualFold, ASCII only. It reports whether s and t are 
 
 ```
 searchKey: http.http2lower
+tags: [private]
 ```
 
 ```Go
@@ -24808,6 +26169,7 @@ lower returns the ASCII lowercase version of b.
 
 ```
 searchKey: http.http2isASCIIPrint
+tags: [private]
 ```
 
 ```Go
@@ -24820,6 +26182,7 @@ isASCIIPrint returns whether s is ASCII and printable according to [https://tool
 
 ```
 searchKey: http.http2asciiToLower
+tags: [private]
 ```
 
 ```Go
@@ -24832,6 +26195,7 @@ asciiToLower returns the lowercase version of s if s is ASCII and printable, and
 
 ```
 searchKey: http.http2isBadCipher
+tags: [private]
 ```
 
 ```Go
@@ -24844,6 +26208,7 @@ isBadCipher reports whether the cipher is blacklisted by the HTTP/2 spec. Refere
 
 ```
 searchKey: http.http2filterOutClientConn
+tags: [private]
 ```
 
 ```Go
@@ -24854,6 +26219,7 @@ func http2filterOutClientConn(in []*http2ClientConn, exclude *http2ClientConn) [
 
 ```
 searchKey: http.http2shouldRetryDial
+tags: [private]
 ```
 
 ```Go
@@ -24866,6 +26232,7 @@ shouldRetryDial reports whether the current request should retry dialing after t
 
 ```
 searchKey: http.http2getDataBufferChunk
+tags: [private]
 ```
 
 ```Go
@@ -24876,6 +26243,7 @@ func http2getDataBufferChunk(size int64) []byte
 
 ```
 searchKey: http.http2putDataBufferChunk
+tags: [private]
 ```
 
 ```Go
@@ -24886,6 +26254,7 @@ func http2putDataBufferChunk(p []byte)
 
 ```
 searchKey: http.http2terminalReadFrameError
+tags: [private]
 ```
 
 ```Go
@@ -24898,6 +26267,7 @@ terminalReadFrameError reports whether err is an unrecoverable error from ReadFr
 
 ```
 searchKey: http.http2validStreamIDOrZero
+tags: [private]
 ```
 
 ```Go
@@ -24908,6 +26278,7 @@ func http2validStreamIDOrZero(streamID uint32) bool
 
 ```
 searchKey: http.http2validStreamID
+tags: [private]
 ```
 
 ```Go
@@ -24918,6 +26289,7 @@ func http2validStreamID(streamID uint32) bool
 
 ```
 searchKey: http.http2readByte
+tags: [private]
 ```
 
 ```Go
@@ -24928,6 +26300,7 @@ func http2readByte(p []byte) (remain []byte, b byte, err error)
 
 ```
 searchKey: http.http2readUint32
+tags: [private]
 ```
 
 ```Go
@@ -24938,6 +26311,7 @@ func http2readUint32(p []byte) (remain []byte, v uint32, err error)
 
 ```
 searchKey: http.http2summarizeFrame
+tags: [private]
 ```
 
 ```Go
@@ -24948,6 +26322,7 @@ func http2summarizeFrame(f http2Frame) string
 
 ```
 searchKey: http.http2traceHasWroteHeaderField
+tags: [private]
 ```
 
 ```Go
@@ -24958,6 +26333,7 @@ func http2traceHasWroteHeaderField(trace *httptrace.ClientTrace) bool
 
 ```
 searchKey: http.http2traceWroteHeaderField
+tags: [private]
 ```
 
 ```Go
@@ -24968,6 +26344,7 @@ func http2traceWroteHeaderField(trace *httptrace.ClientTrace, k, v string)
 
 ```
 searchKey: http.http2traceGot1xxResponseFunc
+tags: [private]
 ```
 
 ```Go
@@ -24978,6 +26355,7 @@ func http2traceGot1xxResponseFunc(trace *httptrace.ClientTrace) func(int, textpr
 
 ```
 searchKey: http.http2curGoroutineID
+tags: [private]
 ```
 
 ```Go
@@ -24988,6 +26366,7 @@ func http2curGoroutineID() uint64
 
 ```
 searchKey: http.http2parseUintBytes
+tags: [private]
 ```
 
 ```Go
@@ -25000,6 +26379,7 @@ parseUintBytes is like strconv.ParseUint, but using a []byte.
 
 ```
 searchKey: http.http2cutoff64
+tags: [private]
 ```
 
 ```Go
@@ -25012,6 +26392,7 @@ Return the first number n such that n*base >= 1<<64.
 
 ```
 searchKey: http.http2buildCommonHeaderMapsOnce
+tags: [private]
 ```
 
 ```Go
@@ -25022,6 +26403,7 @@ func http2buildCommonHeaderMapsOnce()
 
 ```
 searchKey: http.http2buildCommonHeaderMaps
+tags: [private]
 ```
 
 ```Go
@@ -25032,16 +26414,18 @@ func http2buildCommonHeaderMaps()
 
 ```
 searchKey: http.http2lowerHeader
+tags: [private]
 ```
 
 ```Go
 func http2lowerHeader(v string) (lower string, ascii bool)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.h2_bundle.go" href="#init.h2_bundle.go">func init()</a>
 
 ```
 searchKey: http.init
+tags: [private]
 ```
 
 ```Go
@@ -25052,6 +26436,7 @@ func init()
 
 ```
 searchKey: http.http2validWireHeaderFieldName
+tags: [private]
 ```
 
 ```Go
@@ -25073,6 +26458,7 @@ lowercase prior to their encoding in HTTP/2. "
 
 ```
 searchKey: http.http2httpCodeString
+tags: [private]
 ```
 
 ```Go
@@ -25083,6 +26469,7 @@ func http2httpCodeString(code int) string
 
 ```
 searchKey: http.http2mustUint31
+tags: [private]
 ```
 
 ```Go
@@ -25093,6 +26480,7 @@ func http2mustUint31(v int32) uint32
 
 ```
 searchKey: http.http2bodyAllowedForStatus
+tags: [private]
 ```
 
 ```Go
@@ -25105,6 +26493,7 @@ bodyAllowedForStatus reports whether a given response status code permits a body
 
 ```
 searchKey: http.http2validPseudoPath
+tags: [private]
 ```
 
 ```Go
@@ -25126,6 +26515,7 @@ We used to enforce that the path also didn't start with "//", but Google's GFE a
 
 ```
 searchKey: http.http2ConfigureServer
+tags: [private]
 ```
 
 ```Go
@@ -25142,6 +26532,7 @@ ConfigureServer must be called before s begins serving.
 
 ```
 searchKey: http.http2serverConnBaseContext
+tags: [private]
 ```
 
 ```Go
@@ -25152,6 +26543,7 @@ func http2serverConnBaseContext(c net.Conn, opts *http2ServeConnOpts) (ctx conte
 
 ```
 searchKey: http.http2errno
+tags: [private]
 ```
 
 ```Go
@@ -25166,6 +26558,7 @@ TODO: remove this helper function once http2 can use build tags. See comment in 
 
 ```
 searchKey: http.http2isClosedConnError
+tags: [private]
 ```
 
 ```Go
@@ -25178,6 +26571,7 @@ isClosedConnError reports whether err is an error from use of a closed network c
 
 ```
 searchKey: http.http2checkPriority
+tags: [private]
 ```
 
 ```Go
@@ -25188,6 +26582,7 @@ func http2checkPriority(streamID uint32, p http2PriorityParam) error
 
 ```
 searchKey: http.http2handleHeaderListTooLong
+tags: [private]
 ```
 
 ```Go
@@ -25198,6 +26593,7 @@ func http2handleHeaderListTooLong(w ResponseWriter, r *Request)
 
 ```
 searchKey: http.http2checkWriteHeaderCode
+tags: [private]
 ```
 
 ```Go
@@ -25210,6 +26606,7 @@ checkWriteHeaderCode is a copy of net/http's checkWriteHeaderCode.
 
 ```
 searchKey: http.http2foreachHeaderElement
+tags: [private]
 ```
 
 ```Go
@@ -25222,6 +26619,7 @@ foreachHeaderElement splits v according to the "#rule" construction in RFC 7230 
 
 ```
 searchKey: http.http2checkValidHTTP2RequestHeaders
+tags: [private]
 ```
 
 ```Go
@@ -25234,6 +26632,7 @@ checkValidHTTP2RequestHeaders checks whether h is a valid HTTP/2 request, per RF
 
 ```
 searchKey: http.http2h1ServerKeepAlivesDisabled
+tags: [private]
 ```
 
 ```Go
@@ -25246,6 +26645,7 @@ h1ServerKeepAlivesDisabled reports whether hs has its keep-alives disabled. See 
 
 ```
 searchKey: http.http2ConfigureTransport
+tags: [private]
 ```
 
 ```Go
@@ -25260,6 +26660,7 @@ Use ConfigureTransports instead to configure the HTTP/2 Transport.
 
 ```
 searchKey: http.http2awaitRequestCancel
+tags: [private]
 ```
 
 ```Go
@@ -25272,6 +26673,7 @@ awaitRequestCancel waits for the user to cancel a request or for the done channe
 
 ```
 searchKey: http.http2isNoCachedConnError
+tags: [private]
 ```
 
 ```Go
@@ -25284,6 +26686,7 @@ isNoCachedConnError reports whether err is of type noCachedConnError or its equi
 
 ```
 searchKey: http.http2authorityAddr
+tags: [private]
 ```
 
 ```Go
@@ -25296,6 +26699,7 @@ authorityAddr returns a given authority (a host/IP, or host:port / ip:port) and 
 
 ```
 searchKey: http.http2canRetryError
+tags: [private]
 ```
 
 ```Go
@@ -25306,6 +26710,7 @@ func http2canRetryError(err error) bool
 
 ```
 searchKey: http.http2commaSeparatedTrailers
+tags: [private]
 ```
 
 ```Go
@@ -25316,6 +26721,7 @@ func http2commaSeparatedTrailers(req *Request) (string, error)
 
 ```
 searchKey: http.http2checkConnHeaders
+tags: [private]
 ```
 
 ```Go
@@ -25328,6 +26734,7 @@ checkConnHeaders checks whether req has any invalid connection-level headers. pe
 
 ```
 searchKey: http.http2actualContentLength
+tags: [private]
 ```
 
 ```Go
@@ -25340,6 +26747,7 @@ actualContentLength returns a sanitized version of req.ContentLength, where 0 ac
 
 ```
 searchKey: http.http2shouldSendReqContentLength
+tags: [private]
 ```
 
 ```Go
@@ -25352,6 +26760,7 @@ shouldSendReqContentLength reports whether the http2.Transport should send a "co
 
 ```
 searchKey: http.http2isEOFOrNetReadError
+tags: [private]
 ```
 
 ```Go
@@ -25362,6 +26771,7 @@ func http2isEOFOrNetReadError(err error) bool
 
 ```
 searchKey: http.http2strSliceContains
+tags: [private]
 ```
 
 ```Go
@@ -25372,6 +26782,7 @@ func http2strSliceContains(ss []string, s string) bool
 
 ```
 searchKey: http.http2isConnectionCloseRequest
+tags: [private]
 ```
 
 ```Go
@@ -25384,6 +26795,7 @@ isConnectionCloseRequest reports whether req should use its own connection for a
 
 ```
 searchKey: http.http2registerHTTPSProtocol
+tags: [private]
 ```
 
 ```Go
@@ -25396,6 +26808,7 @@ registerHTTPSProtocol calls Transport.RegisterProtocol but converting panics int
 
 ```
 searchKey: http.http2traceGetConn
+tags: [private]
 ```
 
 ```Go
@@ -25406,6 +26819,7 @@ func http2traceGetConn(req *Request, hostPort string)
 
 ```
 searchKey: http.http2traceGotConn
+tags: [private]
 ```
 
 ```Go
@@ -25416,6 +26830,7 @@ func http2traceGotConn(req *Request, cc *http2ClientConn, reused bool)
 
 ```
 searchKey: http.http2traceWroteHeaders
+tags: [private]
 ```
 
 ```Go
@@ -25426,6 +26841,7 @@ func http2traceWroteHeaders(trace *httptrace.ClientTrace)
 
 ```
 searchKey: http.http2traceGot100Continue
+tags: [private]
 ```
 
 ```Go
@@ -25436,6 +26852,7 @@ func http2traceGot100Continue(trace *httptrace.ClientTrace)
 
 ```
 searchKey: http.http2traceWait100Continue
+tags: [private]
 ```
 
 ```Go
@@ -25446,6 +26863,7 @@ func http2traceWait100Continue(trace *httptrace.ClientTrace)
 
 ```
 searchKey: http.http2traceWroteRequest
+tags: [private]
 ```
 
 ```Go
@@ -25456,6 +26874,7 @@ func http2traceWroteRequest(trace *httptrace.ClientTrace, err error)
 
 ```
 searchKey: http.http2traceFirstResponseByte
+tags: [private]
 ```
 
 ```Go
@@ -25466,6 +26885,7 @@ func http2traceFirstResponseByte(trace *httptrace.ClientTrace)
 
 ```
 searchKey: http.http2writeEndsStream
+tags: [private]
 ```
 
 ```Go
@@ -25478,6 +26898,7 @@ writeEndsStream reports whether w writes a frame that will transition the stream
 
 ```
 searchKey: http.http2splitHeaderBlock
+tags: [private]
 ```
 
 ```Go
@@ -25490,6 +26911,7 @@ splitHeaderBlock splits headerBlock into fragments so that each fragment fits in
 
 ```
 searchKey: http.http2encKV
+tags: [private]
 ```
 
 ```Go
@@ -25500,6 +26922,7 @@ func http2encKV(enc *hpack.Encoder, k, v string)
 
 ```
 searchKey: http.http2encodeHeaders
+tags: [private]
 ```
 
 ```Go
@@ -25512,7 +26935,6 @@ encodeHeaders encodes an http.Header. If keys is not nil, then (k, h[k]) is enco
 
 ```
 searchKey: http.ParseTime
-tags: [exported]
 ```
 
 ```Go
@@ -25525,7 +26947,6 @@ ParseTime parses a time header (such as the Date: header), trying each of the th
 
 ```
 searchKey: http.CanonicalHeaderKey
-tags: [exported]
 ```
 
 ```Go
@@ -25538,6 +26959,7 @@ CanonicalHeaderKey returns the canonical format of the header key s. The canonic
 
 ```
 searchKey: http.hasToken
+tags: [private]
 ```
 
 ```Go
@@ -25550,6 +26972,7 @@ hasToken reports whether token appears with v, ASCII case-insensitive, with spac
 
 ```
 searchKey: http.isTokenBoundary
+tags: [private]
 ```
 
 ```Go
@@ -25560,6 +26983,7 @@ func isTokenBoundary(b byte) bool
 
 ```
 searchKey: http.hasPort
+tags: [private]
 ```
 
 ```Go
@@ -25572,6 +26996,7 @@ Given a string of the form "host", "host:port", or "[ipv6::address]:port", retur
 
 ```
 searchKey: http.removeEmptyPort
+tags: [private]
 ```
 
 ```Go
@@ -25584,6 +27009,7 @@ removeEmptyPort strips the empty port in ":port" to "" as mandated by RFC 3986 S
 
 ```
 searchKey: http.isNotToken
+tags: [private]
 ```
 
 ```Go
@@ -25594,6 +27020,7 @@ func isNotToken(r rune) bool
 
 ```
 searchKey: http.stringContainsCTLByte
+tags: [private]
 ```
 
 ```Go
@@ -25606,6 +27033,7 @@ stringContainsCTLByte reports whether s contains any ASCII control character.
 
 ```
 searchKey: http.hexEscapeNonASCII
+tags: [private]
 ```
 
 ```Go
@@ -25616,6 +27044,7 @@ func hexEscapeNonASCII(s string) string
 
 ```
 searchKey: http.badStringError
+tags: [private]
 ```
 
 ```Go
@@ -25626,6 +27055,7 @@ func badStringError(what, val string) error
 
 ```
 searchKey: http.valueOrDefault
+tags: [private]
 ```
 
 ```Go
@@ -25638,6 +27068,7 @@ Return value if nonempty, def otherwise.
 
 ```
 searchKey: http.idnaASCII
+tags: [private]
 ```
 
 ```Go
@@ -25648,6 +27079,7 @@ func idnaASCII(v string) (string, error)
 
 ```
 searchKey: http.cleanHost
+tags: [private]
 ```
 
 ```Go
@@ -25672,6 +27104,7 @@ But practically, what we are trying to avoid is the situation in issue 11206, wh
 
 ```
 searchKey: http.removeZone
+tags: [private]
 ```
 
 ```Go
@@ -25684,7 +27117,6 @@ removeZone removes IPv6 zone identifier from host. E.g., "[fe80::1%en0]:8080" to
 
 ```
 searchKey: http.ParseHTTPVersion
-tags: [exported]
 ```
 
 ```Go
@@ -25697,6 +27129,7 @@ ParseHTTPVersion parses an HTTP version string. "HTTP/1.0" returns (1, 0, true).
 
 ```
 searchKey: http.validMethod
+tags: [private]
 ```
 
 ```Go
@@ -25707,6 +27140,7 @@ func validMethod(method string) bool
 
 ```
 searchKey: http.parseBasicAuth
+tags: [private]
 ```
 
 ```Go
@@ -25719,6 +27153,7 @@ parseBasicAuth parses an HTTP Basic Authentication string. "Basic QWxhZGRpbjpvcG
 
 ```
 searchKey: http.parseRequestLine
+tags: [private]
 ```
 
 ```Go
@@ -25731,6 +27166,7 @@ parseRequestLine parses "GET /foo HTTP/1.1" into its three parts.
 
 ```
 searchKey: http.newTextprotoReader
+tags: [private]
 ```
 
 ```Go
@@ -25741,6 +27177,7 @@ func newTextprotoReader(br *bufio.Reader) *textproto.Reader
 
 ```
 searchKey: http.putTextprotoReader
+tags: [private]
 ```
 
 ```Go
@@ -25751,7 +27188,6 @@ func putTextprotoReader(r *textproto.Reader)
 
 ```
 searchKey: http.MaxBytesReader
-tags: [exported]
 ```
 
 ```Go
@@ -25766,6 +27202,7 @@ MaxBytesReader prevents clients from accidentally or maliciously sending a large
 
 ```
 searchKey: http.copyValues
+tags: [private]
 ```
 
 ```Go
@@ -25776,6 +27213,7 @@ func copyValues(dst, src url.Values)
 
 ```
 searchKey: http.parsePostForm
+tags: [private]
 ```
 
 ```Go
@@ -25786,6 +27224,7 @@ func parsePostForm(r *Request) (vs url.Values, err error)
 
 ```
 searchKey: http.requestMethodUsuallyLacksBody
+tags: [private]
 ```
 
 ```Go
@@ -25798,6 +27237,7 @@ requestMethodUsuallyLacksBody reports whether the given request method is one th
 
 ```
 searchKey: http.fixPragmaCacheControl
+tags: [private]
 ```
 
 ```Go
@@ -25820,6 +27260,7 @@ Cache-Control: no-cache
 
 ```
 searchKey: http.isProtocolSwitchResponse
+tags: [private]
 ```
 
 ```Go
@@ -25832,6 +27273,7 @@ isProtocolSwitchResponse reports whether the response code and response header i
 
 ```
 searchKey: http.isProtocolSwitchHeader
+tags: [private]
 ```
 
 ```Go
@@ -25844,6 +27286,7 @@ isProtocolSwitchHeader reports whether the request or response header is for a p
 
 ```
 searchKey: http.bufioWriterPool
+tags: [private]
 ```
 
 ```Go
@@ -25854,6 +27297,7 @@ func bufioWriterPool(size int) *sync.Pool
 
 ```
 searchKey: http.newBufioReader
+tags: [private]
 ```
 
 ```Go
@@ -25864,6 +27308,7 @@ func newBufioReader(r io.Reader) *bufio.Reader
 
 ```
 searchKey: http.putBufioReader
+tags: [private]
 ```
 
 ```Go
@@ -25874,6 +27319,7 @@ func putBufioReader(br *bufio.Reader)
 
 ```
 searchKey: http.newBufioWriterSize
+tags: [private]
 ```
 
 ```Go
@@ -25884,6 +27330,7 @@ func newBufioWriterSize(w io.Writer, size int) *bufio.Writer
 
 ```
 searchKey: http.putBufioWriter
+tags: [private]
 ```
 
 ```Go
@@ -25894,6 +27341,7 @@ func putBufioWriter(bw *bufio.Writer)
 
 ```
 searchKey: http.appendTime
+tags: [private]
 ```
 
 ```Go
@@ -25906,6 +27354,7 @@ appendTime is a non-allocating version of []byte(t.UTC().Format(TimeFormat))
 
 ```
 searchKey: http.http1ServerSupportsRequest
+tags: [private]
 ```
 
 ```Go
@@ -25918,6 +27367,7 @@ http1ServerSupportsRequest reports whether Go's HTTP/1.x server supports the giv
 
 ```
 searchKey: http.checkWriteHeaderCode
+tags: [private]
 ```
 
 ```Go
@@ -25928,6 +27378,7 @@ func checkWriteHeaderCode(code int)
 
 ```
 searchKey: http.relevantCaller
+tags: [private]
 ```
 
 ```Go
@@ -25940,6 +27391,7 @@ relevantCaller searches the call stack for the first function outside of net/htt
 
 ```
 searchKey: http.foreachHeaderElement
+tags: [private]
 ```
 
 ```Go
@@ -25952,6 +27404,7 @@ foreachHeaderElement splits v according to the "#rule" construction in RFC 7230 
 
 ```
 searchKey: http.writeStatusLine
+tags: [private]
 ```
 
 ```Go
@@ -25964,6 +27417,7 @@ writeStatusLine writes an HTTP/1.x Status-Line (RFC 7230 Section 3.1.2) to bw. i
 
 ```
 searchKey: http.validNextProto
+tags: [private]
 ```
 
 ```Go
@@ -25976,6 +27430,7 @@ validNextProto reports whether the proto is a valid ALPN protocol name. Everythi
 
 ```
 searchKey: http.badRequestError
+tags: [private]
 ```
 
 ```Go
@@ -25988,6 +27443,7 @@ badRequestError is a literal string (used by in the server in HTML, unescaped) t
 
 ```
 searchKey: http.isCommonNetReadError
+tags: [private]
 ```
 
 ```Go
@@ -26000,6 +27456,7 @@ isCommonNetReadError reports whether err is a common error encountered during re
 
 ```
 searchKey: http.registerOnHitEOF
+tags: [private]
 ```
 
 ```Go
@@ -26010,6 +27467,7 @@ func registerOnHitEOF(rc io.ReadCloser, fn func())
 
 ```
 searchKey: http.requestBodyRemains
+tags: [private]
 ```
 
 ```Go
@@ -26022,7 +27480,6 @@ requestBodyRemains reports whether future calls to Read on rc might yield more d
 
 ```
 searchKey: http.Error
-tags: [exported]
 ```
 
 ```Go
@@ -26035,7 +27492,6 @@ Error replies to the request with the specified error message and HTTP code. It 
 
 ```
 searchKey: http.NotFound
-tags: [exported]
 ```
 
 ```Go
@@ -26048,7 +27504,6 @@ NotFound replies to the request with an HTTP 404 not found error.
 
 ```
 searchKey: http.Redirect
-tags: [exported]
 ```
 
 ```Go
@@ -26065,6 +27520,7 @@ If the Content-Type header has not been set, Redirect sets it to "text/html; cha
 
 ```
 searchKey: http.htmlEscape
+tags: [private]
 ```
 
 ```Go
@@ -26075,6 +27531,7 @@ func htmlEscape(s string) string
 
 ```
 searchKey: http.cleanPath
+tags: [private]
 ```
 
 ```Go
@@ -26087,6 +27544,7 @@ cleanPath returns the canonical path for p, eliminating . and .. elements.
 
 ```
 searchKey: http.stripHostPort
+tags: [private]
 ```
 
 ```Go
@@ -26099,6 +27557,7 @@ stripHostPort returns h without any trailing ":<port>".
 
 ```
 searchKey: http.appendSorted
+tags: [private]
 ```
 
 ```Go
@@ -26109,7 +27568,6 @@ func appendSorted(es []muxEntry, e muxEntry) []muxEntry
 
 ```
 searchKey: http.Handle
-tags: [exported]
 ```
 
 ```Go
@@ -26122,7 +27580,6 @@ Handle registers the handler for the given pattern in the DefaultServeMux. The d
 
 ```
 searchKey: http.HandleFunc
-tags: [exported]
 ```
 
 ```Go
@@ -26135,7 +27592,6 @@ HandleFunc registers the handler function for the given pattern in the DefaultSe
 
 ```
 searchKey: http.Serve
-tags: [exported]
 ```
 
 ```Go
@@ -26154,7 +27610,6 @@ Serve always returns a non-nil error.
 
 ```
 searchKey: http.ServeTLS
-tags: [exported]
 ```
 
 ```Go
@@ -26173,6 +27628,7 @@ ServeTLS always returns a non-nil error.
 
 ```
 searchKey: http.logf
+tags: [private]
 ```
 
 ```Go
@@ -26185,7 +27641,6 @@ logf prints to the ErrorLog of the *Server associated with request r via ServerC
 
 ```
 searchKey: http.ListenAndServe
-tags: [exported]
 ```
 
 ```Go
@@ -26202,7 +27657,6 @@ ListenAndServe always returns a non-nil error.
 
 ```
 searchKey: http.ListenAndServeTLS
-tags: [exported]
 ```
 
 ```Go
@@ -26215,6 +27669,7 @@ ListenAndServeTLS acts identically to ListenAndServe, except that it expects HTT
 
 ```
 searchKey: http.newLoggingConn
+tags: [private]
 ```
 
 ```Go
@@ -26225,6 +27680,7 @@ func newLoggingConn(baseName string, c net.Conn) net.Conn
 
 ```
 searchKey: http.numLeadingCRorLF
+tags: [private]
 ```
 
 ```Go
@@ -26235,6 +27691,7 @@ func numLeadingCRorLF(v []byte) (n int)
 
 ```
 searchKey: http.strSliceContains
+tags: [private]
 ```
 
 ```Go
@@ -26245,6 +27702,7 @@ func strSliceContains(ss []string, s string) bool
 
 ```
 searchKey: http.tlsRecordHeaderLooksLikeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -26257,7 +27715,6 @@ tlsRecordHeaderLooksLikeHTTP reports whether a TLS record header looks like it m
 
 ```
 searchKey: http.DetectContentType
-tags: [exported]
 ```
 
 ```Go
@@ -26270,6 +27727,7 @@ DetectContentType implements the algorithm described at [https://mimesniff.spec.
 
 ```
 searchKey: http.isWS
+tags: [private]
 ```
 
 ```Go
@@ -26282,6 +27740,7 @@ isWS reports whether the provided byte is a whitespace byte (0xWS) as defined in
 
 ```
 searchKey: http.isTT
+tags: [private]
 ```
 
 ```Go
@@ -26294,6 +27753,7 @@ isTT reports whether the provided byte is a tag-terminating byte (0xTT) as defin
 
 ```
 searchKey: http.sockssplitHostPort
+tags: [private]
 ```
 
 ```Go
@@ -26304,7 +27764,6 @@ func sockssplitHostPort(address string) (string, int, error)
 
 ```
 searchKey: http.StatusText
-tags: [exported]
 ```
 
 ```Go
@@ -26317,6 +27776,7 @@ StatusText returns a text for the HTTP status code. It returns the empty string 
 
 ```
 searchKey: http.noResponseBodyExpected
+tags: [private]
 ```
 
 ```Go
@@ -26327,6 +27787,7 @@ func noResponseBodyExpected(requestMethod string) bool
 
 ```
 searchKey: http.bodyAllowedForStatus
+tags: [private]
 ```
 
 ```Go
@@ -26339,6 +27800,7 @@ bodyAllowedForStatus reports whether a given response status code permits a body
 
 ```
 searchKey: http.suppressedHeaders
+tags: [private]
 ```
 
 ```Go
@@ -26349,6 +27811,7 @@ func suppressedHeaders(status int) []string
 
 ```
 searchKey: http.readTransfer
+tags: [private]
 ```
 
 ```Go
@@ -26361,6 +27824,7 @@ msg is *Request or *Response.
 
 ```
 searchKey: http.chunked
+tags: [private]
 ```
 
 ```Go
@@ -26373,6 +27837,7 @@ Checks whether chunked is part of the encodings stack
 
 ```
 searchKey: http.isIdentity
+tags: [private]
 ```
 
 ```Go
@@ -26385,6 +27850,7 @@ Checks whether the encoding is explicitly "identity".
 
 ```
 searchKey: http.isUnsupportedTEError
+tags: [private]
 ```
 
 ```Go
@@ -26397,6 +27863,7 @@ isUnsupportedTEError checks if the error is of type unsupportedTEError. It is us
 
 ```
 searchKey: http.fixLength
+tags: [private]
 ```
 
 ```Go
@@ -26409,6 +27876,7 @@ Determine the expected body length, using RFC 7230 Section 3.3. This function is
 
 ```
 searchKey: http.shouldClose
+tags: [private]
 ```
 
 ```Go
@@ -26421,6 +27889,7 @@ Determine whether to hang up after sending a request and body, or receiving a re
 
 ```
 searchKey: http.seeUpcomingDoubleCRLF
+tags: [private]
 ```
 
 ```Go
@@ -26431,6 +27900,7 @@ func seeUpcomingDoubleCRLF(r *bufio.Reader) bool
 
 ```
 searchKey: http.mergeSetHeader
+tags: [private]
 ```
 
 ```Go
@@ -26441,6 +27911,7 @@ func mergeSetHeader(dst *Header, src Header)
 
 ```
 searchKey: http.parseContentLength
+tags: [private]
 ```
 
 ```Go
@@ -26453,6 +27924,7 @@ parseContentLength trims whitespace from s and returns -1 if no value is set, or
 
 ```
 searchKey: http.isKnownInMemoryReader
+tags: [private]
 ```
 
 ```Go
@@ -26465,7 +27937,6 @@ isKnownInMemoryReader reports whether r is a type known to not block on Read. It
 
 ```
 searchKey: http.ProxyFromEnvironment
-tags: [exported]
 ```
 
 ```Go
@@ -26484,7 +27955,6 @@ As a special case, if req.URL.Host is "localhost" (with or without a port number
 
 ```
 searchKey: http.ProxyURL
-tags: [exported]
 ```
 
 ```Go
@@ -26497,6 +27967,7 @@ ProxyURL returns a proxy function (for use in a Transport) that always returns t
 
 ```
 searchKey: http.envProxyFunc
+tags: [private]
 ```
 
 ```Go
@@ -26509,6 +27980,7 @@ defaultProxyConfig returns a ProxyConfig value looked up from the environment. T
 
 ```
 searchKey: http.resetProxyConfig
+tags: [private]
 ```
 
 ```Go
@@ -26521,6 +27993,7 @@ resetProxyConfig is used by tests.
 
 ```
 searchKey: http.is408Message
+tags: [private]
 ```
 
 ```Go
@@ -26533,6 +28006,7 @@ is408Message reports whether buf has the prefix of an HTTP 408 Request Timeout r
 
 ```
 searchKey: http.newReadWriteCloserBody
+tags: [private]
 ```
 
 ```Go
@@ -26543,6 +28017,7 @@ func newReadWriteCloserBody(br *bufio.Reader, rwc io.ReadWriteCloser) io.ReadWri
 
 ```
 searchKey: http.nop
+tags: [private]
 ```
 
 ```Go
@@ -26553,6 +28028,7 @@ func nop()
 
 ```
 searchKey: http.canonicalAddr
+tags: [private]
 ```
 
 ```Go
@@ -26565,6 +28041,7 @@ canonicalAddr returns url.Host but always with a ":port" suffix
 
 ```
 searchKey: http.cloneTLSConfig
+tags: [private]
 ```
 
 ```Go
@@ -26577,6 +28054,7 @@ cloneTLSConfig returns a shallow clone of cfg, or a new zero tls.Config if cfg i
 
 ```
 searchKey: http.TestWriteSetCookies
+tags: [private]
 ```
 
 ```Go
@@ -26587,6 +28065,7 @@ func TestWriteSetCookies(t *testing.T)
 
 ```
 searchKey: http.TestSetCookie
+tags: [private]
 ```
 
 ```Go
@@ -26597,6 +28076,7 @@ func TestSetCookie(t *testing.T)
 
 ```
 searchKey: http.TestAddCookie
+tags: [private]
 ```
 
 ```Go
@@ -26607,6 +28087,7 @@ func TestAddCookie(t *testing.T)
 
 ```
 searchKey: http.toJSON
+tags: [private]
 ```
 
 ```Go
@@ -26617,6 +28098,7 @@ func toJSON(v interface{}) string
 
 ```
 searchKey: http.TestReadSetCookies
+tags: [private]
 ```
 
 ```Go
@@ -26627,6 +28109,7 @@ func TestReadSetCookies(t *testing.T)
 
 ```
 searchKey: http.TestReadCookies
+tags: [private]
 ```
 
 ```Go
@@ -26637,6 +28120,7 @@ func TestReadCookies(t *testing.T)
 
 ```
 searchKey: http.TestSetCookieDoubleQuotes
+tags: [private]
 ```
 
 ```Go
@@ -26647,6 +28131,7 @@ func TestSetCookieDoubleQuotes(t *testing.T)
 
 ```
 searchKey: http.TestCookieSanitizeValue
+tags: [private]
 ```
 
 ```Go
@@ -26657,6 +28142,7 @@ func TestCookieSanitizeValue(t *testing.T)
 
 ```
 searchKey: http.TestCookieSanitizePath
+tags: [private]
 ```
 
 ```Go
@@ -26667,6 +28153,7 @@ func TestCookieSanitizePath(t *testing.T)
 
 ```
 searchKey: http.BenchmarkCookieString
+tags: [private]
 ```
 
 ```Go
@@ -26677,6 +28164,7 @@ func BenchmarkCookieString(b *testing.B)
 
 ```
 searchKey: http.BenchmarkReadSetCookies
+tags: [private]
 ```
 
 ```Go
@@ -26687,16 +28175,18 @@ func BenchmarkReadSetCookies(b *testing.B)
 
 ```
 searchKey: http.BenchmarkReadCookies
+tags: [private]
 ```
 
 ```Go
 func BenchmarkReadCookies(b *testing.B)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.export_test.go" href="#init.export_test.go">func init()</a>
 
 ```
 searchKey: http.init
+tags: [private]
 ```
 
 ```Go
@@ -26707,6 +28197,7 @@ func init()
 
 ```
 searchKey: http.CondSkipHTTP2
+tags: [private]
 ```
 
 ```Go
@@ -26717,6 +28208,7 @@ func CondSkipHTTP2(t *testing.T)
 
 ```
 searchKey: http.SetReadLoopBeforeNextReadHook
+tags: [private]
 ```
 
 ```Go
@@ -26727,6 +28219,7 @@ func SetReadLoopBeforeNextReadHook(f func())
 
 ```
 searchKey: http.SetPendingDialHooks
+tags: [private]
 ```
 
 ```Go
@@ -26739,6 +28232,7 @@ SetPendingDialHooks sets the hooks that run before and after handling pending di
 
 ```
 searchKey: http.SetTestHookServerServe
+tags: [private]
 ```
 
 ```Go
@@ -26749,6 +28243,7 @@ func SetTestHookServerServe(fn func(*Server, net.Listener))
 
 ```
 searchKey: http.ResetCachedEnvironment
+tags: [private]
 ```
 
 ```Go
@@ -26759,6 +28254,7 @@ func ResetCachedEnvironment()
 
 ```
 searchKey: http.unnilTestHook
+tags: [private]
 ```
 
 ```Go
@@ -26771,6 +28267,7 @@ All test hooks must be non-nil so they can be called directly, but the tests use
 
 ```
 searchKey: http.hookSetter
+tags: [private]
 ```
 
 ```Go
@@ -26781,6 +28278,7 @@ func hookSetter(dst *func()) func(func())
 
 ```
 searchKey: http.ExportHttp2ConfigureTransport
+tags: [private]
 ```
 
 ```Go
@@ -26791,6 +28289,7 @@ func ExportHttp2ConfigureTransport(t *Transport) error
 
 ```
 searchKey: http.ExportSetH2GoawayTimeout
+tags: [private]
 ```
 
 ```Go
@@ -26801,6 +28300,7 @@ func ExportSetH2GoawayTimeout(d time.Duration) (restore func())
 
 ```
 searchKey: http.ExportCloseTransportConnsAbruptly
+tags: [private]
 ```
 
 ```Go
@@ -26813,6 +28313,7 @@ ExportCloseTransportConnsAbruptly closes all idle connections from tr in an abru
 
 ```
 searchKey: http.checker
+tags: [private]
 ```
 
 ```Go
@@ -26823,6 +28324,7 @@ func checker(t *testing.T) func(string, error)
 
 ```
 searchKey: http.TestFileTransport
+tags: [private]
 ```
 
 ```Go
@@ -26833,6 +28335,7 @@ func TestFileTransport(t *testing.T)
 
 ```
 searchKey: http.TestHeaderWrite
+tags: [private]
 ```
 
 ```Go
@@ -26843,6 +28346,7 @@ func TestHeaderWrite(t *testing.T)
 
 ```
 searchKey: http.TestParseTime
+tags: [private]
 ```
 
 ```Go
@@ -26853,6 +28357,7 @@ func TestParseTime(t *testing.T)
 
 ```
 searchKey: http.TestHasToken
+tags: [private]
 ```
 
 ```Go
@@ -26863,6 +28368,7 @@ func TestHasToken(t *testing.T)
 
 ```
 searchKey: http.TestNilHeaderClone
+tags: [private]
 ```
 
 ```Go
@@ -26873,6 +28379,7 @@ func TestNilHeaderClone(t *testing.T)
 
 ```
 searchKey: http.BenchmarkHeaderWriteSubset
+tags: [private]
 ```
 
 ```Go
@@ -26883,6 +28390,7 @@ func BenchmarkHeaderWriteSubset(b *testing.B)
 
 ```
 searchKey: http.TestHeaderWriteSubsetAllocs
+tags: [private]
 ```
 
 ```Go
@@ -26893,6 +28401,7 @@ func TestHeaderWriteSubsetAllocs(t *testing.T)
 
 ```
 searchKey: http.TestCloneOrMakeHeader
+tags: [private]
 ```
 
 ```Go
@@ -26905,6 +28414,7 @@ Issue 34878: test that every call to cloneOrMakeHeader never returns a nil Heade
 
 ```
 searchKey: http.TestForeachHeaderElement
+tags: [private]
 ```
 
 ```Go
@@ -26915,6 +28425,7 @@ func TestForeachHeaderElement(t *testing.T)
 
 ```
 searchKey: http.TestCleanHost
+tags: [private]
 ```
 
 ```Go
@@ -26925,6 +28436,7 @@ func TestCleanHost(t *testing.T)
 
 ```
 searchKey: http.TestCmdGoNoHTTPServer
+tags: [private]
 ```
 
 ```Go
@@ -26939,6 +28451,7 @@ This catches accidental dependencies between the HTTP transport and server code.
 
 ```
 searchKey: http.TestOmitHTTP2
+tags: [private]
 ```
 
 ```Go
@@ -26951,6 +28464,7 @@ Tests that the nethttpomithttp2 build tag doesn't rot too much, even if there's 
 
 ```
 searchKey: http.TestOmitHTTP2Vet
+tags: [private]
 ```
 
 ```Go
@@ -26963,6 +28477,7 @@ Tests that the nethttpomithttp2 build tag at least type checks in short mode. Th
 
 ```
 searchKey: http.BenchmarkCopyValues
+tags: [private]
 ```
 
 ```Go
@@ -26973,6 +28488,7 @@ func BenchmarkCopyValues(b *testing.B)
 
 ```
 searchKey: http.TestNoUnicodeStrings
+tags: [private]
 ```
 
 ```Go
@@ -26985,6 +28501,7 @@ TestNoUnicodeStrings checks that nothing in net/http uses the Unicode-aware stri
 
 ```
 searchKey: http.TestCacheKeys
+tags: [private]
 ```
 
 ```Go
@@ -26995,6 +28512,7 @@ func TestCacheKeys(t *testing.T)
 
 ```
 searchKey: http.ResetProxyEnv
+tags: [private]
 ```
 
 ```Go
@@ -27005,6 +28523,7 @@ func ResetProxyEnv()
 
 ```
 searchKey: http.TestParseRange
+tags: [private]
 ```
 
 ```Go
@@ -27015,6 +28534,7 @@ func TestParseRange(t *testing.T)
 
 ```
 searchKey: http.TestReadRequest
+tags: [private]
 ```
 
 ```Go
@@ -27025,6 +28545,7 @@ func TestReadRequest(t *testing.T)
 
 ```
 searchKey: http.reqBytes
+tags: [private]
 ```
 
 ```Go
@@ -27037,6 +28558,7 @@ reqBytes treats req as a request (with \n delimiters) and returns it with \r\n d
 
 ```
 searchKey: http.TestReadRequest_Bad
+tags: [private]
 ```
 
 ```Go
@@ -27047,6 +28569,7 @@ func TestReadRequest_Bad(t *testing.T)
 
 ```
 searchKey: http.TestRequestWrite
+tags: [private]
 ```
 
 ```Go
@@ -27057,6 +28580,7 @@ func TestRequestWrite(t *testing.T)
 
 ```
 searchKey: http.TestRequestWriteTransport
+tags: [private]
 ```
 
 ```Go
@@ -27067,6 +28591,7 @@ func TestRequestWriteTransport(t *testing.T)
 
 ```
 searchKey: http.TestRequestWriteClosesBody
+tags: [private]
 ```
 
 ```Go
@@ -27079,6 +28604,7 @@ TestRequestWriteClosesBody tests that Request.Write closes its request.Body. It 
 
 ```
 searchKey: http.chunk
+tags: [private]
 ```
 
 ```Go
@@ -27089,6 +28615,7 @@ func chunk(s string) string
 
 ```
 searchKey: http.mustParseURL
+tags: [private]
 ```
 
 ```Go
@@ -27099,6 +28626,7 @@ func mustParseURL(s string) *url.URL
 
 ```
 searchKey: http.TestRequestWriteError
+tags: [private]
 ```
 
 ```Go
@@ -27111,6 +28639,7 @@ TestRequestWriteError tests the Write err != nil checks in (*Request).write.
 
 ```
 searchKey: http.dumpRequestOut
+tags: [private]
 ```
 
 ```Go
@@ -27123,6 +28652,7 @@ dumpRequestOut is a modified copy of net/http/httputil.DumpRequestOut. Unlike th
 
 ```
 searchKey: http.TestReadResponse
+tags: [private]
 ```
 
 ```Go
@@ -27135,6 +28665,7 @@ tests successful calls to ReadResponse, and inspects the returned Response. For 
 
 ```
 searchKey: http.TestWriteResponse
+tags: [private]
 ```
 
 ```Go
@@ -27145,6 +28676,7 @@ func TestWriteResponse(t *testing.T)
 
 ```
 searchKey: http.TestReadResponseCloseInMiddle
+tags: [private]
 ```
 
 ```Go
@@ -27157,6 +28689,7 @@ TestReadResponseCloseInMiddle tests that closing a body after reading only part 
 
 ```
 searchKey: http.diff
+tags: [private]
 ```
 
 ```Go
@@ -27167,6 +28700,7 @@ func diff(t *testing.T, prefix string, have, want interface{})
 
 ```
 searchKey: http.TestLocationResponse
+tags: [private]
 ```
 
 ```Go
@@ -27177,6 +28711,7 @@ func TestLocationResponse(t *testing.T)
 
 ```
 searchKey: http.TestResponseStatusStutter
+tags: [private]
 ```
 
 ```Go
@@ -27187,6 +28722,7 @@ func TestResponseStatusStutter(t *testing.T)
 
 ```
 searchKey: http.TestResponseContentLengthShortBody
+tags: [private]
 ```
 
 ```Go
@@ -27197,6 +28733,7 @@ func TestResponseContentLengthShortBody(t *testing.T)
 
 ```
 searchKey: http.TestReadResponseErrors
+tags: [private]
 ```
 
 ```Go
@@ -27209,6 +28746,7 @@ Test various ReadResponse error cases. (also tests success cases, but mostly it'
 
 ```
 searchKey: http.matchErr
+tags: [private]
 ```
 
 ```Go
@@ -27221,6 +28759,7 @@ wantErr can be nil, an error value to match exactly, or type string to match a s
 
 ```
 searchKey: http.TestNeedsSniff
+tags: [private]
 ```
 
 ```Go
@@ -27231,6 +28770,7 @@ func TestNeedsSniff(t *testing.T)
 
 ```
 searchKey: http.TestResponseWritesOnlySingleConnectionClose
+tags: [private]
 ```
 
 ```Go
@@ -27243,6 +28783,7 @@ A response should only write out single Connection: close header. Tests #19499.
 
 ```
 searchKey: http.TestResponseWrite
+tags: [private]
 ```
 
 ```Go
@@ -27253,6 +28794,7 @@ func TestResponseWrite(t *testing.T)
 
 ```
 searchKey: http.BenchmarkServerMatch
+tags: [private]
 ```
 
 ```Go
@@ -27263,6 +28805,7 @@ func BenchmarkServerMatch(b *testing.B)
 
 ```
 searchKey: http.TestBodyReadBadTrailer
+tags: [private]
 ```
 
 ```Go
@@ -27273,6 +28816,7 @@ func TestBodyReadBadTrailer(t *testing.T)
 
 ```
 searchKey: http.TestFinalChunkedBodyReadEOF
+tags: [private]
 ```
 
 ```Go
@@ -27283,6 +28827,7 @@ func TestFinalChunkedBodyReadEOF(t *testing.T)
 
 ```
 searchKey: http.TestDetectInMemoryReaders
+tags: [private]
 ```
 
 ```Go
@@ -27293,6 +28838,7 @@ func TestDetectInMemoryReaders(t *testing.T)
 
 ```
 searchKey: http.TestTransferWriterWriteBodyReaderTypes
+tags: [private]
 ```
 
 ```Go
@@ -27303,6 +28849,7 @@ func TestTransferWriterWriteBodyReaderTypes(t *testing.T)
 
 ```
 searchKey: http.TestParseTransferEncoding
+tags: [private]
 ```
 
 ```Go
@@ -27313,6 +28860,7 @@ func TestParseTransferEncoding(t *testing.T)
 
 ```
 searchKey: http.TestParseContentLength
+tags: [private]
 ```
 
 ```Go
@@ -27325,6 +28873,7 @@ issue 39017 - disallow Content-Length values such as "+3"
 
 ```
 searchKey: http.TestTransportPersistConnReadLoopEOF
+tags: [private]
 ```
 
 ```Go
@@ -27337,6 +28886,7 @@ Issue 15446: incorrect wrapping of errors when server closes an idle connection.
 
 ```
 searchKey: http.isTransportReadFromServerError
+tags: [private]
 ```
 
 ```Go
@@ -27347,6 +28897,7 @@ func isTransportReadFromServerError(err error) bool
 
 ```
 searchKey: http.newLocalListener
+tags: [private]
 ```
 
 ```Go
@@ -27357,6 +28908,7 @@ func newLocalListener(t *testing.T) net.Listener
 
 ```
 searchKey: http.TestTransportShouldRetryRequest
+tags: [private]
 ```
 
 ```Go
@@ -27367,6 +28919,7 @@ func TestTransportShouldRetryRequest(t *testing.T)
 
 ```
 searchKey: http.TestTransportBodyAltRewind
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "ghe-feeder",
     "newPage": true,
     "searchKey": "internal/cmd/ghe-feeder",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "reposProcessedCounter",
                 "newPage": false,
                 "searchKey": "main.reposProcessedCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "reposFailedCounter",
                 "newPage": false,
                 "searchKey": "main.reposFailedCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "reposSucceededCounter",
                 "newPage": false,
                 "searchKey": "main.reposSucceededCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "reposAlreadyDoneCounter",
                 "newPage": false,
                 "searchKey": "main.reposAlreadyDoneCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "remainingWorkGauge",
                 "newPage": false,
                 "searchKey": "main.remainingWorkGauge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -140,7 +154,9 @@
                 "identifier": "left",
                 "newPage": false,
                 "searchKey": "main.left",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -160,7 +176,9 @@
                 "identifier": "right",
                 "newPage": false,
                 "searchKey": "main.right",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -183,7 +201,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -201,7 +221,9 @@
                 "identifier": "feederDB",
                 "newPage": false,
                 "searchKey": "main.feederDB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -219,7 +241,9 @@
                       "identifier": "newFeederDB",
                       "newPage": false,
                       "searchKey": "main.newFeederDB",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -239,7 +263,9 @@
                       "identifier": "feederDB.declareRepo",
                       "newPage": false,
                       "searchKey": "main.feederDB.declareRepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -259,7 +285,9 @@
                       "identifier": "feederDB.failed",
                       "newPage": false,
                       "searchKey": "main.feederDB.failed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -279,7 +307,9 @@
                       "identifier": "feederDB.succeeded",
                       "newPage": false,
                       "searchKey": "main.feederDB.succeeded",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -299,7 +329,9 @@
                       "identifier": "feederDB.declareOrg",
                       "newPage": false,
                       "searchKey": "main.feederDB.declareOrg",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -322,7 +354,9 @@
                 "identifier": "producer",
                 "newPage": false,
                 "searchKey": "main.producer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -340,7 +374,9 @@
                       "identifier": "producer.pumpFile",
                       "newPage": false,
                       "searchKey": "main.producer.pumpFile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -360,7 +396,9 @@
                       "identifier": "producer.pump",
                       "newPage": false,
                       "searchKey": "main.producer.pump",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -383,7 +421,9 @@
                 "identifier": "feederError",
                 "newPage": false,
                 "searchKey": "main.feederError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -401,7 +441,9 @@
                       "identifier": "feederError.Error",
                       "newPage": false,
                       "searchKey": "main.feederError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -421,7 +463,9 @@
                       "identifier": "feederError.Unwrap",
                       "newPage": false,
                       "searchKey": "main.feederError.Unwrap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -444,7 +488,9 @@
                 "identifier": "worker",
                 "newPage": false,
                 "searchKey": "main.worker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -462,7 +508,9 @@
                       "identifier": "worker.run",
                       "newPage": false,
                       "searchKey": "main.worker.run",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -482,7 +530,9 @@
                       "identifier": "worker.process",
                       "newPage": false,
                       "searchKey": "main.worker.process",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -502,7 +552,9 @@
                       "identifier": "worker.cloneRepo",
                       "newPage": false,
                       "searchKey": "main.worker.cloneRepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -522,7 +574,9 @@
                       "identifier": "worker.addRemote",
                       "newPage": false,
                       "searchKey": "main.worker.addRemote",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -542,7 +596,9 @@
                       "identifier": "worker.pushToGHE",
                       "newPage": false,
                       "searchKey": "main.worker.pushToGHE",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -562,7 +618,9 @@
                       "identifier": "worker.addGHEOrg",
                       "newPage": false,
                       "searchKey": "main.worker.addGHEOrg",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -582,7 +640,9 @@
                       "identifier": "worker.addGHERepo",
                       "newPage": false,
                       "searchKey": "main.worker.addGHERepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -608,7 +668,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -626,7 +688,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -646,7 +710,9 @@
                 "identifier": "stats",
                 "newPage": false,
                 "searchKey": "main.stats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -666,7 +732,9 @@
                 "identifier": "getRandomName",
                 "newPage": false,
                 "searchKey": "main.getRandomName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -686,7 +754,9 @@
                 "identifier": "extractOwnerRepoFromCSVLine",
                 "newPage": false,
                 "searchKey": "main.extractOwnerRepoFromCSVLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -706,7 +776,9 @@
                 "identifier": "numLinesInFile",
                 "newPage": false,
                 "searchKey": "main.numLinesInFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -726,7 +798,9 @@
                 "identifier": "numLinesTotal",
                 "newPage": false,
                 "searchKey": "main.numLinesTotal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -746,7 +820,9 @@
                 "identifier": "newGHEClient",
                 "newPage": false,
                 "searchKey": "main.newGHEClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -761,12 +837,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/ghe-feeder#init",
+              "pathID": "/internal/cmd/ghe-feeder#init.worker.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.worker.go",
                 "newPage": false,
                 "searchKey": "main.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -786,7 +864,9 @@
                 "identifier": "randomOrgNameAndSize",
                 "newPage": false,
                 "searchKey": "main.randomOrgNameAndSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

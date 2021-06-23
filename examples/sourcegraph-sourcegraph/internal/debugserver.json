@@ -4,7 +4,9 @@
     "identifier": "debugserver",
     "newPage": true,
     "searchKey": "internal/debugserver",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "addr",
                 "newPage": false,
                 "searchKey": "debugserver.addr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "Services",
                 "newPage": false,
                 "searchKey": "debugserver.Services",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -85,7 +89,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -103,9 +109,7 @@
                 "identifier": "Endpoint",
                 "newPage": false,
                 "searchKey": "debugserver.Endpoint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -125,9 +129,7 @@
                 "identifier": "Service",
                 "newPage": false,
                 "searchKey": "debugserver.Service",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -147,9 +149,7 @@
                 "identifier": "Dumper",
                 "newPage": false,
                 "searchKey": "debugserver.Dumper",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,7 +172,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -185,12 +187,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/debugserver#init",
+              "pathID": "/internal/debugserver#init.debug.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.debug.go",
                 "newPage": false,
                 "searchKey": "debugserver.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +214,7 @@
                 "identifier": "NewServerRoutine",
                 "newPage": false,
                 "searchKey": "debugserver.NewServerRoutine",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -232,7 +234,9 @@
                 "identifier": "expvarHandler",
                 "newPage": false,
                 "searchKey": "debugserver.expvarHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -252,7 +256,9 @@
                 "identifier": "gcHandler",
                 "newPage": false,
                 "searchKey": "debugserver.gcHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -272,7 +278,9 @@
                 "identifier": "freeOSMemoryHandler",
                 "newPage": false,
                 "searchKey": "debugserver.freeOSMemoryHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -292,7 +300,9 @@
                 "identifier": "registerMetadataGauge",
                 "newPage": false,
                 "searchKey": "debugserver.registerMetadataGauge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -312,7 +322,9 @@
                 "identifier": "healthzHandler",
                 "newPage": false,
                 "searchKey": "debugserver.healthzHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -332,7 +344,9 @@
                 "identifier": "readyHandler",
                 "newPage": false,
                 "searchKey": "debugserver.readyHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

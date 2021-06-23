@@ -4,9 +4,7 @@
     "identifier": "gitserver",
     "newPage": true,
     "searchKey": "cmd/gitserver",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "reposDir",
                 "newPage": false,
                 "searchKey": "main.reposDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "wantPctFree",
                 "newPage": false,
                 "searchKey": "main.wantPctFree",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "janitorInterval",
                 "newPage": false,
                 "searchKey": "main.janitorInterval",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "syncRepoStateInterval",
                 "newPage": false,
                 "searchKey": "main.syncRepoStateInterval",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "syncRepoStateBatchSize",
                 "newPage": false,
                 "searchKey": "main.syncRepoStateBatchSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "syncRepoStateUpsertPerSecond",
                 "newPage": false,
                 "searchKey": "main.syncRepoStateUpsertPerSecond",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "envHostname",
                 "newPage": false,
                 "searchKey": "main.envHostname",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,9 +197,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -227,7 +237,9 @@
                 "identifier": "hostnameBestEffort",
                 "newPage": false,
                 "searchKey": "main.hostnameBestEffort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "getPercent",
                 "newPage": false,
                 "searchKey": "main.getPercent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "getDB",
                 "newPage": false,
                 "searchKey": "main.getDB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -287,7 +303,9 @@
                 "identifier": "TestParsePercent",
                 "newPage": false,
                 "searchKey": "main.TestParsePercent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

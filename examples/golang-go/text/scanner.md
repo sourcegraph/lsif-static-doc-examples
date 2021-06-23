@@ -104,15 +104,10 @@ By default, a Scanner skips white space and Go comments and recognizes all liter
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ScanIdents" href="#ScanIdents">const ScanIdents</a>
 
 ```
 searchKey: scanner.ScanIdents
-tags: [exported]
 ```
 
 ```Go
@@ -133,7 +128,6 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.ScanInts
-tags: [exported]
 ```
 
 ```Go
@@ -154,7 +148,6 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.ScanFloats
-tags: [exported]
 ```
 
 ```Go
@@ -176,7 +169,6 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.ScanChars
-tags: [exported]
 ```
 
 ```Go
@@ -197,7 +189,6 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.ScanStrings
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +209,6 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.ScanRawStrings
-tags: [exported]
 ```
 
 ```Go
@@ -239,7 +229,6 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.ScanComments
-tags: [exported]
 ```
 
 ```Go
@@ -260,7 +249,6 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.SkipComments
-tags: [exported]
 ```
 
 ```Go
@@ -282,7 +270,6 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.GoTokens
-tags: [exported]
 ```
 
 ```Go
@@ -303,7 +290,6 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.EOF
-tags: [exported]
 ```
 
 ```Go
@@ -316,7 +302,6 @@ The result of Scan is one of these tokens or a Unicode character.
 
 ```
 searchKey: scanner.Ident
-tags: [exported]
 ```
 
 ```Go
@@ -329,7 +314,6 @@ The result of Scan is one of these tokens or a Unicode character.
 
 ```
 searchKey: scanner.Int
-tags: [exported]
 ```
 
 ```Go
@@ -342,7 +326,6 @@ The result of Scan is one of these tokens or a Unicode character.
 
 ```
 searchKey: scanner.Float
-tags: [exported]
 ```
 
 ```Go
@@ -355,7 +338,6 @@ The result of Scan is one of these tokens or a Unicode character.
 
 ```
 searchKey: scanner.Char
-tags: [exported]
 ```
 
 ```Go
@@ -368,7 +350,6 @@ The result of Scan is one of these tokens or a Unicode character.
 
 ```
 searchKey: scanner.String
-tags: [exported]
 ```
 
 ```Go
@@ -381,7 +362,6 @@ The result of Scan is one of these tokens or a Unicode character.
 
 ```
 searchKey: scanner.RawString
-tags: [exported]
 ```
 
 ```Go
@@ -394,7 +374,6 @@ The result of Scan is one of these tokens or a Unicode character.
 
 ```
 searchKey: scanner.Comment
-tags: [exported]
 ```
 
 ```Go
@@ -407,6 +386,7 @@ The result of Scan is one of these tokens or a Unicode character.
 
 ```
 searchKey: scanner.skipComment
+tags: [private]
 ```
 
 ```Go
@@ -421,7 +401,6 @@ internal use only
 
 ```
 searchKey: scanner.GoWhitespace
-tags: [exported]
 ```
 
 ```Go
@@ -434,6 +413,7 @@ GoWhitespace is the default value for the Scanner's Whitespace field. Its value 
 
 ```
 searchKey: scanner.bufLen
+tags: [private]
 ```
 
 ```Go
@@ -443,14 +423,11 @@ const bufLen = 1024 // at least utf8.UTFMax
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="tokenString" href="#tokenString">var tokenString</a>
 
 ```
 searchKey: scanner.tokenString
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +438,7 @@ var tokenString = ...
 
 ```
 searchKey: scanner.segmentList
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +449,7 @@ var segmentList = ...
 
 ```
 searchKey: scanner.f100
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +460,7 @@ var f100 = ...
 
 ```
 searchKey: scanner.tokenList
+tags: [private]
 ```
 
 ```Go
@@ -489,15 +469,10 @@ var tokenList = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Position" href="#Position">type Position struct</a>
 
 ```
 searchKey: scanner.Position
-tags: [exported]
 ```
 
 ```Go
@@ -515,7 +490,6 @@ A source position is represented by a Position value. A position is valid if Lin
 
 ```
 searchKey: scanner.Position.IsValid
-tags: [exported]
 ```
 
 ```Go
@@ -528,7 +502,6 @@ IsValid reports whether the position is valid.
 
 ```
 searchKey: scanner.Position.String
-tags: [exported]
 ```
 
 ```Go
@@ -539,7 +512,6 @@ func (pos Position) String() string
 
 ```
 searchKey: scanner.Scanner
-tags: [exported]
 ```
 
 ```Go
@@ -612,7 +584,6 @@ A Scanner implements reading of Unicode characters and tokens from an io.Reader.
 
 ```
 searchKey: scanner.Scanner.Init
-tags: [exported]
 ```
 
 ```Go
@@ -625,6 +596,7 @@ Init initializes a Scanner with a new source and returns s. Error is set to nil,
 
 ```
 searchKey: scanner.Scanner.next
+tags: [private]
 ```
 
 ```Go
@@ -637,7 +609,6 @@ next reads and returns the next Unicode character. It is designed such that only
 
 ```
 searchKey: scanner.Scanner.Next
-tags: [exported]
 ```
 
 ```Go
@@ -650,7 +621,6 @@ Next reads and returns the next Unicode character. It returns EOF at the end of 
 
 ```
 searchKey: scanner.Scanner.Peek
-tags: [exported]
 ```
 
 ```Go
@@ -663,6 +633,7 @@ Peek returns the next Unicode character in the source without advancing the scan
 
 ```
 searchKey: scanner.Scanner.error
+tags: [private]
 ```
 
 ```Go
@@ -673,6 +644,7 @@ func (s *Scanner) error(msg string)
 
 ```
 searchKey: scanner.Scanner.errorf
+tags: [private]
 ```
 
 ```Go
@@ -683,6 +655,7 @@ func (s *Scanner) errorf(format string, args ...interface{})
 
 ```
 searchKey: scanner.Scanner.isIdentRune
+tags: [private]
 ```
 
 ```Go
@@ -693,6 +666,7 @@ func (s *Scanner) isIdentRune(ch rune, i int) bool
 
 ```
 searchKey: scanner.Scanner.scanIdentifier
+tags: [private]
 ```
 
 ```Go
@@ -703,6 +677,7 @@ func (s *Scanner) scanIdentifier() rune
 
 ```
 searchKey: scanner.Scanner.digits
+tags: [private]
 ```
 
 ```Go
@@ -715,6 +690,7 @@ digits accepts the sequence { digit | '_' } starting with ch0. If base <= 10, di
 
 ```
 searchKey: scanner.Scanner.scanNumber
+tags: [private]
 ```
 
 ```Go
@@ -725,6 +701,7 @@ func (s *Scanner) scanNumber(ch rune, seenDot bool) (rune, rune)
 
 ```
 searchKey: scanner.Scanner.scanDigits
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +712,7 @@ func (s *Scanner) scanDigits(ch rune, base, n int) rune
 
 ```
 searchKey: scanner.Scanner.scanEscape
+tags: [private]
 ```
 
 ```Go
@@ -745,6 +723,7 @@ func (s *Scanner) scanEscape(quote rune) rune
 
 ```
 searchKey: scanner.Scanner.scanString
+tags: [private]
 ```
 
 ```Go
@@ -755,6 +734,7 @@ func (s *Scanner) scanString(quote rune) (n int)
 
 ```
 searchKey: scanner.Scanner.scanRawString
+tags: [private]
 ```
 
 ```Go
@@ -765,6 +745,7 @@ func (s *Scanner) scanRawString()
 
 ```
 searchKey: scanner.Scanner.scanChar
+tags: [private]
 ```
 
 ```Go
@@ -775,6 +756,7 @@ func (s *Scanner) scanChar()
 
 ```
 searchKey: scanner.Scanner.scanComment
+tags: [private]
 ```
 
 ```Go
@@ -785,7 +767,6 @@ func (s *Scanner) scanComment(ch rune) rune
 
 ```
 searchKey: scanner.Scanner.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -798,7 +779,6 @@ Scan reads the next token or Unicode character from source and returns it. It on
 
 ```
 searchKey: scanner.Scanner.Pos
-tags: [exported]
 ```
 
 ```Go
@@ -811,7 +791,6 @@ Pos returns the position of the character immediately after the character or tok
 
 ```
 searchKey: scanner.Scanner.TokenText
-tags: [exported]
 ```
 
 ```Go
@@ -824,6 +803,7 @@ TokenText returns the string corresponding to the most recently scanned token. V
 
 ```
 searchKey: scanner.StringReader
+tags: [private]
 ```
 
 ```Go
@@ -839,6 +819,7 @@ A StringReader delivers its data one string segment at a time via Read.
 
 ```
 searchKey: scanner.StringReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -849,6 +830,7 @@ func (r *StringReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: scanner.token
+tags: [private]
 ```
 
 ```Go
@@ -862,6 +844,7 @@ type token struct {
 
 ```
 searchKey: scanner.errReader
+tags: [private]
 ```
 
 ```Go
@@ -874,6 +857,7 @@ An errReader returns (0, err) where err is not io.EOF.
 
 ```
 searchKey: scanner.errReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -884,6 +868,7 @@ func (errReader) Read(b []byte) (int, error)
 
 ```
 searchKey: scanner.countReader
+tags: [private]
 ```
 
 ```Go
@@ -894,6 +879,7 @@ type countReader int
 
 ```
 searchKey: scanner.countReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -902,15 +888,10 @@ func (r *countReader) Read([]byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="TokenString" href="#TokenString">func TokenString(tok rune) string</a>
 
 ```
 searchKey: scanner.TokenString
-tags: [exported]
 ```
 
 ```Go
@@ -923,6 +904,7 @@ TokenString returns a printable string for a token or Unicode character.
 
 ```
 searchKey: scanner.lower
+tags: [private]
 ```
 
 ```Go
@@ -933,6 +915,7 @@ func lower(ch rune) rune
 
 ```
 searchKey: scanner.isDecimal
+tags: [private]
 ```
 
 ```Go
@@ -943,6 +926,7 @@ func isDecimal(ch rune) bool
 
 ```
 searchKey: scanner.isHex
+tags: [private]
 ```
 
 ```Go
@@ -953,6 +937,7 @@ func isHex(ch rune) bool
 
 ```
 searchKey: scanner.litname
+tags: [private]
 ```
 
 ```Go
@@ -963,6 +948,7 @@ func litname(prefix rune) string
 
 ```
 searchKey: scanner.invalidSep
+tags: [private]
 ```
 
 ```Go
@@ -975,6 +961,7 @@ invalidSep returns the index of the first invalid separator in x, or -1.
 
 ```
 searchKey: scanner.digitVal
+tags: [private]
 ```
 
 ```Go
@@ -985,6 +972,7 @@ func digitVal(ch rune) int
 
 ```
 searchKey: scanner.readRuneSegments
+tags: [private]
 ```
 
 ```Go
@@ -995,6 +983,7 @@ func readRuneSegments(t *testing.T, segments []string)
 
 ```
 searchKey: scanner.TestNext
+tags: [private]
 ```
 
 ```Go
@@ -1005,6 +994,7 @@ func TestNext(t *testing.T)
 
 ```
 searchKey: scanner.makeSource
+tags: [private]
 ```
 
 ```Go
@@ -1015,6 +1005,7 @@ func makeSource(pattern string) *bytes.Buffer
 
 ```
 searchKey: scanner.checkTok
+tags: [private]
 ```
 
 ```Go
@@ -1025,6 +1016,7 @@ func checkTok(t *testing.T, s *Scanner, line int, got, want rune, text string)
 
 ```
 searchKey: scanner.checkTokErr
+tags: [private]
 ```
 
 ```Go
@@ -1035,6 +1027,7 @@ func checkTokErr(t *testing.T, s *Scanner, line int, want rune, text string)
 
 ```
 searchKey: scanner.countNewlines
+tags: [private]
 ```
 
 ```Go
@@ -1045,6 +1038,7 @@ func countNewlines(s string) int
 
 ```
 searchKey: scanner.testScan
+tags: [private]
 ```
 
 ```Go
@@ -1055,6 +1049,7 @@ func testScan(t *testing.T, mode uint)
 
 ```
 searchKey: scanner.TestScan
+tags: [private]
 ```
 
 ```Go
@@ -1065,6 +1060,7 @@ func TestScan(t *testing.T)
 
 ```
 searchKey: scanner.TestInvalidExponent
+tags: [private]
 ```
 
 ```Go
@@ -1075,6 +1071,7 @@ func TestInvalidExponent(t *testing.T)
 
 ```
 searchKey: scanner.TestPosition
+tags: [private]
 ```
 
 ```Go
@@ -1085,6 +1082,7 @@ func TestPosition(t *testing.T)
 
 ```
 searchKey: scanner.TestScanZeroMode
+tags: [private]
 ```
 
 ```Go
@@ -1095,6 +1093,7 @@ func TestScanZeroMode(t *testing.T)
 
 ```
 searchKey: scanner.testScanSelectedMode
+tags: [private]
 ```
 
 ```Go
@@ -1105,6 +1104,7 @@ func testScanSelectedMode(t *testing.T, mode uint, class rune)
 
 ```
 searchKey: scanner.TestScanSelectedMask
+tags: [private]
 ```
 
 ```Go
@@ -1115,6 +1115,7 @@ func TestScanSelectedMask(t *testing.T)
 
 ```
 searchKey: scanner.TestScanCustomIdent
+tags: [private]
 ```
 
 ```Go
@@ -1125,6 +1126,7 @@ func TestScanCustomIdent(t *testing.T)
 
 ```
 searchKey: scanner.TestScanNext
+tags: [private]
 ```
 
 ```Go
@@ -1135,6 +1137,7 @@ func TestScanNext(t *testing.T)
 
 ```
 searchKey: scanner.TestScanWhitespace
+tags: [private]
 ```
 
 ```Go
@@ -1145,6 +1148,7 @@ func TestScanWhitespace(t *testing.T)
 
 ```
 searchKey: scanner.testError
+tags: [private]
 ```
 
 ```Go
@@ -1155,6 +1159,7 @@ func testError(t *testing.T, src, pos, msg string, tok rune)
 
 ```
 searchKey: scanner.TestError
+tags: [private]
 ```
 
 ```Go
@@ -1165,6 +1170,7 @@ func TestError(t *testing.T)
 
 ```
 searchKey: scanner.TestIOError
+tags: [private]
 ```
 
 ```Go
@@ -1175,6 +1181,7 @@ func TestIOError(t *testing.T)
 
 ```
 searchKey: scanner.checkPos
+tags: [private]
 ```
 
 ```Go
@@ -1185,6 +1192,7 @@ func checkPos(t *testing.T, got, want Position)
 
 ```
 searchKey: scanner.checkNextPos
+tags: [private]
 ```
 
 ```Go
@@ -1195,6 +1203,7 @@ func checkNextPos(t *testing.T, s *Scanner, offset, line, column int, char rune)
 
 ```
 searchKey: scanner.checkScanPos
+tags: [private]
 ```
 
 ```Go
@@ -1205,6 +1214,7 @@ func checkScanPos(t *testing.T, s *Scanner, offset, line, column int, char rune)
 
 ```
 searchKey: scanner.TestPos
+tags: [private]
 ```
 
 ```Go
@@ -1215,6 +1225,7 @@ func TestPos(t *testing.T)
 
 ```
 searchKey: scanner.TestNextEOFHandling
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1236,7 @@ func TestNextEOFHandling(t *testing.T)
 
 ```
 searchKey: scanner.TestScanEOFHandling
+tags: [private]
 ```
 
 ```Go
@@ -1235,6 +1247,7 @@ func TestScanEOFHandling(t *testing.T)
 
 ```
 searchKey: scanner.TestIssue29723
+tags: [private]
 ```
 
 ```Go
@@ -1245,6 +1258,7 @@ func TestIssue29723(t *testing.T)
 
 ```
 searchKey: scanner.TestNumbers
+tags: [private]
 ```
 
 ```Go
@@ -1255,6 +1269,7 @@ func TestNumbers(t *testing.T)
 
 ```
 searchKey: scanner.TestIssue30320
+tags: [private]
 ```
 
 ```Go
@@ -1265,6 +1280,7 @@ func TestIssue30320(t *testing.T)
 
 ```
 searchKey: scanner.extractInts
+tags: [private]
 ```
 
 ```Go

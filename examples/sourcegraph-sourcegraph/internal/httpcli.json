@@ -4,7 +4,9 @@
     "identifier": "httpcli",
     "newPage": true,
     "searchKey": "internal/httpcli",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "redisCache",
                 "newPage": false,
                 "searchKey": "httpcli.redisCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "externalOnce",
                 "newPage": false,
                 "searchKey": "httpcli.externalOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "externalDoer",
                 "newPage": false,
                 "searchKey": "httpcli.externalDoer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "externalHTTPClient",
                 "newPage": false,
                 "searchKey": "httpcli.externalHTTPClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +135,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -141,9 +155,7 @@
                 "identifier": "Doer",
                 "newPage": false,
                 "searchKey": "httpcli.Doer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -161,9 +173,7 @@
                       "identifier": "ExternalDoer",
                       "newPage": false,
                       "searchKey": "httpcli.ExternalDoer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -183,9 +193,7 @@
                       "identifier": "ContextErrorMiddleware",
                       "newPage": false,
                       "searchKey": "httpcli.ContextErrorMiddleware",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -205,9 +213,7 @@
                       "identifier": "GitHubProxyRedirectMiddleware",
                       "newPage": false,
                       "searchKey": "httpcli.GitHubProxyRedirectMiddleware",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -227,7 +233,9 @@
                       "identifier": "newFakeClient",
                       "newPage": false,
                       "searchKey": "httpcli.newFakeClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -250,9 +258,7 @@
                 "identifier": "DoerFunc",
                 "newPage": false,
                 "searchKey": "httpcli.DoerFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -270,9 +276,7 @@
                       "identifier": "DoerFunc.Do",
                       "newPage": false,
                       "searchKey": "httpcli.DoerFunc.Do",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -295,9 +299,7 @@
                 "identifier": "Middleware",
                 "newPage": false,
                 "searchKey": "httpcli.Middleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -315,9 +317,7 @@
                       "identifier": "NewMiddleware",
                       "newPage": false,
                       "searchKey": "httpcli.NewMiddleware",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -337,9 +337,7 @@
                       "identifier": "HeadersMiddleware",
                       "newPage": false,
                       "searchKey": "httpcli.HeadersMiddleware",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -362,9 +360,7 @@
                 "identifier": "Opt",
                 "newPage": false,
                 "searchKey": "httpcli.Opt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -382,9 +378,7 @@
                       "identifier": "NewCertPoolOpt",
                       "newPage": false,
                       "searchKey": "httpcli.NewCertPoolOpt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -404,9 +398,7 @@
                       "identifier": "NewCachedTransportOpt",
                       "newPage": false,
                       "searchKey": "httpcli.NewCachedTransportOpt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -426,9 +418,7 @@
                       "identifier": "NewIdleConnTimeoutOpt",
                       "newPage": false,
                       "searchKey": "httpcli.NewIdleConnTimeoutOpt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -448,9 +438,7 @@
                       "identifier": "NewTimeoutOpt",
                       "newPage": false,
                       "searchKey": "httpcli.NewTimeoutOpt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -473,9 +461,7 @@
                 "identifier": "Factory",
                 "newPage": false,
                 "searchKey": "httpcli.Factory",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -493,9 +479,7 @@
                       "identifier": "NewExternalHTTPClientFactory",
                       "newPage": false,
                       "searchKey": "httpcli.NewExternalHTTPClientFactory",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -515,9 +499,7 @@
                       "identifier": "NewFactory",
                       "newPage": false,
                       "searchKey": "httpcli.NewFactory",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -537,9 +519,7 @@
                       "identifier": "Factory.Doer",
                       "newPage": false,
                       "searchKey": "httpcli.Factory.Doer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -559,9 +539,7 @@
                       "identifier": "Factory.Client",
                       "newPage": false,
                       "searchKey": "httpcli.Factory.Client",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -584,7 +562,9 @@
                 "identifier": "externalTransport",
                 "newPage": false,
                 "searchKey": "httpcli.externalTransport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -602,7 +582,9 @@
                       "identifier": "externalTransport.RoundTrip",
                       "newPage": false,
                       "searchKey": "httpcli.externalTransport.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -622,7 +604,9 @@
                       "identifier": "externalTransport.update",
                       "newPage": false,
                       "searchKey": "httpcli.externalTransport.update",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -645,7 +629,9 @@
                 "identifier": "bogusTransport",
                 "newPage": false,
                 "searchKey": "httpcli.bogusTransport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -663,7 +649,9 @@
                       "identifier": "bogusTransport.RoundTrip",
                       "newPage": false,
                       "searchKey": "httpcli.bogusTransport.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -689,7 +677,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -707,7 +697,9 @@
                 "identifier": "externalInit",
                 "newPage": false,
                 "searchKey": "httpcli.externalInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -727,9 +719,7 @@
                 "identifier": "ExternalHTTPClient",
                 "newPage": false,
                 "searchKey": "httpcli.ExternalHTTPClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -749,9 +739,7 @@
                 "identifier": "ExternalTransportOpt",
                 "newPage": false,
                 "searchKey": "httpcli.ExternalTransportOpt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -771,7 +759,9 @@
                 "identifier": "isUnwrappableTransport",
                 "newPage": false,
                 "searchKey": "httpcli.isUnwrappableTransport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -791,9 +781,7 @@
                 "identifier": "TracedTransportOpt",
                 "newPage": false,
                 "searchKey": "httpcli.TracedTransportOpt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -813,7 +801,9 @@
                 "identifier": "getTransportForMutation",
                 "newPage": false,
                 "searchKey": "httpcli.getTransportForMutation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -833,7 +823,9 @@
                 "identifier": "TestHeadersMiddleware",
                 "newPage": false,
                 "searchKey": "httpcli.TestHeadersMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -853,7 +845,9 @@
                 "identifier": "TestContextErrorMiddleware",
                 "newPage": false,
                 "searchKey": "httpcli.TestContextErrorMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -873,7 +867,9 @@
                 "identifier": "genCert",
                 "newPage": false,
                 "searchKey": "httpcli.genCert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -893,7 +889,9 @@
                 "identifier": "TestNewCertPool",
                 "newPage": false,
                 "searchKey": "httpcli.TestNewCertPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -913,7 +911,9 @@
                 "identifier": "TestNewIdleConnTimeoutOpt",
                 "newPage": false,
                 "searchKey": "httpcli.TestNewIdleConnTimeoutOpt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -933,7 +933,9 @@
                 "identifier": "TestNewTimeoutOpt",
                 "newPage": false,
                 "searchKey": "httpcli.TestNewTimeoutOpt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

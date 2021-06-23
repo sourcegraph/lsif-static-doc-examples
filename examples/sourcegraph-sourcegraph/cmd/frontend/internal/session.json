@@ -4,7 +4,9 @@
     "identifier": "session",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/session",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "defaultExpiryPeriod",
                 "newPage": false,
                 "searchKey": "session.defaultExpiryPeriod",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "cookieName",
                 "newPage": false,
                 "searchKey": "session.cookieName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "sessionStore",
                 "newPage": false,
                 "searchKey": "session.sessionStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "sessionCookieKey",
                 "newPage": false,
                 "searchKey": "session.sessionCookieKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +158,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -162,7 +178,9 @@
                 "identifier": "sessionInfo",
                 "newPage": false,
                 "searchKey": "session.sessionInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -182,7 +200,9 @@
                 "identifier": "sessionsStore",
                 "newPage": false,
                 "searchKey": "session.sessionsStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -200,7 +220,9 @@
                       "identifier": "sessionsStore.Get",
                       "newPage": false,
                       "searchKey": "session.sessionsStore.Get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -220,7 +242,9 @@
                       "identifier": "sessionsStore.New",
                       "newPage": false,
                       "searchKey": "session.sessionsStore.New",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -240,7 +264,9 @@
                       "identifier": "sessionsStore.setSecureOptions",
                       "newPage": false,
                       "searchKey": "session.sessionsStore.setSecureOptions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -266,7 +292,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -279,12 +307,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/session#init",
+              "pathID": "/cmd/frontend/internal/session#init.session.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.session.go",
                 "newPage": false,
                 "searchKey": "session.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,9 +334,7 @@
                 "identifier": "SetSessionStore",
                 "newPage": false,
                 "searchKey": "session.SetSessionStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +354,7 @@
                 "identifier": "NewRedisStore",
                 "newPage": false,
                 "searchKey": "session.NewRedisStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -348,7 +374,9 @@
                 "identifier": "setSessionSecureOptions",
                 "newPage": false,
                 "searchKey": "session.setSessionSecureOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -368,9 +396,7 @@
                 "identifier": "Ping",
                 "newPage": false,
                 "searchKey": "session.Ping",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -390,7 +416,9 @@
                 "identifier": "ping",
                 "newPage": false,
                 "searchKey": "session.ping",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -410,7 +438,9 @@
                 "identifier": "waitForRedis",
                 "newPage": false,
                 "searchKey": "session.waitForRedis",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -430,9 +460,7 @@
                 "identifier": "SetData",
                 "newPage": false,
                 "searchKey": "session.SetData",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -452,9 +480,7 @@
                 "identifier": "GetData",
                 "newPage": false,
                 "searchKey": "session.GetData",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -474,9 +500,7 @@
                 "identifier": "SetActor",
                 "newPage": false,
                 "searchKey": "session.SetActor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -496,7 +520,9 @@
                 "identifier": "hasSessionCookie",
                 "newPage": false,
                 "searchKey": "session.hasSessionCookie",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -516,7 +542,9 @@
                 "identifier": "deleteSession",
                 "newPage": false,
                 "searchKey": "session.deleteSession",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -536,9 +564,7 @@
                 "identifier": "InvalidateSessionCurrentUser",
                 "newPage": false,
                 "searchKey": "session.InvalidateSessionCurrentUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -558,9 +584,7 @@
                 "identifier": "InvalidateSessionsByID",
                 "newPage": false,
                 "searchKey": "session.InvalidateSessionsByID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -580,9 +604,7 @@
                 "identifier": "CookieMiddleware",
                 "newPage": false,
                 "searchKey": "session.CookieMiddleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -602,9 +624,7 @@
                 "identifier": "CookieMiddlewareWithCSRFSafety",
                 "newPage": false,
                 "searchKey": "session.CookieMiddlewareWithCSRFSafety",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -624,7 +644,9 @@
                 "identifier": "authenticateByCookie",
                 "newPage": false,
                 "searchKey": "session.authenticateByCookie",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -644,9 +666,7 @@
                 "identifier": "ResetMockSessionStore",
                 "newPage": false,
                 "searchKey": "session.ResetMockSessionStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -666,7 +686,9 @@
                 "identifier": "TestSetActorDeleteSession",
                 "newPage": false,
                 "searchKey": "session.TestSetActorDeleteSession",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -686,7 +708,9 @@
                 "identifier": "checkCookieDeleted",
                 "newPage": false,
                 "searchKey": "session.checkCookieDeleted",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -706,7 +730,9 @@
                 "identifier": "TestSessionExpiry",
                 "newPage": false,
                 "searchKey": "session.TestSessionExpiry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -726,7 +752,9 @@
                 "identifier": "TestManualSessionExpiry",
                 "newPage": false,
                 "searchKey": "session.TestManualSessionExpiry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -746,7 +774,9 @@
                 "identifier": "TestCookieMiddleware",
                 "newPage": false,
                 "searchKey": "session.TestCookieMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -766,7 +796,9 @@
                 "identifier": "sessionCookie",
                 "newPage": false,
                 "searchKey": "session.sessionCookie",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -786,7 +818,9 @@
                 "identifier": "TestRecoverFromInvalidCookieValue",
                 "newPage": false,
                 "searchKey": "session.TestRecoverFromInvalidCookieValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -806,7 +840,9 @@
                 "identifier": "TestMismatchedUserCreationFails",
                 "newPage": false,
                 "searchKey": "session.TestMismatchedUserCreationFails",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -826,7 +862,9 @@
                 "identifier": "TestOldUserSessionSucceeds",
                 "newPage": false,
                 "searchKey": "session.TestOldUserSessionSucceeds",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

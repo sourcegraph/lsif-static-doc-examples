@@ -47,11 +47,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TokenHeaderName" href="#TokenHeaderName">const TokenHeaderName</a>
 
 ```
 searchKey: webhooks.TokenHeaderName
-tags: [exported]
 ```
 
 ```Go
@@ -60,11 +63,14 @@ const TokenHeaderName = "X-Gitlab-Token"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrObjectKindUnknown" href="#ErrObjectKindUnknown">var ErrObjectKindUnknown</a>
 
 ```
 searchKey: webhooks.ErrObjectKindUnknown
-tags: [exported]
 ```
 
 ```Go
@@ -73,11 +79,14 @@ var ErrObjectKindUnknown = errors.New("unknown object kind")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="EventCommon" href="#EventCommon">type EventCommon struct</a>
 
 ```
 searchKey: webhooks.EventCommon
-tags: [exported]
 ```
 
 ```Go
@@ -94,7 +103,6 @@ EventCommon contains fields that are common to all webhook event types.
 
 ```
 searchKey: webhooks.PipelineEvent
-tags: [exported]
 ```
 
 ```Go
@@ -111,6 +119,7 @@ type PipelineEvent struct {
 
 ```
 searchKey: webhooks.downcaster
+tags: [private]
 ```
 
 ```Go
@@ -123,7 +132,6 @@ type downcaster interface {
 
 ```
 searchKey: webhooks.MergeRequestEventCommon
-tags: [exported]
 ```
 
 ```Go
@@ -143,6 +151,7 @@ MergeRequestEventCommon is the common type that underpins the types defined for 
 
 ```
 searchKey: webhooks.mergeRequestEventChanges
+tags: [private]
 ```
 
 ```Go
@@ -161,7 +170,6 @@ type mergeRequestEventChanges struct {
 
 ```
 searchKey: webhooks.MergeRequestEventCommonContainer
-tags: [exported]
 ```
 
 ```Go
@@ -176,6 +184,7 @@ MergeRequestEventCommonContainer is a common interface for types that embed Merg
 
 ```
 searchKey: webhooks.keyer
+tags: [private]
 ```
 
 ```Go
@@ -188,7 +197,6 @@ type keyer interface {
 
 ```
 searchKey: webhooks.UpsertableWebhookEvent
-tags: [exported]
 ```
 
 ```Go
@@ -204,7 +212,6 @@ UpsertableWebhookEvent is a common interface for types that embed ToEvent to pro
 
 ```
 searchKey: webhooks.MergeRequestApprovedEvent
-tags: [exported]
 ```
 
 ```Go
@@ -215,7 +222,6 @@ type MergeRequestApprovedEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestApprovedEvent.ToEventCommon
-tags: [exported]
 ```
 
 ```Go
@@ -226,7 +232,6 @@ func (e *MergeRequestApprovedEvent) ToEventCommon() *MergeRequestEventCommon
 
 ```
 searchKey: webhooks.MergeRequestUnapprovedEvent
-tags: [exported]
 ```
 
 ```Go
@@ -237,7 +242,6 @@ type MergeRequestUnapprovedEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestUnapprovedEvent.ToEventCommon
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +252,6 @@ func (e *MergeRequestUnapprovedEvent) ToEventCommon() *MergeRequestEventCommon
 
 ```
 searchKey: webhooks.MergeRequestUpdateEvent
-tags: [exported]
 ```
 
 ```Go
@@ -259,7 +262,6 @@ type MergeRequestUpdateEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestUpdateEvent.ToEventCommon
-tags: [exported]
 ```
 
 ```Go
@@ -270,7 +272,6 @@ func (e *MergeRequestUpdateEvent) ToEventCommon() *MergeRequestEventCommon
 
 ```
 searchKey: webhooks.MergeRequestCloseEvent
-tags: [exported]
 ```
 
 ```Go
@@ -281,7 +282,6 @@ type MergeRequestCloseEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestCloseEvent.ToEventCommon
-tags: [exported]
 ```
 
 ```Go
@@ -292,7 +292,6 @@ func (e *MergeRequestCloseEvent) ToEventCommon() *MergeRequestEventCommon
 
 ```
 searchKey: webhooks.MergeRequestCloseEvent.ToEvent
-tags: [exported]
 ```
 
 ```Go
@@ -303,7 +302,6 @@ func (e *MergeRequestCloseEvent) ToEvent() keyer
 
 ```
 searchKey: webhooks.MergeRequestMergeEvent
-tags: [exported]
 ```
 
 ```Go
@@ -314,7 +312,6 @@ type MergeRequestMergeEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestMergeEvent.ToEventCommon
-tags: [exported]
 ```
 
 ```Go
@@ -325,7 +322,6 @@ func (e *MergeRequestMergeEvent) ToEventCommon() *MergeRequestEventCommon
 
 ```
 searchKey: webhooks.MergeRequestMergeEvent.ToEvent
-tags: [exported]
 ```
 
 ```Go
@@ -336,7 +332,6 @@ func (e *MergeRequestMergeEvent) ToEvent() keyer
 
 ```
 searchKey: webhooks.MergeRequestReopenEvent
-tags: [exported]
 ```
 
 ```Go
@@ -347,7 +342,6 @@ type MergeRequestReopenEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestReopenEvent.ToEventCommon
-tags: [exported]
 ```
 
 ```Go
@@ -358,7 +352,6 @@ func (e *MergeRequestReopenEvent) ToEventCommon() *MergeRequestEventCommon
 
 ```
 searchKey: webhooks.MergeRequestReopenEvent.ToEvent
-tags: [exported]
 ```
 
 ```Go
@@ -369,7 +362,6 @@ func (e *MergeRequestReopenEvent) ToEvent() keyer
 
 ```
 searchKey: webhooks.MergeRequestUndraftEvent
-tags: [exported]
 ```
 
 ```Go
@@ -380,7 +372,6 @@ type MergeRequestUndraftEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestUndraftEvent.ToEventCommon
-tags: [exported]
 ```
 
 ```Go
@@ -391,7 +382,6 @@ func (e *MergeRequestUndraftEvent) ToEventCommon() *MergeRequestEventCommon
 
 ```
 searchKey: webhooks.MergeRequestUndraftEvent.ToEvent
-tags: [exported]
 ```
 
 ```Go
@@ -402,7 +392,6 @@ func (e *MergeRequestUndraftEvent) ToEvent() keyer
 
 ```
 searchKey: webhooks.MergeRequestDraftEvent
-tags: [exported]
 ```
 
 ```Go
@@ -413,7 +402,6 @@ type MergeRequestDraftEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestDraftEvent.ToEventCommon
-tags: [exported]
 ```
 
 ```Go
@@ -424,7 +412,6 @@ func (e *MergeRequestDraftEvent) ToEventCommon() *MergeRequestEventCommon
 
 ```
 searchKey: webhooks.MergeRequestDraftEvent.ToEvent
-tags: [exported]
 ```
 
 ```Go
@@ -435,6 +422,7 @@ func (e *MergeRequestDraftEvent) ToEvent() keyer
 
 ```
 searchKey: webhooks.mergeRequestEvent
+tags: [private]
 ```
 
 ```Go
@@ -455,6 +443,7 @@ mergeRequestEvent is an internal type used for initially unmarshalling the typed
 
 ```
 searchKey: webhooks.mergeRequestEvent.downcast
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +454,7 @@ func (mre *mergeRequestEvent) downcast() (interface{}, error)
 
 ```
 searchKey: webhooks.mergeRequestEventObjectAttributes
+tags: [private]
 ```
 
 ```Go
@@ -476,11 +466,14 @@ type mergeRequestEventObjectAttributes struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="UnmarshalEvent" href="#UnmarshalEvent">func UnmarshalEvent(data []byte) (interface{}, error)</a>
 
 ```
 searchKey: webhooks.UnmarshalEvent
-tags: [exported]
 ```
 
 ```Go
@@ -495,6 +488,7 @@ Errors caused by a valid payload being of an unknown type may be distinguished f
 
 ```
 searchKey: webhooks.TestUnmarshalEvent
+tags: [private]
 ```
 
 ```Go
@@ -505,6 +499,7 @@ func TestUnmarshalEvent(t *testing.T)
 
 ```
 searchKey: webhooks.TestMergeRequestDowncast
+tags: [private]
 ```
 
 ```Go

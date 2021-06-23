@@ -119,10 +119,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="sep" href="#sep">const sep</a>
 
 ```
 searchKey: filepath_test.sep
+tags: [private]
 ```
 
 ```Go
@@ -133,6 +138,7 @@ const sep = filepath.Separator
 
 ```
 searchKey: filepath_test.lsep
+tags: [private]
 ```
 
 ```Go
@@ -141,10 +147,15 @@ const lsep = filepath.ListSeparator
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="matchTests" href="#matchTests">var matchTests</a>
 
 ```
 searchKey: filepath_test.matchTests
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +166,7 @@ var matchTests = ...
 
 ```
 searchKey: filepath_test.globTests
+tags: [private]
 ```
 
 ```Go
@@ -165,6 +177,7 @@ var globTests = ...
 
 ```
 searchKey: filepath_test.globSymlinkTests
+tags: [private]
 ```
 
 ```Go
@@ -175,6 +188,7 @@ var globSymlinkTests = ...
 
 ```
 searchKey: filepath_test.cleantests
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +199,7 @@ var cleantests = ...
 
 ```
 searchKey: filepath_test.wincleantests
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +210,7 @@ var wincleantests = ...
 
 ```
 searchKey: filepath_test.slashtests
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +221,7 @@ var slashtests = ...
 
 ```
 searchKey: filepath_test.splitlisttests
+tags: [private]
 ```
 
 ```Go
@@ -215,6 +232,7 @@ var splitlisttests = ...
 
 ```
 searchKey: filepath_test.winsplitlisttests
+tags: [private]
 ```
 
 ```Go
@@ -225,6 +243,7 @@ var winsplitlisttests = ...
 
 ```
 searchKey: filepath_test.unixsplittests
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +254,7 @@ var unixsplittests = ...
 
 ```
 searchKey: filepath_test.winsplittests
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +265,7 @@ var winsplittests = ...
 
 ```
 searchKey: filepath_test.jointests
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +276,7 @@ var jointests = ...
 
 ```
 searchKey: filepath_test.winjointests
+tags: [private]
 ```
 
 ```Go
@@ -265,6 +287,7 @@ var winjointests = ...
 
 ```
 searchKey: filepath_test.exttests
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +298,7 @@ var exttests = ...
 
 ```
 searchKey: filepath_test.tree
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +309,7 @@ var tree = ...
 
 ```
 searchKey: filepath_test.basetests
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +320,7 @@ var basetests = ...
 
 ```
 searchKey: filepath_test.winbasetests
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +331,7 @@ var winbasetests = ...
 
 ```
 searchKey: filepath_test.dirtests
+tags: [private]
 ```
 
 ```Go
@@ -315,6 +342,7 @@ var dirtests = ...
 
 ```
 searchKey: filepath_test.windirtests
+tags: [private]
 ```
 
 ```Go
@@ -325,6 +353,7 @@ var windirtests = ...
 
 ```
 searchKey: filepath_test.isabstests
+tags: [private]
 ```
 
 ```Go
@@ -335,6 +364,7 @@ var isabstests = ...
 
 ```
 searchKey: filepath_test.winisabstests
+tags: [private]
 ```
 
 ```Go
@@ -345,6 +375,7 @@ var winisabstests = ...
 
 ```
 searchKey: filepath_test.EvalSymlinksTestDirs
+tags: [private]
 ```
 
 ```Go
@@ -355,6 +386,7 @@ var EvalSymlinksTestDirs = ...
 
 ```
 searchKey: filepath_test.EvalSymlinksTests
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +397,7 @@ var EvalSymlinksTests = ...
 
 ```
 searchKey: filepath_test.absTestDirs
+tags: [private]
 ```
 
 ```Go
@@ -381,6 +414,7 @@ Test directories relative to temporary directory. The tests are run in absTestDi
 
 ```
 searchKey: filepath_test.absTests
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +427,7 @@ Test paths relative to temporary directory. $ expands to the directory. The test
 
 ```
 searchKey: filepath_test.reltests
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +438,7 @@ var reltests = ...
 
 ```
 searchKey: filepath_test.winreltests
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +449,7 @@ var winreltests = ...
 
 ```
 searchKey: filepath_test.volumenametests
+tags: [private]
 ```
 
 ```Go
@@ -421,10 +458,15 @@ var volumenametests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MatchTest" href="#MatchTest">type MatchTest struct</a>
 
 ```
 searchKey: filepath_test.MatchTest
+tags: [private]
 ```
 
 ```Go
@@ -439,6 +481,7 @@ type MatchTest struct {
 
 ```
 searchKey: filepath_test.globTest
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +495,7 @@ type globTest struct {
 
 ```
 searchKey: filepath_test.globTest.buildWant
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +506,7 @@ func (test *globTest) buildWant(root string) []string
 
 ```
 searchKey: filepath_test.globTest.globAbs
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +517,7 @@ func (test *globTest) globAbs(root, rootPattern string) error
 
 ```
 searchKey: filepath_test.globTest.globRel
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +528,7 @@ func (test *globTest) globRel(root string) error
 
 ```
 searchKey: filepath_test.PathTest
+tags: [private]
 ```
 
 ```Go
@@ -494,6 +541,7 @@ type PathTest struct {
 
 ```
 searchKey: filepath_test.SplitListTest
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +555,7 @@ type SplitListTest struct {
 
 ```
 searchKey: filepath_test.SplitTest
+tags: [private]
 ```
 
 ```Go
@@ -519,6 +568,7 @@ type SplitTest struct {
 
 ```
 searchKey: filepath_test.JoinTest
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +582,7 @@ type JoinTest struct {
 
 ```
 searchKey: filepath_test.ExtTest
+tags: [private]
 ```
 
 ```Go
@@ -544,6 +595,7 @@ type ExtTest struct {
 
 ```
 searchKey: filepath_test.Node
+tags: [private]
 ```
 
 ```Go
@@ -558,6 +610,7 @@ type Node struct {
 
 ```
 searchKey: filepath_test.statDirEntry
+tags: [private]
 ```
 
 ```Go
@@ -570,6 +623,7 @@ type statDirEntry struct {
 
 ```
 searchKey: filepath_test.statDirEntry.Name
+tags: [private]
 ```
 
 ```Go
@@ -580,6 +634,7 @@ func (d *statDirEntry) Name() string
 
 ```
 searchKey: filepath_test.statDirEntry.IsDir
+tags: [private]
 ```
 
 ```Go
@@ -590,6 +645,7 @@ func (d *statDirEntry) IsDir() bool
 
 ```
 searchKey: filepath_test.statDirEntry.Type
+tags: [private]
 ```
 
 ```Go
@@ -600,6 +656,7 @@ func (d *statDirEntry) Type() fs.FileMode
 
 ```
 searchKey: filepath_test.statDirEntry.Info
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +667,7 @@ func (d *statDirEntry) Info() (fs.FileInfo, error)
 
 ```
 searchKey: filepath_test.IsAbsTest
+tags: [private]
 ```
 
 ```Go
@@ -623,6 +681,7 @@ type IsAbsTest struct {
 
 ```
 searchKey: filepath_test.EvalSymlinksTest
+tags: [private]
 ```
 
 ```Go
@@ -636,6 +695,7 @@ type EvalSymlinksTest struct {
 
 ```
 searchKey: filepath_test.RelTests
+tags: [private]
 ```
 
 ```Go
@@ -648,6 +708,7 @@ type RelTests struct {
 
 ```
 searchKey: filepath_test.VolumeNameTest
+tags: [private]
 ```
 
 ```Go
@@ -659,10 +720,15 @@ type VolumeNameTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleExt" href="#ExampleExt">func ExampleExt()</a>
 
 ```
 searchKey: filepath_test.ExampleExt
+tags: [private]
 ```
 
 ```Go
@@ -673,6 +739,7 @@ func ExampleExt()
 
 ```
 searchKey: filepath_test.ExampleSplitList
+tags: [private]
 ```
 
 ```Go
@@ -683,6 +750,7 @@ func ExampleSplitList()
 
 ```
 searchKey: filepath_test.ExampleRel
+tags: [private]
 ```
 
 ```Go
@@ -693,6 +761,7 @@ func ExampleRel()
 
 ```
 searchKey: filepath_test.ExampleSplit
+tags: [private]
 ```
 
 ```Go
@@ -703,6 +772,7 @@ func ExampleSplit()
 
 ```
 searchKey: filepath_test.ExampleJoin
+tags: [private]
 ```
 
 ```Go
@@ -713,6 +783,7 @@ func ExampleJoin()
 
 ```
 searchKey: filepath_test.ExampleMatch
+tags: [private]
 ```
 
 ```Go
@@ -723,6 +794,7 @@ func ExampleMatch()
 
 ```
 searchKey: filepath_test.ExampleBase
+tags: [private]
 ```
 
 ```Go
@@ -733,6 +805,7 @@ func ExampleBase()
 
 ```
 searchKey: filepath_test.ExampleDir
+tags: [private]
 ```
 
 ```Go
@@ -743,6 +816,7 @@ func ExampleDir()
 
 ```
 searchKey: filepath_test.ExampleIsAbs
+tags: [private]
 ```
 
 ```Go
@@ -753,6 +827,7 @@ func ExampleIsAbs()
 
 ```
 searchKey: filepath_test.prepareTestDirTree
+tags: [private]
 ```
 
 ```Go
@@ -763,6 +838,7 @@ func prepareTestDirTree(tree string) (string, error)
 
 ```
 searchKey: filepath_test.ExampleWalk
+tags: [private]
 ```
 
 ```Go
@@ -773,6 +849,7 @@ func ExampleWalk()
 
 ```
 searchKey: filepath_test.errp
+tags: [private]
 ```
 
 ```Go
@@ -783,6 +860,7 @@ func errp(e error) string
 
 ```
 searchKey: filepath_test.TestMatch
+tags: [private]
 ```
 
 ```Go
@@ -793,6 +871,7 @@ func TestMatch(t *testing.T)
 
 ```
 searchKey: filepath_test.contains
+tags: [private]
 ```
 
 ```Go
@@ -805,6 +884,7 @@ contains reports whether vector contains the string s.
 
 ```
 searchKey: filepath_test.TestGlob
+tags: [private]
 ```
 
 ```Go
@@ -815,6 +895,7 @@ func TestGlob(t *testing.T)
 
 ```
 searchKey: filepath_test.TestGlobError
+tags: [private]
 ```
 
 ```Go
@@ -825,6 +906,7 @@ func TestGlobError(t *testing.T)
 
 ```
 searchKey: filepath_test.TestGlobUNC
+tags: [private]
 ```
 
 ```Go
@@ -835,6 +917,7 @@ func TestGlobUNC(t *testing.T)
 
 ```
 searchKey: filepath_test.TestGlobSymlink
+tags: [private]
 ```
 
 ```Go
@@ -845,6 +928,7 @@ func TestGlobSymlink(t *testing.T)
 
 ```
 searchKey: filepath_test.TestWindowsGlob
+tags: [private]
 ```
 
 ```Go
@@ -855,6 +939,7 @@ func TestWindowsGlob(t *testing.T)
 
 ```
 searchKey: filepath_test.TestNonWindowsGlobEscape
+tags: [private]
 ```
 
 ```Go
@@ -865,6 +950,7 @@ func TestNonWindowsGlobEscape(t *testing.T)
 
 ```
 searchKey: filepath_test.TestClean
+tags: [private]
 ```
 
 ```Go
@@ -875,6 +961,7 @@ func TestClean(t *testing.T)
 
 ```
 searchKey: filepath_test.TestFromAndToSlash
+tags: [private]
 ```
 
 ```Go
@@ -885,6 +972,7 @@ func TestFromAndToSlash(t *testing.T)
 
 ```
 searchKey: filepath_test.TestSplitList
+tags: [private]
 ```
 
 ```Go
@@ -895,6 +983,7 @@ func TestSplitList(t *testing.T)
 
 ```
 searchKey: filepath_test.TestSplit
+tags: [private]
 ```
 
 ```Go
@@ -905,6 +994,7 @@ func TestSplit(t *testing.T)
 
 ```
 searchKey: filepath_test.TestJoin
+tags: [private]
 ```
 
 ```Go
@@ -915,6 +1005,7 @@ func TestJoin(t *testing.T)
 
 ```
 searchKey: filepath_test.TestExt
+tags: [private]
 ```
 
 ```Go
@@ -925,6 +1016,7 @@ func TestExt(t *testing.T)
 
 ```
 searchKey: filepath_test.walkTree
+tags: [private]
 ```
 
 ```Go
@@ -935,6 +1027,7 @@ func walkTree(n *Node, path string, f func(path string, n *Node))
 
 ```
 searchKey: filepath_test.makeTree
+tags: [private]
 ```
 
 ```Go
@@ -945,6 +1038,7 @@ func makeTree(t *testing.T)
 
 ```
 searchKey: filepath_test.markTree
+tags: [private]
 ```
 
 ```Go
@@ -955,6 +1049,7 @@ func markTree(n *Node)
 
 ```
 searchKey: filepath_test.checkMarks
+tags: [private]
 ```
 
 ```Go
@@ -965,6 +1060,7 @@ func checkMarks(t *testing.T, report bool)
 
 ```
 searchKey: filepath_test.mark
+tags: [private]
 ```
 
 ```Go
@@ -977,6 +1073,7 @@ Assumes that each node name is unique. Good enough for a test. If clear is true,
 
 ```
 searchKey: filepath_test.chdir
+tags: [private]
 ```
 
 ```Go
@@ -989,6 +1086,7 @@ chdir changes the current working directory to the named directory, and then res
 
 ```
 searchKey: filepath_test.chtmpdir
+tags: [private]
 ```
 
 ```Go
@@ -999,6 +1097,7 @@ func chtmpdir(t *testing.T) (restore func())
 
 ```
 searchKey: filepath_test.tempDirCanonical
+tags: [private]
 ```
 
 ```Go
@@ -1011,6 +1110,7 @@ tempDirCanonical returns a temporary directory for the test to use, ensuring tha
 
 ```
 searchKey: filepath_test.TestWalk
+tags: [private]
 ```
 
 ```Go
@@ -1021,6 +1121,7 @@ func TestWalk(t *testing.T)
 
 ```
 searchKey: filepath_test.TestWalkDir
+tags: [private]
 ```
 
 ```Go
@@ -1031,6 +1132,7 @@ func TestWalkDir(t *testing.T)
 
 ```
 searchKey: filepath_test.testWalk
+tags: [private]
 ```
 
 ```Go
@@ -1041,6 +1143,7 @@ func testWalk(t *testing.T, walk func(string, fs.WalkDirFunc) error, errVisit in
 
 ```
 searchKey: filepath_test.touch
+tags: [private]
 ```
 
 ```Go
@@ -1051,6 +1154,7 @@ func touch(t *testing.T, name string)
 
 ```
 searchKey: filepath_test.TestWalkSkipDirOnFile
+tags: [private]
 ```
 
 ```Go
@@ -1061,6 +1165,7 @@ func TestWalkSkipDirOnFile(t *testing.T)
 
 ```
 searchKey: filepath_test.TestWalkFileError
+tags: [private]
 ```
 
 ```Go
@@ -1071,6 +1176,7 @@ func TestWalkFileError(t *testing.T)
 
 ```
 searchKey: filepath_test.TestBase
+tags: [private]
 ```
 
 ```Go
@@ -1081,6 +1187,7 @@ func TestBase(t *testing.T)
 
 ```
 searchKey: filepath_test.TestDir
+tags: [private]
 ```
 
 ```Go
@@ -1091,6 +1198,7 @@ func TestDir(t *testing.T)
 
 ```
 searchKey: filepath_test.TestIsAbs
+tags: [private]
 ```
 
 ```Go
@@ -1101,6 +1209,7 @@ func TestIsAbs(t *testing.T)
 
 ```
 searchKey: filepath_test.simpleJoin
+tags: [private]
 ```
 
 ```Go
@@ -1113,6 +1222,7 @@ simpleJoin builds a file name from the directory and path. It does not use Join 
 
 ```
 searchKey: filepath_test.testEvalSymlinks
+tags: [private]
 ```
 
 ```Go
@@ -1123,6 +1233,7 @@ func testEvalSymlinks(t *testing.T, path, want string)
 
 ```
 searchKey: filepath_test.testEvalSymlinksAfterChdir
+tags: [private]
 ```
 
 ```Go
@@ -1133,6 +1244,7 @@ func testEvalSymlinksAfterChdir(t *testing.T, wd, path, want string)
 
 ```
 searchKey: filepath_test.TestEvalSymlinks
+tags: [private]
 ```
 
 ```Go
@@ -1143,6 +1255,7 @@ func TestEvalSymlinks(t *testing.T)
 
 ```
 searchKey: filepath_test.TestEvalSymlinksIsNotExist
+tags: [private]
 ```
 
 ```Go
@@ -1153,6 +1266,7 @@ func TestEvalSymlinksIsNotExist(t *testing.T)
 
 ```
 searchKey: filepath_test.TestIssue13582
+tags: [private]
 ```
 
 ```Go
@@ -1163,6 +1277,7 @@ func TestIssue13582(t *testing.T)
 
 ```
 searchKey: filepath_test.TestAbs
+tags: [private]
 ```
 
 ```Go
@@ -1173,6 +1288,7 @@ func TestAbs(t *testing.T)
 
 ```
 searchKey: filepath_test.TestAbsEmptyString
+tags: [private]
 ```
 
 ```Go
@@ -1185,6 +1301,7 @@ Empty path needs to be special-cased on Windows. See golang.org/issue/24441. We 
 
 ```
 searchKey: filepath_test.TestRel
+tags: [private]
 ```
 
 ```Go
@@ -1195,6 +1312,7 @@ func TestRel(t *testing.T)
 
 ```
 searchKey: filepath_test.TestVolumeName
+tags: [private]
 ```
 
 ```Go
@@ -1205,6 +1323,7 @@ func TestVolumeName(t *testing.T)
 
 ```
 searchKey: filepath_test.TestDriveLetterInEvalSymlinks
+tags: [private]
 ```
 
 ```Go
@@ -1215,6 +1334,7 @@ func TestDriveLetterInEvalSymlinks(t *testing.T)
 
 ```
 searchKey: filepath_test.TestBug3486
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1345,7 @@ func TestBug3486(t *testing.T)
 
 ```
 searchKey: filepath_test.testWalkSymlink
+tags: [private]
 ```
 
 ```Go
@@ -1235,6 +1356,7 @@ func testWalkSymlink(t *testing.T, mklink func(target, link string) error)
 
 ```
 searchKey: filepath_test.TestWalkSymlink
+tags: [private]
 ```
 
 ```Go
@@ -1245,6 +1367,7 @@ func TestWalkSymlink(t *testing.T)
 
 ```
 searchKey: filepath_test.TestIssue29372
+tags: [private]
 ```
 
 ```Go
@@ -1255,6 +1378,7 @@ func TestIssue29372(t *testing.T)
 
 ```
 searchKey: filepath_test.TestEvalSymlinksAboveRoot
+tags: [private]
 ```
 
 ```Go
@@ -1267,6 +1391,7 @@ Issue 30520 part 1.
 
 ```
 searchKey: filepath_test.TestEvalSymlinksAboveRootChdir
+tags: [private]
 ```
 
 ```Go

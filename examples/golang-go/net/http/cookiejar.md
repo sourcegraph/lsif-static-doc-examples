@@ -91,14 +91,11 @@ Package cookiejar implements an in-memory RFC 6265-compliant http.CookieJar.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="base" href="#base">const base</a>
 
 ```
 searchKey: cookiejar.base
+tags: [private]
 ```
 
 ```Go
@@ -113,6 +110,7 @@ All computation is done with int32s, so that overflow behavior is identical rega
 
 ```
 searchKey: cookiejar.damp
+tags: [private]
 ```
 
 ```Go
@@ -127,6 +125,7 @@ All computation is done with int32s, so that overflow behavior is identical rega
 
 ```
 searchKey: cookiejar.initialBias
+tags: [private]
 ```
 
 ```Go
@@ -141,6 +140,7 @@ All computation is done with int32s, so that overflow behavior is identical rega
 
 ```
 searchKey: cookiejar.initialN
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +155,7 @@ All computation is done with int32s, so that overflow behavior is identical rega
 
 ```
 searchKey: cookiejar.skew
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +170,7 @@ All computation is done with int32s, so that overflow behavior is identical rega
 
 ```
 searchKey: cookiejar.tmax
+tags: [private]
 ```
 
 ```Go
@@ -183,6 +185,7 @@ All computation is done with int32s, so that overflow behavior is identical rega
 
 ```
 searchKey: cookiejar.tmin
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +200,7 @@ All computation is done with int32s, so that overflow behavior is identical rega
 
 ```
 searchKey: cookiejar.acePrefix
+tags: [private]
 ```
 
 ```Go
@@ -207,14 +211,11 @@ acePrefix is the ASCII Compatible Encoding prefix.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="errIllegalDomain" href="#errIllegalDomain">var errIllegalDomain</a>
 
 ```
 searchKey: cookiejar.errIllegalDomain
+tags: [private]
 ```
 
 ```Go
@@ -225,6 +226,7 @@ var errIllegalDomain = errors.New("cookiejar: illegal cookie domain attribute")
 
 ```
 searchKey: cookiejar.errMalformedDomain
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +237,7 @@ var errMalformedDomain = errors.New("cookiejar: malformed cookie domain attribut
 
 ```
 searchKey: cookiejar.errNoHostname
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +248,7 @@ var errNoHostname = errors.New("cookiejar: no host name available (IP only)")
 
 ```
 searchKey: cookiejar.endOfTime
+tags: [private]
 ```
 
 ```Go
@@ -257,6 +261,7 @@ endOfTime is the time when session (non-persistent) cookies expire. This instant
 
 ```
 searchKey: cookiejar.tNow
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +274,7 @@ tNow is the synthetic current time used as now during testing.
 
 ```
 searchKey: cookiejar.hasDotSuffixTests
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +285,7 @@ var hasDotSuffixTests = ...
 
 ```
 searchKey: cookiejar.canonicalHostTests
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +296,7 @@ var canonicalHostTests = ...
 
 ```
 searchKey: cookiejar.hasPortTests
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +307,7 @@ var hasPortTests = ...
 
 ```
 searchKey: cookiejar.jarKeyTests
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +318,7 @@ var jarKeyTests = ...
 
 ```
 searchKey: cookiejar.jarKeyNilPSLTests
+tags: [private]
 ```
 
 ```Go
@@ -319,6 +329,7 @@ var jarKeyNilPSLTests = ...
 
 ```
 searchKey: cookiejar.isIPTests
+tags: [private]
 ```
 
 ```Go
@@ -329,6 +340,7 @@ var isIPTests = ...
 
 ```
 searchKey: cookiejar.defaultPathTests
+tags: [private]
 ```
 
 ```Go
@@ -339,6 +351,7 @@ var defaultPathTests = ...
 
 ```
 searchKey: cookiejar.domainAndTypeTests
+tags: [private]
 ```
 
 ```Go
@@ -349,6 +362,7 @@ var domainAndTypeTests = ...
 
 ```
 searchKey: cookiejar.basicsTests
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +375,7 @@ basicsTests contains fundamental tests. Each jarTest has to be performed on a fr
 
 ```
 searchKey: cookiejar.updateAndDeleteTests
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +388,7 @@ updateAndDeleteTests contains jarTests which must be performed on the same Jar.
 
 ```
 searchKey: cookiejar.chromiumBasicsTests
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +401,7 @@ chromiumBasicsTests contains fundamental tests. Each jarTest has to be performed
 
 ```
 searchKey: cookiejar.chromiumDomainTests
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +414,7 @@ chromiumDomainTests contains jarTests which must be executed all on the same Jar
 
 ```
 searchKey: cookiejar.chromiumDeletionTests
+tags: [private]
 ```
 
 ```Go
@@ -409,6 +427,7 @@ chromiumDeletionTests must be performed all on the same Jar.
 
 ```
 searchKey: cookiejar.domainHandlingTests
+tags: [private]
 ```
 
 ```Go
@@ -421,6 +440,7 @@ domainHandlingTests tests and documents the rules for domain handling. Each test
 
 ```
 searchKey: cookiejar.punycodeTestCases
+tags: [private]
 ```
 
 ```Go
@@ -429,15 +449,10 @@ var punycodeTestCases = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="PublicSuffixList" href="#PublicSuffixList">type PublicSuffixList interface</a>
 
 ```
 searchKey: cookiejar.PublicSuffixList
-tags: [exported]
 ```
 
 ```Go
@@ -474,7 +489,6 @@ A public suffix list implementation is in the package golang.org/x/net/publicsuf
 
 ```
 searchKey: cookiejar.Options
-tags: [exported]
 ```
 
 ```Go
@@ -495,7 +509,6 @@ Options are the options for creating a new Jar.
 
 ```
 searchKey: cookiejar.Jar
-tags: [exported]
 ```
 
 ```Go
@@ -521,7 +534,6 @@ Jar implements the http.CookieJar interface from the net/http package.
 
 ```
 searchKey: cookiejar.New
-tags: [exported]
 ```
 
 ```Go
@@ -534,6 +546,7 @@ New returns a new cookie jar. A nil *Options is equivalent to a zero Options.
 
 ```
 searchKey: cookiejar.newTestJar
+tags: [private]
 ```
 
 ```Go
@@ -546,7 +559,6 @@ newTestJar creates an empty Jar with testPSL as the public suffix list.
 
 ```
 searchKey: cookiejar.Jar.Cookies
-tags: [exported]
 ```
 
 ```Go
@@ -561,6 +573,7 @@ It returns an empty slice if the URL's scheme is not HTTP or HTTPS.
 
 ```
 searchKey: cookiejar.Jar.cookies
+tags: [private]
 ```
 
 ```Go
@@ -573,7 +586,6 @@ cookies is like Cookies but takes the current time as a parameter.
 
 ```
 searchKey: cookiejar.Jar.SetCookies
-tags: [exported]
 ```
 
 ```Go
@@ -588,6 +600,7 @@ It does nothing if the URL's scheme is not HTTP or HTTPS.
 
 ```
 searchKey: cookiejar.Jar.setCookies
+tags: [private]
 ```
 
 ```Go
@@ -600,6 +613,7 @@ setCookies is like SetCookies but takes the current time as parameter.
 
 ```
 searchKey: cookiejar.Jar.newEntry
+tags: [private]
 ```
 
 ```Go
@@ -616,6 +630,7 @@ A malformed c.Domain will result in an error.
 
 ```
 searchKey: cookiejar.Jar.domainAndType
+tags: [private]
 ```
 
 ```Go
@@ -628,6 +643,7 @@ domainAndType determines the cookie's domain and hostOnly attribute.
 
 ```
 searchKey: cookiejar.entry
+tags: [private]
 ```
 
 ```Go
@@ -660,6 +676,7 @@ This struct type is not used outside of this package per se, but the exported fi
 
 ```
 searchKey: cookiejar.entry.id
+tags: [private]
 ```
 
 ```Go
@@ -672,6 +689,7 @@ id returns the domain;path;name triple of e as an id.
 
 ```
 searchKey: cookiejar.entry.shouldSend
+tags: [private]
 ```
 
 ```Go
@@ -684,6 +702,7 @@ shouldSend determines whether e's cookie qualifies to be included in a request t
 
 ```
 searchKey: cookiejar.entry.domainMatch
+tags: [private]
 ```
 
 ```Go
@@ -696,6 +715,7 @@ domainMatch implements "domain-match" of RFC 6265 section 5.1.3.
 
 ```
 searchKey: cookiejar.entry.pathMatch
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +728,7 @@ pathMatch implements "path-match" according to RFC 6265 section 5.1.4.
 
 ```
 searchKey: cookiejar.testPSL
+tags: [private]
 ```
 
 ```Go
@@ -725,6 +746,7 @@ PublicSuffix("www2.buggy.psl") == "com"
 
 ```
 searchKey: cookiejar.testPSL.String
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +757,7 @@ func (testPSL) String() string
 
 ```
 searchKey: cookiejar.testPSL.PublicSuffix
+tags: [private]
 ```
 
 ```Go
@@ -745,6 +768,7 @@ func (testPSL) PublicSuffix(d string) string
 
 ```
 searchKey: cookiejar.jarTest
+tags: [private]
 ```
 
 ```Go
@@ -773,6 +797,7 @@ jarTest encapsulates the following actions on a jar:
 
 ```
 searchKey: cookiejar.jarTest.run
+tags: [private]
 ```
 
 ```Go
@@ -785,6 +810,7 @@ run runs the jarTest.
 
 ```
 searchKey: cookiejar.query
+tags: [private]
 ```
 
 ```Go
@@ -798,14 +824,11 @@ query contains one test of the cookies returned from Jar.Cookies.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="hasDotSuffix" href="#hasDotSuffix">func hasDotSuffix(s, suffix string) bool</a>
 
 ```
 searchKey: cookiejar.hasDotSuffix
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +841,7 @@ hasDotSuffix reports whether s ends in "."+suffix.
 
 ```
 searchKey: cookiejar.canonicalHost
+tags: [private]
 ```
 
 ```Go
@@ -830,6 +854,7 @@ canonicalHost strips port from host if present and returns the canonicalized hos
 
 ```
 searchKey: cookiejar.hasPort
+tags: [private]
 ```
 
 ```Go
@@ -842,6 +867,7 @@ hasPort reports whether host contains a port number. host may be a host name, an
 
 ```
 searchKey: cookiejar.jarKey
+tags: [private]
 ```
 
 ```Go
@@ -854,6 +880,7 @@ jarKey returns the key to use for a jar.
 
 ```
 searchKey: cookiejar.isIP
+tags: [private]
 ```
 
 ```Go
@@ -866,6 +893,7 @@ isIP reports whether host is an IP address.
 
 ```
 searchKey: cookiejar.defaultPath
+tags: [private]
 ```
 
 ```Go
@@ -878,6 +906,7 @@ defaultPath returns the directory part of an URL's path according to RFC 6265 se
 
 ```
 searchKey: cookiejar.encode
+tags: [private]
 ```
 
 ```Go
@@ -892,6 +921,7 @@ The "while h < length(input)" line in the specification becomes "for remaining !
 
 ```
 searchKey: cookiejar.encodeDigit
+tags: [private]
 ```
 
 ```Go
@@ -902,6 +932,7 @@ func encodeDigit(digit int32) byte
 
 ```
 searchKey: cookiejar.adapt
+tags: [private]
 ```
 
 ```Go
@@ -914,6 +945,7 @@ adapt is the bias adaptation function specified in section 6.1.
 
 ```
 searchKey: cookiejar.toASCII
+tags: [private]
 ```
 
 ```Go
@@ -926,6 +958,7 @@ toASCII converts a domain or domain label to its ASCII form. For example, toASCI
 
 ```
 searchKey: cookiejar.TestHasDotSuffix
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +969,7 @@ func TestHasDotSuffix(t *testing.T)
 
 ```
 searchKey: cookiejar.TestCanonicalHost
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +980,7 @@ func TestCanonicalHost(t *testing.T)
 
 ```
 searchKey: cookiejar.TestHasPort
+tags: [private]
 ```
 
 ```Go
@@ -956,6 +991,7 @@ func TestHasPort(t *testing.T)
 
 ```
 searchKey: cookiejar.TestJarKey
+tags: [private]
 ```
 
 ```Go
@@ -966,6 +1002,7 @@ func TestJarKey(t *testing.T)
 
 ```
 searchKey: cookiejar.TestJarKeyNilPSL
+tags: [private]
 ```
 
 ```Go
@@ -976,6 +1013,7 @@ func TestJarKeyNilPSL(t *testing.T)
 
 ```
 searchKey: cookiejar.TestIsIP
+tags: [private]
 ```
 
 ```Go
@@ -986,6 +1024,7 @@ func TestIsIP(t *testing.T)
 
 ```
 searchKey: cookiejar.TestDefaultPath
+tags: [private]
 ```
 
 ```Go
@@ -996,6 +1035,7 @@ func TestDefaultPath(t *testing.T)
 
 ```
 searchKey: cookiejar.TestDomainAndType
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +1046,7 @@ func TestDomainAndType(t *testing.T)
 
 ```
 searchKey: cookiejar.expiresIn
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1059,7 @@ expiresIn creates an expires attribute delta seconds from tNow.
 
 ```
 searchKey: cookiejar.mustParseURL
+tags: [private]
 ```
 
 ```Go
@@ -1030,6 +1072,7 @@ mustParseURL parses s to an URL and panics on error.
 
 ```
 searchKey: cookiejar.TestBasics
+tags: [private]
 ```
 
 ```Go
@@ -1040,6 +1083,7 @@ func TestBasics(t *testing.T)
 
 ```
 searchKey: cookiejar.TestUpdateAndDelete
+tags: [private]
 ```
 
 ```Go
@@ -1050,6 +1094,7 @@ func TestUpdateAndDelete(t *testing.T)
 
 ```
 searchKey: cookiejar.TestExpiration
+tags: [private]
 ```
 
 ```Go
@@ -1060,6 +1105,7 @@ func TestExpiration(t *testing.T)
 
 ```
 searchKey: cookiejar.TestChromiumBasics
+tags: [private]
 ```
 
 ```Go
@@ -1070,6 +1116,7 @@ func TestChromiumBasics(t *testing.T)
 
 ```
 searchKey: cookiejar.TestChromiumDomain
+tags: [private]
 ```
 
 ```Go
@@ -1080,6 +1127,7 @@ func TestChromiumDomain(t *testing.T)
 
 ```
 searchKey: cookiejar.TestChromiumDeletion
+tags: [private]
 ```
 
 ```Go
@@ -1090,6 +1138,7 @@ func TestChromiumDeletion(t *testing.T)
 
 ```
 searchKey: cookiejar.TestDomainHandling
+tags: [private]
 ```
 
 ```Go
@@ -1100,6 +1149,7 @@ func TestDomainHandling(t *testing.T)
 
 ```
 searchKey: cookiejar.TestIssue19384
+tags: [private]
 ```
 
 ```Go
@@ -1110,6 +1160,7 @@ func TestIssue19384(t *testing.T)
 
 ```
 searchKey: cookiejar.TestPunycode
+tags: [private]
 ```
 
 ```Go

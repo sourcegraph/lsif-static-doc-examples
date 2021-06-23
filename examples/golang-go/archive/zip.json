@@ -4,9 +4,7 @@
     "identifier": "zip",
     "newPage": true,
     "searchKey": "archive/zip",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "zip.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "Deflate",
                 "newPage": false,
                 "searchKey": "zip.Deflate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,7 +80,9 @@
                 "identifier": "fileHeaderSignature",
                 "newPage": false,
                 "searchKey": "zip.fileHeaderSignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -108,7 +102,9 @@
                 "identifier": "directoryHeaderSignature",
                 "newPage": false,
                 "searchKey": "zip.directoryHeaderSignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -128,7 +124,9 @@
                 "identifier": "directoryEndSignature",
                 "newPage": false,
                 "searchKey": "zip.directoryEndSignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,7 +146,9 @@
                 "identifier": "directory64LocSignature",
                 "newPage": false,
                 "searchKey": "zip.directory64LocSignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +168,9 @@
                 "identifier": "directory64EndSignature",
                 "newPage": false,
                 "searchKey": "zip.directory64EndSignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -188,7 +190,9 @@
                 "identifier": "dataDescriptorSignature",
                 "newPage": false,
                 "searchKey": "zip.dataDescriptorSignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -208,7 +212,9 @@
                 "identifier": "fileHeaderLen",
                 "newPage": false,
                 "searchKey": "zip.fileHeaderLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -228,7 +234,9 @@
                 "identifier": "directoryHeaderLen",
                 "newPage": false,
                 "searchKey": "zip.directoryHeaderLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -248,7 +256,9 @@
                 "identifier": "directoryEndLen",
                 "newPage": false,
                 "searchKey": "zip.directoryEndLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -268,7 +278,9 @@
                 "identifier": "dataDescriptorLen",
                 "newPage": false,
                 "searchKey": "zip.dataDescriptorLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -288,7 +300,9 @@
                 "identifier": "dataDescriptor64Len",
                 "newPage": false,
                 "searchKey": "zip.dataDescriptor64Len",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -308,7 +322,9 @@
                 "identifier": "directory64LocLen",
                 "newPage": false,
                 "searchKey": "zip.directory64LocLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -328,7 +344,9 @@
                 "identifier": "directory64EndLen",
                 "newPage": false,
                 "searchKey": "zip.directory64EndLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -348,7 +366,9 @@
                 "identifier": "creatorFAT",
                 "newPage": false,
                 "searchKey": "zip.creatorFAT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -368,7 +388,9 @@
                 "identifier": "creatorUnix",
                 "newPage": false,
                 "searchKey": "zip.creatorUnix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -388,7 +410,9 @@
                 "identifier": "creatorNTFS",
                 "newPage": false,
                 "searchKey": "zip.creatorNTFS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -408,7 +432,9 @@
                 "identifier": "creatorVFAT",
                 "newPage": false,
                 "searchKey": "zip.creatorVFAT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -428,7 +454,9 @@
                 "identifier": "creatorMacOSX",
                 "newPage": false,
                 "searchKey": "zip.creatorMacOSX",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -448,7 +476,9 @@
                 "identifier": "zipVersion20",
                 "newPage": false,
                 "searchKey": "zip.zipVersion20",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -468,7 +498,9 @@
                 "identifier": "zipVersion45",
                 "newPage": false,
                 "searchKey": "zip.zipVersion45",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -488,7 +520,9 @@
                 "identifier": "uint16max",
                 "newPage": false,
                 "searchKey": "zip.uint16max",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -508,7 +542,9 @@
                 "identifier": "uint32max",
                 "newPage": false,
                 "searchKey": "zip.uint32max",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -528,7 +564,9 @@
                 "identifier": "zip64ExtraID",
                 "newPage": false,
                 "searchKey": "zip.zip64ExtraID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -548,7 +586,9 @@
                 "identifier": "ntfsExtraID",
                 "newPage": false,
                 "searchKey": "zip.ntfsExtraID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -568,7 +608,9 @@
                 "identifier": "unixExtraID",
                 "newPage": false,
                 "searchKey": "zip.unixExtraID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -588,7 +630,9 @@
                 "identifier": "extTimeExtraID",
                 "newPage": false,
                 "searchKey": "zip.extTimeExtraID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -608,7 +652,9 @@
                 "identifier": "infoZipUnixExtraID",
                 "newPage": false,
                 "searchKey": "zip.infoZipUnixExtraID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -628,7 +674,9 @@
                 "identifier": "s_IFMT",
                 "newPage": false,
                 "searchKey": "zip.s_IFMT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -648,7 +696,9 @@
                 "identifier": "s_IFSOCK",
                 "newPage": false,
                 "searchKey": "zip.s_IFSOCK",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -668,7 +718,9 @@
                 "identifier": "s_IFLNK",
                 "newPage": false,
                 "searchKey": "zip.s_IFLNK",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -688,7 +740,9 @@
                 "identifier": "s_IFREG",
                 "newPage": false,
                 "searchKey": "zip.s_IFREG",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -708,7 +762,9 @@
                 "identifier": "s_IFBLK",
                 "newPage": false,
                 "searchKey": "zip.s_IFBLK",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -728,7 +784,9 @@
                 "identifier": "s_IFDIR",
                 "newPage": false,
                 "searchKey": "zip.s_IFDIR",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -748,7 +806,9 @@
                 "identifier": "s_IFCHR",
                 "newPage": false,
                 "searchKey": "zip.s_IFCHR",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -768,7 +828,9 @@
                 "identifier": "s_IFIFO",
                 "newPage": false,
                 "searchKey": "zip.s_IFIFO",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -788,7 +850,9 @@
                 "identifier": "s_ISUID",
                 "newPage": false,
                 "searchKey": "zip.s_ISUID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -808,7 +872,9 @@
                 "identifier": "s_ISGID",
                 "newPage": false,
                 "searchKey": "zip.s_ISGID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -828,7 +894,9 @@
                 "identifier": "s_ISVTX",
                 "newPage": false,
                 "searchKey": "zip.s_ISVTX",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -848,7 +916,9 @@
                 "identifier": "msdosDir",
                 "newPage": false,
                 "searchKey": "zip.msdosDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -868,7 +938,9 @@
                 "identifier": "msdosReadOnly",
                 "newPage": false,
                 "searchKey": "zip.msdosReadOnly",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -891,9 +963,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -911,9 +981,7 @@
                 "identifier": "ErrFormat",
                 "newPage": false,
                 "searchKey": "zip.ErrFormat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -933,9 +1001,7 @@
                 "identifier": "ErrAlgorithm",
                 "newPage": false,
                 "searchKey": "zip.ErrAlgorithm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -955,9 +1021,7 @@
                 "identifier": "ErrChecksum",
                 "newPage": false,
                 "searchKey": "zip.ErrChecksum",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -977,7 +1041,9 @@
                 "identifier": "dotFile",
                 "newPage": false,
                 "searchKey": "zip.dotFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -997,7 +1063,9 @@
                 "identifier": "flateWriterPool",
                 "newPage": false,
                 "searchKey": "zip.flateWriterPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1017,7 +1085,9 @@
                 "identifier": "flateReaderPool",
                 "newPage": false,
                 "searchKey": "zip.flateReaderPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1037,7 +1107,9 @@
                 "identifier": "compressors",
                 "newPage": false,
                 "searchKey": "zip.compressors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1057,7 +1129,9 @@
                 "identifier": "decompressors",
                 "newPage": false,
                 "searchKey": "zip.decompressors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1077,7 +1151,9 @@
                 "identifier": "errLongName",
                 "newPage": false,
                 "searchKey": "zip.errLongName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1097,7 +1173,9 @@
                 "identifier": "errLongExtra",
                 "newPage": false,
                 "searchKey": "zip.errLongExtra",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1117,7 +1195,9 @@
                 "identifier": "tests",
                 "newPage": false,
                 "searchKey": "zip.tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1137,7 +1217,9 @@
                 "identifier": "writeTests",
                 "newPage": false,
                 "searchKey": "zip.writeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1157,7 +1239,9 @@
                 "identifier": "errDiscardedBytes",
                 "newPage": false,
                 "searchKey": "zip.errDiscardedBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1180,9 +1264,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1200,9 +1282,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "zip.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1220,9 +1300,7 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "zip.NewReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1237,12 +1315,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/archive/zip#Reader.init",
+                    "pathID": "/archive/zip#Reader.init.reader.go",
                     "documentation": {
-                      "identifier": "Reader.init",
+                      "identifier": "Reader.init.reader.go",
                       "newPage": false,
                       "searchKey": "zip.Reader.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1262,9 +1342,7 @@
                       "identifier": "Reader.RegisterDecompressor",
                       "newPage": false,
                       "searchKey": "zip.Reader.RegisterDecompressor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1284,7 +1362,9 @@
                       "identifier": "Reader.decompressor",
                       "newPage": false,
                       "searchKey": "zip.Reader.decompressor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1304,7 +1384,9 @@
                       "identifier": "Reader.initFileList",
                       "newPage": false,
                       "searchKey": "zip.Reader.initFileList",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1324,9 +1406,7 @@
                       "identifier": "Reader.Open",
                       "newPage": false,
                       "searchKey": "zip.Reader.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1346,7 +1426,9 @@
                       "identifier": "Reader.openLookup",
                       "newPage": false,
                       "searchKey": "zip.Reader.openLookup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1366,7 +1448,9 @@
                       "identifier": "Reader.openReadDir",
                       "newPage": false,
                       "searchKey": "zip.Reader.openReadDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1389,9 +1473,7 @@
                 "identifier": "ReadCloser",
                 "newPage": false,
                 "searchKey": "zip.ReadCloser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1409,9 +1491,7 @@
                       "identifier": "OpenReader",
                       "newPage": false,
                       "searchKey": "zip.OpenReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1431,9 +1511,7 @@
                       "identifier": "ReadCloser.Close",
                       "newPage": false,
                       "searchKey": "zip.ReadCloser.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1456,9 +1534,7 @@
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "zip.File",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1476,9 +1552,7 @@
                       "identifier": "File.DataOffset",
                       "newPage": false,
                       "searchKey": "zip.File.DataOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1498,9 +1572,7 @@
                       "identifier": "File.Open",
                       "newPage": false,
                       "searchKey": "zip.File.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1520,9 +1592,7 @@
                       "identifier": "File.OpenRaw",
                       "newPage": false,
                       "searchKey": "zip.File.OpenRaw",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1542,7 +1612,9 @@
                       "identifier": "File.readDataDescriptor",
                       "newPage": false,
                       "searchKey": "zip.File.readDataDescriptor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1562,7 +1634,9 @@
                       "identifier": "File.findBodyOffset",
                       "newPage": false,
                       "searchKey": "zip.File.findBodyOffset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1585,7 +1659,9 @@
                 "identifier": "checksumReader",
                 "newPage": false,
                 "searchKey": "zip.checksumReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1603,7 +1679,9 @@
                       "identifier": "checksumReader.Stat",
                       "newPage": false,
                       "searchKey": "zip.checksumReader.Stat",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1623,7 +1701,9 @@
                       "identifier": "checksumReader.Read",
                       "newPage": false,
                       "searchKey": "zip.checksumReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1643,7 +1723,9 @@
                       "identifier": "checksumReader.Close",
                       "newPage": false,
                       "searchKey": "zip.checksumReader.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1666,7 +1748,9 @@
                 "identifier": "readBuf",
                 "newPage": false,
                 "searchKey": "zip.readBuf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1684,7 +1768,9 @@
                       "identifier": "readBuf.uint8",
                       "newPage": false,
                       "searchKey": "zip.readBuf.uint8",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1704,7 +1790,9 @@
                       "identifier": "readBuf.uint16",
                       "newPage": false,
                       "searchKey": "zip.readBuf.uint16",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1724,7 +1812,9 @@
                       "identifier": "readBuf.uint32",
                       "newPage": false,
                       "searchKey": "zip.readBuf.uint32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1744,7 +1834,9 @@
                       "identifier": "readBuf.uint64",
                       "newPage": false,
                       "searchKey": "zip.readBuf.uint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1764,7 +1856,9 @@
                       "identifier": "readBuf.sub",
                       "newPage": false,
                       "searchKey": "zip.readBuf.sub",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1787,7 +1881,9 @@
                 "identifier": "fileListEntry",
                 "newPage": false,
                 "searchKey": "zip.fileListEntry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1805,7 +1901,9 @@
                       "identifier": "fileListEntry.stat",
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.stat",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1825,7 +1923,9 @@
                       "identifier": "fileListEntry.Name",
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1845,7 +1945,9 @@
                       "identifier": "fileListEntry.Size",
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1865,7 +1967,9 @@
                       "identifier": "fileListEntry.Mode",
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Mode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1885,7 +1989,9 @@
                       "identifier": "fileListEntry.Type",
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Type",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1905,7 +2011,9 @@
                       "identifier": "fileListEntry.IsDir",
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.IsDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1925,7 +2033,9 @@
                       "identifier": "fileListEntry.Sys",
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Sys",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1945,7 +2055,9 @@
                       "identifier": "fileListEntry.ModTime",
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.ModTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1965,7 +2077,9 @@
                       "identifier": "fileListEntry.Info",
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Info",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1988,7 +2102,9 @@
                 "identifier": "fileInfoDirEntry",
                 "newPage": false,
                 "searchKey": "zip.fileInfoDirEntry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2008,7 +2124,9 @@
                 "identifier": "openDir",
                 "newPage": false,
                 "searchKey": "zip.openDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2026,7 +2144,9 @@
                       "identifier": "openDir.Close",
                       "newPage": false,
                       "searchKey": "zip.openDir.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2046,7 +2166,9 @@
                       "identifier": "openDir.Stat",
                       "newPage": false,
                       "searchKey": "zip.openDir.Stat",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2066,7 +2188,9 @@
                       "identifier": "openDir.Read",
                       "newPage": false,
                       "searchKey": "zip.openDir.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2086,7 +2210,9 @@
                       "identifier": "openDir.ReadDir",
                       "newPage": false,
                       "searchKey": "zip.openDir.ReadDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2109,9 +2235,7 @@
                 "identifier": "Compressor",
                 "newPage": false,
                 "searchKey": "zip.Compressor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2129,7 +2253,9 @@
                       "identifier": "compressor",
                       "newPage": false,
                       "searchKey": "zip.compressor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2152,9 +2278,7 @@
                 "identifier": "Decompressor",
                 "newPage": false,
                 "searchKey": "zip.Decompressor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2172,7 +2296,9 @@
                       "identifier": "decompressor",
                       "newPage": false,
                       "searchKey": "zip.decompressor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2195,7 +2321,9 @@
                 "identifier": "pooledFlateWriter",
                 "newPage": false,
                 "searchKey": "zip.pooledFlateWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2213,7 +2341,9 @@
                       "identifier": "pooledFlateWriter.Write",
                       "newPage": false,
                       "searchKey": "zip.pooledFlateWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2233,7 +2363,9 @@
                       "identifier": "pooledFlateWriter.Close",
                       "newPage": false,
                       "searchKey": "zip.pooledFlateWriter.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2256,7 +2388,9 @@
                 "identifier": "pooledFlateReader",
                 "newPage": false,
                 "searchKey": "zip.pooledFlateReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2274,7 +2408,9 @@
                       "identifier": "pooledFlateReader.Read",
                       "newPage": false,
                       "searchKey": "zip.pooledFlateReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2294,7 +2430,9 @@
                       "identifier": "pooledFlateReader.Close",
                       "newPage": false,
                       "searchKey": "zip.pooledFlateReader.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2317,9 +2455,7 @@
                 "identifier": "FileHeader",
                 "newPage": false,
                 "searchKey": "zip.FileHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2337,9 +2473,7 @@
                       "identifier": "FileInfoHeader",
                       "newPage": false,
                       "searchKey": "zip.FileInfoHeader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2359,9 +2493,7 @@
                       "identifier": "FileHeader.FileInfo",
                       "newPage": false,
                       "searchKey": "zip.FileHeader.FileInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2382,7 +2514,6 @@
                       "newPage": false,
                       "searchKey": "zip.FileHeader.ModTime",
                       "tags": [
-                        "exported",
                         "deprecated"
                       ]
                     },
@@ -2405,7 +2536,6 @@
                       "newPage": false,
                       "searchKey": "zip.FileHeader.SetModTime",
                       "tags": [
-                        "exported",
                         "deprecated"
                       ]
                     },
@@ -2427,9 +2557,7 @@
                       "identifier": "FileHeader.Mode",
                       "newPage": false,
                       "searchKey": "zip.FileHeader.Mode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2449,9 +2577,7 @@
                       "identifier": "FileHeader.SetMode",
                       "newPage": false,
                       "searchKey": "zip.FileHeader.SetMode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2471,7 +2597,9 @@
                       "identifier": "FileHeader.isZip64",
                       "newPage": false,
                       "searchKey": "zip.FileHeader.isZip64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2491,7 +2619,9 @@
                       "identifier": "FileHeader.hasDataDescriptor",
                       "newPage": false,
                       "searchKey": "zip.FileHeader.hasDataDescriptor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2514,7 +2644,9 @@
                 "identifier": "headerFileInfo",
                 "newPage": false,
                 "searchKey": "zip.headerFileInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2532,7 +2664,9 @@
                       "identifier": "headerFileInfo.Name",
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2552,7 +2686,9 @@
                       "identifier": "headerFileInfo.Size",
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2572,7 +2708,9 @@
                       "identifier": "headerFileInfo.IsDir",
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.IsDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2592,7 +2730,9 @@
                       "identifier": "headerFileInfo.ModTime",
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.ModTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2612,7 +2752,9 @@
                       "identifier": "headerFileInfo.Mode",
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Mode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2632,7 +2774,9 @@
                       "identifier": "headerFileInfo.Type",
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Type",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2652,7 +2796,9 @@
                       "identifier": "headerFileInfo.Sys",
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Sys",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2672,7 +2818,9 @@
                       "identifier": "headerFileInfo.Info",
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Info",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2695,7 +2843,9 @@
                 "identifier": "directoryEnd",
                 "newPage": false,
                 "searchKey": "zip.directoryEnd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2713,7 +2863,9 @@
                       "identifier": "readDirectoryEnd",
                       "newPage": false,
                       "searchKey": "zip.readDirectoryEnd",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2736,7 +2888,9 @@
                 "identifier": "dataDescriptor",
                 "newPage": false,
                 "searchKey": "zip.dataDescriptor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2754,7 +2908,9 @@
                       "identifier": "readDataDescriptor",
                       "newPage": false,
                       "searchKey": "zip.readDataDescriptor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2777,9 +2933,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "zip.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2797,9 +2951,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "zip.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2819,9 +2971,7 @@
                       "identifier": "Writer.SetOffset",
                       "newPage": false,
                       "searchKey": "zip.Writer.SetOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2841,9 +2991,7 @@
                       "identifier": "Writer.Flush",
                       "newPage": false,
                       "searchKey": "zip.Writer.Flush",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2863,9 +3011,7 @@
                       "identifier": "Writer.SetComment",
                       "newPage": false,
                       "searchKey": "zip.Writer.SetComment",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2885,9 +3031,7 @@
                       "identifier": "Writer.Close",
                       "newPage": false,
                       "searchKey": "zip.Writer.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2907,9 +3051,7 @@
                       "identifier": "Writer.Create",
                       "newPage": false,
                       "searchKey": "zip.Writer.Create",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2929,7 +3071,9 @@
                       "identifier": "Writer.prepare",
                       "newPage": false,
                       "searchKey": "zip.Writer.prepare",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2949,9 +3093,7 @@
                       "identifier": "Writer.CreateHeader",
                       "newPage": false,
                       "searchKey": "zip.Writer.CreateHeader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2971,9 +3113,7 @@
                       "identifier": "Writer.CreateRaw",
                       "newPage": false,
                       "searchKey": "zip.Writer.CreateRaw",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2993,9 +3133,7 @@
                       "identifier": "Writer.Copy",
                       "newPage": false,
                       "searchKey": "zip.Writer.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3015,9 +3153,7 @@
                       "identifier": "Writer.RegisterCompressor",
                       "newPage": false,
                       "searchKey": "zip.Writer.RegisterCompressor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3037,7 +3173,9 @@
                       "identifier": "Writer.compressor",
                       "newPage": false,
                       "searchKey": "zip.Writer.compressor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3060,7 +3198,9 @@
                 "identifier": "header",
                 "newPage": false,
                 "searchKey": "zip.header",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3080,7 +3220,9 @@
                 "identifier": "dirWriter",
                 "newPage": false,
                 "searchKey": "zip.dirWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3098,7 +3240,9 @@
                       "identifier": "dirWriter.Write",
                       "newPage": false,
                       "searchKey": "zip.dirWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3121,7 +3265,9 @@
                 "identifier": "fileWriter",
                 "newPage": false,
                 "searchKey": "zip.fileWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3139,7 +3285,9 @@
                       "identifier": "fileWriter.Write",
                       "newPage": false,
                       "searchKey": "zip.fileWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3159,7 +3307,9 @@
                       "identifier": "fileWriter.close",
                       "newPage": false,
                       "searchKey": "zip.fileWriter.close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3179,7 +3329,9 @@
                       "identifier": "fileWriter.writeDataDescriptor",
                       "newPage": false,
                       "searchKey": "zip.fileWriter.writeDataDescriptor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3202,7 +3354,9 @@
                 "identifier": "countWriter",
                 "newPage": false,
                 "searchKey": "zip.countWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3220,7 +3374,9 @@
                       "identifier": "countWriter.Write",
                       "newPage": false,
                       "searchKey": "zip.countWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3243,7 +3399,9 @@
                 "identifier": "nopCloser",
                 "newPage": false,
                 "searchKey": "zip.nopCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3261,7 +3419,9 @@
                       "identifier": "nopCloser.Close",
                       "newPage": false,
                       "searchKey": "zip.nopCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3284,7 +3444,9 @@
                 "identifier": "writeBuf",
                 "newPage": false,
                 "searchKey": "zip.writeBuf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3302,7 +3464,9 @@
                       "identifier": "writeBuf.uint8",
                       "newPage": false,
                       "searchKey": "zip.writeBuf.uint8",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3322,7 +3486,9 @@
                       "identifier": "writeBuf.uint16",
                       "newPage": false,
                       "searchKey": "zip.writeBuf.uint16",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3342,7 +3508,9 @@
                       "identifier": "writeBuf.uint32",
                       "newPage": false,
                       "searchKey": "zip.writeBuf.uint32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3362,7 +3530,9 @@
                       "identifier": "writeBuf.uint64",
                       "newPage": false,
                       "searchKey": "zip.writeBuf.uint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3385,7 +3555,9 @@
                 "identifier": "ZipTest",
                 "newPage": false,
                 "searchKey": "zip.ZipTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3405,7 +3577,9 @@
                 "identifier": "ZipTestFile",
                 "newPage": false,
                 "searchKey": "zip.ZipTestFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3425,7 +3599,9 @@
                 "identifier": "WriteTest",
                 "newPage": false,
                 "searchKey": "zip.WriteTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3445,7 +3621,9 @@
                 "identifier": "repeatedByte",
                 "newPage": false,
                 "searchKey": "zip.repeatedByte",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3465,7 +3643,9 @@
                 "identifier": "rleBuffer",
                 "newPage": false,
                 "searchKey": "zip.rleBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3483,7 +3663,9 @@
                       "identifier": "testZip64",
                       "newPage": false,
                       "searchKey": "zip.testZip64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3503,7 +3685,9 @@
                       "identifier": "rleBuffer.Size",
                       "newPage": false,
                       "searchKey": "zip.rleBuffer.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3523,7 +3707,9 @@
                       "identifier": "rleBuffer.Write",
                       "newPage": false,
                       "searchKey": "zip.rleBuffer.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3543,7 +3729,9 @@
                       "identifier": "rleBuffer.ReadAt",
                       "newPage": false,
                       "searchKey": "zip.rleBuffer.ReadAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3566,7 +3754,9 @@
                 "identifier": "fakeHash32",
                 "newPage": false,
                 "searchKey": "zip.fakeHash32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3584,7 +3774,9 @@
                       "identifier": "fakeHash32.Write",
                       "newPage": false,
                       "searchKey": "zip.fakeHash32.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3604,7 +3796,9 @@
                       "identifier": "fakeHash32.Sum32",
                       "newPage": false,
                       "searchKey": "zip.fakeHash32.Sum32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3627,7 +3821,9 @@
                 "identifier": "suffixSaver",
                 "newPage": false,
                 "searchKey": "zip.suffixSaver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3645,7 +3841,9 @@
                       "identifier": "suffixSaver.Size",
                       "newPage": false,
                       "searchKey": "zip.suffixSaver.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3665,7 +3863,9 @@
                       "identifier": "suffixSaver.ReadAt",
                       "newPage": false,
                       "searchKey": "zip.suffixSaver.ReadAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3685,7 +3885,9 @@
                       "identifier": "suffixSaver.Suffix",
                       "newPage": false,
                       "searchKey": "zip.suffixSaver.Suffix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3705,7 +3907,9 @@
                       "identifier": "suffixSaver.Write",
                       "newPage": false,
                       "searchKey": "zip.suffixSaver.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3728,7 +3932,9 @@
                 "identifier": "sizedReaderAt",
                 "newPage": false,
                 "searchKey": "zip.sizedReaderAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3748,7 +3954,9 @@
                 "identifier": "zeros",
                 "newPage": false,
                 "searchKey": "zip.zeros",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3766,7 +3974,9 @@
                       "identifier": "zeros.Read",
                       "newPage": false,
                       "searchKey": "zip.zeros.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3792,9 +4002,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -3812,7 +4020,9 @@
                 "identifier": "readDirectoryHeader",
                 "newPage": false,
                 "searchKey": "zip.readDirectoryHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3832,7 +4042,9 @@
                 "identifier": "findDirectory64End",
                 "newPage": false,
                 "searchKey": "zip.findDirectory64End",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3852,7 +4064,9 @@
                 "identifier": "readDirectory64End",
                 "newPage": false,
                 "searchKey": "zip.readDirectory64End",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3872,7 +4086,9 @@
                 "identifier": "findSignatureInBlock",
                 "newPage": false,
                 "searchKey": "zip.findSignatureInBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3892,7 +4108,9 @@
                 "identifier": "toValidName",
                 "newPage": false,
                 "searchKey": "zip.toValidName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3912,7 +4130,9 @@
                 "identifier": "fileEntryLess",
                 "newPage": false,
                 "searchKey": "zip.fileEntryLess",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3932,7 +4152,9 @@
                 "identifier": "split",
                 "newPage": false,
                 "searchKey": "zip.split",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3952,7 +4174,9 @@
                 "identifier": "newFlateWriter",
                 "newPage": false,
                 "searchKey": "zip.newFlateWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3972,7 +4196,9 @@
                 "identifier": "newFlateReader",
                 "newPage": false,
                 "searchKey": "zip.newFlateReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3987,12 +4213,14 @@
           },
           {
             "node": {
-              "pathID": "/archive/zip#init",
+              "pathID": "/archive/zip#init.register.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.register.go",
                 "newPage": false,
                 "searchKey": "zip.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4012,9 +4240,7 @@
                 "identifier": "RegisterDecompressor",
                 "newPage": false,
                 "searchKey": "zip.RegisterDecompressor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4034,9 +4260,7 @@
                 "identifier": "RegisterCompressor",
                 "newPage": false,
                 "searchKey": "zip.RegisterCompressor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4056,7 +4280,9 @@
                 "identifier": "timeZone",
                 "newPage": false,
                 "searchKey": "zip.timeZone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4076,7 +4302,9 @@
                 "identifier": "msDosTimeToTime",
                 "newPage": false,
                 "searchKey": "zip.msDosTimeToTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4096,7 +4324,9 @@
                 "identifier": "timeToMsDosTime",
                 "newPage": false,
                 "searchKey": "zip.timeToMsDosTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4116,7 +4346,9 @@
                 "identifier": "msdosModeToFileMode",
                 "newPage": false,
                 "searchKey": "zip.msdosModeToFileMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4136,7 +4368,9 @@
                 "identifier": "fileModeToUnixMode",
                 "newPage": false,
                 "searchKey": "zip.fileModeToUnixMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4156,7 +4390,9 @@
                 "identifier": "unixModeToFileMode",
                 "newPage": false,
                 "searchKey": "zip.unixModeToFileMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4176,7 +4412,9 @@
                 "identifier": "detectUTF8",
                 "newPage": false,
                 "searchKey": "zip.detectUTF8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4196,7 +4434,9 @@
                 "identifier": "writeHeader",
                 "newPage": false,
                 "searchKey": "zip.writeHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4216,7 +4456,9 @@
                 "identifier": "min64",
                 "newPage": false,
                 "searchKey": "zip.min64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4236,7 +4478,9 @@
                 "identifier": "TestReader",
                 "newPage": false,
                 "searchKey": "zip.TestReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4256,7 +4500,9 @@
                 "identifier": "readTestZip",
                 "newPage": false,
                 "searchKey": "zip.readTestZip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4276,7 +4522,9 @@
                 "identifier": "equalTimeAndZone",
                 "newPage": false,
                 "searchKey": "zip.equalTimeAndZone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4296,7 +4544,9 @@
                 "identifier": "readTestFile",
                 "newPage": false,
                 "searchKey": "zip.readTestFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4316,7 +4566,9 @@
                 "identifier": "testFileMode",
                 "newPage": false,
                 "searchKey": "zip.testFileMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4336,7 +4588,9 @@
                 "identifier": "TestInvalidFiles",
                 "newPage": false,
                 "searchKey": "zip.TestInvalidFiles",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4356,7 +4610,9 @@
                 "identifier": "messWith",
                 "newPage": false,
                 "searchKey": "zip.messWith",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4376,7 +4632,9 @@
                 "identifier": "returnCorruptCRC32Zip",
                 "newPage": false,
                 "searchKey": "zip.returnCorruptCRC32Zip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4396,7 +4654,9 @@
                 "identifier": "returnCorruptNotStreamedZip",
                 "newPage": false,
                 "searchKey": "zip.returnCorruptNotStreamedZip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4416,7 +4676,9 @@
                 "identifier": "rZipBytes",
                 "newPage": false,
                 "searchKey": "zip.rZipBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4436,7 +4698,9 @@
                 "identifier": "returnRecursiveZip",
                 "newPage": false,
                 "searchKey": "zip.returnRecursiveZip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4456,7 +4720,9 @@
                 "identifier": "biggestZipBytes",
                 "newPage": false,
                 "searchKey": "zip.biggestZipBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4476,7 +4742,9 @@
                 "identifier": "returnBigZipBytes",
                 "newPage": false,
                 "searchKey": "zip.returnBigZipBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4496,7 +4764,9 @@
                 "identifier": "TestIssue8186",
                 "newPage": false,
                 "searchKey": "zip.TestIssue8186",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4516,7 +4786,9 @@
                 "identifier": "TestIssue10957",
                 "newPage": false,
                 "searchKey": "zip.TestIssue10957",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4536,7 +4808,9 @@
                 "identifier": "TestIssue10956",
                 "newPage": false,
                 "searchKey": "zip.TestIssue10956",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4556,7 +4830,9 @@
                 "identifier": "TestIssue11146",
                 "newPage": false,
                 "searchKey": "zip.TestIssue11146",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4576,7 +4852,9 @@
                 "identifier": "TestIssue12449",
                 "newPage": false,
                 "searchKey": "zip.TestIssue12449",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4596,7 +4874,9 @@
                 "identifier": "TestFS",
                 "newPage": false,
                 "searchKey": "zip.TestFS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4616,7 +4896,9 @@
                 "identifier": "TestFSModTime",
                 "newPage": false,
                 "searchKey": "zip.TestFSModTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4636,7 +4918,9 @@
                 "identifier": "TestCVE202127919",
                 "newPage": false,
                 "searchKey": "zip.TestCVE202127919",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4656,7 +4940,9 @@
                 "identifier": "TestReadDataDescriptor",
                 "newPage": false,
                 "searchKey": "zip.TestReadDataDescriptor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4676,7 +4962,9 @@
                 "identifier": "TestCVE202133196",
                 "newPage": false,
                 "searchKey": "zip.TestCVE202133196",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4696,7 +4984,9 @@
                 "identifier": "TestWriter",
                 "newPage": false,
                 "searchKey": "zip.TestWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4716,7 +5006,9 @@
                 "identifier": "TestWriterComment",
                 "newPage": false,
                 "searchKey": "zip.TestWriterComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4736,7 +5028,9 @@
                 "identifier": "TestWriterUTF8",
                 "newPage": false,
                 "searchKey": "zip.TestWriterUTF8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4756,7 +5050,9 @@
                 "identifier": "TestWriterTime",
                 "newPage": false,
                 "searchKey": "zip.TestWriterTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4776,7 +5072,9 @@
                 "identifier": "TestWriterOffset",
                 "newPage": false,
                 "searchKey": "zip.TestWriterOffset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4796,7 +5094,9 @@
                 "identifier": "TestWriterFlush",
                 "newPage": false,
                 "searchKey": "zip.TestWriterFlush",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4816,7 +5116,9 @@
                 "identifier": "TestWriterDir",
                 "newPage": false,
                 "searchKey": "zip.TestWriterDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4836,7 +5138,9 @@
                 "identifier": "TestWriterDirAttributes",
                 "newPage": false,
                 "searchKey": "zip.TestWriterDirAttributes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4856,7 +5160,9 @@
                 "identifier": "TestWriterCopy",
                 "newPage": false,
                 "searchKey": "zip.TestWriterCopy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4876,7 +5182,9 @@
                 "identifier": "TestWriterCreateRaw",
                 "newPage": false,
                 "searchKey": "zip.TestWriterCreateRaw",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4896,7 +5204,9 @@
                 "identifier": "testCreate",
                 "newPage": false,
                 "searchKey": "zip.testCreate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4916,7 +5226,9 @@
                 "identifier": "testReadFile",
                 "newPage": false,
                 "searchKey": "zip.testReadFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4936,7 +5248,9 @@
                 "identifier": "BenchmarkCompressedZipGarbage",
                 "newPage": false,
                 "searchKey": "zip.BenchmarkCompressedZipGarbage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4956,7 +5270,9 @@
                 "identifier": "TestOver65kFiles",
                 "newPage": false,
                 "searchKey": "zip.TestOver65kFiles",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4976,7 +5292,9 @@
                 "identifier": "TestModTime",
                 "newPage": false,
                 "searchKey": "zip.TestModTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4996,7 +5314,9 @@
                 "identifier": "testHeaderRoundTrip",
                 "newPage": false,
                 "searchKey": "zip.testHeaderRoundTrip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5016,7 +5336,9 @@
                 "identifier": "TestFileHeaderRoundTrip",
                 "newPage": false,
                 "searchKey": "zip.TestFileHeaderRoundTrip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5036,7 +5358,9 @@
                 "identifier": "TestFileHeaderRoundTrip64",
                 "newPage": false,
                 "searchKey": "zip.TestFileHeaderRoundTrip64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5056,7 +5380,9 @@
                 "identifier": "TestFileHeaderRoundTripModified",
                 "newPage": false,
                 "searchKey": "zip.TestFileHeaderRoundTripModified",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5076,7 +5402,9 @@
                 "identifier": "TestFileHeaderRoundTripWithoutModified",
                 "newPage": false,
                 "searchKey": "zip.TestFileHeaderRoundTripWithoutModified",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5096,7 +5424,9 @@
                 "identifier": "min",
                 "newPage": false,
                 "searchKey": "zip.min",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5116,7 +5446,9 @@
                 "identifier": "memset",
                 "newPage": false,
                 "searchKey": "zip.memset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5136,7 +5468,9 @@
                 "identifier": "TestRLEBuffer",
                 "newPage": false,
                 "searchKey": "zip.TestRLEBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5156,7 +5490,9 @@
                 "identifier": "TestZip64",
                 "newPage": false,
                 "searchKey": "zip.TestZip64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5176,7 +5512,9 @@
                 "identifier": "TestZip64EdgeCase",
                 "newPage": false,
                 "searchKey": "zip.TestZip64EdgeCase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5196,7 +5534,9 @@
                 "identifier": "TestZip64DirectoryOffset",
                 "newPage": false,
                 "searchKey": "zip.TestZip64DirectoryOffset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5216,7 +5556,9 @@
                 "identifier": "TestZip64ManyRecords",
                 "newPage": false,
                 "searchKey": "zip.TestZip64ManyRecords",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5236,7 +5578,9 @@
                 "identifier": "generatesZip64",
                 "newPage": false,
                 "searchKey": "zip.generatesZip64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5256,7 +5600,9 @@
                 "identifier": "suffixIsZip64",
                 "newPage": false,
                 "searchKey": "zip.suffixIsZip64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5276,7 +5622,9 @@
                 "identifier": "TestZip64LargeDirectory",
                 "newPage": false,
                 "searchKey": "zip.TestZip64LargeDirectory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5296,7 +5644,9 @@
                 "identifier": "testZip64DirectoryRecordLength",
                 "newPage": false,
                 "searchKey": "zip.testZip64DirectoryRecordLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5316,7 +5666,9 @@
                 "identifier": "testValidHeader",
                 "newPage": false,
                 "searchKey": "zip.testValidHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5336,7 +5688,9 @@
                 "identifier": "TestHeaderInvalidTagAndSize",
                 "newPage": false,
                 "searchKey": "zip.TestHeaderInvalidTagAndSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5356,7 +5710,9 @@
                 "identifier": "TestHeaderTooShort",
                 "newPage": false,
                 "searchKey": "zip.TestHeaderTooShort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5376,7 +5732,9 @@
                 "identifier": "TestHeaderTooLongErr",
                 "newPage": false,
                 "searchKey": "zip.TestHeaderTooLongErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5396,7 +5754,9 @@
                 "identifier": "TestHeaderIgnoredSize",
                 "newPage": false,
                 "searchKey": "zip.TestHeaderIgnoredSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5416,7 +5776,9 @@
                 "identifier": "TestZeroLengthHeader",
                 "newPage": false,
                 "searchKey": "zip.TestZeroLengthHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5436,7 +5798,9 @@
                 "identifier": "BenchmarkZip64Test",
                 "newPage": false,
                 "searchKey": "zip.BenchmarkZip64Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5456,7 +5820,9 @@
                 "identifier": "BenchmarkZip64TestSizes",
                 "newPage": false,
                 "searchKey": "zip.BenchmarkZip64TestSizes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5476,7 +5842,9 @@
                 "identifier": "TestSuffixSaver",
                 "newPage": false,
                 "searchKey": "zip.TestSuffixSaver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

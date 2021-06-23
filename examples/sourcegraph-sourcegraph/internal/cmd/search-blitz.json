@@ -4,7 +4,9 @@
     "identifier": "search-blitz",
     "newPage": true,
     "searchKey": "internal/cmd/search-blitz",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "envToken",
                 "newPage": false,
                 "searchKey": "main.envToken",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "envEndpoint",
                 "newPage": false,
                 "searchKey": "main.envEndpoint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,9 +88,7 @@
                 "identifier": "Batch",
                 "newPage": false,
                 "searchKey": "main.Batch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -102,9 +108,7 @@
                 "identifier": "Stream",
                 "newPage": false,
                 "searchKey": "main.Stream",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "port",
                 "newPage": false,
                 "searchKey": "main.port",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "envConfig",
                 "newPage": false,
                 "searchKey": "main.envConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "envLogDir",
                 "newPage": false,
                 "searchKey": "main.envLogDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +197,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -205,7 +217,9 @@
                 "identifier": "allProtocols",
                 "newPage": false,
                 "searchKey": "main.allProtocols",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -225,9 +239,7 @@
                 "identifier": "UserLatencyBuckets",
                 "newPage": false,
                 "searchKey": "main.UserLatencyBuckets",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "durationSearchHistogram",
                 "newPage": false,
                 "searchKey": "main.durationSearchHistogram",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "graphQLQuery",
                 "newPage": false,
                 "searchKey": "main.graphQLQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -290,7 +306,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -308,7 +326,9 @@
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "main.client",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -326,7 +346,9 @@
                       "identifier": "newClient",
                       "newPage": false,
                       "searchKey": "main.newClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -346,7 +368,9 @@
                       "identifier": "client.search",
                       "newPage": false,
                       "searchKey": "main.client.search",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -366,7 +390,9 @@
                       "identifier": "client.url",
                       "newPage": false,
                       "searchKey": "main.client.url",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -386,7 +412,9 @@
                       "identifier": "client.clientType",
                       "newPage": false,
                       "searchKey": "main.client.clientType",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -409,9 +437,7 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "main.Config",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -429,7 +455,9 @@
                       "identifier": "loadQueries",
                       "newPage": false,
                       "searchKey": "main.loadQueries",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -452,9 +480,7 @@
                 "identifier": "QueryGroupConfig",
                 "newPage": false,
                 "searchKey": "main.QueryGroupConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -474,9 +500,7 @@
                 "identifier": "QueryConfig",
                 "newPage": false,
                 "searchKey": "main.QueryConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -496,9 +520,7 @@
                 "identifier": "Protocol",
                 "newPage": false,
                 "searchKey": "main.Protocol",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -516,9 +538,7 @@
                       "identifier": "Protocol.UnmarshalYAML",
                       "newPage": false,
                       "searchKey": "main.Protocol.UnmarshalYAML",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -541,7 +561,9 @@
                 "identifier": "genericClient",
                 "newPage": false,
                 "searchKey": "main.genericClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -561,7 +583,9 @@
                 "identifier": "rawResult",
                 "newPage": false,
                 "searchKey": "main.rawResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,7 +605,9 @@
                 "identifier": "result",
                 "newPage": false,
                 "searchKey": "main.result",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -601,7 +627,9 @@
                 "identifier": "searchResults",
                 "newPage": false,
                 "searchKey": "main.searchResults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -621,7 +649,9 @@
                 "identifier": "searchResultsAlert",
                 "newPage": false,
                 "searchKey": "main.searchResultsAlert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -641,7 +671,9 @@
                 "identifier": "metrics",
                 "newPage": false,
                 "searchKey": "main.metrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -661,7 +693,9 @@
                 "identifier": "streamClient",
                 "newPage": false,
                 "searchKey": "main.streamClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -679,7 +713,9 @@
                       "identifier": "newStreamClient",
                       "newPage": false,
                       "searchKey": "main.newStreamClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -699,7 +735,9 @@
                       "identifier": "streamClient.search",
                       "newPage": false,
                       "searchKey": "main.streamClient.search",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -719,7 +757,9 @@
                       "identifier": "streamClient.clientType",
                       "newPage": false,
                       "searchKey": "main.streamClient.clientType",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -745,7 +785,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -763,7 +805,9 @@
                 "identifier": "health",
                 "newPage": false,
                 "searchKey": "main.health",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -783,7 +827,9 @@
                 "identifier": "run",
                 "newPage": false,
                 "searchKey": "main.run",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -803,7 +849,9 @@
                 "identifier": "startServer",
                 "newPage": false,
                 "searchKey": "main.startServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -823,7 +871,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -843,9 +893,7 @@
                 "identifier": "SignalSensitiveContext",
                 "newPage": false,
                 "searchKey": "main.SignalSensitiveContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -860,12 +908,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/search-blitz#init",
+              "pathID": "/internal/cmd/search-blitz#init.prometheus.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.prometheus.go",
                 "newPage": false,
                 "searchKey": "main.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

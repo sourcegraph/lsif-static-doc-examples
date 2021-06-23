@@ -4,7 +4,9 @@
     "identifier": "protocol",
     "newPage": true,
     "searchKey": "internal/gitserver/protocol",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "GitolitePhabricatorMetadataResponse",
                 "newPage": false,
                 "searchKey": "protocol.GitolitePhabricatorMetadataResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "ExecRequest",
                 "newPage": false,
                 "searchKey": "protocol.ExecRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "P4ExecRequest",
                 "newPage": false,
                 "searchKey": "protocol.P4ExecRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "RemoteOpts",
                 "newPage": false,
                 "searchKey": "protocol.RemoteOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "SSHConfig",
                 "newPage": false,
                 "searchKey": "protocol.SSHConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "HTTPSConfig",
                 "newPage": false,
                 "searchKey": "protocol.HTTPSConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                 "identifier": "RepoUpdateRequest",
                 "newPage": false,
                 "searchKey": "protocol.RepoUpdateRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,9 +184,7 @@
                 "identifier": "RepoUpdateResponse",
                 "newPage": false,
                 "searchKey": "protocol.RepoUpdateResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -216,9 +204,7 @@
                 "identifier": "NotFoundPayload",
                 "newPage": false,
                 "searchKey": "protocol.NotFoundPayload",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -238,9 +224,7 @@
                 "identifier": "IsRepoCloneableRequest",
                 "newPage": false,
                 "searchKey": "protocol.IsRepoCloneableRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -260,9 +244,7 @@
                 "identifier": "IsRepoCloneableResponse",
                 "newPage": false,
                 "searchKey": "protocol.IsRepoCloneableResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,9 +264,7 @@
                 "identifier": "IsRepoClonedRequest",
                 "newPage": false,
                 "searchKey": "protocol.IsRepoClonedRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -304,9 +284,7 @@
                 "identifier": "RepoDeleteRequest",
                 "newPage": false,
                 "searchKey": "protocol.RepoDeleteRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +304,7 @@
                 "identifier": "RepoInfoRequest",
                 "newPage": false,
                 "searchKey": "protocol.RepoInfoRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -348,9 +324,7 @@
                 "identifier": "RepoInfo",
                 "newPage": false,
                 "searchKey": "protocol.RepoInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -370,9 +344,7 @@
                 "identifier": "RepoInfoResponse",
                 "newPage": false,
                 "searchKey": "protocol.RepoInfoResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -392,9 +364,7 @@
                 "identifier": "ReposStats",
                 "newPage": false,
                 "searchKey": "protocol.ReposStats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -414,9 +384,7 @@
                 "identifier": "RepoCloneProgressRequest",
                 "newPage": false,
                 "searchKey": "protocol.RepoCloneProgressRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -436,9 +404,7 @@
                 "identifier": "RepoCloneProgress",
                 "newPage": false,
                 "searchKey": "protocol.RepoCloneProgress",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -458,9 +424,7 @@
                 "identifier": "RepoCloneProgressResponse",
                 "newPage": false,
                 "searchKey": "protocol.RepoCloneProgressResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -480,9 +444,7 @@
                 "identifier": "CreateCommitFromPatchRequest",
                 "newPage": false,
                 "searchKey": "protocol.CreateCommitFromPatchRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -502,9 +464,7 @@
                 "identifier": "PatchCommitInfo",
                 "newPage": false,
                 "searchKey": "protocol.PatchCommitInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -524,9 +484,7 @@
                 "identifier": "PushConfig",
                 "newPage": false,
                 "searchKey": "protocol.PushConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -546,9 +504,7 @@
                 "identifier": "CreateCommitFromPatchResponse",
                 "newPage": false,
                 "searchKey": "protocol.CreateCommitFromPatchResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -566,9 +522,7 @@
                       "identifier": "CreateCommitFromPatchResponse.SetError",
                       "newPage": false,
                       "searchKey": "protocol.CreateCommitFromPatchResponse.SetError",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -591,9 +545,7 @@
                 "identifier": "CreateCommitFromPatchError",
                 "newPage": false,
                 "searchKey": "protocol.CreateCommitFromPatchError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -611,9 +563,7 @@
                       "identifier": "CreateCommitFromPatchError.Error",
                       "newPage": false,
                       "searchKey": "protocol.CreateCommitFromPatchError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -639,7 +589,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -657,9 +609,7 @@
                 "identifier": "NormalizeRepo",
                 "newPage": false,
                 "searchKey": "protocol.NormalizeRepo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -679,7 +629,9 @@
                 "identifier": "hasUpperASCII",
                 "newPage": false,
                 "searchKey": "protocol.hasUpperASCII",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -699,7 +651,9 @@
                 "identifier": "TestNormalizeRepo",
                 "newPage": false,
                 "searchKey": "protocol.TestNormalizeRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

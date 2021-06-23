@@ -4,7 +4,9 @@
     "identifier": "command",
     "newPage": true,
     "searchKey": "enterprise/cmd/executor/internal/command",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ScriptsPath",
                 "newPage": false,
                 "searchKey": "command.ScriptsPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "firecrackerContainerDir",
                 "newPage": false,
                 "searchKey": "command.firecrackerContainerDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -85,7 +89,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "commonFirecrackerFlags",
                 "newPage": false,
                 "searchKey": "command.commonFirecrackerFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +131,9 @@
                 "identifier": "igniteRunLock",
                 "newPage": false,
                 "searchKey": "command.igniteRunLock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +153,9 @@
                 "identifier": "imagePattern",
                 "newPage": false,
                 "searchKey": "command.imagePattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -163,7 +175,9 @@
                 "identifier": "allowedBinaries",
                 "newPage": false,
                 "searchKey": "command.allowedBinaries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -183,9 +197,7 @@
                 "identifier": "ErrIllegalCommand",
                 "newPage": false,
                 "searchKey": "command.ErrIllegalCommand",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -205,7 +217,9 @@
                 "identifier": "defaultRunner",
                 "newPage": false,
                 "searchKey": "command.defaultRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -225,7 +239,9 @@
                 "identifier": "commandComparer",
                 "newPage": false,
                 "searchKey": "command.commandComparer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -248,7 +264,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -266,7 +284,9 @@
                 "identifier": "commandRunner",
                 "newPage": false,
                 "searchKey": "command.commandRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -286,9 +306,7 @@
                 "identifier": "Logger",
                 "newPage": false,
                 "searchKey": "command.Logger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -306,9 +324,7 @@
                       "identifier": "NewLogger",
                       "newPage": false,
                       "searchKey": "command.NewLogger",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,9 +344,7 @@
                       "identifier": "Logger.Log",
                       "newPage": false,
                       "searchKey": "command.Logger.Log",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -350,9 +364,7 @@
                       "identifier": "Logger.Entries",
                       "newPage": false,
                       "searchKey": "command.Logger.Entries",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -375,9 +387,7 @@
                 "identifier": "Operations",
                 "newPage": false,
                 "searchKey": "command.Operations",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -395,9 +405,7 @@
                       "identifier": "NewOperations",
                       "newPage": false,
                       "searchKey": "command.NewOperations",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,7 +428,9 @@
                 "identifier": "command",
                 "newPage": false,
                 "searchKey": "command.command",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -438,7 +448,9 @@
                       "identifier": "formatRawOrDockerCommand",
                       "newPage": false,
                       "searchKey": "command.formatRawOrDockerCommand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -458,7 +470,9 @@
                       "identifier": "formatFirecrackerCommand",
                       "newPage": false,
                       "searchKey": "command.formatFirecrackerCommand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -481,9 +495,7 @@
                 "identifier": "Runner",
                 "newPage": false,
                 "searchKey": "command.Runner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -501,9 +513,7 @@
                       "identifier": "NewRunner",
                       "newPage": false,
                       "searchKey": "command.NewRunner",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -526,9 +536,7 @@
                 "identifier": "CommandSpec",
                 "newPage": false,
                 "searchKey": "command.CommandSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -548,9 +556,7 @@
                 "identifier": "Options",
                 "newPage": false,
                 "searchKey": "command.Options",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -570,9 +576,7 @@
                 "identifier": "FirecrackerOptions",
                 "newPage": false,
                 "searchKey": "command.FirecrackerOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -592,9 +596,7 @@
                 "identifier": "ResourceOptions",
                 "newPage": false,
                 "searchKey": "command.ResourceOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -614,7 +616,9 @@
                 "identifier": "dockerRunner",
                 "newPage": false,
                 "searchKey": "command.dockerRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -632,7 +636,9 @@
                       "identifier": "dockerRunner.Setup",
                       "newPage": false,
                       "searchKey": "command.dockerRunner.Setup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -652,7 +658,9 @@
                       "identifier": "dockerRunner.Teardown",
                       "newPage": false,
                       "searchKey": "command.dockerRunner.Teardown",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -672,7 +680,9 @@
                       "identifier": "dockerRunner.Run",
                       "newPage": false,
                       "searchKey": "command.dockerRunner.Run",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -695,7 +705,9 @@
                 "identifier": "firecrackerRunner",
                 "newPage": false,
                 "searchKey": "command.firecrackerRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -713,7 +725,9 @@
                       "identifier": "firecrackerRunner.Setup",
                       "newPage": false,
                       "searchKey": "command.firecrackerRunner.Setup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -733,7 +747,9 @@
                       "identifier": "firecrackerRunner.Teardown",
                       "newPage": false,
                       "searchKey": "command.firecrackerRunner.Teardown",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -753,7 +769,9 @@
                       "identifier": "firecrackerRunner.Run",
                       "newPage": false,
                       "searchKey": "command.firecrackerRunner.Run",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -776,7 +794,9 @@
                 "identifier": "runnerWrapper",
                 "newPage": false,
                 "searchKey": "command.runnerWrapper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -794,7 +814,9 @@
                       "identifier": "runnerWrapper.RunCommand",
                       "newPage": false,
                       "searchKey": "command.runnerWrapper.RunCommand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -817,7 +839,9 @@
                 "identifier": "MockCommandRunner",
                 "newPage": false,
                 "searchKey": "command.MockCommandRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -835,7 +859,9 @@
                       "identifier": "NewMockCommandRunner",
                       "newPage": false,
                       "searchKey": "command.NewMockCommandRunner",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -855,7 +881,9 @@
                       "identifier": "NewMockCommandRunnerFrom",
                       "newPage": false,
                       "searchKey": "command.NewMockCommandRunnerFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -875,7 +903,9 @@
                       "identifier": "MockCommandRunner.RunCommand",
                       "newPage": false,
                       "searchKey": "command.MockCommandRunner.RunCommand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -898,7 +928,9 @@
                 "identifier": "surrogateMockCommandRunner",
                 "newPage": false,
                 "searchKey": "command.surrogateMockCommandRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -918,7 +950,9 @@
                 "identifier": "CommandRunnerRunCommandFunc",
                 "newPage": false,
                 "searchKey": "command.CommandRunnerRunCommandFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -936,7 +970,9 @@
                       "identifier": "CommandRunnerRunCommandFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -956,7 +992,9 @@
                       "identifier": "CommandRunnerRunCommandFunc.PushHook",
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -976,7 +1014,9 @@
                       "identifier": "CommandRunnerRunCommandFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -996,7 +1036,9 @@
                       "identifier": "CommandRunnerRunCommandFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1016,7 +1058,9 @@
                       "identifier": "CommandRunnerRunCommandFunc.nextHook",
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1036,7 +1080,9 @@
                       "identifier": "CommandRunnerRunCommandFunc.appendCall",
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1056,7 +1102,9 @@
                       "identifier": "CommandRunnerRunCommandFunc.History",
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1079,7 +1127,9 @@
                 "identifier": "CommandRunnerRunCommandFuncCall",
                 "newPage": false,
                 "searchKey": "command.CommandRunnerRunCommandFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1097,7 +1147,9 @@
                       "identifier": "CommandRunnerRunCommandFuncCall.Args",
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1117,7 +1169,9 @@
                       "identifier": "CommandRunnerRunCommandFuncCall.Results",
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1143,7 +1197,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1161,7 +1217,9 @@
                 "identifier": "dockerResourceFlags",
                 "newPage": false,
                 "searchKey": "command.dockerResourceFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1181,7 +1239,9 @@
                 "identifier": "dockerVolumeFlags",
                 "newPage": false,
                 "searchKey": "command.dockerVolumeFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1201,7 +1261,9 @@
                 "identifier": "dockerWorkingdirectoryFlags",
                 "newPage": false,
                 "searchKey": "command.dockerWorkingdirectoryFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1221,7 +1283,9 @@
                 "identifier": "dockerEnvFlags",
                 "newPage": false,
                 "searchKey": "command.dockerEnvFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1241,7 +1305,9 @@
                 "identifier": "dockerEntrypointFlags",
                 "newPage": false,
                 "searchKey": "command.dockerEntrypointFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1261,7 +1327,9 @@
                 "identifier": "setupFirecracker",
                 "newPage": false,
                 "searchKey": "command.setupFirecracker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1281,7 +1349,9 @@
                 "identifier": "teardownFirecracker",
                 "newPage": false,
                 "searchKey": "command.teardownFirecracker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1301,7 +1371,9 @@
                 "identifier": "firecrackerResourceFlags",
                 "newPage": false,
                 "searchKey": "command.firecrackerResourceFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1321,7 +1393,9 @@
                 "identifier": "firecrackerCopyfileFlags",
                 "newPage": false,
                 "searchKey": "command.firecrackerCopyfileFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1341,7 +1415,9 @@
                 "identifier": "tarfilePathOnHost",
                 "newPage": false,
                 "searchKey": "command.tarfilePathOnHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1361,7 +1437,9 @@
                 "identifier": "tarfilePathInVM",
                 "newPage": false,
                 "searchKey": "command.tarfilePathInVM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1381,7 +1459,9 @@
                 "identifier": "sanitizeImage",
                 "newPage": false,
                 "searchKey": "command.sanitizeImage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1401,7 +1481,9 @@
                 "identifier": "redact",
                 "newPage": false,
                 "searchKey": "command.redact",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1421,7 +1503,9 @@
                 "identifier": "runCommand",
                 "newPage": false,
                 "searchKey": "command.runCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1441,7 +1525,9 @@
                 "identifier": "validateCommand",
                 "newPage": false,
                 "searchKey": "command.validateCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1461,7 +1547,9 @@
                 "identifier": "prepCommand",
                 "newPage": false,
                 "searchKey": "command.prepCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1481,7 +1569,9 @@
                 "identifier": "readProcessPipes",
                 "newPage": false,
                 "searchKey": "command.readProcessPipes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1501,7 +1591,9 @@
                 "identifier": "monitorCommand",
                 "newPage": false,
                 "searchKey": "command.monitorCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1521,7 +1613,9 @@
                 "identifier": "watchWaitGroup",
                 "newPage": false,
                 "searchKey": "command.watchWaitGroup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1541,7 +1635,9 @@
                 "identifier": "flatten",
                 "newPage": false,
                 "searchKey": "command.flatten",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1561,7 +1657,9 @@
                 "identifier": "intersperse",
                 "newPage": false,
                 "searchKey": "command.intersperse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1581,7 +1679,9 @@
                 "identifier": "TestFormatRawOrDockerCommandRaw",
                 "newPage": false,
                 "searchKey": "command.TestFormatRawOrDockerCommandRaw",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1601,7 +1701,9 @@
                 "identifier": "TestFormatRawOrDockerCommandDockerScript",
                 "newPage": false,
                 "searchKey": "command.TestFormatRawOrDockerCommandDockerScript",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1621,7 +1723,9 @@
                 "identifier": "TestFormatRawOrDockerCommandDockerCommand",
                 "newPage": false,
                 "searchKey": "command.TestFormatRawOrDockerCommandDockerCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1641,7 +1745,9 @@
                 "identifier": "TestFormatFirecrackerCommandRaw",
                 "newPage": false,
                 "searchKey": "command.TestFormatFirecrackerCommandRaw",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1661,7 +1767,9 @@
                 "identifier": "TestFormatFirecrackerCommandDockerScript",
                 "newPage": false,
                 "searchKey": "command.TestFormatFirecrackerCommandDockerScript",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1681,7 +1789,9 @@
                 "identifier": "TestFormatFirecrackerCommandDockerCommand",
                 "newPage": false,
                 "searchKey": "command.TestFormatFirecrackerCommandDockerCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1701,7 +1811,9 @@
                 "identifier": "TestSetupFirecracker",
                 "newPage": false,
                 "searchKey": "command.TestSetupFirecracker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1721,7 +1833,9 @@
                 "identifier": "TestTeardownFirecracker",
                 "newPage": false,
                 "searchKey": "command.TestTeardownFirecracker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1741,7 +1855,9 @@
                 "identifier": "TestSanitizeImage",
                 "newPage": false,
                 "searchKey": "command.TestSanitizeImage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1761,7 +1877,9 @@
                 "identifier": "makeTestOperation",
                 "newPage": false,
                 "searchKey": "command.makeTestOperation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1781,7 +1899,9 @@
                 "identifier": "compareStrings",
                 "newPage": false,
                 "searchKey": "command.compareStrings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1801,7 +1921,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "command.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1821,7 +1943,9 @@
                 "identifier": "TestRunCommandEmptyCommand",
                 "newPage": false,
                 "searchKey": "command.TestRunCommandEmptyCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1841,7 +1965,9 @@
                 "identifier": "TestRunCommandIllegalCommand",
                 "newPage": false,
                 "searchKey": "command.TestRunCommandIllegalCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1861,7 +1987,9 @@
                 "identifier": "TestFlatten",
                 "newPage": false,
                 "searchKey": "command.TestFlatten",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1881,7 +2009,9 @@
                 "identifier": "TestIntersperse",
                 "newPage": false,
                 "searchKey": "command.TestIntersperse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

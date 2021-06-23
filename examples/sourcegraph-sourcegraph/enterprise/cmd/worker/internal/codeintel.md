@@ -42,10 +42,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="initCodeIntelDatabaseMemo" href="#initCodeIntelDatabaseMemo">var initCodeIntelDatabaseMemo</a>
 
 ```
 searchKey: codeintel.initCodeIntelDatabaseMemo
+tags: [private]
 ```
 
 ```Go
@@ -56,6 +61,7 @@ var initCodeIntelDatabaseMemo = ...
 
 ```
 searchKey: codeintel.commitGraphConfigInst
+tags: [private]
 ```
 
 ```Go
@@ -66,6 +72,7 @@ var commitGraphConfigInst = &commitGraphConfig{}
 
 ```
 searchKey: codeintel.initDBStore
+tags: [private]
 ```
 
 ```Go
@@ -76,6 +83,7 @@ var initDBStore = ...
 
 ```
 searchKey: codeintel.initGitserverClient
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +94,7 @@ var initGitserverClient = ...
 
 ```
 searchKey: codeintel.indexingConfigInst
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +105,7 @@ var indexingConfigInst = &indexingConfig{}
 
 ```
 searchKey: codeintel.janitorConfigInst
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +116,7 @@ var janitorConfigInst = &janitorConfig{}
 
 ```
 searchKey: codeintel.initLSFIStore
+tags: [private]
 ```
 
 ```Go
@@ -114,10 +125,15 @@ var initLSFIStore = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="commitGraphConfig" href="#commitGraphConfig">type commitGraphConfig struct</a>
 
 ```
 searchKey: codeintel.commitGraphConfig
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +148,7 @@ type commitGraphConfig struct {
 
 ```
 searchKey: codeintel.commitGraphConfig.Load
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +159,7 @@ func (c *commitGraphConfig) Load()
 
 ```
 searchKey: codeintel.commitGraphJob
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +170,7 @@ type commitGraphJob struct{}
 
 ```
 searchKey: codeintel.commitGraphJob.Config
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +181,7 @@ func (j *commitGraphJob) Config() []env.Config
 
 ```
 searchKey: codeintel.commitGraphJob.Routines
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +192,7 @@ func (j *commitGraphJob) Routines(ctx context.Context) ([]goroutine.BackgroundRo
 
 ```
 searchKey: codeintel.indexingConfig
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +209,7 @@ type indexingConfig struct {
 
 ```
 searchKey: codeintel.indexingConfig.Load
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +220,7 @@ func (c *indexingConfig) Load()
 
 ```
 searchKey: codeintel.indexingJob
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +231,7 @@ type indexingJob struct{}
 
 ```
 searchKey: codeintel.indexingJob.Config
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +242,7 @@ func (j *indexingJob) Config() []env.Config
 
 ```
 searchKey: codeintel.indexingJob.Routines
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +253,7 @@ func (j *indexingJob) Routines(ctx context.Context) ([]goroutine.BackgroundRouti
 
 ```
 searchKey: codeintel.janitorConfig
+tags: [private]
 ```
 
 ```Go
@@ -247,6 +273,7 @@ type janitorConfig struct {
 
 ```
 searchKey: codeintel.janitorConfig.Load
+tags: [private]
 ```
 
 ```Go
@@ -257,6 +284,7 @@ func (c *janitorConfig) Load()
 
 ```
 searchKey: codeintel.janitorJob
+tags: [private]
 ```
 
 ```Go
@@ -267,6 +295,7 @@ type janitorJob struct{}
 
 ```
 searchKey: codeintel.janitorJob.Config
+tags: [private]
 ```
 
 ```Go
@@ -277,6 +306,7 @@ func (j *janitorJob) Config() []env.Config
 
 ```
 searchKey: codeintel.janitorJob.Routines
+tags: [private]
 ```
 
 ```Go
@@ -285,11 +315,14 @@ func (j *janitorJob) Routines(ctx context.Context) ([]goroutine.BackgroundRoutin
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="InitCodeIntelDatabase" href="#InitCodeIntelDatabase">func InitCodeIntelDatabase() (*sql.DB, error)</a>
 
 ```
 searchKey: codeintel.InitCodeIntelDatabase
-tags: [exported]
 ```
 
 ```Go
@@ -302,7 +335,6 @@ InitCodeIntelDatabase initializes and returns a connection to the codeintel db.
 
 ```
 searchKey: codeintel.NewCommitGraphJob
-tags: [exported]
 ```
 
 ```Go
@@ -313,7 +345,6 @@ func NewCommitGraphJob() shared.Job
 
 ```
 searchKey: codeintel.InitDBStore
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +357,6 @@ InitDBStore initializes and returns a db store instance.
 
 ```
 searchKey: codeintel.InitGitserverClient
-tags: [exported]
 ```
 
 ```Go
@@ -339,7 +369,6 @@ InitGitserverClient initializes and returns a gitserver client.
 
 ```
 searchKey: codeintel.NewIndexingJob
-tags: [exported]
 ```
 
 ```Go
@@ -350,7 +379,6 @@ func NewIndexingJob() shared.Job
 
 ```
 searchKey: codeintel.NewJanitorJob
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +389,6 @@ func NewJanitorJob() shared.Job
 
 ```
 searchKey: codeintel.InitLSIFStore
-tags: [exported]
 ```
 
 ```Go

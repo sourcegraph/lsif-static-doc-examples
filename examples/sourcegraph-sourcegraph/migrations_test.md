@@ -3,7 +3,7 @@
 ## Index
 
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.migrations_test.go)
     * [func TestIDConstraints(t *testing.T)](#TestIDConstraints)
     * [func TestFrontendMigrations(t *testing.T)](#TestFrontendMigrations)
     * [func TestCodeIntelMigrations(t *testing.T)](#TestCodeIntelMigrations)
@@ -12,10 +12,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.migrations_test.go" href="#init.migrations_test.go">func init()</a>
 
 ```
 searchKey: migrations_test.init
+tags: [private]
 ```
 
 ```Go
@@ -26,6 +31,7 @@ func init()
 
 ```
 searchKey: migrations_test.TestIDConstraints
+tags: [private]
 ```
 
 ```Go
@@ -36,6 +42,7 @@ func TestIDConstraints(t *testing.T)
 
 ```
 searchKey: migrations_test.TestFrontendMigrations
+tags: [private]
 ```
 
 ```Go
@@ -46,6 +53,7 @@ func TestFrontendMigrations(t *testing.T)
 
 ```
 searchKey: migrations_test.TestCodeIntelMigrations
+tags: [private]
 ```
 
 ```Go
@@ -56,6 +64,7 @@ func TestCodeIntelMigrations(t *testing.T)
 
 ```
 searchKey: migrations_test.testMigrations
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "window",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/types/scheduler/window",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "ratePerSecond",
                 "newPage": false,
                 "searchKey": "window.ratePerSecond",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "ratePerMinute",
                 "newPage": false,
                 "searchKey": "window.ratePerMinute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "ratePerHour",
                 "newPage": false,
                 "searchKey": "window.ratePerHour",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +113,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -121,9 +133,7 @@
                 "identifier": "ErrZeroSchedule",
                 "newPage": false,
                 "searchKey": "window.ErrZeroSchedule",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +153,9 @@
                 "identifier": "cmpAllowUnexported",
                 "newPage": false,
                 "searchKey": "window.cmpAllowUnexported",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -163,7 +175,9 @@
                 "identifier": "cmpOptions",
                 "newPage": false,
                 "searchKey": "window.cmpOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -183,7 +197,9 @@
                 "identifier": "allWeekdays",
                 "newPage": false,
                 "searchKey": "window.allWeekdays",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -206,7 +222,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -224,9 +242,7 @@
                 "identifier": "Configuration",
                 "newPage": false,
                 "searchKey": "window.Configuration",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -244,9 +260,7 @@
                       "identifier": "NewConfiguration",
                       "newPage": false,
                       "searchKey": "window.NewConfiguration",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -266,9 +280,7 @@
                       "identifier": "Configuration.Estimate",
                       "newPage": false,
                       "searchKey": "window.Configuration.Estimate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -288,9 +300,7 @@
                       "identifier": "Configuration.HasRolloutWindows",
                       "newPage": false,
                       "searchKey": "window.Configuration.HasRolloutWindows",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -310,9 +320,7 @@
                       "identifier": "Configuration.Schedule",
                       "newPage": false,
                       "searchKey": "window.Configuration.Schedule",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -332,7 +340,9 @@
                       "identifier": "Configuration.windowFor",
                       "newPage": false,
                       "searchKey": "window.Configuration.windowFor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -352,7 +362,9 @@
                       "identifier": "Configuration.scheduleAt",
                       "newPage": false,
                       "searchKey": "window.Configuration.scheduleAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -375,7 +387,9 @@
                 "identifier": "rate",
                 "newPage": false,
                 "searchKey": "window.rate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -393,7 +407,9 @@
                       "identifier": "makeUnlimitedRate",
                       "newPage": false,
                       "searchKey": "window.makeUnlimitedRate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -413,7 +429,9 @@
                       "identifier": "parseRate",
                       "newPage": false,
                       "searchKey": "window.parseRate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -433,7 +451,9 @@
                       "identifier": "rate.IsUnlimited",
                       "newPage": false,
                       "searchKey": "window.rate.IsUnlimited",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -456,7 +476,9 @@
                 "identifier": "rateUnit",
                 "newPage": false,
                 "searchKey": "window.rateUnit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -474,7 +496,9 @@
                       "identifier": "parseRateUnit",
                       "newPage": false,
                       "searchKey": "window.parseRateUnit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -494,7 +518,9 @@
                       "identifier": "rateUnit.AsDuration",
                       "newPage": false,
                       "searchKey": "window.rateUnit.AsDuration",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -517,9 +543,7 @@
                 "identifier": "Schedule",
                 "newPage": false,
                 "searchKey": "window.Schedule",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -537,7 +561,9 @@
                       "identifier": "newSchedule",
                       "newPage": false,
                       "searchKey": "window.newSchedule",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -557,9 +583,7 @@
                       "identifier": "Schedule.Take",
                       "newPage": false,
                       "searchKey": "window.Schedule.Take",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -579,9 +603,7 @@
                       "identifier": "Schedule.ValidUntil",
                       "newPage": false,
                       "searchKey": "window.Schedule.ValidUntil",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -601,7 +623,9 @@
                       "identifier": "Schedule.total",
                       "newPage": false,
                       "searchKey": "window.Schedule.total",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -624,7 +648,9 @@
                 "identifier": "timeOfDay",
                 "newPage": false,
                 "searchKey": "window.timeOfDay",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -642,7 +668,9 @@
                       "identifier": "timeOfDayFromParts",
                       "newPage": false,
                       "searchKey": "window.timeOfDayFromParts",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -662,7 +690,9 @@
                       "identifier": "timeOfDayFromTime",
                       "newPage": false,
                       "searchKey": "window.timeOfDayFromTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -682,7 +712,9 @@
                       "identifier": "parseWindowTime",
                       "newPage": false,
                       "searchKey": "window.parseWindowTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -702,7 +734,9 @@
                       "identifier": "timeOfDayPtr",
                       "newPage": false,
                       "searchKey": "window.timeOfDayPtr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -722,7 +756,9 @@
                       "identifier": "timeOfDay.after",
                       "newPage": false,
                       "searchKey": "window.timeOfDay.after",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -742,7 +778,9 @@
                       "identifier": "timeOfDay.before",
                       "newPage": false,
                       "searchKey": "window.timeOfDay.before",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -762,7 +800,9 @@
                       "identifier": "timeOfDay.Equal",
                       "newPage": false,
                       "searchKey": "window.timeOfDay.Equal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -785,7 +825,9 @@
                 "identifier": "weekdaySet",
                 "newPage": false,
                 "searchKey": "window.weekdaySet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -803,7 +845,9 @@
                       "identifier": "newWeekdaySet",
                       "newPage": false,
                       "searchKey": "window.newWeekdaySet",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -823,7 +867,9 @@
                       "identifier": "weekdayToBit",
                       "newPage": false,
                       "searchKey": "window.weekdayToBit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -843,7 +889,9 @@
                       "identifier": "weekdaySet.add",
                       "newPage": false,
                       "searchKey": "window.weekdaySet.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -863,7 +911,9 @@
                       "identifier": "weekdaySet.all",
                       "newPage": false,
                       "searchKey": "window.weekdaySet.all",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -883,7 +933,9 @@
                       "identifier": "weekdaySet.includes",
                       "newPage": false,
                       "searchKey": "window.weekdaySet.includes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -903,7 +955,9 @@
                       "identifier": "weekdaySet.Equal",
                       "newPage": false,
                       "searchKey": "window.weekdaySet.Equal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -926,9 +980,7 @@
                 "identifier": "Window",
                 "newPage": false,
                 "searchKey": "window.Window",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -946,7 +998,9 @@
                       "identifier": "parseWindow",
                       "newPage": false,
                       "searchKey": "window.parseWindow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -966,7 +1020,9 @@
                       "identifier": "Window.covers",
                       "newPage": false,
                       "searchKey": "window.Window.covers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -986,9 +1042,7 @@
                       "identifier": "Window.IsOpen",
                       "newPage": false,
                       "searchKey": "window.Window.IsOpen",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1008,9 +1062,7 @@
                       "identifier": "Window.NextOpenAfter",
                       "newPage": false,
                       "searchKey": "window.Window.NextOpenAfter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1036,7 +1088,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1054,7 +1108,9 @@
                 "identifier": "parseConfiguration",
                 "newPage": false,
                 "searchKey": "window.parseConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1074,7 +1130,9 @@
                 "identifier": "parseTimePart",
                 "newPage": false,
                 "searchKey": "window.parseTimePart",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1094,7 +1152,9 @@
                 "identifier": "parseWeekday",
                 "newPage": false,
                 "searchKey": "window.parseWeekday",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1114,7 +1174,9 @@
                 "identifier": "TestConfiguration_Estimate",
                 "newPage": false,
                 "searchKey": "window.TestConfiguration_Estimate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1134,7 +1196,9 @@
                 "identifier": "TestConfiguration_Schedule",
                 "newPage": false,
                 "searchKey": "window.TestConfiguration_Schedule",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1154,7 +1218,9 @@
                 "identifier": "TestConfiguration_currentFor",
                 "newPage": false,
                 "searchKey": "window.TestConfiguration_currentFor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1174,7 +1240,9 @@
                 "identifier": "TestParseConfiguration",
                 "newPage": false,
                 "searchKey": "window.TestParseConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1194,7 +1262,9 @@
                 "identifier": "TestParseRateUnit",
                 "newPage": false,
                 "searchKey": "window.TestParseRateUnit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1214,7 +1284,9 @@
                 "identifier": "TestParseRate",
                 "newPage": false,
                 "searchKey": "window.TestParseRate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1234,7 +1306,9 @@
                 "identifier": "TestRateUnit_AsDuration",
                 "newPage": false,
                 "searchKey": "window.TestRateUnit_AsDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1254,7 +1328,9 @@
                 "identifier": "TestScheduleLimited",
                 "newPage": false,
                 "searchKey": "window.TestScheduleLimited",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1274,7 +1350,9 @@
                 "identifier": "TestScheduleUnlimited",
                 "newPage": false,
                 "searchKey": "window.TestScheduleUnlimited",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1294,7 +1372,9 @@
                 "identifier": "TestScheduleZero",
                 "newPage": false,
                 "searchKey": "window.TestScheduleZero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1314,7 +1394,9 @@
                 "identifier": "TestTimeOfDay",
                 "newPage": false,
                 "searchKey": "window.TestTimeOfDay",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1334,7 +1416,9 @@
                 "identifier": "TestWeekday_All",
                 "newPage": false,
                 "searchKey": "window.TestWeekday_All",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1354,7 +1438,9 @@
                 "identifier": "TestWeekday_Includes",
                 "newPage": false,
                 "searchKey": "window.TestWeekday_Includes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1374,7 +1460,9 @@
                 "identifier": "TestWeekdayBitSanity",
                 "newPage": false,
                 "searchKey": "window.TestWeekdayBitSanity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1394,7 +1482,9 @@
                 "identifier": "TestWindow_IsOpen",
                 "newPage": false,
                 "searchKey": "window.TestWindow_IsOpen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1414,7 +1504,9 @@
                 "identifier": "TestWindow_NextOpenAfter",
                 "newPage": false,
                 "searchKey": "window.TestWindow_NextOpenAfter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1434,7 +1526,9 @@
                 "identifier": "TestParseWindowTime",
                 "newPage": false,
                 "searchKey": "window.TestParseWindowTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1454,7 +1548,9 @@
                 "identifier": "TestParseWeekday",
                 "newPage": false,
                 "searchKey": "window.TestParseWeekday",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1474,7 +1570,9 @@
                 "identifier": "TestParseWindow",
                 "newPage": false,
                 "searchKey": "window.TestParseWindow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

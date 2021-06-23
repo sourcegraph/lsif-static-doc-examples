@@ -4,9 +4,7 @@
     "identifier": "src-expose",
     "newPage": true,
     "searchKey": "dev/src-expose",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "testAddress",
                 "newPage": false,
                 "searchKey": "main.testAddress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,7 +83,9 @@
                 "identifier": "errSilent",
                 "newPage": false,
                 "searchKey": "main.errSilent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "indexHTML",
                 "newPage": false,
                 "searchKey": "main.indexHTML",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "postUpdateHook",
                 "newPage": false,
                 "searchKey": "main.postUpdateHook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "discardLogger",
                 "newPage": false,
                 "searchKey": "main.discardLogger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -170,9 +174,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -190,7 +192,9 @@
                 "identifier": "usageError",
                 "newPage": false,
                 "searchKey": "main.usageError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -208,7 +212,9 @@
                       "identifier": "usageError.Error",
                       "newPage": false,
                       "searchKey": "main.usageError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -231,9 +237,7 @@
                 "identifier": "Serve",
                 "newPage": false,
                 "searchKey": "main.Serve",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -251,9 +255,7 @@
                       "identifier": "Serve.Start",
                       "newPage": false,
                       "searchKey": "main.Serve.Start",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -273,7 +275,9 @@
                       "identifier": "Serve.handler",
                       "newPage": false,
                       "searchKey": "main.Serve.handler",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -293,7 +297,9 @@
                       "identifier": "Serve.configureRepos",
                       "newPage": false,
                       "searchKey": "main.Serve.configureRepos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -313,7 +319,9 @@
                       "identifier": "Serve.allUpdateServerInfo",
                       "newPage": false,
                       "searchKey": "main.Serve.allUpdateServerInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -336,9 +344,7 @@
                 "identifier": "Repo",
                 "newPage": false,
                 "searchKey": "main.Repo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -358,7 +364,9 @@
                 "identifier": "httpDir",
                 "newPage": false,
                 "searchKey": "main.httpDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -376,7 +384,9 @@
                       "identifier": "httpDir.Open",
                       "newPage": false,
                       "searchKey": "main.httpDir.Open",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -399,7 +409,9 @@
                 "identifier": "lineCountWriter",
                 "newPage": false,
                 "searchKey": "main.lineCountWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -417,7 +429,9 @@
                       "identifier": "lineCountWriter.Write",
                       "newPage": false,
                       "searchKey": "main.lineCountWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -437,7 +451,9 @@
                       "identifier": "lineCountWriter.Close",
                       "newPage": false,
                       "searchKey": "main.lineCountWriter.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -460,9 +476,7 @@
                 "identifier": "SyncDir",
                 "newPage": false,
                 "searchKey": "main.SyncDir",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -482,9 +496,7 @@
                 "identifier": "Snapshotter",
                 "newPage": false,
                 "searchKey": "main.Snapshotter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -502,9 +514,7 @@
                       "identifier": "Snapshotter.SetDefaults",
                       "newPage": false,
                       "searchKey": "main.Snapshotter.SetDefaults",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -524,9 +534,7 @@
                       "identifier": "Snapshotter.Run",
                       "newPage": false,
                       "searchKey": "main.Snapshotter.Run",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -549,7 +557,9 @@
                 "identifier": "testWriter",
                 "newPage": false,
                 "searchKey": "main.testWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -567,7 +577,9 @@
                       "identifier": "testWriter.Write",
                       "newPage": false,
                       "searchKey": "main.testWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -593,9 +605,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -613,7 +623,9 @@
                 "identifier": "explainAddr",
                 "newPage": false,
                 "searchKey": "main.explainAddr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -633,7 +645,9 @@
                 "identifier": "explainSnapshotter",
                 "newPage": false,
                 "searchKey": "main.explainSnapshotter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -653,7 +667,9 @@
                 "identifier": "usageErrorOutput",
                 "newPage": false,
                 "searchKey": "main.usageErrorOutput",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -673,7 +689,9 @@
                 "identifier": "shortenErrHelp",
                 "newPage": false,
                 "searchKey": "main.shortenErrHelp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -693,7 +711,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -713,7 +733,9 @@
                 "identifier": "configurePostUpdateHook",
                 "newPage": false,
                 "searchKey": "main.configurePostUpdateHook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -733,7 +755,9 @@
                 "identifier": "updateServerInfo",
                 "newPage": false,
                 "searchKey": "main.updateServerInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -753,7 +777,9 @@
                 "identifier": "snapshot",
                 "newPage": false,
                 "searchKey": "main.snapshot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -773,7 +799,9 @@
                 "identifier": "run",
                 "newPage": false,
                 "searchKey": "main.run",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -793,7 +821,9 @@
                 "identifier": "abs",
                 "newPage": false,
                 "searchKey": "main.abs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -813,7 +843,9 @@
                 "identifier": "TestExplain",
                 "newPage": false,
                 "searchKey": "main.TestExplain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -833,7 +865,9 @@
                 "identifier": "TestReposHandler",
                 "newPage": false,
                 "searchKey": "main.TestReposHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -853,7 +887,9 @@
                 "identifier": "testReposHandler",
                 "newPage": false,
                 "searchKey": "main.testReposHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -873,7 +909,9 @@
                 "identifier": "gitInitRepos",
                 "newPage": false,
                 "searchKey": "main.gitInitRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -893,7 +931,9 @@
                 "identifier": "TestIgnoreGitSubmodules",
                 "newPage": false,
                 "searchKey": "main.TestIgnoreGitSubmodules",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -913,7 +953,9 @@
                 "identifier": "testLogger",
                 "newPage": false,
                 "searchKey": "main.testLogger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

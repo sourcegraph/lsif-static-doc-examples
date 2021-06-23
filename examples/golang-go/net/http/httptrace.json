@@ -4,9 +4,7 @@
     "identifier": "httptrace",
     "newPage": true,
     "searchKey": "net/http/httptrace",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "clientEventContextKey",
                 "newPage": false,
                 "searchKey": "httptrace.clientEventContextKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,9 +62,7 @@
                 "identifier": "ClientTrace",
                 "newPage": false,
                 "searchKey": "httptrace.ClientTrace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +80,7 @@
                       "identifier": "ContextClientTrace",
                       "newPage": false,
                       "searchKey": "httptrace.ContextClientTrace",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -106,7 +100,9 @@
                       "identifier": "ClientTrace.compose",
                       "newPage": false,
                       "searchKey": "httptrace.ClientTrace.compose",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,7 +122,9 @@
                       "identifier": "ClientTrace.hasNetHooks",
                       "newPage": false,
                       "searchKey": "httptrace.ClientTrace.hasNetHooks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -149,9 +147,7 @@
                 "identifier": "WroteRequestInfo",
                 "newPage": false,
                 "searchKey": "httptrace.WroteRequestInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -171,9 +167,7 @@
                 "identifier": "DNSStartInfo",
                 "newPage": false,
                 "searchKey": "httptrace.DNSStartInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -193,9 +187,7 @@
                 "identifier": "DNSDoneInfo",
                 "newPage": false,
                 "searchKey": "httptrace.DNSDoneInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -215,9 +207,7 @@
                 "identifier": "GotConnInfo",
                 "newPage": false,
                 "searchKey": "httptrace.GotConnInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -240,9 +230,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -260,9 +248,7 @@
                 "identifier": "WithClientTrace",
                 "newPage": false,
                 "searchKey": "httptrace.WithClientTrace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,7 +268,9 @@
                 "identifier": "TestWithClientTrace",
                 "newPage": false,
                 "searchKey": "httptrace.TestWithClientTrace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -302,7 +290,9 @@
                 "identifier": "TestCompose",
                 "newPage": false,
                 "searchKey": "httptrace.TestCompose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

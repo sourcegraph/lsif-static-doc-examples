@@ -27,10 +27,15 @@ Package txemail sends transactional emails.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="textFuncMap" href="#textFuncMap">var textFuncMap</a>
 
 ```
 searchKey: txemail.textFuncMap
+tags: [private]
 ```
 
 ```Go
@@ -41,6 +46,7 @@ var textFuncMap = ...
 
 ```
 searchKey: txemail.htmlFuncMap
+tags: [private]
 ```
 
 ```Go
@@ -51,7 +57,6 @@ var htmlFuncMap = ...
 
 ```
 searchKey: txemail.MockSend
-tags: [exported]
 ```
 
 ```Go
@@ -64,6 +69,7 @@ MockSend is used in tests to mock the Send func.
 
 ```
 searchKey: txemail.disableSilently
+tags: [private]
 ```
 
 ```Go
@@ -72,11 +78,14 @@ var disableSilently bool
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Message" href="#Message">type Message struct</a>
 
 ```
 searchKey: txemail.Message
-tags: [exported]
 ```
 
 ```Go
@@ -96,11 +105,14 @@ Message describes an email message to be sent.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MustParseTemplate" href="#MustParseTemplate">func MustParseTemplate(input txtypes.Templates) txtypes.ParsedTemplates</a>
 
 ```
 searchKey: txemail.MustParseTemplate
-tags: [exported]
 ```
 
 ```Go
@@ -113,7 +125,6 @@ MustParseTemplate calls ParseTemplate and panics if an error is returned. It is 
 
 ```
 searchKey: txemail.MustValidate
-tags: [exported]
 ```
 
 ```Go
@@ -126,7 +137,6 @@ MustValidate panics if the templates are unparsable, otherwise it returns them u
 
 ```
 searchKey: txemail.ParseTemplate
-tags: [exported]
 ```
 
 ```Go
@@ -139,6 +149,7 @@ ParseTemplate is a helper func for parsing the text/template and html/template t
 
 ```
 searchKey: txemail.renderTemplate
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +160,7 @@ func renderTemplate(t *txtypes.ParsedTemplates, data interface{}, m *email.Email
 
 ```
 searchKey: txemail.render
+tags: [private]
 ```
 
 ```Go
@@ -161,7 +173,6 @@ render returns the rendered message contents without sending email.
 
 ```
 searchKey: txemail.Send
-tags: [exported]
 ```
 
 ```Go
@@ -176,7 +187,6 @@ Callers that do not live in the frontend should call api.InternalClient.SendEmai
 
 ```
 searchKey: txemail.DisableSilently
-tags: [exported]
 ```
 
 ```Go
@@ -189,6 +199,7 @@ DisableSilently prevents sending of emails, even if email sending is configured.
 
 ```
 searchKey: txemail.TestParseTemplate
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +210,7 @@ func TestParseTemplate(t *testing.T)
 
 ```
 searchKey: txemail.TestRender
+tags: [private]
 ```
 
 ```Go

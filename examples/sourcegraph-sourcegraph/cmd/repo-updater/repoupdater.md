@@ -59,14 +59,11 @@ Package repoupdater implements the repo-updater service HTTP handler.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="mockRepoLookup" href="#mockRepoLookup">var mockRepoLookup</a>
 
 ```
 searchKey: repoupdater.mockRepoLookup
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +74,7 @@ var mockRepoLookup func(protocol.RepoLookupArgs) (*protocol.RepoLookupResult, er
 
 ```
 searchKey: repoupdater.dsn
+tags: [private]
 ```
 
 ```Go
@@ -85,15 +83,10 @@ var dsn = flag.String("dsn", "", "Database connection string to use in integrati
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="HandlerMetrics" href="#HandlerMetrics">type HandlerMetrics struct</a>
 
 ```
 searchKey: repoupdater.HandlerMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -108,7 +101,6 @@ HandlerMetrics encapsulates the Prometheus metrics of an http.Handler.
 
 ```
 searchKey: repoupdater.NewHandlerMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -121,7 +113,6 @@ NewHandlerMetrics returns HandlerMetrics that need to be registered in a Prometh
 
 ```
 searchKey: repoupdater.HandlerMetrics.MustRegister
-tags: [exported]
 ```
 
 ```Go
@@ -134,6 +125,7 @@ MustRegister registers all metrics in HandlerMetrics in the given prometheus.Reg
 
 ```
 searchKey: repoupdater.observedHandler
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +140,7 @@ type observedHandler struct {
 
 ```
 searchKey: repoupdater.observedHandler.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -158,6 +151,7 @@ func (h *observedHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: repoupdater.responseRecorder
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +166,7 @@ type responseRecorder struct {
 
 ```
 searchKey: repoupdater.responseRecorder.WriteHeader
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +179,7 @@ WriteHeader may not be explicitly called, so care must be taken to initialize w.
 
 ```
 searchKey: repoupdater.responseRecorder.Write
+tags: [private]
 ```
 
 ```Go
@@ -194,7 +190,6 @@ func (w *responseRecorder) Write(p []byte) (int, error)
 
 ```
 searchKey: repoupdater.Server
-tags: [exported]
 ```
 
 ```Go
@@ -242,7 +237,6 @@ Server is a repoupdater server.
 
 ```
 searchKey: repoupdater.Server.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -255,6 +249,7 @@ Handler returns the http.Handler that should be used to serve requests.
 
 ```
 searchKey: repoupdater.Server.handleRepoUpdateSchedulerInfo
+tags: [private]
 ```
 
 ```Go
@@ -265,6 +260,7 @@ func (s *Server) handleRepoUpdateSchedulerInfo(w http.ResponseWriter, r *http.Re
 
 ```
 searchKey: repoupdater.Server.handleRepoLookup
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +271,7 @@ func (s *Server) handleRepoLookup(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: repoupdater.Server.handleEnqueueRepoUpdate
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +282,7 @@ func (s *Server) handleEnqueueRepoUpdate(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: repoupdater.Server.enqueueRepoUpdate
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +293,7 @@ func (s *Server) enqueueRepoUpdate(ctx context.Context, req *protocol.RepoUpdate
 
 ```
 searchKey: repoupdater.Server.handleExternalServiceSync
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +304,7 @@ func (s *Server) handleExternalServiceSync(w http.ResponseWriter, r *http.Reques
 
 ```
 searchKey: repoupdater.Server.repoLookup
+tags: [private]
 ```
 
 ```Go
@@ -315,6 +315,7 @@ func (s *Server) repoLookup(ctx context.Context, args protocol.RepoLookupArgs) (
 
 ```
 searchKey: repoupdater.Server.remoteRepoSync
+tags: [private]
 ```
 
 ```Go
@@ -327,6 +328,7 @@ remoteRepoSync is used by Sourcegraph.com to incrementally sync metadata for rem
 
 ```
 searchKey: repoupdater.Server.handleEnqueueChangesetSync
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +339,7 @@ func (s *Server) handleEnqueueChangesetSync(w http.ResponseWriter, r *http.Reque
 
 ```
 searchKey: repoupdater.Server.handleSchedulePermsSync
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +350,7 @@ func (s *Server) handleSchedulePermsSync(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: repoupdater.fakeRepoSource
+tags: [private]
 ```
 
 ```Go
@@ -360,6 +364,7 @@ type fakeRepoSource struct {
 
 ```
 searchKey: repoupdater.fakeRepoSource.GetRepo
+tags: [private]
 ```
 
 ```Go
@@ -370,6 +375,7 @@ func (s *fakeRepoSource) GetRepo(context.Context, string) (*types.Repo, error)
 
 ```
 searchKey: repoupdater.fakeScheduler
+tags: [private]
 ```
 
 ```Go
@@ -380,6 +386,7 @@ type fakeScheduler struct{}
 
 ```
 searchKey: repoupdater.fakeScheduler.UpdateOnce
+tags: [private]
 ```
 
 ```Go
@@ -390,6 +397,7 @@ func (s *fakeScheduler) UpdateOnce(_ api.RepoID, _ api.RepoName)
 
 ```
 searchKey: repoupdater.fakeScheduler.ScheduleInfo
+tags: [private]
 ```
 
 ```Go
@@ -400,6 +408,7 @@ func (s *fakeScheduler) ScheduleInfo(id api.RepoID) *protocol.RepoUpdateSchedule
 
 ```
 searchKey: repoupdater.fakePermsSyncer
+tags: [private]
 ```
 
 ```Go
@@ -410,6 +419,7 @@ type fakePermsSyncer struct{}
 
 ```
 searchKey: repoupdater.fakePermsSyncer.ScheduleUsers
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +430,7 @@ func (*fakePermsSyncer) ScheduleUsers(ctx context.Context, userIDs ...int32)
 
 ```
 searchKey: repoupdater.fakePermsSyncer.ScheduleRepos
+tags: [private]
 ```
 
 ```Go
@@ -430,6 +441,7 @@ func (*fakePermsSyncer) ScheduleRepos(ctx context.Context, repoIDs ...api.RepoID
 
 ```
 searchKey: repoupdater.testSource
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +454,7 @@ type testSource struct {
 
 ```
 searchKey: repoupdater.testSource.ListRepos
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +465,7 @@ func (t testSource) ListRepos(ctx context.Context, results chan repos.SourceResu
 
 ```
 searchKey: repoupdater.testSource.ExternalServices
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +476,7 @@ func (t testSource) ExternalServices() types.ExternalServices
 
 ```
 searchKey: repoupdater.testSource.WithAuthenticator
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +487,7 @@ func (t testSource) WithAuthenticator(a auth.Authenticator) (repos.Source, error
 
 ```
 searchKey: repoupdater.testSource.ValidateAuthenticator
+tags: [private]
 ```
 
 ```Go
@@ -480,15 +496,10 @@ func (t testSource) ValidateAuthenticator(ctx context.Context) error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ObservedHandler" href="#ObservedHandler">func ObservedHandler(log log15.Logger,...</a>
 
 ```
 searchKey: repoupdater.ObservedHandler
-tags: [exported]
 ```
 
 ```Go
@@ -505,6 +516,7 @@ ObservedHandler returns a decorator that wraps an http.Handler with logging, Pro
 
 ```
 searchKey: repoupdater.respond
+tags: [private]
 ```
 
 ```Go
@@ -517,6 +529,7 @@ TODO(tsenart): Reuse this function in all handlers.
 
 ```
 searchKey: repoupdater.externalServiceValidate
+tags: [private]
 ```
 
 ```Go
@@ -527,6 +540,7 @@ func externalServiceValidate(ctx context.Context, req protocol.ExternalServiceSy
 
 ```
 searchKey: repoupdater.newRepoInfo
+tags: [private]
 ```
 
 ```Go
@@ -537,6 +551,7 @@ func newRepoInfo(r *types.Repo) (*protocol.RepoInfo, error)
 
 ```
 searchKey: repoupdater.pathAppend
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +562,7 @@ func pathAppend(base, p string) string
 
 ```
 searchKey: repoupdater.isUnauthorized
+tags: [private]
 ```
 
 ```Go
@@ -557,6 +573,7 @@ func isUnauthorized(err error) bool
 
 ```
 searchKey: repoupdater.isTemporarilyUnavailable
+tags: [private]
 ```
 
 ```Go
@@ -567,6 +584,7 @@ func isTemporarilyUnavailable(err error) bool
 
 ```
 searchKey: repoupdater.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -577,6 +595,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: repoupdater.TestIntegration
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +606,7 @@ func TestIntegration(t *testing.T)
 
 ```
 searchKey: repoupdater.TestServer_handleRepoLookup
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +617,7 @@ func TestServer_handleRepoLookup(t *testing.T)
 
 ```
 searchKey: repoupdater.testServerEnqueueRepoUpdate
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +628,7 @@ func testServerEnqueueRepoUpdate(t *testing.T, store *repos.Store) func(t *testi
 
 ```
 searchKey: repoupdater.testRepoLookup
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +639,7 @@ func testRepoLookup(db *sql.DB) func(t *testing.T, repoStore *repos.Store) func(
 
 ```
 searchKey: repoupdater.TestServer_handleSchedulePermsSync
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +650,7 @@ func TestServer_handleSchedulePermsSync(t *testing.T)
 
 ```
 searchKey: repoupdater.TestExternalServiceValidate_ValidatesToken
+tags: [private]
 ```
 
 ```Go

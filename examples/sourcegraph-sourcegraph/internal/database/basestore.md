@@ -52,7 +52,7 @@
     * [func ScanTimes(rows *sql.Rows, queryErr error) (_ []time.Time, err error)](#ScanTimes)
     * [func ScanFirstTime(rows *sql.Rows, queryErr error) (_ time.Time, _ bool, err error)](#ScanFirstTime)
     * [func makeSavepointID() (string, error)](#makeSavepointID)
-    * [func init()](#init)
+    * [func init()](#init.store_test.go)
     * [func TestTransaction(t *testing.T)](#TestTransaction)
     * [func TestSavepoints(t *testing.T)](#TestSavepoints)
     * [func recurSavepoints(t *testing.T, store *Store, index, rollbackAt int)](#recurSavepoints)
@@ -62,10 +62,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="savepointQuery" href="#savepointQuery">const savepointQuery</a>
 
 ```
 searchKey: basestore.savepointQuery
+tags: [private]
 ```
 
 ```Go
@@ -76,6 +81,7 @@ const savepointQuery = "SAVEPOINT %s"
 
 ```
 searchKey: basestore.commitSavepointQuery
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +92,7 @@ const commitSavepointQuery = "RELEASE %s"
 
 ```
 searchKey: basestore.rollbackSavepointQuery
+tags: [private]
 ```
 
 ```Go
@@ -94,11 +101,14 @@ const rollbackSavepointQuery = "ROLLBACK TO %s"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrNotTransactable" href="#ErrNotTransactable">var ErrNotTransactable</a>
 
 ```
 searchKey: basestore.ErrNotTransactable
-tags: [exported]
 ```
 
 ```Go
@@ -109,11 +119,14 @@ ErrNotTransactable occurs when Transact is called on a Store instance whose unde
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TransactableHandle" href="#TransactableHandle">type TransactableHandle struct</a>
 
 ```
 searchKey: basestore.TransactableHandle
-tags: [exported]
 ```
 
 ```Go
@@ -130,7 +143,6 @@ TransactableHandle is a wrapper around a database connection that provides neste
 
 ```
 searchKey: basestore.NewHandle
-tags: [exported]
 ```
 
 ```Go
@@ -143,7 +155,6 @@ NewHandle returns a new transactable database handle connected to the given dsn 
 
 ```
 searchKey: basestore.NewHandleWithDB
-tags: [exported]
 ```
 
 ```Go
@@ -156,7 +167,6 @@ NewHandleWithDB returns a new transactable database handle using the given datab
 
 ```
 searchKey: basestore.TransactableHandle.DB
-tags: [exported]
 ```
 
 ```Go
@@ -169,7 +179,6 @@ DB returns the underlying database handle.
 
 ```
 searchKey: basestore.TransactableHandle.InTransaction
-tags: [exported]
 ```
 
 ```Go
@@ -182,7 +191,6 @@ InTransaction returns true if the underlying database handle is in a transaction
 
 ```
 searchKey: basestore.TransactableHandle.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -197,7 +205,6 @@ Note that it is not valid to call Transact or Done on the same database handle f
 
 ```
 searchKey: basestore.TransactableHandle.Done
-tags: [exported]
 ```
 
 ```Go
@@ -210,6 +217,7 @@ Done performs a commit or rollback of the underlying transaction/savepoint depen
 
 ```
 searchKey: basestore.savepoint
+tags: [private]
 ```
 
 ```Go
@@ -225,6 +233,7 @@ savepoint is a small wrapper around committing/rolling back a "nested transactio
 
 ```
 searchKey: basestore.newSavepoint
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +244,7 @@ func newSavepoint(ctx context.Context, db dbutil.DB) (*savepoint, error)
 
 ```
 searchKey: basestore.savepoint.Commit
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +255,7 @@ func (s *savepoint) Commit() error
 
 ```
 searchKey: basestore.savepoint.Rollback
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +266,7 @@ func (s *savepoint) Rollback() error
 
 ```
 searchKey: basestore.savepoint.apply
+tags: [private]
 ```
 
 ```Go
@@ -265,7 +277,6 @@ func (s *savepoint) apply(query string) error
 
 ```
 searchKey: basestore.Store
-tags: [exported]
 ```
 
 ```Go
@@ -301,7 +312,6 @@ func (s *SprocketStore) Transact(ctx context.Context) (*SprocketStore, error) {
 
 ```
 searchKey: basestore.New
-tags: [exported]
 ```
 
 ```Go
@@ -314,7 +324,6 @@ New returns a new base store connected to the given dsn (data store name).
 
 ```
 searchKey: basestore.NewWithDB
-tags: [exported]
 ```
 
 ```Go
@@ -327,7 +336,6 @@ NewHandleWithDB returns a new base store connected to the given connection.
 
 ```
 searchKey: basestore.NewWithHandle
-tags: [exported]
 ```
 
 ```Go
@@ -340,6 +348,7 @@ NewWithHandle returns a new base store using the given database handle.
 
 ```
 searchKey: basestore.testStore
+tags: [private]
 ```
 
 ```Go
@@ -350,7 +359,6 @@ func testStore(db dbutil.DB) *Store
 
 ```
 searchKey: basestore.Store.Handle
-tags: [exported]
 ```
 
 ```Go
@@ -363,7 +371,6 @@ Handle returns the underlying transactable database handle.
 
 ```
 searchKey: basestore.Store.With
-tags: [exported]
 ```
 
 ```Go
@@ -387,7 +394,6 @@ Note that once a handle is shared between two stores, committing or rolling back
 
 ```
 searchKey: basestore.Store.Query
-tags: [exported]
 ```
 
 ```Go
@@ -400,7 +406,6 @@ Query performs QueryContext on the underlying connection.
 
 ```
 searchKey: basestore.Store.QueryRow
-tags: [exported]
 ```
 
 ```Go
@@ -413,7 +418,6 @@ QueryRow performs QueryRowContext on the underlying connection.
 
 ```
 searchKey: basestore.Store.Exec
-tags: [exported]
 ```
 
 ```Go
@@ -426,7 +430,6 @@ Exec performs a query without returning any rows.
 
 ```
 searchKey: basestore.Store.ExecResult
-tags: [exported]
 ```
 
 ```Go
@@ -439,7 +442,6 @@ ExecResult performs a query without returning any rows, but includes the result 
 
 ```
 searchKey: basestore.Store.InTransaction
-tags: [exported]
 ```
 
 ```Go
@@ -452,7 +454,6 @@ InTransaction returns true if the underlying database handle is in a transaction
 
 ```
 searchKey: basestore.Store.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -465,7 +466,6 @@ Transact returns a new store whose methods operate within the context of a new t
 
 ```
 searchKey: basestore.Store.Done
-tags: [exported]
 ```
 
 ```Go
@@ -478,7 +478,6 @@ Done performs a commit or rollback of the underlying transaction/savepoint depen
 
 ```
 searchKey: basestore.ShareableStore
-tags: [exported]
 ```
 
 ```Go
@@ -492,10 +491,15 @@ ShareableStore is implemented by stores to explicitly allow distinct store insta
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="combineErrors" href="#combineErrors">func combineErrors(errs ...error) (err error)</a>
 
 ```
 searchKey: basestore.combineErrors
+tags: [private]
 ```
 
 ```Go
@@ -508,7 +512,6 @@ combineErrors returns a multierror containing all fo the non-nil error parameter
 
 ```
 searchKey: basestore.CloseRows
-tags: [exported]
 ```
 
 ```Go
@@ -540,7 +543,6 @@ things, err := ScanThings(store.Query(ctx, query))
 
 ```
 searchKey: basestore.ScanStrings
-tags: [exported]
 ```
 
 ```Go
@@ -553,7 +555,6 @@ ScanStrings reads string values from the given row object.
 
 ```
 searchKey: basestore.ScanFirstString
-tags: [exported]
 ```
 
 ```Go
@@ -566,7 +567,6 @@ ScanFirstString reads string values from the given row object and returns the fi
 
 ```
 searchKey: basestore.ScanFirstNullString
-tags: [exported]
 ```
 
 ```Go
@@ -579,7 +579,6 @@ ScanFirstNullString reads possibly null string values from the given row object 
 
 ```
 searchKey: basestore.ScanInts
-tags: [exported]
 ```
 
 ```Go
@@ -592,7 +591,6 @@ ScanInts reads integer values from the given row object.
 
 ```
 searchKey: basestore.ScanInt32s
-tags: [exported]
 ```
 
 ```Go
@@ -605,7 +603,6 @@ ScanInt32s reads integer values from the given row object.
 
 ```
 searchKey: basestore.ScanFirstInt
-tags: [exported]
 ```
 
 ```Go
@@ -618,7 +615,6 @@ ScanFirstInt reads integer values from the given row object and returns the firs
 
 ```
 searchKey: basestore.ScanFloats
-tags: [exported]
 ```
 
 ```Go
@@ -631,7 +627,6 @@ ScanFloats reads float values from the given row object.
 
 ```
 searchKey: basestore.ScanFirstFloat
-tags: [exported]
 ```
 
 ```Go
@@ -644,7 +639,6 @@ ScanFirstFloat reads float values from the given row object and returns the firs
 
 ```
 searchKey: basestore.ScanBools
-tags: [exported]
 ```
 
 ```Go
@@ -657,7 +651,6 @@ ScanBools reads bool values from the given row object.
 
 ```
 searchKey: basestore.ScanFirstBool
-tags: [exported]
 ```
 
 ```Go
@@ -670,7 +663,6 @@ ScanFirstBool reads bool values from the given row object and returns the first 
 
 ```
 searchKey: basestore.ScanTimes
-tags: [exported]
 ```
 
 ```Go
@@ -683,7 +675,6 @@ ScanTimes reads time values from the given row object.
 
 ```
 searchKey: basestore.ScanFirstTime
-tags: [exported]
 ```
 
 ```Go
@@ -696,16 +687,18 @@ ScanFirstTime reads time values from the given row object and returns the first 
 
 ```
 searchKey: basestore.makeSavepointID
+tags: [private]
 ```
 
 ```Go
 func makeSavepointID() (string, error)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.store_test.go" href="#init.store_test.go">func init()</a>
 
 ```
 searchKey: basestore.init
+tags: [private]
 ```
 
 ```Go
@@ -716,6 +709,7 @@ func init()
 
 ```
 searchKey: basestore.TestTransaction
+tags: [private]
 ```
 
 ```Go
@@ -726,6 +720,7 @@ func TestTransaction(t *testing.T)
 
 ```
 searchKey: basestore.TestSavepoints
+tags: [private]
 ```
 
 ```Go
@@ -736,6 +731,7 @@ func TestSavepoints(t *testing.T)
 
 ```
 searchKey: basestore.recurSavepoints
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +742,7 @@ func recurSavepoints(t *testing.T, store *Store, index, rollbackAt int)
 
 ```
 searchKey: basestore.assertCounts
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +753,7 @@ func assertCounts(t *testing.T, db dbutil.DB, expectedCounts map[int]int)
 
 ```
 searchKey: basestore.setupStoreTest
+tags: [private]
 ```
 
 ```Go

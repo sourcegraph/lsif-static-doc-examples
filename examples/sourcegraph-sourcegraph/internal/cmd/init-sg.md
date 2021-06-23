@@ -23,10 +23,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="client" href="#client">var client</a>
 
 ```
 searchKey: main.client
+tags: [private]
 ```
 
 ```Go
@@ -37,6 +42,7 @@ var client *gqltestutil.Client
 
 ```
 searchKey: main.initSG
+tags: [private]
 ```
 
 ```Go
@@ -47,6 +53,7 @@ var initSG = flag.NewFlagSet("initserver", flag.ExitOnError)
 
 ```
 searchKey: main.addRepos
+tags: [private]
 ```
 
 ```Go
@@ -57,6 +64,7 @@ var addRepos = flag.NewFlagSet("addrepos", flag.ExitOnError)
 
 ```
 searchKey: main.baseURL
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +75,7 @@ var baseURL = ...
 
 ```
 searchKey: main.email
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +86,7 @@ var email = ...
 
 ```
 searchKey: main.username
+tags: [private]
 ```
 
 ```Go
@@ -87,6 +97,7 @@ var username = ...
 
 ```
 searchKey: main.password
+tags: [private]
 ```
 
 ```Go
@@ -97,6 +108,7 @@ var password = ...
 
 ```
 searchKey: main.githubToken
+tags: [private]
 ```
 
 ```Go
@@ -107,6 +119,7 @@ var githubToken = ...
 
 ```
 searchKey: main.addReposConfig
+tags: [private]
 ```
 
 ```Go
@@ -117,6 +130,7 @@ var addReposConfig = ...
 
 ```
 searchKey: main.home
+tags: [private]
 ```
 
 ```Go
@@ -127,6 +141,7 @@ var home = os.Getenv("HOME")
 
 ```
 searchKey: main.profile
+tags: [private]
 ```
 
 ```Go
@@ -135,10 +150,15 @@ var profile = home + "/.profile"
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +169,7 @@ func main()
 
 ```
 searchKey: main.initSourcegraph
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +180,7 @@ func initSourcegraph()
 
 ```
 searchKey: main.mustMarshalJSONString
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +191,7 @@ func mustMarshalJSONString(v interface{}) string
 
 ```
 searchKey: main.addReposCommand
+tags: [private]
 ```
 
 ```Go

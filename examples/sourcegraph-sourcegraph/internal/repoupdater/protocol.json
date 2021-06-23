@@ -4,7 +4,9 @@
     "identifier": "protocol",
     "newPage": true,
     "searchKey": "internal/repoupdater/protocol",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "RepoUpdateSchedulerInfoArgs",
                 "newPage": false,
                 "searchKey": "protocol.RepoUpdateSchedulerInfoArgs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "RepoUpdateSchedulerInfoResult",
                 "newPage": false,
                 "searchKey": "protocol.RepoUpdateSchedulerInfoResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "RepoScheduleState",
                 "newPage": false,
                 "searchKey": "protocol.RepoScheduleState",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "RepoQueueState",
                 "newPage": false,
                 "searchKey": "protocol.RepoQueueState",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "RepoExternalServicesRequest",
                 "newPage": false,
                 "searchKey": "protocol.RepoExternalServicesRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "RepoExternalServicesResponse",
                 "newPage": false,
                 "searchKey": "protocol.RepoExternalServicesResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                 "identifier": "RepoLookupArgs",
                 "newPage": false,
                 "searchKey": "protocol.RepoLookupArgs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -192,9 +182,7 @@
                       "identifier": "RepoLookupArgs.String",
                       "newPage": false,
                       "searchKey": "protocol.RepoLookupArgs.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -217,9 +205,7 @@
                 "identifier": "RepoLookupResult",
                 "newPage": false,
                 "searchKey": "protocol.RepoLookupResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -237,9 +223,7 @@
                       "identifier": "RepoLookupResult.String",
                       "newPage": false,
                       "searchKey": "protocol.RepoLookupResult.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -262,9 +246,7 @@
                 "identifier": "RepoInfo",
                 "newPage": false,
                 "searchKey": "protocol.RepoInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,9 +264,7 @@
                       "identifier": "RepoInfo.String",
                       "newPage": false,
                       "searchKey": "protocol.RepoInfo.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -307,9 +287,7 @@
                 "identifier": "VCSInfo",
                 "newPage": false,
                 "searchKey": "protocol.VCSInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -329,9 +307,7 @@
                 "identifier": "RepoLinks",
                 "newPage": false,
                 "searchKey": "protocol.RepoLinks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -351,9 +327,7 @@
                 "identifier": "RepoUpdateRequest",
                 "newPage": false,
                 "searchKey": "protocol.RepoUpdateRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -371,9 +345,7 @@
                       "identifier": "RepoUpdateRequest.String",
                       "newPage": false,
                       "searchKey": "protocol.RepoUpdateRequest.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -396,9 +368,7 @@
                 "identifier": "RepoUpdateResponse",
                 "newPage": false,
                 "searchKey": "protocol.RepoUpdateResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -418,9 +388,7 @@
                 "identifier": "ChangesetSyncRequest",
                 "newPage": false,
                 "searchKey": "protocol.ChangesetSyncRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -440,9 +408,7 @@
                 "identifier": "ChangesetSyncResponse",
                 "newPage": false,
                 "searchKey": "protocol.ChangesetSyncResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -462,9 +428,7 @@
                 "identifier": "PermsSyncRequest",
                 "newPage": false,
                 "searchKey": "protocol.PermsSyncRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -484,9 +448,7 @@
                 "identifier": "PermsSyncResponse",
                 "newPage": false,
                 "searchKey": "protocol.PermsSyncResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -506,9 +468,7 @@
                 "identifier": "ExternalServiceSyncRequest",
                 "newPage": false,
                 "searchKey": "protocol.ExternalServiceSyncRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -528,9 +488,7 @@
                 "identifier": "ExternalServiceSyncResult",
                 "newPage": false,
                 "searchKey": "protocol.ExternalServiceSyncResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

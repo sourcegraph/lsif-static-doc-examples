@@ -4,9 +4,7 @@
     "identifier": "prom-wrapper",
     "newPage": true,
     "searchKey": "docker-images/prometheus/cmd/prom-wrapper",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "alertmanagerPathPrefix",
                 "newPage": false,
                 "searchKey": "main.alertmanagerPathPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "alertmanagerNoopReceiver",
                 "newPage": false,
                 "searchKey": "main.alertmanagerNoopReceiver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "alertmanagerWarningReceiver",
                 "newPage": false,
                 "searchKey": "main.alertmanagerWarningReceiver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "alertmanagerCriticalReceiver",
                 "newPage": false,
                 "searchKey": "main.alertmanagerCriticalReceiver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "colorWarning",
                 "newPage": false,
                 "searchKey": "main.colorWarning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "colorCritical",
                 "newPage": false,
                 "searchKey": "main.colorCritical",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "colorGood",
                 "newPage": false,
                 "searchKey": "main.colorGood",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "docsURL",
                 "newPage": false,
                 "searchKey": "main.docsURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                 "identifier": "alertSolutionsPagePath",
                 "newPage": false,
                 "searchKey": "main.alertSolutionsPagePath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +238,9 @@
                 "identifier": "matcherRegexPrefix",
                 "newPage": false,
                 "searchKey": "main.matcherRegexPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -244,7 +260,9 @@
                 "identifier": "matcherRegexSuffix",
                 "newPage": false,
                 "searchKey": "main.matcherRegexSuffix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,9 +285,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -287,7 +303,9 @@
                 "identifier": "noConfig",
                 "newPage": false,
                 "searchKey": "main.noConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -307,7 +325,9 @@
                 "identifier": "noAlertmanager",
                 "newPage": false,
                 "searchKey": "main.noAlertmanager",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -327,7 +347,9 @@
                 "identifier": "exportPort",
                 "newPage": false,
                 "searchKey": "main.exportPort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,7 +369,9 @@
                 "identifier": "prometheusPort",
                 "newPage": false,
                 "searchKey": "main.prometheusPort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +391,9 @@
                 "identifier": "alertmanagerPort",
                 "newPage": false,
                 "searchKey": "main.alertmanagerPort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +413,9 @@
                 "identifier": "alertmanagerConfigPath",
                 "newPage": false,
                 "searchKey": "main.alertmanagerConfigPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,7 +435,9 @@
                 "identifier": "alertmanagerEnableCluster",
                 "newPage": false,
                 "searchKey": "main.alertmanagerEnableCluster",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -427,7 +457,9 @@
                 "identifier": "opsGenieAPIKey",
                 "newPage": false,
                 "searchKey": "main.opsGenieAPIKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,7 +479,9 @@
                 "identifier": "commonLabels",
                 "newPage": false,
                 "searchKey": "main.commonLabels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,7 +501,9 @@
                 "identifier": "observableDocAnchorTemplate",
                 "newPage": false,
                 "searchKey": "main.observableDocAnchorTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,7 +523,9 @@
                 "identifier": "alertSolutionsURLTemplate",
                 "newPage": false,
                 "searchKey": "main.alertSolutionsURLTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +545,9 @@
                 "identifier": "firingTitleTemplate",
                 "newPage": false,
                 "searchKey": "main.firingTitleTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,7 +567,9 @@
                 "identifier": "resolvedTitleTemplate",
                 "newPage": false,
                 "searchKey": "main.resolvedTitleTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -547,7 +589,9 @@
                 "identifier": "notificationTitleTemplate",
                 "newPage": false,
                 "searchKey": "main.notificationTitleTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -570,9 +614,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -590,9 +632,7 @@
                 "identifier": "ChangeContext",
                 "newPage": false,
                 "searchKey": "main.ChangeContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -612,9 +652,7 @@
                 "identifier": "ChangeResult",
                 "newPage": false,
                 "searchKey": "main.ChangeResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -632,7 +670,9 @@
                       "identifier": "changeReceivers",
                       "newPage": false,
                       "searchKey": "main.changeReceivers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -652,7 +692,9 @@
                       "identifier": "changeSMTP",
                       "newPage": false,
                       "searchKey": "main.changeSMTP",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -672,7 +714,9 @@
                       "identifier": "changeSilences",
                       "newPage": false,
                       "searchKey": "main.changeSilences",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -695,9 +739,7 @@
                 "identifier": "Change",
                 "newPage": false,
                 "searchKey": "main.Change",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -717,7 +759,9 @@
                 "identifier": "siteEmailConfig",
                 "newPage": false,
                 "searchKey": "main.siteEmailConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -737,7 +781,9 @@
                 "identifier": "subscribedSiteConfig",
                 "newPage": false,
                 "searchKey": "main.subscribedSiteConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -755,7 +801,9 @@
                       "identifier": "newSubscribedSiteConfig",
                       "newPage": false,
                       "searchKey": "main.newSubscribedSiteConfig",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -775,7 +823,9 @@
                       "identifier": "subscribedSiteConfig.Diff",
                       "newPage": false,
                       "searchKey": "main.subscribedSiteConfig.Diff",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -798,7 +848,9 @@
                 "identifier": "siteConfigDiff",
                 "newPage": false,
                 "searchKey": "main.siteConfigDiff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -818,9 +870,7 @@
                 "identifier": "SiteConfigSubscriber",
                 "newPage": false,
                 "searchKey": "main.SiteConfigSubscriber",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -838,9 +888,7 @@
                       "identifier": "NewSiteConfigSubscriber",
                       "newPage": false,
                       "searchKey": "main.NewSiteConfigSubscriber",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -860,9 +908,7 @@
                       "identifier": "SiteConfigSubscriber.Handler",
                       "newPage": false,
                       "searchKey": "main.SiteConfigSubscriber.Handler",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -882,9 +928,7 @@
                       "identifier": "SiteConfigSubscriber.Subscribe",
                       "newPage": false,
                       "searchKey": "main.SiteConfigSubscriber.Subscribe",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -904,7 +948,9 @@
                       "identifier": "SiteConfigSubscriber.execDiffs",
                       "newPage": false,
                       "searchKey": "main.SiteConfigSubscriber.execDiffs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -927,9 +973,7 @@
                 "identifier": "AlertsStatusReporter",
                 "newPage": false,
                 "searchKey": "main.AlertsStatusReporter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -947,9 +991,7 @@
                       "identifier": "NewAlertsStatusReporter",
                       "newPage": false,
                       "searchKey": "main.NewAlertsStatusReporter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -969,9 +1011,7 @@
                       "identifier": "AlertsStatusReporter.Handler",
                       "newPage": false,
                       "searchKey": "main.AlertsStatusReporter.Handler",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -997,9 +1037,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1017,7 +1055,9 @@
                 "identifier": "waitForAlertmanager",
                 "newPage": false,
                 "searchKey": "main.waitForAlertmanager",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1037,7 +1077,9 @@
                 "identifier": "reloadAlertmanager",
                 "newPage": false,
                 "searchKey": "main.reloadAlertmanager",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1057,7 +1099,9 @@
                 "identifier": "renderConfiguration",
                 "newPage": false,
                 "searchKey": "main.renderConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1077,7 +1121,9 @@
                 "identifier": "applyConfiguration",
                 "newPage": false,
                 "searchKey": "main.applyConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1097,7 +1143,9 @@
                 "identifier": "duration",
                 "newPage": false,
                 "searchKey": "main.duration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1117,7 +1165,9 @@
                 "identifier": "runCmd",
                 "newPage": false,
                 "searchKey": "main.runCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1137,9 +1187,7 @@
                 "identifier": "NewPrometheusCmd",
                 "newPage": false,
                 "searchKey": "main.NewPrometheusCmd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1159,9 +1207,7 @@
                 "identifier": "NewAlertmanagerCmd",
                 "newPage": false,
                 "searchKey": "main.NewAlertmanagerCmd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1181,7 +1227,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1201,7 +1249,9 @@
                 "identifier": "alertSolutionsURL",
                 "newPage": false,
                 "searchKey": "main.alertSolutionsURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1221,7 +1271,9 @@
                 "identifier": "newRoutesAndReceivers",
                 "newPage": false,
                 "searchKey": "main.newRoutesAndReceivers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1241,7 +1293,9 @@
                 "identifier": "newRootRoute",
                 "newPage": false,
                 "searchKey": "main.newRootRoute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1261,7 +1315,9 @@
                 "identifier": "stringP",
                 "newPage": false,
                 "searchKey": "main.stringP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1281,7 +1337,9 @@
                 "identifier": "boolP",
                 "newPage": false,
                 "searchKey": "main.boolP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1301,7 +1359,9 @@
                 "identifier": "newMatchersFromSilence",
                 "newPage": false,
                 "searchKey": "main.newMatchersFromSilence",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1321,7 +1381,9 @@
                 "identifier": "newSilenceFromMatchers",
                 "newPage": false,
                 "searchKey": "main.newSilenceFromMatchers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1336,12 +1398,14 @@
           },
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#init",
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#init.siteconfig.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.siteconfig.go",
                 "newPage": false,
                 "searchKey": "main.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1361,7 +1425,9 @@
                 "identifier": "TestAlertSolutionsURL",
                 "newPage": false,
                 "searchKey": "main.TestAlertSolutionsURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1381,7 +1447,9 @@
                 "identifier": "TestNewRoutesAndReceivers",
                 "newPage": false,
                 "searchKey": "main.TestNewRoutesAndReceivers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1401,7 +1469,9 @@
                 "identifier": "TestMatchersAndSilences",
                 "newPage": false,
                 "searchKey": "main.TestMatchersAndSilences",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1421,7 +1491,9 @@
                 "identifier": "TestAlertsStatusReporterHistory",
                 "newPage": false,
                 "searchKey": "main.TestAlertsStatusReporterHistory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

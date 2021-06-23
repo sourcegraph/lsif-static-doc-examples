@@ -67,7 +67,7 @@ Package gccgoimporter implements Import for gccgo-generated object files.
     * [type Importer func(imports map[string]*go/types.Package, path string, srcDir string, lookup func(string) (io.ReadCloser, error)) (*go/types.Package, error)](#Importer)
         * [func GetImporter(searchpaths []string, initmap map[*types.Package]InitData) Importer](#GetImporter)
     * [type parser struct](#parser)
-        * [func (p *parser) init(filename string, src io.Reader, imports map[string]*types.Package)](#parser.init)
+        * [func (p *parser) init(filename string, src io.Reader, imports map[string]*types.Package)](#parser.init.parser.go)
         * [func (p *parser) initScanner(filename string, src io.Reader)](#parser.initScanner)
         * [func (p *parser) error(err interface{})](#parser.error)
         * [func (p *parser) errorf(format string, args ...interface{})](#parser.errorf)
@@ -141,10 +141,15 @@ Package gccgoimporter implements Import for gccgo-generated object files.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="armag" href="#armag">const armag</a>
 
 ```
 searchKey: gccgoimporter.armag
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +162,7 @@ Magic strings for different archive file formats.
 
 ```
 searchKey: gccgoimporter.armagt
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +175,7 @@ Magic strings for different archive file formats.
 
 ```
 searchKey: gccgoimporter.armagb
+tags: [private]
 ```
 
 ```Go
@@ -181,6 +188,7 @@ Magic strings for different archive file formats.
 
 ```
 searchKey: gccgoimporter.arNameOff
+tags: [private]
 ```
 
 ```Go
@@ -193,6 +201,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arNameSize
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +214,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arDateOff
+tags: [private]
 ```
 
 ```Go
@@ -217,6 +227,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arDateSize
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +240,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arUIDOff
+tags: [private]
 ```
 
 ```Go
@@ -241,6 +253,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arUIDSize
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +266,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arGIDOff
+tags: [private]
 ```
 
 ```Go
@@ -265,6 +279,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arGIDSize
+tags: [private]
 ```
 
 ```Go
@@ -277,6 +292,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arModeOff
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +305,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arModeSize
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +318,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arSizeOff
+tags: [private]
 ```
 
 ```Go
@@ -313,6 +331,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arSizeSize
+tags: [private]
 ```
 
 ```Go
@@ -325,6 +344,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arFmagOff
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +357,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arFmagSize
+tags: [private]
 ```
 
 ```Go
@@ -349,6 +370,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arHdrSize
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +383,7 @@ Offsets and sizes for fields in a standard archive header.
 
 ```
 searchKey: gccgoimporter.arfmag
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +396,7 @@ The contents of the fmag field of a standard archive header.
 
 ```
 searchKey: gccgoimporter.gccgov1Magic
+tags: [private]
 ```
 
 ```Go
@@ -383,6 +407,7 @@ const gccgov1Magic = "v1;\n"
 
 ```
 searchKey: gccgoimporter.gccgov2Magic
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +418,7 @@ const gccgov2Magic = "v2;\n"
 
 ```
 searchKey: gccgoimporter.gccgov3Magic
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +429,7 @@ const gccgov3Magic = "v3;\n"
 
 ```
 searchKey: gccgoimporter.goimporterMagic
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +440,7 @@ const goimporterMagic = "\n$$ "
 
 ```
 searchKey: gccgoimporter.archiveMagic
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +451,7 @@ const archiveMagic = "!<ar"
 
 ```
 searchKey: gccgoimporter.aixbigafMagic
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +462,7 @@ const aixbigafMagic = "<big"
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinINT8
+tags: [private]
 ```
 
 ```Go
@@ -445,6 +475,7 @@ From gofrontend/go/export.h Note that these values are negative in the gofronten
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinINT16
+tags: [private]
 ```
 
 ```Go
@@ -455,6 +486,7 @@ const gccgoBuiltinINT16 = 2
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinINT32
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +497,7 @@ const gccgoBuiltinINT32 = 3
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinINT64
+tags: [private]
 ```
 
 ```Go
@@ -475,6 +508,7 @@ const gccgoBuiltinINT64 = 4
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinUINT8
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +519,7 @@ const gccgoBuiltinUINT8 = 5
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinUINT16
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +530,7 @@ const gccgoBuiltinUINT16 = 6
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinUINT32
+tags: [private]
 ```
 
 ```Go
@@ -505,6 +541,7 @@ const gccgoBuiltinUINT32 = 7
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinUINT64
+tags: [private]
 ```
 
 ```Go
@@ -515,6 +552,7 @@ const gccgoBuiltinUINT64 = 8
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinFLOAT32
+tags: [private]
 ```
 
 ```Go
@@ -525,6 +563,7 @@ const gccgoBuiltinFLOAT32 = 9
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinFLOAT64
+tags: [private]
 ```
 
 ```Go
@@ -535,6 +574,7 @@ const gccgoBuiltinFLOAT64 = 10
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinINT
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +585,7 @@ const gccgoBuiltinINT = 11
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinUINT
+tags: [private]
 ```
 
 ```Go
@@ -555,6 +596,7 @@ const gccgoBuiltinUINT = 12
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinUINTPTR
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +607,7 @@ const gccgoBuiltinUINTPTR = 13
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinBOOL
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +618,7 @@ const gccgoBuiltinBOOL = 15
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinSTRING
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +629,7 @@ const gccgoBuiltinSTRING = 16
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinCOMPLEX64
+tags: [private]
 ```
 
 ```Go
@@ -595,6 +640,7 @@ const gccgoBuiltinCOMPLEX64 = 17
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinCOMPLEX128
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +651,7 @@ const gccgoBuiltinCOMPLEX128 = 18
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinERROR
+tags: [private]
 ```
 
 ```Go
@@ -615,6 +662,7 @@ const gccgoBuiltinERROR = 19
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinBYTE
+tags: [private]
 ```
 
 ```Go
@@ -625,6 +673,7 @@ const gccgoBuiltinBYTE = 20
 
 ```
 searchKey: gccgoimporter.gccgoBuiltinRUNE
+tags: [private]
 ```
 
 ```Go
@@ -633,10 +682,15 @@ const gccgoBuiltinRUNE = 21
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="reserved" href="#reserved">var reserved</a>
 
 ```
 searchKey: gccgoimporter.reserved
+tags: [private]
 ```
 
 ```Go
@@ -649,6 +703,7 @@ reserved is a singleton type used to fill type map slots that have been reserved
 
 ```
 searchKey: gccgoimporter.importablePackages
+tags: [private]
 ```
 
 ```Go
@@ -661,6 +716,7 @@ importablePackages is a list of packages that we verify that we can import. This
 
 ```
 searchKey: gccgoimporter.importerTests
+tags: [private]
 ```
 
 ```Go
@@ -673,6 +729,7 @@ When adding tests to this list, be sure to set the 'gccgoVersion' field if the t
 
 ```
 searchKey: gccgoimporter.typeParserTests
+tags: [private]
 ```
 
 ```Go
@@ -681,10 +738,15 @@ var typeParserTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="seekerReadAt" href="#seekerReadAt">type seekerReadAt struct</a>
 
 ```
 searchKey: gccgoimporter.seekerReadAt
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +759,7 @@ type seekerReadAt struct {
 
 ```
 searchKey: gccgoimporter.seekerReadAt.ReadAt
+tags: [private]
 ```
 
 ```Go
@@ -707,7 +770,6 @@ func (sra seekerReadAt) ReadAt(p []byte, off int64) (int, error)
 
 ```
 searchKey: gccgoimporter.GccgoInstallation
-tags: [exported]
 ```
 
 ```Go
@@ -729,7 +791,6 @@ Information about a specific installation of gccgo.
 
 ```
 searchKey: gccgoimporter.GccgoInstallation.InitFromDriver
-tags: [exported]
 ```
 
 ```Go
@@ -742,7 +803,6 @@ Ask the driver at the given path for information for this GccgoInstallation. The
 
 ```
 searchKey: gccgoimporter.GccgoInstallation.SearchPaths
-tags: [exported]
 ```
 
 ```Go
@@ -755,7 +815,6 @@ Return the list of export search paths for this GccgoInstallation.
 
 ```
 searchKey: gccgoimporter.GccgoInstallation.GetImporter
-tags: [exported]
 ```
 
 ```Go
@@ -768,7 +827,6 @@ Return an importer that searches incpaths followed by the gcc installation's bui
 
 ```
 searchKey: gccgoimporter.PackageInit
-tags: [exported]
 ```
 
 ```Go
@@ -785,7 +843,6 @@ A PackageInit describes an imported package that needs initialization.
 
 ```
 searchKey: gccgoimporter.InitData
-tags: [exported]
 ```
 
 ```Go
@@ -808,7 +865,6 @@ The gccgo-specific init data for a package.
 
 ```
 searchKey: gccgoimporter.Importer
-tags: [exported]
 ```
 
 ```Go
@@ -821,7 +877,6 @@ An Importer resolves import paths to Packages. The imports map records packages 
 
 ```
 searchKey: gccgoimporter.GetImporter
-tags: [exported]
 ```
 
 ```Go
@@ -832,6 +887,7 @@ func GetImporter(searchpaths []string, initmap map[*types.Package]InitData) Impo
 
 ```
 searchKey: gccgoimporter.parser
+tags: [private]
 ```
 
 ```Go
@@ -852,10 +908,11 @@ type parser struct {
 }
 ```
 
-#### <a id="parser.init" href="#parser.init">func (p *parser) init(filename string, src io.Reader, imports map[string]*types.Package)</a>
+#### <a id="parser.init.parser.go" href="#parser.init.parser.go">func (p *parser) init(filename string, src io.Reader, imports map[string]*types.Package)</a>
 
 ```
 searchKey: gccgoimporter.parser.init
+tags: [private]
 ```
 
 ```Go
@@ -866,6 +923,7 @@ func (p *parser) init(filename string, src io.Reader, imports map[string]*types.
 
 ```
 searchKey: gccgoimporter.parser.initScanner
+tags: [private]
 ```
 
 ```Go
@@ -876,6 +934,7 @@ func (p *parser) initScanner(filename string, src io.Reader)
 
 ```
 searchKey: gccgoimporter.parser.error
+tags: [private]
 ```
 
 ```Go
@@ -886,6 +945,7 @@ func (p *parser) error(err interface{})
 
 ```
 searchKey: gccgoimporter.parser.errorf
+tags: [private]
 ```
 
 ```Go
@@ -896,6 +956,7 @@ func (p *parser) errorf(format string, args ...interface{})
 
 ```
 searchKey: gccgoimporter.parser.expect
+tags: [private]
 ```
 
 ```Go
@@ -906,6 +967,7 @@ func (p *parser) expect(tok rune) string
 
 ```
 searchKey: gccgoimporter.parser.expectEOL
+tags: [private]
 ```
 
 ```Go
@@ -916,6 +978,7 @@ func (p *parser) expectEOL()
 
 ```
 searchKey: gccgoimporter.parser.expectKeyword
+tags: [private]
 ```
 
 ```Go
@@ -926,6 +989,7 @@ func (p *parser) expectKeyword(keyword string)
 
 ```
 searchKey: gccgoimporter.parser.parseString
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +1000,7 @@ func (p *parser) parseString() string
 
 ```
 searchKey: gccgoimporter.parser.parseUnquotedString
+tags: [private]
 ```
 
 ```Go
@@ -948,6 +1013,7 @@ unquotedString     = { unquotedStringChar } . unquotedStringChar = <neither a wh
 
 ```
 searchKey: gccgoimporter.parser.next
+tags: [private]
 ```
 
 ```Go
@@ -958,6 +1024,7 @@ func (p *parser) next()
 
 ```
 searchKey: gccgoimporter.parser.parseQualifiedName
+tags: [private]
 ```
 
 ```Go
@@ -968,6 +1035,7 @@ func (p *parser) parseQualifiedName() (path, name string)
 
 ```
 searchKey: gccgoimporter.parser.parseUnquotedQualifiedName
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1046,7 @@ func (p *parser) parseUnquotedQualifiedName() (path, name string)
 
 ```
 searchKey: gccgoimporter.parser.parseQualifiedNameStr
+tags: [private]
 ```
 
 ```Go
@@ -992,6 +1061,7 @@ The above production uses greedy matching.
 
 ```
 searchKey: gccgoimporter.parser.getPkg
+tags: [private]
 ```
 
 ```Go
@@ -1004,6 +1074,7 @@ getPkg returns the package for a given path. If the package is not found but we 
 
 ```
 searchKey: gccgoimporter.parser.parseExportedName
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1089,7 @@ ExportedName = string [string] .
 
 ```
 searchKey: gccgoimporter.parser.parseName
+tags: [private]
 ```
 
 ```Go
@@ -1030,6 +1102,7 @@ Name = QualifiedName | "?" .
 
 ```
 searchKey: gccgoimporter.parser.parseField
+tags: [private]
 ```
 
 ```Go
@@ -1042,6 +1115,7 @@ Field = Name Type [string] .
 
 ```
 searchKey: gccgoimporter.parser.parseParam
+tags: [private]
 ```
 
 ```Go
@@ -1054,6 +1128,7 @@ Param = Name ["..."] Type .
 
 ```
 searchKey: gccgoimporter.parser.parseVar
+tags: [private]
 ```
 
 ```Go
@@ -1066,6 +1141,7 @@ Var = Name Type .
 
 ```
 searchKey: gccgoimporter.parser.parseConversion
+tags: [private]
 ```
 
 ```Go
@@ -1078,6 +1154,7 @@ Conversion = "convert" "(" Type "," ConstValue ")" .
 
 ```
 searchKey: gccgoimporter.parser.parseConstValue
+tags: [private]
 ```
 
 ```Go
@@ -1090,6 +1167,7 @@ ConstValue     = string | "false" | "true" | ["-"] (int ["'"] | FloatOrComplex) 
 
 ```
 searchKey: gccgoimporter.parser.parseConst
+tags: [private]
 ```
 
 ```Go
@@ -1102,6 +1180,7 @@ Const = Name [Type] "=" ConstValue .
 
 ```
 searchKey: gccgoimporter.parser.reserve
+tags: [private]
 ```
 
 ```Go
@@ -1114,6 +1193,7 @@ reserve reserves the type map entry n for future use.
 
 ```
 searchKey: gccgoimporter.parser.update
+tags: [private]
 ```
 
 ```Go
@@ -1126,6 +1206,7 @@ update sets the type map entries for the entries in nlist to t. An entry in nlis
 
 ```
 searchKey: gccgoimporter.parser.parseNamedType
+tags: [private]
 ```
 
 ```Go
@@ -1138,6 +1219,7 @@ NamedType = TypeName [ "=" ] Type { Method } . TypeName  = ExportedName . Method
 
 ```
 searchKey: gccgoimporter.parser.parseInt64
+tags: [private]
 ```
 
 ```Go
@@ -1148,6 +1230,7 @@ func (p *parser) parseInt64() int64
 
 ```
 searchKey: gccgoimporter.parser.parseInt
+tags: [private]
 ```
 
 ```Go
@@ -1158,6 +1241,7 @@ func (p *parser) parseInt() int
 
 ```
 searchKey: gccgoimporter.parser.parseArrayOrSliceType
+tags: [private]
 ```
 
 ```Go
@@ -1170,6 +1254,7 @@ ArrayOrSliceType = "[" [ int ] "]" Type .
 
 ```
 searchKey: gccgoimporter.parser.parseMapType
+tags: [private]
 ```
 
 ```Go
@@ -1182,6 +1267,7 @@ MapType = "map" "[" Type "]" Type .
 
 ```
 searchKey: gccgoimporter.parser.parseChanType
+tags: [private]
 ```
 
 ```Go
@@ -1194,6 +1280,7 @@ ChanType = "chan" ["<-" | "-<"] Type .
 
 ```
 searchKey: gccgoimporter.parser.parseStructType
+tags: [private]
 ```
 
 ```Go
@@ -1206,6 +1293,7 @@ StructType = "struct" "{" { Field } "}" .
 
 ```
 searchKey: gccgoimporter.parser.parseParamList
+tags: [private]
 ```
 
 ```Go
@@ -1218,6 +1306,7 @@ ParamList = "(" [ { Parameter "," } Parameter ] ")" .
 
 ```
 searchKey: gccgoimporter.parser.parseResultList
+tags: [private]
 ```
 
 ```Go
@@ -1230,6 +1319,7 @@ ResultList = Type | ParamList .
 
 ```
 searchKey: gccgoimporter.parser.parseFunctionType
+tags: [private]
 ```
 
 ```Go
@@ -1242,6 +1332,7 @@ FunctionType = ParamList ResultList .
 
 ```
 searchKey: gccgoimporter.parser.parseFunc
+tags: [private]
 ```
 
 ```Go
@@ -1254,6 +1345,7 @@ Func = Name FunctionType [InlineBody] .
 
 ```
 searchKey: gccgoimporter.parser.parseInterfaceType
+tags: [private]
 ```
 
 ```Go
@@ -1266,6 +1358,7 @@ InterfaceType = "interface" "{" { ("?" Type | Func) ";" } "}" .
 
 ```
 searchKey: gccgoimporter.parser.parsePointerType
+tags: [private]
 ```
 
 ```Go
@@ -1278,6 +1371,7 @@ PointerType = "*" ("any" | Type) .
 
 ```
 searchKey: gccgoimporter.parser.parseTypeSpec
+tags: [private]
 ```
 
 ```Go
@@ -1290,6 +1384,7 @@ TypeSpec = NamedType | MapType | ChanType | StructType | InterfaceType | Pointer
 
 ```
 searchKey: gccgoimporter.parser.parseType
+tags: [private]
 ```
 
 ```Go
@@ -1304,6 +1399,7 @@ parseType updates the type map to t for all type numbers n.
 
 ```
 searchKey: gccgoimporter.parser.parseTypeAfterAngle
+tags: [private]
 ```
 
 ```Go
@@ -1316,6 +1412,7 @@ func (p *parser) parseTypeAfterAngle(pkg *types.Package, n ...interface{}) (t ty
 
 ```
 searchKey: gccgoimporter.parser.parseTypeExtended
+tags: [private]
 ```
 
 ```Go
@@ -1328,6 +1425,7 @@ parseTypeExtended is identical to parseType, but if the type in question is a sa
 
 ```
 searchKey: gccgoimporter.parser.skipInlineBody
+tags: [private]
 ```
 
 ```Go
@@ -1340,6 +1438,7 @@ InlineBody = "<inl:NN>" .{NN} Reports whether a body was skipped.
 
 ```
 searchKey: gccgoimporter.parser.parseTypes
+tags: [private]
 ```
 
 ```Go
@@ -1352,6 +1451,7 @@ Types = "types" maxp1 exportedp1 (offset length)* .
 
 ```
 searchKey: gccgoimporter.parser.parseSavedType
+tags: [private]
 ```
 
 ```Go
@@ -1364,6 +1464,7 @@ parseSavedType parses one saved type definition.
 
 ```
 searchKey: gccgoimporter.parser.parsePackageInit
+tags: [private]
 ```
 
 ```Go
@@ -1376,6 +1477,7 @@ PackageInit = unquotedString unquotedString int .
 
 ```
 searchKey: gccgoimporter.parser.maybeCreatePackage
+tags: [private]
 ```
 
 ```Go
@@ -1388,6 +1490,7 @@ Create the package if we have parsed both the package path and package name.
 
 ```
 searchKey: gccgoimporter.parser.parseInitDataDirective
+tags: [private]
 ```
 
 ```Go
@@ -1406,6 +1509,7 @@ InitDataDirective = ( "v1" | "v2" | "v3" ) ";" |
 
 ```
 searchKey: gccgoimporter.parser.parseDirective
+tags: [private]
 ```
 
 ```Go
@@ -1430,6 +1534,7 @@ Directive = InitDataDirective |
 
 ```
 searchKey: gccgoimporter.parser.parsePackage
+tags: [private]
 ```
 
 ```Go
@@ -1442,6 +1547,7 @@ Package = { Directive } .
 
 ```
 searchKey: gccgoimporter.fixupRecord
+tags: [private]
 ```
 
 ```Go
@@ -1455,6 +1561,7 @@ type fixupRecord struct {
 
 ```
 searchKey: gccgoimporter.importError
+tags: [private]
 ```
 
 ```Go
@@ -1468,6 +1575,7 @@ type importError struct {
 
 ```
 searchKey: gccgoimporter.importError.Error
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1586,7 @@ func (e importError) Error() string
 
 ```
 searchKey: gccgoimporter.importerTest
+tags: [private]
 ```
 
 ```Go
@@ -1490,10 +1599,15 @@ type importerTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="arExportData" href="#arExportData">func arExportData(archive io.ReadSeeker) (io.ReadSeeker, error)</a>
 
 ```
 searchKey: gccgoimporter.arExportData
+tags: [private]
 ```
 
 ```Go
@@ -1506,6 +1620,7 @@ arExportData takes an archive file and returns a ReadSeeker for the export data 
 
 ```
 searchKey: gccgoimporter.standardArExportData
+tags: [private]
 ```
 
 ```Go
@@ -1518,6 +1633,7 @@ standardArExportData returns export data from a standard archive.
 
 ```
 searchKey: gccgoimporter.elfFromAr
+tags: [private]
 ```
 
 ```Go
@@ -1530,6 +1646,7 @@ elfFromAr tries to get export data from an archive member as an ELF file. If the
 
 ```
 searchKey: gccgoimporter.aixBigArExportData
+tags: [private]
 ```
 
 ```Go
@@ -1542,6 +1659,7 @@ aixBigArExportData returns export data from an AIX big archive.
 
 ```
 searchKey: gccgoimporter.readerAtFromSeeker
+tags: [private]
 ```
 
 ```Go
@@ -1554,6 +1672,7 @@ readerAtFromSeeker turns an io.ReadSeeker into an io.ReaderAt. This is only safe
 
 ```
 searchKey: gccgoimporter.findExportFile
+tags: [private]
 ```
 
 ```Go
@@ -1566,6 +1685,7 @@ Locate the file from which to read export data. This is intended to replicate th
 
 ```
 searchKey: gccgoimporter.openExportFile
+tags: [private]
 ```
 
 ```Go
@@ -1578,6 +1698,7 @@ Opens the export data file at the given path. If this is an ELF file, searches f
 
 ```
 searchKey: gccgoimporter.readMagic
+tags: [private]
 ```
 
 ```Go
@@ -1590,6 +1711,7 @@ readMagic reads the four bytes at the start of a ReadSeeker and returns them as 
 
 ```
 searchKey: gccgoimporter.deref
+tags: [private]
 ```
 
 ```Go
@@ -1600,6 +1722,7 @@ func deref(typ types.Type) types.Type
 
 ```
 searchKey: gccgoimporter.lookupBuiltinType
+tags: [private]
 ```
 
 ```Go
@@ -1610,6 +1733,7 @@ func lookupBuiltinType(typ int) types.Type
 
 ```
 searchKey: gccgoimporter.TestInstallationImporter
+tags: [private]
 ```
 
 ```Go
@@ -1620,6 +1744,7 @@ func TestInstallationImporter(t *testing.T)
 
 ```
 searchKey: gccgoimporter.runImporterTest
+tags: [private]
 ```
 
 ```Go
@@ -1630,6 +1755,7 @@ func runImporterTest(t *testing.T, imp Importer, initmap map[*types.Package]Init
 
 ```
 searchKey: gccgoimporter.TestGoxImporter
+tags: [private]
 ```
 
 ```Go
@@ -1640,6 +1766,7 @@ func TestGoxImporter(t *testing.T)
 
 ```
 searchKey: gccgoimporter.gccgoPath
+tags: [private]
 ```
 
 ```Go
@@ -1652,6 +1779,7 @@ gccgoPath returns a path to gccgo if it is present (either in path or specified 
 
 ```
 searchKey: gccgoimporter.TestObjImporter
+tags: [private]
 ```
 
 ```Go
@@ -1662,6 +1790,7 @@ func TestObjImporter(t *testing.T)
 
 ```
 searchKey: gccgoimporter.TestTypeParser
+tags: [private]
 ```
 
 ```Go

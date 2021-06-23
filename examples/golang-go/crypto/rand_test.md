@@ -20,10 +20,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="countingReader" href="#countingReader">type countingReader struct</a>
 
 ```
 searchKey: rand_test.countingReader
+tags: [private]
 ```
 
 ```Go
@@ -37,6 +42,7 @@ type countingReader struct {
 
 ```
 searchKey: rand_test.countingReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -45,10 +51,15 @@ func (r *countingReader) Read(p []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleRead" href="#ExampleRead">func ExampleRead()</a>
 
 ```
 searchKey: rand_test.ExampleRead
+tags: [private]
 ```
 
 ```Go
@@ -61,6 +72,7 @@ This example reads 10 cryptographically secure pseudorandom numbers from rand.Re
 
 ```
 searchKey: rand_test.TestPrimeSmall
+tags: [private]
 ```
 
 ```Go
@@ -73,6 +85,7 @@ func TestPrimeSmall(t *testing.T)
 
 ```
 searchKey: rand_test.TestPrimeBitsLt2
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +98,7 @@ Test that passing bits < 2 causes Prime to return nil, error
 
 ```
 searchKey: rand_test.TestInt
+tags: [private]
 ```
 
 ```Go
@@ -95,6 +109,7 @@ func TestInt(t *testing.T)
 
 ```
 searchKey: rand_test.TestIntReads
+tags: [private]
 ```
 
 ```Go
@@ -107,6 +122,7 @@ Test that Int reads only the necessary number of bytes from the reader for max a
 
 ```
 searchKey: rand_test.TestIntMask
+tags: [private]
 ```
 
 ```Go
@@ -119,6 +135,7 @@ Test that Int does not mask out valid return values
 
 ```
 searchKey: rand_test.testIntPanics
+tags: [private]
 ```
 
 ```Go
@@ -129,6 +146,7 @@ func testIntPanics(t *testing.T, b *big.Int)
 
 ```
 searchKey: rand_test.TestIntEmptyMaxPanics
+tags: [private]
 ```
 
 ```Go
@@ -141,6 +159,7 @@ Test that passing a new big.Int as max causes Int to panic
 
 ```
 searchKey: rand_test.TestIntNegativeMaxPanics
+tags: [private]
 ```
 
 ```Go
@@ -153,6 +172,7 @@ Test that passing a negative value as max causes Int to panic
 
 ```
 searchKey: rand_test.BenchmarkPrime
+tags: [private]
 ```
 
 ```Go

@@ -49,11 +49,14 @@ Note especially that this package does not itself change behavior at run time ba
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="FieldTrack" href="#FieldTrack">const FieldTrack</a>
 
 ```
 searchKey: goexperiment.FieldTrack
-tags: [exported]
 ```
 
 ```Go
@@ -64,7 +67,6 @@ const FieldTrack = false
 
 ```
 searchKey: goexperiment.FieldTrackInt
-tags: [exported]
 ```
 
 ```Go
@@ -75,7 +77,6 @@ const FieldTrackInt = 0
 
 ```
 searchKey: goexperiment.PreemptibleLoops
-tags: [exported]
 ```
 
 ```Go
@@ -86,7 +87,6 @@ const PreemptibleLoops = false
 
 ```
 searchKey: goexperiment.PreemptibleLoopsInt
-tags: [exported]
 ```
 
 ```Go
@@ -97,7 +97,6 @@ const PreemptibleLoopsInt = 0
 
 ```
 searchKey: goexperiment.Regabi
-tags: [exported]
 ```
 
 ```Go
@@ -108,7 +107,6 @@ const Regabi = false
 
 ```
 searchKey: goexperiment.RegabiInt
-tags: [exported]
 ```
 
 ```Go
@@ -119,7 +117,6 @@ const RegabiInt = 0
 
 ```
 searchKey: goexperiment.RegabiArgs
-tags: [exported]
 ```
 
 ```Go
@@ -130,7 +127,6 @@ const RegabiArgs = false
 
 ```
 searchKey: goexperiment.RegabiArgsInt
-tags: [exported]
 ```
 
 ```Go
@@ -141,7 +137,6 @@ const RegabiArgsInt = 0
 
 ```
 searchKey: goexperiment.RegabiDefer
-tags: [exported]
 ```
 
 ```Go
@@ -152,7 +147,6 @@ const RegabiDefer = false
 
 ```
 searchKey: goexperiment.RegabiDeferInt
-tags: [exported]
 ```
 
 ```Go
@@ -163,7 +157,6 @@ const RegabiDeferInt = 0
 
 ```
 searchKey: goexperiment.RegabiG
-tags: [exported]
 ```
 
 ```Go
@@ -174,7 +167,6 @@ const RegabiG = false
 
 ```
 searchKey: goexperiment.RegabiGInt
-tags: [exported]
 ```
 
 ```Go
@@ -185,7 +177,6 @@ const RegabiGInt = 0
 
 ```
 searchKey: goexperiment.RegabiReflect
-tags: [exported]
 ```
 
 ```Go
@@ -196,7 +187,6 @@ const RegabiReflect = false
 
 ```
 searchKey: goexperiment.RegabiReflectInt
-tags: [exported]
 ```
 
 ```Go
@@ -207,7 +197,6 @@ const RegabiReflectInt = 0
 
 ```
 searchKey: goexperiment.RegabiWrappers
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +207,6 @@ const RegabiWrappers = false
 
 ```
 searchKey: goexperiment.RegabiWrappersInt
-tags: [exported]
 ```
 
 ```Go
@@ -229,7 +217,6 @@ const RegabiWrappersInt = 0
 
 ```
 searchKey: goexperiment.StaticLockRanking
-tags: [exported]
 ```
 
 ```Go
@@ -240,7 +227,6 @@ const StaticLockRanking = false
 
 ```
 searchKey: goexperiment.StaticLockRankingInt
-tags: [exported]
 ```
 
 ```Go
@@ -249,11 +235,14 @@ const StaticLockRankingInt = 0
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Flags" href="#Flags">type Flags struct</a>
 
 ```
 searchKey: goexperiment.Flags
-tags: [exported]
 ```
 
 ```Go

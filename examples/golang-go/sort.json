@@ -4,9 +4,7 @@
     "identifier": "sort",
     "newPage": true,
     "searchKey": "sort",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "reflectValueOf",
                 "newPage": false,
                 "searchKey": "sort.reflectValueOf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "reflectSwapper",
                 "newPage": false,
                 "searchKey": "sort.reflectSwapper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,9 +87,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -107,9 +105,7 @@
                 "identifier": "Interface",
                 "newPage": false,
                 "searchKey": "sort.Interface",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +123,7 @@
                       "identifier": "Reverse",
                       "newPage": false,
                       "searchKey": "sort.Reverse",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -152,7 +146,9 @@
                 "identifier": "lessSwap",
                 "newPage": false,
                 "searchKey": "sort.lessSwap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -172,7 +168,9 @@
                 "identifier": "reverse",
                 "newPage": false,
                 "searchKey": "sort.reverse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -190,7 +188,9 @@
                       "identifier": "reverse.Less",
                       "newPage": false,
                       "searchKey": "sort.reverse.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -213,9 +213,7 @@
                 "identifier": "IntSlice",
                 "newPage": false,
                 "searchKey": "sort.IntSlice",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -233,9 +231,7 @@
                       "identifier": "IntSlice.Search",
                       "newPage": false,
                       "searchKey": "sort.IntSlice.Search",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -255,9 +251,7 @@
                       "identifier": "IntSlice.Len",
                       "newPage": false,
                       "searchKey": "sort.IntSlice.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -277,9 +271,7 @@
                       "identifier": "IntSlice.Less",
                       "newPage": false,
                       "searchKey": "sort.IntSlice.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -299,9 +291,7 @@
                       "identifier": "IntSlice.Swap",
                       "newPage": false,
                       "searchKey": "sort.IntSlice.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -321,9 +311,7 @@
                       "identifier": "IntSlice.Sort",
                       "newPage": false,
                       "searchKey": "sort.IntSlice.Sort",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -346,9 +334,7 @@
                 "identifier": "Float64Slice",
                 "newPage": false,
                 "searchKey": "sort.Float64Slice",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -366,9 +352,7 @@
                       "identifier": "Float64Slice.Search",
                       "newPage": false,
                       "searchKey": "sort.Float64Slice.Search",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -388,9 +372,7 @@
                       "identifier": "Float64Slice.Len",
                       "newPage": false,
                       "searchKey": "sort.Float64Slice.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -410,9 +392,7 @@
                       "identifier": "Float64Slice.Less",
                       "newPage": false,
                       "searchKey": "sort.Float64Slice.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -432,9 +412,7 @@
                       "identifier": "Float64Slice.Swap",
                       "newPage": false,
                       "searchKey": "sort.Float64Slice.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -454,9 +432,7 @@
                       "identifier": "Float64Slice.Sort",
                       "newPage": false,
                       "searchKey": "sort.Float64Slice.Sort",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -479,9 +455,7 @@
                 "identifier": "StringSlice",
                 "newPage": false,
                 "searchKey": "sort.StringSlice",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -499,9 +473,7 @@
                       "identifier": "StringSlice.Search",
                       "newPage": false,
                       "searchKey": "sort.StringSlice.Search",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -521,9 +493,7 @@
                       "identifier": "StringSlice.Len",
                       "newPage": false,
                       "searchKey": "sort.StringSlice.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -543,9 +513,7 @@
                       "identifier": "StringSlice.Less",
                       "newPage": false,
                       "searchKey": "sort.StringSlice.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -565,9 +533,7 @@
                       "identifier": "StringSlice.Swap",
                       "newPage": false,
                       "searchKey": "sort.StringSlice.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -587,9 +553,7 @@
                       "identifier": "StringSlice.Sort",
                       "newPage": false,
                       "searchKey": "sort.StringSlice.Sort",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -615,9 +579,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -635,9 +597,7 @@
                 "identifier": "Search",
                 "newPage": false,
                 "searchKey": "sort.Search",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -657,9 +617,7 @@
                 "identifier": "SearchInts",
                 "newPage": false,
                 "searchKey": "sort.SearchInts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -679,9 +637,7 @@
                 "identifier": "SearchFloat64s",
                 "newPage": false,
                 "searchKey": "sort.SearchFloat64s",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -701,9 +657,7 @@
                 "identifier": "SearchStrings",
                 "newPage": false,
                 "searchKey": "sort.SearchStrings",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -723,9 +677,7 @@
                 "identifier": "Slice",
                 "newPage": false,
                 "searchKey": "sort.Slice",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -745,9 +697,7 @@
                 "identifier": "SliceStable",
                 "newPage": false,
                 "searchKey": "sort.SliceStable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -767,9 +717,7 @@
                 "identifier": "SliceIsSorted",
                 "newPage": false,
                 "searchKey": "sort.SliceIsSorted",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -789,7 +737,9 @@
                 "identifier": "insertionSort",
                 "newPage": false,
                 "searchKey": "sort.insertionSort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -809,7 +759,9 @@
                 "identifier": "siftDown",
                 "newPage": false,
                 "searchKey": "sort.siftDown",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -829,7 +781,9 @@
                 "identifier": "heapSort",
                 "newPage": false,
                 "searchKey": "sort.heapSort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -849,7 +803,9 @@
                 "identifier": "medianOfThree",
                 "newPage": false,
                 "searchKey": "sort.medianOfThree",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -869,7 +825,9 @@
                 "identifier": "swapRange",
                 "newPage": false,
                 "searchKey": "sort.swapRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -889,7 +847,9 @@
                 "identifier": "doPivot",
                 "newPage": false,
                 "searchKey": "sort.doPivot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -909,7 +869,9 @@
                 "identifier": "quickSort",
                 "newPage": false,
                 "searchKey": "sort.quickSort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -929,9 +891,7 @@
                 "identifier": "Sort",
                 "newPage": false,
                 "searchKey": "sort.Sort",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -951,7 +911,9 @@
                 "identifier": "maxDepth",
                 "newPage": false,
                 "searchKey": "sort.maxDepth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -971,9 +933,7 @@
                 "identifier": "IsSorted",
                 "newPage": false,
                 "searchKey": "sort.IsSorted",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -993,7 +953,9 @@
                 "identifier": "isNaN",
                 "newPage": false,
                 "searchKey": "sort.isNaN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1013,9 +975,7 @@
                 "identifier": "Ints",
                 "newPage": false,
                 "searchKey": "sort.Ints",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1035,9 +995,7 @@
                 "identifier": "Float64s",
                 "newPage": false,
                 "searchKey": "sort.Float64s",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1057,9 +1015,7 @@
                 "identifier": "Strings",
                 "newPage": false,
                 "searchKey": "sort.Strings",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1079,9 +1035,7 @@
                 "identifier": "IntsAreSorted",
                 "newPage": false,
                 "searchKey": "sort.IntsAreSorted",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1101,9 +1055,7 @@
                 "identifier": "Float64sAreSorted",
                 "newPage": false,
                 "searchKey": "sort.Float64sAreSorted",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1123,9 +1075,7 @@
                 "identifier": "StringsAreSorted",
                 "newPage": false,
                 "searchKey": "sort.StringsAreSorted",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1145,9 +1095,7 @@
                 "identifier": "Stable",
                 "newPage": false,
                 "searchKey": "sort.Stable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1167,7 +1115,9 @@
                 "identifier": "stable",
                 "newPage": false,
                 "searchKey": "sort.stable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1187,7 +1137,9 @@
                 "identifier": "symMerge",
                 "newPage": false,
                 "searchKey": "sort.symMerge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1207,7 +1159,9 @@
                 "identifier": "rotate",
                 "newPage": false,
                 "searchKey": "sort.rotate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1227,7 +1181,9 @@
                 "identifier": "insertionSort_func",
                 "newPage": false,
                 "searchKey": "sort.insertionSort_func",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1247,7 +1203,9 @@
                 "identifier": "siftDown_func",
                 "newPage": false,
                 "searchKey": "sort.siftDown_func",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1267,7 +1225,9 @@
                 "identifier": "heapSort_func",
                 "newPage": false,
                 "searchKey": "sort.heapSort_func",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1287,7 +1247,9 @@
                 "identifier": "medianOfThree_func",
                 "newPage": false,
                 "searchKey": "sort.medianOfThree_func",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1307,7 +1269,9 @@
                 "identifier": "swapRange_func",
                 "newPage": false,
                 "searchKey": "sort.swapRange_func",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1327,7 +1291,9 @@
                 "identifier": "doPivot_func",
                 "newPage": false,
                 "searchKey": "sort.doPivot_func",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1347,7 +1313,9 @@
                 "identifier": "quickSort_func",
                 "newPage": false,
                 "searchKey": "sort.quickSort_func",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1367,7 +1335,9 @@
                 "identifier": "stable_func",
                 "newPage": false,
                 "searchKey": "sort.stable_func",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1387,7 +1357,9 @@
                 "identifier": "symMerge_func",
                 "newPage": false,
                 "searchKey": "sort.symMerge_func",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1407,7 +1379,9 @@
                 "identifier": "rotate_func",
                 "newPage": false,
                 "searchKey": "sort.rotate_func",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1427,7 +1401,9 @@
                 "identifier": "Heapsort",
                 "newPage": false,
                 "searchKey": "sort.Heapsort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

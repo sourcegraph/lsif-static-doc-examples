@@ -78,7 +78,7 @@
     * [func sameInts(x, y []int) bool](#sameInts)
     * [func TestBigUnnamedStruct(t *testing.T)](#TestBigUnnamedStruct)
     * [func TestBigStruct(t *testing.T)](#TestBigStruct)
-    * [func init()](#init)
+    * [func init()](#init.all_test.go)
     * [func TestTypeOf(t *testing.T)](#TestTypeOf)
     * [func Nil(a interface{}, t *testing.T)](#Nil)
     * [func NotNil(a interface{}, t *testing.T)](#NotNil)
@@ -106,10 +106,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="typeTests" href="#typeTests">var typeTests</a>
 
 ```
 searchKey: reflectlite_test.typeTests
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +125,7 @@ var typeTests = ...
 
 ```
 searchKey: reflectlite_test.valueTests
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +136,7 @@ var valueTests = ...
 
 ```
 searchKey: reflectlite_test._i
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +147,7 @@ var _i = 7
 
 ```
 searchKey: reflectlite_test.valueToStringTests
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +158,7 @@ var valueToStringTests = ...
 
 ```
 searchKey: reflectlite_test.appendTests
+tags: [private]
 ```
 
 ```Go
@@ -160,6 +169,7 @@ var appendTests = ...
 
 ```
 searchKey: reflectlite_test.fn1
+tags: [private]
 ```
 
 ```Go
@@ -173,6 +183,7 @@ Simple functions for DeepEqual tests.
 
 ```
 searchKey: reflectlite_test.fn2
+tags: [private]
 ```
 
 ```Go
@@ -186,6 +197,7 @@ Simple functions for DeepEqual tests.
 
 ```
 searchKey: reflectlite_test.fn3
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +211,7 @@ Simple functions for DeepEqual tests.
 
 ```
 searchKey: reflectlite_test.loop1
+tags: [private]
 ```
 
 ```Go
@@ -209,6 +222,7 @@ var loop1, loop2 Loop
 
 ```
 searchKey: reflectlite_test.loop2
+tags: [private]
 ```
 
 ```Go
@@ -219,6 +233,7 @@ var loop1, loop2 Loop
 
 ```
 searchKey: reflectlite_test.loopy1
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +244,7 @@ var loopy1, loopy2 Loopy
 
 ```
 searchKey: reflectlite_test.loopy2
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +255,7 @@ var loopy1, loopy2 Loopy
 
 ```
 searchKey: reflectlite_test.typeOfTests
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +266,7 @@ var typeOfTests = ...
 
 ```
 searchKey: reflectlite_test.nameTests
+tags: [private]
 ```
 
 ```Go
@@ -259,6 +277,7 @@ var nameTests = ...
 
 ```
 searchKey: reflectlite_test.typeNames
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +288,7 @@ var typeNames = ...
 
 ```
 searchKey: reflectlite_test.implementsTests
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +299,7 @@ var implementsTests = ...
 
 ```
 searchKey: reflectlite_test.assignableTests
+tags: [private]
 ```
 
 ```Go
@@ -287,10 +308,15 @@ var assignableTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="integer" href="#integer">type integer int</a>
 
 ```
 searchKey: reflectlite_test.integer
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +327,7 @@ type integer int
 
 ```
 searchKey: reflectlite_test.T
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +343,7 @@ type T struct {
 
 ```
 searchKey: reflectlite_test.pair
+tags: [private]
 ```
 
 ```Go
@@ -329,6 +357,7 @@ type pair struct {
 
 ```
 searchKey: reflectlite_test.big
+tags: [private]
 ```
 
 ```Go
@@ -341,6 +370,7 @@ type big struct {
 
 ```
 searchKey: reflectlite_test.Basic
+tags: [private]
 ```
 
 ```Go
@@ -354,6 +384,7 @@ type Basic struct {
 
 ```
 searchKey: reflectlite_test.NotBasic
+tags: [private]
 ```
 
 ```Go
@@ -364,6 +395,7 @@ type NotBasic Basic
 
 ```
 searchKey: reflectlite_test.DeepEqualTest
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +409,7 @@ type DeepEqualTest struct {
 
 ```
 searchKey: reflectlite_test.self
+tags: [private]
 ```
 
 ```Go
@@ -387,6 +420,7 @@ type self struct{}
 
 ```
 searchKey: reflectlite_test.Loop
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +431,7 @@ type Loop *Loop
 
 ```
 searchKey: reflectlite_test.Loopy
+tags: [private]
 ```
 
 ```Go
@@ -407,6 +442,7 @@ type Loopy interface{}
 
 ```
 searchKey: reflectlite_test.Point
+tags: [private]
 ```
 
 ```Go
@@ -419,6 +455,7 @@ type Point struct {
 
 ```
 searchKey: reflectlite_test.Point.AnotherMethod
+tags: [private]
 ```
 
 ```Go
@@ -431,6 +468,7 @@ This will be index 0.
 
 ```
 searchKey: reflectlite_test.Point.Dist
+tags: [private]
 ```
 
 ```Go
@@ -443,6 +481,7 @@ This will be index 1.
 
 ```
 searchKey: reflectlite_test.Point.GCMethod
+tags: [private]
 ```
 
 ```Go
@@ -455,6 +494,7 @@ This will be index 2.
 
 ```
 searchKey: reflectlite_test.Point.NoArgs
+tags: [private]
 ```
 
 ```Go
@@ -467,6 +507,7 @@ This will be index 3.
 
 ```
 searchKey: reflectlite_test.Point.TotalDist
+tags: [private]
 ```
 
 ```Go
@@ -479,6 +520,7 @@ This will be index 4.
 
 ```
 searchKey: reflectlite_test.D1
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +533,7 @@ type D1 struct {
 
 ```
 searchKey: reflectlite_test.D2
+tags: [private]
 ```
 
 ```Go
@@ -503,6 +546,7 @@ type D2 struct {
 
 ```
 searchKey: reflectlite_test.S
+tags: [private]
 ```
 
 ```Go
@@ -516,6 +560,7 @@ type S struct {
 
 ```
 searchKey: reflectlite_test.TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678
+tags: [private]
 ```
 
 ```Go
@@ -526,6 +571,7 @@ type TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTe
 
 ```
 searchKey: reflectlite_test.nameTest
+tags: [private]
 ```
 
 ```Go
@@ -539,6 +585,7 @@ type nameTest struct {
 
 ```
 searchKey: reflectlite_test.Tint
+tags: [private]
 ```
 
 ```Go
@@ -549,6 +596,7 @@ type Tint int
 
 ```
 searchKey: reflectlite_test.Tint2
+tags: [private]
 ```
 
 ```Go
@@ -559,6 +607,7 @@ type Tint2 = Tint
 
 ```
 searchKey: reflectlite_test.Talias1
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +624,7 @@ type Talias1 struct {
 
 ```
 searchKey: reflectlite_test.Talias2
+tags: [private]
 ```
 
 ```Go
@@ -588,6 +638,7 @@ type Talias2 struct {
 
 ```
 searchKey: reflectlite_test.visitor
+tags: [private]
 ```
 
 ```Go
@@ -600,6 +651,7 @@ type visitor struct {
 
 ```
 searchKey: reflectlite_test.newVisitor
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +662,7 @@ func newVisitor() visitor
 
 ```
 searchKey: reflectlite_test.visitor.filter
+tags: [private]
 ```
 
 ```Go
@@ -620,6 +673,7 @@ func (v visitor) filter(name string) bool
 
 ```
 searchKey: reflectlite_test.visitor.Visit
+tags: [private]
 ```
 
 ```Go
@@ -630,6 +684,7 @@ func (v visitor) Visit(n ast.Node) ast.Visitor
 
 ```
 searchKey: reflectlite_test.notAnExpr
+tags: [private]
 ```
 
 ```Go
@@ -640,6 +695,7 @@ type notAnExpr struct{}
 
 ```
 searchKey: reflectlite_test.notAnExpr.Pos
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +706,7 @@ func (notAnExpr) Pos() token.Pos
 
 ```
 searchKey: reflectlite_test.notAnExpr.End
+tags: [private]
 ```
 
 ```Go
@@ -660,6 +717,7 @@ func (notAnExpr) End() token.Pos
 
 ```
 searchKey: reflectlite_test.notAnExpr.exprNode
+tags: [private]
 ```
 
 ```Go
@@ -670,6 +728,7 @@ func (notAnExpr) exprNode()
 
 ```
 searchKey: reflectlite_test.notASTExpr
+tags: [private]
 ```
 
 ```Go
@@ -684,6 +743,7 @@ type notASTExpr interface {
 
 ```
 searchKey: reflectlite_test.mapError
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +754,7 @@ type mapError map[string]string
 
 ```
 searchKey: reflectlite_test.mapError.Error
+tags: [private]
 ```
 
 ```Go
@@ -704,6 +765,7 @@ func (mapError) Error() string
 
 ```
 searchKey: reflectlite_test.IntPtr
+tags: [private]
 ```
 
 ```Go
@@ -714,6 +776,7 @@ type IntPtr *int
 
 ```
 searchKey: reflectlite_test.IntPtr1
+tags: [private]
 ```
 
 ```Go
@@ -724,6 +787,7 @@ type IntPtr1 *int
 
 ```
 searchKey: reflectlite_test.Ch
+tags: [private]
 ```
 
 ```Go
@@ -732,10 +796,15 @@ type Ch <-chan interface{}
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ToValue" href="#ToValue">func ToValue(v Value) reflect.Value</a>
 
 ```
 searchKey: reflectlite_test.ToValue
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +815,7 @@ func ToValue(v Value) reflect.Value
 
 ```
 searchKey: reflectlite_test.TypeString
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +826,7 @@ func TypeString(t Type) string
 
 ```
 searchKey: reflectlite_test.assert
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +837,7 @@ func assert(t *testing.T, s, want string)
 
 ```
 searchKey: reflectlite_test.testType
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +848,7 @@ func testType(t *testing.T, i int, typ Type, want string)
 
 ```
 searchKey: reflectlite_test.testReflectType
+tags: [private]
 ```
 
 ```Go
@@ -786,6 +859,7 @@ func testReflectType(t *testing.T, i int, typ Type, want string)
 
 ```
 searchKey: reflectlite_test.TestTypes
+tags: [private]
 ```
 
 ```Go
@@ -796,6 +870,7 @@ func TestTypes(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestSetValue
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +881,7 @@ func TestSetValue(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestCanSetField
+tags: [private]
 ```
 
 ```Go
@@ -816,6 +892,7 @@ func TestCanSetField(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestValueToString
+tags: [private]
 ```
 
 ```Go
@@ -826,6 +903,7 @@ func TestValueToString(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestPtrSetNil
+tags: [private]
 ```
 
 ```Go
@@ -836,6 +914,7 @@ func TestPtrSetNil(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestMapSetNil
+tags: [private]
 ```
 
 ```Go
@@ -846,6 +925,7 @@ func TestMapSetNil(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestAll
+tags: [private]
 ```
 
 ```Go
@@ -856,6 +936,7 @@ func TestAll(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestInterfaceValue
+tags: [private]
 ```
 
 ```Go
@@ -866,6 +947,7 @@ func TestInterfaceValue(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestFunctionValue
+tags: [private]
 ```
 
 ```Go
@@ -876,6 +958,7 @@ func TestFunctionValue(t *testing.T)
 
 ```
 searchKey: reflectlite_test.sameInts
+tags: [private]
 ```
 
 ```Go
@@ -886,6 +969,7 @@ func sameInts(x, y []int) bool
 
 ```
 searchKey: reflectlite_test.TestBigUnnamedStruct
+tags: [private]
 ```
 
 ```Go
@@ -896,16 +980,18 @@ func TestBigUnnamedStruct(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestBigStruct
+tags: [private]
 ```
 
 ```Go
 func TestBigStruct(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.all_test.go" href="#init.all_test.go">func init()</a>
 
 ```
 searchKey: reflectlite_test.init
+tags: [private]
 ```
 
 ```Go
@@ -916,6 +1002,7 @@ func init()
 
 ```
 searchKey: reflectlite_test.TestTypeOf
+tags: [private]
 ```
 
 ```Go
@@ -926,6 +1013,7 @@ func TestTypeOf(t *testing.T)
 
 ```
 searchKey: reflectlite_test.Nil
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +1024,7 @@ func Nil(a interface{}, t *testing.T)
 
 ```
 searchKey: reflectlite_test.NotNil
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +1035,7 @@ func NotNil(a interface{}, t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestIsNil
+tags: [private]
 ```
 
 ```Go
@@ -956,6 +1046,7 @@ func TestIsNil(t *testing.T)
 
 ```
 searchKey: reflectlite_test.Indirect
+tags: [private]
 ```
 
 ```Go
@@ -968,6 +1059,7 @@ Indirect returns the value that v points to. If v is a nil pointer, Indirect ret
 
 ```
 searchKey: reflectlite_test.TestNilPtrValueSub
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1070,7 @@ func TestNilPtrValueSub(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestImportPath
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +1081,7 @@ func TestImportPath(t *testing.T)
 
 ```
 searchKey: reflectlite_test.noAlloc
+tags: [private]
 ```
 
 ```Go
@@ -998,6 +1092,7 @@ func noAlloc(t *testing.T, n int, f func(int))
 
 ```
 searchKey: reflectlite_test.TestAllocations
+tags: [private]
 ```
 
 ```Go
@@ -1008,6 +1103,7 @@ func TestAllocations(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestSetPanic
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1114,7 @@ func TestSetPanic(t *testing.T)
 
 ```
 searchKey: reflectlite_test.shouldPanic
+tags: [private]
 ```
 
 ```Go
@@ -1028,6 +1125,7 @@ func shouldPanic(f func())
 
 ```
 searchKey: reflectlite_test.TestBigZero
+tags: [private]
 ```
 
 ```Go
@@ -1038,6 +1136,7 @@ func TestBigZero(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestInvalid
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1147,7 @@ func TestInvalid(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestNames
+tags: [private]
 ```
 
 ```Go
@@ -1058,6 +1158,7 @@ func TestNames(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestUnaddressableField
+tags: [private]
 ```
 
 ```Go
@@ -1072,6 +1173,7 @@ This ensures that unexported fields cannot be modified by other packages.
 
 ```
 searchKey: reflectlite_test.TestAliasNames
+tags: [private]
 ```
 
 ```Go
@@ -1082,6 +1184,7 @@ func TestAliasNames(t *testing.T)
 
 ```
 searchKey: reflectlite_test.loadTypes
+tags: [private]
 ```
 
 ```Go
@@ -1092,6 +1195,7 @@ func loadTypes(path, pkgName string, v visitor)
 
 ```
 searchKey: reflectlite_test.TestMirrorWithReflect
+tags: [private]
 ```
 
 ```Go
@@ -1102,6 +1206,7 @@ func TestMirrorWithReflect(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestImplicitSetConversion
+tags: [private]
 ```
 
 ```Go
@@ -1112,6 +1217,7 @@ func TestImplicitSetConversion(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestImplements
+tags: [private]
 ```
 
 ```Go
@@ -1122,6 +1228,7 @@ func TestImplements(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestAssignableTo
+tags: [private]
 ```
 
 ```Go
@@ -1132,6 +1239,7 @@ func TestAssignableTo(t *testing.T)
 
 ```
 searchKey: reflectlite_test.valueToString
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1252,7 @@ valueToString returns a textual representation of the reflection value val. For 
 
 ```
 searchKey: reflectlite_test.valueToStringImpl
+tags: [private]
 ```
 
 ```Go

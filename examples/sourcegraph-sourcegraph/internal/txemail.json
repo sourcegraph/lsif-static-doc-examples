@@ -4,7 +4,9 @@
     "identifier": "txemail",
     "newPage": true,
     "searchKey": "internal/txemail",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "textFuncMap",
                 "newPage": false,
                 "searchKey": "txemail.textFuncMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "htmlFuncMap",
                 "newPage": false,
                 "searchKey": "txemail.htmlFuncMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,9 +88,7 @@
                 "identifier": "MockSend",
                 "newPage": false,
                 "searchKey": "txemail.MockSend",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -102,7 +108,9 @@
                 "identifier": "disableSilently",
                 "newPage": false,
                 "searchKey": "txemail.disableSilently",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +133,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -143,9 +153,7 @@
                 "identifier": "Message",
                 "newPage": false,
                 "searchKey": "txemail.Message",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +176,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -186,9 +196,7 @@
                 "identifier": "MustParseTemplate",
                 "newPage": false,
                 "searchKey": "txemail.MustParseTemplate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -208,9 +216,7 @@
                 "identifier": "MustValidate",
                 "newPage": false,
                 "searchKey": "txemail.MustValidate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -230,9 +236,7 @@
                 "identifier": "ParseTemplate",
                 "newPage": false,
                 "searchKey": "txemail.ParseTemplate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -252,7 +256,9 @@
                 "identifier": "renderTemplate",
                 "newPage": false,
                 "searchKey": "txemail.renderTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -272,7 +278,9 @@
                 "identifier": "render",
                 "newPage": false,
                 "searchKey": "txemail.render",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -292,9 +300,7 @@
                 "identifier": "Send",
                 "newPage": false,
                 "searchKey": "txemail.Send",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -314,9 +320,7 @@
                 "identifier": "DisableSilently",
                 "newPage": false,
                 "searchKey": "txemail.DisableSilently",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -336,7 +340,9 @@
                 "identifier": "TestParseTemplate",
                 "newPage": false,
                 "searchKey": "txemail.TestParseTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -356,7 +362,9 @@
                 "identifier": "TestRender",
                 "newPage": false,
                 "searchKey": "txemail.TestRender",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

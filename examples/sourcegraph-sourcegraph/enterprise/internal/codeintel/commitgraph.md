@@ -34,11 +34,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Graph" href="#Graph">type Graph struct</a>
 
 ```
 searchKey: commitgraph.Graph
-tags: [exported]
 ```
 
 ```Go
@@ -54,7 +57,6 @@ type Graph struct {
 
 ```
 searchKey: commitgraph.NewGraph
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +69,6 @@ NewGraph creates a commit graph decorated with the set of uploads visible from t
 
 ```
 searchKey: commitgraph.Graph.UploadsVisibleAtCommit
-tags: [exported]
 ```
 
 ```Go
@@ -80,7 +81,6 @@ UploadsVisibleAtCommit returns the set of uploads that are visible from the give
 
 ```
 searchKey: commitgraph.Graph.Stream
-tags: [exported]
 ```
 
 ```Go
@@ -93,7 +93,6 @@ Stream returns a channel of envelope values which indicate either the set of vis
 
 ```
 searchKey: commitgraph.Graph.Gather
-tags: [exported]
 ```
 
 ```Go
@@ -106,7 +105,6 @@ Gather reads the graph's stream to completion and returns a map of the values. T
 
 ```
 searchKey: commitgraph.Envelope
-tags: [exported]
 ```
 
 ```Go
@@ -120,7 +118,6 @@ type Envelope struct {
 
 ```
 searchKey: commitgraph.VisibilityRelationship
-tags: [exported]
 ```
 
 ```Go
@@ -134,7 +131,6 @@ type VisibilityRelationship struct {
 
 ```
 searchKey: commitgraph.LinkRelationship
-tags: [exported]
 ```
 
 ```Go
@@ -149,7 +145,6 @@ type LinkRelationship struct {
 
 ```
 searchKey: commitgraph.CommitGraphView
-tags: [exported]
 ```
 
 ```Go
@@ -171,7 +166,6 @@ CommitGraphView is a space-efficient view of a commit graph decorated with the s
 
 ```
 searchKey: commitgraph.NewCommitGraphView
-tags: [exported]
 ```
 
 ```Go
@@ -182,6 +176,7 @@ func NewCommitGraphView() *CommitGraphView
 
 ```
 searchKey: commitgraph.readBenchmarkCommitGraphView
+tags: [private]
 ```
 
 ```Go
@@ -192,7 +187,6 @@ func readBenchmarkCommitGraphView() (*CommitGraphView, error)
 
 ```
 searchKey: commitgraph.CommitGraphView.Add
-tags: [exported]
 ```
 
 ```Go
@@ -203,7 +197,6 @@ func (v *CommitGraphView) Add(meta UploadMeta, commit, token string)
 
 ```
 searchKey: commitgraph.UploadMeta
-tags: [exported]
 ```
 
 ```Go
@@ -217,10 +210,15 @@ UploadMeta represents the visibility of an LSIF upload from a particular locatio
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="reverseGraph" href="#reverseGraph">func reverseGraph(graph map[string][]string) map[string][]string</a>
 
 ```
 searchKey: commitgraph.reverseGraph
+tags: [private]
 ```
 
 ```Go
@@ -233,6 +231,7 @@ reverseGraph returns the reverse of the given graph by flipping all the edges.
 
 ```
 searchKey: commitgraph.populateUploadsByTraversal
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +252,7 @@ For all remaining commits, we can easily re-calculate the visible uploads withou
 
 ```
 searchKey: commitgraph.populateUploadsForCommit
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +273,7 @@ If two ancestors have different uploads visible for the same root and indexer, t
 
 ```
 searchKey: commitgraph.traverseForUploads
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +286,7 @@ traverseForUploads returns the value in the given uploads map whose key matches 
 
 ```
 searchKey: commitgraph.traverseForCommit
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +301,7 @@ NOTE: We assume that each commit with multiple parents have been assigned data w
 
 ```
 searchKey: commitgraph.adjustVisibleUploads
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +314,7 @@ adjustVisibleUploads returns a copy of the given uploads map with the distance a
 
 ```
 searchKey: commitgraph.replaces
+tags: [private]
 ```
 
 ```Go
@@ -323,6 +327,7 @@ replaces returns true if upload1 has a smaller distance than upload2. Ties are b
 
 ```
 searchKey: commitgraph.TestCalculateVisibleUploads
+tags: [private]
 ```
 
 ```Go
@@ -333,6 +338,7 @@ func TestCalculateVisibleUploads(t *testing.T)
 
 ```
 searchKey: commitgraph.TestCalculateVisibleUploadsAlternateCommitGraph
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +349,7 @@ func TestCalculateVisibleUploadsAlternateCommitGraph(t *testing.T)
 
 ```
 searchKey: commitgraph.BenchmarkCalculateVisibleUploads
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +360,7 @@ func BenchmarkCalculateVisibleUploads(b *testing.B)
 
 ```
 searchKey: commitgraph.readBenchmarkCommitGraph
+tags: [private]
 ```
 
 ```Go
@@ -363,6 +371,7 @@ func readBenchmarkCommitGraph() (*gitserver.CommitGraph, error)
 
 ```
 searchKey: commitgraph.readBenchmarkFile
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +382,7 @@ func readBenchmarkFile(path string) ([]byte, error)
 
 ```
 searchKey: commitgraph.makeTestGraph
+tags: [private]
 ```
 
 ```Go

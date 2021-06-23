@@ -19,10 +19,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="UintptrSize" href="#UintptrSize">const UintptrSize</a>
 
 ```
 searchKey: math_test.UintptrSize
+tags: [private]
 ```
 
 ```Go
@@ -31,10 +36,15 @@ const UintptrSize = 32 << (^uintptr(0) >> 63)
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="mulUintptrTests" href="#mulUintptrTests">var mulUintptrTests</a>
 
 ```
 searchKey: math_test.mulUintptrTests
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +55,7 @@ var mulUintptrTests = ...
 
 ```
 searchKey: math_test.SinkUintptr
+tags: [private]
 ```
 
 ```Go
@@ -55,6 +66,7 @@ var SinkUintptr uintptr
 
 ```
 searchKey: math_test.SinkBool
+tags: [private]
 ```
 
 ```Go
@@ -65,6 +77,7 @@ var SinkBool bool
 
 ```
 searchKey: math_test.x
+tags: [private]
 ```
 
 ```Go
@@ -75,6 +88,7 @@ var x, y uintptr
 
 ```
 searchKey: math_test.y
+tags: [private]
 ```
 
 ```Go
@@ -83,10 +97,15 @@ var x, y uintptr
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="mulUintptrTest" href="#mulUintptrTest">type mulUintptrTest struct</a>
 
 ```
 searchKey: math_test.mulUintptrTest
+tags: [private]
 ```
 
 ```Go
@@ -99,10 +118,15 @@ type mulUintptrTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestMulUintptr" href="#TestMulUintptr">func TestMulUintptr(t *testing.T)</a>
 
 ```
 searchKey: math_test.TestMulUintptr
+tags: [private]
 ```
 
 ```Go
@@ -113,6 +137,7 @@ func TestMulUintptr(t *testing.T)
 
 ```
 searchKey: math_test.BenchmarkMulUintptr
+tags: [private]
 ```
 
 ```Go

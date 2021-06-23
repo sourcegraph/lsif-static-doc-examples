@@ -4,9 +4,7 @@
     "identifier": "ecdsa",
     "newPage": true,
     "searchKey": "crypto/ecdsa",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "aesIV",
                 "newPage": false,
                 "searchKey": "ecdsa.aesIV",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,7 +83,9 @@
                 "identifier": "one",
                 "newPage": false,
                 "searchKey": "ecdsa.one",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "errZeroParam",
                 "newPage": false,
                 "searchKey": "ecdsa.errZeroParam",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "zeroReader",
                 "newPage": false,
                 "searchKey": "ecdsa.zeroReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +152,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -170,7 +170,9 @@
                 "identifier": "invertible",
                 "newPage": false,
                 "searchKey": "ecdsa.invertible",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -190,7 +192,9 @@
                 "identifier": "combinedMult",
                 "newPage": false,
                 "searchKey": "ecdsa.combinedMult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +214,7 @@
                 "identifier": "PublicKey",
                 "newPage": false,
                 "searchKey": "ecdsa.PublicKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -230,9 +232,7 @@
                       "identifier": "PublicKey.Equal",
                       "newPage": false,
                       "searchKey": "ecdsa.PublicKey.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -255,9 +255,7 @@
                 "identifier": "PrivateKey",
                 "newPage": false,
                 "searchKey": "ecdsa.PrivateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -275,9 +273,7 @@
                       "identifier": "GenerateKey",
                       "newPage": false,
                       "searchKey": "ecdsa.GenerateKey",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -297,9 +293,7 @@
                       "identifier": "PrivateKey.Public",
                       "newPage": false,
                       "searchKey": "ecdsa.PrivateKey.Public",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -319,9 +313,7 @@
                       "identifier": "PrivateKey.Equal",
                       "newPage": false,
                       "searchKey": "ecdsa.PrivateKey.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -341,9 +333,7 @@
                       "identifier": "PrivateKey.Sign",
                       "newPage": false,
                       "searchKey": "ecdsa.PrivateKey.Sign",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -366,7 +356,9 @@
                 "identifier": "zr",
                 "newPage": false,
                 "searchKey": "ecdsa.zr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -384,7 +376,9 @@
                       "identifier": "zr.Read",
                       "newPage": false,
                       "searchKey": "ecdsa.zr.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -410,9 +404,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -430,7 +422,9 @@
                 "identifier": "randFieldElement",
                 "newPage": false,
                 "searchKey": "ecdsa.randFieldElement",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -450,7 +444,9 @@
                 "identifier": "hashToInt",
                 "newPage": false,
                 "searchKey": "ecdsa.hashToInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -470,7 +466,9 @@
                 "identifier": "fermatInverse",
                 "newPage": false,
                 "searchKey": "ecdsa.fermatInverse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -490,9 +488,7 @@
                 "identifier": "Sign",
                 "newPage": false,
                 "searchKey": "ecdsa.Sign",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -512,7 +508,9 @@
                 "identifier": "signGeneric",
                 "newPage": false,
                 "searchKey": "ecdsa.signGeneric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -532,9 +530,7 @@
                 "identifier": "SignASN1",
                 "newPage": false,
                 "searchKey": "ecdsa.SignASN1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -554,9 +550,7 @@
                 "identifier": "Verify",
                 "newPage": false,
                 "searchKey": "ecdsa.Verify",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -576,7 +570,9 @@
                 "identifier": "verifyGeneric",
                 "newPage": false,
                 "searchKey": "ecdsa.verifyGeneric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -596,9 +592,7 @@
                 "identifier": "VerifyASN1",
                 "newPage": false,
                 "searchKey": "ecdsa.VerifyASN1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -618,7 +612,9 @@
                 "identifier": "sign",
                 "newPage": false,
                 "searchKey": "ecdsa.sign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -638,7 +634,9 @@
                 "identifier": "verify",
                 "newPage": false,
                 "searchKey": "ecdsa.verify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -658,7 +656,9 @@
                 "identifier": "testAllCurves",
                 "newPage": false,
                 "searchKey": "ecdsa.testAllCurves",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -678,7 +678,9 @@
                 "identifier": "TestKeyGeneration",
                 "newPage": false,
                 "searchKey": "ecdsa.TestKeyGeneration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -698,7 +700,9 @@
                 "identifier": "testKeyGeneration",
                 "newPage": false,
                 "searchKey": "ecdsa.testKeyGeneration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -718,7 +722,9 @@
                 "identifier": "TestSignAndVerify",
                 "newPage": false,
                 "searchKey": "ecdsa.TestSignAndVerify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -738,7 +744,9 @@
                 "identifier": "testSignAndVerify",
                 "newPage": false,
                 "searchKey": "ecdsa.testSignAndVerify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -758,7 +766,9 @@
                 "identifier": "TestSignAndVerifyASN1",
                 "newPage": false,
                 "searchKey": "ecdsa.TestSignAndVerifyASN1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -778,7 +788,9 @@
                 "identifier": "testSignAndVerifyASN1",
                 "newPage": false,
                 "searchKey": "ecdsa.testSignAndVerifyASN1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -798,7 +810,9 @@
                 "identifier": "TestNonceSafety",
                 "newPage": false,
                 "searchKey": "ecdsa.TestNonceSafety",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -818,7 +832,9 @@
                 "identifier": "testNonceSafety",
                 "newPage": false,
                 "searchKey": "ecdsa.testNonceSafety",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -838,7 +854,9 @@
                 "identifier": "TestINDCCA",
                 "newPage": false,
                 "searchKey": "ecdsa.TestINDCCA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -858,7 +876,9 @@
                 "identifier": "testINDCCA",
                 "newPage": false,
                 "searchKey": "ecdsa.testINDCCA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -878,7 +898,9 @@
                 "identifier": "fromHex",
                 "newPage": false,
                 "searchKey": "ecdsa.fromHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -898,7 +920,9 @@
                 "identifier": "TestVectors",
                 "newPage": false,
                 "searchKey": "ecdsa.TestVectors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -918,7 +942,9 @@
                 "identifier": "TestNegativeInputs",
                 "newPage": false,
                 "searchKey": "ecdsa.TestNegativeInputs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -938,7 +964,9 @@
                 "identifier": "testNegativeInputs",
                 "newPage": false,
                 "searchKey": "ecdsa.testNegativeInputs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -958,7 +986,9 @@
                 "identifier": "TestZeroHashSignature",
                 "newPage": false,
                 "searchKey": "ecdsa.TestZeroHashSignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -978,7 +1008,9 @@
                 "identifier": "testZeroHashSignature",
                 "newPage": false,
                 "searchKey": "ecdsa.testZeroHashSignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -998,7 +1030,9 @@
                 "identifier": "benchmarkAllCurves",
                 "newPage": false,
                 "searchKey": "ecdsa.benchmarkAllCurves",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1018,7 +1052,9 @@
                 "identifier": "BenchmarkSign",
                 "newPage": false,
                 "searchKey": "ecdsa.BenchmarkSign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1038,7 +1074,9 @@
                 "identifier": "BenchmarkVerify",
                 "newPage": false,
                 "searchKey": "ecdsa.BenchmarkVerify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1058,7 +1096,9 @@
                 "identifier": "BenchmarkGenerateKey",
                 "newPage": false,
                 "searchKey": "ecdsa.BenchmarkGenerateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

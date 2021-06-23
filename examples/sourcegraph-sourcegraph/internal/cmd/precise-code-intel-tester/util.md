@@ -38,11 +38,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MaxDisplayLines" href="#MaxDisplayLines">const MaxDisplayLines</a>
 
 ```
 searchKey: util.MaxDisplayLines
-tags: [exported]
 ```
 
 ```Go
@@ -55,7 +58,6 @@ MaxDisplayLines is the number of lines that will be displayed before truncation.
 
 ```
 searchKey: util.MaxDisplayWidth
-tags: [exported]
 ```
 
 ```Go
@@ -66,10 +68,15 @@ MaxDisplayWidth is the number of columns that can be used to draw a progress bar
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="braille" href="#braille">var braille</a>
 
 ```
 searchKey: util.braille
+tags: [private]
 ```
 
 ```Go
@@ -80,11 +87,14 @@ braille is an animated spinner based off of the characters used by yarn.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrorPayload" href="#ErrorPayload">type ErrorPayload struct</a>
 
 ```
 searchKey: util.ErrorPayload
-tags: [exported]
 ```
 
 ```Go
@@ -97,7 +107,6 @@ type ErrorPayload struct {
 
 ```
 searchKey: util.GraphQLError
-tags: [exported]
 ```
 
 ```Go
@@ -110,7 +119,6 @@ type GraphQLError struct {
 
 ```
 searchKey: util.Limiter
-tags: [exported]
 ```
 
 ```Go
@@ -125,7 +133,6 @@ Limiter implements a counting semaphore.
 
 ```
 searchKey: util.NewLimiter
-tags: [exported]
 ```
 
 ```Go
@@ -138,7 +145,6 @@ NewLimiter creates a new limiter with the given maximum concurrency.
 
 ```
 searchKey: util.Limiter.Acquire
-tags: [exported]
 ```
 
 ```Go
@@ -151,7 +157,6 @@ Acquire blocks until it can acquire a value from the inner channel.
 
 ```
 searchKey: util.Limiter.Release
-tags: [exported]
 ```
 
 ```Go
@@ -164,7 +169,6 @@ Release adds a value back to the limiter, unblocking one waiter.
 
 ```
 searchKey: util.Limiter.Close
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +181,6 @@ Close closes the underlying channel.
 
 ```
 searchKey: util.ParallelFn
-tags: [exported]
 ```
 
 ```Go
@@ -195,6 +198,7 @@ ParallelFn groups an error-returning function with a description that can be dis
 
 ```
 searchKey: util.errPair
+tags: [private]
 ```
 
 ```Go
@@ -210,6 +214,7 @@ errPair bundles an error value with the function index from which it was produce
 
 ```
 searchKey: util.pendingMap
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +228,7 @@ type pendingMap struct {
 
 ```
 searchKey: util.newPendingMap
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +241,7 @@ newPendingMap creates a new pending map with n pending tasks.
 
 ```
 searchKey: util.pendingMap.remove
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +252,7 @@ func (m *pendingMap) remove(i int)
 
 ```
 searchKey: util.pendingMap.keys
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +263,7 @@ func (m *pendingMap) keys() (keys []int)
 
 ```
 searchKey: util.pendingMap.set
+tags: [private]
 ```
 
 ```Go
@@ -265,6 +274,7 @@ func (m *pendingMap) set(i int)
 
 ```
 searchKey: util.pendingMap.get
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +285,7 @@ func (m *pendingMap) get(i int) bool
 
 ```
 searchKey: util.pendingMap.size
+tags: [private]
 ```
 
 ```Go
@@ -283,11 +294,14 @@ func (m *pendingMap) size() int
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SignalSensitiveContext" href="#SignalSensitiveContext">func SignalSensitiveContext() (context.Context, func())</a>
 
 ```
 searchKey: util.SignalSensitiveContext
-tags: [exported]
 ```
 
 ```Go
@@ -300,7 +314,6 @@ SignalSensitiveContext returns a background context that is canceled after recei
 
 ```
 searchKey: util.QueryGraphQL
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +328,6 @@ The queryName is the name of the GraphQL query, which uniquely identifies the so
 
 ```
 searchKey: util.RunParallel
-tags: [exported]
 ```
 
 ```Go
@@ -328,6 +340,7 @@ RunParallel runs each function in parallel. Returns the first error to occur. Th
 
 ```
 searchKey: util.runFunctions
+tags: [private]
 ```
 
 ```Go
@@ -340,6 +353,7 @@ runFunctions is the worker body. It will pull an index off of the work queue, ma
 
 ```
 searchKey: util.monitor
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +366,7 @@ monitor waits for all functions to complete, an error, or the context to be canc
 
 ```
 searchKey: util.formatUpdate
+tags: [private]
 ```
 
 ```Go
@@ -364,6 +379,7 @@ formatUpdate constructs a content object with a number of lines indicating the i
 
 ```
 searchKey: util.numLines
+tags: [private]
 ```
 
 ```Go
@@ -376,6 +392,7 @@ numLines determines how many lines to display in formatUpdate.
 
 ```
 searchKey: util.formatProgressBar
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +405,7 @@ formatProgressBar constructs a progress bar string based on the relationship bet
 
 ```
 searchKey: util.digits
+tags: [private]
 ```
 
 ```Go

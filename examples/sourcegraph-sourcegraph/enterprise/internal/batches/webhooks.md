@@ -89,10 +89,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="githubEvents" href="#githubEvents">var githubEvents</a>
 
 ```
 searchKey: webhooks.githubEvents
+tags: [private]
 ```
 
 ```Go
@@ -105,6 +110,7 @@ githubEvents is the set of events this webhook handler listens to you can find i
 
 ```
 searchKey: webhooks.errExternalServiceNotFound
+tags: [private]
 ```
 
 ```Go
@@ -115,6 +121,7 @@ var errExternalServiceNotFound = errors.New("external service not found")
 
 ```
 searchKey: webhooks.errExternalServiceWrongKind
+tags: [private]
 ```
 
 ```Go
@@ -125,6 +132,7 @@ var errExternalServiceWrongKind = errors.New("external service is not of the exp
 
 ```
 searchKey: webhooks.errPipelineMissingMergeRequest
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +143,7 @@ var errPipelineMissingMergeRequest = errors.New("pipeline event does not include
 
 ```
 searchKey: webhooks.update
+tags: [private]
 ```
 
 ```Go
@@ -143,11 +152,14 @@ var update = flag.Bool("update", false, "update testdata")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="BitbucketServerWebhook" href="#BitbucketServerWebhook">type BitbucketServerWebhook struct</a>
 
 ```
 searchKey: webhooks.BitbucketServerWebhook
-tags: [exported]
 ```
 
 ```Go
@@ -160,7 +172,6 @@ type BitbucketServerWebhook struct {
 
 ```
 searchKey: webhooks.NewBitbucketServerWebhook
-tags: [exported]
 ```
 
 ```Go
@@ -171,7 +182,6 @@ func NewBitbucketServerWebhook(store *store.Store) *BitbucketServerWebhook
 
 ```
 searchKey: webhooks.BitbucketServerWebhook.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -182,6 +192,7 @@ func (h *BitbucketServerWebhook) ServeHTTP(w http.ResponseWriter, r *http.Reques
 
 ```
 searchKey: webhooks.BitbucketServerWebhook.parseEvent
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +203,7 @@ func (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *type
 
 ```
 searchKey: webhooks.BitbucketServerWebhook.convertEvent
+tags: [private]
 ```
 
 ```Go
@@ -202,7 +214,6 @@ func (h *BitbucketServerWebhook) convertEvent(theirs interface{}) (prs []PR, our
 
 ```
 searchKey: webhooks.GitHubWebhook
-tags: [exported]
 ```
 
 ```Go
@@ -217,7 +228,6 @@ GitHubWebhook receives GitHub organization webhook events that are relevant to B
 
 ```
 searchKey: webhooks.NewGitHubWebhook
-tags: [exported]
 ```
 
 ```Go
@@ -228,7 +238,6 @@ func NewGitHubWebhook(store *store.Store) *GitHubWebhook
 
 ```
 searchKey: webhooks.GitHubWebhook.Register
-tags: [exported]
 ```
 
 ```Go
@@ -241,6 +250,7 @@ Register registers this webhook handler to handle events with the passed webhook
 
 ```
 searchKey: webhooks.GitHubWebhook.handleGitHubWebhook
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +263,7 @@ handleGithubWebhook is the entry point for webhooks from the webhook router, see
 
 ```
 searchKey: webhooks.GitHubWebhook.convertEvent
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +274,7 @@ func (h *GitHubWebhook) convertEvent(ctx context.Context, externalServiceID stri
 
 ```
 searchKey: webhooks.GitHubWebhook.issueComment
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +285,7 @@ func (*GitHubWebhook) issueComment(e *gh.IssueCommentEvent) *github.IssueComment
 
 ```
 searchKey: webhooks.GitHubWebhook.labeledEvent
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +296,7 @@ func (*GitHubWebhook) labeledEvent(e *gh.PullRequestEvent) *github.LabelEvent
 
 ```
 searchKey: webhooks.GitHubWebhook.readyForReviewEvent
+tags: [private]
 ```
 
 ```Go
@@ -293,6 +307,7 @@ func (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyF
 
 ```
 searchKey: webhooks.GitHubWebhook.convertToDraftEvent
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +318,7 @@ func (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.Conver
 
 ```
 searchKey: webhooks.GitHubWebhook.assignedEvent
+tags: [private]
 ```
 
 ```Go
@@ -313,6 +329,7 @@ func (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEven
 
 ```
 searchKey: webhooks.GitHubWebhook.unassignedEvent
+tags: [private]
 ```
 
 ```Go
@@ -323,6 +340,7 @@ func (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.Unassigned
 
 ```
 searchKey: webhooks.GitHubWebhook.reviewRequestedEvent
+tags: [private]
 ```
 
 ```Go
@@ -333,6 +351,7 @@ func (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.Revie
 
 ```
 searchKey: webhooks.GitHubWebhook.reviewRequestRemovedEvent
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +362,7 @@ func (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.
 
 ```
 searchKey: webhooks.GitHubWebhook.renamedTitleEvent
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +373,7 @@ func (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedT
 
 ```
 searchKey: webhooks.GitHubWebhook.closedOrMergeEvent
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +386,7 @@ closed events from github have a 'merged flag which identifies them as merge eve
 
 ```
 searchKey: webhooks.GitHubWebhook.reopenedEvent
+tags: [private]
 ```
 
 ```Go
@@ -375,6 +397,7 @@ func (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEven
 
 ```
 searchKey: webhooks.GitHubWebhook.pullRequestReviewEvent
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +408,7 @@ func (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *gith
 
 ```
 searchKey: webhooks.GitHubWebhook.pullRequestReviewCommentEvent
+tags: [private]
 ```
 
 ```Go
@@ -395,6 +419,7 @@ func (*GitHubWebhook) pullRequestReviewCommentEvent(e *gh.PullRequestReviewComme
 
 ```
 searchKey: webhooks.GitHubWebhook.commitStatusEvent
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +430,7 @@ func (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatu
 
 ```
 searchKey: webhooks.GitHubWebhook.checkSuiteEvent
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +441,7 @@ func (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite
 
 ```
 searchKey: webhooks.GitHubWebhook.checkRunEvent
+tags: [private]
 ```
 
 ```Go
@@ -425,7 +452,6 @@ func (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun
 
 ```
 searchKey: webhooks.GitLabWebhook
-tags: [exported]
 ```
 
 ```Go
@@ -438,7 +464,6 @@ type GitLabWebhook struct {
 
 ```
 searchKey: webhooks.NewGitLabWebhook
-tags: [exported]
 ```
 
 ```Go
@@ -449,7 +474,6 @@ func NewGitLabWebhook(store *store.Store) *GitLabWebhook
 
 ```
 searchKey: webhooks.GitLabWebhook.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -462,6 +486,7 @@ ServeHTTP implements the http.Handler interface.
 
 ```
 searchKey: webhooks.GitLabWebhook.getExternalServiceFromRawID
+tags: [private]
 ```
 
 ```Go
@@ -476,6 +501,7 @@ On failure, errExternalServiceNotFound is returned if the ID doesn't match any G
 
 ```
 searchKey: webhooks.GitLabWebhook.handleEvent
+tags: [private]
 ```
 
 ```Go
@@ -488,6 +514,7 @@ handleEvent is essentially a router: it dispatches based on the event type to pe
 
 ```
 searchKey: webhooks.GitLabWebhook.enqueueChangesetSyncFromEvent
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +525,7 @@ func (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID 
 
 ```
 searchKey: webhooks.GitLabWebhook.handlePipelineEvent
+tags: [private]
 ```
 
 ```Go
@@ -508,6 +536,7 @@ func (h *GitLabWebhook) handlePipelineEvent(ctx context.Context, esID string, ev
 
 ```
 searchKey: webhooks.GitLabWebhook.getChangesetForPR
+tags: [private]
 ```
 
 ```Go
@@ -518,7 +547,6 @@ func (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, 
 
 ```
 searchKey: webhooks.Webhook
-tags: [exported]
 ```
 
 ```Go
@@ -535,6 +563,7 @@ type Webhook struct {
 
 ```
 searchKey: webhooks.Webhook.getRepoForPR
+tags: [private]
 ```
 
 ```Go
@@ -550,6 +579,7 @@ func (h Webhook) getRepoForPR(
 
 ```
 searchKey: webhooks.Webhook.upsertChangesetEvent
+tags: [private]
 ```
 
 ```Go
@@ -565,7 +595,6 @@ func (h Webhook) upsertChangesetEvent(
 
 ```
 searchKey: webhooks.PR
-tags: [exported]
 ```
 
 ```Go
@@ -579,6 +608,7 @@ type PR struct {
 
 ```
 searchKey: webhooks.gitlabToPR
+tags: [private]
 ```
 
 ```Go
@@ -591,6 +621,7 @@ gitlabToPR instantiates a new PR instance given fields that are commonly availab
 
 ```
 searchKey: webhooks.keyer
+tags: [private]
 ```
 
 ```Go
@@ -603,6 +634,7 @@ type keyer interface {
 
 ```
 searchKey: webhooks.httpError
+tags: [private]
 ```
 
 ```Go
@@ -616,6 +648,7 @@ type httpError struct {
 
 ```
 searchKey: webhooks.httpError.Error
+tags: [private]
 ```
 
 ```Go
@@ -626,6 +659,7 @@ func (e httpError) Error() string
 
 ```
 searchKey: webhooks.brokenDB
+tags: [private]
 ```
 
 ```Go
@@ -638,6 +672,7 @@ brokenDB provides a dbutil.DB that always fails: for methods that return an erro
 
 ```
 searchKey: webhooks.brokenDB.QueryContext
+tags: [private]
 ```
 
 ```Go
@@ -648,6 +683,7 @@ func (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interfac
 
 ```
 searchKey: webhooks.brokenDB.ExecContext
+tags: [private]
 ```
 
 ```Go
@@ -658,6 +694,7 @@ func (db *brokenDB) ExecContext(ctx context.Context, q string, args ...interface
 
 ```
 searchKey: webhooks.brokenDB.QueryRowContext
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +705,7 @@ func (db *brokenDB) QueryRowContext(ctx context.Context, q string, args ...inter
 
 ```
 searchKey: webhooks.brokenReader
+tags: [private]
 ```
 
 ```Go
@@ -680,6 +718,7 @@ brokenReader implements an io.ReadCloser that always returns an error when read.
 
 ```
 searchKey: webhooks.brokenReader.Close
+tags: [private]
 ```
 
 ```Go
@@ -690,6 +729,7 @@ func (br *brokenReader) Close() error
 
 ```
 searchKey: webhooks.brokenReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -700,6 +740,7 @@ func (br *brokenReader) Read(p []byte) (int, error)
 
 ```
 searchKey: webhooks.nestedTx
+tags: [private]
 ```
 
 ```Go
@@ -714,6 +755,7 @@ It would be theoretically possible to use savepoints to implement something rese
 
 ```
 searchKey: webhooks.nestedTx.Rollback
+tags: [private]
 ```
 
 ```Go
@@ -724,6 +766,7 @@ func (ntx *nestedTx) Rollback() error
 
 ```
 searchKey: webhooks.nestedTx.Commit
+tags: [private]
 ```
 
 ```Go
@@ -734,6 +777,7 @@ func (ntx *nestedTx) Commit() error
 
 ```
 searchKey: webhooks.nestedTx.BeginTx
+tags: [private]
 ```
 
 ```Go
@@ -744,6 +788,7 @@ func (ntx *nestedTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error
 
 ```
 searchKey: webhooks.noNestingTx
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +801,7 @@ noNestingTx is another transaction wrapper that always returns an error when a t
 
 ```
 searchKey: webhooks.noNestingTx.BeginTx
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +812,7 @@ func (nntx *noNestingTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error
 
 ```
 searchKey: webhooks.webhookTestCase
+tags: [private]
 ```
 
 ```Go
@@ -782,6 +829,7 @@ type webhookTestCase struct {
 
 ```
 searchKey: webhooks.loadWebhookTestCase
+tags: [private]
 ```
 
 ```Go
@@ -790,10 +838,15 @@ func loadWebhookTestCase(t testing.TB, path string) webhookTestCase
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="validateGitLabSecret" href="#validateGitLabSecret">func validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)</a>
 
 ```
 searchKey: webhooks.validateGitLabSecret
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +859,7 @@ validateGitLabSecret validates that the given secret matches one of the webhooks
 
 ```
 searchKey: webhooks.extractExternalServiceID
+tags: [private]
 ```
 
 ```Go
@@ -816,6 +870,7 @@ func extractExternalServiceID(extSvc *types.ExternalService) (string, error)
 
 ```
 searchKey: webhooks.respond
+tags: [private]
 ```
 
 ```Go
@@ -826,6 +881,7 @@ func respond(w http.ResponseWriter, code int, v interface{})
 
 ```
 searchKey: webhooks.testBitbucketWebhook
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +894,7 @@ Run from integration_test.go
 
 ```
 searchKey: webhooks.testGitHubWebhook
+tags: [private]
 ```
 
 ```Go
@@ -850,6 +907,7 @@ Run from integration_test.go
 
 ```
 searchKey: webhooks.testGitLabWebhook
+tags: [private]
 ```
 
 ```Go
@@ -860,6 +918,7 @@ func testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)
 
 ```
 searchKey: webhooks.TestValidateGitLabSecret
+tags: [private]
 ```
 
 ```Go
@@ -870,6 +929,7 @@ func TestValidateGitLabSecret(t *testing.T)
 
 ```
 searchKey: webhooks.gitLabTestSetup
+tags: [private]
 ```
 
 ```Go
@@ -882,6 +942,7 @@ gitLabTestSetup instantiates the stores and a clock for use within tests. Any ch
 
 ```
 searchKey: webhooks.assertBodyIncludes
+tags: [private]
 ```
 
 ```Go
@@ -894,6 +955,7 @@ assertBodyIncludes checks for a specific substring within the given response bod
 
 ```
 searchKey: webhooks.assertChangesetEventForChangeset
+tags: [private]
 ```
 
 ```Go
@@ -906,6 +968,7 @@ assertChangesetEventForChangeset checks that one (and only one) changeset event 
 
 ```
 searchKey: webhooks.createGitLabExternalService
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +981,7 @@ createGitLabExternalService creates a mock GitLab service with a valid configura
 
 ```
 searchKey: webhooks.createGitLabRepo
+tags: [private]
 ```
 
 ```Go
@@ -930,6 +994,7 @@ createGitLabRepo creates a mock GitLab repo attached to the given external servi
 
 ```
 searchKey: webhooks.createGitLabChangeset
+tags: [private]
 ```
 
 ```Go
@@ -942,6 +1007,7 @@ createGitLabChangeset creates a mock GitLab changeset.
 
 ```
 searchKey: webhooks.createMergeRequestPayload
+tags: [private]
 ```
 
 ```Go
@@ -954,6 +1020,7 @@ createMergeRequestPayload creates a mock GitLab webhook payload of the merge req
 
 ```
 searchKey: webhooks.createPipelinePayload
+tags: [private]
 ```
 
 ```Go
@@ -966,6 +1033,7 @@ createPipelinePayload creates a mock GitLab webhook payload of the pipeline obje
 
 ```
 searchKey: webhooks.getSingleRepo
+tags: [private]
 ```
 
 ```Go
@@ -976,6 +1044,7 @@ func getSingleRepo(ctx context.Context, bitbucketSource *repos.BitbucketServerSo
 
 ```
 searchKey: webhooks.sign
+tags: [private]
 ```
 
 ```Go
@@ -986,6 +1055,7 @@ func sign(t *testing.T, message, secret []byte) string
 
 ```
 searchKey: webhooks.TestWebhooksIntegration
+tags: [private]
 ```
 
 ```Go

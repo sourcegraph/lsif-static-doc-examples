@@ -31,10 +31,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="databaseNamePrefix" href="#databaseNamePrefix">const databaseNamePrefix</a>
 
 ```
 searchKey: main.databaseNamePrefix
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +50,7 @@ const databaseNamePrefix = "schemadoc-gen-temp-"
 
 ```
 searchKey: main.containerName
+tags: [private]
 ```
 
 ```Go
@@ -53,10 +59,15 @@ const containerName = "schemadoc"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="logger" href="#logger">var logger</a>
 
 ```
 searchKey: main.logger
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +78,7 @@ var logger = log.New(os.Stderr, "", log.LstdFlags)
 
 ```
 searchKey: main.versionRe
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +89,7 @@ var versionRe = lazyregexp.New(fmt.Sprintf(`\b%s\b`, regexp.QuoteMeta(`12\.\d+`)
 
 ```
 searchKey: main.databases
+tags: [private]
 ```
 
 ```Go
@@ -85,10 +98,15 @@ var databases = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="runFunc" href="#runFunc">type runFunc func(quiet bool, cmd ...string) (string, error)</a>
 
 ```
 searchKey: main.runFunc
+tags: [private]
 ```
 
 ```Go
@@ -99,6 +117,7 @@ type runFunc func(quiet bool, cmd ...string) (string, error)
 
 ```
 searchKey: main.runWithPrefix
+tags: [private]
 ```
 
 ```Go
@@ -109,6 +128,7 @@ func runWithPrefix(prefix []string) runFunc
 
 ```
 searchKey: main.table
+tags: [private]
 ```
 
 ```Go
@@ -120,10 +140,15 @@ type table struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +161,7 @@ This script generates markdown formatted output containing descriptions of the c
 
 ```
 searchKey: main.mainErr
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +172,7 @@ func mainErr() error
 
 ```
 searchKey: main.mainLocal
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +183,7 @@ func mainLocal() error
 
 ```
 searchKey: main.mainContainer
+tags: [private]
 ```
 
 ```Go
@@ -166,6 +194,7 @@ func mainContainer() error
 
 ```
 searchKey: main.generateAndWrite
+tags: [private]
 ```
 
 ```Go
@@ -176,6 +205,7 @@ func generateAndWrite(database *dbconn.Database, dataSource string, commandPrefi
 
 ```
 searchKey: main.startDocker
+tags: [private]
 ```
 
 ```Go
@@ -186,6 +216,7 @@ func startDocker() (commandPrefix []string, shutdown func(), _ error)
 
 ```
 searchKey: main.generateInternal
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +227,7 @@ func generateInternal(database *dbconn.Database, dataSource string, run runFunc)
 
 ```
 searchKey: main.getTables
+tags: [private]
 ```
 
 ```Go
@@ -206,6 +238,7 @@ func getTables(db *sql.DB) (tables []table, _ error)
 
 ```
 searchKey: main.describeTable
+tags: [private]
 ```
 
 ```Go
@@ -216,6 +249,7 @@ func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (s
 
 ```
 searchKey: main.getTableComment
+tags: [private]
 ```
 
 ```Go
@@ -226,6 +260,7 @@ func getTableComment(db *sql.DB, table string) (comment string, _ error)
 
 ```
 searchKey: main.getViewQuery
+tags: [private]
 ```
 
 ```Go
@@ -236,6 +271,7 @@ func getViewQuery(db *sql.DB, view string) (query string, _ error)
 
 ```
 searchKey: main.getColumnComments
+tags: [private]
 ```
 
 ```Go
@@ -246,6 +282,7 @@ func getColumnComments(db *sql.DB, table string) (map[string]string, error)
 
 ```
 searchKey: main.describeTypes
+tags: [private]
 ```
 
 ```Go

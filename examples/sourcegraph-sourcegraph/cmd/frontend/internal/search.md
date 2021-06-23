@@ -63,10 +63,15 @@ package search is search specific logic for the frontend. Also see github.com/so
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="fileMatch" href="#fileMatch">const fileMatch</a>
 
 ```
 searchKey: search.fileMatch
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +82,7 @@ const fileMatch matchType = iota
 
 ```
 searchKey: search.repoMatch
+tags: [private]
 ```
 
 ```Go
@@ -87,6 +93,7 @@ const repoMatch
 
 ```
 searchKey: search.symbolMatch
+tags: [private]
 ```
 
 ```Go
@@ -97,6 +104,7 @@ const symbolMatch
 
 ```
 searchKey: search.commitMatch
+tags: [private]
 ```
 
 ```Go
@@ -105,10 +113,15 @@ const commitMatch
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="metricLatency" href="#metricLatency">var metricLatency</a>
 
 ```
 searchKey: search.metricLatency
+tags: [private]
 ```
 
 ```Go
@@ -119,6 +132,7 @@ var metricLatency = ...
 
 ```
 searchKey: search.searchBlitzUserAgentRegexp
+tags: [private]
 ```
 
 ```Go
@@ -127,10 +141,15 @@ var searchBlitzUserAgentRegexp = lazyregexp.New(`^SearchBlitz \(([^\)]+)\)$`)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="progressAggregator" href="#progressAggregator">type progressAggregator struct</a>
 
 ```
 searchKey: search.progressAggregator
+tags: [private]
 ```
 
 ```Go
@@ -151,6 +170,7 @@ type progressAggregator struct {
 
 ```
 searchKey: search.progressAggregator.Update
+tags: [private]
 ```
 
 ```Go
@@ -161,6 +181,7 @@ func (p *progressAggregator) Update(event streaming.SearchEvent)
 
 ```
 searchKey: search.progressAggregator.currentStats
+tags: [private]
 ```
 
 ```Go
@@ -171,6 +192,7 @@ func (p *progressAggregator) currentStats() api.ProgressStats
 
 ```
 searchKey: search.progressAggregator.Current
+tags: [private]
 ```
 
 ```Go
@@ -183,6 +205,7 @@ Current returns the current progress event.
 
 ```
 searchKey: search.progressAggregator.Final
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +218,7 @@ Final returns the current progress event, but with final fields set to indicate 
 
 ```
 searchKey: search.namerFunc
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +229,7 @@ type namerFunc string
 
 ```
 searchKey: search.namerFunc.Name
+tags: [private]
 ```
 
 ```Go
@@ -215,6 +240,7 @@ func (n namerFunc) Name() string
 
 ```
 searchKey: search.streamHandler
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +256,7 @@ type streamHandler struct {
 
 ```
 searchKey: search.streamHandler.ServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +267,7 @@ func (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: search.streamHandler.getEventRepoMetadata
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +278,7 @@ func (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streamin
 
 ```
 searchKey: search.streamHandler.startSearch
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +291,7 @@ startSearch will start a search. It returns the events channel which streams out
 
 ```
 searchKey: search.searchResolver
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +305,7 @@ type searchResolver interface {
 
 ```
 searchKey: search.defaultNewSearchResolver
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +316,7 @@ func defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlba
 
 ```
 searchKey: search.args
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +333,7 @@ type args struct {
 
 ```
 searchKey: search.parseURLQuery
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +344,7 @@ func parseURLQuery(q url.Values) (*args, error)
 
 ```
 searchKey: search.jsonArrayBuf
+tags: [private]
 ```
 
 ```Go
@@ -328,6 +362,7 @@ jsonArrayBuf builds up a JSON array by marshalling per item. Once the array has 
 
 ```
 searchKey: search.jsonArrayBuf.Append
+tags: [private]
 ```
 
 ```Go
@@ -340,6 +375,7 @@ Append marshals v and adds it to the json array buffer. If the size of the buffe
 
 ```
 searchKey: search.jsonArrayBuf.Flush
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +388,7 @@ Flush writes and resets the buffer if there is data to write.
 
 ```
 searchKey: search.jsonArrayBuf.Len
+tags: [private]
 ```
 
 ```Go
@@ -362,6 +399,7 @@ func (j *jsonArrayBuf) Len() int
 
 ```
 searchKey: search.matchType
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +410,7 @@ type matchType int
 
 ```
 searchKey: search.matchType.MarshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +421,7 @@ func (t matchType) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: search.mockSearchResolver
+tags: [private]
 ```
 
 ```Go
@@ -396,6 +436,7 @@ type mockSearchResolver struct {
 
 ```
 searchKey: search.mockSearchResolver.Results
+tags: [private]
 ```
 
 ```Go
@@ -406,6 +447,7 @@ func (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.Searc
 
 ```
 searchKey: search.mockSearchResolver.Close
+tags: [private]
 ```
 
 ```Go
@@ -416,6 +458,7 @@ func (h *mockSearchResolver) Close()
 
 ```
 searchKey: search.mockSearchResolver.Inputs
+tags: [private]
 ```
 
 ```Go
@@ -424,10 +467,15 @@ func (h *mockSearchResolver) Inputs() run.SearchInputs
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="getNames" href="#getNames">func getNames(stats streaming.Stats, status searchshared.RepoStatus) []api.Namer</a>
 
 ```
 searchKey: search.getNames
+tags: [private]
 ```
 
 ```Go
@@ -438,6 +486,7 @@ func getNames(stats streaming.Stats, status searchshared.RepoStatus) []api.Namer
 
 ```
 searchKey: search.intPtr
+tags: [private]
 ```
 
 ```Go
@@ -448,7 +497,6 @@ func intPtr(i int) *int
 
 ```
 searchKey: search.StreamHandler
-tags: [exported]
 ```
 
 ```Go
@@ -461,6 +509,7 @@ StreamHandler is an http handler which streams back search results.
 
 ```
 searchKey: search.strPtr
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +520,7 @@ func strPtr(s string) *string
 
 ```
 searchKey: search.fromStrPtr
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +531,7 @@ func fromStrPtr(s *string) string
 
 ```
 searchKey: search.fromMatch
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +542,7 @@ func fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamh
 
 ```
 searchKey: search.fromFileMatch
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +553,7 @@ func fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) s
 
 ```
 searchKey: search.fromSymbolMatch
+tags: [private]
 ```
 
 ```Go
@@ -511,6 +564,7 @@ func fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo)
 
 ```
 searchKey: search.fromRepository
+tags: [private]
 ```
 
 ```Go
@@ -521,6 +575,7 @@ func fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) 
 
 ```
 searchKey: search.fromCommit
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +586,7 @@ func fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo
 
 ```
 searchKey: search.eventStreamOTHook
+tags: [private]
 ```
 
 ```Go
@@ -543,7 +599,6 @@ eventStreamOTHook returns a StatHook which logs to log.
 
 ```
 searchKey: search.GuessSource
-tags: [exported]
 ```
 
 ```Go
@@ -556,6 +611,7 @@ GuessSource guesses the source the request came from (browser, other HTTP client
 
 ```
 searchKey: search.batchEvents
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +624,7 @@ batchEvents takes an event stream and merges events that come through close in t
 
 ```
 searchKey: search.repoIDs
+tags: [private]
 ```
 
 ```Go
@@ -578,6 +635,7 @@ func repoIDs(results []result.Match) []api.RepoID
 
 ```
 searchKey: search.TestServeStream_empty
+tags: [private]
 ```
 
 ```Go
@@ -588,6 +646,7 @@ func TestServeStream_empty(t *testing.T)
 
 ```
 searchKey: search.TestDefaultNewSearchResolver
+tags: [private]
 ```
 
 ```Go
@@ -600,6 +659,7 @@ Ensures graphqlbackend matches the interface we expect
 
 ```
 searchKey: search.TestDisplayLimit
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +670,7 @@ func TestDisplayLimit(t *testing.T)
 
 ```
 searchKey: search.mkRepoMatch
+tags: [private]
 ```
 
 ```Go

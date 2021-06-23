@@ -1510,15 +1510,10 @@ Package elf implements access to ELF object files.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="EI_CLASS" href="#EI_CLASS">const EI_CLASS</a>
 
 ```
 searchKey: elf.EI_CLASS
-tags: [exported]
 ```
 
 ```Go
@@ -1532,7 +1527,6 @@ Indexes into the Header.Ident array.
 
 ```
 searchKey: elf.EI_DATA
-tags: [exported]
 ```
 
 ```Go
@@ -1546,7 +1540,6 @@ Indexes into the Header.Ident array.
 
 ```
 searchKey: elf.EI_VERSION
-tags: [exported]
 ```
 
 ```Go
@@ -1560,7 +1553,6 @@ Indexes into the Header.Ident array.
 
 ```
 searchKey: elf.EI_OSABI
-tags: [exported]
 ```
 
 ```Go
@@ -1574,7 +1566,6 @@ Indexes into the Header.Ident array.
 
 ```
 searchKey: elf.EI_ABIVERSION
-tags: [exported]
 ```
 
 ```Go
@@ -1588,7 +1579,6 @@ Indexes into the Header.Ident array.
 
 ```
 searchKey: elf.EI_PAD
-tags: [exported]
 ```
 
 ```Go
@@ -1602,7 +1592,6 @@ Indexes into the Header.Ident array.
 
 ```
 searchKey: elf.EI_NIDENT
-tags: [exported]
 ```
 
 ```Go
@@ -1616,7 +1605,6 @@ Indexes into the Header.Ident array.
 
 ```
 searchKey: elf.ELFMAG
-tags: [exported]
 ```
 
 ```Go
@@ -1629,7 +1617,6 @@ Initial magic number for ELF files.
 
 ```
 searchKey: elf.EV_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -1640,7 +1627,6 @@ const EV_NONE Version = 0
 
 ```
 searchKey: elf.EV_CURRENT
-tags: [exported]
 ```
 
 ```Go
@@ -1651,7 +1637,6 @@ const EV_CURRENT Version = 1
 
 ```
 searchKey: elf.ELFCLASSNONE
-tags: [exported]
 ```
 
 ```Go
@@ -1663,7 +1648,6 @@ const ELFCLASSNONE Class = 0 /* Unknown class. */
 
 ```
 searchKey: elf.ELFCLASS32
-tags: [exported]
 ```
 
 ```Go
@@ -1675,7 +1659,6 @@ const ELFCLASS32 Class = 1 /* 32-bit architecture. */
 
 ```
 searchKey: elf.ELFCLASS64
-tags: [exported]
 ```
 
 ```Go
@@ -1687,7 +1670,6 @@ const ELFCLASS64 Class = 2 /* 64-bit architecture. */
 
 ```
 searchKey: elf.ELFDATANONE
-tags: [exported]
 ```
 
 ```Go
@@ -1699,7 +1681,6 @@ const ELFDATANONE Data = 0 /* Unknown data format. */
 
 ```
 searchKey: elf.ELFDATA2LSB
-tags: [exported]
 ```
 
 ```Go
@@ -1711,7 +1692,6 @@ const ELFDATA2LSB Data = 1 /* 2's complement little-endian. */
 
 ```
 searchKey: elf.ELFDATA2MSB
-tags: [exported]
 ```
 
 ```Go
@@ -1723,7 +1703,6 @@ const ELFDATA2MSB Data = 2 /* 2's complement big-endian. */
 
 ```
 searchKey: elf.ELFOSABI_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -1735,7 +1714,6 @@ const ELFOSABI_NONE OSABI = 0 /* UNIX System V ABI */
 
 ```
 searchKey: elf.ELFOSABI_HPUX
-tags: [exported]
 ```
 
 ```Go
@@ -1747,7 +1725,6 @@ const ELFOSABI_HPUX OSABI = 1 /* HP-UX operating system */
 
 ```
 searchKey: elf.ELFOSABI_NETBSD
-tags: [exported]
 ```
 
 ```Go
@@ -1759,7 +1736,6 @@ const ELFOSABI_NETBSD OSABI = 2 /* NetBSD */
 
 ```
 searchKey: elf.ELFOSABI_LINUX
-tags: [exported]
 ```
 
 ```Go
@@ -1771,7 +1747,6 @@ const ELFOSABI_LINUX OSABI = 3 /* Linux */
 
 ```
 searchKey: elf.ELFOSABI_HURD
-tags: [exported]
 ```
 
 ```Go
@@ -1783,7 +1758,6 @@ const ELFOSABI_HURD OSABI = 4 /* Hurd */
 
 ```
 searchKey: elf.ELFOSABI_86OPEN
-tags: [exported]
 ```
 
 ```Go
@@ -1795,7 +1769,6 @@ const ELFOSABI_86OPEN OSABI = 5 /* 86Open common IA32 ABI */
 
 ```
 searchKey: elf.ELFOSABI_SOLARIS
-tags: [exported]
 ```
 
 ```Go
@@ -1807,7 +1780,6 @@ const ELFOSABI_SOLARIS OSABI = 6 /* Solaris */
 
 ```
 searchKey: elf.ELFOSABI_AIX
-tags: [exported]
 ```
 
 ```Go
@@ -1819,7 +1791,6 @@ const ELFOSABI_AIX OSABI = 7 /* AIX */
 
 ```
 searchKey: elf.ELFOSABI_IRIX
-tags: [exported]
 ```
 
 ```Go
@@ -1831,7 +1802,6 @@ const ELFOSABI_IRIX OSABI = 8 /* IRIX */
 
 ```
 searchKey: elf.ELFOSABI_FREEBSD
-tags: [exported]
 ```
 
 ```Go
@@ -1843,7 +1813,6 @@ const ELFOSABI_FREEBSD OSABI = 9 /* FreeBSD */
 
 ```
 searchKey: elf.ELFOSABI_TRU64
-tags: [exported]
 ```
 
 ```Go
@@ -1855,7 +1824,6 @@ const ELFOSABI_TRU64 OSABI = 10 /* TRU64 UNIX */
 
 ```
 searchKey: elf.ELFOSABI_MODESTO
-tags: [exported]
 ```
 
 ```Go
@@ -1867,7 +1835,6 @@ const ELFOSABI_MODESTO OSABI = 11 /* Novell Modesto */
 
 ```
 searchKey: elf.ELFOSABI_OPENBSD
-tags: [exported]
 ```
 
 ```Go
@@ -1879,7 +1846,6 @@ const ELFOSABI_OPENBSD OSABI = 12 /* OpenBSD */
 
 ```
 searchKey: elf.ELFOSABI_OPENVMS
-tags: [exported]
 ```
 
 ```Go
@@ -1891,7 +1857,6 @@ const ELFOSABI_OPENVMS OSABI = 13 /* Open VMS */
 
 ```
 searchKey: elf.ELFOSABI_NSK
-tags: [exported]
 ```
 
 ```Go
@@ -1903,7 +1868,6 @@ const ELFOSABI_NSK OSABI = 14 /* HP Non-Stop Kernel */
 
 ```
 searchKey: elf.ELFOSABI_AROS
-tags: [exported]
 ```
 
 ```Go
@@ -1915,7 +1879,6 @@ const ELFOSABI_AROS OSABI = 15 /* Amiga Research OS */
 
 ```
 searchKey: elf.ELFOSABI_FENIXOS
-tags: [exported]
 ```
 
 ```Go
@@ -1927,7 +1890,6 @@ const ELFOSABI_FENIXOS OSABI = 16 /* The FenixOS highly scalable multi-core OS *
 
 ```
 searchKey: elf.ELFOSABI_CLOUDABI
-tags: [exported]
 ```
 
 ```Go
@@ -1939,7 +1901,6 @@ const ELFOSABI_CLOUDABI OSABI = 17 /* Nuxi CloudABI */
 
 ```
 searchKey: elf.ELFOSABI_ARM
-tags: [exported]
 ```
 
 ```Go
@@ -1951,7 +1912,6 @@ const ELFOSABI_ARM OSABI = 97 /* ARM */
 
 ```
 searchKey: elf.ELFOSABI_STANDALONE
-tags: [exported]
 ```
 
 ```Go
@@ -1963,7 +1923,6 @@ const ELFOSABI_STANDALONE OSABI = 255 /* Standalone (embedded) application */
 
 ```
 searchKey: elf.ET_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -1975,7 +1934,6 @@ const ET_NONE Type = 0 /* Unknown type. */
 
 ```
 searchKey: elf.ET_REL
-tags: [exported]
 ```
 
 ```Go
@@ -1987,7 +1945,6 @@ const ET_REL Type = 1 /* Relocatable. */
 
 ```
 searchKey: elf.ET_EXEC
-tags: [exported]
 ```
 
 ```Go
@@ -1999,7 +1956,6 @@ const ET_EXEC Type = 2 /* Executable. */
 
 ```
 searchKey: elf.ET_DYN
-tags: [exported]
 ```
 
 ```Go
@@ -2011,7 +1967,6 @@ const ET_DYN Type = 3 /* Shared object. */
 
 ```
 searchKey: elf.ET_CORE
-tags: [exported]
 ```
 
 ```Go
@@ -2023,7 +1978,6 @@ const ET_CORE Type = 4 /* Core file. */
 
 ```
 searchKey: elf.ET_LOOS
-tags: [exported]
 ```
 
 ```Go
@@ -2035,7 +1989,6 @@ const ET_LOOS Type = 0xfe00 /* First operating system specific. */
 
 ```
 searchKey: elf.ET_HIOS
-tags: [exported]
 ```
 
 ```Go
@@ -2047,7 +2000,6 @@ const ET_HIOS Type = 0xfeff /* Last operating system-specific. */
 
 ```
 searchKey: elf.ET_LOPROC
-tags: [exported]
 ```
 
 ```Go
@@ -2059,7 +2011,6 @@ const ET_LOPROC Type = 0xff00 /* First processor-specific. */
 
 ```
 searchKey: elf.ET_HIPROC
-tags: [exported]
 ```
 
 ```Go
@@ -2071,7 +2022,6 @@ const ET_HIPROC Type = 0xffff /* Last processor-specific. */
 
 ```
 searchKey: elf.EM_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -2083,7 +2033,6 @@ const EM_NONE Machine = 0 /* Unknown machine. */
 
 ```
 searchKey: elf.EM_M32
-tags: [exported]
 ```
 
 ```Go
@@ -2095,7 +2044,6 @@ const EM_M32 Machine = 1 /* AT&T WE32100. */
 
 ```
 searchKey: elf.EM_SPARC
-tags: [exported]
 ```
 
 ```Go
@@ -2107,7 +2055,6 @@ const EM_SPARC Machine = 2 /* Sun SPARC. */
 
 ```
 searchKey: elf.EM_386
-tags: [exported]
 ```
 
 ```Go
@@ -2119,7 +2066,6 @@ const EM_386 Machine = 3 /* Intel i386. */
 
 ```
 searchKey: elf.EM_68K
-tags: [exported]
 ```
 
 ```Go
@@ -2131,7 +2077,6 @@ const EM_68K Machine = 4 /* Motorola 68000. */
 
 ```
 searchKey: elf.EM_88K
-tags: [exported]
 ```
 
 ```Go
@@ -2143,7 +2088,6 @@ const EM_88K Machine = 5 /* Motorola 88000. */
 
 ```
 searchKey: elf.EM_860
-tags: [exported]
 ```
 
 ```Go
@@ -2155,7 +2099,6 @@ const EM_860 Machine = 7 /* Intel i860. */
 
 ```
 searchKey: elf.EM_MIPS
-tags: [exported]
 ```
 
 ```Go
@@ -2167,7 +2110,6 @@ const EM_MIPS Machine = 8 /* MIPS R3000 Big-Endian only. */
 
 ```
 searchKey: elf.EM_S370
-tags: [exported]
 ```
 
 ```Go
@@ -2179,7 +2121,6 @@ const EM_S370 Machine = 9 /* IBM System/370. */
 
 ```
 searchKey: elf.EM_MIPS_RS3_LE
-tags: [exported]
 ```
 
 ```Go
@@ -2191,7 +2132,6 @@ const EM_MIPS_RS3_LE Machine = 10 /* MIPS R3000 Little-Endian. */
 
 ```
 searchKey: elf.EM_PARISC
-tags: [exported]
 ```
 
 ```Go
@@ -2203,7 +2143,6 @@ const EM_PARISC Machine = 15 /* HP PA-RISC. */
 
 ```
 searchKey: elf.EM_VPP500
-tags: [exported]
 ```
 
 ```Go
@@ -2215,7 +2154,6 @@ const EM_VPP500 Machine = 17 /* Fujitsu VPP500. */
 
 ```
 searchKey: elf.EM_SPARC32PLUS
-tags: [exported]
 ```
 
 ```Go
@@ -2227,7 +2165,6 @@ const EM_SPARC32PLUS Machine = 18 /* SPARC v8plus. */
 
 ```
 searchKey: elf.EM_960
-tags: [exported]
 ```
 
 ```Go
@@ -2239,7 +2176,6 @@ const EM_960 Machine = 19 /* Intel 80960. */
 
 ```
 searchKey: elf.EM_PPC
-tags: [exported]
 ```
 
 ```Go
@@ -2251,7 +2187,6 @@ const EM_PPC Machine = 20 /* PowerPC 32-bit. */
 
 ```
 searchKey: elf.EM_PPC64
-tags: [exported]
 ```
 
 ```Go
@@ -2263,7 +2198,6 @@ const EM_PPC64 Machine = 21 /* PowerPC 64-bit. */
 
 ```
 searchKey: elf.EM_S390
-tags: [exported]
 ```
 
 ```Go
@@ -2275,7 +2209,6 @@ const EM_S390 Machine = 22 /* IBM System/390. */
 
 ```
 searchKey: elf.EM_V800
-tags: [exported]
 ```
 
 ```Go
@@ -2287,7 +2220,6 @@ const EM_V800 Machine = 36 /* NEC V800. */
 
 ```
 searchKey: elf.EM_FR20
-tags: [exported]
 ```
 
 ```Go
@@ -2299,7 +2231,6 @@ const EM_FR20 Machine = 37 /* Fujitsu FR20. */
 
 ```
 searchKey: elf.EM_RH32
-tags: [exported]
 ```
 
 ```Go
@@ -2311,7 +2242,6 @@ const EM_RH32 Machine = 38 /* TRW RH-32. */
 
 ```
 searchKey: elf.EM_RCE
-tags: [exported]
 ```
 
 ```Go
@@ -2323,7 +2253,6 @@ const EM_RCE Machine = 39 /* Motorola RCE. */
 
 ```
 searchKey: elf.EM_ARM
-tags: [exported]
 ```
 
 ```Go
@@ -2335,7 +2264,6 @@ const EM_ARM Machine = 40 /* ARM. */
 
 ```
 searchKey: elf.EM_SH
-tags: [exported]
 ```
 
 ```Go
@@ -2347,7 +2275,6 @@ const EM_SH Machine = 42 /* Hitachi SH. */
 
 ```
 searchKey: elf.EM_SPARCV9
-tags: [exported]
 ```
 
 ```Go
@@ -2359,7 +2286,6 @@ const EM_SPARCV9 Machine = 43 /* SPARC v9 64-bit. */
 
 ```
 searchKey: elf.EM_TRICORE
-tags: [exported]
 ```
 
 ```Go
@@ -2371,7 +2297,6 @@ const EM_TRICORE Machine = 44 /* Siemens TriCore embedded processor. */
 
 ```
 searchKey: elf.EM_ARC
-tags: [exported]
 ```
 
 ```Go
@@ -2383,7 +2308,6 @@ const EM_ARC Machine = 45 /* Argonaut RISC Core. */
 
 ```
 searchKey: elf.EM_H8_300
-tags: [exported]
 ```
 
 ```Go
@@ -2395,7 +2319,6 @@ const EM_H8_300 Machine = 46 /* Hitachi H8/300. */
 
 ```
 searchKey: elf.EM_H8_300H
-tags: [exported]
 ```
 
 ```Go
@@ -2407,7 +2330,6 @@ const EM_H8_300H Machine = 47 /* Hitachi H8/300H. */
 
 ```
 searchKey: elf.EM_H8S
-tags: [exported]
 ```
 
 ```Go
@@ -2419,7 +2341,6 @@ const EM_H8S Machine = 48 /* Hitachi H8S. */
 
 ```
 searchKey: elf.EM_H8_500
-tags: [exported]
 ```
 
 ```Go
@@ -2431,7 +2352,6 @@ const EM_H8_500 Machine = 49 /* Hitachi H8/500. */
 
 ```
 searchKey: elf.EM_IA_64
-tags: [exported]
 ```
 
 ```Go
@@ -2443,7 +2363,6 @@ const EM_IA_64 Machine = 50 /* Intel IA-64 Processor. */
 
 ```
 searchKey: elf.EM_MIPS_X
-tags: [exported]
 ```
 
 ```Go
@@ -2455,7 +2374,6 @@ const EM_MIPS_X Machine = 51 /* Stanford MIPS-X. */
 
 ```
 searchKey: elf.EM_COLDFIRE
-tags: [exported]
 ```
 
 ```Go
@@ -2467,7 +2385,6 @@ const EM_COLDFIRE Machine = 52 /* Motorola ColdFire. */
 
 ```
 searchKey: elf.EM_68HC12
-tags: [exported]
 ```
 
 ```Go
@@ -2479,7 +2396,6 @@ const EM_68HC12 Machine = 53 /* Motorola M68HC12. */
 
 ```
 searchKey: elf.EM_MMA
-tags: [exported]
 ```
 
 ```Go
@@ -2491,7 +2407,6 @@ const EM_MMA Machine = 54 /* Fujitsu MMA. */
 
 ```
 searchKey: elf.EM_PCP
-tags: [exported]
 ```
 
 ```Go
@@ -2503,7 +2418,6 @@ const EM_PCP Machine = 55 /* Siemens PCP. */
 
 ```
 searchKey: elf.EM_NCPU
-tags: [exported]
 ```
 
 ```Go
@@ -2515,7 +2429,6 @@ const EM_NCPU Machine = 56 /* Sony nCPU. */
 
 ```
 searchKey: elf.EM_NDR1
-tags: [exported]
 ```
 
 ```Go
@@ -2527,7 +2440,6 @@ const EM_NDR1 Machine = 57 /* Denso NDR1 microprocessor. */
 
 ```
 searchKey: elf.EM_STARCORE
-tags: [exported]
 ```
 
 ```Go
@@ -2539,7 +2451,6 @@ const EM_STARCORE Machine = 58 /* Motorola Star*Core processor. */
 
 ```
 searchKey: elf.EM_ME16
-tags: [exported]
 ```
 
 ```Go
@@ -2551,7 +2462,6 @@ const EM_ME16 Machine = 59 /* Toyota ME16 processor. */
 
 ```
 searchKey: elf.EM_ST100
-tags: [exported]
 ```
 
 ```Go
@@ -2563,7 +2473,6 @@ const EM_ST100 Machine = 60 /* STMicroelectronics ST100 processor. */
 
 ```
 searchKey: elf.EM_TINYJ
-tags: [exported]
 ```
 
 ```Go
@@ -2575,7 +2484,6 @@ const EM_TINYJ Machine = 61 /* Advanced Logic Corp. TinyJ processor. */
 
 ```
 searchKey: elf.EM_X86_64
-tags: [exported]
 ```
 
 ```Go
@@ -2587,7 +2495,6 @@ const EM_X86_64 Machine = 62 /* Advanced Micro Devices x86-64 */
 
 ```
 searchKey: elf.EM_PDSP
-tags: [exported]
 ```
 
 ```Go
@@ -2599,7 +2506,6 @@ const EM_PDSP Machine = 63 /* Sony DSP Processor */
 
 ```
 searchKey: elf.EM_PDP10
-tags: [exported]
 ```
 
 ```Go
@@ -2611,7 +2517,6 @@ const EM_PDP10 Machine = 64 /* Digital Equipment Corp. PDP-10 */
 
 ```
 searchKey: elf.EM_PDP11
-tags: [exported]
 ```
 
 ```Go
@@ -2623,7 +2528,6 @@ const EM_PDP11 Machine = 65 /* Digital Equipment Corp. PDP-11 */
 
 ```
 searchKey: elf.EM_FX66
-tags: [exported]
 ```
 
 ```Go
@@ -2635,7 +2539,6 @@ const EM_FX66 Machine = 66 /* Siemens FX66 microcontroller */
 
 ```
 searchKey: elf.EM_ST9PLUS
-tags: [exported]
 ```
 
 ```Go
@@ -2647,7 +2550,6 @@ const EM_ST9PLUS Machine = 67 /* STMicroelectronics ST9+ 8/16 bit microcontrolle
 
 ```
 searchKey: elf.EM_ST7
-tags: [exported]
 ```
 
 ```Go
@@ -2659,7 +2561,6 @@ const EM_ST7 Machine = 68 /* STMicroelectronics ST7 8-bit microcontroller */
 
 ```
 searchKey: elf.EM_68HC16
-tags: [exported]
 ```
 
 ```Go
@@ -2671,7 +2572,6 @@ const EM_68HC16 Machine = 69 /* Motorola MC68HC16 Microcontroller */
 
 ```
 searchKey: elf.EM_68HC11
-tags: [exported]
 ```
 
 ```Go
@@ -2683,7 +2583,6 @@ const EM_68HC11 Machine = 70 /* Motorola MC68HC11 Microcontroller */
 
 ```
 searchKey: elf.EM_68HC08
-tags: [exported]
 ```
 
 ```Go
@@ -2695,7 +2594,6 @@ const EM_68HC08 Machine = 71 /* Motorola MC68HC08 Microcontroller */
 
 ```
 searchKey: elf.EM_68HC05
-tags: [exported]
 ```
 
 ```Go
@@ -2707,7 +2605,6 @@ const EM_68HC05 Machine = 72 /* Motorola MC68HC05 Microcontroller */
 
 ```
 searchKey: elf.EM_SVX
-tags: [exported]
 ```
 
 ```Go
@@ -2719,7 +2616,6 @@ const EM_SVX Machine = 73 /* Silicon Graphics SVx */
 
 ```
 searchKey: elf.EM_ST19
-tags: [exported]
 ```
 
 ```Go
@@ -2731,7 +2627,6 @@ const EM_ST19 Machine = 74 /* STMicroelectronics ST19 8-bit microcontroller */
 
 ```
 searchKey: elf.EM_VAX
-tags: [exported]
 ```
 
 ```Go
@@ -2743,7 +2638,6 @@ const EM_VAX Machine = 75 /* Digital VAX */
 
 ```
 searchKey: elf.EM_CRIS
-tags: [exported]
 ```
 
 ```Go
@@ -2755,7 +2649,6 @@ const EM_CRIS Machine = 76 /* Axis Communications 32-bit embedded processor */
 
 ```
 searchKey: elf.EM_JAVELIN
-tags: [exported]
 ```
 
 ```Go
@@ -2767,7 +2660,6 @@ const EM_JAVELIN Machine = 77 /* Infineon Technologies 32-bit embedded processor
 
 ```
 searchKey: elf.EM_FIREPATH
-tags: [exported]
 ```
 
 ```Go
@@ -2779,7 +2671,6 @@ const EM_FIREPATH Machine = 78 /* Element 14 64-bit DSP Processor */
 
 ```
 searchKey: elf.EM_ZSP
-tags: [exported]
 ```
 
 ```Go
@@ -2791,7 +2682,6 @@ const EM_ZSP Machine = 79 /* LSI Logic 16-bit DSP Processor */
 
 ```
 searchKey: elf.EM_MMIX
-tags: [exported]
 ```
 
 ```Go
@@ -2803,7 +2693,6 @@ const EM_MMIX Machine = 80 /* Donald Knuth's educational 64-bit processor */
 
 ```
 searchKey: elf.EM_HUANY
-tags: [exported]
 ```
 
 ```Go
@@ -2815,7 +2704,6 @@ const EM_HUANY Machine = 81 /* Harvard University machine-independent object fil
 
 ```
 searchKey: elf.EM_PRISM
-tags: [exported]
 ```
 
 ```Go
@@ -2827,7 +2715,6 @@ const EM_PRISM Machine = 82 /* SiTera Prism */
 
 ```
 searchKey: elf.EM_AVR
-tags: [exported]
 ```
 
 ```Go
@@ -2839,7 +2726,6 @@ const EM_AVR Machine = 83 /* Atmel AVR 8-bit microcontroller */
 
 ```
 searchKey: elf.EM_FR30
-tags: [exported]
 ```
 
 ```Go
@@ -2851,7 +2737,6 @@ const EM_FR30 Machine = 84 /* Fujitsu FR30 */
 
 ```
 searchKey: elf.EM_D10V
-tags: [exported]
 ```
 
 ```Go
@@ -2863,7 +2748,6 @@ const EM_D10V Machine = 85 /* Mitsubishi D10V */
 
 ```
 searchKey: elf.EM_D30V
-tags: [exported]
 ```
 
 ```Go
@@ -2875,7 +2759,6 @@ const EM_D30V Machine = 86 /* Mitsubishi D30V */
 
 ```
 searchKey: elf.EM_V850
-tags: [exported]
 ```
 
 ```Go
@@ -2887,7 +2770,6 @@ const EM_V850 Machine = 87 /* NEC v850 */
 
 ```
 searchKey: elf.EM_M32R
-tags: [exported]
 ```
 
 ```Go
@@ -2899,7 +2781,6 @@ const EM_M32R Machine = 88 /* Mitsubishi M32R */
 
 ```
 searchKey: elf.EM_MN10300
-tags: [exported]
 ```
 
 ```Go
@@ -2911,7 +2792,6 @@ const EM_MN10300 Machine = 89 /* Matsushita MN10300 */
 
 ```
 searchKey: elf.EM_MN10200
-tags: [exported]
 ```
 
 ```Go
@@ -2923,7 +2803,6 @@ const EM_MN10200 Machine = 90 /* Matsushita MN10200 */
 
 ```
 searchKey: elf.EM_PJ
-tags: [exported]
 ```
 
 ```Go
@@ -2935,7 +2814,6 @@ const EM_PJ Machine = 91 /* picoJava */
 
 ```
 searchKey: elf.EM_OPENRISC
-tags: [exported]
 ```
 
 ```Go
@@ -2947,7 +2825,6 @@ const EM_OPENRISC Machine = 92 /* OpenRISC 32-bit embedded processor */
 
 ```
 searchKey: elf.EM_ARC_COMPACT
-tags: [exported]
 ```
 
 ```Go
@@ -2959,7 +2836,6 @@ const EM_ARC_COMPACT Machine /* ARC International ARCompact processor (old spell
 
 ```
 searchKey: elf.EM_XTENSA
-tags: [exported]
 ```
 
 ```Go
@@ -2971,7 +2847,6 @@ const EM_XTENSA Machine = 94 /* Tensilica Xtensa Architecture */
 
 ```
 searchKey: elf.EM_VIDEOCORE
-tags: [exported]
 ```
 
 ```Go
@@ -2983,7 +2858,6 @@ const EM_VIDEOCORE Machine = 95 /* Alphamosaic VideoCore processor */
 
 ```
 searchKey: elf.EM_TMM_GPP
-tags: [exported]
 ```
 
 ```Go
@@ -2995,7 +2869,6 @@ const EM_TMM_GPP Machine = 96 /* Thompson Multimedia General Purpose Processor *
 
 ```
 searchKey: elf.EM_NS32K
-tags: [exported]
 ```
 
 ```Go
@@ -3007,7 +2880,6 @@ const EM_NS32K Machine = 97 /* National Semiconductor 32000 series */
 
 ```
 searchKey: elf.EM_TPC
-tags: [exported]
 ```
 
 ```Go
@@ -3019,7 +2891,6 @@ const EM_TPC Machine = 98 /* Tenor Network TPC processor */
 
 ```
 searchKey: elf.EM_SNP1K
-tags: [exported]
 ```
 
 ```Go
@@ -3031,7 +2902,6 @@ const EM_SNP1K Machine = 99 /* Trebia SNP 1000 processor */
 
 ```
 searchKey: elf.EM_ST200
-tags: [exported]
 ```
 
 ```Go
@@ -3043,7 +2913,6 @@ const EM_ST200 Machine = 100 /* STMicroelectronics (www.st.com) ST200 microcontr
 
 ```
 searchKey: elf.EM_IP2K
-tags: [exported]
 ```
 
 ```Go
@@ -3055,7 +2924,6 @@ const EM_IP2K Machine = 101 /* Ubicom IP2xxx microcontroller family */
 
 ```
 searchKey: elf.EM_MAX
-tags: [exported]
 ```
 
 ```Go
@@ -3067,7 +2935,6 @@ const EM_MAX Machine = 102 /* MAX Processor */
 
 ```
 searchKey: elf.EM_CR
-tags: [exported]
 ```
 
 ```Go
@@ -3079,7 +2946,6 @@ const EM_CR Machine = 103 /* National Semiconductor CompactRISC microprocessor *
 
 ```
 searchKey: elf.EM_F2MC16
-tags: [exported]
 ```
 
 ```Go
@@ -3091,7 +2957,6 @@ const EM_F2MC16 Machine = 104 /* Fujitsu F2MC16 */
 
 ```
 searchKey: elf.EM_MSP430
-tags: [exported]
 ```
 
 ```Go
@@ -3103,7 +2968,6 @@ const EM_MSP430 Machine = 105 /* Texas Instruments embedded microcontroller msp4
 
 ```
 searchKey: elf.EM_BLACKFIN
-tags: [exported]
 ```
 
 ```Go
@@ -3115,7 +2979,6 @@ const EM_BLACKFIN Machine = 106 /* Analog Devices Blackfin (DSP) processor */
 
 ```
 searchKey: elf.EM_SE_C33
-tags: [exported]
 ```
 
 ```Go
@@ -3127,7 +2990,6 @@ const EM_SE_C33 Machine = 107 /* S1C33 Family of Seiko Epson processors */
 
 ```
 searchKey: elf.EM_SEP
-tags: [exported]
 ```
 
 ```Go
@@ -3139,7 +3001,6 @@ const EM_SEP Machine = 108 /* Sharp embedded microprocessor */
 
 ```
 searchKey: elf.EM_ARCA
-tags: [exported]
 ```
 
 ```Go
@@ -3151,7 +3012,6 @@ const EM_ARCA Machine = 109 /* Arca RISC Microprocessor */
 
 ```
 searchKey: elf.EM_UNICORE
-tags: [exported]
 ```
 
 ```Go
@@ -3163,7 +3023,6 @@ const EM_UNICORE Machine /* Microprocessor series from PKU-Unity Ltd. and MPRC o
 
 ```
 searchKey: elf.EM_EXCESS
-tags: [exported]
 ```
 
 ```Go
@@ -3175,7 +3034,6 @@ const EM_EXCESS Machine = 111 /* eXcess: 16/32/64-bit configurable embedded CPU 
 
 ```
 searchKey: elf.EM_DXP
-tags: [exported]
 ```
 
 ```Go
@@ -3187,7 +3045,6 @@ const EM_DXP Machine = 112 /* Icera Semiconductor Inc. Deep Execution Processor 
 
 ```
 searchKey: elf.EM_ALTERA_NIOS2
-tags: [exported]
 ```
 
 ```Go
@@ -3199,7 +3056,6 @@ const EM_ALTERA_NIOS2 Machine = 113 /* Altera Nios II soft-core processor */
 
 ```
 searchKey: elf.EM_CRX
-tags: [exported]
 ```
 
 ```Go
@@ -3211,7 +3067,6 @@ const EM_CRX Machine = 114 /* National Semiconductor CompactRISC CRX microproces
 
 ```
 searchKey: elf.EM_XGATE
-tags: [exported]
 ```
 
 ```Go
@@ -3223,7 +3078,6 @@ const EM_XGATE Machine = 115 /* Motorola XGATE embedded processor */
 
 ```
 searchKey: elf.EM_C166
-tags: [exported]
 ```
 
 ```Go
@@ -3235,7 +3089,6 @@ const EM_C166 Machine = 116 /* Infineon C16x/XC16x processor */
 
 ```
 searchKey: elf.EM_M16C
-tags: [exported]
 ```
 
 ```Go
@@ -3247,7 +3100,6 @@ const EM_M16C Machine = 117 /* Renesas M16C series microprocessors */
 
 ```
 searchKey: elf.EM_DSPIC30F
-tags: [exported]
 ```
 
 ```Go
@@ -3259,7 +3111,6 @@ const EM_DSPIC30F Machine = 118 /* Microchip Technology dsPIC30F Digital Signal 
 
 ```
 searchKey: elf.EM_CE
-tags: [exported]
 ```
 
 ```Go
@@ -3271,7 +3122,6 @@ const EM_CE Machine = 119 /* Freescale Communication Engine RISC core */
 
 ```
 searchKey: elf.EM_M32C
-tags: [exported]
 ```
 
 ```Go
@@ -3283,7 +3133,6 @@ const EM_M32C Machine = 120 /* Renesas M32C series microprocessors */
 
 ```
 searchKey: elf.EM_TSK3000
-tags: [exported]
 ```
 
 ```Go
@@ -3295,7 +3144,6 @@ const EM_TSK3000 Machine = 131 /* Altium TSK3000 core */
 
 ```
 searchKey: elf.EM_RS08
-tags: [exported]
 ```
 
 ```Go
@@ -3307,7 +3155,6 @@ const EM_RS08 Machine = 132 /* Freescale RS08 embedded processor */
 
 ```
 searchKey: elf.EM_SHARC
-tags: [exported]
 ```
 
 ```Go
@@ -3319,7 +3166,6 @@ const EM_SHARC Machine = 133 /* Analog Devices SHARC family of 32-bit DSP proces
 
 ```
 searchKey: elf.EM_ECOG2
-tags: [exported]
 ```
 
 ```Go
@@ -3331,7 +3177,6 @@ const EM_ECOG2 Machine = 134 /* Cyan Technology eCOG2 microprocessor */
 
 ```
 searchKey: elf.EM_SCORE7
-tags: [exported]
 ```
 
 ```Go
@@ -3343,7 +3188,6 @@ const EM_SCORE7 Machine = 135 /* Sunplus S+core7 RISC processor */
 
 ```
 searchKey: elf.EM_DSP24
-tags: [exported]
 ```
 
 ```Go
@@ -3355,7 +3199,6 @@ const EM_DSP24 Machine = 136 /* New Japan Radio (NJR) 24-bit DSP Processor */
 
 ```
 searchKey: elf.EM_VIDEOCORE3
-tags: [exported]
 ```
 
 ```Go
@@ -3367,7 +3210,6 @@ const EM_VIDEOCORE3 Machine = 137 /* Broadcom VideoCore III processor */
 
 ```
 searchKey: elf.EM_LATTICEMICO32
-tags: [exported]
 ```
 
 ```Go
@@ -3379,7 +3221,6 @@ const EM_LATTICEMICO32 Machine = 138 /* RISC processor for Lattice FPGA architec
 
 ```
 searchKey: elf.EM_SE_C17
-tags: [exported]
 ```
 
 ```Go
@@ -3391,7 +3232,6 @@ const EM_SE_C17 Machine = 139 /* Seiko Epson C17 family */
 
 ```
 searchKey: elf.EM_TI_C6000
-tags: [exported]
 ```
 
 ```Go
@@ -3403,7 +3243,6 @@ const EM_TI_C6000 Machine = 140 /* The Texas Instruments TMS320C6000 DSP family 
 
 ```
 searchKey: elf.EM_TI_C2000
-tags: [exported]
 ```
 
 ```Go
@@ -3415,7 +3254,6 @@ const EM_TI_C2000 Machine = 141 /* The Texas Instruments TMS320C2000 DSP family 
 
 ```
 searchKey: elf.EM_TI_C5500
-tags: [exported]
 ```
 
 ```Go
@@ -3427,7 +3265,6 @@ const EM_TI_C5500 Machine = 142 /* The Texas Instruments TMS320C55x DSP family *
 
 ```
 searchKey: elf.EM_TI_ARP32
-tags: [exported]
 ```
 
 ```Go
@@ -3439,7 +3276,6 @@ const EM_TI_ARP32 Machine /* Texas Instruments Application Specific RISC Process
 
 ```
 searchKey: elf.EM_TI_PRU
-tags: [exported]
 ```
 
 ```Go
@@ -3451,7 +3287,6 @@ const EM_TI_PRU Machine = 144 /* Texas Instruments Programmable Realtime Unit */
 
 ```
 searchKey: elf.EM_MMDSP_PLUS
-tags: [exported]
 ```
 
 ```Go
@@ -3463,7 +3298,6 @@ const EM_MMDSP_PLUS Machine = 160 /* STMicroelectronics 64bit VLIW Data Signal P
 
 ```
 searchKey: elf.EM_CYPRESS_M8C
-tags: [exported]
 ```
 
 ```Go
@@ -3475,7 +3309,6 @@ const EM_CYPRESS_M8C Machine = 161 /* Cypress M8C microprocessor */
 
 ```
 searchKey: elf.EM_R32C
-tags: [exported]
 ```
 
 ```Go
@@ -3487,7 +3320,6 @@ const EM_R32C Machine = 162 /* Renesas R32C series microprocessors */
 
 ```
 searchKey: elf.EM_TRIMEDIA
-tags: [exported]
 ```
 
 ```Go
@@ -3499,7 +3331,6 @@ const EM_TRIMEDIA Machine = 163 /* NXP Semiconductors TriMedia architecture fami
 
 ```
 searchKey: elf.EM_QDSP6
-tags: [exported]
 ```
 
 ```Go
@@ -3511,7 +3342,6 @@ const EM_QDSP6 Machine = 164 /* QUALCOMM DSP6 Processor */
 
 ```
 searchKey: elf.EM_8051
-tags: [exported]
 ```
 
 ```Go
@@ -3523,7 +3353,6 @@ const EM_8051 Machine = 165 /* Intel 8051 and variants */
 
 ```
 searchKey: elf.EM_STXP7X
-tags: [exported]
 ```
 
 ```Go
@@ -3535,7 +3364,6 @@ const EM_STXP7X Machine /* STMicroelectronics STxP7x family of configurable and 
 
 ```
 searchKey: elf.EM_NDS32
-tags: [exported]
 ```
 
 ```Go
@@ -3547,7 +3375,6 @@ const EM_NDS32 Machine /* Andes Technology compact code size embedded RISC proce
 
 ```
 searchKey: elf.EM_ECOG1
-tags: [exported]
 ```
 
 ```Go
@@ -3559,7 +3386,6 @@ const EM_ECOG1 Machine = 168 /* Cyan Technology eCOG1X family */
 
 ```
 searchKey: elf.EM_ECOG1X
-tags: [exported]
 ```
 
 ```Go
@@ -3571,7 +3397,6 @@ const EM_ECOG1X Machine = 168 /* Cyan Technology eCOG1X family */
 
 ```
 searchKey: elf.EM_MAXQ30
-tags: [exported]
 ```
 
 ```Go
@@ -3583,7 +3408,6 @@ const EM_MAXQ30 Machine = 169 /* Dallas Semiconductor MAXQ30 Core Micro-controll
 
 ```
 searchKey: elf.EM_XIMO16
-tags: [exported]
 ```
 
 ```Go
@@ -3595,7 +3419,6 @@ const EM_XIMO16 Machine = 170 /* New Japan Radio (NJR) 16-bit DSP Processor */
 
 ```
 searchKey: elf.EM_MANIK
-tags: [exported]
 ```
 
 ```Go
@@ -3607,7 +3430,6 @@ const EM_MANIK Machine = 171 /* M2000 Reconfigurable RISC Microprocessor */
 
 ```
 searchKey: elf.EM_CRAYNV2
-tags: [exported]
 ```
 
 ```Go
@@ -3619,7 +3441,6 @@ const EM_CRAYNV2 Machine = 172 /* Cray Inc. NV2 vector architecture */
 
 ```
 searchKey: elf.EM_RX
-tags: [exported]
 ```
 
 ```Go
@@ -3631,7 +3452,6 @@ const EM_RX Machine = 173 /* Renesas RX family */
 
 ```
 searchKey: elf.EM_METAG
-tags: [exported]
 ```
 
 ```Go
@@ -3643,7 +3463,6 @@ const EM_METAG Machine = 174 /* Imagination Technologies META processor architec
 
 ```
 searchKey: elf.EM_MCST_ELBRUS
-tags: [exported]
 ```
 
 ```Go
@@ -3655,7 +3474,6 @@ const EM_MCST_ELBRUS Machine = 175 /* MCST Elbrus general purpose hardware archi
 
 ```
 searchKey: elf.EM_ECOG16
-tags: [exported]
 ```
 
 ```Go
@@ -3667,7 +3485,6 @@ const EM_ECOG16 Machine = 176 /* Cyan Technology eCOG16 family */
 
 ```
 searchKey: elf.EM_CR16
-tags: [exported]
 ```
 
 ```Go
@@ -3679,7 +3496,6 @@ const EM_CR16 Machine = 177 /* National Semiconductor CompactRISC CR16 16-bit mi
 
 ```
 searchKey: elf.EM_ETPU
-tags: [exported]
 ```
 
 ```Go
@@ -3691,7 +3507,6 @@ const EM_ETPU Machine = 178 /* Freescale Extended Time Processing Unit */
 
 ```
 searchKey: elf.EM_SLE9X
-tags: [exported]
 ```
 
 ```Go
@@ -3703,7 +3518,6 @@ const EM_SLE9X Machine = 179 /* Infineon Technologies SLE9X core */
 
 ```
 searchKey: elf.EM_L10M
-tags: [exported]
 ```
 
 ```Go
@@ -3715,7 +3529,6 @@ const EM_L10M Machine = 180 /* Intel L10M */
 
 ```
 searchKey: elf.EM_K10M
-tags: [exported]
 ```
 
 ```Go
@@ -3727,7 +3540,6 @@ const EM_K10M Machine = 181 /* Intel K10M */
 
 ```
 searchKey: elf.EM_AARCH64
-tags: [exported]
 ```
 
 ```Go
@@ -3739,7 +3551,6 @@ const EM_AARCH64 Machine = 183 /* ARM 64-bit Architecture (AArch64) */
 
 ```
 searchKey: elf.EM_AVR32
-tags: [exported]
 ```
 
 ```Go
@@ -3751,7 +3562,6 @@ const EM_AVR32 Machine = 185 /* Atmel Corporation 32-bit microprocessor family *
 
 ```
 searchKey: elf.EM_STM8
-tags: [exported]
 ```
 
 ```Go
@@ -3763,7 +3573,6 @@ const EM_STM8 Machine = 186 /* STMicroeletronics STM8 8-bit microcontroller */
 
 ```
 searchKey: elf.EM_TILE64
-tags: [exported]
 ```
 
 ```Go
@@ -3775,7 +3584,6 @@ const EM_TILE64 Machine = 187 /* Tilera TILE64 multicore architecture family */
 
 ```
 searchKey: elf.EM_TILEPRO
-tags: [exported]
 ```
 
 ```Go
@@ -3787,7 +3595,6 @@ const EM_TILEPRO Machine = 188 /* Tilera TILEPro multicore architecture family *
 
 ```
 searchKey: elf.EM_MICROBLAZE
-tags: [exported]
 ```
 
 ```Go
@@ -3799,7 +3606,6 @@ const EM_MICROBLAZE Machine = 189 /* Xilinx MicroBlaze 32-bit RISC soft processo
 
 ```
 searchKey: elf.EM_CUDA
-tags: [exported]
 ```
 
 ```Go
@@ -3811,7 +3617,6 @@ const EM_CUDA Machine = 190 /* NVIDIA CUDA architecture */
 
 ```
 searchKey: elf.EM_TILEGX
-tags: [exported]
 ```
 
 ```Go
@@ -3823,7 +3628,6 @@ const EM_TILEGX Machine = 191 /* Tilera TILE-Gx multicore architecture family */
 
 ```
 searchKey: elf.EM_CLOUDSHIELD
-tags: [exported]
 ```
 
 ```Go
@@ -3835,7 +3639,6 @@ const EM_CLOUDSHIELD Machine = 192 /* CloudShield architecture family */
 
 ```
 searchKey: elf.EM_COREA_1ST
-tags: [exported]
 ```
 
 ```Go
@@ -3847,7 +3650,6 @@ const EM_COREA_1ST Machine = 193 /* KIPO-KAIST Core-A 1st generation processor f
 
 ```
 searchKey: elf.EM_COREA_2ND
-tags: [exported]
 ```
 
 ```Go
@@ -3859,7 +3661,6 @@ const EM_COREA_2ND Machine = 194 /* KIPO-KAIST Core-A 2nd generation processor f
 
 ```
 searchKey: elf.EM_ARC_COMPACT2
-tags: [exported]
 ```
 
 ```Go
@@ -3871,7 +3672,6 @@ const EM_ARC_COMPACT2 Machine = 195 /* Synopsys ARCompact V2 */
 
 ```
 searchKey: elf.EM_OPEN8
-tags: [exported]
 ```
 
 ```Go
@@ -3883,7 +3683,6 @@ const EM_OPEN8 Machine = 196 /* Open8 8-bit RISC soft processor core */
 
 ```
 searchKey: elf.EM_RL78
-tags: [exported]
 ```
 
 ```Go
@@ -3895,7 +3694,6 @@ const EM_RL78 Machine = 197 /* Renesas RL78 family */
 
 ```
 searchKey: elf.EM_VIDEOCORE5
-tags: [exported]
 ```
 
 ```Go
@@ -3907,7 +3705,6 @@ const EM_VIDEOCORE5 Machine = 198 /* Broadcom VideoCore V processor */
 
 ```
 searchKey: elf.EM_78KOR
-tags: [exported]
 ```
 
 ```Go
@@ -3919,7 +3716,6 @@ const EM_78KOR Machine = 199 /* Renesas 78KOR family */
 
 ```
 searchKey: elf.EM_56800EX
-tags: [exported]
 ```
 
 ```Go
@@ -3931,7 +3727,6 @@ const EM_56800EX Machine = 200 /* Freescale 56800EX Digital Signal Controller (D
 
 ```
 searchKey: elf.EM_BA1
-tags: [exported]
 ```
 
 ```Go
@@ -3943,7 +3738,6 @@ const EM_BA1 Machine = 201 /* Beyond BA1 CPU architecture */
 
 ```
 searchKey: elf.EM_BA2
-tags: [exported]
 ```
 
 ```Go
@@ -3955,7 +3749,6 @@ const EM_BA2 Machine = 202 /* Beyond BA2 CPU architecture */
 
 ```
 searchKey: elf.EM_XCORE
-tags: [exported]
 ```
 
 ```Go
@@ -3967,7 +3760,6 @@ const EM_XCORE Machine = 203 /* XMOS xCORE processor family */
 
 ```
 searchKey: elf.EM_MCHP_PIC
-tags: [exported]
 ```
 
 ```Go
@@ -3979,7 +3771,6 @@ const EM_MCHP_PIC Machine = 204 /* Microchip 8-bit PIC(r) family */
 
 ```
 searchKey: elf.EM_INTEL205
-tags: [exported]
 ```
 
 ```Go
@@ -3991,7 +3782,6 @@ const EM_INTEL205 Machine = 205 /* Reserved by Intel */
 
 ```
 searchKey: elf.EM_INTEL206
-tags: [exported]
 ```
 
 ```Go
@@ -4003,7 +3793,6 @@ const EM_INTEL206 Machine = 206 /* Reserved by Intel */
 
 ```
 searchKey: elf.EM_INTEL207
-tags: [exported]
 ```
 
 ```Go
@@ -4015,7 +3804,6 @@ const EM_INTEL207 Machine = 207 /* Reserved by Intel */
 
 ```
 searchKey: elf.EM_INTEL208
-tags: [exported]
 ```
 
 ```Go
@@ -4027,7 +3815,6 @@ const EM_INTEL208 Machine = 208 /* Reserved by Intel */
 
 ```
 searchKey: elf.EM_INTEL209
-tags: [exported]
 ```
 
 ```Go
@@ -4039,7 +3826,6 @@ const EM_INTEL209 Machine = 209 /* Reserved by Intel */
 
 ```
 searchKey: elf.EM_KM32
-tags: [exported]
 ```
 
 ```Go
@@ -4051,7 +3837,6 @@ const EM_KM32 Machine = 210 /* KM211 KM32 32-bit processor */
 
 ```
 searchKey: elf.EM_KMX32
-tags: [exported]
 ```
 
 ```Go
@@ -4063,7 +3848,6 @@ const EM_KMX32 Machine = 211 /* KM211 KMX32 32-bit processor */
 
 ```
 searchKey: elf.EM_KMX16
-tags: [exported]
 ```
 
 ```Go
@@ -4075,7 +3859,6 @@ const EM_KMX16 Machine = 212 /* KM211 KMX16 16-bit processor */
 
 ```
 searchKey: elf.EM_KMX8
-tags: [exported]
 ```
 
 ```Go
@@ -4087,7 +3870,6 @@ const EM_KMX8 Machine = 213 /* KM211 KMX8 8-bit processor */
 
 ```
 searchKey: elf.EM_KVARC
-tags: [exported]
 ```
 
 ```Go
@@ -4099,7 +3881,6 @@ const EM_KVARC Machine = 214 /* KM211 KVARC processor */
 
 ```
 searchKey: elf.EM_CDP
-tags: [exported]
 ```
 
 ```Go
@@ -4111,7 +3892,6 @@ const EM_CDP Machine = 215 /* Paneve CDP architecture family */
 
 ```
 searchKey: elf.EM_COGE
-tags: [exported]
 ```
 
 ```Go
@@ -4123,7 +3903,6 @@ const EM_COGE Machine = 216 /* Cognitive Smart Memory Processor */
 
 ```
 searchKey: elf.EM_COOL
-tags: [exported]
 ```
 
 ```Go
@@ -4135,7 +3914,6 @@ const EM_COOL Machine = 217 /* Bluechip Systems CoolEngine */
 
 ```
 searchKey: elf.EM_NORC
-tags: [exported]
 ```
 
 ```Go
@@ -4147,7 +3925,6 @@ const EM_NORC Machine = 218 /* Nanoradio Optimized RISC */
 
 ```
 searchKey: elf.EM_CSR_KALIMBA
-tags: [exported]
 ```
 
 ```Go
@@ -4159,7 +3936,6 @@ const EM_CSR_KALIMBA Machine = 219 /* CSR Kalimba architecture family */
 
 ```
 searchKey: elf.EM_Z80
-tags: [exported]
 ```
 
 ```Go
@@ -4171,7 +3947,6 @@ const EM_Z80 Machine = 220 /* Zilog Z80 */
 
 ```
 searchKey: elf.EM_VISIUM
-tags: [exported]
 ```
 
 ```Go
@@ -4183,7 +3958,6 @@ const EM_VISIUM Machine = 221 /* Controls and Data Services VISIUMcore processor
 
 ```
 searchKey: elf.EM_FT32
-tags: [exported]
 ```
 
 ```Go
@@ -4195,7 +3969,6 @@ const EM_FT32 Machine = 222 /* FTDI Chip FT32 high performance 32-bit RISC archi
 
 ```
 searchKey: elf.EM_MOXIE
-tags: [exported]
 ```
 
 ```Go
@@ -4207,7 +3980,6 @@ const EM_MOXIE Machine = 223 /* Moxie processor family */
 
 ```
 searchKey: elf.EM_AMDGPU
-tags: [exported]
 ```
 
 ```Go
@@ -4219,7 +3991,6 @@ const EM_AMDGPU Machine = 224 /* AMD GPU architecture */
 
 ```
 searchKey: elf.EM_RISCV
-tags: [exported]
 ```
 
 ```Go
@@ -4231,7 +4002,6 @@ const EM_RISCV Machine = 243 /* RISC-V */
 
 ```
 searchKey: elf.EM_LANAI
-tags: [exported]
 ```
 
 ```Go
@@ -4243,7 +4013,6 @@ const EM_LANAI Machine = 244 /* Lanai 32-bit processor */
 
 ```
 searchKey: elf.EM_BPF
-tags: [exported]
 ```
 
 ```Go
@@ -4255,7 +4024,6 @@ const EM_BPF Machine = 247 /* Linux BPF – in-kernel virtual machine */
 
 ```
 searchKey: elf.EM_486
-tags: [exported]
 ```
 
 ```Go
@@ -4269,7 +4037,6 @@ Non-standard or deprecated.
 
 ```
 searchKey: elf.EM_MIPS_RS4_BE
-tags: [exported]
 ```
 
 ```Go
@@ -4281,7 +4048,6 @@ const EM_MIPS_RS4_BE Machine = 10 /* MIPS R4000 Big-Endian */
 
 ```
 searchKey: elf.EM_ALPHA_STD
-tags: [exported]
 ```
 
 ```Go
@@ -4293,7 +4059,6 @@ const EM_ALPHA_STD Machine = 41 /* Digital Alpha (standard value). */
 
 ```
 searchKey: elf.EM_ALPHA
-tags: [exported]
 ```
 
 ```Go
@@ -4305,7 +4070,6 @@ const EM_ALPHA Machine = 0x9026 /* Alpha (written in the absence of an ABI) */
 
 ```
 searchKey: elf.SHN_UNDEF
-tags: [exported]
 ```
 
 ```Go
@@ -4317,7 +4081,6 @@ const SHN_UNDEF SectionIndex = 0 /* Undefined, missing, irrelevant. */
 
 ```
 searchKey: elf.SHN_LORESERVE
-tags: [exported]
 ```
 
 ```Go
@@ -4329,7 +4092,6 @@ const SHN_LORESERVE SectionIndex = 0xff00 /* First of reserved range. */
 
 ```
 searchKey: elf.SHN_LOPROC
-tags: [exported]
 ```
 
 ```Go
@@ -4341,7 +4103,6 @@ const SHN_LOPROC SectionIndex = 0xff00 /* First processor-specific. */
 
 ```
 searchKey: elf.SHN_HIPROC
-tags: [exported]
 ```
 
 ```Go
@@ -4353,7 +4114,6 @@ const SHN_HIPROC SectionIndex = 0xff1f /* Last processor-specific. */
 
 ```
 searchKey: elf.SHN_LOOS
-tags: [exported]
 ```
 
 ```Go
@@ -4365,7 +4125,6 @@ const SHN_LOOS SectionIndex = 0xff20 /* First operating system-specific. */
 
 ```
 searchKey: elf.SHN_HIOS
-tags: [exported]
 ```
 
 ```Go
@@ -4377,7 +4136,6 @@ const SHN_HIOS SectionIndex = 0xff3f /* Last operating system-specific. */
 
 ```
 searchKey: elf.SHN_ABS
-tags: [exported]
 ```
 
 ```Go
@@ -4389,7 +4147,6 @@ const SHN_ABS SectionIndex = 0xfff1 /* Absolute values. */
 
 ```
 searchKey: elf.SHN_COMMON
-tags: [exported]
 ```
 
 ```Go
@@ -4401,7 +4158,6 @@ const SHN_COMMON SectionIndex = 0xfff2 /* Common data. */
 
 ```
 searchKey: elf.SHN_XINDEX
-tags: [exported]
 ```
 
 ```Go
@@ -4413,7 +4169,6 @@ const SHN_XINDEX SectionIndex = 0xffff /* Escape; index stored elsewhere. */
 
 ```
 searchKey: elf.SHN_HIRESERVE
-tags: [exported]
 ```
 
 ```Go
@@ -4425,7 +4180,6 @@ const SHN_HIRESERVE SectionIndex = 0xffff /* Last of reserved range. */
 
 ```
 searchKey: elf.SHT_NULL
-tags: [exported]
 ```
 
 ```Go
@@ -4437,7 +4191,6 @@ const SHT_NULL SectionType = 0 /* inactive */
 
 ```
 searchKey: elf.SHT_PROGBITS
-tags: [exported]
 ```
 
 ```Go
@@ -4449,7 +4202,6 @@ const SHT_PROGBITS SectionType = 1 /* program defined information */
 
 ```
 searchKey: elf.SHT_SYMTAB
-tags: [exported]
 ```
 
 ```Go
@@ -4461,7 +4213,6 @@ const SHT_SYMTAB SectionType = 2 /* symbol table section */
 
 ```
 searchKey: elf.SHT_STRTAB
-tags: [exported]
 ```
 
 ```Go
@@ -4473,7 +4224,6 @@ const SHT_STRTAB SectionType = 3 /* string table section */
 
 ```
 searchKey: elf.SHT_RELA
-tags: [exported]
 ```
 
 ```Go
@@ -4485,7 +4235,6 @@ const SHT_RELA SectionType = 4 /* relocation section with addends */
 
 ```
 searchKey: elf.SHT_HASH
-tags: [exported]
 ```
 
 ```Go
@@ -4497,7 +4246,6 @@ const SHT_HASH SectionType = 5 /* symbol hash table section */
 
 ```
 searchKey: elf.SHT_DYNAMIC
-tags: [exported]
 ```
 
 ```Go
@@ -4509,7 +4257,6 @@ const SHT_DYNAMIC SectionType = 6 /* dynamic section */
 
 ```
 searchKey: elf.SHT_NOTE
-tags: [exported]
 ```
 
 ```Go
@@ -4521,7 +4268,6 @@ const SHT_NOTE SectionType = 7 /* note section */
 
 ```
 searchKey: elf.SHT_NOBITS
-tags: [exported]
 ```
 
 ```Go
@@ -4533,7 +4279,6 @@ const SHT_NOBITS SectionType = 8 /* no space section */
 
 ```
 searchKey: elf.SHT_REL
-tags: [exported]
 ```
 
 ```Go
@@ -4545,7 +4290,6 @@ const SHT_REL SectionType = 9 /* relocation section - no addends */
 
 ```
 searchKey: elf.SHT_SHLIB
-tags: [exported]
 ```
 
 ```Go
@@ -4557,7 +4301,6 @@ const SHT_SHLIB SectionType = 10 /* reserved - purpose unknown */
 
 ```
 searchKey: elf.SHT_DYNSYM
-tags: [exported]
 ```
 
 ```Go
@@ -4569,7 +4312,6 @@ const SHT_DYNSYM SectionType = 11 /* dynamic symbol table section */
 
 ```
 searchKey: elf.SHT_INIT_ARRAY
-tags: [exported]
 ```
 
 ```Go
@@ -4581,7 +4323,6 @@ const SHT_INIT_ARRAY SectionType = 14 /* Initialization function pointers. */
 
 ```
 searchKey: elf.SHT_FINI_ARRAY
-tags: [exported]
 ```
 
 ```Go
@@ -4593,7 +4334,6 @@ const SHT_FINI_ARRAY SectionType = 15 /* Termination function pointers. */
 
 ```
 searchKey: elf.SHT_PREINIT_ARRAY
-tags: [exported]
 ```
 
 ```Go
@@ -4605,7 +4345,6 @@ const SHT_PREINIT_ARRAY SectionType = 16 /* Pre-initialization function ptrs. */
 
 ```
 searchKey: elf.SHT_GROUP
-tags: [exported]
 ```
 
 ```Go
@@ -4617,7 +4356,6 @@ const SHT_GROUP SectionType = 17 /* Section group. */
 
 ```
 searchKey: elf.SHT_SYMTAB_SHNDX
-tags: [exported]
 ```
 
 ```Go
@@ -4629,7 +4367,6 @@ const SHT_SYMTAB_SHNDX SectionType = 18 /* Section indexes (see SHN_XINDEX). */
 
 ```
 searchKey: elf.SHT_LOOS
-tags: [exported]
 ```
 
 ```Go
@@ -4641,7 +4378,6 @@ const SHT_LOOS SectionType = 0x60000000 /* First of OS specific semantics */
 
 ```
 searchKey: elf.SHT_GNU_ATTRIBUTES
-tags: [exported]
 ```
 
 ```Go
@@ -4653,7 +4389,6 @@ const SHT_GNU_ATTRIBUTES SectionType = 0x6ffffff5 /* GNU object attributes */
 
 ```
 searchKey: elf.SHT_GNU_HASH
-tags: [exported]
 ```
 
 ```Go
@@ -4665,7 +4400,6 @@ const SHT_GNU_HASH SectionType = 0x6ffffff6 /* GNU hash table */
 
 ```
 searchKey: elf.SHT_GNU_LIBLIST
-tags: [exported]
 ```
 
 ```Go
@@ -4677,7 +4411,6 @@ const SHT_GNU_LIBLIST SectionType = 0x6ffffff7 /* GNU prelink library list */
 
 ```
 searchKey: elf.SHT_GNU_VERDEF
-tags: [exported]
 ```
 
 ```Go
@@ -4689,7 +4422,6 @@ const SHT_GNU_VERDEF SectionType = 0x6ffffffd /* GNU version definition section 
 
 ```
 searchKey: elf.SHT_GNU_VERNEED
-tags: [exported]
 ```
 
 ```Go
@@ -4701,7 +4433,6 @@ const SHT_GNU_VERNEED SectionType = 0x6ffffffe /* GNU version needs section */
 
 ```
 searchKey: elf.SHT_GNU_VERSYM
-tags: [exported]
 ```
 
 ```Go
@@ -4713,7 +4444,6 @@ const SHT_GNU_VERSYM SectionType = 0x6fffffff /* GNU version symbol table */
 
 ```
 searchKey: elf.SHT_HIOS
-tags: [exported]
 ```
 
 ```Go
@@ -4725,7 +4455,6 @@ const SHT_HIOS SectionType = 0x6fffffff /* Last of OS specific semantics */
 
 ```
 searchKey: elf.SHT_LOPROC
-tags: [exported]
 ```
 
 ```Go
@@ -4737,7 +4466,6 @@ const SHT_LOPROC SectionType = 0x70000000 /* reserved range for processor */
 
 ```
 searchKey: elf.SHT_MIPS_ABIFLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -4749,7 +4477,6 @@ const SHT_MIPS_ABIFLAGS SectionType = 0x7000002a /* .MIPS.abiflags */
 
 ```
 searchKey: elf.SHT_HIPROC
-tags: [exported]
 ```
 
 ```Go
@@ -4761,7 +4488,6 @@ const SHT_HIPROC SectionType = 0x7fffffff /* specific section header types */
 
 ```
 searchKey: elf.SHT_LOUSER
-tags: [exported]
 ```
 
 ```Go
@@ -4773,7 +4499,6 @@ const SHT_LOUSER SectionType = 0x80000000 /* reserved range for application */
 
 ```
 searchKey: elf.SHT_HIUSER
-tags: [exported]
 ```
 
 ```Go
@@ -4785,7 +4510,6 @@ const SHT_HIUSER SectionType = 0xffffffff /* specific indexes */
 
 ```
 searchKey: elf.SHF_WRITE
-tags: [exported]
 ```
 
 ```Go
@@ -4797,7 +4521,6 @@ const SHF_WRITE SectionFlag = 0x1 /* Section contains writable data. */
 
 ```
 searchKey: elf.SHF_ALLOC
-tags: [exported]
 ```
 
 ```Go
@@ -4809,7 +4532,6 @@ const SHF_ALLOC SectionFlag = 0x2 /* Section occupies memory. */
 
 ```
 searchKey: elf.SHF_EXECINSTR
-tags: [exported]
 ```
 
 ```Go
@@ -4821,7 +4543,6 @@ const SHF_EXECINSTR SectionFlag = 0x4 /* Section contains instructions. */
 
 ```
 searchKey: elf.SHF_MERGE
-tags: [exported]
 ```
 
 ```Go
@@ -4833,7 +4554,6 @@ const SHF_MERGE SectionFlag = 0x10 /* Section may be merged. */
 
 ```
 searchKey: elf.SHF_STRINGS
-tags: [exported]
 ```
 
 ```Go
@@ -4845,7 +4565,6 @@ const SHF_STRINGS SectionFlag = 0x20 /* Section contains strings. */
 
 ```
 searchKey: elf.SHF_INFO_LINK
-tags: [exported]
 ```
 
 ```Go
@@ -4857,7 +4576,6 @@ const SHF_INFO_LINK SectionFlag = 0x40 /* sh_info holds section index. */
 
 ```
 searchKey: elf.SHF_LINK_ORDER
-tags: [exported]
 ```
 
 ```Go
@@ -4869,7 +4587,6 @@ const SHF_LINK_ORDER SectionFlag = 0x80 /* Special ordering requirements. */
 
 ```
 searchKey: elf.SHF_OS_NONCONFORMING
-tags: [exported]
 ```
 
 ```Go
@@ -4881,7 +4598,6 @@ const SHF_OS_NONCONFORMING SectionFlag = 0x100 /* OS-specific processing require
 
 ```
 searchKey: elf.SHF_GROUP
-tags: [exported]
 ```
 
 ```Go
@@ -4893,7 +4609,6 @@ const SHF_GROUP SectionFlag = 0x200 /* Member of section group. */
 
 ```
 searchKey: elf.SHF_TLS
-tags: [exported]
 ```
 
 ```Go
@@ -4905,7 +4620,6 @@ const SHF_TLS SectionFlag = 0x400 /* Section contains TLS data. */
 
 ```
 searchKey: elf.SHF_COMPRESSED
-tags: [exported]
 ```
 
 ```Go
@@ -4917,7 +4631,6 @@ const SHF_COMPRESSED SectionFlag = 0x800 /* Section is compressed. */
 
 ```
 searchKey: elf.SHF_MASKOS
-tags: [exported]
 ```
 
 ```Go
@@ -4929,7 +4642,6 @@ const SHF_MASKOS SectionFlag = 0x0ff00000 /* OS-specific semantics. */
 
 ```
 searchKey: elf.SHF_MASKPROC
-tags: [exported]
 ```
 
 ```Go
@@ -4941,7 +4653,6 @@ const SHF_MASKPROC SectionFlag = 0xf0000000 /* Processor-specific semantics. */
 
 ```
 searchKey: elf.COMPRESS_ZLIB
-tags: [exported]
 ```
 
 ```Go
@@ -4953,7 +4664,6 @@ const COMPRESS_ZLIB CompressionType = 1 /* ZLIB compression. */
 
 ```
 searchKey: elf.COMPRESS_LOOS
-tags: [exported]
 ```
 
 ```Go
@@ -4965,7 +4675,6 @@ const COMPRESS_LOOS CompressionType = 0x60000000 /* First OS-specific. */
 
 ```
 searchKey: elf.COMPRESS_HIOS
-tags: [exported]
 ```
 
 ```Go
@@ -4977,7 +4686,6 @@ const COMPRESS_HIOS CompressionType = 0x6fffffff /* Last OS-specific. */
 
 ```
 searchKey: elf.COMPRESS_LOPROC
-tags: [exported]
 ```
 
 ```Go
@@ -4989,7 +4697,6 @@ const COMPRESS_LOPROC CompressionType = 0x70000000 /* First processor-specific t
 
 ```
 searchKey: elf.COMPRESS_HIPROC
-tags: [exported]
 ```
 
 ```Go
@@ -5001,7 +4708,6 @@ const COMPRESS_HIPROC CompressionType = 0x7fffffff /* Last processor-specific ty
 
 ```
 searchKey: elf.PT_NULL
-tags: [exported]
 ```
 
 ```Go
@@ -5013,7 +4719,6 @@ const PT_NULL ProgType = 0 /* Unused entry. */
 
 ```
 searchKey: elf.PT_LOAD
-tags: [exported]
 ```
 
 ```Go
@@ -5025,7 +4730,6 @@ const PT_LOAD ProgType = 1 /* Loadable segment. */
 
 ```
 searchKey: elf.PT_DYNAMIC
-tags: [exported]
 ```
 
 ```Go
@@ -5037,7 +4741,6 @@ const PT_DYNAMIC ProgType = 2 /* Dynamic linking information segment. */
 
 ```
 searchKey: elf.PT_INTERP
-tags: [exported]
 ```
 
 ```Go
@@ -5049,7 +4752,6 @@ const PT_INTERP ProgType = 3 /* Pathname of interpreter. */
 
 ```
 searchKey: elf.PT_NOTE
-tags: [exported]
 ```
 
 ```Go
@@ -5061,7 +4763,6 @@ const PT_NOTE ProgType = 4 /* Auxiliary information. */
 
 ```
 searchKey: elf.PT_SHLIB
-tags: [exported]
 ```
 
 ```Go
@@ -5073,7 +4774,6 @@ const PT_SHLIB ProgType = 5 /* Reserved (not used). */
 
 ```
 searchKey: elf.PT_PHDR
-tags: [exported]
 ```
 
 ```Go
@@ -5085,7 +4785,6 @@ const PT_PHDR ProgType = 6 /* Location of program header itself. */
 
 ```
 searchKey: elf.PT_TLS
-tags: [exported]
 ```
 
 ```Go
@@ -5097,7 +4796,6 @@ const PT_TLS ProgType = 7 /* Thread local storage segment */
 
 ```
 searchKey: elf.PT_LOOS
-tags: [exported]
 ```
 
 ```Go
@@ -5109,7 +4807,6 @@ const PT_LOOS ProgType = 0x60000000 /* First OS-specific. */
 
 ```
 searchKey: elf.PT_GNU_EH_FRAME
-tags: [exported]
 ```
 
 ```Go
@@ -5121,7 +4818,6 @@ const PT_GNU_EH_FRAME ProgType = 0x6474e550 /* Frame unwind information */
 
 ```
 searchKey: elf.PT_GNU_STACK
-tags: [exported]
 ```
 
 ```Go
@@ -5133,7 +4829,6 @@ const PT_GNU_STACK ProgType = 0x6474e551 /* Stack flags */
 
 ```
 searchKey: elf.PT_GNU_RELRO
-tags: [exported]
 ```
 
 ```Go
@@ -5145,7 +4840,6 @@ const PT_GNU_RELRO ProgType = 0x6474e552 /* Read only after relocs */
 
 ```
 searchKey: elf.PT_GNU_PROPERTY
-tags: [exported]
 ```
 
 ```Go
@@ -5157,7 +4851,6 @@ const PT_GNU_PROPERTY ProgType = 0x6474e553 /* GNU property */
 
 ```
 searchKey: elf.PT_GNU_MBIND_LO
-tags: [exported]
 ```
 
 ```Go
@@ -5169,7 +4862,6 @@ const PT_GNU_MBIND_LO ProgType = 0x6474e555 /* Mbind segments start */
 
 ```
 searchKey: elf.PT_GNU_MBIND_HI
-tags: [exported]
 ```
 
 ```Go
@@ -5181,7 +4873,6 @@ const PT_GNU_MBIND_HI ProgType = 0x6474f554 /* Mbind segments finish */
 
 ```
 searchKey: elf.PT_PAX_FLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -5193,7 +4884,6 @@ const PT_PAX_FLAGS ProgType = 0x65041580 /* PAX flags */
 
 ```
 searchKey: elf.PT_OPENBSD_RANDOMIZE
-tags: [exported]
 ```
 
 ```Go
@@ -5205,7 +4895,6 @@ const PT_OPENBSD_RANDOMIZE ProgType = 0x65a3dbe6 /* Random data */
 
 ```
 searchKey: elf.PT_OPENBSD_WXNEEDED
-tags: [exported]
 ```
 
 ```Go
@@ -5217,7 +4906,6 @@ const PT_OPENBSD_WXNEEDED ProgType = 0x65a3dbe7 /* W^X violations */
 
 ```
 searchKey: elf.PT_OPENBSD_BOOTDATA
-tags: [exported]
 ```
 
 ```Go
@@ -5229,7 +4917,6 @@ const PT_OPENBSD_BOOTDATA ProgType = 0x65a41be6 /* Boot arguments */
 
 ```
 searchKey: elf.PT_SUNW_EH_FRAME
-tags: [exported]
 ```
 
 ```Go
@@ -5241,7 +4928,6 @@ const PT_SUNW_EH_FRAME ProgType = 0x6474e550 /* Frame unwind information */
 
 ```
 searchKey: elf.PT_SUNWSTACK
-tags: [exported]
 ```
 
 ```Go
@@ -5253,7 +4939,6 @@ const PT_SUNWSTACK ProgType = 0x6ffffffb /* Stack segment */
 
 ```
 searchKey: elf.PT_HIOS
-tags: [exported]
 ```
 
 ```Go
@@ -5265,7 +4950,6 @@ const PT_HIOS ProgType = 0x6fffffff /* Last OS-specific. */
 
 ```
 searchKey: elf.PT_LOPROC
-tags: [exported]
 ```
 
 ```Go
@@ -5277,7 +4961,6 @@ const PT_LOPROC ProgType = 0x70000000 /* First processor-specific type. */
 
 ```
 searchKey: elf.PT_ARM_ARCHEXT
-tags: [exported]
 ```
 
 ```Go
@@ -5289,7 +4972,6 @@ const PT_ARM_ARCHEXT ProgType = 0x70000000 /* Architecture compatibility */
 
 ```
 searchKey: elf.PT_ARM_EXIDX
-tags: [exported]
 ```
 
 ```Go
@@ -5301,7 +4983,6 @@ const PT_ARM_EXIDX ProgType = 0x70000001 /* Exception unwind tables */
 
 ```
 searchKey: elf.PT_AARCH64_ARCHEXT
-tags: [exported]
 ```
 
 ```Go
@@ -5313,7 +4994,6 @@ const PT_AARCH64_ARCHEXT ProgType = 0x70000000 /* Architecture compatibility */
 
 ```
 searchKey: elf.PT_AARCH64_UNWIND
-tags: [exported]
 ```
 
 ```Go
@@ -5325,7 +5005,6 @@ const PT_AARCH64_UNWIND ProgType = 0x70000001 /* Exception unwind tables */
 
 ```
 searchKey: elf.PT_MIPS_REGINFO
-tags: [exported]
 ```
 
 ```Go
@@ -5337,7 +5016,6 @@ const PT_MIPS_REGINFO ProgType = 0x70000000 /* Register usage */
 
 ```
 searchKey: elf.PT_MIPS_RTPROC
-tags: [exported]
 ```
 
 ```Go
@@ -5349,7 +5027,6 @@ const PT_MIPS_RTPROC ProgType = 0x70000001 /* Runtime procedures */
 
 ```
 searchKey: elf.PT_MIPS_OPTIONS
-tags: [exported]
 ```
 
 ```Go
@@ -5361,7 +5038,6 @@ const PT_MIPS_OPTIONS ProgType = 0x70000002 /* Options */
 
 ```
 searchKey: elf.PT_MIPS_ABIFLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -5373,7 +5049,6 @@ const PT_MIPS_ABIFLAGS ProgType = 0x70000003 /* ABI flags */
 
 ```
 searchKey: elf.PT_S390_PGSTE
-tags: [exported]
 ```
 
 ```Go
@@ -5385,7 +5060,6 @@ const PT_S390_PGSTE ProgType = 0x70000000 /* 4k page table size */
 
 ```
 searchKey: elf.PT_HIPROC
-tags: [exported]
 ```
 
 ```Go
@@ -5397,7 +5071,6 @@ const PT_HIPROC ProgType = 0x7fffffff /* Last processor-specific type. */
 
 ```
 searchKey: elf.PF_X
-tags: [exported]
 ```
 
 ```Go
@@ -5409,7 +5082,6 @@ const PF_X ProgFlag = 0x1 /* Executable. */
 
 ```
 searchKey: elf.PF_W
-tags: [exported]
 ```
 
 ```Go
@@ -5421,7 +5093,6 @@ const PF_W ProgFlag = 0x2 /* Writable. */
 
 ```
 searchKey: elf.PF_R
-tags: [exported]
 ```
 
 ```Go
@@ -5433,7 +5104,6 @@ const PF_R ProgFlag = 0x4 /* Readable. */
 
 ```
 searchKey: elf.PF_MASKOS
-tags: [exported]
 ```
 
 ```Go
@@ -5445,7 +5115,6 @@ const PF_MASKOS ProgFlag = 0x0ff00000 /* Operating system-specific. */
 
 ```
 searchKey: elf.PF_MASKPROC
-tags: [exported]
 ```
 
 ```Go
@@ -5457,7 +5126,6 @@ const PF_MASKPROC ProgFlag = 0xf0000000 /* Processor-specific. */
 
 ```
 searchKey: elf.DT_NULL
-tags: [exported]
 ```
 
 ```Go
@@ -5469,7 +5137,6 @@ const DT_NULL DynTag = 0 /* Terminating entry. */
 
 ```
 searchKey: elf.DT_NEEDED
-tags: [exported]
 ```
 
 ```Go
@@ -5481,7 +5148,6 @@ const DT_NEEDED DynTag = 1 /* String table offset of a needed shared library. */
 
 ```
 searchKey: elf.DT_PLTRELSZ
-tags: [exported]
 ```
 
 ```Go
@@ -5493,7 +5159,6 @@ const DT_PLTRELSZ DynTag = 2 /* Total size in bytes of PLT relocations. */
 
 ```
 searchKey: elf.DT_PLTGOT
-tags: [exported]
 ```
 
 ```Go
@@ -5505,7 +5170,6 @@ const DT_PLTGOT DynTag = 3 /* Processor-dependent address. */
 
 ```
 searchKey: elf.DT_HASH
-tags: [exported]
 ```
 
 ```Go
@@ -5517,7 +5181,6 @@ const DT_HASH DynTag = 4 /* Address of symbol hash table. */
 
 ```
 searchKey: elf.DT_STRTAB
-tags: [exported]
 ```
 
 ```Go
@@ -5529,7 +5192,6 @@ const DT_STRTAB DynTag = 5 /* Address of string table. */
 
 ```
 searchKey: elf.DT_SYMTAB
-tags: [exported]
 ```
 
 ```Go
@@ -5541,7 +5203,6 @@ const DT_SYMTAB DynTag = 6 /* Address of symbol table. */
 
 ```
 searchKey: elf.DT_RELA
-tags: [exported]
 ```
 
 ```Go
@@ -5553,7 +5214,6 @@ const DT_RELA DynTag = 7 /* Address of ElfNN_Rela relocations. */
 
 ```
 searchKey: elf.DT_RELASZ
-tags: [exported]
 ```
 
 ```Go
@@ -5565,7 +5225,6 @@ const DT_RELASZ DynTag = 8 /* Total size of ElfNN_Rela relocations. */
 
 ```
 searchKey: elf.DT_RELAENT
-tags: [exported]
 ```
 
 ```Go
@@ -5577,7 +5236,6 @@ const DT_RELAENT DynTag = 9 /* Size of each ElfNN_Rela relocation entry. */
 
 ```
 searchKey: elf.DT_STRSZ
-tags: [exported]
 ```
 
 ```Go
@@ -5589,7 +5247,6 @@ const DT_STRSZ DynTag = 10 /* Size of string table. */
 
 ```
 searchKey: elf.DT_SYMENT
-tags: [exported]
 ```
 
 ```Go
@@ -5601,7 +5258,6 @@ const DT_SYMENT DynTag = 11 /* Size of each symbol table entry. */
 
 ```
 searchKey: elf.DT_INIT
-tags: [exported]
 ```
 
 ```Go
@@ -5613,7 +5269,6 @@ const DT_INIT DynTag = 12 /* Address of initialization function. */
 
 ```
 searchKey: elf.DT_FINI
-tags: [exported]
 ```
 
 ```Go
@@ -5625,7 +5280,6 @@ const DT_FINI DynTag = 13 /* Address of finalization function. */
 
 ```
 searchKey: elf.DT_SONAME
-tags: [exported]
 ```
 
 ```Go
@@ -5637,7 +5291,6 @@ const DT_SONAME DynTag = 14 /* String table offset of shared object name. */
 
 ```
 searchKey: elf.DT_RPATH
-tags: [exported]
 ```
 
 ```Go
@@ -5649,7 +5302,6 @@ const DT_RPATH DynTag = 15 /* String table offset of library path. [sup] */
 
 ```
 searchKey: elf.DT_SYMBOLIC
-tags: [exported]
 ```
 
 ```Go
@@ -5661,7 +5313,6 @@ const DT_SYMBOLIC DynTag = 16 /* Indicates "symbolic" linking. [sup] */
 
 ```
 searchKey: elf.DT_REL
-tags: [exported]
 ```
 
 ```Go
@@ -5673,7 +5324,6 @@ const DT_REL DynTag = 17 /* Address of ElfNN_Rel relocations. */
 
 ```
 searchKey: elf.DT_RELSZ
-tags: [exported]
 ```
 
 ```Go
@@ -5685,7 +5335,6 @@ const DT_RELSZ DynTag = 18 /* Total size of ElfNN_Rel relocations. */
 
 ```
 searchKey: elf.DT_RELENT
-tags: [exported]
 ```
 
 ```Go
@@ -5697,7 +5346,6 @@ const DT_RELENT DynTag = 19 /* Size of each ElfNN_Rel relocation. */
 
 ```
 searchKey: elf.DT_PLTREL
-tags: [exported]
 ```
 
 ```Go
@@ -5709,7 +5357,6 @@ const DT_PLTREL DynTag = 20 /* Type of relocation used for PLT. */
 
 ```
 searchKey: elf.DT_DEBUG
-tags: [exported]
 ```
 
 ```Go
@@ -5721,7 +5368,6 @@ const DT_DEBUG DynTag = 21 /* Reserved (not used). */
 
 ```
 searchKey: elf.DT_TEXTREL
-tags: [exported]
 ```
 
 ```Go
@@ -5733,7 +5379,6 @@ const DT_TEXTREL DynTag /* Indicates there may be relocations in non-writable se
 
 ```
 searchKey: elf.DT_JMPREL
-tags: [exported]
 ```
 
 ```Go
@@ -5745,7 +5390,6 @@ const DT_JMPREL DynTag = 23 /* Address of PLT relocations. */
 
 ```
 searchKey: elf.DT_BIND_NOW
-tags: [exported]
 ```
 
 ```Go
@@ -5757,7 +5401,6 @@ const DT_BIND_NOW DynTag = 24 /* [sup] */
 
 ```
 searchKey: elf.DT_INIT_ARRAY
-tags: [exported]
 ```
 
 ```Go
@@ -5769,7 +5412,6 @@ const DT_INIT_ARRAY DynTag = 25 /* Address of the array of pointers to initializ
 
 ```
 searchKey: elf.DT_FINI_ARRAY
-tags: [exported]
 ```
 
 ```Go
@@ -5781,7 +5423,6 @@ const DT_FINI_ARRAY DynTag = 26 /* Address of the array of pointers to terminati
 
 ```
 searchKey: elf.DT_INIT_ARRAYSZ
-tags: [exported]
 ```
 
 ```Go
@@ -5793,7 +5434,6 @@ const DT_INIT_ARRAYSZ DynTag = 27 /* Size in bytes of the array of initializatio
 
 ```
 searchKey: elf.DT_FINI_ARRAYSZ
-tags: [exported]
 ```
 
 ```Go
@@ -5805,7 +5445,6 @@ const DT_FINI_ARRAYSZ DynTag = 28 /* Size in bytes of the array of termination f
 
 ```
 searchKey: elf.DT_RUNPATH
-tags: [exported]
 ```
 
 ```Go
@@ -5817,7 +5456,6 @@ const DT_RUNPATH DynTag /* String table offset of a null-terminated library sear
 
 ```
 searchKey: elf.DT_FLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -5829,7 +5467,6 @@ const DT_FLAGS DynTag = 30 /* Object specific flag values. */
 
 ```
 searchKey: elf.DT_ENCODING
-tags: [exported]
 ```
 
 ```Go
@@ -5845,7 +5482,6 @@ const DT_ENCODING DynTag /* Values greater than or equal to DT_ENCODING
 
 ```
 searchKey: elf.DT_PREINIT_ARRAY
-tags: [exported]
 ```
 
 ```Go
@@ -5857,7 +5493,6 @@ const DT_PREINIT_ARRAY DynTag /* Address of the array of pointers to pre-initial
 
 ```
 searchKey: elf.DT_PREINIT_ARRAYSZ
-tags: [exported]
 ```
 
 ```Go
@@ -5869,7 +5504,6 @@ const DT_PREINIT_ARRAYSZ DynTag /* Size in bytes of the array of pre-initializat
 
 ```
 searchKey: elf.DT_SYMTAB_SHNDX
-tags: [exported]
 ```
 
 ```Go
@@ -5881,7 +5515,6 @@ const DT_SYMTAB_SHNDX DynTag = 34 /* Address of SHT_SYMTAB_SHNDX section. */
 
 ```
 searchKey: elf.DT_LOOS
-tags: [exported]
 ```
 
 ```Go
@@ -5893,7 +5526,6 @@ const DT_LOOS DynTag = 0x6000000d /* First OS-specific */
 
 ```
 searchKey: elf.DT_HIOS
-tags: [exported]
 ```
 
 ```Go
@@ -5905,7 +5537,6 @@ const DT_HIOS DynTag = 0x6ffff000 /* Last OS-specific */
 
 ```
 searchKey: elf.DT_VALRNGLO
-tags: [exported]
 ```
 
 ```Go
@@ -5916,7 +5547,6 @@ const DT_VALRNGLO DynTag = 0x6ffffd00
 
 ```
 searchKey: elf.DT_GNU_PRELINKED
-tags: [exported]
 ```
 
 ```Go
@@ -5927,7 +5557,6 @@ const DT_GNU_PRELINKED DynTag = 0x6ffffdf5
 
 ```
 searchKey: elf.DT_GNU_CONFLICTSZ
-tags: [exported]
 ```
 
 ```Go
@@ -5938,7 +5567,6 @@ const DT_GNU_CONFLICTSZ DynTag = 0x6ffffdf6
 
 ```
 searchKey: elf.DT_GNU_LIBLISTSZ
-tags: [exported]
 ```
 
 ```Go
@@ -5949,7 +5577,6 @@ const DT_GNU_LIBLISTSZ DynTag = 0x6ffffdf7
 
 ```
 searchKey: elf.DT_CHECKSUM
-tags: [exported]
 ```
 
 ```Go
@@ -5960,7 +5587,6 @@ const DT_CHECKSUM DynTag = 0x6ffffdf8
 
 ```
 searchKey: elf.DT_PLTPADSZ
-tags: [exported]
 ```
 
 ```Go
@@ -5971,7 +5597,6 @@ const DT_PLTPADSZ DynTag = 0x6ffffdf9
 
 ```
 searchKey: elf.DT_MOVEENT
-tags: [exported]
 ```
 
 ```Go
@@ -5982,7 +5607,6 @@ const DT_MOVEENT DynTag = 0x6ffffdfa
 
 ```
 searchKey: elf.DT_MOVESZ
-tags: [exported]
 ```
 
 ```Go
@@ -5993,7 +5617,6 @@ const DT_MOVESZ DynTag = 0x6ffffdfb
 
 ```
 searchKey: elf.DT_FEATURE
-tags: [exported]
 ```
 
 ```Go
@@ -6004,7 +5627,6 @@ const DT_FEATURE DynTag = 0x6ffffdfc
 
 ```
 searchKey: elf.DT_POSFLAG_1
-tags: [exported]
 ```
 
 ```Go
@@ -6015,7 +5637,6 @@ const DT_POSFLAG_1 DynTag = 0x6ffffdfd
 
 ```
 searchKey: elf.DT_SYMINSZ
-tags: [exported]
 ```
 
 ```Go
@@ -6026,7 +5647,6 @@ const DT_SYMINSZ DynTag = 0x6ffffdfe
 
 ```
 searchKey: elf.DT_SYMINENT
-tags: [exported]
 ```
 
 ```Go
@@ -6037,7 +5657,6 @@ const DT_SYMINENT DynTag = 0x6ffffdff
 
 ```
 searchKey: elf.DT_VALRNGHI
-tags: [exported]
 ```
 
 ```Go
@@ -6048,7 +5667,6 @@ const DT_VALRNGHI DynTag = 0x6ffffdff
 
 ```
 searchKey: elf.DT_ADDRRNGLO
-tags: [exported]
 ```
 
 ```Go
@@ -6059,7 +5677,6 @@ const DT_ADDRRNGLO DynTag = 0x6ffffe00
 
 ```
 searchKey: elf.DT_GNU_HASH
-tags: [exported]
 ```
 
 ```Go
@@ -6070,7 +5687,6 @@ const DT_GNU_HASH DynTag = 0x6ffffef5
 
 ```
 searchKey: elf.DT_TLSDESC_PLT
-tags: [exported]
 ```
 
 ```Go
@@ -6081,7 +5697,6 @@ const DT_TLSDESC_PLT DynTag = 0x6ffffef6
 
 ```
 searchKey: elf.DT_TLSDESC_GOT
-tags: [exported]
 ```
 
 ```Go
@@ -6092,7 +5707,6 @@ const DT_TLSDESC_GOT DynTag = 0x6ffffef7
 
 ```
 searchKey: elf.DT_GNU_CONFLICT
-tags: [exported]
 ```
 
 ```Go
@@ -6103,7 +5717,6 @@ const DT_GNU_CONFLICT DynTag = 0x6ffffef8
 
 ```
 searchKey: elf.DT_GNU_LIBLIST
-tags: [exported]
 ```
 
 ```Go
@@ -6114,7 +5727,6 @@ const DT_GNU_LIBLIST DynTag = 0x6ffffef9
 
 ```
 searchKey: elf.DT_CONFIG
-tags: [exported]
 ```
 
 ```Go
@@ -6125,7 +5737,6 @@ const DT_CONFIG DynTag = 0x6ffffefa
 
 ```
 searchKey: elf.DT_DEPAUDIT
-tags: [exported]
 ```
 
 ```Go
@@ -6136,7 +5747,6 @@ const DT_DEPAUDIT DynTag = 0x6ffffefb
 
 ```
 searchKey: elf.DT_AUDIT
-tags: [exported]
 ```
 
 ```Go
@@ -6147,7 +5757,6 @@ const DT_AUDIT DynTag = 0x6ffffefc
 
 ```
 searchKey: elf.DT_PLTPAD
-tags: [exported]
 ```
 
 ```Go
@@ -6158,7 +5767,6 @@ const DT_PLTPAD DynTag = 0x6ffffefd
 
 ```
 searchKey: elf.DT_MOVETAB
-tags: [exported]
 ```
 
 ```Go
@@ -6169,7 +5777,6 @@ const DT_MOVETAB DynTag = 0x6ffffefe
 
 ```
 searchKey: elf.DT_SYMINFO
-tags: [exported]
 ```
 
 ```Go
@@ -6180,7 +5787,6 @@ const DT_SYMINFO DynTag = 0x6ffffeff
 
 ```
 searchKey: elf.DT_ADDRRNGHI
-tags: [exported]
 ```
 
 ```Go
@@ -6191,7 +5797,6 @@ const DT_ADDRRNGHI DynTag = 0x6ffffeff
 
 ```
 searchKey: elf.DT_VERSYM
-tags: [exported]
 ```
 
 ```Go
@@ -6202,7 +5807,6 @@ const DT_VERSYM DynTag = 0x6ffffff0
 
 ```
 searchKey: elf.DT_RELACOUNT
-tags: [exported]
 ```
 
 ```Go
@@ -6213,7 +5817,6 @@ const DT_RELACOUNT DynTag = 0x6ffffff9
 
 ```
 searchKey: elf.DT_RELCOUNT
-tags: [exported]
 ```
 
 ```Go
@@ -6224,7 +5827,6 @@ const DT_RELCOUNT DynTag = 0x6ffffffa
 
 ```
 searchKey: elf.DT_FLAGS_1
-tags: [exported]
 ```
 
 ```Go
@@ -6235,7 +5837,6 @@ const DT_FLAGS_1 DynTag = 0x6ffffffb
 
 ```
 searchKey: elf.DT_VERDEF
-tags: [exported]
 ```
 
 ```Go
@@ -6246,7 +5847,6 @@ const DT_VERDEF DynTag = 0x6ffffffc
 
 ```
 searchKey: elf.DT_VERDEFNUM
-tags: [exported]
 ```
 
 ```Go
@@ -6257,7 +5857,6 @@ const DT_VERDEFNUM DynTag = 0x6ffffffd
 
 ```
 searchKey: elf.DT_VERNEED
-tags: [exported]
 ```
 
 ```Go
@@ -6268,7 +5867,6 @@ const DT_VERNEED DynTag = 0x6ffffffe
 
 ```
 searchKey: elf.DT_VERNEEDNUM
-tags: [exported]
 ```
 
 ```Go
@@ -6279,7 +5877,6 @@ const DT_VERNEEDNUM DynTag = 0x6fffffff
 
 ```
 searchKey: elf.DT_LOPROC
-tags: [exported]
 ```
 
 ```Go
@@ -6291,7 +5888,6 @@ const DT_LOPROC DynTag = 0x70000000 /* First processor-specific type. */
 
 ```
 searchKey: elf.DT_MIPS_RLD_VERSION
-tags: [exported]
 ```
 
 ```Go
@@ -6302,7 +5898,6 @@ const DT_MIPS_RLD_VERSION DynTag = 0x70000001
 
 ```
 searchKey: elf.DT_MIPS_TIME_STAMP
-tags: [exported]
 ```
 
 ```Go
@@ -6313,7 +5908,6 @@ const DT_MIPS_TIME_STAMP DynTag = 0x70000002
 
 ```
 searchKey: elf.DT_MIPS_ICHECKSUM
-tags: [exported]
 ```
 
 ```Go
@@ -6324,7 +5918,6 @@ const DT_MIPS_ICHECKSUM DynTag = 0x70000003
 
 ```
 searchKey: elf.DT_MIPS_IVERSION
-tags: [exported]
 ```
 
 ```Go
@@ -6335,7 +5928,6 @@ const DT_MIPS_IVERSION DynTag = 0x70000004
 
 ```
 searchKey: elf.DT_MIPS_FLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -6346,7 +5938,6 @@ const DT_MIPS_FLAGS DynTag = 0x70000005
 
 ```
 searchKey: elf.DT_MIPS_BASE_ADDRESS
-tags: [exported]
 ```
 
 ```Go
@@ -6357,7 +5948,6 @@ const DT_MIPS_BASE_ADDRESS DynTag = 0x70000006
 
 ```
 searchKey: elf.DT_MIPS_MSYM
-tags: [exported]
 ```
 
 ```Go
@@ -6368,7 +5958,6 @@ const DT_MIPS_MSYM DynTag = 0x70000007
 
 ```
 searchKey: elf.DT_MIPS_CONFLICT
-tags: [exported]
 ```
 
 ```Go
@@ -6379,7 +5968,6 @@ const DT_MIPS_CONFLICT DynTag = 0x70000008
 
 ```
 searchKey: elf.DT_MIPS_LIBLIST
-tags: [exported]
 ```
 
 ```Go
@@ -6390,7 +5978,6 @@ const DT_MIPS_LIBLIST DynTag = 0x70000009
 
 ```
 searchKey: elf.DT_MIPS_LOCAL_GOTNO
-tags: [exported]
 ```
 
 ```Go
@@ -6401,7 +5988,6 @@ const DT_MIPS_LOCAL_GOTNO DynTag = 0x7000000a
 
 ```
 searchKey: elf.DT_MIPS_CONFLICTNO
-tags: [exported]
 ```
 
 ```Go
@@ -6412,7 +5998,6 @@ const DT_MIPS_CONFLICTNO DynTag = 0x7000000b
 
 ```
 searchKey: elf.DT_MIPS_LIBLISTNO
-tags: [exported]
 ```
 
 ```Go
@@ -6423,7 +6008,6 @@ const DT_MIPS_LIBLISTNO DynTag = 0x70000010
 
 ```
 searchKey: elf.DT_MIPS_SYMTABNO
-tags: [exported]
 ```
 
 ```Go
@@ -6434,7 +6018,6 @@ const DT_MIPS_SYMTABNO DynTag = 0x70000011
 
 ```
 searchKey: elf.DT_MIPS_UNREFEXTNO
-tags: [exported]
 ```
 
 ```Go
@@ -6445,7 +6028,6 @@ const DT_MIPS_UNREFEXTNO DynTag = 0x70000012
 
 ```
 searchKey: elf.DT_MIPS_GOTSYM
-tags: [exported]
 ```
 
 ```Go
@@ -6456,7 +6038,6 @@ const DT_MIPS_GOTSYM DynTag = 0x70000013
 
 ```
 searchKey: elf.DT_MIPS_HIPAGENO
-tags: [exported]
 ```
 
 ```Go
@@ -6467,7 +6048,6 @@ const DT_MIPS_HIPAGENO DynTag = 0x70000014
 
 ```
 searchKey: elf.DT_MIPS_RLD_MAP
-tags: [exported]
 ```
 
 ```Go
@@ -6478,7 +6058,6 @@ const DT_MIPS_RLD_MAP DynTag = 0x70000016
 
 ```
 searchKey: elf.DT_MIPS_DELTA_CLASS
-tags: [exported]
 ```
 
 ```Go
@@ -6489,7 +6068,6 @@ const DT_MIPS_DELTA_CLASS DynTag = 0x70000017
 
 ```
 searchKey: elf.DT_MIPS_DELTA_CLASS_NO
-tags: [exported]
 ```
 
 ```Go
@@ -6500,7 +6078,6 @@ const DT_MIPS_DELTA_CLASS_NO DynTag = 0x70000018
 
 ```
 searchKey: elf.DT_MIPS_DELTA_INSTANCE
-tags: [exported]
 ```
 
 ```Go
@@ -6511,7 +6088,6 @@ const DT_MIPS_DELTA_INSTANCE DynTag = 0x70000019
 
 ```
 searchKey: elf.DT_MIPS_DELTA_INSTANCE_NO
-tags: [exported]
 ```
 
 ```Go
@@ -6522,7 +6098,6 @@ const DT_MIPS_DELTA_INSTANCE_NO DynTag = 0x7000001a
 
 ```
 searchKey: elf.DT_MIPS_DELTA_RELOC
-tags: [exported]
 ```
 
 ```Go
@@ -6533,7 +6108,6 @@ const DT_MIPS_DELTA_RELOC DynTag = 0x7000001b
 
 ```
 searchKey: elf.DT_MIPS_DELTA_RELOC_NO
-tags: [exported]
 ```
 
 ```Go
@@ -6544,7 +6118,6 @@ const DT_MIPS_DELTA_RELOC_NO DynTag = 0x7000001c
 
 ```
 searchKey: elf.DT_MIPS_DELTA_SYM
-tags: [exported]
 ```
 
 ```Go
@@ -6555,7 +6128,6 @@ const DT_MIPS_DELTA_SYM DynTag = 0x7000001d
 
 ```
 searchKey: elf.DT_MIPS_DELTA_SYM_NO
-tags: [exported]
 ```
 
 ```Go
@@ -6566,7 +6138,6 @@ const DT_MIPS_DELTA_SYM_NO DynTag = 0x7000001e
 
 ```
 searchKey: elf.DT_MIPS_DELTA_CLASSSYM
-tags: [exported]
 ```
 
 ```Go
@@ -6577,7 +6148,6 @@ const DT_MIPS_DELTA_CLASSSYM DynTag = 0x70000020
 
 ```
 searchKey: elf.DT_MIPS_DELTA_CLASSSYM_NO
-tags: [exported]
 ```
 
 ```Go
@@ -6588,7 +6158,6 @@ const DT_MIPS_DELTA_CLASSSYM_NO DynTag = 0x70000021
 
 ```
 searchKey: elf.DT_MIPS_CXX_FLAGS
-tags: [exported]
 ```
 
 ```Go
@@ -6599,7 +6168,6 @@ const DT_MIPS_CXX_FLAGS DynTag = 0x70000022
 
 ```
 searchKey: elf.DT_MIPS_PIXIE_INIT
-tags: [exported]
 ```
 
 ```Go
@@ -6610,7 +6178,6 @@ const DT_MIPS_PIXIE_INIT DynTag = 0x70000023
 
 ```
 searchKey: elf.DT_MIPS_SYMBOL_LIB
-tags: [exported]
 ```
 
 ```Go
@@ -6621,7 +6188,6 @@ const DT_MIPS_SYMBOL_LIB DynTag = 0x70000024
 
 ```
 searchKey: elf.DT_MIPS_LOCALPAGE_GOTIDX
-tags: [exported]
 ```
 
 ```Go
@@ -6632,7 +6198,6 @@ const DT_MIPS_LOCALPAGE_GOTIDX DynTag = 0x70000025
 
 ```
 searchKey: elf.DT_MIPS_LOCAL_GOTIDX
-tags: [exported]
 ```
 
 ```Go
@@ -6643,7 +6208,6 @@ const DT_MIPS_LOCAL_GOTIDX DynTag = 0x70000026
 
 ```
 searchKey: elf.DT_MIPS_HIDDEN_GOTIDX
-tags: [exported]
 ```
 
 ```Go
@@ -6654,7 +6218,6 @@ const DT_MIPS_HIDDEN_GOTIDX DynTag = 0x70000027
 
 ```
 searchKey: elf.DT_MIPS_PROTECTED_GOTIDX
-tags: [exported]
 ```
 
 ```Go
@@ -6665,7 +6228,6 @@ const DT_MIPS_PROTECTED_GOTIDX DynTag = 0x70000028
 
 ```
 searchKey: elf.DT_MIPS_OPTIONS
-tags: [exported]
 ```
 
 ```Go
@@ -6676,7 +6238,6 @@ const DT_MIPS_OPTIONS DynTag = 0x70000029
 
 ```
 searchKey: elf.DT_MIPS_INTERFACE
-tags: [exported]
 ```
 
 ```Go
@@ -6687,7 +6248,6 @@ const DT_MIPS_INTERFACE DynTag = 0x7000002a
 
 ```
 searchKey: elf.DT_MIPS_DYNSTR_ALIGN
-tags: [exported]
 ```
 
 ```Go
@@ -6698,7 +6258,6 @@ const DT_MIPS_DYNSTR_ALIGN DynTag = 0x7000002b
 
 ```
 searchKey: elf.DT_MIPS_INTERFACE_SIZE
-tags: [exported]
 ```
 
 ```Go
@@ -6709,7 +6268,6 @@ const DT_MIPS_INTERFACE_SIZE DynTag = 0x7000002c
 
 ```
 searchKey: elf.DT_MIPS_RLD_TEXT_RESOLVE_ADDR
-tags: [exported]
 ```
 
 ```Go
@@ -6720,7 +6278,6 @@ const DT_MIPS_RLD_TEXT_RESOLVE_ADDR DynTag = 0x7000002d
 
 ```
 searchKey: elf.DT_MIPS_PERF_SUFFIX
-tags: [exported]
 ```
 
 ```Go
@@ -6731,7 +6288,6 @@ const DT_MIPS_PERF_SUFFIX DynTag = 0x7000002e
 
 ```
 searchKey: elf.DT_MIPS_COMPACT_SIZE
-tags: [exported]
 ```
 
 ```Go
@@ -6742,7 +6298,6 @@ const DT_MIPS_COMPACT_SIZE DynTag = 0x7000002f
 
 ```
 searchKey: elf.DT_MIPS_GP_VALUE
-tags: [exported]
 ```
 
 ```Go
@@ -6753,7 +6308,6 @@ const DT_MIPS_GP_VALUE DynTag = 0x70000030
 
 ```
 searchKey: elf.DT_MIPS_AUX_DYNAMIC
-tags: [exported]
 ```
 
 ```Go
@@ -6764,7 +6318,6 @@ const DT_MIPS_AUX_DYNAMIC DynTag = 0x70000031
 
 ```
 searchKey: elf.DT_MIPS_PLTGOT
-tags: [exported]
 ```
 
 ```Go
@@ -6775,7 +6328,6 @@ const DT_MIPS_PLTGOT DynTag = 0x70000032
 
 ```
 searchKey: elf.DT_MIPS_RWPLT
-tags: [exported]
 ```
 
 ```Go
@@ -6786,7 +6338,6 @@ const DT_MIPS_RWPLT DynTag = 0x70000034
 
 ```
 searchKey: elf.DT_MIPS_RLD_MAP_REL
-tags: [exported]
 ```
 
 ```Go
@@ -6797,7 +6348,6 @@ const DT_MIPS_RLD_MAP_REL DynTag = 0x70000035
 
 ```
 searchKey: elf.DT_PPC_GOT
-tags: [exported]
 ```
 
 ```Go
@@ -6808,7 +6358,6 @@ const DT_PPC_GOT DynTag = 0x70000000
 
 ```
 searchKey: elf.DT_PPC_OPT
-tags: [exported]
 ```
 
 ```Go
@@ -6819,7 +6368,6 @@ const DT_PPC_OPT DynTag = 0x70000001
 
 ```
 searchKey: elf.DT_PPC64_GLINK
-tags: [exported]
 ```
 
 ```Go
@@ -6830,7 +6378,6 @@ const DT_PPC64_GLINK DynTag = 0x70000000
 
 ```
 searchKey: elf.DT_PPC64_OPD
-tags: [exported]
 ```
 
 ```Go
@@ -6841,7 +6388,6 @@ const DT_PPC64_OPD DynTag = 0x70000001
 
 ```
 searchKey: elf.DT_PPC64_OPDSZ
-tags: [exported]
 ```
 
 ```Go
@@ -6852,7 +6398,6 @@ const DT_PPC64_OPDSZ DynTag = 0x70000002
 
 ```
 searchKey: elf.DT_PPC64_OPT
-tags: [exported]
 ```
 
 ```Go
@@ -6863,7 +6408,6 @@ const DT_PPC64_OPT DynTag = 0x70000003
 
 ```
 searchKey: elf.DT_SPARC_REGISTER
-tags: [exported]
 ```
 
 ```Go
@@ -6874,7 +6418,6 @@ const DT_SPARC_REGISTER DynTag = 0x70000001
 
 ```
 searchKey: elf.DT_AUXILIARY
-tags: [exported]
 ```
 
 ```Go
@@ -6885,7 +6428,6 @@ const DT_AUXILIARY DynTag = 0x7ffffffd
 
 ```
 searchKey: elf.DT_USED
-tags: [exported]
 ```
 
 ```Go
@@ -6896,7 +6438,6 @@ const DT_USED DynTag = 0x7ffffffe
 
 ```
 searchKey: elf.DT_FILTER
-tags: [exported]
 ```
 
 ```Go
@@ -6907,7 +6448,6 @@ const DT_FILTER DynTag = 0x7fffffff
 
 ```
 searchKey: elf.DT_HIPROC
-tags: [exported]
 ```
 
 ```Go
@@ -6919,7 +6459,6 @@ const DT_HIPROC DynTag = 0x7fffffff /* Last processor-specific type. */
 
 ```
 searchKey: elf.DF_ORIGIN
-tags: [exported]
 ```
 
 ```Go
@@ -6933,7 +6472,6 @@ const DF_ORIGIN DynFlag /* Indicates that the object being loaded may
 
 ```
 searchKey: elf.DF_SYMBOLIC
-tags: [exported]
 ```
 
 ```Go
@@ -6945,7 +6483,6 @@ const DF_SYMBOLIC DynFlag = 0x0002 /* Indicates "symbolic" linking. */
 
 ```
 searchKey: elf.DF_TEXTREL
-tags: [exported]
 ```
 
 ```Go
@@ -6957,7 +6494,6 @@ const DF_TEXTREL DynFlag /* Indicates there may be relocations in non-writable s
 
 ```
 searchKey: elf.DF_BIND_NOW
-tags: [exported]
 ```
 
 ```Go
@@ -6972,7 +6508,6 @@ const DF_BIND_NOW DynFlag /* Indicates that the dynamic linker should
 
 ```
 searchKey: elf.DF_STATIC_TLS
-tags: [exported]
 ```
 
 ```Go
@@ -6986,7 +6521,6 @@ const DF_STATIC_TLS DynFlag /* Indicates that the shared object or
 
 ```
 searchKey: elf.NT_PRSTATUS
-tags: [exported]
 ```
 
 ```Go
@@ -6998,7 +6532,6 @@ const NT_PRSTATUS NType = 1 /* Process status. */
 
 ```
 searchKey: elf.NT_FPREGSET
-tags: [exported]
 ```
 
 ```Go
@@ -7010,7 +6543,6 @@ const NT_FPREGSET NType = 2 /* Floating point registers. */
 
 ```
 searchKey: elf.NT_PRPSINFO
-tags: [exported]
 ```
 
 ```Go
@@ -7022,7 +6554,6 @@ const NT_PRPSINFO NType = 3 /* Process state info. */
 
 ```
 searchKey: elf.STB_LOCAL
-tags: [exported]
 ```
 
 ```Go
@@ -7034,7 +6565,6 @@ const STB_LOCAL SymBind = 0 /* Local symbol */
 
 ```
 searchKey: elf.STB_GLOBAL
-tags: [exported]
 ```
 
 ```Go
@@ -7046,7 +6576,6 @@ const STB_GLOBAL SymBind = 1 /* Global symbol */
 
 ```
 searchKey: elf.STB_WEAK
-tags: [exported]
 ```
 
 ```Go
@@ -7058,7 +6587,6 @@ const STB_WEAK SymBind = 2 /* like global - lower precedence */
 
 ```
 searchKey: elf.STB_LOOS
-tags: [exported]
 ```
 
 ```Go
@@ -7070,7 +6598,6 @@ const STB_LOOS SymBind = 10 /* Reserved range for operating system */
 
 ```
 searchKey: elf.STB_HIOS
-tags: [exported]
 ```
 
 ```Go
@@ -7082,7 +6609,6 @@ const STB_HIOS SymBind = 12 /*   specific semantics. */
 
 ```
 searchKey: elf.STB_LOPROC
-tags: [exported]
 ```
 
 ```Go
@@ -7094,7 +6620,6 @@ const STB_LOPROC SymBind = 13 /* reserved range for processor */
 
 ```
 searchKey: elf.STB_HIPROC
-tags: [exported]
 ```
 
 ```Go
@@ -7106,7 +6631,6 @@ const STB_HIPROC SymBind = 15 /*   specific semantics. */
 
 ```
 searchKey: elf.STT_NOTYPE
-tags: [exported]
 ```
 
 ```Go
@@ -7118,7 +6642,6 @@ const STT_NOTYPE SymType = 0 /* Unspecified type. */
 
 ```
 searchKey: elf.STT_OBJECT
-tags: [exported]
 ```
 
 ```Go
@@ -7130,7 +6653,6 @@ const STT_OBJECT SymType = 1 /* Data object. */
 
 ```
 searchKey: elf.STT_FUNC
-tags: [exported]
 ```
 
 ```Go
@@ -7142,7 +6664,6 @@ const STT_FUNC SymType = 2 /* Function. */
 
 ```
 searchKey: elf.STT_SECTION
-tags: [exported]
 ```
 
 ```Go
@@ -7154,7 +6675,6 @@ const STT_SECTION SymType = 3 /* Section. */
 
 ```
 searchKey: elf.STT_FILE
-tags: [exported]
 ```
 
 ```Go
@@ -7166,7 +6686,6 @@ const STT_FILE SymType = 4 /* Source file. */
 
 ```
 searchKey: elf.STT_COMMON
-tags: [exported]
 ```
 
 ```Go
@@ -7178,7 +6697,6 @@ const STT_COMMON SymType = 5 /* Uninitialized common block. */
 
 ```
 searchKey: elf.STT_TLS
-tags: [exported]
 ```
 
 ```Go
@@ -7190,7 +6708,6 @@ const STT_TLS SymType = 6 /* TLS object. */
 
 ```
 searchKey: elf.STT_LOOS
-tags: [exported]
 ```
 
 ```Go
@@ -7202,7 +6719,6 @@ const STT_LOOS SymType = 10 /* Reserved range for operating system */
 
 ```
 searchKey: elf.STT_HIOS
-tags: [exported]
 ```
 
 ```Go
@@ -7214,7 +6730,6 @@ const STT_HIOS SymType = 12 /*   specific semantics. */
 
 ```
 searchKey: elf.STT_LOPROC
-tags: [exported]
 ```
 
 ```Go
@@ -7226,7 +6741,6 @@ const STT_LOPROC SymType = 13 /* reserved range for processor */
 
 ```
 searchKey: elf.STT_HIPROC
-tags: [exported]
 ```
 
 ```Go
@@ -7238,7 +6752,6 @@ const STT_HIPROC SymType = 15 /*   specific semantics. */
 
 ```
 searchKey: elf.STV_DEFAULT
-tags: [exported]
 ```
 
 ```Go
@@ -7250,7 +6763,6 @@ const STV_DEFAULT SymVis = 0x0 /* Default visibility (see binding). */
 
 ```
 searchKey: elf.STV_INTERNAL
-tags: [exported]
 ```
 
 ```Go
@@ -7262,7 +6774,6 @@ const STV_INTERNAL SymVis = 0x1 /* Special meaning in relocatable objects. */
 
 ```
 searchKey: elf.STV_HIDDEN
-tags: [exported]
 ```
 
 ```Go
@@ -7274,7 +6785,6 @@ const STV_HIDDEN SymVis = 0x2 /* Not visible. */
 
 ```
 searchKey: elf.STV_PROTECTED
-tags: [exported]
 ```
 
 ```Go
@@ -7286,7 +6796,6 @@ const STV_PROTECTED SymVis = 0x3 /* Visible but not preemptible. */
 
 ```
 searchKey: elf.R_X86_64_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -7298,7 +6807,6 @@ const R_X86_64_NONE R_X86_64 = 0 /* No relocation. */
 
 ```
 searchKey: elf.R_X86_64_64
-tags: [exported]
 ```
 
 ```Go
@@ -7310,7 +6818,6 @@ const R_X86_64_64 R_X86_64 = 1 /* Add 64 bit symbol value. */
 
 ```
 searchKey: elf.R_X86_64_PC32
-tags: [exported]
 ```
 
 ```Go
@@ -7322,7 +6829,6 @@ const R_X86_64_PC32 R_X86_64 = 2 /* PC-relative 32 bit signed sym value. */
 
 ```
 searchKey: elf.R_X86_64_GOT32
-tags: [exported]
 ```
 
 ```Go
@@ -7334,7 +6840,6 @@ const R_X86_64_GOT32 R_X86_64 = 3 /* PC-relative 32 bit GOT offset. */
 
 ```
 searchKey: elf.R_X86_64_PLT32
-tags: [exported]
 ```
 
 ```Go
@@ -7346,7 +6851,6 @@ const R_X86_64_PLT32 R_X86_64 = 4 /* PC-relative 32 bit PLT offset. */
 
 ```
 searchKey: elf.R_X86_64_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -7358,7 +6862,6 @@ const R_X86_64_COPY R_X86_64 = 5 /* Copy data from shared object. */
 
 ```
 searchKey: elf.R_X86_64_GLOB_DAT
-tags: [exported]
 ```
 
 ```Go
@@ -7370,7 +6873,6 @@ const R_X86_64_GLOB_DAT R_X86_64 = 6 /* Set GOT entry to data address. */
 
 ```
 searchKey: elf.R_X86_64_JMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -7382,7 +6884,6 @@ const R_X86_64_JMP_SLOT R_X86_64 = 7 /* Set GOT entry to code address. */
 
 ```
 searchKey: elf.R_X86_64_RELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -7394,7 +6895,6 @@ const R_X86_64_RELATIVE R_X86_64 = 8 /* Add load address of shared object. */
 
 ```
 searchKey: elf.R_X86_64_GOTPCREL
-tags: [exported]
 ```
 
 ```Go
@@ -7406,7 +6906,6 @@ const R_X86_64_GOTPCREL R_X86_64 = 9 /* Add 32 bit signed pcrel offset to GOT. *
 
 ```
 searchKey: elf.R_X86_64_32
-tags: [exported]
 ```
 
 ```Go
@@ -7418,7 +6917,6 @@ const R_X86_64_32 R_X86_64 = 10 /* Add 32 bit zero extended symbol value */
 
 ```
 searchKey: elf.R_X86_64_32S
-tags: [exported]
 ```
 
 ```Go
@@ -7430,7 +6928,6 @@ const R_X86_64_32S R_X86_64 = 11 /* Add 32 bit sign extended symbol value */
 
 ```
 searchKey: elf.R_X86_64_16
-tags: [exported]
 ```
 
 ```Go
@@ -7442,7 +6939,6 @@ const R_X86_64_16 R_X86_64 = 12 /* Add 16 bit zero extended symbol value */
 
 ```
 searchKey: elf.R_X86_64_PC16
-tags: [exported]
 ```
 
 ```Go
@@ -7454,7 +6950,6 @@ const R_X86_64_PC16 R_X86_64 = 13 /* Add 16 bit signed extended pc relative symb
 
 ```
 searchKey: elf.R_X86_64_8
-tags: [exported]
 ```
 
 ```Go
@@ -7466,7 +6961,6 @@ const R_X86_64_8 R_X86_64 = 14 /* Add 8 bit zero extended symbol value */
 
 ```
 searchKey: elf.R_X86_64_PC8
-tags: [exported]
 ```
 
 ```Go
@@ -7478,7 +6972,6 @@ const R_X86_64_PC8 R_X86_64 = 15 /* Add 8 bit signed extended pc relative symbol
 
 ```
 searchKey: elf.R_X86_64_DTPMOD64
-tags: [exported]
 ```
 
 ```Go
@@ -7490,7 +6983,6 @@ const R_X86_64_DTPMOD64 R_X86_64 = 16 /* ID of module containing symbol */
 
 ```
 searchKey: elf.R_X86_64_DTPOFF64
-tags: [exported]
 ```
 
 ```Go
@@ -7502,7 +6994,6 @@ const R_X86_64_DTPOFF64 R_X86_64 = 17 /* Offset in TLS block */
 
 ```
 searchKey: elf.R_X86_64_TPOFF64
-tags: [exported]
 ```
 
 ```Go
@@ -7514,7 +7005,6 @@ const R_X86_64_TPOFF64 R_X86_64 = 18 /* Offset in static TLS block */
 
 ```
 searchKey: elf.R_X86_64_TLSGD
-tags: [exported]
 ```
 
 ```Go
@@ -7526,7 +7016,6 @@ const R_X86_64_TLSGD R_X86_64 = 19 /* PC relative offset to GD GOT entry */
 
 ```
 searchKey: elf.R_X86_64_TLSLD
-tags: [exported]
 ```
 
 ```Go
@@ -7538,7 +7027,6 @@ const R_X86_64_TLSLD R_X86_64 = 20 /* PC relative offset to LD GOT entry */
 
 ```
 searchKey: elf.R_X86_64_DTPOFF32
-tags: [exported]
 ```
 
 ```Go
@@ -7550,7 +7038,6 @@ const R_X86_64_DTPOFF32 R_X86_64 = 21 /* Offset in TLS block */
 
 ```
 searchKey: elf.R_X86_64_GOTTPOFF
-tags: [exported]
 ```
 
 ```Go
@@ -7562,7 +7049,6 @@ const R_X86_64_GOTTPOFF R_X86_64 = 22 /* PC relative offset to IE GOT entry */
 
 ```
 searchKey: elf.R_X86_64_TPOFF32
-tags: [exported]
 ```
 
 ```Go
@@ -7574,7 +7060,6 @@ const R_X86_64_TPOFF32 R_X86_64 = 23 /* Offset in static TLS block */
 
 ```
 searchKey: elf.R_X86_64_PC64
-tags: [exported]
 ```
 
 ```Go
@@ -7586,7 +7071,6 @@ const R_X86_64_PC64 R_X86_64 = 24 /* PC relative 64-bit sign extended symbol val
 
 ```
 searchKey: elf.R_X86_64_GOTOFF64
-tags: [exported]
 ```
 
 ```Go
@@ -7597,7 +7081,6 @@ const R_X86_64_GOTOFF64 R_X86_64 = 25
 
 ```
 searchKey: elf.R_X86_64_GOTPC32
-tags: [exported]
 ```
 
 ```Go
@@ -7608,7 +7091,6 @@ const R_X86_64_GOTPC32 R_X86_64 = 26
 
 ```
 searchKey: elf.R_X86_64_GOT64
-tags: [exported]
 ```
 
 ```Go
@@ -7619,7 +7101,6 @@ const R_X86_64_GOT64 R_X86_64 = 27
 
 ```
 searchKey: elf.R_X86_64_GOTPCREL64
-tags: [exported]
 ```
 
 ```Go
@@ -7630,7 +7111,6 @@ const R_X86_64_GOTPCREL64 R_X86_64 = 28
 
 ```
 searchKey: elf.R_X86_64_GOTPC64
-tags: [exported]
 ```
 
 ```Go
@@ -7641,7 +7121,6 @@ const R_X86_64_GOTPC64 R_X86_64 = 29
 
 ```
 searchKey: elf.R_X86_64_GOTPLT64
-tags: [exported]
 ```
 
 ```Go
@@ -7652,7 +7131,6 @@ const R_X86_64_GOTPLT64 R_X86_64 = 30
 
 ```
 searchKey: elf.R_X86_64_PLTOFF64
-tags: [exported]
 ```
 
 ```Go
@@ -7663,7 +7141,6 @@ const R_X86_64_PLTOFF64 R_X86_64 = 31
 
 ```
 searchKey: elf.R_X86_64_SIZE32
-tags: [exported]
 ```
 
 ```Go
@@ -7674,7 +7151,6 @@ const R_X86_64_SIZE32 R_X86_64 = 32
 
 ```
 searchKey: elf.R_X86_64_SIZE64
-tags: [exported]
 ```
 
 ```Go
@@ -7685,7 +7161,6 @@ const R_X86_64_SIZE64 R_X86_64 = 33
 
 ```
 searchKey: elf.R_X86_64_GOTPC32_TLSDESC
-tags: [exported]
 ```
 
 ```Go
@@ -7696,7 +7171,6 @@ const R_X86_64_GOTPC32_TLSDESC R_X86_64 = 34
 
 ```
 searchKey: elf.R_X86_64_TLSDESC_CALL
-tags: [exported]
 ```
 
 ```Go
@@ -7707,7 +7181,6 @@ const R_X86_64_TLSDESC_CALL R_X86_64 = 35
 
 ```
 searchKey: elf.R_X86_64_TLSDESC
-tags: [exported]
 ```
 
 ```Go
@@ -7718,7 +7191,6 @@ const R_X86_64_TLSDESC R_X86_64 = 36
 
 ```
 searchKey: elf.R_X86_64_IRELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -7729,7 +7201,6 @@ const R_X86_64_IRELATIVE R_X86_64 = 37
 
 ```
 searchKey: elf.R_X86_64_RELATIVE64
-tags: [exported]
 ```
 
 ```Go
@@ -7740,7 +7211,6 @@ const R_X86_64_RELATIVE64 R_X86_64 = 38
 
 ```
 searchKey: elf.R_X86_64_PC32_BND
-tags: [exported]
 ```
 
 ```Go
@@ -7751,7 +7221,6 @@ const R_X86_64_PC32_BND R_X86_64 = 39
 
 ```
 searchKey: elf.R_X86_64_PLT32_BND
-tags: [exported]
 ```
 
 ```Go
@@ -7762,7 +7231,6 @@ const R_X86_64_PLT32_BND R_X86_64 = 40
 
 ```
 searchKey: elf.R_X86_64_GOTPCRELX
-tags: [exported]
 ```
 
 ```Go
@@ -7773,7 +7241,6 @@ const R_X86_64_GOTPCRELX R_X86_64 = 41
 
 ```
 searchKey: elf.R_X86_64_REX_GOTPCRELX
-tags: [exported]
 ```
 
 ```Go
@@ -7784,7 +7251,6 @@ const R_X86_64_REX_GOTPCRELX R_X86_64 = 42
 
 ```
 searchKey: elf.R_AARCH64_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -7795,7 +7261,6 @@ const R_AARCH64_NONE R_AARCH64 = 0
 
 ```
 searchKey: elf.R_AARCH64_P32_ABS32
-tags: [exported]
 ```
 
 ```Go
@@ -7806,7 +7271,6 @@ const R_AARCH64_P32_ABS32 R_AARCH64 = 1
 
 ```
 searchKey: elf.R_AARCH64_P32_ABS16
-tags: [exported]
 ```
 
 ```Go
@@ -7817,7 +7281,6 @@ const R_AARCH64_P32_ABS16 R_AARCH64 = 2
 
 ```
 searchKey: elf.R_AARCH64_P32_PREL32
-tags: [exported]
 ```
 
 ```Go
@@ -7828,7 +7291,6 @@ const R_AARCH64_P32_PREL32 R_AARCH64 = 3
 
 ```
 searchKey: elf.R_AARCH64_P32_PREL16
-tags: [exported]
 ```
 
 ```Go
@@ -7839,7 +7301,6 @@ const R_AARCH64_P32_PREL16 R_AARCH64 = 4
 
 ```
 searchKey: elf.R_AARCH64_P32_MOVW_UABS_G0
-tags: [exported]
 ```
 
 ```Go
@@ -7850,7 +7311,6 @@ const R_AARCH64_P32_MOVW_UABS_G0 R_AARCH64 = 5
 
 ```
 searchKey: elf.R_AARCH64_P32_MOVW_UABS_G0_NC
-tags: [exported]
 ```
 
 ```Go
@@ -7861,7 +7321,6 @@ const R_AARCH64_P32_MOVW_UABS_G0_NC R_AARCH64 = 6
 
 ```
 searchKey: elf.R_AARCH64_P32_MOVW_UABS_G1
-tags: [exported]
 ```
 
 ```Go
@@ -7872,7 +7331,6 @@ const R_AARCH64_P32_MOVW_UABS_G1 R_AARCH64 = 7
 
 ```
 searchKey: elf.R_AARCH64_P32_MOVW_SABS_G0
-tags: [exported]
 ```
 
 ```Go
@@ -7883,7 +7341,6 @@ const R_AARCH64_P32_MOVW_SABS_G0 R_AARCH64 = 8
 
 ```
 searchKey: elf.R_AARCH64_P32_LD_PREL_LO19
-tags: [exported]
 ```
 
 ```Go
@@ -7894,7 +7351,6 @@ const R_AARCH64_P32_LD_PREL_LO19 R_AARCH64 = 9
 
 ```
 searchKey: elf.R_AARCH64_P32_ADR_PREL_LO21
-tags: [exported]
 ```
 
 ```Go
@@ -7905,7 +7361,6 @@ const R_AARCH64_P32_ADR_PREL_LO21 R_AARCH64 = 10
 
 ```
 searchKey: elf.R_AARCH64_P32_ADR_PREL_PG_HI21
-tags: [exported]
 ```
 
 ```Go
@@ -7916,7 +7371,6 @@ const R_AARCH64_P32_ADR_PREL_PG_HI21 R_AARCH64 = 11
 
 ```
 searchKey: elf.R_AARCH64_P32_ADD_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -7927,7 +7381,6 @@ const R_AARCH64_P32_ADD_ABS_LO12_NC R_AARCH64 = 12
 
 ```
 searchKey: elf.R_AARCH64_P32_LDST8_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -7938,7 +7391,6 @@ const R_AARCH64_P32_LDST8_ABS_LO12_NC R_AARCH64 = 13
 
 ```
 searchKey: elf.R_AARCH64_P32_LDST16_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -7949,7 +7401,6 @@ const R_AARCH64_P32_LDST16_ABS_LO12_NC R_AARCH64 = 14
 
 ```
 searchKey: elf.R_AARCH64_P32_LDST32_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -7960,7 +7411,6 @@ const R_AARCH64_P32_LDST32_ABS_LO12_NC R_AARCH64 = 15
 
 ```
 searchKey: elf.R_AARCH64_P32_LDST64_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -7971,7 +7421,6 @@ const R_AARCH64_P32_LDST64_ABS_LO12_NC R_AARCH64 = 16
 
 ```
 searchKey: elf.R_AARCH64_P32_LDST128_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -7982,7 +7431,6 @@ const R_AARCH64_P32_LDST128_ABS_LO12_NC R_AARCH64 = 17
 
 ```
 searchKey: elf.R_AARCH64_P32_TSTBR14
-tags: [exported]
 ```
 
 ```Go
@@ -7993,7 +7441,6 @@ const R_AARCH64_P32_TSTBR14 R_AARCH64 = 18
 
 ```
 searchKey: elf.R_AARCH64_P32_CONDBR19
-tags: [exported]
 ```
 
 ```Go
@@ -8004,7 +7451,6 @@ const R_AARCH64_P32_CONDBR19 R_AARCH64 = 19
 
 ```
 searchKey: elf.R_AARCH64_P32_JUMP26
-tags: [exported]
 ```
 
 ```Go
@@ -8015,7 +7461,6 @@ const R_AARCH64_P32_JUMP26 R_AARCH64 = 20
 
 ```
 searchKey: elf.R_AARCH64_P32_CALL26
-tags: [exported]
 ```
 
 ```Go
@@ -8026,7 +7471,6 @@ const R_AARCH64_P32_CALL26 R_AARCH64 = 21
 
 ```
 searchKey: elf.R_AARCH64_P32_GOT_LD_PREL19
-tags: [exported]
 ```
 
 ```Go
@@ -8037,7 +7481,6 @@ const R_AARCH64_P32_GOT_LD_PREL19 R_AARCH64 = 25
 
 ```
 searchKey: elf.R_AARCH64_P32_ADR_GOT_PAGE
-tags: [exported]
 ```
 
 ```Go
@@ -8048,7 +7491,6 @@ const R_AARCH64_P32_ADR_GOT_PAGE R_AARCH64 = 26
 
 ```
 searchKey: elf.R_AARCH64_P32_LD32_GOT_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8059,7 +7501,6 @@ const R_AARCH64_P32_LD32_GOT_LO12_NC R_AARCH64 = 27
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSGD_ADR_PAGE21
-tags: [exported]
 ```
 
 ```Go
@@ -8070,7 +7511,6 @@ const R_AARCH64_P32_TLSGD_ADR_PAGE21 R_AARCH64 = 81
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSGD_ADD_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8081,7 +7521,6 @@ const R_AARCH64_P32_TLSGD_ADD_LO12_NC R_AARCH64 = 82
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21
-tags: [exported]
 ```
 
 ```Go
@@ -8092,7 +7531,6 @@ const R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21 R_AARCH64 = 103
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8103,7 +7541,6 @@ const R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC R_AARCH64 = 104
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19
-tags: [exported]
 ```
 
 ```Go
@@ -8114,7 +7551,6 @@ const R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19 R_AARCH64 = 105
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSLE_MOVW_TPREL_G1
-tags: [exported]
 ```
 
 ```Go
@@ -8125,7 +7561,6 @@ const R_AARCH64_P32_TLSLE_MOVW_TPREL_G1 R_AARCH64 = 106
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSLE_MOVW_TPREL_G0
-tags: [exported]
 ```
 
 ```Go
@@ -8136,7 +7571,6 @@ const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0 R_AARCH64 = 107
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8147,7 +7581,6 @@ const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC R_AARCH64 = 108
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSLE_ADD_TPREL_HI12
-tags: [exported]
 ```
 
 ```Go
@@ -8158,7 +7591,6 @@ const R_AARCH64_P32_TLSLE_ADD_TPREL_HI12 R_AARCH64 = 109
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSLE_ADD_TPREL_LO12
-tags: [exported]
 ```
 
 ```Go
@@ -8169,7 +7601,6 @@ const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12 R_AARCH64 = 110
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8180,7 +7611,6 @@ const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC R_AARCH64 = 111
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSDESC_LD_PREL19
-tags: [exported]
 ```
 
 ```Go
@@ -8191,7 +7621,6 @@ const R_AARCH64_P32_TLSDESC_LD_PREL19 R_AARCH64 = 122
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSDESC_ADR_PREL21
-tags: [exported]
 ```
 
 ```Go
@@ -8202,7 +7631,6 @@ const R_AARCH64_P32_TLSDESC_ADR_PREL21 R_AARCH64 = 123
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSDESC_ADR_PAGE21
-tags: [exported]
 ```
 
 ```Go
@@ -8213,7 +7641,6 @@ const R_AARCH64_P32_TLSDESC_ADR_PAGE21 R_AARCH64 = 124
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSDESC_LD32_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8224,7 +7651,6 @@ const R_AARCH64_P32_TLSDESC_LD32_LO12_NC R_AARCH64 = 125
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSDESC_ADD_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8235,7 +7661,6 @@ const R_AARCH64_P32_TLSDESC_ADD_LO12_NC R_AARCH64 = 126
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSDESC_CALL
-tags: [exported]
 ```
 
 ```Go
@@ -8246,7 +7671,6 @@ const R_AARCH64_P32_TLSDESC_CALL R_AARCH64 = 127
 
 ```
 searchKey: elf.R_AARCH64_P32_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -8257,7 +7681,6 @@ const R_AARCH64_P32_COPY R_AARCH64 = 180
 
 ```
 searchKey: elf.R_AARCH64_P32_GLOB_DAT
-tags: [exported]
 ```
 
 ```Go
@@ -8268,7 +7691,6 @@ const R_AARCH64_P32_GLOB_DAT R_AARCH64 = 181
 
 ```
 searchKey: elf.R_AARCH64_P32_JUMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -8279,7 +7701,6 @@ const R_AARCH64_P32_JUMP_SLOT R_AARCH64 = 182
 
 ```
 searchKey: elf.R_AARCH64_P32_RELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -8290,7 +7711,6 @@ const R_AARCH64_P32_RELATIVE R_AARCH64 = 183
 
 ```
 searchKey: elf.R_AARCH64_P32_TLS_DTPMOD
-tags: [exported]
 ```
 
 ```Go
@@ -8301,7 +7721,6 @@ const R_AARCH64_P32_TLS_DTPMOD R_AARCH64 = 184
 
 ```
 searchKey: elf.R_AARCH64_P32_TLS_DTPREL
-tags: [exported]
 ```
 
 ```Go
@@ -8312,7 +7731,6 @@ const R_AARCH64_P32_TLS_DTPREL R_AARCH64 = 185
 
 ```
 searchKey: elf.R_AARCH64_P32_TLS_TPREL
-tags: [exported]
 ```
 
 ```Go
@@ -8323,7 +7741,6 @@ const R_AARCH64_P32_TLS_TPREL R_AARCH64 = 186
 
 ```
 searchKey: elf.R_AARCH64_P32_TLSDESC
-tags: [exported]
 ```
 
 ```Go
@@ -8334,7 +7751,6 @@ const R_AARCH64_P32_TLSDESC R_AARCH64 = 187
 
 ```
 searchKey: elf.R_AARCH64_P32_IRELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -8345,7 +7761,6 @@ const R_AARCH64_P32_IRELATIVE R_AARCH64 = 188
 
 ```
 searchKey: elf.R_AARCH64_NULL
-tags: [exported]
 ```
 
 ```Go
@@ -8356,7 +7771,6 @@ const R_AARCH64_NULL R_AARCH64 = 256
 
 ```
 searchKey: elf.R_AARCH64_ABS64
-tags: [exported]
 ```
 
 ```Go
@@ -8367,7 +7781,6 @@ const R_AARCH64_ABS64 R_AARCH64 = 257
 
 ```
 searchKey: elf.R_AARCH64_ABS32
-tags: [exported]
 ```
 
 ```Go
@@ -8378,7 +7791,6 @@ const R_AARCH64_ABS32 R_AARCH64 = 258
 
 ```
 searchKey: elf.R_AARCH64_ABS16
-tags: [exported]
 ```
 
 ```Go
@@ -8389,7 +7801,6 @@ const R_AARCH64_ABS16 R_AARCH64 = 259
 
 ```
 searchKey: elf.R_AARCH64_PREL64
-tags: [exported]
 ```
 
 ```Go
@@ -8400,7 +7811,6 @@ const R_AARCH64_PREL64 R_AARCH64 = 260
 
 ```
 searchKey: elf.R_AARCH64_PREL32
-tags: [exported]
 ```
 
 ```Go
@@ -8411,7 +7821,6 @@ const R_AARCH64_PREL32 R_AARCH64 = 261
 
 ```
 searchKey: elf.R_AARCH64_PREL16
-tags: [exported]
 ```
 
 ```Go
@@ -8422,7 +7831,6 @@ const R_AARCH64_PREL16 R_AARCH64 = 262
 
 ```
 searchKey: elf.R_AARCH64_MOVW_UABS_G0
-tags: [exported]
 ```
 
 ```Go
@@ -8433,7 +7841,6 @@ const R_AARCH64_MOVW_UABS_G0 R_AARCH64 = 263
 
 ```
 searchKey: elf.R_AARCH64_MOVW_UABS_G0_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8444,7 +7851,6 @@ const R_AARCH64_MOVW_UABS_G0_NC R_AARCH64 = 264
 
 ```
 searchKey: elf.R_AARCH64_MOVW_UABS_G1
-tags: [exported]
 ```
 
 ```Go
@@ -8455,7 +7861,6 @@ const R_AARCH64_MOVW_UABS_G1 R_AARCH64 = 265
 
 ```
 searchKey: elf.R_AARCH64_MOVW_UABS_G1_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8466,7 +7871,6 @@ const R_AARCH64_MOVW_UABS_G1_NC R_AARCH64 = 266
 
 ```
 searchKey: elf.R_AARCH64_MOVW_UABS_G2
-tags: [exported]
 ```
 
 ```Go
@@ -8477,7 +7881,6 @@ const R_AARCH64_MOVW_UABS_G2 R_AARCH64 = 267
 
 ```
 searchKey: elf.R_AARCH64_MOVW_UABS_G2_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8488,7 +7891,6 @@ const R_AARCH64_MOVW_UABS_G2_NC R_AARCH64 = 268
 
 ```
 searchKey: elf.R_AARCH64_MOVW_UABS_G3
-tags: [exported]
 ```
 
 ```Go
@@ -8499,7 +7901,6 @@ const R_AARCH64_MOVW_UABS_G3 R_AARCH64 = 269
 
 ```
 searchKey: elf.R_AARCH64_MOVW_SABS_G0
-tags: [exported]
 ```
 
 ```Go
@@ -8510,7 +7911,6 @@ const R_AARCH64_MOVW_SABS_G0 R_AARCH64 = 270
 
 ```
 searchKey: elf.R_AARCH64_MOVW_SABS_G1
-tags: [exported]
 ```
 
 ```Go
@@ -8521,7 +7921,6 @@ const R_AARCH64_MOVW_SABS_G1 R_AARCH64 = 271
 
 ```
 searchKey: elf.R_AARCH64_MOVW_SABS_G2
-tags: [exported]
 ```
 
 ```Go
@@ -8532,7 +7931,6 @@ const R_AARCH64_MOVW_SABS_G2 R_AARCH64 = 272
 
 ```
 searchKey: elf.R_AARCH64_LD_PREL_LO19
-tags: [exported]
 ```
 
 ```Go
@@ -8543,7 +7941,6 @@ const R_AARCH64_LD_PREL_LO19 R_AARCH64 = 273
 
 ```
 searchKey: elf.R_AARCH64_ADR_PREL_LO21
-tags: [exported]
 ```
 
 ```Go
@@ -8554,7 +7951,6 @@ const R_AARCH64_ADR_PREL_LO21 R_AARCH64 = 274
 
 ```
 searchKey: elf.R_AARCH64_ADR_PREL_PG_HI21
-tags: [exported]
 ```
 
 ```Go
@@ -8565,7 +7961,6 @@ const R_AARCH64_ADR_PREL_PG_HI21 R_AARCH64 = 275
 
 ```
 searchKey: elf.R_AARCH64_ADR_PREL_PG_HI21_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8576,7 +7971,6 @@ const R_AARCH64_ADR_PREL_PG_HI21_NC R_AARCH64 = 276
 
 ```
 searchKey: elf.R_AARCH64_ADD_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8587,7 +7981,6 @@ const R_AARCH64_ADD_ABS_LO12_NC R_AARCH64 = 277
 
 ```
 searchKey: elf.R_AARCH64_LDST8_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8598,7 +7991,6 @@ const R_AARCH64_LDST8_ABS_LO12_NC R_AARCH64 = 278
 
 ```
 searchKey: elf.R_AARCH64_TSTBR14
-tags: [exported]
 ```
 
 ```Go
@@ -8609,7 +8001,6 @@ const R_AARCH64_TSTBR14 R_AARCH64 = 279
 
 ```
 searchKey: elf.R_AARCH64_CONDBR19
-tags: [exported]
 ```
 
 ```Go
@@ -8620,7 +8011,6 @@ const R_AARCH64_CONDBR19 R_AARCH64 = 280
 
 ```
 searchKey: elf.R_AARCH64_JUMP26
-tags: [exported]
 ```
 
 ```Go
@@ -8631,7 +8021,6 @@ const R_AARCH64_JUMP26 R_AARCH64 = 282
 
 ```
 searchKey: elf.R_AARCH64_CALL26
-tags: [exported]
 ```
 
 ```Go
@@ -8642,7 +8031,6 @@ const R_AARCH64_CALL26 R_AARCH64 = 283
 
 ```
 searchKey: elf.R_AARCH64_LDST16_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8653,7 +8041,6 @@ const R_AARCH64_LDST16_ABS_LO12_NC R_AARCH64 = 284
 
 ```
 searchKey: elf.R_AARCH64_LDST32_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8664,7 +8051,6 @@ const R_AARCH64_LDST32_ABS_LO12_NC R_AARCH64 = 285
 
 ```
 searchKey: elf.R_AARCH64_LDST64_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8675,7 +8061,6 @@ const R_AARCH64_LDST64_ABS_LO12_NC R_AARCH64 = 286
 
 ```
 searchKey: elf.R_AARCH64_LDST128_ABS_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8686,7 +8071,6 @@ const R_AARCH64_LDST128_ABS_LO12_NC R_AARCH64 = 299
 
 ```
 searchKey: elf.R_AARCH64_GOT_LD_PREL19
-tags: [exported]
 ```
 
 ```Go
@@ -8697,7 +8081,6 @@ const R_AARCH64_GOT_LD_PREL19 R_AARCH64 = 309
 
 ```
 searchKey: elf.R_AARCH64_LD64_GOTOFF_LO15
-tags: [exported]
 ```
 
 ```Go
@@ -8708,7 +8091,6 @@ const R_AARCH64_LD64_GOTOFF_LO15 R_AARCH64 = 310
 
 ```
 searchKey: elf.R_AARCH64_ADR_GOT_PAGE
-tags: [exported]
 ```
 
 ```Go
@@ -8719,7 +8101,6 @@ const R_AARCH64_ADR_GOT_PAGE R_AARCH64 = 311
 
 ```
 searchKey: elf.R_AARCH64_LD64_GOT_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8730,7 +8111,6 @@ const R_AARCH64_LD64_GOT_LO12_NC R_AARCH64 = 312
 
 ```
 searchKey: elf.R_AARCH64_LD64_GOTPAGE_LO15
-tags: [exported]
 ```
 
 ```Go
@@ -8741,7 +8121,6 @@ const R_AARCH64_LD64_GOTPAGE_LO15 R_AARCH64 = 313
 
 ```
 searchKey: elf.R_AARCH64_TLSGD_ADR_PREL21
-tags: [exported]
 ```
 
 ```Go
@@ -8752,7 +8131,6 @@ const R_AARCH64_TLSGD_ADR_PREL21 R_AARCH64 = 512
 
 ```
 searchKey: elf.R_AARCH64_TLSGD_ADR_PAGE21
-tags: [exported]
 ```
 
 ```Go
@@ -8763,7 +8141,6 @@ const R_AARCH64_TLSGD_ADR_PAGE21 R_AARCH64 = 513
 
 ```
 searchKey: elf.R_AARCH64_TLSGD_ADD_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8774,7 +8151,6 @@ const R_AARCH64_TLSGD_ADD_LO12_NC R_AARCH64 = 514
 
 ```
 searchKey: elf.R_AARCH64_TLSGD_MOVW_G1
-tags: [exported]
 ```
 
 ```Go
@@ -8785,7 +8161,6 @@ const R_AARCH64_TLSGD_MOVW_G1 R_AARCH64 = 515
 
 ```
 searchKey: elf.R_AARCH64_TLSGD_MOVW_G0_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8796,7 +8171,6 @@ const R_AARCH64_TLSGD_MOVW_G0_NC R_AARCH64 = 516
 
 ```
 searchKey: elf.R_AARCH64_TLSLD_ADR_PREL21
-tags: [exported]
 ```
 
 ```Go
@@ -8807,7 +8181,6 @@ const R_AARCH64_TLSLD_ADR_PREL21 R_AARCH64 = 517
 
 ```
 searchKey: elf.R_AARCH64_TLSLD_ADR_PAGE21
-tags: [exported]
 ```
 
 ```Go
@@ -8818,7 +8191,6 @@ const R_AARCH64_TLSLD_ADR_PAGE21 R_AARCH64 = 518
 
 ```
 searchKey: elf.R_AARCH64_TLSIE_MOVW_GOTTPREL_G1
-tags: [exported]
 ```
 
 ```Go
@@ -8829,7 +8201,6 @@ const R_AARCH64_TLSIE_MOVW_GOTTPREL_G1 R_AARCH64 = 539
 
 ```
 searchKey: elf.R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8840,7 +8211,6 @@ const R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC R_AARCH64 = 540
 
 ```
 searchKey: elf.R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21
-tags: [exported]
 ```
 
 ```Go
@@ -8851,7 +8221,6 @@ const R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21 R_AARCH64 = 541
 
 ```
 searchKey: elf.R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8862,7 +8231,6 @@ const R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC R_AARCH64 = 542
 
 ```
 searchKey: elf.R_AARCH64_TLSIE_LD_GOTTPREL_PREL19
-tags: [exported]
 ```
 
 ```Go
@@ -8873,7 +8241,6 @@ const R_AARCH64_TLSIE_LD_GOTTPREL_PREL19 R_AARCH64 = 543
 
 ```
 searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G2
-tags: [exported]
 ```
 
 ```Go
@@ -8884,7 +8251,6 @@ const R_AARCH64_TLSLE_MOVW_TPREL_G2 R_AARCH64 = 544
 
 ```
 searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G1
-tags: [exported]
 ```
 
 ```Go
@@ -8895,7 +8261,6 @@ const R_AARCH64_TLSLE_MOVW_TPREL_G1 R_AARCH64 = 545
 
 ```
 searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G1_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8906,7 +8271,6 @@ const R_AARCH64_TLSLE_MOVW_TPREL_G1_NC R_AARCH64 = 546
 
 ```
 searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G0
-tags: [exported]
 ```
 
 ```Go
@@ -8917,7 +8281,6 @@ const R_AARCH64_TLSLE_MOVW_TPREL_G0 R_AARCH64 = 547
 
 ```
 searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G0_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8928,7 +8291,6 @@ const R_AARCH64_TLSLE_MOVW_TPREL_G0_NC R_AARCH64 = 548
 
 ```
 searchKey: elf.R_AARCH64_TLSLE_ADD_TPREL_HI12
-tags: [exported]
 ```
 
 ```Go
@@ -8939,7 +8301,6 @@ const R_AARCH64_TLSLE_ADD_TPREL_HI12 R_AARCH64 = 549
 
 ```
 searchKey: elf.R_AARCH64_TLSLE_ADD_TPREL_LO12
-tags: [exported]
 ```
 
 ```Go
@@ -8950,7 +8311,6 @@ const R_AARCH64_TLSLE_ADD_TPREL_LO12 R_AARCH64 = 550
 
 ```
 searchKey: elf.R_AARCH64_TLSLE_ADD_TPREL_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -8961,7 +8321,6 @@ const R_AARCH64_TLSLE_ADD_TPREL_LO12_NC R_AARCH64 = 551
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC_LD_PREL19
-tags: [exported]
 ```
 
 ```Go
@@ -8972,7 +8331,6 @@ const R_AARCH64_TLSDESC_LD_PREL19 R_AARCH64 = 560
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC_ADR_PREL21
-tags: [exported]
 ```
 
 ```Go
@@ -8983,7 +8341,6 @@ const R_AARCH64_TLSDESC_ADR_PREL21 R_AARCH64 = 561
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC_ADR_PAGE21
-tags: [exported]
 ```
 
 ```Go
@@ -8994,7 +8351,6 @@ const R_AARCH64_TLSDESC_ADR_PAGE21 R_AARCH64 = 562
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC_LD64_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -9005,7 +8361,6 @@ const R_AARCH64_TLSDESC_LD64_LO12_NC R_AARCH64 = 563
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC_ADD_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -9016,7 +8371,6 @@ const R_AARCH64_TLSDESC_ADD_LO12_NC R_AARCH64 = 564
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC_OFF_G1
-tags: [exported]
 ```
 
 ```Go
@@ -9027,7 +8381,6 @@ const R_AARCH64_TLSDESC_OFF_G1 R_AARCH64 = 565
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC_OFF_G0_NC
-tags: [exported]
 ```
 
 ```Go
@@ -9038,7 +8391,6 @@ const R_AARCH64_TLSDESC_OFF_G0_NC R_AARCH64 = 566
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC_LDR
-tags: [exported]
 ```
 
 ```Go
@@ -9049,7 +8401,6 @@ const R_AARCH64_TLSDESC_LDR R_AARCH64 = 567
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC_ADD
-tags: [exported]
 ```
 
 ```Go
@@ -9060,7 +8411,6 @@ const R_AARCH64_TLSDESC_ADD R_AARCH64 = 568
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC_CALL
-tags: [exported]
 ```
 
 ```Go
@@ -9071,7 +8421,6 @@ const R_AARCH64_TLSDESC_CALL R_AARCH64 = 569
 
 ```
 searchKey: elf.R_AARCH64_TLSLE_LDST128_TPREL_LO12
-tags: [exported]
 ```
 
 ```Go
@@ -9082,7 +8431,6 @@ const R_AARCH64_TLSLE_LDST128_TPREL_LO12 R_AARCH64 = 570
 
 ```
 searchKey: elf.R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -9093,7 +8441,6 @@ const R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC R_AARCH64 = 571
 
 ```
 searchKey: elf.R_AARCH64_TLSLD_LDST128_DTPREL_LO12
-tags: [exported]
 ```
 
 ```Go
@@ -9104,7 +8451,6 @@ const R_AARCH64_TLSLD_LDST128_DTPREL_LO12 R_AARCH64 = 572
 
 ```
 searchKey: elf.R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -9115,7 +8461,6 @@ const R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC R_AARCH64 = 573
 
 ```
 searchKey: elf.R_AARCH64_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -9126,7 +8471,6 @@ const R_AARCH64_COPY R_AARCH64 = 1024
 
 ```
 searchKey: elf.R_AARCH64_GLOB_DAT
-tags: [exported]
 ```
 
 ```Go
@@ -9137,7 +8481,6 @@ const R_AARCH64_GLOB_DAT R_AARCH64 = 1025
 
 ```
 searchKey: elf.R_AARCH64_JUMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -9148,7 +8491,6 @@ const R_AARCH64_JUMP_SLOT R_AARCH64 = 1026
 
 ```
 searchKey: elf.R_AARCH64_RELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -9159,7 +8501,6 @@ const R_AARCH64_RELATIVE R_AARCH64 = 1027
 
 ```
 searchKey: elf.R_AARCH64_TLS_DTPMOD64
-tags: [exported]
 ```
 
 ```Go
@@ -9170,7 +8511,6 @@ const R_AARCH64_TLS_DTPMOD64 R_AARCH64 = 1028
 
 ```
 searchKey: elf.R_AARCH64_TLS_DTPREL64
-tags: [exported]
 ```
 
 ```Go
@@ -9181,7 +8521,6 @@ const R_AARCH64_TLS_DTPREL64 R_AARCH64 = 1029
 
 ```
 searchKey: elf.R_AARCH64_TLS_TPREL64
-tags: [exported]
 ```
 
 ```Go
@@ -9192,7 +8531,6 @@ const R_AARCH64_TLS_TPREL64 R_AARCH64 = 1030
 
 ```
 searchKey: elf.R_AARCH64_TLSDESC
-tags: [exported]
 ```
 
 ```Go
@@ -9203,7 +8541,6 @@ const R_AARCH64_TLSDESC R_AARCH64 = 1031
 
 ```
 searchKey: elf.R_AARCH64_IRELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -9214,7 +8551,6 @@ const R_AARCH64_IRELATIVE R_AARCH64 = 1032
 
 ```
 searchKey: elf.R_ALPHA_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -9226,7 +8562,6 @@ const R_ALPHA_NONE R_ALPHA = 0 /* No reloc */
 
 ```
 searchKey: elf.R_ALPHA_REFLONG
-tags: [exported]
 ```
 
 ```Go
@@ -9238,7 +8573,6 @@ const R_ALPHA_REFLONG R_ALPHA = 1 /* Direct 32 bit */
 
 ```
 searchKey: elf.R_ALPHA_REFQUAD
-tags: [exported]
 ```
 
 ```Go
@@ -9250,7 +8584,6 @@ const R_ALPHA_REFQUAD R_ALPHA = 2 /* Direct 64 bit */
 
 ```
 searchKey: elf.R_ALPHA_GPREL32
-tags: [exported]
 ```
 
 ```Go
@@ -9262,7 +8595,6 @@ const R_ALPHA_GPREL32 R_ALPHA = 3 /* GP relative 32 bit */
 
 ```
 searchKey: elf.R_ALPHA_LITERAL
-tags: [exported]
 ```
 
 ```Go
@@ -9274,7 +8606,6 @@ const R_ALPHA_LITERAL R_ALPHA = 4 /* GP relative 16 bit w/optimization */
 
 ```
 searchKey: elf.R_ALPHA_LITUSE
-tags: [exported]
 ```
 
 ```Go
@@ -9286,7 +8617,6 @@ const R_ALPHA_LITUSE R_ALPHA = 5 /* Optimization hint for LITERAL */
 
 ```
 searchKey: elf.R_ALPHA_GPDISP
-tags: [exported]
 ```
 
 ```Go
@@ -9298,7 +8628,6 @@ const R_ALPHA_GPDISP R_ALPHA = 6 /* Add displacement to GP */
 
 ```
 searchKey: elf.R_ALPHA_BRADDR
-tags: [exported]
 ```
 
 ```Go
@@ -9310,7 +8639,6 @@ const R_ALPHA_BRADDR R_ALPHA = 7 /* PC+4 relative 23 bit shifted */
 
 ```
 searchKey: elf.R_ALPHA_HINT
-tags: [exported]
 ```
 
 ```Go
@@ -9322,7 +8650,6 @@ const R_ALPHA_HINT R_ALPHA = 8 /* PC+4 relative 16 bit shifted */
 
 ```
 searchKey: elf.R_ALPHA_SREL16
-tags: [exported]
 ```
 
 ```Go
@@ -9334,7 +8661,6 @@ const R_ALPHA_SREL16 R_ALPHA = 9 /* PC relative 16 bit */
 
 ```
 searchKey: elf.R_ALPHA_SREL32
-tags: [exported]
 ```
 
 ```Go
@@ -9346,7 +8672,6 @@ const R_ALPHA_SREL32 R_ALPHA = 10 /* PC relative 32 bit */
 
 ```
 searchKey: elf.R_ALPHA_SREL64
-tags: [exported]
 ```
 
 ```Go
@@ -9358,7 +8683,6 @@ const R_ALPHA_SREL64 R_ALPHA = 11 /* PC relative 64 bit */
 
 ```
 searchKey: elf.R_ALPHA_OP_PUSH
-tags: [exported]
 ```
 
 ```Go
@@ -9370,7 +8694,6 @@ const R_ALPHA_OP_PUSH R_ALPHA = 12 /* OP stack push */
 
 ```
 searchKey: elf.R_ALPHA_OP_STORE
-tags: [exported]
 ```
 
 ```Go
@@ -9382,7 +8705,6 @@ const R_ALPHA_OP_STORE R_ALPHA = 13 /* OP stack pop and store */
 
 ```
 searchKey: elf.R_ALPHA_OP_PSUB
-tags: [exported]
 ```
 
 ```Go
@@ -9394,7 +8716,6 @@ const R_ALPHA_OP_PSUB R_ALPHA = 14 /* OP stack subtract */
 
 ```
 searchKey: elf.R_ALPHA_OP_PRSHIFT
-tags: [exported]
 ```
 
 ```Go
@@ -9406,7 +8727,6 @@ const R_ALPHA_OP_PRSHIFT R_ALPHA = 15 /* OP stack right shift */
 
 ```
 searchKey: elf.R_ALPHA_GPVALUE
-tags: [exported]
 ```
 
 ```Go
@@ -9417,7 +8737,6 @@ const R_ALPHA_GPVALUE R_ALPHA = 16
 
 ```
 searchKey: elf.R_ALPHA_GPRELHIGH
-tags: [exported]
 ```
 
 ```Go
@@ -9428,7 +8747,6 @@ const R_ALPHA_GPRELHIGH R_ALPHA = 17
 
 ```
 searchKey: elf.R_ALPHA_GPRELLOW
-tags: [exported]
 ```
 
 ```Go
@@ -9439,7 +8757,6 @@ const R_ALPHA_GPRELLOW R_ALPHA = 18
 
 ```
 searchKey: elf.R_ALPHA_IMMED_GP_16
-tags: [exported]
 ```
 
 ```Go
@@ -9450,7 +8767,6 @@ const R_ALPHA_IMMED_GP_16 R_ALPHA = 19
 
 ```
 searchKey: elf.R_ALPHA_IMMED_GP_HI32
-tags: [exported]
 ```
 
 ```Go
@@ -9461,7 +8777,6 @@ const R_ALPHA_IMMED_GP_HI32 R_ALPHA = 20
 
 ```
 searchKey: elf.R_ALPHA_IMMED_SCN_HI32
-tags: [exported]
 ```
 
 ```Go
@@ -9472,7 +8787,6 @@ const R_ALPHA_IMMED_SCN_HI32 R_ALPHA = 21
 
 ```
 searchKey: elf.R_ALPHA_IMMED_BR_HI32
-tags: [exported]
 ```
 
 ```Go
@@ -9483,7 +8797,6 @@ const R_ALPHA_IMMED_BR_HI32 R_ALPHA = 22
 
 ```
 searchKey: elf.R_ALPHA_IMMED_LO32
-tags: [exported]
 ```
 
 ```Go
@@ -9494,7 +8807,6 @@ const R_ALPHA_IMMED_LO32 R_ALPHA = 23
 
 ```
 searchKey: elf.R_ALPHA_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -9506,7 +8818,6 @@ const R_ALPHA_COPY R_ALPHA = 24 /* Copy symbol at runtime */
 
 ```
 searchKey: elf.R_ALPHA_GLOB_DAT
-tags: [exported]
 ```
 
 ```Go
@@ -9518,7 +8829,6 @@ const R_ALPHA_GLOB_DAT R_ALPHA = 25 /* Create GOT entry */
 
 ```
 searchKey: elf.R_ALPHA_JMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -9530,7 +8840,6 @@ const R_ALPHA_JMP_SLOT R_ALPHA = 26 /* Create PLT entry */
 
 ```
 searchKey: elf.R_ALPHA_RELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -9542,7 +8851,6 @@ const R_ALPHA_RELATIVE R_ALPHA = 27 /* Adjust by program base */
 
 ```
 searchKey: elf.R_ARM_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -9554,7 +8862,6 @@ const R_ARM_NONE R_ARM = 0 /* No relocation. */
 
 ```
 searchKey: elf.R_ARM_PC24
-tags: [exported]
 ```
 
 ```Go
@@ -9565,7 +8872,6 @@ const R_ARM_PC24 R_ARM = 1
 
 ```
 searchKey: elf.R_ARM_ABS32
-tags: [exported]
 ```
 
 ```Go
@@ -9576,7 +8882,6 @@ const R_ARM_ABS32 R_ARM = 2
 
 ```
 searchKey: elf.R_ARM_REL32
-tags: [exported]
 ```
 
 ```Go
@@ -9587,7 +8892,6 @@ const R_ARM_REL32 R_ARM = 3
 
 ```
 searchKey: elf.R_ARM_PC13
-tags: [exported]
 ```
 
 ```Go
@@ -9598,7 +8902,6 @@ const R_ARM_PC13 R_ARM = 4
 
 ```
 searchKey: elf.R_ARM_ABS16
-tags: [exported]
 ```
 
 ```Go
@@ -9609,7 +8912,6 @@ const R_ARM_ABS16 R_ARM = 5
 
 ```
 searchKey: elf.R_ARM_ABS12
-tags: [exported]
 ```
 
 ```Go
@@ -9620,7 +8922,6 @@ const R_ARM_ABS12 R_ARM = 6
 
 ```
 searchKey: elf.R_ARM_THM_ABS5
-tags: [exported]
 ```
 
 ```Go
@@ -9631,7 +8932,6 @@ const R_ARM_THM_ABS5 R_ARM = 7
 
 ```
 searchKey: elf.R_ARM_ABS8
-tags: [exported]
 ```
 
 ```Go
@@ -9642,7 +8942,6 @@ const R_ARM_ABS8 R_ARM = 8
 
 ```
 searchKey: elf.R_ARM_SBREL32
-tags: [exported]
 ```
 
 ```Go
@@ -9653,7 +8952,6 @@ const R_ARM_SBREL32 R_ARM = 9
 
 ```
 searchKey: elf.R_ARM_THM_PC22
-tags: [exported]
 ```
 
 ```Go
@@ -9664,7 +8962,6 @@ const R_ARM_THM_PC22 R_ARM = 10
 
 ```
 searchKey: elf.R_ARM_THM_PC8
-tags: [exported]
 ```
 
 ```Go
@@ -9675,7 +8972,6 @@ const R_ARM_THM_PC8 R_ARM = 11
 
 ```
 searchKey: elf.R_ARM_AMP_VCALL9
-tags: [exported]
 ```
 
 ```Go
@@ -9686,7 +8982,6 @@ const R_ARM_AMP_VCALL9 R_ARM = 12
 
 ```
 searchKey: elf.R_ARM_SWI24
-tags: [exported]
 ```
 
 ```Go
@@ -9697,7 +8992,6 @@ const R_ARM_SWI24 R_ARM = 13
 
 ```
 searchKey: elf.R_ARM_THM_SWI8
-tags: [exported]
 ```
 
 ```Go
@@ -9708,7 +9002,6 @@ const R_ARM_THM_SWI8 R_ARM = 14
 
 ```
 searchKey: elf.R_ARM_XPC25
-tags: [exported]
 ```
 
 ```Go
@@ -9719,7 +9012,6 @@ const R_ARM_XPC25 R_ARM = 15
 
 ```
 searchKey: elf.R_ARM_THM_XPC22
-tags: [exported]
 ```
 
 ```Go
@@ -9730,7 +9022,6 @@ const R_ARM_THM_XPC22 R_ARM = 16
 
 ```
 searchKey: elf.R_ARM_TLS_DTPMOD32
-tags: [exported]
 ```
 
 ```Go
@@ -9741,7 +9032,6 @@ const R_ARM_TLS_DTPMOD32 R_ARM = 17
 
 ```
 searchKey: elf.R_ARM_TLS_DTPOFF32
-tags: [exported]
 ```
 
 ```Go
@@ -9752,7 +9042,6 @@ const R_ARM_TLS_DTPOFF32 R_ARM = 18
 
 ```
 searchKey: elf.R_ARM_TLS_TPOFF32
-tags: [exported]
 ```
 
 ```Go
@@ -9763,7 +9052,6 @@ const R_ARM_TLS_TPOFF32 R_ARM = 19
 
 ```
 searchKey: elf.R_ARM_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -9775,7 +9063,6 @@ const R_ARM_COPY R_ARM = 20 /* Copy data from shared object. */
 
 ```
 searchKey: elf.R_ARM_GLOB_DAT
-tags: [exported]
 ```
 
 ```Go
@@ -9787,7 +9074,6 @@ const R_ARM_GLOB_DAT R_ARM = 21 /* Set GOT entry to data address. */
 
 ```
 searchKey: elf.R_ARM_JUMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -9799,7 +9085,6 @@ const R_ARM_JUMP_SLOT R_ARM = 22 /* Set GOT entry to code address. */
 
 ```
 searchKey: elf.R_ARM_RELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -9811,7 +9096,6 @@ const R_ARM_RELATIVE R_ARM = 23 /* Add load address of shared object. */
 
 ```
 searchKey: elf.R_ARM_GOTOFF
-tags: [exported]
 ```
 
 ```Go
@@ -9823,7 +9107,6 @@ const R_ARM_GOTOFF R_ARM = 24 /* Add GOT-relative symbol address. */
 
 ```
 searchKey: elf.R_ARM_GOTPC
-tags: [exported]
 ```
 
 ```Go
@@ -9835,7 +9118,6 @@ const R_ARM_GOTPC R_ARM = 25 /* Add PC-relative GOT table address. */
 
 ```
 searchKey: elf.R_ARM_GOT32
-tags: [exported]
 ```
 
 ```Go
@@ -9847,7 +9129,6 @@ const R_ARM_GOT32 R_ARM = 26 /* Add PC-relative GOT offset. */
 
 ```
 searchKey: elf.R_ARM_PLT32
-tags: [exported]
 ```
 
 ```Go
@@ -9859,7 +9140,6 @@ const R_ARM_PLT32 R_ARM = 27 /* Add PC-relative PLT offset. */
 
 ```
 searchKey: elf.R_ARM_CALL
-tags: [exported]
 ```
 
 ```Go
@@ -9870,7 +9150,6 @@ const R_ARM_CALL R_ARM = 28
 
 ```
 searchKey: elf.R_ARM_JUMP24
-tags: [exported]
 ```
 
 ```Go
@@ -9881,7 +9160,6 @@ const R_ARM_JUMP24 R_ARM = 29
 
 ```
 searchKey: elf.R_ARM_THM_JUMP24
-tags: [exported]
 ```
 
 ```Go
@@ -9892,7 +9170,6 @@ const R_ARM_THM_JUMP24 R_ARM = 30
 
 ```
 searchKey: elf.R_ARM_BASE_ABS
-tags: [exported]
 ```
 
 ```Go
@@ -9903,7 +9180,6 @@ const R_ARM_BASE_ABS R_ARM = 31
 
 ```
 searchKey: elf.R_ARM_ALU_PCREL_7_0
-tags: [exported]
 ```
 
 ```Go
@@ -9914,7 +9190,6 @@ const R_ARM_ALU_PCREL_7_0 R_ARM = 32
 
 ```
 searchKey: elf.R_ARM_ALU_PCREL_15_8
-tags: [exported]
 ```
 
 ```Go
@@ -9925,7 +9200,6 @@ const R_ARM_ALU_PCREL_15_8 R_ARM = 33
 
 ```
 searchKey: elf.R_ARM_ALU_PCREL_23_15
-tags: [exported]
 ```
 
 ```Go
@@ -9936,7 +9210,6 @@ const R_ARM_ALU_PCREL_23_15 R_ARM = 34
 
 ```
 searchKey: elf.R_ARM_LDR_SBREL_11_10_NC
-tags: [exported]
 ```
 
 ```Go
@@ -9947,7 +9220,6 @@ const R_ARM_LDR_SBREL_11_10_NC R_ARM = 35
 
 ```
 searchKey: elf.R_ARM_ALU_SBREL_19_12_NC
-tags: [exported]
 ```
 
 ```Go
@@ -9958,7 +9230,6 @@ const R_ARM_ALU_SBREL_19_12_NC R_ARM = 36
 
 ```
 searchKey: elf.R_ARM_ALU_SBREL_27_20_CK
-tags: [exported]
 ```
 
 ```Go
@@ -9969,7 +9240,6 @@ const R_ARM_ALU_SBREL_27_20_CK R_ARM = 37
 
 ```
 searchKey: elf.R_ARM_TARGET1
-tags: [exported]
 ```
 
 ```Go
@@ -9980,7 +9250,6 @@ const R_ARM_TARGET1 R_ARM = 38
 
 ```
 searchKey: elf.R_ARM_SBREL31
-tags: [exported]
 ```
 
 ```Go
@@ -9991,7 +9260,6 @@ const R_ARM_SBREL31 R_ARM = 39
 
 ```
 searchKey: elf.R_ARM_V4BX
-tags: [exported]
 ```
 
 ```Go
@@ -10002,7 +9270,6 @@ const R_ARM_V4BX R_ARM = 40
 
 ```
 searchKey: elf.R_ARM_TARGET2
-tags: [exported]
 ```
 
 ```Go
@@ -10013,7 +9280,6 @@ const R_ARM_TARGET2 R_ARM = 41
 
 ```
 searchKey: elf.R_ARM_PREL31
-tags: [exported]
 ```
 
 ```Go
@@ -10024,7 +9290,6 @@ const R_ARM_PREL31 R_ARM = 42
 
 ```
 searchKey: elf.R_ARM_MOVW_ABS_NC
-tags: [exported]
 ```
 
 ```Go
@@ -10035,7 +9300,6 @@ const R_ARM_MOVW_ABS_NC R_ARM = 43
 
 ```
 searchKey: elf.R_ARM_MOVT_ABS
-tags: [exported]
 ```
 
 ```Go
@@ -10046,7 +9310,6 @@ const R_ARM_MOVT_ABS R_ARM = 44
 
 ```
 searchKey: elf.R_ARM_MOVW_PREL_NC
-tags: [exported]
 ```
 
 ```Go
@@ -10057,7 +9320,6 @@ const R_ARM_MOVW_PREL_NC R_ARM = 45
 
 ```
 searchKey: elf.R_ARM_MOVT_PREL
-tags: [exported]
 ```
 
 ```Go
@@ -10068,7 +9330,6 @@ const R_ARM_MOVT_PREL R_ARM = 46
 
 ```
 searchKey: elf.R_ARM_THM_MOVW_ABS_NC
-tags: [exported]
 ```
 
 ```Go
@@ -10079,7 +9340,6 @@ const R_ARM_THM_MOVW_ABS_NC R_ARM = 47
 
 ```
 searchKey: elf.R_ARM_THM_MOVT_ABS
-tags: [exported]
 ```
 
 ```Go
@@ -10090,7 +9350,6 @@ const R_ARM_THM_MOVT_ABS R_ARM = 48
 
 ```
 searchKey: elf.R_ARM_THM_MOVW_PREL_NC
-tags: [exported]
 ```
 
 ```Go
@@ -10101,7 +9360,6 @@ const R_ARM_THM_MOVW_PREL_NC R_ARM = 49
 
 ```
 searchKey: elf.R_ARM_THM_MOVT_PREL
-tags: [exported]
 ```
 
 ```Go
@@ -10112,7 +9370,6 @@ const R_ARM_THM_MOVT_PREL R_ARM = 50
 
 ```
 searchKey: elf.R_ARM_THM_JUMP19
-tags: [exported]
 ```
 
 ```Go
@@ -10123,7 +9380,6 @@ const R_ARM_THM_JUMP19 R_ARM = 51
 
 ```
 searchKey: elf.R_ARM_THM_JUMP6
-tags: [exported]
 ```
 
 ```Go
@@ -10134,7 +9390,6 @@ const R_ARM_THM_JUMP6 R_ARM = 52
 
 ```
 searchKey: elf.R_ARM_THM_ALU_PREL_11_0
-tags: [exported]
 ```
 
 ```Go
@@ -10145,7 +9400,6 @@ const R_ARM_THM_ALU_PREL_11_0 R_ARM = 53
 
 ```
 searchKey: elf.R_ARM_THM_PC12
-tags: [exported]
 ```
 
 ```Go
@@ -10156,7 +9410,6 @@ const R_ARM_THM_PC12 R_ARM = 54
 
 ```
 searchKey: elf.R_ARM_ABS32_NOI
-tags: [exported]
 ```
 
 ```Go
@@ -10167,7 +9420,6 @@ const R_ARM_ABS32_NOI R_ARM = 55
 
 ```
 searchKey: elf.R_ARM_REL32_NOI
-tags: [exported]
 ```
 
 ```Go
@@ -10178,7 +9430,6 @@ const R_ARM_REL32_NOI R_ARM = 56
 
 ```
 searchKey: elf.R_ARM_ALU_PC_G0_NC
-tags: [exported]
 ```
 
 ```Go
@@ -10189,7 +9440,6 @@ const R_ARM_ALU_PC_G0_NC R_ARM = 57
 
 ```
 searchKey: elf.R_ARM_ALU_PC_G0
-tags: [exported]
 ```
 
 ```Go
@@ -10200,7 +9450,6 @@ const R_ARM_ALU_PC_G0 R_ARM = 58
 
 ```
 searchKey: elf.R_ARM_ALU_PC_G1_NC
-tags: [exported]
 ```
 
 ```Go
@@ -10211,7 +9460,6 @@ const R_ARM_ALU_PC_G1_NC R_ARM = 59
 
 ```
 searchKey: elf.R_ARM_ALU_PC_G1
-tags: [exported]
 ```
 
 ```Go
@@ -10222,7 +9470,6 @@ const R_ARM_ALU_PC_G1 R_ARM = 60
 
 ```
 searchKey: elf.R_ARM_ALU_PC_G2
-tags: [exported]
 ```
 
 ```Go
@@ -10233,7 +9480,6 @@ const R_ARM_ALU_PC_G2 R_ARM = 61
 
 ```
 searchKey: elf.R_ARM_LDR_PC_G1
-tags: [exported]
 ```
 
 ```Go
@@ -10244,7 +9490,6 @@ const R_ARM_LDR_PC_G1 R_ARM = 62
 
 ```
 searchKey: elf.R_ARM_LDR_PC_G2
-tags: [exported]
 ```
 
 ```Go
@@ -10255,7 +9500,6 @@ const R_ARM_LDR_PC_G2 R_ARM = 63
 
 ```
 searchKey: elf.R_ARM_LDRS_PC_G0
-tags: [exported]
 ```
 
 ```Go
@@ -10266,7 +9510,6 @@ const R_ARM_LDRS_PC_G0 R_ARM = 64
 
 ```
 searchKey: elf.R_ARM_LDRS_PC_G1
-tags: [exported]
 ```
 
 ```Go
@@ -10277,7 +9520,6 @@ const R_ARM_LDRS_PC_G1 R_ARM = 65
 
 ```
 searchKey: elf.R_ARM_LDRS_PC_G2
-tags: [exported]
 ```
 
 ```Go
@@ -10288,7 +9530,6 @@ const R_ARM_LDRS_PC_G2 R_ARM = 66
 
 ```
 searchKey: elf.R_ARM_LDC_PC_G0
-tags: [exported]
 ```
 
 ```Go
@@ -10299,7 +9540,6 @@ const R_ARM_LDC_PC_G0 R_ARM = 67
 
 ```
 searchKey: elf.R_ARM_LDC_PC_G1
-tags: [exported]
 ```
 
 ```Go
@@ -10310,7 +9550,6 @@ const R_ARM_LDC_PC_G1 R_ARM = 68
 
 ```
 searchKey: elf.R_ARM_LDC_PC_G2
-tags: [exported]
 ```
 
 ```Go
@@ -10321,7 +9560,6 @@ const R_ARM_LDC_PC_G2 R_ARM = 69
 
 ```
 searchKey: elf.R_ARM_ALU_SB_G0_NC
-tags: [exported]
 ```
 
 ```Go
@@ -10332,7 +9570,6 @@ const R_ARM_ALU_SB_G0_NC R_ARM = 70
 
 ```
 searchKey: elf.R_ARM_ALU_SB_G0
-tags: [exported]
 ```
 
 ```Go
@@ -10343,7 +9580,6 @@ const R_ARM_ALU_SB_G0 R_ARM = 71
 
 ```
 searchKey: elf.R_ARM_ALU_SB_G1_NC
-tags: [exported]
 ```
 
 ```Go
@@ -10354,7 +9590,6 @@ const R_ARM_ALU_SB_G1_NC R_ARM = 72
 
 ```
 searchKey: elf.R_ARM_ALU_SB_G1
-tags: [exported]
 ```
 
 ```Go
@@ -10365,7 +9600,6 @@ const R_ARM_ALU_SB_G1 R_ARM = 73
 
 ```
 searchKey: elf.R_ARM_ALU_SB_G2
-tags: [exported]
 ```
 
 ```Go
@@ -10376,7 +9610,6 @@ const R_ARM_ALU_SB_G2 R_ARM = 74
 
 ```
 searchKey: elf.R_ARM_LDR_SB_G0
-tags: [exported]
 ```
 
 ```Go
@@ -10387,7 +9620,6 @@ const R_ARM_LDR_SB_G0 R_ARM = 75
 
 ```
 searchKey: elf.R_ARM_LDR_SB_G1
-tags: [exported]
 ```
 
 ```Go
@@ -10398,7 +9630,6 @@ const R_ARM_LDR_SB_G1 R_ARM = 76
 
 ```
 searchKey: elf.R_ARM_LDR_SB_G2
-tags: [exported]
 ```
 
 ```Go
@@ -10409,7 +9640,6 @@ const R_ARM_LDR_SB_G2 R_ARM = 77
 
 ```
 searchKey: elf.R_ARM_LDRS_SB_G0
-tags: [exported]
 ```
 
 ```Go
@@ -10420,7 +9650,6 @@ const R_ARM_LDRS_SB_G0 R_ARM = 78
 
 ```
 searchKey: elf.R_ARM_LDRS_SB_G1
-tags: [exported]
 ```
 
 ```Go
@@ -10431,7 +9660,6 @@ const R_ARM_LDRS_SB_G1 R_ARM = 79
 
 ```
 searchKey: elf.R_ARM_LDRS_SB_G2
-tags: [exported]
 ```
 
 ```Go
@@ -10442,7 +9670,6 @@ const R_ARM_LDRS_SB_G2 R_ARM = 80
 
 ```
 searchKey: elf.R_ARM_LDC_SB_G0
-tags: [exported]
 ```
 
 ```Go
@@ -10453,7 +9680,6 @@ const R_ARM_LDC_SB_G0 R_ARM = 81
 
 ```
 searchKey: elf.R_ARM_LDC_SB_G1
-tags: [exported]
 ```
 
 ```Go
@@ -10464,7 +9690,6 @@ const R_ARM_LDC_SB_G1 R_ARM = 82
 
 ```
 searchKey: elf.R_ARM_LDC_SB_G2
-tags: [exported]
 ```
 
 ```Go
@@ -10475,7 +9700,6 @@ const R_ARM_LDC_SB_G2 R_ARM = 83
 
 ```
 searchKey: elf.R_ARM_MOVW_BREL_NC
-tags: [exported]
 ```
 
 ```Go
@@ -10486,7 +9710,6 @@ const R_ARM_MOVW_BREL_NC R_ARM = 84
 
 ```
 searchKey: elf.R_ARM_MOVT_BREL
-tags: [exported]
 ```
 
 ```Go
@@ -10497,7 +9720,6 @@ const R_ARM_MOVT_BREL R_ARM = 85
 
 ```
 searchKey: elf.R_ARM_MOVW_BREL
-tags: [exported]
 ```
 
 ```Go
@@ -10508,7 +9730,6 @@ const R_ARM_MOVW_BREL R_ARM = 86
 
 ```
 searchKey: elf.R_ARM_THM_MOVW_BREL_NC
-tags: [exported]
 ```
 
 ```Go
@@ -10519,7 +9740,6 @@ const R_ARM_THM_MOVW_BREL_NC R_ARM = 87
 
 ```
 searchKey: elf.R_ARM_THM_MOVT_BREL
-tags: [exported]
 ```
 
 ```Go
@@ -10530,7 +9750,6 @@ const R_ARM_THM_MOVT_BREL R_ARM = 88
 
 ```
 searchKey: elf.R_ARM_THM_MOVW_BREL
-tags: [exported]
 ```
 
 ```Go
@@ -10541,7 +9760,6 @@ const R_ARM_THM_MOVW_BREL R_ARM = 89
 
 ```
 searchKey: elf.R_ARM_TLS_GOTDESC
-tags: [exported]
 ```
 
 ```Go
@@ -10552,7 +9770,6 @@ const R_ARM_TLS_GOTDESC R_ARM = 90
 
 ```
 searchKey: elf.R_ARM_TLS_CALL
-tags: [exported]
 ```
 
 ```Go
@@ -10563,7 +9780,6 @@ const R_ARM_TLS_CALL R_ARM = 91
 
 ```
 searchKey: elf.R_ARM_TLS_DESCSEQ
-tags: [exported]
 ```
 
 ```Go
@@ -10574,7 +9790,6 @@ const R_ARM_TLS_DESCSEQ R_ARM = 92
 
 ```
 searchKey: elf.R_ARM_THM_TLS_CALL
-tags: [exported]
 ```
 
 ```Go
@@ -10585,7 +9800,6 @@ const R_ARM_THM_TLS_CALL R_ARM = 93
 
 ```
 searchKey: elf.R_ARM_PLT32_ABS
-tags: [exported]
 ```
 
 ```Go
@@ -10596,7 +9810,6 @@ const R_ARM_PLT32_ABS R_ARM = 94
 
 ```
 searchKey: elf.R_ARM_GOT_ABS
-tags: [exported]
 ```
 
 ```Go
@@ -10607,7 +9820,6 @@ const R_ARM_GOT_ABS R_ARM = 95
 
 ```
 searchKey: elf.R_ARM_GOT_PREL
-tags: [exported]
 ```
 
 ```Go
@@ -10618,7 +9830,6 @@ const R_ARM_GOT_PREL R_ARM = 96
 
 ```
 searchKey: elf.R_ARM_GOT_BREL12
-tags: [exported]
 ```
 
 ```Go
@@ -10629,7 +9840,6 @@ const R_ARM_GOT_BREL12 R_ARM = 97
 
 ```
 searchKey: elf.R_ARM_GOTOFF12
-tags: [exported]
 ```
 
 ```Go
@@ -10640,7 +9850,6 @@ const R_ARM_GOTOFF12 R_ARM = 98
 
 ```
 searchKey: elf.R_ARM_GOTRELAX
-tags: [exported]
 ```
 
 ```Go
@@ -10651,7 +9860,6 @@ const R_ARM_GOTRELAX R_ARM = 99
 
 ```
 searchKey: elf.R_ARM_GNU_VTENTRY
-tags: [exported]
 ```
 
 ```Go
@@ -10662,7 +9870,6 @@ const R_ARM_GNU_VTENTRY R_ARM = 100
 
 ```
 searchKey: elf.R_ARM_GNU_VTINHERIT
-tags: [exported]
 ```
 
 ```Go
@@ -10673,7 +9880,6 @@ const R_ARM_GNU_VTINHERIT R_ARM = 101
 
 ```
 searchKey: elf.R_ARM_THM_JUMP11
-tags: [exported]
 ```
 
 ```Go
@@ -10684,7 +9890,6 @@ const R_ARM_THM_JUMP11 R_ARM = 102
 
 ```
 searchKey: elf.R_ARM_THM_JUMP8
-tags: [exported]
 ```
 
 ```Go
@@ -10695,7 +9900,6 @@ const R_ARM_THM_JUMP8 R_ARM = 103
 
 ```
 searchKey: elf.R_ARM_TLS_GD32
-tags: [exported]
 ```
 
 ```Go
@@ -10706,7 +9910,6 @@ const R_ARM_TLS_GD32 R_ARM = 104
 
 ```
 searchKey: elf.R_ARM_TLS_LDM32
-tags: [exported]
 ```
 
 ```Go
@@ -10717,7 +9920,6 @@ const R_ARM_TLS_LDM32 R_ARM = 105
 
 ```
 searchKey: elf.R_ARM_TLS_LDO32
-tags: [exported]
 ```
 
 ```Go
@@ -10728,7 +9930,6 @@ const R_ARM_TLS_LDO32 R_ARM = 106
 
 ```
 searchKey: elf.R_ARM_TLS_IE32
-tags: [exported]
 ```
 
 ```Go
@@ -10739,7 +9940,6 @@ const R_ARM_TLS_IE32 R_ARM = 107
 
 ```
 searchKey: elf.R_ARM_TLS_LE32
-tags: [exported]
 ```
 
 ```Go
@@ -10750,7 +9950,6 @@ const R_ARM_TLS_LE32 R_ARM = 108
 
 ```
 searchKey: elf.R_ARM_TLS_LDO12
-tags: [exported]
 ```
 
 ```Go
@@ -10761,7 +9960,6 @@ const R_ARM_TLS_LDO12 R_ARM = 109
 
 ```
 searchKey: elf.R_ARM_TLS_LE12
-tags: [exported]
 ```
 
 ```Go
@@ -10772,7 +9970,6 @@ const R_ARM_TLS_LE12 R_ARM = 110
 
 ```
 searchKey: elf.R_ARM_TLS_IE12GP
-tags: [exported]
 ```
 
 ```Go
@@ -10783,7 +9980,6 @@ const R_ARM_TLS_IE12GP R_ARM = 111
 
 ```
 searchKey: elf.R_ARM_PRIVATE_0
-tags: [exported]
 ```
 
 ```Go
@@ -10794,7 +9990,6 @@ const R_ARM_PRIVATE_0 R_ARM = 112
 
 ```
 searchKey: elf.R_ARM_PRIVATE_1
-tags: [exported]
 ```
 
 ```Go
@@ -10805,7 +10000,6 @@ const R_ARM_PRIVATE_1 R_ARM = 113
 
 ```
 searchKey: elf.R_ARM_PRIVATE_2
-tags: [exported]
 ```
 
 ```Go
@@ -10816,7 +10010,6 @@ const R_ARM_PRIVATE_2 R_ARM = 114
 
 ```
 searchKey: elf.R_ARM_PRIVATE_3
-tags: [exported]
 ```
 
 ```Go
@@ -10827,7 +10020,6 @@ const R_ARM_PRIVATE_3 R_ARM = 115
 
 ```
 searchKey: elf.R_ARM_PRIVATE_4
-tags: [exported]
 ```
 
 ```Go
@@ -10838,7 +10030,6 @@ const R_ARM_PRIVATE_4 R_ARM = 116
 
 ```
 searchKey: elf.R_ARM_PRIVATE_5
-tags: [exported]
 ```
 
 ```Go
@@ -10849,7 +10040,6 @@ const R_ARM_PRIVATE_5 R_ARM = 117
 
 ```
 searchKey: elf.R_ARM_PRIVATE_6
-tags: [exported]
 ```
 
 ```Go
@@ -10860,7 +10050,6 @@ const R_ARM_PRIVATE_6 R_ARM = 118
 
 ```
 searchKey: elf.R_ARM_PRIVATE_7
-tags: [exported]
 ```
 
 ```Go
@@ -10871,7 +10060,6 @@ const R_ARM_PRIVATE_7 R_ARM = 119
 
 ```
 searchKey: elf.R_ARM_PRIVATE_8
-tags: [exported]
 ```
 
 ```Go
@@ -10882,7 +10070,6 @@ const R_ARM_PRIVATE_8 R_ARM = 120
 
 ```
 searchKey: elf.R_ARM_PRIVATE_9
-tags: [exported]
 ```
 
 ```Go
@@ -10893,7 +10080,6 @@ const R_ARM_PRIVATE_9 R_ARM = 121
 
 ```
 searchKey: elf.R_ARM_PRIVATE_10
-tags: [exported]
 ```
 
 ```Go
@@ -10904,7 +10090,6 @@ const R_ARM_PRIVATE_10 R_ARM = 122
 
 ```
 searchKey: elf.R_ARM_PRIVATE_11
-tags: [exported]
 ```
 
 ```Go
@@ -10915,7 +10100,6 @@ const R_ARM_PRIVATE_11 R_ARM = 123
 
 ```
 searchKey: elf.R_ARM_PRIVATE_12
-tags: [exported]
 ```
 
 ```Go
@@ -10926,7 +10110,6 @@ const R_ARM_PRIVATE_12 R_ARM = 124
 
 ```
 searchKey: elf.R_ARM_PRIVATE_13
-tags: [exported]
 ```
 
 ```Go
@@ -10937,7 +10120,6 @@ const R_ARM_PRIVATE_13 R_ARM = 125
 
 ```
 searchKey: elf.R_ARM_PRIVATE_14
-tags: [exported]
 ```
 
 ```Go
@@ -10948,7 +10130,6 @@ const R_ARM_PRIVATE_14 R_ARM = 126
 
 ```
 searchKey: elf.R_ARM_PRIVATE_15
-tags: [exported]
 ```
 
 ```Go
@@ -10959,7 +10140,6 @@ const R_ARM_PRIVATE_15 R_ARM = 127
 
 ```
 searchKey: elf.R_ARM_ME_TOO
-tags: [exported]
 ```
 
 ```Go
@@ -10970,7 +10150,6 @@ const R_ARM_ME_TOO R_ARM = 128
 
 ```
 searchKey: elf.R_ARM_THM_TLS_DESCSEQ16
-tags: [exported]
 ```
 
 ```Go
@@ -10981,7 +10160,6 @@ const R_ARM_THM_TLS_DESCSEQ16 R_ARM = 129
 
 ```
 searchKey: elf.R_ARM_THM_TLS_DESCSEQ32
-tags: [exported]
 ```
 
 ```Go
@@ -10992,7 +10170,6 @@ const R_ARM_THM_TLS_DESCSEQ32 R_ARM = 130
 
 ```
 searchKey: elf.R_ARM_THM_GOT_BREL12
-tags: [exported]
 ```
 
 ```Go
@@ -11003,7 +10180,6 @@ const R_ARM_THM_GOT_BREL12 R_ARM = 131
 
 ```
 searchKey: elf.R_ARM_THM_ALU_ABS_G0_NC
-tags: [exported]
 ```
 
 ```Go
@@ -11014,7 +10190,6 @@ const R_ARM_THM_ALU_ABS_G0_NC R_ARM = 132
 
 ```
 searchKey: elf.R_ARM_THM_ALU_ABS_G1_NC
-tags: [exported]
 ```
 
 ```Go
@@ -11025,7 +10200,6 @@ const R_ARM_THM_ALU_ABS_G1_NC R_ARM = 133
 
 ```
 searchKey: elf.R_ARM_THM_ALU_ABS_G2_NC
-tags: [exported]
 ```
 
 ```Go
@@ -11036,7 +10210,6 @@ const R_ARM_THM_ALU_ABS_G2_NC R_ARM = 134
 
 ```
 searchKey: elf.R_ARM_THM_ALU_ABS_G3
-tags: [exported]
 ```
 
 ```Go
@@ -11047,7 +10220,6 @@ const R_ARM_THM_ALU_ABS_G3 R_ARM = 135
 
 ```
 searchKey: elf.R_ARM_IRELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -11058,7 +10230,6 @@ const R_ARM_IRELATIVE R_ARM = 160
 
 ```
 searchKey: elf.R_ARM_RXPC25
-tags: [exported]
 ```
 
 ```Go
@@ -11069,7 +10240,6 @@ const R_ARM_RXPC25 R_ARM = 249
 
 ```
 searchKey: elf.R_ARM_RSBREL32
-tags: [exported]
 ```
 
 ```Go
@@ -11080,7 +10250,6 @@ const R_ARM_RSBREL32 R_ARM = 250
 
 ```
 searchKey: elf.R_ARM_THM_RPC22
-tags: [exported]
 ```
 
 ```Go
@@ -11091,7 +10260,6 @@ const R_ARM_THM_RPC22 R_ARM = 251
 
 ```
 searchKey: elf.R_ARM_RREL32
-tags: [exported]
 ```
 
 ```Go
@@ -11102,7 +10270,6 @@ const R_ARM_RREL32 R_ARM = 252
 
 ```
 searchKey: elf.R_ARM_RABS32
-tags: [exported]
 ```
 
 ```Go
@@ -11113,7 +10280,6 @@ const R_ARM_RABS32 R_ARM = 253
 
 ```
 searchKey: elf.R_ARM_RPC24
-tags: [exported]
 ```
 
 ```Go
@@ -11124,7 +10290,6 @@ const R_ARM_RPC24 R_ARM = 254
 
 ```
 searchKey: elf.R_ARM_RBASE
-tags: [exported]
 ```
 
 ```Go
@@ -11135,7 +10300,6 @@ const R_ARM_RBASE R_ARM = 255
 
 ```
 searchKey: elf.R_386_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -11147,7 +10311,6 @@ const R_386_NONE R_386 = 0 /* No relocation. */
 
 ```
 searchKey: elf.R_386_32
-tags: [exported]
 ```
 
 ```Go
@@ -11159,7 +10322,6 @@ const R_386_32 R_386 = 1 /* Add symbol value. */
 
 ```
 searchKey: elf.R_386_PC32
-tags: [exported]
 ```
 
 ```Go
@@ -11171,7 +10333,6 @@ const R_386_PC32 R_386 = 2 /* Add PC-relative symbol value. */
 
 ```
 searchKey: elf.R_386_GOT32
-tags: [exported]
 ```
 
 ```Go
@@ -11183,7 +10344,6 @@ const R_386_GOT32 R_386 = 3 /* Add PC-relative GOT offset. */
 
 ```
 searchKey: elf.R_386_PLT32
-tags: [exported]
 ```
 
 ```Go
@@ -11195,7 +10355,6 @@ const R_386_PLT32 R_386 = 4 /* Add PC-relative PLT offset. */
 
 ```
 searchKey: elf.R_386_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -11207,7 +10366,6 @@ const R_386_COPY R_386 = 5 /* Copy data from shared object. */
 
 ```
 searchKey: elf.R_386_GLOB_DAT
-tags: [exported]
 ```
 
 ```Go
@@ -11219,7 +10377,6 @@ const R_386_GLOB_DAT R_386 = 6 /* Set GOT entry to data address. */
 
 ```
 searchKey: elf.R_386_JMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -11231,7 +10388,6 @@ const R_386_JMP_SLOT R_386 = 7 /* Set GOT entry to code address. */
 
 ```
 searchKey: elf.R_386_RELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -11243,7 +10399,6 @@ const R_386_RELATIVE R_386 = 8 /* Add load address of shared object. */
 
 ```
 searchKey: elf.R_386_GOTOFF
-tags: [exported]
 ```
 
 ```Go
@@ -11255,7 +10410,6 @@ const R_386_GOTOFF R_386 = 9 /* Add GOT-relative symbol address. */
 
 ```
 searchKey: elf.R_386_GOTPC
-tags: [exported]
 ```
 
 ```Go
@@ -11267,7 +10421,6 @@ const R_386_GOTPC R_386 = 10 /* Add PC-relative GOT table address. */
 
 ```
 searchKey: elf.R_386_32PLT
-tags: [exported]
 ```
 
 ```Go
@@ -11278,7 +10431,6 @@ const R_386_32PLT R_386 = 11
 
 ```
 searchKey: elf.R_386_TLS_TPOFF
-tags: [exported]
 ```
 
 ```Go
@@ -11290,7 +10442,6 @@ const R_386_TLS_TPOFF R_386 = 14 /* Negative offset in static TLS block */
 
 ```
 searchKey: elf.R_386_TLS_IE
-tags: [exported]
 ```
 
 ```Go
@@ -11302,7 +10453,6 @@ const R_386_TLS_IE R_386 = 15 /* Absolute address of GOT for -ve static TLS */
 
 ```
 searchKey: elf.R_386_TLS_GOTIE
-tags: [exported]
 ```
 
 ```Go
@@ -11314,7 +10464,6 @@ const R_386_TLS_GOTIE R_386 = 16 /* GOT entry for negative static TLS block */
 
 ```
 searchKey: elf.R_386_TLS_LE
-tags: [exported]
 ```
 
 ```Go
@@ -11326,7 +10475,6 @@ const R_386_TLS_LE R_386 = 17 /* Negative offset relative to static TLS */
 
 ```
 searchKey: elf.R_386_TLS_GD
-tags: [exported]
 ```
 
 ```Go
@@ -11338,7 +10486,6 @@ const R_386_TLS_GD R_386 = 18 /* 32 bit offset to GOT (index,off) pair */
 
 ```
 searchKey: elf.R_386_TLS_LDM
-tags: [exported]
 ```
 
 ```Go
@@ -11350,7 +10497,6 @@ const R_386_TLS_LDM R_386 = 19 /* 32 bit offset to GOT (index,zero) pair */
 
 ```
 searchKey: elf.R_386_16
-tags: [exported]
 ```
 
 ```Go
@@ -11361,7 +10507,6 @@ const R_386_16 R_386 = 20
 
 ```
 searchKey: elf.R_386_PC16
-tags: [exported]
 ```
 
 ```Go
@@ -11372,7 +10517,6 @@ const R_386_PC16 R_386 = 21
 
 ```
 searchKey: elf.R_386_8
-tags: [exported]
 ```
 
 ```Go
@@ -11383,7 +10527,6 @@ const R_386_8 R_386 = 22
 
 ```
 searchKey: elf.R_386_PC8
-tags: [exported]
 ```
 
 ```Go
@@ -11394,7 +10537,6 @@ const R_386_PC8 R_386 = 23
 
 ```
 searchKey: elf.R_386_TLS_GD_32
-tags: [exported]
 ```
 
 ```Go
@@ -11406,7 +10548,6 @@ const R_386_TLS_GD_32 R_386 = 24 /* 32 bit offset to GOT (index,off) pair */
 
 ```
 searchKey: elf.R_386_TLS_GD_PUSH
-tags: [exported]
 ```
 
 ```Go
@@ -11418,7 +10559,6 @@ const R_386_TLS_GD_PUSH R_386 = 25 /* pushl instruction for Sun ABI GD sequence 
 
 ```
 searchKey: elf.R_386_TLS_GD_CALL
-tags: [exported]
 ```
 
 ```Go
@@ -11430,7 +10570,6 @@ const R_386_TLS_GD_CALL R_386 = 26 /* call instruction for Sun ABI GD sequence *
 
 ```
 searchKey: elf.R_386_TLS_GD_POP
-tags: [exported]
 ```
 
 ```Go
@@ -11442,7 +10581,6 @@ const R_386_TLS_GD_POP R_386 = 27 /* popl instruction for Sun ABI GD sequence */
 
 ```
 searchKey: elf.R_386_TLS_LDM_32
-tags: [exported]
 ```
 
 ```Go
@@ -11454,7 +10592,6 @@ const R_386_TLS_LDM_32 R_386 = 28 /* 32 bit offset to GOT (index,zero) pair */
 
 ```
 searchKey: elf.R_386_TLS_LDM_PUSH
-tags: [exported]
 ```
 
 ```Go
@@ -11466,7 +10603,6 @@ const R_386_TLS_LDM_PUSH R_386 = 29 /* pushl instruction for Sun ABI LD sequence
 
 ```
 searchKey: elf.R_386_TLS_LDM_CALL
-tags: [exported]
 ```
 
 ```Go
@@ -11478,7 +10614,6 @@ const R_386_TLS_LDM_CALL R_386 = 30 /* call instruction for Sun ABI LD sequence 
 
 ```
 searchKey: elf.R_386_TLS_LDM_POP
-tags: [exported]
 ```
 
 ```Go
@@ -11490,7 +10625,6 @@ const R_386_TLS_LDM_POP R_386 = 31 /* popl instruction for Sun ABI LD sequence *
 
 ```
 searchKey: elf.R_386_TLS_LDO_32
-tags: [exported]
 ```
 
 ```Go
@@ -11502,7 +10636,6 @@ const R_386_TLS_LDO_32 R_386 = 32 /* 32 bit offset from start of TLS block */
 
 ```
 searchKey: elf.R_386_TLS_IE_32
-tags: [exported]
 ```
 
 ```Go
@@ -11514,7 +10647,6 @@ const R_386_TLS_IE_32 R_386 = 33 /* 32 bit offset to GOT static TLS offset entry
 
 ```
 searchKey: elf.R_386_TLS_LE_32
-tags: [exported]
 ```
 
 ```Go
@@ -11526,7 +10658,6 @@ const R_386_TLS_LE_32 R_386 = 34 /* 32 bit offset within static TLS block */
 
 ```
 searchKey: elf.R_386_TLS_DTPMOD32
-tags: [exported]
 ```
 
 ```Go
@@ -11538,7 +10669,6 @@ const R_386_TLS_DTPMOD32 R_386 = 35 /* GOT entry containing TLS index */
 
 ```
 searchKey: elf.R_386_TLS_DTPOFF32
-tags: [exported]
 ```
 
 ```Go
@@ -11550,7 +10680,6 @@ const R_386_TLS_DTPOFF32 R_386 = 36 /* GOT entry containing TLS offset */
 
 ```
 searchKey: elf.R_386_TLS_TPOFF32
-tags: [exported]
 ```
 
 ```Go
@@ -11562,7 +10691,6 @@ const R_386_TLS_TPOFF32 R_386 = 37 /* GOT entry of -ve static TLS offset */
 
 ```
 searchKey: elf.R_386_SIZE32
-tags: [exported]
 ```
 
 ```Go
@@ -11573,7 +10701,6 @@ const R_386_SIZE32 R_386 = 38
 
 ```
 searchKey: elf.R_386_TLS_GOTDESC
-tags: [exported]
 ```
 
 ```Go
@@ -11584,7 +10711,6 @@ const R_386_TLS_GOTDESC R_386 = 39
 
 ```
 searchKey: elf.R_386_TLS_DESC_CALL
-tags: [exported]
 ```
 
 ```Go
@@ -11595,7 +10721,6 @@ const R_386_TLS_DESC_CALL R_386 = 40
 
 ```
 searchKey: elf.R_386_TLS_DESC
-tags: [exported]
 ```
 
 ```Go
@@ -11606,7 +10731,6 @@ const R_386_TLS_DESC R_386 = 41
 
 ```
 searchKey: elf.R_386_IRELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -11617,7 +10741,6 @@ const R_386_IRELATIVE R_386 = 42
 
 ```
 searchKey: elf.R_386_GOT32X
-tags: [exported]
 ```
 
 ```Go
@@ -11628,7 +10751,6 @@ const R_386_GOT32X R_386 = 43
 
 ```
 searchKey: elf.R_MIPS_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -11639,7 +10761,6 @@ const R_MIPS_NONE R_MIPS = 0
 
 ```
 searchKey: elf.R_MIPS_16
-tags: [exported]
 ```
 
 ```Go
@@ -11650,7 +10771,6 @@ const R_MIPS_16 R_MIPS = 1
 
 ```
 searchKey: elf.R_MIPS_32
-tags: [exported]
 ```
 
 ```Go
@@ -11661,7 +10781,6 @@ const R_MIPS_32 R_MIPS = 2
 
 ```
 searchKey: elf.R_MIPS_REL32
-tags: [exported]
 ```
 
 ```Go
@@ -11672,7 +10791,6 @@ const R_MIPS_REL32 R_MIPS = 3
 
 ```
 searchKey: elf.R_MIPS_26
-tags: [exported]
 ```
 
 ```Go
@@ -11683,7 +10801,6 @@ const R_MIPS_26 R_MIPS = 4
 
 ```
 searchKey: elf.R_MIPS_HI16
-tags: [exported]
 ```
 
 ```Go
@@ -11695,7 +10812,6 @@ const R_MIPS_HI16 R_MIPS = 5 /* high 16 bits of symbol value */
 
 ```
 searchKey: elf.R_MIPS_LO16
-tags: [exported]
 ```
 
 ```Go
@@ -11707,7 +10823,6 @@ const R_MIPS_LO16 R_MIPS = 6 /* low 16 bits of symbol value */
 
 ```
 searchKey: elf.R_MIPS_GPREL16
-tags: [exported]
 ```
 
 ```Go
@@ -11719,7 +10834,6 @@ const R_MIPS_GPREL16 R_MIPS = 7 /* GP-relative reference  */
 
 ```
 searchKey: elf.R_MIPS_LITERAL
-tags: [exported]
 ```
 
 ```Go
@@ -11731,7 +10845,6 @@ const R_MIPS_LITERAL R_MIPS = 8 /* Reference to literal section  */
 
 ```
 searchKey: elf.R_MIPS_GOT16
-tags: [exported]
 ```
 
 ```Go
@@ -11743,7 +10856,6 @@ const R_MIPS_GOT16 R_MIPS = 9 /* Reference to global offset table */
 
 ```
 searchKey: elf.R_MIPS_PC16
-tags: [exported]
 ```
 
 ```Go
@@ -11755,7 +10867,6 @@ const R_MIPS_PC16 R_MIPS = 10 /* 16 bit PC relative reference */
 
 ```
 searchKey: elf.R_MIPS_CALL16
-tags: [exported]
 ```
 
 ```Go
@@ -11767,7 +10878,6 @@ const R_MIPS_CALL16 R_MIPS = 11 /* 16 bit call through glbl offset tbl */
 
 ```
 searchKey: elf.R_MIPS_GPREL32
-tags: [exported]
 ```
 
 ```Go
@@ -11778,7 +10888,6 @@ const R_MIPS_GPREL32 R_MIPS = 12
 
 ```
 searchKey: elf.R_MIPS_SHIFT5
-tags: [exported]
 ```
 
 ```Go
@@ -11789,7 +10898,6 @@ const R_MIPS_SHIFT5 R_MIPS = 16
 
 ```
 searchKey: elf.R_MIPS_SHIFT6
-tags: [exported]
 ```
 
 ```Go
@@ -11800,7 +10908,6 @@ const R_MIPS_SHIFT6 R_MIPS = 17
 
 ```
 searchKey: elf.R_MIPS_64
-tags: [exported]
 ```
 
 ```Go
@@ -11811,7 +10918,6 @@ const R_MIPS_64 R_MIPS = 18
 
 ```
 searchKey: elf.R_MIPS_GOT_DISP
-tags: [exported]
 ```
 
 ```Go
@@ -11822,7 +10928,6 @@ const R_MIPS_GOT_DISP R_MIPS = 19
 
 ```
 searchKey: elf.R_MIPS_GOT_PAGE
-tags: [exported]
 ```
 
 ```Go
@@ -11833,7 +10938,6 @@ const R_MIPS_GOT_PAGE R_MIPS = 20
 
 ```
 searchKey: elf.R_MIPS_GOT_OFST
-tags: [exported]
 ```
 
 ```Go
@@ -11844,7 +10948,6 @@ const R_MIPS_GOT_OFST R_MIPS = 21
 
 ```
 searchKey: elf.R_MIPS_GOT_HI16
-tags: [exported]
 ```
 
 ```Go
@@ -11855,7 +10958,6 @@ const R_MIPS_GOT_HI16 R_MIPS = 22
 
 ```
 searchKey: elf.R_MIPS_GOT_LO16
-tags: [exported]
 ```
 
 ```Go
@@ -11866,7 +10968,6 @@ const R_MIPS_GOT_LO16 R_MIPS = 23
 
 ```
 searchKey: elf.R_MIPS_SUB
-tags: [exported]
 ```
 
 ```Go
@@ -11877,7 +10978,6 @@ const R_MIPS_SUB R_MIPS = 24
 
 ```
 searchKey: elf.R_MIPS_INSERT_A
-tags: [exported]
 ```
 
 ```Go
@@ -11888,7 +10988,6 @@ const R_MIPS_INSERT_A R_MIPS = 25
 
 ```
 searchKey: elf.R_MIPS_INSERT_B
-tags: [exported]
 ```
 
 ```Go
@@ -11899,7 +10998,6 @@ const R_MIPS_INSERT_B R_MIPS = 26
 
 ```
 searchKey: elf.R_MIPS_DELETE
-tags: [exported]
 ```
 
 ```Go
@@ -11910,7 +11008,6 @@ const R_MIPS_DELETE R_MIPS = 27
 
 ```
 searchKey: elf.R_MIPS_HIGHER
-tags: [exported]
 ```
 
 ```Go
@@ -11921,7 +11018,6 @@ const R_MIPS_HIGHER R_MIPS = 28
 
 ```
 searchKey: elf.R_MIPS_HIGHEST
-tags: [exported]
 ```
 
 ```Go
@@ -11932,7 +11028,6 @@ const R_MIPS_HIGHEST R_MIPS = 29
 
 ```
 searchKey: elf.R_MIPS_CALL_HI16
-tags: [exported]
 ```
 
 ```Go
@@ -11943,7 +11038,6 @@ const R_MIPS_CALL_HI16 R_MIPS = 30
 
 ```
 searchKey: elf.R_MIPS_CALL_LO16
-tags: [exported]
 ```
 
 ```Go
@@ -11954,7 +11048,6 @@ const R_MIPS_CALL_LO16 R_MIPS = 31
 
 ```
 searchKey: elf.R_MIPS_SCN_DISP
-tags: [exported]
 ```
 
 ```Go
@@ -11965,7 +11058,6 @@ const R_MIPS_SCN_DISP R_MIPS = 32
 
 ```
 searchKey: elf.R_MIPS_REL16
-tags: [exported]
 ```
 
 ```Go
@@ -11976,7 +11068,6 @@ const R_MIPS_REL16 R_MIPS = 33
 
 ```
 searchKey: elf.R_MIPS_ADD_IMMEDIATE
-tags: [exported]
 ```
 
 ```Go
@@ -11987,7 +11078,6 @@ const R_MIPS_ADD_IMMEDIATE R_MIPS = 34
 
 ```
 searchKey: elf.R_MIPS_PJUMP
-tags: [exported]
 ```
 
 ```Go
@@ -11998,7 +11088,6 @@ const R_MIPS_PJUMP R_MIPS = 35
 
 ```
 searchKey: elf.R_MIPS_RELGOT
-tags: [exported]
 ```
 
 ```Go
@@ -12009,7 +11098,6 @@ const R_MIPS_RELGOT R_MIPS = 36
 
 ```
 searchKey: elf.R_MIPS_JALR
-tags: [exported]
 ```
 
 ```Go
@@ -12020,7 +11108,6 @@ const R_MIPS_JALR R_MIPS = 37
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPMOD32
-tags: [exported]
 ```
 
 ```Go
@@ -12032,7 +11119,6 @@ const R_MIPS_TLS_DTPMOD32 R_MIPS = 38 /* Module number 32 bit */
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPREL32
-tags: [exported]
 ```
 
 ```Go
@@ -12044,7 +11130,6 @@ const R_MIPS_TLS_DTPREL32 R_MIPS = 39 /* Module-relative offset 32 bit */
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPMOD64
-tags: [exported]
 ```
 
 ```Go
@@ -12056,7 +11141,6 @@ const R_MIPS_TLS_DTPMOD64 R_MIPS = 40 /* Module number 64 bit */
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPREL64
-tags: [exported]
 ```
 
 ```Go
@@ -12068,7 +11152,6 @@ const R_MIPS_TLS_DTPREL64 R_MIPS = 41 /* Module-relative offset 64 bit */
 
 ```
 searchKey: elf.R_MIPS_TLS_GD
-tags: [exported]
 ```
 
 ```Go
@@ -12080,7 +11163,6 @@ const R_MIPS_TLS_GD R_MIPS = 42 /* 16 bit GOT offset for GD */
 
 ```
 searchKey: elf.R_MIPS_TLS_LDM
-tags: [exported]
 ```
 
 ```Go
@@ -12092,7 +11174,6 @@ const R_MIPS_TLS_LDM R_MIPS = 43 /* 16 bit GOT offset for LDM */
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPREL_HI16
-tags: [exported]
 ```
 
 ```Go
@@ -12104,7 +11185,6 @@ const R_MIPS_TLS_DTPREL_HI16 R_MIPS = 44 /* Module-relative offset, high 16 bits
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPREL_LO16
-tags: [exported]
 ```
 
 ```Go
@@ -12116,7 +11196,6 @@ const R_MIPS_TLS_DTPREL_LO16 R_MIPS = 45 /* Module-relative offset, low 16 bits 
 
 ```
 searchKey: elf.R_MIPS_TLS_GOTTPREL
-tags: [exported]
 ```
 
 ```Go
@@ -12128,7 +11207,6 @@ const R_MIPS_TLS_GOTTPREL R_MIPS = 46 /* 16 bit GOT offset for IE */
 
 ```
 searchKey: elf.R_MIPS_TLS_TPREL32
-tags: [exported]
 ```
 
 ```Go
@@ -12140,7 +11218,6 @@ const R_MIPS_TLS_TPREL32 R_MIPS = 47 /* TP-relative offset, 32 bit */
 
 ```
 searchKey: elf.R_MIPS_TLS_TPREL64
-tags: [exported]
 ```
 
 ```Go
@@ -12152,7 +11229,6 @@ const R_MIPS_TLS_TPREL64 R_MIPS = 48 /* TP-relative offset, 64 bit */
 
 ```
 searchKey: elf.R_MIPS_TLS_TPREL_HI16
-tags: [exported]
 ```
 
 ```Go
@@ -12164,7 +11240,6 @@ const R_MIPS_TLS_TPREL_HI16 R_MIPS = 49 /* TP-relative offset, high 16 bits */
 
 ```
 searchKey: elf.R_MIPS_TLS_TPREL_LO16
-tags: [exported]
 ```
 
 ```Go
@@ -12176,7 +11251,6 @@ const R_MIPS_TLS_TPREL_LO16 R_MIPS = 50 /* TP-relative offset, low 16 bits */
 
 ```
 searchKey: elf.R_PPC_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -12188,7 +11262,6 @@ const R_PPC_NONE R_PPC = 0 // R_POWERPC_NONE
 
 ```
 searchKey: elf.R_PPC_ADDR32
-tags: [exported]
 ```
 
 ```Go
@@ -12200,7 +11273,6 @@ const R_PPC_ADDR32 R_PPC = 1 // R_POWERPC_ADDR32
 
 ```
 searchKey: elf.R_PPC_ADDR24
-tags: [exported]
 ```
 
 ```Go
@@ -12212,7 +11284,6 @@ const R_PPC_ADDR24 R_PPC = 2 // R_POWERPC_ADDR24
 
 ```
 searchKey: elf.R_PPC_ADDR16
-tags: [exported]
 ```
 
 ```Go
@@ -12224,7 +11295,6 @@ const R_PPC_ADDR16 R_PPC = 3 // R_POWERPC_ADDR16
 
 ```
 searchKey: elf.R_PPC_ADDR16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -12236,7 +11306,6 @@ const R_PPC_ADDR16_LO R_PPC = 4 // R_POWERPC_ADDR16_LO
 
 ```
 searchKey: elf.R_PPC_ADDR16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -12248,7 +11317,6 @@ const R_PPC_ADDR16_HI R_PPC = 5 // R_POWERPC_ADDR16_HI
 
 ```
 searchKey: elf.R_PPC_ADDR16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -12260,7 +11328,6 @@ const R_PPC_ADDR16_HA R_PPC = 6 // R_POWERPC_ADDR16_HA
 
 ```
 searchKey: elf.R_PPC_ADDR14
-tags: [exported]
 ```
 
 ```Go
@@ -12272,7 +11339,6 @@ const R_PPC_ADDR14 R_PPC = 7 // R_POWERPC_ADDR14
 
 ```
 searchKey: elf.R_PPC_ADDR14_BRTAKEN
-tags: [exported]
 ```
 
 ```Go
@@ -12284,7 +11350,6 @@ const R_PPC_ADDR14_BRTAKEN R_PPC = 8 // R_POWERPC_ADDR14_BRTAKEN
 
 ```
 searchKey: elf.R_PPC_ADDR14_BRNTAKEN
-tags: [exported]
 ```
 
 ```Go
@@ -12296,7 +11361,6 @@ const R_PPC_ADDR14_BRNTAKEN R_PPC = 9 // R_POWERPC_ADDR14_BRNTAKEN
 
 ```
 searchKey: elf.R_PPC_REL24
-tags: [exported]
 ```
 
 ```Go
@@ -12308,7 +11372,6 @@ const R_PPC_REL24 R_PPC = 10 // R_POWERPC_REL24
 
 ```
 searchKey: elf.R_PPC_REL14
-tags: [exported]
 ```
 
 ```Go
@@ -12320,7 +11383,6 @@ const R_PPC_REL14 R_PPC = 11 // R_POWERPC_REL14
 
 ```
 searchKey: elf.R_PPC_REL14_BRTAKEN
-tags: [exported]
 ```
 
 ```Go
@@ -12332,7 +11394,6 @@ const R_PPC_REL14_BRTAKEN R_PPC = 12 // R_POWERPC_REL14_BRTAKEN
 
 ```
 searchKey: elf.R_PPC_REL14_BRNTAKEN
-tags: [exported]
 ```
 
 ```Go
@@ -12344,7 +11405,6 @@ const R_PPC_REL14_BRNTAKEN R_PPC = 13 // R_POWERPC_REL14_BRNTAKEN
 
 ```
 searchKey: elf.R_PPC_GOT16
-tags: [exported]
 ```
 
 ```Go
@@ -12356,7 +11416,6 @@ const R_PPC_GOT16 R_PPC = 14 // R_POWERPC_GOT16
 
 ```
 searchKey: elf.R_PPC_GOT16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -12368,7 +11427,6 @@ const R_PPC_GOT16_LO R_PPC = 15 // R_POWERPC_GOT16_LO
 
 ```
 searchKey: elf.R_PPC_GOT16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -12380,7 +11438,6 @@ const R_PPC_GOT16_HI R_PPC = 16 // R_POWERPC_GOT16_HI
 
 ```
 searchKey: elf.R_PPC_GOT16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -12392,7 +11449,6 @@ const R_PPC_GOT16_HA R_PPC = 17 // R_POWERPC_GOT16_HA
 
 ```
 searchKey: elf.R_PPC_PLTREL24
-tags: [exported]
 ```
 
 ```Go
@@ -12403,7 +11459,6 @@ const R_PPC_PLTREL24 R_PPC = 18
 
 ```
 searchKey: elf.R_PPC_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -12415,7 +11470,6 @@ const R_PPC_COPY R_PPC = 19 // R_POWERPC_COPY
 
 ```
 searchKey: elf.R_PPC_GLOB_DAT
-tags: [exported]
 ```
 
 ```Go
@@ -12427,7 +11481,6 @@ const R_PPC_GLOB_DAT R_PPC = 20 // R_POWERPC_GLOB_DAT
 
 ```
 searchKey: elf.R_PPC_JMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -12439,7 +11492,6 @@ const R_PPC_JMP_SLOT R_PPC = 21 // R_POWERPC_JMP_SLOT
 
 ```
 searchKey: elf.R_PPC_RELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -12451,7 +11503,6 @@ const R_PPC_RELATIVE R_PPC = 22 // R_POWERPC_RELATIVE
 
 ```
 searchKey: elf.R_PPC_LOCAL24PC
-tags: [exported]
 ```
 
 ```Go
@@ -12462,7 +11513,6 @@ const R_PPC_LOCAL24PC R_PPC = 23
 
 ```
 searchKey: elf.R_PPC_UADDR32
-tags: [exported]
 ```
 
 ```Go
@@ -12474,7 +11524,6 @@ const R_PPC_UADDR32 R_PPC = 24 // R_POWERPC_UADDR32
 
 ```
 searchKey: elf.R_PPC_UADDR16
-tags: [exported]
 ```
 
 ```Go
@@ -12486,7 +11535,6 @@ const R_PPC_UADDR16 R_PPC = 25 // R_POWERPC_UADDR16
 
 ```
 searchKey: elf.R_PPC_REL32
-tags: [exported]
 ```
 
 ```Go
@@ -12498,7 +11546,6 @@ const R_PPC_REL32 R_PPC = 26 // R_POWERPC_REL32
 
 ```
 searchKey: elf.R_PPC_PLT32
-tags: [exported]
 ```
 
 ```Go
@@ -12510,7 +11557,6 @@ const R_PPC_PLT32 R_PPC = 27 // R_POWERPC_PLT32
 
 ```
 searchKey: elf.R_PPC_PLTREL32
-tags: [exported]
 ```
 
 ```Go
@@ -12522,7 +11568,6 @@ const R_PPC_PLTREL32 R_PPC = 28 // R_POWERPC_PLTREL32
 
 ```
 searchKey: elf.R_PPC_PLT16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -12534,7 +11579,6 @@ const R_PPC_PLT16_LO R_PPC = 29 // R_POWERPC_PLT16_LO
 
 ```
 searchKey: elf.R_PPC_PLT16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -12546,7 +11590,6 @@ const R_PPC_PLT16_HI R_PPC = 30 // R_POWERPC_PLT16_HI
 
 ```
 searchKey: elf.R_PPC_PLT16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -12558,7 +11601,6 @@ const R_PPC_PLT16_HA R_PPC = 31 // R_POWERPC_PLT16_HA
 
 ```
 searchKey: elf.R_PPC_SDAREL16
-tags: [exported]
 ```
 
 ```Go
@@ -12569,7 +11611,6 @@ const R_PPC_SDAREL16 R_PPC = 32
 
 ```
 searchKey: elf.R_PPC_SECTOFF
-tags: [exported]
 ```
 
 ```Go
@@ -12581,7 +11622,6 @@ const R_PPC_SECTOFF R_PPC = 33 // R_POWERPC_SECTOFF
 
 ```
 searchKey: elf.R_PPC_SECTOFF_LO
-tags: [exported]
 ```
 
 ```Go
@@ -12593,7 +11633,6 @@ const R_PPC_SECTOFF_LO R_PPC = 34 // R_POWERPC_SECTOFF_LO
 
 ```
 searchKey: elf.R_PPC_SECTOFF_HI
-tags: [exported]
 ```
 
 ```Go
@@ -12605,7 +11644,6 @@ const R_PPC_SECTOFF_HI R_PPC = 35 // R_POWERPC_SECTOFF_HI
 
 ```
 searchKey: elf.R_PPC_SECTOFF_HA
-tags: [exported]
 ```
 
 ```Go
@@ -12617,7 +11655,6 @@ const R_PPC_SECTOFF_HA R_PPC = 36 // R_POWERPC_SECTOFF_HA
 
 ```
 searchKey: elf.R_PPC_TLS
-tags: [exported]
 ```
 
 ```Go
@@ -12629,7 +11666,6 @@ const R_PPC_TLS R_PPC = 67 // R_POWERPC_TLS
 
 ```
 searchKey: elf.R_PPC_DTPMOD32
-tags: [exported]
 ```
 
 ```Go
@@ -12641,7 +11677,6 @@ const R_PPC_DTPMOD32 R_PPC = 68 // R_POWERPC_DTPMOD32
 
 ```
 searchKey: elf.R_PPC_TPREL16
-tags: [exported]
 ```
 
 ```Go
@@ -12653,7 +11688,6 @@ const R_PPC_TPREL16 R_PPC = 69 // R_POWERPC_TPREL16
 
 ```
 searchKey: elf.R_PPC_TPREL16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -12665,7 +11699,6 @@ const R_PPC_TPREL16_LO R_PPC = 70 // R_POWERPC_TPREL16_LO
 
 ```
 searchKey: elf.R_PPC_TPREL16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -12677,7 +11710,6 @@ const R_PPC_TPREL16_HI R_PPC = 71 // R_POWERPC_TPREL16_HI
 
 ```
 searchKey: elf.R_PPC_TPREL16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -12689,7 +11721,6 @@ const R_PPC_TPREL16_HA R_PPC = 72 // R_POWERPC_TPREL16_HA
 
 ```
 searchKey: elf.R_PPC_TPREL32
-tags: [exported]
 ```
 
 ```Go
@@ -12701,7 +11732,6 @@ const R_PPC_TPREL32 R_PPC = 73 // R_POWERPC_TPREL32
 
 ```
 searchKey: elf.R_PPC_DTPREL16
-tags: [exported]
 ```
 
 ```Go
@@ -12713,7 +11743,6 @@ const R_PPC_DTPREL16 R_PPC = 74 // R_POWERPC_DTPREL16
 
 ```
 searchKey: elf.R_PPC_DTPREL16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -12725,7 +11754,6 @@ const R_PPC_DTPREL16_LO R_PPC = 75 // R_POWERPC_DTPREL16_LO
 
 ```
 searchKey: elf.R_PPC_DTPREL16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -12737,7 +11765,6 @@ const R_PPC_DTPREL16_HI R_PPC = 76 // R_POWERPC_DTPREL16_HI
 
 ```
 searchKey: elf.R_PPC_DTPREL16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -12749,7 +11776,6 @@ const R_PPC_DTPREL16_HA R_PPC = 77 // R_POWERPC_DTPREL16_HA
 
 ```
 searchKey: elf.R_PPC_DTPREL32
-tags: [exported]
 ```
 
 ```Go
@@ -12761,7 +11787,6 @@ const R_PPC_DTPREL32 R_PPC = 78 // R_POWERPC_DTPREL32
 
 ```
 searchKey: elf.R_PPC_GOT_TLSGD16
-tags: [exported]
 ```
 
 ```Go
@@ -12773,7 +11798,6 @@ const R_PPC_GOT_TLSGD16 R_PPC = 79 // R_POWERPC_GOT_TLSGD16
 
 ```
 searchKey: elf.R_PPC_GOT_TLSGD16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -12785,7 +11809,6 @@ const R_PPC_GOT_TLSGD16_LO R_PPC = 80 // R_POWERPC_GOT_TLSGD16_LO
 
 ```
 searchKey: elf.R_PPC_GOT_TLSGD16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -12797,7 +11820,6 @@ const R_PPC_GOT_TLSGD16_HI R_PPC = 81 // R_POWERPC_GOT_TLSGD16_HI
 
 ```
 searchKey: elf.R_PPC_GOT_TLSGD16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -12809,7 +11831,6 @@ const R_PPC_GOT_TLSGD16_HA R_PPC = 82 // R_POWERPC_GOT_TLSGD16_HA
 
 ```
 searchKey: elf.R_PPC_GOT_TLSLD16
-tags: [exported]
 ```
 
 ```Go
@@ -12821,7 +11842,6 @@ const R_PPC_GOT_TLSLD16 R_PPC = 83 // R_POWERPC_GOT_TLSLD16
 
 ```
 searchKey: elf.R_PPC_GOT_TLSLD16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -12833,7 +11853,6 @@ const R_PPC_GOT_TLSLD16_LO R_PPC = 84 // R_POWERPC_GOT_TLSLD16_LO
 
 ```
 searchKey: elf.R_PPC_GOT_TLSLD16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -12845,7 +11864,6 @@ const R_PPC_GOT_TLSLD16_HI R_PPC = 85 // R_POWERPC_GOT_TLSLD16_HI
 
 ```
 searchKey: elf.R_PPC_GOT_TLSLD16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -12857,7 +11875,6 @@ const R_PPC_GOT_TLSLD16_HA R_PPC = 86 // R_POWERPC_GOT_TLSLD16_HA
 
 ```
 searchKey: elf.R_PPC_GOT_TPREL16
-tags: [exported]
 ```
 
 ```Go
@@ -12869,7 +11886,6 @@ const R_PPC_GOT_TPREL16 R_PPC = 87 // R_POWERPC_GOT_TPREL16
 
 ```
 searchKey: elf.R_PPC_GOT_TPREL16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -12881,7 +11897,6 @@ const R_PPC_GOT_TPREL16_LO R_PPC = 88 // R_POWERPC_GOT_TPREL16_LO
 
 ```
 searchKey: elf.R_PPC_GOT_TPREL16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -12893,7 +11908,6 @@ const R_PPC_GOT_TPREL16_HI R_PPC = 89 // R_POWERPC_GOT_TPREL16_HI
 
 ```
 searchKey: elf.R_PPC_GOT_TPREL16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -12905,7 +11919,6 @@ const R_PPC_GOT_TPREL16_HA R_PPC = 90 // R_POWERPC_GOT_TPREL16_HA
 
 ```
 searchKey: elf.R_PPC_EMB_NADDR32
-tags: [exported]
 ```
 
 ```Go
@@ -12916,7 +11929,6 @@ const R_PPC_EMB_NADDR32 R_PPC = 101
 
 ```
 searchKey: elf.R_PPC_EMB_NADDR16
-tags: [exported]
 ```
 
 ```Go
@@ -12927,7 +11939,6 @@ const R_PPC_EMB_NADDR16 R_PPC = 102
 
 ```
 searchKey: elf.R_PPC_EMB_NADDR16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -12938,7 +11949,6 @@ const R_PPC_EMB_NADDR16_LO R_PPC = 103
 
 ```
 searchKey: elf.R_PPC_EMB_NADDR16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -12949,7 +11959,6 @@ const R_PPC_EMB_NADDR16_HI R_PPC = 104
 
 ```
 searchKey: elf.R_PPC_EMB_NADDR16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -12960,7 +11969,6 @@ const R_PPC_EMB_NADDR16_HA R_PPC = 105
 
 ```
 searchKey: elf.R_PPC_EMB_SDAI16
-tags: [exported]
 ```
 
 ```Go
@@ -12971,7 +11979,6 @@ const R_PPC_EMB_SDAI16 R_PPC = 106
 
 ```
 searchKey: elf.R_PPC_EMB_SDA2I16
-tags: [exported]
 ```
 
 ```Go
@@ -12982,7 +11989,6 @@ const R_PPC_EMB_SDA2I16 R_PPC = 107
 
 ```
 searchKey: elf.R_PPC_EMB_SDA2REL
-tags: [exported]
 ```
 
 ```Go
@@ -12993,7 +11999,6 @@ const R_PPC_EMB_SDA2REL R_PPC = 108
 
 ```
 searchKey: elf.R_PPC_EMB_SDA21
-tags: [exported]
 ```
 
 ```Go
@@ -13004,7 +12009,6 @@ const R_PPC_EMB_SDA21 R_PPC = 109
 
 ```
 searchKey: elf.R_PPC_EMB_MRKREF
-tags: [exported]
 ```
 
 ```Go
@@ -13015,7 +12019,6 @@ const R_PPC_EMB_MRKREF R_PPC = 110
 
 ```
 searchKey: elf.R_PPC_EMB_RELSEC16
-tags: [exported]
 ```
 
 ```Go
@@ -13026,7 +12029,6 @@ const R_PPC_EMB_RELSEC16 R_PPC = 111
 
 ```
 searchKey: elf.R_PPC_EMB_RELST_LO
-tags: [exported]
 ```
 
 ```Go
@@ -13037,7 +12039,6 @@ const R_PPC_EMB_RELST_LO R_PPC = 112
 
 ```
 searchKey: elf.R_PPC_EMB_RELST_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13048,7 +12049,6 @@ const R_PPC_EMB_RELST_HI R_PPC = 113
 
 ```
 searchKey: elf.R_PPC_EMB_RELST_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13059,7 +12059,6 @@ const R_PPC_EMB_RELST_HA R_PPC = 114
 
 ```
 searchKey: elf.R_PPC_EMB_BIT_FLD
-tags: [exported]
 ```
 
 ```Go
@@ -13070,7 +12069,6 @@ const R_PPC_EMB_BIT_FLD R_PPC = 115
 
 ```
 searchKey: elf.R_PPC_EMB_RELSDA
-tags: [exported]
 ```
 
 ```Go
@@ -13081,7 +12079,6 @@ const R_PPC_EMB_RELSDA R_PPC = 116
 
 ```
 searchKey: elf.R_PPC64_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -13093,7 +12090,6 @@ const R_PPC64_NONE R_PPC64 = 0 // R_POWERPC_NONE
 
 ```
 searchKey: elf.R_PPC64_ADDR32
-tags: [exported]
 ```
 
 ```Go
@@ -13105,7 +12101,6 @@ const R_PPC64_ADDR32 R_PPC64 = 1 // R_POWERPC_ADDR32
 
 ```
 searchKey: elf.R_PPC64_ADDR24
-tags: [exported]
 ```
 
 ```Go
@@ -13117,7 +12112,6 @@ const R_PPC64_ADDR24 R_PPC64 = 2 // R_POWERPC_ADDR24
 
 ```
 searchKey: elf.R_PPC64_ADDR16
-tags: [exported]
 ```
 
 ```Go
@@ -13129,7 +12123,6 @@ const R_PPC64_ADDR16 R_PPC64 = 3 // R_POWERPC_ADDR16
 
 ```
 searchKey: elf.R_PPC64_ADDR16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -13141,7 +12134,6 @@ const R_PPC64_ADDR16_LO R_PPC64 = 4 // R_POWERPC_ADDR16_LO
 
 ```
 searchKey: elf.R_PPC64_ADDR16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13153,7 +12145,6 @@ const R_PPC64_ADDR16_HI R_PPC64 = 5 // R_POWERPC_ADDR16_HI
 
 ```
 searchKey: elf.R_PPC64_ADDR16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13165,7 +12156,6 @@ const R_PPC64_ADDR16_HA R_PPC64 = 6 // R_POWERPC_ADDR16_HA
 
 ```
 searchKey: elf.R_PPC64_ADDR14
-tags: [exported]
 ```
 
 ```Go
@@ -13177,7 +12167,6 @@ const R_PPC64_ADDR14 R_PPC64 = 7 // R_POWERPC_ADDR14
 
 ```
 searchKey: elf.R_PPC64_ADDR14_BRTAKEN
-tags: [exported]
 ```
 
 ```Go
@@ -13189,7 +12178,6 @@ const R_PPC64_ADDR14_BRTAKEN R_PPC64 = 8 // R_POWERPC_ADDR14_BRTAKEN
 
 ```
 searchKey: elf.R_PPC64_ADDR14_BRNTAKEN
-tags: [exported]
 ```
 
 ```Go
@@ -13201,7 +12189,6 @@ const R_PPC64_ADDR14_BRNTAKEN R_PPC64 = 9 // R_POWERPC_ADDR14_BRNTAKEN
 
 ```
 searchKey: elf.R_PPC64_REL24
-tags: [exported]
 ```
 
 ```Go
@@ -13213,7 +12200,6 @@ const R_PPC64_REL24 R_PPC64 = 10 // R_POWERPC_REL24
 
 ```
 searchKey: elf.R_PPC64_REL14
-tags: [exported]
 ```
 
 ```Go
@@ -13225,7 +12211,6 @@ const R_PPC64_REL14 R_PPC64 = 11 // R_POWERPC_REL14
 
 ```
 searchKey: elf.R_PPC64_REL14_BRTAKEN
-tags: [exported]
 ```
 
 ```Go
@@ -13237,7 +12222,6 @@ const R_PPC64_REL14_BRTAKEN R_PPC64 = 12 // R_POWERPC_REL14_BRTAKEN
 
 ```
 searchKey: elf.R_PPC64_REL14_BRNTAKEN
-tags: [exported]
 ```
 
 ```Go
@@ -13249,7 +12233,6 @@ const R_PPC64_REL14_BRNTAKEN R_PPC64 = 13 // R_POWERPC_REL14_BRNTAKEN
 
 ```
 searchKey: elf.R_PPC64_GOT16
-tags: [exported]
 ```
 
 ```Go
@@ -13261,7 +12244,6 @@ const R_PPC64_GOT16 R_PPC64 = 14 // R_POWERPC_GOT16
 
 ```
 searchKey: elf.R_PPC64_GOT16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -13273,7 +12255,6 @@ const R_PPC64_GOT16_LO R_PPC64 = 15 // R_POWERPC_GOT16_LO
 
 ```
 searchKey: elf.R_PPC64_GOT16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13285,7 +12266,6 @@ const R_PPC64_GOT16_HI R_PPC64 = 16 // R_POWERPC_GOT16_HI
 
 ```
 searchKey: elf.R_PPC64_GOT16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13297,7 +12277,6 @@ const R_PPC64_GOT16_HA R_PPC64 = 17 // R_POWERPC_GOT16_HA
 
 ```
 searchKey: elf.R_PPC64_JMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -13309,7 +12288,6 @@ const R_PPC64_JMP_SLOT R_PPC64 = 21 // R_POWERPC_JMP_SLOT
 
 ```
 searchKey: elf.R_PPC64_REL32
-tags: [exported]
 ```
 
 ```Go
@@ -13321,7 +12299,6 @@ const R_PPC64_REL32 R_PPC64 = 26 // R_POWERPC_REL32
 
 ```
 searchKey: elf.R_PPC64_ADDR64
-tags: [exported]
 ```
 
 ```Go
@@ -13332,7 +12309,6 @@ const R_PPC64_ADDR64 R_PPC64 = 38
 
 ```
 searchKey: elf.R_PPC64_ADDR16_HIGHER
-tags: [exported]
 ```
 
 ```Go
@@ -13343,7 +12319,6 @@ const R_PPC64_ADDR16_HIGHER R_PPC64 = 39
 
 ```
 searchKey: elf.R_PPC64_ADDR16_HIGHERA
-tags: [exported]
 ```
 
 ```Go
@@ -13354,7 +12329,6 @@ const R_PPC64_ADDR16_HIGHERA R_PPC64 = 40
 
 ```
 searchKey: elf.R_PPC64_ADDR16_HIGHEST
-tags: [exported]
 ```
 
 ```Go
@@ -13365,7 +12339,6 @@ const R_PPC64_ADDR16_HIGHEST R_PPC64 = 41
 
 ```
 searchKey: elf.R_PPC64_ADDR16_HIGHESTA
-tags: [exported]
 ```
 
 ```Go
@@ -13376,7 +12349,6 @@ const R_PPC64_ADDR16_HIGHESTA R_PPC64 = 42
 
 ```
 searchKey: elf.R_PPC64_REL64
-tags: [exported]
 ```
 
 ```Go
@@ -13387,7 +12359,6 @@ const R_PPC64_REL64 R_PPC64 = 44
 
 ```
 searchKey: elf.R_PPC64_TOC16
-tags: [exported]
 ```
 
 ```Go
@@ -13398,7 +12369,6 @@ const R_PPC64_TOC16 R_PPC64 = 47
 
 ```
 searchKey: elf.R_PPC64_TOC16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -13409,7 +12379,6 @@ const R_PPC64_TOC16_LO R_PPC64 = 48
 
 ```
 searchKey: elf.R_PPC64_TOC16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13420,7 +12389,6 @@ const R_PPC64_TOC16_HI R_PPC64 = 49
 
 ```
 searchKey: elf.R_PPC64_TOC16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13431,7 +12399,6 @@ const R_PPC64_TOC16_HA R_PPC64 = 50
 
 ```
 searchKey: elf.R_PPC64_TOC
-tags: [exported]
 ```
 
 ```Go
@@ -13442,7 +12409,6 @@ const R_PPC64_TOC R_PPC64 = 51
 
 ```
 searchKey: elf.R_PPC64_PLTGOT16
-tags: [exported]
 ```
 
 ```Go
@@ -13453,7 +12419,6 @@ const R_PPC64_PLTGOT16 R_PPC64 = 52
 
 ```
 searchKey: elf.R_PPC64_PLTGOT16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -13464,7 +12429,6 @@ const R_PPC64_PLTGOT16_LO R_PPC64 = 53
 
 ```
 searchKey: elf.R_PPC64_PLTGOT16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13475,7 +12439,6 @@ const R_PPC64_PLTGOT16_HI R_PPC64 = 54
 
 ```
 searchKey: elf.R_PPC64_PLTGOT16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13486,7 +12449,6 @@ const R_PPC64_PLTGOT16_HA R_PPC64 = 55
 
 ```
 searchKey: elf.R_PPC64_ADDR16_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13497,7 +12459,6 @@ const R_PPC64_ADDR16_DS R_PPC64 = 56
 
 ```
 searchKey: elf.R_PPC64_ADDR16_LO_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13508,7 +12469,6 @@ const R_PPC64_ADDR16_LO_DS R_PPC64 = 57
 
 ```
 searchKey: elf.R_PPC64_GOT16_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13519,7 +12479,6 @@ const R_PPC64_GOT16_DS R_PPC64 = 58
 
 ```
 searchKey: elf.R_PPC64_GOT16_LO_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13530,7 +12489,6 @@ const R_PPC64_GOT16_LO_DS R_PPC64 = 59
 
 ```
 searchKey: elf.R_PPC64_PLT16_LO_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13541,7 +12499,6 @@ const R_PPC64_PLT16_LO_DS R_PPC64 = 60
 
 ```
 searchKey: elf.R_PPC64_SECTOFF_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13552,7 +12509,6 @@ const R_PPC64_SECTOFF_DS R_PPC64 = 61
 
 ```
 searchKey: elf.R_PPC64_SECTOFF_LO_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13563,7 +12519,6 @@ const R_PPC64_SECTOFF_LO_DS R_PPC64 = 61
 
 ```
 searchKey: elf.R_PPC64_TOC16_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13574,7 +12529,6 @@ const R_PPC64_TOC16_DS R_PPC64 = 63
 
 ```
 searchKey: elf.R_PPC64_TOC16_LO_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13585,7 +12539,6 @@ const R_PPC64_TOC16_LO_DS R_PPC64 = 64
 
 ```
 searchKey: elf.R_PPC64_PLTGOT16_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13596,7 +12549,6 @@ const R_PPC64_PLTGOT16_DS R_PPC64 = 65
 
 ```
 searchKey: elf.R_PPC64_PLTGOT_LO_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13607,7 +12559,6 @@ const R_PPC64_PLTGOT_LO_DS R_PPC64 = 66
 
 ```
 searchKey: elf.R_PPC64_TLS
-tags: [exported]
 ```
 
 ```Go
@@ -13619,7 +12570,6 @@ const R_PPC64_TLS R_PPC64 = 67 // R_POWERPC_TLS
 
 ```
 searchKey: elf.R_PPC64_DTPMOD64
-tags: [exported]
 ```
 
 ```Go
@@ -13631,7 +12581,6 @@ const R_PPC64_DTPMOD64 R_PPC64 = 68 // R_POWERPC_DTPMOD64
 
 ```
 searchKey: elf.R_PPC64_TPREL16
-tags: [exported]
 ```
 
 ```Go
@@ -13643,7 +12592,6 @@ const R_PPC64_TPREL16 R_PPC64 = 69 // R_POWERPC_TPREL16
 
 ```
 searchKey: elf.R_PPC64_TPREL16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -13655,7 +12603,6 @@ const R_PPC64_TPREL16_LO R_PPC64 = 70 // R_POWERPC_TPREL16_LO
 
 ```
 searchKey: elf.R_PPC64_TPREL16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13667,7 +12614,6 @@ const R_PPC64_TPREL16_HI R_PPC64 = 71 // R_POWERPC_TPREL16_HI
 
 ```
 searchKey: elf.R_PPC64_TPREL16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13679,7 +12625,6 @@ const R_PPC64_TPREL16_HA R_PPC64 = 72 // R_POWERPC_TPREL16_HA
 
 ```
 searchKey: elf.R_PPC64_TPREL64
-tags: [exported]
 ```
 
 ```Go
@@ -13691,7 +12636,6 @@ const R_PPC64_TPREL64 R_PPC64 = 73 // R_POWERPC_TPREL64
 
 ```
 searchKey: elf.R_PPC64_DTPREL16
-tags: [exported]
 ```
 
 ```Go
@@ -13703,7 +12647,6 @@ const R_PPC64_DTPREL16 R_PPC64 = 74 // R_POWERPC_DTPREL16
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -13715,7 +12658,6 @@ const R_PPC64_DTPREL16_LO R_PPC64 = 75 // R_POWERPC_DTPREL16_LO
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13727,7 +12669,6 @@ const R_PPC64_DTPREL16_HI R_PPC64 = 76 // R_POWERPC_DTPREL16_HI
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13739,7 +12680,6 @@ const R_PPC64_DTPREL16_HA R_PPC64 = 77 // R_POWERPC_DTPREL16_HA
 
 ```
 searchKey: elf.R_PPC64_DTPREL64
-tags: [exported]
 ```
 
 ```Go
@@ -13751,7 +12691,6 @@ const R_PPC64_DTPREL64 R_PPC64 = 78 // R_POWERPC_DTPREL64
 
 ```
 searchKey: elf.R_PPC64_GOT_TLSGD16
-tags: [exported]
 ```
 
 ```Go
@@ -13763,7 +12702,6 @@ const R_PPC64_GOT_TLSGD16 R_PPC64 = 79 // R_POWERPC_GOT_TLSGD16
 
 ```
 searchKey: elf.R_PPC64_GOT_TLSGD16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -13775,7 +12713,6 @@ const R_PPC64_GOT_TLSGD16_LO R_PPC64 = 80 // R_POWERPC_GOT_TLSGD16_LO
 
 ```
 searchKey: elf.R_PPC64_GOT_TLSGD16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13787,7 +12724,6 @@ const R_PPC64_GOT_TLSGD16_HI R_PPC64 = 81 // R_POWERPC_GOT_TLSGD16_HI
 
 ```
 searchKey: elf.R_PPC64_GOT_TLSGD16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13799,7 +12735,6 @@ const R_PPC64_GOT_TLSGD16_HA R_PPC64 = 82 // R_POWERPC_GOT_TLSGD16_HA
 
 ```
 searchKey: elf.R_PPC64_GOT_TLSLD16
-tags: [exported]
 ```
 
 ```Go
@@ -13811,7 +12746,6 @@ const R_PPC64_GOT_TLSLD16 R_PPC64 = 83 // R_POWERPC_GOT_TLSLD16
 
 ```
 searchKey: elf.R_PPC64_GOT_TLSLD16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -13823,7 +12757,6 @@ const R_PPC64_GOT_TLSLD16_LO R_PPC64 = 84 // R_POWERPC_GOT_TLSLD16_LO
 
 ```
 searchKey: elf.R_PPC64_GOT_TLSLD16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13835,7 +12768,6 @@ const R_PPC64_GOT_TLSLD16_HI R_PPC64 = 85 // R_POWERPC_GOT_TLSLD16_HI
 
 ```
 searchKey: elf.R_PPC64_GOT_TLSLD16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13847,7 +12779,6 @@ const R_PPC64_GOT_TLSLD16_HA R_PPC64 = 86 // R_POWERPC_GOT_TLSLD16_HA
 
 ```
 searchKey: elf.R_PPC64_GOT_TPREL16_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13859,7 +12790,6 @@ const R_PPC64_GOT_TPREL16_DS R_PPC64 = 87 // R_POWERPC_GOT_TPREL16_DS
 
 ```
 searchKey: elf.R_PPC64_GOT_TPREL16_LO_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13871,7 +12801,6 @@ const R_PPC64_GOT_TPREL16_LO_DS R_PPC64 = 88 // R_POWERPC_GOT_TPREL16_LO_DS
 
 ```
 searchKey: elf.R_PPC64_GOT_TPREL16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13883,7 +12812,6 @@ const R_PPC64_GOT_TPREL16_HI R_PPC64 = 89 // R_POWERPC_GOT_TPREL16_HI
 
 ```
 searchKey: elf.R_PPC64_GOT_TPREL16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13895,7 +12823,6 @@ const R_PPC64_GOT_TPREL16_HA R_PPC64 = 90 // R_POWERPC_GOT_TPREL16_HA
 
 ```
 searchKey: elf.R_PPC64_GOT_DTPREL16_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13907,7 +12834,6 @@ const R_PPC64_GOT_DTPREL16_DS R_PPC64 = 91 // R_POWERPC_GOT_DTPREL16_DS
 
 ```
 searchKey: elf.R_PPC64_GOT_DTPREL16_LO_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13919,7 +12845,6 @@ const R_PPC64_GOT_DTPREL16_LO_DS R_PPC64 = 92 // R_POWERPC_GOT_DTPREL16_LO_DS
 
 ```
 searchKey: elf.R_PPC64_GOT_DTPREL16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -13931,7 +12856,6 @@ const R_PPC64_GOT_DTPREL16_HI R_PPC64 = 93 // R_POWERPC_GOT_DTPREL16_HI
 
 ```
 searchKey: elf.R_PPC64_GOT_DTPREL16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -13943,7 +12867,6 @@ const R_PPC64_GOT_DTPREL16_HA R_PPC64 = 94 // R_POWERPC_GOT_DTPREL16_HA
 
 ```
 searchKey: elf.R_PPC64_TPREL16_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13954,7 +12877,6 @@ const R_PPC64_TPREL16_DS R_PPC64 = 95
 
 ```
 searchKey: elf.R_PPC64_TPREL16_LO_DS
-tags: [exported]
 ```
 
 ```Go
@@ -13965,7 +12887,6 @@ const R_PPC64_TPREL16_LO_DS R_PPC64 = 96
 
 ```
 searchKey: elf.R_PPC64_TPREL16_HIGHER
-tags: [exported]
 ```
 
 ```Go
@@ -13976,7 +12897,6 @@ const R_PPC64_TPREL16_HIGHER R_PPC64 = 97
 
 ```
 searchKey: elf.R_PPC64_TPREL16_HIGHERA
-tags: [exported]
 ```
 
 ```Go
@@ -13987,7 +12907,6 @@ const R_PPC64_TPREL16_HIGHERA R_PPC64 = 98
 
 ```
 searchKey: elf.R_PPC64_TPREL16_HIGHEST
-tags: [exported]
 ```
 
 ```Go
@@ -13998,7 +12917,6 @@ const R_PPC64_TPREL16_HIGHEST R_PPC64 = 99
 
 ```
 searchKey: elf.R_PPC64_TPREL16_HIGHESTA
-tags: [exported]
 ```
 
 ```Go
@@ -14009,7 +12927,6 @@ const R_PPC64_TPREL16_HIGHESTA R_PPC64 = 100
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_DS
-tags: [exported]
 ```
 
 ```Go
@@ -14020,7 +12937,6 @@ const R_PPC64_DTPREL16_DS R_PPC64 = 101
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_LO_DS
-tags: [exported]
 ```
 
 ```Go
@@ -14031,7 +12947,6 @@ const R_PPC64_DTPREL16_LO_DS R_PPC64 = 102
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_HIGHER
-tags: [exported]
 ```
 
 ```Go
@@ -14042,7 +12957,6 @@ const R_PPC64_DTPREL16_HIGHER R_PPC64 = 103
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_HIGHERA
-tags: [exported]
 ```
 
 ```Go
@@ -14053,7 +12967,6 @@ const R_PPC64_DTPREL16_HIGHERA R_PPC64 = 104
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_HIGHEST
-tags: [exported]
 ```
 
 ```Go
@@ -14064,7 +12977,6 @@ const R_PPC64_DTPREL16_HIGHEST R_PPC64 = 105
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_HIGHESTA
-tags: [exported]
 ```
 
 ```Go
@@ -14075,7 +12987,6 @@ const R_PPC64_DTPREL16_HIGHESTA R_PPC64 = 106
 
 ```
 searchKey: elf.R_PPC64_TLSGD
-tags: [exported]
 ```
 
 ```Go
@@ -14086,7 +12997,6 @@ const R_PPC64_TLSGD R_PPC64 = 107
 
 ```
 searchKey: elf.R_PPC64_TLSLD
-tags: [exported]
 ```
 
 ```Go
@@ -14097,7 +13007,6 @@ const R_PPC64_TLSLD R_PPC64 = 108
 
 ```
 searchKey: elf.R_PPC64_TOCSAVE
-tags: [exported]
 ```
 
 ```Go
@@ -14108,7 +13017,6 @@ const R_PPC64_TOCSAVE R_PPC64 = 109
 
 ```
 searchKey: elf.R_PPC64_ADDR16_HIGH
-tags: [exported]
 ```
 
 ```Go
@@ -14119,7 +13027,6 @@ const R_PPC64_ADDR16_HIGH R_PPC64 = 110
 
 ```
 searchKey: elf.R_PPC64_ADDR16_HIGHA
-tags: [exported]
 ```
 
 ```Go
@@ -14130,7 +13037,6 @@ const R_PPC64_ADDR16_HIGHA R_PPC64 = 111
 
 ```
 searchKey: elf.R_PPC64_TPREL16_HIGH
-tags: [exported]
 ```
 
 ```Go
@@ -14141,7 +13047,6 @@ const R_PPC64_TPREL16_HIGH R_PPC64 = 112
 
 ```
 searchKey: elf.R_PPC64_TPREL16_HIGHA
-tags: [exported]
 ```
 
 ```Go
@@ -14152,7 +13057,6 @@ const R_PPC64_TPREL16_HIGHA R_PPC64 = 113
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_HIGH
-tags: [exported]
 ```
 
 ```Go
@@ -14163,7 +13067,6 @@ const R_PPC64_DTPREL16_HIGH R_PPC64 = 114
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_HIGHA
-tags: [exported]
 ```
 
 ```Go
@@ -14174,7 +13077,6 @@ const R_PPC64_DTPREL16_HIGHA R_PPC64 = 115
 
 ```
 searchKey: elf.R_PPC64_REL24_NOTOC
-tags: [exported]
 ```
 
 ```Go
@@ -14185,7 +13087,6 @@ const R_PPC64_REL24_NOTOC R_PPC64 = 116
 
 ```
 searchKey: elf.R_PPC64_ADDR64_LOCAL
-tags: [exported]
 ```
 
 ```Go
@@ -14196,7 +13097,6 @@ const R_PPC64_ADDR64_LOCAL R_PPC64 = 117
 
 ```
 searchKey: elf.R_PPC64_ENTRY
-tags: [exported]
 ```
 
 ```Go
@@ -14207,7 +13107,6 @@ const R_PPC64_ENTRY R_PPC64 = 118
 
 ```
 searchKey: elf.R_PPC64_REL16DX_HA
-tags: [exported]
 ```
 
 ```Go
@@ -14219,7 +13118,6 @@ const R_PPC64_REL16DX_HA R_PPC64 = 246 // R_POWERPC_REL16DX_HA
 
 ```
 searchKey: elf.R_PPC64_JMP_IREL
-tags: [exported]
 ```
 
 ```Go
@@ -14230,7 +13128,6 @@ const R_PPC64_JMP_IREL R_PPC64 = 247
 
 ```
 searchKey: elf.R_PPC64_IRELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -14242,7 +13139,6 @@ const R_PPC64_IRELATIVE R_PPC64 = 248 // R_POWERPC_IRELATIVE
 
 ```
 searchKey: elf.R_PPC64_REL16
-tags: [exported]
 ```
 
 ```Go
@@ -14254,7 +13150,6 @@ const R_PPC64_REL16 R_PPC64 = 249 // R_POWERPC_REL16
 
 ```
 searchKey: elf.R_PPC64_REL16_LO
-tags: [exported]
 ```
 
 ```Go
@@ -14266,7 +13161,6 @@ const R_PPC64_REL16_LO R_PPC64 = 250 // R_POWERPC_REL16_LO
 
 ```
 searchKey: elf.R_PPC64_REL16_HI
-tags: [exported]
 ```
 
 ```Go
@@ -14278,7 +13172,6 @@ const R_PPC64_REL16_HI R_PPC64 = 251 // R_POWERPC_REL16_HI
 
 ```
 searchKey: elf.R_PPC64_REL16_HA
-tags: [exported]
 ```
 
 ```Go
@@ -14290,7 +13183,6 @@ const R_PPC64_REL16_HA R_PPC64 = 252 // R_POWERPC_REL16_HA
 
 ```
 searchKey: elf.R_RISCV_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -14302,7 +13194,6 @@ const R_RISCV_NONE R_RISCV = 0 /* No relocation. */
 
 ```
 searchKey: elf.R_RISCV_32
-tags: [exported]
 ```
 
 ```Go
@@ -14314,7 +13205,6 @@ const R_RISCV_32 R_RISCV = 1 /* Add 32 bit zero extended symbol value */
 
 ```
 searchKey: elf.R_RISCV_64
-tags: [exported]
 ```
 
 ```Go
@@ -14326,7 +13216,6 @@ const R_RISCV_64 R_RISCV = 2 /* Add 64 bit symbol value. */
 
 ```
 searchKey: elf.R_RISCV_RELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -14338,7 +13227,6 @@ const R_RISCV_RELATIVE R_RISCV = 3 /* Add load address of shared object. */
 
 ```
 searchKey: elf.R_RISCV_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -14350,7 +13238,6 @@ const R_RISCV_COPY R_RISCV = 4 /* Copy data from shared object. */
 
 ```
 searchKey: elf.R_RISCV_JUMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -14362,7 +13249,6 @@ const R_RISCV_JUMP_SLOT R_RISCV = 5 /* Set GOT entry to code address. */
 
 ```
 searchKey: elf.R_RISCV_TLS_DTPMOD32
-tags: [exported]
 ```
 
 ```Go
@@ -14374,7 +13260,6 @@ const R_RISCV_TLS_DTPMOD32 R_RISCV = 6 /* 32 bit ID of module containing symbol 
 
 ```
 searchKey: elf.R_RISCV_TLS_DTPMOD64
-tags: [exported]
 ```
 
 ```Go
@@ -14386,7 +13271,6 @@ const R_RISCV_TLS_DTPMOD64 R_RISCV = 7 /* ID of module containing symbol */
 
 ```
 searchKey: elf.R_RISCV_TLS_DTPREL32
-tags: [exported]
 ```
 
 ```Go
@@ -14398,7 +13282,6 @@ const R_RISCV_TLS_DTPREL32 R_RISCV = 8 /* 32 bit relative offset in TLS block */
 
 ```
 searchKey: elf.R_RISCV_TLS_DTPREL64
-tags: [exported]
 ```
 
 ```Go
@@ -14410,7 +13293,6 @@ const R_RISCV_TLS_DTPREL64 R_RISCV = 9 /* Relative offset in TLS block */
 
 ```
 searchKey: elf.R_RISCV_TLS_TPREL32
-tags: [exported]
 ```
 
 ```Go
@@ -14422,7 +13304,6 @@ const R_RISCV_TLS_TPREL32 R_RISCV = 10 /* 32 bit relative offset in static TLS b
 
 ```
 searchKey: elf.R_RISCV_TLS_TPREL64
-tags: [exported]
 ```
 
 ```Go
@@ -14434,7 +13315,6 @@ const R_RISCV_TLS_TPREL64 R_RISCV = 11 /* Relative offset in static TLS block */
 
 ```
 searchKey: elf.R_RISCV_BRANCH
-tags: [exported]
 ```
 
 ```Go
@@ -14446,7 +13326,6 @@ const R_RISCV_BRANCH R_RISCV = 16 /* PC-relative branch */
 
 ```
 searchKey: elf.R_RISCV_JAL
-tags: [exported]
 ```
 
 ```Go
@@ -14458,7 +13337,6 @@ const R_RISCV_JAL R_RISCV = 17 /* PC-relative jump */
 
 ```
 searchKey: elf.R_RISCV_CALL
-tags: [exported]
 ```
 
 ```Go
@@ -14470,7 +13348,6 @@ const R_RISCV_CALL R_RISCV = 18 /* PC-relative call */
 
 ```
 searchKey: elf.R_RISCV_CALL_PLT
-tags: [exported]
 ```
 
 ```Go
@@ -14482,7 +13359,6 @@ const R_RISCV_CALL_PLT R_RISCV = 19 /* PC-relative call (PLT) */
 
 ```
 searchKey: elf.R_RISCV_GOT_HI20
-tags: [exported]
 ```
 
 ```Go
@@ -14494,7 +13370,6 @@ const R_RISCV_GOT_HI20 R_RISCV = 20 /* PC-relative GOT reference */
 
 ```
 searchKey: elf.R_RISCV_TLS_GOT_HI20
-tags: [exported]
 ```
 
 ```Go
@@ -14506,7 +13381,6 @@ const R_RISCV_TLS_GOT_HI20 R_RISCV = 21 /* PC-relative TLS IE GOT offset */
 
 ```
 searchKey: elf.R_RISCV_TLS_GD_HI20
-tags: [exported]
 ```
 
 ```Go
@@ -14518,7 +13392,6 @@ const R_RISCV_TLS_GD_HI20 R_RISCV = 22 /* PC-relative TLS GD reference */
 
 ```
 searchKey: elf.R_RISCV_PCREL_HI20
-tags: [exported]
 ```
 
 ```Go
@@ -14530,7 +13403,6 @@ const R_RISCV_PCREL_HI20 R_RISCV = 23 /* PC-relative reference */
 
 ```
 searchKey: elf.R_RISCV_PCREL_LO12_I
-tags: [exported]
 ```
 
 ```Go
@@ -14542,7 +13414,6 @@ const R_RISCV_PCREL_LO12_I R_RISCV = 24 /* PC-relative reference */
 
 ```
 searchKey: elf.R_RISCV_PCREL_LO12_S
-tags: [exported]
 ```
 
 ```Go
@@ -14554,7 +13425,6 @@ const R_RISCV_PCREL_LO12_S R_RISCV = 25 /* PC-relative reference */
 
 ```
 searchKey: elf.R_RISCV_HI20
-tags: [exported]
 ```
 
 ```Go
@@ -14566,7 +13436,6 @@ const R_RISCV_HI20 R_RISCV = 26 /* Absolute address */
 
 ```
 searchKey: elf.R_RISCV_LO12_I
-tags: [exported]
 ```
 
 ```Go
@@ -14578,7 +13447,6 @@ const R_RISCV_LO12_I R_RISCV = 27 /* Absolute address */
 
 ```
 searchKey: elf.R_RISCV_LO12_S
-tags: [exported]
 ```
 
 ```Go
@@ -14590,7 +13458,6 @@ const R_RISCV_LO12_S R_RISCV = 28 /* Absolute address */
 
 ```
 searchKey: elf.R_RISCV_TPREL_HI20
-tags: [exported]
 ```
 
 ```Go
@@ -14602,7 +13469,6 @@ const R_RISCV_TPREL_HI20 R_RISCV = 29 /* TLS LE thread offset */
 
 ```
 searchKey: elf.R_RISCV_TPREL_LO12_I
-tags: [exported]
 ```
 
 ```Go
@@ -14614,7 +13480,6 @@ const R_RISCV_TPREL_LO12_I R_RISCV = 30 /* TLS LE thread offset */
 
 ```
 searchKey: elf.R_RISCV_TPREL_LO12_S
-tags: [exported]
 ```
 
 ```Go
@@ -14626,7 +13491,6 @@ const R_RISCV_TPREL_LO12_S R_RISCV = 31 /* TLS LE thread offset */
 
 ```
 searchKey: elf.R_RISCV_TPREL_ADD
-tags: [exported]
 ```
 
 ```Go
@@ -14638,7 +13502,6 @@ const R_RISCV_TPREL_ADD R_RISCV = 32 /* TLS LE thread usage */
 
 ```
 searchKey: elf.R_RISCV_ADD8
-tags: [exported]
 ```
 
 ```Go
@@ -14650,7 +13513,6 @@ const R_RISCV_ADD8 R_RISCV = 33 /* 8-bit label addition */
 
 ```
 searchKey: elf.R_RISCV_ADD16
-tags: [exported]
 ```
 
 ```Go
@@ -14662,7 +13524,6 @@ const R_RISCV_ADD16 R_RISCV = 34 /* 16-bit label addition */
 
 ```
 searchKey: elf.R_RISCV_ADD32
-tags: [exported]
 ```
 
 ```Go
@@ -14674,7 +13535,6 @@ const R_RISCV_ADD32 R_RISCV = 35 /* 32-bit label addition */
 
 ```
 searchKey: elf.R_RISCV_ADD64
-tags: [exported]
 ```
 
 ```Go
@@ -14686,7 +13546,6 @@ const R_RISCV_ADD64 R_RISCV = 36 /* 64-bit label addition */
 
 ```
 searchKey: elf.R_RISCV_SUB8
-tags: [exported]
 ```
 
 ```Go
@@ -14698,7 +13557,6 @@ const R_RISCV_SUB8 R_RISCV = 37 /* 8-bit label subtraction */
 
 ```
 searchKey: elf.R_RISCV_SUB16
-tags: [exported]
 ```
 
 ```Go
@@ -14710,7 +13568,6 @@ const R_RISCV_SUB16 R_RISCV = 38 /* 16-bit label subtraction */
 
 ```
 searchKey: elf.R_RISCV_SUB32
-tags: [exported]
 ```
 
 ```Go
@@ -14722,7 +13579,6 @@ const R_RISCV_SUB32 R_RISCV = 39 /* 32-bit label subtraction */
 
 ```
 searchKey: elf.R_RISCV_SUB64
-tags: [exported]
 ```
 
 ```Go
@@ -14734,7 +13590,6 @@ const R_RISCV_SUB64 R_RISCV = 40 /* 64-bit label subtraction */
 
 ```
 searchKey: elf.R_RISCV_GNU_VTINHERIT
-tags: [exported]
 ```
 
 ```Go
@@ -14746,7 +13601,6 @@ const R_RISCV_GNU_VTINHERIT R_RISCV = 41 /* GNU C++ vtable hierarchy */
 
 ```
 searchKey: elf.R_RISCV_GNU_VTENTRY
-tags: [exported]
 ```
 
 ```Go
@@ -14758,7 +13612,6 @@ const R_RISCV_GNU_VTENTRY R_RISCV = 42 /* GNU C++ vtable member usage */
 
 ```
 searchKey: elf.R_RISCV_ALIGN
-tags: [exported]
 ```
 
 ```Go
@@ -14770,7 +13623,6 @@ const R_RISCV_ALIGN R_RISCV = 43 /* Alignment statement */
 
 ```
 searchKey: elf.R_RISCV_RVC_BRANCH
-tags: [exported]
 ```
 
 ```Go
@@ -14782,7 +13634,6 @@ const R_RISCV_RVC_BRANCH R_RISCV = 44 /* PC-relative branch offset */
 
 ```
 searchKey: elf.R_RISCV_RVC_JUMP
-tags: [exported]
 ```
 
 ```Go
@@ -14794,7 +13645,6 @@ const R_RISCV_RVC_JUMP R_RISCV = 45 /* PC-relative jump offset */
 
 ```
 searchKey: elf.R_RISCV_RVC_LUI
-tags: [exported]
 ```
 
 ```Go
@@ -14806,7 +13656,6 @@ const R_RISCV_RVC_LUI R_RISCV = 46 /* Absolute address */
 
 ```
 searchKey: elf.R_RISCV_GPREL_I
-tags: [exported]
 ```
 
 ```Go
@@ -14818,7 +13667,6 @@ const R_RISCV_GPREL_I R_RISCV = 47 /* GP-relative reference */
 
 ```
 searchKey: elf.R_RISCV_GPREL_S
-tags: [exported]
 ```
 
 ```Go
@@ -14830,7 +13678,6 @@ const R_RISCV_GPREL_S R_RISCV = 48 /* GP-relative reference */
 
 ```
 searchKey: elf.R_RISCV_TPREL_I
-tags: [exported]
 ```
 
 ```Go
@@ -14842,7 +13689,6 @@ const R_RISCV_TPREL_I R_RISCV = 49 /* TP-relative TLS LE load */
 
 ```
 searchKey: elf.R_RISCV_TPREL_S
-tags: [exported]
 ```
 
 ```Go
@@ -14854,7 +13700,6 @@ const R_RISCV_TPREL_S R_RISCV = 50 /* TP-relative TLS LE store */
 
 ```
 searchKey: elf.R_RISCV_RELAX
-tags: [exported]
 ```
 
 ```Go
@@ -14866,7 +13711,6 @@ const R_RISCV_RELAX R_RISCV = 51 /* Instruction pair can be relaxed */
 
 ```
 searchKey: elf.R_RISCV_SUB6
-tags: [exported]
 ```
 
 ```Go
@@ -14878,7 +13722,6 @@ const R_RISCV_SUB6 R_RISCV = 52 /* Local label subtraction */
 
 ```
 searchKey: elf.R_RISCV_SET6
-tags: [exported]
 ```
 
 ```Go
@@ -14890,7 +13733,6 @@ const R_RISCV_SET6 R_RISCV = 53 /* Local label subtraction */
 
 ```
 searchKey: elf.R_RISCV_SET8
-tags: [exported]
 ```
 
 ```Go
@@ -14902,7 +13744,6 @@ const R_RISCV_SET8 R_RISCV = 54 /* Local label subtraction */
 
 ```
 searchKey: elf.R_RISCV_SET16
-tags: [exported]
 ```
 
 ```Go
@@ -14914,7 +13755,6 @@ const R_RISCV_SET16 R_RISCV = 55 /* Local label subtraction */
 
 ```
 searchKey: elf.R_RISCV_SET32
-tags: [exported]
 ```
 
 ```Go
@@ -14926,7 +13766,6 @@ const R_RISCV_SET32 R_RISCV = 56 /* Local label subtraction */
 
 ```
 searchKey: elf.R_RISCV_32_PCREL
-tags: [exported]
 ```
 
 ```Go
@@ -14938,7 +13777,6 @@ const R_RISCV_32_PCREL R_RISCV = 57 /* 32-bit PC relative */
 
 ```
 searchKey: elf.R_390_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -14949,7 +13787,6 @@ const R_390_NONE R_390 = 0
 
 ```
 searchKey: elf.R_390_8
-tags: [exported]
 ```
 
 ```Go
@@ -14960,7 +13797,6 @@ const R_390_8 R_390 = 1
 
 ```
 searchKey: elf.R_390_12
-tags: [exported]
 ```
 
 ```Go
@@ -14971,7 +13807,6 @@ const R_390_12 R_390 = 2
 
 ```
 searchKey: elf.R_390_16
-tags: [exported]
 ```
 
 ```Go
@@ -14982,7 +13817,6 @@ const R_390_16 R_390 = 3
 
 ```
 searchKey: elf.R_390_32
-tags: [exported]
 ```
 
 ```Go
@@ -14993,7 +13827,6 @@ const R_390_32 R_390 = 4
 
 ```
 searchKey: elf.R_390_PC32
-tags: [exported]
 ```
 
 ```Go
@@ -15004,7 +13837,6 @@ const R_390_PC32 R_390 = 5
 
 ```
 searchKey: elf.R_390_GOT12
-tags: [exported]
 ```
 
 ```Go
@@ -15015,7 +13847,6 @@ const R_390_GOT12 R_390 = 6
 
 ```
 searchKey: elf.R_390_GOT32
-tags: [exported]
 ```
 
 ```Go
@@ -15026,7 +13857,6 @@ const R_390_GOT32 R_390 = 7
 
 ```
 searchKey: elf.R_390_PLT32
-tags: [exported]
 ```
 
 ```Go
@@ -15037,7 +13867,6 @@ const R_390_PLT32 R_390 = 8
 
 ```
 searchKey: elf.R_390_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -15048,7 +13877,6 @@ const R_390_COPY R_390 = 9
 
 ```
 searchKey: elf.R_390_GLOB_DAT
-tags: [exported]
 ```
 
 ```Go
@@ -15059,7 +13887,6 @@ const R_390_GLOB_DAT R_390 = 10
 
 ```
 searchKey: elf.R_390_JMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -15070,7 +13897,6 @@ const R_390_JMP_SLOT R_390 = 11
 
 ```
 searchKey: elf.R_390_RELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -15081,7 +13907,6 @@ const R_390_RELATIVE R_390 = 12
 
 ```
 searchKey: elf.R_390_GOTOFF
-tags: [exported]
 ```
 
 ```Go
@@ -15092,7 +13917,6 @@ const R_390_GOTOFF R_390 = 13
 
 ```
 searchKey: elf.R_390_GOTPC
-tags: [exported]
 ```
 
 ```Go
@@ -15103,7 +13927,6 @@ const R_390_GOTPC R_390 = 14
 
 ```
 searchKey: elf.R_390_GOT16
-tags: [exported]
 ```
 
 ```Go
@@ -15114,7 +13937,6 @@ const R_390_GOT16 R_390 = 15
 
 ```
 searchKey: elf.R_390_PC16
-tags: [exported]
 ```
 
 ```Go
@@ -15125,7 +13947,6 @@ const R_390_PC16 R_390 = 16
 
 ```
 searchKey: elf.R_390_PC16DBL
-tags: [exported]
 ```
 
 ```Go
@@ -15136,7 +13957,6 @@ const R_390_PC16DBL R_390 = 17
 
 ```
 searchKey: elf.R_390_PLT16DBL
-tags: [exported]
 ```
 
 ```Go
@@ -15147,7 +13967,6 @@ const R_390_PLT16DBL R_390 = 18
 
 ```
 searchKey: elf.R_390_PC32DBL
-tags: [exported]
 ```
 
 ```Go
@@ -15158,7 +13977,6 @@ const R_390_PC32DBL R_390 = 19
 
 ```
 searchKey: elf.R_390_PLT32DBL
-tags: [exported]
 ```
 
 ```Go
@@ -15169,7 +13987,6 @@ const R_390_PLT32DBL R_390 = 20
 
 ```
 searchKey: elf.R_390_GOTPCDBL
-tags: [exported]
 ```
 
 ```Go
@@ -15180,7 +13997,6 @@ const R_390_GOTPCDBL R_390 = 21
 
 ```
 searchKey: elf.R_390_64
-tags: [exported]
 ```
 
 ```Go
@@ -15191,7 +14007,6 @@ const R_390_64 R_390 = 22
 
 ```
 searchKey: elf.R_390_PC64
-tags: [exported]
 ```
 
 ```Go
@@ -15202,7 +14017,6 @@ const R_390_PC64 R_390 = 23
 
 ```
 searchKey: elf.R_390_GOT64
-tags: [exported]
 ```
 
 ```Go
@@ -15213,7 +14027,6 @@ const R_390_GOT64 R_390 = 24
 
 ```
 searchKey: elf.R_390_PLT64
-tags: [exported]
 ```
 
 ```Go
@@ -15224,7 +14037,6 @@ const R_390_PLT64 R_390 = 25
 
 ```
 searchKey: elf.R_390_GOTENT
-tags: [exported]
 ```
 
 ```Go
@@ -15235,7 +14047,6 @@ const R_390_GOTENT R_390 = 26
 
 ```
 searchKey: elf.R_390_GOTOFF16
-tags: [exported]
 ```
 
 ```Go
@@ -15246,7 +14057,6 @@ const R_390_GOTOFF16 R_390 = 27
 
 ```
 searchKey: elf.R_390_GOTOFF64
-tags: [exported]
 ```
 
 ```Go
@@ -15257,7 +14067,6 @@ const R_390_GOTOFF64 R_390 = 28
 
 ```
 searchKey: elf.R_390_GOTPLT12
-tags: [exported]
 ```
 
 ```Go
@@ -15268,7 +14077,6 @@ const R_390_GOTPLT12 R_390 = 29
 
 ```
 searchKey: elf.R_390_GOTPLT16
-tags: [exported]
 ```
 
 ```Go
@@ -15279,7 +14087,6 @@ const R_390_GOTPLT16 R_390 = 30
 
 ```
 searchKey: elf.R_390_GOTPLT32
-tags: [exported]
 ```
 
 ```Go
@@ -15290,7 +14097,6 @@ const R_390_GOTPLT32 R_390 = 31
 
 ```
 searchKey: elf.R_390_GOTPLT64
-tags: [exported]
 ```
 
 ```Go
@@ -15301,7 +14107,6 @@ const R_390_GOTPLT64 R_390 = 32
 
 ```
 searchKey: elf.R_390_GOTPLTENT
-tags: [exported]
 ```
 
 ```Go
@@ -15312,7 +14117,6 @@ const R_390_GOTPLTENT R_390 = 33
 
 ```
 searchKey: elf.R_390_GOTPLTOFF16
-tags: [exported]
 ```
 
 ```Go
@@ -15323,7 +14127,6 @@ const R_390_GOTPLTOFF16 R_390 = 34
 
 ```
 searchKey: elf.R_390_GOTPLTOFF32
-tags: [exported]
 ```
 
 ```Go
@@ -15334,7 +14137,6 @@ const R_390_GOTPLTOFF32 R_390 = 35
 
 ```
 searchKey: elf.R_390_GOTPLTOFF64
-tags: [exported]
 ```
 
 ```Go
@@ -15345,7 +14147,6 @@ const R_390_GOTPLTOFF64 R_390 = 36
 
 ```
 searchKey: elf.R_390_TLS_LOAD
-tags: [exported]
 ```
 
 ```Go
@@ -15356,7 +14157,6 @@ const R_390_TLS_LOAD R_390 = 37
 
 ```
 searchKey: elf.R_390_TLS_GDCALL
-tags: [exported]
 ```
 
 ```Go
@@ -15367,7 +14167,6 @@ const R_390_TLS_GDCALL R_390 = 38
 
 ```
 searchKey: elf.R_390_TLS_LDCALL
-tags: [exported]
 ```
 
 ```Go
@@ -15378,7 +14177,6 @@ const R_390_TLS_LDCALL R_390 = 39
 
 ```
 searchKey: elf.R_390_TLS_GD32
-tags: [exported]
 ```
 
 ```Go
@@ -15389,7 +14187,6 @@ const R_390_TLS_GD32 R_390 = 40
 
 ```
 searchKey: elf.R_390_TLS_GD64
-tags: [exported]
 ```
 
 ```Go
@@ -15400,7 +14197,6 @@ const R_390_TLS_GD64 R_390 = 41
 
 ```
 searchKey: elf.R_390_TLS_GOTIE12
-tags: [exported]
 ```
 
 ```Go
@@ -15411,7 +14207,6 @@ const R_390_TLS_GOTIE12 R_390 = 42
 
 ```
 searchKey: elf.R_390_TLS_GOTIE32
-tags: [exported]
 ```
 
 ```Go
@@ -15422,7 +14217,6 @@ const R_390_TLS_GOTIE32 R_390 = 43
 
 ```
 searchKey: elf.R_390_TLS_GOTIE64
-tags: [exported]
 ```
 
 ```Go
@@ -15433,7 +14227,6 @@ const R_390_TLS_GOTIE64 R_390 = 44
 
 ```
 searchKey: elf.R_390_TLS_LDM32
-tags: [exported]
 ```
 
 ```Go
@@ -15444,7 +14237,6 @@ const R_390_TLS_LDM32 R_390 = 45
 
 ```
 searchKey: elf.R_390_TLS_LDM64
-tags: [exported]
 ```
 
 ```Go
@@ -15455,7 +14247,6 @@ const R_390_TLS_LDM64 R_390 = 46
 
 ```
 searchKey: elf.R_390_TLS_IE32
-tags: [exported]
 ```
 
 ```Go
@@ -15466,7 +14257,6 @@ const R_390_TLS_IE32 R_390 = 47
 
 ```
 searchKey: elf.R_390_TLS_IE64
-tags: [exported]
 ```
 
 ```Go
@@ -15477,7 +14267,6 @@ const R_390_TLS_IE64 R_390 = 48
 
 ```
 searchKey: elf.R_390_TLS_IEENT
-tags: [exported]
 ```
 
 ```Go
@@ -15488,7 +14277,6 @@ const R_390_TLS_IEENT R_390 = 49
 
 ```
 searchKey: elf.R_390_TLS_LE32
-tags: [exported]
 ```
 
 ```Go
@@ -15499,7 +14287,6 @@ const R_390_TLS_LE32 R_390 = 50
 
 ```
 searchKey: elf.R_390_TLS_LE64
-tags: [exported]
 ```
 
 ```Go
@@ -15510,7 +14297,6 @@ const R_390_TLS_LE64 R_390 = 51
 
 ```
 searchKey: elf.R_390_TLS_LDO32
-tags: [exported]
 ```
 
 ```Go
@@ -15521,7 +14307,6 @@ const R_390_TLS_LDO32 R_390 = 52
 
 ```
 searchKey: elf.R_390_TLS_LDO64
-tags: [exported]
 ```
 
 ```Go
@@ -15532,7 +14317,6 @@ const R_390_TLS_LDO64 R_390 = 53
 
 ```
 searchKey: elf.R_390_TLS_DTPMOD
-tags: [exported]
 ```
 
 ```Go
@@ -15543,7 +14327,6 @@ const R_390_TLS_DTPMOD R_390 = 54
 
 ```
 searchKey: elf.R_390_TLS_DTPOFF
-tags: [exported]
 ```
 
 ```Go
@@ -15554,7 +14337,6 @@ const R_390_TLS_DTPOFF R_390 = 55
 
 ```
 searchKey: elf.R_390_TLS_TPOFF
-tags: [exported]
 ```
 
 ```Go
@@ -15565,7 +14347,6 @@ const R_390_TLS_TPOFF R_390 = 56
 
 ```
 searchKey: elf.R_390_20
-tags: [exported]
 ```
 
 ```Go
@@ -15576,7 +14357,6 @@ const R_390_20 R_390 = 57
 
 ```
 searchKey: elf.R_390_GOT20
-tags: [exported]
 ```
 
 ```Go
@@ -15587,7 +14367,6 @@ const R_390_GOT20 R_390 = 58
 
 ```
 searchKey: elf.R_390_GOTPLT20
-tags: [exported]
 ```
 
 ```Go
@@ -15598,7 +14377,6 @@ const R_390_GOTPLT20 R_390 = 59
 
 ```
 searchKey: elf.R_390_TLS_GOTIE20
-tags: [exported]
 ```
 
 ```Go
@@ -15609,7 +14387,6 @@ const R_390_TLS_GOTIE20 R_390 = 60
 
 ```
 searchKey: elf.R_SPARC_NONE
-tags: [exported]
 ```
 
 ```Go
@@ -15620,7 +14397,6 @@ const R_SPARC_NONE R_SPARC = 0
 
 ```
 searchKey: elf.R_SPARC_8
-tags: [exported]
 ```
 
 ```Go
@@ -15631,7 +14407,6 @@ const R_SPARC_8 R_SPARC = 1
 
 ```
 searchKey: elf.R_SPARC_16
-tags: [exported]
 ```
 
 ```Go
@@ -15642,7 +14417,6 @@ const R_SPARC_16 R_SPARC = 2
 
 ```
 searchKey: elf.R_SPARC_32
-tags: [exported]
 ```
 
 ```Go
@@ -15653,7 +14427,6 @@ const R_SPARC_32 R_SPARC = 3
 
 ```
 searchKey: elf.R_SPARC_DISP8
-tags: [exported]
 ```
 
 ```Go
@@ -15664,7 +14437,6 @@ const R_SPARC_DISP8 R_SPARC = 4
 
 ```
 searchKey: elf.R_SPARC_DISP16
-tags: [exported]
 ```
 
 ```Go
@@ -15675,7 +14447,6 @@ const R_SPARC_DISP16 R_SPARC = 5
 
 ```
 searchKey: elf.R_SPARC_DISP32
-tags: [exported]
 ```
 
 ```Go
@@ -15686,7 +14457,6 @@ const R_SPARC_DISP32 R_SPARC = 6
 
 ```
 searchKey: elf.R_SPARC_WDISP30
-tags: [exported]
 ```
 
 ```Go
@@ -15697,7 +14467,6 @@ const R_SPARC_WDISP30 R_SPARC = 7
 
 ```
 searchKey: elf.R_SPARC_WDISP22
-tags: [exported]
 ```
 
 ```Go
@@ -15708,7 +14477,6 @@ const R_SPARC_WDISP22 R_SPARC = 8
 
 ```
 searchKey: elf.R_SPARC_HI22
-tags: [exported]
 ```
 
 ```Go
@@ -15719,7 +14487,6 @@ const R_SPARC_HI22 R_SPARC = 9
 
 ```
 searchKey: elf.R_SPARC_22
-tags: [exported]
 ```
 
 ```Go
@@ -15730,7 +14497,6 @@ const R_SPARC_22 R_SPARC = 10
 
 ```
 searchKey: elf.R_SPARC_13
-tags: [exported]
 ```
 
 ```Go
@@ -15741,7 +14507,6 @@ const R_SPARC_13 R_SPARC = 11
 
 ```
 searchKey: elf.R_SPARC_LO10
-tags: [exported]
 ```
 
 ```Go
@@ -15752,7 +14517,6 @@ const R_SPARC_LO10 R_SPARC = 12
 
 ```
 searchKey: elf.R_SPARC_GOT10
-tags: [exported]
 ```
 
 ```Go
@@ -15763,7 +14527,6 @@ const R_SPARC_GOT10 R_SPARC = 13
 
 ```
 searchKey: elf.R_SPARC_GOT13
-tags: [exported]
 ```
 
 ```Go
@@ -15774,7 +14537,6 @@ const R_SPARC_GOT13 R_SPARC = 14
 
 ```
 searchKey: elf.R_SPARC_GOT22
-tags: [exported]
 ```
 
 ```Go
@@ -15785,7 +14547,6 @@ const R_SPARC_GOT22 R_SPARC = 15
 
 ```
 searchKey: elf.R_SPARC_PC10
-tags: [exported]
 ```
 
 ```Go
@@ -15796,7 +14557,6 @@ const R_SPARC_PC10 R_SPARC = 16
 
 ```
 searchKey: elf.R_SPARC_PC22
-tags: [exported]
 ```
 
 ```Go
@@ -15807,7 +14567,6 @@ const R_SPARC_PC22 R_SPARC = 17
 
 ```
 searchKey: elf.R_SPARC_WPLT30
-tags: [exported]
 ```
 
 ```Go
@@ -15818,7 +14577,6 @@ const R_SPARC_WPLT30 R_SPARC = 18
 
 ```
 searchKey: elf.R_SPARC_COPY
-tags: [exported]
 ```
 
 ```Go
@@ -15829,7 +14587,6 @@ const R_SPARC_COPY R_SPARC = 19
 
 ```
 searchKey: elf.R_SPARC_GLOB_DAT
-tags: [exported]
 ```
 
 ```Go
@@ -15840,7 +14597,6 @@ const R_SPARC_GLOB_DAT R_SPARC = 20
 
 ```
 searchKey: elf.R_SPARC_JMP_SLOT
-tags: [exported]
 ```
 
 ```Go
@@ -15851,7 +14607,6 @@ const R_SPARC_JMP_SLOT R_SPARC = 21
 
 ```
 searchKey: elf.R_SPARC_RELATIVE
-tags: [exported]
 ```
 
 ```Go
@@ -15862,7 +14617,6 @@ const R_SPARC_RELATIVE R_SPARC = 22
 
 ```
 searchKey: elf.R_SPARC_UA32
-tags: [exported]
 ```
 
 ```Go
@@ -15873,7 +14627,6 @@ const R_SPARC_UA32 R_SPARC = 23
 
 ```
 searchKey: elf.R_SPARC_PLT32
-tags: [exported]
 ```
 
 ```Go
@@ -15884,7 +14637,6 @@ const R_SPARC_PLT32 R_SPARC = 24
 
 ```
 searchKey: elf.R_SPARC_HIPLT22
-tags: [exported]
 ```
 
 ```Go
@@ -15895,7 +14647,6 @@ const R_SPARC_HIPLT22 R_SPARC = 25
 
 ```
 searchKey: elf.R_SPARC_LOPLT10
-tags: [exported]
 ```
 
 ```Go
@@ -15906,7 +14657,6 @@ const R_SPARC_LOPLT10 R_SPARC = 26
 
 ```
 searchKey: elf.R_SPARC_PCPLT32
-tags: [exported]
 ```
 
 ```Go
@@ -15917,7 +14667,6 @@ const R_SPARC_PCPLT32 R_SPARC = 27
 
 ```
 searchKey: elf.R_SPARC_PCPLT22
-tags: [exported]
 ```
 
 ```Go
@@ -15928,7 +14677,6 @@ const R_SPARC_PCPLT22 R_SPARC = 28
 
 ```
 searchKey: elf.R_SPARC_PCPLT10
-tags: [exported]
 ```
 
 ```Go
@@ -15939,7 +14687,6 @@ const R_SPARC_PCPLT10 R_SPARC = 29
 
 ```
 searchKey: elf.R_SPARC_10
-tags: [exported]
 ```
 
 ```Go
@@ -15950,7 +14697,6 @@ const R_SPARC_10 R_SPARC = 30
 
 ```
 searchKey: elf.R_SPARC_11
-tags: [exported]
 ```
 
 ```Go
@@ -15961,7 +14707,6 @@ const R_SPARC_11 R_SPARC = 31
 
 ```
 searchKey: elf.R_SPARC_64
-tags: [exported]
 ```
 
 ```Go
@@ -15972,7 +14717,6 @@ const R_SPARC_64 R_SPARC = 32
 
 ```
 searchKey: elf.R_SPARC_OLO10
-tags: [exported]
 ```
 
 ```Go
@@ -15983,7 +14727,6 @@ const R_SPARC_OLO10 R_SPARC = 33
 
 ```
 searchKey: elf.R_SPARC_HH22
-tags: [exported]
 ```
 
 ```Go
@@ -15994,7 +14737,6 @@ const R_SPARC_HH22 R_SPARC = 34
 
 ```
 searchKey: elf.R_SPARC_HM10
-tags: [exported]
 ```
 
 ```Go
@@ -16005,7 +14747,6 @@ const R_SPARC_HM10 R_SPARC = 35
 
 ```
 searchKey: elf.R_SPARC_LM22
-tags: [exported]
 ```
 
 ```Go
@@ -16016,7 +14757,6 @@ const R_SPARC_LM22 R_SPARC = 36
 
 ```
 searchKey: elf.R_SPARC_PC_HH22
-tags: [exported]
 ```
 
 ```Go
@@ -16027,7 +14767,6 @@ const R_SPARC_PC_HH22 R_SPARC = 37
 
 ```
 searchKey: elf.R_SPARC_PC_HM10
-tags: [exported]
 ```
 
 ```Go
@@ -16038,7 +14777,6 @@ const R_SPARC_PC_HM10 R_SPARC = 38
 
 ```
 searchKey: elf.R_SPARC_PC_LM22
-tags: [exported]
 ```
 
 ```Go
@@ -16049,7 +14787,6 @@ const R_SPARC_PC_LM22 R_SPARC = 39
 
 ```
 searchKey: elf.R_SPARC_WDISP16
-tags: [exported]
 ```
 
 ```Go
@@ -16060,7 +14797,6 @@ const R_SPARC_WDISP16 R_SPARC = 40
 
 ```
 searchKey: elf.R_SPARC_WDISP19
-tags: [exported]
 ```
 
 ```Go
@@ -16071,7 +14807,6 @@ const R_SPARC_WDISP19 R_SPARC = 41
 
 ```
 searchKey: elf.R_SPARC_GLOB_JMP
-tags: [exported]
 ```
 
 ```Go
@@ -16082,7 +14817,6 @@ const R_SPARC_GLOB_JMP R_SPARC = 42
 
 ```
 searchKey: elf.R_SPARC_7
-tags: [exported]
 ```
 
 ```Go
@@ -16093,7 +14827,6 @@ const R_SPARC_7 R_SPARC = 43
 
 ```
 searchKey: elf.R_SPARC_5
-tags: [exported]
 ```
 
 ```Go
@@ -16104,7 +14837,6 @@ const R_SPARC_5 R_SPARC = 44
 
 ```
 searchKey: elf.R_SPARC_6
-tags: [exported]
 ```
 
 ```Go
@@ -16115,7 +14847,6 @@ const R_SPARC_6 R_SPARC = 45
 
 ```
 searchKey: elf.R_SPARC_DISP64
-tags: [exported]
 ```
 
 ```Go
@@ -16126,7 +14857,6 @@ const R_SPARC_DISP64 R_SPARC = 46
 
 ```
 searchKey: elf.R_SPARC_PLT64
-tags: [exported]
 ```
 
 ```Go
@@ -16137,7 +14867,6 @@ const R_SPARC_PLT64 R_SPARC = 47
 
 ```
 searchKey: elf.R_SPARC_HIX22
-tags: [exported]
 ```
 
 ```Go
@@ -16148,7 +14877,6 @@ const R_SPARC_HIX22 R_SPARC = 48
 
 ```
 searchKey: elf.R_SPARC_LOX10
-tags: [exported]
 ```
 
 ```Go
@@ -16159,7 +14887,6 @@ const R_SPARC_LOX10 R_SPARC = 49
 
 ```
 searchKey: elf.R_SPARC_H44
-tags: [exported]
 ```
 
 ```Go
@@ -16170,7 +14897,6 @@ const R_SPARC_H44 R_SPARC = 50
 
 ```
 searchKey: elf.R_SPARC_M44
-tags: [exported]
 ```
 
 ```Go
@@ -16181,7 +14907,6 @@ const R_SPARC_M44 R_SPARC = 51
 
 ```
 searchKey: elf.R_SPARC_L44
-tags: [exported]
 ```
 
 ```Go
@@ -16192,7 +14917,6 @@ const R_SPARC_L44 R_SPARC = 52
 
 ```
 searchKey: elf.R_SPARC_REGISTER
-tags: [exported]
 ```
 
 ```Go
@@ -16203,7 +14927,6 @@ const R_SPARC_REGISTER R_SPARC = 53
 
 ```
 searchKey: elf.R_SPARC_UA64
-tags: [exported]
 ```
 
 ```Go
@@ -16214,7 +14937,6 @@ const R_SPARC_UA64 R_SPARC = 54
 
 ```
 searchKey: elf.R_SPARC_UA16
-tags: [exported]
 ```
 
 ```Go
@@ -16225,7 +14947,6 @@ const R_SPARC_UA16 R_SPARC = 55
 
 ```
 searchKey: elf.ARM_MAGIC_TRAMP_NUMBER
-tags: [exported]
 ```
 
 ```Go
@@ -16238,7 +14959,6 @@ Magic number for the elf trampoline, chosen wisely to be an immediate value.
 
 ```
 searchKey: elf.Sym32Size
-tags: [exported]
 ```
 
 ```Go
@@ -16249,7 +14969,6 @@ const Sym32Size = 16
 
 ```
 searchKey: elf.Sym64Size
-tags: [exported]
 ```
 
 ```Go
@@ -16260,6 +14979,7 @@ const Sym64Size = 24
 
 ```
 searchKey: elf.seekStart
+tags: [private]
 ```
 
 ```Go
@@ -16272,6 +14992,7 @@ seekStart, seekCurrent, seekEnd are copies of io.SeekStart, io.SeekCurrent, and 
 
 ```
 searchKey: elf.seekCurrent
+tags: [private]
 ```
 
 ```Go
@@ -16284,6 +15005,7 @@ seekStart, seekCurrent, seekEnd are copies of io.SeekStart, io.SeekCurrent, and 
 
 ```
 searchKey: elf.seekEnd
+tags: [private]
 ```
 
 ```Go
@@ -16294,14 +15016,11 @@ seekStart, seekCurrent, seekEnd are copies of io.SeekStart, io.SeekCurrent, and 
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="versionStrings" href="#versionStrings">var versionStrings</a>
 
 ```
 searchKey: elf.versionStrings
+tags: [private]
 ```
 
 ```Go
@@ -16315,6 +15034,7 @@ var versionStrings = []intName{
 
 ```
 searchKey: elf.classStrings
+tags: [private]
 ```
 
 ```Go
@@ -16329,6 +15049,7 @@ var classStrings = []intName{
 
 ```
 searchKey: elf.dataStrings
+tags: [private]
 ```
 
 ```Go
@@ -16343,6 +15064,7 @@ var dataStrings = []intName{
 
 ```
 searchKey: elf.osabiStrings
+tags: [private]
 ```
 
 ```Go
@@ -16353,6 +15075,7 @@ var osabiStrings = ...
 
 ```
 searchKey: elf.typeStrings
+tags: [private]
 ```
 
 ```Go
@@ -16363,6 +15086,7 @@ var typeStrings = ...
 
 ```
 searchKey: elf.machineStrings
+tags: [private]
 ```
 
 ```Go
@@ -16373,6 +15097,7 @@ var machineStrings = ...
 
 ```
 searchKey: elf.shnStrings
+tags: [private]
 ```
 
 ```Go
@@ -16383,6 +15108,7 @@ var shnStrings = ...
 
 ```
 searchKey: elf.shtStrings
+tags: [private]
 ```
 
 ```Go
@@ -16393,6 +15119,7 @@ var shtStrings = ...
 
 ```
 searchKey: elf.shfStrings
+tags: [private]
 ```
 
 ```Go
@@ -16403,6 +15130,7 @@ var shfStrings = ...
 
 ```
 searchKey: elf.compressionStrings
+tags: [private]
 ```
 
 ```Go
@@ -16413,6 +15141,7 @@ var compressionStrings = ...
 
 ```
 searchKey: elf.ptStrings
+tags: [private]
 ```
 
 ```Go
@@ -16423,6 +15152,7 @@ var ptStrings = ...
 
 ```
 searchKey: elf.pfStrings
+tags: [private]
 ```
 
 ```Go
@@ -16437,6 +15167,7 @@ var pfStrings = []intName{
 
 ```
 searchKey: elf.dtStrings
+tags: [private]
 ```
 
 ```Go
@@ -16447,6 +15178,7 @@ var dtStrings = ...
 
 ```
 searchKey: elf.dflagStrings
+tags: [private]
 ```
 
 ```Go
@@ -16457,6 +15189,7 @@ var dflagStrings = ...
 
 ```
 searchKey: elf.ntypeStrings
+tags: [private]
 ```
 
 ```Go
@@ -16471,6 +15204,7 @@ var ntypeStrings = []intName{
 
 ```
 searchKey: elf.stbStrings
+tags: [private]
 ```
 
 ```Go
@@ -16481,6 +15215,7 @@ var stbStrings = ...
 
 ```
 searchKey: elf.sttStrings
+tags: [private]
 ```
 
 ```Go
@@ -16491,6 +15226,7 @@ var sttStrings = ...
 
 ```
 searchKey: elf.stvStrings
+tags: [private]
 ```
 
 ```Go
@@ -16501,6 +15237,7 @@ var stvStrings = ...
 
 ```
 searchKey: elf.rx86_64Strings
+tags: [private]
 ```
 
 ```Go
@@ -16511,6 +15248,7 @@ var rx86_64Strings = ...
 
 ```
 searchKey: elf.raarch64Strings
+tags: [private]
 ```
 
 ```Go
@@ -16521,6 +15259,7 @@ var raarch64Strings = ...
 
 ```
 searchKey: elf.ralphaStrings
+tags: [private]
 ```
 
 ```Go
@@ -16531,6 +15270,7 @@ var ralphaStrings = ...
 
 ```
 searchKey: elf.rarmStrings
+tags: [private]
 ```
 
 ```Go
@@ -16541,6 +15281,7 @@ var rarmStrings = ...
 
 ```
 searchKey: elf.r386Strings
+tags: [private]
 ```
 
 ```Go
@@ -16551,6 +15292,7 @@ var r386Strings = ...
 
 ```
 searchKey: elf.rmipsStrings
+tags: [private]
 ```
 
 ```Go
@@ -16561,6 +15303,7 @@ var rmipsStrings = ...
 
 ```
 searchKey: elf.rppcStrings
+tags: [private]
 ```
 
 ```Go
@@ -16571,6 +15314,7 @@ var rppcStrings = ...
 
 ```
 searchKey: elf.rppc64Strings
+tags: [private]
 ```
 
 ```Go
@@ -16581,6 +15325,7 @@ var rppc64Strings = ...
 
 ```
 searchKey: elf.rriscvStrings
+tags: [private]
 ```
 
 ```Go
@@ -16591,6 +15336,7 @@ var rriscvStrings = ...
 
 ```
 searchKey: elf.r390Strings
+tags: [private]
 ```
 
 ```Go
@@ -16601,6 +15347,7 @@ var r390Strings = ...
 
 ```
 searchKey: elf.rsparcStrings
+tags: [private]
 ```
 
 ```Go
@@ -16611,7 +15358,6 @@ var rsparcStrings = ...
 
 ```
 searchKey: elf.ErrNoSymbols
-tags: [exported]
 ```
 
 ```Go
@@ -16624,6 +15370,7 @@ ErrNoSymbols is returned by File.Symbols and File.DynamicSymbols if there is no 
 
 ```
 searchKey: elf.nameTests
+tags: [private]
 ```
 
 ```Go
@@ -16634,6 +15381,7 @@ var nameTests = ...
 
 ```
 searchKey: elf.fileTests
+tags: [private]
 ```
 
 ```Go
@@ -16644,6 +15392,7 @@ var fileTests = ...
 
 ```
 searchKey: elf.relocationTests
+tags: [private]
 ```
 
 ```Go
@@ -16654,6 +15403,7 @@ var relocationTests = ...
 
 ```
 searchKey: elf.symbolsGolden
+tags: [private]
 ```
 
 ```Go
@@ -16664,6 +15414,7 @@ var symbolsGolden = ...
 
 ```
 searchKey: elf.dynamicSymbolsGolden
+tags: [private]
 ```
 
 ```Go
@@ -16672,15 +15423,10 @@ var dynamicSymbolsGolden = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Version" href="#Version">type Version byte</a>
 
 ```
 searchKey: elf.Version
-tags: [exported]
 ```
 
 ```Go
@@ -16693,7 +15439,6 @@ Version is found in Header.Ident[EI_VERSION] and Header.Version.
 
 ```
 searchKey: elf.Version.String
-tags: [exported]
 ```
 
 ```Go
@@ -16704,7 +15449,6 @@ func (i Version) String() string
 
 ```
 searchKey: elf.Version.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -16715,7 +15459,6 @@ func (i Version) GoString() string
 
 ```
 searchKey: elf.Class
-tags: [exported]
 ```
 
 ```Go
@@ -16728,7 +15471,6 @@ Class is found in Header.Ident[EI_CLASS] and Header.Class.
 
 ```
 searchKey: elf.Class.String
-tags: [exported]
 ```
 
 ```Go
@@ -16739,7 +15481,6 @@ func (i Class) String() string
 
 ```
 searchKey: elf.Class.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -16750,7 +15491,6 @@ func (i Class) GoString() string
 
 ```
 searchKey: elf.Data
-tags: [exported]
 ```
 
 ```Go
@@ -16763,7 +15503,6 @@ Data is found in Header.Ident[EI_DATA] and Header.Data.
 
 ```
 searchKey: elf.Data.String
-tags: [exported]
 ```
 
 ```Go
@@ -16774,7 +15513,6 @@ func (i Data) String() string
 
 ```
 searchKey: elf.Data.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -16785,7 +15523,6 @@ func (i Data) GoString() string
 
 ```
 searchKey: elf.OSABI
-tags: [exported]
 ```
 
 ```Go
@@ -16798,7 +15535,6 @@ OSABI is found in Header.Ident[EI_OSABI] and Header.OSABI.
 
 ```
 searchKey: elf.OSABI.String
-tags: [exported]
 ```
 
 ```Go
@@ -16809,7 +15545,6 @@ func (i OSABI) String() string
 
 ```
 searchKey: elf.OSABI.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -16820,7 +15555,6 @@ func (i OSABI) GoString() string
 
 ```
 searchKey: elf.Type
-tags: [exported]
 ```
 
 ```Go
@@ -16833,7 +15567,6 @@ Type is found in Header.Type.
 
 ```
 searchKey: elf.Type.String
-tags: [exported]
 ```
 
 ```Go
@@ -16844,7 +15577,6 @@ func (i Type) String() string
 
 ```
 searchKey: elf.Type.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -16855,7 +15587,6 @@ func (i Type) GoString() string
 
 ```
 searchKey: elf.Machine
-tags: [exported]
 ```
 
 ```Go
@@ -16868,7 +15599,6 @@ Machine is found in Header.Machine.
 
 ```
 searchKey: elf.Machine.String
-tags: [exported]
 ```
 
 ```Go
@@ -16879,7 +15609,6 @@ func (i Machine) String() string
 
 ```
 searchKey: elf.Machine.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -16890,7 +15619,6 @@ func (i Machine) GoString() string
 
 ```
 searchKey: elf.SectionIndex
-tags: [exported]
 ```
 
 ```Go
@@ -16903,7 +15631,6 @@ Special section indices.
 
 ```
 searchKey: elf.SectionIndex.String
-tags: [exported]
 ```
 
 ```Go
@@ -16914,7 +15641,6 @@ func (i SectionIndex) String() string
 
 ```
 searchKey: elf.SectionIndex.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -16925,7 +15651,6 @@ func (i SectionIndex) GoString() string
 
 ```
 searchKey: elf.SectionType
-tags: [exported]
 ```
 
 ```Go
@@ -16938,7 +15663,6 @@ Section type.
 
 ```
 searchKey: elf.SectionType.String
-tags: [exported]
 ```
 
 ```Go
@@ -16949,7 +15673,6 @@ func (i SectionType) String() string
 
 ```
 searchKey: elf.SectionType.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -16960,7 +15683,6 @@ func (i SectionType) GoString() string
 
 ```
 searchKey: elf.SectionFlag
-tags: [exported]
 ```
 
 ```Go
@@ -16973,7 +15695,6 @@ Section flags.
 
 ```
 searchKey: elf.SectionFlag.String
-tags: [exported]
 ```
 
 ```Go
@@ -16984,7 +15705,6 @@ func (i SectionFlag) String() string
 
 ```
 searchKey: elf.SectionFlag.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -16995,7 +15715,6 @@ func (i SectionFlag) GoString() string
 
 ```
 searchKey: elf.CompressionType
-tags: [exported]
 ```
 
 ```Go
@@ -17008,7 +15727,6 @@ Section compression type.
 
 ```
 searchKey: elf.CompressionType.String
-tags: [exported]
 ```
 
 ```Go
@@ -17019,7 +15737,6 @@ func (i CompressionType) String() string
 
 ```
 searchKey: elf.CompressionType.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17030,7 +15747,6 @@ func (i CompressionType) GoString() string
 
 ```
 searchKey: elf.ProgType
-tags: [exported]
 ```
 
 ```Go
@@ -17043,7 +15759,6 @@ Prog.Type
 
 ```
 searchKey: elf.ProgType.String
-tags: [exported]
 ```
 
 ```Go
@@ -17054,7 +15769,6 @@ func (i ProgType) String() string
 
 ```
 searchKey: elf.ProgType.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17065,7 +15779,6 @@ func (i ProgType) GoString() string
 
 ```
 searchKey: elf.ProgFlag
-tags: [exported]
 ```
 
 ```Go
@@ -17078,7 +15791,6 @@ Prog.Flag
 
 ```
 searchKey: elf.ProgFlag.String
-tags: [exported]
 ```
 
 ```Go
@@ -17089,7 +15801,6 @@ func (i ProgFlag) String() string
 
 ```
 searchKey: elf.ProgFlag.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17100,7 +15811,6 @@ func (i ProgFlag) GoString() string
 
 ```
 searchKey: elf.DynTag
-tags: [exported]
 ```
 
 ```Go
@@ -17113,7 +15823,6 @@ Dyn.Tag
 
 ```
 searchKey: elf.DynTag.String
-tags: [exported]
 ```
 
 ```Go
@@ -17124,7 +15833,6 @@ func (i DynTag) String() string
 
 ```
 searchKey: elf.DynTag.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17135,7 +15843,6 @@ func (i DynTag) GoString() string
 
 ```
 searchKey: elf.DynFlag
-tags: [exported]
 ```
 
 ```Go
@@ -17148,7 +15855,6 @@ DT_FLAGS values.
 
 ```
 searchKey: elf.DynFlag.String
-tags: [exported]
 ```
 
 ```Go
@@ -17159,7 +15865,6 @@ func (i DynFlag) String() string
 
 ```
 searchKey: elf.DynFlag.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17170,7 +15875,6 @@ func (i DynFlag) GoString() string
 
 ```
 searchKey: elf.NType
-tags: [exported]
 ```
 
 ```Go
@@ -17183,7 +15887,6 @@ NType values; used in core files.
 
 ```
 searchKey: elf.NType.String
-tags: [exported]
 ```
 
 ```Go
@@ -17194,7 +15897,6 @@ func (i NType) String() string
 
 ```
 searchKey: elf.NType.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17205,7 +15907,6 @@ func (i NType) GoString() string
 
 ```
 searchKey: elf.SymBind
-tags: [exported]
 ```
 
 ```Go
@@ -17218,7 +15919,6 @@ Symbol Binding - ELFNN_ST_BIND - st_info
 
 ```
 searchKey: elf.ST_BIND
-tags: [exported]
 ```
 
 ```Go
@@ -17229,7 +15929,6 @@ func ST_BIND(info uint8) SymBind
 
 ```
 searchKey: elf.SymBind.String
-tags: [exported]
 ```
 
 ```Go
@@ -17240,7 +15939,6 @@ func (i SymBind) String() string
 
 ```
 searchKey: elf.SymBind.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17251,7 +15949,6 @@ func (i SymBind) GoString() string
 
 ```
 searchKey: elf.SymType
-tags: [exported]
 ```
 
 ```Go
@@ -17264,7 +15961,6 @@ Symbol type - ELFNN_ST_TYPE - st_info
 
 ```
 searchKey: elf.ST_TYPE
-tags: [exported]
 ```
 
 ```Go
@@ -17275,7 +15971,6 @@ func ST_TYPE(info uint8) SymType
 
 ```
 searchKey: elf.SymType.String
-tags: [exported]
 ```
 
 ```Go
@@ -17286,7 +15981,6 @@ func (i SymType) String() string
 
 ```
 searchKey: elf.SymType.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17297,7 +15991,6 @@ func (i SymType) GoString() string
 
 ```
 searchKey: elf.SymVis
-tags: [exported]
 ```
 
 ```Go
@@ -17310,7 +16003,6 @@ Symbol visibility - ELFNN_ST_VISIBILITY - st_other
 
 ```
 searchKey: elf.ST_VISIBILITY
-tags: [exported]
 ```
 
 ```Go
@@ -17321,7 +16013,6 @@ func ST_VISIBILITY(other uint8) SymVis
 
 ```
 searchKey: elf.SymVis.String
-tags: [exported]
 ```
 
 ```Go
@@ -17332,7 +16023,6 @@ func (i SymVis) String() string
 
 ```
 searchKey: elf.SymVis.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17343,7 +16033,6 @@ func (i SymVis) GoString() string
 
 ```
 searchKey: elf.R_X86_64
-tags: [exported]
 ```
 
 ```Go
@@ -17356,7 +16045,6 @@ Relocation types for x86-64.
 
 ```
 searchKey: elf.R_X86_64.String
-tags: [exported]
 ```
 
 ```Go
@@ -17367,7 +16055,6 @@ func (i R_X86_64) String() string
 
 ```
 searchKey: elf.R_X86_64.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17378,7 +16065,6 @@ func (i R_X86_64) GoString() string
 
 ```
 searchKey: elf.R_AARCH64
-tags: [exported]
 ```
 
 ```Go
@@ -17391,7 +16077,6 @@ Relocation types for AArch64 (aka arm64)
 
 ```
 searchKey: elf.R_AARCH64.String
-tags: [exported]
 ```
 
 ```Go
@@ -17402,7 +16087,6 @@ func (i R_AARCH64) String() string
 
 ```
 searchKey: elf.R_AARCH64.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17413,7 +16097,6 @@ func (i R_AARCH64) GoString() string
 
 ```
 searchKey: elf.R_ALPHA
-tags: [exported]
 ```
 
 ```Go
@@ -17426,7 +16109,6 @@ Relocation types for Alpha.
 
 ```
 searchKey: elf.R_ALPHA.String
-tags: [exported]
 ```
 
 ```Go
@@ -17437,7 +16119,6 @@ func (i R_ALPHA) String() string
 
 ```
 searchKey: elf.R_ALPHA.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17448,7 +16129,6 @@ func (i R_ALPHA) GoString() string
 
 ```
 searchKey: elf.R_ARM
-tags: [exported]
 ```
 
 ```Go
@@ -17461,7 +16141,6 @@ Relocation types for ARM.
 
 ```
 searchKey: elf.R_ARM.String
-tags: [exported]
 ```
 
 ```Go
@@ -17472,7 +16151,6 @@ func (i R_ARM) String() string
 
 ```
 searchKey: elf.R_ARM.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17483,7 +16161,6 @@ func (i R_ARM) GoString() string
 
 ```
 searchKey: elf.R_386
-tags: [exported]
 ```
 
 ```Go
@@ -17496,7 +16173,6 @@ Relocation types for 386.
 
 ```
 searchKey: elf.R_386.String
-tags: [exported]
 ```
 
 ```Go
@@ -17507,7 +16183,6 @@ func (i R_386) String() string
 
 ```
 searchKey: elf.R_386.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17518,7 +16193,6 @@ func (i R_386) GoString() string
 
 ```
 searchKey: elf.R_MIPS
-tags: [exported]
 ```
 
 ```Go
@@ -17531,7 +16205,6 @@ Relocation types for MIPS.
 
 ```
 searchKey: elf.R_MIPS.String
-tags: [exported]
 ```
 
 ```Go
@@ -17542,7 +16215,6 @@ func (i R_MIPS) String() string
 
 ```
 searchKey: elf.R_MIPS.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17553,7 +16225,6 @@ func (i R_MIPS) GoString() string
 
 ```
 searchKey: elf.R_PPC
-tags: [exported]
 ```
 
 ```Go
@@ -17568,7 +16239,6 @@ Values that are shared by both R_PPC and R_PPC64 are prefixed with R_POWERPC_ in
 
 ```
 searchKey: elf.R_PPC.String
-tags: [exported]
 ```
 
 ```Go
@@ -17579,7 +16249,6 @@ func (i R_PPC) String() string
 
 ```
 searchKey: elf.R_PPC.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17590,7 +16259,6 @@ func (i R_PPC) GoString() string
 
 ```
 searchKey: elf.R_PPC64
-tags: [exported]
 ```
 
 ```Go
@@ -17605,7 +16273,6 @@ Values that are shared by both R_PPC and R_PPC64 are prefixed with R_POWERPC_ in
 
 ```
 searchKey: elf.R_PPC64.String
-tags: [exported]
 ```
 
 ```Go
@@ -17616,7 +16283,6 @@ func (i R_PPC64) String() string
 
 ```
 searchKey: elf.R_PPC64.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17627,7 +16293,6 @@ func (i R_PPC64) GoString() string
 
 ```
 searchKey: elf.R_RISCV
-tags: [exported]
 ```
 
 ```Go
@@ -17640,7 +16305,6 @@ Relocation types for RISC-V processors.
 
 ```
 searchKey: elf.R_RISCV.String
-tags: [exported]
 ```
 
 ```Go
@@ -17651,7 +16315,6 @@ func (i R_RISCV) String() string
 
 ```
 searchKey: elf.R_RISCV.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17662,7 +16325,6 @@ func (i R_RISCV) GoString() string
 
 ```
 searchKey: elf.R_390
-tags: [exported]
 ```
 
 ```Go
@@ -17675,7 +16337,6 @@ Relocation types for s390x processors.
 
 ```
 searchKey: elf.R_390.String
-tags: [exported]
 ```
 
 ```Go
@@ -17686,7 +16347,6 @@ func (i R_390) String() string
 
 ```
 searchKey: elf.R_390.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17697,7 +16357,6 @@ func (i R_390) GoString() string
 
 ```
 searchKey: elf.R_SPARC
-tags: [exported]
 ```
 
 ```Go
@@ -17710,7 +16369,6 @@ Relocation types for SPARC.
 
 ```
 searchKey: elf.R_SPARC.String
-tags: [exported]
 ```
 
 ```Go
@@ -17721,7 +16379,6 @@ func (i R_SPARC) String() string
 
 ```
 searchKey: elf.R_SPARC.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -17732,7 +16389,6 @@ func (i R_SPARC) GoString() string
 
 ```
 searchKey: elf.Header32
-tags: [exported]
 ```
 
 ```Go
@@ -17760,7 +16416,6 @@ ELF32 File header.
 
 ```
 searchKey: elf.Section32
-tags: [exported]
 ```
 
 ```Go
@@ -17784,7 +16439,6 @@ ELF32 Section header.
 
 ```
 searchKey: elf.Prog32
-tags: [exported]
 ```
 
 ```Go
@@ -17806,7 +16460,6 @@ ELF32 Program header.
 
 ```
 searchKey: elf.Dyn32
-tags: [exported]
 ```
 
 ```Go
@@ -17822,7 +16475,6 @@ ELF32 Dynamic structure. The ".dynamic" section contains an array of them.
 
 ```
 searchKey: elf.Chdr32
-tags: [exported]
 ```
 
 ```Go
@@ -17839,7 +16491,6 @@ ELF32 Compression header.
 
 ```
 searchKey: elf.Rel32
-tags: [exported]
 ```
 
 ```Go
@@ -17855,7 +16506,6 @@ ELF32 Relocations that don't need an addend field.
 
 ```
 searchKey: elf.Rela32
-tags: [exported]
 ```
 
 ```Go
@@ -17872,7 +16522,6 @@ ELF32 Relocations that need an addend field.
 
 ```
 searchKey: elf.Sym32
-tags: [exported]
 ```
 
 ```Go
@@ -17892,7 +16541,6 @@ ELF32 Symbol.
 
 ```
 searchKey: elf.Header64
-tags: [exported]
 ```
 
 ```Go
@@ -17920,7 +16568,6 @@ ELF64 file header.
 
 ```
 searchKey: elf.Section64
-tags: [exported]
 ```
 
 ```Go
@@ -17944,7 +16591,6 @@ ELF64 Section header.
 
 ```
 searchKey: elf.Prog64
-tags: [exported]
 ```
 
 ```Go
@@ -17966,7 +16612,6 @@ ELF64 Program header.
 
 ```
 searchKey: elf.Dyn64
-tags: [exported]
 ```
 
 ```Go
@@ -17982,7 +16627,6 @@ ELF64 Dynamic structure. The ".dynamic" section contains an array of them.
 
 ```
 searchKey: elf.Chdr64
-tags: [exported]
 ```
 
 ```Go
@@ -18000,7 +16644,6 @@ ELF64 Compression header.
 
 ```
 searchKey: elf.Rel64
-tags: [exported]
 ```
 
 ```Go
@@ -18016,7 +16659,6 @@ ELF64 relocations that don't need an addend field.
 
 ```
 searchKey: elf.Rela64
-tags: [exported]
 ```
 
 ```Go
@@ -18033,7 +16675,6 @@ ELF64 relocations that need an addend field.
 
 ```
 searchKey: elf.Sym64
-tags: [exported]
 ```
 
 ```Go
@@ -18053,6 +16694,7 @@ ELF64 symbol table entries.
 
 ```
 searchKey: elf.intName
+tags: [private]
 ```
 
 ```Go
@@ -18066,7 +16708,6 @@ type intName struct {
 
 ```
 searchKey: elf.FileHeader
-tags: [exported]
 ```
 
 ```Go
@@ -18089,7 +16730,6 @@ A FileHeader represents an ELF file header.
 
 ```
 searchKey: elf.File
-tags: [exported]
 ```
 
 ```Go
@@ -18109,7 +16749,6 @@ A File represents an open ELF file.
 
 ```
 searchKey: elf.Open
-tags: [exported]
 ```
 
 ```Go
@@ -18122,7 +16761,6 @@ Open opens the named file using os.Open and prepares it for use as an ELF binary
 
 ```
 searchKey: elf.NewFile
-tags: [exported]
 ```
 
 ```Go
@@ -18135,6 +16773,7 @@ NewFile creates a new File for accessing an ELF binary in an underlying reader. 
 
 ```
 searchKey: elf.File.stringTable
+tags: [private]
 ```
 
 ```Go
@@ -18147,7 +16786,6 @@ stringTable reads and returns the string table given by the specified link value
 
 ```
 searchKey: elf.File.Close
-tags: [exported]
 ```
 
 ```Go
@@ -18160,7 +16798,6 @@ Close closes the File. If the File was created using NewFile directly instead of
 
 ```
 searchKey: elf.File.SectionByType
-tags: [exported]
 ```
 
 ```Go
@@ -18173,6 +16810,7 @@ SectionByType returns the first section in f with the given type, or nil if ther
 
 ```
 searchKey: elf.File.getSymbols
+tags: [private]
 ```
 
 ```Go
@@ -18185,6 +16823,7 @@ getSymbols returns a slice of Symbols from parsing the symbol table with the giv
 
 ```
 searchKey: elf.File.getSymbols32
+tags: [private]
 ```
 
 ```Go
@@ -18195,6 +16834,7 @@ func (f *File) getSymbols32(typ SectionType) ([]Symbol, []byte, error)
 
 ```
 searchKey: elf.File.getSymbols64
+tags: [private]
 ```
 
 ```Go
@@ -18205,7 +16845,6 @@ func (f *File) getSymbols64(typ SectionType) ([]Symbol, []byte, error)
 
 ```
 searchKey: elf.File.Section
-tags: [exported]
 ```
 
 ```Go
@@ -18218,6 +16857,7 @@ Section returns a section with the given name, or nil if no such section exists.
 
 ```
 searchKey: elf.File.applyRelocations
+tags: [private]
 ```
 
 ```Go
@@ -18230,6 +16870,7 @@ applyRelocations applies relocations to dst. rels is a relocations section in RE
 
 ```
 searchKey: elf.File.applyRelocationsAMD64
+tags: [private]
 ```
 
 ```Go
@@ -18240,6 +16881,7 @@ func (f *File) applyRelocationsAMD64(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.applyRelocations386
+tags: [private]
 ```
 
 ```Go
@@ -18250,6 +16892,7 @@ func (f *File) applyRelocations386(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.applyRelocationsARM
+tags: [private]
 ```
 
 ```Go
@@ -18260,6 +16903,7 @@ func (f *File) applyRelocationsARM(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.applyRelocationsARM64
+tags: [private]
 ```
 
 ```Go
@@ -18270,6 +16914,7 @@ func (f *File) applyRelocationsARM64(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.applyRelocationsPPC
+tags: [private]
 ```
 
 ```Go
@@ -18280,6 +16925,7 @@ func (f *File) applyRelocationsPPC(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.applyRelocationsPPC64
+tags: [private]
 ```
 
 ```Go
@@ -18290,6 +16936,7 @@ func (f *File) applyRelocationsPPC64(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.applyRelocationsMIPS
+tags: [private]
 ```
 
 ```Go
@@ -18300,6 +16947,7 @@ func (f *File) applyRelocationsMIPS(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.applyRelocationsMIPS64
+tags: [private]
 ```
 
 ```Go
@@ -18310,6 +16958,7 @@ func (f *File) applyRelocationsMIPS64(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.applyRelocationsRISCV64
+tags: [private]
 ```
 
 ```Go
@@ -18320,6 +16969,7 @@ func (f *File) applyRelocationsRISCV64(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.applyRelocationss390x
+tags: [private]
 ```
 
 ```Go
@@ -18330,6 +16980,7 @@ func (f *File) applyRelocationss390x(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.applyRelocationsSPARC64
+tags: [private]
 ```
 
 ```Go
@@ -18340,7 +16991,6 @@ func (f *File) applyRelocationsSPARC64(dst []byte, rels []byte) error
 
 ```
 searchKey: elf.File.DWARF
-tags: [exported]
 ```
 
 ```Go
@@ -18351,7 +17001,6 @@ func (f *File) DWARF() (*dwarf.Data, error)
 
 ```
 searchKey: elf.File.Symbols
-tags: [exported]
 ```
 
 ```Go
@@ -18366,7 +17015,6 @@ For compatibility with Go 1.0, Symbols omits the null symbol at index 0. After r
 
 ```
 searchKey: elf.File.DynamicSymbols
-tags: [exported]
 ```
 
 ```Go
@@ -18383,7 +17031,6 @@ For compatibility with Symbols, DynamicSymbols omits the null symbol at index 0.
 
 ```
 searchKey: elf.File.ImportedSymbols
-tags: [exported]
 ```
 
 ```Go
@@ -18396,6 +17043,7 @@ ImportedSymbols returns the names of all symbols referred to by the binary f tha
 
 ```
 searchKey: elf.File.gnuVersionInit
+tags: [private]
 ```
 
 ```Go
@@ -18408,6 +17056,7 @@ gnuVersionInit parses the GNU version tables for use by calls to gnuVersion.
 
 ```
 searchKey: elf.File.gnuVersion
+tags: [private]
 ```
 
 ```Go
@@ -18420,7 +17069,6 @@ gnuVersion adds Library and Version information to sym, which came from offset i
 
 ```
 searchKey: elf.File.ImportedLibraries
-tags: [exported]
 ```
 
 ```Go
@@ -18433,7 +17081,6 @@ ImportedLibraries returns the names of all libraries referred to by the binary f
 
 ```
 searchKey: elf.File.DynString
-tags: [exported]
 ```
 
 ```Go
@@ -18448,7 +17095,6 @@ The tag must be one that takes string values: DT_NEEDED, DT_SONAME, DT_RPATH, or
 
 ```
 searchKey: elf.SectionHeader
-tags: [exported]
 ```
 
 ```Go
@@ -18478,7 +17124,6 @@ A SectionHeader represents a single ELF section header.
 
 ```
 searchKey: elf.Section
-tags: [exported]
 ```
 
 ```Go
@@ -18509,7 +17154,6 @@ A Section represents a single section in an ELF file.
 
 ```
 searchKey: elf.Section.Data
-tags: [exported]
 ```
 
 ```Go
@@ -18522,7 +17166,6 @@ Data reads and returns the contents of the ELF section. Even if the section is s
 
 ```
 searchKey: elf.Section.Open
-tags: [exported]
 ```
 
 ```Go
@@ -18535,7 +17178,6 @@ Open returns a new ReadSeeker reading the ELF section. Even if the section is st
 
 ```
 searchKey: elf.ProgHeader
-tags: [exported]
 ```
 
 ```Go
@@ -18557,7 +17199,6 @@ A ProgHeader represents a single ELF program header.
 
 ```
 searchKey: elf.Prog
-tags: [exported]
 ```
 
 ```Go
@@ -18581,7 +17222,6 @@ A Prog represents a single ELF program header in an ELF binary.
 
 ```
 searchKey: elf.Prog.Open
-tags: [exported]
 ```
 
 ```Go
@@ -18594,7 +17234,6 @@ Open returns a new ReadSeeker reading the ELF program body.
 
 ```
 searchKey: elf.Symbol
-tags: [exported]
 ```
 
 ```Go
@@ -18617,7 +17256,6 @@ A Symbol represents an entry in an ELF symbol table section.
 
 ```
 searchKey: elf.FormatError
-tags: [exported]
 ```
 
 ```Go
@@ -18632,7 +17270,6 @@ type FormatError struct {
 
 ```
 searchKey: elf.FormatError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -18643,7 +17280,6 @@ func (e *FormatError) Error() string
 
 ```
 searchKey: elf.ImportedSymbol
-tags: [exported]
 ```
 
 ```Go
@@ -18658,6 +17294,7 @@ type ImportedSymbol struct {
 
 ```
 searchKey: elf.verneed
+tags: [private]
 ```
 
 ```Go
@@ -18671,6 +17308,7 @@ type verneed struct {
 
 ```
 searchKey: elf.errorReader
+tags: [private]
 ```
 
 ```Go
@@ -18685,6 +17323,7 @@ errorReader returns error from all operations.
 
 ```
 searchKey: elf.errorReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -18695,6 +17334,7 @@ func (r errorReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: elf.errorReader.ReadAt
+tags: [private]
 ```
 
 ```Go
@@ -18705,6 +17345,7 @@ func (r errorReader) ReadAt(p []byte, off int64) (n int, err error)
 
 ```
 searchKey: elf.errorReader.Seek
+tags: [private]
 ```
 
 ```Go
@@ -18715,6 +17356,7 @@ func (r errorReader) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: elf.errorReader.Close
+tags: [private]
 ```
 
 ```Go
@@ -18725,6 +17367,7 @@ func (r errorReader) Close() error
 
 ```
 searchKey: elf.readSeekerFromReader
+tags: [private]
 ```
 
 ```Go
@@ -18742,6 +17385,7 @@ readSeekerFromReader converts an io.Reader into an io.ReadSeeker. In general See
 
 ```
 searchKey: elf.readSeekerFromReader.start
+tags: [private]
 ```
 
 ```Go
@@ -18752,6 +17396,7 @@ func (r *readSeekerFromReader) start()
 
 ```
 searchKey: elf.readSeekerFromReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -18762,6 +17407,7 @@ func (r *readSeekerFromReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: elf.readSeekerFromReader.Seek
+tags: [private]
 ```
 
 ```Go
@@ -18772,6 +17418,7 @@ func (r *readSeekerFromReader) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: elf.nameTest
+tags: [private]
 ```
 
 ```Go
@@ -18785,6 +17432,7 @@ type nameTest struct {
 
 ```
 searchKey: elf.fileTest
+tags: [private]
 ```
 
 ```Go
@@ -18801,6 +17449,7 @@ type fileTest struct {
 
 ```
 searchKey: elf.relocationTestEntry
+tags: [private]
 ```
 
 ```Go
@@ -18815,6 +17464,7 @@ type relocationTestEntry struct {
 
 ```
 searchKey: elf.relocationTest
+tags: [private]
 ```
 
 ```Go
@@ -18826,15 +17476,10 @@ type relocationTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="R_SYM32" href="#R_SYM32">func R_SYM32(info uint32) uint32</a>
 
 ```
 searchKey: elf.R_SYM32
-tags: [exported]
 ```
 
 ```Go
@@ -18845,7 +17490,6 @@ func R_SYM32(info uint32) uint32
 
 ```
 searchKey: elf.R_TYPE32
-tags: [exported]
 ```
 
 ```Go
@@ -18856,7 +17500,6 @@ func R_TYPE32(info uint32) uint32
 
 ```
 searchKey: elf.R_INFO32
-tags: [exported]
 ```
 
 ```Go
@@ -18867,7 +17510,6 @@ func R_INFO32(sym, typ uint32) uint32
 
 ```
 searchKey: elf.ST_INFO
-tags: [exported]
 ```
 
 ```Go
@@ -18878,7 +17520,6 @@ func ST_INFO(bind SymBind, typ SymType) uint8
 
 ```
 searchKey: elf.R_SYM64
-tags: [exported]
 ```
 
 ```Go
@@ -18889,7 +17530,6 @@ func R_SYM64(info uint64) uint32
 
 ```
 searchKey: elf.R_TYPE64
-tags: [exported]
 ```
 
 ```Go
@@ -18900,7 +17540,6 @@ func R_TYPE64(info uint64) uint32
 
 ```
 searchKey: elf.R_INFO
-tags: [exported]
 ```
 
 ```Go
@@ -18911,6 +17550,7 @@ func R_INFO(sym, typ uint32) uint64
 
 ```
 searchKey: elf.stringName
+tags: [private]
 ```
 
 ```Go
@@ -18921,6 +17561,7 @@ func stringName(i uint32, names []intName, goSyntax bool) string
 
 ```
 searchKey: elf.flagName
+tags: [private]
 ```
 
 ```Go
@@ -18931,6 +17572,7 @@ func flagName(i uint32, names []intName, goSyntax bool) string
 
 ```
 searchKey: elf.getString
+tags: [private]
 ```
 
 ```Go
@@ -18943,6 +17585,7 @@ getString extracts a string from an ELF string table.
 
 ```
 searchKey: elf.canApplyRelocation
+tags: [private]
 ```
 
 ```Go
@@ -18955,6 +17598,7 @@ canApplyRelocation reports whether we should try to apply a relocation to a DWAR
 
 ```
 searchKey: elf.TestNames
+tags: [private]
 ```
 
 ```Go
@@ -18965,6 +17609,7 @@ func TestNames(t *testing.T)
 
 ```
 searchKey: elf.TestOpen
+tags: [private]
 ```
 
 ```Go
@@ -18975,6 +17620,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: elf.decompress
+tags: [private]
 ```
 
 ```Go
@@ -18987,6 +17633,7 @@ elf.NewFile requires io.ReaderAt, which compress/gzip cannot provide. Decompress
 
 ```
 searchKey: elf.TestDWARFRelocations
+tags: [private]
 ```
 
 ```Go
@@ -18997,6 +17644,7 @@ func TestDWARFRelocations(t *testing.T)
 
 ```
 searchKey: elf.TestCompressedDWARF
+tags: [private]
 ```
 
 ```Go
@@ -19007,6 +17655,7 @@ func TestCompressedDWARF(t *testing.T)
 
 ```
 searchKey: elf.TestCompressedSection
+tags: [private]
 ```
 
 ```Go
@@ -19017,6 +17666,7 @@ func TestCompressedSection(t *testing.T)
 
 ```
 searchKey: elf.TestNoSectionOverlaps
+tags: [private]
 ```
 
 ```Go
@@ -19027,6 +17677,7 @@ func TestNoSectionOverlaps(t *testing.T)
 
 ```
 searchKey: elf.TestIssue10996
+tags: [private]
 ```
 
 ```Go
@@ -19037,6 +17688,7 @@ func TestIssue10996(t *testing.T)
 
 ```
 searchKey: elf.TestSymbols
+tags: [private]
 ```
 
 ```Go

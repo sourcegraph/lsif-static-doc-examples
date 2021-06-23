@@ -32,15 +32,10 @@ Package client contains a partial implementation of the extension registry.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="APIVersion" href="#APIVersion">const APIVersion</a>
 
 ```
 searchKey: client.APIVersion
-tags: [exported]
 ```
 
 ```Go
@@ -53,7 +48,6 @@ APIVersion is a string that uniquely identifies this API version.
 
 ```
 searchKey: client.AcceptHeader
-tags: [exported]
 ```
 
 ```Go
@@ -66,7 +60,6 @@ AcceptHeader is the value of the "Accept" HTTP request header sent by the client
 
 ```
 searchKey: client.MediaTypeHeaderName
-tags: [exported]
 ```
 
 ```Go
@@ -79,7 +72,6 @@ MediaTypeHeaderName is the name of the HTTP response header whose value the clie
 
 ```
 searchKey: client.MediaType
-tags: [exported]
 ```
 
 ```Go
@@ -92,6 +84,7 @@ MediaType is the client's expected value for the MediaTypeHeaderName HTTP respon
 
 ```
 searchKey: client.remoteRegistryErrorMessage
+tags: [private]
 ```
 
 ```Go
@@ -100,14 +93,11 @@ const remoteRegistryErrorMessage = "unable to contact extension registry"
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="notFoundError" href="#notFoundError">type notFoundError struct</a>
 
 ```
 searchKey: client.notFoundError
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +108,7 @@ type notFoundError struct{ field, value string }
 
 ```
 searchKey: client.notFoundError.NotFound
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +119,7 @@ func (notFoundError) NotFound() bool
 
 ```
 searchKey: client.notFoundError.Error
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +130,7 @@ func (e *notFoundError) Error() string
 
 ```
 searchKey: client.httpError
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +141,7 @@ type httpError int
 
 ```
 searchKey: client.httpError.Error
+tags: [private]
 ```
 
 ```Go
@@ -158,7 +152,6 @@ func (e httpError) Error() string
 
 ```
 searchKey: client.Extension
-tags: [exported]
 ```
 
 ```Go
@@ -187,7 +180,6 @@ It is the external form of github.com/sourcegraph/sourcegraph/cmd/frontend/types
 
 ```
 searchKey: client.GetByUUID
-tags: [exported]
 ```
 
 ```Go
@@ -200,7 +192,6 @@ GetByUUID gets the extension from the remote registry with the given UUID. If th
 
 ```
 searchKey: client.GetByExtensionID
-tags: [exported]
 ```
 
 ```Go
@@ -213,6 +204,7 @@ GetByExtensionID gets the extension from the remote registry with the given exte
 
 ```
 searchKey: client.getBy
+tags: [private]
 ```
 
 ```Go
@@ -223,7 +215,6 @@ func getBy(ctx context.Context, registry *url.URL, op, field, value string) (*Ex
 
 ```
 searchKey: client.Publisher
-tags: [exported]
 ```
 
 ```Go
@@ -237,15 +228,10 @@ Publisher describes a publisher in the extension registry.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="List" href="#List">func List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)</a>
 
 ```
 searchKey: client.List
-tags: [exported]
 ```
 
 ```Go
@@ -258,7 +244,6 @@ List lists extensions on the remote registry matching the query (or all if the q
 
 ```
 searchKey: client.GetFeaturedExtensions
-tags: [exported]
 ```
 
 ```Go
@@ -269,6 +254,7 @@ func GetFeaturedExtensions(ctx context.Context, registry *url.URL) ([]*Extension
 
 ```
 searchKey: client.httpGet
+tags: [private]
 ```
 
 ```Go
@@ -279,7 +265,6 @@ func httpGet(ctx context.Context, op, urlStr string, result interface{}) (err er
 
 ```
 searchKey: client.IsRemoteRegistryError
-tags: [exported]
 ```
 
 ```Go
@@ -292,7 +277,6 @@ IsRemoteRegistryError reports whether the err is (likely) from this package's in
 
 ```
 searchKey: client.Name
-tags: [exported]
 ```
 
 ```Go
@@ -305,6 +289,7 @@ Name returns the registry name given its URL.
 
 ```
 searchKey: client.toURL
+tags: [private]
 ```
 
 ```Go

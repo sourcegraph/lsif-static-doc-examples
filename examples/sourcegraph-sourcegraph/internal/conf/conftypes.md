@@ -10,11 +10,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ServiceConnections" href="#ServiceConnections">type ServiceConnections struct</a>
 
 ```
 searchKey: conftypes.ServiceConnections
-tags: [exported]
 ```
 
 ```Go
@@ -45,7 +48,6 @@ ServiceConnections represents configuration about how the deployment internally 
 
 ```
 searchKey: conftypes.RawUnified
-tags: [exported]
 ```
 
 ```Go
@@ -61,7 +63,6 @@ RawUnified is the unparsed variant of conf.Unified.
 
 ```
 searchKey: conftypes.RawUnified.Equal
-tags: [exported]
 ```
 
 ```Go

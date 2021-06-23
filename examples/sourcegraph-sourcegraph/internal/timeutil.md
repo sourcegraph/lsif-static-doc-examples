@@ -15,11 +15,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="FakeClock" href="#FakeClock">type FakeClock struct</a>
 
 ```
 searchKey: timeutil.FakeClock
-tags: [exported]
 ```
 
 ```Go
@@ -36,7 +39,6 @@ FakeClock provides a controllable clock for use in tests.
 
 ```
 searchKey: timeutil.NewFakeClock
-tags: [exported]
 ```
 
 ```Go
@@ -49,7 +51,6 @@ NewFakeClock returns a FakeClock instance that starts telling time at the given 
 
 ```
 searchKey: timeutil.FakeClock.Now
-tags: [exported]
 ```
 
 ```Go
@@ -62,7 +63,6 @@ Now returns the current fake time and advances the clock "step" amount of time.
 
 ```
 searchKey: timeutil.FakeClock.Time
-tags: [exported]
 ```
 
 ```Go
@@ -73,11 +73,14 @@ Time tells the time at the given step from the provided epoch.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Now" href="#Now">func Now() time.Time</a>
 
 ```
 searchKey: timeutil.Now
-tags: [exported]
 ```
 
 ```Go
@@ -90,7 +93,6 @@ Now returns the current UTC time with time.Microsecond truncated because Postgre
 
 ```
 searchKey: timeutil.StartOfWeek
-tags: [exported]
 ```
 
 ```Go
@@ -101,6 +103,7 @@ func StartOfWeek(now time.Time, weeksAgo int) time.Time
 
 ```
 searchKey: timeutil.TestWeek_StartOfWeek
+tags: [private]
 ```
 
 ```Go

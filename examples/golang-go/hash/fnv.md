@@ -122,14 +122,11 @@ All the hash.Hash implementations returned by this package also implement encodi
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="offset32" href="#offset32">const offset32</a>
 
 ```
 searchKey: fnv.offset32
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +137,7 @@ const offset32 = 2166136261
 
 ```
 searchKey: fnv.offset64
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +148,7 @@ const offset64 = 14695981039346656037
 
 ```
 searchKey: fnv.offset128Lower
+tags: [private]
 ```
 
 ```Go
@@ -160,6 +159,7 @@ const offset128Lower = 0x62b821756295c58d
 
 ```
 searchKey: fnv.offset128Higher
+tags: [private]
 ```
 
 ```Go
@@ -170,6 +170,7 @@ const offset128Higher = 0x6c62272e07bb0142
 
 ```
 searchKey: fnv.prime32
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +181,7 @@ const prime32 = 16777619
 
 ```
 searchKey: fnv.prime64
+tags: [private]
 ```
 
 ```Go
@@ -190,6 +192,7 @@ const prime64 = 1099511628211
 
 ```
 searchKey: fnv.prime128Lower
+tags: [private]
 ```
 
 ```Go
@@ -200,6 +203,7 @@ const prime128Lower = 0x13b
 
 ```
 searchKey: fnv.prime128Shift
+tags: [private]
 ```
 
 ```Go
@@ -210,6 +214,7 @@ const prime128Shift = 24
 
 ```
 searchKey: fnv.magic32
+tags: [private]
 ```
 
 ```Go
@@ -220,6 +225,7 @@ const magic32 = "fnv\x01"
 
 ```
 searchKey: fnv.magic32a
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +236,7 @@ const magic32a = "fnv\x02"
 
 ```
 searchKey: fnv.magic64
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +247,7 @@ const magic64 = "fnv\x03"
 
 ```
 searchKey: fnv.magic64a
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +258,7 @@ const magic64a = "fnv\x04"
 
 ```
 searchKey: fnv.magic128
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +269,7 @@ const magic128 = "fnv\x05"
 
 ```
 searchKey: fnv.magic128a
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +280,7 @@ const magic128a = "fnv\x06"
 
 ```
 searchKey: fnv.marshaledSize32
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +291,7 @@ const marshaledSize32 = len(magic32) + 4
 
 ```
 searchKey: fnv.marshaledSize64
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +302,7 @@ const marshaledSize64 = len(magic64) + 8
 
 ```
 searchKey: fnv.marshaledSize128
+tags: [private]
 ```
 
 ```Go
@@ -298,14 +311,11 @@ const marshaledSize128 = len(magic128) + 8*2
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="golden32" href="#golden32">var golden32</a>
 
 ```
 searchKey: fnv.golden32
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +326,7 @@ var golden32 = ...
 
 ```
 searchKey: fnv.golden32a
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +337,7 @@ var golden32a = ...
 
 ```
 searchKey: fnv.golden64
+tags: [private]
 ```
 
 ```Go
@@ -336,6 +348,7 @@ var golden64 = ...
 
 ```
 searchKey: fnv.golden64a
+tags: [private]
 ```
 
 ```Go
@@ -346,6 +359,7 @@ var golden64a = ...
 
 ```
 searchKey: fnv.golden128
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +370,7 @@ var golden128 = ...
 
 ```
 searchKey: fnv.golden128a
+tags: [private]
 ```
 
 ```Go
@@ -364,14 +379,11 @@ var golden128a = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="sum32" href="#sum32">type sum32 uint32</a>
 
 ```
 searchKey: fnv.sum32
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +394,7 @@ type sum32 uint32
 
 ```
 searchKey: fnv.sum32.Reset
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +405,7 @@ func (s *sum32) Reset()
 
 ```
 searchKey: fnv.sum32.Sum32
+tags: [private]
 ```
 
 ```Go
@@ -402,6 +416,7 @@ func (s *sum32) Sum32() uint32
 
 ```
 searchKey: fnv.sum32.Write
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +427,7 @@ func (s *sum32) Write(data []byte) (int, error)
 
 ```
 searchKey: fnv.sum32.Size
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +438,7 @@ func (s *sum32) Size() int
 
 ```
 searchKey: fnv.sum32.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +449,7 @@ func (s *sum32) BlockSize() int
 
 ```
 searchKey: fnv.sum32.Sum
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +460,7 @@ func (s *sum32) Sum(in []byte) []byte
 
 ```
 searchKey: fnv.sum32.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +471,7 @@ func (s *sum32) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum32.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +482,7 @@ func (s *sum32) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: fnv.sum32a
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +493,7 @@ type sum32a uint32
 
 ```
 searchKey: fnv.sum32a.Reset
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +504,7 @@ func (s *sum32a) Reset()
 
 ```
 searchKey: fnv.sum32a.Sum32
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +515,7 @@ func (s *sum32a) Sum32() uint32
 
 ```
 searchKey: fnv.sum32a.Write
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +526,7 @@ func (s *sum32a) Write(data []byte) (int, error)
 
 ```
 searchKey: fnv.sum32a.Size
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +537,7 @@ func (s *sum32a) Size() int
 
 ```
 searchKey: fnv.sum32a.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +548,7 @@ func (s *sum32a) BlockSize() int
 
 ```
 searchKey: fnv.sum32a.Sum
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +559,7 @@ func (s *sum32a) Sum(in []byte) []byte
 
 ```
 searchKey: fnv.sum32a.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +570,7 @@ func (s *sum32a) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum32a.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -552,6 +581,7 @@ func (s *sum32a) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: fnv.sum64
+tags: [private]
 ```
 
 ```Go
@@ -562,6 +592,7 @@ type sum64 uint64
 
 ```
 searchKey: fnv.sum64.Reset
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +603,7 @@ func (s *sum64) Reset()
 
 ```
 searchKey: fnv.sum64.Sum64
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +614,7 @@ func (s *sum64) Sum64() uint64
 
 ```
 searchKey: fnv.sum64.Write
+tags: [private]
 ```
 
 ```Go
@@ -592,6 +625,7 @@ func (s *sum64) Write(data []byte) (int, error)
 
 ```
 searchKey: fnv.sum64.Size
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +636,7 @@ func (s *sum64) Size() int
 
 ```
 searchKey: fnv.sum64.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -612,6 +647,7 @@ func (s *sum64) BlockSize() int
 
 ```
 searchKey: fnv.sum64.Sum
+tags: [private]
 ```
 
 ```Go
@@ -622,6 +658,7 @@ func (s *sum64) Sum(in []byte) []byte
 
 ```
 searchKey: fnv.sum64.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -632,6 +669,7 @@ func (s *sum64) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum64.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +680,7 @@ func (s *sum64) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: fnv.sum64a
+tags: [private]
 ```
 
 ```Go
@@ -652,6 +691,7 @@ type sum64a uint64
 
 ```
 searchKey: fnv.sum64a.Reset
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +702,7 @@ func (s *sum64a) Reset()
 
 ```
 searchKey: fnv.sum64a.Sum64
+tags: [private]
 ```
 
 ```Go
@@ -672,6 +713,7 @@ func (s *sum64a) Sum64() uint64
 
 ```
 searchKey: fnv.sum64a.Write
+tags: [private]
 ```
 
 ```Go
@@ -682,6 +724,7 @@ func (s *sum64a) Write(data []byte) (int, error)
 
 ```
 searchKey: fnv.sum64a.Size
+tags: [private]
 ```
 
 ```Go
@@ -692,6 +735,7 @@ func (s *sum64a) Size() int
 
 ```
 searchKey: fnv.sum64a.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -702,6 +746,7 @@ func (s *sum64a) BlockSize() int
 
 ```
 searchKey: fnv.sum64a.Sum
+tags: [private]
 ```
 
 ```Go
@@ -712,6 +757,7 @@ func (s *sum64a) Sum(in []byte) []byte
 
 ```
 searchKey: fnv.sum64a.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -722,6 +768,7 @@ func (s *sum64a) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum64a.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -732,6 +779,7 @@ func (s *sum64a) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: fnv.sum128
+tags: [private]
 ```
 
 ```Go
@@ -742,6 +790,7 @@ type sum128 [2]uint64
 
 ```
 searchKey: fnv.sum128.Reset
+tags: [private]
 ```
 
 ```Go
@@ -752,6 +801,7 @@ func (s *sum128) Reset()
 
 ```
 searchKey: fnv.sum128.Write
+tags: [private]
 ```
 
 ```Go
@@ -762,6 +812,7 @@ func (s *sum128) Write(data []byte) (int, error)
 
 ```
 searchKey: fnv.sum128.Size
+tags: [private]
 ```
 
 ```Go
@@ -772,6 +823,7 @@ func (s *sum128) Size() int
 
 ```
 searchKey: fnv.sum128.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -782,6 +834,7 @@ func (s *sum128) BlockSize() int
 
 ```
 searchKey: fnv.sum128.Sum
+tags: [private]
 ```
 
 ```Go
@@ -792,6 +845,7 @@ func (s *sum128) Sum(in []byte) []byte
 
 ```
 searchKey: fnv.sum128.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -802,6 +856,7 @@ func (s *sum128) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum128.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -812,6 +867,7 @@ func (s *sum128) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: fnv.sum128a
+tags: [private]
 ```
 
 ```Go
@@ -822,6 +878,7 @@ type sum128a [2]uint64
 
 ```
 searchKey: fnv.sum128a.Reset
+tags: [private]
 ```
 
 ```Go
@@ -832,6 +889,7 @@ func (s *sum128a) Reset()
 
 ```
 searchKey: fnv.sum128a.Write
+tags: [private]
 ```
 
 ```Go
@@ -842,6 +900,7 @@ func (s *sum128a) Write(data []byte) (int, error)
 
 ```
 searchKey: fnv.sum128a.Size
+tags: [private]
 ```
 
 ```Go
@@ -852,6 +911,7 @@ func (s *sum128a) Size() int
 
 ```
 searchKey: fnv.sum128a.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -862,6 +922,7 @@ func (s *sum128a) BlockSize() int
 
 ```
 searchKey: fnv.sum128a.Sum
+tags: [private]
 ```
 
 ```Go
@@ -872,6 +933,7 @@ func (s *sum128a) Sum(in []byte) []byte
 
 ```
 searchKey: fnv.sum128a.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -882,6 +944,7 @@ func (s *sum128a) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum128a.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -892,6 +955,7 @@ func (s *sum128a) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: fnv.golden
+tags: [private]
 ```
 
 ```Go
@@ -904,15 +968,10 @@ type golden struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="New32" href="#New32">func New32() hash.Hash32</a>
 
 ```
 searchKey: fnv.New32
-tags: [exported]
 ```
 
 ```Go
@@ -925,7 +984,6 @@ New32 returns a new 32-bit FNV-1 hash.Hash. Its Sum method will lay the value ou
 
 ```
 searchKey: fnv.New32a
-tags: [exported]
 ```
 
 ```Go
@@ -938,7 +996,6 @@ New32a returns a new 32-bit FNV-1a hash.Hash. Its Sum method will lay the value 
 
 ```
 searchKey: fnv.New64
-tags: [exported]
 ```
 
 ```Go
@@ -951,7 +1008,6 @@ New64 returns a new 64-bit FNV-1 hash.Hash. Its Sum method will lay the value ou
 
 ```
 searchKey: fnv.New64a
-tags: [exported]
 ```
 
 ```Go
@@ -964,7 +1020,6 @@ New64a returns a new 64-bit FNV-1a hash.Hash. Its Sum method will lay the value 
 
 ```
 searchKey: fnv.New128
-tags: [exported]
 ```
 
 ```Go
@@ -977,7 +1032,6 @@ New128 returns a new 128-bit FNV-1 hash.Hash. Its Sum method will lay the value 
 
 ```
 searchKey: fnv.New128a
-tags: [exported]
 ```
 
 ```Go
@@ -990,6 +1044,7 @@ New128a returns a new 128-bit FNV-1a hash.Hash. Its Sum method will lay the valu
 
 ```
 searchKey: fnv.readUint32
+tags: [private]
 ```
 
 ```Go
@@ -1000,6 +1055,7 @@ func readUint32(b []byte) uint32
 
 ```
 searchKey: fnv.appendUint32
+tags: [private]
 ```
 
 ```Go
@@ -1010,6 +1066,7 @@ func appendUint32(b []byte, x uint32) []byte
 
 ```
 searchKey: fnv.appendUint64
+tags: [private]
 ```
 
 ```Go
@@ -1020,6 +1077,7 @@ func appendUint64(b []byte, x uint64) []byte
 
 ```
 searchKey: fnv.readUint64
+tags: [private]
 ```
 
 ```Go
@@ -1030,6 +1088,7 @@ func readUint64(b []byte) uint64
 
 ```
 searchKey: fnv.TestGolden32
+tags: [private]
 ```
 
 ```Go
@@ -1040,6 +1099,7 @@ func TestGolden32(t *testing.T)
 
 ```
 searchKey: fnv.TestGolden32a
+tags: [private]
 ```
 
 ```Go
@@ -1050,6 +1110,7 @@ func TestGolden32a(t *testing.T)
 
 ```
 searchKey: fnv.TestGolden64
+tags: [private]
 ```
 
 ```Go
@@ -1060,6 +1121,7 @@ func TestGolden64(t *testing.T)
 
 ```
 searchKey: fnv.TestGolden64a
+tags: [private]
 ```
 
 ```Go
@@ -1070,6 +1132,7 @@ func TestGolden64a(t *testing.T)
 
 ```
 searchKey: fnv.TestGolden128
+tags: [private]
 ```
 
 ```Go
@@ -1080,6 +1143,7 @@ func TestGolden128(t *testing.T)
 
 ```
 searchKey: fnv.TestGolden128a
+tags: [private]
 ```
 
 ```Go
@@ -1090,6 +1154,7 @@ func TestGolden128a(t *testing.T)
 
 ```
 searchKey: fnv.testGolden
+tags: [private]
 ```
 
 ```Go
@@ -1100,6 +1165,7 @@ func testGolden(t *testing.T, hash hash.Hash, gold []golden)
 
 ```
 searchKey: fnv.TestGoldenMarshal
+tags: [private]
 ```
 
 ```Go
@@ -1110,6 +1176,7 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity32
+tags: [private]
 ```
 
 ```Go
@@ -1120,6 +1187,7 @@ func TestIntegrity32(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity32a
+tags: [private]
 ```
 
 ```Go
@@ -1130,6 +1198,7 @@ func TestIntegrity32a(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity64
+tags: [private]
 ```
 
 ```Go
@@ -1140,6 +1209,7 @@ func TestIntegrity64(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity64a
+tags: [private]
 ```
 
 ```Go
@@ -1150,6 +1220,7 @@ func TestIntegrity64a(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity128
+tags: [private]
 ```
 
 ```Go
@@ -1160,6 +1231,7 @@ func TestIntegrity128(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity128a
+tags: [private]
 ```
 
 ```Go
@@ -1170,6 +1242,7 @@ func TestIntegrity128a(t *testing.T)
 
 ```
 searchKey: fnv.testIntegrity
+tags: [private]
 ```
 
 ```Go
@@ -1180,6 +1253,7 @@ func testIntegrity(t *testing.T, h hash.Hash)
 
 ```
 searchKey: fnv.BenchmarkFnv32KB
+tags: [private]
 ```
 
 ```Go
@@ -1190,6 +1264,7 @@ func BenchmarkFnv32KB(b *testing.B)
 
 ```
 searchKey: fnv.BenchmarkFnv32aKB
+tags: [private]
 ```
 
 ```Go
@@ -1200,6 +1275,7 @@ func BenchmarkFnv32aKB(b *testing.B)
 
 ```
 searchKey: fnv.BenchmarkFnv64KB
+tags: [private]
 ```
 
 ```Go
@@ -1210,6 +1286,7 @@ func BenchmarkFnv64KB(b *testing.B)
 
 ```
 searchKey: fnv.BenchmarkFnv64aKB
+tags: [private]
 ```
 
 ```Go
@@ -1220,6 +1297,7 @@ func BenchmarkFnv64aKB(b *testing.B)
 
 ```
 searchKey: fnv.BenchmarkFnv128KB
+tags: [private]
 ```
 
 ```Go
@@ -1230,6 +1308,7 @@ func BenchmarkFnv128KB(b *testing.B)
 
 ```
 searchKey: fnv.BenchmarkFnv128aKB
+tags: [private]
 ```
 
 ```Go
@@ -1240,6 +1319,7 @@ func BenchmarkFnv128aKB(b *testing.B)
 
 ```
 searchKey: fnv.benchmarkKB
+tags: [private]
 ```
 
 ```Go

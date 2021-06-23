@@ -4,7 +4,9 @@
     "identifier": "globalstatedb",
     "newPage": true,
     "searchKey": "internal/database/globalstatedb",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Mock",
                 "newPage": false,
                 "searchKey": "globalstatedb.Mock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +67,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,9 +87,7 @@
                 "identifier": "State",
                 "newPage": false,
                 "searchKey": "globalstatedb.State",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,9 +105,7 @@
                       "identifier": "Get",
                       "newPage": false,
                       "searchKey": "globalstatedb.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -125,7 +125,9 @@
                       "identifier": "getConfiguration",
                       "newPage": false,
                       "searchKey": "globalstatedb.getConfiguration",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -148,7 +150,9 @@
                 "identifier": "queryExecDatabaseHandler",
                 "newPage": false,
                 "searchKey": "globalstatedb.queryExecDatabaseHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +172,9 @@
                 "identifier": "execDatabaseHandler",
                 "newPage": false,
                 "searchKey": "globalstatedb.execDatabaseHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -191,7 +197,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -209,9 +217,7 @@
                 "identifier": "SiteInitialized",
                 "newPage": false,
                 "searchKey": "globalstatedb.SiteInitialized",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -231,9 +237,7 @@
                 "identifier": "EnsureInitialized",
                 "newPage": false,
                 "searchKey": "globalstatedb.EnsureInitialized",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -253,7 +257,9 @@
                 "identifier": "tryInsertNew",
                 "newPage": false,
                 "searchKey": "globalstatedb.tryInsertNew",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -268,12 +274,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/globalstatedb#init",
+              "pathID": "/internal/database/globalstatedb#init.db_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "globalstatedb.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -293,7 +301,9 @@
                 "identifier": "TestGet",
                 "newPage": false,
                 "searchKey": "globalstatedb.TestGet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

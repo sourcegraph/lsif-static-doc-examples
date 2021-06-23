@@ -11,10 +11,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleNotify" href="#ExampleNotify">func ExampleNotify()</a>
 
 ```
 searchKey: signal_test.ExampleNotify
+tags: [private]
 ```
 
 ```Go
@@ -25,6 +30,7 @@ func ExampleNotify()
 
 ```
 searchKey: signal_test.ExampleNotify_allSignals
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +41,7 @@ func ExampleNotify_allSignals()
 
 ```
 searchKey: signal_test.ExampleNotifyContext
+tags: [private]
 ```
 
 ```Go
@@ -47,6 +54,7 @@ This example passes a context with a signal to tell a blocking function that it 
 
 ```
 searchKey: signal_test.TestTerminalSignal
+tags: [private]
 ```
 
 ```Go

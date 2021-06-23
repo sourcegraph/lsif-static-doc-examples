@@ -4,7 +4,9 @@
     "identifier": "buildkite",
     "newPage": true,
     "searchKey": "enterprise/dev/ci/internal/buildkite",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Plugins",
                 "newPage": false,
                 "searchKey": "buildkite.Plugins",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "BeforeEveryStepOpts",
                 "newPage": false,
                 "searchKey": "buildkite.BeforeEveryStepOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "AfterEveryStepOpts",
                 "newPage": false,
                 "searchKey": "buildkite.AfterEveryStepOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -109,7 +107,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -127,9 +127,7 @@
                 "identifier": "Pipeline",
                 "newPage": false,
                 "searchKey": "buildkite.Pipeline",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -147,9 +145,7 @@
                       "identifier": "Pipeline.AddStep",
                       "newPage": false,
                       "searchKey": "buildkite.Pipeline.AddStep",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -169,9 +165,7 @@
                       "identifier": "Pipeline.AddTrigger",
                       "newPage": false,
                       "searchKey": "buildkite.Pipeline.AddTrigger",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -191,9 +185,7 @@
                       "identifier": "Pipeline.WriteTo",
                       "newPage": false,
                       "searchKey": "buildkite.Pipeline.WriteTo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -213,9 +205,7 @@
                       "identifier": "Pipeline.AddWait",
                       "newPage": false,
                       "searchKey": "buildkite.Pipeline.AddWait",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -238,9 +228,7 @@
                 "identifier": "BuildOptions",
                 "newPage": false,
                 "searchKey": "buildkite.BuildOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -260,9 +248,7 @@
                 "identifier": "Step",
                 "newPage": false,
                 "searchKey": "buildkite.Step",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,9 +268,7 @@
                 "identifier": "RetryOptions",
                 "newPage": false,
                 "searchKey": "buildkite.RetryOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -304,9 +288,7 @@
                 "identifier": "AutomaticRetryOptions",
                 "newPage": false,
                 "searchKey": "buildkite.AutomaticRetryOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +308,7 @@
                 "identifier": "StepOpt",
                 "newPage": false,
                 "searchKey": "buildkite.StepOpt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -346,9 +326,7 @@
                       "identifier": "Cmd",
                       "newPage": false,
                       "searchKey": "buildkite.Cmd",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -368,9 +346,7 @@
                       "identifier": "Trigger",
                       "newPage": false,
                       "searchKey": "buildkite.Trigger",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -390,9 +366,7 @@
                       "identifier": "Async",
                       "newPage": false,
                       "searchKey": "buildkite.Async",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -412,9 +386,7 @@
                       "identifier": "Build",
                       "newPage": false,
                       "searchKey": "buildkite.Build",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,9 +406,7 @@
                       "identifier": "ConcurrencyGroup",
                       "newPage": false,
                       "searchKey": "buildkite.ConcurrencyGroup",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -456,9 +426,7 @@
                       "identifier": "Concurrency",
                       "newPage": false,
                       "searchKey": "buildkite.Concurrency",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -478,9 +446,7 @@
                       "identifier": "Env",
                       "newPage": false,
                       "searchKey": "buildkite.Env",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -500,9 +466,7 @@
                       "identifier": "SoftFail",
                       "newPage": false,
                       "searchKey": "buildkite.SoftFail",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -522,9 +486,7 @@
                       "identifier": "AutomaticRetry",
                       "newPage": false,
                       "searchKey": "buildkite.AutomaticRetry",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -544,9 +506,7 @@
                       "identifier": "ArtifactPaths",
                       "newPage": false,
                       "searchKey": "buildkite.ArtifactPaths",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -566,9 +526,7 @@
                       "identifier": "Agent",
                       "newPage": false,
                       "searchKey": "buildkite.Agent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",

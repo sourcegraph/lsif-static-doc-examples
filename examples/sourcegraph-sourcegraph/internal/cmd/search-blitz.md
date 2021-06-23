@@ -43,15 +43,20 @@
     * [func startServer(wg *sync.WaitGroup) *http.Server](#startServer)
     * [func main()](#main)
     * [func SignalSensitiveContext() (ctx context.Context, cleanup func())](#SignalSensitiveContext)
-    * [func init()](#init)
+    * [func init()](#init.prometheus.go)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [private]
+```
 
 ### <a id="envToken" href="#envToken">const envToken</a>
 
 ```
 searchKey: main.envToken
+tags: [private]
 ```
 
 ```Go
@@ -62,6 +67,7 @@ const envToken = "SOURCEGRAPH_TOKEN"
 
 ```
 searchKey: main.envEndpoint
+tags: [private]
 ```
 
 ```Go
@@ -72,7 +78,6 @@ const envEndpoint = "SOURCEGRAPH_ENDPOINT"
 
 ```
 searchKey: main.Batch
-tags: [exported]
 ```
 
 ```Go
@@ -83,7 +88,6 @@ const Batch Protocol = iota
 
 ```
 searchKey: main.Stream
-tags: [exported]
 ```
 
 ```Go
@@ -94,6 +98,7 @@ const Stream
 
 ```
 searchKey: main.port
+tags: [private]
 ```
 
 ```Go
@@ -104,6 +109,7 @@ const port = "8080"
 
 ```
 searchKey: main.envConfig
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +120,7 @@ const envConfig = "CONFIG"
 
 ```
 searchKey: main.envLogDir
+tags: [private]
 ```
 
 ```Go
@@ -122,10 +129,15 @@ const envLogDir = "LOG_DIR"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="allProtocols" href="#allProtocols">var allProtocols</a>
 
 ```
 searchKey: main.allProtocols
+tags: [private]
 ```
 
 ```Go
@@ -136,7 +148,6 @@ var allProtocols = []Protocol{Batch, Stream}
 
 ```
 searchKey: main.UserLatencyBuckets
-tags: [exported]
 ```
 
 ```Go
@@ -147,6 +158,7 @@ var UserLatencyBuckets = []float64{100, 200, 300, 400, 500, 1000, 2000, 5000, 10
 
 ```
 searchKey: main.durationSearchHistogram
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +169,7 @@ var durationSearchHistogram = ...
 
 ```
 searchKey: main.graphQLQuery
+tags: [private]
 ```
 
 ```Go
@@ -165,10 +178,15 @@ var graphQLQuery = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="client" href="#client">type client struct</a>
 
 ```
 searchKey: main.client
+tags: [private]
 ```
 
 ```Go
@@ -183,6 +201,7 @@ type client struct {
 
 ```
 searchKey: main.newClient
+tags: [private]
 ```
 
 ```Go
@@ -193,6 +212,7 @@ func newClient() (*client, error)
 
 ```
 searchKey: main.client.search
+tags: [private]
 ```
 
 ```Go
@@ -203,6 +223,7 @@ func (s *client) search(ctx context.Context, query, queryName string) (*metrics,
 
 ```
 searchKey: main.client.url
+tags: [private]
 ```
 
 ```Go
@@ -213,6 +234,7 @@ func (s *client) url() string
 
 ```
 searchKey: main.client.clientType
+tags: [private]
 ```
 
 ```Go
@@ -223,7 +245,6 @@ func (s *client) clientType() string
 
 ```
 searchKey: main.Config
-tags: [exported]
 ```
 
 ```Go
@@ -236,6 +257,7 @@ type Config struct {
 
 ```
 searchKey: main.loadQueries
+tags: [private]
 ```
 
 ```Go
@@ -246,7 +268,6 @@ func loadQueries(path string) (*Config, error)
 
 ```
 searchKey: main.QueryGroupConfig
-tags: [exported]
 ```
 
 ```Go
@@ -260,7 +281,6 @@ type QueryGroupConfig struct {
 
 ```
 searchKey: main.QueryConfig
-tags: [exported]
 ```
 
 ```Go
@@ -280,7 +300,6 @@ type QueryConfig struct {
 
 ```
 searchKey: main.Protocol
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +312,6 @@ Protocol represents either the graphQL Protocol or the streaming Protocol
 
 ```
 searchKey: main.Protocol.UnmarshalYAML
-tags: [exported]
 ```
 
 ```Go
@@ -304,6 +322,7 @@ func (s *Protocol) UnmarshalYAML(unmarshal func(interface{}) error) error
 
 ```
 searchKey: main.genericClient
+tags: [private]
 ```
 
 ```Go
@@ -317,6 +336,7 @@ type genericClient interface {
 
 ```
 searchKey: main.rawResult
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +350,7 @@ type rawResult struct {
 
 ```
 searchKey: main.result
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +368,7 @@ type result struct {
 
 ```
 searchKey: main.searchResults
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +388,7 @@ searchResults represents the data we get back from the GraphQL search request.
 
 ```
 searchKey: main.searchResultsAlert
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +408,7 @@ searchResultsAlert is a type that can be used to unmarshal values returned by th
 
 ```
 searchKey: main.metrics
+tags: [private]
 ```
 
 ```Go
@@ -398,6 +422,7 @@ type metrics struct {
 
 ```
 searchKey: main.streamClient
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +437,7 @@ type streamClient struct {
 
 ```
 searchKey: main.newStreamClient
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +448,7 @@ func newStreamClient() (*streamClient, error)
 
 ```
 searchKey: main.streamClient.search
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +459,7 @@ func (s *streamClient) search(ctx context.Context, query, queryName string) (*me
 
 ```
 searchKey: main.streamClient.clientType
+tags: [private]
 ```
 
 ```Go
@@ -440,10 +468,15 @@ func (s *streamClient) clientType() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="health" href="#health">func health(w http.ResponseWriter, r *http.Request)</a>
 
 ```
 searchKey: main.health
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +487,7 @@ func health(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: main.run
+tags: [private]
 ```
 
 ```Go
@@ -464,6 +498,7 @@ func run(ctx context.Context, wg *sync.WaitGroup)
 
 ```
 searchKey: main.startServer
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +509,7 @@ func startServer(wg *sync.WaitGroup) *http.Server
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -484,7 +520,6 @@ func main()
 
 ```
 searchKey: main.SignalSensitiveContext
-tags: [exported]
 ```
 
 ```Go
@@ -493,10 +528,11 @@ func SignalSensitiveContext() (ctx context.Context, cleanup func())
 
 SignalSensitiveContext returns a background context that is canceled after receiving an interrupt or terminate signal. A second signal will abort the program. This function returns the context and a function that should be  deferred by the caller to clean up internal channels. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.prometheus.go" href="#init.prometheus.go">func init()</a>
 
 ```
 searchKey: main.init
+tags: [private]
 ```
 
 ```Go

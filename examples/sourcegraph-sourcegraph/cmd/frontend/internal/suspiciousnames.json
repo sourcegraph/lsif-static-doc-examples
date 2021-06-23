@@ -4,7 +4,9 @@
     "identifier": "suspiciousnames",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/suspiciousnames",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "suspiciousNames",
                 "newPage": false,
                 "searchKey": "suspiciousnames.suspiciousNames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "CheckNameAllowedForUserOrOrganization",
                 "newPage": false,
                 "searchKey": "suspiciousnames.CheckNameAllowedForUserOrOrganization",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "isSuspicious",
                 "newPage": false,
                 "searchKey": "suspiciousnames.isSuspicious",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

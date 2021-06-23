@@ -4,7 +4,9 @@
     "identifier": "handlerutil",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/handlerutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "ravenClient",
                 "newPage": false,
                 "searchKey": "handlerutil.ravenClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "URLMovedError",
                 "newPage": false,
                 "searchKey": "handlerutil.URLMovedError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -101,9 +107,7 @@
                       "identifier": "URLMovedError.Error",
                       "newPage": false,
                       "searchKey": "handlerutil.URLMovedError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,9 +130,7 @@
                 "identifier": "HandlerWithErrorReturn",
                 "newPage": false,
                 "searchKey": "handlerutil.HandlerWithErrorReturn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -146,9 +148,7 @@
                       "identifier": "HandlerWithErrorReturn.ServeHTTP",
                       "newPage": false,
                       "searchKey": "handlerutil.HandlerWithErrorReturn.ServeHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -174,7 +174,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -187,12 +189,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/handlerutil#init",
+              "pathID": "/cmd/frontend/internal/handlerutil#init.error_reporting.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.error_reporting.go",
                 "newPage": false,
                 "searchKey": "handlerutil.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -212,7 +216,9 @@
                 "identifier": "reportError",
                 "newPage": false,
                 "searchKey": "handlerutil.reportError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -232,7 +238,9 @@
                 "identifier": "httpErrCode",
                 "newPage": false,
                 "searchKey": "handlerutil.httpErrCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -252,7 +260,9 @@
                 "identifier": "collapseMultipleErrors",
                 "newPage": false,
                 "searchKey": "handlerutil.collapseMultipleErrors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -272,9 +282,7 @@
                 "identifier": "CSRFMiddleware",
                 "newPage": false,
                 "searchKey": "handlerutil.CSRFMiddleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -294,9 +302,7 @@
                 "identifier": "GetRepo",
                 "newPage": false,
                 "searchKey": "handlerutil.GetRepo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -316,7 +322,9 @@
                 "identifier": "getRepoRev",
                 "newPage": false,
                 "searchKey": "handlerutil.getRepoRev",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -336,9 +344,7 @@
                 "identifier": "GetRepoAndRev",
                 "newPage": false,
                 "searchKey": "handlerutil.GetRepoAndRev",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -358,9 +364,7 @@
                 "identifier": "RedirectToNewRepoName",
                 "newPage": false,
                 "searchKey": "handlerutil.RedirectToNewRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -380,7 +384,9 @@
                 "identifier": "TestGetRepo",
                 "newPage": false,
                 "searchKey": "handlerutil.TestGetRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

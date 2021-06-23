@@ -4,7 +4,9 @@
     "identifier": "processrestart",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/processrestart",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "usingGoremanServer",
                 "newPage": false,
                 "searchKey": "processrestart.usingGoremanServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "restartGoremanServer",
                 "newPage": false,
                 "searchKey": "processrestart.restartGoremanServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,9 +111,7 @@
                 "identifier": "CanRestart",
                 "newPage": false,
                 "searchKey": "processrestart.CanRestart",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -123,9 +131,7 @@
                 "identifier": "Restart",
                 "newPage": false,
                 "searchKey": "processrestart.Restart",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

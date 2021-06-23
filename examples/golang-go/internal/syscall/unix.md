@@ -21,11 +21,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AT_REMOVEDIR" href="#AT_REMOVEDIR">const AT_REMOVEDIR</a>
 
 ```
 searchKey: unix.AT_REMOVEDIR
-tags: [exported]
 ```
 
 ```Go
@@ -36,7 +39,6 @@ const AT_REMOVEDIR = 0x80
 
 ```
 searchKey: unix.AT_SYMLINK_NOFOLLOW
-tags: [exported]
 ```
 
 ```Go
@@ -45,11 +47,14 @@ const AT_SYMLINK_NOFOLLOW = 0x0020
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Unlinkat" href="#Unlinkat">func Unlinkat(dirfd int, path string, flags int) error</a>
 
 ```
 searchKey: unix.Unlinkat
-tags: [exported]
 ```
 
 ```Go
@@ -60,7 +65,6 @@ func Unlinkat(dirfd int, path string, flags int) error
 
 ```
 searchKey: unix.Openat
-tags: [exported]
 ```
 
 ```Go
@@ -71,7 +75,6 @@ func Openat(dirfd int, path string, flags int, perm uint32) (int, error)
 
 ```
 searchKey: unix.Fstatat
-tags: [exported]
 ```
 
 ```Go
@@ -82,6 +85,7 @@ func Fstatat(dirfd int, path string, stat *syscall.Stat_t, flags int) error
 
 ```
 searchKey: unix.unlinkat
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +96,7 @@ func unlinkat(dirfd int, path string, flags int) error
 
 ```
 searchKey: unix.openat
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +107,7 @@ func openat(dirfd int, path string, flags int, perm uint32) (int, error)
 
 ```
 searchKey: unix.fstatat
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +118,7 @@ func fstatat(dirfd int, path string, stat *syscall.Stat_t, flags int) error
 
 ```
 searchKey: unix.libc_getentropy_trampoline
+tags: [private]
 ```
 
 ```Go
@@ -122,7 +129,6 @@ func libc_getentropy_trampoline()
 
 ```
 searchKey: unix.GetEntropy
-tags: [exported]
 ```
 
 ```Go
@@ -135,6 +141,7 @@ GetEntropy calls the macOS getentropy system call.
 
 ```
 searchKey: unix.syscall_syscall
+tags: [private]
 ```
 
 ```Go
@@ -145,7 +152,6 @@ func syscall_syscall(fn, a1, a2, a3 uintptr) (r1, r2 uintptr, err syscall.Errno)
 
 ```
 searchKey: unix.IsNonblock
-tags: [exported]
 ```
 
 ```Go
@@ -156,6 +162,7 @@ func IsNonblock(fd int) (nonblocking bool, err error)
 
 ```
 searchKey: unix.fcntl
+tags: [private]
 ```
 
 ```Go

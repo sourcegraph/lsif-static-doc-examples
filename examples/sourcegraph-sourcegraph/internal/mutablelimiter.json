@@ -4,7 +4,9 @@
     "identifier": "mutablelimiter",
     "newPage": true,
     "searchKey": "internal/mutablelimiter",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Limiter",
                 "newPage": false,
                 "searchKey": "mutablelimiter.Limiter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "mutablelimiter.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "Limiter.SetLimit",
                       "newPage": false,
                       "searchKey": "mutablelimiter.Limiter.SetLimit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "Limiter.GetLimit",
                       "newPage": false,
                       "searchKey": "mutablelimiter.Limiter.GetLimit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,9 +122,7 @@
                       "identifier": "Limiter.Acquire",
                       "newPage": false,
                       "searchKey": "mutablelimiter.Limiter.Acquire",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -148,7 +142,9 @@
                       "identifier": "Limiter.do",
                       "newPage": false,
                       "searchKey": "mutablelimiter.Limiter.do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -171,7 +167,9 @@
                 "identifier": "acquireResponse",
                 "newPage": false,
                 "searchKey": "mutablelimiter.acquireResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -191,7 +189,9 @@
                 "identifier": "acquireRequest",
                 "newPage": false,
                 "searchKey": "mutablelimiter.acquireRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -214,7 +214,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -232,7 +234,9 @@
                 "identifier": "TestLimiter",
                 "newPage": false,
                 "searchKey": "mutablelimiter.TestLimiter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

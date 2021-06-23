@@ -40,10 +40,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="requestMeter" href="#requestMeter">var requestMeter</a>
 
 ```
 searchKey: repoupdater.requestMeter
+tags: [private]
 ```
 
 ```Go
@@ -54,7 +59,6 @@ var requestMeter = ...
 
 ```
 searchKey: repoupdater.DefaultClient
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +71,6 @@ DefaultClient is the default Client. Unless overwritten, it is connected to the 
 
 ```
 searchKey: repoupdater.MockRepoLookup
-tags: [exported]
 ```
 
 ```Go
@@ -80,7 +83,6 @@ MockRepoLookup mocks (*Client).RepoLookup for tests.
 
 ```
 searchKey: repoupdater.MockEnqueueRepoUpdate
-tags: [exported]
 ```
 
 ```Go
@@ -93,7 +95,6 @@ MockEnqueueRepoUpdate mocks (*Client).EnqueueRepoUpdate for tests.
 
 ```
 searchKey: repoupdater.MockEnqueueChangesetSync
-tags: [exported]
 ```
 
 ```Go
@@ -104,11 +105,14 @@ MockEnqueueChangesetSync mocks (*Client).EnqueueChangesetSync for tests.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: repoupdater.Client
-tags: [exported]
 ```
 
 ```Go
@@ -127,7 +131,6 @@ Client is a repoupdater client.
 
 ```
 searchKey: repoupdater.NewClient
-tags: [exported]
 ```
 
 ```Go
@@ -140,7 +143,6 @@ NewClient will initiate a new repoupdater Client with the given serverURL.
 
 ```
 searchKey: repoupdater.Client.RepoUpdateSchedulerInfo
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +155,6 @@ RepoUpdateSchedulerInfo returns information about the state of the repo in the u
 
 ```
 searchKey: repoupdater.Client.RepoLookup
-tags: [exported]
 ```
 
 ```Go
@@ -166,7 +167,6 @@ RepoLookup retrieves information about the repository on repoupdater.
 
 ```
 searchKey: repoupdater.Client.EnqueueRepoUpdate
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +179,6 @@ EnqueueRepoUpdate requests that the named repository be updated in the near futu
 
 ```
 searchKey: repoupdater.Client.EnqueueChangesetSync
-tags: [exported]
 ```
 
 ```Go
@@ -190,7 +189,6 @@ func (c *Client) EnqueueChangesetSync(ctx context.Context, ids []int64) error
 
 ```
 searchKey: repoupdater.Client.SchedulePermsSync
-tags: [exported]
 ```
 
 ```Go
@@ -201,7 +199,6 @@ func (c *Client) SchedulePermsSync(ctx context.Context, args protocol.PermsSyncR
 
 ```
 searchKey: repoupdater.Client.SyncExternalService
-tags: [exported]
 ```
 
 ```Go
@@ -214,7 +211,6 @@ SyncExternalService requests the given external service to be synced.
 
 ```
 searchKey: repoupdater.Client.RepoExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -227,6 +223,7 @@ RepoExternalServices requests the external services associated with a repository
 
 ```
 searchKey: repoupdater.Client.httpPost
+tags: [private]
 ```
 
 ```Go
@@ -237,6 +234,7 @@ func (c *Client) httpPost(ctx context.Context, method string, payload interface{
 
 ```
 searchKey: repoupdater.Client.do
+tags: [private]
 ```
 
 ```Go
@@ -247,6 +245,7 @@ func (c *Client) do(ctx context.Context, req *http.Request) (_ *http.Response, e
 
 ```
 searchKey: repoupdater.repoNotFoundError
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +259,7 @@ type repoNotFoundError struct {
 
 ```
 searchKey: repoupdater.repoNotFoundError.NotFound
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +270,7 @@ func (repoNotFoundError) NotFound() bool
 
 ```
 searchKey: repoupdater.repoNotFoundError.Error
+tags: [private]
 ```
 
 ```Go
@@ -280,7 +281,6 @@ func (e *repoNotFoundError) Error() string
 
 ```
 searchKey: repoupdater.ErrNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -296,7 +296,6 @@ ErrNotFound is an error that occurs when a Repo doesn't exist.
 
 ```
 searchKey: repoupdater.ErrNotFound.NotFound
-tags: [exported]
 ```
 
 ```Go
@@ -309,7 +308,6 @@ NotFound returns true if the repo does Not exist.
 
 ```
 searchKey: repoupdater.ErrNotFound.Error
-tags: [exported]
 ```
 
 ```Go
@@ -320,7 +318,6 @@ func (e *ErrNotFound) Error() string
 
 ```
 searchKey: repoupdater.ErrUnauthorized
-tags: [exported]
 ```
 
 ```Go
@@ -336,7 +333,6 @@ ErrUnauthorized is an error that occurs when repo access is unauthorized.
 
 ```
 searchKey: repoupdater.ErrUnauthorized.Unauthorized
-tags: [exported]
 ```
 
 ```Go
@@ -349,7 +345,6 @@ Unauthorized returns true if repo access is unauthorized.
 
 ```
 searchKey: repoupdater.ErrUnauthorized.Error
-tags: [exported]
 ```
 
 ```Go
@@ -360,7 +355,6 @@ func (e *ErrUnauthorized) Error() string
 
 ```
 searchKey: repoupdater.ErrTemporary
-tags: [exported]
 ```
 
 ```Go
@@ -376,7 +370,6 @@ ErrTemporary is an error that can be retried
 
 ```
 searchKey: repoupdater.ErrTemporary.Temporary
-tags: [exported]
 ```
 
 ```Go
@@ -389,7 +382,6 @@ Temporary is when the repository was reported as being temporarily unavailable.
 
 ```
 searchKey: repoupdater.ErrTemporary.Error
-tags: [exported]
 ```
 
 ```Go
@@ -398,10 +390,15 @@ func (e *ErrTemporary) Error() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestNewClient" href="#TestNewClient">func TestNewClient(t *testing.T)</a>
 
 ```
 searchKey: repoupdater.TestNewClient
+tags: [private]
 ```
 
 ```Go

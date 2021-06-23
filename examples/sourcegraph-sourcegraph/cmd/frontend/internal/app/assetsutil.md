@@ -9,17 +9,22 @@ Package assetsutil is a utils package for static files.
     * [var baseURL](#baseURL)
 * [Functions](#func)
     * [func Mount(mux *http.ServeMux)](#Mount)
-    * [func init()](#init)
+    * [func init()](#init.handler.go)
     * [func isPhabricatorAsset(path string) bool](#isPhabricatorAsset)
     * [func URL(p string) *url.URL](#URL)
 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="assetsRoot" href="#assetsRoot">var assetsRoot</a>
 
 ```
 searchKey: assetsutil.assetsRoot
+tags: [private]
 ```
 
 ```Go
@@ -30,6 +35,7 @@ var assetsRoot = env.Get("ASSETS_ROOT", "/.assets", "URL to web assets")
 
 ```
 searchKey: assetsutil.baseURL
+tags: [private]
 ```
 
 ```Go
@@ -40,11 +46,14 @@ baseURL is the path prefix under which static assets should be served.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Mount" href="#Mount">func Mount(mux *http.ServeMux)</a>
 
 ```
 searchKey: assetsutil.Mount
-tags: [exported]
 ```
 
 ```Go
@@ -53,10 +62,11 @@ func Mount(mux *http.ServeMux)
 
 Mount mounts the static asset handler. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.handler.go" href="#init.handler.go">func init()</a>
 
 ```
 searchKey: assetsutil.init
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +77,7 @@ func init()
 
 ```
 searchKey: assetsutil.isPhabricatorAsset
+tags: [private]
 ```
 
 ```Go
@@ -77,7 +88,6 @@ func isPhabricatorAsset(path string) bool
 
 ```
 searchKey: assetsutil.URL
-tags: [exported]
 ```
 
 ```Go

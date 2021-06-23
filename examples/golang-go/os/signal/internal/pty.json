@@ -4,7 +4,9 @@
     "identifier": "pty",
     "newPage": true,
     "searchKey": "os/signal/internal/pty",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "PtyError",
                 "newPage": false,
                 "searchKey": "pty.PtyError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +62,9 @@
                       "identifier": "ptyError",
                       "newPage": false,
                       "searchKey": "pty.ptyError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -80,9 +84,7 @@
                       "identifier": "PtyError.Error",
                       "newPage": false,
                       "searchKey": "pty.PtyError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -102,9 +104,7 @@
                       "identifier": "PtyError.Unwrap",
                       "newPage": false,
                       "searchKey": "pty.PtyError.Unwrap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -130,7 +130,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -148,9 +150,7 @@
                 "identifier": "Open",
                 "newPage": false,
                 "searchKey": "pty.Open",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

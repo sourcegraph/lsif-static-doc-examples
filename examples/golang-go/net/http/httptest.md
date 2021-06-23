@@ -44,7 +44,7 @@ Package httptest provides utilities for HTTP testing.
     * [func checkWriteHeaderCode(code int)](#checkWriteHeaderCode)
     * [func parseContentLength(cl string) int64](#parseContentLength)
     * [func newLocalListener() net.Listener](#newLocalListener)
-    * [func init()](#init)
+    * [func init()](#init.server.go)
     * [func strSliceContainsPrefix(v []string, pre string) bool](#strSliceContainsPrefix)
     * [func TestNewRequest(t *testing.T)](#TestNewRequest)
     * [func TestRecorder(t *testing.T)](#TestRecorder)
@@ -64,15 +64,10 @@ Package httptest provides utilities for HTTP testing.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="DefaultRemoteAddr" href="#DefaultRemoteAddr">const DefaultRemoteAddr</a>
 
 ```
 searchKey: httptest.DefaultRemoteAddr
-tags: [exported]
 ```
 
 ```Go
@@ -83,14 +78,11 @@ DefaultRemoteAddr is the default remote address to return in RemoteAddr if an ex
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="serveFlag" href="#serveFlag">var serveFlag</a>
 
 ```
 searchKey: httptest.serveFlag
+tags: [private]
 ```
 
 ```Go
@@ -109,6 +101,7 @@ to start the broken server so you can interact with it manually. We only registe
 
 ```
 searchKey: httptest.newServers
+tags: [private]
 ```
 
 ```Go
@@ -117,15 +110,10 @@ var newServers = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ResponseRecorder" href="#ResponseRecorder">type ResponseRecorder struct</a>
 
 ```
 searchKey: httptest.ResponseRecorder
-tags: [exported]
 ```
 
 ```Go
@@ -165,7 +153,6 @@ ResponseRecorder is an implementation of http.ResponseWriter that records its mu
 
 ```
 searchKey: httptest.NewRecorder
-tags: [exported]
 ```
 
 ```Go
@@ -178,7 +165,6 @@ NewRecorder returns an initialized ResponseRecorder.
 
 ```
 searchKey: httptest.ResponseRecorder.Header
-tags: [exported]
 ```
 
 ```Go
@@ -191,6 +177,7 @@ Header implements http.ResponseWriter. It returns the response headers to mutate
 
 ```
 searchKey: httptest.ResponseRecorder.writeHeader
+tags: [private]
 ```
 
 ```Go
@@ -205,7 +192,6 @@ bytes or str are the beginning of the response body. We pass both to avoid unnec
 
 ```
 searchKey: httptest.ResponseRecorder.Write
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +204,6 @@ Write implements http.ResponseWriter. The data in buf is written to rw.Body, if 
 
 ```
 searchKey: httptest.ResponseRecorder.WriteString
-tags: [exported]
 ```
 
 ```Go
@@ -231,7 +216,6 @@ WriteString implements io.StringWriter. The data in str is written to rw.Body, i
 
 ```
 searchKey: httptest.ResponseRecorder.WriteHeader
-tags: [exported]
 ```
 
 ```Go
@@ -244,7 +228,6 @@ WriteHeader implements http.ResponseWriter.
 
 ```
 searchKey: httptest.ResponseRecorder.Flush
-tags: [exported]
 ```
 
 ```Go
@@ -257,7 +240,6 @@ Flush implements http.Flusher. To test whether Flush was called, see rw.Flushed.
 
 ```
 searchKey: httptest.ResponseRecorder.Result
-tags: [exported]
 ```
 
 ```Go
@@ -278,7 +260,6 @@ Result must only be called after the handler has finished running.
 
 ```
 searchKey: httptest.Server
-tags: [exported]
 ```
 
 ```Go
@@ -323,7 +304,6 @@ A Server is an HTTP server listening on a system-chosen port on the local loopba
 
 ```
 searchKey: httptest.NewServer
-tags: [exported]
 ```
 
 ```Go
@@ -336,7 +316,6 @@ NewServer starts and returns a new Server. The caller should call Close when fin
 
 ```
 searchKey: httptest.NewUnstartedServer
-tags: [exported]
 ```
 
 ```Go
@@ -353,7 +332,6 @@ The caller should call Close when finished, to shut it down.
 
 ```
 searchKey: httptest.NewTLSServer
-tags: [exported]
 ```
 
 ```Go
@@ -366,7 +344,6 @@ NewTLSServer starts and returns a new Server using TLS. The caller should call C
 
 ```
 searchKey: httptest.Server.Start
-tags: [exported]
 ```
 
 ```Go
@@ -379,7 +356,6 @@ Start starts a server from NewUnstartedServer.
 
 ```
 searchKey: httptest.Server.StartTLS
-tags: [exported]
 ```
 
 ```Go
@@ -392,7 +368,6 @@ StartTLS starts TLS on a server from NewUnstartedServer.
 
 ```
 searchKey: httptest.Server.Close
-tags: [exported]
 ```
 
 ```Go
@@ -405,6 +380,7 @@ Close shuts down the server and blocks until all outstanding requests on this se
 
 ```
 searchKey: httptest.Server.logCloseHangDebugInfo
+tags: [private]
 ```
 
 ```Go
@@ -415,7 +391,6 @@ func (s *Server) logCloseHangDebugInfo()
 
 ```
 searchKey: httptest.Server.CloseClientConnections
-tags: [exported]
 ```
 
 ```Go
@@ -428,7 +403,6 @@ CloseClientConnections closes any open HTTP connections to the test Server.
 
 ```
 searchKey: httptest.Server.Certificate
-tags: [exported]
 ```
 
 ```Go
@@ -441,7 +415,6 @@ Certificate returns the certificate used by the server, or nil if the server doe
 
 ```
 searchKey: httptest.Server.Client
-tags: [exported]
 ```
 
 ```Go
@@ -454,6 +427,7 @@ Client returns an HTTP client configured for making requests to the server. It i
 
 ```
 searchKey: httptest.Server.goServe
+tags: [private]
 ```
 
 ```Go
@@ -464,6 +438,7 @@ func (s *Server) goServe()
 
 ```
 searchKey: httptest.Server.wrap
+tags: [private]
 ```
 
 ```Go
@@ -476,6 +451,7 @@ wrap installs the connection state-tracking hook to know which connections are i
 
 ```
 searchKey: httptest.Server.closeConn
+tags: [private]
 ```
 
 ```Go
@@ -488,6 +464,7 @@ closeConn closes c. s.mu must be held.
 
 ```
 searchKey: httptest.Server.closeConnChan
+tags: [private]
 ```
 
 ```Go
@@ -500,6 +477,7 @@ closeConnChan is like closeConn, but takes an optional channel to receive a valu
 
 ```
 searchKey: httptest.Server.forgetConn
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +490,7 @@ forgetConn removes c from the set of tracked conns and decrements it from the wa
 
 ```
 searchKey: httptest.closeIdleTransport
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +503,7 @@ type closeIdleTransport interface {
 
 ```
 searchKey: httptest.newServerFunc
+tags: [private]
 ```
 
 ```Go
@@ -534,6 +514,7 @@ type newServerFunc func(http.Handler) *Server
 
 ```
 searchKey: httptest.onlyCloseListener
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +527,7 @@ type onlyCloseListener struct {
 
 ```
 searchKey: httptest.onlyCloseListener.Close
+tags: [private]
 ```
 
 ```Go
@@ -554,15 +536,10 @@ func (onlyCloseListener) Close() error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NewRequest" href="#NewRequest">func NewRequest(method, target string, body io.Reader) *http.Request</a>
 
 ```
 searchKey: httptest.NewRequest
-tags: [exported]
 ```
 
 ```Go
@@ -589,6 +566,7 @@ To generate a client HTTP request instead of a server request, see the NewReques
 
 ```
 searchKey: httptest.checkWriteHeaderCode
+tags: [private]
 ```
 
 ```Go
@@ -599,6 +577,7 @@ func checkWriteHeaderCode(code int)
 
 ```
 searchKey: httptest.parseContentLength
+tags: [private]
 ```
 
 ```Go
@@ -613,16 +592,18 @@ This a modified version of same function found in net/http/transfer.go. This one
 
 ```
 searchKey: httptest.newLocalListener
+tags: [private]
 ```
 
 ```Go
 func newLocalListener() net.Listener
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.server.go" href="#init.server.go">func init()</a>
 
 ```
 searchKey: httptest.init
+tags: [private]
 ```
 
 ```Go
@@ -633,6 +614,7 @@ func init()
 
 ```
 searchKey: httptest.strSliceContainsPrefix
+tags: [private]
 ```
 
 ```Go
@@ -643,6 +625,7 @@ func strSliceContainsPrefix(v []string, pre string) bool
 
 ```
 searchKey: httptest.TestNewRequest
+tags: [private]
 ```
 
 ```Go
@@ -653,6 +636,7 @@ func TestNewRequest(t *testing.T)
 
 ```
 searchKey: httptest.TestRecorder
+tags: [private]
 ```
 
 ```Go
@@ -663,6 +647,7 @@ func TestRecorder(t *testing.T)
 
 ```
 searchKey: httptest.TestParseContentLength
+tags: [private]
 ```
 
 ```Go
@@ -675,6 +660,7 @@ issue 39017 - disallow Content-Length values such as "+3"
 
 ```
 searchKey: httptest.TestRecorderPanicsOnNonXXXStatusCode
+tags: [private]
 ```
 
 ```Go
@@ -687,6 +673,7 @@ Ensure that httptest.Recorder panics when given a non-3 digit (XXX) status HTTP 
 
 ```
 searchKey: httptest.TestServer
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +684,7 @@ func TestServer(t *testing.T)
 
 ```
 searchKey: httptest.testServer
+tags: [private]
 ```
 
 ```Go
@@ -707,6 +695,7 @@ func testServer(t *testing.T, newServer newServerFunc)
 
 ```
 searchKey: httptest.testGetAfterClose
+tags: [private]
 ```
 
 ```Go
@@ -719,6 +708,7 @@ Issue 12781
 
 ```
 searchKey: httptest.testServerCloseBlocking
+tags: [private]
 ```
 
 ```Go
@@ -729,6 +719,7 @@ func testServerCloseBlocking(t *testing.T, newServer newServerFunc)
 
 ```
 searchKey: httptest.testServerCloseClientConnections
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +732,7 @@ Issue 14290
 
 ```
 searchKey: httptest.testServerClient
+tags: [private]
 ```
 
 ```Go
@@ -753,6 +745,7 @@ Tests that the Server.Client method works and returns an http.Client that can hi
 
 ```
 searchKey: httptest.testServerClientTransportType
+tags: [private]
 ```
 
 ```Go
@@ -765,6 +758,7 @@ Tests that the Server.Client.Transport interface is implemented by a *http.Trans
 
 ```
 searchKey: httptest.testTLSServerClientTransportType
+tags: [private]
 ```
 
 ```Go
@@ -777,6 +771,7 @@ Tests that the TLS Server.Client.Transport interface is implemented by a *http.T
 
 ```
 searchKey: httptest.TestServerZeroValueClose
+tags: [private]
 ```
 
 ```Go
@@ -789,6 +784,7 @@ Issue 19729: panic in Server.Close for values created directly without a constru
 
 ```
 searchKey: httptest.TestTLSServerWithHTTP2
+tags: [private]
 ```
 
 ```Go

@@ -76,7 +76,6 @@
         * [func decodeOID(sha string) (OID, error)](#decodeOID)
         * [func (oid OID) String() string](#OID.String)
     * [type ObjectType string](#ObjectType)
-        * [func GetObject(ctx context.Context, repo api.RepoName, objectName string) (oid OID, objectType ObjectType, err error)](#GetObject)
     * [type RefGlob struct](#RefGlob)
     * [type RefGlobs []git.compiledRefGlobPattern](#RefGlobs)
         * [func CompileRefGlobs(globs []RefGlob) (RefGlobs, error)](#CompileRefGlobs)
@@ -204,7 +203,7 @@
     * [func TestDiffFileIterator(t *testing.T)](#TestDiffFileIterator)
     * [func TestExecSafe(t *testing.T)](#TestExecSafe)
     * [func TestMain(m *testing.M)](#TestMain)
-    * [func init()](#init)
+    * [func init()](#init.main_test.go)
     * [func AsJSON(v interface{}) string](#AsJSON)
     * [func InitGitRepository(t testing.TB, cmds ...string) string](#InitGitRepository)
     * [func GitCommand(dir, name string, args ...string) *exec.Cmd](#GitCommand)
@@ -239,10 +238,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="partsPerCommit" href="#partsPerCommit">const partsPerCommit</a>
 
 ```
 searchKey: git.partsPerCommit
+tags: [private]
 ```
 
 ```Go
@@ -254,6 +258,7 @@ const partsPerCommit = 10 // number of \x00-separated fields per commit
 
 ```
 searchKey: git.logFormatWithRefs
+tags: [private]
 ```
 
 ```Go
@@ -266,6 +271,7 @@ include refs (slow on repos with many refs)
 
 ```
 searchKey: git.logFormatWithoutRefs
+tags: [private]
 ```
 
 ```Go
@@ -278,7 +284,6 @@ don't include refs (faster, should be used if refs are not needed)
 
 ```
 searchKey: git.ModeSubmodule
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +298,6 @@ To avoid being reported as a regular file mode by (os.FileMode).IsRegular, it se
 
 ```
 searchKey: git.DevNullSHA
-tags: [exported]
 ```
 
 ```Go
@@ -306,7 +310,6 @@ const DevNullSHA = "4b825dc642cb6eb9a060e54bf8d69288fbee4904"
 
 ```
 searchKey: git.ObjectTypeCommit
-tags: [exported]
 ```
 
 ```Go
@@ -319,7 +322,6 @@ Standard Git object types.
 
 ```
 searchKey: git.ObjectTypeTag
-tags: [exported]
 ```
 
 ```Go
@@ -332,7 +334,6 @@ Standard Git object types.
 
 ```
 searchKey: git.ObjectTypeTree
-tags: [exported]
 ```
 
 ```Go
@@ -345,7 +346,6 @@ Standard Git object types.
 
 ```
 searchKey: git.ObjectTypeBlob
-tags: [exported]
 ```
 
 ```Go
@@ -356,10 +356,15 @@ Standard Git object types.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="logEntryPattern" href="#logEntryPattern">var logEntryPattern</a>
 
 ```
 searchKey: git.logEntryPattern
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +377,7 @@ logEntryPattern is the regexp pattern that matches entries in the output of the 
 
 ```
 searchKey: git.recordGetCommitQueries
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +388,7 @@ var recordGetCommitQueries = os.Getenv("RECORD_GET_COMMIT_QUERIES") == "1"
 
 ```
 searchKey: git.runCommitLog
+tags: [private]
 ```
 
 ```Go
@@ -394,6 +401,7 @@ runCommitLog sends the git command to gitserver. It interprets missing revision 
 
 ```
 searchKey: git.errLogOnelineBatchScannerClosed
+tags: [private]
 ```
 
 ```Go
@@ -406,6 +414,7 @@ errLogOnelineBatchScannerClosed is returned if a read is attempted on a closed l
 
 ```
 searchKey: git.validRawLogDiffSearchFormatArgs
+tags: [private]
 ```
 
 ```Go
@@ -416,6 +425,7 @@ var validRawLogDiffSearchFormatArgs = ...
 
 ```
 searchKey: git.gitCmdAllowlist
+tags: [private]
 ```
 
 ```Go
@@ -428,6 +438,7 @@ gitCmdAllowlist are commands and arguments that are allowed to execute when call
 
 ```
 searchKey: git.gitCommonAllowlist
+tags: [private]
 ```
 
 ```Go
@@ -440,7 +451,6 @@ var gitCommonAllowlist = ...
 
 ```
 searchKey: git.Mocks
-tags: [exported]
 ```
 
 ```Go
@@ -469,6 +479,7 @@ Mocks is used to mock behavior in tests. Tests must call ResetMocks() when finis
 
 ```
 searchKey: git.emptyMocks
+tags: [private]
 ```
 
 ```Go
@@ -497,6 +508,7 @@ Mocks is used to mock behavior in tests. Tests must call ResetMocks() when finis
 
 ```
 searchKey: git.invalidBranch
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +519,7 @@ var invalidBranch = ...
 
 ```
 searchKey: git.lsTreeRootCacheMu
+tags: [private]
 ```
 
 ```Go
@@ -519,6 +532,7 @@ lsTreeRootCache caches the result of running `git ls-tree ...` on a repository's
 
 ```
 searchKey: git.lsTreeRootCache
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +545,7 @@ lsTreeRootCache caches the result of running `git ls-tree ...` on a repository's
 
 ```
 searchKey: git.root
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +556,7 @@ var root string
 
 ```
 searchKey: git.Times
+tags: [private]
 ```
 
 ```Go
@@ -554,6 +570,7 @@ var Times = []string{
 
 ```
 searchKey: git.NonExistentCommitID
+tags: [private]
 ```
 
 ```Go
@@ -562,11 +579,14 @@ var NonExistentCommitID = api.CommitID(strings.Repeat("a", 40))
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="BlameOptions" href="#BlameOptions">type BlameOptions struct</a>
 
 ```
 searchKey: git.BlameOptions
-tags: [exported]
 ```
 
 ```Go
@@ -585,7 +605,6 @@ BlameOptions configures a blame.
 
 ```
 searchKey: git.Hunk
-tags: [exported]
 ```
 
 ```Go
@@ -606,6 +625,7 @@ A Hunk is a contiguous portion of a file associated with a commit.
 
 ```
 searchKey: git.blobReader
+tags: [private]
 ```
 
 ```Go
@@ -625,6 +645,7 @@ blobReader, which should be created using newBlobReader, is a struct that allows
 
 ```
 searchKey: git.newBlobReader
+tags: [private]
 ```
 
 ```Go
@@ -635,6 +656,7 @@ func newBlobReader(ctx context.Context, repo api.RepoName, commit api.CommitID, 
 
 ```
 searchKey: git.blobReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -645,6 +667,7 @@ func (br *blobReader) Read(p []byte) (int, error)
 
 ```
 searchKey: git.blobReader.Close
+tags: [private]
 ```
 
 ```Go
@@ -655,6 +678,7 @@ func (br *blobReader) Close() error
 
 ```
 searchKey: git.blobReader.convertError
+tags: [private]
 ```
 
 ```Go
@@ -667,7 +691,6 @@ convertError converts an error returned from 'git show' into a more appropriate 
 
 ```
 searchKey: git.Commit
-tags: [exported]
 ```
 
 ```Go
@@ -685,6 +708,7 @@ type Commit struct {
 
 ```
 searchKey: git.getCommit
+tags: [private]
 ```
 
 ```Go
@@ -697,7 +721,6 @@ getCommit returns the commit with the given id.
 
 ```
 searchKey: git.GetCommit
-tags: [exported]
 ```
 
 ```Go
@@ -712,7 +735,6 @@ The remoteURLFunc is called to get the Git remote URL if it's not set in repo an
 
 ```
 searchKey: git.FirstEverCommit
-tags: [exported]
 ```
 
 ```Go
@@ -725,7 +747,6 @@ FirstEverCommit returns the first commit ever made to the repository.
 
 ```
 searchKey: git.FindNearestCommit
-tags: [exported]
 ```
 
 ```Go
@@ -740,6 +761,7 @@ Can return a commit very far away if no nearby one exists. Can theoretically ret
 
 ```
 searchKey: git.parseCommitFromLog
+tags: [private]
 ```
 
 ```Go
@@ -752,7 +774,6 @@ parseCommitFromLog parses the next commit from data and returns the commit and t
 
 ```
 searchKey: git.Message
-tags: [exported]
 ```
 
 ```Go
@@ -763,7 +784,6 @@ type Message string
 
 ```
 searchKey: git.Message.Subject
-tags: [exported]
 ```
 
 ```Go
@@ -776,7 +796,6 @@ Subject returns the first line of the commit message
 
 ```
 searchKey: git.Message.Body
-tags: [exported]
 ```
 
 ```Go
@@ -789,7 +808,6 @@ Body returns the contents of the Git commit message after the subject.
 
 ```
 searchKey: git.Signature
-tags: [exported]
 ```
 
 ```Go
@@ -804,7 +822,6 @@ type Signature struct {
 
 ```
 searchKey: git.CommitsOptions
-tags: [exported]
 ```
 
 ```Go
@@ -836,6 +853,7 @@ CommitsOptions specifies options for (Repository).Commits (Repository).CommitCou
 
 ```
 searchKey: git.onelineCommit
+tags: [private]
 ```
 
 ```Go
@@ -851,7 +869,6 @@ onelineCommit contains (a subset of the) information about a commit returned by 
 
 ```
 searchKey: git.DiffOptions
-tags: [exported]
 ```
 
 ```Go
@@ -868,7 +885,6 @@ type DiffOptions struct {
 
 ```
 searchKey: git.DiffFileIterator
-tags: [exported]
 ```
 
 ```Go
@@ -882,7 +898,6 @@ type DiffFileIterator struct {
 
 ```
 searchKey: git.Diff
-tags: [exported]
 ```
 
 ```Go
@@ -895,7 +910,6 @@ Diff returns an iterator that can be used to access the diff between two commits
 
 ```
 searchKey: git.DiffFileIterator.Close
-tags: [exported]
 ```
 
 ```Go
@@ -906,7 +920,6 @@ func (i *DiffFileIterator) Close() error
 
 ```
 searchKey: git.DiffFileIterator.Next
-tags: [exported]
 ```
 
 ```Go
@@ -919,6 +932,7 @@ Next returns the next file diff. If no more diffs are available, the diff will b
 
 ```
 searchKey: git.diffHunkLineInfo
+tags: [private]
 ```
 
 ```Go
@@ -934,6 +948,7 @@ type diffHunkLineInfo struct {
 
 ```
 searchKey: git.diffHunkLineInfo.changed
+tags: [private]
 ```
 
 ```Go
@@ -944,7 +959,6 @@ func (info diffHunkLineInfo) changed() bool
 
 ```
 searchKey: git.TextSearchOptions
-tags: [exported]
 ```
 
 ```Go
@@ -961,7 +975,6 @@ TextSearchOptions contains common options for text search commands.
 
 ```
 searchKey: git.PathOptions
-tags: [exported]
 ```
 
 ```Go
@@ -979,7 +992,6 @@ PathOptions contains common options for commands that can be limited to only cer
 
 ```
 searchKey: git.RawLogDiffSearchOptions
-tags: [exported]
 ```
 
 ```Go
@@ -1025,7 +1037,6 @@ RawLogDiffSearchOptions specifies options to (Repository).RawLogDiffSearch.
 
 ```
 searchKey: git.LogCommitSearchResult
-tags: [exported]
 ```
 
 ```Go
@@ -1054,7 +1065,6 @@ LogCommitSearchResult describes a matching diff from (Repository).RawLogDiffSear
 
 ```
 searchKey: git.LogCommitSearchEvent
-tags: [exported]
 ```
 
 ```Go
@@ -1083,7 +1093,6 @@ LogCommitSearchEvent are emitted by RawLogDiffSearchStream
 
 ```
 searchKey: git.RawDiff
-tags: [exported]
 ```
 
 ```Go
@@ -1098,7 +1107,6 @@ A RawDiff represents changes between two commits.
 
 ```
 searchKey: git.Highlight
-tags: [exported]
 ```
 
 ```Go
@@ -1115,6 +1123,7 @@ Highlight represents a highlighted region in a string.
 
 ```
 searchKey: git.refResolveCache
+tags: [private]
 ```
 
 ```Go
@@ -1133,6 +1142,7 @@ cachedRefResolver is a short-lived cache for ref resolutions. Only use it for th
 
 ```
 searchKey: git.refResolveCache.resolveHEADSymbolicRef
+tags: [private]
 ```
 
 ```Go
@@ -1143,6 +1153,7 @@ func (r *refResolveCache) resolveHEADSymbolicRef(ctx context.Context, repo api.R
 
 ```
 searchKey: git.cmdFunc
+tags: [private]
 ```
 
 ```Go
@@ -1155,6 +1166,7 @@ cmdFunc is a func that creates a new executable Git command.
 
 ```
 searchKey: git.gitserverCmdFunc
+tags: [private]
 ```
 
 ```Go
@@ -1165,6 +1177,7 @@ func gitserverCmdFunc(repo api.RepoName) cmdFunc
 
 ```
 searchKey: git.cmd
+tags: [private]
 ```
 
 ```Go
@@ -1180,7 +1193,6 @@ cmd is an executable Git command.
 
 ```
 searchKey: git.Submodule
-tags: [exported]
 ```
 
 ```Go
@@ -1203,7 +1215,6 @@ Submodule holds information about a Git submodule and is returned in the FileInf
 
 ```
 searchKey: git.ObjectInfo
-tags: [exported]
 ```
 
 ```Go
@@ -1218,6 +1229,7 @@ ObjectInfo holds information about a Git object and is returned in (fs.FileInfo)
 
 ```
 searchKey: git.objectInfo
+tags: [private]
 ```
 
 ```Go
@@ -1228,6 +1240,7 @@ type objectInfo OID
 
 ```
 searchKey: git.objectInfo.OID
+tags: [private]
 ```
 
 ```Go
@@ -1238,7 +1251,6 @@ func (oid objectInfo) OID() OID
 
 ```
 searchKey: git.OID
-tags: [exported]
 ```
 
 ```Go
@@ -1251,7 +1263,6 @@ OID is a Git OID (40-char hex-encoded).
 
 ```
 searchKey: git.GetObject
-tags: [exported]
 ```
 
 ```Go
@@ -1264,6 +1275,7 @@ GetObject looks up a Git object and returns information about it.
 
 ```
 searchKey: git.decodeOID
+tags: [private]
 ```
 
 ```Go
@@ -1274,7 +1286,6 @@ func decodeOID(sha string) (OID, error)
 
 ```
 searchKey: git.OID.String
-tags: [exported]
 ```
 
 ```Go
@@ -1285,7 +1296,6 @@ func (oid OID) String() string
 
 ```
 searchKey: git.ObjectType
-tags: [exported]
 ```
 
 ```Go
@@ -1294,24 +1304,10 @@ type ObjectType string
 
 ObjectType is a valid Git object type (commit, tag, tree, and blob). 
 
-#### <a id="GetObject" href="#GetObject">func GetObject(ctx context.Context, repo api.RepoName, objectName string) (oid OID, objectType ObjectType, err error)</a>
-
-```
-searchKey: git.GetObject
-tags: [exported]
-```
-
-```Go
-func GetObject(ctx context.Context, repo api.RepoName, objectName string) (oid OID, objectType ObjectType, err error)
-```
-
-GetObject looks up a Git object and returns information about it. 
-
 ### <a id="RefGlob" href="#RefGlob">type RefGlob struct</a>
 
 ```
 searchKey: git.RefGlob
-tags: [exported]
 ```
 
 ```Go
@@ -1332,7 +1328,6 @@ RefGlob describes a glob pattern that either includes or excludes refs. Exactly 
 
 ```
 searchKey: git.RefGlobs
-tags: [exported]
 ```
 
 ```Go
@@ -1345,7 +1340,6 @@ RefGlobs is a compiled matcher based on RefGlob patterns. Use CompileRefGlobs to
 
 ```
 searchKey: git.CompileRefGlobs
-tags: [exported]
 ```
 
 ```Go
@@ -1358,7 +1352,6 @@ CompileRefGlobs compiles the ordered ref glob patterns (interpreted as in `git l
 
 ```
 searchKey: git.RefGlobs.Match
-tags: [exported]
 ```
 
 ```Go
@@ -1371,6 +1364,7 @@ Match reports whether the named ref matches the ref globs.
 
 ```
 searchKey: git.compiledRefGlobPattern
+tags: [private]
 ```
 
 ```Go
@@ -1384,7 +1378,6 @@ type compiledRefGlobPattern struct {
 
 ```
 searchKey: git.Branch
-tags: [exported]
 ```
 
 ```Go
@@ -1407,7 +1400,6 @@ A Branch is a VCS branch.
 
 ```
 searchKey: git.BranchesOptions
-tags: [exported]
 ```
 
 ```Go
@@ -1434,7 +1426,6 @@ BranchesOptions specifies options for the list of branches returned by (Reposito
 
 ```
 searchKey: git.Tag
-tags: [exported]
 ```
 
 ```Go
@@ -1451,7 +1442,6 @@ A Tag is a VCS tag.
 
 ```
 searchKey: git.BehindAhead
-tags: [exported]
 ```
 
 ```Go
@@ -1467,7 +1457,6 @@ BehindAhead is a set of behind/ahead counts.
 
 ```
 searchKey: git.GetBehindAhead
-tags: [exported]
 ```
 
 ```Go
@@ -1480,7 +1469,6 @@ GetBehindAhead returns the behind/ahead commit counts information for right vs. 
 
 ```
 searchKey: git.Branches
-tags: [exported]
 ```
 
 ```Go
@@ -1491,7 +1479,6 @@ type Branches []*Branch
 
 ```
 searchKey: git.Branches.Len
-tags: [exported]
 ```
 
 ```Go
@@ -1502,7 +1489,6 @@ func (p Branches) Len() int
 
 ```
 searchKey: git.Branches.Less
-tags: [exported]
 ```
 
 ```Go
@@ -1513,7 +1499,6 @@ func (p Branches) Less(i, j int) bool
 
 ```
 searchKey: git.Branches.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -1524,7 +1509,6 @@ func (p Branches) Swap(i, j int)
 
 ```
 searchKey: git.ByAuthorDate
-tags: [exported]
 ```
 
 ```Go
@@ -1537,7 +1521,6 @@ ByAuthorDate sorts by author date. Requires full commit information to be includ
 
 ```
 searchKey: git.ByAuthorDate.Len
-tags: [exported]
 ```
 
 ```Go
@@ -1548,7 +1531,6 @@ func (p ByAuthorDate) Len() int
 
 ```
 searchKey: git.ByAuthorDate.Less
-tags: [exported]
 ```
 
 ```Go
@@ -1559,7 +1541,6 @@ func (p ByAuthorDate) Less(i, j int) bool
 
 ```
 searchKey: git.ByAuthorDate.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -1570,7 +1551,6 @@ func (p ByAuthorDate) Swap(i, j int)
 
 ```
 searchKey: git.Tags
-tags: [exported]
 ```
 
 ```Go
@@ -1581,7 +1561,6 @@ type Tags []*Tag
 
 ```
 searchKey: git.Tags.Len
-tags: [exported]
 ```
 
 ```Go
@@ -1592,7 +1571,6 @@ func (p Tags) Len() int
 
 ```
 searchKey: git.Tags.Less
-tags: [exported]
 ```
 
 ```Go
@@ -1603,7 +1581,6 @@ func (p Tags) Less(i, j int) bool
 
 ```
 searchKey: git.Tags.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -1614,6 +1591,7 @@ func (p Tags) Swap(i, j int)
 
 ```
 searchKey: git.branchFilter
+tags: [private]
 ```
 
 ```Go
@@ -1626,6 +1604,7 @@ branchFilter is a filter for branch names. If not empty, only contained branch n
 
 ```
 searchKey: git.branchFilter.allows
+tags: [private]
 ```
 
 ```Go
@@ -1638,6 +1617,7 @@ allows will return true if the current filter set-up validates against the passe
 
 ```
 searchKey: git.branchFilter.add
+tags: [private]
 ```
 
 ```Go
@@ -1650,6 +1630,7 @@ add adds a slice of strings to the filter.
 
 ```
 searchKey: git.byteSlices
+tags: [private]
 ```
 
 ```Go
@@ -1660,6 +1641,7 @@ type byteSlices [][]byte
 
 ```
 searchKey: git.byteSlices.Len
+tags: [private]
 ```
 
 ```Go
@@ -1670,6 +1652,7 @@ func (p byteSlices) Len() int
 
 ```
 searchKey: git.byteSlices.Less
+tags: [private]
 ```
 
 ```Go
@@ -1680,6 +1663,7 @@ func (p byteSlices) Less(i, j int) bool
 
 ```
 searchKey: git.byteSlices.Swap
+tags: [private]
 ```
 
 ```Go
@@ -1690,7 +1674,6 @@ func (p byteSlices) Swap(i, j int)
 
 ```
 searchKey: git.Ref
-tags: [exported]
 ```
 
 ```Go
@@ -1706,7 +1689,6 @@ Ref describes a Git ref.
 
 ```
 searchKey: git.ResolveRevisionOptions
-tags: [exported]
 ```
 
 ```Go
@@ -1721,7 +1703,6 @@ ResolveRevisionOptions configure how we resolve revisions. The zero value should
 
 ```
 searchKey: git.BadCommitError
-tags: [exported]
 ```
 
 ```Go
@@ -1736,7 +1717,6 @@ type BadCommitError struct {
 
 ```
 searchKey: git.BadCommitError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1747,7 +1727,6 @@ func (e BadCommitError) Error() string
 
 ```
 searchKey: git.ShortLogOptions
-tags: [exported]
 ```
 
 ```Go
@@ -1764,7 +1743,6 @@ ShortLogOptions contains options for (Repository).ShortLog.
 
 ```
 searchKey: git.PersonCount
-tags: [exported]
 ```
 
 ```Go
@@ -1781,7 +1759,6 @@ A PersonCount is a contributor to a repository.
 
 ```
 searchKey: git.PersonCount.String
-tags: [exported]
 ```
 
 ```Go
@@ -1792,6 +1769,7 @@ func (p *PersonCount) String() string
 
 ```
 searchKey: git.closer
+tags: [private]
 ```
 
 ```Go
@@ -1802,6 +1780,7 @@ type closer bool
 
 ```
 searchKey: git.closer.Read
+tags: [private]
 ```
 
 ```Go
@@ -1812,6 +1791,7 @@ func (c *closer) Read(p []byte) (int, error)
 
 ```
 searchKey: git.closer.Close
+tags: [private]
 ```
 
 ```Go
@@ -1820,11 +1800,14 @@ func (c *closer) Close() error
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="BlameFile" href="#BlameFile">func BlameFile(ctx context.Context, repo api.RepoName, path string, opt *BlameOptions) ([]*Hunk, error)</a>
 
 ```
 searchKey: git.BlameFile
-tags: [exported]
 ```
 
 ```Go
@@ -1837,6 +1820,7 @@ BlameFile returns Git blame information about a file.
 
 ```
 searchKey: git.blameFileCmd
+tags: [private]
 ```
 
 ```Go
@@ -1847,7 +1831,6 @@ func blameFileCmd(ctx context.Context, command cmdFunc, path string, opt *BlameO
 
 ```
 searchKey: git.ReadFile
-tags: [exported]
 ```
 
 ```Go
@@ -1860,7 +1843,6 @@ ReadFile returns the first maxBytes of the named file at commit. If maxBytes <= 
 
 ```
 searchKey: git.NewFileReader
-tags: [exported]
 ```
 
 ```Go
@@ -1873,6 +1855,7 @@ NewFileReader returns an io.ReadCloser reading from the named file at commit. Th
 
 ```
 searchKey: git.readFileBytes
+tags: [private]
 ```
 
 ```Go
@@ -1883,7 +1866,6 @@ func readFileBytes(ctx context.Context, repo api.RepoName, commit api.CommitID, 
 
 ```
 searchKey: git.Commits
-tags: [exported]
 ```
 
 ```Go
@@ -1896,7 +1878,6 @@ Commits returns all commits matching the options.
 
 ```
 searchKey: git.HasCommitAfter
-tags: [exported]
 ```
 
 ```Go
@@ -1909,6 +1890,7 @@ HasCommitAfter indicates the staleness of a repository. It returns a boolean ind
 
 ```
 searchKey: git.isBadObjectErr
+tags: [private]
 ```
 
 ```Go
@@ -1919,6 +1901,7 @@ func isBadObjectErr(output, obj string) bool
 
 ```
 searchKey: git.commitLog
+tags: [private]
 ```
 
 ```Go
@@ -1933,6 +1916,7 @@ The caller is responsible for doing checkSpecArgSafety on opt.Head and opt.Base.
 
 ```
 searchKey: git.commitLogArgs
+tags: [private]
 ```
 
 ```Go
@@ -1943,7 +1927,6 @@ func commitLogArgs(initialArgs []string, opt CommitsOptions) (args []string, err
 
 ```
 searchKey: git.CommitCount
-tags: [exported]
 ```
 
 ```Go
@@ -1956,6 +1939,7 @@ CommitCount returns the number of commits that would be returned by Commits.
 
 ```
 searchKey: git.logOnelineBatchScanner
+tags: [private]
 ```
 
 ```Go
@@ -1972,6 +1956,7 @@ cleanup must be called when done. This function creates a goroutine to batch up 
 
 ```
 searchKey: git.logOnelineScanner
+tags: [private]
 ```
 
 ```Go
@@ -1990,6 +1975,7 @@ Once it returns an error the scanner should be disregarded. io.EOF is returned w
 
 ```
 searchKey: git.compilePathMatcher
+tags: [private]
 ```
 
 ```Go
@@ -2002,6 +1988,7 @@ compilePathMatcher compiles the path options into a PathMatcher.
 
 ```
 searchKey: git.filterAndHighlightDiff
+tags: [private]
 ```
 
 ```Go
@@ -2014,6 +2001,7 @@ filterAndHighlightDiff returns the raw diff with query matches highlighted and o
 
 ```
 searchKey: git.truncateLongLines
+tags: [private]
 ```
 
 ```Go
@@ -2024,6 +2012,7 @@ func truncateLongLines(data []byte, maxCharsPerLine int) []byte
 
 ```
 searchKey: git.diffHunkLineStatus
+tags: [private]
 ```
 
 ```Go
@@ -2034,6 +2023,7 @@ func diffHunkLineStatus(line []byte) (added, removed bool)
 
 ```
 searchKey: git.computeDiffHunkInfo
+tags: [private]
 ```
 
 ```Go
@@ -2044,6 +2034,7 @@ func computeDiffHunkInfo(lines [][]byte, query *regexp.Regexp, matchContextLines
 
 ```
 searchKey: git.splitHunkMatches
+tags: [private]
 ```
 
 ```Go
@@ -2056,7 +2047,6 @@ splitHunkMatches returns a list of hunks that are a subset of the input hunks, f
 
 ```
 searchKey: git.CompilePathMatcher
-tags: [exported]
 ```
 
 ```Go
@@ -2069,6 +2059,7 @@ CompilePathMatcher compiles the path options into a PathMatcher.
 
 ```
 searchKey: git.isValidRawLogDiffSearchFormatArgs
+tags: [private]
 ```
 
 ```Go
@@ -2079,7 +2070,6 @@ func isValidRawLogDiffSearchFormatArgs(formatArgs []string) bool
 
 ```
 searchKey: git.RawLogDiffSearch
-tags: [exported]
 ```
 
 ```Go
@@ -2092,7 +2082,6 @@ RawLogDiffSearch wraps RawLogDiffSearchStream providing a blocking API. See RawL
 
 ```
 searchKey: git.RawLogDiffSearchStream
-tags: [exported]
 ```
 
 ```Go
@@ -2107,6 +2096,7 @@ The returned channel must be read until closed, otherwise you may leak resources
 
 ```
 searchKey: git.doLogDiffSearchStream
+tags: [private]
 ```
 
 ```Go
@@ -2119,6 +2109,7 @@ doLogDiffSearchStream is called by RawLogDiffSearchStream to send events down c.
 
 ```
 searchKey: git.rawLogSearchCmd
+tags: [private]
 ```
 
 ```Go
@@ -2129,6 +2120,7 @@ func rawLogSearchCmd(ctx context.Context, repo api.RepoName, opt RawLogDiffSearc
 
 ```
 searchKey: git.rawShowSearch
+tags: [private]
 ```
 
 ```Go
@@ -2141,6 +2133,7 @@ rawShowSearch runs git show on each commit in onelineCommits. We need to do this
 
 ```
 searchKey: git.logDiffCommonArgs
+tags: [private]
 ```
 
 ```Go
@@ -2151,6 +2144,7 @@ func logDiffCommonArgs(opt RawLogDiffSearchOptions) []string
 
 ```
 searchKey: git.filterAndResolveRefs
+tags: [private]
 ```
 
 ```Go
@@ -2163,6 +2157,7 @@ filterAndResolveRefs replaces "HEAD" entries with the names of the ref they refe
 
 ```
 searchKey: git.deadlineLabel
+tags: [private]
 ```
 
 ```Go
@@ -2173,6 +2168,7 @@ func deadlineLabel(ctx context.Context) string
 
 ```
 searchKey: git.regexpToGlobBestEffort
+tags: [private]
 ```
 
 ```Go
@@ -2187,6 +2183,7 @@ regexpToGlobBestEffort performs a best-effort conversion of the regexp p to an e
 
 ```
 searchKey: git.globQuoteMeta
+tags: [private]
 ```
 
 ```Go
@@ -2197,6 +2194,7 @@ func globQuoteMeta(s []rune) string
 
 ```
 searchKey: git.checkSpecArgSafety
+tags: [private]
 ```
 
 ```Go
@@ -2209,7 +2207,6 @@ checkSpecArgSafety returns a non-nil err if spec begins with a "-", which could 
 
 ```
 searchKey: git.ExecSafe
-tags: [exported]
 ```
 
 ```Go
@@ -2224,7 +2221,6 @@ An error is only returned when there is a failure unrelated to the actual comman
 
 ```
 searchKey: git.ExecReader
-tags: [exported]
 ```
 
 ```Go
@@ -2237,6 +2233,7 @@ ExecReader executes an arbitrary `git` command (`git [args...]`) and returns a r
 
 ```
 searchKey: git.readUntilTimeout
+tags: [private]
 ```
 
 ```Go
@@ -2247,6 +2244,7 @@ func readUntilTimeout(ctx context.Context, cmd *gitserver.Cmd) ([]byte, bool, er
 
 ```
 searchKey: git.isAllowedGitArg
+tags: [private]
 ```
 
 ```Go
@@ -2259,6 +2257,7 @@ isAllowedGitArg checks if the arg is allowed.
 
 ```
 searchKey: git.isAllowedGitCmd
+tags: [private]
 ```
 
 ```Go
@@ -2271,7 +2270,6 @@ isAllowedGitCmd checks if the cmd and arguments are allowed.
 
 ```
 searchKey: git.MergeBase
-tags: [exported]
 ```
 
 ```Go
@@ -2284,7 +2282,6 @@ MergeBase returns the merge base commit for the specified commits.
 
 ```
 searchKey: git.ResetMocks
-tags: [exported]
 ```
 
 ```Go
@@ -2297,7 +2294,6 @@ ResetMocks clears the mock functions set on Mocks (so that subsequent tests don'
 
 ```
 searchKey: git.HumanReadableBranchName
-tags: [exported]
 ```
 
 ```Go
@@ -2312,7 +2308,6 @@ Example: "Change coördination mechanism" -> "change-coordination-mechanism"
 
 ```
 searchKey: git.EnsureRefPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -2325,7 +2320,6 @@ EnsureRefPrefix checks whether the ref is a full ref and contains the "refs/head
 
 ```
 searchKey: git.AbbreviateRef
-tags: [exported]
 ```
 
 ```Go
@@ -2338,7 +2332,6 @@ AbbreviateRef removes the "refs/heads/" prefix from a given ref. If the ref does
 
 ```
 searchKey: git.ListBranches
-tags: [exported]
 ```
 
 ```Go
@@ -2351,6 +2344,7 @@ ListBranches returns a list of all branches in the repository.
 
 ```
 searchKey: git.branches
+tags: [private]
 ```
 
 ```Go
@@ -2363,7 +2357,6 @@ branches runs the `git branch` command followed by the given arguments and retur
 
 ```
 searchKey: git.ListTags
-tags: [exported]
 ```
 
 ```Go
@@ -2376,6 +2369,7 @@ ListTags returns a list of all tags in the repository.
 
 ```
 searchKey: git.parseTags
+tags: [private]
 ```
 
 ```Go
@@ -2386,7 +2380,6 @@ func parseTags(in []byte) ([]*Tag, error)
 
 ```
 searchKey: git.ListRefs
-tags: [exported]
 ```
 
 ```Go
@@ -2399,6 +2392,7 @@ ListRefs returns a list of all refs in the repository.
 
 ```
 searchKey: git.showRef
+tags: [private]
 ```
 
 ```Go
@@ -2409,7 +2403,6 @@ func showRef(ctx context.Context, repo api.RepoName, args ...string) ([]Ref, err
 
 ```
 searchKey: git.ValidateBranchName
-tags: [exported]
 ```
 
 ```Go
@@ -2422,7 +2415,6 @@ ValidateBranchName returns false if the given string is not a valid branch name.
 
 ```
 searchKey: git.IsAbsoluteRevision
-tags: [exported]
 ```
 
 ```Go
@@ -2437,6 +2429,7 @@ Note: This doesn't mean the SHA exists in a repository, nor does it mean it isn'
 
 ```
 searchKey: git.ensureAbsoluteCommit
+tags: [private]
 ```
 
 ```Go
@@ -2447,7 +2440,6 @@ func ensureAbsoluteCommit(commitID api.CommitID) error
 
 ```
 searchKey: git.ResolveRevision
-tags: [exported]
 ```
 
 ```Go
@@ -2462,6 +2454,7 @@ Error cases: * Repo does not exist: vcs.RepoNotExistError * Commit does not exis
 
 ```
 searchKey: git.runRevParse
+tags: [private]
 ```
 
 ```Go
@@ -2474,7 +2467,6 @@ runRevParse sends the git rev-parse command to gitserver. It interprets missing 
 
 ```
 searchKey: git.ShortLog
-tags: [exported]
 ```
 
 ```Go
@@ -2487,6 +2479,7 @@ ShortLog returns the per-author commit statistics of the repo.
 
 ```
 searchKey: git.parseShortLog
+tags: [private]
 ```
 
 ```Go
@@ -2497,6 +2490,7 @@ func parseShortLog(out []byte) ([]*PersonCount, error)
 
 ```
 searchKey: git.lenientParseAddress
+tags: [private]
 ```
 
 ```Go
@@ -2519,7 +2513,6 @@ mail: expected single address, got "<foo@gmail.com>"
 
 ```
 searchKey: git.Lstat
-tags: [exported]
 ```
 
 ```Go
@@ -2532,7 +2525,6 @@ Lstat returns a FileInfo describing the named file at commit. If the file is a s
 
 ```
 searchKey: git.Stat
-tags: [exported]
 ```
 
 ```Go
@@ -2545,7 +2537,6 @@ Stat returns a FileInfo describing the named file at commit.
 
 ```
 searchKey: git.ReadDir
-tags: [exported]
 ```
 
 ```Go
@@ -2558,7 +2549,6 @@ ReadDir reads the contents of the named directory at commit.
 
 ```
 searchKey: git.LsFiles
-tags: [exported]
 ```
 
 ```Go
@@ -2571,6 +2561,7 @@ LsFiles returns the output of `git ls-files`
 
 ```
 searchKey: git.lsTree
+tags: [private]
 ```
 
 ```Go
@@ -2583,6 +2574,7 @@ lsTree returns ls of tree at path.
 
 ```
 searchKey: git.lsTreeUncached
+tags: [private]
 ```
 
 ```Go
@@ -2593,6 +2585,7 @@ func lsTreeUncached(ctx context.Context, repo api.RepoName, commit api.CommitID,
 
 ```
 searchKey: git.TestRepository_BlameFile
+tags: [private]
 ```
 
 ```Go
@@ -2603,6 +2596,7 @@ func TestRepository_BlameFile(t *testing.T)
 
 ```
 searchKey: git.TestRead
+tags: [private]
 ```
 
 ```Go
@@ -2613,6 +2607,7 @@ func TestRead(t *testing.T)
 
 ```
 searchKey: git.TestRepository_GetCommit
+tags: [private]
 ```
 
 ```Go
@@ -2623,6 +2618,7 @@ func TestRepository_GetCommit(t *testing.T)
 
 ```
 searchKey: git.TestRepository_HasCommitAfter
+tags: [private]
 ```
 
 ```Go
@@ -2633,6 +2629,7 @@ func TestRepository_HasCommitAfter(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FirstEverCommit
+tags: [private]
 ```
 
 ```Go
@@ -2643,6 +2640,7 @@ func TestRepository_FirstEverCommit(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FindNearestCommit
+tags: [private]
 ```
 
 ```Go
@@ -2653,6 +2651,7 @@ func TestRepository_FindNearestCommit(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Commits
+tags: [private]
 ```
 
 ```Go
@@ -2663,6 +2662,7 @@ func TestRepository_Commits(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Commits_options
+tags: [private]
 ```
 
 ```Go
@@ -2673,6 +2673,7 @@ func TestRepository_Commits_options(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Commits_options_path
+tags: [private]
 ```
 
 ```Go
@@ -2683,6 +2684,7 @@ func TestRepository_Commits_options_path(t *testing.T)
 
 ```
 searchKey: git.TestLogOnelineBatchScanner_batchclosed
+tags: [private]
 ```
 
 ```Go
@@ -2695,6 +2697,7 @@ Test we return errLogOnelineBatchScannerClosed is returned. It is very complicat
 
 ```
 searchKey: git.TestLogOnelineBatchScanner_closed
+tags: [private]
 ```
 
 ```Go
@@ -2707,6 +2710,7 @@ This test is much simpler since we just set the batchsize to 1 to ensure we only
 
 ```
 searchKey: git.TestLogOnelineBatchScanner_debounce
+tags: [private]
 ```
 
 ```Go
@@ -2717,6 +2721,7 @@ func TestLogOnelineBatchScanner_debounce(t *testing.T)
 
 ```
 searchKey: git.TestLogOnelineBatchScanner_empty
+tags: [private]
 ```
 
 ```Go
@@ -2727,6 +2732,7 @@ func TestLogOnelineBatchScanner_empty(t *testing.T)
 
 ```
 searchKey: git.TestLogOnelineBatchScanner_small
+tags: [private]
 ```
 
 ```Go
@@ -2737,6 +2743,7 @@ func TestLogOnelineBatchScanner_small(t *testing.T)
 
 ```
 searchKey: git.TestMessage
+tags: [private]
 ```
 
 ```Go
@@ -2747,6 +2754,7 @@ func TestMessage(t *testing.T)
 
 ```
 searchKey: git.TestFilterAndHighlightDiff
+tags: [private]
 ```
 
 ```Go
@@ -2757,6 +2765,7 @@ func TestFilterAndHighlightDiff(t *testing.T)
 
 ```
 searchKey: git.TestSplitHunkMatches
+tags: [private]
 ```
 
 ```Go
@@ -2767,6 +2776,7 @@ func TestSplitHunkMatches(t *testing.T)
 
 ```
 searchKey: git.TestTruncateLongLines
+tags: [private]
 ```
 
 ```Go
@@ -2777,6 +2787,7 @@ func TestTruncateLongLines(t *testing.T)
 
 ```
 searchKey: git.TestRepository_RawLogDiffSearch
+tags: [private]
 ```
 
 ```Go
@@ -2787,6 +2798,7 @@ func TestRepository_RawLogDiffSearch(t *testing.T)
 
 ```
 searchKey: git.TestRepository_RawLogDiffSearch_empty
+tags: [private]
 ```
 
 ```Go
@@ -2797,6 +2809,7 @@ func TestRepository_RawLogDiffSearch_empty(t *testing.T)
 
 ```
 searchKey: git.TestRegexpToGlobBestEffort
+tags: [private]
 ```
 
 ```Go
@@ -2807,6 +2820,7 @@ func TestRegexpToGlobBestEffort(t *testing.T)
 
 ```
 searchKey: git.TestDiff
+tags: [private]
 ```
 
 ```Go
@@ -2817,6 +2831,7 @@ func TestDiff(t *testing.T)
 
 ```
 searchKey: git.TestDiffFileIterator
+tags: [private]
 ```
 
 ```Go
@@ -2827,6 +2842,7 @@ func TestDiffFileIterator(t *testing.T)
 
 ```
 searchKey: git.TestExecSafe
+tags: [private]
 ```
 
 ```Go
@@ -2837,16 +2853,18 @@ func TestExecSafe(t *testing.T)
 
 ```
 searchKey: git.TestMain
+tags: [private]
 ```
 
 ```Go
 func TestMain(m *testing.M)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.main_test.go" href="#init.main_test.go">func init()</a>
 
 ```
 searchKey: git.init
+tags: [private]
 ```
 
 ```Go
@@ -2859,6 +2877,7 @@ done in init since the go vet analysis "ctrlflow" is tripped up if this is done 
 
 ```
 searchKey: git.AsJSON
+tags: [private]
 ```
 
 ```Go
@@ -2869,6 +2888,7 @@ func AsJSON(v interface{}) string
 
 ```
 searchKey: git.InitGitRepository
+tags: [private]
 ```
 
 ```Go
@@ -2881,6 +2901,7 @@ InitGitRepository initializes a new Git repository and runs cmds in a new tempor
 
 ```
 searchKey: git.GitCommand
+tags: [private]
 ```
 
 ```Go
@@ -2891,6 +2912,7 @@ func GitCommand(dir, name string, args ...string) *exec.Cmd
 
 ```
 searchKey: git.MakeGitRepository
+tags: [private]
 ```
 
 ```Go
@@ -2903,6 +2925,7 @@ MakeGitRepository calls initGitRepository to create a new Git repository and ret
 
 ```
 searchKey: git.CommitsEqual
+tags: [private]
 ```
 
 ```Go
@@ -2913,6 +2936,7 @@ func CommitsEqual(a, b *Commit) bool
 
 ```
 searchKey: git.MustParseTime
+tags: [private]
 ```
 
 ```Go
@@ -2923,6 +2947,7 @@ func MustParseTime(layout, value string) time.Time
 
 ```
 searchKey: git.AppleTime
+tags: [private]
 ```
 
 ```Go
@@ -2933,6 +2958,7 @@ func AppleTime(t string) string
 
 ```
 searchKey: git.ComputeCommitHash
+tags: [private]
 ```
 
 ```Go
@@ -2945,6 +2971,7 @@ Computes hash of last commit in a given repo dir On Windows, content of a "link 
 
 ```
 searchKey: git.TestMerger_MergeBase
+tags: [private]
 ```
 
 ```Go
@@ -2955,6 +2982,7 @@ func TestMerger_MergeBase(t *testing.T)
 
 ```
 searchKey: git.TestGetObject
+tags: [private]
 ```
 
 ```Go
@@ -2965,6 +2993,7 @@ func TestGetObject(t *testing.T)
 
 ```
 searchKey: git.TestRefGlobs
+tags: [private]
 ```
 
 ```Go
@@ -2975,6 +3004,7 @@ func TestRefGlobs(t *testing.T)
 
 ```
 searchKey: git.TestHumanReadableBranchName
+tags: [private]
 ```
 
 ```Go
@@ -2985,6 +3015,7 @@ func TestHumanReadableBranchName(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ListBranches
+tags: [private]
 ```
 
 ```Go
@@ -2995,6 +3026,7 @@ func TestRepository_ListBranches(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Branches_MergedInto
+tags: [private]
 ```
 
 ```Go
@@ -3005,6 +3037,7 @@ func TestRepository_Branches_MergedInto(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Branches_ContainsCommit
+tags: [private]
 ```
 
 ```Go
@@ -3015,6 +3048,7 @@ func TestRepository_Branches_ContainsCommit(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Branches_BehindAheadCounts
+tags: [private]
 ```
 
 ```Go
@@ -3025,6 +3059,7 @@ func TestRepository_Branches_BehindAheadCounts(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Branches_IncludeCommit
+tags: [private]
 ```
 
 ```Go
@@ -3035,6 +3070,7 @@ func TestRepository_Branches_IncludeCommit(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ListTags
+tags: [private]
 ```
 
 ```Go
@@ -3045,6 +3081,7 @@ func TestRepository_ListTags(t *testing.T)
 
 ```
 searchKey: git.TestRepository_parseTags_WithoutCreatorDate
+tags: [private]
 ```
 
 ```Go
@@ -3057,6 +3094,7 @@ See [https://github.com/sourcegraph/sourcegraph/issues/5453](https://github.com/
 
 ```
 searchKey: git.TestValidateBranchName
+tags: [private]
 ```
 
 ```Go
@@ -3067,6 +3105,7 @@ func TestValidateBranchName(t *testing.T)
 
 ```
 searchKey: git.TestIsAbsoluteRevision
+tags: [private]
 ```
 
 ```Go
@@ -3077,6 +3116,7 @@ func TestIsAbsoluteRevision(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ResolveBranch
+tags: [private]
 ```
 
 ```Go
@@ -3087,6 +3127,7 @@ func TestRepository_ResolveBranch(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ResolveBranch_error
+tags: [private]
 ```
 
 ```Go
@@ -3097,6 +3138,7 @@ func TestRepository_ResolveBranch_error(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ResolveTag
+tags: [private]
 ```
 
 ```Go
@@ -3107,6 +3149,7 @@ func TestRepository_ResolveTag(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ResolveTag_error
+tags: [private]
 ```
 
 ```Go
@@ -3117,6 +3160,7 @@ func TestRepository_ResolveTag_error(t *testing.T)
 
 ```
 searchKey: git.TestParseShortLog
+tags: [private]
 ```
 
 ```Go
@@ -3127,6 +3171,7 @@ func TestParseShortLog(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FileSystem_Symlinks
+tags: [private]
 ```
 
 ```Go
@@ -3137,6 +3182,7 @@ func TestRepository_FileSystem_Symlinks(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FileSystem
+tags: [private]
 ```
 
 ```Go
@@ -3147,6 +3193,7 @@ func TestRepository_FileSystem(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FileSystem_quoteChars
+tags: [private]
 ```
 
 ```Go
@@ -3157,6 +3204,7 @@ func TestRepository_FileSystem_quoteChars(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FileSystem_gitSubmodules
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "bg",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/bg",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "recommendedPolicy",
                 "newPage": false,
                 "searchKey": "bg.recommendedPolicy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "CheckRedisCacheEvictionPolicy",
                 "newPage": false,
                 "searchKey": "bg.CheckRedisCacheEvictionPolicy",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "getRunID",
                 "newPage": false,
                 "searchKey": "bg.getRunID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,9 +131,7 @@
                 "identifier": "DeleteOldCacheDataInRedis",
                 "newPage": false,
                 "searchKey": "bg.DeleteOldCacheDataInRedis",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -145,9 +151,7 @@
                 "identifier": "DeleteOldEventLogsInPostgres",
                 "newPage": false,
                 "searchKey": "bg.DeleteOldEventLogsInPostgres",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -167,9 +171,7 @@
                 "identifier": "DeleteOldSecurityEventLogsInPostgres",
                 "newPage": false,
                 "searchKey": "bg.DeleteOldSecurityEventLogsInPostgres",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -184,12 +186,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/bg#init",
+              "pathID": "/cmd/frontend/internal/bg#init.db_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "bg.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

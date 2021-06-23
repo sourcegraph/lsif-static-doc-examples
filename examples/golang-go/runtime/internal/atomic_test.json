@@ -4,7 +4,9 @@
     "identifier": "atomic_test",
     "newPage": true,
     "searchKey": "runtime/internal/atomic_test",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "sink",
                 "newPage": false,
                 "searchKey": "atomic_test.sink",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "runParallel",
                 "newPage": false,
                 "searchKey": "atomic_test.runParallel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "TestXadduintptr",
                 "newPage": false,
                 "searchKey": "atomic_test.TestXadduintptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "TestXadduintptrOnUint64",
                 "newPage": false,
                 "searchKey": "atomic_test.TestXadduintptrOnUint64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "shouldPanic",
                 "newPage": false,
                 "searchKey": "atomic_test.shouldPanic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "TestUnaligned64",
                 "newPage": false,
                 "searchKey": "atomic_test.TestUnaligned64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "TestAnd8",
                 "newPage": false,
                 "searchKey": "atomic_test.TestAnd8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -201,7 +221,9 @@
                 "identifier": "TestAnd",
                 "newPage": false,
                 "searchKey": "atomic_test.TestAnd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -221,7 +243,9 @@
                 "identifier": "TestOr8",
                 "newPage": false,
                 "searchKey": "atomic_test.TestOr8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -241,7 +265,9 @@
                 "identifier": "TestOr",
                 "newPage": false,
                 "searchKey": "atomic_test.TestOr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,7 +287,9 @@
                 "identifier": "TestBitwiseContended8",
                 "newPage": false,
                 "searchKey": "atomic_test.TestBitwiseContended8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -281,7 +309,9 @@
                 "identifier": "TestBitwiseContended",
                 "newPage": false,
                 "searchKey": "atomic_test.TestBitwiseContended",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,7 +331,9 @@
                 "identifier": "TestStorepNoWB",
                 "newPage": false,
                 "searchKey": "atomic_test.TestStorepNoWB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -321,7 +353,9 @@
                 "identifier": "BenchmarkAtomicLoad64",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAtomicLoad64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -341,7 +375,9 @@
                 "identifier": "BenchmarkAtomicStore64",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAtomicStore64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -361,7 +397,9 @@
                 "identifier": "BenchmarkAtomicLoad",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAtomicLoad",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -381,7 +419,9 @@
                 "identifier": "BenchmarkAtomicStore",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAtomicStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -401,7 +441,9 @@
                 "identifier": "BenchmarkAnd8",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAnd8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -421,7 +463,9 @@
                 "identifier": "BenchmarkAnd",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAnd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -441,7 +485,9 @@
                 "identifier": "BenchmarkAnd8Parallel",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAnd8Parallel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -461,7 +507,9 @@
                 "identifier": "BenchmarkAndParallel",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAndParallel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -481,7 +529,9 @@
                 "identifier": "BenchmarkOr8",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkOr8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -501,7 +551,9 @@
                 "identifier": "BenchmarkOr",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkOr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -521,7 +573,9 @@
                 "identifier": "BenchmarkOr8Parallel",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkOr8Parallel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -541,7 +595,9 @@
                 "identifier": "BenchmarkOrParallel",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkOrParallel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -561,7 +617,9 @@
                 "identifier": "BenchmarkXadd",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkXadd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,7 +639,9 @@
                 "identifier": "BenchmarkXadd64",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkXadd64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -601,7 +661,9 @@
                 "identifier": "BenchmarkCas",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkCas",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -621,7 +683,9 @@
                 "identifier": "BenchmarkCas64",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkCas64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -641,7 +705,9 @@
                 "identifier": "BenchmarkXchg",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkXchg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -661,7 +727,9 @@
                 "identifier": "BenchmarkXchg64",
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkXchg64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

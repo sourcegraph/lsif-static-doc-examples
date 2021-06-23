@@ -46,10 +46,15 @@ It is in a separate package from app so that other packages may use it to genera
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="revSuffixNoDots" href="#revSuffixNoDots">const revSuffixNoDots</a>
 
 ```
 searchKey: router.revSuffixNoDots
+tags: [private]
 ```
 
 ```Go
@@ -62,7 +67,6 @@ same as spec.unresolvedRevPattern but also not allowing path components starting
 
 ```
 searchKey: router.RobotsTxt
-tags: [exported]
 ```
 
 ```Go
@@ -73,7 +77,6 @@ const RobotsTxt = "robots-txt"
 
 ```
 searchKey: router.Favicon
-tags: [exported]
 ```
 
 ```Go
@@ -84,7 +87,6 @@ const Favicon = "favicon"
 
 ```
 searchKey: router.OpenSearch
-tags: [exported]
 ```
 
 ```Go
@@ -95,7 +97,6 @@ const OpenSearch = "opensearch"
 
 ```
 searchKey: router.RepoBadge
-tags: [exported]
 ```
 
 ```Go
@@ -106,7 +107,6 @@ const RepoBadge = "repo.badge"
 
 ```
 searchKey: router.Logout
-tags: [exported]
 ```
 
 ```Go
@@ -117,7 +117,6 @@ const Logout = "logout"
 
 ```
 searchKey: router.SignIn
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +127,6 @@ const SignIn = "sign-in"
 
 ```
 searchKey: router.SignOut
-tags: [exported]
 ```
 
 ```Go
@@ -139,7 +137,6 @@ const SignOut = "sign-out"
 
 ```
 searchKey: router.SignUp
-tags: [exported]
 ```
 
 ```Go
@@ -150,7 +147,6 @@ const SignUp = "sign-up"
 
 ```
 searchKey: router.SiteInit
-tags: [exported]
 ```
 
 ```Go
@@ -161,7 +157,6 @@ const SiteInit = "site-init"
 
 ```
 searchKey: router.VerifyEmail
-tags: [exported]
 ```
 
 ```Go
@@ -172,7 +167,6 @@ const VerifyEmail = "verify-email"
 
 ```
 searchKey: router.ResetPasswordInit
-tags: [exported]
 ```
 
 ```Go
@@ -183,7 +177,6 @@ const ResetPasswordInit = "reset-password.init"
 
 ```
 searchKey: router.ResetPasswordCode
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +187,6 @@ const ResetPasswordCode = "reset-password.code"
 
 ```
 searchKey: router.CheckUsernameTaken
-tags: [exported]
 ```
 
 ```Go
@@ -205,7 +197,6 @@ const CheckUsernameTaken = "check-username-taken"
 
 ```
 searchKey: router.RegistryExtensionBundle
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +207,6 @@ const RegistryExtensionBundle = "registry.extension.bundle"
 
 ```
 searchKey: router.UsageStatsDownload
-tags: [exported]
 ```
 
 ```Go
@@ -227,7 +217,6 @@ const UsageStatsDownload = "usage-stats.download"
 
 ```
 searchKey: router.LatestPing
-tags: [exported]
 ```
 
 ```Go
@@ -238,7 +227,6 @@ const LatestPing = "pings.latest"
 
 ```
 searchKey: router.OldToolsRedirect
-tags: [exported]
 ```
 
 ```Go
@@ -249,7 +237,6 @@ const OldToolsRedirect = "old-tools-redirect"
 
 ```
 searchKey: router.OldTreeRedirect
-tags: [exported]
 ```
 
 ```Go
@@ -260,7 +247,6 @@ const OldTreeRedirect = "old-tree-redirect"
 
 ```
 searchKey: router.GDDORefs
-tags: [exported]
 ```
 
 ```Go
@@ -271,7 +257,6 @@ const GDDORefs = "gddo.refs"
 
 ```
 searchKey: router.Editor
-tags: [exported]
 ```
 
 ```Go
@@ -282,7 +267,6 @@ const Editor = "editor"
 
 ```
 searchKey: router.Debug
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +277,6 @@ const Debug = "debug"
 
 ```
 searchKey: router.DebugHeaders
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +287,6 @@ const DebugHeaders = "debug.headers"
 
 ```
 searchKey: router.GopherconLiveBlog
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +297,6 @@ const GopherconLiveBlog = "gophercon.live.blog"
 
 ```
 searchKey: router.GoSymbolURL
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +307,6 @@ const GoSymbolURL = "go-symbol-url"
 
 ```
 searchKey: router.UI
-tags: [exported]
 ```
 
 ```Go
@@ -335,10 +315,15 @@ const UI = "ui"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="router" href="#router">var router</a>
 
 ```
 searchKey: router.router
+tags: [private]
 ```
 
 ```Go
@@ -347,11 +332,14 @@ var router = newRouter()
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="URLToRepoTreeEntry" href="#URLToRepoTreeEntry">func URLToRepoTreeEntry(repo api.RepoName, rev, path string) *url.URL</a>
 
 ```
 searchKey: router.URLToRepoTreeEntry
-tags: [exported]
 ```
 
 ```Go
@@ -362,6 +350,7 @@ func URLToRepoTreeEntry(repo api.RepoName, rev, path string) *url.URL
 
 ```
 searchKey: router.revStr
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +361,7 @@ func revStr(rev string) string
 
 ```
 searchKey: router.addOldTreeRedirectRoute
+tags: [private]
 ```
 
 ```Go
@@ -382,7 +372,6 @@ func addOldTreeRedirectRoute(matchRouter *mux.Router)
 
 ```
 searchKey: router.Router
-tags: [exported]
 ```
 
 ```Go
@@ -395,6 +384,7 @@ Router returns the frontend app router.
 
 ```
 searchKey: router.newRouter
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +395,7 @@ func newRouter() *mux.Router
 
 ```
 searchKey: router.TestOldTreesRedirect
+tags: [private]
 ```
 
 ```Go

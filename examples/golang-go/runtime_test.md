@@ -285,7 +285,6 @@
     * [type Tinter interface](#Tinter)
     * [type bigValue struct](#bigValue)
     * [type objtype [320]byte](#objtype)
-        * [func adjChunks() (*objtype, *objtype)](#adjChunks)
         * [func adjStringChunk() (string, *objtype)](#adjStringChunk)
     * [type Object1 struct](#Object1)
     * [type Object2 struct](#Object2)
@@ -459,15 +458,15 @@
     * [func TestBadTraceback(t *testing.T)](#TestBadTraceback)
     * [func TestTimePprof(t *testing.T)](#TestTimePprof)
     * [func TestAbort(t *testing.T)](#TestAbort)
-    * [func init()](#init)
+    * [func init()](#init.crash_test.go)
     * [func TestRuntimePanic(t *testing.T)](#TestRuntimePanic)
     * [func TestG0StackOverflow(t *testing.T)](#TestG0StackOverflow)
     * [func TestDoublePanic(t *testing.T)](#TestDoublePanic)
-    * [func init()](#init)
+    * [func init()](#init.crash_unix_test.go)
     * [func TestBadOpen(t *testing.T)](#TestBadOpen)
     * [func TestCrashDumpsAllThreads(t *testing.T)](#TestCrashDumpsAllThreads)
     * [func TestPanicSystemstack(t *testing.T)](#TestPanicSystemstack)
-    * [func init()](#init)
+    * [func init()](#init.crash_unix_test.go.0xc060101578)
     * [func testPanicSystemstackInternal()](#testPanicSystemstackInternal)
     * [func TestSignalExitStatus(t *testing.T)](#TestSignalExitStatus)
     * [func TestSignalIgnoreSIGTRAP(t *testing.T)](#TestSignalIgnoreSIGTRAP)
@@ -820,6 +819,7 @@
     * [func TestFinalizerZeroSizedStruct(t *testing.T)](#TestFinalizerZeroSizedStruct)
     * [func BenchmarkFinalizer(b *testing.B)](#BenchmarkFinalizer)
     * [func BenchmarkFinalizerRun(b *testing.B)](#BenchmarkFinalizerRun)
+    * [func adjChunks() (*objtype, *objtype)](#adjChunks)
     * [func TestEmptySlice(t *testing.T)](#TestEmptySlice)
     * [func TestEmptyString(t *testing.T)](#TestEmptyString)
     * [func TestFinalizerOnGlobal(t *testing.T)](#TestFinalizerOnGlobal)
@@ -860,7 +860,7 @@
     * [func checkNonblocking(t *testing.T, fd int32, name string)](#checkNonblocking)
     * [func checkCloseonexec(t *testing.T, fd int32, name string)](#checkCloseonexec)
     * [func TestSetNonblock(t *testing.T)](#TestSetNonblock)
-    * [func init()](#init)
+    * [func init()](#init.netpoll_os_test.go)
     * [func BenchmarkNetpollBreak(b *testing.B)](#BenchmarkNetpollBreak)
     * [func BenchmarkSyscall(b *testing.B)](#BenchmarkSyscall)
     * [func BenchmarkSyscallWork(b *testing.B)](#BenchmarkSyscallWork)
@@ -946,7 +946,7 @@
     * [func TestLldbPython(t *testing.T)](#TestLldbPython)
     * [func TestMmapErrorSign(t *testing.T)](#TestMmapErrorSign)
     * [func TestPhysPageSize(t *testing.T)](#TestPhysPageSize)
-    * [func init()](#init)
+    * [func init()](#init.runtime_test.go)
     * [func errfn() error](#errfn)
     * [func errfn1() error](#errfn1)
     * [func BenchmarkIfaceCmp100(b *testing.B)](#BenchmarkIfaceCmp100)
@@ -1139,10 +1139,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="typeScalar" href="#typeScalar">const typeScalar</a>
 
 ```
 searchKey: runtime_test.typeScalar
+tags: [private]
 ```
 
 ```Go
@@ -1153,6 +1158,7 @@ const typeScalar = 0
 
 ```
 searchKey: runtime_test.typePointer
+tags: [private]
 ```
 
 ```Go
@@ -1163,6 +1169,7 @@ const typePointer = 1
 
 ```
 searchKey: runtime_test.hashSize
+tags: [private]
 ```
 
 ```Go
@@ -1175,6 +1182,7 @@ size of the hash output (32 or 64 bits)
 
 ```
 searchKey: runtime_test.size
+tags: [private]
 ```
 
 ```Go
@@ -1185,6 +1193,7 @@ const size = 10
 
 ```
 searchKey: runtime_test.objsize
+tags: [private]
 ```
 
 ```Go
@@ -1197,6 +1206,7 @@ One chunk must be exactly one sizeclass in size. It should be a sizeclass not us
 
 ```
 searchKey: runtime_test.helloSource
+tags: [private]
 ```
 
 ```Go
@@ -1207,6 +1217,7 @@ const helloSource = ...
 
 ```
 searchKey: runtime_test.backtraceSource
+tags: [private]
 ```
 
 ```Go
@@ -1217,6 +1228,7 @@ const backtraceSource = ...
 
 ```
 searchKey: runtime_test.autotmpTypeSource
+tags: [private]
 ```
 
 ```Go
@@ -1227,6 +1239,7 @@ const autotmpTypeSource = ...
 
 ```
 searchKey: runtime_test.constsSource
+tags: [private]
 ```
 
 ```Go
@@ -1237,6 +1250,7 @@ const constsSource = ...
 
 ```
 searchKey: runtime_test.panicSource
+tags: [private]
 ```
 
 ```Go
@@ -1247,6 +1261,7 @@ const panicSource = ...
 
 ```
 searchKey: runtime_test.InfCallstackSource
+tags: [private]
 ```
 
 ```Go
@@ -1257,6 +1272,7 @@ const InfCallstackSource = ...
 
 ```
 searchKey: runtime_test.lldbHelloSource
+tags: [private]
 ```
 
 ```Go
@@ -1267,6 +1283,7 @@ const lldbHelloSource = ...
 
 ```
 searchKey: runtime_test.lldbScriptSource
+tags: [private]
 ```
 
 ```Go
@@ -1277,6 +1294,7 @@ const lldbScriptSource = ...
 
 ```
 searchKey: runtime_test.expectedLldbOutput
+tags: [private]
 ```
 
 ```Go
@@ -1287,6 +1305,7 @@ const expectedLldbOutput = ...
 
 ```
 searchKey: runtime_test.N
+tags: [private]
 ```
 
 ```Go
@@ -1297,6 +1316,7 @@ const N = 20
 
 ```
 searchKey: runtime_test.sizeNoStack
+tags: [private]
 ```
 
 ```Go
@@ -1309,6 +1329,7 @@ Strings and slices that don't escape and fit into tmpBuf are stack allocated, wh
 
 ```
 searchKey: runtime_test.intSize
+tags: [private]
 ```
 
 ```Go
@@ -1317,10 +1338,15 @@ const intSize = 32 << (^uint(0) >> 63)
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="alwaysFalse" href="#alwaysFalse">var alwaysFalse</a>
 
 ```
 searchKey: runtime_test.alwaysFalse
+tags: [private]
 ```
 
 ```Go
@@ -1331,6 +1357,7 @@ var alwaysFalse = false
 
 ```
 searchKey: runtime_test.workSink
+tags: [private]
 ```
 
 ```Go
@@ -1341,6 +1368,7 @@ var workSink = 0
 
 ```
 searchKey: runtime_test.s
+tags: [private]
 ```
 
 ```Go
@@ -1351,6 +1379,7 @@ var s int
 
 ```
 searchKey: runtime_test.ss
+tags: [private]
 ```
 
 ```Go
@@ -1361,6 +1390,7 @@ var ss *int
 
 ```
 searchKey: runtime_test.result
+tags: [private]
 ```
 
 ```Go
@@ -1371,6 +1401,7 @@ var result complex128
 
 ```
 searchKey: runtime_test.toRemove
+tags: [private]
 ```
 
 ```Go
@@ -1381,6 +1412,7 @@ var toRemove []string
 
 ```
 searchKey: runtime_test.testprog
+tags: [private]
 ```
 
 ```Go
@@ -1395,6 +1427,7 @@ var testprog struct {
 
 ```
 searchKey: runtime_test.concurrentMapTest
+tags: [private]
 ```
 
 ```Go
@@ -1405,6 +1438,7 @@ var concurrentMapTest = ...
 
 ```
 searchKey: runtime_test.sigquit
+tags: [private]
 ```
 
 ```Go
@@ -1417,6 +1451,7 @@ sigquit is the signal to send to kill a hanging testdata program. Send SIGQUIT t
 
 ```
 searchKey: runtime_test.glob
+tags: [private]
 ```
 
 ```Go
@@ -1427,6 +1462,7 @@ var glob int = 3
 
 ```
 searchKey: runtime_test.list
+tags: [private]
 ```
 
 ```Go
@@ -1437,6 +1473,7 @@ var list []int
 
 ```
 searchKey: runtime_test.globint1
+tags: [private]
 ```
 
 ```Go
@@ -1447,6 +1484,7 @@ var globint1, globint2, globint3 int
 
 ```
 searchKey: runtime_test.globint2
+tags: [private]
 ```
 
 ```Go
@@ -1457,6 +1495,7 @@ var globint1, globint2, globint3 int
 
 ```
 searchKey: runtime_test.globint3
+tags: [private]
 ```
 
 ```Go
@@ -1467,6 +1506,7 @@ var globint1, globint2, globint3 int
 
 ```
 searchKey: runtime_test.saveInt
+tags: [private]
 ```
 
 ```Go
@@ -1477,6 +1517,7 @@ var saveInt uint32
 
 ```
 searchKey: runtime_test.globstruct
+tags: [private]
 ```
 
 ```Go
@@ -1489,6 +1530,7 @@ var globstruct struct {
 
 ```
 searchKey: runtime_test.hugeSink
+tags: [private]
 ```
 
 ```Go
@@ -1499,6 +1541,7 @@ var hugeSink interface{}
 
 ```
 searchKey: runtime_test.pointerClassSink
+tags: [private]
 ```
 
 ```Go
@@ -1509,6 +1552,7 @@ var pointerClassSink *int
 
 ```
 searchKey: runtime_test.pointerClassData
+tags: [private]
 ```
 
 ```Go
@@ -1519,6 +1563,7 @@ var pointerClassData = 42
 
 ```
 searchKey: runtime_test.a
+tags: [private]
 ```
 
 ```Go
@@ -1529,6 +1574,7 @@ var a bool
 
 ```
 searchKey: runtime_test.gcinfoSink
+tags: [private]
 ```
 
 ```Go
@@ -1539,6 +1585,7 @@ var gcinfoSink interface{}
 
 ```
 searchKey: runtime_test.infoPtr
+tags: [private]
 ```
 
 ```Go
@@ -1549,6 +1596,7 @@ var infoPtr = []byte{typePointer}
 
 ```
 searchKey: runtime_test.infoPtr10
+tags: [private]
 ```
 
 ```Go
@@ -1559,6 +1607,7 @@ var infoPtr10 = ...
 
 ```
 searchKey: runtime_test.infoScalarPtr
+tags: [private]
 ```
 
 ```Go
@@ -1569,6 +1618,7 @@ var infoScalarPtr = ...
 
 ```
 searchKey: runtime_test.infoScalarPtr4
+tags: [private]
 ```
 
 ```Go
@@ -1579,6 +1629,7 @@ var infoScalarPtr4 = ...
 
 ```
 searchKey: runtime_test.infoPtrScalar
+tags: [private]
 ```
 
 ```Go
@@ -1589,6 +1640,7 @@ var infoPtrScalar = ...
 
 ```
 searchKey: runtime_test.bssPtr
+tags: [private]
 ```
 
 ```Go
@@ -1601,6 +1653,7 @@ BSS
 
 ```
 searchKey: runtime_test.bssScalarPtr
+tags: [private]
 ```
 
 ```Go
@@ -1611,6 +1664,7 @@ var bssScalarPtr ScalarPtr
 
 ```
 searchKey: runtime_test.bssPtrScalar
+tags: [private]
 ```
 
 ```Go
@@ -1621,6 +1675,7 @@ var bssPtrScalar PtrScalar
 
 ```
 searchKey: runtime_test.bssBigStruct
+tags: [private]
 ```
 
 ```Go
@@ -1631,6 +1686,7 @@ var bssBigStruct BigStruct
 
 ```
 searchKey: runtime_test.bssString
+tags: [private]
 ```
 
 ```Go
@@ -1641,6 +1697,7 @@ var bssString string
 
 ```
 searchKey: runtime_test.bssSlice
+tags: [private]
 ```
 
 ```Go
@@ -1651,6 +1708,7 @@ var bssSlice []string
 
 ```
 searchKey: runtime_test.bssEface
+tags: [private]
 ```
 
 ```Go
@@ -1661,6 +1719,7 @@ var bssEface interface{}
 
 ```
 searchKey: runtime_test.bssIface
+tags: [private]
 ```
 
 ```Go
@@ -1671,6 +1730,7 @@ var bssIface Iface
 
 ```
 searchKey: runtime_test.dataPtr
+tags: [private]
 ```
 
 ```Go
@@ -1683,6 +1743,7 @@ DATA
 
 ```
 searchKey: runtime_test.dataScalarPtr
+tags: [private]
 ```
 
 ```Go
@@ -1693,6 +1754,7 @@ var dataScalarPtr = ScalarPtr{q: 1}
 
 ```
 searchKey: runtime_test.dataPtrScalar
+tags: [private]
 ```
 
 ```Go
@@ -1703,6 +1765,7 @@ var dataPtrScalar = PtrScalar{w: 1}
 
 ```
 searchKey: runtime_test.dataBigStruct
+tags: [private]
 ```
 
 ```Go
@@ -1713,6 +1776,7 @@ var dataBigStruct = BigStruct{w: 1}
 
 ```
 searchKey: runtime_test.dataString
+tags: [private]
 ```
 
 ```Go
@@ -1723,6 +1787,7 @@ var dataString = "foo"
 
 ```
 searchKey: runtime_test.dataSlice
+tags: [private]
 ```
 
 ```Go
@@ -1733,6 +1798,7 @@ var dataSlice = []string{"foo"}
 
 ```
 searchKey: runtime_test.dataEface
+tags: [private]
 ```
 
 ```Go
@@ -1743,6 +1809,7 @@ var dataEface interface{} = 42
 
 ```
 searchKey: runtime_test.dataIface
+tags: [private]
 ```
 
 ```Go
@@ -1753,6 +1820,7 @@ var dataIface Iface = IfaceImpl(42)
 
 ```
 searchKey: runtime_test.infoString
+tags: [private]
 ```
 
 ```Go
@@ -1763,6 +1831,7 @@ var infoString = []byte{typePointer, typeScalar}
 
 ```
 searchKey: runtime_test.infoSlice
+tags: [private]
 ```
 
 ```Go
@@ -1773,6 +1842,7 @@ var infoSlice = []byte{typePointer, typeScalar, typeScalar}
 
 ```
 searchKey: runtime_test.infoEface
+tags: [private]
 ```
 
 ```Go
@@ -1783,6 +1853,7 @@ var infoEface = []byte{typeScalar, typePointer}
 
 ```
 searchKey: runtime_test.infoIface
+tags: [private]
 ```
 
 ```Go
@@ -1793,6 +1864,7 @@ var infoIface = []byte{typeScalar, typePointer}
 
 ```
 searchKey: runtime_test.sink
+tags: [private]
 ```
 
 ```Go
@@ -1803,6 +1875,7 @@ var sink uint64
 
 ```
 searchKey: runtime_test.dummyTimeHistogram
+tags: [private]
 ```
 
 ```Go
@@ -1813,6 +1886,7 @@ var dummyTimeHistogram TimeHistogram
 
 ```
 searchKey: runtime_test.e
+tags: [private]
 ```
 
 ```Go
@@ -1823,6 +1897,7 @@ var e interface{}
 
 ```
 searchKey: runtime_test.e_
+tags: [private]
 ```
 
 ```Go
@@ -1833,6 +1908,7 @@ var e_ interface{}
 
 ```
 searchKey: runtime_test.i1
+tags: [private]
 ```
 
 ```Go
@@ -1843,6 +1919,7 @@ var i1 I1
 
 ```
 searchKey: runtime_test.i2
+tags: [private]
 ```
 
 ```Go
@@ -1853,6 +1930,7 @@ var i2 I2
 
 ```
 searchKey: runtime_test.ts
+tags: [private]
 ```
 
 ```Go
@@ -1863,6 +1941,7 @@ var ts TS
 
 ```
 searchKey: runtime_test.tm
+tags: [private]
 ```
 
 ```Go
@@ -1873,6 +1952,7 @@ var tm TM
 
 ```
 searchKey: runtime_test.tl
+tags: [private]
 ```
 
 ```Go
@@ -1883,6 +1963,7 @@ var tl TL
 
 ```
 searchKey: runtime_test.ok
+tags: [private]
 ```
 
 ```Go
@@ -1893,6 +1974,7 @@ var ok bool
 
 ```
 searchKey: runtime_test.eight8
+tags: [private]
 ```
 
 ```Go
@@ -1903,6 +1985,7 @@ var eight8 uint8 = 8
 
 ```
 searchKey: runtime_test.eight8I
+tags: [private]
 ```
 
 ```Go
@@ -1913,6 +1996,7 @@ var eight8I T8 = 8
 
 ```
 searchKey: runtime_test.yes
+tags: [private]
 ```
 
 ```Go
@@ -1923,6 +2007,7 @@ var yes bool = true
 
 ```
 searchKey: runtime_test.zero16
+tags: [private]
 ```
 
 ```Go
@@ -1933,6 +2018,7 @@ var zero16 uint16 = 0
 
 ```
 searchKey: runtime_test.zero16I
+tags: [private]
 ```
 
 ```Go
@@ -1943,6 +2029,7 @@ var zero16I T16 = 0
 
 ```
 searchKey: runtime_test.one16
+tags: [private]
 ```
 
 ```Go
@@ -1953,6 +2040,7 @@ var one16 uint16 = 1
 
 ```
 searchKey: runtime_test.thousand16
+tags: [private]
 ```
 
 ```Go
@@ -1963,6 +2051,7 @@ var thousand16 uint16 = 1000
 
 ```
 searchKey: runtime_test.zero32
+tags: [private]
 ```
 
 ```Go
@@ -1973,6 +2062,7 @@ var zero32 uint32 = 0
 
 ```
 searchKey: runtime_test.zero32I
+tags: [private]
 ```
 
 ```Go
@@ -1983,6 +2073,7 @@ var zero32I T32 = 0
 
 ```
 searchKey: runtime_test.one32
+tags: [private]
 ```
 
 ```Go
@@ -1993,6 +2084,7 @@ var one32 uint32 = 1
 
 ```
 searchKey: runtime_test.thousand32
+tags: [private]
 ```
 
 ```Go
@@ -2003,6 +2095,7 @@ var thousand32 uint32 = 1000
 
 ```
 searchKey: runtime_test.zero64
+tags: [private]
 ```
 
 ```Go
@@ -2013,6 +2106,7 @@ var zero64 uint64 = 0
 
 ```
 searchKey: runtime_test.zero64I
+tags: [private]
 ```
 
 ```Go
@@ -2023,6 +2117,7 @@ var zero64I T64 = 0
 
 ```
 searchKey: runtime_test.one64
+tags: [private]
 ```
 
 ```Go
@@ -2033,6 +2128,7 @@ var one64 uint64 = 1
 
 ```
 searchKey: runtime_test.thousand64
+tags: [private]
 ```
 
 ```Go
@@ -2043,6 +2139,7 @@ var thousand64 uint64 = 1000
 
 ```
 searchKey: runtime_test.zerostr
+tags: [private]
 ```
 
 ```Go
@@ -2053,6 +2150,7 @@ var zerostr string = ""
 
 ```
 searchKey: runtime_test.zerostrI
+tags: [private]
 ```
 
 ```Go
@@ -2063,6 +2161,7 @@ var zerostrI Tstr = ""
 
 ```
 searchKey: runtime_test.nzstr
+tags: [private]
 ```
 
 ```Go
@@ -2073,6 +2172,7 @@ var nzstr string = "abc"
 
 ```
 searchKey: runtime_test.zeroslice
+tags: [private]
 ```
 
 ```Go
@@ -2083,6 +2183,7 @@ var zeroslice []byte = nil
 
 ```
 searchKey: runtime_test.zerosliceI
+tags: [private]
 ```
 
 ```Go
@@ -2093,6 +2194,7 @@ var zerosliceI Tslice = nil
 
 ```
 searchKey: runtime_test.nzslice
+tags: [private]
 ```
 
 ```Go
@@ -2103,6 +2205,7 @@ var nzslice []byte = []byte("abc")
 
 ```
 searchKey: runtime_test.zerobig
+tags: [private]
 ```
 
 ```Go
@@ -2113,6 +2216,7 @@ var zerobig [512]byte
 
 ```
 searchKey: runtime_test.nzbig
+tags: [private]
 ```
 
 ```Go
@@ -2123,6 +2227,7 @@ var nzbig [512]byte = [512]byte{511: 1}
 
 ```
 searchKey: runtime_test.global
+tags: [private]
 ```
 
 ```Go
@@ -2133,6 +2238,7 @@ var global interface{}
 
 ```
 searchKey: runtime_test.stress
+tags: [private]
 ```
 
 ```Go
@@ -2143,6 +2249,7 @@ var stress []*MyNode
 
 ```
 searchKey: runtime_test.testMemStatsCount
+tags: [private]
 ```
 
 ```Go
@@ -2153,6 +2260,7 @@ var testMemStatsCount int
 
 ```
 searchKey: runtime_test.tinyByteSink
+tags: [private]
 ```
 
 ```Go
@@ -2163,6 +2271,7 @@ var tinyByteSink *byte
 
 ```
 searchKey: runtime_test.tinyUint32Sink
+tags: [private]
 ```
 
 ```Go
@@ -2173,6 +2282,7 @@ var tinyUint32Sink *uint32
 
 ```
 searchKey: runtime_test.tinyObj12Sink
+tags: [private]
 ```
 
 ```Go
@@ -2183,6 +2293,7 @@ var tinyObj12Sink *obj12
 
 ```
 searchKey: runtime_test.arenaCollisionSink
+tags: [private]
 ```
 
 ```Go
@@ -2193,6 +2304,7 @@ var arenaCollisionSink []*acLink
 
 ```
 searchKey: runtime_test.mallocSink
+tags: [private]
 ```
 
 ```Go
@@ -2203,6 +2315,7 @@ var mallocSink uintptr
 
 ```
 searchKey: runtime_test.n
+tags: [private]
 ```
 
 ```Go
@@ -2213,6 +2326,7 @@ var n = flag.Int("n", 1000, "number of goroutines")
 
 ```
 searchKey: runtime_test.BoolSink
+tags: [private]
 ```
 
 ```Go
@@ -2223,6 +2337,7 @@ var BoolSink bool
 
 ```
 searchKey: runtime_test.hintLessThan8
+tags: [private]
 ```
 
 ```Go
@@ -2233,6 +2348,7 @@ var hintLessThan8 = 7
 
 ```
 searchKey: runtime_test.hintGreaterThan8
+tags: [private]
 ```
 
 ```Go
@@ -2243,6 +2359,7 @@ var hintGreaterThan8 = 32
 
 ```
 searchKey: runtime_test.sinkAppend
+tags: [private]
 ```
 
 ```Go
@@ -2253,6 +2370,7 @@ var sinkAppend bool
 
 ```
 searchKey: runtime_test.mapSink
+tags: [private]
 ```
 
 ```Go
@@ -2263,6 +2381,7 @@ var mapSink map[int]int
 
 ```
 searchKey: runtime_test.mapBucketTests
+tags: [private]
 ```
 
 ```Go
@@ -2273,6 +2392,7 @@ var mapBucketTests = ...
 
 ```
 searchKey: runtime_test.testNonEscapingMapVariable
+tags: [private]
 ```
 
 ```Go
@@ -2283,6 +2403,7 @@ var testNonEscapingMapVariable int = 8
 
 ```
 searchKey: runtime_test.bufSizes
+tags: [private]
 ```
 
 ```Go
@@ -2293,6 +2414,7 @@ var bufSizes = ...
 
 ```
 searchKey: runtime_test.bufSizesOverlap
+tags: [private]
 ```
 
 ```Go
@@ -2305,6 +2427,7 @@ var bufSizesOverlap = []int{
 
 ```
 searchKey: runtime_test.xsglobal
+tags: [private]
 ```
 
 ```Go
@@ -2315,6 +2438,7 @@ var xsglobal []byte
 
 ```
 searchKey: runtime_test.ssglobal
+tags: [private]
 ```
 
 ```Go
@@ -2325,6 +2449,7 @@ var ssglobal string
 
 ```
 searchKey: runtime_test.Foo2
+tags: [private]
 ```
 
 ```Go
@@ -2335,6 +2460,7 @@ var Foo2 = &Object2{}
 
 ```
 searchKey: runtime_test.Foo1
+tags: [private]
 ```
 
 ```Go
@@ -2345,6 +2471,7 @@ var Foo1 = &Object1{}
 
 ```
 searchKey: runtime_test.wg
+tags: [private]
 ```
 
 ```Go
@@ -2355,6 +2482,7 @@ var wg sync.WaitGroup
 
 ```
 searchKey: runtime_test.stop
+tags: [private]
 ```
 
 ```Go
@@ -2365,6 +2493,7 @@ var stop = make(chan bool, 1)
 
 ```
 searchKey: runtime_test.preempt
+tags: [private]
 ```
 
 ```Go
@@ -2377,6 +2506,7 @@ The function is used to test preemption at split stack checks. Declaring a var a
 
 ```
 searchKey: runtime_test.padData
+tags: [private]
 ```
 
 ```Go
@@ -2387,6 +2517,7 @@ var padData [128]uint64
 
 ```
 searchKey: runtime_test.sysNanosleep
+tags: [private]
 ```
 
 ```Go
@@ -2399,6 +2530,7 @@ sysNanosleep is defined by OS-specific files (such as runtime_linux_test.go) to 
 
 ```
 searchKey: runtime_test.sink32
+tags: [private]
 ```
 
 ```Go
@@ -2409,6 +2541,7 @@ var sink32 uint32
 
 ```
 searchKey: runtime_test.lldbPath
+tags: [private]
 ```
 
 ```Go
@@ -2419,6 +2552,7 @@ var lldbPath string
 
 ```
 searchKey: runtime_test.flagQuick
+tags: [private]
 ```
 
 ```Go
@@ -2429,6 +2563,7 @@ var flagQuick = flag.Bool("quick", false, "skip slow tests, for second run in al
 
 ```
 searchKey: runtime_test.errf
+tags: [private]
 ```
 
 ```Go
@@ -2439,6 +2574,7 @@ var errf error
 
 ```
 searchKey: runtime_test.efaceCmp1
+tags: [private]
 ```
 
 ```Go
@@ -2449,6 +2585,7 @@ var efaceCmp1 interface{}
 
 ```
 searchKey: runtime_test.efaceCmp2
+tags: [private]
 ```
 
 ```Go
@@ -2459,6 +2596,7 @@ var efaceCmp2 interface{}
 
 ```
 searchKey: runtime_test.faultAddrs
+tags: [private]
 ```
 
 ```Go
@@ -2469,6 +2607,7 @@ var faultAddrs = ...
 
 ```
 searchKey: runtime_test.One
+tags: [private]
 ```
 
 ```Go
@@ -2479,6 +2618,7 @@ var One = []int64{1}
 
 ```
 searchKey: runtime_test.SinkIntSlice
+tags: [private]
 ```
 
 ```Go
@@ -2489,6 +2629,7 @@ var SinkIntSlice []int
 
 ```
 searchKey: runtime_test.SinkIntPointerSlice
+tags: [private]
 ```
 
 ```Go
@@ -2499,6 +2640,7 @@ var SinkIntPointerSlice []*int
 
 ```
 searchKey: runtime_test.blackhole
+tags: [private]
 ```
 
 ```Go
@@ -2509,6 +2651,7 @@ var blackhole []byte
 
 ```
 searchKey: runtime_test.x
+tags: [private]
 ```
 
 ```Go
@@ -2519,6 +2662,7 @@ var x []int
 
 ```
 searchKey: runtime_test.sByte
+tags: [private]
 ```
 
 ```Go
@@ -2529,6 +2673,7 @@ var sByte []byte
 
 ```
 searchKey: runtime_test.s1Ptr
+tags: [private]
 ```
 
 ```Go
@@ -2539,6 +2684,7 @@ var s1Ptr []uintptr
 
 ```
 searchKey: runtime_test.s2Ptr
+tags: [private]
 ```
 
 ```Go
@@ -2549,6 +2695,7 @@ var s2Ptr [][2]uintptr
 
 ```
 searchKey: runtime_test.s3Ptr
+tags: [private]
 ```
 
 ```Go
@@ -2559,6 +2706,7 @@ var s3Ptr [][3]uintptr
 
 ```
 searchKey: runtime_test.s4Ptr
+tags: [private]
 ```
 
 ```Go
@@ -2569,6 +2717,7 @@ var s4Ptr [][4]uintptr
 
 ```
 searchKey: runtime_test.nerr
+tags: [private]
 ```
 
 ```Go
@@ -2579,6 +2728,7 @@ var nerr int
 
 ```
 searchKey: runtime_test.escapeMe
+tags: [private]
 ```
 
 ```Go
@@ -2591,6 +2741,7 @@ Pass a value to escapeMe to force it to escape.
 
 ```
 searchKey: runtime_test.escapeString
+tags: [private]
 ```
 
 ```Go
@@ -2601,6 +2752,7 @@ var escapeString string
 
 ```
 searchKey: runtime_test.stringdata
+tags: [private]
 ```
 
 ```Go
@@ -2611,6 +2763,7 @@ var stringdata = ...
 
 ```
 searchKey: runtime_test.sinkInt
+tags: [private]
 ```
 
 ```Go
@@ -2621,6 +2774,7 @@ var sinkInt int
 
 ```
 searchKey: runtime_test.atoi64tests
+tags: [private]
 ```
 
 ```Go
@@ -2631,6 +2785,7 @@ var atoi64tests = ...
 
 ```
 searchKey: runtime_test.atoi32tests
+tags: [private]
 ```
 
 ```Go
@@ -2641,6 +2796,7 @@ var atoi32tests = ...
 
 ```
 searchKey: runtime_test.firstLine
+tags: [private]
 ```
 
 ```Go
@@ -2654,6 +2810,7 @@ Do not add/remove lines in this block without updating the line numbers.
 
 ```
 searchKey: runtime_test.lineVar1
+tags: [private]
 ```
 
 ```Go
@@ -2665,6 +2822,7 @@ var lineVar1 = lineNumber() // 2
 
 ```
 searchKey: runtime_test.lineVar2a
+tags: [private]
 ```
 
 ```Go
@@ -2676,6 +2834,7 @@ var lineVar2a, lineVar2b = lineNumber(), lineNumber() // 3
 
 ```
 searchKey: runtime_test.lineVar2b
+tags: [private]
 ```
 
 ```Go
@@ -2687,6 +2846,7 @@ var lineVar2a, lineVar2b = lineNumber(), lineNumber() // 3
 
 ```
 searchKey: runtime_test.compLit
+tags: [private]
 ```
 
 ```Go
@@ -2700,6 +2860,7 @@ var compLit
 
 ```
 searchKey: runtime_test.arrayLit
+tags: [private]
 ```
 
 ```Go
@@ -2714,6 +2875,7 @@ var arrayLit = [...]int{lineNumber(),
 
 ```
 searchKey: runtime_test.sliceLit
+tags: [private]
 ```
 
 ```Go
@@ -2728,6 +2890,7 @@ var sliceLit = []int{lineNumber(),
 
 ```
 searchKey: runtime_test.mapLit
+tags: [private]
 ```
 
 ```Go
@@ -2741,6 +2904,7 @@ var mapLit
 
 ```
 searchKey: runtime_test.intLit
+tags: [private]
 ```
 
 ```Go
@@ -2754,6 +2918,7 @@ var intLit = lineNumber() +
 
 ```
 searchKey: runtime_test.l38
+tags: [private]
 ```
 
 ```Go
@@ -2764,6 +2929,7 @@ var l38, l39, l40 int
 
 ```
 searchKey: runtime_test.l39
+tags: [private]
 ```
 
 ```Go
@@ -2774,6 +2940,7 @@ var l38, l39, l40 int
 
 ```
 searchKey: runtime_test.l40
+tags: [private]
 ```
 
 ```Go
@@ -2784,6 +2951,7 @@ var l38, l39, l40 int
 
 ```
 searchKey: runtime_test.dummy
+tags: [private]
 ```
 
 ```Go
@@ -2794,6 +2962,7 @@ var dummy int
 
 ```
 searchKey: runtime_test.testTracebackArgsBuf
+tags: [private]
 ```
 
 ```Go
@@ -2802,10 +2971,15 @@ var testTracebackArgsBuf [1000]byte
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="struct0" href="#struct0">type struct0 struct{}</a>
 
 ```
 searchKey: runtime_test.struct0
+tags: [private]
 ```
 
 ```Go
@@ -2816,6 +2990,7 @@ type struct0 struct{}
 
 ```
 searchKey: runtime_test.response
+tags: [private]
 ```
 
 ```Go
@@ -2827,6 +3002,7 @@ type response struct {
 
 ```
 searchKey: runtime_test.doRequest
+tags: [private]
 ```
 
 ```Go
@@ -2837,6 +3013,7 @@ func doRequest(useSelect bool) (*response, error)
 
 ```
 searchKey: runtime_test.myError
+tags: [private]
 ```
 
 ```Go
@@ -2848,6 +3025,7 @@ type myError struct {
 
 ```
 searchKey: runtime_test.myError.Error
+tags: [private]
 ```
 
 ```Go
@@ -2858,6 +3036,7 @@ func (myError) Error() string
 
 ```
 searchKey: runtime_test.buildexe
+tags: [private]
 ```
 
 ```Go
@@ -2871,6 +3050,7 @@ type buildexe struct {
 
 ```
 searchKey: runtime_test.point
+tags: [private]
 ```
 
 ```Go
@@ -2883,6 +3063,7 @@ type point struct {
 
 ```
 searchKey: runtime_test.point.negate
+tags: [private]
 ```
 
 ```Go
@@ -2893,6 +3074,7 @@ func (p *point) negate()
 
 ```
 searchKey: runtime_test.nonSSAable
+tags: [private]
 ```
 
 ```Go
@@ -2903,6 +3085,7 @@ type nonSSAable [128]byte
 
 ```
 searchKey: runtime_test.mknonSSAable
+tags: [private]
 ```
 
 ```Go
@@ -2913,6 +3096,7 @@ func mknonSSAable() nonSSAable
 
 ```
 searchKey: runtime_test.bigStruct
+tags: [private]
 ```
 
 ```Go
@@ -2925,6 +3109,7 @@ type bigStruct struct {
 
 ```
 searchKey: runtime_test.containsBigStruct
+tags: [private]
 ```
 
 ```Go
@@ -2937,6 +3122,7 @@ type containsBigStruct struct {
 
 ```
 searchKey: runtime_test.sideeffect2
+tags: [private]
 ```
 
 ```Go
@@ -2947,6 +3133,7 @@ func sideeffect2(in containsBigStruct) containsBigStruct
 
 ```
 searchKey: runtime_test.foo
+tags: [private]
 ```
 
 ```Go
@@ -2958,6 +3145,7 @@ type foo struct {
 
 ```
 searchKey: runtime_test.foo.method1
+tags: [private]
 ```
 
 ```Go
@@ -2968,6 +3156,7 @@ func (f *foo) method1()
 
 ```
 searchKey: runtime_test.foo.method2
+tags: [private]
 ```
 
 ```Go
@@ -2978,6 +3167,7 @@ func (f *foo) method2()
 
 ```
 searchKey: runtime_test.Node1
+tags: [private]
 ```
 
 ```Go
@@ -2991,6 +3181,7 @@ type Node1 struct {
 
 ```
 searchKey: runtime_test.Node8
+tags: [private]
 ```
 
 ```Go
@@ -3004,6 +3195,7 @@ type Node8 struct {
 
 ```
 searchKey: runtime_test.Node64
+tags: [private]
 ```
 
 ```Go
@@ -3017,6 +3209,7 @@ type Node64 struct {
 
 ```
 searchKey: runtime_test.Node64Dead
+tags: [private]
 ```
 
 ```Go
@@ -3030,6 +3223,7 @@ type Node64Dead struct {
 
 ```
 searchKey: runtime_test.Node124
+tags: [private]
 ```
 
 ```Go
@@ -3043,6 +3237,7 @@ type Node124 struct {
 
 ```
 searchKey: runtime_test.Node126
+tags: [private]
 ```
 
 ```Go
@@ -3056,6 +3251,7 @@ type Node126 struct {
 
 ```
 searchKey: runtime_test.Node128
+tags: [private]
 ```
 
 ```Go
@@ -3069,6 +3265,7 @@ type Node128 struct {
 
 ```
 searchKey: runtime_test.Node130
+tags: [private]
 ```
 
 ```Go
@@ -3082,6 +3279,7 @@ type Node130 struct {
 
 ```
 searchKey: runtime_test.Node1024
+tags: [private]
 ```
 
 ```Go
@@ -3095,6 +3293,7 @@ type Node1024 struct {
 
 ```
 searchKey: runtime_test.Ptr
+tags: [private]
 ```
 
 ```Go
@@ -3107,6 +3306,7 @@ type Ptr struct {
 
 ```
 searchKey: runtime_test.ScalarPtr
+tags: [private]
 ```
 
 ```Go
@@ -3124,6 +3324,7 @@ type ScalarPtr struct {
 
 ```
 searchKey: runtime_test.PtrScalar
+tags: [private]
 ```
 
 ```Go
@@ -3141,6 +3342,7 @@ type PtrScalar struct {
 
 ```
 searchKey: runtime_test.BigStruct
+tags: [private]
 ```
 
 ```Go
@@ -3160,6 +3362,7 @@ type BigStruct struct {
 
 ```
 searchKey: runtime_test.Iface
+tags: [private]
 ```
 
 ```Go
@@ -3172,6 +3375,7 @@ type Iface interface {
 
 ```
 searchKey: runtime_test.IfaceImpl
+tags: [private]
 ```
 
 ```Go
@@ -3182,6 +3386,7 @@ type IfaceImpl int
 
 ```
 searchKey: runtime_test.IfaceImpl.f
+tags: [private]
 ```
 
 ```Go
@@ -3192,6 +3397,7 @@ func (IfaceImpl) f()
 
 ```
 searchKey: runtime_test.HashSet
+tags: [private]
 ```
 
 ```Go
@@ -3205,6 +3411,7 @@ type HashSet struct {
 
 ```
 searchKey: runtime_test.newHashSet
+tags: [private]
 ```
 
 ```Go
@@ -3215,6 +3422,7 @@ func newHashSet() *HashSet
 
 ```
 searchKey: runtime_test.HashSet.add
+tags: [private]
 ```
 
 ```Go
@@ -3225,6 +3433,7 @@ func (s *HashSet) add(h uintptr)
 
 ```
 searchKey: runtime_test.HashSet.addS
+tags: [private]
 ```
 
 ```Go
@@ -3235,6 +3444,7 @@ func (s *HashSet) addS(x string)
 
 ```
 searchKey: runtime_test.HashSet.addB
+tags: [private]
 ```
 
 ```Go
@@ -3245,6 +3455,7 @@ func (s *HashSet) addB(x []byte)
 
 ```
 searchKey: runtime_test.HashSet.addS_seed
+tags: [private]
 ```
 
 ```Go
@@ -3255,6 +3466,7 @@ func (s *HashSet) addS_seed(x string, seed uintptr)
 
 ```
 searchKey: runtime_test.HashSet.check
+tags: [private]
 ```
 
 ```Go
@@ -3265,6 +3477,7 @@ func (s *HashSet) check(t *testing.T)
 
 ```
 searchKey: runtime_test.Key
+tags: [private]
 ```
 
 ```Go
@@ -3282,6 +3495,7 @@ type Key interface {
 
 ```
 searchKey: runtime_test.BytesKey
+tags: [private]
 ```
 
 ```Go
@@ -3294,6 +3508,7 @@ type BytesKey struct {
 
 ```
 searchKey: runtime_test.BytesKey.clear
+tags: [private]
 ```
 
 ```Go
@@ -3304,6 +3519,7 @@ func (k *BytesKey) clear()
 
 ```
 searchKey: runtime_test.BytesKey.random
+tags: [private]
 ```
 
 ```Go
@@ -3314,6 +3530,7 @@ func (k *BytesKey) random(r *rand.Rand)
 
 ```
 searchKey: runtime_test.BytesKey.bits
+tags: [private]
 ```
 
 ```Go
@@ -3324,6 +3541,7 @@ func (k *BytesKey) bits() int
 
 ```
 searchKey: runtime_test.BytesKey.flipBit
+tags: [private]
 ```
 
 ```Go
@@ -3334,6 +3552,7 @@ func (k *BytesKey) flipBit(i int)
 
 ```
 searchKey: runtime_test.BytesKey.hash
+tags: [private]
 ```
 
 ```Go
@@ -3344,6 +3563,7 @@ func (k *BytesKey) hash() uintptr
 
 ```
 searchKey: runtime_test.BytesKey.name
+tags: [private]
 ```
 
 ```Go
@@ -3354,6 +3574,7 @@ func (k *BytesKey) name() string
 
 ```
 searchKey: runtime_test.Int32Key
+tags: [private]
 ```
 
 ```Go
@@ -3366,6 +3587,7 @@ type Int32Key struct {
 
 ```
 searchKey: runtime_test.Int32Key.clear
+tags: [private]
 ```
 
 ```Go
@@ -3376,6 +3598,7 @@ func (k *Int32Key) clear()
 
 ```
 searchKey: runtime_test.Int32Key.random
+tags: [private]
 ```
 
 ```Go
@@ -3386,6 +3609,7 @@ func (k *Int32Key) random(r *rand.Rand)
 
 ```
 searchKey: runtime_test.Int32Key.bits
+tags: [private]
 ```
 
 ```Go
@@ -3396,6 +3620,7 @@ func (k *Int32Key) bits() int
 
 ```
 searchKey: runtime_test.Int32Key.flipBit
+tags: [private]
 ```
 
 ```Go
@@ -3406,6 +3631,7 @@ func (k *Int32Key) flipBit(i int)
 
 ```
 searchKey: runtime_test.Int32Key.hash
+tags: [private]
 ```
 
 ```Go
@@ -3416,6 +3642,7 @@ func (k *Int32Key) hash() uintptr
 
 ```
 searchKey: runtime_test.Int32Key.name
+tags: [private]
 ```
 
 ```Go
@@ -3426,6 +3653,7 @@ func (k *Int32Key) name() string
 
 ```
 searchKey: runtime_test.Int64Key
+tags: [private]
 ```
 
 ```Go
@@ -3438,6 +3666,7 @@ type Int64Key struct {
 
 ```
 searchKey: runtime_test.Int64Key.clear
+tags: [private]
 ```
 
 ```Go
@@ -3448,6 +3677,7 @@ func (k *Int64Key) clear()
 
 ```
 searchKey: runtime_test.Int64Key.random
+tags: [private]
 ```
 
 ```Go
@@ -3458,6 +3688,7 @@ func (k *Int64Key) random(r *rand.Rand)
 
 ```
 searchKey: runtime_test.Int64Key.bits
+tags: [private]
 ```
 
 ```Go
@@ -3468,6 +3699,7 @@ func (k *Int64Key) bits() int
 
 ```
 searchKey: runtime_test.Int64Key.flipBit
+tags: [private]
 ```
 
 ```Go
@@ -3478,6 +3710,7 @@ func (k *Int64Key) flipBit(i int)
 
 ```
 searchKey: runtime_test.Int64Key.hash
+tags: [private]
 ```
 
 ```Go
@@ -3488,6 +3721,7 @@ func (k *Int64Key) hash() uintptr
 
 ```
 searchKey: runtime_test.Int64Key.name
+tags: [private]
 ```
 
 ```Go
@@ -3498,6 +3732,7 @@ func (k *Int64Key) name() string
 
 ```
 searchKey: runtime_test.EfaceKey
+tags: [private]
 ```
 
 ```Go
@@ -3510,6 +3745,7 @@ type EfaceKey struct {
 
 ```
 searchKey: runtime_test.EfaceKey.clear
+tags: [private]
 ```
 
 ```Go
@@ -3520,6 +3756,7 @@ func (k *EfaceKey) clear()
 
 ```
 searchKey: runtime_test.EfaceKey.random
+tags: [private]
 ```
 
 ```Go
@@ -3530,6 +3767,7 @@ func (k *EfaceKey) random(r *rand.Rand)
 
 ```
 searchKey: runtime_test.EfaceKey.bits
+tags: [private]
 ```
 
 ```Go
@@ -3540,6 +3778,7 @@ func (k *EfaceKey) bits() int
 
 ```
 searchKey: runtime_test.EfaceKey.flipBit
+tags: [private]
 ```
 
 ```Go
@@ -3550,6 +3789,7 @@ func (k *EfaceKey) flipBit(i int)
 
 ```
 searchKey: runtime_test.EfaceKey.hash
+tags: [private]
 ```
 
 ```Go
@@ -3560,6 +3800,7 @@ func (k *EfaceKey) hash() uintptr
 
 ```
 searchKey: runtime_test.EfaceKey.name
+tags: [private]
 ```
 
 ```Go
@@ -3570,6 +3811,7 @@ func (k *EfaceKey) name() string
 
 ```
 searchKey: runtime_test.IfaceKey
+tags: [private]
 ```
 
 ```Go
@@ -3584,6 +3826,7 @@ type IfaceKey struct {
 
 ```
 searchKey: runtime_test.IfaceKey.clear
+tags: [private]
 ```
 
 ```Go
@@ -3594,6 +3837,7 @@ func (k *IfaceKey) clear()
 
 ```
 searchKey: runtime_test.IfaceKey.random
+tags: [private]
 ```
 
 ```Go
@@ -3604,6 +3848,7 @@ func (k *IfaceKey) random(r *rand.Rand)
 
 ```
 searchKey: runtime_test.IfaceKey.bits
+tags: [private]
 ```
 
 ```Go
@@ -3614,6 +3859,7 @@ func (k *IfaceKey) bits() int
 
 ```
 searchKey: runtime_test.IfaceKey.flipBit
+tags: [private]
 ```
 
 ```Go
@@ -3624,6 +3870,7 @@ func (k *IfaceKey) flipBit(i int)
 
 ```
 searchKey: runtime_test.IfaceKey.hash
+tags: [private]
 ```
 
 ```Go
@@ -3634,6 +3881,7 @@ func (k *IfaceKey) hash() uintptr
 
 ```
 searchKey: runtime_test.IfaceKey.name
+tags: [private]
 ```
 
 ```Go
@@ -3644,6 +3892,7 @@ func (k *IfaceKey) name() string
 
 ```
 searchKey: runtime_test.fInter
+tags: [private]
 ```
 
 ```Go
@@ -3654,6 +3903,7 @@ type fInter uint64
 
 ```
 searchKey: runtime_test.fInter.F
+tags: [private]
 ```
 
 ```Go
@@ -3664,6 +3914,7 @@ func (x fInter) F()
 
 ```
 searchKey: runtime_test.I1
+tags: [private]
 ```
 
 ```Go
@@ -3676,6 +3927,7 @@ type I1 interface {
 
 ```
 searchKey: runtime_test.I2
+tags: [private]
 ```
 
 ```Go
@@ -3689,6 +3941,7 @@ type I2 interface {
 
 ```
 searchKey: runtime_test.TS
+tags: [private]
 ```
 
 ```Go
@@ -3699,6 +3952,7 @@ type TS uint16
 
 ```
 searchKey: runtime_test.TS.Method1
+tags: [private]
 ```
 
 ```Go
@@ -3709,6 +3963,7 @@ func (TS) Method1()
 
 ```
 searchKey: runtime_test.TS.Method2
+tags: [private]
 ```
 
 ```Go
@@ -3719,6 +3974,7 @@ func (TS) Method2()
 
 ```
 searchKey: runtime_test.TM
+tags: [private]
 ```
 
 ```Go
@@ -3729,6 +3985,7 @@ type TM uintptr
 
 ```
 searchKey: runtime_test.TM.Method1
+tags: [private]
 ```
 
 ```Go
@@ -3739,6 +3996,7 @@ func (TM) Method1()
 
 ```
 searchKey: runtime_test.TM.Method2
+tags: [private]
 ```
 
 ```Go
@@ -3749,6 +4007,7 @@ func (TM) Method2()
 
 ```
 searchKey: runtime_test.TL
+tags: [private]
 ```
 
 ```Go
@@ -3759,6 +4018,7 @@ type TL [2]uintptr
 
 ```
 searchKey: runtime_test.TL.Method1
+tags: [private]
 ```
 
 ```Go
@@ -3769,6 +4029,7 @@ func (TL) Method1()
 
 ```
 searchKey: runtime_test.TL.Method2
+tags: [private]
 ```
 
 ```Go
@@ -3779,6 +4040,7 @@ func (TL) Method2()
 
 ```
 searchKey: runtime_test.T8
+tags: [private]
 ```
 
 ```Go
@@ -3789,6 +4051,7 @@ type T8 uint8
 
 ```
 searchKey: runtime_test.T8.Method1
+tags: [private]
 ```
 
 ```Go
@@ -3799,6 +4062,7 @@ func (T8) Method1()
 
 ```
 searchKey: runtime_test.T16
+tags: [private]
 ```
 
 ```Go
@@ -3809,6 +4073,7 @@ type T16 uint16
 
 ```
 searchKey: runtime_test.T16.Method1
+tags: [private]
 ```
 
 ```Go
@@ -3819,6 +4084,7 @@ func (T16) Method1()
 
 ```
 searchKey: runtime_test.T32
+tags: [private]
 ```
 
 ```Go
@@ -3829,6 +4095,7 @@ type T32 uint32
 
 ```
 searchKey: runtime_test.T32.Method1
+tags: [private]
 ```
 
 ```Go
@@ -3839,6 +4106,7 @@ func (T32) Method1()
 
 ```
 searchKey: runtime_test.T64
+tags: [private]
 ```
 
 ```Go
@@ -3849,6 +4117,7 @@ type T64 uint64
 
 ```
 searchKey: runtime_test.T64.Method1
+tags: [private]
 ```
 
 ```Go
@@ -3859,6 +4128,7 @@ func (T64) Method1()
 
 ```
 searchKey: runtime_test.Tstr
+tags: [private]
 ```
 
 ```Go
@@ -3869,6 +4139,7 @@ type Tstr string
 
 ```
 searchKey: runtime_test.Tstr.Method1
+tags: [private]
 ```
 
 ```Go
@@ -3879,6 +4150,7 @@ func (Tstr) Method1()
 
 ```
 searchKey: runtime_test.Tslice
+tags: [private]
 ```
 
 ```Go
@@ -3889,6 +4161,7 @@ type Tslice []byte
 
 ```
 searchKey: runtime_test.Tslice.Method1
+tags: [private]
 ```
 
 ```Go
@@ -3899,6 +4172,7 @@ func (Tslice) Method1()
 
 ```
 searchKey: runtime_test.MyNode
+tags: [private]
 ```
 
 ```Go
@@ -3912,6 +4186,7 @@ type MyNode struct {
 
 ```
 searchKey: runtime_test.toMyNode
+tags: [private]
 ```
 
 ```Go
@@ -3922,6 +4197,7 @@ func toMyNode(node *LFNode) *MyNode
 
 ```
 searchKey: runtime_test.obj12
+tags: [private]
 ```
 
 ```Go
@@ -3935,6 +4211,7 @@ type obj12 struct {
 
 ```
 searchKey: runtime_test.acLink
+tags: [private]
 ```
 
 ```Go
@@ -3947,6 +4224,7 @@ type acLink struct {
 
 ```
 searchKey: runtime_test.LargeStruct
+tags: [private]
 ```
 
 ```Go
@@ -3959,6 +4237,7 @@ type LargeStruct struct {
 
 ```
 searchKey: runtime_test.chunk
+tags: [private]
 ```
 
 ```Go
@@ -3969,6 +4248,7 @@ type chunk [17]byte
 
 ```
 searchKey: runtime_test.BigKey
+tags: [private]
 ```
 
 ```Go
@@ -3979,6 +4259,7 @@ type BigKey [3]int64
 
 ```
 searchKey: runtime_test.BigVal
+tags: [private]
 ```
 
 ```Go
@@ -3989,6 +4270,7 @@ type BigVal [3]int64
 
 ```
 searchKey: runtime_test.ComplexAlgKey
+tags: [private]
 ```
 
 ```Go
@@ -4007,6 +4289,7 @@ type ComplexAlgKey struct {
 
 ```
 searchKey: runtime_test.FloatInt
+tags: [private]
 ```
 
 ```Go
@@ -4020,6 +4303,7 @@ type FloatInt struct {
 
 ```
 searchKey: runtime_test.empty
+tags: [private]
 ```
 
 ```Go
@@ -4031,6 +4315,7 @@ type empty struct {
 
 ```
 searchKey: runtime_test.canString
+tags: [private]
 ```
 
 ```Go
@@ -4041,6 +4326,7 @@ type canString int
 
 ```
 searchKey: runtime_test.canString.String
+tags: [private]
 ```
 
 ```Go
@@ -4051,6 +4337,7 @@ func (c canString) String() string
 
 ```
 searchKey: runtime_test.Tintptr
+tags: [private]
 ```
 
 ```Go
@@ -4062,6 +4349,7 @@ type Tintptr *int // assignable to *int
 
 ```
 searchKey: runtime_test.Tint
+tags: [private]
 ```
 
 ```Go
@@ -4073,6 +4361,7 @@ type Tint int // *Tint implements Tinter, interface{}
 
 ```
 searchKey: runtime_test.Tint.m
+tags: [private]
 ```
 
 ```Go
@@ -4083,6 +4372,7 @@ func (t *Tint) m()
 
 ```
 searchKey: runtime_test.Tinter
+tags: [private]
 ```
 
 ```Go
@@ -4095,6 +4385,7 @@ type Tinter interface {
 
 ```
 searchKey: runtime_test.bigValue
+tags: [private]
 ```
 
 ```Go
@@ -4109,26 +4400,18 @@ type bigValue struct {
 
 ```
 searchKey: runtime_test.objtype
+tags: [private]
 ```
 
 ```Go
 type objtype [objsize]byte
 ```
 
-#### <a id="adjChunks" href="#adjChunks">func adjChunks() (*objtype, *objtype)</a>
-
-```
-searchKey: runtime_test.adjChunks
-```
-
-```Go
-func adjChunks() (*objtype, *objtype)
-```
-
 #### <a id="adjStringChunk" href="#adjStringChunk">func adjStringChunk() (string, *objtype)</a>
 
 ```
 searchKey: runtime_test.adjStringChunk
+tags: [private]
 ```
 
 ```Go
@@ -4139,6 +4422,7 @@ func adjStringChunk() (string, *objtype)
 
 ```
 searchKey: runtime_test.Object1
+tags: [private]
 ```
 
 ```Go
@@ -4151,6 +4435,7 @@ type Object1 struct {
 
 ```
 searchKey: runtime_test.Object2
+tags: [private]
 ```
 
 ```Go
@@ -4163,6 +4448,7 @@ type Object2 struct {
 
 ```
 searchKey: runtime_test.Matrix
+tags: [private]
 ```
 
 ```Go
@@ -4173,6 +4459,7 @@ type Matrix [][]float64
 
 ```
 searchKey: runtime_test.makeMatrix
+tags: [private]
 ```
 
 ```Go
@@ -4183,6 +4470,7 @@ func makeMatrix(n int) Matrix
 
 ```
 searchKey: runtime_test.struct24
+tags: [private]
 ```
 
 ```Go
@@ -4193,6 +4481,7 @@ type struct24 struct{ a, b, c int64 }
 
 ```
 searchKey: runtime_test.struct32
+tags: [private]
 ```
 
 ```Go
@@ -4203,6 +4492,7 @@ type struct32 struct{ a, b, c, d int64 }
 
 ```
 searchKey: runtime_test.struct40
+tags: [private]
 ```
 
 ```Go
@@ -4213,6 +4503,7 @@ type struct40 struct{ a, b, c, d, e int64 }
 
 ```
 searchKey: runtime_test.bigBuf
+tags: [private]
 ```
 
 ```Go
@@ -4223,6 +4514,7 @@ type bigBuf [4 * 1024]byte
 
 ```
 searchKey: runtime_test.xtreeNode
+tags: [private]
 ```
 
 ```Go
@@ -4235,6 +4527,7 @@ type xtreeNode struct {
 
 ```
 searchKey: runtime_test.makeTree
+tags: [private]
 ```
 
 ```Go
@@ -4245,6 +4538,7 @@ func makeTree(d int) *xtreeNode
 
 ```
 searchKey: runtime_test.structWithMethod
+tags: [private]
 ```
 
 ```Go
@@ -4255,6 +4549,7 @@ type structWithMethod struct{}
 
 ```
 searchKey: runtime_test.structWithMethod.caller
+tags: [private]
 ```
 
 ```Go
@@ -4265,6 +4560,7 @@ func (s structWithMethod) caller() string
 
 ```
 searchKey: runtime_test.structWithMethod.callers
+tags: [private]
 ```
 
 ```Go
@@ -4275,6 +4571,7 @@ func (s structWithMethod) callers() []uintptr
 
 ```
 searchKey: runtime_test.structWithMethod.stack
+tags: [private]
 ```
 
 ```Go
@@ -4285,6 +4582,7 @@ func (s structWithMethod) stack() string
 
 ```
 searchKey: runtime_test.structWithMethod.nop
+tags: [private]
 ```
 
 ```Go
@@ -4295,6 +4593,7 @@ func (s structWithMethod) nop()
 
 ```
 searchKey: runtime_test.I
+tags: [private]
 ```
 
 ```Go
@@ -4307,6 +4606,7 @@ type I interface {
 
 ```
 searchKey: runtime_test.atoi64Test
+tags: [private]
 ```
 
 ```Go
@@ -4321,6 +4621,7 @@ type atoi64Test struct {
 
 ```
 searchKey: runtime_test.atoi32Test
+tags: [private]
 ```
 
 ```Go
@@ -4335,6 +4636,7 @@ type atoi32Test struct {
 
 ```
 searchKey: runtime_test.fakeTimeFrame
+tags: [private]
 ```
 
 ```Go
@@ -4346,10 +4648,15 @@ type fakeTimeFrame struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="f1" href="#f1">func f1(pan bool) []uintptr</a>
 
 ```
 searchKey: runtime_test.f1
+tags: [private]
 ```
 
 ```Go
@@ -4360,6 +4667,7 @@ func f1(pan bool) []uintptr
 
 ```
 searchKey: runtime_test.f2
+tags: [private]
 ```
 
 ```Go
@@ -4370,6 +4678,7 @@ func f2(pan bool) []uintptr
 
 ```
 searchKey: runtime_test.f3
+tags: [private]
 ```
 
 ```Go
@@ -4380,6 +4689,7 @@ func f3(pan bool) []uintptr
 
 ```
 searchKey: runtime_test.testCallers
+tags: [private]
 ```
 
 ```Go
@@ -4390,6 +4700,7 @@ func testCallers(t *testing.T, pcs []uintptr, pan bool)
 
 ```
 searchKey: runtime_test.testCallersEqual
+tags: [private]
 ```
 
 ```Go
@@ -4400,6 +4711,7 @@ func testCallersEqual(t *testing.T, pcs []uintptr, want []string)
 
 ```
 searchKey: runtime_test.TestCallers
+tags: [private]
 ```
 
 ```Go
@@ -4410,6 +4722,7 @@ func TestCallers(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCallersPanic
+tags: [private]
 ```
 
 ```Go
@@ -4420,6 +4733,7 @@ func TestCallersPanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCallersDoublePanic
+tags: [private]
 ```
 
 ```Go
@@ -4430,6 +4744,7 @@ func TestCallersDoublePanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCallersAfterRecovery
+tags: [private]
 ```
 
 ```Go
@@ -4442,6 +4757,7 @@ Test that a defer after a successful recovery looks like it is called directly f
 
 ```
 searchKey: runtime_test.TestCallersAbortedPanic
+tags: [private]
 ```
 
 ```Go
@@ -4452,6 +4768,7 @@ func TestCallersAbortedPanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCallersAbortedPanic2
+tags: [private]
 ```
 
 ```Go
@@ -4462,6 +4779,7 @@ func TestCallersAbortedPanic2(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCallersNilPointerPanic
+tags: [private]
 ```
 
 ```Go
@@ -4472,6 +4790,7 @@ func TestCallersNilPointerPanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCallersDivZeroPanic
+tags: [private]
 ```
 
 ```Go
@@ -4482,6 +4801,7 @@ func TestCallersDivZeroPanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCallersDeferNilFuncPanic
+tags: [private]
 ```
 
 ```Go
@@ -4492,6 +4812,7 @@ func TestCallersDeferNilFuncPanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCallersDeferNilFuncPanicWithLoop
+tags: [private]
 ```
 
 ```Go
@@ -4504,6 +4825,7 @@ Same test, but forcing non-open-coded defer by putting the defer in a loop.  See
 
 ```
 searchKey: runtime_test.TestChan
+tags: [private]
 ```
 
 ```Go
@@ -4514,6 +4836,7 @@ func TestChan(t *testing.T)
 
 ```
 searchKey: runtime_test.TestNonblockRecvRace
+tags: [private]
 ```
 
 ```Go
@@ -4524,6 +4847,7 @@ func TestNonblockRecvRace(t *testing.T)
 
 ```
 searchKey: runtime_test.TestNonblockSelectRace
+tags: [private]
 ```
 
 ```Go
@@ -4546,6 +4870,7 @@ The second goroutine does a non-blocking select receiving from c1 and c2. From t
 
 ```
 searchKey: runtime_test.TestNonblockSelectRace2
+tags: [private]
 ```
 
 ```Go
@@ -4558,6 +4883,7 @@ Same as TestNonblockSelectRace, but close(c2) replaces c2 <- 1.
 
 ```
 searchKey: runtime_test.TestSelfSelect
+tags: [private]
 ```
 
 ```Go
@@ -4568,6 +4894,7 @@ func TestSelfSelect(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSelectStress
+tags: [private]
 ```
 
 ```Go
@@ -4578,6 +4905,7 @@ func TestSelectStress(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSelectFairness
+tags: [private]
 ```
 
 ```Go
@@ -4588,6 +4916,7 @@ func TestSelectFairness(t *testing.T)
 
 ```
 searchKey: runtime_test.TestChanSendInterface
+tags: [private]
 ```
 
 ```Go
@@ -4598,6 +4927,7 @@ func TestChanSendInterface(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPseudoRandomSend
+tags: [private]
 ```
 
 ```Go
@@ -4608,6 +4938,7 @@ func TestPseudoRandomSend(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMultiConsumer
+tags: [private]
 ```
 
 ```Go
@@ -4618,6 +4949,7 @@ func TestMultiConsumer(t *testing.T)
 
 ```
 searchKey: runtime_test.TestShrinkStackDuringBlockedSend
+tags: [private]
 ```
 
 ```Go
@@ -4628,6 +4960,7 @@ func TestShrinkStackDuringBlockedSend(t *testing.T)
 
 ```
 searchKey: runtime_test.TestNoShrinkStackWhileParking
+tags: [private]
 ```
 
 ```Go
@@ -4638,6 +4971,7 @@ func TestNoShrinkStackWhileParking(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSelectDuplicateChannel
+tags: [private]
 ```
 
 ```Go
@@ -4648,6 +4982,7 @@ func TestSelectDuplicateChannel(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSelectStackAdjust
+tags: [private]
 ```
 
 ```Go
@@ -4658,6 +4993,7 @@ func TestSelectStackAdjust(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkMakeChan
+tags: [private]
 ```
 
 ```Go
@@ -4668,6 +5004,7 @@ func BenchmarkMakeChan(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanNonblocking
+tags: [private]
 ```
 
 ```Go
@@ -4678,6 +5015,7 @@ func BenchmarkChanNonblocking(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSelectUncontended
+tags: [private]
 ```
 
 ```Go
@@ -4688,6 +5026,7 @@ func BenchmarkSelectUncontended(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSelectSyncContended
+tags: [private]
 ```
 
 ```Go
@@ -4698,6 +5037,7 @@ func BenchmarkSelectSyncContended(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSelectAsyncContended
+tags: [private]
 ```
 
 ```Go
@@ -4708,6 +5048,7 @@ func BenchmarkSelectAsyncContended(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSelectNonblock
+tags: [private]
 ```
 
 ```Go
@@ -4718,6 +5059,7 @@ func BenchmarkSelectNonblock(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanUncontended
+tags: [private]
 ```
 
 ```Go
@@ -4728,6 +5070,7 @@ func BenchmarkChanUncontended(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanContended
+tags: [private]
 ```
 
 ```Go
@@ -4738,6 +5081,7 @@ func BenchmarkChanContended(b *testing.B)
 
 ```
 searchKey: runtime_test.benchmarkChanSync
+tags: [private]
 ```
 
 ```Go
@@ -4748,6 +5092,7 @@ func benchmarkChanSync(b *testing.B, work int)
 
 ```
 searchKey: runtime_test.BenchmarkChanSync
+tags: [private]
 ```
 
 ```Go
@@ -4758,6 +5103,7 @@ func BenchmarkChanSync(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanSyncWork
+tags: [private]
 ```
 
 ```Go
@@ -4768,6 +5114,7 @@ func BenchmarkChanSyncWork(b *testing.B)
 
 ```
 searchKey: runtime_test.benchmarkChanProdCons
+tags: [private]
 ```
 
 ```Go
@@ -4778,6 +5125,7 @@ func benchmarkChanProdCons(b *testing.B, chanSize, localWork int)
 
 ```
 searchKey: runtime_test.BenchmarkChanProdCons0
+tags: [private]
 ```
 
 ```Go
@@ -4788,6 +5136,7 @@ func BenchmarkChanProdCons0(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanProdCons10
+tags: [private]
 ```
 
 ```Go
@@ -4798,6 +5147,7 @@ func BenchmarkChanProdCons10(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanProdCons100
+tags: [private]
 ```
 
 ```Go
@@ -4808,6 +5158,7 @@ func BenchmarkChanProdCons100(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanProdConsWork0
+tags: [private]
 ```
 
 ```Go
@@ -4818,6 +5169,7 @@ func BenchmarkChanProdConsWork0(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanProdConsWork10
+tags: [private]
 ```
 
 ```Go
@@ -4828,6 +5180,7 @@ func BenchmarkChanProdConsWork10(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanProdConsWork100
+tags: [private]
 ```
 
 ```Go
@@ -4838,6 +5191,7 @@ func BenchmarkChanProdConsWork100(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSelectProdCons
+tags: [private]
 ```
 
 ```Go
@@ -4848,6 +5202,7 @@ func BenchmarkSelectProdCons(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanCreation
+tags: [private]
 ```
 
 ```Go
@@ -4858,6 +5213,7 @@ func BenchmarkChanCreation(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanSem
+tags: [private]
 ```
 
 ```Go
@@ -4868,6 +5224,7 @@ func BenchmarkChanSem(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanPopular
+tags: [private]
 ```
 
 ```Go
@@ -4878,6 +5235,7 @@ func BenchmarkChanPopular(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkChanClosed
+tags: [private]
 ```
 
 ```Go
@@ -4888,6 +5246,7 @@ func BenchmarkChanClosed(b *testing.B)
 
 ```
 searchKey: runtime_test.localWork
+tags: [private]
 ```
 
 ```Go
@@ -4898,6 +5257,7 @@ func localWork(w int)
 
 ```
 searchKey: runtime_test.TestChanSendSelectBarrier
+tags: [private]
 ```
 
 ```Go
@@ -4908,6 +5268,7 @@ func TestChanSendSelectBarrier(t *testing.T)
 
 ```
 searchKey: runtime_test.TestChanSendBarrier
+tags: [private]
 ```
 
 ```Go
@@ -4918,6 +5279,7 @@ func TestChanSendBarrier(t *testing.T)
 
 ```
 searchKey: runtime_test.testChanSendBarrier
+tags: [private]
 ```
 
 ```Go
@@ -4928,6 +5290,7 @@ func testChanSendBarrier(useSelect bool)
 
 ```
 searchKey: runtime_test.TestCheckPtr
+tags: [private]
 ```
 
 ```Go
@@ -4938,6 +5301,7 @@ func TestCheckPtr(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkCallClosure
+tags: [private]
 ```
 
 ```Go
@@ -4948,6 +5312,7 @@ func BenchmarkCallClosure(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCallClosure1
+tags: [private]
 ```
 
 ```Go
@@ -4958,6 +5323,7 @@ func BenchmarkCallClosure1(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCallClosure2
+tags: [private]
 ```
 
 ```Go
@@ -4968,6 +5334,7 @@ func BenchmarkCallClosure2(b *testing.B)
 
 ```
 searchKey: runtime_test.addr1
+tags: [private]
 ```
 
 ```Go
@@ -4978,6 +5345,7 @@ func addr1(x int) *int
 
 ```
 searchKey: runtime_test.BenchmarkCallClosure3
+tags: [private]
 ```
 
 ```Go
@@ -4988,6 +5356,7 @@ func BenchmarkCallClosure3(b *testing.B)
 
 ```
 searchKey: runtime_test.addr2
+tags: [private]
 ```
 
 ```Go
@@ -4998,6 +5367,7 @@ func addr2() (x int, p *int)
 
 ```
 searchKey: runtime_test.BenchmarkCallClosure4
+tags: [private]
 ```
 
 ```Go
@@ -5008,6 +5378,7 @@ func BenchmarkCallClosure4(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkComplex128DivNormal
+tags: [private]
 ```
 
 ```Go
@@ -5018,6 +5389,7 @@ func BenchmarkComplex128DivNormal(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkComplex128DivNisNaN
+tags: [private]
 ```
 
 ```Go
@@ -5028,6 +5400,7 @@ func BenchmarkComplex128DivNisNaN(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkComplex128DivDisNaN
+tags: [private]
 ```
 
 ```Go
@@ -5038,6 +5411,7 @@ func BenchmarkComplex128DivDisNaN(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkComplex128DivNisInf
+tags: [private]
 ```
 
 ```Go
@@ -5048,6 +5422,7 @@ func BenchmarkComplex128DivNisInf(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkComplex128DivDisInf
+tags: [private]
 ```
 
 ```Go
@@ -5058,6 +5433,7 @@ func BenchmarkComplex128DivDisInf(b *testing.B)
 
 ```
 searchKey: runtime_test.TestCgoCrashHandler
+tags: [private]
 ```
 
 ```Go
@@ -5068,6 +5444,7 @@ func TestCgoCrashHandler(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoSignalDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -5078,6 +5455,7 @@ func TestCgoSignalDeadlock(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoTraceback
+tags: [private]
 ```
 
 ```Go
@@ -5088,6 +5466,7 @@ func TestCgoTraceback(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoCallbackGC
+tags: [private]
 ```
 
 ```Go
@@ -5098,6 +5477,7 @@ func TestCgoCallbackGC(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoExternalThreadPanic
+tags: [private]
 ```
 
 ```Go
@@ -5108,6 +5488,7 @@ func TestCgoExternalThreadPanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoExternalThreadSIGPROF
+tags: [private]
 ```
 
 ```Go
@@ -5118,6 +5499,7 @@ func TestCgoExternalThreadSIGPROF(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoExternalThreadSignal
+tags: [private]
 ```
 
 ```Go
@@ -5128,6 +5510,7 @@ func TestCgoExternalThreadSignal(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoDLLImports
+tags: [private]
 ```
 
 ```Go
@@ -5138,6 +5521,7 @@ func TestCgoDLLImports(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoExecSignalMask
+tags: [private]
 ```
 
 ```Go
@@ -5148,6 +5532,7 @@ func TestCgoExecSignalMask(t *testing.T)
 
 ```
 searchKey: runtime_test.TestEnsureDropM
+tags: [private]
 ```
 
 ```Go
@@ -5158,6 +5543,7 @@ func TestEnsureDropM(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoCheckBytes
+tags: [private]
 ```
 
 ```Go
@@ -5170,6 +5556,7 @@ Test for issue 14387. Test that the program that doesn't need any cgo pointer ch
 
 ```
 searchKey: runtime_test.TestCgoPanicDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -5180,6 +5567,7 @@ func TestCgoPanicDeadlock(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoCCodeSIGPROF
+tags: [private]
 ```
 
 ```Go
@@ -5190,6 +5578,7 @@ func TestCgoCCodeSIGPROF(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoCrashTraceback
+tags: [private]
 ```
 
 ```Go
@@ -5200,6 +5589,7 @@ func TestCgoCrashTraceback(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoCrashTracebackGo
+tags: [private]
 ```
 
 ```Go
@@ -5210,6 +5600,7 @@ func TestCgoCrashTracebackGo(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoTracebackContext
+tags: [private]
 ```
 
 ```Go
@@ -5220,6 +5611,7 @@ func TestCgoTracebackContext(t *testing.T)
 
 ```
 searchKey: runtime_test.testCgoPprof
+tags: [private]
 ```
 
 ```Go
@@ -5230,6 +5622,7 @@ func testCgoPprof(t *testing.T, buildArg, runArg, top, bottom string)
 
 ```
 searchKey: runtime_test.TestCgoPprof
+tags: [private]
 ```
 
 ```Go
@@ -5240,6 +5633,7 @@ func TestCgoPprof(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoPprofPIE
+tags: [private]
 ```
 
 ```Go
@@ -5250,6 +5644,7 @@ func TestCgoPprofPIE(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoPprofThread
+tags: [private]
 ```
 
 ```Go
@@ -5260,6 +5655,7 @@ func TestCgoPprofThread(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoPprofThreadNoTraceback
+tags: [private]
 ```
 
 ```Go
@@ -5270,6 +5666,7 @@ func TestCgoPprofThreadNoTraceback(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRaceProf
+tags: [private]
 ```
 
 ```Go
@@ -5280,6 +5677,7 @@ func TestRaceProf(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRaceSignal
+tags: [private]
 ```
 
 ```Go
@@ -5290,6 +5688,7 @@ func TestRaceSignal(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoNumGoroutine
+tags: [private]
 ```
 
 ```Go
@@ -5300,6 +5699,7 @@ func TestCgoNumGoroutine(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCatchPanic
+tags: [private]
 ```
 
 ```Go
@@ -5310,6 +5710,7 @@ func TestCatchPanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoLockOSThreadExit
+tags: [private]
 ```
 
 ```Go
@@ -5320,6 +5721,7 @@ func TestCgoLockOSThreadExit(t *testing.T)
 
 ```
 searchKey: runtime_test.TestWindowsStackMemoryCgo
+tags: [private]
 ```
 
 ```Go
@@ -5330,6 +5732,7 @@ func TestWindowsStackMemoryCgo(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSigStackSwapping
+tags: [private]
 ```
 
 ```Go
@@ -5340,6 +5743,7 @@ func TestSigStackSwapping(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCgoTracebackSigpanic
+tags: [private]
 ```
 
 ```Go
@@ -5350,6 +5754,7 @@ func TestCgoTracebackSigpanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestBigStackCallbackCgo
+tags: [private]
 ```
 
 ```Go
@@ -5364,6 +5769,7 @@ See also TestBigStackCallbackSyscall.
 
 ```
 searchKey: runtime_test.nextTrace
+tags: [private]
 ```
 
 ```Go
@@ -5374,6 +5780,7 @@ func nextTrace(lines []string) ([]string, []string)
 
 ```
 searchKey: runtime_test.findTrace
+tags: [private]
 ```
 
 ```Go
@@ -5384,6 +5791,7 @@ func findTrace(text, top string) []string
 
 ```
 searchKey: runtime_test.TestSegv
+tags: [private]
 ```
 
 ```Go
@@ -5394,6 +5802,7 @@ func TestSegv(t *testing.T)
 
 ```
 searchKey: runtime_test.TestEINTR
+tags: [private]
 ```
 
 ```Go
@@ -5406,6 +5815,7 @@ TestEINTR tests that we handle EINTR correctly. See issue #20400 and friends.
 
 ```
 searchKey: runtime_test.TestNeedmDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -5418,6 +5828,7 @@ Issue #42207.
 
 ```
 searchKey: runtime_test.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -5428,6 +5839,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: runtime_test.runTestProg
+tags: [private]
 ```
 
 ```Go
@@ -5438,6 +5850,7 @@ func runTestProg(t *testing.T, binary, name string, env ...string) string
 
 ```
 searchKey: runtime_test.runBuiltTestProg
+tags: [private]
 ```
 
 ```Go
@@ -5448,6 +5861,7 @@ func runBuiltTestProg(t *testing.T, exe, name string, env ...string) string
 
 ```
 searchKey: runtime_test.buildTestProg
+tags: [private]
 ```
 
 ```Go
@@ -5458,6 +5872,7 @@ func buildTestProg(t *testing.T, binary string, flags ...string) (string, error)
 
 ```
 searchKey: runtime_test.TestVDSO
+tags: [private]
 ```
 
 ```Go
@@ -5468,6 +5883,7 @@ func TestVDSO(t *testing.T)
 
 ```
 searchKey: runtime_test.testCrashHandler
+tags: [private]
 ```
 
 ```Go
@@ -5478,6 +5894,7 @@ func testCrashHandler(t *testing.T, cgo bool)
 
 ```
 searchKey: runtime_test.TestCrashHandler
+tags: [private]
 ```
 
 ```Go
@@ -5488,6 +5905,7 @@ func TestCrashHandler(t *testing.T)
 
 ```
 searchKey: runtime_test.testDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -5498,6 +5916,7 @@ func testDeadlock(t *testing.T, name string)
 
 ```
 searchKey: runtime_test.TestSimpleDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -5508,6 +5927,7 @@ func TestSimpleDeadlock(t *testing.T)
 
 ```
 searchKey: runtime_test.TestInitDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -5518,6 +5938,7 @@ func TestInitDeadlock(t *testing.T)
 
 ```
 searchKey: runtime_test.TestLockedDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -5528,6 +5949,7 @@ func TestLockedDeadlock(t *testing.T)
 
 ```
 searchKey: runtime_test.TestLockedDeadlock2
+tags: [private]
 ```
 
 ```Go
@@ -5538,6 +5960,7 @@ func TestLockedDeadlock2(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGoexitDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -5548,6 +5971,7 @@ func TestGoexitDeadlock(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStackOverflow
+tags: [private]
 ```
 
 ```Go
@@ -5558,6 +5982,7 @@ func TestStackOverflow(t *testing.T)
 
 ```
 searchKey: runtime_test.TestThreadExhaustion
+tags: [private]
 ```
 
 ```Go
@@ -5568,6 +5993,7 @@ func TestThreadExhaustion(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRecursivePanic
+tags: [private]
 ```
 
 ```Go
@@ -5578,6 +6004,7 @@ func TestRecursivePanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRecursivePanic2
+tags: [private]
 ```
 
 ```Go
@@ -5588,6 +6015,7 @@ func TestRecursivePanic2(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRecursivePanic3
+tags: [private]
 ```
 
 ```Go
@@ -5598,6 +6026,7 @@ func TestRecursivePanic3(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRecursivePanic4
+tags: [private]
 ```
 
 ```Go
@@ -5608,6 +6037,7 @@ func TestRecursivePanic4(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRecursivePanic5
+tags: [private]
 ```
 
 ```Go
@@ -5618,6 +6048,7 @@ func TestRecursivePanic5(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGoexitCrash
+tags: [private]
 ```
 
 ```Go
@@ -5628,6 +6059,7 @@ func TestGoexitCrash(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGoexitDefer
+tags: [private]
 ```
 
 ```Go
@@ -5638,6 +6070,7 @@ func TestGoexitDefer(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGoNil
+tags: [private]
 ```
 
 ```Go
@@ -5648,6 +6081,7 @@ func TestGoNil(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMainGoroutineID
+tags: [private]
 ```
 
 ```Go
@@ -5658,6 +6092,7 @@ func TestMainGoroutineID(t *testing.T)
 
 ```
 searchKey: runtime_test.TestNoHelperGoroutines
+tags: [private]
 ```
 
 ```Go
@@ -5668,6 +6103,7 @@ func TestNoHelperGoroutines(t *testing.T)
 
 ```
 searchKey: runtime_test.TestBreakpoint
+tags: [private]
 ```
 
 ```Go
@@ -5678,6 +6114,7 @@ func TestBreakpoint(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGoexitInPanic
+tags: [private]
 ```
 
 ```Go
@@ -5688,6 +6125,7 @@ func TestGoexitInPanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRuntimePanicWithRuntimeError
+tags: [private]
 ```
 
 ```Go
@@ -5700,6 +6138,7 @@ Issue 14965: Runtime panics should be of type runtime.Error
 
 ```
 searchKey: runtime_test.panicValue
+tags: [private]
 ```
 
 ```Go
@@ -5710,6 +6149,7 @@ func panicValue(fn func()) (recovered interface{})
 
 ```
 searchKey: runtime_test.TestPanicAfterGoexit
+tags: [private]
 ```
 
 ```Go
@@ -5720,6 +6160,7 @@ func TestPanicAfterGoexit(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRecoveredPanicAfterGoexit
+tags: [private]
 ```
 
 ```Go
@@ -5730,6 +6171,7 @@ func TestRecoveredPanicAfterGoexit(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRecoverBeforePanicAfterGoexit
+tags: [private]
 ```
 
 ```Go
@@ -5740,6 +6182,7 @@ func TestRecoverBeforePanicAfterGoexit(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRecoverBeforePanicAfterGoexit2
+tags: [private]
 ```
 
 ```Go
@@ -5750,6 +6193,7 @@ func TestRecoverBeforePanicAfterGoexit2(t *testing.T)
 
 ```
 searchKey: runtime_test.TestNetpollDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -5760,6 +6204,7 @@ func TestNetpollDeadlock(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPanicTraceback
+tags: [private]
 ```
 
 ```Go
@@ -5770,6 +6215,7 @@ func TestPanicTraceback(t *testing.T)
 
 ```
 searchKey: runtime_test.testPanicDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -5780,6 +6226,7 @@ func testPanicDeadlock(t *testing.T, name string, want string)
 
 ```
 searchKey: runtime_test.TestPanicDeadlockGosched
+tags: [private]
 ```
 
 ```Go
@@ -5790,6 +6237,7 @@ func TestPanicDeadlockGosched(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPanicDeadlockSyscall
+tags: [private]
 ```
 
 ```Go
@@ -5800,6 +6248,7 @@ func TestPanicDeadlockSyscall(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPanicLoop
+tags: [private]
 ```
 
 ```Go
@@ -5810,6 +6259,7 @@ func TestPanicLoop(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMemPprof
+tags: [private]
 ```
 
 ```Go
@@ -5820,6 +6270,7 @@ func TestMemPprof(t *testing.T)
 
 ```
 searchKey: runtime_test.TestConcurrentMapWrites
+tags: [private]
 ```
 
 ```Go
@@ -5830,6 +6281,7 @@ func TestConcurrentMapWrites(t *testing.T)
 
 ```
 searchKey: runtime_test.TestConcurrentMapReadWrite
+tags: [private]
 ```
 
 ```Go
@@ -5840,6 +6292,7 @@ func TestConcurrentMapReadWrite(t *testing.T)
 
 ```
 searchKey: runtime_test.TestConcurrentMapIterateWrite
+tags: [private]
 ```
 
 ```Go
@@ -5850,6 +6303,7 @@ func TestConcurrentMapIterateWrite(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPanicInlined
+tags: [private]
 ```
 
 ```Go
@@ -5862,6 +6316,7 @@ Test for issue #10152.
 
 ```
 searchKey: runtime_test.TestPanicRace
+tags: [private]
 ```
 
 ```Go
@@ -5874,6 +6329,7 @@ Test for issues #3934 and #20018. We want to delay exiting until a panic print i
 
 ```
 searchKey: runtime_test.TestBadTraceback
+tags: [private]
 ```
 
 ```Go
@@ -5884,6 +6340,7 @@ func TestBadTraceback(t *testing.T)
 
 ```
 searchKey: runtime_test.TestTimePprof
+tags: [private]
 ```
 
 ```Go
@@ -5894,6 +6351,7 @@ func TestTimePprof(t *testing.T)
 
 ```
 searchKey: runtime_test.TestAbort
+tags: [private]
 ```
 
 ```Go
@@ -5902,10 +6360,11 @@ func TestAbort(t *testing.T)
 
 Test that runtime.abort does so. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.crash_test.go" href="#init.crash_test.go">func init()</a>
 
 ```
 searchKey: runtime_test.init
+tags: [private]
 ```
 
 ```Go
@@ -5918,6 +6377,7 @@ For TestRuntimePanic: test a panic in the runtime package without involving the 
 
 ```
 searchKey: runtime_test.TestRuntimePanic
+tags: [private]
 ```
 
 ```Go
@@ -5928,6 +6388,7 @@ func TestRuntimePanic(t *testing.T)
 
 ```
 searchKey: runtime_test.TestG0StackOverflow
+tags: [private]
 ```
 
 ```Go
@@ -5940,6 +6401,7 @@ Test that g0 stack overflows are handled gracefully.
 
 ```
 searchKey: runtime_test.TestDoublePanic
+tags: [private]
 ```
 
 ```Go
@@ -5948,10 +6410,11 @@ func TestDoublePanic(t *testing.T)
 
 Test that panic message is not clobbered. See issue 30150. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.crash_unix_test.go" href="#init.crash_unix_test.go">func init()</a>
 
 ```
 searchKey: runtime_test.init
+tags: [private]
 ```
 
 ```Go
@@ -5962,6 +6425,7 @@ func init()
 
 ```
 searchKey: runtime_test.TestBadOpen
+tags: [private]
 ```
 
 ```Go
@@ -5972,6 +6436,7 @@ func TestBadOpen(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCrashDumpsAllThreads
+tags: [private]
 ```
 
 ```Go
@@ -5982,16 +6447,18 @@ func TestCrashDumpsAllThreads(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPanicSystemstack
+tags: [private]
 ```
 
 ```Go
 func TestPanicSystemstack(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.crash_unix_test.go.0xc060101578" href="#init.crash_unix_test.go.0xc060101578">func init()</a>
 
 ```
 searchKey: runtime_test.init
+tags: [private]
 ```
 
 ```Go
@@ -6002,6 +6469,7 @@ func init()
 
 ```
 searchKey: runtime_test.testPanicSystemstackInternal
+tags: [private]
 ```
 
 ```Go
@@ -6012,6 +6480,7 @@ func testPanicSystemstackInternal()
 
 ```
 searchKey: runtime_test.TestSignalExitStatus
+tags: [private]
 ```
 
 ```Go
@@ -6022,6 +6491,7 @@ func TestSignalExitStatus(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSignalIgnoreSIGTRAP
+tags: [private]
 ```
 
 ```Go
@@ -6032,6 +6502,7 @@ func TestSignalIgnoreSIGTRAP(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSignalDuringExec
+tags: [private]
 ```
 
 ```Go
@@ -6042,6 +6513,7 @@ func TestSignalDuringExec(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSignalM
+tags: [private]
 ```
 
 ```Go
@@ -6052,6 +6524,7 @@ func TestSignalM(t *testing.T)
 
 ```
 searchKey: runtime_test.skipDebugLog
+tags: [private]
 ```
 
 ```Go
@@ -6062,6 +6535,7 @@ func skipDebugLog(t *testing.T)
 
 ```
 searchKey: runtime_test.dlogCanonicalize
+tags: [private]
 ```
 
 ```Go
@@ -6072,6 +6546,7 @@ func dlogCanonicalize(x string) string
 
 ```
 searchKey: runtime_test.TestDebugLog
+tags: [private]
 ```
 
 ```Go
@@ -6082,6 +6557,7 @@ func TestDebugLog(t *testing.T)
 
 ```
 searchKey: runtime_test.TestDebugLogTypes
+tags: [private]
 ```
 
 ```Go
@@ -6092,6 +6568,7 @@ func TestDebugLogTypes(t *testing.T)
 
 ```
 searchKey: runtime_test.TestDebugLogSym
+tags: [private]
 ```
 
 ```Go
@@ -6102,6 +6579,7 @@ func TestDebugLogSym(t *testing.T)
 
 ```
 searchKey: runtime_test.TestDebugLogInterleaving
+tags: [private]
 ```
 
 ```Go
@@ -6112,6 +6590,7 @@ func TestDebugLogInterleaving(t *testing.T)
 
 ```
 searchKey: runtime_test.TestDebugLogWraparound
+tags: [private]
 ```
 
 ```Go
@@ -6122,6 +6601,7 @@ func TestDebugLogWraparound(t *testing.T)
 
 ```
 searchKey: runtime_test.TestDebugLogLongString
+tags: [private]
 ```
 
 ```Go
@@ -6132,6 +6612,7 @@ func TestDebugLogLongString(t *testing.T)
 
 ```
 searchKey: runtime_test.TestUnconditionalPanic
+tags: [private]
 ```
 
 ```Go
@@ -6144,6 +6625,7 @@ Make sure open-coded defer exit code is not lost, even when there is an uncondit
 
 ```
 searchKey: runtime_test.TestOpenAndNonOpenDefers
+tags: [private]
 ```
 
 ```Go
@@ -6156,6 +6638,7 @@ Test an open-coded defer and non-open-coded defer - make sure both defers run an
 
 ```
 searchKey: runtime_test.testOpen
+tags: [private]
 ```
 
 ```Go
@@ -6166,6 +6649,7 @@ func testOpen(t *testing.T, arg int)
 
 ```
 searchKey: runtime_test.TestNonOpenAndOpenDefers
+tags: [private]
 ```
 
 ```Go
@@ -6178,6 +6662,7 @@ Test a non-open-coded defer and an open-coded defer - make sure both defers run 
 
 ```
 searchKey: runtime_test.TestConditionalDefers
+tags: [private]
 ```
 
 ```Go
@@ -6190,6 +6675,7 @@ Make sure that conditional open-coded defers are activated correctly and run in 
 
 ```
 searchKey: runtime_test.testConditionalDefers
+tags: [private]
 ```
 
 ```Go
@@ -6200,6 +6686,7 @@ func testConditionalDefers(n int)
 
 ```
 searchKey: runtime_test.TestDisappearingDefer
+tags: [private]
 ```
 
 ```Go
@@ -6212,6 +6699,7 @@ Test that there is no compile-time or run-time error if an open-coded defer call
 
 ```
 searchKey: runtime_test.TestAbortedPanic
+tags: [private]
 ```
 
 ```Go
@@ -6224,6 +6712,7 @@ This tests an extra recursive panic behavior that is only specified in the code.
 
 ```
 searchKey: runtime_test.TestRecoverMatching
+tags: [private]
 ```
 
 ```Go
@@ -6236,6 +6725,7 @@ This tests that recover() does not succeed unless it is called directly from a d
 
 ```
 searchKey: runtime_test.sideeffect
+tags: [private]
 ```
 
 ```Go
@@ -6246,6 +6736,7 @@ func sideeffect(n int64) int64
 
 ```
 searchKey: runtime_test.TestNonSSAableArgs
+tags: [private]
 ```
 
 ```Go
@@ -6258,6 +6749,7 @@ Test that nonSSAable arguments to defer are handled correctly and only evaluated
 
 ```
 searchKey: runtime_test.doPanic
+tags: [private]
 ```
 
 ```Go
@@ -6268,6 +6760,7 @@ func doPanic()
 
 ```
 searchKey: runtime_test.TestDeferForFuncWithNoExit
+tags: [private]
 ```
 
 ```Go
@@ -6278,6 +6771,7 @@ func TestDeferForFuncWithNoExit(t *testing.T)
 
 ```
 searchKey: runtime_test.TestDeferWithRepeatedRepanics
+tags: [private]
 ```
 
 ```Go
@@ -6290,6 +6784,7 @@ Test case approximating issue #37664, where a recursive function (interpreter) m
 
 ```
 searchKey: runtime_test.interpreter
+tags: [private]
 ```
 
 ```Go
@@ -6300,6 +6795,7 @@ func interpreter(level int, maxlevel int, rec int)
 
 ```
 searchKey: runtime_test.recurseFnPanicRec
+tags: [private]
 ```
 
 ```Go
@@ -6310,6 +6806,7 @@ func recurseFnPanicRec(level int, maxlevel int)
 
 ```
 searchKey: runtime_test.recurseFn
+tags: [private]
 ```
 
 ```Go
@@ -6320,6 +6817,7 @@ func recurseFn(level int, maxlevel int)
 
 ```
 searchKey: runtime_test.TestIssue37688
+tags: [private]
 ```
 
 ```Go
@@ -6332,6 +6830,7 @@ Try to reproduce issue #37688, where a pointer to an open-coded defer struct is 
 
 ```
 searchKey: runtime_test.g2
+tags: [private]
 ```
 
 ```Go
@@ -6342,6 +6841,7 @@ func g2()
 
 ```
 searchKey: runtime_test.g3
+tags: [private]
 ```
 
 ```Go
@@ -6352,6 +6852,7 @@ func g3()
 
 ```
 searchKey: runtime_test.ff1
+tags: [private]
 ```
 
 ```Go
@@ -6362,6 +6863,7 @@ func ff1(ap *foo, a, b, c, d, e, f, g, h, i int)
 
 ```
 searchKey: runtime_test.rec1
+tags: [private]
 ```
 
 ```Go
@@ -6372,6 +6874,7 @@ func rec1(max int)
 
 ```
 searchKey: runtime_test.TestIssue43921
+tags: [private]
 ```
 
 ```Go
@@ -6382,6 +6885,7 @@ func TestIssue43921(t *testing.T)
 
 ```
 searchKey: runtime_test.expect
+tags: [private]
 ```
 
 ```Go
@@ -6392,6 +6896,7 @@ func expect(t *testing.T, n int, err interface{})
 
 ```
 searchKey: runtime_test.TestFixedGOROOT
+tags: [private]
 ```
 
 ```Go
@@ -6402,6 +6907,7 @@ func TestFixedGOROOT(t *testing.T)
 
 ```
 searchKey: runtime_test.ExampleFrames
+tags: [private]
 ```
 
 ```Go
@@ -6412,6 +6918,7 @@ func ExampleFrames()
 
 ```
 searchKey: runtime_test.TestFastLog2
+tags: [private]
 ```
 
 ```Go
@@ -6422,6 +6929,7 @@ func TestFastLog2(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGcSys
+tags: [private]
 ```
 
 ```Go
@@ -6432,6 +6940,7 @@ func TestGcSys(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGcDeepNesting
+tags: [private]
 ```
 
 ```Go
@@ -6442,6 +6951,7 @@ func TestGcDeepNesting(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGcMapIndirection
+tags: [private]
 ```
 
 ```Go
@@ -6452,6 +6962,7 @@ func TestGcMapIndirection(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGcArraySlice
+tags: [private]
 ```
 
 ```Go
@@ -6462,6 +6973,7 @@ func TestGcArraySlice(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGcRescan
+tags: [private]
 ```
 
 ```Go
@@ -6472,6 +6984,7 @@ func TestGcRescan(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGcLastTime
+tags: [private]
 ```
 
 ```Go
@@ -6482,6 +6995,7 @@ func TestGcLastTime(t *testing.T)
 
 ```
 searchKey: runtime_test.TestHugeGCInfo
+tags: [private]
 ```
 
 ```Go
@@ -6492,6 +7006,7 @@ func TestHugeGCInfo(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPeriodicGC
+tags: [private]
 ```
 
 ```Go
@@ -6502,6 +7017,7 @@ func TestPeriodicGC(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGcZombieReporting
+tags: [private]
 ```
 
 ```Go
@@ -6512,6 +7028,7 @@ func TestGcZombieReporting(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGCTestMoveStackOnNextCall
+tags: [private]
 ```
 
 ```Go
@@ -6522,6 +7039,7 @@ func TestGCTestMoveStackOnNextCall(t *testing.T)
 
 ```
 searchKey: runtime_test.moveStackCheck
+tags: [private]
 ```
 
 ```Go
@@ -6534,6 +7052,7 @@ This must not be inlined because the point is to force a stack growth check and 
 
 ```
 searchKey: runtime_test.TestGCTestMoveStackRepeatedly
+tags: [private]
 ```
 
 ```Go
@@ -6544,6 +7063,7 @@ func TestGCTestMoveStackRepeatedly(t *testing.T)
 
 ```
 searchKey: runtime_test.moveStack1
+tags: [private]
 ```
 
 ```Go
@@ -6554,6 +7074,7 @@ func moveStack1(x bool)
 
 ```
 searchKey: runtime_test.TestGCTestIsReachable
+tags: [private]
 ```
 
 ```Go
@@ -6564,6 +7085,7 @@ func TestGCTestIsReachable(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGCTestPointerClass
+tags: [private]
 ```
 
 ```Go
@@ -6574,6 +7096,7 @@ func TestGCTestPointerClass(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypePtr
+tags: [private]
 ```
 
 ```Go
@@ -6584,6 +7107,7 @@ func BenchmarkSetTypePtr(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypePtr8
+tags: [private]
 ```
 
 ```Go
@@ -6594,6 +7118,7 @@ func BenchmarkSetTypePtr8(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypePtr16
+tags: [private]
 ```
 
 ```Go
@@ -6604,6 +7129,7 @@ func BenchmarkSetTypePtr16(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypePtr32
+tags: [private]
 ```
 
 ```Go
@@ -6614,6 +7140,7 @@ func BenchmarkSetTypePtr32(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypePtr64
+tags: [private]
 ```
 
 ```Go
@@ -6624,6 +7151,7 @@ func BenchmarkSetTypePtr64(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypePtr126
+tags: [private]
 ```
 
 ```Go
@@ -6634,6 +7162,7 @@ func BenchmarkSetTypePtr126(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypePtr128
+tags: [private]
 ```
 
 ```Go
@@ -6644,6 +7173,7 @@ func BenchmarkSetTypePtr128(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypePtrSlice
+tags: [private]
 ```
 
 ```Go
@@ -6654,6 +7184,7 @@ func BenchmarkSetTypePtrSlice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode1
+tags: [private]
 ```
 
 ```Go
@@ -6664,6 +7195,7 @@ func BenchmarkSetTypeNode1(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode1Slice
+tags: [private]
 ```
 
 ```Go
@@ -6674,6 +7206,7 @@ func BenchmarkSetTypeNode1Slice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode8
+tags: [private]
 ```
 
 ```Go
@@ -6684,6 +7217,7 @@ func BenchmarkSetTypeNode8(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode8Slice
+tags: [private]
 ```
 
 ```Go
@@ -6694,6 +7228,7 @@ func BenchmarkSetTypeNode8Slice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode64
+tags: [private]
 ```
 
 ```Go
@@ -6704,6 +7239,7 @@ func BenchmarkSetTypeNode64(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode64Slice
+tags: [private]
 ```
 
 ```Go
@@ -6714,6 +7250,7 @@ func BenchmarkSetTypeNode64Slice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode64Dead
+tags: [private]
 ```
 
 ```Go
@@ -6724,6 +7261,7 @@ func BenchmarkSetTypeNode64Dead(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode64DeadSlice
+tags: [private]
 ```
 
 ```Go
@@ -6734,6 +7272,7 @@ func BenchmarkSetTypeNode64DeadSlice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode124
+tags: [private]
 ```
 
 ```Go
@@ -6744,6 +7283,7 @@ func BenchmarkSetTypeNode124(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode124Slice
+tags: [private]
 ```
 
 ```Go
@@ -6754,6 +7294,7 @@ func BenchmarkSetTypeNode124Slice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode126
+tags: [private]
 ```
 
 ```Go
@@ -6764,6 +7305,7 @@ func BenchmarkSetTypeNode126(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode126Slice
+tags: [private]
 ```
 
 ```Go
@@ -6774,6 +7316,7 @@ func BenchmarkSetTypeNode126Slice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode128
+tags: [private]
 ```
 
 ```Go
@@ -6784,6 +7327,7 @@ func BenchmarkSetTypeNode128(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode128Slice
+tags: [private]
 ```
 
 ```Go
@@ -6794,6 +7338,7 @@ func BenchmarkSetTypeNode128Slice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode130
+tags: [private]
 ```
 
 ```Go
@@ -6804,6 +7349,7 @@ func BenchmarkSetTypeNode130(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode130Slice
+tags: [private]
 ```
 
 ```Go
@@ -6814,6 +7360,7 @@ func BenchmarkSetTypeNode130Slice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode1024
+tags: [private]
 ```
 
 ```Go
@@ -6824,6 +7371,7 @@ func BenchmarkSetTypeNode1024(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSetTypeNode1024Slice
+tags: [private]
 ```
 
 ```Go
@@ -6834,6 +7382,7 @@ func BenchmarkSetTypeNode1024Slice(b *testing.B)
 
 ```
 searchKey: runtime_test.benchSetType
+tags: [private]
 ```
 
 ```Go
@@ -6844,6 +7393,7 @@ func benchSetType(b *testing.B, x interface{})
 
 ```
 searchKey: runtime_test.BenchmarkAllocation
+tags: [private]
 ```
 
 ```Go
@@ -6854,6 +7404,7 @@ func BenchmarkAllocation(b *testing.B)
 
 ```
 searchKey: runtime_test.TestPrintGC
+tags: [private]
 ```
 
 ```Go
@@ -6864,6 +7415,7 @@ func TestPrintGC(t *testing.T)
 
 ```
 searchKey: runtime_test.testTypeSwitch
+tags: [private]
 ```
 
 ```Go
@@ -6874,6 +7426,7 @@ func testTypeSwitch(x interface{}) error
 
 ```
 searchKey: runtime_test.testAssert
+tags: [private]
 ```
 
 ```Go
@@ -6884,6 +7437,7 @@ func testAssert(x interface{}) error
 
 ```
 searchKey: runtime_test.testAssertVar
+tags: [private]
 ```
 
 ```Go
@@ -6894,6 +7448,7 @@ func testAssertVar(x interface{}) error
 
 ```
 searchKey: runtime_test.testIfaceEqual
+tags: [private]
 ```
 
 ```Go
@@ -6904,6 +7459,7 @@ func testIfaceEqual(x interface{})
 
 ```
 searchKey: runtime_test.TestPageAccounting
+tags: [private]
 ```
 
 ```Go
@@ -6914,6 +7470,7 @@ func TestPageAccounting(t *testing.T)
 
 ```
 searchKey: runtime_test.TestReadMemStats
+tags: [private]
 ```
 
 ```Go
@@ -6924,6 +7481,7 @@ func TestReadMemStats(t *testing.T)
 
 ```
 searchKey: runtime_test.logDiff
+tags: [private]
 ```
 
 ```Go
@@ -6934,6 +7492,7 @@ func logDiff(t *testing.T, prefix string, got, want reflect.Value)
 
 ```
 searchKey: runtime_test.BenchmarkReadMemStats
+tags: [private]
 ```
 
 ```Go
@@ -6944,6 +7503,7 @@ func BenchmarkReadMemStats(b *testing.B)
 
 ```
 searchKey: runtime_test.applyGCLoad
+tags: [private]
 ```
 
 ```Go
@@ -6954,6 +7514,7 @@ func applyGCLoad(b *testing.B) func()
 
 ```
 searchKey: runtime_test.BenchmarkReadMemStatsLatency
+tags: [private]
 ```
 
 ```Go
@@ -6964,6 +7525,7 @@ func BenchmarkReadMemStatsLatency(b *testing.B)
 
 ```
 searchKey: runtime_test.TestUserForcedGC
+tags: [private]
 ```
 
 ```Go
@@ -6974,6 +7536,7 @@ func TestUserForcedGC(t *testing.T)
 
 ```
 searchKey: runtime_test.writeBarrierBenchmark
+tags: [private]
 ```
 
 ```Go
@@ -6984,6 +7547,7 @@ func writeBarrierBenchmark(b *testing.B, f func())
 
 ```
 searchKey: runtime_test.BenchmarkWriteBarrier
+tags: [private]
 ```
 
 ```Go
@@ -6994,6 +7558,7 @@ func BenchmarkWriteBarrier(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkBulkWriteBarrier
+tags: [private]
 ```
 
 ```Go
@@ -7004,6 +7569,7 @@ func BenchmarkBulkWriteBarrier(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkScanStackNoLocals
+tags: [private]
 ```
 
 ```Go
@@ -7014,6 +7580,7 @@ func BenchmarkScanStackNoLocals(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMSpanCountAlloc
+tags: [private]
 ```
 
 ```Go
@@ -7024,6 +7591,7 @@ func BenchmarkMSpanCountAlloc(b *testing.B)
 
 ```
 searchKey: runtime_test.countpwg
+tags: [private]
 ```
 
 ```Go
@@ -7034,6 +7602,7 @@ func countpwg(n *int, ready *sync.WaitGroup, teardown chan bool)
 
 ```
 searchKey: runtime_test.TestGCInfo
+tags: [private]
 ```
 
 ```Go
@@ -7046,6 +7615,7 @@ TestGCInfo tests that various objects in heap, data and bss receive correct GC p
 
 ```
 searchKey: runtime_test.verifyGCInfo
+tags: [private]
 ```
 
 ```Go
@@ -7056,6 +7626,7 @@ func verifyGCInfo(t *testing.T, name string, p interface{}, mask0 []byte)
 
 ```
 searchKey: runtime_test.trimDead
+tags: [private]
 ```
 
 ```Go
@@ -7066,6 +7637,7 @@ func trimDead(mask []byte) []byte
 
 ```
 searchKey: runtime_test.escape
+tags: [private]
 ```
 
 ```Go
@@ -7076,6 +7648,7 @@ func escape(p interface{}) interface{}
 
 ```
 searchKey: runtime_test.infoBigStruct
+tags: [private]
 ```
 
 ```Go
@@ -7086,6 +7659,7 @@ func infoBigStruct() []byte
 
 ```
 searchKey: runtime_test.TestMemHash32Equality
+tags: [private]
 ```
 
 ```Go
@@ -7096,6 +7670,7 @@ func TestMemHash32Equality(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMemHash64Equality
+tags: [private]
 ```
 
 ```Go
@@ -7106,6 +7681,7 @@ func TestMemHash64Equality(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSmhasherSanity
+tags: [private]
 ```
 
 ```Go
@@ -7118,6 +7694,7 @@ Sanity checks. hash should not depend on values outside key. hash should not dep
 
 ```
 searchKey: runtime_test.TestSmhasherAppendedZeros
+tags: [private]
 ```
 
 ```Go
@@ -7130,6 +7707,7 @@ a string plus adding zeros must make distinct hashes
 
 ```
 searchKey: runtime_test.TestSmhasherSmallKeys
+tags: [private]
 ```
 
 ```Go
@@ -7142,6 +7720,7 @@ All 0-3 byte strings have distinct hashes.
 
 ```
 searchKey: runtime_test.TestSmhasherZeros
+tags: [private]
 ```
 
 ```Go
@@ -7154,6 +7733,7 @@ Different length strings of all zeros have distinct hashes.
 
 ```
 searchKey: runtime_test.TestSmhasherTwoNonzero
+tags: [private]
 ```
 
 ```Go
@@ -7166,6 +7746,7 @@ Strings with up to two nonzero bytes all have distinct hashes.
 
 ```
 searchKey: runtime_test.twoNonZero
+tags: [private]
 ```
 
 ```Go
@@ -7176,6 +7757,7 @@ func twoNonZero(h *HashSet, n int)
 
 ```
 searchKey: runtime_test.TestSmhasherCyclic
+tags: [private]
 ```
 
 ```Go
@@ -7188,6 +7770,7 @@ Test strings with repeats, like "abcdabcdabcdabcd..."
 
 ```
 searchKey: runtime_test.TestSmhasherSparse
+tags: [private]
 ```
 
 ```Go
@@ -7200,6 +7783,7 @@ Test strings with only a few bits set
 
 ```
 searchKey: runtime_test.sparse
+tags: [private]
 ```
 
 ```Go
@@ -7210,6 +7794,7 @@ func sparse(t *testing.T, n int, k int)
 
 ```
 searchKey: runtime_test.setbits
+tags: [private]
 ```
 
 ```Go
@@ -7222,6 +7807,7 @@ set up to k bits at index i and greater
 
 ```
 searchKey: runtime_test.TestSmhasherPermutation
+tags: [private]
 ```
 
 ```Go
@@ -7234,6 +7820,7 @@ Test all possible combinations of n blocks from the set s. "permutation" is a ba
 
 ```
 searchKey: runtime_test.permutation
+tags: [private]
 ```
 
 ```Go
@@ -7244,6 +7831,7 @@ func permutation(t *testing.T, s []uint32, n int)
 
 ```
 searchKey: runtime_test.genPerm
+tags: [private]
 ```
 
 ```Go
@@ -7254,6 +7842,7 @@ func genPerm(h *HashSet, b []byte, s []uint32, n int)
 
 ```
 searchKey: runtime_test.TestSmhasherAvalanche
+tags: [private]
 ```
 
 ```Go
@@ -7266,6 +7855,7 @@ Flipping a single bit of a key should flip each output bit with 50% probability.
 
 ```
 searchKey: runtime_test.avalancheTest1
+tags: [private]
 ```
 
 ```Go
@@ -7276,6 +7866,7 @@ func avalancheTest1(t *testing.T, k Key)
 
 ```
 searchKey: runtime_test.TestSmhasherWindowed
+tags: [private]
 ```
 
 ```Go
@@ -7288,6 +7879,7 @@ All bit rotations of a set of distinct keys
 
 ```
 searchKey: runtime_test.windowed
+tags: [private]
 ```
 
 ```Go
@@ -7298,6 +7890,7 @@ func windowed(t *testing.T, k Key)
 
 ```
 searchKey: runtime_test.TestSmhasherText
+tags: [private]
 ```
 
 ```Go
@@ -7310,6 +7903,7 @@ All keys of the form prefix + [A-Za-z0-9]*N + suffix.
 
 ```
 searchKey: runtime_test.text
+tags: [private]
 ```
 
 ```Go
@@ -7320,6 +7914,7 @@ func text(t *testing.T, prefix, suffix string)
 
 ```
 searchKey: runtime_test.TestSmhasherSeed
+tags: [private]
 ```
 
 ```Go
@@ -7332,6 +7927,7 @@ Make sure different seed values generate different hashes.
 
 ```
 searchKey: runtime_test.randBytes
+tags: [private]
 ```
 
 ```Go
@@ -7342,6 +7938,7 @@ func randBytes(r *rand.Rand, b []byte)
 
 ```
 searchKey: runtime_test.benchmarkHash
+tags: [private]
 ```
 
 ```Go
@@ -7352,6 +7949,7 @@ func benchmarkHash(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.BenchmarkHash5
+tags: [private]
 ```
 
 ```Go
@@ -7362,6 +7960,7 @@ func BenchmarkHash5(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkHash16
+tags: [private]
 ```
 
 ```Go
@@ -7372,6 +7971,7 @@ func BenchmarkHash16(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkHash64
+tags: [private]
 ```
 
 ```Go
@@ -7382,6 +7982,7 @@ func BenchmarkHash64(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkHash1024
+tags: [private]
 ```
 
 ```Go
@@ -7392,6 +7993,7 @@ func BenchmarkHash1024(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkHash65536
+tags: [private]
 ```
 
 ```Go
@@ -7402,6 +8004,7 @@ func BenchmarkHash65536(b *testing.B)
 
 ```
 searchKey: runtime_test.TestArrayHash
+tags: [private]
 ```
 
 ```Go
@@ -7412,6 +8015,7 @@ func TestArrayHash(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStructHash
+tags: [private]
 ```
 
 ```Go
@@ -7422,6 +8026,7 @@ func TestStructHash(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkAlignedLoad
+tags: [private]
 ```
 
 ```Go
@@ -7432,6 +8037,7 @@ func BenchmarkAlignedLoad(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkUnalignedLoad
+tags: [private]
 ```
 
 ```Go
@@ -7442,6 +8048,7 @@ func BenchmarkUnalignedLoad(b *testing.B)
 
 ```
 searchKey: runtime_test.TestCollisions
+tags: [private]
 ```
 
 ```Go
@@ -7452,6 +8059,7 @@ func TestCollisions(t *testing.T)
 
 ```
 searchKey: runtime_test.TestTimeHistogram
+tags: [private]
 ```
 
 ```Go
@@ -7462,6 +8070,7 @@ func TestTimeHistogram(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCmpIfaceConcreteAlloc
+tags: [private]
 ```
 
 ```Go
@@ -7474,6 +8083,7 @@ Issue 9370
 
 ```
 searchKey: runtime_test.BenchmarkEqEfaceConcrete
+tags: [private]
 ```
 
 ```Go
@@ -7484,6 +8094,7 @@ func BenchmarkEqEfaceConcrete(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkEqIfaceConcrete
+tags: [private]
 ```
 
 ```Go
@@ -7494,6 +8105,7 @@ func BenchmarkEqIfaceConcrete(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkNeEfaceConcrete
+tags: [private]
 ```
 
 ```Go
@@ -7504,6 +8116,7 @@ func BenchmarkNeEfaceConcrete(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkNeIfaceConcrete
+tags: [private]
 ```
 
 ```Go
@@ -7514,6 +8127,7 @@ func BenchmarkNeIfaceConcrete(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkConvT2EByteSized
+tags: [private]
 ```
 
 ```Go
@@ -7524,6 +8138,7 @@ func BenchmarkConvT2EByteSized(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkConvT2ESmall
+tags: [private]
 ```
 
 ```Go
@@ -7534,6 +8149,7 @@ func BenchmarkConvT2ESmall(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkConvT2EUintptr
+tags: [private]
 ```
 
 ```Go
@@ -7544,6 +8160,7 @@ func BenchmarkConvT2EUintptr(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkConvT2ELarge
+tags: [private]
 ```
 
 ```Go
@@ -7554,6 +8171,7 @@ func BenchmarkConvT2ELarge(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkConvT2ISmall
+tags: [private]
 ```
 
 ```Go
@@ -7564,6 +8182,7 @@ func BenchmarkConvT2ISmall(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkConvT2IUintptr
+tags: [private]
 ```
 
 ```Go
@@ -7574,6 +8193,7 @@ func BenchmarkConvT2IUintptr(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkConvT2ILarge
+tags: [private]
 ```
 
 ```Go
@@ -7584,6 +8204,7 @@ func BenchmarkConvT2ILarge(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkConvI2E
+tags: [private]
 ```
 
 ```Go
@@ -7594,6 +8215,7 @@ func BenchmarkConvI2E(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkConvI2I
+tags: [private]
 ```
 
 ```Go
@@ -7604,6 +8226,7 @@ func BenchmarkConvI2I(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertE2T
+tags: [private]
 ```
 
 ```Go
@@ -7614,6 +8237,7 @@ func BenchmarkAssertE2T(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertE2TLarge
+tags: [private]
 ```
 
 ```Go
@@ -7624,6 +8248,7 @@ func BenchmarkAssertE2TLarge(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertE2I
+tags: [private]
 ```
 
 ```Go
@@ -7634,6 +8259,7 @@ func BenchmarkAssertE2I(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertI2T
+tags: [private]
 ```
 
 ```Go
@@ -7644,6 +8270,7 @@ func BenchmarkAssertI2T(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertI2I
+tags: [private]
 ```
 
 ```Go
@@ -7654,6 +8281,7 @@ func BenchmarkAssertI2I(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertI2E
+tags: [private]
 ```
 
 ```Go
@@ -7664,6 +8292,7 @@ func BenchmarkAssertI2E(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertE2E
+tags: [private]
 ```
 
 ```Go
@@ -7674,6 +8303,7 @@ func BenchmarkAssertE2E(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertE2T2
+tags: [private]
 ```
 
 ```Go
@@ -7684,6 +8314,7 @@ func BenchmarkAssertE2T2(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertE2T2Blank
+tags: [private]
 ```
 
 ```Go
@@ -7694,6 +8325,7 @@ func BenchmarkAssertE2T2Blank(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertI2E2
+tags: [private]
 ```
 
 ```Go
@@ -7704,6 +8336,7 @@ func BenchmarkAssertI2E2(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertI2E2Blank
+tags: [private]
 ```
 
 ```Go
@@ -7714,6 +8347,7 @@ func BenchmarkAssertI2E2Blank(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertE2E2
+tags: [private]
 ```
 
 ```Go
@@ -7724,6 +8358,7 @@ func BenchmarkAssertE2E2(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAssertE2E2Blank
+tags: [private]
 ```
 
 ```Go
@@ -7734,6 +8369,7 @@ func BenchmarkAssertE2E2Blank(b *testing.B)
 
 ```
 searchKey: runtime_test.TestNonEscapingConvT2E
+tags: [private]
 ```
 
 ```Go
@@ -7744,6 +8380,7 @@ func TestNonEscapingConvT2E(t *testing.T)
 
 ```
 searchKey: runtime_test.TestNonEscapingConvT2I
+tags: [private]
 ```
 
 ```Go
@@ -7754,6 +8391,7 @@ func TestNonEscapingConvT2I(t *testing.T)
 
 ```
 searchKey: runtime_test.TestZeroConvT2x
+tags: [private]
 ```
 
 ```Go
@@ -7764,6 +8402,7 @@ func TestZeroConvT2x(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkConvT2Ezero
+tags: [private]
 ```
 
 ```Go
@@ -7774,6 +8413,7 @@ func BenchmarkConvT2Ezero(b *testing.B)
 
 ```
 searchKey: runtime_test.fromMyNode
+tags: [private]
 ```
 
 ```Go
@@ -7784,6 +8424,7 @@ func fromMyNode(node *MyNode) *LFNode
 
 ```
 searchKey: runtime_test.TestLFStack
+tags: [private]
 ```
 
 ```Go
@@ -7794,6 +8435,7 @@ func TestLFStack(t *testing.T)
 
 ```
 searchKey: runtime_test.TestLFStackStress
+tags: [private]
 ```
 
 ```Go
@@ -7804,6 +8446,7 @@ func TestLFStackStress(t *testing.T)
 
 ```
 searchKey: runtime_test.TestLockRankPartialOrder
+tags: [private]
 ```
 
 ```Go
@@ -7816,6 +8459,7 @@ Check that the partial order in lockPartialOrder fits within the total order det
 
 ```
 searchKey: runtime_test.TestLockRankPartialOrderSortedEntries
+tags: [private]
 ```
 
 ```Go
@@ -7828,6 +8472,7 @@ Verify that partial order lists are kept sorted. This is a purely cosemetic chec
 
 ```
 searchKey: runtime_test.TestMemStats
+tags: [private]
 ```
 
 ```Go
@@ -7838,6 +8483,7 @@ func TestMemStats(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStringConcatenationAllocs
+tags: [private]
 ```
 
 ```Go
@@ -7848,6 +8494,7 @@ func TestStringConcatenationAllocs(t *testing.T)
 
 ```
 searchKey: runtime_test.TestTinyAlloc
+tags: [private]
 ```
 
 ```Go
@@ -7858,6 +8505,7 @@ func TestTinyAlloc(t *testing.T)
 
 ```
 searchKey: runtime_test.TestTinyAllocIssue37262
+tags: [private]
 ```
 
 ```Go
@@ -7868,6 +8516,7 @@ func TestTinyAllocIssue37262(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPageCacheLeak
+tags: [private]
 ```
 
 ```Go
@@ -7878,6 +8527,7 @@ func TestPageCacheLeak(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPhysicalMemoryUtilization
+tags: [private]
 ```
 
 ```Go
@@ -7888,6 +8538,7 @@ func TestPhysicalMemoryUtilization(t *testing.T)
 
 ```
 searchKey: runtime_test.TestScavengedBitsCleared
+tags: [private]
 ```
 
 ```Go
@@ -7898,6 +8549,7 @@ func TestScavengedBitsCleared(t *testing.T)
 
 ```
 searchKey: runtime_test.TestArenaCollision
+tags: [private]
 ```
 
 ```Go
@@ -7908,6 +8560,7 @@ func TestArenaCollision(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkMalloc8
+tags: [private]
 ```
 
 ```Go
@@ -7918,6 +8571,7 @@ func BenchmarkMalloc8(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMalloc16
+tags: [private]
 ```
 
 ```Go
@@ -7928,6 +8582,7 @@ func BenchmarkMalloc16(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMallocTypeInfo8
+tags: [private]
 ```
 
 ```Go
@@ -7938,6 +8593,7 @@ func BenchmarkMallocTypeInfo8(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMallocTypeInfo16
+tags: [private]
 ```
 
 ```Go
@@ -7948,6 +8604,7 @@ func BenchmarkMallocTypeInfo16(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMallocLargeStruct
+tags: [private]
 ```
 
 ```Go
@@ -7958,6 +8615,7 @@ func BenchmarkMallocLargeStruct(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkGoroutineSelect
+tags: [private]
 ```
 
 ```Go
@@ -7968,6 +8626,7 @@ func BenchmarkGoroutineSelect(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkGoroutineBlocking
+tags: [private]
 ```
 
 ```Go
@@ -7978,6 +8637,7 @@ func BenchmarkGoroutineBlocking(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkGoroutineForRange
+tags: [private]
 ```
 
 ```Go
@@ -7988,6 +8648,7 @@ func BenchmarkGoroutineForRange(b *testing.B)
 
 ```
 searchKey: runtime_test.benchHelper
+tags: [private]
 ```
 
 ```Go
@@ -7998,6 +8659,7 @@ func benchHelper(b *testing.B, n int, read func(chan struct{}))
 
 ```
 searchKey: runtime_test.BenchmarkGoroutineIdle
+tags: [private]
 ```
 
 ```Go
@@ -8008,6 +8670,7 @@ func BenchmarkGoroutineIdle(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkHashStringSpeed
+tags: [private]
 ```
 
 ```Go
@@ -8018,6 +8681,7 @@ func BenchmarkHashStringSpeed(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkHashBytesSpeed
+tags: [private]
 ```
 
 ```Go
@@ -8028,6 +8692,7 @@ func BenchmarkHashBytesSpeed(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkHashInt32Speed
+tags: [private]
 ```
 
 ```Go
@@ -8038,6 +8703,7 @@ func BenchmarkHashInt32Speed(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkHashInt64Speed
+tags: [private]
 ```
 
 ```Go
@@ -8048,6 +8714,7 @@ func BenchmarkHashInt64Speed(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkHashStringArraySpeed
+tags: [private]
 ```
 
 ```Go
@@ -8058,6 +8725,7 @@ func BenchmarkHashStringArraySpeed(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMegMap
+tags: [private]
 ```
 
 ```Go
@@ -8068,6 +8736,7 @@ func BenchmarkMegMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMegOneMap
+tags: [private]
 ```
 
 ```Go
@@ -8078,6 +8747,7 @@ func BenchmarkMegOneMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMegEqMap
+tags: [private]
 ```
 
 ```Go
@@ -8088,6 +8758,7 @@ func BenchmarkMegEqMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMegEmptyMap
+tags: [private]
 ```
 
 ```Go
@@ -8098,6 +8769,7 @@ func BenchmarkMegEmptyMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSmallStrMap
+tags: [private]
 ```
 
 ```Go
@@ -8108,6 +8780,7 @@ func BenchmarkSmallStrMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapStringKeysEight_16
+tags: [private]
 ```
 
 ```Go
@@ -8118,6 +8791,7 @@ func BenchmarkMapStringKeysEight_16(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapStringKeysEight_32
+tags: [private]
 ```
 
 ```Go
@@ -8128,6 +8802,7 @@ func BenchmarkMapStringKeysEight_32(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapStringKeysEight_64
+tags: [private]
 ```
 
 ```Go
@@ -8138,6 +8813,7 @@ func BenchmarkMapStringKeysEight_64(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapStringKeysEight_1M
+tags: [private]
 ```
 
 ```Go
@@ -8148,6 +8824,7 @@ func BenchmarkMapStringKeysEight_1M(b *testing.B)
 
 ```
 searchKey: runtime_test.benchmarkMapStringKeysEight
+tags: [private]
 ```
 
 ```Go
@@ -8158,6 +8835,7 @@ func benchmarkMapStringKeysEight(b *testing.B, keySize int)
 
 ```
 searchKey: runtime_test.BenchmarkIntMap
+tags: [private]
 ```
 
 ```Go
@@ -8168,6 +8846,7 @@ func BenchmarkIntMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapFirst
+tags: [private]
 ```
 
 ```Go
@@ -8178,6 +8857,7 @@ func BenchmarkMapFirst(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapMid
+tags: [private]
 ```
 
 ```Go
@@ -8188,6 +8868,7 @@ func BenchmarkMapMid(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapLast
+tags: [private]
 ```
 
 ```Go
@@ -8198,6 +8879,7 @@ func BenchmarkMapLast(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapCycle
+tags: [private]
 ```
 
 ```Go
@@ -8208,6 +8890,7 @@ func BenchmarkMapCycle(b *testing.B)
 
 ```
 searchKey: runtime_test.benchmarkRepeatedLookup
+tags: [private]
 ```
 
 ```Go
@@ -8220,6 +8903,7 @@ Accessing the same keys in a row.
 
 ```
 searchKey: runtime_test.BenchmarkRepeatedLookupStrMapKey32
+tags: [private]
 ```
 
 ```Go
@@ -8230,6 +8914,7 @@ func BenchmarkRepeatedLookupStrMapKey32(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkRepeatedLookupStrMapKey1M
+tags: [private]
 ```
 
 ```Go
@@ -8240,6 +8925,7 @@ func BenchmarkRepeatedLookupStrMapKey1M(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMakeMap
+tags: [private]
 ```
 
 ```Go
@@ -8250,6 +8936,7 @@ func BenchmarkMakeMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkNewEmptyMap
+tags: [private]
 ```
 
 ```Go
@@ -8260,6 +8947,7 @@ func BenchmarkNewEmptyMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkNewSmallMap
+tags: [private]
 ```
 
 ```Go
@@ -8270,6 +8958,7 @@ func BenchmarkNewSmallMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapIter
+tags: [private]
 ```
 
 ```Go
@@ -8280,6 +8969,7 @@ func BenchmarkMapIter(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapIterEmpty
+tags: [private]
 ```
 
 ```Go
@@ -8290,6 +8980,7 @@ func BenchmarkMapIterEmpty(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSameLengthMap
+tags: [private]
 ```
 
 ```Go
@@ -8300,6 +8991,7 @@ func BenchmarkSameLengthMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkBigKeyMap
+tags: [private]
 ```
 
 ```Go
@@ -8310,6 +9002,7 @@ func BenchmarkBigKeyMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkBigValMap
+tags: [private]
 ```
 
 ```Go
@@ -8320,6 +9013,7 @@ func BenchmarkBigValMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSmallKeyMap
+tags: [private]
 ```
 
 ```Go
@@ -8330,6 +9024,7 @@ func BenchmarkSmallKeyMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapPopulate
+tags: [private]
 ```
 
 ```Go
@@ -8340,6 +9035,7 @@ func BenchmarkMapPopulate(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkComplexAlgMap
+tags: [private]
 ```
 
 ```Go
@@ -8350,6 +9046,7 @@ func BenchmarkComplexAlgMap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkGoMapClear
+tags: [private]
 ```
 
 ```Go
@@ -8360,6 +9057,7 @@ func BenchmarkGoMapClear(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapStringConversion
+tags: [private]
 ```
 
 ```Go
@@ -8370,6 +9068,7 @@ func BenchmarkMapStringConversion(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapInterfaceString
+tags: [private]
 ```
 
 ```Go
@@ -8380,6 +9079,7 @@ func BenchmarkMapInterfaceString(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapInterfacePtr
+tags: [private]
 ```
 
 ```Go
@@ -8390,6 +9090,7 @@ func BenchmarkMapInterfacePtr(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkNewEmptyMapHintLessThan8
+tags: [private]
 ```
 
 ```Go
@@ -8400,6 +9101,7 @@ func BenchmarkNewEmptyMapHintLessThan8(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkNewEmptyMapHintGreaterThan8
+tags: [private]
 ```
 
 ```Go
@@ -8410,6 +9112,7 @@ func BenchmarkNewEmptyMapHintGreaterThan8(b *testing.B)
 
 ```
 searchKey: runtime_test.TestHmapSize
+tags: [private]
 ```
 
 ```Go
@@ -8420,6 +9123,7 @@ func TestHmapSize(t *testing.T)
 
 ```
 searchKey: runtime_test.TestNegativeZero
+tags: [private]
 ```
 
 ```Go
@@ -8439,6 +9143,7 @@ I'm not sure the language spec actually requires this behavior, but it's what th
 
 ```
 searchKey: runtime_test.testMapNan
+tags: [private]
 ```
 
 ```Go
@@ -8449,6 +9154,7 @@ func testMapNan(t *testing.T, m map[float64]int)
 
 ```
 searchKey: runtime_test.TestMapAssignmentNan
+tags: [private]
 ```
 
 ```Go
@@ -8461,6 +9167,7 @@ nan is a good test because nan != nan, and nan has a randomized hash value.
 
 ```
 searchKey: runtime_test.TestMapOperatorAssignmentNan
+tags: [private]
 ```
 
 ```Go
@@ -8473,6 +9180,7 @@ nan is a good test because nan != nan, and nan has a randomized hash value.
 
 ```
 searchKey: runtime_test.TestMapOperatorAssignment
+tags: [private]
 ```
 
 ```Go
@@ -8483,6 +9191,7 @@ func TestMapOperatorAssignment(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMapAppendAssignment
+tags: [private]
 ```
 
 ```Go
@@ -8493,6 +9202,7 @@ func TestMapAppendAssignment(t *testing.T)
 
 ```
 searchKey: runtime_test.TestAlias
+tags: [private]
 ```
 
 ```Go
@@ -8505,6 +9215,7 @@ Maps aren't actually copied on assignment.
 
 ```
 searchKey: runtime_test.TestGrowWithNaN
+tags: [private]
 ```
 
 ```Go
@@ -8515,6 +9226,7 @@ func TestGrowWithNaN(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGrowWithNegativeZero
+tags: [private]
 ```
 
 ```Go
@@ -8525,6 +9237,7 @@ func TestGrowWithNegativeZero(t *testing.T)
 
 ```
 searchKey: runtime_test.TestIterGrowAndDelete
+tags: [private]
 ```
 
 ```Go
@@ -8535,6 +9248,7 @@ func TestIterGrowAndDelete(t *testing.T)
 
 ```
 searchKey: runtime_test.TestIterGrowWithGC
+tags: [private]
 ```
 
 ```Go
@@ -8547,6 +9261,7 @@ make sure old bucket arrays don't get GCd while an iterator is still using them.
 
 ```
 searchKey: runtime_test.testConcurrentReadsAfterGrowth
+tags: [private]
 ```
 
 ```Go
@@ -8557,6 +9272,7 @@ func testConcurrentReadsAfterGrowth(t *testing.T, useReflect bool)
 
 ```
 searchKey: runtime_test.TestConcurrentReadsAfterGrowth
+tags: [private]
 ```
 
 ```Go
@@ -8567,6 +9283,7 @@ func TestConcurrentReadsAfterGrowth(t *testing.T)
 
 ```
 searchKey: runtime_test.TestConcurrentReadsAfterGrowthReflect
+tags: [private]
 ```
 
 ```Go
@@ -8577,6 +9294,7 @@ func TestConcurrentReadsAfterGrowthReflect(t *testing.T)
 
 ```
 searchKey: runtime_test.TestBigItems
+tags: [private]
 ```
 
 ```Go
@@ -8587,6 +9305,7 @@ func TestBigItems(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMapHugeZero
+tags: [private]
 ```
 
 ```Go
@@ -8597,6 +9316,7 @@ func TestMapHugeZero(t *testing.T)
 
 ```
 searchKey: runtime_test.TestEmptyKeyAndValue
+tags: [private]
 ```
 
 ```Go
@@ -8607,6 +9327,7 @@ func TestEmptyKeyAndValue(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSingleBucketMapStringKeys_DupLen
+tags: [private]
 ```
 
 ```Go
@@ -8619,6 +9340,7 @@ Tests a map with a single bucket, with same-lengthed short keys ("quick keys") a
 
 ```
 searchKey: runtime_test.TestSingleBucketMapStringKeys_NoDupLen
+tags: [private]
 ```
 
 ```Go
@@ -8631,6 +9353,7 @@ Tests a map with a single bucket, with all keys having different lengths.
 
 ```
 searchKey: runtime_test.testMapLookups
+tags: [private]
 ```
 
 ```Go
@@ -8641,6 +9364,7 @@ func testMapLookups(t *testing.T, m map[string]string)
 
 ```
 searchKey: runtime_test.TestMapNanGrowIterator
+tags: [private]
 ```
 
 ```Go
@@ -8653,6 +9377,7 @@ Tests whether the iterator returns the right elements when started in the middle
 
 ```
 searchKey: runtime_test.TestMapIterOrder
+tags: [private]
 ```
 
 ```Go
@@ -8663,6 +9388,7 @@ func TestMapIterOrder(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMapSparseIterOrder
+tags: [private]
 ```
 
 ```Go
@@ -8675,6 +9401,7 @@ Issue 8410
 
 ```
 searchKey: runtime_test.TestMapStringBytesLookup
+tags: [private]
 ```
 
 ```Go
@@ -8685,6 +9412,7 @@ func TestMapStringBytesLookup(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMapLargeKeyNoPointer
+tags: [private]
 ```
 
 ```Go
@@ -8695,6 +9423,7 @@ func TestMapLargeKeyNoPointer(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMapLargeValNoPointer
+tags: [private]
 ```
 
 ```Go
@@ -8705,6 +9434,7 @@ func TestMapLargeValNoPointer(t *testing.T)
 
 ```
 searchKey: runtime_test.TestIgnoreBogusMapHint
+tags: [private]
 ```
 
 ```Go
@@ -8717,6 +9447,7 @@ Test that making a map with a large or invalid hint doesn't panic. (Issue 19926)
 
 ```
 searchKey: runtime_test.TestMapBuckets
+tags: [private]
 ```
 
 ```Go
@@ -8727,6 +9458,7 @@ func TestMapBuckets(t *testing.T)
 
 ```
 searchKey: runtime_test.benchmarkMapPop
+tags: [private]
 ```
 
 ```Go
@@ -8737,6 +9469,7 @@ func benchmarkMapPop(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.BenchmarkMapPop100
+tags: [private]
 ```
 
 ```Go
@@ -8747,6 +9480,7 @@ func BenchmarkMapPop100(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapPop1000
+tags: [private]
 ```
 
 ```Go
@@ -8757,6 +9491,7 @@ func BenchmarkMapPop1000(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapPop10000
+tags: [private]
 ```
 
 ```Go
@@ -8767,6 +9502,7 @@ func BenchmarkMapPop10000(b *testing.B)
 
 ```
 searchKey: runtime_test.TestNonEscapingMap
+tags: [private]
 ```
 
 ```Go
@@ -8777,6 +9513,7 @@ func TestNonEscapingMap(t *testing.T)
 
 ```
 searchKey: runtime_test.benchmarkMapAssignInt32
+tags: [private]
 ```
 
 ```Go
@@ -8787,6 +9524,7 @@ func benchmarkMapAssignInt32(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapOperatorAssignInt32
+tags: [private]
 ```
 
 ```Go
@@ -8797,6 +9535,7 @@ func benchmarkMapOperatorAssignInt32(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapAppendAssignInt32
+tags: [private]
 ```
 
 ```Go
@@ -8807,6 +9546,7 @@ func benchmarkMapAppendAssignInt32(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapDeleteInt32
+tags: [private]
 ```
 
 ```Go
@@ -8817,6 +9557,7 @@ func benchmarkMapDeleteInt32(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapAssignInt64
+tags: [private]
 ```
 
 ```Go
@@ -8827,6 +9568,7 @@ func benchmarkMapAssignInt64(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapOperatorAssignInt64
+tags: [private]
 ```
 
 ```Go
@@ -8837,6 +9579,7 @@ func benchmarkMapOperatorAssignInt64(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapAppendAssignInt64
+tags: [private]
 ```
 
 ```Go
@@ -8847,6 +9590,7 @@ func benchmarkMapAppendAssignInt64(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapDeleteInt64
+tags: [private]
 ```
 
 ```Go
@@ -8857,6 +9601,7 @@ func benchmarkMapDeleteInt64(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapAssignStr
+tags: [private]
 ```
 
 ```Go
@@ -8867,6 +9612,7 @@ func benchmarkMapAssignStr(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapOperatorAssignStr
+tags: [private]
 ```
 
 ```Go
@@ -8877,6 +9623,7 @@ func benchmarkMapOperatorAssignStr(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapAppendAssignStr
+tags: [private]
 ```
 
 ```Go
@@ -8887,6 +9634,7 @@ func benchmarkMapAppendAssignStr(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapDeleteStr
+tags: [private]
 ```
 
 ```Go
@@ -8897,6 +9645,7 @@ func benchmarkMapDeleteStr(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.benchmarkMapDeletePointer
+tags: [private]
 ```
 
 ```Go
@@ -8907,6 +9656,7 @@ func benchmarkMapDeletePointer(b *testing.B, n int)
 
 ```
 searchKey: runtime_test.runWith
+tags: [private]
 ```
 
 ```Go
@@ -8917,6 +9667,7 @@ func runWith(f func(*testing.B, int), v ...int) func(*testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapAssign
+tags: [private]
 ```
 
 ```Go
@@ -8927,6 +9678,7 @@ func BenchmarkMapAssign(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapOperatorAssign
+tags: [private]
 ```
 
 ```Go
@@ -8937,6 +9689,7 @@ func BenchmarkMapOperatorAssign(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapAppendAssign
+tags: [private]
 ```
 
 ```Go
@@ -8947,6 +9700,7 @@ func BenchmarkMapAppendAssign(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMapDelete
+tags: [private]
 ```
 
 ```Go
@@ -8957,6 +9711,7 @@ func BenchmarkMapDelete(b *testing.B)
 
 ```
 searchKey: runtime_test.TestDeferDeleteSlow
+tags: [private]
 ```
 
 ```Go
@@ -8967,6 +9722,7 @@ func TestDeferDeleteSlow(t *testing.T)
 
 ```
 searchKey: runtime_test.TestIncrementAfterDeleteValueInt
+tags: [private]
 ```
 
 ```Go
@@ -8979,6 +9735,7 @@ TestIncrementAfterDeleteValueInt and other test Issue 25936. Value types int, in
 
 ```
 searchKey: runtime_test.TestIncrementAfterDeleteValueInt32
+tags: [private]
 ```
 
 ```Go
@@ -8989,6 +9746,7 @@ func TestIncrementAfterDeleteValueInt32(t *testing.T)
 
 ```
 searchKey: runtime_test.TestIncrementAfterDeleteValueInt64
+tags: [private]
 ```
 
 ```Go
@@ -8999,6 +9757,7 @@ func TestIncrementAfterDeleteValueInt64(t *testing.T)
 
 ```
 searchKey: runtime_test.TestIncrementAfterDeleteKeyStringValueInt
+tags: [private]
 ```
 
 ```Go
@@ -9009,6 +9768,7 @@ func TestIncrementAfterDeleteKeyStringValueInt(t *testing.T)
 
 ```
 searchKey: runtime_test.TestIncrementAfterDeleteKeyValueString
+tags: [private]
 ```
 
 ```Go
@@ -9019,6 +9779,7 @@ func TestIncrementAfterDeleteKeyValueString(t *testing.T)
 
 ```
 searchKey: runtime_test.TestIncrementAfterBulkClearKeyStringValueInt
+tags: [private]
 ```
 
 ```Go
@@ -9031,6 +9792,7 @@ TestIncrementAfterBulkClearKeyStringValueInt tests that map bulk deletion (mapcl
 
 ```
 searchKey: runtime_test.TestMapTombstones
+tags: [private]
 ```
 
 ```Go
@@ -9041,6 +9803,7 @@ func TestMapTombstones(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMapInterfaceKey
+tags: [private]
 ```
 
 ```Go
@@ -9051,6 +9814,7 @@ func TestMapInterfaceKey(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMemmove
+tags: [private]
 ```
 
 ```Go
@@ -9061,6 +9825,7 @@ func TestMemmove(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMemmoveAlias
+tags: [private]
 ```
 
 ```Go
@@ -9071,6 +9836,7 @@ func TestMemmoveAlias(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMemmoveLarge0x180000
+tags: [private]
 ```
 
 ```Go
@@ -9081,6 +9847,7 @@ func TestMemmoveLarge0x180000(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMemmoveOverlapLarge0x120000
+tags: [private]
 ```
 
 ```Go
@@ -9091,6 +9858,7 @@ func TestMemmoveOverlapLarge0x120000(t *testing.T)
 
 ```
 searchKey: runtime_test.testSize
+tags: [private]
 ```
 
 ```Go
@@ -9101,6 +9869,7 @@ func testSize(t *testing.T, size int)
 
 ```
 searchKey: runtime_test.testOverlap
+tags: [private]
 ```
 
 ```Go
@@ -9111,6 +9880,7 @@ func testOverlap(t *testing.T, size int)
 
 ```
 searchKey: runtime_test.copyref
+tags: [private]
 ```
 
 ```Go
@@ -9123,6 +9893,7 @@ Forward copy.
 
 ```
 searchKey: runtime_test.copybw
+tags: [private]
 ```
 
 ```Go
@@ -9135,6 +9906,7 @@ Backwards copy
 
 ```
 searchKey: runtime_test.matchLen
+tags: [private]
 ```
 
 ```Go
@@ -9147,6 +9919,7 @@ Returns offset of difference
 
 ```
 searchKey: runtime_test.cmpb
+tags: [private]
 ```
 
 ```Go
@@ -9157,6 +9930,7 @@ func cmpb(a, b []byte) int
 
 ```
 searchKey: runtime_test.TestMemmoveAtomicity
+tags: [private]
 ```
 
 ```Go
@@ -9169,6 +9943,7 @@ Ensure that memmove writes pointers atomically, so the GC won't observe a partia
 
 ```
 searchKey: runtime_test.benchmarkSizes
+tags: [private]
 ```
 
 ```Go
@@ -9179,6 +9954,7 @@ func benchmarkSizes(b *testing.B, sizes []int, fn func(b *testing.B, n int))
 
 ```
 searchKey: runtime_test.BenchmarkMemmove
+tags: [private]
 ```
 
 ```Go
@@ -9189,6 +9965,7 @@ func BenchmarkMemmove(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMemmoveOverlap
+tags: [private]
 ```
 
 ```Go
@@ -9199,6 +9976,7 @@ func BenchmarkMemmoveOverlap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMemmoveUnalignedDst
+tags: [private]
 ```
 
 ```Go
@@ -9209,6 +9987,7 @@ func BenchmarkMemmoveUnalignedDst(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMemmoveUnalignedDstOverlap
+tags: [private]
 ```
 
 ```Go
@@ -9219,6 +9998,7 @@ func BenchmarkMemmoveUnalignedDstOverlap(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMemmoveUnalignedSrc
+tags: [private]
 ```
 
 ```Go
@@ -9229,6 +10009,7 @@ func BenchmarkMemmoveUnalignedSrc(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMemmoveUnalignedSrcOverlap
+tags: [private]
 ```
 
 ```Go
@@ -9239,6 +10020,7 @@ func BenchmarkMemmoveUnalignedSrcOverlap(b *testing.B)
 
 ```
 searchKey: runtime_test.TestMemclr
+tags: [private]
 ```
 
 ```Go
@@ -9249,6 +10031,7 @@ func TestMemclr(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkMemclr
+tags: [private]
 ```
 
 ```Go
@@ -9259,6 +10042,7 @@ func BenchmarkMemclr(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkGoMemclr
+tags: [private]
 ```
 
 ```Go
@@ -9269,6 +10053,7 @@ func BenchmarkGoMemclr(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat8
+tags: [private]
 ```
 
 ```Go
@@ -9279,6 +10064,7 @@ func BenchmarkClearFat8(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat12
+tags: [private]
 ```
 
 ```Go
@@ -9289,6 +10075,7 @@ func BenchmarkClearFat12(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat16
+tags: [private]
 ```
 
 ```Go
@@ -9299,6 +10086,7 @@ func BenchmarkClearFat16(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat24
+tags: [private]
 ```
 
 ```Go
@@ -9309,6 +10097,7 @@ func BenchmarkClearFat24(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat32
+tags: [private]
 ```
 
 ```Go
@@ -9319,6 +10108,7 @@ func BenchmarkClearFat32(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat40
+tags: [private]
 ```
 
 ```Go
@@ -9329,6 +10119,7 @@ func BenchmarkClearFat40(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat48
+tags: [private]
 ```
 
 ```Go
@@ -9339,6 +10130,7 @@ func BenchmarkClearFat48(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat56
+tags: [private]
 ```
 
 ```Go
@@ -9349,6 +10141,7 @@ func BenchmarkClearFat56(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat64
+tags: [private]
 ```
 
 ```Go
@@ -9359,6 +10152,7 @@ func BenchmarkClearFat64(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat128
+tags: [private]
 ```
 
 ```Go
@@ -9369,6 +10163,7 @@ func BenchmarkClearFat128(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat256
+tags: [private]
 ```
 
 ```Go
@@ -9379,6 +10174,7 @@ func BenchmarkClearFat256(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat512
+tags: [private]
 ```
 
 ```Go
@@ -9389,6 +10185,7 @@ func BenchmarkClearFat512(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkClearFat1024
+tags: [private]
 ```
 
 ```Go
@@ -9399,6 +10196,7 @@ func BenchmarkClearFat1024(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat8
+tags: [private]
 ```
 
 ```Go
@@ -9409,6 +10207,7 @@ func BenchmarkCopyFat8(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat12
+tags: [private]
 ```
 
 ```Go
@@ -9419,6 +10218,7 @@ func BenchmarkCopyFat12(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat16
+tags: [private]
 ```
 
 ```Go
@@ -9429,6 +10229,7 @@ func BenchmarkCopyFat16(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat24
+tags: [private]
 ```
 
 ```Go
@@ -9439,6 +10240,7 @@ func BenchmarkCopyFat24(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat32
+tags: [private]
 ```
 
 ```Go
@@ -9449,6 +10251,7 @@ func BenchmarkCopyFat32(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat64
+tags: [private]
 ```
 
 ```Go
@@ -9459,6 +10262,7 @@ func BenchmarkCopyFat64(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat128
+tags: [private]
 ```
 
 ```Go
@@ -9469,6 +10273,7 @@ func BenchmarkCopyFat128(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat256
+tags: [private]
 ```
 
 ```Go
@@ -9479,6 +10284,7 @@ func BenchmarkCopyFat256(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat512
+tags: [private]
 ```
 
 ```Go
@@ -9489,6 +10295,7 @@ func BenchmarkCopyFat512(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat520
+tags: [private]
 ```
 
 ```Go
@@ -9499,6 +10306,7 @@ func BenchmarkCopyFat520(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCopyFat1024
+tags: [private]
 ```
 
 ```Go
@@ -9509,6 +10317,7 @@ func BenchmarkCopyFat1024(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkIssue18740
+tags: [private]
 ```
 
 ```Go
@@ -9521,6 +10330,7 @@ BenchmarkIssue18740 ensures that memmove uses 4 and 8 byte load/store to move 4 
 
 ```
 searchKey: runtime_test.prepareAllMetricsSamples
+tags: [private]
 ```
 
 ```Go
@@ -9531,6 +10341,7 @@ func prepareAllMetricsSamples() (map[string]metrics.Description, []metrics.Sampl
 
 ```
 searchKey: runtime_test.TestReadMetrics
+tags: [private]
 ```
 
 ```Go
@@ -9541,6 +10352,7 @@ func TestReadMetrics(t *testing.T)
 
 ```
 searchKey: runtime_test.TestReadMetricsConsistency
+tags: [private]
 ```
 
 ```Go
@@ -9551,6 +10363,7 @@ func TestReadMetricsConsistency(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkReadMetricsLatency
+tags: [private]
 ```
 
 ```Go
@@ -9561,6 +10374,7 @@ func BenchmarkReadMetricsLatency(b *testing.B)
 
 ```
 searchKey: runtime_test.TestFinalizerType
+tags: [private]
 ```
 
 ```Go
@@ -9571,6 +10385,7 @@ func TestFinalizerType(t *testing.T)
 
 ```
 searchKey: runtime_test.TestFinalizerInterfaceBig
+tags: [private]
 ```
 
 ```Go
@@ -9581,6 +10396,7 @@ func TestFinalizerInterfaceBig(t *testing.T)
 
 ```
 searchKey: runtime_test.fin
+tags: [private]
 ```
 
 ```Go
@@ -9591,6 +10407,7 @@ func fin(v *int)
 
 ```
 searchKey: runtime_test.TestFinalizerZeroSizedStruct
+tags: [private]
 ```
 
 ```Go
@@ -9603,6 +10420,7 @@ Verify we don't crash at least. golang.org/issue/6857
 
 ```
 searchKey: runtime_test.BenchmarkFinalizer
+tags: [private]
 ```
 
 ```Go
@@ -9613,16 +10431,29 @@ func BenchmarkFinalizer(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkFinalizerRun
+tags: [private]
 ```
 
 ```Go
 func BenchmarkFinalizerRun(b *testing.B)
 ```
 
+### <a id="adjChunks" href="#adjChunks">func adjChunks() (*objtype, *objtype)</a>
+
+```
+searchKey: runtime_test.adjChunks
+tags: [private]
+```
+
+```Go
+func adjChunks() (*objtype, *objtype)
+```
+
 ### <a id="TestEmptySlice" href="#TestEmptySlice">func TestEmptySlice(t *testing.T)</a>
 
 ```
 searchKey: runtime_test.TestEmptySlice
+tags: [private]
 ```
 
 ```Go
@@ -9635,6 +10466,7 @@ Make sure an empty slice on the stack doesn't pin the next object in memory.
 
 ```
 searchKey: runtime_test.TestEmptyString
+tags: [private]
 ```
 
 ```Go
@@ -9647,6 +10479,7 @@ Make sure an empty string on the stack doesn't pin the next object in memory.
 
 ```
 searchKey: runtime_test.TestFinalizerOnGlobal
+tags: [private]
 ```
 
 ```Go
@@ -9659,6 +10492,7 @@ Test for issue 7656.
 
 ```
 searchKey: runtime_test.TestDeferKeepAlive
+tags: [private]
 ```
 
 ```Go
@@ -9669,6 +10503,7 @@ func TestDeferKeepAlive(t *testing.T)
 
 ```
 searchKey: runtime_test.makePallocData
+tags: [private]
 ```
 
 ```Go
@@ -9681,6 +10516,7 @@ makePallocData produces an initialized PallocData by setting the ranges of descr
 
 ```
 searchKey: runtime_test.TestFillAligned
+tags: [private]
 ```
 
 ```Go
@@ -9691,6 +10527,7 @@ func TestFillAligned(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPallocDataFindScavengeCandidate
+tags: [private]
 ```
 
 ```Go
@@ -9701,6 +10538,7 @@ func TestPallocDataFindScavengeCandidate(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPageAllocScavenge
+tags: [private]
 ```
 
 ```Go
@@ -9713,6 +10551,7 @@ Tests end-to-end scavenging on a pageAlloc.
 
 ```
 searchKey: runtime_test.checkPageAlloc
+tags: [private]
 ```
 
 ```Go
@@ -9723,6 +10562,7 @@ func checkPageAlloc(t *testing.T, want, got *PageAlloc)
 
 ```
 searchKey: runtime_test.TestPageAllocGrow
+tags: [private]
 ```
 
 ```Go
@@ -9733,6 +10573,7 @@ func TestPageAllocGrow(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPageAllocAlloc
+tags: [private]
 ```
 
 ```Go
@@ -9743,6 +10584,7 @@ func TestPageAllocAlloc(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPageAllocExhaust
+tags: [private]
 ```
 
 ```Go
@@ -9753,6 +10595,7 @@ func TestPageAllocExhaust(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPageAllocFree
+tags: [private]
 ```
 
 ```Go
@@ -9763,6 +10606,7 @@ func TestPageAllocFree(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPageAllocAllocAndFree
+tags: [private]
 ```
 
 ```Go
@@ -9773,6 +10617,7 @@ func TestPageAllocAllocAndFree(t *testing.T)
 
 ```
 searchKey: runtime_test.checkPageCache
+tags: [private]
 ```
 
 ```Go
@@ -9783,6 +10628,7 @@ func checkPageCache(t *testing.T, got, want PageCache)
 
 ```
 searchKey: runtime_test.TestPageCacheAlloc
+tags: [private]
 ```
 
 ```Go
@@ -9793,6 +10639,7 @@ func TestPageCacheAlloc(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPageCacheFlush
+tags: [private]
 ```
 
 ```Go
@@ -9803,6 +10650,7 @@ func TestPageCacheFlush(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPageAllocAllocToCache
+tags: [private]
 ```
 
 ```Go
@@ -9813,6 +10661,7 @@ func TestPageAllocAllocToCache(t *testing.T)
 
 ```
 searchKey: runtime_test.checkPallocBits
+tags: [private]
 ```
 
 ```Go
@@ -9825,6 +10674,7 @@ Ensures that got and want are the same, and if not, reports detailed diff inform
 
 ```
 searchKey: runtime_test.makePallocBits
+tags: [private]
 ```
 
 ```Go
@@ -9837,6 +10687,7 @@ makePallocBits produces an initialized PallocBits by setting the ranges in s to 
 
 ```
 searchKey: runtime_test.TestPallocBitsAllocRange
+tags: [private]
 ```
 
 ```Go
@@ -9849,6 +10700,7 @@ Ensures that PallocBits.AllocRange works, which is a fundamental method used for
 
 ```
 searchKey: runtime_test.invertPallocBits
+tags: [private]
 ```
 
 ```Go
@@ -9861,6 +10713,7 @@ Inverts every bit in the PallocBits.
 
 ```
 searchKey: runtime_test.checkPallocSum
+tags: [private]
 ```
 
 ```Go
@@ -9873,6 +10726,7 @@ Ensures two packed summaries are identical, and reports a detailed description o
 
 ```
 searchKey: runtime_test.TestMallocBitsPopcntRange
+tags: [private]
 ```
 
 ```Go
@@ -9883,6 +10737,7 @@ func TestMallocBitsPopcntRange(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPallocBitsSummarizeRandom
+tags: [private]
 ```
 
 ```Go
@@ -9895,6 +10750,7 @@ Ensures computing bit summaries works as expected by generating random bitmaps a
 
 ```
 searchKey: runtime_test.TestPallocBitsSummarize
+tags: [private]
 ```
 
 ```Go
@@ -9907,6 +10763,7 @@ Ensures computing bit summaries works as expected.
 
 ```
 searchKey: runtime_test.BenchmarkPallocBitsSummarize
+tags: [private]
 ```
 
 ```Go
@@ -9919,6 +10776,7 @@ Benchmarks how quickly we can summarize a PallocBits.
 
 ```
 searchKey: runtime_test.TestPallocBitsAlloc
+tags: [private]
 ```
 
 ```Go
@@ -9931,6 +10789,7 @@ Ensures page allocation works.
 
 ```
 searchKey: runtime_test.TestPallocBitsFree
+tags: [private]
 ```
 
 ```Go
@@ -9943,6 +10802,7 @@ Ensures page freeing works.
 
 ```
 searchKey: runtime_test.TestFindBitRange64
+tags: [private]
 ```
 
 ```Go
@@ -9953,6 +10813,7 @@ func TestFindBitRange64(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkFindBitRange64
+tags: [private]
 ```
 
 ```Go
@@ -9963,6 +10824,7 @@ func BenchmarkFindBitRange64(b *testing.B)
 
 ```
 searchKey: runtime_test.validateAddrRanges
+tags: [private]
 ```
 
 ```Go
@@ -9973,6 +10835,7 @@ func validateAddrRanges(t *testing.T, a *AddrRanges, want ...AddrRange)
 
 ```
 searchKey: runtime_test.TestAddrRangesAdd
+tags: [private]
 ```
 
 ```Go
@@ -9983,6 +10846,7 @@ func TestAddrRangesAdd(t *testing.T)
 
 ```
 searchKey: runtime_test.TestAddrRangesFindSucc
+tags: [private]
 ```
 
 ```Go
@@ -9993,6 +10857,7 @@ func TestAddrRangesFindSucc(t *testing.T)
 
 ```
 searchKey: runtime_test.fcntl
+tags: [private]
 ```
 
 ```Go
@@ -10005,6 +10870,7 @@ Call fcntl libc function rather than calling syscall.
 
 ```
 searchKey: runtime_test.TestNonblockingPipe
+tags: [private]
 ```
 
 ```Go
@@ -10015,6 +10881,7 @@ func TestNonblockingPipe(t *testing.T)
 
 ```
 searchKey: runtime_test.checkIsPipe
+tags: [private]
 ```
 
 ```Go
@@ -10025,6 +10892,7 @@ func checkIsPipe(t *testing.T, r, w int32)
 
 ```
 searchKey: runtime_test.checkNonblocking
+tags: [private]
 ```
 
 ```Go
@@ -10035,6 +10903,7 @@ func checkNonblocking(t *testing.T, fd int32, name string)
 
 ```
 searchKey: runtime_test.checkCloseonexec
+tags: [private]
 ```
 
 ```Go
@@ -10045,16 +10914,18 @@ func checkCloseonexec(t *testing.T, fd int32, name string)
 
 ```
 searchKey: runtime_test.TestSetNonblock
+tags: [private]
 ```
 
 ```Go
 func TestSetNonblock(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.netpoll_os_test.go" href="#init.netpoll_os_test.go">func init()</a>
 
 ```
 searchKey: runtime_test.init
+tags: [private]
 ```
 
 ```Go
@@ -10065,6 +10936,7 @@ func init()
 
 ```
 searchKey: runtime_test.BenchmarkNetpollBreak
+tags: [private]
 ```
 
 ```Go
@@ -10075,6 +10947,7 @@ func BenchmarkNetpollBreak(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSyscall
+tags: [private]
 ```
 
 ```Go
@@ -10087,6 +10960,7 @@ Syscall tests split stack between Entersyscall and Exitsyscall under race detect
 
 ```
 searchKey: runtime_test.BenchmarkSyscallWork
+tags: [private]
 ```
 
 ```Go
@@ -10097,6 +10971,7 @@ func BenchmarkSyscallWork(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSyscallExcess
+tags: [private]
 ```
 
 ```Go
@@ -10107,6 +10982,7 @@ func BenchmarkSyscallExcess(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSyscallExcessWork
+tags: [private]
 ```
 
 ```Go
@@ -10117,6 +10993,7 @@ func BenchmarkSyscallExcessWork(b *testing.B)
 
 ```
 searchKey: runtime_test.benchmarkSyscall
+tags: [private]
 ```
 
 ```Go
@@ -10127,6 +11004,7 @@ func benchmarkSyscall(b *testing.B, work, excess int)
 
 ```
 searchKey: runtime_test.TestPanicWithDirectlyPrintableCustomTypes
+tags: [private]
 ```
 
 ```Go
@@ -10139,6 +11017,7 @@ Test that panics print out the underlying value when the underlying kind is dire
 
 ```
 searchKey: runtime_test.perpetuumMobile
+tags: [private]
 ```
 
 ```Go
@@ -10149,6 +11028,7 @@ func perpetuumMobile()
 
 ```
 searchKey: runtime_test.TestStopTheWorldDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -10159,6 +11039,7 @@ func TestStopTheWorldDeadlock(t *testing.T)
 
 ```
 searchKey: runtime_test.TestYieldProgress
+tags: [private]
 ```
 
 ```Go
@@ -10169,6 +11050,7 @@ func TestYieldProgress(t *testing.T)
 
 ```
 searchKey: runtime_test.TestYieldLockedProgress
+tags: [private]
 ```
 
 ```Go
@@ -10179,6 +11061,7 @@ func TestYieldLockedProgress(t *testing.T)
 
 ```
 searchKey: runtime_test.testYieldProgress
+tags: [private]
 ```
 
 ```Go
@@ -10189,6 +11072,7 @@ func testYieldProgress(locked bool)
 
 ```
 searchKey: runtime_test.TestYieldLocked
+tags: [private]
 ```
 
 ```Go
@@ -10199,6 +11083,7 @@ func TestYieldLocked(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGoroutineParallelism
+tags: [private]
 ```
 
 ```Go
@@ -10209,6 +11094,7 @@ func TestGoroutineParallelism(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGoroutineParallelism2
+tags: [private]
 ```
 
 ```Go
@@ -10221,6 +11107,7 @@ Test that all runnable goroutines are scheduled at the same time.
 
 ```
 searchKey: runtime_test.testGoroutineParallelism2
+tags: [private]
 ```
 
 ```Go
@@ -10231,6 +11118,7 @@ func testGoroutineParallelism2(t *testing.T, load, netpoll bool)
 
 ```
 searchKey: runtime_test.TestBlockLocked
+tags: [private]
 ```
 
 ```Go
@@ -10241,6 +11129,7 @@ func TestBlockLocked(t *testing.T)
 
 ```
 searchKey: runtime_test.TestTimerFairness
+tags: [private]
 ```
 
 ```Go
@@ -10251,6 +11140,7 @@ func TestTimerFairness(t *testing.T)
 
 ```
 searchKey: runtime_test.TestTimerFairness2
+tags: [private]
 ```
 
 ```Go
@@ -10261,6 +11151,7 @@ func TestTimerFairness2(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPreemption
+tags: [private]
 ```
 
 ```Go
@@ -10271,6 +11162,7 @@ func TestPreemption(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPreemptionGC
+tags: [private]
 ```
 
 ```Go
@@ -10281,6 +11173,7 @@ func TestPreemptionGC(t *testing.T)
 
 ```
 searchKey: runtime_test.TestAsyncPreempt
+tags: [private]
 ```
 
 ```Go
@@ -10291,6 +11184,7 @@ func TestAsyncPreempt(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGCFairness
+tags: [private]
 ```
 
 ```Go
@@ -10301,6 +11195,7 @@ func TestGCFairness(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGCFairness2
+tags: [private]
 ```
 
 ```Go
@@ -10311,6 +11206,7 @@ func TestGCFairness2(t *testing.T)
 
 ```
 searchKey: runtime_test.TestNumGoroutine
+tags: [private]
 ```
 
 ```Go
@@ -10321,6 +11217,7 @@ func TestNumGoroutine(t *testing.T)
 
 ```
 searchKey: runtime_test.TestPingPongHog
+tags: [private]
 ```
 
 ```Go
@@ -10331,6 +11228,7 @@ func TestPingPongHog(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkPingPongHog
+tags: [private]
 ```
 
 ```Go
@@ -10341,6 +11239,7 @@ func BenchmarkPingPongHog(b *testing.B)
 
 ```
 searchKey: runtime_test.stackGrowthRecursive
+tags: [private]
 ```
 
 ```Go
@@ -10351,6 +11250,7 @@ func stackGrowthRecursive(i int)
 
 ```
 searchKey: runtime_test.TestPreemptSplitBig
+tags: [private]
 ```
 
 ```Go
@@ -10361,6 +11261,7 @@ func TestPreemptSplitBig(t *testing.T)
 
 ```
 searchKey: runtime_test.big
+tags: [private]
 ```
 
 ```Go
@@ -10371,6 +11272,7 @@ func big(stop chan int) int
 
 ```
 searchKey: runtime_test.bigframe
+tags: [private]
 ```
 
 ```Go
@@ -10381,6 +11283,7 @@ func bigframe(stop chan int) int
 
 ```
 searchKey: runtime_test.small
+tags: [private]
 ```
 
 ```Go
@@ -10391,6 +11294,7 @@ func small(stop chan int, x *[8192]byte) int
 
 ```
 searchKey: runtime_test.nonleaf
+tags: [private]
 ```
 
 ```Go
@@ -10401,6 +11305,7 @@ func nonleaf(stop chan int) bool
 
 ```
 searchKey: runtime_test.TestSchedLocalQueue
+tags: [private]
 ```
 
 ```Go
@@ -10411,6 +11316,7 @@ func TestSchedLocalQueue(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSchedLocalQueueSteal
+tags: [private]
 ```
 
 ```Go
@@ -10421,6 +11327,7 @@ func TestSchedLocalQueueSteal(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSchedLocalQueueEmpty
+tags: [private]
 ```
 
 ```Go
@@ -10431,6 +11338,7 @@ func TestSchedLocalQueueEmpty(t *testing.T)
 
 ```
 searchKey: runtime_test.benchmarkStackGrowth
+tags: [private]
 ```
 
 ```Go
@@ -10441,6 +11349,7 @@ func benchmarkStackGrowth(b *testing.B, rec int)
 
 ```
 searchKey: runtime_test.BenchmarkStackGrowth
+tags: [private]
 ```
 
 ```Go
@@ -10451,6 +11360,7 @@ func BenchmarkStackGrowth(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkStackGrowthDeep
+tags: [private]
 ```
 
 ```Go
@@ -10461,6 +11371,7 @@ func BenchmarkStackGrowthDeep(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCreateGoroutines
+tags: [private]
 ```
 
 ```Go
@@ -10471,6 +11382,7 @@ func BenchmarkCreateGoroutines(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCreateGoroutinesParallel
+tags: [private]
 ```
 
 ```Go
@@ -10481,6 +11393,7 @@ func BenchmarkCreateGoroutinesParallel(b *testing.B)
 
 ```
 searchKey: runtime_test.benchmarkCreateGoroutines
+tags: [private]
 ```
 
 ```Go
@@ -10491,6 +11404,7 @@ func benchmarkCreateGoroutines(b *testing.B, procs int)
 
 ```
 searchKey: runtime_test.BenchmarkCreateGoroutinesCapture
+tags: [private]
 ```
 
 ```Go
@@ -10501,6 +11415,7 @@ func BenchmarkCreateGoroutinesCapture(b *testing.B)
 
 ```
 searchKey: runtime_test.warmupScheduler
+tags: [private]
 ```
 
 ```Go
@@ -10513,6 +11428,7 @@ warmupScheduler ensures the scheduler has at least targetThreadCount threads in 
 
 ```
 searchKey: runtime_test.doWork
+tags: [private]
 ```
 
 ```Go
@@ -10523,6 +11439,7 @@ func doWork(dur time.Duration)
 
 ```
 searchKey: runtime_test.BenchmarkCreateGoroutinesSingle
+tags: [private]
 ```
 
 ```Go
@@ -10537,6 +11454,7 @@ Compared to BenchmarkCreateGoroutines, this causes different behavior in the sch
 
 ```
 searchKey: runtime_test.BenchmarkClosureCall
+tags: [private]
 ```
 
 ```Go
@@ -10547,6 +11465,7 @@ func BenchmarkClosureCall(b *testing.B)
 
 ```
 searchKey: runtime_test.benchmarkWakeupParallel
+tags: [private]
 ```
 
 ```Go
@@ -10557,6 +11476,7 @@ func benchmarkWakeupParallel(b *testing.B, spin func(time.Duration))
 
 ```
 searchKey: runtime_test.BenchmarkWakeupParallelSpinning
+tags: [private]
 ```
 
 ```Go
@@ -10567,6 +11487,7 @@ func BenchmarkWakeupParallelSpinning(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkWakeupParallelSyscall
+tags: [private]
 ```
 
 ```Go
@@ -10577,6 +11498,7 @@ func BenchmarkWakeupParallelSyscall(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMatmult
+tags: [private]
 ```
 
 ```Go
@@ -10587,6 +11509,7 @@ func BenchmarkMatmult(b *testing.B)
 
 ```
 searchKey: runtime_test.matmult
+tags: [private]
 ```
 
 ```Go
@@ -10597,6 +11520,7 @@ func matmult(done chan<- struct{}, A, B, C Matrix, i0, i1, j0, j1, k0, k1, thres
 
 ```
 searchKey: runtime_test.TestStealOrder
+tags: [private]
 ```
 
 ```Go
@@ -10607,6 +11531,7 @@ func TestStealOrder(t *testing.T)
 
 ```
 searchKey: runtime_test.TestLockOSThreadNesting
+tags: [private]
 ```
 
 ```Go
@@ -10617,6 +11542,7 @@ func TestLockOSThreadNesting(t *testing.T)
 
 ```
 searchKey: runtime_test.TestLockOSThreadExit
+tags: [private]
 ```
 
 ```Go
@@ -10627,6 +11553,7 @@ func TestLockOSThreadExit(t *testing.T)
 
 ```
 searchKey: runtime_test.testLockOSThreadExit
+tags: [private]
 ```
 
 ```Go
@@ -10637,6 +11564,7 @@ func testLockOSThreadExit(t *testing.T, prog string)
 
 ```
 searchKey: runtime_test.TestLockOSThreadAvoidsStatePropagation
+tags: [private]
 ```
 
 ```Go
@@ -10647,6 +11575,7 @@ func TestLockOSThreadAvoidsStatePropagation(t *testing.T)
 
 ```
 searchKey: runtime_test.TestLockOSThreadTemplateThreadRace
+tags: [private]
 ```
 
 ```Go
@@ -10657,6 +11586,7 @@ func TestLockOSThreadTemplateThreadRace(t *testing.T)
 
 ```
 searchKey: runtime_test.fakeSyscall
+tags: [private]
 ```
 
 ```Go
@@ -10669,6 +11599,7 @@ fakeSyscall emulates a system call.
 
 ```
 searchKey: runtime_test.testPreemptionAfterSyscall
+tags: [private]
 ```
 
 ```Go
@@ -10681,6 +11612,7 @@ Check that a goroutine will be preempted if it is calling short system calls.
 
 ```
 searchKey: runtime_test.TestPreemptionAfterSyscall
+tags: [private]
 ```
 
 ```Go
@@ -10691,6 +11623,7 @@ func TestPreemptionAfterSyscall(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGetgThreadSwitch
+tags: [private]
 ```
 
 ```Go
@@ -10701,6 +11634,7 @@ func TestGetgThreadSwitch(t *testing.T)
 
 ```
 searchKey: runtime_test.TestNetpollBreak
+tags: [private]
 ```
 
 ```Go
@@ -10713,6 +11647,7 @@ TestNetpollBreak tests that netpollBreak can break a netpoll. This test is not p
 
 ```
 searchKey: runtime_test.TestBigGOMAXPROCS
+tags: [private]
 ```
 
 ```Go
@@ -10725,6 +11660,7 @@ TestBigGOMAXPROCS tests that setting GOMAXPROCS to a large value doesn't cause a
 
 ```
 searchKey: runtime_test.TestProfBuf
+tags: [private]
 ```
 
 ```Go
@@ -10735,6 +11671,7 @@ func TestProfBuf(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkFastrand
+tags: [private]
 ```
 
 ```Go
@@ -10745,6 +11682,7 @@ func BenchmarkFastrand(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkFastrandHashiter
+tags: [private]
 ```
 
 ```Go
@@ -10755,6 +11693,7 @@ func BenchmarkFastrandHashiter(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkFastrandn
+tags: [private]
 ```
 
 ```Go
@@ -10765,6 +11704,7 @@ func BenchmarkFastrandn(b *testing.B)
 
 ```
 searchKey: runtime_test.checkGdbEnvironment
+tags: [private]
 ```
 
 ```Go
@@ -10775,6 +11715,7 @@ func checkGdbEnvironment(t *testing.T)
 
 ```
 searchKey: runtime_test.checkGdbVersion
+tags: [private]
 ```
 
 ```Go
@@ -10785,6 +11726,7 @@ func checkGdbVersion(t *testing.T)
 
 ```
 searchKey: runtime_test.checkGdbPython
+tags: [private]
 ```
 
 ```Go
@@ -10795,6 +11737,7 @@ func checkGdbPython(t *testing.T)
 
 ```
 searchKey: runtime_test.checkCleanBacktrace
+tags: [private]
 ```
 
 ```Go
@@ -10807,6 +11750,7 @@ checkCleanBacktrace checks that the given backtrace is well formed and does not 
 
 ```
 searchKey: runtime_test.lastLine
+tags: [private]
 ```
 
 ```Go
@@ -10817,6 +11761,7 @@ func lastLine(src []byte) int
 
 ```
 searchKey: runtime_test.TestGdbPython
+tags: [private]
 ```
 
 ```Go
@@ -10827,6 +11772,7 @@ func TestGdbPython(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGdbPythonCgo
+tags: [private]
 ```
 
 ```Go
@@ -10837,6 +11783,7 @@ func TestGdbPythonCgo(t *testing.T)
 
 ```
 searchKey: runtime_test.testGdbPython
+tags: [private]
 ```
 
 ```Go
@@ -10847,6 +11794,7 @@ func testGdbPython(t *testing.T, cgo bool)
 
 ```
 searchKey: runtime_test.TestGdbBacktrace
+tags: [private]
 ```
 
 ```Go
@@ -10859,6 +11807,7 @@ TestGdbBacktrace tests that gdb can unwind the stack correctly using only the DW
 
 ```
 searchKey: runtime_test.TestGdbAutotmpTypes
+tags: [private]
 ```
 
 ```Go
@@ -10871,6 +11820,7 @@ TestGdbAutotmpTypes ensures that types of autotmp variables appear in .debug_inf
 
 ```
 searchKey: runtime_test.TestGdbConst
+tags: [private]
 ```
 
 ```Go
@@ -10881,6 +11831,7 @@ func TestGdbConst(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGdbPanic
+tags: [private]
 ```
 
 ```Go
@@ -10893,6 +11844,7 @@ TestGdbPanic tests that gdb can unwind the stack correctly from SIGABRTs from Go
 
 ```
 searchKey: runtime_test.TestGdbInfCallstack
+tags: [private]
 ```
 
 ```Go
@@ -10905,6 +11857,7 @@ TestGdbInfCallstack tests that gdb can unwind the callstack of cgo programs on a
 
 ```
 searchKey: runtime_test.checkLldbPython
+tags: [private]
 ```
 
 ```Go
@@ -10915,6 +11868,7 @@ func checkLldbPython(t *testing.T)
 
 ```
 searchKey: runtime_test.TestLldbPython
+tags: [private]
 ```
 
 ```Go
@@ -10925,6 +11879,7 @@ func TestLldbPython(t *testing.T)
 
 ```
 searchKey: runtime_test.TestMmapErrorSign
+tags: [private]
 ```
 
 ```Go
@@ -10937,16 +11892,18 @@ Test that the error value returned by mmap is positive, as that is what the code
 
 ```
 searchKey: runtime_test.TestPhysPageSize
+tags: [private]
 ```
 
 ```Go
 func TestPhysPageSize(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.runtime_test.go" href="#init.runtime_test.go">func init()</a>
 
 ```
 searchKey: runtime_test.init
+tags: [private]
 ```
 
 ```Go
@@ -10957,6 +11914,7 @@ func init()
 
 ```
 searchKey: runtime_test.errfn
+tags: [private]
 ```
 
 ```Go
@@ -10967,6 +11925,7 @@ func errfn() error
 
 ```
 searchKey: runtime_test.errfn1
+tags: [private]
 ```
 
 ```Go
@@ -10977,6 +11936,7 @@ func errfn1() error
 
 ```
 searchKey: runtime_test.BenchmarkIfaceCmp100
+tags: [private]
 ```
 
 ```Go
@@ -10987,6 +11947,7 @@ func BenchmarkIfaceCmp100(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkIfaceCmpNil100
+tags: [private]
 ```
 
 ```Go
@@ -10997,6 +11958,7 @@ func BenchmarkIfaceCmpNil100(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkEfaceCmpDiff
+tags: [private]
 ```
 
 ```Go
@@ -11007,6 +11969,7 @@ func BenchmarkEfaceCmpDiff(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkEfaceCmpDiffIndirect
+tags: [private]
 ```
 
 ```Go
@@ -11017,6 +11980,7 @@ func BenchmarkEfaceCmpDiffIndirect(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkDefer
+tags: [private]
 ```
 
 ```Go
@@ -11027,6 +11991,7 @@ func BenchmarkDefer(b *testing.B)
 
 ```
 searchKey: runtime_test.defer1
+tags: [private]
 ```
 
 ```Go
@@ -11037,6 +12002,7 @@ func defer1()
 
 ```
 searchKey: runtime_test.BenchmarkDefer10
+tags: [private]
 ```
 
 ```Go
@@ -11047,6 +12013,7 @@ func BenchmarkDefer10(b *testing.B)
 
 ```
 searchKey: runtime_test.defer2
+tags: [private]
 ```
 
 ```Go
@@ -11057,6 +12024,7 @@ func defer2()
 
 ```
 searchKey: runtime_test.BenchmarkDeferMany
+tags: [private]
 ```
 
 ```Go
@@ -11067,6 +12035,7 @@ func BenchmarkDeferMany(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkPanicRecover
+tags: [private]
 ```
 
 ```Go
@@ -11077,6 +12046,7 @@ func BenchmarkPanicRecover(b *testing.B)
 
 ```
 searchKey: runtime_test.defer3
+tags: [private]
 ```
 
 ```Go
@@ -11087,6 +12057,7 @@ func defer3()
 
 ```
 searchKey: runtime_test.TestStopCPUProfilingWithProfilerOff
+tags: [private]
 ```
 
 ```Go
@@ -11099,6 +12070,7 @@ golang.org/issue/7063
 
 ```
 searchKey: runtime_test.TestSetPanicOnFault
+tags: [private]
 ```
 
 ```Go
@@ -11109,6 +12081,7 @@ func TestSetPanicOnFault(t *testing.T)
 
 ```
 searchKey: runtime_test.testSetPanicOnFault
+tags: [private]
 ```
 
 ```Go
@@ -11121,6 +12094,7 @@ testSetPanicOnFault tests one potentially faulting address. It deliberately cons
 
 ```
 searchKey: runtime_test.eqstring_generic
+tags: [private]
 ```
 
 ```Go
@@ -11131,6 +12105,7 @@ func eqstring_generic(s1, s2 string) bool
 
 ```
 searchKey: runtime_test.TestEqString
+tags: [private]
 ```
 
 ```Go
@@ -11141,6 +12116,7 @@ func TestEqString(t *testing.T)
 
 ```
 searchKey: runtime_test.TestTrailingZero
+tags: [private]
 ```
 
 ```Go
@@ -11151,6 +12127,7 @@ func TestTrailingZero(t *testing.T)
 
 ```
 searchKey: runtime_test.TestAppendGrowth
+tags: [private]
 ```
 
 ```Go
@@ -11161,6 +12138,7 @@ func TestAppendGrowth(t *testing.T)
 
 ```
 searchKey: runtime_test.TestAppendSliceGrowth
+tags: [private]
 ```
 
 ```Go
@@ -11171,6 +12149,7 @@ func TestAppendSliceGrowth(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGoroutineProfileTrivial
+tags: [private]
 ```
 
 ```Go
@@ -11181,6 +12160,7 @@ func TestGoroutineProfileTrivial(t *testing.T)
 
 ```
 searchKey: runtime_test.TestVersion
+tags: [private]
 ```
 
 ```Go
@@ -11191,6 +12171,7 @@ func TestVersion(t *testing.T)
 
 ```
 searchKey: runtime_test.TestGoroutineProfile
+tags: [private]
 ```
 
 ```Go
@@ -11201,6 +12182,7 @@ func TestGoroutineProfile(t *testing.T)
 
 ```
 searchKey: runtime_test.parallelReader
+tags: [private]
 ```
 
 ```Go
@@ -11211,6 +12193,7 @@ func parallelReader(m *RWMutex, clocked chan bool, cunlock *uint32, cdone chan b
 
 ```
 searchKey: runtime_test.doTestParallelReaders
+tags: [private]
 ```
 
 ```Go
@@ -11221,6 +12204,7 @@ func doTestParallelReaders(numReaders int)
 
 ```
 searchKey: runtime_test.TestParallelRWMutexReaders
+tags: [private]
 ```
 
 ```Go
@@ -11231,6 +12215,7 @@ func TestParallelRWMutexReaders(t *testing.T)
 
 ```
 searchKey: runtime_test.reader
+tags: [private]
 ```
 
 ```Go
@@ -11241,6 +12226,7 @@ func reader(rwm *RWMutex, num_iterations int, activity *int32, cdone chan bool)
 
 ```
 searchKey: runtime_test.writer
+tags: [private]
 ```
 
 ```Go
@@ -11251,6 +12237,7 @@ func writer(rwm *RWMutex, num_iterations int, activity *int32, cdone chan bool)
 
 ```
 searchKey: runtime_test.HammerRWMutex
+tags: [private]
 ```
 
 ```Go
@@ -11261,6 +12248,7 @@ func HammerRWMutex(gomaxprocs, numReaders, num_iterations int)
 
 ```
 searchKey: runtime_test.TestRWMutex
+tags: [private]
 ```
 
 ```Go
@@ -11271,6 +12259,7 @@ func TestRWMutex(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkRWMutexUncontended
+tags: [private]
 ```
 
 ```Go
@@ -11281,6 +12270,7 @@ func BenchmarkRWMutexUncontended(b *testing.B)
 
 ```
 searchKey: runtime_test.benchmarkRWMutex
+tags: [private]
 ```
 
 ```Go
@@ -11291,6 +12281,7 @@ func benchmarkRWMutex(b *testing.B, localWork, writeRatio int)
 
 ```
 searchKey: runtime_test.BenchmarkRWMutexWrite100
+tags: [private]
 ```
 
 ```Go
@@ -11301,6 +12292,7 @@ func BenchmarkRWMutexWrite100(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkRWMutexWrite10
+tags: [private]
 ```
 
 ```Go
@@ -11311,6 +12303,7 @@ func BenchmarkRWMutexWrite10(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkRWMutexWorkWrite100
+tags: [private]
 ```
 
 ```Go
@@ -11321,6 +12314,7 @@ func BenchmarkRWMutexWorkWrite100(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkRWMutexWorkWrite10
+tags: [private]
 ```
 
 ```Go
@@ -11331,6 +12325,7 @@ func BenchmarkRWMutexWorkWrite10(b *testing.B)
 
 ```
 searchKey: runtime_test.TestSemaHandoff
+tags: [private]
 ```
 
 ```Go
@@ -11343,6 +12338,7 @@ TestSemaHandoff checks that when semrelease+handoff is requested, the G that rel
 
 ```
 searchKey: runtime_test.TestSemaHandoff1
+tags: [private]
 ```
 
 ```Go
@@ -11353,6 +12349,7 @@ func TestSemaHandoff1(t *testing.T)
 
 ```
 searchKey: runtime_test.TestSemaHandoff2
+tags: [private]
 ```
 
 ```Go
@@ -11363,6 +12360,7 @@ func TestSemaHandoff2(t *testing.T)
 
 ```
 searchKey: runtime_test.testSemaHandoff
+tags: [private]
 ```
 
 ```Go
@@ -11373,6 +12371,7 @@ func testSemaHandoff() bool
 
 ```
 searchKey: runtime_test.TestSpuriousWakeupsNeverHangSemasleep
+tags: [private]
 ```
 
 ```Go
@@ -11385,6 +12384,7 @@ Issue #27250. Spurious wakeups to pthread_cond_timedwait_relative_np shouldn't c
 
 ```
 searchKey: runtime_test.TestSizeof
+tags: [private]
 ```
 
 ```Go
@@ -11395,6 +12395,7 @@ func TestSizeof(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkMakeSliceCopy
+tags: [private]
 ```
 
 ```Go
@@ -11405,6 +12406,7 @@ func BenchmarkMakeSliceCopy(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkMakeSlice
+tags: [private]
 ```
 
 ```Go
@@ -11415,6 +12417,7 @@ func BenchmarkMakeSlice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkGrowSlice
+tags: [private]
 ```
 
 ```Go
@@ -11425,6 +12428,7 @@ func BenchmarkGrowSlice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkExtendSlice
+tags: [private]
 ```
 
 ```Go
@@ -11435,6 +12439,7 @@ func BenchmarkExtendSlice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAppend
+tags: [private]
 ```
 
 ```Go
@@ -11445,6 +12450,7 @@ func BenchmarkAppend(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAppendGrowByte
+tags: [private]
 ```
 
 ```Go
@@ -11455,6 +12461,7 @@ func BenchmarkAppendGrowByte(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAppendGrowString
+tags: [private]
 ```
 
 ```Go
@@ -11465,6 +12472,7 @@ func BenchmarkAppendGrowString(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAppendSlice
+tags: [private]
 ```
 
 ```Go
@@ -11475,6 +12483,7 @@ func BenchmarkAppendSlice(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAppendSliceLarge
+tags: [private]
 ```
 
 ```Go
@@ -11485,6 +12494,7 @@ func BenchmarkAppendSliceLarge(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAppendStr
+tags: [private]
 ```
 
 ```Go
@@ -11495,6 +12505,7 @@ func BenchmarkAppendStr(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAppendSpecialCase
+tags: [private]
 ```
 
 ```Go
@@ -11505,6 +12516,7 @@ func BenchmarkAppendSpecialCase(b *testing.B)
 
 ```
 searchKey: runtime_test.f
+tags: [private]
 ```
 
 ```Go
@@ -11515,6 +12527,7 @@ func f() int
 
 ```
 searchKey: runtime_test.TestSideEffectOrder
+tags: [private]
 ```
 
 ```Go
@@ -11525,6 +12538,7 @@ func TestSideEffectOrder(t *testing.T)
 
 ```
 searchKey: runtime_test.TestAppendOverlap
+tags: [private]
 ```
 
 ```Go
@@ -11535,6 +12549,7 @@ func TestAppendOverlap(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkCopy
+tags: [private]
 ```
 
 ```Go
@@ -11545,6 +12560,7 @@ func BenchmarkCopy(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkAppendInPlace
+tags: [private]
 ```
 
 ```Go
@@ -11557,6 +12573,7 @@ BenchmarkAppendInPlace tests the performance of append when the result is being 
 
 ```
 searchKey: runtime_test.fop
+tags: [private]
 ```
 
 ```Go
@@ -11569,6 +12586,7 @@ turn uint64 op into float64 op
 
 ```
 searchKey: runtime_test.add
+tags: [private]
 ```
 
 ```Go
@@ -11579,6 +12597,7 @@ func add(x, y float64) float64
 
 ```
 searchKey: runtime_test.sub
+tags: [private]
 ```
 
 ```Go
@@ -11589,6 +12608,7 @@ func sub(x, y float64) float64
 
 ```
 searchKey: runtime_test.mul
+tags: [private]
 ```
 
 ```Go
@@ -11599,6 +12619,7 @@ func mul(x, y float64) float64
 
 ```
 searchKey: runtime_test.div
+tags: [private]
 ```
 
 ```Go
@@ -11609,6 +12630,7 @@ func div(x, y float64) float64
 
 ```
 searchKey: runtime_test.TestFloat64
+tags: [private]
 ```
 
 ```Go
@@ -11619,6 +12641,7 @@ func TestFloat64(t *testing.T)
 
 ```
 searchKey: runtime_test.trunc32
+tags: [private]
 ```
 
 ```Go
@@ -11631,6 +12654,7 @@ func trunc32(f float64) float64
 
 ```
 searchKey: runtime_test.to32sw
+tags: [private]
 ```
 
 ```Go
@@ -11643,6 +12667,7 @@ func to32sw(f float64) float64
 
 ```
 searchKey: runtime_test.to64sw
+tags: [private]
 ```
 
 ```Go
@@ -11655,6 +12680,7 @@ func to64sw(f float64) float64
 
 ```
 searchKey: runtime_test.hwint64
+tags: [private]
 ```
 
 ```Go
@@ -11667,6 +12693,7 @@ float64 -hw-> int64 -hw-> float64
 
 ```
 searchKey: runtime_test.hwint32
+tags: [private]
 ```
 
 ```Go
@@ -11679,6 +12706,7 @@ float64 -hw-> int32 -hw-> float64
 
 ```
 searchKey: runtime_test.toint64sw
+tags: [private]
 ```
 
 ```Go
@@ -11691,6 +12719,7 @@ float64 -sw-> int64 -hw-> float64
 
 ```
 searchKey: runtime_test.fromint64sw
+tags: [private]
 ```
 
 ```Go
@@ -11703,6 +12732,7 @@ float64 -hw-> int64 -sw-> float64
 
 ```
 searchKey: runtime_test.err
+tags: [private]
 ```
 
 ```Go
@@ -11713,6 +12743,7 @@ func err(t *testing.T, format string, args ...interface{})
 
 ```
 searchKey: runtime_test.test
+tags: [private]
 ```
 
 ```Go
@@ -11723,6 +12754,7 @@ func test(t *testing.T, op string, hw, sw func(float64, float64) float64, all []
 
 ```
 searchKey: runtime_test.testu
+tags: [private]
 ```
 
 ```Go
@@ -11733,6 +12765,7 @@ func testu(t *testing.T, op string, hw, sw func(float64) float64, v float64)
 
 ```
 searchKey: runtime_test.hwcmp
+tags: [private]
 ```
 
 ```Go
@@ -11743,6 +12776,7 @@ func hwcmp(f, g float64) (cmp int, isnan bool)
 
 ```
 searchKey: runtime_test.testcmp
+tags: [private]
 ```
 
 ```Go
@@ -11753,6 +12787,7 @@ func testcmp(t *testing.T, f, g float64)
 
 ```
 searchKey: runtime_test.same
+tags: [private]
 ```
 
 ```Go
@@ -11763,6 +12798,7 @@ func same(f, g float64) bool
 
 ```
 searchKey: runtime_test.TestStackMem
+tags: [private]
 ```
 
 ```Go
@@ -11775,6 +12811,7 @@ TestStackMem measures per-thread stack segment cache behavior. The test consumed
 
 ```
 searchKey: runtime_test.TestStackGrowth
+tags: [private]
 ```
 
 ```Go
@@ -11787,6 +12824,7 @@ Test stack growing in different contexts.
 
 ```
 searchKey: runtime_test.growStack
+tags: [private]
 ```
 
 ```Go
@@ -11797,6 +12835,7 @@ func growStack(progress *uint32)
 
 ```
 searchKey: runtime_test.growStackIter
+tags: [private]
 ```
 
 ```Go
@@ -11809,6 +12848,7 @@ This function is not an anonymous func, so that the compiler can do escape analy
 
 ```
 searchKey: runtime_test.TestStackGrowthCallback
+tags: [private]
 ```
 
 ```Go
@@ -11819,6 +12859,7 @@ func TestStackGrowthCallback(t *testing.T)
 
 ```
 searchKey: runtime_test.growStackWithCallback
+tags: [private]
 ```
 
 ```Go
@@ -11829,6 +12870,7 @@ func growStackWithCallback(cb func())
 
 ```
 searchKey: runtime_test.set
+tags: [private]
 ```
 
 ```Go
@@ -11841,6 +12883,7 @@ TestDeferPtrs tests the adjustment of Defer's argument pointers (p aka &y) durin
 
 ```
 searchKey: runtime_test.TestDeferPtrs
+tags: [private]
 ```
 
 ```Go
@@ -11851,6 +12894,7 @@ func TestDeferPtrs(t *testing.T)
 
 ```
 searchKey: runtime_test.TestDeferPtrsGoexit
+tags: [private]
 ```
 
 ```Go
@@ -11863,6 +12907,7 @@ TestDeferPtrsGoexit is like TestDeferPtrs but exercises the possibility that the
 
 ```
 searchKey: runtime_test.testDeferPtrsGoexit
+tags: [private]
 ```
 
 ```Go
@@ -11873,6 +12918,7 @@ func testDeferPtrsGoexit(c chan int, i int)
 
 ```
 searchKey: runtime_test.setBig
+tags: [private]
 ```
 
 ```Go
@@ -11883,6 +12929,7 @@ func setBig(p *int, x int, b bigBuf)
 
 ```
 searchKey: runtime_test.TestDeferPtrsPanic
+tags: [private]
 ```
 
 ```Go
@@ -11895,6 +12942,7 @@ TestDeferPtrsPanic is like TestDeferPtrsGoexit, but it's using panic instead of 
 
 ```
 searchKey: runtime_test.testDeferPtrsPanic
+tags: [private]
 ```
 
 ```Go
@@ -11905,6 +12953,7 @@ func testDeferPtrsPanic(c chan int, i int)
 
 ```
 searchKey: runtime_test.testDeferLeafSigpanic1
+tags: [private]
 ```
 
 ```Go
@@ -11915,6 +12964,7 @@ func testDeferLeafSigpanic1()
 
 ```
 searchKey: runtime_test.TestDeferLeafSigpanic
+tags: [private]
 ```
 
 ```Go
@@ -11927,6 +12977,7 @@ TestDeferLeafSigpanic tests defer matching around leaf functions that sigpanic. 
 
 ```
 searchKey: runtime_test.TestPanicUseStack
+tags: [private]
 ```
 
 ```Go
@@ -11939,6 +12990,7 @@ TestPanicUseStack checks that a chain of Panic structs on the stack are updated 
 
 ```
 searchKey: runtime_test.TestPanicFar
+tags: [private]
 ```
 
 ```Go
@@ -11949,6 +13001,7 @@ func TestPanicFar(t *testing.T)
 
 ```
 searchKey: runtime_test.useStackAndCall
+tags: [private]
 ```
 
 ```Go
@@ -11961,6 +13014,7 @@ use about n KB of stack and call f
 
 ```
 searchKey: runtime_test.useStack
+tags: [private]
 ```
 
 ```Go
@@ -11971,6 +13025,7 @@ func useStack(n int)
 
 ```
 searchKey: runtime_test.growing
+tags: [private]
 ```
 
 ```Go
@@ -11981,6 +13036,7 @@ func growing(c chan int, done chan struct{})
 
 ```
 searchKey: runtime_test.TestStackCache
+tags: [private]
 ```
 
 ```Go
@@ -11991,6 +13047,7 @@ func TestStackCache(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStackOutput
+tags: [private]
 ```
 
 ```Go
@@ -12001,6 +13058,7 @@ func TestStackOutput(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStackAllOutput
+tags: [private]
 ```
 
 ```Go
@@ -12011,6 +13069,7 @@ func TestStackAllOutput(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStackPanic
+tags: [private]
 ```
 
 ```Go
@@ -12021,6 +13080,7 @@ func TestStackPanic(t *testing.T)
 
 ```
 searchKey: runtime_test.BenchmarkStackCopyPtr
+tags: [private]
 ```
 
 ```Go
@@ -12031,6 +13091,7 @@ func BenchmarkStackCopyPtr(b *testing.B)
 
 ```
 searchKey: runtime_test.countp
+tags: [private]
 ```
 
 ```Go
@@ -12041,6 +13102,7 @@ func countp(n *int)
 
 ```
 searchKey: runtime_test.BenchmarkStackCopy
+tags: [private]
 ```
 
 ```Go
@@ -12051,6 +13113,7 @@ func BenchmarkStackCopy(b *testing.B)
 
 ```
 searchKey: runtime_test.count
+tags: [private]
 ```
 
 ```Go
@@ -12061,6 +13124,7 @@ func count(n int) int
 
 ```
 searchKey: runtime_test.BenchmarkStackCopyNoCache
+tags: [private]
 ```
 
 ```Go
@@ -12071,6 +13135,7 @@ func BenchmarkStackCopyNoCache(b *testing.B)
 
 ```
 searchKey: runtime_test.count1
+tags: [private]
 ```
 
 ```Go
@@ -12081,6 +13146,7 @@ func count1(n int) int
 
 ```
 searchKey: runtime_test.count2
+tags: [private]
 ```
 
 ```Go
@@ -12091,6 +13157,7 @@ func count2(n int) int
 
 ```
 searchKey: runtime_test.count3
+tags: [private]
 ```
 
 ```Go
@@ -12101,6 +13168,7 @@ func count3(n int) int
 
 ```
 searchKey: runtime_test.count4
+tags: [private]
 ```
 
 ```Go
@@ -12111,6 +13179,7 @@ func count4(n int) int
 
 ```
 searchKey: runtime_test.count5
+tags: [private]
 ```
 
 ```Go
@@ -12121,6 +13190,7 @@ func count5(n int) int
 
 ```
 searchKey: runtime_test.count6
+tags: [private]
 ```
 
 ```Go
@@ -12131,6 +13201,7 @@ func count6(n int) int
 
 ```
 searchKey: runtime_test.count7
+tags: [private]
 ```
 
 ```Go
@@ -12141,6 +13212,7 @@ func count7(n int) int
 
 ```
 searchKey: runtime_test.count8
+tags: [private]
 ```
 
 ```Go
@@ -12151,6 +13223,7 @@ func count8(n int) int
 
 ```
 searchKey: runtime_test.count9
+tags: [private]
 ```
 
 ```Go
@@ -12161,6 +13234,7 @@ func count9(n int) int
 
 ```
 searchKey: runtime_test.count10
+tags: [private]
 ```
 
 ```Go
@@ -12171,6 +13245,7 @@ func count10(n int) int
 
 ```
 searchKey: runtime_test.count11
+tags: [private]
 ```
 
 ```Go
@@ -12181,6 +13256,7 @@ func count11(n int) int
 
 ```
 searchKey: runtime_test.count12
+tags: [private]
 ```
 
 ```Go
@@ -12191,6 +13267,7 @@ func count12(n int) int
 
 ```
 searchKey: runtime_test.count13
+tags: [private]
 ```
 
 ```Go
@@ -12201,6 +13278,7 @@ func count13(n int) int
 
 ```
 searchKey: runtime_test.count14
+tags: [private]
 ```
 
 ```Go
@@ -12211,6 +13289,7 @@ func count14(n int) int
 
 ```
 searchKey: runtime_test.count15
+tags: [private]
 ```
 
 ```Go
@@ -12221,6 +13300,7 @@ func count15(n int) int
 
 ```
 searchKey: runtime_test.count16
+tags: [private]
 ```
 
 ```Go
@@ -12231,6 +13311,7 @@ func count16(n int) int
 
 ```
 searchKey: runtime_test.count17
+tags: [private]
 ```
 
 ```Go
@@ -12241,6 +13322,7 @@ func count17(n int) int
 
 ```
 searchKey: runtime_test.count18
+tags: [private]
 ```
 
 ```Go
@@ -12251,6 +13333,7 @@ func count18(n int) int
 
 ```
 searchKey: runtime_test.count19
+tags: [private]
 ```
 
 ```Go
@@ -12261,6 +13344,7 @@ func count19(n int) int
 
 ```
 searchKey: runtime_test.count20
+tags: [private]
 ```
 
 ```Go
@@ -12271,6 +13355,7 @@ func count20(n int) int
 
 ```
 searchKey: runtime_test.count21
+tags: [private]
 ```
 
 ```Go
@@ -12281,6 +13366,7 @@ func count21(n int) int
 
 ```
 searchKey: runtime_test.count22
+tags: [private]
 ```
 
 ```Go
@@ -12291,6 +13377,7 @@ func count22(n int) int
 
 ```
 searchKey: runtime_test.count23
+tags: [private]
 ```
 
 ```Go
@@ -12301,6 +13388,7 @@ func count23(n int) int
 
 ```
 searchKey: runtime_test.TestStackWrapperCaller
+tags: [private]
 ```
 
 ```Go
@@ -12311,6 +13399,7 @@ func TestStackWrapperCaller(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStackWrapperCallers
+tags: [private]
 ```
 
 ```Go
@@ -12321,6 +13410,7 @@ func TestStackWrapperCallers(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStackWrapperStack
+tags: [private]
 ```
 
 ```Go
@@ -12331,6 +13421,7 @@ func TestStackWrapperStack(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStackWrapperStackPanic
+tags: [private]
 ```
 
 ```Go
@@ -12341,6 +13432,7 @@ func TestStackWrapperStackPanic(t *testing.T)
 
 ```
 searchKey: runtime_test.testStackWrapperPanic
+tags: [private]
 ```
 
 ```Go
@@ -12351,6 +13443,7 @@ func testStackWrapperPanic(t *testing.T, cb func(), expect string)
 
 ```
 searchKey: runtime_test.TestCallersFromWrapper
+tags: [private]
 ```
 
 ```Go
@@ -12361,6 +13454,7 @@ func TestCallersFromWrapper(t *testing.T)
 
 ```
 searchKey: runtime_test.TestTracebackSystemstack
+tags: [private]
 ```
 
 ```Go
@@ -12371,6 +13465,7 @@ func TestTracebackSystemstack(t *testing.T)
 
 ```
 searchKey: runtime_test.TestTracebackAncestors
+tags: [private]
 ```
 
 ```Go
@@ -12381,6 +13476,7 @@ func TestTracebackAncestors(t *testing.T)
 
 ```
 searchKey: runtime_test.TestDeferLiveness
+tags: [private]
 ```
 
 ```Go
@@ -12393,6 +13489,7 @@ Test that defer closure is correctly scanned when the stack is scanned.
 
 ```
 searchKey: runtime_test.TestDeferHeapAndStack
+tags: [private]
 ```
 
 ```Go
@@ -12403,6 +13500,7 @@ func TestDeferHeapAndStack(t *testing.T)
 
 ```
 searchKey: runtime_test.deferHeapAndStack
+tags: [private]
 ```
 
 ```Go
@@ -12415,6 +13513,7 @@ deferHeapAndStack(n) computes 2*n
 
 ```
 searchKey: runtime_test.TestTracebackInlineExcluded
+tags: [private]
 ```
 
 ```Go
@@ -12427,6 +13526,7 @@ Test that when F -> G is inlined and F is excluded from stack traces, G still ap
 
 ```
 searchKey: runtime_test.tracebackExcluded
+tags: [private]
 ```
 
 ```Go
@@ -12439,6 +13539,7 @@ tracebackExcluded should be excluded from tracebacks. There are various ways thi
 
 ```
 searchKey: runtime_test.tracebackNotExcluded
+tags: [private]
 ```
 
 ```Go
@@ -12451,6 +13552,7 @@ tracebackNotExcluded should be inlined into tracebackExcluded, but should not it
 
 ```
 searchKey: runtime_test.BenchmarkCompareStringEqual
+tags: [private]
 ```
 
 ```Go
@@ -12461,6 +13563,7 @@ func BenchmarkCompareStringEqual(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCompareStringIdentical
+tags: [private]
 ```
 
 ```Go
@@ -12471,6 +13574,7 @@ func BenchmarkCompareStringIdentical(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCompareStringSameLength
+tags: [private]
 ```
 
 ```Go
@@ -12481,6 +13585,7 @@ func BenchmarkCompareStringSameLength(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCompareStringDifferentLength
+tags: [private]
 ```
 
 ```Go
@@ -12491,6 +13596,7 @@ func BenchmarkCompareStringDifferentLength(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCompareStringBigUnaligned
+tags: [private]
 ```
 
 ```Go
@@ -12501,6 +13607,7 @@ func BenchmarkCompareStringBigUnaligned(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkCompareStringBig
+tags: [private]
 ```
 
 ```Go
@@ -12511,6 +13618,7 @@ func BenchmarkCompareStringBig(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkConcatStringAndBytes
+tags: [private]
 ```
 
 ```Go
@@ -12521,6 +13629,7 @@ func BenchmarkConcatStringAndBytes(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkSliceByteToString
+tags: [private]
 ```
 
 ```Go
@@ -12531,6 +13640,7 @@ func BenchmarkSliceByteToString(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkRuneCount
+tags: [private]
 ```
 
 ```Go
@@ -12541,6 +13651,7 @@ func BenchmarkRuneCount(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkRuneIterate
+tags: [private]
 ```
 
 ```Go
@@ -12551,6 +13662,7 @@ func BenchmarkRuneIterate(b *testing.B)
 
 ```
 searchKey: runtime_test.BenchmarkArrayEqual
+tags: [private]
 ```
 
 ```Go
@@ -12561,6 +13673,7 @@ func BenchmarkArrayEqual(b *testing.B)
 
 ```
 searchKey: runtime_test.TestStringW
+tags: [private]
 ```
 
 ```Go
@@ -12571,6 +13684,7 @@ func TestStringW(t *testing.T)
 
 ```
 searchKey: runtime_test.TestLargeStringConcat
+tags: [private]
 ```
 
 ```Go
@@ -12581,6 +13695,7 @@ func TestLargeStringConcat(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCompareTempString
+tags: [private]
 ```
 
 ```Go
@@ -12591,6 +13706,7 @@ func TestCompareTempString(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStringIndexHaystack
+tags: [private]
 ```
 
 ```Go
@@ -12601,6 +13717,7 @@ func TestStringIndexHaystack(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStringIndexNeedle
+tags: [private]
 ```
 
 ```Go
@@ -12611,6 +13728,7 @@ func TestStringIndexNeedle(t *testing.T)
 
 ```
 searchKey: runtime_test.TestStringOnStack
+tags: [private]
 ```
 
 ```Go
@@ -12621,6 +13739,7 @@ func TestStringOnStack(t *testing.T)
 
 ```
 searchKey: runtime_test.TestIntString
+tags: [private]
 ```
 
 ```Go
@@ -12631,6 +13750,7 @@ func TestIntString(t *testing.T)
 
 ```
 searchKey: runtime_test.TestIntStringAllocs
+tags: [private]
 ```
 
 ```Go
@@ -12641,6 +13761,7 @@ func TestIntStringAllocs(t *testing.T)
 
 ```
 searchKey: runtime_test.TestRangeStringCast
+tags: [private]
 ```
 
 ```Go
@@ -12651,6 +13772,7 @@ func TestRangeStringCast(t *testing.T)
 
 ```
 searchKey: runtime_test.isZeroed
+tags: [private]
 ```
 
 ```Go
@@ -12661,6 +13783,7 @@ func isZeroed(b []byte) bool
 
 ```
 searchKey: runtime_test.isZeroedR
+tags: [private]
 ```
 
 ```Go
@@ -12671,6 +13794,7 @@ func isZeroedR(r []rune) bool
 
 ```
 searchKey: runtime_test.TestString2Slice
+tags: [private]
 ```
 
 ```Go
@@ -12681,6 +13805,7 @@ func TestString2Slice(t *testing.T)
 
 ```
 searchKey: runtime_test.TestAtoi
+tags: [private]
 ```
 
 ```Go
@@ -12691,6 +13816,7 @@ func TestAtoi(t *testing.T)
 
 ```
 searchKey: runtime_test.TestAtoi32
+tags: [private]
 ```
 
 ```Go
@@ -12701,6 +13827,7 @@ func TestAtoi32(t *testing.T)
 
 ```
 searchKey: runtime_test.TestCaller
+tags: [private]
 ```
 
 ```Go
@@ -12711,6 +13838,7 @@ func TestCaller(t *testing.T)
 
 ```
 searchKey: runtime_test.testCallerFoo
+tags: [private]
 ```
 
 ```Go
@@ -12723,6 +13851,7 @@ These are marked noinline so that we can use FuncForPC in testCallerBar.
 
 ```
 searchKey: runtime_test.testCallerBar
+tags: [private]
 ```
 
 ```Go
@@ -12733,6 +13862,7 @@ func testCallerBar(t *testing.T)
 
 ```
 searchKey: runtime_test.lineNumber
+tags: [private]
 ```
 
 ```Go
@@ -12743,6 +13873,7 @@ func lineNumber() int
 
 ```
 searchKey: runtime_test.trythis
+tags: [private]
 ```
 
 ```Go
@@ -12753,6 +13884,7 @@ func trythis()
 
 ```
 searchKey: runtime_test.recordLines
+tags: [private]
 ```
 
 ```Go
@@ -12763,6 +13895,7 @@ func recordLines(a, b, c int)
 
 ```
 searchKey: runtime_test.TestLineNumber
+tags: [private]
 ```
 
 ```Go
@@ -12773,6 +13906,7 @@ func TestLineNumber(t *testing.T)
 
 ```
 searchKey: runtime_test.TestNilName
+tags: [private]
 ```
 
 ```Go
@@ -12783,6 +13917,7 @@ func TestNilName(t *testing.T)
 
 ```
 searchKey: runtime_test.inlined
+tags: [private]
 ```
 
 ```Go
@@ -12793,6 +13928,7 @@ func inlined()
 
 ```
 searchKey: runtime_test.tracebackFunc
+tags: [private]
 ```
 
 ```Go
@@ -12807,6 +13943,7 @@ No inline to ensure this complete function appears in output.
 
 ```
 searchKey: runtime_test.TestFunctionAlignmentTraceback
+tags: [private]
 ```
 
 ```Go
@@ -12841,6 +13978,7 @@ This is a regression test for issue 44971.
 
 ```
 searchKey: runtime_test.TestFakeTime
+tags: [private]
 ```
 
 ```Go
@@ -12851,6 +13989,7 @@ func TestFakeTime(t *testing.T)
 
 ```
 searchKey: runtime_test.parseFakeTime
+tags: [private]
 ```
 
 ```Go
@@ -12861,6 +14000,7 @@ func parseFakeTime(x []byte) ([]fakeTimeFrame, error)
 
 ```
 searchKey: runtime_test.TestTracebackArgs
+tags: [private]
 ```
 
 ```Go
@@ -12871,6 +14011,7 @@ func TestTracebackArgs(t *testing.T)
 
 ```
 searchKey: runtime_test.testTracebackArgs1
+tags: [private]
 ```
 
 ```Go
@@ -12881,6 +14022,7 @@ func testTracebackArgs1(a, b, c, d, e, f, g, h, i, j, k, l int) int
 
 ```
 searchKey: runtime_test.testTracebackArgs2
+tags: [private]
 ```
 
 ```Go
@@ -12894,6 +14036,7 @@ func testTracebackArgs2(a bool, b struct {
 
 ```
 searchKey: runtime_test.testTracebackArgs3
+tags: [private]
 ```
 
 ```Go
@@ -12904,6 +14047,7 @@ func testTracebackArgs3(x [3]byte, a, b, c int, y [3]byte) int
 
 ```
 searchKey: runtime_test.testTracebackArgs4
+tags: [private]
 ```
 
 ```Go
@@ -12914,6 +14058,7 @@ func testTracebackArgs4(a bool, x [1][1][1][1][1][1][1][1][1][1]int) int
 
 ```
 searchKey: runtime_test.testTracebackArgs5
+tags: [private]
 ```
 
 ```Go

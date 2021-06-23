@@ -227,10 +227,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="defaultMaxJobsPerCommit" href="#defaultMaxJobsPerCommit">const defaultMaxJobsPerCommit</a>
 
 ```
 searchKey: enqueuer.defaultMaxJobsPerCommit
+tags: [private]
 ```
 
 ```Go
@@ -241,7 +246,6 @@ const defaultMaxJobsPerCommit = 25
 
 ```
 searchKey: enqueuer.GitHubScheme
-tags: [exported]
 ```
 
 ```Go
@@ -250,10 +254,15 @@ const GitHubScheme = "https://"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="goVersionPattern" href="#goVersionPattern">var goVersionPattern</a>
 
 ```
 searchKey: enqueuer.goVersionPattern
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +273,7 @@ var goVersionPattern = lazyregexp.New(`^v?[\d\.]+-([a-f0-9]+)`)
 
 ```
 searchKey: enqueuer.yamlIndexConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -272,11 +282,14 @@ var yamlIndexConfiguration = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IndexEnqueuer" href="#IndexEnqueuer">type IndexEnqueuer struct</a>
 
 ```
 searchKey: enqueuer.IndexEnqueuer
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +306,6 @@ type IndexEnqueuer struct {
 
 ```
 searchKey: enqueuer.NewIndexEnqueuer
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +316,6 @@ func NewIndexEnqueuer(dbStore DBStore, gitClient GitserverClient, repoUpdater Re
 
 ```
 searchKey: enqueuer.IndexEnqueuer.QueueIndexesForRepository
-tags: [exported]
 ```
 
 ```Go
@@ -317,7 +328,6 @@ QueueIndexesForRepository attempts to queue an index for the lastest commit on t
 
 ```
 searchKey: enqueuer.IndexEnqueuer.ForceQueueIndexesForRepository
-tags: [exported]
 ```
 
 ```Go
@@ -330,7 +340,6 @@ ForceQueueIndexesForRepository attempts to queue an index for the lastest commit
 
 ```
 searchKey: enqueuer.IndexEnqueuer.InferIndexConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -343,7 +352,6 @@ InferIndexConfiguration looks at the repository contents at the lastest commit o
 
 ```
 searchKey: enqueuer.IndexEnqueuer.QueueIndexesForPackage
-tags: [exported]
 ```
 
 ```Go
@@ -356,6 +364,7 @@ QueueIndexesForPackage enqueues index jobs for a dependency of a recently-proces
 
 ```
 searchKey: enqueuer.IndexEnqueuer.queueIndexForRepository
+tags: [private]
 ```
 
 ```Go
@@ -370,6 +379,7 @@ If the force flag is false, then the presence of an upload or index record for t
 
 ```
 searchKey: enqueuer.IndexEnqueuer.queueIndexForRepositoryAndCommit
+tags: [private]
 ```
 
 ```Go
@@ -384,6 +394,7 @@ If the force flag is false, then the presence of an upload or index record for t
 
 ```
 searchKey: enqueuer.IndexEnqueuer.queueIndexes
+tags: [private]
 ```
 
 ```Go
@@ -396,6 +407,7 @@ queueIndexes inserts a set of index records into the database. It is assumed tha
 
 ```
 searchKey: enqueuer.IndexEnqueuer.inferIndexJobsFromRepositoryStructure
+tags: [private]
 ```
 
 ```Go
@@ -408,6 +420,7 @@ inferIndexJobsFromRepositoryStructure collects the result of  InferIndexJobs ove
 
 ```
 searchKey: enqueuer.IndexEnqueuer.getIndexRecords
+tags: [private]
 ```
 
 ```Go
@@ -426,6 +439,7 @@ getIndexRecords determines the set of index records that should be enqueued for 
 
 ```
 searchKey: enqueuer.IndexEnqueuer.getIndexRecordsFromConfigurationInDatabase
+tags: [private]
 ```
 
 ```Go
@@ -438,6 +452,7 @@ getIndexRecordsFromConfigurationInDatabase returns a set of index jobs configure
 
 ```
 searchKey: enqueuer.IndexEnqueuer.getIndexRecordsFromConfigurationInRepository
+tags: [private]
 ```
 
 ```Go
@@ -450,6 +465,7 @@ getIndexRecordsFromConfigurationInRepository returns a set of index jobs configu
 
 ```
 searchKey: enqueuer.IndexEnqueuer.inferIndexRecordsFromRepositoryStructure
+tags: [private]
 ```
 
 ```Go
@@ -462,7 +478,6 @@ inferIndexRecordsFromRepositoryStructure looks at the repository contents at the
 
 ```
 searchKey: enqueuer.DBStore
-tags: [exported]
 ```
 
 ```Go
@@ -485,7 +500,6 @@ type DBStore interface {
 
 ```
 searchKey: enqueuer.DBStoreShim
-tags: [exported]
 ```
 
 ```Go
@@ -498,7 +512,6 @@ type DBStoreShim struct {
 
 ```
 searchKey: enqueuer.DBStoreShim.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -509,7 +522,6 @@ func (db *DBStoreShim) Transact(ctx context.Context) (DBStore, error)
 
 ```
 searchKey: enqueuer.RepoUpdaterClient
-tags: [exported]
 ```
 
 ```Go
@@ -522,7 +534,6 @@ type RepoUpdaterClient interface {
 
 ```
 searchKey: enqueuer.GitserverClient
-tags: [exported]
 ```
 
 ```Go
@@ -539,6 +550,7 @@ type GitserverClient interface {
 
 ```
 searchKey: enqueuer.gitClient
+tags: [private]
 ```
 
 ```Go
@@ -553,6 +565,7 @@ type gitClient struct {
 
 ```
 searchKey: enqueuer.newGitClient
+tags: [private]
 ```
 
 ```Go
@@ -563,6 +576,7 @@ func newGitClient(client GitserverClient, repositoryID int, commit string) gitCl
 
 ```
 searchKey: enqueuer.gitClient.ListFiles
+tags: [private]
 ```
 
 ```Go
@@ -573,6 +587,7 @@ func (c gitClient) ListFiles(ctx context.Context, pattern *regexp.Regexp) ([]str
 
 ```
 searchKey: enqueuer.gitClient.FileExists
+tags: [private]
 ```
 
 ```Go
@@ -583,6 +598,7 @@ func (c gitClient) FileExists(ctx context.Context, file string) (bool, error)
 
 ```
 searchKey: enqueuer.gitClient.RawContents
+tags: [private]
 ```
 
 ```Go
@@ -593,6 +609,7 @@ func (c gitClient) RawContents(ctx context.Context, file string) ([]byte, error)
 
 ```
 searchKey: enqueuer.operations
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +624,7 @@ type operations struct {
 
 ```
 searchKey: enqueuer.newOperations
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +635,7 @@ func newOperations(observationContext *observation.Context) *operations
 
 ```
 searchKey: enqueuer.MockDBStore
+tags: [private]
 ```
 
 ```Go
@@ -656,6 +675,7 @@ MockDBStore is a mock implementation of the DBStore interface (from the package 
 
 ```
 searchKey: enqueuer.NewMockDBStore
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +688,7 @@ NewMockDBStore creates a new mock of the DBStore interface. All methods return z
 
 ```
 searchKey: enqueuer.NewMockDBStoreFrom
+tags: [private]
 ```
 
 ```Go
@@ -680,6 +701,7 @@ NewMockDBStoreFrom creates a new mock of the MockDBStore interface. All methods 
 
 ```
 searchKey: enqueuer.MockDBStore.DirtyRepositories
+tags: [private]
 ```
 
 ```Go
@@ -692,6 +714,7 @@ DirtyRepositories delegates to the next hook function in the queue and stores th
 
 ```
 searchKey: enqueuer.MockDBStore.Done
+tags: [private]
 ```
 
 ```Go
@@ -704,6 +727,7 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: enqueuer.MockDBStore.GetIndexConfigurationByRepositoryID
+tags: [private]
 ```
 
 ```Go
@@ -716,6 +740,7 @@ GetIndexConfigurationByRepositoryID delegates to the next hook function in the q
 
 ```
 searchKey: enqueuer.MockDBStore.GetRepositoriesWithIndexConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +753,7 @@ GetRepositoriesWithIndexConfiguration delegates to the next hook function in the
 
 ```
 searchKey: enqueuer.MockDBStore.Handle
+tags: [private]
 ```
 
 ```Go
@@ -740,6 +766,7 @@ Handle delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: enqueuer.MockDBStore.InsertIndex
+tags: [private]
 ```
 
 ```Go
@@ -752,6 +779,7 @@ InsertIndex delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: enqueuer.MockDBStore.IsQueued
+tags: [private]
 ```
 
 ```Go
@@ -764,6 +792,7 @@ IsQueued delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: enqueuer.MockDBStore.Transact
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +805,7 @@ Transact delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFunc
+tags: [private]
 ```
 
 ```Go
@@ -793,6 +823,7 @@ DBStoreDirtyRepositoriesFunc describes the behavior when the DirtyRepositories m
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -805,6 +836,7 @@ SetDefaultHook sets function that is called when the DirtyRepositories method of
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -817,6 +849,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the DirtyR
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -829,6 +862,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -841,6 +875,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -851,6 +886,7 @@ func (f *DBStoreDirtyRepositoriesFunc) nextHook() func(context.Context) (map[int
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -861,6 +897,7 @@ func (f *DBStoreDirtyRepositoriesFunc) appendCall(r0 DBStoreDirtyRepositoriesFun
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -873,6 +910,7 @@ History returns a sequence of DBStoreDirtyRepositoriesFuncCall objects describin
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -895,6 +933,7 @@ DBStoreDirtyRepositoriesFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -907,6 +946,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreDirtyRepositoriesFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -919,6 +959,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreDoneFunc
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +977,7 @@ DBStoreDoneFunc describes the behavior when the Done method of the parent MockDB
 
 ```
 searchKey: enqueuer.DBStoreDoneFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -948,6 +990,7 @@ SetDefaultHook sets function that is called when the Done method of the parent M
 
 ```
 searchKey: enqueuer.DBStoreDoneFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -960,6 +1003,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Done m
 
 ```
 searchKey: enqueuer.DBStoreDoneFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -972,6 +1016,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.DBStoreDoneFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -984,6 +1029,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.DBStoreDoneFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -994,6 +1040,7 @@ func (f *DBStoreDoneFunc) nextHook() func(error) error
 
 ```
 searchKey: enqueuer.DBStoreDoneFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1004,6 +1051,7 @@ func (f *DBStoreDoneFunc) appendCall(r0 DBStoreDoneFuncCall)
 
 ```
 searchKey: enqueuer.DBStoreDoneFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1016,6 +1064,7 @@ History returns a sequence of DBStoreDoneFuncCall objects describing the invocat
 
 ```
 searchKey: enqueuer.DBStoreDoneFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1035,6 +1084,7 @@ DBStoreDoneFuncCall is an object that describes an invocation of method Done on 
 
 ```
 searchKey: enqueuer.DBStoreDoneFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1047,6 +1097,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreDoneFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1059,6 +1110,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc
+tags: [private]
 ```
 
 ```Go
@@ -1076,6 +1128,7 @@ DBStoreGetIndexConfigurationByRepositoryIDFunc describes the behavior when the G
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1088,6 +1141,7 @@ SetDefaultHook sets function that is called when the GetIndexConfigurationByRepo
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1100,6 +1154,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetInd
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1112,6 +1167,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1124,6 +1180,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1134,6 +1191,7 @@ func (f *DBStoreGetIndexConfigurationByRepositoryIDFunc) nextHook() func(context
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1202,7 @@ func (f *DBStoreGetIndexConfigurationByRepositoryIDFunc) appendCall(r0 DBStoreGe
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1156,6 +1215,7 @@ History returns a sequence of DBStoreGetIndexConfigurationByRepositoryIDFuncCall
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1184,6 +1244,7 @@ DBStoreGetIndexConfigurationByRepositoryIDFuncCall is an object that describes a
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1196,6 +1257,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1208,6 +1270,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1288,7 @@ DBStoreGetRepositoriesWithIndexConfigurationFunc describes the behavior when the
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1237,6 +1301,7 @@ SetDefaultHook sets function that is called when the GetRepositoriesWithIndexCon
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1249,6 +1314,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetRep
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1261,6 +1327,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1273,6 +1340,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1283,6 +1351,7 @@ func (f *DBStoreGetRepositoriesWithIndexConfigurationFunc) nextHook() func(conte
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1293,6 +1362,7 @@ func (f *DBStoreGetRepositoriesWithIndexConfigurationFunc) appendCall(r0 DBStore
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1305,6 +1375,7 @@ History returns a sequence of DBStoreGetRepositoriesWithIndexConfigurationFuncCa
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1327,6 +1398,7 @@ DBStoreGetRepositoriesWithIndexConfigurationFuncCall is an object that describes
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1339,6 +1411,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1351,6 +1424,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreHandleFunc
+tags: [private]
 ```
 
 ```Go
@@ -1368,6 +1442,7 @@ DBStoreHandleFunc describes the behavior when the Handle method of the parent Mo
 
 ```
 searchKey: enqueuer.DBStoreHandleFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1380,6 +1455,7 @@ SetDefaultHook sets function that is called when the Handle method of the parent
 
 ```
 searchKey: enqueuer.DBStoreHandleFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1392,6 +1468,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Handle
 
 ```
 searchKey: enqueuer.DBStoreHandleFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1404,6 +1481,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.DBStoreHandleFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1416,6 +1494,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.DBStoreHandleFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1426,6 +1505,7 @@ func (f *DBStoreHandleFunc) nextHook() func() *basestore.TransactableHandle
 
 ```
 searchKey: enqueuer.DBStoreHandleFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1436,6 +1516,7 @@ func (f *DBStoreHandleFunc) appendCall(r0 DBStoreHandleFuncCall)
 
 ```
 searchKey: enqueuer.DBStoreHandleFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1448,6 +1529,7 @@ History returns a sequence of DBStoreHandleFuncCall objects describing the invoc
 
 ```
 searchKey: enqueuer.DBStoreHandleFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1464,6 +1546,7 @@ DBStoreHandleFuncCall is an object that describes an invocation of method Handle
 
 ```
 searchKey: enqueuer.DBStoreHandleFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1476,6 +1559,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreHandleFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1488,6 +1572,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFunc
+tags: [private]
 ```
 
 ```Go
@@ -1505,6 +1590,7 @@ DBStoreInsertIndexFunc describes the behavior when the InsertIndex method of the
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1517,6 +1603,7 @@ SetDefaultHook sets function that is called when the InsertIndex method of the p
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1529,6 +1616,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Insert
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1541,6 +1629,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1553,6 +1642,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1563,6 +1653,7 @@ func (f *DBStoreInsertIndexFunc) nextHook() func(context.Context, dbstore.Index)
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1573,6 +1664,7 @@ func (f *DBStoreInsertIndexFunc) appendCall(r0 DBStoreInsertIndexFuncCall)
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1585,6 +1677,7 @@ History returns a sequence of DBStoreInsertIndexFuncCall objects describing the 
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1610,6 +1703,7 @@ DBStoreInsertIndexFuncCall is an object that describes an invocation of method I
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1622,6 +1716,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreInsertIndexFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1634,6 +1729,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFunc
+tags: [private]
 ```
 
 ```Go
@@ -1651,6 +1747,7 @@ DBStoreIsQueuedFunc describes the behavior when the IsQueued method of the paren
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1663,6 +1760,7 @@ SetDefaultHook sets function that is called when the IsQueued method of the pare
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1675,6 +1773,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the IsQueu
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1687,6 +1786,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1699,6 +1799,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1709,6 +1810,7 @@ func (f *DBStoreIsQueuedFunc) nextHook() func(context.Context, int, string) (boo
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1719,6 +1821,7 @@ func (f *DBStoreIsQueuedFunc) appendCall(r0 DBStoreIsQueuedFuncCall)
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1731,6 +1834,7 @@ History returns a sequence of DBStoreIsQueuedFuncCall objects describing the inv
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1759,6 +1863,7 @@ DBStoreIsQueuedFuncCall is an object that describes an invocation of method IsQu
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1771,6 +1876,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreIsQueuedFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1783,6 +1889,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreTransactFunc
+tags: [private]
 ```
 
 ```Go
@@ -1800,6 +1907,7 @@ DBStoreTransactFunc describes the behavior when the Transact method of the paren
 
 ```
 searchKey: enqueuer.DBStoreTransactFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1812,6 +1920,7 @@ SetDefaultHook sets function that is called when the Transact method of the pare
 
 ```
 searchKey: enqueuer.DBStoreTransactFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1824,6 +1933,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Transa
 
 ```
 searchKey: enqueuer.DBStoreTransactFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1836,6 +1946,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.DBStoreTransactFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1848,6 +1959,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.DBStoreTransactFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1858,6 +1970,7 @@ func (f *DBStoreTransactFunc) nextHook() func(context.Context) (DBStore, error)
 
 ```
 searchKey: enqueuer.DBStoreTransactFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1868,6 +1981,7 @@ func (f *DBStoreTransactFunc) appendCall(r0 DBStoreTransactFuncCall)
 
 ```
 searchKey: enqueuer.DBStoreTransactFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1880,6 +1994,7 @@ History returns a sequence of DBStoreTransactFuncCall objects describing the inv
 
 ```
 searchKey: enqueuer.DBStoreTransactFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1902,6 +2017,7 @@ DBStoreTransactFuncCall is an object that describes an invocation of method Tran
 
 ```
 searchKey: enqueuer.DBStoreTransactFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1914,6 +2030,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.DBStoreTransactFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1926,6 +2043,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.MockGitserverClient
+tags: [private]
 ```
 
 ```Go
@@ -1954,6 +2072,7 @@ MockGitserverClient is a mock implementation of the GitserverClient interface (f
 
 ```
 searchKey: enqueuer.NewMockGitserverClient
+tags: [private]
 ```
 
 ```Go
@@ -1966,6 +2085,7 @@ NewMockGitserverClient creates a new mock of the GitserverClient interface. All 
 
 ```
 searchKey: enqueuer.NewMockGitserverClientFrom
+tags: [private]
 ```
 
 ```Go
@@ -1978,6 +2098,7 @@ NewMockGitserverClientFrom creates a new mock of the MockGitserverClient interfa
 
 ```
 searchKey: enqueuer.MockGitserverClient.FileExists
+tags: [private]
 ```
 
 ```Go
@@ -1990,6 +2111,7 @@ FileExists delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: enqueuer.MockGitserverClient.Head
+tags: [private]
 ```
 
 ```Go
@@ -2002,6 +2124,7 @@ Head delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: enqueuer.MockGitserverClient.ListFiles
+tags: [private]
 ```
 
 ```Go
@@ -2014,6 +2137,7 @@ ListFiles delegates to the next hook function in the queue and stores the parame
 
 ```
 searchKey: enqueuer.MockGitserverClient.RawContents
+tags: [private]
 ```
 
 ```Go
@@ -2026,6 +2150,7 @@ RawContents delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: enqueuer.MockGitserverClient.ResolveRevision
+tags: [private]
 ```
 
 ```Go
@@ -2038,6 +2163,7 @@ ResolveRevision delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFunc
+tags: [private]
 ```
 
 ```Go
@@ -2055,6 +2181,7 @@ GitserverClientFileExistsFunc describes the behavior when the FileExists method 
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2067,6 +2194,7 @@ SetDefaultHook sets function that is called when the FileExists method of the pa
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2079,6 +2207,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the FileEx
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2091,6 +2220,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2103,6 +2233,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2113,6 +2244,7 @@ func (f *GitserverClientFileExistsFunc) nextHook() func(context.Context, int, st
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2123,6 +2255,7 @@ func (f *GitserverClientFileExistsFunc) appendCall(r0 GitserverClientFileExistsF
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2135,6 +2268,7 @@ History returns a sequence of GitserverClientFileExistsFuncCall objects describi
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2166,6 +2300,7 @@ GitserverClientFileExistsFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2178,6 +2313,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.GitserverClientFileExistsFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2190,6 +2326,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.GitserverClientHeadFunc
+tags: [private]
 ```
 
 ```Go
@@ -2207,6 +2344,7 @@ GitserverClientHeadFunc describes the behavior when the Head method of the paren
 
 ```
 searchKey: enqueuer.GitserverClientHeadFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2219,6 +2357,7 @@ SetDefaultHook sets function that is called when the Head method of the parent M
 
 ```
 searchKey: enqueuer.GitserverClientHeadFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2231,6 +2370,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Head m
 
 ```
 searchKey: enqueuer.GitserverClientHeadFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2243,6 +2383,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.GitserverClientHeadFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2255,6 +2396,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.GitserverClientHeadFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2265,6 +2407,7 @@ func (f *GitserverClientHeadFunc) nextHook() func(context.Context, int) (string,
 
 ```
 searchKey: enqueuer.GitserverClientHeadFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2275,6 +2418,7 @@ func (f *GitserverClientHeadFunc) appendCall(r0 GitserverClientHeadFuncCall)
 
 ```
 searchKey: enqueuer.GitserverClientHeadFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2287,6 +2431,7 @@ History returns a sequence of GitserverClientHeadFuncCall objects describing the
 
 ```
 searchKey: enqueuer.GitserverClientHeadFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2312,6 +2457,7 @@ GitserverClientHeadFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: enqueuer.GitserverClientHeadFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2324,6 +2470,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.GitserverClientHeadFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2336,6 +2483,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFunc
+tags: [private]
 ```
 
 ```Go
@@ -2353,6 +2501,7 @@ GitserverClientListFilesFunc describes the behavior when the ListFiles method of
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2365,6 +2514,7 @@ SetDefaultHook sets function that is called when the ListFiles method of the par
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2377,6 +2527,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the ListFi
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2389,6 +2540,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2401,6 +2553,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2411,6 +2564,7 @@ func (f *GitserverClientListFilesFunc) nextHook() func(context.Context, int, str
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2421,6 +2575,7 @@ func (f *GitserverClientListFilesFunc) appendCall(r0 GitserverClientListFilesFun
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2433,6 +2588,7 @@ History returns a sequence of GitserverClientListFilesFuncCall objects describin
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2464,6 +2620,7 @@ GitserverClientListFilesFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2476,6 +2633,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.GitserverClientListFilesFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2488,6 +2646,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFunc
+tags: [private]
 ```
 
 ```Go
@@ -2505,6 +2664,7 @@ GitserverClientRawContentsFunc describes the behavior when the RawContents metho
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2517,6 +2677,7 @@ SetDefaultHook sets function that is called when the RawContents method of the p
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2529,6 +2690,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the RawCon
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2541,6 +2703,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2553,6 +2716,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2563,6 +2727,7 @@ func (f *GitserverClientRawContentsFunc) nextHook() func(context.Context, int, s
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2573,6 +2738,7 @@ func (f *GitserverClientRawContentsFunc) appendCall(r0 GitserverClientRawContent
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2585,6 +2751,7 @@ History returns a sequence of GitserverClientRawContentsFuncCall objects describ
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2616,6 +2783,7 @@ GitserverClientRawContentsFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2628,6 +2796,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.GitserverClientRawContentsFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2640,6 +2809,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFunc
+tags: [private]
 ```
 
 ```Go
@@ -2657,6 +2827,7 @@ GitserverClientResolveRevisionFunc describes the behavior when the ResolveRevisi
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2669,6 +2840,7 @@ SetDefaultHook sets function that is called when the ResolveRevision method of t
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2681,6 +2853,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Resolv
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2693,6 +2866,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2705,6 +2879,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2715,6 +2890,7 @@ func (f *GitserverClientResolveRevisionFunc) nextHook() func(context.Context, in
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2725,6 +2901,7 @@ func (f *GitserverClientResolveRevisionFunc) appendCall(r0 GitserverClientResolv
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2737,6 +2914,7 @@ History returns a sequence of GitserverClientResolveRevisionFuncCall objects des
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2765,6 +2943,7 @@ GitserverClientResolveRevisionFuncCall is an object that describes an invocation
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2777,6 +2956,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.GitserverClientResolveRevisionFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2789,6 +2969,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: enqueuer.MockRepoUpdaterClient
+tags: [private]
 ```
 
 ```Go
@@ -2805,6 +2986,7 @@ MockRepoUpdaterClient is a mock implementation of the RepoUpdaterClient interfac
 
 ```
 searchKey: enqueuer.NewMockRepoUpdaterClient
+tags: [private]
 ```
 
 ```Go
@@ -2817,6 +2999,7 @@ NewMockRepoUpdaterClient creates a new mock of the RepoUpdaterClient interface. 
 
 ```
 searchKey: enqueuer.NewMockRepoUpdaterClientFrom
+tags: [private]
 ```
 
 ```Go
@@ -2829,6 +3012,7 @@ NewMockRepoUpdaterClientFrom creates a new mock of the MockRepoUpdaterClient int
 
 ```
 searchKey: enqueuer.MockRepoUpdaterClient.EnqueueRepoUpdate
+tags: [private]
 ```
 
 ```Go
@@ -2841,6 +3025,7 @@ EnqueueRepoUpdate delegates to the next hook function in the queue and stores th
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc
+tags: [private]
 ```
 
 ```Go
@@ -2858,6 +3043,7 @@ RepoUpdaterClientEnqueueRepoUpdateFunc describes the behavior when the EnqueueRe
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2870,6 +3056,7 @@ SetDefaultHook sets function that is called when the EnqueueRepoUpdate method of
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2882,6 +3069,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Enqueu
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2894,6 +3082,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2906,6 +3095,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2916,6 +3106,7 @@ func (f *RepoUpdaterClientEnqueueRepoUpdateFunc) nextHook() func(context.Context
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2926,6 +3117,7 @@ func (f *RepoUpdaterClientEnqueueRepoUpdateFunc) appendCall(r0 RepoUpdaterClient
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2938,6 +3130,7 @@ History returns a sequence of RepoUpdaterClientEnqueueRepoUpdateFuncCall objects
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2963,6 +3156,7 @@ RepoUpdaterClientEnqueueRepoUpdateFuncCall is an object that describes an invoca
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2975,6 +3169,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: enqueuer.RepoUpdaterClientEnqueueRepoUpdateFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2985,10 +3180,15 @@ Results returns an interface slice containing the results of this invocation.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="isNotFoundError" href="#isNotFoundError">func isNotFoundError(err error) bool</a>
 
 ```
 searchKey: enqueuer.isNotFoundError
+tags: [private]
 ```
 
 ```Go
@@ -2999,7 +3199,6 @@ func isNotFoundError(err error) bool
 
 ```
 searchKey: enqueuer.InferGoRepositoryAndRevision
-tags: [exported]
 ```
 
 ```Go
@@ -3010,6 +3209,7 @@ func InferGoRepositoryAndRevision(pkg semantic.Package) (repoName, gitTagOrCommi
 
 ```
 searchKey: enqueuer.convertIndexConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -3022,6 +3222,7 @@ convertIndexConfiguration converts an index configuration object into a set of i
 
 ```
 searchKey: enqueuer.convertInferredConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -3034,6 +3235,7 @@ convertInferredConfiguration converts a set of index jobs into a set of index re
 
 ```
 searchKey: enqueuer.TestQueueIndexesForRepositoryInDatabase
+tags: [private]
 ```
 
 ```Go
@@ -3044,6 +3246,7 @@ func TestQueueIndexesForRepositoryInDatabase(t *testing.T)
 
 ```
 searchKey: enqueuer.TestQueueIndexesForRepositoryInRepository
+tags: [private]
 ```
 
 ```Go
@@ -3054,6 +3257,7 @@ func TestQueueIndexesForRepositoryInRepository(t *testing.T)
 
 ```
 searchKey: enqueuer.TestQueueIndexesForRepositoryInferred
+tags: [private]
 ```
 
 ```Go
@@ -3064,6 +3268,7 @@ func TestQueueIndexesForRepositoryInferred(t *testing.T)
 
 ```
 searchKey: enqueuer.TestQueueIndexesForRepositoryInferredTooLarge
+tags: [private]
 ```
 
 ```Go
@@ -3074,6 +3279,7 @@ func TestQueueIndexesForRepositoryInferredTooLarge(t *testing.T)
 
 ```
 searchKey: enqueuer.TestQueueIndexesForPackage
+tags: [private]
 ```
 
 ```Go
@@ -3084,6 +3290,7 @@ func TestQueueIndexesForPackage(t *testing.T)
 
 ```
 searchKey: enqueuer.TestInferGoRepositoryAndRevision
+tags: [private]
 ```
 
 ```Go

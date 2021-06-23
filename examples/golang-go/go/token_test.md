@@ -8,10 +8,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example_retrievePositionInfo" href="#Example_retrievePositionInfo">func Example_retrievePositionInfo()</a>
 
 ```
 searchKey: token_test.Example_retrievePositionInfo
+tags: [private]
 ```
 
 ```Go

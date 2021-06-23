@@ -4,7 +4,9 @@
     "identifier": "sync_test",
     "newPage": true,
     "searchKey": "sync_test",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "opLoad",
                 "newPage": false,
                 "searchKey": "sync_test.opLoad",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "opStore",
                 "newPage": false,
                 "searchKey": "sync_test.opStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "opLoadOrStore",
                 "newPage": false,
                 "searchKey": "sync_test.opLoadOrStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "opLoadAndDelete",
                 "newPage": false,
                 "searchKey": "sync_test.opLoadAndDelete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "opDelete",
                 "newPage": false,
                 "searchKey": "sync_test.opDelete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +157,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "bufPool",
                 "newPage": false,
                 "searchKey": "sync_test.bufPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "http",
                 "newPage": false,
                 "searchKey": "sync_test.http",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -201,7 +221,9 @@
                 "identifier": "mapOps",
                 "newPage": false,
                 "searchKey": "sync_test.mapOps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -221,7 +243,9 @@
                 "identifier": "misuseTests",
                 "newPage": false,
                 "searchKey": "sync_test.misuseTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -241,7 +265,9 @@
                 "identifier": "globalSink",
                 "newPage": false,
                 "searchKey": "sync_test.globalSink",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -264,7 +290,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -282,7 +310,9 @@
                 "identifier": "httpPkg",
                 "newPage": false,
                 "searchKey": "sync_test.httpPkg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -300,7 +330,9 @@
                       "identifier": "httpPkg.Get",
                       "newPage": false,
                       "searchKey": "sync_test.httpPkg.Get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -323,7 +355,9 @@
                 "identifier": "bench",
                 "newPage": false,
                 "searchKey": "sync_test.bench",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -343,7 +377,9 @@
                 "identifier": "mapInterface",
                 "newPage": false,
                 "searchKey": "sync_test.mapInterface",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -363,7 +399,9 @@
                 "identifier": "RWMutexMap",
                 "newPage": false,
                 "searchKey": "sync_test.RWMutexMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -381,7 +419,9 @@
                       "identifier": "RWMutexMap.Load",
                       "newPage": false,
                       "searchKey": "sync_test.RWMutexMap.Load",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -401,7 +441,9 @@
                       "identifier": "RWMutexMap.Store",
                       "newPage": false,
                       "searchKey": "sync_test.RWMutexMap.Store",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -421,7 +463,9 @@
                       "identifier": "RWMutexMap.LoadOrStore",
                       "newPage": false,
                       "searchKey": "sync_test.RWMutexMap.LoadOrStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -441,7 +485,9 @@
                       "identifier": "RWMutexMap.LoadAndDelete",
                       "newPage": false,
                       "searchKey": "sync_test.RWMutexMap.LoadAndDelete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -461,7 +507,9 @@
                       "identifier": "RWMutexMap.Delete",
                       "newPage": false,
                       "searchKey": "sync_test.RWMutexMap.Delete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -481,7 +529,9 @@
                       "identifier": "RWMutexMap.Range",
                       "newPage": false,
                       "searchKey": "sync_test.RWMutexMap.Range",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -504,7 +554,9 @@
                 "identifier": "DeepCopyMap",
                 "newPage": false,
                 "searchKey": "sync_test.DeepCopyMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -522,7 +574,9 @@
                       "identifier": "DeepCopyMap.Load",
                       "newPage": false,
                       "searchKey": "sync_test.DeepCopyMap.Load",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -542,7 +596,9 @@
                       "identifier": "DeepCopyMap.Store",
                       "newPage": false,
                       "searchKey": "sync_test.DeepCopyMap.Store",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -562,7 +618,9 @@
                       "identifier": "DeepCopyMap.LoadOrStore",
                       "newPage": false,
                       "searchKey": "sync_test.DeepCopyMap.LoadOrStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -582,7 +640,9 @@
                       "identifier": "DeepCopyMap.LoadAndDelete",
                       "newPage": false,
                       "searchKey": "sync_test.DeepCopyMap.LoadAndDelete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -602,7 +662,9 @@
                       "identifier": "DeepCopyMap.Delete",
                       "newPage": false,
                       "searchKey": "sync_test.DeepCopyMap.Delete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -622,7 +684,9 @@
                       "identifier": "DeepCopyMap.Range",
                       "newPage": false,
                       "searchKey": "sync_test.DeepCopyMap.Range",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -642,7 +706,9 @@
                       "identifier": "DeepCopyMap.dirty",
                       "newPage": false,
                       "searchKey": "sync_test.DeepCopyMap.dirty",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -665,7 +731,9 @@
                 "identifier": "mapOp",
                 "newPage": false,
                 "searchKey": "sync_test.mapOp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -685,7 +753,9 @@
                 "identifier": "mapCall",
                 "newPage": false,
                 "searchKey": "sync_test.mapCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -703,7 +773,9 @@
                       "identifier": "mapCall.apply",
                       "newPage": false,
                       "searchKey": "sync_test.mapCall.apply",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -723,7 +795,9 @@
                       "identifier": "mapCall.Generate",
                       "newPage": false,
                       "searchKey": "sync_test.mapCall.Generate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -746,7 +820,9 @@
                 "identifier": "mapResult",
                 "newPage": false,
                 "searchKey": "sync_test.mapResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -766,7 +842,9 @@
                 "identifier": "one",
                 "newPage": false,
                 "searchKey": "sync_test.one",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -784,7 +862,9 @@
                       "identifier": "one.Increment",
                       "newPage": false,
                       "searchKey": "sync_test.one.Increment",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -810,7 +890,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -828,7 +910,9 @@
                 "identifier": "TestCondSignal",
                 "newPage": false,
                 "searchKey": "sync_test.TestCondSignal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -848,7 +932,9 @@
                 "identifier": "TestCondSignalGenerations",
                 "newPage": false,
                 "searchKey": "sync_test.TestCondSignalGenerations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -868,7 +954,9 @@
                 "identifier": "TestCondBroadcast",
                 "newPage": false,
                 "searchKey": "sync_test.TestCondBroadcast",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -888,7 +976,9 @@
                 "identifier": "TestRace",
                 "newPage": false,
                 "searchKey": "sync_test.TestRace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -908,7 +998,9 @@
                 "identifier": "TestCondSignalStealing",
                 "newPage": false,
                 "searchKey": "sync_test.TestCondSignalStealing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -928,7 +1020,9 @@
                 "identifier": "TestCondCopy",
                 "newPage": false,
                 "searchKey": "sync_test.TestCondCopy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -948,7 +1042,9 @@
                 "identifier": "BenchmarkCond1",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkCond1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -968,7 +1064,9 @@
                 "identifier": "BenchmarkCond2",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkCond2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -988,7 +1086,9 @@
                 "identifier": "BenchmarkCond4",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkCond4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1008,7 +1108,9 @@
                 "identifier": "BenchmarkCond8",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkCond8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1028,7 +1130,9 @@
                 "identifier": "BenchmarkCond16",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkCond16",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1048,7 +1152,9 @@
                 "identifier": "BenchmarkCond32",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkCond32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1068,7 +1174,9 @@
                 "identifier": "benchmarkCond",
                 "newPage": false,
                 "searchKey": "sync_test.benchmarkCond",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1088,7 +1196,9 @@
                 "identifier": "timeNow",
                 "newPage": false,
                 "searchKey": "sync_test.timeNow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1108,7 +1218,9 @@
                 "identifier": "Log",
                 "newPage": false,
                 "searchKey": "sync_test.Log",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1128,7 +1240,9 @@
                 "identifier": "ExamplePool",
                 "newPage": false,
                 "searchKey": "sync_test.ExamplePool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1148,7 +1262,9 @@
                 "identifier": "ExampleWaitGroup",
                 "newPage": false,
                 "searchKey": "sync_test.ExampleWaitGroup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1168,7 +1284,9 @@
                 "identifier": "ExampleOnce",
                 "newPage": false,
                 "searchKey": "sync_test.ExampleOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1188,7 +1306,9 @@
                 "identifier": "benchMap",
                 "newPage": false,
                 "searchKey": "sync_test.benchMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1208,7 +1328,9 @@
                 "identifier": "BenchmarkLoadMostlyHits",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkLoadMostlyHits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1228,7 +1350,9 @@
                 "identifier": "BenchmarkLoadMostlyMisses",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkLoadMostlyMisses",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1248,7 +1372,9 @@
                 "identifier": "BenchmarkLoadOrStoreBalanced",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkLoadOrStoreBalanced",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1268,7 +1394,9 @@
                 "identifier": "BenchmarkLoadOrStoreUnique",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkLoadOrStoreUnique",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1288,7 +1416,9 @@
                 "identifier": "BenchmarkLoadOrStoreCollision",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkLoadOrStoreCollision",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1308,7 +1438,9 @@
                 "identifier": "BenchmarkLoadAndDeleteBalanced",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkLoadAndDeleteBalanced",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1328,7 +1460,9 @@
                 "identifier": "BenchmarkLoadAndDeleteUnique",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkLoadAndDeleteUnique",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1348,7 +1482,9 @@
                 "identifier": "BenchmarkLoadAndDeleteCollision",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkLoadAndDeleteCollision",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1368,7 +1504,9 @@
                 "identifier": "BenchmarkRange",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1388,7 +1526,9 @@
                 "identifier": "BenchmarkAdversarialAlloc",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkAdversarialAlloc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1408,7 +1548,9 @@
                 "identifier": "BenchmarkAdversarialDelete",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkAdversarialDelete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1428,7 +1570,9 @@
                 "identifier": "BenchmarkDeleteCollision",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkDeleteCollision",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1448,7 +1592,9 @@
                 "identifier": "randValue",
                 "newPage": false,
                 "searchKey": "sync_test.randValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1468,7 +1614,9 @@
                 "identifier": "applyCalls",
                 "newPage": false,
                 "searchKey": "sync_test.applyCalls",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1488,7 +1636,9 @@
                 "identifier": "applyMap",
                 "newPage": false,
                 "searchKey": "sync_test.applyMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1508,7 +1658,9 @@
                 "identifier": "applyRWMutexMap",
                 "newPage": false,
                 "searchKey": "sync_test.applyRWMutexMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1528,7 +1680,9 @@
                 "identifier": "applyDeepCopyMap",
                 "newPage": false,
                 "searchKey": "sync_test.applyDeepCopyMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1548,7 +1702,9 @@
                 "identifier": "TestMapMatchesRWMutex",
                 "newPage": false,
                 "searchKey": "sync_test.TestMapMatchesRWMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1568,7 +1724,9 @@
                 "identifier": "TestMapMatchesDeepCopy",
                 "newPage": false,
                 "searchKey": "sync_test.TestMapMatchesDeepCopy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1588,7 +1746,9 @@
                 "identifier": "TestConcurrentRange",
                 "newPage": false,
                 "searchKey": "sync_test.TestConcurrentRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1608,7 +1768,9 @@
                 "identifier": "TestIssue40999",
                 "newPage": false,
                 "searchKey": "sync_test.TestIssue40999",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1628,7 +1790,9 @@
                 "identifier": "HammerSemaphore",
                 "newPage": false,
                 "searchKey": "sync_test.HammerSemaphore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1648,7 +1812,9 @@
                 "identifier": "TestSemaphore",
                 "newPage": false,
                 "searchKey": "sync_test.TestSemaphore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1668,7 +1834,9 @@
                 "identifier": "BenchmarkUncontendedSemaphore",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkUncontendedSemaphore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1688,7 +1856,9 @@
                 "identifier": "BenchmarkContendedSemaphore",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkContendedSemaphore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1708,7 +1878,9 @@
                 "identifier": "HammerMutex",
                 "newPage": false,
                 "searchKey": "sync_test.HammerMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1728,7 +1900,9 @@
                 "identifier": "TestMutex",
                 "newPage": false,
                 "searchKey": "sync_test.TestMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1743,12 +1917,14 @@
           },
           {
             "node": {
-              "pathID": "/sync_test#init",
+              "pathID": "/sync_test#init.mutex_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.mutex_test.go",
                 "newPage": false,
                 "searchKey": "sync_test.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1768,7 +1944,9 @@
                 "identifier": "TestMutexMisuse",
                 "newPage": false,
                 "searchKey": "sync_test.TestMutexMisuse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1788,7 +1966,9 @@
                 "identifier": "TestMutexFairness",
                 "newPage": false,
                 "searchKey": "sync_test.TestMutexFairness",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1808,7 +1988,9 @@
                 "identifier": "BenchmarkMutexUncontended",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkMutexUncontended",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1828,7 +2010,9 @@
                 "identifier": "benchmarkMutex",
                 "newPage": false,
                 "searchKey": "sync_test.benchmarkMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1848,7 +2032,9 @@
                 "identifier": "BenchmarkMutex",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1868,7 +2054,9 @@
                 "identifier": "BenchmarkMutexSlack",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkMutexSlack",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1888,7 +2076,9 @@
                 "identifier": "BenchmarkMutexWork",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkMutexWork",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1908,7 +2098,9 @@
                 "identifier": "BenchmarkMutexWorkSlack",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkMutexWorkSlack",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1928,7 +2120,9 @@
                 "identifier": "BenchmarkMutexNoSpin",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkMutexNoSpin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1948,7 +2142,9 @@
                 "identifier": "BenchmarkMutexSpin",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkMutexSpin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1968,7 +2164,9 @@
                 "identifier": "run",
                 "newPage": false,
                 "searchKey": "sync_test.run",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1988,7 +2186,9 @@
                 "identifier": "TestOnce",
                 "newPage": false,
                 "searchKey": "sync_test.TestOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2008,7 +2208,9 @@
                 "identifier": "TestOncePanic",
                 "newPage": false,
                 "searchKey": "sync_test.TestOncePanic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2028,7 +2230,9 @@
                 "identifier": "BenchmarkOnce",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2048,7 +2252,9 @@
                 "identifier": "TestPool",
                 "newPage": false,
                 "searchKey": "sync_test.TestPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2068,7 +2274,9 @@
                 "identifier": "TestPoolNew",
                 "newPage": false,
                 "searchKey": "sync_test.TestPoolNew",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2088,7 +2296,9 @@
                 "identifier": "TestPoolGC",
                 "newPage": false,
                 "searchKey": "sync_test.TestPoolGC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2108,7 +2318,9 @@
                 "identifier": "TestPoolRelease",
                 "newPage": false,
                 "searchKey": "sync_test.TestPoolRelease",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2128,7 +2340,9 @@
                 "identifier": "testPool",
                 "newPage": false,
                 "searchKey": "sync_test.testPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2148,7 +2362,9 @@
                 "identifier": "TestPoolStress",
                 "newPage": false,
                 "searchKey": "sync_test.TestPoolStress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2168,7 +2384,9 @@
                 "identifier": "TestPoolDequeue",
                 "newPage": false,
                 "searchKey": "sync_test.TestPoolDequeue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2188,7 +2406,9 @@
                 "identifier": "TestPoolChain",
                 "newPage": false,
                 "searchKey": "sync_test.TestPoolChain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2208,7 +2428,9 @@
                 "identifier": "testPoolDequeue",
                 "newPage": false,
                 "searchKey": "sync_test.testPoolDequeue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2228,7 +2450,9 @@
                 "identifier": "BenchmarkPool",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2248,7 +2472,9 @@
                 "identifier": "BenchmarkPoolOverflow",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkPoolOverflow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2268,7 +2494,9 @@
                 "identifier": "BenchmarkPoolSTW",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkPoolSTW",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2288,7 +2516,9 @@
                 "identifier": "BenchmarkPoolExpensiveNew",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkPoolExpensiveNew",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2308,7 +2538,9 @@
                 "identifier": "BenchmarkSemaUncontended",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkSemaUncontended",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2328,7 +2560,9 @@
                 "identifier": "benchmarkSema",
                 "newPage": false,
                 "searchKey": "sync_test.benchmarkSema",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2348,7 +2582,9 @@
                 "identifier": "BenchmarkSemaSyntNonblock",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkSemaSyntNonblock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2368,7 +2604,9 @@
                 "identifier": "BenchmarkSemaSyntBlock",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkSemaSyntBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2388,7 +2626,9 @@
                 "identifier": "BenchmarkSemaWorkNonblock",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkSemaWorkNonblock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2408,7 +2648,9 @@
                 "identifier": "BenchmarkSemaWorkBlock",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkSemaWorkBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2428,7 +2670,9 @@
                 "identifier": "parallelReader",
                 "newPage": false,
                 "searchKey": "sync_test.parallelReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2448,7 +2692,9 @@
                 "identifier": "doTestParallelReaders",
                 "newPage": false,
                 "searchKey": "sync_test.doTestParallelReaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2468,7 +2714,9 @@
                 "identifier": "TestParallelReaders",
                 "newPage": false,
                 "searchKey": "sync_test.TestParallelReaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2488,7 +2736,9 @@
                 "identifier": "reader",
                 "newPage": false,
                 "searchKey": "sync_test.reader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2508,7 +2758,9 @@
                 "identifier": "writer",
                 "newPage": false,
                 "searchKey": "sync_test.writer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2528,7 +2780,9 @@
                 "identifier": "HammerRWMutex",
                 "newPage": false,
                 "searchKey": "sync_test.HammerRWMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2548,7 +2802,9 @@
                 "identifier": "TestRWMutex",
                 "newPage": false,
                 "searchKey": "sync_test.TestRWMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2568,7 +2824,9 @@
                 "identifier": "TestRLocker",
                 "newPage": false,
                 "searchKey": "sync_test.TestRLocker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2588,7 +2846,9 @@
                 "identifier": "BenchmarkRWMutexUncontended",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkRWMutexUncontended",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2608,7 +2868,9 @@
                 "identifier": "benchmarkRWMutex",
                 "newPage": false,
                 "searchKey": "sync_test.benchmarkRWMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2628,7 +2890,9 @@
                 "identifier": "BenchmarkRWMutexWrite100",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkRWMutexWrite100",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2648,7 +2912,9 @@
                 "identifier": "BenchmarkRWMutexWrite10",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkRWMutexWrite10",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2668,7 +2934,9 @@
                 "identifier": "BenchmarkRWMutexWorkWrite100",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkRWMutexWorkWrite100",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2688,7 +2956,9 @@
                 "identifier": "BenchmarkRWMutexWorkWrite10",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkRWMutexWorkWrite10",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2708,7 +2978,9 @@
                 "identifier": "testWaitGroup",
                 "newPage": false,
                 "searchKey": "sync_test.testWaitGroup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2728,7 +3000,9 @@
                 "identifier": "TestWaitGroup",
                 "newPage": false,
                 "searchKey": "sync_test.TestWaitGroup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2748,7 +3022,9 @@
                 "identifier": "knownRacy",
                 "newPage": false,
                 "searchKey": "sync_test.knownRacy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2768,7 +3044,9 @@
                 "identifier": "TestWaitGroupMisuse",
                 "newPage": false,
                 "searchKey": "sync_test.TestWaitGroupMisuse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2788,7 +3066,9 @@
                 "identifier": "pollUntilEqual",
                 "newPage": false,
                 "searchKey": "sync_test.pollUntilEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2808,7 +3088,9 @@
                 "identifier": "TestWaitGroupMisuse2",
                 "newPage": false,
                 "searchKey": "sync_test.TestWaitGroupMisuse2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2828,7 +3110,9 @@
                 "identifier": "TestWaitGroupMisuse3",
                 "newPage": false,
                 "searchKey": "sync_test.TestWaitGroupMisuse3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2848,7 +3132,9 @@
                 "identifier": "TestWaitGroupRace",
                 "newPage": false,
                 "searchKey": "sync_test.TestWaitGroupRace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2868,7 +3154,9 @@
                 "identifier": "TestWaitGroupAlign",
                 "newPage": false,
                 "searchKey": "sync_test.TestWaitGroupAlign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2888,7 +3176,9 @@
                 "identifier": "BenchmarkWaitGroupUncontended",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkWaitGroupUncontended",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2908,7 +3198,9 @@
                 "identifier": "benchmarkWaitGroupAddDone",
                 "newPage": false,
                 "searchKey": "sync_test.benchmarkWaitGroupAddDone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2928,7 +3220,9 @@
                 "identifier": "BenchmarkWaitGroupAddDone",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkWaitGroupAddDone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2948,7 +3242,9 @@
                 "identifier": "BenchmarkWaitGroupAddDoneWork",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkWaitGroupAddDoneWork",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2968,7 +3264,9 @@
                 "identifier": "benchmarkWaitGroupWait",
                 "newPage": false,
                 "searchKey": "sync_test.benchmarkWaitGroupWait",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2988,7 +3286,9 @@
                 "identifier": "BenchmarkWaitGroupWait",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkWaitGroupWait",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3008,7 +3308,9 @@
                 "identifier": "BenchmarkWaitGroupWaitWork",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkWaitGroupWaitWork",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3028,7 +3330,9 @@
                 "identifier": "BenchmarkWaitGroupActuallyWait",
                 "newPage": false,
                 "searchKey": "sync_test.BenchmarkWaitGroupActuallyWait",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -10,10 +10,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleNew" href="#ExampleNew">func ExampleNew()</a>
 
 ```
 searchKey: md5_test.ExampleNew
+tags: [private]
 ```
 
 ```Go
@@ -24,6 +29,7 @@ func ExampleNew()
 
 ```
 searchKey: md5_test.ExampleSum
+tags: [private]
 ```
 
 ```Go
@@ -34,6 +40,7 @@ func ExampleSum()
 
 ```
 searchKey: md5_test.ExampleNew_file
+tags: [private]
 ```
 
 ```Go

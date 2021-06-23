@@ -4,7 +4,9 @@
     "identifier": "sysreq",
     "newPage": true,
     "searchKey": "internal/sysreq",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "checks",
                 "newPage": false,
                 "searchKey": "sysreq.checks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "Status",
                 "newPage": false,
                 "searchKey": "sysreq.Status",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -101,9 +107,7 @@
                       "identifier": "Status.OK",
                       "newPage": false,
                       "searchKey": "sysreq.Status.OK",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -123,9 +127,7 @@
                       "identifier": "Status.Failed",
                       "newPage": false,
                       "searchKey": "sysreq.Status.Failed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -148,7 +150,9 @@
                 "identifier": "check",
                 "newPage": false,
                 "searchKey": "sysreq.check",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,9 +172,7 @@
                 "identifier": "CheckFunc",
                 "newPage": false,
                 "searchKey": "sysreq.CheckFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -193,7 +195,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -211,9 +215,7 @@
                 "identifier": "Check",
                 "newPage": false,
                 "searchKey": "sysreq.Check",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -233,9 +235,7 @@
                 "identifier": "AddCheck",
                 "newPage": false,
                 "searchKey": "sysreq.AddCheck",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -255,7 +255,9 @@
                 "identifier": "rlimitCheck",
                 "newPage": false,
                 "searchKey": "sysreq.rlimitCheck",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -275,7 +277,9 @@
                 "identifier": "TestCheck",
                 "newPage": false,
                 "searchKey": "sysreq.TestCheck",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -295,7 +299,9 @@
                 "identifier": "TestCheck_skip",
                 "newPage": false,
                 "searchKey": "sysreq.TestCheck_skip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

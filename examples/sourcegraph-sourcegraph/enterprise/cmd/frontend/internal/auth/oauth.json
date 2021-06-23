@@ -4,7 +4,9 @@
     "identifier": "oauth",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/auth/oauth",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "LoginStateOpCreateAccount",
                 "newPage": false,
                 "searchKey": "oauth.LoginStateOpCreateAccount",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "LoginStateOpCreateCodeHostConnection",
                 "newPage": false,
                 "searchKey": "oauth.LoginStateOpCreateCodeHostConnection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,7 +107,9 @@
                 "identifier": "extraScopes",
                 "newPage": false,
                 "searchKey": "oauth.extraScopes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +129,9 @@
                 "identifier": "traceLogEnabled",
                 "newPage": false,
                 "searchKey": "oauth.traceLogEnabled",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -145,7 +151,9 @@
                 "identifier": "isOAuths",
                 "newPage": false,
                 "searchKey": "oauth.isOAuths",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +176,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -186,7 +196,9 @@
                 "identifier": "loggingRoundTripper",
                 "newPage": false,
                 "searchKey": "oauth.loggingRoundTripper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                       "identifier": "loggingRoundTripper.RoundTrip",
                       "newPage": false,
                       "searchKey": "oauth.loggingRoundTripper.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -227,9 +241,7 @@
                 "identifier": "Provider",
                 "newPage": false,
                 "searchKey": "oauth.Provider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                       "identifier": "getExactlyOneOAuthProvider",
                       "newPage": false,
                       "searchKey": "oauth.getExactlyOneOAuthProvider",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -267,9 +281,7 @@
                       "identifier": "GetProvider",
                       "newPage": false,
                       "searchKey": "oauth.GetProvider",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -289,9 +301,7 @@
                       "identifier": "NewProvider",
                       "newPage": false,
                       "searchKey": "oauth.NewProvider",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -311,9 +321,7 @@
                       "identifier": "Provider.ConfigID",
                       "newPage": false,
                       "searchKey": "oauth.Provider.ConfigID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -333,9 +341,7 @@
                       "identifier": "Provider.Config",
                       "newPage": false,
                       "searchKey": "oauth.Provider.Config",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -355,9 +361,7 @@
                       "identifier": "Provider.CachedInfo",
                       "newPage": false,
                       "searchKey": "oauth.Provider.CachedInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -377,9 +381,7 @@
                       "identifier": "Provider.Refresh",
                       "newPage": false,
                       "searchKey": "oauth.Provider.Refresh",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -402,9 +404,7 @@
                 "identifier": "ProviderOp",
                 "newPage": false,
                 "searchKey": "oauth.ProviderOp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -424,9 +424,7 @@
                 "identifier": "LoginStateOp",
                 "newPage": false,
                 "searchKey": "oauth.LoginStateOp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -446,9 +444,7 @@
                 "identifier": "LoginState",
                 "newPage": false,
                 "searchKey": "oauth.LoginState",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -466,9 +462,7 @@
                       "identifier": "DecodeState",
                       "newPage": false,
                       "searchKey": "oauth.DecodeState",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -488,9 +482,7 @@
                       "identifier": "LoginState.Encode",
                       "newPage": false,
                       "searchKey": "oauth.LoginState.Encode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -513,9 +505,7 @@
                 "identifier": "SessionData",
                 "newPage": false,
                 "searchKey": "oauth.SessionData",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -535,9 +525,7 @@
                 "identifier": "SessionIssuerHelper",
                 "newPage": false,
                 "searchKey": "oauth.SessionIssuerHelper",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -560,7 +548,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -578,9 +568,7 @@
                 "identifier": "NewCookie",
                 "newPage": false,
                 "searchKey": "oauth.NewCookie",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -600,7 +588,9 @@
                 "identifier": "expiresTime",
                 "newPage": false,
                 "searchKey": "oauth.expiresTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -620,9 +610,7 @@
                 "identifier": "NewHandler",
                 "newPage": false,
                 "searchKey": "oauth.NewHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -642,7 +630,9 @@
                 "identifier": "newOAuthFlowHandler",
                 "newPage": false,
                 "searchKey": "oauth.newOAuthFlowHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -662,7 +652,9 @@
                 "identifier": "getExtraScopes",
                 "newPage": false,
                 "searchKey": "oauth.getExtraScopes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -682,7 +674,9 @@
                 "identifier": "withOAuthExternalHTTPClient",
                 "newPage": false,
                 "searchKey": "oauth.withOAuthExternalHTTPClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -702,7 +696,9 @@
                 "identifier": "previewAndDuplicateReader",
                 "newPage": false,
                 "searchKey": "oauth.previewAndDuplicateReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -722,9 +718,7 @@
                 "identifier": "AddIsOAuth",
                 "newPage": false,
                 "searchKey": "oauth.AddIsOAuth",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -744,7 +738,9 @@
                 "identifier": "isOAuth",
                 "newPage": false,
                 "searchKey": "oauth.isOAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -764,7 +760,9 @@
                 "identifier": "isHuman",
                 "newPage": false,
                 "searchKey": "oauth.isHuman",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -784,7 +782,9 @@
                 "identifier": "stateHandler",
                 "newPage": false,
                 "searchKey": "oauth.stateHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -804,7 +804,9 @@
                 "identifier": "randomState",
                 "newPage": false,
                 "searchKey": "oauth.randomState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -824,7 +826,9 @@
                 "identifier": "getRedirect",
                 "newPage": false,
                 "searchKey": "oauth.getRedirect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -844,7 +848,9 @@
                 "identifier": "canRedirect",
                 "newPage": false,
                 "searchKey": "oauth.canRedirect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -864,9 +870,7 @@
                 "identifier": "SessionIssuer",
                 "newPage": false,
                 "searchKey": "oauth.SessionIssuer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -886,7 +890,9 @@
                 "identifier": "TestCanRedirect",
                 "newPage": false,
                 "searchKey": "oauth.TestCanRedirect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

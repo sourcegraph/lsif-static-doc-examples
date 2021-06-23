@@ -4,9 +4,7 @@
     "identifier": "tzdata",
     "newPage": true,
     "searchKey": "time/tzdata",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "zipdata",
                 "newPage": false,
                 "searchKey": "tzdata.zipdata",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,7 +83,9 @@
                 "identifier": "registerLoadFromEmbeddedTZData",
                 "newPage": false,
                 "searchKey": "tzdata.registerLoadFromEmbeddedTZData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -102,12 +100,14 @@
           },
           {
             "node": {
-              "pathID": "/time/tzdata#init",
+              "pathID": "/time/tzdata#init.tzdata.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.tzdata.go",
                 "newPage": false,
                 "searchKey": "tzdata.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "get4s",
                 "newPage": false,
                 "searchKey": "tzdata.get4s",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "get2s",
                 "newPage": false,
                 "searchKey": "tzdata.get2s",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "loadFromEmbeddedTZData",
                 "newPage": false,
                 "searchKey": "tzdata.loadFromEmbeddedTZData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -46,11 +46,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DocumentMatchLimit" href="#DocumentMatchLimit">const DocumentMatchLimit</a>
 
 ```
 searchKey: api.DocumentMatchLimit
-tags: [exported]
 ```
 
 ```Go
@@ -63,7 +66,6 @@ DocumentMatchLimit is when we found too many matches in a document, so we stoppe
 
 ```
 searchKey: api.ShardMatchLimit
-tags: [exported]
 ```
 
 ```Go
@@ -76,7 +78,6 @@ ShardMatchLimit is when we found too many matches in a shard/repository, so we s
 
 ```
 searchKey: api.DisplayLimit
-tags: [exported]
 ```
 
 ```Go
@@ -89,7 +90,6 @@ DisplayLimit is when we found too many matches during a search so we stopped dis
 
 ```
 searchKey: api.RepositoryLimit
-tags: [exported]
 ```
 
 ```Go
@@ -102,7 +102,6 @@ RepositoryLimit is when we did not search a repository because the set of reposi
 
 ```
 searchKey: api.ShardTimeout
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +114,6 @@ ShardTimeout is when we ran out of time before searching a shard/repository.
 
 ```
 searchKey: api.RepositoryCloning
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +126,6 @@ RepositoryCloning is when we could not search a repository because it is not clo
 
 ```
 searchKey: api.RepositoryMissing
-tags: [exported]
 ```
 
 ```Go
@@ -141,7 +138,6 @@ RepositoryMissing is when we could not search a repository because it is not clo
 
 ```
 searchKey: api.ExcludedFork
-tags: [exported]
 ```
 
 ```Go
@@ -154,7 +150,6 @@ ExcludedFork is when we did not search a repository because it is a fork.
 
 ```
 searchKey: api.ExcludedArchive
-tags: [exported]
 ```
 
 ```Go
@@ -167,7 +162,6 @@ ExcludedArchive is when we did not search a repository because it is archived.
 
 ```
 searchKey: api.SeverityInfo
-tags: [exported]
 ```
 
 ```Go
@@ -178,7 +172,6 @@ const SeverityInfo SkippedSeverity = "info"
 
 ```
 searchKey: api.SeverityWarn
-tags: [exported]
 ```
 
 ```Go
@@ -187,10 +180,15 @@ const SeverityWarn SkippedSeverity = "warn"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="skippedHandlers" href="#skippedHandlers">var skippedHandlers</a>
 
 ```
 searchKey: api.skippedHandlers
+tags: [private]
 ```
 
 ```Go
@@ -203,6 +201,7 @@ TODO implement all skipped reasons
 
 ```
 searchKey: api.updateGolden
+tags: [private]
 ```
 
 ```Go
@@ -211,11 +210,14 @@ var updateGolden = flag.Bool("update", false, "Updastdata goldens")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Namer" href="#Namer">type Namer interface</a>
 
 ```
 searchKey: api.Namer
-tags: [exported]
 ```
 
 ```Go
@@ -228,7 +230,6 @@ type Namer interface {
 
 ```
 searchKey: api.ProgressStats
-tags: [exported]
 ```
 
 ```Go
@@ -258,7 +259,6 @@ type ProgressStats struct {
 
 ```
 searchKey: api.Progress
-tags: [exported]
 ```
 
 ```Go
@@ -295,7 +295,6 @@ Progress is an aggregate type representing a progress update.
 
 ```
 searchKey: api.BuildProgressEvent
-tags: [exported]
 ```
 
 ```Go
@@ -308,7 +307,6 @@ BuildProgressEvent builds a progress event from a final results resolver.
 
 ```
 searchKey: api.Skipped
-tags: [exported]
 ```
 
 ```Go
@@ -333,6 +331,7 @@ Skipped is a description of shards or documents that were skipped.
 
 ```
 searchKey: api.skippedReposHandler
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +342,7 @@ func skippedReposHandler(repos []Namer, titleVerb, messageReason string, base Sk
 
 ```
 searchKey: api.repositoryCloningHandler
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +353,7 @@ func repositoryCloningHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.repositoryMissingHandler
+tags: [private]
 ```
 
 ```Go
@@ -363,6 +364,7 @@ func repositoryMissingHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.shardTimeoutHandler
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +375,7 @@ func shardTimeoutHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.displayLimitHandler
+tags: [private]
 ```
 
 ```Go
@@ -383,6 +386,7 @@ func displayLimitHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.shardMatchLimitHandler
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +397,7 @@ func shardMatchLimitHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.excludedForkHandler
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +408,7 @@ func excludedForkHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.excludedArchiveHandler
+tags: [private]
 ```
 
 ```Go
@@ -413,7 +419,6 @@ func excludedArchiveHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.SkippedSuggested
-tags: [exported]
 ```
 
 ```Go
@@ -429,7 +434,6 @@ SkippedSuggested is a query to suggest to the user to resolve the reason for ski
 
 ```
 searchKey: api.SkippedReason
-tags: [exported]
 ```
 
 ```Go
@@ -442,7 +446,6 @@ SkippedReason is an enum for Skipped.Reason.
 
 ```
 searchKey: api.SkippedSeverity
-tags: [exported]
 ```
 
 ```Go
@@ -455,6 +458,7 @@ SkippedSeverity is an enum for Skipped.Severity.
 
 ```
 searchKey: api.repo
+tags: [private]
 ```
 
 ```Go
@@ -467,6 +471,7 @@ type repo struct {
 
 ```
 searchKey: api.repo.Name
+tags: [private]
 ```
 
 ```Go
@@ -475,10 +480,15 @@ func (r repo) Name() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="number" href="#number">func number(i int) string</a>
 
 ```
 searchKey: api.number
+tags: [private]
 ```
 
 ```Go
@@ -489,6 +499,7 @@ func number(i int) string
 
 ```
 searchKey: api.plural
+tags: [private]
 ```
 
 ```Go
@@ -499,6 +510,7 @@ func plural(one, many string, n int) string
 
 ```
 searchKey: api.TestSearchProgress
+tags: [private]
 ```
 
 ```Go
@@ -509,6 +521,7 @@ func TestSearchProgress(t *testing.T)
 
 ```
 searchKey: api.TestNumber
+tags: [private]
 ```
 
 ```Go
@@ -519,6 +532,7 @@ func TestNumber(t *testing.T)
 
 ```
 searchKey: api.intPtr
+tags: [private]
 ```
 
 ```Go

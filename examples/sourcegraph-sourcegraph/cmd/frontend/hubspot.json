@@ -4,9 +4,7 @@
     "identifier": "hubspot",
     "newPage": true,
     "searchKey": "cmd/frontend/hubspot",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "ContactProperties",
                 "newPage": false,
                 "searchKey": "hubspot.ContactProperties",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "ContactResponse",
                 "newPage": false,
                 "searchKey": "hubspot.ContactResponse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,7 +80,9 @@
                 "identifier": "apiProperties",
                 "newPage": false,
                 "searchKey": "hubspot.apiProperties",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +100,9 @@
                       "identifier": "newAPIValues",
                       "newPage": false,
                       "searchKey": "hubspot.newAPIValues",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,7 +122,9 @@
                       "identifier": "apiProperties.set",
                       "newPage": false,
                       "searchKey": "hubspot.apiProperties.set",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -149,7 +147,9 @@
                 "identifier": "apiProperty",
                 "newPage": false,
                 "searchKey": "hubspot.apiProperty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -169,9 +169,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "hubspot.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -189,9 +187,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "hubspot.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -211,9 +207,7 @@
                       "identifier": "Client.CreateOrUpdateContact",
                       "newPage": false,
                       "searchKey": "hubspot.Client.CreateOrUpdateContact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -233,7 +227,9 @@
                       "identifier": "Client.baseContactURL",
                       "newPage": false,
                       "searchKey": "hubspot.Client.baseContactURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -253,9 +249,7 @@
                       "identifier": "Client.LogEvent",
                       "newPage": false,
                       "searchKey": "hubspot.Client.LogEvent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -275,7 +269,9 @@
                       "identifier": "Client.baseEventURL",
                       "newPage": false,
                       "searchKey": "hubspot.Client.baseEventURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -295,9 +291,7 @@
                       "identifier": "Client.SubmitForm",
                       "newPage": false,
                       "searchKey": "hubspot.Client.SubmitForm",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -317,7 +311,9 @@
                       "identifier": "Client.baseFormURL",
                       "newPage": false,
                       "searchKey": "hubspot.Client.baseFormURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -337,7 +333,9 @@
                       "identifier": "Client.postForm",
                       "newPage": false,
                       "searchKey": "hubspot.Client.postForm",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -357,7 +355,9 @@
                       "identifier": "Client.postJSON",
                       "newPage": false,
                       "searchKey": "hubspot.Client.postJSON",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -377,7 +377,9 @@
                       "identifier": "Client.get",
                       "newPage": false,
                       "searchKey": "hubspot.Client.get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -403,9 +405,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -423,7 +423,9 @@
                 "identifier": "wrapError",
                 "newPage": false,
                 "searchKey": "hubspot.wrapError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

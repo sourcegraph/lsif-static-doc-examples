@@ -4,7 +4,9 @@
     "identifier": "indexing",
     "newPage": true,
     "searchKey": "enterprise/cmd/worker/internal/codeintel/indexing",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "defaultRepositoriesQueuedPerSecond",
                 "newPage": false,
                 "searchKey": "indexing.defaultRepositoriesQueuedPerSecond",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "dependencyIndexingRepositoryIDs",
                 "newPage": false,
                 "searchKey": "indexing.dependencyIndexingRepositoryIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "indexSchedulerEnabled",
                 "newPage": false,
                 "searchKey": "indexing.indexSchedulerEnabled",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "enabledRepoGroupNames",
                 "newPage": false,
                 "searchKey": "indexing.enabledRepoGroupNames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "singletonOperations",
                 "newPage": false,
                 "searchKey": "indexing.singletonOperations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "once",
                 "newPage": false,
                 "searchKey": "indexing.once",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +202,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -202,7 +222,9 @@
                 "identifier": "dependencyIndexingSchedulerHandler",
                 "newPage": false,
                 "searchKey": "indexing.dependencyIndexingSchedulerHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +242,9 @@
                       "identifier": "dependencyIndexingSchedulerHandler.Handle",
                       "newPage": false,
                       "searchKey": "indexing.dependencyIndexingSchedulerHandler.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -240,7 +264,9 @@
                       "identifier": "dependencyIndexingSchedulerHandler.shouldIndexDependencies",
                       "newPage": false,
                       "searchKey": "indexing.dependencyIndexingSchedulerHandler.shouldIndexDependencies",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -263,9 +289,7 @@
                 "identifier": "DBStore",
                 "newPage": false,
                 "searchKey": "indexing.DBStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -285,9 +309,7 @@
                 "identifier": "DBStoreShim",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreShim",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -305,9 +327,7 @@
                       "identifier": "DBStoreShim.With",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreShim.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -330,9 +350,7 @@
                 "identifier": "IndexingSettingStore",
                 "newPage": false,
                 "searchKey": "indexing.IndexingSettingStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -352,9 +370,7 @@
                 "identifier": "IndexingRepoStore",
                 "newPage": false,
                 "searchKey": "indexing.IndexingRepoStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -374,9 +390,7 @@
                 "identifier": "GitserverClient",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -396,9 +410,7 @@
                 "identifier": "IndexEnqueuer",
                 "newPage": false,
                 "searchKey": "indexing.IndexEnqueuer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -418,9 +430,7 @@
                 "identifier": "IndexScheduler",
                 "newPage": false,
                 "searchKey": "indexing.IndexScheduler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -438,9 +448,7 @@
                       "identifier": "IndexScheduler.Handle",
                       "newPage": false,
                       "searchKey": "indexing.IndexScheduler.Handle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -460,9 +468,7 @@
                       "identifier": "IndexScheduler.HandleError",
                       "newPage": false,
                       "searchKey": "indexing.IndexScheduler.HandleError",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -485,7 +491,9 @@
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "indexing.operations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -503,7 +511,9 @@
                       "identifier": "newOperations",
                       "newPage": false,
                       "searchKey": "indexing.newOperations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -526,7 +536,9 @@
                 "identifier": "MockDBStore",
                 "newPage": false,
                 "searchKey": "indexing.MockDBStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -544,7 +556,9 @@
                       "identifier": "NewMockDBStore",
                       "newPage": false,
                       "searchKey": "indexing.NewMockDBStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -564,7 +578,9 @@
                       "identifier": "NewMockDBStoreFrom",
                       "newPage": false,
                       "searchKey": "indexing.NewMockDBStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -584,7 +600,9 @@
                       "identifier": "MockDBStore.GetAutoindexDisabledRepositories",
                       "newPage": false,
                       "searchKey": "indexing.MockDBStore.GetAutoindexDisabledRepositories",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -604,7 +622,9 @@
                       "identifier": "MockDBStore.GetRepositoriesWithIndexConfiguration",
                       "newPage": false,
                       "searchKey": "indexing.MockDBStore.GetRepositoriesWithIndexConfiguration",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -624,7 +644,9 @@
                       "identifier": "MockDBStore.GetUploadByID",
                       "newPage": false,
                       "searchKey": "indexing.MockDBStore.GetUploadByID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -644,7 +666,9 @@
                       "identifier": "MockDBStore.GetUploads",
                       "newPage": false,
                       "searchKey": "indexing.MockDBStore.GetUploads",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -664,7 +688,9 @@
                       "identifier": "MockDBStore.ReferencesForUpload",
                       "newPage": false,
                       "searchKey": "indexing.MockDBStore.ReferencesForUpload",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -684,7 +710,9 @@
                       "identifier": "MockDBStore.With",
                       "newPage": false,
                       "searchKey": "indexing.MockDBStore.With",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -707,7 +735,9 @@
                 "identifier": "DBStoreGetAutoindexDisabledRepositoriesFunc",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -725,7 +755,9 @@
                       "identifier": "DBStoreGetAutoindexDisabledRepositoriesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -745,7 +777,9 @@
                       "identifier": "DBStoreGetAutoindexDisabledRepositoriesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -765,7 +799,9 @@
                       "identifier": "DBStoreGetAutoindexDisabledRepositoriesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -785,7 +821,9 @@
                       "identifier": "DBStoreGetAutoindexDisabledRepositoriesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -805,7 +843,9 @@
                       "identifier": "DBStoreGetAutoindexDisabledRepositoriesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -825,7 +865,9 @@
                       "identifier": "DBStoreGetAutoindexDisabledRepositoriesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -845,7 +887,9 @@
                       "identifier": "DBStoreGetAutoindexDisabledRepositoriesFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -868,7 +912,9 @@
                 "identifier": "DBStoreGetAutoindexDisabledRepositoriesFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -886,7 +932,9 @@
                       "identifier": "DBStoreGetAutoindexDisabledRepositoriesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -906,7 +954,9 @@
                       "identifier": "DBStoreGetAutoindexDisabledRepositoriesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetAutoindexDisabledRepositoriesFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -929,7 +979,9 @@
                 "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -947,7 +999,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -967,7 +1021,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -987,7 +1043,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1007,7 +1065,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1027,7 +1087,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1047,7 +1109,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1067,7 +1131,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1090,7 +1156,9 @@
                 "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1108,7 +1176,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1128,7 +1198,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1151,7 +1223,9 @@
                 "identifier": "DBStoreGetUploadByIDFunc",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreGetUploadByIDFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1169,7 +1243,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadByIDFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1189,7 +1265,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadByIDFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1209,7 +1287,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadByIDFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1229,7 +1309,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadByIDFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1249,7 +1331,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadByIDFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1269,7 +1353,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadByIDFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1289,7 +1375,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadByIDFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1312,7 +1400,9 @@
                 "identifier": "DBStoreGetUploadByIDFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreGetUploadByIDFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1330,7 +1420,9 @@
                       "identifier": "DBStoreGetUploadByIDFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadByIDFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1350,7 +1442,9 @@
                       "identifier": "DBStoreGetUploadByIDFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadByIDFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1373,7 +1467,9 @@
                 "identifier": "DBStoreGetUploadsFunc",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreGetUploadsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1391,7 +1487,9 @@
                       "identifier": "DBStoreGetUploadsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadsFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1411,7 +1509,9 @@
                       "identifier": "DBStoreGetUploadsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1431,7 +1531,9 @@
                       "identifier": "DBStoreGetUploadsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadsFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1451,7 +1553,9 @@
                       "identifier": "DBStoreGetUploadsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1471,7 +1575,9 @@
                       "identifier": "DBStoreGetUploadsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1491,7 +1597,9 @@
                       "identifier": "DBStoreGetUploadsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1511,7 +1619,9 @@
                       "identifier": "DBStoreGetUploadsFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadsFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1534,7 +1644,9 @@
                 "identifier": "DBStoreGetUploadsFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreGetUploadsFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1552,7 +1664,9 @@
                       "identifier": "DBStoreGetUploadsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1572,7 +1686,9 @@
                       "identifier": "DBStoreGetUploadsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreGetUploadsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1595,7 +1711,9 @@
                 "identifier": "DBStoreReferencesForUploadFunc",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreReferencesForUploadFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1613,7 +1731,9 @@
                       "identifier": "DBStoreReferencesForUploadFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreReferencesForUploadFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1633,7 +1753,9 @@
                       "identifier": "DBStoreReferencesForUploadFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreReferencesForUploadFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1653,7 +1775,9 @@
                       "identifier": "DBStoreReferencesForUploadFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreReferencesForUploadFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1673,7 +1797,9 @@
                       "identifier": "DBStoreReferencesForUploadFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreReferencesForUploadFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1693,7 +1819,9 @@
                       "identifier": "DBStoreReferencesForUploadFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreReferencesForUploadFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1713,7 +1841,9 @@
                       "identifier": "DBStoreReferencesForUploadFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreReferencesForUploadFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1733,7 +1863,9 @@
                       "identifier": "DBStoreReferencesForUploadFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreReferencesForUploadFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1756,7 +1888,9 @@
                 "identifier": "DBStoreReferencesForUploadFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreReferencesForUploadFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1774,7 +1908,9 @@
                       "identifier": "DBStoreReferencesForUploadFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreReferencesForUploadFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1794,7 +1930,9 @@
                       "identifier": "DBStoreReferencesForUploadFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreReferencesForUploadFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1817,7 +1955,9 @@
                 "identifier": "DBStoreWithFunc",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreWithFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1835,7 +1975,9 @@
                       "identifier": "DBStoreWithFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreWithFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1855,7 +1997,9 @@
                       "identifier": "DBStoreWithFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreWithFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1875,7 +2019,9 @@
                       "identifier": "DBStoreWithFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreWithFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1895,7 +2041,9 @@
                       "identifier": "DBStoreWithFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreWithFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1915,7 +2063,9 @@
                       "identifier": "DBStoreWithFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreWithFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1935,7 +2085,9 @@
                       "identifier": "DBStoreWithFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreWithFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1955,7 +2107,9 @@
                       "identifier": "DBStoreWithFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreWithFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1978,7 +2132,9 @@
                 "identifier": "DBStoreWithFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.DBStoreWithFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1996,7 +2152,9 @@
                       "identifier": "DBStoreWithFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreWithFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2016,7 +2174,9 @@
                       "identifier": "DBStoreWithFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.DBStoreWithFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2039,7 +2199,9 @@
                 "identifier": "MockGitserverClient",
                 "newPage": false,
                 "searchKey": "indexing.MockGitserverClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2057,7 +2219,9 @@
                       "identifier": "NewMockGitserverClient",
                       "newPage": false,
                       "searchKey": "indexing.NewMockGitserverClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2077,7 +2241,9 @@
                       "identifier": "NewMockGitserverClientFrom",
                       "newPage": false,
                       "searchKey": "indexing.NewMockGitserverClientFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2097,7 +2263,9 @@
                       "identifier": "MockGitserverClient.FileExists",
                       "newPage": false,
                       "searchKey": "indexing.MockGitserverClient.FileExists",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2117,7 +2285,9 @@
                       "identifier": "MockGitserverClient.Head",
                       "newPage": false,
                       "searchKey": "indexing.MockGitserverClient.Head",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2137,7 +2307,9 @@
                       "identifier": "MockGitserverClient.ListFiles",
                       "newPage": false,
                       "searchKey": "indexing.MockGitserverClient.ListFiles",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2157,7 +2329,9 @@
                       "identifier": "MockGitserverClient.RawContents",
                       "newPage": false,
                       "searchKey": "indexing.MockGitserverClient.RawContents",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2177,7 +2351,9 @@
                       "identifier": "MockGitserverClient.ResolveRevision",
                       "newPage": false,
                       "searchKey": "indexing.MockGitserverClient.ResolveRevision",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2200,7 +2376,9 @@
                 "identifier": "GitserverClientFileExistsFunc",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClientFileExistsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2218,7 +2396,9 @@
                       "identifier": "GitserverClientFileExistsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientFileExistsFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2238,7 +2418,9 @@
                       "identifier": "GitserverClientFileExistsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientFileExistsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2258,7 +2440,9 @@
                       "identifier": "GitserverClientFileExistsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientFileExistsFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2278,7 +2462,9 @@
                       "identifier": "GitserverClientFileExistsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientFileExistsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2298,7 +2484,9 @@
                       "identifier": "GitserverClientFileExistsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientFileExistsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2318,7 +2506,9 @@
                       "identifier": "GitserverClientFileExistsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientFileExistsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2338,7 +2528,9 @@
                       "identifier": "GitserverClientFileExistsFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientFileExistsFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2361,7 +2553,9 @@
                 "identifier": "GitserverClientFileExistsFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClientFileExistsFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2379,7 +2573,9 @@
                       "identifier": "GitserverClientFileExistsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientFileExistsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2399,7 +2595,9 @@
                       "identifier": "GitserverClientFileExistsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientFileExistsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2422,7 +2620,9 @@
                 "identifier": "GitserverClientHeadFunc",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClientHeadFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2440,7 +2640,9 @@
                       "identifier": "GitserverClientHeadFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientHeadFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2460,7 +2662,9 @@
                       "identifier": "GitserverClientHeadFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientHeadFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2480,7 +2684,9 @@
                       "identifier": "GitserverClientHeadFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientHeadFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2500,7 +2706,9 @@
                       "identifier": "GitserverClientHeadFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientHeadFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2520,7 +2728,9 @@
                       "identifier": "GitserverClientHeadFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientHeadFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2540,7 +2750,9 @@
                       "identifier": "GitserverClientHeadFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientHeadFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2560,7 +2772,9 @@
                       "identifier": "GitserverClientHeadFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientHeadFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2583,7 +2797,9 @@
                 "identifier": "GitserverClientHeadFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClientHeadFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2601,7 +2817,9 @@
                       "identifier": "GitserverClientHeadFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientHeadFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2621,7 +2839,9 @@
                       "identifier": "GitserverClientHeadFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientHeadFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2644,7 +2864,9 @@
                 "identifier": "GitserverClientListFilesFunc",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClientListFilesFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2662,7 +2884,9 @@
                       "identifier": "GitserverClientListFilesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientListFilesFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2682,7 +2906,9 @@
                       "identifier": "GitserverClientListFilesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientListFilesFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2702,7 +2928,9 @@
                       "identifier": "GitserverClientListFilesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientListFilesFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2722,7 +2950,9 @@
                       "identifier": "GitserverClientListFilesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientListFilesFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2742,7 +2972,9 @@
                       "identifier": "GitserverClientListFilesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientListFilesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2762,7 +2994,9 @@
                       "identifier": "GitserverClientListFilesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientListFilesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2782,7 +3016,9 @@
                       "identifier": "GitserverClientListFilesFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientListFilesFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2805,7 +3041,9 @@
                 "identifier": "GitserverClientListFilesFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClientListFilesFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2823,7 +3061,9 @@
                       "identifier": "GitserverClientListFilesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientListFilesFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2843,7 +3083,9 @@
                       "identifier": "GitserverClientListFilesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientListFilesFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2866,7 +3108,9 @@
                 "identifier": "GitserverClientRawContentsFunc",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClientRawContentsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2884,7 +3128,9 @@
                       "identifier": "GitserverClientRawContentsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientRawContentsFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2904,7 +3150,9 @@
                       "identifier": "GitserverClientRawContentsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientRawContentsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2924,7 +3172,9 @@
                       "identifier": "GitserverClientRawContentsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientRawContentsFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2944,7 +3194,9 @@
                       "identifier": "GitserverClientRawContentsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientRawContentsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2964,7 +3216,9 @@
                       "identifier": "GitserverClientRawContentsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientRawContentsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2984,7 +3238,9 @@
                       "identifier": "GitserverClientRawContentsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientRawContentsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3004,7 +3260,9 @@
                       "identifier": "GitserverClientRawContentsFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientRawContentsFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3027,7 +3285,9 @@
                 "identifier": "GitserverClientRawContentsFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClientRawContentsFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3045,7 +3305,9 @@
                       "identifier": "GitserverClientRawContentsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientRawContentsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3065,7 +3327,9 @@
                       "identifier": "GitserverClientRawContentsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientRawContentsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3088,7 +3352,9 @@
                 "identifier": "GitserverClientResolveRevisionFunc",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClientResolveRevisionFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3106,7 +3372,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientResolveRevisionFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3126,7 +3394,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientResolveRevisionFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3146,7 +3416,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientResolveRevisionFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3166,7 +3438,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientResolveRevisionFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3186,7 +3460,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientResolveRevisionFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3206,7 +3482,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientResolveRevisionFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3226,7 +3504,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientResolveRevisionFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3249,7 +3529,9 @@
                 "identifier": "GitserverClientResolveRevisionFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.GitserverClientResolveRevisionFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3267,7 +3549,9 @@
                       "identifier": "GitserverClientResolveRevisionFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientResolveRevisionFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3287,7 +3571,9 @@
                       "identifier": "GitserverClientResolveRevisionFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.GitserverClientResolveRevisionFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3310,7 +3596,9 @@
                 "identifier": "MockIndexEnqueuer",
                 "newPage": false,
                 "searchKey": "indexing.MockIndexEnqueuer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3328,7 +3616,9 @@
                       "identifier": "NewMockIndexEnqueuer",
                       "newPage": false,
                       "searchKey": "indexing.NewMockIndexEnqueuer",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3348,7 +3638,9 @@
                       "identifier": "NewMockIndexEnqueuerFrom",
                       "newPage": false,
                       "searchKey": "indexing.NewMockIndexEnqueuerFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3368,7 +3660,9 @@
                       "identifier": "MockIndexEnqueuer.QueueIndexesForPackage",
                       "newPage": false,
                       "searchKey": "indexing.MockIndexEnqueuer.QueueIndexesForPackage",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3388,7 +3682,9 @@
                       "identifier": "MockIndexEnqueuer.QueueIndexesForRepository",
                       "newPage": false,
                       "searchKey": "indexing.MockIndexEnqueuer.QueueIndexesForRepository",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3411,7 +3707,9 @@
                 "identifier": "IndexEnqueuerQueueIndexesForPackageFunc",
                 "newPage": false,
                 "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3429,7 +3727,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForPackageFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3449,7 +3749,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForPackageFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3469,7 +3771,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForPackageFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3489,7 +3793,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForPackageFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3509,7 +3815,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForPackageFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3529,7 +3837,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForPackageFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3549,7 +3859,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForPackageFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3572,7 +3884,9 @@
                 "identifier": "IndexEnqueuerQueueIndexesForPackageFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3590,7 +3904,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForPackageFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3610,7 +3926,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForPackageFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForPackageFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3633,7 +3951,9 @@
                 "identifier": "IndexEnqueuerQueueIndexesForRepositoryFunc",
                 "newPage": false,
                 "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3651,7 +3971,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForRepositoryFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3671,7 +3993,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForRepositoryFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3691,7 +4015,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForRepositoryFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3711,7 +4037,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForRepositoryFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3731,7 +4059,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForRepositoryFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3751,7 +4081,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForRepositoryFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3771,7 +4103,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForRepositoryFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3794,7 +4128,9 @@
                 "identifier": "IndexEnqueuerQueueIndexesForRepositoryFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3812,7 +4148,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForRepositoryFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3832,7 +4170,9 @@
                       "identifier": "IndexEnqueuerQueueIndexesForRepositoryFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.IndexEnqueuerQueueIndexesForRepositoryFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3855,7 +4195,9 @@
                 "identifier": "MockIndexingRepoStore",
                 "newPage": false,
                 "searchKey": "indexing.MockIndexingRepoStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3873,7 +4215,9 @@
                       "identifier": "NewMockIndexingRepoStore",
                       "newPage": false,
                       "searchKey": "indexing.NewMockIndexingRepoStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3893,7 +4237,9 @@
                       "identifier": "NewMockIndexingRepoStoreFrom",
                       "newPage": false,
                       "searchKey": "indexing.NewMockIndexingRepoStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3913,7 +4259,9 @@
                       "identifier": "MockIndexingRepoStore.ListRepoNames",
                       "newPage": false,
                       "searchKey": "indexing.MockIndexingRepoStore.ListRepoNames",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3936,7 +4284,9 @@
                 "identifier": "IndexingRepoStoreListRepoNamesFunc",
                 "newPage": false,
                 "searchKey": "indexing.IndexingRepoStoreListRepoNamesFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3954,7 +4304,9 @@
                       "identifier": "IndexingRepoStoreListRepoNamesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexingRepoStoreListRepoNamesFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3974,7 +4326,9 @@
                       "identifier": "IndexingRepoStoreListRepoNamesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexingRepoStoreListRepoNamesFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3994,7 +4348,9 @@
                       "identifier": "IndexingRepoStoreListRepoNamesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.IndexingRepoStoreListRepoNamesFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4014,7 +4370,9 @@
                       "identifier": "IndexingRepoStoreListRepoNamesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.IndexingRepoStoreListRepoNamesFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4034,7 +4392,9 @@
                       "identifier": "IndexingRepoStoreListRepoNamesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexingRepoStoreListRepoNamesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4054,7 +4414,9 @@
                       "identifier": "IndexingRepoStoreListRepoNamesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.IndexingRepoStoreListRepoNamesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4074,7 +4436,9 @@
                       "identifier": "IndexingRepoStoreListRepoNamesFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.IndexingRepoStoreListRepoNamesFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4097,7 +4461,9 @@
                 "identifier": "IndexingRepoStoreListRepoNamesFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.IndexingRepoStoreListRepoNamesFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4115,7 +4481,9 @@
                       "identifier": "IndexingRepoStoreListRepoNamesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.IndexingRepoStoreListRepoNamesFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4135,7 +4503,9 @@
                       "identifier": "IndexingRepoStoreListRepoNamesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.IndexingRepoStoreListRepoNamesFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4158,7 +4528,9 @@
                 "identifier": "MockIndexingSettingStore",
                 "newPage": false,
                 "searchKey": "indexing.MockIndexingSettingStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4176,7 +4548,9 @@
                       "identifier": "NewMockIndexingSettingStore",
                       "newPage": false,
                       "searchKey": "indexing.NewMockIndexingSettingStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4196,7 +4570,9 @@
                       "identifier": "NewMockIndexingSettingStoreFrom",
                       "newPage": false,
                       "searchKey": "indexing.NewMockIndexingSettingStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4216,7 +4592,9 @@
                       "identifier": "MockIndexingSettingStore.GetLastestSchemaSettings",
                       "newPage": false,
                       "searchKey": "indexing.MockIndexingSettingStore.GetLastestSchemaSettings",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4239,7 +4617,9 @@
                 "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFunc",
                 "newPage": false,
                 "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4257,7 +4637,9 @@
                       "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4277,7 +4659,9 @@
                       "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4297,7 +4681,9 @@
                       "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4317,7 +4703,9 @@
                       "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4337,7 +4725,9 @@
                       "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4357,7 +4747,9 @@
                       "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4377,7 +4769,9 @@
                       "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4400,7 +4794,9 @@
                 "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4418,7 +4814,9 @@
                       "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4438,7 +4836,9 @@
                       "identifier": "IndexingSettingStoreGetLastestSchemaSettingsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.IndexingSettingStoreGetLastestSchemaSettingsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4461,7 +4861,9 @@
                 "identifier": "MockPackageReferenceScanner",
                 "newPage": false,
                 "searchKey": "indexing.MockPackageReferenceScanner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4479,7 +4881,9 @@
                       "identifier": "NewMockPackageReferenceScanner",
                       "newPage": false,
                       "searchKey": "indexing.NewMockPackageReferenceScanner",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4499,7 +4903,9 @@
                       "identifier": "NewMockPackageReferenceScannerFrom",
                       "newPage": false,
                       "searchKey": "indexing.NewMockPackageReferenceScannerFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4519,7 +4925,9 @@
                       "identifier": "MockPackageReferenceScanner.Close",
                       "newPage": false,
                       "searchKey": "indexing.MockPackageReferenceScanner.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4539,7 +4947,9 @@
                       "identifier": "MockPackageReferenceScanner.Next",
                       "newPage": false,
                       "searchKey": "indexing.MockPackageReferenceScanner.Next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4562,7 +4972,9 @@
                 "identifier": "PackageReferenceScannerCloseFunc",
                 "newPage": false,
                 "searchKey": "indexing.PackageReferenceScannerCloseFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4580,7 +4992,9 @@
                       "identifier": "PackageReferenceScannerCloseFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerCloseFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4600,7 +5014,9 @@
                       "identifier": "PackageReferenceScannerCloseFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerCloseFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4620,7 +5036,9 @@
                       "identifier": "PackageReferenceScannerCloseFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerCloseFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4640,7 +5058,9 @@
                       "identifier": "PackageReferenceScannerCloseFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerCloseFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4660,7 +5080,9 @@
                       "identifier": "PackageReferenceScannerCloseFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerCloseFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4680,7 +5102,9 @@
                       "identifier": "PackageReferenceScannerCloseFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerCloseFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4700,7 +5124,9 @@
                       "identifier": "PackageReferenceScannerCloseFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerCloseFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4723,7 +5149,9 @@
                 "identifier": "PackageReferenceScannerCloseFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.PackageReferenceScannerCloseFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4741,7 +5169,9 @@
                       "identifier": "PackageReferenceScannerCloseFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerCloseFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4761,7 +5191,9 @@
                       "identifier": "PackageReferenceScannerCloseFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerCloseFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4784,7 +5216,9 @@
                 "identifier": "PackageReferenceScannerNextFunc",
                 "newPage": false,
                 "searchKey": "indexing.PackageReferenceScannerNextFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4802,7 +5236,9 @@
                       "identifier": "PackageReferenceScannerNextFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerNextFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4822,7 +5258,9 @@
                       "identifier": "PackageReferenceScannerNextFunc.PushHook",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerNextFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4842,7 +5280,9 @@
                       "identifier": "PackageReferenceScannerNextFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerNextFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4862,7 +5302,9 @@
                       "identifier": "PackageReferenceScannerNextFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerNextFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4882,7 +5324,9 @@
                       "identifier": "PackageReferenceScannerNextFunc.nextHook",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerNextFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4902,7 +5346,9 @@
                       "identifier": "PackageReferenceScannerNextFunc.appendCall",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerNextFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4922,7 +5368,9 @@
                       "identifier": "PackageReferenceScannerNextFunc.History",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerNextFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4945,7 +5393,9 @@
                 "identifier": "PackageReferenceScannerNextFuncCall",
                 "newPage": false,
                 "searchKey": "indexing.PackageReferenceScannerNextFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4963,7 +5413,9 @@
                       "identifier": "PackageReferenceScannerNextFuncCall.Args",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerNextFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4983,7 +5435,9 @@
                       "identifier": "PackageReferenceScannerNextFuncCall.Results",
                       "newPage": false,
                       "searchKey": "indexing.PackageReferenceScannerNextFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5009,7 +5463,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -5027,9 +5483,7 @@
                 "identifier": "NewDependencyIndexingScheduler",
                 "newPage": false,
                 "searchKey": "indexing.NewDependencyIndexingScheduler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5049,9 +5503,7 @@
                 "identifier": "NewIndexScheduler",
                 "newPage": false,
                 "searchKey": "indexing.NewIndexScheduler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5071,7 +5523,9 @@
                 "identifier": "deduplicateRepositoryIDs",
                 "newPage": false,
                 "searchKey": "indexing.deduplicateRepositoryIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5091,7 +5545,9 @@
                 "identifier": "isRepoNotExist",
                 "newPage": false,
                 "searchKey": "indexing.isRepoNotExist",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5111,7 +5567,9 @@
                 "identifier": "TestDependencyIndexingSchedulerHandler",
                 "newPage": false,
                 "searchKey": "indexing.TestDependencyIndexingSchedulerHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5131,7 +5589,9 @@
                 "identifier": "TestDependencyIndexingSchedulerHandlerShouldSkipRepository",
                 "newPage": false,
                 "searchKey": "indexing.TestDependencyIndexingSchedulerHandlerShouldSkipRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5146,12 +5606,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/worker/internal/codeintel/indexing#init",
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/indexing#init.index_scheduler_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.index_scheduler_test.go",
                 "newPage": false,
                 "searchKey": "indexing.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5171,7 +5633,9 @@
                 "identifier": "TestIndexSchedulerUpdate",
                 "newPage": false,
                 "searchKey": "indexing.TestIndexSchedulerUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5191,7 +5655,9 @@
                 "identifier": "TestDisabledAutoindexConfiguration",
                 "newPage": false,
                 "searchKey": "indexing.TestDisabledAutoindexConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5211,7 +5677,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "indexing.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

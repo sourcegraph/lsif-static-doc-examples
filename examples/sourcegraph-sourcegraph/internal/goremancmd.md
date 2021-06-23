@@ -11,10 +11,15 @@ Command goremancmd exists for testing the internally vendored goreman that ./cmd
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="do" href="#do">func do() error</a>
 
 ```
 searchKey: main.do
+tags: [private]
 ```
 
 ```Go
@@ -25,6 +30,7 @@ func do() error
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go

@@ -23,14 +23,11 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="addr" href="#addr">const addr</a>
 
 ```
 searchKey: main.addr
+tags: [private]
 ```
 
 ```Go
@@ -39,15 +36,10 @@ const addr = ":3192"
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
 searchKey: main.Config
-tags: [exported]
 ```
 
 ```Go
@@ -76,7 +68,6 @@ type Config struct {
 
 ```
 searchKey: main.Config.Load
-tags: [exported]
 ```
 
 ```Go
@@ -87,7 +78,6 @@ func (c *Config) Load()
 
 ```
 searchKey: main.Config.APIWorkerOptions
-tags: [exported]
 ```
 
 ```Go
@@ -98,7 +88,6 @@ func (c *Config) APIWorkerOptions(transport http.RoundTripper) apiworker.Options
 
 ```
 searchKey: main.Config.WorkerOptions
-tags: [exported]
 ```
 
 ```Go
@@ -109,7 +98,6 @@ func (c *Config) WorkerOptions() workerutil.WorkerOptions
 
 ```
 searchKey: main.Config.FirecrackerOptions
-tags: [exported]
 ```
 
 ```Go
@@ -120,7 +108,6 @@ func (c *Config) FirecrackerOptions() command.FirecrackerOptions
 
 ```
 searchKey: main.Config.ResourceOptions
-tags: [exported]
 ```
 
 ```Go
@@ -131,7 +118,6 @@ func (c *Config) ResourceOptions() command.ResourceOptions
 
 ```
 searchKey: main.Config.ClientOptions
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +128,6 @@ func (c *Config) ClientOptions(transport http.RoundTripper) apiclient.Options
 
 ```
 searchKey: main.Config.BaseClientOptions
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +138,6 @@ func (c *Config) BaseClientOptions(transport http.RoundTripper) apiclient.BaseCl
 
 ```
 searchKey: main.Config.EndpointOptions
-tags: [exported]
 ```
 
 ```Go
@@ -162,14 +146,11 @@ func (c *Config) EndpointOptions() apiclient.EndpointOptions
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +161,7 @@ func main()
 
 ```
 searchKey: main.makeWorkerMetrics
+tags: [private]
 ```
 
 ```Go

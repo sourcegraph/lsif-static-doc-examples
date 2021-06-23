@@ -8,10 +8,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleNewReader" href="#ExampleNewReader">func ExampleNewReader()</a>
 
 ```
 searchKey: multipart_test.ExampleNewReader
+tags: [private]
 ```
 
 ```Go

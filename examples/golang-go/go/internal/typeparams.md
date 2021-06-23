@@ -17,11 +17,14 @@ Package typeparams provides functions to work with type parameter data stored in
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DisallowParsing" href="#DisallowParsing">const DisallowParsing</a>
 
 ```
 searchKey: typeparams.DisallowParsing
-tags: [exported]
 ```
 
 ```Go
@@ -34,7 +37,6 @@ DisallowParsing is the numeric value of a parsing mode that disallows type param
 
 ```
 searchKey: typeparams.Enabled
-tags: [exported]
 ```
 
 ```Go
@@ -43,11 +45,14 @@ const Enabled = false
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="PackExpr" href="#PackExpr">func PackExpr(list []ast.Expr) ast.Expr</a>
 
 ```
 searchKey: typeparams.PackExpr
-tags: [exported]
 ```
 
 ```Go
@@ -58,7 +63,6 @@ func PackExpr(list []ast.Expr) ast.Expr
 
 ```
 searchKey: typeparams.UnpackExpr
-tags: [exported]
 ```
 
 ```Go
@@ -69,7 +73,6 @@ func UnpackExpr(expr ast.Expr) []ast.Expr
 
 ```
 searchKey: typeparams.IsListExpr
-tags: [exported]
 ```
 
 ```Go
@@ -80,7 +83,6 @@ func IsListExpr(n ast.Node) bool
 
 ```
 searchKey: typeparams.Get
-tags: [exported]
 ```
 
 ```Go
@@ -91,7 +93,6 @@ func Get(ast.Node) *ast.FieldList
 
 ```
 searchKey: typeparams.Set
-tags: [exported]
 ```
 
 ```Go

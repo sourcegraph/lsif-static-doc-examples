@@ -4,7 +4,9 @@
     "identifier": "registry",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/registry",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "extensionPublisherNameExpr",
                 "newPage": false,
                 "searchKey": "registry.extensionPublisherNameExpr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "extensionIDExpr",
                 "newPage": false,
                 "searchKey": "registry.extensionIDExpr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "sourceMappingURLLineRegex",
                 "newPage": false,
                 "searchKey": "registry.sourceMappingURLLineRegex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "nonLettersDigits",
                 "newPage": false,
                 "searchKey": "registry.nonLettersDigits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "featuredExtensionIDs",
                 "newPage": false,
                 "searchKey": "registry.featuredExtensionIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "extensionIsWIPExpr",
                 "newPage": false,
                 "searchKey": "registry.extensionIsWIPExpr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "registryList",
                 "newPage": false,
                 "searchKey": "registry.registryList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -201,7 +221,9 @@
                 "identifier": "registryGetByUUID",
                 "newPage": false,
                 "searchKey": "registry.registryGetByUUID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -221,7 +243,9 @@
                 "identifier": "registryGetByExtensionID",
                 "newPage": false,
                 "searchKey": "registry.registryGetByExtensionID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -241,7 +265,9 @@
                 "identifier": "registryGetFeaturedExtensions",
                 "newPage": false,
                 "searchKey": "registry.registryGetFeaturedExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,7 +287,9 @@
                 "identifier": "registryRequestsDuration",
                 "newPage": false,
                 "searchKey": "registry.registryRequestsDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -281,7 +309,9 @@
                 "identifier": "mocks",
                 "newPage": false,
                 "searchKey": "registry.mocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,7 +331,9 @@
                 "identifier": "errRegistryUnknownPublisher",
                 "newPage": false,
                 "searchKey": "registry.errRegistryUnknownPublisher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -321,7 +353,9 @@
                 "identifier": "errInvalidJSONInManifest",
                 "newPage": false,
                 "searchKey": "registry.errInvalidJSONInManifest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -341,7 +375,9 @@
                 "identifier": "registryExtensionNamesForTests",
                 "newPage": false,
                 "searchKey": "registry.registryExtensionNamesForTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,7 +400,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -382,7 +420,9 @@
                 "identifier": "extensionDBResolver",
                 "newPage": false,
                 "searchKey": "registry.extensionDBResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -400,7 +440,9 @@
                       "identifier": "extensionDBResolver.ID",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.ID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,7 +462,9 @@
                       "identifier": "extensionDBResolver.UUID",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.UUID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -440,7 +484,9 @@
                       "identifier": "extensionDBResolver.ExtensionID",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.ExtensionID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -460,7 +506,9 @@
                       "identifier": "extensionDBResolver.ExtensionIDWithoutRegistry",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.ExtensionIDWithoutRegistry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -480,7 +528,9 @@
                       "identifier": "extensionDBResolver.Publisher",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.Publisher",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -500,7 +550,9 @@
                       "identifier": "extensionDBResolver.Name",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.Name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -520,7 +572,9 @@
                       "identifier": "extensionDBResolver.Manifest",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.Manifest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -540,7 +594,9 @@
                       "identifier": "extensionDBResolver.CreatedAt",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.CreatedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -560,7 +616,9 @@
                       "identifier": "extensionDBResolver.UpdatedAt",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.UpdatedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -580,7 +638,9 @@
                       "identifier": "extensionDBResolver.PublishedAt",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.PublishedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -600,7 +660,9 @@
                       "identifier": "extensionDBResolver.URL",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.URL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -620,7 +682,9 @@
                       "identifier": "extensionDBResolver.RemoteURL",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.RemoteURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -640,7 +704,9 @@
                       "identifier": "extensionDBResolver.RegistryName",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.RegistryName",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -660,7 +726,9 @@
                       "identifier": "extensionDBResolver.IsLocal",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.IsLocal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -680,7 +748,9 @@
                       "identifier": "extensionDBResolver.IsWorkInProgress",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.IsWorkInProgress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -700,7 +770,9 @@
                       "identifier": "extensionDBResolver.ViewerCanAdminister",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.ViewerCanAdminister",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -720,7 +792,9 @@
                       "identifier": "extensionDBResolver.release",
                       "newPage": false,
                       "searchKey": "registry.extensionDBResolver.release",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -743,7 +817,9 @@
                 "identifier": "dbExtension",
                 "newPage": false,
                 "searchKey": "registry.dbExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -763,7 +839,9 @@
                 "identifier": "dbExtensions",
                 "newPage": false,
                 "searchKey": "registry.dbExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -781,7 +859,9 @@
                       "identifier": "dbExtensions.Create",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.Create",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -801,7 +881,9 @@
                       "identifier": "dbExtensions.GetByID",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.GetByID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -821,7 +903,9 @@
                       "identifier": "dbExtensions.GetByUUID",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.GetByUUID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -841,7 +925,9 @@
                       "identifier": "dbExtensions.GetByExtensionID",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.GetByExtensionID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -861,7 +947,9 @@
                       "identifier": "dbExtensions.GetFeaturedExtensions",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.GetFeaturedExtensions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -881,7 +969,9 @@
                       "identifier": "dbExtensions.getFeaturedExtensions",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.getFeaturedExtensions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -901,7 +991,9 @@
                       "identifier": "dbExtensions.List",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.List",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -921,7 +1013,9 @@
                       "identifier": "dbExtensions.listCountSQL",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.listCountSQL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -941,7 +1035,9 @@
                       "identifier": "dbExtensions.list",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.list",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -961,7 +1057,9 @@
                       "identifier": "dbExtensions.Count",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.Count",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -981,7 +1079,9 @@
                       "identifier": "dbExtensions.Update",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.Update",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1001,7 +1101,9 @@
                       "identifier": "dbExtensions.Delete",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.Delete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1021,7 +1123,9 @@
                       "identifier": "dbExtensions.ListPublishers",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.ListPublishers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1041,7 +1145,9 @@
                       "identifier": "dbExtensions.publishersSQLCTE",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.publishersSQLCTE",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1061,7 +1167,9 @@
                       "identifier": "dbExtensions.listPublishers",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.listPublishers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1081,7 +1189,9 @@
                       "identifier": "dbExtensions.CountPublishers",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.CountPublishers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1101,7 +1211,9 @@
                       "identifier": "dbExtensions.GetPublisher",
                       "newPage": false,
                       "searchKey": "registry.dbExtensions.GetPublisher",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1124,7 +1236,9 @@
                 "identifier": "extensionNotFoundError",
                 "newPage": false,
                 "searchKey": "registry.extensionNotFoundError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1142,7 +1256,9 @@
                       "identifier": "extensionNotFoundError.NotFound",
                       "newPage": false,
                       "searchKey": "registry.extensionNotFoundError.NotFound",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1162,7 +1278,9 @@
                       "identifier": "extensionNotFoundError.Error",
                       "newPage": false,
                       "searchKey": "registry.extensionNotFoundError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1185,7 +1303,9 @@
                 "identifier": "dbExtensionsListOptions",
                 "newPage": false,
                 "searchKey": "registry.dbExtensionsListOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1203,7 +1323,9 @@
                       "identifier": "toDBExtensionsListOptions",
                       "newPage": false,
                       "searchKey": "registry.toDBExtensionsListOptions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1223,7 +1345,9 @@
                       "identifier": "dbExtensionsListOptions.sqlConditions",
                       "newPage": false,
                       "searchKey": "registry.dbExtensionsListOptions.sqlConditions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1243,7 +1367,9 @@
                       "identifier": "dbExtensionsListOptions.sqlOrder",
                       "newPage": false,
                       "searchKey": "registry.dbExtensionsListOptions.sqlOrder",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1266,7 +1392,9 @@
                 "identifier": "mockExtensions",
                 "newPage": false,
                 "searchKey": "registry.mockExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1286,7 +1414,9 @@
                 "identifier": "responseRecorder",
                 "newPage": false,
                 "searchKey": "registry.responseRecorder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1304,7 +1434,9 @@
                       "identifier": "responseRecorder.WriteHeader",
                       "newPage": false,
                       "searchKey": "registry.responseRecorder.WriteHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1327,7 +1459,9 @@
                 "identifier": "dbMocks",
                 "newPage": false,
                 "searchKey": "registry.dbMocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1347,7 +1481,9 @@
                 "identifier": "registryPublisherConnection",
                 "newPage": false,
                 "searchKey": "registry.registryPublisherConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1365,7 +1501,9 @@
                       "identifier": "registryPublisherConnection.compute",
                       "newPage": false,
                       "searchKey": "registry.registryPublisherConnection.compute",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1385,7 +1523,9 @@
                       "identifier": "registryPublisherConnection.Nodes",
                       "newPage": false,
                       "searchKey": "registry.registryPublisherConnection.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1405,7 +1545,9 @@
                       "identifier": "registryPublisherConnection.TotalCount",
                       "newPage": false,
                       "searchKey": "registry.registryPublisherConnection.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1425,7 +1567,9 @@
                       "identifier": "registryPublisherConnection.PageInfo",
                       "newPage": false,
                       "searchKey": "registry.registryPublisherConnection.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1448,7 +1592,9 @@
                 "identifier": "registryPublisher",
                 "newPage": false,
                 "searchKey": "registry.registryPublisher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1466,7 +1612,9 @@
                       "identifier": "getRegistryPublisher",
                       "newPage": false,
                       "searchKey": "registry.getRegistryPublisher",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1486,7 +1634,9 @@
                       "identifier": "registryPublisher.ToUser",
                       "newPage": false,
                       "searchKey": "registry.registryPublisher.ToUser",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1506,7 +1656,9 @@
                       "identifier": "registryPublisher.ToOrg",
                       "newPage": false,
                       "searchKey": "registry.registryPublisher.ToOrg",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1526,7 +1678,9 @@
                       "identifier": "registryPublisher.toDBRegistryPublisher",
                       "newPage": false,
                       "searchKey": "registry.registryPublisher.toDBRegistryPublisher",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1546,7 +1700,9 @@
                       "identifier": "registryPublisher.RegistryExtensionConnectionURL",
                       "newPage": false,
                       "searchKey": "registry.registryPublisher.RegistryExtensionConnectionURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1569,7 +1725,9 @@
                 "identifier": "registryPublisherID",
                 "newPage": false,
                 "searchKey": "registry.registryPublisherID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1587,7 +1745,9 @@
                       "identifier": "toRegistryPublisherID",
                       "newPage": false,
                       "searchKey": "registry.toRegistryPublisherID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1607,7 +1767,9 @@
                       "identifier": "unmarshalRegistryPublisherID",
                       "newPage": false,
                       "searchKey": "registry.unmarshalRegistryPublisherID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1627,7 +1789,9 @@
                       "identifier": "registryPublisherID.viewerCanAdminister",
                       "newPage": false,
                       "searchKey": "registry.registryPublisherID.viewerCanAdminister",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1650,7 +1814,9 @@
                 "identifier": "dbPublisher",
                 "newPage": false,
                 "searchKey": "registry.dbPublisher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1668,7 +1834,9 @@
                       "identifier": "dbPublisher.IsZero",
                       "newPage": false,
                       "searchKey": "registry.dbPublisher.IsZero",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1691,7 +1859,9 @@
                 "identifier": "publisherNotFoundError",
                 "newPage": false,
                 "searchKey": "registry.publisherNotFoundError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1709,7 +1879,9 @@
                       "identifier": "publisherNotFoundError.NotFound",
                       "newPage": false,
                       "searchKey": "registry.publisherNotFoundError.NotFound",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1729,7 +1901,9 @@
                       "identifier": "publisherNotFoundError.Error",
                       "newPage": false,
                       "searchKey": "registry.publisherNotFoundError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1752,7 +1926,9 @@
                 "identifier": "dbPublishersListOptions",
                 "newPage": false,
                 "searchKey": "registry.dbPublishersListOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1770,7 +1946,9 @@
                       "identifier": "dbPublishersListOptions.sqlConditions",
                       "newPage": false,
                       "searchKey": "registry.dbPublishersListOptions.sqlConditions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1793,7 +1971,9 @@
                 "identifier": "dbRelease",
                 "newPage": false,
                 "searchKey": "registry.dbRelease",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1811,7 +1991,9 @@
                       "identifier": "getLatestRelease",
                       "newPage": false,
                       "searchKey": "registry.getLatestRelease",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1834,7 +2016,9 @@
                 "identifier": "dbReleases",
                 "newPage": false,
                 "searchKey": "registry.dbReleases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1852,7 +2036,9 @@
                       "identifier": "dbReleases.Create",
                       "newPage": false,
                       "searchKey": "registry.dbReleases.Create",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1872,7 +2058,9 @@
                       "identifier": "dbReleases.GetLatest",
                       "newPage": false,
                       "searchKey": "registry.dbReleases.GetLatest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1892,7 +2080,9 @@
                       "identifier": "dbReleases.GetLatestBatch",
                       "newPage": false,
                       "searchKey": "registry.dbReleases.GetLatestBatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1912,7 +2102,9 @@
                       "identifier": "dbReleases.GetArtifacts",
                       "newPage": false,
                       "searchKey": "registry.dbReleases.GetArtifacts",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1935,7 +2127,9 @@
                 "identifier": "releaseNotFoundError",
                 "newPage": false,
                 "searchKey": "registry.releaseNotFoundError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1953,7 +2147,9 @@
                       "identifier": "releaseNotFoundError.NotFound",
                       "newPage": false,
                       "searchKey": "registry.releaseNotFoundError.NotFound",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1973,7 +2169,9 @@
                       "identifier": "releaseNotFoundError.Error",
                       "newPage": false,
                       "searchKey": "registry.releaseNotFoundError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1996,7 +2194,9 @@
                 "identifier": "mockReleases",
                 "newPage": false,
                 "searchKey": "registry.mockReleases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2019,7 +2219,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2032,12 +2234,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/registry#init",
+              "pathID": "/enterprise/cmd/frontend/internal/registry#init.allow.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.allow.go",
                 "newPage": false,
                 "searchKey": "registry.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2057,7 +2261,9 @@
                 "identifier": "getAllowedExtensionsFromSiteConfig",
                 "newPage": false,
                 "searchKey": "registry.getAllowedExtensionsFromSiteConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2072,12 +2278,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/registry#init",
+              "pathID": "/enterprise/cmd/frontend/internal/registry#init.extension_bundle.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.extension_bundle.go",
                 "newPage": false,
                 "searchKey": "registry.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2097,7 +2305,9 @@
                 "identifier": "handleRegistryExtensionBundle",
                 "newPage": false,
                 "searchKey": "registry.handleRegistryExtensionBundle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2117,7 +2327,9 @@
                 "identifier": "parseExtensionBundleFilename",
                 "newPage": false,
                 "searchKey": "registry.parseExtensionBundleFilename",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2132,12 +2344,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/registry#init",
+              "pathID": "/enterprise/cmd/frontend/internal/registry#init.extension_connection_graphql.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.extension_connection_graphql.go",
                 "newPage": false,
                 "searchKey": "registry.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2157,7 +2371,9 @@
                 "identifier": "listLocalRegistryExtensions",
                 "newPage": false,
                 "searchKey": "registry.listLocalRegistryExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2177,7 +2393,9 @@
                 "identifier": "countLocalRegistryExtensions",
                 "newPage": false,
                 "searchKey": "registry.countLocalRegistryExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2197,7 +2415,9 @@
                 "identifier": "parseExtensionQuery",
                 "newPage": false,
                 "searchKey": "registry.parseExtensionQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2217,7 +2437,9 @@
                 "identifier": "filterStripLocalExtensionIDs",
                 "newPage": false,
                 "searchKey": "registry.filterStripLocalExtensionIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2237,7 +2459,9 @@
                 "identifier": "strptr",
                 "newPage": false,
                 "searchKey": "registry.strptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2257,7 +2481,9 @@
                 "identifier": "validateExtensionManifest",
                 "newPage": false,
                 "searchKey": "registry.validateExtensionManifest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2277,7 +2503,9 @@
                 "identifier": "getLatestForBatch",
                 "newPage": false,
                 "searchKey": "registry.getLatestForBatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2297,7 +2525,9 @@
                 "identifier": "prepReleaseManifest",
                 "newPage": false,
                 "searchKey": "registry.prepReleaseManifest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2317,7 +2547,9 @@
                 "identifier": "makeExtensionBundleURL",
                 "newPage": false,
                 "searchKey": "registry.makeExtensionBundleURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2332,12 +2564,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/registry#init",
+              "pathID": "/enterprise/cmd/frontend/internal/registry#init.extensions.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.extensions.go",
                 "newPage": false,
                 "searchKey": "registry.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2357,7 +2591,9 @@
                 "identifier": "prefixLocalExtensionID",
                 "newPage": false,
                 "searchKey": "registry.prefixLocalExtensionID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2372,12 +2608,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/registry#init",
+              "pathID": "/enterprise/cmd/frontend/internal/registry#init.http_api.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.http_api.go",
                 "newPage": false,
                 "searchKey": "registry.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2397,7 +2635,9 @@
                 "identifier": "toRegistryAPIExtension",
                 "newPage": false,
                 "searchKey": "registry.toRegistryAPIExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2417,7 +2657,9 @@
                 "identifier": "toRegistryAPIExtensionBatch",
                 "newPage": false,
                 "searchKey": "registry.toRegistryAPIExtensionBatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2437,7 +2679,9 @@
                 "identifier": "newExtension",
                 "newPage": false,
                 "searchKey": "registry.newExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2457,7 +2701,9 @@
                 "identifier": "handleRegistry",
                 "newPage": false,
                 "searchKey": "registry.handleRegistry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2472,12 +2718,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/registry#init",
+              "pathID": "/enterprise/cmd/frontend/internal/registry#init.http_api.go.0xc06f6623d8",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.http_api.go.0xc06f6623d8",
                 "newPage": false,
                 "searchKey": "registry.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2497,7 +2745,9 @@
                 "identifier": "resetMocks",
                 "newPage": false,
                 "searchKey": "registry.resetMocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2512,12 +2762,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/registry#init",
+              "pathID": "/enterprise/cmd/frontend/internal/registry#init.publisher_connection_graphql.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.publisher_connection_graphql.go",
                 "newPage": false,
                 "searchKey": "registry.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2537,7 +2789,9 @@
                 "identifier": "extensionRegistryPublishers",
                 "newPage": false,
                 "searchKey": "registry.extensionRegistryPublishers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2552,12 +2806,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/registry#init",
+              "pathID": "/enterprise/cmd/frontend/internal/registry#init.publisher_graphql.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.publisher_graphql.go",
                 "newPage": false,
                 "searchKey": "registry.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2577,7 +2833,9 @@
                 "identifier": "extensionRegistryViewerPublishers",
                 "newPage": false,
                 "searchKey": "registry.extensionRegistryViewerPublishers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2592,12 +2850,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/registry#init",
+              "pathID": "/enterprise/cmd/frontend/internal/registry#init.registry_graphql.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.registry_graphql.go",
                 "newPage": false,
                 "searchKey": "registry.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2617,7 +2877,9 @@
                 "identifier": "registryExtensionByIDInt32",
                 "newPage": false,
                 "searchKey": "registry.registryExtensionByIDInt32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2637,7 +2899,9 @@
                 "identifier": "extensionRegistryCreateExtension",
                 "newPage": false,
                 "searchKey": "registry.extensionRegistryCreateExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2657,7 +2921,9 @@
                 "identifier": "viewerCanAdministerExtension",
                 "newPage": false,
                 "searchKey": "registry.viewerCanAdministerExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2677,7 +2943,9 @@
                 "identifier": "extensionRegistryUpdateExtension",
                 "newPage": false,
                 "searchKey": "registry.extensionRegistryUpdateExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2697,7 +2965,9 @@
                 "identifier": "extensionRegistryDeleteExtension",
                 "newPage": false,
                 "searchKey": "registry.extensionRegistryDeleteExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2717,7 +2987,9 @@
                 "identifier": "extensionRegistryPublishExtension",
                 "newPage": false,
                 "searchKey": "registry.extensionRegistryPublishExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2737,7 +3009,9 @@
                 "identifier": "TestIsRemoteExtensionAllowed",
                 "newPage": false,
                 "searchKey": "registry.TestIsRemoteExtensionAllowed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2757,7 +3031,9 @@
                 "identifier": "sameElements",
                 "newPage": false,
                 "searchKey": "registry.sameElements",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2777,7 +3053,9 @@
                 "identifier": "TestFilterRemoteExtensions",
                 "newPage": false,
                 "searchKey": "registry.TestFilterRemoteExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2792,12 +3070,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/registry#init",
+              "pathID": "/enterprise/cmd/frontend/internal/registry#init.db_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "registry.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2817,7 +3097,9 @@
                 "identifier": "TestParseExtensionBundleFilename",
                 "newPage": false,
                 "searchKey": "registry.TestParseExtensionBundleFilename",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2837,7 +3119,9 @@
                 "identifier": "TestFilteringExtensionIDs",
                 "newPage": false,
                 "searchKey": "registry.TestFilteringExtensionIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2857,7 +3141,9 @@
                 "identifier": "TestToDBExtensionsListOptions",
                 "newPage": false,
                 "searchKey": "registry.TestToDBExtensionsListOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2877,7 +3163,9 @@
                 "identifier": "strarrayptr",
                 "newPage": false,
                 "searchKey": "registry.strarrayptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2897,7 +3185,9 @@
                 "identifier": "TestGetExtensionManifestWithBundleURL",
                 "newPage": false,
                 "searchKey": "registry.TestGetExtensionManifestWithBundleURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2917,7 +3207,9 @@
                 "identifier": "jsonDeepEqual",
                 "newPage": false,
                 "searchKey": "registry.jsonDeepEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2937,7 +3229,9 @@
                 "identifier": "TestRegistryExtensions_validNames",
                 "newPage": false,
                 "searchKey": "registry.TestRegistryExtensions_validNames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2957,7 +3251,9 @@
                 "identifier": "TestRegistryExtensions",
                 "newPage": false,
                 "searchKey": "registry.TestRegistryExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2977,7 +3273,9 @@
                 "identifier": "TestRegistryExtensions_ListCount",
                 "newPage": false,
                 "searchKey": "registry.TestRegistryExtensions_ListCount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2997,7 +3295,9 @@
                 "identifier": "TestFeaturedExtensions",
                 "newPage": false,
                 "searchKey": "registry.TestFeaturedExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3017,7 +3317,9 @@
                 "identifier": "asJSON",
                 "newPage": false,
                 "searchKey": "registry.asJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3037,7 +3339,9 @@
                 "identifier": "TestRegistryExtensionReleases",
                 "newPage": false,
                 "searchKey": "registry.TestRegistryExtensionReleases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,9 +4,7 @@
     "identifier": "client",
     "newPage": true,
     "searchKey": "cmd/frontend/registry/client",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "APIVersion",
                 "newPage": false,
                 "searchKey": "client.APIVersion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "AcceptHeader",
                 "newPage": false,
                 "searchKey": "client.AcceptHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "MediaTypeHeaderName",
                 "newPage": false,
                 "searchKey": "client.MediaTypeHeaderName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "MediaType",
                 "newPage": false,
                 "searchKey": "client.MediaType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -132,7 +120,9 @@
                 "identifier": "remoteRegistryErrorMessage",
                 "newPage": false,
                 "searchKey": "client.remoteRegistryErrorMessage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -155,9 +145,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -175,7 +163,9 @@
                 "identifier": "notFoundError",
                 "newPage": false,
                 "searchKey": "client.notFoundError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -193,7 +183,9 @@
                       "identifier": "notFoundError.NotFound",
                       "newPage": false,
                       "searchKey": "client.notFoundError.NotFound",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -213,7 +205,9 @@
                       "identifier": "notFoundError.Error",
                       "newPage": false,
                       "searchKey": "client.notFoundError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -236,7 +230,9 @@
                 "identifier": "httpError",
                 "newPage": false,
                 "searchKey": "client.httpError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -254,7 +250,9 @@
                       "identifier": "httpError.Error",
                       "newPage": false,
                       "searchKey": "client.httpError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -277,9 +275,7 @@
                 "identifier": "Extension",
                 "newPage": false,
                 "searchKey": "client.Extension",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -297,9 +293,7 @@
                       "identifier": "GetByUUID",
                       "newPage": false,
                       "searchKey": "client.GetByUUID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -319,9 +313,7 @@
                       "identifier": "GetByExtensionID",
                       "newPage": false,
                       "searchKey": "client.GetByExtensionID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -341,7 +333,9 @@
                       "identifier": "getBy",
                       "newPage": false,
                       "searchKey": "client.getBy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -364,9 +358,7 @@
                 "identifier": "Publisher",
                 "newPage": false,
                 "searchKey": "client.Publisher",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -389,9 +381,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -409,9 +399,7 @@
                 "identifier": "List",
                 "newPage": false,
                 "searchKey": "client.List",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -431,9 +419,7 @@
                 "identifier": "GetFeaturedExtensions",
                 "newPage": false,
                 "searchKey": "client.GetFeaturedExtensions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -453,7 +439,9 @@
                 "identifier": "httpGet",
                 "newPage": false,
                 "searchKey": "client.httpGet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -473,9 +461,7 @@
                 "identifier": "IsRemoteRegistryError",
                 "newPage": false,
                 "searchKey": "client.IsRemoteRegistryError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -495,9 +481,7 @@
                 "identifier": "Name",
                 "newPage": false,
                 "searchKey": "client.Name",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -517,7 +501,9 @@
                 "identifier": "toURL",
                 "newPage": false,
                 "searchKey": "client.toURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

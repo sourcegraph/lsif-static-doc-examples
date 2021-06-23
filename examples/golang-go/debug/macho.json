@@ -4,9 +4,7 @@
     "identifier": "macho",
     "newPage": true,
     "searchKey": "debug/macho",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "fatArchHeaderSize",
                 "newPage": false,
                 "searchKey": "macho.fatArchHeaderSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "fileHeaderSize32",
                 "newPage": false,
                 "searchKey": "macho.fileHeaderSize32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "fileHeaderSize64",
                 "newPage": false,
                 "searchKey": "macho.fileHeaderSize64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,9 +106,7 @@
                 "identifier": "Magic32",
                 "newPage": false,
                 "searchKey": "macho.Magic32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -126,9 +126,7 @@
                 "identifier": "Magic64",
                 "newPage": false,
                 "searchKey": "macho.Magic64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -148,9 +146,7 @@
                 "identifier": "MagicFat",
                 "newPage": false,
                 "searchKey": "macho.MagicFat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -170,9 +166,7 @@
                 "identifier": "TypeObj",
                 "newPage": false,
                 "searchKey": "macho.TypeObj",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -192,9 +186,7 @@
                 "identifier": "TypeExec",
                 "newPage": false,
                 "searchKey": "macho.TypeExec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -214,9 +206,7 @@
                 "identifier": "TypeDylib",
                 "newPage": false,
                 "searchKey": "macho.TypeDylib",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -236,9 +226,7 @@
                 "identifier": "TypeBundle",
                 "newPage": false,
                 "searchKey": "macho.TypeBundle",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -258,7 +246,9 @@
                 "identifier": "cpuArch64",
                 "newPage": false,
                 "searchKey": "macho.cpuArch64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -278,9 +268,7 @@
                 "identifier": "Cpu386",
                 "newPage": false,
                 "searchKey": "macho.Cpu386",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -300,9 +288,7 @@
                 "identifier": "CpuAmd64",
                 "newPage": false,
                 "searchKey": "macho.CpuAmd64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -322,9 +308,7 @@
                 "identifier": "CpuArm",
                 "newPage": false,
                 "searchKey": "macho.CpuArm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -344,9 +328,7 @@
                 "identifier": "CpuArm64",
                 "newPage": false,
                 "searchKey": "macho.CpuArm64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -366,9 +348,7 @@
                 "identifier": "CpuPpc",
                 "newPage": false,
                 "searchKey": "macho.CpuPpc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -388,9 +368,7 @@
                 "identifier": "CpuPpc64",
                 "newPage": false,
                 "searchKey": "macho.CpuPpc64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -410,9 +388,7 @@
                 "identifier": "LoadCmdSegment",
                 "newPage": false,
                 "searchKey": "macho.LoadCmdSegment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -432,9 +408,7 @@
                 "identifier": "LoadCmdSymtab",
                 "newPage": false,
                 "searchKey": "macho.LoadCmdSymtab",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -454,9 +428,7 @@
                 "identifier": "LoadCmdThread",
                 "newPage": false,
                 "searchKey": "macho.LoadCmdThread",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -476,9 +448,7 @@
                 "identifier": "LoadCmdUnixThread",
                 "newPage": false,
                 "searchKey": "macho.LoadCmdUnixThread",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -498,9 +468,7 @@
                 "identifier": "LoadCmdDysymtab",
                 "newPage": false,
                 "searchKey": "macho.LoadCmdDysymtab",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -520,9 +488,7 @@
                 "identifier": "LoadCmdDylib",
                 "newPage": false,
                 "searchKey": "macho.LoadCmdDylib",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -542,9 +508,7 @@
                 "identifier": "LoadCmdDylinker",
                 "newPage": false,
                 "searchKey": "macho.LoadCmdDylinker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -564,9 +528,7 @@
                 "identifier": "LoadCmdSegment64",
                 "newPage": false,
                 "searchKey": "macho.LoadCmdSegment64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -586,9 +548,7 @@
                 "identifier": "LoadCmdRpath",
                 "newPage": false,
                 "searchKey": "macho.LoadCmdRpath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -608,9 +568,7 @@
                 "identifier": "FlagNoUndefs",
                 "newPage": false,
                 "searchKey": "macho.FlagNoUndefs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -630,9 +588,7 @@
                 "identifier": "FlagIncrLink",
                 "newPage": false,
                 "searchKey": "macho.FlagIncrLink",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -652,9 +608,7 @@
                 "identifier": "FlagDyldLink",
                 "newPage": false,
                 "searchKey": "macho.FlagDyldLink",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -674,9 +628,7 @@
                 "identifier": "FlagBindAtLoad",
                 "newPage": false,
                 "searchKey": "macho.FlagBindAtLoad",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -696,9 +648,7 @@
                 "identifier": "FlagPrebound",
                 "newPage": false,
                 "searchKey": "macho.FlagPrebound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -718,9 +668,7 @@
                 "identifier": "FlagSplitSegs",
                 "newPage": false,
                 "searchKey": "macho.FlagSplitSegs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -740,9 +688,7 @@
                 "identifier": "FlagLazyInit",
                 "newPage": false,
                 "searchKey": "macho.FlagLazyInit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -762,9 +708,7 @@
                 "identifier": "FlagTwoLevel",
                 "newPage": false,
                 "searchKey": "macho.FlagTwoLevel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -784,9 +728,7 @@
                 "identifier": "FlagForceFlat",
                 "newPage": false,
                 "searchKey": "macho.FlagForceFlat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -806,9 +748,7 @@
                 "identifier": "FlagNoMultiDefs",
                 "newPage": false,
                 "searchKey": "macho.FlagNoMultiDefs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -828,9 +768,7 @@
                 "identifier": "FlagNoFixPrebinding",
                 "newPage": false,
                 "searchKey": "macho.FlagNoFixPrebinding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -850,9 +788,7 @@
                 "identifier": "FlagPrebindable",
                 "newPage": false,
                 "searchKey": "macho.FlagPrebindable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -872,9 +808,7 @@
                 "identifier": "FlagAllModsBound",
                 "newPage": false,
                 "searchKey": "macho.FlagAllModsBound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -894,9 +828,7 @@
                 "identifier": "FlagSubsectionsViaSymbols",
                 "newPage": false,
                 "searchKey": "macho.FlagSubsectionsViaSymbols",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -916,9 +848,7 @@
                 "identifier": "FlagCanonical",
                 "newPage": false,
                 "searchKey": "macho.FlagCanonical",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -938,9 +868,7 @@
                 "identifier": "FlagWeakDefines",
                 "newPage": false,
                 "searchKey": "macho.FlagWeakDefines",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -960,9 +888,7 @@
                 "identifier": "FlagBindsToWeak",
                 "newPage": false,
                 "searchKey": "macho.FlagBindsToWeak",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -982,9 +908,7 @@
                 "identifier": "FlagAllowStackExecution",
                 "newPage": false,
                 "searchKey": "macho.FlagAllowStackExecution",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1004,9 +928,7 @@
                 "identifier": "FlagRootSafe",
                 "newPage": false,
                 "searchKey": "macho.FlagRootSafe",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1026,9 +948,7 @@
                 "identifier": "FlagSetuidSafe",
                 "newPage": false,
                 "searchKey": "macho.FlagSetuidSafe",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1048,9 +968,7 @@
                 "identifier": "FlagNoReexportedDylibs",
                 "newPage": false,
                 "searchKey": "macho.FlagNoReexportedDylibs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1070,9 +988,7 @@
                 "identifier": "FlagPIE",
                 "newPage": false,
                 "searchKey": "macho.FlagPIE",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1092,9 +1008,7 @@
                 "identifier": "FlagDeadStrippableDylib",
                 "newPage": false,
                 "searchKey": "macho.FlagDeadStrippableDylib",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1114,9 +1028,7 @@
                 "identifier": "FlagHasTLVDescriptors",
                 "newPage": false,
                 "searchKey": "macho.FlagHasTLVDescriptors",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1136,9 +1048,7 @@
                 "identifier": "FlagNoHeapExecution",
                 "newPage": false,
                 "searchKey": "macho.FlagNoHeapExecution",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1158,9 +1068,7 @@
                 "identifier": "FlagAppExtensionSafe",
                 "newPage": false,
                 "searchKey": "macho.FlagAppExtensionSafe",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1180,9 +1088,7 @@
                 "identifier": "GENERIC_RELOC_VANILLA",
                 "newPage": false,
                 "searchKey": "macho.GENERIC_RELOC_VANILLA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1202,9 +1108,7 @@
                 "identifier": "GENERIC_RELOC_PAIR",
                 "newPage": false,
                 "searchKey": "macho.GENERIC_RELOC_PAIR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1224,9 +1128,7 @@
                 "identifier": "GENERIC_RELOC_SECTDIFF",
                 "newPage": false,
                 "searchKey": "macho.GENERIC_RELOC_SECTDIFF",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1246,9 +1148,7 @@
                 "identifier": "GENERIC_RELOC_PB_LA_PTR",
                 "newPage": false,
                 "searchKey": "macho.GENERIC_RELOC_PB_LA_PTR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1268,9 +1168,7 @@
                 "identifier": "GENERIC_RELOC_LOCAL_SECTDIFF",
                 "newPage": false,
                 "searchKey": "macho.GENERIC_RELOC_LOCAL_SECTDIFF",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1290,9 +1188,7 @@
                 "identifier": "GENERIC_RELOC_TLV",
                 "newPage": false,
                 "searchKey": "macho.GENERIC_RELOC_TLV",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1312,9 +1208,7 @@
                 "identifier": "X86_64_RELOC_UNSIGNED",
                 "newPage": false,
                 "searchKey": "macho.X86_64_RELOC_UNSIGNED",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1334,9 +1228,7 @@
                 "identifier": "X86_64_RELOC_SIGNED",
                 "newPage": false,
                 "searchKey": "macho.X86_64_RELOC_SIGNED",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1356,9 +1248,7 @@
                 "identifier": "X86_64_RELOC_BRANCH",
                 "newPage": false,
                 "searchKey": "macho.X86_64_RELOC_BRANCH",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1378,9 +1268,7 @@
                 "identifier": "X86_64_RELOC_GOT_LOAD",
                 "newPage": false,
                 "searchKey": "macho.X86_64_RELOC_GOT_LOAD",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1400,9 +1288,7 @@
                 "identifier": "X86_64_RELOC_GOT",
                 "newPage": false,
                 "searchKey": "macho.X86_64_RELOC_GOT",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1422,9 +1308,7 @@
                 "identifier": "X86_64_RELOC_SUBTRACTOR",
                 "newPage": false,
                 "searchKey": "macho.X86_64_RELOC_SUBTRACTOR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1444,9 +1328,7 @@
                 "identifier": "X86_64_RELOC_SIGNED_1",
                 "newPage": false,
                 "searchKey": "macho.X86_64_RELOC_SIGNED_1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1466,9 +1348,7 @@
                 "identifier": "X86_64_RELOC_SIGNED_2",
                 "newPage": false,
                 "searchKey": "macho.X86_64_RELOC_SIGNED_2",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1488,9 +1368,7 @@
                 "identifier": "X86_64_RELOC_SIGNED_4",
                 "newPage": false,
                 "searchKey": "macho.X86_64_RELOC_SIGNED_4",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1510,9 +1388,7 @@
                 "identifier": "X86_64_RELOC_TLV",
                 "newPage": false,
                 "searchKey": "macho.X86_64_RELOC_TLV",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1532,9 +1408,7 @@
                 "identifier": "ARM_RELOC_VANILLA",
                 "newPage": false,
                 "searchKey": "macho.ARM_RELOC_VANILLA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1554,9 +1428,7 @@
                 "identifier": "ARM_RELOC_PAIR",
                 "newPage": false,
                 "searchKey": "macho.ARM_RELOC_PAIR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1576,9 +1448,7 @@
                 "identifier": "ARM_RELOC_SECTDIFF",
                 "newPage": false,
                 "searchKey": "macho.ARM_RELOC_SECTDIFF",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1598,9 +1468,7 @@
                 "identifier": "ARM_RELOC_LOCAL_SECTDIFF",
                 "newPage": false,
                 "searchKey": "macho.ARM_RELOC_LOCAL_SECTDIFF",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1620,9 +1488,7 @@
                 "identifier": "ARM_RELOC_PB_LA_PTR",
                 "newPage": false,
                 "searchKey": "macho.ARM_RELOC_PB_LA_PTR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1642,9 +1508,7 @@
                 "identifier": "ARM_RELOC_BR24",
                 "newPage": false,
                 "searchKey": "macho.ARM_RELOC_BR24",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1664,9 +1528,7 @@
                 "identifier": "ARM_THUMB_RELOC_BR22",
                 "newPage": false,
                 "searchKey": "macho.ARM_THUMB_RELOC_BR22",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1686,9 +1548,7 @@
                 "identifier": "ARM_THUMB_32BIT_BRANCH",
                 "newPage": false,
                 "searchKey": "macho.ARM_THUMB_32BIT_BRANCH",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1708,9 +1568,7 @@
                 "identifier": "ARM_RELOC_HALF",
                 "newPage": false,
                 "searchKey": "macho.ARM_RELOC_HALF",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1730,9 +1588,7 @@
                 "identifier": "ARM_RELOC_HALF_SECTDIFF",
                 "newPage": false,
                 "searchKey": "macho.ARM_RELOC_HALF_SECTDIFF",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1752,9 +1608,7 @@
                 "identifier": "ARM64_RELOC_UNSIGNED",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_UNSIGNED",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1774,9 +1628,7 @@
                 "identifier": "ARM64_RELOC_SUBTRACTOR",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_SUBTRACTOR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1796,9 +1648,7 @@
                 "identifier": "ARM64_RELOC_BRANCH26",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_BRANCH26",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1818,9 +1668,7 @@
                 "identifier": "ARM64_RELOC_PAGE21",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_PAGE21",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1840,9 +1688,7 @@
                 "identifier": "ARM64_RELOC_PAGEOFF12",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_PAGEOFF12",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1862,9 +1708,7 @@
                 "identifier": "ARM64_RELOC_GOT_LOAD_PAGE21",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_GOT_LOAD_PAGE21",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1884,9 +1728,7 @@
                 "identifier": "ARM64_RELOC_GOT_LOAD_PAGEOFF12",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_GOT_LOAD_PAGEOFF12",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1906,9 +1748,7 @@
                 "identifier": "ARM64_RELOC_POINTER_TO_GOT",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_POINTER_TO_GOT",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1928,9 +1768,7 @@
                 "identifier": "ARM64_RELOC_TLVP_LOAD_PAGE21",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_TLVP_LOAD_PAGE21",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1950,9 +1788,7 @@
                 "identifier": "ARM64_RELOC_TLVP_LOAD_PAGEOFF12",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_TLVP_LOAD_PAGEOFF12",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1972,9 +1808,7 @@
                 "identifier": "ARM64_RELOC_ADDEND",
                 "newPage": false,
                 "searchKey": "macho.ARM64_RELOC_ADDEND",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1994,7 +1828,9 @@
                 "identifier": "_RelocTypeGeneric_name",
                 "newPage": false,
                 "searchKey": "macho._RelocTypeGeneric_name",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2014,7 +1850,9 @@
                 "identifier": "_RelocTypeX86_64_name",
                 "newPage": false,
                 "searchKey": "macho._RelocTypeX86_64_name",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2034,7 +1872,9 @@
                 "identifier": "_RelocTypeARM_name",
                 "newPage": false,
                 "searchKey": "macho._RelocTypeARM_name",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2054,7 +1894,9 @@
                 "identifier": "_RelocTypeARM64_name",
                 "newPage": false,
                 "searchKey": "macho._RelocTypeARM64_name",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2077,9 +1919,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2097,9 +1937,7 @@
                 "identifier": "ErrNotFat",
                 "newPage": false,
                 "searchKey": "macho.ErrNotFat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2119,7 +1957,9 @@
                 "identifier": "typeStrings",
                 "newPage": false,
                 "searchKey": "macho.typeStrings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2139,7 +1979,9 @@
                 "identifier": "cpuStrings",
                 "newPage": false,
                 "searchKey": "macho.cpuStrings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2159,7 +2001,9 @@
                 "identifier": "cmdStrings",
                 "newPage": false,
                 "searchKey": "macho.cmdStrings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2179,7 +2023,9 @@
                 "identifier": "_RelocTypeGeneric_index",
                 "newPage": false,
                 "searchKey": "macho._RelocTypeGeneric_index",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2199,7 +2045,9 @@
                 "identifier": "_RelocTypeX86_64_index",
                 "newPage": false,
                 "searchKey": "macho._RelocTypeX86_64_index",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2219,7 +2067,9 @@
                 "identifier": "_RelocTypeARM_index",
                 "newPage": false,
                 "searchKey": "macho._RelocTypeARM_index",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2239,7 +2089,9 @@
                 "identifier": "_RelocTypeARM64_index",
                 "newPage": false,
                 "searchKey": "macho._RelocTypeARM64_index",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2259,7 +2111,9 @@
                 "identifier": "fileTests",
                 "newPage": false,
                 "searchKey": "macho.fileTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2282,9 +2136,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2302,9 +2154,7 @@
                 "identifier": "FatFile",
                 "newPage": false,
                 "searchKey": "macho.FatFile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2322,9 +2172,7 @@
                       "identifier": "NewFatFile",
                       "newPage": false,
                       "searchKey": "macho.NewFatFile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2344,9 +2192,7 @@
                       "identifier": "OpenFat",
                       "newPage": false,
                       "searchKey": "macho.OpenFat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2366,7 +2212,9 @@
                       "identifier": "openFatObscured",
                       "newPage": false,
                       "searchKey": "macho.openFatObscured",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2386,9 +2234,7 @@
                       "identifier": "FatFile.Close",
                       "newPage": false,
                       "searchKey": "macho.FatFile.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2411,9 +2257,7 @@
                 "identifier": "FatArchHeader",
                 "newPage": false,
                 "searchKey": "macho.FatArchHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2433,9 +2277,7 @@
                 "identifier": "FatArch",
                 "newPage": false,
                 "searchKey": "macho.FatArch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2455,9 +2297,7 @@
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "macho.File",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2475,9 +2315,7 @@
                       "identifier": "Open",
                       "newPage": false,
                       "searchKey": "macho.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2497,9 +2335,7 @@
                       "identifier": "NewFile",
                       "newPage": false,
                       "searchKey": "macho.NewFile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2519,7 +2355,9 @@
                       "identifier": "openObscured",
                       "newPage": false,
                       "searchKey": "macho.openObscured",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2539,9 +2377,7 @@
                       "identifier": "File.Close",
                       "newPage": false,
                       "searchKey": "macho.File.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2561,7 +2397,9 @@
                       "identifier": "File.parseSymtab",
                       "newPage": false,
                       "searchKey": "macho.File.parseSymtab",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2581,7 +2419,9 @@
                       "identifier": "File.pushSection",
                       "newPage": false,
                       "searchKey": "macho.File.pushSection",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2601,9 +2441,7 @@
                       "identifier": "File.Segment",
                       "newPage": false,
                       "searchKey": "macho.File.Segment",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2623,9 +2461,7 @@
                       "identifier": "File.Section",
                       "newPage": false,
                       "searchKey": "macho.File.Section",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2645,9 +2481,7 @@
                       "identifier": "File.DWARF",
                       "newPage": false,
                       "searchKey": "macho.File.DWARF",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2667,9 +2501,7 @@
                       "identifier": "File.ImportedSymbols",
                       "newPage": false,
                       "searchKey": "macho.File.ImportedSymbols",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2689,9 +2521,7 @@
                       "identifier": "File.ImportedLibraries",
                       "newPage": false,
                       "searchKey": "macho.File.ImportedLibraries",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2714,9 +2544,7 @@
                 "identifier": "Load",
                 "newPage": false,
                 "searchKey": "macho.Load",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2736,9 +2564,7 @@
                 "identifier": "LoadBytes",
                 "newPage": false,
                 "searchKey": "macho.LoadBytes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2756,9 +2582,7 @@
                       "identifier": "LoadBytes.Raw",
                       "newPage": false,
                       "searchKey": "macho.LoadBytes.Raw",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2781,9 +2605,7 @@
                 "identifier": "SegmentHeader",
                 "newPage": false,
                 "searchKey": "macho.SegmentHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2803,9 +2625,7 @@
                 "identifier": "Segment",
                 "newPage": false,
                 "searchKey": "macho.Segment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2823,9 +2643,7 @@
                       "identifier": "Segment.Data",
                       "newPage": false,
                       "searchKey": "macho.Segment.Data",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2845,9 +2663,7 @@
                       "identifier": "Segment.Open",
                       "newPage": false,
                       "searchKey": "macho.Segment.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2870,9 +2686,7 @@
                 "identifier": "SectionHeader",
                 "newPage": false,
                 "searchKey": "macho.SectionHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2892,9 +2706,7 @@
                 "identifier": "Reloc",
                 "newPage": false,
                 "searchKey": "macho.Reloc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2914,9 +2726,7 @@
                 "identifier": "Section",
                 "newPage": false,
                 "searchKey": "macho.Section",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2934,9 +2744,7 @@
                       "identifier": "Section.Data",
                       "newPage": false,
                       "searchKey": "macho.Section.Data",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2956,9 +2764,7 @@
                       "identifier": "Section.Open",
                       "newPage": false,
                       "searchKey": "macho.Section.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2981,9 +2787,7 @@
                 "identifier": "Dylib",
                 "newPage": false,
                 "searchKey": "macho.Dylib",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3003,9 +2807,7 @@
                 "identifier": "Symtab",
                 "newPage": false,
                 "searchKey": "macho.Symtab",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3025,9 +2827,7 @@
                 "identifier": "Dysymtab",
                 "newPage": false,
                 "searchKey": "macho.Dysymtab",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3047,9 +2847,7 @@
                 "identifier": "Rpath",
                 "newPage": false,
                 "searchKey": "macho.Rpath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3069,9 +2867,7 @@
                 "identifier": "Symbol",
                 "newPage": false,
                 "searchKey": "macho.Symbol",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3091,9 +2887,7 @@
                 "identifier": "FormatError",
                 "newPage": false,
                 "searchKey": "macho.FormatError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3111,9 +2905,7 @@
                       "identifier": "FormatError.Error",
                       "newPage": false,
                       "searchKey": "macho.FormatError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3136,7 +2928,9 @@
                 "identifier": "relocInfo",
                 "newPage": false,
                 "searchKey": "macho.relocInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3156,9 +2950,7 @@
                 "identifier": "FileHeader",
                 "newPage": false,
                 "searchKey": "macho.FileHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3178,9 +2970,7 @@
                 "identifier": "Type",
                 "newPage": false,
                 "searchKey": "macho.Type",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3198,9 +2988,7 @@
                       "identifier": "Type.String",
                       "newPage": false,
                       "searchKey": "macho.Type.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3220,9 +3008,7 @@
                       "identifier": "Type.GoString",
                       "newPage": false,
                       "searchKey": "macho.Type.GoString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3245,9 +3031,7 @@
                 "identifier": "Cpu",
                 "newPage": false,
                 "searchKey": "macho.Cpu",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3265,9 +3049,7 @@
                       "identifier": "Cpu.String",
                       "newPage": false,
                       "searchKey": "macho.Cpu.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3287,9 +3069,7 @@
                       "identifier": "Cpu.GoString",
                       "newPage": false,
                       "searchKey": "macho.Cpu.GoString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3312,9 +3092,7 @@
                 "identifier": "LoadCmd",
                 "newPage": false,
                 "searchKey": "macho.LoadCmd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3332,9 +3110,7 @@
                       "identifier": "LoadCmd.String",
                       "newPage": false,
                       "searchKey": "macho.LoadCmd.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3354,9 +3130,7 @@
                       "identifier": "LoadCmd.GoString",
                       "newPage": false,
                       "searchKey": "macho.LoadCmd.GoString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3379,9 +3153,7 @@
                 "identifier": "Segment32",
                 "newPage": false,
                 "searchKey": "macho.Segment32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3401,9 +3173,7 @@
                 "identifier": "Segment64",
                 "newPage": false,
                 "searchKey": "macho.Segment64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3423,9 +3193,7 @@
                 "identifier": "SymtabCmd",
                 "newPage": false,
                 "searchKey": "macho.SymtabCmd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3445,9 +3213,7 @@
                 "identifier": "DysymtabCmd",
                 "newPage": false,
                 "searchKey": "macho.DysymtabCmd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3467,9 +3233,7 @@
                 "identifier": "DylibCmd",
                 "newPage": false,
                 "searchKey": "macho.DylibCmd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3489,9 +3253,7 @@
                 "identifier": "RpathCmd",
                 "newPage": false,
                 "searchKey": "macho.RpathCmd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3511,9 +3273,7 @@
                 "identifier": "Thread",
                 "newPage": false,
                 "searchKey": "macho.Thread",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3533,9 +3293,7 @@
                 "identifier": "Section32",
                 "newPage": false,
                 "searchKey": "macho.Section32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3555,9 +3313,7 @@
                 "identifier": "Section64",
                 "newPage": false,
                 "searchKey": "macho.Section64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3577,9 +3333,7 @@
                 "identifier": "Nlist32",
                 "newPage": false,
                 "searchKey": "macho.Nlist32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3599,9 +3353,7 @@
                 "identifier": "Nlist64",
                 "newPage": false,
                 "searchKey": "macho.Nlist64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3621,9 +3373,7 @@
                 "identifier": "Regs386",
                 "newPage": false,
                 "searchKey": "macho.Regs386",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3643,9 +3393,7 @@
                 "identifier": "RegsAMD64",
                 "newPage": false,
                 "searchKey": "macho.RegsAMD64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3665,7 +3413,9 @@
                 "identifier": "intName",
                 "newPage": false,
                 "searchKey": "macho.intName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3685,9 +3435,7 @@
                 "identifier": "RelocTypeGeneric",
                 "newPage": false,
                 "searchKey": "macho.RelocTypeGeneric",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3705,9 +3453,7 @@
                       "identifier": "RelocTypeGeneric.GoString",
                       "newPage": false,
                       "searchKey": "macho.RelocTypeGeneric.GoString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3727,9 +3473,7 @@
                       "identifier": "RelocTypeGeneric.String",
                       "newPage": false,
                       "searchKey": "macho.RelocTypeGeneric.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3752,9 +3496,7 @@
                 "identifier": "RelocTypeX86_64",
                 "newPage": false,
                 "searchKey": "macho.RelocTypeX86_64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3772,9 +3514,7 @@
                       "identifier": "RelocTypeX86_64.GoString",
                       "newPage": false,
                       "searchKey": "macho.RelocTypeX86_64.GoString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3794,9 +3534,7 @@
                       "identifier": "RelocTypeX86_64.String",
                       "newPage": false,
                       "searchKey": "macho.RelocTypeX86_64.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3819,9 +3557,7 @@
                 "identifier": "RelocTypeARM",
                 "newPage": false,
                 "searchKey": "macho.RelocTypeARM",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3839,9 +3575,7 @@
                       "identifier": "RelocTypeARM.GoString",
                       "newPage": false,
                       "searchKey": "macho.RelocTypeARM.GoString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3861,9 +3595,7 @@
                       "identifier": "RelocTypeARM.String",
                       "newPage": false,
                       "searchKey": "macho.RelocTypeARM.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3886,9 +3618,7 @@
                 "identifier": "RelocTypeARM64",
                 "newPage": false,
                 "searchKey": "macho.RelocTypeARM64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3906,9 +3636,7 @@
                       "identifier": "RelocTypeARM64.GoString",
                       "newPage": false,
                       "searchKey": "macho.RelocTypeARM64.GoString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3928,9 +3656,7 @@
                       "identifier": "RelocTypeARM64.String",
                       "newPage": false,
                       "searchKey": "macho.RelocTypeARM64.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3953,7 +3679,9 @@
                 "identifier": "fileTest",
                 "newPage": false,
                 "searchKey": "macho.fileTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3976,9 +3704,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -3996,7 +3722,9 @@
                 "identifier": "cstring",
                 "newPage": false,
                 "searchKey": "macho.cstring",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4016,7 +3744,9 @@
                 "identifier": "stringName",
                 "newPage": false,
                 "searchKey": "macho.stringName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4036,7 +3766,9 @@
                 "identifier": "readerAtFromObscured",
                 "newPage": false,
                 "searchKey": "macho.readerAtFromObscured",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4056,7 +3788,9 @@
                 "identifier": "TestOpen",
                 "newPage": false,
                 "searchKey": "macho.TestOpen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4076,7 +3810,9 @@
                 "identifier": "TestOpenFailure",
                 "newPage": false,
                 "searchKey": "macho.TestOpenFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4096,7 +3832,9 @@
                 "identifier": "TestOpenFat",
                 "newPage": false,
                 "searchKey": "macho.TestOpenFat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4116,7 +3854,9 @@
                 "identifier": "TestOpenFatFailure",
                 "newPage": false,
                 "searchKey": "macho.TestOpenFatFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4136,7 +3876,9 @@
                 "identifier": "TestRelocTypeString",
                 "newPage": false,
                 "searchKey": "macho.TestRelocTypeString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4156,7 +3898,9 @@
                 "identifier": "TestTypeString",
                 "newPage": false,
                 "searchKey": "macho.TestTypeString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

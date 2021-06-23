@@ -137,10 +137,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="testCommit" href="#testCommit">const testCommit</a>
 
 ```
 searchKey: httpapi.testCommit
+tags: [private]
 ```
 
 ```Go
@@ -149,10 +154,15 @@ const testCommit = "deadbeef01deadbeef02deadbeef03deadbeef04"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="githubURL" href="#githubURL">var githubURL</a>
 
 ```
 searchKey: httpapi.githubURL
+tags: [private]
 ```
 
 ```Go
@@ -163,6 +173,7 @@ var githubURL = url.URL{Scheme: "https", Host: "api.github.com"}
 
 ```
 searchKey: httpapi.revhashPattern
+tags: [private]
 ```
 
 ```Go
@@ -171,11 +182,14 @@ var revhashPattern = lazyregexp.New(`^[a-z0-9]{40}$`)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ClientError" href="#ClientError">type ClientError struct</a>
 
 ```
 searchKey: httpapi.ClientError
-tags: [exported]
 ```
 
 ```Go
@@ -188,7 +202,6 @@ type ClientError struct {
 
 ```
 searchKey: httpapi.ClientError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -199,7 +212,6 @@ func (e *ClientError) Error() string
 
 ```
 searchKey: httpapi.DBStore
-tags: [exported]
 ```
 
 ```Go
@@ -219,7 +231,6 @@ type DBStore interface {
 
 ```
 searchKey: httpapi.DBStoreShim
-tags: [exported]
 ```
 
 ```Go
@@ -232,7 +243,6 @@ type DBStoreShim struct {
 
 ```
 searchKey: httpapi.DBStoreShim.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -243,7 +253,6 @@ func (s *DBStoreShim) Transact(ctx context.Context) (DBStore, error)
 
 ```
 searchKey: httpapi.UploadHandler
-tags: [exported]
 ```
 
 ```Go
@@ -258,6 +267,7 @@ type UploadHandler struct {
 
 ```
 searchKey: httpapi.UploadHandler.handleEnqueue
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +280,7 @@ POST /upload
 
 ```
 searchKey: httpapi.UploadHandler.handleEnqueueErr
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +314,7 @@ See the functions the following functions for details on how each request is han
 
 ```
 searchKey: httpapi.UploadHandler.handleEnqueueSinglePayload
+tags: [private]
 ```
 
 ```Go
@@ -315,6 +327,7 @@ handleEnqueueSinglePayload handles a non-multipart upload. This creates an uploa
 
 ```
 searchKey: httpapi.UploadHandler.handleEnqueueMultipartSetup
+tags: [private]
 ```
 
 ```Go
@@ -327,6 +340,7 @@ handleEnqueueMultipartSetup handles the first request in a multipart upload. Thi
 
 ```
 searchKey: httpapi.UploadHandler.handleEnqueueMultipartUpload
+tags: [private]
 ```
 
 ```Go
@@ -339,6 +353,7 @@ handleEnqueueMultipartUpload handles a partial upload in a multipart upload. Thi
 
 ```
 searchKey: httpapi.UploadHandler.handleEnqueueMultipartFinalize
+tags: [private]
 ```
 
 ```Go
@@ -351,6 +366,7 @@ handleEnqueueMultipartFinalize handles the final request of a multipart upload. 
 
 ```
 searchKey: httpapi.UploadHandler.markUploadAsFailed
+tags: [private]
 ```
 
 ```Go
@@ -365,7 +381,6 @@ This method does not return an error as it's best-effort cleanup. If an error oc
 
 ```
 searchKey: httpapi.UploadArgs
-tags: [exported]
 ```
 
 ```Go
@@ -384,6 +399,7 @@ UploadArgs are common arguments required to enqueue an upload for both single-pa
 
 ```
 searchKey: httpapi.enqueuePayload
+tags: [private]
 ```
 
 ```Go
@@ -396,6 +412,7 @@ type enqueuePayload struct {
 
 ```
 searchKey: httpapi.MockDBStore
+tags: [private]
 ```
 
 ```Go
@@ -430,6 +447,7 @@ MockDBStore is a mock implementation of the DBStore interface (from the package 
 
 ```
 searchKey: httpapi.NewMockDBStore
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +460,7 @@ NewMockDBStore creates a new mock of the DBStore interface. All methods return z
 
 ```
 searchKey: httpapi.NewMockDBStoreFrom
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +473,7 @@ NewMockDBStoreFrom creates a new mock of the MockDBStore interface. All methods 
 
 ```
 searchKey: httpapi.MockDBStore.AddUploadPart
+tags: [private]
 ```
 
 ```Go
@@ -466,6 +486,7 @@ AddUploadPart delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: httpapi.MockDBStore.Done
+tags: [private]
 ```
 
 ```Go
@@ -478,6 +499,7 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: httpapi.MockDBStore.GetUploadByID
+tags: [private]
 ```
 
 ```Go
@@ -490,6 +512,7 @@ GetUploadByID delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: httpapi.MockDBStore.InsertUpload
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +525,7 @@ InsertUpload delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: httpapi.MockDBStore.MarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +538,7 @@ MarkFailed delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: httpapi.MockDBStore.MarkQueued
+tags: [private]
 ```
 
 ```Go
@@ -526,6 +551,7 @@ MarkQueued delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: httpapi.MockDBStore.Transact
+tags: [private]
 ```
 
 ```Go
@@ -538,6 +564,7 @@ Transact delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFunc
+tags: [private]
 ```
 
 ```Go
@@ -555,6 +582,7 @@ DBStoreAddUploadPartFunc describes the behavior when the AddUploadPart method of
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -567,6 +595,7 @@ SetDefaultHook sets function that is called when the AddUploadPart method of the
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -579,6 +608,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the AddUpl
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -591,6 +621,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -603,6 +634,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -613,6 +645,7 @@ func (f *DBStoreAddUploadPartFunc) nextHook() func(context.Context, int, int) er
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -623,6 +656,7 @@ func (f *DBStoreAddUploadPartFunc) appendCall(r0 DBStoreAddUploadPartFuncCall)
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -635,6 +669,7 @@ History returns a sequence of DBStoreAddUploadPartFuncCall objects describing th
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -660,6 +695,7 @@ DBStoreAddUploadPartFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -672,6 +708,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -684,6 +721,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: httpapi.DBStoreDoneFunc
+tags: [private]
 ```
 
 ```Go
@@ -701,6 +739,7 @@ DBStoreDoneFunc describes the behavior when the Done method of the parent MockDB
 
 ```
 searchKey: httpapi.DBStoreDoneFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -713,6 +752,7 @@ SetDefaultHook sets function that is called when the Done method of the parent M
 
 ```
 searchKey: httpapi.DBStoreDoneFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -725,6 +765,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Done m
 
 ```
 searchKey: httpapi.DBStoreDoneFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -737,6 +778,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: httpapi.DBStoreDoneFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -749,6 +791,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: httpapi.DBStoreDoneFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -759,6 +802,7 @@ func (f *DBStoreDoneFunc) nextHook() func(error) error
 
 ```
 searchKey: httpapi.DBStoreDoneFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -769,6 +813,7 @@ func (f *DBStoreDoneFunc) appendCall(r0 DBStoreDoneFuncCall)
 
 ```
 searchKey: httpapi.DBStoreDoneFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -781,6 +826,7 @@ History returns a sequence of DBStoreDoneFuncCall objects describing the invocat
 
 ```
 searchKey: httpapi.DBStoreDoneFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -800,6 +846,7 @@ DBStoreDoneFuncCall is an object that describes an invocation of method Done on 
 
 ```
 searchKey: httpapi.DBStoreDoneFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -812,6 +859,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreDoneFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -824,6 +872,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFunc
+tags: [private]
 ```
 
 ```Go
@@ -841,6 +890,7 @@ DBStoreGetUploadByIDFunc describes the behavior when the GetUploadByID method of
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -853,6 +903,7 @@ SetDefaultHook sets function that is called when the GetUploadByID method of the
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -865,6 +916,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetUpl
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -877,6 +929,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -889,6 +942,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -899,6 +953,7 @@ func (f *DBStoreGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstor
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -909,6 +964,7 @@ func (f *DBStoreGetUploadByIDFunc) appendCall(r0 DBStoreGetUploadByIDFuncCall)
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -921,6 +977,7 @@ History returns a sequence of DBStoreGetUploadByIDFuncCall objects describing th
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -949,6 +1006,7 @@ DBStoreGetUploadByIDFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -961,6 +1019,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -973,6 +1032,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFunc
+tags: [private]
 ```
 
 ```Go
@@ -990,6 +1050,7 @@ DBStoreInsertUploadFunc describes the behavior when the InsertUpload method of t
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1002,6 +1063,7 @@ SetDefaultHook sets function that is called when the InsertUpload method of the 
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1014,6 +1076,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Insert
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1026,6 +1089,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1038,6 +1102,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1113,7 @@ func (f *DBStoreInsertUploadFunc) nextHook() func(context.Context, dbstore.Uploa
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1058,6 +1124,7 @@ func (f *DBStoreInsertUploadFunc) appendCall(r0 DBStoreInsertUploadFuncCall)
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1070,6 +1137,7 @@ History returns a sequence of DBStoreInsertUploadFuncCall objects describing the
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1095,6 +1163,7 @@ DBStoreInsertUploadFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1107,6 +1176,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1119,6 +1189,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFunc
+tags: [private]
 ```
 
 ```Go
@@ -1136,6 +1207,7 @@ DBStoreMarkFailedFunc describes the behavior when the MarkFailed method of the p
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1148,6 +1220,7 @@ SetDefaultHook sets function that is called when the MarkFailed method of the pa
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1160,6 +1233,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkFa
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1172,6 +1246,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1184,6 +1259,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1194,6 +1270,7 @@ func (f *DBStoreMarkFailedFunc) nextHook() func(context.Context, int, string) er
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1204,6 +1281,7 @@ func (f *DBStoreMarkFailedFunc) appendCall(r0 DBStoreMarkFailedFuncCall)
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1216,6 +1294,7 @@ History returns a sequence of DBStoreMarkFailedFuncCall objects describing the i
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1241,6 +1320,7 @@ DBStoreMarkFailedFuncCall is an object that describes an invocation of method Ma
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1253,6 +1333,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1265,6 +1346,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFunc
+tags: [private]
 ```
 
 ```Go
@@ -1282,6 +1364,7 @@ DBStoreMarkQueuedFunc describes the behavior when the MarkQueued method of the p
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1294,6 +1377,7 @@ SetDefaultHook sets function that is called when the MarkQueued method of the pa
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1306,6 +1390,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkQu
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1318,6 +1403,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1330,6 +1416,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1340,6 +1427,7 @@ func (f *DBStoreMarkQueuedFunc) nextHook() func(context.Context, int, *int64) er
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1350,6 +1438,7 @@ func (f *DBStoreMarkQueuedFunc) appendCall(r0 DBStoreMarkQueuedFuncCall)
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1362,6 +1451,7 @@ History returns a sequence of DBStoreMarkQueuedFuncCall objects describing the i
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1387,6 +1477,7 @@ DBStoreMarkQueuedFuncCall is an object that describes an invocation of method Ma
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1399,6 +1490,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1411,6 +1503,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: httpapi.DBStoreTransactFunc
+tags: [private]
 ```
 
 ```Go
@@ -1428,6 +1521,7 @@ DBStoreTransactFunc describes the behavior when the Transact method of the paren
 
 ```
 searchKey: httpapi.DBStoreTransactFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1440,6 +1534,7 @@ SetDefaultHook sets function that is called when the Transact method of the pare
 
 ```
 searchKey: httpapi.DBStoreTransactFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1452,6 +1547,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Transa
 
 ```
 searchKey: httpapi.DBStoreTransactFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1464,6 +1560,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: httpapi.DBStoreTransactFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1476,6 +1573,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: httpapi.DBStoreTransactFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1486,6 +1584,7 @@ func (f *DBStoreTransactFunc) nextHook() func(context.Context) (DBStore, error)
 
 ```
 searchKey: httpapi.DBStoreTransactFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1496,6 +1595,7 @@ func (f *DBStoreTransactFunc) appendCall(r0 DBStoreTransactFuncCall)
 
 ```
 searchKey: httpapi.DBStoreTransactFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1508,6 +1608,7 @@ History returns a sequence of DBStoreTransactFuncCall objects describing the inv
 
 ```
 searchKey: httpapi.DBStoreTransactFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1530,6 +1631,7 @@ DBStoreTransactFuncCall is an object that describes an invocation of method Tran
 
 ```
 searchKey: httpapi.DBStoreTransactFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1542,6 +1644,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreTransactFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1552,10 +1655,15 @@ Results returns an interface slice containing the results of this invocation.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="isSiteAdmin" href="#isSiteAdmin">func isSiteAdmin(ctx context.Context) bool</a>
 
 ```
 searchKey: httpapi.isSiteAdmin
+tags: [private]
 ```
 
 ```Go
@@ -1566,6 +1674,7 @@ func isSiteAdmin(ctx context.Context) bool
 
 ```
 searchKey: httpapi.enforceAuth
+tags: [private]
 ```
 
 ```Go
@@ -1576,6 +1685,7 @@ func enforceAuth(ctx context.Context, w http.ResponseWriter, r *http.Request, re
 
 ```
 searchKey: httpapi.enforceAuthGithub
+tags: [private]
 ```
 
 ```Go
@@ -1586,6 +1696,7 @@ func enforceAuthGithub(ctx context.Context, w http.ResponseWriter, r *http.Reque
 
 ```
 searchKey: httpapi.clientError
+tags: [private]
 ```
 
 ```Go
@@ -1596,7 +1707,6 @@ func clientError(message string, vals ...interface{}) error
 
 ```
 searchKey: httpapi.NewUploadHandler
-tags: [exported]
 ```
 
 ```Go
@@ -1607,6 +1717,7 @@ func NewUploadHandler(dbStore DBStore, uploadStore uploadstore.Store, internal b
 
 ```
 searchKey: httpapi.inferIndexer
+tags: [private]
 ```
 
 ```Go
@@ -1621,6 +1732,7 @@ Newer versions of src-cli will do this same check before uploading the file. How
 
 ```
 searchKey: httpapi.ensureRepoAndCommitExist
+tags: [private]
 ```
 
 ```Go
@@ -1633,6 +1745,7 @@ func ensureRepoAndCommitExist(ctx context.Context, w http.ResponseWriter, repoNa
 
 ```
 searchKey: httpapi.formatAWSError
+tags: [private]
 ```
 
 ```Go
@@ -1645,6 +1758,7 @@ formatAWSError returns the unwrapped, root AWS/S3 error. This method returns an 
 
 ```
 searchKey: httpapi.sanitizeRoot
+tags: [private]
 ```
 
 ```Go
@@ -1655,6 +1769,7 @@ func sanitizeRoot(s string) string
 
 ```
 searchKey: httpapi.hasQuery
+tags: [private]
 ```
 
 ```Go
@@ -1665,6 +1780,7 @@ func hasQuery(r *http.Request, name string) bool
 
 ```
 searchKey: httpapi.getQuery
+tags: [private]
 ```
 
 ```Go
@@ -1675,6 +1791,7 @@ func getQuery(r *http.Request, name string) string
 
 ```
 searchKey: httpapi.getQueryInt
+tags: [private]
 ```
 
 ```Go
@@ -1685,6 +1802,7 @@ func getQueryInt(r *http.Request, name string) int
 
 ```
 searchKey: httpapi.copyAll
+tags: [private]
 ```
 
 ```Go
@@ -1697,6 +1815,7 @@ copyAll writes the contents of r to w and logs on write failure.
 
 ```
 searchKey: httpapi.writeJSON
+tags: [private]
 ```
 
 ```Go
@@ -1709,6 +1828,7 @@ writeJSON writes the JSON-encoded payload to w and logs on write failure. If the
 
 ```
 searchKey: httpapi.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -1719,6 +1839,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: httpapi.TestHandleEnqueueSinglePayload
+tags: [private]
 ```
 
 ```Go
@@ -1729,6 +1850,7 @@ func TestHandleEnqueueSinglePayload(t *testing.T)
 
 ```
 searchKey: httpapi.TestHandleEnqueueSinglePayloadNoIndexerName
+tags: [private]
 ```
 
 ```Go
@@ -1739,6 +1861,7 @@ func TestHandleEnqueueSinglePayloadNoIndexerName(t *testing.T)
 
 ```
 searchKey: httpapi.TestHandleEnqueueMultipartSetup
+tags: [private]
 ```
 
 ```Go
@@ -1749,6 +1872,7 @@ func TestHandleEnqueueMultipartSetup(t *testing.T)
 
 ```
 searchKey: httpapi.TestHandleEnqueueMultipartUpload
+tags: [private]
 ```
 
 ```Go
@@ -1759,6 +1883,7 @@ func TestHandleEnqueueMultipartUpload(t *testing.T)
 
 ```
 searchKey: httpapi.TestHandleEnqueueMultipartFinalize
+tags: [private]
 ```
 
 ```Go
@@ -1769,6 +1894,7 @@ func TestHandleEnqueueMultipartFinalize(t *testing.T)
 
 ```
 searchKey: httpapi.TestHandleEnqueueMultipartFinalizeIncompleteUpload
+tags: [private]
 ```
 
 ```Go
@@ -1779,6 +1905,7 @@ func TestHandleEnqueueMultipartFinalizeIncompleteUpload(t *testing.T)
 
 ```
 searchKey: httpapi.setupRepoMocks
+tags: [private]
 ```
 
 ```Go

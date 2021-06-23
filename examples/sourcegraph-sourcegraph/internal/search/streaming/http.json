@@ -4,7 +4,9 @@
     "identifier": "http",
     "newPage": true,
     "searchKey": "internal/search/streaming/http",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "FileMatchType",
                 "newPage": false,
                 "searchKey": "http.FileMatchType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "RepoMatchType",
                 "newPage": false,
                 "searchKey": "http.RepoMatchType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "SymbolMatchType",
                 "newPage": false,
                 "searchKey": "http.SymbolMatchType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "CommitMatchType",
                 "newPage": false,
                 "searchKey": "http.CommitMatchType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -131,7 +127,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -149,9 +147,7 @@
                 "identifier": "Decoder",
                 "newPage": false,
                 "searchKey": "http.Decoder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -169,9 +165,7 @@
                       "identifier": "Decoder.ReadAll",
                       "newPage": false,
                       "searchKey": "http.Decoder.ReadAll",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -194,7 +188,9 @@
                 "identifier": "eventMatchUnmarshaller",
                 "newPage": false,
                 "searchKey": "http.eventMatchUnmarshaller",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -212,7 +208,9 @@
                       "identifier": "eventMatchUnmarshaller.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "http.eventMatchUnmarshaller.UnmarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -235,9 +233,7 @@
                 "identifier": "EventMatch",
                 "newPage": false,
                 "searchKey": "http.EventMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -257,9 +253,7 @@
                 "identifier": "EventFileMatch",
                 "newPage": false,
                 "searchKey": "http.EventFileMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -277,7 +271,9 @@
                       "identifier": "EventFileMatch.eventMatch",
                       "newPage": false,
                       "searchKey": "http.EventFileMatch.eventMatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -300,9 +296,7 @@
                 "identifier": "EventLineMatch",
                 "newPage": false,
                 "searchKey": "http.EventLineMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -322,9 +316,7 @@
                 "identifier": "EventRepoMatch",
                 "newPage": false,
                 "searchKey": "http.EventRepoMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -342,7 +334,9 @@
                       "identifier": "EventRepoMatch.eventMatch",
                       "newPage": false,
                       "searchKey": "http.EventRepoMatch.eventMatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -365,9 +359,7 @@
                 "identifier": "EventSymbolMatch",
                 "newPage": false,
                 "searchKey": "http.EventSymbolMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -385,7 +377,9 @@
                       "identifier": "EventSymbolMatch.eventMatch",
                       "newPage": false,
                       "searchKey": "http.EventSymbolMatch.eventMatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -408,9 +402,7 @@
                 "identifier": "Symbol",
                 "newPage": false,
                 "searchKey": "http.Symbol",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -430,9 +422,7 @@
                 "identifier": "EventCommitMatch",
                 "newPage": false,
                 "searchKey": "http.EventCommitMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -450,7 +440,9 @@
                       "identifier": "EventCommitMatch.eventMatch",
                       "newPage": false,
                       "searchKey": "http.EventCommitMatch.eventMatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -473,9 +465,7 @@
                 "identifier": "EventFilter",
                 "newPage": false,
                 "searchKey": "http.EventFilter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -495,9 +485,7 @@
                 "identifier": "EventAlert",
                 "newPage": false,
                 "searchKey": "http.EventAlert",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -517,9 +505,7 @@
                 "identifier": "ProposedQuery",
                 "newPage": false,
                 "searchKey": "http.ProposedQuery",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -539,9 +525,7 @@
                 "identifier": "EventError",
                 "newPage": false,
                 "searchKey": "http.EventError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -561,9 +545,7 @@
                 "identifier": "MatchType",
                 "newPage": false,
                 "searchKey": "http.MatchType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -581,9 +563,7 @@
                       "identifier": "MatchType.MarshalJSON",
                       "newPage": false,
                       "searchKey": "http.MatchType.MarshalJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -603,9 +583,7 @@
                       "identifier": "MatchType.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "http.MatchType.UnmarshalJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -628,9 +606,7 @@
                 "identifier": "WriterStat",
                 "newPage": false,
                 "searchKey": "http.WriterStat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -650,9 +626,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "http.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -670,9 +644,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "http.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -692,9 +664,7 @@
                       "identifier": "Writer.Event",
                       "newPage": false,
                       "searchKey": "http.Writer.Event",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -714,9 +684,7 @@
                       "identifier": "Writer.EventBytes",
                       "newPage": false,
                       "searchKey": "http.Writer.EventBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -742,7 +710,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -760,9 +730,7 @@
                 "identifier": "NewRequest",
                 "newPage": false,
                 "searchKey": "http.NewRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -782,7 +750,9 @@
                 "identifier": "splitColon",
                 "newPage": false,
                 "searchKey": "http.splitColon",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -802,7 +772,9 @@
                 "identifier": "TestDecoder",
                 "newPage": false,
                 "searchKey": "http.TestDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

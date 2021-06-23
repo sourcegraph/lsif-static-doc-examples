@@ -23,11 +23,14 @@ The runtime package intentionally exports these functions only in the race build
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Enabled" href="#Enabled">const Enabled</a>
 
 ```
 searchKey: race.Enabled
-tags: [exported]
 ```
 
 ```Go
@@ -36,11 +39,14 @@ const Enabled = false
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Acquire" href="#Acquire">func Acquire(addr unsafe.Pointer)</a>
 
 ```
 searchKey: race.Acquire
-tags: [exported]
 ```
 
 ```Go
@@ -51,7 +57,6 @@ func Acquire(addr unsafe.Pointer)
 
 ```
 searchKey: race.Release
-tags: [exported]
 ```
 
 ```Go
@@ -62,7 +67,6 @@ func Release(addr unsafe.Pointer)
 
 ```
 searchKey: race.ReleaseMerge
-tags: [exported]
 ```
 
 ```Go
@@ -73,7 +77,6 @@ func ReleaseMerge(addr unsafe.Pointer)
 
 ```
 searchKey: race.Disable
-tags: [exported]
 ```
 
 ```Go
@@ -84,7 +87,6 @@ func Disable()
 
 ```
 searchKey: race.Enable
-tags: [exported]
 ```
 
 ```Go
@@ -95,7 +97,6 @@ func Enable()
 
 ```
 searchKey: race.Read
-tags: [exported]
 ```
 
 ```Go
@@ -106,7 +107,6 @@ func Read(addr unsafe.Pointer)
 
 ```
 searchKey: race.Write
-tags: [exported]
 ```
 
 ```Go
@@ -117,7 +117,6 @@ func Write(addr unsafe.Pointer)
 
 ```
 searchKey: race.ReadRange
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +127,6 @@ func ReadRange(addr unsafe.Pointer, len int)
 
 ```
 searchKey: race.WriteRange
-tags: [exported]
 ```
 
 ```Go
@@ -139,7 +137,6 @@ func WriteRange(addr unsafe.Pointer, len int)
 
 ```
 searchKey: race.Errors
-tags: [exported]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "stripeutil",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/dotcom/stripeutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "stripeSecretKey",
                 "newPage": false,
                 "searchKey": "stripeutil.stripeSecretKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "stripePublishableKey",
                 "newPage": false,
                 "searchKey": "stripeutil.stripePublishableKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,9 +111,7 @@
                 "identifier": "ValidateAndPublishConfig",
                 "newPage": false,
                 "searchKey": "stripeutil.ValidateAndPublishConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +131,9 @@
                 "identifier": "isTest",
                 "newPage": false,
                 "searchKey": "stripeutil.isTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +153,9 @@
                 "identifier": "baseURL",
                 "newPage": false,
                 "searchKey": "stripeutil.baseURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -163,9 +175,7 @@
                 "identifier": "CustomerURL",
                 "newPage": false,
                 "searchKey": "stripeutil.CustomerURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -185,9 +195,7 @@
                 "identifier": "SubscriptionURL",
                 "newPage": false,
                 "searchKey": "stripeutil.SubscriptionURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

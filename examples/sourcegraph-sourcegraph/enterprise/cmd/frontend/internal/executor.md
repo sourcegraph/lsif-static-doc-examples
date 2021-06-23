@@ -15,7 +15,7 @@
     * [func reverseProxy(target *url.URL) http.Handler](#reverseProxy)
     * [func makeProxyRequest(r *http.Request, target *url.URL) (*http.Request, error)](#makeProxyRequest)
     * [func copyHeader(dst, src http.Header)](#copyHeader)
-    * [func init()](#init)
+    * [func init()](#init.internal_proxy_handler_test.go)
     * [func TestInternalProxyAuthTokenMiddleware(t *testing.T)](#TestInternalProxyAuthTokenMiddleware)
     * [func TestReverseProxySimple(t *testing.T)](#TestReverseProxySimple)
     * [func TestReverseProxyTargetPath(t *testing.T)](#TestReverseProxyTargetPath)
@@ -25,10 +25,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="queueURL" href="#queueURL">var queueURL</a>
 
 ```
 searchKey: executor.queueURL
+tags: [private]
 ```
 
 ```Go
@@ -39,6 +44,7 @@ var queueURL = env.Get("EXECUTOR_QUEUE_URL", "", "HTTP address for the internal 
 
 ```
 searchKey: executor.sharedUsername
+tags: [private]
 ```
 
 ```Go
@@ -49,6 +55,7 @@ var sharedUsername = ...
 
 ```
 searchKey: executor.sharedPassword
+tags: [private]
 ```
 
 ```Go
@@ -59,6 +66,7 @@ var sharedPassword = ...
 
 ```
 searchKey: executor.client
+tags: [private]
 ```
 
 ```Go
@@ -71,6 +79,7 @@ TODO(efritz) - add tracing, metrics
 
 ```
 searchKey: executor.getRest
+tags: [private]
 ```
 
 ```Go
@@ -83,11 +92,14 @@ getRest returns the "rest" segment of the request's URL. This is a function vari
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Init" href="#Init">func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error</a>
 
 ```
 searchKey: executor.Init
-tags: [exported]
 ```
 
 ```Go
@@ -98,6 +110,7 @@ func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigrat
 
 ```
 searchKey: executor.newInternalProxyHandler
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +121,7 @@ func newInternalProxyHandler(uploadHandler http.Handler) (func() http.Handler, e
 
 ```
 searchKey: executor.basicAuthMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +134,7 @@ basicAuthMiddleware rejects requests that do not have a basic auth username and 
 
 ```
 searchKey: executor.reverseProxy
+tags: [private]
 ```
 
 ```Go
@@ -134,6 +149,7 @@ Note that we do not use httputil.ReverseProxy. We need to ensure that there are 
 
 ```
 searchKey: executor.makeProxyRequest
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +162,7 @@ makeProxyRequest returns a new HTTP request object with the given HTTP request's
 
 ```
 searchKey: executor.copyHeader
+tags: [private]
 ```
 
 ```Go
@@ -154,10 +171,11 @@ func copyHeader(dst, src http.Header)
 
 copyHeader adds the header values from src to dst. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.internal_proxy_handler_test.go" href="#init.internal_proxy_handler_test.go">func init()</a>
 
 ```
 searchKey: executor.init
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +186,7 @@ func init()
 
 ```
 searchKey: executor.TestInternalProxyAuthTokenMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -178,6 +197,7 @@ func TestInternalProxyAuthTokenMiddleware(t *testing.T)
 
 ```
 searchKey: executor.TestReverseProxySimple
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +208,7 @@ func TestReverseProxySimple(t *testing.T)
 
 ```
 searchKey: executor.TestReverseProxyTargetPath
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +219,7 @@ func TestReverseProxyTargetPath(t *testing.T)
 
 ```
 searchKey: executor.TestReverseProxyHeaders
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +230,7 @@ func TestReverseProxyHeaders(t *testing.T)
 
 ```
 searchKey: executor.TestReverseProxyRedirectWithPayload
+tags: [private]
 ```
 
 ```Go

@@ -50,17 +50,22 @@ Package billing handles subscription billing on Sourcegraph.com (via Stripe).
     * [func ToSubscriptionItemsParams(input graphqlbackend.ProductSubscriptionInput) *stripe.SubscriptionItemsParams](#ToSubscriptionItemsParams)
     * [func GetSubscriptionItemIDToReplace(billingSub *stripe.Subscription, billingCustomerID string) (string, error)](#GetSubscriptionItemIDToReplace)
     * [func TestGetOrAssignUserCustomerID(t *testing.T)](#TestGetOrAssignUserCustomerID)
-    * [func init()](#init)
+    * [func init()](#init.db_test.go)
     * [func TestDBUsersBillingCustomerID(t *testing.T)](#TestDBUsersBillingCustomerID)
     * [func strptr(s string) *string](#strptr)
 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="dummyCustomerMu" href="#dummyCustomerMu">var dummyCustomerMu</a>
 
 ```
 searchKey: billing.dummyCustomerMu
+tags: [private]
 ```
 
 ```Go
@@ -71,6 +76,7 @@ var dummyCustomerMu sync.Mutex
 
 ```
 searchKey: billing.dummyCustomerID
+tags: [private]
 ```
 
 ```Go
@@ -81,6 +87,7 @@ var dummyCustomerID string
 
 ```
 searchKey: billing.mockCreateCustomerID
+tags: [private]
 ```
 
 ```Go
@@ -89,10 +96,15 @@ var mockCreateCustomerID func(userID int32) (string, error)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="dbBilling" href="#dbBilling">type dbBilling struct</a>
 
 ```
 searchKey: billing.dbBilling
+tags: [private]
 ```
 
 ```Go
@@ -107,6 +119,7 @@ dbBilling provides billing-related database operations.
 
 ```
 searchKey: billing.dbBilling.getUserBillingCustomerID
+tags: [private]
 ```
 
 ```Go
@@ -121,6 +134,7 @@ If a transaction tx is provided, the query is executed using the transaction. If
 
 ```
 searchKey: billing.dbBilling.setUserBillingCustomerID
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +149,7 @@ If a transaction tx is provided, the query is executed using the transaction. If
 
 ```
 searchKey: billing.productSubscriptionEvent
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +164,7 @@ productSubscriptionEvent implements the GraphQL type ProductSubscriptionEvent.
 
 ```
 searchKey: billing.productSubscriptionEvent.ID
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +175,7 @@ func (r *productSubscriptionEvent) ID() string
 
 ```
 searchKey: billing.productSubscriptionEvent.Date
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +186,7 @@ func (r *productSubscriptionEvent) Date() string
 
 ```
 searchKey: billing.productSubscriptionEvent.Title
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +197,7 @@ func (r *productSubscriptionEvent) Title() string
 
 ```
 searchKey: billing.productSubscriptionEvent.Description
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +208,7 @@ func (r *productSubscriptionEvent) Description() *string
 
 ```
 searchKey: billing.productSubscriptionEvent.URL
+tags: [private]
 ```
 
 ```Go
@@ -199,7 +219,6 @@ func (r *productSubscriptionEvent) URL() *string
 
 ```
 searchKey: billing.BillingResolver
-tags: [exported]
 ```
 
 ```Go
@@ -214,7 +233,6 @@ BillingResolver implements the GraphQL Query and Mutation fields related to bill
 
 ```
 searchKey: billing.BillingResolver.UserURLForSiteAdminBilling
-tags: [exported]
 ```
 
 ```Go
@@ -225,7 +243,6 @@ func (r BillingResolver) UserURLForSiteAdminBilling(ctx context.Context, userID 
 
 ```
 searchKey: billing.BillingResolver.SetUserBilling
-tags: [exported]
 ```
 
 ```Go
@@ -236,7 +253,6 @@ func (r BillingResolver) SetUserBilling(ctx context.Context, args *graphqlbacken
 
 ```
 searchKey: billing.BillingResolver.ProductPlans
-tags: [exported]
 ```
 
 ```Go
@@ -249,6 +265,7 @@ ProductPlans implements the GraphQL field Query.dotcom.productPlans.
 
 ```
 searchKey: billing.productPlan
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +287,7 @@ productPlan implements the GraphQL type ProductPlan.
 
 ```
 searchKey: billing.productPlan.ProductPlanID
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +298,7 @@ func (r *productPlan) ProductPlanID() string
 
 ```
 searchKey: billing.productPlan.BillingPlanID
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +309,7 @@ func (r *productPlan) BillingPlanID() string
 
 ```
 searchKey: billing.productPlan.Name
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +320,7 @@ func (r *productPlan) Name() string
 
 ```
 searchKey: billing.productPlan.NameWithBrand
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +331,7 @@ func (r *productPlan) NameWithBrand() string
 
 ```
 searchKey: billing.productPlan.PricePerUserPerYear
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +342,7 @@ func (r *productPlan) PricePerUserPerYear() int32
 
 ```
 searchKey: billing.productPlan.MinQuantity
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +353,7 @@ func (r *productPlan) MinQuantity() *int32
 
 ```
 searchKey: billing.productPlan.MaxQuantity
+tags: [private]
 ```
 
 ```Go
@@ -340,6 +364,7 @@ func (r *productPlan) MaxQuantity() *int32
 
 ```
 searchKey: billing.productPlan.TiersMode
+tags: [private]
 ```
 
 ```Go
@@ -350,6 +375,7 @@ func (r *productPlan) TiersMode() string
 
 ```
 searchKey: billing.productPlan.PlanTiers
+tags: [private]
 ```
 
 ```Go
@@ -360,6 +386,7 @@ func (r *productPlan) PlanTiers() []graphqlbackend.PlanTier
 
 ```
 searchKey: billing.planTier
+tags: [private]
 ```
 
 ```Go
@@ -376,6 +403,7 @@ planTier implements the GraphQL type PlanTier.
 
 ```
 searchKey: billing.planTier.UnitAmount
+tags: [private]
 ```
 
 ```Go
@@ -386,6 +414,7 @@ func (r *planTier) UnitAmount() int32
 
 ```
 searchKey: billing.planTier.UpTo
+tags: [private]
 ```
 
 ```Go
@@ -396,6 +425,7 @@ func (r *planTier) UpTo() int32
 
 ```
 searchKey: billing.planTier.FlatAmount
+tags: [private]
 ```
 
 ```Go
@@ -404,11 +434,14 @@ func (r *planTier) FlatAmount() int32
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="GetOrAssignUserCustomerID" href="#GetOrAssignUserCustomerID">func GetOrAssignUserCustomerID(ctx context.Context, userID int32) (_ string, err error)</a>
 
 ```
 searchKey: billing.GetOrAssignUserCustomerID
-tags: [exported]
 ```
 
 ```Go
@@ -421,7 +454,6 @@ GetOrAssignUserCustomerID returns the billing customer ID associated with the us
 
 ```
 searchKey: billing.GetDummyCustomerID
-tags: [exported]
 ```
 
 ```Go
@@ -436,6 +468,7 @@ The first time this func is called, it looks up the ID of the existing dummy cus
 
 ```
 searchKey: billing.createCustomerID
+tags: [private]
 ```
 
 ```Go
@@ -448,6 +481,7 @@ createCustomerID creates a customer record on the billing system and returns the
 
 ```
 searchKey: billing.deleteCustomerID
+tags: [private]
 ```
 
 ```Go
@@ -460,7 +494,6 @@ deleteCustomerID deletes the customer record on the billing system.
 
 ```
 searchKey: billing.ToProductSubscriptionEvent
-tags: [exported]
 ```
 
 ```Go
@@ -475,6 +508,7 @@ The okToShowUser return value reports whether the event should be shown to the u
 
 ```
 searchKey: billing.getProductSubscriptionEventInfo
+tags: [private]
 ```
 
 ```Go
@@ -487,6 +521,7 @@ getProductSubscriptionEventInfo returns a nice title and description for the eve
 
 ```
 searchKey: billing.usdCentsToString
+tags: [private]
 ```
 
 ```Go
@@ -497,7 +532,6 @@ func usdCentsToString(s string) string
 
 ```
 searchKey: billing.InfoForProductPlan
-tags: [exported]
 ```
 
 ```Go
@@ -512,7 +546,6 @@ License key tags indicate which product plan the license is for, so they are sto
 
 ```
 searchKey: billing.ToProductPlan
-tags: [exported]
 ```
 
 ```Go
@@ -525,7 +558,6 @@ ToProductPlan returns a resolver for the GraphQL type ProductPlan from the given
 
 ```
 searchKey: billing.ProductPlanMinMaxQuantity
-tags: [exported]
 ```
 
 ```Go
@@ -538,7 +570,6 @@ ProductPlanMinMaxQuantity returns the plan's product's minQuantity and maxQuanti
 
 ```
 searchKey: billing.ToSubscriptionItemsParams
-tags: [exported]
 ```
 
 ```Go
@@ -551,7 +582,6 @@ ToSubscriptionItemsParams converts a value of GraphQL type ProductSubscriptionIn
 
 ```
 searchKey: billing.GetSubscriptionItemIDToReplace
-tags: [exported]
 ```
 
 ```Go
@@ -564,16 +594,18 @@ GetSubscriptionItemIDToReplace returns the ID of the billing subscription item (
 
 ```
 searchKey: billing.TestGetOrAssignUserCustomerID
+tags: [private]
 ```
 
 ```Go
 func TestGetOrAssignUserCustomerID(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
 
 ```
 searchKey: billing.init
+tags: [private]
 ```
 
 ```Go
@@ -584,6 +616,7 @@ func init()
 
 ```
 searchKey: billing.TestDBUsersBillingCustomerID
+tags: [private]
 ```
 
 ```Go
@@ -594,6 +627,7 @@ func TestDBUsersBillingCustomerID(t *testing.T)
 
 ```
 searchKey: billing.strptr
+tags: [private]
 ```
 
 ```Go

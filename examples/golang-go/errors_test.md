@@ -36,10 +36,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="poserPathErr" href="#poserPathErr">var poserPathErr</a>
 
 ```
 searchKey: errors_test.poserPathErr
+tags: [private]
 ```
 
 ```Go
@@ -48,10 +53,15 @@ var poserPathErr = &fs.PathError{Op: "poser"}
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MyError" href="#MyError">type MyError struct</a>
 
 ```
 searchKey: errors_test.MyError
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +77,7 @@ MyError is an error implementation that includes a time and message.
 
 ```
 searchKey: errors_test.MyError.Error
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +88,7 @@ func (e MyError) Error() string
 
 ```
 searchKey: errors_test.poser
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +102,7 @@ type poser struct {
 
 ```
 searchKey: errors_test.poser.Error
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +113,7 @@ func (p *poser) Error() string
 
 ```
 searchKey: errors_test.poser.Is
+tags: [private]
 ```
 
 ```Go
@@ -110,6 +124,7 @@ func (p *poser) Is(err error) bool
 
 ```
 searchKey: errors_test.poser.As
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +135,7 @@ func (p *poser) As(err interface{}) bool
 
 ```
 searchKey: errors_test.errorT
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +146,7 @@ type errorT struct{ s string }
 
 ```
 searchKey: errors_test.errorT.Error
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +157,7 @@ func (e errorT) Error() string
 
 ```
 searchKey: errors_test.wrapped
+tags: [private]
 ```
 
 ```Go
@@ -153,6 +171,7 @@ type wrapped struct {
 
 ```
 searchKey: errors_test.wrapped.Error
+tags: [private]
 ```
 
 ```Go
@@ -163,6 +182,7 @@ func (e wrapped) Error() string
 
 ```
 searchKey: errors_test.wrapped.Unwrap
+tags: [private]
 ```
 
 ```Go
@@ -173,6 +193,7 @@ func (e wrapped) Unwrap() error
 
 ```
 searchKey: errors_test.errorUncomparable
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +206,7 @@ type errorUncomparable struct {
 
 ```
 searchKey: errors_test.errorUncomparable.Error
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +217,7 @@ func (errorUncomparable) Error() string
 
 ```
 searchKey: errors_test.errorUncomparable.Is
+tags: [private]
 ```
 
 ```Go
@@ -203,10 +226,15 @@ func (errorUncomparable) Is(target error) bool
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestNewEqual" href="#TestNewEqual">func TestNewEqual(t *testing.T)</a>
 
 ```
 searchKey: errors_test.TestNewEqual
+tags: [private]
 ```
 
 ```Go
@@ -217,6 +245,7 @@ func TestNewEqual(t *testing.T)
 
 ```
 searchKey: errors_test.TestErrorMethod
+tags: [private]
 ```
 
 ```Go
@@ -227,6 +256,7 @@ func TestErrorMethod(t *testing.T)
 
 ```
 searchKey: errors_test.ExampleNew
+tags: [private]
 ```
 
 ```Go
@@ -237,6 +267,7 @@ func ExampleNew()
 
 ```
 searchKey: errors_test.ExampleNew_errorf
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +280,7 @@ The fmt package's Errorf function lets us use the package's formatting features 
 
 ```
 searchKey: errors_test.oops
+tags: [private]
 ```
 
 ```Go
@@ -259,6 +291,7 @@ func oops() error
 
 ```
 searchKey: errors_test.Example
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +302,7 @@ func Example()
 
 ```
 searchKey: errors_test.TestIs
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +313,7 @@ func TestIs(t *testing.T)
 
 ```
 searchKey: errors_test.TestAs
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +324,7 @@ func TestAs(t *testing.T)
 
 ```
 searchKey: errors_test.TestAsValidation
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +335,7 @@ func TestAsValidation(t *testing.T)
 
 ```
 searchKey: errors_test.TestUnwrap
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +346,7 @@ func TestUnwrap(t *testing.T)
 
 ```
 searchKey: errors_test.ExampleIs
+tags: [private]
 ```
 
 ```Go
@@ -319,6 +357,7 @@ func ExampleIs()
 
 ```
 searchKey: errors_test.ExampleAs
+tags: [private]
 ```
 
 ```Go

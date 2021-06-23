@@ -4,7 +4,9 @@
     "identifier": "nettrace",
     "newPage": true,
     "searchKey": "internal/nettrace",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "TraceKey",
                 "newPage": false,
                 "searchKey": "nettrace.TraceKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "LookupIPAltResolverKey",
                 "newPage": false,
                 "searchKey": "nettrace.LookupIPAltResolverKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "Trace",
                 "newPage": false,
                 "searchKey": "nettrace.Trace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

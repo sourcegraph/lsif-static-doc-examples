@@ -17,14 +17,11 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="port" href="#port">const port</a>
 
 ```
 searchKey: main.port
+tags: [private]
 ```
 
 ```Go
@@ -33,14 +30,11 @@ const port = "3180"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="logRequests" href="#logRequests">var logRequests</a>
 
 ```
 searchKey: main.logRequests
+tags: [private]
 ```
 
 ```Go
@@ -51,6 +45,7 @@ var logRequests, _ = strconv.ParseBool(env.Get("LOG_REQUESTS", "", "log HTTP req
 
 ```
 searchKey: main.requestMu
+tags: [private]
 ```
 
 ```Go
@@ -63,6 +58,7 @@ requestMu ensures we only do one request at a time to prevent tripping abuse det
 
 ```
 searchKey: main.metricWaitingRequestsGauge
+tags: [private]
 ```
 
 ```Go
@@ -73,6 +69,7 @@ var metricWaitingRequestsGauge = ...
 
 ```
 searchKey: main.hopHeaders
+tags: [private]
 ```
 
 ```Go
@@ -83,14 +80,11 @@ list obtained from httputil of headers not to forward.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -101,6 +95,7 @@ func main()
 
 ```
 searchKey: main.instrumentHandler
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +106,7 @@ func instrumentHandler(r prometheus.Registerer, h http.Handler) http.Handler
 
 ```
 searchKey: main.TestInstrumentHandler
+tags: [private]
 ```
 
 ```Go

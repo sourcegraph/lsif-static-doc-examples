@@ -92,10 +92,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="requestDuration" href="#requestDuration">var requestDuration</a>
 
 ```
 searchKey: backend.requestDuration
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +111,7 @@ var requestDuration = ...
 
 ```
 searchKey: backend.metricListAllCount
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +122,7 @@ var metricListAllCount = ...
 
 ```
 searchKey: backend.metricListAllWithID
+tags: [private]
 ```
 
 ```Go
@@ -126,6 +133,7 @@ var metricListAllWithID = ...
 
 ```
 searchKey: backend.metricListAllTimestamp
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +144,7 @@ var metricListAllTimestamp = ...
 
 ```
 searchKey: backend.zoektHTTPClient
+tags: [private]
 ```
 
 ```Go
@@ -144,11 +153,14 @@ var zoektHTTPClient = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="FakeSearcher" href="#FakeSearcher">type FakeSearcher struct</a>
 
 ```
 searchKey: backend.FakeSearcher
-tags: [exported]
 ```
 
 ```Go
@@ -168,7 +180,6 @@ FakeSearcher is a zoekt.Searcher that returns a predefined search Result.
 
 ```
 searchKey: backend.FakeSearcher.Search
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +190,6 @@ func (ss *FakeSearcher) Search(ctx context.Context, q zoektquery.Q, opts *zoekt.
 
 ```
 searchKey: backend.FakeSearcher.StreamSearch
-tags: [exported]
 ```
 
 ```Go
@@ -190,7 +200,6 @@ func (ss *FakeSearcher) StreamSearch(ctx context.Context, q zoektquery.Q, opts *
 
 ```
 searchKey: backend.FakeSearcher.List
-tags: [exported]
 ```
 
 ```Go
@@ -201,7 +210,6 @@ func (ss *FakeSearcher) List(ctx context.Context, q zoektquery.Q) (*zoekt.RepoLi
 
 ```
 searchKey: backend.FakeSearcher.String
-tags: [exported]
 ```
 
 ```Go
@@ -212,7 +220,6 @@ func (ss *FakeSearcher) String() string
 
 ```
 searchKey: backend.HorizontalSearcher
-tags: [exported]
 ```
 
 ```Go
@@ -235,7 +242,6 @@ HorizontalSearcher is a Streamer which aggregates searches over Map. It manages 
 
 ```
 searchKey: backend.HorizontalSearcher.StreamSearch
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +254,6 @@ StreamSearch does a search which merges the stream from every endpoint in Map.
 
 ```
 searchKey: backend.HorizontalSearcher.Search
-tags: [exported]
 ```
 
 ```Go
@@ -261,7 +266,6 @@ Search aggregates search over every endpoint in Map.
 
 ```
 searchKey: backend.HorizontalSearcher.List
-tags: [exported]
 ```
 
 ```Go
@@ -274,7 +278,6 @@ List aggregates list over every endpoint in Map.
 
 ```
 searchKey: backend.HorizontalSearcher.Close
-tags: [exported]
 ```
 
 ```Go
@@ -287,7 +290,6 @@ Close will close all connections in Map.
 
 ```
 searchKey: backend.HorizontalSearcher.String
-tags: [exported]
 ```
 
 ```Go
@@ -298,6 +300,7 @@ func (s *HorizontalSearcher) String() string
 
 ```
 searchKey: backend.HorizontalSearcher.searchers
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +313,7 @@ searchers returns the list of clients to aggregate over.
 
 ```
 searchKey: backend.HorizontalSearcher.syncSearchers
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +326,7 @@ syncSearchers syncs the set of clients with the set of endpoints. It is the slow
 
 ```
 searchKey: backend.dedupper
+tags: [private]
 ```
 
 ```Go
@@ -333,6 +338,7 @@ type dedupper map[string]string // repoName -> endpoint
 
 ```
 searchKey: backend.dedupper.Dedup
+tags: [private]
 ```
 
 ```Go
@@ -345,6 +351,7 @@ Dedup will in-place filter out matches on Repositories we have already seen. A R
 
 ```
 searchKey: backend.zoektIndexOptions
+tags: [private]
 ```
 
 ```Go
@@ -383,7 +390,6 @@ We only specify a subset of the fields.
 
 ```
 searchKey: backend.RepoIndexOptions
-tags: [exported]
 ```
 
 ```Go
@@ -411,7 +417,6 @@ RepoIndexOptions are the options used by GetIndexOptions for a specific reposito
 
 ```
 searchKey: backend.EndpointMap
-tags: [exported]
 ```
 
 ```Go
@@ -429,7 +434,6 @@ EndpointMap is the subset of endpoint.Map (consistent hashmap) methods we use. D
 
 ```
 searchKey: backend.Indexers
-tags: [exported]
 ```
 
 ```Go
@@ -449,7 +453,6 @@ Indexers provides methods over the set of indexed-search servers in a Sourcegrap
 
 ```
 searchKey: backend.Indexers.ReposSubset
-tags: [exported]
 ```
 
 ```Go
@@ -468,7 +471,6 @@ An error is returned if hostname is not part of the Indexers endpoints.
 
 ```
 searchKey: backend.Indexers.Enabled
-tags: [exported]
 ```
 
 ```Go
@@ -481,6 +483,7 @@ Enabled returns true if this feature is enabled. At first horizontal sharding wi
 
 ```
 searchKey: backend.meteredSearcher
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +498,7 @@ type meteredSearcher struct {
 
 ```
 searchKey: backend.meteredSearcher.StreamSearch
+tags: [private]
 ```
 
 ```Go
@@ -505,6 +509,7 @@ func (m *meteredSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoe
 
 ```
 searchKey: backend.meteredSearcher.Search
+tags: [private]
 ```
 
 ```Go
@@ -515,6 +520,7 @@ func (m *meteredSearcher) Search(ctx context.Context, q query.Q, opts *zoekt.Sea
 
 ```
 searchKey: backend.meteredSearcher.List
+tags: [private]
 ```
 
 ```Go
@@ -525,6 +531,7 @@ func (m *meteredSearcher) List(ctx context.Context, q query.Q) (*zoekt.RepoList,
 
 ```
 searchKey: backend.meteredSearcher.String
+tags: [private]
 ```
 
 ```Go
@@ -535,7 +542,6 @@ func (m *meteredSearcher) String() string
 
 ```
 searchKey: backend.Zoekt
-tags: [exported]
 ```
 
 ```Go
@@ -562,7 +568,6 @@ Note: Zoekt starts up background goroutines, so call Close when done using the C
 
 ```
 searchKey: backend.Zoekt.Close
-tags: [exported]
 ```
 
 ```Go
@@ -575,7 +580,6 @@ Close will tear down the background goroutines.
 
 ```
 searchKey: backend.Zoekt.String
-tags: [exported]
 ```
 
 ```Go
@@ -586,7 +590,6 @@ func (c *Zoekt) String() string
 
 ```
 searchKey: backend.Zoekt.ListAll
-tags: [exported]
 ```
 
 ```Go
@@ -599,7 +602,6 @@ ListAll returns the response of List without any restrictions.
 
 ```
 searchKey: backend.Zoekt.SetEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -612,7 +614,6 @@ SetEnabled will disable zoekt if b is false.
 
 ```
 searchKey: backend.Zoekt.Enabled
-tags: [exported]
 ```
 
 ```Go
@@ -625,6 +626,7 @@ Enabled returns true if Zoekt is enabled. It is enabled if Client is non-nil and
 
 ```
 searchKey: backend.Zoekt.list
+tags: [private]
 ```
 
 ```Go
@@ -635,6 +637,7 @@ func (c *Zoekt) list(ctx context.Context) (map[string]*zoekt.Repository, error)
 
 ```
 searchKey: backend.Zoekt.start
+tags: [private]
 ```
 
 ```Go
@@ -647,7 +650,6 @@ start starts a goroutine that keeps the listResp and listErr fields updated from
 
 ```
 searchKey: backend.ZoektStreamFunc
-tags: [exported]
 ```
 
 ```Go
@@ -660,7 +662,6 @@ ZoektStreamFunc is a convenience function to create a stream receiver from a fun
 
 ```
 searchKey: backend.ZoektStreamFunc.Send
-tags: [exported]
 ```
 
 ```Go
@@ -671,7 +672,6 @@ func (f ZoektStreamFunc) Send(event *zoekt.SearchResult)
 
 ```
 searchKey: backend.StreamSearchEvent
-tags: [exported]
 ```
 
 ```Go
@@ -690,7 +690,6 @@ This is a Sourcegraph extension.
 
 ```
 searchKey: backend.StreamSearchAdapter
-tags: [exported]
 ```
 
 ```Go
@@ -705,7 +704,6 @@ StreamSearchAdapter adapts a zoekt.Searcher to conform to the StreamSearch inter
 
 ```
 searchKey: backend.StreamSearchAdapter.StreamSearch
-tags: [exported]
 ```
 
 ```Go
@@ -716,7 +714,6 @@ func (s *StreamSearchAdapter) StreamSearch(ctx context.Context, q query.Q, opts 
 
 ```
 searchKey: backend.StreamSearchAdapter.String
-tags: [exported]
 ```
 
 ```Go
@@ -727,6 +724,7 @@ func (s *StreamSearchAdapter) String() string
 
 ```
 searchKey: backend.zoektStream
+tags: [private]
 ```
 
 ```Go
@@ -740,6 +738,7 @@ type zoektStream struct {
 
 ```
 searchKey: backend.mockSearcher
+tags: [private]
 ```
 
 ```Go
@@ -755,6 +754,7 @@ type mockSearcher struct {
 
 ```
 searchKey: backend.mockSearcher.Search
+tags: [private]
 ```
 
 ```Go
@@ -765,6 +765,7 @@ func (s *mockSearcher) Search(context.Context, query.Q, *zoekt.SearchOptions) (*
 
 ```
 searchKey: backend.mockSearcher.StreamSearch
+tags: [private]
 ```
 
 ```Go
@@ -775,6 +776,7 @@ func (s *mockSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.
 
 ```
 searchKey: backend.mockSearcher.List
+tags: [private]
 ```
 
 ```Go
@@ -785,6 +787,7 @@ func (s *mockSearcher) List(context.Context, query.Q) (*zoekt.RepoList, error)
 
 ```
 searchKey: backend.mockSearcher.Close
+tags: [private]
 ```
 
 ```Go
@@ -795,6 +798,7 @@ func (*mockSearcher) Close()
 
 ```
 searchKey: backend.mockSearcher.String
+tags: [private]
 ```
 
 ```Go
@@ -805,6 +809,7 @@ func (*mockSearcher) String() string
 
 ```
 searchKey: backend.atomicMap
+tags: [private]
 ```
 
 ```Go
@@ -817,6 +822,7 @@ type atomicMap struct {
 
 ```
 searchKey: backend.atomicMap.Endpoints
+tags: [private]
 ```
 
 ```Go
@@ -827,6 +833,7 @@ func (m *atomicMap) Endpoints() (map[string]struct{}, error)
 
 ```
 searchKey: backend.atomicMap.GetMany
+tags: [private]
 ```
 
 ```Go
@@ -837,6 +844,7 @@ func (m *atomicMap) GetMany(keys ...string) ([]string, error)
 
 ```
 searchKey: backend.prefixMap
+tags: [private]
 ```
 
 ```Go
@@ -849,6 +857,7 @@ prefixMap assigns keys to values if the value is a prefix of key.
 
 ```
 searchKey: backend.prefixMap.Endpoints
+tags: [private]
 ```
 
 ```Go
@@ -859,6 +868,7 @@ func (m prefixMap) Endpoints() (map[string]struct{}, error)
 
 ```
 searchKey: backend.prefixMap.GetMany
+tags: [private]
 ```
 
 ```Go
@@ -867,11 +877,14 @@ func (m prefixMap) GetMany(keys ...string) ([]string, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AggregateStreamSearch" href="#AggregateStreamSearch">func AggregateStreamSearch(ctx context.Context, streamSearch func(context.Context, query.Q, *zoekt.SearchOptions, zoekt.Sender) error, q query.Q, opts *zoekt.SearchOptions) (*zoekt.SearchResult, error)</a>
 
 ```
 searchKey: backend.AggregateStreamSearch
-tags: [exported]
 ```
 
 ```Go
@@ -884,6 +897,7 @@ AggregateStreamSearch aggregates the stream events into a single batch result.
 
 ```
 searchKey: backend.equalKeys
+tags: [private]
 ```
 
 ```Go
@@ -894,7 +908,6 @@ func equalKeys(a map[string]zoekt.Streamer, b map[string]struct{}) bool
 
 ```
 searchKey: backend.GetIndexOptions
-tags: [exported]
 ```
 
 ```Go
@@ -912,6 +925,7 @@ GetIndexOptions returns a json blob for consumption by sourcegraph-zoekt-indexse
 
 ```
 searchKey: backend.getIndexOptions
+tags: [private]
 ```
 
 ```Go
@@ -927,6 +941,7 @@ func getIndexOptions(
 
 ```
 searchKey: backend.getBoolPtr
+tags: [private]
 ```
 
 ```Go
@@ -937,6 +952,7 @@ func getBoolPtr(b *bool, default_ bool) bool
 
 ```
 searchKey: backend.marshal
+tags: [private]
 ```
 
 ```Go
@@ -947,6 +963,7 @@ func marshal(o *zoektIndexOptions) []byte
 
 ```
 searchKey: backend.findEndpoint
+tags: [private]
 ```
 
 ```Go
@@ -959,6 +976,7 @@ findEndpoint returns the endpoint in eps which matches hostname.
 
 ```
 searchKey: backend.endpointsString
+tags: [private]
 ```
 
 ```Go
@@ -971,7 +989,6 @@ endpointsString creates a user readable String for an endpoint map.
 
 ```
 searchKey: backend.NewMeteredSearcher
-tags: [exported]
 ```
 
 ```Go
@@ -982,6 +999,7 @@ func NewMeteredSearcher(hostname string, z zoekt.Streamer) zoekt.Streamer
 
 ```
 searchKey: backend.queryString
+tags: [private]
 ```
 
 ```Go
@@ -992,6 +1010,7 @@ func queryString(q query.Q) string
 
 ```
 searchKey: backend.randSleep
+tags: [private]
 ```
 
 ```Go
@@ -1004,7 +1023,6 @@ randSleep will sleep for an expected d duration with a jitter in [-jitter / 2, j
 
 ```
 searchKey: backend.ZoektDial
-tags: [exported]
 ```
 
 ```Go
@@ -1017,6 +1035,7 @@ ZoektDial connects to a Searcher HTTP RPC server at address (host:port).
 
 ```
 searchKey: backend.TestHorizontalSearcher
+tags: [private]
 ```
 
 ```Go
@@ -1027,6 +1046,7 @@ func TestHorizontalSearcher(t *testing.T)
 
 ```
 searchKey: backend.TestDoStreamSearch
+tags: [private]
 ```
 
 ```Go
@@ -1037,6 +1057,7 @@ func TestDoStreamSearch(t *testing.T)
 
 ```
 searchKey: backend.TestSyncSearchers
+tags: [private]
 ```
 
 ```Go
@@ -1047,6 +1068,7 @@ func TestSyncSearchers(t *testing.T)
 
 ```
 searchKey: backend.TestDedupper
+tags: [private]
 ```
 
 ```Go
@@ -1057,6 +1079,7 @@ func TestDedupper(t *testing.T)
 
 ```
 searchKey: backend.BenchmarkDedup
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1090,7 @@ func BenchmarkDedup(b *testing.B)
 
 ```
 searchKey: backend.backgroundSearch
+tags: [private]
 ```
 
 ```Go
@@ -1077,6 +1101,7 @@ func backgroundSearch(searcher zoekt.Searcher) func(t *testing.T)
 
 ```
 searchKey: backend.TestGetIndexOptions
+tags: [private]
 ```
 
 ```Go
@@ -1087,6 +1112,7 @@ func TestGetIndexOptions(t *testing.T)
 
 ```
 searchKey: backend.TestGetIndexOptions_getVersion
+tags: [private]
 ```
 
 ```Go
@@ -1097,6 +1123,7 @@ func TestGetIndexOptions_getVersion(t *testing.T)
 
 ```
 searchKey: backend.TestGetIndexOptions_batch
+tags: [private]
 ```
 
 ```Go
@@ -1107,6 +1134,7 @@ func TestGetIndexOptions_batch(t *testing.T)
 
 ```
 searchKey: backend.parseVersionContext
+tags: [private]
 ```
 
 ```Go
@@ -1117,6 +1145,7 @@ func parseVersionContext(name string, repoRevStrs ...string) *schema.VersionCont
 
 ```
 searchKey: backend.boolPtr
+tags: [private]
 ```
 
 ```Go
@@ -1127,6 +1156,7 @@ func boolPtr(b bool) *bool
 
 ```
 searchKey: backend.TestReposSubset
+tags: [private]
 ```
 
 ```Go
@@ -1137,6 +1167,7 @@ func TestReposSubset(t *testing.T)
 
 ```
 searchKey: backend.TestFindEndpoint
+tags: [private]
 ```
 
 ```Go

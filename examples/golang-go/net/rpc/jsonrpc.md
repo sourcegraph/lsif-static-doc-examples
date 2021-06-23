@@ -37,7 +37,6 @@ Package jsonrpc implements a JSON-RPC 1.0 ClientCodec and ServerCodec for the rp
         * [func (BuiltinTypes) Slice(i int, reply *[]int) error](#BuiltinTypes.Slice)
         * [func (BuiltinTypes) Array(i int, reply *[1]int) error](#BuiltinTypes.Array)
     * [type pipe struct](#pipe)
-        * [func myPipe() (*pipe, *pipe)](#myPipe)
         * [func (p *pipe) Close() error](#pipe.Close)
         * [func (p *pipe) LocalAddr() net.Addr](#pipe.LocalAddr)
         * [func (p *pipe) RemoteAddr() net.Addr](#pipe.RemoteAddr)
@@ -53,7 +52,7 @@ Package jsonrpc implements a JSON-RPC 1.0 ClientCodec and ServerCodec for the rp
     * [func Dial(network, address string) (*rpc.Client, error)](#Dial)
     * [func NewServerCodec(conn io.ReadWriteCloser) rpc.ServerCodec](#NewServerCodec)
     * [func ServeConn(conn io.ReadWriteCloser)](#ServeConn)
-    * [func init()](#init)
+    * [func init()](#init.all_test.go)
     * [func TestServerNoParams(t *testing.T)](#TestServerNoParams)
     * [func TestServerEmptyMessage(t *testing.T)](#TestServerEmptyMessage)
     * [func TestServer(t *testing.T)](#TestServer)
@@ -63,18 +62,16 @@ Package jsonrpc implements a JSON-RPC 1.0 ClientCodec and ServerCodec for the rp
     * [func TestMalformedOutput(t *testing.T)](#TestMalformedOutput)
     * [func TestServerErrorHasNullResult(t *testing.T)](#TestServerErrorHasNullResult)
     * [func TestUnexpectedError(t *testing.T)](#TestUnexpectedError)
+    * [func myPipe() (*pipe, *pipe)](#myPipe)
 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [exported]
-```
 
 ### <a id="errMissingParams" href="#errMissingParams">var errMissingParams</a>
 
 ```
 searchKey: jsonrpc.errMissingParams
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +82,7 @@ var errMissingParams = errors.New("jsonrpc: request body missing params")
 
 ```
 searchKey: jsonrpc.null
+tags: [private]
 ```
 
 ```Go
@@ -93,14 +91,11 @@ var null = json.RawMessage([]byte("null"))
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="clientCodec" href="#clientCodec">type clientCodec struct</a>
 
 ```
 searchKey: jsonrpc.clientCodec
+tags: [private]
 ```
 
 ```Go
@@ -126,6 +121,7 @@ type clientCodec struct {
 
 ```
 searchKey: jsonrpc.clientCodec.WriteRequest
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +132,7 @@ func (c *clientCodec) WriteRequest(r *rpc.Request, param interface{}) error
 
 ```
 searchKey: jsonrpc.clientCodec.ReadResponseHeader
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +143,7 @@ func (c *clientCodec) ReadResponseHeader(r *rpc.Response) error
 
 ```
 searchKey: jsonrpc.clientCodec.ReadResponseBody
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +154,7 @@ func (c *clientCodec) ReadResponseBody(x interface{}) error
 
 ```
 searchKey: jsonrpc.clientCodec.Close
+tags: [private]
 ```
 
 ```Go
@@ -166,6 +165,7 @@ func (c *clientCodec) Close() error
 
 ```
 searchKey: jsonrpc.clientRequest
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +180,7 @@ type clientRequest struct {
 
 ```
 searchKey: jsonrpc.clientResponse
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +195,7 @@ type clientResponse struct {
 
 ```
 searchKey: jsonrpc.clientResponse.reset
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +206,7 @@ func (r *clientResponse) reset()
 
 ```
 searchKey: jsonrpc.serverCodec
+tags: [private]
 ```
 
 ```Go
@@ -231,6 +234,7 @@ type serverCodec struct {
 
 ```
 searchKey: jsonrpc.serverCodec.ReadRequestHeader
+tags: [private]
 ```
 
 ```Go
@@ -241,6 +245,7 @@ func (c *serverCodec) ReadRequestHeader(r *rpc.Request) error
 
 ```
 searchKey: jsonrpc.serverCodec.ReadRequestBody
+tags: [private]
 ```
 
 ```Go
@@ -251,6 +256,7 @@ func (c *serverCodec) ReadRequestBody(x interface{}) error
 
 ```
 searchKey: jsonrpc.serverCodec.WriteResponse
+tags: [private]
 ```
 
 ```Go
@@ -261,6 +267,7 @@ func (c *serverCodec) WriteResponse(r *rpc.Response, x interface{}) error
 
 ```
 searchKey: jsonrpc.serverCodec.Close
+tags: [private]
 ```
 
 ```Go
@@ -271,6 +278,7 @@ func (c *serverCodec) Close() error
 
 ```
 searchKey: jsonrpc.serverRequest
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +293,7 @@ type serverRequest struct {
 
 ```
 searchKey: jsonrpc.serverRequest.reset
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +304,7 @@ func (r *serverRequest) reset()
 
 ```
 searchKey: jsonrpc.serverResponse
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +319,7 @@ type serverResponse struct {
 
 ```
 searchKey: jsonrpc.Args
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +332,7 @@ type Args struct {
 
 ```
 searchKey: jsonrpc.Reply
+tags: [private]
 ```
 
 ```Go
@@ -333,6 +345,7 @@ type Reply struct {
 
 ```
 searchKey: jsonrpc.Arith
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +356,7 @@ type Arith int
 
 ```
 searchKey: jsonrpc.Arith.Add
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +367,7 @@ func (t *Arith) Add(args *Args, reply *Reply) error
 
 ```
 searchKey: jsonrpc.Arith.Mul
+tags: [private]
 ```
 
 ```Go
@@ -363,6 +378,7 @@ func (t *Arith) Mul(args *Args, reply *Reply) error
 
 ```
 searchKey: jsonrpc.Arith.Div
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +389,7 @@ func (t *Arith) Div(args *Args, reply *Reply) error
 
 ```
 searchKey: jsonrpc.Arith.Error
+tags: [private]
 ```
 
 ```Go
@@ -383,6 +400,7 @@ func (t *Arith) Error(args *Args, reply *Reply) error
 
 ```
 searchKey: jsonrpc.ArithAddResp
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +415,7 @@ type ArithAddResp struct {
 
 ```
 searchKey: jsonrpc.BuiltinTypes
+tags: [private]
 ```
 
 ```Go
@@ -407,6 +426,7 @@ type BuiltinTypes struct{}
 
 ```
 searchKey: jsonrpc.BuiltinTypes.Map
+tags: [private]
 ```
 
 ```Go
@@ -417,6 +437,7 @@ func (BuiltinTypes) Map(i int, reply *map[int]int) error
 
 ```
 searchKey: jsonrpc.BuiltinTypes.Slice
+tags: [private]
 ```
 
 ```Go
@@ -427,6 +448,7 @@ func (BuiltinTypes) Slice(i int, reply *[]int) error
 
 ```
 searchKey: jsonrpc.BuiltinTypes.Array
+tags: [private]
 ```
 
 ```Go
@@ -437,6 +459,7 @@ func (BuiltinTypes) Array(i int, reply *[1]int) error
 
 ```
 searchKey: jsonrpc.pipe
+tags: [private]
 ```
 
 ```Go
@@ -446,22 +469,11 @@ type pipe struct {
 }
 ```
 
-#### <a id="myPipe" href="#myPipe">func myPipe() (*pipe, *pipe)</a>
-
-```
-searchKey: jsonrpc.myPipe
-```
-
-```Go
-func myPipe() (*pipe, *pipe)
-```
-
-Copied from package net. 
-
 #### <a id="pipe.Close" href="#pipe.Close">func (p *pipe) Close() error</a>
 
 ```
 searchKey: jsonrpc.pipe.Close
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +484,7 @@ func (p *pipe) Close() error
 
 ```
 searchKey: jsonrpc.pipe.LocalAddr
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +495,7 @@ func (p *pipe) LocalAddr() net.Addr
 
 ```
 searchKey: jsonrpc.pipe.RemoteAddr
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +506,7 @@ func (p *pipe) RemoteAddr() net.Addr
 
 ```
 searchKey: jsonrpc.pipe.SetTimeout
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +517,7 @@ func (p *pipe) SetTimeout(nsec int64) error
 
 ```
 searchKey: jsonrpc.pipe.SetReadTimeout
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +528,7 @@ func (p *pipe) SetReadTimeout(nsec int64) error
 
 ```
 searchKey: jsonrpc.pipe.SetWriteTimeout
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +539,7 @@ func (p *pipe) SetWriteTimeout(nsec int64) error
 
 ```
 searchKey: jsonrpc.pipeAddr
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +550,7 @@ type pipeAddr int
 
 ```
 searchKey: jsonrpc.pipeAddr.Network
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +561,7 @@ func (pipeAddr) Network() string
 
 ```
 searchKey: jsonrpc.pipeAddr.String
+tags: [private]
 ```
 
 ```Go
@@ -550,15 +570,10 @@ func (pipeAddr) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NewClientCodec" href="#NewClientCodec">func NewClientCodec(conn io.ReadWriteCloser) rpc.ClientCodec</a>
 
 ```
 searchKey: jsonrpc.NewClientCodec
-tags: [exported]
 ```
 
 ```Go
@@ -571,7 +586,6 @@ NewClientCodec returns a new rpc.ClientCodec using JSON-RPC on conn.
 
 ```
 searchKey: jsonrpc.NewClient
-tags: [exported]
 ```
 
 ```Go
@@ -584,7 +598,6 @@ NewClient returns a new rpc.Client to handle requests to the set of services at 
 
 ```
 searchKey: jsonrpc.Dial
-tags: [exported]
 ```
 
 ```Go
@@ -597,7 +610,6 @@ Dial connects to a JSON-RPC server at the specified network address.
 
 ```
 searchKey: jsonrpc.NewServerCodec
-tags: [exported]
 ```
 
 ```Go
@@ -610,7 +622,6 @@ NewServerCodec returns a new rpc.ServerCodec using JSON-RPC on conn.
 
 ```
 searchKey: jsonrpc.ServeConn
-tags: [exported]
 ```
 
 ```Go
@@ -619,10 +630,11 @@ func ServeConn(conn io.ReadWriteCloser)
 
 ServeConn runs the JSON-RPC server on a single connection. ServeConn blocks, serving the connection until the client hangs up. The caller typically invokes ServeConn in a go statement. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.all_test.go" href="#init.all_test.go">func init()</a>
 
 ```
 searchKey: jsonrpc.init
+tags: [private]
 ```
 
 ```Go
@@ -633,6 +645,7 @@ func init()
 
 ```
 searchKey: jsonrpc.TestServerNoParams
+tags: [private]
 ```
 
 ```Go
@@ -643,6 +656,7 @@ func TestServerNoParams(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestServerEmptyMessage
+tags: [private]
 ```
 
 ```Go
@@ -653,6 +667,7 @@ func TestServerEmptyMessage(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestServer
+tags: [private]
 ```
 
 ```Go
@@ -663,6 +678,7 @@ func TestServer(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestClient
+tags: [private]
 ```
 
 ```Go
@@ -673,6 +689,7 @@ func TestClient(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestBuiltinTypes
+tags: [private]
 ```
 
 ```Go
@@ -683,6 +700,7 @@ func TestBuiltinTypes(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestMalformedInput
+tags: [private]
 ```
 
 ```Go
@@ -693,6 +711,7 @@ func TestMalformedInput(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestMalformedOutput
+tags: [private]
 ```
 
 ```Go
@@ -703,6 +722,7 @@ func TestMalformedOutput(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestServerErrorHasNullResult
+tags: [private]
 ```
 
 ```Go
@@ -713,9 +733,23 @@ func TestServerErrorHasNullResult(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestUnexpectedError
+tags: [private]
 ```
 
 ```Go
 func TestUnexpectedError(t *testing.T)
 ```
+
+### <a id="myPipe" href="#myPipe">func myPipe() (*pipe, *pipe)</a>
+
+```
+searchKey: jsonrpc.myPipe
+tags: [private]
+```
+
+```Go
+func myPipe() (*pipe, *pipe)
+```
+
+Copied from package net. 
 

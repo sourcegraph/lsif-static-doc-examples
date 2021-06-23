@@ -4,9 +4,7 @@
     "identifier": "enterprise",
     "newPage": true,
     "searchKey": "cmd/frontend/enterprise",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Services",
                 "newPage": false,
                 "searchKey": "enterprise.Services",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -64,9 +58,7 @@
                       "identifier": "DefaultServices",
                       "newPage": false,
                       "searchKey": "enterprise.DefaultServices",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -89,9 +81,7 @@
                 "identifier": "NewCodeIntelUploadHandler",
                 "newPage": false,
                 "searchKey": "enterprise.NewCodeIntelUploadHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -111,9 +101,7 @@
                 "identifier": "NewExecutorProxyHandler",
                 "newPage": false,
                 "searchKey": "enterprise.NewExecutorProxyHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -133,7 +121,9 @@
                 "identifier": "registerFunc",
                 "newPage": false,
                 "searchKey": "enterprise.registerFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -151,7 +141,9 @@
                       "identifier": "registerFunc.Register",
                       "newPage": false,
                       "searchKey": "enterprise.registerFunc.Register",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -177,9 +169,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -197,7 +187,9 @@
                 "identifier": "makeNotFoundHandler",
                 "newPage": false,
                 "searchKey": "enterprise.makeNotFoundHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

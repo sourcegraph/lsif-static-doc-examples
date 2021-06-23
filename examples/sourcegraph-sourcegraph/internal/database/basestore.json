@@ -4,7 +4,9 @@
     "identifier": "basestore",
     "newPage": true,
     "searchKey": "internal/database/basestore",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "savepointQuery",
                 "newPage": false,
                 "searchKey": "basestore.savepointQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "commitSavepointQuery",
                 "newPage": false,
                 "searchKey": "basestore.commitSavepointQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "rollbackSavepointQuery",
                 "newPage": false,
                 "searchKey": "basestore.rollbackSavepointQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +113,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -121,9 +133,7 @@
                 "identifier": "ErrNotTransactable",
                 "newPage": false,
                 "searchKey": "basestore.ErrNotTransactable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -146,7 +156,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -164,9 +176,7 @@
                 "identifier": "TransactableHandle",
                 "newPage": false,
                 "searchKey": "basestore.TransactableHandle",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -184,9 +194,7 @@
                       "identifier": "NewHandle",
                       "newPage": false,
                       "searchKey": "basestore.NewHandle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -206,9 +214,7 @@
                       "identifier": "NewHandleWithDB",
                       "newPage": false,
                       "searchKey": "basestore.NewHandleWithDB",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -228,9 +234,7 @@
                       "identifier": "TransactableHandle.DB",
                       "newPage": false,
                       "searchKey": "basestore.TransactableHandle.DB",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -250,9 +254,7 @@
                       "identifier": "TransactableHandle.InTransaction",
                       "newPage": false,
                       "searchKey": "basestore.TransactableHandle.InTransaction",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -272,9 +274,7 @@
                       "identifier": "TransactableHandle.Transact",
                       "newPage": false,
                       "searchKey": "basestore.TransactableHandle.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,9 +294,7 @@
                       "identifier": "TransactableHandle.Done",
                       "newPage": false,
                       "searchKey": "basestore.TransactableHandle.Done",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -319,7 +317,9 @@
                 "identifier": "savepoint",
                 "newPage": false,
                 "searchKey": "basestore.savepoint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -337,7 +337,9 @@
                       "identifier": "newSavepoint",
                       "newPage": false,
                       "searchKey": "basestore.newSavepoint",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -357,7 +359,9 @@
                       "identifier": "savepoint.Commit",
                       "newPage": false,
                       "searchKey": "basestore.savepoint.Commit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -377,7 +381,9 @@
                       "identifier": "savepoint.Rollback",
                       "newPage": false,
                       "searchKey": "basestore.savepoint.Rollback",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -397,7 +403,9 @@
                       "identifier": "savepoint.apply",
                       "newPage": false,
                       "searchKey": "basestore.savepoint.apply",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,9 +428,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "basestore.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -440,9 +446,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "basestore.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -462,9 +466,7 @@
                       "identifier": "NewWithDB",
                       "newPage": false,
                       "searchKey": "basestore.NewWithDB",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -484,9 +486,7 @@
                       "identifier": "NewWithHandle",
                       "newPage": false,
                       "searchKey": "basestore.NewWithHandle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -506,7 +506,9 @@
                       "identifier": "testStore",
                       "newPage": false,
                       "searchKey": "basestore.testStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -526,9 +528,7 @@
                       "identifier": "Store.Handle",
                       "newPage": false,
                       "searchKey": "basestore.Store.Handle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -548,9 +548,7 @@
                       "identifier": "Store.With",
                       "newPage": false,
                       "searchKey": "basestore.Store.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -570,9 +568,7 @@
                       "identifier": "Store.Query",
                       "newPage": false,
                       "searchKey": "basestore.Store.Query",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -592,9 +588,7 @@
                       "identifier": "Store.QueryRow",
                       "newPage": false,
                       "searchKey": "basestore.Store.QueryRow",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -614,9 +608,7 @@
                       "identifier": "Store.Exec",
                       "newPage": false,
                       "searchKey": "basestore.Store.Exec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -636,9 +628,7 @@
                       "identifier": "Store.ExecResult",
                       "newPage": false,
                       "searchKey": "basestore.Store.ExecResult",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -658,9 +648,7 @@
                       "identifier": "Store.InTransaction",
                       "newPage": false,
                       "searchKey": "basestore.Store.InTransaction",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -680,9 +668,7 @@
                       "identifier": "Store.Transact",
                       "newPage": false,
                       "searchKey": "basestore.Store.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -702,9 +688,7 @@
                       "identifier": "Store.Done",
                       "newPage": false,
                       "searchKey": "basestore.Store.Done",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -727,9 +711,7 @@
                 "identifier": "ShareableStore",
                 "newPage": false,
                 "searchKey": "basestore.ShareableStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -752,7 +734,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -770,7 +754,9 @@
                 "identifier": "combineErrors",
                 "newPage": false,
                 "searchKey": "basestore.combineErrors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -790,9 +776,7 @@
                 "identifier": "CloseRows",
                 "newPage": false,
                 "searchKey": "basestore.CloseRows",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -812,9 +796,7 @@
                 "identifier": "ScanStrings",
                 "newPage": false,
                 "searchKey": "basestore.ScanStrings",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -834,9 +816,7 @@
                 "identifier": "ScanFirstString",
                 "newPage": false,
                 "searchKey": "basestore.ScanFirstString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -856,9 +836,7 @@
                 "identifier": "ScanFirstNullString",
                 "newPage": false,
                 "searchKey": "basestore.ScanFirstNullString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -878,9 +856,7 @@
                 "identifier": "ScanInts",
                 "newPage": false,
                 "searchKey": "basestore.ScanInts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -900,9 +876,7 @@
                 "identifier": "ScanInt32s",
                 "newPage": false,
                 "searchKey": "basestore.ScanInt32s",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -922,9 +896,7 @@
                 "identifier": "ScanFirstInt",
                 "newPage": false,
                 "searchKey": "basestore.ScanFirstInt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -944,9 +916,7 @@
                 "identifier": "ScanFloats",
                 "newPage": false,
                 "searchKey": "basestore.ScanFloats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -966,9 +936,7 @@
                 "identifier": "ScanFirstFloat",
                 "newPage": false,
                 "searchKey": "basestore.ScanFirstFloat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -988,9 +956,7 @@
                 "identifier": "ScanBools",
                 "newPage": false,
                 "searchKey": "basestore.ScanBools",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1010,9 +976,7 @@
                 "identifier": "ScanFirstBool",
                 "newPage": false,
                 "searchKey": "basestore.ScanFirstBool",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1032,9 +996,7 @@
                 "identifier": "ScanTimes",
                 "newPage": false,
                 "searchKey": "basestore.ScanTimes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1054,9 +1016,7 @@
                 "identifier": "ScanFirstTime",
                 "newPage": false,
                 "searchKey": "basestore.ScanFirstTime",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1076,7 +1036,9 @@
                 "identifier": "makeSavepointID",
                 "newPage": false,
                 "searchKey": "basestore.makeSavepointID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1091,12 +1053,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/basestore#init",
+              "pathID": "/internal/database/basestore#init.store_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.store_test.go",
                 "newPage": false,
                 "searchKey": "basestore.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1116,7 +1080,9 @@
                 "identifier": "TestTransaction",
                 "newPage": false,
                 "searchKey": "basestore.TestTransaction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1136,7 +1102,9 @@
                 "identifier": "TestSavepoints",
                 "newPage": false,
                 "searchKey": "basestore.TestSavepoints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1156,7 +1124,9 @@
                 "identifier": "recurSavepoints",
                 "newPage": false,
                 "searchKey": "basestore.recurSavepoints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1176,7 +1146,9 @@
                 "identifier": "assertCounts",
                 "newPage": false,
                 "searchKey": "basestore.assertCounts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1196,7 +1168,9 @@
                 "identifier": "setupStoreTest",
                 "newPage": false,
                 "searchKey": "basestore.setupStoreTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

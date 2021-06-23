@@ -432,7 +432,7 @@ func TestMain(m *testing.M) {
     * [func TestSplitRegexp(t *T)](#TestSplitRegexp)
     * [func TestMatcher(t *T)](#TestMatcher)
     * [func TestNaming(t *T)](#TestNaming)
-    * [func init()](#init)
+    * [func init()](#init.sub_test.go)
     * [func TestTestContext(t *T)](#TestTestContext)
     * [func TestTRun(t *T)](#TestTRun)
     * [func TestBRun(t *T)](#TestBRun)
@@ -454,14 +454,11 @@ func TestMain(m *testing.M) {
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="maxStackLen" href="#maxStackLen">const maxStackLen</a>
 
 ```
 searchKey: testing.maxStackLen
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +471,7 @@ The maximum number of stack frames to go through when skipping helper functions 
 
 ```
 searchKey: testing.normalPanic
+tags: [private]
 ```
 
 ```Go
@@ -484,6 +482,7 @@ const normalPanic panicHandling = iota
 
 ```
 searchKey: testing.recoverAndReturnPanic
+tags: [private]
 ```
 
 ```Go
@@ -492,14 +491,11 @@ const recoverAndReturnPanic
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="matchBenchmarks" href="#matchBenchmarks">var matchBenchmarks</a>
 
 ```
 searchKey: testing.matchBenchmarks
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +506,7 @@ var matchBenchmarks *string
 
 ```
 searchKey: testing.benchmarkMemory
+tags: [private]
 ```
 
 ```Go
@@ -520,6 +517,7 @@ var benchmarkMemory *bool
 
 ```
 searchKey: testing.benchTime
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +529,7 @@ var benchTime = benchTimeFlag{d: 1 * time.Second} // changed during test of test
 
 ```
 searchKey: testing.benchmarkLock
+tags: [private]
 ```
 
 ```Go
@@ -543,6 +542,7 @@ Global lock to ensure only one benchmark runs at a time.
 
 ```
 searchKey: testing.memStats
+tags: [private]
 ```
 
 ```Go
@@ -555,6 +555,7 @@ Used for every benchmark for measuring memory.
 
 ```
 searchKey: testing.labelsOnce
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +566,7 @@ var labelsOnce sync.Once
 
 ```
 searchKey: testing.cover
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +577,7 @@ var cover Cover
 
 ```
 searchKey: testing.matchMutex
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +590,7 @@ TODO: fix test_main to avoid race and improve caching, also allowing to eliminat
 
 ```
 searchKey: testing.initRan
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +601,7 @@ var initRan bool
 
 ```
 searchKey: testing.short
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +614,7 @@ Flags, registered during Init.
 
 ```
 searchKey: testing.failFast
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +625,7 @@ var failFast *bool
 
 ```
 searchKey: testing.outputDir
+tags: [private]
 ```
 
 ```Go
@@ -629,6 +636,7 @@ var outputDir *string
 
 ```
 searchKey: testing.chatty
+tags: [private]
 ```
 
 ```Go
@@ -639,6 +647,7 @@ var chatty *bool
 
 ```
 searchKey: testing.count
+tags: [private]
 ```
 
 ```Go
@@ -649,6 +658,7 @@ var count *uint
 
 ```
 searchKey: testing.coverProfile
+tags: [private]
 ```
 
 ```Go
@@ -659,6 +669,7 @@ var coverProfile *string
 
 ```
 searchKey: testing.matchList
+tags: [private]
 ```
 
 ```Go
@@ -669,6 +680,7 @@ var matchList *string
 
 ```
 searchKey: testing.match
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +691,7 @@ var match *string
 
 ```
 searchKey: testing.memProfile
+tags: [private]
 ```
 
 ```Go
@@ -689,6 +702,7 @@ var memProfile *string
 
 ```
 searchKey: testing.memProfileRate
+tags: [private]
 ```
 
 ```Go
@@ -699,6 +713,7 @@ var memProfileRate *int
 
 ```
 searchKey: testing.cpuProfile
+tags: [private]
 ```
 
 ```Go
@@ -709,6 +724,7 @@ var cpuProfile *string
 
 ```
 searchKey: testing.blockProfile
+tags: [private]
 ```
 
 ```Go
@@ -719,6 +735,7 @@ var blockProfile *string
 
 ```
 searchKey: testing.blockProfileRate
+tags: [private]
 ```
 
 ```Go
@@ -729,6 +746,7 @@ var blockProfileRate *int
 
 ```
 searchKey: testing.mutexProfile
+tags: [private]
 ```
 
 ```Go
@@ -739,6 +757,7 @@ var mutexProfile *string
 
 ```
 searchKey: testing.mutexProfileFraction
+tags: [private]
 ```
 
 ```Go
@@ -749,6 +768,7 @@ var mutexProfileFraction *int
 
 ```
 searchKey: testing.panicOnExit0
+tags: [private]
 ```
 
 ```Go
@@ -759,6 +779,7 @@ var panicOnExit0 *bool
 
 ```
 searchKey: testing.traceFile
+tags: [private]
 ```
 
 ```Go
@@ -769,6 +790,7 @@ var traceFile *string
 
 ```
 searchKey: testing.timeout
+tags: [private]
 ```
 
 ```Go
@@ -779,6 +801,7 @@ var timeout *time.Duration
 
 ```
 searchKey: testing.cpuListStr
+tags: [private]
 ```
 
 ```Go
@@ -789,6 +812,7 @@ var cpuListStr *string
 
 ```
 searchKey: testing.parallel
+tags: [private]
 ```
 
 ```Go
@@ -799,6 +823,7 @@ var parallel *int
 
 ```
 searchKey: testing.shuffle
+tags: [private]
 ```
 
 ```Go
@@ -809,6 +834,7 @@ var shuffle *string
 
 ```
 searchKey: testing.testlog
+tags: [private]
 ```
 
 ```Go
@@ -819,6 +845,7 @@ var testlog *string
 
 ```
 searchKey: testing.haveExamples
+tags: [private]
 ```
 
 ```Go
@@ -830,6 +857,7 @@ var haveExamples bool // are there examples?
 
 ```
 searchKey: testing.cpuList
+tags: [private]
 ```
 
 ```Go
@@ -840,6 +868,7 @@ var cpuList []int
 
 ```
 searchKey: testing.testlogFile
+tags: [private]
 ```
 
 ```Go
@@ -850,6 +879,7 @@ var testlogFile *os.File
 
 ```
 searchKey: testing.numFailed
+tags: [private]
 ```
 
 ```Go
@@ -861,6 +891,7 @@ var numFailed uint32 // number of test failures
 
 ```
 searchKey: testing.errNilPanicOrGoexit
+tags: [private]
 ```
 
 ```Go
@@ -871,6 +902,7 @@ var errNilPanicOrGoexit = errors.New("test executed panic(nil) or runtime.Goexit
 
 ```
 searchKey: testing.errMain
+tags: [private]
 ```
 
 ```Go
@@ -883,6 +915,7 @@ No one should be using func Main anymore. See the doc comment on func Main and u
 
 ```
 searchKey: testing.PrettyPrint
+tags: [private]
 ```
 
 ```Go
@@ -891,14 +924,11 @@ var PrettyPrint = prettyPrint
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="benchTimeFlag" href="#benchTimeFlag">type benchTimeFlag struct</a>
 
 ```
 searchKey: testing.benchTimeFlag
+tags: [private]
 ```
 
 ```Go
@@ -912,6 +942,7 @@ type benchTimeFlag struct {
 
 ```
 searchKey: testing.benchTimeFlag.String
+tags: [private]
 ```
 
 ```Go
@@ -922,6 +953,7 @@ func (f *benchTimeFlag) String() string
 
 ```
 searchKey: testing.benchTimeFlag.Set
+tags: [private]
 ```
 
 ```Go
@@ -932,7 +964,6 @@ func (f *benchTimeFlag) Set(s string) error
 
 ```
 searchKey: testing.InternalBenchmark
-tags: [exported]
 ```
 
 ```Go
@@ -948,7 +979,6 @@ InternalBenchmark is an internal type but exported because it is cross-package; 
 
 ```
 searchKey: testing.B
-tags: [exported]
 ```
 
 ```Go
@@ -988,7 +1018,6 @@ Like in tests, benchmark logs are accumulated during execution and dumped to sta
 
 ```
 searchKey: testing.B.StartTimer
-tags: [exported]
 ```
 
 ```Go
@@ -1001,7 +1030,6 @@ StartTimer starts timing a test. This function is called automatically before a 
 
 ```
 searchKey: testing.B.StopTimer
-tags: [exported]
 ```
 
 ```Go
@@ -1014,7 +1042,6 @@ StopTimer stops timing a test. This can be used to pause the timer while perform
 
 ```
 searchKey: testing.B.ResetTimer
-tags: [exported]
 ```
 
 ```Go
@@ -1027,7 +1054,6 @@ ResetTimer zeroes the elapsed benchmark time and memory allocation counters and 
 
 ```
 searchKey: testing.B.SetBytes
-tags: [exported]
 ```
 
 ```Go
@@ -1040,7 +1066,6 @@ SetBytes records the number of bytes processed in a single operation. If this is
 
 ```
 searchKey: testing.B.ReportAllocs
-tags: [exported]
 ```
 
 ```Go
@@ -1053,6 +1078,7 @@ ReportAllocs enables malloc statistics for this benchmark. It is equivalent to s
 
 ```
 searchKey: testing.B.runN
+tags: [private]
 ```
 
 ```Go
@@ -1065,6 +1091,7 @@ runN runs a single benchmark for the specified number of iterations.
 
 ```
 searchKey: testing.B.run1
+tags: [private]
 ```
 
 ```Go
@@ -1077,6 +1104,7 @@ run1 runs the first iteration of benchFunc. It reports whether more iterations o
 
 ```
 searchKey: testing.B.run
+tags: [private]
 ```
 
 ```Go
@@ -1089,6 +1117,7 @@ run executes the benchmark in a separate goroutine, including all of its subbenc
 
 ```
 searchKey: testing.B.doBench
+tags: [private]
 ```
 
 ```Go
@@ -1099,6 +1128,7 @@ func (b *B) doBench() BenchmarkResult
 
 ```
 searchKey: testing.B.launch
+tags: [private]
 ```
 
 ```Go
@@ -1111,7 +1141,6 @@ launch launches the benchmark function. It gradually increases the number of ben
 
 ```
 searchKey: testing.B.ReportMetric
-tags: [exported]
 ```
 
 ```Go
@@ -1124,7 +1153,6 @@ ReportMetric adds "n unit" to the reported benchmark results. If the metric is p
 
 ```
 searchKey: testing.B.Run
-tags: [exported]
 ```
 
 ```Go
@@ -1139,6 +1167,7 @@ A subbenchmark is like any other benchmark. A benchmark that calls Run at least 
 
 ```
 searchKey: testing.B.add
+tags: [private]
 ```
 
 ```Go
@@ -1151,6 +1180,7 @@ add simulates running benchmarks in sequence in a single iteration. It is used t
 
 ```
 searchKey: testing.B.trimOutput
+tags: [private]
 ```
 
 ```Go
@@ -1163,7 +1193,6 @@ trimOutput shortens the output from a benchmark, which can be very long.
 
 ```
 searchKey: testing.B.RunParallel
-tags: [exported]
 ```
 
 ```Go
@@ -1178,7 +1207,6 @@ The body function will be run in each goroutine. It should set up any goroutine-
 
 ```
 searchKey: testing.B.SetParallelism
-tags: [exported]
 ```
 
 ```Go
@@ -1191,7 +1219,6 @@ SetParallelism sets the number of goroutines used by RunParallel to p*GOMAXPROCS
 
 ```
 searchKey: testing.BenchmarkResult
-tags: [exported]
 ```
 
 ```Go
@@ -1213,7 +1240,6 @@ BenchmarkResult contains the results of a benchmark run.
 
 ```
 searchKey: testing.Benchmark
-tags: [exported]
 ```
 
 ```Go
@@ -1230,7 +1256,6 @@ If f calls Run, the result will be an estimate of running all its subbenchmarks 
 
 ```
 searchKey: testing.BenchmarkResult.NsPerOp
-tags: [exported]
 ```
 
 ```Go
@@ -1243,6 +1268,7 @@ NsPerOp returns the "ns/op" metric.
 
 ```
 searchKey: testing.BenchmarkResult.mbPerSec
+tags: [private]
 ```
 
 ```Go
@@ -1255,7 +1281,6 @@ mbPerSec returns the "MB/s" metric.
 
 ```
 searchKey: testing.BenchmarkResult.AllocsPerOp
-tags: [exported]
 ```
 
 ```Go
@@ -1268,7 +1293,6 @@ AllocsPerOp returns the "allocs/op" metric, which is calculated as r.MemAllocs /
 
 ```
 searchKey: testing.BenchmarkResult.AllocedBytesPerOp
-tags: [exported]
 ```
 
 ```Go
@@ -1281,7 +1305,6 @@ AllocedBytesPerOp returns the "B/op" metric, which is calculated as r.MemBytes /
 
 ```
 searchKey: testing.BenchmarkResult.String
-tags: [exported]
 ```
 
 ```Go
@@ -1294,7 +1317,6 @@ String returns a summary of the benchmark results. It follows the benchmark resu
 
 ```
 searchKey: testing.BenchmarkResult.MemString
-tags: [exported]
 ```
 
 ```Go
@@ -1307,6 +1329,7 @@ MemString returns r.AllocedBytesPerOp and r.AllocsPerOp in the same format as 'g
 
 ```
 searchKey: testing.benchContext
+tags: [private]
 ```
 
 ```Go
@@ -1322,6 +1345,7 @@ type benchContext struct {
 
 ```
 searchKey: testing.benchContext.processBench
+tags: [private]
 ```
 
 ```Go
@@ -1334,7 +1358,6 @@ processBench runs bench b for the configured CPU counts and prints the results.
 
 ```
 searchKey: testing.PB
-tags: [exported]
 ```
 
 ```Go
@@ -1352,7 +1375,6 @@ A PB is used by RunParallel for running parallel benchmarks.
 
 ```
 searchKey: testing.PB.Next
-tags: [exported]
 ```
 
 ```Go
@@ -1365,6 +1387,7 @@ Next reports whether there are more iterations to execute.
 
 ```
 searchKey: testing.discard
+tags: [private]
 ```
 
 ```Go
@@ -1375,6 +1398,7 @@ type discard struct{}
 
 ```
 searchKey: testing.discard.Write
+tags: [private]
 ```
 
 ```Go
@@ -1385,7 +1409,6 @@ func (discard) Write(b []byte) (n int, err error)
 
 ```
 searchKey: testing.CoverBlock
-tags: [exported]
 ```
 
 ```Go
@@ -1404,7 +1427,6 @@ CoverBlock records the coverage data for a single basic block. The fields are 1-
 
 ```
 searchKey: testing.Cover
-tags: [exported]
 ```
 
 ```Go
@@ -1422,7 +1444,6 @@ Cover records information about test coverage checking. NOTE: This struct is int
 
 ```
 searchKey: testing.InternalExample
-tags: [exported]
 ```
 
 ```Go
@@ -1438,6 +1459,7 @@ type InternalExample struct {
 
 ```
 searchKey: testing.InternalExample.processRunResult
+tags: [private]
 ```
 
 ```Go
@@ -1452,6 +1474,7 @@ If stdout doesn't match the expected output or if recovered is non-nil, it'll pr
 
 ```
 searchKey: testing.matcher
+tags: [private]
 ```
 
 ```Go
@@ -1470,6 +1493,7 @@ matcher sanitizes, uniques, and filters names of subtests and subbenchmarks.
 
 ```
 searchKey: testing.newMatcher
+tags: [private]
 ```
 
 ```Go
@@ -1480,6 +1504,7 @@ func newMatcher(matchString func(pat, str string) (bool, error), patterns, name 
 
 ```
 searchKey: testing.matcher.fullName
+tags: [private]
 ```
 
 ```Go
@@ -1490,6 +1515,7 @@ func (m *matcher) fullName(c *common, subname string) (name string, ok, partial 
 
 ```
 searchKey: testing.matcher.unique
+tags: [private]
 ```
 
 ```Go
@@ -1502,6 +1528,7 @@ unique creates a unique name for the given parent and subname by affixing it wit
 
 ```
 searchKey: testing.chattyPrinter
+tags: [private]
 ```
 
 ```Go
@@ -1516,6 +1543,7 @@ type chattyPrinter struct {
 
 ```
 searchKey: testing.newChattyPrinter
+tags: [private]
 ```
 
 ```Go
@@ -1526,6 +1554,7 @@ func newChattyPrinter(w io.Writer) *chattyPrinter
 
 ```
 searchKey: testing.chattyPrinter.Updatef
+tags: [private]
 ```
 
 ```Go
@@ -1540,6 +1569,7 @@ The formatted message must include the test name itself.
 
 ```
 searchKey: testing.chattyPrinter.Printf
+tags: [private]
 ```
 
 ```Go
@@ -1552,6 +1582,7 @@ Printf prints a message, generated by the named test, that does not necessarily 
 
 ```
 searchKey: testing.common
+tags: [private]
 ```
 
 ```Go
@@ -1599,6 +1630,7 @@ common holds the elements common between T and B and captures common methods suc
 
 ```
 searchKey: testing.common.frameSkip
+tags: [private]
 ```
 
 ```Go
@@ -1611,6 +1643,7 @@ frameSkip searches, starting after skip frames, for the first caller frame in a 
 
 ```
 searchKey: testing.common.decorate
+tags: [private]
 ```
 
 ```Go
@@ -1623,6 +1656,7 @@ decorate prefixes the string with the file and line of the call site and inserts
 
 ```
 searchKey: testing.common.flushToParent
+tags: [private]
 ```
 
 ```Go
@@ -1635,6 +1669,7 @@ flushToParent writes c.output to the parent after first writing the header with 
 
 ```
 searchKey: testing.common.private
+tags: [private]
 ```
 
 ```Go
@@ -1645,6 +1680,7 @@ func (c *common) private()
 
 ```
 searchKey: testing.common.Name
+tags: [private]
 ```
 
 ```Go
@@ -1657,6 +1693,7 @@ Name returns the name of the running test or benchmark.
 
 ```
 searchKey: testing.common.setRan
+tags: [private]
 ```
 
 ```Go
@@ -1667,6 +1704,7 @@ func (c *common) setRan()
 
 ```
 searchKey: testing.common.Fail
+tags: [private]
 ```
 
 ```Go
@@ -1679,6 +1717,7 @@ Fail marks the function as having failed but continues execution.
 
 ```
 searchKey: testing.common.Failed
+tags: [private]
 ```
 
 ```Go
@@ -1691,6 +1730,7 @@ Failed reports whether the function has failed.
 
 ```
 searchKey: testing.common.FailNow
+tags: [private]
 ```
 
 ```Go
@@ -1703,6 +1743,7 @@ FailNow marks the function as having failed and stops its execution by calling r
 
 ```
 searchKey: testing.common.log
+tags: [private]
 ```
 
 ```Go
@@ -1715,6 +1756,7 @@ log generates the output. It's always at the same stack depth.
 
 ```
 searchKey: testing.common.logDepth
+tags: [private]
 ```
 
 ```Go
@@ -1727,6 +1769,7 @@ logDepth generates the output at an arbitrary stack depth.
 
 ```
 searchKey: testing.common.Log
+tags: [private]
 ```
 
 ```Go
@@ -1739,6 +1782,7 @@ Log formats its arguments using default formatting, analogous to Println, and re
 
 ```
 searchKey: testing.common.Logf
+tags: [private]
 ```
 
 ```Go
@@ -1751,6 +1795,7 @@ Logf formats its arguments according to the format, analogous to Printf, and rec
 
 ```
 searchKey: testing.common.Error
+tags: [private]
 ```
 
 ```Go
@@ -1763,6 +1808,7 @@ Error is equivalent to Log followed by Fail.
 
 ```
 searchKey: testing.common.Errorf
+tags: [private]
 ```
 
 ```Go
@@ -1775,6 +1821,7 @@ Errorf is equivalent to Logf followed by Fail.
 
 ```
 searchKey: testing.common.Fatal
+tags: [private]
 ```
 
 ```Go
@@ -1787,6 +1834,7 @@ Fatal is equivalent to Log followed by FailNow.
 
 ```
 searchKey: testing.common.Fatalf
+tags: [private]
 ```
 
 ```Go
@@ -1799,6 +1847,7 @@ Fatalf is equivalent to Logf followed by FailNow.
 
 ```
 searchKey: testing.common.Skip
+tags: [private]
 ```
 
 ```Go
@@ -1811,6 +1860,7 @@ Skip is equivalent to Log followed by SkipNow.
 
 ```
 searchKey: testing.common.Skipf
+tags: [private]
 ```
 
 ```Go
@@ -1823,6 +1873,7 @@ Skipf is equivalent to Logf followed by SkipNow.
 
 ```
 searchKey: testing.common.SkipNow
+tags: [private]
 ```
 
 ```Go
@@ -1835,6 +1886,7 @@ SkipNow marks the test as having been skipped and stops its execution by calling
 
 ```
 searchKey: testing.common.Skipped
+tags: [private]
 ```
 
 ```Go
@@ -1847,6 +1899,7 @@ Skipped reports whether the test was skipped.
 
 ```
 searchKey: testing.common.Helper
+tags: [private]
 ```
 
 ```Go
@@ -1859,6 +1912,7 @@ Helper marks the calling function as a test helper function. When printing file 
 
 ```
 searchKey: testing.common.Cleanup
+tags: [private]
 ```
 
 ```Go
@@ -1871,6 +1925,7 @@ Cleanup registers a function to be called when the test (or subtest) and all its
 
 ```
 searchKey: testing.common.TempDir
+tags: [private]
 ```
 
 ```Go
@@ -1883,6 +1938,7 @@ TempDir returns a temporary directory for the test to use. The directory is auto
 
 ```
 searchKey: testing.common.Setenv
+tags: [private]
 ```
 
 ```Go
@@ -1897,6 +1953,7 @@ This cannot be used in parallel tests.
 
 ```
 searchKey: testing.common.runCleanup
+tags: [private]
 ```
 
 ```Go
@@ -1909,6 +1966,7 @@ runCleanup is called at the end of the test. If catchPanic is true, this will ca
 
 ```
 searchKey: testing.indenter
+tags: [private]
 ```
 
 ```Go
@@ -1921,6 +1979,7 @@ type indenter struct {
 
 ```
 searchKey: testing.indenter.Write
+tags: [private]
 ```
 
 ```Go
@@ -1931,7 +1990,6 @@ func (w indenter) Write(b []byte) (n int, err error)
 
 ```
 searchKey: testing.TB
-tags: [exported]
 ```
 
 ```Go
@@ -1967,7 +2025,6 @@ TB is the interface common to T and B.
 
 ```
 searchKey: testing.T
-tags: [exported]
 ```
 
 ```Go
@@ -1989,7 +2046,6 @@ The other reporting methods, such as the variations of Log and Error, may be cal
 
 ```
 searchKey: testing.T.Parallel
-tags: [exported]
 ```
 
 ```Go
@@ -2002,7 +2058,6 @@ Parallel signals that this test is to be run in parallel with (and only with) ot
 
 ```
 searchKey: testing.T.Setenv
-tags: [exported]
 ```
 
 ```Go
@@ -2017,7 +2072,6 @@ This cannot be used in parallel tests.
 
 ```
 searchKey: testing.T.Run
-tags: [exported]
 ```
 
 ```Go
@@ -2032,7 +2086,6 @@ Run may be called simultaneously from multiple goroutines, but all such calls mu
 
 ```
 searchKey: testing.T.Deadline
-tags: [exported]
 ```
 
 ```Go
@@ -2047,6 +2100,7 @@ The ok result is false if the -timeout flag indicates “no timeout” (0).
 
 ```
 searchKey: testing.T.report
+tags: [private]
 ```
 
 ```Go
@@ -2057,6 +2111,7 @@ func (t *T) report()
 
 ```
 searchKey: testing.panicHandling
+tags: [private]
 ```
 
 ```Go
@@ -2069,7 +2124,6 @@ panicHanding is an argument to runCleanup.
 
 ```
 searchKey: testing.InternalTest
-tags: [exported]
 ```
 
 ```Go
@@ -2085,6 +2139,7 @@ InternalTest is an internal type but exported because it is cross-package; it is
 
 ```
 searchKey: testing.testContext
+tags: [private]
 ```
 
 ```Go
@@ -2115,6 +2170,7 @@ testContext holds all fields that are common to all tests. This includes synchro
 
 ```
 searchKey: testing.newTestContext
+tags: [private]
 ```
 
 ```Go
@@ -2125,6 +2181,7 @@ func newTestContext(maxParallel int, m *matcher) *testContext
 
 ```
 searchKey: testing.testContext.waitParallel
+tags: [private]
 ```
 
 ```Go
@@ -2135,6 +2192,7 @@ func (c *testContext) waitParallel()
 
 ```
 searchKey: testing.testContext.release
+tags: [private]
 ```
 
 ```Go
@@ -2145,6 +2203,7 @@ func (c *testContext) release()
 
 ```
 searchKey: testing.matchStringOnly
+tags: [private]
 ```
 
 ```Go
@@ -2155,6 +2214,7 @@ type matchStringOnly func(pat, str string) (bool, error)
 
 ```
 searchKey: testing.matchStringOnly.MatchString
+tags: [private]
 ```
 
 ```Go
@@ -2165,6 +2225,7 @@ func (f matchStringOnly) MatchString(pat, str string) (bool, error)
 
 ```
 searchKey: testing.matchStringOnly.StartCPUProfile
+tags: [private]
 ```
 
 ```Go
@@ -2175,6 +2236,7 @@ func (f matchStringOnly) StartCPUProfile(w io.Writer) error
 
 ```
 searchKey: testing.matchStringOnly.StopCPUProfile
+tags: [private]
 ```
 
 ```Go
@@ -2185,6 +2247,7 @@ func (f matchStringOnly) StopCPUProfile()
 
 ```
 searchKey: testing.matchStringOnly.WriteProfileTo
+tags: [private]
 ```
 
 ```Go
@@ -2195,6 +2258,7 @@ func (f matchStringOnly) WriteProfileTo(string, io.Writer, int) error
 
 ```
 searchKey: testing.matchStringOnly.ImportPath
+tags: [private]
 ```
 
 ```Go
@@ -2205,6 +2269,7 @@ func (f matchStringOnly) ImportPath() string
 
 ```
 searchKey: testing.matchStringOnly.StartTestLog
+tags: [private]
 ```
 
 ```Go
@@ -2215,6 +2280,7 @@ func (f matchStringOnly) StartTestLog(io.Writer)
 
 ```
 searchKey: testing.matchStringOnly.StopTestLog
+tags: [private]
 ```
 
 ```Go
@@ -2225,6 +2291,7 @@ func (f matchStringOnly) StopTestLog() error
 
 ```
 searchKey: testing.matchStringOnly.SetPanicOnExit0
+tags: [private]
 ```
 
 ```Go
@@ -2235,7 +2302,6 @@ func (f matchStringOnly) SetPanicOnExit0(bool)
 
 ```
 searchKey: testing.M
-tags: [exported]
 ```
 
 ```Go
@@ -2262,7 +2328,6 @@ M is a type passed to a TestMain function to run the actual tests.
 
 ```
 searchKey: testing.MainStart
-tags: [exported]
 ```
 
 ```Go
@@ -2275,7 +2340,6 @@ MainStart is meant for use by tests generated by 'go test'. It is not meant to b
 
 ```
 searchKey: testing.M.Run
-tags: [exported]
 ```
 
 ```Go
@@ -2288,6 +2352,7 @@ Run runs the tests. It returns an exit code to pass to os.Exit.
 
 ```
 searchKey: testing.M.before
+tags: [private]
 ```
 
 ```Go
@@ -2300,6 +2365,7 @@ before runs before all testing.
 
 ```
 searchKey: testing.M.after
+tags: [private]
 ```
 
 ```Go
@@ -2312,6 +2378,7 @@ after runs after all testing.
 
 ```
 searchKey: testing.M.writeProfiles
+tags: [private]
 ```
 
 ```Go
@@ -2322,6 +2389,7 @@ func (m *M) writeProfiles()
 
 ```
 searchKey: testing.M.startAlarm
+tags: [private]
 ```
 
 ```Go
@@ -2334,6 +2402,7 @@ startAlarm starts an alarm if requested.
 
 ```
 searchKey: testing.M.stopAlarm
+tags: [private]
 ```
 
 ```Go
@@ -2346,6 +2415,7 @@ stopAlarm turns off the alarm.
 
 ```
 searchKey: testing.testDeps
+tags: [private]
 ```
 
 ```Go
@@ -2367,6 +2437,7 @@ testDeps is an internal interface of functionality that is passed into this pack
 
 ```
 searchKey: testing.noopWriter
+tags: [private]
 ```
 
 ```Go
@@ -2377,6 +2448,7 @@ type noopWriter int
 
 ```
 searchKey: testing.noopWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -2387,6 +2459,7 @@ func (nw *noopWriter) Write(b []byte) (int, error)
 
 ```
 searchKey: testing.funcWriter
+tags: [private]
 ```
 
 ```Go
@@ -2399,6 +2472,7 @@ type funcWriter struct {
 
 ```
 searchKey: testing.funcWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -2407,15 +2481,10 @@ func (fw *funcWriter) Write(b []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="AllocsPerRun" href="#AllocsPerRun">func AllocsPerRun(runs int, f func()) (avg float64)</a>
 
 ```
 searchKey: testing.AllocsPerRun
-tags: [exported]
 ```
 
 ```Go
@@ -2432,6 +2501,7 @@ AllocsPerRun sets GOMAXPROCS to 1 during its measurement and will restore it bef
 
 ```
 searchKey: testing.initBenchmarkFlags
+tags: [private]
 ```
 
 ```Go
@@ -2442,6 +2512,7 @@ func initBenchmarkFlags()
 
 ```
 searchKey: testing.min
+tags: [private]
 ```
 
 ```Go
@@ -2452,6 +2523,7 @@ func min(x, y int64) int64
 
 ```
 searchKey: testing.max
+tags: [private]
 ```
 
 ```Go
@@ -2462,6 +2534,7 @@ func max(x, y int64) int64
 
 ```
 searchKey: testing.prettyPrint
+tags: [private]
 ```
 
 ```Go
@@ -2472,6 +2545,7 @@ func prettyPrint(w io.Writer, x float64, unit string)
 
 ```
 searchKey: testing.benchmarkName
+tags: [private]
 ```
 
 ```Go
@@ -2484,7 +2558,6 @@ benchmarkName returns full name of benchmark including procs suffix.
 
 ```
 searchKey: testing.RunBenchmarks
-tags: [exported]
 ```
 
 ```Go
@@ -2497,6 +2570,7 @@ RunBenchmarks is an internal function but exported because it is cross-package; 
 
 ```
 searchKey: testing.runBenchmarks
+tags: [private]
 ```
 
 ```Go
@@ -2507,7 +2581,6 @@ func runBenchmarks(importPath string, matchString func(pat, str string) (bool, e
 
 ```
 searchKey: testing.Coverage
-tags: [exported]
 ```
 
 ```Go
@@ -2522,7 +2595,6 @@ When running a large set of sequential test cases, checking Coverage after each 
 
 ```
 searchKey: testing.RegisterCover
-tags: [exported]
 ```
 
 ```Go
@@ -2535,6 +2607,7 @@ RegisterCover records the coverage data accumulators for the tests. NOTE: This f
 
 ```
 searchKey: testing.mustBeNil
+tags: [private]
 ```
 
 ```Go
@@ -2547,6 +2620,7 @@ mustBeNil checks the error and, if present, reports it and exits.
 
 ```
 searchKey: testing.coverReport
+tags: [private]
 ```
 
 ```Go
@@ -2559,7 +2633,6 @@ coverReport reports the coverage percentage and writes a coverage profile if req
 
 ```
 searchKey: testing.RunExamples
-tags: [exported]
 ```
 
 ```Go
@@ -2572,6 +2645,7 @@ RunExamples is an internal function but exported because it is cross-package; it
 
 ```
 searchKey: testing.runExamples
+tags: [private]
 ```
 
 ```Go
@@ -2582,6 +2656,7 @@ func runExamples(matchString func(pat, str string) (bool, error), examples []Int
 
 ```
 searchKey: testing.sortLines
+tags: [private]
 ```
 
 ```Go
@@ -2592,6 +2667,7 @@ func sortLines(output string) string
 
 ```
 searchKey: testing.splitRegexp
+tags: [private]
 ```
 
 ```Go
@@ -2602,6 +2678,7 @@ func splitRegexp(s string) []string
 
 ```
 searchKey: testing.rewrite
+tags: [private]
 ```
 
 ```Go
@@ -2614,6 +2691,7 @@ rewrite rewrites a subname to having only printable characters and no white spac
 
 ```
 searchKey: testing.isSpace
+tags: [private]
 ```
 
 ```Go
@@ -2624,6 +2702,7 @@ func isSpace(r rune) bool
 
 ```
 searchKey: testing.runExample
+tags: [private]
 ```
 
 ```Go
@@ -2634,7 +2713,6 @@ func runExample(eg InternalExample) (ok bool)
 
 ```
 searchKey: testing.Init
-tags: [exported]
 ```
 
 ```Go
@@ -2649,7 +2727,6 @@ Init has no effect if it was already called.
 
 ```
 searchKey: testing.Short
-tags: [exported]
 ```
 
 ```Go
@@ -2662,7 +2739,6 @@ Short reports whether the -test.short flag is set.
 
 ```
 searchKey: testing.CoverMode
-tags: [exported]
 ```
 
 ```Go
@@ -2675,7 +2751,6 @@ CoverMode reports what the test coverage mode is set to. The values are "set", "
 
 ```
 searchKey: testing.Verbose
-tags: [exported]
 ```
 
 ```Go
@@ -2688,6 +2763,7 @@ Verbose reports whether the -test.v flag is set.
 
 ```
 searchKey: testing.fmtDuration
+tags: [private]
 ```
 
 ```Go
@@ -2700,6 +2776,7 @@ fmtDuration returns a string representing d in the form "87.00s".
 
 ```
 searchKey: testing.callerName
+tags: [private]
 ```
 
 ```Go
@@ -2712,6 +2789,7 @@ callerName gives the function name (qualified with a package path) for the calle
 
 ```
 searchKey: testing.pcToName
+tags: [private]
 ```
 
 ```Go
@@ -2722,6 +2800,7 @@ func pcToName(pc uintptr) string
 
 ```
 searchKey: testing.tRunner
+tags: [private]
 ```
 
 ```Go
@@ -2732,7 +2811,6 @@ func tRunner(t *T, fn func(t *T))
 
 ```
 searchKey: testing.Main
-tags: [exported]
 ```
 
 ```Go
@@ -2745,6 +2823,7 @@ Main is an internal function, part of the implementation of the "go test" comman
 
 ```
 searchKey: testing.listTests
+tags: [private]
 ```
 
 ```Go
@@ -2755,7 +2834,6 @@ func listTests(matchString func(pat, str string) (bool, error), tests []Internal
 
 ```
 searchKey: testing.RunTests
-tags: [exported]
 ```
 
 ```Go
@@ -2768,6 +2846,7 @@ RunTests is an internal function but exported because it is cross-package; it is
 
 ```
 searchKey: testing.runTests
+tags: [private]
 ```
 
 ```Go
@@ -2778,6 +2857,7 @@ func runTests(matchString func(pat, str string) (bool, error), tests []InternalT
 
 ```
 searchKey: testing.toOutputDir
+tags: [private]
 ```
 
 ```Go
@@ -2790,6 +2870,7 @@ toOutputDir returns the file name relocated, if required, to outputDir. Simple i
 
 ```
 searchKey: testing.parseCpuList
+tags: [private]
 ```
 
 ```Go
@@ -2800,6 +2881,7 @@ func parseCpuList()
 
 ```
 searchKey: testing.shouldFailFast
+tags: [private]
 ```
 
 ```Go
@@ -2810,6 +2892,7 @@ func shouldFailFast() bool
 
 ```
 searchKey: testing.TestTBHelper
+tags: [private]
 ```
 
 ```Go
@@ -2820,6 +2903,7 @@ func TestTBHelper(t *T)
 
 ```
 searchKey: testing.TestTBHelperParallel
+tags: [private]
 ```
 
 ```Go
@@ -2830,6 +2914,7 @@ func TestTBHelperParallel(t *T)
 
 ```
 searchKey: testing.TestTBHelperLineNumer
+tags: [private]
 ```
 
 ```Go
@@ -2840,6 +2925,7 @@ func TestTBHelperLineNumer(t *T)
 
 ```
 searchKey: testing.BenchmarkTBHelper
+tags: [private]
 ```
 
 ```Go
@@ -2850,6 +2936,7 @@ func BenchmarkTBHelper(b *B)
 
 ```
 searchKey: testing.notHelper
+tags: [private]
 ```
 
 ```Go
@@ -2860,6 +2947,7 @@ func notHelper(t *T, msg string)
 
 ```
 searchKey: testing.helper
+tags: [private]
 ```
 
 ```Go
@@ -2870,6 +2958,7 @@ func helper(t *T, msg string)
 
 ```
 searchKey: testing.notHelperCallingHelper
+tags: [private]
 ```
 
 ```Go
@@ -2880,6 +2969,7 @@ func notHelperCallingHelper(t *T, msg string)
 
 ```
 searchKey: testing.helperCallingHelper
+tags: [private]
 ```
 
 ```Go
@@ -2890,6 +2980,7 @@ func helperCallingHelper(t *T, msg string)
 
 ```
 searchKey: testing.testHelper
+tags: [private]
 ```
 
 ```Go
@@ -2900,6 +2991,7 @@ func testHelper(t *T)
 
 ```
 searchKey: testing.parallelTestHelper
+tags: [private]
 ```
 
 ```Go
@@ -2910,6 +3002,7 @@ func parallelTestHelper(t *T)
 
 ```
 searchKey: testing.TestIsSpace
+tags: [private]
 ```
 
 ```Go
@@ -2922,6 +3015,7 @@ Verify that our IsSpace agrees with unicode.IsSpace.
 
 ```
 searchKey: testing.TestSplitRegexp
+tags: [private]
 ```
 
 ```Go
@@ -2932,6 +3026,7 @@ func TestSplitRegexp(t *T)
 
 ```
 searchKey: testing.TestMatcher
+tags: [private]
 ```
 
 ```Go
@@ -2942,16 +3037,18 @@ func TestMatcher(t *T)
 
 ```
 searchKey: testing.TestNaming
+tags: [private]
 ```
 
 ```Go
 func TestNaming(t *T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.sub_test.go" href="#init.sub_test.go">func init()</a>
 
 ```
 searchKey: testing.init
+tags: [private]
 ```
 
 ```Go
@@ -2962,6 +3059,7 @@ func init()
 
 ```
 searchKey: testing.TestTestContext
+tags: [private]
 ```
 
 ```Go
@@ -2972,6 +3070,7 @@ func TestTestContext(t *T)
 
 ```
 searchKey: testing.TestTRun
+tags: [private]
 ```
 
 ```Go
@@ -2982,6 +3081,7 @@ func TestTRun(t *T)
 
 ```
 searchKey: testing.TestBRun
+tags: [private]
 ```
 
 ```Go
@@ -2992,6 +3092,7 @@ func TestBRun(t *T)
 
 ```
 searchKey: testing.makeRegexp
+tags: [private]
 ```
 
 ```Go
@@ -3002,6 +3103,7 @@ func makeRegexp(s string) string
 
 ```
 searchKey: testing.TestBenchmarkOutput
+tags: [private]
 ```
 
 ```Go
@@ -3012,6 +3114,7 @@ func TestBenchmarkOutput(t *T)
 
 ```
 searchKey: testing.TestBenchmarkStartsFrom1
+tags: [private]
 ```
 
 ```Go
@@ -3022,6 +3125,7 @@ func TestBenchmarkStartsFrom1(t *T)
 
 ```
 searchKey: testing.TestBenchmarkReadMemStatsBeforeFirstRun
+tags: [private]
 ```
 
 ```Go
@@ -3032,6 +3136,7 @@ func TestBenchmarkReadMemStatsBeforeFirstRun(t *T)
 
 ```
 searchKey: testing.TestParallelSub
+tags: [private]
 ```
 
 ```Go
@@ -3042,6 +3147,7 @@ func TestParallelSub(t *T)
 
 ```
 searchKey: testing.TestRacyOutput
+tags: [private]
 ```
 
 ```Go
@@ -3052,6 +3158,7 @@ func TestRacyOutput(t *T)
 
 ```
 searchKey: testing.TestLogAfterComplete
+tags: [private]
 ```
 
 ```Go
@@ -3064,6 +3171,7 @@ The late log message did not include the test name.  Issue 29388.
 
 ```
 searchKey: testing.TestBenchmark
+tags: [private]
 ```
 
 ```Go
@@ -3074,6 +3182,7 @@ func TestBenchmark(t *T)
 
 ```
 searchKey: testing.TestCleanup
+tags: [private]
 ```
 
 ```Go
@@ -3084,6 +3193,7 @@ func TestCleanup(t *T)
 
 ```
 searchKey: testing.TestConcurrentCleanup
+tags: [private]
 ```
 
 ```Go
@@ -3094,6 +3204,7 @@ func TestConcurrentCleanup(t *T)
 
 ```
 searchKey: testing.TestCleanupCalledEvenAfterGoexit
+tags: [private]
 ```
 
 ```Go
@@ -3104,6 +3215,7 @@ func TestCleanupCalledEvenAfterGoexit(t *T)
 
 ```
 searchKey: testing.TestRunCleanup
+tags: [private]
 ```
 
 ```Go
@@ -3114,6 +3226,7 @@ func TestRunCleanup(t *T)
 
 ```
 searchKey: testing.TestCleanupParallelSubtests
+tags: [private]
 ```
 
 ```Go
@@ -3124,6 +3237,7 @@ func TestCleanupParallelSubtests(t *T)
 
 ```
 searchKey: testing.TestNestedCleanup
+tags: [private]
 ```
 
 ```Go

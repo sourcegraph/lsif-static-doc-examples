@@ -46,11 +46,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ArchiveFormatZip" href="#ArchiveFormatZip">const ArchiveFormatZip</a>
 
 ```
 searchKey: vfsutil.ArchiveFormatZip
-tags: [exported]
 ```
 
 ```Go
@@ -63,7 +66,6 @@ ArchiveFormatZip indicates a zip archive is desired.
 
 ```
 searchKey: vfsutil.ArchiveFormatTar
-tags: [exported]
 ```
 
 ```Go
@@ -74,11 +76,14 @@ ArchiveFormatTar indicates a tar archive is desired.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ArchiveCacheDir" href="#ArchiveCacheDir">var ArchiveCacheDir</a>
 
 ```
 searchKey: vfsutil.ArchiveCacheDir
-tags: [exported]
 ```
 
 ```Go
@@ -91,6 +96,7 @@ ArchiveCacheDir is the location on disk that archives are cached. It is configur
 
 ```
 searchKey: vfsutil.initOnce
+tags: [private]
 ```
 
 ```Go
@@ -101,6 +107,7 @@ var initOnce sync.Once
 
 ```
 searchKey: vfsutil.cachedFileEvict
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +118,7 @@ var cachedFileEvict = ...
 
 ```
 searchKey: vfsutil.githubRepoRx
+tags: [private]
 ```
 
 ```Go
@@ -121,6 +129,7 @@ var githubRepoRx = lazyregexp.New(`^github\.com/[\w.-]{1,100}/[\w.-]{1,100}$`)
 
 ```
 searchKey: vfsutil.ghFetch
+tags: [private]
 ```
 
 ```Go
@@ -131,6 +140,7 @@ var ghFetch = ...
 
 ```
 searchKey: vfsutil.ghFetchFailed
+tags: [private]
 ```
 
 ```Go
@@ -141,6 +151,7 @@ var ghFetchFailed = ...
 
 ```
 searchKey: vfsutil.gitserverFetchTotal
+tags: [private]
 ```
 
 ```Go
@@ -151,6 +162,7 @@ var gitserverFetchTotal = ...
 
 ```
 searchKey: vfsutil.gitserverFetchFailedTotal
+tags: [private]
 ```
 
 ```Go
@@ -159,10 +171,15 @@ var gitserverFetchFailedTotal = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="archiveReader" href="#archiveReader">type archiveReader struct</a>
 
 ```
 searchKey: vfsutil.archiveReader
+tags: [private]
 ```
 
 ```Go
@@ -188,7 +205,6 @@ archiveReader is like zip.ReadCloser, but it allows us to use a custom closer.
 
 ```
 searchKey: vfsutil.ArchiveFS
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +232,6 @@ ArchiveFS is a ctxvfs.FileSystem backed by an Archiver.
 
 ```
 searchKey: vfsutil.NewGitHubRepoVFS
-tags: [exported]
 ```
 
 ```Go
@@ -229,7 +244,6 @@ NewGitHubRepoVFS creates a new VFS backed by a GitHub downloadable repository ar
 
 ```
 searchKey: vfsutil.NewGitServer
-tags: [exported]
 ```
 
 ```Go
@@ -242,7 +256,6 @@ NewGitServer returns a VFS to repo at commit. It is backed by an archive fetched
 
 ```
 searchKey: vfsutil.NewZipVFS
-tags: [exported]
 ```
 
 ```Go
@@ -255,6 +268,7 @@ NewZipVFS downloads a zip archive from a URL (or fetches from the local cache on
 
 ```
 searchKey: vfsutil.ArchiveFS.fetchOrWait
+tags: [private]
 ```
 
 ```Go
@@ -267,7 +281,6 @@ fetchOrWait initiates the fetch if it has not yet started. Otherwise it waits fo
 
 ```
 searchKey: vfsutil.ArchiveFS.Open
-tags: [exported]
 ```
 
 ```Go
@@ -278,7 +291,6 @@ func (fs *ArchiveFS) Open(ctx context.Context, name string) (ctxvfs.ReadSeekClos
 
 ```
 searchKey: vfsutil.ArchiveFS.Lstat
-tags: [exported]
 ```
 
 ```Go
@@ -289,7 +301,6 @@ func (fs *ArchiveFS) Lstat(ctx context.Context, path string) (fs.FileInfo, error
 
 ```
 searchKey: vfsutil.ArchiveFS.Stat
-tags: [exported]
 ```
 
 ```Go
@@ -300,7 +311,6 @@ func (fs *ArchiveFS) Stat(ctx context.Context, path string) (fs.FileInfo, error)
 
 ```
 searchKey: vfsutil.ArchiveFS.ReadDir
-tags: [exported]
 ```
 
 ```Go
@@ -311,7 +321,6 @@ func (fs *ArchiveFS) ReadDir(ctx context.Context, path string) ([]fs.FileInfo, e
 
 ```
 searchKey: vfsutil.ArchiveFS.ListAllFiles
-tags: [exported]
 ```
 
 ```Go
@@ -322,7 +331,6 @@ func (fs *ArchiveFS) ListAllFiles(ctx context.Context) ([]string, error)
 
 ```
 searchKey: vfsutil.ArchiveFS.Close
-tags: [exported]
 ```
 
 ```Go
@@ -333,7 +341,6 @@ func (fs *ArchiveFS) Close() error
 
 ```
 searchKey: vfsutil.ArchiveFS.String
-tags: [exported]
 ```
 
 ```Go
@@ -344,7 +351,6 @@ func (fs *ArchiveFS) String() string
 
 ```
 searchKey: vfsutil.Evicter
-tags: [exported]
 ```
 
 ```Go
@@ -360,7 +366,6 @@ Evicter implements Evict
 
 ```
 searchKey: vfsutil.GitServerFetchArchive
-tags: [exported]
 ```
 
 ```Go
@@ -373,6 +378,7 @@ GitServerFetchArchive fetches an archive of a repositories contents from gitserv
 
 ```
 searchKey: vfsutil.cachedFile
+tags: [private]
 ```
 
 ```Go
@@ -389,6 +395,7 @@ type cachedFile struct {
 
 ```
 searchKey: vfsutil.cachedFetch
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +408,7 @@ cachedFetch will open a file from the local cache with key. If missing, fetcher 
 
 ```
 searchKey: vfsutil.cachedFile.Evict
+tags: [private]
 ```
 
 ```Go
@@ -413,7 +421,6 @@ Evict will remove the file from the cache. It does not close File. It also does 
 
 ```
 searchKey: vfsutil.ArchiveFormat
-tags: [exported]
 ```
 
 ```Go
@@ -426,7 +433,6 @@ ArchiveFormat represents an archive format (zip, tar, etc).
 
 ```
 searchKey: vfsutil.ArchiveOpts
-tags: [exported]
 ```
 
 ```Go
@@ -451,6 +457,7 @@ ArchiveOpts describes options for fetching a repository archive.
 
 ```
 searchKey: vfsutil.ArchiveOpts.cacheKey
+tags: [private]
 ```
 
 ```Go
@@ -459,10 +466,15 @@ func (opts *ArchiveOpts) cacheKey() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="zipNewFileReader" href="#zipNewFileReader">func zipNewFileReader(f *os.File) (*zip.Reader, error)</a>
 
 ```
 searchKey: vfsutil.zipNewFileReader
+tags: [private]
 ```
 
 ```Go
@@ -473,6 +485,7 @@ func zipNewFileReader(f *os.File) (*zip.Reader, error)
 
 ```
 searchKey: vfsutil.initArchiveCacheDir
+tags: [private]
 ```
 
 ```Go
@@ -483,6 +496,7 @@ func initArchiveCacheDir()
 
 ```
 searchKey: vfsutil.TestGitHubRepoVFS
+tags: [private]
 ```
 
 ```Go
@@ -493,6 +507,7 @@ func TestGitHubRepoVFS(t *testing.T)
 
 ```
 searchKey: vfsutil.useEmptyArchiveCacheDir
+tags: [private]
 ```
 
 ```Go
@@ -503,6 +518,7 @@ func useEmptyArchiveCacheDir() func()
 
 ```
 searchKey: vfsutil.testVFS
+tags: [private]
 ```
 
 ```Go

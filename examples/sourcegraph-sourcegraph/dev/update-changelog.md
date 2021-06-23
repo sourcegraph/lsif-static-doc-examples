@@ -21,14 +21,11 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="newVersion" href="#newVersion">var newVersion</a>
 
 ```
 searchKey: main.newVersion
+tags: [private]
 ```
 
 ```Go
@@ -37,14 +34,11 @@ var newVersion string
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="changeSubset" href="#changeSubset">type changeSubset struct</a>
 
 ```
 searchKey: main.changeSubset
+tags: [private]
 ```
 
 ```Go
@@ -58,6 +52,7 @@ type changeSubset struct {
 
 ```
 searchKey: main.parseSubset
+tags: [private]
 ```
 
 ```Go
@@ -70,6 +65,7 @@ parseSubset tries to read a change subset, which is a ### header followed by a l
 
 ```
 searchKey: main.changeSubset.String
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +76,7 @@ func (css *changeSubset) String() string
 
 ```
 searchKey: main.changeSubset.any
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +87,7 @@ func (css *changeSubset) any() bool
 
 ```
 searchKey: main.changeSet
+tags: [private]
 ```
 
 ```Go
@@ -104,6 +102,7 @@ type changeSet struct {
 
 ```
 searchKey: main.parseSet
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +113,7 @@ func parseSet(sec [][]byte, lineCount int) (*changeSet, error)
 
 ```
 searchKey: main.changeSet.String
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +124,7 @@ func (cs *changeSet) String() string
 
 ```
 searchKey: main.changeSet.any
+tags: [private]
 ```
 
 ```Go
@@ -134,6 +135,7 @@ func (cs *changeSet) any() bool
 
 ```
 searchKey: main.changeLog
+tags: [private]
 ```
 
 ```Go
@@ -147,14 +149,11 @@ a representation of a changeLog in the format we use, which is ## headers per re
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="readLines" href="#readLines">func readLines(path string) ([][]byte, error)</a>
 
 ```
 searchKey: main.readLines
+tags: [private]
 ```
 
 ```Go
@@ -167,6 +166,7 @@ readLines() yields the lines of the file as a slice of byte-slices
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go

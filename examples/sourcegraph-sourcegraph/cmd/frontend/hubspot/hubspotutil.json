@@ -4,9 +4,7 @@
     "identifier": "hubspotutil",
     "newPage": true,
     "searchKey": "cmd/frontend/hubspot/hubspotutil",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "HubSpotHAPIKey",
                 "newPage": false,
                 "searchKey": "hubspotutil.HubSpotHAPIKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "SurveyFormID",
                 "newPage": false,
                 "searchKey": "hubspotutil.SurveyFormID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "TrialFormID",
                 "newPage": false,
                 "searchKey": "hubspotutil.TrialFormID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "HappinessFeedbackFormID",
                 "newPage": false,
                 "searchKey": "hubspotutil.HappinessFeedbackFormID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -132,9 +120,7 @@
                 "identifier": "SignupEventID",
                 "newPage": false,
                 "searchKey": "hubspotutil.SignupEventID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -154,9 +140,7 @@
                 "identifier": "SelfHostedSiteInitEventID",
                 "newPage": false,
                 "searchKey": "hubspotutil.SelfHostedSiteInitEventID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -176,7 +160,9 @@
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "hubspotutil.client",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -199,9 +185,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -219,9 +203,7 @@
                 "identifier": "HasAPIKey",
                 "newPage": false,
                 "searchKey": "hubspotutil.HasAPIKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -236,12 +218,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/hubspot/hubspotutil#init",
+              "pathID": "/cmd/frontend/hubspot/hubspotutil#init.hubspotutil.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.hubspotutil.go",
                 "newPage": false,
                 "searchKey": "hubspotutil.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,9 +245,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "hubspotutil.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -283,9 +265,7 @@
                 "identifier": "SyncUser",
                 "newPage": false,
                 "searchKey": "hubspotutil.SyncUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -305,7 +285,9 @@
                 "identifier": "syncHubSpotContact",
                 "newPage": false,
                 "searchKey": "hubspotutil.syncHubSpotContact",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

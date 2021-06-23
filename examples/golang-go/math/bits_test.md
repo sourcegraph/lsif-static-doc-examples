@@ -87,7 +87,7 @@
     * [func BenchmarkDiv(b *testing.B)](#BenchmarkDiv)
     * [func BenchmarkDiv32(b *testing.B)](#BenchmarkDiv32)
     * [func BenchmarkDiv64(b *testing.B)](#BenchmarkDiv64)
-    * [func init()](#init)
+    * [func init()](#init.bits_test.go)
     * [func ExampleLeadingZeros8()](#ExampleLeadingZeros8)
     * [func ExampleLeadingZeros16()](#ExampleLeadingZeros16)
     * [func ExampleLeadingZeros32()](#ExampleLeadingZeros32)
@@ -120,10 +120,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="_M" href="#_M">const _M</a>
 
 ```
 searchKey: bits_test._M
+tags: [private]
 ```
 
 ```Go
@@ -134,6 +139,7 @@ const _M = 1<<UintSize - 1
 
 ```
 searchKey: bits_test._M32
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +150,7 @@ const _M32 = 1<<32 - 1
 
 ```
 searchKey: bits_test._M64
+tags: [private]
 ```
 
 ```Go
@@ -154,6 +161,7 @@ const _M64 = 1<<64 - 1
 
 ```
 searchKey: bits_test.divZeroError
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +172,7 @@ const divZeroError = "runtime error: integer divide by zero"
 
 ```
 searchKey: bits_test.overflowError
+tags: [private]
 ```
 
 ```Go
@@ -172,10 +181,15 @@ const overflowError = "runtime error: integer overflow"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Input" href="#Input">var Input</a>
 
 ```
 searchKey: bits_test.Input
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +202,7 @@ Exported (global) variable serving as input for some of the benchmarks to ensure
 
 ```
 searchKey: bits_test.Output
+tags: [private]
 ```
 
 ```Go
@@ -200,6 +215,7 @@ Exported (global) variable to store function results during benchmarking to ensu
 
 ```
 searchKey: bits_test.tab
+tags: [private]
 ```
 
 ```Go
@@ -210,10 +226,15 @@ tab contains results for all uint8 values
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="entry" href="#entry">type entry struct</a>
 
 ```
 searchKey: bits_test.entry
+tags: [private]
 ```
 
 ```Go
@@ -224,10 +245,15 @@ type entry = struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestUintSize" href="#TestUintSize">func TestUintSize(t *testing.T)</a>
 
 ```
 searchKey: bits_test.TestUintSize
+tags: [private]
 ```
 
 ```Go
@@ -238,6 +264,7 @@ func TestUintSize(t *testing.T)
 
 ```
 searchKey: bits_test.TestLeadingZeros
+tags: [private]
 ```
 
 ```Go
@@ -248,6 +275,7 @@ func TestLeadingZeros(t *testing.T)
 
 ```
 searchKey: bits_test.BenchmarkLeadingZeros
+tags: [private]
 ```
 
 ```Go
@@ -258,6 +286,7 @@ func BenchmarkLeadingZeros(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkLeadingZeros8
+tags: [private]
 ```
 
 ```Go
@@ -268,6 +297,7 @@ func BenchmarkLeadingZeros8(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkLeadingZeros16
+tags: [private]
 ```
 
 ```Go
@@ -278,6 +308,7 @@ func BenchmarkLeadingZeros16(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkLeadingZeros32
+tags: [private]
 ```
 
 ```Go
@@ -288,6 +319,7 @@ func BenchmarkLeadingZeros32(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkLeadingZeros64
+tags: [private]
 ```
 
 ```Go
@@ -298,6 +330,7 @@ func BenchmarkLeadingZeros64(b *testing.B)
 
 ```
 searchKey: bits_test.TestTrailingZeros
+tags: [private]
 ```
 
 ```Go
@@ -308,6 +341,7 @@ func TestTrailingZeros(t *testing.T)
 
 ```
 searchKey: bits_test.BenchmarkTrailingZeros
+tags: [private]
 ```
 
 ```Go
@@ -318,6 +352,7 @@ func BenchmarkTrailingZeros(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkTrailingZeros8
+tags: [private]
 ```
 
 ```Go
@@ -328,6 +363,7 @@ func BenchmarkTrailingZeros8(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkTrailingZeros16
+tags: [private]
 ```
 
 ```Go
@@ -338,6 +374,7 @@ func BenchmarkTrailingZeros16(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkTrailingZeros32
+tags: [private]
 ```
 
 ```Go
@@ -348,6 +385,7 @@ func BenchmarkTrailingZeros32(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkTrailingZeros64
+tags: [private]
 ```
 
 ```Go
@@ -358,6 +396,7 @@ func BenchmarkTrailingZeros64(b *testing.B)
 
 ```
 searchKey: bits_test.TestOnesCount
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +407,7 @@ func TestOnesCount(t *testing.T)
 
 ```
 searchKey: bits_test.testOnesCount
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +418,7 @@ func testOnesCount(t *testing.T, x uint64, want int)
 
 ```
 searchKey: bits_test.BenchmarkOnesCount
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +429,7 @@ func BenchmarkOnesCount(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkOnesCount8
+tags: [private]
 ```
 
 ```Go
@@ -398,6 +440,7 @@ func BenchmarkOnesCount8(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkOnesCount16
+tags: [private]
 ```
 
 ```Go
@@ -408,6 +451,7 @@ func BenchmarkOnesCount16(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkOnesCount32
+tags: [private]
 ```
 
 ```Go
@@ -418,6 +462,7 @@ func BenchmarkOnesCount32(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkOnesCount64
+tags: [private]
 ```
 
 ```Go
@@ -428,6 +473,7 @@ func BenchmarkOnesCount64(b *testing.B)
 
 ```
 searchKey: bits_test.TestRotateLeft
+tags: [private]
 ```
 
 ```Go
@@ -438,6 +484,7 @@ func TestRotateLeft(t *testing.T)
 
 ```
 searchKey: bits_test.BenchmarkRotateLeft
+tags: [private]
 ```
 
 ```Go
@@ -448,6 +495,7 @@ func BenchmarkRotateLeft(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkRotateLeft8
+tags: [private]
 ```
 
 ```Go
@@ -458,6 +506,7 @@ func BenchmarkRotateLeft8(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkRotateLeft16
+tags: [private]
 ```
 
 ```Go
@@ -468,6 +517,7 @@ func BenchmarkRotateLeft16(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkRotateLeft32
+tags: [private]
 ```
 
 ```Go
@@ -478,6 +528,7 @@ func BenchmarkRotateLeft32(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkRotateLeft64
+tags: [private]
 ```
 
 ```Go
@@ -488,6 +539,7 @@ func BenchmarkRotateLeft64(b *testing.B)
 
 ```
 searchKey: bits_test.TestReverse
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +550,7 @@ func TestReverse(t *testing.T)
 
 ```
 searchKey: bits_test.testReverse
+tags: [private]
 ```
 
 ```Go
@@ -508,6 +561,7 @@ func testReverse(t *testing.T, x64, want64 uint64)
 
 ```
 searchKey: bits_test.BenchmarkReverse
+tags: [private]
 ```
 
 ```Go
@@ -518,6 +572,7 @@ func BenchmarkReverse(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkReverse8
+tags: [private]
 ```
 
 ```Go
@@ -528,6 +583,7 @@ func BenchmarkReverse8(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkReverse16
+tags: [private]
 ```
 
 ```Go
@@ -538,6 +594,7 @@ func BenchmarkReverse16(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkReverse32
+tags: [private]
 ```
 
 ```Go
@@ -548,6 +605,7 @@ func BenchmarkReverse32(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkReverse64
+tags: [private]
 ```
 
 ```Go
@@ -558,6 +616,7 @@ func BenchmarkReverse64(b *testing.B)
 
 ```
 searchKey: bits_test.TestReverseBytes
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +627,7 @@ func TestReverseBytes(t *testing.T)
 
 ```
 searchKey: bits_test.testReverseBytes
+tags: [private]
 ```
 
 ```Go
@@ -578,6 +638,7 @@ func testReverseBytes(t *testing.T, x64, want64 uint64)
 
 ```
 searchKey: bits_test.BenchmarkReverseBytes
+tags: [private]
 ```
 
 ```Go
@@ -588,6 +649,7 @@ func BenchmarkReverseBytes(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkReverseBytes16
+tags: [private]
 ```
 
 ```Go
@@ -598,6 +660,7 @@ func BenchmarkReverseBytes16(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkReverseBytes32
+tags: [private]
 ```
 
 ```Go
@@ -608,6 +671,7 @@ func BenchmarkReverseBytes32(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkReverseBytes64
+tags: [private]
 ```
 
 ```Go
@@ -618,6 +682,7 @@ func BenchmarkReverseBytes64(b *testing.B)
 
 ```
 searchKey: bits_test.TestLen
+tags: [private]
 ```
 
 ```Go
@@ -628,6 +693,7 @@ func TestLen(t *testing.T)
 
 ```
 searchKey: bits_test.TestAddSubUint
+tags: [private]
 ```
 
 ```Go
@@ -638,6 +704,7 @@ func TestAddSubUint(t *testing.T)
 
 ```
 searchKey: bits_test.TestAddSubUint32
+tags: [private]
 ```
 
 ```Go
@@ -648,6 +715,7 @@ func TestAddSubUint32(t *testing.T)
 
 ```
 searchKey: bits_test.TestAddSubUint64
+tags: [private]
 ```
 
 ```Go
@@ -658,6 +726,7 @@ func TestAddSubUint64(t *testing.T)
 
 ```
 searchKey: bits_test.TestAdd64OverflowPanic
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +737,7 @@ func TestAdd64OverflowPanic(t *testing.T)
 
 ```
 searchKey: bits_test.TestSub64OverflowPanic
+tags: [private]
 ```
 
 ```Go
@@ -678,6 +748,7 @@ func TestSub64OverflowPanic(t *testing.T)
 
 ```
 searchKey: bits_test.TestMulDiv
+tags: [private]
 ```
 
 ```Go
@@ -688,6 +759,7 @@ func TestMulDiv(t *testing.T)
 
 ```
 searchKey: bits_test.TestMulDiv32
+tags: [private]
 ```
 
 ```Go
@@ -698,6 +770,7 @@ func TestMulDiv32(t *testing.T)
 
 ```
 searchKey: bits_test.TestMulDiv64
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +781,7 @@ func TestMulDiv64(t *testing.T)
 
 ```
 searchKey: bits_test.TestDivPanicOverflow
+tags: [private]
 ```
 
 ```Go
@@ -718,6 +792,7 @@ func TestDivPanicOverflow(t *testing.T)
 
 ```
 searchKey: bits_test.TestDiv32PanicOverflow
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +803,7 @@ func TestDiv32PanicOverflow(t *testing.T)
 
 ```
 searchKey: bits_test.TestDiv64PanicOverflow
+tags: [private]
 ```
 
 ```Go
@@ -738,6 +814,7 @@ func TestDiv64PanicOverflow(t *testing.T)
 
 ```
 searchKey: bits_test.TestDivPanicZero
+tags: [private]
 ```
 
 ```Go
@@ -748,6 +825,7 @@ func TestDivPanicZero(t *testing.T)
 
 ```
 searchKey: bits_test.TestDiv32PanicZero
+tags: [private]
 ```
 
 ```Go
@@ -758,6 +836,7 @@ func TestDiv32PanicZero(t *testing.T)
 
 ```
 searchKey: bits_test.TestDiv64PanicZero
+tags: [private]
 ```
 
 ```Go
@@ -768,6 +847,7 @@ func TestDiv64PanicZero(t *testing.T)
 
 ```
 searchKey: bits_test.TestRem32
+tags: [private]
 ```
 
 ```Go
@@ -778,6 +858,7 @@ func TestRem32(t *testing.T)
 
 ```
 searchKey: bits_test.TestRem32Overflow
+tags: [private]
 ```
 
 ```Go
@@ -788,6 +869,7 @@ func TestRem32Overflow(t *testing.T)
 
 ```
 searchKey: bits_test.TestRem64
+tags: [private]
 ```
 
 ```Go
@@ -798,6 +880,7 @@ func TestRem64(t *testing.T)
 
 ```
 searchKey: bits_test.TestRem64Overflow
+tags: [private]
 ```
 
 ```Go
@@ -808,6 +891,7 @@ func TestRem64Overflow(t *testing.T)
 
 ```
 searchKey: bits_test.BenchmarkAdd
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +902,7 @@ func BenchmarkAdd(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkAdd32
+tags: [private]
 ```
 
 ```Go
@@ -828,6 +913,7 @@ func BenchmarkAdd32(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkAdd64
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +924,7 @@ func BenchmarkAdd64(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkAdd64multiple
+tags: [private]
 ```
 
 ```Go
@@ -848,6 +935,7 @@ func BenchmarkAdd64multiple(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkSub
+tags: [private]
 ```
 
 ```Go
@@ -858,6 +946,7 @@ func BenchmarkSub(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkSub32
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +957,7 @@ func BenchmarkSub32(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkSub64
+tags: [private]
 ```
 
 ```Go
@@ -878,6 +968,7 @@ func BenchmarkSub64(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkSub64multiple
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +979,7 @@ func BenchmarkSub64multiple(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkMul
+tags: [private]
 ```
 
 ```Go
@@ -898,6 +990,7 @@ func BenchmarkMul(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkMul32
+tags: [private]
 ```
 
 ```Go
@@ -908,6 +1001,7 @@ func BenchmarkMul32(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkMul64
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +1012,7 @@ func BenchmarkMul64(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkDiv
+tags: [private]
 ```
 
 ```Go
@@ -928,6 +1023,7 @@ func BenchmarkDiv(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkDiv32
+tags: [private]
 ```
 
 ```Go
@@ -938,16 +1034,18 @@ func BenchmarkDiv32(b *testing.B)
 
 ```
 searchKey: bits_test.BenchmarkDiv64
+tags: [private]
 ```
 
 ```Go
 func BenchmarkDiv64(b *testing.B)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.bits_test.go" href="#init.bits_test.go">func init()</a>
 
 ```
 searchKey: bits_test.init
+tags: [private]
 ```
 
 ```Go
@@ -958,6 +1056,7 @@ func init()
 
 ```
 searchKey: bits_test.ExampleLeadingZeros8
+tags: [private]
 ```
 
 ```Go
@@ -968,6 +1067,7 @@ func ExampleLeadingZeros8()
 
 ```
 searchKey: bits_test.ExampleLeadingZeros16
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1078,7 @@ func ExampleLeadingZeros16()
 
 ```
 searchKey: bits_test.ExampleLeadingZeros32
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +1089,7 @@ func ExampleLeadingZeros32()
 
 ```
 searchKey: bits_test.ExampleLeadingZeros64
+tags: [private]
 ```
 
 ```Go
@@ -998,6 +1100,7 @@ func ExampleLeadingZeros64()
 
 ```
 searchKey: bits_test.ExampleTrailingZeros8
+tags: [private]
 ```
 
 ```Go
@@ -1008,6 +1111,7 @@ func ExampleTrailingZeros8()
 
 ```
 searchKey: bits_test.ExampleTrailingZeros16
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1122,7 @@ func ExampleTrailingZeros16()
 
 ```
 searchKey: bits_test.ExampleTrailingZeros32
+tags: [private]
 ```
 
 ```Go
@@ -1028,6 +1133,7 @@ func ExampleTrailingZeros32()
 
 ```
 searchKey: bits_test.ExampleTrailingZeros64
+tags: [private]
 ```
 
 ```Go
@@ -1038,6 +1144,7 @@ func ExampleTrailingZeros64()
 
 ```
 searchKey: bits_test.ExampleOnesCount
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1155,7 @@ func ExampleOnesCount()
 
 ```
 searchKey: bits_test.ExampleOnesCount8
+tags: [private]
 ```
 
 ```Go
@@ -1058,6 +1166,7 @@ func ExampleOnesCount8()
 
 ```
 searchKey: bits_test.ExampleOnesCount16
+tags: [private]
 ```
 
 ```Go
@@ -1068,6 +1177,7 @@ func ExampleOnesCount16()
 
 ```
 searchKey: bits_test.ExampleOnesCount32
+tags: [private]
 ```
 
 ```Go
@@ -1078,6 +1188,7 @@ func ExampleOnesCount32()
 
 ```
 searchKey: bits_test.ExampleOnesCount64
+tags: [private]
 ```
 
 ```Go
@@ -1088,6 +1199,7 @@ func ExampleOnesCount64()
 
 ```
 searchKey: bits_test.ExampleRotateLeft8
+tags: [private]
 ```
 
 ```Go
@@ -1098,6 +1210,7 @@ func ExampleRotateLeft8()
 
 ```
 searchKey: bits_test.ExampleRotateLeft16
+tags: [private]
 ```
 
 ```Go
@@ -1108,6 +1221,7 @@ func ExampleRotateLeft16()
 
 ```
 searchKey: bits_test.ExampleRotateLeft32
+tags: [private]
 ```
 
 ```Go
@@ -1118,6 +1232,7 @@ func ExampleRotateLeft32()
 
 ```
 searchKey: bits_test.ExampleRotateLeft64
+tags: [private]
 ```
 
 ```Go
@@ -1128,6 +1243,7 @@ func ExampleRotateLeft64()
 
 ```
 searchKey: bits_test.ExampleReverse8
+tags: [private]
 ```
 
 ```Go
@@ -1138,6 +1254,7 @@ func ExampleReverse8()
 
 ```
 searchKey: bits_test.ExampleReverse16
+tags: [private]
 ```
 
 ```Go
@@ -1148,6 +1265,7 @@ func ExampleReverse16()
 
 ```
 searchKey: bits_test.ExampleReverse32
+tags: [private]
 ```
 
 ```Go
@@ -1158,6 +1276,7 @@ func ExampleReverse32()
 
 ```
 searchKey: bits_test.ExampleReverse64
+tags: [private]
 ```
 
 ```Go
@@ -1168,6 +1287,7 @@ func ExampleReverse64()
 
 ```
 searchKey: bits_test.ExampleReverseBytes16
+tags: [private]
 ```
 
 ```Go
@@ -1178,6 +1298,7 @@ func ExampleReverseBytes16()
 
 ```
 searchKey: bits_test.ExampleReverseBytes32
+tags: [private]
 ```
 
 ```Go
@@ -1188,6 +1309,7 @@ func ExampleReverseBytes32()
 
 ```
 searchKey: bits_test.ExampleReverseBytes64
+tags: [private]
 ```
 
 ```Go
@@ -1198,6 +1320,7 @@ func ExampleReverseBytes64()
 
 ```
 searchKey: bits_test.ExampleLen8
+tags: [private]
 ```
 
 ```Go
@@ -1208,6 +1331,7 @@ func ExampleLen8()
 
 ```
 searchKey: bits_test.ExampleLen16
+tags: [private]
 ```
 
 ```Go
@@ -1218,6 +1342,7 @@ func ExampleLen16()
 
 ```
 searchKey: bits_test.ExampleLen32
+tags: [private]
 ```
 
 ```Go
@@ -1228,6 +1353,7 @@ func ExampleLen32()
 
 ```
 searchKey: bits_test.ExampleLen64
+tags: [private]
 ```
 
 ```Go

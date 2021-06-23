@@ -4,7 +4,9 @@
     "identifier": "vcs",
     "newPage": true,
     "searchKey": "internal/vcs",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "usernameRe",
                 "newPage": false,
                 "searchKey": "vcs.usernameRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "urlRe",
                 "newPage": false,
                 "searchKey": "vcs.urlRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "repoRe",
                 "newPage": false,
                 "searchKey": "vcs.repoRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "formatStdlib",
                 "newPage": false,
                 "searchKey": "vcs.formatStdlib",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "formatRsync",
                 "newPage": false,
                 "searchKey": "vcs.formatRsync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -140,7 +154,9 @@
                 "identifier": "formatLocal",
                 "newPage": false,
                 "searchKey": "vcs.formatLocal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -163,7 +179,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "schemes",
                 "newPage": false,
                 "searchKey": "vcs.schemes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -201,7 +221,9 @@
                 "identifier": "scpSyntax",
                 "newPage": false,
                 "searchKey": "vcs.scpSyntax",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +246,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -242,9 +266,7 @@
                 "identifier": "RepoNotExistError",
                 "newPage": false,
                 "searchKey": "vcs.RepoNotExistError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -262,9 +284,7 @@
                       "identifier": "RepoNotExistError.NotFound",
                       "newPage": false,
                       "searchKey": "vcs.RepoNotExistError.NotFound",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -284,9 +304,7 @@
                       "identifier": "RepoNotExistError.Error",
                       "newPage": false,
                       "searchKey": "vcs.RepoNotExistError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -309,9 +327,7 @@
                 "identifier": "URL",
                 "newPage": false,
                 "searchKey": "vcs.URL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -329,9 +345,7 @@
                       "identifier": "ParseURL",
                       "newPage": false,
                       "searchKey": "vcs.ParseURL",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -351,7 +365,9 @@
                       "identifier": "parseScheme",
                       "newPage": false,
                       "searchKey": "vcs.parseScheme",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -371,7 +387,9 @@
                       "identifier": "parseScp",
                       "newPage": false,
                       "searchKey": "vcs.parseScp",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -391,7 +409,9 @@
                       "identifier": "parseLocal",
                       "newPage": false,
                       "searchKey": "vcs.parseLocal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -411,9 +431,7 @@
                       "identifier": "URL.String",
                       "newPage": false,
                       "searchKey": "vcs.URL.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -433,9 +451,7 @@
                       "identifier": "URL.IsSSH",
                       "newPage": false,
                       "searchKey": "vcs.URL.IsSSH",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -458,7 +474,9 @@
                 "identifier": "urlFormat",
                 "newPage": false,
                 "searchKey": "vcs.urlFormat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -481,7 +499,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -499,9 +519,7 @@
                 "identifier": "IsRepoNotExist",
                 "newPage": false,
                 "searchKey": "vcs.IsRepoNotExist",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -521,9 +539,7 @@
                 "identifier": "IsCloneInProgress",
                 "newPage": false,
                 "searchKey": "vcs.IsCloneInProgress",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -543,7 +559,9 @@
                 "identifier": "TestParseURL",
                 "newPage": false,
                 "searchKey": "vcs.TestParseURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

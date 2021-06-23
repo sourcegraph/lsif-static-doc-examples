@@ -422,14 +422,11 @@ This package does not guarantee bit-identical results across architectures.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="uvnan" href="#uvnan">const uvnan</a>
 
 ```
 searchKey: math.uvnan
+tags: [private]
 ```
 
 ```Go
@@ -440,6 +437,7 @@ const uvnan = 0x7FF8000000000001
 
 ```
 searchKey: math.uvinf
+tags: [private]
 ```
 
 ```Go
@@ -450,6 +448,7 @@ const uvinf = 0x7FF0000000000000
 
 ```
 searchKey: math.uvneginf
+tags: [private]
 ```
 
 ```Go
@@ -460,6 +459,7 @@ const uvneginf = 0xFFF0000000000000
 
 ```
 searchKey: math.uvone
+tags: [private]
 ```
 
 ```Go
@@ -470,6 +470,7 @@ const uvone = 0x3FF0000000000000
 
 ```
 searchKey: math.mask
+tags: [private]
 ```
 
 ```Go
@@ -480,6 +481,7 @@ const mask = 0x7FF
 
 ```
 searchKey: math.shift
+tags: [private]
 ```
 
 ```Go
@@ -490,6 +492,7 @@ const shift = 64 - 11 - 1
 
 ```
 searchKey: math.bias
+tags: [private]
 ```
 
 ```Go
@@ -500,6 +503,7 @@ const bias = 1023
 
 ```
 searchKey: math.signMask
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +514,7 @@ const signMask = 1 << 63
 
 ```
 searchKey: math.fracMask
+tags: [private]
 ```
 
 ```Go
@@ -520,7 +525,6 @@ const fracMask = 1<<shift - 1
 
 ```
 searchKey: math.E
-tags: [exported]
 ```
 
 ```Go
@@ -534,7 +538,6 @@ Mathematical constants.
 
 ```
 searchKey: math.Pi
-tags: [exported]
 ```
 
 ```Go
@@ -548,7 +551,6 @@ Mathematical constants.
 
 ```
 searchKey: math.Phi
-tags: [exported]
 ```
 
 ```Go
@@ -562,7 +564,6 @@ Mathematical constants.
 
 ```
 searchKey: math.Sqrt2
-tags: [exported]
 ```
 
 ```Go
@@ -576,7 +577,6 @@ Mathematical constants.
 
 ```
 searchKey: math.SqrtE
-tags: [exported]
 ```
 
 ```Go
@@ -590,7 +590,6 @@ Mathematical constants.
 
 ```
 searchKey: math.SqrtPi
-tags: [exported]
 ```
 
 ```Go
@@ -604,7 +603,6 @@ Mathematical constants.
 
 ```
 searchKey: math.SqrtPhi
-tags: [exported]
 ```
 
 ```Go
@@ -618,7 +616,6 @@ Mathematical constants.
 
 ```
 searchKey: math.Ln2
-tags: [exported]
 ```
 
 ```Go
@@ -632,7 +629,6 @@ Mathematical constants.
 
 ```
 searchKey: math.Log2E
-tags: [exported]
 ```
 
 ```Go
@@ -645,7 +641,6 @@ Mathematical constants.
 
 ```
 searchKey: math.Ln10
-tags: [exported]
 ```
 
 ```Go
@@ -659,7 +654,6 @@ Mathematical constants.
 
 ```
 searchKey: math.Log10E
-tags: [exported]
 ```
 
 ```Go
@@ -672,7 +666,6 @@ Mathematical constants.
 
 ```
 searchKey: math.MaxFloat32
-tags: [exported]
 ```
 
 ```Go
@@ -686,7 +679,6 @@ Floating-point limit values. Max is the largest finite value representable by th
 
 ```
 searchKey: math.SmallestNonzeroFloat32
-tags: [exported]
 ```
 
 ```Go
@@ -700,7 +692,6 @@ Floating-point limit values. Max is the largest finite value representable by th
 
 ```
 searchKey: math.MaxFloat64
-tags: [exported]
 ```
 
 ```Go
@@ -714,7 +705,6 @@ Floating-point limit values. Max is the largest finite value representable by th
 
 ```
 searchKey: math.SmallestNonzeroFloat64
-tags: [exported]
 ```
 
 ```Go
@@ -728,6 +718,7 @@ Floating-point limit values. Max is the largest finite value representable by th
 
 ```
 searchKey: math.intSize
+tags: [private]
 ```
 
 ```Go
@@ -741,7 +732,6 @@ Integer limit values.
 
 ```
 searchKey: math.MaxInt
-tags: [exported]
 ```
 
 ```Go
@@ -754,7 +744,6 @@ Integer limit values.
 
 ```
 searchKey: math.MinInt
-tags: [exported]
 ```
 
 ```Go
@@ -767,7 +756,6 @@ Integer limit values.
 
 ```
 searchKey: math.MaxInt8
-tags: [exported]
 ```
 
 ```Go
@@ -780,7 +768,6 @@ Integer limit values.
 
 ```
 searchKey: math.MinInt8
-tags: [exported]
 ```
 
 ```Go
@@ -793,7 +780,6 @@ Integer limit values.
 
 ```
 searchKey: math.MaxInt16
-tags: [exported]
 ```
 
 ```Go
@@ -806,7 +792,6 @@ Integer limit values.
 
 ```
 searchKey: math.MinInt16
-tags: [exported]
 ```
 
 ```Go
@@ -819,7 +804,6 @@ Integer limit values.
 
 ```
 searchKey: math.MaxInt32
-tags: [exported]
 ```
 
 ```Go
@@ -832,7 +816,6 @@ Integer limit values.
 
 ```
 searchKey: math.MinInt32
-tags: [exported]
 ```
 
 ```Go
@@ -845,7 +828,6 @@ Integer limit values.
 
 ```
 searchKey: math.MaxInt64
-tags: [exported]
 ```
 
 ```Go
@@ -858,7 +840,6 @@ Integer limit values.
 
 ```
 searchKey: math.MinInt64
-tags: [exported]
 ```
 
 ```Go
@@ -871,7 +852,6 @@ Integer limit values.
 
 ```
 searchKey: math.MaxUint
-tags: [exported]
 ```
 
 ```Go
@@ -884,7 +864,6 @@ Integer limit values.
 
 ```
 searchKey: math.MaxUint8
-tags: [exported]
 ```
 
 ```Go
@@ -897,7 +876,6 @@ Integer limit values.
 
 ```
 searchKey: math.MaxUint16
-tags: [exported]
 ```
 
 ```Go
@@ -910,7 +888,6 @@ Integer limit values.
 
 ```
 searchKey: math.MaxUint32
-tags: [exported]
 ```
 
 ```Go
@@ -923,7 +900,6 @@ Integer limit values.
 
 ```
 searchKey: math.MaxUint64
-tags: [exported]
 ```
 
 ```Go
@@ -936,6 +912,7 @@ Integer limit values.
 
 ```
 searchKey: math.haveArchMax
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +923,7 @@ const haveArchMax = true
 
 ```
 searchKey: math.haveArchMin
+tags: [private]
 ```
 
 ```Go
@@ -956,6 +934,7 @@ const haveArchMin = true
 
 ```
 searchKey: math.erx
+tags: [private]
 ```
 
 ```Go
@@ -967,6 +946,7 @@ const erx = 8.45062911510467529297e-01 // 0x3FEB0AC160000000
 
 ```
 searchKey: math.efx
+tags: [private]
 ```
 
 ```Go
@@ -980,6 +960,7 @@ Coefficients for approximation to  erf in [0, 0.84375]
 
 ```
 searchKey: math.efx8
+tags: [private]
 ```
 
 ```Go
@@ -991,6 +972,7 @@ const efx8 = 1.02703333676410069053e+00 // 0x3FF06EBA8214DB69
 
 ```
 searchKey: math.pp0
+tags: [private]
 ```
 
 ```Go
@@ -1002,6 +984,7 @@ const pp0 = 1.28379167095512558561e-01 // 0x3FC06EBA8214DB68
 
 ```
 searchKey: math.pp1
+tags: [private]
 ```
 
 ```Go
@@ -1013,6 +996,7 @@ const pp1 = -3.25042107247001499370e-01 // 0xBFD4CD7D691CB913
 
 ```
 searchKey: math.pp2
+tags: [private]
 ```
 
 ```Go
@@ -1024,6 +1008,7 @@ const pp2 = -2.84817495755985104766e-02 // 0xBF9D2A51DBD7194F
 
 ```
 searchKey: math.pp3
+tags: [private]
 ```
 
 ```Go
@@ -1035,6 +1020,7 @@ const pp3 = -5.77027029648944159157e-03 // 0xBF77A291236668E4
 
 ```
 searchKey: math.pp4
+tags: [private]
 ```
 
 ```Go
@@ -1046,6 +1032,7 @@ const pp4 = -2.37630166566501626084e-05 // 0xBEF8EAD6120016AC
 
 ```
 searchKey: math.qq1
+tags: [private]
 ```
 
 ```Go
@@ -1057,6 +1044,7 @@ const qq1 = 3.97917223959155352819e-01 // 0x3FD97779CDDADC09
 
 ```
 searchKey: math.qq2
+tags: [private]
 ```
 
 ```Go
@@ -1068,6 +1056,7 @@ const qq2 = 6.50222499887672944485e-02 // 0x3FB0A54C5536CEBA
 
 ```
 searchKey: math.qq3
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1068,7 @@ const qq3 = 5.08130628187576562776e-03 // 0x3F74D022C4D36B0F
 
 ```
 searchKey: math.qq4
+tags: [private]
 ```
 
 ```Go
@@ -1090,6 +1080,7 @@ const qq4 = 1.32494738004321644526e-04 // 0x3F215DC9221C1A10
 
 ```
 searchKey: math.qq5
+tags: [private]
 ```
 
 ```Go
@@ -1101,6 +1092,7 @@ const qq5 = -3.96022827877536812320e-06 // 0xBED09C4342A26120
 
 ```
 searchKey: math.pa0
+tags: [private]
 ```
 
 ```Go
@@ -1114,6 +1106,7 @@ Coefficients for approximation to  erf  in [0.84375, 1.25]
 
 ```
 searchKey: math.pa1
+tags: [private]
 ```
 
 ```Go
@@ -1125,6 +1118,7 @@ const pa1 = 4.14856118683748331666e-01 // 0x3FDA8D00AD92B34D
 
 ```
 searchKey: math.pa2
+tags: [private]
 ```
 
 ```Go
@@ -1136,6 +1130,7 @@ const pa2 = -3.72207876035701323847e-01 // 0xBFD7D240FBB8C3F1
 
 ```
 searchKey: math.pa3
+tags: [private]
 ```
 
 ```Go
@@ -1147,6 +1142,7 @@ const pa3 = 3.18346619901161753674e-01 // 0x3FD45FCA805120E4
 
 ```
 searchKey: math.pa4
+tags: [private]
 ```
 
 ```Go
@@ -1158,6 +1154,7 @@ const pa4 = -1.10894694282396677476e-01 // 0xBFBC63983D3E28EC
 
 ```
 searchKey: math.pa5
+tags: [private]
 ```
 
 ```Go
@@ -1169,6 +1166,7 @@ const pa5 = 3.54783043256182359371e-02 // 0x3FA22A36599795EB
 
 ```
 searchKey: math.pa6
+tags: [private]
 ```
 
 ```Go
@@ -1180,6 +1178,7 @@ const pa6 = -2.16637559486879084300e-03 // 0xBF61BF380A96073F
 
 ```
 searchKey: math.qa1
+tags: [private]
 ```
 
 ```Go
@@ -1191,6 +1190,7 @@ const qa1 = 1.06420880400844228286e-01 // 0x3FBB3E6618EEE323
 
 ```
 searchKey: math.qa2
+tags: [private]
 ```
 
 ```Go
@@ -1202,6 +1202,7 @@ const qa2 = 5.40397917702171048937e-01 // 0x3FE14AF092EB6F33
 
 ```
 searchKey: math.qa3
+tags: [private]
 ```
 
 ```Go
@@ -1213,6 +1214,7 @@ const qa3 = 7.18286544141962662868e-02 // 0x3FB2635CD99FE9A7
 
 ```
 searchKey: math.qa4
+tags: [private]
 ```
 
 ```Go
@@ -1224,6 +1226,7 @@ const qa4 = 1.26171219808761642112e-01 // 0x3FC02660E763351F
 
 ```
 searchKey: math.qa5
+tags: [private]
 ```
 
 ```Go
@@ -1235,6 +1238,7 @@ const qa5 = 1.36370839120290507362e-02 // 0x3F8BEDC26B51DD1C
 
 ```
 searchKey: math.qa6
+tags: [private]
 ```
 
 ```Go
@@ -1246,6 +1250,7 @@ const qa6 = 1.19844998467991074170e-02 // 0x3F888B545735151D
 
 ```
 searchKey: math.ra0
+tags: [private]
 ```
 
 ```Go
@@ -1259,6 +1264,7 @@ Coefficients for approximation to  erfc in [1.25, 1/0.35]
 
 ```
 searchKey: math.ra1
+tags: [private]
 ```
 
 ```Go
@@ -1270,6 +1276,7 @@ const ra1 = -6.93858572707181764372e-01 // 0xBFE63416E4BA7360
 
 ```
 searchKey: math.ra2
+tags: [private]
 ```
 
 ```Go
@@ -1281,6 +1288,7 @@ const ra2 = -1.05586262253232909814e+01 // 0xC0251E0441B0E726
 
 ```
 searchKey: math.ra3
+tags: [private]
 ```
 
 ```Go
@@ -1292,6 +1300,7 @@ const ra3 = -6.23753324503260060396e+01 // 0xC04F300AE4CBA38D
 
 ```
 searchKey: math.ra4
+tags: [private]
 ```
 
 ```Go
@@ -1303,6 +1312,7 @@ const ra4 = -1.62396669462573470355e+02 // 0xC0644CB184282266
 
 ```
 searchKey: math.ra5
+tags: [private]
 ```
 
 ```Go
@@ -1314,6 +1324,7 @@ const ra5 = -1.84605092906711035994e+02 // 0xC067135CEBCCABB2
 
 ```
 searchKey: math.ra6
+tags: [private]
 ```
 
 ```Go
@@ -1325,6 +1336,7 @@ const ra6 = -8.12874355063065934246e+01 // 0xC054526557E4D2F2
 
 ```
 searchKey: math.ra7
+tags: [private]
 ```
 
 ```Go
@@ -1336,6 +1348,7 @@ const ra7 = -9.81432934416914548592e+00 // 0xC023A0EFC69AC25C
 
 ```
 searchKey: math.sa1
+tags: [private]
 ```
 
 ```Go
@@ -1347,6 +1360,7 @@ const sa1 = 1.96512716674392571292e+01 // 0x4033A6B9BD707687
 
 ```
 searchKey: math.sa2
+tags: [private]
 ```
 
 ```Go
@@ -1358,6 +1372,7 @@ const sa2 = 1.37657754143519042600e+02 // 0x4061350C526AE721
 
 ```
 searchKey: math.sa3
+tags: [private]
 ```
 
 ```Go
@@ -1369,6 +1384,7 @@ const sa3 = 4.34565877475229228821e+02 // 0x407B290DD58A1A71
 
 ```
 searchKey: math.sa4
+tags: [private]
 ```
 
 ```Go
@@ -1380,6 +1396,7 @@ const sa4 = 6.45387271733267880336e+02 // 0x40842B1921EC2868
 
 ```
 searchKey: math.sa5
+tags: [private]
 ```
 
 ```Go
@@ -1391,6 +1408,7 @@ const sa5 = 4.29008140027567833386e+02 // 0x407AD02157700314
 
 ```
 searchKey: math.sa6
+tags: [private]
 ```
 
 ```Go
@@ -1402,6 +1420,7 @@ const sa6 = 1.08635005541779435134e+02 // 0x405B28A3EE48AE2C
 
 ```
 searchKey: math.sa7
+tags: [private]
 ```
 
 ```Go
@@ -1413,6 +1432,7 @@ const sa7 = 6.57024977031928170135e+00 // 0x401A47EF8E484A93
 
 ```
 searchKey: math.sa8
+tags: [private]
 ```
 
 ```Go
@@ -1424,6 +1444,7 @@ const sa8 = -6.04244152148580987438e-02 // 0xBFAEEFF2EE749A62
 
 ```
 searchKey: math.rb0
+tags: [private]
 ```
 
 ```Go
@@ -1437,6 +1458,7 @@ Coefficients for approximation to  erfc in [1/.35, 28]
 
 ```
 searchKey: math.rb1
+tags: [private]
 ```
 
 ```Go
@@ -1448,6 +1470,7 @@ const rb1 = -7.99283237680523006574e-01 // 0xBFE993BA70C285DE
 
 ```
 searchKey: math.rb2
+tags: [private]
 ```
 
 ```Go
@@ -1459,6 +1482,7 @@ const rb2 = -1.77579549177547519889e+01 // 0xC031C209555F995A
 
 ```
 searchKey: math.rb3
+tags: [private]
 ```
 
 ```Go
@@ -1470,6 +1494,7 @@ const rb3 = -1.60636384855821916062e+02 // 0xC064145D43C5ED98
 
 ```
 searchKey: math.rb4
+tags: [private]
 ```
 
 ```Go
@@ -1481,6 +1506,7 @@ const rb4 = -6.37566443368389627722e+02 // 0xC083EC881375F228
 
 ```
 searchKey: math.rb5
+tags: [private]
 ```
 
 ```Go
@@ -1492,6 +1518,7 @@ const rb5 = -1.02509513161107724954e+03 // 0xC09004616A2E5992
 
 ```
 searchKey: math.rb6
+tags: [private]
 ```
 
 ```Go
@@ -1503,6 +1530,7 @@ const rb6 = -4.83519191608651397019e+02 // 0xC07E384E9BDC383F
 
 ```
 searchKey: math.sb1
+tags: [private]
 ```
 
 ```Go
@@ -1514,6 +1542,7 @@ const sb1 = 3.03380607434824582924e+01 // 0x403E568B261D5190
 
 ```
 searchKey: math.sb2
+tags: [private]
 ```
 
 ```Go
@@ -1525,6 +1554,7 @@ const sb2 = 3.25792512996573918826e+02 // 0x40745CAE221B9F0A
 
 ```
 searchKey: math.sb3
+tags: [private]
 ```
 
 ```Go
@@ -1536,6 +1566,7 @@ const sb3 = 1.53672958608443695994e+03 // 0x409802EB189D5118
 
 ```
 searchKey: math.sb4
+tags: [private]
 ```
 
 ```Go
@@ -1547,6 +1578,7 @@ const sb4 = 3.19985821950859553908e+03 // 0x40A8FFB7688C246A
 
 ```
 searchKey: math.sb5
+tags: [private]
 ```
 
 ```Go
@@ -1558,6 +1590,7 @@ const sb5 = 2.55305040643316442583e+03 // 0x40A3F219CEDF3BE6
 
 ```
 searchKey: math.sb6
+tags: [private]
 ```
 
 ```Go
@@ -1569,6 +1602,7 @@ const sb6 = 4.74528541206955367215e+02 // 0x407DA874E79FE763
 
 ```
 searchKey: math.sb7
+tags: [private]
 ```
 
 ```Go
@@ -1580,6 +1614,7 @@ const sb7 = -2.24409524465858183362e+01 // 0xC03670E242712D62
 
 ```
 searchKey: math.a0
+tags: [private]
 ```
 
 ```Go
@@ -1592,6 +1627,7 @@ Coefficients for approximation to erf in |x| <= 0.85
 
 ```
 searchKey: math.a1
+tags: [private]
 ```
 
 ```Go
@@ -1602,6 +1638,7 @@ const a1 = 4.7072688112383978012285e1
 
 ```
 searchKey: math.a2
+tags: [private]
 ```
 
 ```Go
@@ -1612,6 +1649,7 @@ const a2 = 6.9706266534389598238465e2
 
 ```
 searchKey: math.a3
+tags: [private]
 ```
 
 ```Go
@@ -1622,6 +1660,7 @@ const a3 = 4.8548868893843886794648e3
 
 ```
 searchKey: math.a4
+tags: [private]
 ```
 
 ```Go
@@ -1632,6 +1671,7 @@ const a4 = 1.6235862515167575384252e4
 
 ```
 searchKey: math.a5
+tags: [private]
 ```
 
 ```Go
@@ -1642,6 +1682,7 @@ const a5 = 2.3782041382114385731252e4
 
 ```
 searchKey: math.a6
+tags: [private]
 ```
 
 ```Go
@@ -1652,6 +1693,7 @@ const a6 = 1.1819493347062294404278e4
 
 ```
 searchKey: math.a7
+tags: [private]
 ```
 
 ```Go
@@ -1662,6 +1704,7 @@ const a7 = 8.8709406962545514830200e2
 
 ```
 searchKey: math.b0
+tags: [private]
 ```
 
 ```Go
@@ -1672,6 +1715,7 @@ const b0 = 1.0000000000000000000e0
 
 ```
 searchKey: math.b1
+tags: [private]
 ```
 
 ```Go
@@ -1682,6 +1726,7 @@ const b1 = 4.2313330701600911252e1
 
 ```
 searchKey: math.b2
+tags: [private]
 ```
 
 ```Go
@@ -1692,6 +1737,7 @@ const b2 = 6.8718700749205790830e2
 
 ```
 searchKey: math.b3
+tags: [private]
 ```
 
 ```Go
@@ -1702,6 +1748,7 @@ const b3 = 5.3941960214247511077e3
 
 ```
 searchKey: math.b4
+tags: [private]
 ```
 
 ```Go
@@ -1712,6 +1759,7 @@ const b4 = 2.1213794301586595867e4
 
 ```
 searchKey: math.b5
+tags: [private]
 ```
 
 ```Go
@@ -1722,6 +1770,7 @@ const b5 = 3.9307895800092710610e4
 
 ```
 searchKey: math.b6
+tags: [private]
 ```
 
 ```Go
@@ -1732,6 +1781,7 @@ const b6 = 2.8729085735721942674e4
 
 ```
 searchKey: math.b7
+tags: [private]
 ```
 
 ```Go
@@ -1742,6 +1792,7 @@ const b7 = 5.2264952788528545610e3
 
 ```
 searchKey: math.c0
+tags: [private]
 ```
 
 ```Go
@@ -1754,6 +1805,7 @@ Coefficients for approximation to erf in 0.85 < |x| <= 1-2*exp(-25)
 
 ```
 searchKey: math.c1
+tags: [private]
 ```
 
 ```Go
@@ -1764,6 +1816,7 @@ const c1 = 4.63033784615654529590e0
 
 ```
 searchKey: math.c2
+tags: [private]
 ```
 
 ```Go
@@ -1774,6 +1827,7 @@ const c2 = 5.76949722146069140550e0
 
 ```
 searchKey: math.c3
+tags: [private]
 ```
 
 ```Go
@@ -1784,6 +1838,7 @@ const c3 = 3.64784832476320460504e0
 
 ```
 searchKey: math.c4
+tags: [private]
 ```
 
 ```Go
@@ -1794,6 +1849,7 @@ const c4 = 1.27045825245236838258e0
 
 ```
 searchKey: math.c5
+tags: [private]
 ```
 
 ```Go
@@ -1804,6 +1860,7 @@ const c5 = 2.41780725177450611770e-1
 
 ```
 searchKey: math.c6
+tags: [private]
 ```
 
 ```Go
@@ -1814,6 +1871,7 @@ const c6 = 2.27238449892691845833e-2
 
 ```
 searchKey: math.c7
+tags: [private]
 ```
 
 ```Go
@@ -1824,6 +1882,7 @@ const c7 = 7.74545014278341407640e-4
 
 ```
 searchKey: math.d0
+tags: [private]
 ```
 
 ```Go
@@ -1834,6 +1893,7 @@ const d0 = 1.4142135623730950488016887e0
 
 ```
 searchKey: math.d1
+tags: [private]
 ```
 
 ```Go
@@ -1844,6 +1904,7 @@ const d1 = 2.9036514445419946173133295e0
 
 ```
 searchKey: math.d2
+tags: [private]
 ```
 
 ```Go
@@ -1854,6 +1915,7 @@ const d2 = 2.3707661626024532365971225e0
 
 ```
 searchKey: math.d3
+tags: [private]
 ```
 
 ```Go
@@ -1864,6 +1926,7 @@ const d3 = 9.7547832001787427186894837e-1
 
 ```
 searchKey: math.d4
+tags: [private]
 ```
 
 ```Go
@@ -1874,6 +1937,7 @@ const d4 = 2.0945065210512749128288442e-1
 
 ```
 searchKey: math.d5
+tags: [private]
 ```
 
 ```Go
@@ -1884,6 +1948,7 @@ const d5 = 2.1494160384252876777097297e-2
 
 ```
 searchKey: math.d6
+tags: [private]
 ```
 
 ```Go
@@ -1894,6 +1959,7 @@ const d6 = 7.7441459065157709165577218e-4
 
 ```
 searchKey: math.d7
+tags: [private]
 ```
 
 ```Go
@@ -1904,6 +1970,7 @@ const d7 = 1.4859850019840355905497876e-9
 
 ```
 searchKey: math.e0
+tags: [private]
 ```
 
 ```Go
@@ -1916,6 +1983,7 @@ Coefficients for approximation to erf in 1-2*exp(-25) < |x| < 1
 
 ```
 searchKey: math.e1
+tags: [private]
 ```
 
 ```Go
@@ -1926,6 +1994,7 @@ const e1 = 5.46378491116411436990e0
 
 ```
 searchKey: math.e2
+tags: [private]
 ```
 
 ```Go
@@ -1936,6 +2005,7 @@ const e2 = 1.78482653991729133580e0
 
 ```
 searchKey: math.e3
+tags: [private]
 ```
 
 ```Go
@@ -1946,6 +2016,7 @@ const e3 = 2.96560571828504891230e-1
 
 ```
 searchKey: math.e4
+tags: [private]
 ```
 
 ```Go
@@ -1956,6 +2027,7 @@ const e4 = 2.65321895265761230930e-2
 
 ```
 searchKey: math.e5
+tags: [private]
 ```
 
 ```Go
@@ -1966,6 +2038,7 @@ const e5 = 1.24266094738807843860e-3
 
 ```
 searchKey: math.e6
+tags: [private]
 ```
 
 ```Go
@@ -1976,6 +2049,7 @@ const e6 = 2.71155556874348757815e-5
 
 ```
 searchKey: math.e7
+tags: [private]
 ```
 
 ```Go
@@ -1986,6 +2060,7 @@ const e7 = 2.01033439929228813265e-7
 
 ```
 searchKey: math.f0
+tags: [private]
 ```
 
 ```Go
@@ -1996,6 +2071,7 @@ const f0 = 1.414213562373095048801689e0
 
 ```
 searchKey: math.f1
+tags: [private]
 ```
 
 ```Go
@@ -2006,6 +2082,7 @@ const f1 = 8.482908416595164588112026e-1
 
 ```
 searchKey: math.f2
+tags: [private]
 ```
 
 ```Go
@@ -2016,6 +2093,7 @@ const f2 = 1.936480946950659106176712e-1
 
 ```
 searchKey: math.f3
+tags: [private]
 ```
 
 ```Go
@@ -2026,6 +2104,7 @@ const f3 = 2.103693768272068968719679e-2
 
 ```
 searchKey: math.f4
+tags: [private]
 ```
 
 ```Go
@@ -2036,6 +2115,7 @@ const f4 = 1.112800997078859844711555e-3
 
 ```
 searchKey: math.f5
+tags: [private]
 ```
 
 ```Go
@@ -2046,6 +2126,7 @@ const f5 = 2.611088405080593625138020e-5
 
 ```
 searchKey: math.f6
+tags: [private]
 ```
 
 ```Go
@@ -2056,6 +2137,7 @@ const f6 = 2.010321207683943062279931e-7
 
 ```
 searchKey: math.f7
+tags: [private]
 ```
 
 ```Go
@@ -2066,6 +2148,7 @@ const f7 = 2.891024605872965461538222e-15
 
 ```
 searchKey: math.haveArchExp2
+tags: [private]
 ```
 
 ```Go
@@ -2076,6 +2159,7 @@ const haveArchExp2 = false
 
 ```
 searchKey: math.haveArchExp
+tags: [private]
 ```
 
 ```Go
@@ -2086,6 +2170,7 @@ const haveArchExp = true
 
 ```
 searchKey: math.haveArchFloor
+tags: [private]
 ```
 
 ```Go
@@ -2096,6 +2181,7 @@ const haveArchFloor = true
 
 ```
 searchKey: math.haveArchCeil
+tags: [private]
 ```
 
 ```Go
@@ -2106,6 +2192,7 @@ const haveArchCeil = true
 
 ```
 searchKey: math.haveArchTrunc
+tags: [private]
 ```
 
 ```Go
@@ -2116,6 +2203,7 @@ const haveArchTrunc = true
 
 ```
 searchKey: math.haveArchHypot
+tags: [private]
 ```
 
 ```Go
@@ -2126,6 +2214,7 @@ const haveArchHypot = true
 
 ```
 searchKey: math.haveArchLog
+tags: [private]
 ```
 
 ```Go
@@ -2136,6 +2225,7 @@ const haveArchLog = true
 
 ```
 searchKey: math.haveArchModf
+tags: [private]
 ```
 
 ```Go
@@ -2146,6 +2236,7 @@ const haveArchModf = false
 
 ```
 searchKey: math.haveArchSqrt
+tags: [private]
 ```
 
 ```Go
@@ -2156,6 +2247,7 @@ const haveArchSqrt = true
 
 ```
 searchKey: math.haveArchAcos
+tags: [private]
 ```
 
 ```Go
@@ -2166,6 +2258,7 @@ const haveArchAcos = false
 
 ```
 searchKey: math.haveArchAcosh
+tags: [private]
 ```
 
 ```Go
@@ -2176,6 +2269,7 @@ const haveArchAcosh = false
 
 ```
 searchKey: math.haveArchAsin
+tags: [private]
 ```
 
 ```Go
@@ -2186,6 +2280,7 @@ const haveArchAsin = false
 
 ```
 searchKey: math.haveArchAsinh
+tags: [private]
 ```
 
 ```Go
@@ -2196,6 +2291,7 @@ const haveArchAsinh = false
 
 ```
 searchKey: math.haveArchAtan
+tags: [private]
 ```
 
 ```Go
@@ -2206,6 +2302,7 @@ const haveArchAtan = false
 
 ```
 searchKey: math.haveArchAtan2
+tags: [private]
 ```
 
 ```Go
@@ -2216,6 +2313,7 @@ const haveArchAtan2 = false
 
 ```
 searchKey: math.haveArchAtanh
+tags: [private]
 ```
 
 ```Go
@@ -2226,6 +2324,7 @@ const haveArchAtanh = false
 
 ```
 searchKey: math.haveArchCbrt
+tags: [private]
 ```
 
 ```Go
@@ -2236,6 +2335,7 @@ const haveArchCbrt = false
 
 ```
 searchKey: math.haveArchCos
+tags: [private]
 ```
 
 ```Go
@@ -2246,6 +2346,7 @@ const haveArchCos = false
 
 ```
 searchKey: math.haveArchCosh
+tags: [private]
 ```
 
 ```Go
@@ -2256,6 +2357,7 @@ const haveArchCosh = false
 
 ```
 searchKey: math.haveArchErf
+tags: [private]
 ```
 
 ```Go
@@ -2266,6 +2368,7 @@ const haveArchErf = false
 
 ```
 searchKey: math.haveArchErfc
+tags: [private]
 ```
 
 ```Go
@@ -2276,6 +2379,7 @@ const haveArchErfc = false
 
 ```
 searchKey: math.haveArchExpm1
+tags: [private]
 ```
 
 ```Go
@@ -2286,6 +2390,7 @@ const haveArchExpm1 = false
 
 ```
 searchKey: math.haveArchFrexp
+tags: [private]
 ```
 
 ```Go
@@ -2296,6 +2401,7 @@ const haveArchFrexp = false
 
 ```
 searchKey: math.haveArchLdexp
+tags: [private]
 ```
 
 ```Go
@@ -2306,6 +2412,7 @@ const haveArchLdexp = false
 
 ```
 searchKey: math.haveArchLog10
+tags: [private]
 ```
 
 ```Go
@@ -2316,6 +2423,7 @@ const haveArchLog10 = false
 
 ```
 searchKey: math.haveArchLog2
+tags: [private]
 ```
 
 ```Go
@@ -2326,6 +2434,7 @@ const haveArchLog2 = false
 
 ```
 searchKey: math.haveArchLog1p
+tags: [private]
 ```
 
 ```Go
@@ -2336,6 +2445,7 @@ const haveArchLog1p = false
 
 ```
 searchKey: math.haveArchMod
+tags: [private]
 ```
 
 ```Go
@@ -2346,6 +2456,7 @@ const haveArchMod = false
 
 ```
 searchKey: math.haveArchPow
+tags: [private]
 ```
 
 ```Go
@@ -2356,6 +2467,7 @@ const haveArchPow = false
 
 ```
 searchKey: math.haveArchRemainder
+tags: [private]
 ```
 
 ```Go
@@ -2366,6 +2478,7 @@ const haveArchRemainder = false
 
 ```
 searchKey: math.haveArchSin
+tags: [private]
 ```
 
 ```Go
@@ -2376,6 +2489,7 @@ const haveArchSin = false
 
 ```
 searchKey: math.haveArchSinh
+tags: [private]
 ```
 
 ```Go
@@ -2386,6 +2500,7 @@ const haveArchSinh = false
 
 ```
 searchKey: math.haveArchTan
+tags: [private]
 ```
 
 ```Go
@@ -2396,6 +2511,7 @@ const haveArchTan = false
 
 ```
 searchKey: math.haveArchTanh
+tags: [private]
 ```
 
 ```Go
@@ -2406,6 +2522,7 @@ const haveArchTanh = false
 
 ```
 searchKey: math.reduceThreshold
+tags: [private]
 ```
 
 ```Go
@@ -2424,6 +2541,7 @@ So, conservatively we can take x < 1<<29. Above this threshold Payne-Hanek range
 
 ```
 searchKey: math.ReduceThreshold
+tags: [private]
 ```
 
 ```Go
@@ -2432,14 +2550,11 @@ const ReduceThreshold = reduceThreshold
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="useFMA" href="#useFMA">var useFMA</a>
 
 ```
 searchKey: math.useFMA
+tags: [private]
 ```
 
 ```Go
@@ -2450,6 +2565,7 @@ var useFMA = cpu.X86.HasAVX && cpu.X86.HasFMA
 
 ```
 searchKey: math._gamP
+tags: [private]
 ```
 
 ```Go
@@ -2460,6 +2576,7 @@ var _gamP = ...
 
 ```
 searchKey: math._gamQ
+tags: [private]
 ```
 
 ```Go
@@ -2470,6 +2587,7 @@ var _gamQ = ...
 
 ```
 searchKey: math._gamS
+tags: [private]
 ```
 
 ```Go
@@ -2480,6 +2598,7 @@ var _gamS = ...
 
 ```
 searchKey: math.p0R8
+tags: [private]
 ```
 
 ```Go
@@ -2492,6 +2611,7 @@ for x in [inf, 8]=1/[0,0.125]
 
 ```
 searchKey: math.p0S8
+tags: [private]
 ```
 
 ```Go
@@ -2502,6 +2622,7 @@ var p0S8 = ...
 
 ```
 searchKey: math.p0R5
+tags: [private]
 ```
 
 ```Go
@@ -2514,6 +2635,7 @@ for x in [8,4.5454]=1/[0.125,0.22001]
 
 ```
 searchKey: math.p0S5
+tags: [private]
 ```
 
 ```Go
@@ -2524,6 +2646,7 @@ var p0S5 = ...
 
 ```
 searchKey: math.p0R3
+tags: [private]
 ```
 
 ```Go
@@ -2536,6 +2659,7 @@ for x in [4.547,2.8571]=1/[0.2199,0.35001]
 
 ```
 searchKey: math.p0S3
+tags: [private]
 ```
 
 ```Go
@@ -2546,6 +2670,7 @@ var p0S3 = ...
 
 ```
 searchKey: math.p0R2
+tags: [private]
 ```
 
 ```Go
@@ -2558,6 +2683,7 @@ for x in [2.8570,2]=1/[0.3499,0.5]
 
 ```
 searchKey: math.p0S2
+tags: [private]
 ```
 
 ```Go
@@ -2568,6 +2694,7 @@ var p0S2 = ...
 
 ```
 searchKey: math.q0R8
+tags: [private]
 ```
 
 ```Go
@@ -2580,6 +2707,7 @@ for x in [inf, 8]=1/[0,0.125]
 
 ```
 searchKey: math.q0S8
+tags: [private]
 ```
 
 ```Go
@@ -2590,6 +2718,7 @@ var q0S8 = ...
 
 ```
 searchKey: math.q0R5
+tags: [private]
 ```
 
 ```Go
@@ -2602,6 +2731,7 @@ for x in [8,4.5454]=1/[0.125,0.22001]
 
 ```
 searchKey: math.q0S5
+tags: [private]
 ```
 
 ```Go
@@ -2612,6 +2742,7 @@ var q0S5 = ...
 
 ```
 searchKey: math.q0R3
+tags: [private]
 ```
 
 ```Go
@@ -2624,6 +2755,7 @@ for x in [4.547,2.8571]=1/[0.2199,0.35001]
 
 ```
 searchKey: math.q0S3
+tags: [private]
 ```
 
 ```Go
@@ -2634,6 +2766,7 @@ var q0S3 = ...
 
 ```
 searchKey: math.q0R2
+tags: [private]
 ```
 
 ```Go
@@ -2646,6 +2779,7 @@ for x in [2.8570,2]=1/[0.3499,0.5]
 
 ```
 searchKey: math.q0S2
+tags: [private]
 ```
 
 ```Go
@@ -2656,6 +2790,7 @@ var q0S2 = ...
 
 ```
 searchKey: math.p1R8
+tags: [private]
 ```
 
 ```Go
@@ -2668,6 +2803,7 @@ for x in [inf, 8]=1/[0,0.125]
 
 ```
 searchKey: math.p1S8
+tags: [private]
 ```
 
 ```Go
@@ -2678,6 +2814,7 @@ var p1S8 = ...
 
 ```
 searchKey: math.p1R5
+tags: [private]
 ```
 
 ```Go
@@ -2690,6 +2827,7 @@ for x in [8,4.5454] = 1/[0.125,0.22001]
 
 ```
 searchKey: math.p1S5
+tags: [private]
 ```
 
 ```Go
@@ -2700,6 +2838,7 @@ var p1S5 = ...
 
 ```
 searchKey: math.p1R3
+tags: [private]
 ```
 
 ```Go
@@ -2712,6 +2851,7 @@ for x in[4.5453,2.8571] = 1/[0.2199,0.35001]
 
 ```
 searchKey: math.p1S3
+tags: [private]
 ```
 
 ```Go
@@ -2722,6 +2862,7 @@ var p1S3 = ...
 
 ```
 searchKey: math.p1R2
+tags: [private]
 ```
 
 ```Go
@@ -2734,6 +2875,7 @@ for x in [2.8570,2] = 1/[0.3499,0.5]
 
 ```
 searchKey: math.p1S2
+tags: [private]
 ```
 
 ```Go
@@ -2744,6 +2886,7 @@ var p1S2 = ...
 
 ```
 searchKey: math.q1R8
+tags: [private]
 ```
 
 ```Go
@@ -2756,6 +2899,7 @@ for x in [inf, 8] = 1/[0,0.125]
 
 ```
 searchKey: math.q1S8
+tags: [private]
 ```
 
 ```Go
@@ -2766,6 +2910,7 @@ var q1S8 = ...
 
 ```
 searchKey: math.q1R5
+tags: [private]
 ```
 
 ```Go
@@ -2778,6 +2923,7 @@ for x in [8,4.5454] = 1/[0.125,0.22001]
 
 ```
 searchKey: math.q1S5
+tags: [private]
 ```
 
 ```Go
@@ -2788,6 +2934,7 @@ var q1S5 = ...
 
 ```
 searchKey: math.q1R3
+tags: [private]
 ```
 
 ```Go
@@ -2800,6 +2947,7 @@ for x in [4.5454,2.8571] = 1/[0.2199,0.35001] ???
 
 ```
 searchKey: math.q1S3
+tags: [private]
 ```
 
 ```Go
@@ -2810,6 +2958,7 @@ var q1S3 = ...
 
 ```
 searchKey: math.q1R2
+tags: [private]
 ```
 
 ```Go
@@ -2822,6 +2971,7 @@ for x in [2.8570,2] = 1/[0.3499,0.5]
 
 ```
 searchKey: math.q1S2
+tags: [private]
 ```
 
 ```Go
@@ -2832,6 +2982,7 @@ var q1S2 = ...
 
 ```
 searchKey: math._lgamA
+tags: [private]
 ```
 
 ```Go
@@ -2842,6 +2993,7 @@ var _lgamA = ...
 
 ```
 searchKey: math._lgamR
+tags: [private]
 ```
 
 ```Go
@@ -2852,6 +3004,7 @@ var _lgamR = ...
 
 ```
 searchKey: math._lgamS
+tags: [private]
 ```
 
 ```Go
@@ -2862,6 +3015,7 @@ var _lgamS = ...
 
 ```
 searchKey: math._lgamT
+tags: [private]
 ```
 
 ```Go
@@ -2872,6 +3026,7 @@ var _lgamT = ...
 
 ```
 searchKey: math._lgamU
+tags: [private]
 ```
 
 ```Go
@@ -2882,6 +3037,7 @@ var _lgamU = ...
 
 ```
 searchKey: math._lgamV
+tags: [private]
 ```
 
 ```Go
@@ -2892,6 +3048,7 @@ var _lgamV = ...
 
 ```
 searchKey: math._lgamW
+tags: [private]
 ```
 
 ```Go
@@ -2902,6 +3059,7 @@ var _lgamW = ...
 
 ```
 searchKey: math.pow10tab
+tags: [private]
 ```
 
 ```Go
@@ -2914,6 +3072,7 @@ pow10tab stores the pre-computed values 10**i for i < 32.
 
 ```
 searchKey: math.pow10postab32
+tags: [private]
 ```
 
 ```Go
@@ -2926,6 +3085,7 @@ pow10postab32 stores the pre-computed value for 10**(i*32) at index i.
 
 ```
 searchKey: math.pow10negtab32
+tags: [private]
 ```
 
 ```Go
@@ -2938,6 +3098,7 @@ pow10negtab32 stores the pre-computed value for 10**(-i*32) at index i.
 
 ```
 searchKey: math._sin
+tags: [private]
 ```
 
 ```Go
@@ -2950,6 +3111,7 @@ sin coefficients
 
 ```
 searchKey: math._cos
+tags: [private]
 ```
 
 ```Go
@@ -2962,6 +3124,7 @@ cos coefficients
 
 ```
 searchKey: math._tanP
+tags: [private]
 ```
 
 ```Go
@@ -2974,6 +3137,7 @@ tan coefficients
 
 ```
 searchKey: math._tanQ
+tags: [private]
 ```
 
 ```Go
@@ -2984,6 +3148,7 @@ var _tanQ = ...
 
 ```
 searchKey: math.tanhP
+tags: [private]
 ```
 
 ```Go
@@ -2994,6 +3159,7 @@ var tanhP = ...
 
 ```
 searchKey: math.tanhQ
+tags: [private]
 ```
 
 ```Go
@@ -3004,6 +3170,7 @@ var tanhQ = ...
 
 ```
 searchKey: math.mPi4
+tags: [private]
 ```
 
 ```Go
@@ -3016,6 +3183,7 @@ mPi4 is the binary digits of 4/pi as a uint64 array, that is, 4/pi = Sum mPi4[i]
 
 ```
 searchKey: math.ExpGo
+tags: [private]
 ```
 
 ```Go
@@ -3028,6 +3196,7 @@ Export internal functions for testing.
 
 ```
 searchKey: math.Exp2Go
+tags: [private]
 ```
 
 ```Go
@@ -3038,6 +3207,7 @@ var Exp2Go = exp2
 
 ```
 searchKey: math.HypotGo
+tags: [private]
 ```
 
 ```Go
@@ -3048,6 +3218,7 @@ var HypotGo = hypot
 
 ```
 searchKey: math.SqrtGo
+tags: [private]
 ```
 
 ```Go
@@ -3058,6 +3229,7 @@ var SqrtGo = sqrt
 
 ```
 searchKey: math.TrigReduce
+tags: [private]
 ```
 
 ```Go
@@ -3066,15 +3238,10 @@ var TrigReduce = trigReduce
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Abs" href="#Abs">func Abs(x float64) float64</a>
 
 ```
 searchKey: math.Abs
-tags: [exported]
 ```
 
 ```Go
@@ -3094,7 +3261,6 @@ Abs(NaN) = NaN
 
 ```
 searchKey: math.Acosh
-tags: [exported]
 ```
 
 ```Go
@@ -3115,6 +3281,7 @@ Acosh(NaN) = NaN
 
 ```
 searchKey: math.acosh
+tags: [private]
 ```
 
 ```Go
@@ -3125,7 +3292,6 @@ func acosh(x float64) float64
 
 ```
 searchKey: math.Asin
-tags: [exported]
 ```
 
 ```Go
@@ -3145,6 +3311,7 @@ Asin(x) = NaN if x < -1 or x > 1
 
 ```
 searchKey: math.asin
+tags: [private]
 ```
 
 ```Go
@@ -3155,7 +3322,6 @@ func asin(x float64) float64
 
 ```
 searchKey: math.Acos
-tags: [exported]
 ```
 
 ```Go
@@ -3174,6 +3340,7 @@ Acos(x) = NaN if x < -1 or x > 1
 
 ```
 searchKey: math.acos
+tags: [private]
 ```
 
 ```Go
@@ -3184,7 +3351,6 @@ func acos(x float64) float64
 
 ```
 searchKey: math.Asinh
-tags: [exported]
 ```
 
 ```Go
@@ -3205,6 +3371,7 @@ Asinh(NaN) = NaN
 
 ```
 searchKey: math.asinh
+tags: [private]
 ```
 
 ```Go
@@ -3215,6 +3382,7 @@ func asinh(x float64) float64
 
 ```
 searchKey: math.xatan
+tags: [private]
 ```
 
 ```Go
@@ -3227,6 +3395,7 @@ xatan evaluates a series valid in the range [0, 0.66].
 
 ```
 searchKey: math.satan
+tags: [private]
 ```
 
 ```Go
@@ -3239,7 +3408,6 @@ satan reduces its argument (known to be positive) to the range [0, 0.66] and cal
 
 ```
 searchKey: math.Atan
-tags: [exported]
 ```
 
 ```Go
@@ -3259,6 +3427,7 @@ Atan(±Inf) = ±Pi/2
 
 ```
 searchKey: math.atan
+tags: [private]
 ```
 
 ```Go
@@ -3269,7 +3438,6 @@ func atan(x float64) float64
 
 ```
 searchKey: math.Atan2
-tags: [exported]
 ```
 
 ```Go
@@ -3304,6 +3472,7 @@ Atan2(-Inf, x) = -Pi/2
 
 ```
 searchKey: math.atan2
+tags: [private]
 ```
 
 ```Go
@@ -3314,7 +3483,6 @@ func atan2(y, x float64) float64
 
 ```
 searchKey: math.Atanh
-tags: [exported]
 ```
 
 ```Go
@@ -3337,6 +3505,7 @@ Atanh(NaN) = NaN
 
 ```
 searchKey: math.atanh
+tags: [private]
 ```
 
 ```Go
@@ -3347,7 +3516,6 @@ func atanh(x float64) float64
 
 ```
 searchKey: math.Inf
-tags: [exported]
 ```
 
 ```Go
@@ -3360,7 +3528,6 @@ Inf returns positive infinity if sign >= 0, negative infinity if sign < 0.
 
 ```
 searchKey: math.NaN
-tags: [exported]
 ```
 
 ```Go
@@ -3373,7 +3540,6 @@ NaN returns an IEEE 754 `not-a-number' value.
 
 ```
 searchKey: math.IsNaN
-tags: [exported]
 ```
 
 ```Go
@@ -3386,7 +3552,6 @@ IsNaN reports whether f is an IEEE 754 `not-a-number' value.
 
 ```
 searchKey: math.IsInf
-tags: [exported]
 ```
 
 ```Go
@@ -3399,6 +3564,7 @@ IsInf reports whether f is an infinity, according to sign. If sign > 0, IsInf re
 
 ```
 searchKey: math.normalize
+tags: [private]
 ```
 
 ```Go
@@ -3411,7 +3577,6 @@ normalize returns a normal number y and exponent exp satisfying x == y × 2**exp
 
 ```
 searchKey: math.Cbrt
-tags: [exported]
 ```
 
 ```Go
@@ -3432,6 +3597,7 @@ Cbrt(NaN) = NaN
 
 ```
 searchKey: math.cbrt
+tags: [private]
 ```
 
 ```Go
@@ -3442,7 +3608,6 @@ func cbrt(x float64) float64
 
 ```
 searchKey: math.Copysign
-tags: [exported]
 ```
 
 ```Go
@@ -3455,7 +3620,6 @@ Copysign returns a value with the magnitude of x and the sign of y.
 
 ```
 searchKey: math.Dim
-tags: [exported]
 ```
 
 ```Go
@@ -3476,7 +3640,6 @@ Dim(x, NaN) = Dim(NaN, x) = NaN
 
 ```
 searchKey: math.Max
-tags: [exported]
 ```
 
 ```Go
@@ -3498,6 +3661,7 @@ Max(-0, -0) = -0
 
 ```
 searchKey: math.max
+tags: [private]
 ```
 
 ```Go
@@ -3508,7 +3672,6 @@ func max(x, y float64) float64
 
 ```
 searchKey: math.Min
-tags: [exported]
 ```
 
 ```Go
@@ -3529,6 +3692,7 @@ Min(-0, ±0) = Min(±0, -0) = -0
 
 ```
 searchKey: math.min
+tags: [private]
 ```
 
 ```Go
@@ -3539,6 +3703,7 @@ func min(x, y float64) float64
 
 ```
 searchKey: math.archMax
+tags: [private]
 ```
 
 ```Go
@@ -3549,6 +3714,7 @@ func archMax(x, y float64) float64
 
 ```
 searchKey: math.archMin
+tags: [private]
 ```
 
 ```Go
@@ -3559,7 +3725,6 @@ func archMin(x, y float64) float64
 
 ```
 searchKey: math.Erf
-tags: [exported]
 ```
 
 ```Go
@@ -3580,6 +3745,7 @@ Erf(NaN) = NaN
 
 ```
 searchKey: math.erf
+tags: [private]
 ```
 
 ```Go
@@ -3590,7 +3756,6 @@ func erf(x float64) float64
 
 ```
 searchKey: math.Erfc
-tags: [exported]
 ```
 
 ```Go
@@ -3611,6 +3776,7 @@ Erfc(NaN) = NaN
 
 ```
 searchKey: math.erfc
+tags: [private]
 ```
 
 ```Go
@@ -3621,7 +3787,6 @@ func erfc(x float64) float64
 
 ```
 searchKey: math.Erfinv
-tags: [exported]
 ```
 
 ```Go
@@ -3643,7 +3808,6 @@ Erfinv(NaN) = NaN
 
 ```
 searchKey: math.Erfcinv
-tags: [exported]
 ```
 
 ```Go
@@ -3665,7 +3829,6 @@ Erfcinv(NaN) = NaN
 
 ```
 searchKey: math.Exp
-tags: [exported]
 ```
 
 ```Go
@@ -3687,6 +3850,7 @@ Very large values overflow to 0 or +Inf. Very small values underflow to 1.
 
 ```
 searchKey: math.exp
+tags: [private]
 ```
 
 ```Go
@@ -3697,7 +3861,6 @@ func exp(x float64) float64
 
 ```
 searchKey: math.Exp2
-tags: [exported]
 ```
 
 ```Go
@@ -3712,6 +3875,7 @@ Special cases are the same as Exp.
 
 ```
 searchKey: math.exp2
+tags: [private]
 ```
 
 ```Go
@@ -3722,6 +3886,7 @@ func exp2(x float64) float64
 
 ```
 searchKey: math.expmulti
+tags: [private]
 ```
 
 ```Go
@@ -3734,6 +3899,7 @@ exp1 returns e**r × 2**k where r = hi - lo and |r| ≤ ln(2)/2.
 
 ```
 searchKey: math.archExp2
+tags: [private]
 ```
 
 ```Go
@@ -3744,6 +3910,7 @@ func archExp2(x float64) float64
 
 ```
 searchKey: math.archExp
+tags: [private]
 ```
 
 ```Go
@@ -3754,7 +3921,6 @@ func archExp(x float64) float64
 
 ```
 searchKey: math.Expm1
-tags: [exported]
 ```
 
 ```Go
@@ -3777,6 +3943,7 @@ Very large values overflow to -1 or +Inf.
 
 ```
 searchKey: math.expm1
+tags: [private]
 ```
 
 ```Go
@@ -3787,7 +3954,6 @@ func expm1(x float64) float64
 
 ```
 searchKey: math.Floor
-tags: [exported]
 ```
 
 ```Go
@@ -3808,6 +3974,7 @@ Floor(NaN) = NaN
 
 ```
 searchKey: math.floor
+tags: [private]
 ```
 
 ```Go
@@ -3818,7 +3985,6 @@ func floor(x float64) float64
 
 ```
 searchKey: math.Ceil
-tags: [exported]
 ```
 
 ```Go
@@ -3839,6 +4005,7 @@ Ceil(NaN) = NaN
 
 ```
 searchKey: math.ceil
+tags: [private]
 ```
 
 ```Go
@@ -3849,7 +4016,6 @@ func ceil(x float64) float64
 
 ```
 searchKey: math.Trunc
-tags: [exported]
 ```
 
 ```Go
@@ -3870,6 +4036,7 @@ Trunc(NaN) = NaN
 
 ```
 searchKey: math.trunc
+tags: [private]
 ```
 
 ```Go
@@ -3880,7 +4047,6 @@ func trunc(x float64) float64
 
 ```
 searchKey: math.Round
-tags: [exported]
 ```
 
 ```Go
@@ -3901,7 +4067,6 @@ Round(NaN) = NaN
 
 ```
 searchKey: math.RoundToEven
-tags: [exported]
 ```
 
 ```Go
@@ -3922,6 +4087,7 @@ RoundToEven(NaN) = NaN
 
 ```
 searchKey: math.archFloor
+tags: [private]
 ```
 
 ```Go
@@ -3932,6 +4098,7 @@ func archFloor(x float64) float64
 
 ```
 searchKey: math.archCeil
+tags: [private]
 ```
 
 ```Go
@@ -3942,6 +4109,7 @@ func archCeil(x float64) float64
 
 ```
 searchKey: math.archTrunc
+tags: [private]
 ```
 
 ```Go
@@ -3952,6 +4120,7 @@ func archTrunc(x float64) float64
 
 ```
 searchKey: math.zero
+tags: [private]
 ```
 
 ```Go
@@ -3962,6 +4131,7 @@ func zero(x uint64) uint64
 
 ```
 searchKey: math.nonzero
+tags: [private]
 ```
 
 ```Go
@@ -3972,6 +4142,7 @@ func nonzero(x uint64) uint64
 
 ```
 searchKey: math.shl
+tags: [private]
 ```
 
 ```Go
@@ -3982,6 +4153,7 @@ func shl(u1, u2 uint64, n uint) (r1, r2 uint64)
 
 ```
 searchKey: math.shr
+tags: [private]
 ```
 
 ```Go
@@ -3992,6 +4164,7 @@ func shr(u1, u2 uint64, n uint) (r1, r2 uint64)
 
 ```
 searchKey: math.shrcompress
+tags: [private]
 ```
 
 ```Go
@@ -4004,6 +4177,7 @@ shrcompress compresses the bottom n+1 bits of the two-word value into a single b
 
 ```
 searchKey: math.lz
+tags: [private]
 ```
 
 ```Go
@@ -4014,6 +4188,7 @@ func lz(u1, u2 uint64) (l int32)
 
 ```
 searchKey: math.split
+tags: [private]
 ```
 
 ```Go
@@ -4026,7 +4201,6 @@ split splits b into sign, biased exponent, and mantissa. It adds the implicit 1 
 
 ```
 searchKey: math.FMA
-tags: [exported]
 ```
 
 ```Go
@@ -4039,7 +4213,6 @@ FMA returns x * y + z, computed with only one rounding. (That is, FMA returns th
 
 ```
 searchKey: math.Frexp
-tags: [exported]
 ```
 
 ```Go
@@ -4060,6 +4233,7 @@ Frexp(NaN) = NaN, 0
 
 ```
 searchKey: math.frexp
+tags: [private]
 ```
 
 ```Go
@@ -4070,6 +4244,7 @@ func frexp(f float64) (frac float64, exp int)
 
 ```
 searchKey: math.stirling
+tags: [private]
 ```
 
 ```Go
@@ -4082,7 +4257,6 @@ Gamma function computed by Stirling's formula. The pair of results must be multi
 
 ```
 searchKey: math.Gamma
-tags: [exported]
 ```
 
 ```Go
@@ -4106,6 +4280,7 @@ Gamma(NaN) = NaN
 
 ```
 searchKey: math.isNegInt
+tags: [private]
 ```
 
 ```Go
@@ -4116,7 +4291,6 @@ func isNegInt(x float64) bool
 
 ```
 searchKey: math.Hypot
-tags: [exported]
 ```
 
 ```Go
@@ -4138,6 +4312,7 @@ Hypot(p, NaN) = NaN
 
 ```
 searchKey: math.hypot
+tags: [private]
 ```
 
 ```Go
@@ -4148,6 +4323,7 @@ func hypot(p, q float64) float64
 
 ```
 searchKey: math.archHypot
+tags: [private]
 ```
 
 ```Go
@@ -4158,7 +4334,6 @@ func archHypot(p, q float64) float64
 
 ```
 searchKey: math.J0
-tags: [exported]
 ```
 
 ```Go
@@ -4179,7 +4354,6 @@ J0(NaN) = NaN
 
 ```
 searchKey: math.Y0
-tags: [exported]
 ```
 
 ```Go
@@ -4201,6 +4375,7 @@ Y0(NaN) = NaN
 
 ```
 searchKey: math.pzero
+tags: [private]
 ```
 
 ```Go
@@ -4211,6 +4386,7 @@ func pzero(x float64) float64
 
 ```
 searchKey: math.qzero
+tags: [private]
 ```
 
 ```Go
@@ -4221,7 +4397,6 @@ func qzero(x float64) float64
 
 ```
 searchKey: math.J1
-tags: [exported]
 ```
 
 ```Go
@@ -4241,7 +4416,6 @@ J1(NaN) = NaN
 
 ```
 searchKey: math.Y1
-tags: [exported]
 ```
 
 ```Go
@@ -4263,6 +4437,7 @@ Y1(NaN) = NaN
 
 ```
 searchKey: math.pone
+tags: [private]
 ```
 
 ```Go
@@ -4273,6 +4448,7 @@ func pone(x float64) float64
 
 ```
 searchKey: math.qone
+tags: [private]
 ```
 
 ```Go
@@ -4283,7 +4459,6 @@ func qone(x float64) float64
 
 ```
 searchKey: math.Jn
-tags: [exported]
 ```
 
 ```Go
@@ -4303,7 +4478,6 @@ Jn(n, NaN) = NaN
 
 ```
 searchKey: math.Yn
-tags: [exported]
 ```
 
 ```Go
@@ -4326,7 +4500,6 @@ Yn(n, NaN) = NaN
 
 ```
 searchKey: math.Ldexp
-tags: [exported]
 ```
 
 ```Go
@@ -4347,6 +4520,7 @@ Ldexp(NaN, exp) = NaN
 
 ```
 searchKey: math.ldexp
+tags: [private]
 ```
 
 ```Go
@@ -4357,7 +4531,6 @@ func ldexp(frac float64, exp int) float64
 
 ```
 searchKey: math.Lgamma
-tags: [exported]
 ```
 
 ```Go
@@ -4380,6 +4553,7 @@ Lgamma(NaN) = NaN
 
 ```
 searchKey: math.sinPi
+tags: [private]
 ```
 
 ```Go
@@ -4392,7 +4566,6 @@ sinPi(x) is a helper function for negative x
 
 ```
 searchKey: math.Log
-tags: [exported]
 ```
 
 ```Go
@@ -4414,6 +4587,7 @@ Log(NaN) = NaN
 
 ```
 searchKey: math.log
+tags: [private]
 ```
 
 ```Go
@@ -4424,7 +4598,6 @@ func log(x float64) float64
 
 ```
 searchKey: math.Log10
-tags: [exported]
 ```
 
 ```Go
@@ -4437,6 +4610,7 @@ Log10 returns the decimal logarithm of x. The special cases are the same as for 
 
 ```
 searchKey: math.log10
+tags: [private]
 ```
 
 ```Go
@@ -4447,7 +4621,6 @@ func log10(x float64) float64
 
 ```
 searchKey: math.Log2
-tags: [exported]
 ```
 
 ```Go
@@ -4460,6 +4633,7 @@ Log2 returns the binary logarithm of x. The special cases are the same as for Lo
 
 ```
 searchKey: math.log2
+tags: [private]
 ```
 
 ```Go
@@ -4470,7 +4644,6 @@ func log2(x float64) float64
 
 ```
 searchKey: math.Log1p
-tags: [exported]
 ```
 
 ```Go
@@ -4493,6 +4666,7 @@ Log1p(NaN) = NaN
 
 ```
 searchKey: math.log1p
+tags: [private]
 ```
 
 ```Go
@@ -4503,6 +4677,7 @@ func log1p(x float64) float64
 
 ```
 searchKey: math.archLog
+tags: [private]
 ```
 
 ```Go
@@ -4513,7 +4688,6 @@ func archLog(x float64) float64
 
 ```
 searchKey: math.Logb
-tags: [exported]
 ```
 
 ```Go
@@ -4534,7 +4708,6 @@ Logb(NaN) = NaN
 
 ```
 searchKey: math.Ilogb
-tags: [exported]
 ```
 
 ```Go
@@ -4555,6 +4728,7 @@ Ilogb(NaN) = MaxInt32
 
 ```
 searchKey: math.ilogb
+tags: [private]
 ```
 
 ```Go
@@ -4567,7 +4741,6 @@ logb returns the binary exponent of x. It assumes x is finite and non-zero.
 
 ```
 searchKey: math.Mod
-tags: [exported]
 ```
 
 ```Go
@@ -4590,6 +4763,7 @@ Mod(x, NaN) = NaN
 
 ```
 searchKey: math.mod
+tags: [private]
 ```
 
 ```Go
@@ -4600,7 +4774,6 @@ func mod(x, y float64) float64
 
 ```
 searchKey: math.Modf
-tags: [exported]
 ```
 
 ```Go
@@ -4620,6 +4793,7 @@ Modf(NaN) = NaN, NaN
 
 ```
 searchKey: math.modf
+tags: [private]
 ```
 
 ```Go
@@ -4630,6 +4804,7 @@ func modf(f float64) (int float64, frac float64)
 
 ```
 searchKey: math.archModf
+tags: [private]
 ```
 
 ```Go
@@ -4640,7 +4815,6 @@ func archModf(f float64) (int float64, frac float64)
 
 ```
 searchKey: math.Nextafter32
-tags: [exported]
 ```
 
 ```Go
@@ -4661,7 +4835,6 @@ Nextafter32(x, NaN) = NaN
 
 ```
 searchKey: math.Nextafter
-tags: [exported]
 ```
 
 ```Go
@@ -4682,6 +4855,7 @@ Nextafter(x, NaN) = NaN
 
 ```
 searchKey: math.isOddInt
+tags: [private]
 ```
 
 ```Go
@@ -4692,7 +4866,6 @@ func isOddInt(x float64) bool
 
 ```
 searchKey: math.Pow
-tags: [exported]
 ```
 
 ```Go
@@ -4730,6 +4903,7 @@ Pow(x, y) = NaN for finite x < 0 and finite non-integer y
 
 ```
 searchKey: math.pow
+tags: [private]
 ```
 
 ```Go
@@ -4740,7 +4914,6 @@ func pow(x, y float64) float64
 
 ```
 searchKey: math.Pow10
-tags: [exported]
 ```
 
 ```Go
@@ -4760,7 +4933,6 @@ Pow10(n) = +Inf for n > 308
 
 ```
 searchKey: math.Remainder
-tags: [exported]
 ```
 
 ```Go
@@ -4783,6 +4955,7 @@ Remainder(x, NaN) = NaN
 
 ```
 searchKey: math.remainder
+tags: [private]
 ```
 
 ```Go
@@ -4793,7 +4966,6 @@ func remainder(x, y float64) float64
 
 ```
 searchKey: math.Signbit
-tags: [exported]
 ```
 
 ```Go
@@ -4806,7 +4978,6 @@ Signbit reports whether x is negative or negative zero.
 
 ```
 searchKey: math.Cos
-tags: [exported]
 ```
 
 ```Go
@@ -4826,6 +4997,7 @@ Cos(NaN) = NaN
 
 ```
 searchKey: math.cos
+tags: [private]
 ```
 
 ```Go
@@ -4836,7 +5008,6 @@ func cos(x float64) float64
 
 ```
 searchKey: math.Sin
-tags: [exported]
 ```
 
 ```Go
@@ -4857,6 +5028,7 @@ Sin(NaN) = NaN
 
 ```
 searchKey: math.sin
+tags: [private]
 ```
 
 ```Go
@@ -4867,7 +5039,6 @@ func sin(x float64) float64
 
 ```
 searchKey: math.Sincos
-tags: [exported]
 ```
 
 ```Go
@@ -4888,7 +5059,6 @@ Sincos(NaN) = NaN, NaN
 
 ```
 searchKey: math.Sinh
-tags: [exported]
 ```
 
 ```Go
@@ -4909,6 +5079,7 @@ Sinh(NaN) = NaN
 
 ```
 searchKey: math.sinh
+tags: [private]
 ```
 
 ```Go
@@ -4919,7 +5090,6 @@ func sinh(x float64) float64
 
 ```
 searchKey: math.Cosh
-tags: [exported]
 ```
 
 ```Go
@@ -4940,6 +5110,7 @@ Cosh(NaN) = NaN
 
 ```
 searchKey: math.cosh
+tags: [private]
 ```
 
 ```Go
@@ -4950,7 +5121,6 @@ func cosh(x float64) float64
 
 ```
 searchKey: math.Sqrt
-tags: [exported]
 ```
 
 ```Go
@@ -4972,6 +5142,7 @@ Sqrt(NaN) = NaN
 
 ```
 searchKey: math.sqrt
+tags: [private]
 ```
 
 ```Go
@@ -4982,6 +5153,7 @@ func sqrt(x float64) float64
 
 ```
 searchKey: math.archSqrt
+tags: [private]
 ```
 
 ```Go
@@ -4992,6 +5164,7 @@ func archSqrt(x float64) float64
 
 ```
 searchKey: math.archAcos
+tags: [private]
 ```
 
 ```Go
@@ -5002,6 +5175,7 @@ func archAcos(x float64) float64
 
 ```
 searchKey: math.archAcosh
+tags: [private]
 ```
 
 ```Go
@@ -5012,6 +5186,7 @@ func archAcosh(x float64) float64
 
 ```
 searchKey: math.archAsin
+tags: [private]
 ```
 
 ```Go
@@ -5022,6 +5197,7 @@ func archAsin(x float64) float64
 
 ```
 searchKey: math.archAsinh
+tags: [private]
 ```
 
 ```Go
@@ -5032,6 +5208,7 @@ func archAsinh(x float64) float64
 
 ```
 searchKey: math.archAtan
+tags: [private]
 ```
 
 ```Go
@@ -5042,6 +5219,7 @@ func archAtan(x float64) float64
 
 ```
 searchKey: math.archAtan2
+tags: [private]
 ```
 
 ```Go
@@ -5052,6 +5230,7 @@ func archAtan2(y, x float64) float64
 
 ```
 searchKey: math.archAtanh
+tags: [private]
 ```
 
 ```Go
@@ -5062,6 +5241,7 @@ func archAtanh(x float64) float64
 
 ```
 searchKey: math.archCbrt
+tags: [private]
 ```
 
 ```Go
@@ -5072,6 +5252,7 @@ func archCbrt(x float64) float64
 
 ```
 searchKey: math.archCos
+tags: [private]
 ```
 
 ```Go
@@ -5082,6 +5263,7 @@ func archCos(x float64) float64
 
 ```
 searchKey: math.archCosh
+tags: [private]
 ```
 
 ```Go
@@ -5092,6 +5274,7 @@ func archCosh(x float64) float64
 
 ```
 searchKey: math.archErf
+tags: [private]
 ```
 
 ```Go
@@ -5102,6 +5285,7 @@ func archErf(x float64) float64
 
 ```
 searchKey: math.archErfc
+tags: [private]
 ```
 
 ```Go
@@ -5112,6 +5296,7 @@ func archErfc(x float64) float64
 
 ```
 searchKey: math.archExpm1
+tags: [private]
 ```
 
 ```Go
@@ -5122,6 +5307,7 @@ func archExpm1(x float64) float64
 
 ```
 searchKey: math.archFrexp
+tags: [private]
 ```
 
 ```Go
@@ -5132,6 +5318,7 @@ func archFrexp(x float64) (float64, int)
 
 ```
 searchKey: math.archLdexp
+tags: [private]
 ```
 
 ```Go
@@ -5142,6 +5329,7 @@ func archLdexp(frac float64, exp int) float64
 
 ```
 searchKey: math.archLog10
+tags: [private]
 ```
 
 ```Go
@@ -5152,6 +5340,7 @@ func archLog10(x float64) float64
 
 ```
 searchKey: math.archLog2
+tags: [private]
 ```
 
 ```Go
@@ -5162,6 +5351,7 @@ func archLog2(x float64) float64
 
 ```
 searchKey: math.archLog1p
+tags: [private]
 ```
 
 ```Go
@@ -5172,6 +5362,7 @@ func archLog1p(x float64) float64
 
 ```
 searchKey: math.archMod
+tags: [private]
 ```
 
 ```Go
@@ -5182,6 +5373,7 @@ func archMod(x, y float64) float64
 
 ```
 searchKey: math.archPow
+tags: [private]
 ```
 
 ```Go
@@ -5192,6 +5384,7 @@ func archPow(x, y float64) float64
 
 ```
 searchKey: math.archRemainder
+tags: [private]
 ```
 
 ```Go
@@ -5202,6 +5395,7 @@ func archRemainder(x, y float64) float64
 
 ```
 searchKey: math.archSin
+tags: [private]
 ```
 
 ```Go
@@ -5212,6 +5406,7 @@ func archSin(x float64) float64
 
 ```
 searchKey: math.archSinh
+tags: [private]
 ```
 
 ```Go
@@ -5222,6 +5417,7 @@ func archSinh(x float64) float64
 
 ```
 searchKey: math.archTan
+tags: [private]
 ```
 
 ```Go
@@ -5232,6 +5428,7 @@ func archTan(x float64) float64
 
 ```
 searchKey: math.archTanh
+tags: [private]
 ```
 
 ```Go
@@ -5242,7 +5439,6 @@ func archTanh(x float64) float64
 
 ```
 searchKey: math.Tan
-tags: [exported]
 ```
 
 ```Go
@@ -5263,6 +5459,7 @@ Tan(NaN) = NaN
 
 ```
 searchKey: math.tan
+tags: [private]
 ```
 
 ```Go
@@ -5273,7 +5470,6 @@ func tan(x float64) float64
 
 ```
 searchKey: math.Tanh
-tags: [exported]
 ```
 
 ```Go
@@ -5294,6 +5490,7 @@ Tanh(NaN) = NaN
 
 ```
 searchKey: math.tanh
+tags: [private]
 ```
 
 ```Go
@@ -5304,6 +5501,7 @@ func tanh(x float64) float64
 
 ```
 searchKey: math.trigReduce
+tags: [private]
 ```
 
 ```Go
@@ -5316,7 +5514,6 @@ trigReduce implements Payne-Hanek range reduction by Pi/4 for x > 0. It returns 
 
 ```
 searchKey: math.Float32bits
-tags: [exported]
 ```
 
 ```Go
@@ -5329,7 +5526,6 @@ Float32bits returns the IEEE 754 binary representation of f, with the sign bit o
 
 ```
 searchKey: math.Float32frombits
-tags: [exported]
 ```
 
 ```Go
@@ -5342,7 +5538,6 @@ Float32frombits returns the floating-point number corresponding to the IEEE 754 
 
 ```
 searchKey: math.Float64bits
-tags: [exported]
 ```
 
 ```Go
@@ -5355,7 +5550,6 @@ Float64bits returns the IEEE 754 binary representation of f, with the sign bit o
 
 ```
 searchKey: math.Float64frombits
-tags: [exported]
 ```
 
 ```Go

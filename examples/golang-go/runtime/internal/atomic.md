@@ -50,11 +50,14 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Load" href="#Load">func Load(ptr *uint32) uint32</a>
 
 ```
 searchKey: atomic.Load
-tags: [exported]
 ```
 
 ```Go
@@ -65,7 +68,6 @@ func Load(ptr *uint32) uint32
 
 ```
 searchKey: atomic.Loadp
-tags: [exported]
 ```
 
 ```Go
@@ -76,7 +78,6 @@ func Loadp(ptr unsafe.Pointer) unsafe.Pointer
 
 ```
 searchKey: atomic.Load64
-tags: [exported]
 ```
 
 ```Go
@@ -87,7 +88,6 @@ func Load64(ptr *uint64) uint64
 
 ```
 searchKey: atomic.LoadAcq
-tags: [exported]
 ```
 
 ```Go
@@ -98,7 +98,6 @@ func LoadAcq(ptr *uint32) uint32
 
 ```
 searchKey: atomic.LoadAcq64
-tags: [exported]
 ```
 
 ```Go
@@ -109,7 +108,6 @@ func LoadAcq64(ptr *uint64) uint64
 
 ```
 searchKey: atomic.LoadAcquintptr
-tags: [exported]
 ```
 
 ```Go
@@ -120,7 +118,6 @@ func LoadAcquintptr(ptr *uintptr) uintptr
 
 ```
 searchKey: atomic.Xadd
-tags: [exported]
 ```
 
 ```Go
@@ -131,7 +128,6 @@ func Xadd(ptr *uint32, delta int32) uint32
 
 ```
 searchKey: atomic.Xadd64
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +138,6 @@ func Xadd64(ptr *uint64, delta int64) uint64
 
 ```
 searchKey: atomic.Xadduintptr
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +148,6 @@ func Xadduintptr(ptr *uintptr, delta uintptr) uintptr
 
 ```
 searchKey: atomic.Xchg
-tags: [exported]
 ```
 
 ```Go
@@ -164,7 +158,6 @@ func Xchg(ptr *uint32, new uint32) uint32
 
 ```
 searchKey: atomic.Xchg64
-tags: [exported]
 ```
 
 ```Go
@@ -175,7 +168,6 @@ func Xchg64(ptr *uint64, new uint64) uint64
 
 ```
 searchKey: atomic.Xchguintptr
-tags: [exported]
 ```
 
 ```Go
@@ -186,7 +178,6 @@ func Xchguintptr(ptr *uintptr, new uintptr) uintptr
 
 ```
 searchKey: atomic.Load8
-tags: [exported]
 ```
 
 ```Go
@@ -197,7 +188,6 @@ func Load8(ptr *uint8) uint8
 
 ```
 searchKey: atomic.And8
-tags: [exported]
 ```
 
 ```Go
@@ -208,7 +198,6 @@ func And8(ptr *uint8, val uint8)
 
 ```
 searchKey: atomic.Or8
-tags: [exported]
 ```
 
 ```Go
@@ -219,7 +208,6 @@ func Or8(ptr *uint8, val uint8)
 
 ```
 searchKey: atomic.And
-tags: [exported]
 ```
 
 ```Go
@@ -230,7 +218,6 @@ func And(ptr *uint32, val uint32)
 
 ```
 searchKey: atomic.Or
-tags: [exported]
 ```
 
 ```Go
@@ -241,7 +228,6 @@ func Or(ptr *uint32, val uint32)
 
 ```
 searchKey: atomic.Cas64
-tags: [exported]
 ```
 
 ```Go
@@ -252,7 +238,6 @@ func Cas64(ptr *uint64, old, new uint64) bool
 
 ```
 searchKey: atomic.CasRel
-tags: [exported]
 ```
 
 ```Go
@@ -263,7 +248,6 @@ func CasRel(ptr *uint32, old, new uint32) bool
 
 ```
 searchKey: atomic.Store
-tags: [exported]
 ```
 
 ```Go
@@ -274,7 +258,6 @@ func Store(ptr *uint32, val uint32)
 
 ```
 searchKey: atomic.Store8
-tags: [exported]
 ```
 
 ```Go
@@ -285,7 +268,6 @@ func Store8(ptr *uint8, val uint8)
 
 ```
 searchKey: atomic.Store64
-tags: [exported]
 ```
 
 ```Go
@@ -296,7 +278,6 @@ func Store64(ptr *uint64, val uint64)
 
 ```
 searchKey: atomic.StoreRel
-tags: [exported]
 ```
 
 ```Go
@@ -307,7 +288,6 @@ func StoreRel(ptr *uint32, val uint32)
 
 ```
 searchKey: atomic.StoreRel64
-tags: [exported]
 ```
 
 ```Go
@@ -318,7 +298,6 @@ func StoreRel64(ptr *uint64, val uint64)
 
 ```
 searchKey: atomic.StoreReluintptr
-tags: [exported]
 ```
 
 ```Go
@@ -329,7 +308,6 @@ func StoreReluintptr(ptr *uintptr, val uintptr)
 
 ```
 searchKey: atomic.StorepNoWB
-tags: [exported]
 ```
 
 ```Go
@@ -344,7 +322,6 @@ NO go:noescape annotation; see atomic_pointer.go.
 
 ```
 searchKey: atomic.Cas
-tags: [exported]
 ```
 
 ```Go
@@ -355,7 +332,6 @@ func Cas(ptr *uint32, old, new uint32) bool
 
 ```
 searchKey: atomic.Casp1
-tags: [exported]
 ```
 
 ```Go
@@ -368,7 +344,6 @@ NO go:noescape annotation; see atomic_pointer.go.
 
 ```
 searchKey: atomic.Casint32
-tags: [exported]
 ```
 
 ```Go
@@ -379,7 +354,6 @@ func Casint32(ptr *int32, old, new int32) bool
 
 ```
 searchKey: atomic.Casint64
-tags: [exported]
 ```
 
 ```Go
@@ -390,7 +364,6 @@ func Casint64(ptr *int64, old, new int64) bool
 
 ```
 searchKey: atomic.Casuintptr
-tags: [exported]
 ```
 
 ```Go
@@ -401,7 +374,6 @@ func Casuintptr(ptr *uintptr, old, new uintptr) bool
 
 ```
 searchKey: atomic.Storeint32
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +384,6 @@ func Storeint32(ptr *int32, new int32)
 
 ```
 searchKey: atomic.Storeint64
-tags: [exported]
 ```
 
 ```Go
@@ -423,7 +394,6 @@ func Storeint64(ptr *int64, new int64)
 
 ```
 searchKey: atomic.Storeuintptr
-tags: [exported]
 ```
 
 ```Go
@@ -434,7 +404,6 @@ func Storeuintptr(ptr *uintptr, new uintptr)
 
 ```
 searchKey: atomic.Loaduintptr
-tags: [exported]
 ```
 
 ```Go
@@ -445,7 +414,6 @@ func Loaduintptr(ptr *uintptr) uintptr
 
 ```
 searchKey: atomic.Loaduint
-tags: [exported]
 ```
 
 ```Go
@@ -456,7 +424,6 @@ func Loaduint(ptr *uint) uint
 
 ```
 searchKey: atomic.Loadint32
-tags: [exported]
 ```
 
 ```Go
@@ -467,7 +434,6 @@ func Loadint32(ptr *int32) int32
 
 ```
 searchKey: atomic.Loadint64
-tags: [exported]
 ```
 
 ```Go
@@ -478,7 +444,6 @@ func Loadint64(ptr *int64) int64
 
 ```
 searchKey: atomic.Xaddint32
-tags: [exported]
 ```
 
 ```Go
@@ -489,7 +454,6 @@ func Xaddint32(ptr *int32, delta int32) int32
 
 ```
 searchKey: atomic.Xaddint64
-tags: [exported]
 ```
 
 ```Go
@@ -500,7 +464,6 @@ func Xaddint64(ptr *int64, delta int64) int64
 
 ```
 searchKey: atomic.Xchgint32
-tags: [exported]
 ```
 
 ```Go
@@ -511,7 +474,6 @@ func Xchgint32(ptr *int32, new int32) int32
 
 ```
 searchKey: atomic.Xchgint64
-tags: [exported]
 ```
 
 ```Go
@@ -522,6 +484,7 @@ func Xchgint64(ptr *int64, new int64) int64
 
 ```
 searchKey: atomic.panicUnaligned
+tags: [private]
 ```
 
 ```Go

@@ -38,14 +38,11 @@ Package internal contains HTTP internals shared by net/http and net/http/httputi
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="maxLineLength" href="#maxLineLength">const maxLineLength</a>
 
 ```
 searchKey: internal.maxLineLength
+tags: [private]
 ```
 
 ```Go
@@ -55,15 +52,10 @@ const maxLineLength = 4096 // assumed <= bufio.defaultBufSize
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrLineTooLong" href="#ErrLineTooLong">var ErrLineTooLong</a>
 
 ```
 searchKey: internal.ErrLineTooLong
-tags: [exported]
 ```
 
 ```Go
@@ -72,14 +64,11 @@ var ErrLineTooLong = errors.New("header line too long")
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="chunkedReader" href="#chunkedReader">type chunkedReader struct</a>
 
 ```
 searchKey: internal.chunkedReader
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +85,7 @@ type chunkedReader struct {
 
 ```
 searchKey: internal.chunkedReader.beginChunk
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +96,7 @@ func (cr *chunkedReader) beginChunk()
 
 ```
 searchKey: internal.chunkedReader.chunkHeaderAvailable
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +107,7 @@ func (cr *chunkedReader) chunkHeaderAvailable() bool
 
 ```
 searchKey: internal.chunkedReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -126,6 +118,7 @@ func (cr *chunkedReader) Read(b []uint8) (n int, err error)
 
 ```
 searchKey: internal.chunkedWriter
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +133,7 @@ Writing to chunkedWriter translates to writing in HTTP chunked Transfer Encoding
 
 ```
 searchKey: internal.chunkedWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +146,7 @@ Write the contents of data as one chunk to Wire. NOTE: Note that the correspondi
 
 ```
 searchKey: internal.chunkedWriter.Close
+tags: [private]
 ```
 
 ```Go
@@ -162,7 +157,6 @@ func (cw *chunkedWriter) Close() error
 
 ```
 searchKey: internal.FlushAfterChunkWriter
-tags: [exported]
 ```
 
 ```Go
@@ -175,15 +169,10 @@ FlushAfterChunkWriter signals from the caller of NewChunkedWriter that each chun
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NewChunkedReader" href="#NewChunkedReader">func NewChunkedReader(r io.Reader) io.Reader</a>
 
 ```
 searchKey: internal.NewChunkedReader
-tags: [exported]
 ```
 
 ```Go
@@ -198,6 +187,7 @@ NewChunkedReader is not needed by normal applications. The http package automati
 
 ```
 searchKey: internal.readChunkLine
+tags: [private]
 ```
 
 ```Go
@@ -210,6 +200,7 @@ Read a line of bytes (up to \n) from b. Give up if the line exceeds maxLineLengt
 
 ```
 searchKey: internal.trimTrailingWhitespace
+tags: [private]
 ```
 
 ```Go
@@ -220,6 +211,7 @@ func trimTrailingWhitespace(b []byte) []byte
 
 ```
 searchKey: internal.isASCIISpace
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +222,7 @@ func isASCIISpace(b byte) bool
 
 ```
 searchKey: internal.removeChunkExtension
+tags: [private]
 ```
 
 ```Go
@@ -249,7 +242,6 @@ removeChunkExtension removes any chunk-extension from p. For example,
 
 ```
 searchKey: internal.NewChunkedWriter
-tags: [exported]
 ```
 
 ```Go
@@ -264,6 +256,7 @@ NewChunkedWriter is not needed by normal applications. The http package adds chu
 
 ```
 searchKey: internal.parseHexUint
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +267,7 @@ func parseHexUint(v []byte) (n uint64, err error)
 
 ```
 searchKey: internal.TestChunk
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +278,7 @@ func TestChunk(t *testing.T)
 
 ```
 searchKey: internal.TestChunkReadMultiple
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +289,7 @@ func TestChunkReadMultiple(t *testing.T)
 
 ```
 searchKey: internal.TestChunkReaderAllocs
+tags: [private]
 ```
 
 ```Go
@@ -304,6 +300,7 @@ func TestChunkReaderAllocs(t *testing.T)
 
 ```
 searchKey: internal.TestParseHexUint
+tags: [private]
 ```
 
 ```Go
@@ -314,6 +311,7 @@ func TestParseHexUint(t *testing.T)
 
 ```
 searchKey: internal.TestChunkReadingIgnoresExtensions
+tags: [private]
 ```
 
 ```Go
@@ -324,6 +322,7 @@ func TestChunkReadingIgnoresExtensions(t *testing.T)
 
 ```
 searchKey: internal.TestChunkReadPartial
+tags: [private]
 ```
 
 ```Go

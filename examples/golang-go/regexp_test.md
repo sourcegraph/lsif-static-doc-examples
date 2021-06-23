@@ -38,10 +38,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example" href="#Example">func Example()</a>
 
 ```
 searchKey: regexp_test.Example
+tags: [private]
 ```
 
 ```Go
@@ -52,6 +57,7 @@ func Example()
 
 ```
 searchKey: regexp_test.ExampleMatch
+tags: [private]
 ```
 
 ```Go
@@ -62,6 +68,7 @@ func ExampleMatch()
 
 ```
 searchKey: regexp_test.ExampleMatchString
+tags: [private]
 ```
 
 ```Go
@@ -72,6 +79,7 @@ func ExampleMatchString()
 
 ```
 searchKey: regexp_test.ExampleQuoteMeta
+tags: [private]
 ```
 
 ```Go
@@ -82,6 +90,7 @@ func ExampleQuoteMeta()
 
 ```
 searchKey: regexp_test.ExampleRegexp_Find
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +101,7 @@ func ExampleRegexp_Find()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindAll
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +112,7 @@ func ExampleRegexp_FindAll()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindAllSubmatch
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +123,7 @@ func ExampleRegexp_FindAllSubmatch()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindSubmatch
+tags: [private]
 ```
 
 ```Go
@@ -122,6 +134,7 @@ func ExampleRegexp_FindSubmatch()
 
 ```
 searchKey: regexp_test.ExampleRegexp_Match
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +145,7 @@ func ExampleRegexp_Match()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindString
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +156,7 @@ func ExampleRegexp_FindString()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindStringIndex
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +167,7 @@ func ExampleRegexp_FindStringIndex()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindStringSubmatch
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +178,7 @@ func ExampleRegexp_FindStringSubmatch()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindAllString
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +189,7 @@ func ExampleRegexp_FindAllString()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindAllStringSubmatch
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +200,7 @@ func ExampleRegexp_FindAllStringSubmatch()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindAllStringSubmatchIndex
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +211,7 @@ func ExampleRegexp_FindAllStringSubmatchIndex()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindSubmatchIndex
+tags: [private]
 ```
 
 ```Go
@@ -202,6 +222,7 @@ func ExampleRegexp_FindSubmatchIndex()
 
 ```
 searchKey: regexp_test.ExampleRegexp_Longest
+tags: [private]
 ```
 
 ```Go
@@ -212,6 +233,7 @@ func ExampleRegexp_Longest()
 
 ```
 searchKey: regexp_test.ExampleRegexp_MatchString
+tags: [private]
 ```
 
 ```Go
@@ -222,6 +244,7 @@ func ExampleRegexp_MatchString()
 
 ```
 searchKey: regexp_test.ExampleRegexp_NumSubexp
+tags: [private]
 ```
 
 ```Go
@@ -232,6 +255,7 @@ func ExampleRegexp_NumSubexp()
 
 ```
 searchKey: regexp_test.ExampleRegexp_ReplaceAll
+tags: [private]
 ```
 
 ```Go
@@ -242,6 +266,7 @@ func ExampleRegexp_ReplaceAll()
 
 ```
 searchKey: regexp_test.ExampleRegexp_ReplaceAllLiteralString
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +277,7 @@ func ExampleRegexp_ReplaceAllLiteralString()
 
 ```
 searchKey: regexp_test.ExampleRegexp_ReplaceAllString
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +288,7 @@ func ExampleRegexp_ReplaceAllString()
 
 ```
 searchKey: regexp_test.ExampleRegexp_ReplaceAllStringFunc
+tags: [private]
 ```
 
 ```Go
@@ -272,6 +299,7 @@ func ExampleRegexp_ReplaceAllStringFunc()
 
 ```
 searchKey: regexp_test.ExampleRegexp_SubexpNames
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +310,7 @@ func ExampleRegexp_SubexpNames()
 
 ```
 searchKey: regexp_test.ExampleRegexp_SubexpIndex
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +321,7 @@ func ExampleRegexp_SubexpIndex()
 
 ```
 searchKey: regexp_test.ExampleRegexp_Split
+tags: [private]
 ```
 
 ```Go
@@ -302,6 +332,7 @@ func ExampleRegexp_Split()
 
 ```
 searchKey: regexp_test.ExampleRegexp_Expand
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +343,7 @@ func ExampleRegexp_Expand()
 
 ```
 searchKey: regexp_test.ExampleRegexp_ExpandString
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +354,7 @@ func ExampleRegexp_ExpandString()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindIndex
+tags: [private]
 ```
 
 ```Go
@@ -332,6 +365,7 @@ func ExampleRegexp_FindIndex()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindAllSubmatchIndex
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +376,7 @@ func ExampleRegexp_FindAllSubmatchIndex()
 
 ```
 searchKey: regexp_test.ExampleRegexp_FindAllIndex
+tags: [private]
 ```
 
 ```Go

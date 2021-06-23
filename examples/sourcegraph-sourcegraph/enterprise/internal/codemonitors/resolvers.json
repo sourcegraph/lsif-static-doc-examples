@@ -4,7 +4,9 @@
     "identifier": "resolvers",
     "newPage": true,
     "searchKey": "enterprise/internal/codemonitors/resolvers",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "MonitorKind",
                 "newPage": false,
                 "searchKey": "resolvers.MonitorKind",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "monitorTriggerQueryKind",
                 "newPage": false,
                 "searchKey": "resolvers.monitorTriggerQueryKind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -82,7 +86,9 @@
                 "identifier": "monitorTriggerEventKind",
                 "newPage": false,
                 "searchKey": "resolvers.monitorTriggerEventKind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -102,7 +108,9 @@
                 "identifier": "monitorActionEmailKind",
                 "newPage": false,
                 "searchKey": "resolvers.monitorActionEmailKind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -122,7 +130,9 @@
                 "identifier": "monitorActionEventKind",
                 "newPage": false,
                 "searchKey": "resolvers.monitorActionEventKind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -142,7 +152,9 @@
                 "identifier": "monitorActionEmailRecipientKind",
                 "newPage": false,
                 "searchKey": "resolvers.monitorActionEmailRecipientKind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -162,7 +174,9 @@
                 "identifier": "queryByUserFmtStr",
                 "newPage": false,
                 "searchKey": "resolvers.queryByUserFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -182,7 +196,9 @@
                 "identifier": "editMonitor",
                 "newPage": false,
                 "searchKey": "resolvers.editMonitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -202,7 +218,9 @@
                 "identifier": "recipientsPagingFmtStr",
                 "newPage": false,
                 "searchKey": "resolvers.recipientsPagingFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -222,7 +240,9 @@
                 "identifier": "queryMonitorByIDFmtStr",
                 "newPage": false,
                 "searchKey": "resolvers.queryMonitorByIDFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -242,7 +262,9 @@
                 "identifier": "monitorPagingFmtStr",
                 "newPage": false,
                 "searchKey": "resolvers.monitorPagingFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -262,7 +284,9 @@
                 "identifier": "actionPagingFmtStr",
                 "newPage": false,
                 "searchKey": "resolvers.actionPagingFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -282,7 +306,9 @@
                 "identifier": "triggerEventPagingFmtStr",
                 "newPage": false,
                 "searchKey": "resolvers.triggerEventPagingFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -302,7 +328,9 @@
                 "identifier": "actionEventPagingFmtStr",
                 "newPage": false,
                 "searchKey": "resolvers.actionEventPagingFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -325,7 +353,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -343,7 +373,9 @@
                 "identifier": "stateToStatus",
                 "newPage": false,
                 "searchKey": "resolvers.stateToStatus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -366,7 +398,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -384,9 +418,7 @@
                 "identifier": "Resolver",
                 "newPage": false,
                 "searchKey": "resolvers.Resolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -404,7 +436,9 @@
                       "identifier": "newTestResolver",
                       "newPage": false,
                       "searchKey": "resolvers.newTestResolver",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -424,9 +458,7 @@
                       "identifier": "Resolver.Now",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.Now",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -446,9 +478,7 @@
                       "identifier": "Resolver.NodeResolvers",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.NodeResolvers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -468,9 +498,7 @@
                       "identifier": "Resolver.Monitors",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.Monitors",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -490,9 +518,7 @@
                       "identifier": "Resolver.MonitorByID",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.MonitorByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -512,9 +538,7 @@
                       "identifier": "Resolver.CreateCodeMonitor",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.CreateCodeMonitor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -534,9 +558,7 @@
                       "identifier": "Resolver.ToggleCodeMonitor",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.ToggleCodeMonitor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -556,9 +578,7 @@
                       "identifier": "Resolver.DeleteCodeMonitor",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.DeleteCodeMonitor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -578,9 +598,7 @@
                       "identifier": "Resolver.UpdateCodeMonitor",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.UpdateCodeMonitor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -600,9 +618,7 @@
                       "identifier": "Resolver.ResetTriggerQueryTimestamps",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.ResetTriggerQueryTimestamps",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -622,9 +638,7 @@
                       "identifier": "Resolver.TriggerTestEmailAction",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.TriggerTestEmailAction",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -644,7 +658,9 @@
                       "identifier": "Resolver.actionIDsForMonitorIDInt64",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.actionIDsForMonitorIDInt64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -664,7 +680,9 @@
                       "identifier": "Resolver.actionIDsForMonitorIDINT64SinglePage",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.actionIDsForMonitorIDINT64SinglePage",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -684,7 +702,9 @@
                       "identifier": "Resolver.updateCodeMonitor",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.updateCodeMonitor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -704,7 +724,9 @@
                       "identifier": "Resolver.transact",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.transact",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -724,7 +746,9 @@
                       "identifier": "Resolver.isAllowedToEdit",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.isAllowedToEdit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -744,7 +768,9 @@
                       "identifier": "Resolver.isAllowedToCreate",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.isAllowedToCreate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -764,7 +790,9 @@
                       "identifier": "Resolver.ownerForID64",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.ownerForID64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -784,7 +812,9 @@
                       "identifier": "Resolver.actionConnectionResolverWithTriggerID",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.actionConnectionResolverWithTriggerID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -804,7 +834,9 @@
                       "identifier": "Resolver.insertTestMonitorWithOpts",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.insertTestMonitorWithOpts",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -827,7 +859,9 @@
                 "identifier": "monitorConnection",
                 "newPage": false,
                 "searchKey": "resolvers.monitorConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -845,7 +879,9 @@
                       "identifier": "monitorConnection.Nodes",
                       "newPage": false,
                       "searchKey": "resolvers.monitorConnection.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -865,7 +901,9 @@
                       "identifier": "monitorConnection.TotalCount",
                       "newPage": false,
                       "searchKey": "resolvers.monitorConnection.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -885,7 +923,9 @@
                       "identifier": "monitorConnection.PageInfo",
                       "newPage": false,
                       "searchKey": "resolvers.monitorConnection.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -908,7 +948,9 @@
                 "identifier": "monitor",
                 "newPage": false,
                 "searchKey": "resolvers.monitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -926,7 +968,9 @@
                       "identifier": "monitor.ID",
                       "newPage": false,
                       "searchKey": "resolvers.monitor.ID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -946,7 +990,9 @@
                       "identifier": "monitor.CreatedBy",
                       "newPage": false,
                       "searchKey": "resolvers.monitor.CreatedBy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -966,7 +1012,9 @@
                       "identifier": "monitor.CreatedAt",
                       "newPage": false,
                       "searchKey": "resolvers.monitor.CreatedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -986,7 +1034,9 @@
                       "identifier": "monitor.Description",
                       "newPage": false,
                       "searchKey": "resolvers.monitor.Description",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1006,7 +1056,9 @@
                       "identifier": "monitor.Enabled",
                       "newPage": false,
                       "searchKey": "resolvers.monitor.Enabled",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1026,7 +1078,9 @@
                       "identifier": "monitor.Owner",
                       "newPage": false,
                       "searchKey": "resolvers.monitor.Owner",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1046,7 +1100,9 @@
                       "identifier": "monitor.Trigger",
                       "newPage": false,
                       "searchKey": "resolvers.monitor.Trigger",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1066,7 +1122,9 @@
                       "identifier": "monitor.Actions",
                       "newPage": false,
                       "searchKey": "resolvers.monitor.Actions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1089,7 +1147,9 @@
                 "identifier": "monitorTrigger",
                 "newPage": false,
                 "searchKey": "resolvers.monitorTrigger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1107,7 +1167,9 @@
                       "identifier": "monitorTrigger.ToMonitorQuery",
                       "newPage": false,
                       "searchKey": "resolvers.monitorTrigger.ToMonitorQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1130,7 +1192,9 @@
                 "identifier": "monitorQuery",
                 "newPage": false,
                 "searchKey": "resolvers.monitorQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1148,7 +1212,9 @@
                       "identifier": "monitorQuery.ID",
                       "newPage": false,
                       "searchKey": "resolvers.monitorQuery.ID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1168,7 +1234,9 @@
                       "identifier": "monitorQuery.Query",
                       "newPage": false,
                       "searchKey": "resolvers.monitorQuery.Query",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1188,7 +1256,9 @@
                       "identifier": "monitorQuery.Events",
                       "newPage": false,
                       "searchKey": "resolvers.monitorQuery.Events",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1211,7 +1281,9 @@
                 "identifier": "monitorTriggerEventConnection",
                 "newPage": false,
                 "searchKey": "resolvers.monitorTriggerEventConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1229,7 +1301,9 @@
                       "identifier": "monitorTriggerEventConnection.Nodes",
                       "newPage": false,
                       "searchKey": "resolvers.monitorTriggerEventConnection.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1249,7 +1323,9 @@
                       "identifier": "monitorTriggerEventConnection.TotalCount",
                       "newPage": false,
                       "searchKey": "resolvers.monitorTriggerEventConnection.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1269,7 +1345,9 @@
                       "identifier": "monitorTriggerEventConnection.PageInfo",
                       "newPage": false,
                       "searchKey": "resolvers.monitorTriggerEventConnection.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1292,7 +1370,9 @@
                 "identifier": "monitorTriggerEvent",
                 "newPage": false,
                 "searchKey": "resolvers.monitorTriggerEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1310,7 +1390,9 @@
                       "identifier": "monitorTriggerEvent.ID",
                       "newPage": false,
                       "searchKey": "resolvers.monitorTriggerEvent.ID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1330,7 +1412,9 @@
                       "identifier": "monitorTriggerEvent.Status",
                       "newPage": false,
                       "searchKey": "resolvers.monitorTriggerEvent.Status",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1350,7 +1434,9 @@
                       "identifier": "monitorTriggerEvent.Message",
                       "newPage": false,
                       "searchKey": "resolvers.monitorTriggerEvent.Message",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1370,7 +1456,9 @@
                       "identifier": "monitorTriggerEvent.Timestamp",
                       "newPage": false,
                       "searchKey": "resolvers.monitorTriggerEvent.Timestamp",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1390,7 +1478,9 @@
                       "identifier": "monitorTriggerEvent.Actions",
                       "newPage": false,
                       "searchKey": "resolvers.monitorTriggerEvent.Actions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1413,7 +1503,9 @@
                 "identifier": "monitorActionConnection",
                 "newPage": false,
                 "searchKey": "resolvers.monitorActionConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1431,7 +1523,9 @@
                       "identifier": "monitorActionConnection.Nodes",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionConnection.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1451,7 +1545,9 @@
                       "identifier": "monitorActionConnection.TotalCount",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionConnection.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1471,7 +1567,9 @@
                       "identifier": "monitorActionConnection.PageInfo",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionConnection.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1494,7 +1592,9 @@
                 "identifier": "action",
                 "newPage": false,
                 "searchKey": "resolvers.action",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1512,7 +1612,9 @@
                       "identifier": "action.ToMonitorEmail",
                       "newPage": false,
                       "searchKey": "resolvers.action.ToMonitorEmail",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1535,7 +1637,9 @@
                 "identifier": "monitorEmail",
                 "newPage": false,
                 "searchKey": "resolvers.monitorEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1553,7 +1657,9 @@
                       "identifier": "monitorEmail.Recipients",
                       "newPage": false,
                       "searchKey": "resolvers.monitorEmail.Recipients",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1573,7 +1679,9 @@
                       "identifier": "monitorEmail.Enabled",
                       "newPage": false,
                       "searchKey": "resolvers.monitorEmail.Enabled",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1593,7 +1701,9 @@
                       "identifier": "monitorEmail.Priority",
                       "newPage": false,
                       "searchKey": "resolvers.monitorEmail.Priority",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1613,7 +1723,9 @@
                       "identifier": "monitorEmail.Header",
                       "newPage": false,
                       "searchKey": "resolvers.monitorEmail.Header",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1633,7 +1745,9 @@
                       "identifier": "monitorEmail.ID",
                       "newPage": false,
                       "searchKey": "resolvers.monitorEmail.ID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1653,7 +1767,9 @@
                       "identifier": "monitorEmail.Events",
                       "newPage": false,
                       "searchKey": "resolvers.monitorEmail.Events",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1676,7 +1792,9 @@
                 "identifier": "monitorActionEmailRecipientsConnection",
                 "newPage": false,
                 "searchKey": "resolvers.monitorActionEmailRecipientsConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1694,7 +1812,9 @@
                       "identifier": "monitorActionEmailRecipientsConnection.Nodes",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionEmailRecipientsConnection.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1714,7 +1834,9 @@
                       "identifier": "monitorActionEmailRecipientsConnection.TotalCount",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionEmailRecipientsConnection.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1734,7 +1856,9 @@
                       "identifier": "monitorActionEmailRecipientsConnection.PageInfo",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionEmailRecipientsConnection.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1757,7 +1881,9 @@
                 "identifier": "monitorActionEventConnection",
                 "newPage": false,
                 "searchKey": "resolvers.monitorActionEventConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1775,7 +1901,9 @@
                       "identifier": "monitorActionEventConnection.Nodes",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionEventConnection.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1795,7 +1923,9 @@
                       "identifier": "monitorActionEventConnection.TotalCount",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionEventConnection.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1815,7 +1945,9 @@
                       "identifier": "monitorActionEventConnection.PageInfo",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionEventConnection.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1838,7 +1970,9 @@
                 "identifier": "monitorActionEvent",
                 "newPage": false,
                 "searchKey": "resolvers.monitorActionEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1856,7 +1990,9 @@
                       "identifier": "monitorActionEvent.ID",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionEvent.ID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1876,7 +2012,9 @@
                       "identifier": "monitorActionEvent.Status",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionEvent.Status",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1896,7 +2034,9 @@
                       "identifier": "monitorActionEvent.Message",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionEvent.Message",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1916,7 +2056,9 @@
                       "identifier": "monitorActionEvent.Timestamp",
                       "newPage": false,
                       "searchKey": "resolvers.monitorActionEvent.Timestamp",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1939,7 +2081,9 @@
                 "identifier": "Option",
                 "newPage": false,
                 "searchKey": "resolvers.Option",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1957,7 +2101,9 @@
                       "identifier": "WithActions",
                       "newPage": false,
                       "searchKey": "resolvers.WithActions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1977,7 +2123,9 @@
                       "identifier": "WithOwner",
                       "newPage": false,
                       "searchKey": "resolvers.WithOwner",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1997,7 +2145,9 @@
                       "identifier": "WithPostHooks",
                       "newPage": false,
                       "searchKey": "resolvers.WithPostHooks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2020,7 +2170,9 @@
                 "identifier": "hook",
                 "newPage": false,
                 "searchKey": "resolvers.hook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2040,7 +2192,9 @@
                 "identifier": "options",
                 "newPage": false,
                 "searchKey": "resolvers.options",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2060,7 +2214,9 @@
                 "identifier": "actionOption",
                 "newPage": false,
                 "searchKey": "resolvers.actionOption",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2078,7 +2234,9 @@
                       "identifier": "actionOption.apply",
                       "newPage": false,
                       "searchKey": "resolvers.actionOption.apply",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2101,7 +2259,9 @@
                 "identifier": "ownerOption",
                 "newPage": false,
                 "searchKey": "resolvers.ownerOption",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2119,7 +2279,9 @@
                       "identifier": "ownerOption.apply",
                       "newPage": false,
                       "searchKey": "resolvers.ownerOption.apply",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2142,7 +2304,9 @@
                 "identifier": "postHookOption",
                 "newPage": false,
                 "searchKey": "resolvers.postHookOption",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2160,7 +2324,9 @@
                       "identifier": "postHookOption.apply",
                       "newPage": false,
                       "searchKey": "resolvers.postHookOption.apply",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2183,7 +2349,9 @@
                 "identifier": "testUser",
                 "newPage": false,
                 "searchKey": "resolvers.testUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2201,7 +2369,9 @@
                       "identifier": "testUser.id",
                       "newPage": false,
                       "searchKey": "resolvers.testUser.id",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2227,7 +2397,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2245,9 +2417,7 @@
                 "identifier": "NewResolver",
                 "newPage": false,
                 "searchKey": "resolvers.NewResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2267,7 +2437,9 @@
                 "identifier": "newResolverWithClock",
                 "newPage": false,
                 "searchKey": "resolvers.newResolverWithClock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2287,7 +2459,9 @@
                 "identifier": "sendTestEmail",
                 "newPage": false,
                 "searchKey": "resolvers.sendTestEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2307,7 +2481,9 @@
                 "identifier": "splitActionIDs",
                 "newPage": false,
                 "searchKey": "resolvers.splitActionIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2327,7 +2503,9 @@
                 "identifier": "ownerForID64Query",
                 "newPage": false,
                 "searchKey": "resolvers.ownerForID64Query",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2347,7 +2525,9 @@
                 "identifier": "insertTestUser",
                 "newPage": false,
                 "searchKey": "resolvers.insertTestUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2367,7 +2547,9 @@
                 "identifier": "addUserToOrg",
                 "newPage": false,
                 "searchKey": "resolvers.addUserToOrg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2387,7 +2569,9 @@
                 "identifier": "marshalDateTime",
                 "newPage": false,
                 "searchKey": "resolvers.marshalDateTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2402,12 +2586,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codemonitors/resolvers#init",
+              "pathID": "/enterprise/internal/codemonitors/resolvers#init.resolvers_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.resolvers_test.go",
                 "newPage": false,
                 "searchKey": "resolvers.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2427,7 +2613,9 @@
                 "identifier": "TestCreateCodeMonitor",
                 "newPage": false,
                 "searchKey": "resolvers.TestCreateCodeMonitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2447,7 +2635,9 @@
                 "identifier": "TestListCodeMonitors",
                 "newPage": false,
                 "searchKey": "resolvers.TestListCodeMonitors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2467,7 +2657,9 @@
                 "identifier": "requireNodeCount",
                 "newPage": false,
                 "searchKey": "resolvers.requireNodeCount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2487,7 +2679,9 @@
                 "identifier": "requireHasNextPage",
                 "newPage": false,
                 "searchKey": "resolvers.requireHasNextPage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2507,7 +2701,9 @@
                 "identifier": "TestIsAllowedToEdit",
                 "newPage": false,
                 "searchKey": "resolvers.TestIsAllowedToEdit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2527,7 +2723,9 @@
                 "identifier": "TestIsAllowedToCreate",
                 "newPage": false,
                 "searchKey": "resolvers.TestIsAllowedToCreate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2547,7 +2745,9 @@
                 "identifier": "TestQueryMonitor",
                 "newPage": false,
                 "searchKey": "resolvers.TestQueryMonitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2567,7 +2767,9 @@
                 "identifier": "queryByUser",
                 "newPage": false,
                 "searchKey": "resolvers.queryByUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2587,7 +2789,9 @@
                 "identifier": "TestEditCodeMonitor",
                 "newPage": false,
                 "searchKey": "resolvers.TestEditCodeMonitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2607,7 +2811,9 @@
                 "identifier": "recipientPaging",
                 "newPage": false,
                 "searchKey": "resolvers.recipientPaging",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2627,7 +2833,9 @@
                 "identifier": "queryByID",
                 "newPage": false,
                 "searchKey": "resolvers.queryByID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2647,7 +2855,9 @@
                 "identifier": "monitorPaging",
                 "newPage": false,
                 "searchKey": "resolvers.monitorPaging",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2667,7 +2877,9 @@
                 "identifier": "actionPaging",
                 "newPage": false,
                 "searchKey": "resolvers.actionPaging",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2687,7 +2899,9 @@
                 "identifier": "triggerEventPaging",
                 "newPage": false,
                 "searchKey": "resolvers.triggerEventPaging",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2707,7 +2921,9 @@
                 "identifier": "actionEventPaging",
                 "newPage": false,
                 "searchKey": "resolvers.actionEventPaging",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2727,7 +2943,9 @@
                 "identifier": "TestTriggerTestEmailAction",
                 "newPage": false,
                 "searchKey": "resolvers.TestTriggerTestEmailAction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2747,7 +2965,9 @@
                 "identifier": "TestMonitorKindEqualsResolvers",
                 "newPage": false,
                 "searchKey": "resolvers.TestMonitorKindEqualsResolvers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

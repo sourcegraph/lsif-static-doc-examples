@@ -4,7 +4,9 @@
     "identifier": "testdeps",
     "newPage": true,
     "searchKey": "testing/internal/testdeps",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "matchPat",
                 "newPage": false,
                 "searchKey": "testdeps.matchPat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "matchRe",
                 "newPage": false,
                 "searchKey": "testdeps.matchRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,9 +88,7 @@
                 "identifier": "ImportPath",
                 "newPage": false,
                 "searchKey": "testdeps.ImportPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -102,7 +108,9 @@
                 "identifier": "log",
                 "newPage": false,
                 "searchKey": "testdeps.log",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +133,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -143,9 +153,7 @@
                 "identifier": "TestDeps",
                 "newPage": false,
                 "searchKey": "testdeps.TestDeps",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -163,9 +171,7 @@
                       "identifier": "TestDeps.MatchString",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.MatchString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -185,9 +191,7 @@
                       "identifier": "TestDeps.StartCPUProfile",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.StartCPUProfile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -207,9 +211,7 @@
                       "identifier": "TestDeps.StopCPUProfile",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.StopCPUProfile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -229,9 +231,7 @@
                       "identifier": "TestDeps.WriteProfileTo",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.WriteProfileTo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -251,9 +251,7 @@
                       "identifier": "TestDeps.ImportPath",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.ImportPath",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -273,9 +271,7 @@
                       "identifier": "TestDeps.StartTestLog",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.StartTestLog",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -295,9 +291,7 @@
                       "identifier": "TestDeps.StopTestLog",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.StopTestLog",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -317,9 +311,7 @@
                       "identifier": "TestDeps.SetPanicOnExit0",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.SetPanicOnExit0",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -342,7 +334,9 @@
                 "identifier": "testLog",
                 "newPage": false,
                 "searchKey": "testdeps.testLog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -360,7 +354,9 @@
                       "identifier": "testLog.Getenv",
                       "newPage": false,
                       "searchKey": "testdeps.testLog.Getenv",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -380,7 +376,9 @@
                       "identifier": "testLog.Open",
                       "newPage": false,
                       "searchKey": "testdeps.testLog.Open",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -400,7 +398,9 @@
                       "identifier": "testLog.Stat",
                       "newPage": false,
                       "searchKey": "testdeps.testLog.Stat",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,7 +420,9 @@
                       "identifier": "testLog.Chdir",
                       "newPage": false,
                       "searchKey": "testdeps.testLog.Chdir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -440,7 +442,9 @@
                       "identifier": "testLog.add",
                       "newPage": false,
                       "searchKey": "testdeps.testLog.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",

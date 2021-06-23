@@ -14,10 +14,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="publicsuffix" href="#publicsuffix">var publicsuffix</a>
 
 ```
 searchKey: cookiejar_test.publicsuffix
+tags: [private]
 ```
 
 ```Go
@@ -26,10 +31,15 @@ var publicsuffix = dummypsl{}
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="dummypsl" href="#dummypsl">type dummypsl struct</a>
 
 ```
 searchKey: cookiejar_test.dummypsl
+tags: [private]
 ```
 
 ```Go
@@ -42,6 +52,7 @@ type dummypsl struct {
 
 ```
 searchKey: cookiejar_test.dummypsl.PublicSuffix
+tags: [private]
 ```
 
 ```Go
@@ -52,6 +63,7 @@ func (dummypsl) PublicSuffix(domain string) string
 
 ```
 searchKey: cookiejar_test.dummypsl.String
+tags: [private]
 ```
 
 ```Go
@@ -60,10 +72,15 @@ func (dummypsl) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleNew" href="#ExampleNew">func ExampleNew()</a>
 
 ```
 searchKey: cookiejar_test.ExampleNew
+tags: [private]
 ```
 
 ```Go

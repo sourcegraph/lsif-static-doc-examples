@@ -4,7 +4,9 @@
     "identifier": "middleware",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/cli/middleware",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "goImportMetaTagTemplate",
                 "newPage": false,
                 "searchKey": "middleware.goImportMetaTagTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "httpTrace",
                 "newPage": false,
                 "searchKey": "middleware.httpTrace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "goImportMetaTag",
                 "newPage": false,
                 "searchKey": "middleware.goImportMetaTag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +136,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -142,9 +156,7 @@
                 "identifier": "BlackHole",
                 "newPage": false,
                 "searchKey": "middleware.BlackHole",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +176,9 @@
                 "identifier": "isBlackhole",
                 "newPage": false,
                 "searchKey": "middleware.isBlackhole",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,9 +198,7 @@
                 "identifier": "SourcegraphComGoGetHandler",
                 "newPage": false,
                 "searchKey": "middleware.SourcegraphComGoGetHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -206,9 +218,7 @@
                 "identifier": "Trace",
                 "newPage": false,
                 "searchKey": "middleware.Trace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

@@ -4,7 +4,9 @@
     "identifier": "worker",
     "newPage": true,
     "searchKey": "enterprise/cmd/executor/internal/worker",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ErrJobAlreadyExists",
                 "newPage": false,
                 "searchKey": "worker.ErrJobAlreadyExists",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "scriptPreamble",
                 "newPage": false,
                 "searchKey": "worker.scriptPreamble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -82,7 +86,9 @@
                 "identifier": "makeTempDir",
                 "newPage": false,
                 "searchKey": "worker.makeTempDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -105,7 +111,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -123,7 +131,9 @@
                 "identifier": "handler",
                 "newPage": false,
                 "searchKey": "worker.handler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +151,9 @@
                       "identifier": "handler.Handle",
                       "newPage": false,
                       "searchKey": "worker.handler.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -161,7 +173,9 @@
                       "identifier": "handler.prepareWorkspace",
                       "newPage": false,
                       "searchKey": "worker.handler.prepareWorkspace",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -184,9 +198,7 @@
                 "identifier": "IDSet",
                 "newPage": false,
                 "searchKey": "worker.IDSet",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                       "identifier": "newIDSet",
                       "newPage": false,
                       "searchKey": "worker.newIDSet",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -224,9 +238,7 @@
                       "identifier": "IDSet.Add",
                       "newPage": false,
                       "searchKey": "worker.IDSet.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -246,9 +258,7 @@
                       "identifier": "IDSet.Remove",
                       "newPage": false,
                       "searchKey": "worker.IDSet.Remove",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -268,9 +278,7 @@
                       "identifier": "IDSet.Slice",
                       "newPage": false,
                       "searchKey": "worker.IDSet.Slice",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -293,7 +301,9 @@
                 "identifier": "storeShim",
                 "newPage": false,
                 "searchKey": "worker.storeShim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -311,7 +321,9 @@
                       "identifier": "storeShim.QueuedCount",
                       "newPage": false,
                       "searchKey": "worker.storeShim.QueuedCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -331,7 +343,9 @@
                       "identifier": "storeShim.Dequeue",
                       "newPage": false,
                       "searchKey": "worker.storeShim.Dequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -351,7 +365,9 @@
                       "identifier": "storeShim.AddExecutionLogEntry",
                       "newPage": false,
                       "searchKey": "worker.storeShim.AddExecutionLogEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -371,7 +387,9 @@
                       "identifier": "storeShim.MarkComplete",
                       "newPage": false,
                       "searchKey": "worker.storeShim.MarkComplete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -391,7 +409,9 @@
                       "identifier": "storeShim.MarkErrored",
                       "newPage": false,
                       "searchKey": "worker.storeShim.MarkErrored",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -411,7 +431,9 @@
                       "identifier": "storeShim.MarkFailed",
                       "newPage": false,
                       "searchKey": "worker.storeShim.MarkFailed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -431,7 +453,9 @@
                       "identifier": "storeShim.Done",
                       "newPage": false,
                       "searchKey": "worker.storeShim.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -454,9 +478,7 @@
                 "identifier": "QueueStore",
                 "newPage": false,
                 "searchKey": "worker.QueueStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -476,9 +498,7 @@
                 "identifier": "Options",
                 "newPage": false,
                 "searchKey": "worker.Options",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -498,7 +518,9 @@
                 "identifier": "MockRunner",
                 "newPage": false,
                 "searchKey": "worker.MockRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -516,7 +538,9 @@
                       "identifier": "NewMockRunner",
                       "newPage": false,
                       "searchKey": "worker.NewMockRunner",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -536,7 +560,9 @@
                       "identifier": "NewMockRunnerFrom",
                       "newPage": false,
                       "searchKey": "worker.NewMockRunnerFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -556,7 +582,9 @@
                       "identifier": "MockRunner.Run",
                       "newPage": false,
                       "searchKey": "worker.MockRunner.Run",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -576,7 +604,9 @@
                       "identifier": "MockRunner.Setup",
                       "newPage": false,
                       "searchKey": "worker.MockRunner.Setup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -596,7 +626,9 @@
                       "identifier": "MockRunner.Teardown",
                       "newPage": false,
                       "searchKey": "worker.MockRunner.Teardown",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -619,7 +651,9 @@
                 "identifier": "RunnerRunFunc",
                 "newPage": false,
                 "searchKey": "worker.RunnerRunFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -637,7 +671,9 @@
                       "identifier": "RunnerRunFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.RunnerRunFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -657,7 +693,9 @@
                       "identifier": "RunnerRunFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.RunnerRunFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -677,7 +715,9 @@
                       "identifier": "RunnerRunFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.RunnerRunFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -697,7 +737,9 @@
                       "identifier": "RunnerRunFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.RunnerRunFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -717,7 +759,9 @@
                       "identifier": "RunnerRunFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.RunnerRunFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -737,7 +781,9 @@
                       "identifier": "RunnerRunFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.RunnerRunFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -757,7 +803,9 @@
                       "identifier": "RunnerRunFunc.History",
                       "newPage": false,
                       "searchKey": "worker.RunnerRunFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -780,7 +828,9 @@
                 "identifier": "RunnerRunFuncCall",
                 "newPage": false,
                 "searchKey": "worker.RunnerRunFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -798,7 +848,9 @@
                       "identifier": "RunnerRunFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.RunnerRunFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -818,7 +870,9 @@
                       "identifier": "RunnerRunFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.RunnerRunFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -841,7 +895,9 @@
                 "identifier": "RunnerSetupFunc",
                 "newPage": false,
                 "searchKey": "worker.RunnerSetupFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -859,7 +915,9 @@
                       "identifier": "RunnerSetupFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.RunnerSetupFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -879,7 +937,9 @@
                       "identifier": "RunnerSetupFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.RunnerSetupFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -899,7 +959,9 @@
                       "identifier": "RunnerSetupFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.RunnerSetupFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -919,7 +981,9 @@
                       "identifier": "RunnerSetupFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.RunnerSetupFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -939,7 +1003,9 @@
                       "identifier": "RunnerSetupFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.RunnerSetupFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -959,7 +1025,9 @@
                       "identifier": "RunnerSetupFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.RunnerSetupFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -979,7 +1047,9 @@
                       "identifier": "RunnerSetupFunc.History",
                       "newPage": false,
                       "searchKey": "worker.RunnerSetupFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1002,7 +1072,9 @@
                 "identifier": "RunnerSetupFuncCall",
                 "newPage": false,
                 "searchKey": "worker.RunnerSetupFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1020,7 +1092,9 @@
                       "identifier": "RunnerSetupFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.RunnerSetupFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1040,7 +1114,9 @@
                       "identifier": "RunnerSetupFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.RunnerSetupFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1063,7 +1139,9 @@
                 "identifier": "RunnerTeardownFunc",
                 "newPage": false,
                 "searchKey": "worker.RunnerTeardownFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1081,7 +1159,9 @@
                       "identifier": "RunnerTeardownFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.RunnerTeardownFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1101,7 +1181,9 @@
                       "identifier": "RunnerTeardownFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.RunnerTeardownFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1121,7 +1203,9 @@
                       "identifier": "RunnerTeardownFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.RunnerTeardownFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1141,7 +1225,9 @@
                       "identifier": "RunnerTeardownFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.RunnerTeardownFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1161,7 +1247,9 @@
                       "identifier": "RunnerTeardownFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.RunnerTeardownFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1181,7 +1269,9 @@
                       "identifier": "RunnerTeardownFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.RunnerTeardownFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1201,7 +1291,9 @@
                       "identifier": "RunnerTeardownFunc.History",
                       "newPage": false,
                       "searchKey": "worker.RunnerTeardownFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1224,7 +1316,9 @@
                 "identifier": "RunnerTeardownFuncCall",
                 "newPage": false,
                 "searchKey": "worker.RunnerTeardownFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1242,7 +1336,9 @@
                       "identifier": "RunnerTeardownFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.RunnerTeardownFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1262,7 +1358,9 @@
                       "identifier": "RunnerTeardownFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.RunnerTeardownFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1285,7 +1383,9 @@
                 "identifier": "MockStore",
                 "newPage": false,
                 "searchKey": "worker.MockStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1303,7 +1403,9 @@
                       "identifier": "NewMockStore",
                       "newPage": false,
                       "searchKey": "worker.NewMockStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1323,7 +1425,9 @@
                       "identifier": "NewMockStoreFrom",
                       "newPage": false,
                       "searchKey": "worker.NewMockStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1343,7 +1447,9 @@
                       "identifier": "MockStore.AddExecutionLogEntry",
                       "newPage": false,
                       "searchKey": "worker.MockStore.AddExecutionLogEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1363,7 +1469,9 @@
                       "identifier": "MockStore.Dequeue",
                       "newPage": false,
                       "searchKey": "worker.MockStore.Dequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1383,7 +1491,9 @@
                       "identifier": "MockStore.Done",
                       "newPage": false,
                       "searchKey": "worker.MockStore.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1403,7 +1513,9 @@
                       "identifier": "MockStore.MarkComplete",
                       "newPage": false,
                       "searchKey": "worker.MockStore.MarkComplete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1423,7 +1535,9 @@
                       "identifier": "MockStore.MarkErrored",
                       "newPage": false,
                       "searchKey": "worker.MockStore.MarkErrored",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1443,7 +1557,9 @@
                       "identifier": "MockStore.MarkFailed",
                       "newPage": false,
                       "searchKey": "worker.MockStore.MarkFailed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1463,7 +1579,9 @@
                       "identifier": "MockStore.QueuedCount",
                       "newPage": false,
                       "searchKey": "worker.MockStore.QueuedCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1486,7 +1604,9 @@
                 "identifier": "StoreAddExecutionLogEntryFunc",
                 "newPage": false,
                 "searchKey": "worker.StoreAddExecutionLogEntryFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1504,7 +1624,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.StoreAddExecutionLogEntryFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1524,7 +1646,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.StoreAddExecutionLogEntryFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1544,7 +1668,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreAddExecutionLogEntryFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1564,7 +1690,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreAddExecutionLogEntryFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1584,7 +1712,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.StoreAddExecutionLogEntryFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1604,7 +1734,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.StoreAddExecutionLogEntryFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1624,7 +1756,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.History",
                       "newPage": false,
                       "searchKey": "worker.StoreAddExecutionLogEntryFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1647,7 +1781,9 @@
                 "identifier": "StoreAddExecutionLogEntryFuncCall",
                 "newPage": false,
                 "searchKey": "worker.StoreAddExecutionLogEntryFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1665,7 +1801,9 @@
                       "identifier": "StoreAddExecutionLogEntryFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.StoreAddExecutionLogEntryFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1685,7 +1823,9 @@
                       "identifier": "StoreAddExecutionLogEntryFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.StoreAddExecutionLogEntryFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1708,7 +1848,9 @@
                 "identifier": "StoreDequeueFunc",
                 "newPage": false,
                 "searchKey": "worker.StoreDequeueFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1726,7 +1868,9 @@
                       "identifier": "StoreDequeueFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.StoreDequeueFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1746,7 +1890,9 @@
                       "identifier": "StoreDequeueFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.StoreDequeueFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1766,7 +1912,9 @@
                       "identifier": "StoreDequeueFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreDequeueFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1786,7 +1934,9 @@
                       "identifier": "StoreDequeueFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreDequeueFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1806,7 +1956,9 @@
                       "identifier": "StoreDequeueFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.StoreDequeueFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1826,7 +1978,9 @@
                       "identifier": "StoreDequeueFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.StoreDequeueFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1846,7 +2000,9 @@
                       "identifier": "StoreDequeueFunc.History",
                       "newPage": false,
                       "searchKey": "worker.StoreDequeueFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1869,7 +2025,9 @@
                 "identifier": "StoreDequeueFuncCall",
                 "newPage": false,
                 "searchKey": "worker.StoreDequeueFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1887,7 +2045,9 @@
                       "identifier": "StoreDequeueFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.StoreDequeueFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1907,7 +2067,9 @@
                       "identifier": "StoreDequeueFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.StoreDequeueFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1930,7 +2092,9 @@
                 "identifier": "StoreDoneFunc",
                 "newPage": false,
                 "searchKey": "worker.StoreDoneFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1948,7 +2112,9 @@
                       "identifier": "StoreDoneFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.StoreDoneFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1968,7 +2134,9 @@
                       "identifier": "StoreDoneFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.StoreDoneFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1988,7 +2156,9 @@
                       "identifier": "StoreDoneFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreDoneFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2008,7 +2178,9 @@
                       "identifier": "StoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreDoneFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2028,7 +2200,9 @@
                       "identifier": "StoreDoneFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.StoreDoneFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2048,7 +2222,9 @@
                       "identifier": "StoreDoneFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.StoreDoneFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2068,7 +2244,9 @@
                       "identifier": "StoreDoneFunc.History",
                       "newPage": false,
                       "searchKey": "worker.StoreDoneFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2091,7 +2269,9 @@
                 "identifier": "StoreDoneFuncCall",
                 "newPage": false,
                 "searchKey": "worker.StoreDoneFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2109,7 +2289,9 @@
                       "identifier": "StoreDoneFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.StoreDoneFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2129,7 +2311,9 @@
                       "identifier": "StoreDoneFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.StoreDoneFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2152,7 +2336,9 @@
                 "identifier": "StoreMarkCompleteFunc",
                 "newPage": false,
                 "searchKey": "worker.StoreMarkCompleteFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2170,7 +2356,9 @@
                       "identifier": "StoreMarkCompleteFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkCompleteFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2190,7 +2378,9 @@
                       "identifier": "StoreMarkCompleteFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkCompleteFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2210,7 +2400,9 @@
                       "identifier": "StoreMarkCompleteFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkCompleteFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2230,7 +2422,9 @@
                       "identifier": "StoreMarkCompleteFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkCompleteFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2250,7 +2444,9 @@
                       "identifier": "StoreMarkCompleteFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkCompleteFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2270,7 +2466,9 @@
                       "identifier": "StoreMarkCompleteFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkCompleteFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2290,7 +2488,9 @@
                       "identifier": "StoreMarkCompleteFunc.History",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkCompleteFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2313,7 +2513,9 @@
                 "identifier": "StoreMarkCompleteFuncCall",
                 "newPage": false,
                 "searchKey": "worker.StoreMarkCompleteFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2331,7 +2533,9 @@
                       "identifier": "StoreMarkCompleteFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkCompleteFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2351,7 +2555,9 @@
                       "identifier": "StoreMarkCompleteFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkCompleteFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2374,7 +2580,9 @@
                 "identifier": "StoreMarkErroredFunc",
                 "newPage": false,
                 "searchKey": "worker.StoreMarkErroredFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2392,7 +2600,9 @@
                       "identifier": "StoreMarkErroredFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkErroredFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2412,7 +2622,9 @@
                       "identifier": "StoreMarkErroredFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkErroredFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2432,7 +2644,9 @@
                       "identifier": "StoreMarkErroredFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkErroredFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2452,7 +2666,9 @@
                       "identifier": "StoreMarkErroredFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkErroredFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2472,7 +2688,9 @@
                       "identifier": "StoreMarkErroredFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkErroredFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2492,7 +2710,9 @@
                       "identifier": "StoreMarkErroredFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkErroredFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2512,7 +2732,9 @@
                       "identifier": "StoreMarkErroredFunc.History",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkErroredFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2535,7 +2757,9 @@
                 "identifier": "StoreMarkErroredFuncCall",
                 "newPage": false,
                 "searchKey": "worker.StoreMarkErroredFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2553,7 +2777,9 @@
                       "identifier": "StoreMarkErroredFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkErroredFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2573,7 +2799,9 @@
                       "identifier": "StoreMarkErroredFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkErroredFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2596,7 +2824,9 @@
                 "identifier": "StoreMarkFailedFunc",
                 "newPage": false,
                 "searchKey": "worker.StoreMarkFailedFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2614,7 +2844,9 @@
                       "identifier": "StoreMarkFailedFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkFailedFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2634,7 +2866,9 @@
                       "identifier": "StoreMarkFailedFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkFailedFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2654,7 +2888,9 @@
                       "identifier": "StoreMarkFailedFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkFailedFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2674,7 +2910,9 @@
                       "identifier": "StoreMarkFailedFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkFailedFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2694,7 +2932,9 @@
                       "identifier": "StoreMarkFailedFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkFailedFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2714,7 +2954,9 @@
                       "identifier": "StoreMarkFailedFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkFailedFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2734,7 +2976,9 @@
                       "identifier": "StoreMarkFailedFunc.History",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkFailedFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2757,7 +3001,9 @@
                 "identifier": "StoreMarkFailedFuncCall",
                 "newPage": false,
                 "searchKey": "worker.StoreMarkFailedFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2775,7 +3021,9 @@
                       "identifier": "StoreMarkFailedFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkFailedFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2795,7 +3043,9 @@
                       "identifier": "StoreMarkFailedFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.StoreMarkFailedFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2818,7 +3068,9 @@
                 "identifier": "StoreQueuedCountFunc",
                 "newPage": false,
                 "searchKey": "worker.StoreQueuedCountFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2836,7 +3088,9 @@
                       "identifier": "StoreQueuedCountFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.StoreQueuedCountFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2856,7 +3110,9 @@
                       "identifier": "StoreQueuedCountFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.StoreQueuedCountFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2876,7 +3132,9 @@
                       "identifier": "StoreQueuedCountFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreQueuedCountFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2896,7 +3154,9 @@
                       "identifier": "StoreQueuedCountFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.StoreQueuedCountFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2916,7 +3176,9 @@
                       "identifier": "StoreQueuedCountFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.StoreQueuedCountFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2936,7 +3198,9 @@
                       "identifier": "StoreQueuedCountFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.StoreQueuedCountFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2956,7 +3220,9 @@
                       "identifier": "StoreQueuedCountFunc.History",
                       "newPage": false,
                       "searchKey": "worker.StoreQueuedCountFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2979,7 +3245,9 @@
                 "identifier": "StoreQueuedCountFuncCall",
                 "newPage": false,
                 "searchKey": "worker.StoreQueuedCountFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2997,7 +3265,9 @@
                       "identifier": "StoreQueuedCountFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.StoreQueuedCountFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3017,7 +3287,9 @@
                       "identifier": "StoreQueuedCountFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.StoreQueuedCountFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3043,7 +3315,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -3061,7 +3335,9 @@
                 "identifier": "buildScript",
                 "newPage": false,
                 "searchKey": "worker.buildScript",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3081,7 +3357,9 @@
                 "identifier": "union",
                 "newPage": false,
                 "searchKey": "worker.union",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3101,7 +3379,9 @@
                 "identifier": "scriptNameFromJobStep",
                 "newPage": false,
                 "searchKey": "worker.scriptNameFromJobStep",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3121,7 +3401,9 @@
                 "identifier": "createHoneyEvent",
                 "newPage": false,
                 "searchKey": "worker.createHoneyEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3141,9 +3423,7 @@
                 "identifier": "NewWorker",
                 "newPage": false,
                 "searchKey": "worker.NewWorker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3163,7 +3443,9 @@
                 "identifier": "connectToFrontend",
                 "newPage": false,
                 "searchKey": "worker.connectToFrontend",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3183,7 +3465,9 @@
                 "identifier": "makeURL",
                 "newPage": false,
                 "searchKey": "worker.makeURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3203,7 +3487,9 @@
                 "identifier": "makeRelativeURL",
                 "newPage": false,
                 "searchKey": "worker.makeRelativeURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3223,7 +3509,9 @@
                 "identifier": "makeTemporaryDirectory",
                 "newPage": false,
                 "searchKey": "worker.makeTemporaryDirectory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3243,7 +3531,9 @@
                 "identifier": "TestHandle",
                 "newPage": false,
                 "searchKey": "worker.TestHandle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3263,7 +3553,9 @@
                 "identifier": "TestIDAddRemove",
                 "newPage": false,
                 "searchKey": "worker.TestIDAddRemove",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3283,7 +3575,9 @@
                 "identifier": "TestIDSetSlice",
                 "newPage": false,
                 "searchKey": "worker.TestIDSetSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3303,7 +3597,9 @@
                 "identifier": "TestPrepareWorkspace",
                 "newPage": false,
                 "searchKey": "worker.TestPrepareWorkspace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3323,7 +3619,9 @@
                 "identifier": "TestPrepareWorkspaceNoRepository",
                 "newPage": false,
                 "searchKey": "worker.TestPrepareWorkspaceNoRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

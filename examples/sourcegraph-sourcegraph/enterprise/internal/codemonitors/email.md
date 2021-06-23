@@ -25,11 +25,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MonitorKind" href="#MonitorKind">const MonitorKind</a>
 
 ```
 searchKey: email.MonitorKind
-tags: [exported]
 ```
 
 ```Go
@@ -42,6 +45,7 @@ To avoid a circular dependency with the codemonitors/resolvers package we have t
 
 ```
 searchKey: email.utmSourceEmail
+tags: [private]
 ```
 
 ```Go
@@ -52,6 +56,7 @@ const utmSourceEmail = "code-monitoring-email"
 
 ```
 searchKey: email.priorityCritical
+tags: [private]
 ```
 
 ```Go
@@ -60,10 +65,15 @@ const priorityCritical = "CRITICAL"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="externalURL" href="#externalURL">var externalURL</a>
 
 ```
 searchKey: email.externalURL
+tags: [private]
 ```
 
 ```Go
@@ -74,7 +84,6 @@ var externalURL *url.URL
 
 ```
 searchKey: email.MockSendEmailForNewSearchResult
-tags: [exported]
 ```
 
 ```Go
@@ -85,7 +94,6 @@ var MockSendEmailForNewSearchResult func(ctx context.Context, userID int32, data
 
 ```
 searchKey: email.MockExternalURL
-tags: [exported]
 ```
 
 ```Go
@@ -96,6 +104,7 @@ var MockExternalURL func() *url.URL
 
 ```
 searchKey: email.newSearchResultsEmailTemplates
+tags: [private]
 ```
 
 ```Go
@@ -104,11 +113,14 @@ var newSearchResultsEmailTemplates = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TemplateDataNewSearchResults" href="#TemplateDataNewSearchResults">type TemplateDataNewSearchResults struct</a>
 
 ```
 searchKey: email.TemplateDataNewSearchResults
-tags: [exported]
 ```
 
 ```Go
@@ -126,7 +138,6 @@ type TemplateDataNewSearchResults struct {
 
 ```
 searchKey: email.NewTemplateDataForNewSearchResults
-tags: [exported]
 ```
 
 ```Go
@@ -137,7 +148,6 @@ func NewTemplateDataForNewSearchResults(ctx context.Context, monitorDescription,
 
 ```
 searchKey: email.NewTestTemplateDataForNewSearchResults
-tags: [exported]
 ```
 
 ```Go
@@ -146,11 +156,14 @@ func NewTestTemplateDataForNewSearchResults(ctx context.Context, monitorDescript
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SendEmailForNewSearchResult" href="#SendEmailForNewSearchResult">func SendEmailForNewSearchResult(ctx context.Context, userID int32, data *TemplateDataNewSearchResults) error</a>
 
 ```
 searchKey: email.SendEmailForNewSearchResult
-tags: [exported]
 ```
 
 ```Go
@@ -161,6 +174,7 @@ func SendEmailForNewSearchResult(ctx context.Context, userID int32, data *Templa
 
 ```
 searchKey: email.sendEmail
+tags: [private]
 ```
 
 ```Go
@@ -171,6 +185,7 @@ func sendEmail(ctx context.Context, userID int32, template txtypes.Templates, da
 
 ```
 searchKey: email.getSearchURL
+tags: [private]
 ```
 
 ```Go
@@ -181,6 +196,7 @@ func getSearchURL(ctx context.Context, query, utmSource string) (string, error)
 
 ```
 searchKey: email.getCodeMonitorURL
+tags: [private]
 ```
 
 ```Go
@@ -191,6 +207,7 @@ func getCodeMonitorURL(ctx context.Context, monitorID int64, utmSource string) (
 
 ```
 searchKey: email.sourcegraphURL
+tags: [private]
 ```
 
 ```Go

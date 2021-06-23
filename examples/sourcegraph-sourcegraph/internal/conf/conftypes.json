@@ -4,7 +4,9 @@
     "identifier": "conftypes",
     "newPage": true,
     "searchKey": "internal/conf/conftypes",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ServiceConnections",
                 "newPage": false,
                 "searchKey": "conftypes.ServiceConnections",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "RawUnified",
                 "newPage": false,
                 "searchKey": "conftypes.RawUnified",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "RawUnified.Equal",
                       "newPage": false,
                       "searchKey": "conftypes.RawUnified.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",

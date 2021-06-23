@@ -4,7 +4,9 @@
     "identifier": "run",
     "newPage": true,
     "searchKey": "internal/search/run",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "defaultMaxSearchResults",
                 "newPage": false,
                 "searchKey": "run.defaultMaxSearchResults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "DefaultSymbolLimit",
                 "newPage": false,
                 "searchKey": "run.DefaultSymbolLimit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -85,7 +89,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -103,9 +109,7 @@
                 "identifier": "MockSearchRepositories",
                 "newPage": false,
                 "searchKey": "run.MockSearchRepositories",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -125,9 +129,7 @@
                 "identifier": "MockSearchSymbols",
                 "newPage": false,
                 "searchKey": "run.MockSearchSymbols",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "textSearchLimiter",
                 "newPage": false,
                 "searchKey": "run.textSearchLimiter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "mockSearchFilesInRepo",
                 "newPage": false,
                 "searchKey": "run.mockSearchFilesInRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,9 +193,7 @@
                 "identifier": "MockSearchFilesInRepos",
                 "newPage": false,
                 "searchKey": "run.MockSearchFilesInRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -212,7 +216,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -230,9 +236,7 @@
                 "identifier": "Aggregator",
                 "newPage": false,
                 "searchKey": "run.Aggregator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -250,9 +254,7 @@
                       "identifier": "NewAggregator",
                       "newPage": false,
                       "searchKey": "run.NewAggregator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -272,9 +274,7 @@
                       "identifier": "Aggregator.Get",
                       "newPage": false,
                       "searchKey": "run.Aggregator.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,9 +294,7 @@
                       "identifier": "Aggregator.Send",
                       "newPage": false,
                       "searchKey": "run.Aggregator.Send",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -316,9 +314,7 @@
                       "identifier": "Aggregator.Error",
                       "newPage": false,
                       "searchKey": "run.Aggregator.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -338,9 +334,7 @@
                       "identifier": "Aggregator.DoRepoSearch",
                       "newPage": false,
                       "searchKey": "run.Aggregator.DoRepoSearch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -360,9 +354,7 @@
                       "identifier": "Aggregator.DoSymbolSearch",
                       "newPage": false,
                       "searchKey": "run.Aggregator.DoSymbolSearch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -382,9 +374,7 @@
                       "identifier": "Aggregator.DoFilePathSearch",
                       "newPage": false,
                       "searchKey": "run.Aggregator.DoFilePathSearch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -404,9 +394,7 @@
                       "identifier": "Aggregator.DoDiffSearch",
                       "newPage": false,
                       "searchKey": "run.Aggregator.DoDiffSearch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -426,9 +414,7 @@
                       "identifier": "Aggregator.DoCommitSearch",
                       "newPage": false,
                       "searchKey": "run.Aggregator.DoCommitSearch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -451,9 +437,7 @@
                 "identifier": "DiffCommitError",
                 "newPage": false,
                 "searchKey": "run.DiffCommitError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -473,9 +457,7 @@
                 "identifier": "RepoLimitError",
                 "newPage": false,
                 "searchKey": "run.RepoLimitError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -493,9 +475,7 @@
                       "identifier": "RepoLimitError.Error",
                       "newPage": false,
                       "searchKey": "run.RepoLimitError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -518,9 +498,7 @@
                 "identifier": "TimeLimitError",
                 "newPage": false,
                 "searchKey": "run.TimeLimitError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -538,9 +516,7 @@
                       "identifier": "TimeLimitError.Error",
                       "newPage": false,
                       "searchKey": "run.TimeLimitError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -563,9 +539,7 @@
                 "identifier": "SearchCommitsInReposParameters",
                 "newPage": false,
                 "searchKey": "run.SearchCommitsInReposParameters",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -585,9 +559,7 @@
                 "identifier": "SearchInputs",
                 "newPage": false,
                 "searchKey": "run.SearchInputs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -605,9 +577,7 @@
                       "identifier": "SearchInputs.MaxResults",
                       "newPage": false,
                       "searchKey": "run.SearchInputs.MaxResults",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -630,9 +600,7 @@
                 "identifier": "SearchPaginationInfo",
                 "newPage": false,
                 "searchKey": "run.SearchPaginationInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -652,9 +620,7 @@
                 "identifier": "SearchCursor",
                 "newPage": false,
                 "searchKey": "run.SearchCursor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -677,7 +643,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -695,7 +663,9 @@
                 "identifier": "checkDiffCommitSearchLimits",
                 "newPage": false,
                 "searchKey": "run.checkDiffCommitSearchLimits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -715,7 +685,9 @@
                 "identifier": "commitParametersToDiffParameters",
                 "newPage": false,
                 "searchKey": "run.commitParametersToDiffParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -735,9 +707,7 @@
                 "identifier": "SearchCommitsInRepoStream",
                 "newPage": false,
                 "searchKey": "run.SearchCommitsInRepoStream",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -757,7 +727,9 @@
                 "identifier": "errorName",
                 "newPage": false,
                 "searchKey": "run.errorName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -777,7 +749,9 @@
                 "identifier": "orderedFuzzyRegexp",
                 "newPage": false,
                 "searchKey": "run.orderedFuzzyRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -797,7 +771,9 @@
                 "identifier": "logCommitSearchResultsToMatches",
                 "newPage": false,
                 "searchKey": "run.logCommitSearchResultsToMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -817,7 +793,9 @@
                 "identifier": "fromVCSHighlights",
                 "newPage": false,
                 "searchKey": "run.fromVCSHighlights",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -837,7 +815,9 @@
                 "identifier": "cleanDiffPreview",
                 "newPage": false,
                 "searchKey": "run.cleanDiffPreview",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -857,7 +837,9 @@
                 "identifier": "highlightMatches",
                 "newPage": false,
                 "searchKey": "run.highlightMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -877,9 +859,7 @@
                 "identifier": "ResolveCommitParameters",
                 "newPage": false,
                 "searchKey": "run.ResolveCommitParameters",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -899,9 +879,7 @@
                 "identifier": "SearchCommitsInRepos",
                 "newPage": false,
                 "searchKey": "run.SearchCommitsInRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -921,9 +899,7 @@
                 "identifier": "SearchCommitDiffsInRepos",
                 "newPage": false,
                 "searchKey": "run.SearchCommitDiffsInRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -943,9 +919,7 @@
                 "identifier": "SearchCommitLogInRepos",
                 "newPage": false,
                 "searchKey": "run.SearchCommitLogInRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -965,7 +939,9 @@
                 "identifier": "commitMatchesToMatches",
                 "newPage": false,
                 "searchKey": "run.commitMatchesToMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -985,7 +961,9 @@
                 "identifier": "expandUsernamesToEmails",
                 "newPage": false,
                 "searchKey": "run.expandUsernamesToEmails",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1005,9 +983,7 @@
                 "identifier": "SearchRepositories",
                 "newPage": false,
                 "searchKey": "run.SearchRepositories",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1027,7 +1003,9 @@
                 "identifier": "repoRevsToRepoMatches",
                 "newPage": false,
                 "searchKey": "run.repoRevsToRepoMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1047,7 +1025,9 @@
                 "identifier": "matchRepos",
                 "newPage": false,
                 "searchKey": "run.matchRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1067,7 +1047,9 @@
                 "identifier": "reposToAdd",
                 "newPage": false,
                 "searchKey": "run.reposToAdd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1087,7 +1069,9 @@
                 "identifier": "handleRepoSearchResult",
                 "newPage": false,
                 "searchKey": "run.handleRepoSearchResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1107,7 +1091,9 @@
                 "identifier": "getRepos",
                 "newPage": false,
                 "searchKey": "run.getRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1127,7 +1113,9 @@
                 "identifier": "statsDeref",
                 "newPage": false,
                 "searchKey": "run.statsDeref",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1147,9 +1135,7 @@
                 "identifier": "SearchSymbols",
                 "newPage": false,
                 "searchKey": "run.SearchSymbols",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1169,7 +1155,9 @@
                 "identifier": "searchSymbolsInRepo",
                 "newPage": false,
                 "searchKey": "run.searchSymbolsInRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1189,7 +1177,9 @@
                 "identifier": "indexedSymbolsBranch",
                 "newPage": false,
                 "searchKey": "run.indexedSymbolsBranch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1209,7 +1199,9 @@
                 "identifier": "searchZoektSymbols",
                 "newPage": false,
                 "searchKey": "run.searchZoektSymbols",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1229,9 +1221,7 @@
                 "identifier": "ComputeSymbols",
                 "newPage": false,
                 "searchKey": "run.ComputeSymbols",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1251,7 +1241,9 @@
                 "identifier": "limitOrDefault",
                 "newPage": false,
                 "searchKey": "run.limitOrDefault",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1271,9 +1263,7 @@
                 "identifier": "SearchFilesInRepo",
                 "newPage": false,
                 "searchKey": "run.SearchFilesInRepo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1293,7 +1283,9 @@
                 "identifier": "repoShouldBeSearched",
                 "newPage": false,
                 "searchKey": "run.repoShouldBeSearched",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1313,7 +1305,9 @@
                 "identifier": "repoHasFilesWithNamesMatching",
                 "newPage": false,
                 "searchKey": "run.repoHasFilesWithNamesMatching",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1333,7 +1327,9 @@
                 "identifier": "fileMatchesToMatches",
                 "newPage": false,
                 "searchKey": "run.fileMatchesToMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1353,7 +1349,9 @@
                 "identifier": "matchesToFileMatches",
                 "newPage": false,
                 "searchKey": "run.matchesToFileMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1373,9 +1371,7 @@
                 "identifier": "SearchFilesInReposBatch",
                 "newPage": false,
                 "searchKey": "run.SearchFilesInReposBatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1395,9 +1391,7 @@
                 "identifier": "SearchFilesInRepos",
                 "newPage": false,
                 "searchKey": "run.SearchFilesInRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1417,7 +1411,9 @@
                 "identifier": "callSearcherOverRepos",
                 "newPage": false,
                 "searchKey": "run.callSearcherOverRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1437,7 +1433,9 @@
                 "identifier": "TestCheckDiffCommitSearchLimits",
                 "newPage": false,
                 "searchKey": "run.TestCheckDiffCommitSearchLimits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1457,7 +1455,9 @@
                 "identifier": "TestSearchCommitsInRepo",
                 "newPage": false,
                 "searchKey": "run.TestSearchCommitsInRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1477,7 +1477,9 @@
                 "identifier": "resetMocks",
                 "newPage": false,
                 "searchKey": "run.resetMocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1497,7 +1499,9 @@
                 "identifier": "TestExpandUsernamesToEmails",
                 "newPage": false,
                 "searchKey": "run.TestExpandUsernamesToEmails",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1517,7 +1521,9 @@
                 "identifier": "TestHighlightMatches",
                 "newPage": false,
                 "searchKey": "run.TestHighlightMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1537,7 +1543,9 @@
                 "identifier": "Benchmark_highlightMatches",
                 "newPage": false,
                 "searchKey": "run.Benchmark_highlightMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1557,7 +1565,9 @@
                 "identifier": "searchCommitsInRepo",
                 "newPage": false,
                 "searchKey": "run.searchCommitsInRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1577,7 +1587,9 @@
                 "identifier": "TestCommitSearchResult_Limit",
                 "newPage": false,
                 "searchKey": "run.TestCommitSearchResult_Limit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1597,7 +1609,9 @@
                 "identifier": "TestSearchRepositories",
                 "newPage": false,
                 "searchKey": "run.TestSearchRepositories",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1617,7 +1631,9 @@
                 "identifier": "searchRepositoriesBatch",
                 "newPage": false,
                 "searchKey": "run.searchRepositoriesBatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1637,7 +1653,9 @@
                 "identifier": "TestRepoShouldBeAdded",
                 "newPage": false,
                 "searchKey": "run.TestRepoShouldBeAdded",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1657,7 +1675,9 @@
                 "identifier": "repoShouldBeAdded",
                 "newPage": false,
                 "searchKey": "run.repoShouldBeAdded",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1677,7 +1697,9 @@
                 "identifier": "TestMatchRepos",
                 "newPage": false,
                 "searchKey": "run.TestMatchRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1697,7 +1719,9 @@
                 "identifier": "BenchmarkSearchRepositories",
                 "newPage": false,
                 "searchKey": "run.BenchmarkSearchRepositories",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1717,7 +1741,9 @@
                 "identifier": "TestOrderedFuzzyRegexp",
                 "newPage": false,
                 "searchKey": "run.TestOrderedFuzzyRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1737,7 +1763,9 @@
                 "identifier": "TestSearchFilesInRepos",
                 "newPage": false,
                 "searchKey": "run.TestSearchFilesInRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1757,7 +1785,9 @@
                 "identifier": "TestSearchFilesInReposStream",
                 "newPage": false,
                 "searchKey": "run.TestSearchFilesInReposStream",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1777,7 +1807,9 @@
                 "identifier": "assertReposStatus",
                 "newPage": false,
                 "searchKey": "run.assertReposStatus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1797,7 +1829,9 @@
                 "identifier": "TestSearchFilesInRepos_multipleRevsPerRepo",
                 "newPage": false,
                 "searchKey": "run.TestSearchFilesInRepos_multipleRevsPerRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1817,7 +1851,9 @@
                 "identifier": "TestRepoShouldBeSearched",
                 "newPage": false,
                 "searchKey": "run.TestRepoShouldBeSearched",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1837,7 +1873,9 @@
                 "identifier": "makeRepositoryRevisions",
                 "newPage": false,
                 "searchKey": "run.makeRepositoryRevisions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1857,7 +1895,9 @@
                 "identifier": "mkRepos",
                 "newPage": false,
                 "searchKey": "run.mkRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1877,7 +1917,9 @@
                 "identifier": "TestFileMatch_Limit",
                 "newPage": false,
                 "searchKey": "run.TestFileMatch_Limit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -9,10 +9,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleLogger" href="#ExampleLogger">func ExampleLogger()</a>
 
 ```
 searchKey: log_test.ExampleLogger
+tags: [private]
 ```
 
 ```Go
@@ -23,6 +28,7 @@ func ExampleLogger()
 
 ```
 searchKey: log_test.ExampleLogger_Output
+tags: [private]
 ```
 
 ```Go

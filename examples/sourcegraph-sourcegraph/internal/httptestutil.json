@@ -4,7 +4,9 @@
     "identifier": "httptestutil",
     "newPage": true,
     "searchKey": "internal/httptestutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "handlerTransport",
                 "newPage": false,
                 "searchKey": "httptestutil.handlerTransport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -58,7 +64,9 @@
                       "identifier": "handlerTransport.RoundTrip",
                       "newPage": false,
                       "searchKey": "httptestutil.handlerTransport.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "httptestutil.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -101,9 +107,7 @@
                       "identifier": "NewTest",
                       "newPage": false,
                       "searchKey": "httptestutil.NewTest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -123,9 +127,7 @@
                       "identifier": "Client.Get",
                       "newPage": false,
                       "searchKey": "httptestutil.Client.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -145,9 +147,7 @@
                       "identifier": "Client.Do",
                       "newPage": false,
                       "searchKey": "httptestutil.Client.Do",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -167,9 +167,7 @@
                       "identifier": "Client.DoOK",
                       "newPage": false,
                       "searchKey": "httptestutil.Client.DoOK",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -189,9 +187,7 @@
                       "identifier": "Client.GetOK",
                       "newPage": false,
                       "searchKey": "httptestutil.Client.GetOK",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -211,9 +207,7 @@
                       "identifier": "Client.PostOK",
                       "newPage": false,
                       "searchKey": "httptestutil.Client.PostOK",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -233,9 +227,7 @@
                       "identifier": "Client.DoNoFollowRedirects",
                       "newPage": false,
                       "searchKey": "httptestutil.Client.DoNoFollowRedirects",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -255,9 +247,7 @@
                       "identifier": "Client.GetNoFollowRedirects",
                       "newPage": false,
                       "searchKey": "httptestutil.Client.GetNoFollowRedirects",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -277,9 +267,7 @@
                       "identifier": "Client.GetJSON",
                       "newPage": false,
                       "searchKey": "httptestutil.Client.GetJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -299,9 +287,7 @@
                       "identifier": "Client.DoJSON",
                       "newPage": false,
                       "searchKey": "httptestutil.Client.DoJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -321,9 +307,7 @@
                       "identifier": "Client.PostFormNoFollowRedirects",
                       "newPage": false,
                       "searchKey": "httptestutil.Client.PostFormNoFollowRedirects",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -349,7 +333,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -367,9 +353,7 @@
                 "identifier": "NewRecorder",
                 "newPage": false,
                 "searchKey": "httptestutil.NewRecorder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -389,9 +373,7 @@
                 "identifier": "NewRecorderOpt",
                 "newPage": false,
                 "searchKey": "httptestutil.NewRecorderOpt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -411,9 +393,7 @@
                 "identifier": "NewGitHubRecorderFactory",
                 "newPage": false,
                 "searchKey": "httptestutil.NewGitHubRecorderFactory",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -433,9 +413,7 @@
                 "identifier": "NewRecorderFactory",
                 "newPage": false,
                 "searchKey": "httptestutil.NewRecorderFactory",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

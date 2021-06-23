@@ -50,10 +50,15 @@ Package ci is responsible for generating a Buildkite pipeline configuration. It 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ignoredRootFiles" href="#ignoredRootFiles">var ignoredRootFiles</a>
 
 ```
 searchKey: ci.ignoredRootFiles
+tags: [private]
 ```
 
 ```Go
@@ -64,11 +69,14 @@ Changes in the files below will be ignored by the Storybook workflow.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
 searchKey: ci.Config
-tags: [exported]
 ```
 
 ```Go
@@ -111,7 +119,6 @@ Config is the set of configuration parameters that determine the structure of th
 
 ```
 searchKey: ci.ComputeConfig
-tags: [exported]
 ```
 
 ```Go
@@ -122,6 +129,7 @@ func ComputeConfig() Config
 
 ```
 searchKey: ci.Config.shortCommit
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +140,7 @@ func (c Config) shortCommit() string
 
 ```
 searchKey: ci.Config.isMainBranch
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +151,7 @@ func (c *Config) isMainBranch() bool
 
 ```
 searchKey: ci.Config.ensureCommit
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +162,7 @@ func (c Config) ensureCommit() error
 
 ```
 searchKey: ci.Config.isPR
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +173,7 @@ func (c Config) isPR() bool
 
 ```
 searchKey: ci.Config.isDocsOnly
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +184,7 @@ func (c Config) isDocsOnly() bool
 
 ```
 searchKey: ci.Config.isSgOnly
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +197,7 @@ isSgOnly returns whether the changedFiles are only in the ./dev/sg folder.
 
 ```
 searchKey: ci.Config.isGoOnly
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +208,7 @@ func (c Config) isGoOnly() bool
 
 ```
 searchKey: ci.Config.shouldRunE2EandQA
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +219,7 @@ func (c Config) shouldRunE2EandQA() bool
 
 ```
 searchKey: ci.Config.candidateImageTag
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +234,7 @@ Note that the availability of this image depends on whether a candidate gets bui
 
 ```
 searchKey: ci.Config.isStorybookAffected
+tags: [private]
 ```
 
 ```Go
@@ -228,10 +245,15 @@ Run Storybook workflow only if related files were changed.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="contains" href="#contains">func contains(s []string, str string) bool</a>
 
 ```
 searchKey: ci.contains
+tags: [private]
 ```
 
 ```Go
@@ -242,6 +264,7 @@ func contains(s []string, str string) bool
 
 ```
 searchKey: ci.isAllowedRootFile
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +275,7 @@ func isAllowedRootFile(p string) bool
 
 ```
 searchKey: ci.addDocs
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +288,7 @@ Verifies the docs formatting and builds the `docsite` command.
 
 ```
 searchKey: ci.addCheck
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +301,7 @@ Adds the static check test step.
 
 ```
 searchKey: ci.addLint
+tags: [private]
 ```
 
 ```Go
@@ -288,6 +314,7 @@ Adds the lint test step.
 
 ```
 searchKey: ci.addWebApp
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +327,7 @@ Adds steps for the OSS and Enterprise web app builds. Runs the web app tests.
 
 ```
 searchKey: ci.addBrowserExt
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +340,7 @@ Builds and tests the browser extension.
 
 ```
 searchKey: ci.addSharedTests
+tags: [private]
 ```
 
 ```Go
@@ -324,6 +353,7 @@ Adds the shared frontend tests (shared between the web app and browser extension
 
 ```
 searchKey: ci.addBrandedTests
+tags: [private]
 ```
 
 ```Go
@@ -334,6 +364,7 @@ func addBrandedTests(pipeline *bk.Pipeline)
 
 ```
 searchKey: ci.addPostgresBackcompat
+tags: [private]
 ```
 
 ```Go
@@ -346,6 +377,7 @@ Adds PostgreSQL backcompat tests.
 
 ```
 searchKey: ci.addGoTests
+tags: [private]
 ```
 
 ```Go
@@ -358,6 +390,7 @@ Adds the Go test step.
 
 ```
 searchKey: ci.addGoBuild
+tags: [private]
 ```
 
 ```Go
@@ -370,6 +403,7 @@ Builds the OSS and Enterprise Go commands.
 
 ```
 searchKey: ci.addDockerfileLint
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +416,7 @@ Lints the Dockerfiles.
 
 ```
 searchKey: ci.addBackendIntegrationTests
+tags: [private]
 ```
 
 ```Go
@@ -394,6 +429,7 @@ Adds backend integration tests step.
 
 ```
 searchKey: ci.addBrowserExtensionE2ESteps
+tags: [private]
 ```
 
 ```Go
@@ -404,6 +440,7 @@ func addBrowserExtensionE2ESteps(pipeline *bk.Pipeline)
 
 ```
 searchKey: ci.addBrowserExtensionReleaseSteps
+tags: [private]
 ```
 
 ```Go
@@ -416,6 +453,7 @@ Release the browser extension.
 
 ```
 searchKey: ci.wait
+tags: [private]
 ```
 
 ```Go
@@ -428,6 +466,7 @@ Adds a Buildkite pipeline "Wait".
 
 ```
 searchKey: ci.triggerAsync
+tags: [private]
 ```
 
 ```Go
@@ -440,6 +479,7 @@ Trigger the async pipeline to run.
 
 ```
 searchKey: ci.triggerUpdaterPipeline
+tags: [private]
 ```
 
 ```Go
@@ -450,6 +490,7 @@ func triggerUpdaterPipeline(c Config) func(*bk.Pipeline)
 
 ```
 searchKey: ci.clusterDockerImages
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +503,7 @@ images used by cluster-qa test
 
 ```
 searchKey: ci.triggerE2EandQA
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +514,7 @@ func triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)
 
 ```
 searchKey: ci.copyEnv
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +525,7 @@ func copyEnv(keys ...string) map[string]string
 
 ```
 searchKey: ci.addDockerImages
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +542,7 @@ Notes:
 
 ```
 searchKey: ci.addCandidateDockerImage
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +555,7 @@ Build a candidate docker image that will re-tagged with the final tags once the 
 
 ```
 searchKey: ci.addFinalDockerImage
+tags: [private]
 ```
 
 ```Go
@@ -522,7 +568,6 @@ Tag and push final Docker image for the service defined by `app` after the e2e t
 
 ```
 searchKey: ci.GeneratePipeline
-tags: [exported]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "search",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/search",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ErrExpr",
                 "newPage": false,
                 "searchKey": "search.ErrExpr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +62,9 @@
                       "identifier": "createErrExpr",
                       "newPage": false,
                       "searchKey": "search.createErrExpr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -80,9 +84,7 @@
                       "identifier": "ErrExpr.Error",
                       "newPage": false,
                       "searchKey": "search.ErrExpr.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -105,9 +107,7 @@
                 "identifier": "ErrUnsupportedField",
                 "newPage": false,
                 "searchKey": "search.ErrUnsupportedField",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -125,9 +125,7 @@
                       "identifier": "ErrUnsupportedField.Error",
                       "newPage": false,
                       "searchKey": "search.ErrUnsupportedField.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -150,9 +148,7 @@
                 "identifier": "ErrUnsupportedValueType",
                 "newPage": false,
                 "searchKey": "search.ErrUnsupportedValueType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -170,9 +166,7 @@
                       "identifier": "ErrUnsupportedValueType.Error",
                       "newPage": false,
                       "searchKey": "search.ErrUnsupportedValueType.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -195,9 +189,7 @@
                 "identifier": "TextSearchTerm",
                 "newPage": false,
                 "searchKey": "search.TextSearchTerm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +212,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -238,9 +232,7 @@
                 "identifier": "ParseTextSearch",
                 "newPage": false,
                 "searchKey": "search.ParseTextSearch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +252,9 @@
                 "identifier": "TestChangesetSearch",
                 "newPage": false,
                 "searchKey": "search.TestChangesetSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -15,15 +15,10 @@ Package protocol contains structures used by the searcher API.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Request" href="#Request">type Request struct</a>
 
 ```
 searchKey: protocol.Request
-tags: [exported]
 ```
 
 ```Go
@@ -80,7 +75,6 @@ Request represents a request to searcher
 
 ```
 searchKey: protocol.PatternInfo
-tags: [exported]
 ```
 
 ```Go
@@ -162,7 +156,6 @@ PatternInfo describes a search request on a repo. Most of the fields are based o
 
 ```
 searchKey: protocol.PatternInfo.String
-tags: [exported]
 ```
 
 ```Go
@@ -173,7 +166,6 @@ func (p *PatternInfo) String() string
 
 ```
 searchKey: protocol.Response
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +186,6 @@ Response represents the response from a Search request.
 
 ```
 searchKey: protocol.FileMatch
-tags: [exported]
 ```
 
 ```Go
@@ -215,7 +206,6 @@ FileMatch is the struct used by vscode to receive search results
 
 ```
 searchKey: protocol.LineMatch
-tags: [exported]
 ```
 
 ```Go

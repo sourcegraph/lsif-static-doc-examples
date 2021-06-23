@@ -4,9 +4,7 @@
     "identifier": "providers",
     "newPage": true,
     "searchKey": "cmd/frontend/auth/providers",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "curProviders",
                 "newPage": false,
                 "searchKey": "providers.curProviders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "curProvidersMu",
                 "newPage": false,
                 "searchKey": "providers.curProvidersMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "MockProviders",
                 "newPage": false,
                 "searchKey": "providers.MockProviders",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -109,9 +107,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -129,9 +125,7 @@
                 "identifier": "Provider",
                 "newPage": false,
                 "searchKey": "providers.Provider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -149,9 +143,7 @@
                       "identifier": "GetProviderByConfigID",
                       "newPage": false,
                       "searchKey": "providers.GetProviderByConfigID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -174,9 +166,7 @@
                 "identifier": "ConfigID",
                 "newPage": false,
                 "searchKey": "providers.ConfigID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -196,9 +186,7 @@
                 "identifier": "Info",
                 "newPage": false,
                 "searchKey": "providers.Info",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -218,7 +206,9 @@
                 "identifier": "sortProviders",
                 "newPage": false,
                 "searchKey": "providers.sortProviders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -236,7 +226,9 @@
                       "identifier": "sortProviders.Len",
                       "newPage": false,
                       "searchKey": "providers.sortProviders.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -256,7 +248,9 @@
                       "identifier": "sortProviders.Less",
                       "newPage": false,
                       "searchKey": "providers.sortProviders.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -276,7 +270,9 @@
                       "identifier": "sortProviders.Swap",
                       "newPage": false,
                       "searchKey": "providers.sortProviders.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -302,9 +298,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -322,9 +316,7 @@
                 "identifier": "Update",
                 "newPage": false,
                 "searchKey": "providers.Update",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -344,9 +336,7 @@
                 "identifier": "Providers",
                 "newPage": false,
                 "searchKey": "providers.Providers",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -366,9 +356,7 @@
                 "identifier": "BuiltinAuthEnabled",
                 "newPage": false,
                 "searchKey": "providers.BuiltinAuthEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

@@ -4,7 +4,9 @@
     "identifier": "perforce",
     "newPage": true,
     "searchKey": "internal/authz/perforce",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Provider",
                 "newPage": false,
                 "searchKey": "perforce.Provider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "NewProvider",
                       "newPage": false,
                       "searchKey": "perforce.NewProvider",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "Provider.FetchAccount",
                       "newPage": false,
                       "searchKey": "perforce.Provider.FetchAccount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,7 +102,9 @@
                       "identifier": "Provider.canRevokeReadAccess",
                       "newPage": false,
                       "searchKey": "perforce.Provider.canRevokeReadAccess",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -124,7 +124,9 @@
                       "identifier": "Provider.canGrantReadAccess",
                       "newPage": false,
                       "searchKey": "perforce.Provider.canGrantReadAccess",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -144,9 +146,7 @@
                       "identifier": "Provider.FetchUserPerms",
                       "newPage": false,
                       "searchKey": "perforce.Provider.FetchUserPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -166,7 +166,9 @@
                       "identifier": "Provider.getAllUserEmails",
                       "newPage": false,
                       "searchKey": "perforce.Provider.getAllUserEmails",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -186,7 +188,9 @@
                       "identifier": "Provider.getAllUsers",
                       "newPage": false,
                       "searchKey": "perforce.Provider.getAllUsers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -206,7 +210,9 @@
                       "identifier": "Provider.getGroupMembers",
                       "newPage": false,
                       "searchKey": "perforce.Provider.getGroupMembers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -226,9 +232,7 @@
                       "identifier": "Provider.FetchRepoPerms",
                       "newPage": false,
                       "searchKey": "perforce.Provider.FetchRepoPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -248,9 +252,7 @@
                       "identifier": "Provider.ServiceType",
                       "newPage": false,
                       "searchKey": "perforce.Provider.ServiceType",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -270,9 +272,7 @@
                       "identifier": "Provider.ServiceID",
                       "newPage": false,
                       "searchKey": "perforce.Provider.ServiceID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -292,9 +292,7 @@
                       "identifier": "Provider.URN",
                       "newPage": false,
                       "searchKey": "perforce.Provider.URN",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -314,9 +312,7 @@
                       "identifier": "Provider.Validate",
                       "newPage": false,
                       "searchKey": "perforce.Provider.Validate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -342,7 +338,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -360,9 +358,7 @@
                 "identifier": "NewAuthzProviders",
                 "newPage": false,
                 "searchKey": "perforce.NewAuthzProviders",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -382,7 +378,9 @@
                 "identifier": "newAuthzProvider",
                 "newPage": false,
                 "searchKey": "perforce.newAuthzProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -402,9 +400,7 @@
                 "identifier": "ValidateAuthz",
                 "newPage": false,
                 "searchKey": "perforce.ValidateAuthz",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -424,7 +420,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "perforce.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -444,7 +442,9 @@
                 "identifier": "TestProvider_FetchAccount",
                 "newPage": false,
                 "searchKey": "perforce.TestProvider_FetchAccount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -464,7 +464,9 @@
                 "identifier": "TestProvider_FetchUserPerms",
                 "newPage": false,
                 "searchKey": "perforce.TestProvider_FetchUserPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -484,7 +486,9 @@
                 "identifier": "TestProvider_FetchRepoPerms",
                 "newPage": false,
                 "searchKey": "perforce.TestProvider_FetchRepoPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,7 +4,9 @@
     "identifier": "billing",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/dotcom/billing",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "dummyCustomerMu",
                 "newPage": false,
                 "searchKey": "billing.dummyCustomerMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "dummyCustomerID",
                 "newPage": false,
                 "searchKey": "billing.dummyCustomerID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "mockCreateCustomerID",
                 "newPage": false,
                 "searchKey": "billing.mockCreateCustomerID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +113,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "dbBilling",
                 "newPage": false,
                 "searchKey": "billing.dbBilling",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -139,7 +153,9 @@
                       "identifier": "dbBilling.getUserBillingCustomerID",
                       "newPage": false,
                       "searchKey": "billing.dbBilling.getUserBillingCustomerID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -159,7 +175,9 @@
                       "identifier": "dbBilling.setUserBillingCustomerID",
                       "newPage": false,
                       "searchKey": "billing.dbBilling.setUserBillingCustomerID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -182,7 +200,9 @@
                 "identifier": "productSubscriptionEvent",
                 "newPage": false,
                 "searchKey": "billing.productSubscriptionEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -200,7 +220,9 @@
                       "identifier": "productSubscriptionEvent.ID",
                       "newPage": false,
                       "searchKey": "billing.productSubscriptionEvent.ID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -220,7 +242,9 @@
                       "identifier": "productSubscriptionEvent.Date",
                       "newPage": false,
                       "searchKey": "billing.productSubscriptionEvent.Date",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -240,7 +264,9 @@
                       "identifier": "productSubscriptionEvent.Title",
                       "newPage": false,
                       "searchKey": "billing.productSubscriptionEvent.Title",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -260,7 +286,9 @@
                       "identifier": "productSubscriptionEvent.Description",
                       "newPage": false,
                       "searchKey": "billing.productSubscriptionEvent.Description",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -280,7 +308,9 @@
                       "identifier": "productSubscriptionEvent.URL",
                       "newPage": false,
                       "searchKey": "billing.productSubscriptionEvent.URL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -303,9 +333,7 @@
                 "identifier": "BillingResolver",
                 "newPage": false,
                 "searchKey": "billing.BillingResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -323,9 +351,7 @@
                       "identifier": "BillingResolver.UserURLForSiteAdminBilling",
                       "newPage": false,
                       "searchKey": "billing.BillingResolver.UserURLForSiteAdminBilling",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -345,9 +371,7 @@
                       "identifier": "BillingResolver.SetUserBilling",
                       "newPage": false,
                       "searchKey": "billing.BillingResolver.SetUserBilling",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -367,9 +391,7 @@
                       "identifier": "BillingResolver.ProductPlans",
                       "newPage": false,
                       "searchKey": "billing.BillingResolver.ProductPlans",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -392,7 +414,9 @@
                 "identifier": "productPlan",
                 "newPage": false,
                 "searchKey": "billing.productPlan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -410,7 +434,9 @@
                       "identifier": "productPlan.ProductPlanID",
                       "newPage": false,
                       "searchKey": "billing.productPlan.ProductPlanID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -430,7 +456,9 @@
                       "identifier": "productPlan.BillingPlanID",
                       "newPage": false,
                       "searchKey": "billing.productPlan.BillingPlanID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -450,7 +478,9 @@
                       "identifier": "productPlan.Name",
                       "newPage": false,
                       "searchKey": "billing.productPlan.Name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -470,7 +500,9 @@
                       "identifier": "productPlan.NameWithBrand",
                       "newPage": false,
                       "searchKey": "billing.productPlan.NameWithBrand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -490,7 +522,9 @@
                       "identifier": "productPlan.PricePerUserPerYear",
                       "newPage": false,
                       "searchKey": "billing.productPlan.PricePerUserPerYear",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -510,7 +544,9 @@
                       "identifier": "productPlan.MinQuantity",
                       "newPage": false,
                       "searchKey": "billing.productPlan.MinQuantity",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -530,7 +566,9 @@
                       "identifier": "productPlan.MaxQuantity",
                       "newPage": false,
                       "searchKey": "billing.productPlan.MaxQuantity",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -550,7 +588,9 @@
                       "identifier": "productPlan.TiersMode",
                       "newPage": false,
                       "searchKey": "billing.productPlan.TiersMode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -570,7 +610,9 @@
                       "identifier": "productPlan.PlanTiers",
                       "newPage": false,
                       "searchKey": "billing.productPlan.PlanTiers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -593,7 +635,9 @@
                 "identifier": "planTier",
                 "newPage": false,
                 "searchKey": "billing.planTier",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -611,7 +655,9 @@
                       "identifier": "planTier.UnitAmount",
                       "newPage": false,
                       "searchKey": "billing.planTier.UnitAmount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -631,7 +677,9 @@
                       "identifier": "planTier.UpTo",
                       "newPage": false,
                       "searchKey": "billing.planTier.UpTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -651,7 +699,9 @@
                       "identifier": "planTier.FlatAmount",
                       "newPage": false,
                       "searchKey": "billing.planTier.FlatAmount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -677,7 +727,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -695,9 +747,7 @@
                 "identifier": "GetOrAssignUserCustomerID",
                 "newPage": false,
                 "searchKey": "billing.GetOrAssignUserCustomerID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -717,9 +767,7 @@
                 "identifier": "GetDummyCustomerID",
                 "newPage": false,
                 "searchKey": "billing.GetDummyCustomerID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -739,7 +787,9 @@
                 "identifier": "createCustomerID",
                 "newPage": false,
                 "searchKey": "billing.createCustomerID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -759,7 +809,9 @@
                 "identifier": "deleteCustomerID",
                 "newPage": false,
                 "searchKey": "billing.deleteCustomerID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -779,9 +831,7 @@
                 "identifier": "ToProductSubscriptionEvent",
                 "newPage": false,
                 "searchKey": "billing.ToProductSubscriptionEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -801,7 +851,9 @@
                 "identifier": "getProductSubscriptionEventInfo",
                 "newPage": false,
                 "searchKey": "billing.getProductSubscriptionEventInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -821,7 +873,9 @@
                 "identifier": "usdCentsToString",
                 "newPage": false,
                 "searchKey": "billing.usdCentsToString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -841,9 +895,7 @@
                 "identifier": "InfoForProductPlan",
                 "newPage": false,
                 "searchKey": "billing.InfoForProductPlan",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -863,9 +915,7 @@
                 "identifier": "ToProductPlan",
                 "newPage": false,
                 "searchKey": "billing.ToProductPlan",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -885,9 +935,7 @@
                 "identifier": "ProductPlanMinMaxQuantity",
                 "newPage": false,
                 "searchKey": "billing.ProductPlanMinMaxQuantity",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -907,9 +955,7 @@
                 "identifier": "ToSubscriptionItemsParams",
                 "newPage": false,
                 "searchKey": "billing.ToSubscriptionItemsParams",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -929,9 +975,7 @@
                 "identifier": "GetSubscriptionItemIDToReplace",
                 "newPage": false,
                 "searchKey": "billing.GetSubscriptionItemIDToReplace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -951,7 +995,9 @@
                 "identifier": "TestGetOrAssignUserCustomerID",
                 "newPage": false,
                 "searchKey": "billing.TestGetOrAssignUserCustomerID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -966,12 +1012,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#init",
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#init.db_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "billing.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -991,7 +1039,9 @@
                 "identifier": "TestDBUsersBillingCustomerID",
                 "newPage": false,
                 "searchKey": "billing.TestDBUsersBillingCustomerID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1011,7 +1061,9 @@
                 "identifier": "strptr",
                 "newPage": false,
                 "searchKey": "billing.strptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

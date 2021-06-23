@@ -14,10 +14,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="unsafePointerType" href="#unsafePointerType">var unsafePointerType</a>
 
 ```
 searchKey: unsafeheader_test.unsafePointerType
+tags: [private]
 ```
 
 ```Go
@@ -28,6 +33,7 @@ var unsafePointerType = reflect.TypeOf(unsafe.Pointer(nil))
 
 ```
 searchKey: unsafeheader_test.uintptrType
+tags: [private]
 ```
 
 ```Go
@@ -36,10 +42,15 @@ var uintptrType = reflect.TypeOf(uintptr(0))
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestTypeMatchesReflectType" href="#TestTypeMatchesReflectType">func TestTypeMatchesReflectType(t *testing.T)</a>
 
 ```
 searchKey: unsafeheader_test.TestTypeMatchesReflectType
+tags: [private]
 ```
 
 ```Go
@@ -52,6 +63,7 @@ TestTypeMatchesReflectType ensures that the name and layout of the unsafeheader 
 
 ```
 searchKey: unsafeheader_test.testHeaderMatchesReflect
+tags: [private]
 ```
 
 ```Go
@@ -62,6 +74,7 @@ func testHeaderMatchesReflect(t *testing.T, header, reflectHeader interface{})
 
 ```
 searchKey: unsafeheader_test.typeCompatible
+tags: [private]
 ```
 
 ```Go
@@ -72,6 +85,7 @@ func typeCompatible(t, rt reflect.Type) bool
 
 ```
 searchKey: unsafeheader_test.TestWriteThroughHeader
+tags: [private]
 ```
 
 ```Go

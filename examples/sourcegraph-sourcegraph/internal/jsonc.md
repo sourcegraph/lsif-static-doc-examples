@@ -18,11 +18,14 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DefaultFormatOptions" href="#DefaultFormatOptions">var DefaultFormatOptions</a>
 
 ```
 searchKey: jsonc.DefaultFormatOptions
-tags: [exported]
 ```
 
 ```Go
@@ -31,11 +34,14 @@ var DefaultFormatOptions = jsonx.FormatOptions{InsertSpaces: true, TabSize: 2}
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Unmarshal" href="#Unmarshal">func Unmarshal(text string, v interface{}) error</a>
 
 ```
 searchKey: jsonc.Unmarshal
-tags: [exported]
 ```
 
 ```Go
@@ -48,7 +54,6 @@ Unmarshal unmarshals the JSON using a fault-tolerant parser that allows comments
 
 ```
 searchKey: jsonc.Parse
-tags: [exported]
 ```
 
 ```Go
@@ -61,7 +66,6 @@ Parse converts JSON with comments, trailing commas, and some types of syntax err
 
 ```
 searchKey: jsonc.Normalize
-tags: [exported]
 ```
 
 ```Go
@@ -74,7 +78,6 @@ Normalize is like Parse, except it ignores errors and always returns valid JSON,
 
 ```
 searchKey: jsonc.Remove
-tags: [exported]
 ```
 
 ```Go
@@ -87,7 +90,6 @@ Remove returns the input JSON with the given path removed.
 
 ```
 searchKey: jsonc.Edit
-tags: [exported]
 ```
 
 ```Go
@@ -100,7 +102,6 @@ Edit returns the input JSON with the given path set to v.
 
 ```
 searchKey: jsonc.ReadProperty
-tags: [exported]
 ```
 
 ```Go
@@ -113,7 +114,6 @@ ReadProperty attempts to read the value of the specified path, ignoring parse er
 
 ```
 searchKey: jsonc.Format
-tags: [exported]
 ```
 
 ```Go
@@ -126,6 +126,7 @@ Format returns the input JSON formatted with the given options.
 
 ```
 searchKey: jsonc.TestUnmarshal
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +137,7 @@ func TestUnmarshal(t *testing.T)
 
 ```
 searchKey: jsonc.TestNormalize
+tags: [private]
 ```
 
 ```Go

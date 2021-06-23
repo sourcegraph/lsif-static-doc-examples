@@ -4,7 +4,9 @@
     "identifier": "conf",
     "newPage": true,
     "searchKey": "internal/conf",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "AccessTokensNone",
                 "newPage": false,
                 "searchKey": "conf.AccessTokensNone",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "AccessTokensAll",
                 "newPage": false,
                 "searchKey": "conf.AccessTokensAll",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "AccessTokensAdmin",
                 "newPage": false,
                 "searchKey": "conf.AccessTokensAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "DeployKubernetes",
                 "newPage": false,
                 "searchKey": "conf.DeployKubernetes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "DeploySingleDocker",
                 "newPage": false,
                 "searchKey": "conf.DeploySingleDocker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "DeployDockerCompose",
                 "newPage": false,
                 "searchKey": "conf.DeployDockerCompose",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                 "identifier": "DeployPureDocker",
                 "newPage": false,
                 "searchKey": "conf.DeployPureDocker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,9 +184,7 @@
                 "identifier": "DeployDev",
                 "newPage": false,
                 "searchKey": "conf.DeployDev",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -216,7 +204,9 @@
                 "identifier": "defaultPasswordLinkExpiry",
                 "newPage": false,
                 "searchKey": "conf.defaultPasswordLinkExpiry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -236,9 +226,7 @@
                 "identifier": "ExternalServiceModeDisabled",
                 "newPage": false,
                 "searchKey": "conf.ExternalServiceModeDisabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -258,9 +246,7 @@
                 "identifier": "ExternalServiceModePublic",
                 "newPage": false,
                 "searchKey": "conf.ExternalServiceModePublic",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -280,9 +266,7 @@
                 "identifier": "ExternalServiceModeAll",
                 "newPage": false,
                 "searchKey": "conf.ExternalServiceModeAll",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -302,7 +286,9 @@
                 "identifier": "modeServer",
                 "newPage": false,
                 "searchKey": "conf.modeServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -322,7 +308,9 @@
                 "identifier": "modeClient",
                 "newPage": false,
                 "searchKey": "conf.modeClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -342,7 +330,9 @@
                 "identifier": "modeEmpty",
                 "newPage": false,
                 "searchKey": "conf.modeEmpty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -362,7 +352,9 @@
                 "identifier": "problemSite",
                 "newPage": false,
                 "searchKey": "conf.problemSite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -382,7 +374,9 @@
                 "identifier": "problemExternalService",
                 "newPage": false,
                 "searchKey": "conf.problemExternalService",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -405,7 +399,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -423,7 +419,9 @@
                 "identifier": "defaultClientOnce",
                 "newPage": false,
                 "searchKey": "conf.defaultClientOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -443,7 +441,9 @@
                 "identifier": "defaultClientVal",
                 "newPage": false,
                 "searchKey": "conf.defaultClientVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -463,7 +463,9 @@
                 "identifier": "configurationServerFrontendOnlyInitialized",
                 "newPage": false,
                 "searchKey": "conf.configurationServerFrontendOnlyInitialized",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -483,9 +485,7 @@
                 "identifier": "FormatOptions",
                 "newPage": false,
                 "searchKey": "conf.FormatOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -505,7 +505,9 @@
                 "identifier": "siteConfigEscapeHatchPath",
                 "newPage": false,
                 "searchKey": "conf.siteConfigEscapeHatchPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -525,7 +527,9 @@
                 "identifier": "requireRestart",
                 "newPage": false,
                 "searchKey": "conf.requireRestart",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -545,9 +549,7 @@
                 "identifier": "DefaultRemoteRegistry",
                 "newPage": false,
                 "searchKey": "conf.DefaultRemoteRegistry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -567,7 +569,9 @@
                 "identifier": "ignoreLegacyKubernetesFields",
                 "newPage": false,
                 "searchKey": "conf.ignoreLegacyKubernetesFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -587,7 +591,9 @@
                 "identifier": "contributedValidators",
                 "newPage": false,
                 "searchKey": "conf.contributedValidators",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -607,7 +613,9 @@
                 "identifier": "contributedWarnings",
                 "newPage": false,
                 "searchKey": "conf.contributedWarnings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -630,7 +638,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -648,7 +658,9 @@
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "conf.client",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -666,7 +678,9 @@
                       "identifier": "defaultClient",
                       "newPage": false,
                       "searchKey": "conf.defaultClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -686,7 +700,9 @@
                       "identifier": "initDefaultClient",
                       "newPage": false,
                       "searchKey": "conf.initDefaultClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -706,7 +722,9 @@
                       "identifier": "client.Raw",
                       "newPage": false,
                       "searchKey": "conf.client.Raw",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -726,7 +744,9 @@
                       "identifier": "client.Get",
                       "newPage": false,
                       "searchKey": "conf.client.Get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -746,7 +766,9 @@
                       "identifier": "client.Mock",
                       "newPage": false,
                       "searchKey": "conf.client.Mock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -766,7 +788,9 @@
                       "identifier": "client.Watch",
                       "newPage": false,
                       "searchKey": "conf.client.Watch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -786,7 +810,9 @@
                       "identifier": "client.Cached",
                       "newPage": false,
                       "searchKey": "conf.client.Cached",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -806,7 +832,9 @@
                       "identifier": "client.notifyWatchers",
                       "newPage": false,
                       "searchKey": "conf.client.notifyWatchers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -826,7 +854,9 @@
                       "identifier": "client.continuouslyUpdate",
                       "newPage": false,
                       "searchKey": "conf.client.continuouslyUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -846,7 +876,9 @@
                       "identifier": "client.fetchAndUpdate",
                       "newPage": false,
                       "searchKey": "conf.client.fetchAndUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -869,7 +901,9 @@
                 "identifier": "continuousUpdateOptions",
                 "newPage": false,
                 "searchKey": "conf.continuousUpdateOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -889,9 +923,7 @@
                 "identifier": "AccessTokAllow",
                 "newPage": false,
                 "searchKey": "conf.AccessTokAllow",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -909,9 +941,7 @@
                       "identifier": "AccessTokensAllow",
                       "newPage": false,
                       "searchKey": "conf.AccessTokensAllow",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -934,9 +964,7 @@
                 "identifier": "ExternalServiceMode",
                 "newPage": false,
                 "searchKey": "conf.ExternalServiceMode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -954,9 +982,7 @@
                       "identifier": "ExternalServiceUserMode",
                       "newPage": false,
                       "searchKey": "conf.ExternalServiceUserMode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -976,9 +1002,7 @@
                       "identifier": "ExternalServiceMode.String",
                       "newPage": false,
                       "searchKey": "conf.ExternalServiceMode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1001,9 +1025,7 @@
                 "identifier": "Unified",
                 "newPage": false,
                 "searchKey": "conf.Unified",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1021,9 +1043,7 @@
                       "identifier": "Get",
                       "newPage": false,
                       "searchKey": "conf.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1043,9 +1063,7 @@
                       "identifier": "ParseConfig",
                       "newPage": false,
                       "searchKey": "conf.ParseConfig",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1068,7 +1086,9 @@
                 "identifier": "configurationMode",
                 "newPage": false,
                 "searchKey": "conf.configurationMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1086,7 +1106,9 @@
                       "identifier": "getMode",
                       "newPage": false,
                       "searchKey": "conf.getMode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1109,7 +1131,9 @@
                 "identifier": "cachedConfigurationSource",
                 "newPage": false,
                 "searchKey": "conf.cachedConfigurationSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1127,7 +1151,9 @@
                       "identifier": "cachedConfigurationSource.Read",
                       "newPage": false,
                       "searchKey": "conf.cachedConfigurationSource.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1147,7 +1173,9 @@
                       "identifier": "cachedConfigurationSource.Write",
                       "newPage": false,
                       "searchKey": "conf.cachedConfigurationSource.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1170,9 +1198,7 @@
                 "identifier": "PlatformConfiguration",
                 "newPage": false,
                 "searchKey": "conf.PlatformConfiguration",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1190,9 +1216,7 @@
                       "identifier": "Extensions",
                       "newPage": false,
                       "searchKey": "conf.Extensions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1215,9 +1239,7 @@
                 "identifier": "ConfigurationSource",
                 "newPage": false,
                 "searchKey": "conf.ConfigurationSource",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1237,9 +1259,7 @@
                 "identifier": "Server",
                 "newPage": false,
                 "searchKey": "conf.Server",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1257,9 +1277,7 @@
                       "identifier": "InitConfigurationServerFrontendOnly",
                       "newPage": false,
                       "searchKey": "conf.InitConfigurationServerFrontendOnly",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1279,9 +1297,7 @@
                       "identifier": "NewServer",
                       "newPage": false,
                       "searchKey": "conf.NewServer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1301,9 +1317,7 @@
                       "identifier": "Server.Raw",
                       "newPage": false,
                       "searchKey": "conf.Server.Raw",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1323,9 +1337,7 @@
                       "identifier": "Server.Write",
                       "newPage": false,
                       "searchKey": "conf.Server.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1345,9 +1357,7 @@
                       "identifier": "Server.Edit",
                       "newPage": false,
                       "searchKey": "conf.Server.Edit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1367,9 +1377,7 @@
                       "identifier": "Server.Start",
                       "newPage": false,
                       "searchKey": "conf.Server.Start",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1389,7 +1397,9 @@
                       "identifier": "Server.watchSource",
                       "newPage": false,
                       "searchKey": "conf.Server.watchSource",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1409,7 +1419,9 @@
                       "identifier": "Server.updateFromSource",
                       "newPage": false,
                       "searchKey": "conf.Server.updateFromSource",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1429,9 +1441,7 @@
                       "identifier": "Server.NeedServerRestart",
                       "newPage": false,
                       "searchKey": "conf.Server.NeedServerRestart",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1451,7 +1461,9 @@
                       "identifier": "Server.markNeedServerRestart",
                       "newPage": false,
                       "searchKey": "conf.Server.markNeedServerRestart",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1474,9 +1486,7 @@
                 "identifier": "Edits",
                 "newPage": false,
                 "searchKey": "conf.Edits",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1496,7 +1506,9 @@
                 "identifier": "store",
                 "newPage": false,
                 "searchKey": "conf.store",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1514,7 +1526,9 @@
                       "identifier": "newStore",
                       "newPage": false,
                       "searchKey": "conf.newStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1534,7 +1548,9 @@
                       "identifier": "store.LastValid",
                       "newPage": false,
                       "searchKey": "conf.store.LastValid",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1554,7 +1570,9 @@
                       "identifier": "store.Raw",
                       "newPage": false,
                       "searchKey": "conf.store.Raw",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1574,7 +1592,9 @@
                       "identifier": "store.Mock",
                       "newPage": false,
                       "searchKey": "conf.store.Mock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1594,7 +1614,9 @@
                       "identifier": "store.MaybeUpdate",
                       "newPage": false,
                       "searchKey": "conf.store.MaybeUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1614,7 +1636,9 @@
                       "identifier": "store.WaitUntilInitialized",
                       "newPage": false,
                       "searchKey": "conf.store.WaitUntilInitialized",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1634,7 +1658,9 @@
                       "identifier": "store.checkDeadlock",
                       "newPage": false,
                       "searchKey": "conf.store.checkDeadlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1654,7 +1680,9 @@
                       "identifier": "store.initialize",
                       "newPage": false,
                       "searchKey": "conf.store.initialize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1677,7 +1705,9 @@
                 "identifier": "updateResult",
                 "newPage": false,
                 "searchKey": "conf.updateResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1697,7 +1727,9 @@
                 "identifier": "problemKind",
                 "newPage": false,
                 "searchKey": "conf.problemKind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1717,9 +1749,7 @@
                 "identifier": "Problem",
                 "newPage": false,
                 "searchKey": "conf.Problem",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1737,9 +1767,7 @@
                       "identifier": "NewSiteProblem",
                       "newPage": false,
                       "searchKey": "conf.NewSiteProblem",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1759,9 +1787,7 @@
                       "identifier": "NewExternalServiceProblem",
                       "newPage": false,
                       "searchKey": "conf.NewExternalServiceProblem",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1781,9 +1807,7 @@
                       "identifier": "Problem.IsSite",
                       "newPage": false,
                       "searchKey": "conf.Problem.IsSite",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1803,9 +1827,7 @@
                       "identifier": "Problem.IsExternalService",
                       "newPage": false,
                       "searchKey": "conf.Problem.IsExternalService",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1825,9 +1847,7 @@
                       "identifier": "Problem.String",
                       "newPage": false,
                       "searchKey": "conf.Problem.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1847,9 +1867,7 @@
                       "identifier": "Problem.MarshalJSON",
                       "newPage": false,
                       "searchKey": "conf.Problem.MarshalJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1869,9 +1887,7 @@
                       "identifier": "Problem.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "conf.Problem.UnmarshalJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1894,9 +1910,7 @@
                 "identifier": "Problems",
                 "newPage": false,
                 "searchKey": "conf.Problems",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1914,7 +1928,9 @@
                       "identifier": "newProblems",
                       "newPage": false,
                       "searchKey": "conf.newProblems",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1934,9 +1950,7 @@
                       "identifier": "NewSiteProblems",
                       "newPage": false,
                       "searchKey": "conf.NewSiteProblems",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1956,9 +1970,7 @@
                       "identifier": "NewExternalServiceProblems",
                       "newPage": false,
                       "searchKey": "conf.NewExternalServiceProblems",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1978,9 +1990,7 @@
                       "identifier": "Validate",
                       "newPage": false,
                       "searchKey": "conf.Validate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2000,7 +2010,9 @@
                       "identifier": "validateCustomRaw",
                       "newPage": false,
                       "searchKey": "conf.validateCustomRaw",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2020,7 +2032,9 @@
                       "identifier": "validateCustom",
                       "newPage": false,
                       "searchKey": "conf.validateCustom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2040,9 +2054,7 @@
                       "identifier": "GetWarnings",
                       "newPage": false,
                       "searchKey": "conf.GetWarnings",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2062,9 +2074,7 @@
                       "identifier": "Problems.Messages",
                       "newPage": false,
                       "searchKey": "conf.Problems.Messages",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2084,9 +2094,7 @@
                       "identifier": "Problems.Site",
                       "newPage": false,
                       "searchKey": "conf.Problems.Site",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2106,9 +2114,7 @@
                       "identifier": "Problems.ExternalService",
                       "newPage": false,
                       "searchKey": "conf.Problems.ExternalService",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2131,7 +2137,9 @@
                 "identifier": "jsonLoader",
                 "newPage": false,
                 "searchKey": "conf.jsonLoader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2149,7 +2157,9 @@
                       "identifier": "jsonLoader.LoaderFactory",
                       "newPage": false,
                       "searchKey": "conf.jsonLoader.LoaderFactory",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2172,7 +2182,9 @@
                 "identifier": "jsonLoaderFactory",
                 "newPage": false,
                 "searchKey": "conf.jsonLoaderFactory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2190,7 +2202,9 @@
                       "identifier": "jsonLoaderFactory.New",
                       "newPage": false,
                       "searchKey": "conf.jsonLoaderFactory.New",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2213,9 +2227,7 @@
                 "identifier": "Validator",
                 "newPage": false,
                 "searchKey": "conf.Validator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2238,7 +2250,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2256,9 +2270,7 @@
                 "identifier": "AuthProviderType",
                 "newPage": false,
                 "searchKey": "conf.AuthProviderType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2278,9 +2290,7 @@
                 "identifier": "AuthPublic",
                 "newPage": false,
                 "searchKey": "conf.AuthPublic",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2300,9 +2310,7 @@
                 "identifier": "AuthAllowSignup",
                 "newPage": false,
                 "searchKey": "conf.AuthAllowSignup",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2322,7 +2330,9 @@
                 "identifier": "authAllowSignup",
                 "newPage": false,
                 "searchKey": "conf.authAllowSignup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2342,9 +2352,7 @@
                 "identifier": "Raw",
                 "newPage": false,
                 "searchKey": "conf.Raw",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2364,9 +2372,7 @@
                 "identifier": "Mock",
                 "newPage": false,
                 "searchKey": "conf.Mock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2386,9 +2392,7 @@
                 "identifier": "Watch",
                 "newPage": false,
                 "searchKey": "conf.Watch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2408,9 +2412,7 @@
                 "identifier": "Cached",
                 "newPage": false,
                 "searchKey": "conf.Cached",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2425,12 +2427,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/conf#init",
+              "pathID": "/internal/conf#init.computed.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.computed.go",
                 "newPage": false,
                 "searchKey": "conf.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2450,7 +2454,9 @@
                 "identifier": "defaultConfigForDeployment",
                 "newPage": false,
                 "searchKey": "conf.defaultConfigForDeployment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2470,9 +2476,7 @@
                 "identifier": "AWSCodeCommitConfigs",
                 "newPage": false,
                 "searchKey": "conf.AWSCodeCommitConfigs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2492,9 +2496,7 @@
                 "identifier": "BitbucketServerConfigs",
                 "newPage": false,
                 "searchKey": "conf.BitbucketServerConfigs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2514,9 +2516,7 @@
                 "identifier": "GitHubConfigs",
                 "newPage": false,
                 "searchKey": "conf.GitHubConfigs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2536,9 +2536,7 @@
                 "identifier": "GitLabConfigs",
                 "newPage": false,
                 "searchKey": "conf.GitLabConfigs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2558,9 +2556,7 @@
                 "identifier": "GitoliteConfigs",
                 "newPage": false,
                 "searchKey": "conf.GitoliteConfigs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2580,9 +2576,7 @@
                 "identifier": "PhabricatorConfigs",
                 "newPage": false,
                 "searchKey": "conf.PhabricatorConfigs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2602,9 +2596,7 @@
                 "identifier": "EmailVerificationRequired",
                 "newPage": false,
                 "searchKey": "conf.EmailVerificationRequired",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2624,9 +2616,7 @@
                 "identifier": "CanSendEmail",
                 "newPage": false,
                 "searchKey": "conf.CanSendEmail",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2646,9 +2636,7 @@
                 "identifier": "DeployType",
                 "newPage": false,
                 "searchKey": "conf.DeployType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2668,9 +2656,7 @@
                 "identifier": "IsDeployTypeKubernetes",
                 "newPage": false,
                 "searchKey": "conf.IsDeployTypeKubernetes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2690,9 +2676,7 @@
                 "identifier": "IsDeployTypeDockerCompose",
                 "newPage": false,
                 "searchKey": "conf.IsDeployTypeDockerCompose",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2712,9 +2696,7 @@
                 "identifier": "IsDeployTypePureDocker",
                 "newPage": false,
                 "searchKey": "conf.IsDeployTypePureDocker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2734,9 +2716,7 @@
                 "identifier": "IsDeployTypeSingleDockerContainer",
                 "newPage": false,
                 "searchKey": "conf.IsDeployTypeSingleDockerContainer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2756,9 +2736,7 @@
                 "identifier": "IsDev",
                 "newPage": false,
                 "searchKey": "conf.IsDev",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2778,9 +2756,7 @@
                 "identifier": "IsValidDeployType",
                 "newPage": false,
                 "searchKey": "conf.IsValidDeployType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2800,9 +2776,7 @@
                 "identifier": "UpdateChannel",
                 "newPage": false,
                 "searchKey": "conf.UpdateChannel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2822,9 +2796,7 @@
                 "identifier": "SearchIndexEnabled",
                 "newPage": false,
                 "searchKey": "conf.SearchIndexEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2844,9 +2816,7 @@
                 "identifier": "BatchChangesEnabled",
                 "newPage": false,
                 "searchKey": "conf.BatchChangesEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2866,9 +2836,7 @@
                 "identifier": "BatchChangesRestrictedToAdmins",
                 "newPage": false,
                 "searchKey": "conf.BatchChangesRestrictedToAdmins",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2888,9 +2856,7 @@
                 "identifier": "CodeIntelAutoIndexingEnabled",
                 "newPage": false,
                 "searchKey": "conf.CodeIntelAutoIndexingEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2910,9 +2876,7 @@
                 "identifier": "ProductResearchPageEnabled",
                 "newPage": false,
                 "searchKey": "conf.ProductResearchPageEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2932,9 +2896,7 @@
                 "identifier": "ExternalURL",
                 "newPage": false,
                 "searchKey": "conf.ExternalURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2954,9 +2916,7 @@
                 "identifier": "UsingExternalURL",
                 "newPage": false,
                 "searchKey": "conf.UsingExternalURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2976,9 +2936,7 @@
                 "identifier": "IsExternalURLSecure",
                 "newPage": false,
                 "searchKey": "conf.IsExternalURLSecure",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2998,9 +2956,7 @@
                 "identifier": "IsBuiltinSignupAllowed",
                 "newPage": false,
                 "searchKey": "conf.IsBuiltinSignupAllowed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3020,9 +2976,7 @@
                 "identifier": "SearchSymbolsParallelism",
                 "newPage": false,
                 "searchKey": "conf.SearchSymbolsParallelism",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3042,9 +2996,7 @@
                 "identifier": "BitbucketServerPluginPerm",
                 "newPage": false,
                 "searchKey": "conf.BitbucketServerPluginPerm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3064,9 +3016,7 @@
                 "identifier": "EventLoggingEnabled",
                 "newPage": false,
                 "searchKey": "conf.EventLoggingEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3086,9 +3036,7 @@
                 "identifier": "StructuralSearchEnabled",
                 "newPage": false,
                 "searchKey": "conf.StructuralSearchEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3108,9 +3056,7 @@
                 "identifier": "AndOrQueryEnabled",
                 "newPage": false,
                 "searchKey": "conf.AndOrQueryEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3130,9 +3076,7 @@
                 "identifier": "ExperimentalFeatures",
                 "newPage": false,
                 "searchKey": "conf.ExperimentalFeatures",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3152,9 +3096,7 @@
                 "identifier": "AuthMinPasswordLength",
                 "newPage": false,
                 "searchKey": "conf.AuthMinPasswordLength",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3174,9 +3116,7 @@
                 "identifier": "AuthPasswordResetLinkExpiry",
                 "newPage": false,
                 "searchKey": "conf.AuthPasswordResetLinkExpiry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3196,9 +3136,7 @@
                 "identifier": "GitMaxCodehostRequestsPerSecond",
                 "newPage": false,
                 "searchKey": "conf.GitMaxCodehostRequestsPerSecond",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3218,9 +3156,7 @@
                 "identifier": "UserReposMaxPerUser",
                 "newPage": false,
                 "searchKey": "conf.UserReposMaxPerUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3240,9 +3176,7 @@
                 "identifier": "UserReposMaxPerSite",
                 "newPage": false,
                 "searchKey": "conf.UserReposMaxPerSite",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3262,7 +3196,9 @@
                 "identifier": "startSiteConfigEscapeHatchWorker",
                 "newPage": false,
                 "searchKey": "conf.startSiteConfigEscapeHatchWorker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3282,7 +3218,9 @@
                 "identifier": "diff",
                 "newPage": false,
                 "searchKey": "conf.diff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3302,7 +3240,9 @@
                 "identifier": "diffStruct",
                 "newPage": false,
                 "searchKey": "conf.diffStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3322,7 +3262,9 @@
                 "identifier": "getJSONFields",
                 "newPage": false,
                 "searchKey": "conf.getJSONFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3342,7 +3284,9 @@
                 "identifier": "parseJSONTag",
                 "newPage": false,
                 "searchKey": "conf.parseJSONTag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3362,9 +3306,7 @@
                 "identifier": "HasExternalAuthProvider",
                 "newPage": false,
                 "searchKey": "conf.HasExternalAuthProvider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3384,7 +3326,9 @@
                 "identifier": "parseConfigData",
                 "newPage": false,
                 "searchKey": "conf.parseConfigData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3404,9 +3348,7 @@
                 "identifier": "NeedRestartToApply",
                 "newPage": false,
                 "searchKey": "conf.NeedRestartToApply",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3426,9 +3368,7 @@
                 "identifier": "ValidateSite",
                 "newPage": false,
                 "searchKey": "conf.ValidateSite",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3448,9 +3388,7 @@
                 "identifier": "ValidateSetting",
                 "newPage": false,
                 "searchKey": "conf.ValidateSetting",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3470,7 +3408,9 @@
                 "identifier": "doValidate",
                 "newPage": false,
                 "searchKey": "conf.doValidate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3490,7 +3430,9 @@
                 "identifier": "validate",
                 "newPage": false,
                 "searchKey": "conf.validate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3510,9 +3452,7 @@
                 "identifier": "MustValidateDefaults",
                 "newPage": false,
                 "searchKey": "conf.MustValidateDefaults",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3532,7 +3472,9 @@
                 "identifier": "mustValidate",
                 "newPage": false,
                 "searchKey": "conf.mustValidate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3552,9 +3494,7 @@
                 "identifier": "ContributeValidator",
                 "newPage": false,
                 "searchKey": "conf.ContributeValidator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3574,9 +3514,7 @@
                 "identifier": "TestValidator",
                 "newPage": false,
                 "searchKey": "conf.TestValidator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3596,9 +3534,7 @@
                 "identifier": "ContributeWarning",
                 "newPage": false,
                 "searchKey": "conf.ContributeWarning",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3618,7 +3554,9 @@
                 "identifier": "TestAuthPublic",
                 "newPage": false,
                 "searchKey": "conf.TestAuthPublic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3638,7 +3576,9 @@
                 "identifier": "TestClient_continuouslyUpdate",
                 "newPage": false,
                 "searchKey": "conf.TestClient_continuouslyUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3658,7 +3598,9 @@
                 "identifier": "TestSearchIndexEnabled",
                 "newPage": false,
                 "searchKey": "conf.TestSearchIndexEnabled",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3678,7 +3620,9 @@
                 "identifier": "TestAuthPasswordResetLinkDuration",
                 "newPage": false,
                 "searchKey": "conf.TestAuthPasswordResetLinkDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3698,7 +3642,9 @@
                 "identifier": "TestGitMaxCodehostRequestsPerSecond",
                 "newPage": false,
                 "searchKey": "conf.TestGitMaxCodehostRequestsPerSecond",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3718,7 +3664,9 @@
                 "identifier": "setenv",
                 "newPage": false,
                 "searchKey": "conf.setenv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3738,7 +3686,9 @@
                 "identifier": "boolPtr",
                 "newPage": false,
                 "searchKey": "conf.boolPtr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3758,7 +3708,9 @@
                 "identifier": "intPtr",
                 "newPage": false,
                 "searchKey": "conf.intPtr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3778,7 +3730,9 @@
                 "identifier": "TestDiff",
                 "newPage": false,
                 "searchKey": "conf.TestDiff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3798,7 +3752,9 @@
                 "identifier": "toSlice",
                 "newPage": false,
                 "searchKey": "conf.toSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3818,7 +3774,9 @@
                 "identifier": "TestExtensions",
                 "newPage": false,
                 "searchKey": "conf.TestExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3838,7 +3796,9 @@
                 "identifier": "TestValidate",
                 "newPage": false,
                 "searchKey": "conf.TestValidate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3858,7 +3818,9 @@
                 "identifier": "TestValidateCustom",
                 "newPage": false,
                 "searchKey": "conf.TestValidateCustom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3878,7 +3840,9 @@
                 "identifier": "TestProblems",
                 "newPage": false,
                 "searchKey": "conf.TestProblems",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

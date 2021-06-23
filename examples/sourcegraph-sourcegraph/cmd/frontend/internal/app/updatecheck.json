@@ -4,7 +4,9 @@
     "identifier": "updatecheck",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app/updatecheck",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "redisInfoCommand",
                 "newPage": false,
                 "searchKey": "updatecheck.redisInfoCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "metricsRecorder",
                 "newPage": false,
                 "searchKey": "updatecheck.metricsRecorder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "mu",
                 "newPage": false,
                 "searchKey": "updatecheck.mu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "startedAt",
                 "newPage": false,
                 "searchKey": "updatecheck.startedAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "lastStatus",
                 "newPage": false,
                 "searchKey": "updatecheck.lastStatus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "started",
                 "newPage": false,
                 "searchKey": "updatecheck.started",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "pubSubPingsTopicID",
                 "newPage": false,
                 "searchKey": "updatecheck.pubSubPingsTopicID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -201,7 +221,9 @@
                 "identifier": "latestReleaseDockerServerImageBuild",
                 "newPage": false,
                 "searchKey": "updatecheck.latestReleaseDockerServerImageBuild",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -221,7 +243,9 @@
                 "identifier": "latestReleaseKubernetesBuild",
                 "newPage": false,
                 "searchKey": "updatecheck.latestReleaseKubernetesBuild",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -241,7 +265,9 @@
                 "identifier": "latestReleaseDockerComposeOrPureDocker",
                 "newPage": false,
                 "searchKey": "updatecheck.latestReleaseDockerComposeOrPureDocker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,7 +287,9 @@
                 "identifier": "dateRegex",
                 "newPage": false,
                 "searchKey": "updatecheck.dateRegex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -281,7 +309,9 @@
                 "identifier": "timeNow",
                 "newPage": false,
                 "searchKey": "updatecheck.timeNow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,7 +331,9 @@
                 "identifier": "codeIntelActionNames",
                 "newPage": false,
                 "searchKey": "updatecheck.codeIntelActionNames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -321,7 +353,9 @@
                 "identifier": "codeIntelSourceNames",
                 "newPage": false,
                 "searchKey": "updatecheck.codeIntelSourceNames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -341,7 +375,9 @@
                 "identifier": "requestCounter",
                 "newPage": false,
                 "searchKey": "updatecheck.requestCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -361,7 +397,9 @@
                 "identifier": "requestHasUpdateCounter",
                 "newPage": false,
                 "searchKey": "updatecheck.requestHasUpdateCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -381,7 +419,9 @@
                 "identifier": "errorCounter",
                 "newPage": false,
                 "searchKey": "updatecheck.errorCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -404,7 +444,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -422,7 +464,9 @@
                 "identifier": "build",
                 "newPage": false,
                 "searchKey": "updatecheck.build",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -440,7 +484,9 @@
                       "identifier": "newBuild",
                       "newPage": false,
                       "searchKey": "updatecheck.newBuild",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -460,7 +506,9 @@
                       "identifier": "getLatestRelease",
                       "newPage": false,
                       "searchKey": "updatecheck.getLatestRelease",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -483,9 +531,7 @@
                 "identifier": "Status",
                 "newPage": false,
                 "searchKey": "updatecheck.Status",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -503,9 +549,7 @@
                       "identifier": "Last",
                       "newPage": false,
                       "searchKey": "updatecheck.Last",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -525,9 +569,7 @@
                       "identifier": "Status.HasUpdate",
                       "newPage": false,
                       "searchKey": "updatecheck.Status.HasUpdate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -550,7 +592,9 @@
                 "identifier": "pingRequest",
                 "newPage": false,
                 "searchKey": "updatecheck.pingRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -568,7 +612,9 @@
                       "identifier": "readPingRequest",
                       "newPage": false,
                       "searchKey": "updatecheck.readPingRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -588,7 +634,9 @@
                       "identifier": "readPingRequestFromQuery",
                       "newPage": false,
                       "searchKey": "updatecheck.readPingRequestFromQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -608,7 +656,9 @@
                       "identifier": "readPingRequestFromBody",
                       "newPage": false,
                       "searchKey": "updatecheck.readPingRequestFromBody",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -631,7 +681,9 @@
                 "identifier": "dependencyVersions",
                 "newPage": false,
                 "searchKey": "updatecheck.dependencyVersions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -651,7 +703,9 @@
                 "identifier": "pingPayload",
                 "newPage": false,
                 "searchKey": "updatecheck.pingPayload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -671,7 +725,9 @@
                 "identifier": "jsonCodeIntelUsage",
                 "newPage": false,
                 "searchKey": "updatecheck.jsonCodeIntelUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -691,7 +747,9 @@
                 "identifier": "jsonEventSummary",
                 "newPage": false,
                 "searchKey": "updatecheck.jsonEventSummary",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -709,7 +767,9 @@
                       "identifier": "translateEventSummary",
                       "newPage": false,
                       "searchKey": "updatecheck.translateEventSummary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -735,7 +795,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -753,9 +815,7 @@
                 "identifier": "IsPending",
                 "newPage": false,
                 "searchKey": "updatecheck.IsPending",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -775,7 +835,9 @@
                 "identifier": "recordOperation",
                 "newPage": false,
                 "searchKey": "updatecheck.recordOperation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -795,7 +857,9 @@
                 "identifier": "getAndMarshalSiteActivityJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalSiteActivityJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -815,7 +879,9 @@
                 "identifier": "hasSearchOccurred",
                 "newPage": false,
                 "searchKey": "updatecheck.hasSearchOccurred",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -835,7 +901,9 @@
                 "identifier": "hasFindRefsOccurred",
                 "newPage": false,
                 "searchKey": "updatecheck.hasFindRefsOccurred",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -855,7 +923,9 @@
                 "identifier": "getTotalUsersCount",
                 "newPage": false,
                 "searchKey": "updatecheck.getTotalUsersCount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -875,7 +945,9 @@
                 "identifier": "getTotalReposCount",
                 "newPage": false,
                 "searchKey": "updatecheck.getTotalReposCount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -895,7 +967,9 @@
                 "identifier": "getUsersActiveTodayCount",
                 "newPage": false,
                 "searchKey": "updatecheck.getUsersActiveTodayCount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -915,7 +989,9 @@
                 "identifier": "getInitialSiteAdminEmail",
                 "newPage": false,
                 "searchKey": "updatecheck.getInitialSiteAdminEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -935,7 +1011,9 @@
                 "identifier": "getAndMarshalBatchChangesUsageJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalBatchChangesUsageJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -955,7 +1033,9 @@
                 "identifier": "getAndMarshalGrowthStatisticsJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalGrowthStatisticsJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -975,7 +1055,9 @@
                 "identifier": "getAndMarshalSavedSearchesJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalSavedSearchesJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -995,7 +1077,9 @@
                 "identifier": "getAndMarshalHomepagePanelsJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalHomepagePanelsJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1015,7 +1099,9 @@
                 "identifier": "getAndMarshalRepositoriesJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalRepositoriesJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1035,7 +1121,9 @@
                 "identifier": "getAndMarshalRetentionStatisticsJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalRetentionStatisticsJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1055,7 +1143,9 @@
                 "identifier": "getAndMarshalSearchOnboardingJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalSearchOnboardingJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1075,7 +1165,9 @@
                 "identifier": "getAndMarshalAggregatedCodeIntelUsageJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalAggregatedCodeIntelUsageJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1095,7 +1187,9 @@
                 "identifier": "getAndMarshalAggregatedSearchUsageJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalAggregatedSearchUsageJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1115,7 +1209,9 @@
                 "identifier": "getAndMarshalExtensionsUsageStatisticsJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalExtensionsUsageStatisticsJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1135,7 +1231,9 @@
                 "identifier": "getAndMarshalCodeInsightsUsageJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalCodeInsightsUsageJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1155,7 +1253,9 @@
                 "identifier": "getAndMarshalCodeMonitoringUsageJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalCodeMonitoringUsageJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1175,7 +1275,9 @@
                 "identifier": "getDependencyVersions",
                 "newPage": false,
                 "searchKey": "updatecheck.getDependencyVersions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1195,7 +1297,9 @@
                 "identifier": "getRedisVersion",
                 "newPage": false,
                 "searchKey": "updatecheck.getRedisVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1215,7 +1319,9 @@
                 "identifier": "parseRedisInfo",
                 "newPage": false,
                 "searchKey": "updatecheck.parseRedisInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1235,7 +1341,9 @@
                 "identifier": "updateBody",
                 "newPage": false,
                 "searchKey": "updatecheck.updateBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1255,7 +1363,9 @@
                 "identifier": "authProviderTypes",
                 "newPage": false,
                 "searchKey": "updatecheck.authProviderTypes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1275,7 +1385,9 @@
                 "identifier": "externalServiceKinds",
                 "newPage": false,
                 "searchKey": "updatecheck.externalServiceKinds",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1295,7 +1407,9 @@
                 "identifier": "check",
                 "newPage": false,
                 "searchKey": "updatecheck.check",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1315,9 +1429,7 @@
                 "identifier": "Start",
                 "newPage": false,
                 "searchKey": "updatecheck.Start",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1337,9 +1449,7 @@
                 "identifier": "Handler",
                 "newPage": false,
                 "searchKey": "updatecheck.Handler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1359,7 +1469,9 @@
                 "identifier": "canUpdate",
                 "newPage": false,
                 "searchKey": "updatecheck.canUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1379,7 +1491,9 @@
                 "identifier": "canUpdateVersion",
                 "newPage": false,
                 "searchKey": "updatecheck.canUpdateVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1399,7 +1513,9 @@
                 "identifier": "canUpdateDate",
                 "newPage": false,
                 "searchKey": "updatecheck.canUpdateDate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1419,7 +1535,9 @@
                 "identifier": "toInt",
                 "newPage": false,
                 "searchKey": "updatecheck.toInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1439,7 +1557,9 @@
                 "identifier": "toBool",
                 "newPage": false,
                 "searchKey": "updatecheck.toBool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1459,7 +1579,9 @@
                 "identifier": "toRawMessage",
                 "newPage": false,
                 "searchKey": "updatecheck.toRawMessage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1479,7 +1601,9 @@
                 "identifier": "logPing",
                 "newPage": false,
                 "searchKey": "updatecheck.logPing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1499,7 +1623,9 @@
                 "identifier": "marshalPing",
                 "newPage": false,
                 "searchKey": "updatecheck.marshalPing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1519,7 +1645,9 @@
                 "identifier": "reserializeCodeIntelUsage",
                 "newPage": false,
                 "searchKey": "updatecheck.reserializeCodeIntelUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1539,7 +1667,9 @@
                 "identifier": "reserializeNewCodeIntelUsage",
                 "newPage": false,
                 "searchKey": "updatecheck.reserializeNewCodeIntelUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1559,7 +1689,9 @@
                 "identifier": "reserializeOldCodeIntelUsage",
                 "newPage": false,
                 "searchKey": "updatecheck.reserializeOldCodeIntelUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1579,7 +1711,9 @@
                 "identifier": "reserializeSearchUsage",
                 "newPage": false,
                 "searchKey": "updatecheck.reserializeSearchUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1599,7 +1733,9 @@
                 "identifier": "TestParseRedisInfo",
                 "newPage": false,
                 "searchKey": "updatecheck.TestParseRedisInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1619,7 +1755,9 @@
                 "identifier": "TestLatestDockerVersionPushed",
                 "newPage": false,
                 "searchKey": "updatecheck.TestLatestDockerVersionPushed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1639,7 +1777,9 @@
                 "identifier": "TestLatestKubernetesVersionPushed",
                 "newPage": false,
                 "searchKey": "updatecheck.TestLatestKubernetesVersionPushed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1659,7 +1799,9 @@
                 "identifier": "TestLatestDockerComposeOrPureDockerVersionPushed",
                 "newPage": false,
                 "searchKey": "updatecheck.TestLatestDockerComposeOrPureDockerVersionPushed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1679,7 +1821,9 @@
                 "identifier": "TestCanUpdate",
                 "newPage": false,
                 "searchKey": "updatecheck.TestCanUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1699,7 +1843,9 @@
                 "identifier": "TestSerializeBasic",
                 "newPage": false,
                 "searchKey": "updatecheck.TestSerializeBasic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1719,7 +1865,9 @@
                 "identifier": "TestSerializeFromQuery",
                 "newPage": false,
                 "searchKey": "updatecheck.TestSerializeFromQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1739,7 +1887,9 @@
                 "identifier": "TestSerializeAutomationUsage",
                 "newPage": false,
                 "searchKey": "updatecheck.TestSerializeAutomationUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1759,7 +1909,9 @@
                 "identifier": "TestSerializeCodeIntelUsage",
                 "newPage": false,
                 "searchKey": "updatecheck.TestSerializeCodeIntelUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1779,7 +1931,9 @@
                 "identifier": "TestSerializeOldCodeIntelUsage",
                 "newPage": false,
                 "searchKey": "updatecheck.TestSerializeOldCodeIntelUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1799,7 +1953,9 @@
                 "identifier": "compareJSON",
                 "newPage": false,
                 "searchKey": "updatecheck.compareJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

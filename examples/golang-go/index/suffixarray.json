@@ -4,9 +4,7 @@
     "identifier": "suffixarray",
     "newPage": true,
     "searchKey": "index/suffixarray",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "realMaxData32",
                 "newPage": false,
                 "searchKey": "suffixarray.realMaxData32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "bufSize",
                 "newPage": false,
                 "searchKey": "suffixarray.bufSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,9 +87,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "maxData32",
                 "newPage": false,
                 "searchKey": "suffixarray.maxData32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "errTooBig",
                 "newPage": false,
                 "searchKey": "suffixarray.errTooBig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "testCases",
                 "newPage": false,
                 "searchKey": "suffixarray.testCases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "benchdata",
                 "newPage": false,
                 "searchKey": "suffixarray.benchdata",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "benchrand",
                 "newPage": false,
                 "searchKey": "suffixarray.benchrand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +218,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -230,9 +236,7 @@
                 "identifier": "Index",
                 "newPage": false,
                 "searchKey": "suffixarray.Index",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -250,9 +254,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "suffixarray.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -272,9 +274,7 @@
                       "identifier": "Index.Read",
                       "newPage": false,
                       "searchKey": "suffixarray.Index.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,9 +294,7 @@
                       "identifier": "Index.Write",
                       "newPage": false,
                       "searchKey": "suffixarray.Index.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -316,9 +314,7 @@
                       "identifier": "Index.Bytes",
                       "newPage": false,
                       "searchKey": "suffixarray.Index.Bytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -338,7 +334,9 @@
                       "identifier": "Index.at",
                       "newPage": false,
                       "searchKey": "suffixarray.Index.at",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -358,7 +356,9 @@
                       "identifier": "Index.lookupAll",
                       "newPage": false,
                       "searchKey": "suffixarray.Index.lookupAll",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -378,9 +378,7 @@
                       "identifier": "Index.Lookup",
                       "newPage": false,
                       "searchKey": "suffixarray.Index.Lookup",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -400,9 +398,7 @@
                       "identifier": "Index.FindAllIndex",
                       "newPage": false,
                       "searchKey": "suffixarray.Index.FindAllIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -425,7 +421,9 @@
                 "identifier": "ints",
                 "newPage": false,
                 "searchKey": "suffixarray.ints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -443,7 +441,9 @@
                       "identifier": "ints.len",
                       "newPage": false,
                       "searchKey": "suffixarray.ints.len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -463,7 +463,9 @@
                       "identifier": "ints.get",
                       "newPage": false,
                       "searchKey": "suffixarray.ints.get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -483,7 +485,9 @@
                       "identifier": "ints.set",
                       "newPage": false,
                       "searchKey": "suffixarray.ints.set",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -503,7 +507,9 @@
                       "identifier": "ints.slice",
                       "newPage": false,
                       "searchKey": "suffixarray.ints.slice",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -526,7 +532,9 @@
                 "identifier": "testCase",
                 "newPage": false,
                 "searchKey": "suffixarray.testCase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -546,7 +554,9 @@
                 "identifier": "index",
                 "newPage": false,
                 "searchKey": "suffixarray.index",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -564,7 +574,9 @@
                       "identifier": "index.Len",
                       "newPage": false,
                       "searchKey": "suffixarray.index.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -584,7 +596,9 @@
                       "identifier": "index.Less",
                       "newPage": false,
                       "searchKey": "suffixarray.index.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -604,7 +618,9 @@
                       "identifier": "index.Swap",
                       "newPage": false,
                       "searchKey": "suffixarray.index.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -624,7 +640,9 @@
                       "identifier": "index.at",
                       "newPage": false,
                       "searchKey": "suffixarray.index.at",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -650,9 +668,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -670,7 +686,9 @@
                 "identifier": "text_32",
                 "newPage": false,
                 "searchKey": "suffixarray.text_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -690,7 +708,9 @@
                 "identifier": "sais_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.sais_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -710,7 +730,9 @@
                 "identifier": "freq_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.freq_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -730,7 +752,9 @@
                 "identifier": "bucketMin_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.bucketMin_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -750,7 +774,9 @@
                 "identifier": "bucketMax_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.bucketMax_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -770,7 +796,9 @@
                 "identifier": "placeLMS_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.placeLMS_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -790,7 +818,9 @@
                 "identifier": "induceSubL_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.induceSubL_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -810,7 +840,9 @@
                 "identifier": "induceSubS_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.induceSubS_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -830,7 +862,9 @@
                 "identifier": "length_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.length_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -850,7 +884,9 @@
                 "identifier": "assignID_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.assignID_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -870,7 +906,9 @@
                 "identifier": "map_32",
                 "newPage": false,
                 "searchKey": "suffixarray.map_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -890,7 +928,9 @@
                 "identifier": "recurse_32",
                 "newPage": false,
                 "searchKey": "suffixarray.recurse_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -910,7 +950,9 @@
                 "identifier": "unmap_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.unmap_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -930,7 +972,9 @@
                 "identifier": "expand_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.expand_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -950,7 +994,9 @@
                 "identifier": "induceL_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.induceL_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -970,7 +1016,9 @@
                 "identifier": "induceS_8_32",
                 "newPage": false,
                 "searchKey": "suffixarray.induceS_8_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -990,7 +1038,9 @@
                 "identifier": "text_64",
                 "newPage": false,
                 "searchKey": "suffixarray.text_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1010,7 +1060,9 @@
                 "identifier": "sais_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.sais_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1030,7 +1082,9 @@
                 "identifier": "sais_32",
                 "newPage": false,
                 "searchKey": "suffixarray.sais_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1050,7 +1104,9 @@
                 "identifier": "sais_64",
                 "newPage": false,
                 "searchKey": "suffixarray.sais_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1070,7 +1126,9 @@
                 "identifier": "freq_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.freq_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1090,7 +1148,9 @@
                 "identifier": "freq_32",
                 "newPage": false,
                 "searchKey": "suffixarray.freq_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1110,7 +1170,9 @@
                 "identifier": "freq_64",
                 "newPage": false,
                 "searchKey": "suffixarray.freq_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1130,7 +1192,9 @@
                 "identifier": "bucketMin_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.bucketMin_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1150,7 +1214,9 @@
                 "identifier": "bucketMin_32",
                 "newPage": false,
                 "searchKey": "suffixarray.bucketMin_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1170,7 +1236,9 @@
                 "identifier": "bucketMin_64",
                 "newPage": false,
                 "searchKey": "suffixarray.bucketMin_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1190,7 +1258,9 @@
                 "identifier": "bucketMax_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.bucketMax_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1210,7 +1280,9 @@
                 "identifier": "bucketMax_32",
                 "newPage": false,
                 "searchKey": "suffixarray.bucketMax_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1230,7 +1302,9 @@
                 "identifier": "bucketMax_64",
                 "newPage": false,
                 "searchKey": "suffixarray.bucketMax_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1250,7 +1324,9 @@
                 "identifier": "placeLMS_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.placeLMS_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1270,7 +1346,9 @@
                 "identifier": "placeLMS_32",
                 "newPage": false,
                 "searchKey": "suffixarray.placeLMS_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1290,7 +1368,9 @@
                 "identifier": "placeLMS_64",
                 "newPage": false,
                 "searchKey": "suffixarray.placeLMS_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1310,7 +1390,9 @@
                 "identifier": "induceSubL_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.induceSubL_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1330,7 +1412,9 @@
                 "identifier": "induceSubL_32",
                 "newPage": false,
                 "searchKey": "suffixarray.induceSubL_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1350,7 +1434,9 @@
                 "identifier": "induceSubL_64",
                 "newPage": false,
                 "searchKey": "suffixarray.induceSubL_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1370,7 +1456,9 @@
                 "identifier": "induceSubS_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.induceSubS_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1390,7 +1478,9 @@
                 "identifier": "induceSubS_32",
                 "newPage": false,
                 "searchKey": "suffixarray.induceSubS_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1410,7 +1500,9 @@
                 "identifier": "induceSubS_64",
                 "newPage": false,
                 "searchKey": "suffixarray.induceSubS_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1430,7 +1522,9 @@
                 "identifier": "length_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.length_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1450,7 +1544,9 @@
                 "identifier": "length_32",
                 "newPage": false,
                 "searchKey": "suffixarray.length_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1470,7 +1566,9 @@
                 "identifier": "length_64",
                 "newPage": false,
                 "searchKey": "suffixarray.length_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1490,7 +1588,9 @@
                 "identifier": "assignID_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.assignID_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1510,7 +1610,9 @@
                 "identifier": "assignID_32",
                 "newPage": false,
                 "searchKey": "suffixarray.assignID_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1530,7 +1632,9 @@
                 "identifier": "assignID_64",
                 "newPage": false,
                 "searchKey": "suffixarray.assignID_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1550,7 +1654,9 @@
                 "identifier": "map_64",
                 "newPage": false,
                 "searchKey": "suffixarray.map_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1570,7 +1676,9 @@
                 "identifier": "recurse_64",
                 "newPage": false,
                 "searchKey": "suffixarray.recurse_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1590,7 +1698,9 @@
                 "identifier": "unmap_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.unmap_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1610,7 +1720,9 @@
                 "identifier": "unmap_32",
                 "newPage": false,
                 "searchKey": "suffixarray.unmap_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1630,7 +1742,9 @@
                 "identifier": "unmap_64",
                 "newPage": false,
                 "searchKey": "suffixarray.unmap_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1650,7 +1764,9 @@
                 "identifier": "expand_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.expand_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1670,7 +1786,9 @@
                 "identifier": "expand_32",
                 "newPage": false,
                 "searchKey": "suffixarray.expand_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1690,7 +1808,9 @@
                 "identifier": "expand_64",
                 "newPage": false,
                 "searchKey": "suffixarray.expand_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1710,7 +1830,9 @@
                 "identifier": "induceL_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.induceL_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1730,7 +1852,9 @@
                 "identifier": "induceL_32",
                 "newPage": false,
                 "searchKey": "suffixarray.induceL_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1750,7 +1874,9 @@
                 "identifier": "induceL_64",
                 "newPage": false,
                 "searchKey": "suffixarray.induceL_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1770,7 +1896,9 @@
                 "identifier": "induceS_8_64",
                 "newPage": false,
                 "searchKey": "suffixarray.induceS_8_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1790,7 +1918,9 @@
                 "identifier": "induceS_32",
                 "newPage": false,
                 "searchKey": "suffixarray.induceS_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1810,7 +1940,9 @@
                 "identifier": "induceS_64",
                 "newPage": false,
                 "searchKey": "suffixarray.induceS_64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1830,7 +1962,9 @@
                 "identifier": "writeInt",
                 "newPage": false,
                 "searchKey": "suffixarray.writeInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1850,7 +1984,9 @@
                 "identifier": "readInt",
                 "newPage": false,
                 "searchKey": "suffixarray.readInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1870,7 +2006,9 @@
                 "identifier": "writeSlice",
                 "newPage": false,
                 "searchKey": "suffixarray.writeSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1890,7 +2028,9 @@
                 "identifier": "readSlice",
                 "newPage": false,
                 "searchKey": "suffixarray.readSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1910,7 +2050,9 @@
                 "identifier": "find",
                 "newPage": false,
                 "searchKey": "suffixarray.find",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1930,7 +2072,9 @@
                 "identifier": "testLookup",
                 "newPage": false,
                 "searchKey": "suffixarray.testLookup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1950,7 +2094,9 @@
                 "identifier": "testFindAllIndex",
                 "newPage": false,
                 "searchKey": "suffixarray.testFindAllIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1970,7 +2116,9 @@
                 "identifier": "testLookups",
                 "newPage": false,
                 "searchKey": "suffixarray.testLookups",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1990,7 +2138,9 @@
                 "identifier": "testConstruction",
                 "newPage": false,
                 "searchKey": "suffixarray.testConstruction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2010,7 +2160,9 @@
                 "identifier": "equal",
                 "newPage": false,
                 "searchKey": "suffixarray.equal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2030,7 +2182,9 @@
                 "identifier": "testSaveRestore",
                 "newPage": false,
                 "searchKey": "suffixarray.testSaveRestore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2050,7 +2204,9 @@
                 "identifier": "testIndex",
                 "newPage": false,
                 "searchKey": "suffixarray.testIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2070,7 +2226,9 @@
                 "identifier": "TestIndex32",
                 "newPage": false,
                 "searchKey": "suffixarray.TestIndex32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2090,7 +2248,9 @@
                 "identifier": "TestIndex64",
                 "newPage": false,
                 "searchKey": "suffixarray.TestIndex64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2110,7 +2270,9 @@
                 "identifier": "TestNew32",
                 "newPage": false,
                 "searchKey": "suffixarray.TestNew32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2130,7 +2292,9 @@
                 "identifier": "TestNew64",
                 "newPage": false,
                 "searchKey": "suffixarray.TestNew64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2150,7 +2314,9 @@
                 "identifier": "test",
                 "newPage": false,
                 "searchKey": "suffixarray.test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2170,7 +2336,9 @@
                 "identifier": "testRec",
                 "newPage": false,
                 "searchKey": "suffixarray.testRec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2190,7 +2358,9 @@
                 "identifier": "testSA",
                 "newPage": false,
                 "searchKey": "suffixarray.testSA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2210,7 +2380,9 @@
                 "identifier": "benchmarkNew",
                 "newPage": false,
                 "searchKey": "suffixarray.benchmarkNew",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2230,7 +2402,9 @@
                 "identifier": "makeText",
                 "newPage": false,
                 "searchKey": "suffixarray.makeText",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2250,7 +2424,9 @@
                 "identifier": "setBits",
                 "newPage": false,
                 "searchKey": "suffixarray.setBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2270,7 +2446,9 @@
                 "identifier": "BenchmarkNew",
                 "newPage": false,
                 "searchKey": "suffixarray.BenchmarkNew",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2290,7 +2468,9 @@
                 "identifier": "BenchmarkSaveRestore",
                 "newPage": false,
                 "searchKey": "suffixarray.BenchmarkSaveRestore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

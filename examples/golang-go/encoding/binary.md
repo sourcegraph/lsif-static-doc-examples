@@ -152,15 +152,10 @@ This package favors simplicity over efficiency. Clients that require high-perfor
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="MaxVarintLen16" href="#MaxVarintLen16">const MaxVarintLen16</a>
 
 ```
 searchKey: binary.MaxVarintLen16
-tags: [exported]
 ```
 
 ```Go
@@ -173,7 +168,6 @@ MaxVarintLenN is the maximum length of a varint-encoded N-bit integer.
 
 ```
 searchKey: binary.MaxVarintLen32
-tags: [exported]
 ```
 
 ```Go
@@ -186,7 +180,6 @@ MaxVarintLenN is the maximum length of a varint-encoded N-bit integer.
 
 ```
 searchKey: binary.MaxVarintLen64
-tags: [exported]
 ```
 
 ```Go
@@ -197,15 +190,10 @@ MaxVarintLenN is the maximum length of a varint-encoded N-bit integer.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="LittleEndian" href="#LittleEndian">var LittleEndian</a>
 
 ```
 searchKey: binary.LittleEndian
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +206,6 @@ LittleEndian is the little-endian implementation of ByteOrder.
 
 ```
 searchKey: binary.BigEndian
-tags: [exported]
 ```
 
 ```Go
@@ -231,6 +218,7 @@ BigEndian is the big-endian implementation of ByteOrder.
 
 ```
 searchKey: binary.structSize
+tags: [private]
 ```
 
 ```Go
@@ -242,6 +230,7 @@ var structSize sync.Map // map[reflect.Type]int
 
 ```
 searchKey: binary.overflow
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +241,7 @@ var overflow = errors.New("binary: varint overflows a 64-bit integer")
 
 ```
 searchKey: binary.s
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +252,7 @@ var s = ...
 
 ```
 searchKey: binary.big
+tags: [private]
 ```
 
 ```Go
@@ -272,6 +263,7 @@ var big = ...
 
 ```
 searchKey: binary.little
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +274,7 @@ var little = ...
 
 ```
 searchKey: binary.src
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +285,7 @@ var src = []byte{1, 2, 3, 4, 5, 6, 7, 8}
 
 ```
 searchKey: binary.res
+tags: [private]
 ```
 
 ```Go
@@ -302,6 +296,7 @@ var res = []int32{0x01020304, 0x05060708}
 
 ```
 searchKey: binary.putbuf
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +307,7 @@ var putbuf = []byte{0, 0, 0, 0, 0, 0, 0, 0}
 
 ```
 searchKey: binary.intArrays
+tags: [private]
 ```
 
 ```Go
@@ -324,6 +320,7 @@ Addresses of arrays are easier to manipulate with reflection than are slices.
 
 ```
 searchKey: binary.tests
+tags: [private]
 ```
 
 ```Go
@@ -332,15 +329,10 @@ var tests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ByteOrder" href="#ByteOrder">type ByteOrder interface</a>
 
 ```
 searchKey: binary.ByteOrder
-tags: [exported]
 ```
 
 ```Go
@@ -361,6 +353,7 @@ A ByteOrder specifies how to convert byte sequences into 16-, 32-, or 64-bit uns
 
 ```
 searchKey: binary.littleEndian
+tags: [private]
 ```
 
 ```Go
@@ -371,6 +364,7 @@ type littleEndian struct{}
 
 ```
 searchKey: binary.littleEndian.Uint16
+tags: [private]
 ```
 
 ```Go
@@ -381,6 +375,7 @@ func (littleEndian) Uint16(b []byte) uint16
 
 ```
 searchKey: binary.littleEndian.PutUint16
+tags: [private]
 ```
 
 ```Go
@@ -391,6 +386,7 @@ func (littleEndian) PutUint16(b []byte, v uint16)
 
 ```
 searchKey: binary.littleEndian.Uint32
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +397,7 @@ func (littleEndian) Uint32(b []byte) uint32
 
 ```
 searchKey: binary.littleEndian.PutUint32
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +408,7 @@ func (littleEndian) PutUint32(b []byte, v uint32)
 
 ```
 searchKey: binary.littleEndian.Uint64
+tags: [private]
 ```
 
 ```Go
@@ -421,6 +419,7 @@ func (littleEndian) Uint64(b []byte) uint64
 
 ```
 searchKey: binary.littleEndian.PutUint64
+tags: [private]
 ```
 
 ```Go
@@ -431,6 +430,7 @@ func (littleEndian) PutUint64(b []byte, v uint64)
 
 ```
 searchKey: binary.littleEndian.String
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +441,7 @@ func (littleEndian) String() string
 
 ```
 searchKey: binary.littleEndian.GoString
+tags: [private]
 ```
 
 ```Go
@@ -451,6 +452,7 @@ func (littleEndian) GoString() string
 
 ```
 searchKey: binary.bigEndian
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +463,7 @@ type bigEndian struct{}
 
 ```
 searchKey: binary.bigEndian.Uint16
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +474,7 @@ func (bigEndian) Uint16(b []byte) uint16
 
 ```
 searchKey: binary.bigEndian.PutUint16
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +485,7 @@ func (bigEndian) PutUint16(b []byte, v uint16)
 
 ```
 searchKey: binary.bigEndian.Uint32
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +496,7 @@ func (bigEndian) Uint32(b []byte) uint32
 
 ```
 searchKey: binary.bigEndian.PutUint32
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +507,7 @@ func (bigEndian) PutUint32(b []byte, v uint32)
 
 ```
 searchKey: binary.bigEndian.Uint64
+tags: [private]
 ```
 
 ```Go
@@ -511,6 +518,7 @@ func (bigEndian) Uint64(b []byte) uint64
 
 ```
 searchKey: binary.bigEndian.PutUint64
+tags: [private]
 ```
 
 ```Go
@@ -521,6 +529,7 @@ func (bigEndian) PutUint64(b []byte, v uint64)
 
 ```
 searchKey: binary.bigEndian.String
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +540,7 @@ func (bigEndian) String() string
 
 ```
 searchKey: binary.bigEndian.GoString
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +551,7 @@ func (bigEndian) GoString() string
 
 ```
 searchKey: binary.coder
+tags: [private]
 ```
 
 ```Go
@@ -555,6 +566,7 @@ type coder struct {
 
 ```
 searchKey: binary.decoder
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +577,7 @@ type decoder coder
 
 ```
 searchKey: binary.decoder.bool
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +588,7 @@ func (d *decoder) bool() bool
 
 ```
 searchKey: binary.decoder.uint8
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +599,7 @@ func (d *decoder) uint8() uint8
 
 ```
 searchKey: binary.decoder.uint16
+tags: [private]
 ```
 
 ```Go
@@ -595,6 +610,7 @@ func (d *decoder) uint16() uint16
 
 ```
 searchKey: binary.decoder.uint32
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +621,7 @@ func (d *decoder) uint32() uint32
 
 ```
 searchKey: binary.decoder.uint64
+tags: [private]
 ```
 
 ```Go
@@ -615,6 +632,7 @@ func (d *decoder) uint64() uint64
 
 ```
 searchKey: binary.decoder.int8
+tags: [private]
 ```
 
 ```Go
@@ -625,6 +643,7 @@ func (d *decoder) int8() int8
 
 ```
 searchKey: binary.decoder.int16
+tags: [private]
 ```
 
 ```Go
@@ -635,6 +654,7 @@ func (d *decoder) int16() int16
 
 ```
 searchKey: binary.decoder.int32
+tags: [private]
 ```
 
 ```Go
@@ -645,6 +665,7 @@ func (d *decoder) int32() int32
 
 ```
 searchKey: binary.decoder.int64
+tags: [private]
 ```
 
 ```Go
@@ -655,6 +676,7 @@ func (d *decoder) int64() int64
 
 ```
 searchKey: binary.decoder.value
+tags: [private]
 ```
 
 ```Go
@@ -665,6 +687,7 @@ func (d *decoder) value(v reflect.Value)
 
 ```
 searchKey: binary.decoder.skip
+tags: [private]
 ```
 
 ```Go
@@ -675,6 +698,7 @@ func (d *decoder) skip(v reflect.Value)
 
 ```
 searchKey: binary.encoder
+tags: [private]
 ```
 
 ```Go
@@ -685,6 +709,7 @@ type encoder coder
 
 ```
 searchKey: binary.encoder.bool
+tags: [private]
 ```
 
 ```Go
@@ -695,6 +720,7 @@ func (e *encoder) bool(x bool)
 
 ```
 searchKey: binary.encoder.uint8
+tags: [private]
 ```
 
 ```Go
@@ -705,6 +731,7 @@ func (e *encoder) uint8(x uint8)
 
 ```
 searchKey: binary.encoder.uint16
+tags: [private]
 ```
 
 ```Go
@@ -715,6 +742,7 @@ func (e *encoder) uint16(x uint16)
 
 ```
 searchKey: binary.encoder.uint32
+tags: [private]
 ```
 
 ```Go
@@ -725,6 +753,7 @@ func (e *encoder) uint32(x uint32)
 
 ```
 searchKey: binary.encoder.uint64
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +764,7 @@ func (e *encoder) uint64(x uint64)
 
 ```
 searchKey: binary.encoder.int8
+tags: [private]
 ```
 
 ```Go
@@ -745,6 +775,7 @@ func (e *encoder) int8(x int8)
 
 ```
 searchKey: binary.encoder.int16
+tags: [private]
 ```
 
 ```Go
@@ -755,6 +786,7 @@ func (e *encoder) int16(x int16)
 
 ```
 searchKey: binary.encoder.int32
+tags: [private]
 ```
 
 ```Go
@@ -765,6 +797,7 @@ func (e *encoder) int32(x int32)
 
 ```
 searchKey: binary.encoder.int64
+tags: [private]
 ```
 
 ```Go
@@ -775,6 +808,7 @@ func (e *encoder) int64(x int64)
 
 ```
 searchKey: binary.encoder.value
+tags: [private]
 ```
 
 ```Go
@@ -785,6 +819,7 @@ func (e *encoder) value(v reflect.Value)
 
 ```
 searchKey: binary.encoder.skip
+tags: [private]
 ```
 
 ```Go
@@ -795,6 +830,7 @@ func (e *encoder) skip(v reflect.Value)
 
 ```
 searchKey: binary.Struct
+tags: [private]
 ```
 
 ```Go
@@ -821,6 +857,7 @@ type Struct struct {
 
 ```
 searchKey: binary.T
+tags: [private]
 ```
 
 ```Go
@@ -836,6 +873,7 @@ type T struct {
 
 ```
 searchKey: binary.BlankFields
+tags: [private]
 ```
 
 ```Go
@@ -856,6 +894,7 @@ type BlankFields struct {
 
 ```
 searchKey: binary.BlankFieldsProbe
+tags: [private]
 ```
 
 ```Go
@@ -876,6 +915,7 @@ type BlankFieldsProbe struct {
 
 ```
 searchKey: binary.Unexported
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +928,7 @@ type Unexported struct {
 
 ```
 searchKey: binary.byteSliceReader
+tags: [private]
 ```
 
 ```Go
@@ -900,6 +941,7 @@ type byteSliceReader struct {
 
 ```
 searchKey: binary.byteSliceReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -908,15 +950,10 @@ func (br *byteSliceReader) Read(p []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Read" href="#Read">func Read(r io.Reader, order ByteOrder, data interface{}) error</a>
 
 ```
 searchKey: binary.Read
-tags: [exported]
 ```
 
 ```Go
@@ -931,7 +968,6 @@ The error is EOF only if no bytes were read. If an EOF happens after reading som
 
 ```
 searchKey: binary.Write
-tags: [exported]
 ```
 
 ```Go
@@ -944,7 +980,6 @@ Write writes the binary representation of data into w. Data must be a fixed-size
 
 ```
 searchKey: binary.Size
-tags: [exported]
 ```
 
 ```Go
@@ -957,6 +992,7 @@ Size returns how many bytes Write would generate to encode the value v, which mu
 
 ```
 searchKey: binary.dataSize
+tags: [private]
 ```
 
 ```Go
@@ -969,6 +1005,7 @@ dataSize returns the number of bytes the actual data represented by v occupies i
 
 ```
 searchKey: binary.sizeof
+tags: [private]
 ```
 
 ```Go
@@ -981,6 +1018,7 @@ sizeof returns the size >= 0 of variables for the given type or -1 if the type i
 
 ```
 searchKey: binary.intDataSize
+tags: [private]
 ```
 
 ```Go
@@ -993,7 +1031,6 @@ intDataSize returns the size of the data required to represent the data when enc
 
 ```
 searchKey: binary.PutUvarint
-tags: [exported]
 ```
 
 ```Go
@@ -1006,7 +1043,6 @@ PutUvarint encodes a uint64 into buf and returns the number of bytes written. If
 
 ```
 searchKey: binary.Uvarint
-tags: [exported]
 ```
 
 ```Go
@@ -1025,7 +1061,6 @@ n  < 0: value larger than 64 bits (overflow)
 
 ```
 searchKey: binary.PutVarint
-tags: [exported]
 ```
 
 ```Go
@@ -1038,7 +1073,6 @@ PutVarint encodes an int64 into buf and returns the number of bytes written. If 
 
 ```
 searchKey: binary.Varint
-tags: [exported]
 ```
 
 ```Go
@@ -1057,7 +1091,6 @@ n  < 0: value larger than 64 bits (overflow)
 
 ```
 searchKey: binary.ReadUvarint
-tags: [exported]
 ```
 
 ```Go
@@ -1070,7 +1103,6 @@ ReadUvarint reads an encoded unsigned integer from r and returns it as a uint64.
 
 ```
 searchKey: binary.ReadVarint
-tags: [exported]
 ```
 
 ```Go
@@ -1083,6 +1115,7 @@ ReadVarint reads an encoded signed integer from r and returns it as an int64.
 
 ```
 searchKey: binary.checkResult
+tags: [private]
 ```
 
 ```Go
@@ -1093,6 +1126,7 @@ func checkResult(t *testing.T, dir string, order ByteOrder, err error, have, wan
 
 ```
 searchKey: binary.testRead
+tags: [private]
 ```
 
 ```Go
@@ -1103,6 +1137,7 @@ func testRead(t *testing.T, order ByteOrder, b []byte, s1 interface{})
 
 ```
 searchKey: binary.testWrite
+tags: [private]
 ```
 
 ```Go
@@ -1113,6 +1148,7 @@ func testWrite(t *testing.T, order ByteOrder, b []byte, s1 interface{})
 
 ```
 searchKey: binary.TestLittleEndianRead
+tags: [private]
 ```
 
 ```Go
@@ -1123,6 +1159,7 @@ func TestLittleEndianRead(t *testing.T)
 
 ```
 searchKey: binary.TestLittleEndianWrite
+tags: [private]
 ```
 
 ```Go
@@ -1133,6 +1170,7 @@ func TestLittleEndianWrite(t *testing.T)
 
 ```
 searchKey: binary.TestLittleEndianPtrWrite
+tags: [private]
 ```
 
 ```Go
@@ -1143,6 +1181,7 @@ func TestLittleEndianPtrWrite(t *testing.T)
 
 ```
 searchKey: binary.TestBigEndianRead
+tags: [private]
 ```
 
 ```Go
@@ -1153,6 +1192,7 @@ func TestBigEndianRead(t *testing.T)
 
 ```
 searchKey: binary.TestBigEndianWrite
+tags: [private]
 ```
 
 ```Go
@@ -1163,6 +1203,7 @@ func TestBigEndianWrite(t *testing.T)
 
 ```
 searchKey: binary.TestBigEndianPtrWrite
+tags: [private]
 ```
 
 ```Go
@@ -1173,6 +1214,7 @@ func TestBigEndianPtrWrite(t *testing.T)
 
 ```
 searchKey: binary.TestReadSlice
+tags: [private]
 ```
 
 ```Go
@@ -1183,6 +1225,7 @@ func TestReadSlice(t *testing.T)
 
 ```
 searchKey: binary.TestWriteSlice
+tags: [private]
 ```
 
 ```Go
@@ -1193,6 +1236,7 @@ func TestWriteSlice(t *testing.T)
 
 ```
 searchKey: binary.TestReadBool
+tags: [private]
 ```
 
 ```Go
@@ -1203,6 +1247,7 @@ func TestReadBool(t *testing.T)
 
 ```
 searchKey: binary.TestReadBoolSlice
+tags: [private]
 ```
 
 ```Go
@@ -1213,6 +1258,7 @@ func TestReadBoolSlice(t *testing.T)
 
 ```
 searchKey: binary.TestSliceRoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -1223,6 +1269,7 @@ func TestSliceRoundTrip(t *testing.T)
 
 ```
 searchKey: binary.TestWriteT
+tags: [private]
 ```
 
 ```Go
@@ -1233,6 +1280,7 @@ func TestWriteT(t *testing.T)
 
 ```
 searchKey: binary.TestBlankFields
+tags: [private]
 ```
 
 ```Go
@@ -1243,6 +1291,7 @@ func TestBlankFields(t *testing.T)
 
 ```
 searchKey: binary.TestSizeStructCache
+tags: [private]
 ```
 
 ```Go
@@ -1253,6 +1302,7 @@ func TestSizeStructCache(t *testing.T)
 
 ```
 searchKey: binary.TestUnexportedRead
+tags: [private]
 ```
 
 ```Go
@@ -1263,6 +1313,7 @@ func TestUnexportedRead(t *testing.T)
 
 ```
 searchKey: binary.TestReadErrorMsg
+tags: [private]
 ```
 
 ```Go
@@ -1273,6 +1324,7 @@ func TestReadErrorMsg(t *testing.T)
 
 ```
 searchKey: binary.TestReadTruncated
+tags: [private]
 ```
 
 ```Go
@@ -1283,6 +1335,7 @@ func TestReadTruncated(t *testing.T)
 
 ```
 searchKey: binary.testUint64SmallSliceLengthPanics
+tags: [private]
 ```
 
 ```Go
@@ -1293,6 +1346,7 @@ func testUint64SmallSliceLengthPanics() (panicked bool)
 
 ```
 searchKey: binary.testPutUint64SmallSliceLengthPanics
+tags: [private]
 ```
 
 ```Go
@@ -1303,6 +1357,7 @@ func testPutUint64SmallSliceLengthPanics() (panicked bool)
 
 ```
 searchKey: binary.TestEarlyBoundsChecks
+tags: [private]
 ```
 
 ```Go
@@ -1313,6 +1368,7 @@ func TestEarlyBoundsChecks(t *testing.T)
 
 ```
 searchKey: binary.TestReadInvalidDestination
+tags: [private]
 ```
 
 ```Go
@@ -1323,6 +1379,7 @@ func TestReadInvalidDestination(t *testing.T)
 
 ```
 searchKey: binary.testReadInvalidDestination
+tags: [private]
 ```
 
 ```Go
@@ -1333,6 +1390,7 @@ func testReadInvalidDestination(t *testing.T, order ByteOrder)
 
 ```
 searchKey: binary.BenchmarkReadSlice1000Int32s
+tags: [private]
 ```
 
 ```Go
@@ -1343,6 +1401,7 @@ func BenchmarkReadSlice1000Int32s(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkReadStruct
+tags: [private]
 ```
 
 ```Go
@@ -1353,6 +1412,7 @@ func BenchmarkReadStruct(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkWriteStruct
+tags: [private]
 ```
 
 ```Go
@@ -1363,6 +1423,7 @@ func BenchmarkWriteStruct(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkReadInts
+tags: [private]
 ```
 
 ```Go
@@ -1373,6 +1434,7 @@ func BenchmarkReadInts(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkWriteInts
+tags: [private]
 ```
 
 ```Go
@@ -1383,6 +1445,7 @@ func BenchmarkWriteInts(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkWriteSlice1000Int32s
+tags: [private]
 ```
 
 ```Go
@@ -1393,6 +1456,7 @@ func BenchmarkWriteSlice1000Int32s(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkPutUint16
+tags: [private]
 ```
 
 ```Go
@@ -1403,6 +1467,7 @@ func BenchmarkPutUint16(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkPutUint32
+tags: [private]
 ```
 
 ```Go
@@ -1413,6 +1478,7 @@ func BenchmarkPutUint32(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkPutUint64
+tags: [private]
 ```
 
 ```Go
@@ -1423,6 +1489,7 @@ func BenchmarkPutUint64(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkLittleEndianPutUint16
+tags: [private]
 ```
 
 ```Go
@@ -1433,6 +1500,7 @@ func BenchmarkLittleEndianPutUint16(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkLittleEndianPutUint32
+tags: [private]
 ```
 
 ```Go
@@ -1443,6 +1511,7 @@ func BenchmarkLittleEndianPutUint32(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkLittleEndianPutUint64
+tags: [private]
 ```
 
 ```Go
@@ -1453,6 +1522,7 @@ func BenchmarkLittleEndianPutUint64(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkReadFloats
+tags: [private]
 ```
 
 ```Go
@@ -1463,6 +1533,7 @@ func BenchmarkReadFloats(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkWriteFloats
+tags: [private]
 ```
 
 ```Go
@@ -1473,6 +1544,7 @@ func BenchmarkWriteFloats(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkReadSlice1000Float32s
+tags: [private]
 ```
 
 ```Go
@@ -1483,6 +1555,7 @@ func BenchmarkReadSlice1000Float32s(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkWriteSlice1000Float32s
+tags: [private]
 ```
 
 ```Go
@@ -1493,6 +1566,7 @@ func BenchmarkWriteSlice1000Float32s(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkReadSlice1000Uint8s
+tags: [private]
 ```
 
 ```Go
@@ -1503,6 +1577,7 @@ func BenchmarkReadSlice1000Uint8s(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkWriteSlice1000Uint8s
+tags: [private]
 ```
 
 ```Go
@@ -1513,6 +1588,7 @@ func BenchmarkWriteSlice1000Uint8s(b *testing.B)
 
 ```
 searchKey: binary.testConstant
+tags: [private]
 ```
 
 ```Go
@@ -1523,6 +1599,7 @@ func testConstant(t *testing.T, w uint, max int)
 
 ```
 searchKey: binary.TestConstants
+tags: [private]
 ```
 
 ```Go
@@ -1533,6 +1610,7 @@ func TestConstants(t *testing.T)
 
 ```
 searchKey: binary.testVarint
+tags: [private]
 ```
 
 ```Go
@@ -1543,6 +1621,7 @@ func testVarint(t *testing.T, x int64)
 
 ```
 searchKey: binary.testUvarint
+tags: [private]
 ```
 
 ```Go
@@ -1553,6 +1632,7 @@ func testUvarint(t *testing.T, x uint64)
 
 ```
 searchKey: binary.TestVarint
+tags: [private]
 ```
 
 ```Go
@@ -1563,6 +1643,7 @@ func TestVarint(t *testing.T)
 
 ```
 searchKey: binary.TestUvarint
+tags: [private]
 ```
 
 ```Go
@@ -1573,6 +1654,7 @@ func TestUvarint(t *testing.T)
 
 ```
 searchKey: binary.TestBufferTooSmall
+tags: [private]
 ```
 
 ```Go
@@ -1583,6 +1665,7 @@ func TestBufferTooSmall(t *testing.T)
 
 ```
 searchKey: binary.TestBufferTooBigWithOverflow
+tags: [private]
 ```
 
 ```Go
@@ -1595,6 +1678,7 @@ Ensure that we catch overflows of bytes going past MaxVarintLen64. See issue [ht
 
 ```
 searchKey: binary.testOverflow
+tags: [private]
 ```
 
 ```Go
@@ -1605,6 +1689,7 @@ func testOverflow(t *testing.T, buf []byte, x0 uint64, n0 int, err0 error)
 
 ```
 searchKey: binary.TestOverflow
+tags: [private]
 ```
 
 ```Go
@@ -1615,6 +1700,7 @@ func TestOverflow(t *testing.T)
 
 ```
 searchKey: binary.TestNonCanonicalZero
+tags: [private]
 ```
 
 ```Go
@@ -1625,6 +1711,7 @@ func TestNonCanonicalZero(t *testing.T)
 
 ```
 searchKey: binary.BenchmarkPutUvarint32
+tags: [private]
 ```
 
 ```Go
@@ -1635,6 +1722,7 @@ func BenchmarkPutUvarint32(b *testing.B)
 
 ```
 searchKey: binary.BenchmarkPutUvarint64
+tags: [private]
 ```
 
 ```Go

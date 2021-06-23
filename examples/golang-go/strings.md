@@ -136,14 +136,11 @@ For information about UTF-8 strings in Go, see [https://blog.golang.org/strings]
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="countCutOff" href="#countCutOff">const countCutOff</a>
 
 ```
 searchKey: strings.countCutOff
+tags: [private]
 ```
 
 ```Go
@@ -154,14 +151,11 @@ countCutOff controls the ratio of a string length to a number of replacements at
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="asciiSpace" href="#asciiSpace">var asciiSpace</a>
 
 ```
 searchKey: strings.asciiSpace
+tags: [private]
 ```
 
 ```Go
@@ -170,15 +164,10 @@ var asciiSpace = [256]uint8{'\t': 1, '\n': 1, '\v': 1, '\f': 1, '\r': 1, ' ': 1}
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Builder" href="#Builder">type Builder struct</a>
 
 ```
 searchKey: strings.Builder
-tags: [exported]
 ```
 
 ```Go
@@ -194,6 +183,7 @@ A Builder is used to efficiently build a string using Write methods. It minimize
 
 ```
 searchKey: strings.Builder.copyCheck
+tags: [private]
 ```
 
 ```Go
@@ -204,7 +194,6 @@ func (b *Builder) copyCheck()
 
 ```
 searchKey: strings.Builder.String
-tags: [exported]
 ```
 
 ```Go
@@ -217,7 +206,6 @@ String returns the accumulated string.
 
 ```
 searchKey: strings.Builder.Len
-tags: [exported]
 ```
 
 ```Go
@@ -230,7 +218,6 @@ Len returns the number of accumulated bytes; b.Len() == len(b.String()).
 
 ```
 searchKey: strings.Builder.Cap
-tags: [exported]
 ```
 
 ```Go
@@ -243,7 +230,6 @@ Cap returns the capacity of the builder's underlying byte slice. It is the total
 
 ```
 searchKey: strings.Builder.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -256,6 +242,7 @@ Reset resets the Builder to be empty.
 
 ```
 searchKey: strings.Builder.grow
+tags: [private]
 ```
 
 ```Go
@@ -268,7 +255,6 @@ grow copies the buffer to a new, larger buffer so that there are at least n byte
 
 ```
 searchKey: strings.Builder.Grow
-tags: [exported]
 ```
 
 ```Go
@@ -281,7 +267,6 @@ Grow grows b's capacity, if necessary, to guarantee space for another n bytes. A
 
 ```
 searchKey: strings.Builder.Write
-tags: [exported]
 ```
 
 ```Go
@@ -294,7 +279,6 @@ Write appends the contents of p to b's buffer. Write always returns len(p), nil.
 
 ```
 searchKey: strings.Builder.WriteByte
-tags: [exported]
 ```
 
 ```Go
@@ -307,7 +291,6 @@ WriteByte appends the byte c to b's buffer. The returned error is always nil.
 
 ```
 searchKey: strings.Builder.WriteRune
-tags: [exported]
 ```
 
 ```Go
@@ -320,7 +303,6 @@ WriteRune appends the UTF-8 encoding of Unicode code point r to b's buffer. It r
 
 ```
 searchKey: strings.Builder.WriteString
-tags: [exported]
 ```
 
 ```Go
@@ -333,7 +315,6 @@ WriteString appends the contents of s to b's buffer. It returns the length of s 
 
 ```
 searchKey: strings.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -350,7 +331,6 @@ A Reader implements the io.Reader, io.ReaderAt, io.ByteReader, io.ByteScanner, i
 
 ```
 searchKey: strings.NewReader
-tags: [exported]
 ```
 
 ```Go
@@ -363,7 +343,6 @@ NewReader returns a new Reader reading from s. It is similar to bytes.NewBufferS
 
 ```
 searchKey: strings.Reader.Len
-tags: [exported]
 ```
 
 ```Go
@@ -376,7 +355,6 @@ Len returns the number of bytes of the unread portion of the string.
 
 ```
 searchKey: strings.Reader.Size
-tags: [exported]
 ```
 
 ```Go
@@ -389,7 +367,6 @@ Size returns the original length of the underlying string. Size is the number of
 
 ```
 searchKey: strings.Reader.Read
-tags: [exported]
 ```
 
 ```Go
@@ -402,7 +379,6 @@ Read implements the io.Reader interface.
 
 ```
 searchKey: strings.Reader.ReadAt
-tags: [exported]
 ```
 
 ```Go
@@ -415,7 +391,6 @@ ReadAt implements the io.ReaderAt interface.
 
 ```
 searchKey: strings.Reader.ReadByte
-tags: [exported]
 ```
 
 ```Go
@@ -428,7 +403,6 @@ ReadByte implements the io.ByteReader interface.
 
 ```
 searchKey: strings.Reader.UnreadByte
-tags: [exported]
 ```
 
 ```Go
@@ -441,7 +415,6 @@ UnreadByte implements the io.ByteScanner interface.
 
 ```
 searchKey: strings.Reader.ReadRune
-tags: [exported]
 ```
 
 ```Go
@@ -454,7 +427,6 @@ ReadRune implements the io.RuneReader interface.
 
 ```
 searchKey: strings.Reader.UnreadRune
-tags: [exported]
 ```
 
 ```Go
@@ -467,7 +439,6 @@ UnreadRune implements the io.RuneScanner interface.
 
 ```
 searchKey: strings.Reader.Seek
-tags: [exported]
 ```
 
 ```Go
@@ -480,7 +451,6 @@ Seek implements the io.Seeker interface.
 
 ```
 searchKey: strings.Reader.WriteTo
-tags: [exported]
 ```
 
 ```Go
@@ -493,7 +463,6 @@ WriteTo implements the io.WriterTo interface.
 
 ```
 searchKey: strings.Reader.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -506,7 +475,6 @@ Reset resets the Reader to be reading from s.
 
 ```
 searchKey: strings.Replacer
-tags: [exported]
 ```
 
 ```Go
@@ -523,7 +491,6 @@ Replacer replaces a list of strings with replacements. It is safe for concurrent
 
 ```
 searchKey: strings.NewReplacer
-tags: [exported]
 ```
 
 ```Go
@@ -538,6 +505,7 @@ NewReplacer panics if given an odd number of arguments.
 
 ```
 searchKey: strings.Replacer.buildOnce
+tags: [private]
 ```
 
 ```Go
@@ -548,6 +516,7 @@ func (r *Replacer) buildOnce()
 
 ```
 searchKey: strings.Replacer.build
+tags: [private]
 ```
 
 ```Go
@@ -558,7 +527,6 @@ func (b *Replacer) build() replacer
 
 ```
 searchKey: strings.Replacer.Replace
-tags: [exported]
 ```
 
 ```Go
@@ -571,7 +539,6 @@ Replace returns a copy of s with all replacements performed.
 
 ```
 searchKey: strings.Replacer.WriteString
-tags: [exported]
 ```
 
 ```Go
@@ -584,6 +551,7 @@ WriteString writes s to w with all replacements performed.
 
 ```
 searchKey: strings.Replacer.Replacer
+tags: [private]
 ```
 
 ```Go
@@ -594,6 +562,7 @@ func (r *Replacer) Replacer() interface{}
 
 ```
 searchKey: strings.Replacer.PrintTrie
+tags: [private]
 ```
 
 ```Go
@@ -604,6 +573,7 @@ func (r *Replacer) PrintTrie() string
 
 ```
 searchKey: strings.replacer
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +589,7 @@ replacer is the interface that a replacement algorithm needs to implement.
 
 ```
 searchKey: strings.trieNode
+tags: [private]
 ```
 
 ```Go
@@ -669,6 +640,7 @@ n0 is the root node, and its children are n1, n4 and n6; n1's children are n2 an
 
 ```
 searchKey: strings.trieNode.add
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +651,7 @@ func (t *trieNode) add(key, val string, priority int, r *genericReplacer)
 
 ```
 searchKey: strings.genericReplacer
+tags: [private]
 ```
 
 ```Go
@@ -698,6 +671,7 @@ genericReplacer is the fully generic algorithm. It's used as a fallback when not
 
 ```
 searchKey: strings.makeGenericReplacer
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +682,7 @@ func makeGenericReplacer(oldnew []string) *genericReplacer
 
 ```
 searchKey: strings.genericReplacer.lookup
+tags: [private]
 ```
 
 ```Go
@@ -718,6 +693,7 @@ func (r *genericReplacer) lookup(s string, ignoreRoot bool) (val string, keylen 
 
 ```
 searchKey: strings.genericReplacer.Replace
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +704,7 @@ func (r *genericReplacer) Replace(s string) string
 
 ```
 searchKey: strings.genericReplacer.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -738,6 +715,7 @@ func (r *genericReplacer) WriteString(w io.Writer, s string) (n int, err error)
 
 ```
 searchKey: strings.genericReplacer.printNode
+tags: [private]
 ```
 
 ```Go
@@ -748,6 +726,7 @@ func (r *genericReplacer) printNode(t *trieNode, depth int) (s string)
 
 ```
 searchKey: strings.appendSliceWriter
+tags: [private]
 ```
 
 ```Go
@@ -758,6 +737,7 @@ type appendSliceWriter []byte
 
 ```
 searchKey: strings.appendSliceWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -770,6 +750,7 @@ Write writes to the buffer to satisfy io.Writer.
 
 ```
 searchKey: strings.appendSliceWriter.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -782,6 +763,7 @@ WriteString writes to the buffer without string->[]byte->string allocations.
 
 ```
 searchKey: strings.stringWriter
+tags: [private]
 ```
 
 ```Go
@@ -794,6 +776,7 @@ type stringWriter struct {
 
 ```
 searchKey: strings.stringWriter.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -804,6 +787,7 @@ func (w stringWriter) WriteString(s string) (int, error)
 
 ```
 searchKey: strings.singleStringReplacer
+tags: [private]
 ```
 
 ```Go
@@ -820,6 +804,7 @@ singleStringReplacer is the implementation that's used when there is only one st
 
 ```
 searchKey: strings.makeSingleStringReplacer
+tags: [private]
 ```
 
 ```Go
@@ -830,6 +815,7 @@ func makeSingleStringReplacer(pattern string, value string) *singleStringReplace
 
 ```
 searchKey: strings.singleStringReplacer.Replace
+tags: [private]
 ```
 
 ```Go
@@ -840,6 +826,7 @@ func (r *singleStringReplacer) Replace(s string) string
 
 ```
 searchKey: strings.singleStringReplacer.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -850,6 +837,7 @@ func (r *singleStringReplacer) WriteString(w io.Writer, s string) (n int, err er
 
 ```
 searchKey: strings.byteReplacer
+tags: [private]
 ```
 
 ```Go
@@ -862,6 +850,7 @@ byteReplacer is the implementation that's used when all the "old" and "new" valu
 
 ```
 searchKey: strings.byteReplacer.Replace
+tags: [private]
 ```
 
 ```Go
@@ -872,6 +861,7 @@ func (r *byteReplacer) Replace(s string) string
 
 ```
 searchKey: strings.byteReplacer.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -882,6 +872,7 @@ func (r *byteReplacer) WriteString(w io.Writer, s string) (n int, err error)
 
 ```
 searchKey: strings.byteStringReplacer
+tags: [private]
 ```
 
 ```Go
@@ -902,6 +893,7 @@ byteStringReplacer is the implementation that's used when all the "old" values a
 
 ```
 searchKey: strings.byteStringReplacer.Replace
+tags: [private]
 ```
 
 ```Go
@@ -912,6 +904,7 @@ func (r *byteStringReplacer) Replace(s string) string
 
 ```
 searchKey: strings.byteStringReplacer.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -922,6 +915,7 @@ func (r *byteStringReplacer) WriteString(w io.Writer, s string) (n int, err erro
 
 ```
 searchKey: strings.stringFinder
+tags: [private]
 ```
 
 ```Go
@@ -968,6 +962,7 @@ stringFinder efficiently finds strings in a source text. It's implemented using 
 
 ```
 searchKey: strings.makeStringFinder
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +973,7 @@ func makeStringFinder(pattern string) *stringFinder
 
 ```
 searchKey: strings.stringFinder.next
+tags: [private]
 ```
 
 ```Go
@@ -990,6 +986,7 @@ next returns the index in text of the first occurrence of the pattern. If the pa
 
 ```
 searchKey: strings.asciiSet
+tags: [private]
 ```
 
 ```Go
@@ -1002,6 +999,7 @@ asciiSet is a 32-byte value, where each bit represents the presence of a given A
 
 ```
 searchKey: strings.makeASCIISet
+tags: [private]
 ```
 
 ```Go
@@ -1014,6 +1012,7 @@ makeASCIISet creates a set of ASCII characters and reports whether all character
 
 ```
 searchKey: strings.asciiSet.contains
+tags: [private]
 ```
 
 ```Go
@@ -1024,14 +1023,11 @@ contains reports whether c is inside the set.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="noescape" href="#noescape">func noescape(p unsafe.Pointer) unsafe.Pointer</a>
 
 ```
 searchKey: strings.noescape
+tags: [private]
 ```
 
 ```Go
@@ -1044,7 +1040,6 @@ noescape hides a pointer from escape analysis.  noescape is the identity functio
 
 ```
 searchKey: strings.Compare
-tags: [exported]
 ```
 
 ```Go
@@ -1059,6 +1054,7 @@ Compare is included only for symmetry with package bytes. It is usually clearer 
 
 ```
 searchKey: strings.getStringWriter
+tags: [private]
 ```
 
 ```Go
@@ -1069,6 +1065,7 @@ func getStringWriter(w io.Writer) io.StringWriter
 
 ```
 searchKey: strings.longestCommonSuffix
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1076,7 @@ func longestCommonSuffix(a, b string) (i int)
 
 ```
 searchKey: strings.max
+tags: [private]
 ```
 
 ```Go
@@ -1089,6 +1087,7 @@ func max(a, b int) int
 
 ```
 searchKey: strings.explode
+tags: [private]
 ```
 
 ```Go
@@ -1101,7 +1100,6 @@ explode splits s into a slice of UTF-8 strings, one string per Unicode character
 
 ```
 searchKey: strings.Count
-tags: [exported]
 ```
 
 ```Go
@@ -1114,7 +1112,6 @@ Count counts the number of non-overlapping instances of substr in s. If substr i
 
 ```
 searchKey: strings.Contains
-tags: [exported]
 ```
 
 ```Go
@@ -1127,7 +1124,6 @@ Contains reports whether substr is within s.
 
 ```
 searchKey: strings.ContainsAny
-tags: [exported]
 ```
 
 ```Go
@@ -1140,7 +1136,6 @@ ContainsAny reports whether any Unicode code points in chars are within s.
 
 ```
 searchKey: strings.ContainsRune
-tags: [exported]
 ```
 
 ```Go
@@ -1153,7 +1148,6 @@ ContainsRune reports whether the Unicode code point r is within s.
 
 ```
 searchKey: strings.LastIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1166,7 +1160,6 @@ LastIndex returns the index of the last instance of substr in s, or -1 if substr
 
 ```
 searchKey: strings.IndexByte
-tags: [exported]
 ```
 
 ```Go
@@ -1179,7 +1172,6 @@ IndexByte returns the index of the first instance of c in s, or -1 if c is not p
 
 ```
 searchKey: strings.IndexRune
-tags: [exported]
 ```
 
 ```Go
@@ -1192,7 +1184,6 @@ IndexRune returns the index of the first instance of the Unicode code point r, o
 
 ```
 searchKey: strings.IndexAny
-tags: [exported]
 ```
 
 ```Go
@@ -1205,7 +1196,6 @@ IndexAny returns the index of the first instance of any Unicode code point from 
 
 ```
 searchKey: strings.LastIndexAny
-tags: [exported]
 ```
 
 ```Go
@@ -1218,7 +1208,6 @@ LastIndexAny returns the index of the last instance of any Unicode code point fr
 
 ```
 searchKey: strings.LastIndexByte
-tags: [exported]
 ```
 
 ```Go
@@ -1231,6 +1220,7 @@ LastIndexByte returns the index of the last instance of c in s, or -1 if c is no
 
 ```
 searchKey: strings.genSplit
+tags: [private]
 ```
 
 ```Go
@@ -1243,7 +1233,6 @@ Generic split: splits after each instance of sep, including sepSave bytes of sep
 
 ```
 searchKey: strings.SplitN
-tags: [exported]
 ```
 
 ```Go
@@ -1266,7 +1255,6 @@ Edge cases for s and sep (for example, empty strings) are handled as described i
 
 ```
 searchKey: strings.SplitAfterN
-tags: [exported]
 ```
 
 ```Go
@@ -1289,7 +1277,6 @@ Edge cases for s and sep (for example, empty strings) are handled as described i
 
 ```
 searchKey: strings.Split
-tags: [exported]
 ```
 
 ```Go
@@ -1308,7 +1295,6 @@ It is equivalent to SplitN with a count of -1.
 
 ```
 searchKey: strings.SplitAfter
-tags: [exported]
 ```
 
 ```Go
@@ -1327,7 +1313,6 @@ It is equivalent to SplitAfterN with a count of -1.
 
 ```
 searchKey: strings.Fields
-tags: [exported]
 ```
 
 ```Go
@@ -1340,7 +1325,6 @@ Fields splits the string s around each instance of one or more consecutive white
 
 ```
 searchKey: strings.FieldsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1355,7 +1339,6 @@ FieldsFunc makes no guarantees about the order in which it calls f(c) and assume
 
 ```
 searchKey: strings.Join
-tags: [exported]
 ```
 
 ```Go
@@ -1368,7 +1351,6 @@ Join concatenates the elements of its first argument to create a single string. 
 
 ```
 searchKey: strings.HasPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -1381,7 +1363,6 @@ HasPrefix tests whether the string s begins with prefix.
 
 ```
 searchKey: strings.HasSuffix
-tags: [exported]
 ```
 
 ```Go
@@ -1394,7 +1375,6 @@ HasSuffix tests whether the string s ends with suffix.
 
 ```
 searchKey: strings.Map
-tags: [exported]
 ```
 
 ```Go
@@ -1407,7 +1387,6 @@ Map returns a copy of the string s with all its characters modified according to
 
 ```
 searchKey: strings.Repeat
-tags: [exported]
 ```
 
 ```Go
@@ -1422,7 +1401,6 @@ It panics if count is negative or if the result of (len(s) * count) overflows.
 
 ```
 searchKey: strings.ToUpper
-tags: [exported]
 ```
 
 ```Go
@@ -1435,7 +1413,6 @@ ToUpper returns s with all Unicode letters mapped to their upper case.
 
 ```
 searchKey: strings.ToLower
-tags: [exported]
 ```
 
 ```Go
@@ -1448,7 +1425,6 @@ ToLower returns s with all Unicode letters mapped to their lower case.
 
 ```
 searchKey: strings.ToTitle
-tags: [exported]
 ```
 
 ```Go
@@ -1461,7 +1437,6 @@ ToTitle returns a copy of the string s with all Unicode letters mapped to their 
 
 ```
 searchKey: strings.ToUpperSpecial
-tags: [exported]
 ```
 
 ```Go
@@ -1474,7 +1449,6 @@ ToUpperSpecial returns a copy of the string s with all Unicode letters mapped to
 
 ```
 searchKey: strings.ToLowerSpecial
-tags: [exported]
 ```
 
 ```Go
@@ -1487,7 +1461,6 @@ ToLowerSpecial returns a copy of the string s with all Unicode letters mapped to
 
 ```
 searchKey: strings.ToTitleSpecial
-tags: [exported]
 ```
 
 ```Go
@@ -1500,7 +1473,6 @@ ToTitleSpecial returns a copy of the string s with all Unicode letters mapped to
 
 ```
 searchKey: strings.ToValidUTF8
-tags: [exported]
 ```
 
 ```Go
@@ -1513,6 +1485,7 @@ ToValidUTF8 returns a copy of the string s with each run of invalid UTF-8 byte s
 
 ```
 searchKey: strings.isSeparator
+tags: [private]
 ```
 
 ```Go
@@ -1525,7 +1498,6 @@ isSeparator reports whether the rune could mark a word boundary. TODO: update wh
 
 ```
 searchKey: strings.Title
-tags: [exported]
 ```
 
 ```Go
@@ -1540,7 +1512,6 @@ BUG(rsc): The rule Title uses for word boundaries does not handle Unicode punctu
 
 ```
 searchKey: strings.TrimLeftFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1553,7 +1524,6 @@ TrimLeftFunc returns a slice of the string s with all leading Unicode code point
 
 ```
 searchKey: strings.TrimRightFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1566,7 +1536,6 @@ TrimRightFunc returns a slice of the string s with all trailing Unicode code poi
 
 ```
 searchKey: strings.TrimFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1579,7 +1548,6 @@ TrimFunc returns a slice of the string s with all leading and trailing Unicode c
 
 ```
 searchKey: strings.IndexFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1592,7 +1560,6 @@ IndexFunc returns the index into s of the first Unicode code point satisfying f(
 
 ```
 searchKey: strings.LastIndexFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1605,6 +1572,7 @@ LastIndexFunc returns the index into s of the last Unicode code point satisfying
 
 ```
 searchKey: strings.indexFunc
+tags: [private]
 ```
 
 ```Go
@@ -1617,6 +1585,7 @@ indexFunc is the same as IndexFunc except that if truth==false, the sense of the
 
 ```
 searchKey: strings.lastIndexFunc
+tags: [private]
 ```
 
 ```Go
@@ -1629,6 +1598,7 @@ lastIndexFunc is the same as LastIndexFunc except that if truth==false, the sens
 
 ```
 searchKey: strings.makeCutsetFunc
+tags: [private]
 ```
 
 ```Go
@@ -1639,7 +1609,6 @@ func makeCutsetFunc(cutset string) func(rune) bool
 
 ```
 searchKey: strings.Trim
-tags: [exported]
 ```
 
 ```Go
@@ -1652,7 +1621,6 @@ Trim returns a slice of the string s with all leading and trailing Unicode code 
 
 ```
 searchKey: strings.TrimLeft
-tags: [exported]
 ```
 
 ```Go
@@ -1667,7 +1635,6 @@ To remove a prefix, use TrimPrefix instead.
 
 ```
 searchKey: strings.TrimRight
-tags: [exported]
 ```
 
 ```Go
@@ -1682,7 +1649,6 @@ To remove a suffix, use TrimSuffix instead.
 
 ```
 searchKey: strings.TrimSpace
-tags: [exported]
 ```
 
 ```Go
@@ -1695,7 +1661,6 @@ TrimSpace returns a slice of the string s, with all leading and trailing white s
 
 ```
 searchKey: strings.TrimPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -1708,7 +1673,6 @@ TrimPrefix returns s without the provided leading prefix string. If s doesn't st
 
 ```
 searchKey: strings.TrimSuffix
-tags: [exported]
 ```
 
 ```Go
@@ -1721,7 +1685,6 @@ TrimSuffix returns s without the provided trailing suffix string. If s doesn't e
 
 ```
 searchKey: strings.Replace
-tags: [exported]
 ```
 
 ```Go
@@ -1734,7 +1697,6 @@ Replace returns a copy of the string s with the first n non-overlapping instance
 
 ```
 searchKey: strings.ReplaceAll
-tags: [exported]
 ```
 
 ```Go
@@ -1747,7 +1709,6 @@ ReplaceAll returns a copy of the string s with all non-overlapping instances of 
 
 ```
 searchKey: strings.EqualFold
-tags: [exported]
 ```
 
 ```Go
@@ -1760,7 +1721,6 @@ EqualFold reports whether s and t, interpreted as UTF-8 strings, are equal under
 
 ```
 searchKey: strings.Index
-tags: [exported]
 ```
 
 ```Go
@@ -1773,6 +1733,7 @@ Index returns the index of the first instance of substr in s, or -1 if substr is
 
 ```
 searchKey: strings.StringFind
+tags: [private]
 ```
 
 ```Go
@@ -1783,6 +1744,7 @@ func StringFind(pattern, text string) int
 
 ```
 searchKey: strings.DumpTables
+tags: [private]
 ```
 
 ```Go

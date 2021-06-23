@@ -4,9 +4,7 @@
     "identifier": "math",
     "newPage": true,
     "searchKey": "math",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "uvnan",
                 "newPage": false,
                 "searchKey": "math.uvnan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "uvinf",
                 "newPage": false,
                 "searchKey": "math.uvinf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "uvneginf",
                 "newPage": false,
                 "searchKey": "math.uvneginf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "uvone",
                 "newPage": false,
                 "searchKey": "math.uvone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "mask",
                 "newPage": false,
                 "searchKey": "math.mask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "shift",
                 "newPage": false,
                 "searchKey": "math.shift",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "bias",
                 "newPage": false,
                 "searchKey": "math.bias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "signMask",
                 "newPage": false,
                 "searchKey": "math.signMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                 "identifier": "fracMask",
                 "newPage": false,
                 "searchKey": "math.fracMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,9 +238,7 @@
                 "identifier": "E",
                 "newPage": false,
                 "searchKey": "math.E",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -246,9 +258,7 @@
                 "identifier": "Pi",
                 "newPage": false,
                 "searchKey": "math.Pi",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -268,9 +278,7 @@
                 "identifier": "Phi",
                 "newPage": false,
                 "searchKey": "math.Phi",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -290,9 +298,7 @@
                 "identifier": "Sqrt2",
                 "newPage": false,
                 "searchKey": "math.Sqrt2",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -312,9 +318,7 @@
                 "identifier": "SqrtE",
                 "newPage": false,
                 "searchKey": "math.SqrtE",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -334,9 +338,7 @@
                 "identifier": "SqrtPi",
                 "newPage": false,
                 "searchKey": "math.SqrtPi",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -356,9 +358,7 @@
                 "identifier": "SqrtPhi",
                 "newPage": false,
                 "searchKey": "math.SqrtPhi",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -378,9 +378,7 @@
                 "identifier": "Ln2",
                 "newPage": false,
                 "searchKey": "math.Ln2",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -400,9 +398,7 @@
                 "identifier": "Log2E",
                 "newPage": false,
                 "searchKey": "math.Log2E",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -422,9 +418,7 @@
                 "identifier": "Ln10",
                 "newPage": false,
                 "searchKey": "math.Ln10",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -444,9 +438,7 @@
                 "identifier": "Log10E",
                 "newPage": false,
                 "searchKey": "math.Log10E",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -466,9 +458,7 @@
                 "identifier": "MaxFloat32",
                 "newPage": false,
                 "searchKey": "math.MaxFloat32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -488,9 +478,7 @@
                 "identifier": "SmallestNonzeroFloat32",
                 "newPage": false,
                 "searchKey": "math.SmallestNonzeroFloat32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -510,9 +498,7 @@
                 "identifier": "MaxFloat64",
                 "newPage": false,
                 "searchKey": "math.MaxFloat64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -532,9 +518,7 @@
                 "identifier": "SmallestNonzeroFloat64",
                 "newPage": false,
                 "searchKey": "math.SmallestNonzeroFloat64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -554,7 +538,9 @@
                 "identifier": "intSize",
                 "newPage": false,
                 "searchKey": "math.intSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -574,9 +560,7 @@
                 "identifier": "MaxInt",
                 "newPage": false,
                 "searchKey": "math.MaxInt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -596,9 +580,7 @@
                 "identifier": "MinInt",
                 "newPage": false,
                 "searchKey": "math.MinInt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -618,9 +600,7 @@
                 "identifier": "MaxInt8",
                 "newPage": false,
                 "searchKey": "math.MaxInt8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -640,9 +620,7 @@
                 "identifier": "MinInt8",
                 "newPage": false,
                 "searchKey": "math.MinInt8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -662,9 +640,7 @@
                 "identifier": "MaxInt16",
                 "newPage": false,
                 "searchKey": "math.MaxInt16",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -684,9 +660,7 @@
                 "identifier": "MinInt16",
                 "newPage": false,
                 "searchKey": "math.MinInt16",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -706,9 +680,7 @@
                 "identifier": "MaxInt32",
                 "newPage": false,
                 "searchKey": "math.MaxInt32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -728,9 +700,7 @@
                 "identifier": "MinInt32",
                 "newPage": false,
                 "searchKey": "math.MinInt32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -750,9 +720,7 @@
                 "identifier": "MaxInt64",
                 "newPage": false,
                 "searchKey": "math.MaxInt64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -772,9 +740,7 @@
                 "identifier": "MinInt64",
                 "newPage": false,
                 "searchKey": "math.MinInt64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -794,9 +760,7 @@
                 "identifier": "MaxUint",
                 "newPage": false,
                 "searchKey": "math.MaxUint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -816,9 +780,7 @@
                 "identifier": "MaxUint8",
                 "newPage": false,
                 "searchKey": "math.MaxUint8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -838,9 +800,7 @@
                 "identifier": "MaxUint16",
                 "newPage": false,
                 "searchKey": "math.MaxUint16",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -860,9 +820,7 @@
                 "identifier": "MaxUint32",
                 "newPage": false,
                 "searchKey": "math.MaxUint32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -882,9 +840,7 @@
                 "identifier": "MaxUint64",
                 "newPage": false,
                 "searchKey": "math.MaxUint64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -904,7 +860,9 @@
                 "identifier": "haveArchMax",
                 "newPage": false,
                 "searchKey": "math.haveArchMax",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -924,7 +882,9 @@
                 "identifier": "haveArchMin",
                 "newPage": false,
                 "searchKey": "math.haveArchMin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -944,7 +904,9 @@
                 "identifier": "erx",
                 "newPage": false,
                 "searchKey": "math.erx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -964,7 +926,9 @@
                 "identifier": "efx",
                 "newPage": false,
                 "searchKey": "math.efx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -984,7 +948,9 @@
                 "identifier": "efx8",
                 "newPage": false,
                 "searchKey": "math.efx8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1004,7 +970,9 @@
                 "identifier": "pp0",
                 "newPage": false,
                 "searchKey": "math.pp0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1024,7 +992,9 @@
                 "identifier": "pp1",
                 "newPage": false,
                 "searchKey": "math.pp1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1044,7 +1014,9 @@
                 "identifier": "pp2",
                 "newPage": false,
                 "searchKey": "math.pp2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1064,7 +1036,9 @@
                 "identifier": "pp3",
                 "newPage": false,
                 "searchKey": "math.pp3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1084,7 +1058,9 @@
                 "identifier": "pp4",
                 "newPage": false,
                 "searchKey": "math.pp4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1104,7 +1080,9 @@
                 "identifier": "qq1",
                 "newPage": false,
                 "searchKey": "math.qq1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1124,7 +1102,9 @@
                 "identifier": "qq2",
                 "newPage": false,
                 "searchKey": "math.qq2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1144,7 +1124,9 @@
                 "identifier": "qq3",
                 "newPage": false,
                 "searchKey": "math.qq3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1164,7 +1146,9 @@
                 "identifier": "qq4",
                 "newPage": false,
                 "searchKey": "math.qq4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1184,7 +1168,9 @@
                 "identifier": "qq5",
                 "newPage": false,
                 "searchKey": "math.qq5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1204,7 +1190,9 @@
                 "identifier": "pa0",
                 "newPage": false,
                 "searchKey": "math.pa0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1224,7 +1212,9 @@
                 "identifier": "pa1",
                 "newPage": false,
                 "searchKey": "math.pa1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1244,7 +1234,9 @@
                 "identifier": "pa2",
                 "newPage": false,
                 "searchKey": "math.pa2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1264,7 +1256,9 @@
                 "identifier": "pa3",
                 "newPage": false,
                 "searchKey": "math.pa3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1284,7 +1278,9 @@
                 "identifier": "pa4",
                 "newPage": false,
                 "searchKey": "math.pa4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1304,7 +1300,9 @@
                 "identifier": "pa5",
                 "newPage": false,
                 "searchKey": "math.pa5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1324,7 +1322,9 @@
                 "identifier": "pa6",
                 "newPage": false,
                 "searchKey": "math.pa6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1344,7 +1344,9 @@
                 "identifier": "qa1",
                 "newPage": false,
                 "searchKey": "math.qa1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1364,7 +1366,9 @@
                 "identifier": "qa2",
                 "newPage": false,
                 "searchKey": "math.qa2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1384,7 +1388,9 @@
                 "identifier": "qa3",
                 "newPage": false,
                 "searchKey": "math.qa3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1404,7 +1410,9 @@
                 "identifier": "qa4",
                 "newPage": false,
                 "searchKey": "math.qa4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1424,7 +1432,9 @@
                 "identifier": "qa5",
                 "newPage": false,
                 "searchKey": "math.qa5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1444,7 +1454,9 @@
                 "identifier": "qa6",
                 "newPage": false,
                 "searchKey": "math.qa6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1464,7 +1476,9 @@
                 "identifier": "ra0",
                 "newPage": false,
                 "searchKey": "math.ra0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1484,7 +1498,9 @@
                 "identifier": "ra1",
                 "newPage": false,
                 "searchKey": "math.ra1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1504,7 +1520,9 @@
                 "identifier": "ra2",
                 "newPage": false,
                 "searchKey": "math.ra2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1524,7 +1542,9 @@
                 "identifier": "ra3",
                 "newPage": false,
                 "searchKey": "math.ra3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1544,7 +1564,9 @@
                 "identifier": "ra4",
                 "newPage": false,
                 "searchKey": "math.ra4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1564,7 +1586,9 @@
                 "identifier": "ra5",
                 "newPage": false,
                 "searchKey": "math.ra5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1584,7 +1608,9 @@
                 "identifier": "ra6",
                 "newPage": false,
                 "searchKey": "math.ra6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1604,7 +1630,9 @@
                 "identifier": "ra7",
                 "newPage": false,
                 "searchKey": "math.ra7",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1624,7 +1652,9 @@
                 "identifier": "sa1",
                 "newPage": false,
                 "searchKey": "math.sa1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1644,7 +1674,9 @@
                 "identifier": "sa2",
                 "newPage": false,
                 "searchKey": "math.sa2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1664,7 +1696,9 @@
                 "identifier": "sa3",
                 "newPage": false,
                 "searchKey": "math.sa3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1684,7 +1718,9 @@
                 "identifier": "sa4",
                 "newPage": false,
                 "searchKey": "math.sa4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1704,7 +1740,9 @@
                 "identifier": "sa5",
                 "newPage": false,
                 "searchKey": "math.sa5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1724,7 +1762,9 @@
                 "identifier": "sa6",
                 "newPage": false,
                 "searchKey": "math.sa6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1744,7 +1784,9 @@
                 "identifier": "sa7",
                 "newPage": false,
                 "searchKey": "math.sa7",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1764,7 +1806,9 @@
                 "identifier": "sa8",
                 "newPage": false,
                 "searchKey": "math.sa8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1784,7 +1828,9 @@
                 "identifier": "rb0",
                 "newPage": false,
                 "searchKey": "math.rb0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1804,7 +1850,9 @@
                 "identifier": "rb1",
                 "newPage": false,
                 "searchKey": "math.rb1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1824,7 +1872,9 @@
                 "identifier": "rb2",
                 "newPage": false,
                 "searchKey": "math.rb2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1844,7 +1894,9 @@
                 "identifier": "rb3",
                 "newPage": false,
                 "searchKey": "math.rb3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1864,7 +1916,9 @@
                 "identifier": "rb4",
                 "newPage": false,
                 "searchKey": "math.rb4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1884,7 +1938,9 @@
                 "identifier": "rb5",
                 "newPage": false,
                 "searchKey": "math.rb5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1904,7 +1960,9 @@
                 "identifier": "rb6",
                 "newPage": false,
                 "searchKey": "math.rb6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1924,7 +1982,9 @@
                 "identifier": "sb1",
                 "newPage": false,
                 "searchKey": "math.sb1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1944,7 +2004,9 @@
                 "identifier": "sb2",
                 "newPage": false,
                 "searchKey": "math.sb2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1964,7 +2026,9 @@
                 "identifier": "sb3",
                 "newPage": false,
                 "searchKey": "math.sb3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1984,7 +2048,9 @@
                 "identifier": "sb4",
                 "newPage": false,
                 "searchKey": "math.sb4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2004,7 +2070,9 @@
                 "identifier": "sb5",
                 "newPage": false,
                 "searchKey": "math.sb5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2024,7 +2092,9 @@
                 "identifier": "sb6",
                 "newPage": false,
                 "searchKey": "math.sb6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2044,7 +2114,9 @@
                 "identifier": "sb7",
                 "newPage": false,
                 "searchKey": "math.sb7",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2064,7 +2136,9 @@
                 "identifier": "a0",
                 "newPage": false,
                 "searchKey": "math.a0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2084,7 +2158,9 @@
                 "identifier": "a1",
                 "newPage": false,
                 "searchKey": "math.a1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2104,7 +2180,9 @@
                 "identifier": "a2",
                 "newPage": false,
                 "searchKey": "math.a2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2124,7 +2202,9 @@
                 "identifier": "a3",
                 "newPage": false,
                 "searchKey": "math.a3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2144,7 +2224,9 @@
                 "identifier": "a4",
                 "newPage": false,
                 "searchKey": "math.a4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2164,7 +2246,9 @@
                 "identifier": "a5",
                 "newPage": false,
                 "searchKey": "math.a5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2184,7 +2268,9 @@
                 "identifier": "a6",
                 "newPage": false,
                 "searchKey": "math.a6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2204,7 +2290,9 @@
                 "identifier": "a7",
                 "newPage": false,
                 "searchKey": "math.a7",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2224,7 +2312,9 @@
                 "identifier": "b0",
                 "newPage": false,
                 "searchKey": "math.b0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2244,7 +2334,9 @@
                 "identifier": "b1",
                 "newPage": false,
                 "searchKey": "math.b1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2264,7 +2356,9 @@
                 "identifier": "b2",
                 "newPage": false,
                 "searchKey": "math.b2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2284,7 +2378,9 @@
                 "identifier": "b3",
                 "newPage": false,
                 "searchKey": "math.b3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2304,7 +2400,9 @@
                 "identifier": "b4",
                 "newPage": false,
                 "searchKey": "math.b4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2324,7 +2422,9 @@
                 "identifier": "b5",
                 "newPage": false,
                 "searchKey": "math.b5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2344,7 +2444,9 @@
                 "identifier": "b6",
                 "newPage": false,
                 "searchKey": "math.b6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2364,7 +2466,9 @@
                 "identifier": "b7",
                 "newPage": false,
                 "searchKey": "math.b7",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2384,7 +2488,9 @@
                 "identifier": "c0",
                 "newPage": false,
                 "searchKey": "math.c0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2404,7 +2510,9 @@
                 "identifier": "c1",
                 "newPage": false,
                 "searchKey": "math.c1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2424,7 +2532,9 @@
                 "identifier": "c2",
                 "newPage": false,
                 "searchKey": "math.c2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2444,7 +2554,9 @@
                 "identifier": "c3",
                 "newPage": false,
                 "searchKey": "math.c3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2464,7 +2576,9 @@
                 "identifier": "c4",
                 "newPage": false,
                 "searchKey": "math.c4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2484,7 +2598,9 @@
                 "identifier": "c5",
                 "newPage": false,
                 "searchKey": "math.c5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2504,7 +2620,9 @@
                 "identifier": "c6",
                 "newPage": false,
                 "searchKey": "math.c6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2524,7 +2642,9 @@
                 "identifier": "c7",
                 "newPage": false,
                 "searchKey": "math.c7",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2544,7 +2664,9 @@
                 "identifier": "d0",
                 "newPage": false,
                 "searchKey": "math.d0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2564,7 +2686,9 @@
                 "identifier": "d1",
                 "newPage": false,
                 "searchKey": "math.d1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2584,7 +2708,9 @@
                 "identifier": "d2",
                 "newPage": false,
                 "searchKey": "math.d2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2604,7 +2730,9 @@
                 "identifier": "d3",
                 "newPage": false,
                 "searchKey": "math.d3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2624,7 +2752,9 @@
                 "identifier": "d4",
                 "newPage": false,
                 "searchKey": "math.d4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2644,7 +2774,9 @@
                 "identifier": "d5",
                 "newPage": false,
                 "searchKey": "math.d5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2664,7 +2796,9 @@
                 "identifier": "d6",
                 "newPage": false,
                 "searchKey": "math.d6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2684,7 +2818,9 @@
                 "identifier": "d7",
                 "newPage": false,
                 "searchKey": "math.d7",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2704,7 +2840,9 @@
                 "identifier": "e0",
                 "newPage": false,
                 "searchKey": "math.e0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2724,7 +2862,9 @@
                 "identifier": "e1",
                 "newPage": false,
                 "searchKey": "math.e1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2744,7 +2884,9 @@
                 "identifier": "e2",
                 "newPage": false,
                 "searchKey": "math.e2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2764,7 +2906,9 @@
                 "identifier": "e3",
                 "newPage": false,
                 "searchKey": "math.e3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2784,7 +2928,9 @@
                 "identifier": "e4",
                 "newPage": false,
                 "searchKey": "math.e4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2804,7 +2950,9 @@
                 "identifier": "e5",
                 "newPage": false,
                 "searchKey": "math.e5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2824,7 +2972,9 @@
                 "identifier": "e6",
                 "newPage": false,
                 "searchKey": "math.e6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2844,7 +2994,9 @@
                 "identifier": "e7",
                 "newPage": false,
                 "searchKey": "math.e7",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2864,7 +3016,9 @@
                 "identifier": "f0",
                 "newPage": false,
                 "searchKey": "math.f0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2884,7 +3038,9 @@
                 "identifier": "f1",
                 "newPage": false,
                 "searchKey": "math.f1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2904,7 +3060,9 @@
                 "identifier": "f2",
                 "newPage": false,
                 "searchKey": "math.f2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2924,7 +3082,9 @@
                 "identifier": "f3",
                 "newPage": false,
                 "searchKey": "math.f3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2944,7 +3104,9 @@
                 "identifier": "f4",
                 "newPage": false,
                 "searchKey": "math.f4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2964,7 +3126,9 @@
                 "identifier": "f5",
                 "newPage": false,
                 "searchKey": "math.f5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2984,7 +3148,9 @@
                 "identifier": "f6",
                 "newPage": false,
                 "searchKey": "math.f6",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3004,7 +3170,9 @@
                 "identifier": "f7",
                 "newPage": false,
                 "searchKey": "math.f7",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3024,7 +3192,9 @@
                 "identifier": "haveArchExp2",
                 "newPage": false,
                 "searchKey": "math.haveArchExp2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3044,7 +3214,9 @@
                 "identifier": "haveArchExp",
                 "newPage": false,
                 "searchKey": "math.haveArchExp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3064,7 +3236,9 @@
                 "identifier": "haveArchFloor",
                 "newPage": false,
                 "searchKey": "math.haveArchFloor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3084,7 +3258,9 @@
                 "identifier": "haveArchCeil",
                 "newPage": false,
                 "searchKey": "math.haveArchCeil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3104,7 +3280,9 @@
                 "identifier": "haveArchTrunc",
                 "newPage": false,
                 "searchKey": "math.haveArchTrunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3124,7 +3302,9 @@
                 "identifier": "haveArchHypot",
                 "newPage": false,
                 "searchKey": "math.haveArchHypot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3144,7 +3324,9 @@
                 "identifier": "haveArchLog",
                 "newPage": false,
                 "searchKey": "math.haveArchLog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3164,7 +3346,9 @@
                 "identifier": "haveArchModf",
                 "newPage": false,
                 "searchKey": "math.haveArchModf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3184,7 +3368,9 @@
                 "identifier": "haveArchSqrt",
                 "newPage": false,
                 "searchKey": "math.haveArchSqrt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3204,7 +3390,9 @@
                 "identifier": "haveArchAcos",
                 "newPage": false,
                 "searchKey": "math.haveArchAcos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3224,7 +3412,9 @@
                 "identifier": "haveArchAcosh",
                 "newPage": false,
                 "searchKey": "math.haveArchAcosh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3244,7 +3434,9 @@
                 "identifier": "haveArchAsin",
                 "newPage": false,
                 "searchKey": "math.haveArchAsin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3264,7 +3456,9 @@
                 "identifier": "haveArchAsinh",
                 "newPage": false,
                 "searchKey": "math.haveArchAsinh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3284,7 +3478,9 @@
                 "identifier": "haveArchAtan",
                 "newPage": false,
                 "searchKey": "math.haveArchAtan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3304,7 +3500,9 @@
                 "identifier": "haveArchAtan2",
                 "newPage": false,
                 "searchKey": "math.haveArchAtan2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3324,7 +3522,9 @@
                 "identifier": "haveArchAtanh",
                 "newPage": false,
                 "searchKey": "math.haveArchAtanh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3344,7 +3544,9 @@
                 "identifier": "haveArchCbrt",
                 "newPage": false,
                 "searchKey": "math.haveArchCbrt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3364,7 +3566,9 @@
                 "identifier": "haveArchCos",
                 "newPage": false,
                 "searchKey": "math.haveArchCos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3384,7 +3588,9 @@
                 "identifier": "haveArchCosh",
                 "newPage": false,
                 "searchKey": "math.haveArchCosh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3404,7 +3610,9 @@
                 "identifier": "haveArchErf",
                 "newPage": false,
                 "searchKey": "math.haveArchErf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3424,7 +3632,9 @@
                 "identifier": "haveArchErfc",
                 "newPage": false,
                 "searchKey": "math.haveArchErfc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3444,7 +3654,9 @@
                 "identifier": "haveArchExpm1",
                 "newPage": false,
                 "searchKey": "math.haveArchExpm1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3464,7 +3676,9 @@
                 "identifier": "haveArchFrexp",
                 "newPage": false,
                 "searchKey": "math.haveArchFrexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3484,7 +3698,9 @@
                 "identifier": "haveArchLdexp",
                 "newPage": false,
                 "searchKey": "math.haveArchLdexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3504,7 +3720,9 @@
                 "identifier": "haveArchLog10",
                 "newPage": false,
                 "searchKey": "math.haveArchLog10",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3524,7 +3742,9 @@
                 "identifier": "haveArchLog2",
                 "newPage": false,
                 "searchKey": "math.haveArchLog2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3544,7 +3764,9 @@
                 "identifier": "haveArchLog1p",
                 "newPage": false,
                 "searchKey": "math.haveArchLog1p",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3564,7 +3786,9 @@
                 "identifier": "haveArchMod",
                 "newPage": false,
                 "searchKey": "math.haveArchMod",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3584,7 +3808,9 @@
                 "identifier": "haveArchPow",
                 "newPage": false,
                 "searchKey": "math.haveArchPow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3604,7 +3830,9 @@
                 "identifier": "haveArchRemainder",
                 "newPage": false,
                 "searchKey": "math.haveArchRemainder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3624,7 +3852,9 @@
                 "identifier": "haveArchSin",
                 "newPage": false,
                 "searchKey": "math.haveArchSin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3644,7 +3874,9 @@
                 "identifier": "haveArchSinh",
                 "newPage": false,
                 "searchKey": "math.haveArchSinh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3664,7 +3896,9 @@
                 "identifier": "haveArchTan",
                 "newPage": false,
                 "searchKey": "math.haveArchTan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3684,7 +3918,9 @@
                 "identifier": "haveArchTanh",
                 "newPage": false,
                 "searchKey": "math.haveArchTanh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3704,7 +3940,9 @@
                 "identifier": "reduceThreshold",
                 "newPage": false,
                 "searchKey": "math.reduceThreshold",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3724,7 +3962,9 @@
                 "identifier": "ReduceThreshold",
                 "newPage": false,
                 "searchKey": "math.ReduceThreshold",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3747,9 +3987,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -3767,7 +4005,9 @@
                 "identifier": "useFMA",
                 "newPage": false,
                 "searchKey": "math.useFMA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3787,7 +4027,9 @@
                 "identifier": "_gamP",
                 "newPage": false,
                 "searchKey": "math._gamP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3807,7 +4049,9 @@
                 "identifier": "_gamQ",
                 "newPage": false,
                 "searchKey": "math._gamQ",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3827,7 +4071,9 @@
                 "identifier": "_gamS",
                 "newPage": false,
                 "searchKey": "math._gamS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3847,7 +4093,9 @@
                 "identifier": "p0R8",
                 "newPage": false,
                 "searchKey": "math.p0R8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3867,7 +4115,9 @@
                 "identifier": "p0S8",
                 "newPage": false,
                 "searchKey": "math.p0S8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3887,7 +4137,9 @@
                 "identifier": "p0R5",
                 "newPage": false,
                 "searchKey": "math.p0R5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3907,7 +4159,9 @@
                 "identifier": "p0S5",
                 "newPage": false,
                 "searchKey": "math.p0S5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3927,7 +4181,9 @@
                 "identifier": "p0R3",
                 "newPage": false,
                 "searchKey": "math.p0R3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3947,7 +4203,9 @@
                 "identifier": "p0S3",
                 "newPage": false,
                 "searchKey": "math.p0S3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3967,7 +4225,9 @@
                 "identifier": "p0R2",
                 "newPage": false,
                 "searchKey": "math.p0R2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3987,7 +4247,9 @@
                 "identifier": "p0S2",
                 "newPage": false,
                 "searchKey": "math.p0S2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4007,7 +4269,9 @@
                 "identifier": "q0R8",
                 "newPage": false,
                 "searchKey": "math.q0R8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4027,7 +4291,9 @@
                 "identifier": "q0S8",
                 "newPage": false,
                 "searchKey": "math.q0S8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4047,7 +4313,9 @@
                 "identifier": "q0R5",
                 "newPage": false,
                 "searchKey": "math.q0R5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4067,7 +4335,9 @@
                 "identifier": "q0S5",
                 "newPage": false,
                 "searchKey": "math.q0S5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4087,7 +4357,9 @@
                 "identifier": "q0R3",
                 "newPage": false,
                 "searchKey": "math.q0R3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4107,7 +4379,9 @@
                 "identifier": "q0S3",
                 "newPage": false,
                 "searchKey": "math.q0S3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4127,7 +4401,9 @@
                 "identifier": "q0R2",
                 "newPage": false,
                 "searchKey": "math.q0R2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4147,7 +4423,9 @@
                 "identifier": "q0S2",
                 "newPage": false,
                 "searchKey": "math.q0S2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4167,7 +4445,9 @@
                 "identifier": "p1R8",
                 "newPage": false,
                 "searchKey": "math.p1R8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4187,7 +4467,9 @@
                 "identifier": "p1S8",
                 "newPage": false,
                 "searchKey": "math.p1S8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4207,7 +4489,9 @@
                 "identifier": "p1R5",
                 "newPage": false,
                 "searchKey": "math.p1R5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4227,7 +4511,9 @@
                 "identifier": "p1S5",
                 "newPage": false,
                 "searchKey": "math.p1S5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4247,7 +4533,9 @@
                 "identifier": "p1R3",
                 "newPage": false,
                 "searchKey": "math.p1R3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4267,7 +4555,9 @@
                 "identifier": "p1S3",
                 "newPage": false,
                 "searchKey": "math.p1S3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4287,7 +4577,9 @@
                 "identifier": "p1R2",
                 "newPage": false,
                 "searchKey": "math.p1R2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4307,7 +4599,9 @@
                 "identifier": "p1S2",
                 "newPage": false,
                 "searchKey": "math.p1S2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4327,7 +4621,9 @@
                 "identifier": "q1R8",
                 "newPage": false,
                 "searchKey": "math.q1R8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4347,7 +4643,9 @@
                 "identifier": "q1S8",
                 "newPage": false,
                 "searchKey": "math.q1S8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4367,7 +4665,9 @@
                 "identifier": "q1R5",
                 "newPage": false,
                 "searchKey": "math.q1R5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4387,7 +4687,9 @@
                 "identifier": "q1S5",
                 "newPage": false,
                 "searchKey": "math.q1S5",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4407,7 +4709,9 @@
                 "identifier": "q1R3",
                 "newPage": false,
                 "searchKey": "math.q1R3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4427,7 +4731,9 @@
                 "identifier": "q1S3",
                 "newPage": false,
                 "searchKey": "math.q1S3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4447,7 +4753,9 @@
                 "identifier": "q1R2",
                 "newPage": false,
                 "searchKey": "math.q1R2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4467,7 +4775,9 @@
                 "identifier": "q1S2",
                 "newPage": false,
                 "searchKey": "math.q1S2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4487,7 +4797,9 @@
                 "identifier": "_lgamA",
                 "newPage": false,
                 "searchKey": "math._lgamA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4507,7 +4819,9 @@
                 "identifier": "_lgamR",
                 "newPage": false,
                 "searchKey": "math._lgamR",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4527,7 +4841,9 @@
                 "identifier": "_lgamS",
                 "newPage": false,
                 "searchKey": "math._lgamS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4547,7 +4863,9 @@
                 "identifier": "_lgamT",
                 "newPage": false,
                 "searchKey": "math._lgamT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4567,7 +4885,9 @@
                 "identifier": "_lgamU",
                 "newPage": false,
                 "searchKey": "math._lgamU",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4587,7 +4907,9 @@
                 "identifier": "_lgamV",
                 "newPage": false,
                 "searchKey": "math._lgamV",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4607,7 +4929,9 @@
                 "identifier": "_lgamW",
                 "newPage": false,
                 "searchKey": "math._lgamW",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4627,7 +4951,9 @@
                 "identifier": "pow10tab",
                 "newPage": false,
                 "searchKey": "math.pow10tab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4647,7 +4973,9 @@
                 "identifier": "pow10postab32",
                 "newPage": false,
                 "searchKey": "math.pow10postab32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4667,7 +4995,9 @@
                 "identifier": "pow10negtab32",
                 "newPage": false,
                 "searchKey": "math.pow10negtab32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4687,7 +5017,9 @@
                 "identifier": "_sin",
                 "newPage": false,
                 "searchKey": "math._sin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4707,7 +5039,9 @@
                 "identifier": "_cos",
                 "newPage": false,
                 "searchKey": "math._cos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4727,7 +5061,9 @@
                 "identifier": "_tanP",
                 "newPage": false,
                 "searchKey": "math._tanP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4747,7 +5083,9 @@
                 "identifier": "_tanQ",
                 "newPage": false,
                 "searchKey": "math._tanQ",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4767,7 +5105,9 @@
                 "identifier": "tanhP",
                 "newPage": false,
                 "searchKey": "math.tanhP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4787,7 +5127,9 @@
                 "identifier": "tanhQ",
                 "newPage": false,
                 "searchKey": "math.tanhQ",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4807,7 +5149,9 @@
                 "identifier": "mPi4",
                 "newPage": false,
                 "searchKey": "math.mPi4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4827,7 +5171,9 @@
                 "identifier": "ExpGo",
                 "newPage": false,
                 "searchKey": "math.ExpGo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4847,7 +5193,9 @@
                 "identifier": "Exp2Go",
                 "newPage": false,
                 "searchKey": "math.Exp2Go",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4867,7 +5215,9 @@
                 "identifier": "HypotGo",
                 "newPage": false,
                 "searchKey": "math.HypotGo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4887,7 +5237,9 @@
                 "identifier": "SqrtGo",
                 "newPage": false,
                 "searchKey": "math.SqrtGo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4907,7 +5259,9 @@
                 "identifier": "TrigReduce",
                 "newPage": false,
                 "searchKey": "math.TrigReduce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4930,9 +5284,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -4950,9 +5302,7 @@
                 "identifier": "Abs",
                 "newPage": false,
                 "searchKey": "math.Abs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4972,9 +5322,7 @@
                 "identifier": "Acosh",
                 "newPage": false,
                 "searchKey": "math.Acosh",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4994,7 +5342,9 @@
                 "identifier": "acosh",
                 "newPage": false,
                 "searchKey": "math.acosh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5014,9 +5364,7 @@
                 "identifier": "Asin",
                 "newPage": false,
                 "searchKey": "math.Asin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5036,7 +5384,9 @@
                 "identifier": "asin",
                 "newPage": false,
                 "searchKey": "math.asin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5056,9 +5406,7 @@
                 "identifier": "Acos",
                 "newPage": false,
                 "searchKey": "math.Acos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5078,7 +5426,9 @@
                 "identifier": "acos",
                 "newPage": false,
                 "searchKey": "math.acos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5098,9 +5448,7 @@
                 "identifier": "Asinh",
                 "newPage": false,
                 "searchKey": "math.Asinh",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5120,7 +5468,9 @@
                 "identifier": "asinh",
                 "newPage": false,
                 "searchKey": "math.asinh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5140,7 +5490,9 @@
                 "identifier": "xatan",
                 "newPage": false,
                 "searchKey": "math.xatan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5160,7 +5512,9 @@
                 "identifier": "satan",
                 "newPage": false,
                 "searchKey": "math.satan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5180,9 +5534,7 @@
                 "identifier": "Atan",
                 "newPage": false,
                 "searchKey": "math.Atan",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5202,7 +5554,9 @@
                 "identifier": "atan",
                 "newPage": false,
                 "searchKey": "math.atan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5222,9 +5576,7 @@
                 "identifier": "Atan2",
                 "newPage": false,
                 "searchKey": "math.Atan2",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5244,7 +5596,9 @@
                 "identifier": "atan2",
                 "newPage": false,
                 "searchKey": "math.atan2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5264,9 +5618,7 @@
                 "identifier": "Atanh",
                 "newPage": false,
                 "searchKey": "math.Atanh",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5286,7 +5638,9 @@
                 "identifier": "atanh",
                 "newPage": false,
                 "searchKey": "math.atanh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5306,9 +5660,7 @@
                 "identifier": "Inf",
                 "newPage": false,
                 "searchKey": "math.Inf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5328,9 +5680,7 @@
                 "identifier": "NaN",
                 "newPage": false,
                 "searchKey": "math.NaN",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5350,9 +5700,7 @@
                 "identifier": "IsNaN",
                 "newPage": false,
                 "searchKey": "math.IsNaN",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5372,9 +5720,7 @@
                 "identifier": "IsInf",
                 "newPage": false,
                 "searchKey": "math.IsInf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5394,7 +5740,9 @@
                 "identifier": "normalize",
                 "newPage": false,
                 "searchKey": "math.normalize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5414,9 +5762,7 @@
                 "identifier": "Cbrt",
                 "newPage": false,
                 "searchKey": "math.Cbrt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5436,7 +5782,9 @@
                 "identifier": "cbrt",
                 "newPage": false,
                 "searchKey": "math.cbrt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5456,9 +5804,7 @@
                 "identifier": "Copysign",
                 "newPage": false,
                 "searchKey": "math.Copysign",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5478,9 +5824,7 @@
                 "identifier": "Dim",
                 "newPage": false,
                 "searchKey": "math.Dim",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5500,9 +5844,7 @@
                 "identifier": "Max",
                 "newPage": false,
                 "searchKey": "math.Max",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5522,7 +5864,9 @@
                 "identifier": "max",
                 "newPage": false,
                 "searchKey": "math.max",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5542,9 +5886,7 @@
                 "identifier": "Min",
                 "newPage": false,
                 "searchKey": "math.Min",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5564,7 +5906,9 @@
                 "identifier": "min",
                 "newPage": false,
                 "searchKey": "math.min",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5584,7 +5928,9 @@
                 "identifier": "archMax",
                 "newPage": false,
                 "searchKey": "math.archMax",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5604,7 +5950,9 @@
                 "identifier": "archMin",
                 "newPage": false,
                 "searchKey": "math.archMin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5624,9 +5972,7 @@
                 "identifier": "Erf",
                 "newPage": false,
                 "searchKey": "math.Erf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5646,7 +5992,9 @@
                 "identifier": "erf",
                 "newPage": false,
                 "searchKey": "math.erf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5666,9 +6014,7 @@
                 "identifier": "Erfc",
                 "newPage": false,
                 "searchKey": "math.Erfc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5688,7 +6034,9 @@
                 "identifier": "erfc",
                 "newPage": false,
                 "searchKey": "math.erfc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5708,9 +6056,7 @@
                 "identifier": "Erfinv",
                 "newPage": false,
                 "searchKey": "math.Erfinv",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5730,9 +6076,7 @@
                 "identifier": "Erfcinv",
                 "newPage": false,
                 "searchKey": "math.Erfcinv",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5752,9 +6096,7 @@
                 "identifier": "Exp",
                 "newPage": false,
                 "searchKey": "math.Exp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5774,7 +6116,9 @@
                 "identifier": "exp",
                 "newPage": false,
                 "searchKey": "math.exp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5794,9 +6138,7 @@
                 "identifier": "Exp2",
                 "newPage": false,
                 "searchKey": "math.Exp2",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5816,7 +6158,9 @@
                 "identifier": "exp2",
                 "newPage": false,
                 "searchKey": "math.exp2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5836,7 +6180,9 @@
                 "identifier": "expmulti",
                 "newPage": false,
                 "searchKey": "math.expmulti",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5856,7 +6202,9 @@
                 "identifier": "archExp2",
                 "newPage": false,
                 "searchKey": "math.archExp2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5876,7 +6224,9 @@
                 "identifier": "archExp",
                 "newPage": false,
                 "searchKey": "math.archExp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5896,9 +6246,7 @@
                 "identifier": "Expm1",
                 "newPage": false,
                 "searchKey": "math.Expm1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5918,7 +6266,9 @@
                 "identifier": "expm1",
                 "newPage": false,
                 "searchKey": "math.expm1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5938,9 +6288,7 @@
                 "identifier": "Floor",
                 "newPage": false,
                 "searchKey": "math.Floor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5960,7 +6308,9 @@
                 "identifier": "floor",
                 "newPage": false,
                 "searchKey": "math.floor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5980,9 +6330,7 @@
                 "identifier": "Ceil",
                 "newPage": false,
                 "searchKey": "math.Ceil",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6002,7 +6350,9 @@
                 "identifier": "ceil",
                 "newPage": false,
                 "searchKey": "math.ceil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6022,9 +6372,7 @@
                 "identifier": "Trunc",
                 "newPage": false,
                 "searchKey": "math.Trunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6044,7 +6392,9 @@
                 "identifier": "trunc",
                 "newPage": false,
                 "searchKey": "math.trunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6064,9 +6414,7 @@
                 "identifier": "Round",
                 "newPage": false,
                 "searchKey": "math.Round",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6086,9 +6434,7 @@
                 "identifier": "RoundToEven",
                 "newPage": false,
                 "searchKey": "math.RoundToEven",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6108,7 +6454,9 @@
                 "identifier": "archFloor",
                 "newPage": false,
                 "searchKey": "math.archFloor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6128,7 +6476,9 @@
                 "identifier": "archCeil",
                 "newPage": false,
                 "searchKey": "math.archCeil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6148,7 +6498,9 @@
                 "identifier": "archTrunc",
                 "newPage": false,
                 "searchKey": "math.archTrunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6168,7 +6520,9 @@
                 "identifier": "zero",
                 "newPage": false,
                 "searchKey": "math.zero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6188,7 +6542,9 @@
                 "identifier": "nonzero",
                 "newPage": false,
                 "searchKey": "math.nonzero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6208,7 +6564,9 @@
                 "identifier": "shl",
                 "newPage": false,
                 "searchKey": "math.shl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6228,7 +6586,9 @@
                 "identifier": "shr",
                 "newPage": false,
                 "searchKey": "math.shr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6248,7 +6608,9 @@
                 "identifier": "shrcompress",
                 "newPage": false,
                 "searchKey": "math.shrcompress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6268,7 +6630,9 @@
                 "identifier": "lz",
                 "newPage": false,
                 "searchKey": "math.lz",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6288,7 +6652,9 @@
                 "identifier": "split",
                 "newPage": false,
                 "searchKey": "math.split",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6308,9 +6674,7 @@
                 "identifier": "FMA",
                 "newPage": false,
                 "searchKey": "math.FMA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6330,9 +6694,7 @@
                 "identifier": "Frexp",
                 "newPage": false,
                 "searchKey": "math.Frexp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6352,7 +6714,9 @@
                 "identifier": "frexp",
                 "newPage": false,
                 "searchKey": "math.frexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6372,7 +6736,9 @@
                 "identifier": "stirling",
                 "newPage": false,
                 "searchKey": "math.stirling",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6392,9 +6758,7 @@
                 "identifier": "Gamma",
                 "newPage": false,
                 "searchKey": "math.Gamma",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6414,7 +6778,9 @@
                 "identifier": "isNegInt",
                 "newPage": false,
                 "searchKey": "math.isNegInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6434,9 +6800,7 @@
                 "identifier": "Hypot",
                 "newPage": false,
                 "searchKey": "math.Hypot",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6456,7 +6820,9 @@
                 "identifier": "hypot",
                 "newPage": false,
                 "searchKey": "math.hypot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6476,7 +6842,9 @@
                 "identifier": "archHypot",
                 "newPage": false,
                 "searchKey": "math.archHypot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6496,9 +6864,7 @@
                 "identifier": "J0",
                 "newPage": false,
                 "searchKey": "math.J0",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6518,9 +6884,7 @@
                 "identifier": "Y0",
                 "newPage": false,
                 "searchKey": "math.Y0",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6540,7 +6904,9 @@
                 "identifier": "pzero",
                 "newPage": false,
                 "searchKey": "math.pzero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6560,7 +6926,9 @@
                 "identifier": "qzero",
                 "newPage": false,
                 "searchKey": "math.qzero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6580,9 +6948,7 @@
                 "identifier": "J1",
                 "newPage": false,
                 "searchKey": "math.J1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6602,9 +6968,7 @@
                 "identifier": "Y1",
                 "newPage": false,
                 "searchKey": "math.Y1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6624,7 +6988,9 @@
                 "identifier": "pone",
                 "newPage": false,
                 "searchKey": "math.pone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6644,7 +7010,9 @@
                 "identifier": "qone",
                 "newPage": false,
                 "searchKey": "math.qone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6664,9 +7032,7 @@
                 "identifier": "Jn",
                 "newPage": false,
                 "searchKey": "math.Jn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6686,9 +7052,7 @@
                 "identifier": "Yn",
                 "newPage": false,
                 "searchKey": "math.Yn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6708,9 +7072,7 @@
                 "identifier": "Ldexp",
                 "newPage": false,
                 "searchKey": "math.Ldexp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6730,7 +7092,9 @@
                 "identifier": "ldexp",
                 "newPage": false,
                 "searchKey": "math.ldexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6750,9 +7114,7 @@
                 "identifier": "Lgamma",
                 "newPage": false,
                 "searchKey": "math.Lgamma",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6772,7 +7134,9 @@
                 "identifier": "sinPi",
                 "newPage": false,
                 "searchKey": "math.sinPi",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6792,9 +7156,7 @@
                 "identifier": "Log",
                 "newPage": false,
                 "searchKey": "math.Log",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6814,7 +7176,9 @@
                 "identifier": "log",
                 "newPage": false,
                 "searchKey": "math.log",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6834,9 +7198,7 @@
                 "identifier": "Log10",
                 "newPage": false,
                 "searchKey": "math.Log10",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6856,7 +7218,9 @@
                 "identifier": "log10",
                 "newPage": false,
                 "searchKey": "math.log10",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6876,9 +7240,7 @@
                 "identifier": "Log2",
                 "newPage": false,
                 "searchKey": "math.Log2",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6898,7 +7260,9 @@
                 "identifier": "log2",
                 "newPage": false,
                 "searchKey": "math.log2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6918,9 +7282,7 @@
                 "identifier": "Log1p",
                 "newPage": false,
                 "searchKey": "math.Log1p",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6940,7 +7302,9 @@
                 "identifier": "log1p",
                 "newPage": false,
                 "searchKey": "math.log1p",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6960,7 +7324,9 @@
                 "identifier": "archLog",
                 "newPage": false,
                 "searchKey": "math.archLog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6980,9 +7346,7 @@
                 "identifier": "Logb",
                 "newPage": false,
                 "searchKey": "math.Logb",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7002,9 +7366,7 @@
                 "identifier": "Ilogb",
                 "newPage": false,
                 "searchKey": "math.Ilogb",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7024,7 +7386,9 @@
                 "identifier": "ilogb",
                 "newPage": false,
                 "searchKey": "math.ilogb",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7044,9 +7408,7 @@
                 "identifier": "Mod",
                 "newPage": false,
                 "searchKey": "math.Mod",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7066,7 +7428,9 @@
                 "identifier": "mod",
                 "newPage": false,
                 "searchKey": "math.mod",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7086,9 +7450,7 @@
                 "identifier": "Modf",
                 "newPage": false,
                 "searchKey": "math.Modf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7108,7 +7470,9 @@
                 "identifier": "modf",
                 "newPage": false,
                 "searchKey": "math.modf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7128,7 +7492,9 @@
                 "identifier": "archModf",
                 "newPage": false,
                 "searchKey": "math.archModf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7148,9 +7514,7 @@
                 "identifier": "Nextafter32",
                 "newPage": false,
                 "searchKey": "math.Nextafter32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7170,9 +7534,7 @@
                 "identifier": "Nextafter",
                 "newPage": false,
                 "searchKey": "math.Nextafter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7192,7 +7554,9 @@
                 "identifier": "isOddInt",
                 "newPage": false,
                 "searchKey": "math.isOddInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7212,9 +7576,7 @@
                 "identifier": "Pow",
                 "newPage": false,
                 "searchKey": "math.Pow",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7234,7 +7596,9 @@
                 "identifier": "pow",
                 "newPage": false,
                 "searchKey": "math.pow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7254,9 +7618,7 @@
                 "identifier": "Pow10",
                 "newPage": false,
                 "searchKey": "math.Pow10",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7276,9 +7638,7 @@
                 "identifier": "Remainder",
                 "newPage": false,
                 "searchKey": "math.Remainder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7298,7 +7658,9 @@
                 "identifier": "remainder",
                 "newPage": false,
                 "searchKey": "math.remainder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7318,9 +7680,7 @@
                 "identifier": "Signbit",
                 "newPage": false,
                 "searchKey": "math.Signbit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7340,9 +7700,7 @@
                 "identifier": "Cos",
                 "newPage": false,
                 "searchKey": "math.Cos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7362,7 +7720,9 @@
                 "identifier": "cos",
                 "newPage": false,
                 "searchKey": "math.cos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7382,9 +7742,7 @@
                 "identifier": "Sin",
                 "newPage": false,
                 "searchKey": "math.Sin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7404,7 +7762,9 @@
                 "identifier": "sin",
                 "newPage": false,
                 "searchKey": "math.sin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7424,9 +7784,7 @@
                 "identifier": "Sincos",
                 "newPage": false,
                 "searchKey": "math.Sincos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7446,9 +7804,7 @@
                 "identifier": "Sinh",
                 "newPage": false,
                 "searchKey": "math.Sinh",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7468,7 +7824,9 @@
                 "identifier": "sinh",
                 "newPage": false,
                 "searchKey": "math.sinh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7488,9 +7846,7 @@
                 "identifier": "Cosh",
                 "newPage": false,
                 "searchKey": "math.Cosh",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7510,7 +7866,9 @@
                 "identifier": "cosh",
                 "newPage": false,
                 "searchKey": "math.cosh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7530,9 +7888,7 @@
                 "identifier": "Sqrt",
                 "newPage": false,
                 "searchKey": "math.Sqrt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -7552,7 +7908,9 @@
                 "identifier": "sqrt",
                 "newPage": false,
                 "searchKey": "math.sqrt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7572,7 +7930,9 @@
                 "identifier": "archSqrt",
                 "newPage": false,
                 "searchKey": "math.archSqrt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7592,7 +7952,9 @@
                 "identifier": "archAcos",
                 "newPage": false,
                 "searchKey": "math.archAcos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7612,7 +7974,9 @@
                 "identifier": "archAcosh",
                 "newPage": false,
                 "searchKey": "math.archAcosh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7632,7 +7996,9 @@
                 "identifier": "archAsin",
                 "newPage": false,
                 "searchKey": "math.archAsin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7652,7 +8018,9 @@
                 "identifier": "archAsinh",
                 "newPage": false,
                 "searchKey": "math.archAsinh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7672,7 +8040,9 @@
                 "identifier": "archAtan",
                 "newPage": false,
                 "searchKey": "math.archAtan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7692,7 +8062,9 @@
                 "identifier": "archAtan2",
                 "newPage": false,
                 "searchKey": "math.archAtan2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7712,7 +8084,9 @@
                 "identifier": "archAtanh",
                 "newPage": false,
                 "searchKey": "math.archAtanh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7732,7 +8106,9 @@
                 "identifier": "archCbrt",
                 "newPage": false,
                 "searchKey": "math.archCbrt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7752,7 +8128,9 @@
                 "identifier": "archCos",
                 "newPage": false,
                 "searchKey": "math.archCos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7772,7 +8150,9 @@
                 "identifier": "archCosh",
                 "newPage": false,
                 "searchKey": "math.archCosh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7792,7 +8172,9 @@
                 "identifier": "archErf",
                 "newPage": false,
                 "searchKey": "math.archErf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7812,7 +8194,9 @@
                 "identifier": "archErfc",
                 "newPage": false,
                 "searchKey": "math.archErfc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7832,7 +8216,9 @@
                 "identifier": "archExpm1",
                 "newPage": false,
                 "searchKey": "math.archExpm1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7852,7 +8238,9 @@
                 "identifier": "archFrexp",
                 "newPage": false,
                 "searchKey": "math.archFrexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7872,7 +8260,9 @@
                 "identifier": "archLdexp",
                 "newPage": false,
                 "searchKey": "math.archLdexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7892,7 +8282,9 @@
                 "identifier": "archLog10",
                 "newPage": false,
                 "searchKey": "math.archLog10",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7912,7 +8304,9 @@
                 "identifier": "archLog2",
                 "newPage": false,
                 "searchKey": "math.archLog2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7932,7 +8326,9 @@
                 "identifier": "archLog1p",
                 "newPage": false,
                 "searchKey": "math.archLog1p",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7952,7 +8348,9 @@
                 "identifier": "archMod",
                 "newPage": false,
                 "searchKey": "math.archMod",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7972,7 +8370,9 @@
                 "identifier": "archPow",
                 "newPage": false,
                 "searchKey": "math.archPow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7992,7 +8392,9 @@
                 "identifier": "archRemainder",
                 "newPage": false,
                 "searchKey": "math.archRemainder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8012,7 +8414,9 @@
                 "identifier": "archSin",
                 "newPage": false,
                 "searchKey": "math.archSin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8032,7 +8436,9 @@
                 "identifier": "archSinh",
                 "newPage": false,
                 "searchKey": "math.archSinh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8052,7 +8458,9 @@
                 "identifier": "archTan",
                 "newPage": false,
                 "searchKey": "math.archTan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8072,7 +8480,9 @@
                 "identifier": "archTanh",
                 "newPage": false,
                 "searchKey": "math.archTanh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8092,9 +8502,7 @@
                 "identifier": "Tan",
                 "newPage": false,
                 "searchKey": "math.Tan",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8114,7 +8522,9 @@
                 "identifier": "tan",
                 "newPage": false,
                 "searchKey": "math.tan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8134,9 +8544,7 @@
                 "identifier": "Tanh",
                 "newPage": false,
                 "searchKey": "math.Tanh",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8156,7 +8564,9 @@
                 "identifier": "tanh",
                 "newPage": false,
                 "searchKey": "math.tanh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8176,7 +8586,9 @@
                 "identifier": "trigReduce",
                 "newPage": false,
                 "searchKey": "math.trigReduce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8196,9 +8608,7 @@
                 "identifier": "Float32bits",
                 "newPage": false,
                 "searchKey": "math.Float32bits",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8218,9 +8628,7 @@
                 "identifier": "Float32frombits",
                 "newPage": false,
                 "searchKey": "math.Float32frombits",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8240,9 +8648,7 @@
                 "identifier": "Float64bits",
                 "newPage": false,
                 "searchKey": "math.Float64bits",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8262,9 +8668,7 @@
                 "identifier": "Float64frombits",
                 "newPage": false,
                 "searchKey": "math.Float64frombits",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

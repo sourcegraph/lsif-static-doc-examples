@@ -4,9 +4,7 @@
     "identifier": "backend",
     "newPage": true,
     "searchKey": "cmd/frontend/backend",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "authzBypass",
                 "newPage": false,
                 "searchKey": "backend.authzBypass",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "getFirstVersionQuery",
                 "newPage": false,
                 "searchKey": "backend.getFirstVersionQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "getVersionQuery",
                 "newPage": false,
                 "searchKey": "backend.getVersionQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "upsertVersionQuery",
                 "newPage": false,
                 "searchKey": "backend.upsertVersionQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +131,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -147,9 +149,7 @@
                 "identifier": "MockCountGoImporters",
                 "newPage": false,
                 "searchKey": "backend.MockCountGoImporters",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -169,7 +169,9 @@
                 "identifier": "goImportersCountCache",
                 "newPage": false,
                 "searchKey": "backend.goImportersCountCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -189,7 +191,9 @@
                 "identifier": "countGoImportersHTTPClient",
                 "newPage": false,
                 "searchKey": "backend.countGoImportersHTTPClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -209,7 +213,9 @@
                 "identifier": "useEnhancedLanguageDetection",
                 "newPage": false,
                 "searchKey": "backend.useEnhancedLanguageDetection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -229,7 +235,9 @@
                 "identifier": "inventoryCache",
                 "newPage": false,
                 "searchKey": "backend.inventoryCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -249,9 +257,7 @@
                 "identifier": "Mocks",
                 "newPage": false,
                 "searchKey": "backend.Mocks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -271,9 +277,7 @@
                 "identifier": "ErrNotAuthenticated",
                 "newPage": false,
                 "searchKey": "backend.ErrNotAuthenticated",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -293,9 +297,7 @@
                 "identifier": "ErrNotAnOrgMember",
                 "newPage": false,
                 "searchKey": "backend.ErrNotAnOrgMember",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -315,9 +317,7 @@
                 "identifier": "Repos",
                 "newPage": false,
                 "searchKey": "backend.Repos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -337,7 +337,9 @@
                 "identifier": "metricIsRepoCloneable",
                 "newPage": false,
                 "searchKey": "backend.metricIsRepoCloneable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -357,7 +359,9 @@
                 "identifier": "errRepoNotFound",
                 "newPage": false,
                 "searchKey": "backend.errRepoNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -377,9 +381,7 @@
                 "identifier": "ErrMustBeSiteAdmin",
                 "newPage": false,
                 "searchKey": "backend.ErrMustBeSiteAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -399,9 +401,7 @@
                 "identifier": "Symbols",
                 "newPage": false,
                 "searchKey": "backend.Symbols",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -421,7 +421,9 @@
                 "identifier": "metricLabels",
                 "newPage": false,
                 "searchKey": "backend.metricLabels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -441,7 +443,9 @@
                 "identifier": "requestDuration",
                 "newPage": false,
                 "searchKey": "backend.requestDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -461,7 +465,9 @@
                 "identifier": "requestGauge",
                 "newPage": false,
                 "searchKey": "backend.requestGauge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -481,9 +487,7 @@
                 "identifier": "UserEmails",
                 "newPage": false,
                 "searchKey": "backend.UserEmails",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -503,7 +507,9 @@
                 "identifier": "verifyEmailTemplates",
                 "newPage": false,
                 "searchKey": "backend.verifyEmailTemplates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -523,7 +529,9 @@
                 "identifier": "updateAccountEmailTemplate",
                 "newPage": false,
                 "searchKey": "backend.updateAccountEmailTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -543,9 +551,7 @@
                 "identifier": "MockMakePasswordResetURL",
                 "newPage": false,
                 "searchKey": "backend.MockMakePasswordResetURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -568,9 +574,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -588,9 +592,7 @@
                 "identifier": "MockServices",
                 "newPage": false,
                 "searchKey": "backend.MockServices",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -610,9 +612,7 @@
                 "identifier": "ErrRepoSeeOther",
                 "newPage": false,
                 "searchKey": "backend.ErrRepoSeeOther",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -630,9 +630,7 @@
                       "identifier": "ErrRepoSeeOther.Error",
                       "newPage": false,
                       "searchKey": "backend.ErrRepoSeeOther.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -655,7 +653,9 @@
                 "identifier": "repos",
                 "newPage": false,
                 "searchKey": "backend.repos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -673,7 +673,9 @@
                       "identifier": "repos.Get",
                       "newPage": false,
                       "searchKey": "backend.repos.Get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -693,7 +695,9 @@
                       "identifier": "repos.GetByName",
                       "newPage": false,
                       "searchKey": "backend.repos.GetByName",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -713,7 +717,9 @@
                       "identifier": "repos.Add",
                       "newPage": false,
                       "searchKey": "backend.repos.Add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -733,7 +739,9 @@
                       "identifier": "repos.List",
                       "newPage": false,
                       "searchKey": "backend.repos.List",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -753,7 +761,9 @@
                       "identifier": "repos.ListIndexable",
                       "newPage": false,
                       "searchKey": "backend.repos.ListIndexable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -773,7 +783,9 @@
                       "identifier": "repos.ListDefault",
                       "newPage": false,
                       "searchKey": "backend.repos.ListDefault",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -793,7 +805,9 @@
                       "identifier": "repos.GetInventory",
                       "newPage": false,
                       "searchKey": "backend.repos.GetInventory",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -813,7 +827,9 @@
                       "identifier": "repos.ResolveRev",
                       "newPage": false,
                       "searchKey": "backend.repos.ResolveRev",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -833,7 +849,9 @@
                       "identifier": "repos.GetCommit",
                       "newPage": false,
                       "searchKey": "backend.repos.GetCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -856,9 +874,7 @@
                 "identifier": "MockRepos",
                 "newPage": false,
                 "searchKey": "backend.MockRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -876,9 +892,7 @@
                       "identifier": "MockRepos.MockGet",
                       "newPage": false,
                       "searchKey": "backend.MockRepos.MockGet",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -898,9 +912,7 @@
                       "identifier": "MockRepos.MockGetByName",
                       "newPage": false,
                       "searchKey": "backend.MockRepos.MockGetByName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -920,9 +932,7 @@
                       "identifier": "MockRepos.MockGet_Return",
                       "newPage": false,
                       "searchKey": "backend.MockRepos.MockGet_Return",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -942,9 +952,7 @@
                       "identifier": "MockRepos.MockList",
                       "newPage": false,
                       "searchKey": "backend.MockRepos.MockList",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -964,9 +972,7 @@
                       "identifier": "MockRepos.MockResolveRev_NoCheck",
                       "newPage": false,
                       "searchKey": "backend.MockRepos.MockResolveRev_NoCheck",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -986,9 +992,7 @@
                       "identifier": "MockRepos.MockResolveRev_NotFound",
                       "newPage": false,
                       "searchKey": "backend.MockRepos.MockResolveRev_NotFound",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1008,9 +1012,7 @@
                       "identifier": "MockRepos.MockGetCommit_Return_NoCheck",
                       "newPage": false,
                       "searchKey": "backend.MockRepos.MockGetCommit_Return_NoCheck",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1033,9 +1035,7 @@
                 "identifier": "InsufficientAuthorizationError",
                 "newPage": false,
                 "searchKey": "backend.InsufficientAuthorizationError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1053,9 +1053,7 @@
                       "identifier": "InsufficientAuthorizationError.Error",
                       "newPage": false,
                       "searchKey": "backend.InsufficientAuthorizationError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1075,9 +1073,7 @@
                       "identifier": "InsufficientAuthorizationError.Unauthorized",
                       "newPage": false,
                       "searchKey": "backend.InsufficientAuthorizationError.Unauthorized",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1100,7 +1096,9 @@
                 "identifier": "contextKey",
                 "newPage": false,
                 "searchKey": "backend.contextKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1120,7 +1118,9 @@
                 "identifier": "symbols",
                 "newPage": false,
                 "searchKey": "backend.symbols",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1138,7 +1138,9 @@
                       "identifier": "symbols.ListTags",
                       "newPage": false,
                       "searchKey": "backend.symbols.ListTags",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1161,7 +1163,9 @@
                 "identifier": "userEmails",
                 "newPage": false,
                 "searchKey": "backend.userEmails",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1179,7 +1183,9 @@
                       "identifier": "userEmails.Add",
                       "newPage": false,
                       "searchKey": "backend.userEmails.Add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1199,7 +1205,9 @@
                       "identifier": "userEmails.SendUserEmailOnFieldUpdate",
                       "newPage": false,
                       "searchKey": "backend.userEmails.SendUserEmailOnFieldUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1222,9 +1230,7 @@
                 "identifier": "UpgradeError",
                 "newPage": false,
                 "searchKey": "backend.UpgradeError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1242,9 +1248,7 @@
                       "identifier": "UpgradeError.Error",
                       "newPage": false,
                       "searchKey": "backend.UpgradeError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1267,7 +1271,9 @@
                 "identifier": "mockRoundTripper",
                 "newPage": false,
                 "searchKey": "backend.mockRoundTripper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1285,7 +1291,9 @@
                       "identifier": "mockRoundTripper.RoundTrip",
                       "newPage": false,
                       "searchKey": "backend.mockRoundTripper.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1308,7 +1316,9 @@
                 "identifier": "gitObjectInfo",
                 "newPage": false,
                 "searchKey": "backend.gitObjectInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1326,7 +1336,9 @@
                       "identifier": "gitObjectInfo.OID",
                       "newPage": false,
                       "searchKey": "backend.gitObjectInfo.OID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1352,9 +1364,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1372,9 +1382,7 @@
                 "identifier": "CountGoImporters",
                 "newPage": false,
                 "searchKey": "backend.CountGoImporters",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1394,7 +1402,9 @@
                 "identifier": "listGoPackagesInRepoImprecise",
                 "newPage": false,
                 "searchKey": "backend.listGoPackagesInRepoImprecise",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1414,7 +1424,9 @@
                 "identifier": "isPossibleExternallyImportableGoPackageDir",
                 "newPage": false,
                 "searchKey": "backend.isPossibleExternallyImportableGoPackageDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1434,9 +1446,7 @@
                 "identifier": "InventoryContext",
                 "newPage": false,
                 "searchKey": "backend.InventoryContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1456,7 +1466,9 @@
                 "identifier": "testContext",
                 "newPage": false,
                 "searchKey": "backend.testContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1476,9 +1488,7 @@
                 "identifier": "CheckOrgAccessOrSiteAdmin",
                 "newPage": false,
                 "searchKey": "backend.CheckOrgAccessOrSiteAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1498,9 +1508,7 @@
                 "identifier": "CheckOrgAccess",
                 "newPage": false,
                 "searchKey": "backend.CheckOrgAccess",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1520,7 +1528,9 @@
                 "identifier": "checkOrgAccess",
                 "newPage": false,
                 "searchKey": "backend.checkOrgAccess",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1540,7 +1550,9 @@
                 "identifier": "checkUserIsOrgMember",
                 "newPage": false,
                 "searchKey": "backend.checkUserIsOrgMember",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1560,7 +1572,9 @@
                 "identifier": "shouldRedirect",
                 "newPage": false,
                 "searchKey": "backend.shouldRedirect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1580,9 +1594,7 @@
                 "identifier": "CheckCurrentUserIsSiteAdmin",
                 "newPage": false,
                 "searchKey": "backend.CheckCurrentUserIsSiteAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1602,9 +1614,7 @@
                 "identifier": "CheckUserIsSiteAdmin",
                 "newPage": false,
                 "searchKey": "backend.CheckUserIsSiteAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1624,9 +1634,7 @@
                 "identifier": "CheckSiteAdminOrSameUser",
                 "newPage": false,
                 "searchKey": "backend.CheckSiteAdminOrSameUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1646,9 +1654,7 @@
                 "identifier": "CheckSameUser",
                 "newPage": false,
                 "searchKey": "backend.CheckSameUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1668,9 +1674,7 @@
                 "identifier": "CurrentUser",
                 "newPage": false,
                 "searchKey": "backend.CurrentUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1690,9 +1694,7 @@
                 "identifier": "WithAuthzBypass",
                 "newPage": false,
                 "searchKey": "backend.WithAuthzBypass",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1712,7 +1714,9 @@
                 "identifier": "hasAuthzBypass",
                 "newPage": false,
                 "searchKey": "backend.hasAuthzBypass",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1732,7 +1736,9 @@
                 "identifier": "trace",
                 "newPage": false,
                 "searchKey": "backend.trace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1752,7 +1758,9 @@
                 "identifier": "checkEmailAbuse",
                 "newPage": false,
                 "searchKey": "backend.checkEmailAbuse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1772,9 +1780,7 @@
                 "identifier": "MakeEmailVerificationCode",
                 "newPage": false,
                 "searchKey": "backend.MakeEmailVerificationCode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1794,9 +1800,7 @@
                 "identifier": "SendUserEmailVerificationEmail",
                 "newPage": false,
                 "searchKey": "backend.SendUserEmailVerificationEmail",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1816,9 +1820,7 @@
                 "identifier": "MakeRandomHardToGuessPassword",
                 "newPage": false,
                 "searchKey": "backend.MakeRandomHardToGuessPassword",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1838,9 +1840,7 @@
                 "identifier": "MakePasswordResetURL",
                 "newPage": false,
                 "searchKey": "backend.MakePasswordResetURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1860,9 +1860,7 @@
                 "identifier": "GetFirstServiceVersion",
                 "newPage": false,
                 "searchKey": "backend.GetFirstServiceVersion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1882,9 +1880,7 @@
                 "identifier": "UpdateServiceVersion",
                 "newPage": false,
                 "searchKey": "backend.UpdateServiceVersion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1904,9 +1900,7 @@
                 "identifier": "IsValidUpgrade",
                 "newPage": false,
                 "searchKey": "backend.IsValidUpgrade",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1926,7 +1920,9 @@
                 "identifier": "TestCountGoImporters",
                 "newPage": false,
                 "searchKey": "backend.TestCountGoImporters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1946,7 +1942,9 @@
                 "identifier": "TestListGoPackagesInRepoImprecise",
                 "newPage": false,
                 "searchKey": "backend.TestListGoPackagesInRepoImprecise",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1966,7 +1964,9 @@
                 "identifier": "TestIsPossibleExternallyImportableGoPackageDir",
                 "newPage": false,
                 "searchKey": "backend.TestIsPossibleExternallyImportableGoPackageDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1986,7 +1986,9 @@
                 "identifier": "TestReposService_Get",
                 "newPage": false,
                 "searchKey": "backend.TestReposService_Get",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2006,7 +2008,9 @@
                 "identifier": "TestReposService_List",
                 "newPage": false,
                 "searchKey": "backend.TestReposService_List",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2026,7 +2030,9 @@
                 "identifier": "TestRepos_Add",
                 "newPage": false,
                 "searchKey": "backend.TestRepos_Add",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2046,7 +2052,9 @@
                 "identifier": "TestReposGetInventory",
                 "newPage": false,
                 "searchKey": "backend.TestReposGetInventory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2066,7 +2074,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "backend.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2086,7 +2096,9 @@
                 "identifier": "TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch",
                 "newPage": false,
                 "searchKey": "backend.TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2106,7 +2118,9 @@
                 "identifier": "TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev",
                 "newPage": false,
                 "searchKey": "backend.TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2126,7 +2140,9 @@
                 "identifier": "TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID",
                 "newPage": false,
                 "searchKey": "backend.TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2146,7 +2162,9 @@
                 "identifier": "TestRepos_ResolveRev_commitIDSpecified_failsToResolve",
                 "newPage": false,
                 "searchKey": "backend.TestRepos_ResolveRev_commitIDSpecified_failsToResolve",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2166,7 +2184,9 @@
                 "identifier": "TestRepos_GetCommit_repoupdaterError",
                 "newPage": false,
                 "searchKey": "backend.TestRepos_GetCommit_repoupdaterError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2186,7 +2206,9 @@
                 "identifier": "TestCheckEmailAbuse",
                 "newPage": false,
                 "searchKey": "backend.TestCheckEmailAbuse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2206,7 +2228,9 @@
                 "identifier": "TestSendUserEmailVerificationEmail",
                 "newPage": false,
                 "searchKey": "backend.TestSendUserEmailVerificationEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2226,7 +2250,9 @@
                 "identifier": "TestSendUserEmailOnFieldUpdate",
                 "newPage": false,
                 "searchKey": "backend.TestSendUserEmailOnFieldUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2241,12 +2267,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#init",
+              "pathID": "/cmd/frontend/backend#init.versions_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.versions_test.go",
                 "newPage": false,
                 "searchKey": "backend.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2266,7 +2294,9 @@
                 "identifier": "TestGetFirstServiceVersion",
                 "newPage": false,
                 "searchKey": "backend.TestGetFirstServiceVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2286,7 +2316,9 @@
                 "identifier": "TestUpdateServiceVersion",
                 "newPage": false,
                 "searchKey": "backend.TestUpdateServiceVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2306,7 +2338,9 @@
                 "identifier": "TestIsValidUpgrade",
                 "newPage": false,
                 "searchKey": "backend.TestIsValidUpgrade",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

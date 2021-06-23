@@ -4,9 +4,7 @@
     "identifier": "cipher",
     "newPage": true,
     "searchKey": "crypto/cipher",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "streamBufferSize",
                 "newPage": false,
                 "searchKey": "cipher.streamBufferSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "gcmBlockSize",
                 "newPage": false,
                 "searchKey": "cipher.gcmBlockSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "gcmTagSize",
                 "newPage": false,
                 "searchKey": "cipher.gcmTagSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "gcmMinimumTagSize",
                 "newPage": false,
                 "searchKey": "cipher.gcmMinimumTagSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "gcmStandardNonceSize",
                 "newPage": false,
                 "searchKey": "cipher.gcmStandardNonceSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,9 +153,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "errOpen",
                 "newPage": false,
                 "searchKey": "cipher.errOpen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "gcmReductionTable",
                 "newPage": false,
                 "searchKey": "cipher.gcmReductionTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "XorBytes",
                 "newPage": false,
                 "searchKey": "cipher.XorBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,9 +240,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -250,7 +258,9 @@
                 "identifier": "cbc",
                 "newPage": false,
                 "searchKey": "cipher.cbc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -268,7 +278,9 @@
                       "identifier": "newCBC",
                       "newPage": false,
                       "searchKey": "cipher.newCBC",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -291,7 +303,9 @@
                 "identifier": "cbcEncrypter",
                 "newPage": false,
                 "searchKey": "cipher.cbcEncrypter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -309,7 +323,9 @@
                       "identifier": "cbcEncrypter.BlockSize",
                       "newPage": false,
                       "searchKey": "cipher.cbcEncrypter.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -329,7 +345,9 @@
                       "identifier": "cbcEncrypter.CryptBlocks",
                       "newPage": false,
                       "searchKey": "cipher.cbcEncrypter.CryptBlocks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -349,7 +367,9 @@
                       "identifier": "cbcEncrypter.SetIV",
                       "newPage": false,
                       "searchKey": "cipher.cbcEncrypter.SetIV",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -372,7 +392,9 @@
                 "identifier": "cbcEncAble",
                 "newPage": false,
                 "searchKey": "cipher.cbcEncAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -392,7 +414,9 @@
                 "identifier": "cbcDecrypter",
                 "newPage": false,
                 "searchKey": "cipher.cbcDecrypter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -410,7 +434,9 @@
                       "identifier": "cbcDecrypter.BlockSize",
                       "newPage": false,
                       "searchKey": "cipher.cbcDecrypter.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -430,7 +456,9 @@
                       "identifier": "cbcDecrypter.CryptBlocks",
                       "newPage": false,
                       "searchKey": "cipher.cbcDecrypter.CryptBlocks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -450,7 +478,9 @@
                       "identifier": "cbcDecrypter.SetIV",
                       "newPage": false,
                       "searchKey": "cipher.cbcDecrypter.SetIV",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -473,7 +503,9 @@
                 "identifier": "cbcDecAble",
                 "newPage": false,
                 "searchKey": "cipher.cbcDecAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -493,7 +525,9 @@
                 "identifier": "cfb",
                 "newPage": false,
                 "searchKey": "cipher.cfb",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -511,7 +545,9 @@
                       "identifier": "cfb.XORKeyStream",
                       "newPage": false,
                       "searchKey": "cipher.cfb.XORKeyStream",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -534,9 +570,7 @@
                 "identifier": "Block",
                 "newPage": false,
                 "searchKey": "cipher.Block",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -556,9 +590,7 @@
                 "identifier": "Stream",
                 "newPage": false,
                 "searchKey": "cipher.Stream",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -576,9 +608,7 @@
                       "identifier": "NewCFBEncrypter",
                       "newPage": false,
                       "searchKey": "cipher.NewCFBEncrypter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -598,9 +628,7 @@
                       "identifier": "NewCFBDecrypter",
                       "newPage": false,
                       "searchKey": "cipher.NewCFBDecrypter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -620,7 +648,9 @@
                       "identifier": "newCFB",
                       "newPage": false,
                       "searchKey": "cipher.newCFB",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -640,9 +670,7 @@
                       "identifier": "NewCTR",
                       "newPage": false,
                       "searchKey": "cipher.NewCTR",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -662,9 +690,7 @@
                       "identifier": "NewOFB",
                       "newPage": false,
                       "searchKey": "cipher.NewOFB",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -687,9 +713,7 @@
                 "identifier": "BlockMode",
                 "newPage": false,
                 "searchKey": "cipher.BlockMode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -707,9 +731,7 @@
                       "identifier": "NewCBCEncrypter",
                       "newPage": false,
                       "searchKey": "cipher.NewCBCEncrypter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -729,9 +751,7 @@
                       "identifier": "NewCBCDecrypter",
                       "newPage": false,
                       "searchKey": "cipher.NewCBCDecrypter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -754,7 +774,9 @@
                 "identifier": "ctr",
                 "newPage": false,
                 "searchKey": "cipher.ctr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -772,7 +794,9 @@
                       "identifier": "ctr.refill",
                       "newPage": false,
                       "searchKey": "cipher.ctr.refill",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -792,7 +816,9 @@
                       "identifier": "ctr.XORKeyStream",
                       "newPage": false,
                       "searchKey": "cipher.ctr.XORKeyStream",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -815,7 +841,9 @@
                 "identifier": "ctrAble",
                 "newPage": false,
                 "searchKey": "cipher.ctrAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -835,9 +863,7 @@
                 "identifier": "AEAD",
                 "newPage": false,
                 "searchKey": "cipher.AEAD",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -855,9 +881,7 @@
                       "identifier": "NewGCM",
                       "newPage": false,
                       "searchKey": "cipher.NewGCM",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -877,9 +901,7 @@
                       "identifier": "NewGCMWithNonceSize",
                       "newPage": false,
                       "searchKey": "cipher.NewGCMWithNonceSize",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -899,9 +921,7 @@
                       "identifier": "NewGCMWithTagSize",
                       "newPage": false,
                       "searchKey": "cipher.NewGCMWithTagSize",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -921,7 +941,9 @@
                       "identifier": "newGCMWithNonceAndTagSize",
                       "newPage": false,
                       "searchKey": "cipher.newGCMWithNonceAndTagSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -944,7 +966,9 @@
                 "identifier": "gcmAble",
                 "newPage": false,
                 "searchKey": "cipher.gcmAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -964,7 +988,9 @@
                 "identifier": "gcmFieldElement",
                 "newPage": false,
                 "searchKey": "cipher.gcmFieldElement",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -982,7 +1008,9 @@
                       "identifier": "gcmAdd",
                       "newPage": false,
                       "searchKey": "cipher.gcmAdd",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1002,7 +1030,9 @@
                       "identifier": "gcmDouble",
                       "newPage": false,
                       "searchKey": "cipher.gcmDouble",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1025,7 +1055,9 @@
                 "identifier": "gcm",
                 "newPage": false,
                 "searchKey": "cipher.gcm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1043,7 +1075,9 @@
                       "identifier": "gcm.NonceSize",
                       "newPage": false,
                       "searchKey": "cipher.gcm.NonceSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1063,7 +1097,9 @@
                       "identifier": "gcm.Overhead",
                       "newPage": false,
                       "searchKey": "cipher.gcm.Overhead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1083,7 +1119,9 @@
                       "identifier": "gcm.Seal",
                       "newPage": false,
                       "searchKey": "cipher.gcm.Seal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1103,7 +1141,9 @@
                       "identifier": "gcm.Open",
                       "newPage": false,
                       "searchKey": "cipher.gcm.Open",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1123,7 +1163,9 @@
                       "identifier": "gcm.mul",
                       "newPage": false,
                       "searchKey": "cipher.gcm.mul",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1143,7 +1185,9 @@
                       "identifier": "gcm.updateBlocks",
                       "newPage": false,
                       "searchKey": "cipher.gcm.updateBlocks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1163,7 +1207,9 @@
                       "identifier": "gcm.update",
                       "newPage": false,
                       "searchKey": "cipher.gcm.update",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1183,7 +1229,9 @@
                       "identifier": "gcm.counterCrypt",
                       "newPage": false,
                       "searchKey": "cipher.gcm.counterCrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1203,7 +1251,9 @@
                       "identifier": "gcm.deriveCounter",
                       "newPage": false,
                       "searchKey": "cipher.gcm.deriveCounter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1223,7 +1273,9 @@
                       "identifier": "gcm.auth",
                       "newPage": false,
                       "searchKey": "cipher.gcm.auth",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1246,9 +1298,7 @@
                 "identifier": "StreamReader",
                 "newPage": false,
                 "searchKey": "cipher.StreamReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1266,9 +1316,7 @@
                       "identifier": "StreamReader.Read",
                       "newPage": false,
                       "searchKey": "cipher.StreamReader.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1291,9 +1339,7 @@
                 "identifier": "StreamWriter",
                 "newPage": false,
                 "searchKey": "cipher.StreamWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1311,9 +1357,7 @@
                       "identifier": "StreamWriter.Write",
                       "newPage": false,
                       "searchKey": "cipher.StreamWriter.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1333,9 +1377,7 @@
                       "identifier": "StreamWriter.Close",
                       "newPage": false,
                       "searchKey": "cipher.StreamWriter.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1358,7 +1400,9 @@
                 "identifier": "ofb",
                 "newPage": false,
                 "searchKey": "cipher.ofb",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1376,7 +1420,9 @@
                       "identifier": "ofb.refill",
                       "newPage": false,
                       "searchKey": "cipher.ofb.refill",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1396,7 +1442,9 @@
                       "identifier": "ofb.XORKeyStream",
                       "newPage": false,
                       "searchKey": "cipher.ofb.XORKeyStream",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1422,9 +1470,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1442,7 +1488,9 @@
                 "identifier": "dup",
                 "newPage": false,
                 "searchKey": "cipher.dup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1462,7 +1510,9 @@
                 "identifier": "reverseBits",
                 "newPage": false,
                 "searchKey": "cipher.reverseBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1482,7 +1532,9 @@
                 "identifier": "gcmInc32",
                 "newPage": false,
                 "searchKey": "cipher.gcmInc32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1502,7 +1554,9 @@
                 "identifier": "sliceForAppend",
                 "newPage": false,
                 "searchKey": "cipher.sliceForAppend",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1522,7 +1576,9 @@
                 "identifier": "xorBytes",
                 "newPage": false,
                 "searchKey": "cipher.xorBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1542,7 +1598,9 @@
                 "identifier": "xorWords",
                 "newPage": false,
                 "searchKey": "cipher.xorWords",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1562,7 +1620,9 @@
                 "identifier": "xorBytesSSE2",
                 "newPage": false,
                 "searchKey": "cipher.xorBytesSSE2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

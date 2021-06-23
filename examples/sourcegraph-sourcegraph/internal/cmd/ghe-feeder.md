@@ -39,16 +39,21 @@
     * [func numLinesInFile(path string, skipNumLines int64) (int64, int64, error)](#numLinesInFile)
     * [func numLinesTotal(skipNumLines int64) (int64, error)](#numLinesTotal)
     * [func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)](#newGHEClient)
-    * [func init()](#init)
+    * [func init()](#init.worker.go)
     * [func randomOrgNameAndSize() (string, int)](#randomOrgNameAndSize)
 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="reposProcessedCounter" href="#reposProcessedCounter">var reposProcessedCounter</a>
 
 ```
 searchKey: main.reposProcessedCounter
+tags: [private]
 ```
 
 ```Go
@@ -59,6 +64,7 @@ var reposProcessedCounter = ...
 
 ```
 searchKey: main.reposFailedCounter
+tags: [private]
 ```
 
 ```Go
@@ -69,6 +75,7 @@ var reposFailedCounter = ...
 
 ```
 searchKey: main.reposSucceededCounter
+tags: [private]
 ```
 
 ```Go
@@ -79,6 +86,7 @@ var reposSucceededCounter = ...
 
 ```
 searchKey: main.reposAlreadyDoneCounter
+tags: [private]
 ```
 
 ```Go
@@ -89,6 +97,7 @@ var reposAlreadyDoneCounter = ...
 
 ```
 searchKey: main.remainingWorkGauge
+tags: [private]
 ```
 
 ```Go
@@ -99,6 +108,7 @@ var remainingWorkGauge = ...
 
 ```
 searchKey: main.left
+tags: [private]
 ```
 
 ```Go
@@ -109,6 +119,7 @@ var left = ...
 
 ```
 searchKey: main.right
+tags: [private]
 ```
 
 ```Go
@@ -119,10 +130,15 @@ Docker, starting from 0.7.x, generates names from notable scientists and hackers
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="feederDB" href="#feederDB">type feederDB struct</a>
 
 ```
 searchKey: main.feederDB
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +160,7 @@ feederDB is a front to a sqlite DB that records ownerRepo processed, orgs create
 
 ```
 searchKey: main.newFeederDB
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +173,7 @@ newFeederDB creates or opens the DB, creating the two tables if necessary
 
 ```
 searchKey: main.feederDB.declareRepo
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +186,7 @@ declareRepo adds the ownerRepo to the DB when it gets pumped into the pipe and m
 
 ```
 searchKey: main.feederDB.failed
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +199,7 @@ failed records the fact that the worker processing the specified ownerRepo faile
 
 ```
 searchKey: main.feederDB.succeeded
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +212,7 @@ succeeded records that a worker has successfully processed the specified ownerRe
 
 ```
 searchKey: main.feederDB.declareOrg
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +225,7 @@ declareOrg adds a newly created org from one of the workers.
 
 ```
 searchKey: main.producer
+tags: [private]
 ```
 
 ```Go
@@ -231,6 +253,7 @@ producer is pumping input line by line into the pipe channel for processing by t
 
 ```
 searchKey: main.producer.pumpFile
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +266,7 @@ pumpFile reads the specified file line by line and feeds ownerRepo strings into 
 
 ```
 searchKey: main.producer.pump
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +279,7 @@ pump finds all the input files specified as command line by recursively going th
 
 ```
 searchKey: main.feederError
+tags: [private]
 ```
 
 ```Go
@@ -272,6 +297,7 @@ feederError is an error while processing an ownerRepo line. errType partitions t
 
 ```
 searchKey: main.feederError.Error
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +308,7 @@ func (e *feederError) Error() string
 
 ```
 searchKey: main.feederError.Unwrap
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +319,7 @@ func (e *feederError) Unwrap() error
 
 ```
 searchKey: main.worker
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +380,7 @@ worker processes ownerRepo strings, feeding them to GHE instance. it declares or
 
 ```
 searchKey: main.worker.run
+tags: [private]
 ```
 
 ```Go
@@ -364,6 +393,7 @@ run spins until work channel closes or context cancels
 
 ```
 searchKey: main.worker.process
+tags: [private]
 ```
 
 ```Go
@@ -376,6 +406,7 @@ process does the necessary work for one ownerRepo string: clone, declare repo in
 
 ```
 searchKey: main.worker.cloneRepo
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +419,7 @@ cloneRepo clones the specified repo from github.com into the scratchDir
 
 ```
 searchKey: main.worker.addRemote
+tags: [private]
 ```
 
 ```Go
@@ -400,6 +432,7 @@ addRemote declares the GHE as a remote to the cloned repo
 
 ```
 searchKey: main.worker.pushToGHE
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +445,7 @@ pushToGHE does a `git push` command to the GHE remote
 
 ```
 searchKey: main.worker.addGHEOrg
+tags: [private]
 ```
 
 ```Go
@@ -424,6 +458,7 @@ addGHEOrg uses the GHE API to declare the org at the GHE
 
 ```
 searchKey: main.worker.addGHERepo
+tags: [private]
 ```
 
 ```Go
@@ -434,10 +469,15 @@ addGHEOrg uses the GHE API to declare the repo at the GHE
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -448,6 +488,7 @@ func main()
 
 ```
 searchKey: main.stats
+tags: [private]
 ```
 
 ```Go
@@ -458,6 +499,7 @@ func stats(wkrs []*worker, prdc *producer) string
 
 ```
 searchKey: main.getRandomName
+tags: [private]
 ```
 
 ```Go
@@ -470,6 +512,7 @@ GetRandomName generates a random name from the list of adjectives and surnames i
 
 ```
 searchKey: main.extractOwnerRepoFromCSVLine
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +525,7 @@ extractOwnerRepoFromCSVLine extracts the owner and repo from a line that comes f
 
 ```
 searchKey: main.numLinesInFile
+tags: [private]
 ```
 
 ```Go
@@ -494,6 +538,7 @@ numLinesInFile counts how many lines are in the specified file (it starts counti
 
 ```
 searchKey: main.numLinesTotal
+tags: [private]
 ```
 
 ```Go
@@ -506,16 +551,18 @@ numLinesTotal goes through all the inputs and counts how many lines are availabl
 
 ```
 searchKey: main.newGHEClient
+tags: [private]
 ```
 
 ```Go
 func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.worker.go" href="#init.worker.go">func init()</a>
 
 ```
 searchKey: main.init
+tags: [private]
 ```
 
 ```Go
@@ -526,6 +573,7 @@ func init()
 
 ```
 searchKey: main.randomOrgNameAndSize
+tags: [private]
 ```
 
 ```Go

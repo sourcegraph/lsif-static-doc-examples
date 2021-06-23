@@ -4,7 +4,9 @@
     "identifier": "github",
     "newPage": true,
     "searchKey": "internal/extsvc/github",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "createPullRequestCommentMutation",
                 "newPage": false,
                 "searchKey": "github.createPullRequestCommentMutation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "mergePullRequestMutation",
                 "newPage": false,
                 "searchKey": "github.mergePullRequestMutation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "timelineItemTypesFmtStr",
                 "newPage": false,
                 "searchKey": "github.timelineItemTypesFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "prCommonFragments",
                 "newPage": false,
                 "searchKey": "github.prCommonFragments",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "timelineItemsFragmentFmtstr",
                 "newPage": false,
                 "searchKey": "github.timelineItemsFragmentFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -140,7 +154,9 @@
                 "identifier": "convertToDraftEventFmtstr",
                 "newPage": false,
                 "searchKey": "github.convertToDraftEventFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -160,7 +176,9 @@
                 "identifier": "pullRequestFragmentsFmtstr",
                 "newPage": false,
                 "searchKey": "github.pullRequestFragmentsFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -180,9 +198,7 @@
                 "identifier": "VisibilityAll",
                 "newPage": false,
                 "searchKey": "github.VisibilityAll",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -202,9 +218,7 @@
                 "identifier": "VisibilityPublic",
                 "newPage": false,
                 "searchKey": "github.VisibilityPublic",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -224,9 +238,7 @@
                 "identifier": "VisibilityPrivate",
                 "newPage": false,
                 "searchKey": "github.VisibilityPrivate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -246,7 +258,9 @@
                 "identifier": "versionCacheResetTime",
                 "newPage": false,
                 "searchKey": "github.versionCacheResetTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -266,7 +280,9 @@
                 "identifier": "graphqlErrTypeNotFound",
                 "newPage": false,
                 "searchKey": "github.graphqlErrTypeNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -289,7 +305,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -307,7 +325,9 @@
                 "identifier": "ghe220Semver",
                 "newPage": false,
                 "searchKey": "github.ghe220Semver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -327,7 +347,9 @@
                 "identifier": "ghe221PlusOrDotComSemver",
                 "newPage": false,
                 "searchKey": "github.ghe221PlusOrDotComSemver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,7 +369,9 @@
                 "identifier": "ghe300PlusOrDotComSemver",
                 "newPage": false,
                 "searchKey": "github.ghe300PlusOrDotComSemver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +391,9 @@
                 "identifier": "gitHubDisable",
                 "newPage": false,
                 "searchKey": "github.gitHubDisable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +413,9 @@
                 "identifier": "githubProxyURL",
                 "newPage": false,
                 "searchKey": "github.githubProxyURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,7 +435,9 @@
                 "identifier": "requestCounter",
                 "newPage": false,
                 "searchKey": "github.requestCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -427,9 +457,7 @@
                 "identifier": "ErrRepoNotFound",
                 "newPage": false,
                 "searchKey": "github.ErrRepoNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -449,7 +477,9 @@
                 "identifier": "errInternalRateLimitExceeded",
                 "newPage": false,
                 "searchKey": "github.errInternalRateLimitExceeded",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -469,9 +499,7 @@
                 "identifier": "ErrIncompleteResults",
                 "newPage": false,
                 "searchKey": "github.ErrIncompleteResults",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -491,9 +519,7 @@
                 "identifier": "ErrPullRequestAlreadyExists",
                 "newPage": false,
                 "searchKey": "github.ErrPullRequestAlreadyExists",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -513,9 +539,7 @@
                 "identifier": "GetRepositoryMock",
                 "newPage": false,
                 "searchKey": "github.GetRepositoryMock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -535,7 +559,9 @@
                 "identifier": "reposGitHubCacheCounter",
                 "newPage": false,
                 "searchKey": "github.reposGitHubCacheCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -555,9 +581,7 @@
                 "identifier": "ErrBatchTooLarge",
                 "newPage": false,
                 "searchKey": "github.ErrBatchTooLarge",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -577,7 +601,9 @@
                 "identifier": "allMatchingSemver",
                 "newPage": false,
                 "searchKey": "github.allMatchingSemver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -597,7 +623,9 @@
                 "identifier": "globalVersionCache",
                 "newPage": false,
                 "searchKey": "github.globalVersionCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -617,9 +645,7 @@
                 "identifier": "MockGetAuthenticatedUserEmails",
                 "newPage": false,
                 "searchKey": "github.MockGetAuthenticatedUserEmails",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -639,9 +665,7 @@
                 "identifier": "MockGetAuthenticatedUserOrgs",
                 "newPage": false,
                 "searchKey": "github.MockGetAuthenticatedUserOrgs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -661,9 +685,7 @@
                 "identifier": "MockGetAuthenticatedUserOAuthScopes",
                 "newPage": false,
                 "searchKey": "github.MockGetAuthenticatedUserOAuthScopes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -683,7 +705,9 @@
                 "identifier": "updateRegex",
                 "newPage": false,
                 "searchKey": "github.updateRegex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -706,7 +730,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -724,9 +750,7 @@
                 "identifier": "PageInfo",
                 "newPage": false,
                 "searchKey": "github.PageInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -746,9 +770,7 @@
                 "identifier": "Actor",
                 "newPage": false,
                 "searchKey": "github.Actor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -768,9 +790,7 @@
                 "identifier": "Team",
                 "newPage": false,
                 "searchKey": "github.Team",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -790,9 +810,7 @@
                 "identifier": "GitActor",
                 "newPage": false,
                 "searchKey": "github.GitActor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -812,9 +830,7 @@
                 "identifier": "Review",
                 "newPage": false,
                 "searchKey": "github.Review",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -834,9 +850,7 @@
                 "identifier": "CheckSuite",
                 "newPage": false,
                 "searchKey": "github.CheckSuite",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -854,9 +868,7 @@
                       "identifier": "CheckSuite.Key",
                       "newPage": false,
                       "searchKey": "github.CheckSuite.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -879,9 +891,7 @@
                 "identifier": "CheckRun",
                 "newPage": false,
                 "searchKey": "github.CheckRun",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -899,9 +909,7 @@
                       "identifier": "CheckRun.Key",
                       "newPage": false,
                       "searchKey": "github.CheckRun.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -924,9 +932,7 @@
                 "identifier": "Commit",
                 "newPage": false,
                 "searchKey": "github.Commit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -946,9 +952,7 @@
                 "identifier": "Status",
                 "newPage": false,
                 "searchKey": "github.Status",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -968,9 +972,7 @@
                 "identifier": "CommitStatus",
                 "newPage": false,
                 "searchKey": "github.CommitStatus",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -988,9 +990,7 @@
                       "identifier": "CommitStatus.Key",
                       "newPage": false,
                       "searchKey": "github.CommitStatus.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1013,9 +1013,7 @@
                 "identifier": "Context",
                 "newPage": false,
                 "searchKey": "github.Context",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1035,9 +1033,7 @@
                 "identifier": "Label",
                 "newPage": false,
                 "searchKey": "github.Label",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1057,9 +1053,7 @@
                 "identifier": "PullRequest",
                 "newPage": false,
                 "searchKey": "github.PullRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1079,9 +1073,7 @@
                 "identifier": "AssignedEvent",
                 "newPage": false,
                 "searchKey": "github.AssignedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1099,9 +1091,7 @@
                       "identifier": "AssignedEvent.Key",
                       "newPage": false,
                       "searchKey": "github.AssignedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1124,9 +1114,7 @@
                 "identifier": "ClosedEvent",
                 "newPage": false,
                 "searchKey": "github.ClosedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1144,9 +1132,7 @@
                       "identifier": "ClosedEvent.Key",
                       "newPage": false,
                       "searchKey": "github.ClosedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1169,9 +1155,7 @@
                 "identifier": "IssueComment",
                 "newPage": false,
                 "searchKey": "github.IssueComment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1189,9 +1173,7 @@
                       "identifier": "IssueComment.Key",
                       "newPage": false,
                       "searchKey": "github.IssueComment.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1214,9 +1196,7 @@
                 "identifier": "RenamedTitleEvent",
                 "newPage": false,
                 "searchKey": "github.RenamedTitleEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1234,9 +1214,7 @@
                       "identifier": "RenamedTitleEvent.Key",
                       "newPage": false,
                       "searchKey": "github.RenamedTitleEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1259,9 +1237,7 @@
                 "identifier": "MergedEvent",
                 "newPage": false,
                 "searchKey": "github.MergedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1279,9 +1255,7 @@
                       "identifier": "MergedEvent.Key",
                       "newPage": false,
                       "searchKey": "github.MergedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1304,9 +1278,7 @@
                 "identifier": "PullRequestReview",
                 "newPage": false,
                 "searchKey": "github.PullRequestReview",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1324,9 +1296,7 @@
                       "identifier": "PullRequestReview.Key",
                       "newPage": false,
                       "searchKey": "github.PullRequestReview.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1349,9 +1319,7 @@
                 "identifier": "PullRequestReviewThread",
                 "newPage": false,
                 "searchKey": "github.PullRequestReviewThread",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1371,9 +1339,7 @@
                 "identifier": "PullRequestCommit",
                 "newPage": false,
                 "searchKey": "github.PullRequestCommit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1391,9 +1357,7 @@
                       "identifier": "PullRequestCommit.Key",
                       "newPage": false,
                       "searchKey": "github.PullRequestCommit.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1416,9 +1380,7 @@
                 "identifier": "CommitWithChecks",
                 "newPage": false,
                 "searchKey": "github.CommitWithChecks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1438,9 +1400,7 @@
                 "identifier": "PullRequestReviewComment",
                 "newPage": false,
                 "searchKey": "github.PullRequestReviewComment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1458,9 +1418,7 @@
                       "identifier": "PullRequestReviewComment.Key",
                       "newPage": false,
                       "searchKey": "github.PullRequestReviewComment.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1483,9 +1441,7 @@
                 "identifier": "ReopenedEvent",
                 "newPage": false,
                 "searchKey": "github.ReopenedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1503,9 +1459,7 @@
                       "identifier": "ReopenedEvent.Key",
                       "newPage": false,
                       "searchKey": "github.ReopenedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1528,9 +1482,7 @@
                 "identifier": "ReviewDismissedEvent",
                 "newPage": false,
                 "searchKey": "github.ReviewDismissedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1548,9 +1500,7 @@
                       "identifier": "ReviewDismissedEvent.Key",
                       "newPage": false,
                       "searchKey": "github.ReviewDismissedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1573,9 +1523,7 @@
                 "identifier": "ReviewRequestRemovedEvent",
                 "newPage": false,
                 "searchKey": "github.ReviewRequestRemovedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1593,9 +1541,7 @@
                       "identifier": "ReviewRequestRemovedEvent.Key",
                       "newPage": false,
                       "searchKey": "github.ReviewRequestRemovedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1618,9 +1564,7 @@
                 "identifier": "ReviewRequestedEvent",
                 "newPage": false,
                 "searchKey": "github.ReviewRequestedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1638,9 +1582,7 @@
                       "identifier": "ReviewRequestedEvent.Key",
                       "newPage": false,
                       "searchKey": "github.ReviewRequestedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1660,9 +1602,7 @@
                       "identifier": "ReviewRequestedEvent.ReviewerDeleted",
                       "newPage": false,
                       "searchKey": "github.ReviewRequestedEvent.ReviewerDeleted",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1685,9 +1625,7 @@
                 "identifier": "ReadyForReviewEvent",
                 "newPage": false,
                 "searchKey": "github.ReadyForReviewEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1705,9 +1643,7 @@
                       "identifier": "ReadyForReviewEvent.Key",
                       "newPage": false,
                       "searchKey": "github.ReadyForReviewEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1730,9 +1666,7 @@
                 "identifier": "ConvertToDraftEvent",
                 "newPage": false,
                 "searchKey": "github.ConvertToDraftEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1750,9 +1684,7 @@
                       "identifier": "ConvertToDraftEvent.Key",
                       "newPage": false,
                       "searchKey": "github.ConvertToDraftEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1775,9 +1707,7 @@
                 "identifier": "UnassignedEvent",
                 "newPage": false,
                 "searchKey": "github.UnassignedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1795,9 +1725,7 @@
                       "identifier": "UnassignedEvent.Key",
                       "newPage": false,
                       "searchKey": "github.UnassignedEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1820,9 +1748,7 @@
                 "identifier": "LabelEvent",
                 "newPage": false,
                 "searchKey": "github.LabelEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1840,9 +1766,7 @@
                       "identifier": "LabelEvent.Key",
                       "newPage": false,
                       "searchKey": "github.LabelEvent.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1865,9 +1789,7 @@
                 "identifier": "TimelineItemConnection",
                 "newPage": false,
                 "searchKey": "github.TimelineItemConnection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1887,9 +1809,7 @@
                 "identifier": "TimelineItem",
                 "newPage": false,
                 "searchKey": "github.TimelineItem",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1907,9 +1827,7 @@
                       "identifier": "TimelineItem.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "github.TimelineItem.UnmarshalJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1932,9 +1850,7 @@
                 "identifier": "CreatePullRequestInput",
                 "newPage": false,
                 "searchKey": "github.CreatePullRequestInput",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1954,9 +1870,7 @@
                 "identifier": "UpdatePullRequestInput",
                 "newPage": false,
                 "searchKey": "github.UpdatePullRequestInput",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1976,9 +1890,7 @@
                 "identifier": "ErrPullRequestNotFound",
                 "newPage": false,
                 "searchKey": "github.ErrPullRequestNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1996,9 +1908,7 @@
                       "identifier": "ErrPullRequestNotFound.Error",
                       "newPage": false,
                       "searchKey": "github.ErrPullRequestNotFound.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2021,7 +1931,9 @@
                 "identifier": "disabledClient",
                 "newPage": false,
                 "searchKey": "github.disabledClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2039,7 +1951,9 @@
                       "identifier": "disabledClient.Do",
                       "newPage": false,
                       "searchKey": "github.disabledClient.Do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2062,9 +1976,7 @@
                 "identifier": "Repository",
                 "newPage": false,
                 "searchKey": "github.Repository",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2082,7 +1994,9 @@
                       "identifier": "convertRestRepo",
                       "newPage": false,
                       "searchKey": "github.convertRestRepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2105,7 +2019,9 @@
                 "identifier": "cachedRepo",
                 "newPage": false,
                 "searchKey": "github.cachedRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2125,7 +2041,9 @@
                 "identifier": "restRepositoryPermissions",
                 "newPage": false,
                 "searchKey": "github.restRepositoryPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2145,7 +2063,9 @@
                 "identifier": "restRepository",
                 "newPage": false,
                 "searchKey": "github.restRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2165,9 +2085,7 @@
                 "identifier": "Visibility",
                 "newPage": false,
                 "searchKey": "github.Visibility",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2187,7 +2105,9 @@
                 "identifier": "restSearchResponse",
                 "newPage": false,
                 "searchKey": "github.restSearchResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2207,9 +2127,7 @@
                 "identifier": "RepositoryListPage",
                 "newPage": false,
                 "searchKey": "github.RepositoryListPage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2229,7 +2147,9 @@
                 "identifier": "restTopicsResponse",
                 "newPage": false,
                 "searchKey": "github.restTopicsResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2249,9 +2169,7 @@
                 "identifier": "User",
                 "newPage": false,
                 "searchKey": "github.User",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2271,9 +2189,7 @@
                 "identifier": "UserEmail",
                 "newPage": false,
                 "searchKey": "github.UserEmail",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2293,9 +2209,7 @@
                 "identifier": "Org",
                 "newPage": false,
                 "searchKey": "github.Org",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2315,9 +2229,7 @@
                 "identifier": "Collaborator",
                 "newPage": false,
                 "searchKey": "github.Collaborator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2337,7 +2249,9 @@
                 "identifier": "versionCache",
                 "newPage": false,
                 "searchKey": "github.versionCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2357,9 +2271,7 @@
                 "identifier": "V3Client",
                 "newPage": false,
                 "searchKey": "github.V3Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2377,9 +2289,7 @@
                       "identifier": "NewV3Client",
                       "newPage": false,
                       "searchKey": "github.NewV3Client",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2399,9 +2309,7 @@
                       "identifier": "NewV3SearchClient",
                       "newPage": false,
                       "searchKey": "github.NewV3SearchClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2421,7 +2329,9 @@
                       "identifier": "newV3Client",
                       "newPage": false,
                       "searchKey": "github.newV3Client",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2441,7 +2351,9 @@
                       "identifier": "newTestClient",
                       "newPage": false,
                       "searchKey": "github.newTestClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2461,7 +2373,9 @@
                       "identifier": "newTestClientWithAuthenticator",
                       "newPage": false,
                       "searchKey": "github.newTestClientWithAuthenticator",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2481,7 +2395,9 @@
                       "identifier": "newV3TestClient",
                       "newPage": false,
                       "searchKey": "github.newV3TestClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2501,7 +2417,9 @@
                       "identifier": "V3Client.cachedGetRepository",
                       "newPage": false,
                       "searchKey": "github.V3Client.cachedGetRepository",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2521,7 +2439,9 @@
                       "identifier": "V3Client.getRepositoryFromAPI",
                       "newPage": false,
                       "searchKey": "github.V3Client.getRepositoryFromAPI",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2541,9 +2461,7 @@
                       "identifier": "V3Client.WithAuthenticator",
                       "newPage": false,
                       "searchKey": "github.V3Client.WithAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2563,9 +2481,7 @@
                       "identifier": "V3Client.RateLimitMonitor",
                       "newPage": false,
                       "searchKey": "github.V3Client.RateLimitMonitor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2585,7 +2501,9 @@
                       "identifier": "V3Client.requestGet",
                       "newPage": false,
                       "searchKey": "github.V3Client.requestGet",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2605,7 +2523,9 @@
                       "identifier": "V3Client.requestGetWithHeader",
                       "newPage": false,
                       "searchKey": "github.V3Client.requestGetWithHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2625,7 +2545,9 @@
                       "identifier": "V3Client.get",
                       "newPage": false,
                       "searchKey": "github.V3Client.get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2645,9 +2567,7 @@
                       "identifier": "V3Client.GetAuthenticatedUser",
                       "newPage": false,
                       "searchKey": "github.V3Client.GetAuthenticatedUser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2667,9 +2587,7 @@
                       "identifier": "V3Client.GetAuthenticatedUserEmails",
                       "newPage": false,
                       "searchKey": "github.V3Client.GetAuthenticatedUserEmails",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2689,9 +2607,7 @@
                       "identifier": "V3Client.GetAuthenticatedUserOrgs",
                       "newPage": false,
                       "searchKey": "github.V3Client.GetAuthenticatedUserOrgs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2711,9 +2627,7 @@
                       "identifier": "V3Client.GetAuthenticatedUserOAuthScopes",
                       "newPage": false,
                       "searchKey": "github.V3Client.GetAuthenticatedUserOAuthScopes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2733,9 +2647,7 @@
                       "identifier": "V3Client.ListRepositoryCollaborators",
                       "newPage": false,
                       "searchKey": "github.V3Client.ListRepositoryCollaborators",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2755,9 +2667,7 @@
                       "identifier": "V3Client.GetRepository",
                       "newPage": false,
                       "searchKey": "github.V3Client.GetRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2777,7 +2687,9 @@
                       "identifier": "V3Client.getRepositoryFromCache",
                       "newPage": false,
                       "searchKey": "github.V3Client.getRepositoryFromCache",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2797,7 +2709,9 @@
                       "identifier": "V3Client.addRepositoryToCache",
                       "newPage": false,
                       "searchKey": "github.V3Client.addRepositoryToCache",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2817,7 +2731,9 @@
                       "identifier": "V3Client.addRepositoriesToCache",
                       "newPage": false,
                       "searchKey": "github.V3Client.addRepositoriesToCache",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2837,7 +2753,9 @@
                       "identifier": "V3Client.getPublicRepositories",
                       "newPage": false,
                       "searchKey": "github.V3Client.getPublicRepositories",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2857,9 +2775,7 @@
                       "identifier": "V3Client.ListPublicRepositories",
                       "newPage": false,
                       "searchKey": "github.V3Client.ListPublicRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2879,9 +2795,7 @@
                       "identifier": "V3Client.ListAffiliatedRepositories",
                       "newPage": false,
                       "searchKey": "github.V3Client.ListAffiliatedRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2901,9 +2815,7 @@
                       "identifier": "V3Client.ListOrgRepositories",
                       "newPage": false,
                       "searchKey": "github.V3Client.ListOrgRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2923,9 +2835,7 @@
                       "identifier": "V3Client.ListUserRepositories",
                       "newPage": false,
                       "searchKey": "github.V3Client.ListUserRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2945,9 +2855,7 @@
                       "identifier": "V3Client.ListRepositoriesForSearch",
                       "newPage": false,
                       "searchKey": "github.V3Client.ListRepositoriesForSearch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2967,9 +2875,7 @@
                       "identifier": "V3Client.ListTopicsOnRepository",
                       "newPage": false,
                       "searchKey": "github.V3Client.ListTopicsOnRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2989,9 +2895,7 @@
                       "identifier": "V3Client.ListInstallationRepositories",
                       "newPage": false,
                       "searchKey": "github.V3Client.ListInstallationRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3011,7 +2915,9 @@
                       "identifier": "V3Client.listRepositories",
                       "newPage": false,
                       "searchKey": "github.V3Client.listRepositories",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3034,9 +2940,7 @@
                 "identifier": "APIError",
                 "newPage": false,
                 "searchKey": "github.APIError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3054,9 +2958,7 @@
                       "identifier": "APIError.Error",
                       "newPage": false,
                       "searchKey": "github.APIError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3076,9 +2978,7 @@
                       "identifier": "APIError.Unauthorized",
                       "newPage": false,
                       "searchKey": "github.APIError.Unauthorized",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3098,9 +2998,7 @@
                       "identifier": "APIError.AccountSuspended",
                       "newPage": false,
                       "searchKey": "github.APIError.AccountSuspended",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3123,9 +3021,7 @@
                 "identifier": "V4Client",
                 "newPage": false,
                 "searchKey": "github.V4Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3143,9 +3039,7 @@
                       "identifier": "NewV4Client",
                       "newPage": false,
                       "searchKey": "github.NewV4Client",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3165,7 +3059,9 @@
                       "identifier": "newV4Client",
                       "newPage": false,
                       "searchKey": "github.newV4Client",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3185,9 +3081,7 @@
                       "identifier": "V4Client.CreatePullRequest",
                       "newPage": false,
                       "searchKey": "github.V4Client.CreatePullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3207,9 +3101,7 @@
                       "identifier": "V4Client.UpdatePullRequest",
                       "newPage": false,
                       "searchKey": "github.V4Client.UpdatePullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3229,9 +3121,7 @@
                       "identifier": "V4Client.MarkPullRequestReadyForReview",
                       "newPage": false,
                       "searchKey": "github.V4Client.MarkPullRequestReadyForReview",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3251,9 +3141,7 @@
                       "identifier": "V4Client.ClosePullRequest",
                       "newPage": false,
                       "searchKey": "github.V4Client.ClosePullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3273,9 +3161,7 @@
                       "identifier": "V4Client.ReopenPullRequest",
                       "newPage": false,
                       "searchKey": "github.V4Client.ReopenPullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3295,9 +3181,7 @@
                       "identifier": "V4Client.LoadPullRequest",
                       "newPage": false,
                       "searchKey": "github.V4Client.LoadPullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3317,9 +3201,7 @@
                       "identifier": "V4Client.GetOpenPullRequestByRefs",
                       "newPage": false,
                       "searchKey": "github.V4Client.GetOpenPullRequestByRefs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3339,9 +3221,7 @@
                       "identifier": "V4Client.CreatePullRequestComment",
                       "newPage": false,
                       "searchKey": "github.V4Client.CreatePullRequestComment",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3361,9 +3241,7 @@
                       "identifier": "V4Client.MergePullRequest",
                       "newPage": false,
                       "searchKey": "github.V4Client.MergePullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3383,7 +3261,9 @@
                       "identifier": "V4Client.loadRemainingTimelineItems",
                       "newPage": false,
                       "searchKey": "github.V4Client.loadRemainingTimelineItems",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3403,9 +3283,7 @@
                       "identifier": "V4Client.WithAuthenticator",
                       "newPage": false,
                       "searchKey": "github.V4Client.WithAuthenticator",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3425,9 +3303,7 @@
                       "identifier": "V4Client.RateLimitMonitor",
                       "newPage": false,
                       "searchKey": "github.V4Client.RateLimitMonitor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3447,7 +3323,9 @@
                       "identifier": "V4Client.requestGraphQL",
                       "newPage": false,
                       "searchKey": "github.V4Client.requestGraphQL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3467,7 +3345,9 @@
                       "identifier": "V4Client.determineGitHubVersion",
                       "newPage": false,
                       "searchKey": "github.V4Client.determineGitHubVersion",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3487,7 +3367,9 @@
                       "identifier": "V4Client.fetchGitHubVersion",
                       "newPage": false,
                       "searchKey": "github.V4Client.fetchGitHubVersion",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3507,9 +3389,7 @@
                       "identifier": "V4Client.GetAuthenticatedUser",
                       "newPage": false,
                       "searchKey": "github.V4Client.GetAuthenticatedUser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3529,9 +3409,7 @@
                       "identifier": "V4Client.GetReposByNameWithOwner",
                       "newPage": false,
                       "searchKey": "github.V4Client.GetReposByNameWithOwner",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3551,7 +3429,9 @@
                       "identifier": "V4Client.buildGetReposBatchQuery",
                       "newPage": false,
                       "searchKey": "github.V4Client.buildGetReposBatchQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3571,7 +3451,9 @@
                       "identifier": "V4Client.repositoryFieldsGraphQLFragment",
                       "newPage": false,
                       "searchKey": "github.V4Client.repositoryFieldsGraphQLFragment",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3594,7 +3476,9 @@
                 "identifier": "limitDepth",
                 "newPage": false,
                 "searchKey": "github.limitDepth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3614,7 +3498,9 @@
                 "identifier": "graphqlErrors",
                 "newPage": false,
                 "searchKey": "github.graphqlErrors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3632,7 +3518,9 @@
                       "identifier": "graphqlErrors.Error",
                       "newPage": false,
                       "searchKey": "github.graphqlErrors.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3655,7 +3543,9 @@
                 "identifier": "mockHTTPResponseBody",
                 "newPage": false,
                 "searchKey": "github.mockHTTPResponseBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3673,7 +3563,9 @@
                       "identifier": "mockHTTPResponseBody.Do",
                       "newPage": false,
                       "searchKey": "github.mockHTTPResponseBody.Do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3696,7 +3588,9 @@
                 "identifier": "mockHTTPEmptyResponse",
                 "newPage": false,
                 "searchKey": "github.mockHTTPEmptyResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3714,7 +3608,9 @@
                       "identifier": "mockHTTPEmptyResponse.Do",
                       "newPage": false,
                       "searchKey": "github.mockHTTPEmptyResponse.Do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3740,7 +3636,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -3758,7 +3656,9 @@
                 "identifier": "abbreviateRef",
                 "newPage": false,
                 "searchKey": "github.abbreviateRef",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3778,7 +3678,9 @@
                 "identifier": "timelineItemTypes",
                 "newPage": false,
                 "searchKey": "github.timelineItemTypes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3798,7 +3700,9 @@
                 "identifier": "timelineItemsFragment",
                 "newPage": false,
                 "searchKey": "github.timelineItemsFragment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3818,7 +3722,9 @@
                 "identifier": "pullRequestFragments",
                 "newPage": false,
                 "searchKey": "github.pullRequestFragments",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3838,9 +3744,7 @@
                 "identifier": "ExternalRepoSpec",
                 "newPage": false,
                 "searchKey": "github.ExternalRepoSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3860,9 +3764,7 @@
                 "identifier": "APIRoot",
                 "newPage": false,
                 "searchKey": "github.APIRoot",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3882,7 +3784,9 @@
                 "identifier": "doRequest",
                 "newPage": false,
                 "searchKey": "github.doRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3902,7 +3806,9 @@
                 "identifier": "canonicalizedURL",
                 "newPage": false,
                 "searchKey": "github.canonicalizedURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3922,7 +3828,9 @@
                 "identifier": "urlIsGitHubDotCom",
                 "newPage": false,
                 "searchKey": "github.urlIsGitHubDotCom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3942,9 +3850,7 @@
                 "identifier": "IsNotFound",
                 "newPage": false,
                 "searchKey": "github.IsNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3964,9 +3870,7 @@
                 "identifier": "IsRateLimitExceeded",
                 "newPage": false,
                 "searchKey": "github.IsRateLimitExceeded",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3986,9 +3890,7 @@
                 "identifier": "IsNotMergeable",
                 "newPage": false,
                 "searchKey": "github.IsNotMergeable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4008,9 +3910,7 @@
                 "identifier": "SplitRepositoryNameWithOwner",
                 "newPage": false,
                 "searchKey": "github.SplitRepositoryNameWithOwner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4030,7 +3930,9 @@
                 "identifier": "ownerNameCacheKey",
                 "newPage": false,
                 "searchKey": "github.ownerNameCacheKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4050,7 +3952,9 @@
                 "identifier": "nameWithOwnerCacheKey",
                 "newPage": false,
                 "searchKey": "github.nameWithOwnerCacheKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4070,7 +3974,9 @@
                 "identifier": "nodeIDCacheKey",
                 "newPage": false,
                 "searchKey": "github.nodeIDCacheKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4090,7 +3996,9 @@
                 "identifier": "convertRestRepoPermissions",
                 "newPage": false,
                 "searchKey": "github.convertRestRepoPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4110,9 +4018,7 @@
                 "identifier": "GetExternalAccountData",
                 "newPage": false,
                 "searchKey": "github.GetExternalAccountData",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4132,9 +4038,7 @@
                 "identifier": "SetExternalAccountData",
                 "newPage": false,
                 "searchKey": "github.SetExternalAccountData",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4154,7 +4058,9 @@
                 "identifier": "normalizeURL",
                 "newPage": false,
                 "searchKey": "github.normalizeURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4174,7 +4080,9 @@
                 "identifier": "newRepoCache",
                 "newPage": false,
                 "searchKey": "github.newRepoCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4194,9 +4102,7 @@
                 "identifier": "HTTPErrorCode",
                 "newPage": false,
                 "searchKey": "github.HTTPErrorCode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4216,7 +4122,9 @@
                 "identifier": "estimateGraphQLCost",
                 "newPage": false,
                 "searchKey": "github.estimateGraphQLCost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4236,7 +4144,9 @@
                 "identifier": "calcDefinitionCost",
                 "newPage": false,
                 "searchKey": "github.calcDefinitionCost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4256,7 +4166,9 @@
                 "identifier": "filterInPlace",
                 "newPage": false,
                 "searchKey": "github.filterInPlace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4276,7 +4188,9 @@
                 "identifier": "unmarshal",
                 "newPage": false,
                 "searchKey": "github.unmarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4296,7 +4210,9 @@
                 "identifier": "TestSplitRepositoryNameWithOwner",
                 "newPage": false,
                 "searchKey": "github.TestSplitRepositoryNameWithOwner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4316,7 +4232,9 @@
                 "identifier": "TestClient_GetRepository",
                 "newPage": false,
                 "searchKey": "github.TestClient_GetRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4336,7 +4254,9 @@
                 "identifier": "TestClient_GetRepository_nonexistent",
                 "newPage": false,
                 "searchKey": "github.TestClient_GetRepository_nonexistent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4356,7 +4276,9 @@
                 "identifier": "TestClient_ListOrgRepositories",
                 "newPage": false,
                 "searchKey": "github.TestClient_ListOrgRepositories",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4376,7 +4298,9 @@
                 "identifier": "stringForRepoList",
                 "newPage": false,
                 "searchKey": "github.stringForRepoList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4396,7 +4320,9 @@
                 "identifier": "repoListsAreEqual",
                 "newPage": false,
                 "searchKey": "github.repoListsAreEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4416,7 +4342,9 @@
                 "identifier": "TestClient_ListRepositoriesForSearch",
                 "newPage": false,
                 "searchKey": "github.TestClient_ListRepositoriesForSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4436,7 +4364,9 @@
                 "identifier": "TestClient_ListRepositoriesForSearch_incomplete",
                 "newPage": false,
                 "searchKey": "github.TestClient_ListRepositoriesForSearch_incomplete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4456,7 +4386,9 @@
                 "identifier": "TestClient_buildGetRepositoriesBatchQuery",
                 "newPage": false,
                 "searchKey": "github.TestClient_buildGetRepositoriesBatchQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4476,7 +4408,9 @@
                 "identifier": "TestClient_GetReposByNameWithOwner",
                 "newPage": false,
                 "searchKey": "github.TestClient_GetReposByNameWithOwner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4496,7 +4430,9 @@
                 "identifier": "TestListRepositoryCollaborators",
                 "newPage": false,
                 "searchKey": "github.TestListRepositoryCollaborators",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4516,7 +4452,9 @@
                 "identifier": "TestNewRepoCache",
                 "newPage": false,
                 "searchKey": "github.TestNewRepoCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4536,7 +4474,9 @@
                 "identifier": "TestListAffiliatedRepositories",
                 "newPage": false,
                 "searchKey": "github.TestListAffiliatedRepositories",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4556,7 +4496,9 @@
                 "identifier": "Test_GetAuthenticatedUserOAuthScopes",
                 "newPage": false,
                 "searchKey": "github.Test_GetAuthenticatedUserOAuthScopes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4576,7 +4518,9 @@
                 "identifier": "TestGetAuthenticatedUserOrgs",
                 "newPage": false,
                 "searchKey": "github.TestGetAuthenticatedUserOrgs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4596,7 +4540,9 @@
                 "identifier": "TestV3Client_WithAuthenticator",
                 "newPage": false,
                 "searchKey": "github.TestV3Client_WithAuthenticator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4616,7 +4562,9 @@
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "github.update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4636,7 +4584,9 @@
                 "identifier": "TestUnmarshal",
                 "newPage": false,
                 "searchKey": "github.TestUnmarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4656,7 +4606,9 @@
                 "identifier": "TestGetAuthenticatedUserV4",
                 "newPage": false,
                 "searchKey": "github.TestGetAuthenticatedUserV4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4676,7 +4628,9 @@
                 "identifier": "TestLoadPullRequest",
                 "newPage": false,
                 "searchKey": "github.TestLoadPullRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4696,7 +4650,9 @@
                 "identifier": "TestCreatePullRequest",
                 "newPage": false,
                 "searchKey": "github.TestCreatePullRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4716,7 +4672,9 @@
                 "identifier": "TestClosePullRequest",
                 "newPage": false,
                 "searchKey": "github.TestClosePullRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4736,7 +4694,9 @@
                 "identifier": "TestReopenPullRequest",
                 "newPage": false,
                 "searchKey": "github.TestReopenPullRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4756,7 +4716,9 @@
                 "identifier": "TestMarkPullRequestReadyForReview",
                 "newPage": false,
                 "searchKey": "github.TestMarkPullRequestReadyForReview",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4776,7 +4738,9 @@
                 "identifier": "TestCreatePullRequestComment",
                 "newPage": false,
                 "searchKey": "github.TestCreatePullRequestComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4796,7 +4760,9 @@
                 "identifier": "TestMergePullRequest",
                 "newPage": false,
                 "searchKey": "github.TestMergePullRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4816,7 +4782,9 @@
                 "identifier": "TestEstimateGraphQLCost",
                 "newPage": false,
                 "searchKey": "github.TestEstimateGraphQLCost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4836,7 +4804,9 @@
                 "identifier": "TestV4Client_WithAuthenticator",
                 "newPage": false,
                 "searchKey": "github.TestV4Client_WithAuthenticator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

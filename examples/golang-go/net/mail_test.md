@@ -10,10 +10,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleParseAddressList" href="#ExampleParseAddressList">func ExampleParseAddressList()</a>
 
 ```
 searchKey: mail_test.ExampleParseAddressList
+tags: [private]
 ```
 
 ```Go
@@ -24,6 +29,7 @@ func ExampleParseAddressList()
 
 ```
 searchKey: mail_test.ExampleParseAddress
+tags: [private]
 ```
 
 ```Go
@@ -34,6 +40,7 @@ func ExampleParseAddress()
 
 ```
 searchKey: mail_test.ExampleReadMessage
+tags: [private]
 ```
 
 ```Go

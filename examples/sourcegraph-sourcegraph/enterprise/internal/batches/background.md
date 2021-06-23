@@ -68,10 +68,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="bulkProcessorMaxNumRetries" href="#bulkProcessorMaxNumRetries">const bulkProcessorMaxNumRetries</a>
 
 ```
 searchKey: background.bulkProcessorMaxNumRetries
+tags: [private]
 ```
 
 ```Go
@@ -84,6 +89,7 @@ bulkProcessorMaxNumRetries is the maximum number of attempts the bulkProcessor m
 
 ```
 searchKey: background.bulkProcessorMaxNumResets
+tags: [private]
 ```
 
 ```Go
@@ -96,7 +102,6 @@ bulkProcessorMaxNumResets is the maximum number of attempts the bulkProcessor ma
 
 ```
 searchKey: background.BatchChangesSSHMigrationID
-tags: [exported]
 ```
 
 ```Go
@@ -109,7 +114,6 @@ BatchChangesSSHMigrationID is the ID of row holding the ssh migration. It is def
 
 ```
 searchKey: background.BatchChangesUserCredentialMigrationID
-tags: [exported]
 ```
 
 ```Go
@@ -122,7 +126,6 @@ BatchChangesUserCredentialMigrationID is the ID of the row holding the user cred
 
 ```
 searchKey: background.BatchChangesSiteCredentialMigrationID
-tags: [exported]
 ```
 
 ```Go
@@ -135,6 +138,7 @@ BatchChangesSiteCredentialMigrationID is the ID of the row holding the site cred
 
 ```
 searchKey: background.reconcilerMaxNumRetries
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +151,7 @@ reconcilerMaxNumRetries is the maximum number of attempts the reconciler makes t
 
 ```
 searchKey: background.reconcilerMaxNumResets
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +164,7 @@ reconcilerMaxNumResets is the maximum number of attempts the reconciler makes to
 
 ```
 searchKey: background.siteCredentialMigrationCountPerRun
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +175,7 @@ const siteCredentialMigrationCountPerRun = 5
 
 ```
 searchKey: background.siteCredentialMigratorProgressQuery
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +186,7 @@ const siteCredentialMigratorProgressQuery = ...
 
 ```
 searchKey: background.sshMigrationCountPerRun
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +197,7 @@ const sshMigrationCountPerRun = 5
 
 ```
 searchKey: background.sshMigratorProgressQuery
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +208,7 @@ const sshMigratorProgressQuery = ...
 
 ```
 searchKey: background.userCredentialMigrationCountPerRun
+tags: [private]
 ```
 
 ```Go
@@ -209,6 +219,7 @@ const userCredentialMigrationCountPerRun = 5
 
 ```
 searchKey: background.userCredentialMigratorProgressQuery
+tags: [private]
 ```
 
 ```Go
@@ -217,10 +228,15 @@ const userCredentialMigratorProgressQuery = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="unknownJobTypeErr" href="#unknownJobTypeErr">type unknownJobTypeErr struct</a>
 
 ```
 searchKey: background.unknownJobTypeErr
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +251,7 @@ unknownJobTypeErr is returned when a ChangesetJob record is of an unknown type a
 
 ```
 searchKey: background.unknownJobTypeErr.Error
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +262,7 @@ func (e unknownJobTypeErr) Error() string
 
 ```
 searchKey: background.unknownJobTypeErr.NonRetryable
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +273,7 @@ func (e unknownJobTypeErr) NonRetryable() bool
 
 ```
 searchKey: background.bulkProcessor
+tags: [private]
 ```
 
 ```Go
@@ -272,6 +291,7 @@ type bulkProcessor struct {
 
 ```
 searchKey: background.bulkProcessor.process
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +302,7 @@ func (b *bulkProcessor) process(ctx context.Context, job *btypes.ChangesetJob) (
 
 ```
 searchKey: background.bulkProcessor.comment
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +313,7 @@ func (b *bulkProcessor) comment(ctx context.Context, job *btypes.ChangesetJob) e
 
 ```
 searchKey: background.bulkProcessor.detach
+tags: [private]
 ```
 
 ```Go
@@ -302,6 +324,7 @@ func (b *bulkProcessor) detach(ctx context.Context, job *btypes.ChangesetJob) er
 
 ```
 searchKey: background.bulkProcessor.reenqueueChangeset
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +335,7 @@ func (b *bulkProcessor) reenqueueChangeset(ctx context.Context, job *btypes.Chan
 
 ```
 searchKey: background.bulkProcessor.mergeChangeset
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +346,7 @@ func (b *bulkProcessor) mergeChangeset(ctx context.Context, job *btypes.Changese
 
 ```
 searchKey: background.bulkProcessorWorker
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +362,7 @@ bulkProcessorWorker is a wrapper for the workerutil handlerfunc to create a bulk
 
 ```
 searchKey: background.bulkProcessorWorker.HandlerFunc
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +373,7 @@ func (b *bulkProcessorWorker) HandlerFunc() dbworker.HandlerFunc
 
 ```
 searchKey: background.batchChangesMetrics
+tags: [private]
 ```
 
 ```Go
@@ -362,6 +389,7 @@ type batchChangesMetrics struct {
 
 ```
 searchKey: background.newMetrics
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +400,7 @@ func newMetrics() batchChangesMetrics
 
 ```
 searchKey: background.siteCredentialMigrator
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +414,7 @@ type siteCredentialMigrator struct {
 
 ```
 searchKey: background.siteCredentialMigrator.Progress
+tags: [private]
 ```
 
 ```Go
@@ -395,6 +425,7 @@ func (m *siteCredentialMigrator) Progress(ctx context.Context) (float64, error)
 
 ```
 searchKey: background.siteCredentialMigrator.Up
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +436,7 @@ func (m *siteCredentialMigrator) Up(ctx context.Context) error
 
 ```
 searchKey: background.siteCredentialMigrator.Down
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +447,7 @@ func (m *siteCredentialMigrator) Down(ctx context.Context) error
 
 ```
 searchKey: background.sshMigrator
+tags: [private]
 ```
 
 ```Go
@@ -429,6 +462,7 @@ sshMigrator migrates existing batch changes credentials that have no SSH key sto
 
 ```
 searchKey: background.sshMigrator.Progress
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +475,7 @@ Progress returns the ratio of migrated records to total records. Any record with
 
 ```
 searchKey: background.sshMigrator.Up
+tags: [private]
 ```
 
 ```Go
@@ -453,6 +488,7 @@ Up loops over all credentials and finds authenticators that are missing SSH cred
 
 ```
 searchKey: background.sshMigrator.Down
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +501,7 @@ Down converts all credentials that have an SSH key back to a version without, so
 
 ```
 searchKey: background.userCredentialMigrator
+tags: [private]
 ```
 
 ```Go
@@ -478,6 +515,7 @@ type userCredentialMigrator struct {
 
 ```
 searchKey: background.userCredentialMigrator.Progress
+tags: [private]
 ```
 
 ```Go
@@ -488,6 +526,7 @@ func (m *userCredentialMigrator) Progress(ctx context.Context) (float64, error)
 
 ```
 searchKey: background.userCredentialMigrator.Up
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +537,7 @@ func (m *userCredentialMigrator) Up(ctx context.Context) error
 
 ```
 searchKey: background.userCredentialMigrator.Down
+tags: [private]
 ```
 
 ```Go
@@ -506,11 +546,14 @@ func (m *userCredentialMigrator) Down(ctx context.Context) error
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Routines" href="#Routines">func Routines(ctx context.Context, batchesStore *store.Store, cf *httpcli.Factory) []goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: background.Routines
-tags: [exported]
 ```
 
 ```Go
@@ -521,6 +564,7 @@ func Routines(ctx context.Context, batchesStore *store.Store, cf *httpcli.Factor
 
 ```
 searchKey: background.newBulkOperationWorker
+tags: [private]
 ```
 
 ```Go
@@ -538,6 +582,7 @@ newBulkOperationWorker creates a dbworker.Worker that fetches enqueued changeset
 
 ```
 searchKey: background.newBulkOperationWorkerResetter
+tags: [private]
 ```
 
 ```Go
@@ -550,6 +595,7 @@ newBulkOperationWorkerResetter creates a dbworker.Resetter that reenqueues lost 
 
 ```
 searchKey: background.createBulkOperationDBWorkerStore
+tags: [private]
 ```
 
 ```Go
@@ -560,6 +606,7 @@ func createBulkOperationDBWorkerStore(s *store.Store) dbworkerstore.Store
 
 ```
 searchKey: background.scanFirstChangesetJobRecord
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +619,7 @@ scanFirstChangesetJobRecord wraps store.ScanFirstChangesetJob to return a generi
 
 ```
 searchKey: background.makeResetterMetrics
+tags: [private]
 ```
 
 ```Go
@@ -582,7 +630,6 @@ func makeResetterMetrics(observationContext *observation.Context, workerName str
 
 ```
 searchKey: background.RegisterMigrations
-tags: [exported]
 ```
 
 ```Go
@@ -595,6 +642,7 @@ RegisterMigrations registers all currently implemented out of band migrations by
 
 ```
 searchKey: background.newReconcilerWorker
+tags: [private]
 ```
 
 ```Go
@@ -613,6 +661,7 @@ newReconcilerWorker creates a dbworker.newWorker that fetches enqueued changeset
 
 ```
 searchKey: background.newReconcilerWorkerResetter
+tags: [private]
 ```
 
 ```Go
@@ -623,6 +672,7 @@ func newReconcilerWorkerResetter(s *store.Store, metrics batchChangesMetrics) *d
 
 ```
 searchKey: background.scanFirstChangesetRecord
+tags: [private]
 ```
 
 ```Go
@@ -633,6 +683,7 @@ func scanFirstChangesetRecord(rows *sql.Rows, err error) (workerutil.Record, boo
 
 ```
 searchKey: background.createReconcilerDBWorkerStore
+tags: [private]
 ```
 
 ```Go
@@ -643,6 +694,7 @@ func createReconcilerDBWorkerStore(s *store.Store) dbworkerstore.Store
 
 ```
 searchKey: background.newSpecExpireWorker
+tags: [private]
 ```
 
 ```Go
@@ -653,6 +705,7 @@ func newSpecExpireWorker(ctx context.Context, cstore *store.Store) goroutine.Bac
 
 ```
 searchKey: background.TestBulkProcessor
+tags: [private]
 ```
 
 ```Go
@@ -663,6 +716,7 @@ func TestBulkProcessor(t *testing.T)
 
 ```
 searchKey: background.TestReconcilerWorkerView
+tags: [private]
 ```
 
 ```Go
@@ -673,6 +727,7 @@ func TestReconcilerWorkerView(t *testing.T)
 
 ```
 searchKey: background.assertReturnedChangesetIDs
+tags: [private]
 ```
 
 ```Go
@@ -683,6 +738,7 @@ func assertReturnedChangesetIDs(t *testing.T, ctx context.Context, db dbutil.DB,
 
 ```
 searchKey: background.TestSiteCredentialMigrator
+tags: [private]
 ```
 
 ```Go
@@ -693,6 +749,7 @@ func TestSiteCredentialMigrator(t *testing.T)
 
 ```
 searchKey: background.TestSSHMigrator
+tags: [private]
 ```
 
 ```Go
@@ -703,6 +760,7 @@ func TestSSHMigrator(t *testing.T)
 
 ```
 searchKey: background.TestUserCredentialMigrator
+tags: [private]
 ```
 
 ```Go
@@ -713,6 +771,7 @@ func TestUserCredentialMigrator(t *testing.T)
 
 ```
 searchKey: background.assertProgress
+tags: [private]
 ```
 
 ```Go
@@ -725,6 +784,7 @@ func assertProgress(t *testing.T, ctx context.Context, want float64, migrator in
 
 ```
 searchKey: background.createUnencryptedUserCredential
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +801,7 @@ func createUnencryptedUserCredential(
 
 ```
 searchKey: background.createPreviouslyEncryptedUserCredential
+tags: [private]
 ```
 
 ```Go

@@ -78,10 +78,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ratePerSecond" href="#ratePerSecond">const ratePerSecond</a>
 
 ```
 searchKey: window.ratePerSecond
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +97,7 @@ const ratePerSecond = iota
 
 ```
 searchKey: window.ratePerMinute
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +108,7 @@ const ratePerMinute
 
 ```
 searchKey: window.ratePerHour
+tags: [private]
 ```
 
 ```Go
@@ -110,11 +117,14 @@ const ratePerHour
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrZeroSchedule" href="#ErrZeroSchedule">var ErrZeroSchedule</a>
 
 ```
 searchKey: window.ErrZeroSchedule
-tags: [exported]
 ```
 
 ```Go
@@ -127,6 +137,7 @@ ErrZeroSchedule indicates a Schedule that has a zero rate limit, and for which T
 
 ```
 searchKey: window.cmpAllowUnexported
+tags: [private]
 ```
 
 ```Go
@@ -139,6 +150,7 @@ We have a bunch of tests in here that rely on unexported fields in the window st
 
 ```
 searchKey: window.cmpOptions
+tags: [private]
 ```
 
 ```Go
@@ -151,6 +163,7 @@ We have a bunch of tests in here that rely on unexported fields in the window st
 
 ```
 searchKey: window.allWeekdays
+tags: [private]
 ```
 
 ```Go
@@ -159,11 +172,14 @@ var allWeekdays = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Configuration" href="#Configuration">type Configuration struct</a>
 
 ```
 searchKey: window.Configuration
-tags: [exported]
 ```
 
 ```Go
@@ -178,7 +194,6 @@ Configuration represents the rollout windows configured on the site.
 
 ```
 searchKey: window.NewConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -191,7 +206,6 @@ NewConfiguration constructs a Configuration based on the given site configuratio
 
 ```
 searchKey: window.Configuration.Estimate
-tags: [exported]
 ```
 
 ```Go
@@ -204,7 +218,6 @@ Estimate attempts to estimate when the given entry in a queue of changesets to b
 
 ```
 searchKey: window.Configuration.HasRolloutWindows
-tags: [exported]
 ```
 
 ```Go
@@ -217,7 +230,6 @@ HasRolloutWindows returns true if one or more windows have been defined.
 
 ```
 searchKey: window.Configuration.Schedule
-tags: [exported]
 ```
 
 ```Go
@@ -230,6 +242,7 @@ Schedule returns the currently active schedule.
 
 ```
 searchKey: window.Configuration.windowFor
+tags: [private]
 ```
 
 ```Go
@@ -242,6 +255,7 @@ windowFor returns the rollout window for the given time, if any, and the duratio
 
 ```
 searchKey: window.Configuration.scheduleAt
+tags: [private]
 ```
 
 ```Go
@@ -254,6 +268,7 @@ scheduleAt constructs a schedule that is valid at the given time. Note that sche
 
 ```
 searchKey: window.rate
+tags: [private]
 ```
 
 ```Go
@@ -267,6 +282,7 @@ type rate struct {
 
 ```
 searchKey: window.makeUnlimitedRate
+tags: [private]
 ```
 
 ```Go
@@ -277,6 +293,7 @@ func makeUnlimitedRate() rate
 
 ```
 searchKey: window.parseRate
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +306,7 @@ parseRate parses a rate given either as a raw integer (which will be interpreted
 
 ```
 searchKey: window.rate.IsUnlimited
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +317,7 @@ func (r rate) IsUnlimited() bool
 
 ```
 searchKey: window.rateUnit
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +328,7 @@ type rateUnit int
 
 ```
 searchKey: window.parseRateUnit
+tags: [private]
 ```
 
 ```Go
@@ -319,6 +339,7 @@ func parseRateUnit(raw string) (rateUnit, error)
 
 ```
 searchKey: window.rateUnit.AsDuration
+tags: [private]
 ```
 
 ```Go
@@ -329,7 +350,6 @@ func (ru rateUnit) AsDuration() time.Duration
 
 ```
 searchKey: window.Schedule
-tags: [exported]
 ```
 
 ```Go
@@ -353,6 +373,7 @@ Schedule represents a single Schedule in time: for a certain amount of time, thi
 
 ```
 searchKey: window.newSchedule
+tags: [private]
 ```
 
 ```Go
@@ -363,7 +384,6 @@ func newSchedule(base time.Time, d time.Duration, rate rate) *Schedule
 
 ```
 searchKey: window.Schedule.Take
-tags: [exported]
 ```
 
 ```Go
@@ -376,7 +396,6 @@ Take blocks until a scheduling event can occur, and returns the time the event o
 
 ```
 searchKey: window.Schedule.ValidUntil
-tags: [exported]
 ```
 
 ```Go
@@ -389,6 +408,7 @@ ValidUntil returns the time the schedule is valid until. After that time, a new 
 
 ```
 searchKey: window.Schedule.total
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +421,7 @@ total returns the total number of events the schedule expects to be able to hand
 
 ```
 searchKey: window.timeOfDay
+tags: [private]
 ```
 
 ```Go
@@ -416,6 +437,7 @@ type timeOfDay struct {
 
 ```
 searchKey: window.timeOfDayFromParts
+tags: [private]
 ```
 
 ```Go
@@ -426,6 +448,7 @@ func timeOfDayFromParts(hour, minute int8) timeOfDay
 
 ```
 searchKey: window.timeOfDayFromTime
+tags: [private]
 ```
 
 ```Go
@@ -436,6 +459,7 @@ func timeOfDayFromTime(t time.Time) timeOfDay
 
 ```
 searchKey: window.parseWindowTime
+tags: [private]
 ```
 
 ```Go
@@ -446,6 +470,7 @@ func parseWindowTime(raw string) (*timeOfDay, error)
 
 ```
 searchKey: window.timeOfDayPtr
+tags: [private]
 ```
 
 ```Go
@@ -456,6 +481,7 @@ func timeOfDayPtr(hour, minute int8) *timeOfDay
 
 ```
 searchKey: window.timeOfDay.after
+tags: [private]
 ```
 
 ```Go
@@ -466,6 +492,7 @@ func (t timeOfDay) after(other timeOfDay) bool
 
 ```
 searchKey: window.timeOfDay.before
+tags: [private]
 ```
 
 ```Go
@@ -476,6 +503,7 @@ func (t timeOfDay) before(other timeOfDay) bool
 
 ```
 searchKey: window.timeOfDay.Equal
+tags: [private]
 ```
 
 ```Go
@@ -486,6 +514,7 @@ func (t timeOfDay) Equal(other timeOfDay) bool
 
 ```
 searchKey: window.weekdaySet
+tags: [private]
 ```
 
 ```Go
@@ -500,6 +529,7 @@ In terms of the implementation, since there are only seven possible weekdays, we
 
 ```
 searchKey: window.newWeekdaySet
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +542,7 @@ newWeekdaySet instantiates a new weekdaySet and returns it. If one or more days 
 
 ```
 searchKey: window.weekdayToBit
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +553,7 @@ func weekdayToBit(day time.Weekday) weekdaySet
 
 ```
 searchKey: window.weekdaySet.add
+tags: [private]
 ```
 
 ```Go
@@ -534,6 +566,7 @@ add adds a day to the weekdaySet.
 
 ```
 searchKey: window.weekdaySet.all
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +579,7 @@ all returns true if the weekdaySet matches all days.
 
 ```
 searchKey: window.weekdaySet.includes
+tags: [private]
 ```
 
 ```Go
@@ -558,6 +592,7 @@ includes returns true if the given day is included in the weekdaySet.
 
 ```
 searchKey: window.weekdaySet.Equal
+tags: [private]
 ```
 
 ```Go
@@ -570,7 +605,6 @@ Equal is needed for test purposes, but not in normal use.
 
 ```
 searchKey: window.Window
-tags: [exported]
 ```
 
 ```Go
@@ -588,6 +622,7 @@ Window represents a single rollout window configured on a site.
 
 ```
 searchKey: window.parseWindow
+tags: [private]
 ```
 
 ```Go
@@ -598,6 +633,7 @@ func parseWindow(raw *schema.BatchChangeRolloutWindow) (Window, error)
 
 ```
 searchKey: window.Window.covers
+tags: [private]
 ```
 
 ```Go
@@ -608,7 +644,6 @@ func (w *Window) covers(when timeOfDay) bool
 
 ```
 searchKey: window.Window.IsOpen
-tags: [exported]
 ```
 
 ```Go
@@ -621,7 +656,6 @@ IsOpen checks if this window is currently open.
 
 ```
 searchKey: window.Window.NextOpenAfter
-tags: [exported]
 ```
 
 ```Go
@@ -632,10 +666,15 @@ NextOpenAfter returns the time that this window will next be open.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="parseConfiguration" href="#parseConfiguration">func parseConfiguration(raw *[]*schema.BatchChangeRolloutWindow) ([]Window, error)</a>
 
 ```
 searchKey: window.parseConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -646,6 +685,7 @@ func parseConfiguration(raw *[]*schema.BatchChangeRolloutWindow) ([]Window, erro
 
 ```
 searchKey: window.parseTimePart
+tags: [private]
 ```
 
 ```Go
@@ -656,6 +696,7 @@ func parseTimePart(s string) (int8, error)
 
 ```
 searchKey: window.parseWeekday
+tags: [private]
 ```
 
 ```Go
@@ -666,6 +707,7 @@ func parseWeekday(raw string) (time.Weekday, error)
 
 ```
 searchKey: window.TestConfiguration_Estimate
+tags: [private]
 ```
 
 ```Go
@@ -676,6 +718,7 @@ func TestConfiguration_Estimate(t *testing.T)
 
 ```
 searchKey: window.TestConfiguration_Schedule
+tags: [private]
 ```
 
 ```Go
@@ -686,6 +729,7 @@ func TestConfiguration_Schedule(t *testing.T)
 
 ```
 searchKey: window.TestConfiguration_currentFor
+tags: [private]
 ```
 
 ```Go
@@ -696,6 +740,7 @@ func TestConfiguration_currentFor(t *testing.T)
 
 ```
 searchKey: window.TestParseConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -706,6 +751,7 @@ func TestParseConfiguration(t *testing.T)
 
 ```
 searchKey: window.TestParseRateUnit
+tags: [private]
 ```
 
 ```Go
@@ -716,6 +762,7 @@ func TestParseRateUnit(t *testing.T)
 
 ```
 searchKey: window.TestParseRate
+tags: [private]
 ```
 
 ```Go
@@ -726,6 +773,7 @@ func TestParseRate(t *testing.T)
 
 ```
 searchKey: window.TestRateUnit_AsDuration
+tags: [private]
 ```
 
 ```Go
@@ -736,6 +784,7 @@ func TestRateUnit_AsDuration(t *testing.T)
 
 ```
 searchKey: window.TestScheduleLimited
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +795,7 @@ func TestScheduleLimited(t *testing.T)
 
 ```
 searchKey: window.TestScheduleUnlimited
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +806,7 @@ func TestScheduleUnlimited(t *testing.T)
 
 ```
 searchKey: window.TestScheduleZero
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +817,7 @@ func TestScheduleZero(t *testing.T)
 
 ```
 searchKey: window.TestTimeOfDay
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +828,7 @@ func TestTimeOfDay(t *testing.T)
 
 ```
 searchKey: window.TestWeekday_All
+tags: [private]
 ```
 
 ```Go
@@ -786,6 +839,7 @@ func TestWeekday_All(t *testing.T)
 
 ```
 searchKey: window.TestWeekday_Includes
+tags: [private]
 ```
 
 ```Go
@@ -796,6 +850,7 @@ func TestWeekday_Includes(t *testing.T)
 
 ```
 searchKey: window.TestWeekdayBitSanity
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +861,7 @@ func TestWeekdayBitSanity(t *testing.T)
 
 ```
 searchKey: window.TestWindow_IsOpen
+tags: [private]
 ```
 
 ```Go
@@ -816,6 +872,7 @@ func TestWindow_IsOpen(t *testing.T)
 
 ```
 searchKey: window.TestWindow_NextOpenAfter
+tags: [private]
 ```
 
 ```Go
@@ -826,6 +883,7 @@ func TestWindow_NextOpenAfter(t *testing.T)
 
 ```
 searchKey: window.TestParseWindowTime
+tags: [private]
 ```
 
 ```Go
@@ -836,6 +894,7 @@ func TestParseWindowTime(t *testing.T)
 
 ```
 searchKey: window.TestParseWeekday
+tags: [private]
 ```
 
 ```Go
@@ -846,6 +905,7 @@ func TestParseWeekday(t *testing.T)
 
 ```
 searchKey: window.TestParseWindow
+tags: [private]
 ```
 
 ```Go

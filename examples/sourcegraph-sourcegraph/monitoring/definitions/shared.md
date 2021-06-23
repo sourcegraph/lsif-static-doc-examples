@@ -62,15 +62,10 @@ Learn more about monitoring in [https://about.sourcegraph.com/handbook/engineeri
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="TitleContainerMonitoring" href="#TitleContainerMonitoring">const TitleContainerMonitoring</a>
 
 ```
 searchKey: shared.TitleContainerMonitoring
-tags: [exported]
 ```
 
 ```Go
@@ -87,7 +82,6 @@ cAdvisor metrics reference: [https://github.com/google/cadvisor/blob/master/docs
 
 ```
 searchKey: shared.TitleGolangMonitoring
-tags: [exported]
 ```
 
 ```Go
@@ -102,7 +96,6 @@ Uses metrics exported by the Prometheus Golang library, so is available on all d
 
 ```
 searchKey: shared.TitleKubernetesMonitoring
-tags: [exported]
 ```
 
 ```Go
@@ -117,7 +110,6 @@ These observables should only use metrics exported by Kubernetes, or use Prometh
 
 ```
 searchKey: shared.TitleProvisioningIndicators
-tags: [exported]
 ```
 
 ```Go
@@ -130,15 +122,10 @@ These observables should only use cAdvisor metrics, and are thus only available 
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ContainerMissing" href="#ContainerMissing">var ContainerMissing</a>
 
 ```
 searchKey: shared.ContainerMissing
-tags: [exported]
 ```
 
 ```Go
@@ -149,7 +136,6 @@ var ContainerMissing sharedObservable = ...
 
 ```
 searchKey: shared.ContainerMemoryUsage
-tags: [exported]
 ```
 
 ```Go
@@ -160,7 +146,6 @@ var ContainerMemoryUsage sharedObservable = ...
 
 ```
 searchKey: shared.ContainerCPUUsage
-tags: [exported]
 ```
 
 ```Go
@@ -171,7 +156,6 @@ var ContainerCPUUsage sharedObservable = ...
 
 ```
 searchKey: shared.ContainerIOUsage
-tags: [exported]
 ```
 
 ```Go
@@ -184,7 +168,6 @@ ContainerIOUsage monitors filesystem reads and writes, and is useful for service
 
 ```
 searchKey: shared.FrontendInternalAPIErrorResponses
-tags: [exported]
 ```
 
 ```Go
@@ -195,7 +178,6 @@ var FrontendInternalAPIErrorResponses sharedObservable = ...
 
 ```
 searchKey: shared.GoGoroutines
-tags: [exported]
 ```
 
 ```Go
@@ -206,7 +188,6 @@ var GoGoroutines sharedObservable = ...
 
 ```
 searchKey: shared.GoGcDuration
-tags: [exported]
 ```
 
 ```Go
@@ -217,7 +198,6 @@ var GoGcDuration sharedObservable = ...
 
 ```
 searchKey: shared.KubernetesPodsAvailable
-tags: [exported]
 ```
 
 ```Go
@@ -228,7 +208,6 @@ var KubernetesPodsAvailable sharedObservable = ...
 
 ```
 searchKey: shared.ProvisioningCPUUsageLongTerm
-tags: [exported]
 ```
 
 ```Go
@@ -239,7 +218,6 @@ var ProvisioningCPUUsageLongTerm sharedObservable = ...
 
 ```
 searchKey: shared.ProvisioningMemoryUsageLongTerm
-tags: [exported]
 ```
 
 ```Go
@@ -250,7 +228,6 @@ var ProvisioningMemoryUsageLongTerm sharedObservable = ...
 
 ```
 searchKey: shared.ProvisioningCPUUsageShortTerm
-tags: [exported]
 ```
 
 ```Go
@@ -261,7 +238,6 @@ var ProvisioningCPUUsageShortTerm sharedObservable = ...
 
 ```
 searchKey: shared.ProvisioningMemoryUsageShortTerm
-tags: [exported]
 ```
 
 ```Go
@@ -270,15 +246,10 @@ var ProvisioningMemoryUsageShortTerm sharedObservable = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Observable" href="#Observable">type Observable monitoring.Observable</a>
 
 ```
 searchKey: shared.Observable
-tags: [exported]
 ```
 
 ```Go
@@ -291,7 +262,6 @@ Observable is a variant of normal Observables that offer convenience functions f
 
 ```
 searchKey: shared.Observable.Observable
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +274,6 @@ Observable is a convenience adapter that casts this SharedObservable as an norma
 
 ```
 searchKey: shared.Observable.WithWarning
-tags: [exported]
 ```
 
 ```Go
@@ -317,7 +286,6 @@ WithWarning overrides this Observable's warning-level alert with the given alert
 
 ```
 searchKey: shared.Observable.WithCritical
-tags: [exported]
 ```
 
 ```Go
@@ -330,7 +298,6 @@ WithCritical overrides this Observable's critical-level alert with the given ale
 
 ```
 searchKey: shared.Observable.WithNoAlerts
-tags: [exported]
 ```
 
 ```Go
@@ -343,6 +310,7 @@ WithNoAlerts disables alerting on this Observable and sets the given interpretat
 
 ```
 searchKey: shared.sharedObservable
+tags: [private]
 ```
 
 ```Go
@@ -353,15 +321,10 @@ sharedObservable defines the type all shared observable variables should have in
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="CadvisorNameMatcher" href="#CadvisorNameMatcher">func CadvisorNameMatcher(containerName string) string</a>
 
 ```
 searchKey: shared.CadvisorNameMatcher
-tags: [exported]
 ```
 
 ```Go

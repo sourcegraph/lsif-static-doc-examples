@@ -88,14 +88,11 @@ Package bufio implements buffered I/O. It wraps an io.Reader or io.Writer object
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="defaultBufSize" href="#defaultBufSize">const defaultBufSize</a>
 
 ```
 searchKey: bufio.defaultBufSize
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +103,7 @@ const defaultBufSize = 4096
 
 ```
 searchKey: bufio.minReadBufferSize
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +114,7 @@ const minReadBufferSize = 16
 
 ```
 searchKey: bufio.maxConsecutiveEmptyReads
+tags: [private]
 ```
 
 ```Go
@@ -126,7 +125,6 @@ const maxConsecutiveEmptyReads = 100
 
 ```
 searchKey: bufio.MaxScanTokenSize
-tags: [exported]
 ```
 
 ```Go
@@ -139,6 +137,7 @@ MaxScanTokenSize is the maximum size used to buffer a token unless the user prov
 
 ```
 searchKey: bufio.startBufSize
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +149,7 @@ const startBufSize = 4096 // Size of initial allocation for buffer.
 
 ```
 searchKey: bufio.DefaultBufSize
+tags: [private]
 ```
 
 ```Go
@@ -158,15 +158,10 @@ const DefaultBufSize = defaultBufSize
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrInvalidUnreadByte" href="#ErrInvalidUnreadByte">var ErrInvalidUnreadByte</a>
 
 ```
 searchKey: bufio.ErrInvalidUnreadByte
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +172,6 @@ var ErrInvalidUnreadByte = errors.New("bufio: invalid use of UnreadByte")
 
 ```
 searchKey: bufio.ErrInvalidUnreadRune
-tags: [exported]
 ```
 
 ```Go
@@ -188,7 +182,6 @@ var ErrInvalidUnreadRune = errors.New("bufio: invalid use of UnreadRune")
 
 ```
 searchKey: bufio.ErrBufferFull
-tags: [exported]
 ```
 
 ```Go
@@ -199,7 +192,6 @@ var ErrBufferFull = errors.New("bufio: buffer full")
 
 ```
 searchKey: bufio.ErrNegativeCount
-tags: [exported]
 ```
 
 ```Go
@@ -210,6 +202,7 @@ var ErrNegativeCount = errors.New("bufio: negative count")
 
 ```
 searchKey: bufio.errNegativeRead
+tags: [private]
 ```
 
 ```Go
@@ -220,6 +213,7 @@ var errNegativeRead = errors.New("bufio: reader returned negative count from Rea
 
 ```
 searchKey: bufio.errNegativeWrite
+tags: [private]
 ```
 
 ```Go
@@ -230,7 +224,6 @@ var errNegativeWrite = errors.New("bufio: writer returned negative count from Wr
 
 ```
 searchKey: bufio.ErrTooLong
-tags: [exported]
 ```
 
 ```Go
@@ -243,7 +236,6 @@ Errors returned by Scanner.
 
 ```
 searchKey: bufio.ErrNegativeAdvance
-tags: [exported]
 ```
 
 ```Go
@@ -256,7 +248,6 @@ Errors returned by Scanner.
 
 ```
 searchKey: bufio.ErrAdvanceTooFar
-tags: [exported]
 ```
 
 ```Go
@@ -269,7 +260,6 @@ Errors returned by Scanner.
 
 ```
 searchKey: bufio.ErrBadReadCount
-tags: [exported]
 ```
 
 ```Go
@@ -282,7 +272,6 @@ Errors returned by Scanner.
 
 ```
 searchKey: bufio.ErrFinalToken
-tags: [exported]
 ```
 
 ```Go
@@ -295,6 +284,7 @@ ErrFinalToken is a special sentinel error value. It is intended to be returned b
 
 ```
 searchKey: bufio.errorRune
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +295,7 @@ var errorRune = []byte(string(utf8.RuneError))
 
 ```
 searchKey: bufio.IsSpace
+tags: [private]
 ```
 
 ```Go
@@ -313,15 +304,10 @@ var IsSpace = isSpace
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Reader" href="#Reader">type Reader struct</a>
 
 ```
 searchKey: bufio.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -341,7 +327,6 @@ Reader implements buffering for an io.Reader object.
 
 ```
 searchKey: bufio.NewReaderSize
-tags: [exported]
 ```
 
 ```Go
@@ -354,7 +339,6 @@ NewReaderSize returns a new Reader whose buffer has at least the specified size.
 
 ```
 searchKey: bufio.NewReader
-tags: [exported]
 ```
 
 ```Go
@@ -367,7 +351,6 @@ NewReader returns a new Reader whose buffer has the default size.
 
 ```
 searchKey: bufio.Reader.Size
-tags: [exported]
 ```
 
 ```Go
@@ -380,7 +363,6 @@ Size returns the size of the underlying buffer in bytes.
 
 ```
 searchKey: bufio.Reader.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -393,6 +375,7 @@ Reset discards any buffered data, resets all state, and switches the buffered re
 
 ```
 searchKey: bufio.Reader.reset
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +386,7 @@ func (b *Reader) reset(buf []byte, r io.Reader)
 
 ```
 searchKey: bufio.Reader.fill
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +399,7 @@ fill reads a new chunk into the buffer.
 
 ```
 searchKey: bufio.Reader.readErr
+tags: [private]
 ```
 
 ```Go
@@ -425,7 +410,6 @@ func (b *Reader) readErr() error
 
 ```
 searchKey: bufio.Reader.Peek
-tags: [exported]
 ```
 
 ```Go
@@ -440,7 +424,6 @@ Calling Peek prevents a UnreadByte or UnreadRune call from succeeding until the 
 
 ```
 searchKey: bufio.Reader.Discard
-tags: [exported]
 ```
 
 ```Go
@@ -455,7 +438,6 @@ If Discard skips fewer than n bytes, it also returns an error. If 0 <= n <= b.Bu
 
 ```
 searchKey: bufio.Reader.Read
-tags: [exported]
 ```
 
 ```Go
@@ -468,7 +450,6 @@ Read reads data into p. It returns the number of bytes read into p. The bytes ar
 
 ```
 searchKey: bufio.Reader.ReadByte
-tags: [exported]
 ```
 
 ```Go
@@ -481,7 +462,6 @@ ReadByte reads and returns a single byte. If no byte is available, returns an er
 
 ```
 searchKey: bufio.Reader.UnreadByte
-tags: [exported]
 ```
 
 ```Go
@@ -496,7 +476,6 @@ UnreadByte returns an error if the most recent method called on the Reader was n
 
 ```
 searchKey: bufio.Reader.ReadRune
-tags: [exported]
 ```
 
 ```Go
@@ -509,7 +488,6 @@ ReadRune reads a single UTF-8 encoded Unicode character and returns the rune and
 
 ```
 searchKey: bufio.Reader.UnreadRune
-tags: [exported]
 ```
 
 ```Go
@@ -522,7 +500,6 @@ UnreadRune unreads the last rune. If the most recent method called on the Reader
 
 ```
 searchKey: bufio.Reader.Buffered
-tags: [exported]
 ```
 
 ```Go
@@ -535,7 +512,6 @@ Buffered returns the number of bytes that can be read from the current buffer.
 
 ```
 searchKey: bufio.Reader.ReadSlice
-tags: [exported]
 ```
 
 ```Go
@@ -548,7 +524,6 @@ ReadSlice reads until the first occurrence of delim in the input, returning a sl
 
 ```
 searchKey: bufio.Reader.ReadLine
-tags: [exported]
 ```
 
 ```Go
@@ -565,6 +540,7 @@ The text returned from ReadLine does not include the line end ("\r\n" or "\n"). 
 
 ```
 searchKey: bufio.Reader.collectFragments
+tags: [private]
 ```
 
 ```Go
@@ -577,7 +553,6 @@ collectFragments reads until the first occurrence of delim in the input. It retu
 
 ```
 searchKey: bufio.Reader.ReadBytes
-tags: [exported]
 ```
 
 ```Go
@@ -590,7 +565,6 @@ ReadBytes reads until the first occurrence of delim in the input, returning a sl
 
 ```
 searchKey: bufio.Reader.ReadString
-tags: [exported]
 ```
 
 ```Go
@@ -603,7 +577,6 @@ ReadString reads until the first occurrence of delim in the input, returning a s
 
 ```
 searchKey: bufio.Reader.WriteTo
-tags: [exported]
 ```
 
 ```Go
@@ -616,6 +589,7 @@ WriteTo implements io.WriterTo. This may make multiple calls to the Read method 
 
 ```
 searchKey: bufio.Reader.writeBuf
+tags: [private]
 ```
 
 ```Go
@@ -628,7 +602,6 @@ writeBuf writes the Reader's buffer to the writer.
 
 ```
 searchKey: bufio.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -646,7 +619,6 @@ Writer implements buffering for an io.Writer object. If an error occurs writing 
 
 ```
 searchKey: bufio.NewWriterSize
-tags: [exported]
 ```
 
 ```Go
@@ -659,7 +631,6 @@ NewWriterSize returns a new Writer whose buffer has at least the specified size.
 
 ```
 searchKey: bufio.NewWriter
-tags: [exported]
 ```
 
 ```Go
@@ -672,7 +643,6 @@ NewWriter returns a new Writer whose buffer has the default size.
 
 ```
 searchKey: bufio.Writer.Size
-tags: [exported]
 ```
 
 ```Go
@@ -685,7 +655,6 @@ Size returns the size of the underlying buffer in bytes.
 
 ```
 searchKey: bufio.Writer.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -698,7 +667,6 @@ Reset discards any unflushed buffered data, clears any error, and resets b to wr
 
 ```
 searchKey: bufio.Writer.Flush
-tags: [exported]
 ```
 
 ```Go
@@ -711,7 +679,6 @@ Flush writes any buffered data to the underlying io.Writer.
 
 ```
 searchKey: bufio.Writer.Available
-tags: [exported]
 ```
 
 ```Go
@@ -724,7 +691,6 @@ Available returns how many bytes are unused in the buffer.
 
 ```
 searchKey: bufio.Writer.Buffered
-tags: [exported]
 ```
 
 ```Go
@@ -737,7 +703,6 @@ Buffered returns the number of bytes that have been written into the current buf
 
 ```
 searchKey: bufio.Writer.Write
-tags: [exported]
 ```
 
 ```Go
@@ -750,7 +715,6 @@ Write writes the contents of p into the buffer. It returns the number of bytes w
 
 ```
 searchKey: bufio.Writer.WriteByte
-tags: [exported]
 ```
 
 ```Go
@@ -763,7 +727,6 @@ WriteByte writes a single byte.
 
 ```
 searchKey: bufio.Writer.WriteRune
-tags: [exported]
 ```
 
 ```Go
@@ -776,7 +739,6 @@ WriteRune writes a single Unicode code point, returning the number of bytes writ
 
 ```
 searchKey: bufio.Writer.WriteString
-tags: [exported]
 ```
 
 ```Go
@@ -789,7 +751,6 @@ WriteString writes a string. It returns the number of bytes written. If the coun
 
 ```
 searchKey: bufio.Writer.ReadFrom
-tags: [exported]
 ```
 
 ```Go
@@ -802,7 +763,6 @@ ReadFrom implements io.ReaderFrom. If the underlying writer supports the ReadFro
 
 ```
 searchKey: bufio.ReadWriter
-tags: [exported]
 ```
 
 ```Go
@@ -818,7 +778,6 @@ ReadWriter stores pointers to a Reader and a Writer. It implements io.ReadWriter
 
 ```
 searchKey: bufio.NewReadWriter
-tags: [exported]
 ```
 
 ```Go
@@ -831,7 +790,6 @@ NewReadWriter allocates a new ReadWriter that dispatches to r and w.
 
 ```
 searchKey: bufio.Scanner
-tags: [exported]
 ```
 
 ```Go
@@ -858,7 +816,6 @@ Scanning stops unrecoverably at EOF, the first I/O error, or a token too large t
 
 ```
 searchKey: bufio.NewScanner
-tags: [exported]
 ```
 
 ```Go
@@ -871,7 +828,6 @@ NewScanner returns a new Scanner to read from r. The split function defaults to 
 
 ```
 searchKey: bufio.Scanner.Err
-tags: [exported]
 ```
 
 ```Go
@@ -884,7 +840,6 @@ Err returns the first non-EOF error that was encountered by the Scanner.
 
 ```
 searchKey: bufio.Scanner.Bytes
-tags: [exported]
 ```
 
 ```Go
@@ -897,7 +852,6 @@ Bytes returns the most recent token generated by a call to Scan. The underlying 
 
 ```
 searchKey: bufio.Scanner.Text
-tags: [exported]
 ```
 
 ```Go
@@ -910,7 +864,6 @@ Text returns the most recent token generated by a call to Scan as a newly alloca
 
 ```
 searchKey: bufio.Scanner.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -923,6 +876,7 @@ Scan advances the Scanner to the next token, which will then be available throug
 
 ```
 searchKey: bufio.Scanner.advance
+tags: [private]
 ```
 
 ```Go
@@ -935,6 +889,7 @@ advance consumes n bytes of the buffer. It reports whether the advance was legal
 
 ```
 searchKey: bufio.Scanner.setErr
+tags: [private]
 ```
 
 ```Go
@@ -947,7 +902,6 @@ setErr records the first error encountered.
 
 ```
 searchKey: bufio.Scanner.Buffer
-tags: [exported]
 ```
 
 ```Go
@@ -964,7 +918,6 @@ Buffer panics if it is called after scanning has started.
 
 ```
 searchKey: bufio.Scanner.Split
-tags: [exported]
 ```
 
 ```Go
@@ -979,6 +932,7 @@ Split panics if it is called after scanning has started.
 
 ```
 searchKey: bufio.Scanner.MaxTokenSize
+tags: [private]
 ```
 
 ```Go
@@ -989,6 +943,7 @@ func (s *Scanner) MaxTokenSize(n int)
 
 ```
 searchKey: bufio.Scanner.ErrOrEOF
+tags: [private]
 ```
 
 ```Go
@@ -1001,7 +956,6 @@ ErrOrEOF is like Err, but returns EOF. Used to test a corner case.
 
 ```
 searchKey: bufio.SplitFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1018,15 +972,10 @@ The function is never called with an empty data slice unless atEOF is true. If a
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ScanBytes" href="#ScanBytes">func ScanBytes(data []byte, atEOF bool) (advance int, token []byte, err error)</a>
 
 ```
 searchKey: bufio.ScanBytes
-tags: [exported]
 ```
 
 ```Go
@@ -1039,7 +988,6 @@ ScanBytes is a split function for a Scanner that returns each byte as a token.
 
 ```
 searchKey: bufio.ScanRunes
-tags: [exported]
 ```
 
 ```Go
@@ -1052,6 +1000,7 @@ ScanRunes is a split function for a Scanner that returns each UTF-8-encoded rune
 
 ```
 searchKey: bufio.dropCR
+tags: [private]
 ```
 
 ```Go
@@ -1064,7 +1013,6 @@ dropCR drops a terminal \r from the data.
 
 ```
 searchKey: bufio.ScanLines
-tags: [exported]
 ```
 
 ```Go
@@ -1077,6 +1025,7 @@ ScanLines is a split function for a Scanner that returns each line of text, stri
 
 ```
 searchKey: bufio.isSpace
+tags: [private]
 ```
 
 ```Go
@@ -1089,7 +1038,6 @@ isSpace reports whether the character is a Unicode white space character. We avo
 
 ```
 searchKey: bufio.ScanWords
-tags: [exported]
 ```
 
 ```Go

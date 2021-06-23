@@ -4,9 +4,7 @@
     "identifier": "asn1",
     "newPage": true,
     "searchKey": "encoding/asn1",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "allowAsterisk",
                 "newPage": false,
                 "searchKey": "asn1.allowAsterisk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "rejectAsterisk",
                 "newPage": false,
                 "searchKey": "asn1.rejectAsterisk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "allowAmpersand",
                 "newPage": false,
                 "searchKey": "asn1.allowAmpersand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "rejectAmpersand",
                 "newPage": false,
                 "searchKey": "asn1.rejectAmpersand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,9 +128,7 @@
                 "identifier": "TagBoolean",
                 "newPage": false,
                 "searchKey": "asn1.TagBoolean",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -146,9 +148,7 @@
                 "identifier": "TagInteger",
                 "newPage": false,
                 "searchKey": "asn1.TagInteger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -168,9 +168,7 @@
                 "identifier": "TagBitString",
                 "newPage": false,
                 "searchKey": "asn1.TagBitString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -190,9 +188,7 @@
                 "identifier": "TagOctetString",
                 "newPage": false,
                 "searchKey": "asn1.TagOctetString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -212,9 +208,7 @@
                 "identifier": "TagNull",
                 "newPage": false,
                 "searchKey": "asn1.TagNull",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -234,9 +228,7 @@
                 "identifier": "TagOID",
                 "newPage": false,
                 "searchKey": "asn1.TagOID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -256,9 +248,7 @@
                 "identifier": "TagEnum",
                 "newPage": false,
                 "searchKey": "asn1.TagEnum",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -278,9 +268,7 @@
                 "identifier": "TagUTF8String",
                 "newPage": false,
                 "searchKey": "asn1.TagUTF8String",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -300,9 +288,7 @@
                 "identifier": "TagSequence",
                 "newPage": false,
                 "searchKey": "asn1.TagSequence",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -322,9 +308,7 @@
                 "identifier": "TagSet",
                 "newPage": false,
                 "searchKey": "asn1.TagSet",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -344,9 +328,7 @@
                 "identifier": "TagNumericString",
                 "newPage": false,
                 "searchKey": "asn1.TagNumericString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -366,9 +348,7 @@
                 "identifier": "TagPrintableString",
                 "newPage": false,
                 "searchKey": "asn1.TagPrintableString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -388,9 +368,7 @@
                 "identifier": "TagT61String",
                 "newPage": false,
                 "searchKey": "asn1.TagT61String",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -410,9 +388,7 @@
                 "identifier": "TagIA5String",
                 "newPage": false,
                 "searchKey": "asn1.TagIA5String",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -432,9 +408,7 @@
                 "identifier": "TagUTCTime",
                 "newPage": false,
                 "searchKey": "asn1.TagUTCTime",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -454,9 +428,7 @@
                 "identifier": "TagGeneralizedTime",
                 "newPage": false,
                 "searchKey": "asn1.TagGeneralizedTime",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -476,9 +448,7 @@
                 "identifier": "TagGeneralString",
                 "newPage": false,
                 "searchKey": "asn1.TagGeneralString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -498,9 +468,7 @@
                 "identifier": "TagBMPString",
                 "newPage": false,
                 "searchKey": "asn1.TagBMPString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -520,9 +488,7 @@
                 "identifier": "ClassUniversal",
                 "newPage": false,
                 "searchKey": "asn1.ClassUniversal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -542,9 +508,7 @@
                 "identifier": "ClassApplication",
                 "newPage": false,
                 "searchKey": "asn1.ClassApplication",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -564,9 +528,7 @@
                 "identifier": "ClassContextSpecific",
                 "newPage": false,
                 "searchKey": "asn1.ClassContextSpecific",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -586,9 +548,7 @@
                 "identifier": "ClassPrivate",
                 "newPage": false,
                 "searchKey": "asn1.ClassPrivate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -611,9 +571,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -631,7 +589,9 @@
                 "identifier": "bigOne",
                 "newPage": false,
                 "searchKey": "asn1.bigOne",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -651,9 +611,7 @@
                 "identifier": "NullRawValue",
                 "newPage": false,
                 "searchKey": "asn1.NullRawValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -673,9 +631,7 @@
                 "identifier": "NullBytes",
                 "newPage": false,
                 "searchKey": "asn1.NullBytes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -695,7 +651,9 @@
                 "identifier": "bitStringType",
                 "newPage": false,
                 "searchKey": "asn1.bitStringType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -715,7 +673,9 @@
                 "identifier": "objectIdentifierType",
                 "newPage": false,
                 "searchKey": "asn1.objectIdentifierType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -735,7 +695,9 @@
                 "identifier": "enumeratedType",
                 "newPage": false,
                 "searchKey": "asn1.enumeratedType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -755,7 +717,9 @@
                 "identifier": "flagType",
                 "newPage": false,
                 "searchKey": "asn1.flagType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -775,7 +739,9 @@
                 "identifier": "timeType",
                 "newPage": false,
                 "searchKey": "asn1.timeType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -795,7 +761,9 @@
                 "identifier": "rawValueType",
                 "newPage": false,
                 "searchKey": "asn1.rawValueType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -815,7 +783,9 @@
                 "identifier": "rawContentsType",
                 "newPage": false,
                 "searchKey": "asn1.rawContentsType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -835,7 +805,9 @@
                 "identifier": "bigIntType",
                 "newPage": false,
                 "searchKey": "asn1.bigIntType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -855,7 +827,9 @@
                 "identifier": "byte00Encoder",
                 "newPage": false,
                 "searchKey": "asn1.byte00Encoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -875,7 +849,9 @@
                 "identifier": "byteFFEncoder",
                 "newPage": false,
                 "searchKey": "asn1.byteFFEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -895,7 +871,9 @@
                 "identifier": "boolTestData",
                 "newPage": false,
                 "searchKey": "asn1.boolTestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -915,7 +893,9 @@
                 "identifier": "int64TestData",
                 "newPage": false,
                 "searchKey": "asn1.int64TestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -935,7 +915,9 @@
                 "identifier": "int32TestData",
                 "newPage": false,
                 "searchKey": "asn1.int32TestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -955,7 +937,9 @@
                 "identifier": "bigIntTests",
                 "newPage": false,
                 "searchKey": "asn1.bigIntTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -975,7 +959,9 @@
                 "identifier": "bitStringTestData",
                 "newPage": false,
                 "searchKey": "asn1.bitStringTestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -995,7 +981,9 @@
                 "identifier": "bitStringRightAlignTests",
                 "newPage": false,
                 "searchKey": "asn1.bitStringRightAlignTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1015,7 +1003,9 @@
                 "identifier": "objectIdentifierTestData",
                 "newPage": false,
                 "searchKey": "asn1.objectIdentifierTestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1035,7 +1025,9 @@
                 "identifier": "utcTestData",
                 "newPage": false,
                 "searchKey": "asn1.utcTestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1055,7 +1047,9 @@
                 "identifier": "generalizedTimeTestData",
                 "newPage": false,
                 "searchKey": "asn1.generalizedTimeTestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1075,7 +1069,9 @@
                 "identifier": "tagAndLengthData",
                 "newPage": false,
                 "searchKey": "asn1.tagAndLengthData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1095,7 +1091,9 @@
                 "identifier": "parseFieldParametersTestData",
                 "newPage": false,
                 "searchKey": "asn1.parseFieldParametersTestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1115,7 +1113,9 @@
                 "identifier": "unmarshalTestData",
                 "newPage": false,
                 "searchKey": "asn1.unmarshalTestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1135,7 +1135,9 @@
                 "identifier": "oiEqualTests",
                 "newPage": false,
                 "searchKey": "asn1.oiEqualTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1155,7 +1157,9 @@
                 "identifier": "derEncodedSelfSignedCert",
                 "newPage": false,
                 "searchKey": "asn1.derEncodedSelfSignedCert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1175,7 +1179,9 @@
                 "identifier": "derEncodedSelfSignedCertBytes",
                 "newPage": false,
                 "searchKey": "asn1.derEncodedSelfSignedCertBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1195,7 +1201,9 @@
                 "identifier": "derEncodedPaypalNULCertBytes",
                 "newPage": false,
                 "searchKey": "asn1.derEncodedPaypalNULCertBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1215,7 +1223,9 @@
                 "identifier": "stringSliceTestData",
                 "newPage": false,
                 "searchKey": "asn1.stringSliceTestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1235,7 +1245,9 @@
                 "identifier": "explicitTaggedTimeTestData",
                 "newPage": false,
                 "searchKey": "asn1.explicitTaggedTimeTestData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1255,7 +1267,9 @@
                 "identifier": "bmpStringTests",
                 "newPage": false,
                 "searchKey": "asn1.bmpStringTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1275,7 +1289,9 @@
                 "identifier": "PST",
                 "newPage": false,
                 "searchKey": "asn1.PST",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1295,7 +1311,9 @@
                 "identifier": "marshalTests",
                 "newPage": false,
                 "searchKey": "asn1.marshalTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1315,7 +1333,9 @@
                 "identifier": "marshalWithParamsTests",
                 "newPage": false,
                 "searchKey": "asn1.marshalWithParamsTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1335,7 +1355,9 @@
                 "identifier": "marshalErrTests",
                 "newPage": false,
                 "searchKey": "asn1.marshalErrTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1358,9 +1380,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1378,9 +1398,7 @@
                 "identifier": "StructuralError",
                 "newPage": false,
                 "searchKey": "asn1.StructuralError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1398,9 +1416,7 @@
                       "identifier": "StructuralError.Error",
                       "newPage": false,
                       "searchKey": "asn1.StructuralError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1423,9 +1439,7 @@
                 "identifier": "SyntaxError",
                 "newPage": false,
                 "searchKey": "asn1.SyntaxError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1443,9 +1457,7 @@
                       "identifier": "SyntaxError.Error",
                       "newPage": false,
                       "searchKey": "asn1.SyntaxError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1468,9 +1480,7 @@
                 "identifier": "BitString",
                 "newPage": false,
                 "searchKey": "asn1.BitString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1488,7 +1498,9 @@
                       "identifier": "parseBitString",
                       "newPage": false,
                       "searchKey": "asn1.parseBitString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1508,9 +1520,7 @@
                       "identifier": "BitString.At",
                       "newPage": false,
                       "searchKey": "asn1.BitString.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1530,9 +1540,7 @@
                       "identifier": "BitString.RightAlign",
                       "newPage": false,
                       "searchKey": "asn1.BitString.RightAlign",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1555,9 +1563,7 @@
                 "identifier": "ObjectIdentifier",
                 "newPage": false,
                 "searchKey": "asn1.ObjectIdentifier",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1575,7 +1581,9 @@
                       "identifier": "parseObjectIdentifier",
                       "newPage": false,
                       "searchKey": "asn1.parseObjectIdentifier",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1595,9 +1603,7 @@
                       "identifier": "ObjectIdentifier.Equal",
                       "newPage": false,
                       "searchKey": "asn1.ObjectIdentifier.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1617,9 +1623,7 @@
                       "identifier": "ObjectIdentifier.String",
                       "newPage": false,
                       "searchKey": "asn1.ObjectIdentifier.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1642,9 +1646,7 @@
                 "identifier": "Enumerated",
                 "newPage": false,
                 "searchKey": "asn1.Enumerated",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1664,9 +1666,7 @@
                 "identifier": "Flag",
                 "newPage": false,
                 "searchKey": "asn1.Flag",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1686,7 +1686,9 @@
                 "identifier": "asteriskFlag",
                 "newPage": false,
                 "searchKey": "asn1.asteriskFlag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1706,7 +1708,9 @@
                 "identifier": "ampersandFlag",
                 "newPage": false,
                 "searchKey": "asn1.ampersandFlag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1726,9 +1730,7 @@
                 "identifier": "RawValue",
                 "newPage": false,
                 "searchKey": "asn1.RawValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1748,9 +1750,7 @@
                 "identifier": "RawContent",
                 "newPage": false,
                 "searchKey": "asn1.RawContent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1770,7 +1770,9 @@
                 "identifier": "invalidUnmarshalError",
                 "newPage": false,
                 "searchKey": "asn1.invalidUnmarshalError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1788,7 +1790,9 @@
                       "identifier": "invalidUnmarshalError.Error",
                       "newPage": false,
                       "searchKey": "asn1.invalidUnmarshalError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1811,7 +1815,9 @@
                 "identifier": "tagAndLength",
                 "newPage": false,
                 "searchKey": "asn1.tagAndLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1829,7 +1835,9 @@
                       "identifier": "parseTagAndLength",
                       "newPage": false,
                       "searchKey": "asn1.parseTagAndLength",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1852,7 +1860,9 @@
                 "identifier": "fieldParameters",
                 "newPage": false,
                 "searchKey": "asn1.fieldParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1870,7 +1880,9 @@
                       "identifier": "parseFieldParameters",
                       "newPage": false,
                       "searchKey": "asn1.parseFieldParameters",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1893,7 +1905,9 @@
                 "identifier": "encoder",
                 "newPage": false,
                 "searchKey": "asn1.encoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1911,7 +1925,9 @@
                       "identifier": "makeBigInt",
                       "newPage": false,
                       "searchKey": "asn1.makeBigInt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1931,7 +1947,9 @@
                       "identifier": "makeObjectIdentifier",
                       "newPage": false,
                       "searchKey": "asn1.makeObjectIdentifier",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1951,7 +1969,9 @@
                       "identifier": "makePrintableString",
                       "newPage": false,
                       "searchKey": "asn1.makePrintableString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1971,7 +1991,9 @@
                       "identifier": "makeIA5String",
                       "newPage": false,
                       "searchKey": "asn1.makeIA5String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1991,7 +2013,9 @@
                       "identifier": "makeNumericString",
                       "newPage": false,
                       "searchKey": "asn1.makeNumericString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2011,7 +2035,9 @@
                       "identifier": "makeUTF8String",
                       "newPage": false,
                       "searchKey": "asn1.makeUTF8String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2031,7 +2057,9 @@
                       "identifier": "makeUTCTime",
                       "newPage": false,
                       "searchKey": "asn1.makeUTCTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2051,7 +2079,9 @@
                       "identifier": "makeGeneralizedTime",
                       "newPage": false,
                       "searchKey": "asn1.makeGeneralizedTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2071,7 +2101,9 @@
                       "identifier": "makeBody",
                       "newPage": false,
                       "searchKey": "asn1.makeBody",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2091,7 +2123,9 @@
                       "identifier": "makeField",
                       "newPage": false,
                       "searchKey": "asn1.makeField",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2114,7 +2148,9 @@
                 "identifier": "byteEncoder",
                 "newPage": false,
                 "searchKey": "asn1.byteEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2132,7 +2168,9 @@
                       "identifier": "byteEncoder.Len",
                       "newPage": false,
                       "searchKey": "asn1.byteEncoder.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2152,7 +2190,9 @@
                       "identifier": "byteEncoder.Encode",
                       "newPage": false,
                       "searchKey": "asn1.byteEncoder.Encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2175,7 +2215,9 @@
                 "identifier": "bytesEncoder",
                 "newPage": false,
                 "searchKey": "asn1.bytesEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2193,7 +2235,9 @@
                       "identifier": "bytesEncoder.Len",
                       "newPage": false,
                       "searchKey": "asn1.bytesEncoder.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2213,7 +2257,9 @@
                       "identifier": "bytesEncoder.Encode",
                       "newPage": false,
                       "searchKey": "asn1.bytesEncoder.Encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2236,7 +2282,9 @@
                 "identifier": "stringEncoder",
                 "newPage": false,
                 "searchKey": "asn1.stringEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2254,7 +2302,9 @@
                       "identifier": "stringEncoder.Len",
                       "newPage": false,
                       "searchKey": "asn1.stringEncoder.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2274,7 +2324,9 @@
                       "identifier": "stringEncoder.Encode",
                       "newPage": false,
                       "searchKey": "asn1.stringEncoder.Encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2297,7 +2349,9 @@
                 "identifier": "multiEncoder",
                 "newPage": false,
                 "searchKey": "asn1.multiEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2315,7 +2369,9 @@
                       "identifier": "multiEncoder.Len",
                       "newPage": false,
                       "searchKey": "asn1.multiEncoder.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2335,7 +2391,9 @@
                       "identifier": "multiEncoder.Encode",
                       "newPage": false,
                       "searchKey": "asn1.multiEncoder.Encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2358,7 +2416,9 @@
                 "identifier": "setEncoder",
                 "newPage": false,
                 "searchKey": "asn1.setEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2376,7 +2436,9 @@
                       "identifier": "setEncoder.Len",
                       "newPage": false,
                       "searchKey": "asn1.setEncoder.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2396,7 +2458,9 @@
                       "identifier": "setEncoder.Encode",
                       "newPage": false,
                       "searchKey": "asn1.setEncoder.Encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2419,7 +2483,9 @@
                 "identifier": "taggedEncoder",
                 "newPage": false,
                 "searchKey": "asn1.taggedEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2437,7 +2503,9 @@
                       "identifier": "taggedEncoder.Len",
                       "newPage": false,
                       "searchKey": "asn1.taggedEncoder.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2457,7 +2525,9 @@
                       "identifier": "taggedEncoder.Encode",
                       "newPage": false,
                       "searchKey": "asn1.taggedEncoder.Encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2480,7 +2550,9 @@
                 "identifier": "int64Encoder",
                 "newPage": false,
                 "searchKey": "asn1.int64Encoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2498,7 +2570,9 @@
                       "identifier": "int64Encoder.Len",
                       "newPage": false,
                       "searchKey": "asn1.int64Encoder.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2518,7 +2592,9 @@
                       "identifier": "int64Encoder.Encode",
                       "newPage": false,
                       "searchKey": "asn1.int64Encoder.Encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2541,7 +2617,9 @@
                 "identifier": "bitStringEncoder",
                 "newPage": false,
                 "searchKey": "asn1.bitStringEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2559,7 +2637,9 @@
                       "identifier": "bitStringEncoder.Len",
                       "newPage": false,
                       "searchKey": "asn1.bitStringEncoder.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2579,7 +2659,9 @@
                       "identifier": "bitStringEncoder.Encode",
                       "newPage": false,
                       "searchKey": "asn1.bitStringEncoder.Encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2602,7 +2684,9 @@
                 "identifier": "oidEncoder",
                 "newPage": false,
                 "searchKey": "asn1.oidEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2620,7 +2704,9 @@
                       "identifier": "oidEncoder.Len",
                       "newPage": false,
                       "searchKey": "asn1.oidEncoder.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2640,7 +2726,9 @@
                       "identifier": "oidEncoder.Encode",
                       "newPage": false,
                       "searchKey": "asn1.oidEncoder.Encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2663,7 +2751,9 @@
                 "identifier": "boolTest",
                 "newPage": false,
                 "searchKey": "asn1.boolTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2683,7 +2773,9 @@
                 "identifier": "int64Test",
                 "newPage": false,
                 "searchKey": "asn1.int64Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2703,7 +2795,9 @@
                 "identifier": "int32Test",
                 "newPage": false,
                 "searchKey": "asn1.int32Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2723,7 +2817,9 @@
                 "identifier": "bitStringTest",
                 "newPage": false,
                 "searchKey": "asn1.bitStringTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2743,7 +2839,9 @@
                 "identifier": "bitStringRightAlignTest",
                 "newPage": false,
                 "searchKey": "asn1.bitStringRightAlignTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2763,7 +2861,9 @@
                 "identifier": "objectIdentifierTest",
                 "newPage": false,
                 "searchKey": "asn1.objectIdentifierTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2783,7 +2883,9 @@
                 "identifier": "timeTest",
                 "newPage": false,
                 "searchKey": "asn1.timeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2803,7 +2905,9 @@
                 "identifier": "tagAndLengthTest",
                 "newPage": false,
                 "searchKey": "asn1.tagAndLengthTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2823,7 +2927,9 @@
                 "identifier": "parseFieldParametersTest",
                 "newPage": false,
                 "searchKey": "asn1.parseFieldParametersTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2843,7 +2949,9 @@
                 "identifier": "TestObjectIdentifierStruct",
                 "newPage": false,
                 "searchKey": "asn1.TestObjectIdentifierStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2863,7 +2971,9 @@
                 "identifier": "TestContextSpecificTags",
                 "newPage": false,
                 "searchKey": "asn1.TestContextSpecificTags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2883,7 +2993,9 @@
                 "identifier": "TestContextSpecificTags2",
                 "newPage": false,
                 "searchKey": "asn1.TestContextSpecificTags2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2903,7 +3015,9 @@
                 "identifier": "TestContextSpecificTags3",
                 "newPage": false,
                 "searchKey": "asn1.TestContextSpecificTags3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2923,7 +3037,9 @@
                 "identifier": "TestElementsAfterString",
                 "newPage": false,
                 "searchKey": "asn1.TestElementsAfterString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2943,7 +3059,9 @@
                 "identifier": "TestBigInt",
                 "newPage": false,
                 "searchKey": "asn1.TestBigInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2963,7 +3081,9 @@
                 "identifier": "TestSet",
                 "newPage": false,
                 "searchKey": "asn1.TestSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2983,7 +3103,9 @@
                 "identifier": "Certificate",
                 "newPage": false,
                 "searchKey": "asn1.Certificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3003,7 +3125,9 @@
                 "identifier": "TBSCertificate",
                 "newPage": false,
                 "searchKey": "asn1.TBSCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3023,7 +3147,9 @@
                 "identifier": "AlgorithmIdentifier",
                 "newPage": false,
                 "searchKey": "asn1.AlgorithmIdentifier",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3043,7 +3169,9 @@
                 "identifier": "RDNSequence",
                 "newPage": false,
                 "searchKey": "asn1.RDNSequence",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3063,7 +3191,9 @@
                 "identifier": "RelativeDistinguishedNameSET",
                 "newPage": false,
                 "searchKey": "asn1.RelativeDistinguishedNameSET",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3083,7 +3213,9 @@
                 "identifier": "AttributeTypeAndValue",
                 "newPage": false,
                 "searchKey": "asn1.AttributeTypeAndValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3103,7 +3235,9 @@
                 "identifier": "Validity",
                 "newPage": false,
                 "searchKey": "asn1.Validity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3123,7 +3257,9 @@
                 "identifier": "PublicKeyInfo",
                 "newPage": false,
                 "searchKey": "asn1.PublicKeyInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3143,7 +3279,9 @@
                 "identifier": "rawStructTest",
                 "newPage": false,
                 "searchKey": "asn1.rawStructTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3163,7 +3301,9 @@
                 "identifier": "oiEqualTest",
                 "newPage": false,
                 "searchKey": "asn1.oiEqualTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3183,7 +3323,9 @@
                 "identifier": "explicitTaggedTimeTest",
                 "newPage": false,
                 "searchKey": "asn1.explicitTaggedTimeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3203,7 +3345,9 @@
                 "identifier": "implicitTaggedTimeTest",
                 "newPage": false,
                 "searchKey": "asn1.implicitTaggedTimeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3223,7 +3367,9 @@
                 "identifier": "truncatedExplicitTagTest",
                 "newPage": false,
                 "searchKey": "asn1.truncatedExplicitTagTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3243,7 +3389,9 @@
                 "identifier": "invalidUTF8Test",
                 "newPage": false,
                 "searchKey": "asn1.invalidUTF8Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3263,7 +3411,9 @@
                 "identifier": "unexported",
                 "newPage": false,
                 "searchKey": "asn1.unexported",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3283,7 +3433,9 @@
                 "identifier": "exported",
                 "newPage": false,
                 "searchKey": "asn1.exported",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3303,7 +3455,9 @@
                 "identifier": "intStruct",
                 "newPage": false,
                 "searchKey": "asn1.intStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3323,7 +3477,9 @@
                 "identifier": "twoIntStruct",
                 "newPage": false,
                 "searchKey": "asn1.twoIntStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3343,7 +3499,9 @@
                 "identifier": "bigIntStruct",
                 "newPage": false,
                 "searchKey": "asn1.bigIntStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3363,7 +3521,9 @@
                 "identifier": "nestedStruct",
                 "newPage": false,
                 "searchKey": "asn1.nestedStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3383,7 +3543,9 @@
                 "identifier": "rawContentsStruct",
                 "newPage": false,
                 "searchKey": "asn1.rawContentsStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3403,7 +3565,9 @@
                 "identifier": "implicitTagTest",
                 "newPage": false,
                 "searchKey": "asn1.implicitTagTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3423,7 +3587,9 @@
                 "identifier": "explicitTagTest",
                 "newPage": false,
                 "searchKey": "asn1.explicitTagTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3443,7 +3609,9 @@
                 "identifier": "flagTest",
                 "newPage": false,
                 "searchKey": "asn1.flagTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3463,7 +3631,9 @@
                 "identifier": "generalizedTimeTest",
                 "newPage": false,
                 "searchKey": "asn1.generalizedTimeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3483,7 +3653,9 @@
                 "identifier": "ia5StringTest",
                 "newPage": false,
                 "searchKey": "asn1.ia5StringTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3503,7 +3675,9 @@
                 "identifier": "printableStringTest",
                 "newPage": false,
                 "searchKey": "asn1.printableStringTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3523,7 +3697,9 @@
                 "identifier": "genericStringTest",
                 "newPage": false,
                 "searchKey": "asn1.genericStringTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3543,7 +3719,9 @@
                 "identifier": "optionalRawValueTest",
                 "newPage": false,
                 "searchKey": "asn1.optionalRawValueTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3563,7 +3741,9 @@
                 "identifier": "omitEmptyTest",
                 "newPage": false,
                 "searchKey": "asn1.omitEmptyTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3583,7 +3763,9 @@
                 "identifier": "defaultTest",
                 "newPage": false,
                 "searchKey": "asn1.defaultTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3603,7 +3785,9 @@
                 "identifier": "applicationTest",
                 "newPage": false,
                 "searchKey": "asn1.applicationTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3623,7 +3807,9 @@
                 "identifier": "privateTest",
                 "newPage": false,
                 "searchKey": "asn1.privateTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3643,7 +3829,9 @@
                 "identifier": "numericStringTest",
                 "newPage": false,
                 "searchKey": "asn1.numericStringTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3663,7 +3851,9 @@
                 "identifier": "testSET",
                 "newPage": false,
                 "searchKey": "asn1.testSET",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3683,7 +3873,9 @@
                 "identifier": "marshalTest",
                 "newPage": false,
                 "searchKey": "asn1.marshalTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3703,7 +3895,9 @@
                 "identifier": "marshalWithParamsTest",
                 "newPage": false,
                 "searchKey": "asn1.marshalWithParamsTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3723,7 +3917,9 @@
                 "identifier": "marshalErrTest",
                 "newPage": false,
                 "searchKey": "asn1.marshalErrTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3746,9 +3942,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -3766,7 +3960,9 @@
                 "identifier": "parseBool",
                 "newPage": false,
                 "searchKey": "asn1.parseBool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3786,7 +3982,9 @@
                 "identifier": "checkInteger",
                 "newPage": false,
                 "searchKey": "asn1.checkInteger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3806,7 +4004,9 @@
                 "identifier": "parseInt64",
                 "newPage": false,
                 "searchKey": "asn1.parseInt64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3826,7 +4026,9 @@
                 "identifier": "parseInt32",
                 "newPage": false,
                 "searchKey": "asn1.parseInt32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3846,7 +4048,9 @@
                 "identifier": "parseBigInt",
                 "newPage": false,
                 "searchKey": "asn1.parseBigInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3866,7 +4070,9 @@
                 "identifier": "parseBase128Int",
                 "newPage": false,
                 "searchKey": "asn1.parseBase128Int",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3886,7 +4092,9 @@
                 "identifier": "parseUTCTime",
                 "newPage": false,
                 "searchKey": "asn1.parseUTCTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3906,7 +4114,9 @@
                 "identifier": "parseGeneralizedTime",
                 "newPage": false,
                 "searchKey": "asn1.parseGeneralizedTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3926,7 +4136,9 @@
                 "identifier": "parseNumericString",
                 "newPage": false,
                 "searchKey": "asn1.parseNumericString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3946,7 +4158,9 @@
                 "identifier": "isNumeric",
                 "newPage": false,
                 "searchKey": "asn1.isNumeric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3966,7 +4180,9 @@
                 "identifier": "parsePrintableString",
                 "newPage": false,
                 "searchKey": "asn1.parsePrintableString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3986,7 +4202,9 @@
                 "identifier": "isPrintable",
                 "newPage": false,
                 "searchKey": "asn1.isPrintable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4006,7 +4224,9 @@
                 "identifier": "parseIA5String",
                 "newPage": false,
                 "searchKey": "asn1.parseIA5String",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4026,7 +4246,9 @@
                 "identifier": "parseT61String",
                 "newPage": false,
                 "searchKey": "asn1.parseT61String",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4046,7 +4268,9 @@
                 "identifier": "parseUTF8String",
                 "newPage": false,
                 "searchKey": "asn1.parseUTF8String",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4066,7 +4290,9 @@
                 "identifier": "parseBMPString",
                 "newPage": false,
                 "searchKey": "asn1.parseBMPString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4086,7 +4312,9 @@
                 "identifier": "parseSequenceOf",
                 "newPage": false,
                 "searchKey": "asn1.parseSequenceOf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4106,7 +4334,9 @@
                 "identifier": "invalidLength",
                 "newPage": false,
                 "searchKey": "asn1.invalidLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4126,7 +4356,9 @@
                 "identifier": "parseField",
                 "newPage": false,
                 "searchKey": "asn1.parseField",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4146,7 +4378,9 @@
                 "identifier": "canHaveDefaultValue",
                 "newPage": false,
                 "searchKey": "asn1.canHaveDefaultValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4166,7 +4400,9 @@
                 "identifier": "setDefaultValue",
                 "newPage": false,
                 "searchKey": "asn1.setDefaultValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4186,9 +4422,7 @@
                 "identifier": "Unmarshal",
                 "newPage": false,
                 "searchKey": "asn1.Unmarshal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4208,9 +4442,7 @@
                 "identifier": "UnmarshalWithParams",
                 "newPage": false,
                 "searchKey": "asn1.UnmarshalWithParams",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4230,7 +4462,9 @@
                 "identifier": "getUniversalType",
                 "newPage": false,
                 "searchKey": "asn1.getUniversalType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4250,7 +4484,9 @@
                 "identifier": "base128IntLength",
                 "newPage": false,
                 "searchKey": "asn1.base128IntLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4270,7 +4506,9 @@
                 "identifier": "appendBase128Int",
                 "newPage": false,
                 "searchKey": "asn1.appendBase128Int",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4290,7 +4528,9 @@
                 "identifier": "appendLength",
                 "newPage": false,
                 "searchKey": "asn1.appendLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4310,7 +4550,9 @@
                 "identifier": "lengthLength",
                 "newPage": false,
                 "searchKey": "asn1.lengthLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4330,7 +4572,9 @@
                 "identifier": "appendTagAndLength",
                 "newPage": false,
                 "searchKey": "asn1.appendTagAndLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4350,7 +4594,9 @@
                 "identifier": "appendTwoDigits",
                 "newPage": false,
                 "searchKey": "asn1.appendTwoDigits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4370,7 +4616,9 @@
                 "identifier": "appendFourDigits",
                 "newPage": false,
                 "searchKey": "asn1.appendFourDigits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4390,7 +4638,9 @@
                 "identifier": "outsideUTCRange",
                 "newPage": false,
                 "searchKey": "asn1.outsideUTCRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4410,7 +4660,9 @@
                 "identifier": "appendUTCTime",
                 "newPage": false,
                 "searchKey": "asn1.appendUTCTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4430,7 +4682,9 @@
                 "identifier": "appendGeneralizedTime",
                 "newPage": false,
                 "searchKey": "asn1.appendGeneralizedTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4450,7 +4704,9 @@
                 "identifier": "appendTimeCommon",
                 "newPage": false,
                 "searchKey": "asn1.appendTimeCommon",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4470,7 +4726,9 @@
                 "identifier": "stripTagAndLength",
                 "newPage": false,
                 "searchKey": "asn1.stripTagAndLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4490,9 +4748,7 @@
                 "identifier": "Marshal",
                 "newPage": false,
                 "searchKey": "asn1.Marshal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4512,9 +4768,7 @@
                 "identifier": "MarshalWithParams",
                 "newPage": false,
                 "searchKey": "asn1.MarshalWithParams",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4534,7 +4788,9 @@
                 "identifier": "TestParseBool",
                 "newPage": false,
                 "searchKey": "asn1.TestParseBool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4554,7 +4810,9 @@
                 "identifier": "TestParseInt64",
                 "newPage": false,
                 "searchKey": "asn1.TestParseInt64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4574,7 +4832,9 @@
                 "identifier": "TestParseInt32",
                 "newPage": false,
                 "searchKey": "asn1.TestParseInt32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4594,7 +4854,9 @@
                 "identifier": "TestParseBigInt",
                 "newPage": false,
                 "searchKey": "asn1.TestParseBigInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4614,7 +4876,9 @@
                 "identifier": "TestBitString",
                 "newPage": false,
                 "searchKey": "asn1.TestBitString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4634,7 +4898,9 @@
                 "identifier": "TestBitStringAt",
                 "newPage": false,
                 "searchKey": "asn1.TestBitStringAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4654,7 +4920,9 @@
                 "identifier": "TestBitStringRightAlign",
                 "newPage": false,
                 "searchKey": "asn1.TestBitStringRightAlign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4674,7 +4942,9 @@
                 "identifier": "TestObjectIdentifier",
                 "newPage": false,
                 "searchKey": "asn1.TestObjectIdentifier",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4694,7 +4964,9 @@
                 "identifier": "TestUTCTime",
                 "newPage": false,
                 "searchKey": "asn1.TestUTCTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4714,7 +4986,9 @@
                 "identifier": "TestGeneralizedTime",
                 "newPage": false,
                 "searchKey": "asn1.TestGeneralizedTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4734,7 +5008,9 @@
                 "identifier": "TestParseTagAndLength",
                 "newPage": false,
                 "searchKey": "asn1.TestParseTagAndLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4754,7 +5030,9 @@
                 "identifier": "newInt",
                 "newPage": false,
                 "searchKey": "asn1.newInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4774,7 +5052,9 @@
                 "identifier": "newInt64",
                 "newPage": false,
                 "searchKey": "asn1.newInt64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4794,7 +5074,9 @@
                 "identifier": "newString",
                 "newPage": false,
                 "searchKey": "asn1.newString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4814,7 +5096,9 @@
                 "identifier": "newBool",
                 "newPage": false,
                 "searchKey": "asn1.newBool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4834,7 +5118,9 @@
                 "identifier": "TestParseFieldParameters",
                 "newPage": false,
                 "searchKey": "asn1.TestParseFieldParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4854,7 +5140,9 @@
                 "identifier": "TestUnmarshal",
                 "newPage": false,
                 "searchKey": "asn1.TestUnmarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4874,7 +5162,9 @@
                 "identifier": "TestUnmarshalWithNilOrNonPointer",
                 "newPage": false,
                 "searchKey": "asn1.TestUnmarshalWithNilOrNonPointer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4894,7 +5184,9 @@
                 "identifier": "TestCertificate",
                 "newPage": false,
                 "searchKey": "asn1.TestCertificate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4914,7 +5206,9 @@
                 "identifier": "TestCertificateWithNUL",
                 "newPage": false,
                 "searchKey": "asn1.TestCertificateWithNUL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4934,7 +5228,9 @@
                 "identifier": "TestRawStructs",
                 "newPage": false,
                 "searchKey": "asn1.TestRawStructs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4954,7 +5250,9 @@
                 "identifier": "TestObjectIdentifierEqual",
                 "newPage": false,
                 "searchKey": "asn1.TestObjectIdentifierEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4974,7 +5272,9 @@
                 "identifier": "TestStringSlice",
                 "newPage": false,
                 "searchKey": "asn1.TestStringSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4994,7 +5294,9 @@
                 "identifier": "TestExplicitTaggedTime",
                 "newPage": false,
                 "searchKey": "asn1.TestExplicitTaggedTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5014,7 +5316,9 @@
                 "identifier": "TestImplicitTaggedTime",
                 "newPage": false,
                 "searchKey": "asn1.TestImplicitTaggedTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5034,7 +5338,9 @@
                 "identifier": "TestTruncatedExplicitTag",
                 "newPage": false,
                 "searchKey": "asn1.TestTruncatedExplicitTag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5054,7 +5360,9 @@
                 "identifier": "TestUnmarshalInvalidUTF8",
                 "newPage": false,
                 "searchKey": "asn1.TestUnmarshalInvalidUTF8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5074,7 +5382,9 @@
                 "identifier": "TestMarshalNilValue",
                 "newPage": false,
                 "searchKey": "asn1.TestMarshalNilValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5094,7 +5404,9 @@
                 "identifier": "TestUnexportedStructField",
                 "newPage": false,
                 "searchKey": "asn1.TestUnexportedStructField",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5114,7 +5426,9 @@
                 "identifier": "TestNull",
                 "newPage": false,
                 "searchKey": "asn1.TestNull",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5134,7 +5448,9 @@
                 "identifier": "TestExplicitTagRawValueStruct",
                 "newPage": false,
                 "searchKey": "asn1.TestExplicitTagRawValueStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5154,7 +5470,9 @@
                 "identifier": "TestTaggedRawValue",
                 "newPage": false,
                 "searchKey": "asn1.TestTaggedRawValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5174,7 +5492,9 @@
                 "identifier": "TestBMPString",
                 "newPage": false,
                 "searchKey": "asn1.TestBMPString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5194,7 +5514,9 @@
                 "identifier": "TestNonMinimalEncodedOID",
                 "newPage": false,
                 "searchKey": "asn1.TestNonMinimalEncodedOID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5214,7 +5536,9 @@
                 "identifier": "farFuture",
                 "newPage": false,
                 "searchKey": "asn1.farFuture",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5234,7 +5558,9 @@
                 "identifier": "TestMarshal",
                 "newPage": false,
                 "searchKey": "asn1.TestMarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5254,7 +5580,9 @@
                 "identifier": "TestMarshalWithParams",
                 "newPage": false,
                 "searchKey": "asn1.TestMarshalWithParams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5274,7 +5602,9 @@
                 "identifier": "TestMarshalError",
                 "newPage": false,
                 "searchKey": "asn1.TestMarshalError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5294,7 +5624,9 @@
                 "identifier": "TestInvalidUTF8",
                 "newPage": false,
                 "searchKey": "asn1.TestInvalidUTF8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5314,7 +5646,9 @@
                 "identifier": "TestMarshalOID",
                 "newPage": false,
                 "searchKey": "asn1.TestMarshalOID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5334,7 +5668,9 @@
                 "identifier": "TestIssue11130",
                 "newPage": false,
                 "searchKey": "asn1.TestIssue11130",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5354,7 +5690,9 @@
                 "identifier": "BenchmarkMarshal",
                 "newPage": false,
                 "searchKey": "asn1.BenchmarkMarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5374,7 +5712,9 @@
                 "identifier": "TestSetEncoder",
                 "newPage": false,
                 "searchKey": "asn1.TestSetEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5394,7 +5734,9 @@
                 "identifier": "TestSetEncoderSETSliceSuffix",
                 "newPage": false,
                 "searchKey": "asn1.TestSetEncoderSETSliceSuffix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5414,7 +5756,9 @@
                 "identifier": "BenchmarkUnmarshal",
                 "newPage": false,
                 "searchKey": "asn1.BenchmarkUnmarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

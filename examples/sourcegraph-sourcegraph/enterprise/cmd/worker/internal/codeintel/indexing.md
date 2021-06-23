@@ -255,7 +255,7 @@
     * [func isRepoNotExist(err error) bool](#isRepoNotExist)
     * [func TestDependencyIndexingSchedulerHandler(t *testing.T)](#TestDependencyIndexingSchedulerHandler)
     * [func TestDependencyIndexingSchedulerHandlerShouldSkipRepository(t *testing.T)](#TestDependencyIndexingSchedulerHandlerShouldSkipRepository)
-    * [func init()](#init)
+    * [func init()](#init.index_scheduler_test.go)
     * [func TestIndexSchedulerUpdate(t *testing.T)](#TestIndexSchedulerUpdate)
     * [func TestDisabledAutoindexConfiguration(t *testing.T)](#TestDisabledAutoindexConfiguration)
     * [func TestMain(m *testing.M)](#TestMain)
@@ -263,10 +263,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="defaultRepositoriesQueuedPerSecond" href="#defaultRepositoriesQueuedPerSecond">const defaultRepositoriesQueuedPerSecond</a>
 
 ```
 searchKey: indexing.defaultRepositoriesQueuedPerSecond
+tags: [private]
 ```
 
 ```Go
@@ -275,10 +280,15 @@ const defaultRepositoriesQueuedPerSecond = 25
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="dependencyIndexingRepositoryIDs" href="#dependencyIndexingRepositoryIDs">var dependencyIndexingRepositoryIDs</a>
 
 ```
 searchKey: indexing.dependencyIndexingRepositoryIDs
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +304,7 @@ var dependencyIndexingRepositoryIDs = []int{
 
 ```
 searchKey: indexing.indexSchedulerEnabled
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +317,7 @@ For mocking in tests
 
 ```
 searchKey: indexing.enabledRepoGroupNames
+tags: [private]
 ```
 
 ```Go
@@ -318,6 +330,7 @@ Used to filter the valid repo group names
 
 ```
 searchKey: indexing.singletonOperations
+tags: [private]
 ```
 
 ```Go
@@ -328,6 +341,7 @@ var singletonOperations *operations
 
 ```
 searchKey: indexing.once
+tags: [private]
 ```
 
 ```Go
@@ -336,10 +350,15 @@ var once sync.Once
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="dependencyIndexingSchedulerHandler" href="#dependencyIndexingSchedulerHandler">type dependencyIndexingSchedulerHandler struct</a>
 
 ```
 searchKey: indexing.dependencyIndexingSchedulerHandler
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +372,7 @@ type dependencyIndexingSchedulerHandler struct {
 
 ```
 searchKey: indexing.dependencyIndexingSchedulerHandler.Handle
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +385,7 @@ Handle iterates all import monikers associated with a given upload that has rece
 
 ```
 searchKey: indexing.dependencyIndexingSchedulerHandler.shouldIndexDependencies
+tags: [private]
 ```
 
 ```Go
@@ -377,7 +398,6 @@ shouldIndexDependencies returns true if the given upload should undergo dependen
 
 ```
 searchKey: indexing.DBStore
-tags: [exported]
 ```
 
 ```Go
@@ -395,7 +415,6 @@ type DBStore interface {
 
 ```
 searchKey: indexing.DBStoreShim
-tags: [exported]
 ```
 
 ```Go
@@ -408,7 +427,6 @@ type DBStoreShim struct {
 
 ```
 searchKey: indexing.DBStoreShim.With
-tags: [exported]
 ```
 
 ```Go
@@ -419,7 +437,6 @@ func (s *DBStoreShim) With(other basestore.ShareableStore) DBStore
 
 ```
 searchKey: indexing.IndexingSettingStore
-tags: [exported]
 ```
 
 ```Go
@@ -432,7 +449,6 @@ type IndexingSettingStore interface {
 
 ```
 searchKey: indexing.IndexingRepoStore
-tags: [exported]
 ```
 
 ```Go
@@ -445,7 +461,6 @@ type IndexingRepoStore interface {
 
 ```
 searchKey: indexing.GitserverClient
-tags: [exported]
 ```
 
 ```Go
@@ -462,7 +477,6 @@ type GitserverClient interface {
 
 ```
 searchKey: indexing.IndexEnqueuer
-tags: [exported]
 ```
 
 ```Go
@@ -476,7 +490,6 @@ type IndexEnqueuer interface {
 
 ```
 searchKey: indexing.IndexScheduler
-tags: [exported]
 ```
 
 ```Go
@@ -494,7 +507,6 @@ type IndexScheduler struct {
 
 ```
 searchKey: indexing.IndexScheduler.Handle
-tags: [exported]
 ```
 
 ```Go
@@ -505,7 +517,6 @@ func (s *IndexScheduler) Handle(ctx context.Context) error
 
 ```
 searchKey: indexing.IndexScheduler.HandleError
-tags: [exported]
 ```
 
 ```Go
@@ -516,6 +527,7 @@ func (s *IndexScheduler) HandleError(err error)
 
 ```
 searchKey: indexing.operations
+tags: [private]
 ```
 
 ```Go
@@ -529,6 +541,7 @@ type operations struct {
 
 ```
 searchKey: indexing.newOperations
+tags: [private]
 ```
 
 ```Go
@@ -539,6 +552,7 @@ func newOperations(observationContext *observation.Context) *operations
 
 ```
 searchKey: indexing.MockDBStore
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +586,7 @@ MockDBStore is a mock implementation of the DBStore interface (from the package 
 
 ```
 searchKey: indexing.NewMockDBStore
+tags: [private]
 ```
 
 ```Go
@@ -584,6 +599,7 @@ NewMockDBStore creates a new mock of the DBStore interface. All methods return z
 
 ```
 searchKey: indexing.NewMockDBStoreFrom
+tags: [private]
 ```
 
 ```Go
@@ -596,6 +612,7 @@ NewMockDBStoreFrom creates a new mock of the MockDBStore interface. All methods 
 
 ```
 searchKey: indexing.MockDBStore.GetAutoindexDisabledRepositories
+tags: [private]
 ```
 
 ```Go
@@ -608,6 +625,7 @@ GetAutoindexDisabledRepositories delegates to the next hook function in the queu
 
 ```
 searchKey: indexing.MockDBStore.GetRepositoriesWithIndexConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -620,6 +638,7 @@ GetRepositoriesWithIndexConfiguration delegates to the next hook function in the
 
 ```
 searchKey: indexing.MockDBStore.GetUploadByID
+tags: [private]
 ```
 
 ```Go
@@ -632,6 +651,7 @@ GetUploadByID delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: indexing.MockDBStore.GetUploads
+tags: [private]
 ```
 
 ```Go
@@ -644,6 +664,7 @@ GetUploads delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: indexing.MockDBStore.ReferencesForUpload
+tags: [private]
 ```
 
 ```Go
@@ -656,6 +677,7 @@ ReferencesForUpload delegates to the next hook function in the queue and stores 
 
 ```
 searchKey: indexing.MockDBStore.With
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +690,7 @@ With delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFunc
+tags: [private]
 ```
 
 ```Go
@@ -685,6 +708,7 @@ DBStoreGetAutoindexDisabledRepositoriesFunc describes the behavior when the GetA
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +721,7 @@ SetDefaultHook sets function that is called when the GetAutoindexDisabledReposit
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -709,6 +734,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetAut
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -721,6 +747,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -733,6 +760,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -743,6 +771,7 @@ func (f *DBStoreGetAutoindexDisabledRepositoriesFunc) nextHook() func(context.Co
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -753,6 +782,7 @@ func (f *DBStoreGetAutoindexDisabledRepositoriesFunc) appendCall(r0 DBStoreGetAu
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -765,6 +795,7 @@ History returns a sequence of DBStoreGetAutoindexDisabledRepositoriesFuncCall ob
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -787,6 +818,7 @@ DBStoreGetAutoindexDisabledRepositoriesFuncCall is an object that describes an i
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -799,6 +831,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -811,6 +844,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc
+tags: [private]
 ```
 
 ```Go
@@ -828,6 +862,7 @@ DBStoreGetRepositoriesWithIndexConfigurationFunc describes the behavior when the
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -840,6 +875,7 @@ SetDefaultHook sets function that is called when the GetRepositoriesWithIndexCon
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -852,6 +888,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetRep
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -864,6 +901,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -876,6 +914,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -886,6 +925,7 @@ func (f *DBStoreGetRepositoriesWithIndexConfigurationFunc) nextHook() func(conte
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -896,6 +936,7 @@ func (f *DBStoreGetRepositoriesWithIndexConfigurationFunc) appendCall(r0 DBStore
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -908,6 +949,7 @@ History returns a sequence of DBStoreGetRepositoriesWithIndexConfigurationFuncCa
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -930,6 +972,7 @@ DBStoreGetRepositoriesWithIndexConfigurationFuncCall is an object that describes
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -942,6 +985,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -954,6 +998,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFunc
+tags: [private]
 ```
 
 ```Go
@@ -971,6 +1016,7 @@ DBStoreGetUploadByIDFunc describes the behavior when the GetUploadByID method of
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -983,6 +1029,7 @@ SetDefaultHook sets function that is called when the GetUploadByID method of the
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -995,6 +1042,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetUpl
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1007,6 +1055,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1019,6 +1068,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1029,6 +1079,7 @@ func (f *DBStoreGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstor
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1039,6 +1090,7 @@ func (f *DBStoreGetUploadByIDFunc) appendCall(r0 DBStoreGetUploadByIDFuncCall)
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1051,6 +1103,7 @@ History returns a sequence of DBStoreGetUploadByIDFuncCall objects describing th
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1132,7 @@ DBStoreGetUploadByIDFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1091,6 +1145,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1103,6 +1158,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetUploadsFunc
+tags: [private]
 ```
 
 ```Go
@@ -1120,6 +1176,7 @@ DBStoreGetUploadsFunc describes the behavior when the GetUploads method of the p
 
 ```
 searchKey: indexing.DBStoreGetUploadsFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1132,6 +1189,7 @@ SetDefaultHook sets function that is called when the GetUploads method of the pa
 
 ```
 searchKey: indexing.DBStoreGetUploadsFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1202,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetUpl
 
 ```
 searchKey: indexing.DBStoreGetUploadsFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1156,6 +1215,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.DBStoreGetUploadsFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1168,6 +1228,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.DBStoreGetUploadsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1178,6 +1239,7 @@ func (f *DBStoreGetUploadsFunc) nextHook() func(context.Context, dbstore.GetUplo
 
 ```
 searchKey: indexing.DBStoreGetUploadsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1188,6 +1250,7 @@ func (f *DBStoreGetUploadsFunc) appendCall(r0 DBStoreGetUploadsFuncCall)
 
 ```
 searchKey: indexing.DBStoreGetUploadsFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1200,6 +1263,7 @@ History returns a sequence of DBStoreGetUploadsFuncCall objects describing the i
 
 ```
 searchKey: indexing.DBStoreGetUploadsFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1228,6 +1292,7 @@ DBStoreGetUploadsFuncCall is an object that describes an invocation of method Ge
 
 ```
 searchKey: indexing.DBStoreGetUploadsFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1240,6 +1305,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetUploadsFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1252,6 +1318,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFunc
+tags: [private]
 ```
 
 ```Go
@@ -1269,6 +1336,7 @@ DBStoreReferencesForUploadFunc describes the behavior when the ReferencesForUplo
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1281,6 +1349,7 @@ SetDefaultHook sets function that is called when the ReferencesForUpload method 
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1293,6 +1362,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Refere
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1305,6 +1375,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1317,6 +1388,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1327,6 +1399,7 @@ func (f *DBStoreReferencesForUploadFunc) nextHook() func(context.Context, int) (
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1337,6 +1410,7 @@ func (f *DBStoreReferencesForUploadFunc) appendCall(r0 DBStoreReferencesForUploa
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1349,6 +1423,7 @@ History returns a sequence of DBStoreReferencesForUploadFuncCall objects describ
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1374,6 +1449,7 @@ DBStoreReferencesForUploadFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1386,6 +1462,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1398,6 +1475,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.DBStoreWithFunc
+tags: [private]
 ```
 
 ```Go
@@ -1415,6 +1493,7 @@ DBStoreWithFunc describes the behavior when the With method of the parent MockDB
 
 ```
 searchKey: indexing.DBStoreWithFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1427,6 +1506,7 @@ SetDefaultHook sets function that is called when the With method of the parent M
 
 ```
 searchKey: indexing.DBStoreWithFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1439,6 +1519,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the With m
 
 ```
 searchKey: indexing.DBStoreWithFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1451,6 +1532,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.DBStoreWithFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1463,6 +1545,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.DBStoreWithFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1473,6 +1556,7 @@ func (f *DBStoreWithFunc) nextHook() func(basestore.ShareableStore) DBStore
 
 ```
 searchKey: indexing.DBStoreWithFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1483,6 +1567,7 @@ func (f *DBStoreWithFunc) appendCall(r0 DBStoreWithFuncCall)
 
 ```
 searchKey: indexing.DBStoreWithFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1495,6 +1580,7 @@ History returns a sequence of DBStoreWithFuncCall objects describing the invocat
 
 ```
 searchKey: indexing.DBStoreWithFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1514,6 +1600,7 @@ DBStoreWithFuncCall is an object that describes an invocation of method With on 
 
 ```
 searchKey: indexing.DBStoreWithFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1526,6 +1613,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreWithFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1538,6 +1626,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.MockGitserverClient
+tags: [private]
 ```
 
 ```Go
@@ -1566,6 +1655,7 @@ MockGitserverClient is a mock implementation of the GitserverClient interface (f
 
 ```
 searchKey: indexing.NewMockGitserverClient
+tags: [private]
 ```
 
 ```Go
@@ -1578,6 +1668,7 @@ NewMockGitserverClient creates a new mock of the GitserverClient interface. All 
 
 ```
 searchKey: indexing.NewMockGitserverClientFrom
+tags: [private]
 ```
 
 ```Go
@@ -1590,6 +1681,7 @@ NewMockGitserverClientFrom creates a new mock of the MockGitserverClient interfa
 
 ```
 searchKey: indexing.MockGitserverClient.FileExists
+tags: [private]
 ```
 
 ```Go
@@ -1602,6 +1694,7 @@ FileExists delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: indexing.MockGitserverClient.Head
+tags: [private]
 ```
 
 ```Go
@@ -1614,6 +1707,7 @@ Head delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: indexing.MockGitserverClient.ListFiles
+tags: [private]
 ```
 
 ```Go
@@ -1626,6 +1720,7 @@ ListFiles delegates to the next hook function in the queue and stores the parame
 
 ```
 searchKey: indexing.MockGitserverClient.RawContents
+tags: [private]
 ```
 
 ```Go
@@ -1638,6 +1733,7 @@ RawContents delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: indexing.MockGitserverClient.ResolveRevision
+tags: [private]
 ```
 
 ```Go
@@ -1650,6 +1746,7 @@ ResolveRevision delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: indexing.GitserverClientFileExistsFunc
+tags: [private]
 ```
 
 ```Go
@@ -1667,6 +1764,7 @@ GitserverClientFileExistsFunc describes the behavior when the FileExists method 
 
 ```
 searchKey: indexing.GitserverClientFileExistsFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1679,6 +1777,7 @@ SetDefaultHook sets function that is called when the FileExists method of the pa
 
 ```
 searchKey: indexing.GitserverClientFileExistsFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1691,6 +1790,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the FileEx
 
 ```
 searchKey: indexing.GitserverClientFileExistsFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1703,6 +1803,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.GitserverClientFileExistsFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1715,6 +1816,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.GitserverClientFileExistsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1725,6 +1827,7 @@ func (f *GitserverClientFileExistsFunc) nextHook() func(context.Context, int, st
 
 ```
 searchKey: indexing.GitserverClientFileExistsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1735,6 +1838,7 @@ func (f *GitserverClientFileExistsFunc) appendCall(r0 GitserverClientFileExistsF
 
 ```
 searchKey: indexing.GitserverClientFileExistsFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1747,6 +1851,7 @@ History returns a sequence of GitserverClientFileExistsFuncCall objects describi
 
 ```
 searchKey: indexing.GitserverClientFileExistsFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1778,6 +1883,7 @@ GitserverClientFileExistsFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: indexing.GitserverClientFileExistsFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1790,6 +1896,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.GitserverClientFileExistsFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1802,6 +1909,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.GitserverClientHeadFunc
+tags: [private]
 ```
 
 ```Go
@@ -1819,6 +1927,7 @@ GitserverClientHeadFunc describes the behavior when the Head method of the paren
 
 ```
 searchKey: indexing.GitserverClientHeadFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1831,6 +1940,7 @@ SetDefaultHook sets function that is called when the Head method of the parent M
 
 ```
 searchKey: indexing.GitserverClientHeadFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1843,6 +1953,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Head m
 
 ```
 searchKey: indexing.GitserverClientHeadFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1855,6 +1966,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.GitserverClientHeadFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1867,6 +1979,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.GitserverClientHeadFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1877,6 +1990,7 @@ func (f *GitserverClientHeadFunc) nextHook() func(context.Context, int) (string,
 
 ```
 searchKey: indexing.GitserverClientHeadFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1887,6 +2001,7 @@ func (f *GitserverClientHeadFunc) appendCall(r0 GitserverClientHeadFuncCall)
 
 ```
 searchKey: indexing.GitserverClientHeadFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1899,6 +2014,7 @@ History returns a sequence of GitserverClientHeadFuncCall objects describing the
 
 ```
 searchKey: indexing.GitserverClientHeadFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1924,6 +2040,7 @@ GitserverClientHeadFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: indexing.GitserverClientHeadFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1936,6 +2053,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.GitserverClientHeadFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1948,6 +2066,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.GitserverClientListFilesFunc
+tags: [private]
 ```
 
 ```Go
@@ -1965,6 +2084,7 @@ GitserverClientListFilesFunc describes the behavior when the ListFiles method of
 
 ```
 searchKey: indexing.GitserverClientListFilesFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1977,6 +2097,7 @@ SetDefaultHook sets function that is called when the ListFiles method of the par
 
 ```
 searchKey: indexing.GitserverClientListFilesFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1989,6 +2110,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the ListFi
 
 ```
 searchKey: indexing.GitserverClientListFilesFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2001,6 +2123,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.GitserverClientListFilesFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2013,6 +2136,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.GitserverClientListFilesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2023,6 +2147,7 @@ func (f *GitserverClientListFilesFunc) nextHook() func(context.Context, int, str
 
 ```
 searchKey: indexing.GitserverClientListFilesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2033,6 +2158,7 @@ func (f *GitserverClientListFilesFunc) appendCall(r0 GitserverClientListFilesFun
 
 ```
 searchKey: indexing.GitserverClientListFilesFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2045,6 +2171,7 @@ History returns a sequence of GitserverClientListFilesFuncCall objects describin
 
 ```
 searchKey: indexing.GitserverClientListFilesFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2076,6 +2203,7 @@ GitserverClientListFilesFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: indexing.GitserverClientListFilesFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2088,6 +2216,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.GitserverClientListFilesFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2100,6 +2229,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.GitserverClientRawContentsFunc
+tags: [private]
 ```
 
 ```Go
@@ -2117,6 +2247,7 @@ GitserverClientRawContentsFunc describes the behavior when the RawContents metho
 
 ```
 searchKey: indexing.GitserverClientRawContentsFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2129,6 +2260,7 @@ SetDefaultHook sets function that is called when the RawContents method of the p
 
 ```
 searchKey: indexing.GitserverClientRawContentsFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2141,6 +2273,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the RawCon
 
 ```
 searchKey: indexing.GitserverClientRawContentsFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2153,6 +2286,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.GitserverClientRawContentsFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2165,6 +2299,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.GitserverClientRawContentsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2175,6 +2310,7 @@ func (f *GitserverClientRawContentsFunc) nextHook() func(context.Context, int, s
 
 ```
 searchKey: indexing.GitserverClientRawContentsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2185,6 +2321,7 @@ func (f *GitserverClientRawContentsFunc) appendCall(r0 GitserverClientRawContent
 
 ```
 searchKey: indexing.GitserverClientRawContentsFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2197,6 +2334,7 @@ History returns a sequence of GitserverClientRawContentsFuncCall objects describ
 
 ```
 searchKey: indexing.GitserverClientRawContentsFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2228,6 +2366,7 @@ GitserverClientRawContentsFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: indexing.GitserverClientRawContentsFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2240,6 +2379,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.GitserverClientRawContentsFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2252,6 +2392,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFunc
+tags: [private]
 ```
 
 ```Go
@@ -2269,6 +2410,7 @@ GitserverClientResolveRevisionFunc describes the behavior when the ResolveRevisi
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2281,6 +2423,7 @@ SetDefaultHook sets function that is called when the ResolveRevision method of t
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2293,6 +2436,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Resolv
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2305,6 +2449,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2317,6 +2462,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2327,6 +2473,7 @@ func (f *GitserverClientResolveRevisionFunc) nextHook() func(context.Context, in
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2337,6 +2484,7 @@ func (f *GitserverClientResolveRevisionFunc) appendCall(r0 GitserverClientResolv
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2349,6 +2497,7 @@ History returns a sequence of GitserverClientResolveRevisionFuncCall objects des
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2377,6 +2526,7 @@ GitserverClientResolveRevisionFuncCall is an object that describes an invocation
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2389,6 +2539,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2401,6 +2552,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.MockIndexEnqueuer
+tags: [private]
 ```
 
 ```Go
@@ -2421,6 +2573,7 @@ MockIndexEnqueuer is a mock implementation of the IndexEnqueuer interface (from 
 
 ```
 searchKey: indexing.NewMockIndexEnqueuer
+tags: [private]
 ```
 
 ```Go
@@ -2433,6 +2586,7 @@ NewMockIndexEnqueuer creates a new mock of the IndexEnqueuer interface. All meth
 
 ```
 searchKey: indexing.NewMockIndexEnqueuerFrom
+tags: [private]
 ```
 
 ```Go
@@ -2445,6 +2599,7 @@ NewMockIndexEnqueuerFrom creates a new mock of the MockIndexEnqueuer interface. 
 
 ```
 searchKey: indexing.MockIndexEnqueuer.QueueIndexesForPackage
+tags: [private]
 ```
 
 ```Go
@@ -2457,6 +2612,7 @@ QueueIndexesForPackage delegates to the next hook function in the queue and stor
 
 ```
 searchKey: indexing.MockIndexEnqueuer.QueueIndexesForRepository
+tags: [private]
 ```
 
 ```Go
@@ -2469,6 +2625,7 @@ QueueIndexesForRepository delegates to the next hook function in the queue and s
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFunc
+tags: [private]
 ```
 
 ```Go
@@ -2486,6 +2643,7 @@ IndexEnqueuerQueueIndexesForPackageFunc describes the behavior when the QueueInd
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2498,6 +2656,7 @@ SetDefaultHook sets function that is called when the QueueIndexesForPackage meth
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2510,6 +2669,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the QueueI
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2522,6 +2682,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2534,6 +2695,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2544,6 +2706,7 @@ func (f *IndexEnqueuerQueueIndexesForPackageFunc) nextHook() func(context.Contex
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2554,6 +2717,7 @@ func (f *IndexEnqueuerQueueIndexesForPackageFunc) appendCall(r0 IndexEnqueuerQue
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2566,6 +2730,7 @@ History returns a sequence of IndexEnqueuerQueueIndexesForPackageFuncCall object
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2588,6 +2753,7 @@ IndexEnqueuerQueueIndexesForPackageFuncCall is an object that describes an invoc
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2600,6 +2766,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2612,6 +2779,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFunc
+tags: [private]
 ```
 
 ```Go
@@ -2629,6 +2797,7 @@ IndexEnqueuerQueueIndexesForRepositoryFunc describes the behavior when the Queue
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2641,6 +2810,7 @@ SetDefaultHook sets function that is called when the QueueIndexesForRepository m
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2653,6 +2823,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the QueueI
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2665,6 +2836,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2677,6 +2849,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2687,6 +2860,7 @@ func (f *IndexEnqueuerQueueIndexesForRepositoryFunc) nextHook() func(context.Con
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2697,6 +2871,7 @@ func (f *IndexEnqueuerQueueIndexesForRepositoryFunc) appendCall(r0 IndexEnqueuer
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2709,6 +2884,7 @@ History returns a sequence of IndexEnqueuerQueueIndexesForRepositoryFuncCall obj
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2731,6 +2907,7 @@ IndexEnqueuerQueueIndexesForRepositoryFuncCall is an object that describes an in
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2743,6 +2920,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2755,6 +2933,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.MockIndexingRepoStore
+tags: [private]
 ```
 
 ```Go
@@ -2771,6 +2950,7 @@ MockIndexingRepoStore is a mock implementation of the IndexingRepoStore interfac
 
 ```
 searchKey: indexing.NewMockIndexingRepoStore
+tags: [private]
 ```
 
 ```Go
@@ -2783,6 +2963,7 @@ NewMockIndexingRepoStore creates a new mock of the IndexingRepoStore interface. 
 
 ```
 searchKey: indexing.NewMockIndexingRepoStoreFrom
+tags: [private]
 ```
 
 ```Go
@@ -2795,6 +2976,7 @@ NewMockIndexingRepoStoreFrom creates a new mock of the MockIndexingRepoStore int
 
 ```
 searchKey: indexing.MockIndexingRepoStore.ListRepoNames
+tags: [private]
 ```
 
 ```Go
@@ -2807,6 +2989,7 @@ ListRepoNames delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFunc
+tags: [private]
 ```
 
 ```Go
@@ -2824,6 +3007,7 @@ IndexingRepoStoreListRepoNamesFunc describes the behavior when the ListRepoNames
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2836,6 +3020,7 @@ SetDefaultHook sets function that is called when the ListRepoNames method of the
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2848,6 +3033,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the ListRe
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2860,6 +3046,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2872,6 +3059,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2882,6 +3070,7 @@ func (f *IndexingRepoStoreListRepoNamesFunc) nextHook() func(context.Context, da
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2892,6 +3081,7 @@ func (f *IndexingRepoStoreListRepoNamesFunc) appendCall(r0 IndexingRepoStoreList
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2904,6 +3094,7 @@ History returns a sequence of IndexingRepoStoreListRepoNamesFuncCall objects des
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2929,6 +3120,7 @@ IndexingRepoStoreListRepoNamesFuncCall is an object that describes an invocation
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2941,6 +3133,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2953,6 +3146,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.MockIndexingSettingStore
+tags: [private]
 ```
 
 ```Go
@@ -2969,6 +3163,7 @@ MockIndexingSettingStore is a mock implementation of the IndexingSettingStore in
 
 ```
 searchKey: indexing.NewMockIndexingSettingStore
+tags: [private]
 ```
 
 ```Go
@@ -2981,6 +3176,7 @@ NewMockIndexingSettingStore creates a new mock of the IndexingSettingStore inter
 
 ```
 searchKey: indexing.NewMockIndexingSettingStoreFrom
+tags: [private]
 ```
 
 ```Go
@@ -2993,6 +3189,7 @@ NewMockIndexingSettingStoreFrom creates a new mock of the MockIndexingSettingSto
 
 ```
 searchKey: indexing.MockIndexingSettingStore.GetLastestSchemaSettings
+tags: [private]
 ```
 
 ```Go
@@ -3005,6 +3202,7 @@ GetLastestSchemaSettings delegates to the next hook function in the queue and st
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc
+tags: [private]
 ```
 
 ```Go
@@ -3022,6 +3220,7 @@ IndexingSettingStoreGetLastestSchemaSettingsFunc describes the behavior when the
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3034,6 +3233,7 @@ SetDefaultHook sets function that is called when the GetLastestSchemaSettings me
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3046,6 +3246,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetLas
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3058,6 +3259,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3070,6 +3272,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3080,6 +3283,7 @@ func (f *IndexingSettingStoreGetLastestSchemaSettingsFunc) nextHook() func(conte
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3090,6 +3294,7 @@ func (f *IndexingSettingStoreGetLastestSchemaSettingsFunc) appendCall(r0 Indexin
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3102,6 +3307,7 @@ History returns a sequence of IndexingSettingStoreGetLastestSchemaSettingsFuncCa
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3127,6 +3333,7 @@ IndexingSettingStoreGetLastestSchemaSettingsFuncCall is an object that describes
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3139,6 +3346,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3151,6 +3359,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.MockPackageReferenceScanner
+tags: [private]
 ```
 
 ```Go
@@ -3170,6 +3379,7 @@ MockPackageReferenceScanner is a mock implementation of the PackageReferenceScan
 
 ```
 searchKey: indexing.NewMockPackageReferenceScanner
+tags: [private]
 ```
 
 ```Go
@@ -3182,6 +3392,7 @@ NewMockPackageReferenceScanner creates a new mock of the PackageReferenceScanner
 
 ```
 searchKey: indexing.NewMockPackageReferenceScannerFrom
+tags: [private]
 ```
 
 ```Go
@@ -3194,6 +3405,7 @@ NewMockPackageReferenceScannerFrom creates a new mock of the MockPackageReferenc
 
 ```
 searchKey: indexing.MockPackageReferenceScanner.Close
+tags: [private]
 ```
 
 ```Go
@@ -3206,6 +3418,7 @@ Close delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: indexing.MockPackageReferenceScanner.Next
+tags: [private]
 ```
 
 ```Go
@@ -3218,6 +3431,7 @@ Next delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFunc
+tags: [private]
 ```
 
 ```Go
@@ -3235,6 +3449,7 @@ PackageReferenceScannerCloseFunc describes the behavior when the Close method of
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3247,6 +3462,7 @@ SetDefaultHook sets function that is called when the Close method of the parent 
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3259,6 +3475,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Close 
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3271,6 +3488,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3283,6 +3501,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3293,6 +3512,7 @@ func (f *PackageReferenceScannerCloseFunc) nextHook() func() error
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3303,6 +3523,7 @@ func (f *PackageReferenceScannerCloseFunc) appendCall(r0 PackageReferenceScanner
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3315,6 +3536,7 @@ History returns a sequence of PackageReferenceScannerCloseFuncCall objects descr
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3331,6 +3553,7 @@ PackageReferenceScannerCloseFuncCall is an object that describes an invocation o
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3343,6 +3566,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3355,6 +3579,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFunc
+tags: [private]
 ```
 
 ```Go
@@ -3372,6 +3597,7 @@ PackageReferenceScannerNextFunc describes the behavior when the Next method of t
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3384,6 +3610,7 @@ SetDefaultHook sets function that is called when the Next method of the parent M
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3396,6 +3623,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Next m
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3408,6 +3636,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3420,6 +3649,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3430,6 +3660,7 @@ func (f *PackageReferenceScannerNextFunc) nextHook() func() (lsifstore.PackageRe
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3440,6 +3671,7 @@ func (f *PackageReferenceScannerNextFunc) appendCall(r0 PackageReferenceScannerN
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3452,6 +3684,7 @@ History returns a sequence of PackageReferenceScannerNextFuncCall objects descri
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3474,6 +3707,7 @@ PackageReferenceScannerNextFuncCall is an object that describes an invocation of
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3486,6 +3720,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3496,11 +3731,14 @@ Results returns an interface slice containing the results of this invocation.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewDependencyIndexingScheduler" href="#NewDependencyIndexingScheduler">func NewDependencyIndexingScheduler(dbStore DBStore,...</a>
 
 ```
 searchKey: indexing.NewDependencyIndexingScheduler
-tags: [exported]
 ```
 
 ```Go
@@ -3520,7 +3758,6 @@ NewDependencyIndexingScheduler returns a new worker instance that processes reco
 
 ```
 searchKey: indexing.NewIndexScheduler
-tags: [exported]
 ```
 
 ```Go
@@ -3538,6 +3775,7 @@ func NewIndexScheduler(
 
 ```
 searchKey: indexing.deduplicateRepositoryIDs
+tags: [private]
 ```
 
 ```Go
@@ -3548,6 +3786,7 @@ func deduplicateRepositoryIDs(ids ...[]int) (repositoryIDs []int)
 
 ```
 searchKey: indexing.isRepoNotExist
+tags: [private]
 ```
 
 ```Go
@@ -3558,6 +3797,7 @@ func isRepoNotExist(err error) bool
 
 ```
 searchKey: indexing.TestDependencyIndexingSchedulerHandler
+tags: [private]
 ```
 
 ```Go
@@ -3568,16 +3808,18 @@ func TestDependencyIndexingSchedulerHandler(t *testing.T)
 
 ```
 searchKey: indexing.TestDependencyIndexingSchedulerHandlerShouldSkipRepository
+tags: [private]
 ```
 
 ```Go
 func TestDependencyIndexingSchedulerHandlerShouldSkipRepository(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.index_scheduler_test.go" href="#init.index_scheduler_test.go">func init()</a>
 
 ```
 searchKey: indexing.init
+tags: [private]
 ```
 
 ```Go
@@ -3588,6 +3830,7 @@ func init()
 
 ```
 searchKey: indexing.TestIndexSchedulerUpdate
+tags: [private]
 ```
 
 ```Go
@@ -3598,6 +3841,7 @@ func TestIndexSchedulerUpdate(t *testing.T)
 
 ```
 searchKey: indexing.TestDisabledAutoindexConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -3608,6 +3852,7 @@ func TestDisabledAutoindexConfiguration(t *testing.T)
 
 ```
 searchKey: indexing.TestMain
+tags: [private]
 ```
 
 ```Go

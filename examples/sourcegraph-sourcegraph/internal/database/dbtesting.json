@@ -4,7 +4,9 @@
     "identifier": "dbtesting",
     "newPage": true,
     "searchKey": "internal/database/dbtesting",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "MockHashPassword",
                 "newPage": false,
                 "searchKey": "dbtesting.MockHashPassword",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "MockValidPassword",
                 "newPage": false,
                 "searchKey": "dbtesting.MockValidPassword",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "BeforeTest",
                 "newPage": false,
                 "searchKey": "dbtesting.BeforeTest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "DBNameSuffix",
                 "newPage": false,
                 "searchKey": "dbtesting.DBNameSuffix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,7 +124,9 @@
                 "identifier": "connectOnce",
                 "newPage": false,
                 "searchKey": "dbtesting.connectOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,7 +146,9 @@
                 "identifier": "connectErr",
                 "newPage": false,
                 "searchKey": "dbtesting.connectErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -171,7 +171,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -189,9 +191,7 @@
                 "identifier": "MockDB",
                 "newPage": false,
                 "searchKey": "dbtesting.MockDB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -209,9 +209,7 @@
                       "identifier": "MockDB.QueryContext",
                       "newPage": false,
                       "searchKey": "dbtesting.MockDB.QueryContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -231,9 +229,7 @@
                       "identifier": "MockDB.ExecContext",
                       "newPage": false,
                       "searchKey": "dbtesting.MockDB.ExecContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -253,9 +249,7 @@
                       "identifier": "MockDB.QueryRowContext",
                       "newPage": false,
                       "searchKey": "dbtesting.MockDB.QueryRowContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -281,7 +275,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -299,7 +295,9 @@
                 "identifier": "useFastPasswordMocks",
                 "newPage": false,
                 "searchKey": "dbtesting.useFastPasswordMocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -319,9 +317,7 @@
                 "identifier": "SetupGlobalTestDB",
                 "newPage": false,
                 "searchKey": "dbtesting.SetupGlobalTestDB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -341,9 +337,7 @@
                 "identifier": "GetDB",
                 "newPage": false,
                 "searchKey": "dbtesting.GetDB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -363,7 +357,9 @@
                 "identifier": "emptyDBPreserveSchema",
                 "newPage": false,
                 "searchKey": "dbtesting.emptyDBPreserveSchema",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -383,7 +379,9 @@
                 "identifier": "initTest",
                 "newPage": false,
                 "searchKey": "dbtesting.initTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

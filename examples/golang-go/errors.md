@@ -71,14 +71,11 @@ because the former will succeed if err wraps an *fs.PathError.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="errorType" href="#errorType">var errorType</a>
 
 ```
 searchKey: errors.errorType
+tags: [private]
 ```
 
 ```Go
@@ -87,14 +84,11 @@ var errorType = reflectlite.TypeOf((*error)(nil)).Elem()
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="errorString" href="#errorString">type errorString struct</a>
 
 ```
 searchKey: errors.errorString
+tags: [private]
 ```
 
 ```Go
@@ -109,6 +103,7 @@ errorString is a trivial implementation of error.
 
 ```
 searchKey: errors.errorString.Error
+tags: [private]
 ```
 
 ```Go
@@ -117,15 +112,10 @@ func (e *errorString) Error() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="New" href="#New">func New(text string) error</a>
 
 ```
 searchKey: errors.New
-tags: [exported]
 ```
 
 ```Go
@@ -138,7 +128,6 @@ New returns an error that formats as the given text. Each call to New returns a 
 
 ```
 searchKey: errors.Unwrap
-tags: [exported]
 ```
 
 ```Go
@@ -151,7 +140,6 @@ Unwrap returns the result of calling the Unwrap method on err, if err's type con
 
 ```
 searchKey: errors.Is
-tags: [exported]
 ```
 
 ```Go
@@ -176,7 +164,6 @@ then Is(MyError{}, fs.ErrExist) returns true. See syscall.Errno.Is for an exampl
 
 ```
 searchKey: errors.As
-tags: [exported]
 ```
 
 ```Go

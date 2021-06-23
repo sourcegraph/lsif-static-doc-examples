@@ -4,7 +4,9 @@
     "identifier": "gitlaboauth",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/auth/gitlaboauth",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "PkgName",
                 "newPage": false,
                 "searchKey": "gitlaboauth.PkgName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "authPrefix",
                 "newPage": false,
                 "searchKey": "gitlaboauth.authPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -82,7 +86,9 @@
                 "identifier": "sessionKey",
                 "newPage": false,
                 "searchKey": "gitlaboauth.sessionKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -102,7 +108,9 @@
                 "identifier": "userKey",
                 "newPage": false,
                 "searchKey": "gitlaboauth.userKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +133,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -143,7 +153,9 @@
                 "identifier": "sessionIssuerHelper",
                 "newPage": false,
                 "searchKey": "gitlaboauth.sessionIssuerHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +173,9 @@
                       "identifier": "sessionIssuerHelper.GetOrCreateUser",
                       "newPage": false,
                       "searchKey": "gitlaboauth.sessionIssuerHelper.GetOrCreateUser",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -181,7 +195,9 @@
                       "identifier": "sessionIssuerHelper.CreateCodeHostConnection",
                       "newPage": false,
                       "searchKey": "gitlaboauth.sessionIssuerHelper.CreateCodeHostConnection",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -201,7 +217,9 @@
                       "identifier": "sessionIssuerHelper.DeleteStateCookie",
                       "newPage": false,
                       "searchKey": "gitlaboauth.sessionIssuerHelper.DeleteStateCookie",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -221,7 +239,9 @@
                       "identifier": "sessionIssuerHelper.SessionData",
                       "newPage": false,
                       "searchKey": "gitlaboauth.sessionIssuerHelper.SessionData",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -244,7 +264,9 @@
                 "identifier": "key",
                 "newPage": false,
                 "searchKey": "gitlaboauth.key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -264,7 +286,9 @@
                 "identifier": "MockProvider",
                 "newPage": false,
                 "searchKey": "gitlaboauth.MockProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -282,7 +306,9 @@
                       "identifier": "newMockProvider",
                       "newPage": false,
                       "searchKey": "gitlaboauth.newMockProvider",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -308,7 +334,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -321,12 +349,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#init",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#init.config.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.config.go",
                 "newPage": false,
                 "searchKey": "gitlaboauth.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -346,7 +376,9 @@
                 "identifier": "parseConfig",
                 "newPage": false,
                 "searchKey": "gitlaboauth.parseConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -366,9 +398,7 @@
                 "identifier": "LoginHandler",
                 "newPage": false,
                 "searchKey": "gitlaboauth.LoginHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -388,9 +418,7 @@
                 "identifier": "CallbackHandler",
                 "newPage": false,
                 "searchKey": "gitlaboauth.CallbackHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -410,7 +438,9 @@
                 "identifier": "gitlabHandler",
                 "newPage": false,
                 "searchKey": "gitlaboauth.gitlabHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -430,7 +460,9 @@
                 "identifier": "validateResponse",
                 "newPage": false,
                 "searchKey": "gitlaboauth.validateResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -450,7 +482,9 @@
                 "identifier": "gitlabClientFromAuthURL",
                 "newPage": false,
                 "searchKey": "gitlaboauth.gitlabClientFromAuthURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -465,12 +499,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#init",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#init.middleware.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.middleware.go",
                 "newPage": false,
                 "searchKey": "gitlaboauth.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -490,9 +526,7 @@
                 "identifier": "Middleware",
                 "newPage": false,
                 "searchKey": "gitlaboauth.Middleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -512,7 +546,9 @@
                 "identifier": "parseProvider",
                 "newPage": false,
                 "searchKey": "gitlaboauth.parseProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -532,7 +568,9 @@
                 "identifier": "getStateConfig",
                 "newPage": false,
                 "searchKey": "gitlaboauth.getStateConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -552,7 +590,9 @@
                 "identifier": "requestedScopes",
                 "newPage": false,
                 "searchKey": "gitlaboauth.requestedScopes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -572,9 +612,7 @@
                 "identifier": "WithUser",
                 "newPage": false,
                 "searchKey": "gitlaboauth.WithUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -594,9 +632,7 @@
                 "identifier": "UserFromContext",
                 "newPage": false,
                 "searchKey": "gitlaboauth.UserFromContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -616,7 +652,9 @@
                 "identifier": "TestParseConfig",
                 "newPage": false,
                 "searchKey": "gitlaboauth.TestParseConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -636,7 +674,9 @@
                 "identifier": "provider",
                 "newPage": false,
                 "searchKey": "gitlaboauth.provider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -656,7 +696,9 @@
                 "identifier": "TestMiddleware",
                 "newPage": false,
                 "searchKey": "gitlaboauth.TestMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -676,7 +718,9 @@
                 "identifier": "TestSessionIssuerHelper_CreateCodeHostConnection",
                 "newPage": false,
                 "searchKey": "gitlaboauth.TestSessionIssuerHelper_CreateCodeHostConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

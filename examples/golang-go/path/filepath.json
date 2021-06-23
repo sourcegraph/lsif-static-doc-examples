@@ -4,9 +4,7 @@
     "identifier": "filepath",
     "newPage": true,
     "searchKey": "path/filepath",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Separator",
                 "newPage": false,
                 "searchKey": "filepath.Separator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "ListSeparator",
                 "newPage": false,
                 "searchKey": "filepath.ListSeparator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -91,9 +83,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -111,9 +101,7 @@
                 "identifier": "ErrBadPattern",
                 "newPage": false,
                 "searchKey": "filepath.ErrBadPattern",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -133,9 +121,7 @@
                 "identifier": "SkipDir",
                 "newPage": false,
                 "searchKey": "filepath.SkipDir",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -155,7 +141,9 @@
                 "identifier": "lstat",
                 "newPage": false,
                 "searchKey": "filepath.lstat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -175,7 +163,9 @@
                 "identifier": "LstatP",
                 "newPage": false,
                 "searchKey": "filepath.LstatP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -198,9 +188,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -218,7 +206,9 @@
                 "identifier": "lazybuf",
                 "newPage": false,
                 "searchKey": "filepath.lazybuf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -236,7 +226,9 @@
                       "identifier": "lazybuf.index",
                       "newPage": false,
                       "searchKey": "filepath.lazybuf.index",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -256,7 +248,9 @@
                       "identifier": "lazybuf.append",
                       "newPage": false,
                       "searchKey": "filepath.lazybuf.append",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -276,7 +270,9 @@
                       "identifier": "lazybuf.string",
                       "newPage": false,
                       "searchKey": "filepath.lazybuf.string",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -299,9 +295,7 @@
                 "identifier": "WalkFunc",
                 "newPage": false,
                 "searchKey": "filepath.WalkFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -321,7 +315,9 @@
                 "identifier": "statDirEntry",
                 "newPage": false,
                 "searchKey": "filepath.statDirEntry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -339,7 +335,9 @@
                       "identifier": "statDirEntry.Name",
                       "newPage": false,
                       "searchKey": "filepath.statDirEntry.Name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -359,7 +357,9 @@
                       "identifier": "statDirEntry.IsDir",
                       "newPage": false,
                       "searchKey": "filepath.statDirEntry.IsDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -379,7 +379,9 @@
                       "identifier": "statDirEntry.Type",
                       "newPage": false,
                       "searchKey": "filepath.statDirEntry.Type",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -399,7 +401,9 @@
                       "identifier": "statDirEntry.Info",
                       "newPage": false,
                       "searchKey": "filepath.statDirEntry.Info",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -425,9 +429,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -445,9 +447,7 @@
                 "identifier": "Match",
                 "newPage": false,
                 "searchKey": "filepath.Match",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -467,7 +467,9 @@
                 "identifier": "scanChunk",
                 "newPage": false,
                 "searchKey": "filepath.scanChunk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,7 +489,9 @@
                 "identifier": "matchChunk",
                 "newPage": false,
                 "searchKey": "filepath.matchChunk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +511,9 @@
                 "identifier": "getEsc",
                 "newPage": false,
                 "searchKey": "filepath.getEsc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,9 +533,7 @@
                 "identifier": "Glob",
                 "newPage": false,
                 "searchKey": "filepath.Glob",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -549,7 +553,9 @@
                 "identifier": "cleanGlobPath",
                 "newPage": false,
                 "searchKey": "filepath.cleanGlobPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -569,7 +575,9 @@
                 "identifier": "cleanGlobPathWindows",
                 "newPage": false,
                 "searchKey": "filepath.cleanGlobPathWindows",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -589,7 +597,9 @@
                 "identifier": "glob",
                 "newPage": false,
                 "searchKey": "filepath.glob",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -609,7 +619,9 @@
                 "identifier": "hasMeta",
                 "newPage": false,
                 "searchKey": "filepath.hasMeta",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -629,9 +641,7 @@
                 "identifier": "Clean",
                 "newPage": false,
                 "searchKey": "filepath.Clean",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -651,9 +661,7 @@
                 "identifier": "ToSlash",
                 "newPage": false,
                 "searchKey": "filepath.ToSlash",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -673,9 +681,7 @@
                 "identifier": "FromSlash",
                 "newPage": false,
                 "searchKey": "filepath.FromSlash",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -695,9 +701,7 @@
                 "identifier": "SplitList",
                 "newPage": false,
                 "searchKey": "filepath.SplitList",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -717,9 +721,7 @@
                 "identifier": "Split",
                 "newPage": false,
                 "searchKey": "filepath.Split",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -739,9 +741,7 @@
                 "identifier": "Join",
                 "newPage": false,
                 "searchKey": "filepath.Join",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -761,9 +761,7 @@
                 "identifier": "Ext",
                 "newPage": false,
                 "searchKey": "filepath.Ext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -783,9 +781,7 @@
                 "identifier": "EvalSymlinks",
                 "newPage": false,
                 "searchKey": "filepath.EvalSymlinks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -805,9 +801,7 @@
                 "identifier": "Abs",
                 "newPage": false,
                 "searchKey": "filepath.Abs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -827,7 +821,9 @@
                 "identifier": "unixAbs",
                 "newPage": false,
                 "searchKey": "filepath.unixAbs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -847,9 +843,7 @@
                 "identifier": "Rel",
                 "newPage": false,
                 "searchKey": "filepath.Rel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -869,7 +863,9 @@
                 "identifier": "walkDir",
                 "newPage": false,
                 "searchKey": "filepath.walkDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -889,7 +885,9 @@
                 "identifier": "walk",
                 "newPage": false,
                 "searchKey": "filepath.walk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -909,9 +907,7 @@
                 "identifier": "WalkDir",
                 "newPage": false,
                 "searchKey": "filepath.WalkDir",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -931,9 +927,7 @@
                 "identifier": "Walk",
                 "newPage": false,
                 "searchKey": "filepath.Walk",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -953,7 +947,9 @@
                 "identifier": "readDir",
                 "newPage": false,
                 "searchKey": "filepath.readDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -973,7 +969,9 @@
                 "identifier": "readDirNames",
                 "newPage": false,
                 "searchKey": "filepath.readDirNames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -993,9 +991,7 @@
                 "identifier": "Base",
                 "newPage": false,
                 "searchKey": "filepath.Base",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1015,9 +1011,7 @@
                 "identifier": "Dir",
                 "newPage": false,
                 "searchKey": "filepath.Dir",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1037,9 +1031,7 @@
                 "identifier": "VolumeName",
                 "newPage": false,
                 "searchKey": "filepath.VolumeName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1059,9 +1051,7 @@
                 "identifier": "IsAbs",
                 "newPage": false,
                 "searchKey": "filepath.IsAbs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1081,7 +1071,9 @@
                 "identifier": "volumeNameLen",
                 "newPage": false,
                 "searchKey": "filepath.volumeNameLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1102,7 +1094,6 @@
                 "newPage": false,
                 "searchKey": "filepath.HasPrefix",
                 "tags": [
-                  "exported",
                   "deprecated"
                 ]
               },
@@ -1124,7 +1115,9 @@
                 "identifier": "splitList",
                 "newPage": false,
                 "searchKey": "filepath.splitList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1144,7 +1137,9 @@
                 "identifier": "abs",
                 "newPage": false,
                 "searchKey": "filepath.abs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1164,7 +1159,9 @@
                 "identifier": "join",
                 "newPage": false,
                 "searchKey": "filepath.join",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1184,7 +1181,9 @@
                 "identifier": "sameWord",
                 "newPage": false,
                 "searchKey": "filepath.sameWord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1204,7 +1203,9 @@
                 "identifier": "walkSymlinks",
                 "newPage": false,
                 "searchKey": "filepath.walkSymlinks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1224,7 +1225,9 @@
                 "identifier": "evalSymlinks",
                 "newPage": false,
                 "searchKey": "filepath.evalSymlinks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

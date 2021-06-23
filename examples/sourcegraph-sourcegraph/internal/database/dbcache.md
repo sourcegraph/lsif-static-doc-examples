@@ -16,15 +16,20 @@
 * [Functions](#func)
     * [func TestListDefaultRepos(t *testing.T)](#TestListDefaultRepos)
     * [func BenchmarkDefaultRepos_List_Empty(b *testing.B)](#BenchmarkDefaultRepos_List_Empty)
-    * [func init()](#init)
+    * [func init()](#init.main_test.go)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [private]
+```
 
 ### <a id="defaultReposMaxAge" href="#defaultReposMaxAge">const defaultReposMaxAge</a>
 
 ```
 searchKey: dbcache.defaultReposMaxAge
+tags: [private]
 ```
 
 ```Go
@@ -35,10 +40,15 @@ defaultReposMaxAge is how long we cache the list of default repos. The list chan
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="cachedRepos" href="#cachedRepos">type cachedRepos struct</a>
 
 ```
 searchKey: dbcache.cachedRepos
+tags: [private]
 ```
 
 ```Go
@@ -52,6 +62,7 @@ type cachedRepos struct {
 
 ```
 searchKey: dbcache.cachedRepos.Repos
+tags: [private]
 ```
 
 ```Go
@@ -64,7 +75,6 @@ Repos returns the current cached repos and boolean value indicating whether an u
 
 ```
 searchKey: dbcache.DefaultRepoLister
-tags: [exported]
 ```
 
 ```Go
@@ -83,7 +93,6 @@ DefaultRepoLister holds the list of default repos which are cached for defaultRe
 
 ```
 searchKey: dbcache.NewDefaultRepoLister
-tags: [exported]
 ```
 
 ```Go
@@ -94,7 +103,6 @@ func NewDefaultRepoLister(store *database.RepoStore) *DefaultRepoLister
 
 ```
 searchKey: dbcache.DefaultRepoLister.List
-tags: [exported]
 ```
 
 ```Go
@@ -109,7 +117,6 @@ The values are cached for up to defaultReposMaxAge. If the cache has expired, we
 
 ```
 searchKey: dbcache.DefaultRepoLister.ListPublic
-tags: [exported]
 ```
 
 ```Go
@@ -122,6 +129,7 @@ ListPublic is similar to List except that it only includes public repos.
 
 ```
 searchKey: dbcache.DefaultRepoLister.list
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +140,7 @@ func (s *DefaultRepoLister) list(ctx context.Context, onlyPublic bool) (results 
 
 ```
 searchKey: dbcache.DefaultRepoLister.refreshCache
+tags: [private]
 ```
 
 ```Go
@@ -140,10 +149,15 @@ func (s *DefaultRepoLister) refreshCache(ctx context.Context, onlyPublic bool) (
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestListDefaultRepos" href="#TestListDefaultRepos">func TestListDefaultRepos(t *testing.T)</a>
 
 ```
 searchKey: dbcache.TestListDefaultRepos
+tags: [private]
 ```
 
 ```Go
@@ -154,16 +168,18 @@ func TestListDefaultRepos(t *testing.T)
 
 ```
 searchKey: dbcache.BenchmarkDefaultRepos_List_Empty
+tags: [private]
 ```
 
 ```Go
 func BenchmarkDefaultRepos_List_Empty(b *testing.B)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.main_test.go" href="#init.main_test.go">func init()</a>
 
 ```
 searchKey: dbcache.init
+tags: [private]
 ```
 
 ```Go

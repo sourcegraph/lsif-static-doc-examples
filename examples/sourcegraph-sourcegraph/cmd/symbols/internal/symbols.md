@@ -49,7 +49,7 @@ Package symbols implements the symbol search service.
     * [func symbolInDBToSymbol(symbolInDB symbolInDB) result.Symbol](#symbolInDBToSymbol)
     * [func TestParser(t *testing.T)](#TestParser)
     * [func BenchmarkSearch(b *testing.B)](#BenchmarkSearch)
-    * [func init()](#init)
+    * [func init()](#init.service_test.go)
     * [func TestIsLiteralEquality(t *testing.T)](#TestIsLiteralEquality)
     * [func TestService(t *testing.T)](#TestService)
     * [func createTar(files map[string]string) (io.ReadCloser, error)](#createTar)
@@ -57,10 +57,15 @@ Package symbols implements the symbol search service.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="debugLogs" href="#debugLogs">const debugLogs</a>
 
 ```
 searchKey: symbols.debugLogs
+tags: [private]
 ```
 
 ```Go
@@ -71,6 +76,7 @@ const debugLogs = false
 
 ```
 searchKey: symbols.maxFileSize
+tags: [private]
 ```
 
 ```Go
@@ -84,6 +90,7 @@ maxFileSize is the limit on file size in bytes. Only files smaller than this are
 
 ```
 searchKey: symbols.symbolsDBVersion
+tags: [private]
 ```
 
 ```Go
@@ -94,10 +101,15 @@ The version of the symbols database schema. This is included in the database fil
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="logErrors" href="#logErrors">var logErrors</a>
 
 ```
 searchKey: symbols.logErrors
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +120,7 @@ var logErrors = os.Getenv("DEPLOY_TYPE") == "dev"
 
 ```
 searchKey: symbols.ctagsCommand
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +131,7 @@ var ctagsCommand = ...
 
 ```
 searchKey: symbols.rawPatternLengthLimit
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +144,7 @@ Increasing this value may increase the size of the symbols cache, but will also 
 
 ```
 searchKey: symbols.fetching
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +155,7 @@ var fetching = ...
 
 ```
 searchKey: symbols.fetchQueueSize
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +166,7 @@ var fetchQueueSize = ...
 
 ```
 searchKey: symbols.fetchFailed
+tags: [private]
 ```
 
 ```Go
@@ -160,6 +177,7 @@ var fetchFailed = ...
 
 ```
 searchKey: symbols.parsing
+tags: [private]
 ```
 
 ```Go
@@ -170,6 +188,7 @@ var parsing = ...
 
 ```
 searchKey: symbols.parseQueueSize
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +199,7 @@ var parseQueueSize = ...
 
 ```
 searchKey: symbols.parseQueueTimeouts
+tags: [private]
 ```
 
 ```Go
@@ -190,6 +210,7 @@ var parseQueueTimeouts = ...
 
 ```
 searchKey: symbols.parseFailed
+tags: [private]
 ```
 
 ```Go
@@ -200,6 +221,7 @@ var parseFailed = ...
 
 ```
 searchKey: symbols.cacheSizeBytes
+tags: [private]
 ```
 
 ```Go
@@ -210,6 +232,7 @@ var cacheSizeBytes = ...
 
 ```
 searchKey: symbols.evictions
+tags: [private]
 ```
 
 ```Go
@@ -218,10 +241,15 @@ var evictions = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="parseRequest" href="#parseRequest">type parseRequest struct</a>
 
 ```
 searchKey: symbols.parseRequest
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +263,7 @@ type parseRequest struct {
 
 ```
 searchKey: symbols.symbolInDB
+tags: [private]
 ```
 
 ```Go
@@ -261,6 +290,7 @@ symbolInDB is the same as `protocol.Symbol`, but with two additional columns: na
 
 ```
 searchKey: symbols.symbolToSymbolInDB
+tags: [private]
 ```
 
 ```Go
@@ -271,7 +301,6 @@ func symbolToSymbolInDB(symbol result.Symbol) symbolInDB
 
 ```
 searchKey: symbols.Service
-tags: [exported]
 ```
 
 ```Go
@@ -317,6 +346,7 @@ Service is the symbols service.
 
 ```
 searchKey: symbols.Service.fetchRepositoryArchive
+tags: [private]
 ```
 
 ```Go
@@ -327,6 +357,7 @@ func (s *Service) fetchRepositoryArchive(ctx context.Context, repo api.RepoName,
 
 ```
 searchKey: symbols.Service.startParsers
+tags: [private]
 ```
 
 ```Go
@@ -339,6 +370,7 @@ startParsers starts the parser process pool.
 
 ```
 searchKey: symbols.Service.parseUncached
+tags: [private]
 ```
 
 ```Go
@@ -349,6 +381,7 @@ func (s *Service) parseUncached(ctx context.Context, repo api.RepoName, commitID
 
 ```
 searchKey: symbols.Service.parse
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +394,7 @@ parse gets a parser from the pool and uses it to satisfy the parse request.
 
 ```
 searchKey: symbols.Service.handleSearch
+tags: [private]
 ```
 
 ```Go
@@ -371,6 +405,7 @@ func (s *Service) handleSearch(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: symbols.Service.search
+tags: [private]
 ```
 
 ```Go
@@ -381,6 +416,7 @@ func (s *Service) search(ctx context.Context, args protocol.SearchArgs) (*result
 
 ```
 searchKey: symbols.Service.getDBFile
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +429,7 @@ getDBFile returns the path to the sqlite3 database for the repo@commit specified
 
 ```
 searchKey: symbols.Service.writeAllSymbolsToNewDB
+tags: [private]
 ```
 
 ```Go
@@ -405,7 +442,6 @@ writeAllSymbolsToNewDB fetches the repo@commit from gitserver, parses all the sy
 
 ```
 searchKey: symbols.Service.Start
-tags: [exported]
 ```
 
 ```Go
@@ -418,7 +454,6 @@ Start must be called before any requests are handled.
 
 ```
 searchKey: symbols.Service.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -431,6 +466,7 @@ Handler returns the http.Handler that should be used to serve requests.
 
 ```
 searchKey: symbols.Service.handleHealthCheck
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +477,7 @@ func (s *Service) handleHealthCheck(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: symbols.Service.watchAndEvict
+tags: [private]
 ```
 
 ```Go
@@ -453,6 +490,7 @@ watchAndEvict is a loop which periodically checks the size of the cache and evic
 
 ```
 searchKey: symbols.mockParser
+tags: [private]
 ```
 
 ```Go
@@ -463,6 +501,7 @@ type mockParser []string
 
 ```
 searchKey: symbols.mockParser.Parse
+tags: [private]
 ```
 
 ```Go
@@ -473,6 +512,7 @@ func (m mockParser) Parse(name string, content []byte) ([]*ctags.Entry, error)
 
 ```
 searchKey: symbols.mockParser.Close
+tags: [private]
 ```
 
 ```Go
@@ -481,11 +521,14 @@ func (mockParser) Close()
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewParser" href="#NewParser">func NewParser() (ctags.Parser, error)</a>
 
 ```
 searchKey: symbols.NewParser
-tags: [exported]
 ```
 
 ```Go
@@ -498,6 +541,7 @@ NewParser runs the ctags command from the CTAGS_COMMAND environment variable, fa
 
 ```
 searchKey: symbols.entryToSymbol
+tags: [private]
 ```
 
 ```Go
@@ -508,6 +552,7 @@ func entryToSymbol(e *ctags.Entry) result.Symbol
 
 ```
 searchKey: symbols.isLiteralEquality
+tags: [private]
 ```
 
 ```Go
@@ -520,6 +565,7 @@ isLiteralEquality checks if the given regex matches literal strings exactly. Ret
 
 ```
 searchKey: symbols.filterSymbols
+tags: [private]
 ```
 
 ```Go
@@ -530,6 +576,7 @@ func filterSymbols(ctx context.Context, db *sqlx.DB, args protocol.SearchArgs) (
 
 ```
 searchKey: symbols.symbolInDBToSymbol
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +587,7 @@ func symbolInDBToSymbol(symbolInDB symbolInDB) result.Symbol
 
 ```
 searchKey: symbols.TestParser
+tags: [private]
 ```
 
 ```Go
@@ -550,16 +598,18 @@ func TestParser(t *testing.T)
 
 ```
 searchKey: symbols.BenchmarkSearch
+tags: [private]
 ```
 
 ```Go
 func BenchmarkSearch(b *testing.B)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.service_test.go" href="#init.service_test.go">func init()</a>
 
 ```
 searchKey: symbols.init
+tags: [private]
 ```
 
 ```Go
@@ -570,6 +620,7 @@ func init()
 
 ```
 searchKey: symbols.TestIsLiteralEquality
+tags: [private]
 ```
 
 ```Go
@@ -580,6 +631,7 @@ func TestIsLiteralEquality(t *testing.T)
 
 ```
 searchKey: symbols.TestService
+tags: [private]
 ```
 
 ```Go
@@ -590,6 +642,7 @@ func TestService(t *testing.T)
 
 ```
 searchKey: symbols.createTar
+tags: [private]
 ```
 
 ```Go

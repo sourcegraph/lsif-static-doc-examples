@@ -4,7 +4,9 @@
     "identifier": "bytealg",
     "newPage": true,
     "searchKey": "internal/bytealg",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "offsetX86HasSSE2",
                 "newPage": false,
                 "searchKey": "bytealg.offsetX86HasSSE2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "offsetX86HasSSE42",
                 "newPage": false,
                 "searchKey": "bytealg.offsetX86HasSSE42",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "offsetX86HasAVX2",
                 "newPage": false,
                 "searchKey": "bytealg.offsetX86HasAVX2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "offsetX86HasPOPCNT",
                 "newPage": false,
                 "searchKey": "bytealg.offsetX86HasPOPCNT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "offsetS390xHasVX",
                 "newPage": false,
                 "searchKey": "bytealg.offsetS390xHasVX",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -140,7 +154,9 @@
                 "identifier": "offsetPPC64HasPOWER9",
                 "newPage": false,
                 "searchKey": "bytealg.offsetPPC64HasPOWER9",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -160,9 +176,7 @@
                 "identifier": "PrimeRK",
                 "newPage": false,
                 "searchKey": "bytealg.PrimeRK",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -182,9 +196,7 @@
                 "identifier": "MaxBruteForce",
                 "newPage": false,
                 "searchKey": "bytealg.MaxBruteForce",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -207,7 +219,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -225,9 +239,7 @@
                 "identifier": "MaxLen",
                 "newPage": false,
                 "searchKey": "bytealg.MaxLen",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -250,7 +262,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -268,9 +282,7 @@
                 "identifier": "HashStrBytes",
                 "newPage": false,
                 "searchKey": "bytealg.HashStrBytes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -290,9 +302,7 @@
                 "identifier": "HashStr",
                 "newPage": false,
                 "searchKey": "bytealg.HashStr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -312,9 +322,7 @@
                 "identifier": "HashStrRevBytes",
                 "newPage": false,
                 "searchKey": "bytealg.HashStrRevBytes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -334,9 +342,7 @@
                 "identifier": "HashStrRev",
                 "newPage": false,
                 "searchKey": "bytealg.HashStrRev",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -356,9 +362,7 @@
                 "identifier": "IndexRabinKarpBytes",
                 "newPage": false,
                 "searchKey": "bytealg.IndexRabinKarpBytes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -378,9 +382,7 @@
                 "identifier": "IndexRabinKarp",
                 "newPage": false,
                 "searchKey": "bytealg.IndexRabinKarp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -400,9 +402,7 @@
                 "identifier": "Compare",
                 "newPage": false,
                 "searchKey": "bytealg.Compare",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -422,7 +422,9 @@
                 "identifier": "abigen_runtime_cmpstring",
                 "newPage": false,
                 "searchKey": "bytealg.abigen_runtime_cmpstring",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -442,9 +444,7 @@
                 "identifier": "Count",
                 "newPage": false,
                 "searchKey": "bytealg.Count",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -464,9 +464,7 @@
                 "identifier": "CountString",
                 "newPage": false,
                 "searchKey": "bytealg.CountString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -486,7 +484,9 @@
                 "identifier": "countGeneric",
                 "newPage": false,
                 "searchKey": "bytealg.countGeneric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -506,7 +506,9 @@
                 "identifier": "countGenericString",
                 "newPage": false,
                 "searchKey": "bytealg.countGenericString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -526,9 +528,7 @@
                 "identifier": "Equal",
                 "newPage": false,
                 "searchKey": "bytealg.Equal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -548,7 +548,9 @@
                 "identifier": "abigen_runtime_memequal",
                 "newPage": false,
                 "searchKey": "bytealg.abigen_runtime_memequal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -568,7 +570,9 @@
                 "identifier": "abigen_runtime_memequal_varlen",
                 "newPage": false,
                 "searchKey": "bytealg.abigen_runtime_memequal_varlen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -583,12 +587,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/bytealg#init",
+              "pathID": "/internal/bytealg#init.index_amd64.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.index_amd64.go",
                 "newPage": false,
                 "searchKey": "bytealg.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -608,9 +614,7 @@
                 "identifier": "Cutover",
                 "newPage": false,
                 "searchKey": "bytealg.Cutover",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -630,9 +634,7 @@
                 "identifier": "Index",
                 "newPage": false,
                 "searchKey": "bytealg.Index",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -652,9 +654,7 @@
                 "identifier": "IndexString",
                 "newPage": false,
                 "searchKey": "bytealg.IndexString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -674,9 +674,7 @@
                 "identifier": "IndexByte",
                 "newPage": false,
                 "searchKey": "bytealg.IndexByte",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -696,9 +694,7 @@
                 "identifier": "IndexByteString",
                 "newPage": false,
                 "searchKey": "bytealg.IndexByteString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

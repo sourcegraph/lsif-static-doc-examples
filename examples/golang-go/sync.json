@@ -4,9 +4,7 @@
     "identifier": "sync",
     "newPage": true,
     "searchKey": "sync",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "mutexLocked",
                 "newPage": false,
                 "searchKey": "sync.mutexLocked",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "mutexWoken",
                 "newPage": false,
                 "searchKey": "sync.mutexWoken",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "mutexStarving",
                 "newPage": false,
                 "searchKey": "sync.mutexStarving",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "mutexWaiterShift",
                 "newPage": false,
                 "searchKey": "sync.mutexWaiterShift",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "starvationThresholdNs",
                 "newPage": false,
                 "searchKey": "sync.starvationThresholdNs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "dequeueBits",
                 "newPage": false,
                 "searchKey": "sync.dequeueBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "dequeueLimit",
                 "newPage": false,
                 "searchKey": "sync.dequeueLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "rwmutexMaxReaders",
                 "newPage": false,
                 "searchKey": "sync.rwmutexMaxReaders",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,9 +219,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -227,7 +237,9 @@
                 "identifier": "expunged",
                 "newPage": false,
                 "searchKey": "sync.expunged",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "poolRaceHash",
                 "newPage": false,
                 "searchKey": "sync.poolRaceHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "allPoolsMu",
                 "newPage": false,
                 "searchKey": "sync.allPoolsMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -287,7 +303,9 @@
                 "identifier": "allPools",
                 "newPage": false,
                 "searchKey": "sync.allPools",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -307,7 +325,9 @@
                 "identifier": "oldPools",
                 "newPage": false,
                 "searchKey": "sync.oldPools",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -327,7 +347,9 @@
                 "identifier": "Runtime_Semacquire",
                 "newPage": false,
                 "searchKey": "sync.Runtime_Semacquire",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,7 +369,9 @@
                 "identifier": "Runtime_Semrelease",
                 "newPage": false,
                 "searchKey": "sync.Runtime_Semrelease",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +391,9 @@
                 "identifier": "Runtime_procPin",
                 "newPage": false,
                 "searchKey": "sync.Runtime_procPin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +413,9 @@
                 "identifier": "Runtime_procUnpin",
                 "newPage": false,
                 "searchKey": "sync.Runtime_procUnpin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -410,9 +438,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -430,9 +456,7 @@
                 "identifier": "Cond",
                 "newPage": false,
                 "searchKey": "sync.Cond",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -450,9 +474,7 @@
                       "identifier": "NewCond",
                       "newPage": false,
                       "searchKey": "sync.NewCond",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -472,9 +494,7 @@
                       "identifier": "Cond.Wait",
                       "newPage": false,
                       "searchKey": "sync.Cond.Wait",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -494,9 +514,7 @@
                       "identifier": "Cond.Signal",
                       "newPage": false,
                       "searchKey": "sync.Cond.Signal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -516,9 +534,7 @@
                       "identifier": "Cond.Broadcast",
                       "newPage": false,
                       "searchKey": "sync.Cond.Broadcast",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -541,7 +557,9 @@
                 "identifier": "copyChecker",
                 "newPage": false,
                 "searchKey": "sync.copyChecker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -559,7 +577,9 @@
                       "identifier": "copyChecker.check",
                       "newPage": false,
                       "searchKey": "sync.copyChecker.check",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -582,7 +602,9 @@
                 "identifier": "noCopy",
                 "newPage": false,
                 "searchKey": "sync.noCopy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -600,7 +622,9 @@
                       "identifier": "noCopy.Lock",
                       "newPage": false,
                       "searchKey": "sync.noCopy.Lock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -620,7 +644,9 @@
                       "identifier": "noCopy.Unlock",
                       "newPage": false,
                       "searchKey": "sync.noCopy.Unlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -643,9 +669,7 @@
                 "identifier": "Map",
                 "newPage": false,
                 "searchKey": "sync.Map",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -663,9 +687,7 @@
                       "identifier": "Map.Load",
                       "newPage": false,
                       "searchKey": "sync.Map.Load",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -685,9 +707,7 @@
                       "identifier": "Map.Store",
                       "newPage": false,
                       "searchKey": "sync.Map.Store",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -707,9 +727,7 @@
                       "identifier": "Map.LoadOrStore",
                       "newPage": false,
                       "searchKey": "sync.Map.LoadOrStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -729,9 +747,7 @@
                       "identifier": "Map.LoadAndDelete",
                       "newPage": false,
                       "searchKey": "sync.Map.LoadAndDelete",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -751,9 +767,7 @@
                       "identifier": "Map.Delete",
                       "newPage": false,
                       "searchKey": "sync.Map.Delete",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -773,9 +787,7 @@
                       "identifier": "Map.Range",
                       "newPage": false,
                       "searchKey": "sync.Map.Range",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -795,7 +807,9 @@
                       "identifier": "Map.missLocked",
                       "newPage": false,
                       "searchKey": "sync.Map.missLocked",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -815,7 +829,9 @@
                       "identifier": "Map.dirtyLocked",
                       "newPage": false,
                       "searchKey": "sync.Map.dirtyLocked",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -838,7 +854,9 @@
                 "identifier": "readOnly",
                 "newPage": false,
                 "searchKey": "sync.readOnly",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -858,7 +876,9 @@
                 "identifier": "entry",
                 "newPage": false,
                 "searchKey": "sync.entry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -876,7 +896,9 @@
                       "identifier": "newEntry",
                       "newPage": false,
                       "searchKey": "sync.newEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -896,7 +918,9 @@
                       "identifier": "entry.load",
                       "newPage": false,
                       "searchKey": "sync.entry.load",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -916,7 +940,9 @@
                       "identifier": "entry.tryStore",
                       "newPage": false,
                       "searchKey": "sync.entry.tryStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -936,7 +962,9 @@
                       "identifier": "entry.unexpungeLocked",
                       "newPage": false,
                       "searchKey": "sync.entry.unexpungeLocked",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -956,7 +984,9 @@
                       "identifier": "entry.storeLocked",
                       "newPage": false,
                       "searchKey": "sync.entry.storeLocked",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -976,7 +1006,9 @@
                       "identifier": "entry.tryLoadOrStore",
                       "newPage": false,
                       "searchKey": "sync.entry.tryLoadOrStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -996,7 +1028,9 @@
                       "identifier": "entry.delete",
                       "newPage": false,
                       "searchKey": "sync.entry.delete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1016,7 +1050,9 @@
                       "identifier": "entry.tryExpungeLocked",
                       "newPage": false,
                       "searchKey": "sync.entry.tryExpungeLocked",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1039,9 +1075,7 @@
                 "identifier": "Mutex",
                 "newPage": false,
                 "searchKey": "sync.Mutex",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1059,9 +1093,7 @@
                       "identifier": "Mutex.Lock",
                       "newPage": false,
                       "searchKey": "sync.Mutex.Lock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1081,7 +1113,9 @@
                       "identifier": "Mutex.lockSlow",
                       "newPage": false,
                       "searchKey": "sync.Mutex.lockSlow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1101,9 +1135,7 @@
                       "identifier": "Mutex.Unlock",
                       "newPage": false,
                       "searchKey": "sync.Mutex.Unlock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1123,7 +1155,9 @@
                       "identifier": "Mutex.unlockSlow",
                       "newPage": false,
                       "searchKey": "sync.Mutex.unlockSlow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1146,9 +1180,7 @@
                 "identifier": "Locker",
                 "newPage": false,
                 "searchKey": "sync.Locker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1168,9 +1200,7 @@
                 "identifier": "Once",
                 "newPage": false,
                 "searchKey": "sync.Once",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1188,9 +1218,7 @@
                       "identifier": "Once.Do",
                       "newPage": false,
                       "searchKey": "sync.Once.Do",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1210,7 +1238,9 @@
                       "identifier": "Once.doSlow",
                       "newPage": false,
                       "searchKey": "sync.Once.doSlow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1233,9 +1263,7 @@
                 "identifier": "Pool",
                 "newPage": false,
                 "searchKey": "sync.Pool",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1253,9 +1281,7 @@
                       "identifier": "Pool.Put",
                       "newPage": false,
                       "searchKey": "sync.Pool.Put",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1275,9 +1301,7 @@
                       "identifier": "Pool.Get",
                       "newPage": false,
                       "searchKey": "sync.Pool.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1297,7 +1321,9 @@
                       "identifier": "Pool.getSlow",
                       "newPage": false,
                       "searchKey": "sync.Pool.getSlow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1317,7 +1343,9 @@
                       "identifier": "Pool.pin",
                       "newPage": false,
                       "searchKey": "sync.Pool.pin",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1337,7 +1365,9 @@
                       "identifier": "Pool.pinSlow",
                       "newPage": false,
                       "searchKey": "sync.Pool.pinSlow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1360,7 +1390,9 @@
                 "identifier": "poolLocalInternal",
                 "newPage": false,
                 "searchKey": "sync.poolLocalInternal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1380,7 +1412,9 @@
                 "identifier": "poolLocal",
                 "newPage": false,
                 "searchKey": "sync.poolLocal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1398,7 +1432,9 @@
                       "identifier": "indexLocal",
                       "newPage": false,
                       "searchKey": "sync.indexLocal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1421,7 +1457,9 @@
                 "identifier": "poolDequeue",
                 "newPage": false,
                 "searchKey": "sync.poolDequeue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1439,7 +1477,9 @@
                       "identifier": "poolDequeue.unpack",
                       "newPage": false,
                       "searchKey": "sync.poolDequeue.unpack",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1459,7 +1499,9 @@
                       "identifier": "poolDequeue.pack",
                       "newPage": false,
                       "searchKey": "sync.poolDequeue.pack",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1479,7 +1521,9 @@
                       "identifier": "poolDequeue.pushHead",
                       "newPage": false,
                       "searchKey": "sync.poolDequeue.pushHead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1499,7 +1543,9 @@
                       "identifier": "poolDequeue.popHead",
                       "newPage": false,
                       "searchKey": "sync.poolDequeue.popHead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1519,7 +1565,9 @@
                       "identifier": "poolDequeue.popTail",
                       "newPage": false,
                       "searchKey": "sync.poolDequeue.popTail",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1539,7 +1587,9 @@
                       "identifier": "poolDequeue.PushHead",
                       "newPage": false,
                       "searchKey": "sync.poolDequeue.PushHead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1559,7 +1609,9 @@
                       "identifier": "poolDequeue.PopHead",
                       "newPage": false,
                       "searchKey": "sync.poolDequeue.PopHead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1579,7 +1631,9 @@
                       "identifier": "poolDequeue.PopTail",
                       "newPage": false,
                       "searchKey": "sync.poolDequeue.PopTail",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1602,7 +1656,9 @@
                 "identifier": "eface",
                 "newPage": false,
                 "searchKey": "sync.eface",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1622,7 +1678,9 @@
                 "identifier": "dequeueNil",
                 "newPage": false,
                 "searchKey": "sync.dequeueNil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1642,7 +1700,9 @@
                 "identifier": "poolChain",
                 "newPage": false,
                 "searchKey": "sync.poolChain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1660,7 +1720,9 @@
                       "identifier": "poolChain.pushHead",
                       "newPage": false,
                       "searchKey": "sync.poolChain.pushHead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1680,7 +1742,9 @@
                       "identifier": "poolChain.popHead",
                       "newPage": false,
                       "searchKey": "sync.poolChain.popHead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1700,7 +1764,9 @@
                       "identifier": "poolChain.popTail",
                       "newPage": false,
                       "searchKey": "sync.poolChain.popTail",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1720,7 +1786,9 @@
                       "identifier": "poolChain.PushHead",
                       "newPage": false,
                       "searchKey": "sync.poolChain.PushHead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1740,7 +1808,9 @@
                       "identifier": "poolChain.PopHead",
                       "newPage": false,
                       "searchKey": "sync.poolChain.PopHead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1760,7 +1830,9 @@
                       "identifier": "poolChain.PopTail",
                       "newPage": false,
                       "searchKey": "sync.poolChain.PopTail",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1783,7 +1855,9 @@
                 "identifier": "poolChainElt",
                 "newPage": false,
                 "searchKey": "sync.poolChainElt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1801,7 +1875,9 @@
                       "identifier": "loadPoolChainElt",
                       "newPage": false,
                       "searchKey": "sync.loadPoolChainElt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1824,7 +1900,9 @@
                 "identifier": "notifyList",
                 "newPage": false,
                 "searchKey": "sync.notifyList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1844,9 +1922,7 @@
                 "identifier": "RWMutex",
                 "newPage": false,
                 "searchKey": "sync.RWMutex",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1864,9 +1940,7 @@
                       "identifier": "RWMutex.RLock",
                       "newPage": false,
                       "searchKey": "sync.RWMutex.RLock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1886,9 +1960,7 @@
                       "identifier": "RWMutex.RUnlock",
                       "newPage": false,
                       "searchKey": "sync.RWMutex.RUnlock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1908,7 +1980,9 @@
                       "identifier": "RWMutex.rUnlockSlow",
                       "newPage": false,
                       "searchKey": "sync.RWMutex.rUnlockSlow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1928,9 +2002,7 @@
                       "identifier": "RWMutex.Lock",
                       "newPage": false,
                       "searchKey": "sync.RWMutex.Lock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1950,9 +2022,7 @@
                       "identifier": "RWMutex.Unlock",
                       "newPage": false,
                       "searchKey": "sync.RWMutex.Unlock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1972,9 +2042,7 @@
                       "identifier": "RWMutex.RLocker",
                       "newPage": false,
                       "searchKey": "sync.RWMutex.RLocker",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1997,7 +2065,9 @@
                 "identifier": "rlocker",
                 "newPage": false,
                 "searchKey": "sync.rlocker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2015,7 +2085,9 @@
                       "identifier": "rlocker.Lock",
                       "newPage": false,
                       "searchKey": "sync.rlocker.Lock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2035,7 +2107,9 @@
                       "identifier": "rlocker.Unlock",
                       "newPage": false,
                       "searchKey": "sync.rlocker.Unlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2058,9 +2132,7 @@
                 "identifier": "WaitGroup",
                 "newPage": false,
                 "searchKey": "sync.WaitGroup",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2078,7 +2150,9 @@
                       "identifier": "WaitGroup.state",
                       "newPage": false,
                       "searchKey": "sync.WaitGroup.state",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2098,9 +2172,7 @@
                       "identifier": "WaitGroup.Add",
                       "newPage": false,
                       "searchKey": "sync.WaitGroup.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2120,9 +2192,7 @@
                       "identifier": "WaitGroup.Done",
                       "newPage": false,
                       "searchKey": "sync.WaitGroup.Done",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2142,9 +2212,7 @@
                       "identifier": "WaitGroup.Wait",
                       "newPage": false,
                       "searchKey": "sync.WaitGroup.Wait",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2167,7 +2235,9 @@
                 "identifier": "PoolDequeue",
                 "newPage": false,
                 "searchKey": "sync.PoolDequeue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2185,7 +2255,9 @@
                       "identifier": "NewPoolDequeue",
                       "newPage": false,
                       "searchKey": "sync.NewPoolDequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2205,7 +2277,9 @@
                       "identifier": "NewPoolChain",
                       "newPage": false,
                       "searchKey": "sync.NewPoolChain",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2231,9 +2305,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2251,7 +2323,9 @@
                 "identifier": "throw",
                 "newPage": false,
                 "searchKey": "sync.throw",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2271,7 +2345,9 @@
                 "identifier": "fastrand",
                 "newPage": false,
                 "searchKey": "sync.fastrand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2291,7 +2367,9 @@
                 "identifier": "poolRaceAddr",
                 "newPage": false,
                 "searchKey": "sync.poolRaceAddr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2311,7 +2389,9 @@
                 "identifier": "poolCleanup",
                 "newPage": false,
                 "searchKey": "sync.poolCleanup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2326,12 +2406,14 @@
           },
           {
             "node": {
-              "pathID": "/sync#init",
+              "pathID": "/sync#init.pool.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.pool.go",
                 "newPage": false,
                 "searchKey": "sync.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2351,7 +2433,9 @@
                 "identifier": "runtime_registerPoolCleanup",
                 "newPage": false,
                 "searchKey": "sync.runtime_registerPoolCleanup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2371,7 +2455,9 @@
                 "identifier": "runtime_procPin",
                 "newPage": false,
                 "searchKey": "sync.runtime_procPin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2391,7 +2477,9 @@
                 "identifier": "runtime_procUnpin",
                 "newPage": false,
                 "searchKey": "sync.runtime_procUnpin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2411,7 +2499,9 @@
                 "identifier": "runtime_LoadAcquintptr",
                 "newPage": false,
                 "searchKey": "sync.runtime_LoadAcquintptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2431,7 +2521,9 @@
                 "identifier": "runtime_StoreReluintptr",
                 "newPage": false,
                 "searchKey": "sync.runtime_StoreReluintptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2451,7 +2543,9 @@
                 "identifier": "storePoolChainElt",
                 "newPage": false,
                 "searchKey": "sync.storePoolChainElt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2471,7 +2565,9 @@
                 "identifier": "runtime_Semacquire",
                 "newPage": false,
                 "searchKey": "sync.runtime_Semacquire",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2491,7 +2587,9 @@
                 "identifier": "runtime_SemacquireMutex",
                 "newPage": false,
                 "searchKey": "sync.runtime_SemacquireMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2511,7 +2609,9 @@
                 "identifier": "runtime_Semrelease",
                 "newPage": false,
                 "searchKey": "sync.runtime_Semrelease",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2531,7 +2631,9 @@
                 "identifier": "runtime_notifyListAdd",
                 "newPage": false,
                 "searchKey": "sync.runtime_notifyListAdd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2551,7 +2653,9 @@
                 "identifier": "runtime_notifyListWait",
                 "newPage": false,
                 "searchKey": "sync.runtime_notifyListWait",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2571,7 +2675,9 @@
                 "identifier": "runtime_notifyListNotifyAll",
                 "newPage": false,
                 "searchKey": "sync.runtime_notifyListNotifyAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2591,7 +2697,9 @@
                 "identifier": "runtime_notifyListNotifyOne",
                 "newPage": false,
                 "searchKey": "sync.runtime_notifyListNotifyOne",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2611,7 +2719,9 @@
                 "identifier": "runtime_notifyListCheck",
                 "newPage": false,
                 "searchKey": "sync.runtime_notifyListCheck",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2626,12 +2736,14 @@
           },
           {
             "node": {
-              "pathID": "/sync#init",
+              "pathID": "/sync#init.runtime.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.runtime.go",
                 "newPage": false,
                 "searchKey": "sync.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2651,7 +2763,9 @@
                 "identifier": "runtime_canSpin",
                 "newPage": false,
                 "searchKey": "sync.runtime_canSpin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2671,7 +2785,9 @@
                 "identifier": "runtime_doSpin",
                 "newPage": false,
                 "searchKey": "sync.runtime_doSpin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2691,7 +2807,9 @@
                 "identifier": "runtime_nanotime",
                 "newPage": false,
                 "searchKey": "sync.runtime_nanotime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

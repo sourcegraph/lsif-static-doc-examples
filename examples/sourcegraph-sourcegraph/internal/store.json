@@ -4,7 +4,9 @@
     "identifier": "store",
     "newPage": true,
     "searchKey": "internal/store",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "maxFileSize",
                 "newPage": false,
                 "searchKey": "store.maxFileSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "cacheSizeBytes",
                 "newPage": false,
                 "searchKey": "store.cacheSizeBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "evictions",
                 "newPage": false,
                 "searchKey": "store.evictions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "fetching",
                 "newPage": false,
                 "searchKey": "store.fetching",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "fetchQueueSize",
                 "newPage": false,
                 "searchKey": "store.fetchQueueSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "fetchFailed",
                 "newPage": false,
                 "searchKey": "store.fetchFailed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +202,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -202,9 +222,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "store.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -222,7 +240,9 @@
                       "identifier": "tmpStore",
                       "newPage": false,
                       "searchKey": "store.tmpStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -242,9 +262,7 @@
                       "identifier": "Store.Start",
                       "newPage": false,
                       "searchKey": "store.Store.Start",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -264,9 +282,7 @@
                       "identifier": "Store.PrepareZip",
                       "newPage": false,
                       "searchKey": "store.Store.PrepareZip",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -286,7 +302,9 @@
                       "identifier": "Store.fetch",
                       "newPage": false,
                       "searchKey": "store.Store.fetch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -306,9 +324,7 @@
                       "identifier": "Store.String",
                       "newPage": false,
                       "searchKey": "store.Store.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,7 +344,9 @@
                       "identifier": "Store.watchAndEvict",
                       "newPage": false,
                       "searchKey": "store.Store.watchAndEvict",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -348,7 +366,9 @@
                       "identifier": "Store.watchConfig",
                       "newPage": false,
                       "searchKey": "store.Store.watchConfig",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -371,9 +391,7 @@
                 "identifier": "FilterFunc",
                 "newPage": false,
                 "searchKey": "store.FilterFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -393,7 +411,9 @@
                 "identifier": "temporaryError",
                 "newPage": false,
                 "searchKey": "store.temporaryError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -411,7 +431,9 @@
                       "identifier": "temporaryError.Temporary",
                       "newPage": false,
                       "searchKey": "store.temporaryError.Temporary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,9 +456,7 @@
                 "identifier": "ZipCache",
                 "newPage": false,
                 "searchKey": "store.ZipCache",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -454,7 +474,9 @@
                       "identifier": "ZipCache.shardFor",
                       "newPage": false,
                       "searchKey": "store.ZipCache.shardFor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -474,9 +496,7 @@
                       "identifier": "ZipCache.Get",
                       "newPage": false,
                       "searchKey": "store.ZipCache.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -496,7 +516,9 @@
                       "identifier": "ZipCache.delete",
                       "newPage": false,
                       "searchKey": "store.ZipCache.delete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -516,7 +538,9 @@
                       "identifier": "ZipCache.count",
                       "newPage": false,
                       "searchKey": "store.ZipCache.count",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -539,7 +563,9 @@
                 "identifier": "zipCacheShard",
                 "newPage": false,
                 "searchKey": "store.zipCacheShard",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -559,9 +585,7 @@
                 "identifier": "ZipFile",
                 "newPage": false,
                 "searchKey": "store.ZipFile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -579,9 +603,7 @@
                       "identifier": "GetZipFileWithRetry",
                       "newPage": false,
                       "searchKey": "store.GetZipFileWithRetry",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -601,7 +623,9 @@
                       "identifier": "readZipFile",
                       "newPage": false,
                       "searchKey": "store.readZipFile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -621,9 +645,7 @@
                       "identifier": "MockZipFile",
                       "newPage": false,
                       "searchKey": "store.MockZipFile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -643,9 +665,7 @@
                       "identifier": "ZipFile.PopulateFiles",
                       "newPage": false,
                       "searchKey": "store.ZipFile.PopulateFiles",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -665,9 +685,7 @@
                       "identifier": "ZipFile.Close",
                       "newPage": false,
                       "searchKey": "store.ZipFile.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -687,9 +705,7 @@
                       "identifier": "ZipFile.DataFor",
                       "newPage": false,
                       "searchKey": "store.ZipFile.DataFor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -712,9 +728,7 @@
                 "identifier": "SrcFile",
                 "newPage": false,
                 "searchKey": "store.SrcFile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -732,9 +746,7 @@
                       "identifier": "SrcFile.String",
                       "newPage": false,
                       "searchKey": "store.SrcFile.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -760,7 +772,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -778,7 +792,9 @@
                 "identifier": "copySearchable",
                 "newPage": false,
                 "searchKey": "store.copySearchable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -798,7 +814,9 @@
                 "identifier": "ignoreSizeMax",
                 "newPage": false,
                 "searchKey": "store.ignoreSizeMax",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -818,7 +836,9 @@
                 "identifier": "TestGetZipFileWithRetry",
                 "newPage": false,
                 "searchKey": "store.TestGetZipFileWithRetry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -838,7 +858,9 @@
                 "identifier": "TestPrepareZip",
                 "newPage": false,
                 "searchKey": "store.TestPrepareZip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -858,7 +880,9 @@
                 "identifier": "TestPrepareZip_fetchTarFail",
                 "newPage": false,
                 "searchKey": "store.TestPrepareZip_fetchTarFail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -878,7 +902,9 @@
                 "identifier": "TestPrepareZip_errHeader",
                 "newPage": false,
                 "searchKey": "store.TestPrepareZip_errHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -898,7 +924,9 @@
                 "identifier": "TestIngoreSizeMax",
                 "newPage": false,
                 "searchKey": "store.TestIngoreSizeMax",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -918,7 +946,9 @@
                 "identifier": "emptyTar",
                 "newPage": false,
                 "searchKey": "store.emptyTar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -938,7 +968,9 @@
                 "identifier": "TestZipCacheDelete",
                 "newPage": false,
                 "searchKey": "store.TestZipCacheDelete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

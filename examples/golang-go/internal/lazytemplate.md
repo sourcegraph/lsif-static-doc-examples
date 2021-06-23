@@ -16,10 +16,15 @@ Package lazytemplate is a thin wrapper over text/template, allowing the use of g
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="inTest" href="#inTest">var inTest</a>
 
 ```
 searchKey: lazytemplate.inTest
+tags: [private]
 ```
 
 ```Go
@@ -28,11 +33,14 @@ var inTest = len(os.Args) > 0 && strings.HasSuffix(strings.TrimSuffix(os.Args[0]
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Template" href="#Template">type Template struct</a>
 
 ```
 searchKey: lazytemplate.Template
-tags: [exported]
 ```
 
 ```Go
@@ -50,7 +58,6 @@ Template is a wrapper around text/template.Template, where the underlying templa
 
 ```
 searchKey: lazytemplate.New
-tags: [exported]
 ```
 
 ```Go
@@ -63,6 +70,7 @@ New creates a new lazy template, delaying the parsing work until it is first nee
 
 ```
 searchKey: lazytemplate.Template.tp
+tags: [private]
 ```
 
 ```Go
@@ -73,6 +81,7 @@ func (r *Template) tp() *template.Template
 
 ```
 searchKey: lazytemplate.Template.build
+tags: [private]
 ```
 
 ```Go
@@ -83,7 +92,6 @@ func (r *Template) build()
 
 ```
 searchKey: lazytemplate.Template.Execute
-tags: [exported]
 ```
 
 ```Go

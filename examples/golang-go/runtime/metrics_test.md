@@ -13,10 +13,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestDescriptionNameFormat" href="#TestDescriptionNameFormat">func TestDescriptionNameFormat(t *testing.T)</a>
 
 ```
 searchKey: metrics_test.TestDescriptionNameFormat
+tags: [private]
 ```
 
 ```Go
@@ -27,6 +32,7 @@ func TestDescriptionNameFormat(t *testing.T)
 
 ```
 searchKey: metrics_test.extractMetricDocs
+tags: [private]
 ```
 
 ```Go
@@ -37,6 +43,7 @@ func extractMetricDocs(t *testing.T) map[string]string
 
 ```
 searchKey: metrics_test.TestDescriptionDocs
+tags: [private]
 ```
 
 ```Go
@@ -47,6 +54,7 @@ func TestDescriptionDocs(t *testing.T)
 
 ```
 searchKey: metrics_test.ExampleRead_readingOneMetric
+tags: [private]
 ```
 
 ```Go
@@ -57,6 +65,7 @@ func ExampleRead_readingOneMetric()
 
 ```
 searchKey: metrics_test.ExampleRead_readingAllMetrics
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +76,7 @@ func ExampleRead_readingAllMetrics()
 
 ```
 searchKey: metrics_test.medianBucket
+tags: [private]
 ```
 
 ```Go

@@ -19,11 +19,14 @@ package mutablelimiter provides a Limiter (Semaphore) which supports havings its
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Limiter" href="#Limiter">type Limiter struct</a>
 
 ```
 searchKey: mutablelimiter.Limiter
-tags: [exported]
 ```
 
 ```Go
@@ -42,7 +45,6 @@ Note: Each Limiter has an associated goroutine managing the semaphore state. We 
 
 ```
 searchKey: mutablelimiter.New
-tags: [exported]
 ```
 
 ```Go
@@ -55,7 +57,6 @@ New returns a new Limiter (Semaphore).
 
 ```
 searchKey: mutablelimiter.Limiter.SetLimit
-tags: [exported]
 ```
 
 ```Go
@@ -68,7 +69,6 @@ SetLimit adjusts the limit. If we currently have more than limit context acquire
 
 ```
 searchKey: mutablelimiter.Limiter.GetLimit
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +81,6 @@ GetLimit reports the current state of the limiter, returning the capacity and le
 
 ```
 searchKey: mutablelimiter.Limiter.Acquire
-tags: [exported]
 ```
 
 ```Go
@@ -96,6 +95,7 @@ If ctx is Done before we can acquire, then the context error is returned.
 
 ```
 searchKey: mutablelimiter.Limiter.do
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +106,7 @@ func (l *Limiter) do(limit int)
 
 ```
 searchKey: mutablelimiter.acquireResponse
+tags: [private]
 ```
 
 ```Go
@@ -119,6 +120,7 @@ type acquireResponse struct {
 
 ```
 searchKey: mutablelimiter.acquireRequest
+tags: [private]
 ```
 
 ```Go
@@ -130,10 +132,15 @@ type acquireRequest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestLimiter" href="#TestLimiter">func TestLimiter(t *testing.T)</a>
 
 ```
 searchKey: mutablelimiter.TestLimiter
+tags: [private]
 ```
 
 ```Go

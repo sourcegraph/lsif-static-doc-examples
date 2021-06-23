@@ -4,7 +4,9 @@
     "identifier": "worker",
     "newPage": true,
     "searchKey": "enterprise/cmd/precise-code-intel-worker/internal/worker",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "CloneInProgressDelay",
                 "newPage": false,
                 "searchKey": "worker.CloneInProgressDelay",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +67,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,7 +87,9 @@
                 "identifier": "handler",
                 "newPage": false,
                 "searchKey": "worker.handler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +107,9 @@
                       "identifier": "handler.Handle",
                       "newPage": false,
                       "searchKey": "worker.handler.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -121,7 +129,9 @@
                       "identifier": "handler.PreDequeue",
                       "newPage": false,
                       "searchKey": "worker.handler.PreDequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -141,7 +151,9 @@
                       "identifier": "handler.PreHandle",
                       "newPage": false,
                       "searchKey": "worker.handler.PreHandle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -161,7 +173,9 @@
                       "identifier": "handler.PostHandle",
                       "newPage": false,
                       "searchKey": "worker.handler.PostHandle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -181,7 +195,9 @@
                       "identifier": "handler.getSize",
                       "newPage": false,
                       "searchKey": "worker.handler.getSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -201,7 +217,9 @@
                       "identifier": "handler.handle",
                       "newPage": false,
                       "searchKey": "worker.handler.handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -224,9 +242,7 @@
                 "identifier": "DBStore",
                 "newPage": false,
                 "searchKey": "worker.DBStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -246,9 +262,7 @@
                 "identifier": "DBStoreShim",
                 "newPage": false,
                 "searchKey": "worker.DBStoreShim",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -266,9 +280,7 @@
                       "identifier": "DBStoreShim.With",
                       "newPage": false,
                       "searchKey": "worker.DBStoreShim.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -288,9 +300,7 @@
                       "identifier": "DBStoreShim.Transact",
                       "newPage": false,
                       "searchKey": "worker.DBStoreShim.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -313,9 +323,7 @@
                 "identifier": "LSIFStore",
                 "newPage": false,
                 "searchKey": "worker.LSIFStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -335,9 +343,7 @@
                 "identifier": "LSIFStoreShim",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreShim",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -355,9 +361,7 @@
                       "identifier": "LSIFStoreShim.Transact",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreShim.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -380,9 +384,7 @@
                 "identifier": "GitserverClient",
                 "newPage": false,
                 "searchKey": "worker.GitserverClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -402,7 +404,9 @@
                 "identifier": "MockDBStore",
                 "newPage": false,
                 "searchKey": "worker.MockDBStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -420,7 +424,9 @@
                       "identifier": "NewMockDBStore",
                       "newPage": false,
                       "searchKey": "worker.NewMockDBStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -440,7 +446,9 @@
                       "identifier": "NewMockDBStoreFrom",
                       "newPage": false,
                       "searchKey": "worker.NewMockDBStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -460,7 +468,9 @@
                       "identifier": "MockDBStore.DeleteOverlappingDumps",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.DeleteOverlappingDumps",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -480,7 +490,9 @@
                       "identifier": "MockDBStore.Done",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -500,7 +512,9 @@
                       "identifier": "MockDBStore.Handle",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -520,7 +534,9 @@
                       "identifier": "MockDBStore.InsertDependencyIndexingJob",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.InsertDependencyIndexingJob",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -540,7 +556,9 @@
                       "identifier": "MockDBStore.MarkRepositoryAsDirty",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.MarkRepositoryAsDirty",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -560,7 +578,9 @@
                       "identifier": "MockDBStore.RepoName",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.RepoName",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -580,7 +600,9 @@
                       "identifier": "MockDBStore.Transact",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.Transact",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -600,7 +622,9 @@
                       "identifier": "MockDBStore.UpdateCommitedAt",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.UpdateCommitedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -620,7 +644,9 @@
                       "identifier": "MockDBStore.UpdatePackageReferences",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.UpdatePackageReferences",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -640,7 +666,9 @@
                       "identifier": "MockDBStore.UpdatePackages",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.UpdatePackages",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -660,7 +688,9 @@
                       "identifier": "MockDBStore.With",
                       "newPage": false,
                       "searchKey": "worker.MockDBStore.With",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -683,7 +713,9 @@
                 "identifier": "DBStoreDeleteOverlappingDumpsFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreDeleteOverlappingDumpsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -701,7 +733,9 @@
                       "identifier": "DBStoreDeleteOverlappingDumpsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDeleteOverlappingDumpsFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -721,7 +755,9 @@
                       "identifier": "DBStoreDeleteOverlappingDumpsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDeleteOverlappingDumpsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -741,7 +777,9 @@
                       "identifier": "DBStoreDeleteOverlappingDumpsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDeleteOverlappingDumpsFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -761,7 +799,9 @@
                       "identifier": "DBStoreDeleteOverlappingDumpsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDeleteOverlappingDumpsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -781,7 +821,9 @@
                       "identifier": "DBStoreDeleteOverlappingDumpsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDeleteOverlappingDumpsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -801,7 +843,9 @@
                       "identifier": "DBStoreDeleteOverlappingDumpsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDeleteOverlappingDumpsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -821,7 +865,9 @@
                       "identifier": "DBStoreDeleteOverlappingDumpsFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDeleteOverlappingDumpsFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -844,7 +890,9 @@
                 "identifier": "DBStoreDeleteOverlappingDumpsFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreDeleteOverlappingDumpsFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -862,7 +910,9 @@
                       "identifier": "DBStoreDeleteOverlappingDumpsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDeleteOverlappingDumpsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -882,7 +932,9 @@
                       "identifier": "DBStoreDeleteOverlappingDumpsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDeleteOverlappingDumpsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -905,7 +957,9 @@
                 "identifier": "DBStoreDoneFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreDoneFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -923,7 +977,9 @@
                       "identifier": "DBStoreDoneFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDoneFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -943,7 +999,9 @@
                       "identifier": "DBStoreDoneFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDoneFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -963,7 +1021,9 @@
                       "identifier": "DBStoreDoneFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDoneFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -983,7 +1043,9 @@
                       "identifier": "DBStoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDoneFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1003,7 +1065,9 @@
                       "identifier": "DBStoreDoneFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDoneFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1023,7 +1087,9 @@
                       "identifier": "DBStoreDoneFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDoneFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1043,7 +1109,9 @@
                       "identifier": "DBStoreDoneFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDoneFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1066,7 +1134,9 @@
                 "identifier": "DBStoreDoneFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreDoneFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1084,7 +1154,9 @@
                       "identifier": "DBStoreDoneFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDoneFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1104,7 +1176,9 @@
                       "identifier": "DBStoreDoneFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreDoneFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1127,7 +1201,9 @@
                 "identifier": "DBStoreHandleFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreHandleFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1145,7 +1221,9 @@
                       "identifier": "DBStoreHandleFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreHandleFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1165,7 +1243,9 @@
                       "identifier": "DBStoreHandleFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreHandleFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1185,7 +1265,9 @@
                       "identifier": "DBStoreHandleFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreHandleFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1205,7 +1287,9 @@
                       "identifier": "DBStoreHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreHandleFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1225,7 +1309,9 @@
                       "identifier": "DBStoreHandleFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreHandleFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1245,7 +1331,9 @@
                       "identifier": "DBStoreHandleFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreHandleFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1265,7 +1353,9 @@
                       "identifier": "DBStoreHandleFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreHandleFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1288,7 +1378,9 @@
                 "identifier": "DBStoreHandleFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreHandleFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1306,7 +1398,9 @@
                       "identifier": "DBStoreHandleFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreHandleFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1326,7 +1420,9 @@
                       "identifier": "DBStoreHandleFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreHandleFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1349,7 +1445,9 @@
                 "identifier": "DBStoreInsertDependencyIndexingJobFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreInsertDependencyIndexingJobFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1367,7 +1465,9 @@
                       "identifier": "DBStoreInsertDependencyIndexingJobFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreInsertDependencyIndexingJobFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1387,7 +1487,9 @@
                       "identifier": "DBStoreInsertDependencyIndexingJobFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreInsertDependencyIndexingJobFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1407,7 +1509,9 @@
                       "identifier": "DBStoreInsertDependencyIndexingJobFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreInsertDependencyIndexingJobFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1427,7 +1531,9 @@
                       "identifier": "DBStoreInsertDependencyIndexingJobFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreInsertDependencyIndexingJobFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1447,7 +1553,9 @@
                       "identifier": "DBStoreInsertDependencyIndexingJobFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreInsertDependencyIndexingJobFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1467,7 +1575,9 @@
                       "identifier": "DBStoreInsertDependencyIndexingJobFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreInsertDependencyIndexingJobFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1487,7 +1597,9 @@
                       "identifier": "DBStoreInsertDependencyIndexingJobFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreInsertDependencyIndexingJobFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1510,7 +1622,9 @@
                 "identifier": "DBStoreInsertDependencyIndexingJobFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreInsertDependencyIndexingJobFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1528,7 +1642,9 @@
                       "identifier": "DBStoreInsertDependencyIndexingJobFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreInsertDependencyIndexingJobFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1548,7 +1664,9 @@
                       "identifier": "DBStoreInsertDependencyIndexingJobFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreInsertDependencyIndexingJobFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1571,7 +1689,9 @@
                 "identifier": "DBStoreMarkRepositoryAsDirtyFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1589,7 +1709,9 @@
                       "identifier": "DBStoreMarkRepositoryAsDirtyFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1609,7 +1731,9 @@
                       "identifier": "DBStoreMarkRepositoryAsDirtyFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1629,7 +1753,9 @@
                       "identifier": "DBStoreMarkRepositoryAsDirtyFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1649,7 +1775,9 @@
                       "identifier": "DBStoreMarkRepositoryAsDirtyFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1669,7 +1797,9 @@
                       "identifier": "DBStoreMarkRepositoryAsDirtyFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1689,7 +1819,9 @@
                       "identifier": "DBStoreMarkRepositoryAsDirtyFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1709,7 +1841,9 @@
                       "identifier": "DBStoreMarkRepositoryAsDirtyFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1732,7 +1866,9 @@
                 "identifier": "DBStoreMarkRepositoryAsDirtyFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1750,7 +1886,9 @@
                       "identifier": "DBStoreMarkRepositoryAsDirtyFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1770,7 +1908,9 @@
                       "identifier": "DBStoreMarkRepositoryAsDirtyFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreMarkRepositoryAsDirtyFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1793,7 +1933,9 @@
                 "identifier": "DBStoreRepoNameFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreRepoNameFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1811,7 +1953,9 @@
                       "identifier": "DBStoreRepoNameFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreRepoNameFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1831,7 +1975,9 @@
                       "identifier": "DBStoreRepoNameFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreRepoNameFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1851,7 +1997,9 @@
                       "identifier": "DBStoreRepoNameFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreRepoNameFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1871,7 +2019,9 @@
                       "identifier": "DBStoreRepoNameFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreRepoNameFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1891,7 +2041,9 @@
                       "identifier": "DBStoreRepoNameFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreRepoNameFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1911,7 +2063,9 @@
                       "identifier": "DBStoreRepoNameFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreRepoNameFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1931,7 +2085,9 @@
                       "identifier": "DBStoreRepoNameFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreRepoNameFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1954,7 +2110,9 @@
                 "identifier": "DBStoreRepoNameFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreRepoNameFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1972,7 +2130,9 @@
                       "identifier": "DBStoreRepoNameFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreRepoNameFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1992,7 +2152,9 @@
                       "identifier": "DBStoreRepoNameFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreRepoNameFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2015,7 +2177,9 @@
                 "identifier": "DBStoreTransactFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreTransactFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2033,7 +2197,9 @@
                       "identifier": "DBStoreTransactFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreTransactFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2053,7 +2219,9 @@
                       "identifier": "DBStoreTransactFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreTransactFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2073,7 +2241,9 @@
                       "identifier": "DBStoreTransactFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreTransactFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2093,7 +2263,9 @@
                       "identifier": "DBStoreTransactFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreTransactFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2113,7 +2285,9 @@
                       "identifier": "DBStoreTransactFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreTransactFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2133,7 +2307,9 @@
                       "identifier": "DBStoreTransactFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreTransactFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2153,7 +2329,9 @@
                       "identifier": "DBStoreTransactFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreTransactFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2176,7 +2354,9 @@
                 "identifier": "DBStoreTransactFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreTransactFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2194,7 +2374,9 @@
                       "identifier": "DBStoreTransactFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreTransactFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2214,7 +2396,9 @@
                       "identifier": "DBStoreTransactFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreTransactFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2237,7 +2421,9 @@
                 "identifier": "DBStoreUpdateCommitedAtFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreUpdateCommitedAtFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2255,7 +2441,9 @@
                       "identifier": "DBStoreUpdateCommitedAtFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdateCommitedAtFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2275,7 +2463,9 @@
                       "identifier": "DBStoreUpdateCommitedAtFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdateCommitedAtFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2295,7 +2485,9 @@
                       "identifier": "DBStoreUpdateCommitedAtFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdateCommitedAtFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2315,7 +2507,9 @@
                       "identifier": "DBStoreUpdateCommitedAtFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdateCommitedAtFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2335,7 +2529,9 @@
                       "identifier": "DBStoreUpdateCommitedAtFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdateCommitedAtFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2355,7 +2551,9 @@
                       "identifier": "DBStoreUpdateCommitedAtFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdateCommitedAtFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2375,7 +2573,9 @@
                       "identifier": "DBStoreUpdateCommitedAtFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdateCommitedAtFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2398,7 +2598,9 @@
                 "identifier": "DBStoreUpdateCommitedAtFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreUpdateCommitedAtFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2416,7 +2618,9 @@
                       "identifier": "DBStoreUpdateCommitedAtFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdateCommitedAtFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2436,7 +2640,9 @@
                       "identifier": "DBStoreUpdateCommitedAtFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdateCommitedAtFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2459,7 +2665,9 @@
                 "identifier": "DBStoreUpdatePackageReferencesFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreUpdatePackageReferencesFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2477,7 +2685,9 @@
                       "identifier": "DBStoreUpdatePackageReferencesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackageReferencesFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2497,7 +2707,9 @@
                       "identifier": "DBStoreUpdatePackageReferencesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackageReferencesFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2517,7 +2729,9 @@
                       "identifier": "DBStoreUpdatePackageReferencesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackageReferencesFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2537,7 +2751,9 @@
                       "identifier": "DBStoreUpdatePackageReferencesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackageReferencesFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2557,7 +2773,9 @@
                       "identifier": "DBStoreUpdatePackageReferencesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackageReferencesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2577,7 +2795,9 @@
                       "identifier": "DBStoreUpdatePackageReferencesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackageReferencesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2597,7 +2817,9 @@
                       "identifier": "DBStoreUpdatePackageReferencesFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackageReferencesFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2620,7 +2842,9 @@
                 "identifier": "DBStoreUpdatePackageReferencesFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreUpdatePackageReferencesFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2638,7 +2862,9 @@
                       "identifier": "DBStoreUpdatePackageReferencesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackageReferencesFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2658,7 +2884,9 @@
                       "identifier": "DBStoreUpdatePackageReferencesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackageReferencesFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2681,7 +2909,9 @@
                 "identifier": "DBStoreUpdatePackagesFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreUpdatePackagesFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2699,7 +2929,9 @@
                       "identifier": "DBStoreUpdatePackagesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackagesFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2719,7 +2951,9 @@
                       "identifier": "DBStoreUpdatePackagesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackagesFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2739,7 +2973,9 @@
                       "identifier": "DBStoreUpdatePackagesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackagesFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2759,7 +2995,9 @@
                       "identifier": "DBStoreUpdatePackagesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackagesFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2779,7 +3017,9 @@
                       "identifier": "DBStoreUpdatePackagesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackagesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2799,7 +3039,9 @@
                       "identifier": "DBStoreUpdatePackagesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackagesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2819,7 +3061,9 @@
                       "identifier": "DBStoreUpdatePackagesFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackagesFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2842,7 +3086,9 @@
                 "identifier": "DBStoreUpdatePackagesFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreUpdatePackagesFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2860,7 +3106,9 @@
                       "identifier": "DBStoreUpdatePackagesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackagesFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2880,7 +3128,9 @@
                       "identifier": "DBStoreUpdatePackagesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreUpdatePackagesFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2903,7 +3153,9 @@
                 "identifier": "DBStoreWithFunc",
                 "newPage": false,
                 "searchKey": "worker.DBStoreWithFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2921,7 +3173,9 @@
                       "identifier": "DBStoreWithFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreWithFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2941,7 +3195,9 @@
                       "identifier": "DBStoreWithFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreWithFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2961,7 +3217,9 @@
                       "identifier": "DBStoreWithFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreWithFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2981,7 +3239,9 @@
                       "identifier": "DBStoreWithFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.DBStoreWithFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3001,7 +3261,9 @@
                       "identifier": "DBStoreWithFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.DBStoreWithFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3021,7 +3283,9 @@
                       "identifier": "DBStoreWithFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.DBStoreWithFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3041,7 +3305,9 @@
                       "identifier": "DBStoreWithFunc.History",
                       "newPage": false,
                       "searchKey": "worker.DBStoreWithFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3064,7 +3330,9 @@
                 "identifier": "DBStoreWithFuncCall",
                 "newPage": false,
                 "searchKey": "worker.DBStoreWithFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3082,7 +3350,9 @@
                       "identifier": "DBStoreWithFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.DBStoreWithFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3102,7 +3372,9 @@
                       "identifier": "DBStoreWithFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.DBStoreWithFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3125,7 +3397,9 @@
                 "identifier": "MockGitserverClient",
                 "newPage": false,
                 "searchKey": "worker.MockGitserverClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3143,7 +3417,9 @@
                       "identifier": "NewMockGitserverClient",
                       "newPage": false,
                       "searchKey": "worker.NewMockGitserverClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3163,7 +3439,9 @@
                       "identifier": "NewMockGitserverClientFrom",
                       "newPage": false,
                       "searchKey": "worker.NewMockGitserverClientFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3183,7 +3461,9 @@
                       "identifier": "MockGitserverClient.CommitDate",
                       "newPage": false,
                       "searchKey": "worker.MockGitserverClient.CommitDate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3203,7 +3483,9 @@
                       "identifier": "MockGitserverClient.DirectoryChildren",
                       "newPage": false,
                       "searchKey": "worker.MockGitserverClient.DirectoryChildren",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3223,7 +3505,9 @@
                       "identifier": "MockGitserverClient.ResolveRevision",
                       "newPage": false,
                       "searchKey": "worker.MockGitserverClient.ResolveRevision",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3246,7 +3530,9 @@
                 "identifier": "GitserverClientCommitDateFunc",
                 "newPage": false,
                 "searchKey": "worker.GitserverClientCommitDateFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3264,7 +3550,9 @@
                       "identifier": "GitserverClientCommitDateFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientCommitDateFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3284,7 +3572,9 @@
                       "identifier": "GitserverClientCommitDateFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientCommitDateFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3304,7 +3594,9 @@
                       "identifier": "GitserverClientCommitDateFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientCommitDateFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3324,7 +3616,9 @@
                       "identifier": "GitserverClientCommitDateFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientCommitDateFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3344,7 +3638,9 @@
                       "identifier": "GitserverClientCommitDateFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientCommitDateFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3364,7 +3660,9 @@
                       "identifier": "GitserverClientCommitDateFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientCommitDateFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3384,7 +3682,9 @@
                       "identifier": "GitserverClientCommitDateFunc.History",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientCommitDateFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3407,7 +3707,9 @@
                 "identifier": "GitserverClientCommitDateFuncCall",
                 "newPage": false,
                 "searchKey": "worker.GitserverClientCommitDateFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3425,7 +3727,9 @@
                       "identifier": "GitserverClientCommitDateFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientCommitDateFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3445,7 +3749,9 @@
                       "identifier": "GitserverClientCommitDateFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientCommitDateFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3468,7 +3774,9 @@
                 "identifier": "GitserverClientDirectoryChildrenFunc",
                 "newPage": false,
                 "searchKey": "worker.GitserverClientDirectoryChildrenFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3486,7 +3794,9 @@
                       "identifier": "GitserverClientDirectoryChildrenFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientDirectoryChildrenFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3506,7 +3816,9 @@
                       "identifier": "GitserverClientDirectoryChildrenFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientDirectoryChildrenFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3526,7 +3838,9 @@
                       "identifier": "GitserverClientDirectoryChildrenFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientDirectoryChildrenFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3546,7 +3860,9 @@
                       "identifier": "GitserverClientDirectoryChildrenFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientDirectoryChildrenFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3566,7 +3882,9 @@
                       "identifier": "GitserverClientDirectoryChildrenFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientDirectoryChildrenFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3586,7 +3904,9 @@
                       "identifier": "GitserverClientDirectoryChildrenFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientDirectoryChildrenFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3606,7 +3926,9 @@
                       "identifier": "GitserverClientDirectoryChildrenFunc.History",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientDirectoryChildrenFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3629,7 +3951,9 @@
                 "identifier": "GitserverClientDirectoryChildrenFuncCall",
                 "newPage": false,
                 "searchKey": "worker.GitserverClientDirectoryChildrenFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3647,7 +3971,9 @@
                       "identifier": "GitserverClientDirectoryChildrenFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientDirectoryChildrenFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3667,7 +3993,9 @@
                       "identifier": "GitserverClientDirectoryChildrenFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientDirectoryChildrenFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3690,7 +4018,9 @@
                 "identifier": "GitserverClientResolveRevisionFunc",
                 "newPage": false,
                 "searchKey": "worker.GitserverClientResolveRevisionFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3708,7 +4038,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientResolveRevisionFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3728,7 +4060,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientResolveRevisionFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3748,7 +4082,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientResolveRevisionFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3768,7 +4104,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientResolveRevisionFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3788,7 +4126,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientResolveRevisionFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3808,7 +4148,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientResolveRevisionFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3828,7 +4170,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.History",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientResolveRevisionFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3851,7 +4195,9 @@
                 "identifier": "GitserverClientResolveRevisionFuncCall",
                 "newPage": false,
                 "searchKey": "worker.GitserverClientResolveRevisionFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3869,7 +4215,9 @@
                       "identifier": "GitserverClientResolveRevisionFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientResolveRevisionFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3889,7 +4237,9 @@
                       "identifier": "GitserverClientResolveRevisionFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.GitserverClientResolveRevisionFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3912,7 +4262,9 @@
                 "identifier": "MockLSIFStore",
                 "newPage": false,
                 "searchKey": "worker.MockLSIFStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3930,7 +4282,9 @@
                       "identifier": "NewMockLSIFStore",
                       "newPage": false,
                       "searchKey": "worker.NewMockLSIFStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3950,7 +4304,9 @@
                       "identifier": "NewMockLSIFStoreFrom",
                       "newPage": false,
                       "searchKey": "worker.NewMockLSIFStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3970,7 +4326,9 @@
                       "identifier": "MockLSIFStore.Done",
                       "newPage": false,
                       "searchKey": "worker.MockLSIFStore.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3990,7 +4348,9 @@
                       "identifier": "MockLSIFStore.Transact",
                       "newPage": false,
                       "searchKey": "worker.MockLSIFStore.Transact",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4010,7 +4370,9 @@
                       "identifier": "MockLSIFStore.WriteDefinitions",
                       "newPage": false,
                       "searchKey": "worker.MockLSIFStore.WriteDefinitions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4030,7 +4392,9 @@
                       "identifier": "MockLSIFStore.WriteDocumentationPages",
                       "newPage": false,
                       "searchKey": "worker.MockLSIFStore.WriteDocumentationPages",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4050,7 +4414,9 @@
                       "identifier": "MockLSIFStore.WriteDocuments",
                       "newPage": false,
                       "searchKey": "worker.MockLSIFStore.WriteDocuments",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4070,7 +4436,9 @@
                       "identifier": "MockLSIFStore.WriteMeta",
                       "newPage": false,
                       "searchKey": "worker.MockLSIFStore.WriteMeta",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4090,7 +4458,9 @@
                       "identifier": "MockLSIFStore.WriteReferences",
                       "newPage": false,
                       "searchKey": "worker.MockLSIFStore.WriteReferences",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4110,7 +4480,9 @@
                       "identifier": "MockLSIFStore.WriteResultChunks",
                       "newPage": false,
                       "searchKey": "worker.MockLSIFStore.WriteResultChunks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4133,7 +4505,9 @@
                 "identifier": "LSIFStoreDoneFunc",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreDoneFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4151,7 +4525,9 @@
                       "identifier": "LSIFStoreDoneFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreDoneFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4171,7 +4547,9 @@
                       "identifier": "LSIFStoreDoneFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreDoneFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4191,7 +4569,9 @@
                       "identifier": "LSIFStoreDoneFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreDoneFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4211,7 +4591,9 @@
                       "identifier": "LSIFStoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreDoneFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4231,7 +4613,9 @@
                       "identifier": "LSIFStoreDoneFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreDoneFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4251,7 +4635,9 @@
                       "identifier": "LSIFStoreDoneFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreDoneFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4271,7 +4657,9 @@
                       "identifier": "LSIFStoreDoneFunc.History",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreDoneFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4294,7 +4682,9 @@
                 "identifier": "LSIFStoreDoneFuncCall",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreDoneFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4312,7 +4702,9 @@
                       "identifier": "LSIFStoreDoneFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreDoneFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4332,7 +4724,9 @@
                       "identifier": "LSIFStoreDoneFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreDoneFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4355,7 +4749,9 @@
                 "identifier": "LSIFStoreTransactFunc",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreTransactFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4373,7 +4769,9 @@
                       "identifier": "LSIFStoreTransactFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreTransactFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4393,7 +4791,9 @@
                       "identifier": "LSIFStoreTransactFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreTransactFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4413,7 +4813,9 @@
                       "identifier": "LSIFStoreTransactFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreTransactFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4433,7 +4835,9 @@
                       "identifier": "LSIFStoreTransactFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreTransactFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4453,7 +4857,9 @@
                       "identifier": "LSIFStoreTransactFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreTransactFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4473,7 +4879,9 @@
                       "identifier": "LSIFStoreTransactFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreTransactFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4493,7 +4901,9 @@
                       "identifier": "LSIFStoreTransactFunc.History",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreTransactFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4516,7 +4926,9 @@
                 "identifier": "LSIFStoreTransactFuncCall",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreTransactFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4534,7 +4946,9 @@
                       "identifier": "LSIFStoreTransactFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreTransactFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4554,7 +4968,9 @@
                       "identifier": "LSIFStoreTransactFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreTransactFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4577,7 +4993,9 @@
                 "identifier": "LSIFStoreWriteDefinitionsFunc",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteDefinitionsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4595,7 +5013,9 @@
                       "identifier": "LSIFStoreWriteDefinitionsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDefinitionsFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4615,7 +5035,9 @@
                       "identifier": "LSIFStoreWriteDefinitionsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDefinitionsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4635,7 +5057,9 @@
                       "identifier": "LSIFStoreWriteDefinitionsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDefinitionsFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4655,7 +5079,9 @@
                       "identifier": "LSIFStoreWriteDefinitionsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDefinitionsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4675,7 +5101,9 @@
                       "identifier": "LSIFStoreWriteDefinitionsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDefinitionsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4695,7 +5123,9 @@
                       "identifier": "LSIFStoreWriteDefinitionsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDefinitionsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4715,7 +5145,9 @@
                       "identifier": "LSIFStoreWriteDefinitionsFunc.History",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDefinitionsFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4738,7 +5170,9 @@
                 "identifier": "LSIFStoreWriteDefinitionsFuncCall",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteDefinitionsFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4756,7 +5190,9 @@
                       "identifier": "LSIFStoreWriteDefinitionsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDefinitionsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4776,7 +5212,9 @@
                       "identifier": "LSIFStoreWriteDefinitionsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDefinitionsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4799,7 +5237,9 @@
                 "identifier": "LSIFStoreWriteDocumentationPagesFunc",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteDocumentationPagesFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4817,7 +5257,9 @@
                       "identifier": "LSIFStoreWriteDocumentationPagesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentationPagesFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4837,7 +5279,9 @@
                       "identifier": "LSIFStoreWriteDocumentationPagesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentationPagesFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4857,7 +5301,9 @@
                       "identifier": "LSIFStoreWriteDocumentationPagesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentationPagesFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4877,7 +5323,9 @@
                       "identifier": "LSIFStoreWriteDocumentationPagesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentationPagesFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4897,7 +5345,9 @@
                       "identifier": "LSIFStoreWriteDocumentationPagesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentationPagesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4917,7 +5367,9 @@
                       "identifier": "LSIFStoreWriteDocumentationPagesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentationPagesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4937,7 +5389,9 @@
                       "identifier": "LSIFStoreWriteDocumentationPagesFunc.History",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentationPagesFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4960,7 +5414,9 @@
                 "identifier": "LSIFStoreWriteDocumentationPagesFuncCall",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteDocumentationPagesFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4978,7 +5434,9 @@
                       "identifier": "LSIFStoreWriteDocumentationPagesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentationPagesFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4998,7 +5456,9 @@
                       "identifier": "LSIFStoreWriteDocumentationPagesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentationPagesFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5021,7 +5481,9 @@
                 "identifier": "LSIFStoreWriteDocumentsFunc",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteDocumentsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5039,7 +5501,9 @@
                       "identifier": "LSIFStoreWriteDocumentsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentsFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5059,7 +5523,9 @@
                       "identifier": "LSIFStoreWriteDocumentsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5079,7 +5545,9 @@
                       "identifier": "LSIFStoreWriteDocumentsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentsFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5099,7 +5567,9 @@
                       "identifier": "LSIFStoreWriteDocumentsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5119,7 +5589,9 @@
                       "identifier": "LSIFStoreWriteDocumentsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5139,7 +5611,9 @@
                       "identifier": "LSIFStoreWriteDocumentsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5159,7 +5633,9 @@
                       "identifier": "LSIFStoreWriteDocumentsFunc.History",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentsFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5182,7 +5658,9 @@
                 "identifier": "LSIFStoreWriteDocumentsFuncCall",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteDocumentsFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5200,7 +5678,9 @@
                       "identifier": "LSIFStoreWriteDocumentsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5220,7 +5700,9 @@
                       "identifier": "LSIFStoreWriteDocumentsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteDocumentsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5243,7 +5725,9 @@
                 "identifier": "LSIFStoreWriteMetaFunc",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteMetaFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5261,7 +5745,9 @@
                       "identifier": "LSIFStoreWriteMetaFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteMetaFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5281,7 +5767,9 @@
                       "identifier": "LSIFStoreWriteMetaFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteMetaFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5301,7 +5789,9 @@
                       "identifier": "LSIFStoreWriteMetaFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteMetaFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5321,7 +5811,9 @@
                       "identifier": "LSIFStoreWriteMetaFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteMetaFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5341,7 +5833,9 @@
                       "identifier": "LSIFStoreWriteMetaFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteMetaFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5361,7 +5855,9 @@
                       "identifier": "LSIFStoreWriteMetaFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteMetaFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5381,7 +5877,9 @@
                       "identifier": "LSIFStoreWriteMetaFunc.History",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteMetaFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5404,7 +5902,9 @@
                 "identifier": "LSIFStoreWriteMetaFuncCall",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteMetaFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5422,7 +5922,9 @@
                       "identifier": "LSIFStoreWriteMetaFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteMetaFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5442,7 +5944,9 @@
                       "identifier": "LSIFStoreWriteMetaFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteMetaFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5465,7 +5969,9 @@
                 "identifier": "LSIFStoreWriteReferencesFunc",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteReferencesFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5483,7 +5989,9 @@
                       "identifier": "LSIFStoreWriteReferencesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteReferencesFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5503,7 +6011,9 @@
                       "identifier": "LSIFStoreWriteReferencesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteReferencesFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5523,7 +6033,9 @@
                       "identifier": "LSIFStoreWriteReferencesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteReferencesFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5543,7 +6055,9 @@
                       "identifier": "LSIFStoreWriteReferencesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteReferencesFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5563,7 +6077,9 @@
                       "identifier": "LSIFStoreWriteReferencesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteReferencesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5583,7 +6099,9 @@
                       "identifier": "LSIFStoreWriteReferencesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteReferencesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5603,7 +6121,9 @@
                       "identifier": "LSIFStoreWriteReferencesFunc.History",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteReferencesFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5626,7 +6146,9 @@
                 "identifier": "LSIFStoreWriteReferencesFuncCall",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteReferencesFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5644,7 +6166,9 @@
                       "identifier": "LSIFStoreWriteReferencesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteReferencesFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5664,7 +6188,9 @@
                       "identifier": "LSIFStoreWriteReferencesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteReferencesFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5687,7 +6213,9 @@
                 "identifier": "LSIFStoreWriteResultChunksFunc",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteResultChunksFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5705,7 +6233,9 @@
                       "identifier": "LSIFStoreWriteResultChunksFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteResultChunksFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5725,7 +6255,9 @@
                       "identifier": "LSIFStoreWriteResultChunksFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteResultChunksFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5745,7 +6277,9 @@
                       "identifier": "LSIFStoreWriteResultChunksFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteResultChunksFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5765,7 +6299,9 @@
                       "identifier": "LSIFStoreWriteResultChunksFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteResultChunksFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5785,7 +6321,9 @@
                       "identifier": "LSIFStoreWriteResultChunksFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteResultChunksFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5805,7 +6343,9 @@
                       "identifier": "LSIFStoreWriteResultChunksFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteResultChunksFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5825,7 +6365,9 @@
                       "identifier": "LSIFStoreWriteResultChunksFunc.History",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteResultChunksFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5848,7 +6390,9 @@
                 "identifier": "LSIFStoreWriteResultChunksFuncCall",
                 "newPage": false,
                 "searchKey": "worker.LSIFStoreWriteResultChunksFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5866,7 +6410,9 @@
                       "identifier": "LSIFStoreWriteResultChunksFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteResultChunksFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5886,7 +6432,9 @@
                       "identifier": "LSIFStoreWriteResultChunksFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.LSIFStoreWriteResultChunksFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5909,7 +6457,9 @@
                 "identifier": "MockWorkerStore",
                 "newPage": false,
                 "searchKey": "worker.MockWorkerStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5927,7 +6477,9 @@
                       "identifier": "NewMockWorkerStore",
                       "newPage": false,
                       "searchKey": "worker.NewMockWorkerStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5947,7 +6499,9 @@
                       "identifier": "NewMockWorkerStoreFrom",
                       "newPage": false,
                       "searchKey": "worker.NewMockWorkerStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5967,7 +6521,9 @@
                       "identifier": "MockWorkerStore.AddExecutionLogEntry",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.AddExecutionLogEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5987,7 +6543,9 @@
                       "identifier": "MockWorkerStore.Dequeue",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.Dequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6007,7 +6565,9 @@
                       "identifier": "MockWorkerStore.DequeueWithIndependentTransactionContext",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.DequeueWithIndependentTransactionContext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6027,7 +6587,9 @@
                       "identifier": "MockWorkerStore.Done",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6047,7 +6609,9 @@
                       "identifier": "MockWorkerStore.Handle",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6067,7 +6631,9 @@
                       "identifier": "MockWorkerStore.MarkComplete",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.MarkComplete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6087,7 +6653,9 @@
                       "identifier": "MockWorkerStore.MarkErrored",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.MarkErrored",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6107,7 +6675,9 @@
                       "identifier": "MockWorkerStore.MarkFailed",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.MarkFailed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6127,7 +6697,9 @@
                       "identifier": "MockWorkerStore.QueuedCount",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.QueuedCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6147,7 +6719,9 @@
                       "identifier": "MockWorkerStore.Requeue",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.Requeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6167,7 +6741,9 @@
                       "identifier": "MockWorkerStore.ResetStalled",
                       "newPage": false,
                       "searchKey": "worker.MockWorkerStore.ResetStalled",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6190,7 +6766,9 @@
                 "identifier": "WorkerStoreAddExecutionLogEntryFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreAddExecutionLogEntryFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6208,7 +6786,9 @@
                       "identifier": "WorkerStoreAddExecutionLogEntryFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreAddExecutionLogEntryFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6228,7 +6808,9 @@
                       "identifier": "WorkerStoreAddExecutionLogEntryFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreAddExecutionLogEntryFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6248,7 +6830,9 @@
                       "identifier": "WorkerStoreAddExecutionLogEntryFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreAddExecutionLogEntryFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6268,7 +6852,9 @@
                       "identifier": "WorkerStoreAddExecutionLogEntryFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreAddExecutionLogEntryFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6288,7 +6874,9 @@
                       "identifier": "WorkerStoreAddExecutionLogEntryFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreAddExecutionLogEntryFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6308,7 +6896,9 @@
                       "identifier": "WorkerStoreAddExecutionLogEntryFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreAddExecutionLogEntryFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6328,7 +6918,9 @@
                       "identifier": "WorkerStoreAddExecutionLogEntryFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreAddExecutionLogEntryFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6351,7 +6943,9 @@
                 "identifier": "WorkerStoreAddExecutionLogEntryFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreAddExecutionLogEntryFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6369,7 +6963,9 @@
                       "identifier": "WorkerStoreAddExecutionLogEntryFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreAddExecutionLogEntryFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6389,7 +6985,9 @@
                       "identifier": "WorkerStoreAddExecutionLogEntryFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreAddExecutionLogEntryFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6412,7 +7010,9 @@
                 "identifier": "WorkerStoreDequeueFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreDequeueFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6430,7 +7030,9 @@
                       "identifier": "WorkerStoreDequeueFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6450,7 +7052,9 @@
                       "identifier": "WorkerStoreDequeueFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6470,7 +7074,9 @@
                       "identifier": "WorkerStoreDequeueFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6490,7 +7096,9 @@
                       "identifier": "WorkerStoreDequeueFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6510,7 +7118,9 @@
                       "identifier": "WorkerStoreDequeueFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6530,7 +7140,9 @@
                       "identifier": "WorkerStoreDequeueFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6550,7 +7162,9 @@
                       "identifier": "WorkerStoreDequeueFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6573,7 +7187,9 @@
                 "identifier": "WorkerStoreDequeueFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreDequeueFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6591,7 +7207,9 @@
                       "identifier": "WorkerStoreDequeueFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6611,7 +7229,9 @@
                       "identifier": "WorkerStoreDequeueFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6634,7 +7254,9 @@
                 "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6652,7 +7274,9 @@
                       "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6672,7 +7296,9 @@
                       "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6692,7 +7318,9 @@
                       "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6712,7 +7340,9 @@
                       "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6732,7 +7362,9 @@
                       "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6752,7 +7384,9 @@
                       "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6772,7 +7406,9 @@
                       "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6795,7 +7431,9 @@
                 "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6813,7 +7451,9 @@
                       "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6833,7 +7473,9 @@
                       "identifier": "WorkerStoreDequeueWithIndependentTransactionContextFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDequeueWithIndependentTransactionContextFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6856,7 +7498,9 @@
                 "identifier": "WorkerStoreDoneFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreDoneFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6874,7 +7518,9 @@
                       "identifier": "WorkerStoreDoneFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDoneFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6894,7 +7540,9 @@
                       "identifier": "WorkerStoreDoneFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDoneFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6914,7 +7562,9 @@
                       "identifier": "WorkerStoreDoneFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDoneFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6934,7 +7584,9 @@
                       "identifier": "WorkerStoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDoneFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6954,7 +7606,9 @@
                       "identifier": "WorkerStoreDoneFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDoneFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6974,7 +7628,9 @@
                       "identifier": "WorkerStoreDoneFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDoneFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6994,7 +7650,9 @@
                       "identifier": "WorkerStoreDoneFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDoneFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7017,7 +7675,9 @@
                 "identifier": "WorkerStoreDoneFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreDoneFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7035,7 +7695,9 @@
                       "identifier": "WorkerStoreDoneFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDoneFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7055,7 +7717,9 @@
                       "identifier": "WorkerStoreDoneFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreDoneFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7078,7 +7742,9 @@
                 "identifier": "WorkerStoreHandleFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreHandleFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7096,7 +7762,9 @@
                       "identifier": "WorkerStoreHandleFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreHandleFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7116,7 +7784,9 @@
                       "identifier": "WorkerStoreHandleFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreHandleFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7136,7 +7806,9 @@
                       "identifier": "WorkerStoreHandleFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreHandleFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7156,7 +7828,9 @@
                       "identifier": "WorkerStoreHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreHandleFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7176,7 +7850,9 @@
                       "identifier": "WorkerStoreHandleFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreHandleFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7196,7 +7872,9 @@
                       "identifier": "WorkerStoreHandleFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreHandleFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7216,7 +7894,9 @@
                       "identifier": "WorkerStoreHandleFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreHandleFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7239,7 +7919,9 @@
                 "identifier": "WorkerStoreHandleFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreHandleFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7257,7 +7939,9 @@
                       "identifier": "WorkerStoreHandleFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreHandleFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7277,7 +7961,9 @@
                       "identifier": "WorkerStoreHandleFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreHandleFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7300,7 +7986,9 @@
                 "identifier": "WorkerStoreMarkCompleteFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreMarkCompleteFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7318,7 +8006,9 @@
                       "identifier": "WorkerStoreMarkCompleteFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkCompleteFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7338,7 +8028,9 @@
                       "identifier": "WorkerStoreMarkCompleteFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkCompleteFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7358,7 +8050,9 @@
                       "identifier": "WorkerStoreMarkCompleteFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkCompleteFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7378,7 +8072,9 @@
                       "identifier": "WorkerStoreMarkCompleteFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkCompleteFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7398,7 +8094,9 @@
                       "identifier": "WorkerStoreMarkCompleteFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkCompleteFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7418,7 +8116,9 @@
                       "identifier": "WorkerStoreMarkCompleteFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkCompleteFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7438,7 +8138,9 @@
                       "identifier": "WorkerStoreMarkCompleteFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkCompleteFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7461,7 +8163,9 @@
                 "identifier": "WorkerStoreMarkCompleteFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreMarkCompleteFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7479,7 +8183,9 @@
                       "identifier": "WorkerStoreMarkCompleteFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkCompleteFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7499,7 +8205,9 @@
                       "identifier": "WorkerStoreMarkCompleteFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkCompleteFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7522,7 +8230,9 @@
                 "identifier": "WorkerStoreMarkErroredFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreMarkErroredFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7540,7 +8250,9 @@
                       "identifier": "WorkerStoreMarkErroredFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkErroredFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7560,7 +8272,9 @@
                       "identifier": "WorkerStoreMarkErroredFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkErroredFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7580,7 +8294,9 @@
                       "identifier": "WorkerStoreMarkErroredFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkErroredFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7600,7 +8316,9 @@
                       "identifier": "WorkerStoreMarkErroredFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkErroredFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7620,7 +8338,9 @@
                       "identifier": "WorkerStoreMarkErroredFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkErroredFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7640,7 +8360,9 @@
                       "identifier": "WorkerStoreMarkErroredFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkErroredFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7660,7 +8382,9 @@
                       "identifier": "WorkerStoreMarkErroredFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkErroredFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7683,7 +8407,9 @@
                 "identifier": "WorkerStoreMarkErroredFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreMarkErroredFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7701,7 +8427,9 @@
                       "identifier": "WorkerStoreMarkErroredFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkErroredFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7721,7 +8449,9 @@
                       "identifier": "WorkerStoreMarkErroredFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkErroredFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7744,7 +8474,9 @@
                 "identifier": "WorkerStoreMarkFailedFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreMarkFailedFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7762,7 +8494,9 @@
                       "identifier": "WorkerStoreMarkFailedFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkFailedFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7782,7 +8516,9 @@
                       "identifier": "WorkerStoreMarkFailedFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkFailedFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7802,7 +8538,9 @@
                       "identifier": "WorkerStoreMarkFailedFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkFailedFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7822,7 +8560,9 @@
                       "identifier": "WorkerStoreMarkFailedFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkFailedFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7842,7 +8582,9 @@
                       "identifier": "WorkerStoreMarkFailedFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkFailedFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7862,7 +8604,9 @@
                       "identifier": "WorkerStoreMarkFailedFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkFailedFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7882,7 +8626,9 @@
                       "identifier": "WorkerStoreMarkFailedFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkFailedFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7905,7 +8651,9 @@
                 "identifier": "WorkerStoreMarkFailedFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreMarkFailedFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7923,7 +8671,9 @@
                       "identifier": "WorkerStoreMarkFailedFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkFailedFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7943,7 +8693,9 @@
                       "identifier": "WorkerStoreMarkFailedFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreMarkFailedFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -7966,7 +8718,9 @@
                 "identifier": "WorkerStoreQueuedCountFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreQueuedCountFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7984,7 +8738,9 @@
                       "identifier": "WorkerStoreQueuedCountFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreQueuedCountFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8004,7 +8760,9 @@
                       "identifier": "WorkerStoreQueuedCountFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreQueuedCountFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8024,7 +8782,9 @@
                       "identifier": "WorkerStoreQueuedCountFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreQueuedCountFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8044,7 +8804,9 @@
                       "identifier": "WorkerStoreQueuedCountFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreQueuedCountFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8064,7 +8826,9 @@
                       "identifier": "WorkerStoreQueuedCountFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreQueuedCountFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8084,7 +8848,9 @@
                       "identifier": "WorkerStoreQueuedCountFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreQueuedCountFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8104,7 +8870,9 @@
                       "identifier": "WorkerStoreQueuedCountFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreQueuedCountFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8127,7 +8895,9 @@
                 "identifier": "WorkerStoreQueuedCountFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreQueuedCountFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8145,7 +8915,9 @@
                       "identifier": "WorkerStoreQueuedCountFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreQueuedCountFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8165,7 +8937,9 @@
                       "identifier": "WorkerStoreQueuedCountFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreQueuedCountFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8188,7 +8962,9 @@
                 "identifier": "WorkerStoreRequeueFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreRequeueFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8206,7 +8982,9 @@
                       "identifier": "WorkerStoreRequeueFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreRequeueFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8226,7 +9004,9 @@
                       "identifier": "WorkerStoreRequeueFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreRequeueFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8246,7 +9026,9 @@
                       "identifier": "WorkerStoreRequeueFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreRequeueFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8266,7 +9048,9 @@
                       "identifier": "WorkerStoreRequeueFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreRequeueFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8286,7 +9070,9 @@
                       "identifier": "WorkerStoreRequeueFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreRequeueFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8306,7 +9092,9 @@
                       "identifier": "WorkerStoreRequeueFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreRequeueFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8326,7 +9114,9 @@
                       "identifier": "WorkerStoreRequeueFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreRequeueFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8349,7 +9139,9 @@
                 "identifier": "WorkerStoreRequeueFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreRequeueFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8367,7 +9159,9 @@
                       "identifier": "WorkerStoreRequeueFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreRequeueFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8387,7 +9181,9 @@
                       "identifier": "WorkerStoreRequeueFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreRequeueFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8410,7 +9206,9 @@
                 "identifier": "WorkerStoreResetStalledFunc",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreResetStalledFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8428,7 +9226,9 @@
                       "identifier": "WorkerStoreResetStalledFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreResetStalledFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8448,7 +9248,9 @@
                       "identifier": "WorkerStoreResetStalledFunc.PushHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreResetStalledFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8468,7 +9270,9 @@
                       "identifier": "WorkerStoreResetStalledFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreResetStalledFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8488,7 +9292,9 @@
                       "identifier": "WorkerStoreResetStalledFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreResetStalledFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8508,7 +9314,9 @@
                       "identifier": "WorkerStoreResetStalledFunc.nextHook",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreResetStalledFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8528,7 +9336,9 @@
                       "identifier": "WorkerStoreResetStalledFunc.appendCall",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreResetStalledFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8548,7 +9358,9 @@
                       "identifier": "WorkerStoreResetStalledFunc.History",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreResetStalledFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8571,7 +9383,9 @@
                 "identifier": "WorkerStoreResetStalledFuncCall",
                 "newPage": false,
                 "searchKey": "worker.WorkerStoreResetStalledFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8589,7 +9403,9 @@
                       "identifier": "WorkerStoreResetStalledFuncCall.Args",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreResetStalledFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8609,7 +9425,9 @@
                       "identifier": "WorkerStoreResetStalledFuncCall.Results",
                       "newPage": false,
                       "searchKey": "worker.WorkerStoreResetStalledFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -8635,7 +9453,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -8653,7 +9473,9 @@
                 "identifier": "inTransaction",
                 "newPage": false,
                 "searchKey": "worker.inTransaction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8673,7 +9495,9 @@
                 "identifier": "requeueIfCloning",
                 "newPage": false,
                 "searchKey": "worker.requeueIfCloning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8693,7 +9517,9 @@
                 "identifier": "withUploadData",
                 "newPage": false,
                 "searchKey": "worker.withUploadData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8713,7 +9539,9 @@
                 "identifier": "writeData",
                 "newPage": false,
                 "searchKey": "worker.writeData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8733,7 +9561,9 @@
                 "identifier": "isUniqueConstraintViolation",
                 "newPage": false,
                 "searchKey": "worker.isUniqueConstraintViolation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8753,7 +9583,9 @@
                 "identifier": "createHoneyEvent",
                 "newPage": false,
                 "searchKey": "worker.createHoneyEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8773,9 +9605,7 @@
                 "identifier": "NewWorker",
                 "newPage": false,
                 "searchKey": "worker.NewWorker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -8795,7 +9625,9 @@
                 "identifier": "TestHandle",
                 "newPage": false,
                 "searchKey": "worker.TestHandle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8815,7 +9647,9 @@
                 "identifier": "TestHandleError",
                 "newPage": false,
                 "searchKey": "worker.TestHandleError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8835,7 +9669,9 @@
                 "identifier": "TestHandleCloneInProgress",
                 "newPage": false,
                 "searchKey": "worker.TestHandleCloneInProgress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8855,7 +9691,9 @@
                 "identifier": "copyTestDump",
                 "newPage": false,
                 "searchKey": "worker.copyTestDump",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -8875,7 +9713,9 @@
                 "identifier": "setupRepoMocks",
                 "newPage": false,
                 "searchKey": "worker.setupRepoMocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

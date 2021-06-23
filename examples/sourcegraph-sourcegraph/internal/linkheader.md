@@ -9,11 +9,14 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExtractNextURL" href="#ExtractNextURL">func ExtractNextURL(resp *http.Response) (string, bool)</a>
 
 ```
 searchKey: linkheader.ExtractNextURL
-tags: [exported]
 ```
 
 ```Go
@@ -26,7 +29,6 @@ ExtractNextURL retrieves the URL with rel="next" from the Link header.
 
 ```
 searchKey: linkheader.ExtractURL
-tags: [exported]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "gqltestutil",
     "newPage": true,
     "searchKey": "internal/gqltestutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "SearchContextsOrderByUpdatedAt",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchContextsOrderByUpdatedAt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "SearchContextsOrderBySpec",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchContextsOrderBySpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,7 +107,9 @@
                 "identifier": "graphqlQueryNameRe",
                 "newPage": false,
                 "searchKey": "gqltestutil.graphqlQueryNameRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,9 +129,7 @@
                 "identifier": "ErrContinueRetry",
                 "newPage": false,
                 "searchKey": "gqltestutil.ErrContinueRetry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,7 +152,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -168,9 +172,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "gqltestutil.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -188,9 +190,7 @@
                       "identifier": "SiteAdminInit",
                       "newPage": false,
                       "searchKey": "gqltestutil.SiteAdminInit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -210,9 +210,7 @@
                       "identifier": "SignUp",
                       "newPage": false,
                       "searchKey": "gqltestutil.SignUp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -232,9 +230,7 @@
                       "identifier": "SignIn",
                       "newPage": false,
                       "searchKey": "gqltestutil.SignIn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -254,7 +250,9 @@
                       "identifier": "authenticate",
                       "newPage": false,
                       "searchKey": "gqltestutil.authenticate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -274,7 +272,9 @@
                       "identifier": "newClient",
                       "newPage": false,
                       "searchKey": "gqltestutil.newClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,9 +294,7 @@
                       "identifier": "Client.CreateAccessToken",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.CreateAccessToken",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -316,9 +314,7 @@
                       "identifier": "Client.DeleteAccessToken",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.DeleteAccessToken",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -338,7 +334,9 @@
                       "identifier": "Client.authenticate",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.authenticate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -358,9 +356,7 @@
                       "identifier": "Client.CurrentUserID",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.CurrentUserID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -380,9 +376,7 @@
                       "identifier": "Client.AuthenticatedUserID",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.AuthenticatedUserID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -402,9 +396,7 @@
                       "identifier": "Client.GraphQL",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.GraphQL",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -424,9 +416,7 @@
                       "identifier": "Client.Get",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -446,9 +436,7 @@
                       "identifier": "Client.Post",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.Post",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -468,7 +456,9 @@
                       "identifier": "Client.addCookies",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.addCookies",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -488,9 +478,7 @@
                       "identifier": "Client.AddExternalService",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.AddExternalService",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -510,9 +498,7 @@
                       "identifier": "Client.DeleteExternalService",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.DeleteExternalService",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -532,9 +518,7 @@
                       "identifier": "Client.GitBlob",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.GitBlob",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -554,9 +538,7 @@
                       "identifier": "Client.Organization",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.Organization",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -576,9 +558,7 @@
                       "identifier": "Client.OrganizationMembers",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.OrganizationMembers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -598,9 +578,7 @@
                       "identifier": "Client.InviteUserToOrganization",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.InviteUserToOrganization",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -620,9 +598,7 @@
                       "identifier": "Client.CreateOrganization",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.CreateOrganization",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -642,9 +618,7 @@
                       "identifier": "Client.UpdateOrganization",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.UpdateOrganization",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -664,9 +638,7 @@
                       "identifier": "Client.DeleteOrganization",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.DeleteOrganization",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -686,9 +658,7 @@
                       "identifier": "Client.RemoveUserFromOrganization",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.RemoveUserFromOrganization",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -708,9 +678,7 @@
                       "identifier": "Client.ScheduleRepositoryPermissionsSync",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.ScheduleRepositoryPermissionsSync",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -730,9 +698,7 @@
                       "identifier": "Client.WaitForReposToBeCloned",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.WaitForReposToBeCloned",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -752,9 +718,7 @@
                       "identifier": "Client.WaitForReposToBeIndex",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.WaitForReposToBeIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -774,7 +738,9 @@
                       "identifier": "Client.waitForReposByQuery",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.waitForReposByQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -794,9 +760,7 @@
                       "identifier": "Client.FileExternalLinks",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.FileExternalLinks",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -816,9 +780,7 @@
                       "identifier": "Client.Repository",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.Repository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -838,9 +800,7 @@
                       "identifier": "Client.RepositoryPermissionsInfo",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.RepositoryPermissionsInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -860,9 +820,7 @@
                       "identifier": "Client.SearchRepositories",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.SearchRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -882,9 +840,7 @@
                       "identifier": "Client.SearchFiles",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.SearchFiles",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -904,9 +860,7 @@
                       "identifier": "Client.SearchCommits",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.SearchCommits",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -926,9 +880,7 @@
                       "identifier": "Client.SearchAll",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.SearchAll",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -948,9 +900,7 @@
                       "identifier": "Client.SearchStats",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.SearchStats",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -970,9 +920,7 @@
                       "identifier": "Client.SearchSuggestions",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.SearchSuggestions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -992,9 +940,7 @@
                       "identifier": "Client.CreateSearchContext",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.CreateSearchContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1014,9 +960,7 @@
                       "identifier": "Client.GetSearchContext",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.GetSearchContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1036,9 +980,7 @@
                       "identifier": "Client.UpdateSearchContext",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.UpdateSearchContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1058,9 +1000,7 @@
                       "identifier": "Client.DeleteSearchContext",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.DeleteSearchContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1080,9 +1020,7 @@
                       "identifier": "Client.ListSearchContexts",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.ListSearchContexts",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1102,9 +1040,7 @@
                       "identifier": "Client.SettingsCascade",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.SettingsCascade",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1124,9 +1060,7 @@
                       "identifier": "Client.OverwriteSettings",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.OverwriteSettings",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1146,7 +1080,9 @@
                       "identifier": "Client.lastSettingsID",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.lastSettingsID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1166,9 +1102,7 @@
                       "identifier": "Client.ViewerSettings",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.ViewerSettings",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1188,9 +1122,7 @@
                       "identifier": "Client.SiteConfiguration",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.SiteConfiguration",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1210,9 +1142,7 @@
                       "identifier": "Client.UpdateSiteConfiguration",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.UpdateSiteConfiguration",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1232,9 +1162,7 @@
                       "identifier": "Client.CreateUser",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.CreateUser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1254,9 +1182,7 @@
                       "identifier": "Client.DeleteUser",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.DeleteUser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1276,9 +1202,7 @@
                       "identifier": "Client.UserOrganizations",
                       "newPage": false,
                       "searchKey": "gqltestutil.Client.UserOrganizations",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1301,9 +1225,7 @@
                 "identifier": "AddExternalServiceInput",
                 "newPage": false,
                 "searchKey": "gqltestutil.AddExternalServiceInput",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1323,9 +1245,7 @@
                 "identifier": "Organization",
                 "newPage": false,
                 "searchKey": "gqltestutil.Organization",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1345,9 +1265,7 @@
                 "identifier": "OrganizationMember",
                 "newPage": false,
                 "searchKey": "gqltestutil.OrganizationMember",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1367,9 +1285,7 @@
                 "identifier": "InviteUserToOrganizationResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.InviteUserToOrganizationResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1389,9 +1305,7 @@
                 "identifier": "ExternalLink",
                 "newPage": false,
                 "searchKey": "gqltestutil.ExternalLink",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1411,9 +1325,7 @@
                 "identifier": "Repository",
                 "newPage": false,
                 "searchKey": "gqltestutil.Repository",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1433,9 +1345,7 @@
                 "identifier": "PermissionsInfo",
                 "newPage": false,
                 "searchKey": "gqltestutil.PermissionsInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1455,9 +1365,7 @@
                 "identifier": "SearchRepositoryResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchRepositoryResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1477,9 +1385,7 @@
                 "identifier": "SearchRepositoryResults",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchRepositoryResults",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1497,9 +1403,7 @@
                       "identifier": "SearchRepositoryResults.Exists",
                       "newPage": false,
                       "searchKey": "gqltestutil.SearchRepositoryResults.Exists",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1519,9 +1423,7 @@
                       "identifier": "SearchRepositoryResults.String",
                       "newPage": false,
                       "searchKey": "gqltestutil.SearchRepositoryResults.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1544,9 +1446,7 @@
                 "identifier": "SearchFileResults",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchFileResults",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1566,9 +1466,7 @@
                 "identifier": "SearchFileResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchFileResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1588,9 +1486,7 @@
                 "identifier": "ProposedQuery",
                 "newPage": false,
                 "searchKey": "gqltestutil.ProposedQuery",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1610,9 +1506,7 @@
                 "identifier": "SearchAlert",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchAlert",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1632,9 +1526,7 @@
                 "identifier": "SearchCommitResults",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchCommitResults",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1654,9 +1546,7 @@
                 "identifier": "AnyResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.AnyResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1674,9 +1564,7 @@
                       "identifier": "AnyResult.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "gqltestutil.AnyResult.UnmarshalJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1699,9 +1587,7 @@
                 "identifier": "FileResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.FileResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1721,9 +1607,7 @@
                 "identifier": "CommitResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.CommitResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1743,9 +1627,7 @@
                 "identifier": "RepositoryResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.RepositoryResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1765,9 +1647,7 @@
                 "identifier": "SearchStatsResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchStatsResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1787,9 +1667,7 @@
                 "identifier": "SearchSuggestionsResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchSuggestionsResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1807,9 +1685,7 @@
                       "identifier": "SearchSuggestionsResult.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "gqltestutil.SearchSuggestionsResult.UnmarshalJSON",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1832,9 +1708,7 @@
                 "identifier": "RepositorySuggestionResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.RepositorySuggestionResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1854,9 +1728,7 @@
                 "identifier": "FileSuggestionResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.FileSuggestionResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1876,9 +1748,7 @@
                 "identifier": "SymbolSuggestionResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.SymbolSuggestionResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1898,9 +1768,7 @@
                 "identifier": "LanguageSuggestionResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.LanguageSuggestionResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1920,9 +1788,7 @@
                 "identifier": "SearchContextSuggestionResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchContextSuggestionResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1942,9 +1808,7 @@
                 "identifier": "SearchStreamClient",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchStreamClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1962,9 +1826,7 @@
                       "identifier": "SearchStreamClient.SearchRepositories",
                       "newPage": false,
                       "searchKey": "gqltestutil.SearchStreamClient.SearchRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1984,9 +1846,7 @@
                       "identifier": "SearchStreamClient.SearchFiles",
                       "newPage": false,
                       "searchKey": "gqltestutil.SearchStreamClient.SearchFiles",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2006,9 +1866,7 @@
                       "identifier": "SearchStreamClient.SearchAll",
                       "newPage": false,
                       "searchKey": "gqltestutil.SearchStreamClient.SearchAll",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2028,9 +1886,7 @@
                       "identifier": "SearchStreamClient.OverwriteSettings",
                       "newPage": false,
                       "searchKey": "gqltestutil.SearchStreamClient.OverwriteSettings",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2050,9 +1906,7 @@
                       "identifier": "SearchStreamClient.AuthenticatedUserID",
                       "newPage": false,
                       "searchKey": "gqltestutil.SearchStreamClient.AuthenticatedUserID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2072,7 +1926,9 @@
                       "identifier": "SearchStreamClient.search",
                       "newPage": false,
                       "searchKey": "gqltestutil.SearchStreamClient.search",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2095,9 +1951,7 @@
                 "identifier": "CreateSearchContextInput",
                 "newPage": false,
                 "searchKey": "gqltestutil.CreateSearchContextInput",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2117,9 +1971,7 @@
                 "identifier": "UpdateSearchContextInput",
                 "newPage": false,
                 "searchKey": "gqltestutil.UpdateSearchContextInput",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2139,9 +1991,7 @@
                 "identifier": "SearchContextRepositoryRevisionsInput",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchContextRepositoryRevisionsInput",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2161,9 +2011,7 @@
                 "identifier": "GetSearchContextResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.GetSearchContextResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2183,9 +2031,7 @@
                 "identifier": "SearchContextsOrderBy",
                 "newPage": false,
                 "searchKey": "gqltestutil.SearchContextsOrderBy",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2205,9 +2051,7 @@
                 "identifier": "ListSearchContextsOptions",
                 "newPage": false,
                 "searchKey": "gqltestutil.ListSearchContextsOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2227,9 +2071,7 @@
                 "identifier": "ListSearchContextsResult",
                 "newPage": false,
                 "searchKey": "gqltestutil.ListSearchContextsResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2249,9 +2091,7 @@
                 "identifier": "SettingsSubject",
                 "newPage": false,
                 "searchKey": "gqltestutil.SettingsSubject",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2274,7 +2114,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2292,9 +2134,7 @@
                 "identifier": "NeedsSiteInit",
                 "newPage": false,
                 "searchKey": "gqltestutil.NeedsSiteInit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2314,7 +2154,9 @@
                 "identifier": "extractCSRFToken",
                 "newPage": false,
                 "searchKey": "gqltestutil.extractCSRFToken",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2334,9 +2176,7 @@
                 "identifier": "Retry",
                 "newPage": false,
                 "searchKey": "gqltestutil.Retry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

@@ -38,14 +38,11 @@ Package pkix contains shared, low level structures used for ASN.1 parsing and se
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="attributeTypeNames" href="#attributeTypeNames">var attributeTypeNames</a>
 
 ```
 searchKey: pkix.attributeTypeNames
+tags: [private]
 ```
 
 ```Go
@@ -56,6 +53,7 @@ var attributeTypeNames = ...
 
 ```
 searchKey: pkix.oidCountry
+tags: [private]
 ```
 
 ```Go
@@ -66,6 +64,7 @@ var oidCountry = []int{2, 5, 4, 6}
 
 ```
 searchKey: pkix.oidOrganization
+tags: [private]
 ```
 
 ```Go
@@ -76,6 +75,7 @@ var oidOrganization = []int{2, 5, 4, 10}
 
 ```
 searchKey: pkix.oidOrganizationalUnit
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +86,7 @@ var oidOrganizationalUnit = []int{2, 5, 4, 11}
 
 ```
 searchKey: pkix.oidCommonName
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +97,7 @@ var oidCommonName = []int{2, 5, 4, 3}
 
 ```
 searchKey: pkix.oidSerialNumber
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +108,7 @@ var oidSerialNumber = []int{2, 5, 4, 5}
 
 ```
 searchKey: pkix.oidLocality
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +119,7 @@ var oidLocality = []int{2, 5, 4, 7}
 
 ```
 searchKey: pkix.oidProvince
+tags: [private]
 ```
 
 ```Go
@@ -126,6 +130,7 @@ var oidProvince = []int{2, 5, 4, 8}
 
 ```
 searchKey: pkix.oidStreetAddress
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +141,7 @@ var oidStreetAddress = []int{2, 5, 4, 9}
 
 ```
 searchKey: pkix.oidPostalCode
+tags: [private]
 ```
 
 ```Go
@@ -144,15 +150,10 @@ var oidPostalCode = []int{2, 5, 4, 17}
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="AlgorithmIdentifier" href="#AlgorithmIdentifier">type AlgorithmIdentifier struct</a>
 
 ```
 searchKey: pkix.AlgorithmIdentifier
-tags: [exported]
 ```
 
 ```Go
@@ -168,7 +169,6 @@ AlgorithmIdentifier represents the ASN.1 structure of the same name. See RFC 528
 
 ```
 searchKey: pkix.RDNSequence
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +179,6 @@ type RDNSequence []RelativeDistinguishedNameSET
 
 ```
 searchKey: pkix.RDNSequence.String
-tags: [exported]
 ```
 
 ```Go
@@ -192,7 +191,6 @@ String returns a string representation of the sequence r, roughly following the 
 
 ```
 searchKey: pkix.RelativeDistinguishedNameSET
-tags: [exported]
 ```
 
 ```Go
@@ -203,7 +201,6 @@ type RelativeDistinguishedNameSET []AttributeTypeAndValue
 
 ```
 searchKey: pkix.AttributeTypeAndValue
-tags: [exported]
 ```
 
 ```Go
@@ -219,7 +216,6 @@ AttributeTypeAndValue mirrors the ASN.1 structure of the same name in RFC 5280, 
 
 ```
 searchKey: pkix.AttributeTypeAndValueSET
-tags: [exported]
 ```
 
 ```Go
@@ -235,7 +231,6 @@ AttributeTypeAndValueSET represents a set of ASN.1 sequences of AttributeTypeAnd
 
 ```
 searchKey: pkix.Extension
-tags: [exported]
 ```
 
 ```Go
@@ -252,7 +247,6 @@ Extension represents the ASN.1 structure of the same name. See RFC 5280, section
 
 ```
 searchKey: pkix.Name
-tags: [exported]
 ```
 
 ```Go
@@ -281,7 +275,6 @@ Name represents an X.509 distinguished name. This only includes the common eleme
 
 ```
 searchKey: pkix.Name.FillFromRDNSequence
-tags: [exported]
 ```
 
 ```Go
@@ -294,6 +287,7 @@ FillFromRDNSequence populates n from the provided RDNSequence. Multi-entry RDNs 
 
 ```
 searchKey: pkix.Name.appendRDNs
+tags: [private]
 ```
 
 ```Go
@@ -306,7 +300,6 @@ appendRDNs appends a relativeDistinguishedNameSET to the given RDNSequence and r
 
 ```
 searchKey: pkix.Name.ToRDNSequence
-tags: [exported]
 ```
 
 ```Go
@@ -331,7 +324,6 @@ Each ExtraNames entry is encoded as an individual RDN.
 
 ```
 searchKey: pkix.Name.String
-tags: [exported]
 ```
 
 ```Go
@@ -344,7 +336,6 @@ String returns the string form of n, roughly following the RFC 2253 Distinguishe
 
 ```
 searchKey: pkix.CertificateList
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +352,6 @@ CertificateList represents the ASN.1 structure of the same name. See RFC 5280, s
 
 ```
 searchKey: pkix.CertificateList.HasExpired
-tags: [exported]
 ```
 
 ```Go
@@ -374,7 +364,6 @@ HasExpired reports whether certList should have been updated by now.
 
 ```
 searchKey: pkix.TBSCertificateList
-tags: [exported]
 ```
 
 ```Go
@@ -396,7 +385,6 @@ TBSCertificateList represents the ASN.1 structure of the same name. See RFC 5280
 
 ```
 searchKey: pkix.RevokedCertificate
-tags: [exported]
 ```
 
 ```Go
@@ -411,14 +399,11 @@ RevokedCertificate represents the ASN.1 structure of the same name. See RFC 5280
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="oidInAttributeTypeAndValue" href="#oidInAttributeTypeAndValue">func oidInAttributeTypeAndValue(oid asn1.ObjectIdentifier, atv []AttributeTypeAndValue) bool</a>
 
 ```
 searchKey: pkix.oidInAttributeTypeAndValue
+tags: [private]
 ```
 
 ```Go

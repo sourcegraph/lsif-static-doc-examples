@@ -15,10 +15,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="symbolsURL" href="#symbolsURL">var symbolsURL</a>
 
 ```
 searchKey: symbols.symbolsURL
+tags: [private]
 ```
 
 ```Go
@@ -29,7 +34,6 @@ var symbolsURL = env.Get("SYMBOLS_URL", "k8s+http://symbols:3184", "symbols serv
 
 ```
 searchKey: symbols.DefaultClient
-tags: [exported]
 ```
 
 ```Go
@@ -40,11 +44,14 @@ DefaultClient is the default Client. Unless overwritten, it is connected to the 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: symbols.Client
-tags: [exported]
 ```
 
 ```Go
@@ -69,6 +76,7 @@ Client is a symbols service client.
 
 ```
 searchKey: symbols.Client.url
+tags: [private]
 ```
 
 ```Go
@@ -79,7 +87,6 @@ func (c *Client) url(key key) (string, error)
 
 ```
 searchKey: symbols.Client.Search
-tags: [exported]
 ```
 
 ```Go
@@ -92,6 +99,7 @@ Search performs a symbol search on the symbols service.
 
 ```
 searchKey: symbols.Client.httpPost
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +110,7 @@ func (c *Client) httpPost(ctx context.Context, method string, key key, payload i
 
 ```
 searchKey: symbols.key
+tags: [private]
 ```
 
 ```Go

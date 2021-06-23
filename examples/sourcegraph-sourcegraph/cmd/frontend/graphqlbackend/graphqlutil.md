@@ -17,15 +17,10 @@ Package graphqlutil contains utilities for working with GraphQL.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ConnectionArgs" href="#ConnectionArgs">type ConnectionArgs struct</a>
 
 ```
 searchKey: graphqlutil.ConnectionArgs
-tags: [exported]
 ```
 
 ```Go
@@ -40,7 +35,6 @@ ConnectionArgs is the common set of arguments to GraphQL fields that return conn
 
 ```
 searchKey: graphqlutil.ConnectionArgs.Set
-tags: [exported]
 ```
 
 ```Go
@@ -53,7 +47,6 @@ Set is a convenience method for setting the DB limit and offset in a DB XyzListO
 
 ```
 searchKey: graphqlutil.ConnectionArgs.GetFirst
-tags: [exported]
 ```
 
 ```Go
@@ -66,7 +59,6 @@ GetFirst is a convenience method returning the value of First, defaulting to the
 
 ```
 searchKey: graphqlutil.PageInfo
-tags: [exported]
 ```
 
 ```Go
@@ -82,7 +74,6 @@ PageInfo implements the GraphQL type PageInfo.
 
 ```
 searchKey: graphqlutil.HasNextPage
-tags: [exported]
 ```
 
 ```Go
@@ -95,7 +86,6 @@ HasNextPage returns a new PageInfo with the given hasNextPage value.
 
 ```
 searchKey: graphqlutil.NextPageCursor
-tags: [exported]
 ```
 
 ```Go
@@ -108,7 +98,6 @@ NextPageCursor returns a new PageInfo indicating there is a next page with the g
 
 ```
 searchKey: graphqlutil.PageInfo.EndCursor
-tags: [exported]
 ```
 
 ```Go
@@ -119,7 +108,6 @@ func (r *PageInfo) EndCursor() *string
 
 ```
 searchKey: graphqlutil.PageInfo.HasNextPage
-tags: [exported]
 ```
 
 ```Go

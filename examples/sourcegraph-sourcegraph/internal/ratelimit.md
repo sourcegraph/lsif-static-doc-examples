@@ -31,11 +31,14 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DefaultMonitorRegistry" href="#DefaultMonitorRegistry">var DefaultMonitorRegistry</a>
 
 ```
 searchKey: ratelimit.DefaultMonitorRegistry
-tags: [exported]
 ```
 
 ```Go
@@ -48,7 +51,6 @@ DefaultMonitorRegistry is the default global rate limit monitor registry. It wil
 
 ```
 searchKey: ratelimit.DefaultRegistry
-tags: [exported]
 ```
 
 ```Go
@@ -59,11 +61,14 @@ DefaultRegistry is the default global rate limit registry. It will hold rate lim
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MonitorRegistry" href="#MonitorRegistry">type MonitorRegistry struct</a>
 
 ```
 searchKey: ratelimit.MonitorRegistry
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +86,6 @@ MonitorRegistry keeps a mapping of external service URL to *Monitor.
 
 ```
 searchKey: ratelimit.NewMonitorRegistry
-tags: [exported]
 ```
 
 ```Go
@@ -94,7 +98,6 @@ NewMonitorRegistry creates a new empty registry.
 
 ```
 searchKey: ratelimit.MonitorRegistry.GetOrSet
-tags: [exported]
 ```
 
 ```Go
@@ -107,7 +110,6 @@ GetOrSet fetches the rate limit monitor associated with the given code host / to
 
 ```
 searchKey: ratelimit.MonitorRegistry.Count
-tags: [exported]
 ```
 
 ```Go
@@ -120,7 +122,6 @@ Count returns the total number of rate limiters in the registry
 
 ```
 searchKey: ratelimit.MetricsCollector
-tags: [exported]
 ```
 
 ```Go
@@ -136,7 +137,6 @@ MetricsCollector is used so that we can inject metric collection functions for d
 
 ```
 searchKey: ratelimit.Monitor
-tags: [exported]
 ```
 
 ```Go
@@ -163,7 +163,6 @@ It is intended to be embedded in an API client struct.
 
 ```
 searchKey: ratelimit.Monitor.Get
-tags: [exported]
 ```
 
 ```Go
@@ -176,7 +175,6 @@ Get reports the client's rate limit status (as of the last API response it recei
 
 ```
 searchKey: ratelimit.Monitor.RecommendedWaitForBackgroundOp
-tags: [exported]
 ```
 
 ```Go
@@ -203,7 +201,6 @@ See [https://developer.github.com/v4/guides/resource-limitations/#rate-limit](ht
 
 ```
 searchKey: ratelimit.Monitor.Update
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +213,6 @@ Update updates the monitor's rate limit information based on the HTTP response h
 
 ```
 searchKey: ratelimit.Monitor.SetCollector
-tags: [exported]
 ```
 
 ```Go
@@ -229,6 +225,7 @@ SetCollector sets the metric collector.
 
 ```
 searchKey: ratelimit.Monitor.now
+tags: [private]
 ```
 
 ```Go
@@ -239,7 +236,6 @@ func (c *Monitor) now() time.Time
 
 ```
 searchKey: ratelimit.Registry
-tags: [exported]
 ```
 
 ```Go
@@ -257,7 +253,6 @@ Registry keeps a mapping of external service URL to *rate.Limiter. By default an
 
 ```
 searchKey: ratelimit.NewRegistry
-tags: [exported]
 ```
 
 ```Go
@@ -270,7 +265,6 @@ NewRegistry creates a new empty registry.
 
 ```
 searchKey: ratelimit.Registry.Get
-tags: [exported]
 ```
 
 ```Go
@@ -283,7 +277,6 @@ Get fetches the rate limiter associated with the given code host. If none has be
 
 ```
 searchKey: ratelimit.Registry.GetOrSet
-tags: [exported]
 ```
 
 ```Go
@@ -296,7 +289,6 @@ GetOrSet fetches the rate limiter associated with the given code host. If none h
 
 ```
 searchKey: ratelimit.Registry.Count
-tags: [exported]
 ```
 
 ```Go
@@ -307,10 +299,15 @@ Count returns the total number of rate limiters in the registry
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="normaliseURL" href="#normaliseURL">func normaliseURL(rawURL string) string</a>
 
 ```
 searchKey: ratelimit.normaliseURL
+tags: [private]
 ```
 
 ```Go
@@ -323,6 +320,7 @@ normaliseURL will attempt to normalise rawURL. If there is an error parsing it, 
 
 ```
 searchKey: ratelimit.TestMonitor_RecommendedWaitForBackgroundOp
+tags: [private]
 ```
 
 ```Go
@@ -333,6 +331,7 @@ func TestMonitor_RecommendedWaitForBackgroundOp(t *testing.T)
 
 ```
 searchKey: ratelimit.TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +342,7 @@ func TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter(t *testing.T)
 
 ```
 searchKey: ratelimit.TestMonitor_Update
+tags: [private]
 ```
 
 ```Go

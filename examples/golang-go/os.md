@@ -186,7 +186,6 @@ Note: The maximum number of concurrent operations on a File may be limited by th
         * [func NewFile(fd uintptr, name string) *File](#NewFile)
         * [func newFile(fd uintptr, name string, kind newFileKind) *File](#newFile)
         * [func openFileNolog(name string, flag int, perm FileMode) (*File, error)](#openFileNolog)
-        * [func Pipe() (r *File, w *File, err error)](#Pipe)
         * [func openFdAt(dirfd int, name string) (*File, error)](#openFdAt)
         * [func CreateTemp(dir, pattern string) (*File, error)](#CreateTemp)
         * [func (f *File) Readdir(n int) ([]FileInfo, error)](#File.Readdir)
@@ -308,7 +307,8 @@ Note: The maximum number of concurrent operations on a File may be limited by th
     * [func basename(name string) string](#basename)
     * [func splitPath(path string) (string, string)](#splitPath)
     * [func fixRootDirectory(p string) string](#fixRootDirectory)
-    * [func init()](#init)
+    * [func Pipe() (r *File, w *File, err error)](#Pipe)
+    * [func init()](#init.proc.go)
     * [func runtime_args() []string](#runtime_args)
     * [func Getuid() int](#Getuid)
     * [func Geteuid() int](#Geteuid)
@@ -339,14 +339,11 @@ Note: The maximum number of concurrent operations on a File may be limited by th
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="readdirName" href="#readdirName">const readdirName</a>
 
 ```
 searchKey: os.readdirName
+tags: [private]
 ```
 
 ```Go
@@ -357,6 +354,7 @@ const readdirName readdirMode = iota
 
 ```
 searchKey: os.readdirDirEntry
+tags: [private]
 ```
 
 ```Go
@@ -367,6 +365,7 @@ const readdirDirEntry
 
 ```
 searchKey: os.readdirFileInfo
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +376,7 @@ const readdirFileInfo
 
 ```
 searchKey: os.isBigEndian
+tags: [private]
 ```
 
 ```Go
@@ -387,7 +387,6 @@ const isBigEndian = false
 
 ```
 searchKey: os.O_RDONLY
-tags: [exported]
 ```
 
 ```Go
@@ -403,7 +402,6 @@ Exactly one of O_RDONLY, O_WRONLY, or O_RDWR must be specified.
 
 ```
 searchKey: os.O_WRONLY
-tags: [exported]
 ```
 
 ```Go
@@ -417,7 +415,6 @@ Flags to OpenFile wrapping those of the underlying system. Not all flags may be 
 
 ```
 searchKey: os.O_RDWR
-tags: [exported]
 ```
 
 ```Go
@@ -431,7 +428,6 @@ Flags to OpenFile wrapping those of the underlying system. Not all flags may be 
 
 ```
 searchKey: os.O_APPEND
-tags: [exported]
 ```
 
 ```Go
@@ -447,7 +443,6 @@ The remaining values may be or'ed in to control behavior.
 
 ```
 searchKey: os.O_CREATE
-tags: [exported]
 ```
 
 ```Go
@@ -461,7 +456,6 @@ Flags to OpenFile wrapping those of the underlying system. Not all flags may be 
 
 ```
 searchKey: os.O_EXCL
-tags: [exported]
 ```
 
 ```Go
@@ -475,7 +469,6 @@ Flags to OpenFile wrapping those of the underlying system. Not all flags may be 
 
 ```
 searchKey: os.O_SYNC
-tags: [exported]
 ```
 
 ```Go
@@ -489,7 +482,6 @@ Flags to OpenFile wrapping those of the underlying system. Not all flags may be 
 
 ```
 searchKey: os.O_TRUNC
-tags: [exported]
 ```
 
 ```Go
@@ -503,7 +495,6 @@ Flags to OpenFile wrapping those of the underlying system. Not all flags may be 
 
 ```
 searchKey: os.SEEK_SET
-tags: [exported]
 ```
 
 ```Go
@@ -519,7 +510,6 @@ Deprecated: Use io.SeekStart, io.SeekCurrent, and io.SeekEnd.
 
 ```
 searchKey: os.SEEK_CUR
-tags: [exported]
 ```
 
 ```Go
@@ -535,7 +525,6 @@ Deprecated: Use io.SeekStart, io.SeekCurrent, and io.SeekEnd.
 
 ```
 searchKey: os.SEEK_END
-tags: [exported]
 ```
 
 ```Go
@@ -551,6 +540,7 @@ Deprecated: Use io.SeekStart, io.SeekCurrent, and io.SeekEnd.
 
 ```
 searchKey: os.kindNewFile
+tags: [private]
 ```
 
 ```Go
@@ -561,6 +551,7 @@ const kindNewFile newFileKind = iota
 
 ```
 searchKey: os.kindOpenFile
+tags: [private]
 ```
 
 ```Go
@@ -571,6 +562,7 @@ const kindOpenFile
 
 ```
 searchKey: os.kindPipe
+tags: [private]
 ```
 
 ```Go
@@ -581,6 +573,7 @@ const kindPipe
 
 ```
 searchKey: os.kindNonBlock
+tags: [private]
 ```
 
 ```Go
@@ -591,7 +584,6 @@ const kindNonBlock
 
 ```
 searchKey: os.DevNull
-tags: [exported]
 ```
 
 ```Go
@@ -604,7 +596,6 @@ DevNull is the name of the operating system's `null device.' On Unix-like system
 
 ```
 searchKey: os.PathSeparator
-tags: [exported]
 ```
 
 ```Go
@@ -616,7 +607,6 @@ const PathSeparator = '/' // OS-specific path separator
 
 ```
 searchKey: os.PathListSeparator
-tags: [exported]
 ```
 
 ```Go
@@ -628,6 +618,7 @@ const PathListSeparator = ':' // OS-specific path list separator
 
 ```
 searchKey: os.supportsCreateWithStickyBit
+tags: [private]
 ```
 
 ```Go
@@ -640,6 +631,7 @@ According to sticky(8), neither open(2) nor mkdir(2) will create a file with the
 
 ```
 searchKey: os.hex
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +642,7 @@ const hex = "0123456789abcdef"
 
 ```
 searchKey: os.supportsCloseOnExec
+tags: [private]
 ```
 
 ```Go
@@ -662,7 +655,6 @@ supportsCloseOnExec reports whether the platform supports the O_CLOEXEC flag. On
 
 ```
 searchKey: os.ModeDir
-tags: [exported]
 ```
 
 ```Go
@@ -678,7 +670,6 @@ The single letters are the abbreviations used by the String method's formatting.
 
 ```
 searchKey: os.ModeAppend
-tags: [exported]
 ```
 
 ```Go
@@ -692,7 +683,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeExclusive
-tags: [exported]
 ```
 
 ```Go
@@ -706,7 +696,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeTemporary
-tags: [exported]
 ```
 
 ```Go
@@ -720,7 +709,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeSymlink
-tags: [exported]
 ```
 
 ```Go
@@ -734,7 +722,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeDevice
-tags: [exported]
 ```
 
 ```Go
@@ -748,7 +735,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeNamedPipe
-tags: [exported]
 ```
 
 ```Go
@@ -762,7 +748,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeSocket
-tags: [exported]
 ```
 
 ```Go
@@ -776,7 +761,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeSetuid
-tags: [exported]
 ```
 
 ```Go
@@ -790,7 +774,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeSetgid
-tags: [exported]
 ```
 
 ```Go
@@ -804,7 +787,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeCharDevice
-tags: [exported]
 ```
 
 ```Go
@@ -818,7 +800,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeSticky
-tags: [exported]
 ```
 
 ```Go
@@ -832,7 +813,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeIrregular
-tags: [exported]
 ```
 
 ```Go
@@ -846,7 +826,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: os.ModeType
-tags: [exported]
 ```
 
 ```Go
@@ -861,7 +840,6 @@ Mask for the type bits. For regular files, none will be set.
 
 ```
 searchKey: os.ModePerm
-tags: [exported]
 ```
 
 ```Go
@@ -873,14 +851,11 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="testingForceReadDirLstat" href="#testingForceReadDirLstat">var testingForceReadDirLstat</a>
 
 ```
 searchKey: os.testingForceReadDirLstat
+tags: [private]
 ```
 
 ```Go
@@ -893,7 +868,6 @@ testingForceReadDirLstat forces ReadDir to call Lstat, for testing that code pat
 
 ```
 searchKey: os.ErrInvalid
-tags: [exported]
 ```
 
 ```Go
@@ -911,7 +885,6 @@ ErrInvalid indicates an invalid argument. Methods on File will return this error
 
 ```
 searchKey: os.ErrPermission
-tags: [exported]
 ```
 
 ```Go
@@ -927,7 +900,6 @@ Errors returned from this package may be tested against these errors with errors
 
 ```
 searchKey: os.ErrExist
-tags: [exported]
 ```
 
 ```Go
@@ -943,7 +915,6 @@ Errors returned from this package may be tested against these errors with errors
 
 ```
 searchKey: os.ErrNotExist
-tags: [exported]
 ```
 
 ```Go
@@ -959,7 +930,6 @@ Errors returned from this package may be tested against these errors with errors
 
 ```
 searchKey: os.ErrClosed
-tags: [exported]
 ```
 
 ```Go
@@ -975,7 +945,6 @@ Errors returned from this package may be tested against these errors with errors
 
 ```
 searchKey: os.ErrNoDeadline
-tags: [exported]
 ```
 
 ```Go
@@ -991,7 +960,6 @@ Errors returned from this package may be tested against these errors with errors
 
 ```
 searchKey: os.ErrDeadlineExceeded
-tags: [exported]
 ```
 
 ```Go
@@ -1007,7 +975,6 @@ Errors returned from this package may be tested against these errors with errors
 
 ```
 searchKey: os.ErrProcessDone
-tags: [exported]
 ```
 
 ```Go
@@ -1020,7 +987,6 @@ ErrProcessDone indicates a Process has finished.
 
 ```
 searchKey: os.Interrupt
-tags: [exported]
 ```
 
 ```Go
@@ -1033,7 +999,6 @@ The only signal values guaranteed to be present in the os package on all systems
 
 ```
 searchKey: os.Kill
-tags: [exported]
 ```
 
 ```Go
@@ -1046,6 +1011,7 @@ The only signal values guaranteed to be present in the os package on all systems
 
 ```
 searchKey: os.executablePath
+tags: [private]
 ```
 
 ```Go
@@ -1057,6 +1023,7 @@ var executablePath string // set by ../runtime/os_darwin.go
 
 ```
 searchKey: os.initCwd
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1034,7 @@ var initCwd, initCwdErr = Getwd()
 
 ```
 searchKey: os.initCwdErr
+tags: [private]
 ```
 
 ```Go
@@ -1077,7 +1045,6 @@ var initCwd, initCwdErr = Getwd()
 
 ```
 searchKey: os.Stdin
-tags: [exported]
 ```
 
 ```Go
@@ -1092,7 +1059,6 @@ Note that the Go runtime writes to standard error for panics and crashes; closin
 
 ```
 searchKey: os.Stdout
-tags: [exported]
 ```
 
 ```Go
@@ -1107,7 +1073,6 @@ Note that the Go runtime writes to standard error for panics and crashes; closin
 
 ```
 searchKey: os.Stderr
-tags: [exported]
 ```
 
 ```Go
@@ -1122,6 +1087,7 @@ Note that the Go runtime writes to standard error for panics and crashes; closin
 
 ```
 searchKey: os.errWriteAtInAppendMode
+tags: [private]
 ```
 
 ```Go
@@ -1132,6 +1098,7 @@ var errWriteAtInAppendMode = errors.New("os: invalid use of WriteAt on file open
 
 ```
 searchKey: os.lstat
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1111,7 @@ lstat is overridden in tests.
 
 ```
 searchKey: os.getwdCache
+tags: [private]
 ```
 
 ```Go
@@ -1157,7 +1125,6 @@ var getwdCache struct {
 
 ```
 searchKey: os.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1170,6 +1137,7 @@ Args hold the command-line arguments, starting with the program name.
 
 ```
 searchKey: os.errPatternHasSeparator
+tags: [private]
 ```
 
 ```Go
@@ -1180,6 +1148,7 @@ var errPatternHasSeparator = errors.New("pattern contains path separator")
 
 ```
 searchKey: os.Atime
+tags: [private]
 ```
 
 ```Go
@@ -1190,6 +1159,7 @@ var Atime = atime
 
 ```
 searchKey: os.LstatP
+tags: [private]
 ```
 
 ```Go
@@ -1200,6 +1170,7 @@ var LstatP = &lstat
 
 ```
 searchKey: os.ErrWriteAtInAppendMode
+tags: [private]
 ```
 
 ```Go
@@ -1210,6 +1181,7 @@ var ErrWriteAtInAppendMode = errWriteAtInAppendMode
 
 ```
 searchKey: os.TestingForceReadDirLstat
+tags: [private]
 ```
 
 ```Go
@@ -1220,6 +1192,7 @@ var TestingForceReadDirLstat = &testingForceReadDirLstat
 
 ```
 searchKey: os.ErrPatternHasSeparator
+tags: [private]
 ```
 
 ```Go
@@ -1230,6 +1203,7 @@ var ErrPatternHasSeparator = errPatternHasSeparator
 
 ```
 searchKey: os.SplitPath
+tags: [private]
 ```
 
 ```Go
@@ -1238,14 +1212,11 @@ var SplitPath = splitPath
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="readdirMode" href="#readdirMode">type readdirMode int</a>
 
 ```
 searchKey: os.readdirMode
+tags: [private]
 ```
 
 ```Go
@@ -1256,7 +1227,6 @@ type readdirMode int
 
 ```
 searchKey: os.DirEntry
-tags: [exported]
 ```
 
 ```Go
@@ -1269,6 +1239,7 @@ A DirEntry is an entry read from a directory (using the ReadDir function or a Fi
 
 ```
 searchKey: os.newUnixDirent
+tags: [private]
 ```
 
 ```Go
@@ -1279,6 +1250,7 @@ func newUnixDirent(parent, name string, typ FileMode) (DirEntry, error)
 
 ```
 searchKey: os.dirInfo
+tags: [private]
 ```
 
 ```Go
@@ -1293,6 +1265,7 @@ Auxiliary information if the File describes a directory
 
 ```
 searchKey: os.dirInfo.close
+tags: [private]
 ```
 
 ```Go
@@ -1303,6 +1276,7 @@ func (d *dirInfo) close()
 
 ```
 searchKey: os.timeout
+tags: [private]
 ```
 
 ```Go
@@ -1315,7 +1289,6 @@ type timeout interface {
 
 ```
 searchKey: os.PathError
-tags: [exported]
 ```
 
 ```Go
@@ -1328,7 +1301,6 @@ PathError records an error and the operation and file path that caused it.
 
 ```
 searchKey: os.SyscallError
-tags: [exported]
 ```
 
 ```Go
@@ -1344,7 +1316,6 @@ SyscallError records an error from a specific system call.
 
 ```
 searchKey: os.SyscallError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1355,7 +1326,6 @@ func (e *SyscallError) Error() string
 
 ```
 searchKey: os.SyscallError.Unwrap
-tags: [exported]
 ```
 
 ```Go
@@ -1366,7 +1336,6 @@ func (e *SyscallError) Unwrap() error
 
 ```
 searchKey: os.SyscallError.Timeout
-tags: [exported]
 ```
 
 ```Go
@@ -1379,6 +1348,7 @@ Timeout reports whether this error represents a timeout.
 
 ```
 searchKey: os.syscallErrorType
+tags: [private]
 ```
 
 ```Go
@@ -1389,6 +1359,7 @@ type syscallErrorType = syscall.Errno
 
 ```
 searchKey: os.readdir_r
+tags: [private]
 ```
 
 ```Go
@@ -1399,7 +1370,6 @@ func readdir_r(dir uintptr, entry *syscall.Dirent, result **syscall.Dirent) (res
 
 ```
 searchKey: os.Process
-tags: [exported]
 ```
 
 ```Go
@@ -1417,6 +1387,7 @@ Process stores the information about a process created by StartProcess.
 
 ```
 searchKey: os.newProcess
+tags: [private]
 ```
 
 ```Go
@@ -1427,7 +1398,6 @@ func newProcess(pid int, handle uintptr) *Process
 
 ```
 searchKey: os.FindProcess
-tags: [exported]
 ```
 
 ```Go
@@ -1444,7 +1414,6 @@ On Unix systems, FindProcess always succeeds and returns a Process for the given
 
 ```
 searchKey: os.StartProcess
-tags: [exported]
 ```
 
 ```Go
@@ -1463,6 +1432,7 @@ If there is an error, it will be of type *PathError.
 
 ```
 searchKey: os.startProcess
+tags: [private]
 ```
 
 ```Go
@@ -1473,6 +1443,7 @@ func startProcess(name string, argv []string, attr *ProcAttr) (p *Process, err e
 
 ```
 searchKey: os.findProcess
+tags: [private]
 ```
 
 ```Go
@@ -1483,6 +1454,7 @@ func findProcess(pid int) (p *Process, err error)
 
 ```
 searchKey: os.Process.setDone
+tags: [private]
 ```
 
 ```Go
@@ -1493,6 +1465,7 @@ func (p *Process) setDone()
 
 ```
 searchKey: os.Process.done
+tags: [private]
 ```
 
 ```Go
@@ -1503,7 +1476,6 @@ func (p *Process) done() bool
 
 ```
 searchKey: os.Process.Release
-tags: [exported]
 ```
 
 ```Go
@@ -1516,7 +1488,6 @@ Release releases any resources associated with the Process p, rendering it unusa
 
 ```
 searchKey: os.Process.Kill
-tags: [exported]
 ```
 
 ```Go
@@ -1529,7 +1500,6 @@ Kill causes the Process to exit immediately. Kill does not wait until the Proces
 
 ```
 searchKey: os.Process.Wait
-tags: [exported]
 ```
 
 ```Go
@@ -1542,7 +1512,6 @@ Wait waits for the Process to exit, and then returns a ProcessState describing i
 
 ```
 searchKey: os.Process.Signal
-tags: [exported]
 ```
 
 ```Go
@@ -1555,6 +1524,7 @@ Signal sends a signal to the Process. Sending Interrupt on Windows is not implem
 
 ```
 searchKey: os.Process.kill
+tags: [private]
 ```
 
 ```Go
@@ -1565,6 +1535,7 @@ func (p *Process) kill() error
 
 ```
 searchKey: os.Process.wait
+tags: [private]
 ```
 
 ```Go
@@ -1575,6 +1546,7 @@ func (p *Process) wait() (ps *ProcessState, err error)
 
 ```
 searchKey: os.Process.signal
+tags: [private]
 ```
 
 ```Go
@@ -1585,6 +1557,7 @@ func (p *Process) signal(sig Signal) error
 
 ```
 searchKey: os.Process.release
+tags: [private]
 ```
 
 ```Go
@@ -1595,6 +1568,7 @@ func (p *Process) release() error
 
 ```
 searchKey: os.Process.blockUntilWaitable
+tags: [private]
 ```
 
 ```Go
@@ -1607,7 +1581,6 @@ blockUntilWaitable attempts to block until a call to p.Wait will succeed immedia
 
 ```
 searchKey: os.ProcAttr
-tags: [exported]
 ```
 
 ```Go
@@ -1643,7 +1616,6 @@ ProcAttr holds the attributes that will be applied to a new process started by S
 
 ```
 searchKey: os.Signal
-tags: [exported]
 ```
 
 ```Go
@@ -1659,7 +1631,6 @@ A Signal represents an operating system signal. The usual underlying implementat
 
 ```
 searchKey: os.ProcessState
-tags: [exported]
 ```
 
 ```Go
@@ -1676,7 +1647,6 @@ ProcessState stores information about a process, as reported by Wait.
 
 ```
 searchKey: os.ProcessState.UserTime
-tags: [exported]
 ```
 
 ```Go
@@ -1689,7 +1659,6 @@ UserTime returns the user CPU time of the exited process and its children.
 
 ```
 searchKey: os.ProcessState.SystemTime
-tags: [exported]
 ```
 
 ```Go
@@ -1702,7 +1671,6 @@ SystemTime returns the system CPU time of the exited process and its children.
 
 ```
 searchKey: os.ProcessState.Exited
-tags: [exported]
 ```
 
 ```Go
@@ -1715,7 +1683,6 @@ Exited reports whether the program has exited.
 
 ```
 searchKey: os.ProcessState.Success
-tags: [exported]
 ```
 
 ```Go
@@ -1728,7 +1695,6 @@ Success reports whether the program exited successfully, such as with exit statu
 
 ```
 searchKey: os.ProcessState.Sys
-tags: [exported]
 ```
 
 ```Go
@@ -1741,7 +1707,6 @@ Sys returns system-dependent exit information about the process. Convert it to t
 
 ```
 searchKey: os.ProcessState.SysUsage
-tags: [exported]
 ```
 
 ```Go
@@ -1754,7 +1719,6 @@ SysUsage returns system-dependent resource usage information about the exited pr
 
 ```
 searchKey: os.ProcessState.Pid
-tags: [exported]
 ```
 
 ```Go
@@ -1767,6 +1731,7 @@ Pid returns the process id of the exited process.
 
 ```
 searchKey: os.ProcessState.exited
+tags: [private]
 ```
 
 ```Go
@@ -1777,6 +1742,7 @@ func (p *ProcessState) exited() bool
 
 ```
 searchKey: os.ProcessState.success
+tags: [private]
 ```
 
 ```Go
@@ -1787,6 +1753,7 @@ func (p *ProcessState) success() bool
 
 ```
 searchKey: os.ProcessState.sys
+tags: [private]
 ```
 
 ```Go
@@ -1797,6 +1764,7 @@ func (p *ProcessState) sys() interface{}
 
 ```
 searchKey: os.ProcessState.sysUsage
+tags: [private]
 ```
 
 ```Go
@@ -1807,7 +1775,6 @@ func (p *ProcessState) sysUsage() interface{}
 
 ```
 searchKey: os.ProcessState.String
-tags: [exported]
 ```
 
 ```Go
@@ -1818,7 +1785,6 @@ func (p *ProcessState) String() string
 
 ```
 searchKey: os.ProcessState.ExitCode
-tags: [exported]
 ```
 
 ```Go
@@ -1831,6 +1797,7 @@ ExitCode returns the exit code of the exited process, or -1 if the process hasn'
 
 ```
 searchKey: os.ProcessState.userTime
+tags: [private]
 ```
 
 ```Go
@@ -1841,6 +1808,7 @@ func (p *ProcessState) userTime() time.Duration
 
 ```
 searchKey: os.ProcessState.systemTime
+tags: [private]
 ```
 
 ```Go
@@ -1851,7 +1819,6 @@ func (p *ProcessState) systemTime() time.Duration
 
 ```
 searchKey: os.LinkError
-tags: [exported]
 ```
 
 ```Go
@@ -1869,7 +1836,6 @@ LinkError records an error during a link or symlink or rename system call and th
 
 ```
 searchKey: os.LinkError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1880,7 +1846,6 @@ func (e *LinkError) Error() string
 
 ```
 searchKey: os.LinkError.Unwrap
-tags: [exported]
 ```
 
 ```Go
@@ -1891,6 +1856,7 @@ func (e *LinkError) Unwrap() error
 
 ```
 searchKey: os.onlyWriter
+tags: [private]
 ```
 
 ```Go
@@ -1903,6 +1869,7 @@ type onlyWriter struct {
 
 ```
 searchKey: os.dirFS
+tags: [private]
 ```
 
 ```Go
@@ -1913,6 +1880,7 @@ type dirFS string
 
 ```
 searchKey: os.dirFS.Open
+tags: [private]
 ```
 
 ```Go
@@ -1923,6 +1891,7 @@ func (dir dirFS) Open(name string) (fs.File, error)
 
 ```
 searchKey: os.dirFS.Stat
+tags: [private]
 ```
 
 ```Go
@@ -1933,6 +1902,7 @@ func (dir dirFS) Stat(name string) (fs.FileInfo, error)
 
 ```
 searchKey: os.file
+tags: [private]
 ```
 
 ```Go
@@ -1952,6 +1922,7 @@ file is the real representation of *File. The extra level of indirection ensures
 
 ```
 searchKey: os.file.close
+tags: [private]
 ```
 
 ```Go
@@ -1962,6 +1933,7 @@ func (file *file) close() error
 
 ```
 searchKey: os.newFileKind
+tags: [private]
 ```
 
 ```Go
@@ -1974,6 +1946,7 @@ newFileKind describes the kind of file to newFile.
 
 ```
 searchKey: os.unixDirent
+tags: [private]
 ```
 
 ```Go
@@ -1989,6 +1962,7 @@ type unixDirent struct {
 
 ```
 searchKey: os.unixDirent.Name
+tags: [private]
 ```
 
 ```Go
@@ -1999,6 +1973,7 @@ func (d *unixDirent) Name() string
 
 ```
 searchKey: os.unixDirent.IsDir
+tags: [private]
 ```
 
 ```Go
@@ -2009,6 +1984,7 @@ func (d *unixDirent) IsDir() bool
 
 ```
 searchKey: os.unixDirent.Type
+tags: [private]
 ```
 
 ```Go
@@ -2019,6 +1995,7 @@ func (d *unixDirent) Type() FileMode
 
 ```
 searchKey: os.unixDirent.Info
+tags: [private]
 ```
 
 ```Go
@@ -2029,6 +2006,7 @@ func (d *unixDirent) Info() (FileInfo, error)
 
 ```
 searchKey: os.rawConn
+tags: [private]
 ```
 
 ```Go
@@ -2043,6 +2021,7 @@ rawConn implements syscall.RawConn.
 
 ```
 searchKey: os.newRawConn
+tags: [private]
 ```
 
 ```Go
@@ -2053,6 +2032,7 @@ func newRawConn(file *File) (*rawConn, error)
 
 ```
 searchKey: os.rawConn.Control
+tags: [private]
 ```
 
 ```Go
@@ -2063,6 +2043,7 @@ func (c *rawConn) Control(f func(uintptr)) error
 
 ```
 searchKey: os.rawConn.Read
+tags: [private]
 ```
 
 ```Go
@@ -2073,6 +2054,7 @@ func (c *rawConn) Read(f func(uintptr) bool) error
 
 ```
 searchKey: os.rawConn.Write
+tags: [private]
 ```
 
 ```Go
@@ -2083,7 +2065,6 @@ func (c *rawConn) Write(f func(uintptr) bool) error
 
 ```
 searchKey: os.File
-tags: [exported]
 ```
 
 ```Go
@@ -2098,7 +2079,6 @@ File represents an open file descriptor.
 
 ```
 searchKey: os.Open
-tags: [exported]
 ```
 
 ```Go
@@ -2111,7 +2091,6 @@ Open opens the named file for reading. If successful, methods on the returned fi
 
 ```
 searchKey: os.Create
-tags: [exported]
 ```
 
 ```Go
@@ -2124,7 +2103,6 @@ Create creates or truncates the named file. If the file already exists, it is tr
 
 ```
 searchKey: os.OpenFile
-tags: [exported]
 ```
 
 ```Go
@@ -2137,7 +2115,6 @@ OpenFile is the generalized open call; most users will use Open or Create instea
 
 ```
 searchKey: os.NewFile
-tags: [exported]
 ```
 
 ```Go
@@ -2152,6 +2129,7 @@ After passing it to NewFile, fd may become invalid under the same conditions des
 
 ```
 searchKey: os.newFile
+tags: [private]
 ```
 
 ```Go
@@ -2164,6 +2142,7 @@ newFile is like NewFile, but if called from OpenFile or Pipe (as passed in the k
 
 ```
 searchKey: os.openFileNolog
+tags: [private]
 ```
 
 ```Go
@@ -2172,23 +2151,11 @@ func openFileNolog(name string, flag int, perm FileMode) (*File, error)
 
 openFileNolog is the Unix implementation of OpenFile. Changes here should be reflected in openFdAt, if relevant. 
 
-#### <a id="Pipe" href="#Pipe">func Pipe() (r *File, w *File, err error)</a>
-
-```
-searchKey: os.Pipe
-tags: [exported]
-```
-
-```Go
-func Pipe() (r *File, w *File, err error)
-```
-
-Pipe returns a connected pair of Files; reads from r return bytes written to w. It returns the files and an error, if any. 
-
 #### <a id="openFdAt" href="#openFdAt">func openFdAt(dirfd int, name string) (*File, error)</a>
 
 ```
 searchKey: os.openFdAt
+tags: [private]
 ```
 
 ```Go
@@ -2201,7 +2168,6 @@ openFdAt opens path relative to the directory in fd. Other than that this should
 
 ```
 searchKey: os.CreateTemp
-tags: [exported]
 ```
 
 ```Go
@@ -2214,7 +2180,6 @@ CreateTemp creates a new temporary file in the directory dir, opens the file for
 
 ```
 searchKey: os.File.Readdir
-tags: [exported]
 ```
 
 ```Go
@@ -2233,7 +2198,6 @@ Most clients are better served by the more efficient ReadDir method.
 
 ```
 searchKey: os.File.Readdirnames
-tags: [exported]
 ```
 
 ```Go
@@ -2250,7 +2214,6 @@ If n <= 0, Readdirnames returns all the names from the directory in a single sli
 
 ```
 searchKey: os.File.ReadDir
-tags: [exported]
 ```
 
 ```Go
@@ -2267,6 +2230,7 @@ If n <= 0, ReadDir returns all the DirEntry records remaining in the directory. 
 
 ```
 searchKey: os.File.readdir
+tags: [private]
 ```
 
 ```Go
@@ -2277,7 +2241,6 @@ func (f *File) readdir(n int, mode readdirMode) (names []string, dirents []DirEn
 
 ```
 searchKey: os.File.Name
-tags: [exported]
 ```
 
 ```Go
@@ -2290,7 +2253,6 @@ Name returns the name of the file as presented to Open.
 
 ```
 searchKey: os.File.Read
-tags: [exported]
 ```
 
 ```Go
@@ -2303,7 +2265,6 @@ Read reads up to len(b) bytes from the File. It returns the number of bytes read
 
 ```
 searchKey: os.File.ReadAt
-tags: [exported]
 ```
 
 ```Go
@@ -2316,7 +2277,6 @@ ReadAt reads len(b) bytes from the File starting at byte offset off. It returns 
 
 ```
 searchKey: os.File.ReadFrom
-tags: [exported]
 ```
 
 ```Go
@@ -2329,7 +2289,6 @@ ReadFrom implements io.ReaderFrom.
 
 ```
 searchKey: os.File.Write
-tags: [exported]
 ```
 
 ```Go
@@ -2342,7 +2301,6 @@ Write writes len(b) bytes to the File. It returns the number of bytes written an
 
 ```
 searchKey: os.File.WriteAt
-tags: [exported]
 ```
 
 ```Go
@@ -2357,7 +2315,6 @@ If file was opened with the O_APPEND flag, WriteAt returns an error.
 
 ```
 searchKey: os.File.Seek
-tags: [exported]
 ```
 
 ```Go
@@ -2372,7 +2329,6 @@ If f is a directory, the behavior of Seek varies by operating system; you can se
 
 ```
 searchKey: os.File.WriteString
-tags: [exported]
 ```
 
 ```Go
@@ -2385,6 +2341,7 @@ WriteString is like Write, but writes the contents of string s rather than a sli
 
 ```
 searchKey: os.File.wrapErr
+tags: [private]
 ```
 
 ```Go
@@ -2397,7 +2354,6 @@ wrapErr wraps an error that occurred during an operation on an open file. It pas
 
 ```
 searchKey: os.File.Chmod
-tags: [exported]
 ```
 
 ```Go
@@ -2410,7 +2366,6 @@ Chmod changes the mode of the file to mode. If there is an error, it will be of 
 
 ```
 searchKey: os.File.SetDeadline
-tags: [exported]
 ```
 
 ```Go
@@ -2433,7 +2388,6 @@ A zero value for t means I/O operations will not time out.
 
 ```
 searchKey: os.File.SetReadDeadline
-tags: [exported]
 ```
 
 ```Go
@@ -2446,7 +2400,6 @@ SetReadDeadline sets the deadline for future Read calls and any currently-blocke
 
 ```
 searchKey: os.File.SetWriteDeadline
-tags: [exported]
 ```
 
 ```Go
@@ -2459,7 +2412,6 @@ SetWriteDeadline sets the deadline for any future Write calls and any currently-
 
 ```
 searchKey: os.File.SyscallConn
-tags: [exported]
 ```
 
 ```Go
@@ -2472,7 +2424,6 @@ SyscallConn returns a raw file. This implements the syscall.Conn interface.
 
 ```
 searchKey: os.File.Close
-tags: [exported]
 ```
 
 ```Go
@@ -2485,6 +2436,7 @@ Close closes the File, rendering it unusable for I/O. On files that support SetD
 
 ```
 searchKey: os.File.read
+tags: [private]
 ```
 
 ```Go
@@ -2497,6 +2449,7 @@ read reads up to len(b) bytes from the File. It returns the number of bytes read
 
 ```
 searchKey: os.File.pread
+tags: [private]
 ```
 
 ```Go
@@ -2509,6 +2462,7 @@ pread reads len(b) bytes from the File starting at byte offset off. It returns t
 
 ```
 searchKey: os.File.write
+tags: [private]
 ```
 
 ```Go
@@ -2521,6 +2475,7 @@ write writes len(b) bytes to the File. It returns the number of bytes written an
 
 ```
 searchKey: os.File.pwrite
+tags: [private]
 ```
 
 ```Go
@@ -2533,6 +2488,7 @@ pwrite writes len(b) bytes to the File starting at byte offset off. It returns t
 
 ```
 searchKey: os.File.chmod
+tags: [private]
 ```
 
 ```Go
@@ -2545,7 +2501,6 @@ See docs in file.go:(*File).Chmod.
 
 ```
 searchKey: os.File.Chown
-tags: [exported]
 ```
 
 ```Go
@@ -2560,7 +2515,6 @@ On Windows, it always returns the syscall.EWINDOWS error, wrapped in *PathError.
 
 ```
 searchKey: os.File.Truncate
-tags: [exported]
 ```
 
 ```Go
@@ -2573,7 +2527,6 @@ Truncate changes the size of the file. It does not change the I/O offset. If the
 
 ```
 searchKey: os.File.Sync
-tags: [exported]
 ```
 
 ```Go
@@ -2586,7 +2539,6 @@ Sync commits the current contents of the file to stable storage. Typically, this
 
 ```
 searchKey: os.File.Chdir
-tags: [exported]
 ```
 
 ```Go
@@ -2599,6 +2551,7 @@ Chdir changes the current working directory to the file, which must be a directo
 
 ```
 searchKey: os.File.setDeadline
+tags: [private]
 ```
 
 ```Go
@@ -2611,6 +2564,7 @@ setDeadline sets the read and write deadline.
 
 ```
 searchKey: os.File.setReadDeadline
+tags: [private]
 ```
 
 ```Go
@@ -2623,6 +2577,7 @@ setReadDeadline sets the read deadline.
 
 ```
 searchKey: os.File.setWriteDeadline
+tags: [private]
 ```
 
 ```Go
@@ -2635,6 +2590,7 @@ setWriteDeadline sets the write deadline.
 
 ```
 searchKey: os.File.checkValid
+tags: [private]
 ```
 
 ```Go
@@ -2647,7 +2603,6 @@ checkValid checks whether f is valid for use. If not, it returns an appropriate 
 
 ```
 searchKey: os.File.Fd
-tags: [exported]
 ```
 
 ```Go
@@ -2662,6 +2617,7 @@ As an alternative, see the f.SyscallConn method.
 
 ```
 searchKey: os.File.seek
+tags: [private]
 ```
 
 ```Go
@@ -2674,6 +2630,7 @@ seek sets the offset for the next Read or Write on file to offset, interpreted a
 
 ```
 searchKey: os.File.readFrom
+tags: [private]
 ```
 
 ```Go
@@ -2684,7 +2641,6 @@ func (f *File) readFrom(r io.Reader) (n int64, handled bool, err error)
 
 ```
 searchKey: os.File.Stat
-tags: [exported]
 ```
 
 ```Go
@@ -2697,7 +2653,6 @@ Stat returns the FileInfo structure describing file. If there is an error, it wi
 
 ```
 searchKey: os.FileInfo
-tags: [exported]
 ```
 
 ```Go
@@ -2710,7 +2665,6 @@ A FileInfo describes a file and is returned by Stat and Lstat.
 
 ```
 searchKey: os.Stat
-tags: [exported]
 ```
 
 ```Go
@@ -2723,7 +2677,6 @@ Stat returns a FileInfo describing the named file. If there is an error, it will
 
 ```
 searchKey: os.Lstat
-tags: [exported]
 ```
 
 ```Go
@@ -2736,6 +2689,7 @@ Lstat returns a FileInfo describing the named file. If the file is a symbolic li
 
 ```
 searchKey: os.statNolog
+tags: [private]
 ```
 
 ```Go
@@ -2748,6 +2702,7 @@ statNolog stats a file with no test logging.
 
 ```
 searchKey: os.lstatNolog
+tags: [private]
 ```
 
 ```Go
@@ -2760,7 +2715,6 @@ lstatNolog lstats a file with no test logging.
 
 ```
 searchKey: os.FileMode
-tags: [exported]
 ```
 
 ```Go
@@ -2773,6 +2727,7 @@ A FileMode represents a file's mode and permission bits. The bits have the same 
 
 ```
 searchKey: os.dtToType
+tags: [private]
 ```
 
 ```Go
@@ -2783,6 +2738,7 @@ func dtToType(typ uint8) FileMode
 
 ```
 searchKey: os.fileStat
+tags: [private]
 ```
 
 ```Go
@@ -2801,6 +2757,7 @@ A fileStat is the implementation of FileInfo returned by Stat and Lstat.
 
 ```
 searchKey: os.fileStat.Name
+tags: [private]
 ```
 
 ```Go
@@ -2811,6 +2768,7 @@ func (fs *fileStat) Name() string
 
 ```
 searchKey: os.fileStat.IsDir
+tags: [private]
 ```
 
 ```Go
@@ -2821,6 +2779,7 @@ func (fs *fileStat) IsDir() bool
 
 ```
 searchKey: os.fileStat.Size
+tags: [private]
 ```
 
 ```Go
@@ -2831,6 +2790,7 @@ func (fs *fileStat) Size() int64
 
 ```
 searchKey: os.fileStat.Mode
+tags: [private]
 ```
 
 ```Go
@@ -2841,6 +2801,7 @@ func (fs *fileStat) Mode() FileMode
 
 ```
 searchKey: os.fileStat.ModTime
+tags: [private]
 ```
 
 ```Go
@@ -2851,6 +2812,7 @@ func (fs *fileStat) ModTime() time.Time
 
 ```
 searchKey: os.fileStat.Sys
+tags: [private]
 ```
 
 ```Go
@@ -2859,15 +2821,10 @@ func (fs *fileStat) Sys() interface{}
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ReadDir" href="#ReadDir">func ReadDir(name string) ([]DirEntry, error)</a>
 
 ```
 searchKey: os.ReadDir
-tags: [exported]
 ```
 
 ```Go
@@ -2880,6 +2837,7 @@ ReadDir reads the named directory, returning all its directory entries sorted by
 
 ```
 searchKey: os.closedir
+tags: [private]
 ```
 
 ```Go
@@ -2890,7 +2848,6 @@ func closedir(dir uintptr) (err error)
 
 ```
 searchKey: os.Expand
-tags: [exported]
 ```
 
 ```Go
@@ -2903,7 +2860,6 @@ Expand replaces ${var} or $var in the string based on the mapping function. For 
 
 ```
 searchKey: os.ExpandEnv
-tags: [exported]
 ```
 
 ```Go
@@ -2916,6 +2872,7 @@ ExpandEnv replaces ${var} or $var in the string according to the values of the c
 
 ```
 searchKey: os.isShellSpecialVar
+tags: [private]
 ```
 
 ```Go
@@ -2928,6 +2885,7 @@ isShellSpecialVar reports whether the character identifies a special shell varia
 
 ```
 searchKey: os.isAlphaNum
+tags: [private]
 ```
 
 ```Go
@@ -2940,6 +2898,7 @@ isAlphaNum reports whether the byte is an ASCII letter, number, or underscore
 
 ```
 searchKey: os.getShellName
+tags: [private]
 ```
 
 ```Go
@@ -2952,7 +2911,6 @@ getShellName returns the name that begins the string and the number of bytes con
 
 ```
 searchKey: os.Getenv
-tags: [exported]
 ```
 
 ```Go
@@ -2965,7 +2923,6 @@ Getenv retrieves the value of the environment variable named by the key. It retu
 
 ```
 searchKey: os.LookupEnv
-tags: [exported]
 ```
 
 ```Go
@@ -2978,7 +2935,6 @@ LookupEnv retrieves the value of the environment variable named by the key. If t
 
 ```
 searchKey: os.Setenv
-tags: [exported]
 ```
 
 ```Go
@@ -2991,7 +2947,6 @@ Setenv sets the value of the environment variable named by the key. It returns a
 
 ```
 searchKey: os.Unsetenv
-tags: [exported]
 ```
 
 ```Go
@@ -3004,7 +2959,6 @@ Unsetenv unsets a single environment variable.
 
 ```
 searchKey: os.Clearenv
-tags: [exported]
 ```
 
 ```Go
@@ -3017,7 +2971,6 @@ Clearenv deletes all environment variables.
 
 ```
 searchKey: os.Environ
-tags: [exported]
 ```
 
 ```Go
@@ -3030,6 +2983,7 @@ Environ returns a copy of strings representing the environment, in the form "key
 
 ```
 searchKey: os.errClosed
+tags: [private]
 ```
 
 ```Go
@@ -3040,6 +2994,7 @@ func errClosed() error
 
 ```
 searchKey: os.errNoDeadline
+tags: [private]
 ```
 
 ```Go
@@ -3050,6 +3005,7 @@ func errNoDeadline() error
 
 ```
 searchKey: os.errDeadlineExceeded
+tags: [private]
 ```
 
 ```Go
@@ -3062,7 +3018,6 @@ errDeadlineExceeded returns the value for os.ErrDeadlineExceeded. This error com
 
 ```
 searchKey: os.NewSyscallError
-tags: [exported]
 ```
 
 ```Go
@@ -3075,7 +3030,6 @@ NewSyscallError returns, as an error, a new SyscallError with the given system c
 
 ```
 searchKey: os.IsExist
-tags: [exported]
 ```
 
 ```Go
@@ -3090,7 +3044,6 @@ This function predates errors.Is. It only supports errors returned by the os pac
 
 ```
 searchKey: os.IsNotExist
-tags: [exported]
 ```
 
 ```Go
@@ -3105,7 +3058,6 @@ This function predates errors.Is. It only supports errors returned by the os pac
 
 ```
 searchKey: os.IsPermission
-tags: [exported]
 ```
 
 ```Go
@@ -3120,7 +3072,6 @@ This function predates errors.Is. It only supports errors returned by the os pac
 
 ```
 searchKey: os.IsTimeout
-tags: [exported]
 ```
 
 ```Go
@@ -3135,6 +3086,7 @@ This function predates errors.Is, and the notion of whether an error indicates a
 
 ```
 searchKey: os.underlyingErrorIs
+tags: [private]
 ```
 
 ```Go
@@ -3145,6 +3097,7 @@ func underlyingErrorIs(err, target error) bool
 
 ```
 searchKey: os.underlyingError
+tags: [private]
 ```
 
 ```Go
@@ -3157,6 +3110,7 @@ underlyingError returns the underlying error for known os error types.
 
 ```
 searchKey: os.wrapSyscallError
+tags: [private]
 ```
 
 ```Go
@@ -3169,7 +3123,6 @@ wrapSyscallError takes an error and a syscall name. If the error is a syscall.Er
 
 ```
 searchKey: os.Getpid
-tags: [exported]
 ```
 
 ```Go
@@ -3182,7 +3135,6 @@ Getpid returns the process id of the caller.
 
 ```
 searchKey: os.Getppid
-tags: [exported]
 ```
 
 ```Go
@@ -3195,7 +3147,6 @@ Getppid returns the process id of the caller's parent.
 
 ```
 searchKey: os.Executable
-tags: [exported]
 ```
 
 ```Go
@@ -3212,6 +3163,7 @@ The main use case is finding resources located relative to an executable.
 
 ```
 searchKey: os.executable
+tags: [private]
 ```
 
 ```Go
@@ -3222,6 +3174,7 @@ func executable() (string, error)
 
 ```
 searchKey: os.genericReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -3232,7 +3185,6 @@ func genericReadFrom(f *File, r io.Reader) (int64, error)
 
 ```
 searchKey: os.Mkdir
-tags: [exported]
 ```
 
 ```Go
@@ -3245,6 +3197,7 @@ Mkdir creates a new directory with the specified name and permission bits (befor
 
 ```
 searchKey: os.setStickyBit
+tags: [private]
 ```
 
 ```Go
@@ -3257,7 +3210,6 @@ setStickyBit adds ModeSticky to the permission bits of path, non atomic.
 
 ```
 searchKey: os.Chdir
-tags: [exported]
 ```
 
 ```Go
@@ -3270,7 +3222,6 @@ Chdir changes the current working directory to the named directory. If there is 
 
 ```
 searchKey: os.Rename
-tags: [exported]
 ```
 
 ```Go
@@ -3283,6 +3234,7 @@ Rename renames (moves) oldpath to newpath. If newpath already exists and is not 
 
 ```
 searchKey: os.fixCount
+tags: [private]
 ```
 
 ```Go
@@ -3295,7 +3247,6 @@ Many functions in package syscall return a count of -1 instead of 0. Using fixCo
 
 ```
 searchKey: os.TempDir
-tags: [exported]
 ```
 
 ```Go
@@ -3312,7 +3263,6 @@ The directory is neither guaranteed to exist nor have accessible permissions.
 
 ```
 searchKey: os.UserCacheDir
-tags: [exported]
 ```
 
 ```Go
@@ -3329,7 +3279,6 @@ If the location cannot be determined (for example, $HOME is not defined), then i
 
 ```
 searchKey: os.UserConfigDir
-tags: [exported]
 ```
 
 ```Go
@@ -3346,7 +3295,6 @@ If the location cannot be determined (for example, $HOME is not defined), then i
 
 ```
 searchKey: os.UserHomeDir
-tags: [exported]
 ```
 
 ```Go
@@ -3361,7 +3309,6 @@ On Unix, including macOS, it returns the $HOME environment variable. On Windows,
 
 ```
 searchKey: os.Chmod
-tags: [exported]
 ```
 
 ```Go
@@ -3382,6 +3329,7 @@ On Plan 9, the mode's permission bits, ModeAppend, ModeExclusive, and ModeTempor
 
 ```
 searchKey: os.isWindowsNulName
+tags: [private]
 ```
 
 ```Go
@@ -3394,7 +3342,6 @@ isWindowsNulName reports whether name is os.DevNull ('NUL') on Windows. True is 
 
 ```
 searchKey: os.DirFS
-tags: [exported]
 ```
 
 ```Go
@@ -3409,6 +3356,7 @@ Note that DirFS("/prefix") only guarantees that the Open calls it makes to the o
 
 ```
 searchKey: os.containsAny
+tags: [private]
 ```
 
 ```Go
@@ -3419,7 +3367,6 @@ func containsAny(s, chars string) bool
 
 ```
 searchKey: os.ReadFile
-tags: [exported]
 ```
 
 ```Go
@@ -3432,7 +3379,6 @@ ReadFile reads the named file and returns the contents. A successful call return
 
 ```
 searchKey: os.WriteFile
-tags: [exported]
 ```
 
 ```Go
@@ -3445,6 +3391,7 @@ WriteFile writes data to the named file, creating it if necessary. If the file d
 
 ```
 searchKey: os.sigpipe
+tags: [private]
 ```
 
 ```Go
@@ -3455,6 +3402,7 @@ func sigpipe()
 
 ```
 searchKey: os.syscallMode
+tags: [private]
 ```
 
 ```Go
@@ -3467,6 +3415,7 @@ syscallMode returns the syscall-specific mode bits from Go's portable mode bits.
 
 ```
 searchKey: os.chmod
+tags: [private]
 ```
 
 ```Go
@@ -3479,7 +3428,6 @@ See docs in file.go:Chmod.
 
 ```
 searchKey: os.Chown
-tags: [exported]
 ```
 
 ```Go
@@ -3494,7 +3442,6 @@ On Windows or Plan 9, Chown always returns the syscall.EWINDOWS or EPLAN9 error,
 
 ```
 searchKey: os.Lchown
-tags: [exported]
 ```
 
 ```Go
@@ -3509,7 +3456,6 @@ On Windows, it always returns the syscall.EWINDOWS error, wrapped in *PathError.
 
 ```
 searchKey: os.Chtimes
-tags: [exported]
 ```
 
 ```Go
@@ -3524,6 +3470,7 @@ The underlying filesystem may truncate or round the values to a less precise tim
 
 ```
 searchKey: os.ignoringEINTR
+tags: [private]
 ```
 
 ```Go
@@ -3536,6 +3483,7 @@ ignoringEINTR makes a function call and repeats it if it returns an EINTR error.
 
 ```
 searchKey: os.fixLongPath
+tags: [private]
 ```
 
 ```Go
@@ -3548,6 +3496,7 @@ fixLongPath is a noop on non-Windows platforms.
 
 ```
 searchKey: os.rename
+tags: [private]
 ```
 
 ```Go
@@ -3558,6 +3507,7 @@ func rename(oldname, newname string) error
 
 ```
 searchKey: os.epipecheck
+tags: [private]
 ```
 
 ```Go
@@ -3570,7 +3520,6 @@ epipecheck raises SIGPIPE if we get an EPIPE error on standard output or standar
 
 ```
 searchKey: os.Truncate
-tags: [exported]
 ```
 
 ```Go
@@ -3583,7 +3532,6 @@ Truncate changes the size of the named file. If the file is a symbolic link, it 
 
 ```
 searchKey: os.Remove
-tags: [exported]
 ```
 
 ```Go
@@ -3596,6 +3544,7 @@ Remove removes the named file or (empty) directory. If there is an error, it wil
 
 ```
 searchKey: os.tempDir
+tags: [private]
 ```
 
 ```Go
@@ -3606,7 +3555,6 @@ func tempDir() string
 
 ```
 searchKey: os.Link
-tags: [exported]
 ```
 
 ```Go
@@ -3619,7 +3567,6 @@ Link creates newname as a hard link to the oldname file. If there is an error, i
 
 ```
 searchKey: os.Symlink
-tags: [exported]
 ```
 
 ```Go
@@ -3632,7 +3579,6 @@ Symlink creates newname as a symbolic link to oldname. On Windows, a symlink to 
 
 ```
 searchKey: os.Readlink
-tags: [exported]
 ```
 
 ```Go
@@ -3645,7 +3591,6 @@ Readlink returns the destination of the named symbolic link. If there is an erro
 
 ```
 searchKey: os.Getwd
-tags: [exported]
 ```
 
 ```Go
@@ -3658,7 +3603,6 @@ Getwd returns a rooted path name corresponding to the current directory. If the 
 
 ```
 searchKey: os.MkdirAll
-tags: [exported]
 ```
 
 ```Go
@@ -3671,7 +3615,6 @@ MkdirAll creates a directory named path, along with any necessary parents, and r
 
 ```
 searchKey: os.RemoveAll
-tags: [exported]
 ```
 
 ```Go
@@ -3684,6 +3627,7 @@ RemoveAll removes path and any children it contains. It removes everything it ca
 
 ```
 searchKey: os.endsWithDot
+tags: [private]
 ```
 
 ```Go
@@ -3696,7 +3640,6 @@ endsWithDot reports whether the final component of path is ".".
 
 ```
 searchKey: os.IsPathSeparator
-tags: [exported]
 ```
 
 ```Go
@@ -3709,6 +3652,7 @@ IsPathSeparator reports whether c is a directory separator character.
 
 ```
 searchKey: os.basename
+tags: [private]
 ```
 
 ```Go
@@ -3721,6 +3665,7 @@ basename removes trailing slashes and the leading directory name from path name.
 
 ```
 searchKey: os.splitPath
+tags: [private]
 ```
 
 ```Go
@@ -3733,16 +3678,30 @@ splitPath returns the base name and parent directory.
 
 ```
 searchKey: os.fixRootDirectory
+tags: [private]
 ```
 
 ```Go
 func fixRootDirectory(p string) string
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="Pipe" href="#Pipe">func Pipe() (r *File, w *File, err error)</a>
+
+```
+searchKey: os.Pipe
+```
+
+```Go
+func Pipe() (r *File, w *File, err error)
+```
+
+Pipe returns a connected pair of Files; reads from r return bytes written to w. It returns the files and an error, if any. 
+
+### <a id="init.proc.go" href="#init.proc.go">func init()</a>
 
 ```
 searchKey: os.init
+tags: [private]
 ```
 
 ```Go
@@ -3753,6 +3712,7 @@ func init()
 
 ```
 searchKey: os.runtime_args
+tags: [private]
 ```
 
 ```Go
@@ -3763,7 +3723,6 @@ func runtime_args() []string
 
 ```
 searchKey: os.Getuid
-tags: [exported]
 ```
 
 ```Go
@@ -3778,7 +3737,6 @@ On Windows, it returns -1.
 
 ```
 searchKey: os.Geteuid
-tags: [exported]
 ```
 
 ```Go
@@ -3793,7 +3751,6 @@ On Windows, it returns -1.
 
 ```
 searchKey: os.Getgid
-tags: [exported]
 ```
 
 ```Go
@@ -3808,7 +3765,6 @@ On Windows, it returns -1.
 
 ```
 searchKey: os.Getegid
-tags: [exported]
 ```
 
 ```Go
@@ -3823,7 +3779,6 @@ On Windows, it returns -1.
 
 ```
 searchKey: os.Getgroups
-tags: [exported]
 ```
 
 ```Go
@@ -3838,7 +3793,6 @@ On Windows, it returns syscall.EWINDOWS. See the os/user package for a possible 
 
 ```
 searchKey: os.Exit
-tags: [exported]
 ```
 
 ```Go
@@ -3853,6 +3807,7 @@ For portability, the status code should be in the range [0, 125].
 
 ```
 searchKey: os.runtime_beforeExit
+tags: [private]
 ```
 
 ```Go
@@ -3863,6 +3818,7 @@ func runtime_beforeExit()
 
 ```
 searchKey: os.removeAll
+tags: [private]
 ```
 
 ```Go
@@ -3873,6 +3829,7 @@ func removeAll(path string) error
 
 ```
 searchKey: os.removeAllFrom
+tags: [private]
 ```
 
 ```Go
@@ -3883,6 +3840,7 @@ func removeAllFrom(parent *File, base string) error
 
 ```
 searchKey: os.fillFileStatFromSys
+tags: [private]
 ```
 
 ```Go
@@ -3893,6 +3851,7 @@ func fillFileStatFromSys(fs *fileStat, name string)
 
 ```
 searchKey: os.timespecToTime
+tags: [private]
 ```
 
 ```Go
@@ -3903,6 +3862,7 @@ func timespecToTime(ts syscall.Timespec) time.Time
 
 ```
 searchKey: os.atime
+tags: [private]
 ```
 
 ```Go
@@ -3915,6 +3875,7 @@ For testing.
 
 ```
 searchKey: os.itox
+tags: [private]
 ```
 
 ```Go
@@ -3927,6 +3888,7 @@ itox converts val (an int) to a hexdecimal string.
 
 ```
 searchKey: os.uitox
+tags: [private]
 ```
 
 ```Go
@@ -3939,7 +3901,6 @@ uitox converts val (a uint) to a hexdecimal string.
 
 ```
 searchKey: os.Hostname
-tags: [exported]
 ```
 
 ```Go
@@ -3952,6 +3913,7 @@ Hostname returns the host name reported by the kernel.
 
 ```
 searchKey: os.hostname
+tags: [private]
 ```
 
 ```Go
@@ -3962,6 +3924,7 @@ func hostname() (name string, err error)
 
 ```
 searchKey: os.fastrand
+tags: [private]
 ```
 
 ```Go
@@ -3974,6 +3937,7 @@ fastrand provided by runtime. We generate random temporary file names so that th
 
 ```
 searchKey: os.nextRandom
+tags: [private]
 ```
 
 ```Go
@@ -3984,6 +3948,7 @@ func nextRandom() string
 
 ```
 searchKey: os.prefixAndSuffix
+tags: [private]
 ```
 
 ```Go
@@ -3996,7 +3961,6 @@ prefixAndSuffix splits pattern by the last wildcard "*", if applicable, returnin
 
 ```
 searchKey: os.MkdirTemp
-tags: [exported]
 ```
 
 ```Go
@@ -4009,6 +3973,7 @@ MkdirTemp creates a new temporary directory in the directory dir and returns the
 
 ```
 searchKey: os.joinPath
+tags: [private]
 ```
 
 ```Go
@@ -4019,6 +3984,7 @@ func joinPath(dir, name string) string
 
 ```
 searchKey: os.lastIndex
+tags: [private]
 ```
 
 ```Go
@@ -4031,7 +3997,6 @@ LastIndexByte from the strings package.
 
 ```
 searchKey: os.Getpagesize
-tags: [exported]
 ```
 
 ```Go
@@ -4044,7 +4009,6 @@ Getpagesize returns the underlying system's memory page size.
 
 ```
 searchKey: os.SameFile
-tags: [exported]
 ```
 
 ```Go
@@ -4057,6 +4021,7 @@ SameFile reports whether fi1 and fi2 describe the same file. For example, on Uni
 
 ```
 searchKey: os.sameFile
+tags: [private]
 ```
 
 ```Go

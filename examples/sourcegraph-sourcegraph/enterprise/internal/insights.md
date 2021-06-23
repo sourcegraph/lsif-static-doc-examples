@@ -17,11 +17,14 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IsEnabled" href="#IsEnabled">func IsEnabled() bool</a>
 
 ```
 searchKey: insights.IsEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -34,7 +37,6 @@ IsEnabled tells if code insights are enabled or not.
 
 ```
 searchKey: insights.Init
-tags: [exported]
 ```
 
 ```Go
@@ -47,7 +49,6 @@ Init initializes the given enterpriseServices to include the required resolvers 
 
 ```
 searchKey: insights.InitializeCodeInsightsDB
-tags: [exported]
 ```
 
 ```Go

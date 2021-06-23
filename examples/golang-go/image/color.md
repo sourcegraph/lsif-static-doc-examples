@@ -92,15 +92,10 @@ Package color implements a basic color library.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="RGBAModel" href="#RGBAModel">var RGBAModel</a>
 
 ```
 searchKey: color.RGBAModel
-tags: [exported]
 ```
 
 ```Go
@@ -113,7 +108,6 @@ Models for the standard color types.
 
 ```
 searchKey: color.RGBA64Model
-tags: [exported]
 ```
 
 ```Go
@@ -126,7 +120,6 @@ Models for the standard color types.
 
 ```
 searchKey: color.NRGBAModel
-tags: [exported]
 ```
 
 ```Go
@@ -139,7 +132,6 @@ Models for the standard color types.
 
 ```
 searchKey: color.NRGBA64Model
-tags: [exported]
 ```
 
 ```Go
@@ -152,7 +144,6 @@ Models for the standard color types.
 
 ```
 searchKey: color.AlphaModel
-tags: [exported]
 ```
 
 ```Go
@@ -165,7 +156,6 @@ Models for the standard color types.
 
 ```
 searchKey: color.Alpha16Model
-tags: [exported]
 ```
 
 ```Go
@@ -178,7 +168,6 @@ Models for the standard color types.
 
 ```
 searchKey: color.GrayModel
-tags: [exported]
 ```
 
 ```Go
@@ -191,7 +180,6 @@ Models for the standard color types.
 
 ```
 searchKey: color.Gray16Model
-tags: [exported]
 ```
 
 ```Go
@@ -204,7 +192,6 @@ Models for the standard color types.
 
 ```
 searchKey: color.Black
-tags: [exported]
 ```
 
 ```Go
@@ -217,7 +204,6 @@ Standard colors.
 
 ```
 searchKey: color.White
-tags: [exported]
 ```
 
 ```Go
@@ -230,7 +216,6 @@ Standard colors.
 
 ```
 searchKey: color.Transparent
-tags: [exported]
 ```
 
 ```Go
@@ -243,7 +228,6 @@ Standard colors.
 
 ```
 searchKey: color.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -256,7 +240,6 @@ Standard colors.
 
 ```
 searchKey: color.YCbCrModel
-tags: [exported]
 ```
 
 ```Go
@@ -269,7 +252,6 @@ YCbCrModel is the Model for Y'CbCr colors.
 
 ```
 searchKey: color.NYCbCrAModel
-tags: [exported]
 ```
 
 ```Go
@@ -282,7 +264,6 @@ NYCbCrAModel is the Model for non-alpha-premultiplied Y'CbCr-with-alpha colors.
 
 ```
 searchKey: color.CMYKModel
-tags: [exported]
 ```
 
 ```Go
@@ -295,6 +276,7 @@ CMYKModel is the Model for CMYK colors.
 
 ```
 searchKey: color.sink8
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +287,7 @@ var sink8 uint8
 
 ```
 searchKey: color.sink32
+tags: [private]
 ```
 
 ```Go
@@ -313,15 +296,10 @@ var sink32 uint32
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Color" href="#Color">type Color interface</a>
 
 ```
 searchKey: color.Color
-tags: [exported]
 ```
 
 ```Go
@@ -343,6 +321,7 @@ Color can convert itself to alpha-premultiplied 16-bits per channel RGBA. The co
 
 ```
 searchKey: color.rgbaModel
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +332,7 @@ func rgbaModel(c Color) Color
 
 ```
 searchKey: color.rgba64Model
+tags: [private]
 ```
 
 ```Go
@@ -363,6 +343,7 @@ func rgba64Model(c Color) Color
 
 ```
 searchKey: color.nrgbaModel
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +354,7 @@ func nrgbaModel(c Color) Color
 
 ```
 searchKey: color.nrgba64Model
+tags: [private]
 ```
 
 ```Go
@@ -383,6 +365,7 @@ func nrgba64Model(c Color) Color
 
 ```
 searchKey: color.alphaModel
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +376,7 @@ func alphaModel(c Color) Color
 
 ```
 searchKey: color.alpha16Model
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +387,7 @@ func alpha16Model(c Color) Color
 
 ```
 searchKey: color.grayModel
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +398,7 @@ func grayModel(c Color) Color
 
 ```
 searchKey: color.gray16Model
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +409,7 @@ func gray16Model(c Color) Color
 
 ```
 searchKey: color.yCbCrModel
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +420,7 @@ func yCbCrModel(c Color) Color
 
 ```
 searchKey: color.nYCbCrAModel
+tags: [private]
 ```
 
 ```Go
@@ -443,6 +431,7 @@ func nYCbCrAModel(c Color) Color
 
 ```
 searchKey: color.cmykModel
+tags: [private]
 ```
 
 ```Go
@@ -453,7 +442,6 @@ func cmykModel(c Color) Color
 
 ```
 searchKey: color.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -470,7 +458,6 @@ An alpha-premultiplied color component C has been scaled by alpha (A), so has va
 
 ```
 searchKey: color.RGBA.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -481,7 +468,6 @@ func (c RGBA) RGBA() (r, g, b, a uint32)
 
 ```
 searchKey: color.RGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -498,7 +484,6 @@ An alpha-premultiplied color component C has been scaled by alpha (A), so has va
 
 ```
 searchKey: color.RGBA64.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -509,7 +494,6 @@ func (c RGBA64) RGBA() (r, g, b, a uint32)
 
 ```
 searchKey: color.NRGBA
-tags: [exported]
 ```
 
 ```Go
@@ -524,7 +508,6 @@ NRGBA represents a non-alpha-premultiplied 32-bit color.
 
 ```
 searchKey: color.NRGBA.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -535,7 +518,6 @@ func (c NRGBA) RGBA() (r, g, b, a uint32)
 
 ```
 searchKey: color.NRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -550,7 +532,6 @@ NRGBA64 represents a non-alpha-premultiplied 64-bit color, having 16 bits for ea
 
 ```
 searchKey: color.NRGBA64.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -561,7 +542,6 @@ func (c NRGBA64) RGBA() (r, g, b, a uint32)
 
 ```
 searchKey: color.Alpha
-tags: [exported]
 ```
 
 ```Go
@@ -576,7 +556,6 @@ Alpha represents an 8-bit alpha color.
 
 ```
 searchKey: color.Alpha.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -587,7 +566,6 @@ func (c Alpha) RGBA() (r, g, b, a uint32)
 
 ```
 searchKey: color.Alpha16
-tags: [exported]
 ```
 
 ```Go
@@ -602,7 +580,6 @@ Alpha16 represents a 16-bit alpha color.
 
 ```
 searchKey: color.Alpha16.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -613,7 +590,6 @@ func (c Alpha16) RGBA() (r, g, b, a uint32)
 
 ```
 searchKey: color.Gray
-tags: [exported]
 ```
 
 ```Go
@@ -628,7 +604,6 @@ Gray represents an 8-bit grayscale color.
 
 ```
 searchKey: color.Gray.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -639,7 +614,6 @@ func (c Gray) RGBA() (r, g, b, a uint32)
 
 ```
 searchKey: color.Gray16
-tags: [exported]
 ```
 
 ```Go
@@ -654,7 +628,6 @@ Gray16 represents a 16-bit grayscale color.
 
 ```
 searchKey: color.Gray16.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -665,7 +638,6 @@ func (c Gray16) RGBA() (r, g, b, a uint32)
 
 ```
 searchKey: color.Model
-tags: [exported]
 ```
 
 ```Go
@@ -680,7 +652,6 @@ Model can convert any Color to one from its own color model. The conversion may 
 
 ```
 searchKey: color.ModelFunc
-tags: [exported]
 ```
 
 ```Go
@@ -693,6 +664,7 @@ ModelFunc returns a Model that invokes f to implement the conversion.
 
 ```
 searchKey: color.modelFunc
+tags: [private]
 ```
 
 ```Go
@@ -705,6 +677,7 @@ type modelFunc struct {
 
 ```
 searchKey: color.modelFunc.Convert
+tags: [private]
 ```
 
 ```Go
@@ -715,7 +688,6 @@ func (m *modelFunc) Convert(c Color) Color
 
 ```
 searchKey: color.Palette
-tags: [exported]
 ```
 
 ```Go
@@ -728,7 +700,6 @@ Palette is a palette of colors.
 
 ```
 searchKey: color.Palette.Convert
-tags: [exported]
 ```
 
 ```Go
@@ -741,7 +712,6 @@ Convert returns the palette color closest to c in Euclidean R,G,B space.
 
 ```
 searchKey: color.Palette.Index
-tags: [exported]
 ```
 
 ```Go
@@ -754,7 +724,6 @@ Index returns the index of the palette color closest to c in Euclidean R,G,B,A s
 
 ```
 searchKey: color.YCbCr
-tags: [exported]
 ```
 
 ```Go
@@ -773,7 +742,6 @@ Conversion between RGB and Y'CbCr is lossy and there are multiple, slightly diff
 
 ```
 searchKey: color.YCbCr.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -784,7 +752,6 @@ func (c YCbCr) RGBA() (uint32, uint32, uint32, uint32)
 
 ```
 searchKey: color.NYCbCrA
-tags: [exported]
 ```
 
 ```Go
@@ -800,7 +767,6 @@ NYCbCrA represents a non-alpha-premultiplied Y'CbCr-with-alpha color, having 8 b
 
 ```
 searchKey: color.NYCbCrA.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -811,7 +777,6 @@ func (c NYCbCrA) RGBA() (uint32, uint32, uint32, uint32)
 
 ```
 searchKey: color.CMYK
-tags: [exported]
 ```
 
 ```Go
@@ -828,7 +793,6 @@ It is not associated with any particular color profile.
 
 ```
 searchKey: color.CMYK.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -837,14 +801,11 @@ func (c CMYK) RGBA() (uint32, uint32, uint32, uint32)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="sqDiff" href="#sqDiff">func sqDiff(x, y uint32) uint32</a>
 
 ```
 searchKey: color.sqDiff
+tags: [private]
 ```
 
 ```Go
@@ -859,7 +820,6 @@ x and y are both assumed to be in the range [0, 0xffff].
 
 ```
 searchKey: color.RGBToYCbCr
-tags: [exported]
 ```
 
 ```Go
@@ -872,7 +832,6 @@ RGBToYCbCr converts an RGB triple to a Y'CbCr triple.
 
 ```
 searchKey: color.YCbCrToRGB
-tags: [exported]
 ```
 
 ```Go
@@ -885,7 +844,6 @@ YCbCrToRGB converts a Y'CbCr triple to an RGB triple.
 
 ```
 searchKey: color.RGBToCMYK
-tags: [exported]
 ```
 
 ```Go
@@ -898,7 +856,6 @@ RGBToCMYK converts an RGB triple to a CMYK quadruple.
 
 ```
 searchKey: color.CMYKToRGB
-tags: [exported]
 ```
 
 ```Go
@@ -911,6 +868,7 @@ CMYKToRGB converts a CMYK quadruple to an RGB triple.
 
 ```
 searchKey: color.TestSqDiff
+tags: [private]
 ```
 
 ```Go
@@ -921,6 +879,7 @@ func TestSqDiff(t *testing.T)
 
 ```
 searchKey: color.delta
+tags: [private]
 ```
 
 ```Go
@@ -931,6 +890,7 @@ func delta(x, y uint8) uint8
 
 ```
 searchKey: color.eq
+tags: [private]
 ```
 
 ```Go
@@ -941,6 +901,7 @@ func eq(c0, c1 Color) error
 
 ```
 searchKey: color.TestYCbCrRoundtrip
+tags: [private]
 ```
 
 ```Go
@@ -953,6 +914,7 @@ TestYCbCrRoundtrip tests that a subset of RGB space can be converted to YCbCr an
 
 ```
 searchKey: color.TestYCbCrToRGBConsistency
+tags: [private]
 ```
 
 ```Go
@@ -965,6 +927,7 @@ TestYCbCrToRGBConsistency tests that calling the RGBA method (16 bit color) then
 
 ```
 searchKey: color.TestYCbCrGray
+tags: [private]
 ```
 
 ```Go
@@ -977,6 +940,7 @@ TestYCbCrGray tests that YCbCr colors are a superset of Gray colors.
 
 ```
 searchKey: color.TestNYCbCrAAlpha
+tags: [private]
 ```
 
 ```Go
@@ -989,6 +953,7 @@ TestNYCbCrAAlpha tests that NYCbCrA colors are a superset of Alpha colors.
 
 ```
 searchKey: color.TestNYCbCrAYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -1001,6 +966,7 @@ TestNYCbCrAYCbCr tests that NYCbCrA colors are a superset of YCbCr colors.
 
 ```
 searchKey: color.TestCMYKRoundtrip
+tags: [private]
 ```
 
 ```Go
@@ -1013,6 +979,7 @@ TestCMYKRoundtrip tests that a subset of RGB space can be converted to CMYK and 
 
 ```
 searchKey: color.TestCMYKToRGBConsistency
+tags: [private]
 ```
 
 ```Go
@@ -1025,6 +992,7 @@ TestCMYKToRGBConsistency tests that calling the RGBA method (16 bit color) then 
 
 ```
 searchKey: color.TestCMYKGray
+tags: [private]
 ```
 
 ```Go
@@ -1037,6 +1005,7 @@ TestCMYKGray tests that CMYK colors are a superset of Gray colors.
 
 ```
 searchKey: color.TestPalette
+tags: [private]
 ```
 
 ```Go
@@ -1047,6 +1016,7 @@ func TestPalette(t *testing.T)
 
 ```
 searchKey: color.BenchmarkYCbCrToRGB
+tags: [private]
 ```
 
 ```Go
@@ -1057,6 +1027,7 @@ func BenchmarkYCbCrToRGB(b *testing.B)
 
 ```
 searchKey: color.BenchmarkRGBToYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1038,7 @@ func BenchmarkRGBToYCbCr(b *testing.B)
 
 ```
 searchKey: color.BenchmarkYCbCrToRGBA
+tags: [private]
 ```
 
 ```Go
@@ -1077,6 +1049,7 @@ func BenchmarkYCbCrToRGBA(b *testing.B)
 
 ```
 searchKey: color.BenchmarkNYCbCrAToRGBA
+tags: [private]
 ```
 
 ```Go

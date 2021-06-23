@@ -10,11 +10,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Message" href="#Message">type Message struct</a>
 
 ```
 searchKey: txtypes.Message
-tags: [exported]
 ```
 
 ```Go
@@ -36,7 +39,6 @@ Message describes an email message to be sent.
 
 ```
 searchKey: txtypes.Templates
-tags: [exported]
 ```
 
 ```Go
@@ -53,7 +55,6 @@ Templates contains the text and HTML templates for an email.
 
 ```
 searchKey: txtypes.ParsedTemplates
-tags: [exported]
 ```
 
 ```Go

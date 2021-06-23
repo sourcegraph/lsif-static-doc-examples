@@ -241,11 +241,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MockQueryResolver" href="#MockQueryResolver">type MockQueryResolver struct</a>
 
 ```
 searchKey: mocks.MockQueryResolver
-tags: [exported]
 ```
 
 ```Go
@@ -277,7 +280,6 @@ MockQueryResolver is a mock implementation of the QueryResolver interface (from 
 
 ```
 searchKey: mocks.NewMockQueryResolver
-tags: [exported]
 ```
 
 ```Go
@@ -290,7 +292,6 @@ NewMockQueryResolver creates a new mock of the QueryResolver interface. All meth
 
 ```
 searchKey: mocks.NewMockQueryResolverFrom
-tags: [exported]
 ```
 
 ```Go
@@ -303,7 +304,6 @@ NewMockQueryResolverFrom creates a new mock of the MockQueryResolver interface. 
 
 ```
 searchKey: mocks.MockQueryResolver.Definitions
-tags: [exported]
 ```
 
 ```Go
@@ -316,7 +316,6 @@ Definitions delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockQueryResolver.Diagnostics
-tags: [exported]
 ```
 
 ```Go
@@ -329,7 +328,6 @@ Diagnostics delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockQueryResolver.DocumentationPage
-tags: [exported]
 ```
 
 ```Go
@@ -342,7 +340,6 @@ DocumentationPage delegates to the next hook function in the queue and stores th
 
 ```
 searchKey: mocks.MockQueryResolver.Hover
-tags: [exported]
 ```
 
 ```Go
@@ -355,7 +352,6 @@ Hover delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: mocks.MockQueryResolver.Ranges
-tags: [exported]
 ```
 
 ```Go
@@ -368,7 +364,6 @@ Ranges delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockQueryResolver.References
-tags: [exported]
 ```
 
 ```Go
@@ -381,7 +376,6 @@ References delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -399,7 +393,6 @@ QueryResolverDefinitionsFunc describes the behavior when the Definitions method 
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +405,6 @@ SetDefaultHook sets function that is called when the Definitions method of the p
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -425,7 +417,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Defini
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -438,7 +429,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -451,6 +441,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +452,7 @@ func (f *QueryResolverDefinitionsFunc) nextHook() func(context.Context, int, int
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -471,7 +463,6 @@ func (f *QueryResolverDefinitionsFunc) appendCall(r0 QueryResolverDefinitionsFun
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -484,7 +475,6 @@ History returns a sequence of QueryResolverDefinitionsFuncCall objects describin
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -513,7 +503,6 @@ QueryResolverDefinitionsFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -526,7 +515,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -539,7 +527,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -557,7 +544,6 @@ QueryResolverDiagnosticsFunc describes the behavior when the Diagnostics method 
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -570,7 +556,6 @@ SetDefaultHook sets function that is called when the Diagnostics method of the p
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -583,7 +568,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Diagno
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -596,7 +580,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -609,6 +592,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +603,7 @@ func (f *QueryResolverDiagnosticsFunc) nextHook() func(context.Context, int) ([]
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -629,7 +614,6 @@ func (f *QueryResolverDiagnosticsFunc) appendCall(r0 QueryResolverDiagnosticsFun
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -642,7 +626,6 @@ History returns a sequence of QueryResolverDiagnosticsFuncCall objects describin
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -671,7 +654,6 @@ QueryResolverDiagnosticsFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -684,7 +666,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -697,7 +678,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFunc
-tags: [exported]
 ```
 
 ```Go
@@ -715,7 +695,6 @@ QueryResolverDocumentationPageFunc describes the behavior when the Documentation
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -728,7 +707,6 @@ SetDefaultHook sets function that is called when the DocumentationPage method of
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -741,7 +719,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Docume
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -754,7 +731,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -767,6 +743,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -777,6 +754,7 @@ func (f *QueryResolverDocumentationPageFunc) nextHook() func(context.Context, st
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -787,7 +765,6 @@ func (f *QueryResolverDocumentationPageFunc) appendCall(r0 QueryResolverDocument
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -800,7 +777,6 @@ History returns a sequence of QueryResolverDocumentationPageFuncCall objects des
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -826,7 +802,6 @@ QueryResolverDocumentationPageFuncCall is an object that describes an invocation
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -839,7 +814,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -852,7 +826,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.QueryResolverHoverFunc
-tags: [exported]
 ```
 
 ```Go
@@ -870,7 +843,6 @@ QueryResolverHoverFunc describes the behavior when the Hover method of the paren
 
 ```
 searchKey: mocks.QueryResolverHoverFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -883,7 +855,6 @@ SetDefaultHook sets function that is called when the Hover method of the parent 
 
 ```
 searchKey: mocks.QueryResolverHoverFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -896,7 +867,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Hover 
 
 ```
 searchKey: mocks.QueryResolverHoverFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -909,7 +879,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.QueryResolverHoverFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -922,6 +891,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.QueryResolverHoverFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -932,6 +902,7 @@ func (f *QueryResolverHoverFunc) nextHook() func(context.Context, int, int) (str
 
 ```
 searchKey: mocks.QueryResolverHoverFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -942,7 +913,6 @@ func (f *QueryResolverHoverFunc) appendCall(r0 QueryResolverHoverFuncCall)
 
 ```
 searchKey: mocks.QueryResolverHoverFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -955,7 +925,6 @@ History returns a sequence of QueryResolverHoverFuncCall objects describing the 
 
 ```
 searchKey: mocks.QueryResolverHoverFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -990,7 +959,6 @@ QueryResolverHoverFuncCall is an object that describes an invocation of method H
 
 ```
 searchKey: mocks.QueryResolverHoverFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1003,7 +971,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverHoverFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1016,7 +983,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.QueryResolverRangesFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1034,7 +1000,6 @@ QueryResolverRangesFunc describes the behavior when the Ranges method of the par
 
 ```
 searchKey: mocks.QueryResolverRangesFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1047,7 +1012,6 @@ SetDefaultHook sets function that is called when the Ranges method of the parent
 
 ```
 searchKey: mocks.QueryResolverRangesFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1060,7 +1024,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Ranges
 
 ```
 searchKey: mocks.QueryResolverRangesFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1073,7 +1036,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.QueryResolverRangesFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1086,6 +1048,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.QueryResolverRangesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1096,6 +1059,7 @@ func (f *QueryResolverRangesFunc) nextHook() func(context.Context, int, int) ([]
 
 ```
 searchKey: mocks.QueryResolverRangesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1106,7 +1070,6 @@ func (f *QueryResolverRangesFunc) appendCall(r0 QueryResolverRangesFuncCall)
 
 ```
 searchKey: mocks.QueryResolverRangesFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1119,7 +1082,6 @@ History returns a sequence of QueryResolverRangesFuncCall objects describing the
 
 ```
 searchKey: mocks.QueryResolverRangesFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1148,7 +1110,6 @@ QueryResolverRangesFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: mocks.QueryResolverRangesFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1161,7 +1122,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverRangesFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1174,7 +1134,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.QueryResolverReferencesFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1192,7 +1151,6 @@ QueryResolverReferencesFunc describes the behavior when the References method of
 
 ```
 searchKey: mocks.QueryResolverReferencesFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1205,7 +1163,6 @@ SetDefaultHook sets function that is called when the References method of the pa
 
 ```
 searchKey: mocks.QueryResolverReferencesFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1218,7 +1175,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Refere
 
 ```
 searchKey: mocks.QueryResolverReferencesFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1231,7 +1187,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.QueryResolverReferencesFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1244,6 +1199,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.QueryResolverReferencesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1254,6 +1210,7 @@ func (f *QueryResolverReferencesFunc) nextHook() func(context.Context, int, int,
 
 ```
 searchKey: mocks.QueryResolverReferencesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1264,7 +1221,6 @@ func (f *QueryResolverReferencesFunc) appendCall(r0 QueryResolverReferencesFuncC
 
 ```
 searchKey: mocks.QueryResolverReferencesFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1277,7 +1233,6 @@ History returns a sequence of QueryResolverReferencesFuncCall objects describing
 
 ```
 searchKey: mocks.QueryResolverReferencesFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1315,7 +1270,6 @@ QueryResolverReferencesFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.QueryResolverReferencesFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1328,7 +1282,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverReferencesFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1341,7 +1294,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.MockResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1395,7 +1347,6 @@ MockResolver is a mock implementation of the Resolver interface (from the packag
 
 ```
 searchKey: mocks.NewMockResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1408,7 +1359,6 @@ NewMockResolver creates a new mock of the Resolver interface. All methods return
 
 ```
 searchKey: mocks.NewMockResolverFrom
-tags: [exported]
 ```
 
 ```Go
@@ -1421,7 +1371,6 @@ NewMockResolverFrom creates a new mock of the MockResolver interface. All method
 
 ```
 searchKey: mocks.MockResolver.CommitGraph
-tags: [exported]
 ```
 
 ```Go
@@ -1434,7 +1383,6 @@ CommitGraph delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockResolver.DeleteIndexByID
-tags: [exported]
 ```
 
 ```Go
@@ -1447,7 +1395,6 @@ DeleteIndexByID delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: mocks.MockResolver.DeleteUploadByID
-tags: [exported]
 ```
 
 ```Go
@@ -1460,7 +1407,6 @@ DeleteUploadByID delegates to the next hook function in the queue and stores the
 
 ```
 searchKey: mocks.MockResolver.GetIndexByID
-tags: [exported]
 ```
 
 ```Go
@@ -1473,7 +1419,6 @@ GetIndexByID delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: mocks.MockResolver.GetIndexesByIDs
-tags: [exported]
 ```
 
 ```Go
@@ -1486,7 +1431,6 @@ GetIndexesByIDs delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: mocks.MockResolver.GetUploadByID
-tags: [exported]
 ```
 
 ```Go
@@ -1499,7 +1443,6 @@ GetUploadByID delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: mocks.MockResolver.GetUploadsByIDs
-tags: [exported]
 ```
 
 ```Go
@@ -1512,7 +1455,6 @@ GetUploadsByIDs delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: mocks.MockResolver.IndexConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -1525,7 +1467,6 @@ IndexConfiguration delegates to the next hook function in the queue and stores t
 
 ```
 searchKey: mocks.MockResolver.IndexConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1538,7 +1479,6 @@ IndexConnectionResolver delegates to the next hook function in the queue and sto
 
 ```
 searchKey: mocks.MockResolver.QueryResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1551,7 +1491,6 @@ QueryResolver delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: mocks.MockResolver.QueueAutoIndexJobForRepo
-tags: [exported]
 ```
 
 ```Go
@@ -1564,7 +1503,6 @@ QueueAutoIndexJobForRepo delegates to the next hook function in the queue and st
 
 ```
 searchKey: mocks.MockResolver.UpdateIndexConfigurationByRepositoryID
-tags: [exported]
 ```
 
 ```Go
@@ -1577,7 +1515,6 @@ UpdateIndexConfigurationByRepositoryID delegates to the next hook function in th
 
 ```
 searchKey: mocks.MockResolver.UploadConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1590,7 +1527,6 @@ UploadConnectionResolver delegates to the next hook function in the queue and st
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1608,7 +1544,6 @@ ResolverCommitGraphFunc describes the behavior when the CommitGraph method of th
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1621,7 +1556,6 @@ SetDefaultHook sets function that is called when the CommitGraph method of the p
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1634,7 +1568,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Commit
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1647,7 +1580,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1660,6 +1592,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1670,6 +1603,7 @@ func (f *ResolverCommitGraphFunc) nextHook() func(context.Context, int) (graphql
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1680,7 +1614,6 @@ func (f *ResolverCommitGraphFunc) appendCall(r0 ResolverCommitGraphFuncCall)
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1693,7 +1626,6 @@ History returns a sequence of ResolverCommitGraphFuncCall objects describing the
 
 ```
 searchKey: mocks.ResolverCommitGraphFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1719,7 +1651,6 @@ ResolverCommitGraphFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: mocks.ResolverCommitGraphFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1732,7 +1663,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverCommitGraphFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1745,7 +1675,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1763,7 +1692,6 @@ ResolverDeleteIndexByIDFunc describes the behavior when the DeleteIndexByID meth
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1776,7 +1704,6 @@ SetDefaultHook sets function that is called when the DeleteIndexByID method of t
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1789,7 +1716,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Delete
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1802,7 +1728,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1815,6 +1740,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1825,6 +1751,7 @@ func (f *ResolverDeleteIndexByIDFunc) nextHook() func(context.Context, int) erro
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1835,7 +1762,6 @@ func (f *ResolverDeleteIndexByIDFunc) appendCall(r0 ResolverDeleteIndexByIDFuncC
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1848,7 +1774,6 @@ History returns a sequence of ResolverDeleteIndexByIDFuncCall objects describing
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1871,7 +1796,6 @@ ResolverDeleteIndexByIDFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1884,7 +1808,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1897,7 +1820,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1915,7 +1837,6 @@ ResolverDeleteUploadByIDFunc describes the behavior when the DeleteUploadByID me
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1928,7 +1849,6 @@ SetDefaultHook sets function that is called when the DeleteUploadByID method of 
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1941,7 +1861,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Delete
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1954,7 +1873,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1967,6 +1885,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1977,6 +1896,7 @@ func (f *ResolverDeleteUploadByIDFunc) nextHook() func(context.Context, int) err
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1987,7 +1907,6 @@ func (f *ResolverDeleteUploadByIDFunc) appendCall(r0 ResolverDeleteUploadByIDFun
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2000,7 +1919,6 @@ History returns a sequence of ResolverDeleteUploadByIDFuncCall objects describin
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2023,7 +1941,6 @@ ResolverDeleteUploadByIDFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2036,7 +1953,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2049,7 +1965,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2067,7 +1982,6 @@ ResolverGetIndexByIDFunc describes the behavior when the GetIndexByID method of 
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2080,7 +1994,6 @@ SetDefaultHook sets function that is called when the GetIndexByID method of the 
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2093,7 +2006,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetInd
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2106,7 +2018,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2119,6 +2030,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2129,6 +2041,7 @@ func (f *ResolverGetIndexByIDFunc) nextHook() func(context.Context, int) (dbstor
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2139,7 +2052,6 @@ func (f *ResolverGetIndexByIDFunc) appendCall(r0 ResolverGetIndexByIDFuncCall)
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2152,7 +2064,6 @@ History returns a sequence of ResolverGetIndexByIDFuncCall objects describing th
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2181,7 +2092,6 @@ ResolverGetIndexByIDFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2194,7 +2104,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2207,7 +2116,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2225,7 +2133,6 @@ ResolverGetIndexesByIDsFunc describes the behavior when the GetIndexesByIDs meth
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2238,7 +2145,6 @@ SetDefaultHook sets function that is called when the GetIndexesByIDs method of t
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2251,7 +2157,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetInd
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2264,7 +2169,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2277,6 +2181,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2287,6 +2192,7 @@ func (f *ResolverGetIndexesByIDsFunc) nextHook() func(context.Context, ...int) (
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2297,7 +2203,6 @@ func (f *ResolverGetIndexesByIDsFunc) appendCall(r0 ResolverGetIndexesByIDsFuncC
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2310,7 +2215,6 @@ History returns a sequence of ResolverGetIndexesByIDsFuncCall objects describing
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2336,7 +2240,6 @@ ResolverGetIndexesByIDsFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2349,7 +2252,6 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2362,7 +2264,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2380,7 +2281,6 @@ ResolverGetUploadByIDFunc describes the behavior when the GetUploadByID method o
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2393,7 +2293,6 @@ SetDefaultHook sets function that is called when the GetUploadByID method of the
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2406,7 +2305,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetUpl
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2419,7 +2317,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2432,6 +2329,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2442,6 +2340,7 @@ func (f *ResolverGetUploadByIDFunc) nextHook() func(context.Context, int) (dbsto
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2452,7 +2351,6 @@ func (f *ResolverGetUploadByIDFunc) appendCall(r0 ResolverGetUploadByIDFuncCall)
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2465,7 +2363,6 @@ History returns a sequence of ResolverGetUploadByIDFuncCall objects describing t
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2494,7 +2391,6 @@ ResolverGetUploadByIDFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2507,7 +2403,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2520,7 +2415,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2538,7 +2432,6 @@ ResolverGetUploadsByIDsFunc describes the behavior when the GetUploadsByIDs meth
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2551,7 +2444,6 @@ SetDefaultHook sets function that is called when the GetUploadsByIDs method of t
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2564,7 +2456,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetUpl
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2577,7 +2468,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2590,6 +2480,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2600,6 +2491,7 @@ func (f *ResolverGetUploadsByIDsFunc) nextHook() func(context.Context, ...int) (
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2610,7 +2502,6 @@ func (f *ResolverGetUploadsByIDsFunc) appendCall(r0 ResolverGetUploadsByIDsFuncC
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2623,7 +2514,6 @@ History returns a sequence of ResolverGetUploadsByIDsFuncCall objects describing
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2649,7 +2539,6 @@ ResolverGetUploadsByIDsFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2662,7 +2551,6 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2675,7 +2563,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2693,7 +2580,6 @@ ResolverIndexConfigurationFunc describes the behavior when the IndexConfiguratio
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2706,7 +2592,6 @@ SetDefaultHook sets function that is called when the IndexConfiguration method o
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2719,7 +2604,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the IndexC
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2732,7 +2616,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2745,6 +2628,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2755,6 +2639,7 @@ func (f *ResolverIndexConfigurationFunc) nextHook() func(context.Context, int) (
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2765,7 +2650,6 @@ func (f *ResolverIndexConfigurationFunc) appendCall(r0 ResolverIndexConfiguratio
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2778,7 +2662,6 @@ History returns a sequence of ResolverIndexConfigurationFuncCall objects describ
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2804,7 +2687,6 @@ ResolverIndexConfigurationFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2817,7 +2699,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2830,7 +2711,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2848,7 +2728,6 @@ ResolverIndexConnectionResolverFunc describes the behavior when the IndexConnect
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2861,7 +2740,6 @@ SetDefaultHook sets function that is called when the IndexConnectionResolver met
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2874,7 +2752,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the IndexC
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2887,7 +2764,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2900,6 +2776,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2910,6 +2787,7 @@ func (f *ResolverIndexConnectionResolverFunc) nextHook() func(dbstore.GetIndexes
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2920,7 +2798,6 @@ func (f *ResolverIndexConnectionResolverFunc) appendCall(r0 ResolverIndexConnect
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2933,7 +2810,6 @@ History returns a sequence of ResolverIndexConnectionResolverFuncCall objects de
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2953,7 +2829,6 @@ ResolverIndexConnectionResolverFuncCall is an object that describes an invocatio
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2966,7 +2841,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2979,7 +2853,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2997,7 +2870,6 @@ ResolverQueryResolverFunc describes the behavior when the QueryResolver method o
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -3010,7 +2882,6 @@ SetDefaultHook sets function that is called when the QueryResolver method of the
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -3023,7 +2894,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the QueryR
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3036,7 +2906,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3049,6 +2918,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3059,6 +2929,7 @@ func (f *ResolverQueryResolverFunc) nextHook() func(context.Context, *graphqlbac
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3069,7 +2940,6 @@ func (f *ResolverQueryResolverFunc) appendCall(r0 ResolverQueryResolverFuncCall)
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -3082,7 +2952,6 @@ History returns a sequence of ResolverQueryResolverFuncCall objects describing t
 
 ```
 searchKey: mocks.ResolverQueryResolverFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -3108,7 +2977,6 @@ ResolverQueryResolverFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: mocks.ResolverQueryResolverFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -3121,7 +2989,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverQueryResolverFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -3134,7 +3001,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc
-tags: [exported]
 ```
 
 ```Go
@@ -3152,7 +3018,6 @@ ResolverQueueAutoIndexJobForRepoFunc describes the behavior when the QueueAutoIn
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -3165,7 +3030,6 @@ SetDefaultHook sets function that is called when the QueueAutoIndexJobForRepo me
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -3178,7 +3042,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the QueueA
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3191,7 +3054,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3204,6 +3066,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3214,6 +3077,7 @@ func (f *ResolverQueueAutoIndexJobForRepoFunc) nextHook() func(context.Context, 
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3224,7 +3088,6 @@ func (f *ResolverQueueAutoIndexJobForRepoFunc) appendCall(r0 ResolverQueueAutoIn
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -3237,7 +3100,6 @@ History returns a sequence of ResolverQueueAutoIndexJobForRepoFuncCall objects d
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -3260,7 +3122,6 @@ ResolverQueueAutoIndexJobForRepoFuncCall is an object that describes an invocati
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -3273,7 +3134,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -3286,7 +3146,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc
-tags: [exported]
 ```
 
 ```Go
@@ -3304,7 +3163,6 @@ ResolverUpdateIndexConfigurationByRepositoryIDFunc describes the behavior when t
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -3317,7 +3175,6 @@ SetDefaultHook sets function that is called when the UpdateIndexConfigurationByR
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -3330,7 +3187,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Update
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3343,7 +3199,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3356,6 +3211,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3366,6 +3222,7 @@ func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) nextHook() func(con
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3376,7 +3233,6 @@ func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) appendCall(r0 Resol
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -3389,7 +3245,6 @@ History returns a sequence of ResolverUpdateIndexConfigurationByRepositoryIDFunc
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -3415,7 +3270,6 @@ ResolverUpdateIndexConfigurationByRepositoryIDFuncCall is an object that describ
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -3428,7 +3282,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -3441,7 +3294,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc
-tags: [exported]
 ```
 
 ```Go
@@ -3459,7 +3311,6 @@ ResolverUploadConnectionResolverFunc describes the behavior when the UploadConne
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -3472,7 +3323,6 @@ SetDefaultHook sets function that is called when the UploadConnectionResolver me
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -3485,7 +3335,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Upload
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3498,7 +3347,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3511,6 +3359,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3521,6 +3370,7 @@ func (f *ResolverUploadConnectionResolverFunc) nextHook() func(dbstore.GetUpload
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3531,7 +3381,6 @@ func (f *ResolverUploadConnectionResolverFunc) appendCall(r0 ResolverUploadConne
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -3544,7 +3393,6 @@ History returns a sequence of ResolverUploadConnectionResolverFuncCall objects d
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -3564,7 +3412,6 @@ ResolverUploadConnectionResolverFuncCall is an object that describes an invocati
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -3577,7 +3424,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFuncCall.Results
-tags: [exported]
 ```
 
 ```Go

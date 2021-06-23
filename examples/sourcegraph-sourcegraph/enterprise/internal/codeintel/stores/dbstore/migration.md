@@ -38,15 +38,20 @@
     * [func TestCommittedAtMigrator(t *testing.T)](#TestCommittedAtMigrator)
     * [func TestCommittedAtMigratorUnknownRepository(t *testing.T)](#TestCommittedAtMigratorUnknownRepository)
     * [func TestCommittedAtMigratorUnknownCommits(t *testing.T)](#TestCommittedAtMigratorUnknownCommits)
-    * [func init()](#init)
+    * [func init()](#init.migration_test.go)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [private]
+```
 
 ### <a id="committedAtProgressQuery" href="#committedAtProgressQuery">const committedAtProgressQuery</a>
 
 ```
 searchKey: migration.committedAtProgressQuery
+tags: [private]
 ```
 
 ```Go
@@ -57,6 +62,7 @@ const committedAtProgressQuery = ...
 
 ```
 searchKey: migration.committedAtSelectUpQuery
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +73,7 @@ const committedAtSelectUpQuery = ...
 
 ```
 searchKey: migration.committedAtProcesshandleCommitQuery
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +84,7 @@ const committedAtProcesshandleCommitQuery = ...
 
 ```
 searchKey: migration.committedAtDownQuery
+tags: [private]
 ```
 
 ```Go
@@ -87,7 +95,6 @@ const committedAtDownQuery = ...
 
 ```
 searchKey: migration.CommittedAtMigrationID
-tags: [exported]
 ```
 
 ```Go
@@ -98,10 +105,15 @@ CommittedAtMigrationID is the primary key of the migration record handled by an 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="committedAtMigrator" href="#committedAtMigrator">type committedAtMigrator struct</a>
 
 ```
 searchKey: migration.committedAtMigrator
+tags: [private]
 ```
 
 ```Go
@@ -116,6 +128,7 @@ type committedAtMigrator struct {
 
 ```
 searchKey: migration.committedAtMigrator.Progress
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +141,7 @@ Progress returns the ratio between the number of upload records that have been c
 
 ```
 searchKey: migration.committedAtMigrator.Up
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +154,7 @@ Up runs a batch of the migration. This method selects a batch of unique reposito
 
 ```
 searchKey: migration.committedAtMigrator.handleSourcedCommits
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +165,7 @@ func (m *committedAtMigrator) handleSourcedCommits(ctx context.Context, tx *dbst
 
 ```
 searchKey: migration.committedAtMigrator.handleCommit
+tags: [private]
 ```
 
 ```Go
@@ -160,6 +176,7 @@ func (m *committedAtMigrator) handleCommit(ctx context.Context, tx *dbstore.Stor
 
 ```
 searchKey: migration.committedAtMigrator.Down
+tags: [private]
 ```
 
 ```Go
@@ -172,7 +189,6 @@ Down runs a batch of the migration in reverse. This method simply sets the commi
 
 ```
 searchKey: migration.GitserverClient
-tags: [exported]
 ```
 
 ```Go
@@ -185,7 +201,6 @@ type GitserverClient interface {
 
 ```
 searchKey: migration.MockGitserverClient
-tags: [exported]
 ```
 
 ```Go
@@ -202,7 +217,6 @@ MockGitserverClient is a mock implementation of the GitserverClient interface (f
 
 ```
 searchKey: migration.NewMockGitserverClient
-tags: [exported]
 ```
 
 ```Go
@@ -215,7 +229,6 @@ NewMockGitserverClient creates a new mock of the GitserverClient interface. All 
 
 ```
 searchKey: migration.NewMockGitserverClientFrom
-tags: [exported]
 ```
 
 ```Go
@@ -228,7 +241,6 @@ NewMockGitserverClientFrom creates a new mock of the MockGitserverClient interfa
 
 ```
 searchKey: migration.MockGitserverClient.CommitDate
-tags: [exported]
 ```
 
 ```Go
@@ -241,7 +253,6 @@ CommitDate delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: migration.GitserverClientCommitDateFunc
-tags: [exported]
 ```
 
 ```Go
@@ -259,7 +270,6 @@ GitserverClientCommitDateFunc describes the behavior when the CommitDate method 
 
 ```
 searchKey: migration.GitserverClientCommitDateFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -272,7 +282,6 @@ SetDefaultHook sets function that is called when the CommitDate method of the pa
 
 ```
 searchKey: migration.GitserverClientCommitDateFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -285,7 +294,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Commit
 
 ```
 searchKey: migration.GitserverClientCommitDateFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -298,7 +306,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: migration.GitserverClientCommitDateFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -311,6 +318,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: migration.GitserverClientCommitDateFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +329,7 @@ func (f *GitserverClientCommitDateFunc) nextHook() func(context.Context, int, st
 
 ```
 searchKey: migration.GitserverClientCommitDateFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -331,7 +340,6 @@ func (f *GitserverClientCommitDateFunc) appendCall(r0 GitserverClientCommitDateF
 
 ```
 searchKey: migration.GitserverClientCommitDateFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -344,7 +352,6 @@ History returns a sequence of GitserverClientCommitDateFuncCall objects describi
 
 ```
 searchKey: migration.GitserverClientCommitDateFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -373,7 +380,6 @@ GitserverClientCommitDateFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: migration.GitserverClientCommitDateFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -386,7 +392,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: migration.GitserverClientCommitDateFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -397,11 +402,14 @@ Results returns an interface slice containing the results of this invocation.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewCommittedAtMigrator" href="#NewCommittedAtMigrator">func NewCommittedAtMigrator(store *dbstore.Store, gitserverClient GitserverClient, batchSize int) oobmigration.Migrator</a>
 
 ```
 searchKey: migration.NewCommittedAtMigrator
-tags: [exported]
 ```
 
 ```Go
@@ -414,6 +422,7 @@ NewCommittedAtMigrator creates a new Migrator instance that reads records from t
 
 ```
 searchKey: migration.isRepositoryNotFound
+tags: [private]
 ```
 
 ```Go
@@ -424,6 +433,7 @@ func isRepositoryNotFound(err error) bool
 
 ```
 searchKey: migration.isRevisionNotFound
+tags: [private]
 ```
 
 ```Go
@@ -434,6 +444,7 @@ func isRevisionNotFound(err error) bool
 
 ```
 searchKey: migration.TestCommittedAtMigrator
+tags: [private]
 ```
 
 ```Go
@@ -444,6 +455,7 @@ func TestCommittedAtMigrator(t *testing.T)
 
 ```
 searchKey: migration.TestCommittedAtMigratorUnknownRepository
+tags: [private]
 ```
 
 ```Go
@@ -454,16 +466,18 @@ func TestCommittedAtMigratorUnknownRepository(t *testing.T)
 
 ```
 searchKey: migration.TestCommittedAtMigratorUnknownCommits
+tags: [private]
 ```
 
 ```Go
 func TestCommittedAtMigratorUnknownCommits(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.migration_test.go" href="#init.migration_test.go">func init()</a>
 
 ```
 searchKey: migration.init
+tags: [private]
 ```
 
 ```Go

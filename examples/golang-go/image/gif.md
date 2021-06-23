@@ -79,7 +79,7 @@ The GIF specification is at [https://www.w3.org/Graphics/GIF/spec-gif89a.txt](ht
     * [func uninterlace(m *image.Paletted)](#uninterlace)
     * [func Decode(r io.Reader) (image.Image, error)](#Decode)
     * [func DecodeConfig(r io.Reader) (image.Config, error)](#DecodeConfig)
-    * [func init()](#init)
+    * [func init()](#init.reader.go)
     * [func log2(x int) int](#log2)
     * [func writeUint16(b []uint8, u uint16)](#writeUint16)
     * [func encodeColorTable(dst []byte, p color.Palette, size int) (int, error)](#encodeColorTable)
@@ -126,14 +126,11 @@ The GIF specification is at [https://www.w3.org/Graphics/GIF/spec-gif89a.txt](ht
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="fColorTable" href="#fColorTable">const fColorTable</a>
 
 ```
 searchKey: gif.fColorTable
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +145,7 @@ Fields.
 
 ```
 searchKey: gif.fInterlace
+tags: [private]
 ```
 
 ```Go
@@ -160,6 +158,7 @@ Masks etc.
 
 ```
 searchKey: gif.fColorTableBitsMask
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +171,7 @@ Masks etc.
 
 ```
 searchKey: gif.gcTransparentColorSet
+tags: [private]
 ```
 
 ```Go
@@ -186,6 +186,7 @@ Graphic control flags.
 
 ```
 searchKey: gif.gcDisposalMethodMask
+tags: [private]
 ```
 
 ```Go
@@ -198,7 +199,6 @@ Masks etc.
 
 ```
 searchKey: gif.DisposalNone
-tags: [exported]
 ```
 
 ```Go
@@ -211,7 +211,6 @@ Disposal Methods.
 
 ```
 searchKey: gif.DisposalBackground
-tags: [exported]
 ```
 
 ```Go
@@ -224,7 +223,6 @@ Disposal Methods.
 
 ```
 searchKey: gif.DisposalPrevious
-tags: [exported]
 ```
 
 ```Go
@@ -237,6 +235,7 @@ Disposal Methods.
 
 ```
 searchKey: gif.sExtension
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +248,7 @@ Section indicators.
 
 ```
 searchKey: gif.sImageDescriptor
+tags: [private]
 ```
 
 ```Go
@@ -261,6 +261,7 @@ Section indicators.
 
 ```
 searchKey: gif.sTrailer
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +274,7 @@ Section indicators.
 
 ```
 searchKey: gif.eText
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +288,7 @@ Extensions.
 
 ```
 searchKey: gif.eGraphicControl
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +302,7 @@ Extensions.
 
 ```
 searchKey: gif.eComment
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +316,7 @@ Extensions.
 
 ```
 searchKey: gif.eApplication
+tags: [private]
 ```
 
 ```Go
@@ -325,6 +330,7 @@ Extensions.
 
 ```
 searchKey: gif.gcLabel
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +343,7 @@ Graphic control extension fields.
 
 ```
 searchKey: gif.gcBlockSize
+tags: [private]
 ```
 
 ```Go
@@ -349,6 +356,7 @@ Graphic control extension fields.
 
 ```
 searchKey: gif.headerStr
+tags: [private]
 ```
 
 ```Go
@@ -364,6 +372,7 @@ header, palette and trailer are parts of a valid 2x1 GIF image.
 
 ```
 searchKey: gif.paletteStr
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +386,7 @@ header, palette and trailer are parts of a valid 2x1 GIF image.
 
 ```
 searchKey: gif.trailerStr
+tags: [private]
 ```
 
 ```Go
@@ -387,14 +397,11 @@ header, palette and trailer are parts of a valid 2x1 GIF image.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="errNotEnough" href="#errNotEnough">var errNotEnough</a>
 
 ```
 searchKey: gif.errNotEnough
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +412,7 @@ var errNotEnough = errors.New("gif: not enough image data")
 
 ```
 searchKey: gif.errTooMuch
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +423,7 @@ var errTooMuch = errors.New("gif: too much image data")
 
 ```
 searchKey: gif.errBadPixel
+tags: [private]
 ```
 
 ```Go
@@ -425,6 +434,7 @@ var errBadPixel = errors.New("gif: invalid pixel value")
 
 ```
 searchKey: gif.interlacing
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +452,7 @@ interlacing represents the set of scans in an interlaced GIF image.
 
 ```
 searchKey: gif.log2Lookup
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +463,7 @@ var log2Lookup = [8]int{2, 4, 8, 16, 32, 64, 128, 256}
 
 ```
 searchKey: gif.testGIF
+tags: [private]
 ```
 
 ```Go
@@ -464,6 +476,7 @@ testGIF is a simple GIF that we can modify to test different scenarios.
 
 ```
 searchKey: gif.testCase
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +487,7 @@ var testCase = ...
 
 ```
 searchKey: gif.frames
+tags: [private]
 ```
 
 ```Go
@@ -485,14 +499,11 @@ var frames = []string{
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="reader" href="#reader">type reader interface</a>
 
 ```
 searchKey: gif.reader
+tags: [private]
 ```
 
 ```Go
@@ -508,6 +519,7 @@ If the io.Reader does not also have ReadByte, then decode will introduce its own
 
 ```
 searchKey: gif.decoder
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +559,7 @@ decoder is the type used to decode a GIF file.
 
 ```
 searchKey: gif.decoder.decode
+tags: [private]
 ```
 
 ```Go
@@ -559,6 +572,7 @@ decode reads a GIF image from r and stores the result in d.
 
 ```
 searchKey: gif.decoder.readHeaderAndScreenDescriptor
+tags: [private]
 ```
 
 ```Go
@@ -569,6 +583,7 @@ func (d *decoder) readHeaderAndScreenDescriptor() error
 
 ```
 searchKey: gif.decoder.readColorTable
+tags: [private]
 ```
 
 ```Go
@@ -579,6 +594,7 @@ func (d *decoder) readColorTable(fields byte) (color.Palette, error)
 
 ```
 searchKey: gif.decoder.readExtension
+tags: [private]
 ```
 
 ```Go
@@ -589,6 +605,7 @@ func (d *decoder) readExtension() error
 
 ```
 searchKey: gif.decoder.readGraphicControl
+tags: [private]
 ```
 
 ```Go
@@ -599,6 +616,7 @@ func (d *decoder) readGraphicControl() error
 
 ```
 searchKey: gif.decoder.readImageDescriptor
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +627,7 @@ func (d *decoder) readImageDescriptor(keepAllFrames bool) error
 
 ```
 searchKey: gif.decoder.newImageFromDescriptor
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +638,7 @@ func (d *decoder) newImageFromDescriptor() (*image.Paletted, error)
 
 ```
 searchKey: gif.decoder.readBlock
+tags: [private]
 ```
 
 ```Go
@@ -629,6 +649,7 @@ func (d *decoder) readBlock() (int, error)
 
 ```
 searchKey: gif.blockReader
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +668,7 @@ To avoid the allocation of a bufio.Reader for the lzw Reader, blockReader implem
 
 ```
 searchKey: gif.blockReader.fill
+tags: [private]
 ```
 
 ```Go
@@ -657,6 +679,7 @@ func (b *blockReader) fill()
 
 ```
 searchKey: gif.blockReader.ReadByte
+tags: [private]
 ```
 
 ```Go
@@ -667,6 +690,7 @@ func (b *blockReader) ReadByte() (byte, error)
 
 ```
 searchKey: gif.blockReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +703,7 @@ blockReader must implement io.Reader, but its Read shouldn't ever actually be ca
 
 ```
 searchKey: gif.blockReader.close
+tags: [private]
 ```
 
 ```Go
@@ -691,6 +716,7 @@ close primarily detects whether or not a block terminator was encountered after 
 
 ```
 searchKey: gif.interlaceScan
+tags: [private]
 ```
 
 ```Go
@@ -705,7 +731,6 @@ interlaceScan defines the ordering for a pass of the interlace algorithm.
 
 ```
 searchKey: gif.GIF
-tags: [exported]
 ```
 
 ```Go
@@ -745,7 +770,6 @@ GIF represents the possibly multiple images stored in a GIF file.
 
 ```
 searchKey: gif.DecodeAll
-tags: [exported]
 ```
 
 ```Go
@@ -758,6 +782,7 @@ DecodeAll reads a GIF image from r and returns the sequential frames and timing 
 
 ```
 searchKey: gif.readGIF
+tags: [private]
 ```
 
 ```Go
@@ -768,6 +793,7 @@ func readGIF(filename string) (*GIF, error)
 
 ```
 searchKey: gif.writer
+tags: [private]
 ```
 
 ```Go
@@ -784,6 +810,7 @@ writer is a buffered writer.
 
 ```
 searchKey: gif.encoder
+tags: [private]
 ```
 
 ```Go
@@ -809,6 +836,7 @@ encoder encodes an image to the GIF format.
 
 ```
 searchKey: gif.encoder.flush
+tags: [private]
 ```
 
 ```Go
@@ -819,6 +847,7 @@ func (e *encoder) flush()
 
 ```
 searchKey: gif.encoder.write
+tags: [private]
 ```
 
 ```Go
@@ -829,6 +858,7 @@ func (e *encoder) write(p []byte)
 
 ```
 searchKey: gif.encoder.writeByte
+tags: [private]
 ```
 
 ```Go
@@ -839,6 +869,7 @@ func (e *encoder) writeByte(b byte)
 
 ```
 searchKey: gif.encoder.writeHeader
+tags: [private]
 ```
 
 ```Go
@@ -849,6 +880,7 @@ func (e *encoder) writeHeader()
 
 ```
 searchKey: gif.encoder.colorTablesMatch
+tags: [private]
 ```
 
 ```Go
@@ -859,6 +891,7 @@ func (e *encoder) colorTablesMatch(localLen, transparentIndex int) bool
 
 ```
 searchKey: gif.encoder.writeImageBlock
+tags: [private]
 ```
 
 ```Go
@@ -869,6 +902,7 @@ func (e *encoder) writeImageBlock(pm *image.Paletted, delay int, disposal byte)
 
 ```
 searchKey: gif.blockWriter
+tags: [private]
 ```
 
 ```Go
@@ -883,6 +917,7 @@ blockWriter writes the block structure of GIF image data, which comprises (n, (n
 
 ```
 searchKey: gif.blockWriter.setup
+tags: [private]
 ```
 
 ```Go
@@ -893,6 +928,7 @@ func (b blockWriter) setup()
 
 ```
 searchKey: gif.blockWriter.Flush
+tags: [private]
 ```
 
 ```Go
@@ -903,6 +939,7 @@ func (b blockWriter) Flush() error
 
 ```
 searchKey: gif.blockWriter.WriteByte
+tags: [private]
 ```
 
 ```Go
@@ -913,6 +950,7 @@ func (b blockWriter) WriteByte(c byte) error
 
 ```
 searchKey: gif.blockWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -925,6 +963,7 @@ blockWriter must be an io.Writer for lzw.NewWriter, but this is never actually c
 
 ```
 searchKey: gif.blockWriter.close
+tags: [private]
 ```
 
 ```Go
@@ -935,7 +974,6 @@ func (b blockWriter) close()
 
 ```
 searchKey: gif.Options
-tags: [exported]
 ```
 
 ```Go
@@ -960,6 +998,7 @@ Options are the encoding parameters.
 
 ```
 searchKey: gif.offsetImage
+tags: [private]
 ```
 
 ```Go
@@ -973,6 +1012,7 @@ type offsetImage struct {
 
 ```
 searchKey: gif.offsetImage.Bounds
+tags: [private]
 ```
 
 ```Go
@@ -981,14 +1021,11 @@ func (i offsetImage) Bounds() image.Rectangle
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="readFull" href="#readFull">func readFull(r io.Reader, b []byte) error</a>
 
 ```
 searchKey: gif.readFull
+tags: [private]
 ```
 
 ```Go
@@ -999,6 +1036,7 @@ func readFull(r io.Reader, b []byte) error
 
 ```
 searchKey: gif.readByte
+tags: [private]
 ```
 
 ```Go
@@ -1009,6 +1047,7 @@ func readByte(r io.ByteReader) (byte, error)
 
 ```
 searchKey: gif.uninterlace
+tags: [private]
 ```
 
 ```Go
@@ -1021,7 +1060,6 @@ uninterlace rearranges the pixels in m to account for interlaced input.
 
 ```
 searchKey: gif.Decode
-tags: [exported]
 ```
 
 ```Go
@@ -1034,7 +1072,6 @@ Decode reads a GIF image from r and returns the first embedded image as an image
 
 ```
 searchKey: gif.DecodeConfig
-tags: [exported]
 ```
 
 ```Go
@@ -1043,10 +1080,11 @@ func DecodeConfig(r io.Reader) (image.Config, error)
 
 DecodeConfig returns the global color model and dimensions of a GIF image without decoding the entire image. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.reader.go" href="#init.reader.go">func init()</a>
 
 ```
 searchKey: gif.init
+tags: [private]
 ```
 
 ```Go
@@ -1057,6 +1095,7 @@ func init()
 
 ```
 searchKey: gif.log2
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1106,7 @@ func log2(x int) int
 
 ```
 searchKey: gif.writeUint16
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1119,7 @@ Little-endian.
 
 ```
 searchKey: gif.encodeColorTable
+tags: [private]
 ```
 
 ```Go
@@ -1089,7 +1130,6 @@ func encodeColorTable(dst []byte, p color.Palette, size int) (int, error)
 
 ```
 searchKey: gif.EncodeAll
-tags: [exported]
 ```
 
 ```Go
@@ -1102,7 +1142,6 @@ EncodeAll writes the images in g to w in GIF format with the given loop count an
 
 ```
 searchKey: gif.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -1115,6 +1154,7 @@ Encode writes the Image m to w in GIF format.
 
 ```
 searchKey: gif.lzwEncode
+tags: [private]
 ```
 
 ```Go
@@ -1127,6 +1167,7 @@ lzwEncode returns an LZW encoding (with 2-bit literals) of in.
 
 ```
 searchKey: gif.TestDecode
+tags: [private]
 ```
 
 ```Go
@@ -1137,6 +1178,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: gif.TestTransparentIndex
+tags: [private]
 ```
 
 ```Go
@@ -1147,6 +1189,7 @@ func TestTransparentIndex(t *testing.T)
 
 ```
 searchKey: gif.try
+tags: [private]
 ```
 
 ```Go
@@ -1157,6 +1200,7 @@ func try(t *testing.T, b []byte, want string)
 
 ```
 searchKey: gif.TestBounds
+tags: [private]
 ```
 
 ```Go
@@ -1167,6 +1211,7 @@ func TestBounds(t *testing.T)
 
 ```
 searchKey: gif.TestNoPalette
+tags: [private]
 ```
 
 ```Go
@@ -1177,6 +1222,7 @@ func TestNoPalette(t *testing.T)
 
 ```
 searchKey: gif.TestPixelOutsidePaletteRange
+tags: [private]
 ```
 
 ```Go
@@ -1187,6 +1233,7 @@ func TestPixelOutsidePaletteRange(t *testing.T)
 
 ```
 searchKey: gif.TestTransparentPixelOutsidePaletteRange
+tags: [private]
 ```
 
 ```Go
@@ -1197,6 +1244,7 @@ func TestTransparentPixelOutsidePaletteRange(t *testing.T)
 
 ```
 searchKey: gif.TestLoopCount
+tags: [private]
 ```
 
 ```Go
@@ -1207,6 +1255,7 @@ func TestLoopCount(t *testing.T)
 
 ```
 searchKey: gif.TestUnexpectedEOF
+tags: [private]
 ```
 
 ```Go
@@ -1217,6 +1266,7 @@ func TestUnexpectedEOF(t *testing.T)
 
 ```
 searchKey: gif.TestDecodeMemoryConsumption
+tags: [private]
 ```
 
 ```Go
@@ -1229,6 +1279,7 @@ See golang.org/issue/22237
 
 ```
 searchKey: gif.BenchmarkDecode
+tags: [private]
 ```
 
 ```Go
@@ -1239,6 +1290,7 @@ func BenchmarkDecode(b *testing.B)
 
 ```
 searchKey: gif.readImg
+tags: [private]
 ```
 
 ```Go
@@ -1249,6 +1301,7 @@ func readImg(filename string) (image.Image, error)
 
 ```
 searchKey: gif.delta
+tags: [private]
 ```
 
 ```Go
@@ -1259,6 +1312,7 @@ func delta(u0, u1 uint32) int64
 
 ```
 searchKey: gif.averageDelta
+tags: [private]
 ```
 
 ```Go
@@ -1271,6 +1325,7 @@ averageDelta returns the average delta in RGB space. The two images must have th
 
 ```
 searchKey: gif.averageDeltaBound
+tags: [private]
 ```
 
 ```Go
@@ -1283,6 +1338,7 @@ averageDeltaBounds returns the average delta in RGB space. The average delta is 
 
 ```
 searchKey: gif.TestWriter
+tags: [private]
 ```
 
 ```Go
@@ -1293,6 +1349,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: gif.TestSubImage
+tags: [private]
 ```
 
 ```Go
@@ -1303,6 +1360,7 @@ func TestSubImage(t *testing.T)
 
 ```
 searchKey: gif.palettesEqual
+tags: [private]
 ```
 
 ```Go
@@ -1315,6 +1373,7 @@ palettesEqual reports whether two color.Palette values are equal, ignoring any t
 
 ```
 searchKey: gif.testEncodeAll
+tags: [private]
 ```
 
 ```Go
@@ -1325,6 +1384,7 @@ func testEncodeAll(t *testing.T, go1Dot5Fields bool, useGlobalColorModel bool)
 
 ```
 searchKey: gif.TestEncodeAllGo1Dot4
+tags: [private]
 ```
 
 ```Go
@@ -1335,6 +1395,7 @@ func TestEncodeAllGo1Dot4(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeAllGo1Dot5
+tags: [private]
 ```
 
 ```Go
@@ -1345,6 +1406,7 @@ func TestEncodeAllGo1Dot5(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeAllGo1Dot5GlobalColorModel
+tags: [private]
 ```
 
 ```Go
@@ -1355,6 +1417,7 @@ func TestEncodeAllGo1Dot5GlobalColorModel(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeMismatchDelay
+tags: [private]
 ```
 
 ```Go
@@ -1365,6 +1428,7 @@ func TestEncodeMismatchDelay(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeZeroGIF
+tags: [private]
 ```
 
 ```Go
@@ -1375,6 +1439,7 @@ func TestEncodeZeroGIF(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeAllFramesOutOfBounds
+tags: [private]
 ```
 
 ```Go
@@ -1385,6 +1450,7 @@ func TestEncodeAllFramesOutOfBounds(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeNonZeroMinPoint
+tags: [private]
 ```
 
 ```Go
@@ -1395,6 +1461,7 @@ func TestEncodeNonZeroMinPoint(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeImplicitConfigSize
+tags: [private]
 ```
 
 ```Go
@@ -1405,6 +1472,7 @@ func TestEncodeImplicitConfigSize(t *testing.T)
 
 ```
 searchKey: gif.TestEncodePalettes
+tags: [private]
 ```
 
 ```Go
@@ -1415,6 +1483,7 @@ func TestEncodePalettes(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeBadPalettes
+tags: [private]
 ```
 
 ```Go
@@ -1425,6 +1494,7 @@ func TestEncodeBadPalettes(t *testing.T)
 
 ```
 searchKey: gif.TestColorTablesMatch
+tags: [private]
 ```
 
 ```Go
@@ -1435,6 +1505,7 @@ func TestColorTablesMatch(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeCroppedSubImages
+tags: [private]
 ```
 
 ```Go
@@ -1445,6 +1516,7 @@ func TestEncodeCroppedSubImages(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeWrappedImage
+tags: [private]
 ```
 
 ```Go
@@ -1455,6 +1527,7 @@ func TestEncodeWrappedImage(t *testing.T)
 
 ```
 searchKey: gif.BenchmarkEncodeRandomPaletted
+tags: [private]
 ```
 
 ```Go
@@ -1465,6 +1538,7 @@ func BenchmarkEncodeRandomPaletted(b *testing.B)
 
 ```
 searchKey: gif.BenchmarkEncodeRandomRGBA
+tags: [private]
 ```
 
 ```Go
@@ -1475,6 +1549,7 @@ func BenchmarkEncodeRandomRGBA(b *testing.B)
 
 ```
 searchKey: gif.BenchmarkEncodeRealisticPaletted
+tags: [private]
 ```
 
 ```Go
@@ -1485,6 +1560,7 @@ func BenchmarkEncodeRealisticPaletted(b *testing.B)
 
 ```
 searchKey: gif.BenchmarkEncodeRealisticRGBA
+tags: [private]
 ```
 
 ```Go

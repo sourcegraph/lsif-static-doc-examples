@@ -31,10 +31,15 @@ Package lazyregexp is a thin wrapper over regexp, allowing the use of global reg
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="inTest" href="#inTest">var inTest</a>
 
 ```
 searchKey: lazyregexp.inTest
+tags: [private]
 ```
 
 ```Go
@@ -43,11 +48,14 @@ var inTest = len(os.Args) > 0 && strings.HasSuffix(strings.TrimSuffix(os.Args[0]
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Regexp" href="#Regexp">type Regexp struct</a>
 
 ```
 searchKey: lazyregexp.Regexp
-tags: [exported]
 ```
 
 ```Go
@@ -65,7 +73,6 @@ Regexp is a wrapper around regexp.Regexp, where the underlying regexp will be co
 
 ```
 searchKey: lazyregexp.New
-tags: [exported]
 ```
 
 ```Go
@@ -78,7 +85,6 @@ New creates a new lazy regexp, delaying the compiling work until it is first nee
 
 ```
 searchKey: lazyregexp.NewPOSIX
-tags: [exported]
 ```
 
 ```Go
@@ -91,6 +97,7 @@ NewPOSIX creates a new lazy regexp, delaying the compiling work until it is firs
 
 ```
 searchKey: lazyregexp.Regexp.re
+tags: [private]
 ```
 
 ```Go
@@ -101,6 +108,7 @@ func (r *Regexp) re() *regexp.Regexp
 
 ```
 searchKey: lazyregexp.Regexp.build
+tags: [private]
 ```
 
 ```Go
@@ -111,7 +119,6 @@ func (r *Regexp) build()
 
 ```
 searchKey: lazyregexp.Regexp.FindSubmatch
-tags: [exported]
 ```
 
 ```Go
@@ -122,7 +129,6 @@ func (r *Regexp) FindSubmatch(s []byte) [][]byte
 
 ```
 searchKey: lazyregexp.Regexp.FindStringSubmatch
-tags: [exported]
 ```
 
 ```Go
@@ -133,7 +139,6 @@ func (r *Regexp) FindStringSubmatch(s string) []string
 
 ```
 searchKey: lazyregexp.Regexp.FindStringSubmatchIndex
-tags: [exported]
 ```
 
 ```Go
@@ -144,7 +149,6 @@ func (r *Regexp) FindStringSubmatchIndex(s string) []int
 
 ```
 searchKey: lazyregexp.Regexp.ReplaceAllString
-tags: [exported]
 ```
 
 ```Go
@@ -155,7 +159,6 @@ func (r *Regexp) ReplaceAllString(src, repl string) string
 
 ```
 searchKey: lazyregexp.Regexp.FindString
-tags: [exported]
 ```
 
 ```Go
@@ -166,7 +169,6 @@ func (r *Regexp) FindString(s string) string
 
 ```
 searchKey: lazyregexp.Regexp.FindAllString
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +179,6 @@ func (r *Regexp) FindAllString(s string, n int) []string
 
 ```
 searchKey: lazyregexp.Regexp.MatchString
-tags: [exported]
 ```
 
 ```Go
@@ -188,7 +189,6 @@ func (r *Regexp) MatchString(s string) bool
 
 ```
 searchKey: lazyregexp.Regexp.SubexpNames
-tags: [exported]
 ```
 
 ```Go
@@ -199,7 +199,6 @@ func (r *Regexp) SubexpNames() []string
 
 ```
 searchKey: lazyregexp.Regexp.FindAllStringSubmatch
-tags: [exported]
 ```
 
 ```Go
@@ -210,7 +209,6 @@ func (r *Regexp) FindAllStringSubmatch(s string, n int) [][]string
 
 ```
 searchKey: lazyregexp.Regexp.Split
-tags: [exported]
 ```
 
 ```Go
@@ -221,7 +219,6 @@ func (r *Regexp) Split(s string, n int) []string
 
 ```
 searchKey: lazyregexp.Regexp.ReplaceAllLiteralString
-tags: [exported]
 ```
 
 ```Go
@@ -232,7 +229,6 @@ func (r *Regexp) ReplaceAllLiteralString(src, repl string) string
 
 ```
 searchKey: lazyregexp.Regexp.FindAllIndex
-tags: [exported]
 ```
 
 ```Go
@@ -243,7 +239,6 @@ func (r *Regexp) FindAllIndex(b []byte, n int) [][]int
 
 ```
 searchKey: lazyregexp.Regexp.Match
-tags: [exported]
 ```
 
 ```Go
@@ -254,7 +249,6 @@ func (r *Regexp) Match(b []byte) bool
 
 ```
 searchKey: lazyregexp.Regexp.ReplaceAllStringFunc
-tags: [exported]
 ```
 
 ```Go
@@ -265,7 +259,6 @@ func (r *Regexp) ReplaceAllStringFunc(src string, repl func(string) string) stri
 
 ```
 searchKey: lazyregexp.Regexp.ReplaceAll
-tags: [exported]
 ```
 
 ```Go

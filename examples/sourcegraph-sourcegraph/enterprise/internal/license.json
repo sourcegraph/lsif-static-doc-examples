@@ -4,7 +4,9 @@
     "identifier": "license",
     "newPage": true,
     "searchKey": "enterprise/internal/license",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "formatVersion",
                 "newPage": false,
                 "searchKey": "license.formatVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "privateKey",
                 "newPage": false,
                 "searchKey": "license.privateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "publicKey",
                 "newPage": false,
                 "searchKey": "license.publicKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "timeFixture",
                 "newPage": false,
                 "searchKey": "license.timeFixture",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "infoFixture",
                 "newPage": false,
                 "searchKey": "license.infoFixture",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +180,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -182,9 +200,7 @@
                 "identifier": "Info",
                 "newPage": false,
                 "searchKey": "license.Info",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -202,9 +218,7 @@
                       "identifier": "ParseSignedKey",
                       "newPage": false,
                       "searchKey": "license.ParseSignedKey",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -224,9 +238,7 @@
                       "identifier": "Info.IsExpired",
                       "newPage": false,
                       "searchKey": "license.Info.IsExpired",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -246,9 +258,7 @@
                       "identifier": "Info.IsExpiredWithGracePeriod",
                       "newPage": false,
                       "searchKey": "license.Info.IsExpiredWithGracePeriod",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -268,9 +278,7 @@
                       "identifier": "Info.HasTag",
                       "newPage": false,
                       "searchKey": "license.Info.HasTag",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -290,9 +298,7 @@
                       "identifier": "Info.String",
                       "newPage": false,
                       "searchKey": "license.Info.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -312,7 +318,9 @@
                       "identifier": "Info.encode",
                       "newPage": false,
                       "searchKey": "license.Info.encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -332,7 +340,9 @@
                       "identifier": "Info.decode",
                       "newPage": false,
                       "searchKey": "license.Info.decode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -355,7 +365,9 @@
                 "identifier": "encodedInfo",
                 "newPage": false,
                 "searchKey": "license.encodedInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -375,7 +387,9 @@
                 "identifier": "signedKey",
                 "newPage": false,
                 "searchKey": "license.signedKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -398,7 +412,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -416,9 +432,7 @@
                 "identifier": "ParseTagsInput",
                 "newPage": false,
                 "searchKey": "license.ParseTagsInput",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -438,9 +452,7 @@
                 "identifier": "GenerateSignedKey",
                 "newPage": false,
                 "searchKey": "license.GenerateSignedKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -460,7 +472,9 @@
                 "identifier": "TestParseTagsInput",
                 "newPage": false,
                 "searchKey": "license.TestParseTagsInput",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -475,12 +489,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/license#init",
+              "pathID": "/enterprise/internal/license#init.license_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.license_test.go",
                 "newPage": false,
                 "searchKey": "license.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -500,7 +516,9 @@
                 "identifier": "TestInfo_EncodeDecode",
                 "newPage": false,
                 "searchKey": "license.TestInfo_EncodeDecode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -520,7 +538,9 @@
                 "identifier": "TestGenerateParseSignedKey",
                 "newPage": false,
                 "searchKey": "license.TestGenerateParseSignedKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -540,7 +560,9 @@
                 "identifier": "TestParseSignedKey",
                 "newPage": false,
                 "searchKey": "license.TestParseSignedKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

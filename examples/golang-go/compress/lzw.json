@@ -4,9 +4,7 @@
     "identifier": "lzw",
     "newPage": true,
     "searchKey": "compress/lzw",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "LSB",
                 "newPage": false,
                 "searchKey": "lzw.LSB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "MSB",
                 "newPage": false,
                 "searchKey": "lzw.MSB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,7 +80,9 @@
                 "identifier": "maxWidth",
                 "newPage": false,
                 "searchKey": "lzw.maxWidth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -108,7 +102,9 @@
                 "identifier": "decoderInvalidCode",
                 "newPage": false,
                 "searchKey": "lzw.decoderInvalidCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -128,7 +124,9 @@
                 "identifier": "flushBuffer",
                 "newPage": false,
                 "searchKey": "lzw.flushBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,7 +146,9 @@
                 "identifier": "maxCode",
                 "newPage": false,
                 "searchKey": "lzw.maxCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +168,9 @@
                 "identifier": "invalidCode",
                 "newPage": false,
                 "searchKey": "lzw.invalidCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -188,7 +190,9 @@
                 "identifier": "tableSize",
                 "newPage": false,
                 "searchKey": "lzw.tableSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -208,7 +212,9 @@
                 "identifier": "tableMask",
                 "newPage": false,
                 "searchKey": "lzw.tableMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -228,7 +234,9 @@
                 "identifier": "invalidEntry",
                 "newPage": false,
                 "searchKey": "lzw.invalidEntry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -251,9 +259,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -271,7 +277,9 @@
                 "identifier": "errClosed",
                 "newPage": false,
                 "searchKey": "lzw.errClosed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -291,7 +299,9 @@
                 "identifier": "errOutOfCodes",
                 "newPage": false,
                 "searchKey": "lzw.errOutOfCodes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -311,7 +321,9 @@
                 "identifier": "lzwTests",
                 "newPage": false,
                 "searchKey": "lzw.lzwTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -331,7 +343,9 @@
                 "identifier": "filenames",
                 "newPage": false,
                 "searchKey": "lzw.filenames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -354,9 +368,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -374,9 +386,7 @@
                 "identifier": "Order",
                 "newPage": false,
                 "searchKey": "lzw.Order",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -396,9 +406,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "lzw.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -416,7 +424,9 @@
                       "identifier": "newReader",
                       "newPage": false,
                       "searchKey": "lzw.newReader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -436,7 +446,9 @@
                       "identifier": "Reader.readLSB",
                       "newPage": false,
                       "searchKey": "lzw.Reader.readLSB",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -456,7 +468,9 @@
                       "identifier": "Reader.readMSB",
                       "newPage": false,
                       "searchKey": "lzw.Reader.readMSB",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -476,9 +490,7 @@
                       "identifier": "Reader.Read",
                       "newPage": false,
                       "searchKey": "lzw.Reader.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -498,7 +510,9 @@
                       "identifier": "Reader.decode",
                       "newPage": false,
                       "searchKey": "lzw.Reader.decode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -518,9 +532,7 @@
                       "identifier": "Reader.Close",
                       "newPage": false,
                       "searchKey": "lzw.Reader.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -540,9 +552,7 @@
                       "identifier": "Reader.Reset",
                       "newPage": false,
                       "searchKey": "lzw.Reader.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -557,12 +567,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/compress/lzw#Reader.init",
+                    "pathID": "/compress/lzw#Reader.init.reader.go",
                     "documentation": {
-                      "identifier": "Reader.init",
+                      "identifier": "Reader.init.reader.go",
                       "newPage": false,
                       "searchKey": "lzw.Reader.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -585,7 +597,9 @@
                 "identifier": "writer",
                 "newPage": false,
                 "searchKey": "lzw.writer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -605,9 +619,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "lzw.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -625,7 +637,9 @@
                       "identifier": "newWriter",
                       "newPage": false,
                       "searchKey": "lzw.newWriter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -645,7 +659,9 @@
                       "identifier": "Writer.writeLSB",
                       "newPage": false,
                       "searchKey": "lzw.Writer.writeLSB",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -665,7 +681,9 @@
                       "identifier": "Writer.writeMSB",
                       "newPage": false,
                       "searchKey": "lzw.Writer.writeMSB",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -685,7 +703,9 @@
                       "identifier": "Writer.incHi",
                       "newPage": false,
                       "searchKey": "lzw.Writer.incHi",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -705,9 +725,7 @@
                       "identifier": "Writer.Write",
                       "newPage": false,
                       "searchKey": "lzw.Writer.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -727,9 +745,7 @@
                       "identifier": "Writer.Close",
                       "newPage": false,
                       "searchKey": "lzw.Writer.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -749,9 +765,7 @@
                       "identifier": "Writer.Reset",
                       "newPage": false,
                       "searchKey": "lzw.Writer.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -766,12 +780,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/compress/lzw#Writer.init",
+                    "pathID": "/compress/lzw#Writer.init.writer.go",
                     "documentation": {
-                      "identifier": "Writer.init",
+                      "identifier": "Writer.init.writer.go",
                       "newPage": false,
                       "searchKey": "lzw.Writer.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -794,7 +810,9 @@
                 "identifier": "lzwTest",
                 "newPage": false,
                 "searchKey": "lzw.lzwTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -814,7 +832,9 @@
                 "identifier": "devZero",
                 "newPage": false,
                 "searchKey": "lzw.devZero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -832,7 +852,9 @@
                       "identifier": "devZero.Read",
                       "newPage": false,
                       "searchKey": "lzw.devZero.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -858,9 +880,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -878,9 +898,7 @@
                 "identifier": "NewReader",
                 "newPage": false,
                 "searchKey": "lzw.NewReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -900,9 +918,7 @@
                 "identifier": "NewWriter",
                 "newPage": false,
                 "searchKey": "lzw.NewWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -922,7 +938,9 @@
                 "identifier": "TestReader",
                 "newPage": false,
                 "searchKey": "lzw.TestReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -942,7 +960,9 @@
                 "identifier": "TestReaderReset",
                 "newPage": false,
                 "searchKey": "lzw.TestReaderReset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -962,7 +982,9 @@
                 "identifier": "TestHiCodeDoesNotOverflow",
                 "newPage": false,
                 "searchKey": "lzw.TestHiCodeDoesNotOverflow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -982,7 +1004,9 @@
                 "identifier": "TestNoLongerSavingPriorExpansions",
                 "newPage": false,
                 "searchKey": "lzw.TestNoLongerSavingPriorExpansions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1002,7 +1026,9 @@
                 "identifier": "BenchmarkDecoder",
                 "newPage": false,
                 "searchKey": "lzw.BenchmarkDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1022,7 +1048,9 @@
                 "identifier": "testFile",
                 "newPage": false,
                 "searchKey": "lzw.testFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1042,7 +1070,9 @@
                 "identifier": "TestWriter",
                 "newPage": false,
                 "searchKey": "lzw.TestWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1062,7 +1092,9 @@
                 "identifier": "TestWriterReset",
                 "newPage": false,
                 "searchKey": "lzw.TestWriterReset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1082,7 +1114,9 @@
                 "identifier": "TestWriterReturnValues",
                 "newPage": false,
                 "searchKey": "lzw.TestWriterReturnValues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1102,7 +1136,9 @@
                 "identifier": "TestSmallLitWidth",
                 "newPage": false,
                 "searchKey": "lzw.TestSmallLitWidth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1122,7 +1158,9 @@
                 "identifier": "BenchmarkEncoder",
                 "newPage": false,
                 "searchKey": "lzw.BenchmarkEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

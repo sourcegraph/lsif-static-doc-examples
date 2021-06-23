@@ -4,7 +4,9 @@
     "identifier": "featureflag",
     "newPage": true,
     "searchKey": "internal/featureflag",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "FeatureFlag",
                 "newPage": false,
                 "searchKey": "featureflag.FeatureFlag",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "FeatureFlag.EvaluateForUser",
                       "newPage": false,
                       "searchKey": "featureflag.FeatureFlag.EvaluateForUser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "FeatureFlag.EvaluateForAnonymousUser",
                       "newPage": false,
                       "searchKey": "featureflag.FeatureFlag.EvaluateForAnonymousUser",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "FeatureFlag.EvaluateGlobal",
                       "newPage": false,
                       "searchKey": "featureflag.FeatureFlag.EvaluateGlobal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -129,9 +125,7 @@
                 "identifier": "FeatureFlagBool",
                 "newPage": false,
                 "searchKey": "featureflag.FeatureFlagBool",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -151,9 +145,7 @@
                 "identifier": "FeatureFlagRollout",
                 "newPage": false,
                 "searchKey": "featureflag.FeatureFlagRollout",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -173,9 +165,7 @@
                 "identifier": "Override",
                 "newPage": false,
                 "searchKey": "featureflag.Override",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -195,9 +185,7 @@
                 "identifier": "FlagSet",
                 "newPage": false,
                 "searchKey": "featureflag.FlagSet",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -215,9 +203,7 @@
                       "identifier": "FromContext",
                       "newPage": false,
                       "searchKey": "featureflag.FromContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -237,9 +223,7 @@
                       "identifier": "FlagSet.GetBool",
                       "newPage": false,
                       "searchKey": "featureflag.FlagSet.GetBool",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -259,9 +243,7 @@
                       "identifier": "FlagSet.GetBoolOr",
                       "newPage": false,
                       "searchKey": "featureflag.FlagSet.GetBoolOr",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -284,7 +266,9 @@
                 "identifier": "flagContextKey",
                 "newPage": false,
                 "searchKey": "featureflag.flagContextKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,9 +288,7 @@
                 "identifier": "FeatureFlagStore",
                 "newPage": false,
                 "searchKey": "featureflag.FeatureFlagStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -329,7 +311,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -347,7 +331,9 @@
                 "identifier": "hashUserAndFlag",
                 "newPage": false,
                 "searchKey": "featureflag.hashUserAndFlag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +353,9 @@
                 "identifier": "hashAnonymousUserAndFlag",
                 "newPage": false,
                 "searchKey": "featureflag.hashAnonymousUserAndFlag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,9 +375,7 @@
                 "identifier": "Middleware",
                 "newPage": false,
                 "searchKey": "featureflag.Middleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -409,7 +395,9 @@
                 "identifier": "contextWithFeatureFlags",
                 "newPage": false,
                 "searchKey": "featureflag.contextWithFeatureFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

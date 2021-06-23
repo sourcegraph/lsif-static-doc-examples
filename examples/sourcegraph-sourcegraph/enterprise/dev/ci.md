@@ -12,14 +12,11 @@ gen-pipeline.go generates a Buildkite YAML file that tests the entire Sourcegrap
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go

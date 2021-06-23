@@ -4,9 +4,7 @@
     "identifier": "adler32",
     "newPage": true,
     "searchKey": "hash/adler32",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "mod",
                 "newPage": false,
                 "searchKey": "adler32.mod",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "nmax",
                 "newPage": false,
                 "searchKey": "adler32.nmax",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "Size",
                 "newPage": false,
                 "searchKey": "adler32.Size",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +104,9 @@
                 "identifier": "magic",
                 "newPage": false,
                 "searchKey": "adler32.magic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -126,7 +126,9 @@
                 "identifier": "marshaledSize",
                 "newPage": false,
                 "searchKey": "adler32.marshaledSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -149,9 +151,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -169,7 +169,9 @@
                 "identifier": "golden",
                 "newPage": false,
                 "searchKey": "adler32.golden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -192,9 +194,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -212,7 +212,9 @@
                 "identifier": "digest",
                 "newPage": false,
                 "searchKey": "adler32.digest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,7 +232,9 @@
                       "identifier": "update",
                       "newPage": false,
                       "searchKey": "adler32.update",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -250,7 +254,9 @@
                       "identifier": "digest.Reset",
                       "newPage": false,
                       "searchKey": "adler32.digest.Reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -270,7 +276,9 @@
                       "identifier": "digest.Size",
                       "newPage": false,
                       "searchKey": "adler32.digest.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -290,7 +298,9 @@
                       "identifier": "digest.BlockSize",
                       "newPage": false,
                       "searchKey": "adler32.digest.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -310,7 +320,9 @@
                       "identifier": "digest.MarshalBinary",
                       "newPage": false,
                       "searchKey": "adler32.digest.MarshalBinary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -330,7 +342,9 @@
                       "identifier": "digest.UnmarshalBinary",
                       "newPage": false,
                       "searchKey": "adler32.digest.UnmarshalBinary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -350,7 +364,9 @@
                       "identifier": "digest.Write",
                       "newPage": false,
                       "searchKey": "adler32.digest.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -370,7 +386,9 @@
                       "identifier": "digest.Sum32",
                       "newPage": false,
                       "searchKey": "adler32.digest.Sum32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -390,7 +408,9 @@
                       "identifier": "digest.Sum",
                       "newPage": false,
                       "searchKey": "adler32.digest.Sum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -416,9 +436,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -436,9 +454,7 @@
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "adler32.New",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -458,7 +474,9 @@
                 "identifier": "appendUint32",
                 "newPage": false,
                 "searchKey": "adler32.appendUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -478,7 +496,9 @@
                 "identifier": "readUint32",
                 "newPage": false,
                 "searchKey": "adler32.readUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -498,9 +518,7 @@
                 "identifier": "Checksum",
                 "newPage": false,
                 "searchKey": "adler32.Checksum",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -520,7 +538,9 @@
                 "identifier": "checksum",
                 "newPage": false,
                 "searchKey": "adler32.checksum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -540,7 +560,9 @@
                 "identifier": "TestGolden",
                 "newPage": false,
                 "searchKey": "adler32.TestGolden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -560,7 +582,9 @@
                 "identifier": "TestGoldenMarshal",
                 "newPage": false,
                 "searchKey": "adler32.TestGoldenMarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -580,7 +604,9 @@
                 "identifier": "BenchmarkAdler32KB",
                 "newPage": false,
                 "searchKey": "adler32.BenchmarkAdler32KB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

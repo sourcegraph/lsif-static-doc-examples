@@ -4,7 +4,9 @@
     "identifier": "pubsub",
     "newPage": true,
     "searchKey": "internal/pubsub",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "PubSubProjectID",
                 "newPage": false,
                 "searchKey": "pubsub.PubSubProjectID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "PubSubCredentialsFile",
                 "newPage": false,
                 "searchKey": "pubsub.PubSubCredentialsFile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "pubsub.client",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +109,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -125,9 +129,7 @@
                 "identifier": "Enabled",
                 "newPage": false,
                 "searchKey": "pubsub.Enabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -142,12 +144,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/pubsub#init",
+              "pathID": "/internal/pubsub#init.publish.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.publish.go",
                 "newPage": false,
                 "searchKey": "pubsub.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,9 +171,7 @@
                 "identifier": "Publish",
                 "newPage": false,
                 "searchKey": "pubsub.Publish",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

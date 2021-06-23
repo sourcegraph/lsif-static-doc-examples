@@ -53,11 +53,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="GitTarget" href="#GitTarget">type GitTarget struct</a>
 
 ```
 searchKey: apitest.GitTarget
-tags: [exported]
 ```
 
 ```Go
@@ -72,7 +75,6 @@ type GitTarget struct {
 
 ```
 searchKey: apitest.DiffRange
-tags: [exported]
 ```
 
 ```Go
@@ -83,7 +85,6 @@ type DiffRange struct{ StartLine, Lines int }
 
 ```
 searchKey: apitest.DiffStat
-tags: [exported]
 ```
 
 ```Go
@@ -94,7 +95,6 @@ type DiffStat struct{ Added, Deleted, Changed int32 }
 
 ```
 searchKey: apitest.DiffStat.ToDiffStat
-tags: [exported]
 ```
 
 ```Go
@@ -105,7 +105,6 @@ func (ds DiffStat) ToDiffStat() *diff.Stat
 
 ```
 searchKey: apitest.FileDiffHunk
-tags: [exported]
 ```
 
 ```Go
@@ -120,7 +119,6 @@ type FileDiffHunk struct {
 
 ```
 searchKey: apitest.File
-tags: [exported]
 ```
 
 ```Go
@@ -133,7 +131,6 @@ type File struct {
 
 ```
 searchKey: apitest.FileDiff
-tags: [exported]
 ```
 
 ```Go
@@ -149,7 +146,6 @@ type FileDiff struct {
 
 ```
 searchKey: apitest.FileDiffs
-tags: [exported]
 ```
 
 ```Go
@@ -166,7 +162,6 @@ type FileDiffs struct {
 
 ```
 searchKey: apitest.User
-tags: [exported]
 ```
 
 ```Go
@@ -184,7 +179,6 @@ type User struct {
 
 ```
 searchKey: apitest.Org
-tags: [exported]
 ```
 
 ```Go
@@ -200,7 +194,6 @@ type Org struct {
 
 ```
 searchKey: apitest.UserOrg
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +209,6 @@ type UserOrg struct {
 
 ```
 searchKey: apitest.BatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -246,7 +238,6 @@ type BatchChange struct {
 
 ```
 searchKey: apitest.BatchChangeConnection
-tags: [exported]
 ```
 
 ```Go
@@ -261,7 +252,6 @@ type BatchChangeConnection struct {
 
 ```
 searchKey: apitest.ChangesetEvent
-tags: [exported]
 ```
 
 ```Go
@@ -276,7 +266,6 @@ type ChangesetEvent struct {
 
 ```
 searchKey: apitest.ChangesetEventConnection
-tags: [exported]
 ```
 
 ```Go
@@ -291,7 +280,6 @@ type ChangesetEventConnection struct {
 
 ```
 searchKey: apitest.Repository
-tags: [exported]
 ```
 
 ```Go
@@ -305,7 +293,6 @@ type Repository struct {
 
 ```
 searchKey: apitest.ExternalURL
-tags: [exported]
 ```
 
 ```Go
@@ -320,7 +307,6 @@ type ExternalURL struct {
 
 ```
 searchKey: apitest.Changeset
-tags: [exported]
 ```
 
 ```Go
@@ -355,7 +341,6 @@ type Changeset struct {
 
 ```
 searchKey: apitest.Comparison
-tags: [exported]
 ```
 
 ```Go
@@ -369,7 +354,6 @@ type Comparison struct {
 
 ```
 searchKey: apitest.Label
-tags: [exported]
 ```
 
 ```Go
@@ -384,7 +368,6 @@ type Label struct {
 
 ```
 searchKey: apitest.ChangesetConnection
-tags: [exported]
 ```
 
 ```Go
@@ -399,7 +382,6 @@ type ChangesetConnection struct {
 
 ```
 searchKey: apitest.ChangesetsStats
-tags: [exported]
 ```
 
 ```Go
@@ -418,7 +400,6 @@ type ChangesetsStats struct {
 
 ```
 searchKey: apitest.ChangesetCounts
-tags: [exported]
 ```
 
 ```Go
@@ -439,7 +420,6 @@ type ChangesetCounts struct {
 
 ```
 searchKey: apitest.BatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -480,7 +460,6 @@ type BatchSpec struct {
 
 ```
 searchKey: apitest.ChangesetSpecDelta
-tags: [exported]
 ```
 
 ```Go
@@ -502,7 +481,6 @@ ChangesetSpecDelta is the delta between two ChangesetSpecs describing the same C
 
 ```
 searchKey: apitest.ChangesetSpec
-tags: [exported]
 ```
 
 ```Go
@@ -520,7 +498,6 @@ type ChangesetSpec struct {
 
 ```
 searchKey: apitest.ChangesetSpecConnection
-tags: [exported]
 ```
 
 ```Go
@@ -535,7 +512,6 @@ type ChangesetSpecConnection struct {
 
 ```
 searchKey: apitest.ChangesetApplyPreviewConnection
-tags: [exported]
 ```
 
 ```Go
@@ -551,7 +527,6 @@ type ChangesetApplyPreviewConnection struct {
 
 ```
 searchKey: apitest.ChangesetApplyPreviewConnectionStats
-tags: [exported]
 ```
 
 ```Go
@@ -574,7 +549,6 @@ type ChangesetApplyPreviewConnectionStats struct {
 
 ```
 searchKey: apitest.ChangesetApplyPreview
-tags: [exported]
 ```
 
 ```Go
@@ -591,7 +565,6 @@ type ChangesetApplyPreview struct {
 
 ```
 searchKey: apitest.ChangesetApplyPreviewTargets
-tags: [exported]
 ```
 
 ```Go
@@ -607,7 +580,6 @@ type ChangesetApplyPreviewTargets struct {
 
 ```
 searchKey: apitest.ChangesetSpecDescription
-tags: [exported]
 ```
 
 ```Go
@@ -639,7 +611,6 @@ type ChangesetSpecDescription struct {
 
 ```
 searchKey: apitest.GitCommitDescription
-tags: [exported]
 ```
 
 ```Go
@@ -656,7 +627,6 @@ type GitCommitDescription struct {
 
 ```
 searchKey: apitest.PageInfo
-tags: [exported]
 ```
 
 ```Go
@@ -670,7 +640,6 @@ type PageInfo struct {
 
 ```
 searchKey: apitest.Person
-tags: [exported]
 ```
 
 ```Go
@@ -685,7 +654,6 @@ type Person struct {
 
 ```
 searchKey: apitest.BatchChangesCredential
-tags: [exported]
 ```
 
 ```Go
@@ -702,7 +670,6 @@ type BatchChangesCredential struct {
 
 ```
 searchKey: apitest.EmptyResponse
-tags: [exported]
 ```
 
 ```Go
@@ -715,7 +682,6 @@ type EmptyResponse struct {
 
 ```
 searchKey: apitest.BatchChangesCodeHostsConnection
-tags: [exported]
 ```
 
 ```Go
@@ -730,7 +696,6 @@ type BatchChangesCodeHostsConnection struct {
 
 ```
 searchKey: apitest.BatchChangesCodeHost
-tags: [exported]
 ```
 
 ```Go
@@ -745,7 +710,6 @@ type BatchChangesCodeHost struct {
 
 ```
 searchKey: apitest.BulkOperation
-tags: [exported]
 ```
 
 ```Go
@@ -764,7 +728,6 @@ type BulkOperation struct {
 
 ```
 searchKey: apitest.ChangesetJobError
-tags: [exported]
 ```
 
 ```Go
@@ -778,7 +741,6 @@ type ChangesetJobError struct {
 
 ```
 searchKey: apitest.BulkOperationConnection
-tags: [exported]
 ```
 
 ```Go
@@ -791,11 +753,14 @@ type BulkOperationConnection struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MustExec" href="#MustExec">func MustExec(ctx context.Context,...</a>
 
 ```
 searchKey: apitest.MustExec
-tags: [exported]
 ```
 
 ```Go
@@ -815,7 +780,6 @@ MustExec uses Exec to execute the given query and calls t.Fatalf if Exec failed.
 
 ```
 searchKey: apitest.Exec
-tags: [exported]
 ```
 
 ```Go
@@ -835,6 +799,7 @@ Exec executes the given query with the given input in the given graphql.Schema. 
 
 ```
 searchKey: apitest.toJSON
+tags: [private]
 ```
 
 ```Go

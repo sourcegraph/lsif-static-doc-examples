@@ -87,14 +87,11 @@ The syslog package is frozen and is not accepting new features. Some external pa
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="severityMask" href="#severityMask">const severityMask</a>
 
 ```
 searchKey: syslog.severityMask
+tags: [private]
 ```
 
 ```Go
@@ -105,6 +102,7 @@ const severityMask = 0x07
 
 ```
 searchKey: syslog.facilityMask
+tags: [private]
 ```
 
 ```Go
@@ -115,7 +113,6 @@ const facilityMask = 0xf8
 
 ```
 searchKey: syslog.LOG_EMERG
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +125,6 @@ From /usr/include/sys/syslog.h. These are the same on Linux, BSD, and OS X.
 
 ```
 searchKey: syslog.LOG_ALERT
-tags: [exported]
 ```
 
 ```Go
@@ -139,7 +135,6 @@ const LOG_ALERT
 
 ```
 searchKey: syslog.LOG_CRIT
-tags: [exported]
 ```
 
 ```Go
@@ -150,7 +145,6 @@ const LOG_CRIT
 
 ```
 searchKey: syslog.LOG_ERR
-tags: [exported]
 ```
 
 ```Go
@@ -161,7 +155,6 @@ const LOG_ERR
 
 ```
 searchKey: syslog.LOG_WARNING
-tags: [exported]
 ```
 
 ```Go
@@ -172,7 +165,6 @@ const LOG_WARNING
 
 ```
 searchKey: syslog.LOG_NOTICE
-tags: [exported]
 ```
 
 ```Go
@@ -183,7 +175,6 @@ const LOG_NOTICE
 
 ```
 searchKey: syslog.LOG_INFO
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +185,6 @@ const LOG_INFO
 
 ```
 searchKey: syslog.LOG_DEBUG
-tags: [exported]
 ```
 
 ```Go
@@ -205,7 +195,6 @@ const LOG_DEBUG
 
 ```
 searchKey: syslog.LOG_KERN
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +207,6 @@ From /usr/include/sys/syslog.h. These are the same up to LOG_FTP on Linux, BSD, 
 
 ```
 searchKey: syslog.LOG_USER
-tags: [exported]
 ```
 
 ```Go
@@ -229,7 +217,6 @@ const LOG_USER
 
 ```
 searchKey: syslog.LOG_MAIL
-tags: [exported]
 ```
 
 ```Go
@@ -240,7 +227,6 @@ const LOG_MAIL
 
 ```
 searchKey: syslog.LOG_DAEMON
-tags: [exported]
 ```
 
 ```Go
@@ -251,7 +237,6 @@ const LOG_DAEMON
 
 ```
 searchKey: syslog.LOG_AUTH
-tags: [exported]
 ```
 
 ```Go
@@ -262,7 +247,6 @@ const LOG_AUTH
 
 ```
 searchKey: syslog.LOG_SYSLOG
-tags: [exported]
 ```
 
 ```Go
@@ -273,7 +257,6 @@ const LOG_SYSLOG
 
 ```
 searchKey: syslog.LOG_LPR
-tags: [exported]
 ```
 
 ```Go
@@ -284,7 +267,6 @@ const LOG_LPR
 
 ```
 searchKey: syslog.LOG_NEWS
-tags: [exported]
 ```
 
 ```Go
@@ -295,7 +277,6 @@ const LOG_NEWS
 
 ```
 searchKey: syslog.LOG_UUCP
-tags: [exported]
 ```
 
 ```Go
@@ -306,7 +287,6 @@ const LOG_UUCP
 
 ```
 searchKey: syslog.LOG_CRON
-tags: [exported]
 ```
 
 ```Go
@@ -317,7 +297,6 @@ const LOG_CRON
 
 ```
 searchKey: syslog.LOG_AUTHPRIV
-tags: [exported]
 ```
 
 ```Go
@@ -328,7 +307,6 @@ const LOG_AUTHPRIV
 
 ```
 searchKey: syslog.LOG_FTP
-tags: [exported]
 ```
 
 ```Go
@@ -339,7 +317,6 @@ const LOG_FTP
 
 ```
 searchKey: syslog.LOG_LOCAL0
-tags: [exported]
 ```
 
 ```Go
@@ -350,7 +327,6 @@ const LOG_LOCAL0
 
 ```
 searchKey: syslog.LOG_LOCAL1
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +337,6 @@ const LOG_LOCAL1
 
 ```
 searchKey: syslog.LOG_LOCAL2
-tags: [exported]
 ```
 
 ```Go
@@ -372,7 +347,6 @@ const LOG_LOCAL2
 
 ```
 searchKey: syslog.LOG_LOCAL3
-tags: [exported]
 ```
 
 ```Go
@@ -383,7 +357,6 @@ const LOG_LOCAL3
 
 ```
 searchKey: syslog.LOG_LOCAL4
-tags: [exported]
 ```
 
 ```Go
@@ -394,7 +367,6 @@ const LOG_LOCAL4
 
 ```
 searchKey: syslog.LOG_LOCAL5
-tags: [exported]
 ```
 
 ```Go
@@ -405,7 +377,6 @@ const LOG_LOCAL5
 
 ```
 searchKey: syslog.LOG_LOCAL6
-tags: [exported]
 ```
 
 ```Go
@@ -416,7 +387,6 @@ const LOG_LOCAL6
 
 ```
 searchKey: syslog.LOG_LOCAL7
-tags: [exported]
 ```
 
 ```Go
@@ -425,14 +395,11 @@ const LOG_LOCAL7
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="crashy" href="#crashy">var crashy</a>
 
 ```
 searchKey: syslog.crashy
+tags: [private]
 ```
 
 ```Go
@@ -441,15 +408,10 @@ var crashy = false
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Priority" href="#Priority">type Priority int</a>
 
 ```
 searchKey: syslog.Priority
-tags: [exported]
 ```
 
 ```Go
@@ -462,7 +424,6 @@ The Priority is a combination of the syslog facility and severity. For example, 
 
 ```
 searchKey: syslog.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -484,7 +445,6 @@ A Writer is a connection to a syslog server.
 
 ```
 searchKey: syslog.New
-tags: [exported]
 ```
 
 ```Go
@@ -497,7 +457,6 @@ New establishes a new connection to the system log daemon. Each write to the ret
 
 ```
 searchKey: syslog.Dial
-tags: [exported]
 ```
 
 ```Go
@@ -510,6 +469,7 @@ Dial establishes a connection to a log daemon by connecting to address raddr on 
 
 ```
 searchKey: syslog.Writer.connect
+tags: [private]
 ```
 
 ```Go
@@ -522,7 +482,6 @@ connect makes a connection to the syslog server. It must be called with w.mu hel
 
 ```
 searchKey: syslog.Writer.Write
-tags: [exported]
 ```
 
 ```Go
@@ -535,7 +494,6 @@ Write sends a log message to the syslog daemon.
 
 ```
 searchKey: syslog.Writer.Close
-tags: [exported]
 ```
 
 ```Go
@@ -548,7 +506,6 @@ Close closes a connection to the syslog daemon.
 
 ```
 searchKey: syslog.Writer.Emerg
-tags: [exported]
 ```
 
 ```Go
@@ -561,7 +518,6 @@ Emerg logs a message with severity LOG_EMERG, ignoring the severity passed to Ne
 
 ```
 searchKey: syslog.Writer.Alert
-tags: [exported]
 ```
 
 ```Go
@@ -574,7 +530,6 @@ Alert logs a message with severity LOG_ALERT, ignoring the severity passed to Ne
 
 ```
 searchKey: syslog.Writer.Crit
-tags: [exported]
 ```
 
 ```Go
@@ -587,7 +542,6 @@ Crit logs a message with severity LOG_CRIT, ignoring the severity passed to New.
 
 ```
 searchKey: syslog.Writer.Err
-tags: [exported]
 ```
 
 ```Go
@@ -600,7 +554,6 @@ Err logs a message with severity LOG_ERR, ignoring the severity passed to New.
 
 ```
 searchKey: syslog.Writer.Warning
-tags: [exported]
 ```
 
 ```Go
@@ -613,7 +566,6 @@ Warning logs a message with severity LOG_WARNING, ignoring the severity passed t
 
 ```
 searchKey: syslog.Writer.Notice
-tags: [exported]
 ```
 
 ```Go
@@ -626,7 +578,6 @@ Notice logs a message with severity LOG_NOTICE, ignoring the severity passed to 
 
 ```
 searchKey: syslog.Writer.Info
-tags: [exported]
 ```
 
 ```Go
@@ -639,7 +590,6 @@ Info logs a message with severity LOG_INFO, ignoring the severity passed to New.
 
 ```
 searchKey: syslog.Writer.Debug
-tags: [exported]
 ```
 
 ```Go
@@ -652,6 +602,7 @@ Debug logs a message with severity LOG_DEBUG, ignoring the severity passed to Ne
 
 ```
 searchKey: syslog.Writer.writeAndRetry
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +613,7 @@ func (w *Writer) writeAndRetry(p Priority, s string) (int, error)
 
 ```
 searchKey: syslog.Writer.write
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +626,7 @@ write generates and writes a syslog formatted string. The format is as follows: 
 
 ```
 searchKey: syslog.serverConn
+tags: [private]
 ```
 
 ```Go
@@ -689,6 +642,7 @@ This interface and the separate syslog_unix.go file exist for Solaris support as
 
 ```
 searchKey: syslog.unixSyslog
+tags: [private]
 ```
 
 ```Go
@@ -699,6 +653,7 @@ func unixSyslog() (conn serverConn, err error)
 
 ```
 searchKey: syslog.netConn
+tags: [private]
 ```
 
 ```Go
@@ -712,6 +667,7 @@ type netConn struct {
 
 ```
 searchKey: syslog.netConn.writeString
+tags: [private]
 ```
 
 ```Go
@@ -722,6 +678,7 @@ func (n *netConn) writeString(p Priority, hostname, tag, msg, nl string) error
 
 ```
 searchKey: syslog.netConn.close
+tags: [private]
 ```
 
 ```Go
@@ -730,15 +687,10 @@ func (n *netConn) close() error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NewLogger" href="#NewLogger">func NewLogger(p Priority, logFlag int) (*log.Logger, error)</a>
 
 ```
 searchKey: syslog.NewLogger
-tags: [exported]
 ```
 
 ```Go
@@ -751,6 +703,7 @@ NewLogger creates a log.Logger whose output is written to the system log service
 
 ```
 searchKey: syslog.runPktSyslog
+tags: [private]
 ```
 
 ```Go
@@ -761,6 +714,7 @@ func runPktSyslog(c net.PacketConn, done chan<- string)
 
 ```
 searchKey: syslog.testableNetwork
+tags: [private]
 ```
 
 ```Go
@@ -771,6 +725,7 @@ func testableNetwork(network string) bool
 
 ```
 searchKey: syslog.runStreamSyslog
+tags: [private]
 ```
 
 ```Go
@@ -781,6 +736,7 @@ func runStreamSyslog(l net.Listener, done chan<- string, wg *sync.WaitGroup)
 
 ```
 searchKey: syslog.startServer
+tags: [private]
 ```
 
 ```Go
@@ -791,6 +747,7 @@ func startServer(n, la string, done chan<- string) (addr string, sock io.Closer,
 
 ```
 searchKey: syslog.TestWithSimulated
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +758,7 @@ func TestWithSimulated(t *testing.T)
 
 ```
 searchKey: syslog.TestFlap
+tags: [private]
 ```
 
 ```Go
@@ -811,6 +769,7 @@ func TestFlap(t *testing.T)
 
 ```
 searchKey: syslog.TestNew
+tags: [private]
 ```
 
 ```Go
@@ -821,6 +780,7 @@ func TestNew(t *testing.T)
 
 ```
 searchKey: syslog.TestNewLogger
+tags: [private]
 ```
 
 ```Go
@@ -831,6 +791,7 @@ func TestNewLogger(t *testing.T)
 
 ```
 searchKey: syslog.TestDial
+tags: [private]
 ```
 
 ```Go
@@ -841,6 +802,7 @@ func TestDial(t *testing.T)
 
 ```
 searchKey: syslog.check
+tags: [private]
 ```
 
 ```Go
@@ -851,6 +813,7 @@ func check(t *testing.T, in, out, transport string)
 
 ```
 searchKey: syslog.TestWrite
+tags: [private]
 ```
 
 ```Go
@@ -861,6 +824,7 @@ func TestWrite(t *testing.T)
 
 ```
 searchKey: syslog.TestConcurrentWrite
+tags: [private]
 ```
 
 ```Go
@@ -871,6 +835,7 @@ func TestConcurrentWrite(t *testing.T)
 
 ```
 searchKey: syslog.TestConcurrentReconnect
+tags: [private]
 ```
 
 ```Go

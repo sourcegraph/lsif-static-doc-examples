@@ -389,7 +389,7 @@ For debugging, the result of t.String does include the monotonic clock reading i
     * [func ZoneinfoForTesting() *string](#ZoneinfoForTesting)
     * [func ResetZoneinfoForTesting()](#ResetZoneinfoForTesting)
     * [func LoadFromEmbeddedTZData(zone string) (string, error)](#LoadFromEmbeddedTZData)
-    * [func init()](#init)
+    * [func init()](#init.internal_test.go)
     * [func initTestingZone()](#initTestingZone)
     * [func forceZipFileForTesting(zipOnly bool)](#forceZipFileForTesting)
     * [func empty(arg interface{}, seq uintptr)](#empty)
@@ -398,15 +398,10 @@ For debugging, the result of t.String does include the monotonic clock reading i
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Layout" href="#Layout">const Layout</a>
 
 ```
 searchKey: time.Layout
-tags: [exported]
 ```
 
 ```Go
@@ -478,7 +473,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.ANSIC
-tags: [exported]
 ```
 
 ```Go
@@ -549,7 +543,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.UnixDate
-tags: [exported]
 ```
 
 ```Go
@@ -620,7 +613,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RubyDate
-tags: [exported]
 ```
 
 ```Go
@@ -691,7 +683,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RFC822
-tags: [exported]
 ```
 
 ```Go
@@ -762,7 +753,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RFC822Z
-tags: [exported]
 ```
 
 ```Go
@@ -834,7 +824,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RFC850
-tags: [exported]
 ```
 
 ```Go
@@ -905,7 +894,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RFC1123
-tags: [exported]
 ```
 
 ```Go
@@ -976,7 +964,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RFC1123Z
-tags: [exported]
 ```
 
 ```Go
@@ -1048,7 +1035,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RFC3339
-tags: [exported]
 ```
 
 ```Go
@@ -1119,7 +1105,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RFC3339Nano
-tags: [exported]
 ```
 
 ```Go
@@ -1190,7 +1175,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.Kitchen
-tags: [exported]
 ```
 
 ```Go
@@ -1261,7 +1245,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.Stamp
-tags: [exported]
 ```
 
 ```Go
@@ -1334,7 +1317,6 @@ Handy time stamps.
 
 ```
 searchKey: time.StampMilli
-tags: [exported]
 ```
 
 ```Go
@@ -1405,7 +1387,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.StampMicro
-tags: [exported]
 ```
 
 ```Go
@@ -1476,7 +1457,6 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.StampNano
-tags: [exported]
 ```
 
 ```Go
@@ -1547,6 +1527,7 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.stdLongMonth
+tags: [private]
 ```
 
 ```Go
@@ -1558,6 +1539,7 @@ const stdLongMonth = iota + stdNeedDate // "January"
 
 ```
 searchKey: time.stdMonth
+tags: [private]
 ```
 
 ```Go
@@ -1569,6 +1551,7 @@ const stdMonth // "Jan"
 
 ```
 searchKey: time.stdNumMonth
+tags: [private]
 ```
 
 ```Go
@@ -1580,6 +1563,7 @@ const stdNumMonth // "1"
 
 ```
 searchKey: time.stdZeroMonth
+tags: [private]
 ```
 
 ```Go
@@ -1591,6 +1575,7 @@ const stdZeroMonth // "01"
 
 ```
 searchKey: time.stdLongWeekDay
+tags: [private]
 ```
 
 ```Go
@@ -1602,6 +1587,7 @@ const stdLongWeekDay // "Monday"
 
 ```
 searchKey: time.stdWeekDay
+tags: [private]
 ```
 
 ```Go
@@ -1613,6 +1599,7 @@ const stdWeekDay // "Mon"
 
 ```
 searchKey: time.stdDay
+tags: [private]
 ```
 
 ```Go
@@ -1624,6 +1611,7 @@ const stdDay // "2"
 
 ```
 searchKey: time.stdUnderDay
+tags: [private]
 ```
 
 ```Go
@@ -1635,6 +1623,7 @@ const stdUnderDay // "_2"
 
 ```
 searchKey: time.stdZeroDay
+tags: [private]
 ```
 
 ```Go
@@ -1646,6 +1635,7 @@ const stdZeroDay // "02"
 
 ```
 searchKey: time.stdUnderYearDay
+tags: [private]
 ```
 
 ```Go
@@ -1657,6 +1647,7 @@ const stdUnderYearDay // "__2"
 
 ```
 searchKey: time.stdZeroYearDay
+tags: [private]
 ```
 
 ```Go
@@ -1668,6 +1659,7 @@ const stdZeroYearDay // "002"
 
 ```
 searchKey: time.stdHour
+tags: [private]
 ```
 
 ```Go
@@ -1679,6 +1671,7 @@ const stdHour = iota + stdNeedClock // "15"
 
 ```
 searchKey: time.stdHour12
+tags: [private]
 ```
 
 ```Go
@@ -1690,6 +1683,7 @@ const stdHour12 // "3"
 
 ```
 searchKey: time.stdZeroHour12
+tags: [private]
 ```
 
 ```Go
@@ -1701,6 +1695,7 @@ const stdZeroHour12 // "03"
 
 ```
 searchKey: time.stdMinute
+tags: [private]
 ```
 
 ```Go
@@ -1712,6 +1707,7 @@ const stdMinute // "4"
 
 ```
 searchKey: time.stdZeroMinute
+tags: [private]
 ```
 
 ```Go
@@ -1723,6 +1719,7 @@ const stdZeroMinute // "04"
 
 ```
 searchKey: time.stdSecond
+tags: [private]
 ```
 
 ```Go
@@ -1734,6 +1731,7 @@ const stdSecond // "5"
 
 ```
 searchKey: time.stdZeroSecond
+tags: [private]
 ```
 
 ```Go
@@ -1745,6 +1743,7 @@ const stdZeroSecond // "05"
 
 ```
 searchKey: time.stdLongYear
+tags: [private]
 ```
 
 ```Go
@@ -1756,6 +1755,7 @@ const stdLongYear = iota + stdNeedDate // "2006"
 
 ```
 searchKey: time.stdYear
+tags: [private]
 ```
 
 ```Go
@@ -1767,6 +1767,7 @@ const stdYear // "06"
 
 ```
 searchKey: time.stdPM
+tags: [private]
 ```
 
 ```Go
@@ -1778,6 +1779,7 @@ const stdPM = iota + stdNeedClock // "PM"
 
 ```
 searchKey: time.stdpm
+tags: [private]
 ```
 
 ```Go
@@ -1789,6 +1791,7 @@ const stdpm // "pm"
 
 ```
 searchKey: time.stdTZ
+tags: [private]
 ```
 
 ```Go
@@ -1800,6 +1803,7 @@ const stdTZ = iota // "MST"
 
 ```
 searchKey: time.stdISO8601TZ
+tags: [private]
 ```
 
 ```Go
@@ -1811,6 +1815,7 @@ const stdISO8601TZ // "Z0700"  // prints Z for UTC
 
 ```
 searchKey: time.stdISO8601SecondsTZ
+tags: [private]
 ```
 
 ```Go
@@ -1822,6 +1827,7 @@ const stdISO8601SecondsTZ // "Z070000"
 
 ```
 searchKey: time.stdISO8601ShortTZ
+tags: [private]
 ```
 
 ```Go
@@ -1833,6 +1839,7 @@ const stdISO8601ShortTZ // "Z07"
 
 ```
 searchKey: time.stdISO8601ColonTZ
+tags: [private]
 ```
 
 ```Go
@@ -1844,6 +1851,7 @@ const stdISO8601ColonTZ // "Z07:00" // prints Z for UTC
 
 ```
 searchKey: time.stdISO8601ColonSecondsTZ
+tags: [private]
 ```
 
 ```Go
@@ -1855,6 +1863,7 @@ const stdISO8601ColonSecondsTZ // "Z07:00:00"
 
 ```
 searchKey: time.stdNumTZ
+tags: [private]
 ```
 
 ```Go
@@ -1866,6 +1875,7 @@ const stdNumTZ // "-0700"  // always numeric
 
 ```
 searchKey: time.stdNumSecondsTz
+tags: [private]
 ```
 
 ```Go
@@ -1877,6 +1887,7 @@ const stdNumSecondsTz // "-070000"
 
 ```
 searchKey: time.stdNumShortTZ
+tags: [private]
 ```
 
 ```Go
@@ -1888,6 +1899,7 @@ const stdNumShortTZ // "-07"    // always numeric
 
 ```
 searchKey: time.stdNumColonTZ
+tags: [private]
 ```
 
 ```Go
@@ -1899,6 +1911,7 @@ const stdNumColonTZ // "-07:00" // always numeric
 
 ```
 searchKey: time.stdNumColonSecondsTZ
+tags: [private]
 ```
 
 ```Go
@@ -1910,6 +1923,7 @@ const stdNumColonSecondsTZ // "-07:00:00"
 
 ```
 searchKey: time.stdFracSecond0
+tags: [private]
 ```
 
 ```Go
@@ -1921,6 +1935,7 @@ const stdFracSecond0 // ".0", ".00", ... , trailing zeros included
 
 ```
 searchKey: time.stdFracSecond9
+tags: [private]
 ```
 
 ```Go
@@ -1932,6 +1947,7 @@ const stdFracSecond9 // ".9", ".99", ..., trailing zeros omitted
 
 ```
 searchKey: time.stdNeedDate
+tags: [private]
 ```
 
 ```Go
@@ -1943,6 +1959,7 @@ const stdNeedDate = 1 << 8 // need month, day, year
 
 ```
 searchKey: time.stdNeedClock
+tags: [private]
 ```
 
 ```Go
@@ -1954,6 +1971,7 @@ const stdNeedClock = 2 << 8 // need hour, minute, second
 
 ```
 searchKey: time.stdArgShift
+tags: [private]
 ```
 
 ```Go
@@ -1965,6 +1983,7 @@ const stdArgShift = 16 // extra argument in high bits, above low stdArgShift
 
 ```
 searchKey: time.stdMask
+tags: [private]
 ```
 
 ```Go
@@ -1976,6 +1995,7 @@ const stdMask = 1<<stdArgShift - 1 // mask out argument
 
 ```
 searchKey: time.runeSelf
+tags: [private]
 ```
 
 ```Go
@@ -1988,6 +2008,7 @@ These are borrowed from unicode/utf8 and strconv and replicate behavior in that 
 
 ```
 searchKey: time.lowerhex
+tags: [private]
 ```
 
 ```Go
@@ -1998,6 +2019,7 @@ const lowerhex = "0123456789abcdef"
 
 ```
 searchKey: time.hasMonotonic
+tags: [private]
 ```
 
 ```Go
@@ -2008,6 +2030,7 @@ const hasMonotonic = 1 << 63
 
 ```
 searchKey: time.maxWall
+tags: [private]
 ```
 
 ```Go
@@ -2019,6 +2042,7 @@ const maxWall = wallToInternal + (1<<33 - 1) // year 2157
 
 ```
 searchKey: time.minWall
+tags: [private]
 ```
 
 ```Go
@@ -2030,6 +2054,7 @@ const minWall = wallToInternal // year 1885
 
 ```
 searchKey: time.nsecMask
+tags: [private]
 ```
 
 ```Go
@@ -2040,6 +2065,7 @@ const nsecMask = 1<<30 - 1
 
 ```
 searchKey: time.nsecShift
+tags: [private]
 ```
 
 ```Go
@@ -2050,7 +2076,6 @@ const nsecShift = 30
 
 ```
 searchKey: time.January
-tags: [exported]
 ```
 
 ```Go
@@ -2061,7 +2086,6 @@ const January Month = 1 + iota
 
 ```
 searchKey: time.February
-tags: [exported]
 ```
 
 ```Go
@@ -2072,7 +2096,6 @@ const February
 
 ```
 searchKey: time.March
-tags: [exported]
 ```
 
 ```Go
@@ -2083,7 +2106,6 @@ const March
 
 ```
 searchKey: time.April
-tags: [exported]
 ```
 
 ```Go
@@ -2094,7 +2116,6 @@ const April
 
 ```
 searchKey: time.May
-tags: [exported]
 ```
 
 ```Go
@@ -2105,7 +2126,6 @@ const May
 
 ```
 searchKey: time.June
-tags: [exported]
 ```
 
 ```Go
@@ -2116,7 +2136,6 @@ const June
 
 ```
 searchKey: time.July
-tags: [exported]
 ```
 
 ```Go
@@ -2127,7 +2146,6 @@ const July
 
 ```
 searchKey: time.August
-tags: [exported]
 ```
 
 ```Go
@@ -2138,7 +2156,6 @@ const August
 
 ```
 searchKey: time.September
-tags: [exported]
 ```
 
 ```Go
@@ -2149,7 +2166,6 @@ const September
 
 ```
 searchKey: time.October
-tags: [exported]
 ```
 
 ```Go
@@ -2160,7 +2176,6 @@ const October
 
 ```
 searchKey: time.November
-tags: [exported]
 ```
 
 ```Go
@@ -2171,7 +2186,6 @@ const November
 
 ```
 searchKey: time.December
-tags: [exported]
 ```
 
 ```Go
@@ -2182,7 +2196,6 @@ const December
 
 ```
 searchKey: time.Sunday
-tags: [exported]
 ```
 
 ```Go
@@ -2193,7 +2206,6 @@ const Sunday Weekday = iota
 
 ```
 searchKey: time.Monday
-tags: [exported]
 ```
 
 ```Go
@@ -2204,7 +2216,6 @@ const Monday
 
 ```
 searchKey: time.Tuesday
-tags: [exported]
 ```
 
 ```Go
@@ -2215,7 +2226,6 @@ const Tuesday
 
 ```
 searchKey: time.Wednesday
-tags: [exported]
 ```
 
 ```Go
@@ -2226,7 +2236,6 @@ const Wednesday
 
 ```
 searchKey: time.Thursday
-tags: [exported]
 ```
 
 ```Go
@@ -2237,7 +2246,6 @@ const Thursday
 
 ```
 searchKey: time.Friday
-tags: [exported]
 ```
 
 ```Go
@@ -2248,7 +2256,6 @@ const Friday
 
 ```
 searchKey: time.Saturday
-tags: [exported]
 ```
 
 ```Go
@@ -2259,6 +2266,7 @@ const Saturday
 
 ```
 searchKey: time.absoluteZeroYear
+tags: [private]
 ```
 
 ```Go
@@ -2271,6 +2279,7 @@ The unsigned zero year for internal calculations. Must be 1 mod 400, and times b
 
 ```
 searchKey: time.internalYear
+tags: [private]
 ```
 
 ```Go
@@ -2283,6 +2292,7 @@ The year of the zero Time. Assumed by the unixToInternal computation below.
 
 ```
 searchKey: time.absoluteToInternal
+tags: [private]
 ```
 
 ```Go
@@ -2295,6 +2305,7 @@ Offsets to convert between internal and absolute or Unix times.
 
 ```
 searchKey: time.internalToAbsolute
+tags: [private]
 ```
 
 ```Go
@@ -2305,6 +2316,7 @@ const internalToAbsolute = -absoluteToInternal
 
 ```
 searchKey: time.unixToInternal
+tags: [private]
 ```
 
 ```Go
@@ -2315,6 +2327,7 @@ const unixToInternal int64 = (1969*365 + 1969/4 - 1969/100 + 1969/400) * seconds
 
 ```
 searchKey: time.internalToUnix
+tags: [private]
 ```
 
 ```Go
@@ -2325,6 +2338,7 @@ const internalToUnix int64 = -unixToInternal
 
 ```
 searchKey: time.wallToInternal
+tags: [private]
 ```
 
 ```Go
@@ -2335,6 +2349,7 @@ const wallToInternal int64 = (1884*365 + 1884/4 - 1884/100 + 1884/400) * seconds
 
 ```
 searchKey: time.internalToWall
+tags: [private]
 ```
 
 ```Go
@@ -2345,6 +2360,7 @@ const internalToWall int64 = -wallToInternal
 
 ```
 searchKey: time.minDuration
+tags: [private]
 ```
 
 ```Go
@@ -2355,6 +2371,7 @@ const minDuration Duration = -1 << 63
 
 ```
 searchKey: time.maxDuration
+tags: [private]
 ```
 
 ```Go
@@ -2365,7 +2382,6 @@ const maxDuration Duration = 1<<63 - 1
 
 ```
 searchKey: time.Nanosecond
-tags: [exported]
 ```
 
 ```Go
@@ -2392,7 +2408,6 @@ fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 
 ```
 searchKey: time.Microsecond
-tags: [exported]
 ```
 
 ```Go
@@ -2419,7 +2434,6 @@ fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 
 ```
 searchKey: time.Millisecond
-tags: [exported]
 ```
 
 ```Go
@@ -2446,7 +2460,6 @@ fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 
 ```
 searchKey: time.Second
-tags: [exported]
 ```
 
 ```Go
@@ -2473,7 +2486,6 @@ fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 
 ```
 searchKey: time.Minute
-tags: [exported]
 ```
 
 ```Go
@@ -2500,7 +2512,6 @@ fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 
 ```
 searchKey: time.Hour
-tags: [exported]
 ```
 
 ```Go
@@ -2527,6 +2538,7 @@ fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 
 ```
 searchKey: time.secondsPerMinute
+tags: [private]
 ```
 
 ```Go
@@ -2537,6 +2549,7 @@ const secondsPerMinute = 60
 
 ```
 searchKey: time.secondsPerHour
+tags: [private]
 ```
 
 ```Go
@@ -2547,6 +2560,7 @@ const secondsPerHour = 60 * secondsPerMinute
 
 ```
 searchKey: time.secondsPerDay
+tags: [private]
 ```
 
 ```Go
@@ -2557,6 +2571,7 @@ const secondsPerDay = 24 * secondsPerHour
 
 ```
 searchKey: time.secondsPerWeek
+tags: [private]
 ```
 
 ```Go
@@ -2567,6 +2582,7 @@ const secondsPerWeek = 7 * secondsPerDay
 
 ```
 searchKey: time.daysPer400Years
+tags: [private]
 ```
 
 ```Go
@@ -2577,6 +2593,7 @@ const daysPer400Years = 365*400 + 97
 
 ```
 searchKey: time.daysPer100Years
+tags: [private]
 ```
 
 ```Go
@@ -2587,6 +2604,7 @@ const daysPer100Years = 365*100 + 24
 
 ```
 searchKey: time.daysPer4Years
+tags: [private]
 ```
 
 ```Go
@@ -2597,6 +2615,7 @@ const daysPer4Years = 365*4 + 1
 
 ```
 searchKey: time.timeBinaryVersion
+tags: [private]
 ```
 
 ```Go
@@ -2607,6 +2626,7 @@ const timeBinaryVersion byte = 1
 
 ```
 searchKey: time.alpha
+tags: [private]
 ```
 
 ```Go
@@ -2620,6 +2640,7 @@ alpha and omega are the beginning and end of time for zone transitions.
 
 ```
 searchKey: time.omega
+tags: [private]
 ```
 
 ```Go
@@ -2633,6 +2654,7 @@ alpha and omega are the beginning and end of time for zone transitions.
 
 ```
 searchKey: time.ruleJulian
+tags: [private]
 ```
 
 ```Go
@@ -2643,6 +2665,7 @@ const ruleJulian ruleKind = iota
 
 ```
 searchKey: time.ruleDOY
+tags: [private]
 ```
 
 ```Go
@@ -2653,6 +2676,7 @@ const ruleDOY
 
 ```
 searchKey: time.ruleMonthWeekDay
+tags: [private]
 ```
 
 ```Go
@@ -2663,6 +2687,7 @@ const ruleMonthWeekDay
 
 ```
 searchKey: time.maxFileSize
+tags: [private]
 ```
 
 ```Go
@@ -2675,6 +2700,7 @@ maxFileSize is the max permitted size of files read by readFile. As reference, t
 
 ```
 searchKey: time.seekStart
+tags: [private]
 ```
 
 ```Go
@@ -2687,6 +2713,7 @@ Copies of io.Seek* constants to avoid importing "io":
 
 ```
 searchKey: time.seekCurrent
+tags: [private]
 ```
 
 ```Go
@@ -2699,6 +2726,7 @@ Copies of io.Seek* constants to avoid importing "io":
 
 ```
 searchKey: time.seekEnd
+tags: [private]
 ```
 
 ```Go
@@ -2711,6 +2739,7 @@ Copies of io.Seek* constants to avoid importing "io":
 
 ```
 searchKey: time.RuleJulian
+tags: [private]
 ```
 
 ```Go
@@ -2721,6 +2750,7 @@ const RuleJulian = RuleKind(ruleJulian)
 
 ```
 searchKey: time.RuleDOY
+tags: [private]
 ```
 
 ```Go
@@ -2731,6 +2761,7 @@ const RuleDOY = RuleKind(ruleDOY)
 
 ```
 searchKey: time.RuleMonthWeekDay
+tags: [private]
 ```
 
 ```Go
@@ -2741,6 +2772,7 @@ const RuleMonthWeekDay = RuleKind(ruleMonthWeekDay)
 
 ```
 searchKey: time.UnixToInternal
+tags: [private]
 ```
 
 ```Go
@@ -2749,14 +2781,11 @@ const UnixToInternal = unixToInternal
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="std0x" href="#std0x">var std0x</a>
 
 ```
 searchKey: time.std0x
+tags: [private]
 ```
 
 ```Go
@@ -2769,6 +2798,7 @@ std0x records the std values for "01", "02", ..., "06".
 
 ```
 searchKey: time.longDayNames
+tags: [private]
 ```
 
 ```Go
@@ -2779,6 +2809,7 @@ var longDayNames = ...
 
 ```
 searchKey: time.shortDayNames
+tags: [private]
 ```
 
 ```Go
@@ -2797,6 +2828,7 @@ var shortDayNames = []string{
 
 ```
 searchKey: time.shortMonthNames
+tags: [private]
 ```
 
 ```Go
@@ -2807,6 +2839,7 @@ var shortMonthNames = ...
 
 ```
 searchKey: time.longMonthNames
+tags: [private]
 ```
 
 ```Go
@@ -2817,6 +2850,7 @@ var longMonthNames = ...
 
 ```
 searchKey: time.atoiError
+tags: [private]
 ```
 
 ```Go
@@ -2829,6 +2863,7 @@ Never printed, just needs to be non-nil for return by atoi.
 
 ```
 searchKey: time.errBad
+tags: [private]
 ```
 
 ```Go
@@ -2840,6 +2875,7 @@ var errBad = errors.New("bad value for field") // placeholder not passed to user
 
 ```
 searchKey: time.errLeadingInt
+tags: [private]
 ```
 
 ```Go
@@ -2851,6 +2887,7 @@ var errLeadingInt = errors.New("time: bad [0-9]*") // never printed
 
 ```
 searchKey: time.unitMap
+tags: [private]
 ```
 
 ```Go
@@ -2861,6 +2898,7 @@ var unitMap = ...
 
 ```
 searchKey: time.daysBefore
+tags: [private]
 ```
 
 ```Go
@@ -2873,6 +2911,7 @@ daysBefore[m] counts the number of days in a non-leap year before month m begins
 
 ```
 searchKey: time.startNano
+tags: [private]
 ```
 
 ```Go
@@ -2885,7 +2924,6 @@ Monotonic times are reported as offsets from startNano. We initialize startNano 
 
 ```
 searchKey: time.UTC
-tags: [exported]
 ```
 
 ```Go
@@ -2898,6 +2936,7 @@ UTC represents Universal Coordinated Time (UTC).
 
 ```
 searchKey: time.utcLoc
+tags: [private]
 ```
 
 ```Go
@@ -2910,7 +2949,6 @@ utcLoc is separate so that get can refer to &utcLoc and ensure that it never ret
 
 ```
 searchKey: time.Local
-tags: [exported]
 ```
 
 ```Go
@@ -2923,6 +2961,7 @@ Local represents the system's local time zone. On Unix systems, Local consults t
 
 ```
 searchKey: time.localLoc
+tags: [private]
 ```
 
 ```Go
@@ -2935,6 +2974,7 @@ localLoc is separate so that initLocal can initialize it even if a client has ch
 
 ```
 searchKey: time.localOnce
+tags: [private]
 ```
 
 ```Go
@@ -2945,6 +2985,7 @@ var localOnce sync.Once
 
 ```
 searchKey: time.errLocation
+tags: [private]
 ```
 
 ```Go
@@ -2955,6 +2996,7 @@ var errLocation = errors.New("time: invalid location name")
 
 ```
 searchKey: time.zoneinfo
+tags: [private]
 ```
 
 ```Go
@@ -2965,6 +3007,7 @@ var zoneinfo *string
 
 ```
 searchKey: time.zoneinfoOnce
+tags: [private]
 ```
 
 ```Go
@@ -2975,6 +3018,7 @@ var zoneinfoOnce sync.Once
 
 ```
 searchKey: time.loadFromEmbeddedTZData
+tags: [private]
 ```
 
 ```Go
@@ -2987,6 +3031,7 @@ loadFromEmbeddedTZData is used to load a specific tzdata file from tzdata inform
 
 ```
 searchKey: time.badData
+tags: [private]
 ```
 
 ```Go
@@ -2997,6 +3042,7 @@ var badData = errors.New("malformed time zone information")
 
 ```
 searchKey: time.loadTzinfoFromTzdata
+tags: [private]
 ```
 
 ```Go
@@ -3009,6 +3055,7 @@ loadTzinfoFromTzdata returns the time zone information of the time zone with the
 
 ```
 searchKey: time.zoneSources
+tags: [private]
 ```
 
 ```Go
@@ -3021,6 +3068,7 @@ Many systems use /usr/share/zoneinfo, Solaris 2 has /usr/share/lib/zoneinfo, IRI
 
 ```
 searchKey: time.ForceZipFileForTesting
+tags: [private]
 ```
 
 ```Go
@@ -3031,6 +3079,7 @@ var ForceZipFileForTesting = forceZipFileForTesting
 
 ```
 searchKey: time.ParseTimeZone
+tags: [private]
 ```
 
 ```Go
@@ -3041,6 +3090,7 @@ var ParseTimeZone = parseTimeZone
 
 ```
 searchKey: time.SetMono
+tags: [private]
 ```
 
 ```Go
@@ -3051,6 +3101,7 @@ var SetMono = (*Time).setMono
 
 ```
 searchKey: time.GetMono
+tags: [private]
 ```
 
 ```Go
@@ -3061,6 +3112,7 @@ var GetMono = (*Time).mono
 
 ```
 searchKey: time.ErrLocation
+tags: [private]
 ```
 
 ```Go
@@ -3071,6 +3123,7 @@ var ErrLocation = errLocation
 
 ```
 searchKey: time.ReadFile
+tags: [private]
 ```
 
 ```Go
@@ -3081,6 +3134,7 @@ var ReadFile = readFile
 
 ```
 searchKey: time.LoadTzinfo
+tags: [private]
 ```
 
 ```Go
@@ -3091,6 +3145,7 @@ var LoadTzinfo = loadTzinfo
 
 ```
 searchKey: time.NextStdChunk
+tags: [private]
 ```
 
 ```Go
@@ -3101,6 +3156,7 @@ var NextStdChunk = nextStdChunk
 
 ```
 searchKey: time.Tzset
+tags: [private]
 ```
 
 ```Go
@@ -3111,6 +3167,7 @@ var Tzset = tzset
 
 ```
 searchKey: time.TzsetName
+tags: [private]
 ```
 
 ```Go
@@ -3121,6 +3178,7 @@ var TzsetName = tzsetName
 
 ```
 searchKey: time.TzsetOffset
+tags: [private]
 ```
 
 ```Go
@@ -3131,6 +3189,7 @@ var TzsetOffset = tzsetOffset
 
 ```
 searchKey: time.StdChunkNames
+tags: [private]
 ```
 
 ```Go
@@ -3143,6 +3202,7 @@ StdChunkNames maps from nextStdChunk results to the matched strings.
 
 ```
 searchKey: time.Quote
+tags: [private]
 ```
 
 ```Go
@@ -3153,6 +3213,7 @@ var Quote = quote
 
 ```
 searchKey: time.OrigZoneSources
+tags: [private]
 ```
 
 ```Go
@@ -3163,6 +3224,7 @@ var OrigZoneSources = zoneSources
 
 ```
 searchKey: time.Interrupt
+tags: [private]
 ```
 
 ```Go
@@ -3173,6 +3235,7 @@ var Interrupt = interrupt
 
 ```
 searchKey: time.DaysIn
+tags: [private]
 ```
 
 ```Go
@@ -3183,6 +3246,7 @@ var DaysIn = daysIn
 
 ```
 searchKey: time.MinMonoTime
+tags: [private]
 ```
 
 ```Go
@@ -3193,6 +3257,7 @@ var MinMonoTime = Time{wall: 1 << 63, ext: -1 << 63, loc: UTC}
 
 ```
 searchKey: time.MaxMonoTime
+tags: [private]
 ```
 
 ```Go
@@ -3203,6 +3268,7 @@ var MaxMonoTime = Time{wall: 1 << 63, ext: 1<<63 - 1, loc: UTC}
 
 ```
 searchKey: time.NotMonoNegativeTime
+tags: [private]
 ```
 
 ```Go
@@ -3211,15 +3277,10 @@ var NotMonoNegativeTime = Time{wall: 0, ext: -1<<63 + 50}
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ParseError" href="#ParseError">type ParseError struct</a>
 
 ```
 searchKey: time.ParseError
-tags: [exported]
 ```
 
 ```Go
@@ -3238,7 +3299,6 @@ ParseError describes a problem parsing a time string.
 
 ```
 searchKey: time.ParseError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -3251,6 +3311,7 @@ Error returns the string representation of a ParseError.
 
 ```
 searchKey: time.runtimeTimer
+tags: [private]
 ```
 
 ```Go
@@ -3272,7 +3333,6 @@ Interface to timers implemented in package runtime. Must be in sync with ../runt
 
 ```
 searchKey: time.Timer
-tags: [exported]
 ```
 
 ```Go
@@ -3288,7 +3348,6 @@ The Timer type represents a single event. When the Timer expires, the current ti
 
 ```
 searchKey: time.NewTimer
-tags: [exported]
 ```
 
 ```Go
@@ -3301,7 +3360,6 @@ NewTimer creates a new Timer that will send the current time on its channel afte
 
 ```
 searchKey: time.AfterFunc
-tags: [exported]
 ```
 
 ```Go
@@ -3314,7 +3372,6 @@ AfterFunc waits for the duration to elapse and then calls f in its own goroutine
 
 ```
 searchKey: time.Timer.Stop
-tags: [exported]
 ```
 
 ```Go
@@ -3339,7 +3396,6 @@ For a timer created with AfterFunc(d, f), if t.Stop returns false, then the time
 
 ```
 searchKey: time.Timer.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -3369,7 +3425,6 @@ For a Timer created with AfterFunc(d, f), Reset either reschedules when f will r
 
 ```
 searchKey: time.Ticker
-tags: [exported]
 ```
 
 ```Go
@@ -3385,7 +3440,6 @@ A Ticker holds a channel that delivers `ticks' of a clock at intervals.
 
 ```
 searchKey: time.NewTicker
-tags: [exported]
 ```
 
 ```Go
@@ -3398,7 +3452,6 @@ NewTicker returns a new Ticker containing a channel that will send the time on t
 
 ```
 searchKey: time.Ticker.Stop
-tags: [exported]
 ```
 
 ```Go
@@ -3411,7 +3464,6 @@ Stop turns off a ticker. After Stop, no more ticks will be sent. Stop does not c
 
 ```
 searchKey: time.Ticker.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -3424,7 +3476,6 @@ Reset stops a ticker and resets its period to the specified duration. The next t
 
 ```
 searchKey: time.Time
-tags: [exported]
 ```
 
 ```Go
@@ -3474,7 +3525,6 @@ Note that the Go == operator compares not just the time instant but also the Loc
 
 ```
 searchKey: time.Parse
-tags: [exported]
 ```
 
 ```Go
@@ -3503,7 +3553,6 @@ When parsing a time with a zone abbreviation like MST, if the zone abbreviation 
 
 ```
 searchKey: time.ParseInLocation
-tags: [exported]
 ```
 
 ```Go
@@ -3516,6 +3565,7 @@ ParseInLocation is like Parse but differs in two important ways. First, in the a
 
 ```
 searchKey: time.parse
+tags: [private]
 ```
 
 ```Go
@@ -3526,7 +3576,6 @@ func parse(layout, value string, defaultLocation, local *Location) (Time, error)
 
 ```
 searchKey: time.Now
-tags: [exported]
 ```
 
 ```Go
@@ -3539,6 +3588,7 @@ Now returns the current local time.
 
 ```
 searchKey: time.unixTime
+tags: [private]
 ```
 
 ```Go
@@ -3549,7 +3599,6 @@ func unixTime(sec int64, nsec int32) Time
 
 ```
 searchKey: time.Unix
-tags: [exported]
 ```
 
 ```Go
@@ -3562,7 +3611,6 @@ Unix returns the local Time corresponding to the given Unix time, sec seconds an
 
 ```
 searchKey: time.UnixMilli
-tags: [exported]
 ```
 
 ```Go
@@ -3575,7 +3623,6 @@ UnixMilli returns the local Time corresponding to the given Unix time, msec mill
 
 ```
 searchKey: time.UnixMicro
-tags: [exported]
 ```
 
 ```Go
@@ -3588,7 +3635,6 @@ UnixMicro returns the local Time corresponding to the given Unix time, usec mill
 
 ```
 searchKey: time.Date
-tags: [exported]
 ```
 
 ```Go
@@ -3613,7 +3659,6 @@ Date panics if loc is nil.
 
 ```
 searchKey: time.Time.String
-tags: [exported]
 ```
 
 ```Go
@@ -3634,7 +3679,6 @@ The returned string is meant for debugging; for a stable serialized representati
 
 ```
 searchKey: time.Time.GoString
-tags: [exported]
 ```
 
 ```Go
@@ -3647,7 +3691,6 @@ GoString implements fmt.GoStringer and formats t to be printed in Go source code
 
 ```
 searchKey: time.Time.Format
-tags: [exported]
 ```
 
 ```Go
@@ -3662,7 +3705,6 @@ The executable example for Time.Format demonstrates the working of the layout st
 
 ```
 searchKey: time.Time.AppendFormat
-tags: [exported]
 ```
 
 ```Go
@@ -3675,6 +3717,7 @@ AppendFormat is like Format but appends the textual representation to b and retu
 
 ```
 searchKey: time.Time.nsec
+tags: [private]
 ```
 
 ```Go
@@ -3687,6 +3730,7 @@ nsec returns the time's nanoseconds.
 
 ```
 searchKey: time.Time.sec
+tags: [private]
 ```
 
 ```Go
@@ -3699,6 +3743,7 @@ sec returns the time's seconds since Jan 1 year 1.
 
 ```
 searchKey: time.Time.unixSec
+tags: [private]
 ```
 
 ```Go
@@ -3711,6 +3756,7 @@ unixSec returns the time's seconds since Jan 1 1970 (Unix time).
 
 ```
 searchKey: time.Time.addSec
+tags: [private]
 ```
 
 ```Go
@@ -3723,6 +3769,7 @@ addSec adds d seconds to the time.
 
 ```
 searchKey: time.Time.setLoc
+tags: [private]
 ```
 
 ```Go
@@ -3735,6 +3782,7 @@ setLoc sets the location associated with the time.
 
 ```
 searchKey: time.Time.stripMono
+tags: [private]
 ```
 
 ```Go
@@ -3747,6 +3795,7 @@ stripMono strips the monotonic clock reading in t.
 
 ```
 searchKey: time.Time.setMono
+tags: [private]
 ```
 
 ```Go
@@ -3759,6 +3808,7 @@ setMono sets the monotonic clock reading in t. If t cannot hold a monotonic cloc
 
 ```
 searchKey: time.Time.mono
+tags: [private]
 ```
 
 ```Go
@@ -3771,7 +3821,6 @@ mono returns t's monotonic clock reading. It returns 0 for a missing reading. Th
 
 ```
 searchKey: time.Time.After
-tags: [exported]
 ```
 
 ```Go
@@ -3784,7 +3833,6 @@ After reports whether the time instant t is after u.
 
 ```
 searchKey: time.Time.Before
-tags: [exported]
 ```
 
 ```Go
@@ -3797,7 +3845,6 @@ Before reports whether the time instant t is before u.
 
 ```
 searchKey: time.Time.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -3810,7 +3857,6 @@ Equal reports whether t and u represent the same time instant. Two times can be 
 
 ```
 searchKey: time.Time.IsZero
-tags: [exported]
 ```
 
 ```Go
@@ -3823,6 +3869,7 @@ IsZero reports whether t represents the zero time instant, January 1, year 1, 00
 
 ```
 searchKey: time.Time.abs
+tags: [private]
 ```
 
 ```Go
@@ -3835,6 +3882,7 @@ abs returns the time t as an absolute time, adjusted by the zone offset. It is c
 
 ```
 searchKey: time.Time.locabs
+tags: [private]
 ```
 
 ```Go
@@ -3847,7 +3895,6 @@ locabs is a combination of the Zone and abs methods, extracting both return valu
 
 ```
 searchKey: time.Time.Date
-tags: [exported]
 ```
 
 ```Go
@@ -3860,7 +3907,6 @@ Date returns the year, month, and day in which t occurs.
 
 ```
 searchKey: time.Time.Year
-tags: [exported]
 ```
 
 ```Go
@@ -3873,7 +3919,6 @@ Year returns the year in which t occurs.
 
 ```
 searchKey: time.Time.Month
-tags: [exported]
 ```
 
 ```Go
@@ -3886,7 +3931,6 @@ Month returns the month of the year specified by t.
 
 ```
 searchKey: time.Time.Day
-tags: [exported]
 ```
 
 ```Go
@@ -3899,7 +3943,6 @@ Day returns the day of the month specified by t.
 
 ```
 searchKey: time.Time.Weekday
-tags: [exported]
 ```
 
 ```Go
@@ -3912,7 +3955,6 @@ Weekday returns the day of the week specified by t.
 
 ```
 searchKey: time.Time.ISOWeek
-tags: [exported]
 ```
 
 ```Go
@@ -3925,7 +3967,6 @@ ISOWeek returns the ISO 8601 year and week number in which t occurs. Week ranges
 
 ```
 searchKey: time.Time.Clock
-tags: [exported]
 ```
 
 ```Go
@@ -3938,7 +3979,6 @@ Clock returns the hour, minute, and second within the day specified by t.
 
 ```
 searchKey: time.Time.Hour
-tags: [exported]
 ```
 
 ```Go
@@ -3951,7 +3991,6 @@ Hour returns the hour within the day specified by t, in the range [0, 23].
 
 ```
 searchKey: time.Time.Minute
-tags: [exported]
 ```
 
 ```Go
@@ -3964,7 +4003,6 @@ Minute returns the minute offset within the hour specified by t, in the range [0
 
 ```
 searchKey: time.Time.Second
-tags: [exported]
 ```
 
 ```Go
@@ -3977,7 +4015,6 @@ Second returns the second offset within the minute specified by t, in the range 
 
 ```
 searchKey: time.Time.Nanosecond
-tags: [exported]
 ```
 
 ```Go
@@ -3990,7 +4027,6 @@ Nanosecond returns the nanosecond offset within the second specified by t, in th
 
 ```
 searchKey: time.Time.YearDay
-tags: [exported]
 ```
 
 ```Go
@@ -4003,7 +4039,6 @@ YearDay returns the day of the year specified by t, in the range [1,365] for non
 
 ```
 searchKey: time.Time.Add
-tags: [exported]
 ```
 
 ```Go
@@ -4016,7 +4051,6 @@ Add returns the time t+d.
 
 ```
 searchKey: time.Time.Sub
-tags: [exported]
 ```
 
 ```Go
@@ -4029,7 +4063,6 @@ Sub returns the duration t-u. If the result exceeds the maximum (or minimum) val
 
 ```
 searchKey: time.Time.AddDate
-tags: [exported]
 ```
 
 ```Go
@@ -4044,6 +4077,7 @@ AddDate normalizes its result in the same way that Date does, so, for example, a
 
 ```
 searchKey: time.Time.date
+tags: [private]
 ```
 
 ```Go
@@ -4056,7 +4090,6 @@ date computes the year, day of year, and when full=true, the month and day in wh
 
 ```
 searchKey: time.Time.UTC
-tags: [exported]
 ```
 
 ```Go
@@ -4069,7 +4102,6 @@ UTC returns t with the location set to UTC.
 
 ```
 searchKey: time.Time.Local
-tags: [exported]
 ```
 
 ```Go
@@ -4082,7 +4114,6 @@ Local returns t with the location set to local time.
 
 ```
 searchKey: time.Time.In
-tags: [exported]
 ```
 
 ```Go
@@ -4097,7 +4128,6 @@ In panics if loc is nil.
 
 ```
 searchKey: time.Time.Location
-tags: [exported]
 ```
 
 ```Go
@@ -4110,7 +4140,6 @@ Location returns the time zone information associated with t.
 
 ```
 searchKey: time.Time.Zone
-tags: [exported]
 ```
 
 ```Go
@@ -4123,7 +4152,6 @@ Zone computes the time zone in effect at time t, returning the abbreviated name 
 
 ```
 searchKey: time.Time.Unix
-tags: [exported]
 ```
 
 ```Go
@@ -4136,7 +4164,6 @@ Unix returns t as a Unix time, the number of seconds elapsed since January 1, 19
 
 ```
 searchKey: time.Time.UnixMilli
-tags: [exported]
 ```
 
 ```Go
@@ -4149,7 +4176,6 @@ UnixMilli returns t as a Unix time, the number of milliseconds elapsed since Jan
 
 ```
 searchKey: time.Time.UnixMicro
-tags: [exported]
 ```
 
 ```Go
@@ -4162,7 +4188,6 @@ UnixMicro returns t as a Unix time, the number of microseconds elapsed since Jan
 
 ```
 searchKey: time.Time.UnixNano
-tags: [exported]
 ```
 
 ```Go
@@ -4175,7 +4200,6 @@ UnixNano returns t as a Unix time, the number of nanoseconds elapsed since Janua
 
 ```
 searchKey: time.Time.MarshalBinary
-tags: [exported]
 ```
 
 ```Go
@@ -4188,7 +4212,6 @@ MarshalBinary implements the encoding.BinaryMarshaler interface.
 
 ```
 searchKey: time.Time.UnmarshalBinary
-tags: [exported]
 ```
 
 ```Go
@@ -4201,7 +4224,6 @@ UnmarshalBinary implements the encoding.BinaryUnmarshaler interface.
 
 ```
 searchKey: time.Time.GobEncode
-tags: [exported]
 ```
 
 ```Go
@@ -4214,7 +4236,6 @@ GobEncode implements the gob.GobEncoder interface.
 
 ```
 searchKey: time.Time.GobDecode
-tags: [exported]
 ```
 
 ```Go
@@ -4227,7 +4248,6 @@ GobDecode implements the gob.GobDecoder interface.
 
 ```
 searchKey: time.Time.MarshalJSON
-tags: [exported]
 ```
 
 ```Go
@@ -4240,7 +4260,6 @@ MarshalJSON implements the json.Marshaler interface. The time is a quoted string
 
 ```
 searchKey: time.Time.UnmarshalJSON
-tags: [exported]
 ```
 
 ```Go
@@ -4253,7 +4272,6 @@ UnmarshalJSON implements the json.Unmarshaler interface. The time is expected to
 
 ```
 searchKey: time.Time.MarshalText
-tags: [exported]
 ```
 
 ```Go
@@ -4266,7 +4284,6 @@ MarshalText implements the encoding.TextMarshaler interface. The time is formatt
 
 ```
 searchKey: time.Time.UnmarshalText
-tags: [exported]
 ```
 
 ```Go
@@ -4279,7 +4296,6 @@ UnmarshalText implements the encoding.TextUnmarshaler interface. The time is exp
 
 ```
 searchKey: time.Time.IsDST
-tags: [exported]
 ```
 
 ```Go
@@ -4292,7 +4308,6 @@ IsDST reports whether the time in the configured location is in Daylight Savings
 
 ```
 searchKey: time.Time.Truncate
-tags: [exported]
 ```
 
 ```Go
@@ -4307,7 +4322,6 @@ Truncate operates on the time as an absolute duration since the zero time; it do
 
 ```
 searchKey: time.Time.Round
-tags: [exported]
 ```
 
 ```Go
@@ -4322,7 +4336,6 @@ Round operates on the time as an absolute duration since the zero time; it does 
 
 ```
 searchKey: time.Month
-tags: [exported]
 ```
 
 ```Go
@@ -4335,6 +4348,7 @@ A Month specifies a month of the year (January = 1, ...).
 
 ```
 searchKey: time.absDate
+tags: [private]
 ```
 
 ```Go
@@ -4347,7 +4361,6 @@ absDate is like date but operates on an absolute time.
 
 ```
 searchKey: time.Month.String
-tags: [exported]
 ```
 
 ```Go
@@ -4360,7 +4373,6 @@ String returns the English name of the month ("January", "February", ...).
 
 ```
 searchKey: time.Weekday
-tags: [exported]
 ```
 
 ```Go
@@ -4373,6 +4385,7 @@ A Weekday specifies a day of the week (Sunday = 0, ...).
 
 ```
 searchKey: time.absWeekday
+tags: [private]
 ```
 
 ```Go
@@ -4385,7 +4398,6 @@ absWeekday is like Weekday but operates on an absolute time.
 
 ```
 searchKey: time.Weekday.String
-tags: [exported]
 ```
 
 ```Go
@@ -4398,7 +4410,6 @@ String returns the English name of the day ("Sunday", "Monday", ...).
 
 ```
 searchKey: time.Duration
-tags: [exported]
 ```
 
 ```Go
@@ -4411,7 +4422,6 @@ A Duration represents the elapsed time between two instants as an int64 nanoseco
 
 ```
 searchKey: time.ParseDuration
-tags: [exported]
 ```
 
 ```Go
@@ -4424,7 +4434,6 @@ ParseDuration parses a duration string. A duration string is a possibly signed s
 
 ```
 searchKey: time.Since
-tags: [exported]
 ```
 
 ```Go
@@ -4437,7 +4446,6 @@ Since returns the time elapsed since t. It is shorthand for time.Now().Sub(t).
 
 ```
 searchKey: time.Until
-tags: [exported]
 ```
 
 ```Go
@@ -4450,6 +4458,7 @@ Until returns the duration until t. It is shorthand for t.Sub(time.Now()).
 
 ```
 searchKey: time.div
+tags: [private]
 ```
 
 ```Go
@@ -4462,7 +4471,6 @@ div divides t by d and returns the quotient parity and remainder. We don't use t
 
 ```
 searchKey: time.Duration.String
-tags: [exported]
 ```
 
 ```Go
@@ -4475,7 +4483,6 @@ String returns a string representing the duration in the form "72h3m0.5s". Leadi
 
 ```
 searchKey: time.Duration.Nanoseconds
-tags: [exported]
 ```
 
 ```Go
@@ -4488,7 +4495,6 @@ Nanoseconds returns the duration as an integer nanosecond count.
 
 ```
 searchKey: time.Duration.Microseconds
-tags: [exported]
 ```
 
 ```Go
@@ -4501,7 +4507,6 @@ Microseconds returns the duration as an integer microsecond count.
 
 ```
 searchKey: time.Duration.Milliseconds
-tags: [exported]
 ```
 
 ```Go
@@ -4514,7 +4519,6 @@ Milliseconds returns the duration as an integer millisecond count.
 
 ```
 searchKey: time.Duration.Seconds
-tags: [exported]
 ```
 
 ```Go
@@ -4527,7 +4531,6 @@ Seconds returns the duration as a floating point number of seconds.
 
 ```
 searchKey: time.Duration.Minutes
-tags: [exported]
 ```
 
 ```Go
@@ -4540,7 +4543,6 @@ Minutes returns the duration as a floating point number of minutes.
 
 ```
 searchKey: time.Duration.Hours
-tags: [exported]
 ```
 
 ```Go
@@ -4553,7 +4555,6 @@ Hours returns the duration as a floating point number of hours.
 
 ```
 searchKey: time.Duration.Truncate
-tags: [exported]
 ```
 
 ```Go
@@ -4566,7 +4567,6 @@ Truncate returns the result of rounding d toward zero to a multiple of m. If m <
 
 ```
 searchKey: time.Duration.Round
-tags: [exported]
 ```
 
 ```Go
@@ -4579,7 +4579,6 @@ Round returns the result of rounding d to the nearest multiple of m. The roundin
 
 ```
 searchKey: time.Location
-tags: [exported]
 ```
 
 ```Go
@@ -4616,7 +4615,6 @@ A Location maps time instants to the zone in use at that time. Typically, the Lo
 
 ```
 searchKey: time.FixedZone
-tags: [exported]
 ```
 
 ```Go
@@ -4629,7 +4627,6 @@ FixedZone returns a Location that always uses the given zone name and offset (se
 
 ```
 searchKey: time.LoadLocation
-tags: [exported]
 ```
 
 ```Go
@@ -4648,7 +4645,6 @@ The time zone database needed by LoadLocation may not be present on all systems,
 
 ```
 searchKey: time.LoadLocationFromTZData
-tags: [exported]
 ```
 
 ```Go
@@ -4661,6 +4657,7 @@ LoadLocationFromTZData returns a Location with the given name initialized from t
 
 ```
 searchKey: time.loadLocation
+tags: [private]
 ```
 
 ```Go
@@ -4673,6 +4670,7 @@ loadLocation returns the Location with the given name from one of the specified 
 
 ```
 searchKey: time.Location.get
+tags: [private]
 ```
 
 ```Go
@@ -4683,7 +4681,6 @@ func (l *Location) get() *Location
 
 ```
 searchKey: time.Location.String
-tags: [exported]
 ```
 
 ```Go
@@ -4696,6 +4693,7 @@ String returns a descriptive name for the time zone information, corresponding t
 
 ```
 searchKey: time.Location.lookup
+tags: [private]
 ```
 
 ```Go
@@ -4710,6 +4708,7 @@ The returned information gives the name of the zone (such as "CET"), the start a
 
 ```
 searchKey: time.Location.lookupFirstZone
+tags: [private]
 ```
 
 ```Go
@@ -4738,6 +4737,7 @@ there is one.
 
 ```
 searchKey: time.Location.firstZoneUsed
+tags: [private]
 ```
 
 ```Go
@@ -4750,6 +4750,7 @@ firstZoneUsed reports whether the first zone is used by some transition.
 
 ```
 searchKey: time.Location.lookupName
+tags: [private]
 ```
 
 ```Go
@@ -4762,6 +4763,7 @@ lookupName returns information about the time zone with the given name (such as 
 
 ```
 searchKey: time.zone
+tags: [private]
 ```
 
 ```Go
@@ -4778,6 +4780,7 @@ A zone represents a single time zone such as CET.
 
 ```
 searchKey: time.zoneTrans
+tags: [private]
 ```
 
 ```Go
@@ -4794,6 +4797,7 @@ A zoneTrans represents a single time zone transition.
 
 ```
 searchKey: time.ruleKind
+tags: [private]
 ```
 
 ```Go
@@ -4806,6 +4810,7 @@ ruleKind is the kinds of rules that can be seen in a tzset string.
 
 ```
 searchKey: time.rule
+tags: [private]
 ```
 
 ```Go
@@ -4824,6 +4829,7 @@ rule is a rule read from a tzset string.
 
 ```
 searchKey: time.tzsetRule
+tags: [private]
 ```
 
 ```Go
@@ -4836,6 +4842,7 @@ tzsetRule parses a rule from a tzset string. It returns the rule, and the remain
 
 ```
 searchKey: time.fileSizeError
+tags: [private]
 ```
 
 ```Go
@@ -4846,6 +4853,7 @@ type fileSizeError string
 
 ```
 searchKey: time.fileSizeError.Error
+tags: [private]
 ```
 
 ```Go
@@ -4856,6 +4864,7 @@ func (f fileSizeError) Error() string
 
 ```
 searchKey: time.dataIO
+tags: [private]
 ```
 
 ```Go
@@ -4871,6 +4880,7 @@ Simple I/O interface to binary blob of data.
 
 ```
 searchKey: time.dataIO.read
+tags: [private]
 ```
 
 ```Go
@@ -4881,6 +4891,7 @@ func (d *dataIO) read(n int) []byte
 
 ```
 searchKey: time.dataIO.big4
+tags: [private]
 ```
 
 ```Go
@@ -4891,6 +4902,7 @@ func (d *dataIO) big4() (n uint32, ok bool)
 
 ```
 searchKey: time.dataIO.big8
+tags: [private]
 ```
 
 ```Go
@@ -4901,6 +4913,7 @@ func (d *dataIO) big8() (n uint64, ok bool)
 
 ```
 searchKey: time.dataIO.byte
+tags: [private]
 ```
 
 ```Go
@@ -4911,6 +4924,7 @@ func (d *dataIO) byte() (n byte, ok bool)
 
 ```
 searchKey: time.dataIO.rest
+tags: [private]
 ```
 
 ```Go
@@ -4923,6 +4937,7 @@ read returns the read of the data in the buffer.
 
 ```
 searchKey: time.RuleKind
+tags: [private]
 ```
 
 ```Go
@@ -4933,6 +4948,7 @@ type RuleKind int
 
 ```
 searchKey: time.Rule
+tags: [private]
 ```
 
 ```Go
@@ -4949,6 +4965,7 @@ type Rule struct {
 
 ```
 searchKey: time.TzsetRule
+tags: [private]
 ```
 
 ```Go
@@ -4957,14 +4974,11 @@ func TzsetRule(s string) (Rule, string, bool)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="startsWithLowerCase" href="#startsWithLowerCase">func startsWithLowerCase(str string) bool</a>
 
 ```
 searchKey: time.startsWithLowerCase
+tags: [private]
 ```
 
 ```Go
@@ -4977,6 +4991,7 @@ startsWithLowerCase reports whether the string has a lower-case letter at the be
 
 ```
 searchKey: time.nextStdChunk
+tags: [private]
 ```
 
 ```Go
@@ -4989,6 +5004,7 @@ nextStdChunk finds the first occurrence of a std string in layout and returns th
 
 ```
 searchKey: time.match
+tags: [private]
 ```
 
 ```Go
@@ -5001,6 +5017,7 @@ match reports whether s1 and s2 match ignoring case. It is assumed s1 and s2 are
 
 ```
 searchKey: time.lookup
+tags: [private]
 ```
 
 ```Go
@@ -5011,6 +5028,7 @@ func lookup(tab []string, val string) (int, string, error)
 
 ```
 searchKey: time.appendInt
+tags: [private]
 ```
 
 ```Go
@@ -5023,6 +5041,7 @@ appendInt appends the decimal form of x to b and returns the result. If the deci
 
 ```
 searchKey: time.atoi
+tags: [private]
 ```
 
 ```Go
@@ -5035,6 +5054,7 @@ Duplicates functionality in strconv, but avoids dependency.
 
 ```
 searchKey: time.formatNano
+tags: [private]
 ```
 
 ```Go
@@ -5047,6 +5067,7 @@ formatNano appends a fractional second, as nanoseconds, to b and returns the res
 
 ```
 searchKey: time.quote
+tags: [private]
 ```
 
 ```Go
@@ -5057,6 +5078,7 @@ func quote(s string) string
 
 ```
 searchKey: time.isDigit
+tags: [private]
 ```
 
 ```Go
@@ -5069,6 +5091,7 @@ isDigit reports whether s[i] is in range and is a decimal digit.
 
 ```
 searchKey: time.getnum
+tags: [private]
 ```
 
 ```Go
@@ -5081,6 +5104,7 @@ getnum parses s[0:1] or s[0:2] (fixed forces s[0:2]) as a decimal integer and re
 
 ```
 searchKey: time.getnum3
+tags: [private]
 ```
 
 ```Go
@@ -5093,6 +5117,7 @@ getnum3 parses s[0:1], s[0:2], or s[0:3] (fixed forces s[0:3]) as a decimal inte
 
 ```
 searchKey: time.cutspace
+tags: [private]
 ```
 
 ```Go
@@ -5103,6 +5128,7 @@ func cutspace(s string) string
 
 ```
 searchKey: time.skip
+tags: [private]
 ```
 
 ```Go
@@ -5115,6 +5141,7 @@ skip removes the given prefix from value, treating runs of space characters as e
 
 ```
 searchKey: time.parseTimeZone
+tags: [private]
 ```
 
 ```Go
@@ -5127,6 +5154,7 @@ parseTimeZone parses a time zone string and returns its length. Time zones are h
 
 ```
 searchKey: time.parseGMT
+tags: [private]
 ```
 
 ```Go
@@ -5139,6 +5167,7 @@ parseGMT parses a GMT time zone. The input string is known to start "GMT". The f
 
 ```
 searchKey: time.parseSignedOffset
+tags: [private]
 ```
 
 ```Go
@@ -5151,6 +5180,7 @@ parseSignedOffset parses a signed timezone offset (e.g. "+03" or "-04"). The fun
 
 ```
 searchKey: time.commaOrPeriod
+tags: [private]
 ```
 
 ```Go
@@ -5161,6 +5191,7 @@ func commaOrPeriod(b byte) bool
 
 ```
 searchKey: time.parseNanoseconds
+tags: [private]
 ```
 
 ```Go
@@ -5171,6 +5202,7 @@ func parseNanoseconds(value string, nbytes int) (ns int, rangeErrString string, 
 
 ```
 searchKey: time.leadingInt
+tags: [private]
 ```
 
 ```Go
@@ -5183,6 +5215,7 @@ leadingInt consumes the leading [0-9]* from s.
 
 ```
 searchKey: time.leadingFraction
+tags: [private]
 ```
 
 ```Go
@@ -5195,7 +5228,6 @@ leadingFraction consumes the leading [0-9]* from s. It is used only for fraction
 
 ```
 searchKey: time.Sleep
-tags: [exported]
 ```
 
 ```Go
@@ -5208,6 +5240,7 @@ Sleep pauses the current goroutine for at least the duration d. A negative or ze
 
 ```
 searchKey: time.when
+tags: [private]
 ```
 
 ```Go
@@ -5220,6 +5253,7 @@ when is a helper function for setting the 'when' field of a runtimeTimer. It ret
 
 ```
 searchKey: time.startTimer
+tags: [private]
 ```
 
 ```Go
@@ -5230,6 +5264,7 @@ func startTimer(*runtimeTimer)
 
 ```
 searchKey: time.stopTimer
+tags: [private]
 ```
 
 ```Go
@@ -5240,6 +5275,7 @@ func stopTimer(*runtimeTimer) bool
 
 ```
 searchKey: time.resetTimer
+tags: [private]
 ```
 
 ```Go
@@ -5250,6 +5286,7 @@ func resetTimer(*runtimeTimer, int64) bool
 
 ```
 searchKey: time.modTimer
+tags: [private]
 ```
 
 ```Go
@@ -5260,6 +5297,7 @@ func modTimer(t *runtimeTimer, when, period int64, f func(interface{}, uintptr),
 
 ```
 searchKey: time.sendTime
+tags: [private]
 ```
 
 ```Go
@@ -5270,7 +5308,6 @@ func sendTime(c interface{}, seq uintptr)
 
 ```
 searchKey: time.After
-tags: [exported]
 ```
 
 ```Go
@@ -5283,6 +5320,7 @@ After waits for the duration to elapse and then sends the current time on the re
 
 ```
 searchKey: time.goFunc
+tags: [private]
 ```
 
 ```Go
@@ -5293,6 +5331,7 @@ func goFunc(arg interface{}, seq uintptr)
 
 ```
 searchKey: time.interrupt
+tags: [private]
 ```
 
 ```Go
@@ -5305,6 +5344,7 @@ for testing: whatever interrupts a sleep
 
 ```
 searchKey: time.open
+tags: [private]
 ```
 
 ```Go
@@ -5315,6 +5355,7 @@ func open(name string) (uintptr, error)
 
 ```
 searchKey: time.read
+tags: [private]
 ```
 
 ```Go
@@ -5325,6 +5366,7 @@ func read(fd uintptr, buf []byte) (int, error)
 
 ```
 searchKey: time.closefd
+tags: [private]
 ```
 
 ```Go
@@ -5335,6 +5377,7 @@ func closefd(fd uintptr)
 
 ```
 searchKey: time.preadn
+tags: [private]
 ```
 
 ```Go
@@ -5345,7 +5388,6 @@ func preadn(fd uintptr, buf []byte, off int) error
 
 ```
 searchKey: time.Tick
-tags: [exported]
 ```
 
 ```Go
@@ -5358,6 +5400,7 @@ Tick is a convenience wrapper for NewTicker providing access to the ticking chan
 
 ```
 searchKey: time.absClock
+tags: [private]
 ```
 
 ```Go
@@ -5370,6 +5413,7 @@ absClock is like clock but operates on an absolute time.
 
 ```
 searchKey: time.fmtFrac
+tags: [private]
 ```
 
 ```Go
@@ -5382,6 +5426,7 @@ fmtFrac formats the fraction of v/10**prec (e.g., ".12345") into the tail of buf
 
 ```
 searchKey: time.fmtInt
+tags: [private]
 ```
 
 ```Go
@@ -5394,6 +5439,7 @@ fmtInt formats v into the tail of buf. It returns the index where the output beg
 
 ```
 searchKey: time.lessThanHalf
+tags: [private]
 ```
 
 ```Go
@@ -5406,6 +5452,7 @@ lessThanHalf reports whether x+x < y but avoids overflow, assuming x and y are b
 
 ```
 searchKey: time.daysIn
+tags: [private]
 ```
 
 ```Go
@@ -5416,6 +5463,7 @@ func daysIn(m Month, year int) int
 
 ```
 searchKey: time.daysSinceEpoch
+tags: [private]
 ```
 
 ```Go
@@ -5428,6 +5476,7 @@ daysSinceEpoch takes a year and returns the number of days from the absolute epo
 
 ```
 searchKey: time.now
+tags: [private]
 ```
 
 ```Go
@@ -5440,6 +5489,7 @@ Provided by package runtime.
 
 ```
 searchKey: time.runtimeNano
+tags: [private]
 ```
 
 ```Go
@@ -5452,6 +5502,7 @@ runtimeNano returns the current value of the runtime clock in nanoseconds.
 
 ```
 searchKey: time.isLeap
+tags: [private]
 ```
 
 ```Go
@@ -5462,6 +5513,7 @@ func isLeap(year int) bool
 
 ```
 searchKey: time.norm
+tags: [private]
 ```
 
 ```Go
@@ -5479,6 +5531,7 @@ hi * base + lo == nhi * base + nlo
 
 ```
 searchKey: time.tzset
+tags: [private]
 ```
 
 ```Go
@@ -5491,6 +5544,7 @@ tzset takes a timezone string like the one found in the TZ environment variable,
 
 ```
 searchKey: time.tzsetName
+tags: [private]
 ```
 
 ```Go
@@ -5503,6 +5557,7 @@ tzsetName returns the timezone name at the start of the tzset string s, and the 
 
 ```
 searchKey: time.tzsetOffset
+tags: [private]
 ```
 
 ```Go
@@ -5515,6 +5570,7 @@ tzsetOffset returns the timezone offset at the start of the tzset string s, and 
 
 ```
 searchKey: time.tzsetNum
+tags: [private]
 ```
 
 ```Go
@@ -5527,6 +5583,7 @@ tzsetNum parses a number from a tzset string. It returns the number, and the rem
 
 ```
 searchKey: time.tzruleTime
+tags: [private]
 ```
 
 ```Go
@@ -5539,6 +5596,7 @@ tzruleTime takes a year, a rule, and a timezone offset, and returns the number o
 
 ```
 searchKey: time.containsDotDot
+tags: [private]
 ```
 
 ```Go
@@ -5551,6 +5609,7 @@ containsDotDot reports whether s contains "..".
 
 ```
 searchKey: time.registerLoadFromEmbeddedTZData
+tags: [private]
 ```
 
 ```Go
@@ -5563,6 +5622,7 @@ registerLoadFromEmbeddedTZData is called by the time/tzdata package, if it is im
 
 ```
 searchKey: time.byteString
+tags: [private]
 ```
 
 ```Go
@@ -5575,6 +5635,7 @@ Make a string by stopping at the first NUL
 
 ```
 searchKey: time.findZone
+tags: [private]
 ```
 
 ```Go
@@ -5585,6 +5646,7 @@ func findZone(zones []zone, name string, offset int, isDST bool) int
 
 ```
 searchKey: time.loadTzinfoFromDirOrZip
+tags: [private]
 ```
 
 ```Go
@@ -5597,6 +5659,7 @@ loadTzinfoFromDirOrZip returns the contents of the file with the given name in d
 
 ```
 searchKey: time.get4
+tags: [private]
 ```
 
 ```Go
@@ -5609,6 +5672,7 @@ get4 returns the little-endian 32-bit value in b.
 
 ```
 searchKey: time.get2
+tags: [private]
 ```
 
 ```Go
@@ -5621,6 +5685,7 @@ get2 returns the little-endian 16-bit value in b.
 
 ```
 searchKey: time.loadTzinfoFromZip
+tags: [private]
 ```
 
 ```Go
@@ -5633,6 +5698,7 @@ loadTzinfoFromZip returns the contents of the file with the given name in the gi
 
 ```
 searchKey: time.loadTzinfo
+tags: [private]
 ```
 
 ```Go
@@ -5645,6 +5711,7 @@ loadTzinfo returns the time zone information of the time zone with the given nam
 
 ```
 searchKey: time.readFile
+tags: [private]
 ```
 
 ```Go
@@ -5657,6 +5724,7 @@ readFile reads and returns the content of the named file. It is a trivial implem
 
 ```
 searchKey: time.initLocal
+tags: [private]
 ```
 
 ```Go
@@ -5667,6 +5735,7 @@ func initLocal()
 
 ```
 searchKey: time.ResetLocalOnceForTest
+tags: [private]
 ```
 
 ```Go
@@ -5677,6 +5746,7 @@ func ResetLocalOnceForTest()
 
 ```
 searchKey: time.ForceUSPacificForTesting
+tags: [private]
 ```
 
 ```Go
@@ -5687,6 +5757,7 @@ func ForceUSPacificForTesting()
 
 ```
 searchKey: time.ZoneinfoForTesting
+tags: [private]
 ```
 
 ```Go
@@ -5697,6 +5768,7 @@ func ZoneinfoForTesting() *string
 
 ```
 searchKey: time.ResetZoneinfoForTesting
+tags: [private]
 ```
 
 ```Go
@@ -5707,16 +5779,18 @@ func ResetZoneinfoForTesting()
 
 ```
 searchKey: time.LoadFromEmbeddedTZData
+tags: [private]
 ```
 
 ```Go
 func LoadFromEmbeddedTZData(zone string) (string, error)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.internal_test.go" href="#init.internal_test.go">func init()</a>
 
 ```
 searchKey: time.init
+tags: [private]
 ```
 
 ```Go
@@ -5727,6 +5801,7 @@ func init()
 
 ```
 searchKey: time.initTestingZone
+tags: [private]
 ```
 
 ```Go
@@ -5737,6 +5812,7 @@ func initTestingZone()
 
 ```
 searchKey: time.forceZipFileForTesting
+tags: [private]
 ```
 
 ```Go
@@ -5747,6 +5823,7 @@ func forceZipFileForTesting(zipOnly bool)
 
 ```
 searchKey: time.empty
+tags: [private]
 ```
 
 ```Go
@@ -5757,6 +5834,7 @@ func empty(arg interface{}, seq uintptr)
 
 ```
 searchKey: time.CheckRuntimeTimerPeriodOverflow
+tags: [private]
 ```
 
 ```Go

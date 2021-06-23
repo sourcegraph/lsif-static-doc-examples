@@ -32,15 +32,10 @@ Package debug contains facilities for programs to debug themselves while they ar
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="GCStats" href="#GCStats">type GCStats struct</a>
 
 ```
 searchKey: debug.GCStats
-tags: [exported]
 ```
 
 ```Go
@@ -60,7 +55,6 @@ GCStats collect information about recent garbage collections.
 
 ```
 searchKey: debug.BuildInfo
-tags: [exported]
 ```
 
 ```Go
@@ -77,7 +71,6 @@ BuildInfo represents the build information read from the running binary.
 
 ```
 searchKey: debug.ReadBuildInfo
-tags: [exported]
 ```
 
 ```Go
@@ -90,6 +83,7 @@ ReadBuildInfo returns the build information embedded in the running binary. The 
 
 ```
 searchKey: debug.readBuildInfo
+tags: [private]
 ```
 
 ```Go
@@ -100,7 +94,6 @@ func readBuildInfo(data string) (*BuildInfo, bool)
 
 ```
 searchKey: debug.Module
-tags: [exported]
 ```
 
 ```Go
@@ -116,15 +109,10 @@ Module represents a module.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ReadGCStats" href="#ReadGCStats">func ReadGCStats(stats *GCStats)</a>
 
 ```
 searchKey: debug.ReadGCStats
-tags: [exported]
 ```
 
 ```Go
@@ -137,7 +125,6 @@ ReadGCStats reads statistics about garbage collection into stats. The number of 
 
 ```
 searchKey: debug.SetGCPercent
-tags: [exported]
 ```
 
 ```Go
@@ -150,7 +137,6 @@ SetGCPercent sets the garbage collection target percentage: a collection is trig
 
 ```
 searchKey: debug.FreeOSMemory
-tags: [exported]
 ```
 
 ```Go
@@ -163,7 +149,6 @@ FreeOSMemory forces a garbage collection followed by an attempt to return as muc
 
 ```
 searchKey: debug.SetMaxStack
-tags: [exported]
 ```
 
 ```Go
@@ -178,7 +163,6 @@ SetMaxStack is useful mainly for limiting the damage done by goroutines that ent
 
 ```
 searchKey: debug.SetMaxThreads
-tags: [exported]
 ```
 
 ```Go
@@ -195,7 +179,6 @@ SetMaxThreads is useful mainly for limiting the damage done by programs that cre
 
 ```
 searchKey: debug.SetPanicOnFault
-tags: [exported]
 ```
 
 ```Go
@@ -214,7 +197,6 @@ If that method exists, it returns the memory address which triggered the fault. 
 
 ```
 searchKey: debug.WriteHeapDump
-tags: [exported]
 ```
 
 ```Go
@@ -231,7 +213,6 @@ The heap dump format is defined at [https://golang.org/s/go15heapdump](https://g
 
 ```
 searchKey: debug.SetTraceback
-tags: [exported]
 ```
 
 ```Go
@@ -244,6 +225,7 @@ SetTraceback sets the amount of detail printed by the runtime in the traceback i
 
 ```
 searchKey: debug.modinfo
+tags: [private]
 ```
 
 ```Go
@@ -256,7 +238,6 @@ exported from runtime
 
 ```
 searchKey: debug.PrintStack
-tags: [exported]
 ```
 
 ```Go
@@ -269,7 +250,6 @@ PrintStack prints to standard error the stack trace returned by runtime.Stack.
 
 ```
 searchKey: debug.Stack
-tags: [exported]
 ```
 
 ```Go
@@ -282,6 +262,7 @@ Stack returns a formatted stack trace of the goroutine that calls it. It calls r
 
 ```
 searchKey: debug.readGCStats
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +275,7 @@ Implemented in package runtime.
 
 ```
 searchKey: debug.freeOSMemory
+tags: [private]
 ```
 
 ```Go
@@ -304,6 +286,7 @@ func freeOSMemory()
 
 ```
 searchKey: debug.setMaxStack
+tags: [private]
 ```
 
 ```Go
@@ -314,6 +297,7 @@ func setMaxStack(int) int
 
 ```
 searchKey: debug.setGCPercent
+tags: [private]
 ```
 
 ```Go
@@ -324,6 +308,7 @@ func setGCPercent(int32) int32
 
 ```
 searchKey: debug.setPanicOnFault
+tags: [private]
 ```
 
 ```Go
@@ -334,6 +319,7 @@ func setPanicOnFault(bool) bool
 
 ```
 searchKey: debug.setMaxThreads
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "cli",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/cli",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "corsAllowHeader",
                 "newPage": false,
                 "searchKey": "cli.corsAllowHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "logoColor",
                 "newPage": false,
                 "searchKey": "cli.logoColor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "skipSysReqsEnvVar",
                 "newPage": false,
                 "searchKey": "cli.skipSysReqsEnvVar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +113,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "metricConfigOverrideUpdates",
                 "newPage": false,
                 "searchKey": "cli.metricConfigOverrideUpdates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "serviceConnectionsVal",
                 "newPage": false,
                 "searchKey": "cli.serviceConnectionsVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "serviceConnectionsOnce",
                 "newPage": false,
                 "searchKey": "cli.serviceConnectionsOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "traceFields",
                 "newPage": false,
                 "searchKey": "cli.traceFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -201,7 +221,9 @@
                 "identifier": "traceThreshold",
                 "newPage": false,
                 "searchKey": "cli.traceThreshold",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -221,7 +243,9 @@
                 "identifier": "printLogo",
                 "newPage": false,
                 "searchKey": "cli.printLogo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -241,7 +265,9 @@
                 "identifier": "httpAddr",
                 "newPage": false,
                 "searchKey": "cli.httpAddr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,7 +287,9 @@
                 "identifier": "httpAddrInternal",
                 "newPage": false,
                 "searchKey": "cli.httpAddrInternal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -281,7 +309,9 @@
                 "identifier": "nginxAddr",
                 "newPage": false,
                 "searchKey": "cli.nginxAddr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,7 +331,9 @@
                 "identifier": "devExtension",
                 "newPage": false,
                 "searchKey": "cli.devExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -321,7 +353,9 @@
                 "identifier": "prodExtension",
                 "newPage": false,
                 "searchKey": "cli.prodExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -341,7 +375,9 @@
                 "identifier": "skipSysReqsEnv",
                 "newPage": false,
                 "searchKey": "cli.skipSysReqsEnv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,7 +400,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -382,7 +420,9 @@
                 "identifier": "configurationSource",
                 "newPage": false,
                 "searchKey": "cli.configurationSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -400,7 +440,9 @@
                       "identifier": "configurationSource.Read",
                       "newPage": false,
                       "searchKey": "cli.configurationSource.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,7 +462,9 @@
                       "identifier": "configurationSource.Write",
                       "newPage": false,
                       "searchKey": "cli.configurationSource.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -446,7 +490,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -464,7 +510,9 @@
                 "identifier": "printConfigValidation",
                 "newPage": false,
                 "searchKey": "cli.printConfigValidation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -484,7 +532,9 @@
                 "identifier": "overrideSiteConfig",
                 "newPage": false,
                 "searchKey": "cli.overrideSiteConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -504,7 +554,9 @@
                 "identifier": "overrideGlobalSettings",
                 "newPage": false,
                 "searchKey": "cli.overrideGlobalSettings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -524,7 +576,9 @@
                 "identifier": "overrideExtSvcConfig",
                 "newPage": false,
                 "searchKey": "cli.overrideExtSvcConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -544,7 +598,9 @@
                 "identifier": "watchUpdate",
                 "newPage": false,
                 "searchKey": "cli.watchUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -564,7 +620,9 @@
                 "identifier": "watchPaths",
                 "newPage": false,
                 "searchKey": "cli.watchPaths",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -584,7 +642,9 @@
                 "identifier": "serviceConnections",
                 "newPage": false,
                 "searchKey": "cli.serviceConnections",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -604,7 +664,9 @@
                 "identifier": "gitServers",
                 "newPage": false,
                 "searchKey": "cli.gitServers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -624,7 +686,9 @@
                 "identifier": "comparePostgresDSNs",
                 "newPage": false,
                 "searchKey": "cli.comparePostgresDSNs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -644,7 +708,9 @@
                 "identifier": "newExternalHTTPHandler",
                 "newPage": false,
                 "searchKey": "cli.newExternalHTTPHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -664,7 +730,9 @@
                 "identifier": "healthCheckMiddleware",
                 "newPage": false,
                 "searchKey": "cli.healthCheckMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -684,7 +752,9 @@
                 "identifier": "newInternalHTTPHandler",
                 "newPage": false,
                 "searchKey": "cli.newInternalHTTPHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -704,7 +774,9 @@
                 "identifier": "withInternalActor",
                 "newPage": false,
                 "searchKey": "cli.withInternalActor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -724,7 +796,9 @@
                 "identifier": "secureHeadersMiddleware",
                 "newPage": false,
                 "searchKey": "cli.secureHeadersMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -744,7 +818,9 @@
                 "identifier": "isTrustedOrigin",
                 "newPage": false,
                 "searchKey": "cli.isTrustedOrigin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -764,7 +840,9 @@
                 "identifier": "newOutOfBandMigrationRunner",
                 "newPage": false,
                 "searchKey": "cli.newOutOfBandMigrationRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -784,7 +862,9 @@
                 "identifier": "validateOutOfBandMigrationRunner",
                 "newPage": false,
                 "searchKey": "cli.validateOutOfBandMigrationRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -799,12 +879,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/cli#init",
+              "pathID": "/cmd/frontend/internal/cli#init.serve_cmd.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.serve_cmd.go",
                 "newPage": false,
                 "searchKey": "cli.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -824,7 +906,9 @@
                 "identifier": "defaultExternalURL",
                 "newPage": false,
                 "searchKey": "cli.defaultExternalURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -844,9 +928,7 @@
                 "identifier": "InitDB",
                 "newPage": false,
                 "searchKey": "cli.InitDB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -866,9 +948,7 @@
                 "identifier": "Main",
                 "newPage": false,
                 "searchKey": "cli.Main",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -888,7 +968,9 @@
                 "identifier": "makeExternalAPI",
                 "newPage": false,
                 "searchKey": "cli.makeExternalAPI",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -908,7 +990,9 @@
                 "identifier": "makeInternalAPI",
                 "newPage": false,
                 "searchKey": "cli.makeInternalAPI",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -928,7 +1012,9 @@
                 "identifier": "isAllowedOrigin",
                 "newPage": false,
                 "searchKey": "cli.isAllowedOrigin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -948,7 +1034,9 @@
                 "identifier": "makeRateLimitWatcher",
                 "newPage": false,
                 "searchKey": "cli.makeRateLimitWatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -968,7 +1056,9 @@
                 "identifier": "skippedSysReqs",
                 "newPage": false,
                 "searchKey": "cli.skippedSysReqs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -988,7 +1078,9 @@
                 "identifier": "checkSysReqs",
                 "newPage": false,
                 "searchKey": "cli.checkSysReqs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1008,7 +1100,9 @@
                 "identifier": "TestServiceConnections",
                 "newPage": false,
                 "searchKey": "cli.TestServiceConnections",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

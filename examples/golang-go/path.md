@@ -33,15 +33,10 @@ The path package should only be used for paths separated by forward slashes, suc
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrBadPattern" href="#ErrBadPattern">var ErrBadPattern</a>
 
 ```
 searchKey: path.ErrBadPattern
-tags: [exported]
 ```
 
 ```Go
@@ -52,14 +47,11 @@ ErrBadPattern indicates a pattern was malformed.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="lazybuf" href="#lazybuf">type lazybuf struct</a>
 
 ```
 searchKey: path.lazybuf
+tags: [private]
 ```
 
 ```Go
@@ -76,6 +68,7 @@ A lazybuf is a lazily constructed path buffer. It supports append, reading previ
 
 ```
 searchKey: path.lazybuf.index
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +79,7 @@ func (b *lazybuf) index(i int) byte
 
 ```
 searchKey: path.lazybuf.append
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +90,7 @@ func (b *lazybuf) append(c byte)
 
 ```
 searchKey: path.lazybuf.string
+tags: [private]
 ```
 
 ```Go
@@ -104,15 +99,10 @@ func (b *lazybuf) string() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Match" href="#Match">func Match(pattern, name string) (matched bool, err error)</a>
 
 ```
 searchKey: path.Match
-tags: [exported]
 ```
 
 ```Go
@@ -144,6 +134,7 @@ Match requires pattern to match all of name, not just a substring. The only poss
 
 ```
 searchKey: path.scanChunk
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +147,7 @@ scanChunk gets the next segment of pattern, which is a non-star string possibly 
 
 ```
 searchKey: path.matchChunk
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +160,7 @@ matchChunk checks whether chunk matches the beginning of s. If so, it returns th
 
 ```
 searchKey: path.getEsc
+tags: [private]
 ```
 
 ```Go
@@ -180,7 +173,6 @@ getEsc gets a possibly-escaped character from chunk, for a character class.
 
 ```
 searchKey: path.Clean
-tags: [exported]
 ```
 
 ```Go
@@ -208,6 +200,7 @@ See also Rob Pike, `Lexical File Names in Plan 9 or Getting Dot-Dot Right,' [htt
 
 ```
 searchKey: path.lastSlash
+tags: [private]
 ```
 
 ```Go
@@ -220,7 +213,6 @@ lastSlash(s) is strings.LastIndex(s, "/") but we can't import strings.
 
 ```
 searchKey: path.Split
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +225,6 @@ Split splits path immediately following the final slash, separating it into a di
 
 ```
 searchKey: path.Join
-tags: [exported]
 ```
 
 ```Go
@@ -246,7 +237,6 @@ Join joins any number of path elements into a single path, separating them with 
 
 ```
 searchKey: path.Ext
-tags: [exported]
 ```
 
 ```Go
@@ -259,7 +249,6 @@ Ext returns the file name extension used by path. The extension is the suffix be
 
 ```
 searchKey: path.Base
-tags: [exported]
 ```
 
 ```Go
@@ -272,7 +261,6 @@ Base returns the last element of path. Trailing slashes are removed before extra
 
 ```
 searchKey: path.IsAbs
-tags: [exported]
 ```
 
 ```Go
@@ -285,7 +273,6 @@ IsAbs reports whether the path is absolute.
 
 ```
 searchKey: path.Dir
-tags: [exported]
 ```
 
 ```Go

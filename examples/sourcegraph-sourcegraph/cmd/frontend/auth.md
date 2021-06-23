@@ -46,7 +46,7 @@ Package auth contains auth related code for the frontend.
     * [func GetAndSaveUser(ctx context.Context, op GetAndSaveUserOp) (userID int32, safeErrMsg string, err error)](#GetAndSaveUser)
     * [func TestNormalizeUsername(t *testing.T)](#TestNormalizeUsername)
     * [func TestSafeRedirectURL(t *testing.T)](#TestSafeRedirectURL)
-    * [func init()](#init)
+    * [func init()](#init.user_test.go)
     * [func TestGetAndSaveUser(t *testing.T)](#TestGetAndSaveUser)
     * [func TestMetadataOnlyAutomaticallySetOnFirstOccurrence(t *testing.T)](#TestMetadataOnlyAutomaticallySetOnFirstOccurrence)
     * [func ext(serviceType, serviceID, clientID, accountID string) extsvc.AccountSpec](#ext)
@@ -55,15 +55,10 @@ Package auth contains auth related code for the frontend.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="AuthURLPrefix" href="#AuthURLPrefix">const AuthURLPrefix</a>
 
 ```
 searchKey: auth.AuthURLPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -74,14 +69,11 @@ AuthURLPrefix is the URL path prefix under which to attach authentication handle
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="extraAuthMiddlewares" href="#extraAuthMiddlewares">var extraAuthMiddlewares</a>
 
 ```
 searchKey: auth.extraAuthMiddlewares
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +84,7 @@ var extraAuthMiddlewares []*Middleware
 
 ```
 searchKey: auth.disallowedSymbols
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +95,7 @@ var disallowedSymbols = lazyregexp.New(`(^[\-\.])|(\.$)|([\-\.]{2,})`)
 
 ```
 searchKey: auth.disallowedCharacter
+tags: [private]
 ```
 
 ```Go
@@ -112,7 +106,6 @@ var disallowedCharacter = lazyregexp.New(`[^a-zA-Z0-9\-\.]`)
 
 ```
 searchKey: auth.RequireAuthMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -129,6 +122,7 @@ It is enabled for all auth providers, but an auth provider may reject or redirec
 
 ```
 searchKey: auth.anonymousAccessibleAPIRoutes
+tags: [private]
 ```
 
 ```Go
@@ -141,6 +135,7 @@ var anonymousAccessibleAPIRoutes = ...
 
 ```
 searchKey: auth.anonymousAccessibleUIRoutes
+tags: [private]
 ```
 
 ```Go
@@ -151,6 +146,7 @@ var anonymousAccessibleUIRoutes = ...
 
 ```
 searchKey: auth.anonymousUIStatusCode
+tags: [private]
 ```
 
 ```Go
@@ -166,7 +162,6 @@ Some routes return non-standard HTTP responses when a user is not signed in.
 
 ```
 searchKey: auth.MockGetAndSaveUser
-tags: [exported]
 ```
 
 ```Go
@@ -175,15 +170,10 @@ var MockGetAndSaveUser func(ctx context.Context, op GetAndSaveUserOp) (userID in
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Middleware" href="#Middleware">type Middleware struct</a>
 
 ```
 searchKey: auth.Middleware
-tags: [exported]
 ```
 
 ```Go
@@ -202,7 +192,6 @@ Middleware groups two related middlewares (one for the API, one for the app).
 
 ```
 searchKey: auth.AuthMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -215,6 +204,7 @@ AuthMiddleware returns the authentication middleware that combines all authentic
 
 ```
 searchKey: auth.composeMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -227,7 +217,6 @@ composeMiddleware returns a new Middleware that composes the middlewares togethe
 
 ```
 searchKey: auth.GetAndSaveUserOp
-tags: [exported]
 ```
 
 ```Go
@@ -244,6 +233,7 @@ type GetAndSaveUserOp struct {
 
 ```
 searchKey: auth.userInfo
+tags: [private]
 ```
 
 ```Go
@@ -258,6 +248,7 @@ type userInfo struct {
 
 ```
 searchKey: auth.mockParams
+tags: [private]
 ```
 
 ```Go
@@ -277,6 +268,7 @@ type mockParams struct {
 
 ```
 searchKey: auth.mocks
+tags: [private]
 ```
 
 ```Go
@@ -307,6 +299,7 @@ mocks provide mocking. It should only be used for one call of auth.GetAndSaveUse
 
 ```
 searchKey: auth.newMocks
+tags: [private]
 ```
 
 ```Go
@@ -317,6 +310,7 @@ func newMocks(t *testing.T, m mockParams) *mocks
 
 ```
 searchKey: auth.mocks.apply
+tags: [private]
 ```
 
 ```Go
@@ -327,6 +321,7 @@ func (m *mocks) apply()
 
 ```
 searchKey: auth.mocks.reset
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +332,7 @@ func (m *mocks) reset()
 
 ```
 searchKey: auth.mocks.LookupUserAndSave
+tags: [private]
 ```
 
 ```Go
@@ -349,6 +345,7 @@ LookupUserAndSave mocks database.ExternalAccounts.LookupUserAndSave
 
 ```
 searchKey: auth.mocks.CreateUserAndSave
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +358,7 @@ CreateUserAndSave mocks database.ExternalAccounts.CreateUserAndSave
 
 ```
 searchKey: auth.mocks.AssociateUserAndSave
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +371,7 @@ AssociateUserAndSave mocks database.ExternalAccounts.AssociateUserAndSave
 
 ```
 searchKey: auth.mocks.GetByVerifiedEmail
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +384,7 @@ GetByVerifiedEmail mocks database.Users.GetByVerifiedEmail
 
 ```
 searchKey: auth.mocks.GetByUsername
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +397,7 @@ GetByUsername mocks database.Users.GetByUsername
 
 ```
 searchKey: auth.mocks.GetByID
+tags: [private]
 ```
 
 ```Go
@@ -409,6 +410,7 @@ GetByID mocks database.Users.GetByID
 
 ```
 searchKey: auth.mocks.Update
+tags: [private]
 ```
 
 ```Go
@@ -421,6 +423,7 @@ Update mocks database.Users.Update
 
 ```
 searchKey: auth.mocks.GrantPendingPermissions
+tags: [private]
 ```
 
 ```Go
@@ -431,15 +434,10 @@ GrantPendingPermissions mocks database.Authz.GrantPendingPermissions
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="RegisterMiddlewares" href="#RegisterMiddlewares">func RegisterMiddlewares(m ...*Middleware)</a>
 
 ```
 searchKey: auth.RegisterMiddlewares
-tags: [exported]
 ```
 
 ```Go
@@ -452,7 +450,6 @@ RegisterMiddlewares registers additional authentication middlewares. Currently t
 
 ```
 searchKey: auth.NormalizeUsername
-tags: [exported]
 ```
 
 ```Go
@@ -471,6 +468,7 @@ Note: Do not forget to change database constraints on "users" and "orgs" tables.
 
 ```
 searchKey: auth.matchedRouteName
+tags: [private]
 ```
 
 ```Go
@@ -481,7 +479,6 @@ func matchedRouteName(req *http.Request, router *mux.Router) string
 
 ```
 searchKey: auth.AllowAnonymousRequest
-tags: [exported]
 ```
 
 ```Go
@@ -496,6 +493,7 @@ AllowAnonymousRequest reports whether handling of the HTTP request (which is fro
 
 ```
 searchKey: auth.anonymousStatusCode
+tags: [private]
 ```
 
 ```Go
@@ -506,7 +504,6 @@ func anonymousStatusCode(req *http.Request, defaultCode int) int
 
 ```
 searchKey: auth.SafeRedirectURL
-tags: [exported]
 ```
 
 ```Go
@@ -521,7 +518,6 @@ SafeRedirectURL returns a safe redirect URL based on the input, to protect again
 
 ```
 searchKey: auth.GetAndSaveUser
-tags: [exported]
 ```
 
 ```Go
@@ -560,6 +556,7 @@ already does.
 
 ```
 searchKey: auth.TestNormalizeUsername
+tags: [private]
 ```
 
 ```Go
@@ -570,16 +567,18 @@ func TestNormalizeUsername(t *testing.T)
 
 ```
 searchKey: auth.TestSafeRedirectURL
+tags: [private]
 ```
 
 ```Go
 func TestSafeRedirectURL(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.user_test.go" href="#init.user_test.go">func init()</a>
 
 ```
 searchKey: auth.init
+tags: [private]
 ```
 
 ```Go
@@ -590,6 +589,7 @@ func init()
 
 ```
 searchKey: auth.TestGetAndSaveUser
+tags: [private]
 ```
 
 ```Go
@@ -604,6 +604,7 @@ TestGetAndSaveUser ensures the correctness of the GetAndSaveUser function.
 
 ```
 searchKey: auth.TestMetadataOnlyAutomaticallySetOnFirstOccurrence
+tags: [private]
 ```
 
 ```Go
@@ -614,6 +615,7 @@ func TestMetadataOnlyAutomaticallySetOnFirstOccurrence(t *testing.T)
 
 ```
 searchKey: auth.ext
+tags: [private]
 ```
 
 ```Go
@@ -624,6 +626,7 @@ func ext(serviceType, serviceID, clientID, accountID string) extsvc.AccountSpec
 
 ```
 searchKey: auth.userProps
+tags: [private]
 ```
 
 ```Go

@@ -14,17 +14,22 @@
 * [Functions](#func)
     * [func Log(lg ErrorLogger, msg string, err *error, ctx ...interface{})](#Log)
     * [func condensedFormat(r *log15.Record) []byte](#condensedFormat)
-    * [func init()](#init)
+    * [func init()](#init.main.go)
     * [func LogEntryLevelString(l log15.Lvl) string](#LogEntryLevelString)
     * [func Init(options ...Option)](#Init)
 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="logColors" href="#logColors">var logColors</a>
 
 ```
 searchKey: logging.logColors
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +40,7 @@ var logColors = ...
 
 ```
 searchKey: logging.logLabels
+tags: [private]
 ```
 
 ```Go
@@ -45,11 +51,14 @@ We'd prefer these in caps, not lowercase, and don't need the 4-character alignme
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrorLogger" href="#ErrorLogger">type ErrorLogger interface</a>
 
 ```
 searchKey: logging.ErrorLogger
-tags: [exported]
 ```
 
 ```Go
@@ -64,7 +73,6 @@ ErrorLogger captures the method required for logging an error.
 
 ```
 searchKey: logging.Options
-tags: [exported]
 ```
 
 ```Go
@@ -80,7 +88,6 @@ Options control the behavior of a tracer.
 
 ```
 searchKey: logging.Option
-tags: [exported]
 ```
 
 ```Go
@@ -93,7 +100,6 @@ If this idiom seems strange: [https://github.com/tmrts/go-patterns/blob/master/i
 
 ```
 searchKey: logging.ServiceName
-tags: [exported]
 ```
 
 ```Go
@@ -104,7 +110,6 @@ func ServiceName(s string) Option
 
 ```
 searchKey: logging.Filter
-tags: [exported]
 ```
 
 ```Go
@@ -113,11 +118,14 @@ func Filter(f func(*log15.Record) bool) Option
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Log" href="#Log">func Log(lg ErrorLogger, msg string, err *error, ctx ...interface{})</a>
 
 ```
 searchKey: logging.Log
-tags: [exported]
 ```
 
 ```Go
@@ -130,16 +138,18 @@ Log logs the given message and context when the given error is defined.
 
 ```
 searchKey: logging.condensedFormat
+tags: [private]
 ```
 
 ```Go
 func condensedFormat(r *log15.Record) []byte
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.main.go" href="#init.main.go">func init()</a>
 
 ```
 searchKey: logging.init
+tags: [private]
 ```
 
 ```Go
@@ -150,7 +160,6 @@ func init()
 
 ```
 searchKey: logging.LogEntryLevelString
-tags: [exported]
 ```
 
 ```Go
@@ -163,7 +172,6 @@ For severity field, see [https://cloud.google.com/logging/docs/reference/v2/rest
 
 ```
 searchKey: logging.Init
-tags: [exported]
 ```
 
 ```Go

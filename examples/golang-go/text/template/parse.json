@@ -4,9 +4,7 @@
     "identifier": "parse",
     "newPage": true,
     "searchKey": "text/template/parse",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "itemError",
                 "newPage": false,
                 "searchKey": "parse.itemError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "itemBool",
                 "newPage": false,
                 "searchKey": "parse.itemBool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "itemChar",
                 "newPage": false,
                 "searchKey": "parse.itemChar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "itemCharConstant",
                 "newPage": false,
                 "searchKey": "parse.itemCharConstant",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "itemComment",
                 "newPage": false,
                 "searchKey": "parse.itemComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "itemComplex",
                 "newPage": false,
                 "searchKey": "parse.itemComplex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "itemAssign",
                 "newPage": false,
                 "searchKey": "parse.itemAssign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "itemDeclare",
                 "newPage": false,
                 "searchKey": "parse.itemDeclare",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                 "identifier": "itemEOF",
                 "newPage": false,
                 "searchKey": "parse.itemEOF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +238,9 @@
                 "identifier": "itemField",
                 "newPage": false,
                 "searchKey": "parse.itemField",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -244,7 +260,9 @@
                 "identifier": "itemIdentifier",
                 "newPage": false,
                 "searchKey": "parse.itemIdentifier",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -264,7 +282,9 @@
                 "identifier": "itemLeftDelim",
                 "newPage": false,
                 "searchKey": "parse.itemLeftDelim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -284,7 +304,9 @@
                 "identifier": "itemLeftParen",
                 "newPage": false,
                 "searchKey": "parse.itemLeftParen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,7 +326,9 @@
                 "identifier": "itemNumber",
                 "newPage": false,
                 "searchKey": "parse.itemNumber",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -324,7 +348,9 @@
                 "identifier": "itemPipe",
                 "newPage": false,
                 "searchKey": "parse.itemPipe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -344,7 +370,9 @@
                 "identifier": "itemRawString",
                 "newPage": false,
                 "searchKey": "parse.itemRawString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,7 +392,9 @@
                 "identifier": "itemRightDelim",
                 "newPage": false,
                 "searchKey": "parse.itemRightDelim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -384,7 +414,9 @@
                 "identifier": "itemRightParen",
                 "newPage": false,
                 "searchKey": "parse.itemRightParen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -404,7 +436,9 @@
                 "identifier": "itemSpace",
                 "newPage": false,
                 "searchKey": "parse.itemSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -424,7 +458,9 @@
                 "identifier": "itemString",
                 "newPage": false,
                 "searchKey": "parse.itemString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -444,7 +480,9 @@
                 "identifier": "itemText",
                 "newPage": false,
                 "searchKey": "parse.itemText",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -464,7 +502,9 @@
                 "identifier": "itemVariable",
                 "newPage": false,
                 "searchKey": "parse.itemVariable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -484,7 +524,9 @@
                 "identifier": "itemKeyword",
                 "newPage": false,
                 "searchKey": "parse.itemKeyword",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -504,7 +546,9 @@
                 "identifier": "itemBlock",
                 "newPage": false,
                 "searchKey": "parse.itemBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -524,7 +568,9 @@
                 "identifier": "itemDot",
                 "newPage": false,
                 "searchKey": "parse.itemDot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -544,7 +590,9 @@
                 "identifier": "itemDefine",
                 "newPage": false,
                 "searchKey": "parse.itemDefine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -564,7 +612,9 @@
                 "identifier": "itemElse",
                 "newPage": false,
                 "searchKey": "parse.itemElse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -584,7 +634,9 @@
                 "identifier": "itemEnd",
                 "newPage": false,
                 "searchKey": "parse.itemEnd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -604,7 +656,9 @@
                 "identifier": "itemIf",
                 "newPage": false,
                 "searchKey": "parse.itemIf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -624,7 +678,9 @@
                 "identifier": "itemNil",
                 "newPage": false,
                 "searchKey": "parse.itemNil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -644,7 +700,9 @@
                 "identifier": "itemRange",
                 "newPage": false,
                 "searchKey": "parse.itemRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -664,7 +722,9 @@
                 "identifier": "itemTemplate",
                 "newPage": false,
                 "searchKey": "parse.itemTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -684,7 +744,9 @@
                 "identifier": "itemWith",
                 "newPage": false,
                 "searchKey": "parse.itemWith",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -704,7 +766,9 @@
                 "identifier": "eof",
                 "newPage": false,
                 "searchKey": "parse.eof",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -724,7 +788,9 @@
                 "identifier": "spaceChars",
                 "newPage": false,
                 "searchKey": "parse.spaceChars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -744,7 +810,9 @@
                 "identifier": "trimMarker",
                 "newPage": false,
                 "searchKey": "parse.trimMarker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -764,7 +832,9 @@
                 "identifier": "trimMarkerLen",
                 "newPage": false,
                 "searchKey": "parse.trimMarkerLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -784,7 +854,9 @@
                 "identifier": "leftDelim",
                 "newPage": false,
                 "searchKey": "parse.leftDelim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -804,7 +876,9 @@
                 "identifier": "rightDelim",
                 "newPage": false,
                 "searchKey": "parse.rightDelim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -824,7 +898,9 @@
                 "identifier": "leftComment",
                 "newPage": false,
                 "searchKey": "parse.leftComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -844,7 +920,9 @@
                 "identifier": "rightComment",
                 "newPage": false,
                 "searchKey": "parse.rightComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -864,9 +942,7 @@
                 "identifier": "NodeText",
                 "newPage": false,
                 "searchKey": "parse.NodeText",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -886,9 +962,7 @@
                 "identifier": "NodeAction",
                 "newPage": false,
                 "searchKey": "parse.NodeAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -908,9 +982,7 @@
                 "identifier": "NodeBool",
                 "newPage": false,
                 "searchKey": "parse.NodeBool",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -930,9 +1002,7 @@
                 "identifier": "NodeChain",
                 "newPage": false,
                 "searchKey": "parse.NodeChain",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -952,9 +1022,7 @@
                 "identifier": "NodeCommand",
                 "newPage": false,
                 "searchKey": "parse.NodeCommand",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -974,9 +1042,7 @@
                 "identifier": "NodeDot",
                 "newPage": false,
                 "searchKey": "parse.NodeDot",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -996,7 +1062,9 @@
                 "identifier": "nodeElse",
                 "newPage": false,
                 "searchKey": "parse.nodeElse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1016,7 +1084,9 @@
                 "identifier": "nodeEnd",
                 "newPage": false,
                 "searchKey": "parse.nodeEnd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1036,9 +1106,7 @@
                 "identifier": "NodeField",
                 "newPage": false,
                 "searchKey": "parse.NodeField",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1058,9 +1126,7 @@
                 "identifier": "NodeIdentifier",
                 "newPage": false,
                 "searchKey": "parse.NodeIdentifier",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1080,9 +1146,7 @@
                 "identifier": "NodeIf",
                 "newPage": false,
                 "searchKey": "parse.NodeIf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1102,9 +1166,7 @@
                 "identifier": "NodeList",
                 "newPage": false,
                 "searchKey": "parse.NodeList",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1124,9 +1186,7 @@
                 "identifier": "NodeNil",
                 "newPage": false,
                 "searchKey": "parse.NodeNil",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1146,9 +1206,7 @@
                 "identifier": "NodeNumber",
                 "newPage": false,
                 "searchKey": "parse.NodeNumber",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1168,9 +1226,7 @@
                 "identifier": "NodePipe",
                 "newPage": false,
                 "searchKey": "parse.NodePipe",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1190,9 +1246,7 @@
                 "identifier": "NodeRange",
                 "newPage": false,
                 "searchKey": "parse.NodeRange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1212,9 +1266,7 @@
                 "identifier": "NodeString",
                 "newPage": false,
                 "searchKey": "parse.NodeString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1234,9 +1286,7 @@
                 "identifier": "NodeTemplate",
                 "newPage": false,
                 "searchKey": "parse.NodeTemplate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1256,9 +1306,7 @@
                 "identifier": "NodeVariable",
                 "newPage": false,
                 "searchKey": "parse.NodeVariable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1278,9 +1326,7 @@
                 "identifier": "NodeWith",
                 "newPage": false,
                 "searchKey": "parse.NodeWith",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1300,9 +1346,7 @@
                 "identifier": "NodeComment",
                 "newPage": false,
                 "searchKey": "parse.NodeComment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1322,9 +1366,7 @@
                 "identifier": "ParseComments",
                 "newPage": false,
                 "searchKey": "parse.ParseComments",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1344,9 +1386,7 @@
                 "identifier": "SkipFuncCheck",
                 "newPage": false,
                 "searchKey": "parse.SkipFuncCheck",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1366,7 +1406,9 @@
                 "identifier": "noError",
                 "newPage": false,
                 "searchKey": "parse.noError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1386,7 +1428,9 @@
                 "identifier": "hasError",
                 "newPage": false,
                 "searchKey": "parse.hasError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1409,9 +1453,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1429,7 +1471,9 @@
                 "identifier": "key",
                 "newPage": false,
                 "searchKey": "parse.key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1449,7 +1493,9 @@
                 "identifier": "textFormat",
                 "newPage": false,
                 "searchKey": "parse.textFormat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1469,7 +1515,9 @@
                 "identifier": "itemName",
                 "newPage": false,
                 "searchKey": "parse.itemName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1489,7 +1537,9 @@
                 "identifier": "tDot",
                 "newPage": false,
                 "searchKey": "parse.tDot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1509,7 +1559,9 @@
                 "identifier": "tBlock",
                 "newPage": false,
                 "searchKey": "parse.tBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1529,7 +1581,9 @@
                 "identifier": "tEOF",
                 "newPage": false,
                 "searchKey": "parse.tEOF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1549,7 +1603,9 @@
                 "identifier": "tFor",
                 "newPage": false,
                 "searchKey": "parse.tFor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1569,7 +1625,9 @@
                 "identifier": "tLeft",
                 "newPage": false,
                 "searchKey": "parse.tLeft",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1589,7 +1647,9 @@
                 "identifier": "tLpar",
                 "newPage": false,
                 "searchKey": "parse.tLpar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1609,7 +1669,9 @@
                 "identifier": "tPipe",
                 "newPage": false,
                 "searchKey": "parse.tPipe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1629,7 +1691,9 @@
                 "identifier": "tQuote",
                 "newPage": false,
                 "searchKey": "parse.tQuote",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1649,7 +1713,9 @@
                 "identifier": "tRange",
                 "newPage": false,
                 "searchKey": "parse.tRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1669,7 +1735,9 @@
                 "identifier": "tRight",
                 "newPage": false,
                 "searchKey": "parse.tRight",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1689,7 +1757,9 @@
                 "identifier": "tRpar",
                 "newPage": false,
                 "searchKey": "parse.tRpar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1709,7 +1779,9 @@
                 "identifier": "tSpace",
                 "newPage": false,
                 "searchKey": "parse.tSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1729,7 +1801,9 @@
                 "identifier": "raw",
                 "newPage": false,
                 "searchKey": "parse.raw",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1749,7 +1823,9 @@
                 "identifier": "rawNL",
                 "newPage": false,
                 "searchKey": "parse.rawNL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1769,7 +1845,9 @@
                 "identifier": "tRawQuote",
                 "newPage": false,
                 "searchKey": "parse.tRawQuote",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1789,7 +1867,9 @@
                 "identifier": "tRawQuoteNL",
                 "newPage": false,
                 "searchKey": "parse.tRawQuoteNL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1809,7 +1889,9 @@
                 "identifier": "lexTests",
                 "newPage": false,
                 "searchKey": "parse.lexTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1829,7 +1911,9 @@
                 "identifier": "lexDelimTests",
                 "newPage": false,
                 "searchKey": "parse.lexDelimTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1849,7 +1933,9 @@
                 "identifier": "tLeftDelim",
                 "newPage": false,
                 "searchKey": "parse.tLeftDelim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1869,7 +1955,9 @@
                 "identifier": "tRightDelim",
                 "newPage": false,
                 "searchKey": "parse.tRightDelim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1889,7 +1977,9 @@
                 "identifier": "lexPosTests",
                 "newPage": false,
                 "searchKey": "parse.lexPosTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1909,7 +1999,9 @@
                 "identifier": "debug",
                 "newPage": false,
                 "searchKey": "parse.debug",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1929,7 +2021,9 @@
                 "identifier": "numberTests",
                 "newPage": false,
                 "searchKey": "parse.numberTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1949,7 +2043,9 @@
                 "identifier": "parseTests",
                 "newPage": false,
                 "searchKey": "parse.parseTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1969,7 +2065,9 @@
                 "identifier": "builtins",
                 "newPage": false,
                 "searchKey": "parse.builtins",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1989,7 +2087,9 @@
                 "identifier": "isEmptyTests",
                 "newPage": false,
                 "searchKey": "parse.isEmptyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2009,7 +2109,9 @@
                 "identifier": "errorTests",
                 "newPage": false,
                 "searchKey": "parse.errorTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2029,7 +2131,9 @@
                 "identifier": "sinkv",
                 "newPage": false,
                 "searchKey": "parse.sinkv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2049,7 +2153,9 @@
                 "identifier": "sinkl",
                 "newPage": false,
                 "searchKey": "parse.sinkl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2072,9 +2178,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2092,7 +2196,9 @@
                 "identifier": "item",
                 "newPage": false,
                 "searchKey": "parse.item",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2110,7 +2216,9 @@
                       "identifier": "mkItem",
                       "newPage": false,
                       "searchKey": "parse.mkItem",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2130,7 +2238,9 @@
                       "identifier": "item.String",
                       "newPage": false,
                       "searchKey": "parse.item.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2153,7 +2263,9 @@
                 "identifier": "itemType",
                 "newPage": false,
                 "searchKey": "parse.itemType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2171,7 +2283,9 @@
                       "identifier": "itemType.String",
                       "newPage": false,
                       "searchKey": "parse.itemType.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2194,7 +2308,9 @@
                 "identifier": "stateFn",
                 "newPage": false,
                 "searchKey": "parse.stateFn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2212,7 +2328,9 @@
                       "identifier": "lexText",
                       "newPage": false,
                       "searchKey": "parse.lexText",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2232,7 +2350,9 @@
                       "identifier": "lexLeftDelim",
                       "newPage": false,
                       "searchKey": "parse.lexLeftDelim",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2252,7 +2372,9 @@
                       "identifier": "lexComment",
                       "newPage": false,
                       "searchKey": "parse.lexComment",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2272,7 +2394,9 @@
                       "identifier": "lexRightDelim",
                       "newPage": false,
                       "searchKey": "parse.lexRightDelim",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2292,7 +2416,9 @@
                       "identifier": "lexInsideAction",
                       "newPage": false,
                       "searchKey": "parse.lexInsideAction",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2312,7 +2438,9 @@
                       "identifier": "lexSpace",
                       "newPage": false,
                       "searchKey": "parse.lexSpace",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2332,7 +2460,9 @@
                       "identifier": "lexIdentifier",
                       "newPage": false,
                       "searchKey": "parse.lexIdentifier",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2352,7 +2482,9 @@
                       "identifier": "lexField",
                       "newPage": false,
                       "searchKey": "parse.lexField",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2372,7 +2504,9 @@
                       "identifier": "lexVariable",
                       "newPage": false,
                       "searchKey": "parse.lexVariable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2392,7 +2526,9 @@
                       "identifier": "lexFieldOrVariable",
                       "newPage": false,
                       "searchKey": "parse.lexFieldOrVariable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2412,7 +2548,9 @@
                       "identifier": "lexChar",
                       "newPage": false,
                       "searchKey": "parse.lexChar",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2432,7 +2570,9 @@
                       "identifier": "lexNumber",
                       "newPage": false,
                       "searchKey": "parse.lexNumber",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2452,7 +2592,9 @@
                       "identifier": "lexQuote",
                       "newPage": false,
                       "searchKey": "parse.lexQuote",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2472,7 +2614,9 @@
                       "identifier": "lexRawQuote",
                       "newPage": false,
                       "searchKey": "parse.lexRawQuote",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2495,7 +2639,9 @@
                 "identifier": "lexer",
                 "newPage": false,
                 "searchKey": "parse.lexer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2513,7 +2659,9 @@
                       "identifier": "lex",
                       "newPage": false,
                       "searchKey": "parse.lex",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2533,7 +2681,9 @@
                       "identifier": "lexer.next",
                       "newPage": false,
                       "searchKey": "parse.lexer.next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2553,7 +2703,9 @@
                       "identifier": "lexer.peek",
                       "newPage": false,
                       "searchKey": "parse.lexer.peek",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2573,7 +2725,9 @@
                       "identifier": "lexer.backup",
                       "newPage": false,
                       "searchKey": "parse.lexer.backup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2593,7 +2747,9 @@
                       "identifier": "lexer.emit",
                       "newPage": false,
                       "searchKey": "parse.lexer.emit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2613,7 +2769,9 @@
                       "identifier": "lexer.ignore",
                       "newPage": false,
                       "searchKey": "parse.lexer.ignore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2633,7 +2791,9 @@
                       "identifier": "lexer.accept",
                       "newPage": false,
                       "searchKey": "parse.lexer.accept",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2653,7 +2813,9 @@
                       "identifier": "lexer.acceptRun",
                       "newPage": false,
                       "searchKey": "parse.lexer.acceptRun",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2673,7 +2835,9 @@
                       "identifier": "lexer.errorf",
                       "newPage": false,
                       "searchKey": "parse.lexer.errorf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2693,7 +2857,9 @@
                       "identifier": "lexer.nextItem",
                       "newPage": false,
                       "searchKey": "parse.lexer.nextItem",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2713,7 +2879,9 @@
                       "identifier": "lexer.drain",
                       "newPage": false,
                       "searchKey": "parse.lexer.drain",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2733,7 +2901,9 @@
                       "identifier": "lexer.run",
                       "newPage": false,
                       "searchKey": "parse.lexer.run",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2753,7 +2923,9 @@
                       "identifier": "lexer.atRightDelim",
                       "newPage": false,
                       "searchKey": "parse.lexer.atRightDelim",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2773,7 +2945,9 @@
                       "identifier": "lexer.atTerminator",
                       "newPage": false,
                       "searchKey": "parse.lexer.atTerminator",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2793,7 +2967,9 @@
                       "identifier": "lexer.scanNumber",
                       "newPage": false,
                       "searchKey": "parse.lexer.scanNumber",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2816,9 +2992,7 @@
                 "identifier": "Node",
                 "newPage": false,
                 "searchKey": "parse.Node",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2838,9 +3012,7 @@
                 "identifier": "NodeType",
                 "newPage": false,
                 "searchKey": "parse.NodeType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2858,9 +3030,7 @@
                       "identifier": "NodeType.Type",
                       "newPage": false,
                       "searchKey": "parse.NodeType.Type",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2883,9 +3053,7 @@
                 "identifier": "Pos",
                 "newPage": false,
                 "searchKey": "parse.Pos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2903,7 +3071,9 @@
                       "identifier": "rightTrimLength",
                       "newPage": false,
                       "searchKey": "parse.rightTrimLength",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2923,7 +3093,9 @@
                       "identifier": "leftTrimLength",
                       "newPage": false,
                       "searchKey": "parse.leftTrimLength",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2943,9 +3115,7 @@
                       "identifier": "Pos.Position",
                       "newPage": false,
                       "searchKey": "parse.Pos.Position",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2968,9 +3138,7 @@
                 "identifier": "ListNode",
                 "newPage": false,
                 "searchKey": "parse.ListNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2988,7 +3156,9 @@
                       "identifier": "ListNode.append",
                       "newPage": false,
                       "searchKey": "parse.ListNode.append",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3008,7 +3178,9 @@
                       "identifier": "ListNode.tree",
                       "newPage": false,
                       "searchKey": "parse.ListNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3028,9 +3200,7 @@
                       "identifier": "ListNode.String",
                       "newPage": false,
                       "searchKey": "parse.ListNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3050,7 +3220,9 @@
                       "identifier": "ListNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.ListNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3070,9 +3242,7 @@
                       "identifier": "ListNode.CopyList",
                       "newPage": false,
                       "searchKey": "parse.ListNode.CopyList",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3092,9 +3262,7 @@
                       "identifier": "ListNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.ListNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3117,9 +3285,7 @@
                 "identifier": "TextNode",
                 "newPage": false,
                 "searchKey": "parse.TextNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3137,9 +3303,7 @@
                       "identifier": "TextNode.String",
                       "newPage": false,
                       "searchKey": "parse.TextNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3159,7 +3323,9 @@
                       "identifier": "TextNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.TextNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3179,7 +3345,9 @@
                       "identifier": "TextNode.tree",
                       "newPage": false,
                       "searchKey": "parse.TextNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3199,9 +3367,7 @@
                       "identifier": "TextNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.TextNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3224,9 +3390,7 @@
                 "identifier": "CommentNode",
                 "newPage": false,
                 "searchKey": "parse.CommentNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3244,9 +3408,7 @@
                       "identifier": "CommentNode.String",
                       "newPage": false,
                       "searchKey": "parse.CommentNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3266,7 +3428,9 @@
                       "identifier": "CommentNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.CommentNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3286,7 +3450,9 @@
                       "identifier": "CommentNode.tree",
                       "newPage": false,
                       "searchKey": "parse.CommentNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3306,9 +3472,7 @@
                       "identifier": "CommentNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.CommentNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3331,9 +3495,7 @@
                 "identifier": "PipeNode",
                 "newPage": false,
                 "searchKey": "parse.PipeNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3351,7 +3513,9 @@
                       "identifier": "PipeNode.append",
                       "newPage": false,
                       "searchKey": "parse.PipeNode.append",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3371,9 +3535,7 @@
                       "identifier": "PipeNode.String",
                       "newPage": false,
                       "searchKey": "parse.PipeNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3393,7 +3555,9 @@
                       "identifier": "PipeNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.PipeNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3413,7 +3577,9 @@
                       "identifier": "PipeNode.tree",
                       "newPage": false,
                       "searchKey": "parse.PipeNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3433,9 +3599,7 @@
                       "identifier": "PipeNode.CopyPipe",
                       "newPage": false,
                       "searchKey": "parse.PipeNode.CopyPipe",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3455,9 +3619,7 @@
                       "identifier": "PipeNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.PipeNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3480,9 +3642,7 @@
                 "identifier": "ActionNode",
                 "newPage": false,
                 "searchKey": "parse.ActionNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3500,9 +3660,7 @@
                       "identifier": "ActionNode.String",
                       "newPage": false,
                       "searchKey": "parse.ActionNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3522,7 +3680,9 @@
                       "identifier": "ActionNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.ActionNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3542,7 +3702,9 @@
                       "identifier": "ActionNode.tree",
                       "newPage": false,
                       "searchKey": "parse.ActionNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3562,9 +3724,7 @@
                       "identifier": "ActionNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.ActionNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3587,9 +3747,7 @@
                 "identifier": "CommandNode",
                 "newPage": false,
                 "searchKey": "parse.CommandNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3607,7 +3765,9 @@
                       "identifier": "CommandNode.append",
                       "newPage": false,
                       "searchKey": "parse.CommandNode.append",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3627,9 +3787,7 @@
                       "identifier": "CommandNode.String",
                       "newPage": false,
                       "searchKey": "parse.CommandNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3649,7 +3807,9 @@
                       "identifier": "CommandNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.CommandNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3669,7 +3829,9 @@
                       "identifier": "CommandNode.tree",
                       "newPage": false,
                       "searchKey": "parse.CommandNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3689,9 +3851,7 @@
                       "identifier": "CommandNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.CommandNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3714,9 +3874,7 @@
                 "identifier": "IdentifierNode",
                 "newPage": false,
                 "searchKey": "parse.IdentifierNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3734,9 +3892,7 @@
                       "identifier": "NewIdentifier",
                       "newPage": false,
                       "searchKey": "parse.NewIdentifier",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3756,9 +3912,7 @@
                       "identifier": "IdentifierNode.SetPos",
                       "newPage": false,
                       "searchKey": "parse.IdentifierNode.SetPos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3778,9 +3932,7 @@
                       "identifier": "IdentifierNode.SetTree",
                       "newPage": false,
                       "searchKey": "parse.IdentifierNode.SetTree",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3800,9 +3952,7 @@
                       "identifier": "IdentifierNode.String",
                       "newPage": false,
                       "searchKey": "parse.IdentifierNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3822,7 +3972,9 @@
                       "identifier": "IdentifierNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.IdentifierNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3842,7 +3994,9 @@
                       "identifier": "IdentifierNode.tree",
                       "newPage": false,
                       "searchKey": "parse.IdentifierNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3862,9 +4016,7 @@
                       "identifier": "IdentifierNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.IdentifierNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3887,9 +4039,7 @@
                 "identifier": "VariableNode",
                 "newPage": false,
                 "searchKey": "parse.VariableNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3907,9 +4057,7 @@
                       "identifier": "VariableNode.String",
                       "newPage": false,
                       "searchKey": "parse.VariableNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3929,7 +4077,9 @@
                       "identifier": "VariableNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.VariableNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3949,7 +4099,9 @@
                       "identifier": "VariableNode.tree",
                       "newPage": false,
                       "searchKey": "parse.VariableNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3969,9 +4121,7 @@
                       "identifier": "VariableNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.VariableNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3994,9 +4144,7 @@
                 "identifier": "DotNode",
                 "newPage": false,
                 "searchKey": "parse.DotNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4014,9 +4162,7 @@
                       "identifier": "DotNode.Type",
                       "newPage": false,
                       "searchKey": "parse.DotNode.Type",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4036,9 +4182,7 @@
                       "identifier": "DotNode.String",
                       "newPage": false,
                       "searchKey": "parse.DotNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4058,7 +4202,9 @@
                       "identifier": "DotNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.DotNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4078,7 +4224,9 @@
                       "identifier": "DotNode.tree",
                       "newPage": false,
                       "searchKey": "parse.DotNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4098,9 +4246,7 @@
                       "identifier": "DotNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.DotNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4123,9 +4269,7 @@
                 "identifier": "NilNode",
                 "newPage": false,
                 "searchKey": "parse.NilNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4143,9 +4287,7 @@
                       "identifier": "NilNode.Type",
                       "newPage": false,
                       "searchKey": "parse.NilNode.Type",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4165,9 +4307,7 @@
                       "identifier": "NilNode.String",
                       "newPage": false,
                       "searchKey": "parse.NilNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4187,7 +4327,9 @@
                       "identifier": "NilNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.NilNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4207,7 +4349,9 @@
                       "identifier": "NilNode.tree",
                       "newPage": false,
                       "searchKey": "parse.NilNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4227,9 +4371,7 @@
                       "identifier": "NilNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.NilNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4252,9 +4394,7 @@
                 "identifier": "FieldNode",
                 "newPage": false,
                 "searchKey": "parse.FieldNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4272,9 +4412,7 @@
                       "identifier": "FieldNode.String",
                       "newPage": false,
                       "searchKey": "parse.FieldNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4294,7 +4432,9 @@
                       "identifier": "FieldNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.FieldNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4314,7 +4454,9 @@
                       "identifier": "FieldNode.tree",
                       "newPage": false,
                       "searchKey": "parse.FieldNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4334,9 +4476,7 @@
                       "identifier": "FieldNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.FieldNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4359,9 +4499,7 @@
                 "identifier": "ChainNode",
                 "newPage": false,
                 "searchKey": "parse.ChainNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4379,9 +4517,7 @@
                       "identifier": "ChainNode.Add",
                       "newPage": false,
                       "searchKey": "parse.ChainNode.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4401,9 +4537,7 @@
                       "identifier": "ChainNode.String",
                       "newPage": false,
                       "searchKey": "parse.ChainNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4423,7 +4557,9 @@
                       "identifier": "ChainNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.ChainNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4443,7 +4579,9 @@
                       "identifier": "ChainNode.tree",
                       "newPage": false,
                       "searchKey": "parse.ChainNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4463,9 +4601,7 @@
                       "identifier": "ChainNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.ChainNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4488,9 +4624,7 @@
                 "identifier": "BoolNode",
                 "newPage": false,
                 "searchKey": "parse.BoolNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4508,9 +4642,7 @@
                       "identifier": "BoolNode.String",
                       "newPage": false,
                       "searchKey": "parse.BoolNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4530,7 +4662,9 @@
                       "identifier": "BoolNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.BoolNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4550,7 +4684,9 @@
                       "identifier": "BoolNode.tree",
                       "newPage": false,
                       "searchKey": "parse.BoolNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4570,9 +4706,7 @@
                       "identifier": "BoolNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.BoolNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4595,9 +4729,7 @@
                 "identifier": "NumberNode",
                 "newPage": false,
                 "searchKey": "parse.NumberNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4615,7 +4747,9 @@
                       "identifier": "NumberNode.simplifyComplex",
                       "newPage": false,
                       "searchKey": "parse.NumberNode.simplifyComplex",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4635,9 +4769,7 @@
                       "identifier": "NumberNode.String",
                       "newPage": false,
                       "searchKey": "parse.NumberNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4657,7 +4789,9 @@
                       "identifier": "NumberNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.NumberNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4677,7 +4811,9 @@
                       "identifier": "NumberNode.tree",
                       "newPage": false,
                       "searchKey": "parse.NumberNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4697,9 +4833,7 @@
                       "identifier": "NumberNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.NumberNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4722,9 +4856,7 @@
                 "identifier": "StringNode",
                 "newPage": false,
                 "searchKey": "parse.StringNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4742,9 +4874,7 @@
                       "identifier": "StringNode.String",
                       "newPage": false,
                       "searchKey": "parse.StringNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4764,7 +4894,9 @@
                       "identifier": "StringNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.StringNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4784,7 +4916,9 @@
                       "identifier": "StringNode.tree",
                       "newPage": false,
                       "searchKey": "parse.StringNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4804,9 +4938,7 @@
                       "identifier": "StringNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.StringNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4829,7 +4961,9 @@
                 "identifier": "endNode",
                 "newPage": false,
                 "searchKey": "parse.endNode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4847,7 +4981,9 @@
                       "identifier": "endNode.String",
                       "newPage": false,
                       "searchKey": "parse.endNode.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4867,7 +5003,9 @@
                       "identifier": "endNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.endNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4887,7 +5025,9 @@
                       "identifier": "endNode.tree",
                       "newPage": false,
                       "searchKey": "parse.endNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4907,7 +5047,9 @@
                       "identifier": "endNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.endNode.Copy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4930,7 +5072,9 @@
                 "identifier": "elseNode",
                 "newPage": false,
                 "searchKey": "parse.elseNode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4948,7 +5092,9 @@
                       "identifier": "elseNode.Type",
                       "newPage": false,
                       "searchKey": "parse.elseNode.Type",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4968,7 +5114,9 @@
                       "identifier": "elseNode.String",
                       "newPage": false,
                       "searchKey": "parse.elseNode.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4988,7 +5136,9 @@
                       "identifier": "elseNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.elseNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5008,7 +5158,9 @@
                       "identifier": "elseNode.tree",
                       "newPage": false,
                       "searchKey": "parse.elseNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5028,7 +5180,9 @@
                       "identifier": "elseNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.elseNode.Copy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5051,9 +5205,7 @@
                 "identifier": "BranchNode",
                 "newPage": false,
                 "searchKey": "parse.BranchNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5071,9 +5223,7 @@
                       "identifier": "BranchNode.String",
                       "newPage": false,
                       "searchKey": "parse.BranchNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5093,7 +5243,9 @@
                       "identifier": "BranchNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.BranchNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5113,7 +5265,9 @@
                       "identifier": "BranchNode.tree",
                       "newPage": false,
                       "searchKey": "parse.BranchNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5133,9 +5287,7 @@
                       "identifier": "BranchNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.BranchNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5158,9 +5310,7 @@
                 "identifier": "IfNode",
                 "newPage": false,
                 "searchKey": "parse.IfNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5178,9 +5328,7 @@
                       "identifier": "IfNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.IfNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5203,9 +5351,7 @@
                 "identifier": "RangeNode",
                 "newPage": false,
                 "searchKey": "parse.RangeNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5223,9 +5369,7 @@
                       "identifier": "RangeNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.RangeNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5248,9 +5392,7 @@
                 "identifier": "WithNode",
                 "newPage": false,
                 "searchKey": "parse.WithNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5268,9 +5410,7 @@
                       "identifier": "WithNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.WithNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5293,9 +5433,7 @@
                 "identifier": "TemplateNode",
                 "newPage": false,
                 "searchKey": "parse.TemplateNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5313,9 +5451,7 @@
                       "identifier": "TemplateNode.String",
                       "newPage": false,
                       "searchKey": "parse.TemplateNode.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5335,7 +5471,9 @@
                       "identifier": "TemplateNode.writeTo",
                       "newPage": false,
                       "searchKey": "parse.TemplateNode.writeTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5355,7 +5493,9 @@
                       "identifier": "TemplateNode.tree",
                       "newPage": false,
                       "searchKey": "parse.TemplateNode.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5375,9 +5515,7 @@
                       "identifier": "TemplateNode.Copy",
                       "newPage": false,
                       "searchKey": "parse.TemplateNode.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5400,9 +5538,7 @@
                 "identifier": "Tree",
                 "newPage": false,
                 "searchKey": "parse.Tree",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5420,9 +5556,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "parse.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5442,7 +5576,9 @@
                       "identifier": "Tree.newList",
                       "newPage": false,
                       "searchKey": "parse.Tree.newList",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5462,7 +5598,9 @@
                       "identifier": "Tree.newText",
                       "newPage": false,
                       "searchKey": "parse.Tree.newText",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5482,7 +5620,9 @@
                       "identifier": "Tree.newComment",
                       "newPage": false,
                       "searchKey": "parse.Tree.newComment",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5502,7 +5642,9 @@
                       "identifier": "Tree.newPipeline",
                       "newPage": false,
                       "searchKey": "parse.Tree.newPipeline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5522,7 +5664,9 @@
                       "identifier": "Tree.newAction",
                       "newPage": false,
                       "searchKey": "parse.Tree.newAction",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5542,7 +5686,9 @@
                       "identifier": "Tree.newCommand",
                       "newPage": false,
                       "searchKey": "parse.Tree.newCommand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5562,7 +5708,9 @@
                       "identifier": "Tree.newVariable",
                       "newPage": false,
                       "searchKey": "parse.Tree.newVariable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5582,7 +5730,9 @@
                       "identifier": "Tree.newDot",
                       "newPage": false,
                       "searchKey": "parse.Tree.newDot",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5602,7 +5752,9 @@
                       "identifier": "Tree.newNil",
                       "newPage": false,
                       "searchKey": "parse.Tree.newNil",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5622,7 +5774,9 @@
                       "identifier": "Tree.newField",
                       "newPage": false,
                       "searchKey": "parse.Tree.newField",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5642,7 +5796,9 @@
                       "identifier": "Tree.newChain",
                       "newPage": false,
                       "searchKey": "parse.Tree.newChain",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5662,7 +5818,9 @@
                       "identifier": "Tree.newBool",
                       "newPage": false,
                       "searchKey": "parse.Tree.newBool",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5682,7 +5840,9 @@
                       "identifier": "Tree.newNumber",
                       "newPage": false,
                       "searchKey": "parse.Tree.newNumber",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5702,7 +5862,9 @@
                       "identifier": "Tree.newString",
                       "newPage": false,
                       "searchKey": "parse.Tree.newString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5722,7 +5884,9 @@
                       "identifier": "Tree.newEnd",
                       "newPage": false,
                       "searchKey": "parse.Tree.newEnd",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5742,7 +5906,9 @@
                       "identifier": "Tree.newElse",
                       "newPage": false,
                       "searchKey": "parse.Tree.newElse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5762,7 +5928,9 @@
                       "identifier": "Tree.newIf",
                       "newPage": false,
                       "searchKey": "parse.Tree.newIf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5782,7 +5950,9 @@
                       "identifier": "Tree.newRange",
                       "newPage": false,
                       "searchKey": "parse.Tree.newRange",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5802,7 +5972,9 @@
                       "identifier": "Tree.newWith",
                       "newPage": false,
                       "searchKey": "parse.Tree.newWith",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5822,7 +5994,9 @@
                       "identifier": "Tree.newTemplate",
                       "newPage": false,
                       "searchKey": "parse.Tree.newTemplate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5842,9 +6016,7 @@
                       "identifier": "Tree.Copy",
                       "newPage": false,
                       "searchKey": "parse.Tree.Copy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5864,7 +6036,9 @@
                       "identifier": "Tree.next",
                       "newPage": false,
                       "searchKey": "parse.Tree.next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5884,7 +6058,9 @@
                       "identifier": "Tree.backup",
                       "newPage": false,
                       "searchKey": "parse.Tree.backup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5904,7 +6080,9 @@
                       "identifier": "Tree.backup2",
                       "newPage": false,
                       "searchKey": "parse.Tree.backup2",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5924,7 +6102,9 @@
                       "identifier": "Tree.backup3",
                       "newPage": false,
                       "searchKey": "parse.Tree.backup3",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5944,7 +6124,9 @@
                       "identifier": "Tree.peek",
                       "newPage": false,
                       "searchKey": "parse.Tree.peek",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5964,7 +6146,9 @@
                       "identifier": "Tree.nextNonSpace",
                       "newPage": false,
                       "searchKey": "parse.Tree.nextNonSpace",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -5984,7 +6168,9 @@
                       "identifier": "Tree.peekNonSpace",
                       "newPage": false,
                       "searchKey": "parse.Tree.peekNonSpace",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6004,9 +6190,7 @@
                       "identifier": "Tree.ErrorContext",
                       "newPage": false,
                       "searchKey": "parse.Tree.ErrorContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6026,7 +6210,9 @@
                       "identifier": "Tree.errorf",
                       "newPage": false,
                       "searchKey": "parse.Tree.errorf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6046,7 +6232,9 @@
                       "identifier": "Tree.error",
                       "newPage": false,
                       "searchKey": "parse.Tree.error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6066,7 +6254,9 @@
                       "identifier": "Tree.expect",
                       "newPage": false,
                       "searchKey": "parse.Tree.expect",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6086,7 +6276,9 @@
                       "identifier": "Tree.expectOneOf",
                       "newPage": false,
                       "searchKey": "parse.Tree.expectOneOf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6106,7 +6298,9 @@
                       "identifier": "Tree.unexpected",
                       "newPage": false,
                       "searchKey": "parse.Tree.unexpected",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6126,7 +6320,9 @@
                       "identifier": "Tree.recover",
                       "newPage": false,
                       "searchKey": "parse.Tree.recover",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6146,7 +6342,9 @@
                       "identifier": "Tree.startParse",
                       "newPage": false,
                       "searchKey": "parse.Tree.startParse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6166,7 +6364,9 @@
                       "identifier": "Tree.stopParse",
                       "newPage": false,
                       "searchKey": "parse.Tree.stopParse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6186,9 +6386,7 @@
                       "identifier": "Tree.Parse",
                       "newPage": false,
                       "searchKey": "parse.Tree.Parse",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6208,7 +6406,9 @@
                       "identifier": "Tree.add",
                       "newPage": false,
                       "searchKey": "parse.Tree.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6228,7 +6428,9 @@
                       "identifier": "Tree.parse",
                       "newPage": false,
                       "searchKey": "parse.Tree.parse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6248,7 +6450,9 @@
                       "identifier": "Tree.parseDefinition",
                       "newPage": false,
                       "searchKey": "parse.Tree.parseDefinition",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6268,7 +6472,9 @@
                       "identifier": "Tree.itemList",
                       "newPage": false,
                       "searchKey": "parse.Tree.itemList",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6288,7 +6494,9 @@
                       "identifier": "Tree.textOrAction",
                       "newPage": false,
                       "searchKey": "parse.Tree.textOrAction",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6308,7 +6516,9 @@
                       "identifier": "Tree.clearActionLine",
                       "newPage": false,
                       "searchKey": "parse.Tree.clearActionLine",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6328,7 +6538,9 @@
                       "identifier": "Tree.action",
                       "newPage": false,
                       "searchKey": "parse.Tree.action",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6348,7 +6560,9 @@
                       "identifier": "Tree.pipeline",
                       "newPage": false,
                       "searchKey": "parse.Tree.pipeline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6368,7 +6582,9 @@
                       "identifier": "Tree.checkPipeline",
                       "newPage": false,
                       "searchKey": "parse.Tree.checkPipeline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6388,7 +6604,9 @@
                       "identifier": "Tree.parseControl",
                       "newPage": false,
                       "searchKey": "parse.Tree.parseControl",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6408,7 +6626,9 @@
                       "identifier": "Tree.ifControl",
                       "newPage": false,
                       "searchKey": "parse.Tree.ifControl",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6428,7 +6648,9 @@
                       "identifier": "Tree.rangeControl",
                       "newPage": false,
                       "searchKey": "parse.Tree.rangeControl",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6448,7 +6670,9 @@
                       "identifier": "Tree.withControl",
                       "newPage": false,
                       "searchKey": "parse.Tree.withControl",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6468,7 +6692,9 @@
                       "identifier": "Tree.endControl",
                       "newPage": false,
                       "searchKey": "parse.Tree.endControl",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6488,7 +6714,9 @@
                       "identifier": "Tree.elseControl",
                       "newPage": false,
                       "searchKey": "parse.Tree.elseControl",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6508,7 +6736,9 @@
                       "identifier": "Tree.blockControl",
                       "newPage": false,
                       "searchKey": "parse.Tree.blockControl",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6528,7 +6758,9 @@
                       "identifier": "Tree.templateControl",
                       "newPage": false,
                       "searchKey": "parse.Tree.templateControl",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6548,7 +6780,9 @@
                       "identifier": "Tree.parseTemplateName",
                       "newPage": false,
                       "searchKey": "parse.Tree.parseTemplateName",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6568,7 +6802,9 @@
                       "identifier": "Tree.command",
                       "newPage": false,
                       "searchKey": "parse.Tree.command",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6588,7 +6824,9 @@
                       "identifier": "Tree.operand",
                       "newPage": false,
                       "searchKey": "parse.Tree.operand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6608,7 +6846,9 @@
                       "identifier": "Tree.term",
                       "newPage": false,
                       "searchKey": "parse.Tree.term",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6628,7 +6868,9 @@
                       "identifier": "Tree.hasFunction",
                       "newPage": false,
                       "searchKey": "parse.Tree.hasFunction",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6648,7 +6890,9 @@
                       "identifier": "Tree.popVars",
                       "newPage": false,
                       "searchKey": "parse.Tree.popVars",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6668,7 +6912,9 @@
                       "identifier": "Tree.useVar",
                       "newPage": false,
                       "searchKey": "parse.Tree.useVar",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6688,7 +6934,9 @@
                       "identifier": "Tree.parseLexer",
                       "newPage": false,
                       "searchKey": "parse.Tree.parseLexer",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -6711,9 +6959,7 @@
                 "identifier": "Mode",
                 "newPage": false,
                 "searchKey": "parse.Mode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6733,7 +6979,9 @@
                 "identifier": "lexTest",
                 "newPage": false,
                 "searchKey": "parse.lexTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6753,7 +7001,9 @@
                 "identifier": "numberTest",
                 "newPage": false,
                 "searchKey": "parse.numberTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6773,7 +7023,9 @@
                 "identifier": "parseTest",
                 "newPage": false,
                 "searchKey": "parse.parseTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6793,7 +7045,9 @@
                 "identifier": "isEmptyTest",
                 "newPage": false,
                 "searchKey": "parse.isEmptyTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6816,9 +7070,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -6836,7 +7088,9 @@
                 "identifier": "isSpace",
                 "newPage": false,
                 "searchKey": "parse.isSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6856,7 +7110,9 @@
                 "identifier": "isAlphaNumeric",
                 "newPage": false,
                 "searchKey": "parse.isAlphaNumeric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6876,7 +7132,9 @@
                 "identifier": "hasLeftTrimMarker",
                 "newPage": false,
                 "searchKey": "parse.hasLeftTrimMarker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6896,7 +7154,9 @@
                 "identifier": "hasRightTrimMarker",
                 "newPage": false,
                 "searchKey": "parse.hasRightTrimMarker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6916,9 +7176,7 @@
                 "identifier": "Parse",
                 "newPage": false,
                 "searchKey": "parse.Parse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6938,9 +7196,7 @@
                 "identifier": "IsEmptyTree",
                 "newPage": false,
                 "searchKey": "parse.IsEmptyTree",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -6960,7 +7216,9 @@
                 "identifier": "collect",
                 "newPage": false,
                 "searchKey": "parse.collect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6980,7 +7238,9 @@
                 "identifier": "equal",
                 "newPage": false,
                 "searchKey": "parse.equal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7000,7 +7260,9 @@
                 "identifier": "TestLex",
                 "newPage": false,
                 "searchKey": "parse.TestLex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7020,7 +7282,9 @@
                 "identifier": "TestDelims",
                 "newPage": false,
                 "searchKey": "parse.TestDelims",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7040,7 +7304,9 @@
                 "identifier": "TestPos",
                 "newPage": false,
                 "searchKey": "parse.TestPos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7060,7 +7326,9 @@
                 "identifier": "TestShutdown",
                 "newPage": false,
                 "searchKey": "parse.TestShutdown",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7080,7 +7348,9 @@
                 "identifier": "TestNumberParse",
                 "newPage": false,
                 "searchKey": "parse.TestNumberParse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7100,7 +7370,9 @@
                 "identifier": "testParse",
                 "newPage": false,
                 "searchKey": "parse.testParse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7120,7 +7392,9 @@
                 "identifier": "TestParse",
                 "newPage": false,
                 "searchKey": "parse.TestParse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7140,7 +7414,9 @@
                 "identifier": "TestParseCopy",
                 "newPage": false,
                 "searchKey": "parse.TestParseCopy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7160,7 +7436,9 @@
                 "identifier": "TestParseWithComments",
                 "newPage": false,
                 "searchKey": "parse.TestParseWithComments",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7180,7 +7458,9 @@
                 "identifier": "TestSkipFuncCheck",
                 "newPage": false,
                 "searchKey": "parse.TestSkipFuncCheck",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7200,7 +7480,9 @@
                 "identifier": "TestIsEmpty",
                 "newPage": false,
                 "searchKey": "parse.TestIsEmpty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7220,7 +7502,9 @@
                 "identifier": "TestErrorContextWithTreeCopy",
                 "newPage": false,
                 "searchKey": "parse.TestErrorContextWithTreeCopy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7240,7 +7524,9 @@
                 "identifier": "TestErrors",
                 "newPage": false,
                 "searchKey": "parse.TestErrors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7260,7 +7546,9 @@
                 "identifier": "TestBlock",
                 "newPage": false,
                 "searchKey": "parse.TestBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7280,7 +7568,9 @@
                 "identifier": "TestLineNum",
                 "newPage": false,
                 "searchKey": "parse.TestLineNum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7300,7 +7590,9 @@
                 "identifier": "BenchmarkParseLarge",
                 "newPage": false,
                 "searchKey": "parse.BenchmarkParseLarge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7320,7 +7612,9 @@
                 "identifier": "BenchmarkVariableString",
                 "newPage": false,
                 "searchKey": "parse.BenchmarkVariableString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -7340,7 +7634,9 @@
                 "identifier": "BenchmarkListString",
                 "newPage": false,
                 "searchKey": "parse.BenchmarkListString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

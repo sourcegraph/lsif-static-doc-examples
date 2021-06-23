@@ -4,9 +4,7 @@
     "identifier": "bufio",
     "newPage": true,
     "searchKey": "bufio",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "defaultBufSize",
                 "newPage": false,
                 "searchKey": "bufio.defaultBufSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "minReadBufferSize",
                 "newPage": false,
                 "searchKey": "bufio.minReadBufferSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "maxConsecutiveEmptyReads",
                 "newPage": false,
                 "searchKey": "bufio.maxConsecutiveEmptyReads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,9 +106,7 @@
                 "identifier": "MaxScanTokenSize",
                 "newPage": false,
                 "searchKey": "bufio.MaxScanTokenSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -126,7 +126,9 @@
                 "identifier": "startBufSize",
                 "newPage": false,
                 "searchKey": "bufio.startBufSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -146,7 +148,9 @@
                 "identifier": "DefaultBufSize",
                 "newPage": false,
                 "searchKey": "bufio.DefaultBufSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -169,9 +173,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -189,9 +191,7 @@
                 "identifier": "ErrInvalidUnreadByte",
                 "newPage": false,
                 "searchKey": "bufio.ErrInvalidUnreadByte",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -211,9 +211,7 @@
                 "identifier": "ErrInvalidUnreadRune",
                 "newPage": false,
                 "searchKey": "bufio.ErrInvalidUnreadRune",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -233,9 +231,7 @@
                 "identifier": "ErrBufferFull",
                 "newPage": false,
                 "searchKey": "bufio.ErrBufferFull",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -255,9 +251,7 @@
                 "identifier": "ErrNegativeCount",
                 "newPage": false,
                 "searchKey": "bufio.ErrNegativeCount",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -277,7 +271,9 @@
                 "identifier": "errNegativeRead",
                 "newPage": false,
                 "searchKey": "bufio.errNegativeRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -297,7 +293,9 @@
                 "identifier": "errNegativeWrite",
                 "newPage": false,
                 "searchKey": "bufio.errNegativeWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -317,9 +315,7 @@
                 "identifier": "ErrTooLong",
                 "newPage": false,
                 "searchKey": "bufio.ErrTooLong",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -339,9 +335,7 @@
                 "identifier": "ErrNegativeAdvance",
                 "newPage": false,
                 "searchKey": "bufio.ErrNegativeAdvance",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -361,9 +355,7 @@
                 "identifier": "ErrAdvanceTooFar",
                 "newPage": false,
                 "searchKey": "bufio.ErrAdvanceTooFar",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -383,9 +375,7 @@
                 "identifier": "ErrBadReadCount",
                 "newPage": false,
                 "searchKey": "bufio.ErrBadReadCount",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -405,9 +395,7 @@
                 "identifier": "ErrFinalToken",
                 "newPage": false,
                 "searchKey": "bufio.ErrFinalToken",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -427,7 +415,9 @@
                 "identifier": "errorRune",
                 "newPage": false,
                 "searchKey": "bufio.errorRune",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,7 +437,9 @@
                 "identifier": "IsSpace",
                 "newPage": false,
                 "searchKey": "bufio.IsSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -470,9 +462,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -490,9 +480,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "bufio.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -510,9 +498,7 @@
                       "identifier": "NewReaderSize",
                       "newPage": false,
                       "searchKey": "bufio.NewReaderSize",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -532,9 +518,7 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "bufio.NewReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -554,9 +538,7 @@
                       "identifier": "Reader.Size",
                       "newPage": false,
                       "searchKey": "bufio.Reader.Size",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -576,9 +558,7 @@
                       "identifier": "Reader.Reset",
                       "newPage": false,
                       "searchKey": "bufio.Reader.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -598,7 +578,9 @@
                       "identifier": "Reader.reset",
                       "newPage": false,
                       "searchKey": "bufio.Reader.reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -618,7 +600,9 @@
                       "identifier": "Reader.fill",
                       "newPage": false,
                       "searchKey": "bufio.Reader.fill",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -638,7 +622,9 @@
                       "identifier": "Reader.readErr",
                       "newPage": false,
                       "searchKey": "bufio.Reader.readErr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -658,9 +644,7 @@
                       "identifier": "Reader.Peek",
                       "newPage": false,
                       "searchKey": "bufio.Reader.Peek",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -680,9 +664,7 @@
                       "identifier": "Reader.Discard",
                       "newPage": false,
                       "searchKey": "bufio.Reader.Discard",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -702,9 +684,7 @@
                       "identifier": "Reader.Read",
                       "newPage": false,
                       "searchKey": "bufio.Reader.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -724,9 +704,7 @@
                       "identifier": "Reader.ReadByte",
                       "newPage": false,
                       "searchKey": "bufio.Reader.ReadByte",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -746,9 +724,7 @@
                       "identifier": "Reader.UnreadByte",
                       "newPage": false,
                       "searchKey": "bufio.Reader.UnreadByte",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -768,9 +744,7 @@
                       "identifier": "Reader.ReadRune",
                       "newPage": false,
                       "searchKey": "bufio.Reader.ReadRune",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -790,9 +764,7 @@
                       "identifier": "Reader.UnreadRune",
                       "newPage": false,
                       "searchKey": "bufio.Reader.UnreadRune",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -812,9 +784,7 @@
                       "identifier": "Reader.Buffered",
                       "newPage": false,
                       "searchKey": "bufio.Reader.Buffered",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -834,9 +804,7 @@
                       "identifier": "Reader.ReadSlice",
                       "newPage": false,
                       "searchKey": "bufio.Reader.ReadSlice",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -856,9 +824,7 @@
                       "identifier": "Reader.ReadLine",
                       "newPage": false,
                       "searchKey": "bufio.Reader.ReadLine",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -878,7 +844,9 @@
                       "identifier": "Reader.collectFragments",
                       "newPage": false,
                       "searchKey": "bufio.Reader.collectFragments",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -898,9 +866,7 @@
                       "identifier": "Reader.ReadBytes",
                       "newPage": false,
                       "searchKey": "bufio.Reader.ReadBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -920,9 +886,7 @@
                       "identifier": "Reader.ReadString",
                       "newPage": false,
                       "searchKey": "bufio.Reader.ReadString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -942,9 +906,7 @@
                       "identifier": "Reader.WriteTo",
                       "newPage": false,
                       "searchKey": "bufio.Reader.WriteTo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -964,7 +926,9 @@
                       "identifier": "Reader.writeBuf",
                       "newPage": false,
                       "searchKey": "bufio.Reader.writeBuf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -987,9 +951,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "bufio.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1007,9 +969,7 @@
                       "identifier": "NewWriterSize",
                       "newPage": false,
                       "searchKey": "bufio.NewWriterSize",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1029,9 +989,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "bufio.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1051,9 +1009,7 @@
                       "identifier": "Writer.Size",
                       "newPage": false,
                       "searchKey": "bufio.Writer.Size",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1073,9 +1029,7 @@
                       "identifier": "Writer.Reset",
                       "newPage": false,
                       "searchKey": "bufio.Writer.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1095,9 +1049,7 @@
                       "identifier": "Writer.Flush",
                       "newPage": false,
                       "searchKey": "bufio.Writer.Flush",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1117,9 +1069,7 @@
                       "identifier": "Writer.Available",
                       "newPage": false,
                       "searchKey": "bufio.Writer.Available",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1139,9 +1089,7 @@
                       "identifier": "Writer.Buffered",
                       "newPage": false,
                       "searchKey": "bufio.Writer.Buffered",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1161,9 +1109,7 @@
                       "identifier": "Writer.Write",
                       "newPage": false,
                       "searchKey": "bufio.Writer.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1183,9 +1129,7 @@
                       "identifier": "Writer.WriteByte",
                       "newPage": false,
                       "searchKey": "bufio.Writer.WriteByte",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1205,9 +1149,7 @@
                       "identifier": "Writer.WriteRune",
                       "newPage": false,
                       "searchKey": "bufio.Writer.WriteRune",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1227,9 +1169,7 @@
                       "identifier": "Writer.WriteString",
                       "newPage": false,
                       "searchKey": "bufio.Writer.WriteString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1249,9 +1189,7 @@
                       "identifier": "Writer.ReadFrom",
                       "newPage": false,
                       "searchKey": "bufio.Writer.ReadFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1274,9 +1212,7 @@
                 "identifier": "ReadWriter",
                 "newPage": false,
                 "searchKey": "bufio.ReadWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1294,9 +1230,7 @@
                       "identifier": "NewReadWriter",
                       "newPage": false,
                       "searchKey": "bufio.NewReadWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1319,9 +1253,7 @@
                 "identifier": "Scanner",
                 "newPage": false,
                 "searchKey": "bufio.Scanner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1339,9 +1271,7 @@
                       "identifier": "NewScanner",
                       "newPage": false,
                       "searchKey": "bufio.NewScanner",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1361,9 +1291,7 @@
                       "identifier": "Scanner.Err",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.Err",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1383,9 +1311,7 @@
                       "identifier": "Scanner.Bytes",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.Bytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1405,9 +1331,7 @@
                       "identifier": "Scanner.Text",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.Text",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1427,9 +1351,7 @@
                       "identifier": "Scanner.Scan",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1449,7 +1371,9 @@
                       "identifier": "Scanner.advance",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.advance",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1469,7 +1393,9 @@
                       "identifier": "Scanner.setErr",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.setErr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1489,9 +1415,7 @@
                       "identifier": "Scanner.Buffer",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.Buffer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1511,9 +1435,7 @@
                       "identifier": "Scanner.Split",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.Split",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1533,7 +1455,9 @@
                       "identifier": "Scanner.MaxTokenSize",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.MaxTokenSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1553,7 +1477,9 @@
                       "identifier": "Scanner.ErrOrEOF",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.ErrOrEOF",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1576,9 +1502,7 @@
                 "identifier": "SplitFunc",
                 "newPage": false,
                 "searchKey": "bufio.SplitFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1601,9 +1525,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1621,9 +1543,7 @@
                 "identifier": "ScanBytes",
                 "newPage": false,
                 "searchKey": "bufio.ScanBytes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1643,9 +1563,7 @@
                 "identifier": "ScanRunes",
                 "newPage": false,
                 "searchKey": "bufio.ScanRunes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1665,7 +1583,9 @@
                 "identifier": "dropCR",
                 "newPage": false,
                 "searchKey": "bufio.dropCR",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1685,9 +1605,7 @@
                 "identifier": "ScanLines",
                 "newPage": false,
                 "searchKey": "bufio.ScanLines",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1707,7 +1625,9 @@
                 "identifier": "isSpace",
                 "newPage": false,
                 "searchKey": "bufio.isSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1727,9 +1647,7 @@
                 "identifier": "ScanWords",
                 "newPage": false,
                 "searchKey": "bufio.ScanWords",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

@@ -11,10 +11,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleEval" href="#ExampleEval">func ExampleEval()</a>
 
 ```
 searchKey: query_test.ExampleEval
+tags: [private]
 ```
 
 ```Go
@@ -25,6 +30,7 @@ func ExampleEval()
 
 ```
 searchKey: query_test.ExampleEval_types
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +41,7 @@ func ExampleEval_types()
 
 ```
 searchKey: query_test.TestEval_cornercase
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +52,7 @@ func TestEval_cornercase(t *testing.T)
 
 ```
 searchKey: query_test.TestEval_error
+tags: [private]
 ```
 
 ```Go

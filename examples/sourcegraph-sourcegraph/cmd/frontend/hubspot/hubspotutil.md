@@ -12,7 +12,7 @@
     * [var client](#client)
 * [Functions](#func)
     * [func HasAPIKey() bool](#HasAPIKey)
-    * [func init()](#init)
+    * [func init()](#init.hubspotutil.go)
     * [func Client() *hubspot.Client](#Client)
     * [func SyncUser(email, eventID string, contactParams *hubspot.ContactProperties)](#SyncUser)
     * [func syncHubSpotContact(email, eventID string, contactParams *hubspot.ContactProperties) error](#syncHubSpotContact)
@@ -20,15 +20,10 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="HubSpotHAPIKey" href="#HubSpotHAPIKey">var HubSpotHAPIKey</a>
 
 ```
 searchKey: hubspotutil.HubSpotHAPIKey
-tags: [exported]
 ```
 
 ```Go
@@ -41,7 +36,6 @@ HubSpotHAPIKey is used by some requests to access their respective API endpoints
 
 ```
 searchKey: hubspotutil.SurveyFormID
-tags: [exported]
 ```
 
 ```Go
@@ -54,7 +48,6 @@ SurveyFormID is the ID for a satisfaction (NPS) survey.
 
 ```
 searchKey: hubspotutil.TrialFormID
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +60,6 @@ TrialFormID is ID for the request trial form.
 
 ```
 searchKey: hubspotutil.HappinessFeedbackFormID
-tags: [exported]
 ```
 
 ```Go
@@ -80,7 +72,6 @@ HappinessFeedbackFormID is the ID for a Happiness survey.
 
 ```
 searchKey: hubspotutil.SignupEventID
-tags: [exported]
 ```
 
 ```Go
@@ -93,7 +84,6 @@ SignupEventID is the HubSpot ID for signup events. HubSpot Events and IDs are al
 
 ```
 searchKey: hubspotutil.SelfHostedSiteInitEventID
-tags: [exported]
 ```
 
 ```Go
@@ -106,6 +96,7 @@ SelfHostedSiteInitEventID is the Hubstpot Event ID for when a new site is create
 
 ```
 searchKey: hubspotutil.client
+tags: [private]
 ```
 
 ```Go
@@ -114,15 +105,10 @@ var client *hubspot.Client
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="HasAPIKey" href="#HasAPIKey">func HasAPIKey() bool</a>
 
 ```
 searchKey: hubspotutil.HasAPIKey
-tags: [exported]
 ```
 
 ```Go
@@ -131,10 +117,11 @@ func HasAPIKey() bool
 
 HasAPIKey returns true if a HubspotAPI key is present. A subset of requests require a HubSpot API key. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.hubspotutil.go" href="#init.hubspotutil.go">func init()</a>
 
 ```
 searchKey: hubspotutil.init
+tags: [private]
 ```
 
 ```Go
@@ -145,7 +132,6 @@ func init()
 
 ```
 searchKey: hubspotutil.Client
-tags: [exported]
 ```
 
 ```Go
@@ -158,7 +144,6 @@ Client returns a hubspot client
 
 ```
 searchKey: hubspotutil.SyncUser
-tags: [exported]
 ```
 
 ```Go
@@ -171,6 +156,7 @@ SyncUser handles creating or syncing a user profile in HubSpot, and if provided,
 
 ```
 searchKey: hubspotutil.syncHubSpotContact
+tags: [private]
 ```
 
 ```Go

@@ -23,14 +23,11 @@ Package utf16 implements encoding and decoding of UTF-16 sequences.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="replacementChar" href="#replacementChar">const replacementChar</a>
 
 ```
 searchKey: utf16.replacementChar
+tags: [private]
 ```
 
 ```Go
@@ -42,6 +39,7 @@ const replacementChar = '\uFFFD' // Unicode replacement character
 
 ```
 searchKey: utf16.maxRune
+tags: [private]
 ```
 
 ```Go
@@ -53,6 +51,7 @@ const maxRune = '\U0010FFFF' // Maximum valid Unicode code point.
 
 ```
 searchKey: utf16.surr1
+tags: [private]
 ```
 
 ```Go
@@ -65,6 +64,7 @@ const surr1 = 0xd800
 
 ```
 searchKey: utf16.surr2
+tags: [private]
 ```
 
 ```Go
@@ -75,6 +75,7 @@ const surr2 = 0xdc00
 
 ```
 searchKey: utf16.surr3
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +86,7 @@ const surr3 = 0xe000
 
 ```
 searchKey: utf16.surrSelf
+tags: [private]
 ```
 
 ```Go
@@ -95,6 +97,7 @@ const surrSelf = 0x10000
 
 ```
 searchKey: utf16.MaxRune
+tags: [private]
 ```
 
 ```Go
@@ -107,6 +110,7 @@ Extra names for constants so we can validate them during testing.
 
 ```
 searchKey: utf16.ReplacementChar
+tags: [private]
 ```
 
 ```Go
@@ -117,15 +121,10 @@ Extra names for constants so we can validate them during testing.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="IsSurrogate" href="#IsSurrogate">func IsSurrogate(r rune) bool</a>
 
 ```
 searchKey: utf16.IsSurrogate
-tags: [exported]
 ```
 
 ```Go
@@ -138,7 +137,6 @@ IsSurrogate reports whether the specified Unicode code point can appear in a sur
 
 ```
 searchKey: utf16.DecodeRune
-tags: [exported]
 ```
 
 ```Go
@@ -151,7 +149,6 @@ DecodeRune returns the UTF-16 decoding of a surrogate pair. If the pair is not a
 
 ```
 searchKey: utf16.EncodeRune
-tags: [exported]
 ```
 
 ```Go
@@ -164,7 +161,6 @@ EncodeRune returns the UTF-16 surrogate pair r1, r2 for the given rune. If the r
 
 ```
 searchKey: utf16.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +173,6 @@ Encode returns the UTF-16 encoding of the Unicode code point sequence s.
 
 ```
 searchKey: utf16.Decode
-tags: [exported]
 ```
 
 ```Go

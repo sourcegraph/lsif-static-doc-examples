@@ -25,11 +25,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExternalServicesStore" href="#ExternalServicesStore">type ExternalServicesStore interface</a>
 
 ```
 searchKey: authz.ExternalServicesStore
-tags: [exported]
 ```
 
 ```Go
@@ -42,6 +45,7 @@ type ExternalServicesStore interface {
 
 ```
 searchKey: authz.gitlabAuthzProviderParams
+tags: [private]
 ```
 
 ```Go
@@ -55,6 +59,7 @@ type gitlabAuthzProviderParams struct {
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.Repos
+tags: [private]
 ```
 
 ```Go
@@ -65,6 +70,7 @@ func (m gitlabAuthzProviderParams) Repos(ctx context.Context, repos []*types.Rep
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.FetchAccount
+tags: [private]
 ```
 
 ```Go
@@ -75,6 +81,7 @@ func (m gitlabAuthzProviderParams) FetchAccount(ctx context.Context, user *types
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.ServiceID
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +92,7 @@ func (m gitlabAuthzProviderParams) ServiceID() string
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.ServiceType
+tags: [private]
 ```
 
 ```Go
@@ -95,6 +103,7 @@ func (m gitlabAuthzProviderParams) ServiceType() string
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.URN
+tags: [private]
 ```
 
 ```Go
@@ -105,6 +114,7 @@ func (m gitlabAuthzProviderParams) URN() string
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.Validate
+tags: [private]
 ```
 
 ```Go
@@ -115,6 +125,7 @@ func (m gitlabAuthzProviderParams) Validate() []string
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.FetchUserPerms
+tags: [private]
 ```
 
 ```Go
@@ -125,6 +136,7 @@ func (m gitlabAuthzProviderParams) FetchUserPerms(context.Context, *extsvc.Accou
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.FetchRepoPerms
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +147,7 @@ func (m gitlabAuthzProviderParams) FetchRepoPerms(context.Context, *extsvc.Repos
 
 ```
 searchKey: authz.fakeStore
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +163,7 @@ type fakeStore struct {
 
 ```
 searchKey: authz.fakeStore.List
+tags: [private]
 ```
 
 ```Go
@@ -158,11 +172,14 @@ func (s fakeStore) List(ctx context.Context, opt database.ExternalServicesListOp
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ProvidersFromConfig" href="#ProvidersFromConfig">func ProvidersFromConfig(ctx context.Context,...</a>
 
 ```
 searchKey: authz.ProvidersFromConfig
-tags: [exported]
 ```
 
 ```Go
@@ -184,6 +201,7 @@ ProvidersFromConfig returns the set of permission-related providers derived from
 
 ```
 searchKey: authz.TestAuthzProvidersFromConfig
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +212,7 @@ func TestAuthzProvidersFromConfig(t *testing.T)
 
 ```
 searchKey: authz.mustURLParse
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +223,7 @@ func mustURLParse(t *testing.T, u string) *url.URL
 
 ```
 searchKey: authz.asJSON
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +234,7 @@ func asJSON(t *testing.T, v interface{}) string
 
 ```
 searchKey: authz.TestMain
+tags: [private]
 ```
 
 ```Go

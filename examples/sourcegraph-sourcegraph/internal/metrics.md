@@ -40,11 +40,14 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestRegisterer" href="#TestRegisterer">var TestRegisterer</a>
 
 ```
 searchKey: metrics.TestRegisterer
-tags: [exported]
 ```
 
 ```Go
@@ -57,6 +60,7 @@ TestRegisterer is a behaviorless Prometheus Registerer usable for unit tests.
 
 ```
 searchKey: metrics.registerer
+tags: [private]
 ```
 
 ```Go
@@ -67,10 +71,15 @@ registerer exists so we can override it in tests
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="testRegisterer" href="#testRegisterer">type testRegisterer struct{}</a>
 
 ```
 searchKey: metrics.testRegisterer
+tags: [private]
 ```
 
 ```Go
@@ -81,6 +90,7 @@ type testRegisterer struct{}
 
 ```
 searchKey: metrics.testRegisterer.Register
+tags: [private]
 ```
 
 ```Go
@@ -91,6 +101,7 @@ func (testRegisterer) Register(prometheus.Collector) error
 
 ```
 searchKey: metrics.testRegisterer.MustRegister
+tags: [private]
 ```
 
 ```Go
@@ -101,6 +112,7 @@ func (testRegisterer) MustRegister(...prometheus.Collector)
 
 ```
 searchKey: metrics.testRegisterer.Unregister
+tags: [private]
 ```
 
 ```Go
@@ -111,7 +123,6 @@ func (testRegisterer) Unregister(prometheus.Collector) bool
 
 ```
 searchKey: metrics.RequestMeter
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +139,6 @@ RequestMeter wraps a Prometheus request meter (counter + duration histogram) upd
 
 ```
 searchKey: metrics.NewRequestMeter
-tags: [exported]
 ```
 
 ```Go
@@ -141,7 +151,6 @@ NewRequestMeter creates a new request meter.
 
 ```
 searchKey: metrics.RequestMeter.Transport
-tags: [exported]
 ```
 
 ```Go
@@ -154,7 +163,6 @@ Transport returns an http.RoundTripper that updates rm for each request. The cat
 
 ```
 searchKey: metrics.RequestMeter.Doer
-tags: [exported]
 ```
 
 ```Go
@@ -167,6 +175,7 @@ Doer returns an httpcli.Doer that updates rm for each request. The categoryFunc 
 
 ```
 searchKey: metrics.requestCounterMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +191,7 @@ type requestCounterMiddleware struct {
 
 ```
 searchKey: metrics.requestCounterMiddleware.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +202,7 @@ func (t *requestCounterMiddleware) RoundTrip(r *http.Request) (resp *http.Respon
 
 ```
 searchKey: metrics.requestCounterMiddleware.Do
+tags: [private]
 ```
 
 ```Go
@@ -202,7 +213,6 @@ func (t *requestCounterMiddleware) Do(req *http.Request) (*http.Response, error)
 
 ```
 searchKey: metrics.OperationMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -219,7 +229,6 @@ OperationMetrics contains three common metrics for any operation.
 
 ```
 searchKey: metrics.NewOperationMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -232,7 +241,6 @@ NewOperationMetrics creates an OperationMetrics value. The metrics will be immed
 
 ```
 searchKey: metrics.OperationMetrics.Observe
-tags: [exported]
 ```
 
 ```Go
@@ -245,6 +253,7 @@ Observe registers an observation of a single operation.
 
 ```
 searchKey: metrics.operationMetricOptions
+tags: [private]
 ```
 
 ```Go
@@ -261,7 +270,6 @@ type operationMetricOptions struct {
 
 ```
 searchKey: metrics.OperationMetricsOption
-tags: [exported]
 ```
 
 ```Go
@@ -274,7 +282,6 @@ OperationMetricsOption alter the default behavior of NewOperationMetrics.
 
 ```
 searchKey: metrics.WithSubsystem
-tags: [exported]
 ```
 
 ```Go
@@ -287,7 +294,6 @@ WithSubsystem overrides the default subsystem for all metrics.
 
 ```
 searchKey: metrics.WithDurationHelp
-tags: [exported]
 ```
 
 ```Go
@@ -300,7 +306,6 @@ WithDurationHelp overrides the default help text for duration metrics.
 
 ```
 searchKey: metrics.WithCountHelp
-tags: [exported]
 ```
 
 ```Go
@@ -313,7 +318,6 @@ WithCountHelp overrides the default help text for count metrics.
 
 ```
 searchKey: metrics.WithErrorsHelp
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +330,6 @@ WithErrorsHelp overrides the default help text for errors metrics.
 
 ```
 searchKey: metrics.WithLabels
-tags: [exported]
 ```
 
 ```Go
@@ -339,7 +342,6 @@ WithLabels overrides the default labels for all metrics.
 
 ```
 searchKey: metrics.SingletonOperationMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -353,7 +355,6 @@ type SingletonOperationMetrics struct {
 
 ```
 searchKey: metrics.SingletonOperationMetrics.Get
-tags: [exported]
 ```
 
 ```Go
@@ -364,11 +365,14 @@ SingletonOperationMetrics returns an operation metrics instance. If no instance 
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MustRegisterDiskMonitor" href="#MustRegisterDiskMonitor">func MustRegisterDiskMonitor(path string)</a>
 
 ```
 searchKey: metrics.MustRegisterDiskMonitor
-tags: [exported]
 ```
 
 ```Go
@@ -383,6 +387,7 @@ It is safe to call this function more than once for the same path.
 
 ```
 searchKey: metrics.mustRegisterOnce
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +398,7 @@ func mustRegisterOnce(c prometheus.Collector)
 
 ```
 searchKey: metrics.testingHTTPClient
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +409,7 @@ func testingHTTPClient(handler http.Handler) (*http.Client, func())
 
 ```
 searchKey: metrics.doRequest
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +420,7 @@ func doRequest(hc *http.Client, u string) error
 
 ```
 searchKey: metrics.TestRequestMeterTransport
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +431,7 @@ func TestRequestMeterTransport(t *testing.T)
 
 ```
 searchKey: metrics.TestMustRegisterDiskMonitor
+tags: [private]
 ```
 
 ```Go

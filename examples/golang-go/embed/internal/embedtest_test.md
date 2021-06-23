@@ -21,10 +21,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="global2" href="#global2">var global2</a>
 
 ```
 searchKey: embedtest_test.global2
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +40,7 @@ var global2 = global
 
 ```
 searchKey: embedtest_test.concurrency2
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +51,7 @@ var concurrency2 = concurrency
 
 ```
 searchKey: embedtest_test.glass2
+tags: [private]
 ```
 
 ```Go
@@ -55,6 +62,7 @@ var glass2 = glass
 
 ```
 searchKey: embedtest_test.sbig2
+tags: [private]
 ```
 
 ```Go
@@ -65,6 +73,7 @@ var sbig2 = sbig
 
 ```
 searchKey: embedtest_test.bbig2
+tags: [private]
 ```
 
 ```Go
@@ -75,6 +84,7 @@ var bbig2 = bbig
 
 ```
 searchKey: embedtest_test.global
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +95,7 @@ var global embed.FS
 
 ```
 searchKey: embedtest_test.concurrency
+tags: [private]
 ```
 
 ```Go
@@ -95,6 +106,7 @@ var concurrency string
 
 ```
 searchKey: embedtest_test.glass
+tags: [private]
 ```
 
 ```Go
@@ -105,6 +117,7 @@ var glass []byte
 
 ```
 searchKey: embedtest_test.sbig
+tags: [private]
 ```
 
 ```Go
@@ -115,6 +128,7 @@ var sbig string
 
 ```
 searchKey: embedtest_test.bbig
+tags: [private]
 ```
 
 ```Go
@@ -123,10 +137,15 @@ var bbig []byte
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="testFiles" href="#testFiles">func testFiles(t *testing.T, f embed.FS, name, data string)</a>
 
 ```
 searchKey: embedtest_test.testFiles
+tags: [private]
 ```
 
 ```Go
@@ -137,6 +156,7 @@ func testFiles(t *testing.T, f embed.FS, name, data string)
 
 ```
 searchKey: embedtest_test.testString
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +167,7 @@ func testString(t *testing.T, s, name, data string)
 
 ```
 searchKey: embedtest_test.TestXGlobal
+tags: [private]
 ```
 
 ```Go

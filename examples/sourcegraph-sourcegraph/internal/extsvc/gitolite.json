@@ -4,7 +4,9 @@
     "identifier": "gitolite",
     "newPage": true,
     "searchKey": "internal/extsvc/gitolite",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Repo",
                 "newPage": false,
                 "searchKey": "gitolite.Repo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "gitolite.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "gitolite.NewClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "Client.ListRepos",
                       "newPage": false,
                       "searchKey": "gitolite.Client.ListRepos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -129,7 +125,9 @@
                 "identifier": "errUnauthorized",
                 "newPage": false,
                 "searchKey": "gitolite.errUnauthorized",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,7 +145,9 @@
                       "identifier": "errUnauthorized.Unauthorized",
                       "newPage": false,
                       "searchKey": "gitolite.errUnauthorized.Unauthorized",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -173,7 +173,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -191,9 +193,7 @@
                 "identifier": "ExternalRepoSpec",
                 "newPage": false,
                 "searchKey": "gitolite.ExternalRepoSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -213,9 +213,7 @@
                 "identifier": "ServiceID",
                 "newPage": false,
                 "searchKey": "gitolite.ServiceID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -235,9 +233,7 @@
                 "identifier": "CloneURL",
                 "newPage": false,
                 "searchKey": "gitolite.CloneURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -257,7 +253,9 @@
                 "identifier": "decodeRepos",
                 "newPage": false,
                 "searchKey": "gitolite.decodeRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -277,7 +275,9 @@
                 "identifier": "maybeUnauthorized",
                 "newPage": false,
                 "searchKey": "gitolite.maybeUnauthorized",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -297,7 +297,9 @@
                 "identifier": "TestDecodeRepos",
                 "newPage": false,
                 "searchKey": "gitolite.TestDecodeRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -317,7 +319,9 @@
                 "identifier": "TestMaybeUnauthorized",
                 "newPage": false,
                 "searchKey": "gitolite.TestMaybeUnauthorized",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

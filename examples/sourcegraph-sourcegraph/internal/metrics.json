@@ -4,7 +4,9 @@
     "identifier": "metrics",
     "newPage": true,
     "searchKey": "internal/metrics",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "TestRegisterer",
                 "newPage": false,
                 "searchKey": "metrics.TestRegisterer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "registerer",
                 "newPage": false,
                 "searchKey": "metrics.registerer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -85,7 +89,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "testRegisterer",
                 "newPage": false,
                 "searchKey": "metrics.testRegisterer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +129,9 @@
                       "identifier": "testRegisterer.Register",
                       "newPage": false,
                       "searchKey": "metrics.testRegisterer.Register",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -141,7 +151,9 @@
                       "identifier": "testRegisterer.MustRegister",
                       "newPage": false,
                       "searchKey": "metrics.testRegisterer.MustRegister",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -161,7 +173,9 @@
                       "identifier": "testRegisterer.Unregister",
                       "newPage": false,
                       "searchKey": "metrics.testRegisterer.Unregister",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -184,9 +198,7 @@
                 "identifier": "RequestMeter",
                 "newPage": false,
                 "searchKey": "metrics.RequestMeter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -204,9 +216,7 @@
                       "identifier": "NewRequestMeter",
                       "newPage": false,
                       "searchKey": "metrics.NewRequestMeter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -226,9 +236,7 @@
                       "identifier": "RequestMeter.Transport",
                       "newPage": false,
                       "searchKey": "metrics.RequestMeter.Transport",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -248,9 +256,7 @@
                       "identifier": "RequestMeter.Doer",
                       "newPage": false,
                       "searchKey": "metrics.RequestMeter.Doer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -273,7 +279,9 @@
                 "identifier": "requestCounterMiddleware",
                 "newPage": false,
                 "searchKey": "metrics.requestCounterMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -291,7 +299,9 @@
                       "identifier": "requestCounterMiddleware.RoundTrip",
                       "newPage": false,
                       "searchKey": "metrics.requestCounterMiddleware.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -311,7 +321,9 @@
                       "identifier": "requestCounterMiddleware.Do",
                       "newPage": false,
                       "searchKey": "metrics.requestCounterMiddleware.Do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -334,9 +346,7 @@
                 "identifier": "OperationMetrics",
                 "newPage": false,
                 "searchKey": "metrics.OperationMetrics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -354,9 +364,7 @@
                       "identifier": "NewOperationMetrics",
                       "newPage": false,
                       "searchKey": "metrics.NewOperationMetrics",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -376,9 +384,7 @@
                       "identifier": "OperationMetrics.Observe",
                       "newPage": false,
                       "searchKey": "metrics.OperationMetrics.Observe",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -401,7 +407,9 @@
                 "identifier": "operationMetricOptions",
                 "newPage": false,
                 "searchKey": "metrics.operationMetricOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -421,9 +429,7 @@
                 "identifier": "OperationMetricsOption",
                 "newPage": false,
                 "searchKey": "metrics.OperationMetricsOption",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -441,9 +447,7 @@
                       "identifier": "WithSubsystem",
                       "newPage": false,
                       "searchKey": "metrics.WithSubsystem",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -463,9 +467,7 @@
                       "identifier": "WithDurationHelp",
                       "newPage": false,
                       "searchKey": "metrics.WithDurationHelp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -485,9 +487,7 @@
                       "identifier": "WithCountHelp",
                       "newPage": false,
                       "searchKey": "metrics.WithCountHelp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -507,9 +507,7 @@
                       "identifier": "WithErrorsHelp",
                       "newPage": false,
                       "searchKey": "metrics.WithErrorsHelp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -529,9 +527,7 @@
                       "identifier": "WithLabels",
                       "newPage": false,
                       "searchKey": "metrics.WithLabels",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -554,9 +550,7 @@
                 "identifier": "SingletonOperationMetrics",
                 "newPage": false,
                 "searchKey": "metrics.SingletonOperationMetrics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -574,9 +568,7 @@
                       "identifier": "SingletonOperationMetrics.Get",
                       "newPage": false,
                       "searchKey": "metrics.SingletonOperationMetrics.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -602,7 +594,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -620,9 +614,7 @@
                 "identifier": "MustRegisterDiskMonitor",
                 "newPage": false,
                 "searchKey": "metrics.MustRegisterDiskMonitor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -642,7 +634,9 @@
                 "identifier": "mustRegisterOnce",
                 "newPage": false,
                 "searchKey": "metrics.mustRegisterOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -662,7 +656,9 @@
                 "identifier": "testingHTTPClient",
                 "newPage": false,
                 "searchKey": "metrics.testingHTTPClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -682,7 +678,9 @@
                 "identifier": "doRequest",
                 "newPage": false,
                 "searchKey": "metrics.doRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -702,7 +700,9 @@
                 "identifier": "TestRequestMeterTransport",
                 "newPage": false,
                 "searchKey": "metrics.TestRequestMeterTransport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -722,7 +722,9 @@
                 "identifier": "TestMustRegisterDiskMonitor",
                 "newPage": false,
                 "searchKey": "metrics.TestMustRegisterDiskMonitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

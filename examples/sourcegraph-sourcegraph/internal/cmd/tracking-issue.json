@@ -4,7 +4,9 @@
     "identifier": "tracking-issue",
     "newPage": true,
     "searchKey": "internal/cmd/tracking-issue",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "costPerSearch",
                 "newPage": false,
                 "searchKey": "main.costPerSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "maxCostPerRequest",
                 "newPage": false,
                 "searchKey": "main.maxCostPerRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "queriesPerLoadRequest",
                 "newPage": false,
                 "searchKey": "main.queriesPerLoadRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "beginWorkMarker",
                 "newPage": false,
                 "searchKey": "main.beginWorkMarker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "endWorkMarker",
                 "newPage": false,
                 "searchKey": "main.endWorkMarker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -140,7 +154,9 @@
                 "identifier": "beginAssigneeMarkerFmt",
                 "newPage": false,
                 "searchKey": "main.beginAssigneeMarkerFmt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -160,7 +176,9 @@
                 "identifier": "endAssigneeMarker",
                 "newPage": false,
                 "searchKey": "main.endAssigneeMarker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -180,7 +198,9 @@
                 "identifier": "issueFields",
                 "newPage": false,
                 "searchKey": "main.issueFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -200,7 +220,9 @@
                 "identifier": "pullRequestFields",
                 "newPage": false,
                 "searchKey": "main.pullRequestFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -223,7 +245,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -241,7 +265,9 @@
                 "identifier": "categorizers",
                 "newPage": false,
                 "searchKey": "main.categorizers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,7 +287,9 @@
                 "identifier": "customerMatcher",
                 "newPage": false,
                 "searchKey": "main.customerMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -281,7 +309,9 @@
                 "identifier": "emojis",
                 "newPage": false,
                 "searchKey": "main.emojis",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,7 +331,9 @@
                 "identifier": "issueOrPullRequestMatcher",
                 "newPage": false,
                 "searchKey": "main.issueOrPullRequestMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -321,7 +353,9 @@
                 "identifier": "now",
                 "newPage": false,
                 "searchKey": "main.now",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -341,7 +375,9 @@
                 "identifier": "testUpdate",
                 "newPage": false,
                 "searchKey": "main.testUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -361,7 +397,9 @@
                 "identifier": "testUpdateFixture",
                 "newPage": false,
                 "searchKey": "main.testUpdateFixture",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -381,7 +419,9 @@
                 "identifier": "testIssues",
                 "newPage": false,
                 "searchKey": "main.testIssues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -404,7 +444,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -422,9 +464,7 @@
                 "identifier": "IssueContext",
                 "newPage": false,
                 "searchKey": "main.IssueContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -442,9 +482,7 @@
                       "identifier": "NewIssueContext",
                       "newPage": false,
                       "searchKey": "main.NewIssueContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -464,9 +502,7 @@
                       "identifier": "IssueContext.Match",
                       "newPage": false,
                       "searchKey": "main.IssueContext.Match",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -489,9 +525,7 @@
                 "identifier": "Issue",
                 "newPage": false,
                 "searchKey": "main.Issue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -509,7 +543,9 @@
                       "identifier": "unmarshalIssue",
                       "newPage": false,
                       "searchKey": "main.unmarshalIssue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -529,9 +565,7 @@
                       "identifier": "Issue.Closed",
                       "newPage": false,
                       "searchKey": "main.Issue.Closed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -551,9 +585,7 @@
                       "identifier": "Issue.SafeTitle",
                       "newPage": false,
                       "searchKey": "main.Issue.SafeTitle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -573,9 +605,7 @@
                       "identifier": "Issue.SafeLabels",
                       "newPage": false,
                       "searchKey": "main.Issue.SafeLabels",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -595,9 +625,7 @@
                       "identifier": "Issue.UpdateBody",
                       "newPage": false,
                       "searchKey": "main.Issue.UpdateBody",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -620,9 +648,7 @@
                 "identifier": "IssueLoader",
                 "newPage": false,
                 "searchKey": "main.IssueLoader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -640,9 +666,7 @@
                       "identifier": "NewIssueLoader",
                       "newPage": false,
                       "searchKey": "main.NewIssueLoader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -662,9 +686,7 @@
                       "identifier": "IssueLoader.Load",
                       "newPage": false,
                       "searchKey": "main.IssueLoader.Load",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -684,7 +706,9 @@
                       "identifier": "IssueLoader.makeNextRequest",
                       "newPage": false,
                       "searchKey": "main.IssueLoader.makeNextRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -704,7 +728,9 @@
                       "identifier": "IssueLoader.performRequest",
                       "newPage": false,
                       "searchKey": "main.IssueLoader.performRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -727,9 +753,7 @@
                 "identifier": "Matcher",
                 "newPage": false,
                 "searchKey": "main.Matcher",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -747,9 +771,7 @@
                       "identifier": "NewMatcher",
                       "newPage": false,
                       "searchKey": "main.NewMatcher",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -769,9 +791,7 @@
                       "identifier": "Matcher.Issue",
                       "newPage": false,
                       "searchKey": "main.Matcher.Issue",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -791,9 +811,7 @@
                       "identifier": "Matcher.PullRequest",
                       "newPage": false,
                       "searchKey": "main.Matcher.PullRequest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -813,7 +831,9 @@
                       "identifier": "Matcher.testAssignee",
                       "newPage": false,
                       "searchKey": "main.Matcher.testAssignee",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -833,7 +853,9 @@
                       "identifier": "Matcher.testLabels",
                       "newPage": false,
                       "searchKey": "main.Matcher.testLabels",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -853,7 +875,9 @@
                       "identifier": "Matcher.testMilestone",
                       "newPage": false,
                       "searchKey": "main.Matcher.testMilestone",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -876,9 +900,7 @@
                 "identifier": "PullRequest",
                 "newPage": false,
                 "searchKey": "main.PullRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -896,7 +918,9 @@
                       "identifier": "unmarshalPullRequest",
                       "newPage": false,
                       "searchKey": "main.unmarshalPullRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -916,9 +940,7 @@
                       "identifier": "PullRequest.Closed",
                       "newPage": false,
                       "searchKey": "main.PullRequest.Closed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -938,9 +960,7 @@
                       "identifier": "PullRequest.Merged",
                       "newPage": false,
                       "searchKey": "main.PullRequest.Merged",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -960,9 +980,7 @@
                       "identifier": "PullRequest.Done",
                       "newPage": false,
                       "searchKey": "main.PullRequest.Done",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -982,9 +1000,7 @@
                       "identifier": "PullRequest.SafeTitle",
                       "newPage": false,
                       "searchKey": "main.PullRequest.SafeTitle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1004,9 +1020,7 @@
                       "identifier": "PullRequest.SafeLabels",
                       "newPage": false,
                       "searchKey": "main.PullRequest.SafeLabels",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1029,9 +1043,7 @@
                 "identifier": "AssigneeRenderer",
                 "newPage": false,
                 "searchKey": "main.AssigneeRenderer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1049,9 +1061,7 @@
                       "identifier": "NewAssigneeRenderer",
                       "newPage": false,
                       "searchKey": "main.NewAssigneeRenderer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1071,9 +1081,7 @@
                       "identifier": "AssigneeRenderer.Render",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.Render",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1093,7 +1101,9 @@
                       "identifier": "AssigneeRenderer.renderPendingWork",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.renderPendingWork",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1113,7 +1123,9 @@
                       "identifier": "AssigneeRenderer.renderPendingTrackingIssues",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.renderPendingTrackingIssues",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1133,7 +1145,9 @@
                       "identifier": "AssigneeRenderer.renderPendingIssues",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.renderPendingIssues",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1153,7 +1167,9 @@
                       "identifier": "AssigneeRenderer.renderPendingPullRequests",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.renderPendingPullRequests",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1173,7 +1189,9 @@
                       "identifier": "AssigneeRenderer.renderCompletedWork",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.renderCompletedWork",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1193,7 +1211,9 @@
                       "identifier": "AssigneeRenderer.renderCompletedTrackingIssues",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.renderCompletedTrackingIssues",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1213,7 +1233,9 @@
                       "identifier": "AssigneeRenderer.renderCompletedIssues",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.renderCompletedIssues",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1233,7 +1255,9 @@
                       "identifier": "AssigneeRenderer.renderCompletedPullRequests",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.renderCompletedPullRequests",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1253,7 +1277,9 @@
                       "identifier": "AssigneeRenderer.renderIssue",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.renderIssue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1273,7 +1299,9 @@
                       "identifier": "AssigneeRenderer.renderPullRequest",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.renderPullRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1293,7 +1321,9 @@
                       "identifier": "AssigneeRenderer.findIssue",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.findIssue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1313,7 +1343,9 @@
                       "identifier": "AssigneeRenderer.findPullRequest",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.findPullRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1333,7 +1365,9 @@
                       "identifier": "AssigneeRenderer.readTrackingIssueURLs",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.readTrackingIssueURLs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1353,7 +1387,9 @@
                       "identifier": "AssigneeRenderer.resetDisplayFlags",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.resetDisplayFlags",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1373,7 +1409,9 @@
                       "identifier": "AssigneeRenderer.doRenderIssue",
                       "newPage": false,
                       "searchKey": "main.AssigneeRenderer.doRenderIssue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1396,9 +1434,7 @@
                 "identifier": "MarkdownByStringKey",
                 "newPage": false,
                 "searchKey": "main.MarkdownByStringKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1418,9 +1454,7 @@
                 "identifier": "MarkdownByIntegerKeyPair",
                 "newPage": false,
                 "searchKey": "main.MarkdownByIntegerKeyPair",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1440,9 +1474,7 @@
                 "identifier": "SearchResult",
                 "newPage": false,
                 "searchKey": "main.SearchResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1462,9 +1494,7 @@
                 "identifier": "SearchNode",
                 "newPage": false,
                 "searchKey": "main.SearchNode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1484,7 +1514,9 @@
                 "identifier": "FixturePayload",
                 "newPage": false,
                 "searchKey": "main.FixturePayload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1507,7 +1539,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1525,9 +1559,7 @@
                 "identifier": "ListTrackingIssues",
                 "newPage": false,
                 "searchKey": "main.ListTrackingIssues",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1547,9 +1579,7 @@
                 "identifier": "LoadTrackingIssues",
                 "newPage": false,
                 "searchKey": "main.LoadTrackingIssues",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1569,7 +1599,9 @@
                 "identifier": "makeQueries",
                 "newPage": false,
                 "searchKey": "main.makeQueries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1589,7 +1621,9 @@
                 "identifier": "matchingIssues",
                 "newPage": false,
                 "searchKey": "main.matchingIssues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1609,7 +1643,9 @@
                 "identifier": "matchingPullRequests",
                 "newPage": false,
                 "searchKey": "main.matchingPullRequests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1629,7 +1665,9 @@
                 "identifier": "matchingTrackingIssues",
                 "newPage": false,
                 "searchKey": "main.matchingTrackingIssues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1649,7 +1687,9 @@
                 "identifier": "deduplicateIssues",
                 "newPage": false,
                 "searchKey": "main.deduplicateIssues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1669,7 +1709,9 @@
                 "identifier": "deduplicatePullRequests",
                 "newPage": false,
                 "searchKey": "main.deduplicatePullRequests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1689,9 +1731,7 @@
                 "identifier": "Emojis",
                 "newPage": false,
                 "searchKey": "main.Emojis",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1711,7 +1751,9 @@
                 "identifier": "categorizeSecurityIssue",
                 "newPage": false,
                 "searchKey": "main.categorizeSecurityIssue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1731,7 +1773,9 @@
                 "identifier": "categorizeCustomerIssue",
                 "newPage": false,
                 "searchKey": "main.categorizeCustomerIssue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1751,7 +1795,9 @@
                 "identifier": "categorizeLabels",
                 "newPage": false,
                 "searchKey": "main.categorizeLabels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1771,9 +1817,7 @@
                 "identifier": "LoadIssues",
                 "newPage": false,
                 "searchKey": "main.LoadIssues",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1793,7 +1837,9 @@
                 "identifier": "chunkQueries",
                 "newPage": false,
                 "searchKey": "main.chunkQueries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1813,7 +1859,9 @@
                 "identifier": "loadIssues",
                 "newPage": false,
                 "searchKey": "main.loadIssues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1833,7 +1881,9 @@
                 "identifier": "makeFragmentArgs",
                 "newPage": false,
                 "searchKey": "main.makeFragmentArgs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1853,7 +1903,9 @@
                 "identifier": "contains",
                 "newPage": false,
                 "searchKey": "main.contains",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1873,7 +1925,9 @@
                 "identifier": "nonTrackingLabels",
                 "newPage": false,
                 "searchKey": "main.nonTrackingLabels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1893,7 +1947,9 @@
                 "identifier": "redactLabels",
                 "newPage": false,
                 "searchKey": "main.redactLabels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1913,7 +1969,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1933,7 +1991,9 @@
                 "identifier": "run",
                 "newPage": false,
                 "searchKey": "main.run",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1953,7 +2013,9 @@
                 "identifier": "testAll",
                 "newPage": false,
                 "searchKey": "main.testAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1973,9 +2035,7 @@
                 "identifier": "RenderTrackingIssue",
                 "newPage": false,
                 "searchKey": "main.RenderTrackingIssue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1995,7 +2055,9 @@
                 "identifier": "findAssignees",
                 "newPage": false,
                 "searchKey": "main.findAssignees",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2015,9 +2077,7 @@
                 "identifier": "SortByIntegerKeyPair",
                 "newPage": false,
                 "searchKey": "main.SortByIntegerKeyPair",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2037,7 +2097,9 @@
                 "identifier": "renderPullRequest",
                 "newPage": false,
                 "searchKey": "main.renderPullRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2057,7 +2119,9 @@
                 "identifier": "estimateFromLabelSets",
                 "newPage": false,
                 "searchKey": "main.estimateFromLabelSets",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2077,7 +2141,9 @@
                 "identifier": "estimateFromLabelSet",
                 "newPage": false,
                 "searchKey": "main.estimateFromLabelSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2097,9 +2163,7 @@
                 "identifier": "Resolve",
                 "newPage": false,
                 "searchKey": "main.Resolve",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2119,7 +2183,9 @@
                 "identifier": "linkPullRequestsAndIssues",
                 "newPage": false,
                 "searchKey": "main.linkPullRequestsAndIssues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2139,7 +2205,9 @@
                 "identifier": "linkTrackingIssues",
                 "newPage": false,
                 "searchKey": "main.linkTrackingIssues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2159,7 +2227,9 @@
                 "identifier": "checkForCycles",
                 "newPage": false,
                 "searchKey": "main.checkForCycles",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2179,7 +2249,9 @@
                 "identifier": "visitNode",
                 "newPage": false,
                 "searchKey": "main.visitNode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2199,7 +2271,9 @@
                 "identifier": "makeSearchQuery",
                 "newPage": false,
                 "searchKey": "main.makeSearchQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2219,7 +2293,9 @@
                 "identifier": "unmarshalSearchNodes",
                 "newPage": false,
                 "searchKey": "main.unmarshalSearchNodes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2239,7 +2315,9 @@
                 "identifier": "partition",
                 "newPage": false,
                 "searchKey": "main.partition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2259,7 +2337,9 @@
                 "identifier": "indexOf",
                 "newPage": false,
                 "searchKey": "main.indexOf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2279,7 +2359,9 @@
                 "identifier": "formatTimeSince",
                 "newPage": false,
                 "searchKey": "main.formatTimeSince",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2299,7 +2381,9 @@
                 "identifier": "updateIssues",
                 "newPage": false,
                 "searchKey": "main.updateIssues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2319,7 +2403,9 @@
                 "identifier": "updateIssue",
                 "newPage": false,
                 "searchKey": "main.updateIssue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2339,7 +2425,9 @@
                 "identifier": "TestIntegration",
                 "newPage": false,
                 "searchKey": "main.TestIntegration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2359,7 +2447,9 @@
                 "identifier": "mockLastUpdate",
                 "newPage": false,
                 "searchKey": "main.mockLastUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2379,7 +2469,9 @@
                 "identifier": "getOrUpdateLastUpdateTime",
                 "newPage": false,
                 "searchKey": "main.getOrUpdateLastUpdateTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2399,7 +2491,9 @@
                 "identifier": "testFixtures",
                 "newPage": false,
                 "searchKey": "main.testFixtures",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2419,7 +2513,9 @@
                 "identifier": "updateTestFixtures",
                 "newPage": false,
                 "searchKey": "main.updateTestFixtures",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2439,7 +2535,9 @@
                 "identifier": "readFixturesFile",
                 "newPage": false,
                 "searchKey": "main.readFixturesFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2459,7 +2557,9 @@
                 "identifier": "writeFixturesFile",
                 "newPage": false,
                 "searchKey": "main.writeFixturesFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

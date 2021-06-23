@@ -9,11 +9,14 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Itoa" href="#Itoa">func Itoa(val int) string</a>
 
 ```
 searchKey: itoa.Itoa
-tags: [exported]
 ```
 
 ```Go
@@ -26,7 +29,6 @@ Itoa converts val to a decimal string.
 
 ```
 searchKey: itoa.Uitoa
-tags: [exported]
 ```
 
 ```Go

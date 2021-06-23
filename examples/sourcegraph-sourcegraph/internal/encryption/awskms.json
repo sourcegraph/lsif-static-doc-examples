@@ -4,7 +4,9 @@
     "identifier": "awskms",
     "newPage": true,
     "searchKey": "internal/encryption/awskms",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "testKeyID",
                 "newPage": false,
                 "searchKey": "awskms.testKeyID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "shouldUpdate",
                 "newPage": false,
                 "searchKey": "awskms.shouldUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +114,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -122,9 +134,7 @@
                 "identifier": "Key",
                 "newPage": false,
                 "searchKey": "awskms.Key",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -142,9 +152,7 @@
                       "identifier": "Key.Version",
                       "newPage": false,
                       "searchKey": "awskms.Key.Version",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -164,9 +172,7 @@
                       "identifier": "Key.Decrypt",
                       "newPage": false,
                       "searchKey": "awskms.Key.Decrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -186,9 +192,7 @@
                       "identifier": "Key.Encrypt",
                       "newPage": false,
                       "searchKey": "awskms.Key.Encrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -211,7 +215,9 @@
                 "identifier": "encryptedValue",
                 "newPage": false,
                 "searchKey": "awskms.encryptedValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -234,7 +240,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -252,9 +260,7 @@
                 "identifier": "NewKey",
                 "newPage": false,
                 "searchKey": "awskms.NewKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -274,7 +280,9 @@
                 "identifier": "newKey",
                 "newPage": false,
                 "searchKey": "awskms.newKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -294,7 +302,9 @@
                 "identifier": "awsConfigOptsForKeyConfig",
                 "newPage": false,
                 "searchKey": "awskms.awsConfigOptsForKeyConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -314,7 +324,9 @@
                 "identifier": "aesEncrypt",
                 "newPage": false,
                 "searchKey": "awskms.aesEncrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -334,7 +346,9 @@
                 "identifier": "aesDecrypt",
                 "newPage": false,
                 "searchKey": "awskms.aesDecrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -354,7 +368,9 @@
                 "identifier": "TestRoundtrip",
                 "newPage": false,
                 "searchKey": "awskms.TestRoundtrip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -374,7 +390,9 @@
                 "identifier": "newClientFactory",
                 "newPage": false,
                 "searchKey": "awskms.newClientFactory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -394,7 +412,9 @@
                 "identifier": "newRecorder",
                 "newPage": false,
                 "searchKey": "awskms.newRecorder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -414,7 +434,9 @@
                 "identifier": "save",
                 "newPage": false,
                 "searchKey": "awskms.save",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -434,7 +456,9 @@
                 "identifier": "readEnvFallback",
                 "newPage": false,
                 "searchKey": "awskms.readEnvFallback",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

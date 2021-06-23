@@ -12,19 +12,24 @@ Package redispool exports pools to specific redis instances.
     * [var Store](#Store)
     * [var timeout](#timeout)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.redispool.go)
     * [func dialRedis(rawEndpoint string) (redis.Conn, error)](#dialRedis)
-    * [func init()](#init)
+    * [func init()](#init.sysreq.go)
     * [func redisCheck(name, addr string, timeout time.Duration, pool *redis.Pool) sysreq.CheckFunc](#redisCheck)
     * [func TestSchemeMatcher(t *testing.T)](#TestSchemeMatcher)
 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="addrCache" href="#addrCache">var addrCache</a>
 
 ```
 searchKey: redispool.addrCache
+tags: [private]
 ```
 
 ```Go
@@ -37,6 +42,7 @@ addrCache is the network address of redis cache.
 
 ```
 searchKey: redispool.addrStore
+tags: [private]
 ```
 
 ```Go
@@ -49,6 +55,7 @@ addrStore is the network address of redis store.
 
 ```
 searchKey: redispool.schemeMatcher
+tags: [private]
 ```
 
 ```Go
@@ -59,7 +66,6 @@ var schemeMatcher = lazyregexp.New(`^[A-Za-z][A-Za-z0-9\+\-\.]*://`)
 
 ```
 searchKey: redispool.Cache
-tags: [exported]
 ```
 
 ```Go
@@ -74,7 +80,6 @@ In Kubernetes the service is called redis-cache.
 
 ```
 searchKey: redispool.Store
-tags: [exported]
 ```
 
 ```Go
@@ -89,6 +94,7 @@ In Kubernetes the service is called redis-store.
 
 ```
 searchKey: redispool.timeout
+tags: [private]
 ```
 
 ```Go
@@ -97,10 +103,15 @@ var timeout, _ = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.redispool.go" href="#init.redispool.go">func init()</a>
 
 ```
 searchKey: redispool.init
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +122,7 @@ func init()
 
 ```
 searchKey: redispool.dialRedis
+tags: [private]
 ```
 
 ```Go
@@ -125,10 +137,11 @@ must be of the format specified in [https://www.iana.org/assignments/uri-schemes
 ```
 2) Otherwise, it is assumed to be of the format $HOSTNAME:$PORT. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.sysreq.go" href="#init.sysreq.go">func init()</a>
 
 ```
 searchKey: redispool.init
+tags: [private]
 ```
 
 ```Go
@@ -139,6 +152,7 @@ func init()
 
 ```
 searchKey: redispool.redisCheck
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +163,7 @@ func redisCheck(name, addr string, timeout time.Duration, pool *redis.Pool) sysr
 
 ```
 searchKey: redispool.TestSchemeMatcher
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "diskcache",
     "newPage": true,
     "searchKey": "internal/diskcache",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "urlMusMu",
                 "newPage": false,
                 "searchKey": "diskcache.urlMusMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "urlMus",
                 "newPage": false,
                 "searchKey": "diskcache.urlMus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,9 +111,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "diskcache.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -121,9 +129,7 @@
                       "identifier": "Store.Open",
                       "newPage": false,
                       "searchKey": "diskcache.Store.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -143,9 +149,7 @@
                       "identifier": "Store.OpenWithPath",
                       "newPage": false,
                       "searchKey": "diskcache.Store.OpenWithPath",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -165,7 +169,9 @@
                       "identifier": "Store.path",
                       "newPage": false,
                       "searchKey": "diskcache.Store.path",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -185,9 +191,7 @@
                       "identifier": "Store.Evict",
                       "newPage": false,
                       "searchKey": "diskcache.Store.Evict",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -210,9 +214,7 @@
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "diskcache.File",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -230,7 +232,9 @@
                       "identifier": "doFetch",
                       "newPage": false,
                       "searchKey": "diskcache.doFetch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -253,9 +257,7 @@
                 "identifier": "Fetcher",
                 "newPage": false,
                 "searchKey": "diskcache.Fetcher",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -275,9 +277,7 @@
                 "identifier": "FetcherWithPath",
                 "newPage": false,
                 "searchKey": "diskcache.FetcherWithPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -297,9 +297,7 @@
                 "identifier": "EvictStats",
                 "newPage": false,
                 "searchKey": "diskcache.EvictStats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -322,7 +320,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -340,7 +340,9 @@
                 "identifier": "copyAndClose",
                 "newPage": false,
                 "searchKey": "diskcache.copyAndClose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -360,7 +362,9 @@
                 "identifier": "touch",
                 "newPage": false,
                 "searchKey": "diskcache.touch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -380,7 +384,9 @@
                 "identifier": "fsync",
                 "newPage": false,
                 "searchKey": "diskcache.fsync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -400,7 +406,9 @@
                 "identifier": "urlMu",
                 "newPage": false,
                 "searchKey": "diskcache.urlMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -420,7 +428,9 @@
                 "identifier": "TestOpen",
                 "newPage": false,
                 "searchKey": "diskcache.TestOpen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

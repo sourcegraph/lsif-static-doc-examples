@@ -272,10 +272,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="batchSpecInsertColsFmt" href="#batchSpecInsertColsFmt">const batchSpecInsertColsFmt</a>
 
 ```
 searchKey: store.batchSpecInsertColsFmt
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +291,7 @@ const batchSpecInsertColsFmt = `(%s, %s, %s, %s, %s, %s, %s, %s)`
 
 ```
 searchKey: store.getNewestBatchSpecQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +302,7 @@ const getNewestBatchSpecQueryFmtstr = ...
 
 ```
 searchKey: store.changesetEventsBatchQueryPrefix
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +313,7 @@ const changesetEventsBatchQueryPrefix = ...
 
 ```
 searchKey: store.batchChangesetEventsQuerySuffix
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +324,7 @@ const batchChangesetEventsQuerySuffix = ...
 
 ```
 searchKey: store.listChangesetSyncDataQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +335,7 @@ const listChangesetSyncDataQueryFmtstr = ...
 
 ```
 searchKey: store.cancelQueuedBatchChangeChangesetsFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -336,6 +346,7 @@ const cancelQueuedBatchChangeChangesetsFmtstr = ...
 
 ```
 searchKey: store.enqueueChangesetsToCloseFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -346,6 +357,7 @@ const enqueueChangesetsToCloseFmtstr = ...
 
 ```
 searchKey: store.getChangesetStatsFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +368,7 @@ const getChangesetStatsFmtstr = ...
 
 ```
 searchKey: store.enqueueNextScheduledChangesetFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +379,7 @@ const enqueueNextScheduledChangesetFmtstr = ...
 
 ```
 searchKey: store.getChangesetPlaceInSchedulerQueueFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -376,6 +390,7 @@ const getChangesetPlaceInSchedulerQueueFmtstr = ...
 
 ```
 searchKey: store.getExternalServiceIDsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -386,6 +401,7 @@ const getExternalServiceIDsQueryFmtstr = ...
 
 ```
 searchKey: store.updateSiteCredentialQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -394,10 +410,15 @@ const updateSiteCredentialQueryFmtstr = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="batchChangeColumns" href="#batchChangeColumns">var batchChangeColumns</a>
 
 ```
 searchKey: store.batchChangeColumns
+tags: [private]
 ```
 
 ```Go
@@ -410,6 +431,7 @@ batchChangeColumns are used by the batch change related Store methods to insert,
 
 ```
 searchKey: store.batchChangeInsertColumns
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +444,7 @@ batchChangeInsertColumns is the list of batch changes columns that are modified 
 
 ```
 searchKey: store.createBatchChangeQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +455,7 @@ var createBatchChangeQueryFmtstr = ...
 
 ```
 searchKey: store.updateBatchChangeQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +466,7 @@ var updateBatchChangeQueryFmtstr = ...
 
 ```
 searchKey: store.deleteBatchChangeQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +477,7 @@ var deleteBatchChangeQueryFmtstr = ...
 
 ```
 searchKey: store.countBatchChangesQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +488,7 @@ var countBatchChangesQueryFmtstr = ...
 
 ```
 searchKey: store.getBatchChangesQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +499,7 @@ var getBatchChangesQueryFmtstr = ...
 
 ```
 searchKey: store.getBatchChangeDiffStatQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +510,7 @@ var getBatchChangeDiffStatQueryFmtstr = ...
 
 ```
 searchKey: store.listBatchChangesQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +521,7 @@ var listBatchChangesQueryFmtstr = ...
 
 ```
 searchKey: store.batchSpecColumns
+tags: [private]
 ```
 
 ```Go
@@ -504,6 +534,7 @@ batchSpecColumns are used by the batchSpec related Store methods to insert, upda
 
 ```
 searchKey: store.batchSpecInsertColumns
+tags: [private]
 ```
 
 ```Go
@@ -516,6 +547,7 @@ batchSpecInsertColumns is the list of batch_specs columns that are modified when
 
 ```
 searchKey: store.createBatchSpecQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -526,6 +558,7 @@ var createBatchSpecQueryFmtstr = ...
 
 ```
 searchKey: store.updateBatchSpecQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -536,6 +569,7 @@ var updateBatchSpecQueryFmtstr = ...
 
 ```
 searchKey: store.deleteBatchSpecQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +580,7 @@ var deleteBatchSpecQueryFmtstr = ...
 
 ```
 searchKey: store.countBatchSpecsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +591,7 @@ var countBatchSpecsQueryFmtstr = ...
 
 ```
 searchKey: store.getBatchSpecsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -566,6 +602,7 @@ var getBatchSpecsQueryFmtstr = ...
 
 ```
 searchKey: store.listBatchSpecsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -576,6 +613,7 @@ var listBatchSpecsQueryFmtstr = ...
 
 ```
 searchKey: store.deleteExpiredBatchSpecsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -586,6 +624,7 @@ var deleteExpiredBatchSpecsQueryFmtstr = ...
 
 ```
 searchKey: store.bulkOperationColumns
+tags: [private]
 ```
 
 ```Go
@@ -596,6 +635,7 @@ var bulkOperationColumns = ...
 
 ```
 searchKey: store.getBulkOperationQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -606,6 +646,7 @@ var getBulkOperationQueryFmtstr = ...
 
 ```
 searchKey: store.listBulkOperationsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -616,6 +657,7 @@ var listBulkOperationsQueryFmtstr = ...
 
 ```
 searchKey: store.countBulkOperationsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -626,6 +668,7 @@ var countBulkOperationsQueryFmtstr = ...
 
 ```
 searchKey: store.listBulkOperationErrorsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -636,6 +679,7 @@ var listBulkOperationErrorsQueryFmtstr = ...
 
 ```
 searchKey: store.getChangesetEventsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -646,6 +690,7 @@ var getChangesetEventsQueryFmtstr = ...
 
 ```
 searchKey: store.listChangesetEventsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -656,6 +701,7 @@ var listChangesetEventsQueryFmtstr = ...
 
 ```
 searchKey: store.countChangesetEventsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -666,6 +712,7 @@ var countChangesetEventsQueryFmtstr = ...
 
 ```
 searchKey: store.upsertChangesetEventsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -676,6 +723,7 @@ var upsertChangesetEventsQueryFmtstr = ...
 
 ```
 searchKey: store.changesetJobInsertColumns
+tags: [private]
 ```
 
 ```Go
@@ -688,7 +736,6 @@ changesetJobInsertColumns is the list of changeset_jobs columns that are modifie
 
 ```
 searchKey: store.ChangesetJobColumns
-tags: [exported]
 ```
 
 ```Go
@@ -701,6 +748,7 @@ ChangesetJobColumns are used by the changeset job related Store methods to query
 
 ```
 searchKey: store.getChangesetJobsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -711,6 +759,7 @@ var getChangesetJobsQueryFmtstr = ...
 
 ```
 searchKey: store.changesetSpecInsertColumns
+tags: [private]
 ```
 
 ```Go
@@ -723,6 +772,7 @@ changesetSpecInsertColumns is the list of changeset_specs columns that are modif
 
 ```
 searchKey: store.changesetSpecColumns
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +785,7 @@ changesetSpecColumns are used by the changeset spec related Store methods to ins
 
 ```
 searchKey: store.createChangesetSpecQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -745,6 +796,7 @@ var createChangesetSpecQueryFmtstr = ...
 
 ```
 searchKey: store.updateChangesetSpecQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -755,6 +807,7 @@ var updateChangesetSpecQueryFmtstr = ...
 
 ```
 searchKey: store.deleteChangesetSpecQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -765,6 +818,7 @@ var deleteChangesetSpecQueryFmtstr = ...
 
 ```
 searchKey: store.countChangesetSpecsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -775,6 +829,7 @@ var countChangesetSpecsQueryFmtstr = ...
 
 ```
 searchKey: store.getChangesetSpecsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -785,6 +840,7 @@ var getChangesetSpecsQueryFmtstr = ...
 
 ```
 searchKey: store.listChangesetSpecsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -795,6 +851,7 @@ var listChangesetSpecsQueryFmtstr = ...
 
 ```
 searchKey: store.deleteExpiredChangesetSpecsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -805,6 +862,7 @@ var deleteExpiredChangesetSpecsQueryFmtstr = ...
 
 ```
 searchKey: store.getRewirerMappingsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -815,7 +873,6 @@ var getRewirerMappingsQueryFmtstr = ...
 
 ```
 searchKey: store.ChangesetColumns
-tags: [exported]
 ```
 
 ```Go
@@ -828,6 +885,7 @@ ChangesetColumns are used by by the changeset related Store methods and by worke
 
 ```
 searchKey: store.changesetInsertColumns
+tags: [private]
 ```
 
 ```Go
@@ -840,6 +898,7 @@ changesetInsertColumns is the list of changeset columns that are modified in Cre
 
 ```
 searchKey: store.createChangesetQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -850,6 +909,7 @@ var createChangesetQueryFmtstr = ...
 
 ```
 searchKey: store.deleteChangesetQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -862,6 +922,7 @@ DELETE FROM changesets WHERE id = %s
 
 ```
 searchKey: store.countChangesetsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -872,6 +933,7 @@ var countChangesetsQueryFmtstr = ...
 
 ```
 searchKey: store.getChangesetsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -882,6 +944,7 @@ var getChangesetsQueryFmtstr = ...
 
 ```
 searchKey: store.listChangesetsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -892,6 +955,7 @@ var listChangesetsQueryFmtstr = ...
 
 ```
 searchKey: store.updateChangesetQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -902,7 +966,6 @@ var updateChangesetQueryFmtstr = ...
 
 ```
 searchKey: store.CanceledChangesetFailureMessage
-tags: [exported]
 ```
 
 ```Go
@@ -915,6 +978,7 @@ CanceledChangesetFailureMessage is set on changesets as the FailureMessage by Ca
 
 ```
 searchKey: store.listCodeHostsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -925,6 +989,7 @@ var listCodeHostsQueryFmtstr = ...
 
 ```
 searchKey: store.createSiteCredentialQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -935,6 +1000,7 @@ var createSiteCredentialQueryFmtstr = ...
 
 ```
 searchKey: store.deleteSiteCredentialQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -945,6 +1011,7 @@ var deleteSiteCredentialQueryFmtstr = ...
 
 ```
 searchKey: store.getSiteCredentialQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -955,6 +1022,7 @@ var getSiteCredentialQueryFmtstr = ...
 
 ```
 searchKey: store.listSiteCredentialsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -965,6 +1033,7 @@ var listSiteCredentialsQueryFmtstr = ...
 
 ```
 searchKey: store.siteCredentialColumns
+tags: [private]
 ```
 
 ```Go
@@ -975,6 +1044,7 @@ var siteCredentialColumns = ...
 
 ```
 searchKey: store.seededRand
+tags: [private]
 ```
 
 ```Go
@@ -987,7 +1057,6 @@ seededRand is used in RandomID() to generate a "random" number.
 
 ```
 searchKey: store.ErrNoResults
-tags: [exported]
 ```
 
 ```Go
@@ -1000,6 +1069,7 @@ ErrNoResults is returned by Store method calls that found no results.
 
 ```
 searchKey: store.cmtRewirerMappingsOpts
+tags: [private]
 ```
 
 ```Go
@@ -1010,11 +1080,14 @@ Comparing the IDs is good enough, no need to bloat the tests here.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="CountBatchChangesOpts" href="#CountBatchChangesOpts">type CountBatchChangesOpts struct</a>
 
 ```
 searchKey: store.CountBatchChangesOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1035,7 +1108,6 @@ CountBatchChangesOpts captures the query options needed for counting batches.
 
 ```
 searchKey: store.GetBatchChangeOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1056,7 +1128,6 @@ GetBatchChangeOpts captures the query options needed for getting a batch change
 
 ```
 searchKey: store.GetBatchChangeDiffStatOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1069,7 +1140,6 @@ type GetBatchChangeDiffStatOpts struct {
 
 ```
 searchKey: store.ListBatchChangesOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1092,7 +1162,6 @@ ListBatchChangesOpts captures the query options needed for listing batches.
 
 ```
 searchKey: store.GetBatchSpecOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1108,7 +1177,6 @@ GetBatchSpecOpts captures the query options needed for getting a BatchSpec
 
 ```
 searchKey: store.GetNewestBatchSpecOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1126,7 +1194,6 @@ GetNewestBatchSpecOpts captures the query options needed to get the latest batch
 
 ```
 searchKey: store.ListBatchSpecsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1142,7 +1209,6 @@ ListBatchSpecsOpts captures the query options needed for listing batch specs.
 
 ```
 searchKey: store.GetBulkOperationOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1157,7 +1223,6 @@ GetBulkOperationOpts captures the query options needed for getting a BulkOperati
 
 ```
 searchKey: store.ListBulkOperationsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1176,7 +1241,6 @@ ListBulkOperationsOpts captures the query options needed for getting a list of b
 
 ```
 searchKey: store.CountBulkOperationsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1192,7 +1256,6 @@ CountBulkOperationsOpts captures the query options needed when counting BulkOper
 
 ```
 searchKey: store.ListBulkOperationErrorsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1207,7 +1270,6 @@ ListBulkOperationErrorsOpts captures the query options needed for getting a list
 
 ```
 searchKey: store.GetChangesetEventOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1225,7 +1287,6 @@ GetChangesetEventOpts captures the query options needed for getting a ChangesetE
 
 ```
 searchKey: store.ListChangesetEventsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1243,7 +1304,6 @@ ListChangesetEventsOpts captures the query options needed for listing changeset 
 
 ```
 searchKey: store.CountChangesetEventsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1258,7 +1318,6 @@ CountChangesetEventsOpts captures the query options needed for counting changese
 
 ```
 searchKey: store.GetChangesetJobOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1273,7 +1332,6 @@ GetChangesetJobOpts captures the query options needed for getting a ChangesetJob
 
 ```
 searchKey: store.CountChangesetSpecsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1288,7 +1346,6 @@ CountChangesetSpecsOpts captures the query options needed for counting Changeset
 
 ```
 searchKey: store.GetChangesetSpecOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1304,7 +1361,6 @@ GetChangesetSpecOpts captures the query options needed for getting a ChangesetSp
 
 ```
 searchKey: store.ListChangesetSpecsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1324,7 +1380,6 @@ ListChangesetSpecsOpts captures the query options needed for listing code mods.
 
 ```
 searchKey: store.GetRewirerMappingsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1342,7 +1397,6 @@ type GetRewirerMappingsOpts struct {
 
 ```
 searchKey: store.CountChangesetsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1367,7 +1421,6 @@ CountChangesetsOpts captures the query options needed for counting changesets.
 
 ```
 searchKey: store.GetChangesetOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1388,7 +1441,6 @@ GetChangesetOpts captures the query options needed for getting a Changeset
 
 ```
 searchKey: store.ListChangesetSyncDataOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1404,7 +1456,6 @@ type ListChangesetSyncDataOpts struct {
 
 ```
 searchKey: store.ListChangesetsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1434,6 +1485,7 @@ Note that TextSearch is potentially expensive, and should only be specified in c
 
 ```
 searchKey: store.jsonBatchChangeChangesetSet
+tags: [private]
 ```
 
 ```Go
@@ -1448,6 +1500,7 @@ jsonBatchChangeChangesetSet represents a "join table" set as a JSONB object wher
 
 ```
 searchKey: store.jsonBatchChangeChangesetSet.Scan
+tags: [private]
 ```
 
 ```Go
@@ -1460,6 +1513,7 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: store.jsonBatchChangeChangesetSet.Value
+tags: [private]
 ```
 
 ```Go
@@ -1472,7 +1526,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: store.ListCodeHostsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1485,7 +1538,6 @@ type ListCodeHostsOpts struct {
 
 ```
 searchKey: store.GetExternalServiceIDsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1499,7 +1551,6 @@ type GetExternalServiceIDsOpts struct {
 
 ```
 searchKey: store.GetSiteCredentialOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1514,7 +1565,6 @@ type GetSiteCredentialOpts struct {
 
 ```
 searchKey: store.ListSiteCredentialsOpts
-tags: [exported]
 ```
 
 ```Go
@@ -1536,7 +1586,6 @@ type ListSiteCredentialsOpts struct {
 
 ```
 searchKey: store.SQLColumns
-tags: [exported]
 ```
 
 ```Go
@@ -1549,7 +1598,6 @@ SQLColumns is a slice of column names, that can be converted to a slice of *sqlf
 
 ```
 searchKey: store.SQLColumns.ToSqlf
-tags: [exported]
 ```
 
 ```Go
@@ -1562,7 +1610,6 @@ ToSqlf returns all the columns wrapped in a *sqlf.Query.
 
 ```
 searchKey: store.Store
-tags: [exported]
 ```
 
 ```Go
@@ -1579,7 +1626,6 @@ Store exposes methods to read and write batches domain models from persistent st
 
 ```
 searchKey: store.New
-tags: [exported]
 ```
 
 ```Go
@@ -1592,7 +1638,6 @@ New returns a new Store backed by the given database.
 
 ```
 searchKey: store.NewWithClock
-tags: [exported]
 ```
 
 ```Go
@@ -1605,7 +1650,6 @@ NewWithClock returns a new Store backed by the given database and clock for time
 
 ```
 searchKey: store.Store.CreateBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -1618,6 +1662,7 @@ CreateBatchChange creates the given batch change.
 
 ```
 searchKey: store.Store.createBatchChangeQuery
+tags: [private]
 ```
 
 ```Go
@@ -1628,7 +1673,6 @@ func (s *Store) createBatchChangeQuery(c *btypes.BatchChange) *sqlf.Query
 
 ```
 searchKey: store.Store.UpdateBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -1641,6 +1685,7 @@ UpdateBatchChange updates the given bach change.
 
 ```
 searchKey: store.Store.updateBatchChangeQuery
+tags: [private]
 ```
 
 ```Go
@@ -1651,7 +1696,6 @@ func (s *Store) updateBatchChangeQuery(c *btypes.BatchChange) *sqlf.Query
 
 ```
 searchKey: store.Store.DeleteBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -1664,7 +1708,6 @@ DeleteBatchChange deletes the batch change with the given ID.
 
 ```
 searchKey: store.Store.CountBatchChanges
-tags: [exported]
 ```
 
 ```Go
@@ -1677,7 +1720,6 @@ CountBatchChanges returns the number of batch changes in the database.
 
 ```
 searchKey: store.Store.GetBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -1690,7 +1732,6 @@ GetBatchChange gets a batch change matching the given options.
 
 ```
 searchKey: store.Store.GetBatchChangeDiffStat
-tags: [exported]
 ```
 
 ```Go
@@ -1701,7 +1742,6 @@ func (s *Store) GetBatchChangeDiffStat(ctx context.Context, opts GetBatchChangeD
 
 ```
 searchKey: store.Store.ListBatchChanges
-tags: [exported]
 ```
 
 ```Go
@@ -1714,7 +1754,6 @@ ListBatchChanges lists batch changes with the given filters.
 
 ```
 searchKey: store.Store.CreateBatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -1727,6 +1766,7 @@ CreateBatchSpec creates the given BatchSpec.
 
 ```
 searchKey: store.Store.createBatchSpecQuery
+tags: [private]
 ```
 
 ```Go
@@ -1737,7 +1777,6 @@ func (s *Store) createBatchSpecQuery(c *btypes.BatchSpec) (*sqlf.Query, error)
 
 ```
 searchKey: store.Store.UpdateBatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -1750,6 +1789,7 @@ UpdateBatchSpec updates the given BatchSpec.
 
 ```
 searchKey: store.Store.updateBatchSpecQuery
+tags: [private]
 ```
 
 ```Go
@@ -1760,7 +1800,6 @@ func (s *Store) updateBatchSpecQuery(c *btypes.BatchSpec) (*sqlf.Query, error)
 
 ```
 searchKey: store.Store.DeleteBatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -1773,7 +1812,6 @@ DeleteBatchSpec deletes the BatchSpec with the given ID.
 
 ```
 searchKey: store.Store.CountBatchSpecs
-tags: [exported]
 ```
 
 ```Go
@@ -1786,7 +1824,6 @@ CountBatchSpecs returns the number of code mods in the database.
 
 ```
 searchKey: store.Store.GetBatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -1799,7 +1836,6 @@ GetBatchSpec gets a BatchSpec matching the given options.
 
 ```
 searchKey: store.Store.GetNewestBatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -1812,7 +1848,6 @@ GetNewestBatchSpec returns the newest batch spec that matches the given options.
 
 ```
 searchKey: store.Store.ListBatchSpecs
-tags: [exported]
 ```
 
 ```Go
@@ -1825,7 +1860,6 @@ ListBatchSpecs lists BatchSpecs with the given filters.
 
 ```
 searchKey: store.Store.DeleteExpiredBatchSpecs
-tags: [exported]
 ```
 
 ```Go
@@ -1838,7 +1872,6 @@ DeleteExpiredBatchSpecs deletes BatchSpecs that have not been attached to a Batc
 
 ```
 searchKey: store.Store.GetBulkOperation
-tags: [exported]
 ```
 
 ```Go
@@ -1851,7 +1884,6 @@ GetBulkOperation gets a BulkOperation matching the given options.
 
 ```
 searchKey: store.Store.ListBulkOperations
-tags: [exported]
 ```
 
 ```Go
@@ -1864,7 +1896,6 @@ ListBulkOperations gets a list of BulkOperations matching the given options.
 
 ```
 searchKey: store.Store.CountBulkOperations
-tags: [exported]
 ```
 
 ```Go
@@ -1877,7 +1908,6 @@ CountBulkOperations gets the count of BulkOperations in the given batch change.
 
 ```
 searchKey: store.Store.ListBulkOperationErrors
-tags: [exported]
 ```
 
 ```Go
@@ -1890,7 +1920,6 @@ ListBulkOperationErrors gets a list of BulkOperationErrors in a given BulkOperat
 
 ```
 searchKey: store.Store.GetChangesetEvent
-tags: [exported]
 ```
 
 ```Go
@@ -1903,7 +1932,6 @@ GetChangesetEvent gets a changeset matching the given options.
 
 ```
 searchKey: store.Store.ListChangesetEvents
-tags: [exported]
 ```
 
 ```Go
@@ -1916,7 +1944,6 @@ ListChangesetEvents lists ChangesetEvents with the given filters.
 
 ```
 searchKey: store.Store.CountChangesetEvents
-tags: [exported]
 ```
 
 ```Go
@@ -1929,7 +1956,6 @@ CountChangesetEvents returns the number of changeset events in the database.
 
 ```
 searchKey: store.Store.UpsertChangesetEvents
-tags: [exported]
 ```
 
 ```Go
@@ -1942,6 +1968,7 @@ UpsertChangesetEvents creates or updates the given ChangesetEvents.
 
 ```
 searchKey: store.Store.upsertChangesetEventsQuery
+tags: [private]
 ```
 
 ```Go
@@ -1952,7 +1979,6 @@ func (s *Store) upsertChangesetEventsQuery(es []*btypes.ChangesetEvent) (*sqlf.Q
 
 ```
 searchKey: store.Store.CreateChangesetJob
-tags: [exported]
 ```
 
 ```Go
@@ -1965,7 +1991,6 @@ CreateChangesetJob creates the given changeset jobs.
 
 ```
 searchKey: store.Store.GetChangesetJob
-tags: [exported]
 ```
 
 ```Go
@@ -1978,7 +2003,6 @@ GetChangesetJob gets a ChangesetJob matching the given options.
 
 ```
 searchKey: store.Store.CreateChangesetSpec
-tags: [exported]
 ```
 
 ```Go
@@ -1991,6 +2015,7 @@ CreateChangesetSpec creates the given ChangesetSpec.
 
 ```
 searchKey: store.Store.createChangesetSpecQuery
+tags: [private]
 ```
 
 ```Go
@@ -2001,7 +2026,6 @@ func (s *Store) createChangesetSpecQuery(c *btypes.ChangesetSpec) (*sqlf.Query, 
 
 ```
 searchKey: store.Store.UpdateChangesetSpec
-tags: [exported]
 ```
 
 ```Go
@@ -2014,6 +2038,7 @@ UpdateChangesetSpec updates the given ChangesetSpec.
 
 ```
 searchKey: store.Store.updateChangesetSpecQuery
+tags: [private]
 ```
 
 ```Go
@@ -2024,7 +2049,6 @@ func (s *Store) updateChangesetSpecQuery(c *btypes.ChangesetSpec) (*sqlf.Query, 
 
 ```
 searchKey: store.Store.DeleteChangesetSpec
-tags: [exported]
 ```
 
 ```Go
@@ -2037,7 +2061,6 @@ DeleteChangesetSpec deletes the ChangesetSpec with the given ID.
 
 ```
 searchKey: store.Store.CountChangesetSpecs
-tags: [exported]
 ```
 
 ```Go
@@ -2050,7 +2073,6 @@ CountChangesetSpecs returns the number of changeset specs in the database.
 
 ```
 searchKey: store.Store.GetChangesetSpec
-tags: [exported]
 ```
 
 ```Go
@@ -2063,7 +2085,6 @@ GetChangesetSpec gets a changeset spec matching the given options.
 
 ```
 searchKey: store.Store.GetChangesetSpecByID
-tags: [exported]
 ```
 
 ```Go
@@ -2076,7 +2097,6 @@ GetChangesetSpecByID gets a changeset spec with the given ID.
 
 ```
 searchKey: store.Store.ListChangesetSpecs
-tags: [exported]
 ```
 
 ```Go
@@ -2089,7 +2109,6 @@ ListChangesetSpecs lists ChangesetSpecs with the given filters.
 
 ```
 searchKey: store.Store.DeleteExpiredChangesetSpecs
-tags: [exported]
 ```
 
 ```Go
@@ -2102,7 +2121,6 @@ DeleteExpiredChangesetSpecs deletes each ChangesetSpec that has not been attache
 
 ```
 searchKey: store.Store.GetRewirerMappings
-tags: [exported]
 ```
 
 ```Go
@@ -2145,6 +2163,7 @@ Spec 1 should be attached to Changeset 1 and (possibly) update its title/body/di
 
 ```
 searchKey: store.Store.changesetWriteQuery
+tags: [private]
 ```
 
 ```Go
@@ -2155,7 +2174,6 @@ func (s *Store) changesetWriteQuery(q string, includeID bool, c *btypes.Changese
 
 ```
 searchKey: store.Store.UpsertChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -2168,7 +2186,6 @@ UpsertChangeset creates or updates the given Changeset.
 
 ```
 searchKey: store.Store.CreateChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -2181,7 +2198,6 @@ CreateChangeset creates the given Changeset.
 
 ```
 searchKey: store.Store.DeleteChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -2194,7 +2210,6 @@ DeleteChangeset deletes the Changeset with the given ID.
 
 ```
 searchKey: store.Store.CountChangesets
-tags: [exported]
 ```
 
 ```Go
@@ -2207,7 +2222,6 @@ CountChangesets returns the number of changesets in the database.
 
 ```
 searchKey: store.Store.GetChangesetByID
-tags: [exported]
 ```
 
 ```Go
@@ -2220,7 +2234,6 @@ GetChangesetByID is a convenience method if only the ID needs to be passed in. I
 
 ```
 searchKey: store.Store.GetChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -2233,7 +2246,6 @@ GetChangeset gets a changeset matching the given options.
 
 ```
 searchKey: store.Store.ListChangesetSyncData
-tags: [exported]
 ```
 
 ```Go
@@ -2246,7 +2258,6 @@ ListChangesetSyncData returns sync data on all non-externally-deleted changesets
 
 ```
 searchKey: store.Store.ListChangesets
-tags: [exported]
 ```
 
 ```Go
@@ -2259,7 +2270,6 @@ ListChangesets lists Changesets with the given filters.
 
 ```
 searchKey: store.Store.UpdateChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -2272,7 +2282,6 @@ UpdateChangeset updates the given Changeset.
 
 ```
 searchKey: store.Store.GetChangesetExternalIDs
-tags: [exported]
 ```
 
 ```Go
@@ -2285,7 +2294,6 @@ GetChangesetExternalIDs allows us to find the external ids for pull requests bas
 
 ```
 searchKey: store.Store.CancelQueuedBatchChangeChangesets
-tags: [exported]
 ```
 
 ```Go
@@ -2296,7 +2304,6 @@ func (s *Store) CancelQueuedBatchChangeChangesets(ctx context.Context, batchChan
 
 ```
 searchKey: store.Store.EnqueueChangesetsToClose
-tags: [exported]
 ```
 
 ```Go
@@ -2313,7 +2320,6 @@ This method will *block* if some of the changesets are currently being processed
 
 ```
 searchKey: store.Store.GetChangesetsStats
-tags: [exported]
 ```
 
 ```Go
@@ -2326,7 +2332,6 @@ GetChangesetsStats returns statistics on all the changesets associated to the gi
 
 ```
 searchKey: store.Store.EnqueueNextScheduledChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -2337,7 +2342,6 @@ func (s *Store) EnqueueNextScheduledChangeset(ctx context.Context) (*btypes.Chan
 
 ```
 searchKey: store.Store.GetChangesetPlaceInSchedulerQueue
-tags: [exported]
 ```
 
 ```Go
@@ -2348,7 +2352,6 @@ func (s *Store) GetChangesetPlaceInSchedulerQueue(ctx context.Context, id int64)
 
 ```
 searchKey: store.Store.ListCodeHosts
-tags: [exported]
 ```
 
 ```Go
@@ -2359,7 +2362,6 @@ func (s *Store) ListCodeHosts(ctx context.Context, opts ListCodeHostsOpts) ([]*b
 
 ```
 searchKey: store.Store.GetExternalServiceIDs
-tags: [exported]
 ```
 
 ```Go
@@ -2370,7 +2372,6 @@ func (s *Store) GetExternalServiceIDs(ctx context.Context, opts GetExternalServi
 
 ```
 searchKey: store.Store.CreateSiteCredential
-tags: [exported]
 ```
 
 ```Go
@@ -2381,7 +2382,6 @@ func (s *Store) CreateSiteCredential(ctx context.Context, c *btypes.SiteCredenti
 
 ```
 searchKey: store.Store.DeleteSiteCredential
-tags: [exported]
 ```
 
 ```Go
@@ -2392,7 +2392,6 @@ func (s *Store) DeleteSiteCredential(ctx context.Context, id int64) error
 
 ```
 searchKey: store.Store.GetSiteCredential
-tags: [exported]
 ```
 
 ```Go
@@ -2403,7 +2402,6 @@ func (s *Store) GetSiteCredential(ctx context.Context, opts GetSiteCredentialOpt
 
 ```
 searchKey: store.Store.ListSiteCredentials
-tags: [exported]
 ```
 
 ```Go
@@ -2414,7 +2412,6 @@ func (s *Store) ListSiteCredentials(ctx context.Context, opts ListSiteCredential
 
 ```
 searchKey: store.Store.UpdateSiteCredential
-tags: [exported]
 ```
 
 ```Go
@@ -2425,6 +2422,7 @@ func (s *Store) UpdateSiteCredential(ctx context.Context, c *btypes.SiteCredenti
 
 ```
 searchKey: store.Store.updateSiteCredentialQuery
+tags: [private]
 ```
 
 ```Go
@@ -2435,7 +2433,6 @@ func (s *Store) updateSiteCredentialQuery(c *btypes.SiteCredential) *sqlf.Query
 
 ```
 searchKey: store.Store.Clock
-tags: [exported]
 ```
 
 ```Go
@@ -2448,7 +2445,6 @@ Clock returns the clock used by the Store.
 
 ```
 searchKey: store.Store.DB
-tags: [exported]
 ```
 
 ```Go
@@ -2461,7 +2457,6 @@ DB returns the underlying dbutil.DB that this Store was instantiated with. It's 
 
 ```
 searchKey: store.Store.Handle
-tags: [exported]
 ```
 
 ```Go
@@ -2474,7 +2469,6 @@ Handle returns the underlying transactable database handle. Needed to implement 
 
 ```
 searchKey: store.Store.With
-tags: [exported]
 ```
 
 ```Go
@@ -2487,7 +2481,6 @@ With creates a new Store with the given basestore.Shareable store as the underly
 
 ```
 searchKey: store.Store.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -2500,7 +2493,6 @@ Transact creates a new transaction. It's required to implement this method and w
 
 ```
 searchKey: store.Store.Repos
-tags: [exported]
 ```
 
 ```Go
@@ -2513,7 +2505,6 @@ Repos returns a database.RepoStore using the same connection as this store.
 
 ```
 searchKey: store.Store.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -2526,7 +2517,6 @@ ExternalServices returns a database.ExternalServiceStore using the same connecti
 
 ```
 searchKey: store.Store.UserCredentials
-tags: [exported]
 ```
 
 ```Go
@@ -2539,6 +2529,7 @@ UserCredentials returns a database.UserCredentialsStore using the same connectio
 
 ```
 searchKey: store.Store.query
+tags: [private]
 ```
 
 ```Go
@@ -2549,6 +2540,7 @@ func (s *Store) query(ctx context.Context, q *sqlf.Query, sc scanFunc) error
 
 ```
 searchKey: store.Store.queryCount
+tags: [private]
 ```
 
 ```Go
@@ -2559,6 +2551,7 @@ func (s *Store) queryCount(ctx context.Context, q *sqlf.Query) (int, error)
 
 ```
 searchKey: store.scanner
+tags: [private]
 ```
 
 ```Go
@@ -2573,6 +2566,7 @@ scanner captures the Scan method of sql.Rows and sql.Row
 
 ```
 searchKey: store.scanFunc
+tags: [private]
 ```
 
 ```Go
@@ -2585,7 +2579,6 @@ a scanFunc scans one or more rows from a scanner, returning the last id column s
 
 ```
 searchKey: store.LimitOpts
-tags: [exported]
 ```
 
 ```Go
@@ -2598,7 +2591,6 @@ type LimitOpts struct {
 
 ```
 searchKey: store.LimitOpts.DBLimit
-tags: [exported]
 ```
 
 ```Go
@@ -2609,7 +2601,6 @@ func (o LimitOpts) DBLimit() int
 
 ```
 searchKey: store.LimitOpts.ToDB
-tags: [exported]
 ```
 
 ```Go
@@ -2620,6 +2611,7 @@ func (o LimitOpts) ToDB() string
 
 ```
 searchKey: store.storeTestFunc
+tags: [private]
 ```
 
 ```Go
@@ -2628,10 +2620,15 @@ type storeTestFunc func(*testing.T, context.Context, *Store, ct.Clock)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="countBatchChangesQuery" href="#countBatchChangesQuery">func countBatchChangesQuery(opts *CountBatchChangesOpts) *sqlf.Query</a>
 
 ```
 searchKey: store.countBatchChangesQuery
+tags: [private]
 ```
 
 ```Go
@@ -2642,6 +2639,7 @@ func countBatchChangesQuery(opts *CountBatchChangesOpts) *sqlf.Query
 
 ```
 searchKey: store.getBatchChangeQuery
+tags: [private]
 ```
 
 ```Go
@@ -2652,6 +2650,7 @@ func getBatchChangeQuery(opts *GetBatchChangeOpts) *sqlf.Query
 
 ```
 searchKey: store.getBatchChangeDiffStatQuery
+tags: [private]
 ```
 
 ```Go
@@ -2662,6 +2661,7 @@ func getBatchChangeDiffStatQuery(opts GetBatchChangeDiffStatOpts, authzConds *sq
 
 ```
 searchKey: store.listBatchChangesQuery
+tags: [private]
 ```
 
 ```Go
@@ -2672,6 +2672,7 @@ func listBatchChangesQuery(opts *ListBatchChangesOpts) *sqlf.Query
 
 ```
 searchKey: store.scanBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -2682,6 +2683,7 @@ func scanBatchChange(c *btypes.BatchChange, s scanner) error
 
 ```
 searchKey: store.getBatchSpecQuery
+tags: [private]
 ```
 
 ```Go
@@ -2692,6 +2694,7 @@ func getBatchSpecQuery(opts *GetBatchSpecOpts) *sqlf.Query
 
 ```
 searchKey: store.getNewestBatchSpecQuery
+tags: [private]
 ```
 
 ```Go
@@ -2702,6 +2705,7 @@ func getNewestBatchSpecQuery(opts *GetNewestBatchSpecOpts) *sqlf.Query
 
 ```
 searchKey: store.listBatchSpecsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2712,6 +2716,7 @@ func listBatchSpecsQuery(opts *ListBatchSpecsOpts) *sqlf.Query
 
 ```
 searchKey: store.scanBatchSpec
+tags: [private]
 ```
 
 ```Go
@@ -2722,6 +2727,7 @@ func scanBatchSpec(c *btypes.BatchSpec, s scanner) error
 
 ```
 searchKey: store.getBulkOperationQuery
+tags: [private]
 ```
 
 ```Go
@@ -2732,6 +2738,7 @@ func getBulkOperationQuery(opts *GetBulkOperationOpts) *sqlf.Query
 
 ```
 searchKey: store.listBulkOperationsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2742,6 +2749,7 @@ func listBulkOperationsQuery(opts *ListBulkOperationsOpts) *sqlf.Query
 
 ```
 searchKey: store.countBulkOperationsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2752,6 +2760,7 @@ func countBulkOperationsQuery(opts *CountBulkOperationsOpts) *sqlf.Query
 
 ```
 searchKey: store.listBulkOperationErrorsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2762,6 +2771,7 @@ func listBulkOperationErrorsQuery(opts *ListBulkOperationErrorsOpts) *sqlf.Query
 
 ```
 searchKey: store.scanBulkOperation
+tags: [private]
 ```
 
 ```Go
@@ -2772,6 +2782,7 @@ func scanBulkOperation(b *btypes.BulkOperation, s scanner) error
 
 ```
 searchKey: store.scanBulkOperationError
+tags: [private]
 ```
 
 ```Go
@@ -2782,6 +2793,7 @@ func scanBulkOperationError(b *btypes.BulkOperationError, s scanner) error
 
 ```
 searchKey: store.getChangesetEventQuery
+tags: [private]
 ```
 
 ```Go
@@ -2792,6 +2804,7 @@ func getChangesetEventQuery(opts *GetChangesetEventOpts) *sqlf.Query
 
 ```
 searchKey: store.listChangesetEventsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2802,6 +2815,7 @@ func listChangesetEventsQuery(opts *ListChangesetEventsOpts) *sqlf.Query
 
 ```
 searchKey: store.countChangesetEventsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2812,6 +2826,7 @@ func countChangesetEventsQuery(opts *CountChangesetEventsOpts) *sqlf.Query
 
 ```
 searchKey: store.batchChangesetEventsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2822,6 +2837,7 @@ func batchChangesetEventsQuery(fmtstr string, es []*btypes.ChangesetEvent) (*sql
 
 ```
 searchKey: store.scanChangesetEvent
+tags: [private]
 ```
 
 ```Go
@@ -2832,6 +2848,7 @@ func scanChangesetEvent(e *btypes.ChangesetEvent, s scanner) error
 
 ```
 searchKey: store.getChangesetJobQuery
+tags: [private]
 ```
 
 ```Go
@@ -2842,6 +2859,7 @@ func getChangesetJobQuery(opts *GetChangesetJobOpts) *sqlf.Query
 
 ```
 searchKey: store.scanChangesetJob
+tags: [private]
 ```
 
 ```Go
@@ -2852,7 +2870,6 @@ func scanChangesetJob(c *btypes.ChangesetJob, s scanner) error
 
 ```
 searchKey: store.ScanFirstChangesetJob
-tags: [exported]
 ```
 
 ```Go
@@ -2863,6 +2880,7 @@ func ScanFirstChangesetJob(rows *sql.Rows, err error) (*btypes.ChangesetJob, boo
 
 ```
 searchKey: store.scanChangesetJobs
+tags: [private]
 ```
 
 ```Go
@@ -2873,6 +2891,7 @@ func scanChangesetJobs(rows *sql.Rows, queryErr error) ([]*btypes.ChangesetJob, 
 
 ```
 searchKey: store.countChangesetSpecsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2883,6 +2902,7 @@ func countChangesetSpecsQuery(opts *CountChangesetSpecsOpts) *sqlf.Query
 
 ```
 searchKey: store.getChangesetSpecQuery
+tags: [private]
 ```
 
 ```Go
@@ -2893,6 +2913,7 @@ func getChangesetSpecQuery(opts *GetChangesetSpecOpts) *sqlf.Query
 
 ```
 searchKey: store.listChangesetSpecsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2903,6 +2924,7 @@ func listChangesetSpecsQuery(opts *ListChangesetSpecsOpts) *sqlf.Query
 
 ```
 searchKey: store.scanChangesetSpec
+tags: [private]
 ```
 
 ```Go
@@ -2913,6 +2935,7 @@ func scanChangesetSpec(c *btypes.ChangesetSpec, s scanner) error
 
 ```
 searchKey: store.getRewirerMappingsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2923,6 +2946,7 @@ func getRewirerMappingsQuery(opts GetRewirerMappingsOpts) (*sqlf.Query, error)
 
 ```
 searchKey: store.getRewirerMappingCurrentState
+tags: [private]
 ```
 
 ```Go
@@ -2933,6 +2957,7 @@ func getRewirerMappingCurrentState(state *btypes.ChangesetState) (*sqlf.Query, e
 
 ```
 searchKey: store.getRewirerMappingTextSearch
+tags: [private]
 ```
 
 ```Go
@@ -2943,6 +2968,7 @@ func getRewirerMappingTextSearch(terms []search.TextSearchTerm) (detachTextSearc
 
 ```
 searchKey: store.countChangesetsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2953,6 +2979,7 @@ func countChangesetsQuery(opts *CountChangesetsOpts, authzConds *sqlf.Query) *sq
 
 ```
 searchKey: store.getChangesetQuery
+tags: [private]
 ```
 
 ```Go
@@ -2963,6 +2990,7 @@ func getChangesetQuery(opts *GetChangesetOpts) *sqlf.Query
 
 ```
 searchKey: store.scanChangesetSyncData
+tags: [private]
 ```
 
 ```Go
@@ -2973,6 +3001,7 @@ func scanChangesetSyncData(h *btypes.ChangesetSyncData, s scanner) error
 
 ```
 searchKey: store.listChangesetSyncDataQuery
+tags: [private]
 ```
 
 ```Go
@@ -2983,6 +3012,7 @@ func listChangesetSyncDataQuery(opts ListChangesetSyncDataOpts) *sqlf.Query
 
 ```
 searchKey: store.listChangesetsQuery
+tags: [private]
 ```
 
 ```Go
@@ -2993,7 +3023,6 @@ func listChangesetsQuery(opts *ListChangesetsOpts, authzConds *sqlf.Query) *sqlf
 
 ```
 searchKey: store.ScanFirstChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -3004,6 +3033,7 @@ func ScanFirstChangeset(rows *sql.Rows, err error) (*btypes.Changeset, bool, err
 
 ```
 searchKey: store.scanChangesets
+tags: [private]
 ```
 
 ```Go
@@ -3014,6 +3044,7 @@ func scanChangesets(rows *sql.Rows, queryErr error) ([]*btypes.Changeset, error)
 
 ```
 searchKey: store.scanChangeset
+tags: [private]
 ```
 
 ```Go
@@ -3024,6 +3055,7 @@ func scanChangeset(t *btypes.Changeset, s scanner) error
 
 ```
 searchKey: store.archivedInBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -3034,6 +3066,7 @@ func archivedInBatchChange(batchChangeID string) *sqlf.Query
 
 ```
 searchKey: store.getChangesetsStatsQuery
+tags: [private]
 ```
 
 ```Go
@@ -3044,6 +3077,7 @@ func getChangesetsStatsQuery(batchChangeID int64) *sqlf.Query
 
 ```
 searchKey: store.listCodeHostsQuery
+tags: [private]
 ```
 
 ```Go
@@ -3054,6 +3088,7 @@ func listCodeHostsQuery(opts ListCodeHostsOpts) *sqlf.Query
 
 ```
 searchKey: store.scanCodeHost
+tags: [private]
 ```
 
 ```Go
@@ -3064,6 +3099,7 @@ func scanCodeHost(c *btypes.CodeHost, sc scanner) error
 
 ```
 searchKey: store.getExternalServiceIDsQuery
+tags: [private]
 ```
 
 ```Go
@@ -3074,6 +3110,7 @@ func getExternalServiceIDsQuery(opts GetExternalServiceIDsOpts) *sqlf.Query
 
 ```
 searchKey: store.createSiteCredentialQuery
+tags: [private]
 ```
 
 ```Go
@@ -3084,6 +3121,7 @@ func createSiteCredentialQuery(c *btypes.SiteCredential) *sqlf.Query
 
 ```
 searchKey: store.deleteSiteCredentialQuery
+tags: [private]
 ```
 
 ```Go
@@ -3094,6 +3132,7 @@ func deleteSiteCredentialQuery(id int64) *sqlf.Query
 
 ```
 searchKey: store.getSiteCredentialQuery
+tags: [private]
 ```
 
 ```Go
@@ -3104,6 +3143,7 @@ func getSiteCredentialQuery(opts GetSiteCredentialOpts) *sqlf.Query
 
 ```
 searchKey: store.listSiteCredentialsQuery
+tags: [private]
 ```
 
 ```Go
@@ -3114,6 +3154,7 @@ func listSiteCredentialsQuery(opts ListSiteCredentialsOpts) *sqlf.Query
 
 ```
 searchKey: store.scanSiteCredential
+tags: [private]
 ```
 
 ```Go
@@ -3124,7 +3165,6 @@ func scanSiteCredential(c *btypes.SiteCredential, sc scanner) error
 
 ```
 searchKey: store.RandomID
-tags: [exported]
 ```
 
 ```Go
@@ -3137,6 +3177,7 @@ RandomID generates a random ID to be used for identifiers in the database.
 
 ```
 searchKey: store.scanAll
+tags: [private]
 ```
 
 ```Go
@@ -3147,6 +3188,7 @@ func scanAll(rows *sql.Rows, scan scanFunc) (err error)
 
 ```
 searchKey: store.jsonbColumn
+tags: [private]
 ```
 
 ```Go
@@ -3157,6 +3199,7 @@ func jsonbColumn(metadata interface{}) (msg json.RawMessage, err error)
 
 ```
 searchKey: store.nullInt32Column
+tags: [private]
 ```
 
 ```Go
@@ -3167,6 +3210,7 @@ func nullInt32Column(n int32) *int32
 
 ```
 searchKey: store.nullInt64Column
+tags: [private]
 ```
 
 ```Go
@@ -3177,6 +3221,7 @@ func nullInt64Column(n int64) *int64
 
 ```
 searchKey: store.nullTimeColumn
+tags: [private]
 ```
 
 ```Go
@@ -3187,6 +3232,7 @@ func nullTimeColumn(t time.Time) *time.Time
 
 ```
 searchKey: store.nullStringColumn
+tags: [private]
 ```
 
 ```Go
@@ -3197,6 +3243,7 @@ func nullStringColumn(s string) *string
 
 ```
 searchKey: store.textSearchTermToClause
+tags: [private]
 ```
 
 ```Go
@@ -3211,6 +3258,7 @@ Note that there must be at least one field: failing to include any fields will l
 
 ```
 searchKey: store.testStoreBatchChanges
+tags: [private]
 ```
 
 ```Go
@@ -3221,6 +3269,7 @@ func testStoreBatchChanges(t *testing.T, ctx context.Context, s *Store, clock ct
 
 ```
 searchKey: store.testUserDeleteCascades
+tags: [private]
 ```
 
 ```Go
@@ -3231,6 +3280,7 @@ func testUserDeleteCascades(t *testing.T, ctx context.Context, s *Store, clock c
 
 ```
 searchKey: store.testStoreBatchSpecs
+tags: [private]
 ```
 
 ```Go
@@ -3241,6 +3291,7 @@ func testStoreBatchSpecs(t *testing.T, ctx context.Context, s *Store, clock ct.C
 
 ```
 searchKey: store.testStoreBulkOperations
+tags: [private]
 ```
 
 ```Go
@@ -3251,6 +3302,7 @@ func testStoreBulkOperations(t *testing.T, ctx context.Context, s *Store, clock 
 
 ```
 searchKey: store.testStoreChangesetEvents
+tags: [private]
 ```
 
 ```Go
@@ -3261,6 +3313,7 @@ func testStoreChangesetEvents(t *testing.T, ctx context.Context, s *Store, clock
 
 ```
 searchKey: store.testStoreChangesetJobs
+tags: [private]
 ```
 
 ```Go
@@ -3271,6 +3324,7 @@ func testStoreChangesetJobs(t *testing.T, ctx context.Context, s *Store, clock c
 
 ```
 searchKey: store.testStoreChangesetSpecs
+tags: [private]
 ```
 
 ```Go
@@ -3281,6 +3335,7 @@ func testStoreChangesetSpecs(t *testing.T, ctx context.Context, s *Store, clock 
 
 ```
 searchKey: store.testStoreChangesetSpecsCurrentState
+tags: [private]
 ```
 
 ```Go
@@ -3291,6 +3346,7 @@ func testStoreChangesetSpecsCurrentState(t *testing.T, ctx context.Context, s *S
 
 ```
 searchKey: store.testStoreChangesetSpecsCurrentStateAndTextSearch
+tags: [private]
 ```
 
 ```Go
@@ -3301,6 +3357,7 @@ func testStoreChangesetSpecsCurrentStateAndTextSearch(t *testing.T, ctx context.
 
 ```
 searchKey: store.testStoreChangesetSpecsTextSearch
+tags: [private]
 ```
 
 ```Go
@@ -3311,6 +3368,7 @@ func testStoreChangesetSpecsTextSearch(t *testing.T, ctx context.Context, s *Sto
 
 ```
 searchKey: store.testStoreChangesets
+tags: [private]
 ```
 
 ```Go
@@ -3321,6 +3379,7 @@ func testStoreChangesets(t *testing.T, ctx context.Context, s *Store, clock ct.C
 
 ```
 searchKey: store.testStoreListChangesetSyncData
+tags: [private]
 ```
 
 ```Go
@@ -3331,6 +3390,7 @@ func testStoreListChangesetSyncData(t *testing.T, ctx context.Context, s *Store,
 
 ```
 searchKey: store.testStoreListChangesetsTextSearch
+tags: [private]
 ```
 
 ```Go
@@ -3341,6 +3401,7 @@ func testStoreListChangesetsTextSearch(t *testing.T, ctx context.Context, s *Sto
 
 ```
 searchKey: store.testStoreChangesetScheduling
+tags: [private]
 ```
 
 ```Go
@@ -3353,6 +3414,7 @@ testStoreChangesetScheduling provides tests for schedule-related methods on the 
 
 ```
 searchKey: store.testStoreCodeHost
+tags: [private]
 ```
 
 ```Go
@@ -3363,6 +3425,7 @@ func testStoreCodeHost(t *testing.T, ctx context.Context, s *Store, clock ct.Clo
 
 ```
 searchKey: store.TestIntegration
+tags: [private]
 ```
 
 ```Go
@@ -3373,6 +3436,7 @@ func TestIntegration(t *testing.T)
 
 ```
 searchKey: store.testStoreSiteCredentials
+tags: [private]
 ```
 
 ```Go
@@ -3383,6 +3447,7 @@ func testStoreSiteCredentials(t *testing.T, ctx context.Context, s *Store, clock
 
 ```
 searchKey: store.storeTest
+tags: [private]
 ```
 
 ```Go
@@ -3395,6 +3460,7 @@ storeTest converts a storeTestFunc into a func(*testing.T) in which all dependen
 
 ```
 searchKey: store.TestTextSearchTermToClause
+tags: [private]
 ```
 
 ```Go

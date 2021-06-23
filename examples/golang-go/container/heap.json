@@ -4,9 +4,7 @@
     "identifier": "heap",
     "newPage": true,
     "searchKey": "container/heap",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Interface",
                 "newPage": false,
                 "searchKey": "heap.Interface",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,7 +60,9 @@
                 "identifier": "myHeap",
                 "newPage": false,
                 "searchKey": "heap.myHeap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +80,9 @@
                       "identifier": "myHeap.Less",
                       "newPage": false,
                       "searchKey": "heap.myHeap.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,7 +102,9 @@
                       "identifier": "myHeap.Swap",
                       "newPage": false,
                       "searchKey": "heap.myHeap.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -124,7 +124,9 @@
                       "identifier": "myHeap.Len",
                       "newPage": false,
                       "searchKey": "heap.myHeap.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -144,7 +146,9 @@
                       "identifier": "myHeap.Pop",
                       "newPage": false,
                       "searchKey": "heap.myHeap.Pop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -164,7 +168,9 @@
                       "identifier": "myHeap.Push",
                       "newPage": false,
                       "searchKey": "heap.myHeap.Push",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -184,7 +190,9 @@
                       "identifier": "myHeap.verify",
                       "newPage": false,
                       "searchKey": "heap.myHeap.verify",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -210,9 +218,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -230,9 +236,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "heap.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -252,9 +256,7 @@
                 "identifier": "Push",
                 "newPage": false,
                 "searchKey": "heap.Push",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -274,9 +276,7 @@
                 "identifier": "Pop",
                 "newPage": false,
                 "searchKey": "heap.Pop",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -296,9 +296,7 @@
                 "identifier": "Remove",
                 "newPage": false,
                 "searchKey": "heap.Remove",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -318,9 +316,7 @@
                 "identifier": "Fix",
                 "newPage": false,
                 "searchKey": "heap.Fix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -340,7 +336,9 @@
                 "identifier": "up",
                 "newPage": false,
                 "searchKey": "heap.up",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -360,7 +358,9 @@
                 "identifier": "down",
                 "newPage": false,
                 "searchKey": "heap.down",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -380,7 +380,9 @@
                 "identifier": "TestInit0",
                 "newPage": false,
                 "searchKey": "heap.TestInit0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -400,7 +402,9 @@
                 "identifier": "TestInit1",
                 "newPage": false,
                 "searchKey": "heap.TestInit1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -420,7 +424,9 @@
                 "identifier": "Test",
                 "newPage": false,
                 "searchKey": "heap.Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -440,7 +446,9 @@
                 "identifier": "TestRemove0",
                 "newPage": false,
                 "searchKey": "heap.TestRemove0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -460,7 +468,9 @@
                 "identifier": "TestRemove1",
                 "newPage": false,
                 "searchKey": "heap.TestRemove1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -480,7 +490,9 @@
                 "identifier": "TestRemove2",
                 "newPage": false,
                 "searchKey": "heap.TestRemove2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -500,7 +512,9 @@
                 "identifier": "BenchmarkDup",
                 "newPage": false,
                 "searchKey": "heap.BenchmarkDup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -520,7 +534,9 @@
                 "identifier": "TestFix",
                 "newPage": false,
                 "searchKey": "heap.TestFix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

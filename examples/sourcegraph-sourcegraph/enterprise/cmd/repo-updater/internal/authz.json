@@ -4,7 +4,9 @@
     "identifier": "authz",
     "newPage": true,
     "searchKey": "enterprise/cmd/repo-updater/internal/authz",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "priorityLow",
                 "newPage": false,
                 "searchKey": "authz.priorityLow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "priorityHigh",
                 "newPage": false,
                 "searchKey": "authz.priorityHigh",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "requestTypeRepo",
                 "newPage": false,
                 "searchKey": "authz.requestTypeRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "requestTypeUser",
                 "newPage": false,
                 "searchKey": "authz.requestTypeUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +135,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "metricsNoPerms",
                 "newPage": false,
                 "searchKey": "authz.metricsNoPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "metricsStalePerms",
                 "newPage": false,
                 "searchKey": "authz.metricsStalePerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "metricsPermsGap",
                 "newPage": false,
                 "searchKey": "authz.metricsPermsGap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -201,7 +221,9 @@
                 "identifier": "metricsSyncDuration",
                 "newPage": false,
                 "searchKey": "authz.metricsSyncDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -221,7 +243,9 @@
                 "identifier": "metricsSyncErrors",
                 "newPage": false,
                 "searchKey": "authz.metricsSyncErrors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -241,7 +265,9 @@
                 "identifier": "metricsQueueSize",
                 "newPage": false,
                 "searchKey": "authz.metricsQueueSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,7 +287,9 @@
                 "identifier": "updateRegex",
                 "newPage": false,
                 "searchKey": "authz.updateRegex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -281,7 +309,9 @@
                 "identifier": "dsn",
                 "newPage": false,
                 "searchKey": "authz.dsn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,7 +331,9 @@
                 "identifier": "cmpOpts",
                 "newPage": false,
                 "searchKey": "authz.cmpOpts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -324,7 +356,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -342,9 +376,7 @@
                 "identifier": "PermsSyncer",
                 "newPage": false,
                 "searchKey": "authz.PermsSyncer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -362,9 +394,7 @@
                       "identifier": "NewPermsSyncer",
                       "newPage": false,
                       "searchKey": "authz.NewPermsSyncer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -384,9 +414,7 @@
                       "identifier": "PermsSyncer.ScheduleUsers",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.ScheduleUsers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -406,7 +434,9 @@
                       "identifier": "PermsSyncer.scheduleUsers",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.scheduleUsers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -426,9 +456,7 @@
                       "identifier": "PermsSyncer.ScheduleRepos",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.ScheduleRepos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -448,7 +476,9 @@
                       "identifier": "PermsSyncer.scheduleRepos",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.scheduleRepos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -468,7 +498,9 @@
                       "identifier": "PermsSyncer.providersByServiceID",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.providersByServiceID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -488,7 +520,9 @@
                       "identifier": "PermsSyncer.providersByURNs",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.providersByURNs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -508,7 +542,9 @@
                       "identifier": "PermsSyncer.syncUserPerms",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.syncUserPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -528,7 +564,9 @@
                       "identifier": "PermsSyncer.syncRepoPerms",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.syncRepoPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -548,7 +586,9 @@
                       "identifier": "PermsSyncer.waitForRateLimit",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.waitForRateLimit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -568,7 +608,9 @@
                       "identifier": "PermsSyncer.syncPerms",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.syncPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -588,7 +630,9 @@
                       "identifier": "PermsSyncer.runSync",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.runSync",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -608,7 +652,9 @@
                       "identifier": "PermsSyncer.scheduleUsersWithNoPerms",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.scheduleUsersWithNoPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -628,7 +674,9 @@
                       "identifier": "PermsSyncer.scheduleReposWithNoPerms",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.scheduleReposWithNoPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -648,7 +696,9 @@
                       "identifier": "PermsSyncer.scheduleUsersWithOldestPerms",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.scheduleUsersWithOldestPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -668,7 +718,9 @@
                       "identifier": "PermsSyncer.scheduleReposWithOldestPerms",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.scheduleReposWithOldestPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -688,7 +740,9 @@
                       "identifier": "PermsSyncer.schedule",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.schedule",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -708,7 +762,9 @@
                       "identifier": "PermsSyncer.isDisabled",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.isDisabled",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -728,7 +784,9 @@
                       "identifier": "PermsSyncer.runSchedule",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.runSchedule",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -748,9 +806,7 @@
                       "identifier": "PermsSyncer.DebugDump",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.DebugDump",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -770,7 +826,9 @@
                       "identifier": "PermsSyncer.observe",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.observe",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -790,7 +848,9 @@
                       "identifier": "PermsSyncer.collectMetrics",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.collectMetrics",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -810,9 +870,7 @@
                       "identifier": "PermsSyncer.Run",
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.Run",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -835,7 +893,9 @@
                 "identifier": "schedule",
                 "newPage": false,
                 "searchKey": "authz.schedule",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -855,7 +915,9 @@
                 "identifier": "scheduledUser",
                 "newPage": false,
                 "searchKey": "authz.scheduledUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -875,7 +937,9 @@
                 "identifier": "scheduledRepo",
                 "newPage": false,
                 "searchKey": "authz.scheduledRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -895,7 +959,9 @@
                 "identifier": "priority",
                 "newPage": false,
                 "searchKey": "authz.priority",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -915,7 +981,9 @@
                 "identifier": "requestType",
                 "newPage": false,
                 "searchKey": "authz.requestType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -933,7 +1001,9 @@
                       "identifier": "requestType.higherPriorityThan",
                       "newPage": false,
                       "searchKey": "authz.requestType.higherPriorityThan",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -956,7 +1026,9 @@
                 "identifier": "requestMeta",
                 "newPage": false,
                 "searchKey": "authz.requestMeta",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -976,7 +1048,9 @@
                 "identifier": "syncRequest",
                 "newPage": false,
                 "searchKey": "authz.syncRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -996,7 +1070,9 @@
                 "identifier": "requestQueueKey",
                 "newPage": false,
                 "searchKey": "authz.requestQueueKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1016,7 +1092,9 @@
                 "identifier": "requestQueue",
                 "newPage": false,
                 "searchKey": "authz.requestQueue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1034,7 +1112,9 @@
                       "identifier": "newRequestQueue",
                       "newPage": false,
                       "searchKey": "authz.newRequestQueue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1054,7 +1134,9 @@
                       "identifier": "requestQueue.enqueue",
                       "newPage": false,
                       "searchKey": "authz.requestQueue.enqueue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1074,7 +1156,9 @@
                       "identifier": "requestQueue.remove",
                       "newPage": false,
                       "searchKey": "authz.requestQueue.remove",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1094,7 +1178,9 @@
                       "identifier": "requestQueue.acquireNext",
                       "newPage": false,
                       "searchKey": "authz.requestQueue.acquireNext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1114,7 +1200,9 @@
                       "identifier": "requestQueue.release",
                       "newPage": false,
                       "searchKey": "authz.requestQueue.release",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1134,7 +1222,9 @@
                       "identifier": "requestQueue.Len",
                       "newPage": false,
                       "searchKey": "authz.requestQueue.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1154,7 +1244,9 @@
                       "identifier": "requestQueue.Less",
                       "newPage": false,
                       "searchKey": "authz.requestQueue.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1174,7 +1266,9 @@
                       "identifier": "requestQueue.Swap",
                       "newPage": false,
                       "searchKey": "authz.requestQueue.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1194,7 +1288,9 @@
                       "identifier": "requestQueue.Push",
                       "newPage": false,
                       "searchKey": "authz.requestQueue.Push",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1214,7 +1310,9 @@
                       "identifier": "requestQueue.Pop",
                       "newPage": false,
                       "searchKey": "authz.requestQueue.Pop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1237,7 +1335,9 @@
                 "identifier": "mockProvider",
                 "newPage": false,
                 "searchKey": "authz.mockProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1255,7 +1355,9 @@
                       "identifier": "mockProvider.FetchAccount",
                       "newPage": false,
                       "searchKey": "authz.mockProvider.FetchAccount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1275,7 +1377,9 @@
                       "identifier": "mockProvider.ServiceType",
                       "newPage": false,
                       "searchKey": "authz.mockProvider.ServiceType",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1295,7 +1399,9 @@
                       "identifier": "mockProvider.ServiceID",
                       "newPage": false,
                       "searchKey": "authz.mockProvider.ServiceID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1315,7 +1421,9 @@
                       "identifier": "mockProvider.URN",
                       "newPage": false,
                       "searchKey": "authz.mockProvider.URN",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1335,7 +1443,9 @@
                       "identifier": "mockProvider.Validate",
                       "newPage": false,
                       "searchKey": "authz.mockProvider.Validate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1355,7 +1465,9 @@
                       "identifier": "mockProvider.FetchUserPerms",
                       "newPage": false,
                       "searchKey": "authz.mockProvider.FetchUserPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1375,7 +1487,9 @@
                       "identifier": "mockProvider.FetchRepoPerms",
                       "newPage": false,
                       "searchKey": "authz.mockProvider.FetchRepoPerms",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1401,7 +1515,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1419,7 +1535,9 @@
                 "identifier": "notify",
                 "newPage": false,
                 "searchKey": "authz.notify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1439,7 +1557,9 @@
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "authz.update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1459,7 +1579,9 @@
                 "identifier": "TestIntegration_GitHubPermissions",
                 "newPage": false,
                 "searchKey": "authz.TestIntegration_GitHubPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1479,7 +1601,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "authz.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1499,7 +1623,9 @@
                 "identifier": "TestPermsSyncer_ScheduleUsers",
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_ScheduleUsers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1519,7 +1645,9 @@
                 "identifier": "TestPermsSyncer_ScheduleRepos",
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_ScheduleRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1539,7 +1667,9 @@
                 "identifier": "TestPermsSyncer_syncUserPerms",
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_syncUserPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1559,7 +1689,9 @@
                 "identifier": "TestPermsSyncer_syncUserPerms_tokenExpire",
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_syncUserPerms_tokenExpire",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1579,7 +1711,9 @@
                 "identifier": "TestPermsSyncer_syncUserPerms_prefixSpecs",
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_syncUserPerms_prefixSpecs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1599,7 +1733,9 @@
                 "identifier": "TestPermsSyncer_syncRepoPerms",
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_syncRepoPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1619,7 +1755,9 @@
                 "identifier": "TestPermsSyncer_waitForRateLimit",
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_waitForRateLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1639,7 +1777,9 @@
                 "identifier": "TestPermsSyncer_syncPerms",
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_syncPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1659,7 +1799,9 @@
                 "identifier": "Test_requestQueue_enqueue",
                 "newPage": false,
                 "searchKey": "authz.Test_requestQueue_enqueue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1679,7 +1821,9 @@
                 "identifier": "Test_requestQueue_remove",
                 "newPage": false,
                 "searchKey": "authz.Test_requestQueue_remove",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1699,7 +1843,9 @@
                 "identifier": "Test_requestQueue_acquireNext",
                 "newPage": false,
                 "searchKey": "authz.Test_requestQueue_acquireNext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1719,7 +1865,9 @@
                 "identifier": "Test_requestQueue_release",
                 "newPage": false,
                 "searchKey": "authz.Test_requestQueue_release",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1739,7 +1887,9 @@
                 "identifier": "Test_requestQueue_Less",
                 "newPage": false,
                 "searchKey": "authz.Test_requestQueue_Less",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

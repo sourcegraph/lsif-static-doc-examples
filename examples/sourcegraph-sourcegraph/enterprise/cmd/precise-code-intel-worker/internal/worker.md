@@ -445,11 +445,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="CloneInProgressDelay" href="#CloneInProgressDelay">const CloneInProgressDelay</a>
 
 ```
 searchKey: worker.CloneInProgressDelay
-tags: [exported]
 ```
 
 ```Go
@@ -460,10 +463,15 @@ CloneInProgressDelay is the delay between processing attempts when a repo is cur
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="handler" href="#handler">type handler struct</a>
 
 ```
 searchKey: worker.handler
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +489,7 @@ type handler struct {
 
 ```
 searchKey: worker.handler.Handle
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +500,7 @@ func (h *handler) Handle(ctx context.Context, tx dbworkerstore.Store, record wor
 
 ```
 searchKey: worker.handler.PreDequeue
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +511,7 @@ func (h *handler) PreDequeue(ctx context.Context) (bool, interface{}, error)
 
 ```
 searchKey: worker.handler.PreHandle
+tags: [private]
 ```
 
 ```Go
@@ -511,6 +522,7 @@ func (h *handler) PreHandle(ctx context.Context, record workerutil.Record)
 
 ```
 searchKey: worker.handler.PostHandle
+tags: [private]
 ```
 
 ```Go
@@ -521,6 +533,7 @@ func (h *handler) PostHandle(ctx context.Context, record workerutil.Record)
 
 ```
 searchKey: worker.handler.getSize
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +544,7 @@ func (h *handler) getSize(record workerutil.Record) int64
 
 ```
 searchKey: worker.handler.handle
+tags: [private]
 ```
 
 ```Go
@@ -543,7 +557,6 @@ handle converts a raw upload into a dump within the given transaction context. R
 
 ```
 searchKey: worker.DBStore
-tags: [exported]
 ```
 
 ```Go
@@ -568,7 +581,6 @@ type DBStore interface {
 
 ```
 searchKey: worker.DBStoreShim
-tags: [exported]
 ```
 
 ```Go
@@ -581,7 +593,6 @@ type DBStoreShim struct {
 
 ```
 searchKey: worker.DBStoreShim.With
-tags: [exported]
 ```
 
 ```Go
@@ -592,7 +603,6 @@ func (s *DBStoreShim) With(other basestore.ShareableStore) DBStore
 
 ```
 searchKey: worker.DBStoreShim.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -603,7 +613,6 @@ func (s *DBStoreShim) Transact(ctx context.Context) (DBStore, error)
 
 ```
 searchKey: worker.LSIFStore
-tags: [exported]
 ```
 
 ```Go
@@ -624,7 +633,6 @@ type LSIFStore interface {
 
 ```
 searchKey: worker.LSIFStoreShim
-tags: [exported]
 ```
 
 ```Go
@@ -637,7 +645,6 @@ type LSIFStoreShim struct {
 
 ```
 searchKey: worker.LSIFStoreShim.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -648,7 +655,6 @@ func (s *LSIFStoreShim) Transact(ctx context.Context) (LSIFStore, error)
 
 ```
 searchKey: worker.GitserverClient
-tags: [exported]
 ```
 
 ```Go
@@ -663,6 +669,7 @@ type GitserverClient interface {
 
 ```
 searchKey: worker.MockDBStore
+tags: [private]
 ```
 
 ```Go
@@ -710,6 +717,7 @@ MockDBStore is a mock implementation of the DBStore interface (from the package 
 
 ```
 searchKey: worker.NewMockDBStore
+tags: [private]
 ```
 
 ```Go
@@ -722,6 +730,7 @@ NewMockDBStore creates a new mock of the DBStore interface. All methods return z
 
 ```
 searchKey: worker.NewMockDBStoreFrom
+tags: [private]
 ```
 
 ```Go
@@ -734,6 +743,7 @@ NewMockDBStoreFrom creates a new mock of the MockDBStore interface. All methods 
 
 ```
 searchKey: worker.MockDBStore.DeleteOverlappingDumps
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +756,7 @@ DeleteOverlappingDumps delegates to the next hook function in the queue and stor
 
 ```
 searchKey: worker.MockDBStore.Done
+tags: [private]
 ```
 
 ```Go
@@ -758,6 +769,7 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: worker.MockDBStore.Handle
+tags: [private]
 ```
 
 ```Go
@@ -770,6 +782,7 @@ Handle delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: worker.MockDBStore.InsertDependencyIndexingJob
+tags: [private]
 ```
 
 ```Go
@@ -782,6 +795,7 @@ InsertDependencyIndexingJob delegates to the next hook function in the queue and
 
 ```
 searchKey: worker.MockDBStore.MarkRepositoryAsDirty
+tags: [private]
 ```
 
 ```Go
@@ -794,6 +808,7 @@ MarkRepositoryAsDirty delegates to the next hook function in the queue and store
 
 ```
 searchKey: worker.MockDBStore.RepoName
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +821,7 @@ RepoName delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: worker.MockDBStore.Transact
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +834,7 @@ Transact delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: worker.MockDBStore.UpdateCommitedAt
+tags: [private]
 ```
 
 ```Go
@@ -830,6 +847,7 @@ UpdateCommitedAt delegates to the next hook function in the queue and stores the
 
 ```
 searchKey: worker.MockDBStore.UpdatePackageReferences
+tags: [private]
 ```
 
 ```Go
@@ -842,6 +860,7 @@ UpdatePackageReferences delegates to the next hook function in the queue and sto
 
 ```
 searchKey: worker.MockDBStore.UpdatePackages
+tags: [private]
 ```
 
 ```Go
@@ -854,6 +873,7 @@ UpdatePackages delegates to the next hook function in the queue and stores the p
 
 ```
 searchKey: worker.MockDBStore.With
+tags: [private]
 ```
 
 ```Go
@@ -866,6 +886,7 @@ With delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFunc
+tags: [private]
 ```
 
 ```Go
@@ -883,6 +904,7 @@ DBStoreDeleteOverlappingDumpsFunc describes the behavior when the DeleteOverlapp
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -895,6 +917,7 @@ SetDefaultHook sets function that is called when the DeleteOverlappingDumps meth
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -907,6 +930,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Delete
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -919,6 +943,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -931,6 +956,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -941,6 +967,7 @@ func (f *DBStoreDeleteOverlappingDumpsFunc) nextHook() func(context.Context, int
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -951,6 +978,7 @@ func (f *DBStoreDeleteOverlappingDumpsFunc) appendCall(r0 DBStoreDeleteOverlappi
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -963,6 +991,7 @@ History returns a sequence of DBStoreDeleteOverlappingDumpsFuncCall objects desc
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -994,6 +1023,7 @@ DBStoreDeleteOverlappingDumpsFuncCall is an object that describes an invocation 
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +1036,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1049,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.DBStoreDoneFunc
+tags: [private]
 ```
 
 ```Go
@@ -1035,6 +1067,7 @@ DBStoreDoneFunc describes the behavior when the Done method of the parent MockDB
 
 ```
 searchKey: worker.DBStoreDoneFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1047,6 +1080,7 @@ SetDefaultHook sets function that is called when the Done method of the parent M
 
 ```
 searchKey: worker.DBStoreDoneFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1059,6 +1093,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Done m
 
 ```
 searchKey: worker.DBStoreDoneFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1071,6 +1106,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreDoneFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1083,6 +1119,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreDoneFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1093,6 +1130,7 @@ func (f *DBStoreDoneFunc) nextHook() func(error) error
 
 ```
 searchKey: worker.DBStoreDoneFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1103,6 +1141,7 @@ func (f *DBStoreDoneFunc) appendCall(r0 DBStoreDoneFuncCall)
 
 ```
 searchKey: worker.DBStoreDoneFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1115,6 +1154,7 @@ History returns a sequence of DBStoreDoneFuncCall objects describing the invocat
 
 ```
 searchKey: worker.DBStoreDoneFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1134,6 +1174,7 @@ DBStoreDoneFuncCall is an object that describes an invocation of method Done on 
 
 ```
 searchKey: worker.DBStoreDoneFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1146,6 +1187,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreDoneFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1158,6 +1200,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.DBStoreHandleFunc
+tags: [private]
 ```
 
 ```Go
@@ -1175,6 +1218,7 @@ DBStoreHandleFunc describes the behavior when the Handle method of the parent Mo
 
 ```
 searchKey: worker.DBStoreHandleFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1187,6 +1231,7 @@ SetDefaultHook sets function that is called when the Handle method of the parent
 
 ```
 searchKey: worker.DBStoreHandleFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1199,6 +1244,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Handle
 
 ```
 searchKey: worker.DBStoreHandleFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1211,6 +1257,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreHandleFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1223,6 +1270,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreHandleFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1233,6 +1281,7 @@ func (f *DBStoreHandleFunc) nextHook() func() *basestore.TransactableHandle
 
 ```
 searchKey: worker.DBStoreHandleFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1243,6 +1292,7 @@ func (f *DBStoreHandleFunc) appendCall(r0 DBStoreHandleFuncCall)
 
 ```
 searchKey: worker.DBStoreHandleFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1255,6 +1305,7 @@ History returns a sequence of DBStoreHandleFuncCall objects describing the invoc
 
 ```
 searchKey: worker.DBStoreHandleFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1271,6 +1322,7 @@ DBStoreHandleFuncCall is an object that describes an invocation of method Handle
 
 ```
 searchKey: worker.DBStoreHandleFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1283,6 +1335,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreHandleFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1295,6 +1348,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFunc
+tags: [private]
 ```
 
 ```Go
@@ -1312,6 +1366,7 @@ DBStoreInsertDependencyIndexingJobFunc describes the behavior when the InsertDep
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1324,6 +1379,7 @@ SetDefaultHook sets function that is called when the InsertDependencyIndexingJob
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1336,6 +1392,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Insert
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1348,6 +1405,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1360,6 +1418,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1370,6 +1429,7 @@ func (f *DBStoreInsertDependencyIndexingJobFunc) nextHook() func(context.Context
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1380,6 +1440,7 @@ func (f *DBStoreInsertDependencyIndexingJobFunc) appendCall(r0 DBStoreInsertDepe
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1392,6 +1453,7 @@ History returns a sequence of DBStoreInsertDependencyIndexingJobFuncCall objects
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1417,6 +1479,7 @@ DBStoreInsertDependencyIndexingJobFuncCall is an object that describes an invoca
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1429,6 +1492,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1441,6 +1505,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFunc
+tags: [private]
 ```
 
 ```Go
@@ -1458,6 +1523,7 @@ DBStoreMarkRepositoryAsDirtyFunc describes the behavior when the MarkRepositoryA
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1470,6 +1536,7 @@ SetDefaultHook sets function that is called when the MarkRepositoryAsDirty metho
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1482,6 +1549,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkRe
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1494,6 +1562,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1506,6 +1575,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1516,6 +1586,7 @@ func (f *DBStoreMarkRepositoryAsDirtyFunc) nextHook() func(context.Context, int)
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1526,6 +1597,7 @@ func (f *DBStoreMarkRepositoryAsDirtyFunc) appendCall(r0 DBStoreMarkRepositoryAs
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1538,6 +1610,7 @@ History returns a sequence of DBStoreMarkRepositoryAsDirtyFuncCall objects descr
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1560,6 +1633,7 @@ DBStoreMarkRepositoryAsDirtyFuncCall is an object that describes an invocation o
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1572,6 +1646,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1584,6 +1659,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.DBStoreRepoNameFunc
+tags: [private]
 ```
 
 ```Go
@@ -1601,6 +1677,7 @@ DBStoreRepoNameFunc describes the behavior when the RepoName method of the paren
 
 ```
 searchKey: worker.DBStoreRepoNameFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1613,6 +1690,7 @@ SetDefaultHook sets function that is called when the RepoName method of the pare
 
 ```
 searchKey: worker.DBStoreRepoNameFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1625,6 +1703,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the RepoNa
 
 ```
 searchKey: worker.DBStoreRepoNameFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1637,6 +1716,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreRepoNameFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1649,6 +1729,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreRepoNameFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1659,6 +1740,7 @@ func (f *DBStoreRepoNameFunc) nextHook() func(context.Context, int) (string, err
 
 ```
 searchKey: worker.DBStoreRepoNameFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1669,6 +1751,7 @@ func (f *DBStoreRepoNameFunc) appendCall(r0 DBStoreRepoNameFuncCall)
 
 ```
 searchKey: worker.DBStoreRepoNameFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1681,6 +1764,7 @@ History returns a sequence of DBStoreRepoNameFuncCall objects describing the inv
 
 ```
 searchKey: worker.DBStoreRepoNameFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1706,6 +1790,7 @@ DBStoreRepoNameFuncCall is an object that describes an invocation of method Repo
 
 ```
 searchKey: worker.DBStoreRepoNameFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1718,6 +1803,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreRepoNameFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1730,6 +1816,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.DBStoreTransactFunc
+tags: [private]
 ```
 
 ```Go
@@ -1747,6 +1834,7 @@ DBStoreTransactFunc describes the behavior when the Transact method of the paren
 
 ```
 searchKey: worker.DBStoreTransactFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1759,6 +1847,7 @@ SetDefaultHook sets function that is called when the Transact method of the pare
 
 ```
 searchKey: worker.DBStoreTransactFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1771,6 +1860,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Transa
 
 ```
 searchKey: worker.DBStoreTransactFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1783,6 +1873,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreTransactFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1795,6 +1886,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreTransactFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1805,6 +1897,7 @@ func (f *DBStoreTransactFunc) nextHook() func(context.Context) (DBStore, error)
 
 ```
 searchKey: worker.DBStoreTransactFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1815,6 +1908,7 @@ func (f *DBStoreTransactFunc) appendCall(r0 DBStoreTransactFuncCall)
 
 ```
 searchKey: worker.DBStoreTransactFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1827,6 +1921,7 @@ History returns a sequence of DBStoreTransactFuncCall objects describing the inv
 
 ```
 searchKey: worker.DBStoreTransactFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1849,6 +1944,7 @@ DBStoreTransactFuncCall is an object that describes an invocation of method Tran
 
 ```
 searchKey: worker.DBStoreTransactFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1861,6 +1957,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreTransactFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1873,6 +1970,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFunc
+tags: [private]
 ```
 
 ```Go
@@ -1890,6 +1988,7 @@ DBStoreUpdateCommitedAtFunc describes the behavior when the UpdateCommitedAt met
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1902,6 +2001,7 @@ SetDefaultHook sets function that is called when the UpdateCommitedAt method of 
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1914,6 +2014,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Update
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1926,6 +2027,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1938,6 +2040,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1948,6 +2051,7 @@ func (f *DBStoreUpdateCommitedAtFunc) nextHook() func(context.Context, int, time
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1958,6 +2062,7 @@ func (f *DBStoreUpdateCommitedAtFunc) appendCall(r0 DBStoreUpdateCommitedAtFuncC
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1970,6 +2075,7 @@ History returns a sequence of DBStoreUpdateCommitedAtFuncCall objects describing
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1995,6 +2101,7 @@ DBStoreUpdateCommitedAtFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2007,6 +2114,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2019,6 +2127,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFunc
+tags: [private]
 ```
 
 ```Go
@@ -2036,6 +2145,7 @@ DBStoreUpdatePackageReferencesFunc describes the behavior when the UpdatePackage
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2048,6 +2158,7 @@ SetDefaultHook sets function that is called when the UpdatePackageReferences met
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2060,6 +2171,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Update
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2072,6 +2184,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2084,6 +2197,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2094,6 +2208,7 @@ func (f *DBStoreUpdatePackageReferencesFunc) nextHook() func(context.Context, in
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2104,6 +2219,7 @@ func (f *DBStoreUpdatePackageReferencesFunc) appendCall(r0 DBStoreUpdatePackageR
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2116,6 +2232,7 @@ History returns a sequence of DBStoreUpdatePackageReferencesFuncCall objects des
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2141,6 +2258,7 @@ DBStoreUpdatePackageReferencesFuncCall is an object that describes an invocation
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2153,6 +2271,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2165,6 +2284,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFunc
+tags: [private]
 ```
 
 ```Go
@@ -2182,6 +2302,7 @@ DBStoreUpdatePackagesFunc describes the behavior when the UpdatePackages method 
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2194,6 +2315,7 @@ SetDefaultHook sets function that is called when the UpdatePackages method of th
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2206,6 +2328,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Update
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2218,6 +2341,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2230,6 +2354,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2240,6 +2365,7 @@ func (f *DBStoreUpdatePackagesFunc) nextHook() func(context.Context, int, []sema
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2250,6 +2376,7 @@ func (f *DBStoreUpdatePackagesFunc) appendCall(r0 DBStoreUpdatePackagesFuncCall)
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2262,6 +2389,7 @@ History returns a sequence of DBStoreUpdatePackagesFuncCall objects describing t
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2287,6 +2415,7 @@ DBStoreUpdatePackagesFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2299,6 +2428,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2311,6 +2441,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.DBStoreWithFunc
+tags: [private]
 ```
 
 ```Go
@@ -2328,6 +2459,7 @@ DBStoreWithFunc describes the behavior when the With method of the parent MockDB
 
 ```
 searchKey: worker.DBStoreWithFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2340,6 +2472,7 @@ SetDefaultHook sets function that is called when the With method of the parent M
 
 ```
 searchKey: worker.DBStoreWithFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2352,6 +2485,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the With m
 
 ```
 searchKey: worker.DBStoreWithFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2364,6 +2498,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.DBStoreWithFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2376,6 +2511,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.DBStoreWithFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2386,6 +2522,7 @@ func (f *DBStoreWithFunc) nextHook() func(basestore.ShareableStore) DBStore
 
 ```
 searchKey: worker.DBStoreWithFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2396,6 +2533,7 @@ func (f *DBStoreWithFunc) appendCall(r0 DBStoreWithFuncCall)
 
 ```
 searchKey: worker.DBStoreWithFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2408,6 +2546,7 @@ History returns a sequence of DBStoreWithFuncCall objects describing the invocat
 
 ```
 searchKey: worker.DBStoreWithFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2427,6 +2566,7 @@ DBStoreWithFuncCall is an object that describes an invocation of method With on 
 
 ```
 searchKey: worker.DBStoreWithFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2439,6 +2579,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreWithFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2451,6 +2592,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.MockGitserverClient
+tags: [private]
 ```
 
 ```Go
@@ -2473,6 +2615,7 @@ MockGitserverClient is a mock implementation of the GitserverClient interface (f
 
 ```
 searchKey: worker.NewMockGitserverClient
+tags: [private]
 ```
 
 ```Go
@@ -2485,6 +2628,7 @@ NewMockGitserverClient creates a new mock of the GitserverClient interface. All 
 
 ```
 searchKey: worker.NewMockGitserverClientFrom
+tags: [private]
 ```
 
 ```Go
@@ -2497,6 +2641,7 @@ NewMockGitserverClientFrom creates a new mock of the MockGitserverClient interfa
 
 ```
 searchKey: worker.MockGitserverClient.CommitDate
+tags: [private]
 ```
 
 ```Go
@@ -2509,6 +2654,7 @@ CommitDate delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: worker.MockGitserverClient.DirectoryChildren
+tags: [private]
 ```
 
 ```Go
@@ -2521,6 +2667,7 @@ DirectoryChildren delegates to the next hook function in the queue and stores th
 
 ```
 searchKey: worker.MockGitserverClient.ResolveRevision
+tags: [private]
 ```
 
 ```Go
@@ -2533,6 +2680,7 @@ ResolveRevision delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: worker.GitserverClientCommitDateFunc
+tags: [private]
 ```
 
 ```Go
@@ -2550,6 +2698,7 @@ GitserverClientCommitDateFunc describes the behavior when the CommitDate method 
 
 ```
 searchKey: worker.GitserverClientCommitDateFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2562,6 +2711,7 @@ SetDefaultHook sets function that is called when the CommitDate method of the pa
 
 ```
 searchKey: worker.GitserverClientCommitDateFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2574,6 +2724,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Commit
 
 ```
 searchKey: worker.GitserverClientCommitDateFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2586,6 +2737,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.GitserverClientCommitDateFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2598,6 +2750,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.GitserverClientCommitDateFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2608,6 +2761,7 @@ func (f *GitserverClientCommitDateFunc) nextHook() func(context.Context, int, st
 
 ```
 searchKey: worker.GitserverClientCommitDateFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2618,6 +2772,7 @@ func (f *GitserverClientCommitDateFunc) appendCall(r0 GitserverClientCommitDateF
 
 ```
 searchKey: worker.GitserverClientCommitDateFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2630,6 +2785,7 @@ History returns a sequence of GitserverClientCommitDateFuncCall objects describi
 
 ```
 searchKey: worker.GitserverClientCommitDateFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2658,6 +2814,7 @@ GitserverClientCommitDateFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: worker.GitserverClientCommitDateFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2670,6 +2827,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.GitserverClientCommitDateFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2682,6 +2840,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFunc
+tags: [private]
 ```
 
 ```Go
@@ -2699,6 +2858,7 @@ GitserverClientDirectoryChildrenFunc describes the behavior when the DirectoryCh
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2711,6 +2871,7 @@ SetDefaultHook sets function that is called when the DirectoryChildren method of
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2723,6 +2884,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Direct
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2735,6 +2897,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2747,6 +2910,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2757,6 +2921,7 @@ func (f *GitserverClientDirectoryChildrenFunc) nextHook() func(context.Context, 
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2767,6 +2932,7 @@ func (f *GitserverClientDirectoryChildrenFunc) appendCall(r0 GitserverClientDire
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2779,6 +2945,7 @@ History returns a sequence of GitserverClientDirectoryChildrenFuncCall objects d
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2810,6 +2977,7 @@ GitserverClientDirectoryChildrenFuncCall is an object that describes an invocati
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2822,6 +2990,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2834,6 +3003,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFunc
+tags: [private]
 ```
 
 ```Go
@@ -2851,6 +3021,7 @@ GitserverClientResolveRevisionFunc describes the behavior when the ResolveRevisi
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2863,6 +3034,7 @@ SetDefaultHook sets function that is called when the ResolveRevision method of t
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2875,6 +3047,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Resolv
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2887,6 +3060,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2899,6 +3073,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2909,6 +3084,7 @@ func (f *GitserverClientResolveRevisionFunc) nextHook() func(context.Context, in
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2919,6 +3095,7 @@ func (f *GitserverClientResolveRevisionFunc) appendCall(r0 GitserverClientResolv
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2931,6 +3108,7 @@ History returns a sequence of GitserverClientResolveRevisionFuncCall objects des
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2959,6 +3137,7 @@ GitserverClientResolveRevisionFuncCall is an object that describes an invocation
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2971,6 +3150,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2983,6 +3163,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.MockLSIFStore
+tags: [private]
 ```
 
 ```Go
@@ -3020,6 +3201,7 @@ MockLSIFStore is a mock implementation of the LSIFStore interface (from the pack
 
 ```
 searchKey: worker.NewMockLSIFStore
+tags: [private]
 ```
 
 ```Go
@@ -3032,6 +3214,7 @@ NewMockLSIFStore creates a new mock of the LSIFStore interface. All methods retu
 
 ```
 searchKey: worker.NewMockLSIFStoreFrom
+tags: [private]
 ```
 
 ```Go
@@ -3044,6 +3227,7 @@ NewMockLSIFStoreFrom creates a new mock of the MockLSIFStore interface. All meth
 
 ```
 searchKey: worker.MockLSIFStore.Done
+tags: [private]
 ```
 
 ```Go
@@ -3056,6 +3240,7 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: worker.MockLSIFStore.Transact
+tags: [private]
 ```
 
 ```Go
@@ -3068,6 +3253,7 @@ Transact delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: worker.MockLSIFStore.WriteDefinitions
+tags: [private]
 ```
 
 ```Go
@@ -3080,6 +3266,7 @@ WriteDefinitions delegates to the next hook function in the queue and stores the
 
 ```
 searchKey: worker.MockLSIFStore.WriteDocumentationPages
+tags: [private]
 ```
 
 ```Go
@@ -3092,6 +3279,7 @@ WriteDocumentationPages delegates to the next hook function in the queue and sto
 
 ```
 searchKey: worker.MockLSIFStore.WriteDocuments
+tags: [private]
 ```
 
 ```Go
@@ -3104,6 +3292,7 @@ WriteDocuments delegates to the next hook function in the queue and stores the p
 
 ```
 searchKey: worker.MockLSIFStore.WriteMeta
+tags: [private]
 ```
 
 ```Go
@@ -3116,6 +3305,7 @@ WriteMeta delegates to the next hook function in the queue and stores the parame
 
 ```
 searchKey: worker.MockLSIFStore.WriteReferences
+tags: [private]
 ```
 
 ```Go
@@ -3128,6 +3318,7 @@ WriteReferences delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: worker.MockLSIFStore.WriteResultChunks
+tags: [private]
 ```
 
 ```Go
@@ -3140,6 +3331,7 @@ WriteResultChunks delegates to the next hook function in the queue and stores th
 
 ```
 searchKey: worker.LSIFStoreDoneFunc
+tags: [private]
 ```
 
 ```Go
@@ -3157,6 +3349,7 @@ LSIFStoreDoneFunc describes the behavior when the Done method of the parent Mock
 
 ```
 searchKey: worker.LSIFStoreDoneFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3169,6 +3362,7 @@ SetDefaultHook sets function that is called when the Done method of the parent M
 
 ```
 searchKey: worker.LSIFStoreDoneFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3181,6 +3375,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Done m
 
 ```
 searchKey: worker.LSIFStoreDoneFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3193,6 +3388,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.LSIFStoreDoneFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3205,6 +3401,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.LSIFStoreDoneFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3215,6 +3412,7 @@ func (f *LSIFStoreDoneFunc) nextHook() func(error) error
 
 ```
 searchKey: worker.LSIFStoreDoneFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3225,6 +3423,7 @@ func (f *LSIFStoreDoneFunc) appendCall(r0 LSIFStoreDoneFuncCall)
 
 ```
 searchKey: worker.LSIFStoreDoneFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3237,6 +3436,7 @@ History returns a sequence of LSIFStoreDoneFuncCall objects describing the invoc
 
 ```
 searchKey: worker.LSIFStoreDoneFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3256,6 +3456,7 @@ LSIFStoreDoneFuncCall is an object that describes an invocation of method Done o
 
 ```
 searchKey: worker.LSIFStoreDoneFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3268,6 +3469,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreDoneFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3280,6 +3482,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.LSIFStoreTransactFunc
+tags: [private]
 ```
 
 ```Go
@@ -3297,6 +3500,7 @@ LSIFStoreTransactFunc describes the behavior when the Transact method of the par
 
 ```
 searchKey: worker.LSIFStoreTransactFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3309,6 +3513,7 @@ SetDefaultHook sets function that is called when the Transact method of the pare
 
 ```
 searchKey: worker.LSIFStoreTransactFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3321,6 +3526,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Transa
 
 ```
 searchKey: worker.LSIFStoreTransactFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3333,6 +3539,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.LSIFStoreTransactFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3345,6 +3552,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.LSIFStoreTransactFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3355,6 +3563,7 @@ func (f *LSIFStoreTransactFunc) nextHook() func(context.Context) (LSIFStore, err
 
 ```
 searchKey: worker.LSIFStoreTransactFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3365,6 +3574,7 @@ func (f *LSIFStoreTransactFunc) appendCall(r0 LSIFStoreTransactFuncCall)
 
 ```
 searchKey: worker.LSIFStoreTransactFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3377,6 +3587,7 @@ History returns a sequence of LSIFStoreTransactFuncCall objects describing the i
 
 ```
 searchKey: worker.LSIFStoreTransactFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3399,6 +3610,7 @@ LSIFStoreTransactFuncCall is an object that describes an invocation of method Tr
 
 ```
 searchKey: worker.LSIFStoreTransactFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3411,6 +3623,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreTransactFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3423,6 +3636,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFunc
+tags: [private]
 ```
 
 ```Go
@@ -3440,6 +3654,7 @@ LSIFStoreWriteDefinitionsFunc describes the behavior when the WriteDefinitions m
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3452,6 +3667,7 @@ SetDefaultHook sets function that is called when the WriteDefinitions method of 
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3464,6 +3680,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the WriteD
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3476,6 +3693,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3488,6 +3706,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3498,6 +3717,7 @@ func (f *LSIFStoreWriteDefinitionsFunc) nextHook() func(context.Context, int, ch
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3508,6 +3728,7 @@ func (f *LSIFStoreWriteDefinitionsFunc) appendCall(r0 LSIFStoreWriteDefinitionsF
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3520,6 +3741,7 @@ History returns a sequence of LSIFStoreWriteDefinitionsFuncCall objects describi
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3545,6 +3767,7 @@ LSIFStoreWriteDefinitionsFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3557,6 +3780,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3569,6 +3793,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFunc
+tags: [private]
 ```
 
 ```Go
@@ -3586,6 +3811,7 @@ LSIFStoreWriteDocumentationPagesFunc describes the behavior when the WriteDocume
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3598,6 +3824,7 @@ SetDefaultHook sets function that is called when the WriteDocumentationPages met
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3610,6 +3837,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the WriteD
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3622,6 +3850,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3634,6 +3863,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3644,6 +3874,7 @@ func (f *LSIFStoreWriteDocumentationPagesFunc) nextHook() func(context.Context, 
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3654,6 +3885,7 @@ func (f *LSIFStoreWriteDocumentationPagesFunc) appendCall(r0 LSIFStoreWriteDocum
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3666,6 +3898,7 @@ History returns a sequence of LSIFStoreWriteDocumentationPagesFuncCall objects d
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3691,6 +3924,7 @@ LSIFStoreWriteDocumentationPagesFuncCall is an object that describes an invocati
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3703,6 +3937,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3715,6 +3950,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFunc
+tags: [private]
 ```
 
 ```Go
@@ -3732,6 +3968,7 @@ LSIFStoreWriteDocumentsFunc describes the behavior when the WriteDocuments metho
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3744,6 +3981,7 @@ SetDefaultHook sets function that is called when the WriteDocuments method of th
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3756,6 +3994,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the WriteD
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3768,6 +4007,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3780,6 +4020,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3790,6 +4031,7 @@ func (f *LSIFStoreWriteDocumentsFunc) nextHook() func(context.Context, int, chan
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3800,6 +4042,7 @@ func (f *LSIFStoreWriteDocumentsFunc) appendCall(r0 LSIFStoreWriteDocumentsFuncC
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3812,6 +4055,7 @@ History returns a sequence of LSIFStoreWriteDocumentsFuncCall objects describing
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3837,6 +4081,7 @@ LSIFStoreWriteDocumentsFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3849,6 +4094,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -3861,6 +4107,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFunc
+tags: [private]
 ```
 
 ```Go
@@ -3878,6 +4125,7 @@ LSIFStoreWriteMetaFunc describes the behavior when the WriteMeta method of the p
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -3890,6 +4138,7 @@ SetDefaultHook sets function that is called when the WriteMeta method of the par
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -3902,6 +4151,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the WriteM
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -3914,6 +4164,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -3926,6 +4177,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3936,6 +4188,7 @@ func (f *LSIFStoreWriteMetaFunc) nextHook() func(context.Context, int, semantic.
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3946,6 +4199,7 @@ func (f *LSIFStoreWriteMetaFunc) appendCall(r0 LSIFStoreWriteMetaFuncCall)
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -3958,6 +4212,7 @@ History returns a sequence of LSIFStoreWriteMetaFuncCall objects describing the 
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -3983,6 +4238,7 @@ LSIFStoreWriteMetaFuncCall is an object that describes an invocation of method W
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -3995,6 +4251,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4007,6 +4264,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFunc
+tags: [private]
 ```
 
 ```Go
@@ -4024,6 +4282,7 @@ LSIFStoreWriteReferencesFunc describes the behavior when the WriteReferences met
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4036,6 +4295,7 @@ SetDefaultHook sets function that is called when the WriteReferences method of t
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4048,6 +4308,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the WriteR
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4060,6 +4321,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4072,6 +4334,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4082,6 +4345,7 @@ func (f *LSIFStoreWriteReferencesFunc) nextHook() func(context.Context, int, cha
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4092,6 +4356,7 @@ func (f *LSIFStoreWriteReferencesFunc) appendCall(r0 LSIFStoreWriteReferencesFun
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4104,6 +4369,7 @@ History returns a sequence of LSIFStoreWriteReferencesFuncCall objects describin
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4129,6 +4395,7 @@ LSIFStoreWriteReferencesFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4141,6 +4408,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4153,6 +4421,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFunc
+tags: [private]
 ```
 
 ```Go
@@ -4170,6 +4439,7 @@ LSIFStoreWriteResultChunksFunc describes the behavior when the WriteResultChunks
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4182,6 +4452,7 @@ SetDefaultHook sets function that is called when the WriteResultChunks method of
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4194,6 +4465,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the WriteR
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4206,6 +4478,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4218,6 +4491,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4228,6 +4502,7 @@ func (f *LSIFStoreWriteResultChunksFunc) nextHook() func(context.Context, int, c
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4238,6 +4513,7 @@ func (f *LSIFStoreWriteResultChunksFunc) appendCall(r0 LSIFStoreWriteResultChunk
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4250,6 +4526,7 @@ History returns a sequence of LSIFStoreWriteResultChunksFuncCall objects describ
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4275,6 +4552,7 @@ LSIFStoreWriteResultChunksFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4287,6 +4565,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4299,6 +4578,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.MockWorkerStore
+tags: [private]
 ```
 
 ```Go
@@ -4346,6 +4626,7 @@ MockWorkerStore is a mock implementation of the Store interface (from the packag
 
 ```
 searchKey: worker.NewMockWorkerStore
+tags: [private]
 ```
 
 ```Go
@@ -4358,6 +4639,7 @@ NewMockWorkerStore creates a new mock of the Store interface. All methods return
 
 ```
 searchKey: worker.NewMockWorkerStoreFrom
+tags: [private]
 ```
 
 ```Go
@@ -4370,6 +4652,7 @@ NewMockWorkerStoreFrom creates a new mock of the MockWorkerStore interface. All 
 
 ```
 searchKey: worker.MockWorkerStore.AddExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -4382,6 +4665,7 @@ AddExecutionLogEntry delegates to the next hook function in the queue and stores
 
 ```
 searchKey: worker.MockWorkerStore.Dequeue
+tags: [private]
 ```
 
 ```Go
@@ -4394,6 +4678,7 @@ Dequeue delegates to the next hook function in the queue and stores the paramete
 
 ```
 searchKey: worker.MockWorkerStore.DequeueWithIndependentTransactionContext
+tags: [private]
 ```
 
 ```Go
@@ -4406,6 +4691,7 @@ DequeueWithIndependentTransactionContext delegates to the next hook function in 
 
 ```
 searchKey: worker.MockWorkerStore.Done
+tags: [private]
 ```
 
 ```Go
@@ -4418,6 +4704,7 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: worker.MockWorkerStore.Handle
+tags: [private]
 ```
 
 ```Go
@@ -4430,6 +4717,7 @@ Handle delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: worker.MockWorkerStore.MarkComplete
+tags: [private]
 ```
 
 ```Go
@@ -4442,6 +4730,7 @@ MarkComplete delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: worker.MockWorkerStore.MarkErrored
+tags: [private]
 ```
 
 ```Go
@@ -4454,6 +4743,7 @@ MarkErrored delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: worker.MockWorkerStore.MarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -4466,6 +4756,7 @@ MarkFailed delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: worker.MockWorkerStore.QueuedCount
+tags: [private]
 ```
 
 ```Go
@@ -4478,6 +4769,7 @@ QueuedCount delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: worker.MockWorkerStore.Requeue
+tags: [private]
 ```
 
 ```Go
@@ -4490,6 +4782,7 @@ Requeue delegates to the next hook function in the queue and stores the paramete
 
 ```
 searchKey: worker.MockWorkerStore.ResetStalled
+tags: [private]
 ```
 
 ```Go
@@ -4502,6 +4795,7 @@ ResetStalled delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFunc
+tags: [private]
 ```
 
 ```Go
@@ -4519,6 +4813,7 @@ WorkerStoreAddExecutionLogEntryFunc describes the behavior when the AddExecution
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4531,6 +4826,7 @@ SetDefaultHook sets function that is called when the AddExecutionLogEntry method
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4543,6 +4839,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the AddExe
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4555,6 +4852,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4567,6 +4865,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4577,6 +4876,7 @@ func (f *WorkerStoreAddExecutionLogEntryFunc) nextHook() func(context.Context, i
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4587,6 +4887,7 @@ func (f *WorkerStoreAddExecutionLogEntryFunc) appendCall(r0 WorkerStoreAddExecut
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4599,6 +4900,7 @@ History returns a sequence of WorkerStoreAddExecutionLogEntryFuncCall objects de
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4624,6 +4926,7 @@ WorkerStoreAddExecutionLogEntryFuncCall is an object that describes an invocatio
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4636,6 +4939,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4648,6 +4952,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.WorkerStoreDequeueFunc
+tags: [private]
 ```
 
 ```Go
@@ -4665,6 +4970,7 @@ WorkerStoreDequeueFunc describes the behavior when the Dequeue method of the par
 
 ```
 searchKey: worker.WorkerStoreDequeueFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4677,6 +4983,7 @@ SetDefaultHook sets function that is called when the Dequeue method of the paren
 
 ```
 searchKey: worker.WorkerStoreDequeueFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4689,6 +4996,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Dequeu
 
 ```
 searchKey: worker.WorkerStoreDequeueFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4701,6 +5009,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreDequeueFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4713,6 +5022,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreDequeueFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4723,6 +5033,7 @@ func (f *WorkerStoreDequeueFunc) nextHook() func(context.Context, []*sqlf.Query)
 
 ```
 searchKey: worker.WorkerStoreDequeueFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4733,6 +5044,7 @@ func (f *WorkerStoreDequeueFunc) appendCall(r0 WorkerStoreDequeueFuncCall)
 
 ```
 searchKey: worker.WorkerStoreDequeueFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4745,6 +5057,7 @@ History returns a sequence of WorkerStoreDequeueFuncCall objects describing the 
 
 ```
 searchKey: worker.WorkerStoreDequeueFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4776,6 +5089,7 @@ WorkerStoreDequeueFuncCall is an object that describes an invocation of method D
 
 ```
 searchKey: worker.WorkerStoreDequeueFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4788,6 +5102,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreDequeueFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4800,6 +5115,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFunc
+tags: [private]
 ```
 
 ```Go
@@ -4817,6 +5133,7 @@ WorkerStoreDequeueWithIndependentTransactionContextFunc describes the behavior w
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4829,6 +5146,7 @@ SetDefaultHook sets function that is called when the DequeueWithIndependentTrans
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4841,6 +5159,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Dequeu
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -4853,6 +5172,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -4865,6 +5185,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -4875,6 +5196,7 @@ func (f *WorkerStoreDequeueWithIndependentTransactionContextFunc) nextHook() fun
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -4885,6 +5207,7 @@ func (f *WorkerStoreDequeueWithIndependentTransactionContextFunc) appendCall(r0 
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -4897,6 +5220,7 @@ History returns a sequence of WorkerStoreDequeueWithIndependentTransactionContex
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -4928,6 +5252,7 @@ WorkerStoreDequeueWithIndependentTransactionContextFuncCall is an object that de
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -4940,6 +5265,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -4952,6 +5278,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.WorkerStoreDoneFunc
+tags: [private]
 ```
 
 ```Go
@@ -4969,6 +5296,7 @@ WorkerStoreDoneFunc describes the behavior when the Done method of the parent Mo
 
 ```
 searchKey: worker.WorkerStoreDoneFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -4981,6 +5309,7 @@ SetDefaultHook sets function that is called when the Done method of the parent M
 
 ```
 searchKey: worker.WorkerStoreDoneFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -4993,6 +5322,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Done m
 
 ```
 searchKey: worker.WorkerStoreDoneFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -5005,6 +5335,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreDoneFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -5017,6 +5348,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreDoneFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -5027,6 +5359,7 @@ func (f *WorkerStoreDoneFunc) nextHook() func(error) error
 
 ```
 searchKey: worker.WorkerStoreDoneFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -5037,6 +5370,7 @@ func (f *WorkerStoreDoneFunc) appendCall(r0 WorkerStoreDoneFuncCall)
 
 ```
 searchKey: worker.WorkerStoreDoneFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -5049,6 +5383,7 @@ History returns a sequence of WorkerStoreDoneFuncCall objects describing the inv
 
 ```
 searchKey: worker.WorkerStoreDoneFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -5068,6 +5403,7 @@ WorkerStoreDoneFuncCall is an object that describes an invocation of method Done
 
 ```
 searchKey: worker.WorkerStoreDoneFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -5080,6 +5416,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreDoneFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -5092,6 +5429,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.WorkerStoreHandleFunc
+tags: [private]
 ```
 
 ```Go
@@ -5109,6 +5447,7 @@ WorkerStoreHandleFunc describes the behavior when the Handle method of the paren
 
 ```
 searchKey: worker.WorkerStoreHandleFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -5121,6 +5460,7 @@ SetDefaultHook sets function that is called when the Handle method of the parent
 
 ```
 searchKey: worker.WorkerStoreHandleFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -5133,6 +5473,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Handle
 
 ```
 searchKey: worker.WorkerStoreHandleFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -5145,6 +5486,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreHandleFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -5157,6 +5499,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreHandleFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -5167,6 +5510,7 @@ func (f *WorkerStoreHandleFunc) nextHook() func() *basestore.TransactableHandle
 
 ```
 searchKey: worker.WorkerStoreHandleFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -5177,6 +5521,7 @@ func (f *WorkerStoreHandleFunc) appendCall(r0 WorkerStoreHandleFuncCall)
 
 ```
 searchKey: worker.WorkerStoreHandleFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -5189,6 +5534,7 @@ History returns a sequence of WorkerStoreHandleFuncCall objects describing the i
 
 ```
 searchKey: worker.WorkerStoreHandleFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -5205,6 +5551,7 @@ WorkerStoreHandleFuncCall is an object that describes an invocation of method Ha
 
 ```
 searchKey: worker.WorkerStoreHandleFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -5217,6 +5564,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreHandleFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -5229,6 +5577,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFunc
+tags: [private]
 ```
 
 ```Go
@@ -5246,6 +5595,7 @@ WorkerStoreMarkCompleteFunc describes the behavior when the MarkComplete method 
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -5258,6 +5608,7 @@ SetDefaultHook sets function that is called when the MarkComplete method of the 
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -5270,6 +5621,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkCo
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -5282,6 +5634,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -5294,6 +5647,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -5304,6 +5658,7 @@ func (f *WorkerStoreMarkCompleteFunc) nextHook() func(context.Context, int) (boo
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -5314,6 +5669,7 @@ func (f *WorkerStoreMarkCompleteFunc) appendCall(r0 WorkerStoreMarkCompleteFuncC
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -5326,6 +5682,7 @@ History returns a sequence of WorkerStoreMarkCompleteFuncCall objects describing
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -5351,6 +5708,7 @@ WorkerStoreMarkCompleteFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -5363,6 +5721,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -5375,6 +5734,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFunc
+tags: [private]
 ```
 
 ```Go
@@ -5392,6 +5752,7 @@ WorkerStoreMarkErroredFunc describes the behavior when the MarkErrored method of
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -5404,6 +5765,7 @@ SetDefaultHook sets function that is called when the MarkErrored method of the p
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -5416,6 +5778,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkEr
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -5428,6 +5791,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -5440,6 +5804,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -5450,6 +5815,7 @@ func (f *WorkerStoreMarkErroredFunc) nextHook() func(context.Context, int, strin
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -5460,6 +5826,7 @@ func (f *WorkerStoreMarkErroredFunc) appendCall(r0 WorkerStoreMarkErroredFuncCal
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -5472,6 +5839,7 @@ History returns a sequence of WorkerStoreMarkErroredFuncCall objects describing 
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -5500,6 +5868,7 @@ WorkerStoreMarkErroredFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -5512,6 +5881,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -5524,6 +5894,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFunc
+tags: [private]
 ```
 
 ```Go
@@ -5541,6 +5912,7 @@ WorkerStoreMarkFailedFunc describes the behavior when the MarkFailed method of t
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -5553,6 +5925,7 @@ SetDefaultHook sets function that is called when the MarkFailed method of the pa
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -5565,6 +5938,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkFa
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -5577,6 +5951,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -5589,6 +5964,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -5599,6 +5975,7 @@ func (f *WorkerStoreMarkFailedFunc) nextHook() func(context.Context, int, string
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -5609,6 +5986,7 @@ func (f *WorkerStoreMarkFailedFunc) appendCall(r0 WorkerStoreMarkFailedFuncCall)
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -5621,6 +5999,7 @@ History returns a sequence of WorkerStoreMarkFailedFuncCall objects describing t
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -5649,6 +6028,7 @@ WorkerStoreMarkFailedFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -5661,6 +6041,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -5673,6 +6054,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFunc
+tags: [private]
 ```
 
 ```Go
@@ -5690,6 +6072,7 @@ WorkerStoreQueuedCountFunc describes the behavior when the QueuedCount method of
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -5702,6 +6085,7 @@ SetDefaultHook sets function that is called when the QueuedCount method of the p
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -5714,6 +6098,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Queued
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -5726,6 +6111,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -5738,6 +6124,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -5748,6 +6135,7 @@ func (f *WorkerStoreQueuedCountFunc) nextHook() func(context.Context, []*sqlf.Qu
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -5758,6 +6146,7 @@ func (f *WorkerStoreQueuedCountFunc) appendCall(r0 WorkerStoreQueuedCountFuncCal
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -5770,6 +6159,7 @@ History returns a sequence of WorkerStoreQueuedCountFuncCall objects describing 
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -5795,6 +6185,7 @@ WorkerStoreQueuedCountFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -5807,6 +6198,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -5819,6 +6211,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.WorkerStoreRequeueFunc
+tags: [private]
 ```
 
 ```Go
@@ -5836,6 +6229,7 @@ WorkerStoreRequeueFunc describes the behavior when the Requeue method of the par
 
 ```
 searchKey: worker.WorkerStoreRequeueFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -5848,6 +6242,7 @@ SetDefaultHook sets function that is called when the Requeue method of the paren
 
 ```
 searchKey: worker.WorkerStoreRequeueFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -5860,6 +6255,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Requeu
 
 ```
 searchKey: worker.WorkerStoreRequeueFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -5872,6 +6268,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreRequeueFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -5884,6 +6281,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreRequeueFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -5894,6 +6292,7 @@ func (f *WorkerStoreRequeueFunc) nextHook() func(context.Context, int, time.Time
 
 ```
 searchKey: worker.WorkerStoreRequeueFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -5904,6 +6303,7 @@ func (f *WorkerStoreRequeueFunc) appendCall(r0 WorkerStoreRequeueFuncCall)
 
 ```
 searchKey: worker.WorkerStoreRequeueFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -5916,6 +6316,7 @@ History returns a sequence of WorkerStoreRequeueFuncCall objects describing the 
 
 ```
 searchKey: worker.WorkerStoreRequeueFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -5941,6 +6342,7 @@ WorkerStoreRequeueFuncCall is an object that describes an invocation of method R
 
 ```
 searchKey: worker.WorkerStoreRequeueFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -5953,6 +6355,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreRequeueFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -5965,6 +6368,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.WorkerStoreResetStalledFunc
+tags: [private]
 ```
 
 ```Go
@@ -5982,6 +6386,7 @@ WorkerStoreResetStalledFunc describes the behavior when the ResetStalled method 
 
 ```
 searchKey: worker.WorkerStoreResetStalledFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -5994,6 +6399,7 @@ SetDefaultHook sets function that is called when the ResetStalled method of the 
 
 ```
 searchKey: worker.WorkerStoreResetStalledFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -6006,6 +6412,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the ResetS
 
 ```
 searchKey: worker.WorkerStoreResetStalledFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -6018,6 +6425,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.WorkerStoreResetStalledFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -6030,6 +6438,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.WorkerStoreResetStalledFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -6040,6 +6449,7 @@ func (f *WorkerStoreResetStalledFunc) nextHook() func(context.Context) ([]int, [
 
 ```
 searchKey: worker.WorkerStoreResetStalledFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -6050,6 +6460,7 @@ func (f *WorkerStoreResetStalledFunc) appendCall(r0 WorkerStoreResetStalledFuncC
 
 ```
 searchKey: worker.WorkerStoreResetStalledFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -6062,6 +6473,7 @@ History returns a sequence of WorkerStoreResetStalledFuncCall objects describing
 
 ```
 searchKey: worker.WorkerStoreResetStalledFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -6087,6 +6499,7 @@ WorkerStoreResetStalledFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: worker.WorkerStoreResetStalledFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -6099,6 +6512,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreResetStalledFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -6109,10 +6523,15 @@ Results returns an interface slice containing the results of this invocation.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="inTransaction" href="#inTransaction">func inTransaction(ctx context.Context, dbStore DBStore, fn func(tx DBStore) error) (err error)</a>
 
 ```
 searchKey: worker.inTransaction
+tags: [private]
 ```
 
 ```Go
@@ -6123,6 +6542,7 @@ func inTransaction(ctx context.Context, dbStore DBStore, fn func(tx DBStore) err
 
 ```
 searchKey: worker.requeueIfCloning
+tags: [private]
 ```
 
 ```Go
@@ -6135,6 +6555,7 @@ requeueIfCloning ensures that the repo and revision are resolvable. If the repo 
 
 ```
 searchKey: worker.withUploadData
+tags: [private]
 ```
 
 ```Go
@@ -6147,6 +6568,7 @@ withUploadData will invoke the given function with a reader of the upload's raw 
 
 ```
 searchKey: worker.writeData
+tags: [private]
 ```
 
 ```Go
@@ -6159,6 +6581,7 @@ writeData transactionally writes the given grouped bundle data into the given LS
 
 ```
 searchKey: worker.isUniqueConstraintViolation
+tags: [private]
 ```
 
 ```Go
@@ -6169,6 +6592,7 @@ func isUniqueConstraintViolation(err error) bool
 
 ```
 searchKey: worker.createHoneyEvent
+tags: [private]
 ```
 
 ```Go
@@ -6179,7 +6603,6 @@ func createHoneyEvent(ctx context.Context, upload store.Upload, err error, durat
 
 ```
 searchKey: worker.NewWorker
-tags: [exported]
 ```
 
 ```Go
@@ -6200,6 +6623,7 @@ func NewWorker(
 
 ```
 searchKey: worker.TestHandle
+tags: [private]
 ```
 
 ```Go
@@ -6210,6 +6634,7 @@ func TestHandle(t *testing.T)
 
 ```
 searchKey: worker.TestHandleError
+tags: [private]
 ```
 
 ```Go
@@ -6220,6 +6645,7 @@ func TestHandleError(t *testing.T)
 
 ```
 searchKey: worker.TestHandleCloneInProgress
+tags: [private]
 ```
 
 ```Go
@@ -6230,6 +6656,7 @@ func TestHandleCloneInProgress(t *testing.T)
 
 ```
 searchKey: worker.copyTestDump
+tags: [private]
 ```
 
 ```Go
@@ -6240,6 +6667,7 @@ func copyTestDump(ctx context.Context, key string) (io.ReadCloser, error)
 
 ```
 searchKey: worker.setupRepoMocks
+tags: [private]
 ```
 
 ```Go

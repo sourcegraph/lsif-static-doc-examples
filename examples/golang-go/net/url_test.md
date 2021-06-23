@@ -25,10 +25,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleValues" href="#ExampleValues">func ExampleValues()</a>
 
 ```
 searchKey: url_test.ExampleValues
+tags: [private]
 ```
 
 ```Go
@@ -39,6 +44,7 @@ func ExampleValues()
 
 ```
 searchKey: url_test.ExampleURL
+tags: [private]
 ```
 
 ```Go
@@ -49,6 +55,7 @@ func ExampleURL()
 
 ```
 searchKey: url_test.ExampleURL_roundtrip
+tags: [private]
 ```
 
 ```Go
@@ -59,6 +66,7 @@ func ExampleURL_roundtrip()
 
 ```
 searchKey: url_test.ExampleURL_ResolveReference
+tags: [private]
 ```
 
 ```Go
@@ -69,6 +77,7 @@ func ExampleURL_ResolveReference()
 
 ```
 searchKey: url_test.ExampleParseQuery
+tags: [private]
 ```
 
 ```Go
@@ -79,6 +88,7 @@ func ExampleParseQuery()
 
 ```
 searchKey: url_test.ExampleURL_EscapedPath
+tags: [private]
 ```
 
 ```Go
@@ -89,6 +99,7 @@ func ExampleURL_EscapedPath()
 
 ```
 searchKey: url_test.ExampleURL_EscapedFragment
+tags: [private]
 ```
 
 ```Go
@@ -99,6 +110,7 @@ func ExampleURL_EscapedFragment()
 
 ```
 searchKey: url_test.ExampleURL_Hostname
+tags: [private]
 ```
 
 ```Go
@@ -109,6 +121,7 @@ func ExampleURL_Hostname()
 
 ```
 searchKey: url_test.ExampleURL_IsAbs
+tags: [private]
 ```
 
 ```Go
@@ -119,6 +132,7 @@ func ExampleURL_IsAbs()
 
 ```
 searchKey: url_test.ExampleURL_MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -129,6 +143,7 @@ func ExampleURL_MarshalBinary()
 
 ```
 searchKey: url_test.ExampleURL_Parse
+tags: [private]
 ```
 
 ```Go
@@ -139,6 +154,7 @@ func ExampleURL_Parse()
 
 ```
 searchKey: url_test.ExampleURL_Port
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +165,7 @@ func ExampleURL_Port()
 
 ```
 searchKey: url_test.ExampleURL_Query
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +176,7 @@ func ExampleURL_Query()
 
 ```
 searchKey: url_test.ExampleURL_String
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +187,7 @@ func ExampleURL_String()
 
 ```
 searchKey: url_test.ExampleURL_UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +198,7 @@ func ExampleURL_UnmarshalBinary()
 
 ```
 searchKey: url_test.ExampleURL_Redacted
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +209,7 @@ func ExampleURL_Redacted()
 
 ```
 searchKey: url_test.ExampleURL_RequestURI
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +220,7 @@ func ExampleURL_RequestURI()
 
 ```
 searchKey: url_test.toJSON
+tags: [private]
 ```
 
 ```Go

@@ -14,7 +14,7 @@ This package will be automatically imported if you build with -tags timetzdata.
     * [const zipdata](#zipdata)
 * [Functions](#func)
     * [func registerLoadFromEmbeddedTZData(func(string) (string, error))](#registerLoadFromEmbeddedTZData)
-    * [func init()](#init)
+    * [func init()](#init.tzdata.go)
     * [func get4s(s string) int](#get4s)
     * [func get2s(s string) int](#get2s)
     * [func loadFromEmbeddedTZData(name string) (string, error)](#loadFromEmbeddedTZData)
@@ -22,14 +22,11 @@ This package will be automatically imported if you build with -tags timetzdata.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="zipdata" href="#zipdata">const zipdata</a>
 
 ```
 searchKey: tzdata.zipdata
+tags: [private]
 ```
 
 ```Go
@@ -38,14 +35,11 @@ const zipdata = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="registerLoadFromEmbeddedTZData" href="#registerLoadFromEmbeddedTZData">func registerLoadFromEmbeddedTZData(func(string) (string, error))</a>
 
 ```
 searchKey: tzdata.registerLoadFromEmbeddedTZData
+tags: [private]
 ```
 
 ```Go
@@ -54,10 +48,11 @@ func registerLoadFromEmbeddedTZData(func(string) (string, error))
 
 registerLoadFromEmbeddedTZData is defined in package time. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.tzdata.go" href="#init.tzdata.go">func init()</a>
 
 ```
 searchKey: tzdata.init
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +63,7 @@ func init()
 
 ```
 searchKey: tzdata.get4s
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +76,7 @@ get4s returns the little-endian 32-bit value at the start of s.
 
 ```
 searchKey: tzdata.get2s
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +89,7 @@ get2s returns the little-endian 16-bit value at the start of s.
 
 ```
 searchKey: tzdata.loadFromEmbeddedTZData
+tags: [private]
 ```
 
 ```Go

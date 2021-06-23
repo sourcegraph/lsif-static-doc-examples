@@ -69,11 +69,14 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrUnknownQueue" href="#ErrUnknownQueue">var ErrUnknownQueue</a>
 
 ```
 searchKey: server.ErrUnknownQueue
-tags: [exported]
 ```
 
 ```Go
@@ -84,7 +87,6 @@ var ErrUnknownQueue = errors.New("unknown queue")
 
 ```
 searchKey: server.ErrUnknownJob
-tags: [exported]
 ```
 
 ```Go
@@ -95,6 +97,7 @@ var ErrUnknownJob = errors.New("unknown job")
 
 ```
 searchKey: server.shutdownErr
+tags: [private]
 ```
 
 ```Go
@@ -103,10 +106,15 @@ var shutdownErr = errors.New("server shutting down")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="handler" href="#handler">type handler struct</a>
 
 ```
 searchKey: server.handler
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +132,7 @@ type handler struct {
 
 ```
 searchKey: server.newHandler
+tags: [private]
 ```
 
 ```Go
@@ -134,6 +143,7 @@ func newHandler(options Options, clock glock.Clock) *handler
 
 ```
 searchKey: server.newHandlerWithMetrics
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +154,7 @@ func newHandlerWithMetrics(options Options, clock glock.Clock, observationContex
 
 ```
 searchKey: server.handler.dequeue
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +167,7 @@ dequeue selects a job record from the database and stashes metadata including th
 
 ```
 searchKey: server.handler.addExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +180,7 @@ addExecutionLogEntry calls AddExecutionLogEntry for the given job. If the job id
 
 ```
 searchKey: server.handler.markComplete
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +193,7 @@ markComplete calls MarkComplete for the given job, then commits the job's transa
 
 ```
 searchKey: server.handler.markErrored
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +206,7 @@ markErrored calls MarkErrored for the given job, then commits the job's transact
 
 ```
 searchKey: server.handler.markFailed
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +219,7 @@ markFailed calls MarkFailed for the given job, then commits the job's transactio
 
 ```
 searchKey: server.handler.findMeta
+tags: [private]
 ```
 
 ```Go
@@ -216,6 +232,7 @@ findMeta returns the job with the given id and executor name. If the job is unkn
 
 ```
 searchKey: server.handler.addMeta
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +245,7 @@ addMeta adds a job to the given executor's job list.
 
 ```
 searchKey: server.handler.updateMetrics
+tags: [private]
 ```
 
 ```Go
@@ -238,6 +256,7 @@ func (m *handler) updateMetrics()
 
 ```
 searchKey: server.handler.heartbeat
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +269,7 @@ heartbeat will release the transaction for any job that is not confirmed to be i
 
 ```
 searchKey: server.handler.cleanup
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +282,7 @@ cleanup will release the transactions held by any executor that has not sent a h
 
 ```
 searchKey: server.handler.shutdown
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +295,7 @@ shutdown releases all transactions. This method is called on process shutdown.
 
 ```
 searchKey: server.handler.unknownJobs
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +308,7 @@ unknownJobs returns the set of job identifiers reported by the executor which do
 
 ```
 searchKey: server.handler.pruneJobs
+tags: [private]
 ```
 
 ```Go
@@ -298,6 +321,7 @@ pruneJobs updates the set of job identifiers assigned to the given executor and 
 
 ```
 searchKey: server.handler.pruneExecutors
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +334,7 @@ pruneExecutors will release the transactions held by any executor that has not s
 
 ```
 searchKey: server.handler.requeueJobs
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +347,7 @@ requeueJobs releases and requeues each of the given jobs.
 
 ```
 searchKey: server.handler.requeueJob
+tags: [private]
 ```
 
 ```Go
@@ -334,6 +360,7 @@ requeueJob requeues the given job and releases the associated transaction.
 
 ```
 searchKey: server.handler.setupRoutes
+tags: [private]
 ```
 
 ```Go
@@ -344,6 +371,7 @@ func (h *handler) setupRoutes(router *mux.Router)
 
 ```
 searchKey: server.handler.handleDequeue
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +384,7 @@ POST /{queueName}/dequeue
 
 ```
 searchKey: server.handler.handleAddExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +397,7 @@ POST /{queueName}/addExecutionLogEntry
 
 ```
 searchKey: server.handler.handleMarkComplete
+tags: [private]
 ```
 
 ```Go
@@ -380,6 +410,7 @@ POST /{queueName}/markComplete
 
 ```
 searchKey: server.handler.handleMarkErrored
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +423,7 @@ POST /{queueName}/markErrored
 
 ```
 searchKey: server.handler.handleMarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -404,6 +436,7 @@ POST /{queueName}/markFailed
 
 ```
 searchKey: server.handler.handleHeartbeat
+tags: [private]
 ```
 
 ```Go
@@ -416,6 +449,7 @@ POST /heartbeat
 
 ```
 searchKey: server.handler.wrapHandler
+tags: [private]
 ```
 
 ```Go
@@ -428,7 +462,6 @@ wrapHandler decodes the request body into the given payload pointer, then calls 
 
 ```
 searchKey: server.Options
-tags: [exported]
 ```
 
 ```Go
@@ -467,7 +500,6 @@ type Options struct {
 
 ```
 searchKey: server.QueueOptions
-tags: [exported]
 ```
 
 ```Go
@@ -485,6 +517,7 @@ type QueueOptions struct {
 
 ```
 searchKey: server.executorMeta
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +531,7 @@ type executorMeta struct {
 
 ```
 searchKey: server.jobMeta
+tags: [private]
 ```
 
 ```Go
@@ -513,7 +547,6 @@ type jobMeta struct {
 
 ```
 searchKey: server.QueueMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -527,6 +560,7 @@ type QueueMetrics struct {
 
 ```
 searchKey: server.newQueueMetrics
+tags: [private]
 ```
 
 ```Go
@@ -537,6 +571,7 @@ func newQueueMetrics(observationContext *observation.Context) *QueueMetrics
 
 ```
 searchKey: server.errorResponse
+tags: [private]
 ```
 
 ```Go
@@ -549,6 +584,7 @@ type errorResponse struct {
 
 ```
 searchKey: server.handlerWrapper
+tags: [private]
 ```
 
 ```Go
@@ -559,6 +595,7 @@ type handlerWrapper struct{ handler *handler }
 
 ```
 searchKey: server.handlerWrapper.Handle
+tags: [private]
 ```
 
 ```Go
@@ -569,6 +606,7 @@ func (hw *handlerWrapper) Handle(ctx context.Context) error
 
 ```
 searchKey: server.handlerWrapper.HandleError
+tags: [private]
 ```
 
 ```Go
@@ -579,6 +617,7 @@ func (hw *handlerWrapper) HandleError(err error)
 
 ```
 searchKey: server.handlerWrapper.OnShutdown
+tags: [private]
 ```
 
 ```Go
@@ -589,6 +628,7 @@ func (hw *handlerWrapper) OnShutdown()
 
 ```
 searchKey: server.testRecord
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +642,7 @@ type testRecord struct {
 
 ```
 searchKey: server.testRecord.RecordID
+tags: [private]
 ```
 
 ```Go
@@ -610,11 +651,14 @@ func (r testRecord) RecordID() int
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewServer" href="#NewServer">func NewServer(options Options, observationContext *observation.Context) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: server.NewServer
-tags: [exported]
 ```
 
 ```Go
@@ -627,6 +671,7 @@ NewServer returns an HTTP job queue server.
 
 ```
 searchKey: server.TestDequeue
+tags: [private]
 ```
 
 ```Go
@@ -637,6 +682,7 @@ func TestDequeue(t *testing.T)
 
 ```
 searchKey: server.TestDequeueNoRecord
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +693,7 @@ func TestDequeueNoRecord(t *testing.T)
 
 ```
 searchKey: server.TestDequeueUnknownQueue
+tags: [private]
 ```
 
 ```Go
@@ -657,6 +704,7 @@ func TestDequeueUnknownQueue(t *testing.T)
 
 ```
 searchKey: server.TestDequeueMaxTransactions
+tags: [private]
 ```
 
 ```Go
@@ -667,6 +715,7 @@ func TestDequeueMaxTransactions(t *testing.T)
 
 ```
 searchKey: server.TestAddExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -677,6 +726,7 @@ func TestAddExecutionLogEntry(t *testing.T)
 
 ```
 searchKey: server.TestAddExecutionLogEntryUnknownQueue
+tags: [private]
 ```
 
 ```Go
@@ -687,6 +737,7 @@ func TestAddExecutionLogEntryUnknownQueue(t *testing.T)
 
 ```
 searchKey: server.TestAddExecutionLogEntryUnknownJob
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +748,7 @@ func TestAddExecutionLogEntryUnknownJob(t *testing.T)
 
 ```
 searchKey: server.TestMarkComplete
+tags: [private]
 ```
 
 ```Go
@@ -707,6 +759,7 @@ func TestMarkComplete(t *testing.T)
 
 ```
 searchKey: server.TestMarkCompleteUnknownJob
+tags: [private]
 ```
 
 ```Go
@@ -717,6 +770,7 @@ func TestMarkCompleteUnknownJob(t *testing.T)
 
 ```
 searchKey: server.TestMarkCompleteUnknownQueue
+tags: [private]
 ```
 
 ```Go
@@ -727,6 +781,7 @@ func TestMarkCompleteUnknownQueue(t *testing.T)
 
 ```
 searchKey: server.TestMarkErrored
+tags: [private]
 ```
 
 ```Go
@@ -737,6 +792,7 @@ func TestMarkErrored(t *testing.T)
 
 ```
 searchKey: server.TestMarkErroredUnknownJob
+tags: [private]
 ```
 
 ```Go
@@ -747,6 +803,7 @@ func TestMarkErroredUnknownJob(t *testing.T)
 
 ```
 searchKey: server.TestMarkErroredUnknownQueue
+tags: [private]
 ```
 
 ```Go
@@ -757,6 +814,7 @@ func TestMarkErroredUnknownQueue(t *testing.T)
 
 ```
 searchKey: server.TestMarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -767,6 +825,7 @@ func TestMarkFailed(t *testing.T)
 
 ```
 searchKey: server.TestHeartbeat
+tags: [private]
 ```
 
 ```Go
@@ -777,6 +836,7 @@ func TestHeartbeat(t *testing.T)
 
 ```
 searchKey: server.TestCleanup
+tags: [private]
 ```
 
 ```Go

@@ -31,14 +31,11 @@ Currently plugins are only supported on Linux, FreeBSD, and macOS. Please report
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="pluginsMu" href="#pluginsMu">var pluginsMu</a>
 
 ```
 searchKey: plugin.pluginsMu
+tags: [private]
 ```
 
 ```Go
@@ -49,6 +46,7 @@ var pluginsMu sync.Mutex
 
 ```
 searchKey: plugin.plugins
+tags: [private]
 ```
 
 ```Go
@@ -57,15 +55,10 @@ var plugins map[string]*Plugin
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Plugin" href="#Plugin">type Plugin struct</a>
 
 ```
 searchKey: plugin.Plugin
-tags: [exported]
 ```
 
 ```Go
@@ -83,7 +76,6 @@ Plugin is a loaded Go plugin.
 
 ```
 searchKey: plugin.Open
-tags: [exported]
 ```
 
 ```Go
@@ -96,6 +88,7 @@ Open opens a Go plugin. If a path has already been opened, then the existing *Pl
 
 ```
 searchKey: plugin.open
+tags: [private]
 ```
 
 ```Go
@@ -106,7 +99,6 @@ func open(name string) (*Plugin, error)
 
 ```
 searchKey: plugin.Plugin.Lookup
-tags: [exported]
 ```
 
 ```Go
@@ -119,7 +111,6 @@ Lookup searches for a symbol named symName in plugin p. A symbol is any exported
 
 ```
 searchKey: plugin.Symbol
-tags: [exported]
 ```
 
 ```Go
@@ -163,6 +154,7 @@ f.(func())() // prints "Hello, number 7"
 
 ```
 searchKey: plugin.lookup
+tags: [private]
 ```
 
 ```Go
@@ -171,14 +163,11 @@ func lookup(p *Plugin, symName string) (Symbol, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="lastmoduleinit" href="#lastmoduleinit">func lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)</a>
 
 ```
 searchKey: plugin.lastmoduleinit
+tags: [private]
 ```
 
 ```Go
@@ -191,6 +180,7 @@ lastmoduleinit is defined in package runtime
 
 ```
 searchKey: plugin.doInit
+tags: [private]
 ```
 
 ```Go

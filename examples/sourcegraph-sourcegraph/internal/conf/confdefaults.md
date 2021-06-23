@@ -15,11 +15,14 @@ It is a separate package so that users of pkg/conf do not indirectly import pkg/
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DevAndTesting" href="#DevAndTesting">var DevAndTesting</a>
 
 ```
 searchKey: confdefaults.DevAndTesting
-tags: [exported]
 ```
 
 ```Go
@@ -36,7 +39,6 @@ Note: This actually generally only applies to 'go test' because we always overri
 
 ```
 searchKey: confdefaults.DockerContainer
-tags: [exported]
 ```
 
 ```Go
@@ -49,7 +51,6 @@ DockerContainer is the default configuration applied to Docker single-container 
 
 ```
 searchKey: confdefaults.KubernetesOrDockerComposeOrPureDocker
-tags: [exported]
 ```
 
 ```Go
@@ -62,7 +63,6 @@ KubernetesOrDockerComposeOrPureDocker is the default configuration applied to Ku
 
 ```
 searchKey: confdefaults.Default
-tags: [exported]
 ```
 
 ```Go

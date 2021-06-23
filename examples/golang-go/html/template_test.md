@@ -38,10 +38,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="templateFile" href="#templateFile">type templateFile struct</a>
 
 ```
 searchKey: template_test.templateFile
+tags: [private]
 ```
 
 ```Go
@@ -57,6 +62,7 @@ templateFile defines the contents of a template to be stored in a file, for test
 
 ```
 searchKey: template_test.testCase
+tags: [private]
 ```
 
 ```Go
@@ -70,6 +76,7 @@ type testCase struct {
 
 ```
 searchKey: template_test.newTestCase
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +87,7 @@ func newTestCase(t *testing.T) *testCase
 
 ```
 searchKey: template_test.testCase.lookup
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +98,7 @@ func (c *testCase) lookup(name string) *Template
 
 ```
 searchKey: template_test.testCase.mustParse
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +109,7 @@ func (c *testCase) mustParse(t *Template, text string)
 
 ```
 searchKey: template_test.testCase.mustNotParse
+tags: [private]
 ```
 
 ```Go
@@ -110,6 +120,7 @@ func (c *testCase) mustNotParse(t *Template, text string)
 
 ```
 searchKey: template_test.testCase.mustExecute
+tags: [private]
 ```
 
 ```Go
@@ -118,10 +129,15 @@ func (c *testCase) mustExecute(t *Template, val interface{}, want string)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example" href="#Example">func Example()</a>
 
 ```
 searchKey: template_test.Example
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +148,7 @@ func Example()
 
 ```
 searchKey: template_test.Example_autoescaping
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +159,7 @@ func Example_autoescaping()
 
 ```
 searchKey: template_test.Example_escape
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +170,7 @@ func Example_escape()
 
 ```
 searchKey: template_test.ExampleTemplate_Delims
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +181,7 @@ func ExampleTemplate_Delims()
 
 ```
 searchKey: template_test.ExampleTemplate_block
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +192,7 @@ func ExampleTemplate_block()
 
 ```
 searchKey: template_test.createTestDir
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +203,7 @@ func createTestDir(files []templateFile) string
 
 ```
 searchKey: template_test.ExampleTemplate_glob
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +216,7 @@ Here we demonstrate loading a set of templates from a directory.
 
 ```
 searchKey: template_test.ExampleTemplate_parsefiles
+tags: [private]
 ```
 
 ```Go
@@ -206,6 +229,7 @@ Here we demonstrate loading a set of templates from files in different directori
 
 ```
 searchKey: template_test.ExampleTemplate_helpers
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +242,7 @@ This example demonstrates one way to share some templates and use them in differ
 
 ```
 searchKey: template_test.ExampleTemplate_share
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +255,7 @@ This example demonstrates how to use one group of driver templates with distinct
 
 ```
 searchKey: template_test.TestTemplateClone
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +266,7 @@ func TestTemplateClone(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineNonEmptyAfterExecution
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +277,7 @@ func TestRedefineNonEmptyAfterExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineEmptyAfterExecution
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +288,7 @@ func TestRedefineEmptyAfterExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineAfterNonExecution
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +299,7 @@ func TestRedefineAfterNonExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineAfterNamedExecution
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +310,7 @@ func TestRedefineAfterNamedExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineNestedByNameAfterExecution
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +321,7 @@ func TestRedefineNestedByNameAfterExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineNestedByTemplateAfterExecution
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +332,7 @@ func TestRedefineNestedByTemplateAfterExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineSafety
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +343,7 @@ func TestRedefineSafety(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineTopUse
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +354,7 @@ func TestRedefineTopUse(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineOtherParsers
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +365,7 @@ func TestRedefineOtherParsers(t *testing.T)
 
 ```
 searchKey: template_test.TestNumbers
+tags: [private]
 ```
 
 ```Go
@@ -340,6 +376,7 @@ func TestNumbers(t *testing.T)
 
 ```
 searchKey: template_test.TestStringsInScriptsWithJsonContentTypeAreCorrectlyEscaped
+tags: [private]
 ```
 
 ```Go
@@ -350,6 +387,7 @@ func TestStringsInScriptsWithJsonContentTypeAreCorrectlyEscaped(t *testing.T)
 
 ```
 searchKey: template_test.TestSkipEscapeComments
+tags: [private]
 ```
 
 ```Go

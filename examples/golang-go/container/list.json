@@ -4,9 +4,7 @@
     "identifier": "list",
     "newPage": true,
     "searchKey": "container/list",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Element",
                 "newPage": false,
                 "searchKey": "list.Element",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -64,9 +58,7 @@
                       "identifier": "Element.Next",
                       "newPage": false,
                       "searchKey": "list.Element.Next",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -86,9 +78,7 @@
                       "identifier": "Element.Prev",
                       "newPage": false,
                       "searchKey": "list.Element.Prev",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -111,9 +101,7 @@
                 "identifier": "List",
                 "newPage": false,
                 "searchKey": "list.List",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -131,9 +119,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "list.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -153,9 +139,7 @@
                       "identifier": "List.Init",
                       "newPage": false,
                       "searchKey": "list.List.Init",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -175,9 +159,7 @@
                       "identifier": "List.Len",
                       "newPage": false,
                       "searchKey": "list.List.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -197,9 +179,7 @@
                       "identifier": "List.Front",
                       "newPage": false,
                       "searchKey": "list.List.Front",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -219,9 +199,7 @@
                       "identifier": "List.Back",
                       "newPage": false,
                       "searchKey": "list.List.Back",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -241,7 +219,9 @@
                       "identifier": "List.lazyInit",
                       "newPage": false,
                       "searchKey": "list.List.lazyInit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -261,7 +241,9 @@
                       "identifier": "List.insert",
                       "newPage": false,
                       "searchKey": "list.List.insert",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -281,7 +263,9 @@
                       "identifier": "List.insertValue",
                       "newPage": false,
                       "searchKey": "list.List.insertValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -301,7 +285,9 @@
                       "identifier": "List.remove",
                       "newPage": false,
                       "searchKey": "list.List.remove",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -321,7 +307,9 @@
                       "identifier": "List.move",
                       "newPage": false,
                       "searchKey": "list.List.move",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -341,9 +329,7 @@
                       "identifier": "List.Remove",
                       "newPage": false,
                       "searchKey": "list.List.Remove",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -363,9 +349,7 @@
                       "identifier": "List.PushFront",
                       "newPage": false,
                       "searchKey": "list.List.PushFront",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -385,9 +369,7 @@
                       "identifier": "List.PushBack",
                       "newPage": false,
                       "searchKey": "list.List.PushBack",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -407,9 +389,7 @@
                       "identifier": "List.InsertBefore",
                       "newPage": false,
                       "searchKey": "list.List.InsertBefore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -429,9 +409,7 @@
                       "identifier": "List.InsertAfter",
                       "newPage": false,
                       "searchKey": "list.List.InsertAfter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -451,9 +429,7 @@
                       "identifier": "List.MoveToFront",
                       "newPage": false,
                       "searchKey": "list.List.MoveToFront",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -473,9 +449,7 @@
                       "identifier": "List.MoveToBack",
                       "newPage": false,
                       "searchKey": "list.List.MoveToBack",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -495,9 +469,7 @@
                       "identifier": "List.MoveBefore",
                       "newPage": false,
                       "searchKey": "list.List.MoveBefore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -517,9 +489,7 @@
                       "identifier": "List.MoveAfter",
                       "newPage": false,
                       "searchKey": "list.List.MoveAfter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -539,9 +509,7 @@
                       "identifier": "List.PushBackList",
                       "newPage": false,
                       "searchKey": "list.List.PushBackList",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -561,9 +529,7 @@
                       "identifier": "List.PushFrontList",
                       "newPage": false,
                       "searchKey": "list.List.PushFrontList",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -589,9 +555,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -609,7 +573,9 @@
                 "identifier": "checkListLen",
                 "newPage": false,
                 "searchKey": "list.checkListLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -629,7 +595,9 @@
                 "identifier": "checkListPointers",
                 "newPage": false,
                 "searchKey": "list.checkListPointers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -649,7 +617,9 @@
                 "identifier": "TestList",
                 "newPage": false,
                 "searchKey": "list.TestList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -669,7 +639,9 @@
                 "identifier": "checkList",
                 "newPage": false,
                 "searchKey": "list.checkList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -689,7 +661,9 @@
                 "identifier": "TestExtending",
                 "newPage": false,
                 "searchKey": "list.TestExtending",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -709,7 +683,9 @@
                 "identifier": "TestRemove",
                 "newPage": false,
                 "searchKey": "list.TestRemove",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -729,7 +705,9 @@
                 "identifier": "TestIssue4103",
                 "newPage": false,
                 "searchKey": "list.TestIssue4103",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -749,7 +727,9 @@
                 "identifier": "TestIssue6349",
                 "newPage": false,
                 "searchKey": "list.TestIssue6349",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -769,7 +749,9 @@
                 "identifier": "TestMove",
                 "newPage": false,
                 "searchKey": "list.TestMove",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -789,7 +771,9 @@
                 "identifier": "TestZeroList",
                 "newPage": false,
                 "searchKey": "list.TestZeroList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -809,7 +793,9 @@
                 "identifier": "TestInsertBeforeUnknownMark",
                 "newPage": false,
                 "searchKey": "list.TestInsertBeforeUnknownMark",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -829,7 +815,9 @@
                 "identifier": "TestInsertAfterUnknownMark",
                 "newPage": false,
                 "searchKey": "list.TestInsertAfterUnknownMark",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -849,7 +837,9 @@
                 "identifier": "TestMoveUnknownMark",
                 "newPage": false,
                 "searchKey": "list.TestMoveUnknownMark",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

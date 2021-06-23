@@ -14,15 +14,10 @@ Package assets contains static assets for the front-end Web app.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Assets" href="#Assets">var Assets</a>
 
 ```
 searchKey: assets.Assets
-tags: [exported]
 ```
 
 ```Go
@@ -33,7 +28,6 @@ var Assets = http.Dir("./ui/assets")
 
 ```
 searchKey: assets.MockLoadWebpackManifest
-tags: [exported]
 ```
 
 ```Go
@@ -42,15 +36,10 @@ var MockLoadWebpackManifest func() (*WebpackManifest, error)
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="WebpackManifest" href="#WebpackManifest">type WebpackManifest struct</a>
 
 ```
 searchKey: assets.WebpackManifest
-tags: [exported]
 ```
 
 ```Go
@@ -68,7 +57,6 @@ type WebpackManifest struct {
 
 ```
 searchKey: assets.LoadWebpackManifest
-tags: [exported]
 ```
 
 ```Go

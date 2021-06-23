@@ -49,7 +49,7 @@ It is a library, not a main package, so that other test packages may use its def
     * [func isTrustedOrigin(r *http.Request) bool](#isTrustedOrigin)
     * [func newOutOfBandMigrationRunner(ctx context.Context, db *sql.DB) *oobmigration.Runner](#newOutOfBandMigrationRunner)
     * [func validateOutOfBandMigrationRunner(ctx context.Context, outOfBandMigrationRunner *oobmigration.Runner)](#validateOutOfBandMigrationRunner)
-    * [func init()](#init)
+    * [func init()](#init.serve_cmd.go)
     * [func defaultExternalURL(nginxAddr, httpAddr string) *url.URL](#defaultExternalURL)
     * [func InitDB() (*sql.DB, error)](#InitDB)
     * [func Main(enterpriseSetupHook func(db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner) enterprise.Services) error](#Main)
@@ -64,10 +64,15 @@ It is a library, not a main package, so that other test packages may use its def
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="corsAllowHeader" href="#corsAllowHeader">const corsAllowHeader</a>
 
 ```
 searchKey: cli.corsAllowHeader
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +85,7 @@ corsAllowHeader is the HTTP header that, if present (and assuming secureHeadersM
 
 ```
 searchKey: cli.logoColor
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +98,7 @@ TODO(sqs): use non-colored logo if terminal doesn't support color
 
 ```
 searchKey: cli.skipSysReqsEnvVar
+tags: [private]
 ```
 
 ```Go
@@ -100,10 +107,15 @@ const skipSysReqsEnvVar = "SRC_SKIP_REQS"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="metricConfigOverrideUpdates" href="#metricConfigOverrideUpdates">var metricConfigOverrideUpdates</a>
 
 ```
 searchKey: cli.metricConfigOverrideUpdates
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +126,7 @@ var metricConfigOverrideUpdates = ...
 
 ```
 searchKey: cli.serviceConnectionsVal
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +137,7 @@ var serviceConnectionsVal conftypes.ServiceConnections
 
 ```
 searchKey: cli.serviceConnectionsOnce
+tags: [private]
 ```
 
 ```Go
@@ -134,6 +148,7 @@ var serviceConnectionsOnce sync.Once
 
 ```
 searchKey: cli.traceFields
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +159,7 @@ var traceFields = ...
 
 ```
 searchKey: cli.traceThreshold
+tags: [private]
 ```
 
 ```Go
@@ -154,6 +170,7 @@ var traceThreshold = ...
 
 ```
 searchKey: cli.printLogo
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +181,7 @@ var printLogo, _ = ...
 
 ```
 searchKey: cli.httpAddr
+tags: [private]
 ```
 
 ```Go
@@ -174,6 +192,7 @@ var httpAddr = env.Get("SRC_HTTP_ADDR", ":3080", "HTTP listen address for app an
 
 ```
 searchKey: cli.httpAddrInternal
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +203,7 @@ var httpAddrInternal = envvar.HTTPAddrInternal
 
 ```
 searchKey: cli.nginxAddr
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +214,7 @@ var nginxAddr = ...
 
 ```
 searchKey: cli.devExtension
+tags: [private]
 ```
 
 ```Go
@@ -206,6 +227,7 @@ dev browser browser extension ID. You can find this by going to chrome://extensi
 
 ```
 searchKey: cli.prodExtension
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +240,7 @@ production browser extension ID. This is found by viewing our extension in the c
 
 ```
 searchKey: cli.skipSysReqsEnv
+tags: [private]
 ```
 
 ```Go
@@ -226,10 +249,15 @@ var skipSysReqsEnv = env.Get(skipSysReqsEnvVar, "false", "skip system requiremen
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="configurationSource" href="#configurationSource">type configurationSource struct{}</a>
 
 ```
 searchKey: cli.configurationSource
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +268,7 @@ type configurationSource struct{}
 
 ```
 searchKey: cli.configurationSource.Read
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +279,7 @@ func (c configurationSource) Read(ctx context.Context) (conftypes.RawUnified, er
 
 ```
 searchKey: cli.configurationSource.Write
+tags: [private]
 ```
 
 ```Go
@@ -258,10 +288,15 @@ func (c configurationSource) Write(ctx context.Context, input conftypes.RawUnifi
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="printConfigValidation" href="#printConfigValidation">func printConfigValidation()</a>
 
 ```
 searchKey: cli.printConfigValidation
+tags: [private]
 ```
 
 ```Go
@@ -272,6 +307,7 @@ func printConfigValidation()
 
 ```
 searchKey: cli.overrideSiteConfig
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +318,7 @@ func overrideSiteConfig(ctx context.Context) error
 
 ```
 searchKey: cli.overrideGlobalSettings
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +329,7 @@ func overrideGlobalSettings(ctx context.Context, db dbutil.DB) error
 
 ```
 searchKey: cli.overrideExtSvcConfig
+tags: [private]
 ```
 
 ```Go
@@ -302,6 +340,7 @@ func overrideExtSvcConfig(ctx context.Context, db dbutil.DB) error
 
 ```
 searchKey: cli.watchUpdate
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +351,7 @@ func watchUpdate(ctx context.Context, path string, update func(context.Context) 
 
 ```
 searchKey: cli.watchPaths
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +366,7 @@ Note: This can send many events even if the file content hasn't changed. For exa
 
 ```
 searchKey: cli.serviceConnections
+tags: [private]
 ```
 
 ```Go
@@ -336,6 +377,7 @@ func serviceConnections() conftypes.ServiceConnections
 
 ```
 searchKey: cli.gitServers
+tags: [private]
 ```
 
 ```Go
@@ -346,6 +388,7 @@ func gitServers() []string
 
 ```
 searchKey: cli.comparePostgresDSNs
+tags: [private]
 ```
 
 ```Go
@@ -358,6 +401,7 @@ comparePostgresDSNs returns an error if one of the given Postgres DSN values are
 
 ```
 searchKey: cli.newExternalHTTPHandler
+tags: [private]
 ```
 
 ```Go
@@ -370,6 +414,7 @@ newExternalHTTPHandler creates and returns the HTTP handler that serves the app 
 
 ```
 searchKey: cli.healthCheckMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -380,6 +425,7 @@ func healthCheckMiddleware(next http.Handler) http.Handler
 
 ```
 searchKey: cli.newInternalHTTPHandler
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +438,7 @@ newInternalHTTPHandler creates and returns the HTTP handler for the internal API
 
 ```
 searchKey: cli.withInternalActor
+tags: [private]
 ```
 
 ```Go
@@ -406,6 +453,7 @@ withInternalActor wraps an existing HTTP handler by setting an internal actor in
 
 ```
 searchKey: cli.secureHeadersMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +468,7 @@ secureHeadersMiddleware adds and checks for HTTP security-related headers.
 
 ```
 searchKey: cli.isTrustedOrigin
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +481,7 @@ isTrustedOrigin returns whether the HTTP request's Origin is trusted to initiate
 
 ```
 searchKey: cli.newOutOfBandMigrationRunner
+tags: [private]
 ```
 
 ```Go
@@ -444,16 +494,18 @@ newOutOfBandMigrationRunner creates and validates an out of band migrator instan
 
 ```
 searchKey: cli.validateOutOfBandMigrationRunner
+tags: [private]
 ```
 
 ```Go
 func validateOutOfBandMigrationRunner(ctx context.Context, outOfBandMigrationRunner *oobmigration.Runner)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.serve_cmd.go" href="#init.serve_cmd.go">func init()</a>
 
 ```
 searchKey: cli.init
+tags: [private]
 ```
 
 ```Go
@@ -464,6 +516,7 @@ func init()
 
 ```
 searchKey: cli.defaultExternalURL
+tags: [private]
 ```
 
 ```Go
@@ -476,7 +529,6 @@ defaultExternalURL returns the default external URL of the application.
 
 ```
 searchKey: cli.InitDB
-tags: [exported]
 ```
 
 ```Go
@@ -489,7 +541,6 @@ InitDB initializes and returns the global database connection and sets the versi
 
 ```
 searchKey: cli.Main
-tags: [exported]
 ```
 
 ```Go
@@ -502,6 +553,7 @@ Main is the main entrypoint for the frontend server program.
 
 ```
 searchKey: cli.makeExternalAPI
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +564,7 @@ func makeExternalAPI(db dbutil.DB, schema *graphql.Schema, enterprise enterprise
 
 ```
 searchKey: cli.makeInternalAPI
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +575,7 @@ func makeInternalAPI(schema *graphql.Schema, db dbutil.DB, enterprise enterprise
 
 ```
 searchKey: cli.isAllowedOrigin
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +586,7 @@ func isAllowedOrigin(origin string, allowedOrigins []string) bool
 
 ```
 searchKey: cli.makeRateLimitWatcher
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +597,7 @@ func makeRateLimitWatcher() (*graphqlbackend.BasicLimitWatcher, error)
 
 ```
 searchKey: cli.skippedSysReqs
+tags: [private]
 ```
 
 ```Go
@@ -554,6 +610,7 @@ skippedSysReqs returns a list of sysreq names to skip (e.g., "Docker").
 
 ```
 searchKey: cli.checkSysReqs
+tags: [private]
 ```
 
 ```Go
@@ -566,6 +623,7 @@ checkSysReqs uses package sysreq to check for the presence of system requirement
 
 ```
 searchKey: cli.TestServiceConnections
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "compression",
     "newPage": true,
     "searchKey": "enterprise/internal/insights/compression",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "getCommitsInRangeStr",
                 "newPage": false,
                 "searchKey": "compression.getCommitsInRangeStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "insertCommitIndexStr",
                 "newPage": false,
                 "searchKey": "compression.insertCommitIndexStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "getCommitIndexMetadataStr",
                 "newPage": false,
                 "searchKey": "compression.getCommitIndexMetadataStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "upsertCommitIndexMetadataStampStr",
                 "newPage": false,
                 "searchKey": "compression.upsertCommitIndexMetadataStampStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +135,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -141,9 +155,7 @@
                 "identifier": "DBCommitStore",
                 "newPage": false,
                 "searchKey": "compression.DBCommitStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -161,9 +173,7 @@
                       "identifier": "NewCommitStore",
                       "newPage": false,
                       "searchKey": "compression.NewCommitStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -183,9 +193,7 @@
                       "identifier": "DBCommitStore.With",
                       "newPage": false,
                       "searchKey": "compression.DBCommitStore.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -205,9 +213,7 @@
                       "identifier": "DBCommitStore.Transact",
                       "newPage": false,
                       "searchKey": "compression.DBCommitStore.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -227,9 +233,7 @@
                       "identifier": "DBCommitStore.Save",
                       "newPage": false,
                       "searchKey": "compression.DBCommitStore.Save",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -249,9 +253,7 @@
                       "identifier": "DBCommitStore.InsertCommits",
                       "newPage": false,
                       "searchKey": "compression.DBCommitStore.InsertCommits",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -271,9 +273,7 @@
                       "identifier": "DBCommitStore.Get",
                       "newPage": false,
                       "searchKey": "compression.DBCommitStore.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -293,9 +293,7 @@
                       "identifier": "DBCommitStore.GetMetadata",
                       "newPage": false,
                       "searchKey": "compression.DBCommitStore.GetMetadata",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -315,9 +313,7 @@
                       "identifier": "DBCommitStore.UpsertMetadataStamp",
                       "newPage": false,
                       "searchKey": "compression.DBCommitStore.UpsertMetadataStamp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -340,9 +336,7 @@
                 "identifier": "CommitStore",
                 "newPage": false,
                 "searchKey": "compression.CommitStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -362,9 +356,7 @@
                 "identifier": "CommitStamp",
                 "newPage": false,
                 "searchKey": "compression.CommitStamp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -384,9 +376,7 @@
                 "identifier": "CommitIndexMetadata",
                 "newPage": false,
                 "searchKey": "compression.CommitIndexMetadata",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -404,7 +394,9 @@
                       "identifier": "getMetadata",
                       "newPage": false,
                       "searchKey": "compression.getMetadata",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -427,9 +419,7 @@
                 "identifier": "MockCommitStore",
                 "newPage": false,
                 "searchKey": "compression.MockCommitStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -447,9 +437,7 @@
                       "identifier": "NewMockCommitStore",
                       "newPage": false,
                       "searchKey": "compression.NewMockCommitStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -469,9 +457,7 @@
                       "identifier": "NewMockCommitStoreFrom",
                       "newPage": false,
                       "searchKey": "compression.NewMockCommitStoreFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -491,9 +477,7 @@
                       "identifier": "MockCommitStore.Get",
                       "newPage": false,
                       "searchKey": "compression.MockCommitStore.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -513,9 +497,7 @@
                       "identifier": "MockCommitStore.GetMetadata",
                       "newPage": false,
                       "searchKey": "compression.MockCommitStore.GetMetadata",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -535,9 +517,7 @@
                       "identifier": "MockCommitStore.InsertCommits",
                       "newPage": false,
                       "searchKey": "compression.MockCommitStore.InsertCommits",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -557,9 +537,7 @@
                       "identifier": "MockCommitStore.Save",
                       "newPage": false,
                       "searchKey": "compression.MockCommitStore.Save",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -579,9 +557,7 @@
                       "identifier": "MockCommitStore.UpsertMetadataStamp",
                       "newPage": false,
                       "searchKey": "compression.MockCommitStore.UpsertMetadataStamp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -604,9 +580,7 @@
                 "identifier": "CommitStoreGetFunc",
                 "newPage": false,
                 "searchKey": "compression.CommitStoreGetFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -624,9 +598,7 @@
                       "identifier": "CommitStoreGetFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -646,9 +618,7 @@
                       "identifier": "CommitStoreGetFunc.PushHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -668,9 +638,7 @@
                       "identifier": "CommitStoreGetFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -690,9 +658,7 @@
                       "identifier": "CommitStoreGetFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -712,7 +678,9 @@
                       "identifier": "CommitStoreGetFunc.nextHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -732,7 +700,9 @@
                       "identifier": "CommitStoreGetFunc.appendCall",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -752,9 +722,7 @@
                       "identifier": "CommitStoreGetFunc.History",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -777,9 +745,7 @@
                 "identifier": "CommitStoreGetFuncCall",
                 "newPage": false,
                 "searchKey": "compression.CommitStoreGetFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -797,9 +763,7 @@
                       "identifier": "CommitStoreGetFuncCall.Args",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -819,9 +783,7 @@
                       "identifier": "CommitStoreGetFuncCall.Results",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -844,9 +806,7 @@
                 "identifier": "CommitStoreGetMetadataFunc",
                 "newPage": false,
                 "searchKey": "compression.CommitStoreGetMetadataFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -864,9 +824,7 @@
                       "identifier": "CommitStoreGetMetadataFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetMetadataFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -886,9 +844,7 @@
                       "identifier": "CommitStoreGetMetadataFunc.PushHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetMetadataFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -908,9 +864,7 @@
                       "identifier": "CommitStoreGetMetadataFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetMetadataFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -930,9 +884,7 @@
                       "identifier": "CommitStoreGetMetadataFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetMetadataFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -952,7 +904,9 @@
                       "identifier": "CommitStoreGetMetadataFunc.nextHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetMetadataFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -972,7 +926,9 @@
                       "identifier": "CommitStoreGetMetadataFunc.appendCall",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetMetadataFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -992,9 +948,7 @@
                       "identifier": "CommitStoreGetMetadataFunc.History",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetMetadataFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1017,9 +971,7 @@
                 "identifier": "CommitStoreGetMetadataFuncCall",
                 "newPage": false,
                 "searchKey": "compression.CommitStoreGetMetadataFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1037,9 +989,7 @@
                       "identifier": "CommitStoreGetMetadataFuncCall.Args",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetMetadataFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1059,9 +1009,7 @@
                       "identifier": "CommitStoreGetMetadataFuncCall.Results",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreGetMetadataFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1084,9 +1032,7 @@
                 "identifier": "CommitStoreInsertCommitsFunc",
                 "newPage": false,
                 "searchKey": "compression.CommitStoreInsertCommitsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1104,9 +1050,7 @@
                       "identifier": "CommitStoreInsertCommitsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreInsertCommitsFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1126,9 +1070,7 @@
                       "identifier": "CommitStoreInsertCommitsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreInsertCommitsFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1148,9 +1090,7 @@
                       "identifier": "CommitStoreInsertCommitsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreInsertCommitsFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1170,9 +1110,7 @@
                       "identifier": "CommitStoreInsertCommitsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreInsertCommitsFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1192,7 +1130,9 @@
                       "identifier": "CommitStoreInsertCommitsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreInsertCommitsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1212,7 +1152,9 @@
                       "identifier": "CommitStoreInsertCommitsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreInsertCommitsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1232,9 +1174,7 @@
                       "identifier": "CommitStoreInsertCommitsFunc.History",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreInsertCommitsFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1257,9 +1197,7 @@
                 "identifier": "CommitStoreInsertCommitsFuncCall",
                 "newPage": false,
                 "searchKey": "compression.CommitStoreInsertCommitsFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1277,9 +1215,7 @@
                       "identifier": "CommitStoreInsertCommitsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreInsertCommitsFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1299,9 +1235,7 @@
                       "identifier": "CommitStoreInsertCommitsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreInsertCommitsFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1324,9 +1258,7 @@
                 "identifier": "CommitStoreSaveFunc",
                 "newPage": false,
                 "searchKey": "compression.CommitStoreSaveFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1344,9 +1276,7 @@
                       "identifier": "CommitStoreSaveFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreSaveFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1366,9 +1296,7 @@
                       "identifier": "CommitStoreSaveFunc.PushHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreSaveFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1388,9 +1316,7 @@
                       "identifier": "CommitStoreSaveFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreSaveFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1410,9 +1336,7 @@
                       "identifier": "CommitStoreSaveFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreSaveFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1432,7 +1356,9 @@
                       "identifier": "CommitStoreSaveFunc.nextHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreSaveFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1452,7 +1378,9 @@
                       "identifier": "CommitStoreSaveFunc.appendCall",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreSaveFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1472,9 +1400,7 @@
                       "identifier": "CommitStoreSaveFunc.History",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreSaveFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1497,9 +1423,7 @@
                 "identifier": "CommitStoreSaveFuncCall",
                 "newPage": false,
                 "searchKey": "compression.CommitStoreSaveFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1517,9 +1441,7 @@
                       "identifier": "CommitStoreSaveFuncCall.Args",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreSaveFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1539,9 +1461,7 @@
                       "identifier": "CommitStoreSaveFuncCall.Results",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreSaveFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1564,9 +1484,7 @@
                 "identifier": "CommitStoreUpsertMetadataStampFunc",
                 "newPage": false,
                 "searchKey": "compression.CommitStoreUpsertMetadataStampFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1584,9 +1502,7 @@
                       "identifier": "CommitStoreUpsertMetadataStampFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1606,9 +1522,7 @@
                       "identifier": "CommitStoreUpsertMetadataStampFunc.PushHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1628,9 +1542,7 @@
                       "identifier": "CommitStoreUpsertMetadataStampFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1650,9 +1562,7 @@
                       "identifier": "CommitStoreUpsertMetadataStampFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1672,7 +1582,9 @@
                       "identifier": "CommitStoreUpsertMetadataStampFunc.nextHook",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1692,7 +1604,9 @@
                       "identifier": "CommitStoreUpsertMetadataStampFunc.appendCall",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1712,9 +1626,7 @@
                       "identifier": "CommitStoreUpsertMetadataStampFunc.History",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1737,9 +1649,7 @@
                 "identifier": "CommitStoreUpsertMetadataStampFuncCall",
                 "newPage": false,
                 "searchKey": "compression.CommitStoreUpsertMetadataStampFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1757,9 +1667,7 @@
                       "identifier": "CommitStoreUpsertMetadataStampFuncCall.Args",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreUpsertMetadataStampFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1779,9 +1687,7 @@
                       "identifier": "CommitStoreUpsertMetadataStampFuncCall.Results",
                       "newPage": false,
                       "searchKey": "compression.CommitStoreUpsertMetadataStampFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1804,9 +1710,7 @@
                 "identifier": "RepoStore",
                 "newPage": false,
                 "searchKey": "compression.RepoStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1826,9 +1730,7 @@
                 "identifier": "CommitIndexer",
                 "newPage": false,
                 "searchKey": "compression.CommitIndexer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1846,9 +1748,7 @@
                       "identifier": "NewCommitIndexer",
                       "newPage": false,
                       "searchKey": "compression.NewCommitIndexer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1868,9 +1768,7 @@
                       "identifier": "CommitIndexer.Handler",
                       "newPage": false,
                       "searchKey": "compression.CommitIndexer.Handler",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1890,7 +1788,9 @@
                       "identifier": "CommitIndexer.indexAll",
                       "newPage": false,
                       "searchKey": "compression.CommitIndexer.indexAll",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1910,7 +1810,9 @@
                       "identifier": "CommitIndexer.indexRepository",
                       "newPage": false,
                       "searchKey": "compression.CommitIndexer.indexRepository",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1930,7 +1832,9 @@
                       "identifier": "CommitIndexer.index",
                       "newPage": false,
                       "searchKey": "compression.CommitIndexer.index",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1956,7 +1860,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1974,9 +1880,7 @@
                 "identifier": "NewCommitIndexerWorker",
                 "newPage": false,
                 "searchKey": "compression.NewCommitIndexerWorker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1996,7 +1900,9 @@
                 "identifier": "getCommits",
                 "newPage": false,
                 "searchKey": "compression.getCommits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2016,7 +1922,9 @@
                 "identifier": "max",
                 "newPage": false,
                 "searchKey": "compression.max",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2036,7 +1944,9 @@
                 "identifier": "TestCommitIndexer_indexAll",
                 "newPage": false,
                 "searchKey": "compression.TestCommitIndexer_indexAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2056,7 +1966,9 @@
                 "identifier": "Test_getMetadata_InsertNewRecord",
                 "newPage": false,
                 "searchKey": "compression.Test_getMetadata_InsertNewRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2076,7 +1988,9 @@
                 "identifier": "Test_getMetadata_NoInsertRequired",
                 "newPage": false,
                 "searchKey": "compression.Test_getMetadata_NoInsertRequired",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2096,7 +2010,9 @@
                 "identifier": "mockIterator",
                 "newPage": false,
                 "searchKey": "compression.mockIterator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2116,7 +2032,9 @@
                 "identifier": "commit",
                 "newPage": false,
                 "searchKey": "compression.commit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2136,7 +2054,9 @@
                 "identifier": "mockCommits",
                 "newPage": false,
                 "searchKey": "compression.mockCommits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2156,7 +2076,9 @@
                 "identifier": "mockIds",
                 "newPage": false,
                 "searchKey": "compression.mockIds",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

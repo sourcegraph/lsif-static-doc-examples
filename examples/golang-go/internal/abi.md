@@ -22,11 +22,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IntArgRegs" href="#IntArgRegs">const IntArgRegs</a>
 
 ```
 searchKey: abi.IntArgRegs
-tags: [exported]
 ```
 
 ```Go
@@ -39,7 +42,6 @@ IntArgRegs is the number of registers dedicated to passing integer argument valu
 
 ```
 searchKey: abi.FloatArgRegs
-tags: [exported]
 ```
 
 ```Go
@@ -52,7 +54,6 @@ FloatArgRegs is the number of registers dedicated to passing floating-point argu
 
 ```
 searchKey: abi.EffectiveFloatRegSize
-tags: [exported]
 ```
 
 ```Go
@@ -67,10 +68,15 @@ For platforms that support larger floating point register widths, such as x87's 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="FuncPCTestFnAddr" href="#FuncPCTestFnAddr">var FuncPCTestFnAddr</a>
 
 ```
 searchKey: abi.FuncPCTestFnAddr
+tags: [private]
 ```
 
 ```Go
@@ -80,11 +86,14 @@ var FuncPCTestFnAddr uintptr // address of FuncPCTestFn, directly retrieved from
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="RegArgs" href="#RegArgs">type RegArgs struct</a>
 
 ```
 searchKey: abi.RegArgs
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +124,6 @@ RegArgs also contains additional space to hold pointers when it may not be safe 
 
 ```
 searchKey: abi.IntArgRegBitmap
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +136,6 @@ IntArgRegBitmap is a bitmap large enough to hold one bit per integer argument/re
 
 ```
 searchKey: abi.IntArgRegBitmap.Set
-tags: [exported]
 ```
 
 ```Go
@@ -141,7 +148,6 @@ Set sets the i'th bit of the bitmap to 1.
 
 ```
 searchKey: abi.IntArgRegBitmap.Get
-tags: [exported]
 ```
 
 ```Go
@@ -154,11 +160,14 @@ nosplit because it's called in extremely sensitive contexts, like on the reflect
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="FuncPCABI0" href="#FuncPCABI0">func FuncPCABI0(f interface{}) uintptr</a>
 
 ```
 searchKey: abi.FuncPCABI0
-tags: [exported]
 ```
 
 ```Go
@@ -173,7 +182,6 @@ Implemented as a compile intrinsic.
 
 ```
 searchKey: abi.FuncPCABIInternal
-tags: [exported]
 ```
 
 ```Go
@@ -188,6 +196,7 @@ Implemented as a compile intrinsic.
 
 ```
 searchKey: abi.FuncPCTestFn
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +207,7 @@ func FuncPCTestFn()
 
 ```
 searchKey: abi.FuncPCTest
+tags: [private]
 ```
 
 ```Go

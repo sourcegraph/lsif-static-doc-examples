@@ -43,7 +43,7 @@ Package bzip2 implements bzip2 decompression.
 * [Functions](#func)
     * [func NewReader(r io.Reader) io.Reader](#NewReader)
     * [func inverseBWT(tt []uint32, origPtr uint, c []uint) uint32](#inverseBWT)
-    * [func init()](#init)
+    * [func init()](#init.bzip2.go)
     * [func updateCRC(val uint32, b []byte) uint32](#updateCRC)
     * [func buildHuffmanNode(t *huffmanTree, codes []huffmanCode, level uint32) (nodeIndex uint16, err error)](#buildHuffmanNode)
     * [func mustDecodeHex(s string) []byte](#mustDecodeHex)
@@ -61,14 +61,11 @@ Package bzip2 implements bzip2 decompression.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="bzip2FileMagic" href="#bzip2FileMagic">const bzip2FileMagic</a>
 
 ```
 searchKey: bzip2.bzip2FileMagic
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +77,7 @@ const bzip2FileMagic = 0x425a // "BZ"
 
 ```
 searchKey: bzip2.bzip2BlockMagic
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +88,7 @@ const bzip2BlockMagic = 0x314159265359
 
 ```
 searchKey: bzip2.bzip2FinalMagic
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +99,7 @@ const bzip2FinalMagic = 0x177245385090
 
 ```
 searchKey: bzip2.invalidNodeValue
+tags: [private]
 ```
 
 ```Go
@@ -110,14 +110,11 @@ invalidNodeValue is an invalid index which marks a leaf node in the tree.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="crctab" href="#crctab">var crctab</a>
 
 ```
 searchKey: bzip2.crctab
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +125,7 @@ var crctab [256]uint32
 
 ```
 searchKey: bzip2.digits
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +136,7 @@ var digits = mustLoadFile("testdata/e.txt.bz2")
 
 ```
 searchKey: bzip2.newton
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +147,7 @@ var newton = mustLoadFile("testdata/Isaac.Newton-Opticks.txt.bz2")
 
 ```
 searchKey: bzip2.random
+tags: [private]
 ```
 
 ```Go
@@ -156,14 +156,11 @@ var random = mustLoadFile("testdata/random.data.bz2")
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="bitReader" href="#bitReader">type bitReader struct</a>
 
 ```
 searchKey: bzip2.bitReader
+tags: [private]
 ```
 
 ```Go
@@ -181,6 +178,7 @@ bitReader wraps an io.Reader and provides the ability to read values, bit-by-bit
 
 ```
 searchKey: bzip2.newBitReader
+tags: [private]
 ```
 
 ```Go
@@ -193,6 +191,7 @@ newBitReader returns a new bitReader reading from r. If r is not already an io.B
 
 ```
 searchKey: bzip2.bitReader.ReadBits64
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +204,7 @@ ReadBits64 reads the given number of bits and returns them in the least-signific
 
 ```
 searchKey: bzip2.bitReader.ReadBits
+tags: [private]
 ```
 
 ```Go
@@ -215,6 +215,7 @@ func (br *bitReader) ReadBits(bits uint) (n int)
 
 ```
 searchKey: bzip2.bitReader.ReadBit
+tags: [private]
 ```
 
 ```Go
@@ -225,6 +226,7 @@ func (br *bitReader) ReadBit() bool
 
 ```
 searchKey: bzip2.bitReader.Err
+tags: [private]
 ```
 
 ```Go
@@ -235,7 +237,6 @@ func (br *bitReader) Err() error
 
 ```
 searchKey: bzip2.StructuralError
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +249,6 @@ A StructuralError is returned when the bzip2 data is found to be syntactically i
 
 ```
 searchKey: bzip2.StructuralError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -259,6 +259,7 @@ func (s StructuralError) Error() string
 
 ```
 searchKey: bzip2.reader
+tags: [private]
 ```
 
 ```Go
@@ -288,6 +289,7 @@ A reader decompresses bzip2 compressed data.
 
 ```
 searchKey: bzip2.reader.setup
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +302,7 @@ setup parses the bzip2 header.
 
 ```
 searchKey: bzip2.reader.Read
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +313,7 @@ func (bz2 *reader) Read(buf []byte) (n int, err error)
 
 ```
 searchKey: bzip2.reader.readFromBlock
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +324,7 @@ func (bz2 *reader) readFromBlock(buf []byte) int
 
 ```
 searchKey: bzip2.reader.read
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +335,7 @@ func (bz2 *reader) read(buf []byte) (int, error)
 
 ```
 searchKey: bzip2.reader.readBlock
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +348,7 @@ readBlock reads a bzip2 block. The magic number should already have been consume
 
 ```
 searchKey: bzip2.huffmanTree
+tags: [private]
 ```
 
 ```Go
@@ -360,6 +367,7 @@ A huffmanTree is a binary tree which is navigated, bit-by-bit to reach a symbol.
 
 ```
 searchKey: bzip2.newHuffmanTree
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +380,7 @@ newHuffmanTree builds a Huffman tree from a slice containing the code lengths of
 
 ```
 searchKey: bzip2.huffmanTree.Decode
+tags: [private]
 ```
 
 ```Go
@@ -384,6 +393,7 @@ Decode reads bits from the given bitReader and navigates the tree until a symbol
 
 ```
 searchKey: bzip2.huffmanNode
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +411,7 @@ The symbols are uint16s because bzip2 encodes not only MTF indexes in the tree, 
 
 ```
 searchKey: bzip2.huffmanSymbolLengthPair
+tags: [private]
 ```
 
 ```Go
@@ -416,6 +427,7 @@ huffmanSymbolLengthPair contains a symbol and its code length.
 
 ```
 searchKey: bzip2.huffmanCode
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +444,7 @@ huffmanCode contains a symbol, its code and code length.
 
 ```
 searchKey: bzip2.moveToFrontDecoder
+tags: [private]
 ```
 
 ```Go
@@ -444,6 +457,7 @@ moveToFrontDecoder implements a move-to-front list. Such a list is an efficient 
 
 ```
 searchKey: bzip2.newMTFDecoder
+tags: [private]
 ```
 
 ```Go
@@ -456,6 +470,7 @@ newMTFDecoder creates a move-to-front decoder with an explicit initial list of s
 
 ```
 searchKey: bzip2.newMTFDecoderWithRange
+tags: [private]
 ```
 
 ```Go
@@ -468,6 +483,7 @@ newMTFDecoderWithRange creates a move-to-front decoder with an initial symbol li
 
 ```
 searchKey: bzip2.moveToFrontDecoder.Decode
+tags: [private]
 ```
 
 ```Go
@@ -478,6 +494,7 @@ func (m moveToFrontDecoder) Decode(n int) (b byte)
 
 ```
 searchKey: bzip2.moveToFrontDecoder.First
+tags: [private]
 ```
 
 ```Go
@@ -488,15 +505,10 @@ First returns the symbol at the front of the list.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NewReader" href="#NewReader">func NewReader(r io.Reader) io.Reader</a>
 
 ```
 searchKey: bzip2.NewReader
-tags: [exported]
 ```
 
 ```Go
@@ -509,6 +521,7 @@ NewReader returns an io.Reader which decompresses bzip2 data from r. If r does n
 
 ```
 searchKey: bzip2.inverseBWT
+tags: [private]
 ```
 
 ```Go
@@ -519,10 +532,11 @@ inverseBWT implements the inverse Burrows-Wheeler transform as described in [htt
 
 This also implements the `single array' method from the bzip2 source code which leaves the output, still shuffled, in the bottom 8 bits of tt with the index of the next byte in the top 24-bits. The index of the first byte is returned. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.bzip2.go" href="#init.bzip2.go">func init()</a>
 
 ```
 searchKey: bzip2.init
+tags: [private]
 ```
 
 ```Go
@@ -533,6 +547,7 @@ func init()
 
 ```
 searchKey: bzip2.updateCRC
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +560,7 @@ updateCRC updates the crc value to incorporate the data in b. The initial value 
 
 ```
 searchKey: bzip2.buildHuffmanNode
+tags: [private]
 ```
 
 ```Go
@@ -557,6 +573,7 @@ buildHuffmanNode takes a slice of sorted huffmanCodes and builds a node in the H
 
 ```
 searchKey: bzip2.mustDecodeHex
+tags: [private]
 ```
 
 ```Go
@@ -567,6 +584,7 @@ func mustDecodeHex(s string) []byte
 
 ```
 searchKey: bzip2.mustLoadFile
+tags: [private]
 ```
 
 ```Go
@@ -577,6 +595,7 @@ func mustLoadFile(f string) []byte
 
 ```
 searchKey: bzip2.trim
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +606,7 @@ func trim(b []byte) string
 
 ```
 searchKey: bzip2.TestReader
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +617,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: bzip2.TestBitReader
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +628,7 @@ func TestBitReader(t *testing.T)
 
 ```
 searchKey: bzip2.TestMTF
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +639,7 @@ func TestMTF(t *testing.T)
 
 ```
 searchKey: bzip2.TestZeroRead
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +650,7 @@ func TestZeroRead(t *testing.T)
 
 ```
 searchKey: bzip2.benchmarkDecode
+tags: [private]
 ```
 
 ```Go
@@ -637,6 +661,7 @@ func benchmarkDecode(b *testing.B, compressed []byte)
 
 ```
 searchKey: bzip2.BenchmarkDecodeDigits
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +672,7 @@ func BenchmarkDecodeDigits(b *testing.B)
 
 ```
 searchKey: bzip2.BenchmarkDecodeNewton
+tags: [private]
 ```
 
 ```Go
@@ -657,6 +683,7 @@ func BenchmarkDecodeNewton(b *testing.B)
 
 ```
 searchKey: bzip2.BenchmarkDecodeRand
+tags: [private]
 ```
 
 ```Go

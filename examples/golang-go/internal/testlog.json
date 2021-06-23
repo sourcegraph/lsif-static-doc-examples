@@ -4,7 +4,9 @@
     "identifier": "testlog",
     "newPage": true,
     "searchKey": "internal/testlog",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "panicOnExit0",
                 "newPage": false,
                 "searchKey": "testlog.panicOnExit0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "logger",
                 "newPage": false,
                 "searchKey": "testlog.logger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,9 +111,7 @@
                 "identifier": "Interface",
                 "newPage": false,
                 "searchKey": "testlog.Interface",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -121,9 +129,7 @@
                       "identifier": "Logger",
                       "newPage": false,
                       "searchKey": "testlog.Logger",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -149,7 +155,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -167,9 +175,7 @@
                 "identifier": "PanicOnExit0",
                 "newPage": false,
                 "searchKey": "testlog.PanicOnExit0",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -189,9 +195,7 @@
                 "identifier": "SetPanicOnExit0",
                 "newPage": false,
                 "searchKey": "testlog.SetPanicOnExit0",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -211,9 +215,7 @@
                 "identifier": "SetLogger",
                 "newPage": false,
                 "searchKey": "testlog.SetLogger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -233,9 +235,7 @@
                 "identifier": "Getenv",
                 "newPage": false,
                 "searchKey": "testlog.Getenv",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -255,9 +255,7 @@
                 "identifier": "Open",
                 "newPage": false,
                 "searchKey": "testlog.Open",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -277,9 +275,7 @@
                 "identifier": "Stat",
                 "newPage": false,
                 "searchKey": "testlog.Stat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

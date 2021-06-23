@@ -23,10 +23,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="eofErrorTests" href="#eofErrorTests">var eofErrorTests</a>
 
 ```
 searchKey: poll_test.eofErrorTests
+tags: [private]
 ```
 
 ```Go
@@ -35,10 +40,15 @@ var eofErrorTests = ...
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="badStateFile" href="#badStateFile">func badStateFile() (*os.File, error)</a>
 
 ```
 searchKey: poll_test.badStateFile
+tags: [private]
 ```
 
 ```Go
@@ -49,6 +59,7 @@ func badStateFile() (*os.File, error)
 
 ```
 searchKey: poll_test.isBadStateFileError
+tags: [private]
 ```
 
 ```Go
@@ -59,6 +70,7 @@ func isBadStateFileError(err error) (string, bool)
 
 ```
 searchKey: poll_test.TestReadError
+tags: [private]
 ```
 
 ```Go
@@ -69,6 +81,7 @@ func TestReadError(t *testing.T)
 
 ```
 searchKey: poll_test.parseReadError
+tags: [private]
 ```
 
 ```Go
@@ -79,6 +92,7 @@ func parseReadError(nestedErr error, verify func(error) (string, bool)) error
 
 ```
 searchKey: poll_test.TestMutexLock
+tags: [private]
 ```
 
 ```Go
@@ -89,6 +103,7 @@ func TestMutexLock(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexClose
+tags: [private]
 ```
 
 ```Go
@@ -99,6 +114,7 @@ func TestMutexClose(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexCloseUnblock
+tags: [private]
 ```
 
 ```Go
@@ -109,6 +125,7 @@ func TestMutexCloseUnblock(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexPanic
+tags: [private]
 ```
 
 ```Go
@@ -119,6 +136,7 @@ func TestMutexPanic(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexOverflowPanic
+tags: [private]
 ```
 
 ```Go
@@ -129,6 +147,7 @@ func TestMutexOverflowPanic(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexStress
+tags: [private]
 ```
 
 ```Go
@@ -139,6 +158,7 @@ func TestMutexStress(t *testing.T)
 
 ```
 searchKey: poll_test.TestEOFError
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +169,7 @@ func TestEOFError(t *testing.T)
 
 ```
 searchKey: poll_test.TestRead
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +180,7 @@ func TestRead(t *testing.T)
 
 ```
 searchKey: poll_test.specialFiles
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +191,7 @@ func specialFiles() []string
 
 ```
 searchKey: poll_test.TestConsume
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "endpoint",
     "newPage": true,
     "searchKey": "internal/endpoint",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "metricEndpointSize",
                 "newPage": false,
                 "searchKey": "endpoint.metricEndpointSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "hashFn",
                 "newPage": false,
                 "searchKey": "endpoint.hashFn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "hashMap",
                 "newPage": false,
                 "searchKey": "endpoint.hashMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -119,7 +131,9 @@
                       "identifier": "hashMapNew",
                       "newPage": false,
                       "searchKey": "endpoint.hashMapNew",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -139,7 +153,9 @@
                       "identifier": "endpointsToMap",
                       "newPage": false,
                       "searchKey": "endpoint.endpointsToMap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -159,7 +175,9 @@
                       "identifier": "newConsistentHashMap",
                       "newPage": false,
                       "searchKey": "endpoint.newConsistentHashMap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -179,7 +197,9 @@
                       "identifier": "hashMap.isEmpty",
                       "newPage": false,
                       "searchKey": "endpoint.hashMap.isEmpty",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -199,7 +219,9 @@
                       "identifier": "hashMap.add",
                       "newPage": false,
                       "searchKey": "endpoint.hashMap.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -219,7 +241,9 @@
                       "identifier": "hashMap.get",
                       "newPage": false,
                       "searchKey": "endpoint.hashMap.get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -242,9 +266,7 @@
                 "identifier": "Map",
                 "newPage": false,
                 "searchKey": "endpoint.Map",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -262,9 +284,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "endpoint.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -284,9 +304,7 @@
                       "identifier": "Static",
                       "newPage": false,
                       "searchKey": "endpoint.Static",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -306,9 +324,7 @@
                       "identifier": "Empty",
                       "newPage": false,
                       "searchKey": "endpoint.Empty",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,9 +344,7 @@
                       "identifier": "Map.String",
                       "newPage": false,
                       "searchKey": "endpoint.Map.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -350,9 +364,7 @@
                       "identifier": "Map.Get",
                       "newPage": false,
                       "searchKey": "endpoint.Map.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -372,9 +384,7 @@
                       "identifier": "Map.GetMany",
                       "newPage": false,
                       "searchKey": "endpoint.Map.GetMany",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -394,9 +404,7 @@
                       "identifier": "Map.Endpoints",
                       "newPage": false,
                       "searchKey": "endpoint.Map.Endpoints",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -416,7 +424,9 @@
                       "identifier": "Map.getUrls",
                       "newPage": false,
                       "searchKey": "endpoint.Map.getUrls",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -439,7 +449,9 @@
                 "identifier": "k8sURL",
                 "newPage": false,
                 "searchKey": "endpoint.k8sURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -457,7 +469,9 @@
                       "identifier": "parseURL",
                       "newPage": false,
                       "searchKey": "endpoint.parseURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -477,7 +491,9 @@
                       "identifier": "k8sURL.endpointURL",
                       "newPage": false,
                       "searchKey": "endpoint.k8sURL.endpointURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -503,7 +519,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -521,7 +539,9 @@
                 "identifier": "inform",
                 "newPage": false,
                 "searchKey": "endpoint.inform",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -541,7 +561,9 @@
                 "identifier": "namespace",
                 "newPage": false,
                 "searchKey": "endpoint.namespace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -561,7 +583,9 @@
                 "identifier": "loadClient",
                 "newPage": false,
                 "searchKey": "endpoint.loadClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,7 +605,9 @@
                 "identifier": "TestNew",
                 "newPage": false,
                 "searchKey": "endpoint.TestNew",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -601,7 +627,9 @@
                 "identifier": "TestStatic",
                 "newPage": false,
                 "searchKey": "endpoint.TestStatic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -621,7 +649,9 @@
                 "identifier": "TestExclude",
                 "newPage": false,
                 "searchKey": "endpoint.TestExclude",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -641,7 +671,9 @@
                 "identifier": "expectEndpoints",
                 "newPage": false,
                 "searchKey": "endpoint.expectEndpoints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -661,7 +693,9 @@
                 "identifier": "TestEndpoints",
                 "newPage": false,
                 "searchKey": "endpoint.TestEndpoints",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -681,7 +715,9 @@
                 "identifier": "TestK8sURL",
                 "newPage": false,
                 "searchKey": "endpoint.TestK8sURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -381,10 +381,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SmallestNormalFloat64" href="#SmallestNormalFloat64">const SmallestNormalFloat64</a>
 
 ```
 searchKey: math_test.SmallestNormalFloat64
+tags: [private]
 ```
 
 ```Go
@@ -398,6 +403,7 @@ arguments and expected results for boundary cases
 
 ```
 searchKey: math_test.LargestSubnormalFloat64
+tags: [private]
 ```
 
 ```Go
@@ -408,10 +414,15 @@ arguments and expected results for boundary cases
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="vf" href="#vf">var vf</a>
 
 ```
 searchKey: math_test.vf
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +433,7 @@ var vf = ...
 
 ```
 searchKey: math_test.acos
+tags: [private]
 ```
 
 ```Go
@@ -434,6 +446,7 @@ The expected results below were computed by the high precision calculators at [h
 
 ```
 searchKey: math_test.acosh
+tags: [private]
 ```
 
 ```Go
@@ -444,6 +457,7 @@ var acosh = ...
 
 ```
 searchKey: math_test.asin
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +468,7 @@ var asin = ...
 
 ```
 searchKey: math_test.asinh
+tags: [private]
 ```
 
 ```Go
@@ -464,6 +479,7 @@ var asinh = ...
 
 ```
 searchKey: math_test.atan
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +490,7 @@ var atan = ...
 
 ```
 searchKey: math_test.atanh
+tags: [private]
 ```
 
 ```Go
@@ -484,6 +501,7 @@ var atanh = ...
 
 ```
 searchKey: math_test.atan2
+tags: [private]
 ```
 
 ```Go
@@ -494,6 +512,7 @@ var atan2 = ...
 
 ```
 searchKey: math_test.cbrt
+tags: [private]
 ```
 
 ```Go
@@ -504,6 +523,7 @@ var cbrt = ...
 
 ```
 searchKey: math_test.ceil
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +534,7 @@ var ceil = ...
 
 ```
 searchKey: math_test.copysign
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +545,7 @@ var copysign = ...
 
 ```
 searchKey: math_test.cos
+tags: [private]
 ```
 
 ```Go
@@ -534,6 +556,7 @@ var cos = ...
 
 ```
 searchKey: math_test.cosLarge
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +569,7 @@ Results for 100000 * Pi + vf[i]
 
 ```
 searchKey: math_test.cosh
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +580,7 @@ var cosh = ...
 
 ```
 searchKey: math_test.erf
+tags: [private]
 ```
 
 ```Go
@@ -566,6 +591,7 @@ var erf = ...
 
 ```
 searchKey: math_test.erfc
+tags: [private]
 ```
 
 ```Go
@@ -576,6 +602,7 @@ var erfc = ...
 
 ```
 searchKey: math_test.erfinv
+tags: [private]
 ```
 
 ```Go
@@ -586,6 +613,7 @@ var erfinv = ...
 
 ```
 searchKey: math_test.exp
+tags: [private]
 ```
 
 ```Go
@@ -596,6 +624,7 @@ var exp = ...
 
 ```
 searchKey: math_test.expm1
+tags: [private]
 ```
 
 ```Go
@@ -606,6 +635,7 @@ var expm1 = ...
 
 ```
 searchKey: math_test.expm1Large
+tags: [private]
 ```
 
 ```Go
@@ -616,6 +646,7 @@ var expm1Large = ...
 
 ```
 searchKey: math_test.exp2
+tags: [private]
 ```
 
 ```Go
@@ -626,6 +657,7 @@ var exp2 = ...
 
 ```
 searchKey: math_test.fabs
+tags: [private]
 ```
 
 ```Go
@@ -636,6 +668,7 @@ var fabs = ...
 
 ```
 searchKey: math_test.fdim
+tags: [private]
 ```
 
 ```Go
@@ -646,6 +679,7 @@ var fdim = ...
 
 ```
 searchKey: math_test.floor
+tags: [private]
 ```
 
 ```Go
@@ -656,6 +690,7 @@ var floor = ...
 
 ```
 searchKey: math_test.fmod
+tags: [private]
 ```
 
 ```Go
@@ -666,6 +701,7 @@ var fmod = ...
 
 ```
 searchKey: math_test.frexp
+tags: [private]
 ```
 
 ```Go
@@ -676,6 +712,7 @@ var frexp = ...
 
 ```
 searchKey: math_test.gamma
+tags: [private]
 ```
 
 ```Go
@@ -686,6 +723,7 @@ var gamma = ...
 
 ```
 searchKey: math_test.j0
+tags: [private]
 ```
 
 ```Go
@@ -696,6 +734,7 @@ var j0 = ...
 
 ```
 searchKey: math_test.j1
+tags: [private]
 ```
 
 ```Go
@@ -706,6 +745,7 @@ var j1 = ...
 
 ```
 searchKey: math_test.j2
+tags: [private]
 ```
 
 ```Go
@@ -716,6 +756,7 @@ var j2 = ...
 
 ```
 searchKey: math_test.jM3
+tags: [private]
 ```
 
 ```Go
@@ -726,6 +767,7 @@ var jM3 = ...
 
 ```
 searchKey: math_test.lgamma
+tags: [private]
 ```
 
 ```Go
@@ -736,6 +778,7 @@ var lgamma = ...
 
 ```
 searchKey: math_test.log
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +789,7 @@ var log = ...
 
 ```
 searchKey: math_test.logb
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +800,7 @@ var logb = ...
 
 ```
 searchKey: math_test.log10
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +811,7 @@ var log10 = ...
 
 ```
 searchKey: math_test.log1p
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +822,7 @@ var log1p = ...
 
 ```
 searchKey: math_test.log2
+tags: [private]
 ```
 
 ```Go
@@ -786,6 +833,7 @@ var log2 = ...
 
 ```
 searchKey: math_test.modf
+tags: [private]
 ```
 
 ```Go
@@ -796,6 +844,7 @@ var modf = ...
 
 ```
 searchKey: math_test.nextafter32
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +855,7 @@ var nextafter32 = ...
 
 ```
 searchKey: math_test.nextafter64
+tags: [private]
 ```
 
 ```Go
@@ -816,6 +866,7 @@ var nextafter64 = ...
 
 ```
 searchKey: math_test.pow
+tags: [private]
 ```
 
 ```Go
@@ -826,6 +877,7 @@ var pow = ...
 
 ```
 searchKey: math_test.remainder
+tags: [private]
 ```
 
 ```Go
@@ -836,6 +888,7 @@ var remainder = ...
 
 ```
 searchKey: math_test.round
+tags: [private]
 ```
 
 ```Go
@@ -857,6 +910,7 @@ var round = []float64{
 
 ```
 searchKey: math_test.signbit
+tags: [private]
 ```
 
 ```Go
@@ -878,6 +932,7 @@ var signbit = []bool{
 
 ```
 searchKey: math_test.sin
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +943,7 @@ var sin = ...
 
 ```
 searchKey: math_test.sinLarge
+tags: [private]
 ```
 
 ```Go
@@ -900,6 +956,7 @@ Results for 100000 * Pi + vf[i]
 
 ```
 searchKey: math_test.sinh
+tags: [private]
 ```
 
 ```Go
@@ -910,6 +967,7 @@ var sinh = ...
 
 ```
 searchKey: math_test.sqrt
+tags: [private]
 ```
 
 ```Go
@@ -920,6 +978,7 @@ var sqrt = ...
 
 ```
 searchKey: math_test.tan
+tags: [private]
 ```
 
 ```Go
@@ -930,6 +989,7 @@ var tan = ...
 
 ```
 searchKey: math_test.tanLarge
+tags: [private]
 ```
 
 ```Go
@@ -942,6 +1002,7 @@ Results for 100000 * Pi + vf[i]
 
 ```
 searchKey: math_test.tanh
+tags: [private]
 ```
 
 ```Go
@@ -952,6 +1013,7 @@ var tanh = ...
 
 ```
 searchKey: math_test.trunc
+tags: [private]
 ```
 
 ```Go
@@ -962,6 +1024,7 @@ var trunc = ...
 
 ```
 searchKey: math_test.y0
+tags: [private]
 ```
 
 ```Go
@@ -972,6 +1035,7 @@ var y0 = ...
 
 ```
 searchKey: math_test.y1
+tags: [private]
 ```
 
 ```Go
@@ -982,6 +1046,7 @@ var y1 = ...
 
 ```
 searchKey: math_test.y2
+tags: [private]
 ```
 
 ```Go
@@ -992,6 +1057,7 @@ var y2 = ...
 
 ```
 searchKey: math_test.yM3
+tags: [private]
 ```
 
 ```Go
@@ -1002,6 +1068,7 @@ var yM3 = ...
 
 ```
 searchKey: math_test.vfacosSC
+tags: [private]
 ```
 
 ```Go
@@ -1019,6 +1086,7 @@ arguments and expected results for special cases
 
 ```
 searchKey: math_test.acosSC
+tags: [private]
 ```
 
 ```Go
@@ -1034,6 +1102,7 @@ var acosSC = []float64{
 
 ```
 searchKey: math_test.vfacoshSC
+tags: [private]
 ```
 
 ```Go
@@ -1050,6 +1119,7 @@ var vfacoshSC = []float64{
 
 ```
 searchKey: math_test.acoshSC
+tags: [private]
 ```
 
 ```Go
@@ -1066,6 +1136,7 @@ var acoshSC = []float64{
 
 ```
 searchKey: math_test.vfasinSC
+tags: [private]
 ```
 
 ```Go
@@ -1082,6 +1153,7 @@ var vfasinSC = []float64{
 
 ```
 searchKey: math_test.asinSC
+tags: [private]
 ```
 
 ```Go
@@ -1098,6 +1170,7 @@ var asinSC = []float64{
 
 ```
 searchKey: math_test.vfasinhSC
+tags: [private]
 ```
 
 ```Go
@@ -1114,6 +1187,7 @@ var vfasinhSC = []float64{
 
 ```
 searchKey: math_test.asinhSC
+tags: [private]
 ```
 
 ```Go
@@ -1130,6 +1204,7 @@ var asinhSC = []float64{
 
 ```
 searchKey: math_test.vfatanSC
+tags: [private]
 ```
 
 ```Go
@@ -1146,6 +1221,7 @@ var vfatanSC = []float64{
 
 ```
 searchKey: math_test.atanSC
+tags: [private]
 ```
 
 ```Go
@@ -1162,6 +1238,7 @@ var atanSC = []float64{
 
 ```
 searchKey: math_test.vfatanhSC
+tags: [private]
 ```
 
 ```Go
@@ -1182,6 +1259,7 @@ var vfatanhSC = []float64{
 
 ```
 searchKey: math_test.atanhSC
+tags: [private]
 ```
 
 ```Go
@@ -1192,6 +1270,7 @@ var atanhSC = ...
 
 ```
 searchKey: math_test.vfatan2SC
+tags: [private]
 ```
 
 ```Go
@@ -1202,6 +1281,7 @@ var vfatan2SC = ...
 
 ```
 searchKey: math_test.atan2SC
+tags: [private]
 ```
 
 ```Go
@@ -1212,6 +1292,7 @@ var atan2SC = ...
 
 ```
 searchKey: math_test.vfcbrtSC
+tags: [private]
 ```
 
 ```Go
@@ -1228,6 +1309,7 @@ var vfcbrtSC = []float64{
 
 ```
 searchKey: math_test.cbrtSC
+tags: [private]
 ```
 
 ```Go
@@ -1244,6 +1326,7 @@ var cbrtSC = []float64{
 
 ```
 searchKey: math_test.vfceilSC
+tags: [private]
 ```
 
 ```Go
@@ -1260,6 +1343,7 @@ var vfceilSC = []float64{
 
 ```
 searchKey: math_test.ceilSC
+tags: [private]
 ```
 
 ```Go
@@ -1276,6 +1360,7 @@ var ceilSC = []float64{
 
 ```
 searchKey: math_test.vfcopysignSC
+tags: [private]
 ```
 
 ```Go
@@ -1290,6 +1375,7 @@ var vfcopysignSC = []float64{
 
 ```
 searchKey: math_test.copysignSC
+tags: [private]
 ```
 
 ```Go
@@ -1304,6 +1390,7 @@ var copysignSC = []float64{
 
 ```
 searchKey: math_test.vfcosSC
+tags: [private]
 ```
 
 ```Go
@@ -1318,6 +1405,7 @@ var vfcosSC = []float64{
 
 ```
 searchKey: math_test.cosSC
+tags: [private]
 ```
 
 ```Go
@@ -1332,6 +1420,7 @@ var cosSC = []float64{
 
 ```
 searchKey: math_test.vfcoshSC
+tags: [private]
 ```
 
 ```Go
@@ -1348,6 +1437,7 @@ var vfcoshSC = []float64{
 
 ```
 searchKey: math_test.coshSC
+tags: [private]
 ```
 
 ```Go
@@ -1364,6 +1454,7 @@ var coshSC = []float64{
 
 ```
 searchKey: math_test.vferfSC
+tags: [private]
 ```
 
 ```Go
@@ -1382,6 +1473,7 @@ var vferfSC = []float64{
 
 ```
 searchKey: math_test.erfSC
+tags: [private]
 ```
 
 ```Go
@@ -1400,6 +1492,7 @@ var erfSC = []float64{
 
 ```
 searchKey: math_test.vferfcSC
+tags: [private]
 ```
 
 ```Go
@@ -1416,6 +1509,7 @@ var vferfcSC = []float64{
 
 ```
 searchKey: math_test.erfcSC
+tags: [private]
 ```
 
 ```Go
@@ -1432,6 +1526,7 @@ var erfcSC = []float64{
 
 ```
 searchKey: math_test.vferfinvSC
+tags: [private]
 ```
 
 ```Go
@@ -1449,6 +1544,7 @@ var vferfinvSC = []float64{
 
 ```
 searchKey: math_test.erfinvSC
+tags: [private]
 ```
 
 ```Go
@@ -1466,6 +1562,7 @@ var erfinvSC = []float64{
 
 ```
 searchKey: math_test.vferfcinvSC
+tags: [private]
 ```
 
 ```Go
@@ -1483,6 +1580,7 @@ var vferfcinvSC = []float64{
 
 ```
 searchKey: math_test.erfcinvSC
+tags: [private]
 ```
 
 ```Go
@@ -1500,6 +1598,7 @@ var erfcinvSC = []float64{
 
 ```
 searchKey: math_test.vfexpSC
+tags: [private]
 ```
 
 ```Go
@@ -1510,6 +1609,7 @@ var vfexpSC = ...
 
 ```
 searchKey: math_test.expSC
+tags: [private]
 ```
 
 ```Go
@@ -1520,6 +1620,7 @@ var expSC = ...
 
 ```
 searchKey: math_test.vfexp2SC
+tags: [private]
 ```
 
 ```Go
@@ -1530,6 +1631,7 @@ var vfexp2SC = ...
 
 ```
 searchKey: math_test.exp2SC
+tags: [private]
 ```
 
 ```Go
@@ -1549,6 +1651,7 @@ var exp2SC = []float64{
 
 ```
 searchKey: math_test.vfexpm1SC
+tags: [private]
 ```
 
 ```Go
@@ -1567,6 +1670,7 @@ var vfexpm1SC = []float64{
 
 ```
 searchKey: math_test.expm1SC
+tags: [private]
 ```
 
 ```Go
@@ -1585,6 +1689,7 @@ var expm1SC = []float64{
 
 ```
 searchKey: math_test.vffabsSC
+tags: [private]
 ```
 
 ```Go
@@ -1601,6 +1706,7 @@ var vffabsSC = []float64{
 
 ```
 searchKey: math_test.fabsSC
+tags: [private]
 ```
 
 ```Go
@@ -1617,6 +1723,7 @@ var fabsSC = []float64{
 
 ```
 searchKey: math_test.vffdimSC
+tags: [private]
 ```
 
 ```Go
@@ -1627,6 +1734,7 @@ var vffdimSC = ...
 
 ```
 searchKey: math_test.nan
+tags: [private]
 ```
 
 ```Go
@@ -1638,6 +1746,7 @@ var nan = Float64frombits(0xFFF8000000000000) // SSE2 DIVSD 0/0
 
 ```
 searchKey: math_test.vffdim2SC
+tags: [private]
 ```
 
 ```Go
@@ -1648,6 +1757,7 @@ var vffdim2SC = ...
 
 ```
 searchKey: math_test.fdimSC
+tags: [private]
 ```
 
 ```Go
@@ -1658,6 +1768,7 @@ var fdimSC = ...
 
 ```
 searchKey: math_test.fmaxSC
+tags: [private]
 ```
 
 ```Go
@@ -1668,6 +1779,7 @@ var fmaxSC = ...
 
 ```
 searchKey: math_test.fminSC
+tags: [private]
 ```
 
 ```Go
@@ -1678,6 +1790,7 @@ var fminSC = ...
 
 ```
 searchKey: math_test.vffmodSC
+tags: [private]
 ```
 
 ```Go
@@ -1688,6 +1801,7 @@ var vffmodSC = ...
 
 ```
 searchKey: math_test.fmodSC
+tags: [private]
 ```
 
 ```Go
@@ -1698,6 +1812,7 @@ var fmodSC = ...
 
 ```
 searchKey: math_test.vffrexpSC
+tags: [private]
 ```
 
 ```Go
@@ -1714,6 +1829,7 @@ var vffrexpSC = []float64{
 
 ```
 searchKey: math_test.frexpSC
+tags: [private]
 ```
 
 ```Go
@@ -1730,6 +1846,7 @@ var frexpSC = []fi{
 
 ```
 searchKey: math_test.vfgamma
+tags: [private]
 ```
 
 ```Go
@@ -1740,6 +1857,7 @@ var vfgamma = ...
 
 ```
 searchKey: math_test.vfhypotSC
+tags: [private]
 ```
 
 ```Go
@@ -1750,6 +1868,7 @@ var vfhypotSC = ...
 
 ```
 searchKey: math_test.hypotSC
+tags: [private]
 ```
 
 ```Go
@@ -1760,6 +1879,7 @@ var hypotSC = ...
 
 ```
 searchKey: math_test.ilogbSC
+tags: [private]
 ```
 
 ```Go
@@ -1775,6 +1895,7 @@ var ilogbSC = []int{
 
 ```
 searchKey: math_test.vfj0SC
+tags: [private]
 ```
 
 ```Go
@@ -1790,6 +1911,7 @@ var vfj0SC = []float64{
 
 ```
 searchKey: math_test.j0SC
+tags: [private]
 ```
 
 ```Go
@@ -1805,6 +1927,7 @@ var j0SC = []float64{
 
 ```
 searchKey: math_test.j1SC
+tags: [private]
 ```
 
 ```Go
@@ -1820,6 +1943,7 @@ var j1SC = []float64{
 
 ```
 searchKey: math_test.j2SC
+tags: [private]
 ```
 
 ```Go
@@ -1835,6 +1959,7 @@ var j2SC = []float64{
 
 ```
 searchKey: math_test.jM3SC
+tags: [private]
 ```
 
 ```Go
@@ -1850,6 +1975,7 @@ var jM3SC = []float64{
 
 ```
 searchKey: math_test.vfldexpSC
+tags: [private]
 ```
 
 ```Go
@@ -1860,6 +1986,7 @@ var vfldexpSC = ...
 
 ```
 searchKey: math_test.ldexpSC
+tags: [private]
 ```
 
 ```Go
@@ -1870,6 +1997,7 @@ var ldexpSC = ...
 
 ```
 searchKey: math_test.vflgammaSC
+tags: [private]
 ```
 
 ```Go
@@ -1888,6 +2016,7 @@ var vflgammaSC = []float64{
 
 ```
 searchKey: math_test.lgammaSC
+tags: [private]
 ```
 
 ```Go
@@ -1898,6 +2027,7 @@ var lgammaSC = ...
 
 ```
 searchKey: math_test.vflogSC
+tags: [private]
 ```
 
 ```Go
@@ -1916,6 +2046,7 @@ var vflogSC = []float64{
 
 ```
 searchKey: math_test.logSC
+tags: [private]
 ```
 
 ```Go
@@ -1934,6 +2065,7 @@ var logSC = []float64{
 
 ```
 searchKey: math_test.vflogbSC
+tags: [private]
 ```
 
 ```Go
@@ -1949,6 +2081,7 @@ var vflogbSC = []float64{
 
 ```
 searchKey: math_test.logbSC
+tags: [private]
 ```
 
 ```Go
@@ -1964,6 +2097,7 @@ var logbSC = []float64{
 
 ```
 searchKey: math_test.vflog1pSC
+tags: [private]
 ```
 
 ```Go
@@ -1974,6 +2108,7 @@ var vflog1pSC = ...
 
 ```
 searchKey: math_test.log1pSC
+tags: [private]
 ```
 
 ```Go
@@ -1984,6 +2119,7 @@ var log1pSC = ...
 
 ```
 searchKey: math_test.vfmodfSC
+tags: [private]
 ```
 
 ```Go
@@ -1999,6 +2135,7 @@ var vfmodfSC = []float64{
 
 ```
 searchKey: math_test.modfSC
+tags: [private]
 ```
 
 ```Go
@@ -2009,6 +2146,7 @@ var modfSC = ...
 
 ```
 searchKey: math_test.vfnextafter32SC
+tags: [private]
 ```
 
 ```Go
@@ -2019,6 +2157,7 @@ var vfnextafter32SC = ...
 
 ```
 searchKey: math_test.nextafter32SC
+tags: [private]
 ```
 
 ```Go
@@ -2029,6 +2168,7 @@ var nextafter32SC = ...
 
 ```
 searchKey: math_test.vfnextafter64SC
+tags: [private]
 ```
 
 ```Go
@@ -2039,6 +2179,7 @@ var vfnextafter64SC = ...
 
 ```
 searchKey: math_test.nextafter64SC
+tags: [private]
 ```
 
 ```Go
@@ -2049,6 +2190,7 @@ var nextafter64SC = ...
 
 ```
 searchKey: math_test.vfpowSC
+tags: [private]
 ```
 
 ```Go
@@ -2059,6 +2201,7 @@ var vfpowSC = ...
 
 ```
 searchKey: math_test.powSC
+tags: [private]
 ```
 
 ```Go
@@ -2069,6 +2212,7 @@ var powSC = ...
 
 ```
 searchKey: math_test.vfpow10SC
+tags: [private]
 ```
 
 ```Go
@@ -2079,6 +2223,7 @@ var vfpow10SC = ...
 
 ```
 searchKey: math_test.pow10SC
+tags: [private]
 ```
 
 ```Go
@@ -2089,6 +2234,7 @@ var pow10SC = ...
 
 ```
 searchKey: math_test.vfroundSC
+tags: [private]
 ```
 
 ```Go
@@ -2099,6 +2245,7 @@ var vfroundSC = ...
 
 ```
 searchKey: math_test.vfroundEvenSC
+tags: [private]
 ```
 
 ```Go
@@ -2109,6 +2256,7 @@ var vfroundEvenSC = ...
 
 ```
 searchKey: math_test.vfsignbitSC
+tags: [private]
 ```
 
 ```Go
@@ -2125,6 +2273,7 @@ var vfsignbitSC = []float64{
 
 ```
 searchKey: math_test.signbitSC
+tags: [private]
 ```
 
 ```Go
@@ -2141,6 +2290,7 @@ var signbitSC = []bool{
 
 ```
 searchKey: math_test.vfsinSC
+tags: [private]
 ```
 
 ```Go
@@ -2157,6 +2307,7 @@ var vfsinSC = []float64{
 
 ```
 searchKey: math_test.sinSC
+tags: [private]
 ```
 
 ```Go
@@ -2173,6 +2324,7 @@ var sinSC = []float64{
 
 ```
 searchKey: math_test.vfsinhSC
+tags: [private]
 ```
 
 ```Go
@@ -2189,6 +2341,7 @@ var vfsinhSC = []float64{
 
 ```
 searchKey: math_test.sinhSC
+tags: [private]
 ```
 
 ```Go
@@ -2205,6 +2358,7 @@ var sinhSC = []float64{
 
 ```
 searchKey: math_test.vfsqrtSC
+tags: [private]
 ```
 
 ```Go
@@ -2215,6 +2369,7 @@ var vfsqrtSC = ...
 
 ```
 searchKey: math_test.sqrtSC
+tags: [private]
 ```
 
 ```Go
@@ -2225,6 +2380,7 @@ var sqrtSC = ...
 
 ```
 searchKey: math_test.vftanhSC
+tags: [private]
 ```
 
 ```Go
@@ -2241,6 +2397,7 @@ var vftanhSC = []float64{
 
 ```
 searchKey: math_test.tanhSC
+tags: [private]
 ```
 
 ```Go
@@ -2257,6 +2414,7 @@ var tanhSC = []float64{
 
 ```
 searchKey: math_test.vfy0SC
+tags: [private]
 ```
 
 ```Go
@@ -2273,6 +2431,7 @@ var vfy0SC = []float64{
 
 ```
 searchKey: math_test.y0SC
+tags: [private]
 ```
 
 ```Go
@@ -2289,6 +2448,7 @@ var y0SC = []float64{
 
 ```
 searchKey: math_test.y1SC
+tags: [private]
 ```
 
 ```Go
@@ -2305,6 +2465,7 @@ var y1SC = []float64{
 
 ```
 searchKey: math_test.y2SC
+tags: [private]
 ```
 
 ```Go
@@ -2321,6 +2482,7 @@ var y2SC = []float64{
 
 ```
 searchKey: math_test.yM3SC
+tags: [private]
 ```
 
 ```Go
@@ -2337,6 +2499,7 @@ var yM3SC = []float64{
 
 ```
 searchKey: math_test.vffrexpBC
+tags: [private]
 ```
 
 ```Go
@@ -2347,6 +2510,7 @@ var vffrexpBC = ...
 
 ```
 searchKey: math_test.frexpBC
+tags: [private]
 ```
 
 ```Go
@@ -2357,6 +2521,7 @@ var frexpBC = ...
 
 ```
 searchKey: math_test.vfldexpBC
+tags: [private]
 ```
 
 ```Go
@@ -2367,6 +2532,7 @@ var vfldexpBC = ...
 
 ```
 searchKey: math_test.ldexpBC
+tags: [private]
 ```
 
 ```Go
@@ -2377,6 +2543,7 @@ var ldexpBC = ...
 
 ```
 searchKey: math_test.logbBC
+tags: [private]
 ```
 
 ```Go
@@ -2396,6 +2563,7 @@ var logbBC = []float64{
 
 ```
 searchKey: math_test.fmaC
+tags: [private]
 ```
 
 ```Go
@@ -2408,6 +2576,7 @@ Test cases were generated with Berkeley TestFloat-3e/testfloat_gen. [http://www.
 
 ```
 searchKey: math_test.sqrt32
+tags: [private]
 ```
 
 ```Go
@@ -2418,6 +2587,7 @@ var sqrt32 = ...
 
 ```
 searchKey: math_test.PortableFMA
+tags: [private]
 ```
 
 ```Go
@@ -2429,6 +2599,7 @@ var PortableFMA = FMA // hide call from compiler intrinsic; falls back to portab
 
 ```
 searchKey: math_test.floatTests
+tags: [private]
 ```
 
 ```Go
@@ -2439,6 +2610,7 @@ var floatTests = ...
 
 ```
 searchKey: math_test.indirectSqrt
+tags: [private]
 ```
 
 ```Go
@@ -2449,6 +2621,7 @@ var indirectSqrt = Sqrt
 
 ```
 searchKey: math_test.GlobalI
+tags: [private]
 ```
 
 ```Go
@@ -2461,6 +2634,7 @@ Global exported variables are used to store the return values of functions measu
 
 ```
 searchKey: math_test.GlobalB
+tags: [private]
 ```
 
 ```Go
@@ -2473,6 +2647,7 @@ Global exported variables are used to store the return values of functions measu
 
 ```
 searchKey: math_test.GlobalF
+tags: [private]
 ```
 
 ```Go
@@ -2485,6 +2660,7 @@ Global exported variables are used to store the return values of functions measu
 
 ```
 searchKey: math_test.copysignNeg
+tags: [private]
 ```
 
 ```Go
@@ -2495,6 +2671,7 @@ var copysignNeg = -1.0
 
 ```
 searchKey: math_test.absPos
+tags: [private]
 ```
 
 ```Go
@@ -2505,6 +2682,7 @@ var absPos = .5
 
 ```
 searchKey: math_test.pow10pos
+tags: [private]
 ```
 
 ```Go
@@ -2515,6 +2693,7 @@ var pow10pos = int(300)
 
 ```
 searchKey: math_test.pow10neg
+tags: [private]
 ```
 
 ```Go
@@ -2525,6 +2704,7 @@ var pow10neg = int(-300)
 
 ```
 searchKey: math_test.roundNeg
+tags: [private]
 ```
 
 ```Go
@@ -2535,6 +2715,7 @@ var roundNeg = float64(-2.5)
 
 ```
 searchKey: math_test.signbitPos
+tags: [private]
 ```
 
 ```Go
@@ -2545,6 +2726,7 @@ var signbitPos = 2.5
 
 ```
 searchKey: math_test.roundUint64
+tags: [private]
 ```
 
 ```Go
@@ -2555,6 +2737,7 @@ var roundUint64 = uint64(5)
 
 ```
 searchKey: math_test.roundFloat32
+tags: [private]
 ```
 
 ```Go
@@ -2565,6 +2748,7 @@ var roundFloat32 = float32(-2.5)
 
 ```
 searchKey: math_test.roundUint32
+tags: [private]
 ```
 
 ```Go
@@ -2575,6 +2759,7 @@ var roundUint32 = uint32(5)
 
 ```
 searchKey: math_test.trigHuge
+tags: [private]
 ```
 
 ```Go
@@ -2587,6 +2772,7 @@ Inputs to test trig_reduce
 
 ```
 searchKey: math_test.cosHuge
+tags: [private]
 ```
 
 ```Go
@@ -2599,6 +2785,7 @@ Results for trigHuge[i] calculated with [https://github.com/robpike/ivy](https:/
 
 ```
 searchKey: math_test.sinHuge
+tags: [private]
 ```
 
 ```Go
@@ -2609,6 +2796,7 @@ var sinHuge = ...
 
 ```
 searchKey: math_test.tanHuge
+tags: [private]
 ```
 
 ```Go
@@ -2617,10 +2805,15 @@ var tanHuge = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="fi" href="#fi">type fi struct</a>
 
 ```
 searchKey: math_test.fi
+tags: [private]
 ```
 
 ```Go
@@ -2634,6 +2827,7 @@ type fi struct {
 
 ```
 searchKey: math_test.floatTest
+tags: [private]
 ```
 
 ```Go
@@ -2646,10 +2840,15 @@ type floatTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="tolerance" href="#tolerance">func tolerance(a, b, e float64) bool</a>
 
 ```
 searchKey: math_test.tolerance
+tags: [private]
 ```
 
 ```Go
@@ -2660,6 +2859,7 @@ func tolerance(a, b, e float64) bool
 
 ```
 searchKey: math_test.close
+tags: [private]
 ```
 
 ```Go
@@ -2670,6 +2870,7 @@ func close(a, b float64) bool
 
 ```
 searchKey: math_test.veryclose
+tags: [private]
 ```
 
 ```Go
@@ -2680,6 +2881,7 @@ func veryclose(a, b float64) bool
 
 ```
 searchKey: math_test.soclose
+tags: [private]
 ```
 
 ```Go
@@ -2690,6 +2892,7 @@ func soclose(a, b, e float64) bool
 
 ```
 searchKey: math_test.alike
+tags: [private]
 ```
 
 ```Go
@@ -2700,6 +2903,7 @@ func alike(a, b float64) bool
 
 ```
 searchKey: math_test.TestNaN
+tags: [private]
 ```
 
 ```Go
@@ -2710,6 +2914,7 @@ func TestNaN(t *testing.T)
 
 ```
 searchKey: math_test.TestAcos
+tags: [private]
 ```
 
 ```Go
@@ -2720,6 +2925,7 @@ func TestAcos(t *testing.T)
 
 ```
 searchKey: math_test.TestAcosh
+tags: [private]
 ```
 
 ```Go
@@ -2730,6 +2936,7 @@ func TestAcosh(t *testing.T)
 
 ```
 searchKey: math_test.TestAsin
+tags: [private]
 ```
 
 ```Go
@@ -2740,6 +2947,7 @@ func TestAsin(t *testing.T)
 
 ```
 searchKey: math_test.TestAsinh
+tags: [private]
 ```
 
 ```Go
@@ -2750,6 +2958,7 @@ func TestAsinh(t *testing.T)
 
 ```
 searchKey: math_test.TestAtan
+tags: [private]
 ```
 
 ```Go
@@ -2760,6 +2969,7 @@ func TestAtan(t *testing.T)
 
 ```
 searchKey: math_test.TestAtanh
+tags: [private]
 ```
 
 ```Go
@@ -2770,6 +2980,7 @@ func TestAtanh(t *testing.T)
 
 ```
 searchKey: math_test.TestAtan2
+tags: [private]
 ```
 
 ```Go
@@ -2780,6 +2991,7 @@ func TestAtan2(t *testing.T)
 
 ```
 searchKey: math_test.TestCbrt
+tags: [private]
 ```
 
 ```Go
@@ -2790,6 +3002,7 @@ func TestCbrt(t *testing.T)
 
 ```
 searchKey: math_test.TestCeil
+tags: [private]
 ```
 
 ```Go
@@ -2800,6 +3013,7 @@ func TestCeil(t *testing.T)
 
 ```
 searchKey: math_test.TestCopysign
+tags: [private]
 ```
 
 ```Go
@@ -2810,6 +3024,7 @@ func TestCopysign(t *testing.T)
 
 ```
 searchKey: math_test.TestCos
+tags: [private]
 ```
 
 ```Go
@@ -2820,6 +3035,7 @@ func TestCos(t *testing.T)
 
 ```
 searchKey: math_test.TestCosh
+tags: [private]
 ```
 
 ```Go
@@ -2830,6 +3046,7 @@ func TestCosh(t *testing.T)
 
 ```
 searchKey: math_test.TestErf
+tags: [private]
 ```
 
 ```Go
@@ -2840,6 +3057,7 @@ func TestErf(t *testing.T)
 
 ```
 searchKey: math_test.TestErfc
+tags: [private]
 ```
 
 ```Go
@@ -2850,6 +3068,7 @@ func TestErfc(t *testing.T)
 
 ```
 searchKey: math_test.TestErfinv
+tags: [private]
 ```
 
 ```Go
@@ -2860,6 +3079,7 @@ func TestErfinv(t *testing.T)
 
 ```
 searchKey: math_test.TestErfcinv
+tags: [private]
 ```
 
 ```Go
@@ -2870,6 +3090,7 @@ func TestErfcinv(t *testing.T)
 
 ```
 searchKey: math_test.TestExp
+tags: [private]
 ```
 
 ```Go
@@ -2880,6 +3101,7 @@ func TestExp(t *testing.T)
 
 ```
 searchKey: math_test.testExp
+tags: [private]
 ```
 
 ```Go
@@ -2890,6 +3112,7 @@ func testExp(t *testing.T, Exp func(float64) float64, name string)
 
 ```
 searchKey: math_test.TestExpm1
+tags: [private]
 ```
 
 ```Go
@@ -2900,6 +3123,7 @@ func TestExpm1(t *testing.T)
 
 ```
 searchKey: math_test.TestExp2
+tags: [private]
 ```
 
 ```Go
@@ -2910,6 +3134,7 @@ func TestExp2(t *testing.T)
 
 ```
 searchKey: math_test.testExp2
+tags: [private]
 ```
 
 ```Go
@@ -2920,6 +3145,7 @@ func testExp2(t *testing.T, Exp2 func(float64) float64, name string)
 
 ```
 searchKey: math_test.TestAbs
+tags: [private]
 ```
 
 ```Go
@@ -2930,6 +3156,7 @@ func TestAbs(t *testing.T)
 
 ```
 searchKey: math_test.TestDim
+tags: [private]
 ```
 
 ```Go
@@ -2940,6 +3167,7 @@ func TestDim(t *testing.T)
 
 ```
 searchKey: math_test.TestFloor
+tags: [private]
 ```
 
 ```Go
@@ -2950,6 +3178,7 @@ func TestFloor(t *testing.T)
 
 ```
 searchKey: math_test.TestMax
+tags: [private]
 ```
 
 ```Go
@@ -2960,6 +3189,7 @@ func TestMax(t *testing.T)
 
 ```
 searchKey: math_test.TestMin
+tags: [private]
 ```
 
 ```Go
@@ -2970,6 +3200,7 @@ func TestMin(t *testing.T)
 
 ```
 searchKey: math_test.TestMod
+tags: [private]
 ```
 
 ```Go
@@ -2980,6 +3211,7 @@ func TestMod(t *testing.T)
 
 ```
 searchKey: math_test.TestFrexp
+tags: [private]
 ```
 
 ```Go
@@ -2990,6 +3222,7 @@ func TestFrexp(t *testing.T)
 
 ```
 searchKey: math_test.TestGamma
+tags: [private]
 ```
 
 ```Go
@@ -3000,6 +3233,7 @@ func TestGamma(t *testing.T)
 
 ```
 searchKey: math_test.TestHypot
+tags: [private]
 ```
 
 ```Go
@@ -3010,6 +3244,7 @@ func TestHypot(t *testing.T)
 
 ```
 searchKey: math_test.TestHypotGo
+tags: [private]
 ```
 
 ```Go
@@ -3020,6 +3255,7 @@ func TestHypotGo(t *testing.T)
 
 ```
 searchKey: math_test.TestIlogb
+tags: [private]
 ```
 
 ```Go
@@ -3030,6 +3266,7 @@ func TestIlogb(t *testing.T)
 
 ```
 searchKey: math_test.TestJ0
+tags: [private]
 ```
 
 ```Go
@@ -3040,6 +3277,7 @@ func TestJ0(t *testing.T)
 
 ```
 searchKey: math_test.TestJ1
+tags: [private]
 ```
 
 ```Go
@@ -3050,6 +3288,7 @@ func TestJ1(t *testing.T)
 
 ```
 searchKey: math_test.TestJn
+tags: [private]
 ```
 
 ```Go
@@ -3060,6 +3299,7 @@ func TestJn(t *testing.T)
 
 ```
 searchKey: math_test.TestLdexp
+tags: [private]
 ```
 
 ```Go
@@ -3070,6 +3310,7 @@ func TestLdexp(t *testing.T)
 
 ```
 searchKey: math_test.TestLgamma
+tags: [private]
 ```
 
 ```Go
@@ -3080,6 +3321,7 @@ func TestLgamma(t *testing.T)
 
 ```
 searchKey: math_test.TestLog
+tags: [private]
 ```
 
 ```Go
@@ -3090,6 +3332,7 @@ func TestLog(t *testing.T)
 
 ```
 searchKey: math_test.TestLogb
+tags: [private]
 ```
 
 ```Go
@@ -3100,6 +3343,7 @@ func TestLogb(t *testing.T)
 
 ```
 searchKey: math_test.TestLog10
+tags: [private]
 ```
 
 ```Go
@@ -3110,6 +3354,7 @@ func TestLog10(t *testing.T)
 
 ```
 searchKey: math_test.TestLog1p
+tags: [private]
 ```
 
 ```Go
@@ -3120,6 +3365,7 @@ func TestLog1p(t *testing.T)
 
 ```
 searchKey: math_test.TestLog2
+tags: [private]
 ```
 
 ```Go
@@ -3130,6 +3376,7 @@ func TestLog2(t *testing.T)
 
 ```
 searchKey: math_test.TestModf
+tags: [private]
 ```
 
 ```Go
@@ -3140,6 +3387,7 @@ func TestModf(t *testing.T)
 
 ```
 searchKey: math_test.TestNextafter32
+tags: [private]
 ```
 
 ```Go
@@ -3150,6 +3398,7 @@ func TestNextafter32(t *testing.T)
 
 ```
 searchKey: math_test.TestNextafter64
+tags: [private]
 ```
 
 ```Go
@@ -3160,6 +3409,7 @@ func TestNextafter64(t *testing.T)
 
 ```
 searchKey: math_test.TestPow
+tags: [private]
 ```
 
 ```Go
@@ -3170,6 +3420,7 @@ func TestPow(t *testing.T)
 
 ```
 searchKey: math_test.TestPow10
+tags: [private]
 ```
 
 ```Go
@@ -3180,6 +3431,7 @@ func TestPow10(t *testing.T)
 
 ```
 searchKey: math_test.TestRemainder
+tags: [private]
 ```
 
 ```Go
@@ -3190,6 +3442,7 @@ func TestRemainder(t *testing.T)
 
 ```
 searchKey: math_test.TestRound
+tags: [private]
 ```
 
 ```Go
@@ -3200,6 +3453,7 @@ func TestRound(t *testing.T)
 
 ```
 searchKey: math_test.TestRoundToEven
+tags: [private]
 ```
 
 ```Go
@@ -3210,6 +3464,7 @@ func TestRoundToEven(t *testing.T)
 
 ```
 searchKey: math_test.TestSignbit
+tags: [private]
 ```
 
 ```Go
@@ -3220,6 +3475,7 @@ func TestSignbit(t *testing.T)
 
 ```
 searchKey: math_test.TestSin
+tags: [private]
 ```
 
 ```Go
@@ -3230,6 +3486,7 @@ func TestSin(t *testing.T)
 
 ```
 searchKey: math_test.TestSincos
+tags: [private]
 ```
 
 ```Go
@@ -3240,6 +3497,7 @@ func TestSincos(t *testing.T)
 
 ```
 searchKey: math_test.TestSinh
+tags: [private]
 ```
 
 ```Go
@@ -3250,6 +3508,7 @@ func TestSinh(t *testing.T)
 
 ```
 searchKey: math_test.TestSqrt
+tags: [private]
 ```
 
 ```Go
@@ -3260,6 +3519,7 @@ func TestSqrt(t *testing.T)
 
 ```
 searchKey: math_test.TestTan
+tags: [private]
 ```
 
 ```Go
@@ -3270,6 +3530,7 @@ func TestTan(t *testing.T)
 
 ```
 searchKey: math_test.TestTanh
+tags: [private]
 ```
 
 ```Go
@@ -3280,6 +3541,7 @@ func TestTanh(t *testing.T)
 
 ```
 searchKey: math_test.TestTrunc
+tags: [private]
 ```
 
 ```Go
@@ -3290,6 +3552,7 @@ func TestTrunc(t *testing.T)
 
 ```
 searchKey: math_test.TestY0
+tags: [private]
 ```
 
 ```Go
@@ -3300,6 +3563,7 @@ func TestY0(t *testing.T)
 
 ```
 searchKey: math_test.TestY1
+tags: [private]
 ```
 
 ```Go
@@ -3310,6 +3574,7 @@ func TestY1(t *testing.T)
 
 ```
 searchKey: math_test.TestYn
+tags: [private]
 ```
 
 ```Go
@@ -3320,6 +3585,7 @@ func TestYn(t *testing.T)
 
 ```
 searchKey: math_test.TestFMA
+tags: [private]
 ```
 
 ```Go
@@ -3330,6 +3596,7 @@ func TestFMA(t *testing.T)
 
 ```
 searchKey: math_test.TestLargeCos
+tags: [private]
 ```
 
 ```Go
@@ -3342,6 +3609,7 @@ Check that math functions of high angle values return accurate results. [Since (
 
 ```
 searchKey: math_test.TestLargeSin
+tags: [private]
 ```
 
 ```Go
@@ -3352,6 +3620,7 @@ func TestLargeSin(t *testing.T)
 
 ```
 searchKey: math_test.TestLargeSincos
+tags: [private]
 ```
 
 ```Go
@@ -3362,6 +3631,7 @@ func TestLargeSincos(t *testing.T)
 
 ```
 searchKey: math_test.TestLargeTan
+tags: [private]
 ```
 
 ```Go
@@ -3372,6 +3642,7 @@ func TestLargeTan(t *testing.T)
 
 ```
 searchKey: math_test.TestTrigReduce
+tags: [private]
 ```
 
 ```Go
@@ -3384,6 +3655,7 @@ Check that trigReduce matches the standard reduction results for input values be
 
 ```
 searchKey: math_test.TestFloatMinMax
+tags: [private]
 ```
 
 ```Go
@@ -3394,6 +3666,7 @@ func TestFloatMinMax(t *testing.T)
 
 ```
 searchKey: math_test.TestFloatMinima
+tags: [private]
 ```
 
 ```Go
@@ -3404,6 +3677,7 @@ func TestFloatMinima(t *testing.T)
 
 ```
 searchKey: math_test.TestFloat32Sqrt
+tags: [private]
 ```
 
 ```Go
@@ -3416,6 +3690,7 @@ TestFloat32Sqrt checks the correctness of the float32 square root optimization r
 
 ```
 searchKey: math_test.BenchmarkAcos
+tags: [private]
 ```
 
 ```Go
@@ -3426,6 +3701,7 @@ func BenchmarkAcos(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAcosh
+tags: [private]
 ```
 
 ```Go
@@ -3436,6 +3712,7 @@ func BenchmarkAcosh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAsin
+tags: [private]
 ```
 
 ```Go
@@ -3446,6 +3723,7 @@ func BenchmarkAsin(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAsinh
+tags: [private]
 ```
 
 ```Go
@@ -3456,6 +3734,7 @@ func BenchmarkAsinh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAtan
+tags: [private]
 ```
 
 ```Go
@@ -3466,6 +3745,7 @@ func BenchmarkAtan(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAtanh
+tags: [private]
 ```
 
 ```Go
@@ -3476,6 +3756,7 @@ func BenchmarkAtanh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAtan2
+tags: [private]
 ```
 
 ```Go
@@ -3486,6 +3767,7 @@ func BenchmarkAtan2(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkCbrt
+tags: [private]
 ```
 
 ```Go
@@ -3496,6 +3778,7 @@ func BenchmarkCbrt(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkCeil
+tags: [private]
 ```
 
 ```Go
@@ -3506,6 +3789,7 @@ func BenchmarkCeil(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkCopysign
+tags: [private]
 ```
 
 ```Go
@@ -3516,6 +3800,7 @@ func BenchmarkCopysign(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkCos
+tags: [private]
 ```
 
 ```Go
@@ -3526,6 +3811,7 @@ func BenchmarkCos(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkCosh
+tags: [private]
 ```
 
 ```Go
@@ -3536,6 +3822,7 @@ func BenchmarkCosh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkErf
+tags: [private]
 ```
 
 ```Go
@@ -3546,6 +3833,7 @@ func BenchmarkErf(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkErfc
+tags: [private]
 ```
 
 ```Go
@@ -3556,6 +3844,7 @@ func BenchmarkErfc(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkErfinv
+tags: [private]
 ```
 
 ```Go
@@ -3566,6 +3855,7 @@ func BenchmarkErfinv(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkErfcinv
+tags: [private]
 ```
 
 ```Go
@@ -3576,6 +3866,7 @@ func BenchmarkErfcinv(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkExp
+tags: [private]
 ```
 
 ```Go
@@ -3586,6 +3877,7 @@ func BenchmarkExp(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkExpGo
+tags: [private]
 ```
 
 ```Go
@@ -3596,6 +3888,7 @@ func BenchmarkExpGo(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkExpm1
+tags: [private]
 ```
 
 ```Go
@@ -3606,6 +3899,7 @@ func BenchmarkExpm1(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkExp2
+tags: [private]
 ```
 
 ```Go
@@ -3616,6 +3910,7 @@ func BenchmarkExp2(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkExp2Go
+tags: [private]
 ```
 
 ```Go
@@ -3626,6 +3921,7 @@ func BenchmarkExp2Go(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAbs
+tags: [private]
 ```
 
 ```Go
@@ -3636,6 +3932,7 @@ func BenchmarkAbs(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkDim
+tags: [private]
 ```
 
 ```Go
@@ -3646,6 +3943,7 @@ func BenchmarkDim(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFloor
+tags: [private]
 ```
 
 ```Go
@@ -3656,6 +3954,7 @@ func BenchmarkFloor(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkMax
+tags: [private]
 ```
 
 ```Go
@@ -3666,6 +3965,7 @@ func BenchmarkMax(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkMin
+tags: [private]
 ```
 
 ```Go
@@ -3676,6 +3976,7 @@ func BenchmarkMin(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkMod
+tags: [private]
 ```
 
 ```Go
@@ -3686,6 +3987,7 @@ func BenchmarkMod(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFrexp
+tags: [private]
 ```
 
 ```Go
@@ -3696,6 +3998,7 @@ func BenchmarkFrexp(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkGamma
+tags: [private]
 ```
 
 ```Go
@@ -3706,6 +4009,7 @@ func BenchmarkGamma(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkHypot
+tags: [private]
 ```
 
 ```Go
@@ -3716,6 +4020,7 @@ func BenchmarkHypot(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkHypotGo
+tags: [private]
 ```
 
 ```Go
@@ -3726,6 +4031,7 @@ func BenchmarkHypotGo(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkIlogb
+tags: [private]
 ```
 
 ```Go
@@ -3736,6 +4042,7 @@ func BenchmarkIlogb(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkJ0
+tags: [private]
 ```
 
 ```Go
@@ -3746,6 +4053,7 @@ func BenchmarkJ0(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkJ1
+tags: [private]
 ```
 
 ```Go
@@ -3756,6 +4064,7 @@ func BenchmarkJ1(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkJn
+tags: [private]
 ```
 
 ```Go
@@ -3766,6 +4075,7 @@ func BenchmarkJn(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLdexp
+tags: [private]
 ```
 
 ```Go
@@ -3776,6 +4086,7 @@ func BenchmarkLdexp(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLgamma
+tags: [private]
 ```
 
 ```Go
@@ -3786,6 +4097,7 @@ func BenchmarkLgamma(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLog
+tags: [private]
 ```
 
 ```Go
@@ -3796,6 +4108,7 @@ func BenchmarkLog(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLogb
+tags: [private]
 ```
 
 ```Go
@@ -3806,6 +4119,7 @@ func BenchmarkLogb(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLog1p
+tags: [private]
 ```
 
 ```Go
@@ -3816,6 +4130,7 @@ func BenchmarkLog1p(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLog10
+tags: [private]
 ```
 
 ```Go
@@ -3826,6 +4141,7 @@ func BenchmarkLog10(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLog2
+tags: [private]
 ```
 
 ```Go
@@ -3836,6 +4152,7 @@ func BenchmarkLog2(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkModf
+tags: [private]
 ```
 
 ```Go
@@ -3846,6 +4163,7 @@ func BenchmarkModf(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkNextafter32
+tags: [private]
 ```
 
 ```Go
@@ -3856,6 +4174,7 @@ func BenchmarkNextafter32(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkNextafter64
+tags: [private]
 ```
 
 ```Go
@@ -3866,6 +4185,7 @@ func BenchmarkNextafter64(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkPowInt
+tags: [private]
 ```
 
 ```Go
@@ -3876,6 +4196,7 @@ func BenchmarkPowInt(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkPowFrac
+tags: [private]
 ```
 
 ```Go
@@ -3886,6 +4207,7 @@ func BenchmarkPowFrac(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkPow10Pos
+tags: [private]
 ```
 
 ```Go
@@ -3896,6 +4218,7 @@ func BenchmarkPow10Pos(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkPow10Neg
+tags: [private]
 ```
 
 ```Go
@@ -3906,6 +4229,7 @@ func BenchmarkPow10Neg(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkRound
+tags: [private]
 ```
 
 ```Go
@@ -3916,6 +4240,7 @@ func BenchmarkRound(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkRoundToEven
+tags: [private]
 ```
 
 ```Go
@@ -3926,6 +4251,7 @@ func BenchmarkRoundToEven(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkRemainder
+tags: [private]
 ```
 
 ```Go
@@ -3936,6 +4262,7 @@ func BenchmarkRemainder(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSignbit
+tags: [private]
 ```
 
 ```Go
@@ -3946,6 +4273,7 @@ func BenchmarkSignbit(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSin
+tags: [private]
 ```
 
 ```Go
@@ -3956,6 +4284,7 @@ func BenchmarkSin(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSincos
+tags: [private]
 ```
 
 ```Go
@@ -3966,6 +4295,7 @@ func BenchmarkSincos(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSinh
+tags: [private]
 ```
 
 ```Go
@@ -3976,6 +4306,7 @@ func BenchmarkSinh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSqrtIndirect
+tags: [private]
 ```
 
 ```Go
@@ -3986,6 +4317,7 @@ func BenchmarkSqrtIndirect(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSqrtLatency
+tags: [private]
 ```
 
 ```Go
@@ -3996,6 +4328,7 @@ func BenchmarkSqrtLatency(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSqrtIndirectLatency
+tags: [private]
 ```
 
 ```Go
@@ -4006,6 +4339,7 @@ func BenchmarkSqrtIndirectLatency(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSqrtGoLatency
+tags: [private]
 ```
 
 ```Go
@@ -4016,6 +4350,7 @@ func BenchmarkSqrtGoLatency(b *testing.B)
 
 ```
 searchKey: math_test.isPrime
+tags: [private]
 ```
 
 ```Go
@@ -4026,6 +4361,7 @@ func isPrime(i int) bool
 
 ```
 searchKey: math_test.BenchmarkSqrtPrime
+tags: [private]
 ```
 
 ```Go
@@ -4036,6 +4372,7 @@ func BenchmarkSqrtPrime(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkTan
+tags: [private]
 ```
 
 ```Go
@@ -4046,6 +4383,7 @@ func BenchmarkTan(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkTanh
+tags: [private]
 ```
 
 ```Go
@@ -4056,6 +4394,7 @@ func BenchmarkTanh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkTrunc
+tags: [private]
 ```
 
 ```Go
@@ -4066,6 +4405,7 @@ func BenchmarkTrunc(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkY0
+tags: [private]
 ```
 
 ```Go
@@ -4076,6 +4416,7 @@ func BenchmarkY0(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkY1
+tags: [private]
 ```
 
 ```Go
@@ -4086,6 +4427,7 @@ func BenchmarkY1(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkYn
+tags: [private]
 ```
 
 ```Go
@@ -4096,6 +4438,7 @@ func BenchmarkYn(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFloat64bits
+tags: [private]
 ```
 
 ```Go
@@ -4106,6 +4449,7 @@ func BenchmarkFloat64bits(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFloat64frombits
+tags: [private]
 ```
 
 ```Go
@@ -4116,6 +4460,7 @@ func BenchmarkFloat64frombits(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFloat32bits
+tags: [private]
 ```
 
 ```Go
@@ -4126,6 +4471,7 @@ func BenchmarkFloat32bits(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFloat32frombits
+tags: [private]
 ```
 
 ```Go
@@ -4136,6 +4482,7 @@ func BenchmarkFloat32frombits(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFMA
+tags: [private]
 ```
 
 ```Go
@@ -4146,6 +4493,7 @@ func BenchmarkFMA(b *testing.B)
 
 ```
 searchKey: math_test.TestMaxUint
+tags: [private]
 ```
 
 ```Go
@@ -4156,6 +4504,7 @@ func TestMaxUint(t *testing.T)
 
 ```
 searchKey: math_test.TestMaxInt
+tags: [private]
 ```
 
 ```Go
@@ -4166,6 +4515,7 @@ func TestMaxInt(t *testing.T)
 
 ```
 searchKey: math_test.ExampleAcos
+tags: [private]
 ```
 
 ```Go
@@ -4176,6 +4526,7 @@ func ExampleAcos()
 
 ```
 searchKey: math_test.ExampleAcosh
+tags: [private]
 ```
 
 ```Go
@@ -4186,6 +4537,7 @@ func ExampleAcosh()
 
 ```
 searchKey: math_test.ExampleAsin
+tags: [private]
 ```
 
 ```Go
@@ -4196,6 +4548,7 @@ func ExampleAsin()
 
 ```
 searchKey: math_test.ExampleAsinh
+tags: [private]
 ```
 
 ```Go
@@ -4206,6 +4559,7 @@ func ExampleAsinh()
 
 ```
 searchKey: math_test.ExampleAtan
+tags: [private]
 ```
 
 ```Go
@@ -4216,6 +4570,7 @@ func ExampleAtan()
 
 ```
 searchKey: math_test.ExampleAtan2
+tags: [private]
 ```
 
 ```Go
@@ -4226,6 +4581,7 @@ func ExampleAtan2()
 
 ```
 searchKey: math_test.ExampleAtanh
+tags: [private]
 ```
 
 ```Go
@@ -4236,6 +4592,7 @@ func ExampleAtanh()
 
 ```
 searchKey: math_test.ExampleCopysign
+tags: [private]
 ```
 
 ```Go
@@ -4246,6 +4603,7 @@ func ExampleCopysign()
 
 ```
 searchKey: math_test.ExampleCos
+tags: [private]
 ```
 
 ```Go
@@ -4256,6 +4614,7 @@ func ExampleCos()
 
 ```
 searchKey: math_test.ExampleCosh
+tags: [private]
 ```
 
 ```Go
@@ -4266,6 +4625,7 @@ func ExampleCosh()
 
 ```
 searchKey: math_test.ExampleSin
+tags: [private]
 ```
 
 ```Go
@@ -4276,6 +4636,7 @@ func ExampleSin()
 
 ```
 searchKey: math_test.ExampleSincos
+tags: [private]
 ```
 
 ```Go
@@ -4286,6 +4647,7 @@ func ExampleSincos()
 
 ```
 searchKey: math_test.ExampleSinh
+tags: [private]
 ```
 
 ```Go
@@ -4296,6 +4658,7 @@ func ExampleSinh()
 
 ```
 searchKey: math_test.ExampleTan
+tags: [private]
 ```
 
 ```Go
@@ -4306,6 +4669,7 @@ func ExampleTan()
 
 ```
 searchKey: math_test.ExampleTanh
+tags: [private]
 ```
 
 ```Go
@@ -4316,6 +4680,7 @@ func ExampleTanh()
 
 ```
 searchKey: math_test.ExampleSqrt
+tags: [private]
 ```
 
 ```Go
@@ -4326,6 +4691,7 @@ func ExampleSqrt()
 
 ```
 searchKey: math_test.ExampleCeil
+tags: [private]
 ```
 
 ```Go
@@ -4336,6 +4702,7 @@ func ExampleCeil()
 
 ```
 searchKey: math_test.ExampleFloor
+tags: [private]
 ```
 
 ```Go
@@ -4346,6 +4713,7 @@ func ExampleFloor()
 
 ```
 searchKey: math_test.ExamplePow
+tags: [private]
 ```
 
 ```Go
@@ -4356,6 +4724,7 @@ func ExamplePow()
 
 ```
 searchKey: math_test.ExamplePow10
+tags: [private]
 ```
 
 ```Go
@@ -4366,6 +4735,7 @@ func ExamplePow10()
 
 ```
 searchKey: math_test.ExampleRound
+tags: [private]
 ```
 
 ```Go
@@ -4376,6 +4746,7 @@ func ExampleRound()
 
 ```
 searchKey: math_test.ExampleRoundToEven
+tags: [private]
 ```
 
 ```Go
@@ -4386,6 +4757,7 @@ func ExampleRoundToEven()
 
 ```
 searchKey: math_test.ExampleLog
+tags: [private]
 ```
 
 ```Go
@@ -4396,6 +4768,7 @@ func ExampleLog()
 
 ```
 searchKey: math_test.ExampleLog2
+tags: [private]
 ```
 
 ```Go
@@ -4406,6 +4779,7 @@ func ExampleLog2()
 
 ```
 searchKey: math_test.ExampleLog10
+tags: [private]
 ```
 
 ```Go
@@ -4416,6 +4790,7 @@ func ExampleLog10()
 
 ```
 searchKey: math_test.ExampleMod
+tags: [private]
 ```
 
 ```Go
@@ -4426,6 +4801,7 @@ func ExampleMod()
 
 ```
 searchKey: math_test.ExampleAbs
+tags: [private]
 ```
 
 ```Go
@@ -4436,6 +4812,7 @@ func ExampleAbs()
 
 ```
 searchKey: math_test.ExampleDim
+tags: [private]
 ```
 
 ```Go
@@ -4446,6 +4823,7 @@ func ExampleDim()
 
 ```
 searchKey: math_test.ExampleExp
+tags: [private]
 ```
 
 ```Go
@@ -4456,6 +4834,7 @@ func ExampleExp()
 
 ```
 searchKey: math_test.ExampleExp2
+tags: [private]
 ```
 
 ```Go
@@ -4466,6 +4845,7 @@ func ExampleExp2()
 
 ```
 searchKey: math_test.ExampleExpm1
+tags: [private]
 ```
 
 ```Go
@@ -4476,6 +4856,7 @@ func ExampleExpm1()
 
 ```
 searchKey: math_test.ExampleTrunc
+tags: [private]
 ```
 
 ```Go
@@ -4486,6 +4867,7 @@ func ExampleTrunc()
 
 ```
 searchKey: math_test.ExampleCbrt
+tags: [private]
 ```
 
 ```Go
@@ -4496,6 +4878,7 @@ func ExampleCbrt()
 
 ```
 searchKey: math_test.ExampleModf
+tags: [private]
 ```
 
 ```Go
@@ -4506,6 +4889,7 @@ func ExampleModf()
 
 ```
 searchKey: math_test.TestHugeCos
+tags: [private]
 ```
 
 ```Go
@@ -4518,6 +4902,7 @@ Check that trig values of huge angles return accurate results. This confirms tha
 
 ```
 searchKey: math_test.TestHugeSin
+tags: [private]
 ```
 
 ```Go
@@ -4528,6 +4913,7 @@ func TestHugeSin(t *testing.T)
 
 ```
 searchKey: math_test.TestHugeSinCos
+tags: [private]
 ```
 
 ```Go
@@ -4538,6 +4924,7 @@ func TestHugeSinCos(t *testing.T)
 
 ```
 searchKey: math_test.TestHugeTan
+tags: [private]
 ```
 
 ```Go

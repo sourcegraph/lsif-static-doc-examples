@@ -4,9 +4,7 @@
     "identifier": "crc32",
     "newPage": true,
     "searchKey": "hash/crc32",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Size",
                 "newPage": false,
                 "searchKey": "crc32.Size",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "IEEE",
                 "newPage": false,
                 "searchKey": "crc32.IEEE",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "Castagnoli",
                 "newPage": false,
                 "searchKey": "crc32.Castagnoli",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "Koopman",
                 "newPage": false,
                 "searchKey": "crc32.Koopman",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -132,7 +120,9 @@
                 "identifier": "magic",
                 "newPage": false,
                 "searchKey": "crc32.magic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -152,7 +142,9 @@
                 "identifier": "marshaledSize",
                 "newPage": false,
                 "searchKey": "crc32.marshaledSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -172,7 +164,9 @@
                 "identifier": "castagnoliK1",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliK1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -192,7 +186,9 @@
                 "identifier": "castagnoliK2",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliK2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -212,7 +208,9 @@
                 "identifier": "slicing8Cutoff",
                 "newPage": false,
                 "searchKey": "crc32.slicing8Cutoff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -235,9 +233,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -255,7 +251,9 @@
                 "identifier": "castagnoliTable",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -275,7 +273,9 @@
                 "identifier": "castagnoliTable8",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliTable8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -295,7 +295,9 @@
                 "identifier": "castagnoliArchImpl",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliArchImpl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -315,7 +317,9 @@
                 "identifier": "updateCastagnoli",
                 "newPage": false,
                 "searchKey": "crc32.updateCastagnoli",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -335,7 +339,9 @@
                 "identifier": "castagnoliOnce",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -355,7 +361,9 @@
                 "identifier": "haveCastagnoli",
                 "newPage": false,
                 "searchKey": "crc32.haveCastagnoli",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -375,9 +383,7 @@
                 "identifier": "IEEETable",
                 "newPage": false,
                 "searchKey": "crc32.IEEETable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -397,7 +403,9 @@
                 "identifier": "ieeeTable8",
                 "newPage": false,
                 "searchKey": "crc32.ieeeTable8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -417,7 +425,9 @@
                 "identifier": "ieeeArchImpl",
                 "newPage": false,
                 "searchKey": "crc32.ieeeArchImpl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -437,7 +447,9 @@
                 "identifier": "updateIEEE",
                 "newPage": false,
                 "searchKey": "crc32.updateIEEE",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -457,7 +469,9 @@
                 "identifier": "ieeeOnce",
                 "newPage": false,
                 "searchKey": "crc32.ieeeOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -477,7 +491,9 @@
                 "identifier": "castagnoliSSE42TableK1",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliSSE42TableK1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -497,7 +513,9 @@
                 "identifier": "castagnoliSSE42TableK2",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliSSE42TableK2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -517,7 +535,9 @@
                 "identifier": "archIeeeTable8",
                 "newPage": false,
                 "searchKey": "crc32.archIeeeTable8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -537,7 +557,9 @@
                 "identifier": "golden",
                 "newPage": false,
                 "searchKey": "crc32.golden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -560,9 +582,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -580,9 +600,7 @@
                 "identifier": "Table",
                 "newPage": false,
                 "searchKey": "crc32.Table",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -600,9 +618,7 @@
                       "identifier": "MakeTable",
                       "newPage": false,
                       "searchKey": "crc32.MakeTable",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -622,7 +638,9 @@
                       "identifier": "simpleMakeTable",
                       "newPage": false,
                       "searchKey": "crc32.simpleMakeTable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -645,7 +663,9 @@
                 "identifier": "digest",
                 "newPage": false,
                 "searchKey": "crc32.digest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -663,7 +683,9 @@
                       "identifier": "digest.Size",
                       "newPage": false,
                       "searchKey": "crc32.digest.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -683,7 +705,9 @@
                       "identifier": "digest.BlockSize",
                       "newPage": false,
                       "searchKey": "crc32.digest.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -703,7 +727,9 @@
                       "identifier": "digest.Reset",
                       "newPage": false,
                       "searchKey": "crc32.digest.Reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -723,7 +749,9 @@
                       "identifier": "digest.MarshalBinary",
                       "newPage": false,
                       "searchKey": "crc32.digest.MarshalBinary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -743,7 +771,9 @@
                       "identifier": "digest.UnmarshalBinary",
                       "newPage": false,
                       "searchKey": "crc32.digest.UnmarshalBinary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -763,7 +793,9 @@
                       "identifier": "digest.Write",
                       "newPage": false,
                       "searchKey": "crc32.digest.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -783,7 +815,9 @@
                       "identifier": "digest.Sum32",
                       "newPage": false,
                       "searchKey": "crc32.digest.Sum32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -803,7 +837,9 @@
                       "identifier": "digest.Sum",
                       "newPage": false,
                       "searchKey": "crc32.digest.Sum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -826,7 +862,9 @@
                 "identifier": "sse42Table",
                 "newPage": false,
                 "searchKey": "crc32.sse42Table",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -846,7 +884,9 @@
                 "identifier": "slicing8Table",
                 "newPage": false,
                 "searchKey": "crc32.slicing8Table",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -864,7 +904,9 @@
                       "identifier": "slicingMakeTable",
                       "newPage": false,
                       "searchKey": "crc32.slicingMakeTable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -887,7 +929,9 @@
                 "identifier": "test",
                 "newPage": false,
                 "searchKey": "crc32.test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -910,9 +954,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -930,7 +972,9 @@
                 "identifier": "castagnoliInit",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -950,7 +994,9 @@
                 "identifier": "ieeeInit",
                 "newPage": false,
                 "searchKey": "crc32.ieeeInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -970,9 +1016,7 @@
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "crc32.New",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -992,9 +1036,7 @@
                 "identifier": "NewIEEE",
                 "newPage": false,
                 "searchKey": "crc32.NewIEEE",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1014,7 +1056,9 @@
                 "identifier": "appendUint32",
                 "newPage": false,
                 "searchKey": "crc32.appendUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1034,7 +1078,9 @@
                 "identifier": "readUint32",
                 "newPage": false,
                 "searchKey": "crc32.readUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1054,9 +1100,7 @@
                 "identifier": "Update",
                 "newPage": false,
                 "searchKey": "crc32.Update",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1076,9 +1120,7 @@
                 "identifier": "Checksum",
                 "newPage": false,
                 "searchKey": "crc32.Checksum",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1098,9 +1140,7 @@
                 "identifier": "ChecksumIEEE",
                 "newPage": false,
                 "searchKey": "crc32.ChecksumIEEE",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1120,7 +1160,9 @@
                 "identifier": "tableSum",
                 "newPage": false,
                 "searchKey": "crc32.tableSum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1140,7 +1182,9 @@
                 "identifier": "castagnoliSSE42",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliSSE42",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1160,7 +1204,9 @@
                 "identifier": "castagnoliSSE42Triple",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliSSE42Triple",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1180,7 +1226,9 @@
                 "identifier": "ieeeCLMUL",
                 "newPage": false,
                 "searchKey": "crc32.ieeeCLMUL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1200,7 +1248,9 @@
                 "identifier": "archAvailableCastagnoli",
                 "newPage": false,
                 "searchKey": "crc32.archAvailableCastagnoli",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1220,7 +1270,9 @@
                 "identifier": "archInitCastagnoli",
                 "newPage": false,
                 "searchKey": "crc32.archInitCastagnoli",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1240,7 +1292,9 @@
                 "identifier": "castagnoliShift",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliShift",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1260,7 +1314,9 @@
                 "identifier": "archUpdateCastagnoli",
                 "newPage": false,
                 "searchKey": "crc32.archUpdateCastagnoli",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1280,7 +1336,9 @@
                 "identifier": "archAvailableIEEE",
                 "newPage": false,
                 "searchKey": "crc32.archAvailableIEEE",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1300,7 +1358,9 @@
                 "identifier": "archInitIEEE",
                 "newPage": false,
                 "searchKey": "crc32.archInitIEEE",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1320,7 +1380,9 @@
                 "identifier": "archUpdateIEEE",
                 "newPage": false,
                 "searchKey": "crc32.archUpdateIEEE",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1340,7 +1402,9 @@
                 "identifier": "simplePopulateTable",
                 "newPage": false,
                 "searchKey": "crc32.simplePopulateTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1360,7 +1424,9 @@
                 "identifier": "simpleUpdate",
                 "newPage": false,
                 "searchKey": "crc32.simpleUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1380,7 +1446,9 @@
                 "identifier": "slicingUpdate",
                 "newPage": false,
                 "searchKey": "crc32.slicingUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1400,7 +1468,9 @@
                 "identifier": "TestCastagnoliRace",
                 "newPage": false,
                 "searchKey": "crc32.TestCastagnoliRace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1420,7 +1490,9 @@
                 "identifier": "testGoldenIEEE",
                 "newPage": false,
                 "searchKey": "crc32.testGoldenIEEE",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1440,7 +1512,9 @@
                 "identifier": "testGoldenCastagnoli",
                 "newPage": false,
                 "searchKey": "crc32.testGoldenCastagnoli",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1460,7 +1534,9 @@
                 "identifier": "testCrossCheck",
                 "newPage": false,
                 "searchKey": "crc32.testCrossCheck",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1480,7 +1556,9 @@
                 "identifier": "TestSimple",
                 "newPage": false,
                 "searchKey": "crc32.TestSimple",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1500,7 +1578,9 @@
                 "identifier": "TestGoldenMarshal",
                 "newPage": false,
                 "searchKey": "crc32.TestGoldenMarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1520,7 +1600,9 @@
                 "identifier": "TestMarshalTableMismatch",
                 "newPage": false,
                 "searchKey": "crc32.TestMarshalTableMismatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1540,7 +1622,9 @@
                 "identifier": "TestSlicing",
                 "newPage": false,
                 "searchKey": "crc32.TestSlicing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1560,7 +1644,9 @@
                 "identifier": "TestArchIEEE",
                 "newPage": false,
                 "searchKey": "crc32.TestArchIEEE",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1580,7 +1666,9 @@
                 "identifier": "TestArchCastagnoli",
                 "newPage": false,
                 "searchKey": "crc32.TestArchCastagnoli",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1600,7 +1688,9 @@
                 "identifier": "TestGolden",
                 "newPage": false,
                 "searchKey": "crc32.TestGolden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1620,7 +1710,9 @@
                 "identifier": "BenchmarkCRC32",
                 "newPage": false,
                 "searchKey": "crc32.BenchmarkCRC32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1640,7 +1732,9 @@
                 "identifier": "benchmarkAll",
                 "newPage": false,
                 "searchKey": "crc32.benchmarkAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1660,7 +1754,9 @@
                 "identifier": "benchmark",
                 "newPage": false,
                 "searchKey": "crc32.benchmark",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

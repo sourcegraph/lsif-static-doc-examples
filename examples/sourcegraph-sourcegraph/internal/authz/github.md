@@ -30,10 +30,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="client" href="#client">type client interface</a>
 
 ```
 searchKey: github.client
+tags: [private]
 ```
 
 ```Go
@@ -52,7 +57,6 @@ NOTE: All methods are sorted in alphabetical order.
 
 ```
 searchKey: github.ClientAdapter
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +71,6 @@ ClientAdapter is an adapter for GitHub API client.
 
 ```
 searchKey: github.ClientAdapter.WithToken
-tags: [exported]
 ```
 
 ```Go
@@ -78,6 +81,7 @@ func (c *ClientAdapter) WithToken(token string) client
 
 ```
 searchKey: github.mockClient
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +96,7 @@ type mockClient struct {
 
 ```
 searchKey: github.mockClient.ListAffiliatedRepositories
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +107,7 @@ func (m *mockClient) ListAffiliatedRepositories(ctx context.Context, visibility 
 
 ```
 searchKey: github.mockClient.ListRepositoryCollaborators
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +118,7 @@ func (m *mockClient) ListRepositoryCollaborators(ctx context.Context, owner, rep
 
 ```
 searchKey: github.mockClient.WithToken
+tags: [private]
 ```
 
 ```Go
@@ -122,7 +129,6 @@ func (m *mockClient) WithToken(token string) client
 
 ```
 searchKey: github.Provider
-tags: [exported]
 ```
 
 ```Go
@@ -139,7 +145,6 @@ Provider implements authz.Provider for GitHub repository permissions.
 
 ```
 searchKey: github.NewProvider
-tags: [exported]
 ```
 
 ```Go
@@ -150,7 +155,6 @@ func NewProvider(urn string, githubURL *url.URL, baseToken string, client *githu
 
 ```
 searchKey: github.Provider.FetchAccount
-tags: [exported]
 ```
 
 ```Go
@@ -163,7 +167,6 @@ FetchAccount implements the authz.Provider interface. It always returns nil, bec
 
 ```
 searchKey: github.Provider.URN
-tags: [exported]
 ```
 
 ```Go
@@ -174,7 +177,6 @@ func (p *Provider) URN() string
 
 ```
 searchKey: github.Provider.ServiceID
-tags: [exported]
 ```
 
 ```Go
@@ -185,7 +187,6 @@ func (p *Provider) ServiceID() string
 
 ```
 searchKey: github.Provider.ServiceType
-tags: [exported]
 ```
 
 ```Go
@@ -196,7 +197,6 @@ func (p *Provider) ServiceType() string
 
 ```
 searchKey: github.Provider.Validate
-tags: [exported]
 ```
 
 ```Go
@@ -207,7 +207,6 @@ func (p *Provider) Validate() (problems []string)
 
 ```
 searchKey: github.Provider.FetchUserPerms
-tags: [exported]
 ```
 
 ```Go
@@ -224,7 +223,6 @@ API docs: [https://developer.github.com/v3/repos/#list-repositories-for-the-auth
 
 ```
 searchKey: github.Provider.FetchRepoPerms
-tags: [exported]
 ```
 
 ```Go
@@ -239,11 +237,14 @@ API docs: [https://developer.github.com/v4/object/repositorycollaboratorconnecti
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewAuthzProviders" href="#NewAuthzProviders">func NewAuthzProviders(conns []*types.GitHubConnection) (ps []authz.Provider, problems []string, warnings []string)</a>
 
 ```
 searchKey: github.NewAuthzProviders
-tags: [exported]
 ```
 
 ```Go
@@ -258,6 +259,7 @@ NewAuthzProviders returns the set of GitHub authz providers derived from the con
 
 ```
 searchKey: github.newAuthzProvider
+tags: [private]
 ```
 
 ```Go
@@ -268,7 +270,6 @@ func newAuthzProvider(urn string, a *schema.GitHubAuthorization, instanceURL, to
 
 ```
 searchKey: github.ValidateAuthz
-tags: [exported]
 ```
 
 ```Go
@@ -281,6 +282,7 @@ ValidateAuthz validates the authorization fields of the given GitHub external se
 
 ```
 searchKey: github.mustURL
+tags: [private]
 ```
 
 ```Go
@@ -291,6 +293,7 @@ func mustURL(t *testing.T, u string) *url.URL
 
 ```
 searchKey: github.TestProvider_FetchUserPerms
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +304,7 @@ func TestProvider_FetchUserPerms(t *testing.T)
 
 ```
 searchKey: github.TestProvider_FetchRepoPerms
+tags: [private]
 ```
 
 ```Go

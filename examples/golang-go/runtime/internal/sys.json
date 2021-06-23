@@ -4,7 +4,9 @@
     "identifier": "sys",
     "newPage": true,
     "searchKey": "runtime/internal/sys",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "AMD64",
                 "newPage": false,
                 "searchKey": "sys.AMD64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "ARM",
                 "newPage": false,
                 "searchKey": "sys.ARM",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "ARM64",
                 "newPage": false,
                 "searchKey": "sys.ARM64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "I386",
                 "newPage": false,
                 "searchKey": "sys.I386",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "MIPS",
                 "newPage": false,
                 "searchKey": "sys.MIPS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "MIPS64",
                 "newPage": false,
                 "searchKey": "sys.MIPS64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                 "identifier": "PPC64",
                 "newPage": false,
                 "searchKey": "sys.PPC64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,9 +184,7 @@
                 "identifier": "RISCV64",
                 "newPage": false,
                 "searchKey": "sys.RISCV64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -216,9 +204,7 @@
                 "identifier": "S390X",
                 "newPage": false,
                 "searchKey": "sys.S390X",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -238,9 +224,7 @@
                 "identifier": "WASM",
                 "newPage": false,
                 "searchKey": "sys.WASM",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -260,9 +244,7 @@
                 "identifier": "PtrSize",
                 "newPage": false,
                 "searchKey": "sys.PtrSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,9 +264,7 @@
                 "identifier": "StackGuardMultiplier",
                 "newPage": false,
                 "searchKey": "sys.StackGuardMultiplier",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -304,9 +284,7 @@
                 "identifier": "ArchFamily",
                 "newPage": false,
                 "searchKey": "sys.ArchFamily",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +304,7 @@
                 "identifier": "BigEndian",
                 "newPage": false,
                 "searchKey": "sys.BigEndian",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -348,9 +324,7 @@
                 "identifier": "DefaultPhysPageSize",
                 "newPage": false,
                 "searchKey": "sys.DefaultPhysPageSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -370,9 +344,7 @@
                 "identifier": "PCQuantum",
                 "newPage": false,
                 "searchKey": "sys.PCQuantum",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -392,9 +364,7 @@
                 "identifier": "Int64Align",
                 "newPage": false,
                 "searchKey": "sys.Int64Align",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -414,9 +384,7 @@
                 "identifier": "MinFrameSize",
                 "newPage": false,
                 "searchKey": "sys.MinFrameSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -436,9 +404,7 @@
                 "identifier": "StackAlign",
                 "newPage": false,
                 "searchKey": "sys.StackAlign",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -458,7 +424,9 @@
                 "identifier": "_ArchFamily",
                 "newPage": false,
                 "searchKey": "sys._ArchFamily",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -478,7 +446,9 @@
                 "identifier": "_DefaultPhysPageSize",
                 "newPage": false,
                 "searchKey": "sys._DefaultPhysPageSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -498,7 +468,9 @@
                 "identifier": "_PCQuantum",
                 "newPage": false,
                 "searchKey": "sys._PCQuantum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -518,7 +490,9 @@
                 "identifier": "_MinFrameSize",
                 "newPage": false,
                 "searchKey": "sys._MinFrameSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -538,7 +512,9 @@
                 "identifier": "_StackAlign",
                 "newPage": false,
                 "searchKey": "sys._StackAlign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -558,7 +534,9 @@
                 "identifier": "deBruijn64ctz",
                 "newPage": false,
                 "searchKey": "sys.deBruijn64ctz",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -578,7 +556,9 @@
                 "identifier": "deBruijn32ctz",
                 "newPage": false,
                 "searchKey": "sys.deBruijn32ctz",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -598,7 +578,9 @@
                 "identifier": "m0",
                 "newPage": false,
                 "searchKey": "sys.m0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -618,7 +600,9 @@
                 "identifier": "m1",
                 "newPage": false,
                 "searchKey": "sys.m1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -638,7 +622,9 @@
                 "identifier": "m2",
                 "newPage": false,
                 "searchKey": "sys.m2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -658,7 +644,9 @@
                 "identifier": "deBruijn64",
                 "newPage": false,
                 "searchKey": "sys.deBruijn64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -678,9 +666,7 @@
                 "identifier": "GOARCH",
                 "newPage": false,
                 "searchKey": "sys.GOARCH",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -700,9 +686,7 @@
                 "identifier": "Goarch386",
                 "newPage": false,
                 "searchKey": "sys.Goarch386",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -722,9 +706,7 @@
                 "identifier": "GoarchAmd64",
                 "newPage": false,
                 "searchKey": "sys.GoarchAmd64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -744,9 +726,7 @@
                 "identifier": "GoarchAmd64p32",
                 "newPage": false,
                 "searchKey": "sys.GoarchAmd64p32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -766,9 +746,7 @@
                 "identifier": "GoarchArm",
                 "newPage": false,
                 "searchKey": "sys.GoarchArm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -788,9 +766,7 @@
                 "identifier": "GoarchArmbe",
                 "newPage": false,
                 "searchKey": "sys.GoarchArmbe",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -810,9 +786,7 @@
                 "identifier": "GoarchArm64",
                 "newPage": false,
                 "searchKey": "sys.GoarchArm64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -832,9 +806,7 @@
                 "identifier": "GoarchArm64be",
                 "newPage": false,
                 "searchKey": "sys.GoarchArm64be",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -854,9 +826,7 @@
                 "identifier": "GoarchPpc64",
                 "newPage": false,
                 "searchKey": "sys.GoarchPpc64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -876,9 +846,7 @@
                 "identifier": "GoarchPpc64le",
                 "newPage": false,
                 "searchKey": "sys.GoarchPpc64le",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -898,9 +866,7 @@
                 "identifier": "GoarchMips",
                 "newPage": false,
                 "searchKey": "sys.GoarchMips",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -920,9 +886,7 @@
                 "identifier": "GoarchMipsle",
                 "newPage": false,
                 "searchKey": "sys.GoarchMipsle",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -942,9 +906,7 @@
                 "identifier": "GoarchMips64",
                 "newPage": false,
                 "searchKey": "sys.GoarchMips64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -964,9 +926,7 @@
                 "identifier": "GoarchMips64le",
                 "newPage": false,
                 "searchKey": "sys.GoarchMips64le",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -986,9 +946,7 @@
                 "identifier": "GoarchMips64p32",
                 "newPage": false,
                 "searchKey": "sys.GoarchMips64p32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1008,9 +966,7 @@
                 "identifier": "GoarchMips64p32le",
                 "newPage": false,
                 "searchKey": "sys.GoarchMips64p32le",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1030,9 +986,7 @@
                 "identifier": "GoarchPpc",
                 "newPage": false,
                 "searchKey": "sys.GoarchPpc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1052,9 +1006,7 @@
                 "identifier": "GoarchRiscv",
                 "newPage": false,
                 "searchKey": "sys.GoarchRiscv",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1074,9 +1026,7 @@
                 "identifier": "GoarchRiscv64",
                 "newPage": false,
                 "searchKey": "sys.GoarchRiscv64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1096,9 +1046,7 @@
                 "identifier": "GoarchS390",
                 "newPage": false,
                 "searchKey": "sys.GoarchS390",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1118,9 +1066,7 @@
                 "identifier": "GoarchS390x",
                 "newPage": false,
                 "searchKey": "sys.GoarchS390x",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1140,9 +1086,7 @@
                 "identifier": "GoarchSparc",
                 "newPage": false,
                 "searchKey": "sys.GoarchSparc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1162,9 +1106,7 @@
                 "identifier": "GoarchSparc64",
                 "newPage": false,
                 "searchKey": "sys.GoarchSparc64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1184,9 +1126,7 @@
                 "identifier": "GoarchWasm",
                 "newPage": false,
                 "searchKey": "sys.GoarchWasm",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1206,9 +1146,7 @@
                 "identifier": "GOOS",
                 "newPage": false,
                 "searchKey": "sys.GOOS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1228,9 +1166,7 @@
                 "identifier": "GoosAix",
                 "newPage": false,
                 "searchKey": "sys.GoosAix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1250,9 +1186,7 @@
                 "identifier": "GoosAndroid",
                 "newPage": false,
                 "searchKey": "sys.GoosAndroid",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1272,9 +1206,7 @@
                 "identifier": "GoosDarwin",
                 "newPage": false,
                 "searchKey": "sys.GoosDarwin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1294,9 +1226,7 @@
                 "identifier": "GoosDragonfly",
                 "newPage": false,
                 "searchKey": "sys.GoosDragonfly",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1316,9 +1246,7 @@
                 "identifier": "GoosFreebsd",
                 "newPage": false,
                 "searchKey": "sys.GoosFreebsd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1338,9 +1266,7 @@
                 "identifier": "GoosHurd",
                 "newPage": false,
                 "searchKey": "sys.GoosHurd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1360,9 +1286,7 @@
                 "identifier": "GoosIllumos",
                 "newPage": false,
                 "searchKey": "sys.GoosIllumos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1382,9 +1306,7 @@
                 "identifier": "GoosIos",
                 "newPage": false,
                 "searchKey": "sys.GoosIos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1404,9 +1326,7 @@
                 "identifier": "GoosJs",
                 "newPage": false,
                 "searchKey": "sys.GoosJs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1426,9 +1346,7 @@
                 "identifier": "GoosLinux",
                 "newPage": false,
                 "searchKey": "sys.GoosLinux",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1448,9 +1366,7 @@
                 "identifier": "GoosNacl",
                 "newPage": false,
                 "searchKey": "sys.GoosNacl",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1470,9 +1386,7 @@
                 "identifier": "GoosNetbsd",
                 "newPage": false,
                 "searchKey": "sys.GoosNetbsd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1492,9 +1406,7 @@
                 "identifier": "GoosOpenbsd",
                 "newPage": false,
                 "searchKey": "sys.GoosOpenbsd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1514,9 +1426,7 @@
                 "identifier": "GoosPlan9",
                 "newPage": false,
                 "searchKey": "sys.GoosPlan9",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1536,9 +1446,7 @@
                 "identifier": "GoosSolaris",
                 "newPage": false,
                 "searchKey": "sys.GoosSolaris",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1558,9 +1466,7 @@
                 "identifier": "GoosWindows",
                 "newPage": false,
                 "searchKey": "sys.GoosWindows",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1580,9 +1486,7 @@
                 "identifier": "GoosZos",
                 "newPage": false,
                 "searchKey": "sys.GoosZos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1605,7 +1509,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1623,7 +1529,9 @@
                 "identifier": "deBruijnIdx64ctz",
                 "newPage": false,
                 "searchKey": "sys.deBruijnIdx64ctz",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1643,7 +1551,9 @@
                 "identifier": "deBruijnIdx32ctz",
                 "newPage": false,
                 "searchKey": "sys.deBruijnIdx32ctz",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1663,7 +1573,9 @@
                 "identifier": "len8tab",
                 "newPage": false,
                 "searchKey": "sys.len8tab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1683,7 +1595,9 @@
                 "identifier": "ntz8tab",
                 "newPage": false,
                 "searchKey": "sys.ntz8tab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1703,7 +1617,9 @@
                 "identifier": "deBruijn64tab",
                 "newPage": false,
                 "searchKey": "sys.deBruijn64tab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1726,7 +1642,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1744,9 +1662,7 @@
                 "identifier": "ArchFamilyType",
                 "newPage": false,
                 "searchKey": "sys.ArchFamilyType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1769,7 +1685,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1787,9 +1705,7 @@
                 "identifier": "Ctz64",
                 "newPage": false,
                 "searchKey": "sys.Ctz64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1809,9 +1725,7 @@
                 "identifier": "Ctz32",
                 "newPage": false,
                 "searchKey": "sys.Ctz32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1831,9 +1745,7 @@
                 "identifier": "Ctz8",
                 "newPage": false,
                 "searchKey": "sys.Ctz8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1853,9 +1765,7 @@
                 "identifier": "Bswap64",
                 "newPage": false,
                 "searchKey": "sys.Bswap64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1875,9 +1785,7 @@
                 "identifier": "Bswap32",
                 "newPage": false,
                 "searchKey": "sys.Bswap32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1897,9 +1805,7 @@
                 "identifier": "Len64",
                 "newPage": false,
                 "searchKey": "sys.Len64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1919,9 +1825,7 @@
                 "identifier": "OnesCount64",
                 "newPage": false,
                 "searchKey": "sys.OnesCount64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1941,9 +1845,7 @@
                 "identifier": "TrailingZeros64",
                 "newPage": false,
                 "searchKey": "sys.TrailingZeros64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1963,9 +1865,7 @@
                 "identifier": "LeadingZeros64",
                 "newPage": false,
                 "searchKey": "sys.LeadingZeros64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1985,9 +1885,7 @@
                 "identifier": "LeadingZeros8",
                 "newPage": false,
                 "searchKey": "sys.LeadingZeros8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2007,9 +1905,7 @@
                 "identifier": "TrailingZeros8",
                 "newPage": false,
                 "searchKey": "sys.TrailingZeros8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2029,9 +1925,7 @@
                 "identifier": "Len8",
                 "newPage": false,
                 "searchKey": "sys.Len8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

@@ -29,14 +29,11 @@ Package globals contains global variables that should be set by the frontend's m
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="externalURLWatchers" href="#externalURLWatchers">var externalURLWatchers</a>
 
 ```
 searchKey: globals.externalURLWatchers
+tags: [private]
 ```
 
 ```Go
@@ -47,6 +44,7 @@ var externalURLWatchers uint32
 
 ```
 searchKey: globals.defaultexternalURL
+tags: [private]
 ```
 
 ```Go
@@ -60,6 +58,7 @@ var defaultexternalURL = &url.URL{
 
 ```
 searchKey: globals.externalURL
+tags: [private]
 ```
 
 ```Go
@@ -70,6 +69,7 @@ var externalURL = ...
 
 ```
 searchKey: globals.defaultPermissionsUserMapping
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +80,7 @@ var defaultPermissionsUserMapping = ...
 
 ```
 searchKey: globals.permissionsUserMapping
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +93,7 @@ permissionsUserMapping mirrors the value of `permissions.userMapping` in the sit
 
 ```
 searchKey: globals.permissionsUserMappingWatchers
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +104,7 @@ var permissionsUserMappingWatchers uint32
 
 ```
 searchKey: globals.defaultBranding
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +117,7 @@ var defaultBranding = &schema.Branding{
 
 ```
 searchKey: globals.branding
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +134,7 @@ branding mirrors the value of `branding` in the site configuration. This variabl
 
 ```
 searchKey: globals.brandingWatchers
+tags: [private]
 ```
 
 ```Go
@@ -140,7 +145,6 @@ var brandingWatchers uint32
 
 ```
 searchKey: globals.ConfigurationServerFrontendOnly
-tags: [exported]
 ```
 
 ```Go
@@ -153,15 +157,10 @@ Any another service that attempts to use this variable will panic.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="WatchExternalURL" href="#WatchExternalURL">func WatchExternalURL(defaultURL *url.URL)</a>
 
 ```
 searchKey: globals.WatchExternalURL
-tags: [exported]
 ```
 
 ```Go
@@ -174,7 +173,6 @@ WatchExternalURL watches for changes in the `externalURL` site configuration so 
 
 ```
 searchKey: globals.ExternalURL
-tags: [exported]
 ```
 
 ```Go
@@ -187,7 +185,6 @@ ExternalURL returns the fully-resolved, externally accessible frontend URL. Call
 
 ```
 searchKey: globals.SetExternalURL
-tags: [exported]
 ```
 
 ```Go
@@ -200,7 +197,6 @@ SetExternalURL sets the fully-resolved, externally accessible frontend URL.
 
 ```
 searchKey: globals.WatchPermissionsUserMapping
-tags: [exported]
 ```
 
 ```Go
@@ -213,7 +209,6 @@ WatchPermissionsUserMapping watches for changes in the `permissions.userMapping`
 
 ```
 searchKey: globals.PermissionsUserMapping
-tags: [exported]
 ```
 
 ```Go
@@ -226,7 +221,6 @@ PermissionsUserMapping returns the last valid value of permissions user mapping 
 
 ```
 searchKey: globals.SetPermissionsUserMapping
-tags: [exported]
 ```
 
 ```Go
@@ -239,7 +233,6 @@ SetPermissionsUserMapping sets a valid value for the permissions user mapping.
 
 ```
 searchKey: globals.WatchBranding
-tags: [exported]
 ```
 
 ```Go
@@ -252,7 +245,6 @@ WatchBranding watches for changes in the `branding` site configuration so that c
 
 ```
 searchKey: globals.Branding
-tags: [exported]
 ```
 
 ```Go
@@ -265,7 +257,6 @@ Branding returns the last valid value of branding in the site configuration. Cal
 
 ```
 searchKey: globals.SetBranding
-tags: [exported]
 ```
 
 ```Go

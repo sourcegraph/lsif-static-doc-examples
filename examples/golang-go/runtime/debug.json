@@ -4,9 +4,7 @@
     "identifier": "debug",
     "newPage": true,
     "searchKey": "runtime/debug",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "GCStats",
                 "newPage": false,
                 "searchKey": "debug.GCStats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "BuildInfo",
                 "newPage": false,
                 "searchKey": "debug.BuildInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -86,9 +78,7 @@
                       "identifier": "ReadBuildInfo",
                       "newPage": false,
                       "searchKey": "debug.ReadBuildInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -108,7 +98,9 @@
                       "identifier": "readBuildInfo",
                       "newPage": false,
                       "searchKey": "debug.readBuildInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -131,9 +123,7 @@
                 "identifier": "Module",
                 "newPage": false,
                 "searchKey": "debug.Module",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -156,9 +146,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -176,9 +164,7 @@
                 "identifier": "ReadGCStats",
                 "newPage": false,
                 "searchKey": "debug.ReadGCStats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -198,9 +184,7 @@
                 "identifier": "SetGCPercent",
                 "newPage": false,
                 "searchKey": "debug.SetGCPercent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -220,9 +204,7 @@
                 "identifier": "FreeOSMemory",
                 "newPage": false,
                 "searchKey": "debug.FreeOSMemory",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -242,9 +224,7 @@
                 "identifier": "SetMaxStack",
                 "newPage": false,
                 "searchKey": "debug.SetMaxStack",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -264,9 +244,7 @@
                 "identifier": "SetMaxThreads",
                 "newPage": false,
                 "searchKey": "debug.SetMaxThreads",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -286,9 +264,7 @@
                 "identifier": "SetPanicOnFault",
                 "newPage": false,
                 "searchKey": "debug.SetPanicOnFault",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -308,9 +284,7 @@
                 "identifier": "WriteHeapDump",
                 "newPage": false,
                 "searchKey": "debug.WriteHeapDump",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -330,9 +304,7 @@
                 "identifier": "SetTraceback",
                 "newPage": false,
                 "searchKey": "debug.SetTraceback",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -352,7 +324,9 @@
                 "identifier": "modinfo",
                 "newPage": false,
                 "searchKey": "debug.modinfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -372,9 +346,7 @@
                 "identifier": "PrintStack",
                 "newPage": false,
                 "searchKey": "debug.PrintStack",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -394,9 +366,7 @@
                 "identifier": "Stack",
                 "newPage": false,
                 "searchKey": "debug.Stack",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -416,7 +386,9 @@
                 "identifier": "readGCStats",
                 "newPage": false,
                 "searchKey": "debug.readGCStats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -436,7 +408,9 @@
                 "identifier": "freeOSMemory",
                 "newPage": false,
                 "searchKey": "debug.freeOSMemory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -456,7 +430,9 @@
                 "identifier": "setMaxStack",
                 "newPage": false,
                 "searchKey": "debug.setMaxStack",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -476,7 +452,9 @@
                 "identifier": "setGCPercent",
                 "newPage": false,
                 "searchKey": "debug.setGCPercent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -496,7 +474,9 @@
                 "identifier": "setPanicOnFault",
                 "newPage": false,
                 "searchKey": "debug.setPanicOnFault",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -516,7 +496,9 @@
                 "identifier": "setMaxThreads",
                 "newPage": false,
                 "searchKey": "debug.setMaxThreads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

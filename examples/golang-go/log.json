@@ -4,9 +4,7 @@
     "identifier": "log",
     "newPage": true,
     "searchKey": "log",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Ldate",
                 "newPage": false,
                 "searchKey": "log.Ldate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "Ltime",
                 "newPage": false,
                 "searchKey": "log.Ltime",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "Lmicroseconds",
                 "newPage": false,
                 "searchKey": "log.Lmicroseconds",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "Llongfile",
                 "newPage": false,
                 "searchKey": "log.Llongfile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -132,9 +120,7 @@
                 "identifier": "Lshortfile",
                 "newPage": false,
                 "searchKey": "log.Lshortfile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -154,9 +140,7 @@
                 "identifier": "LUTC",
                 "newPage": false,
                 "searchKey": "log.LUTC",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -176,9 +160,7 @@
                 "identifier": "Lmsgprefix",
                 "newPage": false,
                 "searchKey": "log.Lmsgprefix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -198,9 +180,7 @@
                 "identifier": "LstdFlags",
                 "newPage": false,
                 "searchKey": "log.LstdFlags",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +200,9 @@
                 "identifier": "Rdate",
                 "newPage": false,
                 "searchKey": "log.Rdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -240,7 +222,9 @@
                 "identifier": "Rtime",
                 "newPage": false,
                 "searchKey": "log.Rtime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +244,9 @@
                 "identifier": "Rmicroseconds",
                 "newPage": false,
                 "searchKey": "log.Rmicroseconds",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -280,7 +266,9 @@
                 "identifier": "Rline",
                 "newPage": false,
                 "searchKey": "log.Rline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -300,7 +288,9 @@
                 "identifier": "Rlongfile",
                 "newPage": false,
                 "searchKey": "log.Rlongfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -320,7 +310,9 @@
                 "identifier": "Rshortfile",
                 "newPage": false,
                 "searchKey": "log.Rshortfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -343,9 +335,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -363,7 +353,9 @@
                 "identifier": "std",
                 "newPage": false,
                 "searchKey": "log.std",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -383,7 +375,9 @@
                 "identifier": "tests",
                 "newPage": false,
                 "searchKey": "log.tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -406,9 +400,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -426,9 +418,7 @@
                 "identifier": "Logger",
                 "newPage": false,
                 "searchKey": "log.Logger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -446,9 +436,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "log.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -468,9 +456,7 @@
                       "identifier": "Default",
                       "newPage": false,
                       "searchKey": "log.Default",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -490,9 +476,7 @@
                       "identifier": "Logger.SetOutput",
                       "newPage": false,
                       "searchKey": "log.Logger.SetOutput",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -512,7 +496,9 @@
                       "identifier": "Logger.formatHeader",
                       "newPage": false,
                       "searchKey": "log.Logger.formatHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -532,9 +518,7 @@
                       "identifier": "Logger.Output",
                       "newPage": false,
                       "searchKey": "log.Logger.Output",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -554,9 +538,7 @@
                       "identifier": "Logger.Printf",
                       "newPage": false,
                       "searchKey": "log.Logger.Printf",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -576,9 +558,7 @@
                       "identifier": "Logger.Print",
                       "newPage": false,
                       "searchKey": "log.Logger.Print",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -598,9 +578,7 @@
                       "identifier": "Logger.Println",
                       "newPage": false,
                       "searchKey": "log.Logger.Println",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -620,9 +598,7 @@
                       "identifier": "Logger.Fatal",
                       "newPage": false,
                       "searchKey": "log.Logger.Fatal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -642,9 +618,7 @@
                       "identifier": "Logger.Fatalf",
                       "newPage": false,
                       "searchKey": "log.Logger.Fatalf",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -664,9 +638,7 @@
                       "identifier": "Logger.Fatalln",
                       "newPage": false,
                       "searchKey": "log.Logger.Fatalln",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -686,9 +658,7 @@
                       "identifier": "Logger.Panic",
                       "newPage": false,
                       "searchKey": "log.Logger.Panic",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -708,9 +678,7 @@
                       "identifier": "Logger.Panicf",
                       "newPage": false,
                       "searchKey": "log.Logger.Panicf",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -730,9 +698,7 @@
                       "identifier": "Logger.Panicln",
                       "newPage": false,
                       "searchKey": "log.Logger.Panicln",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -752,9 +718,7 @@
                       "identifier": "Logger.Flags",
                       "newPage": false,
                       "searchKey": "log.Logger.Flags",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -774,9 +738,7 @@
                       "identifier": "Logger.SetFlags",
                       "newPage": false,
                       "searchKey": "log.Logger.SetFlags",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -796,9 +758,7 @@
                       "identifier": "Logger.Prefix",
                       "newPage": false,
                       "searchKey": "log.Logger.Prefix",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -818,9 +778,7 @@
                       "identifier": "Logger.SetPrefix",
                       "newPage": false,
                       "searchKey": "log.Logger.SetPrefix",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -840,9 +798,7 @@
                       "identifier": "Logger.Writer",
                       "newPage": false,
                       "searchKey": "log.Logger.Writer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -865,7 +821,9 @@
                 "identifier": "tester",
                 "newPage": false,
                 "searchKey": "log.tester",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -888,9 +846,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -908,7 +864,9 @@
                 "identifier": "itoa",
                 "newPage": false,
                 "searchKey": "log.itoa",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -928,9 +886,7 @@
                 "identifier": "SetOutput",
                 "newPage": false,
                 "searchKey": "log.SetOutput",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -950,9 +906,7 @@
                 "identifier": "Flags",
                 "newPage": false,
                 "searchKey": "log.Flags",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -972,9 +926,7 @@
                 "identifier": "SetFlags",
                 "newPage": false,
                 "searchKey": "log.SetFlags",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -994,9 +946,7 @@
                 "identifier": "Prefix",
                 "newPage": false,
                 "searchKey": "log.Prefix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1016,9 +966,7 @@
                 "identifier": "SetPrefix",
                 "newPage": false,
                 "searchKey": "log.SetPrefix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1038,9 +986,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "log.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1060,9 +1006,7 @@
                 "identifier": "Print",
                 "newPage": false,
                 "searchKey": "log.Print",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1082,9 +1026,7 @@
                 "identifier": "Printf",
                 "newPage": false,
                 "searchKey": "log.Printf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1104,9 +1046,7 @@
                 "identifier": "Println",
                 "newPage": false,
                 "searchKey": "log.Println",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1126,9 +1066,7 @@
                 "identifier": "Fatal",
                 "newPage": false,
                 "searchKey": "log.Fatal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1148,9 +1086,7 @@
                 "identifier": "Fatalf",
                 "newPage": false,
                 "searchKey": "log.Fatalf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1170,9 +1106,7 @@
                 "identifier": "Fatalln",
                 "newPage": false,
                 "searchKey": "log.Fatalln",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1192,9 +1126,7 @@
                 "identifier": "Panic",
                 "newPage": false,
                 "searchKey": "log.Panic",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1214,9 +1146,7 @@
                 "identifier": "Panicf",
                 "newPage": false,
                 "searchKey": "log.Panicf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1236,9 +1166,7 @@
                 "identifier": "Panicln",
                 "newPage": false,
                 "searchKey": "log.Panicln",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1258,9 +1186,7 @@
                 "identifier": "Output",
                 "newPage": false,
                 "searchKey": "log.Output",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1280,7 +1206,9 @@
                 "identifier": "testPrint",
                 "newPage": false,
                 "searchKey": "log.testPrint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1300,7 +1228,9 @@
                 "identifier": "TestDefault",
                 "newPage": false,
                 "searchKey": "log.TestDefault",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1320,7 +1250,9 @@
                 "identifier": "TestAll",
                 "newPage": false,
                 "searchKey": "log.TestAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1340,7 +1272,9 @@
                 "identifier": "TestOutput",
                 "newPage": false,
                 "searchKey": "log.TestOutput",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1360,7 +1294,9 @@
                 "identifier": "TestOutputRace",
                 "newPage": false,
                 "searchKey": "log.TestOutputRace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1380,7 +1316,9 @@
                 "identifier": "TestFlagAndPrefixSetting",
                 "newPage": false,
                 "searchKey": "log.TestFlagAndPrefixSetting",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1400,7 +1338,9 @@
                 "identifier": "TestUTCFlag",
                 "newPage": false,
                 "searchKey": "log.TestUTCFlag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1420,7 +1360,9 @@
                 "identifier": "TestEmptyPrintCreatesLine",
                 "newPage": false,
                 "searchKey": "log.TestEmptyPrintCreatesLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1440,7 +1382,9 @@
                 "identifier": "BenchmarkItoa",
                 "newPage": false,
                 "searchKey": "log.BenchmarkItoa",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1460,7 +1404,9 @@
                 "identifier": "BenchmarkPrintln",
                 "newPage": false,
                 "searchKey": "log.BenchmarkPrintln",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1480,7 +1426,9 @@
                 "identifier": "BenchmarkPrintlnNoFlags",
                 "newPage": false,
                 "searchKey": "log.BenchmarkPrintlnNoFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -13,11 +13,14 @@ This is a mirror of golang.org/x/crypto/internal/subtle.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AnyOverlap" href="#AnyOverlap">func AnyOverlap(x, y []byte) bool</a>
 
 ```
 searchKey: subtle.AnyOverlap
-tags: [exported]
 ```
 
 ```Go
@@ -30,7 +33,6 @@ AnyOverlap reports whether x and y share memory at any (not necessarily correspo
 
 ```
 searchKey: subtle.InexactOverlap
-tags: [exported]
 ```
 
 ```Go

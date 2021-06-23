@@ -4,9 +4,7 @@
     "identifier": "rand",
     "newPage": true,
     "searchKey": "crypto/rand",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "urandomDevice",
                 "newPage": false,
                 "searchKey": "rand.urandomDevice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,9 +83,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "rand.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -109,7 +103,9 @@
                 "identifier": "altGetRandom",
                 "newPage": false,
                 "searchKey": "rand.altGetRandom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -129,7 +125,9 @@
                 "identifier": "isEAGAIN",
                 "newPage": false,
                 "searchKey": "rand.isEAGAIN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -149,7 +147,9 @@
                 "identifier": "smallPrimes",
                 "newPage": false,
                 "searchKey": "rand.smallPrimes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -169,7 +169,9 @@
                 "identifier": "smallPrimesProduct",
                 "newPage": false,
                 "searchKey": "rand.smallPrimesProduct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -192,9 +194,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -212,7 +212,9 @@
                 "identifier": "devReader",
                 "newPage": false,
                 "searchKey": "rand.devReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,7 +232,9 @@
                       "identifier": "devReader.Read",
                       "newPage": false,
                       "searchKey": "rand.devReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -253,7 +257,9 @@
                 "identifier": "hideAgainReader",
                 "newPage": false,
                 "searchKey": "rand.hideAgainReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -271,7 +277,9 @@
                       "identifier": "hideAgainReader.Read",
                       "newPage": false,
                       "searchKey": "rand.hideAgainReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,7 +302,9 @@
                 "identifier": "reader",
                 "newPage": false,
                 "searchKey": "rand.reader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -312,7 +322,9 @@
                       "identifier": "reader.Read",
                       "newPage": false,
                       "searchKey": "rand.reader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -338,9 +350,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -353,12 +363,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/rand#init",
+              "pathID": "/crypto/rand#init.eagain.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.eagain.go",
                 "newPage": false,
                 "searchKey": "rand.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -378,7 +390,9 @@
                 "identifier": "unixIsEAGAIN",
                 "newPage": false,
                 "searchKey": "rand.unixIsEAGAIN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -398,9 +412,7 @@
                 "identifier": "Read",
                 "newPage": false,
                 "searchKey": "rand.Read",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -415,12 +427,14 @@
           },
           {
             "node": {
-              "pathID": "/crypto/rand#init",
+              "pathID": "/crypto/rand#init.rand_getentropy.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.rand_getentropy.go",
                 "newPage": false,
                 "searchKey": "rand.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -440,7 +454,9 @@
                 "identifier": "getEntropy",
                 "newPage": false,
                 "searchKey": "rand.getEntropy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -455,12 +471,14 @@
           },
           {
             "node": {
-              "pathID": "/crypto/rand#init",
+              "pathID": "/crypto/rand#init.rand_unix.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.rand_unix.go",
                 "newPage": false,
                 "searchKey": "rand.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -480,7 +498,9 @@
                 "identifier": "warnBlocked",
                 "newPage": false,
                 "searchKey": "rand.warnBlocked",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -500,7 +520,9 @@
                 "identifier": "newReader",
                 "newPage": false,
                 "searchKey": "rand.newReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -520,9 +542,7 @@
                 "identifier": "Prime",
                 "newPage": false,
                 "searchKey": "rand.Prime",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -542,9 +562,7 @@
                 "identifier": "Int",
                 "newPage": false,
                 "searchKey": "rand.Int",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -564,7 +582,9 @@
                 "identifier": "TestRead",
                 "newPage": false,
                 "searchKey": "rand.TestRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -584,7 +604,9 @@
                 "identifier": "TestReadEmpty",
                 "newPage": false,
                 "searchKey": "rand.TestReadEmpty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

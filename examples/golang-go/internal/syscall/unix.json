@@ -4,7 +4,9 @@
     "identifier": "unix",
     "newPage": true,
     "searchKey": "internal/syscall/unix",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "AT_REMOVEDIR",
                 "newPage": false,
                 "searchKey": "unix.AT_REMOVEDIR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "AT_SYMLINK_NOFOLLOW",
                 "newPage": false,
                 "searchKey": "unix.AT_SYMLINK_NOFOLLOW",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,9 +107,7 @@
                 "identifier": "Unlinkat",
                 "newPage": false,
                 "searchKey": "unix.Unlinkat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +127,7 @@
                 "identifier": "Openat",
                 "newPage": false,
                 "searchKey": "unix.Openat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -149,9 +147,7 @@
                 "identifier": "Fstatat",
                 "newPage": false,
                 "searchKey": "unix.Fstatat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -171,7 +167,9 @@
                 "identifier": "unlinkat",
                 "newPage": false,
                 "searchKey": "unix.unlinkat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -191,7 +189,9 @@
                 "identifier": "openat",
                 "newPage": false,
                 "searchKey": "unix.openat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -211,7 +211,9 @@
                 "identifier": "fstatat",
                 "newPage": false,
                 "searchKey": "unix.fstatat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -231,7 +233,9 @@
                 "identifier": "libc_getentropy_trampoline",
                 "newPage": false,
                 "searchKey": "unix.libc_getentropy_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -251,9 +255,7 @@
                 "identifier": "GetEntropy",
                 "newPage": false,
                 "searchKey": "unix.GetEntropy",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -273,7 +275,9 @@
                 "identifier": "syscall_syscall",
                 "newPage": false,
                 "searchKey": "unix.syscall_syscall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -293,9 +297,7 @@
                 "identifier": "IsNonblock",
                 "newPage": false,
                 "searchKey": "unix.IsNonblock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -315,7 +317,9 @@
                 "identifier": "fcntl",
                 "newPage": false,
                 "searchKey": "unix.fcntl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

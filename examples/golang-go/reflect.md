@@ -129,7 +129,6 @@ See "The Laws of Reflection" for an introduction to reflection in Go: [https://g
     * [type rtype struct](#rtype)
         * [func rtypeOff(section unsafe.Pointer, off int32) *rtype](#rtypeOff)
         * [func bucketOf(ktyp, etyp *rtype) *rtype](#bucketOf)
-        * [func funcLayout(t *funcType, rcvr *rtype) (frametype *rtype, framePool *sync.Pool, abi abiDesc)](#funcLayout)
         * [func methodReceiver(op string, v Value, methodIndex int) (rcvrtype *rtype, t *funcType, fn unsafe.Pointer)](#methodReceiver)
         * [func (t *rtype) nameOff(off nameOff) name](#rtype.nameOff)
         * [func (t *rtype) typeOff(off typeOff) *rtype](#rtype.typeOff)
@@ -179,7 +178,6 @@ See "The Laws of Reflection" for an introduction to reflection in Go: [https://g
     * [type arrayType struct](#arrayType)
     * [type chanType struct](#chanType)
     * [type funcType struct](#funcType)
-        * [func methodReceiver(op string, v Value, methodIndex int) (rcvrtype *rtype, t *funcType, fn unsafe.Pointer)](#methodReceiver)
         * [func (t *funcType) in() []*rtype](#funcType.in)
         * [func (t *funcType) out() []*rtype](#funcType.out)
     * [type imethod struct](#imethod)
@@ -463,14 +461,11 @@ See "The Laws of Reflection" for an introduction to reflection in Go: [https://g
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="abiStepBad" href="#abiStepBad">const abiStepBad</a>
 
 ```
 searchKey: reflect.abiStepBad
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +476,7 @@ const abiStepBad abiStepKind = iota
 
 ```
 searchKey: reflect.abiStepStack
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +488,7 @@ const abiStepStack // copy to/from stack
 
 ```
 searchKey: reflect.abiStepIntReg
+tags: [private]
 ```
 
 ```Go
@@ -503,6 +500,7 @@ const abiStepIntReg // copy to/from integer register
 
 ```
 searchKey: reflect.abiStepPointer
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +512,7 @@ const abiStepPointer // copy pointer to/from integer register
 
 ```
 searchKey: reflect.abiStepFloatReg
+tags: [private]
 ```
 
 ```Go
@@ -525,7 +524,6 @@ const abiStepFloatReg // copy to/from FP register
 
 ```
 searchKey: reflect.Invalid
-tags: [exported]
 ```
 
 ```Go
@@ -536,7 +534,6 @@ const Invalid Kind = iota
 
 ```
 searchKey: reflect.Bool
-tags: [exported]
 ```
 
 ```Go
@@ -547,7 +544,6 @@ const Bool
 
 ```
 searchKey: reflect.Int
-tags: [exported]
 ```
 
 ```Go
@@ -558,7 +554,6 @@ const Int
 
 ```
 searchKey: reflect.Int8
-tags: [exported]
 ```
 
 ```Go
@@ -569,7 +564,6 @@ const Int8
 
 ```
 searchKey: reflect.Int16
-tags: [exported]
 ```
 
 ```Go
@@ -580,7 +574,6 @@ const Int16
 
 ```
 searchKey: reflect.Int32
-tags: [exported]
 ```
 
 ```Go
@@ -591,7 +584,6 @@ const Int32
 
 ```
 searchKey: reflect.Int64
-tags: [exported]
 ```
 
 ```Go
@@ -602,7 +594,6 @@ const Int64
 
 ```
 searchKey: reflect.Uint
-tags: [exported]
 ```
 
 ```Go
@@ -613,7 +604,6 @@ const Uint
 
 ```
 searchKey: reflect.Uint8
-tags: [exported]
 ```
 
 ```Go
@@ -624,7 +614,6 @@ const Uint8
 
 ```
 searchKey: reflect.Uint16
-tags: [exported]
 ```
 
 ```Go
@@ -635,7 +624,6 @@ const Uint16
 
 ```
 searchKey: reflect.Uint32
-tags: [exported]
 ```
 
 ```Go
@@ -646,7 +634,6 @@ const Uint32
 
 ```
 searchKey: reflect.Uint64
-tags: [exported]
 ```
 
 ```Go
@@ -657,7 +644,6 @@ const Uint64
 
 ```
 searchKey: reflect.Uintptr
-tags: [exported]
 ```
 
 ```Go
@@ -668,7 +654,6 @@ const Uintptr
 
 ```
 searchKey: reflect.Float32
-tags: [exported]
 ```
 
 ```Go
@@ -679,7 +664,6 @@ const Float32
 
 ```
 searchKey: reflect.Float64
-tags: [exported]
 ```
 
 ```Go
@@ -690,7 +674,6 @@ const Float64
 
 ```
 searchKey: reflect.Complex64
-tags: [exported]
 ```
 
 ```Go
@@ -701,7 +684,6 @@ const Complex64
 
 ```
 searchKey: reflect.Complex128
-tags: [exported]
 ```
 
 ```Go
@@ -712,7 +694,6 @@ const Complex128
 
 ```
 searchKey: reflect.Array
-tags: [exported]
 ```
 
 ```Go
@@ -723,7 +704,6 @@ const Array
 
 ```
 searchKey: reflect.Chan
-tags: [exported]
 ```
 
 ```Go
@@ -734,7 +714,6 @@ const Chan
 
 ```
 searchKey: reflect.Func
-tags: [exported]
 ```
 
 ```Go
@@ -745,7 +724,6 @@ const Func
 
 ```
 searchKey: reflect.Interface
-tags: [exported]
 ```
 
 ```Go
@@ -756,7 +734,6 @@ const Interface
 
 ```
 searchKey: reflect.Map
-tags: [exported]
 ```
 
 ```Go
@@ -767,7 +744,6 @@ const Map
 
 ```
 searchKey: reflect.Ptr
-tags: [exported]
 ```
 
 ```Go
@@ -778,7 +754,6 @@ const Ptr
 
 ```
 searchKey: reflect.Slice
-tags: [exported]
 ```
 
 ```Go
@@ -789,7 +764,6 @@ const Slice
 
 ```
 searchKey: reflect.String
-tags: [exported]
 ```
 
 ```Go
@@ -800,7 +774,6 @@ const String
 
 ```
 searchKey: reflect.Struct
-tags: [exported]
 ```
 
 ```Go
@@ -811,7 +784,6 @@ const Struct
 
 ```
 searchKey: reflect.UnsafePointer
-tags: [exported]
 ```
 
 ```Go
@@ -822,6 +794,7 @@ const UnsafePointer
 
 ```
 searchKey: reflect.tflagUncommon
+tags: [private]
 ```
 
 ```Go
@@ -844,6 +817,7 @@ u := &(*tUncommon)(unsafe.Pointer(t)).u
 
 ```
 searchKey: reflect.tflagExtraStar
+tags: [private]
 ```
 
 ```Go
@@ -856,6 +830,7 @@ tflagExtraStar means the name in the str field has an extraneous '*' prefix. Thi
 
 ```
 searchKey: reflect.tflagNamed
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +843,7 @@ tflagNamed means the type has a name.
 
 ```
 searchKey: reflect.tflagRegularMemory
+tags: [private]
 ```
 
 ```Go
@@ -880,7 +856,6 @@ tflagRegularMemory means that equal and hash functions can treat this type as a 
 
 ```
 searchKey: reflect.RecvDir
-tags: [exported]
 ```
 
 ```Go
@@ -892,7 +867,6 @@ const RecvDir ChanDir = 1 << iota // <-chan
 
 ```
 searchKey: reflect.SendDir
-tags: [exported]
 ```
 
 ```Go
@@ -904,7 +878,6 @@ const SendDir // chan<-
 
 ```
 searchKey: reflect.BothDir
-tags: [exported]
 ```
 
 ```Go
@@ -916,6 +889,7 @@ const BothDir = RecvDir | SendDir // chan
 
 ```
 searchKey: reflect.kindDirectIface
+tags: [private]
 ```
 
 ```Go
@@ -926,6 +900,7 @@ const kindDirectIface = 1 << 5
 
 ```
 searchKey: reflect.kindGCProg
+tags: [private]
 ```
 
 ```Go
@@ -937,6 +912,7 @@ const kindGCProg = 1 << 6 // Type.gc points to GC program
 
 ```
 searchKey: reflect.kindMask
+tags: [private]
 ```
 
 ```Go
@@ -947,6 +923,7 @@ const kindMask = (1 << 5) - 1
 
 ```
 searchKey: reflect.bucketSize
+tags: [private]
 ```
 
 ```Go
@@ -959,6 +936,7 @@ Make sure these routines stay in sync with ../../runtime/map.go! These types exi
 
 ```
 searchKey: reflect.maxKeySize
+tags: [private]
 ```
 
 ```Go
@@ -971,6 +949,7 @@ Make sure these routines stay in sync with ../../runtime/map.go! These types exi
 
 ```
 searchKey: reflect.maxValSize
+tags: [private]
 ```
 
 ```Go
@@ -983,6 +962,7 @@ Make sure these routines stay in sync with ../../runtime/map.go! These types exi
 
 ```
 searchKey: reflect.maxPtrmaskBytes
+tags: [private]
 ```
 
 ```Go
@@ -995,6 +975,7 @@ See cmd/compile/internal/gc/reflect.go for derivation of constant.
 
 ```
 searchKey: reflect.ptrSize
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +987,7 @@ const ptrSize = 4 << (^uintptr(0) >> 63) // unsafe.Sizeof(uintptr(0)) but an ide
 
 ```
 searchKey: reflect.flagKindWidth
+tags: [private]
 ```
 
 ```Go
@@ -1017,6 +999,7 @@ const flagKindWidth = 5 // there are 27 kinds
 
 ```
 searchKey: reflect.flagKindMask
+tags: [private]
 ```
 
 ```Go
@@ -1027,6 +1010,7 @@ const flagKindMask flag = 1<<flagKindWidth - 1
 
 ```
 searchKey: reflect.flagStickyRO
+tags: [private]
 ```
 
 ```Go
@@ -1037,6 +1021,7 @@ const flagStickyRO flag = 1 << 5
 
 ```
 searchKey: reflect.flagEmbedRO
+tags: [private]
 ```
 
 ```Go
@@ -1047,6 +1032,7 @@ const flagEmbedRO flag = 1 << 6
 
 ```
 searchKey: reflect.flagIndir
+tags: [private]
 ```
 
 ```Go
@@ -1057,6 +1043,7 @@ const flagIndir flag = 1 << 7
 
 ```
 searchKey: reflect.flagAddr
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1054,7 @@ const flagAddr flag = 1 << 8
 
 ```
 searchKey: reflect.flagMethod
+tags: [private]
 ```
 
 ```Go
@@ -1077,6 +1065,7 @@ const flagMethod flag = 1 << 9
 
 ```
 searchKey: reflect.flagMethodShift
+tags: [private]
 ```
 
 ```Go
@@ -1087,6 +1076,7 @@ const flagMethodShift = 10
 
 ```
 searchKey: reflect.flagRO
+tags: [private]
 ```
 
 ```Go
@@ -1097,6 +1087,7 @@ const flagRO flag = flagStickyRO | flagEmbedRO
 
 ```
 searchKey: reflect.debugReflectCall
+tags: [private]
 ```
 
 ```Go
@@ -1107,7 +1098,6 @@ const debugReflectCall = false
 
 ```
 searchKey: reflect.SelectSend
-tags: [exported]
 ```
 
 ```Go
@@ -1119,7 +1109,6 @@ const SelectSend // case Chan <- Send
 
 ```
 searchKey: reflect.SelectRecv
-tags: [exported]
 ```
 
 ```Go
@@ -1131,7 +1120,6 @@ const SelectRecv // case <-Chan:
 
 ```
 searchKey: reflect.SelectDefault
-tags: [exported]
 ```
 
 ```Go
@@ -1143,6 +1131,7 @@ const SelectDefault // default
 
 ```
 searchKey: reflect.maxZero
+tags: [private]
 ```
 
 ```Go
@@ -1155,6 +1144,7 @@ must match declarations in runtime/map.go.
 
 ```
 searchKey: reflect.PtrSize
+tags: [private]
 ```
 
 ```Go
@@ -1163,14 +1153,11 @@ const PtrSize = ptrSize
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="intArgRegs" href="#intArgRegs">var intArgRegs</a>
 
 ```
 searchKey: reflect.intArgRegs
+tags: [private]
 ```
 
 ```Go
@@ -1189,6 +1176,7 @@ Currently they're set to zero because using the actual constants will break ever
 
 ```
 searchKey: reflect.floatArgRegs
+tags: [private]
 ```
 
 ```Go
@@ -1207,6 +1195,7 @@ Currently they're set to zero because using the actual constants will break ever
 
 ```
 searchKey: reflect.floatRegSize
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1214,7 @@ Currently they're set to zero because using the actual constants will break ever
 
 ```
 searchKey: reflect.kindNames
+tags: [private]
 ```
 
 ```Go
@@ -1235,6 +1225,7 @@ var kindNames = ...
 
 ```
 searchKey: reflect.ptrMap
+tags: [private]
 ```
 
 ```Go
@@ -1248,6 +1239,7 @@ ptrMap is the cache for PtrTo.
 
 ```
 searchKey: reflect.lookupCache
+tags: [private]
 ```
 
 ```Go
@@ -1261,6 +1253,7 @@ The lookupCache caches ArrayOf, ChanOf, MapOf and SliceOf lookups.
 
 ```
 searchKey: reflect.funcLookupCache
+tags: [private]
 ```
 
 ```Go
@@ -1279,6 +1272,7 @@ The funcLookupCache caches FuncOf lookups. FuncOf does not share the common look
 
 ```
 searchKey: reflect.structLookupCache
+tags: [private]
 ```
 
 ```Go
@@ -1297,6 +1291,7 @@ The structLookupCache caches StructOf lookups. StructOf does not share the commo
 
 ```
 searchKey: reflect.layoutCache
+tags: [private]
 ```
 
 ```Go
@@ -1308,6 +1303,7 @@ var layoutCache sync.Map // map[layoutKey]layoutType
 
 ```
 searchKey: reflect.callGC
+tags: [private]
 ```
 
 ```Go
@@ -1319,6 +1315,7 @@ var callGC bool // for testing; see TestCallMethodJump
 
 ```
 searchKey: reflect.uint8Type
+tags: [private]
 ```
 
 ```Go
@@ -1329,6 +1326,7 @@ var uint8Type = TypeOf(uint8(0)).(*rtype)
 
 ```
 searchKey: reflect.zeroVal
+tags: [private]
 ```
 
 ```Go
@@ -1339,6 +1337,7 @@ var zeroVal [maxZero]byte
 
 ```
 searchKey: reflect.dummy
+tags: [private]
 ```
 
 ```Go
@@ -1352,6 +1351,7 @@ var dummy struct {
 
 ```
 searchKey: reflect.CallGC
+tags: [private]
 ```
 
 ```Go
@@ -1362,6 +1362,7 @@ var CallGC = &callGC
 
 ```
 searchKey: reflect.GCBits
+tags: [private]
 ```
 
 ```Go
@@ -1372,6 +1373,7 @@ var GCBits = gcbits
 
 ```
 searchKey: reflect.pinUnexpMethI
+tags: [private]
 ```
 
 ```Go
@@ -1380,14 +1382,11 @@ var pinUnexpMethI = pinUnexpMeth(EmbedWithUnexpMeth{})
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="abiStep" href="#abiStep">type abiStep struct</a>
 
 ```
 searchKey: reflect.abiStep
+tags: [private]
 ```
 
 ```Go
@@ -1412,6 +1411,7 @@ abiStep represents an ABI "instruction." Each instruction describes one part of 
 
 ```
 searchKey: reflect.abiStepKind
+tags: [private]
 ```
 
 ```Go
@@ -1424,6 +1424,7 @@ abiStepKind is the "op-code" for an abiStep instruction.
 
 ```
 searchKey: reflect.abiSeq
+tags: [private]
 ```
 
 ```Go
@@ -1458,6 +1459,7 @@ An abiSeq should be populated by calling its addArg method.
 
 ```
 searchKey: reflect.abiSeq.dump
+tags: [private]
 ```
 
 ```Go
@@ -1468,6 +1470,7 @@ func (a *abiSeq) dump()
 
 ```
 searchKey: reflect.abiSeq.stepsForValue
+tags: [private]
 ```
 
 ```Go
@@ -1480,6 +1483,7 @@ stepsForValue returns the ABI instructions for translating the i'th Go argument 
 
 ```
 searchKey: reflect.abiSeq.addArg
+tags: [private]
 ```
 
 ```Go
@@ -1494,6 +1498,7 @@ If the value was stack-assigned, returns the single abiStep describing that tran
 
 ```
 searchKey: reflect.abiSeq.addRcvr
+tags: [private]
 ```
 
 ```Go
@@ -1508,6 +1513,7 @@ If the receiver was stack-assigned, returns the single abiStep describing that t
 
 ```
 searchKey: reflect.abiSeq.regAssign
+tags: [private]
 ```
 
 ```Go
@@ -1524,6 +1530,7 @@ This method along with the assign* methods represent the complete register-assig
 
 ```
 searchKey: reflect.abiSeq.assignIntN
+tags: [private]
 ```
 
 ```Go
@@ -1540,6 +1547,7 @@ Returns whether assignment succeeded.
 
 ```
 searchKey: reflect.abiSeq.assignFloatN
+tags: [private]
 ```
 
 ```Go
@@ -1554,6 +1562,7 @@ Returns whether assignment succeeded.
 
 ```
 searchKey: reflect.abiSeq.stackAssign
+tags: [private]
 ```
 
 ```Go
@@ -1568,6 +1577,7 @@ Should not be called directly; use addArg instead.
 
 ```
 searchKey: reflect.abiDesc
+tags: [private]
 ```
 
 ```Go
@@ -1610,6 +1620,7 @@ abiDesc describes the ABI for a function or method.
 
 ```
 searchKey: reflect.newAbiDesc
+tags: [private]
 ```
 
 ```Go
@@ -1620,6 +1631,7 @@ func newAbiDesc(t *funcType, rcvr *rtype) abiDesc
 
 ```
 searchKey: reflect.funcLayout
+tags: [private]
 ```
 
 ```Go
@@ -1632,6 +1644,7 @@ funcLayout computes a struct type representing the layout of the stack-assigned 
 
 ```
 searchKey: reflect.abiDesc.dump
+tags: [private]
 ```
 
 ```Go
@@ -1642,6 +1655,7 @@ func (a *abiDesc) dump()
 
 ```
 searchKey: reflect.visit
+tags: [private]
 ```
 
 ```Go
@@ -1658,6 +1672,7 @@ During deepValueEqual, must keep track of checks that are in progress. The compa
 
 ```
 searchKey: reflect.makeFuncImpl
+tags: [private]
 ```
 
 ```Go
@@ -1674,6 +1689,7 @@ makeFuncImpl is the closure value implementing the function returned by MakeFunc
 
 ```
 searchKey: reflect.methodValue
+tags: [private]
 ```
 
 ```Go
@@ -1690,6 +1706,7 @@ The first 3 words of this type must be kept in sync with makeFuncImpl and runtim
 
 ```
 searchKey: reflect.makeFuncCtxt
+tags: [private]
 ```
 
 ```Go
@@ -1707,7 +1724,6 @@ This structure must be kept in sync with runtime.reflectMethodValue. Any changes
 
 ```
 searchKey: reflect.Type
-tags: [exported]
 ```
 
 ```Go
@@ -1893,7 +1909,6 @@ Type values are comparable, such as with the == operator, so they can be used as
 
 ```
 searchKey: reflect.TypeOf
-tags: [exported]
 ```
 
 ```Go
@@ -1906,7 +1921,6 @@ TypeOf returns the reflection Type that represents the dynamic type of i. If i i
 
 ```
 searchKey: reflect.PtrTo
-tags: [exported]
 ```
 
 ```Go
@@ -1919,7 +1933,6 @@ PtrTo returns the pointer type with element t. For example, if t represents type
 
 ```
 searchKey: reflect.ChanOf
-tags: [exported]
 ```
 
 ```Go
@@ -1934,7 +1947,6 @@ The gc runtime imposes a limit of 64 kB on channel element types. If t's size is
 
 ```
 searchKey: reflect.MapOf
-tags: [exported]
 ```
 
 ```Go
@@ -1949,7 +1961,6 @@ If the key type is not a valid map key type (that is, if it does not implement G
 
 ```
 searchKey: reflect.FuncOf
-tags: [exported]
 ```
 
 ```Go
@@ -1964,7 +1975,6 @@ The variadic argument controls whether the function is variadic. FuncOf panics i
 
 ```
 searchKey: reflect.SliceOf
-tags: [exported]
 ```
 
 ```Go
@@ -1977,7 +1987,6 @@ SliceOf returns the slice type with element type t. For example, if t represents
 
 ```
 searchKey: reflect.StructOf
-tags: [exported]
 ```
 
 ```Go
@@ -1992,7 +2001,6 @@ StructOf currently does not generate wrapper methods for embedded fields and pan
 
 ```
 searchKey: reflect.ArrayOf
-tags: [exported]
 ```
 
 ```Go
@@ -2007,6 +2015,7 @@ If the resulting type would be larger than the available address space, ArrayOf 
 
 ```
 searchKey: reflect.toType
+tags: [private]
 ```
 
 ```Go
@@ -2019,6 +2028,7 @@ toType converts from a *rtype to a Type that can be returned to the client of pa
 
 ```
 searchKey: reflect.FuncLayout
+tags: [private]
 ```
 
 ```Go
@@ -2033,6 +2043,7 @@ Bitmaps like stack, gc, inReg, and outReg are expanded such that each bit takes 
 
 ```
 searchKey: reflect.MapBucketOf
+tags: [private]
 ```
 
 ```Go
@@ -2043,6 +2054,7 @@ func MapBucketOf(x, y Type) Type
 
 ```
 searchKey: reflect.CachedBucketOf
+tags: [private]
 ```
 
 ```Go
@@ -2053,7 +2065,6 @@ func CachedBucketOf(m Type) Type
 
 ```
 searchKey: reflect.Kind
-tags: [exported]
 ```
 
 ```Go
@@ -2066,7 +2077,6 @@ A Kind represents the specific kind of type that a Type represents. The zero Kin
 
 ```
 searchKey: reflect.Kind.String
-tags: [exported]
 ```
 
 ```Go
@@ -2079,6 +2089,7 @@ String returns the name of k.
 
 ```
 searchKey: reflect.tflag
+tags: [private]
 ```
 
 ```Go
@@ -2099,6 +2110,7 @@ runtime/type.go
 
 ```
 searchKey: reflect.rtype
+tags: [private]
 ```
 
 ```Go
@@ -2127,6 +2139,7 @@ rtype must be kept in sync with ../runtime/type.go:/^type._type.
 
 ```
 searchKey: reflect.rtypeOff
+tags: [private]
 ```
 
 ```Go
@@ -2137,28 +2150,18 @@ func rtypeOff(section unsafe.Pointer, off int32) *rtype
 
 ```
 searchKey: reflect.bucketOf
+tags: [private]
 ```
 
 ```Go
 func bucketOf(ktyp, etyp *rtype) *rtype
 ```
 
-#### <a id="funcLayout" href="#funcLayout">func funcLayout(t *funcType, rcvr *rtype) (frametype *rtype, framePool *sync.Pool, abi abiDesc)</a>
-
-```
-searchKey: reflect.funcLayout
-```
-
-```Go
-func funcLayout(t *funcType, rcvr *rtype) (frametype *rtype, framePool *sync.Pool, abi abiDesc)
-```
-
-funcLayout computes a struct type representing the layout of the stack-assigned function arguments and return values for the function type t. If rcvr != nil, rcvr specifies the type of the receiver. The returned type exists only for GC, so we only fill out GC relevant info. Currently, that's just size and the GC program. We also fill in the name for possible debugging use. 
-
 #### <a id="methodReceiver" href="#methodReceiver">func methodReceiver(op string, v Value, methodIndex int) (rcvrtype *rtype, t *funcType, fn unsafe.Pointer)</a>
 
 ```
 searchKey: reflect.methodReceiver
+tags: [private]
 ```
 
 ```Go
@@ -2171,6 +2174,7 @@ methodReceiver returns information about the receiver described by v. The Value 
 
 ```
 searchKey: reflect.rtype.nameOff
+tags: [private]
 ```
 
 ```Go
@@ -2181,6 +2185,7 @@ func (t *rtype) nameOff(off nameOff) name
 
 ```
 searchKey: reflect.rtype.typeOff
+tags: [private]
 ```
 
 ```Go
@@ -2191,6 +2196,7 @@ func (t *rtype) typeOff(off typeOff) *rtype
 
 ```
 searchKey: reflect.rtype.textOff
+tags: [private]
 ```
 
 ```Go
@@ -2201,6 +2207,7 @@ func (t *rtype) textOff(off textOff) unsafe.Pointer
 
 ```
 searchKey: reflect.rtype.uncommon
+tags: [private]
 ```
 
 ```Go
@@ -2211,6 +2218,7 @@ func (t *rtype) uncommon() *uncommonType
 
 ```
 searchKey: reflect.rtype.String
+tags: [private]
 ```
 
 ```Go
@@ -2221,6 +2229,7 @@ func (t *rtype) String() string
 
 ```
 searchKey: reflect.rtype.Size
+tags: [private]
 ```
 
 ```Go
@@ -2231,6 +2240,7 @@ func (t *rtype) Size() uintptr
 
 ```
 searchKey: reflect.rtype.Bits
+tags: [private]
 ```
 
 ```Go
@@ -2241,6 +2251,7 @@ func (t *rtype) Bits() int
 
 ```
 searchKey: reflect.rtype.Align
+tags: [private]
 ```
 
 ```Go
@@ -2251,6 +2262,7 @@ func (t *rtype) Align() int
 
 ```
 searchKey: reflect.rtype.FieldAlign
+tags: [private]
 ```
 
 ```Go
@@ -2261,6 +2273,7 @@ func (t *rtype) FieldAlign() int
 
 ```
 searchKey: reflect.rtype.Kind
+tags: [private]
 ```
 
 ```Go
@@ -2271,6 +2284,7 @@ func (t *rtype) Kind() Kind
 
 ```
 searchKey: reflect.rtype.pointers
+tags: [private]
 ```
 
 ```Go
@@ -2281,6 +2295,7 @@ func (t *rtype) pointers() bool
 
 ```
 searchKey: reflect.rtype.common
+tags: [private]
 ```
 
 ```Go
@@ -2291,6 +2306,7 @@ func (t *rtype) common() *rtype
 
 ```
 searchKey: reflect.rtype.exportedMethods
+tags: [private]
 ```
 
 ```Go
@@ -2301,6 +2317,7 @@ func (t *rtype) exportedMethods() []method
 
 ```
 searchKey: reflect.rtype.NumMethod
+tags: [private]
 ```
 
 ```Go
@@ -2311,6 +2328,7 @@ func (t *rtype) NumMethod() int
 
 ```
 searchKey: reflect.rtype.Method
+tags: [private]
 ```
 
 ```Go
@@ -2321,6 +2339,7 @@ func (t *rtype) Method(i int) (m Method)
 
 ```
 searchKey: reflect.rtype.MethodByName
+tags: [private]
 ```
 
 ```Go
@@ -2331,6 +2350,7 @@ func (t *rtype) MethodByName(name string) (m Method, ok bool)
 
 ```
 searchKey: reflect.rtype.PkgPath
+tags: [private]
 ```
 
 ```Go
@@ -2341,6 +2361,7 @@ func (t *rtype) PkgPath() string
 
 ```
 searchKey: reflect.rtype.hasName
+tags: [private]
 ```
 
 ```Go
@@ -2351,6 +2372,7 @@ func (t *rtype) hasName() bool
 
 ```
 searchKey: reflect.rtype.Name
+tags: [private]
 ```
 
 ```Go
@@ -2361,6 +2383,7 @@ func (t *rtype) Name() string
 
 ```
 searchKey: reflect.rtype.ChanDir
+tags: [private]
 ```
 
 ```Go
@@ -2371,6 +2394,7 @@ func (t *rtype) ChanDir() ChanDir
 
 ```
 searchKey: reflect.rtype.IsVariadic
+tags: [private]
 ```
 
 ```Go
@@ -2381,6 +2405,7 @@ func (t *rtype) IsVariadic() bool
 
 ```
 searchKey: reflect.rtype.Elem
+tags: [private]
 ```
 
 ```Go
@@ -2391,6 +2416,7 @@ func (t *rtype) Elem() Type
 
 ```
 searchKey: reflect.rtype.Field
+tags: [private]
 ```
 
 ```Go
@@ -2401,6 +2427,7 @@ func (t *rtype) Field(i int) StructField
 
 ```
 searchKey: reflect.rtype.FieldByIndex
+tags: [private]
 ```
 
 ```Go
@@ -2411,6 +2438,7 @@ func (t *rtype) FieldByIndex(index []int) StructField
 
 ```
 searchKey: reflect.rtype.FieldByName
+tags: [private]
 ```
 
 ```Go
@@ -2421,6 +2449,7 @@ func (t *rtype) FieldByName(name string) (StructField, bool)
 
 ```
 searchKey: reflect.rtype.FieldByNameFunc
+tags: [private]
 ```
 
 ```Go
@@ -2431,6 +2460,7 @@ func (t *rtype) FieldByNameFunc(match func(string) bool) (StructField, bool)
 
 ```
 searchKey: reflect.rtype.In
+tags: [private]
 ```
 
 ```Go
@@ -2441,6 +2471,7 @@ func (t *rtype) In(i int) Type
 
 ```
 searchKey: reflect.rtype.Key
+tags: [private]
 ```
 
 ```Go
@@ -2451,6 +2482,7 @@ func (t *rtype) Key() Type
 
 ```
 searchKey: reflect.rtype.Len
+tags: [private]
 ```
 
 ```Go
@@ -2461,6 +2493,7 @@ func (t *rtype) Len() int
 
 ```
 searchKey: reflect.rtype.NumField
+tags: [private]
 ```
 
 ```Go
@@ -2471,6 +2504,7 @@ func (t *rtype) NumField() int
 
 ```
 searchKey: reflect.rtype.NumIn
+tags: [private]
 ```
 
 ```Go
@@ -2481,6 +2515,7 @@ func (t *rtype) NumIn() int
 
 ```
 searchKey: reflect.rtype.NumOut
+tags: [private]
 ```
 
 ```Go
@@ -2491,6 +2526,7 @@ func (t *rtype) NumOut() int
 
 ```
 searchKey: reflect.rtype.Out
+tags: [private]
 ```
 
 ```Go
@@ -2501,6 +2537,7 @@ func (t *rtype) Out(i int) Type
 
 ```
 searchKey: reflect.rtype.ptrTo
+tags: [private]
 ```
 
 ```Go
@@ -2511,6 +2548,7 @@ func (t *rtype) ptrTo() *rtype
 
 ```
 searchKey: reflect.rtype.Implements
+tags: [private]
 ```
 
 ```Go
@@ -2521,6 +2559,7 @@ func (t *rtype) Implements(u Type) bool
 
 ```
 searchKey: reflect.rtype.AssignableTo
+tags: [private]
 ```
 
 ```Go
@@ -2531,6 +2570,7 @@ func (t *rtype) AssignableTo(u Type) bool
 
 ```
 searchKey: reflect.rtype.ConvertibleTo
+tags: [private]
 ```
 
 ```Go
@@ -2541,6 +2581,7 @@ func (t *rtype) ConvertibleTo(u Type) bool
 
 ```
 searchKey: reflect.rtype.Comparable
+tags: [private]
 ```
 
 ```Go
@@ -2551,6 +2592,7 @@ func (t *rtype) Comparable() bool
 
 ```
 searchKey: reflect.rtype.gcSlice
+tags: [private]
 ```
 
 ```Go
@@ -2561,6 +2603,7 @@ func (t *rtype) gcSlice(begin, end uintptr) []byte
 
 ```
 searchKey: reflect.method
+tags: [private]
 ```
 
 ```Go
@@ -2578,6 +2621,7 @@ Method on non-interface type
 
 ```
 searchKey: reflect.uncommonType
+tags: [private]
 ```
 
 ```Go
@@ -2596,6 +2640,7 @@ uncommonType is present only for defined types or types with methods (if T is a 
 
 ```
 searchKey: reflect.uncommonType.methods
+tags: [private]
 ```
 
 ```Go
@@ -2606,6 +2651,7 @@ func (t *uncommonType) methods() []method
 
 ```
 searchKey: reflect.uncommonType.exportedMethods
+tags: [private]
 ```
 
 ```Go
@@ -2616,7 +2662,6 @@ func (t *uncommonType) exportedMethods() []method
 
 ```
 searchKey: reflect.ChanDir
-tags: [exported]
 ```
 
 ```Go
@@ -2629,7 +2674,6 @@ ChanDir represents a channel type's direction.
 
 ```
 searchKey: reflect.ChanDir.String
-tags: [exported]
 ```
 
 ```Go
@@ -2640,6 +2684,7 @@ func (d ChanDir) String() string
 
 ```
 searchKey: reflect.arrayType
+tags: [private]
 ```
 
 ```Go
@@ -2657,6 +2702,7 @@ arrayType represents a fixed array type.
 
 ```
 searchKey: reflect.chanType
+tags: [private]
 ```
 
 ```Go
@@ -2673,6 +2719,7 @@ chanType represents a channel type.
 
 ```
 searchKey: reflect.funcType
+tags: [private]
 ```
 
 ```Go
@@ -2695,22 +2742,11 @@ struct {
 }
 
 ```
-#### <a id="methodReceiver" href="#methodReceiver">func methodReceiver(op string, v Value, methodIndex int) (rcvrtype *rtype, t *funcType, fn unsafe.Pointer)</a>
-
-```
-searchKey: reflect.methodReceiver
-```
-
-```Go
-func methodReceiver(op string, v Value, methodIndex int) (rcvrtype *rtype, t *funcType, fn unsafe.Pointer)
-```
-
-methodReceiver returns information about the receiver described by v. The Value v may or may not have the flagMethod bit set, so the kind cached in v.flag should not be used. The return value rcvrtype gives the method's actual receiver type. The return value t gives the method type signature (without the receiver). The return value fn is a pointer to the method code. 
-
 #### <a id="funcType.in" href="#funcType.in">func (t *funcType) in() []*rtype</a>
 
 ```
 searchKey: reflect.funcType.in
+tags: [private]
 ```
 
 ```Go
@@ -2721,6 +2757,7 @@ func (t *funcType) in() []*rtype
 
 ```
 searchKey: reflect.funcType.out
+tags: [private]
 ```
 
 ```Go
@@ -2731,6 +2768,7 @@ func (t *funcType) out() []*rtype
 
 ```
 searchKey: reflect.imethod
+tags: [private]
 ```
 
 ```Go
@@ -2746,6 +2784,7 @@ imethod represents a method on an interface type
 
 ```
 searchKey: reflect.interfaceType
+tags: [private]
 ```
 
 ```Go
@@ -2762,6 +2801,7 @@ interfaceType represents an interface type.
 
 ```
 searchKey: reflect.interfaceType.Method
+tags: [private]
 ```
 
 ```Go
@@ -2774,6 +2814,7 @@ Method returns the i'th method in the type's method set.
 
 ```
 searchKey: reflect.interfaceType.NumMethod
+tags: [private]
 ```
 
 ```Go
@@ -2786,6 +2827,7 @@ NumMethod returns the number of interface methods in the type's method set.
 
 ```
 searchKey: reflect.interfaceType.MethodByName
+tags: [private]
 ```
 
 ```Go
@@ -2798,6 +2840,7 @@ MethodByName method with the given name in the type's method set.
 
 ```
 searchKey: reflect.mapType
+tags: [private]
 ```
 
 ```Go
@@ -2821,6 +2864,7 @@ mapType represents a map type.
 
 ```
 searchKey: reflect.ptrType
+tags: [private]
 ```
 
 ```Go
@@ -2836,6 +2880,7 @@ ptrType represents a pointer type.
 
 ```
 searchKey: reflect.sliceType
+tags: [private]
 ```
 
 ```Go
@@ -2851,6 +2896,7 @@ sliceType represents a slice type.
 
 ```
 searchKey: reflect.structField
+tags: [private]
 ```
 
 ```Go
@@ -2867,6 +2913,7 @@ Struct field
 
 ```
 searchKey: reflect.runtimeStructField
+tags: [private]
 ```
 
 ```Go
@@ -2879,6 +2926,7 @@ runtimeStructField takes a StructField value passed to StructOf and returns both
 
 ```
 searchKey: reflect.structField.offset
+tags: [private]
 ```
 
 ```Go
@@ -2889,6 +2937,7 @@ func (f *structField) offset() uintptr
 
 ```
 searchKey: reflect.structField.embedded
+tags: [private]
 ```
 
 ```Go
@@ -2899,6 +2948,7 @@ func (f *structField) embedded() bool
 
 ```
 searchKey: reflect.structType
+tags: [private]
 ```
 
 ```Go
@@ -2915,6 +2965,7 @@ structType represents a struct type.
 
 ```
 searchKey: reflect.structType.Field
+tags: [private]
 ```
 
 ```Go
@@ -2927,6 +2978,7 @@ Field returns the i'th struct field.
 
 ```
 searchKey: reflect.structType.FieldByIndex
+tags: [private]
 ```
 
 ```Go
@@ -2939,6 +2991,7 @@ FieldByIndex returns the nested field corresponding to index.
 
 ```
 searchKey: reflect.structType.FieldByNameFunc
+tags: [private]
 ```
 
 ```Go
@@ -2951,6 +3004,7 @@ FieldByNameFunc returns the struct field with a name that satisfies the match fu
 
 ```
 searchKey: reflect.structType.FieldByName
+tags: [private]
 ```
 
 ```Go
@@ -2963,6 +3017,7 @@ FieldByName returns the struct field with the given name and a boolean to indica
 
 ```
 searchKey: reflect.name
+tags: [private]
 ```
 
 ```Go
@@ -2975,6 +3030,7 @@ type name struct {
 
 ```
 searchKey: reflect.newName
+tags: [private]
 ```
 
 ```Go
@@ -2985,6 +3041,7 @@ func newName(n, tag string, exported bool) name
 
 ```
 searchKey: reflect.name.data
+tags: [private]
 ```
 
 ```Go
@@ -2995,6 +3052,7 @@ func (n name) data(off int, whySafe string) *byte
 
 ```
 searchKey: reflect.name.isExported
+tags: [private]
 ```
 
 ```Go
@@ -3005,6 +3063,7 @@ func (n name) isExported() bool
 
 ```
 searchKey: reflect.name.hasTag
+tags: [private]
 ```
 
 ```Go
@@ -3015,6 +3074,7 @@ func (n name) hasTag() bool
 
 ```
 searchKey: reflect.name.readVarint
+tags: [private]
 ```
 
 ```Go
@@ -3027,6 +3087,7 @@ readVarint parses a varint as encoded by encoding/binary. It returns the number 
 
 ```
 searchKey: reflect.name.name
+tags: [private]
 ```
 
 ```Go
@@ -3037,6 +3098,7 @@ func (n name) name() (s string)
 
 ```
 searchKey: reflect.name.tag
+tags: [private]
 ```
 
 ```Go
@@ -3047,6 +3109,7 @@ func (n name) tag() (s string)
 
 ```
 searchKey: reflect.name.pkgPath
+tags: [private]
 ```
 
 ```Go
@@ -3057,7 +3120,6 @@ func (n name) pkgPath() string
 
 ```
 searchKey: reflect.Method
-tags: [exported]
 ```
 
 ```Go
@@ -3084,7 +3146,6 @@ Method represents a single method.
 
 ```
 searchKey: reflect.Method.IsExported
-tags: [exported]
 ```
 
 ```Go
@@ -3097,6 +3158,7 @@ IsExported reports whether the method is exported.
 
 ```
 searchKey: reflect.nameOff
+tags: [private]
 ```
 
 ```Go
@@ -3108,6 +3170,7 @@ type nameOff int32 // offset to a name
 
 ```
 searchKey: reflect.resolveReflectName
+tags: [private]
 ```
 
 ```Go
@@ -3120,6 +3183,7 @@ resolveReflectName adds a name to the reflection lookup map in the runtime. It r
 
 ```
 searchKey: reflect.typeOff
+tags: [private]
 ```
 
 ```Go
@@ -3131,6 +3195,7 @@ type typeOff int32 // offset to an *rtype
 
 ```
 searchKey: reflect.resolveReflectType
+tags: [private]
 ```
 
 ```Go
@@ -3143,6 +3208,7 @@ resolveReflectType adds a *rtype to the reflection lookup map in the runtime. It
 
 ```
 searchKey: reflect.textOff
+tags: [private]
 ```
 
 ```Go
@@ -3154,6 +3220,7 @@ type textOff int32 // offset from top of text section
 
 ```
 searchKey: reflect.resolveReflectText
+tags: [private]
 ```
 
 ```Go
@@ -3166,7 +3233,6 @@ resolveReflectText adds a function pointer to the reflection lookup map in the r
 
 ```
 searchKey: reflect.StructField
-tags: [exported]
 ```
 
 ```Go
@@ -3193,7 +3259,6 @@ A StructField describes a single field in a struct.
 
 ```
 searchKey: reflect.StructField.IsExported
-tags: [exported]
 ```
 
 ```Go
@@ -3206,7 +3271,6 @@ IsExported reports whether the field is exported.
 
 ```
 searchKey: reflect.StructTag
-tags: [exported]
 ```
 
 ```Go
@@ -3221,7 +3285,6 @@ By convention, tag strings are a concatenation of optionally space-separated key
 
 ```
 searchKey: reflect.StructTag.Get
-tags: [exported]
 ```
 
 ```Go
@@ -3234,7 +3297,6 @@ Get returns the value associated with key in the tag string. If there is no such
 
 ```
 searchKey: reflect.StructTag.Lookup
-tags: [exported]
 ```
 
 ```Go
@@ -3247,6 +3309,7 @@ Lookup returns the value associated with key in the tag string. If the key is pr
 
 ```
 searchKey: reflect.fieldScan
+tags: [private]
 ```
 
 ```Go
@@ -3262,6 +3325,7 @@ A fieldScan represents an item on the fieldByNameFunc scan work list.
 
 ```
 searchKey: reflect.cacheKey
+tags: [private]
 ```
 
 ```Go
@@ -3279,6 +3343,7 @@ A cacheKey is the key for use in the lookupCache. Four values describe any of th
 
 ```
 searchKey: reflect.funcTypeFixed4
+tags: [private]
 ```
 
 ```Go
@@ -3294,6 +3359,7 @@ TODO(crawshaw): as these funcTypeFixedN structs have no methods, they could be d
 
 ```
 searchKey: reflect.funcTypeFixed8
+tags: [private]
 ```
 
 ```Go
@@ -3307,6 +3373,7 @@ type funcTypeFixed8 struct {
 
 ```
 searchKey: reflect.funcTypeFixed16
+tags: [private]
 ```
 
 ```Go
@@ -3320,6 +3387,7 @@ type funcTypeFixed16 struct {
 
 ```
 searchKey: reflect.funcTypeFixed32
+tags: [private]
 ```
 
 ```Go
@@ -3333,6 +3401,7 @@ type funcTypeFixed32 struct {
 
 ```
 searchKey: reflect.funcTypeFixed64
+tags: [private]
 ```
 
 ```Go
@@ -3346,6 +3415,7 @@ type funcTypeFixed64 struct {
 
 ```
 searchKey: reflect.funcTypeFixed128
+tags: [private]
 ```
 
 ```Go
@@ -3359,6 +3429,7 @@ type funcTypeFixed128 struct {
 
 ```
 searchKey: reflect.structTypeUncommon
+tags: [private]
 ```
 
 ```Go
@@ -3372,6 +3443,7 @@ type structTypeUncommon struct {
 
 ```
 searchKey: reflect.layoutKey
+tags: [private]
 ```
 
 ```Go
@@ -3385,6 +3457,7 @@ type layoutKey struct {
 
 ```
 searchKey: reflect.layoutType
+tags: [private]
 ```
 
 ```Go
@@ -3399,6 +3472,7 @@ type layoutType struct {
 
 ```
 searchKey: reflect.bitVector
+tags: [private]
 ```
 
 ```Go
@@ -3414,6 +3488,7 @@ Note: this type must agree with runtime.bitvector.
 
 ```
 searchKey: reflect.bitVector.append
+tags: [private]
 ```
 
 ```Go
@@ -3426,7 +3501,6 @@ append a bit to the bitmap.
 
 ```
 searchKey: reflect.Value
-tags: [exported]
 ```
 
 ```Go
@@ -3468,7 +3542,6 @@ To compare two Values, compare the results of the Interface method. Using == on 
 
 ```
 searchKey: reflect.MakeFunc
-tags: [exported]
 ```
 
 ```Go
@@ -3493,6 +3566,7 @@ The Examples section of the documentation includes an illustration of how to use
 
 ```
 searchKey: reflect.makeMethodValue
+tags: [private]
 ```
 
 ```Go
@@ -3505,6 +3579,7 @@ makeMethodValue converts v from the rcvr+method index representation of a method
 
 ```
 searchKey: reflect.unpackEface
+tags: [private]
 ```
 
 ```Go
@@ -3517,6 +3592,7 @@ unpackEface converts the empty interface i to a Value.
 
 ```
 searchKey: reflect.copyVal
+tags: [private]
 ```
 
 ```Go
@@ -3529,6 +3605,7 @@ copyVal returns a Value containing the map key or value at ptr, allocating a new
 
 ```
 searchKey: reflect.grow
+tags: [private]
 ```
 
 ```Go
@@ -3541,7 +3618,6 @@ grow grows the slice s so that it can hold extra more values, allocating more ca
 
 ```
 searchKey: reflect.Append
-tags: [exported]
 ```
 
 ```Go
@@ -3554,7 +3630,6 @@ Append appends the values x to a slice s and returns the resulting slice. As in 
 
 ```
 searchKey: reflect.AppendSlice
-tags: [exported]
 ```
 
 ```Go
@@ -3567,7 +3642,6 @@ AppendSlice appends a slice t to a slice s and returns the resulting slice. The 
 
 ```
 searchKey: reflect.Select
-tags: [exported]
 ```
 
 ```Go
@@ -3580,7 +3654,6 @@ Select executes a select operation described by the list of cases. Like the Go s
 
 ```
 searchKey: reflect.MakeSlice
-tags: [exported]
 ```
 
 ```Go
@@ -3593,7 +3666,6 @@ MakeSlice creates a new zero-initialized slice value for the specified slice typ
 
 ```
 searchKey: reflect.MakeChan
-tags: [exported]
 ```
 
 ```Go
@@ -3606,7 +3678,6 @@ MakeChan creates a new channel with the specified type and buffer size.
 
 ```
 searchKey: reflect.MakeMap
-tags: [exported]
 ```
 
 ```Go
@@ -3619,7 +3690,6 @@ MakeMap creates a new map with the specified type.
 
 ```
 searchKey: reflect.MakeMapWithSize
-tags: [exported]
 ```
 
 ```Go
@@ -3632,7 +3702,6 @@ MakeMapWithSize creates a new map with the specified type and initial space for 
 
 ```
 searchKey: reflect.Indirect
-tags: [exported]
 ```
 
 ```Go
@@ -3645,7 +3714,6 @@ Indirect returns the value that v points to. If v is a nil pointer, Indirect ret
 
 ```
 searchKey: reflect.ValueOf
-tags: [exported]
 ```
 
 ```Go
@@ -3658,7 +3726,6 @@ ValueOf returns a new Value initialized to the concrete value stored in the inte
 
 ```
 searchKey: reflect.Zero
-tags: [exported]
 ```
 
 ```Go
@@ -3671,7 +3738,6 @@ Zero returns a Value representing the zero value for the specified type. The res
 
 ```
 searchKey: reflect.New
-tags: [exported]
 ```
 
 ```Go
@@ -3684,7 +3750,6 @@ New returns a Value representing a pointer to a new zero value for the specified
 
 ```
 searchKey: reflect.NewAt
-tags: [exported]
 ```
 
 ```Go
@@ -3697,6 +3762,7 @@ NewAt returns a Value representing a pointer to a value of the specified type, u
 
 ```
 searchKey: reflect.makeInt
+tags: [private]
 ```
 
 ```Go
@@ -3709,6 +3775,7 @@ makeInt returns a Value of type t equal to bits (possibly truncated), where t is
 
 ```
 searchKey: reflect.makeFloat
+tags: [private]
 ```
 
 ```Go
@@ -3721,6 +3788,7 @@ makeFloat returns a Value of type t equal to v (possibly truncated to float32), 
 
 ```
 searchKey: reflect.makeFloat32
+tags: [private]
 ```
 
 ```Go
@@ -3733,6 +3801,7 @@ makeFloat returns a Value of type t equal to v, where t is a float32 type.
 
 ```
 searchKey: reflect.makeComplex
+tags: [private]
 ```
 
 ```Go
@@ -3745,6 +3814,7 @@ makeComplex returns a Value of type t equal to v (possibly truncated to complex6
 
 ```
 searchKey: reflect.makeString
+tags: [private]
 ```
 
 ```Go
@@ -3755,6 +3825,7 @@ func makeString(f flag, v string, t Type) Value
 
 ```
 searchKey: reflect.makeBytes
+tags: [private]
 ```
 
 ```Go
@@ -3765,6 +3836,7 @@ func makeBytes(f flag, v []byte, t Type) Value
 
 ```
 searchKey: reflect.makeRunes
+tags: [private]
 ```
 
 ```Go
@@ -3775,6 +3847,7 @@ func makeRunes(f flag, v []rune, t Type) Value
 
 ```
 searchKey: reflect.cvtInt
+tags: [private]
 ```
 
 ```Go
@@ -3787,6 +3860,7 @@ convertOp: intXX -> [u]intXX
 
 ```
 searchKey: reflect.cvtUint
+tags: [private]
 ```
 
 ```Go
@@ -3799,6 +3873,7 @@ convertOp: uintXX -> [u]intXX
 
 ```
 searchKey: reflect.cvtFloatInt
+tags: [private]
 ```
 
 ```Go
@@ -3811,6 +3886,7 @@ convertOp: floatXX -> intXX
 
 ```
 searchKey: reflect.cvtFloatUint
+tags: [private]
 ```
 
 ```Go
@@ -3823,6 +3899,7 @@ convertOp: floatXX -> uintXX
 
 ```
 searchKey: reflect.cvtIntFloat
+tags: [private]
 ```
 
 ```Go
@@ -3835,6 +3912,7 @@ convertOp: intXX -> floatXX
 
 ```
 searchKey: reflect.cvtUintFloat
+tags: [private]
 ```
 
 ```Go
@@ -3847,6 +3925,7 @@ convertOp: uintXX -> floatXX
 
 ```
 searchKey: reflect.cvtFloat
+tags: [private]
 ```
 
 ```Go
@@ -3859,6 +3938,7 @@ convertOp: floatXX -> floatXX
 
 ```
 searchKey: reflect.cvtComplex
+tags: [private]
 ```
 
 ```Go
@@ -3871,6 +3951,7 @@ convertOp: complexXX -> complexXX
 
 ```
 searchKey: reflect.cvtIntString
+tags: [private]
 ```
 
 ```Go
@@ -3883,6 +3964,7 @@ convertOp: intXX -> string
 
 ```
 searchKey: reflect.cvtUintString
+tags: [private]
 ```
 
 ```Go
@@ -3895,6 +3977,7 @@ convertOp: uintXX -> string
 
 ```
 searchKey: reflect.cvtBytesString
+tags: [private]
 ```
 
 ```Go
@@ -3907,6 +3990,7 @@ convertOp: []byte -> string
 
 ```
 searchKey: reflect.cvtStringBytes
+tags: [private]
 ```
 
 ```Go
@@ -3919,6 +4003,7 @@ convertOp: string -> []byte
 
 ```
 searchKey: reflect.cvtRunesString
+tags: [private]
 ```
 
 ```Go
@@ -3931,6 +4016,7 @@ convertOp: []rune -> string
 
 ```
 searchKey: reflect.cvtStringRunes
+tags: [private]
 ```
 
 ```Go
@@ -3943,6 +4029,7 @@ convertOp: string -> []rune
 
 ```
 searchKey: reflect.cvtSliceArrayPtr
+tags: [private]
 ```
 
 ```Go
@@ -3955,6 +4042,7 @@ convertOp: []T -> *[N]T
 
 ```
 searchKey: reflect.cvtDirect
+tags: [private]
 ```
 
 ```Go
@@ -3967,6 +4055,7 @@ convertOp: direct copy
 
 ```
 searchKey: reflect.cvtT2I
+tags: [private]
 ```
 
 ```Go
@@ -3979,6 +4068,7 @@ convertOp: concrete -> interface
 
 ```
 searchKey: reflect.cvtI2I
+tags: [private]
 ```
 
 ```Go
@@ -3991,6 +4081,7 @@ convertOp: interface -> interface
 
 ```
 searchKey: reflect.MakeRO
+tags: [private]
 ```
 
 ```Go
@@ -4003,6 +4094,7 @@ MakeRO returns a copy of v with the read-only flag set.
 
 ```
 searchKey: reflect.Value.pointer
+tags: [private]
 ```
 
 ```Go
@@ -4015,7 +4107,6 @@ pointer returns the underlying pointer represented by v. v.Kind() must be Ptr, M
 
 ```
 searchKey: reflect.Value.Addr
-tags: [exported]
 ```
 
 ```Go
@@ -4028,7 +4119,6 @@ Addr returns a pointer value representing the address of v. It panics if CanAddr
 
 ```
 searchKey: reflect.Value.Bool
-tags: [exported]
 ```
 
 ```Go
@@ -4041,7 +4131,6 @@ Bool returns v's underlying value. It panics if v's kind is not Bool.
 
 ```
 searchKey: reflect.Value.Bytes
-tags: [exported]
 ```
 
 ```Go
@@ -4054,6 +4143,7 @@ Bytes returns v's underlying value. It panics if v's underlying value is not a s
 
 ```
 searchKey: reflect.Value.runes
+tags: [private]
 ```
 
 ```Go
@@ -4066,7 +4156,6 @@ runes returns v's underlying value. It panics if v's underlying value is not a s
 
 ```
 searchKey: reflect.Value.CanAddr
-tags: [exported]
 ```
 
 ```Go
@@ -4079,7 +4168,6 @@ CanAddr reports whether the value's address can be obtained with Addr. Such valu
 
 ```
 searchKey: reflect.Value.CanSet
-tags: [exported]
 ```
 
 ```Go
@@ -4092,7 +4180,6 @@ CanSet reports whether the value of v can be changed. A Value can be changed onl
 
 ```
 searchKey: reflect.Value.Call
-tags: [exported]
 ```
 
 ```Go
@@ -4105,7 +4192,6 @@ Call calls the function v with the input arguments in. For example, if len(in) =
 
 ```
 searchKey: reflect.Value.CallSlice
-tags: [exported]
 ```
 
 ```Go
@@ -4118,6 +4204,7 @@ CallSlice calls the variadic function v with the input arguments in, assigning t
 
 ```
 searchKey: reflect.Value.call
+tags: [private]
 ```
 
 ```Go
@@ -4128,7 +4215,6 @@ func (v Value) call(op string, in []Value) []Value
 
 ```
 searchKey: reflect.Value.Cap
-tags: [exported]
 ```
 
 ```Go
@@ -4141,7 +4227,6 @@ Cap returns v's capacity. It panics if v's Kind is not Array, Chan, or Slice.
 
 ```
 searchKey: reflect.Value.Close
-tags: [exported]
 ```
 
 ```Go
@@ -4154,7 +4239,6 @@ Close closes the channel v. It panics if v's Kind is not Chan.
 
 ```
 searchKey: reflect.Value.Complex
-tags: [exported]
 ```
 
 ```Go
@@ -4167,7 +4251,6 @@ Complex returns v's underlying value, as a complex128. It panics if v's Kind is 
 
 ```
 searchKey: reflect.Value.Elem
-tags: [exported]
 ```
 
 ```Go
@@ -4180,7 +4263,6 @@ Elem returns the value that the interface v contains or that the pointer v point
 
 ```
 searchKey: reflect.Value.Field
-tags: [exported]
 ```
 
 ```Go
@@ -4193,7 +4275,6 @@ Field returns the i'th field of the struct v. It panics if v's Kind is not Struc
 
 ```
 searchKey: reflect.Value.FieldByIndex
-tags: [exported]
 ```
 
 ```Go
@@ -4206,7 +4287,6 @@ FieldByIndex returns the nested field corresponding to index. It panics if v's K
 
 ```
 searchKey: reflect.Value.FieldByName
-tags: [exported]
 ```
 
 ```Go
@@ -4219,7 +4299,6 @@ FieldByName returns the struct field with the given name. It returns the zero Va
 
 ```
 searchKey: reflect.Value.FieldByNameFunc
-tags: [exported]
 ```
 
 ```Go
@@ -4232,7 +4311,6 @@ FieldByNameFunc returns the struct field with a name that satisfies the match fu
 
 ```
 searchKey: reflect.Value.Float
-tags: [exported]
 ```
 
 ```Go
@@ -4245,7 +4323,6 @@ Float returns v's underlying value, as a float64. It panics if v's Kind is not F
 
 ```
 searchKey: reflect.Value.Index
-tags: [exported]
 ```
 
 ```Go
@@ -4258,7 +4335,6 @@ Index returns v's i'th element. It panics if v's Kind is not Array, Slice, or St
 
 ```
 searchKey: reflect.Value.Int
-tags: [exported]
 ```
 
 ```Go
@@ -4271,7 +4347,6 @@ Int returns v's underlying value, as an int64. It panics if v's Kind is not Int,
 
 ```
 searchKey: reflect.Value.CanInterface
-tags: [exported]
 ```
 
 ```Go
@@ -4284,7 +4359,6 @@ CanInterface reports whether Interface can be used without panicking.
 
 ```
 searchKey: reflect.Value.Interface
-tags: [exported]
 ```
 
 ```Go
@@ -4303,7 +4377,6 @@ It panics if the Value was obtained by accessing unexported struct fields.
 
 ```
 searchKey: reflect.Value.InterfaceData
-tags: [exported]
 ```
 
 ```Go
@@ -4316,7 +4389,6 @@ InterfaceData returns the interface v's value as a uintptr pair. It panics if v'
 
 ```
 searchKey: reflect.Value.IsNil
-tags: [exported]
 ```
 
 ```Go
@@ -4329,7 +4401,6 @@ IsNil reports whether its argument v is nil. The argument must be a chan, func, 
 
 ```
 searchKey: reflect.Value.IsValid
-tags: [exported]
 ```
 
 ```Go
@@ -4342,7 +4413,6 @@ IsValid reports whether v represents a value. It returns false if v is the zero 
 
 ```
 searchKey: reflect.Value.IsZero
-tags: [exported]
 ```
 
 ```Go
@@ -4355,7 +4425,6 @@ IsZero reports whether v is the zero value for its type. It panics if the argume
 
 ```
 searchKey: reflect.Value.Kind
-tags: [exported]
 ```
 
 ```Go
@@ -4368,7 +4437,6 @@ Kind returns v's Kind. If v is the zero Value (IsValid returns false), Kind retu
 
 ```
 searchKey: reflect.Value.Len
-tags: [exported]
 ```
 
 ```Go
@@ -4381,7 +4449,6 @@ Len returns v's length. It panics if v's Kind is not Array, Chan, Map, Slice, or
 
 ```
 searchKey: reflect.Value.MapIndex
-tags: [exported]
 ```
 
 ```Go
@@ -4394,7 +4461,6 @@ MapIndex returns the value associated with key in the map v. It panics if v's Ki
 
 ```
 searchKey: reflect.Value.MapKeys
-tags: [exported]
 ```
 
 ```Go
@@ -4407,7 +4473,6 @@ MapKeys returns a slice containing all the keys present in the map, in unspecifi
 
 ```
 searchKey: reflect.Value.MapRange
-tags: [exported]
 ```
 
 ```Go
@@ -4433,7 +4498,6 @@ for iter.Next() {
 
 ```
 searchKey: reflect.Value.Method
-tags: [exported]
 ```
 
 ```Go
@@ -4446,7 +4510,6 @@ Method returns a function value corresponding to v's i'th method. The arguments 
 
 ```
 searchKey: reflect.Value.NumMethod
-tags: [exported]
 ```
 
 ```Go
@@ -4459,7 +4522,6 @@ NumMethod returns the number of exported methods in the value's method set.
 
 ```
 searchKey: reflect.Value.MethodByName
-tags: [exported]
 ```
 
 ```Go
@@ -4472,7 +4534,6 @@ MethodByName returns a function value corresponding to the method of v with the 
 
 ```
 searchKey: reflect.Value.NumField
-tags: [exported]
 ```
 
 ```Go
@@ -4485,7 +4546,6 @@ NumField returns the number of fields in the struct v. It panics if v's Kind is 
 
 ```
 searchKey: reflect.Value.OverflowComplex
-tags: [exported]
 ```
 
 ```Go
@@ -4498,7 +4558,6 @@ OverflowComplex reports whether the complex128 x cannot be represented by v's ty
 
 ```
 searchKey: reflect.Value.OverflowFloat
-tags: [exported]
 ```
 
 ```Go
@@ -4511,7 +4570,6 @@ OverflowFloat reports whether the float64 x cannot be represented by v's type. I
 
 ```
 searchKey: reflect.Value.OverflowInt
-tags: [exported]
 ```
 
 ```Go
@@ -4524,7 +4582,6 @@ OverflowInt reports whether the int64 x cannot be represented by v's type. It pa
 
 ```
 searchKey: reflect.Value.OverflowUint
-tags: [exported]
 ```
 
 ```Go
@@ -4537,7 +4594,6 @@ OverflowUint reports whether the uint64 x cannot be represented by v's type. It 
 
 ```
 searchKey: reflect.Value.Pointer
-tags: [exported]
 ```
 
 ```Go
@@ -4554,7 +4610,6 @@ If v's Kind is Slice, the returned pointer is to the first element of the slice.
 
 ```
 searchKey: reflect.Value.Recv
-tags: [exported]
 ```
 
 ```Go
@@ -4567,6 +4622,7 @@ Recv receives and returns a value from the channel v. It panics if v's Kind is n
 
 ```
 searchKey: reflect.Value.recv
+tags: [private]
 ```
 
 ```Go
@@ -4579,7 +4635,6 @@ internal recv, possibly non-blocking (nb). v is known to be a channel.
 
 ```
 searchKey: reflect.Value.Send
-tags: [exported]
 ```
 
 ```Go
@@ -4592,6 +4647,7 @@ Send sends x on the channel v. It panics if v's kind is not Chan or if x's type 
 
 ```
 searchKey: reflect.Value.send
+tags: [private]
 ```
 
 ```Go
@@ -4604,7 +4660,6 @@ internal send, possibly non-blocking. v is known to be a channel.
 
 ```
 searchKey: reflect.Value.Set
-tags: [exported]
 ```
 
 ```Go
@@ -4617,7 +4672,6 @@ Set assigns x to the value v. It panics if CanSet returns false. As in Go, x's v
 
 ```
 searchKey: reflect.Value.SetBool
-tags: [exported]
 ```
 
 ```Go
@@ -4630,7 +4684,6 @@ SetBool sets v's underlying value. It panics if v's Kind is not Bool or if CanSe
 
 ```
 searchKey: reflect.Value.SetBytes
-tags: [exported]
 ```
 
 ```Go
@@ -4643,6 +4696,7 @@ SetBytes sets v's underlying value. It panics if v's underlying value is not a s
 
 ```
 searchKey: reflect.Value.setRunes
+tags: [private]
 ```
 
 ```Go
@@ -4655,7 +4709,6 @@ setRunes sets v's underlying value. It panics if v's underlying value is not a s
 
 ```
 searchKey: reflect.Value.SetComplex
-tags: [exported]
 ```
 
 ```Go
@@ -4668,7 +4721,6 @@ SetComplex sets v's underlying value to x. It panics if v's Kind is not Complex6
 
 ```
 searchKey: reflect.Value.SetFloat
-tags: [exported]
 ```
 
 ```Go
@@ -4681,7 +4733,6 @@ SetFloat sets v's underlying value to x. It panics if v's Kind is not Float32 or
 
 ```
 searchKey: reflect.Value.SetInt
-tags: [exported]
 ```
 
 ```Go
@@ -4694,7 +4745,6 @@ SetInt sets v's underlying value to x. It panics if v's Kind is not Int, Int8, I
 
 ```
 searchKey: reflect.Value.SetLen
-tags: [exported]
 ```
 
 ```Go
@@ -4707,7 +4757,6 @@ SetLen sets v's length to n. It panics if v's Kind is not Slice or if n is negat
 
 ```
 searchKey: reflect.Value.SetCap
-tags: [exported]
 ```
 
 ```Go
@@ -4720,7 +4769,6 @@ SetCap sets v's capacity to n. It panics if v's Kind is not Slice or if n is sma
 
 ```
 searchKey: reflect.Value.SetMapIndex
-tags: [exported]
 ```
 
 ```Go
@@ -4733,7 +4781,6 @@ SetMapIndex sets the element associated with key in the map v to elem. It panics
 
 ```
 searchKey: reflect.Value.SetUint
-tags: [exported]
 ```
 
 ```Go
@@ -4746,7 +4793,6 @@ SetUint sets v's underlying value to x. It panics if v's Kind is not Uint, Uintp
 
 ```
 searchKey: reflect.Value.SetPointer
-tags: [exported]
 ```
 
 ```Go
@@ -4759,7 +4805,6 @@ SetPointer sets the unsafe.Pointer value v to x. It panics if v's Kind is not Un
 
 ```
 searchKey: reflect.Value.SetString
-tags: [exported]
 ```
 
 ```Go
@@ -4772,7 +4817,6 @@ SetString sets v's underlying value to x. It panics if v's Kind is not String or
 
 ```
 searchKey: reflect.Value.Slice
-tags: [exported]
 ```
 
 ```Go
@@ -4785,7 +4829,6 @@ Slice returns v[i:j]. It panics if v's Kind is not Array, Slice or String, or if
 
 ```
 searchKey: reflect.Value.Slice3
-tags: [exported]
 ```
 
 ```Go
@@ -4798,7 +4841,6 @@ Slice3 is the 3-index form of the slice operation: it returns v[i:j:k]. It panic
 
 ```
 searchKey: reflect.Value.String
-tags: [exported]
 ```
 
 ```Go
@@ -4811,7 +4853,6 @@ String returns the string v's underlying value, as a string. String is a special
 
 ```
 searchKey: reflect.Value.TryRecv
-tags: [exported]
 ```
 
 ```Go
@@ -4824,7 +4865,6 @@ TryRecv attempts to receive a value from the channel v but will not block. It pa
 
 ```
 searchKey: reflect.Value.TrySend
-tags: [exported]
 ```
 
 ```Go
@@ -4837,7 +4877,6 @@ TrySend attempts to send x on the channel v but will not block. It panics if v's
 
 ```
 searchKey: reflect.Value.Type
-tags: [exported]
 ```
 
 ```Go
@@ -4850,7 +4889,6 @@ Type returns v's type.
 
 ```
 searchKey: reflect.Value.Uint
-tags: [exported]
 ```
 
 ```Go
@@ -4863,7 +4901,6 @@ Uint returns v's underlying value, as a uint64. It panics if v's Kind is not Uin
 
 ```
 searchKey: reflect.Value.UnsafeAddr
-tags: [exported]
 ```
 
 ```Go
@@ -4876,6 +4913,7 @@ UnsafeAddr returns a pointer to v's data. It is for advanced clients that also i
 
 ```
 searchKey: reflect.Value.assignTo
+tags: [private]
 ```
 
 ```Go
@@ -4888,7 +4926,6 @@ assignTo returns a value v that can be assigned directly to typ. It panics if v 
 
 ```
 searchKey: reflect.Value.Convert
-tags: [exported]
 ```
 
 ```Go
@@ -4901,6 +4938,7 @@ Convert returns the value v converted to type t. If the usual Go conversion rule
 
 ```
 searchKey: reflect.flag
+tags: [private]
 ```
 
 ```Go
@@ -4911,6 +4949,7 @@ type flag uintptr
 
 ```
 searchKey: reflect.flag.kind
+tags: [private]
 ```
 
 ```Go
@@ -4921,6 +4960,7 @@ func (f flag) kind() Kind
 
 ```
 searchKey: reflect.flag.ro
+tags: [private]
 ```
 
 ```Go
@@ -4931,6 +4971,7 @@ func (f flag) ro() flag
 
 ```
 searchKey: reflect.flag.mustBe
+tags: [private]
 ```
 
 ```Go
@@ -4943,6 +4984,7 @@ mustBe panics if f's kind is not expected. Making this a method on flag instead 
 
 ```
 searchKey: reflect.flag.mustBeExported
+tags: [private]
 ```
 
 ```Go
@@ -4955,6 +4997,7 @@ mustBeExported panics if f records that the value was obtained using an unexport
 
 ```
 searchKey: reflect.flag.mustBeExportedSlow
+tags: [private]
 ```
 
 ```Go
@@ -4965,6 +5008,7 @@ func (f flag) mustBeExportedSlow()
 
 ```
 searchKey: reflect.flag.mustBeAssignable
+tags: [private]
 ```
 
 ```Go
@@ -4977,6 +5021,7 @@ mustBeAssignable panics if f records that the value is not assignable, which is 
 
 ```
 searchKey: reflect.flag.mustBeAssignableSlow
+tags: [private]
 ```
 
 ```Go
@@ -4987,7 +5032,6 @@ func (f flag) mustBeAssignableSlow()
 
 ```
 searchKey: reflect.ValueError
-tags: [exported]
 ```
 
 ```Go
@@ -5003,7 +5047,6 @@ A ValueError occurs when a Value method is invoked on a Value that does not supp
 
 ```
 searchKey: reflect.ValueError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -5014,6 +5057,7 @@ func (e *ValueError) Error() string
 
 ```
 searchKey: reflect.emptyInterface
+tags: [private]
 ```
 
 ```Go
@@ -5029,6 +5073,7 @@ emptyInterface is the header for an interface{} value.
 
 ```
 searchKey: reflect.nonEmptyInterface
+tags: [private]
 ```
 
 ```Go
@@ -5051,7 +5096,6 @@ nonEmptyInterface is the header for an interface value with methods.
 
 ```
 searchKey: reflect.MapIter
-tags: [exported]
 ```
 
 ```Go
@@ -5067,7 +5111,6 @@ A MapIter is an iterator for ranging over a map. See Value.MapRange.
 
 ```
 searchKey: reflect.MapIter.Key
-tags: [exported]
 ```
 
 ```Go
@@ -5080,7 +5123,6 @@ Key returns the key of the iterator's current map entry.
 
 ```
 searchKey: reflect.MapIter.Value
-tags: [exported]
 ```
 
 ```Go
@@ -5093,7 +5135,6 @@ Value returns the value of the iterator's current map entry.
 
 ```
 searchKey: reflect.MapIter.Next
-tags: [exported]
 ```
 
 ```Go
@@ -5106,7 +5147,6 @@ Next advances the map iterator and reports whether there is another entry. It re
 
 ```
 searchKey: reflect.StringHeader
-tags: [exported]
 ```
 
 ```Go
@@ -5122,7 +5162,6 @@ StringHeader is the runtime representation of a string. It cannot be used safely
 
 ```
 searchKey: reflect.SliceHeader
-tags: [exported]
 ```
 
 ```Go
@@ -5139,6 +5178,7 @@ SliceHeader is the runtime representation of a slice. It cannot be used safely o
 
 ```
 searchKey: reflect.runtimeSelect
+tags: [private]
 ```
 
 ```Go
@@ -5156,7 +5196,6 @@ A runtimeSelect is a single case passed to rselect. This must match ../runtime/s
 
 ```
 searchKey: reflect.SelectDir
-tags: [exported]
 ```
 
 ```Go
@@ -5169,7 +5208,6 @@ A SelectDir describes the communication direction of a select case.
 
 ```
 searchKey: reflect.SelectCase
-tags: [exported]
 ```
 
 ```Go
@@ -5192,6 +5230,7 @@ If Dir is SelectRecv, the case represents a receive operation. Normally Chan's u
 
 ```
 searchKey: reflect.visibleFieldsWalker
+tags: [private]
 ```
 
 ```Go
@@ -5207,6 +5246,7 @@ type visibleFieldsWalker struct {
 
 ```
 searchKey: reflect.visibleFieldsWalker.walk
+tags: [private]
 ```
 
 ```Go
@@ -5219,6 +5259,7 @@ walk walks all the fields in the struct type t, visiting fields in index preorde
 
 ```
 searchKey: reflect.EmbedWithUnexpMeth
+tags: [private]
 ```
 
 ```Go
@@ -5229,6 +5270,7 @@ type EmbedWithUnexpMeth struct{}
 
 ```
 searchKey: reflect.EmbedWithUnexpMeth.f
+tags: [private]
 ```
 
 ```Go
@@ -5239,6 +5281,7 @@ func (EmbedWithUnexpMeth) f()
 
 ```
 searchKey: reflect.pinUnexpMeth
+tags: [private]
 ```
 
 ```Go
@@ -5251,6 +5294,7 @@ type pinUnexpMeth interface {
 
 ```
 searchKey: reflect.OtherPkgFields
+tags: [private]
 ```
 
 ```Go
@@ -5264,6 +5308,7 @@ type OtherPkgFields struct {
 
 ```
 searchKey: reflect.Buffer
+tags: [private]
 ```
 
 ```Go
@@ -5274,14 +5319,11 @@ type Buffer struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="dumpPtrBitMap" href="#dumpPtrBitMap">func dumpPtrBitMap(b abi.IntArgRegBitmap)</a>
 
 ```
 searchKey: reflect.dumpPtrBitMap
+tags: [private]
 ```
 
 ```Go
@@ -5292,6 +5334,7 @@ func dumpPtrBitMap(b abi.IntArgRegBitmap)
 
 ```
 searchKey: reflect.deepValueEqual
+tags: [private]
 ```
 
 ```Go
@@ -5304,7 +5347,6 @@ Tests for deep equality using reflected types. The map argument tracks compariso
 
 ```
 searchKey: reflect.DeepEqual
-tags: [exported]
 ```
 
 ```Go
@@ -5337,6 +5379,7 @@ As DeepEqual traverses the data values it may find a cycle. The second and subse
 
 ```
 searchKey: reflect.makeFuncStub
+tags: [private]
 ```
 
 ```Go
@@ -5349,6 +5392,7 @@ makeFuncStub is an assembly function that is the code half of the function retur
 
 ```
 searchKey: reflect.methodValueCall
+tags: [private]
 ```
 
 ```Go
@@ -5361,6 +5405,7 @@ methodValueCall is an assembly function that is the code half of the function re
 
 ```
 searchKey: reflect.moveMakeFuncArgPtrs
+tags: [private]
 ```
 
 ```Go
@@ -5377,7 +5422,6 @@ nosplit because pointers are being held in uintptr slots in args, so having our 
 
 ```
 searchKey: reflect.Swapper
-tags: [exported]
 ```
 
 ```Go
@@ -5392,6 +5436,7 @@ Swapper panics if the provided interface is not a slice.
 
 ```
 searchKey: reflect.writeVarint
+tags: [private]
 ```
 
 ```Go
@@ -5404,6 +5449,7 @@ writeVarint writes n to buf in varint form. Returns the number of bytes written.
 
 ```
 searchKey: reflect.resolveNameOff
+tags: [private]
 ```
 
 ```Go
@@ -5416,6 +5462,7 @@ resolveNameOff resolves a name offset from a base pointer. The (*rtype).nameOff 
 
 ```
 searchKey: reflect.resolveTypeOff
+tags: [private]
 ```
 
 ```Go
@@ -5428,6 +5475,7 @@ resolveTypeOff resolves an *rtype offset from a base type. The (*rtype).typeOff 
 
 ```
 searchKey: reflect.resolveTextOff
+tags: [private]
 ```
 
 ```Go
@@ -5440,6 +5488,7 @@ resolveTextOff resolves a function pointer offset from a base type. The (*rtype)
 
 ```
 searchKey: reflect.addReflectOff
+tags: [private]
 ```
 
 ```Go
@@ -5452,6 +5501,7 @@ addReflectOff adds a pointer to the reflection lookup map in the runtime. It ret
 
 ```
 searchKey: reflect.add
+tags: [private]
 ```
 
 ```Go
@@ -5466,6 +5516,7 @@ The whySafe string is ignored, so that the function still inlines as efficiently
 
 ```
 searchKey: reflect.fnv1
+tags: [private]
 ```
 
 ```Go
@@ -5478,6 +5529,7 @@ fnv1 incorporates the list of bytes into the hash x using the FNV-1 hash functio
 
 ```
 searchKey: reflect.implements
+tags: [private]
 ```
 
 ```Go
@@ -5490,6 +5542,7 @@ implements reports whether the type V implements the interface type T.
 
 ```
 searchKey: reflect.specialChannelAssignability
+tags: [private]
 ```
 
 ```Go
@@ -5502,6 +5555,7 @@ specialChannelAssignability reports whether a value x of channel type V can be d
 
 ```
 searchKey: reflect.directlyAssignable
+tags: [private]
 ```
 
 ```Go
@@ -5514,6 +5568,7 @@ directlyAssignable reports whether a value x of type V can be directly assigned 
 
 ```
 searchKey: reflect.haveIdenticalType
+tags: [private]
 ```
 
 ```Go
@@ -5524,6 +5579,7 @@ func haveIdenticalType(T, V Type, cmpTags bool) bool
 
 ```
 searchKey: reflect.haveIdenticalUnderlyingType
+tags: [private]
 ```
 
 ```Go
@@ -5534,6 +5590,7 @@ func haveIdenticalUnderlyingType(T, V *rtype, cmpTags bool) bool
 
 ```
 searchKey: reflect.typelinks
+tags: [private]
 ```
 
 ```Go
@@ -5562,6 +5619,7 @@ Note that strings are not unique identifiers for types: there can be more than o
 
 ```
 searchKey: reflect.typesByString
+tags: [private]
 ```
 
 ```Go
@@ -5574,6 +5632,7 @@ typesByString returns the subslice of typelinks() whose elements have the given 
 
 ```
 searchKey: reflect.funcStr
+tags: [private]
 ```
 
 ```Go
@@ -5586,6 +5645,7 @@ funcStr builds a string representation of a funcType.
 
 ```
 searchKey: reflect.isReflexive
+tags: [private]
 ```
 
 ```Go
@@ -5598,6 +5658,7 @@ isReflexive reports whether the == operation on the type is reflexive. That is, 
 
 ```
 searchKey: reflect.needKeyUpdate
+tags: [private]
 ```
 
 ```Go
@@ -5610,6 +5671,7 @@ needKeyUpdate reports whether map overwrites require the key to be copied.
 
 ```
 searchKey: reflect.hashMightPanic
+tags: [private]
 ```
 
 ```Go
@@ -5622,6 +5684,7 @@ hashMightPanic reports whether the hash of a map key of type t might panic.
 
 ```
 searchKey: reflect.emitGCMask
+tags: [private]
 ```
 
 ```Go
@@ -5634,6 +5697,7 @@ emitGCMask writes the GC mask for [n]typ into out, starting at bit offset base.
 
 ```
 searchKey: reflect.appendGCProg
+tags: [private]
 ```
 
 ```Go
@@ -5646,6 +5710,7 @@ appendGCProg appends the GC program for the first ptrdata bytes of typ to dst an
 
 ```
 searchKey: reflect.isLetter
+tags: [private]
 ```
 
 ```Go
@@ -5658,6 +5723,7 @@ isLetter reports whether a given 'rune' is classified as a Letter.
 
 ```
 searchKey: reflect.isValidFieldName
+tags: [private]
 ```
 
 ```Go
@@ -5674,6 +5740,7 @@ identifier = letter { letter | unicode_digit } . letter = unicode_letter | "_" .
 
 ```
 searchKey: reflect.typeptrdata
+tags: [private]
 ```
 
 ```Go
@@ -5686,6 +5753,7 @@ typeptrdata returns the length in bytes of the prefix of t containing pointer da
 
 ```
 searchKey: reflect.appendVarint
+tags: [private]
 ```
 
 ```Go
@@ -5696,6 +5764,7 @@ func appendVarint(x []byte, v uintptr) []byte
 
 ```
 searchKey: reflect.ifaceIndir
+tags: [private]
 ```
 
 ```Go
@@ -5708,6 +5777,7 @@ ifaceIndir reports whether t is stored indirectly in an interface value.
 
 ```
 searchKey: reflect.addTypeBits
+tags: [private]
 ```
 
 ```Go
@@ -5718,6 +5788,7 @@ func addTypeBits(bv *bitVector, offset uintptr, t *rtype)
 
 ```
 searchKey: reflect.packEface
+tags: [private]
 ```
 
 ```Go
@@ -5730,6 +5801,7 @@ packEface converts v to the empty interface.
 
 ```
 searchKey: reflect.methodName
+tags: [private]
 ```
 
 ```Go
@@ -5742,6 +5814,7 @@ methodName returns the name of the calling method, assumed to be two stack frame
 
 ```
 searchKey: reflect.methodNameSkip
+tags: [private]
 ```
 
 ```Go
@@ -5754,6 +5827,7 @@ methodNameSkip is like methodName, but skips another stack frame. This is a sepa
 
 ```
 searchKey: reflect.callReflect
+tags: [private]
 ```
 
 ```Go
@@ -5772,6 +5846,7 @@ regs contains the argument values passed in registers and will contain the value
 
 ```
 searchKey: reflect.storeRcvr
+tags: [private]
 ```
 
 ```Go
@@ -5784,6 +5859,7 @@ v is a method receiver. Store at p the word which is used to encode that receive
 
 ```
 searchKey: reflect.align
+tags: [private]
 ```
 
 ```Go
@@ -5796,6 +5872,7 @@ align returns the result of rounding x up to a multiple of n. n must be a power 
 
 ```
 searchKey: reflect.callMethod
+tags: [private]
 ```
 
 ```Go
@@ -5814,6 +5891,7 @@ regs contains the argument values passed in registers and will contain the value
 
 ```
 searchKey: reflect.funcName
+tags: [private]
 ```
 
 ```Go
@@ -5826,6 +5904,7 @@ funcName returns the name of f, for use in error messages.
 
 ```
 searchKey: reflect.valueInterface
+tags: [private]
 ```
 
 ```Go
@@ -5836,6 +5915,7 @@ func valueInterface(v Value, safe bool) interface{}
 
 ```
 searchKey: reflect.overflowFloat32
+tags: [private]
 ```
 
 ```Go
@@ -5846,6 +5926,7 @@ func overflowFloat32(x float64) bool
 
 ```
 searchKey: reflect.typesMustMatch
+tags: [private]
 ```
 
 ```Go
@@ -5856,6 +5937,7 @@ func typesMustMatch(what string, t1, t2 Type)
 
 ```
 searchKey: reflect.arrayAt
+tags: [private]
 ```
 
 ```Go
@@ -5868,7 +5950,6 @@ arrayAt returns the i-th element of p, an array whose elements are eltSize bytes
 
 ```
 searchKey: reflect.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -5883,6 +5964,7 @@ As a special case, src can have kind String if the element type of dst is kind U
 
 ```
 searchKey: reflect.rselect
+tags: [private]
 ```
 
 ```Go
@@ -5895,6 +5977,7 @@ rselect runs a select. It returns the index of the chosen case. If the case was 
 
 ```
 searchKey: reflect.unsafe_New
+tags: [private]
 ```
 
 ```Go
@@ -5907,6 +5990,7 @@ implemented in package runtime
 
 ```
 searchKey: reflect.unsafe_NewArray
+tags: [private]
 ```
 
 ```Go
@@ -5917,6 +6001,7 @@ func unsafe_NewArray(*rtype, int) unsafe.Pointer
 
 ```
 searchKey: reflect.convertOp
+tags: [private]
 ```
 
 ```Go
@@ -5929,6 +6014,7 @@ convertOp returns the function to convert a value of type src to a value of type
 
 ```
 searchKey: reflect.chancap
+tags: [private]
 ```
 
 ```Go
@@ -5941,6 +6027,7 @@ implemented in ../runtime
 
 ```
 searchKey: reflect.chanclose
+tags: [private]
 ```
 
 ```Go
@@ -5951,6 +6038,7 @@ func chanclose(ch unsafe.Pointer)
 
 ```
 searchKey: reflect.chanlen
+tags: [private]
 ```
 
 ```Go
@@ -5961,6 +6049,7 @@ func chanlen(ch unsafe.Pointer) int
 
 ```
 searchKey: reflect.chanrecv
+tags: [private]
 ```
 
 ```Go
@@ -5971,6 +6060,7 @@ func chanrecv(ch unsafe.Pointer, nb bool, val unsafe.Pointer) (selected, receive
 
 ```
 searchKey: reflect.chansend
+tags: [private]
 ```
 
 ```Go
@@ -5981,6 +6071,7 @@ func chansend(ch unsafe.Pointer, val unsafe.Pointer, nb bool) bool
 
 ```
 searchKey: reflect.makechan
+tags: [private]
 ```
 
 ```Go
@@ -5991,6 +6082,7 @@ func makechan(typ *rtype, size int) (ch unsafe.Pointer)
 
 ```
 searchKey: reflect.makemap
+tags: [private]
 ```
 
 ```Go
@@ -6001,6 +6093,7 @@ func makemap(t *rtype, cap int) (m unsafe.Pointer)
 
 ```
 searchKey: reflect.mapaccess
+tags: [private]
 ```
 
 ```Go
@@ -6011,6 +6104,7 @@ func mapaccess(t *rtype, m unsafe.Pointer, key unsafe.Pointer) (val unsafe.Point
 
 ```
 searchKey: reflect.mapassign
+tags: [private]
 ```
 
 ```Go
@@ -6021,6 +6115,7 @@ func mapassign(t *rtype, m unsafe.Pointer, key, val unsafe.Pointer)
 
 ```
 searchKey: reflect.mapdelete
+tags: [private]
 ```
 
 ```Go
@@ -6031,6 +6126,7 @@ func mapdelete(t *rtype, m unsafe.Pointer, key unsafe.Pointer)
 
 ```
 searchKey: reflect.mapiterinit
+tags: [private]
 ```
 
 ```Go
@@ -6043,6 +6139,7 @@ m escapes into the return value, but the caller of mapiterinit doesn't let the r
 
 ```
 searchKey: reflect.mapiterkey
+tags: [private]
 ```
 
 ```Go
@@ -6053,6 +6150,7 @@ func mapiterkey(it unsafe.Pointer) (key unsafe.Pointer)
 
 ```
 searchKey: reflect.mapiterelem
+tags: [private]
 ```
 
 ```Go
@@ -6063,6 +6161,7 @@ func mapiterelem(it unsafe.Pointer) (elem unsafe.Pointer)
 
 ```
 searchKey: reflect.mapiternext
+tags: [private]
 ```
 
 ```Go
@@ -6073,6 +6172,7 @@ func mapiternext(it unsafe.Pointer)
 
 ```
 searchKey: reflect.maplen
+tags: [private]
 ```
 
 ```Go
@@ -6083,6 +6183,7 @@ func maplen(m unsafe.Pointer) int
 
 ```
 searchKey: reflect.call
+tags: [private]
 ```
 
 ```Go
@@ -6103,6 +6204,7 @@ Arguments passed through to call do not escape. The type is used only in a very 
 
 ```
 searchKey: reflect.ifaceE2I
+tags: [private]
 ```
 
 ```Go
@@ -6113,6 +6215,7 @@ func ifaceE2I(t *rtype, src interface{}, dst unsafe.Pointer)
 
 ```
 searchKey: reflect.memmove
+tags: [private]
 ```
 
 ```Go
@@ -6125,6 +6228,7 @@ memmove copies size bytes to dst from src. No write barriers are used.
 
 ```
 searchKey: reflect.typedmemmove
+tags: [private]
 ```
 
 ```Go
@@ -6137,6 +6241,7 @@ typedmemmove copies a value of type t to dst from src.
 
 ```
 searchKey: reflect.typedmemmovepartial
+tags: [private]
 ```
 
 ```Go
@@ -6149,6 +6254,7 @@ typedmemmovepartial is like typedmemmove but assumes that dst and src point off 
 
 ```
 searchKey: reflect.typedmemclr
+tags: [private]
 ```
 
 ```Go
@@ -6161,6 +6267,7 @@ typedmemclr zeros the value at ptr of type t.
 
 ```
 searchKey: reflect.typedmemclrpartial
+tags: [private]
 ```
 
 ```Go
@@ -6173,6 +6280,7 @@ typedmemclrpartial is like typedmemclr but assumes that dst points off bytes int
 
 ```
 searchKey: reflect.typedslicecopy
+tags: [private]
 ```
 
 ```Go
@@ -6185,6 +6293,7 @@ typedslicecopy copies a slice of elemType values from src to dst, returning the 
 
 ```
 searchKey: reflect.typehash
+tags: [private]
 ```
 
 ```Go
@@ -6195,6 +6304,7 @@ func typehash(t *rtype, p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: reflect.escapes
+tags: [private]
 ```
 
 ```Go
@@ -6207,7 +6317,6 @@ Dummy annotation marking that the value x escapes, for use in cases where the re
 
 ```
 searchKey: reflect.VisibleFields
-tags: [exported]
 ```
 
 ```Go
@@ -6222,6 +6331,7 @@ For each element e of the returned slice, the corresponding field can be retriev
 
 ```
 searchKey: reflect.IsRO
+tags: [private]
 ```
 
 ```Go
@@ -6234,6 +6344,7 @@ IsRO reports whether v's read-only flag is set.
 
 ```
 searchKey: reflect.TypeLinks
+tags: [private]
 ```
 
 ```Go
@@ -6244,6 +6355,7 @@ func TypeLinks() []string
 
 ```
 searchKey: reflect.gcbits
+tags: [private]
 ```
 
 ```Go
@@ -6254,6 +6366,7 @@ func gcbits(interface{}) []byte
 
 ```
 searchKey: reflect.FirstMethodNameBytes
+tags: [private]
 ```
 
 ```Go
@@ -6264,6 +6377,7 @@ func FirstMethodNameBytes(t Type) *byte
 
 ```
 searchKey: reflect.IsExported
+tags: [private]
 ```
 
 ```Go
@@ -6274,6 +6388,7 @@ func IsExported(t Type) bool
 
 ```
 searchKey: reflect.ResolveReflectName
+tags: [private]
 ```
 
 ```Go
@@ -6284,6 +6399,7 @@ func ResolveReflectName(s string)
 
 ```
 searchKey: reflect.clearLayoutCache
+tags: [private]
 ```
 
 ```Go
@@ -6294,6 +6410,7 @@ func clearLayoutCache()
 
 ```
 searchKey: reflect.SetArgRegs
+tags: [private]
 ```
 
 ```Go

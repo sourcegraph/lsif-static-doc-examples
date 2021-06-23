@@ -95,7 +95,6 @@ Because these interfaces and primitives wrap lower-level operations with various
         * [func (r *PipeReader) Close() error](#PipeReader.Close)
         * [func (r *PipeReader) CloseWithError(err error) error](#PipeReader.CloseWithError)
     * [type PipeWriter struct](#PipeWriter)
-        * [func Pipe() (*PipeReader, *PipeWriter)](#Pipe)
         * [func (w *PipeWriter) Write(data []byte) (n int, err error)](#PipeWriter.Write)
         * [func (w *PipeWriter) Close() error](#PipeWriter.Close)
         * [func (w *PipeWriter) CloseWithError(err error) error](#PipeWriter.CloseWithError)
@@ -112,15 +111,10 @@ Because these interfaces and primitives wrap lower-level operations with various
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="SeekStart" href="#SeekStart">const SeekStart</a>
 
 ```
 searchKey: io.SeekStart
-tags: [exported]
 ```
 
 ```Go
@@ -134,7 +128,6 @@ Seek whence values.
 
 ```
 searchKey: io.SeekCurrent
-tags: [exported]
 ```
 
 ```Go
@@ -148,7 +141,6 @@ Seek whence values.
 
 ```
 searchKey: io.SeekEnd
-tags: [exported]
 ```
 
 ```Go
@@ -160,15 +152,10 @@ Seek whence values.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrShortWrite" href="#ErrShortWrite">var ErrShortWrite</a>
 
 ```
 searchKey: io.ErrShortWrite
-tags: [exported]
 ```
 
 ```Go
@@ -181,6 +168,7 @@ ErrShortWrite means that a write accepted fewer bytes than requested but failed 
 
 ```
 searchKey: io.errInvalidWrite
+tags: [private]
 ```
 
 ```Go
@@ -193,7 +181,6 @@ errInvalidWrite means that a write returned an impossible count.
 
 ```
 searchKey: io.ErrShortBuffer
-tags: [exported]
 ```
 
 ```Go
@@ -206,7 +193,6 @@ ErrShortBuffer means that a read required a longer buffer than was provided.
 
 ```
 searchKey: io.EOF
-tags: [exported]
 ```
 
 ```Go
@@ -219,7 +205,6 @@ EOF is the error returned by Read when no more input is available. (Read must re
 
 ```
 searchKey: io.ErrUnexpectedEOF
-tags: [exported]
 ```
 
 ```Go
@@ -232,7 +217,6 @@ ErrUnexpectedEOF means that EOF was encountered in the middle of reading a fixed
 
 ```
 searchKey: io.ErrNoProgress
-tags: [exported]
 ```
 
 ```Go
@@ -245,6 +229,7 @@ ErrNoProgress is returned by some clients of an Reader when many calls to Read h
 
 ```
 searchKey: io.errWhence
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +240,7 @@ var errWhence = errors.New("Seek: invalid whence")
 
 ```
 searchKey: io.errOffset
+tags: [private]
 ```
 
 ```Go
@@ -265,7 +251,6 @@ var errOffset = errors.New("Seek: invalid offset")
 
 ```
 searchKey: io.Discard
-tags: [exported]
 ```
 
 ```Go
@@ -278,6 +263,7 @@ Discard is a Writer on which all Write calls succeed without doing anything.
 
 ```
 searchKey: io.blackHolePool
+tags: [private]
 ```
 
 ```Go
@@ -288,7 +274,6 @@ var blackHolePool = ...
 
 ```
 searchKey: io.ErrClosedPipe
-tags: [exported]
 ```
 
 ```Go
@@ -301,6 +286,7 @@ ErrClosedPipe is the error used for read or write operations on a closed pipe.
 
 ```
 searchKey: io.ErrInvalidWrite
+tags: [private]
 ```
 
 ```Go
@@ -311,15 +297,10 @@ exported for test
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Reader" href="#Reader">type Reader interface</a>
 
 ```
 searchKey: io.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -344,7 +325,6 @@ Implementations must not retain p.
 
 ```
 searchKey: io.LimitReader
-tags: [exported]
 ```
 
 ```Go
@@ -357,7 +337,6 @@ LimitReader returns a Reader that reads from r but stops with EOF after n bytes.
 
 ```
 searchKey: io.TeeReader
-tags: [exported]
 ```
 
 ```Go
@@ -370,7 +349,6 @@ TeeReader returns a Reader that writes to w what it reads from r. All reads from
 
 ```
 searchKey: io.MultiReader
-tags: [exported]
 ```
 
 ```Go
@@ -383,7 +361,6 @@ MultiReader returns a Reader that's the logical concatenation of the provided in
 
 ```
 searchKey: io.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -402,7 +379,6 @@ Implementations must not retain p.
 
 ```
 searchKey: io.MultiWriter
-tags: [exported]
 ```
 
 ```Go
@@ -417,7 +393,6 @@ Each write is written to each listed writer, one at a time. If a listed writer r
 
 ```
 searchKey: io.Closer
-tags: [exported]
 ```
 
 ```Go
@@ -434,7 +409,6 @@ The behavior of Close after the first call is undefined. Specific implementation
 
 ```
 searchKey: io.Seeker
-tags: [exported]
 ```
 
 ```Go
@@ -453,7 +427,6 @@ Seeking to an offset before the start of the file is an error. Seeking to any po
 
 ```
 searchKey: io.ReadWriter
-tags: [exported]
 ```
 
 ```Go
@@ -469,7 +442,6 @@ ReadWriter is the interface that groups the basic Read and Write methods.
 
 ```
 searchKey: io.ReadCloser
-tags: [exported]
 ```
 
 ```Go
@@ -485,7 +457,6 @@ ReadCloser is the interface that groups the basic Read and Close methods.
 
 ```
 searchKey: io.NopCloser
-tags: [exported]
 ```
 
 ```Go
@@ -498,7 +469,6 @@ NopCloser returns a ReadCloser with a no-op Close method wrapping the provided R
 
 ```
 searchKey: io.WriteCloser
-tags: [exported]
 ```
 
 ```Go
@@ -514,7 +484,6 @@ WriteCloser is the interface that groups the basic Write and Close methods.
 
 ```
 searchKey: io.ReadWriteCloser
-tags: [exported]
 ```
 
 ```Go
@@ -531,7 +500,6 @@ ReadWriteCloser is the interface that groups the basic Read, Write and Close met
 
 ```
 searchKey: io.ReadSeeker
-tags: [exported]
 ```
 
 ```Go
@@ -547,7 +515,6 @@ ReadSeeker is the interface that groups the basic Read and Seek methods.
 
 ```
 searchKey: io.ReadSeekCloser
-tags: [exported]
 ```
 
 ```Go
@@ -564,7 +531,6 @@ ReadSeekCloser is the interface that groups the basic Read, Seek and Close metho
 
 ```
 searchKey: io.WriteSeeker
-tags: [exported]
 ```
 
 ```Go
@@ -580,7 +546,6 @@ WriteSeeker is the interface that groups the basic Write and Seek methods.
 
 ```
 searchKey: io.ReadWriteSeeker
-tags: [exported]
 ```
 
 ```Go
@@ -597,7 +562,6 @@ ReadWriteSeeker is the interface that groups the basic Read, Write and Seek meth
 
 ```
 searchKey: io.ReaderFrom
-tags: [exported]
 ```
 
 ```Go
@@ -616,7 +580,6 @@ The Copy function uses ReaderFrom if available.
 
 ```
 searchKey: io.WriterTo
-tags: [exported]
 ```
 
 ```Go
@@ -635,7 +598,6 @@ The Copy function uses WriterTo if available.
 
 ```
 searchKey: io.ReaderAt
-tags: [exported]
 ```
 
 ```Go
@@ -664,7 +626,6 @@ Implementations must not retain p.
 
 ```
 searchKey: io.WriterAt
-tags: [exported]
 ```
 
 ```Go
@@ -687,7 +648,6 @@ Implementations must not retain p.
 
 ```
 searchKey: io.ByteReader
-tags: [exported]
 ```
 
 ```Go
@@ -706,7 +666,6 @@ ReadByte provides an efficient interface for byte-at-time processing. A Reader t
 
 ```
 searchKey: io.ByteScanner
-tags: [exported]
 ```
 
 ```Go
@@ -724,7 +683,6 @@ UnreadByte causes the next call to ReadByte to return the same byte as the previ
 
 ```
 searchKey: io.ByteWriter
-tags: [exported]
 ```
 
 ```Go
@@ -739,7 +697,6 @@ ByteWriter is the interface that wraps the WriteByte method.
 
 ```
 searchKey: io.RuneReader
-tags: [exported]
 ```
 
 ```Go
@@ -756,7 +713,6 @@ ReadRune reads a single UTF-8 encoded Unicode character and returns the rune and
 
 ```
 searchKey: io.RuneScanner
-tags: [exported]
 ```
 
 ```Go
@@ -774,7 +730,6 @@ UnreadRune causes the next call to ReadRune to return the same rune as the previ
 
 ```
 searchKey: io.StringWriter
-tags: [exported]
 ```
 
 ```Go
@@ -789,7 +744,6 @@ StringWriter is the interface that wraps the WriteString method.
 
 ```
 searchKey: io.LimitedReader
-tags: [exported]
 ```
 
 ```Go
@@ -805,7 +759,6 @@ A LimitedReader reads from R but limits the amount of data returned to just N by
 
 ```
 searchKey: io.LimitedReader.Read
-tags: [exported]
 ```
 
 ```Go
@@ -816,7 +769,6 @@ func (l *LimitedReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: io.SectionReader
-tags: [exported]
 ```
 
 ```Go
@@ -834,7 +786,6 @@ SectionReader implements Read, Seek, and ReadAt on a section of an underlying Re
 
 ```
 searchKey: io.NewSectionReader
-tags: [exported]
 ```
 
 ```Go
@@ -847,7 +798,6 @@ NewSectionReader returns a SectionReader that reads from r starting at offset of
 
 ```
 searchKey: io.SectionReader.Read
-tags: [exported]
 ```
 
 ```Go
@@ -858,7 +808,6 @@ func (s *SectionReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: io.SectionReader.Seek
-tags: [exported]
 ```
 
 ```Go
@@ -869,7 +818,6 @@ func (s *SectionReader) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: io.SectionReader.ReadAt
-tags: [exported]
 ```
 
 ```Go
@@ -880,7 +828,6 @@ func (s *SectionReader) ReadAt(p []byte, off int64) (n int, err error)
 
 ```
 searchKey: io.SectionReader.Size
-tags: [exported]
 ```
 
 ```Go
@@ -893,6 +840,7 @@ Size returns the size of the section in bytes.
 
 ```
 searchKey: io.teeReader
+tags: [private]
 ```
 
 ```Go
@@ -906,6 +854,7 @@ type teeReader struct {
 
 ```
 searchKey: io.teeReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -916,6 +865,7 @@ func (t *teeReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: io.discard
+tags: [private]
 ```
 
 ```Go
@@ -926,6 +876,7 @@ type discard struct{}
 
 ```
 searchKey: io.discard.Write
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +887,7 @@ func (discard) Write(p []byte) (int, error)
 
 ```
 searchKey: io.discard.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +898,7 @@ func (discard) WriteString(s string) (int, error)
 
 ```
 searchKey: io.discard.ReadFrom
+tags: [private]
 ```
 
 ```Go
@@ -956,6 +909,7 @@ func (discard) ReadFrom(r Reader) (n int64, err error)
 
 ```
 searchKey: io.nopCloser
+tags: [private]
 ```
 
 ```Go
@@ -968,6 +922,7 @@ type nopCloser struct {
 
 ```
 searchKey: io.nopCloser.Close
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +933,7 @@ func (nopCloser) Close() error
 
 ```
 searchKey: io.eofReader
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +944,7 @@ type eofReader struct{}
 
 ```
 searchKey: io.eofReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -998,6 +955,7 @@ func (eofReader) Read([]byte) (int, error)
 
 ```
 searchKey: io.multiReader
+tags: [private]
 ```
 
 ```Go
@@ -1010,6 +968,7 @@ type multiReader struct {
 
 ```
 searchKey: io.multiReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -1020,6 +979,7 @@ func (mr *multiReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: io.multiWriter
+tags: [private]
 ```
 
 ```Go
@@ -1032,6 +992,7 @@ type multiWriter struct {
 
 ```
 searchKey: io.multiWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -1042,6 +1003,7 @@ func (t *multiWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: io.multiWriter.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -1052,6 +1014,7 @@ func (t *multiWriter) WriteString(s string) (n int, err error)
 
 ```
 searchKey: io.onceError
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1030,7 @@ onceError is an object that will only store an error once.
 
 ```
 searchKey: io.onceError.Store
+tags: [private]
 ```
 
 ```Go
@@ -1077,6 +1041,7 @@ func (a *onceError) Store(err error)
 
 ```
 searchKey: io.onceError.Load
+tags: [private]
 ```
 
 ```Go
@@ -1087,6 +1052,7 @@ func (a *onceError) Load() error
 
 ```
 searchKey: io.pipe
+tags: [private]
 ```
 
 ```Go
@@ -1108,6 +1074,7 @@ A pipe is the shared pipe structure underlying PipeReader and PipeWriter.
 
 ```
 searchKey: io.pipe.Read
+tags: [private]
 ```
 
 ```Go
@@ -1118,6 +1085,7 @@ func (p *pipe) Read(b []byte) (n int, err error)
 
 ```
 searchKey: io.pipe.readCloseError
+tags: [private]
 ```
 
 ```Go
@@ -1128,6 +1096,7 @@ func (p *pipe) readCloseError() error
 
 ```
 searchKey: io.pipe.CloseRead
+tags: [private]
 ```
 
 ```Go
@@ -1138,6 +1107,7 @@ func (p *pipe) CloseRead(err error) error
 
 ```
 searchKey: io.pipe.Write
+tags: [private]
 ```
 
 ```Go
@@ -1148,6 +1118,7 @@ func (p *pipe) Write(b []byte) (n int, err error)
 
 ```
 searchKey: io.pipe.writeCloseError
+tags: [private]
 ```
 
 ```Go
@@ -1158,6 +1129,7 @@ func (p *pipe) writeCloseError() error
 
 ```
 searchKey: io.pipe.CloseWrite
+tags: [private]
 ```
 
 ```Go
@@ -1168,7 +1140,6 @@ func (p *pipe) CloseWrite(err error) error
 
 ```
 searchKey: io.PipeReader
-tags: [exported]
 ```
 
 ```Go
@@ -1183,7 +1154,6 @@ A PipeReader is the read half of a pipe.
 
 ```
 searchKey: io.Pipe
-tags: [exported]
 ```
 
 ```Go
@@ -1200,7 +1170,6 @@ It is safe to call Read and Write in parallel with each other or with Close. Par
 
 ```
 searchKey: io.PipeReader.Read
-tags: [exported]
 ```
 
 ```Go
@@ -1213,7 +1182,6 @@ Read implements the standard Read interface: it reads data from the pipe, blocki
 
 ```
 searchKey: io.PipeReader.Close
-tags: [exported]
 ```
 
 ```Go
@@ -1226,7 +1194,6 @@ Close closes the reader; subsequent writes to the write half of the pipe will re
 
 ```
 searchKey: io.PipeReader.CloseWithError
-tags: [exported]
 ```
 
 ```Go
@@ -1241,7 +1208,6 @@ CloseWithError never overwrites the previous error if it exists and always retur
 
 ```
 searchKey: io.PipeWriter
-tags: [exported]
 ```
 
 ```Go
@@ -1252,28 +1218,10 @@ type PipeWriter struct {
 
 A PipeWriter is the write half of a pipe. 
 
-#### <a id="Pipe" href="#Pipe">func Pipe() (*PipeReader, *PipeWriter)</a>
-
-```
-searchKey: io.Pipe
-tags: [exported]
-```
-
-```Go
-func Pipe() (*PipeReader, *PipeWriter)
-```
-
-Pipe creates a synchronous in-memory pipe. It can be used to connect code expecting an io.Reader with code expecting an io.Writer. 
-
-Reads and Writes on the pipe are matched one to one except when multiple Reads are needed to consume a single Write. That is, each Write to the PipeWriter blocks until it has satisfied one or more Reads from the PipeReader that fully consume the written data. The data is copied directly from the Write to the corresponding Read (or Reads); there is no internal buffering. 
-
-It is safe to call Read and Write in parallel with each other or with Close. Parallel calls to Read and parallel calls to Write are also safe: the individual calls will be gated sequentially. 
-
 #### <a id="PipeWriter.Write" href="#PipeWriter.Write">func (w *PipeWriter) Write(data []byte) (n int, err error)</a>
 
 ```
 searchKey: io.PipeWriter.Write
-tags: [exported]
 ```
 
 ```Go
@@ -1286,7 +1234,6 @@ Write implements the standard Write interface: it writes data to the pipe, block
 
 ```
 searchKey: io.PipeWriter.Close
-tags: [exported]
 ```
 
 ```Go
@@ -1299,7 +1246,6 @@ Close closes the writer; subsequent reads from the read half of the pipe will re
 
 ```
 searchKey: io.PipeWriter.CloseWithError
-tags: [exported]
 ```
 
 ```Go
@@ -1312,15 +1258,10 @@ CloseWithError never overwrites the previous error if it exists and always retur
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="WriteString" href="#WriteString">func WriteString(w Writer, s string) (n int, err error)</a>
 
 ```
 searchKey: io.WriteString
-tags: [exported]
 ```
 
 ```Go
@@ -1333,7 +1274,6 @@ WriteString writes the contents of the string s to w, which accepts a slice of b
 
 ```
 searchKey: io.ReadAtLeast
-tags: [exported]
 ```
 
 ```Go
@@ -1346,7 +1286,6 @@ ReadAtLeast reads from r into buf until it has read at least min bytes. It retur
 
 ```
 searchKey: io.ReadFull
-tags: [exported]
 ```
 
 ```Go
@@ -1359,7 +1298,6 @@ ReadFull reads exactly len(buf) bytes from r into buf. It returns the number of 
 
 ```
 searchKey: io.CopyN
-tags: [exported]
 ```
 
 ```Go
@@ -1374,7 +1312,6 @@ If dst implements the ReaderFrom interface, the copy is implemented using it.
 
 ```
 searchKey: io.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -1391,7 +1328,6 @@ If src implements the WriterTo interface, the copy is implemented by calling src
 
 ```
 searchKey: io.CopyBuffer
-tags: [exported]
 ```
 
 ```Go
@@ -1406,6 +1342,7 @@ If either src implements WriterTo or dst implements ReaderFrom, buf will not be 
 
 ```
 searchKey: io.copyBuffer
+tags: [private]
 ```
 
 ```Go
@@ -1418,7 +1355,6 @@ copyBuffer is the actual implementation of Copy and CopyBuffer. if buf is nil, o
 
 ```
 searchKey: io.ReadAll
-tags: [exported]
 ```
 
 ```Go

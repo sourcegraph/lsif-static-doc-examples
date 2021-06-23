@@ -4,7 +4,9 @@
     "identifier": "insights",
     "newPage": true,
     "searchKey": "enterprise/internal/insights",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "IsEnabled",
                 "newPage": false,
                 "searchKey": "insights.IsEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "insights.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "InitializeCodeInsightsDB",
                 "newPage": false,
                 "searchKey": "insights.InitializeCodeInsightsDB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

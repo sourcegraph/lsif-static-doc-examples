@@ -42,11 +42,14 @@ Package goreman implements a process supervisor for a Procfile.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Shutdown" href="#Shutdown">const Shutdown</a>
 
 ```
 searchKey: goreman.Shutdown
-tags: [exported]
 ```
 
 ```Go
@@ -59,7 +62,6 @@ Shutdown will shutdown Goreman if any process shuts down with a non-zero exit co
 
 ```
 searchKey: goreman.Ignore
-tags: [exported]
 ```
 
 ```Go
@@ -70,10 +72,15 @@ Ignore will continue running Goreman and will leave not restart the dead process
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="procs" href="#procs">var procs</a>
 
 ```
 searchKey: goreman.procs
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +93,7 @@ process informations named with proc.
 
 ```
 searchKey: goreman.maxProcNameLength
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +104,7 @@ var maxProcNameLength int
 
 ```
 searchKey: goreman.procDiedAction
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +117,7 @@ procDiedAction is the ProcDiedAction to take. Goreman still is globals everywher
 
 ```
 searchKey: goreman.colors
+tags: [private]
 ```
 
 ```Go
@@ -125,6 +135,7 @@ var colors = []ct.Color{
 
 ```
 searchKey: goreman.ci
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +146,7 @@ var ci int
 
 ```
 searchKey: goreman.mutex
+tags: [private]
 ```
 
 ```Go
@@ -145,6 +157,7 @@ var mutex = new(sync.Mutex)
 
 ```
 searchKey: goreman.wg
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +168,7 @@ var wg sync.WaitGroup
 
 ```
 searchKey: goreman.signals
+tags: [private]
 ```
 
 ```Go
@@ -163,10 +177,15 @@ var signals = make(chan os.Signal, 10)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="procInfo" href="#procInfo">type procInfo struct</a>
 
 ```
 searchKey: goreman.procInfo
+tags: [private]
 ```
 
 ```Go
@@ -187,7 +206,6 @@ type procInfo struct {
 
 ```
 searchKey: goreman.ProcDiedAction
-tags: [exported]
 ```
 
 ```Go
@@ -200,7 +218,6 @@ ProcDiedAction specifies the behaviour Goreman takes if a process exits with a n
 
 ```
 searchKey: goreman.Options
-tags: [exported]
 ```
 
 ```Go
@@ -217,6 +234,7 @@ type Options struct {
 
 ```
 searchKey: goreman.clogger
+tags: [private]
 ```
 
 ```Go
@@ -234,6 +252,7 @@ type clogger struct {
 
 ```
 searchKey: goreman.createLogger
+tags: [private]
 ```
 
 ```Go
@@ -246,6 +265,7 @@ create logger instance.
 
 ```
 searchKey: goreman.clogger.writeBuffers
+tags: [private]
 ```
 
 ```Go
@@ -258,6 +278,7 @@ write any stored buffers, plus the given line, then empty out the buffers.
 
 ```
 searchKey: goreman.clogger.writeLines
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +291,7 @@ bundle writes into lines, waiting briefly for completion of lines
 
 ```
 searchKey: goreman.clogger.Write
+tags: [private]
 ```
 
 ```Go
@@ -282,7 +304,6 @@ write handler of logger.
 
 ```
 searchKey: goreman.Goreman
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +314,6 @@ type Goreman struct{}
 
 ```
 searchKey: goreman.Goreman.RestartAll
-tags: [exported]
 ```
 
 ```Go
@@ -304,10 +324,15 @@ rpc: restart all (stop all, then start all)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="readProcfile" href="#readProcfile">func readProcfile(content []byte) error</a>
 
 ```
 searchKey: goreman.readProcfile
+tags: [private]
 ```
 
 ```Go
@@ -320,7 +345,6 @@ read Procfile and parse it.
 
 ```
 searchKey: goreman.Start
-tags: [exported]
 ```
 
 ```Go
@@ -333,6 +357,7 @@ Start starts up the Procfile.
 
 ```
 searchKey: goreman.stopProc
+tags: [private]
 ```
 
 ```Go
@@ -345,6 +370,7 @@ stop specified proc.
 
 ```
 searchKey: goreman.startProc
+tags: [private]
 ```
 
 ```Go
@@ -357,6 +383,7 @@ start specified proc. if proc is started already, return nil.
 
 ```
 searchKey: goreman.startProcs
+tags: [private]
 ```
 
 ```Go
@@ -369,6 +396,7 @@ startProcs starts the processes.
 
 ```
 searchKey: goreman.waitProcs
+tags: [private]
 ```
 
 ```Go
@@ -381,6 +409,7 @@ waitProcs waits for processes to complete.
 
 ```
 searchKey: goreman.stopProcs
+tags: [private]
 ```
 
 ```Go
@@ -391,6 +420,7 @@ func stopProcs(kill bool)
 
 ```
 searchKey: goreman.spawnProc
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +433,7 @@ spawn command that specified as proc. Returns true if it stopped due to goreman 
 
 ```
 searchKey: goreman.terminateProc
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +444,7 @@ func terminateProc(proc string) error
 
 ```
 searchKey: goreman.startServer
+tags: [private]
 ```
 
 ```Go

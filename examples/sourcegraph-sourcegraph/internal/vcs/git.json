@@ -4,7 +4,9 @@
     "identifier": "git",
     "newPage": true,
     "searchKey": "internal/vcs/git",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "partsPerCommit",
                 "newPage": false,
                 "searchKey": "git.partsPerCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "logFormatWithRefs",
                 "newPage": false,
                 "searchKey": "git.logFormatWithRefs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "logFormatWithoutRefs",
                 "newPage": false,
                 "searchKey": "git.logFormatWithoutRefs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,9 +110,7 @@
                 "identifier": "ModeSubmodule",
                 "newPage": false,
                 "searchKey": "git.ModeSubmodule",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -122,9 +130,7 @@
                 "identifier": "DevNullSHA",
                 "newPage": false,
                 "searchKey": "git.DevNullSHA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -144,9 +150,7 @@
                 "identifier": "ObjectTypeCommit",
                 "newPage": false,
                 "searchKey": "git.ObjectTypeCommit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -166,9 +170,7 @@
                 "identifier": "ObjectTypeTag",
                 "newPage": false,
                 "searchKey": "git.ObjectTypeTag",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -188,9 +190,7 @@
                 "identifier": "ObjectTypeTree",
                 "newPage": false,
                 "searchKey": "git.ObjectTypeTree",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +210,7 @@
                 "identifier": "ObjectTypeBlob",
                 "newPage": false,
                 "searchKey": "git.ObjectTypeBlob",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -235,7 +233,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -253,7 +253,9 @@
                 "identifier": "logEntryPattern",
                 "newPage": false,
                 "searchKey": "git.logEntryPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -273,7 +275,9 @@
                 "identifier": "recordGetCommitQueries",
                 "newPage": false,
                 "searchKey": "git.recordGetCommitQueries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -293,7 +297,9 @@
                 "identifier": "runCommitLog",
                 "newPage": false,
                 "searchKey": "git.runCommitLog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -313,7 +319,9 @@
                 "identifier": "errLogOnelineBatchScannerClosed",
                 "newPage": false,
                 "searchKey": "git.errLogOnelineBatchScannerClosed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -333,7 +341,9 @@
                 "identifier": "validRawLogDiffSearchFormatArgs",
                 "newPage": false,
                 "searchKey": "git.validRawLogDiffSearchFormatArgs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -353,7 +363,9 @@
                 "identifier": "gitCmdAllowlist",
                 "newPage": false,
                 "searchKey": "git.gitCmdAllowlist",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -373,7 +385,9 @@
                 "identifier": "gitCommonAllowlist",
                 "newPage": false,
                 "searchKey": "git.gitCommonAllowlist",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -393,9 +407,7 @@
                 "identifier": "Mocks",
                 "newPage": false,
                 "searchKey": "git.Mocks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -415,7 +427,9 @@
                 "identifier": "emptyMocks",
                 "newPage": false,
                 "searchKey": "git.emptyMocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -435,7 +449,9 @@
                 "identifier": "invalidBranch",
                 "newPage": false,
                 "searchKey": "git.invalidBranch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -455,7 +471,9 @@
                 "identifier": "lsTreeRootCacheMu",
                 "newPage": false,
                 "searchKey": "git.lsTreeRootCacheMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -475,7 +493,9 @@
                 "identifier": "lsTreeRootCache",
                 "newPage": false,
                 "searchKey": "git.lsTreeRootCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -495,7 +515,9 @@
                 "identifier": "root",
                 "newPage": false,
                 "searchKey": "git.root",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -515,7 +537,9 @@
                 "identifier": "Times",
                 "newPage": false,
                 "searchKey": "git.Times",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -535,7 +559,9 @@
                 "identifier": "NonExistentCommitID",
                 "newPage": false,
                 "searchKey": "git.NonExistentCommitID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -558,7 +584,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -576,9 +604,7 @@
                 "identifier": "BlameOptions",
                 "newPage": false,
                 "searchKey": "git.BlameOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -598,9 +624,7 @@
                 "identifier": "Hunk",
                 "newPage": false,
                 "searchKey": "git.Hunk",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -620,7 +644,9 @@
                 "identifier": "blobReader",
                 "newPage": false,
                 "searchKey": "git.blobReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -638,7 +664,9 @@
                       "identifier": "newBlobReader",
                       "newPage": false,
                       "searchKey": "git.newBlobReader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -658,7 +686,9 @@
                       "identifier": "blobReader.Read",
                       "newPage": false,
                       "searchKey": "git.blobReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -678,7 +708,9 @@
                       "identifier": "blobReader.Close",
                       "newPage": false,
                       "searchKey": "git.blobReader.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -698,7 +730,9 @@
                       "identifier": "blobReader.convertError",
                       "newPage": false,
                       "searchKey": "git.blobReader.convertError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -721,9 +755,7 @@
                 "identifier": "Commit",
                 "newPage": false,
                 "searchKey": "git.Commit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -741,7 +773,9 @@
                       "identifier": "getCommit",
                       "newPage": false,
                       "searchKey": "git.getCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -761,9 +795,7 @@
                       "identifier": "GetCommit",
                       "newPage": false,
                       "searchKey": "git.GetCommit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -783,9 +815,7 @@
                       "identifier": "FirstEverCommit",
                       "newPage": false,
                       "searchKey": "git.FirstEverCommit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -805,9 +835,7 @@
                       "identifier": "FindNearestCommit",
                       "newPage": false,
                       "searchKey": "git.FindNearestCommit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -827,7 +855,9 @@
                       "identifier": "parseCommitFromLog",
                       "newPage": false,
                       "searchKey": "git.parseCommitFromLog",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -850,9 +880,7 @@
                 "identifier": "Message",
                 "newPage": false,
                 "searchKey": "git.Message",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -870,9 +898,7 @@
                       "identifier": "Message.Subject",
                       "newPage": false,
                       "searchKey": "git.Message.Subject",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -892,9 +918,7 @@
                       "identifier": "Message.Body",
                       "newPage": false,
                       "searchKey": "git.Message.Body",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -917,9 +941,7 @@
                 "identifier": "Signature",
                 "newPage": false,
                 "searchKey": "git.Signature",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -939,9 +961,7 @@
                 "identifier": "CommitsOptions",
                 "newPage": false,
                 "searchKey": "git.CommitsOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -961,7 +981,9 @@
                 "identifier": "onelineCommit",
                 "newPage": false,
                 "searchKey": "git.onelineCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -981,9 +1003,7 @@
                 "identifier": "DiffOptions",
                 "newPage": false,
                 "searchKey": "git.DiffOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1003,9 +1023,7 @@
                 "identifier": "DiffFileIterator",
                 "newPage": false,
                 "searchKey": "git.DiffFileIterator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1023,9 +1041,7 @@
                       "identifier": "Diff",
                       "newPage": false,
                       "searchKey": "git.Diff",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1045,9 +1061,7 @@
                       "identifier": "DiffFileIterator.Close",
                       "newPage": false,
                       "searchKey": "git.DiffFileIterator.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1067,9 +1081,7 @@
                       "identifier": "DiffFileIterator.Next",
                       "newPage": false,
                       "searchKey": "git.DiffFileIterator.Next",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1092,7 +1104,9 @@
                 "identifier": "diffHunkLineInfo",
                 "newPage": false,
                 "searchKey": "git.diffHunkLineInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1110,7 +1124,9 @@
                       "identifier": "diffHunkLineInfo.changed",
                       "newPage": false,
                       "searchKey": "git.diffHunkLineInfo.changed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1133,9 +1149,7 @@
                 "identifier": "TextSearchOptions",
                 "newPage": false,
                 "searchKey": "git.TextSearchOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1155,9 +1169,7 @@
                 "identifier": "PathOptions",
                 "newPage": false,
                 "searchKey": "git.PathOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1177,9 +1189,7 @@
                 "identifier": "RawLogDiffSearchOptions",
                 "newPage": false,
                 "searchKey": "git.RawLogDiffSearchOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1199,9 +1209,7 @@
                 "identifier": "LogCommitSearchResult",
                 "newPage": false,
                 "searchKey": "git.LogCommitSearchResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1221,9 +1229,7 @@
                 "identifier": "LogCommitSearchEvent",
                 "newPage": false,
                 "searchKey": "git.LogCommitSearchEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1243,9 +1249,7 @@
                 "identifier": "RawDiff",
                 "newPage": false,
                 "searchKey": "git.RawDiff",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1265,9 +1269,7 @@
                 "identifier": "Highlight",
                 "newPage": false,
                 "searchKey": "git.Highlight",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1287,7 +1289,9 @@
                 "identifier": "refResolveCache",
                 "newPage": false,
                 "searchKey": "git.refResolveCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1305,7 +1309,9 @@
                       "identifier": "refResolveCache.resolveHEADSymbolicRef",
                       "newPage": false,
                       "searchKey": "git.refResolveCache.resolveHEADSymbolicRef",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1328,7 +1334,9 @@
                 "identifier": "cmdFunc",
                 "newPage": false,
                 "searchKey": "git.cmdFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1346,7 +1354,9 @@
                       "identifier": "gitserverCmdFunc",
                       "newPage": false,
                       "searchKey": "git.gitserverCmdFunc",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1369,7 +1379,9 @@
                 "identifier": "cmd",
                 "newPage": false,
                 "searchKey": "git.cmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1389,9 +1401,7 @@
                 "identifier": "Submodule",
                 "newPage": false,
                 "searchKey": "git.Submodule",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1411,9 +1421,7 @@
                 "identifier": "ObjectInfo",
                 "newPage": false,
                 "searchKey": "git.ObjectInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1433,7 +1441,9 @@
                 "identifier": "objectInfo",
                 "newPage": false,
                 "searchKey": "git.objectInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1451,7 +1461,9 @@
                       "identifier": "objectInfo.OID",
                       "newPage": false,
                       "searchKey": "git.objectInfo.OID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1474,9 +1486,7 @@
                 "identifier": "OID",
                 "newPage": false,
                 "searchKey": "git.OID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1494,9 +1504,7 @@
                       "identifier": "GetObject",
                       "newPage": false,
                       "searchKey": "git.GetObject",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1516,7 +1524,9 @@
                       "identifier": "decodeOID",
                       "newPage": false,
                       "searchKey": "git.decodeOID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1536,9 +1546,7 @@
                       "identifier": "OID.String",
                       "newPage": false,
                       "searchKey": "git.OID.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1561,9 +1569,7 @@
                 "identifier": "ObjectType",
                 "newPage": false,
                 "searchKey": "git.ObjectType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1573,30 +1579,7 @@
                 "kind": "markdown",
                 "value": "```Go\ntype ObjectType string\n```\n\nObjectType is a valid Git object type (commit, tag, tree, and blob). \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/vcs/git#GetObject",
-                    "documentation": {
-                      "identifier": "GetObject",
-                      "newPage": false,
-                      "searchKey": "git.GetObject",
-                      "tags": [
-                        "exported"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func GetObject(ctx context.Context, repo api.RepoName, objectName string) (oid OID, objectType ObjectType, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc GetObject(ctx context.Context, repo api.RepoName, objectName string) (oid OID, objectType ObjectType, err error)\n```\n\nGetObject looks up a Git object and returns information about it. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -1606,9 +1589,7 @@
                 "identifier": "RefGlob",
                 "newPage": false,
                 "searchKey": "git.RefGlob",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1628,9 +1609,7 @@
                 "identifier": "RefGlobs",
                 "newPage": false,
                 "searchKey": "git.RefGlobs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1648,9 +1627,7 @@
                       "identifier": "CompileRefGlobs",
                       "newPage": false,
                       "searchKey": "git.CompileRefGlobs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1670,9 +1647,7 @@
                       "identifier": "RefGlobs.Match",
                       "newPage": false,
                       "searchKey": "git.RefGlobs.Match",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1695,7 +1670,9 @@
                 "identifier": "compiledRefGlobPattern",
                 "newPage": false,
                 "searchKey": "git.compiledRefGlobPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1715,9 +1692,7 @@
                 "identifier": "Branch",
                 "newPage": false,
                 "searchKey": "git.Branch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1737,9 +1712,7 @@
                 "identifier": "BranchesOptions",
                 "newPage": false,
                 "searchKey": "git.BranchesOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1759,9 +1732,7 @@
                 "identifier": "Tag",
                 "newPage": false,
                 "searchKey": "git.Tag",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1781,9 +1752,7 @@
                 "identifier": "BehindAhead",
                 "newPage": false,
                 "searchKey": "git.BehindAhead",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1801,9 +1770,7 @@
                       "identifier": "GetBehindAhead",
                       "newPage": false,
                       "searchKey": "git.GetBehindAhead",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1826,9 +1793,7 @@
                 "identifier": "Branches",
                 "newPage": false,
                 "searchKey": "git.Branches",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1846,9 +1811,7 @@
                       "identifier": "Branches.Len",
                       "newPage": false,
                       "searchKey": "git.Branches.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1868,9 +1831,7 @@
                       "identifier": "Branches.Less",
                       "newPage": false,
                       "searchKey": "git.Branches.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1890,9 +1851,7 @@
                       "identifier": "Branches.Swap",
                       "newPage": false,
                       "searchKey": "git.Branches.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1915,9 +1874,7 @@
                 "identifier": "ByAuthorDate",
                 "newPage": false,
                 "searchKey": "git.ByAuthorDate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1935,9 +1892,7 @@
                       "identifier": "ByAuthorDate.Len",
                       "newPage": false,
                       "searchKey": "git.ByAuthorDate.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1957,9 +1912,7 @@
                       "identifier": "ByAuthorDate.Less",
                       "newPage": false,
                       "searchKey": "git.ByAuthorDate.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1979,9 +1932,7 @@
                       "identifier": "ByAuthorDate.Swap",
                       "newPage": false,
                       "searchKey": "git.ByAuthorDate.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2004,9 +1955,7 @@
                 "identifier": "Tags",
                 "newPage": false,
                 "searchKey": "git.Tags",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2024,9 +1973,7 @@
                       "identifier": "Tags.Len",
                       "newPage": false,
                       "searchKey": "git.Tags.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2046,9 +1993,7 @@
                       "identifier": "Tags.Less",
                       "newPage": false,
                       "searchKey": "git.Tags.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2068,9 +2013,7 @@
                       "identifier": "Tags.Swap",
                       "newPage": false,
                       "searchKey": "git.Tags.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2093,7 +2036,9 @@
                 "identifier": "branchFilter",
                 "newPage": false,
                 "searchKey": "git.branchFilter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2111,7 +2056,9 @@
                       "identifier": "branchFilter.allows",
                       "newPage": false,
                       "searchKey": "git.branchFilter.allows",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2131,7 +2078,9 @@
                       "identifier": "branchFilter.add",
                       "newPage": false,
                       "searchKey": "git.branchFilter.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2154,7 +2103,9 @@
                 "identifier": "byteSlices",
                 "newPage": false,
                 "searchKey": "git.byteSlices",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2172,7 +2123,9 @@
                       "identifier": "byteSlices.Len",
                       "newPage": false,
                       "searchKey": "git.byteSlices.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2192,7 +2145,9 @@
                       "identifier": "byteSlices.Less",
                       "newPage": false,
                       "searchKey": "git.byteSlices.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2212,7 +2167,9 @@
                       "identifier": "byteSlices.Swap",
                       "newPage": false,
                       "searchKey": "git.byteSlices.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2235,9 +2192,7 @@
                 "identifier": "Ref",
                 "newPage": false,
                 "searchKey": "git.Ref",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2257,9 +2212,7 @@
                 "identifier": "ResolveRevisionOptions",
                 "newPage": false,
                 "searchKey": "git.ResolveRevisionOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2279,9 +2232,7 @@
                 "identifier": "BadCommitError",
                 "newPage": false,
                 "searchKey": "git.BadCommitError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2299,9 +2250,7 @@
                       "identifier": "BadCommitError.Error",
                       "newPage": false,
                       "searchKey": "git.BadCommitError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2324,9 +2273,7 @@
                 "identifier": "ShortLogOptions",
                 "newPage": false,
                 "searchKey": "git.ShortLogOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2346,9 +2293,7 @@
                 "identifier": "PersonCount",
                 "newPage": false,
                 "searchKey": "git.PersonCount",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2366,9 +2311,7 @@
                       "identifier": "PersonCount.String",
                       "newPage": false,
                       "searchKey": "git.PersonCount.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2391,7 +2334,9 @@
                 "identifier": "closer",
                 "newPage": false,
                 "searchKey": "git.closer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2409,7 +2354,9 @@
                       "identifier": "closer.Read",
                       "newPage": false,
                       "searchKey": "git.closer.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2429,7 +2376,9 @@
                       "identifier": "closer.Close",
                       "newPage": false,
                       "searchKey": "git.closer.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2455,7 +2404,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2473,9 +2424,7 @@
                 "identifier": "BlameFile",
                 "newPage": false,
                 "searchKey": "git.BlameFile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2495,7 +2444,9 @@
                 "identifier": "blameFileCmd",
                 "newPage": false,
                 "searchKey": "git.blameFileCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2515,9 +2466,7 @@
                 "identifier": "ReadFile",
                 "newPage": false,
                 "searchKey": "git.ReadFile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2537,9 +2486,7 @@
                 "identifier": "NewFileReader",
                 "newPage": false,
                 "searchKey": "git.NewFileReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2559,7 +2506,9 @@
                 "identifier": "readFileBytes",
                 "newPage": false,
                 "searchKey": "git.readFileBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2579,9 +2528,7 @@
                 "identifier": "Commits",
                 "newPage": false,
                 "searchKey": "git.Commits",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2601,9 +2548,7 @@
                 "identifier": "HasCommitAfter",
                 "newPage": false,
                 "searchKey": "git.HasCommitAfter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2623,7 +2568,9 @@
                 "identifier": "isBadObjectErr",
                 "newPage": false,
                 "searchKey": "git.isBadObjectErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2643,7 +2590,9 @@
                 "identifier": "commitLog",
                 "newPage": false,
                 "searchKey": "git.commitLog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2663,7 +2612,9 @@
                 "identifier": "commitLogArgs",
                 "newPage": false,
                 "searchKey": "git.commitLogArgs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2683,9 +2634,7 @@
                 "identifier": "CommitCount",
                 "newPage": false,
                 "searchKey": "git.CommitCount",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2705,7 +2654,9 @@
                 "identifier": "logOnelineBatchScanner",
                 "newPage": false,
                 "searchKey": "git.logOnelineBatchScanner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2725,7 +2676,9 @@
                 "identifier": "logOnelineScanner",
                 "newPage": false,
                 "searchKey": "git.logOnelineScanner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2745,7 +2698,9 @@
                 "identifier": "compilePathMatcher",
                 "newPage": false,
                 "searchKey": "git.compilePathMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2765,7 +2720,9 @@
                 "identifier": "filterAndHighlightDiff",
                 "newPage": false,
                 "searchKey": "git.filterAndHighlightDiff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2785,7 +2742,9 @@
                 "identifier": "truncateLongLines",
                 "newPage": false,
                 "searchKey": "git.truncateLongLines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2805,7 +2764,9 @@
                 "identifier": "diffHunkLineStatus",
                 "newPage": false,
                 "searchKey": "git.diffHunkLineStatus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2825,7 +2786,9 @@
                 "identifier": "computeDiffHunkInfo",
                 "newPage": false,
                 "searchKey": "git.computeDiffHunkInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2845,7 +2808,9 @@
                 "identifier": "splitHunkMatches",
                 "newPage": false,
                 "searchKey": "git.splitHunkMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2865,9 +2830,7 @@
                 "identifier": "CompilePathMatcher",
                 "newPage": false,
                 "searchKey": "git.CompilePathMatcher",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2887,7 +2850,9 @@
                 "identifier": "isValidRawLogDiffSearchFormatArgs",
                 "newPage": false,
                 "searchKey": "git.isValidRawLogDiffSearchFormatArgs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2907,9 +2872,7 @@
                 "identifier": "RawLogDiffSearch",
                 "newPage": false,
                 "searchKey": "git.RawLogDiffSearch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2929,9 +2892,7 @@
                 "identifier": "RawLogDiffSearchStream",
                 "newPage": false,
                 "searchKey": "git.RawLogDiffSearchStream",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2951,7 +2912,9 @@
                 "identifier": "doLogDiffSearchStream",
                 "newPage": false,
                 "searchKey": "git.doLogDiffSearchStream",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2971,7 +2934,9 @@
                 "identifier": "rawLogSearchCmd",
                 "newPage": false,
                 "searchKey": "git.rawLogSearchCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2991,7 +2956,9 @@
                 "identifier": "rawShowSearch",
                 "newPage": false,
                 "searchKey": "git.rawShowSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3011,7 +2978,9 @@
                 "identifier": "logDiffCommonArgs",
                 "newPage": false,
                 "searchKey": "git.logDiffCommonArgs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3031,7 +3000,9 @@
                 "identifier": "filterAndResolveRefs",
                 "newPage": false,
                 "searchKey": "git.filterAndResolveRefs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3051,7 +3022,9 @@
                 "identifier": "deadlineLabel",
                 "newPage": false,
                 "searchKey": "git.deadlineLabel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3071,7 +3044,9 @@
                 "identifier": "regexpToGlobBestEffort",
                 "newPage": false,
                 "searchKey": "git.regexpToGlobBestEffort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3091,7 +3066,9 @@
                 "identifier": "globQuoteMeta",
                 "newPage": false,
                 "searchKey": "git.globQuoteMeta",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3111,7 +3088,9 @@
                 "identifier": "checkSpecArgSafety",
                 "newPage": false,
                 "searchKey": "git.checkSpecArgSafety",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3131,9 +3110,7 @@
                 "identifier": "ExecSafe",
                 "newPage": false,
                 "searchKey": "git.ExecSafe",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3153,9 +3130,7 @@
                 "identifier": "ExecReader",
                 "newPage": false,
                 "searchKey": "git.ExecReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3175,7 +3150,9 @@
                 "identifier": "readUntilTimeout",
                 "newPage": false,
                 "searchKey": "git.readUntilTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3195,7 +3172,9 @@
                 "identifier": "isAllowedGitArg",
                 "newPage": false,
                 "searchKey": "git.isAllowedGitArg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3215,7 +3194,9 @@
                 "identifier": "isAllowedGitCmd",
                 "newPage": false,
                 "searchKey": "git.isAllowedGitCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3235,9 +3216,7 @@
                 "identifier": "MergeBase",
                 "newPage": false,
                 "searchKey": "git.MergeBase",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3257,9 +3236,7 @@
                 "identifier": "ResetMocks",
                 "newPage": false,
                 "searchKey": "git.ResetMocks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3279,9 +3256,7 @@
                 "identifier": "HumanReadableBranchName",
                 "newPage": false,
                 "searchKey": "git.HumanReadableBranchName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3301,9 +3276,7 @@
                 "identifier": "EnsureRefPrefix",
                 "newPage": false,
                 "searchKey": "git.EnsureRefPrefix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3323,9 +3296,7 @@
                 "identifier": "AbbreviateRef",
                 "newPage": false,
                 "searchKey": "git.AbbreviateRef",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3345,9 +3316,7 @@
                 "identifier": "ListBranches",
                 "newPage": false,
                 "searchKey": "git.ListBranches",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3367,7 +3336,9 @@
                 "identifier": "branches",
                 "newPage": false,
                 "searchKey": "git.branches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3387,9 +3358,7 @@
                 "identifier": "ListTags",
                 "newPage": false,
                 "searchKey": "git.ListTags",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3409,7 +3378,9 @@
                 "identifier": "parseTags",
                 "newPage": false,
                 "searchKey": "git.parseTags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3429,9 +3400,7 @@
                 "identifier": "ListRefs",
                 "newPage": false,
                 "searchKey": "git.ListRefs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3451,7 +3420,9 @@
                 "identifier": "showRef",
                 "newPage": false,
                 "searchKey": "git.showRef",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3471,9 +3442,7 @@
                 "identifier": "ValidateBranchName",
                 "newPage": false,
                 "searchKey": "git.ValidateBranchName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3493,9 +3462,7 @@
                 "identifier": "IsAbsoluteRevision",
                 "newPage": false,
                 "searchKey": "git.IsAbsoluteRevision",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3515,7 +3482,9 @@
                 "identifier": "ensureAbsoluteCommit",
                 "newPage": false,
                 "searchKey": "git.ensureAbsoluteCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3535,9 +3504,7 @@
                 "identifier": "ResolveRevision",
                 "newPage": false,
                 "searchKey": "git.ResolveRevision",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3557,7 +3524,9 @@
                 "identifier": "runRevParse",
                 "newPage": false,
                 "searchKey": "git.runRevParse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3577,9 +3546,7 @@
                 "identifier": "ShortLog",
                 "newPage": false,
                 "searchKey": "git.ShortLog",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3599,7 +3566,9 @@
                 "identifier": "parseShortLog",
                 "newPage": false,
                 "searchKey": "git.parseShortLog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3619,7 +3588,9 @@
                 "identifier": "lenientParseAddress",
                 "newPage": false,
                 "searchKey": "git.lenientParseAddress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3639,9 +3610,7 @@
                 "identifier": "Lstat",
                 "newPage": false,
                 "searchKey": "git.Lstat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3661,9 +3630,7 @@
                 "identifier": "Stat",
                 "newPage": false,
                 "searchKey": "git.Stat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3683,9 +3650,7 @@
                 "identifier": "ReadDir",
                 "newPage": false,
                 "searchKey": "git.ReadDir",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3705,9 +3670,7 @@
                 "identifier": "LsFiles",
                 "newPage": false,
                 "searchKey": "git.LsFiles",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3727,7 +3690,9 @@
                 "identifier": "lsTree",
                 "newPage": false,
                 "searchKey": "git.lsTree",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3747,7 +3712,9 @@
                 "identifier": "lsTreeUncached",
                 "newPage": false,
                 "searchKey": "git.lsTreeUncached",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3767,7 +3734,9 @@
                 "identifier": "TestRepository_BlameFile",
                 "newPage": false,
                 "searchKey": "git.TestRepository_BlameFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3787,7 +3756,9 @@
                 "identifier": "TestRead",
                 "newPage": false,
                 "searchKey": "git.TestRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3807,7 +3778,9 @@
                 "identifier": "TestRepository_GetCommit",
                 "newPage": false,
                 "searchKey": "git.TestRepository_GetCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3827,7 +3800,9 @@
                 "identifier": "TestRepository_HasCommitAfter",
                 "newPage": false,
                 "searchKey": "git.TestRepository_HasCommitAfter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3847,7 +3822,9 @@
                 "identifier": "TestRepository_FirstEverCommit",
                 "newPage": false,
                 "searchKey": "git.TestRepository_FirstEverCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3867,7 +3844,9 @@
                 "identifier": "TestRepository_FindNearestCommit",
                 "newPage": false,
                 "searchKey": "git.TestRepository_FindNearestCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3887,7 +3866,9 @@
                 "identifier": "TestRepository_Commits",
                 "newPage": false,
                 "searchKey": "git.TestRepository_Commits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3907,7 +3888,9 @@
                 "identifier": "TestRepository_Commits_options",
                 "newPage": false,
                 "searchKey": "git.TestRepository_Commits_options",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3927,7 +3910,9 @@
                 "identifier": "TestRepository_Commits_options_path",
                 "newPage": false,
                 "searchKey": "git.TestRepository_Commits_options_path",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3947,7 +3932,9 @@
                 "identifier": "TestLogOnelineBatchScanner_batchclosed",
                 "newPage": false,
                 "searchKey": "git.TestLogOnelineBatchScanner_batchclosed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3967,7 +3954,9 @@
                 "identifier": "TestLogOnelineBatchScanner_closed",
                 "newPage": false,
                 "searchKey": "git.TestLogOnelineBatchScanner_closed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3987,7 +3976,9 @@
                 "identifier": "TestLogOnelineBatchScanner_debounce",
                 "newPage": false,
                 "searchKey": "git.TestLogOnelineBatchScanner_debounce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4007,7 +3998,9 @@
                 "identifier": "TestLogOnelineBatchScanner_empty",
                 "newPage": false,
                 "searchKey": "git.TestLogOnelineBatchScanner_empty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4027,7 +4020,9 @@
                 "identifier": "TestLogOnelineBatchScanner_small",
                 "newPage": false,
                 "searchKey": "git.TestLogOnelineBatchScanner_small",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4047,7 +4042,9 @@
                 "identifier": "TestMessage",
                 "newPage": false,
                 "searchKey": "git.TestMessage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4067,7 +4064,9 @@
                 "identifier": "TestFilterAndHighlightDiff",
                 "newPage": false,
                 "searchKey": "git.TestFilterAndHighlightDiff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4087,7 +4086,9 @@
                 "identifier": "TestSplitHunkMatches",
                 "newPage": false,
                 "searchKey": "git.TestSplitHunkMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4107,7 +4108,9 @@
                 "identifier": "TestTruncateLongLines",
                 "newPage": false,
                 "searchKey": "git.TestTruncateLongLines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4127,7 +4130,9 @@
                 "identifier": "TestRepository_RawLogDiffSearch",
                 "newPage": false,
                 "searchKey": "git.TestRepository_RawLogDiffSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4147,7 +4152,9 @@
                 "identifier": "TestRepository_RawLogDiffSearch_empty",
                 "newPage": false,
                 "searchKey": "git.TestRepository_RawLogDiffSearch_empty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4167,7 +4174,9 @@
                 "identifier": "TestRegexpToGlobBestEffort",
                 "newPage": false,
                 "searchKey": "git.TestRegexpToGlobBestEffort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4187,7 +4196,9 @@
                 "identifier": "TestDiff",
                 "newPage": false,
                 "searchKey": "git.TestDiff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4207,7 +4218,9 @@
                 "identifier": "TestDiffFileIterator",
                 "newPage": false,
                 "searchKey": "git.TestDiffFileIterator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4227,7 +4240,9 @@
                 "identifier": "TestExecSafe",
                 "newPage": false,
                 "searchKey": "git.TestExecSafe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4247,7 +4262,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "git.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4262,12 +4279,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/vcs/git#init",
+              "pathID": "/internal/vcs/git#init.main_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.main_test.go",
                 "newPage": false,
                 "searchKey": "git.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4287,7 +4306,9 @@
                 "identifier": "AsJSON",
                 "newPage": false,
                 "searchKey": "git.AsJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4307,7 +4328,9 @@
                 "identifier": "InitGitRepository",
                 "newPage": false,
                 "searchKey": "git.InitGitRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4327,7 +4350,9 @@
                 "identifier": "GitCommand",
                 "newPage": false,
                 "searchKey": "git.GitCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4347,7 +4372,9 @@
                 "identifier": "MakeGitRepository",
                 "newPage": false,
                 "searchKey": "git.MakeGitRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4367,7 +4394,9 @@
                 "identifier": "CommitsEqual",
                 "newPage": false,
                 "searchKey": "git.CommitsEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4387,7 +4416,9 @@
                 "identifier": "MustParseTime",
                 "newPage": false,
                 "searchKey": "git.MustParseTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4407,7 +4438,9 @@
                 "identifier": "AppleTime",
                 "newPage": false,
                 "searchKey": "git.AppleTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4427,7 +4460,9 @@
                 "identifier": "ComputeCommitHash",
                 "newPage": false,
                 "searchKey": "git.ComputeCommitHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4447,7 +4482,9 @@
                 "identifier": "TestMerger_MergeBase",
                 "newPage": false,
                 "searchKey": "git.TestMerger_MergeBase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4467,7 +4504,9 @@
                 "identifier": "TestGetObject",
                 "newPage": false,
                 "searchKey": "git.TestGetObject",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4487,7 +4526,9 @@
                 "identifier": "TestRefGlobs",
                 "newPage": false,
                 "searchKey": "git.TestRefGlobs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4507,7 +4548,9 @@
                 "identifier": "TestHumanReadableBranchName",
                 "newPage": false,
                 "searchKey": "git.TestHumanReadableBranchName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4527,7 +4570,9 @@
                 "identifier": "TestRepository_ListBranches",
                 "newPage": false,
                 "searchKey": "git.TestRepository_ListBranches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4547,7 +4592,9 @@
                 "identifier": "TestRepository_Branches_MergedInto",
                 "newPage": false,
                 "searchKey": "git.TestRepository_Branches_MergedInto",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4567,7 +4614,9 @@
                 "identifier": "TestRepository_Branches_ContainsCommit",
                 "newPage": false,
                 "searchKey": "git.TestRepository_Branches_ContainsCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4587,7 +4636,9 @@
                 "identifier": "TestRepository_Branches_BehindAheadCounts",
                 "newPage": false,
                 "searchKey": "git.TestRepository_Branches_BehindAheadCounts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4607,7 +4658,9 @@
                 "identifier": "TestRepository_Branches_IncludeCommit",
                 "newPage": false,
                 "searchKey": "git.TestRepository_Branches_IncludeCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4627,7 +4680,9 @@
                 "identifier": "TestRepository_ListTags",
                 "newPage": false,
                 "searchKey": "git.TestRepository_ListTags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4647,7 +4702,9 @@
                 "identifier": "TestRepository_parseTags_WithoutCreatorDate",
                 "newPage": false,
                 "searchKey": "git.TestRepository_parseTags_WithoutCreatorDate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4667,7 +4724,9 @@
                 "identifier": "TestValidateBranchName",
                 "newPage": false,
                 "searchKey": "git.TestValidateBranchName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4687,7 +4746,9 @@
                 "identifier": "TestIsAbsoluteRevision",
                 "newPage": false,
                 "searchKey": "git.TestIsAbsoluteRevision",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4707,7 +4768,9 @@
                 "identifier": "TestRepository_ResolveBranch",
                 "newPage": false,
                 "searchKey": "git.TestRepository_ResolveBranch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4727,7 +4790,9 @@
                 "identifier": "TestRepository_ResolveBranch_error",
                 "newPage": false,
                 "searchKey": "git.TestRepository_ResolveBranch_error",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4747,7 +4812,9 @@
                 "identifier": "TestRepository_ResolveTag",
                 "newPage": false,
                 "searchKey": "git.TestRepository_ResolveTag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4767,7 +4834,9 @@
                 "identifier": "TestRepository_ResolveTag_error",
                 "newPage": false,
                 "searchKey": "git.TestRepository_ResolveTag_error",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4787,7 +4856,9 @@
                 "identifier": "TestParseShortLog",
                 "newPage": false,
                 "searchKey": "git.TestParseShortLog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4807,7 +4878,9 @@
                 "identifier": "TestRepository_FileSystem_Symlinks",
                 "newPage": false,
                 "searchKey": "git.TestRepository_FileSystem_Symlinks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4827,7 +4900,9 @@
                 "identifier": "TestRepository_FileSystem",
                 "newPage": false,
                 "searchKey": "git.TestRepository_FileSystem",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4847,7 +4922,9 @@
                 "identifier": "TestRepository_FileSystem_quoteChars",
                 "newPage": false,
                 "searchKey": "git.TestRepository_FileSystem_quoteChars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4867,7 +4944,9 @@
                 "identifier": "TestRepository_FileSystem_gitSubmodules",
                 "newPage": false,
                 "searchKey": "git.TestRepository_FileSystem_gitSubmodules",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

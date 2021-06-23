@@ -41,10 +41,15 @@ Package endpoint provides a consistent hash map for URLs to kubernetes endpoints
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="metricEndpointSize" href="#metricEndpointSize">var metricEndpointSize</a>
 
 ```
 searchKey: endpoint.metricEndpointSize
+tags: [private]
 ```
 
 ```Go
@@ -53,10 +58,15 @@ var metricEndpointSize = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="hashFn" href="#hashFn">type hashFn func(data []byte) uint32</a>
 
 ```
 searchKey: endpoint.hashFn
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +77,7 @@ type hashFn func(data []byte) uint32
 
 ```
 searchKey: endpoint.hashMap
+tags: [private]
 ```
 
 ```Go
@@ -83,6 +94,7 @@ type hashMap struct {
 
 ```
 searchKey: endpoint.hashMapNew
+tags: [private]
 ```
 
 ```Go
@@ -93,6 +105,7 @@ func hashMapNew(replicas int, fn hashFn) *hashMap
 
 ```
 searchKey: endpoint.endpointsToMap
+tags: [private]
 ```
 
 ```Go
@@ -103,6 +116,7 @@ func endpointsToMap(u *k8sURL, eps corev1.Endpoints) (*hashMap, error)
 
 ```
 searchKey: endpoint.newConsistentHashMap
+tags: [private]
 ```
 
 ```Go
@@ -113,6 +127,7 @@ func newConsistentHashMap(keys []string) *hashMap
 
 ```
 searchKey: endpoint.hashMap.isEmpty
+tags: [private]
 ```
 
 ```Go
@@ -125,6 +140,7 @@ Returns true if there are no items available.
 
 ```
 searchKey: endpoint.hashMap.add
+tags: [private]
 ```
 
 ```Go
@@ -137,6 +153,7 @@ Adds some keys to the hash.
 
 ```
 searchKey: endpoint.hashMap.get
+tags: [private]
 ```
 
 ```Go
@@ -149,7 +166,6 @@ Gets the closest item in the hash to the provided key that is not in exclude.
 
 ```
 searchKey: endpoint.Map
-tags: [exported]
 ```
 
 ```Go
@@ -168,7 +184,6 @@ Map is a consistent hash map to URLs. It uses the kubernetes API to watch the en
 
 ```
 searchKey: endpoint.New
-tags: [exported]
 ```
 
 ```Go
@@ -192,7 +207,6 @@ Examples URL specifiers:
 
 ```
 searchKey: endpoint.Static
-tags: [exported]
 ```
 
 ```Go
@@ -209,7 +223,6 @@ Static Maps are guaranteed to never return an error.
 
 ```
 searchKey: endpoint.Empty
-tags: [exported]
 ```
 
 ```Go
@@ -222,7 +235,6 @@ Empty returns an Endpoint map which always fails with err.
 
 ```
 searchKey: endpoint.Map.String
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +245,6 @@ func (m *Map) String() string
 
 ```
 searchKey: endpoint.Map.Get
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +259,6 @@ Note: For k8s URLs we return URLs based on the registered endpoints. The endpoin
 
 ```
 searchKey: endpoint.Map.GetMany
-tags: [exported]
 ```
 
 ```Go
@@ -261,7 +271,6 @@ GetMany is the same as calling Get on each item of keys. It will only acquire th
 
 ```
 searchKey: endpoint.Map.Endpoints
-tags: [exported]
 ```
 
 ```Go
@@ -274,6 +283,7 @@ Endpoints returns a set of all addresses. Do not modify the returned value.
 
 ```
 searchKey: endpoint.Map.getUrls
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +294,7 @@ func (m *Map) getUrls() (*hashMap, error)
 
 ```
 searchKey: endpoint.k8sURL
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +310,7 @@ type k8sURL struct {
 
 ```
 searchKey: endpoint.parseURL
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +321,7 @@ func parseURL(rawurl string) (*k8sURL, error)
 
 ```
 searchKey: endpoint.k8sURL.endpointURL
+tags: [private]
 ```
 
 ```Go
@@ -317,10 +330,15 @@ func (u *k8sURL) endpointURL(endpoint string) string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="inform" href="#inform">func inform(client v1.EndpointsInterface, m *Map, u *k8sURL) error</a>
 
 ```
 searchKey: endpoint.inform
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +349,7 @@ func inform(client v1.EndpointsInterface, m *Map, u *k8sURL) error
 
 ```
 searchKey: endpoint.namespace
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +362,7 @@ namespace returns the namespace the pod is currently running in this is done bec
 
 ```
 searchKey: endpoint.loadClient
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +373,7 @@ func loadClient() (client *kubernetes.Clientset, ns string, err error)
 
 ```
 searchKey: endpoint.TestNew
+tags: [private]
 ```
 
 ```Go
@@ -363,6 +384,7 @@ func TestNew(t *testing.T)
 
 ```
 searchKey: endpoint.TestStatic
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +395,7 @@ func TestStatic(t *testing.T)
 
 ```
 searchKey: endpoint.TestExclude
+tags: [private]
 ```
 
 ```Go
@@ -383,6 +406,7 @@ func TestExclude(t *testing.T)
 
 ```
 searchKey: endpoint.expectEndpoints
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +417,7 @@ func expectEndpoints(t *testing.T, m *Map, exclude map[string]bool, endpoints ..
 
 ```
 searchKey: endpoint.TestEndpoints
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +428,7 @@ func TestEndpoints(t *testing.T)
 
 ```
 searchKey: endpoint.TestK8sURL
+tags: [private]
 ```
 
 ```Go

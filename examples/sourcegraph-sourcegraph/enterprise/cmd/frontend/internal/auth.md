@@ -18,11 +18,14 @@ Package auth is imported for side-effects to enable enterprise-only SSO.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Init" href="#Init">func Init(db dbutil.DB)</a>
 
 ```
 searchKey: auth.Init
-tags: [exported]
 ```
 
 ```Go
@@ -35,6 +38,7 @@ Init must be called by the frontend to initialize the auth middlewares.
 
 ```
 searchKey: auth.ssoSignOutHandler
+tags: [private]
 ```
 
 ```Go

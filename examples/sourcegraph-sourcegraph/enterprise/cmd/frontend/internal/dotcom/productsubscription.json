@@ -4,7 +4,9 @@
     "identifier": "productsubscription",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/dotcom/productsubscription",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "lastLicenseExpirationCheckKey",
                 "newPage": false,
                 "searchKey": "productsubscription.lastLicenseExpirationCheckKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "ProductLicenseIDKind",
                 "newPage": false,
                 "searchKey": "productsubscription.ProductLicenseIDKind",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -82,9 +86,7 @@
                 "identifier": "ProductSubscriptionIDKind",
                 "newPage": false,
                 "searchKey": "productsubscription.ProductSubscriptionIDKind",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +109,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -125,7 +129,9 @@
                 "identifier": "licenseExpirationCheckers",
                 "newPage": false,
                 "searchKey": "productsubscription.licenseExpirationCheckers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -145,7 +151,9 @@
                 "identifier": "errLicenseNotFound",
                 "newPage": false,
                 "searchKey": "productsubscription.errLicenseNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -165,7 +173,9 @@
                 "identifier": "mocks",
                 "newPage": false,
                 "searchKey": "productsubscription.mocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -185,7 +195,9 @@
                 "identifier": "emailQueries",
                 "newPage": false,
                 "searchKey": "productsubscription.emailQueries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -205,7 +217,9 @@
                 "identifier": "errSubscriptionNotFound",
                 "newPage": false,
                 "searchKey": "productsubscription.errSubscriptionNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -228,7 +242,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -246,9 +262,7 @@
                 "identifier": "ProductSubscriptionLicensingResolver",
                 "newPage": false,
                 "searchKey": "productsubscription.ProductSubscriptionLicensingResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -266,9 +280,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.PreviewProductSubscriptionInvoice",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.PreviewProductSubscriptionInvoice",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -288,9 +300,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.ProductLicenseByID",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ProductLicenseByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -310,9 +320,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.GenerateProductLicenseForSubscription",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.GenerateProductLicenseForSubscription",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -332,9 +340,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.ProductLicenses",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ProductLicenses",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -354,9 +360,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.ProductSubscriptionByID",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ProductSubscriptionByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -376,9 +380,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.CreateProductSubscription",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.CreateProductSubscription",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -398,9 +400,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.SetProductSubscriptionBilling",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.SetProductSubscriptionBilling",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,9 +420,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.CreatePaidProductSubscription",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.CreatePaidProductSubscription",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -442,9 +440,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.UpdatePaidProductSubscription",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.UpdatePaidProductSubscription",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -464,9 +460,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.ArchiveProductSubscription",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ArchiveProductSubscription",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -486,9 +480,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.ProductSubscription",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ProductSubscription",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -508,9 +500,7 @@
                       "identifier": "ProductSubscriptionLicensingResolver.ProductSubscriptions",
                       "newPage": false,
                       "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ProductSubscriptions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -533,7 +523,9 @@
                 "identifier": "productSubscriptionPreviewInvoice",
                 "newPage": false,
                 "searchKey": "productsubscription.productSubscriptionPreviewInvoice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -551,7 +543,9 @@
                       "identifier": "productSubscriptionPreviewInvoice.Price",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionPreviewInvoice.Price",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -571,7 +565,9 @@
                       "identifier": "productSubscriptionPreviewInvoice.AmountDue",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionPreviewInvoice.AmountDue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -591,7 +587,9 @@
                       "identifier": "productSubscriptionPreviewInvoice.ProrationDate",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionPreviewInvoice.ProrationDate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -611,7 +609,9 @@
                       "identifier": "productSubscriptionPreviewInvoice.IsDowngradeRequiringManualIntervention",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionPreviewInvoice.IsDowngradeRequiringManualIntervention",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -631,7 +631,9 @@
                       "identifier": "productSubscriptionPreviewInvoice.BeforeInvoiceItem",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionPreviewInvoice.BeforeInvoiceItem",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -651,7 +653,9 @@
                       "identifier": "productSubscriptionPreviewInvoice.AfterInvoiceItem",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionPreviewInvoice.AfterInvoiceItem",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -674,7 +678,9 @@
                 "identifier": "slackClient",
                 "newPage": false,
                 "searchKey": "productsubscription.slackClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -694,7 +700,9 @@
                 "identifier": "dbLicense",
                 "newPage": false,
                 "searchKey": "productsubscription.dbLicense",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -714,7 +722,9 @@
                 "identifier": "dbLicenses",
                 "newPage": false,
                 "searchKey": "productsubscription.dbLicenses",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -732,7 +742,9 @@
                       "identifier": "dbLicenses.Create",
                       "newPage": false,
                       "searchKey": "productsubscription.dbLicenses.Create",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -752,7 +764,9 @@
                       "identifier": "dbLicenses.GetByID",
                       "newPage": false,
                       "searchKey": "productsubscription.dbLicenses.GetByID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -772,7 +786,9 @@
                       "identifier": "dbLicenses.GetByLicenseKey",
                       "newPage": false,
                       "searchKey": "productsubscription.dbLicenses.GetByLicenseKey",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -792,7 +808,9 @@
                       "identifier": "dbLicenses.List",
                       "newPage": false,
                       "searchKey": "productsubscription.dbLicenses.List",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -812,7 +830,9 @@
                       "identifier": "dbLicenses.list",
                       "newPage": false,
                       "searchKey": "productsubscription.dbLicenses.list",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -832,7 +852,9 @@
                       "identifier": "dbLicenses.Count",
                       "newPage": false,
                       "searchKey": "productsubscription.dbLicenses.Count",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -855,7 +877,9 @@
                 "identifier": "dbLicensesListOptions",
                 "newPage": false,
                 "searchKey": "productsubscription.dbLicensesListOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -873,7 +897,9 @@
                       "identifier": "dbLicensesListOptions.sqlConditions",
                       "newPage": false,
                       "searchKey": "productsubscription.dbLicensesListOptions.sqlConditions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -896,7 +922,9 @@
                 "identifier": "mockLicenses",
                 "newPage": false,
                 "searchKey": "productsubscription.mockLicenses",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -916,7 +944,9 @@
                 "identifier": "productLicense",
                 "newPage": false,
                 "searchKey": "productsubscription.productLicense",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -934,7 +964,9 @@
                       "identifier": "productLicenseByID",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicenseByID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -954,7 +986,9 @@
                       "identifier": "productLicenseByDBID",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicenseByDBID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -974,7 +1008,9 @@
                       "identifier": "productLicense.ID",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicense.ID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -994,7 +1030,9 @@
                       "identifier": "productLicense.Subscription",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicense.Subscription",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1014,7 +1052,9 @@
                       "identifier": "productLicense.Info",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicense.Info",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1034,7 +1074,9 @@
                       "identifier": "productLicense.LicenseKey",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicense.LicenseKey",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1054,7 +1096,9 @@
                       "identifier": "productLicense.CreatedAt",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicense.CreatedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1077,7 +1121,9 @@
                 "identifier": "productLicenseConnection",
                 "newPage": false,
                 "searchKey": "productsubscription.productLicenseConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1095,7 +1141,9 @@
                       "identifier": "productLicenseConnection.compute",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicenseConnection.compute",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1115,7 +1163,9 @@
                       "identifier": "productLicenseConnection.Nodes",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicenseConnection.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1135,7 +1185,9 @@
                       "identifier": "productLicenseConnection.TotalCount",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicenseConnection.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1155,7 +1207,9 @@
                       "identifier": "productLicenseConnection.PageInfo",
                       "newPage": false,
                       "searchKey": "productsubscription.productLicenseConnection.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1178,7 +1232,9 @@
                 "identifier": "dbMocks",
                 "newPage": false,
                 "searchKey": "productsubscription.dbMocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1198,7 +1254,9 @@
                 "identifier": "productSubscriptionInvoiceItem",
                 "newPage": false,
                 "searchKey": "productsubscription.productSubscriptionInvoiceItem",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1216,7 +1274,9 @@
                       "identifier": "productSubscriptionInvoiceItem.Plan",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionInvoiceItem.Plan",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1236,7 +1296,9 @@
                       "identifier": "productSubscriptionInvoiceItem.UserCount",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionInvoiceItem.UserCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1256,7 +1318,9 @@
                       "identifier": "productSubscriptionInvoiceItem.ExpiresAt",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionInvoiceItem.ExpiresAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1279,7 +1343,9 @@
                 "identifier": "dbSubscription",
                 "newPage": false,
                 "searchKey": "productsubscription.dbSubscription",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1299,7 +1365,9 @@
                 "identifier": "dbSubscriptions",
                 "newPage": false,
                 "searchKey": "productsubscription.dbSubscriptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1317,7 +1385,9 @@
                       "identifier": "dbSubscriptions.Create",
                       "newPage": false,
                       "searchKey": "productsubscription.dbSubscriptions.Create",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1337,7 +1407,9 @@
                       "identifier": "dbSubscriptions.GetByID",
                       "newPage": false,
                       "searchKey": "productsubscription.dbSubscriptions.GetByID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1357,7 +1429,9 @@
                       "identifier": "dbSubscriptions.List",
                       "newPage": false,
                       "searchKey": "productsubscription.dbSubscriptions.List",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1377,7 +1451,9 @@
                       "identifier": "dbSubscriptions.list",
                       "newPage": false,
                       "searchKey": "productsubscription.dbSubscriptions.list",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1397,7 +1473,9 @@
                       "identifier": "dbSubscriptions.Count",
                       "newPage": false,
                       "searchKey": "productsubscription.dbSubscriptions.Count",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1417,7 +1495,9 @@
                       "identifier": "dbSubscriptions.Update",
                       "newPage": false,
                       "searchKey": "productsubscription.dbSubscriptions.Update",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1437,7 +1517,9 @@
                       "identifier": "dbSubscriptions.Archive",
                       "newPage": false,
                       "searchKey": "productsubscription.dbSubscriptions.Archive",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1460,7 +1542,9 @@
                 "identifier": "dbSubscriptionsListOptions",
                 "newPage": false,
                 "searchKey": "productsubscription.dbSubscriptionsListOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1478,7 +1562,9 @@
                       "identifier": "dbSubscriptionsListOptions.sqlConditions",
                       "newPage": false,
                       "searchKey": "productsubscription.dbSubscriptionsListOptions.sqlConditions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1501,7 +1587,9 @@
                 "identifier": "dbSubscriptionUpdate",
                 "newPage": false,
                 "searchKey": "productsubscription.dbSubscriptionUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1521,7 +1609,9 @@
                 "identifier": "mockSubscriptions",
                 "newPage": false,
                 "searchKey": "productsubscription.mockSubscriptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1541,7 +1631,9 @@
                 "identifier": "productSubscription",
                 "newPage": false,
                 "searchKey": "productsubscription.productSubscription",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1559,7 +1651,9 @@
                       "identifier": "productSubscriptionByID",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionByID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1579,7 +1673,9 @@
                       "identifier": "productSubscriptionByDBID",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionByDBID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1599,7 +1695,9 @@
                       "identifier": "productSubscription.InvoiceItem",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.InvoiceItem",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1619,7 +1717,9 @@
                       "identifier": "productSubscription.ID",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.ID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1639,7 +1739,9 @@
                       "identifier": "productSubscription.UUID",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.UUID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1659,7 +1761,9 @@
                       "identifier": "productSubscription.Name",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.Name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1679,7 +1783,9 @@
                       "identifier": "productSubscription.Account",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.Account",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1699,7 +1805,9 @@
                       "identifier": "productSubscription.Events",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.Events",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1719,7 +1827,9 @@
                       "identifier": "productSubscription.ActiveLicense",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.ActiveLicense",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1739,7 +1849,9 @@
                       "identifier": "productSubscription.ProductLicenses",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.ProductLicenses",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1759,7 +1871,9 @@
                       "identifier": "productSubscription.CreatedAt",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.CreatedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1779,7 +1893,9 @@
                       "identifier": "productSubscription.IsArchived",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.IsArchived",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1799,7 +1915,9 @@
                       "identifier": "productSubscription.URL",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.URL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1819,7 +1937,9 @@
                       "identifier": "productSubscription.URLForSiteAdmin",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.URLForSiteAdmin",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1839,7 +1959,9 @@
                       "identifier": "productSubscription.URLForSiteAdminBilling",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscription.URLForSiteAdminBilling",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1862,7 +1984,9 @@
                 "identifier": "productSubscriptionConnection",
                 "newPage": false,
                 "searchKey": "productsubscription.productSubscriptionConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1880,7 +2004,9 @@
                       "identifier": "productSubscriptionConnection.compute",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionConnection.compute",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1900,7 +2026,9 @@
                       "identifier": "productSubscriptionConnection.Nodes",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionConnection.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1920,7 +2048,9 @@
                       "identifier": "productSubscriptionConnection.TotalCount",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionConnection.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1940,7 +2070,9 @@
                       "identifier": "productSubscriptionConnection.PageInfo",
                       "newPage": false,
                       "searchKey": "productsubscription.productSubscriptionConnection.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1963,7 +2095,9 @@
                 "identifier": "fakeSlackClient",
                 "newPage": false,
                 "searchKey": "productsubscription.fakeSlackClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1981,7 +2115,9 @@
                       "identifier": "fakeSlackClient.Post",
                       "newPage": false,
                       "searchKey": "productsubscription.fakeSlackClient.Post",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2007,7 +2143,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2025,7 +2163,9 @@
                 "identifier": "isDowngradeRequiringManualIntervention",
                 "newPage": false,
                 "searchKey": "productsubscription.isDowngradeRequiringManualIntervention",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2045,7 +2185,9 @@
                 "identifier": "userCountExceedsPlanMaxError",
                 "newPage": false,
                 "searchKey": "productsubscription.userCountExceedsPlanMaxError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2065,9 +2207,7 @@
                 "identifier": "StartCheckForUpcomingLicenseExpirations",
                 "newPage": false,
                 "searchKey": "productsubscription.StartCheckForUpcomingLicenseExpirations",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2087,7 +2227,9 @@
                 "identifier": "checkLicensesIfNeeded",
                 "newPage": false,
                 "searchKey": "productsubscription.checkLicensesIfNeeded",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2107,7 +2249,9 @@
                 "identifier": "checkForUpcomingLicenseExpirations",
                 "newPage": false,
                 "searchKey": "productsubscription.checkForUpcomingLicenseExpirations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2127,7 +2271,9 @@
                 "identifier": "checkLastSubscriptionLicense",
                 "newPage": false,
                 "searchKey": "productsubscription.checkLastSubscriptionLicense",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2147,7 +2293,9 @@
                 "identifier": "marshalProductLicenseID",
                 "newPage": false,
                 "searchKey": "productsubscription.marshalProductLicenseID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2167,7 +2315,9 @@
                 "identifier": "unmarshalProductLicenseID",
                 "newPage": false,
                 "searchKey": "productsubscription.unmarshalProductLicenseID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2187,7 +2337,9 @@
                 "identifier": "generateProductLicenseForSubscription",
                 "newPage": false,
                 "searchKey": "productsubscription.generateProductLicenseForSubscription",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2207,7 +2359,9 @@
                 "identifier": "marshalProductSubscriptionID",
                 "newPage": false,
                 "searchKey": "productsubscription.marshalProductSubscriptionID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2227,7 +2381,9 @@
                 "identifier": "unmarshalProductSubscriptionID",
                 "newPage": false,
                 "searchKey": "productsubscription.unmarshalProductSubscriptionID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2242,12 +2398,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#init",
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#init.db_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "productsubscription.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2267,7 +2425,9 @@
                 "identifier": "TestCheckForUpcomingLicenseExpirations",
                 "newPage": false,
                 "searchKey": "productsubscription.TestCheckForUpcomingLicenseExpirations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2287,7 +2447,9 @@
                 "identifier": "TestProductLicenses_Create",
                 "newPage": false,
                 "searchKey": "productsubscription.TestProductLicenses_Create",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2307,7 +2469,9 @@
                 "identifier": "TestProductLicenses_List",
                 "newPage": false,
                 "searchKey": "productsubscription.TestProductLicenses_List",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2327,7 +2491,9 @@
                 "identifier": "TestProductSubscriptions_Create",
                 "newPage": false,
                 "searchKey": "productsubscription.TestProductSubscriptions_Create",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2347,7 +2513,9 @@
                 "identifier": "TestProductSubscriptions_List",
                 "newPage": false,
                 "searchKey": "productsubscription.TestProductSubscriptions_List",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2367,7 +2535,9 @@
                 "identifier": "TestProductSubscriptions_Update",
                 "newPage": false,
                 "searchKey": "productsubscription.TestProductSubscriptions_Update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

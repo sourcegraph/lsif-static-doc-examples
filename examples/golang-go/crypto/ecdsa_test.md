@@ -10,10 +10,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="testEqual" href="#testEqual">func testEqual(t *testing.T, c elliptic.Curve)</a>
 
 ```
 searchKey: ecdsa_test.testEqual
+tags: [private]
 ```
 
 ```Go
@@ -24,6 +29,7 @@ func testEqual(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa_test.TestEqual
+tags: [private]
 ```
 
 ```Go
@@ -34,6 +40,7 @@ func TestEqual(t *testing.T)
 
 ```
 searchKey: ecdsa_test.Example
+tags: [private]
 ```
 
 ```Go

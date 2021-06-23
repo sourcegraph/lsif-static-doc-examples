@@ -4,7 +4,9 @@
     "identifier": "testenv",
     "newPage": true,
     "searchKey": "internal/testenv",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "execPaths",
                 "newPage": false,
                 "searchKey": "testenv.execPaths",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "haveCGO",
                 "newPage": false,
                 "searchKey": "testenv.haveCGO",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "flaky",
                 "newPage": false,
                 "searchKey": "testenv.flaky",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +113,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -121,9 +133,7 @@
                 "identifier": "Builder",
                 "newPage": false,
                 "searchKey": "testenv.Builder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -143,9 +153,7 @@
                 "identifier": "HasGoBuild",
                 "newPage": false,
                 "searchKey": "testenv.HasGoBuild",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -165,9 +173,7 @@
                 "identifier": "MustHaveGoBuild",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveGoBuild",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -187,9 +193,7 @@
                 "identifier": "HasGoRun",
                 "newPage": false,
                 "searchKey": "testenv.HasGoRun",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -209,9 +213,7 @@
                 "identifier": "MustHaveGoRun",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveGoRun",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -231,9 +233,7 @@
                 "identifier": "GoToolPath",
                 "newPage": false,
                 "searchKey": "testenv.GoToolPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -253,9 +253,7 @@
                 "identifier": "GoTool",
                 "newPage": false,
                 "searchKey": "testenv.GoTool",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -275,9 +273,7 @@
                 "identifier": "HasExec",
                 "newPage": false,
                 "searchKey": "testenv.HasExec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -297,9 +293,7 @@
                 "identifier": "HasSrc",
                 "newPage": false,
                 "searchKey": "testenv.HasSrc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -319,9 +313,7 @@
                 "identifier": "MustHaveExec",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveExec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -341,9 +333,7 @@
                 "identifier": "MustHaveExecPath",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveExecPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -363,9 +353,7 @@
                 "identifier": "HasExternalNetwork",
                 "newPage": false,
                 "searchKey": "testenv.HasExternalNetwork",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -385,9 +373,7 @@
                 "identifier": "MustHaveExternalNetwork",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveExternalNetwork",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -407,9 +393,7 @@
                 "identifier": "HasCGO",
                 "newPage": false,
                 "searchKey": "testenv.HasCGO",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -429,9 +413,7 @@
                 "identifier": "MustHaveCGO",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveCGO",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -451,9 +433,7 @@
                 "identifier": "CanInternalLink",
                 "newPage": false,
                 "searchKey": "testenv.CanInternalLink",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -473,9 +453,7 @@
                 "identifier": "MustInternalLink",
                 "newPage": false,
                 "searchKey": "testenv.MustInternalLink",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -495,9 +473,7 @@
                 "identifier": "HasSymlink",
                 "newPage": false,
                 "searchKey": "testenv.HasSymlink",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -517,9 +493,7 @@
                 "identifier": "MustHaveSymlink",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveSymlink",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -539,9 +513,7 @@
                 "identifier": "HasLink",
                 "newPage": false,
                 "searchKey": "testenv.HasLink",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -561,9 +533,7 @@
                 "identifier": "MustHaveLink",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveLink",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -583,9 +553,7 @@
                 "identifier": "SkipFlaky",
                 "newPage": false,
                 "searchKey": "testenv.SkipFlaky",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -605,9 +573,7 @@
                 "identifier": "SkipFlakyNet",
                 "newPage": false,
                 "searchKey": "testenv.SkipFlakyNet",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -627,9 +593,7 @@
                 "identifier": "CleanCmdEnv",
                 "newPage": false,
                 "searchKey": "testenv.CleanCmdEnv",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -649,9 +613,7 @@
                 "identifier": "CPUIsSlow",
                 "newPage": false,
                 "searchKey": "testenv.CPUIsSlow",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -671,9 +633,7 @@
                 "identifier": "SkipIfShortAndSlow",
                 "newPage": false,
                 "searchKey": "testenv.SkipIfShortAndSlow",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -688,12 +648,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/testenv#init",
+              "pathID": "/internal/testenv#init.testenv_cgo.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.testenv_cgo.go",
                 "newPage": false,
                 "searchKey": "testenv.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -713,7 +675,9 @@
                 "identifier": "hasSymlink",
                 "newPage": false,
                 "searchKey": "testenv.hasSymlink",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

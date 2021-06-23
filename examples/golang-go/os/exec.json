@@ -4,9 +4,7 @@
     "identifier": "exec",
     "newPage": true,
     "searchKey": "os/exec",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "skipStdinCopyError",
                 "newPage": false,
                 "searchKey": "exec.skipStdinCopyError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,9 +62,7 @@
                 "identifier": "ErrNotFound",
                 "newPage": false,
                 "searchKey": "exec.ErrNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -86,7 +82,9 @@
                 "identifier": "nonExistentPaths",
                 "newPage": false,
                 "searchKey": "exec.nonExistentPaths",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -109,9 +107,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -129,9 +125,7 @@
                 "identifier": "Error",
                 "newPage": false,
                 "searchKey": "exec.Error",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -149,9 +143,7 @@
                       "identifier": "Error.Error",
                       "newPage": false,
                       "searchKey": "exec.Error.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -171,9 +163,7 @@
                       "identifier": "Error.Unwrap",
                       "newPage": false,
                       "searchKey": "exec.Error.Unwrap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -196,9 +186,7 @@
                 "identifier": "Cmd",
                 "newPage": false,
                 "searchKey": "exec.Cmd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -216,9 +204,7 @@
                       "identifier": "Command",
                       "newPage": false,
                       "searchKey": "exec.Command",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -238,9 +224,7 @@
                       "identifier": "CommandContext",
                       "newPage": false,
                       "searchKey": "exec.CommandContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -260,9 +244,7 @@
                       "identifier": "Cmd.String",
                       "newPage": false,
                       "searchKey": "exec.Cmd.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -282,7 +264,9 @@
                       "identifier": "Cmd.envv",
                       "newPage": false,
                       "searchKey": "exec.Cmd.envv",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -302,7 +286,9 @@
                       "identifier": "Cmd.argv",
                       "newPage": false,
                       "searchKey": "exec.Cmd.argv",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -322,7 +308,9 @@
                       "identifier": "Cmd.stdin",
                       "newPage": false,
                       "searchKey": "exec.Cmd.stdin",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -342,7 +330,9 @@
                       "identifier": "Cmd.stdout",
                       "newPage": false,
                       "searchKey": "exec.Cmd.stdout",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -362,7 +352,9 @@
                       "identifier": "Cmd.stderr",
                       "newPage": false,
                       "searchKey": "exec.Cmd.stderr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -382,7 +374,9 @@
                       "identifier": "Cmd.writerDescriptor",
                       "newPage": false,
                       "searchKey": "exec.Cmd.writerDescriptor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -402,7 +396,9 @@
                       "identifier": "Cmd.closeDescriptors",
                       "newPage": false,
                       "searchKey": "exec.Cmd.closeDescriptors",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -422,9 +418,7 @@
                       "identifier": "Cmd.Run",
                       "newPage": false,
                       "searchKey": "exec.Cmd.Run",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -444,9 +438,7 @@
                       "identifier": "Cmd.Start",
                       "newPage": false,
                       "searchKey": "exec.Cmd.Start",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -466,9 +458,7 @@
                       "identifier": "Cmd.Wait",
                       "newPage": false,
                       "searchKey": "exec.Cmd.Wait",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -488,9 +478,7 @@
                       "identifier": "Cmd.Output",
                       "newPage": false,
                       "searchKey": "exec.Cmd.Output",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -510,9 +498,7 @@
                       "identifier": "Cmd.CombinedOutput",
                       "newPage": false,
                       "searchKey": "exec.Cmd.CombinedOutput",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -532,9 +518,7 @@
                       "identifier": "Cmd.StdinPipe",
                       "newPage": false,
                       "searchKey": "exec.Cmd.StdinPipe",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -554,9 +538,7 @@
                       "identifier": "Cmd.StdoutPipe",
                       "newPage": false,
                       "searchKey": "exec.Cmd.StdoutPipe",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -576,9 +558,7 @@
                       "identifier": "Cmd.StderrPipe",
                       "newPage": false,
                       "searchKey": "exec.Cmd.StderrPipe",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -601,9 +581,7 @@
                 "identifier": "ExitError",
                 "newPage": false,
                 "searchKey": "exec.ExitError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -621,9 +599,7 @@
                       "identifier": "ExitError.Error",
                       "newPage": false,
                       "searchKey": "exec.ExitError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -646,7 +622,9 @@
                 "identifier": "closeOnce",
                 "newPage": false,
                 "searchKey": "exec.closeOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -664,7 +642,9 @@
                       "identifier": "closeOnce.Close",
                       "newPage": false,
                       "searchKey": "exec.closeOnce.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -684,7 +664,9 @@
                       "identifier": "closeOnce.close",
                       "newPage": false,
                       "searchKey": "exec.closeOnce.close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -707,7 +689,9 @@
                 "identifier": "prefixSuffixSaver",
                 "newPage": false,
                 "searchKey": "exec.prefixSuffixSaver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -725,7 +709,9 @@
                       "identifier": "prefixSuffixSaver.Write",
                       "newPage": false,
                       "searchKey": "exec.prefixSuffixSaver.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -745,7 +731,9 @@
                       "identifier": "prefixSuffixSaver.fill",
                       "newPage": false,
                       "searchKey": "exec.prefixSuffixSaver.fill",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -765,7 +753,9 @@
                       "identifier": "prefixSuffixSaver.Bytes",
                       "newPage": false,
                       "searchKey": "exec.prefixSuffixSaver.Bytes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -791,9 +781,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -811,7 +799,9 @@
                 "identifier": "interfaceEqual",
                 "newPage": false,
                 "searchKey": "exec.interfaceEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -831,7 +821,9 @@
                 "identifier": "lookExtensions",
                 "newPage": false,
                 "searchKey": "exec.lookExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -851,7 +843,9 @@
                 "identifier": "minInt",
                 "newPage": false,
                 "searchKey": "exec.minInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -871,7 +865,9 @@
                 "identifier": "dedupEnv",
                 "newPage": false,
                 "searchKey": "exec.dedupEnv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -891,7 +887,9 @@
                 "identifier": "dedupEnvCase",
                 "newPage": false,
                 "searchKey": "exec.dedupEnvCase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -911,7 +909,9 @@
                 "identifier": "addCriticalEnv",
                 "newPage": false,
                 "searchKey": "exec.addCriticalEnv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -926,12 +926,14 @@
           },
           {
             "node": {
-              "pathID": "/os/exec#init",
+              "pathID": "/os/exec#init.exec_unix.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.exec_unix.go",
                 "newPage": false,
                 "searchKey": "exec.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -951,7 +953,9 @@
                 "identifier": "findExecutable",
                 "newPage": false,
                 "searchKey": "exec.findExecutable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -971,9 +975,7 @@
                 "identifier": "LookPath",
                 "newPage": false,
                 "searchKey": "exec.LookPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -993,7 +995,9 @@
                 "identifier": "BenchmarkExecHostname",
                 "newPage": false,
                 "searchKey": "exec.BenchmarkExecHostname",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1013,7 +1017,9 @@
                 "identifier": "TestDedupEnv",
                 "newPage": false,
                 "searchKey": "exec.TestDedupEnv",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1033,7 +1039,9 @@
                 "identifier": "TestPrefixSuffixSaver",
                 "newPage": false,
                 "searchKey": "exec.TestPrefixSuffixSaver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1053,7 +1061,9 @@
                 "identifier": "TestLookPathNotFound",
                 "newPage": false,
                 "searchKey": "exec.TestLookPathNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1073,7 +1083,9 @@
                 "identifier": "TestLookPathUnixEmptyPath",
                 "newPage": false,
                 "searchKey": "exec.TestLookPathUnixEmptyPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

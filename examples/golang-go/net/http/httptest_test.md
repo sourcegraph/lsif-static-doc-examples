@@ -11,10 +11,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleResponseRecorder" href="#ExampleResponseRecorder">func ExampleResponseRecorder()</a>
 
 ```
 searchKey: httptest_test.ExampleResponseRecorder
+tags: [private]
 ```
 
 ```Go
@@ -25,6 +30,7 @@ func ExampleResponseRecorder()
 
 ```
 searchKey: httptest_test.ExampleServer
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +41,7 @@ func ExampleServer()
 
 ```
 searchKey: httptest_test.ExampleServer_hTTP2
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +52,7 @@ func ExampleServer_hTTP2()
 
 ```
 searchKey: httptest_test.ExampleNewTLSServer
+tags: [private]
 ```
 
 ```Go

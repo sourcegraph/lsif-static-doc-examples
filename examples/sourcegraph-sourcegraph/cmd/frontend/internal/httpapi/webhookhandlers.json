@@ -4,7 +4,9 @@
     "identifier": "webhookhandlers",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/httpapi/webhookhandlers",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "repoGetter",
                 "newPage": false,
                 "searchKey": "webhookhandlers.repoGetter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "memberGetter",
                 "newPage": false,
                 "searchKey": "webhookhandlers.memberGetter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "membershipGetter",
                 "newPage": false,
                 "searchKey": "webhookhandlers.membershipGetter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +113,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "handleGitHubRepoAuthzEvent",
                 "newPage": false,
                 "searchKey": "webhookhandlers.handleGitHubRepoAuthzEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "scheduleRepoUpdate",
                 "newPage": false,
                 "searchKey": "webhookhandlers.scheduleRepoUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "handleGitHubUserAuthzEvent",
                 "newPage": false,
                 "searchKey": "webhookhandlers.handleGitHubUserAuthzEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "scheduleUserUpdate",
                 "newPage": false,
                 "searchKey": "webhookhandlers.scheduleUserUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -201,9 +221,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "webhookhandlers.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

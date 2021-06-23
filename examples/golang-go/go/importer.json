@@ -4,9 +4,7 @@
     "identifier": "importer",
     "newPage": true,
     "searchKey": "go/importer",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Lookup",
                 "newPage": false,
                 "searchKey": "importer.Lookup",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,7 +60,9 @@
                 "identifier": "gcimports",
                 "newPage": false,
                 "searchKey": "importer.gcimports",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +80,9 @@
                       "identifier": "gcimports.Import",
                       "newPage": false,
                       "searchKey": "importer.gcimports.Import",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,7 +102,9 @@
                       "identifier": "gcimports.ImportFrom",
                       "newPage": false,
                       "searchKey": "importer.gcimports.ImportFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "gccgoimports",
                 "newPage": false,
                 "searchKey": "importer.gccgoimports",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -145,7 +147,9 @@
                       "identifier": "gccgoimports.Import",
                       "newPage": false,
                       "searchKey": "importer.gccgoimports.Import",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -165,7 +169,9 @@
                       "identifier": "gccgoimports.ImportFrom",
                       "newPage": false,
                       "searchKey": "importer.gccgoimports.ImportFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -191,9 +197,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -212,7 +216,6 @@
                 "newPage": false,
                 "searchKey": "importer.ForCompiler",
                 "tags": [
-                  "exported",
                   "deprecated"
                 ]
               },
@@ -235,7 +238,6 @@
                 "newPage": false,
                 "searchKey": "importer.For",
                 "tags": [
-                  "exported",
                   "deprecated"
                 ]
               },
@@ -257,9 +259,7 @@
                 "identifier": "Default",
                 "newPage": false,
                 "searchKey": "importer.Default",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -279,7 +279,9 @@
                 "identifier": "TestForCompiler",
                 "newPage": false,
                 "searchKey": "importer.TestForCompiler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

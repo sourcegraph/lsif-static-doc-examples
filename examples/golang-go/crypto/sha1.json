@@ -4,9 +4,7 @@
     "identifier": "sha1",
     "newPage": true,
     "searchKey": "crypto/sha1",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Size",
                 "newPage": false,
                 "searchKey": "sha1.Size",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "BlockSize",
                 "newPage": false,
                 "searchKey": "sha1.BlockSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,7 +80,9 @@
                 "identifier": "chunk",
                 "newPage": false,
                 "searchKey": "sha1.chunk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -108,7 +102,9 @@
                 "identifier": "init0",
                 "newPage": false,
                 "searchKey": "sha1.init0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -128,7 +124,9 @@
                 "identifier": "init1",
                 "newPage": false,
                 "searchKey": "sha1.init1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,7 +146,9 @@
                 "identifier": "init2",
                 "newPage": false,
                 "searchKey": "sha1.init2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +168,9 @@
                 "identifier": "init3",
                 "newPage": false,
                 "searchKey": "sha1.init3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -188,7 +190,9 @@
                 "identifier": "init4",
                 "newPage": false,
                 "searchKey": "sha1.init4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -208,7 +212,9 @@
                 "identifier": "magic",
                 "newPage": false,
                 "searchKey": "sha1.magic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -228,7 +234,9 @@
                 "identifier": "marshaledSize",
                 "newPage": false,
                 "searchKey": "sha1.marshaledSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -248,7 +256,9 @@
                 "identifier": "_K0",
                 "newPage": false,
                 "searchKey": "sha1._K0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -268,7 +278,9 @@
                 "identifier": "_K1",
                 "newPage": false,
                 "searchKey": "sha1._K1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -288,7 +300,9 @@
                 "identifier": "_K2",
                 "newPage": false,
                 "searchKey": "sha1._K2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -308,7 +322,9 @@
                 "identifier": "_K3",
                 "newPage": false,
                 "searchKey": "sha1._K3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -331,9 +347,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -351,7 +365,9 @@
                 "identifier": "useAVX2",
                 "newPage": false,
                 "searchKey": "sha1.useAVX2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -371,7 +387,9 @@
                 "identifier": "golden",
                 "newPage": false,
                 "searchKey": "sha1.golden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -391,7 +409,9 @@
                 "identifier": "largeUnmarshalTests",
                 "newPage": false,
                 "searchKey": "sha1.largeUnmarshalTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -411,7 +431,9 @@
                 "identifier": "bench",
                 "newPage": false,
                 "searchKey": "sha1.bench",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -431,7 +453,9 @@
                 "identifier": "buf",
                 "newPage": false,
                 "searchKey": "sha1.buf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -454,9 +478,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -474,7 +496,9 @@
                 "identifier": "digest",
                 "newPage": false,
                 "searchKey": "sha1.digest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -492,7 +516,9 @@
                       "identifier": "digest.MarshalBinary",
                       "newPage": false,
                       "searchKey": "sha1.digest.MarshalBinary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -512,7 +538,9 @@
                       "identifier": "digest.UnmarshalBinary",
                       "newPage": false,
                       "searchKey": "sha1.digest.UnmarshalBinary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -532,7 +560,9 @@
                       "identifier": "digest.Reset",
                       "newPage": false,
                       "searchKey": "sha1.digest.Reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -552,7 +582,9 @@
                       "identifier": "digest.Size",
                       "newPage": false,
                       "searchKey": "sha1.digest.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -572,7 +604,9 @@
                       "identifier": "digest.BlockSize",
                       "newPage": false,
                       "searchKey": "sha1.digest.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -592,7 +626,9 @@
                       "identifier": "digest.Write",
                       "newPage": false,
                       "searchKey": "sha1.digest.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -612,7 +648,9 @@
                       "identifier": "digest.Sum",
                       "newPage": false,
                       "searchKey": "sha1.digest.Sum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -632,7 +670,9 @@
                       "identifier": "digest.checkSum",
                       "newPage": false,
                       "searchKey": "sha1.digest.checkSum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -652,7 +692,9 @@
                       "identifier": "digest.ConstantTimeSum",
                       "newPage": false,
                       "searchKey": "sha1.digest.ConstantTimeSum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -672,7 +714,9 @@
                       "identifier": "digest.constSum",
                       "newPage": false,
                       "searchKey": "sha1.digest.constSum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -695,7 +739,9 @@
                 "identifier": "sha1Test",
                 "newPage": false,
                 "searchKey": "sha1.sha1Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -715,7 +761,9 @@
                 "identifier": "unmarshalTest",
                 "newPage": false,
                 "searchKey": "sha1.unmarshalTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -738,9 +786,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -753,12 +799,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/sha1#init",
+              "pathID": "/crypto/sha1#init.sha1.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.sha1.go",
                 "newPage": false,
                 "searchKey": "sha1.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -778,7 +826,9 @@
                 "identifier": "appendUint64",
                 "newPage": false,
                 "searchKey": "sha1.appendUint64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -798,7 +848,9 @@
                 "identifier": "appendUint32",
                 "newPage": false,
                 "searchKey": "sha1.appendUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -818,7 +870,9 @@
                 "identifier": "consumeUint64",
                 "newPage": false,
                 "searchKey": "sha1.consumeUint64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -838,7 +892,9 @@
                 "identifier": "consumeUint32",
                 "newPage": false,
                 "searchKey": "sha1.consumeUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -858,9 +914,7 @@
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "sha1.New",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -880,9 +934,7 @@
                 "identifier": "Sum",
                 "newPage": false,
                 "searchKey": "sha1.Sum",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -902,7 +954,9 @@
                 "identifier": "blockGeneric",
                 "newPage": false,
                 "searchKey": "sha1.blockGeneric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -922,7 +976,9 @@
                 "identifier": "blockAVX2",
                 "newPage": false,
                 "searchKey": "sha1.blockAVX2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -942,7 +998,9 @@
                 "identifier": "blockAMD64",
                 "newPage": false,
                 "searchKey": "sha1.blockAMD64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -962,7 +1020,9 @@
                 "identifier": "block",
                 "newPage": false,
                 "searchKey": "sha1.block",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -982,7 +1042,9 @@
                 "identifier": "TestGolden",
                 "newPage": false,
                 "searchKey": "sha1.TestGolden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1002,7 +1064,9 @@
                 "identifier": "TestGoldenMarshal",
                 "newPage": false,
                 "searchKey": "sha1.TestGoldenMarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1022,7 +1086,9 @@
                 "identifier": "TestSize",
                 "newPage": false,
                 "searchKey": "sha1.TestSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1042,7 +1108,9 @@
                 "identifier": "TestBlockSize",
                 "newPage": false,
                 "searchKey": "sha1.TestBlockSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1062,7 +1130,9 @@
                 "identifier": "TestBlockGeneric",
                 "newPage": false,
                 "searchKey": "sha1.TestBlockGeneric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1082,7 +1152,9 @@
                 "identifier": "safeSum",
                 "newPage": false,
                 "searchKey": "sha1.safeSum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1102,7 +1174,9 @@
                 "identifier": "TestLargeHashes",
                 "newPage": false,
                 "searchKey": "sha1.TestLargeHashes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1122,7 +1196,9 @@
                 "identifier": "benchmarkSize",
                 "newPage": false,
                 "searchKey": "sha1.benchmarkSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1142,7 +1218,9 @@
                 "identifier": "BenchmarkHash8Bytes",
                 "newPage": false,
                 "searchKey": "sha1.BenchmarkHash8Bytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1162,7 +1240,9 @@
                 "identifier": "BenchmarkHash320Bytes",
                 "newPage": false,
                 "searchKey": "sha1.BenchmarkHash320Bytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1182,7 +1262,9 @@
                 "identifier": "BenchmarkHash1K",
                 "newPage": false,
                 "searchKey": "sha1.BenchmarkHash1K",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1202,7 +1284,9 @@
                 "identifier": "BenchmarkHash8K",
                 "newPage": false,
                 "searchKey": "sha1.BenchmarkHash8K",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

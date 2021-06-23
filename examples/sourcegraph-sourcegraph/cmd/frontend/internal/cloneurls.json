@@ -4,7 +4,9 @@
     "identifier": "cloneurls",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/cloneurls",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ReposourceCloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "cloneurls.ReposourceCloneURLToRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "TestReposourceCloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "cloneurls.TestReposourceCloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

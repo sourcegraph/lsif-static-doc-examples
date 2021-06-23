@@ -15,11 +15,14 @@ Package slack is used to send notifications of an organization's activity to a g
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: slack.Client
-tags: [exported]
 ```
 
 ```Go
@@ -34,7 +37,6 @@ Client is capable of posting a message to a Slack webhook
 
 ```
 searchKey: slack.New
-tags: [exported]
 ```
 
 ```Go
@@ -47,7 +49,6 @@ New creates a new Slack client
 
 ```
 searchKey: slack.Client.Post
-tags: [exported]
 ```
 
 ```Go
@@ -60,7 +61,6 @@ Post sends payload to a Slack channel.
 
 ```
 searchKey: slack.Payload
-tags: [exported]
 ```
 
 ```Go
@@ -80,7 +80,6 @@ Payload is the wrapper for a Slack message, defined at: [https://api.slack.com/d
 
 ```
 searchKey: slack.Attachment
-tags: [exported]
 ```
 
 ```Go
@@ -107,7 +106,6 @@ Attachment is a Slack message attachment, defined at: [https://api.slack.com/doc
 
 ```
 searchKey: slack.Field
-tags: [exported]
 ```
 
 ```Go

@@ -191,7 +191,7 @@ The source code could include additional Go code. That code was never compiled b
     * [func expandSrcDir(str string, srcdir string) (string, bool)](#expandSrcDir)
     * [func safeCgoName(s string) bool](#safeCgoName)
     * [func splitQuoted(s string) (r []string, err error)](#splitQuoted)
-    * [func init()](#init)
+    * [func init()](#init.build.go)
     * [func IsLocalImport(path string) bool](#IsLocalImport)
     * [func ArchChar(goarch string) (string, error)](#ArchChar)
     * [func getToolDir() string](#getToolDir)
@@ -240,15 +240,10 @@ The source code could include additional Go code. That code was never compiled b
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="FindOnly" href="#FindOnly">const FindOnly</a>
 
 ```
 searchKey: build.FindOnly
-tags: [exported]
 ```
 
 ```Go
@@ -261,7 +256,7 @@ If FindOnly is set, Import stops after locating the directory that should contai
 
 ```
 searchKey: build.AllowBinary
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -276,7 +271,6 @@ Deprecated: The supported way to create a compiled-only package is to write sour
 
 ```
 searchKey: build.ImportComment
-tags: [exported]
 ```
 
 ```Go
@@ -289,7 +283,6 @@ If ImportComment is set, parse import comments on package statements. Import ret
 
 ```
 searchKey: build.IgnoreVendor
-tags: [exported]
 ```
 
 ```Go
@@ -306,6 +299,7 @@ In contrast to the package's ImportPath, the returned package's Imports, TestImp
 
 ```
 searchKey: build.safeString
+tags: [private]
 ```
 
 ```Go
@@ -318,6 +312,7 @@ NOTE: $ is not safe for the shell, but it is allowed here because of linker opti
 
 ```
 searchKey: build.goosList
+tags: [private]
 ```
 
 ```Go
@@ -328,6 +323,7 @@ const goosList = ...
 
 ```
 searchKey: build.goarchList
+tags: [private]
 ```
 
 ```Go
@@ -338,6 +334,7 @@ const goarchList = ...
 
 ```
 searchKey: build.quote
+tags: [private]
 ```
 
 ```Go
@@ -346,15 +343,10 @@ const quote = "`"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Default" href="#Default">var Default</a>
 
 ```
 searchKey: build.Default
-tags: [exported]
 ```
 
 ```Go
@@ -367,6 +359,7 @@ Default is the default Context for builds. It uses the GOARCH, GOOS, GOROOT, and
 
 ```
 searchKey: build.defaultToolTags
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +370,7 @@ var defaultToolTags, defaultReleaseTags []string
 
 ```
 searchKey: build.defaultReleaseTags
+tags: [private]
 ```
 
 ```Go
@@ -387,6 +381,7 @@ var defaultToolTags, defaultReleaseTags []string
 
 ```
 searchKey: build.errNoModules
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +392,7 @@ var errNoModules = errors.New("not using modules")
 
 ```
 searchKey: build.slashSlash
+tags: [private]
 ```
 
 ```Go
@@ -407,6 +403,7 @@ var slashSlash = []byte("//")
 
 ```
 searchKey: build.slashStar
+tags: [private]
 ```
 
 ```Go
@@ -417,6 +414,7 @@ var slashStar = []byte("/*")
 
 ```
 searchKey: build.starSlash
+tags: [private]
 ```
 
 ```Go
@@ -427,6 +425,7 @@ var starSlash = []byte("*/")
 
 ```
 searchKey: build.newline
+tags: [private]
 ```
 
 ```Go
@@ -437,6 +436,7 @@ var newline = []byte("\n")
 
 ```
 searchKey: build.dummyPkg
+tags: [private]
 ```
 
 ```Go
@@ -447,6 +447,7 @@ var dummyPkg Package
 
 ```
 searchKey: build.bSlashSlash
+tags: [private]
 ```
 
 ```Go
@@ -457,6 +458,7 @@ var bSlashSlash = []byte(slashSlash)
 
 ```
 searchKey: build.bStarSlash
+tags: [private]
 ```
 
 ```Go
@@ -467,6 +469,7 @@ var bStarSlash = []byte(starSlash)
 
 ```
 searchKey: build.bSlashStar
+tags: [private]
 ```
 
 ```Go
@@ -477,6 +480,7 @@ var bSlashStar = []byte(slashStar)
 
 ```
 searchKey: build.bPlusBuild
+tags: [private]
 ```
 
 ```Go
@@ -487,6 +491,7 @@ var bPlusBuild = []byte("+build")
 
 ```
 searchKey: build.goBuildComment
+tags: [private]
 ```
 
 ```Go
@@ -497,6 +502,7 @@ var goBuildComment = []byte("//go:build")
 
 ```
 searchKey: build.errGoBuildWithoutBuild
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +513,7 @@ var errGoBuildWithoutBuild = errors.New("//go:build comment without // +build co
 
 ```
 searchKey: build.errMultipleGoBuild
+tags: [private]
 ```
 
 ```Go
@@ -517,6 +524,7 @@ var errMultipleGoBuild = errors.New("multiple //go:build comments")
 
 ```
 searchKey: build.binaryOnlyComment
+tags: [private]
 ```
 
 ```Go
@@ -529,6 +537,7 @@ Special comment denoting a binary-only package. See [https://golang.org/design/2
 
 ```
 searchKey: build.knownOS
+tags: [private]
 ```
 
 ```Go
@@ -539,6 +548,7 @@ var knownOS = make(map[string]bool)
 
 ```
 searchKey: build.knownArch
+tags: [private]
 ```
 
 ```Go
@@ -549,7 +559,6 @@ var knownArch = make(map[string]bool)
 
 ```
 searchKey: build.ToolDir
-tags: [exported]
 ```
 
 ```Go
@@ -562,6 +571,7 @@ ToolDir is the directory containing build tools.
 
 ```
 searchKey: build.bom
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +582,7 @@ var bom = []byte{0xef, 0xbb, 0xbf}
 
 ```
 searchKey: build.errSyntax
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +593,7 @@ var errSyntax = errors.New("syntax error")
 
 ```
 searchKey: build.errNUL
+tags: [private]
 ```
 
 ```Go
@@ -592,6 +604,7 @@ var errNUL = errors.New("unexpected NUL in input")
 
 ```
 searchKey: build.goEmbed
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +615,7 @@ var goEmbed = []byte("go:embed")
 
 ```
 searchKey: build.shouldBuildTests
+tags: [private]
 ```
 
 ```Go
@@ -612,6 +626,7 @@ var shouldBuildTests = ...
 
 ```
 searchKey: build.ctxtP9
+tags: [private]
 ```
 
 ```Go
@@ -622,6 +637,7 @@ var ctxtP9 = Context{GOARCH: "arm", GOOS: "plan9"}
 
 ```
 searchKey: build.ctxtAndroid
+tags: [private]
 ```
 
 ```Go
@@ -632,6 +648,7 @@ var ctxtAndroid = Context{GOARCH: "arm", GOOS: "android"}
 
 ```
 searchKey: build.matchFileTests
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +659,7 @@ var matchFileTests = ...
 
 ```
 searchKey: build.expandSrcDirPath
+tags: [private]
 ```
 
 ```Go
@@ -652,6 +670,7 @@ var expandSrcDirPath = filepath.Join(string(filepath.Separator)+"projects", "src
 
 ```
 searchKey: build.expandSrcDirTests
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +681,7 @@ var expandSrcDirTests = ...
 
 ```
 searchKey: build.depsRules
+tags: [private]
 ```
 
 ```Go
@@ -711,6 +731,7 @@ All-caps names are pseudo-names for specific points in the dependency lattice.
 
 ```
 searchKey: build.buildIgnore
+tags: [private]
 ```
 
 ```Go
@@ -721,6 +742,7 @@ var buildIgnore = []byte("\n// +build ignore")
 
 ```
 searchKey: build.readGoInfoTests
+tags: [private]
 ```
 
 ```Go
@@ -731,6 +753,7 @@ var readGoInfoTests = ...
 
 ```
 searchKey: build.readCommentsTests
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +764,7 @@ var readCommentsTests = ...
 
 ```
 searchKey: build.readFailuresTests
+tags: [private]
 ```
 
 ```Go
@@ -751,6 +775,7 @@ var readFailuresTests = ...
 
 ```
 searchKey: build.readEmbedTests
+tags: [private]
 ```
 
 ```Go
@@ -761,6 +786,7 @@ var readEmbedTests = ...
 
 ```
 searchKey: build.thisOS
+tags: [private]
 ```
 
 ```Go
@@ -771,6 +797,7 @@ var thisOS = runtime.GOOS
 
 ```
 searchKey: build.thisArch
+tags: [private]
 ```
 
 ```Go
@@ -781,6 +808,7 @@ var thisArch = runtime.GOARCH
 
 ```
 searchKey: build.otherOS
+tags: [private]
 ```
 
 ```Go
@@ -791,6 +819,7 @@ var otherOS = anotherOS()
 
 ```
 searchKey: build.otherArch
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +830,7 @@ var otherArch = anotherArch()
 
 ```
 searchKey: build.tests
+tags: [private]
 ```
 
 ```Go
@@ -809,15 +839,10 @@ var tests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Context" href="#Context">type Context struct</a>
 
 ```
 searchKey: build.Context
-tags: [exported]
 ```
 
 ```Go
@@ -903,6 +928,7 @@ A Context specifies the supporting context for a build.
 
 ```
 searchKey: build.defaultContext
+tags: [private]
 ```
 
 ```Go
@@ -913,6 +939,7 @@ func defaultContext() Context
 
 ```
 searchKey: build.Context.joinPath
+tags: [private]
 ```
 
 ```Go
@@ -925,6 +952,7 @@ joinPath calls ctxt.JoinPath (if not nil) or else filepath.Join.
 
 ```
 searchKey: build.Context.splitPathList
+tags: [private]
 ```
 
 ```Go
@@ -937,6 +965,7 @@ splitPathList calls ctxt.SplitPathList (if not nil) or else filepath.SplitList.
 
 ```
 searchKey: build.Context.isAbsPath
+tags: [private]
 ```
 
 ```Go
@@ -949,6 +978,7 @@ isAbsPath calls ctxt.IsAbsPath (if not nil) or else filepath.IsAbs.
 
 ```
 searchKey: build.Context.isDir
+tags: [private]
 ```
 
 ```Go
@@ -961,6 +991,7 @@ isDir calls ctxt.IsDir (if not nil) or else uses os.Stat.
 
 ```
 searchKey: build.Context.hasSubdir
+tags: [private]
 ```
 
 ```Go
@@ -973,6 +1004,7 @@ hasSubdir calls ctxt.HasSubdir (if not nil) or else uses the local file system t
 
 ```
 searchKey: build.Context.readDir
+tags: [private]
 ```
 
 ```Go
@@ -985,6 +1017,7 @@ readDir calls ctxt.ReadDir (if not nil) or else ioutil.ReadDir.
 
 ```
 searchKey: build.Context.openFile
+tags: [private]
 ```
 
 ```Go
@@ -997,6 +1030,7 @@ openFile calls ctxt.OpenFile (if not nil) or else os.Open.
 
 ```
 searchKey: build.Context.isFile
+tags: [private]
 ```
 
 ```Go
@@ -1009,6 +1043,7 @@ isFile determines whether path is a file by trying to open it. It reuses openFil
 
 ```
 searchKey: build.Context.gopath
+tags: [private]
 ```
 
 ```Go
@@ -1021,7 +1056,6 @@ gopath returns the list of Go path directories.
 
 ```
 searchKey: build.Context.SrcDirs
-tags: [exported]
 ```
 
 ```Go
@@ -1034,7 +1068,6 @@ SrcDirs returns a list of package source root directories. It draws from the cur
 
 ```
 searchKey: build.Context.ImportDir
-tags: [exported]
 ```
 
 ```Go
@@ -1047,7 +1080,6 @@ ImportDir is like Import but processes the Go package found in the named directo
 
 ```
 searchKey: build.Context.Import
-tags: [exported]
 ```
 
 ```Go
@@ -1070,6 +1102,7 @@ If an error occurs, Import returns a non-nil error and a non-nil *Package contai
 
 ```
 searchKey: build.Context.importGo
+tags: [private]
 ```
 
 ```Go
@@ -1082,7 +1115,6 @@ importGo checks whether it can use the go command to find the directory for path
 
 ```
 searchKey: build.Context.MatchFile
-tags: [exported]
 ```
 
 ```Go
@@ -1097,6 +1129,7 @@ MatchFile considers the name of the file and may use ctxt.OpenFile to read some 
 
 ```
 searchKey: build.Context.matchFile
+tags: [private]
 ```
 
 ```Go
@@ -1113,6 +1146,7 @@ If allTags is non-nil, matchFile records any encountered build tag by setting al
 
 ```
 searchKey: build.Context.shouldBuild
+tags: [private]
 ```
 
 ```Go
@@ -1137,6 +1171,7 @@ shouldBuild reports whether the file should be built and whether a //go:binary-o
 
 ```
 searchKey: build.Context.saveCgo
+tags: [private]
 ```
 
 ```Go
@@ -1149,6 +1184,7 @@ saveCgo saves the information from the #cgo lines in the import "C" comment. The
 
 ```
 searchKey: build.Context.makePathsAbsolute
+tags: [private]
 ```
 
 ```Go
@@ -1163,6 +1199,7 @@ Using filepath.IsAbs and filepath.Join here means the results will be different 
 
 ```
 searchKey: build.Context.matchAuto
+tags: [private]
 ```
 
 ```Go
@@ -1177,6 +1214,7 @@ matchAuto is only used for testing of tag evaluation and in #cgo lines, which ac
 
 ```
 searchKey: build.Context.eval
+tags: [private]
 ```
 
 ```Go
@@ -1187,6 +1225,7 @@ func (ctxt *Context) eval(x constraint.Expr, allTags map[string]bool) bool
 
 ```
 searchKey: build.Context.matchTag
+tags: [private]
 ```
 
 ```Go
@@ -1211,6 +1250,7 @@ It records all consulted tags in allTags.
 
 ```
 searchKey: build.Context.goodOSArchFile
+tags: [private]
 ```
 
 ```Go
@@ -1234,7 +1274,6 @@ Exceptions: if GOOS=android, then files with GOOS=linux are also matched. if GOO
 
 ```
 searchKey: build.ImportMode
-tags: [exported]
 ```
 
 ```Go
@@ -1247,7 +1286,6 @@ An ImportMode controls the behavior of the Import method.
 
 ```
 searchKey: build.Package
-tags: [exported]
 ```
 
 ```Go
@@ -1324,7 +1362,6 @@ A Package describes the Go package found in a directory.
 
 ```
 searchKey: build.Import
-tags: [exported]
 ```
 
 ```Go
@@ -1337,7 +1374,6 @@ Import is shorthand for Default.Import.
 
 ```
 searchKey: build.ImportDir
-tags: [exported]
 ```
 
 ```Go
@@ -1350,7 +1386,6 @@ ImportDir is shorthand for Default.ImportDir.
 
 ```
 searchKey: build.Package.IsCommand
-tags: [exported]
 ```
 
 ```Go
@@ -1363,7 +1398,6 @@ IsCommand reports whether the package is considered a command to be installed (n
 
 ```
 searchKey: build.NoGoError
-tags: [exported]
 ```
 
 ```Go
@@ -1378,7 +1412,6 @@ NoGoError is the error used by Import to describe a directory containing no buil
 
 ```
 searchKey: build.NoGoError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1389,7 +1422,6 @@ func (e *NoGoError) Error() string
 
 ```
 searchKey: build.MultiplePackageError
-tags: [exported]
 ```
 
 ```Go
@@ -1406,7 +1438,6 @@ MultiplePackageError describes a directory containing multiple buildable Go sour
 
 ```
 searchKey: build.MultiplePackageError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -1417,6 +1448,7 @@ func (e *MultiplePackageError) Error() string
 
 ```
 searchKey: build.fileInfo
+tags: [private]
 ```
 
 ```Go
@@ -1438,6 +1470,7 @@ fileInfo records information learned about a file included in a build.
 
 ```
 searchKey: build.fileImport
+tags: [private]
 ```
 
 ```Go
@@ -1452,6 +1485,7 @@ type fileImport struct {
 
 ```
 searchKey: build.fileEmbed
+tags: [private]
 ```
 
 ```Go
@@ -1465,6 +1499,7 @@ type fileEmbed struct {
 
 ```
 searchKey: build.importReader
+tags: [private]
 ```
 
 ```Go
@@ -1483,6 +1518,7 @@ type importReader struct {
 
 ```
 searchKey: build.newImportReader
+tags: [private]
 ```
 
 ```Go
@@ -1493,6 +1529,7 @@ func newImportReader(name string, r io.Reader) *importReader
 
 ```
 searchKey: build.importReader.syntaxError
+tags: [private]
 ```
 
 ```Go
@@ -1505,6 +1542,7 @@ syntaxError records a syntax error, but only if an I/O error has not already bee
 
 ```
 searchKey: build.importReader.readByte
+tags: [private]
 ```
 
 ```Go
@@ -1517,6 +1555,7 @@ readByte reads the next byte from the input, saves it in buf, and returns it. If
 
 ```
 searchKey: build.importReader.readByteNoBuf
+tags: [private]
 ```
 
 ```Go
@@ -1529,6 +1568,7 @@ readByteNoBuf is like readByte but doesn't buffer the byte. It exhausts r.buf be
 
 ```
 searchKey: build.importReader.peekByte
+tags: [private]
 ```
 
 ```Go
@@ -1541,6 +1581,7 @@ peekByte returns the next byte from the input reader but does not advance beyond
 
 ```
 searchKey: build.importReader.nextByte
+tags: [private]
 ```
 
 ```Go
@@ -1553,6 +1594,7 @@ nextByte is like peekByte but advances beyond the returned byte.
 
 ```
 searchKey: build.importReader.findEmbed
+tags: [private]
 ```
 
 ```Go
@@ -1565,6 +1607,7 @@ findEmbed advances the input reader to the next //go:embed comment. It reports w
 
 ```
 searchKey: build.importReader.readKeyword
+tags: [private]
 ```
 
 ```Go
@@ -1577,6 +1620,7 @@ readKeyword reads the given keyword from the input. If the keyword is not presen
 
 ```
 searchKey: build.importReader.readIdent
+tags: [private]
 ```
 
 ```Go
@@ -1589,6 +1633,7 @@ readIdent reads an identifier from the input. If an identifier is not present, r
 
 ```
 searchKey: build.importReader.readString
+tags: [private]
 ```
 
 ```Go
@@ -1601,6 +1646,7 @@ readString reads a quoted string literal from the input. If an identifier is not
 
 ```
 searchKey: build.importReader.readImport
+tags: [private]
 ```
 
 ```Go
@@ -1613,6 +1659,7 @@ readImport reads an import clause - optional identifier followed by quoted strin
 
 ```
 searchKey: build.readNopCloser
+tags: [private]
 ```
 
 ```Go
@@ -1625,6 +1672,7 @@ type readNopCloser struct {
 
 ```
 searchKey: build.readNopCloser.Close
+tags: [private]
 ```
 
 ```Go
@@ -1635,6 +1683,7 @@ func (r readNopCloser) Close() error
 
 ```
 searchKey: build.depsParser
+tags: [private]
 ```
 
 ```Go
@@ -1652,6 +1701,7 @@ A depsParser parses the depsRules syntax described above.
 
 ```
 searchKey: build.depsParser.syntaxError
+tags: [private]
 ```
 
 ```Go
@@ -1664,6 +1714,7 @@ syntaxError reports a parsing error.
 
 ```
 searchKey: build.depsParser.nextList
+tags: [private]
 ```
 
 ```Go
@@ -1676,6 +1727,7 @@ nextList parses and returns a comma-separated list of names.
 
 ```
 searchKey: build.depsParser.nextToken
+tags: [private]
 ```
 
 ```Go
@@ -1688,6 +1740,7 @@ nextToken returns the next token in the deps rules, one of ";" "," "<" "!<" or a
 
 ```
 searchKey: build.readTest
+tags: [private]
 ```
 
 ```Go
@@ -1702,6 +1755,7 @@ type readTest struct {
 
 ```
 searchKey: build.GoodFileTest
+tags: [private]
 ```
 
 ```Go
@@ -1713,14 +1767,11 @@ type GoodFileTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="hasSubdir" href="#hasSubdir">func hasSubdir(root, dir string) (rel string, ok bool)</a>
 
 ```
 searchKey: build.hasSubdir
+tags: [private]
 ```
 
 ```Go
@@ -1733,6 +1784,7 @@ hasSubdir reports if dir is within root by performing lexical analysis only.
 
 ```
 searchKey: build.defaultGOPATH
+tags: [private]
 ```
 
 ```Go
@@ -1743,6 +1795,7 @@ func defaultGOPATH() string
 
 ```
 searchKey: build.envOr
+tags: [private]
 ```
 
 ```Go
@@ -1753,6 +1806,7 @@ func envOr(name, def string) string
 
 ```
 searchKey: build.nameExt
+tags: [private]
 ```
 
 ```Go
@@ -1763,6 +1817,7 @@ func nameExt(name string) string
 
 ```
 searchKey: build.fileListForExt
+tags: [private]
 ```
 
 ```Go
@@ -1773,6 +1828,7 @@ func fileListForExt(p *Package, ext string) *[]string
 
 ```
 searchKey: build.uniq
+tags: [private]
 ```
 
 ```Go
@@ -1783,6 +1839,7 @@ func uniq(list []string) []string
 
 ```
 searchKey: build.equal
+tags: [private]
 ```
 
 ```Go
@@ -1793,6 +1850,7 @@ func equal(x, y []string) bool
 
 ```
 searchKey: build.hasGoFiles
+tags: [private]
 ```
 
 ```Go
@@ -1805,6 +1863,7 @@ hasGoFiles reports whether dir contains any files with names ending in .go. For 
 
 ```
 searchKey: build.findImportComment
+tags: [private]
 ```
 
 ```Go
@@ -1815,6 +1874,7 @@ func findImportComment(data []byte) (s string, line int)
 
 ```
 searchKey: build.skipSpaceOrComment
+tags: [private]
 ```
 
 ```Go
@@ -1827,6 +1887,7 @@ skipSpaceOrComment returns data with any leading spaces or comments removed.
 
 ```
 searchKey: build.parseWord
+tags: [private]
 ```
 
 ```Go
@@ -1839,6 +1900,7 @@ parseWord skips any leading spaces or comments in data and then parses the begin
 
 ```
 searchKey: build.cleanDecls
+tags: [private]
 ```
 
 ```Go
@@ -1849,6 +1911,7 @@ func cleanDecls(m map[string][]token.Position) ([]string, map[string][]token.Pos
 
 ```
 searchKey: build.isGoBuildComment
+tags: [private]
 ```
 
 ```Go
@@ -1859,6 +1922,7 @@ func isGoBuildComment(line []byte) bool
 
 ```
 searchKey: build.parseFileHeader
+tags: [private]
 ```
 
 ```Go
@@ -1869,6 +1933,7 @@ func parseFileHeader(content []byte) (trimmed, goBuild []byte, sawBinaryOnly boo
 
 ```
 searchKey: build.expandSrcDir
+tags: [private]
 ```
 
 ```Go
@@ -1881,6 +1946,7 @@ expandSrcDir expands any occurrence of ${SRCDIR}, making sure the result is safe
 
 ```
 searchKey: build.safeCgoName
+tags: [private]
 ```
 
 ```Go
@@ -1891,6 +1957,7 @@ func safeCgoName(s string) bool
 
 ```
 searchKey: build.splitQuoted
+tags: [private]
 ```
 
 ```Go
@@ -1911,10 +1978,11 @@ Would be parsed as:
 []string{"a", "b:c d", "ef", `g"`}
 
 ```
-### <a id="init" href="#init">func init()</a>
+### <a id="init.build.go" href="#init.build.go">func init()</a>
 
 ```
 searchKey: build.init
+tags: [private]
 ```
 
 ```Go
@@ -1925,7 +1993,6 @@ func init()
 
 ```
 searchKey: build.IsLocalImport
-tags: [exported]
 ```
 
 ```Go
@@ -1938,7 +2005,6 @@ IsLocalImport reports whether the import path is a local import path, like ".", 
 
 ```
 searchKey: build.ArchChar
-tags: [exported]
 ```
 
 ```Go
@@ -1951,6 +2017,7 @@ ArchChar returns "?" and an error. In earlier versions of Go, the returned strin
 
 ```
 searchKey: build.getToolDir
+tags: [private]
 ```
 
 ```Go
@@ -1963,6 +2030,7 @@ getToolDir returns the default value of ToolDir.
 
 ```
 searchKey: build.isIdent
+tags: [private]
 ```
 
 ```Go
@@ -1973,6 +2041,7 @@ func isIdent(c byte) bool
 
 ```
 searchKey: build.readComments
+tags: [private]
 ```
 
 ```Go
@@ -1985,6 +2054,7 @@ readComments is like io.ReadAll, except that it only reads the leading block of 
 
 ```
 searchKey: build.readGoInfo
+tags: [private]
 ```
 
 ```Go
@@ -1999,6 +2069,7 @@ It only returns an error if there are problems reading the file, not for syntax 
 
 ```
 searchKey: build.parseGoEmbed
+tags: [private]
 ```
 
 ```Go
@@ -2011,6 +2082,7 @@ parseGoEmbed parses the text following "//go:embed" to extract the glob patterns
 
 ```
 searchKey: build.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -2021,6 +2093,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: build.TestMatch
+tags: [private]
 ```
 
 ```Go
@@ -2031,6 +2104,7 @@ func TestMatch(t *testing.T)
 
 ```
 searchKey: build.TestDotSlashImport
+tags: [private]
 ```
 
 ```Go
@@ -2041,6 +2115,7 @@ func TestDotSlashImport(t *testing.T)
 
 ```
 searchKey: build.TestEmptyImport
+tags: [private]
 ```
 
 ```Go
@@ -2051,6 +2126,7 @@ func TestEmptyImport(t *testing.T)
 
 ```
 searchKey: build.TestEmptyFolderImport
+tags: [private]
 ```
 
 ```Go
@@ -2061,6 +2137,7 @@ func TestEmptyFolderImport(t *testing.T)
 
 ```
 searchKey: build.TestMultiplePackageImport
+tags: [private]
 ```
 
 ```Go
@@ -2071,6 +2148,7 @@ func TestMultiplePackageImport(t *testing.T)
 
 ```
 searchKey: build.TestLocalDirectory
+tags: [private]
 ```
 
 ```Go
@@ -2081,6 +2159,7 @@ func TestLocalDirectory(t *testing.T)
 
 ```
 searchKey: build.TestShouldBuild
+tags: [private]
 ```
 
 ```Go
@@ -2091,6 +2170,7 @@ func TestShouldBuild(t *testing.T)
 
 ```
 searchKey: build.TestGoodOSArchFile
+tags: [private]
 ```
 
 ```Go
@@ -2101,6 +2181,7 @@ func TestGoodOSArchFile(t *testing.T)
 
 ```
 searchKey: build.TestMatchFile
+tags: [private]
 ```
 
 ```Go
@@ -2111,6 +2192,7 @@ func TestMatchFile(t *testing.T)
 
 ```
 searchKey: build.TestImportCmd
+tags: [private]
 ```
 
 ```Go
@@ -2121,6 +2203,7 @@ func TestImportCmd(t *testing.T)
 
 ```
 searchKey: build.TestExpandSrcDir
+tags: [private]
 ```
 
 ```Go
@@ -2131,6 +2214,7 @@ func TestExpandSrcDir(t *testing.T)
 
 ```
 searchKey: build.TestShellSafety
+tags: [private]
 ```
 
 ```Go
@@ -2141,6 +2225,7 @@ func TestShellSafety(t *testing.T)
 
 ```
 searchKey: build.TestImportDirNotExist
+tags: [private]
 ```
 
 ```Go
@@ -2153,6 +2238,7 @@ Want to get a "cannot find package" error when directory for package does not ex
 
 ```
 searchKey: build.TestImportVendor
+tags: [private]
 ```
 
 ```Go
@@ -2163,6 +2249,7 @@ func TestImportVendor(t *testing.T)
 
 ```
 searchKey: build.TestImportVendorFailure
+tags: [private]
 ```
 
 ```Go
@@ -2173,6 +2260,7 @@ func TestImportVendorFailure(t *testing.T)
 
 ```
 searchKey: build.TestImportVendorParentFailure
+tags: [private]
 ```
 
 ```Go
@@ -2183,6 +2271,7 @@ func TestImportVendorParentFailure(t *testing.T)
 
 ```
 searchKey: build.TestImportPackageOutsideModule
+tags: [private]
 ```
 
 ```Go
@@ -2195,6 +2284,7 @@ Check that a package is loaded in module mode if GO111MODULE=on, even when no go
 
 ```
 searchKey: build.TestImportDirTarget
+tags: [private]
 ```
 
 ```Go
@@ -2205,6 +2295,7 @@ func TestImportDirTarget(t *testing.T)
 
 ```
 searchKey: build.TestIssue23594
+tags: [private]
 ```
 
 ```Go
@@ -2217,6 +2308,7 @@ TestIssue23594 prevents go/build from regressing and populating Package.Doc from
 
 ```
 searchKey: build.TestMissingImportErrorRepetition
+tags: [private]
 ```
 
 ```Go
@@ -2229,6 +2321,7 @@ TestMissingImportErrorRepetition checks that when an unknown package is imported
 
 ```
 searchKey: build.TestCgoImportsIgnored
+tags: [private]
 ```
 
 ```Go
@@ -2241,6 +2334,7 @@ TestCgoImportsIgnored checks that imports in cgo files are not included in the i
 
 ```
 searchKey: build.listStdPkgs
+tags: [private]
 ```
 
 ```Go
@@ -2253,6 +2347,7 @@ listStdPkgs returns the same list of packages as "go list std".
 
 ```
 searchKey: build.TestDependencies
+tags: [private]
 ```
 
 ```Go
@@ -2263,6 +2358,7 @@ func TestDependencies(t *testing.T)
 
 ```
 searchKey: build.findImports
+tags: [private]
 ```
 
 ```Go
@@ -2273,6 +2369,7 @@ func findImports(pkg string) ([]string, error)
 
 ```
 searchKey: build.depsPolicy
+tags: [private]
 ```
 
 ```Go
@@ -2285,6 +2382,7 @@ depsPolicy returns a map m such that m[p][d] == true when p can import d.
 
 ```
 searchKey: build.parseDepsRules
+tags: [private]
 ```
 
 ```Go
@@ -2297,6 +2395,7 @@ parseDepsRules parses depsRules, calling save(deps, op, users) for each deps < u
 
 ```
 searchKey: build.TestStdlibLowercase
+tags: [private]
 ```
 
 ```Go
@@ -2309,6 +2408,7 @@ TestStdlibLowercase tests that all standard library package names are lowercase.
 
 ```
 searchKey: build.TestFindImports
+tags: [private]
 ```
 
 ```Go
@@ -2321,6 +2421,7 @@ TestFindImports tests that findImports works.  See #43249.
 
 ```
 searchKey: build.testRead
+tags: [private]
 ```
 
 ```Go
@@ -2331,6 +2432,7 @@ func testRead(t *testing.T, tests []readTest, read func(io.Reader) ([]byte, erro
 
 ```
 searchKey: build.TestReadGoInfo
+tags: [private]
 ```
 
 ```Go
@@ -2341,6 +2443,7 @@ func TestReadGoInfo(t *testing.T)
 
 ```
 searchKey: build.TestReadComments
+tags: [private]
 ```
 
 ```Go
@@ -2351,6 +2454,7 @@ func TestReadComments(t *testing.T)
 
 ```
 searchKey: build.TestReadFailuresIgnored
+tags: [private]
 ```
 
 ```Go
@@ -2361,6 +2465,7 @@ func TestReadFailuresIgnored(t *testing.T)
 
 ```
 searchKey: build.TestReadEmbed
+tags: [private]
 ```
 
 ```Go
@@ -2371,6 +2476,7 @@ func TestReadEmbed(t *testing.T)
 
 ```
 searchKey: build.anotherOS
+tags: [private]
 ```
 
 ```Go
@@ -2381,6 +2487,7 @@ func anotherOS() string
 
 ```
 searchKey: build.anotherArch
+tags: [private]
 ```
 
 ```Go
@@ -2391,6 +2498,7 @@ func anotherArch() string
 
 ```
 searchKey: build.TestGoodOSArch
+tags: [private]
 ```
 
 ```Go

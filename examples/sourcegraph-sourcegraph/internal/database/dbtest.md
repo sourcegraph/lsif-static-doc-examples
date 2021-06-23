@@ -21,10 +21,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="killClientConnsQuery" href="#killClientConnsQuery">const killClientConnsQuery</a>
 
 ```
 searchKey: dbtest.killClientConnsQuery
+tags: [private]
 ```
 
 ```Go
@@ -33,10 +38,15 @@ const killClientConnsQuery = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="rng" href="#rng">var rng</a>
 
 ```
 searchKey: dbtest.rng
+tags: [private]
 ```
 
 ```Go
@@ -49,6 +59,7 @@ Use a shared, locked RNG to avoid issues with multiple concurrent tests getting 
 
 ```
 searchKey: dbtest.rngLock
+tags: [private]
 ```
 
 ```Go
@@ -59,6 +70,7 @@ var rngLock sync.Mutex
 
 ```
 searchKey: dbtest.templateOnce
+tags: [private]
 ```
 
 ```Go
@@ -67,11 +79,14 @@ var templateOnce sync.Once
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewTx" href="#NewTx">func NewTx(t testing.TB, db *sql.DB) *sql.Tx</a>
 
 ```
 searchKey: dbtest.NewTx
-tags: [exported]
 ```
 
 ```Go
@@ -92,7 +107,6 @@ which aids in testing.
 
 ```
 searchKey: dbtest.NewDB
-tags: [exported]
 ```
 
 ```Go
@@ -105,6 +119,7 @@ NewDB returns a connection to a clean, new temporary testing database with the s
 
 ```
 searchKey: dbtest.initTemplateDB
+tags: [private]
 ```
 
 ```Go
@@ -117,6 +132,7 @@ initTemplateDB creates a template database with a fully migrated schema for the 
 
 ```
 searchKey: dbtest.templateDBName
+tags: [private]
 ```
 
 ```Go
@@ -129,6 +145,7 @@ templateDBName returns the name of the template database for the currently runni
 
 ```
 searchKey: dbtest.wdHash
+tags: [private]
 ```
 
 ```Go
@@ -141,6 +158,7 @@ wdHash returns a hash of the current working directory. This is useful to get a 
 
 ```
 searchKey: dbtest.dbConn
+tags: [private]
 ```
 
 ```Go
@@ -151,6 +169,7 @@ func dbConn(t testing.TB, cfg *url.URL) *sql.DB
 
 ```
 searchKey: dbtest.dbExec
+tags: [private]
 ```
 
 ```Go
@@ -161,6 +180,7 @@ func dbExec(t testing.TB, db *sql.DB, q string, args ...interface{})
 
 ```
 searchKey: dbtest.updateDSNFromEnv
+tags: [private]
 ```
 
 ```Go

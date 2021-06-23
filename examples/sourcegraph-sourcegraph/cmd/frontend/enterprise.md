@@ -15,15 +15,10 @@
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Services" href="#Services">type Services struct</a>
 
 ```
 searchKey: enterprise.Services
-tags: [exported]
 ```
 
 ```Go
@@ -49,7 +44,6 @@ Services is a bag of HTTP handlers and factory functions that are registered by 
 
 ```
 searchKey: enterprise.DefaultServices
-tags: [exported]
 ```
 
 ```Go
@@ -62,7 +56,6 @@ DefaultServices creates a new Services value that has default implementations fo
 
 ```
 searchKey: enterprise.NewCodeIntelUploadHandler
-tags: [exported]
 ```
 
 ```Go
@@ -75,7 +68,6 @@ NewCodeIntelUploadHandler creates a new handler for the LSIF upload endpoint. Th
 
 ```
 searchKey: enterprise.NewExecutorProxyHandler
-tags: [exported]
 ```
 
 ```Go
@@ -88,6 +80,7 @@ NewExecutorProxyHandler creates a new proxy handler for routes accessible to the
 
 ```
 searchKey: enterprise.registerFunc
+tags: [private]
 ```
 
 ```Go
@@ -98,6 +91,7 @@ type registerFunc func(webhook *webhooks.GitHubWebhook)
 
 ```
 searchKey: enterprise.registerFunc.Register
+tags: [private]
 ```
 
 ```Go
@@ -106,14 +100,11 @@ func (fn registerFunc) Register(w *webhooks.GitHubWebhook)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="makeNotFoundHandler" href="#makeNotFoundHandler">func makeNotFoundHandler(handlerName string) http.Handler</a>
 
 ```
 searchKey: enterprise.makeNotFoundHandler
+tags: [private]
 ```
 
 ```Go

@@ -170,11 +170,14 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrJobAlreadyExists" href="#ErrJobAlreadyExists">var ErrJobAlreadyExists</a>
 
 ```
 searchKey: worker.ErrJobAlreadyExists
-tags: [exported]
 ```
 
 ```Go
@@ -187,6 +190,7 @@ ErrJobAlreadyExists occurs when a duplicate job identifier is dequeued.
 
 ```
 searchKey: worker.scriptPreamble
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +203,7 @@ set -x
 
 ```
 searchKey: worker.makeTempDir
+tags: [private]
 ```
 
 ```Go
@@ -209,10 +214,15 @@ makeTempDir defaults to makeTemporaryDirectory and can be replaced for testing w
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="handler" href="#handler">type handler struct</a>
 
 ```
 searchKey: worker.handler
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +238,7 @@ type handler struct {
 
 ```
 searchKey: worker.handler.Handle
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +251,7 @@ Handle clones the target code into a temporary directory, invokes the target ind
 
 ```
 searchKey: worker.handler.prepareWorkspace
+tags: [private]
 ```
 
 ```Go
@@ -252,7 +264,6 @@ prepareWorkspace creates and returns a temporary director in which acts the work
 
 ```
 searchKey: worker.IDSet
-tags: [exported]
 ```
 
 ```Go
@@ -266,6 +277,7 @@ type IDSet struct {
 
 ```
 searchKey: worker.newIDSet
+tags: [private]
 ```
 
 ```Go
@@ -276,7 +288,6 @@ func newIDSet() *IDSet
 
 ```
 searchKey: worker.IDSet.Add
-tags: [exported]
 ```
 
 ```Go
@@ -289,7 +300,6 @@ Add associates the given identifier with the given cancel function in the set. I
 
 ```
 searchKey: worker.IDSet.Remove
-tags: [exported]
 ```
 
 ```Go
@@ -302,7 +312,6 @@ Remove invokes the cancel function associated with the given identifier in the s
 
 ```
 searchKey: worker.IDSet.Slice
-tags: [exported]
 ```
 
 ```Go
@@ -315,6 +324,7 @@ Slice returns an ordered copy of the identifiers composing the set.
 
 ```
 searchKey: worker.storeShim
+tags: [private]
 ```
 
 ```Go
@@ -328,6 +338,7 @@ type storeShim struct {
 
 ```
 searchKey: worker.storeShim.QueuedCount
+tags: [private]
 ```
 
 ```Go
@@ -338,6 +349,7 @@ func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{})
 
 ```
 searchKey: worker.storeShim.Dequeue
+tags: [private]
 ```
 
 ```Go
@@ -348,6 +360,7 @@ func (s *storeShim) Dequeue(ctx context.Context, extraArguments interface{}) (wo
 
 ```
 searchKey: worker.storeShim.AddExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -358,6 +371,7 @@ func (s *storeShim) AddExecutionLogEntry(ctx context.Context, id int, entry work
 
 ```
 searchKey: worker.storeShim.MarkComplete
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +382,7 @@ func (s *storeShim) MarkComplete(ctx context.Context, id int) (bool, error)
 
 ```
 searchKey: worker.storeShim.MarkErrored
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +393,7 @@ func (s *storeShim) MarkErrored(ctx context.Context, id int, errorMessage string
 
 ```
 searchKey: worker.storeShim.MarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +404,7 @@ func (s *storeShim) MarkFailed(ctx context.Context, id int, errorMessage string)
 
 ```
 searchKey: worker.storeShim.Done
+tags: [private]
 ```
 
 ```Go
@@ -398,7 +415,6 @@ func (s *storeShim) Done(err error) error
 
 ```
 searchKey: worker.QueueStore
-tags: [exported]
 ```
 
 ```Go
@@ -416,7 +432,6 @@ type QueueStore interface {
 
 ```
 searchKey: worker.Options
-tags: [exported]
 ```
 
 ```Go
@@ -461,6 +476,7 @@ type Options struct {
 
 ```
 searchKey: worker.MockRunner
+tags: [private]
 ```
 
 ```Go
@@ -483,6 +499,7 @@ MockRunner is a mock implementation of the Runner interface (from the package gi
 
 ```
 searchKey: worker.NewMockRunner
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +512,7 @@ NewMockRunner creates a new mock of the Runner interface. All methods return zer
 
 ```
 searchKey: worker.NewMockRunnerFrom
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +525,7 @@ NewMockRunnerFrom creates a new mock of the MockRunner interface. All methods de
 
 ```
 searchKey: worker.MockRunner.Run
+tags: [private]
 ```
 
 ```Go
@@ -519,6 +538,7 @@ Run delegates to the next hook function in the queue and stores the parameter an
 
 ```
 searchKey: worker.MockRunner.Setup
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +551,7 @@ Setup delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: worker.MockRunner.Teardown
+tags: [private]
 ```
 
 ```Go
@@ -543,6 +564,7 @@ Teardown delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: worker.RunnerRunFunc
+tags: [private]
 ```
 
 ```Go
@@ -560,6 +582,7 @@ RunnerRunFunc describes the behavior when the Run method of the parent MockRunne
 
 ```
 searchKey: worker.RunnerRunFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +595,7 @@ SetDefaultHook sets function that is called when the Run method of the parent Mo
 
 ```
 searchKey: worker.RunnerRunFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -584,6 +608,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Run me
 
 ```
 searchKey: worker.RunnerRunFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -596,6 +621,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.RunnerRunFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -608,6 +634,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.RunnerRunFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -618,6 +645,7 @@ func (f *RunnerRunFunc) nextHook() func(context.Context, command.CommandSpec) er
 
 ```
 searchKey: worker.RunnerRunFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -628,6 +656,7 @@ func (f *RunnerRunFunc) appendCall(r0 RunnerRunFuncCall)
 
 ```
 searchKey: worker.RunnerRunFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -640,6 +669,7 @@ History returns a sequence of RunnerRunFuncCall objects describing the invocatio
 
 ```
 searchKey: worker.RunnerRunFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +692,7 @@ RunnerRunFuncCall is an object that describes an invocation of method Run on an 
 
 ```
 searchKey: worker.RunnerRunFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +705,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.RunnerRunFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -686,6 +718,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.RunnerSetupFunc
+tags: [private]
 ```
 
 ```Go
@@ -703,6 +736,7 @@ RunnerSetupFunc describes the behavior when the Setup method of the parent MockR
 
 ```
 searchKey: worker.RunnerSetupFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -715,6 +749,7 @@ SetDefaultHook sets function that is called when the Setup method of the parent 
 
 ```
 searchKey: worker.RunnerSetupFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -727,6 +762,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Setup 
 
 ```
 searchKey: worker.RunnerSetupFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -739,6 +775,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.RunnerSetupFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -751,6 +788,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.RunnerSetupFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -761,6 +799,7 @@ func (f *RunnerSetupFunc) nextHook() func(context.Context, []string, []string) e
 
 ```
 searchKey: worker.RunnerSetupFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -771,6 +810,7 @@ func (f *RunnerSetupFunc) appendCall(r0 RunnerSetupFuncCall)
 
 ```
 searchKey: worker.RunnerSetupFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -783,6 +823,7 @@ History returns a sequence of RunnerSetupFuncCall objects describing the invocat
 
 ```
 searchKey: worker.RunnerSetupFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -808,6 +849,7 @@ RunnerSetupFuncCall is an object that describes an invocation of method Setup on
 
 ```
 searchKey: worker.RunnerSetupFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -820,6 +862,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.RunnerSetupFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -832,6 +875,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.RunnerTeardownFunc
+tags: [private]
 ```
 
 ```Go
@@ -849,6 +893,7 @@ RunnerTeardownFunc describes the behavior when the Teardown method of the parent
 
 ```
 searchKey: worker.RunnerTeardownFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -861,6 +906,7 @@ SetDefaultHook sets function that is called when the Teardown method of the pare
 
 ```
 searchKey: worker.RunnerTeardownFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -873,6 +919,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Teardo
 
 ```
 searchKey: worker.RunnerTeardownFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -885,6 +932,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.RunnerTeardownFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -897,6 +945,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.RunnerTeardownFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -907,6 +956,7 @@ func (f *RunnerTeardownFunc) nextHook() func(context.Context) error
 
 ```
 searchKey: worker.RunnerTeardownFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -917,6 +967,7 @@ func (f *RunnerTeardownFunc) appendCall(r0 RunnerTeardownFuncCall)
 
 ```
 searchKey: worker.RunnerTeardownFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -929,6 +980,7 @@ History returns a sequence of RunnerTeardownFuncCall objects describing the invo
 
 ```
 searchKey: worker.RunnerTeardownFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -948,6 +1000,7 @@ RunnerTeardownFuncCall is an object that describes an invocation of method Teard
 
 ```
 searchKey: worker.RunnerTeardownFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -960,6 +1013,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.RunnerTeardownFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -972,6 +1026,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.MockStore
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +1061,7 @@ MockStore is a mock implementation of the Store interface (from the package gith
 
 ```
 searchKey: worker.NewMockStore
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1074,7 @@ NewMockStore creates a new mock of the Store interface. All methods return zero 
 
 ```
 searchKey: worker.NewMockStoreFrom
+tags: [private]
 ```
 
 ```Go
@@ -1030,6 +1087,7 @@ NewMockStoreFrom creates a new mock of the MockStore interface. All methods dele
 
 ```
 searchKey: worker.MockStore.AddExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -1042,6 +1100,7 @@ AddExecutionLogEntry delegates to the next hook function in the queue and stores
 
 ```
 searchKey: worker.MockStore.Dequeue
+tags: [private]
 ```
 
 ```Go
@@ -1054,6 +1113,7 @@ Dequeue delegates to the next hook function in the queue and stores the paramete
 
 ```
 searchKey: worker.MockStore.Done
+tags: [private]
 ```
 
 ```Go
@@ -1066,6 +1126,7 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: worker.MockStore.MarkComplete
+tags: [private]
 ```
 
 ```Go
@@ -1078,6 +1139,7 @@ MarkComplete delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: worker.MockStore.MarkErrored
+tags: [private]
 ```
 
 ```Go
@@ -1090,6 +1152,7 @@ MarkErrored delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: worker.MockStore.MarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -1102,6 +1165,7 @@ MarkFailed delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: worker.MockStore.QueuedCount
+tags: [private]
 ```
 
 ```Go
@@ -1114,6 +1178,7 @@ QueuedCount delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFunc
+tags: [private]
 ```
 
 ```Go
@@ -1131,6 +1196,7 @@ StoreAddExecutionLogEntryFunc describes the behavior when the AddExecutionLogEnt
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1143,6 +1209,7 @@ SetDefaultHook sets function that is called when the AddExecutionLogEntry method
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1155,6 +1222,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the AddExe
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1167,6 +1235,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1179,6 +1248,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1189,6 +1259,7 @@ func (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, wo
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1199,6 +1270,7 @@ func (f *StoreAddExecutionLogEntryFunc) appendCall(r0 StoreAddExecutionLogEntryF
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1211,6 +1283,7 @@ History returns a sequence of StoreAddExecutionLogEntryFuncCall objects describi
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1236,6 +1309,7 @@ StoreAddExecutionLogEntryFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1248,6 +1322,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1260,6 +1335,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.StoreDequeueFunc
+tags: [private]
 ```
 
 ```Go
@@ -1277,6 +1353,7 @@ StoreDequeueFunc describes the behavior when the Dequeue method of the parent Mo
 
 ```
 searchKey: worker.StoreDequeueFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1289,6 +1366,7 @@ SetDefaultHook sets function that is called when the Dequeue method of the paren
 
 ```
 searchKey: worker.StoreDequeueFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1301,6 +1379,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Dequeu
 
 ```
 searchKey: worker.StoreDequeueFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1313,6 +1392,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.StoreDequeueFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1325,6 +1405,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.StoreDequeueFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1335,6 +1416,7 @@ func (f *StoreDequeueFunc) nextHook() func(context.Context, interface{}) (worker
 
 ```
 searchKey: worker.StoreDequeueFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1345,6 +1427,7 @@ func (f *StoreDequeueFunc) appendCall(r0 StoreDequeueFuncCall)
 
 ```
 searchKey: worker.StoreDequeueFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1357,6 +1440,7 @@ History returns a sequence of StoreDequeueFuncCall objects describing the invoca
 
 ```
 searchKey: worker.StoreDequeueFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1388,6 +1472,7 @@ StoreDequeueFuncCall is an object that describes an invocation of method Dequeue
 
 ```
 searchKey: worker.StoreDequeueFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1400,6 +1485,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreDequeueFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1412,6 +1498,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.StoreDoneFunc
+tags: [private]
 ```
 
 ```Go
@@ -1429,6 +1516,7 @@ StoreDoneFunc describes the behavior when the Done method of the parent MockStor
 
 ```
 searchKey: worker.StoreDoneFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1441,6 +1529,7 @@ SetDefaultHook sets function that is called when the Done method of the parent M
 
 ```
 searchKey: worker.StoreDoneFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1453,6 +1542,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Done m
 
 ```
 searchKey: worker.StoreDoneFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1465,6 +1555,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.StoreDoneFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1477,6 +1568,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.StoreDoneFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1487,6 +1579,7 @@ func (f *StoreDoneFunc) nextHook() func(error) error
 
 ```
 searchKey: worker.StoreDoneFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1497,6 +1590,7 @@ func (f *StoreDoneFunc) appendCall(r0 StoreDoneFuncCall)
 
 ```
 searchKey: worker.StoreDoneFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1509,6 +1603,7 @@ History returns a sequence of StoreDoneFuncCall objects describing the invocatio
 
 ```
 searchKey: worker.StoreDoneFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1528,6 +1623,7 @@ StoreDoneFuncCall is an object that describes an invocation of method Done on an
 
 ```
 searchKey: worker.StoreDoneFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1540,6 +1636,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreDoneFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1552,6 +1649,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.StoreMarkCompleteFunc
+tags: [private]
 ```
 
 ```Go
@@ -1569,6 +1667,7 @@ StoreMarkCompleteFunc describes the behavior when the MarkComplete method of the
 
 ```
 searchKey: worker.StoreMarkCompleteFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1581,6 +1680,7 @@ SetDefaultHook sets function that is called when the MarkComplete method of the 
 
 ```
 searchKey: worker.StoreMarkCompleteFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1593,6 +1693,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkCo
 
 ```
 searchKey: worker.StoreMarkCompleteFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1605,6 +1706,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.StoreMarkCompleteFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1617,6 +1719,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.StoreMarkCompleteFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1627,6 +1730,7 @@ func (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, err
 
 ```
 searchKey: worker.StoreMarkCompleteFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1637,6 +1741,7 @@ func (f *StoreMarkCompleteFunc) appendCall(r0 StoreMarkCompleteFuncCall)
 
 ```
 searchKey: worker.StoreMarkCompleteFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1649,6 +1754,7 @@ History returns a sequence of StoreMarkCompleteFuncCall objects describing the i
 
 ```
 searchKey: worker.StoreMarkCompleteFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1674,6 +1780,7 @@ StoreMarkCompleteFuncCall is an object that describes an invocation of method Ma
 
 ```
 searchKey: worker.StoreMarkCompleteFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1686,6 +1793,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreMarkCompleteFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1698,6 +1806,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.StoreMarkErroredFunc
+tags: [private]
 ```
 
 ```Go
@@ -1715,6 +1824,7 @@ StoreMarkErroredFunc describes the behavior when the MarkErrored method of the p
 
 ```
 searchKey: worker.StoreMarkErroredFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1727,6 +1837,7 @@ SetDefaultHook sets function that is called when the MarkErrored method of the p
 
 ```
 searchKey: worker.StoreMarkErroredFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1739,6 +1850,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkEr
 
 ```
 searchKey: worker.StoreMarkErroredFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1751,6 +1863,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.StoreMarkErroredFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1763,6 +1876,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.StoreMarkErroredFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1773,6 +1887,7 @@ func (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bo
 
 ```
 searchKey: worker.StoreMarkErroredFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1783,6 +1898,7 @@ func (f *StoreMarkErroredFunc) appendCall(r0 StoreMarkErroredFuncCall)
 
 ```
 searchKey: worker.StoreMarkErroredFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1795,6 +1911,7 @@ History returns a sequence of StoreMarkErroredFuncCall objects describing the in
 
 ```
 searchKey: worker.StoreMarkErroredFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1823,6 +1940,7 @@ StoreMarkErroredFuncCall is an object that describes an invocation of method Mar
 
 ```
 searchKey: worker.StoreMarkErroredFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1835,6 +1953,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreMarkErroredFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1847,6 +1966,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.StoreMarkFailedFunc
+tags: [private]
 ```
 
 ```Go
@@ -1864,6 +1984,7 @@ StoreMarkFailedFunc describes the behavior when the MarkFailed method of the par
 
 ```
 searchKey: worker.StoreMarkFailedFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1876,6 +1997,7 @@ SetDefaultHook sets function that is called when the MarkFailed method of the pa
 
 ```
 searchKey: worker.StoreMarkFailedFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1888,6 +2010,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkFa
 
 ```
 searchKey: worker.StoreMarkFailedFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1900,6 +2023,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.StoreMarkFailedFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1912,6 +2036,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.StoreMarkFailedFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1922,6 +2047,7 @@ func (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (boo
 
 ```
 searchKey: worker.StoreMarkFailedFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1932,6 +2058,7 @@ func (f *StoreMarkFailedFunc) appendCall(r0 StoreMarkFailedFuncCall)
 
 ```
 searchKey: worker.StoreMarkFailedFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1944,6 +2071,7 @@ History returns a sequence of StoreMarkFailedFuncCall objects describing the inv
 
 ```
 searchKey: worker.StoreMarkFailedFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1972,6 +2100,7 @@ StoreMarkFailedFuncCall is an object that describes an invocation of method Mark
 
 ```
 searchKey: worker.StoreMarkFailedFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1984,6 +2113,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreMarkFailedFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1996,6 +2126,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: worker.StoreQueuedCountFunc
+tags: [private]
 ```
 
 ```Go
@@ -2013,6 +2144,7 @@ StoreQueuedCountFunc describes the behavior when the QueuedCount method of the p
 
 ```
 searchKey: worker.StoreQueuedCountFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2025,6 +2157,7 @@ SetDefaultHook sets function that is called when the QueuedCount method of the p
 
 ```
 searchKey: worker.StoreQueuedCountFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2037,6 +2170,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Queued
 
 ```
 searchKey: worker.StoreQueuedCountFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2049,6 +2183,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: worker.StoreQueuedCountFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2061,6 +2196,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: worker.StoreQueuedCountFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2071,6 +2207,7 @@ func (f *StoreQueuedCountFunc) nextHook() func(context.Context, interface{}) (in
 
 ```
 searchKey: worker.StoreQueuedCountFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2081,6 +2218,7 @@ func (f *StoreQueuedCountFunc) appendCall(r0 StoreQueuedCountFuncCall)
 
 ```
 searchKey: worker.StoreQueuedCountFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2093,6 +2231,7 @@ History returns a sequence of StoreQueuedCountFuncCall objects describing the in
 
 ```
 searchKey: worker.StoreQueuedCountFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2118,6 +2257,7 @@ StoreQueuedCountFuncCall is an object that describes an invocation of method Que
 
 ```
 searchKey: worker.StoreQueuedCountFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2130,6 +2270,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreQueuedCountFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2140,10 +2281,15 @@ Results returns an interface slice containing the results of this invocation.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="buildScript" href="#buildScript">func buildScript(dockerStep executor.DockerStep) []byte</a>
 
 ```
 searchKey: worker.buildScript
+tags: [private]
 ```
 
 ```Go
@@ -2154,6 +2300,7 @@ func buildScript(dockerStep executor.DockerStep) []byte
 
 ```
 searchKey: worker.union
+tags: [private]
 ```
 
 ```Go
@@ -2164,6 +2311,7 @@ func union(a, b map[string]string) map[string]string
 
 ```
 searchKey: worker.scriptNameFromJobStep
+tags: [private]
 ```
 
 ```Go
@@ -2174,6 +2322,7 @@ func scriptNameFromJobStep(job executor.Job, i int) string
 
 ```
 searchKey: worker.createHoneyEvent
+tags: [private]
 ```
 
 ```Go
@@ -2184,7 +2333,6 @@ func createHoneyEvent(ctx context.Context, job executor.Job, err error, duration
 
 ```
 searchKey: worker.NewWorker
-tags: [exported]
 ```
 
 ```Go
@@ -2197,6 +2345,7 @@ NewWorker creates a worker that polls a remote job queue API for work. The retur
 
 ```
 searchKey: worker.connectToFrontend
+tags: [private]
 ```
 
 ```Go
@@ -2209,6 +2358,7 @@ connectToFrontend will ping the configured Sourcegraph instance until it receive
 
 ```
 searchKey: worker.makeURL
+tags: [private]
 ```
 
 ```Go
@@ -2219,6 +2369,7 @@ func makeURL(base, username, password string, path ...string) (*url.URL, error)
 
 ```
 searchKey: worker.makeRelativeURL
+tags: [private]
 ```
 
 ```Go
@@ -2229,6 +2380,7 @@ func makeRelativeURL(base string, path ...string) (*url.URL, error)
 
 ```
 searchKey: worker.makeTemporaryDirectory
+tags: [private]
 ```
 
 ```Go
@@ -2239,6 +2391,7 @@ func makeTemporaryDirectory() (string, error)
 
 ```
 searchKey: worker.TestHandle
+tags: [private]
 ```
 
 ```Go
@@ -2249,6 +2402,7 @@ func TestHandle(t *testing.T)
 
 ```
 searchKey: worker.TestIDAddRemove
+tags: [private]
 ```
 
 ```Go
@@ -2259,6 +2413,7 @@ func TestIDAddRemove(t *testing.T)
 
 ```
 searchKey: worker.TestIDSetSlice
+tags: [private]
 ```
 
 ```Go
@@ -2269,6 +2424,7 @@ func TestIDSetSlice(t *testing.T)
 
 ```
 searchKey: worker.TestPrepareWorkspace
+tags: [private]
 ```
 
 ```Go
@@ -2279,6 +2435,7 @@ func TestPrepareWorkspace(t *testing.T)
 
 ```
 searchKey: worker.TestPrepareWorkspaceNoRepository
+tags: [private]
 ```
 
 ```Go

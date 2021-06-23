@@ -75,14 +75,11 @@ Package sort provides primitives for sorting slices and user-defined collections
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="reflectValueOf" href="#reflectValueOf">var reflectValueOf</a>
 
 ```
 searchKey: sort.reflectValueOf
+tags: [private]
 ```
 
 ```Go
@@ -93,6 +90,7 @@ var reflectValueOf = reflectlite.ValueOf
 
 ```
 searchKey: sort.reflectSwapper
+tags: [private]
 ```
 
 ```Go
@@ -101,15 +99,10 @@ var reflectSwapper = reflectlite.Swapper
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Interface" href="#Interface">type Interface interface</a>
 
 ```
 searchKey: sort.Interface
-tags: [exported]
 ```
 
 ```Go
@@ -145,7 +138,6 @@ An implementation of Interface can be sorted by the routines in this package. Th
 
 ```
 searchKey: sort.Reverse
-tags: [exported]
 ```
 
 ```Go
@@ -158,6 +150,7 @@ Reverse returns the reverse order for data.
 
 ```
 searchKey: sort.lessSwap
+tags: [private]
 ```
 
 ```Go
@@ -173,6 +166,7 @@ lessSwap is a pair of Less and Swap function for use with the auto-generated fun
 
 ```
 searchKey: sort.reverse
+tags: [private]
 ```
 
 ```Go
@@ -187,6 +181,7 @@ type reverse struct {
 
 ```
 searchKey: sort.reverse.Less
+tags: [private]
 ```
 
 ```Go
@@ -199,7 +194,6 @@ Less returns the opposite of the embedded implementation's Less method.
 
 ```
 searchKey: sort.IntSlice
-tags: [exported]
 ```
 
 ```Go
@@ -212,7 +206,6 @@ IntSlice attaches the methods of Interface to []int, sorting in increasing order
 
 ```
 searchKey: sort.IntSlice.Search
-tags: [exported]
 ```
 
 ```Go
@@ -225,7 +218,6 @@ Search returns the result of applying SearchInts to the receiver and x.
 
 ```
 searchKey: sort.IntSlice.Len
-tags: [exported]
 ```
 
 ```Go
@@ -236,7 +228,6 @@ func (x IntSlice) Len() int
 
 ```
 searchKey: sort.IntSlice.Less
-tags: [exported]
 ```
 
 ```Go
@@ -247,7 +238,6 @@ func (x IntSlice) Less(i, j int) bool
 
 ```
 searchKey: sort.IntSlice.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -258,7 +248,6 @@ func (x IntSlice) Swap(i, j int)
 
 ```
 searchKey: sort.IntSlice.Sort
-tags: [exported]
 ```
 
 ```Go
@@ -271,7 +260,6 @@ Sort is a convenience method: x.Sort() calls Sort(x).
 
 ```
 searchKey: sort.Float64Slice
-tags: [exported]
 ```
 
 ```Go
@@ -284,7 +272,6 @@ Float64Slice implements Interface for a []float64, sorting in increasing order, 
 
 ```
 searchKey: sort.Float64Slice.Search
-tags: [exported]
 ```
 
 ```Go
@@ -297,7 +284,6 @@ Search returns the result of applying SearchFloat64s to the receiver and x.
 
 ```
 searchKey: sort.Float64Slice.Len
-tags: [exported]
 ```
 
 ```Go
@@ -308,7 +294,6 @@ func (x Float64Slice) Len() int
 
 ```
 searchKey: sort.Float64Slice.Less
-tags: [exported]
 ```
 
 ```Go
@@ -325,7 +310,6 @@ x[i] < x[j] || (math.IsNaN(x[i]) && !math.IsNaN(x[j]))
 
 ```
 searchKey: sort.Float64Slice.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -336,7 +320,6 @@ func (x Float64Slice) Swap(i, j int)
 
 ```
 searchKey: sort.Float64Slice.Sort
-tags: [exported]
 ```
 
 ```Go
@@ -349,7 +332,6 @@ Sort is a convenience method: x.Sort() calls Sort(x).
 
 ```
 searchKey: sort.StringSlice
-tags: [exported]
 ```
 
 ```Go
@@ -362,7 +344,6 @@ StringSlice attaches the methods of Interface to []string, sorting in increasing
 
 ```
 searchKey: sort.StringSlice.Search
-tags: [exported]
 ```
 
 ```Go
@@ -375,7 +356,6 @@ Search returns the result of applying SearchStrings to the receiver and x.
 
 ```
 searchKey: sort.StringSlice.Len
-tags: [exported]
 ```
 
 ```Go
@@ -386,7 +366,6 @@ func (x StringSlice) Len() int
 
 ```
 searchKey: sort.StringSlice.Less
-tags: [exported]
 ```
 
 ```Go
@@ -397,7 +376,6 @@ func (x StringSlice) Less(i, j int) bool
 
 ```
 searchKey: sort.StringSlice.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -408,7 +386,6 @@ func (x StringSlice) Swap(i, j int)
 
 ```
 searchKey: sort.StringSlice.Sort
-tags: [exported]
 ```
 
 ```Go
@@ -419,15 +396,10 @@ Sort is a convenience method: x.Sort() calls Sort(x).
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Search" href="#Search">func Search(n int, f func(int) bool) int</a>
 
 ```
 searchKey: sort.Search
-tags: [exported]
 ```
 
 ```Go
@@ -474,7 +446,6 @@ func GuessingGame() {
 
 ```
 searchKey: sort.SearchInts
-tags: [exported]
 ```
 
 ```Go
@@ -487,7 +458,6 @@ SearchInts searches for x in a sorted slice of ints and returns the index as spe
 
 ```
 searchKey: sort.SearchFloat64s
-tags: [exported]
 ```
 
 ```Go
@@ -500,7 +470,6 @@ SearchFloat64s searches for x in a sorted slice of float64s and returns the inde
 
 ```
 searchKey: sort.SearchStrings
-tags: [exported]
 ```
 
 ```Go
@@ -513,7 +482,6 @@ SearchStrings searches for x in a sorted slice of strings and returns the index 
 
 ```
 searchKey: sort.Slice
-tags: [exported]
 ```
 
 ```Go
@@ -530,7 +498,6 @@ The less function must satisfy the same requirements as the Interface type's Les
 
 ```
 searchKey: sort.SliceStable
-tags: [exported]
 ```
 
 ```Go
@@ -545,7 +512,6 @@ The less function must satisfy the same requirements as the Interface type's Les
 
 ```
 searchKey: sort.SliceIsSorted
-tags: [exported]
 ```
 
 ```Go
@@ -558,6 +524,7 @@ SliceIsSorted reports whether the slice x is sorted according to the provided le
 
 ```
 searchKey: sort.insertionSort
+tags: [private]
 ```
 
 ```Go
@@ -570,6 +537,7 @@ insertionSort sorts data[a:b] using insertion sort.
 
 ```
 searchKey: sort.siftDown
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +550,7 @@ siftDown implements the heap property on data[lo:hi]. first is an offset into th
 
 ```
 searchKey: sort.heapSort
+tags: [private]
 ```
 
 ```Go
@@ -592,6 +561,7 @@ func heapSort(data Interface, a, b int)
 
 ```
 searchKey: sort.medianOfThree
+tags: [private]
 ```
 
 ```Go
@@ -604,6 +574,7 @@ medianOfThree moves the median of the three values data[m0], data[m1], data[m2] 
 
 ```
 searchKey: sort.swapRange
+tags: [private]
 ```
 
 ```Go
@@ -614,6 +585,7 @@ func swapRange(data Interface, a, b, n int)
 
 ```
 searchKey: sort.doPivot
+tags: [private]
 ```
 
 ```Go
@@ -624,6 +596,7 @@ func doPivot(data Interface, lo, hi int) (midlo, midhi int)
 
 ```
 searchKey: sort.quickSort
+tags: [private]
 ```
 
 ```Go
@@ -634,7 +607,6 @@ func quickSort(data Interface, a, b, maxDepth int)
 
 ```
 searchKey: sort.Sort
-tags: [exported]
 ```
 
 ```Go
@@ -647,6 +619,7 @@ Sort sorts data. It makes one call to data.Len to determine n and O(n*log(n)) ca
 
 ```
 searchKey: sort.maxDepth
+tags: [private]
 ```
 
 ```Go
@@ -659,7 +632,6 @@ maxDepth returns a threshold at which quicksort should switch to heapsort. It re
 
 ```
 searchKey: sort.IsSorted
-tags: [exported]
 ```
 
 ```Go
@@ -672,6 +644,7 @@ IsSorted reports whether data is sorted.
 
 ```
 searchKey: sort.isNaN
+tags: [private]
 ```
 
 ```Go
@@ -684,7 +657,6 @@ isNaN is a copy of math.IsNaN to avoid a dependency on the math package.
 
 ```
 searchKey: sort.Ints
-tags: [exported]
 ```
 
 ```Go
@@ -697,7 +669,6 @@ Ints sorts a slice of ints in increasing order.
 
 ```
 searchKey: sort.Float64s
-tags: [exported]
 ```
 
 ```Go
@@ -710,7 +681,6 @@ Float64s sorts a slice of float64s in increasing order. Not-a-number (NaN) value
 
 ```
 searchKey: sort.Strings
-tags: [exported]
 ```
 
 ```Go
@@ -723,7 +693,6 @@ Strings sorts a slice of strings in increasing order.
 
 ```
 searchKey: sort.IntsAreSorted
-tags: [exported]
 ```
 
 ```Go
@@ -736,7 +705,6 @@ IntsAreSorted reports whether the slice x is sorted in increasing order.
 
 ```
 searchKey: sort.Float64sAreSorted
-tags: [exported]
 ```
 
 ```Go
@@ -749,7 +717,6 @@ Float64sAreSorted reports whether the slice x is sorted in increasing order, wit
 
 ```
 searchKey: sort.StringsAreSorted
-tags: [exported]
 ```
 
 ```Go
@@ -762,7 +729,6 @@ StringsAreSorted reports whether the slice x is sorted in increasing order.
 
 ```
 searchKey: sort.Stable
-tags: [exported]
 ```
 
 ```Go
@@ -777,6 +743,7 @@ It makes one call to data.Len to determine n, O(n*log(n)) calls to data.Less and
 
 ```
 searchKey: sort.stable
+tags: [private]
 ```
 
 ```Go
@@ -787,6 +754,7 @@ func stable(data Interface, n int)
 
 ```
 searchKey: sort.symMerge
+tags: [private]
 ```
 
 ```Go
@@ -805,6 +773,7 @@ symMerge assumes non-degenerate arguments: a < m && m < b. Having the caller che
 
 ```
 searchKey: sort.rotate
+tags: [private]
 ```
 
 ```Go
@@ -817,6 +786,7 @@ rotate rotates two consecutive blocks u = data[a:m] and v = data[m:b] in data: D
 
 ```
 searchKey: sort.insertionSort_func
+tags: [private]
 ```
 
 ```Go
@@ -829,6 +799,7 @@ Auto-generated variant of sort.go:insertionSort
 
 ```
 searchKey: sort.siftDown_func
+tags: [private]
 ```
 
 ```Go
@@ -841,6 +812,7 @@ Auto-generated variant of sort.go:siftDown
 
 ```
 searchKey: sort.heapSort_func
+tags: [private]
 ```
 
 ```Go
@@ -853,6 +825,7 @@ Auto-generated variant of sort.go:heapSort
 
 ```
 searchKey: sort.medianOfThree_func
+tags: [private]
 ```
 
 ```Go
@@ -865,6 +838,7 @@ Auto-generated variant of sort.go:medianOfThree
 
 ```
 searchKey: sort.swapRange_func
+tags: [private]
 ```
 
 ```Go
@@ -877,6 +851,7 @@ Auto-generated variant of sort.go:swapRange
 
 ```
 searchKey: sort.doPivot_func
+tags: [private]
 ```
 
 ```Go
@@ -889,6 +864,7 @@ Auto-generated variant of sort.go:doPivot
 
 ```
 searchKey: sort.quickSort_func
+tags: [private]
 ```
 
 ```Go
@@ -901,6 +877,7 @@ Auto-generated variant of sort.go:quickSort
 
 ```
 searchKey: sort.stable_func
+tags: [private]
 ```
 
 ```Go
@@ -913,6 +890,7 @@ Auto-generated variant of sort.go:stable
 
 ```
 searchKey: sort.symMerge_func
+tags: [private]
 ```
 
 ```Go
@@ -925,6 +903,7 @@ Auto-generated variant of sort.go:symMerge
 
 ```
 searchKey: sort.rotate_func
+tags: [private]
 ```
 
 ```Go
@@ -937,6 +916,7 @@ Auto-generated variant of sort.go:rotate
 
 ```
 searchKey: sort.Heapsort
+tags: [private]
 ```
 
 ```Go

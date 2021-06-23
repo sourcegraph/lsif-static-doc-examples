@@ -4,7 +4,9 @@
     "identifier": "auth_test",
     "newPage": true,
     "searchKey": "cmd/frontend/auth_test",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "TestAllowAnonymousRequest",
                 "newPage": false,
                 "searchKey": "auth_test.TestAllowAnonymousRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "TestNewUserRequiredAuthzMiddleware",
                 "newPage": false,
                 "searchKey": "auth_test.TestNewUserRequiredAuthzMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

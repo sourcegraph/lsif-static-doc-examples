@@ -4,7 +4,9 @@
     "identifier": "httpheader",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/auth/httpheader",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "providerType",
                 "newPage": false,
                 "searchKey": "httpheader.providerType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "Middleware",
                 "newPage": false,
                 "searchKey": "httpheader.Middleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +112,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -124,7 +132,9 @@
                 "identifier": "provider",
                 "newPage": false,
                 "searchKey": "httpheader.provider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -142,7 +152,9 @@
                       "identifier": "provider.ConfigID",
                       "newPage": false,
                       "searchKey": "httpheader.provider.ConfigID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -162,7 +174,9 @@
                       "identifier": "provider.Config",
                       "newPage": false,
                       "searchKey": "httpheader.provider.Config",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -182,7 +196,9 @@
                       "identifier": "provider.Refresh",
                       "newPage": false,
                       "searchKey": "httpheader.provider.Refresh",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -202,7 +218,9 @@
                       "identifier": "provider.CachedInfo",
                       "newPage": false,
                       "searchKey": "httpheader.provider.CachedInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -228,7 +246,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -246,7 +266,9 @@
                 "identifier": "getProviderConfig",
                 "newPage": false,
                 "searchKey": "httpheader.getProviderConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,12 +283,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#init",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#init.config.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.config.go",
                 "newPage": false,
                 "searchKey": "httpheader.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -286,7 +310,9 @@
                 "identifier": "validateConfig",
                 "newPage": false,
                 "searchKey": "httpheader.validateConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,12 +327,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#init",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#init.config_watch.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.config_watch.go",
                 "newPage": false,
                 "searchKey": "httpheader.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -326,7 +354,9 @@
                 "identifier": "middleware",
                 "newPage": false,
                 "searchKey": "httpheader.middleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -346,7 +376,9 @@
                 "identifier": "TestValidateCustom",
                 "newPage": false,
                 "searchKey": "httpheader.TestValidateCustom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -366,7 +398,9 @@
                 "identifier": "TestMiddleware",
                 "newPage": false,
                 "searchKey": "httpheader.TestMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -386,7 +420,9 @@
                 "identifier": "TestMiddleware_stripPrefix",
                 "newPage": false,
                 "searchKey": "httpheader.TestMiddleware_stripPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

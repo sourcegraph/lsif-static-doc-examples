@@ -21,11 +21,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Repo" href="#Repo">type Repo struct</a>
 
 ```
 searchKey: gitolite.Repo
-tags: [exported]
 ```
 
 ```Go
@@ -44,7 +47,6 @@ Repo is the repository metadata returned by the Gitolite API.
 
 ```
 searchKey: gitolite.Client
-tags: [exported]
 ```
 
 ```Go
@@ -63,7 +65,6 @@ Impl note: To change the above, remove the invocation of the `ssh` binary and re
 
 ```
 searchKey: gitolite.NewClient
-tags: [exported]
 ```
 
 ```Go
@@ -74,7 +75,6 @@ func NewClient(host string) *Client
 
 ```
 searchKey: gitolite.Client.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -85,6 +85,7 @@ func (c *Client) ListRepos(ctx context.Context) ([]*Repo, error)
 
 ```
 searchKey: gitolite.errUnauthorized
+tags: [private]
 ```
 
 ```Go
@@ -97,6 +98,7 @@ type errUnauthorized struct {
 
 ```
 searchKey: gitolite.errUnauthorized.Unauthorized
+tags: [private]
 ```
 
 ```Go
@@ -105,11 +107,14 @@ func (*errUnauthorized) Unauthorized() bool
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExternalRepoSpec" href="#ExternalRepoSpec">func ExternalRepoSpec(repo *Repo, serviceID string) api.ExternalRepoSpec</a>
 
 ```
 searchKey: gitolite.ExternalRepoSpec
-tags: [exported]
 ```
 
 ```Go
@@ -120,7 +125,6 @@ func ExternalRepoSpec(repo *Repo, serviceID string) api.ExternalRepoSpec
 
 ```
 searchKey: gitolite.ServiceID
-tags: [exported]
 ```
 
 ```Go
@@ -131,7 +135,6 @@ func ServiceID(gitoliteHost string) string
 
 ```
 searchKey: gitolite.CloneURL
-tags: [exported]
 ```
 
 ```Go
@@ -144,6 +147,7 @@ CloneURL returns the clone URL of the external repository. The external repo spe
 
 ```
 searchKey: gitolite.decodeRepos
+tags: [private]
 ```
 
 ```Go
@@ -154,6 +158,7 @@ func decodeRepos(host, gitoliteInfo string) []*Repo
 
 ```
 searchKey: gitolite.maybeUnauthorized
+tags: [private]
 ```
 
 ```Go
@@ -166,6 +171,7 @@ newErrUnauthorized will return an errUnauthorized wrapping err if there is permi
 
 ```
 searchKey: gitolite.TestDecodeRepos
+tags: [private]
 ```
 
 ```Go
@@ -176,6 +182,7 @@ func TestDecodeRepos(t *testing.T)
 
 ```
 searchKey: gitolite.TestMaybeUnauthorized
+tags: [private]
 ```
 
 ```Go

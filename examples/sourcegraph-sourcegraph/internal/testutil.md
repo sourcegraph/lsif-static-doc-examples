@@ -23,10 +23,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="gzipReadCloser" href="#gzipReadCloser">type gzipReadCloser struct</a>
 
 ```
 searchKey: testutil.gzipReadCloser
+tags: [private]
 ```
 
 ```Go
@@ -40,6 +45,7 @@ type gzipReadCloser struct {
 
 ```
 searchKey: testutil.gzipReadCloser.Read
+tags: [private]
 ```
 
 ```Go
@@ -50,6 +56,7 @@ func (z *gzipReadCloser) Read(p []byte) (int, error)
 
 ```
 searchKey: testutil.gzipReadCloser.Close
+tags: [private]
 ```
 
 ```Go
@@ -58,11 +65,14 @@ func (z *gzipReadCloser) Close() error
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Diff" href="#Diff">func Diff(b1, b2 string) (string, error)</a>
 
 ```
 searchKey: testutil.Diff
-tags: [exported]
 ```
 
 ```Go
@@ -73,7 +83,6 @@ func Diff(b1, b2 string) (string, error)
 
 ```
 searchKey: testutil.FetchTarFromGithub
-tags: [exported]
 ```
 
 ```Go
@@ -84,6 +93,7 @@ func FetchTarFromGithub(ctx context.Context, repo api.RepoName, commit api.Commi
 
 ```
 searchKey: testutil.openGzipReader
+tags: [private]
 ```
 
 ```Go
@@ -94,6 +104,7 @@ func openGzipReader(name string) (io.ReadCloser, error)
 
 ```
 searchKey: testutil.fsync
+tags: [private]
 ```
 
 ```Go
@@ -104,7 +115,6 @@ func fsync(path string) error
 
 ```
 searchKey: testutil.AssertGolden
-tags: [exported]
 ```
 
 ```Go
@@ -115,6 +125,7 @@ func AssertGolden(t testing.TB, path string, update bool, want interface{})
 
 ```
 searchKey: testutil.marshal
+tags: [private]
 ```
 
 ```Go
@@ -125,7 +136,6 @@ func marshal(t testing.TB, v interface{}) []byte
 
 ```
 searchKey: testutil.NewStore
-tags: [exported]
 ```
 
 ```Go
@@ -136,6 +146,7 @@ func NewStore(files map[string]string) (*store.Store, func(), error)
 
 ```
 searchKey: testutil.addpaxheader
+tags: [private]
 ```
 
 ```Go
@@ -146,7 +157,6 @@ func addpaxheader(w *tar.Writer, body string) error
 
 ```
 searchKey: testutil.CreateZip
-tags: [exported]
 ```
 
 ```Go
@@ -157,7 +167,6 @@ func CreateZip(files map[string]string) ([]byte, error)
 
 ```
 searchKey: testutil.MockZipFile
-tags: [exported]
 ```
 
 ```Go
@@ -168,7 +177,6 @@ func MockZipFile(data []byte) (*store.ZipFile, error)
 
 ```
 searchKey: testutil.TempZipFromFiles
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +187,6 @@ func TempZipFromFiles(files map[string]string) (path string, cleanup func(), err
 
 ```
 searchKey: testutil.TempZipFileOnDisk
-tags: [exported]
 ```
 
 ```Go

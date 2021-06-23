@@ -297,10 +297,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="intCount" href="#intCount">const intCount</a>
 
 ```
 searchKey: fmt_test.intCount
+tags: [private]
 ```
 
 ```Go
@@ -311,10 +316,15 @@ const intCount = 800
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NaN" href="#NaN">var NaN</a>
 
 ```
 searchKey: fmt_test.NaN
+tags: [private]
 ```
 
 ```Go
@@ -325,6 +335,7 @@ var NaN = math.NaN()
 
 ```
 searchKey: fmt_test.posInf
+tags: [private]
 ```
 
 ```Go
@@ -335,6 +346,7 @@ var posInf = math.Inf(1)
 
 ```
 searchKey: fmt_test.negInf
+tags: [private]
 ```
 
 ```Go
@@ -345,6 +357,7 @@ var negInf = math.Inf(-1)
 
 ```
 searchKey: fmt_test.intVar
+tags: [private]
 ```
 
 ```Go
@@ -355,6 +368,7 @@ var intVar = 0
 
 ```
 searchKey: fmt_test.array
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +379,7 @@ var array = [5]int{1, 2, 3, 4, 5}
 
 ```
 searchKey: fmt_test.iarray
+tags: [private]
 ```
 
 ```Go
@@ -375,6 +390,7 @@ var iarray = [4]interface{}{1, "hello", 2.5, nil}
 
 ```
 searchKey: fmt_test.slice
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +401,7 @@ var slice = array[:]
 
 ```
 searchKey: fmt_test.islice
+tags: [private]
 ```
 
 ```Go
@@ -395,6 +412,7 @@ var islice = iarray[:]
 
 ```
 searchKey: fmt_test.pValue
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +423,7 @@ var pValue P
 
 ```
 searchKey: fmt_test.barray
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +434,7 @@ var barray = [5]renamedUint8{1, 2, 3, 4, 5}
 
 ```
 searchKey: fmt_test.bslice
+tags: [private]
 ```
 
 ```Go
@@ -425,6 +445,7 @@ var bslice = barray[:]
 
 ```
 searchKey: fmt_test.byteStringerSlice
+tags: [private]
 ```
 
 ```Go
@@ -435,6 +456,7 @@ var byteStringerSlice = []byteStringer{'h', 'e', 'l', 'l', 'o'}
 
 ```
 searchKey: fmt_test.byteFormatterSlice
+tags: [private]
 ```
 
 ```Go
@@ -445,6 +467,7 @@ var byteFormatterSlice = []byteFormatter{'h', 'e', 'l', 'l', 'o'}
 
 ```
 searchKey: fmt_test.fmtTests
+tags: [private]
 ```
 
 ```Go
@@ -455,6 +478,7 @@ var fmtTests = ...
 
 ```
 searchKey: fmt_test.reorderTests
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +489,7 @@ var reorderTests = ...
 
 ```
 searchKey: fmt_test.mallocBuf
+tags: [private]
 ```
 
 ```Go
@@ -475,6 +500,7 @@ var mallocBuf bytes.Buffer
 
 ```
 searchKey: fmt_test.mallocPointer
+tags: [private]
 ```
 
 ```Go
@@ -486,6 +512,7 @@ var mallocPointer *int // A pointer so we know the interface value won't allocat
 
 ```
 searchKey: fmt_test.mallocTest
+tags: [private]
 ```
 
 ```Go
@@ -496,6 +523,7 @@ var mallocTest = ...
 
 ```
 searchKey: fmt_test.flagtests
+tags: [private]
 ```
 
 ```Go
@@ -506,6 +534,7 @@ var flagtests = ...
 
 ```
 searchKey: fmt_test.startests
+tags: [private]
 ```
 
 ```Go
@@ -516,6 +545,7 @@ var startests = ...
 
 ```
 searchKey: fmt_test.panictests
+tags: [private]
 ```
 
 ```Go
@@ -526,6 +556,7 @@ var panictests = ...
 
 ```
 searchKey: fmt_test.recurCount
+tags: [private]
 ```
 
 ```Go
@@ -538,6 +569,7 @@ recurCount tests that erroneous String routine doesn't cause fatal recursion.
 
 ```
 searchKey: fmt_test.formatterFlagTests
+tags: [private]
 ```
 
 ```Go
@@ -548,6 +580,7 @@ var formatterFlagTests = ...
 
 ```
 searchKey: fmt_test.boolVal
+tags: [private]
 ```
 
 ```Go
@@ -558,6 +591,7 @@ var boolVal bool
 
 ```
 searchKey: fmt_test.intVal
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +602,7 @@ var intVal int
 
 ```
 searchKey: fmt_test.int8Val
+tags: [private]
 ```
 
 ```Go
@@ -578,6 +613,7 @@ var int8Val int8
 
 ```
 searchKey: fmt_test.int16Val
+tags: [private]
 ```
 
 ```Go
@@ -588,6 +624,7 @@ var int16Val int16
 
 ```
 searchKey: fmt_test.int32Val
+tags: [private]
 ```
 
 ```Go
@@ -598,6 +635,7 @@ var int32Val int32
 
 ```
 searchKey: fmt_test.int64Val
+tags: [private]
 ```
 
 ```Go
@@ -608,6 +646,7 @@ var int64Val int64
 
 ```
 searchKey: fmt_test.uintVal
+tags: [private]
 ```
 
 ```Go
@@ -618,6 +657,7 @@ var uintVal uint
 
 ```
 searchKey: fmt_test.uint8Val
+tags: [private]
 ```
 
 ```Go
@@ -628,6 +668,7 @@ var uint8Val uint8
 
 ```
 searchKey: fmt_test.uint16Val
+tags: [private]
 ```
 
 ```Go
@@ -638,6 +679,7 @@ var uint16Val uint16
 
 ```
 searchKey: fmt_test.uint32Val
+tags: [private]
 ```
 
 ```Go
@@ -648,6 +690,7 @@ var uint32Val uint32
 
 ```
 searchKey: fmt_test.uint64Val
+tags: [private]
 ```
 
 ```Go
@@ -658,6 +701,7 @@ var uint64Val uint64
 
 ```
 searchKey: fmt_test.float32Val
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +712,7 @@ var float32Val float32
 
 ```
 searchKey: fmt_test.float64Val
+tags: [private]
 ```
 
 ```Go
@@ -678,6 +723,7 @@ var float64Val float64
 
 ```
 searchKey: fmt_test.stringVal
+tags: [private]
 ```
 
 ```Go
@@ -688,6 +734,7 @@ var stringVal string
 
 ```
 searchKey: fmt_test.bytesVal
+tags: [private]
 ```
 
 ```Go
@@ -698,6 +745,7 @@ var bytesVal []byte
 
 ```
 searchKey: fmt_test.runeVal
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +756,7 @@ var runeVal rune
 
 ```
 searchKey: fmt_test.complex64Val
+tags: [private]
 ```
 
 ```Go
@@ -718,6 +767,7 @@ var complex64Val complex64
 
 ```
 searchKey: fmt_test.complex128Val
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +778,7 @@ var complex128Val complex128
 
 ```
 searchKey: fmt_test.renamedBoolVal
+tags: [private]
 ```
 
 ```Go
@@ -738,6 +789,7 @@ var renamedBoolVal renamedBool
 
 ```
 searchKey: fmt_test.renamedIntVal
+tags: [private]
 ```
 
 ```Go
@@ -748,6 +800,7 @@ var renamedIntVal renamedInt
 
 ```
 searchKey: fmt_test.renamedInt8Val
+tags: [private]
 ```
 
 ```Go
@@ -758,6 +811,7 @@ var renamedInt8Val renamedInt8
 
 ```
 searchKey: fmt_test.renamedInt16Val
+tags: [private]
 ```
 
 ```Go
@@ -768,6 +822,7 @@ var renamedInt16Val renamedInt16
 
 ```
 searchKey: fmt_test.renamedInt32Val
+tags: [private]
 ```
 
 ```Go
@@ -778,6 +833,7 @@ var renamedInt32Val renamedInt32
 
 ```
 searchKey: fmt_test.renamedInt64Val
+tags: [private]
 ```
 
 ```Go
@@ -788,6 +844,7 @@ var renamedInt64Val renamedInt64
 
 ```
 searchKey: fmt_test.renamedUintVal
+tags: [private]
 ```
 
 ```Go
@@ -798,6 +855,7 @@ var renamedUintVal renamedUint
 
 ```
 searchKey: fmt_test.renamedUint8Val
+tags: [private]
 ```
 
 ```Go
@@ -808,6 +866,7 @@ var renamedUint8Val renamedUint8
 
 ```
 searchKey: fmt_test.renamedUint16Val
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +877,7 @@ var renamedUint16Val renamedUint16
 
 ```
 searchKey: fmt_test.renamedUint32Val
+tags: [private]
 ```
 
 ```Go
@@ -828,6 +888,7 @@ var renamedUint32Val renamedUint32
 
 ```
 searchKey: fmt_test.renamedUint64Val
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +899,7 @@ var renamedUint64Val renamedUint64
 
 ```
 searchKey: fmt_test.renamedUintptrVal
+tags: [private]
 ```
 
 ```Go
@@ -848,6 +910,7 @@ var renamedUintptrVal renamedUintptr
 
 ```
 searchKey: fmt_test.renamedStringVal
+tags: [private]
 ```
 
 ```Go
@@ -858,6 +921,7 @@ var renamedStringVal renamedString
 
 ```
 searchKey: fmt_test.renamedBytesVal
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +932,7 @@ var renamedBytesVal renamedBytes
 
 ```
 searchKey: fmt_test.renamedFloat32Val
+tags: [private]
 ```
 
 ```Go
@@ -878,6 +943,7 @@ var renamedFloat32Val renamedFloat32
 
 ```
 searchKey: fmt_test.renamedFloat64Val
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +954,7 @@ var renamedFloat64Val renamedFloat64
 
 ```
 searchKey: fmt_test.renamedComplex64Val
+tags: [private]
 ```
 
 ```Go
@@ -898,6 +965,7 @@ var renamedComplex64Val renamedComplex64
 
 ```
 searchKey: fmt_test.renamedComplex128Val
+tags: [private]
 ```
 
 ```Go
@@ -908,6 +976,7 @@ var renamedComplex128Val renamedComplex128
 
 ```
 searchKey: fmt_test.xVal
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +987,7 @@ var xVal Xs
 
 ```
 searchKey: fmt_test.intStringVal
+tags: [private]
 ```
 
 ```Go
@@ -928,6 +998,7 @@ var intStringVal IntString
 
 ```
 searchKey: fmt_test.scanTests
+tags: [private]
 ```
 
 ```Go
@@ -938,6 +1009,7 @@ var scanTests = ...
 
 ```
 searchKey: fmt_test.scanfTests
+tags: [private]
 ```
 
 ```Go
@@ -948,6 +1020,7 @@ var scanfTests = ...
 
 ```
 searchKey: fmt_test.overflowTests
+tags: [private]
 ```
 
 ```Go
@@ -958,6 +1031,7 @@ var overflowTests = ...
 
 ```
 searchKey: fmt_test.truth
+tags: [private]
 ```
 
 ```Go
@@ -968,6 +1042,7 @@ var truth bool
 
 ```
 searchKey: fmt_test.i
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1053,7 @@ var i, j, k int
 
 ```
 searchKey: fmt_test.j
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +1064,7 @@ var i, j, k int
 
 ```
 searchKey: fmt_test.k
+tags: [private]
 ```
 
 ```Go
@@ -998,6 +1075,7 @@ var i, j, k int
 
 ```
 searchKey: fmt_test.f
+tags: [private]
 ```
 
 ```Go
@@ -1008,6 +1086,7 @@ var f float64
 
 ```
 searchKey: fmt_test.s
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1097,7 @@ var s, t string
 
 ```
 searchKey: fmt_test.t
+tags: [private]
 ```
 
 ```Go
@@ -1028,6 +1108,7 @@ var s, t string
 
 ```
 searchKey: fmt_test.c
+tags: [private]
 ```
 
 ```Go
@@ -1038,6 +1119,7 @@ var c complex128
 
 ```
 searchKey: fmt_test.x
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1130,7 @@ var x, y Xs
 
 ```
 searchKey: fmt_test.y
+tags: [private]
 ```
 
 ```Go
@@ -1058,6 +1141,7 @@ var x, y Xs
 
 ```
 searchKey: fmt_test.z
+tags: [private]
 ```
 
 ```Go
@@ -1068,6 +1152,7 @@ var z IntString
 
 ```
 searchKey: fmt_test.r1
+tags: [private]
 ```
 
 ```Go
@@ -1078,6 +1163,7 @@ var r1, r2, r3 rune
 
 ```
 searchKey: fmt_test.r2
+tags: [private]
 ```
 
 ```Go
@@ -1088,6 +1174,7 @@ var r1, r2, r3 rune
 
 ```
 searchKey: fmt_test.r3
+tags: [private]
 ```
 
 ```Go
@@ -1098,6 +1185,7 @@ var r1, r2, r3 rune
 
 ```
 searchKey: fmt_test.multiTests
+tags: [private]
 ```
 
 ```Go
@@ -1108,6 +1196,7 @@ var multiTests = ...
 
 ```
 searchKey: fmt_test.readers
+tags: [private]
 ```
 
 ```Go
@@ -1118,6 +1207,7 @@ var readers = ...
 
 ```
 searchKey: fmt_test.eofTests
+tags: [private]
 ```
 
 ```Go
@@ -1126,10 +1216,15 @@ var eofTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="errString" href="#errString">type errString string</a>
 
 ```
 searchKey: fmt_test.errString
+tags: [private]
 ```
 
 ```Go
@@ -1140,6 +1235,7 @@ type errString string
 
 ```
 searchKey: fmt_test.errString.Error
+tags: [private]
 ```
 
 ```Go
@@ -1150,6 +1246,7 @@ func (e errString) Error() string
 
 ```
 searchKey: fmt_test.renamedBool
+tags: [private]
 ```
 
 ```Go
@@ -1160,6 +1257,7 @@ type renamedBool bool
 
 ```
 searchKey: fmt_test.renamedInt
+tags: [private]
 ```
 
 ```Go
@@ -1170,6 +1268,7 @@ type renamedInt int
 
 ```
 searchKey: fmt_test.renamedInt8
+tags: [private]
 ```
 
 ```Go
@@ -1180,6 +1279,7 @@ type renamedInt8 int8
 
 ```
 searchKey: fmt_test.renamedInt16
+tags: [private]
 ```
 
 ```Go
@@ -1190,6 +1290,7 @@ type renamedInt16 int16
 
 ```
 searchKey: fmt_test.renamedInt32
+tags: [private]
 ```
 
 ```Go
@@ -1200,6 +1301,7 @@ type renamedInt32 int32
 
 ```
 searchKey: fmt_test.renamedInt64
+tags: [private]
 ```
 
 ```Go
@@ -1210,6 +1312,7 @@ type renamedInt64 int64
 
 ```
 searchKey: fmt_test.renamedUint
+tags: [private]
 ```
 
 ```Go
@@ -1220,6 +1323,7 @@ type renamedUint uint
 
 ```
 searchKey: fmt_test.renamedUint8
+tags: [private]
 ```
 
 ```Go
@@ -1230,6 +1334,7 @@ type renamedUint8 uint8
 
 ```
 searchKey: fmt_test.renamedUint16
+tags: [private]
 ```
 
 ```Go
@@ -1240,6 +1345,7 @@ type renamedUint16 uint16
 
 ```
 searchKey: fmt_test.renamedUint32
+tags: [private]
 ```
 
 ```Go
@@ -1250,6 +1356,7 @@ type renamedUint32 uint32
 
 ```
 searchKey: fmt_test.renamedUint64
+tags: [private]
 ```
 
 ```Go
@@ -1260,6 +1367,7 @@ type renamedUint64 uint64
 
 ```
 searchKey: fmt_test.renamedUintptr
+tags: [private]
 ```
 
 ```Go
@@ -1270,6 +1378,7 @@ type renamedUintptr uintptr
 
 ```
 searchKey: fmt_test.renamedString
+tags: [private]
 ```
 
 ```Go
@@ -1280,6 +1389,7 @@ type renamedString string
 
 ```
 searchKey: fmt_test.renamedBytes
+tags: [private]
 ```
 
 ```Go
@@ -1290,6 +1400,7 @@ type renamedBytes []byte
 
 ```
 searchKey: fmt_test.renamedFloat32
+tags: [private]
 ```
 
 ```Go
@@ -1300,6 +1411,7 @@ type renamedFloat32 float32
 
 ```
 searchKey: fmt_test.renamedFloat64
+tags: [private]
 ```
 
 ```Go
@@ -1310,6 +1422,7 @@ type renamedFloat64 float64
 
 ```
 searchKey: fmt_test.renamedComplex64
+tags: [private]
 ```
 
 ```Go
@@ -1320,6 +1433,7 @@ type renamedComplex64 complex64
 
 ```
 searchKey: fmt_test.renamedComplex128
+tags: [private]
 ```
 
 ```Go
@@ -1330,6 +1444,7 @@ type renamedComplex128 complex128
 
 ```
 searchKey: fmt_test.A
+tags: [private]
 ```
 
 ```Go
@@ -1345,6 +1460,7 @@ type A struct {
 
 ```
 searchKey: fmt_test.I
+tags: [private]
 ```
 
 ```Go
@@ -1355,6 +1471,7 @@ type I int
 
 ```
 searchKey: fmt_test.I.String
+tags: [private]
 ```
 
 ```Go
@@ -1365,6 +1482,7 @@ func (i I) String() string
 
 ```
 searchKey: fmt_test.B
+tags: [private]
 ```
 
 ```Go
@@ -1378,6 +1496,7 @@ type B struct {
 
 ```
 searchKey: fmt_test.C
+tags: [private]
 ```
 
 ```Go
@@ -1391,6 +1510,7 @@ type C struct {
 
 ```
 searchKey: fmt_test.F
+tags: [private]
 ```
 
 ```Go
@@ -1401,6 +1521,7 @@ type F int
 
 ```
 searchKey: fmt_test.F.Format
+tags: [private]
 ```
 
 ```Go
@@ -1411,6 +1532,7 @@ func (f F) Format(s State, c rune)
 
 ```
 searchKey: fmt_test.G
+tags: [private]
 ```
 
 ```Go
@@ -1421,6 +1543,7 @@ type G int
 
 ```
 searchKey: fmt_test.G.GoString
+tags: [private]
 ```
 
 ```Go
@@ -1431,6 +1554,7 @@ func (g G) GoString() string
 
 ```
 searchKey: fmt_test.S
+tags: [private]
 ```
 
 ```Go
@@ -1444,6 +1568,7 @@ type S struct {
 
 ```
 searchKey: fmt_test.SI
+tags: [private]
 ```
 
 ```Go
@@ -1456,6 +1581,7 @@ type SI struct {
 
 ```
 searchKey: fmt_test.P
+tags: [private]
 ```
 
 ```Go
@@ -1468,6 +1594,7 @@ P is a type with a String method with pointer receiver for testing %p.
 
 ```
 searchKey: fmt_test.P.String
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1605,7 @@ func (p *P) String() string
 
 ```
 searchKey: fmt_test.byteStringer
+tags: [private]
 ```
 
 ```Go
@@ -1488,6 +1616,7 @@ type byteStringer byte
 
 ```
 searchKey: fmt_test.byteStringer.String
+tags: [private]
 ```
 
 ```Go
@@ -1498,6 +1627,7 @@ func (byteStringer) String() string
 
 ```
 searchKey: fmt_test.byteFormatter
+tags: [private]
 ```
 
 ```Go
@@ -1508,6 +1638,7 @@ type byteFormatter byte
 
 ```
 searchKey: fmt_test.byteFormatter.Format
+tags: [private]
 ```
 
 ```Go
@@ -1518,6 +1649,7 @@ func (byteFormatter) Format(f State, _ rune)
 
 ```
 searchKey: fmt_test.writeStringFormatter
+tags: [private]
 ```
 
 ```Go
@@ -1528,6 +1660,7 @@ type writeStringFormatter string
 
 ```
 searchKey: fmt_test.writeStringFormatter.Format
+tags: [private]
 ```
 
 ```Go
@@ -1538,6 +1671,7 @@ func (sf writeStringFormatter) Format(f State, c rune)
 
 ```
 searchKey: fmt_test.SE
+tags: [private]
 ```
 
 ```Go
@@ -1549,6 +1683,7 @@ type SE []interface{} // slice of empty; notational compactness.
 
 ```
 searchKey: fmt_test.flagPrinter
+tags: [private]
 ```
 
 ```Go
@@ -1559,6 +1694,7 @@ type flagPrinter struct{}
 
 ```
 searchKey: fmt_test.flagPrinter.Format
+tags: [private]
 ```
 
 ```Go
@@ -1569,6 +1705,7 @@ func (flagPrinter) Format(f State, c rune)
 
 ```
 searchKey: fmt_test.PanicS
+tags: [private]
 ```
 
 ```Go
@@ -1583,6 +1720,7 @@ PanicS is a type that panics in String.
 
 ```
 searchKey: fmt_test.PanicS.String
+tags: [private]
 ```
 
 ```Go
@@ -1595,6 +1733,7 @@ Value receiver.
 
 ```
 searchKey: fmt_test.PanicGo
+tags: [private]
 ```
 
 ```Go
@@ -1609,6 +1748,7 @@ PanicGo is a type that panics in GoString.
 
 ```
 searchKey: fmt_test.PanicGo.GoString
+tags: [private]
 ```
 
 ```Go
@@ -1621,6 +1761,7 @@ Value receiver.
 
 ```
 searchKey: fmt_test.PanicF
+tags: [private]
 ```
 
 ```Go
@@ -1635,6 +1776,7 @@ PanicF is a type that panics in Format.
 
 ```
 searchKey: fmt_test.PanicF.Format
+tags: [private]
 ```
 
 ```Go
@@ -1647,6 +1789,7 @@ Value receiver.
 
 ```
 searchKey: fmt_test.Recur
+tags: [private]
 ```
 
 ```Go
@@ -1660,6 +1803,7 @@ type Recur struct {
 
 ```
 searchKey: fmt_test.Recur.String
+tags: [private]
 ```
 
 ```Go
@@ -1670,6 +1814,7 @@ func (r *Recur) String() string
 
 ```
 searchKey: fmt_test.Address
+tags: [private]
 ```
 
 ```Go
@@ -1686,6 +1831,7 @@ Address has a City, State and a Country.
 
 ```
 searchKey: fmt_test.Person
+tags: [private]
 ```
 
 ```Go
@@ -1702,6 +1848,7 @@ Person has a Name, Age and Address.
 
 ```
 searchKey: fmt_test.Person.GoString
+tags: [private]
 ```
 
 ```Go
@@ -1714,6 +1861,7 @@ GoString makes Person satisfy the GoStringer interface. The return value is vali
 
 ```
 searchKey: fmt_test.ScanTest
+tags: [private]
 ```
 
 ```Go
@@ -1728,6 +1876,7 @@ type ScanTest struct {
 
 ```
 searchKey: fmt_test.ScanfTest
+tags: [private]
 ```
 
 ```Go
@@ -1743,6 +1892,7 @@ type ScanfTest struct {
 
 ```
 searchKey: fmt_test.ScanfMultiTest
+tags: [private]
 ```
 
 ```Go
@@ -1759,6 +1909,7 @@ type ScanfMultiTest struct {
 
 ```
 searchKey: fmt_test.Xs
+tags: [private]
 ```
 
 ```Go
@@ -1771,6 +1922,7 @@ Xs accepts any non-empty run of the verb character
 
 ```
 searchKey: fmt_test.Xs.Scan
+tags: [private]
 ```
 
 ```Go
@@ -1781,6 +1933,7 @@ func (x *Xs) Scan(state ScanState, verb rune) error
 
 ```
 searchKey: fmt_test.IntString
+tags: [private]
 ```
 
 ```Go
@@ -1796,6 +1949,7 @@ IntString accepts an integer followed immediately by a string. It tests the embe
 
 ```
 searchKey: fmt_test.IntString.Scan
+tags: [private]
 ```
 
 ```Go
@@ -1806,6 +1960,7 @@ func (s *IntString) Scan(state ScanState, verb rune) error
 
 ```
 searchKey: fmt_test.eofCounter
+tags: [private]
 ```
 
 ```Go
@@ -1821,6 +1976,7 @@ eofCounter is a special Reader that counts reads at end of file.
 
 ```
 searchKey: fmt_test.eofCounter.Read
+tags: [private]
 ```
 
 ```Go
@@ -1831,6 +1987,7 @@ func (ec *eofCounter) Read(b []byte) (n int, err error)
 
 ```
 searchKey: fmt_test.TwoLines
+tags: [private]
 ```
 
 ```Go
@@ -1841,6 +1998,7 @@ type TwoLines string
 
 ```
 searchKey: fmt_test.TwoLines.Scan
+tags: [private]
 ```
 
 ```Go
@@ -1853,6 +2011,7 @@ Scan attempts to read two lines into the object. Scanln should prevent this beca
 
 ```
 searchKey: fmt_test.runeScanner
+tags: [private]
 ```
 
 ```Go
@@ -1868,6 +2027,7 @@ runeScanner implements the Scanner interface for TestScanStateCount.
 
 ```
 searchKey: fmt_test.runeScanner.Scan
+tags: [private]
 ```
 
 ```Go
@@ -1878,6 +2038,7 @@ func (rs *runeScanner) Scan(state ScanState, verb rune) error
 
 ```
 searchKey: fmt_test.RecursiveInt
+tags: [private]
 ```
 
 ```Go
@@ -1893,6 +2054,7 @@ RecursiveInt accepts a string matching %d.%d.%d.... and parses it into a linked 
 
 ```
 searchKey: fmt_test.RecursiveInt.Scan
+tags: [private]
 ```
 
 ```Go
@@ -1903,6 +2065,7 @@ func (r *RecursiveInt) Scan(state ScanState, verb rune) (err error)
 
 ```
 searchKey: fmt_test.hexBytes
+tags: [private]
 ```
 
 ```Go
@@ -1913,6 +2076,7 @@ type hexBytes [2]byte
 
 ```
 searchKey: fmt_test.hexBytes.Scan
+tags: [private]
 ```
 
 ```Go
@@ -1923,6 +2087,7 @@ func (h *hexBytes) Scan(ss ScanState, verb rune) error
 
 ```
 searchKey: fmt_test.Animal
+tags: [private]
 ```
 
 ```Go
@@ -1938,6 +2103,7 @@ Animal has a Name and an Age to represent an animal.
 
 ```
 searchKey: fmt_test.Animal.String
+tags: [private]
 ```
 
 ```Go
@@ -1950,6 +2116,7 @@ String makes Animal satisfy the Stringer interface.
 
 ```
 searchKey: fmt_test.TI
+tags: [private]
 ```
 
 ```Go
@@ -1960,6 +2127,7 @@ type TI int
 
 ```
 searchKey: fmt_test.TI.String
+tags: [private]
 ```
 
 ```Go
@@ -1970,6 +2138,7 @@ func (v TI) String() string
 
 ```
 searchKey: fmt_test.TI8
+tags: [private]
 ```
 
 ```Go
@@ -1980,6 +2149,7 @@ type TI8 int8
 
 ```
 searchKey: fmt_test.TI8.String
+tags: [private]
 ```
 
 ```Go
@@ -1990,6 +2160,7 @@ func (v TI8) String() string
 
 ```
 searchKey: fmt_test.TI16
+tags: [private]
 ```
 
 ```Go
@@ -2000,6 +2171,7 @@ type TI16 int16
 
 ```
 searchKey: fmt_test.TI16.String
+tags: [private]
 ```
 
 ```Go
@@ -2010,6 +2182,7 @@ func (v TI16) String() string
 
 ```
 searchKey: fmt_test.TI32
+tags: [private]
 ```
 
 ```Go
@@ -2020,6 +2193,7 @@ type TI32 int32
 
 ```
 searchKey: fmt_test.TI32.String
+tags: [private]
 ```
 
 ```Go
@@ -2030,6 +2204,7 @@ func (v TI32) String() string
 
 ```
 searchKey: fmt_test.TI64
+tags: [private]
 ```
 
 ```Go
@@ -2040,6 +2215,7 @@ type TI64 int64
 
 ```
 searchKey: fmt_test.TI64.String
+tags: [private]
 ```
 
 ```Go
@@ -2050,6 +2226,7 @@ func (v TI64) String() string
 
 ```
 searchKey: fmt_test.TU
+tags: [private]
 ```
 
 ```Go
@@ -2060,6 +2237,7 @@ type TU uint
 
 ```
 searchKey: fmt_test.TU.String
+tags: [private]
 ```
 
 ```Go
@@ -2070,6 +2248,7 @@ func (v TU) String() string
 
 ```
 searchKey: fmt_test.TU8
+tags: [private]
 ```
 
 ```Go
@@ -2080,6 +2259,7 @@ type TU8 uint8
 
 ```
 searchKey: fmt_test.TU8.String
+tags: [private]
 ```
 
 ```Go
@@ -2090,6 +2270,7 @@ func (v TU8) String() string
 
 ```
 searchKey: fmt_test.TU16
+tags: [private]
 ```
 
 ```Go
@@ -2100,6 +2281,7 @@ type TU16 uint16
 
 ```
 searchKey: fmt_test.TU16.String
+tags: [private]
 ```
 
 ```Go
@@ -2110,6 +2292,7 @@ func (v TU16) String() string
 
 ```
 searchKey: fmt_test.TU32
+tags: [private]
 ```
 
 ```Go
@@ -2120,6 +2303,7 @@ type TU32 uint32
 
 ```
 searchKey: fmt_test.TU32.String
+tags: [private]
 ```
 
 ```Go
@@ -2130,6 +2314,7 @@ func (v TU32) String() string
 
 ```
 searchKey: fmt_test.TU64
+tags: [private]
 ```
 
 ```Go
@@ -2140,6 +2325,7 @@ type TU64 uint64
 
 ```
 searchKey: fmt_test.TU64.String
+tags: [private]
 ```
 
 ```Go
@@ -2150,6 +2336,7 @@ func (v TU64) String() string
 
 ```
 searchKey: fmt_test.TUI
+tags: [private]
 ```
 
 ```Go
@@ -2160,6 +2347,7 @@ type TUI uintptr
 
 ```
 searchKey: fmt_test.TUI.String
+tags: [private]
 ```
 
 ```Go
@@ -2170,6 +2358,7 @@ func (v TUI) String() string
 
 ```
 searchKey: fmt_test.TF
+tags: [private]
 ```
 
 ```Go
@@ -2180,6 +2369,7 @@ type TF float64
 
 ```
 searchKey: fmt_test.TF.String
+tags: [private]
 ```
 
 ```Go
@@ -2190,6 +2380,7 @@ func (v TF) String() string
 
 ```
 searchKey: fmt_test.TF32
+tags: [private]
 ```
 
 ```Go
@@ -2200,6 +2391,7 @@ type TF32 float32
 
 ```
 searchKey: fmt_test.TF32.String
+tags: [private]
 ```
 
 ```Go
@@ -2210,6 +2402,7 @@ func (v TF32) String() string
 
 ```
 searchKey: fmt_test.TF64
+tags: [private]
 ```
 
 ```Go
@@ -2220,6 +2413,7 @@ type TF64 float64
 
 ```
 searchKey: fmt_test.TF64.String
+tags: [private]
 ```
 
 ```Go
@@ -2230,6 +2424,7 @@ func (v TF64) String() string
 
 ```
 searchKey: fmt_test.TB
+tags: [private]
 ```
 
 ```Go
@@ -2240,6 +2435,7 @@ type TB bool
 
 ```
 searchKey: fmt_test.TB.String
+tags: [private]
 ```
 
 ```Go
@@ -2250,6 +2446,7 @@ func (v TB) String() string
 
 ```
 searchKey: fmt_test.TS
+tags: [private]
 ```
 
 ```Go
@@ -2260,6 +2457,7 @@ type TS string
 
 ```
 searchKey: fmt_test.TS.String
+tags: [private]
 ```
 
 ```Go
@@ -2268,10 +2466,15 @@ func (v TS) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestErrorf" href="#TestErrorf">func TestErrorf(t *testing.T)</a>
 
 ```
 searchKey: fmt_test.TestErrorf
+tags: [private]
 ```
 
 ```Go
@@ -2282,6 +2485,7 @@ func TestErrorf(t *testing.T)
 
 ```
 searchKey: fmt_test.ExampleErrorf
+tags: [private]
 ```
 
 ```Go
@@ -2294,6 +2498,7 @@ The Errorf function lets us use formatting features to create descriptive error 
 
 ```
 searchKey: fmt_test.ExampleFscanf
+tags: [private]
 ```
 
 ```Go
@@ -2304,6 +2509,7 @@ func ExampleFscanf()
 
 ```
 searchKey: fmt_test.ExampleFscanln
+tags: [private]
 ```
 
 ```Go
@@ -2314,6 +2520,7 @@ func ExampleFscanln()
 
 ```
 searchKey: fmt_test.ExampleSscanf
+tags: [private]
 ```
 
 ```Go
@@ -2324,6 +2531,7 @@ func ExampleSscanf()
 
 ```
 searchKey: fmt_test.ExamplePrint
+tags: [private]
 ```
 
 ```Go
@@ -2334,6 +2542,7 @@ func ExamplePrint()
 
 ```
 searchKey: fmt_test.ExamplePrintln
+tags: [private]
 ```
 
 ```Go
@@ -2344,6 +2553,7 @@ func ExamplePrintln()
 
 ```
 searchKey: fmt_test.ExamplePrintf
+tags: [private]
 ```
 
 ```Go
@@ -2354,6 +2564,7 @@ func ExamplePrintf()
 
 ```
 searchKey: fmt_test.ExampleSprint
+tags: [private]
 ```
 
 ```Go
@@ -2364,6 +2575,7 @@ func ExampleSprint()
 
 ```
 searchKey: fmt_test.ExampleSprintln
+tags: [private]
 ```
 
 ```Go
@@ -2374,6 +2586,7 @@ func ExampleSprintln()
 
 ```
 searchKey: fmt_test.ExampleSprintf
+tags: [private]
 ```
 
 ```Go
@@ -2384,6 +2597,7 @@ func ExampleSprintf()
 
 ```
 searchKey: fmt_test.ExampleFprint
+tags: [private]
 ```
 
 ```Go
@@ -2394,6 +2608,7 @@ func ExampleFprint()
 
 ```
 searchKey: fmt_test.ExampleFprintln
+tags: [private]
 ```
 
 ```Go
@@ -2404,6 +2619,7 @@ func ExampleFprintln()
 
 ```
 searchKey: fmt_test.ExampleFprintf
+tags: [private]
 ```
 
 ```Go
@@ -2414,6 +2630,7 @@ func ExampleFprintf()
 
 ```
 searchKey: fmt_test.Example_printers
+tags: [private]
 ```
 
 ```Go
@@ -2426,6 +2643,7 @@ Print, Println, and Printf lay out their arguments differently. In this example 
 
 ```
 searchKey: fmt_test.Example_formats
+tags: [private]
 ```
 
 ```Go
@@ -2438,6 +2656,7 @@ These examples demonstrate the basics of printing using a format string. Printf,
 
 ```
 searchKey: fmt_test.TestFmtInterface
+tags: [private]
 ```
 
 ```Go
@@ -2448,6 +2667,7 @@ func TestFmtInterface(t *testing.T)
 
 ```
 searchKey: fmt_test.zeroFill
+tags: [private]
 ```
 
 ```Go
@@ -2460,6 +2680,7 @@ zeroFill generates zero-filled strings of the specified width. The length of the
 
 ```
 searchKey: fmt_test.TestSprintf
+tags: [private]
 ```
 
 ```Go
@@ -2470,6 +2691,7 @@ func TestSprintf(t *testing.T)
 
 ```
 searchKey: fmt_test.TestComplexFormatting
+tags: [private]
 ```
 
 ```Go
@@ -2482,6 +2704,7 @@ TestComplexFormatting checks that a complex always formats to the same thing as 
 
 ```
 searchKey: fmt_test.TestReorder
+tags: [private]
 ```
 
 ```Go
@@ -2492,6 +2715,7 @@ func TestReorder(t *testing.T)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfPadding
+tags: [private]
 ```
 
 ```Go
@@ -2502,6 +2726,7 @@ func BenchmarkSprintfPadding(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfEmpty
+tags: [private]
 ```
 
 ```Go
@@ -2512,6 +2737,7 @@ func BenchmarkSprintfEmpty(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfString
+tags: [private]
 ```
 
 ```Go
@@ -2522,6 +2748,7 @@ func BenchmarkSprintfString(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfTruncateString
+tags: [private]
 ```
 
 ```Go
@@ -2532,6 +2759,7 @@ func BenchmarkSprintfTruncateString(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfTruncateBytes
+tags: [private]
 ```
 
 ```Go
@@ -2542,6 +2770,7 @@ func BenchmarkSprintfTruncateBytes(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfSlowParsingPath
+tags: [private]
 ```
 
 ```Go
@@ -2552,6 +2781,7 @@ func BenchmarkSprintfSlowParsingPath(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfQuoteString
+tags: [private]
 ```
 
 ```Go
@@ -2562,6 +2792,7 @@ func BenchmarkSprintfQuoteString(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfInt
+tags: [private]
 ```
 
 ```Go
@@ -2572,6 +2803,7 @@ func BenchmarkSprintfInt(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfIntInt
+tags: [private]
 ```
 
 ```Go
@@ -2582,6 +2814,7 @@ func BenchmarkSprintfIntInt(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfPrefixedInt
+tags: [private]
 ```
 
 ```Go
@@ -2592,6 +2825,7 @@ func BenchmarkSprintfPrefixedInt(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfFloat
+tags: [private]
 ```
 
 ```Go
@@ -2602,6 +2836,7 @@ func BenchmarkSprintfFloat(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfComplex
+tags: [private]
 ```
 
 ```Go
@@ -2612,6 +2847,7 @@ func BenchmarkSprintfComplex(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfBoolean
+tags: [private]
 ```
 
 ```Go
@@ -2622,6 +2858,7 @@ func BenchmarkSprintfBoolean(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfHexString
+tags: [private]
 ```
 
 ```Go
@@ -2632,6 +2869,7 @@ func BenchmarkSprintfHexString(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfHexBytes
+tags: [private]
 ```
 
 ```Go
@@ -2642,6 +2880,7 @@ func BenchmarkSprintfHexBytes(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfBytes
+tags: [private]
 ```
 
 ```Go
@@ -2652,6 +2891,7 @@ func BenchmarkSprintfBytes(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfStringer
+tags: [private]
 ```
 
 ```Go
@@ -2662,6 +2902,7 @@ func BenchmarkSprintfStringer(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfStructure
+tags: [private]
 ```
 
 ```Go
@@ -2672,6 +2913,7 @@ func BenchmarkSprintfStructure(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkManyArgs
+tags: [private]
 ```
 
 ```Go
@@ -2682,6 +2924,7 @@ func BenchmarkManyArgs(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkFprintInt
+tags: [private]
 ```
 
 ```Go
@@ -2692,6 +2935,7 @@ func BenchmarkFprintInt(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkFprintfBytes
+tags: [private]
 ```
 
 ```Go
@@ -2702,6 +2946,7 @@ func BenchmarkFprintfBytes(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkFprintIntNoAlloc
+tags: [private]
 ```
 
 ```Go
@@ -2712,6 +2957,7 @@ func BenchmarkFprintIntNoAlloc(b *testing.B)
 
 ```
 searchKey: fmt_test.TestCountMallocs
+tags: [private]
 ```
 
 ```Go
@@ -2722,6 +2968,7 @@ func TestCountMallocs(t *testing.T)
 
 ```
 searchKey: fmt_test.TestFlagParser
+tags: [private]
 ```
 
 ```Go
@@ -2732,6 +2979,7 @@ func TestFlagParser(t *testing.T)
 
 ```
 searchKey: fmt_test.TestStructPrinter
+tags: [private]
 ```
 
 ```Go
@@ -2742,6 +2990,7 @@ func TestStructPrinter(t *testing.T)
 
 ```
 searchKey: fmt_test.TestSlicePrinter
+tags: [private]
 ```
 
 ```Go
@@ -2752,6 +3001,7 @@ func TestSlicePrinter(t *testing.T)
 
 ```
 searchKey: fmt_test.presentInMap
+tags: [private]
 ```
 
 ```Go
@@ -2764,6 +3014,7 @@ presentInMap checks map printing using substrings so we don't depend on the prin
 
 ```
 searchKey: fmt_test.TestMapPrinter
+tags: [private]
 ```
 
 ```Go
@@ -2774,6 +3025,7 @@ func TestMapPrinter(t *testing.T)
 
 ```
 searchKey: fmt_test.TestEmptyMap
+tags: [private]
 ```
 
 ```Go
@@ -2784,6 +3036,7 @@ func TestEmptyMap(t *testing.T)
 
 ```
 searchKey: fmt_test.TestBlank
+tags: [private]
 ```
 
 ```Go
@@ -2796,6 +3049,7 @@ TestBlank checks that Sprint (and hence Print, Fprint) puts spaces in the right 
 
 ```
 searchKey: fmt_test.TestBlankln
+tags: [private]
 ```
 
 ```Go
@@ -2808,6 +3062,7 @@ TestBlankln checks that Sprintln (and hence Println, Fprintln) puts spaces in th
 
 ```
 searchKey: fmt_test.TestFormatterPrintln
+tags: [private]
 ```
 
 ```Go
@@ -2820,6 +3075,7 @@ TestFormatterPrintln checks Formatter with Sprint, Sprintln, Sprintf.
 
 ```
 searchKey: fmt_test.args
+tags: [private]
 ```
 
 ```Go
@@ -2830,6 +3086,7 @@ func args(a ...interface{}) []interface{}
 
 ```
 searchKey: fmt_test.TestWidthAndPrecision
+tags: [private]
 ```
 
 ```Go
@@ -2840,6 +3097,7 @@ func TestWidthAndPrecision(t *testing.T)
 
 ```
 searchKey: fmt_test.TestPanics
+tags: [private]
 ```
 
 ```Go
@@ -2850,6 +3108,7 @@ func TestPanics(t *testing.T)
 
 ```
 searchKey: fmt_test.TestBadVerbRecursion
+tags: [private]
 ```
 
 ```Go
@@ -2860,6 +3119,7 @@ func TestBadVerbRecursion(t *testing.T)
 
 ```
 searchKey: fmt_test.TestIsSpace
+tags: [private]
 ```
 
 ```Go
@@ -2870,6 +3130,7 @@ func TestIsSpace(t *testing.T)
 
 ```
 searchKey: fmt_test.hideFromVet
+tags: [private]
 ```
 
 ```Go
@@ -2880,6 +3141,7 @@ func hideFromVet(s string) string
 
 ```
 searchKey: fmt_test.TestNilDoesNotBecomeTyped
+tags: [private]
 ```
 
 ```Go
@@ -2890,6 +3152,7 @@ func TestNilDoesNotBecomeTyped(t *testing.T)
 
 ```
 searchKey: fmt_test.TestFormatterFlags
+tags: [private]
 ```
 
 ```Go
@@ -2900,6 +3163,7 @@ func TestFormatterFlags(t *testing.T)
 
 ```
 searchKey: fmt_test.TestParsenum
+tags: [private]
 ```
 
 ```Go
@@ -2910,6 +3174,7 @@ func TestParsenum(t *testing.T)
 
 ```
 searchKey: fmt_test.ExampleGoStringer
+tags: [private]
 ```
 
 ```Go
@@ -2920,6 +3185,7 @@ func ExampleGoStringer()
 
 ```
 searchKey: fmt_test.testScan
+tags: [private]
 ```
 
 ```Go
@@ -2930,6 +3196,7 @@ func testScan(t *testing.T, f func(string) io.Reader, scan func(r io.Reader, a .
 
 ```
 searchKey: fmt_test.TestScan
+tags: [private]
 ```
 
 ```Go
@@ -2940,6 +3207,7 @@ func TestScan(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanln
+tags: [private]
 ```
 
 ```Go
@@ -2950,6 +3218,7 @@ func TestScanln(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanf
+tags: [private]
 ```
 
 ```Go
@@ -2960,6 +3229,7 @@ func TestScanf(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanOverflow
+tags: [private]
 ```
 
 ```Go
@@ -2970,6 +3240,7 @@ func TestScanOverflow(t *testing.T)
 
 ```
 searchKey: fmt_test.verifyNaN
+tags: [private]
 ```
 
 ```Go
@@ -2980,6 +3251,7 @@ func verifyNaN(str string, t *testing.T)
 
 ```
 searchKey: fmt_test.TestNaN
+tags: [private]
 ```
 
 ```Go
@@ -2990,6 +3262,7 @@ func TestNaN(t *testing.T)
 
 ```
 searchKey: fmt_test.verifyInf
+tags: [private]
 ```
 
 ```Go
@@ -3000,6 +3273,7 @@ func verifyInf(str string, t *testing.T)
 
 ```
 searchKey: fmt_test.TestInf
+tags: [private]
 ```
 
 ```Go
@@ -3010,6 +3284,7 @@ func TestInf(t *testing.T)
 
 ```
 searchKey: fmt_test.testScanfMulti
+tags: [private]
 ```
 
 ```Go
@@ -3020,6 +3295,7 @@ func testScanfMulti(t *testing.T, f func(string) io.Reader)
 
 ```
 searchKey: fmt_test.TestScanfMulti
+tags: [private]
 ```
 
 ```Go
@@ -3030,6 +3306,7 @@ func TestScanfMulti(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanMultiple
+tags: [private]
 ```
 
 ```Go
@@ -3040,6 +3317,7 @@ func TestScanMultiple(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanEmpty
+tags: [private]
 ```
 
 ```Go
@@ -3052,6 +3330,7 @@ Empty strings are not valid input when scanning a string.
 
 ```
 searchKey: fmt_test.TestScanNotPointer
+tags: [private]
 ```
 
 ```Go
@@ -3062,6 +3341,7 @@ func TestScanNotPointer(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanlnNoNewline
+tags: [private]
 ```
 
 ```Go
@@ -3072,6 +3352,7 @@ func TestScanlnNoNewline(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanlnWithMiddleNewline
+tags: [private]
 ```
 
 ```Go
@@ -3082,6 +3363,7 @@ func TestScanlnWithMiddleNewline(t *testing.T)
 
 ```
 searchKey: fmt_test.TestEOF
+tags: [private]
 ```
 
 ```Go
@@ -3094,6 +3376,7 @@ TestEOF verifies that when we scan, we see at most EOF once per call to a Scan f
 
 ```
 searchKey: fmt_test.TestEOFAtEndOfInput
+tags: [private]
 ```
 
 ```Go
@@ -3106,6 +3389,7 @@ TestEOFAtEndOfInput verifies that we see an EOF error if we run out of input. Th
 
 ```
 searchKey: fmt_test.TestEOFAllTypes
+tags: [private]
 ```
 
 ```Go
@@ -3116,6 +3400,7 @@ func TestEOFAllTypes(t *testing.T)
 
 ```
 searchKey: fmt_test.TestUnreadRuneWithBufio
+tags: [private]
 ```
 
 ```Go
@@ -3128,6 +3413,7 @@ TestUnreadRuneWithBufio verifies that, at least when using bufio, successive cal
 
 ```
 searchKey: fmt_test.TestMultiLine
+tags: [private]
 ```
 
 ```Go
@@ -3138,6 +3424,7 @@ func TestMultiLine(t *testing.T)
 
 ```
 searchKey: fmt_test.TestLineByLineFscanf
+tags: [private]
 ```
 
 ```Go
@@ -3150,6 +3437,7 @@ TestLineByLineFscanf tests that Fscanf does not read past newline. Issue 3481.
 
 ```
 searchKey: fmt_test.TestScanStateCount
+tags: [private]
 ```
 
 ```Go
@@ -3160,6 +3448,7 @@ func TestScanStateCount(t *testing.T)
 
 ```
 searchKey: fmt_test.scanInts
+tags: [private]
 ```
 
 ```Go
@@ -3172,6 +3461,7 @@ scanInts performs the same scanning task as RecursiveInt.Scan but without recurr
 
 ```
 searchKey: fmt_test.makeInts
+tags: [private]
 ```
 
 ```Go
@@ -3182,6 +3472,7 @@ func makeInts(n int) []byte
 
 ```
 searchKey: fmt_test.TestScanInts
+tags: [private]
 ```
 
 ```Go
@@ -3192,6 +3483,7 @@ func TestScanInts(t *testing.T)
 
 ```
 searchKey: fmt_test.testScanInts
+tags: [private]
 ```
 
 ```Go
@@ -3202,6 +3494,7 @@ func testScanInts(t *testing.T, scan func(*RecursiveInt, *bytes.Buffer) error)
 
 ```
 searchKey: fmt_test.BenchmarkScanInts
+tags: [private]
 ```
 
 ```Go
@@ -3212,6 +3505,7 @@ func BenchmarkScanInts(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkScanRecursiveInt
+tags: [private]
 ```
 
 ```Go
@@ -3222,6 +3516,7 @@ func BenchmarkScanRecursiveInt(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkScanRecursiveIntReaderWrapper
+tags: [private]
 ```
 
 ```Go
@@ -3232,6 +3527,7 @@ func BenchmarkScanRecursiveIntReaderWrapper(b *testing.B)
 
 ```
 searchKey: fmt_test.TestHexBytes
+tags: [private]
 ```
 
 ```Go
@@ -3244,6 +3540,7 @@ Issue 9124. %x on bytes couldn't handle non-space bytes terminating the scan.
 
 ```
 searchKey: fmt_test.TestScanNewlinesAreSpaces
+tags: [private]
 ```
 
 ```Go
@@ -3254,6 +3551,7 @@ func TestScanNewlinesAreSpaces(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanlnNewlinesTerminate
+tags: [private]
 ```
 
 ```Go
@@ -3264,6 +3562,7 @@ func TestScanlnNewlinesTerminate(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanfNewlineMatchFormat
+tags: [private]
 ```
 
 ```Go
@@ -3274,6 +3573,7 @@ func TestScanfNewlineMatchFormat(t *testing.T)
 
 ```
 searchKey: fmt_test.TestHexByte
+tags: [private]
 ```
 
 ```Go
@@ -3284,6 +3584,7 @@ func TestHexByte(t *testing.T)
 
 ```
 searchKey: fmt_test.ExampleStringer
+tags: [private]
 ```
 
 ```Go
@@ -3294,6 +3595,7 @@ func ExampleStringer()
 
 ```
 searchKey: fmt_test.check
+tags: [private]
 ```
 
 ```Go
@@ -3304,6 +3606,7 @@ func check(t *testing.T, got, want string)
 
 ```
 searchKey: fmt_test.TestStringer
+tags: [private]
 ```
 
 ```Go

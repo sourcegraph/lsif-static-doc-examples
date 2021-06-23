@@ -24,11 +24,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="FileInfo" href="#FileInfo">type FileInfo struct</a>
 
 ```
 searchKey: util.FileInfo
-tags: [exported]
 ```
 
 ```Go
@@ -47,7 +50,6 @@ FileInfo implements fs.FileInfo.
 
 ```
 searchKey: util.FileInfo.Name
-tags: [exported]
 ```
 
 ```Go
@@ -58,7 +60,6 @@ func (fi *FileInfo) Name() string
 
 ```
 searchKey: util.FileInfo.Size
-tags: [exported]
 ```
 
 ```Go
@@ -69,7 +70,6 @@ func (fi *FileInfo) Size() int64
 
 ```
 searchKey: util.FileInfo.Mode
-tags: [exported]
 ```
 
 ```Go
@@ -80,7 +80,6 @@ func (fi *FileInfo) Mode() os.FileMode
 
 ```
 searchKey: util.FileInfo.ModTime
-tags: [exported]
 ```
 
 ```Go
@@ -91,7 +90,6 @@ func (fi *FileInfo) ModTime() time.Time
 
 ```
 searchKey: util.FileInfo.IsDir
-tags: [exported]
 ```
 
 ```Go
@@ -102,7 +100,6 @@ func (fi *FileInfo) IsDir() bool
 
 ```
 searchKey: util.FileInfo.Sys
-tags: [exported]
 ```
 
 ```Go
@@ -113,6 +110,7 @@ func (fi *FileInfo) Sys() interface{}
 
 ```
 searchKey: util.fileInfosByName
+tags: [private]
 ```
 
 ```Go
@@ -123,6 +121,7 @@ type fileInfosByName []fs.FileInfo
 
 ```
 searchKey: util.fileInfosByName.Len
+tags: [private]
 ```
 
 ```Go
@@ -133,6 +132,7 @@ func (v fileInfosByName) Len() int
 
 ```
 searchKey: util.fileInfosByName.Less
+tags: [private]
 ```
 
 ```Go
@@ -143,6 +143,7 @@ func (v fileInfosByName) Less(i, j int) bool
 
 ```
 searchKey: util.fileInfosByName.Swap
+tags: [private]
 ```
 
 ```Go
@@ -151,11 +152,14 @@ func (v fileInfosByName) Swap(i, j int)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SortFileInfosByName" href="#SortFileInfosByName">func SortFileInfosByName(fis []fs.FileInfo)</a>
 
 ```
 searchKey: util.SortFileInfosByName
-tags: [exported]
 ```
 
 ```Go
@@ -168,7 +172,6 @@ SortFileInfosByName sorts fis by name, alphabetically.
 
 ```
 searchKey: util.Rel
-tags: [exported]
 ```
 
 ```Go
@@ -183,7 +186,6 @@ The elements in a file path are separated by slash ('/', U+002F) characters, reg
 
 ```
 searchKey: util.ScriptFile
-tags: [exported]
 ```
 
 ```Go
@@ -196,7 +198,6 @@ Constructs platform-specific temporary script file with a given prefix On Window
 
 ```
 searchKey: util.WriteFileWithPermissions
-tags: [exported]
 ```
 
 ```Go
@@ -209,6 +210,7 @@ Wrapper around os.WriteFile that updates permissions regardless if file existed 
 
 ```
 searchKey: util.TestScriptFile
+tags: [private]
 ```
 
 ```Go

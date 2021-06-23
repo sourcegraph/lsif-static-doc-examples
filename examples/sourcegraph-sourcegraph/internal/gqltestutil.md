@@ -113,11 +113,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SearchContextsOrderByUpdatedAt" href="#SearchContextsOrderByUpdatedAt">const SearchContextsOrderByUpdatedAt</a>
 
 ```
 searchKey: gqltestutil.SearchContextsOrderByUpdatedAt
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +131,6 @@ const SearchContextsOrderByUpdatedAt SearchContextsOrderBy = "SEARCH_CONTEXT_UPD
 
 ```
 searchKey: gqltestutil.SearchContextsOrderBySpec
-tags: [exported]
 ```
 
 ```Go
@@ -137,10 +139,15 @@ const SearchContextsOrderBySpec SearchContextsOrderBy = "SEARCH_CONTEXT_SPEC"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="graphqlQueryNameRe" href="#graphqlQueryNameRe">var graphqlQueryNameRe</a>
 
 ```
 searchKey: gqltestutil.graphqlQueryNameRe
+tags: [private]
 ```
 
 ```Go
@@ -151,7 +158,6 @@ var graphqlQueryNameRe = lazyregexp.New(`(query|mutation) +(\w)+`)
 
 ```
 searchKey: gqltestutil.ErrContinueRetry
-tags: [exported]
 ```
 
 ```Go
@@ -160,11 +166,14 @@ var ErrContinueRetry = errors.New("continue Retry")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: gqltestutil.Client
-tags: [exported]
 ```
 
 ```Go
@@ -184,7 +193,6 @@ Client is an authenticated client for a Sourcegraph user for doing e2e testing. 
 
 ```
 searchKey: gqltestutil.SiteAdminInit
-tags: [exported]
 ```
 
 ```Go
@@ -197,7 +205,6 @@ SiteAdminInit initializes the instance with given admin account. It returns an a
 
 ```
 searchKey: gqltestutil.SignUp
-tags: [exported]
 ```
 
 ```Go
@@ -210,7 +217,6 @@ SignUp signs up a new user with given credentials. It returns an authenticated c
 
 ```
 searchKey: gqltestutil.SignIn
-tags: [exported]
 ```
 
 ```Go
@@ -223,6 +229,7 @@ SignIn performs the sign in with given user credentials. It returns an authentic
 
 ```
 searchKey: gqltestutil.authenticate
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +242,7 @@ authenticate initializes an authenticated client with given request body.
 
 ```
 searchKey: gqltestutil.newClient
+tags: [private]
 ```
 
 ```Go
@@ -247,7 +255,6 @@ newClient instantiates a new client by performing a GET request then obtains the
 
 ```
 searchKey: gqltestutil.Client.CreateAccessToken
-tags: [exported]
 ```
 
 ```Go
@@ -260,7 +267,6 @@ CreateAccessToken creates a new access token with given note and scopes for the 
 
 ```
 searchKey: gqltestutil.Client.DeleteAccessToken
-tags: [exported]
 ```
 
 ```Go
@@ -273,6 +279,7 @@ DeleteAccessToken deletes the given access token of the authenticated user.
 
 ```
 searchKey: gqltestutil.Client.authenticate
+tags: [private]
 ```
 
 ```Go
@@ -285,7 +292,6 @@ authenticate is used to send a HTTP POST request to an URL that is able to authe
 
 ```
 searchKey: gqltestutil.Client.CurrentUserID
-tags: [exported]
 ```
 
 ```Go
@@ -298,7 +304,6 @@ CurrentUserID returns the current authenticated user's GraphQL node ID. An optio
 
 ```
 searchKey: gqltestutil.Client.AuthenticatedUserID
-tags: [exported]
 ```
 
 ```Go
@@ -311,7 +316,6 @@ AuthenticatedUserID returns the GraphQL node ID of current authenticated user.
 
 ```
 searchKey: gqltestutil.Client.GraphQL
-tags: [exported]
 ```
 
 ```Go
@@ -324,7 +328,6 @@ GraphQL makes a GraphQL request to the server on behalf of the user authenticate
 
 ```
 searchKey: gqltestutil.Client.Get
-tags: [exported]
 ```
 
 ```Go
@@ -337,7 +340,6 @@ Get performs a GET request to the URL with authenticated user.
 
 ```
 searchKey: gqltestutil.Client.Post
-tags: [exported]
 ```
 
 ```Go
@@ -350,6 +352,7 @@ Post performs a POST request to the URL with authenticated user.
 
 ```
 searchKey: gqltestutil.Client.addCookies
+tags: [private]
 ```
 
 ```Go
@@ -360,7 +363,6 @@ func (c *Client) addCookies(req *http.Request)
 
 ```
 searchKey: gqltestutil.Client.AddExternalService
-tags: [exported]
 ```
 
 ```Go
@@ -375,7 +377,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.DeleteExternalService
-tags: [exported]
 ```
 
 ```Go
@@ -390,7 +391,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.GitBlob
-tags: [exported]
 ```
 
 ```Go
@@ -403,7 +403,6 @@ GitBlob returns blob content of the file in given repository at given revision.
 
 ```
 searchKey: gqltestutil.Client.Organization
-tags: [exported]
 ```
 
 ```Go
@@ -416,7 +415,6 @@ Organization returns basic information of the given organization.
 
 ```
 searchKey: gqltestutil.Client.OrganizationMembers
-tags: [exported]
 ```
 
 ```Go
@@ -429,7 +427,6 @@ OrganizationMembers returns a list of members of the given organization.
 
 ```
 searchKey: gqltestutil.Client.InviteUserToOrganization
-tags: [exported]
 ```
 
 ```Go
@@ -442,7 +439,6 @@ InviteUserToOrganization invites a user to the given organization.
 
 ```
 searchKey: gqltestutil.Client.CreateOrganization
-tags: [exported]
 ```
 
 ```Go
@@ -455,7 +451,6 @@ CreateOrganization creates a new organization with given name and display name. 
 
 ```
 searchKey: gqltestutil.Client.UpdateOrganization
-tags: [exported]
 ```
 
 ```Go
@@ -468,7 +463,6 @@ UpdateOrganization updates display name of the given organization.
 
 ```
 searchKey: gqltestutil.Client.DeleteOrganization
-tags: [exported]
 ```
 
 ```Go
@@ -483,7 +477,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.RemoveUserFromOrganization
-tags: [exported]
 ```
 
 ```Go
@@ -496,7 +489,6 @@ RemoveUserFromOrganization removes user from given organization.
 
 ```
 searchKey: gqltestutil.Client.ScheduleRepositoryPermissionsSync
-tags: [exported]
 ```
 
 ```Go
@@ -509,7 +501,6 @@ ScheduleRepositoryPermissionsSync schedules a permissions syncing request for th
 
 ```
 searchKey: gqltestutil.Client.WaitForReposToBeCloned
-tags: [exported]
 ```
 
 ```Go
@@ -524,7 +515,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.WaitForReposToBeIndex
-tags: [exported]
 ```
 
 ```Go
@@ -539,6 +529,7 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.waitForReposByQuery
+tags: [private]
 ```
 
 ```Go
@@ -549,7 +540,6 @@ func (c *Client) waitForReposByQuery(query string, repos ...string) ([]string, e
 
 ```
 searchKey: gqltestutil.Client.FileExternalLinks
-tags: [exported]
 ```
 
 ```Go
@@ -562,7 +552,6 @@ FileExternalLinks external links for a file or directory in a repository.
 
 ```
 searchKey: gqltestutil.Client.Repository
-tags: [exported]
 ```
 
 ```Go
@@ -575,7 +564,6 @@ Repository returns basic information of the given repository.
 
 ```
 searchKey: gqltestutil.Client.RepositoryPermissionsInfo
-tags: [exported]
 ```
 
 ```Go
@@ -590,7 +578,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.SearchRepositories
-tags: [exported]
 ```
 
 ```Go
@@ -603,7 +590,6 @@ SearchRepositories search repositories with given query.
 
 ```
 searchKey: gqltestutil.Client.SearchFiles
-tags: [exported]
 ```
 
 ```Go
@@ -616,7 +602,6 @@ SearchFiles searches files with given query. It returns the match count and corr
 
 ```
 searchKey: gqltestutil.Client.SearchCommits
-tags: [exported]
 ```
 
 ```Go
@@ -629,7 +614,6 @@ SearchCommits searches commits with given query. It returns the match count and 
 
 ```
 searchKey: gqltestutil.Client.SearchAll
-tags: [exported]
 ```
 
 ```Go
@@ -642,7 +626,6 @@ SearchAll searches for all matches with a given query corresponding file matches
 
 ```
 searchKey: gqltestutil.Client.SearchStats
-tags: [exported]
 ```
 
 ```Go
@@ -655,7 +638,6 @@ SearchStats returns statistics of given query.
 
 ```
 searchKey: gqltestutil.Client.SearchSuggestions
-tags: [exported]
 ```
 
 ```Go
@@ -666,7 +648,6 @@ func (c *Client) SearchSuggestions(query string) ([]SearchSuggestionsResult, err
 
 ```
 searchKey: gqltestutil.Client.CreateSearchContext
-tags: [exported]
 ```
 
 ```Go
@@ -681,7 +662,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.GetSearchContext
-tags: [exported]
 ```
 
 ```Go
@@ -692,7 +672,6 @@ func (c *Client) GetSearchContext(id string) (*GetSearchContextResult, error)
 
 ```
 searchKey: gqltestutil.Client.UpdateSearchContext
-tags: [exported]
 ```
 
 ```Go
@@ -703,7 +682,6 @@ func (c *Client) UpdateSearchContext(id string, input UpdateSearchContextInput, 
 
 ```
 searchKey: gqltestutil.Client.DeleteSearchContext
-tags: [exported]
 ```
 
 ```Go
@@ -718,7 +696,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.ListSearchContexts
-tags: [exported]
 ```
 
 ```Go
@@ -731,7 +708,6 @@ ListSearchContexts list search contexts filtered by the given options.
 
 ```
 searchKey: gqltestutil.Client.SettingsCascade
-tags: [exported]
 ```
 
 ```Go
@@ -744,7 +720,6 @@ SettingsCascade returns settings of given subject ID with contents.
 
 ```
 searchKey: gqltestutil.Client.OverwriteSettings
-tags: [exported]
 ```
 
 ```Go
@@ -757,6 +732,7 @@ OverwriteSettings overwrites settings for given subject ID with contents.
 
 ```
 searchKey: gqltestutil.Client.lastSettingsID
+tags: [private]
 ```
 
 ```Go
@@ -769,7 +745,6 @@ lastSettingsID returns the ID of last settings of given subject. It is required 
 
 ```
 searchKey: gqltestutil.Client.ViewerSettings
-tags: [exported]
 ```
 
 ```Go
@@ -782,7 +757,6 @@ ViewerSettings returns the latest cascaded settings of authenticated user.
 
 ```
 searchKey: gqltestutil.Client.SiteConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -797,7 +771,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.UpdateSiteConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -812,7 +785,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.CreateUser
-tags: [exported]
 ```
 
 ```Go
@@ -827,7 +799,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.DeleteUser
-tags: [exported]
 ```
 
 ```Go
@@ -842,7 +813,6 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.UserOrganizations
-tags: [exported]
 ```
 
 ```Go
@@ -855,7 +825,6 @@ UserOrganizations returns organizations name the given user belongs to.
 
 ```
 searchKey: gqltestutil.AddExternalServiceInput
-tags: [exported]
 ```
 
 ```Go
@@ -870,7 +839,6 @@ type AddExternalServiceInput struct {
 
 ```
 searchKey: gqltestutil.Organization
-tags: [exported]
 ```
 
 ```Go
@@ -886,7 +854,6 @@ Organization contains basic information of an organization.
 
 ```
 searchKey: gqltestutil.OrganizationMember
-tags: [exported]
 ```
 
 ```Go
@@ -902,7 +869,6 @@ OrganizationMember contains basic information of an organization member.
 
 ```
 searchKey: gqltestutil.InviteUserToOrganizationResult
-tags: [exported]
 ```
 
 ```Go
@@ -918,7 +884,6 @@ InviteUserToOrganizationResult contains information of a user invitation to an o
 
 ```
 searchKey: gqltestutil.ExternalLink
-tags: [exported]
 ```
 
 ```Go
@@ -935,7 +900,6 @@ ExternalLink is a link to an external service.
 
 ```
 searchKey: gqltestutil.Repository
-tags: [exported]
 ```
 
 ```Go
@@ -951,7 +915,6 @@ Repository contains basic information of a repository from GraphQL.
 
 ```
 searchKey: gqltestutil.PermissionsInfo
-tags: [exported]
 ```
 
 ```Go
@@ -966,7 +929,6 @@ PermissionsInfo contains permissions information of a repository from GraphQL.
 
 ```
 searchKey: gqltestutil.SearchRepositoryResult
-tags: [exported]
 ```
 
 ```Go
@@ -979,7 +941,6 @@ type SearchRepositoryResult struct {
 
 ```
 searchKey: gqltestutil.SearchRepositoryResults
-tags: [exported]
 ```
 
 ```Go
@@ -990,7 +951,6 @@ type SearchRepositoryResults []*SearchRepositoryResult
 
 ```
 searchKey: gqltestutil.SearchRepositoryResults.Exists
-tags: [exported]
 ```
 
 ```Go
@@ -1003,7 +963,6 @@ Exists returns the list of missing repositories from given names that do not exi
 
 ```
 searchKey: gqltestutil.SearchRepositoryResults.String
-tags: [exported]
 ```
 
 ```Go
@@ -1014,7 +973,6 @@ func (rs SearchRepositoryResults) String() string
 
 ```
 searchKey: gqltestutil.SearchFileResults
-tags: [exported]
 ```
 
 ```Go
@@ -1029,7 +987,6 @@ type SearchFileResults struct {
 
 ```
 searchKey: gqltestutil.SearchFileResult
-tags: [exported]
 ```
 
 ```Go
@@ -1050,7 +1007,6 @@ type SearchFileResult struct {
 
 ```
 searchKey: gqltestutil.ProposedQuery
-tags: [exported]
 ```
 
 ```Go
@@ -1064,7 +1020,6 @@ type ProposedQuery struct {
 
 ```
 searchKey: gqltestutil.SearchAlert
-tags: [exported]
 ```
 
 ```Go
@@ -1081,7 +1036,6 @@ SearchAlert is an alert specific to searches (i.e. not site alert).
 
 ```
 searchKey: gqltestutil.SearchCommitResults
-tags: [exported]
 ```
 
 ```Go
@@ -1097,7 +1051,6 @@ type SearchCommitResults struct {
 
 ```
 searchKey: gqltestutil.AnyResult
-tags: [exported]
 ```
 
 ```Go
@@ -1110,7 +1063,6 @@ type AnyResult struct {
 
 ```
 searchKey: gqltestutil.AnyResult.UnmarshalJSON
-tags: [exported]
 ```
 
 ```Go
@@ -1121,7 +1073,6 @@ func (r *AnyResult) UnmarshalJSON(b []byte) error
 
 ```
 searchKey: gqltestutil.FileResult
-tags: [exported]
 ```
 
 ```Go
@@ -1141,7 +1092,6 @@ type FileResult struct {
 
 ```
 searchKey: gqltestutil.CommitResult
-tags: [exported]
 ```
 
 ```Go
@@ -1154,7 +1104,6 @@ type CommitResult struct {
 
 ```
 searchKey: gqltestutil.RepositoryResult
-tags: [exported]
 ```
 
 ```Go
@@ -1167,7 +1116,6 @@ type RepositoryResult struct {
 
 ```
 searchKey: gqltestutil.SearchStatsResult
-tags: [exported]
 ```
 
 ```Go
@@ -1183,7 +1131,6 @@ type SearchStatsResult struct {
 
 ```
 searchKey: gqltestutil.SearchSuggestionsResult
-tags: [exported]
 ```
 
 ```Go
@@ -1196,7 +1143,6 @@ type SearchSuggestionsResult struct {
 
 ```
 searchKey: gqltestutil.SearchSuggestionsResult.UnmarshalJSON
-tags: [exported]
 ```
 
 ```Go
@@ -1207,7 +1153,6 @@ func (srr *SearchSuggestionsResult) UnmarshalJSON(data []byte) error
 
 ```
 searchKey: gqltestutil.RepositorySuggestionResult
-tags: [exported]
 ```
 
 ```Go
@@ -1220,7 +1165,6 @@ type RepositorySuggestionResult struct {
 
 ```
 searchKey: gqltestutil.FileSuggestionResult
-tags: [exported]
 ```
 
 ```Go
@@ -1239,7 +1183,6 @@ type FileSuggestionResult struct {
 
 ```
 searchKey: gqltestutil.SymbolSuggestionResult
-tags: [exported]
 ```
 
 ```Go
@@ -1263,7 +1206,6 @@ type SymbolSuggestionResult struct {
 
 ```
 searchKey: gqltestutil.LanguageSuggestionResult
-tags: [exported]
 ```
 
 ```Go
@@ -1276,7 +1218,6 @@ type LanguageSuggestionResult struct {
 
 ```
 searchKey: gqltestutil.SearchContextSuggestionResult
-tags: [exported]
 ```
 
 ```Go
@@ -1290,7 +1231,6 @@ type SearchContextSuggestionResult struct {
 
 ```
 searchKey: gqltestutil.SearchStreamClient
-tags: [exported]
 ```
 
 ```Go
@@ -1303,7 +1243,6 @@ type SearchStreamClient struct {
 
 ```
 searchKey: gqltestutil.SearchStreamClient.SearchRepositories
-tags: [exported]
 ```
 
 ```Go
@@ -1314,7 +1253,6 @@ func (s *SearchStreamClient) SearchRepositories(query string) (SearchRepositoryR
 
 ```
 searchKey: gqltestutil.SearchStreamClient.SearchFiles
-tags: [exported]
 ```
 
 ```Go
@@ -1325,7 +1263,6 @@ func (s *SearchStreamClient) SearchFiles(query string) (*SearchFileResults, erro
 
 ```
 searchKey: gqltestutil.SearchStreamClient.SearchAll
-tags: [exported]
 ```
 
 ```Go
@@ -1336,7 +1273,6 @@ func (s *SearchStreamClient) SearchAll(query string) ([]*AnyResult, error)
 
 ```
 searchKey: gqltestutil.SearchStreamClient.OverwriteSettings
-tags: [exported]
 ```
 
 ```Go
@@ -1347,7 +1283,6 @@ func (s *SearchStreamClient) OverwriteSettings(subjectID, contents string) error
 
 ```
 searchKey: gqltestutil.SearchStreamClient.AuthenticatedUserID
-tags: [exported]
 ```
 
 ```Go
@@ -1358,6 +1293,7 @@ func (s *SearchStreamClient) AuthenticatedUserID() string
 
 ```
 searchKey: gqltestutil.SearchStreamClient.search
+tags: [private]
 ```
 
 ```Go
@@ -1368,7 +1304,6 @@ func (s *SearchStreamClient) search(query string, dec streamhttp.Decoder) error
 
 ```
 searchKey: gqltestutil.CreateSearchContextInput
-tags: [exported]
 ```
 
 ```Go
@@ -1383,7 +1318,6 @@ type CreateSearchContextInput struct {
 
 ```
 searchKey: gqltestutil.UpdateSearchContextInput
-tags: [exported]
 ```
 
 ```Go
@@ -1398,7 +1332,6 @@ type UpdateSearchContextInput struct {
 
 ```
 searchKey: gqltestutil.SearchContextRepositoryRevisionsInput
-tags: [exported]
 ```
 
 ```Go
@@ -1412,7 +1345,6 @@ type SearchContextRepositoryRevisionsInput struct {
 
 ```
 searchKey: gqltestutil.GetSearchContextResult
-tags: [exported]
 ```
 
 ```Go
@@ -1434,7 +1366,6 @@ type GetSearchContextResult struct {
 
 ```
 searchKey: gqltestutil.SearchContextsOrderBy
-tags: [exported]
 ```
 
 ```Go
@@ -1445,7 +1376,6 @@ type SearchContextsOrderBy string
 
 ```
 searchKey: gqltestutil.ListSearchContextsOptions
-tags: [exported]
 ```
 
 ```Go
@@ -1463,7 +1393,6 @@ type ListSearchContextsOptions struct {
 
 ```
 searchKey: gqltestutil.ListSearchContextsResult
-tags: [exported]
 ```
 
 ```Go
@@ -1481,7 +1410,6 @@ type ListSearchContextsResult struct {
 
 ```
 searchKey: gqltestutil.SettingsSubject
-tags: [exported]
 ```
 
 ```Go
@@ -1495,11 +1423,14 @@ SettingsSubject contains contents of a setting.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NeedsSiteInit" href="#NeedsSiteInit">func NeedsSiteInit(baseURL string) (bool, error)</a>
 
 ```
 searchKey: gqltestutil.NeedsSiteInit
-tags: [exported]
 ```
 
 ```Go
@@ -1512,6 +1443,7 @@ NeedsSiteInit returns true if the instance hasn't done "Site admin init" step.
 
 ```
 searchKey: gqltestutil.extractCSRFToken
+tags: [private]
 ```
 
 ```Go
@@ -1524,7 +1456,6 @@ extractCSRFToken extracts CSRF token from HTML response body.
 
 ```
 searchKey: gqltestutil.Retry
-tags: [exported]
 ```
 
 ```Go

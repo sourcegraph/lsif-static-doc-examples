@@ -38,11 +38,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="GitolitePhabricatorMetadataResponse" href="#GitolitePhabricatorMetadataResponse">type GitolitePhabricatorMetadataResponse struct</a>
 
 ```
 searchKey: protocol.GitolitePhabricatorMetadataResponse
-tags: [exported]
 ```
 
 ```Go
@@ -57,7 +60,6 @@ GitolitePhabricatorMetadataResponse is the response for a request for Phabricato
 
 ```
 searchKey: protocol.ExecRequest
-tags: [exported]
 ```
 
 ```Go
@@ -78,7 +80,6 @@ Note that this request is deserialized by both gitserver and the frontend's inte
 
 ```
 searchKey: protocol.P4ExecRequest
-tags: [exported]
 ```
 
 ```Go
@@ -98,7 +99,6 @@ Note that this request is deserialized by both gitserver and the frontend's inte
 
 ```
 searchKey: protocol.RemoteOpts
-tags: [exported]
 ```
 
 ```Go
@@ -114,7 +114,6 @@ RemoteOpts configures interactions with a remote repository.
 
 ```
 searchKey: protocol.SSHConfig
-tags: [exported]
 ```
 
 ```Go
@@ -131,7 +130,6 @@ SSHConfig configures and authenticates SSH for communication with remotes.
 
 ```
 searchKey: protocol.HTTPSConfig
-tags: [exported]
 ```
 
 ```Go
@@ -147,7 +145,6 @@ HTTPSConfig configures and authenticates HTTPS for communication with remotes.
 
 ```
 searchKey: protocol.RepoUpdateRequest
-tags: [exported]
 ```
 
 ```Go
@@ -163,7 +160,6 @@ RepoUpdateRequest is a request to update the contents of a given repo, or clone 
 
 ```
 searchKey: protocol.RepoUpdateResponse
-tags: [exported]
 ```
 
 ```Go
@@ -190,7 +186,6 @@ TODO just use RepoInfoResponse?
 
 ```
 searchKey: protocol.NotFoundPayload
-tags: [exported]
 ```
 
 ```Go
@@ -206,7 +201,6 @@ type NotFoundPayload struct {
 
 ```
 searchKey: protocol.IsRepoCloneableRequest
-tags: [exported]
 ```
 
 ```Go
@@ -222,7 +216,6 @@ IsRepoCloneableRequest is a request to determine if a repo is cloneable.
 
 ```
 searchKey: protocol.IsRepoCloneableResponse
-tags: [exported]
 ```
 
 ```Go
@@ -238,7 +231,6 @@ IsRepoCloneableResponse is the response type for the IsRepoCloneableRequest.
 
 ```
 searchKey: protocol.IsRepoClonedRequest
-tags: [exported]
 ```
 
 ```Go
@@ -254,7 +246,6 @@ IsRepoClonedRequest is a request to determine if a repo currently exists on gits
 
 ```
 searchKey: protocol.RepoDeleteRequest
-tags: [exported]
 ```
 
 ```Go
@@ -270,7 +261,6 @@ RepoDeleteRequest is a request to delete a repository clone on gitserver
 
 ```
 searchKey: protocol.RepoInfoRequest
-tags: [exported]
 ```
 
 ```Go
@@ -286,7 +276,6 @@ RepoInfoRequest is a request for information about multiple repositories on gits
 
 ```
 searchKey: protocol.RepoInfo
-tags: [exported]
 ```
 
 ```Go
@@ -311,7 +300,6 @@ RepoInfo is the information requests about a single repository via a RepoInfoReq
 
 ```
 searchKey: protocol.RepoInfoResponse
-tags: [exported]
 ```
 
 ```Go
@@ -327,7 +315,6 @@ RepoInfoResponse is the response to a repository information request for multipl
 
 ```
 searchKey: protocol.ReposStats
-tags: [exported]
 ```
 
 ```Go
@@ -348,7 +335,6 @@ ReposStats is an aggregation of statistics from a gitserver.
 
 ```
 searchKey: protocol.RepoCloneProgressRequest
-tags: [exported]
 ```
 
 ```Go
@@ -363,7 +349,6 @@ RepoCloneProgressRequest is a request for information about the clone progress o
 
 ```
 searchKey: protocol.RepoCloneProgress
-tags: [exported]
 ```
 
 ```Go
@@ -380,7 +365,6 @@ RepoCloneProgress is information about the clone progress of a repo
 
 ```
 searchKey: protocol.RepoCloneProgressResponse
-tags: [exported]
 ```
 
 ```Go
@@ -395,7 +379,6 @@ RepoCloneProgressResponse is the response to a repository clone progress request
 
 ```
 searchKey: protocol.CreateCommitFromPatchRequest
-tags: [exported]
 ```
 
 ```Go
@@ -427,7 +410,6 @@ CreateCommitFromPatchRequest is the request information needed for creating the 
 
 ```
 searchKey: protocol.PatchCommitInfo
-tags: [exported]
 ```
 
 ```Go
@@ -447,7 +429,6 @@ PatchCommitInfo will be used for commit information when creating a commit from 
 
 ```
 searchKey: protocol.PushConfig
-tags: [exported]
 ```
 
 ```Go
@@ -474,7 +455,6 @@ PushConfig provides the configuration required to push one or more commits to a 
 
 ```
 searchKey: protocol.CreateCommitFromPatchResponse
-tags: [exported]
 ```
 
 ```Go
@@ -493,7 +473,6 @@ CreateCommitFromPatchResponse is the response type returned after creating a com
 
 ```
 searchKey: protocol.CreateCommitFromPatchResponse.SetError
-tags: [exported]
 ```
 
 ```Go
@@ -506,7 +485,6 @@ SetError adds the supplied error related details to e.
 
 ```
 searchKey: protocol.CreateCommitFromPatchError
-tags: [exported]
 ```
 
 ```Go
@@ -530,7 +508,6 @@ CreateCommitFromPatchError is populated on errors running CreateCommitFromPatch
 
 ```
 searchKey: protocol.CreateCommitFromPatchError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -541,11 +518,14 @@ Error returns a detailed error conforming to the error interface
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NormalizeRepo" href="#NormalizeRepo">func NormalizeRepo(input api.RepoName) api.RepoName</a>
 
 ```
 searchKey: protocol.NormalizeRepo
-tags: [exported]
 ```
 
 ```Go
@@ -556,6 +536,7 @@ func NormalizeRepo(input api.RepoName) api.RepoName
 
 ```
 searchKey: protocol.hasUpperASCII
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +549,7 @@ hasUpperASCII returns true if s contains any upper-case letters in ASCII, or if 
 
 ```
 searchKey: protocol.TestNormalizeRepo
+tags: [private]
 ```
 
 ```Go

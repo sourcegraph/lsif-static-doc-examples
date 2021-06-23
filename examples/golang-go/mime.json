@@ -4,9 +4,7 @@
     "identifier": "mime",
     "newPage": true,
     "searchKey": "mime",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "BEncoding",
                 "newPage": false,
                 "searchKey": "mime.BEncoding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "QEncoding",
                 "newPage": false,
                 "searchKey": "mime.QEncoding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,7 +80,9 @@
                 "identifier": "maxEncodedWordLen",
                 "newPage": false,
                 "searchKey": "mime.maxEncodedWordLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -108,7 +102,9 @@
                 "identifier": "maxContentLen",
                 "newPage": false,
                 "searchKey": "mime.maxContentLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -128,7 +124,9 @@
                 "identifier": "upperhex",
                 "newPage": false,
                 "searchKey": "mime.upperhex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -151,9 +149,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -171,7 +167,9 @@
                 "identifier": "errInvalidWord",
                 "newPage": false,
                 "searchKey": "mime.errInvalidWord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -191,7 +189,9 @@
                 "identifier": "maxBase64Len",
                 "newPage": false,
                 "searchKey": "mime.maxBase64Len",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -211,9 +211,7 @@
                 "identifier": "ErrInvalidMediaParameter",
                 "newPage": false,
                 "searchKey": "mime.ErrInvalidMediaParameter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -233,7 +231,9 @@
                 "identifier": "mimeTypes",
                 "newPage": false,
                 "searchKey": "mime.mimeTypes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -253,7 +253,9 @@
                 "identifier": "mimeTypesLower",
                 "newPage": false,
                 "searchKey": "mime.mimeTypesLower",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -273,7 +275,9 @@
                 "identifier": "extensionsMu",
                 "newPage": false,
                 "searchKey": "mime.extensionsMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -293,7 +297,9 @@
                 "identifier": "extensions",
                 "newPage": false,
                 "searchKey": "mime.extensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -313,7 +319,9 @@
                 "identifier": "builtinTypesLower",
                 "newPage": false,
                 "searchKey": "mime.builtinTypesLower",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -333,7 +341,9 @@
                 "identifier": "once",
                 "newPage": false,
                 "searchKey": "mime.once",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -353,7 +363,9 @@
                 "identifier": "testInitMime",
                 "newPage": false,
                 "searchKey": "mime.testInitMime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -373,7 +385,9 @@
                 "identifier": "osInitMime",
                 "newPage": false,
                 "searchKey": "mime.osInitMime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -393,7 +407,9 @@
                 "identifier": "mimeGlobs",
                 "newPage": false,
                 "searchKey": "mime.mimeGlobs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -413,7 +429,9 @@
                 "identifier": "typeFiles",
                 "newPage": false,
                 "searchKey": "mime.typeFiles",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -433,7 +451,9 @@
                 "identifier": "badMediaTypeTests",
                 "newPage": false,
                 "searchKey": "mime.badMediaTypeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -453,7 +473,9 @@
                 "identifier": "formatTests",
                 "newPage": false,
                 "searchKey": "mime.formatTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -476,9 +498,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -496,9 +516,7 @@
                 "identifier": "WordEncoder",
                 "newPage": false,
                 "searchKey": "mime.WordEncoder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -516,9 +534,7 @@
                       "identifier": "WordEncoder.Encode",
                       "newPage": false,
                       "searchKey": "mime.WordEncoder.Encode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -538,7 +554,9 @@
                       "identifier": "WordEncoder.encodeWord",
                       "newPage": false,
                       "searchKey": "mime.WordEncoder.encodeWord",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -558,7 +576,9 @@
                       "identifier": "WordEncoder.bEncode",
                       "newPage": false,
                       "searchKey": "mime.WordEncoder.bEncode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -578,7 +598,9 @@
                       "identifier": "WordEncoder.qEncode",
                       "newPage": false,
                       "searchKey": "mime.WordEncoder.qEncode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -598,7 +620,9 @@
                       "identifier": "WordEncoder.openWord",
                       "newPage": false,
                       "searchKey": "mime.WordEncoder.openWord",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -618,7 +642,9 @@
                       "identifier": "WordEncoder.splitWord",
                       "newPage": false,
                       "searchKey": "mime.WordEncoder.splitWord",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -641,9 +667,7 @@
                 "identifier": "WordDecoder",
                 "newPage": false,
                 "searchKey": "mime.WordDecoder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -661,9 +685,7 @@
                       "identifier": "WordDecoder.Decode",
                       "newPage": false,
                       "searchKey": "mime.WordDecoder.Decode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -683,9 +705,7 @@
                       "identifier": "WordDecoder.DecodeHeader",
                       "newPage": false,
                       "searchKey": "mime.WordDecoder.DecodeHeader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -705,7 +725,9 @@
                       "identifier": "WordDecoder.convert",
                       "newPage": false,
                       "searchKey": "mime.WordDecoder.convert",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -728,7 +750,9 @@
                 "identifier": "mediaTypeTest",
                 "newPage": false,
                 "searchKey": "mime.mediaTypeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -748,7 +772,9 @@
                 "identifier": "badMediaTypeTest",
                 "newPage": false,
                 "searchKey": "mime.badMediaTypeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -768,7 +794,9 @@
                 "identifier": "formatTest",
                 "newPage": false,
                 "searchKey": "mime.formatTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -791,9 +819,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -811,7 +837,9 @@
                 "identifier": "needsEncoding",
                 "newPage": false,
                 "searchKey": "mime.needsEncoding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -831,7 +859,9 @@
                 "identifier": "writeQString",
                 "newPage": false,
                 "searchKey": "mime.writeQString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -851,7 +881,9 @@
                 "identifier": "closeWord",
                 "newPage": false,
                 "searchKey": "mime.closeWord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -871,7 +903,9 @@
                 "identifier": "isUTF8",
                 "newPage": false,
                 "searchKey": "mime.isUTF8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -891,7 +925,9 @@
                 "identifier": "decode",
                 "newPage": false,
                 "searchKey": "mime.decode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -911,7 +947,9 @@
                 "identifier": "hasNonWhitespace",
                 "newPage": false,
                 "searchKey": "mime.hasNonWhitespace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -931,7 +969,9 @@
                 "identifier": "qDecode",
                 "newPage": false,
                 "searchKey": "mime.qDecode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -951,7 +991,9 @@
                 "identifier": "readHexByte",
                 "newPage": false,
                 "searchKey": "mime.readHexByte",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -971,7 +1013,9 @@
                 "identifier": "fromHex",
                 "newPage": false,
                 "searchKey": "mime.fromHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -991,7 +1035,9 @@
                 "identifier": "isTSpecial",
                 "newPage": false,
                 "searchKey": "mime.isTSpecial",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1011,7 +1057,9 @@
                 "identifier": "isTokenChar",
                 "newPage": false,
                 "searchKey": "mime.isTokenChar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1031,7 +1079,9 @@
                 "identifier": "isToken",
                 "newPage": false,
                 "searchKey": "mime.isToken",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1051,9 +1101,7 @@
                 "identifier": "FormatMediaType",
                 "newPage": false,
                 "searchKey": "mime.FormatMediaType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1073,7 +1121,9 @@
                 "identifier": "checkMediaTypeDisposition",
                 "newPage": false,
                 "searchKey": "mime.checkMediaTypeDisposition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1093,9 +1143,7 @@
                 "identifier": "ParseMediaType",
                 "newPage": false,
                 "searchKey": "mime.ParseMediaType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1115,7 +1163,9 @@
                 "identifier": "decode2231Enc",
                 "newPage": false,
                 "searchKey": "mime.decode2231Enc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1135,7 +1185,9 @@
                 "identifier": "isNotTokenChar",
                 "newPage": false,
                 "searchKey": "mime.isNotTokenChar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1155,7 +1207,9 @@
                 "identifier": "consumeToken",
                 "newPage": false,
                 "searchKey": "mime.consumeToken",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1175,7 +1229,9 @@
                 "identifier": "consumeValue",
                 "newPage": false,
                 "searchKey": "mime.consumeValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1195,7 +1251,9 @@
                 "identifier": "consumeMediaParam",
                 "newPage": false,
                 "searchKey": "mime.consumeMediaParam",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1215,7 +1273,9 @@
                 "identifier": "percentHexUnescape",
                 "newPage": false,
                 "searchKey": "mime.percentHexUnescape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1235,7 +1295,9 @@
                 "identifier": "ishex",
                 "newPage": false,
                 "searchKey": "mime.ishex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1255,7 +1317,9 @@
                 "identifier": "unhex",
                 "newPage": false,
                 "searchKey": "mime.unhex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1275,7 +1339,9 @@
                 "identifier": "clearSyncMap",
                 "newPage": false,
                 "searchKey": "mime.clearSyncMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1295,7 +1361,9 @@
                 "identifier": "setMimeTypes",
                 "newPage": false,
                 "searchKey": "mime.setMimeTypes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1315,7 +1383,9 @@
                 "identifier": "initMime",
                 "newPage": false,
                 "searchKey": "mime.initMime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1335,9 +1405,7 @@
                 "identifier": "TypeByExtension",
                 "newPage": false,
                 "searchKey": "mime.TypeByExtension",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1357,9 +1425,7 @@
                 "identifier": "ExtensionsByType",
                 "newPage": false,
                 "searchKey": "mime.ExtensionsByType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1379,9 +1445,7 @@
                 "identifier": "AddExtensionType",
                 "newPage": false,
                 "searchKey": "mime.AddExtensionType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1401,7 +1465,9 @@
                 "identifier": "setExtensionType",
                 "newPage": false,
                 "searchKey": "mime.setExtensionType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1416,12 +1482,14 @@
           },
           {
             "node": {
-              "pathID": "/mime#init",
+              "pathID": "/mime#init.type_unix.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.type_unix.go",
                 "newPage": false,
                 "searchKey": "mime.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1441,7 +1509,9 @@
                 "identifier": "loadMimeGlobsFile",
                 "newPage": false,
                 "searchKey": "mime.loadMimeGlobsFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1461,7 +1531,9 @@
                 "identifier": "loadMimeFile",
                 "newPage": false,
                 "searchKey": "mime.loadMimeFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1481,7 +1553,9 @@
                 "identifier": "initMimeUnix",
                 "newPage": false,
                 "searchKey": "mime.initMimeUnix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1501,7 +1575,9 @@
                 "identifier": "initMimeForTests",
                 "newPage": false,
                 "searchKey": "mime.initMimeForTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1521,7 +1597,9 @@
                 "identifier": "TestEncodeWord",
                 "newPage": false,
                 "searchKey": "mime.TestEncodeWord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1541,7 +1619,9 @@
                 "identifier": "TestEncodedWordLength",
                 "newPage": false,
                 "searchKey": "mime.TestEncodedWordLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1561,7 +1641,9 @@
                 "identifier": "TestDecodeWord",
                 "newPage": false,
                 "searchKey": "mime.TestDecodeWord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1581,7 +1663,9 @@
                 "identifier": "TestDecodeHeader",
                 "newPage": false,
                 "searchKey": "mime.TestDecodeHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1601,7 +1685,9 @@
                 "identifier": "TestCharsetDecoder",
                 "newPage": false,
                 "searchKey": "mime.TestCharsetDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1621,7 +1707,9 @@
                 "identifier": "TestCharsetDecoderError",
                 "newPage": false,
                 "searchKey": "mime.TestCharsetDecoderError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1641,7 +1729,9 @@
                 "identifier": "BenchmarkQEncodeWord",
                 "newPage": false,
                 "searchKey": "mime.BenchmarkQEncodeWord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1661,7 +1751,9 @@
                 "identifier": "BenchmarkQDecodeWord",
                 "newPage": false,
                 "searchKey": "mime.BenchmarkQDecodeWord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1681,7 +1773,9 @@
                 "identifier": "BenchmarkQDecodeHeader",
                 "newPage": false,
                 "searchKey": "mime.BenchmarkQDecodeHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1701,7 +1795,9 @@
                 "identifier": "TestConsumeToken",
                 "newPage": false,
                 "searchKey": "mime.TestConsumeToken",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1721,7 +1817,9 @@
                 "identifier": "TestConsumeValue",
                 "newPage": false,
                 "searchKey": "mime.TestConsumeValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1741,7 +1839,9 @@
                 "identifier": "TestConsumeMediaParam",
                 "newPage": false,
                 "searchKey": "mime.TestConsumeMediaParam",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1761,7 +1861,9 @@
                 "identifier": "TestParseMediaType",
                 "newPage": false,
                 "searchKey": "mime.TestParseMediaType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1781,7 +1883,9 @@
                 "identifier": "TestParseMediaTypeBogus",
                 "newPage": false,
                 "searchKey": "mime.TestParseMediaTypeBogus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1801,7 +1905,9 @@
                 "identifier": "TestFormatMediaType",
                 "newPage": false,
                 "searchKey": "mime.TestFormatMediaType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1821,7 +1927,9 @@
                 "identifier": "setMimeInit",
                 "newPage": false,
                 "searchKey": "mime.setMimeInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1841,7 +1949,9 @@
                 "identifier": "clearMimeTypes",
                 "newPage": false,
                 "searchKey": "mime.clearMimeTypes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1861,7 +1971,9 @@
                 "identifier": "setType",
                 "newPage": false,
                 "searchKey": "mime.setType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1881,7 +1993,9 @@
                 "identifier": "TestTypeByExtension",
                 "newPage": false,
                 "searchKey": "mime.TestTypeByExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1901,7 +2015,9 @@
                 "identifier": "TestTypeByExtension_LocalData",
                 "newPage": false,
                 "searchKey": "mime.TestTypeByExtension_LocalData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1921,7 +2037,9 @@
                 "identifier": "TestTypeByExtensionCase",
                 "newPage": false,
                 "searchKey": "mime.TestTypeByExtensionCase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1941,7 +2059,9 @@
                 "identifier": "TestExtensionsByType",
                 "newPage": false,
                 "searchKey": "mime.TestExtensionsByType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1961,7 +2081,9 @@
                 "identifier": "TestLookupMallocs",
                 "newPage": false,
                 "searchKey": "mime.TestLookupMallocs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1981,7 +2103,9 @@
                 "identifier": "BenchmarkTypeByExtension",
                 "newPage": false,
                 "searchKey": "mime.BenchmarkTypeByExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2001,7 +2125,9 @@
                 "identifier": "BenchmarkExtensionsByType",
                 "newPage": false,
                 "searchKey": "mime.BenchmarkExtensionsByType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2021,7 +2147,9 @@
                 "identifier": "TestExtensionsByType2",
                 "newPage": false,
                 "searchKey": "mime.TestExtensionsByType2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2041,7 +2169,9 @@
                 "identifier": "initMimeUnixTest",
                 "newPage": false,
                 "searchKey": "mime.initMimeUnixTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2061,7 +2191,9 @@
                 "identifier": "TestTypeByExtensionUNIX",
                 "newPage": false,
                 "searchKey": "mime.TestTypeByExtensionUNIX",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -122,7 +122,7 @@ Package conf provides functions for accessing the Site Configuration.
     * [func Mock(mockery *Unified)](#Mock)
     * [func Watch(f func())](#Watch)
     * [func Cached(f func() interface{}) (wrapped func() interface{})](#Cached)
-    * [func init()](#init)
+    * [func init()](#init.computed.go)
     * [func defaultConfigForDeployment() conftypes.RawUnified](#defaultConfigForDeployment)
     * [func AWSCodeCommitConfigs(ctx context.Context) ([]*schema.AWSCodeCommitConnection, error)](#AWSCodeCommitConfigs)
     * [func BitbucketServerConfigs(ctx context.Context) ([]*schema.BitbucketServerConnection, error)](#BitbucketServerConfigs)
@@ -195,11 +195,14 @@ Package conf provides functions for accessing the Site Configuration.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AccessTokensNone" href="#AccessTokensNone">const AccessTokensNone</a>
 
 ```
 searchKey: conf.AccessTokensNone
-tags: [exported]
 ```
 
 ```Go
@@ -210,7 +213,6 @@ const AccessTokensNone AccessTokAllow = "none"
 
 ```
 searchKey: conf.AccessTokensAll
-tags: [exported]
 ```
 
 ```Go
@@ -221,7 +223,6 @@ const AccessTokensAll AccessTokAllow = "all-users-create"
 
 ```
 searchKey: conf.AccessTokensAdmin
-tags: [exported]
 ```
 
 ```Go
@@ -232,7 +233,6 @@ const AccessTokensAdmin AccessTokAllow = "site-admin-create"
 
 ```
 searchKey: conf.DeployKubernetes
-tags: [exported]
 ```
 
 ```Go
@@ -245,7 +245,6 @@ Deploy type constants. Any changes here should be reflected in the DeployType ty
 
 ```
 searchKey: conf.DeploySingleDocker
-tags: [exported]
 ```
 
 ```Go
@@ -258,7 +257,6 @@ Deploy type constants. Any changes here should be reflected in the DeployType ty
 
 ```
 searchKey: conf.DeployDockerCompose
-tags: [exported]
 ```
 
 ```Go
@@ -271,7 +269,6 @@ Deploy type constants. Any changes here should be reflected in the DeployType ty
 
 ```
 searchKey: conf.DeployPureDocker
-tags: [exported]
 ```
 
 ```Go
@@ -284,7 +281,6 @@ Deploy type constants. Any changes here should be reflected in the DeployType ty
 
 ```
 searchKey: conf.DeployDev
-tags: [exported]
 ```
 
 ```Go
@@ -297,6 +293,7 @@ Deploy type constants. Any changes here should be reflected in the DeployType ty
 
 ```
 searchKey: conf.defaultPasswordLinkExpiry
+tags: [private]
 ```
 
 ```Go
@@ -309,7 +306,6 @@ By default, password reset links are valid for 4 hours.
 
 ```
 searchKey: conf.ExternalServiceModeDisabled
-tags: [exported]
 ```
 
 ```Go
@@ -320,7 +316,6 @@ const ExternalServiceModeDisabled ExternalServiceMode = 0
 
 ```
 searchKey: conf.ExternalServiceModePublic
-tags: [exported]
 ```
 
 ```Go
@@ -331,7 +326,6 @@ const ExternalServiceModePublic ExternalServiceMode = 1
 
 ```
 searchKey: conf.ExternalServiceModeAll
-tags: [exported]
 ```
 
 ```Go
@@ -342,6 +336,7 @@ const ExternalServiceModeAll ExternalServiceMode = 2
 
 ```
 searchKey: conf.modeServer
+tags: [private]
 ```
 
 ```Go
@@ -354,6 +349,7 @@ The user of pkg/conf reads and writes to the configuration file. This should onl
 
 ```
 searchKey: conf.modeClient
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +362,7 @@ The user of pkg/conf only reads the configuration file.
 
 ```
 searchKey: conf.modeEmpty
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +375,7 @@ The user of pkg/conf is a test case or explicitly opted to have no configuration
 
 ```
 searchKey: conf.problemSite
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +386,7 @@ const problemSite problemKind = "SiteConfig"
 
 ```
 searchKey: conf.problemExternalService
+tags: [private]
 ```
 
 ```Go
@@ -396,10 +395,15 @@ const problemExternalService problemKind = "ExternalService"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="defaultClientOnce" href="#defaultClientOnce">var defaultClientOnce</a>
 
 ```
 searchKey: conf.defaultClientOnce
+tags: [private]
 ```
 
 ```Go
@@ -410,6 +414,7 @@ var defaultClientOnce sync.Once
 
 ```
 searchKey: conf.defaultClientVal
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +425,7 @@ var defaultClientVal *client
 
 ```
 searchKey: conf.configurationServerFrontendOnlyInitialized
+tags: [private]
 ```
 
 ```Go
@@ -430,7 +436,6 @@ var configurationServerFrontendOnlyInitialized = make(chan struct{})
 
 ```
 searchKey: conf.FormatOptions
-tags: [exported]
 ```
 
 ```Go
@@ -443,6 +448,7 @@ FormatOptions is the default format options that should be used for jsonx edit c
 
 ```
 searchKey: conf.siteConfigEscapeHatchPath
+tags: [private]
 ```
 
 ```Go
@@ -453,6 +459,7 @@ var siteConfigEscapeHatchPath = ...
 
 ```
 searchKey: conf.requireRestart
+tags: [private]
 ```
 
 ```Go
@@ -467,7 +474,6 @@ Experimental features are special in that they are denoted individually via e.g.
 
 ```
 searchKey: conf.DefaultRemoteRegistry
-tags: [exported]
 ```
 
 ```Go
@@ -482,6 +488,7 @@ It is intentionally not set in the OSS build.
 
 ```
 searchKey: conf.ignoreLegacyKubernetesFields
+tags: [private]
 ```
 
 ```Go
@@ -494,6 +501,7 @@ ignoreLegacyKubernetesFields is the set of field names for which validation erro
 
 ```
 searchKey: conf.contributedValidators
+tags: [private]
 ```
 
 ```Go
@@ -504,6 +512,7 @@ var contributedValidators []Validator
 
 ```
 searchKey: conf.contributedWarnings
+tags: [private]
 ```
 
 ```Go
@@ -512,10 +521,15 @@ var contributedWarnings []Validator
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="client" href="#client">type client struct</a>
 
 ```
 searchKey: conf.client
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +545,7 @@ type client struct {
 
 ```
 searchKey: conf.defaultClient
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +556,7 @@ func defaultClient() *client
 
 ```
 searchKey: conf.initDefaultClient
+tags: [private]
 ```
 
 ```Go
@@ -551,6 +567,7 @@ func initDefaultClient() *client
 
 ```
 searchKey: conf.client.Raw
+tags: [private]
 ```
 
 ```Go
@@ -563,6 +580,7 @@ Raw returns a copy of the raw configuration.
 
 ```
 searchKey: conf.client.Get
+tags: [private]
 ```
 
 ```Go
@@ -579,6 +597,7 @@ There are a select few configuration options that do restart the server but thes
 
 ```
 searchKey: conf.client.Mock
+tags: [private]
 ```
 
 ```Go
@@ -591,6 +610,7 @@ Mock sets up mock data for the site configuration.
 
 ```
 searchKey: conf.client.Watch
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +625,7 @@ Before Watch returns, it will invoke f to use the current configuration.
 
 ```
 searchKey: conf.client.Cached
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +640,7 @@ The first call to wrapped will block on config initialization.
 
 ```
 searchKey: conf.client.notifyWatchers
+tags: [private]
 ```
 
 ```Go
@@ -631,6 +653,7 @@ notifyWatchers runs all the callbacks registered via client.Watch() whenever the
 
 ```
 searchKey: conf.client.continuouslyUpdate
+tags: [private]
 ```
 
 ```Go
@@ -645,6 +668,7 @@ The optOnlySetByTests parameter is ONLY customized by tests. All callers in main
 
 ```
 searchKey: conf.client.fetchAndUpdate
+tags: [private]
 ```
 
 ```Go
@@ -655,6 +679,7 @@ func (c *client) fetchAndUpdate() error
 
 ```
 searchKey: conf.continuousUpdateOptions
+tags: [private]
 ```
 
 ```Go
@@ -673,7 +698,6 @@ type continuousUpdateOptions struct {
 
 ```
 searchKey: conf.AccessTokAllow
-tags: [exported]
 ```
 
 ```Go
@@ -684,7 +708,6 @@ type AccessTokAllow string
 
 ```
 searchKey: conf.AccessTokensAllow
-tags: [exported]
 ```
 
 ```Go
@@ -697,7 +720,6 @@ AccessTokensAllow returns whether access tokens are enabled, disabled, or restri
 
 ```
 searchKey: conf.ExternalServiceMode
-tags: [exported]
 ```
 
 ```Go
@@ -708,7 +730,6 @@ type ExternalServiceMode int
 
 ```
 searchKey: conf.ExternalServiceUserMode
-tags: [exported]
 ```
 
 ```Go
@@ -721,7 +742,6 @@ ExternalServiceUserMode returns the site level mode describing if users are allo
 
 ```
 searchKey: conf.ExternalServiceMode.String
-tags: [exported]
 ```
 
 ```Go
@@ -732,7 +752,6 @@ func (e ExternalServiceMode) String() string
 
 ```
 searchKey: conf.Unified
-tags: [exported]
 ```
 
 ```Go
@@ -750,7 +769,6 @@ Unified represents the overall global Sourcegraph configuration from various sou
 
 ```
 searchKey: conf.Get
-tags: [exported]
 ```
 
 ```Go
@@ -769,7 +787,6 @@ Get is a wrapper around client.Get.
 
 ```
 searchKey: conf.ParseConfig
-tags: [exported]
 ```
 
 ```Go
@@ -782,6 +799,7 @@ ParseConfig parses the raw configuration.
 
 ```
 searchKey: conf.configurationMode
+tags: [private]
 ```
 
 ```Go
@@ -792,6 +810,7 @@ type configurationMode int
 
 ```
 searchKey: conf.getMode
+tags: [private]
 ```
 
 ```Go
@@ -802,6 +821,7 @@ func getMode() configurationMode
 
 ```
 searchKey: conf.cachedConfigurationSource
+tags: [private]
 ```
 
 ```Go
@@ -821,6 +841,7 @@ cachedConfigurationSource caches reads for a specified duration to reduce the nu
 
 ```
 searchKey: conf.cachedConfigurationSource.Read
+tags: [private]
 ```
 
 ```Go
@@ -831,6 +852,7 @@ func (c *cachedConfigurationSource) Read(ctx context.Context) (conftypes.RawUnif
 
 ```
 searchKey: conf.cachedConfigurationSource.Write
+tags: [private]
 ```
 
 ```Go
@@ -841,7 +863,6 @@ func (c *cachedConfigurationSource) Write(ctx context.Context, input conftypes.R
 
 ```
 searchKey: conf.PlatformConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -856,7 +877,6 @@ PlatformConfiguration contains site configuration for the Sourcegraph platform.
 
 ```
 searchKey: conf.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -869,7 +889,6 @@ Extensions returns the configuration for the Sourcegraph platform, or nil if it 
 
 ```
 searchKey: conf.ConfigurationSource
-tags: [exported]
 ```
 
 ```Go
@@ -886,7 +905,6 @@ ConfigurationSource provides direct access to read and write to the "raw" config
 
 ```
 searchKey: conf.Server
-tags: [exported]
 ```
 
 ```Go
@@ -913,7 +931,6 @@ Server provides access and manages modifications to the site configuration.
 
 ```
 searchKey: conf.InitConfigurationServerFrontendOnly
-tags: [exported]
 ```
 
 ```Go
@@ -926,7 +943,6 @@ InitConfigurationServerFrontendOnly creates and returns a configuration server. 
 
 ```
 searchKey: conf.NewServer
-tags: [exported]
 ```
 
 ```Go
@@ -941,7 +957,6 @@ The server must be started with Start() before it can handle requests.
 
 ```
 searchKey: conf.Server.Raw
-tags: [exported]
 ```
 
 ```Go
@@ -954,7 +969,6 @@ Raw returns the raw text of the configuration file.
 
 ```
 searchKey: conf.Server.Write
-tags: [exported]
 ```
 
 ```Go
@@ -967,7 +981,6 @@ Write writes the JSON config file to the config file's path. If the JSON configu
 
 ```
 searchKey: conf.Server.Edit
-tags: [exported]
 ```
 
 ```Go
@@ -984,7 +997,6 @@ TODO(slimsag): Currently, edits may only be applied via the frontend. It may mak
 
 ```
 searchKey: conf.Server.Start
-tags: [exported]
 ```
 
 ```Go
@@ -997,6 +1009,7 @@ Start initializes the server instance.
 
 ```
 searchKey: conf.Server.watchSource
+tags: [private]
 ```
 
 ```Go
@@ -1009,6 +1022,7 @@ watchSource reloads the configuration from the source at least every five second
 
 ```
 searchKey: conf.Server.updateFromSource
+tags: [private]
 ```
 
 ```Go
@@ -1019,7 +1033,6 @@ func (s *Server) updateFromSource(ctx context.Context) error
 
 ```
 searchKey: conf.Server.NeedServerRestart
-tags: [exported]
 ```
 
 ```Go
@@ -1032,6 +1045,7 @@ NeedServerRestart tells if the server needs to restart for pending configuration
 
 ```
 searchKey: conf.Server.markNeedServerRestart
+tags: [private]
 ```
 
 ```Go
@@ -1044,7 +1058,6 @@ markNeedServerRestart marks the server as needing a restart so that pending conf
 
 ```
 searchKey: conf.Edits
-tags: [exported]
 ```
 
 ```Go
@@ -1059,6 +1072,7 @@ Edits describes some JSON edits to apply to site configuration.
 
 ```
 searchKey: conf.store
+tags: [private]
 ```
 
 ```Go
@@ -1081,6 +1095,7 @@ store manages the in-memory storage, access, and updating of the site configurat
 
 ```
 searchKey: conf.newStore
+tags: [private]
 ```
 
 ```Go
@@ -1093,6 +1108,7 @@ newStore returns a new configuration store.
 
 ```
 searchKey: conf.store.LastValid
+tags: [private]
 ```
 
 ```Go
@@ -1105,6 +1121,7 @@ LastValid returns the last valid site configuration that this store was updated 
 
 ```
 searchKey: conf.store.Raw
+tags: [private]
 ```
 
 ```Go
@@ -1117,6 +1134,7 @@ Raw returns the last raw configuration that this store was updated with.
 
 ```
 searchKey: conf.store.Mock
+tags: [private]
 ```
 
 ```Go
@@ -1129,6 +1147,7 @@ Mock sets up mock data for the site configuration. It uses the configuration mut
 
 ```
 searchKey: conf.store.MaybeUpdate
+tags: [private]
 ```
 
 ```Go
@@ -1145,6 +1164,7 @@ configChange is defined iff the cache was actually updated. TODO@ggilmore: write
 
 ```
 searchKey: conf.store.WaitUntilInitialized
+tags: [private]
 ```
 
 ```Go
@@ -1157,6 +1177,7 @@ WaitUntilInitialized blocks and only returns to the caller once the store has in
 
 ```
 searchKey: conf.store.checkDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -1167,6 +1188,7 @@ func (s *store) checkDeadlock()
 
 ```
 searchKey: conf.store.initialize
+tags: [private]
 ```
 
 ```Go
@@ -1177,6 +1199,7 @@ func (s *store) initialize()
 
 ```
 searchKey: conf.updateResult
+tags: [private]
 ```
 
 ```Go
@@ -1191,6 +1214,7 @@ type updateResult struct {
 
 ```
 searchKey: conf.problemKind
+tags: [private]
 ```
 
 ```Go
@@ -1203,7 +1227,6 @@ problemKind represents the kind of a configuration problem.
 
 ```
 searchKey: conf.Problem
-tags: [exported]
 ```
 
 ```Go
@@ -1219,7 +1242,6 @@ Problem contains kind and description of a specific configuration problem.
 
 ```
 searchKey: conf.NewSiteProblem
-tags: [exported]
 ```
 
 ```Go
@@ -1232,7 +1254,6 @@ NewSiteProblem creates a new site config problem with given message.
 
 ```
 searchKey: conf.NewExternalServiceProblem
-tags: [exported]
 ```
 
 ```Go
@@ -1245,7 +1266,6 @@ NewExternalServiceProblem creates a new external service config problem with giv
 
 ```
 searchKey: conf.Problem.IsSite
-tags: [exported]
 ```
 
 ```Go
@@ -1258,7 +1278,6 @@ IsSite returns true if the problem is about site config.
 
 ```
 searchKey: conf.Problem.IsExternalService
-tags: [exported]
 ```
 
 ```Go
@@ -1271,7 +1290,6 @@ IsExternalService returns true if the problem is about external service config.
 
 ```
 searchKey: conf.Problem.String
-tags: [exported]
 ```
 
 ```Go
@@ -1282,7 +1300,6 @@ func (p Problem) String() string
 
 ```
 searchKey: conf.Problem.MarshalJSON
-tags: [exported]
 ```
 
 ```Go
@@ -1293,7 +1310,6 @@ func (p *Problem) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: conf.Problem.UnmarshalJSON
-tags: [exported]
 ```
 
 ```Go
@@ -1304,7 +1320,6 @@ func (p *Problem) UnmarshalJSON(b []byte) error
 
 ```
 searchKey: conf.Problems
-tags: [exported]
 ```
 
 ```Go
@@ -1317,6 +1332,7 @@ Problems is a list of problems.
 
 ```
 searchKey: conf.newProblems
+tags: [private]
 ```
 
 ```Go
@@ -1329,7 +1345,6 @@ newProblems converts a list of messages with their kind into problems.
 
 ```
 searchKey: conf.NewSiteProblems
-tags: [exported]
 ```
 
 ```Go
@@ -1342,7 +1357,6 @@ NewSiteProblems converts a list of messages into site config problems.
 
 ```
 searchKey: conf.NewExternalServiceProblems
-tags: [exported]
 ```
 
 ```Go
@@ -1355,7 +1369,6 @@ NewExternalServiceProblems converts a list of messages into external service con
 
 ```
 searchKey: conf.Validate
-tags: [exported]
 ```
 
 ```Go
@@ -1368,6 +1381,7 @@ Validate validates the configuration against the JSON Schema and other custom va
 
 ```
 searchKey: conf.validateCustomRaw
+tags: [private]
 ```
 
 ```Go
@@ -1378,6 +1392,7 @@ func validateCustomRaw(normalizedInput conftypes.RawUnified) (problems Problems,
 
 ```
 searchKey: conf.validateCustom
+tags: [private]
 ```
 
 ```Go
@@ -1390,7 +1405,6 @@ validateCustom validates the site config using custom validation steps that are 
 
 ```
 searchKey: conf.GetWarnings
-tags: [exported]
 ```
 
 ```Go
@@ -1403,7 +1417,6 @@ GetWarnings identifies problems with the configuration that a site admin should 
 
 ```
 searchKey: conf.Problems.Messages
-tags: [exported]
 ```
 
 ```Go
@@ -1416,7 +1429,6 @@ Messages returns the list of problems in strings.
 
 ```
 searchKey: conf.Problems.Site
-tags: [exported]
 ```
 
 ```Go
@@ -1429,7 +1441,6 @@ Site returns all site config problems in the list.
 
 ```
 searchKey: conf.Problems.ExternalService
-tags: [exported]
 ```
 
 ```Go
@@ -1442,6 +1453,7 @@ ExternalService returns all external service config problems in the list.
 
 ```
 searchKey: conf.jsonLoader
+tags: [private]
 ```
 
 ```Go
@@ -1454,6 +1466,7 @@ type jsonLoader struct {
 
 ```
 searchKey: conf.jsonLoader.LoaderFactory
+tags: [private]
 ```
 
 ```Go
@@ -1464,6 +1477,7 @@ func (l jsonLoader) LoaderFactory() gojsonschema.JSONLoaderFactory
 
 ```
 searchKey: conf.jsonLoaderFactory
+tags: [private]
 ```
 
 ```Go
@@ -1474,6 +1488,7 @@ type jsonLoaderFactory struct{}
 
 ```
 searchKey: conf.jsonLoaderFactory.New
+tags: [private]
 ```
 
 ```Go
@@ -1484,7 +1499,6 @@ func (f jsonLoaderFactory) New(source string) gojsonschema.JSONLoader
 
 ```
 searchKey: conf.Validator
-tags: [exported]
 ```
 
 ```Go
@@ -1493,11 +1507,14 @@ type Validator func(Unified) Problems
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AuthProviderType" href="#AuthProviderType">func AuthProviderType(p schema.AuthProviders) string</a>
 
 ```
 searchKey: conf.AuthProviderType
-tags: [exported]
 ```
 
 ```Go
@@ -1510,7 +1527,6 @@ AuthProviderType returns the type string for the auth provider.
 
 ```
 searchKey: conf.AuthPublic
-tags: [exported]
 ```
 
 ```Go
@@ -1523,7 +1539,6 @@ AuthPublic reports whether the site is public. Because many core features rely o
 
 ```
 searchKey: conf.AuthAllowSignup
-tags: [exported]
 ```
 
 ```Go
@@ -1536,6 +1551,7 @@ AuthAllowSignup reports whether the site allows signup. Currently only the built
 
 ```
 searchKey: conf.authAllowSignup
+tags: [private]
 ```
 
 ```Go
@@ -1546,7 +1562,6 @@ func authAllowSignup(c *Unified) bool
 
 ```
 searchKey: conf.Raw
-tags: [exported]
 ```
 
 ```Go
@@ -1559,7 +1574,6 @@ Raw returns a copy of the raw configuration.
 
 ```
 searchKey: conf.Mock
-tags: [exported]
 ```
 
 ```Go
@@ -1574,7 +1588,6 @@ Mock is a wrapper around client.Mock.
 
 ```
 searchKey: conf.Watch
-tags: [exported]
 ```
 
 ```Go
@@ -1593,7 +1606,6 @@ IMPORTANT: Watch will block on config initialization. It therefore should *never
 
 ```
 searchKey: conf.Cached
-tags: [exported]
 ```
 
 ```Go
@@ -1604,10 +1616,11 @@ Cached will return a wrapper around f which caches the response. The value will 
 
 IMPORTANT: The first call to wrapped will block on config initialization. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.computed.go" href="#init.computed.go">func init()</a>
 
 ```
 searchKey: conf.init
+tags: [private]
 ```
 
 ```Go
@@ -1618,6 +1631,7 @@ func init()
 
 ```
 searchKey: conf.defaultConfigForDeployment
+tags: [private]
 ```
 
 ```Go
@@ -1628,7 +1642,6 @@ func defaultConfigForDeployment() conftypes.RawUnified
 
 ```
 searchKey: conf.AWSCodeCommitConfigs
-tags: [exported]
 ```
 
 ```Go
@@ -1639,7 +1652,6 @@ func AWSCodeCommitConfigs(ctx context.Context) ([]*schema.AWSCodeCommitConnectio
 
 ```
 searchKey: conf.BitbucketServerConfigs
-tags: [exported]
 ```
 
 ```Go
@@ -1650,7 +1662,6 @@ func BitbucketServerConfigs(ctx context.Context) ([]*schema.BitbucketServerConne
 
 ```
 searchKey: conf.GitHubConfigs
-tags: [exported]
 ```
 
 ```Go
@@ -1661,7 +1672,6 @@ func GitHubConfigs(ctx context.Context) ([]*schema.GitHubConnection, error)
 
 ```
 searchKey: conf.GitLabConfigs
-tags: [exported]
 ```
 
 ```Go
@@ -1672,7 +1682,6 @@ func GitLabConfigs(ctx context.Context) ([]*schema.GitLabConnection, error)
 
 ```
 searchKey: conf.GitoliteConfigs
-tags: [exported]
 ```
 
 ```Go
@@ -1683,7 +1692,6 @@ func GitoliteConfigs(ctx context.Context) ([]*schema.GitoliteConnection, error)
 
 ```
 searchKey: conf.PhabricatorConfigs
-tags: [exported]
 ```
 
 ```Go
@@ -1694,7 +1702,6 @@ func PhabricatorConfigs(ctx context.Context) ([]*schema.PhabricatorConnection, e
 
 ```
 searchKey: conf.EmailVerificationRequired
-tags: [exported]
 ```
 
 ```Go
@@ -1709,7 +1716,6 @@ It's false for sites that do not have an email sending API key set up.
 
 ```
 searchKey: conf.CanSendEmail
-tags: [exported]
 ```
 
 ```Go
@@ -1724,7 +1730,6 @@ It's false for sites that do not have an email sending API key set up.
 
 ```
 searchKey: conf.DeployType
-tags: [exported]
 ```
 
 ```Go
@@ -1737,7 +1742,6 @@ DeployType tells the deployment type.
 
 ```
 searchKey: conf.IsDeployTypeKubernetes
-tags: [exported]
 ```
 
 ```Go
@@ -1750,7 +1754,6 @@ IsDeployTypeKubernetes tells if the given deployment type is a Kubernetes cluste
 
 ```
 searchKey: conf.IsDeployTypeDockerCompose
-tags: [exported]
 ```
 
 ```Go
@@ -1763,7 +1766,6 @@ IsDeployTypeDockerCompose tells if the given deployment type is the Docker Compo
 
 ```
 searchKey: conf.IsDeployTypePureDocker
-tags: [exported]
 ```
 
 ```Go
@@ -1776,7 +1778,6 @@ IsDeployTypePureDocker tells if the given deployment type is the pure Docker dep
 
 ```
 searchKey: conf.IsDeployTypeSingleDockerContainer
-tags: [exported]
 ```
 
 ```Go
@@ -1789,7 +1790,6 @@ IsDeployTypeSingleDockerContainer tells if the given deployment type is Docker s
 
 ```
 searchKey: conf.IsDev
-tags: [exported]
 ```
 
 ```Go
@@ -1802,7 +1802,6 @@ IsDev tells if the given deployment type is "dev".
 
 ```
 searchKey: conf.IsValidDeployType
-tags: [exported]
 ```
 
 ```Go
@@ -1815,7 +1814,6 @@ IsValidDeployType returns true iff the given deployType is a Kubernetes deployme
 
 ```
 searchKey: conf.UpdateChannel
-tags: [exported]
 ```
 
 ```Go
@@ -1828,7 +1826,6 @@ UpdateChannel tells the update channel. Default is "release".
 
 ```
 searchKey: conf.SearchIndexEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -1841,7 +1838,6 @@ SearchIndexEnabled returns true if sourcegraph should index all repositories for
 
 ```
 searchKey: conf.BatchChangesEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -1852,7 +1848,6 @@ func BatchChangesEnabled() bool
 
 ```
 searchKey: conf.BatchChangesRestrictedToAdmins
-tags: [exported]
 ```
 
 ```Go
@@ -1863,7 +1858,6 @@ func BatchChangesRestrictedToAdmins() bool
 
 ```
 searchKey: conf.CodeIntelAutoIndexingEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -1874,7 +1868,6 @@ func CodeIntelAutoIndexingEnabled() bool
 
 ```
 searchKey: conf.ProductResearchPageEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -1885,7 +1878,6 @@ func ProductResearchPageEnabled() bool
 
 ```
 searchKey: conf.ExternalURL
-tags: [exported]
 ```
 
 ```Go
@@ -1896,7 +1888,6 @@ func ExternalURL() string
 
 ```
 searchKey: conf.UsingExternalURL
-tags: [exported]
 ```
 
 ```Go
@@ -1907,7 +1898,6 @@ func UsingExternalURL() bool
 
 ```
 searchKey: conf.IsExternalURLSecure
-tags: [exported]
 ```
 
 ```Go
@@ -1918,7 +1908,6 @@ func IsExternalURLSecure() bool
 
 ```
 searchKey: conf.IsBuiltinSignupAllowed
-tags: [exported]
 ```
 
 ```Go
@@ -1929,7 +1918,6 @@ func IsBuiltinSignupAllowed() bool
 
 ```
 searchKey: conf.SearchSymbolsParallelism
-tags: [exported]
 ```
 
 ```Go
@@ -1942,7 +1930,6 @@ SearchSymbolsParallelism returns 20, or the site config "debug.search.symbolsPar
 
 ```
 searchKey: conf.BitbucketServerPluginPerm
-tags: [exported]
 ```
 
 ```Go
@@ -1953,7 +1940,6 @@ func BitbucketServerPluginPerm() bool
 
 ```
 searchKey: conf.EventLoggingEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -1964,7 +1950,6 @@ func EventLoggingEnabled() bool
 
 ```
 searchKey: conf.StructuralSearchEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -1975,7 +1960,6 @@ func StructuralSearchEnabled() bool
 
 ```
 searchKey: conf.AndOrQueryEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -1986,7 +1970,6 @@ func AndOrQueryEnabled() bool
 
 ```
 searchKey: conf.ExperimentalFeatures
-tags: [exported]
 ```
 
 ```Go
@@ -1997,7 +1980,6 @@ func ExperimentalFeatures() schema.ExperimentalFeatures
 
 ```
 searchKey: conf.AuthMinPasswordLength
-tags: [exported]
 ```
 
 ```Go
@@ -2010,7 +1992,6 @@ AuthMinPasswordLength returns the value of minimum password length requirement. 
 
 ```
 searchKey: conf.AuthPasswordResetLinkExpiry
-tags: [exported]
 ```
 
 ```Go
@@ -2023,7 +2004,6 @@ AuthPasswordResetLinkExpiry returns the time (in seconds) indicating how long pa
 
 ```
 searchKey: conf.GitMaxCodehostRequestsPerSecond
-tags: [exported]
 ```
 
 ```Go
@@ -2036,7 +2016,6 @@ GitMaxCodehostRequestsPerSecond returns maximum number of remote code host git o
 
 ```
 searchKey: conf.UserReposMaxPerUser
-tags: [exported]
 ```
 
 ```Go
@@ -2047,7 +2026,6 @@ func UserReposMaxPerUser() int
 
 ```
 searchKey: conf.UserReposMaxPerSite
-tags: [exported]
 ```
 
 ```Go
@@ -2058,6 +2036,7 @@ func UserReposMaxPerSite() int
 
 ```
 searchKey: conf.startSiteConfigEscapeHatchWorker
+tags: [private]
 ```
 
 ```Go
@@ -2070,6 +2049,7 @@ startSiteConfigEscapeHatchWorker handles ensuring that edits to the ephemeral on
 
 ```
 searchKey: conf.diff
+tags: [private]
 ```
 
 ```Go
@@ -2082,6 +2062,7 @@ diff returns names of the Go fields that have different values between the two c
 
 ```
 searchKey: conf.diffStruct
+tags: [private]
 ```
 
 ```Go
@@ -2092,6 +2073,7 @@ func diffStruct(before, after interface{}, prefix string) (fields map[string]str
 
 ```
 searchKey: conf.getJSONFields
+tags: [private]
 ```
 
 ```Go
@@ -2102,6 +2084,7 @@ func getJSONFields(vv interface{}, prefix string) (fields map[string]interface{}
 
 ```
 searchKey: conf.parseJSONTag
+tags: [private]
 ```
 
 ```Go
@@ -2114,7 +2097,6 @@ parseJSONTag parses a JSON struct field tag to return the JSON field name.
 
 ```
 searchKey: conf.HasExternalAuthProvider
-tags: [exported]
 ```
 
 ```Go
@@ -2125,6 +2107,7 @@ func HasExternalAuthProvider(c Unified) bool
 
 ```
 searchKey: conf.parseConfigData
+tags: [private]
 ```
 
 ```Go
@@ -2137,7 +2120,6 @@ parseConfigData parses the provided config string into the given cfg struct poin
 
 ```
 searchKey: conf.NeedRestartToApply
-tags: [exported]
 ```
 
 ```Go
@@ -2150,7 +2132,6 @@ NeedRestartToApply determines if a restart is needed to apply the changes betwee
 
 ```
 searchKey: conf.ValidateSite
-tags: [exported]
 ```
 
 ```Go
@@ -2163,7 +2144,6 @@ ValidateSite is like Validate, except it only validates the site configuration.
 
 ```
 searchKey: conf.ValidateSetting
-tags: [exported]
 ```
 
 ```Go
@@ -2174,6 +2154,7 @@ func ValidateSetting(input string) (problems []string, err error)
 
 ```
 searchKey: conf.doValidate
+tags: [private]
 ```
 
 ```Go
@@ -2184,6 +2165,7 @@ func doValidate(inputStr, schema string) (messages []string, err error)
 
 ```
 searchKey: conf.validate
+tags: [private]
 ```
 
 ```Go
@@ -2194,7 +2176,6 @@ func validate(schema, input []byte) (*gojsonschema.Result, error)
 
 ```
 searchKey: conf.MustValidateDefaults
-tags: [exported]
 ```
 
 ```Go
@@ -2207,6 +2188,7 @@ MustValidateDefaults should be called after all custom validators have been regi
 
 ```
 searchKey: conf.mustValidate
+tags: [private]
 ```
 
 ```Go
@@ -2219,7 +2201,6 @@ mustValidate panics if the configuration does not pass validation.
 
 ```
 searchKey: conf.ContributeValidator
-tags: [exported]
 ```
 
 ```Go
@@ -2234,7 +2215,6 @@ It may only be called at init time.
 
 ```
 searchKey: conf.TestValidator
-tags: [exported]
 ```
 
 ```Go
@@ -2250,7 +2230,6 @@ TestValidator is an exported helper function for other packages to test their co
 
 ```
 searchKey: conf.ContributeWarning
-tags: [exported]
 ```
 
 ```Go
@@ -2265,6 +2244,7 @@ It may only be called at init time.
 
 ```
 searchKey: conf.TestAuthPublic
+tags: [private]
 ```
 
 ```Go
@@ -2275,6 +2255,7 @@ func TestAuthPublic(t *testing.T)
 
 ```
 searchKey: conf.TestClient_continuouslyUpdate
+tags: [private]
 ```
 
 ```Go
@@ -2285,6 +2266,7 @@ func TestClient_continuouslyUpdate(t *testing.T)
 
 ```
 searchKey: conf.TestSearchIndexEnabled
+tags: [private]
 ```
 
 ```Go
@@ -2295,6 +2277,7 @@ func TestSearchIndexEnabled(t *testing.T)
 
 ```
 searchKey: conf.TestAuthPasswordResetLinkDuration
+tags: [private]
 ```
 
 ```Go
@@ -2305,6 +2288,7 @@ func TestAuthPasswordResetLinkDuration(t *testing.T)
 
 ```
 searchKey: conf.TestGitMaxCodehostRequestsPerSecond
+tags: [private]
 ```
 
 ```Go
@@ -2315,6 +2299,7 @@ func TestGitMaxCodehostRequestsPerSecond(t *testing.T)
 
 ```
 searchKey: conf.setenv
+tags: [private]
 ```
 
 ```Go
@@ -2325,6 +2310,7 @@ func setenv(t *testing.T, keyval string) func()
 
 ```
 searchKey: conf.boolPtr
+tags: [private]
 ```
 
 ```Go
@@ -2335,6 +2321,7 @@ func boolPtr(b bool) *bool
 
 ```
 searchKey: conf.intPtr
+tags: [private]
 ```
 
 ```Go
@@ -2345,6 +2332,7 @@ func intPtr(i int) *int
 
 ```
 searchKey: conf.TestDiff
+tags: [private]
 ```
 
 ```Go
@@ -2355,6 +2343,7 @@ func TestDiff(t *testing.T)
 
 ```
 searchKey: conf.toSlice
+tags: [private]
 ```
 
 ```Go
@@ -2365,6 +2354,7 @@ func toSlice(m map[string]struct{}) []string
 
 ```
 searchKey: conf.TestExtensions
+tags: [private]
 ```
 
 ```Go
@@ -2375,6 +2365,7 @@ func TestExtensions(t *testing.T)
 
 ```
 searchKey: conf.TestValidate
+tags: [private]
 ```
 
 ```Go
@@ -2385,6 +2376,7 @@ func TestValidate(t *testing.T)
 
 ```
 searchKey: conf.TestValidateCustom
+tags: [private]
 ```
 
 ```Go
@@ -2395,6 +2387,7 @@ func TestValidateCustom(t *testing.T)
 
 ```
 searchKey: conf.TestProblems
+tags: [private]
 ```
 
 ```Go

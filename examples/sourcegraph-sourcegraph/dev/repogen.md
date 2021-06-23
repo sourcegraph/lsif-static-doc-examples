@@ -16,14 +16,11 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="numFiles" href="#numFiles">var numFiles</a>
 
 ```
 searchKey: main.numFiles
+tags: [private]
 ```
 
 ```Go
@@ -34,6 +31,7 @@ var numFiles = flag.Int("nf", 100, "number of files to write")
 
 ```
 searchKey: main.fileSize
+tags: [private]
 ```
 
 ```Go
@@ -42,14 +40,11 @@ var fileSize = flag.Int("size", 1024*1024, "size of each file")
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -60,6 +55,7 @@ func main()
 
 ```
 searchKey: main.repogen
+tags: [private]
 ```
 
 ```Go
@@ -72,6 +68,7 @@ repogen creates a repo with nf files, each of the given size.
 
 ```
 searchKey: main.inDir
+tags: [private]
 ```
 
 ```Go
@@ -84,6 +81,7 @@ inDir runs function f in directory d.
 
 ```
 searchKey: main.run
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +94,7 @@ run executes an external command.
 
 ```
 searchKey: main.writeIthFile
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +105,7 @@ func writeIthFile(i, size int, dir string) error
 
 ```
 searchKey: main.write
+tags: [private]
 ```
 
 ```Go

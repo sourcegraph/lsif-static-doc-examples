@@ -4,7 +4,9 @@
     "identifier": "goreman",
     "newPage": true,
     "searchKey": "internal/goreman",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Shutdown",
                 "newPage": false,
                 "searchKey": "goreman.Shutdown",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "Ignore",
                 "newPage": false,
                 "searchKey": "goreman.Ignore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,7 +107,9 @@
                 "identifier": "procs",
                 "newPage": false,
                 "searchKey": "goreman.procs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +129,9 @@
                 "identifier": "maxProcNameLength",
                 "newPage": false,
                 "searchKey": "goreman.maxProcNameLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -145,7 +151,9 @@
                 "identifier": "procDiedAction",
                 "newPage": false,
                 "searchKey": "goreman.procDiedAction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -165,7 +173,9 @@
                 "identifier": "colors",
                 "newPage": false,
                 "searchKey": "goreman.colors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -185,7 +195,9 @@
                 "identifier": "ci",
                 "newPage": false,
                 "searchKey": "goreman.ci",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -205,7 +217,9 @@
                 "identifier": "mutex",
                 "newPage": false,
                 "searchKey": "goreman.mutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -225,7 +239,9 @@
                 "identifier": "wg",
                 "newPage": false,
                 "searchKey": "goreman.wg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -245,7 +261,9 @@
                 "identifier": "signals",
                 "newPage": false,
                 "searchKey": "goreman.signals",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -268,7 +286,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -286,7 +306,9 @@
                 "identifier": "procInfo",
                 "newPage": false,
                 "searchKey": "goreman.procInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -306,9 +328,7 @@
                 "identifier": "ProcDiedAction",
                 "newPage": false,
                 "searchKey": "goreman.ProcDiedAction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -328,9 +348,7 @@
                 "identifier": "Options",
                 "newPage": false,
                 "searchKey": "goreman.Options",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -350,7 +368,9 @@
                 "identifier": "clogger",
                 "newPage": false,
                 "searchKey": "goreman.clogger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -368,7 +388,9 @@
                       "identifier": "createLogger",
                       "newPage": false,
                       "searchKey": "goreman.createLogger",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -388,7 +410,9 @@
                       "identifier": "clogger.writeBuffers",
                       "newPage": false,
                       "searchKey": "goreman.clogger.writeBuffers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -408,7 +432,9 @@
                       "identifier": "clogger.writeLines",
                       "newPage": false,
                       "searchKey": "goreman.clogger.writeLines",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -428,7 +454,9 @@
                       "identifier": "clogger.Write",
                       "newPage": false,
                       "searchKey": "goreman.clogger.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -451,9 +479,7 @@
                 "identifier": "Goreman",
                 "newPage": false,
                 "searchKey": "goreman.Goreman",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -471,9 +497,7 @@
                       "identifier": "Goreman.RestartAll",
                       "newPage": false,
                       "searchKey": "goreman.Goreman.RestartAll",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -499,7 +523,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -517,7 +543,9 @@
                 "identifier": "readProcfile",
                 "newPage": false,
                 "searchKey": "goreman.readProcfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -537,9 +565,7 @@
                 "identifier": "Start",
                 "newPage": false,
                 "searchKey": "goreman.Start",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -559,7 +585,9 @@
                 "identifier": "stopProc",
                 "newPage": false,
                 "searchKey": "goreman.stopProc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -579,7 +607,9 @@
                 "identifier": "startProc",
                 "newPage": false,
                 "searchKey": "goreman.startProc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -599,7 +629,9 @@
                 "identifier": "startProcs",
                 "newPage": false,
                 "searchKey": "goreman.startProcs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -619,7 +651,9 @@
                 "identifier": "waitProcs",
                 "newPage": false,
                 "searchKey": "goreman.waitProcs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -639,7 +673,9 @@
                 "identifier": "stopProcs",
                 "newPage": false,
                 "searchKey": "goreman.stopProcs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -659,7 +695,9 @@
                 "identifier": "spawnProc",
                 "newPage": false,
                 "searchKey": "goreman.spawnProc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -679,7 +717,9 @@
                 "identifier": "terminateProc",
                 "newPage": false,
                 "searchKey": "goreman.terminateProc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -699,7 +739,9 @@
                 "identifier": "startServer",
                 "newPage": false,
                 "searchKey": "goreman.startServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

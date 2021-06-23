@@ -4,7 +4,9 @@
     "identifier": "batch",
     "newPage": true,
     "searchKey": "internal/database/batch",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "maxNumParameters",
                 "newPage": false,
                 "searchKey": "batch.maxNumParameters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "querySuffixCache",
                 "newPage": false,
                 "searchKey": "batch.querySuffixCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "querySuffixCacheMutex",
                 "newPage": false,
                 "searchKey": "batch.querySuffixCacheMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "setup",
                 "newPage": false,
                 "searchKey": "batch.setup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +158,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -162,9 +178,7 @@
                 "identifier": "Inserter",
                 "newPage": false,
                 "searchKey": "batch.Inserter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -182,9 +196,7 @@
                       "identifier": "NewInserter",
                       "newPage": false,
                       "searchKey": "batch.NewInserter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -204,9 +216,7 @@
                       "identifier": "NewInserterWithReturn",
                       "newPage": false,
                       "searchKey": "batch.NewInserterWithReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -226,9 +236,7 @@
                       "identifier": "Inserter.Insert",
                       "newPage": false,
                       "searchKey": "batch.Inserter.Insert",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -248,9 +256,7 @@
                       "identifier": "Inserter.Flush",
                       "newPage": false,
                       "searchKey": "batch.Inserter.Flush",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -270,7 +276,9 @@
                       "identifier": "Inserter.pop",
                       "newPage": false,
                       "searchKey": "batch.Inserter.pop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -290,7 +298,9 @@
                       "identifier": "Inserter.makeQuery",
                       "newPage": false,
                       "searchKey": "batch.Inserter.makeQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -313,9 +323,7 @@
                 "identifier": "ReturningScanner",
                 "newPage": false,
                 "searchKey": "batch.ReturningScanner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -338,7 +346,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -356,9 +366,7 @@
                 "identifier": "InsertValues",
                 "newPage": false,
                 "searchKey": "batch.InsertValues",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -378,9 +386,7 @@
                 "identifier": "WithInserter",
                 "newPage": false,
                 "searchKey": "batch.WithInserter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -400,9 +406,7 @@
                 "identifier": "WithInserterWithReturn",
                 "newPage": false,
                 "searchKey": "batch.WithInserterWithReturn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -422,7 +426,9 @@
                 "identifier": "with",
                 "newPage": false,
                 "searchKey": "batch.with",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -442,7 +448,9 @@
                 "identifier": "getMaxBatchSize",
                 "newPage": false,
                 "searchKey": "batch.getMaxBatchSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -462,7 +470,9 @@
                 "identifier": "makeQueryPrefix",
                 "newPage": false,
                 "searchKey": "batch.makeQueryPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -482,7 +492,9 @@
                 "identifier": "makeQuerySuffix",
                 "newPage": false,
                 "searchKey": "batch.makeQuerySuffix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -502,7 +514,9 @@
                 "identifier": "makeReturningSuffix",
                 "newPage": false,
                 "searchKey": "batch.makeReturningSuffix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -517,12 +531,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/batch#init",
+              "pathID": "/internal/database/batch#init.batch_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.batch_test.go",
                 "newPage": false,
                 "searchKey": "batch.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -542,7 +558,9 @@
                 "identifier": "TestBatchInserter",
                 "newPage": false,
                 "searchKey": "batch.TestBatchInserter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -562,7 +580,9 @@
                 "identifier": "TestBatchInserterWithReturn",
                 "newPage": false,
                 "searchKey": "batch.TestBatchInserterWithReturn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -582,7 +602,9 @@
                 "identifier": "BenchmarkBatchInserter",
                 "newPage": false,
                 "searchKey": "batch.BenchmarkBatchInserter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -602,7 +624,9 @@
                 "identifier": "BenchmarkBatchInserterLargePayload",
                 "newPage": false,
                 "searchKey": "batch.BenchmarkBatchInserterLargePayload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -622,7 +646,9 @@
                 "identifier": "setupTestTable",
                 "newPage": false,
                 "searchKey": "batch.setupTestTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -642,7 +668,9 @@
                 "identifier": "makeTestValues",
                 "newPage": false,
                 "searchKey": "batch.makeTestValues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -662,7 +690,9 @@
                 "identifier": "makePayload",
                 "newPage": false,
                 "searchKey": "batch.makePayload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -682,7 +712,9 @@
                 "identifier": "testInsert",
                 "newPage": false,
                 "searchKey": "batch.testInsert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -702,7 +734,9 @@
                 "identifier": "testInsertWithReturn",
                 "newPage": false,
                 "searchKey": "batch.testInsertWithReturn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

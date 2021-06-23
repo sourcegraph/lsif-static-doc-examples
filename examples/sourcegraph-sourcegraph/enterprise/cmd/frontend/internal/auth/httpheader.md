@@ -16,9 +16,9 @@ Package httpheader implements auth via HTTP Headers.
         * [func (p provider) CachedInfo() *providers.Info](#provider.CachedInfo)
 * [Functions](#func)
     * [func getProviderConfig() (pc *schema.HTTPHeaderAuthProvider, multiple bool)](#getProviderConfig)
-    * [func init()](#init)
+    * [func init()](#init.config.go)
     * [func validateConfig(c conf.Unified) (problems conf.Problems)](#validateConfig)
-    * [func init()](#init)
+    * [func init()](#init.config_watch.go)
     * [func middleware(next http.Handler) http.Handler](#middleware)
     * [func TestValidateCustom(t *testing.T)](#TestValidateCustom)
     * [func TestMiddleware(t *testing.T)](#TestMiddleware)
@@ -27,10 +27,15 @@ Package httpheader implements auth via HTTP Headers.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="providerType" href="#providerType">const providerType</a>
 
 ```
 searchKey: httpheader.providerType
+tags: [private]
 ```
 
 ```Go
@@ -39,11 +44,14 @@ const providerType = "http-header"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Middleware" href="#Middleware">var Middleware</a>
 
 ```
 searchKey: httpheader.Middleware
-tags: [exported]
 ```
 
 ```Go
@@ -59,10 +67,15 @@ See the "func middleware" docs for more information.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="provider" href="#provider">type provider struct</a>
 
 ```
 searchKey: httpheader.provider
+tags: [private]
 ```
 
 ```Go
@@ -75,6 +88,7 @@ type provider struct {
 
 ```
 searchKey: httpheader.provider.ConfigID
+tags: [private]
 ```
 
 ```Go
@@ -87,6 +101,7 @@ ConfigID implements providers.Provider.
 
 ```
 searchKey: httpheader.provider.Config
+tags: [private]
 ```
 
 ```Go
@@ -99,6 +114,7 @@ Config implements providers.Provider.
 
 ```
 searchKey: httpheader.provider.Refresh
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +127,7 @@ Refresh implements providers.Provider.
 
 ```
 searchKey: httpheader.provider.CachedInfo
+tags: [private]
 ```
 
 ```Go
@@ -121,10 +138,15 @@ CachedInfo implements providers.Provider.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="getProviderConfig" href="#getProviderConfig">func getProviderConfig() (pc *schema.HTTPHeaderAuthProvider, multiple bool)</a>
 
 ```
 searchKey: httpheader.getProviderConfig
+tags: [private]
 ```
 
 ```Go
@@ -133,10 +155,11 @@ func getProviderConfig() (pc *schema.HTTPHeaderAuthProvider, multiple bool)
 
 getProviderConfig returns the HTTP header auth provider config. At most 1 can be specified in site config; if there is more than 1, it returns multiple == true (which the caller should handle by returning an error and refusing to proceed with auth). 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.config.go" href="#init.config.go">func init()</a>
 
 ```
 searchKey: httpheader.init
+tags: [private]
 ```
 
 ```Go
@@ -147,16 +170,18 @@ func init()
 
 ```
 searchKey: httpheader.validateConfig
+tags: [private]
 ```
 
 ```Go
 func validateConfig(c conf.Unified) (problems conf.Problems)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.config_watch.go" href="#init.config_watch.go">func init()</a>
 
 ```
 searchKey: httpheader.init
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +194,7 @@ Watch for configuration changes related to the http-header auth provider.
 
 ```
 searchKey: httpheader.middleware
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +211,7 @@ TESTING: Use the testproxy test program to test HTTP auth proxy behavior. For ex
 
 ```
 searchKey: httpheader.TestValidateCustom
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +222,7 @@ func TestValidateCustom(t *testing.T)
 
 ```
 searchKey: httpheader.TestMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -207,6 +235,7 @@ SEE ALSO FOR MANUAL TESTING: See the Middleware docstring for information about 
 
 ```
 searchKey: httpheader.TestMiddleware_stripPrefix
+tags: [private]
 ```
 
 ```Go

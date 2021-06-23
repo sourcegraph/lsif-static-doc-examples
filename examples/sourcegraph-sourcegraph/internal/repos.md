@@ -395,7 +395,7 @@ Package repos providers workers to monitor code host APIs.
     * [func TestPerforceSource_ListRepos(t *testing.T)](#TestPerforceSource_ListRepos)
     * [func TestPerforceSource_makeRepo(t *testing.T)](#TestPerforceSource_makeRepo)
     * [func TestIsSaturdayNight(t *testing.T)](#TestIsSaturdayNight)
-    * [func init()](#init)
+    * [func init()](#init.scheduler_test.go)
     * [func mockTime(t time.Time)](#mockTime)
     * [func TestUpdateQueue_enqueue(t *testing.T)](#TestUpdateQueue_enqueue)
     * [func TestUpdateQueue_remove(t *testing.T)](#TestUpdateQueue_remove)
@@ -436,10 +436,15 @@ Package repos providers workers to monitor code host APIs.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="stubBadHTTPRedirectLocation" href="#stubBadHTTPRedirectLocation">const stubBadHTTPRedirectLocation</a>
 
 ```
 searchKey: repos.stubBadHTTPRedirectLocation
+tags: [private]
 ```
 
 ```Go
@@ -450,6 +455,7 @@ const stubBadHTTPRedirectLocation = `https://amazonaws.com/badhttpredirectlocati
 
 ```
 searchKey: repos.tagFamily
+tags: [private]
 ```
 
 ```Go
@@ -460,6 +466,7 @@ const tagFamily = "family"
 
 ```
 searchKey: repos.tagID
+tags: [private]
 ```
 
 ```Go
@@ -470,6 +477,7 @@ const tagID = "id"
 
 ```
 searchKey: repos.tagState
+tags: [private]
 ```
 
 ```Go
@@ -480,6 +488,7 @@ const tagState = "state"
 
 ```
 searchKey: repos.tagSuccess
+tags: [private]
 ```
 
 ```Go
@@ -490,6 +499,7 @@ const tagSuccess = "success"
 
 ```
 searchKey: repos.minDelay
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +512,7 @@ minDelay is the minimum amount of time between scheduled updates for a single re
 
 ```
 searchKey: repos.maxDelay
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +525,7 @@ maxDelay is the maximum amount of time between scheduled updates for a single re
 
 ```
 searchKey: repos.notifyChanBuffer
+tags: [private]
 ```
 
 ```Go
@@ -526,6 +538,7 @@ notifyChanBuffer controls the buffer size of notification channels. It is import
 
 ```
 searchKey: repos.priorityLow
+tags: [private]
 ```
 
 ```Go
@@ -536,6 +549,7 @@ const priorityLow priority = iota
 
 ```
 searchKey: repos.priorityHigh
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +560,7 @@ const priorityHigh
 
 ```
 searchKey: repos.upsertSourcesFmtstrPrefix
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +571,7 @@ const upsertSourcesFmtstrPrefix = ...
 
 ```
 searchKey: repos.upsertSourcesFmtstrSuffix
+tags: [private]
 ```
 
 ```Go
@@ -566,6 +582,7 @@ const upsertSourcesFmtstrSuffix = ...
 
 ```
 searchKey: repos.upsertSourcesFmtstrDeletes
+tags: [private]
 ```
 
 ```Go
@@ -576,6 +593,7 @@ const upsertSourcesFmtstrDeletes = ...
 
 ```
 searchKey: repos.setClonedReposQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -586,7 +604,6 @@ const setClonedReposQueryFmtstr = ...
 
 ```
 searchKey: repos.CountTotalUserAddedReposQueryFmtstr
-tags: [exported]
 ```
 
 ```Go
@@ -597,6 +614,7 @@ const CountTotalUserAddedReposQueryFmtstr = ...
 
 ```
 searchKey: repos.enqueueSyncJobsQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +627,7 @@ We ignore Phabricator repos here as they are currently synced using RunPhabricat
 
 ```
 searchKey: repos.batchReposQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -617,10 +636,15 @@ const batchReposQueryFmtstr = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="githubRemainingGauge" href="#githubRemainingGauge">var githubRemainingGauge</a>
 
 ```
 searchKey: repos.githubRemainingGauge
+tags: [private]
 ```
 
 ```Go
@@ -631,6 +655,7 @@ var githubRemainingGauge = ...
 
 ```
 searchKey: repos.githubRatelimitWaitCounter
+tags: [private]
 ```
 
 ```Go
@@ -641,6 +666,7 @@ var githubRatelimitWaitCounter = ...
 
 ```
 searchKey: repos.regOrg
+tags: [private]
 ```
 
 ```Go
@@ -653,6 +679,7 @@ regOrg is a regular expression that matches the pattern `org:<org-name>` `<org-n
 
 ```
 searchKey: repos.gitlabRemainingGauge
+tags: [private]
 ```
 
 ```Go
@@ -663,6 +690,7 @@ var gitlabRemainingGauge = ...
 
 ```
 searchKey: repos.gitlabRatelimitWaitCounter
+tags: [private]
 ```
 
 ```Go
@@ -673,6 +701,7 @@ var gitlabRatelimitWaitCounter = ...
 
 ```
 searchKey: repos.schemeOrHostNotEmptyErr
+tags: [private]
 ```
 
 ```Go
@@ -683,6 +712,7 @@ var schemeOrHostNotEmptyErr = errors.New("scheme and host should be empty")
 
 ```
 searchKey: repos.phabricatorUpdateTime
+tags: [private]
 ```
 
 ```Go
@@ -693,6 +723,7 @@ var phabricatorUpdateTime = ...
 
 ```
 searchKey: repos.lastSync
+tags: [private]
 ```
 
 ```Go
@@ -703,6 +734,7 @@ var lastSync = ...
 
 ```
 searchKey: repos.syncStarted
+tags: [private]
 ```
 
 ```Go
@@ -713,6 +745,7 @@ var syncStarted = ...
 
 ```
 searchKey: repos.syncedTotal
+tags: [private]
 ```
 
 ```Go
@@ -723,6 +756,7 @@ var syncedTotal = ...
 
 ```
 searchKey: repos.syncErrors
+tags: [private]
 ```
 
 ```Go
@@ -733,6 +767,7 @@ var syncErrors = ...
 
 ```
 searchKey: repos.syncDuration
+tags: [private]
 ```
 
 ```Go
@@ -743,6 +778,7 @@ var syncDuration = ...
 
 ```
 searchKey: repos.purgeSuccess
+tags: [private]
 ```
 
 ```Go
@@ -753,6 +789,7 @@ var purgeSuccess = ...
 
 ```
 searchKey: repos.purgeFailed
+tags: [private]
 ```
 
 ```Go
@@ -763,6 +800,7 @@ var purgeFailed = ...
 
 ```
 searchKey: repos.schedError
+tags: [private]
 ```
 
 ```Go
@@ -773,6 +811,7 @@ var schedError = ...
 
 ```
 searchKey: repos.schedLoops
+tags: [private]
 ```
 
 ```Go
@@ -783,6 +822,7 @@ var schedLoops = ...
 
 ```
 searchKey: repos.schedAutoFetch
+tags: [private]
 ```
 
 ```Go
@@ -793,6 +833,7 @@ var schedAutoFetch = ...
 
 ```
 searchKey: repos.schedManualFetch
+tags: [private]
 ```
 
 ```Go
@@ -803,6 +844,7 @@ var schedManualFetch = ...
 
 ```
 searchKey: repos.schedKnownRepos
+tags: [private]
 ```
 
 ```Go
@@ -813,6 +855,7 @@ var schedKnownRepos = ...
 
 ```
 searchKey: repos.schedUpdateQueueLength
+tags: [private]
 ```
 
 ```Go
@@ -823,6 +866,7 @@ var schedUpdateQueueLength = ...
 
 ```
 searchKey: repos.requestRepoUpdate
+tags: [private]
 ```
 
 ```Go
@@ -835,6 +879,7 @@ requestRepoUpdate sends a request to gitserver to request an update.
 
 ```
 searchKey: repos.configuredLimiter
+tags: [private]
 ```
 
 ```Go
@@ -847,6 +892,7 @@ configuredLimiter returns a mutable limiter that is configured with the maximum 
 
 ```
 searchKey: repos.notify
+tags: [private]
 ```
 
 ```Go
@@ -864,6 +910,7 @@ notify performs a non-blocking send on the channel. The channel should be buffer
 
 ```
 searchKey: repos.timeNow
+tags: [private]
 ```
 
 ```Go
@@ -876,6 +923,7 @@ Mockable time functions for testing.
 
 ```
 searchKey: repos.timeAfterFunc
+tags: [private]
 ```
 
 ```Go
@@ -888,7 +936,6 @@ Mockable time functions for testing.
 
 ```
 searchKey: repos.MockStatusMessages
-tags: [exported]
 ```
 
 ```Go
@@ -899,6 +946,7 @@ var MockStatusMessages func(context.Context, *types.User) ([]StatusMessage, erro
 
 ```
 searchKey: repos.upsertSourcesQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -909,6 +957,7 @@ var upsertSourcesQueryFmtstr = upsertSourcesFmtstrPrefix + upsertSourcesFmtstrSu
 
 ```
 searchKey: repos.upsertSourcesWithDeletesQueryFmtstr
+tags: [private]
 ```
 
 ```Go
@@ -919,6 +968,7 @@ var upsertSourcesWithDeletesQueryFmtstr = ...
 
 ```
 searchKey: repos.batchUpdateReposQuery
+tags: [private]
 ```
 
 ```Go
@@ -929,6 +979,7 @@ var batchUpdateReposQuery = ...
 
 ```
 searchKey: repos.batchDeleteReposQuery
+tags: [private]
 ```
 
 ```Go
@@ -941,6 +992,7 @@ delete is a soft-delete. name is unique and the syncer ensures we respect that c
 
 ```
 searchKey: repos.batchInsertReposQuery
+tags: [private]
 ```
 
 ```Go
@@ -951,6 +1003,7 @@ var batchInsertReposQuery = ...
 
 ```
 searchKey: repos.listRepoIDsQuery
+tags: [private]
 ```
 
 ```Go
@@ -961,6 +1014,7 @@ var listRepoIDsQuery = ...
 
 ```
 searchKey: repos.updateRegex
+tags: [private]
 ```
 
 ```Go
@@ -971,6 +1025,7 @@ var updateRegex = flag.String("update", "", "Update testdata of tests matching t
 
 ```
 searchKey: repos.defaultTime
+tags: [private]
 ```
 
 ```Go
@@ -979,11 +1034,14 @@ var defaultTime = time.Date(2000, 1, 1, 1, 1, 1, 1, time.UTC)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AWSCodeCommitSource" href="#AWSCodeCommitSource">type AWSCodeCommitSource struct</a>
 
 ```
 searchKey: repos.AWSCodeCommitSource
-tags: [exported]
 ```
 
 ```Go
@@ -1005,7 +1063,6 @@ An AWSCodeCommitSource yields repositories from a single AWS Code Commit connect
 
 ```
 searchKey: repos.NewAWSCodeCommitSource
-tags: [exported]
 ```
 
 ```Go
@@ -1018,6 +1075,7 @@ NewAWSCodeCommitSource returns a new AWSCodeCommitSource from the given external
 
 ```
 searchKey: repos.newAWSCodeCommitSource
+tags: [private]
 ```
 
 ```Go
@@ -1028,7 +1086,6 @@ func newAWSCodeCommitSource(svc *types.ExternalService, c *schema.AWSCodeCommitC
 
 ```
 searchKey: repos.AWSCodeCommitSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -1041,7 +1098,6 @@ ListRepos returns all AWS Code Commit repositories accessible to all connections
 
 ```
 searchKey: repos.AWSCodeCommitSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -1054,6 +1110,7 @@ ExternalServices returns a singleton slice containing the external service.
 
 ```
 searchKey: repos.AWSCodeCommitSource.makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -1064,6 +1121,7 @@ func (s *AWSCodeCommitSource) makeRepo(r *awscodecommit.Repository) (*types.Repo
 
 ```
 searchKey: repos.AWSCodeCommitSource.listAllRepositories
+tags: [private]
 ```
 
 ```Go
@@ -1074,6 +1132,7 @@ func (s *AWSCodeCommitSource) listAllRepositories(ctx context.Context, results c
 
 ```
 searchKey: repos.AWSCodeCommitSource.excludes
+tags: [private]
 ```
 
 ```Go
@@ -1084,6 +1143,7 @@ func (s *AWSCodeCommitSource) excludes(r *awscodecommit.Repository) bool
 
 ```
 searchKey: repos.stubBadHTTPRedirectTransport
+tags: [private]
 ```
 
 ```Go
@@ -1096,6 +1156,7 @@ type stubBadHTTPRedirectTransport struct {
 
 ```
 searchKey: repos.stubBadHTTPRedirectTransport.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -1106,6 +1167,7 @@ func (t stubBadHTTPRedirectTransport) RoundTrip(r *http.Request) (*http.Response
 
 ```
 searchKey: repos.stubBadHTTPRedirectTransport.UnwrappableTransport
+tags: [private]
 ```
 
 ```Go
@@ -1118,7 +1180,6 @@ UnwrappableTransport signals that this transport can't be wrapped. In particular
 
 ```
 searchKey: repos.BitbucketCloudSource
-tags: [exported]
 ```
 
 ```Go
@@ -1136,7 +1197,6 @@ A BitbucketCloudSource yields repositories from a single BitbucketCloud connecti
 
 ```
 searchKey: repos.NewBitbucketCloudSource
-tags: [exported]
 ```
 
 ```Go
@@ -1149,6 +1209,7 @@ NewBitbucketCloudSource returns a new BitbucketCloudSource from the given extern
 
 ```
 searchKey: repos.newBitbucketCloudSource
+tags: [private]
 ```
 
 ```Go
@@ -1159,7 +1220,6 @@ func newBitbucketCloudSource(svc *types.ExternalService, c *schema.BitbucketClou
 
 ```
 searchKey: repos.BitbucketCloudSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -1172,7 +1232,6 @@ ListRepos returns all Bitbucket Cloud repositories accessible to all connections
 
 ```
 searchKey: repos.BitbucketCloudSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -1185,6 +1244,7 @@ ExternalServices returns a singleton slice containing the external service.
 
 ```
 searchKey: repos.BitbucketCloudSource.makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -1195,6 +1255,7 @@ func (s BitbucketCloudSource) makeRepo(r *bitbucketcloud.Repo) *types.Repo
 
 ```
 searchKey: repos.BitbucketCloudSource.remoteURL
+tags: [private]
 ```
 
 ```Go
@@ -1209,6 +1270,7 @@ note: this used to contain credentials but that is no longer the case if you nee
 
 ```
 searchKey: repos.BitbucketCloudSource.excludes
+tags: [private]
 ```
 
 ```Go
@@ -1219,6 +1281,7 @@ func (s *BitbucketCloudSource) excludes(r *bitbucketcloud.Repo) bool
 
 ```
 searchKey: repos.BitbucketCloudSource.listAllRepos
+tags: [private]
 ```
 
 ```Go
@@ -1229,7 +1292,6 @@ func (s *BitbucketCloudSource) listAllRepos(ctx context.Context, results chan So
 
 ```
 searchKey: repos.BitbucketServerSource
-tags: [exported]
 ```
 
 ```Go
@@ -1247,7 +1309,6 @@ A BitbucketServerSource yields repositories from a single BitbucketServer connec
 
 ```
 searchKey: repos.NewBitbucketServerSource
-tags: [exported]
 ```
 
 ```Go
@@ -1260,6 +1321,7 @@ NewBitbucketServerSource returns a new BitbucketServerSource from the given exte
 
 ```
 searchKey: repos.newBitbucketServerSource
+tags: [private]
 ```
 
 ```Go
@@ -1270,7 +1332,6 @@ func newBitbucketServerSource(svc *types.ExternalService, c *schema.BitbucketSer
 
 ```
 searchKey: repos.BitbucketServerSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -1283,7 +1344,6 @@ ListRepos returns all BitbucketServer repositories accessible to all connections
 
 ```
 searchKey: repos.BitbucketServerSource.WithAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -1294,7 +1354,6 @@ func (s BitbucketServerSource) WithAuthenticator(a auth.Authenticator) (Source, 
 
 ```
 searchKey: repos.BitbucketServerSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -1307,6 +1366,7 @@ ExternalServices returns a singleton slice containing the external service.
 
 ```
 searchKey: repos.BitbucketServerSource.makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -1317,6 +1377,7 @@ func (s BitbucketServerSource) makeRepo(repo *bitbucketserver.Repo, isArchived b
 
 ```
 searchKey: repos.BitbucketServerSource.excludes
+tags: [private]
 ```
 
 ```Go
@@ -1327,6 +1388,7 @@ func (s *BitbucketServerSource) excludes(r *bitbucketserver.Repo) bool
 
 ```
 searchKey: repos.BitbucketServerSource.listAllRepos
+tags: [private]
 ```
 
 ```Go
@@ -1337,6 +1399,7 @@ func (s *BitbucketServerSource) listAllRepos(ctx context.Context, results chan S
 
 ```
 searchKey: repos.BitbucketServerSource.listAllLabeledRepos
+tags: [private]
 ```
 
 ```Go
@@ -1347,7 +1410,6 @@ func (s *BitbucketServerSource) listAllLabeledRepos(ctx context.Context, label s
 
 ```
 searchKey: repos.BitbucketServerSource.AuthenticatedUsername
-tags: [exported]
 ```
 
 ```Go
@@ -1360,7 +1422,6 @@ AuthenticatedUsername uses the underlying bitbucketserver.Client to get the user
 
 ```
 searchKey: repos.BitbucketServerSource.ValidateAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -1371,6 +1432,7 @@ func (s *BitbucketServerSource) ValidateAuthenticator(ctx context.Context) error
 
 ```
 searchKey: repos.excludeFunc
+tags: [private]
 ```
 
 ```Go
@@ -1383,6 +1445,7 @@ excludeFunc takes a string and returns true if it should be excluded. In the cas
 
 ```
 searchKey: repos.excludeBuilder
+tags: [private]
 ```
 
 ```Go
@@ -1400,6 +1463,7 @@ excludeBuilder builds an excludeFunc.
 
 ```
 searchKey: repos.excludeBuilder.Exact
+tags: [private]
 ```
 
 ```Go
@@ -1412,6 +1476,7 @@ Exact will case-insensitively exclude the string name.
 
 ```
 searchKey: repos.excludeBuilder.Pattern
+tags: [private]
 ```
 
 ```Go
@@ -1424,6 +1489,7 @@ Pattern will exclude strings matching the regex pattern.
 
 ```
 searchKey: repos.excludeBuilder.Build
+tags: [private]
 ```
 
 ```Go
@@ -1436,7 +1502,6 @@ Build will return an excludeFunc based on the previous calls to Exact and Patter
 
 ```
 searchKey: repos.GithubSource
-tags: [exported]
 ```
 
 ```Go
@@ -1466,7 +1531,6 @@ A GithubSource yields repositories from a single Github connection configured in
 
 ```
 searchKey: repos.NewGithubSource
-tags: [exported]
 ```
 
 ```Go
@@ -1479,6 +1543,7 @@ NewGithubSource returns a new GithubSource from the given external service.
 
 ```
 searchKey: repos.newGithubSource
+tags: [private]
 ```
 
 ```Go
@@ -1489,7 +1554,6 @@ func newGithubSource(svc *types.ExternalService, c *schema.GitHubConnection, cf 
 
 ```
 searchKey: repos.GithubSource.WithAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -1500,7 +1564,6 @@ func (s GithubSource) WithAuthenticator(a auth.Authenticator) (Source, error)
 
 ```
 searchKey: repos.GithubSource.ValidateAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -1511,7 +1574,6 @@ func (s GithubSource) ValidateAuthenticator(ctx context.Context) error
 
 ```
 searchKey: repos.GithubSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -1524,7 +1586,6 @@ ListRepos returns all Github repositories accessible to all connections configur
 
 ```
 searchKey: repos.GithubSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -1537,7 +1598,6 @@ ExternalServices returns a singleton slice containing the external service.
 
 ```
 searchKey: repos.GithubSource.GetRepo
-tags: [exported]
 ```
 
 ```Go
@@ -1550,6 +1610,7 @@ GetRepo returns the Github repository with the given name and owner ("org/repo-n
 
 ```
 searchKey: repos.GithubSource.makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -1560,6 +1621,7 @@ func (s GithubSource) makeRepo(r *github.Repository) *types.Repo
 
 ```
 searchKey: repos.GithubSource.remoteURL
+tags: [private]
 ```
 
 ```Go
@@ -1574,6 +1636,7 @@ note: this used to contain credentials but that is no longer the case if you nee
 
 ```
 searchKey: repos.GithubSource.excludes
+tags: [private]
 ```
 
 ```Go
@@ -1584,6 +1647,7 @@ func (s *GithubSource) excludes(r *github.Repository) bool
 
 ```
 searchKey: repos.GithubSource.paginate
+tags: [private]
 ```
 
 ```Go
@@ -1596,6 +1660,7 @@ paginate returns all the repositories from the given repositoryPager. It repeate
 
 ```
 searchKey: repos.GithubSource.listOrg
+tags: [private]
 ```
 
 ```Go
@@ -1610,6 +1675,7 @@ It returns an error if the request fails on the first page.
 
 ```
 searchKey: repos.GithubSource.listUser
+tags: [private]
 ```
 
 ```Go
@@ -1624,6 +1690,7 @@ It returns an error if the request fails on the first page.
 
 ```
 searchKey: repos.GithubSource.listRepos
+tags: [private]
 ```
 
 ```Go
@@ -1636,6 +1703,7 @@ listRepos returns the valid repositories from the given list of repository names
 
 ```
 searchKey: repos.GithubSource.listPublic
+tags: [private]
 ```
 
 ```Go
@@ -1648,6 +1716,7 @@ listPublic handles the `public` keyword of the `repositoryQuery` config option. 
 
 ```
 searchKey: repos.GithubSource.listAffiliated
+tags: [private]
 ```
 
 ```Go
@@ -1662,6 +1731,7 @@ Affiliation is present if the user: (1) owns the repo, (2) is apart of an org th
 
 ```
 searchKey: repos.GithubSource.listSearch
+tags: [private]
 ```
 
 ```Go
@@ -1674,6 +1744,7 @@ listSearch handles the `repositoryQuery` config option when a keyword is not pre
 
 ```
 searchKey: repos.GithubSource.listRepositoryQuery
+tags: [private]
 ```
 
 ```Go
@@ -1686,6 +1757,7 @@ listRepositoryQuery handles the `repositoryQuery` config option. The supported k
 
 ```
 searchKey: repos.GithubSource.listAllRepositories
+tags: [private]
 ```
 
 ```Go
@@ -1698,6 +1770,7 @@ listAllRepositories returns the repositories from the given `orgs`, `repos`, and
 
 ```
 searchKey: repos.GithubSource.getRepository
+tags: [private]
 ```
 
 ```Go
@@ -1708,6 +1781,7 @@ func (s *GithubSource) getRepository(ctx context.Context, nameWithOwner string) 
 
 ```
 searchKey: repos.GithubSource.fetchAllRepositoriesInBatches
+tags: [private]
 ```
 
 ```Go
@@ -1720,7 +1794,6 @@ fetchAllRepositoriesInBatches fetches the repositories configured in config.Repo
 
 ```
 searchKey: repos.GithubSource.AffiliatedRepositories
-tags: [exported]
 ```
 
 ```Go
@@ -1731,6 +1804,7 @@ func (s *GithubSource) AffiliatedRepositories(ctx context.Context) ([]types.Code
 
 ```
 searchKey: repos.githubResult
+tags: [private]
 ```
 
 ```Go
@@ -1744,6 +1818,7 @@ type githubResult struct {
 
 ```
 searchKey: repos.repositoryPager
+tags: [private]
 ```
 
 ```Go
@@ -1756,7 +1831,6 @@ repositoryPager is a function that returns repositories on a given `page`. It al
 
 ```
 searchKey: repos.GitLabSource
-tags: [exported]
 ```
 
 ```Go
@@ -1777,7 +1851,6 @@ A GitLabSource yields repositories from a single GitLab connection configured in
 
 ```
 searchKey: repos.NewGitLabSource
-tags: [exported]
 ```
 
 ```Go
@@ -1790,6 +1863,7 @@ NewGitLabSource returns a new GitLabSource from the given external service.
 
 ```
 searchKey: repos.newGitLabSource
+tags: [private]
 ```
 
 ```Go
@@ -1800,7 +1874,6 @@ func newGitLabSource(svc *types.ExternalService, c *schema.GitLabConnection, cf 
 
 ```
 searchKey: repos.GitLabSource.WithAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -1811,7 +1884,6 @@ func (s GitLabSource) WithAuthenticator(a auth.Authenticator) (Source, error)
 
 ```
 searchKey: repos.GitLabSource.ValidateAuthenticator
-tags: [exported]
 ```
 
 ```Go
@@ -1822,7 +1894,6 @@ func (s GitLabSource) ValidateAuthenticator(ctx context.Context) error
 
 ```
 searchKey: repos.GitLabSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -1835,7 +1906,6 @@ ListRepos returns all GitLab repositories accessible to all connections configur
 
 ```
 searchKey: repos.GitLabSource.GetRepo
-tags: [exported]
 ```
 
 ```Go
@@ -1848,7 +1918,6 @@ GetRepo returns the GitLab repository with the given pathWithNamespace.
 
 ```
 searchKey: repos.GitLabSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -1861,6 +1930,7 @@ ExternalServices returns a singleton slice containing the external service.
 
 ```
 searchKey: repos.GitLabSource.makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -1871,6 +1941,7 @@ func (s GitLabSource) makeRepo(proj *gitlab.Project) *types.Repo
 
 ```
 searchKey: repos.GitLabSource.remoteURL
+tags: [private]
 ```
 
 ```Go
@@ -1885,6 +1956,7 @@ note: this used to contain credentials but that is no longer the case if you nee
 
 ```
 searchKey: repos.GitLabSource.excludes
+tags: [private]
 ```
 
 ```Go
@@ -1895,6 +1967,7 @@ func (s *GitLabSource) excludes(p *gitlab.Project) bool
 
 ```
 searchKey: repos.GitLabSource.listAllProjects
+tags: [private]
 ```
 
 ```Go
@@ -1905,7 +1978,6 @@ func (s *GitLabSource) listAllProjects(ctx context.Context, results chan SourceR
 
 ```
 searchKey: repos.GitLabSource.AffiliatedRepositories
-tags: [exported]
 ```
 
 ```Go
@@ -1916,7 +1988,6 @@ func (s *GitLabSource) AffiliatedRepositories(ctx context.Context) ([]types.Code
 
 ```
 searchKey: repos.GitoliteSource
-tags: [exported]
 ```
 
 ```Go
@@ -1936,7 +2007,6 @@ A GitoliteSource yields repositories from a single Gitolite connection configure
 
 ```
 searchKey: repos.NewGitoliteSource
-tags: [exported]
 ```
 
 ```Go
@@ -1949,7 +2019,6 @@ NewGitoliteSource returns a new GitoliteSource from the given external service.
 
 ```
 searchKey: repos.GitoliteSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -1962,7 +2031,6 @@ ListRepos returns all Gitolite repositories accessible to all connections config
 
 ```
 searchKey: repos.GitoliteSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -1975,6 +2043,7 @@ ExternalServices returns a singleton slice containing the external service.
 
 ```
 searchKey: repos.GitoliteSource.excludes
+tags: [private]
 ```
 
 ```Go
@@ -1985,6 +2054,7 @@ func (s GitoliteSource) excludes(gr *gitolite.Repo, r *types.Repo) bool
 
 ```
 searchKey: repos.GitoliteSource.makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -1995,7 +2065,6 @@ func (s GitoliteSource) makeRepo(repo *gitolite.Repo) *types.Repo
 
 ```
 searchKey: repos.GitolitePhabricatorMetadataSyncer
-tags: [exported]
 ```
 
 ```Go
@@ -2014,7 +2083,6 @@ TODO(tsenart): This is a HUGE hack, but it lives to see another day. Erradicatin
 
 ```
 searchKey: repos.NewGitolitePhabricatorMetadataSyncer
-tags: [exported]
 ```
 
 ```Go
@@ -2027,7 +2095,6 @@ NewGitolitePhabricatorMetadataSyncer returns a GitolitePhabricatorMetadataSyncer
 
 ```
 searchKey: repos.GitolitePhabricatorMetadataSyncer.Sync
-tags: [exported]
 ```
 
 ```Go
@@ -2040,6 +2107,7 @@ Sync creates Phabricator repos for each of the given Gitolite repos. If this is 
 
 ```
 searchKey: repos.observedSource
+tags: [private]
 ```
 
 ```Go
@@ -2056,6 +2124,7 @@ An observedSource wraps another Source with error logging, Prometheus metrics an
 
 ```
 searchKey: repos.observedSource.ListRepos
+tags: [private]
 ```
 
 ```Go
@@ -2068,7 +2137,6 @@ ListRepos calls into the inner Source registers the observed results.
 
 ```
 searchKey: repos.SourceMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -2083,7 +2151,6 @@ SourceMetrics encapsulates the Prometheus metrics of a Source.
 
 ```
 searchKey: repos.NewSourceMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -2096,7 +2163,6 @@ NewSourceMetrics returns SourceMetrics that need to be registered in a Prometheu
 
 ```
 searchKey: repos.SourceMetrics.MustRegister
-tags: [exported]
 ```
 
 ```Go
@@ -2109,7 +2175,6 @@ MustRegister registers all metrics in SourceMetrics in the given prometheus.Regi
 
 ```
 searchKey: repos.StoreMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -2133,7 +2198,6 @@ StoreMetrics encapsulates the Prometheus metrics of a Store.
 
 ```
 searchKey: repos.NewStoreMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -2146,7 +2210,6 @@ NewStoreMetrics returns StoreMetrics that need to be registered in a Prometheus 
 
 ```
 searchKey: repos.StoreMetrics.MustRegister
-tags: [exported]
 ```
 
 ```Go
@@ -2159,7 +2222,6 @@ MustRegister registers all metrics in StoreMetrics in the given prometheus.Regis
 
 ```
 searchKey: repos.OtherSource
-tags: [exported]
 ```
 
 ```Go
@@ -2176,7 +2238,6 @@ A OtherSource yields repositories from a single Other connection configured in S
 
 ```
 searchKey: repos.NewOtherSource
-tags: [exported]
 ```
 
 ```Go
@@ -2189,7 +2250,6 @@ NewOtherSource returns a new OtherSource from the given external service.
 
 ```
 searchKey: repos.OtherSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -2202,7 +2262,6 @@ ListRepos returns all Other repositories accessible to all connections configure
 
 ```
 searchKey: repos.OtherSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -2215,6 +2274,7 @@ ExternalServices returns a singleton slice containing the external service.
 
 ```
 searchKey: repos.OtherSource.cloneURLs
+tags: [private]
 ```
 
 ```Go
@@ -2225,6 +2285,7 @@ func (s OtherSource) cloneURLs() ([]*url.URL, error)
 
 ```
 searchKey: repos.OtherSource.otherRepoFromCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -2235,6 +2296,7 @@ func (s OtherSource) otherRepoFromCloneURL(urn string, u *url.URL) (*types.Repo,
 
 ```
 searchKey: repos.OtherSource.srcExpose
+tags: [private]
 ```
 
 ```Go
@@ -2245,7 +2307,6 @@ func (s OtherSource) srcExpose(ctx context.Context) ([]*types.Repo, error)
 
 ```
 searchKey: repos.PerforceSource
-tags: [exported]
 ```
 
 ```Go
@@ -2261,7 +2322,6 @@ A PerforceSource yields depots from a single Perforce connection configured in S
 
 ```
 searchKey: repos.NewPerforceSource
-tags: [exported]
 ```
 
 ```Go
@@ -2274,6 +2334,7 @@ NewPerforceSource returns a new PerforceSource from the given external service.
 
 ```
 searchKey: repos.newPerforceSource
+tags: [private]
 ```
 
 ```Go
@@ -2284,7 +2345,6 @@ func newPerforceSource(svc *types.ExternalService, c *schema.PerforceConnection)
 
 ```
 searchKey: repos.PerforceSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -2297,6 +2357,7 @@ ListRepos returns all Perforce depots accessible to all connections configured i
 
 ```
 searchKey: repos.PerforceSource.makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -2307,7 +2368,6 @@ func (s PerforceSource) makeRepo(depot string) *types.Repo
 
 ```
 searchKey: repos.PerforceSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -2320,7 +2380,6 @@ ExternalServices returns a singleton slice containing the external service.
 
 ```
 searchKey: repos.PhabricatorSource
-tags: [exported]
 ```
 
 ```Go
@@ -2340,7 +2399,6 @@ A PhabricatorSource yields repositories from a single Phabricator connection con
 
 ```
 searchKey: repos.NewPhabricatorSource
-tags: [exported]
 ```
 
 ```Go
@@ -2353,7 +2411,6 @@ NewPhabricatorSource returns a new PhabricatorSource from the given external ser
 
 ```
 searchKey: repos.PhabricatorSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -2366,7 +2423,6 @@ ListRepos returns all Phabricator repositories accessible to all connections con
 
 ```
 searchKey: repos.PhabricatorSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -2379,6 +2435,7 @@ ExternalServices returns a singleton slice containing the external service.
 
 ```
 searchKey: repos.PhabricatorSource.makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -2389,6 +2446,7 @@ func (s *PhabricatorSource) makeRepo(repo *phabricator.Repo) (*types.Repo, error
 
 ```
 searchKey: repos.PhabricatorSource.client
+tags: [private]
 ```
 
 ```Go
@@ -2401,6 +2459,7 @@ client initialises the phabricator.Client if it isn't initialised yet. This is d
 
 ```
 searchKey: repos.schedulerConfig
+tags: [private]
 ```
 
 ```Go
@@ -2416,6 +2475,7 @@ schedulerConfig tracks the active scheduler configuration.
 
 ```
 searchKey: repos.updateScheduler
+tags: [private]
 ```
 
 ```Go
@@ -2441,7 +2501,6 @@ A worker continuously dequeues repos and sends updates to gitserver, but its con
 
 ```
 searchKey: repos.NewUpdateScheduler
-tags: [exported]
 ```
 
 ```Go
@@ -2454,6 +2513,7 @@ NewUpdateScheduler returns a new scheduler.
 
 ```
 searchKey: repos.updateScheduler.runScheduleLoop
+tags: [private]
 ```
 
 ```Go
@@ -2466,6 +2526,7 @@ runScheduleLoop starts the loop that schedules updates by enqueuing them into th
 
 ```
 searchKey: repos.updateScheduler.runSchedule
+tags: [private]
 ```
 
 ```Go
@@ -2476,6 +2537,7 @@ func (s *updateScheduler) runSchedule()
 
 ```
 searchKey: repos.updateScheduler.runUpdateLoop
+tags: [private]
 ```
 
 ```Go
@@ -2488,6 +2550,7 @@ runUpdateLoop sends repo update requests to gitserver.
 
 ```
 searchKey: repos.updateScheduler.UpdateFromDiff
+tags: [private]
 ```
 
 ```Go
@@ -2513,6 +2576,7 @@ Unmodified - we likely already have this cloned. Just rely on
 
 ```
 searchKey: repos.updateScheduler.SetCloned
+tags: [private]
 ```
 
 ```Go
@@ -2527,6 +2591,7 @@ This method should be called periodically with the list of all repositories clon
 
 ```
 searchKey: repos.updateScheduler.EnsureScheduled
+tags: [private]
 ```
 
 ```Go
@@ -2539,6 +2604,7 @@ EnsureScheduled ensures that all repos in repos exist in the scheduler.
 
 ```
 searchKey: repos.updateScheduler.upsert
+tags: [private]
 ```
 
 ```Go
@@ -2553,6 +2619,7 @@ If enqueue is true then r is also enqueued to the update queue for a git fetch/c
 
 ```
 searchKey: repos.updateScheduler.remove
+tags: [private]
 ```
 
 ```Go
@@ -2563,6 +2630,7 @@ func (s *updateScheduler) remove(r *types.Repo)
 
 ```
 searchKey: repos.updateScheduler.UpdateOnce
+tags: [private]
 ```
 
 ```Go
@@ -2575,6 +2643,7 @@ UpdateOnce causes a single update of the given repository. It neither adds nor r
 
 ```
 searchKey: repos.updateScheduler.DebugDump
+tags: [private]
 ```
 
 ```Go
@@ -2587,6 +2656,7 @@ DebugDump returns the state of the update scheduler for debugging.
 
 ```
 searchKey: repos.updateScheduler.ScheduleInfo
+tags: [private]
 ```
 
 ```Go
@@ -2599,6 +2669,7 @@ ScheduleInfo returns the current schedule info for a repo.
 
 ```
 searchKey: repos.configuredRepo
+tags: [private]
 ```
 
 ```Go
@@ -2614,6 +2685,7 @@ A configuredRepo represents the configuration data for a given repo from a confi
 
 ```
 searchKey: repos.configuredRepoFromRepo
+tags: [private]
 ```
 
 ```Go
@@ -2624,6 +2696,7 @@ func configuredRepoFromRepo(r *types.Repo) configuredRepo
 
 ```
 searchKey: repos.updateQueue
+tags: [private]
 ```
 
 ```Go
@@ -2648,6 +2721,7 @@ updateQueue is a priority queue of repos to update. A repo can't have more than 
 
 ```
 searchKey: repos.updateQueue.reset
+tags: [private]
 ```
 
 ```Go
@@ -2658,6 +2732,7 @@ func (q *updateQueue) reset()
 
 ```
 searchKey: repos.updateQueue.enqueue
+tags: [private]
 ```
 
 ```Go
@@ -2674,6 +2749,7 @@ If the given priority is higher than the one in the queue, the repo's position i
 
 ```
 searchKey: repos.updateQueue.nextSeq
+tags: [private]
 ```
 
 ```Go
@@ -2686,6 +2762,7 @@ nextSeq increments and returns the next sequence number. The caller must hold th
 
 ```
 searchKey: repos.updateQueue.remove
+tags: [private]
 ```
 
 ```Go
@@ -2698,6 +2775,7 @@ remove removes the repo from the queue if the repo.Updating matches the updating
 
 ```
 searchKey: repos.updateQueue.acquireNext
+tags: [private]
 ```
 
 ```Go
@@ -2710,6 +2788,7 @@ acquireNext acquires the next repo for update. The acquired repo must be removed
 
 ```
 searchKey: repos.updateQueue.Len
+tags: [private]
 ```
 
 ```Go
@@ -2720,6 +2799,7 @@ func (q *updateQueue) Len() int
 
 ```
 searchKey: repos.updateQueue.Less
+tags: [private]
 ```
 
 ```Go
@@ -2730,6 +2810,7 @@ func (q *updateQueue) Less(i, j int) bool
 
 ```
 searchKey: repos.updateQueue.Swap
+tags: [private]
 ```
 
 ```Go
@@ -2740,6 +2821,7 @@ func (q *updateQueue) Swap(i, j int)
 
 ```
 searchKey: repos.updateQueue.Push
+tags: [private]
 ```
 
 ```Go
@@ -2750,6 +2832,7 @@ func (q *updateQueue) Push(x interface{})
 
 ```
 searchKey: repos.updateQueue.Pop
+tags: [private]
 ```
 
 ```Go
@@ -2760,6 +2843,7 @@ func (q *updateQueue) Pop() interface{}
 
 ```
 searchKey: repos.priority
+tags: [private]
 ```
 
 ```Go
@@ -2770,6 +2854,7 @@ type priority int
 
 ```
 searchKey: repos.repoUpdate
+tags: [private]
 ```
 
 ```Go
@@ -2788,6 +2873,7 @@ repoUpdate is a repository that has been queued for an update.
 
 ```
 searchKey: repos.schedule
+tags: [private]
 ```
 
 ```Go
@@ -2809,6 +2895,7 @@ schedule is the schedule of when repos get enqueued into the updateQueue.
 
 ```
 searchKey: repos.schedule.upsert
+tags: [private]
 ```
 
 ```Go
@@ -2821,6 +2908,7 @@ upsert inserts or updates a repo in the schedule.
 
 ```
 searchKey: repos.schedule.setCloned
+tags: [private]
 ```
 
 ```Go
@@ -2831,6 +2919,7 @@ func (s *schedule) setCloned(names []string)
 
 ```
 searchKey: repos.schedule.insertNew
+tags: [private]
 ```
 
 ```Go
@@ -2843,6 +2932,7 @@ insertNew will insert repos only if they are not known to the scheduler
 
 ```
 searchKey: repos.schedule.updateInterval
+tags: [private]
 ```
 
 ```Go
@@ -2855,6 +2945,7 @@ updateInterval updates the update interval of a repo in the schedule. It does no
 
 ```
 searchKey: repos.schedule.getCurrentInterval
+tags: [private]
 ```
 
 ```Go
@@ -2867,6 +2958,7 @@ getCurrentInterval gets the current interval for the supplied repo and a bool in
 
 ```
 searchKey: repos.schedule.remove
+tags: [private]
 ```
 
 ```Go
@@ -2879,6 +2971,7 @@ remove removes a repo from the schedule.
 
 ```
 searchKey: repos.schedule.rescheduleTimer
+tags: [private]
 ```
 
 ```Go
@@ -2891,6 +2984,7 @@ rescheduleTimer schedules the scheduler to wakeup at the time that the next repo
 
 ```
 searchKey: repos.schedule.reset
+tags: [private]
 ```
 
 ```Go
@@ -2901,6 +2995,7 @@ func (s *schedule) reset()
 
 ```
 searchKey: repos.schedule.Len
+tags: [private]
 ```
 
 ```Go
@@ -2911,6 +3006,7 @@ func (s *schedule) Len() int
 
 ```
 searchKey: repos.schedule.Less
+tags: [private]
 ```
 
 ```Go
@@ -2921,6 +3017,7 @@ func (s *schedule) Less(i, j int) bool
 
 ```
 searchKey: repos.schedule.Swap
+tags: [private]
 ```
 
 ```Go
@@ -2931,6 +3028,7 @@ func (s *schedule) Swap(i, j int)
 
 ```
 searchKey: repos.schedule.Push
+tags: [private]
 ```
 
 ```Go
@@ -2941,6 +3039,7 @@ func (s *schedule) Push(x interface{})
 
 ```
 searchKey: repos.schedule.Pop
+tags: [private]
 ```
 
 ```Go
@@ -2951,6 +3050,7 @@ func (s *schedule) Pop() interface{}
 
 ```
 searchKey: repos.scheduledRepoUpdate
+tags: [private]
 ```
 
 ```Go
@@ -2968,7 +3068,6 @@ scheduledRepoUpdate is the update schedule for a single repo.
 
 ```
 searchKey: repos.Sourcer
-tags: [exported]
 ```
 
 ```Go
@@ -2981,7 +3080,6 @@ A Sourcer converts the given ExternalServices to Sources whose yielded Repos sho
 
 ```
 searchKey: repos.NewSourcer
-tags: [exported]
 ```
 
 ```Go
@@ -2998,7 +3096,6 @@ The provided decorator functions will be applied to each Source.
 
 ```
 searchKey: repos.NewFakeSourcer
-tags: [exported]
 ```
 
 ```Go
@@ -3011,7 +3108,6 @@ NewFakeSourcer returns a Sourcer which always returns the given error and source
 
 ```
 searchKey: repos.Source
-tags: [exported]
 ```
 
 ```Go
@@ -3030,7 +3126,6 @@ A Source yields repositories to be stored and analysed by Sourcegraph. Successiv
 
 ```
 searchKey: repos.NewSource
-tags: [exported]
 ```
 
 ```Go
@@ -3043,7 +3138,6 @@ NewSource returns a repository yielding Source from the given ExternalService co
 
 ```
 searchKey: repos.UserSource
-tags: [exported]
 ```
 
 ```Go
@@ -3064,7 +3158,6 @@ A UserSource is a source that can use a custom authenticator (such as one contai
 
 ```
 searchKey: repos.AffiliatedRepositorySource
-tags: [exported]
 ```
 
 ```Go
@@ -3077,7 +3170,6 @@ type AffiliatedRepositorySource interface {
 
 ```
 searchKey: repos.UnsupportedAuthenticatorError
-tags: [exported]
 ```
 
 ```Go
@@ -3093,6 +3185,7 @@ UnsupportedAuthenticatorError is returned by WithAuthenticator if the authentica
 
 ```
 searchKey: repos.newUnsupportedAuthenticatorError
+tags: [private]
 ```
 
 ```Go
@@ -3103,7 +3196,6 @@ func newUnsupportedAuthenticatorError(source string, a auth.Authenticator) Unsup
 
 ```
 searchKey: repos.UnsupportedAuthenticatorError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -3114,7 +3206,6 @@ func (e UnsupportedAuthenticatorError) Error() string
 
 ```
 searchKey: repos.SourceResult
-tags: [exported]
 ```
 
 ```Go
@@ -3134,7 +3225,6 @@ A SourceResult is sent by a Source over a channel for each repository it yields 
 
 ```
 searchKey: repos.SourceError
-tags: [exported]
 ```
 
 ```Go
@@ -3148,7 +3238,6 @@ type SourceError struct {
 
 ```
 searchKey: repos.SourceError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -3159,7 +3248,6 @@ func (s *SourceError) Error() string
 
 ```
 searchKey: repos.SourceError.Cause
-tags: [exported]
 ```
 
 ```Go
@@ -3170,7 +3258,6 @@ func (s *SourceError) Cause() error
 
 ```
 searchKey: repos.Sources
-tags: [exported]
 ```
 
 ```Go
@@ -3183,7 +3270,6 @@ Sources is a list of Sources that implements the Source interface.
 
 ```
 searchKey: repos.Sources.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -3196,7 +3282,6 @@ ListRepos lists all the repos of all the sources and returns the aggregate resul
 
 ```
 searchKey: repos.Sources.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -3209,7 +3294,6 @@ ExternalServices returns the ExternalServices from the given Sources.
 
 ```
 searchKey: repos.Sources.Sources
-tags: [exported]
 ```
 
 ```Go
@@ -3222,6 +3306,7 @@ Sources returns the underlying Sources.
 
 ```
 searchKey: repos.multiSource
+tags: [private]
 ```
 
 ```Go
@@ -3234,7 +3319,6 @@ type multiSource interface {
 
 ```
 searchKey: repos.CloningProgress
-tags: [exported]
 ```
 
 ```Go
@@ -3247,7 +3331,6 @@ type CloningProgress struct {
 
 ```
 searchKey: repos.IndexingProgress
-tags: [exported]
 ```
 
 ```Go
@@ -3260,7 +3343,6 @@ type IndexingProgress struct {
 
 ```
 searchKey: repos.ExternalServiceSyncError
-tags: [exported]
 ```
 
 ```Go
@@ -3274,7 +3356,6 @@ type ExternalServiceSyncError struct {
 
 ```
 searchKey: repos.SyncError
-tags: [exported]
 ```
 
 ```Go
@@ -3287,7 +3368,6 @@ type SyncError struct {
 
 ```
 searchKey: repos.StatusMessage
-tags: [exported]
 ```
 
 ```Go
@@ -3303,7 +3383,6 @@ type StatusMessage struct {
 
 ```
 searchKey: repos.Store
-tags: [exported]
 ```
 
 ```Go
@@ -3334,7 +3413,6 @@ A Store exposes methods to read and write repos and external services.
 
 ```
 searchKey: repos.NewStore
-tags: [exported]
 ```
 
 ```Go
@@ -3347,7 +3425,6 @@ NewStore instantiates and returns a new DBStore with prepared statements.
 
 ```
 searchKey: repos.Store.With
-tags: [exported]
 ```
 
 ```Go
@@ -3358,7 +3435,6 @@ func (s *Store) With(other basestore.ShareableStore) *Store
 
 ```
 searchKey: repos.Store.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -3371,7 +3447,6 @@ Transact returns a TxStore whose methods operate within the context of a transac
 
 ```
 searchKey: repos.Store.Done
-tags: [exported]
 ```
 
 ```Go
@@ -3384,6 +3459,7 @@ Done calls into the inner Store Done method.
 
 ```
 searchKey: repos.Store.trace
+tags: [private]
 ```
 
 ```Go
@@ -3394,7 +3470,6 @@ func (s *Store) trace(ctx context.Context, family string) (*trace.Trace, context
 
 ```
 searchKey: repos.Store.ListExternalRepoSpecs
-tags: [exported]
 ```
 
 ```Go
@@ -3405,7 +3480,6 @@ func (s *Store) ListExternalRepoSpecs(ctx context.Context) (ids map[api.External
 
 ```
 searchKey: repos.Store.UpsertSources
-tags: [exported]
 ```
 
 ```Go
@@ -3416,7 +3490,6 @@ func (s *Store) UpsertSources(ctx context.Context, inserts, updates, deletes map
 
 ```
 searchKey: repos.Store.SetClonedRepos
-tags: [exported]
 ```
 
 ```Go
@@ -3429,7 +3502,6 @@ SetClonedRepos updates cloned status for all repositories. All repositories whos
 
 ```
 searchKey: repos.Store.CountUserAddedRepos
-tags: [exported]
 ```
 
 ```Go
@@ -3442,6 +3514,7 @@ CountUserAddedRepos counts the total number of repos that have been added by use
 
 ```
 searchKey: repos.Store.paginate
+tags: [private]
 ```
 
 ```Go
@@ -3452,6 +3525,7 @@ func (s *Store) paginate(ctx context.Context, limit, perPage int64, cursor int64
 
 ```
 searchKey: repos.Store.list
+tags: [private]
 ```
 
 ```Go
@@ -3462,7 +3536,6 @@ func (s *Store) list(ctx context.Context, q *sqlf.Query, scan scanFunc) (last, c
 
 ```
 searchKey: repos.Store.UpsertRepos
-tags: [exported]
 ```
 
 ```Go
@@ -3475,7 +3548,6 @@ UpsertRepos updates or inserts the given repos in the Sourcegraph repository sto
 
 ```
 searchKey: repos.Store.EnqueueSingleSyncJob
-tags: [exported]
 ```
 
 ```Go
@@ -3488,7 +3560,6 @@ EnqueueSingleSyncJob enqueues a single sync job for the given external service i
 
 ```
 searchKey: repos.Store.EnqueueSyncJobs
-tags: [exported]
 ```
 
 ```Go
@@ -3501,7 +3572,6 @@ EnqueueSyncJobs enqueues sync jobs for all external services that are due.
 
 ```
 searchKey: repos.Store.ListSyncJobs
-tags: [exported]
 ```
 
 ```Go
@@ -3514,6 +3584,7 @@ ListSyncJobs returns all sync jobs.
 
 ```
 searchKey: repos.externalServiceRepo
+tags: [private]
 ```
 
 ```Go
@@ -3528,6 +3599,7 @@ type externalServiceRepo struct {
 
 ```
 searchKey: repos.paginatedQuery
+tags: [private]
 ```
 
 ```Go
@@ -3540,6 +3612,7 @@ a paginatedQuery returns a query with the given pagination parameters
 
 ```
 searchKey: repos.scanner
+tags: [private]
 ```
 
 ```Go
@@ -3554,6 +3627,7 @@ scanner captures the Scan method of sql.Rows and sql.Row
 
 ```
 searchKey: repos.scanFunc
+tags: [private]
 ```
 
 ```Go
@@ -3566,6 +3640,7 @@ a scanFunc scans one or more rows from a scanner, returning the last id column s
 
 ```
 searchKey: repos.repoRecord
+tags: [private]
 ```
 
 ```Go
@@ -3595,6 +3670,7 @@ repoRecord is the json representation of a repository as used in this package Po
 
 ```
 searchKey: repos.newRepoRecord
+tags: [private]
 ```
 
 ```Go
@@ -3605,7 +3681,6 @@ func newRepoRecord(r *types.Repo) (*repoRecord, error)
 
 ```
 searchKey: repos.MockStore
-tags: [exported]
 ```
 
 ```Go
@@ -3620,7 +3695,6 @@ MockStore is used to mock calls to certain DBStore methods.
 
 ```
 searchKey: repos.SyncWorkerOptions
-tags: [exported]
 ```
 
 ```Go
@@ -3637,7 +3711,6 @@ type SyncWorkerOptions struct {
 
 ```
 searchKey: repos.SyncJob
-tags: [exported]
 ```
 
 ```Go
@@ -3661,7 +3734,6 @@ SyncJob represents an external service that needs to be synced
 
 ```
 searchKey: repos.SyncJob.RecordID
-tags: [exported]
 ```
 
 ```Go
@@ -3674,7 +3746,6 @@ RecordID implements workerutil.Record and indicates the queued item id
 
 ```
 searchKey: repos.Syncer
-tags: [exported]
 ```
 
 ```Go
@@ -3713,7 +3784,6 @@ A Syncer periodically synchronizes available repositories from all its given Sou
 
 ```
 searchKey: repos.Syncer.Run
-tags: [exported]
 ```
 
 ```Go
@@ -3726,7 +3796,6 @@ Run runs the Sync at the specified interval.
 
 ```
 searchKey: repos.Syncer.TriggerExternalServiceSync
-tags: [exported]
 ```
 
 ```Go
@@ -3739,7 +3808,6 @@ TriggerExternalServiceSync will enqueue a sync job for the supplied external ser
 
 ```
 searchKey: repos.Syncer.SyncExternalService
-tags: [exported]
 ```
 
 ```Go
@@ -3752,7 +3820,6 @@ SyncExternalService syncs repos using the supplied external service.
 
 ```
 searchKey: repos.Syncer.SyncRepo
-tags: [exported]
 ```
 
 ```Go
@@ -3765,6 +3832,7 @@ SyncRepo runs the syncer on a single repository.
 
 ```
 searchKey: repos.Syncer.insertIfNew
+tags: [private]
 ```
 
 ```Go
@@ -3777,6 +3845,7 @@ insertIfNew is a specialization of SyncRepo. It will insert sourcedRepo if there
 
 ```
 searchKey: repos.Syncer.syncRepo
+tags: [private]
 ```
 
 ```Go
@@ -3789,6 +3858,7 @@ syncRepo syncs a single repo that has been sourced from a single external servic
 
 ```
 searchKey: repos.Syncer.upserts
+tags: [private]
 ```
 
 ```Go
@@ -3801,6 +3871,7 @@ upserts returns a slice containing modified or added repos from a Diff. Deleted 
 
 ```
 searchKey: repos.Syncer.sourcesUpserts
+tags: [private]
 ```
 
 ```Go
@@ -3813,6 +3884,7 @@ sourcesUpserts creates a diff for sources based on the repositoried diff.
 
 ```
 searchKey: repos.Syncer.sourceDiff
+tags: [private]
 ```
 
 ```Go
@@ -3825,6 +3897,7 @@ sourceDiff computes the diff between the oldSources and the newSources, and upda
 
 ```
 searchKey: repos.Syncer.initialUnmodifiedDiffFromStore
+tags: [private]
 ```
 
 ```Go
@@ -3837,6 +3910,7 @@ initialUnmodifiedDiffFromStore creates a diff of all repos present in the store 
 
 ```
 searchKey: repos.Syncer.sourced
+tags: [private]
 ```
 
 ```Go
@@ -3847,6 +3921,7 @@ func (s *Syncer) sourced(ctx context.Context, svc *types.ExternalService, onSour
 
 ```
 searchKey: repos.Syncer.makeNewRepoInserter
+tags: [private]
 ```
 
 ```Go
@@ -3859,6 +3934,7 @@ makeNewRepoInserter returns a function that will insert repos. If publicOnly is 
 
 ```
 searchKey: repos.Syncer.observe
+tags: [private]
 ```
 
 ```Go
@@ -3869,7 +3945,6 @@ func (s *Syncer) observe(ctx context.Context, family, title string) (context.Con
 
 ```
 searchKey: repos.RunOptions
-tags: [exported]
 ```
 
 ```Go
@@ -3887,6 +3962,7 @@ RunOptions contains options customizing Run behaviour.
 
 ```
 searchKey: repos.syncHandler
+tags: [private]
 ```
 
 ```Go
@@ -3902,6 +3978,7 @@ type syncHandler struct {
 
 ```
 searchKey: repos.syncHandler.Handle
+tags: [private]
 ```
 
 ```Go
@@ -3912,7 +3989,6 @@ func (s *syncHandler) Handle(ctx context.Context, tx dbworkerstore.Store, record
 
 ```
 searchKey: repos.ErrUnauthorized
-tags: [exported]
 ```
 
 ```Go
@@ -3923,7 +3999,6 @@ type ErrUnauthorized struct{}
 
 ```
 searchKey: repos.ErrUnauthorized.Error
-tags: [exported]
 ```
 
 ```Go
@@ -3934,7 +4009,6 @@ func (e ErrUnauthorized) Error() string
 
 ```
 searchKey: repos.ErrUnauthorized.Unauthorized
-tags: [exported]
 ```
 
 ```Go
@@ -3945,7 +4019,6 @@ func (e ErrUnauthorized) Unauthorized() bool
 
 ```
 searchKey: repos.ErrForbidden
-tags: [exported]
 ```
 
 ```Go
@@ -3956,7 +4029,6 @@ type ErrForbidden struct{}
 
 ```
 searchKey: repos.ErrForbidden.Error
-tags: [exported]
 ```
 
 ```Go
@@ -3967,7 +4039,6 @@ func (e ErrForbidden) Error() string
 
 ```
 searchKey: repos.ErrForbidden.Forbidden
-tags: [exported]
 ```
 
 ```Go
@@ -3978,7 +4049,6 @@ func (e ErrForbidden) Forbidden() bool
 
 ```
 searchKey: repos.ErrAccountSuspended
-tags: [exported]
 ```
 
 ```Go
@@ -3989,7 +4059,6 @@ type ErrAccountSuspended struct{}
 
 ```
 searchKey: repos.ErrAccountSuspended.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4000,7 +4069,6 @@ func (e ErrAccountSuspended) Error() string
 
 ```
 searchKey: repos.ErrAccountSuspended.AccountSuspended
-tags: [exported]
 ```
 
 ```Go
@@ -4011,6 +4079,7 @@ func (e ErrAccountSuspended) AccountSuspended() bool
 
 ```
 searchKey: repos.sourceDiff
+tags: [private]
 ```
 
 ```Go
@@ -4023,7 +4092,6 @@ type sourceDiff struct {
 
 ```
 searchKey: repos.Diff
-tags: [exported]
 ```
 
 ```Go
@@ -4041,7 +4109,6 @@ Diff is the difference found by a sync between what is in the store and what is 
 
 ```
 searchKey: repos.NewDiff
-tags: [exported]
 ```
 
 ```Go
@@ -4054,6 +4121,7 @@ NewDiff returns a diff from the given sourced and stored repos.
 
 ```
 searchKey: repos.newDiff
+tags: [private]
 ```
 
 ```Go
@@ -4064,7 +4132,6 @@ func newDiff(svc *types.ExternalService, sourced, stored []*types.Repo) (diff Di
 
 ```
 searchKey: repos.Diff.Sort
-tags: [exported]
 ```
 
 ```Go
@@ -4077,7 +4144,6 @@ Sort sorts all Diff elements by Repo.IDs.
 
 ```
 searchKey: repos.Diff.Repos
-tags: [exported]
 ```
 
 ```Go
@@ -4090,7 +4156,6 @@ Repos returns all repos in the Diff.
 
 ```
 searchKey: repos.FakeSource
-tags: [exported]
 ```
 
 ```Go
@@ -4107,7 +4172,6 @@ FakeSource is a fake implementation of Source to be used in tests.
 
 ```
 searchKey: repos.NewFakeSource
-tags: [exported]
 ```
 
 ```Go
@@ -4120,7 +4184,6 @@ NewFakeSource returns an instance of FakeSource with the given urn, error and re
 
 ```
 searchKey: repos.FakeSource.ListRepos
-tags: [exported]
 ```
 
 ```Go
@@ -4133,7 +4196,6 @@ ListRepos returns the Repos that FakeSource was instantiated with as well as the
 
 ```
 searchKey: repos.FakeSource.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -4146,6 +4208,7 @@ ExternalServices returns a singleton slice containing the external service.
 
 ```
 searchKey: repos.externalServiceLister
+tags: [private]
 ```
 
 ```Go
@@ -4158,7 +4221,6 @@ type externalServiceLister interface {
 
 ```
 searchKey: repos.RateLimitSyncer
-tags: [exported]
 ```
 
 ```Go
@@ -4176,7 +4238,6 @@ RateLimitSyncer syncs rate limits based on external service configuration
 
 ```
 searchKey: repos.NewRateLimitSyncer
-tags: [exported]
 ```
 
 ```Go
@@ -4189,7 +4250,6 @@ NewRateLimitSyncer returns a new syncer
 
 ```
 searchKey: repos.RateLimitSyncer.SyncRateLimiters
-tags: [exported]
 ```
 
 ```Go
@@ -4202,7 +4262,6 @@ SyncRateLimiters syncs all rate limiters using current config. We sync them all 
 
 ```
 searchKey: repos.ScopeCache
-tags: [exported]
 ```
 
 ```Go
@@ -4216,6 +4275,7 @@ type ScopeCache interface {
 
 ```
 searchKey: repos.recording
+tags: [private]
 ```
 
 ```Go
@@ -4229,6 +4289,7 @@ type recording struct {
 
 ```
 searchKey: repos.startRecording
+tags: [private]
 ```
 
 ```Go
@@ -4239,6 +4300,7 @@ func startRecording() (*recording, func())
 
 ```
 searchKey: repos.MockExternalServicesLister
+tags: [private]
 ```
 
 ```Go
@@ -4251,6 +4313,7 @@ type MockExternalServicesLister struct {
 
 ```
 searchKey: repos.MockExternalServicesLister.List
+tags: [private]
 ```
 
 ```Go
@@ -4259,10 +4322,15 @@ func (m MockExternalServicesLister) List(ctx context.Context, args database.Exte
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="wrapWithoutRedirect" href="#wrapWithoutRedirect">func wrapWithoutRedirect(c *http.Client)</a>
 
 ```
 searchKey: repos.wrapWithoutRedirect
+tags: [private]
 ```
 
 ```Go
@@ -4275,6 +4343,7 @@ The code below is copied from github.com/aws/aws-sdk-go-v2@v0.11.0/aws/client.go
 
 ```
 searchKey: repos.limitedRedirect
+tags: [private]
 ```
 
 ```Go
@@ -4285,7 +4354,6 @@ func limitedRedirect(r *http.Request, via []*http.Request) error
 
 ```
 searchKey: repos.CloneURL
-tags: [exported]
 ```
 
 ```Go
@@ -4298,6 +4366,7 @@ CloneURL builds a cloneURL for the given repo based on the external service conf
 
 ```
 searchKey: repos.awsCodeCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4308,6 +4377,7 @@ func awsCodeCloneURL(repo *awscodecommit.Repository, cfg *schema.AWSCodeCommitCo
 
 ```
 searchKey: repos.bitbucketServerCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4318,6 +4388,7 @@ func bitbucketServerCloneURL(repo *bitbucketserver.Repo, cfg *schema.BitbucketSe
 
 ```
 searchKey: repos.bitbucketCloudCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4330,6 +4401,7 @@ bitbucketCloudCloneURL returns the repository's Git remote URL with the configur
 
 ```
 searchKey: repos.githubCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4340,6 +4412,7 @@ func githubCloneURL(repo *github.Repository, cfg *schema.GitHubConnection) (stri
 
 ```
 searchKey: repos.gitlabCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4352,6 +4425,7 @@ authenticatedRemoteURL returns the GitLab project's Git remote URL with the conf
 
 ```
 searchKey: repos.perforceCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4364,6 +4438,7 @@ perforceCloneURL composes a clone URL for a Perforce depot based on given inform
 
 ```
 searchKey: repos.phabricatorCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4374,6 +4449,7 @@ func phabricatorCloneURL(repo *phabricator.Repo, _ *schema.PhabricatorConnection
 
 ```
 searchKey: repos.otherCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4384,7 +4460,6 @@ func otherCloneURL(repo *types.Repo, m *extsvc.OtherRepoMetadata) string
 
 ```
 searchKey: repos.ConfRepoListUpdateInterval
-tags: [exported]
 ```
 
 ```Go
@@ -4395,7 +4470,6 @@ func ConfRepoListUpdateInterval() time.Duration
 
 ```
 searchKey: repos.ConfRepoConcurrentExternalServiceSyncers
-tags: [exported]
 ```
 
 ```Go
@@ -4406,6 +4480,7 @@ func ConfRepoConcurrentExternalServiceSyncers() int
 
 ```
 searchKey: repos.matchOrg
+tags: [private]
 ```
 
 ```Go
@@ -4418,6 +4493,7 @@ matchOrg extracts the org name from the pattern `org:<org-name>` if it exists.
 
 ```
 searchKey: repos.exampleRepositoryQuerySplit
+tags: [private]
 ```
 
 ```Go
@@ -4428,6 +4504,7 @@ func exampleRepositoryQuerySplit(q string) string
 
 ```
 searchKey: repos.projectQueryToURL
+tags: [private]
 ```
 
 ```Go
@@ -4438,7 +4515,6 @@ func projectQueryToURL(projectQuery string, perPage int) (string, error)
 
 ```
 searchKey: repos.MustRegisterMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -4449,7 +4525,6 @@ func MustRegisterMetrics(db dbutil.DB, sourcegraphDotCom bool)
 
 ```
 searchKey: repos.ObservedSource
-tags: [exported]
 ```
 
 ```Go
@@ -4462,6 +4537,7 @@ ObservedSource returns a decorator that wraps a Source with error logging, Prome
 
 ```
 searchKey: repos.otherRepoCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4472,6 +4548,7 @@ func otherRepoCloneURL(base *url.URL, repo string) (*url.URL, error)
 
 ```
 searchKey: repos.composePerforceCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4484,7 +4561,6 @@ composePerforceCloneURL composes a clone URL for a Perforce depot based on given
 
 ```
 searchKey: repos.RunPhabricatorRepositorySyncWorker
-tags: [exported]
 ```
 
 ```Go
@@ -4497,6 +4573,7 @@ RunPhabricatorRepositorySyncWorker runs the worker that syncs repositories from 
 
 ```
 searchKey: repos.updatePhabRepos
+tags: [private]
 ```
 
 ```Go
@@ -4509,7 +4586,6 @@ updatePhabRepos ensures that all provided repositories exist in the phabricator_
 
 ```
 searchKey: repos.RunRepositoryPurgeWorker
-tags: [exported]
 ```
 
 ```Go
@@ -4522,6 +4598,7 @@ RunRepositoryPurgeWorker is a worker which deletes repos which are present on gi
 
 ```
 searchKey: repos.purge
+tags: [private]
 ```
 
 ```Go
@@ -4532,6 +4609,7 @@ func purge(ctx context.Context, log log15.Logger) error
 
 ```
 searchKey: repos.isSaturdayNight
+tags: [private]
 ```
 
 ```Go
@@ -4542,6 +4620,7 @@ func isSaturdayNight(t time.Time) bool
 
 ```
 searchKey: repos.randSleep
+tags: [private]
 ```
 
 ```Go
@@ -4554,7 +4633,6 @@ randSleep will sleep for an expected d duration with a jitter in [-jitter / 2, j
 
 ```
 searchKey: repos.RunScheduler
-tags: [exported]
 ```
 
 ```Go
@@ -4567,6 +4645,7 @@ RunScheduler runs the worker that schedules git fetches of synced repositories i
 
 ```
 searchKey: repos.getCustomInterval
+tags: [private]
 ```
 
 ```Go
@@ -4577,6 +4656,7 @@ func getCustomInterval(c *conf.Unified, repoName string) time.Duration
 
 ```
 searchKey: repos.sourceErrorFormatFunc
+tags: [private]
 ```
 
 ```Go
@@ -4587,6 +4667,7 @@ func sourceErrorFormatFunc(es []error) string
 
 ```
 searchKey: repos.group
+tags: [private]
 ```
 
 ```Go
@@ -4597,6 +4678,7 @@ func group(srcs []Source) map[string]Sources
 
 ```
 searchKey: repos.listAll
+tags: [private]
 ```
 
 ```Go
@@ -4609,7 +4691,6 @@ listAll calls ListRepos on the given Source and collects the SourceResults the S
 
 ```
 searchKey: repos.FetchStatusMessages
-tags: [exported]
 ```
 
 ```Go
@@ -4622,6 +4703,7 @@ FetchStatusMessages fetches repo related status messages. When fetching external
 
 ```
 searchKey: repos.getRepoNoun
+tags: [private]
 ```
 
 ```Go
@@ -4632,6 +4714,7 @@ func getRepoNoun(count int) string
 
 ```
 searchKey: repos.scanJobs
+tags: [private]
 ```
 
 ```Go
@@ -4642,6 +4725,7 @@ func scanJobs(rows *sql.Rows) ([]SyncJob, error)
 
 ```
 searchKey: repos.batchReposQuery
+tags: [private]
 ```
 
 ```Go
@@ -4652,6 +4736,7 @@ func batchReposQuery(fmtstr string, repos []*types.Repo) (_ *sqlf.Query, err err
 
 ```
 searchKey: repos.nullTimeColumn
+tags: [private]
 ```
 
 ```Go
@@ -4662,6 +4747,7 @@ func nullTimeColumn(t time.Time) *time.Time
 
 ```
 searchKey: repos.nullStringColumn
+tags: [private]
 ```
 
 ```Go
@@ -4672,6 +4758,7 @@ func nullStringColumn(s string) *string
 
 ```
 searchKey: repos.metadataColumn
+tags: [private]
 ```
 
 ```Go
@@ -4682,6 +4769,7 @@ func metadataColumn(metadata interface{}) (msg json.RawMessage, err error)
 
 ```
 searchKey: repos.sourcesColumn
+tags: [private]
 ```
 
 ```Go
@@ -4692,6 +4780,7 @@ func sourcesColumn(repoID api.RepoID, sources map[string]*types.SourceInfo) (jso
 
 ```
 searchKey: repos.scanAll
+tags: [private]
 ```
 
 ```Go
@@ -4702,6 +4791,7 @@ func scanAll(rows *sql.Rows, scan scanFunc) (last, count int64, err error)
 
 ```
 searchKey: repos.closeErr
+tags: [private]
 ```
 
 ```Go
@@ -4712,7 +4802,6 @@ func closeErr(c io.Closer, err *error)
 
 ```
 searchKey: repos.NewSyncWorker
-tags: [exported]
 ```
 
 ```Go
@@ -4725,6 +4814,7 @@ NewSyncWorker creates a new external service sync worker.
 
 ```
 searchKey: repos.newWorkerMetrics
+tags: [private]
 ```
 
 ```Go
@@ -4735,6 +4825,7 @@ func newWorkerMetrics(r prometheus.Registerer) workerutil.WorkerMetrics
 
 ```
 searchKey: repos.newResetterMetrics
+tags: [private]
 ```
 
 ```Go
@@ -4745,6 +4836,7 @@ func newResetterMetrics(r prometheus.Registerer) dbworker.ResetterMetrics
 
 ```
 searchKey: repos.runJobCleaner
+tags: [private]
 ```
 
 ```Go
@@ -4755,6 +4847,7 @@ func runJobCleaner(ctx context.Context, db dbutil.DB, interval time.Duration)
 
 ```
 searchKey: repos.scanSingleJob
+tags: [private]
 ```
 
 ```Go
@@ -4765,6 +4858,7 @@ func scanSingleJob(rows *sql.Rows, err error) (workerutil.Record, bool, error)
 
 ```
 searchKey: repos.sleep
+tags: [private]
 ```
 
 ```Go
@@ -4777,6 +4871,7 @@ sleep is a context aware time.Sleep
 
 ```
 searchKey: repos.resolveNameConflicts
+tags: [private]
 ```
 
 ```Go
@@ -4789,6 +4884,7 @@ We need to resolve name conflicts by deciding whether to keep the newly added re
 
 ```
 searchKey: repos.calcSyncInterval
+tags: [private]
 ```
 
 ```Go
@@ -4799,6 +4895,7 @@ func calcSyncInterval(now time.Time, lastSync time.Time, minSyncInterval time.Du
 
 ```
 searchKey: repos.merge
+tags: [private]
 ```
 
 ```Go
@@ -4809,6 +4906,7 @@ func merge(o, n *types.Repo)
 
 ```
 searchKey: repos.pick
+tags: [private]
 ```
 
 ```Go
@@ -4821,7 +4919,6 @@ pick deterministically chooses between a and b a repo to keep and discard. It is
 
 ```
 searchKey: repos.GrantedScopes
-tags: [exported]
 ```
 
 ```Go
@@ -4836,6 +4933,7 @@ Currently only GitHub and GitLab user added external services are supported, oth
 
 ```
 searchKey: repos.hashToken
+tags: [private]
 ```
 
 ```Go
@@ -4846,6 +4944,7 @@ func hashToken(token string) (string, error)
 
 ```
 searchKey: repos.setUserinfoBestEffort
+tags: [private]
 ```
 
 ```Go
@@ -4858,6 +4957,7 @@ setUserinfoBestEffort adds the username and password to rawurl. If user is not s
 
 ```
 searchKey: repos.TestAWSCodeCommitSource_Exclude
+tags: [private]
 ```
 
 ```Go
@@ -4868,6 +4968,7 @@ func TestAWSCodeCommitSource_Exclude(t *testing.T)
 
 ```
 searchKey: repos.TestBitbucketCloudSource_ListRepos
+tags: [private]
 ```
 
 ```Go
@@ -4878,6 +4979,7 @@ func TestBitbucketCloudSource_ListRepos(t *testing.T)
 
 ```
 searchKey: repos.TestBitbucketCloudSource_makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -4888,6 +4990,7 @@ func TestBitbucketCloudSource_makeRepo(t *testing.T)
 
 ```
 searchKey: repos.TestBitbucketCloudSource_Exclude
+tags: [private]
 ```
 
 ```Go
@@ -4898,6 +5001,7 @@ func TestBitbucketCloudSource_Exclude(t *testing.T)
 
 ```
 searchKey: repos.TestBitbucketServerSource_MakeRepo
+tags: [private]
 ```
 
 ```Go
@@ -4908,6 +5012,7 @@ func TestBitbucketServerSource_MakeRepo(t *testing.T)
 
 ```
 searchKey: repos.TestBitbucketServerSource_Exclude
+tags: [private]
 ```
 
 ```Go
@@ -4918,6 +5023,7 @@ func TestBitbucketServerSource_Exclude(t *testing.T)
 
 ```
 searchKey: repos.TestBitbucketServerSource_WithAuthenticator
+tags: [private]
 ```
 
 ```Go
@@ -4928,6 +5034,7 @@ func TestBitbucketServerSource_WithAuthenticator(t *testing.T)
 
 ```
 searchKey: repos.TestAWSCodeCloneURLs
+tags: [private]
 ```
 
 ```Go
@@ -4938,6 +5045,7 @@ func TestAWSCodeCloneURLs(t *testing.T)
 
 ```
 searchKey: repos.TestBitbucketServerCloneURLs
+tags: [private]
 ```
 
 ```Go
@@ -4948,6 +5056,7 @@ func TestBitbucketServerCloneURLs(t *testing.T)
 
 ```
 searchKey: repos.TestBitbucketCloudCloneURLs
+tags: [private]
 ```
 
 ```Go
@@ -4958,6 +5067,7 @@ func TestBitbucketCloudCloneURLs(t *testing.T)
 
 ```
 searchKey: repos.TestGitHubCloneURLs
+tags: [private]
 ```
 
 ```Go
@@ -4968,6 +5078,7 @@ func TestGitHubCloneURLs(t *testing.T)
 
 ```
 searchKey: repos.TestGitLabCloneURLs
+tags: [private]
 ```
 
 ```Go
@@ -4978,6 +5089,7 @@ func TestGitLabCloneURLs(t *testing.T)
 
 ```
 searchKey: repos.TestPerforceCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4988,6 +5100,7 @@ func TestPerforceCloneURL(t *testing.T)
 
 ```
 searchKey: repos.TestPhabricatorCloneURL
+tags: [private]
 ```
 
 ```Go
@@ -4998,6 +5111,7 @@ func TestPhabricatorCloneURL(t *testing.T)
 
 ```
 searchKey: repos.TestExampleRepositoryQuerySplit
+tags: [private]
 ```
 
 ```Go
@@ -5008,6 +5122,7 @@ func TestExampleRepositoryQuerySplit(t *testing.T)
 
 ```
 searchKey: repos.TestGithubSource_GetRepo
+tags: [private]
 ```
 
 ```Go
@@ -5018,6 +5133,7 @@ func TestGithubSource_GetRepo(t *testing.T)
 
 ```
 searchKey: repos.TestGithubSource_makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -5028,6 +5144,7 @@ func TestGithubSource_makeRepo(t *testing.T)
 
 ```
 searchKey: repos.TestMatchOrg
+tags: [private]
 ```
 
 ```Go
@@ -5038,6 +5155,7 @@ func TestMatchOrg(t *testing.T)
 
 ```
 searchKey: repos.TestGithubSource_ListRepos
+tags: [private]
 ```
 
 ```Go
@@ -5048,6 +5166,7 @@ func TestGithubSource_ListRepos(t *testing.T)
 
 ```
 searchKey: repos.githubGraphQLFailureMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -5058,6 +5177,7 @@ func githubGraphQLFailureMiddleware(cli httpcli.Doer) httpcli.Doer
 
 ```
 searchKey: repos.TestGithubSource_WithAuthenticator
+tags: [private]
 ```
 
 ```Go
@@ -5068,6 +5188,7 @@ func TestGithubSource_WithAuthenticator(t *testing.T)
 
 ```
 searchKey: repos.TestGithubSource_excludes_disabledAndLocked
+tags: [private]
 ```
 
 ```Go
@@ -5078,6 +5199,7 @@ func TestGithubSource_excludes_disabledAndLocked(t *testing.T)
 
 ```
 searchKey: repos.TestProjectQueryToURL
+tags: [private]
 ```
 
 ```Go
@@ -5088,6 +5210,7 @@ func TestProjectQueryToURL(t *testing.T)
 
 ```
 searchKey: repos.TestGitLabSource_GetRepo
+tags: [private]
 ```
 
 ```Go
@@ -5098,6 +5221,7 @@ func TestGitLabSource_GetRepo(t *testing.T)
 
 ```
 searchKey: repos.TestGitLabSource_makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -5108,6 +5232,7 @@ func TestGitLabSource_makeRepo(t *testing.T)
 
 ```
 searchKey: repos.TestGitLabSource_WithAuthenticator
+tags: [private]
 ```
 
 ```Go
@@ -5118,6 +5243,7 @@ func TestGitLabSource_WithAuthenticator(t *testing.T)
 
 ```
 searchKey: repos.update
+tags: [private]
 ```
 
 ```Go
@@ -5128,6 +5254,7 @@ func update(name string) bool
 
 ```
 searchKey: repos.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -5138,6 +5265,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: repos.TestSrcExpose
+tags: [private]
 ```
 
 ```Go
@@ -5148,6 +5276,7 @@ func TestSrcExpose(t *testing.T)
 
 ```
 searchKey: repos.TestPerforceSource_ListRepos
+tags: [private]
 ```
 
 ```Go
@@ -5158,6 +5287,7 @@ func TestPerforceSource_ListRepos(t *testing.T)
 
 ```
 searchKey: repos.TestPerforceSource_makeRepo
+tags: [private]
 ```
 
 ```Go
@@ -5168,16 +5298,18 @@ func TestPerforceSource_makeRepo(t *testing.T)
 
 ```
 searchKey: repos.TestIsSaturdayNight
+tags: [private]
 ```
 
 ```Go
 func TestIsSaturdayNight(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.scheduler_test.go" href="#init.scheduler_test.go">func init()</a>
 
 ```
 searchKey: repos.init
+tags: [private]
 ```
 
 ```Go
@@ -5188,6 +5320,7 @@ func init()
 
 ```
 searchKey: repos.mockTime
+tags: [private]
 ```
 
 ```Go
@@ -5198,6 +5331,7 @@ func mockTime(t time.Time)
 
 ```
 searchKey: repos.TestUpdateQueue_enqueue
+tags: [private]
 ```
 
 ```Go
@@ -5208,6 +5342,7 @@ func TestUpdateQueue_enqueue(t *testing.T)
 
 ```
 searchKey: repos.TestUpdateQueue_remove
+tags: [private]
 ```
 
 ```Go
@@ -5218,6 +5353,7 @@ func TestUpdateQueue_remove(t *testing.T)
 
 ```
 searchKey: repos.TestUpdateQueue_acquireNext
+tags: [private]
 ```
 
 ```Go
@@ -5228,6 +5364,7 @@ func TestUpdateQueue_acquireNext(t *testing.T)
 
 ```
 searchKey: repos.setupInitialQueue
+tags: [private]
 ```
 
 ```Go
@@ -5238,6 +5375,7 @@ func setupInitialQueue(s *updateScheduler, initialQueue []*repoUpdate)
 
 ```
 searchKey: repos.verifyQueue
+tags: [private]
 ```
 
 ```Go
@@ -5248,6 +5386,7 @@ func verifyQueue(t *testing.T, s *updateScheduler, expected []*repoUpdate)
 
 ```
 searchKey: repos.Test_updateScheduler_UpdateFromDiff
+tags: [private]
 ```
 
 ```Go
@@ -5258,6 +5397,7 @@ func Test_updateScheduler_UpdateFromDiff(t *testing.T)
 
 ```
 searchKey: repos.TestSchedule_upsert
+tags: [private]
 ```
 
 ```Go
@@ -5268,6 +5408,7 @@ func TestSchedule_upsert(t *testing.T)
 
 ```
 searchKey: repos.TestUpdateQueue_setCloned
+tags: [private]
 ```
 
 ```Go
@@ -5278,6 +5419,7 @@ func TestUpdateQueue_setCloned(t *testing.T)
 
 ```
 searchKey: repos.TestScheduleInsertNew
+tags: [private]
 ```
 
 ```Go
@@ -5288,6 +5430,7 @@ func TestScheduleInsertNew(t *testing.T)
 
 ```
 searchKey: repos.TestSchedule_updateInterval
+tags: [private]
 ```
 
 ```Go
@@ -5298,6 +5441,7 @@ func TestSchedule_updateInterval(t *testing.T)
 
 ```
 searchKey: repos.TestSchedule_remove
+tags: [private]
 ```
 
 ```Go
@@ -5308,6 +5452,7 @@ func TestSchedule_remove(t *testing.T)
 
 ```
 searchKey: repos.setupInitialSchedule
+tags: [private]
 ```
 
 ```Go
@@ -5318,6 +5463,7 @@ func setupInitialSchedule(s *updateScheduler, initialSchedule []*scheduledRepoUp
 
 ```
 searchKey: repos.verifySchedule
+tags: [private]
 ```
 
 ```Go
@@ -5328,6 +5474,7 @@ func verifySchedule(t *testing.T, s *updateScheduler, expected []*scheduledRepoU
 
 ```
 searchKey: repos.verifyScheduleRecording
+tags: [private]
 ```
 
 ```Go
@@ -5338,6 +5485,7 @@ func verifyScheduleRecording(t *testing.T, s *updateScheduler, timeAfterFuncDela
 
 ```
 searchKey: repos.TestUpdateScheduler_runSchedule
+tags: [private]
 ```
 
 ```Go
@@ -5348,6 +5496,7 @@ func TestUpdateScheduler_runSchedule(t *testing.T)
 
 ```
 searchKey: repos.TestUpdateScheduler_runUpdateLoop
+tags: [private]
 ```
 
 ```Go
@@ -5358,6 +5507,7 @@ func TestUpdateScheduler_runUpdateLoop(t *testing.T)
 
 ```
 searchKey: repos.verifyRecording
+tags: [private]
 ```
 
 ```Go
@@ -5368,6 +5518,7 @@ func verifyRecording(t *testing.T, s *updateScheduler, timeAfterFuncDelays []tim
 
 ```
 searchKey: repos.timePtr
+tags: [private]
 ```
 
 ```Go
@@ -5378,6 +5529,7 @@ func timePtr(t time.Time) *time.Time
 
 ```
 searchKey: repos.Test_updateQueue_Less
+tags: [private]
 ```
 
 ```Go
@@ -5388,6 +5540,7 @@ func Test_updateQueue_Less(t *testing.T)
 
 ```
 searchKey: repos.TestGetCustomInterval
+tags: [private]
 ```
 
 ```Go
@@ -5398,6 +5551,7 @@ func TestGetCustomInterval(t *testing.T)
 
 ```
 searchKey: repos.TestNewSourcer
+tags: [private]
 ```
 
 ```Go
@@ -5408,6 +5562,7 @@ func TestNewSourcer(t *testing.T)
 
 ```
 searchKey: repos.TestSources_ListRepos
+tags: [private]
 ```
 
 ```Go
@@ -5418,6 +5573,7 @@ func TestSources_ListRepos(t *testing.T)
 
 ```
 searchKey: repos.newClientFactory
+tags: [private]
 ```
 
 ```Go
@@ -5428,6 +5584,7 @@ func newClientFactory(t testing.TB, name string, mws ...httpcli.Middleware) (*ht
 
 ```
 searchKey: repos.gitserverRedirectMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -5438,6 +5595,7 @@ func gitserverRedirectMiddleware(cli httpcli.Doer) httpcli.Doer
 
 ```
 searchKey: repos.newRecorder
+tags: [private]
 ```
 
 ```Go
@@ -5448,6 +5606,7 @@ func newRecorder(t testing.TB, file string, record bool) *recorder.Recorder
 
 ```
 searchKey: repos.save
+tags: [private]
 ```
 
 ```Go
@@ -5458,6 +5617,7 @@ func save(t testing.TB, rec *recorder.Recorder)
 
 ```
 searchKey: repos.marshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -5468,6 +5628,7 @@ func marshalJSON(t testing.TB, v interface{}) string
 
 ```
 searchKey: repos.getAWSEnv
+tags: [private]
 ```
 
 ```Go
@@ -5478,6 +5639,7 @@ func getAWSEnv(envVar string) string
 
 ```
 searchKey: repos.TestStatusMessages
+tags: [private]
 ```
 
 ```Go
@@ -5488,6 +5650,7 @@ func TestStatusMessages(t *testing.T)
 
 ```
 searchKey: repos.TestReposNamesSummary
+tags: [private]
 ```
 
 ```Go
@@ -5498,6 +5661,7 @@ func TestReposNamesSummary(t *testing.T)
 
 ```
 searchKey: repos.TestPick
+tags: [private]
 ```
 
 ```Go
@@ -5510,6 +5674,7 @@ Our uses of pick happen from iterating through a map. So we can't guarantee that
 
 ```
 searchKey: repos.TestSyncRateLimiters
+tags: [private]
 ```
 
 ```Go
@@ -5520,6 +5685,7 @@ func TestSyncRateLimiters(t *testing.T)
 
 ```
 searchKey: repos.TestGrantedScopes
+tags: [private]
 ```
 
 ```Go
@@ -5530,6 +5696,7 @@ func TestGrantedScopes(t *testing.T)
 
 ```
 searchKey: repos.TestHashToken
+tags: [private]
 ```
 
 ```Go
@@ -5540,6 +5707,7 @@ func TestHashToken(t *testing.T)
 
 ```
 searchKey: repos.TestSetUserinfoBestEffort
+tags: [private]
 ```
 
 ```Go

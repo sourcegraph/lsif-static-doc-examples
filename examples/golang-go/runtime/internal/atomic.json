@@ -4,7 +4,9 @@
     "identifier": "atomic",
     "newPage": true,
     "searchKey": "runtime/internal/atomic",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Load",
                 "newPage": false,
                 "searchKey": "atomic.Load",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "Loadp",
                 "newPage": false,
                 "searchKey": "atomic.Loadp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "Load64",
                 "newPage": false,
                 "searchKey": "atomic.Load64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "LoadAcq",
                 "newPage": false,
                 "searchKey": "atomic.LoadAcq",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "LoadAcq64",
                 "newPage": false,
                 "searchKey": "atomic.LoadAcq64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "LoadAcquintptr",
                 "newPage": false,
                 "searchKey": "atomic.LoadAcquintptr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                 "identifier": "Xadd",
                 "newPage": false,
                 "searchKey": "atomic.Xadd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,9 +184,7 @@
                 "identifier": "Xadd64",
                 "newPage": false,
                 "searchKey": "atomic.Xadd64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -216,9 +204,7 @@
                 "identifier": "Xadduintptr",
                 "newPage": false,
                 "searchKey": "atomic.Xadduintptr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -238,9 +224,7 @@
                 "identifier": "Xchg",
                 "newPage": false,
                 "searchKey": "atomic.Xchg",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -260,9 +244,7 @@
                 "identifier": "Xchg64",
                 "newPage": false,
                 "searchKey": "atomic.Xchg64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,9 +264,7 @@
                 "identifier": "Xchguintptr",
                 "newPage": false,
                 "searchKey": "atomic.Xchguintptr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -304,9 +284,7 @@
                 "identifier": "Load8",
                 "newPage": false,
                 "searchKey": "atomic.Load8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +304,7 @@
                 "identifier": "And8",
                 "newPage": false,
                 "searchKey": "atomic.And8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -348,9 +324,7 @@
                 "identifier": "Or8",
                 "newPage": false,
                 "searchKey": "atomic.Or8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -370,9 +344,7 @@
                 "identifier": "And",
                 "newPage": false,
                 "searchKey": "atomic.And",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -392,9 +364,7 @@
                 "identifier": "Or",
                 "newPage": false,
                 "searchKey": "atomic.Or",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -414,9 +384,7 @@
                 "identifier": "Cas64",
                 "newPage": false,
                 "searchKey": "atomic.Cas64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -436,9 +404,7 @@
                 "identifier": "CasRel",
                 "newPage": false,
                 "searchKey": "atomic.CasRel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -458,9 +424,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "atomic.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -480,9 +444,7 @@
                 "identifier": "Store8",
                 "newPage": false,
                 "searchKey": "atomic.Store8",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -502,9 +464,7 @@
                 "identifier": "Store64",
                 "newPage": false,
                 "searchKey": "atomic.Store64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -524,9 +484,7 @@
                 "identifier": "StoreRel",
                 "newPage": false,
                 "searchKey": "atomic.StoreRel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -546,9 +504,7 @@
                 "identifier": "StoreRel64",
                 "newPage": false,
                 "searchKey": "atomic.StoreRel64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -568,9 +524,7 @@
                 "identifier": "StoreReluintptr",
                 "newPage": false,
                 "searchKey": "atomic.StoreReluintptr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -590,9 +544,7 @@
                 "identifier": "StorepNoWB",
                 "newPage": false,
                 "searchKey": "atomic.StorepNoWB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -612,9 +564,7 @@
                 "identifier": "Cas",
                 "newPage": false,
                 "searchKey": "atomic.Cas",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -634,9 +584,7 @@
                 "identifier": "Casp1",
                 "newPage": false,
                 "searchKey": "atomic.Casp1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -656,9 +604,7 @@
                 "identifier": "Casint32",
                 "newPage": false,
                 "searchKey": "atomic.Casint32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -678,9 +624,7 @@
                 "identifier": "Casint64",
                 "newPage": false,
                 "searchKey": "atomic.Casint64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -700,9 +644,7 @@
                 "identifier": "Casuintptr",
                 "newPage": false,
                 "searchKey": "atomic.Casuintptr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -722,9 +664,7 @@
                 "identifier": "Storeint32",
                 "newPage": false,
                 "searchKey": "atomic.Storeint32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -744,9 +684,7 @@
                 "identifier": "Storeint64",
                 "newPage": false,
                 "searchKey": "atomic.Storeint64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -766,9 +704,7 @@
                 "identifier": "Storeuintptr",
                 "newPage": false,
                 "searchKey": "atomic.Storeuintptr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -788,9 +724,7 @@
                 "identifier": "Loaduintptr",
                 "newPage": false,
                 "searchKey": "atomic.Loaduintptr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -810,9 +744,7 @@
                 "identifier": "Loaduint",
                 "newPage": false,
                 "searchKey": "atomic.Loaduint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -832,9 +764,7 @@
                 "identifier": "Loadint32",
                 "newPage": false,
                 "searchKey": "atomic.Loadint32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -854,9 +784,7 @@
                 "identifier": "Loadint64",
                 "newPage": false,
                 "searchKey": "atomic.Loadint64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -876,9 +804,7 @@
                 "identifier": "Xaddint32",
                 "newPage": false,
                 "searchKey": "atomic.Xaddint32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -898,9 +824,7 @@
                 "identifier": "Xaddint64",
                 "newPage": false,
                 "searchKey": "atomic.Xaddint64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -920,9 +844,7 @@
                 "identifier": "Xchgint32",
                 "newPage": false,
                 "searchKey": "atomic.Xchgint32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -942,9 +864,7 @@
                 "identifier": "Xchgint64",
                 "newPage": false,
                 "searchKey": "atomic.Xchgint64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -964,7 +884,9 @@
                 "identifier": "panicUnaligned",
                 "newPage": false,
                 "searchKey": "atomic.panicUnaligned",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

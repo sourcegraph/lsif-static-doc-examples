@@ -4,9 +4,7 @@
     "identifier": "scanner",
     "newPage": true,
     "searchKey": "text/scanner",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "ScanIdents",
                 "newPage": false,
                 "searchKey": "scanner.ScanIdents",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "ScanInts",
                 "newPage": false,
                 "searchKey": "scanner.ScanInts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "ScanFloats",
                 "newPage": false,
                 "searchKey": "scanner.ScanFloats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "ScanChars",
                 "newPage": false,
                 "searchKey": "scanner.ScanChars",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -132,9 +120,7 @@
                 "identifier": "ScanStrings",
                 "newPage": false,
                 "searchKey": "scanner.ScanStrings",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -154,9 +140,7 @@
                 "identifier": "ScanRawStrings",
                 "newPage": false,
                 "searchKey": "scanner.ScanRawStrings",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -176,9 +160,7 @@
                 "identifier": "ScanComments",
                 "newPage": false,
                 "searchKey": "scanner.ScanComments",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -198,9 +180,7 @@
                 "identifier": "SkipComments",
                 "newPage": false,
                 "searchKey": "scanner.SkipComments",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -220,9 +200,7 @@
                 "identifier": "GoTokens",
                 "newPage": false,
                 "searchKey": "scanner.GoTokens",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -242,9 +220,7 @@
                 "identifier": "EOF",
                 "newPage": false,
                 "searchKey": "scanner.EOF",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -264,9 +240,7 @@
                 "identifier": "Ident",
                 "newPage": false,
                 "searchKey": "scanner.Ident",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -286,9 +260,7 @@
                 "identifier": "Int",
                 "newPage": false,
                 "searchKey": "scanner.Int",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -308,9 +280,7 @@
                 "identifier": "Float",
                 "newPage": false,
                 "searchKey": "scanner.Float",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -330,9 +300,7 @@
                 "identifier": "Char",
                 "newPage": false,
                 "searchKey": "scanner.Char",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -352,9 +320,7 @@
                 "identifier": "String",
                 "newPage": false,
                 "searchKey": "scanner.String",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -374,9 +340,7 @@
                 "identifier": "RawString",
                 "newPage": false,
                 "searchKey": "scanner.RawString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -396,9 +360,7 @@
                 "identifier": "Comment",
                 "newPage": false,
                 "searchKey": "scanner.Comment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -418,7 +380,9 @@
                 "identifier": "skipComment",
                 "newPage": false,
                 "searchKey": "scanner.skipComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -438,9 +402,7 @@
                 "identifier": "GoWhitespace",
                 "newPage": false,
                 "searchKey": "scanner.GoWhitespace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -460,7 +422,9 @@
                 "identifier": "bufLen",
                 "newPage": false,
                 "searchKey": "scanner.bufLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -483,9 +447,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -503,7 +465,9 @@
                 "identifier": "tokenString",
                 "newPage": false,
                 "searchKey": "scanner.tokenString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -523,7 +487,9 @@
                 "identifier": "segmentList",
                 "newPage": false,
                 "searchKey": "scanner.segmentList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -543,7 +509,9 @@
                 "identifier": "f100",
                 "newPage": false,
                 "searchKey": "scanner.f100",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -563,7 +531,9 @@
                 "identifier": "tokenList",
                 "newPage": false,
                 "searchKey": "scanner.tokenList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -586,9 +556,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -606,9 +574,7 @@
                 "identifier": "Position",
                 "newPage": false,
                 "searchKey": "scanner.Position",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -626,9 +592,7 @@
                       "identifier": "Position.IsValid",
                       "newPage": false,
                       "searchKey": "scanner.Position.IsValid",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -648,9 +612,7 @@
                       "identifier": "Position.String",
                       "newPage": false,
                       "searchKey": "scanner.Position.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -673,9 +635,7 @@
                 "identifier": "Scanner",
                 "newPage": false,
                 "searchKey": "scanner.Scanner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -693,9 +653,7 @@
                       "identifier": "Scanner.Init",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.Init",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -715,7 +673,9 @@
                       "identifier": "Scanner.next",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -735,9 +695,7 @@
                       "identifier": "Scanner.Next",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.Next",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -757,9 +715,7 @@
                       "identifier": "Scanner.Peek",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.Peek",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -779,7 +735,9 @@
                       "identifier": "Scanner.error",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -799,7 +757,9 @@
                       "identifier": "Scanner.errorf",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.errorf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -819,7 +779,9 @@
                       "identifier": "Scanner.isIdentRune",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.isIdentRune",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -839,7 +801,9 @@
                       "identifier": "Scanner.scanIdentifier",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanIdentifier",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -859,7 +823,9 @@
                       "identifier": "Scanner.digits",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.digits",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -879,7 +845,9 @@
                       "identifier": "Scanner.scanNumber",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanNumber",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -899,7 +867,9 @@
                       "identifier": "Scanner.scanDigits",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanDigits",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -919,7 +889,9 @@
                       "identifier": "Scanner.scanEscape",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanEscape",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -939,7 +911,9 @@
                       "identifier": "Scanner.scanString",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -959,7 +933,9 @@
                       "identifier": "Scanner.scanRawString",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanRawString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -979,7 +955,9 @@
                       "identifier": "Scanner.scanChar",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanChar",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -999,7 +977,9 @@
                       "identifier": "Scanner.scanComment",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanComment",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1019,9 +999,7 @@
                       "identifier": "Scanner.Scan",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1041,9 +1019,7 @@
                       "identifier": "Scanner.Pos",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.Pos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1063,9 +1039,7 @@
                       "identifier": "Scanner.TokenText",
                       "newPage": false,
                       "searchKey": "scanner.Scanner.TokenText",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1088,7 +1062,9 @@
                 "identifier": "StringReader",
                 "newPage": false,
                 "searchKey": "scanner.StringReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1106,7 +1082,9 @@
                       "identifier": "StringReader.Read",
                       "newPage": false,
                       "searchKey": "scanner.StringReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1129,7 +1107,9 @@
                 "identifier": "token",
                 "newPage": false,
                 "searchKey": "scanner.token",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1149,7 +1129,9 @@
                 "identifier": "errReader",
                 "newPage": false,
                 "searchKey": "scanner.errReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1167,7 +1149,9 @@
                       "identifier": "errReader.Read",
                       "newPage": false,
                       "searchKey": "scanner.errReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1190,7 +1174,9 @@
                 "identifier": "countReader",
                 "newPage": false,
                 "searchKey": "scanner.countReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1208,7 +1194,9 @@
                       "identifier": "countReader.Read",
                       "newPage": false,
                       "searchKey": "scanner.countReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1234,9 +1222,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1254,9 +1240,7 @@
                 "identifier": "TokenString",
                 "newPage": false,
                 "searchKey": "scanner.TokenString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1276,7 +1260,9 @@
                 "identifier": "lower",
                 "newPage": false,
                 "searchKey": "scanner.lower",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1296,7 +1282,9 @@
                 "identifier": "isDecimal",
                 "newPage": false,
                 "searchKey": "scanner.isDecimal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1316,7 +1304,9 @@
                 "identifier": "isHex",
                 "newPage": false,
                 "searchKey": "scanner.isHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1336,7 +1326,9 @@
                 "identifier": "litname",
                 "newPage": false,
                 "searchKey": "scanner.litname",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1356,7 +1348,9 @@
                 "identifier": "invalidSep",
                 "newPage": false,
                 "searchKey": "scanner.invalidSep",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1376,7 +1370,9 @@
                 "identifier": "digitVal",
                 "newPage": false,
                 "searchKey": "scanner.digitVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1396,7 +1392,9 @@
                 "identifier": "readRuneSegments",
                 "newPage": false,
                 "searchKey": "scanner.readRuneSegments",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1416,7 +1414,9 @@
                 "identifier": "TestNext",
                 "newPage": false,
                 "searchKey": "scanner.TestNext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1436,7 +1436,9 @@
                 "identifier": "makeSource",
                 "newPage": false,
                 "searchKey": "scanner.makeSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1456,7 +1458,9 @@
                 "identifier": "checkTok",
                 "newPage": false,
                 "searchKey": "scanner.checkTok",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1476,7 +1480,9 @@
                 "identifier": "checkTokErr",
                 "newPage": false,
                 "searchKey": "scanner.checkTokErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1496,7 +1502,9 @@
                 "identifier": "countNewlines",
                 "newPage": false,
                 "searchKey": "scanner.countNewlines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1516,7 +1524,9 @@
                 "identifier": "testScan",
                 "newPage": false,
                 "searchKey": "scanner.testScan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1536,7 +1546,9 @@
                 "identifier": "TestScan",
                 "newPage": false,
                 "searchKey": "scanner.TestScan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1556,7 +1568,9 @@
                 "identifier": "TestInvalidExponent",
                 "newPage": false,
                 "searchKey": "scanner.TestInvalidExponent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1576,7 +1590,9 @@
                 "identifier": "TestPosition",
                 "newPage": false,
                 "searchKey": "scanner.TestPosition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1596,7 +1612,9 @@
                 "identifier": "TestScanZeroMode",
                 "newPage": false,
                 "searchKey": "scanner.TestScanZeroMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1616,7 +1634,9 @@
                 "identifier": "testScanSelectedMode",
                 "newPage": false,
                 "searchKey": "scanner.testScanSelectedMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1636,7 +1656,9 @@
                 "identifier": "TestScanSelectedMask",
                 "newPage": false,
                 "searchKey": "scanner.TestScanSelectedMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1656,7 +1678,9 @@
                 "identifier": "TestScanCustomIdent",
                 "newPage": false,
                 "searchKey": "scanner.TestScanCustomIdent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1676,7 +1700,9 @@
                 "identifier": "TestScanNext",
                 "newPage": false,
                 "searchKey": "scanner.TestScanNext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1696,7 +1722,9 @@
                 "identifier": "TestScanWhitespace",
                 "newPage": false,
                 "searchKey": "scanner.TestScanWhitespace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1716,7 +1744,9 @@
                 "identifier": "testError",
                 "newPage": false,
                 "searchKey": "scanner.testError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1736,7 +1766,9 @@
                 "identifier": "TestError",
                 "newPage": false,
                 "searchKey": "scanner.TestError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1756,7 +1788,9 @@
                 "identifier": "TestIOError",
                 "newPage": false,
                 "searchKey": "scanner.TestIOError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1776,7 +1810,9 @@
                 "identifier": "checkPos",
                 "newPage": false,
                 "searchKey": "scanner.checkPos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1796,7 +1832,9 @@
                 "identifier": "checkNextPos",
                 "newPage": false,
                 "searchKey": "scanner.checkNextPos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1816,7 +1854,9 @@
                 "identifier": "checkScanPos",
                 "newPage": false,
                 "searchKey": "scanner.checkScanPos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1836,7 +1876,9 @@
                 "identifier": "TestPos",
                 "newPage": false,
                 "searchKey": "scanner.TestPos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1856,7 +1898,9 @@
                 "identifier": "TestNextEOFHandling",
                 "newPage": false,
                 "searchKey": "scanner.TestNextEOFHandling",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1876,7 +1920,9 @@
                 "identifier": "TestScanEOFHandling",
                 "newPage": false,
                 "searchKey": "scanner.TestScanEOFHandling",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1896,7 +1942,9 @@
                 "identifier": "TestIssue29723",
                 "newPage": false,
                 "searchKey": "scanner.TestIssue29723",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1916,7 +1964,9 @@
                 "identifier": "TestNumbers",
                 "newPage": false,
                 "searchKey": "scanner.TestNumbers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1936,7 +1986,9 @@
                 "identifier": "TestIssue30320",
                 "newPage": false,
                 "searchKey": "scanner.TestIssue30320",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1956,7 +2008,9 @@
                 "identifier": "extractInts",
                 "newPage": false,
                 "searchKey": "scanner.extractInts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

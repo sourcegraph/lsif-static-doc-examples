@@ -4,7 +4,9 @@
     "identifier": "routevar",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/routevar",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Def",
                 "newPage": false,
                 "searchKey": "routevar.Def",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "RepoPattern",
                 "newPage": false,
                 "searchKey": "routevar.RepoPattern",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "RepoPathDelim",
                 "newPage": false,
                 "searchKey": "routevar.RepoPathDelim",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +104,9 @@
                 "identifier": "pathComponentNotDelim",
                 "newPage": false,
                 "searchKey": "routevar.pathComponentNotDelim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -126,9 +126,7 @@
                 "identifier": "RevPattern",
                 "newPage": false,
                 "searchKey": "routevar.RevPattern",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -151,7 +149,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -169,7 +169,9 @@
                 "identifier": "namedCaptureGroup",
                 "newPage": false,
                 "searchKey": "routevar.namedCaptureGroup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -189,9 +191,7 @@
                 "identifier": "Repo",
                 "newPage": false,
                 "searchKey": "routevar.Repo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -211,9 +211,7 @@
                 "identifier": "Rev",
                 "newPage": false,
                 "searchKey": "routevar.Rev",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -233,9 +231,7 @@
                 "identifier": "RepoRevSuffix",
                 "newPage": false,
                 "searchKey": "routevar.RepoRevSuffix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -255,7 +251,9 @@
                 "identifier": "repoPattern",
                 "newPage": false,
                 "searchKey": "routevar.repoPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -278,7 +276,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -296,9 +296,7 @@
                 "identifier": "DefAtRev",
                 "newPage": false,
                 "searchKey": "routevar.DefAtRev",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -316,9 +314,7 @@
                       "identifier": "ToDefAtRev",
                       "newPage": false,
                       "searchKey": "routevar.ToDefAtRev",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -341,9 +337,7 @@
                 "identifier": "RepoRev",
                 "newPage": false,
                 "searchKey": "routevar.RepoRev",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -361,9 +355,7 @@
                       "identifier": "ToRepoRev",
                       "newPage": false,
                       "searchKey": "routevar.ToRepoRev",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -386,9 +378,7 @@
                 "identifier": "InvalidError",
                 "newPage": false,
                 "searchKey": "routevar.InvalidError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -406,9 +396,7 @@
                       "identifier": "InvalidError.Error",
                       "newPage": false,
                       "searchKey": "routevar.InvalidError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,7 +422,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -452,7 +442,9 @@
                 "identifier": "defURLPathToKeyPath",
                 "newPage": false,
                 "searchKey": "routevar.defURLPathToKeyPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -472,9 +464,7 @@
                 "identifier": "DefRouteVars",
                 "newPage": false,
                 "searchKey": "routevar.DefRouteVars",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -494,7 +484,9 @@
                 "identifier": "namedToNonCapturingGroups",
                 "newPage": false,
                 "searchKey": "routevar.namedToNonCapturingGroups",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -514,9 +506,7 @@
                 "identifier": "ParseRepo",
                 "newPage": false,
                 "searchKey": "routevar.ParseRepo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -536,9 +526,7 @@
                 "identifier": "RepoRouteVars",
                 "newPage": false,
                 "searchKey": "routevar.RepoRouteVars",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -558,9 +546,7 @@
                 "identifier": "ToRepo",
                 "newPage": false,
                 "searchKey": "routevar.ToRepo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -580,9 +566,7 @@
                 "identifier": "RepoRevRouteVars",
                 "newPage": false,
                 "searchKey": "routevar.RepoRevRouteVars",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -602,7 +586,9 @@
                 "identifier": "pathUnescape",
                 "newPage": false,
                 "searchKey": "routevar.pathUnescape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -622,7 +608,9 @@
                 "identifier": "TestDefRouteVars",
                 "newPage": false,
                 "searchKey": "routevar.TestDefRouteVars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -642,7 +630,9 @@
                 "identifier": "pairs",
                 "newPage": false,
                 "searchKey": "routevar.pairs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -662,7 +652,9 @@
                 "identifier": "TestNamedToNonCapturingGroups",
                 "newPage": false,
                 "searchKey": "routevar.TestNamedToNonCapturingGroups",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -682,7 +674,9 @@
                 "identifier": "TestRepoPattern",
                 "newPage": false,
                 "searchKey": "routevar.TestRepoPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -702,7 +696,9 @@
                 "identifier": "TestRevPattern",
                 "newPage": false,
                 "searchKey": "routevar.TestRevPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -722,7 +718,9 @@
                 "identifier": "TestRepo",
                 "newPage": false,
                 "searchKey": "routevar.TestRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -742,7 +740,9 @@
                 "identifier": "TestRev",
                 "newPage": false,
                 "searchKey": "routevar.TestRev",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -762,7 +762,9 @@
                 "identifier": "TestRepoRevSpec",
                 "newPage": false,
                 "searchKey": "routevar.TestRepoRevSpec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

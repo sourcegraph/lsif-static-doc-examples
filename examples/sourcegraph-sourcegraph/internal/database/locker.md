@@ -17,17 +17,22 @@
         * [func (l *Locker) unlock(key int) error](#Locker.unlock)
     * [type UnlockFunc func(err error) error](#UnlockFunc)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.locker_test.go)
     * [func TestLock(t *testing.T)](#TestLock)
     * [func TestLockBlockingAcquire(t *testing.T)](#TestLockBlockingAcquire)
 
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="lockQuery" href="#lockQuery">const lockQuery</a>
 
 ```
 searchKey: locker.lockQuery
+tags: [private]
 ```
 
 ```Go
@@ -38,6 +43,7 @@ const lockQuery = ...
 
 ```
 searchKey: locker.tryLockQuery
+tags: [private]
 ```
 
 ```Go
@@ -48,6 +54,7 @@ const tryLockQuery = ...
 
 ```
 searchKey: locker.unlockQuery
+tags: [private]
 ```
 
 ```Go
@@ -56,11 +63,14 @@ const unlockQuery = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Locker" href="#Locker">type Locker struct</a>
 
 ```
 searchKey: locker.Locker
-tags: [exported]
 ```
 
 ```Go
@@ -78,7 +88,6 @@ For example, an advisory lock can be taken around an expensive calculation relat
 
 ```
 searchKey: locker.NewWithDB
-tags: [exported]
 ```
 
 ```Go
@@ -91,7 +100,6 @@ NewWithDB creates a new Locker with the given namespace.
 
 ```
 searchKey: locker.Locker.With
-tags: [exported]
 ```
 
 ```Go
@@ -102,7 +110,6 @@ func (l *Locker) With(other basestore.ShareableStore) *Locker
 
 ```
 searchKey: locker.Locker.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -113,7 +120,6 @@ func (l *Locker) Transact(ctx context.Context) (*Locker, error)
 
 ```
 searchKey: locker.Locker.Lock
-tags: [exported]
 ```
 
 ```Go
@@ -126,6 +132,7 @@ Lock attempts to take an advisory lock on the given key. If successful, this met
 
 ```
 searchKey: locker.Locker.lock
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +145,7 @@ lock blocks until an advisory lock is taken on the given key.
 
 ```
 searchKey: locker.Locker.tryLock
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +158,7 @@ tryLock attempts to take an advisory lock on the given key. Returns true on succ
 
 ```
 searchKey: locker.Locker.unlock
+tags: [private]
 ```
 
 ```Go
@@ -162,7 +171,6 @@ unlock releases the advisory lock on the given key.
 
 ```
 searchKey: locker.UnlockFunc
-tags: [exported]
 ```
 
 ```Go
@@ -173,10 +181,15 @@ UnlockFunc unlocks the advisory lock taken by a successful call to Lock. If an e
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.locker_test.go" href="#init.locker_test.go">func init()</a>
 
 ```
 searchKey: locker.init
+tags: [private]
 ```
 
 ```Go
@@ -187,6 +200,7 @@ func init()
 
 ```
 searchKey: locker.TestLock
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +211,7 @@ func TestLock(t *testing.T)
 
 ```
 searchKey: locker.TestLockBlockingAcquire
+tags: [private]
 ```
 
 ```Go

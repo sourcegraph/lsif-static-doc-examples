@@ -4,9 +4,7 @@
     "identifier": "errors",
     "newPage": true,
     "searchKey": "errors",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "errorType",
                 "newPage": false,
                 "searchKey": "errors.errorType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,7 +83,9 @@
                 "identifier": "errorString",
                 "newPage": false,
                 "searchKey": "errors.errorString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -105,7 +103,9 @@
                       "identifier": "errorString.Error",
                       "newPage": false,
                       "searchKey": "errors.errorString.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -131,9 +131,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -151,9 +149,7 @@
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "errors.New",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -173,9 +169,7 @@
                 "identifier": "Unwrap",
                 "newPage": false,
                 "searchKey": "errors.Unwrap",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -195,9 +189,7 @@
                 "identifier": "Is",
                 "newPage": false,
                 "searchKey": "errors.Is",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -217,9 +209,7 @@
                 "identifier": "As",
                 "newPage": false,
                 "searchKey": "errors.As",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

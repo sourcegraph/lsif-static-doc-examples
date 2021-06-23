@@ -97,10 +97,15 @@ Package updatecheck provides a client and HTTP handler for checking and serving 
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="redisInfoCommand" href="#redisInfoCommand">const redisInfoCommand</a>
 
 ```
 searchKey: updatecheck.redisInfoCommand
+tags: [private]
 ```
 
 ```Go
@@ -111,10 +116,15 @@ output of running the INFO command in redis-cli
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="metricsRecorder" href="#metricsRecorder">var metricsRecorder</a>
 
 ```
 searchKey: updatecheck.metricsRecorder
+tags: [private]
 ```
 
 ```Go
@@ -127,6 +137,7 @@ metricsRecorder records operational metrics for methods.
 
 ```
 searchKey: updatecheck.mu
+tags: [private]
 ```
 
 ```Go
@@ -137,6 +148,7 @@ var mu sync.Mutex
 
 ```
 searchKey: updatecheck.startedAt
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +159,7 @@ var startedAt *time.Time
 
 ```
 searchKey: updatecheck.lastStatus
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +170,7 @@ var lastStatus *Status
 
 ```
 searchKey: updatecheck.started
+tags: [private]
 ```
 
 ```Go
@@ -167,6 +181,7 @@ var started bool
 
 ```
 searchKey: updatecheck.pubSubPingsTopicID
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +194,7 @@ pubSubPingsTopicID is the topic ID of the topic that forwards messages to Pings'
 
 ```
 searchKey: updatecheck.latestReleaseDockerServerImageBuild
+tags: [private]
 ```
 
 ```Go
@@ -191,6 +207,7 @@ latestReleaseDockerServerImageBuild is only used by sourcegraph.com to tell exis
 
 ```
 searchKey: updatecheck.latestReleaseKubernetesBuild
+tags: [private]
 ```
 
 ```Go
@@ -203,6 +220,7 @@ latestReleaseKubernetesBuild is only used by sourcegraph.com to tell existing So
 
 ```
 searchKey: updatecheck.latestReleaseDockerComposeOrPureDocker
+tags: [private]
 ```
 
 ```Go
@@ -215,6 +233,7 @@ latestReleaseDockerComposeOrPureDocker is only used by sourcegraph.com to tell e
 
 ```
 searchKey: updatecheck.dateRegex
+tags: [private]
 ```
 
 ```Go
@@ -225,6 +244,7 @@ var dateRegex = lazyregexp.New("_([0-9]{4}-[0-9]{2}-[0-9]{2})_")
 
 ```
 searchKey: updatecheck.timeNow
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +255,7 @@ var timeNow = time.Now
 
 ```
 searchKey: updatecheck.codeIntelActionNames
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +266,7 @@ var codeIntelActionNames = ...
 
 ```
 searchKey: updatecheck.codeIntelSourceNames
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +277,7 @@ var codeIntelSourceNames = ...
 
 ```
 searchKey: updatecheck.requestCounter
+tags: [private]
 ```
 
 ```Go
@@ -265,6 +288,7 @@ var requestCounter = ...
 
 ```
 searchKey: updatecheck.requestHasUpdateCounter
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +299,7 @@ var requestHasUpdateCounter = ...
 
 ```
 searchKey: updatecheck.errorCounter
+tags: [private]
 ```
 
 ```Go
@@ -283,10 +308,15 @@ var errorCounter = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="build" href="#build">type build struct</a>
 
 ```
 searchKey: updatecheck.build
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +331,7 @@ build is the JSON shape of the update check handler's response body.
 
 ```
 searchKey: updatecheck.newBuild
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +342,7 @@ func newBuild(version string) build
 
 ```
 searchKey: updatecheck.getLatestRelease
+tags: [private]
 ```
 
 ```Go
@@ -321,7 +353,6 @@ func getLatestRelease(deployType string) build
 
 ```
 searchKey: updatecheck.Status
-tags: [exported]
 ```
 
 ```Go
@@ -338,7 +369,6 @@ Status of the check for software updates for Sourcegraph.
 
 ```
 searchKey: updatecheck.Last
-tags: [exported]
 ```
 
 ```Go
@@ -351,7 +381,6 @@ Last returns the status of the last-completed software update check.
 
 ```
 searchKey: updatecheck.Status.HasUpdate
-tags: [exported]
 ```
 
 ```Go
@@ -364,6 +393,7 @@ HasUpdate reports whether the status indicates an update is available.
 
 ```
 searchKey: updatecheck.pingRequest
+tags: [private]
 ```
 
 ```Go
@@ -408,6 +438,7 @@ pingRequest is the payload of the update check request. These values either supp
 
 ```
 searchKey: updatecheck.readPingRequest
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +451,7 @@ readPingRequest reads the ping request payload from the request. If the request 
 
 ```
 searchKey: updatecheck.readPingRequestFromQuery
+tags: [private]
 ```
 
 ```Go
@@ -430,6 +462,7 @@ func readPingRequestFromQuery(q url.Values) (*pingRequest, error)
 
 ```
 searchKey: updatecheck.readPingRequestFromBody
+tags: [private]
 ```
 
 ```Go
@@ -440,6 +473,7 @@ func readPingRequestFromBody(body io.ReadCloser) (*pingRequest, error)
 
 ```
 searchKey: updatecheck.dependencyVersions
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +488,7 @@ type dependencyVersions struct {
 
 ```
 searchKey: updatecheck.pingPayload
+tags: [private]
 ```
 
 ```Go
@@ -497,6 +532,7 @@ type pingPayload struct {
 
 ```
 searchKey: updatecheck.jsonCodeIntelUsage
+tags: [private]
 ```
 
 ```Go
@@ -518,6 +554,7 @@ type jsonCodeIntelUsage struct {
 
 ```
 searchKey: updatecheck.jsonEventSummary
+tags: [private]
 ```
 
 ```Go
@@ -535,6 +572,7 @@ type jsonEventSummary struct {
 
 ```
 searchKey: updatecheck.translateEventSummary
+tags: [private]
 ```
 
 ```Go
@@ -543,11 +581,14 @@ func translateEventSummary(es types.CodeIntelEventSummary) jsonEventSummary
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IsPending" href="#IsPending">func IsPending() bool</a>
 
 ```
 searchKey: updatecheck.IsPending
-tags: [exported]
 ```
 
 ```Go
@@ -560,6 +601,7 @@ IsPending returns whether an update check is in progress.
 
 ```
 searchKey: updatecheck.recordOperation
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +614,7 @@ recordOperation returns a record fn that is called on any given return err. If a
 
 ```
 searchKey: updatecheck.getAndMarshalSiteActivityJSON
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +625,7 @@ func getAndMarshalSiteActivityJSON(ctx context.Context, db dbutil.DB, criticalOn
 
 ```
 searchKey: updatecheck.hasSearchOccurred
+tags: [private]
 ```
 
 ```Go
@@ -592,6 +636,7 @@ func hasSearchOccurred(ctx context.Context) (_ bool, err error)
 
 ```
 searchKey: updatecheck.hasFindRefsOccurred
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +647,7 @@ func hasFindRefsOccurred(ctx context.Context) (_ bool, err error)
 
 ```
 searchKey: updatecheck.getTotalUsersCount
+tags: [private]
 ```
 
 ```Go
@@ -612,6 +658,7 @@ func getTotalUsersCount(ctx context.Context) (_ int, err error)
 
 ```
 searchKey: updatecheck.getTotalReposCount
+tags: [private]
 ```
 
 ```Go
@@ -622,6 +669,7 @@ func getTotalReposCount(ctx context.Context) (_ int, err error)
 
 ```
 searchKey: updatecheck.getUsersActiveTodayCount
+tags: [private]
 ```
 
 ```Go
@@ -632,6 +680,7 @@ func getUsersActiveTodayCount(ctx context.Context) (_ int, err error)
 
 ```
 searchKey: updatecheck.getInitialSiteAdminEmail
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +691,7 @@ func getInitialSiteAdminEmail(ctx context.Context) (_ string, err error)
 
 ```
 searchKey: updatecheck.getAndMarshalBatchChangesUsageJSON
+tags: [private]
 ```
 
 ```Go
@@ -652,6 +702,7 @@ func getAndMarshalBatchChangesUsageJSON(ctx context.Context, db dbutil.DB) (_ js
 
 ```
 searchKey: updatecheck.getAndMarshalGrowthStatisticsJSON
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +713,7 @@ func getAndMarshalGrowthStatisticsJSON(ctx context.Context, db dbutil.DB) (_ jso
 
 ```
 searchKey: updatecheck.getAndMarshalSavedSearchesJSON
+tags: [private]
 ```
 
 ```Go
@@ -672,6 +724,7 @@ func getAndMarshalSavedSearchesJSON(ctx context.Context, db dbutil.DB) (_ json.R
 
 ```
 searchKey: updatecheck.getAndMarshalHomepagePanelsJSON
+tags: [private]
 ```
 
 ```Go
@@ -682,6 +735,7 @@ func getAndMarshalHomepagePanelsJSON(ctx context.Context, db dbutil.DB) (_ json.
 
 ```
 searchKey: updatecheck.getAndMarshalRepositoriesJSON
+tags: [private]
 ```
 
 ```Go
@@ -692,6 +746,7 @@ func getAndMarshalRepositoriesJSON(ctx context.Context) (_ json.RawMessage, err 
 
 ```
 searchKey: updatecheck.getAndMarshalRetentionStatisticsJSON
+tags: [private]
 ```
 
 ```Go
@@ -702,6 +757,7 @@ func getAndMarshalRetentionStatisticsJSON(ctx context.Context, db dbutil.DB) (_ 
 
 ```
 searchKey: updatecheck.getAndMarshalSearchOnboardingJSON
+tags: [private]
 ```
 
 ```Go
@@ -712,6 +768,7 @@ func getAndMarshalSearchOnboardingJSON(ctx context.Context, db dbutil.DB) (_ jso
 
 ```
 searchKey: updatecheck.getAndMarshalAggregatedCodeIntelUsageJSON
+tags: [private]
 ```
 
 ```Go
@@ -722,6 +779,7 @@ func getAndMarshalAggregatedCodeIntelUsageJSON(ctx context.Context, db dbutil.DB
 
 ```
 searchKey: updatecheck.getAndMarshalAggregatedSearchUsageJSON
+tags: [private]
 ```
 
 ```Go
@@ -732,6 +790,7 @@ func getAndMarshalAggregatedSearchUsageJSON(ctx context.Context, db dbutil.DB) (
 
 ```
 searchKey: updatecheck.getAndMarshalExtensionsUsageStatisticsJSON
+tags: [private]
 ```
 
 ```Go
@@ -742,6 +801,7 @@ func getAndMarshalExtensionsUsageStatisticsJSON(ctx context.Context, db dbutil.D
 
 ```
 searchKey: updatecheck.getAndMarshalCodeInsightsUsageJSON
+tags: [private]
 ```
 
 ```Go
@@ -752,6 +812,7 @@ func getAndMarshalCodeInsightsUsageJSON(ctx context.Context, db dbutil.DB) (_ js
 
 ```
 searchKey: updatecheck.getAndMarshalCodeMonitoringUsageJSON
+tags: [private]
 ```
 
 ```Go
@@ -762,6 +823,7 @@ func getAndMarshalCodeMonitoringUsageJSON(ctx context.Context, db dbutil.DB) (_ 
 
 ```
 searchKey: updatecheck.getDependencyVersions
+tags: [private]
 ```
 
 ```Go
@@ -772,6 +834,7 @@ func getDependencyVersions(ctx context.Context, db dbutil.DB, logFunc func(strin
 
 ```
 searchKey: updatecheck.getRedisVersion
+tags: [private]
 ```
 
 ```Go
@@ -782,6 +845,7 @@ func getRedisVersion(dialFunc func() (redis.Conn, error)) (string, error)
 
 ```
 searchKey: updatecheck.parseRedisInfo
+tags: [private]
 ```
 
 ```Go
@@ -792,6 +856,7 @@ func parseRedisInfo(buf []byte) (map[string]string, error)
 
 ```
 searchKey: updatecheck.updateBody
+tags: [private]
 ```
 
 ```Go
@@ -802,6 +867,7 @@ func updateBody(ctx context.Context, db dbutil.DB) (io.Reader, error)
 
 ```
 searchKey: updatecheck.authProviderTypes
+tags: [private]
 ```
 
 ```Go
@@ -812,6 +878,7 @@ func authProviderTypes() []string
 
 ```
 searchKey: updatecheck.externalServiceKinds
+tags: [private]
 ```
 
 ```Go
@@ -822,6 +889,7 @@ func externalServiceKinds(ctx context.Context) (kinds []string, err error)
 
 ```
 searchKey: updatecheck.check
+tags: [private]
 ```
 
 ```Go
@@ -834,7 +902,6 @@ check performs an update check and updates the global state.
 
 ```
 searchKey: updatecheck.Start
-tags: [exported]
 ```
 
 ```Go
@@ -847,7 +914,6 @@ Start starts checking for software updates periodically.
 
 ```
 searchKey: updatecheck.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -860,6 +926,7 @@ Handler is an HTTP handler that responds with information about software updates
 
 ```
 searchKey: updatecheck.canUpdate
+tags: [private]
 ```
 
 ```Go
@@ -872,6 +939,7 @@ canUpdate returns true if the latestReleaseBuild is newer than the clientVersion
 
 ```
 searchKey: updatecheck.canUpdateVersion
+tags: [private]
 ```
 
 ```Go
@@ -884,6 +952,7 @@ canUpdateVersion returns true if the latest released build is newer than the cli
 
 ```
 searchKey: updatecheck.canUpdateDate
+tags: [private]
 ```
 
 ```Go
@@ -896,6 +965,7 @@ canUpdateDate returns true if clientVersionString contains a date more than 40 d
 
 ```
 searchKey: updatecheck.toInt
+tags: [private]
 ```
 
 ```Go
@@ -906,6 +976,7 @@ func toInt(val string) int32
 
 ```
 searchKey: updatecheck.toBool
+tags: [private]
 ```
 
 ```Go
@@ -916,6 +987,7 @@ func toBool(val string) bool
 
 ```
 searchKey: updatecheck.toRawMessage
+tags: [private]
 ```
 
 ```Go
@@ -926,6 +998,7 @@ func toRawMessage(val string) json.RawMessage
 
 ```
 searchKey: updatecheck.logPing
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +1009,7 @@ func logPing(r *http.Request, pr *pingRequest, hasUpdate bool)
 
 ```
 searchKey: updatecheck.marshalPing
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +1020,7 @@ func marshalPing(pr *pingRequest, hasUpdate bool, clientAddr string, now time.Ti
 
 ```
 searchKey: updatecheck.reserializeCodeIntelUsage
+tags: [private]
 ```
 
 ```Go
@@ -958,6 +1033,7 @@ reserializeCodeIntelUsage returns the given data in the shape of the current cod
 
 ```
 searchKey: updatecheck.reserializeNewCodeIntelUsage
+tags: [private]
 ```
 
 ```Go
@@ -968,6 +1044,7 @@ func reserializeNewCodeIntelUsage(payload json.RawMessage) (json.RawMessage, err
 
 ```
 searchKey: updatecheck.reserializeOldCodeIntelUsage
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1055,7 @@ func reserializeOldCodeIntelUsage(payload json.RawMessage) (json.RawMessage, err
 
 ```
 searchKey: updatecheck.reserializeSearchUsage
+tags: [private]
 ```
 
 ```Go
@@ -990,6 +1068,7 @@ reserializeSearchUsage will reserialize a code intel usage statistics struct wit
 
 ```
 searchKey: updatecheck.TestParseRedisInfo
+tags: [private]
 ```
 
 ```Go
@@ -1000,6 +1079,7 @@ func TestParseRedisInfo(t *testing.T)
 
 ```
 searchKey: updatecheck.TestLatestDockerVersionPushed
+tags: [private]
 ```
 
 ```Go
@@ -1010,6 +1090,7 @@ func TestLatestDockerVersionPushed(t *testing.T)
 
 ```
 searchKey: updatecheck.TestLatestKubernetesVersionPushed
+tags: [private]
 ```
 
 ```Go
@@ -1020,6 +1101,7 @@ func TestLatestKubernetesVersionPushed(t *testing.T)
 
 ```
 searchKey: updatecheck.TestLatestDockerComposeOrPureDockerVersionPushed
+tags: [private]
 ```
 
 ```Go
@@ -1030,6 +1112,7 @@ func TestLatestDockerComposeOrPureDockerVersionPushed(t *testing.T)
 
 ```
 searchKey: updatecheck.TestCanUpdate
+tags: [private]
 ```
 
 ```Go
@@ -1040,6 +1123,7 @@ func TestCanUpdate(t *testing.T)
 
 ```
 searchKey: updatecheck.TestSerializeBasic
+tags: [private]
 ```
 
 ```Go
@@ -1050,6 +1134,7 @@ func TestSerializeBasic(t *testing.T)
 
 ```
 searchKey: updatecheck.TestSerializeFromQuery
+tags: [private]
 ```
 
 ```Go
@@ -1060,6 +1145,7 @@ func TestSerializeFromQuery(t *testing.T)
 
 ```
 searchKey: updatecheck.TestSerializeAutomationUsage
+tags: [private]
 ```
 
 ```Go
@@ -1070,6 +1156,7 @@ func TestSerializeAutomationUsage(t *testing.T)
 
 ```
 searchKey: updatecheck.TestSerializeCodeIntelUsage
+tags: [private]
 ```
 
 ```Go
@@ -1080,6 +1167,7 @@ func TestSerializeCodeIntelUsage(t *testing.T)
 
 ```
 searchKey: updatecheck.TestSerializeOldCodeIntelUsage
+tags: [private]
 ```
 
 ```Go
@@ -1090,6 +1178,7 @@ func TestSerializeOldCodeIntelUsage(t *testing.T)
 
 ```
 searchKey: updatecheck.compareJSON
+tags: [private]
 ```
 
 ```Go

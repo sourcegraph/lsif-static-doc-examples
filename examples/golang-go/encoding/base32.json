@@ -4,9 +4,7 @@
     "identifier": "base32",
     "newPage": true,
     "searchKey": "encoding/base32",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "StdPadding",
                 "newPage": false,
                 "searchKey": "base32.StdPadding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "NoPadding",
                 "newPage": false,
                 "searchKey": "base32.NoPadding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,7 +80,9 @@
                 "identifier": "encodeStd",
                 "newPage": false,
                 "searchKey": "base32.encodeStd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -108,7 +102,9 @@
                 "identifier": "encodeHex",
                 "newPage": false,
                 "searchKey": "base32.encodeHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -131,9 +127,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -151,9 +145,7 @@
                 "identifier": "StdEncoding",
                 "newPage": false,
                 "searchKey": "base32.StdEncoding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -173,9 +165,7 @@
                 "identifier": "HexEncoding",
                 "newPage": false,
                 "searchKey": "base32.HexEncoding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -195,7 +185,9 @@
                 "identifier": "pairs",
                 "newPage": false,
                 "searchKey": "base32.pairs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -215,7 +207,9 @@
                 "identifier": "bigtest",
                 "newPage": false,
                 "searchKey": "base32.bigtest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -238,9 +232,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -258,9 +250,7 @@
                 "identifier": "Encoding",
                 "newPage": false,
                 "searchKey": "base32.Encoding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -278,9 +268,7 @@
                       "identifier": "NewEncoding",
                       "newPage": false,
                       "searchKey": "base32.NewEncoding",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -300,9 +288,7 @@
                       "identifier": "Encoding.WithPadding",
                       "newPage": false,
                       "searchKey": "base32.Encoding.WithPadding",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -322,9 +308,7 @@
                       "identifier": "Encoding.Encode",
                       "newPage": false,
                       "searchKey": "base32.Encoding.Encode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -344,9 +328,7 @@
                       "identifier": "Encoding.EncodeToString",
                       "newPage": false,
                       "searchKey": "base32.Encoding.EncodeToString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -366,9 +348,7 @@
                       "identifier": "Encoding.EncodedLen",
                       "newPage": false,
                       "searchKey": "base32.Encoding.EncodedLen",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -388,7 +368,9 @@
                       "identifier": "Encoding.decode",
                       "newPage": false,
                       "searchKey": "base32.Encoding.decode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -408,9 +390,7 @@
                       "identifier": "Encoding.Decode",
                       "newPage": false,
                       "searchKey": "base32.Encoding.Decode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -430,9 +410,7 @@
                       "identifier": "Encoding.DecodeString",
                       "newPage": false,
                       "searchKey": "base32.Encoding.DecodeString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -452,9 +430,7 @@
                       "identifier": "Encoding.DecodedLen",
                       "newPage": false,
                       "searchKey": "base32.Encoding.DecodedLen",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -477,7 +453,9 @@
                 "identifier": "encoder",
                 "newPage": false,
                 "searchKey": "base32.encoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -495,7 +473,9 @@
                       "identifier": "encoder.Write",
                       "newPage": false,
                       "searchKey": "base32.encoder.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -515,7 +495,9 @@
                       "identifier": "encoder.Close",
                       "newPage": false,
                       "searchKey": "base32.encoder.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -538,9 +520,7 @@
                 "identifier": "CorruptInputError",
                 "newPage": false,
                 "searchKey": "base32.CorruptInputError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -558,9 +538,7 @@
                       "identifier": "CorruptInputError.Error",
                       "newPage": false,
                       "searchKey": "base32.CorruptInputError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -583,7 +561,9 @@
                 "identifier": "decoder",
                 "newPage": false,
                 "searchKey": "base32.decoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -601,7 +581,9 @@
                       "identifier": "decoder.Read",
                       "newPage": false,
                       "searchKey": "base32.decoder.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -624,7 +606,9 @@
                 "identifier": "newlineFilteringReader",
                 "newPage": false,
                 "searchKey": "base32.newlineFilteringReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -642,7 +626,9 @@
                       "identifier": "newlineFilteringReader.Read",
                       "newPage": false,
                       "searchKey": "base32.newlineFilteringReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -665,7 +651,9 @@
                 "identifier": "testpair",
                 "newPage": false,
                 "searchKey": "base32.testpair",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -685,7 +673,9 @@
                 "identifier": "badReader",
                 "newPage": false,
                 "searchKey": "base32.badReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -703,7 +693,9 @@
                       "identifier": "badReader.Read",
                       "newPage": false,
                       "searchKey": "base32.badReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -729,9 +721,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -749,9 +739,7 @@
                 "identifier": "NewEncoder",
                 "newPage": false,
                 "searchKey": "base32.NewEncoder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -771,7 +759,9 @@
                 "identifier": "readEncodedData",
                 "newPage": false,
                 "searchKey": "base32.readEncodedData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -791,7 +781,9 @@
                 "identifier": "stripNewlines",
                 "newPage": false,
                 "searchKey": "base32.stripNewlines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -811,9 +803,7 @@
                 "identifier": "NewDecoder",
                 "newPage": false,
                 "searchKey": "base32.NewDecoder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -833,7 +823,9 @@
                 "identifier": "testEqual",
                 "newPage": false,
                 "searchKey": "base32.testEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -853,7 +845,9 @@
                 "identifier": "TestEncode",
                 "newPage": false,
                 "searchKey": "base32.TestEncode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -873,7 +867,9 @@
                 "identifier": "TestEncoder",
                 "newPage": false,
                 "searchKey": "base32.TestEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -893,7 +889,9 @@
                 "identifier": "TestEncoderBuffering",
                 "newPage": false,
                 "searchKey": "base32.TestEncoderBuffering",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -913,7 +911,9 @@
                 "identifier": "TestDecode",
                 "newPage": false,
                 "searchKey": "base32.TestDecode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -933,7 +933,9 @@
                 "identifier": "TestDecoder",
                 "newPage": false,
                 "searchKey": "base32.TestDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -953,7 +955,9 @@
                 "identifier": "TestIssue20044",
                 "newPage": false,
                 "searchKey": "base32.TestIssue20044",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -973,7 +977,9 @@
                 "identifier": "TestDecoderError",
                 "newPage": false,
                 "searchKey": "base32.TestDecoderError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -993,7 +999,9 @@
                 "identifier": "TestReaderEOF",
                 "newPage": false,
                 "searchKey": "base32.TestReaderEOF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1013,7 +1021,9 @@
                 "identifier": "TestDecoderBuffering",
                 "newPage": false,
                 "searchKey": "base32.TestDecoderBuffering",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1033,7 +1043,9 @@
                 "identifier": "TestDecodeCorrupt",
                 "newPage": false,
                 "searchKey": "base32.TestDecodeCorrupt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1053,7 +1065,9 @@
                 "identifier": "TestBig",
                 "newPage": false,
                 "searchKey": "base32.TestBig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1073,7 +1087,9 @@
                 "identifier": "testStringEncoding",
                 "newPage": false,
                 "searchKey": "base32.testStringEncoding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1093,7 +1109,9 @@
                 "identifier": "TestNewLineCharacters",
                 "newPage": false,
                 "searchKey": "base32.TestNewLineCharacters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1113,7 +1131,9 @@
                 "identifier": "TestDecoderIssue4779",
                 "newPage": false,
                 "searchKey": "base32.TestDecoderIssue4779",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1133,7 +1153,9 @@
                 "identifier": "BenchmarkEncode",
                 "newPage": false,
                 "searchKey": "base32.BenchmarkEncode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1153,7 +1175,9 @@
                 "identifier": "BenchmarkEncodeToString",
                 "newPage": false,
                 "searchKey": "base32.BenchmarkEncodeToString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1173,7 +1197,9 @@
                 "identifier": "BenchmarkDecode",
                 "newPage": false,
                 "searchKey": "base32.BenchmarkDecode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1193,7 +1219,9 @@
                 "identifier": "BenchmarkDecodeString",
                 "newPage": false,
                 "searchKey": "base32.BenchmarkDecodeString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1213,7 +1241,9 @@
                 "identifier": "TestWithCustomPadding",
                 "newPage": false,
                 "searchKey": "base32.TestWithCustomPadding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1233,7 +1263,9 @@
                 "identifier": "TestWithoutPadding",
                 "newPage": false,
                 "searchKey": "base32.TestWithoutPadding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1253,7 +1285,9 @@
                 "identifier": "TestDecodeWithPadding",
                 "newPage": false,
                 "searchKey": "base32.TestDecodeWithPadding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1273,7 +1307,9 @@
                 "identifier": "TestDecodeWithWrongPadding",
                 "newPage": false,
                 "searchKey": "base32.TestDecodeWithWrongPadding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1293,7 +1329,9 @@
                 "identifier": "TestBufferedDecodingSameError",
                 "newPage": false,
                 "searchKey": "base32.TestBufferedDecodingSameError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1313,7 +1351,9 @@
                 "identifier": "TestEncodedDecodedLen",
                 "newPage": false,
                 "searchKey": "base32.TestEncodedDecodedLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1333,7 +1373,9 @@
                 "identifier": "TestWithoutPaddingClose",
                 "newPage": false,
                 "searchKey": "base32.TestWithoutPaddingClose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1353,7 +1395,9 @@
                 "identifier": "TestDecodeReadAll",
                 "newPage": false,
                 "searchKey": "base32.TestDecodeReadAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1373,7 +1417,9 @@
                 "identifier": "TestDecodeSmallBuffer",
                 "newPage": false,
                 "searchKey": "base32.TestDecodeSmallBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

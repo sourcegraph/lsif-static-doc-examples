@@ -78,15 +78,10 @@ Package base64 implements base64 encoding as specified by RFC 4648.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="StdPadding" href="#StdPadding">const StdPadding</a>
 
 ```
 searchKey: base64.StdPadding
-tags: [exported]
 ```
 
 ```Go
@@ -98,7 +93,6 @@ const StdPadding rune = '=' // Standard padding character
 
 ```
 searchKey: base64.NoPadding
-tags: [exported]
 ```
 
 ```Go
@@ -110,6 +104,7 @@ const NoPadding rune = -1 // No padding
 
 ```
 searchKey: base64.encodeStd
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +115,7 @@ const encodeStd = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
 
 ```
 searchKey: base64.encodeURL
+tags: [private]
 ```
 
 ```Go
@@ -128,15 +124,10 @@ const encodeURL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="StdEncoding" href="#StdEncoding">var StdEncoding</a>
 
 ```
 searchKey: base64.StdEncoding
-tags: [exported]
 ```
 
 ```Go
@@ -149,7 +140,6 @@ StdEncoding is the standard base64 encoding, as defined in RFC 4648.
 
 ```
 searchKey: base64.URLEncoding
-tags: [exported]
 ```
 
 ```Go
@@ -162,7 +152,6 @@ URLEncoding is the alternate base64 encoding defined in RFC 4648. It is typicall
 
 ```
 searchKey: base64.RawStdEncoding
-tags: [exported]
 ```
 
 ```Go
@@ -175,7 +164,6 @@ RawStdEncoding is the standard raw, unpadded base64 encoding, as defined in RFC 
 
 ```
 searchKey: base64.RawURLEncoding
-tags: [exported]
 ```
 
 ```Go
@@ -188,6 +176,7 @@ RawURLEncoding is the unpadded alternate base64 encoding defined in RFC 4648. It
 
 ```
 searchKey: base64.pairs
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +187,7 @@ var pairs = ...
 
 ```
 searchKey: base64.funnyEncoding
+tags: [private]
 ```
 
 ```Go
@@ -210,6 +200,7 @@ A nonstandard encoding with a funny padding character, for testing
 
 ```
 searchKey: base64.encodingTests
+tags: [private]
 ```
 
 ```Go
@@ -220,6 +211,7 @@ var encodingTests = ...
 
 ```
 searchKey: base64.bigtest
+tags: [private]
 ```
 
 ```Go
@@ -228,15 +220,10 @@ var bigtest = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Encoding" href="#Encoding">type Encoding struct</a>
 
 ```
 searchKey: base64.Encoding
-tags: [exported]
 ```
 
 ```Go
@@ -254,7 +241,6 @@ An Encoding is a radix 64 encoding/decoding scheme, defined by a 64-character al
 
 ```
 searchKey: base64.NewEncoding
-tags: [exported]
 ```
 
 ```Go
@@ -267,7 +253,6 @@ NewEncoding returns a new padded Encoding defined by the given alphabet, which m
 
 ```
 searchKey: base64.Encoding.WithPadding
-tags: [exported]
 ```
 
 ```Go
@@ -280,7 +265,6 @@ WithPadding creates a new encoding identical to enc except with a specified padd
 
 ```
 searchKey: base64.Encoding.Strict
-tags: [exported]
 ```
 
 ```Go
@@ -295,7 +279,6 @@ Note that the input is still malleable, as new line characters (CR and LF) are s
 
 ```
 searchKey: base64.Encoding.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -310,7 +293,6 @@ The encoding pads the output to a multiple of 4 bytes, so Encode is not appropri
 
 ```
 searchKey: base64.Encoding.EncodeToString
-tags: [exported]
 ```
 
 ```Go
@@ -323,7 +305,6 @@ EncodeToString returns the base64 encoding of src.
 
 ```
 searchKey: base64.Encoding.EncodedLen
-tags: [exported]
 ```
 
 ```Go
@@ -336,6 +317,7 @@ EncodedLen returns the length in bytes of the base64 encoding of an input buffer
 
 ```
 searchKey: base64.Encoding.decodeQuantum
+tags: [private]
 ```
 
 ```Go
@@ -348,7 +330,6 @@ decodeQuantum decodes up to 4 base64 bytes. The received parameters are the dest
 
 ```
 searchKey: base64.Encoding.DecodeString
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +342,6 @@ DecodeString returns the bytes represented by the base64 string s.
 
 ```
 searchKey: base64.Encoding.Decode
-tags: [exported]
 ```
 
 ```Go
@@ -374,7 +354,6 @@ Decode decodes src using the encoding enc. It writes at most DecodedLen(len(src)
 
 ```
 searchKey: base64.Encoding.DecodedLen
-tags: [exported]
 ```
 
 ```Go
@@ -387,6 +366,7 @@ DecodedLen returns the maximum length in bytes of the decoded data corresponding
 
 ```
 searchKey: base64.encoder
+tags: [private]
 ```
 
 ```Go
@@ -404,6 +384,7 @@ type encoder struct {
 
 ```
 searchKey: base64.encoder.Write
+tags: [private]
 ```
 
 ```Go
@@ -414,6 +395,7 @@ func (e *encoder) Write(p []byte) (n int, err error)
 
 ```
 searchKey: base64.encoder.Close
+tags: [private]
 ```
 
 ```Go
@@ -426,7 +408,6 @@ Close flushes any pending output from the encoder. It is an error to call Write 
 
 ```
 searchKey: base64.CorruptInputError
-tags: [exported]
 ```
 
 ```Go
@@ -437,7 +418,6 @@ type CorruptInputError int64
 
 ```
 searchKey: base64.CorruptInputError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -448,6 +428,7 @@ func (e CorruptInputError) Error() string
 
 ```
 searchKey: base64.decoder
+tags: [private]
 ```
 
 ```Go
@@ -467,6 +448,7 @@ type decoder struct {
 
 ```
 searchKey: base64.decoder.Read
+tags: [private]
 ```
 
 ```Go
@@ -477,6 +459,7 @@ func (d *decoder) Read(p []byte) (n int, err error)
 
 ```
 searchKey: base64.newlineFilteringReader
+tags: [private]
 ```
 
 ```Go
@@ -489,6 +472,7 @@ type newlineFilteringReader struct {
 
 ```
 searchKey: base64.newlineFilteringReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -499,6 +483,7 @@ func (r *newlineFilteringReader) Read(p []byte) (int, error)
 
 ```
 searchKey: base64.testpair
+tags: [private]
 ```
 
 ```Go
@@ -511,6 +496,7 @@ type testpair struct {
 
 ```
 searchKey: base64.encodingTest
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +510,7 @@ type encodingTest struct {
 
 ```
 searchKey: base64.nextRead
+tags: [private]
 ```
 
 ```Go
@@ -537,6 +524,7 @@ type nextRead struct {
 
 ```
 searchKey: base64.faultInjectReader
+tags: [private]
 ```
 
 ```Go
@@ -552,6 +540,7 @@ faultInjectReader returns data from source, rate-limited and with the errors as 
 
 ```
 searchKey: base64.faultInjectReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -560,15 +549,10 @@ func (r *faultInjectReader) Read(p []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NewEncoder" href="#NewEncoder">func NewEncoder(enc *Encoding, w io.Writer) io.WriteCloser</a>
 
 ```
 searchKey: base64.NewEncoder
-tags: [exported]
 ```
 
 ```Go
@@ -581,6 +565,7 @@ NewEncoder returns a new base64 stream encoder. Data written to the returned wri
 
 ```
 searchKey: base64.assemble32
+tags: [private]
 ```
 
 ```Go
@@ -593,6 +578,7 @@ assemble32 assembles 4 base64 digits into 3 bytes. Each digit comes from the dec
 
 ```
 searchKey: base64.assemble64
+tags: [private]
 ```
 
 ```Go
@@ -605,7 +591,6 @@ assemble64 assembles 8 base64 digits into 6 bytes. Each digit comes from the dec
 
 ```
 searchKey: base64.NewDecoder
-tags: [exported]
 ```
 
 ```Go
@@ -618,6 +603,7 @@ NewDecoder constructs a new base64 stream decoder.
 
 ```
 searchKey: base64.stdRef
+tags: [private]
 ```
 
 ```Go
@@ -630,6 +616,7 @@ Do nothing to a reference base64 string (leave in standard format)
 
 ```
 searchKey: base64.urlRef
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +629,7 @@ Convert a reference string to URL-encoding
 
 ```
 searchKey: base64.rawRef
+tags: [private]
 ```
 
 ```Go
@@ -654,6 +642,7 @@ Convert a reference string to raw, unpadded format
 
 ```
 searchKey: base64.rawURLRef
+tags: [private]
 ```
 
 ```Go
@@ -666,6 +655,7 @@ Both URL and unpadding conversions
 
 ```
 searchKey: base64.funnyRef
+tags: [private]
 ```
 
 ```Go
@@ -676,6 +666,7 @@ func funnyRef(ref string) string
 
 ```
 searchKey: base64.testEqual
+tags: [private]
 ```
 
 ```Go
@@ -686,6 +677,7 @@ func testEqual(t *testing.T, msg string, args ...interface{}) bool
 
 ```
 searchKey: base64.TestEncode
+tags: [private]
 ```
 
 ```Go
@@ -696,6 +688,7 @@ func TestEncode(t *testing.T)
 
 ```
 searchKey: base64.TestEncoder
+tags: [private]
 ```
 
 ```Go
@@ -706,6 +699,7 @@ func TestEncoder(t *testing.T)
 
 ```
 searchKey: base64.TestEncoderBuffering
+tags: [private]
 ```
 
 ```Go
@@ -716,6 +710,7 @@ func TestEncoderBuffering(t *testing.T)
 
 ```
 searchKey: base64.TestDecode
+tags: [private]
 ```
 
 ```Go
@@ -726,6 +721,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: base64.TestDecoder
+tags: [private]
 ```
 
 ```Go
@@ -736,6 +732,7 @@ func TestDecoder(t *testing.T)
 
 ```
 searchKey: base64.TestDecoderBuffering
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +743,7 @@ func TestDecoderBuffering(t *testing.T)
 
 ```
 searchKey: base64.TestDecodeCorrupt
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +754,7 @@ func TestDecodeCorrupt(t *testing.T)
 
 ```
 searchKey: base64.TestDecodeBounds
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +765,7 @@ func TestDecodeBounds(t *testing.T)
 
 ```
 searchKey: base64.TestEncodedLen
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +776,7 @@ func TestEncodedLen(t *testing.T)
 
 ```
 searchKey: base64.TestDecodedLen
+tags: [private]
 ```
 
 ```Go
@@ -786,6 +787,7 @@ func TestDecodedLen(t *testing.T)
 
 ```
 searchKey: base64.TestBig
+tags: [private]
 ```
 
 ```Go
@@ -796,6 +798,7 @@ func TestBig(t *testing.T)
 
 ```
 searchKey: base64.TestNewLineCharacters
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +809,7 @@ func TestNewLineCharacters(t *testing.T)
 
 ```
 searchKey: base64.TestDecoderIssue3577
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +822,7 @@ tests that we don't ignore errors from our underlying reader
 
 ```
 searchKey: base64.TestDecoderIssue4779
+tags: [private]
 ```
 
 ```Go
@@ -828,6 +833,7 @@ func TestDecoderIssue4779(t *testing.T)
 
 ```
 searchKey: base64.TestDecoderIssue7733
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +844,7 @@ func TestDecoderIssue7733(t *testing.T)
 
 ```
 searchKey: base64.TestDecoderIssue15656
+tags: [private]
 ```
 
 ```Go
@@ -848,6 +855,7 @@ func TestDecoderIssue15656(t *testing.T)
 
 ```
 searchKey: base64.BenchmarkEncodeToString
+tags: [private]
 ```
 
 ```Go
@@ -858,6 +866,7 @@ func BenchmarkEncodeToString(b *testing.B)
 
 ```
 searchKey: base64.BenchmarkDecodeString
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +877,7 @@ func BenchmarkDecodeString(b *testing.B)
 
 ```
 searchKey: base64.TestDecoderRaw
+tags: [private]
 ```
 
 ```Go

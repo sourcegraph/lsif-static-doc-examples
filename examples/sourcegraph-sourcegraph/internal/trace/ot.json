@@ -4,7 +4,9 @@
     "identifier": "ot",
     "newPage": true,
     "searchKey": "internal/trace/ot",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "TraceNone",
                 "newPage": false,
                 "searchKey": "ot.TraceNone",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "TraceSelective",
                 "newPage": false,
                 "searchKey": "ot.TraceSelective",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "TraceAll",
                 "newPage": false,
                 "searchKey": "ot.TraceAll",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +104,9 @@
                 "identifier": "traceHeader",
                 "newPage": false,
                 "searchKey": "ot.traceHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -126,7 +126,9 @@
                 "identifier": "traceQuery",
                 "newPage": false,
                 "searchKey": "ot.traceQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -146,7 +148,9 @@
                 "identifier": "shouldTraceKey",
                 "newPage": false,
                 "searchKey": "ot.shouldTraceKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -169,7 +173,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "trPolicy",
                 "newPage": false,
                 "searchKey": "ot.trPolicy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,7 +218,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -228,7 +238,9 @@
                 "identifier": "tracePolicy",
                 "newPage": false,
                 "searchKey": "ot.tracePolicy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -246,9 +258,7 @@
                       "identifier": "GetTracePolicy",
                       "newPage": false,
                       "searchKey": "ot.GetTracePolicy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -271,9 +281,7 @@
                 "identifier": "Transport",
                 "newPage": false,
                 "searchKey": "ot.Transport",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -291,9 +299,7 @@
                       "identifier": "Transport.RoundTrip",
                       "newPage": false,
                       "searchKey": "ot.Transport.RoundTrip",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -316,7 +322,9 @@
                 "identifier": "key",
                 "newPage": false,
                 "searchKey": "ot.key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -339,7 +347,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -357,9 +367,7 @@
                 "identifier": "SetTracePolicy",
                 "newPage": false,
                 "searchKey": "ot.SetTracePolicy",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -379,9 +387,7 @@
                 "identifier": "Middleware",
                 "newPage": false,
                 "searchKey": "ot.Middleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -401,9 +407,7 @@
                 "identifier": "MiddlewareWithTracer",
                 "newPage": false,
                 "searchKey": "ot.MiddlewareWithTracer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -423,7 +427,9 @@
                 "identifier": "requestWantsTracing",
                 "newPage": false,
                 "searchKey": "ot.requestWantsTracing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -443,9 +449,7 @@
                 "identifier": "ShouldTrace",
                 "newPage": false,
                 "searchKey": "ot.ShouldTrace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -465,9 +469,7 @@
                 "identifier": "WithShouldTrace",
                 "newPage": false,
                 "searchKey": "ot.WithShouldTrace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -487,9 +489,7 @@
                 "identifier": "GetTracer",
                 "newPage": false,
                 "searchKey": "ot.GetTracer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -509,7 +509,9 @@
                 "identifier": "getTracer",
                 "newPage": false,
                 "searchKey": "ot.getTracer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -529,9 +531,7 @@
                 "identifier": "StartSpanFromContext",
                 "newPage": false,
                 "searchKey": "ot.StartSpanFromContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -551,9 +551,7 @@
                 "identifier": "StartSpanFromContextWithTracer",
                 "newPage": false,
                 "searchKey": "ot.StartSpanFromContextWithTracer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

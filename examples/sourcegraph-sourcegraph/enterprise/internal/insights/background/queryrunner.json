@@ -4,7 +4,9 @@
     "identifier": "queryrunner",
     "newPage": true,
     "searchKey": "enterprise/internal/insights/background/queryrunner",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "cleanJobsFmtStr",
                 "newPage": false,
                 "searchKey": "queryrunner.cleanJobsFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "gqlSearchQuery",
                 "newPage": false,
                 "searchKey": "queryrunner.gqlSearchQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "enqueueJobFmtStr",
                 "newPage": false,
                 "searchKey": "queryrunner.enqueueJobFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "dequeueJobFmtStr",
                 "newPage": false,
                 "searchKey": "queryrunner.dequeueJobFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "queryJobsStatusFmtStr",
                 "newPage": false,
                 "searchKey": "queryrunner.queryJobsStatusFmtStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +157,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "jobsColumns",
                 "newPage": false,
                 "searchKey": "queryrunner.jobsColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +202,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -202,7 +222,9 @@
                 "identifier": "graphQLQuery",
                 "newPage": false,
                 "searchKey": "queryrunner.graphQLQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -222,7 +244,9 @@
                 "identifier": "gqlSearchVars",
                 "newPage": false,
                 "searchKey": "queryrunner.gqlSearchVars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -242,7 +266,9 @@
                 "identifier": "gqlSearchResponse",
                 "newPage": false,
                 "searchKey": "queryrunner.gqlSearchResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +286,9 @@
                       "identifier": "search",
                       "newPage": false,
                       "searchKey": "queryrunner.search",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -283,7 +311,9 @@
                 "identifier": "result",
                 "newPage": false,
                 "searchKey": "queryrunner.result",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,7 +331,9 @@
                       "identifier": "decodeResult",
                       "newPage": false,
                       "searchKey": "queryrunner.decodeResult",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -324,7 +356,9 @@
                 "identifier": "fileMatch",
                 "newPage": false,
                 "searchKey": "queryrunner.fileMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -342,7 +376,9 @@
                       "identifier": "fileMatch.matchCount",
                       "newPage": false,
                       "searchKey": "queryrunner.fileMatch.matchCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -362,7 +398,9 @@
                       "identifier": "fileMatch.repoID",
                       "newPage": false,
                       "searchKey": "queryrunner.fileMatch.repoID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -385,7 +423,9 @@
                 "identifier": "commitSearchResult",
                 "newPage": false,
                 "searchKey": "queryrunner.commitSearchResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -403,7 +443,9 @@
                       "identifier": "commitSearchResult.repoID",
                       "newPage": false,
                       "searchKey": "queryrunner.commitSearchResult.repoID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -423,7 +465,9 @@
                       "identifier": "commitSearchResult.matchCount",
                       "newPage": false,
                       "searchKey": "queryrunner.commitSearchResult.matchCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -446,7 +490,9 @@
                 "identifier": "repository",
                 "newPage": false,
                 "searchKey": "queryrunner.repository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -464,7 +510,9 @@
                       "identifier": "repository.repoID",
                       "newPage": false,
                       "searchKey": "queryrunner.repository.repoID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -484,7 +532,9 @@
                       "identifier": "repository.matchCount",
                       "newPage": false,
                       "searchKey": "queryrunner.repository.matchCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -507,7 +557,9 @@
                 "identifier": "workHandler",
                 "newPage": false,
                 "searchKey": "queryrunner.workHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -525,7 +577,9 @@
                       "identifier": "workHandler.Handle",
                       "newPage": false,
                       "searchKey": "queryrunner.workHandler.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -548,9 +602,7 @@
                 "identifier": "JobsStatus",
                 "newPage": false,
                 "searchKey": "queryrunner.JobsStatus",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -568,9 +620,7 @@
                       "identifier": "QueryJobsStatus",
                       "newPage": false,
                       "searchKey": "queryrunner.QueryJobsStatus",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -593,9 +643,7 @@
                 "identifier": "Job",
                 "newPage": false,
                 "searchKey": "queryrunner.Job",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -613,7 +661,9 @@
                       "identifier": "dequeueJob",
                       "newPage": false,
                       "searchKey": "queryrunner.dequeueJob",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -633,9 +683,7 @@
                       "identifier": "Job.RecordID",
                       "newPage": false,
                       "searchKey": "queryrunner.Job.RecordID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -661,7 +709,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -679,9 +729,7 @@
                 "identifier": "NewCleaner",
                 "newPage": false,
                 "searchKey": "queryrunner.NewCleaner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -701,7 +749,9 @@
                 "identifier": "cleanJobs",
                 "newPage": false,
                 "searchKey": "queryrunner.cleanJobs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -721,7 +771,9 @@
                 "identifier": "gqlURL",
                 "newPage": false,
                 "searchKey": "queryrunner.gqlURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -741,9 +793,7 @@
                 "identifier": "NewWorker",
                 "newPage": false,
                 "searchKey": "queryrunner.NewWorker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -763,7 +813,9 @@
                 "identifier": "getRateLimit",
                 "newPage": false,
                 "searchKey": "queryrunner.getRateLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -783,9 +835,7 @@
                 "identifier": "NewResetter",
                 "newPage": false,
                 "searchKey": "queryrunner.NewResetter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -805,7 +855,9 @@
                 "identifier": "createDBWorkerStore",
                 "newPage": false,
                 "searchKey": "queryrunner.createDBWorkerStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -825,9 +877,7 @@
                 "identifier": "EnqueueJob",
                 "newPage": false,
                 "searchKey": "queryrunner.EnqueueJob",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -847,7 +897,9 @@
                 "identifier": "scanJobs",
                 "newPage": false,
                 "searchKey": "queryrunner.scanJobs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -867,7 +919,9 @@
                 "identifier": "doScanJobs",
                 "newPage": false,
                 "searchKey": "queryrunner.doScanJobs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -882,12 +936,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/background/queryrunner#init",
+              "pathID": "/enterprise/internal/insights/background/queryrunner#init.worker_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.worker_test.go",
                 "newPage": false,
                 "searchKey": "queryrunner.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -907,7 +963,9 @@
                 "identifier": "TestJobQueue",
                 "newPage": false,
                 "searchKey": "queryrunner.TestJobQueue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -150,10 +150,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="_Sawtooth" href="#_Sawtooth">const _Sawtooth</a>
 
 ```
 searchKey: sort_test._Sawtooth
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +169,7 @@ const _Sawtooth = iota
 
 ```
 searchKey: sort_test._Rand
+tags: [private]
 ```
 
 ```Go
@@ -174,6 +180,7 @@ const _Rand
 
 ```
 searchKey: sort_test._Stagger
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +191,7 @@ const _Stagger
 
 ```
 searchKey: sort_test._Plateau
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +202,7 @@ const _Plateau
 
 ```
 searchKey: sort_test._Shuffle
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +213,7 @@ const _Shuffle
 
 ```
 searchKey: sort_test._NDist
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +224,7 @@ const _NDist
 
 ```
 searchKey: sort_test._Copy
+tags: [private]
 ```
 
 ```Go
@@ -224,6 +235,7 @@ const _Copy = iota
 
 ```
 searchKey: sort_test._Reverse
+tags: [private]
 ```
 
 ```Go
@@ -234,6 +246,7 @@ const _Reverse
 
 ```
 searchKey: sort_test._ReverseFirstHalf
+tags: [private]
 ```
 
 ```Go
@@ -244,6 +257,7 @@ const _ReverseFirstHalf
 
 ```
 searchKey: sort_test._ReverseSecondHalf
+tags: [private]
 ```
 
 ```Go
@@ -254,6 +268,7 @@ const _ReverseSecondHalf
 
 ```
 searchKey: sort_test._Sorted
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +279,7 @@ const _Sorted
 
 ```
 searchKey: sort_test._Dither
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +290,7 @@ const _Dither
 
 ```
 searchKey: sort_test._NMode
+tags: [private]
 ```
 
 ```Go
@@ -282,10 +299,15 @@ const _NMode
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="planets" href="#planets">var planets</a>
 
 ```
 searchKey: sort_test.planets
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +318,7 @@ var planets = ...
 
 ```
 searchKey: sort_test.changes
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +329,7 @@ var changes = ...
 
 ```
 searchKey: sort_test.data
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +340,7 @@ var data = ...
 
 ```
 searchKey: sort_test.tests
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +351,7 @@ var tests = ...
 
 ```
 searchKey: sort_test.fdata
+tags: [private]
 ```
 
 ```Go
@@ -336,6 +362,7 @@ var fdata = []float64{0: -3.14, 1: 0, 2: 1, 3: 2, 4: 1000.7}
 
 ```
 searchKey: sort_test.sdata
+tags: [private]
 ```
 
 ```Go
@@ -346,6 +373,7 @@ var sdata = []string{0: "f", 1: "foo", 2: "foobar", 3: "x"}
 
 ```
 searchKey: sort_test.wrappertests
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +384,7 @@ var wrappertests = ...
 
 ```
 searchKey: sort_test.ints
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +395,7 @@ var ints = [...]int{74, 59, 238, -784, 9845, 959, 905, 0, 0, 42, 7586, -5467984,
 
 ```
 searchKey: sort_test.float64s
+tags: [private]
 ```
 
 ```Go
@@ -376,6 +406,7 @@ var float64s = ...
 
 ```
 searchKey: sort_test.strings
+tags: [private]
 ```
 
 ```Go
@@ -386,6 +417,7 @@ var strings = [...]string{"", "Hello", "foo", "bar", "foo", "f00", "%*&^*&^&", "
 
 ```
 searchKey: sort_test.countOpsSizes
+tags: [private]
 ```
 
 ```Go
@@ -394,10 +426,15 @@ var countOpsSizes = []int{1e2, 3e2, 1e3, 3e3, 1e4, 3e4, 1e5, 3e5, 1e6}
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Person" href="#Person">type Person struct</a>
 
 ```
 searchKey: sort_test.Person
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +448,7 @@ type Person struct {
 
 ```
 searchKey: sort_test.Person.String
+tags: [private]
 ```
 
 ```Go
@@ -421,6 +459,7 @@ func (p Person) String() string
 
 ```
 searchKey: sort_test.ByAge
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +472,7 @@ ByAge implements sort.Interface for []Person based on the Age field.
 
 ```
 searchKey: sort_test.ByAge.Len
+tags: [private]
 ```
 
 ```Go
@@ -443,6 +483,7 @@ func (a ByAge) Len() int
 
 ```
 searchKey: sort_test.ByAge.Swap
+tags: [private]
 ```
 
 ```Go
@@ -453,6 +494,7 @@ func (a ByAge) Swap(i, j int)
 
 ```
 searchKey: sort_test.ByAge.Less
+tags: [private]
 ```
 
 ```Go
@@ -463,6 +505,7 @@ func (a ByAge) Less(i, j int) bool
 
 ```
 searchKey: sort_test.earthMass
+tags: [private]
 ```
 
 ```Go
@@ -475,6 +518,7 @@ A couple of type definitions to make the units clear.
 
 ```
 searchKey: sort_test.au
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +529,7 @@ type au float64
 
 ```
 searchKey: sort_test.Planet
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +546,7 @@ A Planet defines the properties of a solar system object.
 
 ```
 searchKey: sort_test.By
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +559,7 @@ By is the type of a "less" function that defines the ordering of its Planet argu
 
 ```
 searchKey: sort_test.By.Sort
+tags: [private]
 ```
 
 ```Go
@@ -525,6 +572,7 @@ Sort is a method on the function type, By, that sorts the argument slice accordi
 
 ```
 searchKey: sort_test.planetSorter
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +588,7 @@ planetSorter joins a By function and a slice of Planets to be sorted.
 
 ```
 searchKey: sort_test.planetSorter.Len
+tags: [private]
 ```
 
 ```Go
@@ -552,6 +601,7 @@ Len is part of sort.Interface.
 
 ```
 searchKey: sort_test.planetSorter.Swap
+tags: [private]
 ```
 
 ```Go
@@ -564,6 +614,7 @@ Swap is part of sort.Interface.
 
 ```
 searchKey: sort_test.planetSorter.Less
+tags: [private]
 ```
 
 ```Go
@@ -576,6 +627,7 @@ Less is part of sort.Interface. It is implemented by calling the "by" closure in
 
 ```
 searchKey: sort_test.Change
+tags: [private]
 ```
 
 ```Go
@@ -592,6 +644,7 @@ A Change is a record of source code changes, recording user, language, and delta
 
 ```
 searchKey: sort_test.lessFunc
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +655,7 @@ type lessFunc func(p1, p2 *Change) bool
 
 ```
 searchKey: sort_test.multiSorter
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +671,7 @@ multiSorter implements the Sort interface, sorting the changes within.
 
 ```
 searchKey: sort_test.OrderedBy
+tags: [private]
 ```
 
 ```Go
@@ -629,6 +684,7 @@ OrderedBy returns a Sorter that sorts using the less functions, in order. Call i
 
 ```
 searchKey: sort_test.multiSorter.Sort
+tags: [private]
 ```
 
 ```Go
@@ -641,6 +697,7 @@ Sort sorts the argument slice according to the less functions passed to OrderedB
 
 ```
 searchKey: sort_test.multiSorter.Len
+tags: [private]
 ```
 
 ```Go
@@ -653,6 +710,7 @@ Len is part of sort.Interface.
 
 ```
 searchKey: sort_test.multiSorter.Swap
+tags: [private]
 ```
 
 ```Go
@@ -665,6 +723,7 @@ Swap is part of sort.Interface.
 
 ```
 searchKey: sort_test.multiSorter.Less
+tags: [private]
 ```
 
 ```Go
@@ -677,6 +736,7 @@ Less is part of sort.Interface. It is implemented by looping along the less func
 
 ```
 searchKey: sort_test.Grams
+tags: [private]
 ```
 
 ```Go
@@ -687,6 +747,7 @@ type Grams int
 
 ```
 searchKey: sort_test.Grams.String
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +758,7 @@ func (g Grams) String() string
 
 ```
 searchKey: sort_test.Organ
+tags: [private]
 ```
 
 ```Go
@@ -710,6 +772,7 @@ type Organ struct {
 
 ```
 searchKey: sort_test.Organs
+tags: [private]
 ```
 
 ```Go
@@ -720,6 +783,7 @@ type Organs []*Organ
 
 ```
 searchKey: sort_test.Organs.Len
+tags: [private]
 ```
 
 ```Go
@@ -730,6 +794,7 @@ func (s Organs) Len() int
 
 ```
 searchKey: sort_test.Organs.Swap
+tags: [private]
 ```
 
 ```Go
@@ -740,6 +805,7 @@ func (s Organs) Swap(i, j int)
 
 ```
 searchKey: sort_test.ByName
+tags: [private]
 ```
 
 ```Go
@@ -752,6 +818,7 @@ ByName implements sort.Interface by providing Less and using the Len and Swap me
 
 ```
 searchKey: sort_test.ByName.Less
+tags: [private]
 ```
 
 ```Go
@@ -762,6 +829,7 @@ func (s ByName) Less(i, j int) bool
 
 ```
 searchKey: sort_test.ByWeight
+tags: [private]
 ```
 
 ```Go
@@ -774,6 +842,7 @@ ByWeight implements sort.Interface by providing Less and using the Len and Swap 
 
 ```
 searchKey: sort_test.ByWeight.Less
+tags: [private]
 ```
 
 ```Go
@@ -784,6 +853,7 @@ func (s ByWeight) Less(i, j int) bool
 
 ```
 searchKey: sort_test.nonDeterministicTestingData
+tags: [private]
 ```
 
 ```Go
@@ -796,6 +866,7 @@ type nonDeterministicTestingData struct {
 
 ```
 searchKey: sort_test.nonDeterministicTestingData.Len
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +877,7 @@ func (t *nonDeterministicTestingData) Len() int
 
 ```
 searchKey: sort_test.nonDeterministicTestingData.Less
+tags: [private]
 ```
 
 ```Go
@@ -816,6 +888,7 @@ func (t *nonDeterministicTestingData) Less(i, j int) bool
 
 ```
 searchKey: sort_test.nonDeterministicTestingData.Swap
+tags: [private]
 ```
 
 ```Go
@@ -826,6 +899,7 @@ func (t *nonDeterministicTestingData) Swap(i, j int)
 
 ```
 searchKey: sort_test.testingData
+tags: [private]
 ```
 
 ```Go
@@ -842,6 +916,7 @@ type testingData struct {
 
 ```
 searchKey: sort_test.testingData.Len
+tags: [private]
 ```
 
 ```Go
@@ -852,6 +927,7 @@ func (d *testingData) Len() int
 
 ```
 searchKey: sort_test.testingData.Less
+tags: [private]
 ```
 
 ```Go
@@ -862,6 +938,7 @@ func (d *testingData) Less(i, j int) bool
 
 ```
 searchKey: sort_test.testingData.Swap
+tags: [private]
 ```
 
 ```Go
@@ -872,6 +949,7 @@ func (d *testingData) Swap(i, j int)
 
 ```
 searchKey: sort_test.adversaryTestingData
+tags: [private]
 ```
 
 ```Go
@@ -892,6 +970,7 @@ This is based on the "antiquicksort" implementation by M. Douglas McIlroy. See [
 
 ```
 searchKey: sort_test.newAdversaryTestingData
+tags: [private]
 ```
 
 ```Go
@@ -902,6 +981,7 @@ func newAdversaryTestingData(t *testing.T, size int, maxcmp int) *adversaryTesti
 
 ```
 searchKey: sort_test.adversaryTestingData.Len
+tags: [private]
 ```
 
 ```Go
@@ -912,6 +992,7 @@ func (d *adversaryTestingData) Len() int
 
 ```
 searchKey: sort_test.adversaryTestingData.Less
+tags: [private]
 ```
 
 ```Go
@@ -922,6 +1003,7 @@ func (d *adversaryTestingData) Less(i, j int) bool
 
 ```
 searchKey: sort_test.adversaryTestingData.Swap
+tags: [private]
 ```
 
 ```Go
@@ -932,6 +1014,7 @@ func (d *adversaryTestingData) Swap(i, j int)
 
 ```
 searchKey: sort_test.intPairs
+tags: [private]
 ```
 
 ```Go
@@ -944,6 +1027,7 @@ type intPairs []struct {
 
 ```
 searchKey: sort_test.intPairs.Len
+tags: [private]
 ```
 
 ```Go
@@ -956,6 +1040,7 @@ IntPairs compare on a only.
 
 ```
 searchKey: sort_test.intPairs.Less
+tags: [private]
 ```
 
 ```Go
@@ -966,6 +1051,7 @@ func (d intPairs) Less(i, j int) bool
 
 ```
 searchKey: sort_test.intPairs.Swap
+tags: [private]
 ```
 
 ```Go
@@ -976,6 +1062,7 @@ func (d intPairs) Swap(i, j int)
 
 ```
 searchKey: sort_test.intPairs.initB
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +1075,7 @@ Record initial order in B.
 
 ```
 searchKey: sort_test.intPairs.inOrder
+tags: [private]
 ```
 
 ```Go
@@ -998,10 +1086,15 @@ InOrder checks if a-equal elements were not reordered.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example" href="#Example">func Example()</a>
 
 ```
 searchKey: sort_test.Example
+tags: [private]
 ```
 
 ```Go
@@ -1012,6 +1105,7 @@ func Example()
 
 ```
 searchKey: sort_test.Example_sortKeys
+tags: [private]
 ```
 
 ```Go
@@ -1024,6 +1118,7 @@ ExampleSortKeys demonstrates a technique for sorting a struct type using program
 
 ```
 searchKey: sort_test.Example_sortMultiKeys
+tags: [private]
 ```
 
 ```Go
@@ -1036,6 +1131,7 @@ ExampleMultiKeys demonstrates a technique for sorting a struct type using differ
 
 ```
 searchKey: sort_test.ExampleSearch
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1144,7 @@ This example demonstrates searching a list sorted in ascending order.
 
 ```
 searchKey: sort_test.ExampleSearch_descendingOrder
+tags: [private]
 ```
 
 ```Go
@@ -1060,6 +1157,7 @@ This example demonstrates searching a list sorted in descending order. The appro
 
 ```
 searchKey: sort_test.ExampleSearchFloat64s
+tags: [private]
 ```
 
 ```Go
@@ -1072,6 +1170,7 @@ This example demonstrates searching for float64 in a list sorted in ascending or
 
 ```
 searchKey: sort_test.ExampleSearchInts
+tags: [private]
 ```
 
 ```Go
@@ -1084,6 +1183,7 @@ This example demonstrates searching for int in a list sorted in ascending order.
 
 ```
 searchKey: sort_test.ExampleInts
+tags: [private]
 ```
 
 ```Go
@@ -1094,6 +1194,7 @@ func ExampleInts()
 
 ```
 searchKey: sort_test.ExampleIntsAreSorted
+tags: [private]
 ```
 
 ```Go
@@ -1104,6 +1205,7 @@ func ExampleIntsAreSorted()
 
 ```
 searchKey: sort_test.ExampleFloat64s
+tags: [private]
 ```
 
 ```Go
@@ -1114,6 +1216,7 @@ func ExampleFloat64s()
 
 ```
 searchKey: sort_test.ExampleFloat64sAreSorted
+tags: [private]
 ```
 
 ```Go
@@ -1124,6 +1227,7 @@ func ExampleFloat64sAreSorted()
 
 ```
 searchKey: sort_test.ExampleReverse
+tags: [private]
 ```
 
 ```Go
@@ -1134,6 +1238,7 @@ func ExampleReverse()
 
 ```
 searchKey: sort_test.ExampleSlice
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1249,7 @@ func ExampleSlice()
 
 ```
 searchKey: sort_test.ExampleSliceStable
+tags: [private]
 ```
 
 ```Go
@@ -1154,6 +1260,7 @@ func ExampleSliceStable()
 
 ```
 searchKey: sort_test.ExampleStrings
+tags: [private]
 ```
 
 ```Go
@@ -1164,6 +1271,7 @@ func ExampleStrings()
 
 ```
 searchKey: sort_test.Example_sortWrapper
+tags: [private]
 ```
 
 ```Go
@@ -1174,6 +1282,7 @@ func Example_sortWrapper()
 
 ```
 searchKey: sort_test.printOrgans
+tags: [private]
 ```
 
 ```Go
@@ -1184,6 +1293,7 @@ func printOrgans(s []*Organ)
 
 ```
 searchKey: sort_test.f
+tags: [private]
 ```
 
 ```Go
@@ -1194,6 +1304,7 @@ func f(a []int, x int) func(int) bool
 
 ```
 searchKey: sort_test.TestSearch
+tags: [private]
 ```
 
 ```Go
@@ -1204,6 +1315,7 @@ func TestSearch(t *testing.T)
 
 ```
 searchKey: sort_test.log2
+tags: [private]
 ```
 
 ```Go
@@ -1216,6 +1328,7 @@ log2 computes the binary logarithm of x, rounded up to the next integer. (log2(0
 
 ```
 searchKey: sort_test.TestSearchEfficiency
+tags: [private]
 ```
 
 ```Go
@@ -1226,6 +1339,7 @@ func TestSearchEfficiency(t *testing.T)
 
 ```
 searchKey: sort_test.TestSearchWrappers
+tags: [private]
 ```
 
 ```Go
@@ -1236,6 +1350,7 @@ func TestSearchWrappers(t *testing.T)
 
 ```
 searchKey: sort_test.runSearchWrappers
+tags: [private]
 ```
 
 ```Go
@@ -1246,6 +1361,7 @@ func runSearchWrappers()
 
 ```
 searchKey: sort_test.TestSearchWrappersDontAlloc
+tags: [private]
 ```
 
 ```Go
@@ -1256,6 +1372,7 @@ func TestSearchWrappersDontAlloc(t *testing.T)
 
 ```
 searchKey: sort_test.BenchmarkSearchWrappers
+tags: [private]
 ```
 
 ```Go
@@ -1266,6 +1383,7 @@ func BenchmarkSearchWrappers(b *testing.B)
 
 ```
 searchKey: sort_test.TestSearchExhaustive
+tags: [private]
 ```
 
 ```Go
@@ -1278,6 +1396,7 @@ Abstract exhaustive test: all sizes up to 100, all possible return values. If th
 
 ```
 searchKey: sort_test.TestSortIntSlice
+tags: [private]
 ```
 
 ```Go
@@ -1288,6 +1407,7 @@ func TestSortIntSlice(t *testing.T)
 
 ```
 searchKey: sort_test.TestSortFloat64Slice
+tags: [private]
 ```
 
 ```Go
@@ -1298,6 +1418,7 @@ func TestSortFloat64Slice(t *testing.T)
 
 ```
 searchKey: sort_test.TestSortStringSlice
+tags: [private]
 ```
 
 ```Go
@@ -1308,6 +1429,7 @@ func TestSortStringSlice(t *testing.T)
 
 ```
 searchKey: sort_test.TestInts
+tags: [private]
 ```
 
 ```Go
@@ -1318,6 +1440,7 @@ func TestInts(t *testing.T)
 
 ```
 searchKey: sort_test.TestFloat64s
+tags: [private]
 ```
 
 ```Go
@@ -1328,6 +1451,7 @@ func TestFloat64s(t *testing.T)
 
 ```
 searchKey: sort_test.TestStrings
+tags: [private]
 ```
 
 ```Go
@@ -1338,6 +1462,7 @@ func TestStrings(t *testing.T)
 
 ```
 searchKey: sort_test.TestSlice
+tags: [private]
 ```
 
 ```Go
@@ -1348,6 +1473,7 @@ func TestSlice(t *testing.T)
 
 ```
 searchKey: sort_test.TestSortLarge_Random
+tags: [private]
 ```
 
 ```Go
@@ -1358,6 +1484,7 @@ func TestSortLarge_Random(t *testing.T)
 
 ```
 searchKey: sort_test.TestReverseSortIntSlice
+tags: [private]
 ```
 
 ```Go
@@ -1368,6 +1495,7 @@ func TestReverseSortIntSlice(t *testing.T)
 
 ```
 searchKey: sort_test.TestNonDeterministicComparison
+tags: [private]
 ```
 
 ```Go
@@ -1378,6 +1506,7 @@ func TestNonDeterministicComparison(t *testing.T)
 
 ```
 searchKey: sort_test.BenchmarkSortString1K
+tags: [private]
 ```
 
 ```Go
@@ -1388,6 +1517,7 @@ func BenchmarkSortString1K(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkSortString1K_Slice
+tags: [private]
 ```
 
 ```Go
@@ -1398,6 +1528,7 @@ func BenchmarkSortString1K_Slice(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkStableString1K
+tags: [private]
 ```
 
 ```Go
@@ -1408,6 +1539,7 @@ func BenchmarkStableString1K(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkSortInt1K
+tags: [private]
 ```
 
 ```Go
@@ -1418,6 +1550,7 @@ func BenchmarkSortInt1K(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkStableInt1K
+tags: [private]
 ```
 
 ```Go
@@ -1428,6 +1561,7 @@ func BenchmarkStableInt1K(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkStableInt1K_Slice
+tags: [private]
 ```
 
 ```Go
@@ -1438,6 +1572,7 @@ func BenchmarkStableInt1K_Slice(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkSortInt64K
+tags: [private]
 ```
 
 ```Go
@@ -1448,6 +1583,7 @@ func BenchmarkSortInt64K(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkSortInt64K_Slice
+tags: [private]
 ```
 
 ```Go
@@ -1458,6 +1594,7 @@ func BenchmarkSortInt64K_Slice(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkStableInt64K
+tags: [private]
 ```
 
 ```Go
@@ -1468,6 +1605,7 @@ func BenchmarkStableInt64K(b *testing.B)
 
 ```
 searchKey: sort_test.min
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1616,7 @@ func min(a, b int) int
 
 ```
 searchKey: sort_test.lg
+tags: [private]
 ```
 
 ```Go
@@ -1488,6 +1627,7 @@ func lg(n int) int
 
 ```
 searchKey: sort_test.testBentleyMcIlroy
+tags: [private]
 ```
 
 ```Go
@@ -1498,6 +1638,7 @@ func testBentleyMcIlroy(t *testing.T, sort func(Interface), maxswap func(int) in
 
 ```
 searchKey: sort_test.TestSortBM
+tags: [private]
 ```
 
 ```Go
@@ -1508,6 +1649,7 @@ func TestSortBM(t *testing.T)
 
 ```
 searchKey: sort_test.TestHeapsortBM
+tags: [private]
 ```
 
 ```Go
@@ -1518,6 +1660,7 @@ func TestHeapsortBM(t *testing.T)
 
 ```
 searchKey: sort_test.TestStableBM
+tags: [private]
 ```
 
 ```Go
@@ -1528,6 +1671,7 @@ func TestStableBM(t *testing.T)
 
 ```
 searchKey: sort_test.TestAdversary
+tags: [private]
 ```
 
 ```Go
@@ -1538,6 +1682,7 @@ func TestAdversary(t *testing.T)
 
 ```
 searchKey: sort_test.TestStableInts
+tags: [private]
 ```
 
 ```Go
@@ -1548,6 +1693,7 @@ func TestStableInts(t *testing.T)
 
 ```
 searchKey: sort_test.TestStability
+tags: [private]
 ```
 
 ```Go
@@ -1558,6 +1704,7 @@ func TestStability(t *testing.T)
 
 ```
 searchKey: sort_test.countOps
+tags: [private]
 ```
 
 ```Go
@@ -1568,6 +1715,7 @@ func countOps(t *testing.T, algo func(Interface), name string)
 
 ```
 searchKey: sort_test.TestCountStableOps
+tags: [private]
 ```
 
 ```Go
@@ -1578,6 +1726,7 @@ func TestCountStableOps(t *testing.T)
 
 ```
 searchKey: sort_test.TestCountSortOps
+tags: [private]
 ```
 
 ```Go
@@ -1588,6 +1737,7 @@ func TestCountSortOps(t *testing.T)
 
 ```
 searchKey: sort_test.bench
+tags: [private]
 ```
 
 ```Go
@@ -1598,6 +1748,7 @@ func bench(b *testing.B, size int, algo func(Interface), name string)
 
 ```
 searchKey: sort_test.BenchmarkSort1e2
+tags: [private]
 ```
 
 ```Go
@@ -1608,6 +1759,7 @@ func BenchmarkSort1e2(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkStable1e2
+tags: [private]
 ```
 
 ```Go
@@ -1618,6 +1770,7 @@ func BenchmarkStable1e2(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkSort1e4
+tags: [private]
 ```
 
 ```Go
@@ -1628,6 +1781,7 @@ func BenchmarkSort1e4(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkStable1e4
+tags: [private]
 ```
 
 ```Go
@@ -1638,6 +1792,7 @@ func BenchmarkStable1e4(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkSort1e6
+tags: [private]
 ```
 
 ```Go
@@ -1648,6 +1803,7 @@ func BenchmarkSort1e6(b *testing.B)
 
 ```
 searchKey: sort_test.BenchmarkStable1e6
+tags: [private]
 ```
 
 ```Go

@@ -16,10 +16,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="repoGetter" href="#repoGetter">type repoGetter interface</a>
 
 ```
 searchKey: webhookhandlers.repoGetter
+tags: [private]
 ```
 
 ```Go
@@ -32,6 +37,7 @@ type repoGetter interface {
 
 ```
 searchKey: webhookhandlers.memberGetter
+tags: [private]
 ```
 
 ```Go
@@ -44,6 +50,7 @@ type memberGetter interface {
 
 ```
 searchKey: webhookhandlers.membershipGetter
+tags: [private]
 ```
 
 ```Go
@@ -54,10 +61,15 @@ type membershipGetter interface {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="handleGitHubRepoAuthzEvent" href="#handleGitHubRepoAuthzEvent">func handleGitHubRepoAuthzEvent(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error</a>
 
 ```
 searchKey: webhookhandlers.handleGitHubRepoAuthzEvent
+tags: [private]
 ```
 
 ```Go
@@ -70,6 +82,7 @@ handleGithubRepoAuthzEvent handles any github event containing a repository fiel
 
 ```
 searchKey: webhookhandlers.scheduleRepoUpdate
+tags: [private]
 ```
 
 ```Go
@@ -82,6 +95,7 @@ scheduleRepoUpdate finds an internal repo from a github repo, and posts it to re
 
 ```
 searchKey: webhookhandlers.handleGitHubUserAuthzEvent
+tags: [private]
 ```
 
 ```Go
@@ -94,6 +108,7 @@ handleGitHubUserAuthzEvent handles a github webhook for the events described in 
 
 ```
 searchKey: webhookhandlers.scheduleUserUpdate
+tags: [private]
 ```
 
 ```Go
@@ -104,7 +119,6 @@ func scheduleUserUpdate(ctx context.Context, extSvc *types.ExternalService, gith
 
 ```
 searchKey: webhookhandlers.Init
-tags: [exported]
 ```
 
 ```Go

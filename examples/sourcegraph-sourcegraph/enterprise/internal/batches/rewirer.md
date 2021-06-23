@@ -21,11 +21,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ChangesetRewirer" href="#ChangesetRewirer">type ChangesetRewirer struct</a>
 
 ```
 searchKey: rewirer.ChangesetRewirer
-tags: [exported]
 ```
 
 ```Go
@@ -40,7 +43,6 @@ type ChangesetRewirer struct {
 
 ```
 searchKey: rewirer.New
-tags: [exported]
 ```
 
 ```Go
@@ -51,7 +53,6 @@ func New(mappings btypes.RewirerMappings, batchChangeID int64) *ChangesetRewirer
 
 ```
 searchKey: rewirer.ChangesetRewirer.Rewire
-tags: [exported]
 ```
 
 ```Go
@@ -66,6 +67,7 @@ It also updates the ChangesetIDs on the batch change.
 
 ```
 searchKey: rewirer.ChangesetRewirer.createChangesetForSpec
+tags: [private]
 ```
 
 ```Go
@@ -76,6 +78,7 @@ func (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes
 
 ```
 searchKey: rewirer.ChangesetRewirer.updateChangesetToNewSpec
+tags: [private]
 ```
 
 ```Go
@@ -86,6 +89,7 @@ func (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *b
 
 ```
 searchKey: rewirer.ChangesetRewirer.createTrackingChangeset
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +100,7 @@ func (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID 
 
 ```
 searchKey: rewirer.ChangesetRewirer.attachTrackingChangeset
+tags: [private]
 ```
 
 ```Go
@@ -106,6 +111,7 @@ func (r *ChangesetRewirer) attachTrackingChangeset(changeset *btypes.Changeset)
 
 ```
 searchKey: rewirer.ChangesetRewirer.closeChangeset
+tags: [private]
 ```
 
 ```Go
@@ -116,7 +122,6 @@ func (r *ChangesetRewirer) closeChangeset(changeset *btypes.Changeset)
 
 ```
 searchKey: rewirer.ErrRepoNotSupported
-tags: [exported]
 ```
 
 ```Go
@@ -132,7 +137,6 @@ ErrRepoNotSupported is thrown by the rewirer when it encounters a mapping target
 
 ```
 searchKey: rewirer.ErrRepoNotSupported.Error
-tags: [exported]
 ```
 
 ```Go
@@ -141,10 +145,15 @@ func (e ErrRepoNotSupported) Error() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="checkRepoSupported" href="#checkRepoSupported">func checkRepoSupported(repo *types.Repo) error</a>
 
 ```
 searchKey: rewirer.checkRepoSupported
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +166,7 @@ checkRepoSupported checks whether the given repository is supported by batch cha
 
 ```
 searchKey: rewirer.TestRewirer_Rewire
+tags: [private]
 ```
 
 ```Go
@@ -167,6 +177,7 @@ func TestRewirer_Rewire(t *testing.T)
 
 ```
 searchKey: rewirer.assertResetReconcilerState
+tags: [private]
 ```
 
 ```Go

@@ -10,11 +10,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AccountData" href="#AccountData">type AccountData struct</a>
 
 ```
 searchKey: perforce.AccountData
-tags: [exported]
 ```
 
 ```Go
@@ -30,7 +33,6 @@ AccountData stores information of a Perforce Server account.
 
 ```
 searchKey: perforce.GetExternalAccountData
-tags: [exported]
 ```
 
 ```Go
@@ -43,7 +45,6 @@ GetExternalAccountData extracts account data for the external account.
 
 ```
 searchKey: perforce.Depot
-tags: [exported]
 ```
 
 ```Go

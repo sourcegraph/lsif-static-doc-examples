@@ -19,11 +19,14 @@ Package router contains the route names for our app UI.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="RouteSignIn" href="#RouteSignIn">const RouteSignIn</a>
 
 ```
 searchKey: router.RouteSignIn
-tags: [exported]
 ```
 
 ```Go
@@ -36,7 +39,6 @@ These route names are used by other packages that can't import the ../ui package
 
 ```
 searchKey: router.RouteSignUp
-tags: [exported]
 ```
 
 ```Go
@@ -49,7 +51,6 @@ These route names are used by other packages that can't import the ../ui package
 
 ```
 searchKey: router.RoutePasswordReset
-tags: [exported]
 ```
 
 ```Go
@@ -62,7 +63,6 @@ These route names are used by other packages that can't import the ../ui package
 
 ```
 searchKey: router.RouteRaw
-tags: [exported]
 ```
 
 ```Go
@@ -75,7 +75,6 @@ These route names are used by other packages that can't import the ../ui package
 
 ```
 searchKey: router.RoutePingFromSelfHosted
-tags: [exported]
 ```
 
 ```Go
@@ -86,11 +85,14 @@ These route names are used by other packages that can't import the ../ui package
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Router" href="#Router">var Router</a>
 
 ```
 searchKey: router.Router
-tags: [exported]
 ```
 
 ```Go
@@ -103,11 +105,14 @@ It is used by packages that can't import the ../ui package without creating an i
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Extension" href="#Extension">func Extension(extensionID string) string</a>
 
 ```
 searchKey: router.Extension
-tags: [exported]
 ```
 
 ```Go
@@ -118,7 +123,6 @@ func Extension(extensionID string) string
 
 ```
 searchKey: router.RegistryPublisherExtensions
-tags: [exported]
 ```
 
 ```Go

@@ -4,9 +4,7 @@
     "identifier": "internal",
     "newPage": true,
     "searchKey": "net/http/internal",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "maxLineLength",
                 "newPage": false,
                 "searchKey": "internal.maxLineLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,9 +83,7 @@
                 "identifier": "ErrLineTooLong",
                 "newPage": false,
                 "searchKey": "internal.ErrLineTooLong",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -112,9 +106,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -132,7 +124,9 @@
                 "identifier": "chunkedReader",
                 "newPage": false,
                 "searchKey": "internal.chunkedReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -150,7 +144,9 @@
                       "identifier": "chunkedReader.beginChunk",
                       "newPage": false,
                       "searchKey": "internal.chunkedReader.beginChunk",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -170,7 +166,9 @@
                       "identifier": "chunkedReader.chunkHeaderAvailable",
                       "newPage": false,
                       "searchKey": "internal.chunkedReader.chunkHeaderAvailable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -190,7 +188,9 @@
                       "identifier": "chunkedReader.Read",
                       "newPage": false,
                       "searchKey": "internal.chunkedReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -213,7 +213,9 @@
                 "identifier": "chunkedWriter",
                 "newPage": false,
                 "searchKey": "internal.chunkedWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -231,7 +233,9 @@
                       "identifier": "chunkedWriter.Write",
                       "newPage": false,
                       "searchKey": "internal.chunkedWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -251,7 +255,9 @@
                       "identifier": "chunkedWriter.Close",
                       "newPage": false,
                       "searchKey": "internal.chunkedWriter.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -274,9 +280,7 @@
                 "identifier": "FlushAfterChunkWriter",
                 "newPage": false,
                 "searchKey": "internal.FlushAfterChunkWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -299,9 +303,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -319,9 +321,7 @@
                 "identifier": "NewChunkedReader",
                 "newPage": false,
                 "searchKey": "internal.NewChunkedReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -341,7 +341,9 @@
                 "identifier": "readChunkLine",
                 "newPage": false,
                 "searchKey": "internal.readChunkLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -361,7 +363,9 @@
                 "identifier": "trimTrailingWhitespace",
                 "newPage": false,
                 "searchKey": "internal.trimTrailingWhitespace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -381,7 +385,9 @@
                 "identifier": "isASCIISpace",
                 "newPage": false,
                 "searchKey": "internal.isASCIISpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -401,7 +407,9 @@
                 "identifier": "removeChunkExtension",
                 "newPage": false,
                 "searchKey": "internal.removeChunkExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -421,9 +429,7 @@
                 "identifier": "NewChunkedWriter",
                 "newPage": false,
                 "searchKey": "internal.NewChunkedWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -443,7 +449,9 @@
                 "identifier": "parseHexUint",
                 "newPage": false,
                 "searchKey": "internal.parseHexUint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -463,7 +471,9 @@
                 "identifier": "TestChunk",
                 "newPage": false,
                 "searchKey": "internal.TestChunk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -483,7 +493,9 @@
                 "identifier": "TestChunkReadMultiple",
                 "newPage": false,
                 "searchKey": "internal.TestChunkReadMultiple",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -503,7 +515,9 @@
                 "identifier": "TestChunkReaderAllocs",
                 "newPage": false,
                 "searchKey": "internal.TestChunkReaderAllocs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -523,7 +537,9 @@
                 "identifier": "TestParseHexUint",
                 "newPage": false,
                 "searchKey": "internal.TestParseHexUint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -543,7 +559,9 @@
                 "identifier": "TestChunkReadingIgnoresExtensions",
                 "newPage": false,
                 "searchKey": "internal.TestChunkReadingIgnoresExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -563,7 +581,9 @@
                 "identifier": "TestChunkReadPartial",
                 "newPage": false,
                 "searchKey": "internal.TestChunkReadPartial",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

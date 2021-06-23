@@ -128,14 +128,11 @@ Conn, a convenient packaging of Reader, Writer, and Pipeline for use with a sing
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="toLower" href="#toLower">const toLower</a>
 
 ```
 searchKey: textproto.toLower
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +143,7 @@ const toLower = 'a' - 'A'
 
 ```
 searchKey: textproto.wstateBegin
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +155,7 @@ const wstateBegin = iota // initial state; must be zero
 
 ```
 searchKey: textproto.wstateBeginLine
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +167,7 @@ const wstateBeginLine // beginning of line
 
 ```
 searchKey: textproto.wstateCR
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +179,7 @@ const wstateCR // wrote \r (possibly at end of line)
 
 ```
 searchKey: textproto.wstateData
+tags: [private]
 ```
 
 ```Go
@@ -188,14 +189,11 @@ const wstateData // writing data in middle of line
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="commonHeader" href="#commonHeader">var commonHeader</a>
 
 ```
 searchKey: textproto.commonHeader
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +206,7 @@ commonHeader interns common header strings.
 
 ```
 searchKey: textproto.commonHeaderOnce
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +217,7 @@ var commonHeaderOnce sync.Once
 
 ```
 searchKey: textproto.isTokenTable
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +230,7 @@ isTokenTable is a copy of net/http/lex.go's isTokenTable. See [https://httpwg.gi
 
 ```
 searchKey: textproto.crnl
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +241,7 @@ var crnl = []byte{'\r', '\n'}
 
 ```
 searchKey: textproto.dotcrnl
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +252,7 @@ var dotcrnl = []byte{'.', '\r', '\n'}
 
 ```
 searchKey: textproto.canonicalHeaderKeyTests
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +263,7 @@ var canonicalHeaderKeyTests = ...
 
 ```
 searchKey: textproto.readResponseTests
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +274,7 @@ var readResponseTests = ...
 
 ```
 searchKey: textproto.clientHeaders
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +285,7 @@ var clientHeaders = ...
 
 ```
 searchKey: textproto.serverHeaders
+tags: [private]
 ```
 
 ```Go
@@ -288,15 +294,10 @@ var serverHeaders = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="MIMEHeader" href="#MIMEHeader">type MIMEHeader map[string][]string</a>
 
 ```
 searchKey: textproto.MIMEHeader
-tags: [exported]
 ```
 
 ```Go
@@ -309,7 +310,6 @@ A MIMEHeader represents a MIME-style header mapping keys to sets of values.
 
 ```
 searchKey: textproto.MIMEHeader.Add
-tags: [exported]
 ```
 
 ```Go
@@ -322,7 +322,6 @@ Add adds the key, value pair to the header. It appends to any existing values as
 
 ```
 searchKey: textproto.MIMEHeader.Set
-tags: [exported]
 ```
 
 ```Go
@@ -335,7 +334,6 @@ Set sets the header entries associated with key to the single element value. It 
 
 ```
 searchKey: textproto.MIMEHeader.Get
-tags: [exported]
 ```
 
 ```Go
@@ -348,7 +346,6 @@ Get gets the first value associated with the given key. It is case insensitive; 
 
 ```
 searchKey: textproto.MIMEHeader.Values
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +358,6 @@ Values returns all values associated with the given key. It is case insensitive;
 
 ```
 searchKey: textproto.MIMEHeader.Del
-tags: [exported]
 ```
 
 ```Go
@@ -374,7 +370,6 @@ Del deletes the values associated with key.
 
 ```
 searchKey: textproto.Pipeline
-tags: [exported]
 ```
 
 ```Go
@@ -408,7 +403,6 @@ A pipelined server can use the same calls to ensure that responses computed in p
 
 ```
 searchKey: textproto.Pipeline.Next
-tags: [exported]
 ```
 
 ```Go
@@ -421,7 +415,6 @@ Next returns the next id for a request/response pair.
 
 ```
 searchKey: textproto.Pipeline.StartRequest
-tags: [exported]
 ```
 
 ```Go
@@ -434,7 +427,6 @@ StartRequest blocks until it is time to send (or, if this is a server, receive) 
 
 ```
 searchKey: textproto.Pipeline.EndRequest
-tags: [exported]
 ```
 
 ```Go
@@ -447,7 +439,6 @@ EndRequest notifies p that the request with the given id has been sent (or, if t
 
 ```
 searchKey: textproto.Pipeline.StartResponse
-tags: [exported]
 ```
 
 ```Go
@@ -460,7 +451,6 @@ StartResponse blocks until it is time to receive (or, if this is a server, send)
 
 ```
 searchKey: textproto.Pipeline.EndResponse
-tags: [exported]
 ```
 
 ```Go
@@ -473,6 +463,7 @@ EndResponse notifies p that the response with the given id has been received (or
 
 ```
 searchKey: textproto.sequencer
+tags: [private]
 ```
 
 ```Go
@@ -489,6 +480,7 @@ A sequencer schedules a sequence of numbered events that must happen in order, o
 
 ```
 searchKey: textproto.sequencer.Start
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +493,7 @@ Start waits until it is time for the event numbered id to begin. That is, except
 
 ```
 searchKey: textproto.sequencer.End
+tags: [private]
 ```
 
 ```Go
@@ -513,7 +506,6 @@ End notifies the sequencer that the event numbered id has completed, allowing it
 
 ```
 searchKey: textproto.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -530,7 +522,6 @@ A Reader implements convenience methods for reading requests or responses from a
 
 ```
 searchKey: textproto.NewReader
-tags: [exported]
 ```
 
 ```Go
@@ -545,6 +536,7 @@ To avoid denial of service attacks, the provided bufio.Reader should be reading 
 
 ```
 searchKey: textproto.reader
+tags: [private]
 ```
 
 ```Go
@@ -555,7 +547,6 @@ func reader(s string) *Reader
 
 ```
 searchKey: textproto.Reader.ReadLine
-tags: [exported]
 ```
 
 ```Go
@@ -568,7 +559,6 @@ ReadLine reads a single line from r, eliding the final \n or \r\n from the retur
 
 ```
 searchKey: textproto.Reader.ReadLineBytes
-tags: [exported]
 ```
 
 ```Go
@@ -581,6 +571,7 @@ ReadLineBytes is like ReadLine but returns a []byte instead of a string.
 
 ```
 searchKey: textproto.Reader.readLineSlice
+tags: [private]
 ```
 
 ```Go
@@ -591,7 +582,6 @@ func (r *Reader) readLineSlice() ([]byte, error)
 
 ```
 searchKey: textproto.Reader.ReadContinuedLine
-tags: [exported]
 ```
 
 ```Go
@@ -616,7 +606,6 @@ Empty lines are never continued.
 
 ```
 searchKey: textproto.Reader.ReadContinuedLineBytes
-tags: [exported]
 ```
 
 ```Go
@@ -629,6 +618,7 @@ ReadContinuedLineBytes is like ReadContinuedLine but returns a []byte instead of
 
 ```
 searchKey: textproto.Reader.readContinuedLineSlice
+tags: [private]
 ```
 
 ```Go
@@ -641,6 +631,7 @@ readContinuedLineSlice reads continued lines from the reader buffer, returning a
 
 ```
 searchKey: textproto.Reader.skipSpace
+tags: [private]
 ```
 
 ```Go
@@ -653,6 +644,7 @@ skipSpace skips R over all spaces and returns the number of bytes skipped.
 
 ```
 searchKey: textproto.Reader.readCodeLine
+tags: [private]
 ```
 
 ```Go
@@ -663,7 +655,6 @@ func (r *Reader) readCodeLine(expectCode int) (code int, continued bool, message
 
 ```
 searchKey: textproto.Reader.ReadCodeLine
-tags: [exported]
 ```
 
 ```Go
@@ -692,7 +683,6 @@ An expectCode <= 0 disables the check of the status code.
 
 ```
 searchKey: textproto.Reader.ReadResponse
-tags: [exported]
 ```
 
 ```Go
@@ -727,7 +717,6 @@ An expectCode <= 0 disables the check of the status code.
 
 ```
 searchKey: textproto.Reader.DotReader
-tags: [exported]
 ```
 
 ```Go
@@ -744,6 +733,7 @@ The decoded form returned by the Reader's Read method rewrites the "\r\n" line e
 
 ```
 searchKey: textproto.Reader.closeDot
+tags: [private]
 ```
 
 ```Go
@@ -756,7 +746,6 @@ closeDot drains the current DotReader if any, making sure that it reads until th
 
 ```
 searchKey: textproto.Reader.ReadDotBytes
-tags: [exported]
 ```
 
 ```Go
@@ -771,7 +760,6 @@ See the documentation for the DotReader method for details about dot-encoding.
 
 ```
 searchKey: textproto.Reader.ReadDotLines
-tags: [exported]
 ```
 
 ```Go
@@ -786,7 +774,6 @@ See the documentation for the DotReader method for details about dot-encoding.
 
 ```
 searchKey: textproto.Reader.ReadMIMEHeader
-tags: [exported]
 ```
 
 ```Go
@@ -817,6 +804,7 @@ map[string][]string{
 
 ```
 searchKey: textproto.Reader.upcomingHeaderNewlines
+tags: [private]
 ```
 
 ```Go
@@ -829,6 +817,7 @@ upcomingHeaderNewlines returns an approximation of the number of newlines that w
 
 ```
 searchKey: textproto.dotReader
+tags: [private]
 ```
 
 ```Go
@@ -842,6 +831,7 @@ type dotReader struct {
 
 ```
 searchKey: textproto.dotReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -854,7 +844,6 @@ Read satisfies reads by decoding dot-encoded data read from d.r.
 
 ```
 searchKey: textproto.Error
-tags: [exported]
 ```
 
 ```Go
@@ -870,7 +859,6 @@ An Error represents a numeric error response from a server.
 
 ```
 searchKey: textproto.Error.Error
-tags: [exported]
 ```
 
 ```Go
@@ -881,7 +869,6 @@ func (e *Error) Error() string
 
 ```
 searchKey: textproto.ProtocolError
-tags: [exported]
 ```
 
 ```Go
@@ -894,7 +881,6 @@ A ProtocolError describes a protocol violation such as an invalid response or a 
 
 ```
 searchKey: textproto.ProtocolError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -905,7 +891,6 @@ func (p ProtocolError) Error() string
 
 ```
 searchKey: textproto.Conn
-tags: [exported]
 ```
 
 ```Go
@@ -923,7 +908,6 @@ A Conn represents a textual network protocol connection. It consists of a Reader
 
 ```
 searchKey: textproto.NewConn
-tags: [exported]
 ```
 
 ```Go
@@ -936,7 +920,6 @@ NewConn returns a new Conn using conn for I/O.
 
 ```
 searchKey: textproto.Dial
-tags: [exported]
 ```
 
 ```Go
@@ -949,7 +932,6 @@ Dial connects to the given address on the given network using net.Dial and then 
 
 ```
 searchKey: textproto.Conn.Close
-tags: [exported]
 ```
 
 ```Go
@@ -962,7 +944,6 @@ Close closes the connection.
 
 ```
 searchKey: textproto.Conn.Cmd
-tags: [exported]
 ```
 
 ```Go
@@ -996,7 +977,6 @@ return c.ReadCodeLine(250)
 
 ```
 searchKey: textproto.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -1012,7 +992,6 @@ A Writer implements convenience methods for writing requests or responses to a t
 
 ```
 searchKey: textproto.NewWriter
-tags: [exported]
 ```
 
 ```Go
@@ -1025,7 +1004,6 @@ NewWriter returns a new Writer writing to w.
 
 ```
 searchKey: textproto.Writer.PrintfLine
-tags: [exported]
 ```
 
 ```Go
@@ -1038,7 +1016,6 @@ PrintfLine writes the formatted output followed by \r\n.
 
 ```
 searchKey: textproto.Writer.DotWriter
-tags: [exported]
 ```
 
 ```Go
@@ -1053,6 +1030,7 @@ See the documentation for Reader's DotReader method for details about dot-encodi
 
 ```
 searchKey: textproto.Writer.closeDot
+tags: [private]
 ```
 
 ```Go
@@ -1063,6 +1041,7 @@ func (w *Writer) closeDot()
 
 ```
 searchKey: textproto.dotWriter
+tags: [private]
 ```
 
 ```Go
@@ -1076,6 +1055,7 @@ type dotWriter struct {
 
 ```
 searchKey: textproto.dotWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -1086,6 +1066,7 @@ func (d *dotWriter) Write(b []byte) (n int, err error)
 
 ```
 searchKey: textproto.dotWriter.Close
+tags: [private]
 ```
 
 ```Go
@@ -1096,6 +1077,7 @@ func (d *dotWriter) Close() error
 
 ```
 searchKey: textproto.canonicalHeaderKeyTest
+tags: [private]
 ```
 
 ```Go
@@ -1108,6 +1090,7 @@ type canonicalHeaderKeyTest struct {
 
 ```
 searchKey: textproto.readResponseTest
+tags: [private]
 ```
 
 ```Go
@@ -1121,14 +1104,11 @@ type readResponseTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="trim" href="#trim">func trim(s []byte) []byte</a>
 
 ```
 searchKey: textproto.trim
+tags: [private]
 ```
 
 ```Go
@@ -1141,6 +1121,7 @@ trim returns s with leading and trailing spaces and tabs removed. It does not as
 
 ```
 searchKey: textproto.parseCodeLine
+tags: [private]
 ```
 
 ```Go
@@ -1151,6 +1132,7 @@ func parseCodeLine(line string, expectCode int) (code int, continued bool, messa
 
 ```
 searchKey: textproto.noValidation
+tags: [private]
 ```
 
 ```Go
@@ -1163,6 +1145,7 @@ noValidation is a no-op validation func for readContinuedLineSlice that permits 
 
 ```
 searchKey: textproto.mustHaveFieldNameColon
+tags: [private]
 ```
 
 ```Go
@@ -1175,7 +1158,6 @@ mustHaveFieldNameColon ensures that, per RFC 7230, the field-name is on a single
 
 ```
 searchKey: textproto.CanonicalMIMEHeaderKey
-tags: [exported]
 ```
 
 ```Go
@@ -1188,6 +1170,7 @@ CanonicalMIMEHeaderKey returns the canonical format of the MIME header key s. Th
 
 ```
 searchKey: textproto.validHeaderFieldByte
+tags: [private]
 ```
 
 ```Go
@@ -1208,6 +1191,7 @@ token = 1*tchar
 
 ```
 searchKey: textproto.canonicalMIMEHeaderKey
+tags: [private]
 ```
 
 ```Go
@@ -1222,6 +1206,7 @@ For invalid inputs (if a contains spaces or non-token bytes), a is unchanged and
 
 ```
 searchKey: textproto.initCommonHeader
+tags: [private]
 ```
 
 ```Go
@@ -1232,7 +1217,6 @@ func initCommonHeader()
 
 ```
 searchKey: textproto.TrimString
-tags: [exported]
 ```
 
 ```Go
@@ -1245,7 +1229,6 @@ TrimString returns s without leading and trailing ASCII space.
 
 ```
 searchKey: textproto.TrimBytes
-tags: [exported]
 ```
 
 ```Go
@@ -1258,6 +1241,7 @@ TrimBytes returns b without leading and trailing ASCII space.
 
 ```
 searchKey: textproto.isASCIISpace
+tags: [private]
 ```
 
 ```Go
@@ -1268,6 +1252,7 @@ func isASCIISpace(b byte) bool
 
 ```
 searchKey: textproto.isASCIILetter
+tags: [private]
 ```
 
 ```Go
@@ -1278,6 +1263,7 @@ func isASCIILetter(b byte) bool
 
 ```
 searchKey: textproto.TestCanonicalMIMEHeaderKey
+tags: [private]
 ```
 
 ```Go
@@ -1288,6 +1274,7 @@ func TestCanonicalMIMEHeaderKey(t *testing.T)
 
 ```
 searchKey: textproto.TestMIMEHeaderMultipleValues
+tags: [private]
 ```
 
 ```Go
@@ -1300,6 +1287,7 @@ Issue #34799 add a Header method to get multiple values []string, with canonical
 
 ```
 searchKey: textproto.TestReadLine
+tags: [private]
 ```
 
 ```Go
@@ -1310,6 +1298,7 @@ func TestReadLine(t *testing.T)
 
 ```
 searchKey: textproto.TestReadContinuedLine
+tags: [private]
 ```
 
 ```Go
@@ -1320,6 +1309,7 @@ func TestReadContinuedLine(t *testing.T)
 
 ```
 searchKey: textproto.TestReadCodeLine
+tags: [private]
 ```
 
 ```Go
@@ -1330,6 +1320,7 @@ func TestReadCodeLine(t *testing.T)
 
 ```
 searchKey: textproto.TestReadDotLines
+tags: [private]
 ```
 
 ```Go
@@ -1340,6 +1331,7 @@ func TestReadDotLines(t *testing.T)
 
 ```
 searchKey: textproto.TestReadDotBytes
+tags: [private]
 ```
 
 ```Go
@@ -1350,6 +1342,7 @@ func TestReadDotBytes(t *testing.T)
 
 ```
 searchKey: textproto.TestReadMIMEHeader
+tags: [private]
 ```
 
 ```Go
@@ -1360,6 +1353,7 @@ func TestReadMIMEHeader(t *testing.T)
 
 ```
 searchKey: textproto.TestReadMIMEHeaderSingle
+tags: [private]
 ```
 
 ```Go
@@ -1370,6 +1364,7 @@ func TestReadMIMEHeaderSingle(t *testing.T)
 
 ```
 searchKey: textproto.TestReadMIMEHeaderNoKey
+tags: [private]
 ```
 
 ```Go
@@ -1380,6 +1375,7 @@ func TestReadMIMEHeaderNoKey(t *testing.T)
 
 ```
 searchKey: textproto.TestLargeReadMIMEHeader
+tags: [private]
 ```
 
 ```Go
@@ -1390,6 +1386,7 @@ func TestLargeReadMIMEHeader(t *testing.T)
 
 ```
 searchKey: textproto.TestReadMIMEHeaderNonCompliant
+tags: [private]
 ```
 
 ```Go
@@ -1402,6 +1399,7 @@ TestReadMIMEHeaderNonCompliant checks that we don't normalize headers with space
 
 ```
 searchKey: textproto.TestReadMIMEHeaderMalformed
+tags: [private]
 ```
 
 ```Go
@@ -1412,6 +1410,7 @@ func TestReadMIMEHeaderMalformed(t *testing.T)
 
 ```
 searchKey: textproto.TestReadMIMEHeaderTrimContinued
+tags: [private]
 ```
 
 ```Go
@@ -1424,6 +1423,7 @@ Test that continued lines are properly trimmed. Issue 11204.
 
 ```
 searchKey: textproto.TestRFC959Lines
+tags: [private]
 ```
 
 ```Go
@@ -1436,6 +1436,7 @@ See [https://www.ietf.org/rfc/rfc959.txt](https://www.ietf.org/rfc/rfc959.txt) p
 
 ```
 searchKey: textproto.TestReadMultiLineError
+tags: [private]
 ```
 
 ```Go
@@ -1448,6 +1449,7 @@ Test that multi-line errors are appropriately and fully read. Issue 10230.
 
 ```
 searchKey: textproto.TestCommonHeaders
+tags: [private]
 ```
 
 ```Go
@@ -1458,6 +1460,7 @@ func TestCommonHeaders(t *testing.T)
 
 ```
 searchKey: textproto.BenchmarkReadMIMEHeader
+tags: [private]
 ```
 
 ```Go
@@ -1468,6 +1471,7 @@ func BenchmarkReadMIMEHeader(b *testing.B)
 
 ```
 searchKey: textproto.BenchmarkUncommon
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1482,7 @@ func BenchmarkUncommon(b *testing.B)
 
 ```
 searchKey: textproto.TestPrintfLine
+tags: [private]
 ```
 
 ```Go
@@ -1488,6 +1493,7 @@ func TestPrintfLine(t *testing.T)
 
 ```
 searchKey: textproto.TestDotWriter
+tags: [private]
 ```
 
 ```Go
@@ -1498,6 +1504,7 @@ func TestDotWriter(t *testing.T)
 
 ```
 searchKey: textproto.TestDotWriterCloseEmptyWrite
+tags: [private]
 ```
 
 ```Go
@@ -1508,6 +1515,7 @@ func TestDotWriterCloseEmptyWrite(t *testing.T)
 
 ```
 searchKey: textproto.TestDotWriterCloseNoWrite
+tags: [private]
 ```
 
 ```Go

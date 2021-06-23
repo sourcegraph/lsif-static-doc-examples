@@ -4,7 +4,9 @@
     "identifier": "comby",
     "newPage": true,
     "searchKey": "internal/comby",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "combyPath",
                 "newPage": false,
                 "searchKey": "comby.combyPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "MatchHoleRegexp",
                 "newPage": false,
                 "searchKey": "comby.MatchHoleRegexp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "matchRegexpPattern",
                 "newPage": false,
                 "searchKey": "comby.matchRegexpPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +131,9 @@
                 "identifier": "onMatchWhitespace",
                 "newPage": false,
                 "searchKey": "comby.onMatchWhitespace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -146,7 +156,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -164,9 +176,7 @@
                 "identifier": "Term",
                 "newPage": false,
                 "searchKey": "comby.Term",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -186,9 +196,7 @@
                 "identifier": "Literal",
                 "newPage": false,
                 "searchKey": "comby.Literal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -206,7 +214,9 @@
                       "identifier": "Literal.term",
                       "newPage": false,
                       "searchKey": "comby.Literal.term",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -226,9 +236,7 @@
                       "identifier": "Literal.String",
                       "newPage": false,
                       "searchKey": "comby.Literal.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -251,9 +259,7 @@
                 "identifier": "Hole",
                 "newPage": false,
                 "searchKey": "comby.Hole",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -271,7 +277,9 @@
                       "identifier": "Hole.term",
                       "newPage": false,
                       "searchKey": "comby.Hole.term",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -291,9 +299,7 @@
                       "identifier": "Hole.String",
                       "newPage": false,
                       "searchKey": "comby.Hole.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -316,9 +322,7 @@
                 "identifier": "Input",
                 "newPage": false,
                 "searchKey": "comby.Input",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -338,9 +342,7 @@
                 "identifier": "ZipPath",
                 "newPage": false,
                 "searchKey": "comby.ZipPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -358,9 +360,7 @@
                       "identifier": "ZipPath.Value",
                       "newPage": false,
                       "searchKey": "comby.ZipPath.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -383,9 +383,7 @@
                 "identifier": "DirPath",
                 "newPage": false,
                 "searchKey": "comby.DirPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -403,9 +401,7 @@
                       "identifier": "DirPath.Value",
                       "newPage": false,
                       "searchKey": "comby.DirPath.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -428,9 +424,7 @@
                 "identifier": "Args",
                 "newPage": false,
                 "searchKey": "comby.Args",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -448,9 +442,7 @@
                       "identifier": "Args.String",
                       "newPage": false,
                       "searchKey": "comby.Args.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -473,9 +465,7 @@
                 "identifier": "Location",
                 "newPage": false,
                 "searchKey": "comby.Location",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -495,9 +485,7 @@
                 "identifier": "Range",
                 "newPage": false,
                 "searchKey": "comby.Range",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -517,9 +505,7 @@
                 "identifier": "Match",
                 "newPage": false,
                 "searchKey": "comby.Match",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -539,9 +525,7 @@
                 "identifier": "FileMatch",
                 "newPage": false,
                 "searchKey": "comby.FileMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -561,9 +545,7 @@
                 "identifier": "FileDiff",
                 "newPage": false,
                 "searchKey": "comby.FileDiff",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -586,7 +568,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -604,7 +588,9 @@
                 "identifier": "exists",
                 "newPage": false,
                 "searchKey": "comby.exists",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -624,7 +610,9 @@
                 "identifier": "rawArgs",
                 "newPage": false,
                 "searchKey": "comby.rawArgs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -644,7 +632,9 @@
                 "identifier": "waitForCompletion",
                 "newPage": false,
                 "searchKey": "comby.waitForCompletion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -664,7 +654,9 @@
                 "identifier": "kill",
                 "newPage": false,
                 "searchKey": "comby.kill",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -684,9 +676,7 @@
                 "identifier": "PipeTo",
                 "newPage": false,
                 "searchKey": "comby.PipeTo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -706,9 +696,7 @@
                 "identifier": "Matches",
                 "newPage": false,
                 "searchKey": "comby.Matches",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -728,7 +716,9 @@
                 "identifier": "splitOnHolesPattern",
                 "newPage": false,
                 "searchKey": "comby.splitOnHolesPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -748,7 +738,9 @@
                 "identifier": "parseTemplate",
                 "newPage": false,
                 "searchKey": "comby.parseTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -768,9 +760,7 @@
                 "identifier": "StructuralPatToRegexpQuery",
                 "newPage": false,
                 "searchKey": "comby.StructuralPatToRegexpQuery",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -790,7 +780,9 @@
                 "identifier": "TestMatchesUnmarshalling",
                 "newPage": false,
                 "searchKey": "comby.TestMatchesUnmarshalling",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -810,7 +802,9 @@
                 "identifier": "TestMatchesInZip",
                 "newPage": false,
                 "searchKey": "comby.TestMatchesInZip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -830,7 +824,9 @@
                 "identifier": "TestStructuralPatToRegexpQuery",
                 "newPage": false,
                 "searchKey": "comby.TestStructuralPatToRegexpQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

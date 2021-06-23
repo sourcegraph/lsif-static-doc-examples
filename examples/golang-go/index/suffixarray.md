@@ -132,14 +132,11 @@ offsets2 := index.Lookup(s, 3)  // the list of at most 3 indices where s occurs 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="realMaxData32" href="#realMaxData32">const realMaxData32</a>
 
 ```
 searchKey: suffixarray.realMaxData32
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +147,7 @@ const realMaxData32 = math.MaxInt32
 
 ```
 searchKey: suffixarray.bufSize
+tags: [private]
 ```
 
 ```Go
@@ -159,14 +157,11 @@ const bufSize = 16 << 10 // reasonable for BenchmarkSaveRestore
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="maxData32" href="#maxData32">var maxData32</a>
 
 ```
 searchKey: suffixarray.maxData32
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +174,7 @@ Can change for testing
 
 ```
 searchKey: suffixarray.errTooBig
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +185,7 @@ var errTooBig = errors.New("suffixarray: data too large")
 
 ```
 searchKey: suffixarray.testCases
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +196,7 @@ var testCases = ...
 
 ```
 searchKey: suffixarray.benchdata
+tags: [private]
 ```
 
 ```Go
@@ -209,6 +207,7 @@ var benchdata = make([]byte, 1e6)
 
 ```
 searchKey: suffixarray.benchrand
+tags: [private]
 ```
 
 ```Go
@@ -217,15 +216,10 @@ var benchrand = make([]byte, 1e6)
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Index" href="#Index">type Index struct</a>
 
 ```
 searchKey: suffixarray.Index
-tags: [exported]
 ```
 
 ```Go
@@ -241,7 +235,6 @@ Index implements a suffix array for fast substring search.
 
 ```
 searchKey: suffixarray.New
-tags: [exported]
 ```
 
 ```Go
@@ -254,7 +247,6 @@ New creates a new Index for data. Index creation time is O(N) for N = len(data).
 
 ```
 searchKey: suffixarray.Index.Read
-tags: [exported]
 ```
 
 ```Go
@@ -267,7 +259,6 @@ Read reads the index from r into x; x must not be nil.
 
 ```
 searchKey: suffixarray.Index.Write
-tags: [exported]
 ```
 
 ```Go
@@ -280,7 +271,6 @@ Write writes the index x to w.
 
 ```
 searchKey: suffixarray.Index.Bytes
-tags: [exported]
 ```
 
 ```Go
@@ -293,6 +283,7 @@ Bytes returns the data over which the index was created. It must not be modified
 
 ```
 searchKey: suffixarray.Index.at
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +294,7 @@ func (x *Index) at(i int) []byte
 
 ```
 searchKey: suffixarray.Index.lookupAll
+tags: [private]
 ```
 
 ```Go
@@ -315,7 +307,6 @@ lookupAll returns a slice into the matching region of the index. The runtime is 
 
 ```
 searchKey: suffixarray.Index.Lookup
-tags: [exported]
 ```
 
 ```Go
@@ -328,7 +319,6 @@ Lookup returns an unsorted list of at most n indices where the byte string s occ
 
 ```
 searchKey: suffixarray.Index.FindAllIndex
-tags: [exported]
 ```
 
 ```Go
@@ -341,6 +331,7 @@ FindAllIndex returns a sorted list of non-overlapping matches of the regular exp
 
 ```
 searchKey: suffixarray.ints
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +347,7 @@ An ints is either an []int32 or an []int64. That is, one of them is empty, and o
 
 ```
 searchKey: suffixarray.ints.len
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +358,7 @@ func (a *ints) len() int
 
 ```
 searchKey: suffixarray.ints.get
+tags: [private]
 ```
 
 ```Go
@@ -376,6 +369,7 @@ func (a *ints) get(i int) int64
 
 ```
 searchKey: suffixarray.ints.set
+tags: [private]
 ```
 
 ```Go
@@ -386,6 +380,7 @@ func (a *ints) set(i int, v int64)
 
 ```
 searchKey: suffixarray.ints.slice
+tags: [private]
 ```
 
 ```Go
@@ -396,6 +391,7 @@ func (a *ints) slice(i, j int) ints
 
 ```
 searchKey: suffixarray.testCase
+tags: [private]
 ```
 
 ```Go
@@ -410,6 +406,7 @@ type testCase struct {
 
 ```
 searchKey: suffixarray.index
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +419,7 @@ index is used to hide the sort.Interface
 
 ```
 searchKey: suffixarray.index.Len
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +430,7 @@ func (x *index) Len() int
 
 ```
 searchKey: suffixarray.index.Less
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +441,7 @@ func (x *index) Less(i, j int) bool
 
 ```
 searchKey: suffixarray.index.Swap
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +452,7 @@ func (x *index) Swap(i, j int)
 
 ```
 searchKey: suffixarray.index.at
+tags: [private]
 ```
 
 ```Go
@@ -460,14 +461,11 @@ func (x *index) at(i int) []byte
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="text_32" href="#text_32">func text_32(text []byte, sa []int32)</a>
 
 ```
 searchKey: suffixarray.text_32
+tags: [private]
 ```
 
 ```Go
@@ -480,6 +478,7 @@ text_32 returns the suffix array for the input text. It requires that len(text) 
 
 ```
 searchKey: suffixarray.sais_8_32
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +491,7 @@ sais_8_32 computes the suffix array of text. The text must contain only values i
 
 ```
 searchKey: suffixarray.freq_8_32
+tags: [private]
 ```
 
 ```Go
@@ -504,6 +504,7 @@ freq_8_32 returns the character frequencies for text, as a slice indexed by char
 
 ```
 searchKey: suffixarray.bucketMin_8_32
+tags: [private]
 ```
 
 ```Go
@@ -516,6 +517,7 @@ bucketMin_8_32 stores into bucket[c] the minimum index in the bucket for charact
 
 ```
 searchKey: suffixarray.bucketMax_8_32
+tags: [private]
 ```
 
 ```Go
@@ -528,6 +530,7 @@ bucketMax_8_32 stores into bucket[c] the maximum index in the bucket for charact
 
 ```
 searchKey: suffixarray.placeLMS_8_32
+tags: [private]
 ```
 
 ```Go
@@ -544,6 +547,7 @@ The text indexes of LMS-substring characters are always ≥ 1 (the first LMS-sub
 
 ```
 searchKey: suffixarray.induceSubL_8_32
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +560,7 @@ induceSubL_8_32 inserts the L-type text indexes of LMS-substrings into sa, assum
 
 ```
 searchKey: suffixarray.induceSubS_8_32
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +573,7 @@ induceSubS_8_32 inserts the S-type text indexes of LMS-substrings into sa, assum
 
 ```
 searchKey: suffixarray.length_8_32
+tags: [private]
 ```
 
 ```Go
@@ -584,6 +590,7 @@ Second, to avoid text comparison entirely, if an LMS-substring is very short, sa
 
 ```
 searchKey: suffixarray.assignID_8_32
+tags: [private]
 ```
 
 ```Go
@@ -596,6 +603,7 @@ assignID_8_32 assigns a dense ID numbering to the set of LMS-substrings respecti
 
 ```
 searchKey: suffixarray.map_32
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +618,7 @@ map_32 packs the result, which is the input to the recursion, into the top of sa
 
 ```
 searchKey: suffixarray.recurse_32
+tags: [private]
 ```
 
 ```Go
@@ -622,6 +631,7 @@ recurse_32 calls sais_32 recursively to solve the subproblem we've built. The su
 
 ```
 searchKey: suffixarray.unmap_8_32
+tags: [private]
 ```
 
 ```Go
@@ -634,6 +644,7 @@ unmap_8_32 unmaps the subproblem back to the original. sa[:numLMS] is the LMS-su
 
 ```
 searchKey: suffixarray.expand_8_32
+tags: [private]
 ```
 
 ```Go
@@ -646,6 +657,7 @@ expand_8_32 distributes the compacted, sorted LMS-suffix indexes from sa[:numLMS
 
 ```
 searchKey: suffixarray.induceL_8_32
+tags: [private]
 ```
 
 ```Go
@@ -658,6 +670,7 @@ induceL_8_32 inserts L-type text indexes into sa, assuming that the leftmost S-t
 
 ```
 searchKey: suffixarray.induceS_8_32
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +681,7 @@ func induceS_8_32(text []byte, sa, freq, bucket []int32)
 
 ```
 searchKey: suffixarray.text_64
+tags: [private]
 ```
 
 ```Go
@@ -678,6 +692,7 @@ func text_64(text []byte, sa []int64)
 
 ```
 searchKey: suffixarray.sais_8_64
+tags: [private]
 ```
 
 ```Go
@@ -688,6 +703,7 @@ func sais_8_64(text []byte, textMax int, sa, tmp []int64)
 
 ```
 searchKey: suffixarray.sais_32
+tags: [private]
 ```
 
 ```Go
@@ -698,6 +714,7 @@ func sais_32(text []int32, textMax int, sa, tmp []int32)
 
 ```
 searchKey: suffixarray.sais_64
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +725,7 @@ func sais_64(text []int64, textMax int, sa, tmp []int64)
 
 ```
 searchKey: suffixarray.freq_8_64
+tags: [private]
 ```
 
 ```Go
@@ -718,6 +736,7 @@ func freq_8_64(text []byte, freq, bucket []int64) []int64
 
 ```
 searchKey: suffixarray.freq_32
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +747,7 @@ func freq_32(text []int32, freq, bucket []int32) []int32
 
 ```
 searchKey: suffixarray.freq_64
+tags: [private]
 ```
 
 ```Go
@@ -738,6 +758,7 @@ func freq_64(text []int64, freq, bucket []int64) []int64
 
 ```
 searchKey: suffixarray.bucketMin_8_64
+tags: [private]
 ```
 
 ```Go
@@ -748,6 +769,7 @@ func bucketMin_8_64(text []byte, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.bucketMin_32
+tags: [private]
 ```
 
 ```Go
@@ -758,6 +780,7 @@ func bucketMin_32(text []int32, freq, bucket []int32)
 
 ```
 searchKey: suffixarray.bucketMin_64
+tags: [private]
 ```
 
 ```Go
@@ -768,6 +791,7 @@ func bucketMin_64(text []int64, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.bucketMax_8_64
+tags: [private]
 ```
 
 ```Go
@@ -778,6 +802,7 @@ func bucketMax_8_64(text []byte, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.bucketMax_32
+tags: [private]
 ```
 
 ```Go
@@ -788,6 +813,7 @@ func bucketMax_32(text []int32, freq, bucket []int32)
 
 ```
 searchKey: suffixarray.bucketMax_64
+tags: [private]
 ```
 
 ```Go
@@ -798,6 +824,7 @@ func bucketMax_64(text []int64, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.placeLMS_8_64
+tags: [private]
 ```
 
 ```Go
@@ -808,6 +835,7 @@ func placeLMS_8_64(text []byte, sa, freq, bucket []int64) int
 
 ```
 searchKey: suffixarray.placeLMS_32
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +846,7 @@ func placeLMS_32(text []int32, sa, freq, bucket []int32) int
 
 ```
 searchKey: suffixarray.placeLMS_64
+tags: [private]
 ```
 
 ```Go
@@ -828,6 +857,7 @@ func placeLMS_64(text []int64, sa, freq, bucket []int64) int
 
 ```
 searchKey: suffixarray.induceSubL_8_64
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +868,7 @@ func induceSubL_8_64(text []byte, sa, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.induceSubL_32
+tags: [private]
 ```
 
 ```Go
@@ -848,6 +879,7 @@ func induceSubL_32(text []int32, sa, freq, bucket []int32)
 
 ```
 searchKey: suffixarray.induceSubL_64
+tags: [private]
 ```
 
 ```Go
@@ -858,6 +890,7 @@ func induceSubL_64(text []int64, sa, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.induceSubS_8_64
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +901,7 @@ func induceSubS_8_64(text []byte, sa, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.induceSubS_32
+tags: [private]
 ```
 
 ```Go
@@ -878,6 +912,7 @@ func induceSubS_32(text []int32, sa, freq, bucket []int32)
 
 ```
 searchKey: suffixarray.induceSubS_64
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +923,7 @@ func induceSubS_64(text []int64, sa, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.length_8_64
+tags: [private]
 ```
 
 ```Go
@@ -898,6 +934,7 @@ func length_8_64(text []byte, sa []int64, numLMS int)
 
 ```
 searchKey: suffixarray.length_32
+tags: [private]
 ```
 
 ```Go
@@ -908,6 +945,7 @@ func length_32(text []int32, sa []int32, numLMS int)
 
 ```
 searchKey: suffixarray.length_64
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +956,7 @@ func length_64(text []int64, sa []int64, numLMS int)
 
 ```
 searchKey: suffixarray.assignID_8_64
+tags: [private]
 ```
 
 ```Go
@@ -928,6 +967,7 @@ func assignID_8_64(text []byte, sa []int64, numLMS int) int
 
 ```
 searchKey: suffixarray.assignID_32
+tags: [private]
 ```
 
 ```Go
@@ -938,6 +978,7 @@ func assignID_32(text []int32, sa []int32, numLMS int) int
 
 ```
 searchKey: suffixarray.assignID_64
+tags: [private]
 ```
 
 ```Go
@@ -948,6 +989,7 @@ func assignID_64(text []int64, sa []int64, numLMS int) int
 
 ```
 searchKey: suffixarray.map_64
+tags: [private]
 ```
 
 ```Go
@@ -958,6 +1000,7 @@ func map_64(sa []int64, numLMS int)
 
 ```
 searchKey: suffixarray.recurse_64
+tags: [private]
 ```
 
 ```Go
@@ -968,6 +1011,7 @@ func recurse_64(sa, oldTmp []int64, numLMS, maxID int)
 
 ```
 searchKey: suffixarray.unmap_8_64
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1022,7 @@ func unmap_8_64(text []byte, sa []int64, numLMS int)
 
 ```
 searchKey: suffixarray.unmap_32
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +1033,7 @@ func unmap_32(text []int32, sa []int32, numLMS int)
 
 ```
 searchKey: suffixarray.unmap_64
+tags: [private]
 ```
 
 ```Go
@@ -998,6 +1044,7 @@ func unmap_64(text []int64, sa []int64, numLMS int)
 
 ```
 searchKey: suffixarray.expand_8_64
+tags: [private]
 ```
 
 ```Go
@@ -1008,6 +1055,7 @@ func expand_8_64(text []byte, freq, bucket, sa []int64, numLMS int)
 
 ```
 searchKey: suffixarray.expand_32
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1066,7 @@ func expand_32(text []int32, freq, bucket, sa []int32, numLMS int)
 
 ```
 searchKey: suffixarray.expand_64
+tags: [private]
 ```
 
 ```Go
@@ -1028,6 +1077,7 @@ func expand_64(text []int64, freq, bucket, sa []int64, numLMS int)
 
 ```
 searchKey: suffixarray.induceL_8_64
+tags: [private]
 ```
 
 ```Go
@@ -1038,6 +1088,7 @@ func induceL_8_64(text []byte, sa, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.induceL_32
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1099,7 @@ func induceL_32(text []int32, sa, freq, bucket []int32)
 
 ```
 searchKey: suffixarray.induceL_64
+tags: [private]
 ```
 
 ```Go
@@ -1058,6 +1110,7 @@ func induceL_64(text []int64, sa, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.induceS_8_64
+tags: [private]
 ```
 
 ```Go
@@ -1068,6 +1121,7 @@ func induceS_8_64(text []byte, sa, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.induceS_32
+tags: [private]
 ```
 
 ```Go
@@ -1078,6 +1132,7 @@ func induceS_32(text []int32, sa, freq, bucket []int32)
 
 ```
 searchKey: suffixarray.induceS_64
+tags: [private]
 ```
 
 ```Go
@@ -1088,6 +1143,7 @@ func induceS_64(text []int64, sa, freq, bucket []int64)
 
 ```
 searchKey: suffixarray.writeInt
+tags: [private]
 ```
 
 ```Go
@@ -1100,6 +1156,7 @@ writeInt writes an int x to w using buf to buffer the write.
 
 ```
 searchKey: suffixarray.readInt
+tags: [private]
 ```
 
 ```Go
@@ -1112,6 +1169,7 @@ readInt reads an int x from r using buf to buffer the read and returns x.
 
 ```
 searchKey: suffixarray.writeSlice
+tags: [private]
 ```
 
 ```Go
@@ -1124,6 +1182,7 @@ writeSlice writes data[:n] to w and returns n. It uses buf to buffer the write.
 
 ```
 searchKey: suffixarray.readSlice
+tags: [private]
 ```
 
 ```Go
@@ -1136,6 +1195,7 @@ readSlice reads data[:n] from r and returns n. It uses buf to buffer the read.
 
 ```
 searchKey: suffixarray.find
+tags: [private]
 ```
 
 ```Go
@@ -1148,6 +1208,7 @@ find all occurrences of s in source; report at most n occurrences
 
 ```
 searchKey: suffixarray.testLookup
+tags: [private]
 ```
 
 ```Go
@@ -1158,6 +1219,7 @@ func testLookup(t *testing.T, tc *testCase, x *Index, s string, n int)
 
 ```
 searchKey: suffixarray.testFindAllIndex
+tags: [private]
 ```
 
 ```Go
@@ -1168,6 +1230,7 @@ func testFindAllIndex(t *testing.T, tc *testCase, x *Index, rx *regexp.Regexp, n
 
 ```
 searchKey: suffixarray.testLookups
+tags: [private]
 ```
 
 ```Go
@@ -1178,6 +1241,7 @@ func testLookups(t *testing.T, tc *testCase, x *Index, n int)
 
 ```
 searchKey: suffixarray.testConstruction
+tags: [private]
 ```
 
 ```Go
@@ -1188,6 +1252,7 @@ func testConstruction(t *testing.T, tc *testCase, x *Index)
 
 ```
 searchKey: suffixarray.equal
+tags: [private]
 ```
 
 ```Go
@@ -1198,6 +1263,7 @@ func equal(x, y *Index) bool
 
 ```
 searchKey: suffixarray.testSaveRestore
+tags: [private]
 ```
 
 ```Go
@@ -1210,6 +1276,7 @@ returns the serialized index size
 
 ```
 searchKey: suffixarray.testIndex
+tags: [private]
 ```
 
 ```Go
@@ -1220,6 +1287,7 @@ func testIndex(t *testing.T)
 
 ```
 searchKey: suffixarray.TestIndex32
+tags: [private]
 ```
 
 ```Go
@@ -1230,6 +1298,7 @@ func TestIndex32(t *testing.T)
 
 ```
 searchKey: suffixarray.TestIndex64
+tags: [private]
 ```
 
 ```Go
@@ -1240,6 +1309,7 @@ func TestIndex64(t *testing.T)
 
 ```
 searchKey: suffixarray.TestNew32
+tags: [private]
 ```
 
 ```Go
@@ -1250,6 +1320,7 @@ func TestNew32(t *testing.T)
 
 ```
 searchKey: suffixarray.TestNew64
+tags: [private]
 ```
 
 ```Go
@@ -1260,6 +1331,7 @@ func TestNew64(t *testing.T)
 
 ```
 searchKey: suffixarray.test
+tags: [private]
 ```
 
 ```Go
@@ -1272,6 +1344,7 @@ test tests an arbitrary suffix array construction function. Generates many input
 
 ```
 searchKey: suffixarray.testRec
+tags: [private]
 ```
 
 ```Go
@@ -1284,6 +1357,7 @@ testRec fills x[i:] with all possible combinations of values in [1,max] and then
 
 ```
 searchKey: suffixarray.testSA
+tags: [private]
 ```
 
 ```Go
@@ -1296,6 +1370,7 @@ testSA tests the suffix array build function on the input x. It constructs the s
 
 ```
 searchKey: suffixarray.benchmarkNew
+tags: [private]
 ```
 
 ```Go
@@ -1308,6 +1383,7 @@ Of all possible inputs, the random bytes have the least amount of substring repe
 
 ```
 searchKey: suffixarray.makeText
+tags: [private]
 ```
 
 ```Go
@@ -1318,6 +1394,7 @@ func makeText(name string) ([]byte, error)
 
 ```
 searchKey: suffixarray.setBits
+tags: [private]
 ```
 
 ```Go
@@ -1328,6 +1405,7 @@ func setBits(bits int) (cleanup func())
 
 ```
 searchKey: suffixarray.BenchmarkNew
+tags: [private]
 ```
 
 ```Go
@@ -1338,6 +1416,7 @@ func BenchmarkNew(b *testing.B)
 
 ```
 searchKey: suffixarray.BenchmarkSaveRestore
+tags: [private]
 ```
 
 ```Go

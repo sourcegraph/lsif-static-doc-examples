@@ -4,7 +4,9 @@
     "identifier": "oobmigration",
     "newPage": true,
     "searchKey": "internal/oobmigration",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "getByIDQuery",
                 "newPage": false,
                 "searchKey": "oobmigration.getByIDQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "listQuery",
                 "newPage": false,
                 "searchKey": "oobmigration.listQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "updateDirectionQuery",
                 "newPage": false,
                 "searchKey": "oobmigration.updateDirectionQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "updateProgressQuery",
                 "newPage": false,
                 "searchKey": "oobmigration.updateProgressQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,9 +132,7 @@
                 "identifier": "MaxMigrationErrors",
                 "newPage": false,
                 "searchKey": "oobmigration.MaxMigrationErrors",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -142,7 +152,9 @@
                 "identifier": "addErrorQuery",
                 "newPage": false,
                 "searchKey": "oobmigration.addErrorQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -162,7 +174,9 @@
                 "identifier": "addErrorUpdateTimeQuery",
                 "newPage": false,
                 "searchKey": "oobmigration.addErrorUpdateTimeQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -182,7 +196,9 @@
                 "identifier": "addErrorPruneQuery",
                 "newPage": false,
                 "searchKey": "oobmigration.addErrorPruneQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -202,9 +218,7 @@
                 "identifier": "VersionOrderBefore",
                 "newPage": false,
                 "searchKey": "oobmigration.VersionOrderBefore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -224,9 +238,7 @@
                 "identifier": "VersionOrderEqual",
                 "newPage": false,
                 "searchKey": "oobmigration.VersionOrderEqual",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -246,9 +258,7 @@
                 "identifier": "VersionOrderAfter",
                 "newPage": false,
                 "searchKey": "oobmigration.VersionOrderAfter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -271,7 +281,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -289,9 +301,7 @@
                 "identifier": "ErrMigratorConflict",
                 "newPage": false,
                 "searchKey": "oobmigration.ErrMigratorConflict",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -311,9 +321,7 @@
                 "identifier": "ReturnEnterpriseMigrations",
                 "newPage": false,
                 "searchKey": "oobmigration.ReturnEnterpriseMigrations",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -333,7 +341,9 @@
                 "identifier": "testTime",
                 "newPage": false,
                 "searchKey": "oobmigration.testTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -353,7 +363,9 @@
                 "identifier": "testMigrations",
                 "newPage": false,
                 "searchKey": "oobmigration.testMigrations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -373,7 +385,9 @@
                 "identifier": "testEnterpriseMigrations",
                 "newPage": false,
                 "searchKey": "oobmigration.testEnterpriseMigrations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -396,7 +410,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -414,7 +430,9 @@
                 "identifier": "storeIface",
                 "newPage": false,
                 "searchKey": "oobmigration.storeIface",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -434,9 +452,7 @@
                 "identifier": "Migrator",
                 "newPage": false,
                 "searchKey": "oobmigration.Migrator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -456,7 +472,9 @@
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "oobmigration.operations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -474,7 +492,9 @@
                       "identifier": "newOperations",
                       "newPage": false,
                       "searchKey": "oobmigration.newOperations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -497,9 +517,7 @@
                 "identifier": "Runner",
                 "newPage": false,
                 "searchKey": "oobmigration.Runner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -517,9 +535,7 @@
                       "identifier": "NewRunnerWithDB",
                       "newPage": false,
                       "searchKey": "oobmigration.NewRunnerWithDB",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -539,7 +555,9 @@
                       "identifier": "newRunner",
                       "newPage": false,
                       "searchKey": "oobmigration.newRunner",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -559,9 +577,7 @@
                       "identifier": "Runner.Register",
                       "newPage": false,
                       "searchKey": "oobmigration.Runner.Register",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -581,9 +597,7 @@
                       "identifier": "Runner.Validate",
                       "newPage": false,
                       "searchKey": "oobmigration.Runner.Validate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -603,9 +617,7 @@
                       "identifier": "Runner.Start",
                       "newPage": false,
                       "searchKey": "oobmigration.Runner.Start",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -625,7 +637,9 @@
                       "identifier": "Runner.listMigrations",
                       "newPage": false,
                       "searchKey": "oobmigration.Runner.listMigrations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -645,7 +659,9 @@
                       "identifier": "Runner.ensureProcessorIsRunning",
                       "newPage": false,
                       "searchKey": "oobmigration.Runner.ensureProcessorIsRunning",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -665,9 +681,7 @@
                       "identifier": "Runner.Stop",
                       "newPage": false,
                       "searchKey": "oobmigration.Runner.Stop",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -690,7 +704,9 @@
                 "identifier": "migratorAndOption",
                 "newPage": false,
                 "searchKey": "oobmigration.migratorAndOption",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -710,9 +726,7 @@
                 "identifier": "MigratorOptions",
                 "newPage": false,
                 "searchKey": "oobmigration.MigratorOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -732,7 +746,9 @@
                 "identifier": "migrationStatusError",
                 "newPage": false,
                 "searchKey": "oobmigration.migrationStatusError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -750,7 +766,9 @@
                       "identifier": "migrationStatusError.Error",
                       "newPage": false,
                       "searchKey": "oobmigration.migrationStatusError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -773,7 +791,9 @@
                 "identifier": "migratorOptions",
                 "newPage": false,
                 "searchKey": "oobmigration.migratorOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -793,9 +813,7 @@
                 "identifier": "Migration",
                 "newPage": false,
                 "searchKey": "oobmigration.Migration",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -813,9 +831,7 @@
                       "identifier": "Migration.Complete",
                       "newPage": false,
                       "searchKey": "oobmigration.Migration.Complete",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -838,9 +854,7 @@
                 "identifier": "MigrationError",
                 "newPage": false,
                 "searchKey": "oobmigration.MigrationError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -860,9 +874,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "oobmigration.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -880,9 +892,7 @@
                       "identifier": "NewStoreWithDB",
                       "newPage": false,
                       "searchKey": "oobmigration.NewStoreWithDB",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -902,7 +912,9 @@
                       "identifier": "testStore",
                       "newPage": false,
                       "searchKey": "oobmigration.testStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -922,9 +934,7 @@
                       "identifier": "Store.With",
                       "newPage": false,
                       "searchKey": "oobmigration.Store.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -944,9 +954,7 @@
                       "identifier": "Store.Transact",
                       "newPage": false,
                       "searchKey": "oobmigration.Store.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -966,9 +974,7 @@
                       "identifier": "Store.GetByID",
                       "newPage": false,
                       "searchKey": "oobmigration.Store.GetByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -988,9 +994,7 @@
                       "identifier": "Store.List",
                       "newPage": false,
                       "searchKey": "oobmigration.Store.List",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1010,9 +1014,7 @@
                       "identifier": "Store.UpdateDirection",
                       "newPage": false,
                       "searchKey": "oobmigration.Store.UpdateDirection",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1032,9 +1034,7 @@
                       "identifier": "Store.UpdateProgress",
                       "newPage": false,
                       "searchKey": "oobmigration.Store.UpdateProgress",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1054,7 +1054,9 @@
                       "identifier": "Store.updateProgress",
                       "newPage": false,
                       "searchKey": "oobmigration.Store.updateProgress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1074,9 +1076,7 @@
                       "identifier": "Store.AddError",
                       "newPage": false,
                       "searchKey": "oobmigration.Store.AddError",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1096,7 +1096,9 @@
                       "identifier": "Store.addError",
                       "newPage": false,
                       "searchKey": "oobmigration.Store.addError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1119,9 +1121,7 @@
                 "identifier": "Version",
                 "newPage": false,
                 "searchKey": "oobmigration.Version",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1139,9 +1139,7 @@
                       "identifier": "NewVersion",
                       "newPage": false,
                       "searchKey": "oobmigration.NewVersion",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1161,7 +1159,9 @@
                       "identifier": "newVersionPtr",
                       "newPage": false,
                       "searchKey": "oobmigration.newVersionPtr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1181,9 +1181,7 @@
                       "identifier": "Version.String",
                       "newPage": false,
                       "searchKey": "oobmigration.Version.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1206,9 +1204,7 @@
                 "identifier": "VersionOrder",
                 "newPage": false,
                 "searchKey": "oobmigration.VersionOrder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1226,7 +1222,9 @@
                       "identifier": "compareVersions",
                       "newPage": false,
                       "searchKey": "oobmigration.compareVersions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1249,7 +1247,9 @@
                 "identifier": "MockMigrator",
                 "newPage": false,
                 "searchKey": "oobmigration.MockMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1267,7 +1267,9 @@
                       "identifier": "NewMockMigrator",
                       "newPage": false,
                       "searchKey": "oobmigration.NewMockMigrator",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1287,7 +1289,9 @@
                       "identifier": "NewMockMigratorFrom",
                       "newPage": false,
                       "searchKey": "oobmigration.NewMockMigratorFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1307,7 +1311,9 @@
                       "identifier": "MockMigrator.Down",
                       "newPage": false,
                       "searchKey": "oobmigration.MockMigrator.Down",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1327,7 +1333,9 @@
                       "identifier": "MockMigrator.Progress",
                       "newPage": false,
                       "searchKey": "oobmigration.MockMigrator.Progress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1347,7 +1355,9 @@
                       "identifier": "MockMigrator.Up",
                       "newPage": false,
                       "searchKey": "oobmigration.MockMigrator.Up",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1370,7 +1380,9 @@
                 "identifier": "MigratorDownFunc",
                 "newPage": false,
                 "searchKey": "oobmigration.MigratorDownFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1388,7 +1400,9 @@
                       "identifier": "MigratorDownFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorDownFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1408,7 +1422,9 @@
                       "identifier": "MigratorDownFunc.PushHook",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorDownFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1428,7 +1444,9 @@
                       "identifier": "MigratorDownFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorDownFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1448,7 +1466,9 @@
                       "identifier": "MigratorDownFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorDownFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1468,7 +1488,9 @@
                       "identifier": "MigratorDownFunc.nextHook",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorDownFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1488,7 +1510,9 @@
                       "identifier": "MigratorDownFunc.appendCall",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorDownFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1508,7 +1532,9 @@
                       "identifier": "MigratorDownFunc.History",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorDownFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1531,7 +1557,9 @@
                 "identifier": "MigratorDownFuncCall",
                 "newPage": false,
                 "searchKey": "oobmigration.MigratorDownFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1549,7 +1577,9 @@
                       "identifier": "MigratorDownFuncCall.Args",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorDownFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1569,7 +1599,9 @@
                       "identifier": "MigratorDownFuncCall.Results",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorDownFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1592,7 +1624,9 @@
                 "identifier": "MigratorProgressFunc",
                 "newPage": false,
                 "searchKey": "oobmigration.MigratorProgressFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1610,7 +1644,9 @@
                       "identifier": "MigratorProgressFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorProgressFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1630,7 +1666,9 @@
                       "identifier": "MigratorProgressFunc.PushHook",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorProgressFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1650,7 +1688,9 @@
                       "identifier": "MigratorProgressFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorProgressFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1670,7 +1710,9 @@
                       "identifier": "MigratorProgressFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorProgressFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1690,7 +1732,9 @@
                       "identifier": "MigratorProgressFunc.nextHook",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorProgressFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1710,7 +1754,9 @@
                       "identifier": "MigratorProgressFunc.appendCall",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorProgressFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1730,7 +1776,9 @@
                       "identifier": "MigratorProgressFunc.History",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorProgressFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1753,7 +1801,9 @@
                 "identifier": "MigratorProgressFuncCall",
                 "newPage": false,
                 "searchKey": "oobmigration.MigratorProgressFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1771,7 +1821,9 @@
                       "identifier": "MigratorProgressFuncCall.Args",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorProgressFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1791,7 +1843,9 @@
                       "identifier": "MigratorProgressFuncCall.Results",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorProgressFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1814,7 +1868,9 @@
                 "identifier": "MigratorUpFunc",
                 "newPage": false,
                 "searchKey": "oobmigration.MigratorUpFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1832,7 +1888,9 @@
                       "identifier": "MigratorUpFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorUpFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1852,7 +1910,9 @@
                       "identifier": "MigratorUpFunc.PushHook",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorUpFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1872,7 +1932,9 @@
                       "identifier": "MigratorUpFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorUpFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1892,7 +1954,9 @@
                       "identifier": "MigratorUpFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorUpFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1912,7 +1976,9 @@
                       "identifier": "MigratorUpFunc.nextHook",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorUpFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1932,7 +1998,9 @@
                       "identifier": "MigratorUpFunc.appendCall",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorUpFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1952,7 +2020,9 @@
                       "identifier": "MigratorUpFunc.History",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorUpFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1975,7 +2045,9 @@
                 "identifier": "MigratorUpFuncCall",
                 "newPage": false,
                 "searchKey": "oobmigration.MigratorUpFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1993,7 +2065,9 @@
                       "identifier": "MigratorUpFuncCall.Args",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorUpFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2013,7 +2087,9 @@
                       "identifier": "MigratorUpFuncCall.Results",
                       "newPage": false,
                       "searchKey": "oobmigration.MigratorUpFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2036,7 +2112,9 @@
                 "identifier": "MockStoreIface",
                 "newPage": false,
                 "searchKey": "oobmigration.MockStoreIface",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2054,7 +2132,9 @@
                       "identifier": "NewMockStoreIface",
                       "newPage": false,
                       "searchKey": "oobmigration.NewMockStoreIface",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2074,7 +2154,9 @@
                       "identifier": "NewMockStoreIfaceFrom",
                       "newPage": false,
                       "searchKey": "oobmigration.NewMockStoreIfaceFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2094,7 +2176,9 @@
                       "identifier": "MockStoreIface.AddError",
                       "newPage": false,
                       "searchKey": "oobmigration.MockStoreIface.AddError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2114,7 +2198,9 @@
                       "identifier": "MockStoreIface.List",
                       "newPage": false,
                       "searchKey": "oobmigration.MockStoreIface.List",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2134,7 +2220,9 @@
                       "identifier": "MockStoreIface.UpdateProgress",
                       "newPage": false,
                       "searchKey": "oobmigration.MockStoreIface.UpdateProgress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2157,7 +2245,9 @@
                 "identifier": "surrogateMockStoreIface",
                 "newPage": false,
                 "searchKey": "oobmigration.surrogateMockStoreIface",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2177,7 +2267,9 @@
                 "identifier": "StoreIfaceAddErrorFunc",
                 "newPage": false,
                 "searchKey": "oobmigration.StoreIfaceAddErrorFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2195,7 +2287,9 @@
                       "identifier": "StoreIfaceAddErrorFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceAddErrorFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2215,7 +2309,9 @@
                       "identifier": "StoreIfaceAddErrorFunc.PushHook",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceAddErrorFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2235,7 +2331,9 @@
                       "identifier": "StoreIfaceAddErrorFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceAddErrorFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2255,7 +2353,9 @@
                       "identifier": "StoreIfaceAddErrorFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceAddErrorFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2275,7 +2375,9 @@
                       "identifier": "StoreIfaceAddErrorFunc.nextHook",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceAddErrorFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2295,7 +2397,9 @@
                       "identifier": "StoreIfaceAddErrorFunc.appendCall",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceAddErrorFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2315,7 +2419,9 @@
                       "identifier": "StoreIfaceAddErrorFunc.History",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceAddErrorFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2338,7 +2444,9 @@
                 "identifier": "StoreIfaceAddErrorFuncCall",
                 "newPage": false,
                 "searchKey": "oobmigration.StoreIfaceAddErrorFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2356,7 +2464,9 @@
                       "identifier": "StoreIfaceAddErrorFuncCall.Args",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceAddErrorFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2376,7 +2486,9 @@
                       "identifier": "StoreIfaceAddErrorFuncCall.Results",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceAddErrorFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2399,7 +2511,9 @@
                 "identifier": "StoreIfaceListFunc",
                 "newPage": false,
                 "searchKey": "oobmigration.StoreIfaceListFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2417,7 +2531,9 @@
                       "identifier": "StoreIfaceListFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceListFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2437,7 +2553,9 @@
                       "identifier": "StoreIfaceListFunc.PushHook",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceListFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2457,7 +2575,9 @@
                       "identifier": "StoreIfaceListFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceListFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2477,7 +2597,9 @@
                       "identifier": "StoreIfaceListFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceListFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2497,7 +2619,9 @@
                       "identifier": "StoreIfaceListFunc.nextHook",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceListFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2517,7 +2641,9 @@
                       "identifier": "StoreIfaceListFunc.appendCall",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceListFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2537,7 +2663,9 @@
                       "identifier": "StoreIfaceListFunc.History",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceListFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2560,7 +2688,9 @@
                 "identifier": "StoreIfaceListFuncCall",
                 "newPage": false,
                 "searchKey": "oobmigration.StoreIfaceListFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2578,7 +2708,9 @@
                       "identifier": "StoreIfaceListFuncCall.Args",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceListFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2598,7 +2730,9 @@
                       "identifier": "StoreIfaceListFuncCall.Results",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceListFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2621,7 +2755,9 @@
                 "identifier": "StoreIfaceUpdateProgressFunc",
                 "newPage": false,
                 "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2639,7 +2775,9 @@
                       "identifier": "StoreIfaceUpdateProgressFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2659,7 +2797,9 @@
                       "identifier": "StoreIfaceUpdateProgressFunc.PushHook",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2679,7 +2819,9 @@
                       "identifier": "StoreIfaceUpdateProgressFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2699,7 +2841,9 @@
                       "identifier": "StoreIfaceUpdateProgressFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2719,7 +2863,9 @@
                       "identifier": "StoreIfaceUpdateProgressFunc.nextHook",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2739,7 +2885,9 @@
                       "identifier": "StoreIfaceUpdateProgressFunc.appendCall",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2759,7 +2907,9 @@
                       "identifier": "StoreIfaceUpdateProgressFunc.History",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2782,7 +2932,9 @@
                 "identifier": "StoreIfaceUpdateProgressFuncCall",
                 "newPage": false,
                 "searchKey": "oobmigration.StoreIfaceUpdateProgressFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2800,7 +2952,9 @@
                       "identifier": "StoreIfaceUpdateProgressFuncCall.Args",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceUpdateProgressFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2820,7 +2974,9 @@
                       "identifier": "StoreIfaceUpdateProgressFuncCall.Results",
                       "newPage": false,
                       "searchKey": "oobmigration.StoreIfaceUpdateProgressFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2846,7 +3002,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2864,7 +3022,9 @@
                 "identifier": "newMigrationStatusError",
                 "newPage": false,
                 "searchKey": "oobmigration.newMigrationStatusError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2884,7 +3044,9 @@
                 "identifier": "wrapMigrationErrors",
                 "newPage": false,
                 "searchKey": "oobmigration.wrapMigrationErrors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2904,7 +3066,9 @@
                 "identifier": "runMigrator",
                 "newPage": false,
                 "searchKey": "oobmigration.runMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2924,7 +3088,9 @@
                 "identifier": "runMigrationFunction",
                 "newPage": false,
                 "searchKey": "oobmigration.runMigrationFunction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2944,7 +3110,9 @@
                 "identifier": "updateProgress",
                 "newPage": false,
                 "searchKey": "oobmigration.updateProgress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2964,7 +3132,9 @@
                 "identifier": "runMigrationUp",
                 "newPage": false,
                 "searchKey": "oobmigration.runMigrationUp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2984,7 +3154,9 @@
                 "identifier": "runMigrationDown",
                 "newPage": false,
                 "searchKey": "oobmigration.runMigrationDown",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3004,7 +3176,9 @@
                 "identifier": "scanMigrations",
                 "newPage": false,
                 "searchKey": "oobmigration.scanMigrations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3024,7 +3198,9 @@
                 "identifier": "TestRunner",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3044,7 +3220,9 @@
                 "identifier": "TestRunnerError",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunnerError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3064,7 +3242,9 @@
                 "identifier": "TestRunnerRemovesCompleted",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunnerRemovesCompleted",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3084,7 +3264,9 @@
                 "identifier": "TestRunMigrator",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3104,7 +3286,9 @@
                 "identifier": "TestRunMigratorMigrationErrors",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunMigratorMigrationErrors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3124,7 +3308,9 @@
                 "identifier": "TestRunMigratorMigrationFinishesUp",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunMigratorMigrationFinishesUp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3144,7 +3330,9 @@
                 "identifier": "TestRunMigratorMigrationFinishesDown",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunMigratorMigrationFinishesDown",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3164,7 +3352,9 @@
                 "identifier": "TestRunMigratorMigrationChangesDirection",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunMigratorMigrationChangesDirection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3184,7 +3374,9 @@
                 "identifier": "TestRunMigratorMigrationDesyncedFromData",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunMigratorMigrationDesyncedFromData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3204,7 +3396,9 @@
                 "identifier": "runMigratorWrapped",
                 "newPage": false,
                 "searchKey": "oobmigration.runMigratorWrapped",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3224,7 +3418,9 @@
                 "identifier": "tickN",
                 "newPage": false,
                 "searchKey": "oobmigration.tickN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3244,7 +3440,9 @@
                 "identifier": "TestRunnerValidate",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunnerValidate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3264,7 +3462,9 @@
                 "identifier": "TestRunnerValidateUnfinishedUp",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunnerValidateUnfinishedUp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3284,7 +3484,9 @@
                 "identifier": "TestRunnerValidateUnfinishedDown",
                 "newPage": false,
                 "searchKey": "oobmigration.TestRunnerValidateUnfinishedDown",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3299,12 +3501,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/oobmigration#init",
+              "pathID": "/internal/oobmigration#init.store_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.store_test.go",
                 "newPage": false,
                 "searchKey": "oobmigration.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3324,7 +3528,9 @@
                 "identifier": "TestList",
                 "newPage": false,
                 "searchKey": "oobmigration.TestList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3344,7 +3550,9 @@
                 "identifier": "TestListEnterprise",
                 "newPage": false,
                 "searchKey": "oobmigration.TestListEnterprise",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3364,7 +3572,9 @@
                 "identifier": "TestUpdateDirection",
                 "newPage": false,
                 "searchKey": "oobmigration.TestUpdateDirection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3384,7 +3594,9 @@
                 "identifier": "TestUpdateProgress",
                 "newPage": false,
                 "searchKey": "oobmigration.TestUpdateProgress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3404,7 +3616,9 @@
                 "identifier": "TestAddError",
                 "newPage": false,
                 "searchKey": "oobmigration.TestAddError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3424,7 +3638,9 @@
                 "identifier": "TestAddErrorBounded",
                 "newPage": false,
                 "searchKey": "oobmigration.TestAddErrorBounded",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3444,7 +3660,9 @@
                 "identifier": "timePtr",
                 "newPage": false,
                 "searchKey": "oobmigration.timePtr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3464,7 +3682,9 @@
                 "identifier": "insertMigration",
                 "newPage": false,
                 "searchKey": "oobmigration.insertMigration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3484,7 +3704,9 @@
                 "identifier": "TestCompareVersions",
                 "newPage": false,
                 "searchKey": "oobmigration.TestCompareVersions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

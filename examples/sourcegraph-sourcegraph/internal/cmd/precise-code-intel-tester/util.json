@@ -4,7 +4,9 @@
     "identifier": "util",
     "newPage": true,
     "searchKey": "internal/cmd/precise-code-intel-tester/util",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "MaxDisplayLines",
                 "newPage": false,
                 "searchKey": "util.MaxDisplayLines",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "MaxDisplayWidth",
                 "newPage": false,
                 "searchKey": "util.MaxDisplayWidth",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,7 +107,9 @@
                 "identifier": "braille",
                 "newPage": false,
                 "searchKey": "util.braille",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -128,7 +132,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -146,9 +152,7 @@
                 "identifier": "ErrorPayload",
                 "newPage": false,
                 "searchKey": "util.ErrorPayload",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -168,9 +172,7 @@
                 "identifier": "GraphQLError",
                 "newPage": false,
                 "searchKey": "util.GraphQLError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -190,9 +192,7 @@
                 "identifier": "Limiter",
                 "newPage": false,
                 "searchKey": "util.Limiter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +210,7 @@
                       "identifier": "NewLimiter",
                       "newPage": false,
                       "searchKey": "util.NewLimiter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -232,9 +230,7 @@
                       "identifier": "Limiter.Acquire",
                       "newPage": false,
                       "searchKey": "util.Limiter.Acquire",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -254,9 +250,7 @@
                       "identifier": "Limiter.Release",
                       "newPage": false,
                       "searchKey": "util.Limiter.Release",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -276,9 +270,7 @@
                       "identifier": "Limiter.Close",
                       "newPage": false,
                       "searchKey": "util.Limiter.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -301,9 +293,7 @@
                 "identifier": "ParallelFn",
                 "newPage": false,
                 "searchKey": "util.ParallelFn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -323,7 +313,9 @@
                 "identifier": "errPair",
                 "newPage": false,
                 "searchKey": "util.errPair",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -343,7 +335,9 @@
                 "identifier": "pendingMap",
                 "newPage": false,
                 "searchKey": "util.pendingMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -361,7 +355,9 @@
                       "identifier": "newPendingMap",
                       "newPage": false,
                       "searchKey": "util.newPendingMap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -381,7 +377,9 @@
                       "identifier": "pendingMap.remove",
                       "newPage": false,
                       "searchKey": "util.pendingMap.remove",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -401,7 +399,9 @@
                       "identifier": "pendingMap.keys",
                       "newPage": false,
                       "searchKey": "util.pendingMap.keys",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -421,7 +421,9 @@
                       "identifier": "pendingMap.set",
                       "newPage": false,
                       "searchKey": "util.pendingMap.set",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -441,7 +443,9 @@
                       "identifier": "pendingMap.get",
                       "newPage": false,
                       "searchKey": "util.pendingMap.get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -461,7 +465,9 @@
                       "identifier": "pendingMap.size",
                       "newPage": false,
                       "searchKey": "util.pendingMap.size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -487,7 +493,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -505,9 +513,7 @@
                 "identifier": "SignalSensitiveContext",
                 "newPage": false,
                 "searchKey": "util.SignalSensitiveContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -527,9 +533,7 @@
                 "identifier": "QueryGraphQL",
                 "newPage": false,
                 "searchKey": "util.QueryGraphQL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -549,9 +553,7 @@
                 "identifier": "RunParallel",
                 "newPage": false,
                 "searchKey": "util.RunParallel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -571,7 +573,9 @@
                 "identifier": "runFunctions",
                 "newPage": false,
                 "searchKey": "util.runFunctions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -591,7 +595,9 @@
                 "identifier": "monitor",
                 "newPage": false,
                 "searchKey": "util.monitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -611,7 +617,9 @@
                 "identifier": "formatUpdate",
                 "newPage": false,
                 "searchKey": "util.formatUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -631,7 +639,9 @@
                 "identifier": "numLines",
                 "newPage": false,
                 "searchKey": "util.numLines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -651,7 +661,9 @@
                 "identifier": "formatProgressBar",
                 "newPage": false,
                 "searchKey": "util.formatProgressBar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -671,7 +683,9 @@
                 "identifier": "digits",
                 "newPage": false,
                 "searchKey": "util.digits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

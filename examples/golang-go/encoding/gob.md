@@ -385,7 +385,7 @@ See "Gobs of data" for a design discussion of the gob wire format: [https://blog
         * [func (t *CommonType) name() string](#CommonType.name)
     * [type arrayType struct](#arrayType)
         * [func newArrayType(name string) *arrayType](#newArrayType)
-        * [func (a *arrayType) init(elem gobType, len int)](#arrayType.init)
+        * [func (a *arrayType) init(elem gobType, len int)](#arrayType.init.type.go.0xc0579022e8)
         * [func (a *arrayType) safeString(seen map[typeId]bool) string](#arrayType.safeString)
         * [func (a *arrayType) string() string](#arrayType.string)
     * [type gobEncoderType struct](#gobEncoderType)
@@ -394,12 +394,12 @@ See "Gobs of data" for a design discussion of the gob wire format: [https://blog
         * [func (g *gobEncoderType) string() string](#gobEncoderType.string)
     * [type mapType struct](#mapType)
         * [func newMapType(name string) *mapType](#newMapType)
-        * [func (m *mapType) init(key, elem gobType)](#mapType.init)
+        * [func (m *mapType) init(key, elem gobType)](#mapType.init.type.go.0xc0579022e8)
         * [func (m *mapType) safeString(seen map[typeId]bool) string](#mapType.safeString)
         * [func (m *mapType) string() string](#mapType.string)
     * [type sliceType struct](#sliceType)
         * [func newSliceType(name string) *sliceType](#newSliceType)
-        * [func (s *sliceType) init(elem gobType)](#sliceType.init)
+        * [func (s *sliceType) init(elem gobType)](#sliceType.init.type.go.0xc0579022e8)
         * [func (s *sliceType) safeString(seen map[typeId]bool) string](#sliceType.safeString)
         * [func (s *sliceType) string() string](#sliceType.string)
     * [type fieldType struct](#fieldType)
@@ -583,7 +583,7 @@ See "Gobs of data" for a design discussion of the gob wire format: [https://blog
     * [func decString(i *decInstr, state *decoderState, value reflect.Value)](#decString)
     * [func ignoreUint8Array(i *decInstr, state *decoderState, value reflect.Value)](#ignoreUint8Array)
     * [func decodeIntoValue(state *decoderState, op decOp, isPtr bool, value reflect.Value, instr *decInstr) reflect.Value](#decodeIntoValue)
-    * [func init()](#init)
+    * [func init()](#init.decode.go)
     * [func allocValue(t reflect.Type) reflect.Value](#allocValue)
     * [func toInt(x uint64) int64](#toInt)
     * [func encBoolArray(state *encoderState, v reflect.Value) bool](#encBoolArray)
@@ -636,7 +636,7 @@ See "Gobs of data" for a design discussion of the gob wire format: [https://blog
     * [func catchError(err *error)](#catchError)
     * [func implementsInterface(typ, gobEncDecType reflect.Type) (success bool, indir int8)](#implementsInterface)
     * [func setTypeId(typ gobType)](#setTypeId)
-    * [func init()](#init)
+    * [func init()](#init.type.go)
     * [func isExported(name string) bool](#isExported)
     * [func isSent(field *reflect.StructField) bool](#isSent)
     * [func checkId(want, got typeId)](#checkId)
@@ -764,14 +764,11 @@ See "Gobs of data" for a design discussion of the gob wire format: [https://blog
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="tooBig" href="#tooBig">const tooBig</a>
 
 ```
 searchKey: gob.tooBig
+tags: [private]
 ```
 
 ```Go
@@ -784,6 +781,7 @@ tooBig provides a sanity check for sizes; used in several places. Upper limit of
 
 ```
 searchKey: gob.uint64Size
+tags: [private]
 ```
 
 ```Go
@@ -794,6 +792,7 @@ const uint64Size = 8
 
 ```
 searchKey: gob.singletonField
+tags: [private]
 ```
 
 ```Go
@@ -804,6 +803,7 @@ const singletonField = 0
 
 ```
 searchKey: gob.maxLength
+tags: [private]
 ```
 
 ```Go
@@ -817,6 +817,7 @@ Before we encode a message, we reserve space at the head of the buffer in which 
 
 ```
 searchKey: gob.xGob
+tags: [private]
 ```
 
 ```Go
@@ -830,6 +831,7 @@ externalEncoding bits
 
 ```
 searchKey: gob.xBinary
+tags: [private]
 ```
 
 ```Go
@@ -843,6 +845,7 @@ externalEncoding bits
 
 ```
 searchKey: gob.xText
+tags: [private]
 ```
 
 ```Go
@@ -856,6 +859,7 @@ externalEncoding bits
 
 ```
 searchKey: gob.firstUserId
+tags: [private]
 ```
 
 ```Go
@@ -865,14 +869,11 @@ const firstUserId = 64 // lowest id number granted to user
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="decArrayHelper" href="#decArrayHelper">var decArrayHelper</a>
 
 ```
 searchKey: gob.decArrayHelper
+tags: [private]
 ```
 
 ```Go
@@ -883,6 +884,7 @@ var decArrayHelper = ...
 
 ```
 searchKey: gob.decSliceHelper
+tags: [private]
 ```
 
 ```Go
@@ -893,6 +895,7 @@ var decSliceHelper = ...
 
 ```
 searchKey: gob.errBadUint
+tags: [private]
 ```
 
 ```Go
@@ -903,6 +906,7 @@ var errBadUint = errors.New("gob: encoded unsigned integer out of range")
 
 ```
 searchKey: gob.errBadType
+tags: [private]
 ```
 
 ```Go
@@ -913,6 +917,7 @@ var errBadType = errors.New("gob: unknown type id or corrupted data")
 
 ```
 searchKey: gob.errRange
+tags: [private]
 ```
 
 ```Go
@@ -923,6 +928,7 @@ var errRange = errors.New("gob: bad data: field numbers out of bounds")
 
 ```
 searchKey: gob.noValue
+tags: [private]
 ```
 
 ```Go
@@ -933,6 +939,7 @@ var noValue reflect.Value
 
 ```
 searchKey: gob.decOpTable
+tags: [private]
 ```
 
 ```Go
@@ -945,6 +952,7 @@ Index by Go types.
 
 ```
 searchKey: gob.decIgnoreOpMap
+tags: [private]
 ```
 
 ```Go
@@ -957,6 +965,7 @@ Indexed by gob types.  tComplex will be added during type.init().
 
 ```
 searchKey: gob.emptyStructType
+tags: [private]
 ```
 
 ```Go
@@ -967,6 +976,7 @@ var emptyStructType = reflect.TypeOf(emptyStruct{})
 
 ```
 searchKey: gob.errBadCount
+tags: [private]
 ```
 
 ```Go
@@ -977,6 +987,7 @@ var errBadCount = errors.New("invalid message length")
 
 ```
 searchKey: gob.debugFunc
+tags: [private]
 ```
 
 ```Go
@@ -989,6 +1000,7 @@ If debug.go is compiled into the program, debugFunc prints a human-readable repr
 
 ```
 searchKey: gob.encArrayHelper
+tags: [private]
 ```
 
 ```Go
@@ -999,6 +1011,7 @@ var encArrayHelper = ...
 
 ```
 searchKey: gob.encSliceHelper
+tags: [private]
 ```
 
 ```Go
@@ -1009,6 +1022,7 @@ var encSliceHelper = ...
 
 ```
 searchKey: gob.encBufferPool
+tags: [private]
 ```
 
 ```Go
@@ -1019,6 +1033,7 @@ var encBufferPool = ...
 
 ```
 searchKey: gob.encOpTable
+tags: [private]
 ```
 
 ```Go
@@ -1029,6 +1044,7 @@ var encOpTable = ...
 
 ```
 searchKey: gob.spaceForLength
+tags: [private]
 ```
 
 ```Go
@@ -1039,6 +1055,7 @@ var spaceForLength = make([]byte, maxLength)
 
 ```
 searchKey: gob.userTypeCache
+tags: [private]
 ```
 
 ```Go
@@ -1050,6 +1067,7 @@ var userTypeCache sync.Map // map[reflect.Type]*userTypeInfo
 
 ```
 searchKey: gob.gobEncoderInterfaceType
+tags: [private]
 ```
 
 ```Go
@@ -1060,6 +1078,7 @@ var gobEncoderInterfaceType = reflect.TypeOf((*GobEncoder)(nil)).Elem()
 
 ```
 searchKey: gob.gobDecoderInterfaceType
+tags: [private]
 ```
 
 ```Go
@@ -1070,6 +1089,7 @@ var gobDecoderInterfaceType = reflect.TypeOf((*GobDecoder)(nil)).Elem()
 
 ```
 searchKey: gob.binaryMarshalerInterfaceType
+tags: [private]
 ```
 
 ```Go
@@ -1080,6 +1100,7 @@ var binaryMarshalerInterfaceType = reflect.TypeOf((*encoding.BinaryMarshaler)(ni
 
 ```
 searchKey: gob.binaryUnmarshalerInterfaceType
+tags: [private]
 ```
 
 ```Go
@@ -1090,6 +1111,7 @@ var binaryUnmarshalerInterfaceType = reflect.TypeOf((*encoding.BinaryUnmarshaler
 
 ```
 searchKey: gob.textMarshalerInterfaceType
+tags: [private]
 ```
 
 ```Go
@@ -1100,6 +1122,7 @@ var textMarshalerInterfaceType = reflect.TypeOf((*encoding.TextMarshaler)(nil)).
 
 ```
 searchKey: gob.textUnmarshalerInterfaceType
+tags: [private]
 ```
 
 ```Go
@@ -1110,6 +1133,7 @@ var textUnmarshalerInterfaceType = reflect.TypeOf((*encoding.TextUnmarshaler)(ni
 
 ```
 searchKey: gob.nextId
+tags: [private]
 ```
 
 ```Go
@@ -1121,6 +1145,7 @@ var nextId typeId // incremented for each new type we build
 
 ```
 searchKey: gob.typeLock
+tags: [private]
 ```
 
 ```Go
@@ -1132,6 +1157,7 @@ var typeLock sync.Mutex // set while building a type
 
 ```
 searchKey: gob.types
+tags: [private]
 ```
 
 ```Go
@@ -1142,6 +1168,7 @@ var types = make(map[reflect.Type]gobType)
 
 ```
 searchKey: gob.idToType
+tags: [private]
 ```
 
 ```Go
@@ -1152,6 +1179,7 @@ var idToType = make(map[typeId]gobType)
 
 ```
 searchKey: gob.builtinIdToType
+tags: [private]
 ```
 
 ```Go
@@ -1163,6 +1191,7 @@ var builtinIdToType map[typeId]gobType // set in init() after builtins are estab
 
 ```
 searchKey: gob.tBool
+tags: [private]
 ```
 
 ```Go
@@ -1175,6 +1204,7 @@ Primordial types, needed during initialization. Always passed as pointers so the
 
 ```
 searchKey: gob.tInt
+tags: [private]
 ```
 
 ```Go
@@ -1185,6 +1215,7 @@ var tInt = bootstrapType("int", (*int)(nil), 2)
 
 ```
 searchKey: gob.tUint
+tags: [private]
 ```
 
 ```Go
@@ -1195,6 +1226,7 @@ var tUint = bootstrapType("uint", (*uint)(nil), 3)
 
 ```
 searchKey: gob.tFloat
+tags: [private]
 ```
 
 ```Go
@@ -1205,6 +1237,7 @@ var tFloat = bootstrapType("float", (*float64)(nil), 4)
 
 ```
 searchKey: gob.tBytes
+tags: [private]
 ```
 
 ```Go
@@ -1215,6 +1248,7 @@ var tBytes = bootstrapType("bytes", (*[]byte)(nil), 5)
 
 ```
 searchKey: gob.tString
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1259,7 @@ var tString = bootstrapType("string", (*string)(nil), 6)
 
 ```
 searchKey: gob.tComplex
+tags: [private]
 ```
 
 ```Go
@@ -1235,6 +1270,7 @@ var tComplex = bootstrapType("complex", (*complex128)(nil), 7)
 
 ```
 searchKey: gob.tInterface
+tags: [private]
 ```
 
 ```Go
@@ -1245,6 +1281,7 @@ var tInterface = bootstrapType("interface", (*interface{})(nil), 8)
 
 ```
 searchKey: gob.tReserved7
+tags: [private]
 ```
 
 ```Go
@@ -1257,6 +1294,7 @@ Reserve some Ids for compatible expansion
 
 ```
 searchKey: gob.tReserved6
+tags: [private]
 ```
 
 ```Go
@@ -1267,6 +1305,7 @@ var tReserved6 = bootstrapType("_reserved1", (*struct{ r6 int })(nil), 10)
 
 ```
 searchKey: gob.tReserved5
+tags: [private]
 ```
 
 ```Go
@@ -1277,6 +1316,7 @@ var tReserved5 = bootstrapType("_reserved1", (*struct{ r5 int })(nil), 11)
 
 ```
 searchKey: gob.tReserved4
+tags: [private]
 ```
 
 ```Go
@@ -1287,6 +1327,7 @@ var tReserved4 = bootstrapType("_reserved1", (*struct{ r4 int })(nil), 12)
 
 ```
 searchKey: gob.tReserved3
+tags: [private]
 ```
 
 ```Go
@@ -1297,6 +1338,7 @@ var tReserved3 = bootstrapType("_reserved1", (*struct{ r3 int })(nil), 13)
 
 ```
 searchKey: gob.tReserved2
+tags: [private]
 ```
 
 ```Go
@@ -1307,6 +1349,7 @@ var tReserved2 = bootstrapType("_reserved1", (*struct{ r2 int })(nil), 14)
 
 ```
 searchKey: gob.tReserved1
+tags: [private]
 ```
 
 ```Go
@@ -1317,6 +1360,7 @@ var tReserved1 = bootstrapType("_reserved1", (*struct{ r1 int })(nil), 15)
 
 ```
 searchKey: gob.tWireType
+tags: [private]
 ```
 
 ```Go
@@ -1329,6 +1373,7 @@ Predefined because it's needed by the Decoder
 
 ```
 searchKey: gob.wireTypeUserInfo
+tags: [private]
 ```
 
 ```Go
@@ -1340,6 +1385,7 @@ var wireTypeUserInfo *userTypeInfo // userTypeInfo of (*wireType)
 
 ```
 searchKey: gob.typeInfoMap
+tags: [private]
 ```
 
 ```Go
@@ -1352,6 +1398,7 @@ typeInfoMap is an atomic pointer to map[reflect.Type]*typeInfo. It's updated cop
 
 ```
 searchKey: gob.nameToConcreteType
+tags: [private]
 ```
 
 ```Go
@@ -1363,6 +1410,7 @@ var nameToConcreteType sync.Map // map[string]reflect.Type
 
 ```
 searchKey: gob.concreteTypeToName
+tags: [private]
 ```
 
 ```Go
@@ -1374,6 +1422,7 @@ var concreteTypeToName sync.Map // map[reflect.Type]string
 
 ```
 searchKey: gob.doFuzzTests
+tags: [private]
 ```
 
 ```Go
@@ -1384,6 +1433,7 @@ var doFuzzTests = flag.Bool("gob.fuzz", false, "run the fuzz tests, which are la
 
 ```
 searchKey: gob.encodeT
+tags: [private]
 ```
 
 ```Go
@@ -1394,6 +1444,7 @@ var encodeT = ...
 
 ```
 searchKey: gob.boolResult
+tags: [private]
 ```
 
 ```Go
@@ -1406,6 +1457,7 @@ The result of encoding a true boolean with field number 7
 
 ```
 searchKey: gob.signedResult
+tags: [private]
 ```
 
 ```Go
@@ -1418,6 +1470,7 @@ The result of encoding a number 17 with field number 7
 
 ```
 searchKey: gob.unsignedResult
+tags: [private]
 ```
 
 ```Go
@@ -1428,6 +1481,7 @@ var unsignedResult = []byte{0x07, 17}
 
 ```
 searchKey: gob.floatResult
+tags: [private]
 ```
 
 ```Go
@@ -1438,6 +1492,7 @@ var floatResult = []byte{0x07, 0xFE, 0x31, 0x40}
 
 ```
 searchKey: gob.complexResult
+tags: [private]
 ```
 
 ```Go
@@ -1450,6 +1505,7 @@ The result of encoding a number 17+19i with field number 7
 
 ```
 searchKey: gob.bytesResult
+tags: [private]
 ```
 
 ```Go
@@ -1462,6 +1518,7 @@ The result of encoding "hello" with field number 7
 
 ```
 searchKey: gob.singletons
+tags: [private]
 ```
 
 ```Go
@@ -1472,6 +1529,7 @@ var singletons = ...
 
 ```
 searchKey: gob.unsupportedValues
+tags: [private]
 ```
 
 ```Go
@@ -1487,6 +1545,7 @@ Types not supported at top level by the Encoder.
 
 ```
 searchKey: gob.testInt
+tags: [private]
 ```
 
 ```Go
@@ -1497,6 +1556,7 @@ var testInt int
 
 ```
 searchKey: gob.testFloat32
+tags: [private]
 ```
 
 ```Go
@@ -1507,6 +1567,7 @@ var testFloat32 float32
 
 ```
 searchKey: gob.testString
+tags: [private]
 ```
 
 ```Go
@@ -1517,6 +1578,7 @@ var testString string
 
 ```
 searchKey: gob.testSlice
+tags: [private]
 ```
 
 ```Go
@@ -1527,6 +1589,7 @@ var testSlice []string
 
 ```
 searchKey: gob.testMap
+tags: [private]
 ```
 
 ```Go
@@ -1537,6 +1600,7 @@ var testMap map[string]int
 
 ```
 searchKey: gob.testArray
+tags: [private]
 ```
 
 ```Go
@@ -1547,6 +1611,7 @@ var testArray [7]int
 
 ```
 searchKey: gob.singleTests
+tags: [private]
 ```
 
 ```Go
@@ -1557,6 +1622,7 @@ var singleTests = ...
 
 ```
 searchKey: gob.ignoreTests
+tags: [private]
 ```
 
 ```Go
@@ -1567,6 +1633,7 @@ var ignoreTests = ...
 
 ```
 searchKey: gob.badDataTests
+tags: [private]
 ```
 
 ```Go
@@ -1577,6 +1644,7 @@ var badDataTests = ...
 
 ```
 searchKey: gob.basicTypes
+tags: [private]
 ```
 
 ```Go
@@ -1585,14 +1653,11 @@ var basicTypes = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="decHelper" href="#decHelper">type decHelper func(state *std/encoding/gob.decoderState, v reflect.Value, length int, ovfl error) bool</a>
 
 ```
 searchKey: gob.decHelper
+tags: [private]
 ```
 
 ```Go
@@ -1603,6 +1668,7 @@ type decHelper func(state *decoderState, v reflect.Value, length int, ovfl error
 
 ```
 searchKey: gob.decoderState
+tags: [private]
 ```
 
 ```Go
@@ -1622,6 +1688,7 @@ decoderState is the execution state of an instance of the decoder. A new state i
 
 ```
 searchKey: gob.newDecodeState
+tags: [private]
 ```
 
 ```Go
@@ -1632,6 +1699,7 @@ func newDecodeState(buf *decBuffer) *decoderState
 
 ```
 searchKey: gob.newDecodeStateFromData
+tags: [private]
 ```
 
 ```Go
@@ -1642,6 +1710,7 @@ func newDecodeStateFromData(data []byte) *decoderState
 
 ```
 searchKey: gob.decoderState.decodeUint
+tags: [private]
 ```
 
 ```Go
@@ -1654,6 +1723,7 @@ decodeUint reads an encoded unsigned integer from state.r. Does not check for ov
 
 ```
 searchKey: gob.decoderState.decodeInt
+tags: [private]
 ```
 
 ```Go
@@ -1666,6 +1736,7 @@ decodeInt reads an encoded signed integer from state.r. Does not check for overf
 
 ```
 searchKey: gob.decoderState.getLength
+tags: [private]
 ```
 
 ```Go
@@ -1678,6 +1749,7 @@ getLength decodes the next uint and makes sure it is a possible size for a data 
 
 ```
 searchKey: gob.decBuffer
+tags: [private]
 ```
 
 ```Go
@@ -1693,6 +1765,7 @@ decBuffer is an extremely simple, fast implementation of a read-only byte buffer
 
 ```
 searchKey: gob.newDecBuffer
+tags: [private]
 ```
 
 ```Go
@@ -1703,6 +1776,7 @@ func newDecBuffer(data []byte) *decBuffer
 
 ```
 searchKey: gob.decBuffer.Read
+tags: [private]
 ```
 
 ```Go
@@ -1713,6 +1787,7 @@ func (d *decBuffer) Read(p []byte) (int, error)
 
 ```
 searchKey: gob.decBuffer.Drop
+tags: [private]
 ```
 
 ```Go
@@ -1723,6 +1798,7 @@ func (d *decBuffer) Drop(n int)
 
 ```
 searchKey: gob.decBuffer.Size
+tags: [private]
 ```
 
 ```Go
@@ -1735,6 +1811,7 @@ Size grows the buffer to exactly n bytes, so d.Bytes() will return a slice of le
 
 ```
 searchKey: gob.decBuffer.ReadByte
+tags: [private]
 ```
 
 ```Go
@@ -1745,6 +1822,7 @@ func (d *decBuffer) ReadByte() (byte, error)
 
 ```
 searchKey: gob.decBuffer.Len
+tags: [private]
 ```
 
 ```Go
@@ -1755,6 +1833,7 @@ func (d *decBuffer) Len() int
 
 ```
 searchKey: gob.decBuffer.Bytes
+tags: [private]
 ```
 
 ```Go
@@ -1765,6 +1844,7 @@ func (d *decBuffer) Bytes() []byte
 
 ```
 searchKey: gob.decBuffer.Reset
+tags: [private]
 ```
 
 ```Go
@@ -1775,6 +1855,7 @@ func (d *decBuffer) Reset()
 
 ```
 searchKey: gob.decOp
+tags: [private]
 ```
 
 ```Go
@@ -1787,6 +1868,7 @@ decOp is the signature of a decoding operator for a given type.
 
 ```
 searchKey: gob.decInstr
+tags: [private]
 ```
 
 ```Go
@@ -1804,6 +1886,7 @@ The 'instructions' of the decoding machine
 
 ```
 searchKey: gob.decEngine
+tags: [private]
 ```
 
 ```Go
@@ -1819,6 +1902,7 @@ The encoder engine is an array of instructions indexed by field number of the in
 
 ```
 searchKey: gob.emptyStruct
+tags: [private]
 ```
 
 ```Go
@@ -1831,7 +1915,6 @@ emptyStruct is the type we compile into when ignoring a struct value.
 
 ```
 searchKey: gob.Decoder
-tags: [exported]
 ```
 
 ```Go
@@ -1856,7 +1939,6 @@ The Decoder does only basic sanity checking on decoded input sizes, and its limi
 
 ```
 searchKey: gob.NewDecoder
-tags: [exported]
 ```
 
 ```Go
@@ -1869,6 +1951,7 @@ NewDecoder returns a new decoder that reads from the io.Reader. If r does not al
 
 ```
 searchKey: gob.Decoder.newDecoderState
+tags: [private]
 ```
 
 ```Go
@@ -1881,6 +1964,7 @@ We pass the bytes.Buffer separately for easier testing of the infrastructure wit
 
 ```
 searchKey: gob.Decoder.freeDecoderState
+tags: [private]
 ```
 
 ```Go
@@ -1891,6 +1975,7 @@ func (dec *Decoder) freeDecoderState(d *decoderState)
 
 ```
 searchKey: gob.Decoder.decodeSingle
+tags: [private]
 ```
 
 ```Go
@@ -1903,6 +1988,7 @@ decodeSingle decodes a top-level value that is not a struct and stores it in val
 
 ```
 searchKey: gob.Decoder.decodeStruct
+tags: [private]
 ```
 
 ```Go
@@ -1915,6 +2001,7 @@ decodeStruct decodes a top-level struct and stores it in value. Indir is for the
 
 ```
 searchKey: gob.Decoder.ignoreStruct
+tags: [private]
 ```
 
 ```Go
@@ -1927,6 +2014,7 @@ ignoreStruct discards the data for a struct with no destination.
 
 ```
 searchKey: gob.Decoder.ignoreSingle
+tags: [private]
 ```
 
 ```Go
@@ -1939,6 +2027,7 @@ ignoreSingle discards the data for a top-level non-struct value with no destinat
 
 ```
 searchKey: gob.Decoder.decodeArrayHelper
+tags: [private]
 ```
 
 ```Go
@@ -1951,6 +2040,7 @@ decodeArrayHelper does the work for decoding arrays and slices.
 
 ```
 searchKey: gob.Decoder.decodeArray
+tags: [private]
 ```
 
 ```Go
@@ -1963,6 +2053,7 @@ decodeArray decodes an array and stores it in value. The length is an unsigned i
 
 ```
 searchKey: gob.Decoder.decodeMap
+tags: [private]
 ```
 
 ```Go
@@ -1975,6 +2066,7 @@ decodeMap decodes a map and stores it in value. Maps are encoded as a length fol
 
 ```
 searchKey: gob.Decoder.ignoreArrayHelper
+tags: [private]
 ```
 
 ```Go
@@ -1987,6 +2079,7 @@ ignoreArrayHelper does the work for discarding arrays and slices.
 
 ```
 searchKey: gob.Decoder.ignoreArray
+tags: [private]
 ```
 
 ```Go
@@ -1999,6 +2092,7 @@ ignoreArray discards the data for an array value with no destination.
 
 ```
 searchKey: gob.Decoder.ignoreMap
+tags: [private]
 ```
 
 ```Go
@@ -2011,6 +2105,7 @@ ignoreMap discards the data for a map value with no destination.
 
 ```
 searchKey: gob.Decoder.decodeSlice
+tags: [private]
 ```
 
 ```Go
@@ -2023,6 +2118,7 @@ decodeSlice decodes a slice and stores it in value. Slices are encoded as an uns
 
 ```
 searchKey: gob.Decoder.ignoreSlice
+tags: [private]
 ```
 
 ```Go
@@ -2035,6 +2131,7 @@ ignoreSlice skips over the data for a slice value with no destination.
 
 ```
 searchKey: gob.Decoder.decodeInterface
+tags: [private]
 ```
 
 ```Go
@@ -2047,6 +2144,7 @@ decodeInterface decodes an interface value and stores it in value. Interfaces ar
 
 ```
 searchKey: gob.Decoder.ignoreInterface
+tags: [private]
 ```
 
 ```Go
@@ -2059,6 +2157,7 @@ ignoreInterface discards the data for an interface value with no destination.
 
 ```
 searchKey: gob.Decoder.decodeGobDecoder
+tags: [private]
 ```
 
 ```Go
@@ -2071,6 +2170,7 @@ decodeGobDecoder decodes something implementing the GobDecoder interface. The da
 
 ```
 searchKey: gob.Decoder.ignoreGobDecoder
+tags: [private]
 ```
 
 ```Go
@@ -2083,6 +2183,7 @@ ignoreGobDecoder discards the data for a GobDecoder value with no destination.
 
 ```
 searchKey: gob.Decoder.decOpFor
+tags: [private]
 ```
 
 ```Go
@@ -2095,6 +2196,7 @@ decOpFor returns the decoding op for the base type under rt and the indirection 
 
 ```
 searchKey: gob.Decoder.decIgnoreOpFor
+tags: [private]
 ```
 
 ```Go
@@ -2107,6 +2209,7 @@ decIgnoreOpFor returns the decoding op for a field that has no destination.
 
 ```
 searchKey: gob.Decoder.gobDecodeOpFor
+tags: [private]
 ```
 
 ```Go
@@ -2119,6 +2222,7 @@ gobDecodeOpFor returns the op for a type that is known to implement GobDecoder.
 
 ```
 searchKey: gob.Decoder.compatibleType
+tags: [private]
 ```
 
 ```Go
@@ -2131,6 +2235,7 @@ compatibleType asks: Are these two gob Types compatible? Answers the question fo
 
 ```
 searchKey: gob.Decoder.typeString
+tags: [private]
 ```
 
 ```Go
@@ -2143,6 +2248,7 @@ typeString returns a human-readable description of the type identified by remote
 
 ```
 searchKey: gob.Decoder.compileSingle
+tags: [private]
 ```
 
 ```Go
@@ -2155,6 +2261,7 @@ compileSingle compiles the decoder engine for a non-struct top-level value, incl
 
 ```
 searchKey: gob.Decoder.compileIgnoreSingle
+tags: [private]
 ```
 
 ```Go
@@ -2167,6 +2274,7 @@ compileIgnoreSingle compiles the decoder engine for a non-struct top-level value
 
 ```
 searchKey: gob.Decoder.compileDec
+tags: [private]
 ```
 
 ```Go
@@ -2179,6 +2287,7 @@ compileDec compiles the decoder engine for a value. If the value is not a struct
 
 ```
 searchKey: gob.Decoder.getDecEnginePtr
+tags: [private]
 ```
 
 ```Go
@@ -2191,6 +2300,7 @@ getDecEnginePtr returns the engine for the specified type.
 
 ```
 searchKey: gob.Decoder.getIgnoreEnginePtr
+tags: [private]
 ```
 
 ```Go
@@ -2203,6 +2313,7 @@ getIgnoreEnginePtr returns the engine for the specified type when the value is t
 
 ```
 searchKey: gob.Decoder.decodeValue
+tags: [private]
 ```
 
 ```Go
@@ -2215,6 +2326,7 @@ decodeValue decodes the data stream representing a value and stores it in value.
 
 ```
 searchKey: gob.Decoder.decodeIgnoredValue
+tags: [private]
 ```
 
 ```Go
@@ -2227,6 +2339,7 @@ decodeIgnoredValue decodes the data stream representing a value of the specified
 
 ```
 searchKey: gob.Decoder.recvType
+tags: [private]
 ```
 
 ```Go
@@ -2239,6 +2352,7 @@ recvType loads the definition of a type.
 
 ```
 searchKey: gob.Decoder.recvMessage
+tags: [private]
 ```
 
 ```Go
@@ -2251,6 +2365,7 @@ recvMessage reads the next count-delimited item from the input. It is the conver
 
 ```
 searchKey: gob.Decoder.readMessage
+tags: [private]
 ```
 
 ```Go
@@ -2263,6 +2378,7 @@ readMessage reads the next nbytes bytes from the input.
 
 ```
 searchKey: gob.Decoder.nextInt
+tags: [private]
 ```
 
 ```Go
@@ -2273,6 +2389,7 @@ func (dec *Decoder) nextInt() int64
 
 ```
 searchKey: gob.Decoder.nextUint
+tags: [private]
 ```
 
 ```Go
@@ -2283,6 +2400,7 @@ func (dec *Decoder) nextUint() uint64
 
 ```
 searchKey: gob.Decoder.decodeTypeSequence
+tags: [private]
 ```
 
 ```Go
@@ -2301,7 +2419,6 @@ and returns the type id of the next value. It returns -1 at EOF.  Upon return, t
 
 ```
 searchKey: gob.Decoder.Decode
-tags: [exported]
 ```
 
 ```Go
@@ -2314,7 +2431,6 @@ Decode reads the next value from the input stream and stores it in the data repr
 
 ```
 searchKey: gob.Decoder.DecodeValue
-tags: [exported]
 ```
 
 ```Go
@@ -2327,6 +2443,7 @@ DecodeValue reads the next value from the input stream. If v is the zero reflect
 
 ```
 searchKey: gob.encHelper
+tags: [private]
 ```
 
 ```Go
@@ -2337,6 +2454,7 @@ type encHelper func(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encoderState
+tags: [private]
 ```
 
 ```Go
@@ -2356,6 +2474,7 @@ encoderState is the global execution state of an instance of the encoder. Field 
 
 ```
 searchKey: gob.newEncoderState
+tags: [private]
 ```
 
 ```Go
@@ -2366,6 +2485,7 @@ func newEncoderState(b *encBuffer) *encoderState
 
 ```
 searchKey: gob.encoderState.encodeUint
+tags: [private]
 ```
 
 ```Go
@@ -2378,6 +2498,7 @@ encodeUint writes an encoded unsigned integer to state.b.
 
 ```
 searchKey: gob.encoderState.encodeInt
+tags: [private]
 ```
 
 ```Go
@@ -2390,6 +2511,7 @@ encodeInt writes an encoded signed integer to state.w. The low bit of the encodi
 
 ```
 searchKey: gob.encoderState.update
+tags: [private]
 ```
 
 ```Go
@@ -2402,6 +2524,7 @@ update emits a field number and updates the state to record its value for delta 
 
 ```
 searchKey: gob.encBuffer
+tags: [private]
 ```
 
 ```Go
@@ -2417,6 +2540,7 @@ encBuffer is an extremely simple, fast implementation of a write-only byte buffe
 
 ```
 searchKey: gob.encBuffer.writeByte
+tags: [private]
 ```
 
 ```Go
@@ -2427,6 +2551,7 @@ func (e *encBuffer) writeByte(c byte)
 
 ```
 searchKey: gob.encBuffer.Write
+tags: [private]
 ```
 
 ```Go
@@ -2437,6 +2562,7 @@ func (e *encBuffer) Write(p []byte) (int, error)
 
 ```
 searchKey: gob.encBuffer.WriteString
+tags: [private]
 ```
 
 ```Go
@@ -2447,6 +2573,7 @@ func (e *encBuffer) WriteString(s string)
 
 ```
 searchKey: gob.encBuffer.Len
+tags: [private]
 ```
 
 ```Go
@@ -2457,6 +2584,7 @@ func (e *encBuffer) Len() int
 
 ```
 searchKey: gob.encBuffer.Bytes
+tags: [private]
 ```
 
 ```Go
@@ -2467,6 +2595,7 @@ func (e *encBuffer) Bytes() []byte
 
 ```
 searchKey: gob.encBuffer.Reset
+tags: [private]
 ```
 
 ```Go
@@ -2477,6 +2606,7 @@ func (e *encBuffer) Reset()
 
 ```
 searchKey: gob.encOp
+tags: [private]
 ```
 
 ```Go
@@ -2489,6 +2619,7 @@ encOp is the signature of an encoding operator for a given type.
 
 ```
 searchKey: gob.encOpFor
+tags: [private]
 ```
 
 ```Go
@@ -2501,6 +2632,7 @@ encOpFor returns (a pointer to) the encoding op for the base type under rt and t
 
 ```
 searchKey: gob.gobEncodeOpFor
+tags: [private]
 ```
 
 ```Go
@@ -2513,6 +2645,7 @@ gobEncodeOpFor returns the op for a type that is known to implement GobEncoder.
 
 ```
 searchKey: gob.encInstr
+tags: [private]
 ```
 
 ```Go
@@ -2530,6 +2663,7 @@ The 'instructions' of the encoding machine
 
 ```
 searchKey: gob.encEngine
+tags: [private]
 ```
 
 ```Go
@@ -2544,6 +2678,7 @@ encEngine an array of instructions indexed by field number of the encoding data,
 
 ```
 searchKey: gob.compileEnc
+tags: [private]
 ```
 
 ```Go
@@ -2556,6 +2691,7 @@ compileEnc returns the engine to compile the type.
 
 ```
 searchKey: gob.getEncEngine
+tags: [private]
 ```
 
 ```Go
@@ -2568,6 +2704,7 @@ getEncEngine returns the engine to compile the type.
 
 ```
 searchKey: gob.buildEncEngine
+tags: [private]
 ```
 
 ```Go
@@ -2578,7 +2715,6 @@ func buildEncEngine(info *typeInfo, ut *userTypeInfo, building map[*typeInfo]boo
 
 ```
 searchKey: gob.Encoder
-tags: [exported]
 ```
 
 ```Go
@@ -2599,7 +2735,6 @@ An Encoder manages the transmission of type and data information to the other si
 
 ```
 searchKey: gob.NewEncoder
-tags: [exported]
 ```
 
 ```Go
@@ -2612,6 +2747,7 @@ NewEncoder returns a new encoder that will transmit on the io.Writer.
 
 ```
 searchKey: gob.Encoder.newEncoderState
+tags: [private]
 ```
 
 ```Go
@@ -2622,6 +2758,7 @@ func (enc *Encoder) newEncoderState(b *encBuffer) *encoderState
 
 ```
 searchKey: gob.Encoder.freeEncoderState
+tags: [private]
 ```
 
 ```Go
@@ -2632,6 +2769,7 @@ func (enc *Encoder) freeEncoderState(e *encoderState)
 
 ```
 searchKey: gob.Encoder.encodeSingle
+tags: [private]
 ```
 
 ```Go
@@ -2644,6 +2782,7 @@ encodeSingle encodes a single top-level non-struct value.
 
 ```
 searchKey: gob.Encoder.encodeStruct
+tags: [private]
 ```
 
 ```Go
@@ -2656,6 +2795,7 @@ encodeStruct encodes a single struct value.
 
 ```
 searchKey: gob.Encoder.encodeArray
+tags: [private]
 ```
 
 ```Go
@@ -2668,6 +2808,7 @@ encodeArray encodes an array.
 
 ```
 searchKey: gob.Encoder.encodeMap
+tags: [private]
 ```
 
 ```Go
@@ -2680,6 +2821,7 @@ encodeMap encodes a map as unsigned count followed by key:value pairs.
 
 ```
 searchKey: gob.Encoder.encodeInterface
+tags: [private]
 ```
 
 ```Go
@@ -2692,6 +2834,7 @@ encodeInterface encodes the interface value iv. To send an interface, we send a 
 
 ```
 searchKey: gob.Encoder.encodeGobEncoder
+tags: [private]
 ```
 
 ```Go
@@ -2704,6 +2847,7 @@ encGobEncoder encodes a value that implements the GobEncoder interface. The data
 
 ```
 searchKey: gob.Encoder.encode
+tags: [private]
 ```
 
 ```Go
@@ -2714,6 +2858,7 @@ func (enc *Encoder) encode(b *encBuffer, value reflect.Value, ut *userTypeInfo)
 
 ```
 searchKey: gob.Encoder.writer
+tags: [private]
 ```
 
 ```Go
@@ -2726,6 +2871,7 @@ writer() returns the innermost writer the encoder is using
 
 ```
 searchKey: gob.Encoder.pushWriter
+tags: [private]
 ```
 
 ```Go
@@ -2738,6 +2884,7 @@ pushWriter adds a writer to the encoder.
 
 ```
 searchKey: gob.Encoder.popWriter
+tags: [private]
 ```
 
 ```Go
@@ -2750,6 +2897,7 @@ popWriter pops the innermost writer.
 
 ```
 searchKey: gob.Encoder.setError
+tags: [private]
 ```
 
 ```Go
@@ -2760,6 +2908,7 @@ func (enc *Encoder) setError(err error)
 
 ```
 searchKey: gob.Encoder.writeMessage
+tags: [private]
 ```
 
 ```Go
@@ -2772,6 +2921,7 @@ writeMessage sends the data item preceded by a unsigned count of its length.
 
 ```
 searchKey: gob.Encoder.sendActualType
+tags: [private]
 ```
 
 ```Go
@@ -2784,6 +2934,7 @@ sendActualType sends the requested type, without further investigation, unless i
 
 ```
 searchKey: gob.Encoder.sendType
+tags: [private]
 ```
 
 ```Go
@@ -2796,7 +2947,6 @@ sendType sends the type info to the other side, if necessary.
 
 ```
 searchKey: gob.Encoder.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -2809,6 +2959,7 @@ Encode transmits the data item represented by the empty interface value, guarant
 
 ```
 searchKey: gob.Encoder.sendTypeDescriptor
+tags: [private]
 ```
 
 ```Go
@@ -2821,6 +2972,7 @@ sendTypeDescriptor makes sure the remote side knows about this type. It will sen
 
 ```
 searchKey: gob.Encoder.sendTypeId
+tags: [private]
 ```
 
 ```Go
@@ -2833,7 +2985,6 @@ sendTypeId sends the id, which must have already been defined.
 
 ```
 searchKey: gob.Encoder.EncodeValue
-tags: [exported]
 ```
 
 ```Go
@@ -2846,6 +2997,7 @@ EncodeValue transmits the data item represented by the reflection value, guarant
 
 ```
 searchKey: gob.gobError
+tags: [private]
 ```
 
 ```Go
@@ -2860,6 +3012,7 @@ A gobError is used to distinguish errors (panics) generated in this package.
 
 ```
 searchKey: gob.userTypeInfo
+tags: [private]
 ```
 
 ```Go
@@ -2880,6 +3033,7 @@ userTypeInfo stores the information associated with a type the user has handed t
 
 ```
 searchKey: gob.validUserType
+tags: [private]
 ```
 
 ```Go
@@ -2892,6 +3046,7 @@ validType returns, and saves, the information associated with user-provided type
 
 ```
 searchKey: gob.userType
+tags: [private]
 ```
 
 ```Go
@@ -2904,6 +3059,7 @@ userType returns, and saves, the information associated with user-provided type 
 
 ```
 searchKey: gob.typeId
+tags: [private]
 ```
 
 ```Go
@@ -2916,6 +3072,7 @@ A typeId represents a gob Type as an integer that can be passed on the wire. Int
 
 ```
 searchKey: gob.bootstrapType
+tags: [private]
 ```
 
 ```Go
@@ -2928,6 +3085,7 @@ used for building the basic types; called only from init().  the incoming interf
 
 ```
 searchKey: gob.typeId.gobType
+tags: [private]
 ```
 
 ```Go
@@ -2938,6 +3096,7 @@ func (t typeId) gobType() gobType
 
 ```
 searchKey: gob.typeId.string
+tags: [private]
 ```
 
 ```Go
@@ -2950,6 +3109,7 @@ string returns the string representation of the type associated with the typeId.
 
 ```
 searchKey: gob.typeId.name
+tags: [private]
 ```
 
 ```Go
@@ -2962,6 +3122,7 @@ Name returns the name of the type associated with the typeId.
 
 ```
 searchKey: gob.gobType
+tags: [private]
 ```
 
 ```Go
@@ -2978,6 +3139,7 @@ type gobType interface {
 
 ```
 searchKey: gob.newTypeObject
+tags: [private]
 ```
 
 ```Go
@@ -2990,6 +3152,7 @@ newTypeObject allocates a gobType for the reflection type rt. Unless ut represen
 
 ```
 searchKey: gob.getBaseType
+tags: [private]
 ```
 
 ```Go
@@ -3002,6 +3165,7 @@ getBaseType returns the Gob type describing the given reflect.Type's base type. 
 
 ```
 searchKey: gob.getType
+tags: [private]
 ```
 
 ```Go
@@ -3014,6 +3178,7 @@ getType returns the Gob type describing the given reflect.Type. Should be called
 
 ```
 searchKey: gob.getTypeUnlocked
+tags: [private]
 ```
 
 ```Go
@@ -3024,7 +3189,6 @@ func getTypeUnlocked(name string, rt reflect.Type) gobType
 
 ```
 searchKey: gob.CommonType
-tags: [exported]
 ```
 
 ```Go
@@ -3040,6 +3204,7 @@ CommonType holds elements of all types. It is a historical artifact, kept for bi
 
 ```
 searchKey: gob.CommonType.id
+tags: [private]
 ```
 
 ```Go
@@ -3050,6 +3215,7 @@ func (t *CommonType) id() typeId
 
 ```
 searchKey: gob.CommonType.setId
+tags: [private]
 ```
 
 ```Go
@@ -3060,6 +3226,7 @@ func (t *CommonType) setId(id typeId)
 
 ```
 searchKey: gob.CommonType.string
+tags: [private]
 ```
 
 ```Go
@@ -3070,6 +3237,7 @@ func (t *CommonType) string() string
 
 ```
 searchKey: gob.CommonType.safeString
+tags: [private]
 ```
 
 ```Go
@@ -3080,6 +3248,7 @@ func (t *CommonType) safeString(seen map[typeId]bool) string
 
 ```
 searchKey: gob.CommonType.name
+tags: [private]
 ```
 
 ```Go
@@ -3090,6 +3259,7 @@ func (t *CommonType) name() string
 
 ```
 searchKey: gob.arrayType
+tags: [private]
 ```
 
 ```Go
@@ -3106,16 +3276,18 @@ Array type
 
 ```
 searchKey: gob.newArrayType
+tags: [private]
 ```
 
 ```Go
 func newArrayType(name string) *arrayType
 ```
 
-#### <a id="arrayType.init" href="#arrayType.init">func (a *arrayType) init(elem gobType, len int)</a>
+#### <a id="arrayType.init.type.go.0xc0579022e8" href="#arrayType.init.type.go.0xc0579022e8">func (a *arrayType) init(elem gobType, len int)</a>
 
 ```
 searchKey: gob.arrayType.init
+tags: [private]
 ```
 
 ```Go
@@ -3126,6 +3298,7 @@ func (a *arrayType) init(elem gobType, len int)
 
 ```
 searchKey: gob.arrayType.safeString
+tags: [private]
 ```
 
 ```Go
@@ -3136,6 +3309,7 @@ func (a *arrayType) safeString(seen map[typeId]bool) string
 
 ```
 searchKey: gob.arrayType.string
+tags: [private]
 ```
 
 ```Go
@@ -3146,6 +3320,7 @@ func (a *arrayType) string() string
 
 ```
 searchKey: gob.gobEncoderType
+tags: [private]
 ```
 
 ```Go
@@ -3160,6 +3335,7 @@ GobEncoder type (something that implements the GobEncoder interface)
 
 ```
 searchKey: gob.newGobEncoderType
+tags: [private]
 ```
 
 ```Go
@@ -3170,6 +3346,7 @@ func newGobEncoderType(name string) *gobEncoderType
 
 ```
 searchKey: gob.gobEncoderType.safeString
+tags: [private]
 ```
 
 ```Go
@@ -3180,6 +3357,7 @@ func (g *gobEncoderType) safeString(seen map[typeId]bool) string
 
 ```
 searchKey: gob.gobEncoderType.string
+tags: [private]
 ```
 
 ```Go
@@ -3190,6 +3368,7 @@ func (g *gobEncoderType) string() string
 
 ```
 searchKey: gob.mapType
+tags: [private]
 ```
 
 ```Go
@@ -3206,16 +3385,18 @@ Map type
 
 ```
 searchKey: gob.newMapType
+tags: [private]
 ```
 
 ```Go
 func newMapType(name string) *mapType
 ```
 
-#### <a id="mapType.init" href="#mapType.init">func (m *mapType) init(key, elem gobType)</a>
+#### <a id="mapType.init.type.go.0xc0579022e8" href="#mapType.init.type.go.0xc0579022e8">func (m *mapType) init(key, elem gobType)</a>
 
 ```
 searchKey: gob.mapType.init
+tags: [private]
 ```
 
 ```Go
@@ -3226,6 +3407,7 @@ func (m *mapType) init(key, elem gobType)
 
 ```
 searchKey: gob.mapType.safeString
+tags: [private]
 ```
 
 ```Go
@@ -3236,6 +3418,7 @@ func (m *mapType) safeString(seen map[typeId]bool) string
 
 ```
 searchKey: gob.mapType.string
+tags: [private]
 ```
 
 ```Go
@@ -3246,6 +3429,7 @@ func (m *mapType) string() string
 
 ```
 searchKey: gob.sliceType
+tags: [private]
 ```
 
 ```Go
@@ -3261,16 +3445,18 @@ Slice type
 
 ```
 searchKey: gob.newSliceType
+tags: [private]
 ```
 
 ```Go
 func newSliceType(name string) *sliceType
 ```
 
-#### <a id="sliceType.init" href="#sliceType.init">func (s *sliceType) init(elem gobType)</a>
+#### <a id="sliceType.init.type.go.0xc0579022e8" href="#sliceType.init.type.go.0xc0579022e8">func (s *sliceType) init(elem gobType)</a>
 
 ```
 searchKey: gob.sliceType.init
+tags: [private]
 ```
 
 ```Go
@@ -3281,6 +3467,7 @@ func (s *sliceType) init(elem gobType)
 
 ```
 searchKey: gob.sliceType.safeString
+tags: [private]
 ```
 
 ```Go
@@ -3291,6 +3478,7 @@ func (s *sliceType) safeString(seen map[typeId]bool) string
 
 ```
 searchKey: gob.sliceType.string
+tags: [private]
 ```
 
 ```Go
@@ -3301,6 +3489,7 @@ func (s *sliceType) string() string
 
 ```
 searchKey: gob.fieldType
+tags: [private]
 ```
 
 ```Go
@@ -3316,6 +3505,7 @@ Struct type
 
 ```
 searchKey: gob.structType
+tags: [private]
 ```
 
 ```Go
@@ -3329,6 +3519,7 @@ type structType struct {
 
 ```
 searchKey: gob.newStructType
+tags: [private]
 ```
 
 ```Go
@@ -3339,6 +3530,7 @@ func newStructType(name string) *structType
 
 ```
 searchKey: gob.structType.safeString
+tags: [private]
 ```
 
 ```Go
@@ -3349,6 +3541,7 @@ func (s *structType) safeString(seen map[typeId]bool) string
 
 ```
 searchKey: gob.structType.string
+tags: [private]
 ```
 
 ```Go
@@ -3359,6 +3552,7 @@ func (s *structType) string() string
 
 ```
 searchKey: gob.wireType
+tags: [private]
 ```
 
 ```Go
@@ -3379,6 +3573,7 @@ Representation of the information we send and receive about this type. Each valu
 
 ```
 searchKey: gob.wireType.string
+tags: [private]
 ```
 
 ```Go
@@ -3389,6 +3584,7 @@ func (w *wireType) string() string
 
 ```
 searchKey: gob.typeInfo
+tags: [private]
 ```
 
 ```Go
@@ -3404,6 +3600,7 @@ type typeInfo struct {
 
 ```
 searchKey: gob.lookupTypeInfo
+tags: [private]
 ```
 
 ```Go
@@ -3414,6 +3611,7 @@ func lookupTypeInfo(rt reflect.Type) *typeInfo
 
 ```
 searchKey: gob.getTypeInfo
+tags: [private]
 ```
 
 ```Go
@@ -3424,6 +3622,7 @@ func getTypeInfo(ut *userTypeInfo) (*typeInfo, error)
 
 ```
 searchKey: gob.buildTypeInfo
+tags: [private]
 ```
 
 ```Go
@@ -3436,6 +3635,7 @@ buildTypeInfo constructs the type information for the type and stores it in the 
 
 ```
 searchKey: gob.mustGetTypeInfo
+tags: [private]
 ```
 
 ```Go
@@ -3448,7 +3648,6 @@ Called only when a panic is acceptable and unexpected.
 
 ```
 searchKey: gob.GobEncoder
-tags: [exported]
 ```
 
 ```Go
@@ -3468,7 +3667,6 @@ Note: Since gobs can be stored permanently, it is good design to guarantee the e
 
 ```
 searchKey: gob.GobDecoder
-tags: [exported]
 ```
 
 ```Go
@@ -3486,6 +3684,7 @@ GobDecoder is the interface describing data that provides its own routine for de
 
 ```
 searchKey: gob.EncodeT
+tags: [private]
 ```
 
 ```Go
@@ -3501,6 +3700,7 @@ Guarantee encoding format by comparing some encodings to hand-written values
 
 ```
 searchKey: gob.T0
+tags: [private]
 ```
 
 ```Go
@@ -3518,6 +3718,7 @@ These three structures have the same data with different indirections
 
 ```
 searchKey: gob.T1
+tags: [private]
 ```
 
 ```Go
@@ -3533,6 +3734,7 @@ type T1 struct {
 
 ```
 searchKey: gob.T2
+tags: [private]
 ```
 
 ```Go
@@ -3548,6 +3750,7 @@ type T2 struct {
 
 ```
 searchKey: gob.RT0
+tags: [private]
 ```
 
 ```Go
@@ -3562,6 +3765,7 @@ type RT0 struct {
 
 ```
 searchKey: gob.RT1
+tags: [private]
 ```
 
 ```Go
@@ -3577,6 +3781,7 @@ type RT1 struct {
 
 ```
 searchKey: gob.IT0
+tags: [private]
 ```
 
 ```Go
@@ -3600,6 +3805,7 @@ Like an RT0 but with fields we'll ignore on the decode side.
 
 ```
 searchKey: gob.Indirect
+tags: [private]
 ```
 
 ```Go
@@ -3614,6 +3820,7 @@ type Indirect struct {
 
 ```
 searchKey: gob.Direct
+tags: [private]
 ```
 
 ```Go
@@ -3628,6 +3835,7 @@ type Direct struct {
 
 ```
 searchKey: gob.Squarer
+tags: [private]
 ```
 
 ```Go
@@ -3642,6 +3850,7 @@ An interface with several implementations
 
 ```
 searchKey: gob.Int
+tags: [private]
 ```
 
 ```Go
@@ -3652,6 +3861,7 @@ type Int int
 
 ```
 searchKey: gob.Int.Square
+tags: [private]
 ```
 
 ```Go
@@ -3662,6 +3872,7 @@ func (i Int) Square() int
 
 ```
 searchKey: gob.Float
+tags: [private]
 ```
 
 ```Go
@@ -3672,6 +3883,7 @@ type Float float64
 
 ```
 searchKey: gob.Float.Square
+tags: [private]
 ```
 
 ```Go
@@ -3682,6 +3894,7 @@ func (f Float) Square() int
 
 ```
 searchKey: gob.Vector
+tags: [private]
 ```
 
 ```Go
@@ -3692,6 +3905,7 @@ type Vector []int
 
 ```
 searchKey: gob.Vector.Square
+tags: [private]
 ```
 
 ```Go
@@ -3702,6 +3916,7 @@ func (v Vector) Square() int
 
 ```
 searchKey: gob.Point
+tags: [private]
 ```
 
 ```Go
@@ -3714,6 +3929,7 @@ type Point struct {
 
 ```
 searchKey: gob.Point.Square
+tags: [private]
 ```
 
 ```Go
@@ -3724,6 +3940,7 @@ func (p Point) Square() int
 
 ```
 searchKey: gob.InterfaceItem
+tags: [private]
 ```
 
 ```Go
@@ -3741,6 +3958,7 @@ A struct with interfaces in it.
 
 ```
 searchKey: gob.NoInterfaceItem
+tags: [private]
 ```
 
 ```Go
@@ -3756,6 +3974,7 @@ The same struct without interfaces
 
 ```
 searchKey: gob.BasicInterfaceItem
+tags: [private]
 ```
 
 ```Go
@@ -3776,6 +3995,7 @@ A struct with all basic types, stored in interfaces.
 
 ```
 searchKey: gob.String
+tags: [private]
 ```
 
 ```Go
@@ -3786,6 +4006,7 @@ type String string
 
 ```
 searchKey: gob.PtrInterfaceItem
+tags: [private]
 ```
 
 ```Go
@@ -3799,6 +4020,7 @@ type PtrInterfaceItem struct {
 
 ```
 searchKey: gob.U
+tags: [private]
 ```
 
 ```Go
@@ -3814,6 +4036,7 @@ type U struct {
 
 ```
 searchKey: gob.OnTheFly
+tags: [private]
 ```
 
 ```Go
@@ -3828,6 +4051,7 @@ A type that won't be defined in the gob until we send it in an interface value.
 
 ```
 searchKey: gob.DT
+tags: [private]
 ```
 
 ```Go
@@ -3849,6 +4073,7 @@ type DT struct {
 
 ```
 searchKey: gob.newDT
+tags: [private]
 ```
 
 ```Go
@@ -3859,6 +4084,7 @@ func newDT() DT
 
 ```
 searchKey: gob.ET0
+tags: [private]
 ```
 
 ```Go
@@ -3872,6 +4098,7 @@ type ET0 struct {
 
 ```
 searchKey: gob.ET2
+tags: [private]
 ```
 
 ```Go
@@ -3884,6 +4111,7 @@ type ET2 struct {
 
 ```
 searchKey: gob.ET1
+tags: [private]
 ```
 
 ```Go
@@ -3898,6 +4126,7 @@ type ET1 struct {
 
 ```
 searchKey: gob.ET3
+tags: [private]
 ```
 
 ```Go
@@ -3914,6 +4143,7 @@ Like ET1 but with a different name for a field
 
 ```
 searchKey: gob.ET4
+tags: [private]
 ```
 
 ```Go
@@ -3930,6 +4160,7 @@ Like ET1 but with a different type for a field
 
 ```
 searchKey: gob.SingleTest
+tags: [private]
 ```
 
 ```Go
@@ -3944,6 +4175,7 @@ type SingleTest struct {
 
 ```
 searchKey: gob.interfaceIndirectTestI
+tags: [private]
 ```
 
 ```Go
@@ -3956,6 +4188,7 @@ type interfaceIndirectTestI interface {
 
 ```
 searchKey: gob.interfaceIndirectTestT
+tags: [private]
 ```
 
 ```Go
@@ -3966,6 +4199,7 @@ type interfaceIndirectTestT struct{}
 
 ```
 searchKey: gob.interfaceIndirectTestT.F
+tags: [private]
 ```
 
 ```Go
@@ -3976,6 +4210,7 @@ func (this *interfaceIndirectTestT) F() bool
 
 ```
 searchKey: gob.Struct0
+tags: [private]
 ```
 
 ```Go
@@ -3988,6 +4223,7 @@ type Struct0 struct {
 
 ```
 searchKey: gob.NewType0
+tags: [private]
 ```
 
 ```Go
@@ -4000,6 +4236,7 @@ type NewType0 struct {
 
 ```
 searchKey: gob.ignoreTest
+tags: [private]
 ```
 
 ```Go
@@ -4012,6 +4249,7 @@ type ignoreTest struct {
 
 ```
 searchKey: gob.Bug0Outer
+tags: [private]
 ```
 
 ```Go
@@ -4026,6 +4264,7 @@ Another bug from golang-nuts, involving nested interfaces.
 
 ```
 searchKey: gob.Bug0Inner
+tags: [private]
 ```
 
 ```Go
@@ -4038,6 +4277,7 @@ type Bug0Inner struct {
 
 ```
 searchKey: gob.Bug1Elem
+tags: [private]
 ```
 
 ```Go
@@ -4051,6 +4291,7 @@ type Bug1Elem struct {
 
 ```
 searchKey: gob.Bug1StructMap
+tags: [private]
 ```
 
 ```Go
@@ -4061,6 +4302,7 @@ type Bug1StructMap map[string]Bug1Elem
 
 ```
 searchKey: gob.Bug2
+tags: [private]
 ```
 
 ```Go
@@ -4079,6 +4321,7 @@ Should be able to have unrepresentable fields (chan, func, *chan etc.); we just 
 
 ```
 searchKey: gob.Bug3
+tags: [private]
 ```
 
 ```Go
@@ -4094,6 +4337,7 @@ Mutually recursive slices of structs caused problems.
 
 ```
 searchKey: gob.Bug4Public
+tags: [private]
 ```
 
 ```Go
@@ -4107,6 +4351,7 @@ type Bug4Public struct {
 
 ```
 searchKey: gob.Bug4Secret
+tags: [private]
 ```
 
 ```Go
@@ -4119,6 +4364,7 @@ type Bug4Secret struct {
 
 ```
 searchKey: gob.Z
+tags: [private]
 ```
 
 ```Go
@@ -4130,6 +4376,7 @@ type Z struct {
 
 ```
 searchKey: gob.badDataTest
+tags: [private]
 ```
 
 ```Go
@@ -4144,6 +4391,7 @@ type badDataTest struct {
 
 ```
 searchKey: gob.ByteStruct
+tags: [private]
 ```
 
 ```Go
@@ -4156,6 +4404,7 @@ type ByteStruct struct {
 
 ```
 searchKey: gob.ByteStruct.GobEncode
+tags: [private]
 ```
 
 ```Go
@@ -4166,6 +4415,7 @@ func (g *ByteStruct) GobEncode() ([]byte, error)
 
 ```
 searchKey: gob.ByteStruct.GobDecode
+tags: [private]
 ```
 
 ```Go
@@ -4176,6 +4426,7 @@ func (g *ByteStruct) GobDecode(data []byte) error
 
 ```
 searchKey: gob.StringStruct
+tags: [private]
 ```
 
 ```Go
@@ -4188,6 +4439,7 @@ type StringStruct struct {
 
 ```
 searchKey: gob.StringStruct.GobEncode
+tags: [private]
 ```
 
 ```Go
@@ -4198,6 +4450,7 @@ func (g *StringStruct) GobEncode() ([]byte, error)
 
 ```
 searchKey: gob.StringStruct.GobDecode
+tags: [private]
 ```
 
 ```Go
@@ -4208,6 +4461,7 @@ func (g *StringStruct) GobDecode(data []byte) error
 
 ```
 searchKey: gob.ArrayStruct
+tags: [private]
 ```
 
 ```Go
@@ -4220,6 +4474,7 @@ type ArrayStruct struct {
 
 ```
 searchKey: gob.ArrayStruct.GobEncode
+tags: [private]
 ```
 
 ```Go
@@ -4230,6 +4485,7 @@ func (a *ArrayStruct) GobEncode() ([]byte, error)
 
 ```
 searchKey: gob.ArrayStruct.GobDecode
+tags: [private]
 ```
 
 ```Go
@@ -4240,6 +4496,7 @@ func (a *ArrayStruct) GobDecode(data []byte) error
 
 ```
 searchKey: gob.Gobber
+tags: [private]
 ```
 
 ```Go
@@ -4250,6 +4507,7 @@ type Gobber int
 
 ```
 searchKey: gob.Gobber.GobEncode
+tags: [private]
 ```
 
 ```Go
@@ -4260,6 +4518,7 @@ func (g *Gobber) GobEncode() ([]byte, error)
 
 ```
 searchKey: gob.Gobber.GobDecode
+tags: [private]
 ```
 
 ```Go
@@ -4270,6 +4529,7 @@ func (g *Gobber) GobDecode(data []byte) error
 
 ```
 searchKey: gob.ValueGobber
+tags: [private]
 ```
 
 ```Go
@@ -4281,6 +4541,7 @@ type ValueGobber string // encodes with a value, decodes with a pointer.
 
 ```
 searchKey: gob.ValueGobber.GobEncode
+tags: [private]
 ```
 
 ```Go
@@ -4291,6 +4552,7 @@ func (v ValueGobber) GobEncode() ([]byte, error)
 
 ```
 searchKey: gob.ValueGobber.GobDecode
+tags: [private]
 ```
 
 ```Go
@@ -4301,6 +4563,7 @@ func (v *ValueGobber) GobDecode(data []byte) error
 
 ```
 searchKey: gob.BinaryGobber
+tags: [private]
 ```
 
 ```Go
@@ -4311,6 +4574,7 @@ type BinaryGobber int
 
 ```
 searchKey: gob.BinaryGobber.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -4321,6 +4585,7 @@ func (g *BinaryGobber) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: gob.BinaryGobber.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -4331,6 +4596,7 @@ func (g *BinaryGobber) UnmarshalBinary(data []byte) error
 
 ```
 searchKey: gob.BinaryValueGobber
+tags: [private]
 ```
 
 ```Go
@@ -4341,6 +4607,7 @@ type BinaryValueGobber string
 
 ```
 searchKey: gob.BinaryValueGobber.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -4351,6 +4618,7 @@ func (v BinaryValueGobber) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: gob.BinaryValueGobber.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -4361,6 +4629,7 @@ func (v *BinaryValueGobber) UnmarshalBinary(data []byte) error
 
 ```
 searchKey: gob.TextGobber
+tags: [private]
 ```
 
 ```Go
@@ -4371,6 +4640,7 @@ type TextGobber int
 
 ```
 searchKey: gob.TextGobber.MarshalText
+tags: [private]
 ```
 
 ```Go
@@ -4381,6 +4651,7 @@ func (g *TextGobber) MarshalText() ([]byte, error)
 
 ```
 searchKey: gob.TextGobber.UnmarshalText
+tags: [private]
 ```
 
 ```Go
@@ -4391,6 +4662,7 @@ func (g *TextGobber) UnmarshalText(data []byte) error
 
 ```
 searchKey: gob.TextValueGobber
+tags: [private]
 ```
 
 ```Go
@@ -4401,6 +4673,7 @@ type TextValueGobber string
 
 ```
 searchKey: gob.TextValueGobber.MarshalText
+tags: [private]
 ```
 
 ```Go
@@ -4411,6 +4684,7 @@ func (v TextValueGobber) MarshalText() ([]byte, error)
 
 ```
 searchKey: gob.TextValueGobber.UnmarshalText
+tags: [private]
 ```
 
 ```Go
@@ -4421,6 +4695,7 @@ func (v *TextValueGobber) UnmarshalText(data []byte) error
 
 ```
 searchKey: gob.GobTest0
+tags: [private]
 ```
 
 ```Go
@@ -4434,6 +4709,7 @@ type GobTest0 struct {
 
 ```
 searchKey: gob.GobTest1
+tags: [private]
 ```
 
 ```Go
@@ -4447,6 +4723,7 @@ type GobTest1 struct {
 
 ```
 searchKey: gob.GobTest2
+tags: [private]
 ```
 
 ```Go
@@ -4460,6 +4737,7 @@ type GobTest2 struct {
 
 ```
 searchKey: gob.GobTest3
+tags: [private]
 ```
 
 ```Go
@@ -4475,6 +4753,7 @@ type GobTest3 struct {
 
 ```
 searchKey: gob.GobTest4
+tags: [private]
 ```
 
 ```Go
@@ -4490,6 +4769,7 @@ type GobTest4 struct {
 
 ```
 searchKey: gob.GobTest5
+tags: [private]
 ```
 
 ```Go
@@ -4505,6 +4785,7 @@ type GobTest5 struct {
 
 ```
 searchKey: gob.GobTest6
+tags: [private]
 ```
 
 ```Go
@@ -4523,6 +4804,7 @@ type GobTest6 struct {
 
 ```
 searchKey: gob.GobTest7
+tags: [private]
 ```
 
 ```Go
@@ -4541,6 +4823,7 @@ type GobTest7 struct {
 
 ```
 searchKey: gob.GobTestIgnoreEncoder
+tags: [private]
 ```
 
 ```Go
@@ -4553,6 +4836,7 @@ type GobTestIgnoreEncoder struct {
 
 ```
 searchKey: gob.GobTestValueEncDec
+tags: [private]
 ```
 
 ```Go
@@ -4566,6 +4850,7 @@ type GobTestValueEncDec struct {
 
 ```
 searchKey: gob.GobTestIndirectEncDec
+tags: [private]
 ```
 
 ```Go
@@ -4579,6 +4864,7 @@ type GobTestIndirectEncDec struct {
 
 ```
 searchKey: gob.GobTestArrayEncDec
+tags: [private]
 ```
 
 ```Go
@@ -4592,6 +4878,7 @@ type GobTestArrayEncDec struct {
 
 ```
 searchKey: gob.GobTestIndirectArrayEncDec
+tags: [private]
 ```
 
 ```Go
@@ -4605,6 +4892,7 @@ type GobTestIndirectArrayEncDec struct {
 
 ```
 searchKey: gob.gobDecoderBug0
+tags: [private]
 ```
 
 ```Go
@@ -4617,6 +4905,7 @@ type gobDecoderBug0 struct {
 
 ```
 searchKey: gob.gobDecoderBug0.String
+tags: [private]
 ```
 
 ```Go
@@ -4627,6 +4916,7 @@ func (br *gobDecoderBug0) String() string
 
 ```
 searchKey: gob.gobDecoderBug0.GobEncode
+tags: [private]
 ```
 
 ```Go
@@ -4637,6 +4927,7 @@ func (br *gobDecoderBug0) GobEncode() ([]byte, error)
 
 ```
 searchKey: gob.gobDecoderBug0.GobDecode
+tags: [private]
 ```
 
 ```Go
@@ -4647,6 +4938,7 @@ func (br *gobDecoderBug0) GobDecode(b []byte) error
 
 ```
 searchKey: gob.isZeroBug
+tags: [private]
 ```
 
 ```Go
@@ -4665,6 +4957,7 @@ Another bug: this caused a crash with the new Go1 Time type. We throw in a gob-e
 
 ```
 searchKey: gob.isZeroBugArray
+tags: [private]
 ```
 
 ```Go
@@ -4675,6 +4968,7 @@ type isZeroBugArray [2]uint8
 
 ```
 searchKey: gob.isZeroBugArray.GobEncode
+tags: [private]
 ```
 
 ```Go
@@ -4687,6 +4981,7 @@ Receiver is value, not pointer, to test isZero of array.
 
 ```
 searchKey: gob.isZeroBugArray.GobDecode
+tags: [private]
 ```
 
 ```Go
@@ -4697,6 +4992,7 @@ func (a *isZeroBugArray) GobDecode(data []byte) error
 
 ```
 searchKey: gob.isZeroBugInterface
+tags: [private]
 ```
 
 ```Go
@@ -4709,6 +5005,7 @@ type isZeroBugInterface struct {
 
 ```
 searchKey: gob.isZeroBugInterface.GobEncode
+tags: [private]
 ```
 
 ```Go
@@ -4719,6 +5016,7 @@ func (i isZeroBugInterface) GobEncode() (b []byte, e error)
 
 ```
 searchKey: gob.isZeroBugInterface.GobDecode
+tags: [private]
 ```
 
 ```Go
@@ -4729,6 +5027,7 @@ func (i *isZeroBugInterface) GobDecode(data []byte) error
 
 ```
 searchKey: gob.Bench
+tags: [private]
 ```
 
 ```Go
@@ -4744,6 +5043,7 @@ type Bench struct {
 
 ```
 searchKey: gob.benchmarkBuf
+tags: [private]
 ```
 
 ```Go
@@ -4759,6 +5059,7 @@ benchmarkBuf is a read buffer we can reset
 
 ```
 searchKey: gob.benchmarkBuf.Read
+tags: [private]
 ```
 
 ```Go
@@ -4769,6 +5070,7 @@ func (b *benchmarkBuf) Read(p []byte) (n int, err error)
 
 ```
 searchKey: gob.benchmarkBuf.ReadByte
+tags: [private]
 ```
 
 ```Go
@@ -4779,6 +5081,7 @@ func (b *benchmarkBuf) ReadByte() (c byte, err error)
 
 ```
 searchKey: gob.benchmarkBuf.reset
+tags: [private]
 ```
 
 ```Go
@@ -4789,6 +5092,7 @@ func (b *benchmarkBuf) reset()
 
 ```
 searchKey: gob.typeT
+tags: [private]
 ```
 
 ```Go
@@ -4802,6 +5106,7 @@ type typeT struct {
 
 ```
 searchKey: gob.Bar
+tags: [private]
 ```
 
 ```Go
@@ -4814,6 +5119,7 @@ type Bar struct {
 
 ```
 searchKey: gob.Foo
+tags: [private]
 ```
 
 ```Go
@@ -4836,6 +5142,7 @@ This structure has pointers and refers to itself, making it a good test case.
 
 ```
 searchKey: gob.N1
+tags: [private]
 ```
 
 ```Go
@@ -4846,6 +5153,7 @@ type N1 struct{}
 
 ```
 searchKey: gob.N2
+tags: [private]
 ```
 
 ```Go
@@ -4854,14 +5162,11 @@ type N2 struct{}
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="decBoolArray" href="#decBoolArray">func decBoolArray(state *decoderState, v reflect.Value, length int, ovfl error) bool</a>
 
 ```
 searchKey: gob.decBoolArray
+tags: [private]
 ```
 
 ```Go
@@ -4872,6 +5177,7 @@ func decBoolArray(state *decoderState, v reflect.Value, length int, ovfl error) 
 
 ```
 searchKey: gob.decBoolSlice
+tags: [private]
 ```
 
 ```Go
@@ -4882,6 +5188,7 @@ func decBoolSlice(state *decoderState, v reflect.Value, length int, ovfl error) 
 
 ```
 searchKey: gob.decComplex64Array
+tags: [private]
 ```
 
 ```Go
@@ -4892,6 +5199,7 @@ func decComplex64Array(state *decoderState, v reflect.Value, length int, ovfl er
 
 ```
 searchKey: gob.decComplex64Slice
+tags: [private]
 ```
 
 ```Go
@@ -4902,6 +5210,7 @@ func decComplex64Slice(state *decoderState, v reflect.Value, length int, ovfl er
 
 ```
 searchKey: gob.decComplex128Array
+tags: [private]
 ```
 
 ```Go
@@ -4912,6 +5221,7 @@ func decComplex128Array(state *decoderState, v reflect.Value, length int, ovfl e
 
 ```
 searchKey: gob.decComplex128Slice
+tags: [private]
 ```
 
 ```Go
@@ -4922,6 +5232,7 @@ func decComplex128Slice(state *decoderState, v reflect.Value, length int, ovfl e
 
 ```
 searchKey: gob.decFloat32Array
+tags: [private]
 ```
 
 ```Go
@@ -4932,6 +5243,7 @@ func decFloat32Array(state *decoderState, v reflect.Value, length int, ovfl erro
 
 ```
 searchKey: gob.decFloat32Slice
+tags: [private]
 ```
 
 ```Go
@@ -4942,6 +5254,7 @@ func decFloat32Slice(state *decoderState, v reflect.Value, length int, ovfl erro
 
 ```
 searchKey: gob.decFloat64Array
+tags: [private]
 ```
 
 ```Go
@@ -4952,6 +5265,7 @@ func decFloat64Array(state *decoderState, v reflect.Value, length int, ovfl erro
 
 ```
 searchKey: gob.decFloat64Slice
+tags: [private]
 ```
 
 ```Go
@@ -4962,6 +5276,7 @@ func decFloat64Slice(state *decoderState, v reflect.Value, length int, ovfl erro
 
 ```
 searchKey: gob.decIntArray
+tags: [private]
 ```
 
 ```Go
@@ -4972,6 +5287,7 @@ func decIntArray(state *decoderState, v reflect.Value, length int, ovfl error) b
 
 ```
 searchKey: gob.decIntSlice
+tags: [private]
 ```
 
 ```Go
@@ -4982,6 +5298,7 @@ func decIntSlice(state *decoderState, v reflect.Value, length int, ovfl error) b
 
 ```
 searchKey: gob.decInt16Array
+tags: [private]
 ```
 
 ```Go
@@ -4992,6 +5309,7 @@ func decInt16Array(state *decoderState, v reflect.Value, length int, ovfl error)
 
 ```
 searchKey: gob.decInt16Slice
+tags: [private]
 ```
 
 ```Go
@@ -5002,6 +5320,7 @@ func decInt16Slice(state *decoderState, v reflect.Value, length int, ovfl error)
 
 ```
 searchKey: gob.decInt32Array
+tags: [private]
 ```
 
 ```Go
@@ -5012,6 +5331,7 @@ func decInt32Array(state *decoderState, v reflect.Value, length int, ovfl error)
 
 ```
 searchKey: gob.decInt32Slice
+tags: [private]
 ```
 
 ```Go
@@ -5022,6 +5342,7 @@ func decInt32Slice(state *decoderState, v reflect.Value, length int, ovfl error)
 
 ```
 searchKey: gob.decInt64Array
+tags: [private]
 ```
 
 ```Go
@@ -5032,6 +5353,7 @@ func decInt64Array(state *decoderState, v reflect.Value, length int, ovfl error)
 
 ```
 searchKey: gob.decInt64Slice
+tags: [private]
 ```
 
 ```Go
@@ -5042,6 +5364,7 @@ func decInt64Slice(state *decoderState, v reflect.Value, length int, ovfl error)
 
 ```
 searchKey: gob.decInt8Array
+tags: [private]
 ```
 
 ```Go
@@ -5052,6 +5375,7 @@ func decInt8Array(state *decoderState, v reflect.Value, length int, ovfl error) 
 
 ```
 searchKey: gob.decInt8Slice
+tags: [private]
 ```
 
 ```Go
@@ -5062,6 +5386,7 @@ func decInt8Slice(state *decoderState, v reflect.Value, length int, ovfl error) 
 
 ```
 searchKey: gob.decStringArray
+tags: [private]
 ```
 
 ```Go
@@ -5072,6 +5397,7 @@ func decStringArray(state *decoderState, v reflect.Value, length int, ovfl error
 
 ```
 searchKey: gob.decStringSlice
+tags: [private]
 ```
 
 ```Go
@@ -5082,6 +5408,7 @@ func decStringSlice(state *decoderState, v reflect.Value, length int, ovfl error
 
 ```
 searchKey: gob.decUintArray
+tags: [private]
 ```
 
 ```Go
@@ -5092,6 +5419,7 @@ func decUintArray(state *decoderState, v reflect.Value, length int, ovfl error) 
 
 ```
 searchKey: gob.decUintSlice
+tags: [private]
 ```
 
 ```Go
@@ -5102,6 +5430,7 @@ func decUintSlice(state *decoderState, v reflect.Value, length int, ovfl error) 
 
 ```
 searchKey: gob.decUint16Array
+tags: [private]
 ```
 
 ```Go
@@ -5112,6 +5441,7 @@ func decUint16Array(state *decoderState, v reflect.Value, length int, ovfl error
 
 ```
 searchKey: gob.decUint16Slice
+tags: [private]
 ```
 
 ```Go
@@ -5122,6 +5452,7 @@ func decUint16Slice(state *decoderState, v reflect.Value, length int, ovfl error
 
 ```
 searchKey: gob.decUint32Array
+tags: [private]
 ```
 
 ```Go
@@ -5132,6 +5463,7 @@ func decUint32Array(state *decoderState, v reflect.Value, length int, ovfl error
 
 ```
 searchKey: gob.decUint32Slice
+tags: [private]
 ```
 
 ```Go
@@ -5142,6 +5474,7 @@ func decUint32Slice(state *decoderState, v reflect.Value, length int, ovfl error
 
 ```
 searchKey: gob.decUint64Array
+tags: [private]
 ```
 
 ```Go
@@ -5152,6 +5485,7 @@ func decUint64Array(state *decoderState, v reflect.Value, length int, ovfl error
 
 ```
 searchKey: gob.decUint64Slice
+tags: [private]
 ```
 
 ```Go
@@ -5162,6 +5496,7 @@ func decUint64Slice(state *decoderState, v reflect.Value, length int, ovfl error
 
 ```
 searchKey: gob.decUintptrArray
+tags: [private]
 ```
 
 ```Go
@@ -5172,6 +5507,7 @@ func decUintptrArray(state *decoderState, v reflect.Value, length int, ovfl erro
 
 ```
 searchKey: gob.decUintptrSlice
+tags: [private]
 ```
 
 ```Go
@@ -5182,6 +5518,7 @@ func decUintptrSlice(state *decoderState, v reflect.Value, length int, ovfl erro
 
 ```
 searchKey: gob.overflow
+tags: [private]
 ```
 
 ```Go
@@ -5192,6 +5529,7 @@ func overflow(name string) error
 
 ```
 searchKey: gob.decodeUintReader
+tags: [private]
 ```
 
 ```Go
@@ -5204,6 +5542,7 @@ decodeUintReader reads an encoded unsigned integer from an io.Reader. Used only 
 
 ```
 searchKey: gob.ignoreUint
+tags: [private]
 ```
 
 ```Go
@@ -5216,6 +5555,7 @@ ignoreUint discards a uint value with no destination.
 
 ```
 searchKey: gob.ignoreTwoUints
+tags: [private]
 ```
 
 ```Go
@@ -5228,6 +5568,7 @@ ignoreTwoUints discards a uint value with no destination. It's used to skip comp
 
 ```
 searchKey: gob.decAlloc
+tags: [private]
 ```
 
 ```Go
@@ -5240,6 +5581,7 @@ decAlloc takes a value and returns a settable value that can be assigned to. If 
 
 ```
 searchKey: gob.decBool
+tags: [private]
 ```
 
 ```Go
@@ -5252,6 +5594,7 @@ decBool decodes a uint and stores it as a boolean in value.
 
 ```
 searchKey: gob.decInt8
+tags: [private]
 ```
 
 ```Go
@@ -5264,6 +5607,7 @@ decInt8 decodes an integer and stores it as an int8 in value.
 
 ```
 searchKey: gob.decUint8
+tags: [private]
 ```
 
 ```Go
@@ -5276,6 +5620,7 @@ decUint8 decodes an unsigned integer and stores it as a uint8 in value.
 
 ```
 searchKey: gob.decInt16
+tags: [private]
 ```
 
 ```Go
@@ -5288,6 +5633,7 @@ decInt16 decodes an integer and stores it as an int16 in value.
 
 ```
 searchKey: gob.decUint16
+tags: [private]
 ```
 
 ```Go
@@ -5300,6 +5646,7 @@ decUint16 decodes an unsigned integer and stores it as a uint16 in value.
 
 ```
 searchKey: gob.decInt32
+tags: [private]
 ```
 
 ```Go
@@ -5312,6 +5659,7 @@ decInt32 decodes an integer and stores it as an int32 in value.
 
 ```
 searchKey: gob.decUint32
+tags: [private]
 ```
 
 ```Go
@@ -5324,6 +5672,7 @@ decUint32 decodes an unsigned integer and stores it as a uint32 in value.
 
 ```
 searchKey: gob.decInt64
+tags: [private]
 ```
 
 ```Go
@@ -5336,6 +5685,7 @@ decInt64 decodes an integer and stores it as an int64 in value.
 
 ```
 searchKey: gob.decUint64
+tags: [private]
 ```
 
 ```Go
@@ -5348,6 +5698,7 @@ decUint64 decodes an unsigned integer and stores it as a uint64 in value.
 
 ```
 searchKey: gob.float64FromBits
+tags: [private]
 ```
 
 ```Go
@@ -5360,6 +5711,7 @@ Floating-point numbers are transmitted as uint64s holding the bits of the underl
 
 ```
 searchKey: gob.float32FromBits
+tags: [private]
 ```
 
 ```Go
@@ -5372,6 +5724,7 @@ float32FromBits decodes an unsigned integer, treats it as a 32-bit floating-poin
 
 ```
 searchKey: gob.decFloat32
+tags: [private]
 ```
 
 ```Go
@@ -5384,6 +5737,7 @@ decFloat32 decodes an unsigned integer, treats it as a 32-bit floating-point num
 
 ```
 searchKey: gob.decFloat64
+tags: [private]
 ```
 
 ```Go
@@ -5396,6 +5750,7 @@ decFloat64 decodes an unsigned integer, treats it as a 64-bit floating-point num
 
 ```
 searchKey: gob.decComplex64
+tags: [private]
 ```
 
 ```Go
@@ -5408,6 +5763,7 @@ decComplex64 decodes a pair of unsigned integers, treats them as a pair of float
 
 ```
 searchKey: gob.decComplex128
+tags: [private]
 ```
 
 ```Go
@@ -5420,6 +5776,7 @@ decComplex128 decodes a pair of unsigned integers, treats them as a pair of floa
 
 ```
 searchKey: gob.decUint8Slice
+tags: [private]
 ```
 
 ```Go
@@ -5432,6 +5789,7 @@ decUint8Slice decodes a byte slice and stores in value a slice header describing
 
 ```
 searchKey: gob.decString
+tags: [private]
 ```
 
 ```Go
@@ -5444,6 +5802,7 @@ decString decodes byte array and stores in value a string header describing the 
 
 ```
 searchKey: gob.ignoreUint8Array
+tags: [private]
 ```
 
 ```Go
@@ -5456,6 +5815,7 @@ ignoreUint8Array skips over the data for a byte slice value with no destination.
 
 ```
 searchKey: gob.decodeIntoValue
+tags: [private]
 ```
 
 ```Go
@@ -5464,10 +5824,11 @@ func decodeIntoValue(state *decoderState, op decOp, isPtr bool, value reflect.Va
 
 decodeIntoValue is a helper for map decoding. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.decode.go" href="#init.decode.go">func init()</a>
 
 ```
 searchKey: gob.init
+tags: [private]
 ```
 
 ```Go
@@ -5478,6 +5839,7 @@ func init()
 
 ```
 searchKey: gob.allocValue
+tags: [private]
 ```
 
 ```Go
@@ -5490,6 +5852,7 @@ Gob depends on being able to take the address of zeroed Values it creates, so us
 
 ```
 searchKey: gob.toInt
+tags: [private]
 ```
 
 ```Go
@@ -5502,6 +5865,7 @@ toInt turns an encoded uint64 into an int, according to the marshaling rules.
 
 ```
 searchKey: gob.encBoolArray
+tags: [private]
 ```
 
 ```Go
@@ -5512,6 +5876,7 @@ func encBoolArray(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encBoolSlice
+tags: [private]
 ```
 
 ```Go
@@ -5522,6 +5887,7 @@ func encBoolSlice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encComplex64Array
+tags: [private]
 ```
 
 ```Go
@@ -5532,6 +5898,7 @@ func encComplex64Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encComplex64Slice
+tags: [private]
 ```
 
 ```Go
@@ -5542,6 +5909,7 @@ func encComplex64Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encComplex128Array
+tags: [private]
 ```
 
 ```Go
@@ -5552,6 +5920,7 @@ func encComplex128Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encComplex128Slice
+tags: [private]
 ```
 
 ```Go
@@ -5562,6 +5931,7 @@ func encComplex128Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encFloat32Array
+tags: [private]
 ```
 
 ```Go
@@ -5572,6 +5942,7 @@ func encFloat32Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encFloat32Slice
+tags: [private]
 ```
 
 ```Go
@@ -5582,6 +5953,7 @@ func encFloat32Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encFloat64Array
+tags: [private]
 ```
 
 ```Go
@@ -5592,6 +5964,7 @@ func encFloat64Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encFloat64Slice
+tags: [private]
 ```
 
 ```Go
@@ -5602,6 +5975,7 @@ func encFloat64Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encIntArray
+tags: [private]
 ```
 
 ```Go
@@ -5612,6 +5986,7 @@ func encIntArray(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encIntSlice
+tags: [private]
 ```
 
 ```Go
@@ -5622,6 +5997,7 @@ func encIntSlice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encInt16Array
+tags: [private]
 ```
 
 ```Go
@@ -5632,6 +6008,7 @@ func encInt16Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encInt16Slice
+tags: [private]
 ```
 
 ```Go
@@ -5642,6 +6019,7 @@ func encInt16Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encInt32Array
+tags: [private]
 ```
 
 ```Go
@@ -5652,6 +6030,7 @@ func encInt32Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encInt32Slice
+tags: [private]
 ```
 
 ```Go
@@ -5662,6 +6041,7 @@ func encInt32Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encInt64Array
+tags: [private]
 ```
 
 ```Go
@@ -5672,6 +6052,7 @@ func encInt64Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encInt64Slice
+tags: [private]
 ```
 
 ```Go
@@ -5682,6 +6063,7 @@ func encInt64Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encInt8Array
+tags: [private]
 ```
 
 ```Go
@@ -5692,6 +6074,7 @@ func encInt8Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encInt8Slice
+tags: [private]
 ```
 
 ```Go
@@ -5702,6 +6085,7 @@ func encInt8Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encStringArray
+tags: [private]
 ```
 
 ```Go
@@ -5712,6 +6096,7 @@ func encStringArray(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encStringSlice
+tags: [private]
 ```
 
 ```Go
@@ -5722,6 +6107,7 @@ func encStringSlice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encUintArray
+tags: [private]
 ```
 
 ```Go
@@ -5732,6 +6118,7 @@ func encUintArray(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encUintSlice
+tags: [private]
 ```
 
 ```Go
@@ -5742,6 +6129,7 @@ func encUintSlice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encUint16Array
+tags: [private]
 ```
 
 ```Go
@@ -5752,6 +6140,7 @@ func encUint16Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encUint16Slice
+tags: [private]
 ```
 
 ```Go
@@ -5762,6 +6151,7 @@ func encUint16Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encUint32Array
+tags: [private]
 ```
 
 ```Go
@@ -5772,6 +6162,7 @@ func encUint32Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encUint32Slice
+tags: [private]
 ```
 
 ```Go
@@ -5782,6 +6173,7 @@ func encUint32Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encUint64Array
+tags: [private]
 ```
 
 ```Go
@@ -5792,6 +6184,7 @@ func encUint64Array(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encUint64Slice
+tags: [private]
 ```
 
 ```Go
@@ -5802,6 +6195,7 @@ func encUint64Slice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encUintptrArray
+tags: [private]
 ```
 
 ```Go
@@ -5812,6 +6206,7 @@ func encUintptrArray(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encUintptrSlice
+tags: [private]
 ```
 
 ```Go
@@ -5822,6 +6217,7 @@ func encUintptrSlice(state *encoderState, v reflect.Value) bool
 
 ```
 searchKey: gob.encIndirect
+tags: [private]
 ```
 
 ```Go
@@ -5834,6 +6230,7 @@ encIndirect dereferences pv indir times and returns the result.
 
 ```
 searchKey: gob.encBool
+tags: [private]
 ```
 
 ```Go
@@ -5846,6 +6243,7 @@ encBool encodes the bool referenced by v as an unsigned 0 or 1.
 
 ```
 searchKey: gob.encInt
+tags: [private]
 ```
 
 ```Go
@@ -5858,6 +6256,7 @@ encInt encodes the signed integer (int int8 int16 int32 int64) referenced by v.
 
 ```
 searchKey: gob.encUint
+tags: [private]
 ```
 
 ```Go
@@ -5870,6 +6269,7 @@ encUint encodes the unsigned integer (uint uint8 uint16 uint32 uint64 uintptr) r
 
 ```
 searchKey: gob.floatBits
+tags: [private]
 ```
 
 ```Go
@@ -5882,6 +6282,7 @@ floatBits returns a uint64 holding the bits of a floating-point number. Floating
 
 ```
 searchKey: gob.encFloat
+tags: [private]
 ```
 
 ```Go
@@ -5894,6 +6295,7 @@ encFloat encodes the floating point value (float32 float64) referenced by v.
 
 ```
 searchKey: gob.encComplex
+tags: [private]
 ```
 
 ```Go
@@ -5906,6 +6308,7 @@ encComplex encodes the complex value (complex64 complex128) referenced by v. Com
 
 ```
 searchKey: gob.encUint8Array
+tags: [private]
 ```
 
 ```Go
@@ -5918,6 +6321,7 @@ encUint8Array encodes the byte array referenced by v. Byte arrays are encoded as
 
 ```
 searchKey: gob.encString
+tags: [private]
 ```
 
 ```Go
@@ -5930,6 +6334,7 @@ encString encodes the string referenced by v. Strings are encoded as an unsigned
 
 ```
 searchKey: gob.encStructTerminator
+tags: [private]
 ```
 
 ```Go
@@ -5942,6 +6347,7 @@ encStructTerminator encodes the end of an encoded struct as delta field number o
 
 ```
 searchKey: gob.valid
+tags: [private]
 ```
 
 ```Go
@@ -5954,6 +6360,7 @@ valid reports whether the value is valid and a non-nil pointer. (Slices, maps, a
 
 ```
 searchKey: gob.encodeReflectValue
+tags: [private]
 ```
 
 ```Go
@@ -5966,6 +6373,7 @@ encodeReflectValue is a helper for maps. It encodes the value v.
 
 ```
 searchKey: gob.isZero
+tags: [private]
 ```
 
 ```Go
@@ -5978,6 +6386,7 @@ isZero reports whether the value is the zero of its type.
 
 ```
 searchKey: gob.errorf
+tags: [private]
 ```
 
 ```Go
@@ -5990,6 +6399,7 @@ errorf is like error_ but takes Printf-style arguments to construct an error. It
 
 ```
 searchKey: gob.error_
+tags: [private]
 ```
 
 ```Go
@@ -6002,6 +6412,7 @@ error wraps the argument error and uses it as the argument to panic.
 
 ```
 searchKey: gob.catchError
+tags: [private]
 ```
 
 ```Go
@@ -6014,6 +6425,7 @@ catchError is meant to be used as a deferred function to turn a panic(gobError) 
 
 ```
 searchKey: gob.implementsInterface
+tags: [private]
 ```
 
 ```Go
@@ -6026,16 +6438,18 @@ implementsInterface reports whether the type implements the gobEncoder/gobDecode
 
 ```
 searchKey: gob.setTypeId
+tags: [private]
 ```
 
 ```Go
 func setTypeId(typ gobType)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.type.go" href="#init.type.go">func init()</a>
 
 ```
 searchKey: gob.init
+tags: [private]
 ```
 
 ```Go
@@ -6046,6 +6460,7 @@ func init()
 
 ```
 searchKey: gob.isExported
+tags: [private]
 ```
 
 ```Go
@@ -6058,6 +6473,7 @@ isExported reports whether this is an exported - upper case - name.
 
 ```
 searchKey: gob.isSent
+tags: [private]
 ```
 
 ```Go
@@ -6070,6 +6486,7 @@ isSent reports whether this struct field is to be transmitted. It will be transm
 
 ```
 searchKey: gob.checkId
+tags: [private]
 ```
 
 ```Go
@@ -6080,7 +6497,6 @@ func checkId(want, got typeId)
 
 ```
 searchKey: gob.RegisterName
-tags: [exported]
 ```
 
 ```Go
@@ -6093,7 +6509,6 @@ RegisterName is like Register but uses the provided name rather than the type's 
 
 ```
 searchKey: gob.Register
-tags: [exported]
 ```
 
 ```Go
@@ -6106,6 +6521,7 @@ Register records a type, identified by a value for that type, under its internal
 
 ```
 searchKey: gob.registerBasics
+tags: [private]
 ```
 
 ```Go
@@ -6116,6 +6532,7 @@ func registerBasics()
 
 ```
 searchKey: gob.testError
+tags: [private]
 ```
 
 ```Go
@@ -6128,6 +6545,7 @@ testError is meant to be used as a deferred function to turn a panic(gobError) i
 
 ```
 searchKey: gob.TestUintCodec
+tags: [private]
 ```
 
 ```Go
@@ -6140,6 +6558,7 @@ Test basic encode/decode routines for unsigned integers
 
 ```
 searchKey: gob.verifyInt
+tags: [private]
 ```
 
 ```Go
@@ -6150,6 +6569,7 @@ func verifyInt(i int64, t *testing.T)
 
 ```
 searchKey: gob.TestIntCodec
+tags: [private]
 ```
 
 ```Go
@@ -6162,6 +6582,7 @@ Test basic encode/decode routines for signed integers
 
 ```
 searchKey: gob.TestScalarEncInstructions
+tags: [private]
 ```
 
 ```Go
@@ -6174,6 +6595,7 @@ Test instruction execution for encoding. Do not run the machine yet; instead do 
 
 ```
 searchKey: gob.execDec
+tags: [private]
 ```
 
 ```Go
@@ -6184,6 +6606,7 @@ func execDec(instr *decInstr, state *decoderState, t *testing.T, value reflect.V
 
 ```
 searchKey: gob.TestScalarDecInstructions
+tags: [private]
 ```
 
 ```Go
@@ -6196,6 +6619,7 @@ Test instruction execution for decoding. Do not run the machine yet; instead do 
 
 ```
 searchKey: gob.TestEndToEnd
+tags: [private]
 ```
 
 ```Go
@@ -6206,6 +6630,7 @@ func TestEndToEnd(t *testing.T)
 
 ```
 searchKey: gob.TestOverflow
+tags: [private]
 ```
 
 ```Go
@@ -6216,6 +6641,7 @@ func TestOverflow(t *testing.T)
 
 ```
 searchKey: gob.TestNesting
+tags: [private]
 ```
 
 ```Go
@@ -6226,6 +6652,7 @@ func TestNesting(t *testing.T)
 
 ```
 searchKey: gob.TestAutoIndirection
+tags: [private]
 ```
 
 ```Go
@@ -6236,6 +6663,7 @@ func TestAutoIndirection(t *testing.T)
 
 ```
 searchKey: gob.TestReorderedFields
+tags: [private]
 ```
 
 ```Go
@@ -6246,6 +6674,7 @@ func TestReorderedFields(t *testing.T)
 
 ```
 searchKey: gob.TestIgnoredFields
+tags: [private]
 ```
 
 ```Go
@@ -6256,6 +6685,7 @@ func TestIgnoredFields(t *testing.T)
 
 ```
 searchKey: gob.TestBadRecursiveType
+tags: [private]
 ```
 
 ```Go
@@ -6266,6 +6696,7 @@ func TestBadRecursiveType(t *testing.T)
 
 ```
 searchKey: gob.TestIndirectSliceMapArray
+tags: [private]
 ```
 
 ```Go
@@ -6276,6 +6707,7 @@ func TestIndirectSliceMapArray(t *testing.T)
 
 ```
 searchKey: gob.TestInterface
+tags: [private]
 ```
 
 ```Go
@@ -6286,6 +6718,7 @@ func TestInterface(t *testing.T)
 
 ```
 searchKey: gob.TestInterfaceBasic
+tags: [private]
 ```
 
 ```Go
@@ -6296,6 +6729,7 @@ func TestInterfaceBasic(t *testing.T)
 
 ```
 searchKey: gob.TestInterfacePointer
+tags: [private]
 ```
 
 ```Go
@@ -6308,6 +6742,7 @@ We'll send pointers; should receive values. Also check that we can register T bu
 
 ```
 searchKey: gob.TestIgnoreInterface
+tags: [private]
 ```
 
 ```Go
@@ -6318,6 +6753,7 @@ func TestIgnoreInterface(t *testing.T)
 
 ```
 searchKey: gob.TestUnexportedFields
+tags: [private]
 ```
 
 ```Go
@@ -6328,6 +6764,7 @@ func TestUnexportedFields(t *testing.T)
 
 ```
 searchKey: gob.TestDebugSingleton
+tags: [private]
 ```
 
 ```Go
@@ -6338,6 +6775,7 @@ func TestDebugSingleton(t *testing.T)
 
 ```
 searchKey: gob.TestDebugStruct
+tags: [private]
 ```
 
 ```Go
@@ -6348,6 +6786,7 @@ func TestDebugStruct(t *testing.T)
 
 ```
 searchKey: gob.encFuzzDec
+tags: [private]
 ```
 
 ```Go
@@ -6358,6 +6797,7 @@ func encFuzzDec(rng *rand.Rand, in interface{}) error
 
 ```
 searchKey: gob.TestFuzz
+tags: [private]
 ```
 
 ```Go
@@ -6370,6 +6810,7 @@ This does some "fuzz testing" by attempting to decode a sequence of random bytes
 
 ```
 searchKey: gob.TestFuzzRegressions
+tags: [private]
 ```
 
 ```Go
@@ -6380,6 +6821,7 @@ func TestFuzzRegressions(t *testing.T)
 
 ```
 searchKey: gob.testFuzz
+tags: [private]
 ```
 
 ```Go
@@ -6390,6 +6832,7 @@ func testFuzz(t *testing.T, seed int64, n int, input ...interface{})
 
 ```
 searchKey: gob.TestFuzzOneByte
+tags: [private]
 ```
 
 ```Go
@@ -6402,6 +6845,7 @@ TestFuzzOneByte tries to decode corrupted input sequences and checks that no pan
 
 ```
 searchKey: gob.TestErrorInvalidTypeId
+tags: [private]
 ```
 
 ```Go
@@ -6414,6 +6858,7 @@ Don't crash, just give error with invalid type id. Issue 9649.
 
 ```
 searchKey: gob.TestBasicEncoderDecoder
+tags: [private]
 ```
 
 ```Go
@@ -6426,6 +6871,7 @@ Test basic operations in a safe manner.
 
 ```
 searchKey: gob.TestEncodeIntSlice
+tags: [private]
 ```
 
 ```Go
@@ -6436,6 +6882,7 @@ func TestEncodeIntSlice(t *testing.T)
 
 ```
 searchKey: gob.TestEncoderDecoder
+tags: [private]
 ```
 
 ```Go
@@ -6446,6 +6893,7 @@ func TestEncoderDecoder(t *testing.T)
 
 ```
 searchKey: gob.badTypeCheck
+tags: [private]
 ```
 
 ```Go
@@ -6458,6 +6906,7 @@ Run one value through the encoder/decoder, but use the wrong type. Input is alwa
 
 ```
 searchKey: gob.TestWrongTypeDecoder
+tags: [private]
 ```
 
 ```Go
@@ -6470,6 +6919,7 @@ Test that we recognize a bad type the first time.
 
 ```
 searchKey: gob.TestUnsupported
+tags: [private]
 ```
 
 ```Go
@@ -6480,6 +6930,7 @@ func TestUnsupported(t *testing.T)
 
 ```
 searchKey: gob.encAndDec
+tags: [private]
 ```
 
 ```Go
@@ -6490,6 +6941,7 @@ func encAndDec(in, out interface{}) error
 
 ```
 searchKey: gob.TestTypeToPtrType
+tags: [private]
 ```
 
 ```Go
@@ -6500,6 +6952,7 @@ func TestTypeToPtrType(t *testing.T)
 
 ```
 searchKey: gob.TestPtrTypeToType
+tags: [private]
 ```
 
 ```Go
@@ -6510,6 +6963,7 @@ func TestPtrTypeToType(t *testing.T)
 
 ```
 searchKey: gob.TestTypeToPtrPtrPtrPtrType
+tags: [private]
 ```
 
 ```Go
@@ -6520,6 +6974,7 @@ func TestTypeToPtrPtrPtrPtrType(t *testing.T)
 
 ```
 searchKey: gob.TestSlice
+tags: [private]
 ```
 
 ```Go
@@ -6530,6 +6985,7 @@ func TestSlice(t *testing.T)
 
 ```
 searchKey: gob.TestValueError
+tags: [private]
 ```
 
 ```Go
@@ -6540,6 +6996,7 @@ func TestValueError(t *testing.T)
 
 ```
 searchKey: gob.TestArray
+tags: [private]
 ```
 
 ```Go
@@ -6550,6 +7007,7 @@ func TestArray(t *testing.T)
 
 ```
 searchKey: gob.TestRecursiveMapType
+tags: [private]
 ```
 
 ```Go
@@ -6560,6 +7018,7 @@ func TestRecursiveMapType(t *testing.T)
 
 ```
 searchKey: gob.TestRecursiveSliceType
+tags: [private]
 ```
 
 ```Go
@@ -6570,6 +7029,7 @@ func TestRecursiveSliceType(t *testing.T)
 
 ```
 searchKey: gob.TestDefaultsInArray
+tags: [private]
 ```
 
 ```Go
@@ -6582,6 +7042,7 @@ Regression test for bug: must send zero values inside arrays
 
 ```
 searchKey: gob.TestSingletons
+tags: [private]
 ```
 
 ```Go
@@ -6592,6 +7053,7 @@ func TestSingletons(t *testing.T)
 
 ```
 searchKey: gob.TestStructNonStruct
+tags: [private]
 ```
 
 ```Go
@@ -6602,6 +7064,7 @@ func TestStructNonStruct(t *testing.T)
 
 ```
 searchKey: gob.TestInterfaceIndirect
+tags: [private]
 ```
 
 ```Go
@@ -6614,6 +7077,7 @@ A version of a bug reported on golang-nuts. Also tests top-level slice of interf
 
 ```
 searchKey: gob.TestDecodeIntoNothing
+tags: [private]
 ```
 
 ```Go
@@ -6624,6 +7088,7 @@ func TestDecodeIntoNothing(t *testing.T)
 
 ```
 searchKey: gob.TestIgnoreRecursiveType
+tags: [private]
 ```
 
 ```Go
@@ -6634,6 +7099,7 @@ func TestIgnoreRecursiveType(t *testing.T)
 
 ```
 searchKey: gob.TestNestedInterfaces
+tags: [private]
 ```
 
 ```Go
@@ -6644,6 +7110,7 @@ func TestNestedInterfaces(t *testing.T)
 
 ```
 searchKey: gob.TestMapBug1
+tags: [private]
 ```
 
 ```Go
@@ -6654,6 +7121,7 @@ func TestMapBug1(t *testing.T)
 
 ```
 searchKey: gob.TestGobMapInterfaceEncode
+tags: [private]
 ```
 
 ```Go
@@ -6664,6 +7132,7 @@ func TestGobMapInterfaceEncode(t *testing.T)
 
 ```
 searchKey: gob.TestSliceReusesMemory
+tags: [private]
 ```
 
 ```Go
@@ -6674,6 +7143,7 @@ func TestSliceReusesMemory(t *testing.T)
 
 ```
 searchKey: gob.TestBadCount
+tags: [private]
 ```
 
 ```Go
@@ -6686,6 +7156,7 @@ Used to crash: negative count in recvMessage.
 
 ```
 searchKey: gob.TestSequentialDecoder
+tags: [private]
 ```
 
 ```Go
@@ -6698,6 +7169,7 @@ Verify that sequential Decoders built on a single input will succeed if the inpu
 
 ```
 searchKey: gob.TestChanFuncIgnored
+tags: [private]
 ```
 
 ```Go
@@ -6708,6 +7180,7 @@ func TestChanFuncIgnored(t *testing.T)
 
 ```
 searchKey: gob.TestSliceIncompatibility
+tags: [private]
 ```
 
 ```Go
@@ -6718,6 +7191,7 @@ func TestSliceIncompatibility(t *testing.T)
 
 ```
 searchKey: gob.TestGobPtrSlices
+tags: [private]
 ```
 
 ```Go
@@ -6728,6 +7202,7 @@ func TestGobPtrSlices(t *testing.T)
 
 ```
 searchKey: gob.TestPtrToMapOfMap
+tags: [private]
 ```
 
 ```Go
@@ -6740,6 +7215,7 @@ getDecEnginePtr cached engine for ut.base instead of ut.user so we passed a *map
 
 ```
 searchKey: gob.TestCatchInvalidNilValue
+tags: [private]
 ```
 
 ```Go
@@ -6752,6 +7228,7 @@ Test that untyped nils generate an error, not a panic. See Issue 16204.
 
 ```
 searchKey: gob.TestTopLevelNilPointer
+tags: [private]
 ```
 
 ```Go
@@ -6764,6 +7241,7 @@ A top-level nil pointer generates a panic with a helpful string-valued message.
 
 ```
 searchKey: gob.encodeAndRecover
+tags: [private]
 ```
 
 ```Go
@@ -6774,6 +7252,7 @@ func encodeAndRecover(value interface{}) (encodeErr, panicErr error)
 
 ```
 searchKey: gob.TestNilPointerPanics
+tags: [private]
 ```
 
 ```Go
@@ -6784,6 +7263,7 @@ func TestNilPointerPanics(t *testing.T)
 
 ```
 searchKey: gob.TestNilPointerInsideInterface
+tags: [private]
 ```
 
 ```Go
@@ -6794,6 +7274,7 @@ func TestNilPointerInsideInterface(t *testing.T)
 
 ```
 searchKey: gob.TestMutipleEncodingsOfBadType
+tags: [private]
 ```
 
 ```Go
@@ -6806,6 +7287,7 @@ Test that a failed compilation doesn't leave around an executable encoder. Issue
 
 ```
 searchKey: gob.Test29ElementSlice
+tags: [private]
 ```
 
 ```Go
@@ -6816,6 +7298,7 @@ func Test29ElementSlice(t *testing.T)
 
 ```
 searchKey: gob.TestErrorForHugeSlice
+tags: [private]
 ```
 
 ```Go
@@ -6828,6 +7311,7 @@ Don't crash, just give error when allocating a huge slice. Issue 8084.
 
 ```
 searchKey: gob.TestBadData
+tags: [private]
 ```
 
 ```Go
@@ -6840,6 +7324,7 @@ TestBadData tests that various problems caused by malformed input are caught as 
 
 ```
 searchKey: gob.TestDecodeErrorMultipleTypes
+tags: [private]
 ```
 
 ```Go
@@ -6850,6 +7335,7 @@ func TestDecodeErrorMultipleTypes(t *testing.T)
 
 ```
 searchKey: gob.TestGobEncoderField
+tags: [private]
 ```
 
 ```Go
@@ -6860,6 +7346,7 @@ func TestGobEncoderField(t *testing.T)
 
 ```
 searchKey: gob.TestGobEncoderValueField
+tags: [private]
 ```
 
 ```Go
@@ -6872,6 +7359,7 @@ Even though the field is a value, we can still take its address and should be ab
 
 ```
 searchKey: gob.TestGobEncoderIndirectField
+tags: [private]
 ```
 
 ```Go
@@ -6884,6 +7372,7 @@ GobEncode/Decode should work even if the value is more indirect than the receive
 
 ```
 searchKey: gob.TestGobEncoderArrayField
+tags: [private]
 ```
 
 ```Go
@@ -6896,6 +7385,7 @@ Test with a large field with methods.
 
 ```
 searchKey: gob.TestGobEncoderIndirectArrayField
+tags: [private]
 ```
 
 ```Go
@@ -6908,6 +7398,7 @@ Test an indirection to a large field with methods.
 
 ```
 searchKey: gob.TestGobEncoderFieldsOfDifferentType
+tags: [private]
 ```
 
 ```Go
@@ -6920,6 +7411,7 @@ As long as the fields have the same name and implement the interface, we can cro
 
 ```
 searchKey: gob.TestGobEncoderValueEncoder
+tags: [private]
 ```
 
 ```Go
@@ -6932,6 +7424,7 @@ Test that we can encode a value and decode into a pointer.
 
 ```
 searchKey: gob.TestGobEncoderValueThenPointer
+tags: [private]
 ```
 
 ```Go
@@ -6944,6 +7437,7 @@ Test that we can use a value then a pointer type of a GobEncoder in the same enc
 
 ```
 searchKey: gob.TestGobEncoderPointerThenValue
+tags: [private]
 ```
 
 ```Go
@@ -6956,6 +7450,7 @@ Test that we can use a pointer then a value type of a GobEncoder in the same enc
 
 ```
 searchKey: gob.TestGobEncoderFieldTypeError
+tags: [private]
 ```
 
 ```Go
@@ -6966,6 +7461,7 @@ func TestGobEncoderFieldTypeError(t *testing.T)
 
 ```
 searchKey: gob.TestGobEncoderStructSingleton
+tags: [private]
 ```
 
 ```Go
@@ -6978,6 +7474,7 @@ Even though ByteStruct is a struct, it's treated as a singleton at the top level
 
 ```
 searchKey: gob.TestGobEncoderNonStructSingleton
+tags: [private]
 ```
 
 ```Go
@@ -6988,6 +7485,7 @@ func TestGobEncoderNonStructSingleton(t *testing.T)
 
 ```
 searchKey: gob.TestGobEncoderIgnoreStructField
+tags: [private]
 ```
 
 ```Go
@@ -6998,6 +7496,7 @@ func TestGobEncoderIgnoreStructField(t *testing.T)
 
 ```
 searchKey: gob.TestGobEncoderIgnoreNonStructField
+tags: [private]
 ```
 
 ```Go
@@ -7008,6 +7507,7 @@ func TestGobEncoderIgnoreNonStructField(t *testing.T)
 
 ```
 searchKey: gob.TestGobEncoderIgnoreNilEncoder
+tags: [private]
 ```
 
 ```Go
@@ -7018,6 +7518,7 @@ func TestGobEncoderIgnoreNilEncoder(t *testing.T)
 
 ```
 searchKey: gob.TestGobEncoderExtraIndirect
+tags: [private]
 ```
 
 ```Go
@@ -7030,6 +7531,7 @@ This was a bug: the receiver has a different indirection level than the variable
 
 ```
 searchKey: gob.TestGobEncodeIsZero
+tags: [private]
 ```
 
 ```Go
@@ -7040,6 +7542,7 @@ func TestGobEncodeIsZero(t *testing.T)
 
 ```
 searchKey: gob.TestGobEncodePtrError
+tags: [private]
 ```
 
 ```Go
@@ -7050,6 +7553,7 @@ func TestGobEncodePtrError(t *testing.T)
 
 ```
 searchKey: gob.TestNetIP
+tags: [private]
 ```
 
 ```Go
@@ -7060,6 +7564,7 @@ func TestNetIP(t *testing.T)
 
 ```
 searchKey: gob.benchmarkEndToEnd
+tags: [private]
 ```
 
 ```Go
@@ -7070,6 +7575,7 @@ func benchmarkEndToEnd(b *testing.B, ctor func() interface{}, pipe func() (r io.
 
 ```
 searchKey: gob.BenchmarkEndToEndPipe
+tags: [private]
 ```
 
 ```Go
@@ -7080,6 +7586,7 @@ func BenchmarkEndToEndPipe(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkEndToEndByteBuffer
+tags: [private]
 ```
 
 ```Go
@@ -7090,6 +7597,7 @@ func BenchmarkEndToEndByteBuffer(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkEndToEndSliceByteBuffer
+tags: [private]
 ```
 
 ```Go
@@ -7100,6 +7608,7 @@ func BenchmarkEndToEndSliceByteBuffer(b *testing.B)
 
 ```
 searchKey: gob.TestCountEncodeMallocs
+tags: [private]
 ```
 
 ```Go
@@ -7110,6 +7619,7 @@ func TestCountEncodeMallocs(t *testing.T)
 
 ```
 searchKey: gob.TestCountDecodeMallocs
+tags: [private]
 ```
 
 ```Go
@@ -7120,6 +7630,7 @@ func TestCountDecodeMallocs(t *testing.T)
 
 ```
 searchKey: gob.benchmarkEncodeSlice
+tags: [private]
 ```
 
 ```Go
@@ -7130,6 +7641,7 @@ func benchmarkEncodeSlice(b *testing.B, a interface{})
 
 ```
 searchKey: gob.BenchmarkEncodeComplex128Slice
+tags: [private]
 ```
 
 ```Go
@@ -7140,6 +7652,7 @@ func BenchmarkEncodeComplex128Slice(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkEncodeFloat64Slice
+tags: [private]
 ```
 
 ```Go
@@ -7150,6 +7663,7 @@ func BenchmarkEncodeFloat64Slice(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkEncodeInt32Slice
+tags: [private]
 ```
 
 ```Go
@@ -7160,6 +7674,7 @@ func BenchmarkEncodeInt32Slice(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkEncodeStringSlice
+tags: [private]
 ```
 
 ```Go
@@ -7170,6 +7685,7 @@ func BenchmarkEncodeStringSlice(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkEncodeInterfaceSlice
+tags: [private]
 ```
 
 ```Go
@@ -7180,6 +7696,7 @@ func BenchmarkEncodeInterfaceSlice(b *testing.B)
 
 ```
 searchKey: gob.benchmarkDecodeSlice
+tags: [private]
 ```
 
 ```Go
@@ -7190,6 +7707,7 @@ func benchmarkDecodeSlice(b *testing.B, a interface{})
 
 ```
 searchKey: gob.BenchmarkDecodeComplex128Slice
+tags: [private]
 ```
 
 ```Go
@@ -7200,6 +7718,7 @@ func BenchmarkDecodeComplex128Slice(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkDecodeFloat64Slice
+tags: [private]
 ```
 
 ```Go
@@ -7210,6 +7729,7 @@ func BenchmarkDecodeFloat64Slice(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkDecodeInt32Slice
+tags: [private]
 ```
 
 ```Go
@@ -7220,6 +7740,7 @@ func BenchmarkDecodeInt32Slice(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkDecodeStringSlice
+tags: [private]
 ```
 
 ```Go
@@ -7230,6 +7751,7 @@ func BenchmarkDecodeStringSlice(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkDecodeInterfaceSlice
+tags: [private]
 ```
 
 ```Go
@@ -7240,6 +7762,7 @@ func BenchmarkDecodeInterfaceSlice(b *testing.B)
 
 ```
 searchKey: gob.BenchmarkDecodeMap
+tags: [private]
 ```
 
 ```Go
@@ -7250,6 +7773,7 @@ func BenchmarkDecodeMap(b *testing.B)
 
 ```
 searchKey: gob.TestBasic
+tags: [private]
 ```
 
 ```Go
@@ -7262,6 +7786,7 @@ Sanity checks
 
 ```
 searchKey: gob.TestReregistration
+tags: [private]
 ```
 
 ```Go
@@ -7274,6 +7799,7 @@ Reregister some basic types to check registration is idempotent.
 
 ```
 searchKey: gob.TestArrayType
+tags: [private]
 ```
 
 ```Go
@@ -7284,6 +7810,7 @@ func TestArrayType(t *testing.T)
 
 ```
 searchKey: gob.TestSliceType
+tags: [private]
 ```
 
 ```Go
@@ -7294,6 +7821,7 @@ func TestSliceType(t *testing.T)
 
 ```
 searchKey: gob.TestMapType
+tags: [private]
 ```
 
 ```Go
@@ -7304,6 +7832,7 @@ func TestMapType(t *testing.T)
 
 ```
 searchKey: gob.TestStructType
+tags: [private]
 ```
 
 ```Go
@@ -7314,6 +7843,7 @@ func TestStructType(t *testing.T)
 
 ```
 searchKey: gob.TestRegistration
+tags: [private]
 ```
 
 ```Go
@@ -7326,6 +7856,7 @@ Should be OK to register the same type multiple times, as long as they're at the
 
 ```
 searchKey: gob.TestRegistrationNaming
+tags: [private]
 ```
 
 ```Go
@@ -7338,6 +7869,7 @@ See comment in type.go/Register.
 
 ```
 searchKey: gob.TestStressParallel
+tags: [private]
 ```
 
 ```Go
@@ -7348,6 +7880,7 @@ func TestStressParallel(t *testing.T)
 
 ```
 searchKey: gob.TestTypeRace
+tags: [private]
 ```
 
 ```Go

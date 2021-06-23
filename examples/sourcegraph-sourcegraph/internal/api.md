@@ -66,10 +66,15 @@ Package api contains an API client and types for cross-service communication.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="frontendInternal" href="#frontendInternal">var frontendInternal</a>
 
 ```
 searchKey: api.frontendInternal
+tags: [private]
 ```
 
 ```Go
@@ -80,7 +85,6 @@ var frontendInternal = ...
 
 ```
 searchKey: api.InternalClient
-tags: [exported]
 ```
 
 ```Go
@@ -91,6 +95,7 @@ var InternalClient = &internalClient{URL: "http://" + frontendInternal}
 
 ```
 searchKey: api.requestDuration
+tags: [private]
 ```
 
 ```Go
@@ -101,7 +106,6 @@ var requestDuration = ...
 
 ```
 searchKey: api.MockOrgsListUsers
-tags: [exported]
 ```
 
 ```Go
@@ -112,7 +116,6 @@ var MockOrgsListUsers func(orgID int32) (users []int32, err error)
 
 ```
 searchKey: api.MockInternalClientConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -125,7 +128,6 @@ MockInternalClientConfiguration mocks (*internalClient).Configuration.
 
 ```
 searchKey: api.MockExternalServiceConfigs
-tags: [exported]
 ```
 
 ```Go
@@ -134,11 +136,14 @@ var MockExternalServiceConfigs func(kind string, result interface{}) error
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="RepoID" href="#RepoID">type RepoID int32</a>
 
 ```
 searchKey: api.RepoID
-tags: [exported]
 ```
 
 ```Go
@@ -151,7 +156,6 @@ RepoID is the unique identifier for a repository.
 
 ```
 searchKey: api.RepoName
-tags: [exported]
 ```
 
 ```Go
@@ -166,7 +170,6 @@ Previously, this was called RepoURI.
 
 ```
 searchKey: api.CommitID
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +182,6 @@ CommitID is the 40-character SHA-1 hash for a Git commit.
 
 ```
 searchKey: api.CommitID.Short
-tags: [exported]
 ```
 
 ```Go
@@ -192,7 +194,6 @@ Short returns the SHA-1 commit hash truncated to 7 characters
 
 ```
 searchKey: api.Repo
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +219,6 @@ Repo represents a source code repository.
 
 ```
 searchKey: api.ExternalRepoSpec
-tags: [exported]
 ```
 
 ```Go
@@ -252,7 +252,6 @@ ExternalRepoSpec specifies a repository on an external service (such as GitHub o
 
 ```
 searchKey: api.ExternalRepoSpec.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -265,7 +264,6 @@ Equal returns true if r is equal to s.
 
 ```
 searchKey: api.ExternalRepoSpec.Compare
-tags: [exported]
 ```
 
 ```Go
@@ -278,7 +276,6 @@ Compare returns -1 if r < s, 0 if r == s or 1 if r > s
 
 ```
 searchKey: api.ExternalRepoSpec.String
-tags: [exported]
 ```
 
 ```Go
@@ -289,7 +286,6 @@ func (r ExternalRepoSpec) String() string
 
 ```
 searchKey: api.SettingsSubject
-tags: [exported]
 ```
 
 ```Go
@@ -307,7 +303,6 @@ A SettingsSubject is something that can have settings. Exactly 1 field must be n
 
 ```
 searchKey: api.SettingsSubject.String
-tags: [exported]
 ```
 
 ```Go
@@ -318,7 +313,6 @@ func (s SettingsSubject) String() string
 
 ```
 searchKey: api.Settings
-tags: [exported]
 ```
 
 ```Go
@@ -337,7 +331,6 @@ Settings contains settings for a subject.
 
 ```
 searchKey: api.ExternalService
-tags: [exported]
 ```
 
 ```Go
@@ -363,7 +356,6 @@ ExternalService represents an complete external service record.
 
 ```
 searchKey: api.RepoCreateOrUpdateRequest
-tags: [exported]
 ```
 
 ```Go
@@ -404,7 +396,6 @@ NOTE: Some fields are only used during creation (and are not used to update an e
 
 ```
 searchKey: api.PhabricatorRepoCreateRequest
-tags: [exported]
 ```
 
 ```Go
@@ -419,7 +410,6 @@ type PhabricatorRepoCreateRequest struct {
 
 ```
 searchKey: api.ExternalServiceConfigsRequest
-tags: [exported]
 ```
 
 ```Go
@@ -434,7 +424,6 @@ type ExternalServiceConfigsRequest struct {
 
 ```
 searchKey: api.ExternalServicesListRequest
-tags: [exported]
 ```
 
 ```Go
@@ -452,6 +441,7 @@ type ExternalServicesListRequest struct {
 
 ```
 searchKey: api.internalClient
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +455,7 @@ type internalClient struct {
 
 ```
 searchKey: api.internalClient.WaitForFrontend
+tags: [private]
 ```
 
 ```Go
@@ -477,6 +468,7 @@ WaitForFrontend retries a noop request to the internal API until it is able to r
 
 ```
 searchKey: api.internalClient.SavedQueriesListAll
+tags: [private]
 ```
 
 ```Go
@@ -489,6 +481,7 @@ SavedQueriesListAll lists all saved queries, from every user, org, etc.
 
 ```
 searchKey: api.internalClient.SavedQueriesGetInfo
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +494,7 @@ SavedQueriesGetInfo gets the info from the DB for the given saved query. nil is 
 
 ```
 searchKey: api.internalClient.SavedQueriesSetInfo
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +507,7 @@ SavedQueriesSetInfo sets the info in the DB for the given query.
 
 ```
 searchKey: api.internalClient.SavedQueriesDeleteInfo
+tags: [private]
 ```
 
 ```Go
@@ -523,6 +518,7 @@ func (c *internalClient) SavedQueriesDeleteInfo(ctx context.Context, query strin
 
 ```
 searchKey: api.internalClient.SettingsGetForSubject
+tags: [private]
 ```
 
 ```Go
@@ -533,6 +529,7 @@ func (c *internalClient) SettingsGetForSubject(ctx context.Context, subject Sett
 
 ```
 searchKey: api.internalClient.OrgsListUsers
+tags: [private]
 ```
 
 ```Go
@@ -543,6 +540,7 @@ func (c *internalClient) OrgsListUsers(ctx context.Context, orgID int32) (users 
 
 ```
 searchKey: api.internalClient.OrgsGetByName
+tags: [private]
 ```
 
 ```Go
@@ -553,6 +551,7 @@ func (c *internalClient) OrgsGetByName(ctx context.Context, orgName string) (org
 
 ```
 searchKey: api.internalClient.UsersGetByUsername
+tags: [private]
 ```
 
 ```Go
@@ -563,6 +562,7 @@ func (c *internalClient) UsersGetByUsername(ctx context.Context, username string
 
 ```
 searchKey: api.internalClient.UserEmailsGetEmail
+tags: [private]
 ```
 
 ```Go
@@ -573,6 +573,7 @@ func (c *internalClient) UserEmailsGetEmail(ctx context.Context, userID int32) (
 
 ```
 searchKey: api.internalClient.ExternalURL
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +588,7 @@ TODO(slimsag): needs cleanup as part of upcoming configuration refactor.
 
 ```
 searchKey: api.internalClient.CanSendEmail
+tags: [private]
 ```
 
 ```Go
@@ -599,6 +601,7 @@ TODO(slimsag): needs cleanup as part of upcoming configuration refactor.
 
 ```
 searchKey: api.internalClient.SendEmail
+tags: [private]
 ```
 
 ```Go
@@ -611,6 +614,7 @@ TODO(slimsag): needs cleanup as part of upcoming configuration refactor.
 
 ```
 searchKey: api.internalClient.ReposListEnabled
+tags: [private]
 ```
 
 ```Go
@@ -623,6 +627,7 @@ ReposListEnabled returns a list of all enabled repository names.
 
 ```
 searchKey: api.internalClient.Configuration
+tags: [private]
 ```
 
 ```Go
@@ -633,6 +638,7 @@ func (c *internalClient) Configuration(ctx context.Context) (conftypes.RawUnifie
 
 ```
 searchKey: api.internalClient.ReposGetByName
+tags: [private]
 ```
 
 ```Go
@@ -643,6 +649,7 @@ func (c *internalClient) ReposGetByName(ctx context.Context, repoName RepoName) 
 
 ```
 searchKey: api.internalClient.PhabricatorRepoCreate
+tags: [private]
 ```
 
 ```Go
@@ -653,6 +660,7 @@ func (c *internalClient) PhabricatorRepoCreate(ctx context.Context, repo RepoNam
 
 ```
 searchKey: api.internalClient.ExternalServiceConfigs
+tags: [private]
 ```
 
 ```Go
@@ -665,6 +673,7 @@ ExternalServiceConfigs fetches external service configs of a single kind into th
 
 ```
 searchKey: api.internalClient.ExternalServicesList
+tags: [private]
 ```
 
 ```Go
@@ -677,6 +686,7 @@ ExternalServicesList returns all external services of the given kind.
 
 ```
 searchKey: api.internalClient.LogTelemetry
+tags: [private]
 ```
 
 ```Go
@@ -687,6 +697,7 @@ func (c *internalClient) LogTelemetry(ctx context.Context, reqBody interface{}) 
 
 ```
 searchKey: api.internalClient.postInternal
+tags: [private]
 ```
 
 ```Go
@@ -699,6 +710,7 @@ postInternal sends an HTTP post request to the internal route.
 
 ```
 searchKey: api.internalClient.meteredPost
+tags: [private]
 ```
 
 ```Go
@@ -709,6 +721,7 @@ func (c *internalClient) meteredPost(ctx context.Context, route string, reqBody,
 
 ```
 searchKey: api.internalClient.post
+tags: [private]
 ```
 
 ```Go
@@ -721,7 +734,6 @@ post sends an HTTP post request to the provided route. If reqBody is non-nil it 
 
 ```
 searchKey: api.SavedQueryIDSpec
-tags: [exported]
 ```
 
 ```Go
@@ -735,7 +747,6 @@ type SavedQueryIDSpec struct {
 
 ```
 searchKey: api.ConfigSavedQuery
-tags: [exported]
 ```
 
 ```Go
@@ -757,7 +768,6 @@ ConfigSavedQuery is the JSON shape of a saved query entry in the JSON configurat
 
 ```
 searchKey: api.ConfigSavedQuery.Equals
-tags: [exported]
 ```
 
 ```Go
@@ -768,7 +778,6 @@ func (sq ConfigSavedQuery) Equals(other ConfigSavedQuery) bool
 
 ```
 searchKey: api.PartialConfigSavedQueries
-tags: [exported]
 ```
 
 ```Go
@@ -783,7 +792,6 @@ PartialConfigSavedQueries is the JSON configuration shape, including only the se
 
 ```
 searchKey: api.SavedQuerySpecAndConfig
-tags: [exported]
 ```
 
 ```Go
@@ -799,7 +807,6 @@ SavedQuerySpecAndConfig represents a saved query configuration its unique ID.
 
 ```
 searchKey: api.SavedQueryInfo
-tags: [exported]
 ```
 
 ```Go
@@ -825,10 +832,15 @@ SavedQueryInfo represents information about a saved query that was executed.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="cmp" href="#cmp">func cmp(a, b string) int</a>
 
 ```
 searchKey: api.cmp
+tags: [private]
 ```
 
 ```Go
@@ -839,6 +851,7 @@ func cmp(a, b string) int
 
 ```
 searchKey: api.checkAPIResponse
+tags: [private]
 ```
 
 ```Go

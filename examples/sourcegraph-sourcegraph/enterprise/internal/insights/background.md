@@ -50,10 +50,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="queryJobOffsetTime" href="#queryJobOffsetTime">const queryJobOffsetTime</a>
 
 ```
 searchKey: background.queryJobOffsetTime
+tags: [private]
 ```
 
 ```Go
@@ -62,10 +67,15 @@ const queryJobOffsetTime = 30 * time.Second
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="testRealGlobalSettings" href="#testRealGlobalSettings">var testRealGlobalSettings</a>
 
 ```
 searchKey: background.testRealGlobalSettings
+tags: [private]
 ```
 
 ```Go
@@ -74,11 +84,14 @@ var testRealGlobalSettings = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="RepoStore" href="#RepoStore">type RepoStore interface</a>
 
 ```
 searchKey: background.RepoStore
-tags: [exported]
 ```
 
 ```Go
@@ -93,6 +106,7 @@ RepoStore is a subset of the API exposed by the database.Repos() store (only the
 
 ```
 searchKey: background.historicalEnqueuer
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +163,7 @@ work being performed.
 
 ```
 searchKey: background.historicalEnqueuer.Handler
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +174,7 @@ func (h *historicalEnqueuer) Handler(ctx context.Context) error
 
 ```
 searchKey: background.historicalEnqueuer.buildFrames
+tags: [private]
 ```
 
 ```Go
@@ -175,6 +191,7 @@ It will return instantly if there are no unique series.
 
 ```
 searchKey: background.historicalEnqueuer.buildFrame
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +214,7 @@ It may return both hard errors (e.g. DB connection failure, future frames are un
 
 ```
 searchKey: background.historicalEnqueuer.buildSeries
+tags: [private]
 ```
 
 ```Go
@@ -211,6 +229,7 @@ It may return both hard errors (e.g. DB connection failure, future series are un
 
 ```
 searchKey: background.buildSeriesContext
+tags: [private]
 ```
 
 ```Go
@@ -236,6 +255,7 @@ buildSeriesContext describes context/parameters for a call to buildSeries()
 
 ```
 searchKey: background.cachedGitFirstEverCommit
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +273,7 @@ cachedGitFirstEverCommit is a simple in-memory cache for gitFirstEverCommit call
 
 ```
 searchKey: background.cachedGitFirstEverCommit.gitFirstEverCommit
+tags: [private]
 ```
 
 ```Go
@@ -263,7 +284,6 @@ func (c *cachedGitFirstEverCommit) gitFirstEverCommit(ctx context.Context, repoN
 
 ```
 searchKey: background.MockRepoStore
-tags: [exported]
 ```
 
 ```Go
@@ -280,7 +300,6 @@ MockRepoStore is a mock implementation of the RepoStore interface (from the pack
 
 ```
 searchKey: background.NewMockRepoStore
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +312,6 @@ NewMockRepoStore creates a new mock of the RepoStore interface. All methods retu
 
 ```
 searchKey: background.NewMockRepoStoreFrom
-tags: [exported]
 ```
 
 ```Go
@@ -306,7 +324,6 @@ NewMockRepoStoreFrom creates a new mock of the MockRepoStore interface. All meth
 
 ```
 searchKey: background.MockRepoStore.GetByName
-tags: [exported]
 ```
 
 ```Go
@@ -319,7 +336,6 @@ GetByName delegates to the next hook function in the queue and stores the parame
 
 ```
 searchKey: background.RepoStoreGetByNameFunc
-tags: [exported]
 ```
 
 ```Go
@@ -337,7 +353,6 @@ RepoStoreGetByNameFunc describes the behavior when the GetByName method of the p
 
 ```
 searchKey: background.RepoStoreGetByNameFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -350,7 +365,6 @@ SetDefaultHook sets function that is called when the GetByName method of the par
 
 ```
 searchKey: background.RepoStoreGetByNameFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -363,7 +377,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetByN
 
 ```
 searchKey: background.RepoStoreGetByNameFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -376,7 +389,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: background.RepoStoreGetByNameFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -389,6 +401,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: background.RepoStoreGetByNameFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -399,6 +412,7 @@ func (f *RepoStoreGetByNameFunc) nextHook() func(context.Context, api.RepoName) 
 
 ```
 searchKey: background.RepoStoreGetByNameFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -409,7 +423,6 @@ func (f *RepoStoreGetByNameFunc) appendCall(r0 RepoStoreGetByNameFuncCall)
 
 ```
 searchKey: background.RepoStoreGetByNameFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -422,7 +435,6 @@ History returns a sequence of RepoStoreGetByNameFuncCall objects describing the 
 
 ```
 searchKey: background.RepoStoreGetByNameFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -448,7 +460,6 @@ RepoStoreGetByNameFuncCall is an object that describes an invocation of method G
 
 ```
 searchKey: background.RepoStoreGetByNameFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -461,7 +472,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: background.RepoStoreGetByNameFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -474,6 +484,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: background.testParams
+tags: [private]
 ```
 
 ```Go
@@ -490,6 +501,7 @@ type testParams struct {
 
 ```
 searchKey: background.testResults
+tags: [private]
 ```
 
 ```Go
@@ -506,6 +518,7 @@ type testResults struct {
 
 ```
 searchKey: background.testHistoricalEnqueuer
+tags: [private]
 ```
 
 ```Go
@@ -514,11 +527,14 @@ func testHistoricalEnqueuer(t *testing.T, p *testParams) *testResults
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="StartBackgroundJobs" href="#StartBackgroundJobs">func StartBackgroundJobs(ctx context.Context, mainAppDB *sql.DB)</a>
 
 ```
 searchKey: background.StartBackgroundJobs
-tags: [exported]
 ```
 
 ```Go
@@ -531,6 +547,7 @@ StartBackgroundJobs is the main entrypoint which starts background jobs for code
 
 ```
 searchKey: background.newWorkerMetrics
+tags: [private]
 ```
 
 ```Go
@@ -551,6 +568,7 @@ Individual insights workers may then _also_ want to register their own metrics, 
 
 ```
 searchKey: background.newInsightHistoricalEnqueuer
+tags: [private]
 ```
 
 ```Go
@@ -563,6 +581,7 @@ newInsightHistoricalEnqueuer returns a background goroutine which will periodica
 
 ```
 searchKey: background.getRateLimit
+tags: [private]
 ```
 
 ```Go
@@ -573,6 +592,7 @@ func getRateLimit(defaultValue rate.Limit) func() rate.Limit
 
 ```
 searchKey: background.newInsightEnqueuer
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +605,7 @@ newInsightEnqueuer returns a background goroutine which will periodically find a
 
 ```
 searchKey: background.discoverAndEnqueueInsights
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +623,7 @@ discoverAndEnqueueInsights discovers insights defined in the given setting store
 
 ```
 searchKey: background.withCountUnlimited
+tags: [private]
 ```
 
 ```Go
@@ -616,6 +638,7 @@ TODO(slimsag): future: we should pull in the search query parser to avoid cases 
 
 ```
 searchKey: background.Test_historicalEnqueuer
+tags: [private]
 ```
 
 ```Go
@@ -626,6 +649,7 @@ func Test_historicalEnqueuer(t *testing.T)
 
 ```
 searchKey: background.Test_discoverAndEnqueueInsights
+tags: [private]
 ```
 
 ```Go

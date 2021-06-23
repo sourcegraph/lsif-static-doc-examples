@@ -112,8 +112,8 @@
     * [func idsToString(vs []semantic.ID) string](#idsToString)
     * [func extractResultIDs(ranges []semantic.RangeData, fn func(r semantic.RangeData) semantic.ID) []semantic.ID](#extractResultIDs)
     * [func monikersToString(vs []semantic.MonikerData) string](#monikersToString)
-    * [func init()](#init)
-    * [func init()](#init)
+    * [func init()](#init.serializer.go)
+    * [func init()](#init.serializer_documentation.go)
     * [func TestClear(t *testing.T)](#TestClear)
     * [func TestDatabaseExists(t *testing.T)](#TestDatabaseExists)
     * [func TestDatabaseHover(t *testing.T)](#TestDatabaseHover)
@@ -126,15 +126,20 @@
     * [func TestDocumentData(t *testing.T)](#TestDocumentData)
     * [func TestResultChunkData(t *testing.T)](#TestResultChunkData)
     * [func TestLocations(t *testing.T)](#TestLocations)
-    * [func init()](#init)
+    * [func init()](#init.store_test.go)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [private]
+```
 
 ### <a id="clearQuery" href="#clearQuery">const clearQuery</a>
 
 ```
 searchKey: lsifstore.clearQuery
+tags: [private]
 ```
 
 ```Go
@@ -145,7 +150,6 @@ const clearQuery = ...
 
 ```
 searchKey: lsifstore.CurrentDocumentSchemaVersion
-tags: [exported]
 ```
 
 ```Go
@@ -158,7 +162,6 @@ CurrentDocumentSchemaVersion is the schema version used for new lsif_data_docume
 
 ```
 searchKey: lsifstore.CurrentDefinitionsSchemaVersion
-tags: [exported]
 ```
 
 ```Go
@@ -171,7 +174,6 @@ CurrentDefinitionsSchemaVersion is the schema version used for new lsif_data_def
 
 ```
 searchKey: lsifstore.CurrentReferencesSchemaVersion
-tags: [exported]
 ```
 
 ```Go
@@ -184,6 +186,7 @@ CurrentReferencesSchemaVersion is the schema version used for new lsif_data_refe
 
 ```
 searchKey: lsifstore.writeDocumentsTemporaryTableQuery
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +197,7 @@ const writeDocumentsTemporaryTableQuery = ...
 
 ```
 searchKey: lsifstore.writeDocumentsInsertQuery
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +208,7 @@ const writeDocumentsInsertQuery = ...
 
 ```
 searchKey: lsifstore.writeResultChunksTemporaryTableQuery
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +219,7 @@ const writeResultChunksTemporaryTableQuery = ...
 
 ```
 searchKey: lsifstore.writeResultChunksInsertQuery
+tags: [private]
 ```
 
 ```Go
@@ -224,6 +230,7 @@ const writeResultChunksInsertQuery = ...
 
 ```
 searchKey: lsifstore.writeDefinitionsReferencesTemporaryTableQuery
+tags: [private]
 ```
 
 ```Go
@@ -234,6 +241,7 @@ const writeDefinitionsReferencesTemporaryTableQuery = ...
 
 ```
 searchKey: lsifstore.writeDefinitionReferencesInsertQuery
+tags: [private]
 ```
 
 ```Go
@@ -244,6 +252,7 @@ const writeDefinitionReferencesInsertQuery = ...
 
 ```
 searchKey: lsifstore.writeDocumentationPagesTemporaryTableQuery
+tags: [private]
 ```
 
 ```Go
@@ -254,6 +263,7 @@ const writeDocumentationPagesTemporaryTableQuery = ...
 
 ```
 searchKey: lsifstore.writeDocumentationPagesInsertQuery
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +274,7 @@ const writeDocumentationPagesInsertQuery = ...
 
 ```
 searchKey: lsifstore.diagnosticsQuery
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +285,7 @@ const diagnosticsQuery = ...
 
 ```
 searchKey: lsifstore.documentationPageDataQuery
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +296,7 @@ const documentationPageDataQuery = ...
 
 ```
 searchKey: lsifstore.existsQuery
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +307,7 @@ const existsQuery = ...
 
 ```
 searchKey: lsifstore.hoverDocumentQuery
+tags: [private]
 ```
 
 ```Go
@@ -304,6 +318,7 @@ const hoverDocumentQuery = ...
 
 ```
 searchKey: lsifstore.translateIDsToResultChunkIndexesQuery
+tags: [private]
 ```
 
 ```Go
@@ -314,6 +329,7 @@ const translateIDsToResultChunkIndexesQuery = ...
 
 ```
 searchKey: lsifstore.resultChunkBatchSize
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +342,7 @@ resultChunkBatchSize is the maximum number of result chunks we will query at onc
 
 ```
 searchKey: lsifstore.readLocationsFromResultChunksQuery
+tags: [private]
 ```
 
 ```Go
@@ -336,6 +353,7 @@ const readLocationsFromResultChunksQuery = ...
 
 ```
 searchKey: lsifstore.documentBatchSize
+tags: [private]
 ```
 
 ```Go
@@ -348,6 +366,7 @@ documentBatchSize is the maximum number of documents we will query at once to re
 
 ```
 searchKey: lsifstore.readRangesFromDocumentsQuery
+tags: [private]
 ```
 
 ```Go
@@ -358,6 +377,7 @@ const readRangesFromDocumentsQuery = ...
 
 ```
 searchKey: lsifstore.locationsDocumentQuery
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +388,7 @@ const locationsDocumentQuery = ...
 
 ```
 searchKey: lsifstore.monikersDocumentQuery
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +399,7 @@ const monikersDocumentQuery = ...
 
 ```
 searchKey: lsifstore.bulkMonikerResultsQuery
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +410,7 @@ const bulkMonikerResultsQuery = ...
 
 ```
 searchKey: lsifstore.packageInformationQuery
+tags: [private]
 ```
 
 ```Go
@@ -398,7 +421,6 @@ const packageInformationQuery = ...
 
 ```
 searchKey: lsifstore.MaximumRangesDefinitionLocations
-tags: [exported]
 ```
 
 ```Go
@@ -411,6 +433,7 @@ MaximumRangesDefinitionLocations is the maximum limit when querying definition l
 
 ```
 searchKey: lsifstore.rangesDocumentQuery
+tags: [private]
 ```
 
 ```Go
@@ -421,6 +444,7 @@ const rangesDocumentQuery = ...
 
 ```
 searchKey: lsifstore.testBundleID
+tags: [private]
 ```
 
 ```Go
@@ -429,10 +453,15 @@ const testBundleID = 39162
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="tableNames" href="#tableNames">var tableNames</a>
 
 ```
 searchKey: lsifstore.tableNames
+tags: [private]
 ```
 
 ```Go
@@ -443,7 +472,6 @@ var tableNames = ...
 
 ```
 searchKey: lsifstore.ErrNoMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -454,10 +482,15 @@ ErrNoMetadata occurs if we can't determine the number of result chunks for an in
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="operations" href="#operations">type operations struct</a>
 
 ```
 searchKey: lsifstore.operations
+tags: [private]
 ```
 
 ```Go
@@ -490,6 +523,7 @@ type operations struct {
 
 ```
 searchKey: lsifstore.newOperations
+tags: [private]
 ```
 
 ```Go
@@ -500,7 +534,6 @@ func newOperations(observationContext *observation.Context) *operations
 
 ```
 searchKey: lsifstore.QualifiedDocumentData
-tags: [exported]
 ```
 
 ```Go
@@ -514,7 +547,6 @@ type QualifiedDocumentData struct {
 
 ```
 searchKey: lsifstore.QualifiedMonikerLocations
-tags: [exported]
 ```
 
 ```Go
@@ -528,7 +560,6 @@ type QualifiedMonikerLocations struct {
 
 ```
 searchKey: lsifstore.Serializer
-tags: [exported]
 ```
 
 ```Go
@@ -542,7 +573,6 @@ type Serializer struct {
 
 ```
 searchKey: lsifstore.NewSerializer
-tags: [exported]
 ```
 
 ```Go
@@ -553,7 +583,6 @@ func NewSerializer() *Serializer
 
 ```
 searchKey: lsifstore.Serializer.MarshalDocumentData
-tags: [exported]
 ```
 
 ```Go
@@ -566,7 +595,6 @@ MarshalDocumentData transforms the fields of the given document data payload int
 
 ```
 searchKey: lsifstore.Serializer.MarshalLegacyDocumentData
-tags: [exported]
 ```
 
 ```Go
@@ -579,7 +607,6 @@ MarshalLegacyDocumentData encodes a legacy-formatted document (the value in the 
 
 ```
 searchKey: lsifstore.Serializer.MarshalResultChunkData
-tags: [exported]
 ```
 
 ```Go
@@ -592,7 +619,6 @@ MarshalResultChunkData transforms result chunk data into a string of bytes writa
 
 ```
 searchKey: lsifstore.Serializer.MarshalLocations
-tags: [exported]
 ```
 
 ```Go
@@ -605,6 +631,7 @@ MarshalLocations transforms a slice of locations into a string of bytes writable
 
 ```
 searchKey: lsifstore.Serializer.encode
+tags: [private]
 ```
 
 ```Go
@@ -617,7 +644,6 @@ encode gob-encodes and compresses the given payload.
 
 ```
 searchKey: lsifstore.Serializer.UnmarshalDocumentData
-tags: [exported]
 ```
 
 ```Go
@@ -630,7 +656,6 @@ UnmarshalDocumentData is the inverse of MarshalDocumentData.
 
 ```
 searchKey: lsifstore.Serializer.UnmarshalLegacyDocumentData
-tags: [exported]
 ```
 
 ```Go
@@ -643,7 +668,6 @@ UnmarshalLegacyDocumentData unmarshals a legacy-formatted document (the value in
 
 ```
 searchKey: lsifstore.Serializer.UnmarshalResultChunkData
-tags: [exported]
 ```
 
 ```Go
@@ -656,7 +680,6 @@ UnmarshalResultChunkData is the inverse of MarshalResultChunkData.
 
 ```
 searchKey: lsifstore.Serializer.UnmarshalLocations
-tags: [exported]
 ```
 
 ```Go
@@ -669,6 +692,7 @@ UnmarshalLocations is the inverse of MarshalLocations.
 
 ```
 searchKey: lsifstore.Serializer.decode
+tags: [private]
 ```
 
 ```Go
@@ -681,7 +705,6 @@ encode decompresses gob-decodes the given data and sets the given pointer. If th
 
 ```
 searchKey: lsifstore.Serializer.MarshalDocumentationPageData
-tags: [exported]
 ```
 
 ```Go
@@ -694,7 +717,6 @@ MarshalDocumentationPageData transforms documentation page data into a string of
 
 ```
 searchKey: lsifstore.Serializer.UnmarshalDocumentationPageData
-tags: [exported]
 ```
 
 ```Go
@@ -707,7 +729,6 @@ UnmarshalDocumentationPageData is the inverse of MarshalDocumentationPageData.
 
 ```
 searchKey: lsifstore.MarshalledDocumentData
-tags: [exported]
 ```
 
 ```Go
@@ -724,7 +745,6 @@ type MarshalledDocumentData struct {
 
 ```
 searchKey: lsifstore.Store
-tags: [exported]
 ```
 
 ```Go
@@ -739,7 +759,6 @@ type Store struct {
 
 ```
 searchKey: lsifstore.NewStore
-tags: [exported]
 ```
 
 ```Go
@@ -750,6 +769,7 @@ func NewStore(db dbutil.DB, observationContext *observation.Context) *Store
 
 ```
 searchKey: lsifstore.populateTestStore
+tags: [private]
 ```
 
 ```Go
@@ -760,7 +780,6 @@ func populateTestStore(t testing.TB) *Store
 
 ```
 searchKey: lsifstore.Store.Clear
-tags: [exported]
 ```
 
 ```Go
@@ -771,7 +790,6 @@ func (s *Store) Clear(ctx context.Context, bundleIDs ...int) (err error)
 
 ```
 searchKey: lsifstore.Store.WriteMeta
-tags: [exported]
 ```
 
 ```Go
@@ -784,7 +802,6 @@ WriteMeta is called (transactionally) from the precise-code-intel-worker.
 
 ```
 searchKey: lsifstore.Store.WriteDocuments
-tags: [exported]
 ```
 
 ```Go
@@ -797,7 +814,6 @@ WriteDocuments is called (transactionally) from the precise-code-intel-worker.
 
 ```
 searchKey: lsifstore.Store.WriteResultChunks
-tags: [exported]
 ```
 
 ```Go
@@ -810,7 +826,6 @@ WriteResultChunks is called (transactionally) from the precise-code-intel-worker
 
 ```
 searchKey: lsifstore.Store.WriteDefinitions
-tags: [exported]
 ```
 
 ```Go
@@ -823,7 +838,6 @@ WriteDefinitions is called (transactionally) from the precise-code-intel-worker.
 
 ```
 searchKey: lsifstore.Store.WriteReferences
-tags: [exported]
 ```
 
 ```Go
@@ -836,6 +850,7 @@ WriteReferences is called (transactionally) from the precise-code-intel-worker.
 
 ```
 searchKey: lsifstore.Store.writeDefinitionReferences
+tags: [private]
 ```
 
 ```Go
@@ -846,7 +861,6 @@ func (s *Store) writeDefinitionReferences(ctx context.Context, bundleID int, tab
 
 ```
 searchKey: lsifstore.Store.WriteDocumentationPages
-tags: [exported]
 ```
 
 ```Go
@@ -859,7 +873,6 @@ WriteDocumentationPages is called (transactionally) from the precise-code-intel-
 
 ```
 searchKey: lsifstore.Store.Diagnostics
-tags: [exported]
 ```
 
 ```Go
@@ -872,7 +885,6 @@ Diagnostics returns the diagnostics for the documents that have the given path p
 
 ```
 searchKey: lsifstore.Store.DocumentationPage
-tags: [exported]
 ```
 
 ```Go
@@ -885,6 +897,7 @@ DocumentationPage returns the documentation page with the given PathID.
 
 ```
 searchKey: lsifstore.Store.scanFirstDocumentationPageData
+tags: [private]
 ```
 
 ```Go
@@ -897,7 +910,6 @@ scanFirstDocumentationPageData reads the first DocumentationPageData row. If no 
 
 ```
 searchKey: lsifstore.Store.Exists
-tags: [exported]
 ```
 
 ```Go
@@ -910,7 +922,6 @@ Exists determines if the path exists in the database.
 
 ```
 searchKey: lsifstore.Store.Hover
-tags: [exported]
 ```
 
 ```Go
@@ -923,7 +934,6 @@ Hover returns the hover text of the symbol at the given position.
 
 ```
 searchKey: lsifstore.Store.Definitions
-tags: [exported]
 ```
 
 ```Go
@@ -936,7 +946,6 @@ Definitions returns the set of locations defining the symbol at the given positi
 
 ```
 searchKey: lsifstore.Store.References
-tags: [exported]
 ```
 
 ```Go
@@ -949,6 +958,7 @@ References returns the set of locations referencing the symbol at the given posi
 
 ```
 searchKey: lsifstore.Store.definitionsReferences
+tags: [private]
 ```
 
 ```Go
@@ -959,6 +969,7 @@ func (s *Store) definitionsReferences(ctx context.Context, extractor func(r sema
 
 ```
 searchKey: lsifstore.Store.locations
+tags: [private]
 ```
 
 ```Go
@@ -971,6 +982,7 @@ locations queries the locations associated with the given definition or referenc
 
 ```
 searchKey: lsifstore.Store.translateIDsToResultChunkIndexes
+tags: [private]
 ```
 
 ```Go
@@ -983,6 +995,7 @@ translateIDsToResultChunkIndexes converts a set of result set identifiers within
 
 ```
 searchKey: lsifstore.Store.readLocationsFromResultChunks
+tags: [private]
 ```
 
 ```Go
@@ -995,6 +1008,7 @@ readLocationsFromResultChunks reads the given result chunk indexes for a given b
 
 ```
 searchKey: lsifstore.Store.readRangesFromDocuments
+tags: [private]
 ```
 
 ```Go
@@ -1007,6 +1021,7 @@ readRangesFromDocuments extracts range data from the documents with the given pa
 
 ```
 searchKey: lsifstore.Store.readRangesFromDocument
+tags: [private]
 ```
 
 ```Go
@@ -1019,7 +1034,6 @@ readRangesFromDocument extracts range data from the given document. This method 
 
 ```
 searchKey: lsifstore.Store.MonikersByPosition
-tags: [exported]
 ```
 
 ```Go
@@ -1032,7 +1046,6 @@ MonikersByPosition returns all monikers attached ranges containing the given pos
 
 ```
 searchKey: lsifstore.Store.BulkMonikerResults
-tags: [exported]
 ```
 
 ```Go
@@ -1045,7 +1058,6 @@ BulkMonikerResults returns the locations within one of the given bundles that de
 
 ```
 searchKey: lsifstore.Store.PackageInformation
-tags: [exported]
 ```
 
 ```Go
@@ -1058,7 +1070,6 @@ PackageInformation looks up package information data by identifier.
 
 ```
 searchKey: lsifstore.Store.Ranges
-tags: [exported]
 ```
 
 ```Go
@@ -1071,6 +1082,7 @@ Ranges returns definition, reference, and hover data for each range within the g
 
 ```
 searchKey: lsifstore.Store.locationsWithinFile
+tags: [private]
 ```
 
 ```Go
@@ -1083,6 +1095,7 @@ locationsWithinFile queries the file-local locations associated with the given d
 
 ```
 searchKey: lsifstore.Store.scanDocumentData
+tags: [private]
 ```
 
 ```Go
@@ -1095,6 +1108,7 @@ scanDocumentData reads qualified document data from the given row object.
 
 ```
 searchKey: lsifstore.Store.makeDocumentVisitor
+tags: [private]
 ```
 
 ```Go
@@ -1107,6 +1121,7 @@ makeDocumentVisitor returns a function that calls the given visitor function ove
 
 ```
 searchKey: lsifstore.Store.scanFirstDocumentData
+tags: [private]
 ```
 
 ```Go
@@ -1119,6 +1134,7 @@ scanFirstDocumentData reads qualified document data from its given row object an
 
 ```
 searchKey: lsifstore.Store.scanSingleDocumentDataObject
+tags: [private]
 ```
 
 ```Go
@@ -1131,6 +1147,7 @@ scanSingleDocumentDataObject populates a qualified document data value from the 
 
 ```
 searchKey: lsifstore.Store.makeResultChunkVisitor
+tags: [private]
 ```
 
 ```Go
@@ -1143,6 +1160,7 @@ makeResultChunkVisitor returns a function that accepts a mapping function, reads
 
 ```
 searchKey: lsifstore.Store.scanQualifiedMonikerLocations
+tags: [private]
 ```
 
 ```Go
@@ -1155,6 +1173,7 @@ scanQualifiedMonikerLocations reads moniker locations values from the given row 
 
 ```
 searchKey: lsifstore.Store.scanSingleQualifiedMonikerLocationsObject
+tags: [private]
 ```
 
 ```Go
@@ -1167,7 +1186,6 @@ scanSingleQualifiedMonikerLocationsObject populates a qualified moniker location
 
 ```
 searchKey: lsifstore.Store.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -1178,7 +1196,6 @@ func (s *Store) Transact(ctx context.Context) (*Store, error)
 
 ```
 searchKey: lsifstore.Store.Done
-tags: [exported]
 ```
 
 ```Go
@@ -1189,7 +1206,6 @@ func (s *Store) Done(err error) error
 
 ```
 searchKey: lsifstore.Package
-tags: [exported]
 ```
 
 ```Go
@@ -1207,7 +1223,6 @@ Package pairs a package name and the dump that provides it.
 
 ```
 searchKey: lsifstore.PackageReference
-tags: [exported]
 ```
 
 ```Go
@@ -1223,7 +1238,6 @@ PackageReferences pairs a package name/version with a dump that depends on it.
 
 ```
 searchKey: lsifstore.Location
-tags: [exported]
 ```
 
 ```Go
@@ -1240,7 +1254,6 @@ Location is an LSP-like location scoped to a dump.
 
 ```
 searchKey: lsifstore.Range
-tags: [exported]
 ```
 
 ```Go
@@ -1256,6 +1269,7 @@ Range is an inclusive bounds within a file.
 
 ```
 searchKey: lsifstore.newRange
+tags: [private]
 ```
 
 ```Go
@@ -1266,7 +1280,6 @@ func newRange(startLine, startCharacter, endLine, endCharacter int) Range
 
 ```
 searchKey: lsifstore.Position
-tags: [exported]
 ```
 
 ```Go
@@ -1282,7 +1295,6 @@ Position is a unique position within a file.
 
 ```
 searchKey: lsifstore.Diagnostic
-tags: [exported]
 ```
 
 ```Go
@@ -1299,7 +1311,6 @@ Diagnostic describes diagnostic information attached to a location within a part
 
 ```
 searchKey: lsifstore.CodeIntelligenceRange
-tags: [exported]
 ```
 
 ```Go
@@ -1315,10 +1326,15 @@ CodeIntelligenceRange pairs a range with its definitions, reference, and hover t
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="intsToString" href="#intsToString">func intsToString(vs []int) string</a>
 
 ```
 searchKey: lsifstore.intsToString
+tags: [private]
 ```
 
 ```Go
@@ -1329,6 +1345,7 @@ func intsToString(vs []int) string
 
 ```
 searchKey: lsifstore.withBatchInserter
+tags: [private]
 ```
 
 ```Go
@@ -1341,6 +1358,7 @@ withBatchInserter runs batch.WithInserter in a number of goroutines proportional
 
 ```
 searchKey: lsifstore.limitResultMap
+tags: [private]
 ```
 
 ```Go
@@ -1353,6 +1371,7 @@ limitResultMap returns a map symmetric to the given rangeIDsByResultID that incl
 
 ```
 searchKey: lsifstore.pathsFromResultMap
+tags: [private]
 ```
 
 ```Go
@@ -1365,6 +1384,7 @@ pathsFromResultMap returns a deduplicated and sorted set of document paths prese
 
 ```
 searchKey: lsifstore.sortLocations
+tags: [private]
 ```
 
 ```Go
@@ -1377,6 +1397,7 @@ sortLocations sorts locations by document, then by offset within a document.
 
 ```
 searchKey: lsifstore.compareBundleRanges
+tags: [private]
 ```
 
 ```Go
@@ -1389,6 +1410,7 @@ compareBundleRanges returns true if r1's start position occurs before r2's start
 
 ```
 searchKey: lsifstore.idsToString
+tags: [private]
 ```
 
 ```Go
@@ -1399,6 +1421,7 @@ func idsToString(vs []semantic.ID) string
 
 ```
 searchKey: lsifstore.extractResultIDs
+tags: [private]
 ```
 
 ```Go
@@ -1411,26 +1434,29 @@ extractResultIDs extracts result identifiers from each range in the given list. 
 
 ```
 searchKey: lsifstore.monikersToString
+tags: [private]
 ```
 
 ```Go
 func monikersToString(vs []semantic.MonikerData) string
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.serializer.go" href="#init.serializer.go">func init()</a>
 
 ```
 searchKey: lsifstore.init
+tags: [private]
 ```
 
 ```Go
 func init()
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.serializer_documentation.go" href="#init.serializer_documentation.go">func init()</a>
 
 ```
 searchKey: lsifstore.init
+tags: [private]
 ```
 
 ```Go
@@ -1441,6 +1467,7 @@ func init()
 
 ```
 searchKey: lsifstore.TestClear
+tags: [private]
 ```
 
 ```Go
@@ -1451,6 +1478,7 @@ func TestClear(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseExists
+tags: [private]
 ```
 
 ```Go
@@ -1461,6 +1489,7 @@ func TestDatabaseExists(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseHover
+tags: [private]
 ```
 
 ```Go
@@ -1471,6 +1500,7 @@ func TestDatabaseHover(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseDefinitions
+tags: [private]
 ```
 
 ```Go
@@ -1481,6 +1511,7 @@ func TestDatabaseDefinitions(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseReferences
+tags: [private]
 ```
 
 ```Go
@@ -1491,6 +1522,7 @@ func TestDatabaseReferences(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseMonikersByPosition
+tags: [private]
 ```
 
 ```Go
@@ -1501,6 +1533,7 @@ func TestDatabaseMonikersByPosition(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseBulkMonikerResults
+tags: [private]
 ```
 
 ```Go
@@ -1511,6 +1544,7 @@ func TestDatabaseBulkMonikerResults(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabasePackageInformation
+tags: [private]
 ```
 
 ```Go
@@ -1521,6 +1555,7 @@ func TestDatabasePackageInformation(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseRanges
+tags: [private]
 ```
 
 ```Go
@@ -1531,6 +1566,7 @@ func TestDatabaseRanges(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDocumentData
+tags: [private]
 ```
 
 ```Go
@@ -1541,6 +1577,7 @@ func TestDocumentData(t *testing.T)
 
 ```
 searchKey: lsifstore.TestResultChunkData
+tags: [private]
 ```
 
 ```Go
@@ -1551,16 +1588,18 @@ func TestResultChunkData(t *testing.T)
 
 ```
 searchKey: lsifstore.TestLocations
+tags: [private]
 ```
 
 ```Go
 func TestLocations(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.store_test.go" href="#init.store_test.go">func init()</a>
 
 ```
 searchKey: lsifstore.init
+tags: [private]
 ```
 
 ```Go

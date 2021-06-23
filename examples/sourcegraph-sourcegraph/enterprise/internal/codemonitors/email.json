@@ -4,7 +4,9 @@
     "identifier": "email",
     "newPage": true,
     "searchKey": "enterprise/internal/codemonitors/email",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "MonitorKind",
                 "newPage": false,
                 "searchKey": "email.MonitorKind",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "utmSourceEmail",
                 "newPage": false,
                 "searchKey": "email.utmSourceEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -82,7 +86,9 @@
                 "identifier": "priorityCritical",
                 "newPage": false,
                 "searchKey": "email.priorityCritical",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -105,7 +111,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -123,7 +131,9 @@
                 "identifier": "externalURL",
                 "newPage": false,
                 "searchKey": "email.externalURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,9 +153,7 @@
                 "identifier": "MockSendEmailForNewSearchResult",
                 "newPage": false,
                 "searchKey": "email.MockSendEmailForNewSearchResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -165,9 +173,7 @@
                 "identifier": "MockExternalURL",
                 "newPage": false,
                 "searchKey": "email.MockExternalURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "newSearchResultsEmailTemplates",
                 "newPage": false,
                 "searchKey": "email.newSearchResultsEmailTemplates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,7 +218,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -228,9 +238,7 @@
                 "identifier": "TemplateDataNewSearchResults",
                 "newPage": false,
                 "searchKey": "email.TemplateDataNewSearchResults",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -248,9 +256,7 @@
                       "identifier": "NewTemplateDataForNewSearchResults",
                       "newPage": false,
                       "searchKey": "email.NewTemplateDataForNewSearchResults",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -270,9 +276,7 @@
                       "identifier": "NewTestTemplateDataForNewSearchResults",
                       "newPage": false,
                       "searchKey": "email.NewTestTemplateDataForNewSearchResults",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -298,7 +302,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -316,9 +322,7 @@
                 "identifier": "SendEmailForNewSearchResult",
                 "newPage": false,
                 "searchKey": "email.SendEmailForNewSearchResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -338,7 +342,9 @@
                 "identifier": "sendEmail",
                 "newPage": false,
                 "searchKey": "email.sendEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -358,7 +364,9 @@
                 "identifier": "getSearchURL",
                 "newPage": false,
                 "searchKey": "email.getSearchURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -378,7 +386,9 @@
                 "identifier": "getCodeMonitorURL",
                 "newPage": false,
                 "searchKey": "email.getCodeMonitorURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -398,7 +408,9 @@
                 "identifier": "sourcegraphURL",
                 "newPage": false,
                 "searchKey": "email.sourcegraphURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

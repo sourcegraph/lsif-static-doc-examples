@@ -17,10 +17,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleWrite" href="#ExampleWrite">func ExampleWrite()</a>
 
 ```
 searchKey: binary_test.ExampleWrite
+tags: [private]
 ```
 
 ```Go
@@ -31,6 +36,7 @@ func ExampleWrite()
 
 ```
 searchKey: binary_test.ExampleWrite_multi
+tags: [private]
 ```
 
 ```Go
@@ -41,6 +47,7 @@ func ExampleWrite_multi()
 
 ```
 searchKey: binary_test.ExampleRead
+tags: [private]
 ```
 
 ```Go
@@ -51,6 +58,7 @@ func ExampleRead()
 
 ```
 searchKey: binary_test.ExampleRead_multi
+tags: [private]
 ```
 
 ```Go
@@ -61,6 +69,7 @@ func ExampleRead_multi()
 
 ```
 searchKey: binary_test.ExampleByteOrder_put
+tags: [private]
 ```
 
 ```Go
@@ -71,6 +80,7 @@ func ExampleByteOrder_put()
 
 ```
 searchKey: binary_test.ExampleByteOrder_get
+tags: [private]
 ```
 
 ```Go
@@ -81,6 +91,7 @@ func ExampleByteOrder_get()
 
 ```
 searchKey: binary_test.ExamplePutUvarint
+tags: [private]
 ```
 
 ```Go
@@ -91,6 +102,7 @@ func ExamplePutUvarint()
 
 ```
 searchKey: binary_test.ExamplePutVarint
+tags: [private]
 ```
 
 ```Go
@@ -101,6 +113,7 @@ func ExamplePutVarint()
 
 ```
 searchKey: binary_test.ExampleUvarint
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +124,7 @@ func ExampleUvarint()
 
 ```
 searchKey: binary_test.ExampleVarint
+tags: [private]
 ```
 
 ```Go

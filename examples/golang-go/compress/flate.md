@@ -96,7 +96,7 @@ Package flate implements the DEFLATE compressed data format, described in RFC 19
         * [func (d *compressor) storeHuff()](#compressor.storeHuff)
         * [func (d *compressor) write(b []byte) (n int, err error)](#compressor.write)
         * [func (d *compressor) syncFlush() error](#compressor.syncFlush)
-        * [func (d *compressor) init(w io.Writer, level int) (err error)](#compressor.init)
+        * [func (d *compressor) init(w io.Writer, level int) (err error)](#compressor.init.deflate.go)
         * [func (d *compressor) reset(w io.Writer)](#compressor.reset)
         * [func (d *compressor) close() error](#compressor.close)
     * [type dictWriter struct](#dictWriter)
@@ -116,7 +116,7 @@ Package flate implements the DEFLATE compressed data format, described in RFC 19
         * [func (e *deflateFast) reset()](#deflateFast.reset)
         * [func (e *deflateFast) shiftOffsets()](#deflateFast.shiftOffsets)
     * [type dictDecoder struct](#dictDecoder)
-        * [func (dd *dictDecoder) init(size int, dict []byte)](#dictDecoder.init)
+        * [func (dd *dictDecoder) init(size int, dict []byte)](#dictDecoder.init.dict_decoder.go)
         * [func (dd *dictDecoder) histSize() int](#dictDecoder.histSize)
         * [func (dd *dictDecoder) availRead() int](#dictDecoder.availRead)
         * [func (dd *dictDecoder) availWrite() int](#dictDecoder.availWrite)
@@ -179,7 +179,7 @@ Package flate implements the DEFLATE compressed data format, described in RFC 19
         * [func (e *WriteError) Error() string](#WriteError.Error)
     * [type Resetter interface](#Resetter)
     * [type huffmanDecoder struct](#huffmanDecoder)
-        * [func (h *huffmanDecoder) init(lengths []int) bool](#huffmanDecoder.init)
+        * [func (h *huffmanDecoder) init(lengths []int) bool](#huffmanDecoder.init.inflate.go)
     * [type Reader interface](#Reader)
         * [func makeReader(r io.Reader) Reader](#makeReader)
     * [type decompressor struct](#decompressor)
@@ -227,7 +227,7 @@ Package flate implements the DEFLATE compressed data format, described in RFC 19
     * [func load64(b []byte, i int32) uint64](#load64)
     * [func hash(u uint32) uint32](#hash)
     * [func emitLiteral(dst []token, lit []byte) []token](#emitLiteral)
-    * [func init()](#init)
+    * [func init()](#init.huffman_bit_writer.go)
     * [func histogram(b []byte, h []int32)](#histogram)
     * [func reverseBits(number uint16, bitLength byte) uint16](#reverseBits)
     * [func noEOF(e error) error](#noEOF)
@@ -288,15 +288,10 @@ Package flate implements the DEFLATE compressed data format, described in RFC 19
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NoCompression" href="#NoCompression">const NoCompression</a>
 
 ```
 searchKey: flate.NoCompression
-tags: [exported]
 ```
 
 ```Go
@@ -307,7 +302,6 @@ const NoCompression = 0
 
 ```
 searchKey: flate.BestSpeed
-tags: [exported]
 ```
 
 ```Go
@@ -318,7 +312,6 @@ const BestSpeed = 1
 
 ```
 searchKey: flate.BestCompression
-tags: [exported]
 ```
 
 ```Go
@@ -329,7 +322,6 @@ const BestCompression = 9
 
 ```
 searchKey: flate.DefaultCompression
-tags: [exported]
 ```
 
 ```Go
@@ -340,7 +332,6 @@ const DefaultCompression = -1
 
 ```
 searchKey: flate.HuffmanOnly
-tags: [exported]
 ```
 
 ```Go
@@ -355,6 +346,7 @@ Note that HuffmanOnly produces a compressed output that is RFC 1951 compliant. T
 
 ```
 searchKey: flate.logWindowSize
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +357,7 @@ const logWindowSize = 15
 
 ```
 searchKey: flate.windowSize
+tags: [private]
 ```
 
 ```Go
@@ -375,6 +368,7 @@ const windowSize = 1 << logWindowSize
 
 ```
 searchKey: flate.windowMask
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +379,7 @@ const windowMask = windowSize - 1
 
 ```
 searchKey: flate.baseMatchLength
+tags: [private]
 ```
 
 ```Go
@@ -398,6 +393,7 @@ The LZ77 step produces a sequence of literal tokens and <length, offset> pair to
 
 ```
 searchKey: flate.minMatchLength
+tags: [private]
 ```
 
 ```Go
@@ -409,6 +405,7 @@ const minMatchLength = 4 // The smallest match length that the compressor actual
 
 ```
 searchKey: flate.maxMatchLength
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +417,7 @@ const maxMatchLength = 258 // The largest match length
 
 ```
 searchKey: flate.baseMatchOffset
+tags: [private]
 ```
 
 ```Go
@@ -431,6 +429,7 @@ const baseMatchOffset = 1 // The smallest match offset
 
 ```
 searchKey: flate.maxMatchOffset
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +441,7 @@ const maxMatchOffset = 1 << 15 // The largest match offset
 
 ```
 searchKey: flate.maxFlateBlockTokens
+tags: [private]
 ```
 
 ```Go
@@ -454,6 +454,7 @@ The maximum number of tokens we put into a single flate block, just to stop thin
 
 ```
 searchKey: flate.maxStoreBlockSize
+tags: [private]
 ```
 
 ```Go
@@ -464,6 +465,7 @@ const maxStoreBlockSize = 65535
 
 ```
 searchKey: flate.hashBits
+tags: [private]
 ```
 
 ```Go
@@ -475,6 +477,7 @@ const hashBits = 17 // After 17 performance degrades
 
 ```
 searchKey: flate.hashSize
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +488,7 @@ const hashSize = 1 << hashBits
 
 ```
 searchKey: flate.hashMask
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +499,7 @@ const hashMask = (1 << hashBits) - 1
 
 ```
 searchKey: flate.maxHashOffset
+tags: [private]
 ```
 
 ```Go
@@ -505,6 +510,7 @@ const maxHashOffset = 1 << 24
 
 ```
 searchKey: flate.skipNever
+tags: [private]
 ```
 
 ```Go
@@ -515,6 +521,7 @@ const skipNever = math.MaxInt32
 
 ```
 searchKey: flate.hashmul
+tags: [private]
 ```
 
 ```Go
@@ -525,6 +532,7 @@ const hashmul = 0x1e35a7bd
 
 ```
 searchKey: flate.tableBits
+tags: [private]
 ```
 
 ```Go
@@ -536,6 +544,7 @@ const tableBits = 14 // Bits used in the table.
 
 ```
 searchKey: flate.tableSize
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +556,7 @@ const tableSize = 1 << tableBits // Size of the table.
 
 ```
 searchKey: flate.tableMask
+tags: [private]
 ```
 
 ```Go
@@ -558,6 +568,7 @@ const tableMask // Mask for table indices. Redundant, but can eliminate bounds c
 
 ```
 searchKey: flate.tableShift
+tags: [private]
 ```
 
 ```Go
@@ -569,6 +580,7 @@ const tableShift // Right-shift to get the tableBits most significant bits of a 
 
 ```
 searchKey: flate.bufferReset
+tags: [private]
 ```
 
 ```Go
@@ -581,6 +593,7 @@ Reset the buffer offset when reaching this. Offsets are stored between blocks as
 
 ```
 searchKey: flate.inputMargin
+tags: [private]
 ```
 
 ```Go
@@ -593,6 +606,7 @@ These constants are defined by the Snappy implementation so that its assembly im
 
 ```
 searchKey: flate.minNonLiteralBlockSize
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +619,7 @@ These constants are defined by the Snappy implementation so that its assembly im
 
 ```
 searchKey: flate.offsetCodeCount
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +632,7 @@ The largest offset code.
 
 ```
 searchKey: flate.endBlockMarker
+tags: [private]
 ```
 
 ```Go
@@ -629,6 +645,7 @@ The special code used to mark the end of a block.
 
 ```
 searchKey: flate.lengthCodesStart
+tags: [private]
 ```
 
 ```Go
@@ -641,6 +658,7 @@ The first length code.
 
 ```
 searchKey: flate.codegenCodeCount
+tags: [private]
 ```
 
 ```Go
@@ -653,6 +671,7 @@ The number of codegen codes.
 
 ```
 searchKey: flate.badCode
+tags: [private]
 ```
 
 ```Go
@@ -663,6 +682,7 @@ const badCode = 255
 
 ```
 searchKey: flate.bufferFlushSize
+tags: [private]
 ```
 
 ```Go
@@ -675,6 +695,7 @@ bufferFlushSize indicates the buffer size after which bytes are flushed to the w
 
 ```
 searchKey: flate.bufferSize
+tags: [private]
 ```
 
 ```Go
@@ -687,6 +708,7 @@ bufferSize is the actual output byte buffer size. It must have additional headro
 
 ```
 searchKey: flate.maxBitsLimit
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +719,7 @@ const maxBitsLimit = 16
 
 ```
 searchKey: flate.maxCodeLen
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +731,7 @@ const maxCodeLen = 16 // max length of Huffman code
 
 ```
 searchKey: flate.maxNumLit
+tags: [private]
 ```
 
 ```Go
@@ -720,6 +744,7 @@ The next three numbers come from the RFC section 3.2.7, with the additional prov
 
 ```
 searchKey: flate.maxNumDist
+tags: [private]
 ```
 
 ```Go
@@ -730,6 +755,7 @@ const maxNumDist = 30
 
 ```
 searchKey: flate.numCodes
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +767,7 @@ const numCodes = 19 // number of codes in Huffman meta-code
 
 ```
 searchKey: flate.huffmanChunkBits
+tags: [private]
 ```
 
 ```Go
@@ -751,6 +778,7 @@ const huffmanChunkBits = 9
 
 ```
 searchKey: flate.huffmanNumChunks
+tags: [private]
 ```
 
 ```Go
@@ -761,6 +789,7 @@ const huffmanNumChunks = 1 << huffmanChunkBits
 
 ```
 searchKey: flate.huffmanCountMask
+tags: [private]
 ```
 
 ```Go
@@ -771,6 +800,7 @@ const huffmanCountMask = 15
 
 ```
 searchKey: flate.huffmanValueShift
+tags: [private]
 ```
 
 ```Go
@@ -781,6 +811,7 @@ const huffmanValueShift = 4
 
 ```
 searchKey: flate.lengthShift
+tags: [private]
 ```
 
 ```Go
@@ -793,6 +824,7 @@ const lengthShift = 22
 
 ```
 searchKey: flate.offsetMask
+tags: [private]
 ```
 
 ```Go
@@ -803,6 +835,7 @@ const offsetMask = 1<<lengthShift - 1
 
 ```
 searchKey: flate.typeMask
+tags: [private]
 ```
 
 ```Go
@@ -813,6 +846,7 @@ const typeMask = 3 << 30
 
 ```
 searchKey: flate.literalType
+tags: [private]
 ```
 
 ```Go
@@ -823,6 +857,7 @@ const literalType = 0 << 30
 
 ```
 searchKey: flate.matchType
+tags: [private]
 ```
 
 ```Go
@@ -833,6 +868,7 @@ const matchType = 1 << 30
 
 ```
 searchKey: flate.ml
+tags: [private]
 ```
 
 ```Go
@@ -842,14 +878,11 @@ const ml = 0x7fc00000 // Maximum length token. Used to reduce the size of writeB
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="levels" href="#levels">var levels</a>
 
 ```
 searchKey: flate.levels
+tags: [private]
 ```
 
 ```Go
@@ -860,6 +893,7 @@ var levels = ...
 
 ```
 searchKey: flate.lengthExtraBits
+tags: [private]
 ```
 
 ```Go
@@ -872,6 +906,7 @@ The number of extra bits needed by length code X - LENGTH_CODES_START.
 
 ```
 searchKey: flate.lengthBase
+tags: [private]
 ```
 
 ```Go
@@ -884,6 +919,7 @@ The length indicated by length code X - LENGTH_CODES_START.
 
 ```
 searchKey: flate.offsetExtraBits
+tags: [private]
 ```
 
 ```Go
@@ -896,6 +932,7 @@ offset code word extra bits.
 
 ```
 searchKey: flate.offsetBase
+tags: [private]
 ```
 
 ```Go
@@ -906,6 +943,7 @@ var offsetBase = ...
 
 ```
 searchKey: flate.codegenOrder
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +956,7 @@ The odd order in which the codegen code sizes are written.
 
 ```
 searchKey: flate.huffOffset
+tags: [private]
 ```
 
 ```Go
@@ -930,6 +969,7 @@ huffOffset is a static offset encoder used for huffman only encoding. It can be 
 
 ```
 searchKey: flate.fixedLiteralEncoding
+tags: [private]
 ```
 
 ```Go
@@ -940,6 +980,7 @@ var fixedLiteralEncoding *huffmanEncoder = generateFixedLiteralEncoding()
 
 ```
 searchKey: flate.fixedOffsetEncoding
+tags: [private]
 ```
 
 ```Go
@@ -950,6 +991,7 @@ var fixedOffsetEncoding *huffmanEncoder = generateFixedOffsetEncoding()
 
 ```
 searchKey: flate.fixedOnce
+tags: [private]
 ```
 
 ```Go
@@ -962,6 +1004,7 @@ Initialize the fixedHuffmanDecoder only once upon first use.
 
 ```
 searchKey: flate.fixedHuffmanDecoder
+tags: [private]
 ```
 
 ```Go
@@ -972,6 +1015,7 @@ var fixedHuffmanDecoder huffmanDecoder
 
 ```
 searchKey: flate.codeOrder
+tags: [private]
 ```
 
 ```Go
@@ -982,6 +1026,7 @@ var codeOrder = [...]int{16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 
 
 ```
 searchKey: flate.lengthCodes
+tags: [private]
 ```
 
 ```Go
@@ -994,6 +1039,7 @@ The length code for length X (MIN_MATCH_LENGTH <= X <= MAX_MATCH_LENGTH) is leng
 
 ```
 searchKey: flate.offsetCodes
+tags: [private]
 ```
 
 ```Go
@@ -1004,6 +1050,7 @@ var offsetCodes = ...
 
 ```
 searchKey: flate.deflateTests
+tags: [private]
 ```
 
 ```Go
@@ -1014,6 +1061,7 @@ var deflateTests = ...
 
 ```
 searchKey: flate.deflateInflateTests
+tags: [private]
 ```
 
 ```Go
@@ -1024,6 +1072,7 @@ var deflateInflateTests = ...
 
 ```
 searchKey: flate.reverseBitsTests
+tags: [private]
 ```
 
 ```Go
@@ -1034,6 +1083,7 @@ var reverseBitsTests = ...
 
 ```
 searchKey: flate.deflateInflateStringTests
+tags: [private]
 ```
 
 ```Go
@@ -1044,6 +1094,7 @@ var deflateInflateStringTests = ...
 
 ```
 searchKey: flate.errIO
+tags: [private]
 ```
 
 ```Go
@@ -1054,6 +1105,7 @@ var errIO = errors.New("IO error")
 
 ```
 searchKey: flate.update
+tags: [private]
 ```
 
 ```Go
@@ -1064,6 +1116,7 @@ var update = flag.Bool("update", false, "update reference files")
 
 ```
 searchKey: flate.writeBlockTests
+tags: [private]
 ```
 
 ```Go
@@ -1074,6 +1127,7 @@ var writeBlockTests = ...
 
 ```
 searchKey: flate.suites
+tags: [private]
 ```
 
 ```Go
@@ -1084,6 +1138,7 @@ var suites = ...
 
 ```
 searchKey: flate.levelTests
+tags: [private]
 ```
 
 ```Go
@@ -1094,6 +1149,7 @@ var levelTests = ...
 
 ```
 searchKey: flate.sizes
+tags: [private]
 ```
 
 ```Go
@@ -1109,14 +1165,11 @@ var sizes = []struct {
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="compressionLevel" href="#compressionLevel">type compressionLevel struct</a>
 
 ```
 searchKey: flate.compressionLevel
+tags: [private]
 ```
 
 ```Go
@@ -1129,6 +1182,7 @@ type compressionLevel struct {
 
 ```
 searchKey: flate.compressor
+tags: [private]
 ```
 
 ```Go
@@ -1180,6 +1234,7 @@ type compressor struct {
 
 ```
 searchKey: flate.compressor.fillDeflate
+tags: [private]
 ```
 
 ```Go
@@ -1190,6 +1245,7 @@ func (d *compressor) fillDeflate(b []byte) int
 
 ```
 searchKey: flate.compressor.writeBlock
+tags: [private]
 ```
 
 ```Go
@@ -1200,6 +1256,7 @@ func (d *compressor) writeBlock(tokens []token, index int) error
 
 ```
 searchKey: flate.compressor.fillWindow
+tags: [private]
 ```
 
 ```Go
@@ -1212,6 +1269,7 @@ fillWindow will fill the current window with the supplied dictionary and calcula
 
 ```
 searchKey: flate.compressor.findMatch
+tags: [private]
 ```
 
 ```Go
@@ -1224,6 +1282,7 @@ Try to find a match starting at index whose length is greater than prevSize. We 
 
 ```
 searchKey: flate.compressor.writeStoredBlock
+tags: [private]
 ```
 
 ```Go
@@ -1234,6 +1293,7 @@ func (d *compressor) writeStoredBlock(buf []byte) error
 
 ```
 searchKey: flate.compressor.encSpeed
+tags: [private]
 ```
 
 ```Go
@@ -1246,6 +1306,7 @@ encSpeed will compress and store the currently added data, if enough has been ac
 
 ```
 searchKey: flate.compressor.initDeflate
+tags: [private]
 ```
 
 ```Go
@@ -1256,6 +1317,7 @@ func (d *compressor) initDeflate()
 
 ```
 searchKey: flate.compressor.deflate
+tags: [private]
 ```
 
 ```Go
@@ -1266,6 +1328,7 @@ func (d *compressor) deflate()
 
 ```
 searchKey: flate.compressor.fillStore
+tags: [private]
 ```
 
 ```Go
@@ -1276,6 +1339,7 @@ func (d *compressor) fillStore(b []byte) int
 
 ```
 searchKey: flate.compressor.store
+tags: [private]
 ```
 
 ```Go
@@ -1286,6 +1350,7 @@ func (d *compressor) store()
 
 ```
 searchKey: flate.compressor.storeHuff
+tags: [private]
 ```
 
 ```Go
@@ -1298,6 +1363,7 @@ storeHuff compresses and stores the currently added data when the d.window is fu
 
 ```
 searchKey: flate.compressor.write
+tags: [private]
 ```
 
 ```Go
@@ -1308,16 +1374,18 @@ func (d *compressor) write(b []byte) (n int, err error)
 
 ```
 searchKey: flate.compressor.syncFlush
+tags: [private]
 ```
 
 ```Go
 func (d *compressor) syncFlush() error
 ```
 
-#### <a id="compressor.init" href="#compressor.init">func (d *compressor) init(w io.Writer, level int) (err error)</a>
+#### <a id="compressor.init.deflate.go" href="#compressor.init.deflate.go">func (d *compressor) init(w io.Writer, level int) (err error)</a>
 
 ```
 searchKey: flate.compressor.init
+tags: [private]
 ```
 
 ```Go
@@ -1328,6 +1396,7 @@ func (d *compressor) init(w io.Writer, level int) (err error)
 
 ```
 searchKey: flate.compressor.reset
+tags: [private]
 ```
 
 ```Go
@@ -1338,6 +1407,7 @@ func (d *compressor) reset(w io.Writer)
 
 ```
 searchKey: flate.compressor.close
+tags: [private]
 ```
 
 ```Go
@@ -1348,6 +1418,7 @@ func (d *compressor) close() error
 
 ```
 searchKey: flate.dictWriter
+tags: [private]
 ```
 
 ```Go
@@ -1360,6 +1431,7 @@ type dictWriter struct {
 
 ```
 searchKey: flate.dictWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -1370,7 +1442,6 @@ func (w *dictWriter) Write(b []byte) (n int, err error)
 
 ```
 searchKey: flate.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -1386,7 +1457,6 @@ A Writer takes data written to it and writes the compressed form of that data to
 
 ```
 searchKey: flate.NewWriter
-tags: [exported]
 ```
 
 ```Go
@@ -1401,7 +1471,6 @@ If level is in the range [-2, 9] then the error returned will be nil. Otherwise 
 
 ```
 searchKey: flate.NewWriterDict
-tags: [exported]
 ```
 
 ```Go
@@ -1414,7 +1483,6 @@ NewWriterDict is like NewWriter but initializes the new Writer with a preset dic
 
 ```
 searchKey: flate.Writer.Write
-tags: [exported]
 ```
 
 ```Go
@@ -1427,7 +1495,6 @@ Write writes data to w, which will eventually write the compressed form of data 
 
 ```
 searchKey: flate.Writer.Flush
-tags: [exported]
 ```
 
 ```Go
@@ -1442,7 +1509,6 @@ In the terminology of the zlib library, Flush is equivalent to Z_SYNC_FLUSH.
 
 ```
 searchKey: flate.Writer.Close
-tags: [exported]
 ```
 
 ```Go
@@ -1455,7 +1521,6 @@ Close flushes and closes the writer.
 
 ```
 searchKey: flate.Writer.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -1468,6 +1533,7 @@ Reset discards the writer's state and makes it equivalent to the result of NewWr
 
 ```
 searchKey: flate.tableEntry
+tags: [private]
 ```
 
 ```Go
@@ -1481,6 +1547,7 @@ type tableEntry struct {
 
 ```
 searchKey: flate.deflateFast
+tags: [private]
 ```
 
 ```Go
@@ -1497,6 +1564,7 @@ deflateFast maintains the table for matches, and the previous byte block for cro
 
 ```
 searchKey: flate.newDeflateFast
+tags: [private]
 ```
 
 ```Go
@@ -1507,6 +1575,7 @@ func newDeflateFast() *deflateFast
 
 ```
 searchKey: flate.deflateFast.encode
+tags: [private]
 ```
 
 ```Go
@@ -1519,6 +1588,7 @@ encode encodes a block given in src and appends tokens to dst and returns the re
 
 ```
 searchKey: flate.deflateFast.matchLen
+tags: [private]
 ```
 
 ```Go
@@ -1531,6 +1601,7 @@ matchLen returns the match length between src[s:] and src[t:]. t can be negative
 
 ```
 searchKey: flate.deflateFast.reset
+tags: [private]
 ```
 
 ```Go
@@ -1543,6 +1614,7 @@ Reset resets the encoding history. This ensures that no matches are made to the 
 
 ```
 searchKey: flate.deflateFast.shiftOffsets
+tags: [private]
 ```
 
 ```Go
@@ -1557,6 +1629,7 @@ See [https://golang.org/issue/18636](https://golang.org/issue/18636) and [https:
 
 ```
 searchKey: flate.dictDecoder
+tags: [private]
 ```
 
 ```Go
@@ -1590,10 +1663,11 @@ The writeCopy and tryWriteCopy are used to implement this command.
 ```
 For performance reasons, this implementation performs little to no sanity checks about the arguments. As such, the invariants documented for each method call must be respected. 
 
-#### <a id="dictDecoder.init" href="#dictDecoder.init">func (dd *dictDecoder) init(size int, dict []byte)</a>
+#### <a id="dictDecoder.init.dict_decoder.go" href="#dictDecoder.init.dict_decoder.go">func (dd *dictDecoder) init(size int, dict []byte)</a>
 
 ```
 searchKey: flate.dictDecoder.init
+tags: [private]
 ```
 
 ```Go
@@ -1606,6 +1680,7 @@ init initializes dictDecoder to have a sliding window dictionary of the given si
 
 ```
 searchKey: flate.dictDecoder.histSize
+tags: [private]
 ```
 
 ```Go
@@ -1618,6 +1693,7 @@ histSize reports the total amount of historical data in the dictionary.
 
 ```
 searchKey: flate.dictDecoder.availRead
+tags: [private]
 ```
 
 ```Go
@@ -1630,6 +1706,7 @@ availRead reports the number of bytes that can be flushed by readFlush.
 
 ```
 searchKey: flate.dictDecoder.availWrite
+tags: [private]
 ```
 
 ```Go
@@ -1642,6 +1719,7 @@ availWrite reports the available amount of output buffer space.
 
 ```
 searchKey: flate.dictDecoder.writeSlice
+tags: [private]
 ```
 
 ```Go
@@ -1656,6 +1734,7 @@ This invariant will be kept: len(s) <= availWrite()
 
 ```
 searchKey: flate.dictDecoder.writeMark
+tags: [private]
 ```
 
 ```Go
@@ -1670,6 +1749,7 @@ This invariant must be kept: 0 <= cnt <= availWrite()
 
 ```
 searchKey: flate.dictDecoder.writeByte
+tags: [private]
 ```
 
 ```Go
@@ -1684,6 +1764,7 @@ This invariant must be kept: 0 < availWrite()
 
 ```
 searchKey: flate.dictDecoder.writeCopy
+tags: [private]
 ```
 
 ```Go
@@ -1698,6 +1779,7 @@ This invariant must be kept: 0 < dist <= histSize()
 
 ```
 searchKey: flate.dictDecoder.tryWriteCopy
+tags: [private]
 ```
 
 ```Go
@@ -1714,6 +1796,7 @@ This invariant must be kept: 0 < dist <= histSize()
 
 ```
 searchKey: flate.dictDecoder.readFlush
+tags: [private]
 ```
 
 ```Go
@@ -1726,6 +1809,7 @@ readFlush returns a slice of the historical buffer that is ready to be emitted t
 
 ```
 searchKey: flate.huffmanBitWriter
+tags: [private]
 ```
 
 ```Go
@@ -1757,6 +1841,7 @@ type huffmanBitWriter struct {
 
 ```
 searchKey: flate.newHuffmanBitWriter
+tags: [private]
 ```
 
 ```Go
@@ -1767,6 +1852,7 @@ func newHuffmanBitWriter(w io.Writer) *huffmanBitWriter
 
 ```
 searchKey: flate.huffmanBitWriter.reset
+tags: [private]
 ```
 
 ```Go
@@ -1777,6 +1863,7 @@ func (w *huffmanBitWriter) reset(writer io.Writer)
 
 ```
 searchKey: flate.huffmanBitWriter.flush
+tags: [private]
 ```
 
 ```Go
@@ -1787,6 +1874,7 @@ func (w *huffmanBitWriter) flush()
 
 ```
 searchKey: flate.huffmanBitWriter.write
+tags: [private]
 ```
 
 ```Go
@@ -1797,6 +1885,7 @@ func (w *huffmanBitWriter) write(b []byte)
 
 ```
 searchKey: flate.huffmanBitWriter.writeBits
+tags: [private]
 ```
 
 ```Go
@@ -1807,6 +1896,7 @@ func (w *huffmanBitWriter) writeBits(b int32, nb uint)
 
 ```
 searchKey: flate.huffmanBitWriter.writeBytes
+tags: [private]
 ```
 
 ```Go
@@ -1817,6 +1907,7 @@ func (w *huffmanBitWriter) writeBytes(bytes []byte)
 
 ```
 searchKey: flate.huffmanBitWriter.generateCodegen
+tags: [private]
 ```
 
 ```Go
@@ -1837,6 +1928,7 @@ litenc, offenc   The literal and offset encoder to use
 
 ```
 searchKey: flate.huffmanBitWriter.dynamicSize
+tags: [private]
 ```
 
 ```Go
@@ -1849,6 +1941,7 @@ dynamicSize returns the size of dynamically encoded data in bits.
 
 ```
 searchKey: flate.huffmanBitWriter.fixedSize
+tags: [private]
 ```
 
 ```Go
@@ -1861,6 +1954,7 @@ fixedSize returns the size of dynamically encoded data in bits.
 
 ```
 searchKey: flate.huffmanBitWriter.storedSize
+tags: [private]
 ```
 
 ```Go
@@ -1873,6 +1967,7 @@ storedSize calculates the stored size, including header. The function returns th
 
 ```
 searchKey: flate.huffmanBitWriter.writeCode
+tags: [private]
 ```
 
 ```Go
@@ -1883,6 +1978,7 @@ func (w *huffmanBitWriter) writeCode(c hcode)
 
 ```
 searchKey: flate.huffmanBitWriter.writeDynamicHeader
+tags: [private]
 ```
 
 ```Go
@@ -1901,6 +1997,7 @@ numCodegens  The number of codegens used in codegen
 
 ```
 searchKey: flate.huffmanBitWriter.writeStoredHeader
+tags: [private]
 ```
 
 ```Go
@@ -1911,6 +2008,7 @@ func (w *huffmanBitWriter) writeStoredHeader(length int, isEof bool)
 
 ```
 searchKey: flate.huffmanBitWriter.writeFixedHeader
+tags: [private]
 ```
 
 ```Go
@@ -1921,6 +2019,7 @@ func (w *huffmanBitWriter) writeFixedHeader(isEof bool)
 
 ```
 searchKey: flate.huffmanBitWriter.writeBlock
+tags: [private]
 ```
 
 ```Go
@@ -1933,6 +2032,7 @@ writeBlock will write a block of tokens with the smallest encoding. The original
 
 ```
 searchKey: flate.huffmanBitWriter.writeBlockDynamic
+tags: [private]
 ```
 
 ```Go
@@ -1945,6 +2045,7 @@ writeBlockDynamic encodes a block using a dynamic Huffman table. This should be 
 
 ```
 searchKey: flate.huffmanBitWriter.indexTokens
+tags: [private]
 ```
 
 ```Go
@@ -1957,6 +2058,7 @@ indexTokens indexes a slice of tokens, and updates literalFreq and offsetFreq, a
 
 ```
 searchKey: flate.huffmanBitWriter.writeTokens
+tags: [private]
 ```
 
 ```Go
@@ -1969,6 +2071,7 @@ writeTokens writes a slice of tokens to the output. codes for literal and offset
 
 ```
 searchKey: flate.huffmanBitWriter.writeBlockHuff
+tags: [private]
 ```
 
 ```Go
@@ -1981,6 +2084,7 @@ writeBlockHuff encodes a block of bytes as either Huffman encoded literals or un
 
 ```
 searchKey: flate.hcode
+tags: [private]
 ```
 
 ```Go
@@ -1995,6 +2099,7 @@ hcode is a huffman code with a bit code and bit length.
 
 ```
 searchKey: flate.hcode.set
+tags: [private]
 ```
 
 ```Go
@@ -2007,6 +2112,7 @@ set sets the code and length of an hcode.
 
 ```
 searchKey: flate.huffmanEncoder
+tags: [private]
 ```
 
 ```Go
@@ -2023,6 +2129,7 @@ type huffmanEncoder struct {
 
 ```
 searchKey: flate.newHuffmanEncoder
+tags: [private]
 ```
 
 ```Go
@@ -2033,6 +2140,7 @@ func newHuffmanEncoder(size int) *huffmanEncoder
 
 ```
 searchKey: flate.generateFixedLiteralEncoding
+tags: [private]
 ```
 
 ```Go
@@ -2045,6 +2153,7 @@ Generates a HuffmanCode corresponding to the fixed literal table
 
 ```
 searchKey: flate.generateFixedOffsetEncoding
+tags: [private]
 ```
 
 ```Go
@@ -2055,6 +2164,7 @@ func generateFixedOffsetEncoding() *huffmanEncoder
 
 ```
 searchKey: flate.huffmanEncoder.bitLength
+tags: [private]
 ```
 
 ```Go
@@ -2065,6 +2175,7 @@ func (h *huffmanEncoder) bitLength(freq []int32) int
 
 ```
 searchKey: flate.huffmanEncoder.bitCounts
+tags: [private]
 ```
 
 ```Go
@@ -2099,6 +2210,7 @@ that should be encoded in i bits.
 
 ```
 searchKey: flate.huffmanEncoder.assignEncodingAndSize
+tags: [private]
 ```
 
 ```Go
@@ -2111,6 +2223,7 @@ Look at the leaves and assign them a bit count and an encoding as specified in R
 
 ```
 searchKey: flate.huffmanEncoder.generate
+tags: [private]
 ```
 
 ```Go
@@ -2125,6 +2238,7 @@ freq  An array of frequencies, in which frequency[i] gives the frequency of lite
 
 ```
 searchKey: flate.literalNode
+tags: [private]
 ```
 
 ```Go
@@ -2138,6 +2252,7 @@ type literalNode struct {
 
 ```
 searchKey: flate.maxNode
+tags: [private]
 ```
 
 ```Go
@@ -2148,6 +2263,7 @@ func maxNode() literalNode
 
 ```
 searchKey: flate.levelInfo
+tags: [private]
 ```
 
 ```Go
@@ -2177,6 +2293,7 @@ A levelInfo describes the state of the constructed tree for a given depth.
 
 ```
 searchKey: flate.byLiteral
+tags: [private]
 ```
 
 ```Go
@@ -2187,6 +2304,7 @@ type byLiteral []literalNode
 
 ```
 searchKey: flate.byLiteral.sort
+tags: [private]
 ```
 
 ```Go
@@ -2197,6 +2315,7 @@ func (s *byLiteral) sort(a []literalNode)
 
 ```
 searchKey: flate.byLiteral.Len
+tags: [private]
 ```
 
 ```Go
@@ -2207,6 +2326,7 @@ func (s byLiteral) Len() int
 
 ```
 searchKey: flate.byLiteral.Less
+tags: [private]
 ```
 
 ```Go
@@ -2217,6 +2337,7 @@ func (s byLiteral) Less(i, j int) bool
 
 ```
 searchKey: flate.byLiteral.Swap
+tags: [private]
 ```
 
 ```Go
@@ -2227,6 +2348,7 @@ func (s byLiteral) Swap(i, j int)
 
 ```
 searchKey: flate.byFreq
+tags: [private]
 ```
 
 ```Go
@@ -2237,6 +2359,7 @@ type byFreq []literalNode
 
 ```
 searchKey: flate.byFreq.sort
+tags: [private]
 ```
 
 ```Go
@@ -2247,6 +2370,7 @@ func (s *byFreq) sort(a []literalNode)
 
 ```
 searchKey: flate.byFreq.Len
+tags: [private]
 ```
 
 ```Go
@@ -2257,6 +2381,7 @@ func (s byFreq) Len() int
 
 ```
 searchKey: flate.byFreq.Less
+tags: [private]
 ```
 
 ```Go
@@ -2267,6 +2392,7 @@ func (s byFreq) Less(i, j int) bool
 
 ```
 searchKey: flate.byFreq.Swap
+tags: [private]
 ```
 
 ```Go
@@ -2277,7 +2403,6 @@ func (s byFreq) Swap(i, j int)
 
 ```
 searchKey: flate.CorruptInputError
-tags: [exported]
 ```
 
 ```Go
@@ -2290,7 +2415,6 @@ A CorruptInputError reports the presence of corrupt input at a given offset.
 
 ```
 searchKey: flate.CorruptInputError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -2301,7 +2425,6 @@ func (e CorruptInputError) Error() string
 
 ```
 searchKey: flate.InternalError
-tags: [exported]
 ```
 
 ```Go
@@ -2314,7 +2437,6 @@ An InternalError reports an error in the flate code itself.
 
 ```
 searchKey: flate.InternalError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -2325,7 +2447,6 @@ func (e InternalError) Error() string
 
 ```
 searchKey: flate.ReadError
-tags: [exported]
 ```
 
 ```Go
@@ -2343,7 +2464,6 @@ Deprecated: No longer returned.
 
 ```
 searchKey: flate.ReadError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -2354,7 +2474,6 @@ func (e *ReadError) Error() string
 
 ```
 searchKey: flate.WriteError
-tags: [exported]
 ```
 
 ```Go
@@ -2372,7 +2491,6 @@ Deprecated: No longer returned.
 
 ```
 searchKey: flate.WriteError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -2383,7 +2501,6 @@ func (e *WriteError) Error() string
 
 ```
 searchKey: flate.Resetter
-tags: [exported]
 ```
 
 ```Go
@@ -2400,6 +2517,7 @@ Resetter resets a ReadCloser returned by NewReader or NewReaderDict to switch to
 
 ```
 searchKey: flate.huffmanDecoder
+tags: [private]
 ```
 
 ```Go
@@ -2411,10 +2529,11 @@ type huffmanDecoder struct {
 }
 ```
 
-#### <a id="huffmanDecoder.init" href="#huffmanDecoder.init">func (h *huffmanDecoder) init(lengths []int) bool</a>
+#### <a id="huffmanDecoder.init.inflate.go" href="#huffmanDecoder.init.inflate.go">func (h *huffmanDecoder) init(lengths []int) bool</a>
 
 ```
 searchKey: flate.huffmanDecoder.init
+tags: [private]
 ```
 
 ```Go
@@ -2427,7 +2546,6 @@ Initialize Huffman decoding tables from array of code lengths. Following this fu
 
 ```
 searchKey: flate.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -2443,6 +2561,7 @@ The actual read interface needed by NewReader. If the passed in io.Reader does n
 
 ```
 searchKey: flate.makeReader
+tags: [private]
 ```
 
 ```Go
@@ -2453,6 +2572,7 @@ func makeReader(r io.Reader) Reader
 
 ```
 searchKey: flate.decompressor
+tags: [private]
 ```
 
 ```Go
@@ -2497,6 +2617,7 @@ Decompress state.
 
 ```
 searchKey: flate.decompressor.nextBlock
+tags: [private]
 ```
 
 ```Go
@@ -2507,6 +2628,7 @@ func (f *decompressor) nextBlock()
 
 ```
 searchKey: flate.decompressor.Read
+tags: [private]
 ```
 
 ```Go
@@ -2517,6 +2639,7 @@ func (f *decompressor) Read(b []byte) (int, error)
 
 ```
 searchKey: flate.decompressor.Close
+tags: [private]
 ```
 
 ```Go
@@ -2527,6 +2650,7 @@ func (f *decompressor) Close() error
 
 ```
 searchKey: flate.decompressor.readHuffman
+tags: [private]
 ```
 
 ```Go
@@ -2537,6 +2661,7 @@ func (f *decompressor) readHuffman() error
 
 ```
 searchKey: flate.decompressor.huffmanBlock
+tags: [private]
 ```
 
 ```Go
@@ -2549,6 +2674,7 @@ Decode a single Huffman block from f. hl and hd are the Huffman states for the l
 
 ```
 searchKey: flate.decompressor.dataBlock
+tags: [private]
 ```
 
 ```Go
@@ -2561,6 +2687,7 @@ Copy a single uncompressed data block from input to output.
 
 ```
 searchKey: flate.decompressor.copyData
+tags: [private]
 ```
 
 ```Go
@@ -2573,6 +2700,7 @@ copyData copies f.copyLen bytes from the underlying reader into f.hist. It pause
 
 ```
 searchKey: flate.decompressor.finishBlock
+tags: [private]
 ```
 
 ```Go
@@ -2583,6 +2711,7 @@ func (f *decompressor) finishBlock()
 
 ```
 searchKey: flate.decompressor.moreBits
+tags: [private]
 ```
 
 ```Go
@@ -2593,6 +2722,7 @@ func (f *decompressor) moreBits() error
 
 ```
 searchKey: flate.decompressor.huffSym
+tags: [private]
 ```
 
 ```Go
@@ -2605,6 +2735,7 @@ Read the next Huffman-encoded symbol from f according to h.
 
 ```
 searchKey: flate.decompressor.Reset
+tags: [private]
 ```
 
 ```Go
@@ -2615,6 +2746,7 @@ func (f *decompressor) Reset(r io.Reader, dict []byte) error
 
 ```
 searchKey: flate.token
+tags: [private]
 ```
 
 ```Go
@@ -2625,6 +2757,7 @@ type token uint32
 
 ```
 searchKey: flate.literalToken
+tags: [private]
 ```
 
 ```Go
@@ -2637,6 +2770,7 @@ Convert a literal into a literal token.
 
 ```
 searchKey: flate.matchToken
+tags: [private]
 ```
 
 ```Go
@@ -2649,6 +2783,7 @@ Convert a < xlength, xoffset > pair into a match token.
 
 ```
 searchKey: flate.token.literal
+tags: [private]
 ```
 
 ```Go
@@ -2661,6 +2796,7 @@ Returns the literal of a literal token
 
 ```
 searchKey: flate.token.offset
+tags: [private]
 ```
 
 ```Go
@@ -2673,6 +2809,7 @@ Returns the extra offset of a match token
 
 ```
 searchKey: flate.token.length
+tags: [private]
 ```
 
 ```Go
@@ -2683,6 +2820,7 @@ func (t token) length() uint32
 
 ```
 searchKey: flate.deflateTest
+tags: [private]
 ```
 
 ```Go
@@ -2697,6 +2835,7 @@ type deflateTest struct {
 
 ```
 searchKey: flate.deflateInflateTest
+tags: [private]
 ```
 
 ```Go
@@ -2709,6 +2848,7 @@ type deflateInflateTest struct {
 
 ```
 searchKey: flate.reverseBitsTest
+tags: [private]
 ```
 
 ```Go
@@ -2723,6 +2863,7 @@ type reverseBitsTest struct {
 
 ```
 searchKey: flate.sparseReader
+tags: [private]
 ```
 
 ```Go
@@ -2738,6 +2879,7 @@ A sparseReader returns a stream consisting of 0s followed by 1<<16 1s. This test
 
 ```
 searchKey: flate.sparseReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -2748,6 +2890,7 @@ func (r *sparseReader) Read(b []byte) (n int, err error)
 
 ```
 searchKey: flate.syncBuffer
+tags: [private]
 ```
 
 ```Go
@@ -2763,6 +2906,7 @@ type syncBuffer struct {
 
 ```
 searchKey: flate.newSyncBuffer
+tags: [private]
 ```
 
 ```Go
@@ -2773,6 +2917,7 @@ func newSyncBuffer() *syncBuffer
 
 ```
 searchKey: flate.syncBuffer.Read
+tags: [private]
 ```
 
 ```Go
@@ -2783,6 +2928,7 @@ func (b *syncBuffer) Read(p []byte) (n int, err error)
 
 ```
 searchKey: flate.syncBuffer.signal
+tags: [private]
 ```
 
 ```Go
@@ -2793,6 +2939,7 @@ func (b *syncBuffer) signal()
 
 ```
 searchKey: flate.syncBuffer.Write
+tags: [private]
 ```
 
 ```Go
@@ -2803,6 +2950,7 @@ func (b *syncBuffer) Write(p []byte) (n int, err error)
 
 ```
 searchKey: flate.syncBuffer.WriteMode
+tags: [private]
 ```
 
 ```Go
@@ -2813,6 +2961,7 @@ func (b *syncBuffer) WriteMode()
 
 ```
 searchKey: flate.syncBuffer.ReadMode
+tags: [private]
 ```
 
 ```Go
@@ -2823,6 +2972,7 @@ func (b *syncBuffer) ReadMode()
 
 ```
 searchKey: flate.syncBuffer.Close
+tags: [private]
 ```
 
 ```Go
@@ -2833,6 +2983,7 @@ func (b *syncBuffer) Close() error
 
 ```
 searchKey: flate.deflateInflateStringTest
+tags: [private]
 ```
 
 ```Go
@@ -2847,6 +2998,7 @@ type deflateInflateStringTest struct {
 
 ```
 searchKey: flate.failWriter
+tags: [private]
 ```
 
 ```Go
@@ -2859,6 +3011,7 @@ failWriter fails with errIO exactly at the nth call to Write.
 
 ```
 searchKey: flate.failWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -2869,6 +3022,7 @@ func (w *failWriter) Write(b []byte) (int, error)
 
 ```
 searchKey: flate.huffTest
+tags: [private]
 ```
 
 ```Go
@@ -2884,6 +3038,7 @@ type huffTest struct {
 
 ```
 searchKey: flate.errorWriter
+tags: [private]
 ```
 
 ```Go
@@ -2898,6 +3053,7 @@ errorWriter is a writer that fails after N writes.
 
 ```
 searchKey: flate.errorWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -2906,14 +3062,11 @@ func (e *errorWriter) Write(b []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="hash4" href="#hash4">func hash4(b []byte) uint32</a>
 
 ```
 searchKey: flate.hash4
+tags: [private]
 ```
 
 ```Go
@@ -2926,6 +3079,7 @@ hash4 returns a hash representation of the first 4 bytes of the supplied slice. 
 
 ```
 searchKey: flate.bulkHash4
+tags: [private]
 ```
 
 ```Go
@@ -2938,6 +3092,7 @@ bulkHash4 will compute hashes using the same algorithm as hash4
 
 ```
 searchKey: flate.matchLen
+tags: [private]
 ```
 
 ```Go
@@ -2950,6 +3105,7 @@ matchLen returns the number of matching bytes in a and b up to length 'max'. Bot
 
 ```
 searchKey: flate.load32
+tags: [private]
 ```
 
 ```Go
@@ -2960,6 +3116,7 @@ func load32(b []byte, i int32) uint32
 
 ```
 searchKey: flate.load64
+tags: [private]
 ```
 
 ```Go
@@ -2970,6 +3127,7 @@ func load64(b []byte, i int32) uint64
 
 ```
 searchKey: flate.hash
+tags: [private]
 ```
 
 ```Go
@@ -2980,16 +3138,18 @@ func hash(u uint32) uint32
 
 ```
 searchKey: flate.emitLiteral
+tags: [private]
 ```
 
 ```Go
 func emitLiteral(dst []token, lit []byte) []token
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.huffman_bit_writer.go" href="#init.huffman_bit_writer.go">func init()</a>
 
 ```
 searchKey: flate.init
+tags: [private]
 ```
 
 ```Go
@@ -3000,6 +3160,7 @@ func init()
 
 ```
 searchKey: flate.histogram
+tags: [private]
 ```
 
 ```Go
@@ -3014,6 +3175,7 @@ len(h) must be >= 256, and h's elements must be all zeroes.
 
 ```
 searchKey: flate.reverseBits
+tags: [private]
 ```
 
 ```Go
@@ -3024,6 +3186,7 @@ func reverseBits(number uint16, bitLength byte) uint16
 
 ```
 searchKey: flate.noEOF
+tags: [private]
 ```
 
 ```Go
@@ -3036,6 +3199,7 @@ noEOF returns err, unless err == io.EOF, in which case it returns io.ErrUnexpect
 
 ```
 searchKey: flate.fixedHuffmanDecoderInit
+tags: [private]
 ```
 
 ```Go
@@ -3046,7 +3210,6 @@ func fixedHuffmanDecoderInit()
 
 ```
 searchKey: flate.NewReader
-tags: [exported]
 ```
 
 ```Go
@@ -3061,7 +3224,6 @@ The ReadCloser returned by NewReader also implements Resetter.
 
 ```
 searchKey: flate.NewReaderDict
-tags: [exported]
 ```
 
 ```Go
@@ -3076,6 +3238,7 @@ The ReadCloser returned by NewReader also implements Resetter.
 
 ```
 searchKey: flate.lengthCode
+tags: [private]
 ```
 
 ```Go
@@ -3086,6 +3249,7 @@ func lengthCode(len uint32) uint32
 
 ```
 searchKey: flate.offsetCode
+tags: [private]
 ```
 
 ```Go
@@ -3098,6 +3262,7 @@ Returns the offset code corresponding to a specific offset
 
 ```
 searchKey: flate.largeDataChunk
+tags: [private]
 ```
 
 ```Go
@@ -3108,6 +3273,7 @@ func largeDataChunk() []byte
 
 ```
 searchKey: flate.TestBulkHash4
+tags: [private]
 ```
 
 ```Go
@@ -3118,6 +3284,7 @@ func TestBulkHash4(t *testing.T)
 
 ```
 searchKey: flate.TestDeflate
+tags: [private]
 ```
 
 ```Go
@@ -3128,6 +3295,7 @@ func TestDeflate(t *testing.T)
 
 ```
 searchKey: flate.TestVeryLongSparseChunk
+tags: [private]
 ```
 
 ```Go
@@ -3138,6 +3306,7 @@ func TestVeryLongSparseChunk(t *testing.T)
 
 ```
 searchKey: flate.testSync
+tags: [private]
 ```
 
 ```Go
@@ -3148,6 +3317,7 @@ func testSync(t *testing.T, level int, input []byte, name string)
 
 ```
 searchKey: flate.testToFromWithLevelAndLimit
+tags: [private]
 ```
 
 ```Go
@@ -3158,6 +3328,7 @@ func testToFromWithLevelAndLimit(t *testing.T, level int, input []byte, name str
 
 ```
 searchKey: flate.testToFromWithLimit
+tags: [private]
 ```
 
 ```Go
@@ -3168,6 +3339,7 @@ func testToFromWithLimit(t *testing.T, input []byte, name string, limit [11]int)
 
 ```
 searchKey: flate.TestDeflateInflate
+tags: [private]
 ```
 
 ```Go
@@ -3178,6 +3350,7 @@ func TestDeflateInflate(t *testing.T)
 
 ```
 searchKey: flate.TestReverseBits
+tags: [private]
 ```
 
 ```Go
@@ -3188,6 +3361,7 @@ func TestReverseBits(t *testing.T)
 
 ```
 searchKey: flate.TestDeflateInflateString
+tags: [private]
 ```
 
 ```Go
@@ -3198,6 +3372,7 @@ func TestDeflateInflateString(t *testing.T)
 
 ```
 searchKey: flate.TestReaderDict
+tags: [private]
 ```
 
 ```Go
@@ -3208,6 +3383,7 @@ func TestReaderDict(t *testing.T)
 
 ```
 searchKey: flate.TestWriterDict
+tags: [private]
 ```
 
 ```Go
@@ -3218,6 +3394,7 @@ func TestWriterDict(t *testing.T)
 
 ```
 searchKey: flate.TestRegression2508
+tags: [private]
 ```
 
 ```Go
@@ -3230,6 +3407,7 @@ See [https://golang.org/issue/2508](https://golang.org/issue/2508)
 
 ```
 searchKey: flate.TestWriterReset
+tags: [private]
 ```
 
 ```Go
@@ -3240,6 +3418,7 @@ func TestWriterReset(t *testing.T)
 
 ```
 searchKey: flate.testResetOutput
+tags: [private]
 ```
 
 ```Go
@@ -3250,6 +3429,7 @@ func testResetOutput(t *testing.T, level int, dict []byte)
 
 ```
 searchKey: flate.TestBestSpeed
+tags: [private]
 ```
 
 ```Go
@@ -3262,6 +3442,7 @@ TestBestSpeed tests that round-tripping through deflate and then inflate recover
 
 ```
 searchKey: flate.TestWriterPersistentError
+tags: [private]
 ```
 
 ```Go
@@ -3272,6 +3453,7 @@ func TestWriterPersistentError(t *testing.T)
 
 ```
 searchKey: flate.TestBestSpeedMatch
+tags: [private]
 ```
 
 ```Go
@@ -3282,6 +3464,7 @@ func TestBestSpeedMatch(t *testing.T)
 
 ```
 searchKey: flate.TestBestSpeedMaxMatchOffset
+tags: [private]
 ```
 
 ```Go
@@ -3292,6 +3475,7 @@ func TestBestSpeedMaxMatchOffset(t *testing.T)
 
 ```
 searchKey: flate.TestBestSpeedShiftOffsets
+tags: [private]
 ```
 
 ```Go
@@ -3302,6 +3486,7 @@ func TestBestSpeedShiftOffsets(t *testing.T)
 
 ```
 searchKey: flate.TestMaxStackSize
+tags: [private]
 ```
 
 ```Go
@@ -3312,6 +3497,7 @@ func TestMaxStackSize(t *testing.T)
 
 ```
 searchKey: flate.TestDictDecoder
+tags: [private]
 ```
 
 ```Go
@@ -3322,6 +3508,7 @@ func TestDictDecoder(t *testing.T)
 
 ```
 searchKey: flate.TestIssue5915
+tags: [private]
 ```
 
 ```Go
@@ -3334,6 +3521,7 @@ The following test should not panic.
 
 ```
 searchKey: flate.TestIssue5962
+tags: [private]
 ```
 
 ```Go
@@ -3346,6 +3534,7 @@ The following test should not panic.
 
 ```
 searchKey: flate.TestIssue6255
+tags: [private]
 ```
 
 ```Go
@@ -3358,6 +3547,7 @@ The following test should not panic.
 
 ```
 searchKey: flate.TestInvalidEncoding
+tags: [private]
 ```
 
 ```Go
@@ -3368,6 +3558,7 @@ func TestInvalidEncoding(t *testing.T)
 
 ```
 searchKey: flate.TestInvalidBits
+tags: [private]
 ```
 
 ```Go
@@ -3378,6 +3569,7 @@ func TestInvalidBits(t *testing.T)
 
 ```
 searchKey: flate.TestStreams
+tags: [private]
 ```
 
 ```Go
@@ -3388,6 +3580,7 @@ func TestStreams(t *testing.T)
 
 ```
 searchKey: flate.TestTruncatedStreams
+tags: [private]
 ```
 
 ```Go
@@ -3398,6 +3591,7 @@ func TestTruncatedStreams(t *testing.T)
 
 ```
 searchKey: flate.TestReaderEarlyEOF
+tags: [private]
 ```
 
 ```Go
@@ -3414,6 +3608,7 @@ See [https://github.com/google/go-github/pull/317](https://github.com/google/go-
 
 ```
 searchKey: flate.TestBlockHuff
+tags: [private]
 ```
 
 ```Go
@@ -3426,6 +3621,7 @@ TestBlockHuff tests huffman encoding against reference files to detect possible 
 
 ```
 searchKey: flate.testBlockHuff
+tags: [private]
 ```
 
 ```Go
@@ -3436,6 +3632,7 @@ func testBlockHuff(t *testing.T, in, out string)
 
 ```
 searchKey: flate.TestWriteBlock
+tags: [private]
 ```
 
 ```Go
@@ -3448,6 +3645,7 @@ TestWriteBlock tests if the writeBlock encoding has changed. To update the refer
 
 ```
 searchKey: flate.TestWriteBlockDynamic
+tags: [private]
 ```
 
 ```Go
@@ -3460,6 +3658,7 @@ TestWriteBlockDynamic tests if the writeBlockDynamic encoding has changed. To up
 
 ```
 searchKey: flate.testBlock
+tags: [private]
 ```
 
 ```Go
@@ -3472,6 +3671,7 @@ testBlock tests a block against its references, or regenerate the references, if
 
 ```
 searchKey: flate.writeToType
+tags: [private]
 ```
 
 ```Go
@@ -3482,6 +3682,7 @@ func writeToType(t *testing.T, ttype string, bw *huffmanBitWriter, tok []token, 
 
 ```
 searchKey: flate.testWriterEOF
+tags: [private]
 ```
 
 ```Go
@@ -3494,6 +3695,7 @@ testWriterEOF tests if the written block contains an EOF marker.
 
 ```
 searchKey: flate.TestReset
+tags: [private]
 ```
 
 ```Go
@@ -3504,6 +3706,7 @@ func TestReset(t *testing.T)
 
 ```
 searchKey: flate.TestReaderTruncated
+tags: [private]
 ```
 
 ```Go
@@ -3514,6 +3717,7 @@ func TestReaderTruncated(t *testing.T)
 
 ```
 searchKey: flate.TestResetDict
+tags: [private]
 ```
 
 ```Go
@@ -3524,6 +3728,7 @@ func TestResetDict(t *testing.T)
 
 ```
 searchKey: flate.TestNlitOutOfRange
+tags: [private]
 ```
 
 ```Go
@@ -3534,6 +3739,7 @@ func TestNlitOutOfRange(t *testing.T)
 
 ```
 searchKey: flate.BenchmarkDecode
+tags: [private]
 ```
 
 ```Go
@@ -3544,6 +3750,7 @@ func BenchmarkDecode(b *testing.B)
 
 ```
 searchKey: flate.doBench
+tags: [private]
 ```
 
 ```Go
@@ -3554,6 +3761,7 @@ func doBench(b *testing.B, f func(b *testing.B, buf []byte, level, n int))
 
 ```
 searchKey: flate.BenchmarkEncode
+tags: [private]
 ```
 
 ```Go
@@ -3564,6 +3772,7 @@ func BenchmarkEncode(b *testing.B)
 
 ```
 searchKey: flate.TestWriteError
+tags: [private]
 ```
 
 ```Go
@@ -3576,6 +3785,7 @@ Test if errors from the underlying writer is passed upwards.
 
 ```
 searchKey: flate.TestDeterministic
+tags: [private]
 ```
 
 ```Go
@@ -3588,6 +3798,7 @@ Test if two runs produce identical results even when writing different sizes to 
 
 ```
 searchKey: flate.testDeterministic
+tags: [private]
 ```
 
 ```Go
@@ -3598,6 +3809,7 @@ func testDeterministic(i int, t *testing.T)
 
 ```
 searchKey: flate.TestDeflateFast_Reset
+tags: [private]
 ```
 
 ```Go

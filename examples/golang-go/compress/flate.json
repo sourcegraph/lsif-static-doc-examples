@@ -4,9 +4,7 @@
     "identifier": "flate",
     "newPage": true,
     "searchKey": "compress/flate",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "NoCompression",
                 "newPage": false,
                 "searchKey": "flate.NoCompression",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "BestSpeed",
                 "newPage": false,
                 "searchKey": "flate.BestSpeed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "BestCompression",
                 "newPage": false,
                 "searchKey": "flate.BestCompression",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "DefaultCompression",
                 "newPage": false,
                 "searchKey": "flate.DefaultCompression",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -132,9 +120,7 @@
                 "identifier": "HuffmanOnly",
                 "newPage": false,
                 "searchKey": "flate.HuffmanOnly",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -154,7 +140,9 @@
                 "identifier": "logWindowSize",
                 "newPage": false,
                 "searchKey": "flate.logWindowSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -174,7 +162,9 @@
                 "identifier": "windowSize",
                 "newPage": false,
                 "searchKey": "flate.windowSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -194,7 +184,9 @@
                 "identifier": "windowMask",
                 "newPage": false,
                 "searchKey": "flate.windowMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -214,7 +206,9 @@
                 "identifier": "baseMatchLength",
                 "newPage": false,
                 "searchKey": "flate.baseMatchLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -234,7 +228,9 @@
                 "identifier": "minMatchLength",
                 "newPage": false,
                 "searchKey": "flate.minMatchLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -254,7 +250,9 @@
                 "identifier": "maxMatchLength",
                 "newPage": false,
                 "searchKey": "flate.maxMatchLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -274,7 +272,9 @@
                 "identifier": "baseMatchOffset",
                 "newPage": false,
                 "searchKey": "flate.baseMatchOffset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -294,7 +294,9 @@
                 "identifier": "maxMatchOffset",
                 "newPage": false,
                 "searchKey": "flate.maxMatchOffset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -314,7 +316,9 @@
                 "identifier": "maxFlateBlockTokens",
                 "newPage": false,
                 "searchKey": "flate.maxFlateBlockTokens",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -334,7 +338,9 @@
                 "identifier": "maxStoreBlockSize",
                 "newPage": false,
                 "searchKey": "flate.maxStoreBlockSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -354,7 +360,9 @@
                 "identifier": "hashBits",
                 "newPage": false,
                 "searchKey": "flate.hashBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -374,7 +382,9 @@
                 "identifier": "hashSize",
                 "newPage": false,
                 "searchKey": "flate.hashSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -394,7 +404,9 @@
                 "identifier": "hashMask",
                 "newPage": false,
                 "searchKey": "flate.hashMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -414,7 +426,9 @@
                 "identifier": "maxHashOffset",
                 "newPage": false,
                 "searchKey": "flate.maxHashOffset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -434,7 +448,9 @@
                 "identifier": "skipNever",
                 "newPage": false,
                 "searchKey": "flate.skipNever",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -454,7 +470,9 @@
                 "identifier": "hashmul",
                 "newPage": false,
                 "searchKey": "flate.hashmul",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -474,7 +492,9 @@
                 "identifier": "tableBits",
                 "newPage": false,
                 "searchKey": "flate.tableBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -494,7 +514,9 @@
                 "identifier": "tableSize",
                 "newPage": false,
                 "searchKey": "flate.tableSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -514,7 +536,9 @@
                 "identifier": "tableMask",
                 "newPage": false,
                 "searchKey": "flate.tableMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -534,7 +558,9 @@
                 "identifier": "tableShift",
                 "newPage": false,
                 "searchKey": "flate.tableShift",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -554,7 +580,9 @@
                 "identifier": "bufferReset",
                 "newPage": false,
                 "searchKey": "flate.bufferReset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -574,7 +602,9 @@
                 "identifier": "inputMargin",
                 "newPage": false,
                 "searchKey": "flate.inputMargin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -594,7 +624,9 @@
                 "identifier": "minNonLiteralBlockSize",
                 "newPage": false,
                 "searchKey": "flate.minNonLiteralBlockSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -614,7 +646,9 @@
                 "identifier": "offsetCodeCount",
                 "newPage": false,
                 "searchKey": "flate.offsetCodeCount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -634,7 +668,9 @@
                 "identifier": "endBlockMarker",
                 "newPage": false,
                 "searchKey": "flate.endBlockMarker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -654,7 +690,9 @@
                 "identifier": "lengthCodesStart",
                 "newPage": false,
                 "searchKey": "flate.lengthCodesStart",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -674,7 +712,9 @@
                 "identifier": "codegenCodeCount",
                 "newPage": false,
                 "searchKey": "flate.codegenCodeCount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -694,7 +734,9 @@
                 "identifier": "badCode",
                 "newPage": false,
                 "searchKey": "flate.badCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -714,7 +756,9 @@
                 "identifier": "bufferFlushSize",
                 "newPage": false,
                 "searchKey": "flate.bufferFlushSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -734,7 +778,9 @@
                 "identifier": "bufferSize",
                 "newPage": false,
                 "searchKey": "flate.bufferSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -754,7 +800,9 @@
                 "identifier": "maxBitsLimit",
                 "newPage": false,
                 "searchKey": "flate.maxBitsLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -774,7 +822,9 @@
                 "identifier": "maxCodeLen",
                 "newPage": false,
                 "searchKey": "flate.maxCodeLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -794,7 +844,9 @@
                 "identifier": "maxNumLit",
                 "newPage": false,
                 "searchKey": "flate.maxNumLit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -814,7 +866,9 @@
                 "identifier": "maxNumDist",
                 "newPage": false,
                 "searchKey": "flate.maxNumDist",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -834,7 +888,9 @@
                 "identifier": "numCodes",
                 "newPage": false,
                 "searchKey": "flate.numCodes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -854,7 +910,9 @@
                 "identifier": "huffmanChunkBits",
                 "newPage": false,
                 "searchKey": "flate.huffmanChunkBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -874,7 +932,9 @@
                 "identifier": "huffmanNumChunks",
                 "newPage": false,
                 "searchKey": "flate.huffmanNumChunks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -894,7 +954,9 @@
                 "identifier": "huffmanCountMask",
                 "newPage": false,
                 "searchKey": "flate.huffmanCountMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -914,7 +976,9 @@
                 "identifier": "huffmanValueShift",
                 "newPage": false,
                 "searchKey": "flate.huffmanValueShift",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -934,7 +998,9 @@
                 "identifier": "lengthShift",
                 "newPage": false,
                 "searchKey": "flate.lengthShift",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -954,7 +1020,9 @@
                 "identifier": "offsetMask",
                 "newPage": false,
                 "searchKey": "flate.offsetMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -974,7 +1042,9 @@
                 "identifier": "typeMask",
                 "newPage": false,
                 "searchKey": "flate.typeMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -994,7 +1064,9 @@
                 "identifier": "literalType",
                 "newPage": false,
                 "searchKey": "flate.literalType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1014,7 +1086,9 @@
                 "identifier": "matchType",
                 "newPage": false,
                 "searchKey": "flate.matchType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1034,7 +1108,9 @@
                 "identifier": "ml",
                 "newPage": false,
                 "searchKey": "flate.ml",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1057,9 +1133,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1077,7 +1151,9 @@
                 "identifier": "levels",
                 "newPage": false,
                 "searchKey": "flate.levels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1097,7 +1173,9 @@
                 "identifier": "lengthExtraBits",
                 "newPage": false,
                 "searchKey": "flate.lengthExtraBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1117,7 +1195,9 @@
                 "identifier": "lengthBase",
                 "newPage": false,
                 "searchKey": "flate.lengthBase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1137,7 +1217,9 @@
                 "identifier": "offsetExtraBits",
                 "newPage": false,
                 "searchKey": "flate.offsetExtraBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1157,7 +1239,9 @@
                 "identifier": "offsetBase",
                 "newPage": false,
                 "searchKey": "flate.offsetBase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1177,7 +1261,9 @@
                 "identifier": "codegenOrder",
                 "newPage": false,
                 "searchKey": "flate.codegenOrder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1197,7 +1283,9 @@
                 "identifier": "huffOffset",
                 "newPage": false,
                 "searchKey": "flate.huffOffset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1217,7 +1305,9 @@
                 "identifier": "fixedLiteralEncoding",
                 "newPage": false,
                 "searchKey": "flate.fixedLiteralEncoding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1237,7 +1327,9 @@
                 "identifier": "fixedOffsetEncoding",
                 "newPage": false,
                 "searchKey": "flate.fixedOffsetEncoding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1257,7 +1349,9 @@
                 "identifier": "fixedOnce",
                 "newPage": false,
                 "searchKey": "flate.fixedOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1277,7 +1371,9 @@
                 "identifier": "fixedHuffmanDecoder",
                 "newPage": false,
                 "searchKey": "flate.fixedHuffmanDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1297,7 +1393,9 @@
                 "identifier": "codeOrder",
                 "newPage": false,
                 "searchKey": "flate.codeOrder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1317,7 +1415,9 @@
                 "identifier": "lengthCodes",
                 "newPage": false,
                 "searchKey": "flate.lengthCodes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1337,7 +1437,9 @@
                 "identifier": "offsetCodes",
                 "newPage": false,
                 "searchKey": "flate.offsetCodes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1357,7 +1459,9 @@
                 "identifier": "deflateTests",
                 "newPage": false,
                 "searchKey": "flate.deflateTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1377,7 +1481,9 @@
                 "identifier": "deflateInflateTests",
                 "newPage": false,
                 "searchKey": "flate.deflateInflateTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1397,7 +1503,9 @@
                 "identifier": "reverseBitsTests",
                 "newPage": false,
                 "searchKey": "flate.reverseBitsTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1417,7 +1525,9 @@
                 "identifier": "deflateInflateStringTests",
                 "newPage": false,
                 "searchKey": "flate.deflateInflateStringTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1437,7 +1547,9 @@
                 "identifier": "errIO",
                 "newPage": false,
                 "searchKey": "flate.errIO",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1457,7 +1569,9 @@
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "flate.update",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1477,7 +1591,9 @@
                 "identifier": "writeBlockTests",
                 "newPage": false,
                 "searchKey": "flate.writeBlockTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1497,7 +1613,9 @@
                 "identifier": "suites",
                 "newPage": false,
                 "searchKey": "flate.suites",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1517,7 +1635,9 @@
                 "identifier": "levelTests",
                 "newPage": false,
                 "searchKey": "flate.levelTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1537,7 +1657,9 @@
                 "identifier": "sizes",
                 "newPage": false,
                 "searchKey": "flate.sizes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1560,9 +1682,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1580,7 +1700,9 @@
                 "identifier": "compressionLevel",
                 "newPage": false,
                 "searchKey": "flate.compressionLevel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1600,7 +1722,9 @@
                 "identifier": "compressor",
                 "newPage": false,
                 "searchKey": "flate.compressor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1618,7 +1742,9 @@
                       "identifier": "compressor.fillDeflate",
                       "newPage": false,
                       "searchKey": "flate.compressor.fillDeflate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1638,7 +1764,9 @@
                       "identifier": "compressor.writeBlock",
                       "newPage": false,
                       "searchKey": "flate.compressor.writeBlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1658,7 +1786,9 @@
                       "identifier": "compressor.fillWindow",
                       "newPage": false,
                       "searchKey": "flate.compressor.fillWindow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1678,7 +1808,9 @@
                       "identifier": "compressor.findMatch",
                       "newPage": false,
                       "searchKey": "flate.compressor.findMatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1698,7 +1830,9 @@
                       "identifier": "compressor.writeStoredBlock",
                       "newPage": false,
                       "searchKey": "flate.compressor.writeStoredBlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1718,7 +1852,9 @@
                       "identifier": "compressor.encSpeed",
                       "newPage": false,
                       "searchKey": "flate.compressor.encSpeed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1738,7 +1874,9 @@
                       "identifier": "compressor.initDeflate",
                       "newPage": false,
                       "searchKey": "flate.compressor.initDeflate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1758,7 +1896,9 @@
                       "identifier": "compressor.deflate",
                       "newPage": false,
                       "searchKey": "flate.compressor.deflate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1778,7 +1918,9 @@
                       "identifier": "compressor.fillStore",
                       "newPage": false,
                       "searchKey": "flate.compressor.fillStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1798,7 +1940,9 @@
                       "identifier": "compressor.store",
                       "newPage": false,
                       "searchKey": "flate.compressor.store",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1818,7 +1962,9 @@
                       "identifier": "compressor.storeHuff",
                       "newPage": false,
                       "searchKey": "flate.compressor.storeHuff",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1838,7 +1984,9 @@
                       "identifier": "compressor.write",
                       "newPage": false,
                       "searchKey": "flate.compressor.write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1858,7 +2006,9 @@
                       "identifier": "compressor.syncFlush",
                       "newPage": false,
                       "searchKey": "flate.compressor.syncFlush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1873,12 +2023,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/compress/flate#compressor.init",
+                    "pathID": "/compress/flate#compressor.init.deflate.go",
                     "documentation": {
-                      "identifier": "compressor.init",
+                      "identifier": "compressor.init.deflate.go",
                       "newPage": false,
                       "searchKey": "flate.compressor.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1898,7 +2050,9 @@
                       "identifier": "compressor.reset",
                       "newPage": false,
                       "searchKey": "flate.compressor.reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1918,7 +2072,9 @@
                       "identifier": "compressor.close",
                       "newPage": false,
                       "searchKey": "flate.compressor.close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1941,7 +2097,9 @@
                 "identifier": "dictWriter",
                 "newPage": false,
                 "searchKey": "flate.dictWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1959,7 +2117,9 @@
                       "identifier": "dictWriter.Write",
                       "newPage": false,
                       "searchKey": "flate.dictWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1982,9 +2142,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "flate.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2002,9 +2160,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "flate.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2024,9 +2180,7 @@
                       "identifier": "NewWriterDict",
                       "newPage": false,
                       "searchKey": "flate.NewWriterDict",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2046,9 +2200,7 @@
                       "identifier": "Writer.Write",
                       "newPage": false,
                       "searchKey": "flate.Writer.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2068,9 +2220,7 @@
                       "identifier": "Writer.Flush",
                       "newPage": false,
                       "searchKey": "flate.Writer.Flush",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2090,9 +2240,7 @@
                       "identifier": "Writer.Close",
                       "newPage": false,
                       "searchKey": "flate.Writer.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2112,9 +2260,7 @@
                       "identifier": "Writer.Reset",
                       "newPage": false,
                       "searchKey": "flate.Writer.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2137,7 +2283,9 @@
                 "identifier": "tableEntry",
                 "newPage": false,
                 "searchKey": "flate.tableEntry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2157,7 +2305,9 @@
                 "identifier": "deflateFast",
                 "newPage": false,
                 "searchKey": "flate.deflateFast",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2175,7 +2325,9 @@
                       "identifier": "newDeflateFast",
                       "newPage": false,
                       "searchKey": "flate.newDeflateFast",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2195,7 +2347,9 @@
                       "identifier": "deflateFast.encode",
                       "newPage": false,
                       "searchKey": "flate.deflateFast.encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2215,7 +2369,9 @@
                       "identifier": "deflateFast.matchLen",
                       "newPage": false,
                       "searchKey": "flate.deflateFast.matchLen",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2235,7 +2391,9 @@
                       "identifier": "deflateFast.reset",
                       "newPage": false,
                       "searchKey": "flate.deflateFast.reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2255,7 +2413,9 @@
                       "identifier": "deflateFast.shiftOffsets",
                       "newPage": false,
                       "searchKey": "flate.deflateFast.shiftOffsets",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2278,7 +2438,9 @@
                 "identifier": "dictDecoder",
                 "newPage": false,
                 "searchKey": "flate.dictDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2291,12 +2453,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/compress/flate#dictDecoder.init",
+                    "pathID": "/compress/flate#dictDecoder.init.dict_decoder.go",
                     "documentation": {
-                      "identifier": "dictDecoder.init",
+                      "identifier": "dictDecoder.init.dict_decoder.go",
                       "newPage": false,
                       "searchKey": "flate.dictDecoder.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2316,7 +2480,9 @@
                       "identifier": "dictDecoder.histSize",
                       "newPage": false,
                       "searchKey": "flate.dictDecoder.histSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2336,7 +2502,9 @@
                       "identifier": "dictDecoder.availRead",
                       "newPage": false,
                       "searchKey": "flate.dictDecoder.availRead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2356,7 +2524,9 @@
                       "identifier": "dictDecoder.availWrite",
                       "newPage": false,
                       "searchKey": "flate.dictDecoder.availWrite",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2376,7 +2546,9 @@
                       "identifier": "dictDecoder.writeSlice",
                       "newPage": false,
                       "searchKey": "flate.dictDecoder.writeSlice",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2396,7 +2568,9 @@
                       "identifier": "dictDecoder.writeMark",
                       "newPage": false,
                       "searchKey": "flate.dictDecoder.writeMark",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2416,7 +2590,9 @@
                       "identifier": "dictDecoder.writeByte",
                       "newPage": false,
                       "searchKey": "flate.dictDecoder.writeByte",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2436,7 +2612,9 @@
                       "identifier": "dictDecoder.writeCopy",
                       "newPage": false,
                       "searchKey": "flate.dictDecoder.writeCopy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2456,7 +2634,9 @@
                       "identifier": "dictDecoder.tryWriteCopy",
                       "newPage": false,
                       "searchKey": "flate.dictDecoder.tryWriteCopy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2476,7 +2656,9 @@
                       "identifier": "dictDecoder.readFlush",
                       "newPage": false,
                       "searchKey": "flate.dictDecoder.readFlush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2499,7 +2681,9 @@
                 "identifier": "huffmanBitWriter",
                 "newPage": false,
                 "searchKey": "flate.huffmanBitWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2517,7 +2701,9 @@
                       "identifier": "newHuffmanBitWriter",
                       "newPage": false,
                       "searchKey": "flate.newHuffmanBitWriter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2537,7 +2723,9 @@
                       "identifier": "huffmanBitWriter.reset",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2557,7 +2745,9 @@
                       "identifier": "huffmanBitWriter.flush",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.flush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2577,7 +2767,9 @@
                       "identifier": "huffmanBitWriter.write",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2597,7 +2789,9 @@
                       "identifier": "huffmanBitWriter.writeBits",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.writeBits",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2617,7 +2811,9 @@
                       "identifier": "huffmanBitWriter.writeBytes",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.writeBytes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2637,7 +2833,9 @@
                       "identifier": "huffmanBitWriter.generateCodegen",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.generateCodegen",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2657,7 +2855,9 @@
                       "identifier": "huffmanBitWriter.dynamicSize",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.dynamicSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2677,7 +2877,9 @@
                       "identifier": "huffmanBitWriter.fixedSize",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.fixedSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2697,7 +2899,9 @@
                       "identifier": "huffmanBitWriter.storedSize",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.storedSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2717,7 +2921,9 @@
                       "identifier": "huffmanBitWriter.writeCode",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.writeCode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2737,7 +2943,9 @@
                       "identifier": "huffmanBitWriter.writeDynamicHeader",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.writeDynamicHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2757,7 +2965,9 @@
                       "identifier": "huffmanBitWriter.writeStoredHeader",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.writeStoredHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2777,7 +2987,9 @@
                       "identifier": "huffmanBitWriter.writeFixedHeader",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.writeFixedHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2797,7 +3009,9 @@
                       "identifier": "huffmanBitWriter.writeBlock",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.writeBlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2817,7 +3031,9 @@
                       "identifier": "huffmanBitWriter.writeBlockDynamic",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.writeBlockDynamic",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2837,7 +3053,9 @@
                       "identifier": "huffmanBitWriter.indexTokens",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.indexTokens",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2857,7 +3075,9 @@
                       "identifier": "huffmanBitWriter.writeTokens",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.writeTokens",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2877,7 +3097,9 @@
                       "identifier": "huffmanBitWriter.writeBlockHuff",
                       "newPage": false,
                       "searchKey": "flate.huffmanBitWriter.writeBlockHuff",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2900,7 +3122,9 @@
                 "identifier": "hcode",
                 "newPage": false,
                 "searchKey": "flate.hcode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2918,7 +3142,9 @@
                       "identifier": "hcode.set",
                       "newPage": false,
                       "searchKey": "flate.hcode.set",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2941,7 +3167,9 @@
                 "identifier": "huffmanEncoder",
                 "newPage": false,
                 "searchKey": "flate.huffmanEncoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2959,7 +3187,9 @@
                       "identifier": "newHuffmanEncoder",
                       "newPage": false,
                       "searchKey": "flate.newHuffmanEncoder",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2979,7 +3209,9 @@
                       "identifier": "generateFixedLiteralEncoding",
                       "newPage": false,
                       "searchKey": "flate.generateFixedLiteralEncoding",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2999,7 +3231,9 @@
                       "identifier": "generateFixedOffsetEncoding",
                       "newPage": false,
                       "searchKey": "flate.generateFixedOffsetEncoding",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3019,7 +3253,9 @@
                       "identifier": "huffmanEncoder.bitLength",
                       "newPage": false,
                       "searchKey": "flate.huffmanEncoder.bitLength",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3039,7 +3275,9 @@
                       "identifier": "huffmanEncoder.bitCounts",
                       "newPage": false,
                       "searchKey": "flate.huffmanEncoder.bitCounts",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3059,7 +3297,9 @@
                       "identifier": "huffmanEncoder.assignEncodingAndSize",
                       "newPage": false,
                       "searchKey": "flate.huffmanEncoder.assignEncodingAndSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3079,7 +3319,9 @@
                       "identifier": "huffmanEncoder.generate",
                       "newPage": false,
                       "searchKey": "flate.huffmanEncoder.generate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3102,7 +3344,9 @@
                 "identifier": "literalNode",
                 "newPage": false,
                 "searchKey": "flate.literalNode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3120,7 +3364,9 @@
                       "identifier": "maxNode",
                       "newPage": false,
                       "searchKey": "flate.maxNode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3143,7 +3389,9 @@
                 "identifier": "levelInfo",
                 "newPage": false,
                 "searchKey": "flate.levelInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3163,7 +3411,9 @@
                 "identifier": "byLiteral",
                 "newPage": false,
                 "searchKey": "flate.byLiteral",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3181,7 +3431,9 @@
                       "identifier": "byLiteral.sort",
                       "newPage": false,
                       "searchKey": "flate.byLiteral.sort",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3201,7 +3453,9 @@
                       "identifier": "byLiteral.Len",
                       "newPage": false,
                       "searchKey": "flate.byLiteral.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3221,7 +3475,9 @@
                       "identifier": "byLiteral.Less",
                       "newPage": false,
                       "searchKey": "flate.byLiteral.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3241,7 +3497,9 @@
                       "identifier": "byLiteral.Swap",
                       "newPage": false,
                       "searchKey": "flate.byLiteral.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3264,7 +3522,9 @@
                 "identifier": "byFreq",
                 "newPage": false,
                 "searchKey": "flate.byFreq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3282,7 +3542,9 @@
                       "identifier": "byFreq.sort",
                       "newPage": false,
                       "searchKey": "flate.byFreq.sort",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3302,7 +3564,9 @@
                       "identifier": "byFreq.Len",
                       "newPage": false,
                       "searchKey": "flate.byFreq.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3322,7 +3586,9 @@
                       "identifier": "byFreq.Less",
                       "newPage": false,
                       "searchKey": "flate.byFreq.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3342,7 +3608,9 @@
                       "identifier": "byFreq.Swap",
                       "newPage": false,
                       "searchKey": "flate.byFreq.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3365,9 +3633,7 @@
                 "identifier": "CorruptInputError",
                 "newPage": false,
                 "searchKey": "flate.CorruptInputError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3385,9 +3651,7 @@
                       "identifier": "CorruptInputError.Error",
                       "newPage": false,
                       "searchKey": "flate.CorruptInputError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3410,9 +3674,7 @@
                 "identifier": "InternalError",
                 "newPage": false,
                 "searchKey": "flate.InternalError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3430,9 +3692,7 @@
                       "identifier": "InternalError.Error",
                       "newPage": false,
                       "searchKey": "flate.InternalError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3455,9 +3715,7 @@
                 "identifier": "ReadError",
                 "newPage": false,
                 "searchKey": "flate.ReadError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3475,9 +3733,7 @@
                       "identifier": "ReadError.Error",
                       "newPage": false,
                       "searchKey": "flate.ReadError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3500,9 +3756,7 @@
                 "identifier": "WriteError",
                 "newPage": false,
                 "searchKey": "flate.WriteError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3520,9 +3774,7 @@
                       "identifier": "WriteError.Error",
                       "newPage": false,
                       "searchKey": "flate.WriteError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3545,9 +3797,7 @@
                 "identifier": "Resetter",
                 "newPage": false,
                 "searchKey": "flate.Resetter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3567,7 +3817,9 @@
                 "identifier": "huffmanDecoder",
                 "newPage": false,
                 "searchKey": "flate.huffmanDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3580,12 +3832,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/compress/flate#huffmanDecoder.init",
+                    "pathID": "/compress/flate#huffmanDecoder.init.inflate.go",
                     "documentation": {
-                      "identifier": "huffmanDecoder.init",
+                      "identifier": "huffmanDecoder.init.inflate.go",
                       "newPage": false,
                       "searchKey": "flate.huffmanDecoder.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3608,9 +3862,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "flate.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3628,7 +3880,9 @@
                       "identifier": "makeReader",
                       "newPage": false,
                       "searchKey": "flate.makeReader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3651,7 +3905,9 @@
                 "identifier": "decompressor",
                 "newPage": false,
                 "searchKey": "flate.decompressor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3669,7 +3925,9 @@
                       "identifier": "decompressor.nextBlock",
                       "newPage": false,
                       "searchKey": "flate.decompressor.nextBlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3689,7 +3947,9 @@
                       "identifier": "decompressor.Read",
                       "newPage": false,
                       "searchKey": "flate.decompressor.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3709,7 +3969,9 @@
                       "identifier": "decompressor.Close",
                       "newPage": false,
                       "searchKey": "flate.decompressor.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3729,7 +3991,9 @@
                       "identifier": "decompressor.readHuffman",
                       "newPage": false,
                       "searchKey": "flate.decompressor.readHuffman",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3749,7 +4013,9 @@
                       "identifier": "decompressor.huffmanBlock",
                       "newPage": false,
                       "searchKey": "flate.decompressor.huffmanBlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3769,7 +4035,9 @@
                       "identifier": "decompressor.dataBlock",
                       "newPage": false,
                       "searchKey": "flate.decompressor.dataBlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3789,7 +4057,9 @@
                       "identifier": "decompressor.copyData",
                       "newPage": false,
                       "searchKey": "flate.decompressor.copyData",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3809,7 +4079,9 @@
                       "identifier": "decompressor.finishBlock",
                       "newPage": false,
                       "searchKey": "flate.decompressor.finishBlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3829,7 +4101,9 @@
                       "identifier": "decompressor.moreBits",
                       "newPage": false,
                       "searchKey": "flate.decompressor.moreBits",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3849,7 +4123,9 @@
                       "identifier": "decompressor.huffSym",
                       "newPage": false,
                       "searchKey": "flate.decompressor.huffSym",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3869,7 +4145,9 @@
                       "identifier": "decompressor.Reset",
                       "newPage": false,
                       "searchKey": "flate.decompressor.Reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3892,7 +4170,9 @@
                 "identifier": "token",
                 "newPage": false,
                 "searchKey": "flate.token",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3910,7 +4190,9 @@
                       "identifier": "literalToken",
                       "newPage": false,
                       "searchKey": "flate.literalToken",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3930,7 +4212,9 @@
                       "identifier": "matchToken",
                       "newPage": false,
                       "searchKey": "flate.matchToken",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3950,7 +4234,9 @@
                       "identifier": "token.literal",
                       "newPage": false,
                       "searchKey": "flate.token.literal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3970,7 +4256,9 @@
                       "identifier": "token.offset",
                       "newPage": false,
                       "searchKey": "flate.token.offset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3990,7 +4278,9 @@
                       "identifier": "token.length",
                       "newPage": false,
                       "searchKey": "flate.token.length",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4013,7 +4303,9 @@
                 "identifier": "deflateTest",
                 "newPage": false,
                 "searchKey": "flate.deflateTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4033,7 +4325,9 @@
                 "identifier": "deflateInflateTest",
                 "newPage": false,
                 "searchKey": "flate.deflateInflateTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4053,7 +4347,9 @@
                 "identifier": "reverseBitsTest",
                 "newPage": false,
                 "searchKey": "flate.reverseBitsTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4073,7 +4369,9 @@
                 "identifier": "sparseReader",
                 "newPage": false,
                 "searchKey": "flate.sparseReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4091,7 +4389,9 @@
                       "identifier": "sparseReader.Read",
                       "newPage": false,
                       "searchKey": "flate.sparseReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4114,7 +4414,9 @@
                 "identifier": "syncBuffer",
                 "newPage": false,
                 "searchKey": "flate.syncBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4132,7 +4434,9 @@
                       "identifier": "newSyncBuffer",
                       "newPage": false,
                       "searchKey": "flate.newSyncBuffer",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4152,7 +4456,9 @@
                       "identifier": "syncBuffer.Read",
                       "newPage": false,
                       "searchKey": "flate.syncBuffer.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4172,7 +4478,9 @@
                       "identifier": "syncBuffer.signal",
                       "newPage": false,
                       "searchKey": "flate.syncBuffer.signal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4192,7 +4500,9 @@
                       "identifier": "syncBuffer.Write",
                       "newPage": false,
                       "searchKey": "flate.syncBuffer.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4212,7 +4522,9 @@
                       "identifier": "syncBuffer.WriteMode",
                       "newPage": false,
                       "searchKey": "flate.syncBuffer.WriteMode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4232,7 +4544,9 @@
                       "identifier": "syncBuffer.ReadMode",
                       "newPage": false,
                       "searchKey": "flate.syncBuffer.ReadMode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4252,7 +4566,9 @@
                       "identifier": "syncBuffer.Close",
                       "newPage": false,
                       "searchKey": "flate.syncBuffer.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4275,7 +4591,9 @@
                 "identifier": "deflateInflateStringTest",
                 "newPage": false,
                 "searchKey": "flate.deflateInflateStringTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4295,7 +4613,9 @@
                 "identifier": "failWriter",
                 "newPage": false,
                 "searchKey": "flate.failWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4313,7 +4633,9 @@
                       "identifier": "failWriter.Write",
                       "newPage": false,
                       "searchKey": "flate.failWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4336,7 +4658,9 @@
                 "identifier": "huffTest",
                 "newPage": false,
                 "searchKey": "flate.huffTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4356,7 +4680,9 @@
                 "identifier": "errorWriter",
                 "newPage": false,
                 "searchKey": "flate.errorWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4374,7 +4700,9 @@
                       "identifier": "errorWriter.Write",
                       "newPage": false,
                       "searchKey": "flate.errorWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4400,9 +4728,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -4420,7 +4746,9 @@
                 "identifier": "hash4",
                 "newPage": false,
                 "searchKey": "flate.hash4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4440,7 +4768,9 @@
                 "identifier": "bulkHash4",
                 "newPage": false,
                 "searchKey": "flate.bulkHash4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4460,7 +4790,9 @@
                 "identifier": "matchLen",
                 "newPage": false,
                 "searchKey": "flate.matchLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4480,7 +4812,9 @@
                 "identifier": "load32",
                 "newPage": false,
                 "searchKey": "flate.load32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4500,7 +4834,9 @@
                 "identifier": "load64",
                 "newPage": false,
                 "searchKey": "flate.load64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4520,7 +4856,9 @@
                 "identifier": "hash",
                 "newPage": false,
                 "searchKey": "flate.hash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4540,7 +4878,9 @@
                 "identifier": "emitLiteral",
                 "newPage": false,
                 "searchKey": "flate.emitLiteral",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4555,12 +4895,14 @@
           },
           {
             "node": {
-              "pathID": "/compress/flate#init",
+              "pathID": "/compress/flate#init.huffman_bit_writer.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.huffman_bit_writer.go",
                 "newPage": false,
                 "searchKey": "flate.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4580,7 +4922,9 @@
                 "identifier": "histogram",
                 "newPage": false,
                 "searchKey": "flate.histogram",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4600,7 +4944,9 @@
                 "identifier": "reverseBits",
                 "newPage": false,
                 "searchKey": "flate.reverseBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4620,7 +4966,9 @@
                 "identifier": "noEOF",
                 "newPage": false,
                 "searchKey": "flate.noEOF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4640,7 +4988,9 @@
                 "identifier": "fixedHuffmanDecoderInit",
                 "newPage": false,
                 "searchKey": "flate.fixedHuffmanDecoderInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4660,9 +5010,7 @@
                 "identifier": "NewReader",
                 "newPage": false,
                 "searchKey": "flate.NewReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4682,9 +5030,7 @@
                 "identifier": "NewReaderDict",
                 "newPage": false,
                 "searchKey": "flate.NewReaderDict",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4704,7 +5050,9 @@
                 "identifier": "lengthCode",
                 "newPage": false,
                 "searchKey": "flate.lengthCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4724,7 +5072,9 @@
                 "identifier": "offsetCode",
                 "newPage": false,
                 "searchKey": "flate.offsetCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4744,7 +5094,9 @@
                 "identifier": "largeDataChunk",
                 "newPage": false,
                 "searchKey": "flate.largeDataChunk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4764,7 +5116,9 @@
                 "identifier": "TestBulkHash4",
                 "newPage": false,
                 "searchKey": "flate.TestBulkHash4",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4784,7 +5138,9 @@
                 "identifier": "TestDeflate",
                 "newPage": false,
                 "searchKey": "flate.TestDeflate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4804,7 +5160,9 @@
                 "identifier": "TestVeryLongSparseChunk",
                 "newPage": false,
                 "searchKey": "flate.TestVeryLongSparseChunk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4824,7 +5182,9 @@
                 "identifier": "testSync",
                 "newPage": false,
                 "searchKey": "flate.testSync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4844,7 +5204,9 @@
                 "identifier": "testToFromWithLevelAndLimit",
                 "newPage": false,
                 "searchKey": "flate.testToFromWithLevelAndLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4864,7 +5226,9 @@
                 "identifier": "testToFromWithLimit",
                 "newPage": false,
                 "searchKey": "flate.testToFromWithLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4884,7 +5248,9 @@
                 "identifier": "TestDeflateInflate",
                 "newPage": false,
                 "searchKey": "flate.TestDeflateInflate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4904,7 +5270,9 @@
                 "identifier": "TestReverseBits",
                 "newPage": false,
                 "searchKey": "flate.TestReverseBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4924,7 +5292,9 @@
                 "identifier": "TestDeflateInflateString",
                 "newPage": false,
                 "searchKey": "flate.TestDeflateInflateString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4944,7 +5314,9 @@
                 "identifier": "TestReaderDict",
                 "newPage": false,
                 "searchKey": "flate.TestReaderDict",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4964,7 +5336,9 @@
                 "identifier": "TestWriterDict",
                 "newPage": false,
                 "searchKey": "flate.TestWriterDict",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4984,7 +5358,9 @@
                 "identifier": "TestRegression2508",
                 "newPage": false,
                 "searchKey": "flate.TestRegression2508",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5004,7 +5380,9 @@
                 "identifier": "TestWriterReset",
                 "newPage": false,
                 "searchKey": "flate.TestWriterReset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5024,7 +5402,9 @@
                 "identifier": "testResetOutput",
                 "newPage": false,
                 "searchKey": "flate.testResetOutput",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5044,7 +5424,9 @@
                 "identifier": "TestBestSpeed",
                 "newPage": false,
                 "searchKey": "flate.TestBestSpeed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5064,7 +5446,9 @@
                 "identifier": "TestWriterPersistentError",
                 "newPage": false,
                 "searchKey": "flate.TestWriterPersistentError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5084,7 +5468,9 @@
                 "identifier": "TestBestSpeedMatch",
                 "newPage": false,
                 "searchKey": "flate.TestBestSpeedMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5104,7 +5490,9 @@
                 "identifier": "TestBestSpeedMaxMatchOffset",
                 "newPage": false,
                 "searchKey": "flate.TestBestSpeedMaxMatchOffset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5124,7 +5512,9 @@
                 "identifier": "TestBestSpeedShiftOffsets",
                 "newPage": false,
                 "searchKey": "flate.TestBestSpeedShiftOffsets",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5144,7 +5534,9 @@
                 "identifier": "TestMaxStackSize",
                 "newPage": false,
                 "searchKey": "flate.TestMaxStackSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5164,7 +5556,9 @@
                 "identifier": "TestDictDecoder",
                 "newPage": false,
                 "searchKey": "flate.TestDictDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5184,7 +5578,9 @@
                 "identifier": "TestIssue5915",
                 "newPage": false,
                 "searchKey": "flate.TestIssue5915",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5204,7 +5600,9 @@
                 "identifier": "TestIssue5962",
                 "newPage": false,
                 "searchKey": "flate.TestIssue5962",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5224,7 +5622,9 @@
                 "identifier": "TestIssue6255",
                 "newPage": false,
                 "searchKey": "flate.TestIssue6255",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5244,7 +5644,9 @@
                 "identifier": "TestInvalidEncoding",
                 "newPage": false,
                 "searchKey": "flate.TestInvalidEncoding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5264,7 +5666,9 @@
                 "identifier": "TestInvalidBits",
                 "newPage": false,
                 "searchKey": "flate.TestInvalidBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5284,7 +5688,9 @@
                 "identifier": "TestStreams",
                 "newPage": false,
                 "searchKey": "flate.TestStreams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5304,7 +5710,9 @@
                 "identifier": "TestTruncatedStreams",
                 "newPage": false,
                 "searchKey": "flate.TestTruncatedStreams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5324,7 +5732,9 @@
                 "identifier": "TestReaderEarlyEOF",
                 "newPage": false,
                 "searchKey": "flate.TestReaderEarlyEOF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5344,7 +5754,9 @@
                 "identifier": "TestBlockHuff",
                 "newPage": false,
                 "searchKey": "flate.TestBlockHuff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5364,7 +5776,9 @@
                 "identifier": "testBlockHuff",
                 "newPage": false,
                 "searchKey": "flate.testBlockHuff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5384,7 +5798,9 @@
                 "identifier": "TestWriteBlock",
                 "newPage": false,
                 "searchKey": "flate.TestWriteBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5404,7 +5820,9 @@
                 "identifier": "TestWriteBlockDynamic",
                 "newPage": false,
                 "searchKey": "flate.TestWriteBlockDynamic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5424,7 +5842,9 @@
                 "identifier": "testBlock",
                 "newPage": false,
                 "searchKey": "flate.testBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5444,7 +5864,9 @@
                 "identifier": "writeToType",
                 "newPage": false,
                 "searchKey": "flate.writeToType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5464,7 +5886,9 @@
                 "identifier": "testWriterEOF",
                 "newPage": false,
                 "searchKey": "flate.testWriterEOF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5484,7 +5908,9 @@
                 "identifier": "TestReset",
                 "newPage": false,
                 "searchKey": "flate.TestReset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5504,7 +5930,9 @@
                 "identifier": "TestReaderTruncated",
                 "newPage": false,
                 "searchKey": "flate.TestReaderTruncated",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5524,7 +5952,9 @@
                 "identifier": "TestResetDict",
                 "newPage": false,
                 "searchKey": "flate.TestResetDict",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5544,7 +5974,9 @@
                 "identifier": "TestNlitOutOfRange",
                 "newPage": false,
                 "searchKey": "flate.TestNlitOutOfRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5564,7 +5996,9 @@
                 "identifier": "BenchmarkDecode",
                 "newPage": false,
                 "searchKey": "flate.BenchmarkDecode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5584,7 +6018,9 @@
                 "identifier": "doBench",
                 "newPage": false,
                 "searchKey": "flate.doBench",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5604,7 +6040,9 @@
                 "identifier": "BenchmarkEncode",
                 "newPage": false,
                 "searchKey": "flate.BenchmarkEncode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5624,7 +6062,9 @@
                 "identifier": "TestWriteError",
                 "newPage": false,
                 "searchKey": "flate.TestWriteError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5644,7 +6084,9 @@
                 "identifier": "TestDeterministic",
                 "newPage": false,
                 "searchKey": "flate.TestDeterministic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5664,7 +6106,9 @@
                 "identifier": "testDeterministic",
                 "newPage": false,
                 "searchKey": "flate.testDeterministic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5684,7 +6128,9 @@
                 "identifier": "TestDeflateFast_Reset",
                 "newPage": false,
                 "searchKey": "flate.TestDeflateFast_Reset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

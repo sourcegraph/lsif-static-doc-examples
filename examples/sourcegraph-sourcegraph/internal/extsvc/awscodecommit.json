@@ -4,7 +4,9 @@
     "identifier": "awscodecommit",
     "newPage": true,
     "searchKey": "internal/extsvc/awscodecommit",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "MaxMetadataBatch",
                 "newPage": false,
                 "searchKey": "awscodecommit.MaxMetadataBatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +67,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,9 +87,7 @@
                 "identifier": "ErrNotFound",
                 "newPage": false,
                 "searchKey": "awscodecommit.ErrNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -105,9 +107,7 @@
                 "identifier": "GetRepositoryMock",
                 "newPage": false,
                 "searchKey": "awscodecommit.GetRepositoryMock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "reposCacheCounter",
                 "newPage": false,
                 "searchKey": "awscodecommit.reposCacheCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -150,7 +152,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -168,9 +172,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "awscodecommit.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -188,9 +190,7 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "awscodecommit.NewClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -210,7 +210,9 @@
                       "identifier": "Client.cacheKeyPrefix",
                       "newPage": false,
                       "searchKey": "awscodecommit.Client.cacheKeyPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -230,7 +232,9 @@
                       "identifier": "Client.repositoryCacheKey",
                       "newPage": false,
                       "searchKey": "awscodecommit.Client.repositoryCacheKey",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -250,9 +254,7 @@
                       "identifier": "Client.GetRepository",
                       "newPage": false,
                       "searchKey": "awscodecommit.Client.GetRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -272,7 +274,9 @@
                       "identifier": "Client.cachedGetRepository",
                       "newPage": false,
                       "searchKey": "awscodecommit.Client.cachedGetRepository",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -292,7 +296,9 @@
                       "identifier": "Client.getRepositoryFromCache",
                       "newPage": false,
                       "searchKey": "awscodecommit.Client.getRepositoryFromCache",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -312,7 +318,9 @@
                       "identifier": "Client.addRepositoryToCache",
                       "newPage": false,
                       "searchKey": "awscodecommit.Client.addRepositoryToCache",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -332,7 +340,9 @@
                       "identifier": "Client.getRepositoryFromAPI",
                       "newPage": false,
                       "searchKey": "awscodecommit.Client.getRepositoryFromAPI",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -352,9 +362,7 @@
                       "identifier": "Client.ListRepositories",
                       "newPage": false,
                       "searchKey": "awscodecommit.Client.ListRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -374,7 +382,9 @@
                       "identifier": "Client.getRepositories",
                       "newPage": false,
                       "searchKey": "awscodecommit.Client.getRepositories",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -397,9 +407,7 @@
                 "identifier": "Repository",
                 "newPage": false,
                 "searchKey": "awscodecommit.Repository",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -417,7 +425,9 @@
                       "identifier": "fromRepoMetadata",
                       "newPage": false,
                       "searchKey": "awscodecommit.fromRepoMetadata",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -440,7 +450,9 @@
                 "identifier": "cachedRepo",
                 "newPage": false,
                 "searchKey": "awscodecommit.cachedRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -460,7 +472,9 @@
                 "identifier": "wrappedError",
                 "newPage": false,
                 "searchKey": "awscodecommit.wrappedError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -478,7 +492,9 @@
                       "identifier": "wrappedError.Error",
                       "newPage": false,
                       "searchKey": "awscodecommit.wrappedError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -498,7 +514,9 @@
                       "identifier": "wrappedError.NotFound",
                       "newPage": false,
                       "searchKey": "awscodecommit.wrappedError.NotFound",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -518,7 +536,9 @@
                       "identifier": "wrappedError.Unauthorized",
                       "newPage": false,
                       "searchKey": "awscodecommit.wrappedError.Unauthorized",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -544,7 +564,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -562,9 +584,7 @@
                 "identifier": "IsNotFound",
                 "newPage": false,
                 "searchKey": "awscodecommit.IsNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -584,9 +604,7 @@
                 "identifier": "IsUnauthorized",
                 "newPage": false,
                 "searchKey": "awscodecommit.IsUnauthorized",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -606,9 +624,7 @@
                 "identifier": "ExternalRepoSpec",
                 "newPage": false,
                 "searchKey": "awscodecommit.ExternalRepoSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -628,9 +644,7 @@
                 "identifier": "ServiceID",
                 "newPage": false,
                 "searchKey": "awscodecommit.ServiceID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -650,9 +664,7 @@
                 "identifier": "MockGetRepository_Return",
                 "newPage": false,
                 "searchKey": "awscodecommit.MockGetRepository_Return",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

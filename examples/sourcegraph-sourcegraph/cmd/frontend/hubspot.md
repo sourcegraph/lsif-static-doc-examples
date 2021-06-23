@@ -28,15 +28,10 @@
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ContactProperties" href="#ContactProperties">type ContactProperties struct</a>
 
 ```
 searchKey: hubspot.ContactProperties
-tags: [exported]
 ```
 
 ```Go
@@ -55,7 +50,6 @@ ContactProperties represent HubSpot user properties
 
 ```
 searchKey: hubspot.ContactResponse
-tags: [exported]
 ```
 
 ```Go
@@ -71,6 +65,7 @@ ContactResponse represents HubSpot user properties returned after a CreateOrUpda
 
 ```
 searchKey: hubspot.apiProperties
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +80,7 @@ apiProperties represents a list of HubSpot API-compliant key-value pairs
 
 ```
 searchKey: hubspot.newAPIValues
+tags: [private]
 ```
 
 ```Go
@@ -97,6 +93,7 @@ newAPIValues converts a ContactProperties struct to a HubSpot API-compliant arra
 
 ```
 searchKey: hubspot.apiProperties.set
+tags: [private]
 ```
 
 ```Go
@@ -107,6 +104,7 @@ func (h *apiProperties) set(property string, value interface{})
 
 ```
 searchKey: hubspot.apiProperty
+tags: [private]
 ```
 
 ```Go
@@ -120,7 +118,6 @@ type apiProperty struct {
 
 ```
 searchKey: hubspot.Client
-tags: [exported]
 ```
 
 ```Go
@@ -136,7 +133,6 @@ Client is a HubSpot API client
 
 ```
 searchKey: hubspot.New
-tags: [exported]
 ```
 
 ```Go
@@ -149,7 +145,6 @@ New returns a new HubSpot client using the given Portal ID.
 
 ```
 searchKey: hubspot.Client.CreateOrUpdateContact
-tags: [exported]
 ```
 
 ```Go
@@ -166,6 +161,7 @@ The endpoint returns 200 with the contact's VID and an isNew field on success, o
 
 ```
 searchKey: hubspot.Client.baseContactURL
+tags: [private]
 ```
 
 ```Go
@@ -176,7 +172,6 @@ func (c *Client) baseContactURL(email string) *url.URL
 
 ```
 searchKey: hubspot.Client.LogEvent
-tags: [exported]
 ```
 
 ```Go
@@ -191,6 +186,7 @@ LogEvent logs a user action or event. The response will have a status code of 20
 
 ```
 searchKey: hubspot.Client.baseEventURL
+tags: [private]
 ```
 
 ```Go
@@ -201,7 +197,6 @@ func (c *Client) baseEventURL() *url.URL
 
 ```
 searchKey: hubspot.Client.SubmitForm
-tags: [exported]
 ```
 
 ```Go
@@ -218,6 +213,7 @@ See [https://developers.hubspot.com/docs/methods/forms/submit_form](https://deve
 
 ```
 searchKey: hubspot.Client.baseFormURL
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +224,7 @@ func (c *Client) baseFormURL() *url.URL
 
 ```
 searchKey: hubspot.Client.postForm
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +237,7 @@ Send a POST request with form data to HubSpot APIs that accept application/x-www
 
 ```
 searchKey: hubspot.Client.postJSON
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +250,7 @@ Send a POST request with JSON data to HubSpot APIs that accept JSON (e.g. the Co
 
 ```
 searchKey: hubspot.Client.get
+tags: [private]
 ```
 
 ```Go
@@ -262,14 +261,11 @@ Send a GET request to HubSpot APIs that accept JSON in a querystring (e.g. the E
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="wrapError" href="#wrapError">func wrapError(methodName string, err error) error</a>
 
 ```
 searchKey: hubspot.wrapError
+tags: [private]
 ```
 
 ```Go

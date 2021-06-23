@@ -4,7 +4,9 @@
     "identifier": "migration",
     "newPage": true,
     "searchKey": "enterprise/internal/codeintel/stores/dbstore/migration",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "committedAtProgressQuery",
                 "newPage": false,
                 "searchKey": "migration.committedAtProgressQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "committedAtSelectUpQuery",
                 "newPage": false,
                 "searchKey": "migration.committedAtSelectUpQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "committedAtProcesshandleCommitQuery",
                 "newPage": false,
                 "searchKey": "migration.committedAtProcesshandleCommitQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "committedAtDownQuery",
                 "newPage": false,
                 "searchKey": "migration.committedAtDownQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,9 +132,7 @@
                 "identifier": "CommittedAtMigrationID",
                 "newPage": false,
                 "searchKey": "migration.CommittedAtMigrationID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -145,7 +155,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -163,7 +175,9 @@
                 "identifier": "committedAtMigrator",
                 "newPage": false,
                 "searchKey": "migration.committedAtMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +195,9 @@
                       "identifier": "committedAtMigrator.Progress",
                       "newPage": false,
                       "searchKey": "migration.committedAtMigrator.Progress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -201,7 +217,9 @@
                       "identifier": "committedAtMigrator.Up",
                       "newPage": false,
                       "searchKey": "migration.committedAtMigrator.Up",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -221,7 +239,9 @@
                       "identifier": "committedAtMigrator.handleSourcedCommits",
                       "newPage": false,
                       "searchKey": "migration.committedAtMigrator.handleSourcedCommits",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -241,7 +261,9 @@
                       "identifier": "committedAtMigrator.handleCommit",
                       "newPage": false,
                       "searchKey": "migration.committedAtMigrator.handleCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -261,7 +283,9 @@
                       "identifier": "committedAtMigrator.Down",
                       "newPage": false,
                       "searchKey": "migration.committedAtMigrator.Down",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -284,9 +308,7 @@
                 "identifier": "GitserverClient",
                 "newPage": false,
                 "searchKey": "migration.GitserverClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -306,9 +328,7 @@
                 "identifier": "MockGitserverClient",
                 "newPage": false,
                 "searchKey": "migration.MockGitserverClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +346,7 @@
                       "identifier": "NewMockGitserverClient",
                       "newPage": false,
                       "searchKey": "migration.NewMockGitserverClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -348,9 +366,7 @@
                       "identifier": "NewMockGitserverClientFrom",
                       "newPage": false,
                       "searchKey": "migration.NewMockGitserverClientFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -370,9 +386,7 @@
                       "identifier": "MockGitserverClient.CommitDate",
                       "newPage": false,
                       "searchKey": "migration.MockGitserverClient.CommitDate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -395,9 +409,7 @@
                 "identifier": "GitserverClientCommitDateFunc",
                 "newPage": false,
                 "searchKey": "migration.GitserverClientCommitDateFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -415,9 +427,7 @@
                       "identifier": "GitserverClientCommitDateFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "migration.GitserverClientCommitDateFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -437,9 +447,7 @@
                       "identifier": "GitserverClientCommitDateFunc.PushHook",
                       "newPage": false,
                       "searchKey": "migration.GitserverClientCommitDateFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -459,9 +467,7 @@
                       "identifier": "GitserverClientCommitDateFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "migration.GitserverClientCommitDateFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -481,9 +487,7 @@
                       "identifier": "GitserverClientCommitDateFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "migration.GitserverClientCommitDateFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -503,7 +507,9 @@
                       "identifier": "GitserverClientCommitDateFunc.nextHook",
                       "newPage": false,
                       "searchKey": "migration.GitserverClientCommitDateFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -523,7 +529,9 @@
                       "identifier": "GitserverClientCommitDateFunc.appendCall",
                       "newPage": false,
                       "searchKey": "migration.GitserverClientCommitDateFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -543,9 +551,7 @@
                       "identifier": "GitserverClientCommitDateFunc.History",
                       "newPage": false,
                       "searchKey": "migration.GitserverClientCommitDateFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -568,9 +574,7 @@
                 "identifier": "GitserverClientCommitDateFuncCall",
                 "newPage": false,
                 "searchKey": "migration.GitserverClientCommitDateFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -588,9 +592,7 @@
                       "identifier": "GitserverClientCommitDateFuncCall.Args",
                       "newPage": false,
                       "searchKey": "migration.GitserverClientCommitDateFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -610,9 +612,7 @@
                       "identifier": "GitserverClientCommitDateFuncCall.Results",
                       "newPage": false,
                       "searchKey": "migration.GitserverClientCommitDateFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -638,7 +638,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -656,9 +658,7 @@
                 "identifier": "NewCommittedAtMigrator",
                 "newPage": false,
                 "searchKey": "migration.NewCommittedAtMigrator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -678,7 +678,9 @@
                 "identifier": "isRepositoryNotFound",
                 "newPage": false,
                 "searchKey": "migration.isRepositoryNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -698,7 +700,9 @@
                 "identifier": "isRevisionNotFound",
                 "newPage": false,
                 "searchKey": "migration.isRevisionNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -718,7 +722,9 @@
                 "identifier": "TestCommittedAtMigrator",
                 "newPage": false,
                 "searchKey": "migration.TestCommittedAtMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -738,7 +744,9 @@
                 "identifier": "TestCommittedAtMigratorUnknownRepository",
                 "newPage": false,
                 "searchKey": "migration.TestCommittedAtMigratorUnknownRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -758,7 +766,9 @@
                 "identifier": "TestCommittedAtMigratorUnknownCommits",
                 "newPage": false,
                 "searchKey": "migration.TestCommittedAtMigratorUnknownCommits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -773,12 +783,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#init",
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#init.migration_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.migration_test.go",
                 "newPage": false,
                 "searchKey": "migration.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

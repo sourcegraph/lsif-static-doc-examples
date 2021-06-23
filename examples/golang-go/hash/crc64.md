@@ -49,15 +49,10 @@ Package crc64 implements the 64-bit cyclic redundancy check, or CRC-64, checksum
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Size" href="#Size">const Size</a>
 
 ```
 searchKey: crc64.Size
-tags: [exported]
 ```
 
 ```Go
@@ -70,7 +65,6 @@ The size of a CRC-64 checksum in bytes.
 
 ```
 searchKey: crc64.ISO
-tags: [exported]
 ```
 
 ```Go
@@ -85,7 +79,6 @@ The ISO polynomial, defined in ISO 3309 and used in HDLC.
 
 ```
 searchKey: crc64.ECMA
-tags: [exported]
 ```
 
 ```Go
@@ -100,6 +93,7 @@ The ECMA polynomial, defined in ECMA 182.
 
 ```
 searchKey: crc64.magic
+tags: [private]
 ```
 
 ```Go
@@ -110,6 +104,7 @@ const magic = "crc\x02"
 
 ```
 searchKey: crc64.marshaledSize
+tags: [private]
 ```
 
 ```Go
@@ -118,14 +113,11 @@ const marshaledSize = len(magic) + 8 + 8
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="slicing8TablesBuildOnce" href="#slicing8TablesBuildOnce">var slicing8TablesBuildOnce</a>
 
 ```
 searchKey: crc64.slicing8TablesBuildOnce
+tags: [private]
 ```
 
 ```Go
@@ -136,6 +128,7 @@ var slicing8TablesBuildOnce sync.Once
 
 ```
 searchKey: crc64.slicing8TableISO
+tags: [private]
 ```
 
 ```Go
@@ -146,6 +139,7 @@ var slicing8TableISO *[8]Table
 
 ```
 searchKey: crc64.slicing8TableECMA
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +150,7 @@ var slicing8TableECMA *[8]Table
 
 ```
 searchKey: crc64.golden
+tags: [private]
 ```
 
 ```Go
@@ -164,15 +159,10 @@ var golden = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Table" href="#Table">type Table [256]uint64</a>
 
 ```
 searchKey: crc64.Table
-tags: [exported]
 ```
 
 ```Go
@@ -185,7 +175,6 @@ Table is a 256-word table representing the polynomial for efficient processing.
 
 ```
 searchKey: crc64.MakeTable
-tags: [exported]
 ```
 
 ```Go
@@ -198,6 +187,7 @@ MakeTable returns a Table constructed from the specified polynomial. The content
 
 ```
 searchKey: crc64.makeTable
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +198,7 @@ func makeTable(poly uint64) *Table
 
 ```
 searchKey: crc64.digest
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +214,7 @@ digest represents the partial evaluation of a checksum.
 
 ```
 searchKey: crc64.digest.Size
+tags: [private]
 ```
 
 ```Go
@@ -233,6 +225,7 @@ func (d *digest) Size() int
 
 ```
 searchKey: crc64.digest.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +236,7 @@ func (d *digest) BlockSize() int
 
 ```
 searchKey: crc64.digest.Reset
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +247,7 @@ func (d *digest) Reset()
 
 ```
 searchKey: crc64.digest.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +258,7 @@ func (d *digest) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: crc64.digest.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +269,7 @@ func (d *digest) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: crc64.digest.Write
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +280,7 @@ func (d *digest) Write(p []byte) (n int, err error)
 
 ```
 searchKey: crc64.digest.Sum64
+tags: [private]
 ```
 
 ```Go
@@ -293,6 +291,7 @@ func (d *digest) Sum64() uint64
 
 ```
 searchKey: crc64.digest.Sum
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +302,7 @@ func (d *digest) Sum(in []byte) []byte
 
 ```
 searchKey: crc64.test
+tags: [private]
 ```
 
 ```Go
@@ -317,14 +317,11 @@ type test struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="buildSlicing8TablesOnce" href="#buildSlicing8TablesOnce">func buildSlicing8TablesOnce()</a>
 
 ```
 searchKey: crc64.buildSlicing8TablesOnce
+tags: [private]
 ```
 
 ```Go
@@ -335,6 +332,7 @@ func buildSlicing8TablesOnce()
 
 ```
 searchKey: crc64.buildSlicing8Tables
+tags: [private]
 ```
 
 ```Go
@@ -345,6 +343,7 @@ func buildSlicing8Tables()
 
 ```
 searchKey: crc64.makeSlicingBy8Table
+tags: [private]
 ```
 
 ```Go
@@ -355,7 +354,6 @@ func makeSlicingBy8Table(t *Table) *[8]Table
 
 ```
 searchKey: crc64.New
-tags: [exported]
 ```
 
 ```Go
@@ -368,6 +366,7 @@ New creates a new hash.Hash64 computing the CRC-64 checksum using the polynomial
 
 ```
 searchKey: crc64.appendUint64
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +377,7 @@ func appendUint64(b []byte, x uint64) []byte
 
 ```
 searchKey: crc64.readUint64
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +388,7 @@ func readUint64(b []byte) uint64
 
 ```
 searchKey: crc64.update
+tags: [private]
 ```
 
 ```Go
@@ -398,7 +399,6 @@ func update(crc uint64, tab *Table, p []byte) uint64
 
 ```
 searchKey: crc64.Update
-tags: [exported]
 ```
 
 ```Go
@@ -411,7 +411,6 @@ Update returns the result of adding the bytes in p to the crc.
 
 ```
 searchKey: crc64.Checksum
-tags: [exported]
 ```
 
 ```Go
@@ -424,6 +423,7 @@ Checksum returns the CRC-64 checksum of data using the polynomial represented by
 
 ```
 searchKey: crc64.tableSum
+tags: [private]
 ```
 
 ```Go
@@ -436,6 +436,7 @@ tableSum returns the ISO checksum of table t.
 
 ```
 searchKey: crc64.TestGolden
+tags: [private]
 ```
 
 ```Go
@@ -446,6 +447,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: crc64.TestGoldenMarshal
+tags: [private]
 ```
 
 ```Go
@@ -456,6 +458,7 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: crc64.TestMarshalTableMismatch
+tags: [private]
 ```
 
 ```Go
@@ -466,6 +469,7 @@ func TestMarshalTableMismatch(t *testing.T)
 
 ```
 searchKey: crc64.bench
+tags: [private]
 ```
 
 ```Go
@@ -476,6 +480,7 @@ func bench(b *testing.B, poly uint64, size int64)
 
 ```
 searchKey: crc64.BenchmarkCrc64
+tags: [private]
 ```
 
 ```Go

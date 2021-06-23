@@ -26,10 +26,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Unknown" href="#Unknown">const Unknown</a>
 
 ```
 searchKey: xml_test.Unknown
+tags: [private]
 ```
 
 ```Go
@@ -40,6 +45,7 @@ const Unknown Animal = iota
 
 ```
 searchKey: xml_test.Gopher
+tags: [private]
 ```
 
 ```Go
@@ -50,6 +56,7 @@ const Gopher
 
 ```
 searchKey: xml_test.Zebra
+tags: [private]
 ```
 
 ```Go
@@ -60,6 +67,7 @@ const Zebra
 
 ```
 searchKey: xml_test.Unrecognized
+tags: [private]
 ```
 
 ```Go
@@ -70,6 +78,7 @@ const Unrecognized Size = iota
 
 ```
 searchKey: xml_test.Small
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +89,7 @@ const Small
 
 ```
 searchKey: xml_test.Large
+tags: [private]
 ```
 
 ```Go
@@ -88,10 +98,15 @@ const Large
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Animal" href="#Animal">type Animal int</a>
 
 ```
 searchKey: xml_test.Animal
+tags: [private]
 ```
 
 ```Go
@@ -102,6 +117,7 @@ type Animal int
 
 ```
 searchKey: xml_test.Animal.UnmarshalXML
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +128,7 @@ func (a *Animal) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 
 ```
 searchKey: xml_test.Animal.MarshalXML
+tags: [private]
 ```
 
 ```Go
@@ -122,6 +139,7 @@ func (a Animal) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 
 ```
 searchKey: xml_test.Size
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +150,7 @@ type Size int
 
 ```
 searchKey: xml_test.Size.UnmarshalText
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +161,7 @@ func (s *Size) UnmarshalText(text []byte) error
 
 ```
 searchKey: xml_test.Size.MarshalText
+tags: [private]
 ```
 
 ```Go
@@ -150,10 +170,15 @@ func (s Size) MarshalText() ([]byte, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example_customMarshalXML" href="#Example_customMarshalXML">func Example_customMarshalXML()</a>
 
 ```
 searchKey: xml_test.Example_customMarshalXML
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +189,7 @@ func Example_customMarshalXML()
 
 ```
 searchKey: xml_test.ExampleMarshalIndent
+tags: [private]
 ```
 
 ```Go
@@ -174,6 +200,7 @@ func ExampleMarshalIndent()
 
 ```
 searchKey: xml_test.ExampleEncoder
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +211,7 @@ func ExampleEncoder()
 
 ```
 searchKey: xml_test.ExampleUnmarshal
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +224,7 @@ This example demonstrates unmarshaling an XML excerpt into a value with some pre
 
 ```
 searchKey: xml_test.Example_textMarshalXML
+tags: [private]
 ```
 
 ```Go

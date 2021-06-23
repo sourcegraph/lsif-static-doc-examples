@@ -42,7 +42,7 @@ SHA-1 is cryptographically broken and should not be used for secure applications
     * [type sha1Test struct](#sha1Test)
     * [type unmarshalTest struct](#unmarshalTest)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.sha1.go)
     * [func appendUint64(b []byte, x uint64) []byte](#appendUint64)
     * [func appendUint32(b []byte, x uint32) []byte](#appendUint32)
     * [func consumeUint64(b []byte) ([]byte, uint64)](#consumeUint64)
@@ -69,15 +69,10 @@ SHA-1 is cryptographically broken and should not be used for secure applications
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Size" href="#Size">const Size</a>
 
 ```
 searchKey: sha1.Size
-tags: [exported]
 ```
 
 ```Go
@@ -90,7 +85,6 @@ The size of a SHA-1 checksum in bytes.
 
 ```
 searchKey: sha1.BlockSize
-tags: [exported]
 ```
 
 ```Go
@@ -103,6 +97,7 @@ The blocksize of SHA-1 in bytes.
 
 ```
 searchKey: sha1.chunk
+tags: [private]
 ```
 
 ```Go
@@ -113,6 +108,7 @@ const chunk = 64
 
 ```
 searchKey: sha1.init0
+tags: [private]
 ```
 
 ```Go
@@ -123,6 +119,7 @@ const init0 = 0x67452301
 
 ```
 searchKey: sha1.init1
+tags: [private]
 ```
 
 ```Go
@@ -133,6 +130,7 @@ const init1 = 0xEFCDAB89
 
 ```
 searchKey: sha1.init2
+tags: [private]
 ```
 
 ```Go
@@ -143,6 +141,7 @@ const init2 = 0x98BADCFE
 
 ```
 searchKey: sha1.init3
+tags: [private]
 ```
 
 ```Go
@@ -153,6 +152,7 @@ const init3 = 0x10325476
 
 ```
 searchKey: sha1.init4
+tags: [private]
 ```
 
 ```Go
@@ -163,6 +163,7 @@ const init4 = 0xC3D2E1F0
 
 ```
 searchKey: sha1.magic
+tags: [private]
 ```
 
 ```Go
@@ -173,6 +174,7 @@ const magic = "sha\x01"
 
 ```
 searchKey: sha1.marshaledSize
+tags: [private]
 ```
 
 ```Go
@@ -183,6 +185,7 @@ const marshaledSize = len(magic) + 5*4 + chunk + 8
 
 ```
 searchKey: sha1._K0
+tags: [private]
 ```
 
 ```Go
@@ -193,6 +196,7 @@ const _K0 = 0x5A827999
 
 ```
 searchKey: sha1._K1
+tags: [private]
 ```
 
 ```Go
@@ -203,6 +207,7 @@ const _K1 = 0x6ED9EBA1
 
 ```
 searchKey: sha1._K2
+tags: [private]
 ```
 
 ```Go
@@ -213,6 +218,7 @@ const _K2 = 0x8F1BBCDC
 
 ```
 searchKey: sha1._K3
+tags: [private]
 ```
 
 ```Go
@@ -221,14 +227,11 @@ const _K3 = 0xCA62C1D6
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="useAVX2" href="#useAVX2">var useAVX2</a>
 
 ```
 searchKey: sha1.useAVX2
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +242,7 @@ var useAVX2 = cpu.X86.HasAVX2 && cpu.X86.HasBMI1 && cpu.X86.HasBMI2
 
 ```
 searchKey: sha1.golden
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +253,7 @@ var golden = ...
 
 ```
 searchKey: sha1.largeUnmarshalTests
+tags: [private]
 ```
 
 ```Go
@@ -259,6 +264,7 @@ var largeUnmarshalTests = ...
 
 ```
 searchKey: sha1.bench
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +275,7 @@ var bench = New()
 
 ```
 searchKey: sha1.buf
+tags: [private]
 ```
 
 ```Go
@@ -277,14 +284,11 @@ var buf = make([]byte, 8192)
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="digest" href="#digest">type digest struct</a>
 
 ```
 searchKey: sha1.digest
+tags: [private]
 ```
 
 ```Go
@@ -302,6 +306,7 @@ digest represents the partial evaluation of a checksum.
 
 ```
 searchKey: sha1.digest.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +317,7 @@ func (d *digest) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: sha1.digest.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +328,7 @@ func (d *digest) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: sha1.digest.Reset
+tags: [private]
 ```
 
 ```Go
@@ -332,6 +339,7 @@ func (d *digest) Reset()
 
 ```
 searchKey: sha1.digest.Size
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +350,7 @@ func (d *digest) Size() int
 
 ```
 searchKey: sha1.digest.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +361,7 @@ func (d *digest) BlockSize() int
 
 ```
 searchKey: sha1.digest.Write
+tags: [private]
 ```
 
 ```Go
@@ -362,6 +372,7 @@ func (d *digest) Write(p []byte) (nn int, err error)
 
 ```
 searchKey: sha1.digest.Sum
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +383,7 @@ func (d *digest) Sum(in []byte) []byte
 
 ```
 searchKey: sha1.digest.checkSum
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +394,7 @@ func (d *digest) checkSum() [Size]byte
 
 ```
 searchKey: sha1.digest.ConstantTimeSum
+tags: [private]
 ```
 
 ```Go
@@ -394,6 +407,7 @@ ConstantTimeSum computes the same result of Sum() but in constant time
 
 ```
 searchKey: sha1.digest.constSum
+tags: [private]
 ```
 
 ```Go
@@ -404,6 +418,7 @@ func (d *digest) constSum() [Size]byte
 
 ```
 searchKey: sha1.sha1Test
+tags: [private]
 ```
 
 ```Go
@@ -418,6 +433,7 @@ type sha1Test struct {
 
 ```
 searchKey: sha1.unmarshalTest
+tags: [private]
 ```
 
 ```Go
@@ -431,14 +447,11 @@ Tests for unmarshaling hashes that have hashed a large amount of data The initia
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
-### <a id="init" href="#init">func init()</a>
+### <a id="init.sha1.go" href="#init.sha1.go">func init()</a>
 
 ```
 searchKey: sha1.init
+tags: [private]
 ```
 
 ```Go
@@ -449,6 +462,7 @@ func init()
 
 ```
 searchKey: sha1.appendUint64
+tags: [private]
 ```
 
 ```Go
@@ -459,6 +473,7 @@ func appendUint64(b []byte, x uint64) []byte
 
 ```
 searchKey: sha1.appendUint32
+tags: [private]
 ```
 
 ```Go
@@ -469,6 +484,7 @@ func appendUint32(b []byte, x uint32) []byte
 
 ```
 searchKey: sha1.consumeUint64
+tags: [private]
 ```
 
 ```Go
@@ -479,6 +495,7 @@ func consumeUint64(b []byte) ([]byte, uint64)
 
 ```
 searchKey: sha1.consumeUint32
+tags: [private]
 ```
 
 ```Go
@@ -489,7 +506,6 @@ func consumeUint32(b []byte) ([]byte, uint32)
 
 ```
 searchKey: sha1.New
-tags: [exported]
 ```
 
 ```Go
@@ -502,7 +518,6 @@ New returns a new hash.Hash computing the SHA1 checksum. The Hash also implement
 
 ```
 searchKey: sha1.Sum
-tags: [exported]
 ```
 
 ```Go
@@ -515,6 +530,7 @@ Sum returns the SHA-1 checksum of the data.
 
 ```
 searchKey: sha1.blockGeneric
+tags: [private]
 ```
 
 ```Go
@@ -527,6 +543,7 @@ blockGeneric is a portable, pure Go version of the SHA-1 block step. It's used b
 
 ```
 searchKey: sha1.blockAVX2
+tags: [private]
 ```
 
 ```Go
@@ -537,6 +554,7 @@ func blockAVX2(dig *digest, p []byte)
 
 ```
 searchKey: sha1.blockAMD64
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +565,7 @@ func blockAMD64(dig *digest, p []byte)
 
 ```
 searchKey: sha1.block
+tags: [private]
 ```
 
 ```Go
@@ -557,6 +576,7 @@ func block(dig *digest, p []byte)
 
 ```
 searchKey: sha1.TestGolden
+tags: [private]
 ```
 
 ```Go
@@ -567,6 +587,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: sha1.TestGoldenMarshal
+tags: [private]
 ```
 
 ```Go
@@ -577,6 +598,7 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: sha1.TestSize
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +609,7 @@ func TestSize(t *testing.T)
 
 ```
 searchKey: sha1.TestBlockSize
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +620,7 @@ func TestBlockSize(t *testing.T)
 
 ```
 searchKey: sha1.TestBlockGeneric
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +633,7 @@ Tests that blockGeneric (pure Go) and block (in assembly for some architectures)
 
 ```
 searchKey: sha1.safeSum
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +644,7 @@ func safeSum(h hash.Hash) (sum []byte, err error)
 
 ```
 searchKey: sha1.TestLargeHashes
+tags: [private]
 ```
 
 ```Go
@@ -629,6 +655,7 @@ func TestLargeHashes(t *testing.T)
 
 ```
 searchKey: sha1.benchmarkSize
+tags: [private]
 ```
 
 ```Go
@@ -639,6 +666,7 @@ func benchmarkSize(b *testing.B, size int)
 
 ```
 searchKey: sha1.BenchmarkHash8Bytes
+tags: [private]
 ```
 
 ```Go
@@ -649,6 +677,7 @@ func BenchmarkHash8Bytes(b *testing.B)
 
 ```
 searchKey: sha1.BenchmarkHash320Bytes
+tags: [private]
 ```
 
 ```Go
@@ -659,6 +688,7 @@ func BenchmarkHash320Bytes(b *testing.B)
 
 ```
 searchKey: sha1.BenchmarkHash1K
+tags: [private]
 ```
 
 ```Go
@@ -669,6 +699,7 @@ func BenchmarkHash1K(b *testing.B)
 
 ```
 searchKey: sha1.BenchmarkHash8K
+tags: [private]
 ```
 
 ```Go

@@ -13,10 +13,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="minInt64" href="#minInt64">var minInt64</a>
 
 ```
 searchKey: itoa_test.minInt64
+tags: [private]
 ```
 
 ```Go
@@ -27,6 +32,7 @@ var minInt64 int64 = math.MinInt64
 
 ```
 searchKey: itoa_test.maxInt64
+tags: [private]
 ```
 
 ```Go
@@ -37,6 +43,7 @@ var maxInt64 int64 = math.MaxInt64
 
 ```
 searchKey: itoa_test.maxUint64
+tags: [private]
 ```
 
 ```Go
@@ -45,10 +52,15 @@ var maxUint64 uint64 = math.MaxUint64
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestItoa" href="#TestItoa">func TestItoa(t *testing.T)</a>
 
 ```
 searchKey: itoa_test.TestItoa
+tags: [private]
 ```
 
 ```Go
@@ -59,6 +71,7 @@ func TestItoa(t *testing.T)
 
 ```
 searchKey: itoa_test.TestUitoa
+tags: [private]
 ```
 
 ```Go

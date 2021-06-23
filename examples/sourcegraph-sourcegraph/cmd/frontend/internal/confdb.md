@@ -24,16 +24,19 @@ All other users should go through the conf package and NOT interact with the dat
     * [func TestSiteGetLatestDefault(t *testing.T)](#TestSiteGetLatestDefault)
     * [func TestSiteCreate_RejectInvalidJSON(t *testing.T)](#TestSiteCreate_RejectInvalidJSON)
     * [func TestSiteCreateIfUpToDate(t *testing.T)](#TestSiteCreateIfUpToDate)
-    * [func init()](#init)
+    * [func init()](#init.db_test.go)
 
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [private]
+```
 
 ### <a id="ErrNewerEdit" href="#ErrNewerEdit">var ErrNewerEdit</a>
 
 ```
 searchKey: confdb.ErrNewerEdit
-tags: [exported]
 ```
 
 ```Go
@@ -44,11 +47,14 @@ ErrNewerEdit is returned by SiteCreateIfUpToDate when a newer edit has already b
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SiteConfig" href="#SiteConfig">type SiteConfig struct</a>
 
 ```
 searchKey: confdb.SiteConfig
-tags: [exported]
 ```
 
 ```Go
@@ -66,7 +72,6 @@ SiteConfig contains the contents of a site config along with associated metadata
 
 ```
 searchKey: confdb.SiteCreateIfUpToDate
-tags: [exported]
 ```
 
 ```Go
@@ -83,7 +88,6 @@ The site config that was most recently saved to the database is returned. An err
 
 ```
 searchKey: confdb.SiteGetLatest
-tags: [exported]
 ```
 
 ```Go
@@ -98,6 +102,7 @@ SiteGetLatest returns the site config that was most recently saved to the databa
 
 ```
 searchKey: confdb.createIfUpToDate
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +113,7 @@ func createIfUpToDate(ctx context.Context, tx queryable, lastID *int32, contents
 
 ```
 searchKey: confdb.getLatest
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +124,7 @@ func getLatest(ctx context.Context, tx queryable) (*SiteConfig, error)
 
 ```
 searchKey: confdb.queryable
+tags: [private]
 ```
 
 ```Go
@@ -133,6 +140,7 @@ queryable allows us to reuse the same logic for certain operations both inside a
 
 ```
 searchKey: confdb.newTransaction
+tags: [private]
 ```
 
 ```Go
@@ -141,10 +149,15 @@ func newTransaction(ctx context.Context) (tx queryable, done func(), err error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="addDefault" href="#addDefault">func addDefault(ctx context.Context, tx queryable, contents string) (newLastID *int32, err error)</a>
 
 ```
 searchKey: confdb.addDefault
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +168,7 @@ func addDefault(ctx context.Context, tx queryable, contents string) (newLastID *
 
 ```
 searchKey: confdb.parseQueryRows
+tags: [private]
 ```
 
 ```Go
@@ -165,6 +179,7 @@ func parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)
 
 ```
 searchKey: confdb.TestSiteGetLatestDefault
+tags: [private]
 ```
 
 ```Go
@@ -175,6 +190,7 @@ func TestSiteGetLatestDefault(t *testing.T)
 
 ```
 searchKey: confdb.TestSiteCreate_RejectInvalidJSON
+tags: [private]
 ```
 
 ```Go
@@ -185,16 +201,18 @@ func TestSiteCreate_RejectInvalidJSON(t *testing.T)
 
 ```
 searchKey: confdb.TestSiteCreateIfUpToDate
+tags: [private]
 ```
 
 ```Go
 func TestSiteCreateIfUpToDate(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
 
 ```
 searchKey: confdb.init
+tags: [private]
 ```
 
 ```Go

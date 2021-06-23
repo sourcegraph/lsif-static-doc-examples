@@ -14,10 +14,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="sentryDebug" href="#sentryDebug">var sentryDebug</a>
 
 ```
 searchKey: sentry.sentryDebug
+tags: [private]
 ```
 
 ```Go
@@ -26,11 +31,14 @@ var sentryDebug, _ = ...
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Init" href="#Init">func Init()</a>
 
 ```
 searchKey: sentry.Init
-tags: [exported]
 ```
 
 ```Go
@@ -43,6 +51,7 @@ Init initializes the default Sentry client that uses SENTRY_DSN_BACKEND environm
 
 ```
 searchKey: sentry.captureError
+tags: [private]
 ```
 
 ```Go
@@ -53,7 +62,6 @@ func captureError(err error, level sentry.Level, tags map[string]string)
 
 ```
 searchKey: sentry.CaptureError
-tags: [exported]
 ```
 
 ```Go
@@ -66,7 +74,6 @@ CaptureError adds the given error to the default Sentry client delivery queue fo
 
 ```
 searchKey: sentry.CapturePanic
-tags: [exported]
 ```
 
 ```Go
@@ -79,7 +86,6 @@ CapturePanic does same thing as CaptureError, and adds additional tags to mark t
 
 ```
 searchKey: sentry.Recoverer
-tags: [exported]
 ```
 
 ```Go

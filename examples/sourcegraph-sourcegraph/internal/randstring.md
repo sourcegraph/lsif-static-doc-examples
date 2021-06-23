@@ -30,10 +30,15 @@ This package is adapted (simplified) from Dmitry Chestnykh's uniuri package.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="stdChars" href="#stdChars">var stdChars</a>
 
 ```
 searchKey: randstring.stdChars
+tags: [private]
 ```
 
 ```Go
@@ -44,11 +49,14 @@ stdChars is a set of standard characters allowed in the string.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewLen" href="#NewLen">func NewLen(length int) string</a>
 
 ```
 searchKey: randstring.NewLen
-tags: [exported]
 ```
 
 ```Go
@@ -61,7 +69,6 @@ NewLen returns a new random string of the provided length, consisting of standar
 
 ```
 searchKey: randstring.NewLenChars
-tags: [exported]
 ```
 
 ```Go
@@ -74,6 +81,7 @@ NewLenChars returns a new random string of the provided length, consisting of th
 
 ```
 searchKey: randstring.validateChars
+tags: [private]
 ```
 
 ```Go
@@ -84,6 +92,7 @@ func validateChars(t *testing.T, u string, chars []byte)
 
 ```
 searchKey: randstring.TestNew_unique
+tags: [private]
 ```
 
 ```Go
@@ -94,6 +103,7 @@ func TestNew_unique(t *testing.T)
 
 ```
 searchKey: randstring.TestNewLen
+tags: [private]
 ```
 
 ```Go
@@ -104,6 +114,7 @@ func TestNewLen(t *testing.T)
 
 ```
 searchKey: randstring.TestNewLenChars
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +125,7 @@ func TestNewLenChars(t *testing.T)
 
 ```
 searchKey: randstring.TestNewLenCharsMaxLength
+tags: [private]
 ```
 
 ```Go

@@ -138,14 +138,11 @@ To support tools that analyze Go packages, the patterns found in //go:embed line
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="dotFile" href="#dotFile">var dotFile</a>
 
 ```
 searchKey: embed.dotFile
+tags: [private]
 ```
 
 ```Go
@@ -156,15 +153,10 @@ dotFile is a file for the root directory, which is omitted from the files list i
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="FS" href="#FS">type FS struct</a>
 
 ```
 searchKey: embed.FS
-tags: [exported]
 ```
 
 ```Go
@@ -217,6 +209,7 @@ See the package documentation for more details about initializing an FS.
 
 ```
 searchKey: embed.FS.lookup
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +222,7 @@ lookup returns the named file, or nil if it is not present.
 
 ```
 searchKey: embed.FS.readDir
+tags: [private]
 ```
 
 ```Go
@@ -241,7 +235,6 @@ readDir returns the list of files corresponding to the directory dir.
 
 ```
 searchKey: embed.FS.Open
-tags: [exported]
 ```
 
 ```Go
@@ -254,7 +247,6 @@ Open opens the named file for reading and returns it as an fs.File.
 
 ```
 searchKey: embed.FS.ReadDir
-tags: [exported]
 ```
 
 ```Go
@@ -267,7 +259,6 @@ ReadDir reads and returns the entire named directory.
 
 ```
 searchKey: embed.FS.ReadFile
-tags: [exported]
 ```
 
 ```Go
@@ -280,6 +271,7 @@ ReadFile reads and returns the content of the named file.
 
 ```
 searchKey: embed.file
+tags: [private]
 ```
 
 ```Go
@@ -298,6 +290,7 @@ A file is a single file in the FS. It implements fs.FileInfo and fs.DirEntry.
 
 ```
 searchKey: embed.file.Name
+tags: [private]
 ```
 
 ```Go
@@ -308,6 +301,7 @@ func (f *file) Name() string
 
 ```
 searchKey: embed.file.Size
+tags: [private]
 ```
 
 ```Go
@@ -318,6 +312,7 @@ func (f *file) Size() int64
 
 ```
 searchKey: embed.file.ModTime
+tags: [private]
 ```
 
 ```Go
@@ -328,6 +323,7 @@ func (f *file) ModTime() time.Time
 
 ```
 searchKey: embed.file.IsDir
+tags: [private]
 ```
 
 ```Go
@@ -338,6 +334,7 @@ func (f *file) IsDir() bool
 
 ```
 searchKey: embed.file.Sys
+tags: [private]
 ```
 
 ```Go
@@ -348,6 +345,7 @@ func (f *file) Sys() interface{}
 
 ```
 searchKey: embed.file.Type
+tags: [private]
 ```
 
 ```Go
@@ -358,6 +356,7 @@ func (f *file) Type() fs.FileMode
 
 ```
 searchKey: embed.file.Info
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +367,7 @@ func (f *file) Info() (fs.FileInfo, error)
 
 ```
 searchKey: embed.file.Mode
+tags: [private]
 ```
 
 ```Go
@@ -378,6 +378,7 @@ func (f *file) Mode() fs.FileMode
 
 ```
 searchKey: embed.openFile
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +394,7 @@ An openFile is a regular file open for reading.
 
 ```
 searchKey: embed.openFile.Close
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +405,7 @@ func (f *openFile) Close() error
 
 ```
 searchKey: embed.openFile.Stat
+tags: [private]
 ```
 
 ```Go
@@ -413,6 +416,7 @@ func (f *openFile) Stat() (fs.FileInfo, error)
 
 ```
 searchKey: embed.openFile.Read
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +427,7 @@ func (f *openFile) Read(b []byte) (int, error)
 
 ```
 searchKey: embed.openFile.Seek
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +438,7 @@ func (f *openFile) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: embed.openDir
+tags: [private]
 ```
 
 ```Go
@@ -449,6 +455,7 @@ An openDir is a directory open for reading.
 
 ```
 searchKey: embed.openDir.Close
+tags: [private]
 ```
 
 ```Go
@@ -459,6 +466,7 @@ func (d *openDir) Close() error
 
 ```
 searchKey: embed.openDir.Stat
+tags: [private]
 ```
 
 ```Go
@@ -469,6 +477,7 @@ func (d *openDir) Stat() (fs.FileInfo, error)
 
 ```
 searchKey: embed.openDir.Read
+tags: [private]
 ```
 
 ```Go
@@ -479,6 +488,7 @@ func (d *openDir) Read([]byte) (int, error)
 
 ```
 searchKey: embed.openDir.ReadDir
+tags: [private]
 ```
 
 ```Go
@@ -487,14 +497,11 @@ func (d *openDir) ReadDir(count int) ([]fs.DirEntry, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="split" href="#split">func split(name string) (dir, elem string, isDir bool)</a>
 
 ```
 searchKey: embed.split
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +514,7 @@ split splits the name into dir and elem as described in the comment in the FS st
 
 ```
 searchKey: embed.trimSlash
+tags: [private]
 ```
 
 ```Go
@@ -519,6 +527,7 @@ trimSlash trims a trailing slash from name, if present, returning the possibly s
 
 ```
 searchKey: embed.sortSearch
+tags: [private]
 ```
 
 ```Go

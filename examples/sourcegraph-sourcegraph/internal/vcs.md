@@ -35,10 +35,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="usernameRe" href="#usernameRe">const usernameRe</a>
 
 ```
 searchKey: vcs.usernameRe
+tags: [private]
 ```
 
 ```Go
@@ -51,6 +56,7 @@ usernameRe is the regexp for the username part in a repo URL. Eg: sourcegraph@
 
 ```
 searchKey: vcs.urlRe
+tags: [private]
 ```
 
 ```Go
@@ -63,6 +69,7 @@ urlRe is the regexp for the url part in a repo URL. Eg: github.com
 
 ```
 searchKey: vcs.repoRe
+tags: [private]
 ```
 
 ```Go
@@ -75,6 +82,7 @@ repoRe is the regexp for the repo in a repo URL. Eg: sourcegraph/sourcegraph
 
 ```
 searchKey: vcs.formatStdlib
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +93,7 @@ const formatStdlib urlFormat = iota
 
 ```
 searchKey: vcs.formatRsync
+tags: [private]
 ```
 
 ```Go
@@ -95,6 +104,7 @@ const formatRsync
 
 ```
 searchKey: vcs.formatLocal
+tags: [private]
 ```
 
 ```Go
@@ -103,10 +113,15 @@ const formatLocal
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="schemes" href="#schemes">var schemes</a>
 
 ```
 searchKey: vcs.schemes
+tags: [private]
 ```
 
 ```Go
@@ -117,6 +132,7 @@ var schemes = ...
 
 ```
 searchKey: vcs.scpSyntax
+tags: [private]
 ```
 
 ```Go
@@ -127,11 +143,14 @@ scpSyntax was modified from [https://golang.org/src/cmd/go/vcs.go](https://golan
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="RepoNotExistError" href="#RepoNotExistError">type RepoNotExistError struct</a>
 
 ```
 searchKey: vcs.RepoNotExistError
-tags: [exported]
 ```
 
 ```Go
@@ -152,7 +171,6 @@ RepoNotExistError is an error that reports a repository doesn't exist.
 
 ```
 searchKey: vcs.RepoNotExistError.NotFound
-tags: [exported]
 ```
 
 ```Go
@@ -163,7 +181,6 @@ func (RepoNotExistError) NotFound() bool
 
 ```
 searchKey: vcs.RepoNotExistError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -174,7 +191,6 @@ func (e *RepoNotExistError) Error() string
 
 ```
 searchKey: vcs.URL
-tags: [exported]
 ```
 
 ```Go
@@ -191,7 +207,6 @@ URL wraps url.URL to provide rsync format compatible `String()` functionality. e
 
 ```
 searchKey: vcs.ParseURL
-tags: [exported]
 ```
 
 ```Go
@@ -206,6 +221,7 @@ Code copied and modified from github.com/whilp/git-urls to support perforce sche
 
 ```
 searchKey: vcs.parseScheme
+tags: [private]
 ```
 
 ```Go
@@ -216,6 +232,7 @@ func parseScheme(rawurl string) (*URL, error)
 
 ```
 searchKey: vcs.parseScp
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +245,7 @@ parseScp parses rawurl into a URL object. The rawurl must be an SCP-like URL, ot
 
 ```
 searchKey: vcs.parseLocal
+tags: [private]
 ```
 
 ```Go
@@ -240,7 +258,6 @@ parseLocal parses rawurl into a URL object with a "file" scheme. This will effec
 
 ```
 searchKey: vcs.URL.String
-tags: [exported]
 ```
 
 ```Go
@@ -253,7 +270,6 @@ String will return standard url.URL.String() if the url has a .Scheme set, but i
 
 ```
 searchKey: vcs.URL.IsSSH
-tags: [exported]
 ```
 
 ```Go
@@ -266,6 +282,7 @@ IsSSH returns whether this URL is SSH based, which for vcs.URL means if the sche
 
 ```
 searchKey: vcs.urlFormat
+tags: [private]
 ```
 
 ```Go
@@ -274,11 +291,14 @@ type urlFormat int
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IsRepoNotExist" href="#IsRepoNotExist">func IsRepoNotExist(err error) bool</a>
 
 ```
 searchKey: vcs.IsRepoNotExist
-tags: [exported]
 ```
 
 ```Go
@@ -291,7 +311,6 @@ IsRepoNotExist reports if err is a RepoNotExistError.
 
 ```
 searchKey: vcs.IsCloneInProgress
-tags: [exported]
 ```
 
 ```Go
@@ -304,6 +323,7 @@ IsCloneInProgress reports if err is a RepoNotExistError which has a clone in pro
 
 ```
 searchKey: vcs.TestParseURL
+tags: [private]
 ```
 
 ```Go

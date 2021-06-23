@@ -4,9 +4,7 @@
     "identifier": "hmac",
     "newPage": true,
     "searchKey": "crypto/hmac",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "hmacTests",
                 "newPage": false,
                 "searchKey": "hmac.hmacTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,7 +83,9 @@
                 "identifier": "marshalable",
                 "newPage": false,
                 "searchKey": "hmac.marshalable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "hmac",
                 "newPage": false,
                 "searchKey": "hmac.hmac",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +125,9 @@
                       "identifier": "hmac.Sum",
                       "newPage": false,
                       "searchKey": "hmac.hmac.Sum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -145,7 +147,9 @@
                       "identifier": "hmac.Write",
                       "newPage": false,
                       "searchKey": "hmac.hmac.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -165,7 +169,9 @@
                       "identifier": "hmac.Size",
                       "newPage": false,
                       "searchKey": "hmac.hmac.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -185,7 +191,9 @@
                       "identifier": "hmac.BlockSize",
                       "newPage": false,
                       "searchKey": "hmac.hmac.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -205,7 +213,9 @@
                       "identifier": "hmac.Reset",
                       "newPage": false,
                       "searchKey": "hmac.hmac.Reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -228,7 +238,9 @@
                 "identifier": "hmacTest",
                 "newPage": false,
                 "searchKey": "hmac.hmacTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -248,7 +260,9 @@
                 "identifier": "justHash",
                 "newPage": false,
                 "searchKey": "hmac.justHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -271,9 +285,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -291,9 +303,7 @@
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "hmac.New",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -313,9 +323,7 @@
                 "identifier": "Equal",
                 "newPage": false,
                 "searchKey": "hmac.Equal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -335,7 +343,9 @@
                 "identifier": "TestHMAC",
                 "newPage": false,
                 "searchKey": "hmac.TestHMAC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -355,7 +365,9 @@
                 "identifier": "TestNonUniqueHash",
                 "newPage": false,
                 "searchKey": "hmac.TestNonUniqueHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -375,7 +387,9 @@
                 "identifier": "TestEqual",
                 "newPage": false,
                 "searchKey": "hmac.TestEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -395,7 +409,9 @@
                 "identifier": "BenchmarkHMACSHA256_1K",
                 "newPage": false,
                 "searchKey": "hmac.BenchmarkHMACSHA256_1K",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -415,7 +431,9 @@
                 "identifier": "BenchmarkHMACSHA256_32",
                 "newPage": false,
                 "searchKey": "hmac.BenchmarkHMACSHA256_32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -435,7 +453,9 @@
                 "identifier": "BenchmarkNewWriteSum",
                 "newPage": false,
                 "searchKey": "hmac.BenchmarkNewWriteSum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,7 +4,9 @@
     "identifier": "webhooks",
     "newPage": true,
     "searchKey": "internal/extsvc/gitlab/webhooks",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "TokenHeaderName",
                 "newPage": false,
                 "searchKey": "webhooks.TokenHeaderName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +67,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,9 +87,7 @@
                 "identifier": "ErrObjectKindUnknown",
                 "newPage": false,
                 "searchKey": "webhooks.ErrObjectKindUnknown",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -108,7 +110,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -126,9 +130,7 @@
                 "identifier": "EventCommon",
                 "newPage": false,
                 "searchKey": "webhooks.EventCommon",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -148,9 +150,7 @@
                 "identifier": "PipelineEvent",
                 "newPage": false,
                 "searchKey": "webhooks.PipelineEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -170,7 +170,9 @@
                 "identifier": "downcaster",
                 "newPage": false,
                 "searchKey": "webhooks.downcaster",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -190,9 +192,7 @@
                 "identifier": "MergeRequestEventCommon",
                 "newPage": false,
                 "searchKey": "webhooks.MergeRequestEventCommon",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -212,7 +212,9 @@
                 "identifier": "mergeRequestEventChanges",
                 "newPage": false,
                 "searchKey": "webhooks.mergeRequestEventChanges",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -232,9 +234,7 @@
                 "identifier": "MergeRequestEventCommonContainer",
                 "newPage": false,
                 "searchKey": "webhooks.MergeRequestEventCommonContainer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -254,7 +254,9 @@
                 "identifier": "keyer",
                 "newPage": false,
                 "searchKey": "webhooks.keyer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -274,9 +276,7 @@
                 "identifier": "UpsertableWebhookEvent",
                 "newPage": false,
                 "searchKey": "webhooks.UpsertableWebhookEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -296,9 +296,7 @@
                 "identifier": "MergeRequestApprovedEvent",
                 "newPage": false,
                 "searchKey": "webhooks.MergeRequestApprovedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -316,9 +314,7 @@
                       "identifier": "MergeRequestApprovedEvent.ToEventCommon",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestApprovedEvent.ToEventCommon",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -341,9 +337,7 @@
                 "identifier": "MergeRequestUnapprovedEvent",
                 "newPage": false,
                 "searchKey": "webhooks.MergeRequestUnapprovedEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -361,9 +355,7 @@
                       "identifier": "MergeRequestUnapprovedEvent.ToEventCommon",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestUnapprovedEvent.ToEventCommon",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -386,9 +378,7 @@
                 "identifier": "MergeRequestUpdateEvent",
                 "newPage": false,
                 "searchKey": "webhooks.MergeRequestUpdateEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -406,9 +396,7 @@
                       "identifier": "MergeRequestUpdateEvent.ToEventCommon",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestUpdateEvent.ToEventCommon",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -431,9 +419,7 @@
                 "identifier": "MergeRequestCloseEvent",
                 "newPage": false,
                 "searchKey": "webhooks.MergeRequestCloseEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -451,9 +437,7 @@
                       "identifier": "MergeRequestCloseEvent.ToEventCommon",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestCloseEvent.ToEventCommon",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -473,9 +457,7 @@
                       "identifier": "MergeRequestCloseEvent.ToEvent",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestCloseEvent.ToEvent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -498,9 +480,7 @@
                 "identifier": "MergeRequestMergeEvent",
                 "newPage": false,
                 "searchKey": "webhooks.MergeRequestMergeEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -518,9 +498,7 @@
                       "identifier": "MergeRequestMergeEvent.ToEventCommon",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestMergeEvent.ToEventCommon",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -540,9 +518,7 @@
                       "identifier": "MergeRequestMergeEvent.ToEvent",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestMergeEvent.ToEvent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -565,9 +541,7 @@
                 "identifier": "MergeRequestReopenEvent",
                 "newPage": false,
                 "searchKey": "webhooks.MergeRequestReopenEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -585,9 +559,7 @@
                       "identifier": "MergeRequestReopenEvent.ToEventCommon",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestReopenEvent.ToEventCommon",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -607,9 +579,7 @@
                       "identifier": "MergeRequestReopenEvent.ToEvent",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestReopenEvent.ToEvent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -632,9 +602,7 @@
                 "identifier": "MergeRequestUndraftEvent",
                 "newPage": false,
                 "searchKey": "webhooks.MergeRequestUndraftEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -652,9 +620,7 @@
                       "identifier": "MergeRequestUndraftEvent.ToEventCommon",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestUndraftEvent.ToEventCommon",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -674,9 +640,7 @@
                       "identifier": "MergeRequestUndraftEvent.ToEvent",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestUndraftEvent.ToEvent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -699,9 +663,7 @@
                 "identifier": "MergeRequestDraftEvent",
                 "newPage": false,
                 "searchKey": "webhooks.MergeRequestDraftEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -719,9 +681,7 @@
                       "identifier": "MergeRequestDraftEvent.ToEventCommon",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestDraftEvent.ToEventCommon",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -741,9 +701,7 @@
                       "identifier": "MergeRequestDraftEvent.ToEvent",
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestDraftEvent.ToEvent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -766,7 +724,9 @@
                 "identifier": "mergeRequestEvent",
                 "newPage": false,
                 "searchKey": "webhooks.mergeRequestEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -784,7 +744,9 @@
                       "identifier": "mergeRequestEvent.downcast",
                       "newPage": false,
                       "searchKey": "webhooks.mergeRequestEvent.downcast",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -807,7 +769,9 @@
                 "identifier": "mergeRequestEventObjectAttributes",
                 "newPage": false,
                 "searchKey": "webhooks.mergeRequestEventObjectAttributes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -830,7 +794,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -848,9 +814,7 @@
                 "identifier": "UnmarshalEvent",
                 "newPage": false,
                 "searchKey": "webhooks.UnmarshalEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -870,7 +834,9 @@
                 "identifier": "TestUnmarshalEvent",
                 "newPage": false,
                 "searchKey": "webhooks.TestUnmarshalEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -890,7 +856,9 @@
                 "identifier": "TestMergeRequestDowncast",
                 "newPage": false,
                 "searchKey": "webhooks.TestMergeRequestDowncast",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

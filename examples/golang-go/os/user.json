@@ -4,9 +4,7 @@
     "identifier": "user",
     "newPage": true,
     "searchKey": "os/user",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "userBuffer",
                 "newPage": false,
                 "searchKey": "user.userBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "groupBuffer",
                 "newPage": false,
                 "searchKey": "user.groupBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "maxBufferSize",
                 "newPage": false,
                 "searchKey": "user.maxBufferSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "maxGroups",
                 "newPage": false,
                 "searchKey": "user.maxGroups",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +131,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "cache",
                 "newPage": false,
                 "searchKey": "user.cache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "userImplemented",
                 "newPage": false,
                 "searchKey": "user.userImplemented",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "groupImplemented",
                 "newPage": false,
                 "searchKey": "user.groupImplemented",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +218,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -230,9 +236,7 @@
                 "identifier": "User",
                 "newPage": false,
                 "searchKey": "user.User",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -250,9 +254,7 @@
                       "identifier": "Current",
                       "newPage": false,
                       "searchKey": "user.Current",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -272,9 +274,7 @@
                       "identifier": "Lookup",
                       "newPage": false,
                       "searchKey": "user.Lookup",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,9 +294,7 @@
                       "identifier": "LookupId",
                       "newPage": false,
                       "searchKey": "user.LookupId",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -316,7 +314,9 @@
                       "identifier": "current",
                       "newPage": false,
                       "searchKey": "user.current",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -336,7 +336,9 @@
                       "identifier": "lookupUser",
                       "newPage": false,
                       "searchKey": "user.lookupUser",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -356,7 +358,9 @@
                       "identifier": "lookupUserId",
                       "newPage": false,
                       "searchKey": "user.lookupUserId",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -376,7 +380,9 @@
                       "identifier": "lookupUnixUid",
                       "newPage": false,
                       "searchKey": "user.lookupUnixUid",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -396,7 +402,9 @@
                       "identifier": "buildUser",
                       "newPage": false,
                       "searchKey": "user.buildUser",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -416,9 +424,7 @@
                       "identifier": "User.GroupIds",
                       "newPage": false,
                       "searchKey": "user.User.GroupIds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -441,9 +447,7 @@
                 "identifier": "Group",
                 "newPage": false,
                 "searchKey": "user.Group",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -461,9 +465,7 @@
                       "identifier": "LookupGroup",
                       "newPage": false,
                       "searchKey": "user.LookupGroup",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -483,9 +485,7 @@
                       "identifier": "LookupGroupId",
                       "newPage": false,
                       "searchKey": "user.LookupGroupId",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -505,7 +505,9 @@
                       "identifier": "lookupGroup",
                       "newPage": false,
                       "searchKey": "user.lookupGroup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -525,7 +527,9 @@
                       "identifier": "lookupGroupId",
                       "newPage": false,
                       "searchKey": "user.lookupGroupId",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -545,7 +549,9 @@
                       "identifier": "lookupUnixGid",
                       "newPage": false,
                       "searchKey": "user.lookupUnixGid",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -565,7 +571,9 @@
                       "identifier": "buildGroup",
                       "newPage": false,
                       "searchKey": "user.buildGroup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -588,9 +596,7 @@
                 "identifier": "UnknownUserIdError",
                 "newPage": false,
                 "searchKey": "user.UnknownUserIdError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -608,9 +614,7 @@
                       "identifier": "UnknownUserIdError.Error",
                       "newPage": false,
                       "searchKey": "user.UnknownUserIdError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -633,9 +637,7 @@
                 "identifier": "UnknownUserError",
                 "newPage": false,
                 "searchKey": "user.UnknownUserError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -653,9 +655,7 @@
                       "identifier": "UnknownUserError.Error",
                       "newPage": false,
                       "searchKey": "user.UnknownUserError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -678,9 +678,7 @@
                 "identifier": "UnknownGroupIdError",
                 "newPage": false,
                 "searchKey": "user.UnknownGroupIdError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -698,9 +696,7 @@
                       "identifier": "UnknownGroupIdError.Error",
                       "newPage": false,
                       "searchKey": "user.UnknownGroupIdError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -723,9 +719,7 @@
                 "identifier": "UnknownGroupError",
                 "newPage": false,
                 "searchKey": "user.UnknownGroupError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -743,9 +737,7 @@
                       "identifier": "UnknownGroupError.Error",
                       "newPage": false,
                       "searchKey": "user.UnknownGroupError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -768,7 +760,9 @@
                 "identifier": "bufferKind",
                 "newPage": false,
                 "searchKey": "user.bufferKind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -786,7 +780,9 @@
                       "identifier": "bufferKind.initialSize",
                       "newPage": false,
                       "searchKey": "user.bufferKind.initialSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -809,7 +805,9 @@
                 "identifier": "memBuffer",
                 "newPage": false,
                 "searchKey": "user.memBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -827,7 +825,9 @@
                       "identifier": "alloc",
                       "newPage": false,
                       "searchKey": "user.alloc",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -847,7 +847,9 @@
                       "identifier": "memBuffer.resize",
                       "newPage": false,
                       "searchKey": "user.memBuffer.resize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -867,7 +869,9 @@
                       "identifier": "memBuffer.free",
                       "newPage": false,
                       "searchKey": "user.memBuffer.free",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -893,9 +897,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -913,7 +915,9 @@
                 "identifier": "TestNegativeUid",
                 "newPage": false,
                 "searchKey": "user.TestNegativeUid",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -933,7 +937,9 @@
                 "identifier": "checkUser",
                 "newPage": false,
                 "searchKey": "user.checkUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -953,7 +959,9 @@
                 "identifier": "TestCurrent",
                 "newPage": false,
                 "searchKey": "user.TestCurrent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -973,7 +981,9 @@
                 "identifier": "BenchmarkCurrent",
                 "newPage": false,
                 "searchKey": "user.BenchmarkCurrent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -993,7 +1003,9 @@
                 "identifier": "compare",
                 "newPage": false,
                 "searchKey": "user.compare",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1013,7 +1025,9 @@
                 "identifier": "TestLookup",
                 "newPage": false,
                 "searchKey": "user.TestLookup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1033,7 +1047,9 @@
                 "identifier": "TestLookupId",
                 "newPage": false,
                 "searchKey": "user.TestLookupId",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1053,7 +1069,9 @@
                 "identifier": "checkGroup",
                 "newPage": false,
                 "searchKey": "user.checkGroup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1073,7 +1091,9 @@
                 "identifier": "TestLookupGroup",
                 "newPage": false,
                 "searchKey": "user.TestLookupGroup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1093,7 +1113,9 @@
                 "identifier": "TestGroupIds",
                 "newPage": false,
                 "searchKey": "user.TestGroupIds",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1113,7 +1135,9 @@
                 "identifier": "containsID",
                 "newPage": false,
                 "searchKey": "user.containsID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1133,7 +1157,9 @@
                 "identifier": "retryWithBuffer",
                 "newPage": false,
                 "searchKey": "user.retryWithBuffer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1153,7 +1179,9 @@
                 "identifier": "isSizeReasonable",
                 "newPage": false,
                 "searchKey": "user.isSizeReasonable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1173,7 +1201,9 @@
                 "identifier": "structPasswdForNegativeTest",
                 "newPage": false,
                 "searchKey": "user.structPasswdForNegativeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1193,7 +1223,9 @@
                 "identifier": "getGroupList",
                 "newPage": false,
                 "searchKey": "user.getGroupList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1213,7 +1245,9 @@
                 "identifier": "groupRetry",
                 "newPage": false,
                 "searchKey": "user.groupRetry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1233,7 +1267,9 @@
                 "identifier": "listGroups",
                 "newPage": false,
                 "searchKey": "user.listGroups",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

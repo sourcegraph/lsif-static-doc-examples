@@ -4,9 +4,7 @@
     "identifier": "context",
     "newPage": true,
     "searchKey": "context",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "shortDuration",
                 "newPage": false,
                 "searchKey": "context.shortDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "veryLongDuration",
                 "newPage": false,
                 "searchKey": "context.veryLongDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,9 +87,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -107,9 +105,7 @@
                 "identifier": "Canceled",
                 "newPage": false,
                 "searchKey": "context.Canceled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -129,9 +125,7 @@
                 "identifier": "DeadlineExceeded",
                 "newPage": false,
                 "searchKey": "context.DeadlineExceeded",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -151,7 +145,9 @@
                 "identifier": "background",
                 "newPage": false,
                 "searchKey": "context.background",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -171,7 +167,9 @@
                 "identifier": "todo",
                 "newPage": false,
                 "searchKey": "context.todo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -191,7 +189,9 @@
                 "identifier": "goroutines",
                 "newPage": false,
                 "searchKey": "context.goroutines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -211,7 +211,9 @@
                 "identifier": "cancelCtxKey",
                 "newPage": false,
                 "searchKey": "context.cancelCtxKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -231,7 +233,9 @@
                 "identifier": "closedchan",
                 "newPage": false,
                 "searchKey": "context.closedchan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -251,7 +255,9 @@
                 "identifier": "k1",
                 "newPage": false,
                 "searchKey": "context.k1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -271,7 +277,9 @@
                 "identifier": "k2",
                 "newPage": false,
                 "searchKey": "context.k2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -291,7 +299,9 @@
                 "identifier": "k3",
                 "newPage": false,
                 "searchKey": "context.k3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -314,9 +324,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -334,9 +342,7 @@
                 "identifier": "Context",
                 "newPage": false,
                 "searchKey": "context.Context",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -354,9 +360,7 @@
                       "identifier": "Background",
                       "newPage": false,
                       "searchKey": "context.Background",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -376,9 +380,7 @@
                       "identifier": "TODO",
                       "newPage": false,
                       "searchKey": "context.TODO",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -398,9 +400,7 @@
                       "identifier": "WithCancel",
                       "newPage": false,
                       "searchKey": "context.WithCancel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,9 +420,7 @@
                       "identifier": "WithDeadline",
                       "newPage": false,
                       "searchKey": "context.WithDeadline",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -442,9 +440,7 @@
                       "identifier": "WithTimeout",
                       "newPage": false,
                       "searchKey": "context.WithTimeout",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -464,9 +460,7 @@
                       "identifier": "WithValue",
                       "newPage": false,
                       "searchKey": "context.WithValue",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -489,7 +483,9 @@
                 "identifier": "deadlineExceededError",
                 "newPage": false,
                 "searchKey": "context.deadlineExceededError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +503,9 @@
                       "identifier": "deadlineExceededError.Error",
                       "newPage": false,
                       "searchKey": "context.deadlineExceededError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -527,7 +525,9 @@
                       "identifier": "deadlineExceededError.Timeout",
                       "newPage": false,
                       "searchKey": "context.deadlineExceededError.Timeout",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -547,7 +547,9 @@
                       "identifier": "deadlineExceededError.Temporary",
                       "newPage": false,
                       "searchKey": "context.deadlineExceededError.Temporary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -570,7 +572,9 @@
                 "identifier": "emptyCtx",
                 "newPage": false,
                 "searchKey": "context.emptyCtx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -588,7 +592,9 @@
                       "identifier": "emptyCtx.Deadline",
                       "newPage": false,
                       "searchKey": "context.emptyCtx.Deadline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -608,7 +614,9 @@
                       "identifier": "emptyCtx.Done",
                       "newPage": false,
                       "searchKey": "context.emptyCtx.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -628,7 +636,9 @@
                       "identifier": "emptyCtx.Err",
                       "newPage": false,
                       "searchKey": "context.emptyCtx.Err",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -648,7 +658,9 @@
                       "identifier": "emptyCtx.Value",
                       "newPage": false,
                       "searchKey": "context.emptyCtx.Value",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -668,7 +680,9 @@
                       "identifier": "emptyCtx.String",
                       "newPage": false,
                       "searchKey": "context.emptyCtx.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -691,9 +705,7 @@
                 "identifier": "CancelFunc",
                 "newPage": false,
                 "searchKey": "context.CancelFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -703,74 +715,7 @@
                 "kind": "markdown",
                 "value": "```Go\ntype CancelFunc func()\n```\n\nA CancelFunc tells an operation to abandon its work. A CancelFunc does not wait for the work to stop. A CancelFunc may be called by multiple goroutines simultaneously. After the first call, subsequent calls to a CancelFunc do nothing. \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/context#WithCancel",
-                    "documentation": {
-                      "identifier": "WithCancel",
-                      "newPage": false,
-                      "searchKey": "context.WithCancel",
-                      "tags": [
-                        "exported"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func WithCancel(parent Context) (ctx Context, cancel CancelFunc)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc WithCancel(parent Context) (ctx Context, cancel CancelFunc)\n```\n\nWithCancel returns a copy of parent with a new Done channel. The returned context's Done channel is closed when the returned cancel function is called or when the parent context's Done channel is closed, whichever happens first. \n\nCanceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context complete. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/context#WithDeadline",
-                    "documentation": {
-                      "identifier": "WithDeadline",
-                      "newPage": false,
-                      "searchKey": "context.WithDeadline",
-                      "tags": [
-                        "exported"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func WithDeadline(parent Context, d time.Time) (Context, CancelFunc)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc WithDeadline(parent Context, d time.Time) (Context, CancelFunc)\n```\n\nWithDeadline returns a copy of the parent context with the deadline adjusted to be no later than d. If the parent's deadline is already earlier than d, WithDeadline(parent, d) is semantically equivalent to parent. The returned context's Done channel is closed when the deadline expires, when the returned cancel function is called, or when the parent context's Done channel is closed, whichever happens first. \n\nCanceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context complete. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/context#WithTimeout",
-                    "documentation": {
-                      "identifier": "WithTimeout",
-                      "newPage": false,
-                      "searchKey": "context.WithTimeout",
-                      "tags": [
-                        "exported"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)\n```\n\nWithTimeout returns WithDeadline(parent, time.Now().Add(timeout)). \n\nCanceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context complete: \n\n```\nfunc slowOperationWithTimeout(ctx context.Context) (Result, error) {\n\tctx, cancel := context.WithTimeout(ctx, 100*time.Millisecond)\n\tdefer cancel()  // releases resources if slowOperation completes before timeout elapses\n\treturn slowOperation(ctx)\n}\n\n```\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -780,7 +725,9 @@
                 "identifier": "canceler",
                 "newPage": false,
                 "searchKey": "context.canceler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -800,7 +747,9 @@
                 "identifier": "cancelCtx",
                 "newPage": false,
                 "searchKey": "context.cancelCtx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -818,7 +767,9 @@
                       "identifier": "newCancelCtx",
                       "newPage": false,
                       "searchKey": "context.newCancelCtx",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -838,7 +789,9 @@
                       "identifier": "parentCancelCtx",
                       "newPage": false,
                       "searchKey": "context.parentCancelCtx",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -858,7 +811,9 @@
                       "identifier": "cancelCtx.Value",
                       "newPage": false,
                       "searchKey": "context.cancelCtx.Value",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -878,7 +833,9 @@
                       "identifier": "cancelCtx.Done",
                       "newPage": false,
                       "searchKey": "context.cancelCtx.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -898,7 +855,9 @@
                       "identifier": "cancelCtx.Err",
                       "newPage": false,
                       "searchKey": "context.cancelCtx.Err",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -918,7 +877,9 @@
                       "identifier": "cancelCtx.String",
                       "newPage": false,
                       "searchKey": "context.cancelCtx.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -938,7 +899,9 @@
                       "identifier": "cancelCtx.cancel",
                       "newPage": false,
                       "searchKey": "context.cancelCtx.cancel",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -961,7 +924,9 @@
                 "identifier": "stringer",
                 "newPage": false,
                 "searchKey": "context.stringer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -981,7 +946,9 @@
                 "identifier": "timerCtx",
                 "newPage": false,
                 "searchKey": "context.timerCtx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -999,7 +966,9 @@
                       "identifier": "timerCtx.Deadline",
                       "newPage": false,
                       "searchKey": "context.timerCtx.Deadline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1019,7 +988,9 @@
                       "identifier": "timerCtx.String",
                       "newPage": false,
                       "searchKey": "context.timerCtx.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1039,7 +1010,9 @@
                       "identifier": "timerCtx.cancel",
                       "newPage": false,
                       "searchKey": "context.timerCtx.cancel",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1062,7 +1035,9 @@
                 "identifier": "valueCtx",
                 "newPage": false,
                 "searchKey": "context.valueCtx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1080,7 +1055,9 @@
                       "identifier": "valueCtx.String",
                       "newPage": false,
                       "searchKey": "context.valueCtx.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1100,7 +1077,9 @@
                       "identifier": "valueCtx.Value",
                       "newPage": false,
                       "searchKey": "context.valueCtx.Value",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1123,7 +1102,9 @@
                 "identifier": "testingT",
                 "newPage": false,
                 "searchKey": "context.testingT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1143,7 +1124,9 @@
                 "identifier": "otherContext",
                 "newPage": false,
                 "searchKey": "context.otherContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1163,7 +1146,9 @@
                 "identifier": "key1",
                 "newPage": false,
                 "searchKey": "context.key1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1183,7 +1168,9 @@
                 "identifier": "key2",
                 "newPage": false,
                 "searchKey": "context.key2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1203,7 +1190,9 @@
                 "identifier": "myCtx",
                 "newPage": false,
                 "searchKey": "context.myCtx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1223,7 +1212,9 @@
                 "identifier": "myDoneCtx",
                 "newPage": false,
                 "searchKey": "context.myDoneCtx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1241,7 +1232,9 @@
                       "identifier": "myDoneCtx.Done",
                       "newPage": false,
                       "searchKey": "context.myDoneCtx.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1267,9 +1260,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1287,7 +1278,9 @@
                 "identifier": "propagateCancel",
                 "newPage": false,
                 "searchKey": "context.propagateCancel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1307,7 +1300,9 @@
                 "identifier": "removeChild",
                 "newPage": false,
                 "searchKey": "context.removeChild",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1322,12 +1317,14 @@
           },
           {
             "node": {
-              "pathID": "/context#init",
+              "pathID": "/context#init.context.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.context.go",
                 "newPage": false,
                 "searchKey": "context.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1347,7 +1344,9 @@
                 "identifier": "contextName",
                 "newPage": false,
                 "searchKey": "context.contextName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1367,7 +1366,9 @@
                 "identifier": "stringify",
                 "newPage": false,
                 "searchKey": "context.stringify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1387,7 +1388,9 @@
                 "identifier": "quiescent",
                 "newPage": false,
                 "searchKey": "context.quiescent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1407,7 +1410,9 @@
                 "identifier": "XTestBackground",
                 "newPage": false,
                 "searchKey": "context.XTestBackground",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1427,7 +1432,9 @@
                 "identifier": "XTestTODO",
                 "newPage": false,
                 "searchKey": "context.XTestTODO",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1447,7 +1454,9 @@
                 "identifier": "XTestWithCancel",
                 "newPage": false,
                 "searchKey": "context.XTestWithCancel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1467,7 +1476,9 @@
                 "identifier": "contains",
                 "newPage": false,
                 "searchKey": "context.contains",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1487,7 +1498,9 @@
                 "identifier": "XTestParentFinishesChild",
                 "newPage": false,
                 "searchKey": "context.XTestParentFinishesChild",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1507,7 +1520,9 @@
                 "identifier": "XTestChildFinishesFirst",
                 "newPage": false,
                 "searchKey": "context.XTestChildFinishesFirst",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1527,7 +1542,9 @@
                 "identifier": "testDeadline",
                 "newPage": false,
                 "searchKey": "context.testDeadline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1547,7 +1564,9 @@
                 "identifier": "XTestDeadline",
                 "newPage": false,
                 "searchKey": "context.XTestDeadline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1567,7 +1586,9 @@
                 "identifier": "XTestTimeout",
                 "newPage": false,
                 "searchKey": "context.XTestTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1587,7 +1608,9 @@
                 "identifier": "XTestCanceledTimeout",
                 "newPage": false,
                 "searchKey": "context.XTestCanceledTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1607,7 +1630,9 @@
                 "identifier": "XTestValues",
                 "newPage": false,
                 "searchKey": "context.XTestValues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1627,7 +1652,9 @@
                 "identifier": "XTestAllocs",
                 "newPage": false,
                 "searchKey": "context.XTestAllocs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1647,7 +1674,9 @@
                 "identifier": "XTestSimultaneousCancels",
                 "newPage": false,
                 "searchKey": "context.XTestSimultaneousCancels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1667,7 +1696,9 @@
                 "identifier": "XTestInterlockedCancels",
                 "newPage": false,
                 "searchKey": "context.XTestInterlockedCancels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1687,7 +1718,9 @@
                 "identifier": "XTestLayersCancel",
                 "newPage": false,
                 "searchKey": "context.XTestLayersCancel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1707,7 +1740,9 @@
                 "identifier": "XTestLayersTimeout",
                 "newPage": false,
                 "searchKey": "context.XTestLayersTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1727,7 +1762,9 @@
                 "identifier": "testLayers",
                 "newPage": false,
                 "searchKey": "context.testLayers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1747,7 +1784,9 @@
                 "identifier": "XTestCancelRemoves",
                 "newPage": false,
                 "searchKey": "context.XTestCancelRemoves",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1767,7 +1806,9 @@
                 "identifier": "XTestWithCancelCanceledParent",
                 "newPage": false,
                 "searchKey": "context.XTestWithCancelCanceledParent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1787,7 +1828,9 @@
                 "identifier": "XTestWithValueChecksKey",
                 "newPage": false,
                 "searchKey": "context.XTestWithValueChecksKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1807,7 +1850,9 @@
                 "identifier": "XTestInvalidDerivedFail",
                 "newPage": false,
                 "searchKey": "context.XTestInvalidDerivedFail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1827,7 +1872,9 @@
                 "identifier": "recoveredValue",
                 "newPage": false,
                 "searchKey": "context.recoveredValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1847,7 +1894,9 @@
                 "identifier": "XTestDeadlineExceededSupportsTimeout",
                 "newPage": false,
                 "searchKey": "context.XTestDeadlineExceededSupportsTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1867,7 +1916,9 @@
                 "identifier": "XTestCustomContextGoroutines",
                 "newPage": false,
                 "searchKey": "context.XTestCustomContextGoroutines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

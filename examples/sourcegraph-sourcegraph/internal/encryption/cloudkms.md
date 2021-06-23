@@ -15,11 +15,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Key" href="#Key">type Key struct</a>
 
 ```
 searchKey: cloudkms.Key
-tags: [exported]
 ```
 
 ```Go
@@ -33,7 +36,6 @@ type Key struct {
 
 ```
 searchKey: cloudkms.Key.Version
-tags: [exported]
 ```
 
 ```Go
@@ -44,7 +46,6 @@ func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)
 
 ```
 searchKey: cloudkms.Key.Decrypt
-tags: [exported]
 ```
 
 ```Go
@@ -57,7 +58,6 @@ Decrypt a secret, it must have been encrypted with the same Key encrypted secret
 
 ```
 searchKey: cloudkms.Key.Encrypt
-tags: [exported]
 ```
 
 ```Go
@@ -70,6 +70,7 @@ Encrypt a secret, storing it as a base64 encoded json blob, this json contains t
 
 ```
 searchKey: cloudkms.encryptedValue
+tags: [private]
 ```
 
 ```Go
@@ -82,11 +83,14 @@ type encryptedValue struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewKey" href="#NewKey">func NewKey(ctx context.Context, config schema.CloudKMSEncryptionKey) (encryption.Key, error)</a>
 
 ```
 searchKey: cloudkms.NewKey
-tags: [exported]
 ```
 
 ```Go
@@ -97,6 +101,7 @@ func NewKey(ctx context.Context, config schema.CloudKMSEncryptionKey) (encryptio
 
 ```
 searchKey: cloudkms.crc32Sum
+tags: [private]
 ```
 
 ```Go

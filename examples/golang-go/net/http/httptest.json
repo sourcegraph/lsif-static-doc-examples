@@ -4,9 +4,7 @@
     "identifier": "httptest",
     "newPage": true,
     "searchKey": "net/http/httptest",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "DefaultRemoteAddr",
                 "newPage": false,
                 "searchKey": "httptest.DefaultRemoteAddr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -69,9 +63,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -89,7 +81,9 @@
                 "identifier": "serveFlag",
                 "newPage": false,
                 "searchKey": "httptest.serveFlag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -109,7 +103,9 @@
                 "identifier": "newServers",
                 "newPage": false,
                 "searchKey": "httptest.newServers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -132,9 +128,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -152,9 +146,7 @@
                 "identifier": "ResponseRecorder",
                 "newPage": false,
                 "searchKey": "httptest.ResponseRecorder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                       "identifier": "NewRecorder",
                       "newPage": false,
                       "searchKey": "httptest.NewRecorder",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -194,9 +184,7 @@
                       "identifier": "ResponseRecorder.Header",
                       "newPage": false,
                       "searchKey": "httptest.ResponseRecorder.Header",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -216,7 +204,9 @@
                       "identifier": "ResponseRecorder.writeHeader",
                       "newPage": false,
                       "searchKey": "httptest.ResponseRecorder.writeHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -236,9 +226,7 @@
                       "identifier": "ResponseRecorder.Write",
                       "newPage": false,
                       "searchKey": "httptest.ResponseRecorder.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -258,9 +246,7 @@
                       "identifier": "ResponseRecorder.WriteString",
                       "newPage": false,
                       "searchKey": "httptest.ResponseRecorder.WriteString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -280,9 +266,7 @@
                       "identifier": "ResponseRecorder.WriteHeader",
                       "newPage": false,
                       "searchKey": "httptest.ResponseRecorder.WriteHeader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -302,9 +286,7 @@
                       "identifier": "ResponseRecorder.Flush",
                       "newPage": false,
                       "searchKey": "httptest.ResponseRecorder.Flush",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -324,9 +306,7 @@
                       "identifier": "ResponseRecorder.Result",
                       "newPage": false,
                       "searchKey": "httptest.ResponseRecorder.Result",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -349,9 +329,7 @@
                 "identifier": "Server",
                 "newPage": false,
                 "searchKey": "httptest.Server",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -369,9 +347,7 @@
                       "identifier": "NewServer",
                       "newPage": false,
                       "searchKey": "httptest.NewServer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -391,9 +367,7 @@
                       "identifier": "NewUnstartedServer",
                       "newPage": false,
                       "searchKey": "httptest.NewUnstartedServer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -413,9 +387,7 @@
                       "identifier": "NewTLSServer",
                       "newPage": false,
                       "searchKey": "httptest.NewTLSServer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -435,9 +407,7 @@
                       "identifier": "Server.Start",
                       "newPage": false,
                       "searchKey": "httptest.Server.Start",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -457,9 +427,7 @@
                       "identifier": "Server.StartTLS",
                       "newPage": false,
                       "searchKey": "httptest.Server.StartTLS",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -479,9 +447,7 @@
                       "identifier": "Server.Close",
                       "newPage": false,
                       "searchKey": "httptest.Server.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -501,7 +467,9 @@
                       "identifier": "Server.logCloseHangDebugInfo",
                       "newPage": false,
                       "searchKey": "httptest.Server.logCloseHangDebugInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -521,9 +489,7 @@
                       "identifier": "Server.CloseClientConnections",
                       "newPage": false,
                       "searchKey": "httptest.Server.CloseClientConnections",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -543,9 +509,7 @@
                       "identifier": "Server.Certificate",
                       "newPage": false,
                       "searchKey": "httptest.Server.Certificate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -565,9 +529,7 @@
                       "identifier": "Server.Client",
                       "newPage": false,
                       "searchKey": "httptest.Server.Client",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -587,7 +549,9 @@
                       "identifier": "Server.goServe",
                       "newPage": false,
                       "searchKey": "httptest.Server.goServe",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -607,7 +571,9 @@
                       "identifier": "Server.wrap",
                       "newPage": false,
                       "searchKey": "httptest.Server.wrap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -627,7 +593,9 @@
                       "identifier": "Server.closeConn",
                       "newPage": false,
                       "searchKey": "httptest.Server.closeConn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -647,7 +615,9 @@
                       "identifier": "Server.closeConnChan",
                       "newPage": false,
                       "searchKey": "httptest.Server.closeConnChan",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -667,7 +637,9 @@
                       "identifier": "Server.forgetConn",
                       "newPage": false,
                       "searchKey": "httptest.Server.forgetConn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -690,7 +662,9 @@
                 "identifier": "closeIdleTransport",
                 "newPage": false,
                 "searchKey": "httptest.closeIdleTransport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -710,7 +684,9 @@
                 "identifier": "newServerFunc",
                 "newPage": false,
                 "searchKey": "httptest.newServerFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -730,7 +706,9 @@
                 "identifier": "onlyCloseListener",
                 "newPage": false,
                 "searchKey": "httptest.onlyCloseListener",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -748,7 +726,9 @@
                       "identifier": "onlyCloseListener.Close",
                       "newPage": false,
                       "searchKey": "httptest.onlyCloseListener.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -774,9 +754,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -794,9 +772,7 @@
                 "identifier": "NewRequest",
                 "newPage": false,
                 "searchKey": "httptest.NewRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -816,7 +792,9 @@
                 "identifier": "checkWriteHeaderCode",
                 "newPage": false,
                 "searchKey": "httptest.checkWriteHeaderCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -836,7 +814,9 @@
                 "identifier": "parseContentLength",
                 "newPage": false,
                 "searchKey": "httptest.parseContentLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -856,7 +836,9 @@
                 "identifier": "newLocalListener",
                 "newPage": false,
                 "searchKey": "httptest.newLocalListener",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -871,12 +853,14 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httptest#init",
+              "pathID": "/net/http/httptest#init.server.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.server.go",
                 "newPage": false,
                 "searchKey": "httptest.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -896,7 +880,9 @@
                 "identifier": "strSliceContainsPrefix",
                 "newPage": false,
                 "searchKey": "httptest.strSliceContainsPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -916,7 +902,9 @@
                 "identifier": "TestNewRequest",
                 "newPage": false,
                 "searchKey": "httptest.TestNewRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -936,7 +924,9 @@
                 "identifier": "TestRecorder",
                 "newPage": false,
                 "searchKey": "httptest.TestRecorder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -956,7 +946,9 @@
                 "identifier": "TestParseContentLength",
                 "newPage": false,
                 "searchKey": "httptest.TestParseContentLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -976,7 +968,9 @@
                 "identifier": "TestRecorderPanicsOnNonXXXStatusCode",
                 "newPage": false,
                 "searchKey": "httptest.TestRecorderPanicsOnNonXXXStatusCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -996,7 +990,9 @@
                 "identifier": "TestServer",
                 "newPage": false,
                 "searchKey": "httptest.TestServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1016,7 +1012,9 @@
                 "identifier": "testServer",
                 "newPage": false,
                 "searchKey": "httptest.testServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1036,7 +1034,9 @@
                 "identifier": "testGetAfterClose",
                 "newPage": false,
                 "searchKey": "httptest.testGetAfterClose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1056,7 +1056,9 @@
                 "identifier": "testServerCloseBlocking",
                 "newPage": false,
                 "searchKey": "httptest.testServerCloseBlocking",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1076,7 +1078,9 @@
                 "identifier": "testServerCloseClientConnections",
                 "newPage": false,
                 "searchKey": "httptest.testServerCloseClientConnections",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1096,7 +1100,9 @@
                 "identifier": "testServerClient",
                 "newPage": false,
                 "searchKey": "httptest.testServerClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1116,7 +1122,9 @@
                 "identifier": "testServerClientTransportType",
                 "newPage": false,
                 "searchKey": "httptest.testServerClientTransportType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1136,7 +1144,9 @@
                 "identifier": "testTLSServerClientTransportType",
                 "newPage": false,
                 "searchKey": "httptest.testTLSServerClientTransportType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1156,7 +1166,9 @@
                 "identifier": "TestServerZeroValueClose",
                 "newPage": false,
                 "searchKey": "httptest.TestServerZeroValueClose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1176,7 +1188,9 @@
                 "identifier": "TestTLSServerWithHTTP2",
                 "newPage": false,
                 "searchKey": "httptest.TestTLSServerWithHTTP2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

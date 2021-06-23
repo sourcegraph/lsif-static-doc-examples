@@ -75,10 +75,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="almost1K" href="#almost1K">const almost1K</a>
 
 ```
 searchKey: cipher_test.almost1K
+tags: [private]
 ```
 
 ```Go
@@ -91,6 +96,7 @@ If we test exactly 1K blocks, we would generate exact multiples of the cipher's 
 
 ```
 searchKey: cipher_test.almost8K
+tags: [private]
 ```
 
 ```Go
@@ -99,10 +105,15 @@ const almost8K = 8*1024 - 5
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="cbcAESTests" href="#cbcAESTests">var cbcAESTests</a>
 
 ```
 searchKey: cipher_test.cbcAESTests
+tags: [private]
 ```
 
 ```Go
@@ -113,6 +124,7 @@ var cbcAESTests = ...
 
 ```
 searchKey: cipher_test.cfbTests
+tags: [private]
 ```
 
 ```Go
@@ -125,6 +137,7 @@ cfbTests contains the test vectors from [https://csrc.nist.gov/publications/nist
 
 ```
 searchKey: cipher_test.commonInput
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +148,7 @@ var commonInput = ...
 
 ```
 searchKey: cipher_test.commonKey128
+tags: [private]
 ```
 
 ```Go
@@ -145,6 +159,7 @@ var commonKey128 = ...
 
 ```
 searchKey: cipher_test.commonKey192
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +170,7 @@ var commonKey192 = ...
 
 ```
 searchKey: cipher_test.commonKey256
+tags: [private]
 ```
 
 ```Go
@@ -165,6 +181,7 @@ var commonKey256 = ...
 
 ```
 searchKey: cipher_test.commonIV
+tags: [private]
 ```
 
 ```Go
@@ -175,6 +192,7 @@ var commonIV = ...
 
 ```
 searchKey: cipher_test.commonCounter
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +203,7 @@ var commonCounter = ...
 
 ```
 searchKey: cipher_test.ctrAESTests
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +214,7 @@ var ctrAESTests = ...
 
 ```
 searchKey: cipher_test.aesGCMTests
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +225,7 @@ var aesGCMTests = ...
 
 ```
 searchKey: cipher_test.ofbTests
+tags: [private]
 ```
 
 ```Go
@@ -213,10 +234,15 @@ var ofbTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="noopBlock" href="#noopBlock">type noopBlock int</a>
 
 ```
 searchKey: cipher_test.noopBlock
+tags: [private]
 ```
 
 ```Go
@@ -227,6 +253,7 @@ type noopBlock int
 
 ```
 searchKey: cipher_test.noopBlock.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -237,6 +264,7 @@ func (b noopBlock) BlockSize() int
 
 ```
 searchKey: cipher_test.noopBlock.Encrypt
+tags: [private]
 ```
 
 ```Go
@@ -247,6 +275,7 @@ func (noopBlock) Encrypt(dst, src []byte)
 
 ```
 searchKey: cipher_test.noopBlock.Decrypt
+tags: [private]
 ```
 
 ```Go
@@ -257,6 +286,7 @@ func (noopBlock) Decrypt(dst, src []byte)
 
 ```
 searchKey: cipher_test.wrapper
+tags: [private]
 ```
 
 ```Go
@@ -269,6 +299,7 @@ type wrapper struct {
 
 ```
 searchKey: cipher_test.wrapper.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +310,7 @@ func (w *wrapper) BlockSize() int
 
 ```
 searchKey: cipher_test.wrapper.Encrypt
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +321,7 @@ func (w *wrapper) Encrypt(dst, src []byte)
 
 ```
 searchKey: cipher_test.wrapper.Decrypt
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +332,7 @@ func (w *wrapper) Decrypt(dst, src []byte)
 
 ```
 searchKey: cipher_test.ofbTest
+tags: [private]
 ```
 
 ```Go
@@ -313,10 +347,15 @@ type ofbTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="benchmarkAESGCMSeal" href="#benchmarkAESGCMSeal">func benchmarkAESGCMSeal(b *testing.B, buf []byte, keySize int)</a>
 
 ```
 searchKey: cipher_test.benchmarkAESGCMSeal
+tags: [private]
 ```
 
 ```Go
@@ -327,6 +366,7 @@ func benchmarkAESGCMSeal(b *testing.B, buf []byte, keySize int)
 
 ```
 searchKey: cipher_test.benchmarkAESGCMOpen
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +377,7 @@ func benchmarkAESGCMOpen(b *testing.B, buf []byte, keySize int)
 
 ```
 searchKey: cipher_test.BenchmarkAESGCM
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +388,7 @@ func BenchmarkAESGCM(b *testing.B)
 
 ```
 searchKey: cipher_test.benchmarkAESStream
+tags: [private]
 ```
 
 ```Go
@@ -357,6 +399,7 @@ func benchmarkAESStream(b *testing.B, mode func(cipher.Block, []byte) cipher.Str
 
 ```
 searchKey: cipher_test.BenchmarkAESCFBEncrypt1K
+tags: [private]
 ```
 
 ```Go
@@ -367,6 +410,7 @@ func BenchmarkAESCFBEncrypt1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCFBDecrypt1K
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +421,7 @@ func BenchmarkAESCFBDecrypt1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCFBDecrypt8K
+tags: [private]
 ```
 
 ```Go
@@ -387,6 +432,7 @@ func BenchmarkAESCFBDecrypt8K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESOFB1K
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +443,7 @@ func BenchmarkAESOFB1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCTR1K
+tags: [private]
 ```
 
 ```Go
@@ -407,6 +454,7 @@ func BenchmarkAESCTR1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCTR8K
+tags: [private]
 ```
 
 ```Go
@@ -417,6 +465,7 @@ func BenchmarkAESCTR8K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCBCEncrypt1K
+tags: [private]
 ```
 
 ```Go
@@ -427,6 +476,7 @@ func BenchmarkAESCBCEncrypt1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCBCDecrypt1K
+tags: [private]
 ```
 
 ```Go
@@ -437,6 +487,7 @@ func BenchmarkAESCBCDecrypt1K(b *testing.B)
 
 ```
 searchKey: cipher_test.TestCBCEncrypterAES
+tags: [private]
 ```
 
 ```Go
@@ -447,6 +498,7 @@ func TestCBCEncrypterAES(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCBCDecrypterAES
+tags: [private]
 ```
 
 ```Go
@@ -457,6 +509,7 @@ func TestCBCDecrypterAES(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCFBVectors
+tags: [private]
 ```
 
 ```Go
@@ -467,6 +520,7 @@ func TestCFBVectors(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCFBInverse
+tags: [private]
 ```
 
 ```Go
@@ -477,6 +531,7 @@ func TestCFBInverse(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCryptBlocks
+tags: [private]
 ```
 
 ```Go
@@ -487,6 +542,7 @@ func TestCryptBlocks(t *testing.T)
 
 ```
 searchKey: cipher_test.mustPanic
+tags: [private]
 ```
 
 ```Go
@@ -497,6 +553,7 @@ func mustPanic(t *testing.T, msg string, f func())
 
 ```
 searchKey: cipher_test.TestEmptyPlaintext
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +564,7 @@ func TestEmptyPlaintext(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCTR_AES
+tags: [private]
 ```
 
 ```Go
@@ -517,6 +575,7 @@ func TestCTR_AES(t *testing.T)
 
 ```
 searchKey: cipher_test.inc
+tags: [private]
 ```
 
 ```Go
@@ -527,6 +586,7 @@ func inc(b []byte)
 
 ```
 searchKey: cipher_test.xor
+tags: [private]
 ```
 
 ```Go
@@ -537,6 +597,7 @@ func xor(a, b []byte)
 
 ```
 searchKey: cipher_test.TestCTR
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +608,7 @@ func TestCTR(t *testing.T)
 
 ```
 searchKey: cipher_test.ExampleNewGCM_encrypt
+tags: [private]
 ```
 
 ```Go
@@ -557,6 +619,7 @@ func ExampleNewGCM_encrypt()
 
 ```
 searchKey: cipher_test.ExampleNewGCM_decrypt
+tags: [private]
 ```
 
 ```Go
@@ -567,6 +630,7 @@ func ExampleNewGCM_decrypt()
 
 ```
 searchKey: cipher_test.ExampleNewCBCDecrypter
+tags: [private]
 ```
 
 ```Go
@@ -577,6 +641,7 @@ func ExampleNewCBCDecrypter()
 
 ```
 searchKey: cipher_test.ExampleNewCBCEncrypter
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +652,7 @@ func ExampleNewCBCEncrypter()
 
 ```
 searchKey: cipher_test.ExampleNewCFBDecrypter
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +663,7 @@ func ExampleNewCFBDecrypter()
 
 ```
 searchKey: cipher_test.ExampleNewCFBEncrypter
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +674,7 @@ func ExampleNewCFBEncrypter()
 
 ```
 searchKey: cipher_test.ExampleNewCTR
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +685,7 @@ func ExampleNewCTR()
 
 ```
 searchKey: cipher_test.ExampleNewOFB
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +696,7 @@ func ExampleNewOFB()
 
 ```
 searchKey: cipher_test.ExampleStreamReader
+tags: [private]
 ```
 
 ```Go
@@ -637,6 +707,7 @@ func ExampleStreamReader()
 
 ```
 searchKey: cipher_test.ExampleStreamWriter
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +718,7 @@ func ExampleStreamWriter()
 
 ```
 searchKey: cipher_test.TestAESGCM
+tags: [private]
 ```
 
 ```Go
@@ -657,6 +729,7 @@ func TestAESGCM(t *testing.T)
 
 ```
 searchKey: cipher_test.TestGCMInvalidTagSize
+tags: [private]
 ```
 
 ```Go
@@ -667,6 +740,7 @@ func TestGCMInvalidTagSize(t *testing.T)
 
 ```
 searchKey: cipher_test.TestTagFailureOverwrite
+tags: [private]
 ```
 
 ```Go
@@ -677,6 +751,7 @@ func TestTagFailureOverwrite(t *testing.T)
 
 ```
 searchKey: cipher_test.TestGCMCounterWrap
+tags: [private]
 ```
 
 ```Go
@@ -687,6 +762,7 @@ func TestGCMCounterWrap(t *testing.T)
 
 ```
 searchKey: cipher_test.wrap
+tags: [private]
 ```
 
 ```Go
@@ -699,6 +775,7 @@ wrap wraps the Block interface so that it does not fulfill any optimizing interf
 
 ```
 searchKey: cipher_test.TestGCMAsm
+tags: [private]
 ```
 
 ```Go
@@ -709,6 +786,7 @@ func TestGCMAsm(t *testing.T)
 
 ```
 searchKey: cipher_test.TestOFB
+tags: [private]
 ```
 
 ```Go
@@ -719,6 +797,7 @@ func TestOFB(t *testing.T)
 
 ```
 searchKey: cipher_test.TestXOR
+tags: [private]
 ```
 
 ```Go
@@ -729,6 +808,7 @@ func TestXOR(t *testing.T)
 
 ```
 searchKey: cipher_test.min
+tags: [private]
 ```
 
 ```Go
@@ -739,6 +819,7 @@ func min(a, b []byte) int
 
 ```
 searchKey: cipher_test.BenchmarkXORBytes
+tags: [private]
 ```
 
 ```Go

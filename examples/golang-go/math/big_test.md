@@ -21,10 +21,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="recur" href="#recur">func recur(n, lim int64) *big.Rat</a>
 
 ```
 searchKey: big_test.recur
+tags: [private]
 ```
 
 ```Go
@@ -48,6 +53,7 @@ i.e., for the nth term, use
 
 ```
 searchKey: big_test.Example_eConvergents
+tags: [private]
 ```
 
 ```Go
@@ -60,6 +66,7 @@ This example demonstrates how to use big.Rat to compute the first 15 terms in th
 
 ```
 searchKey: big_test.ExampleRat_SetString
+tags: [private]
 ```
 
 ```Go
@@ -70,6 +77,7 @@ func ExampleRat_SetString()
 
 ```
 searchKey: big_test.ExampleInt_SetString
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +88,7 @@ func ExampleInt_SetString()
 
 ```
 searchKey: big_test.ExampleFloat_SetString
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +99,7 @@ func ExampleFloat_SetString()
 
 ```
 searchKey: big_test.ExampleRat_Scan
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +110,7 @@ func ExampleRat_Scan()
 
 ```
 searchKey: big_test.ExampleInt_Scan
+tags: [private]
 ```
 
 ```Go
@@ -110,6 +121,7 @@ func ExampleInt_Scan()
 
 ```
 searchKey: big_test.ExampleFloat_Scan
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +132,7 @@ func ExampleFloat_Scan()
 
 ```
 searchKey: big_test.Example_fibonacci
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +145,7 @@ This example demonstrates how to use big.Int to compute the smallest Fibonacci n
 
 ```
 searchKey: big_test.Example_sqrt2
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +158,7 @@ This example shows how to use big.Float to compute the square root of 2 with a p
 
 ```
 searchKey: big_test.ExampleFloat_Add
+tags: [private]
 ```
 
 ```Go
@@ -154,6 +169,7 @@ func ExampleFloat_Add()
 
 ```
 searchKey: big_test.ExampleFloat_shift
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +180,7 @@ func ExampleFloat_shift()
 
 ```
 searchKey: big_test.ExampleFloat_Cmp
+tags: [private]
 ```
 
 ```Go
@@ -174,6 +191,7 @@ func ExampleFloat_Cmp()
 
 ```
 searchKey: big_test.ExampleRoundingMode
+tags: [private]
 ```
 
 ```Go

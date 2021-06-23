@@ -20,12 +20,12 @@ Package rand implements a cryptographically secure random number generator.
     * [type reader struct](#reader)
         * [func (r *reader) Read(b []byte) (n int, err error)](#reader.Read)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.eagain.go)
     * [func unixIsEAGAIN(err error) bool](#unixIsEAGAIN)
     * [func Read(b []byte) (n int, err error)](#Read)
-    * [func init()](#init)
+    * [func init()](#init.rand_getentropy.go)
     * [func getEntropy(p []byte) (ok bool)](#getEntropy)
-    * [func init()](#init)
+    * [func init()](#init.rand_unix.go)
     * [func warnBlocked()](#warnBlocked)
     * [func newReader(entropy io.Reader) io.Reader](#newReader)
     * [func Prime(rand io.Reader, bits int) (p *big.Int, err error)](#Prime)
@@ -36,14 +36,11 @@ Package rand implements a cryptographically secure random number generator.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="urandomDevice" href="#urandomDevice">const urandomDevice</a>
 
 ```
 searchKey: rand.urandomDevice
+tags: [private]
 ```
 
 ```Go
@@ -52,15 +49,10 @@ const urandomDevice = "/dev/urandom"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Reader" href="#Reader">var Reader</a>
 
 ```
 searchKey: rand.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -75,6 +67,7 @@ On Linux and FreeBSD, Reader uses getrandom(2) if available, /dev/urandom otherw
 
 ```
 searchKey: rand.altGetRandom
+tags: [private]
 ```
 
 ```Go
@@ -87,6 +80,7 @@ altGetRandom if non-nil specifies an OS-specific function to get urandom-style r
 
 ```
 searchKey: rand.isEAGAIN
+tags: [private]
 ```
 
 ```Go
@@ -98,6 +92,7 @@ var isEAGAIN func(error) bool // set by eagain.go on unix systems
 
 ```
 searchKey: rand.smallPrimes
+tags: [private]
 ```
 
 ```Go
@@ -112,6 +107,7 @@ smallPrimes is a list of small, prime numbers that allows us to rapidly exclude 
 
 ```
 searchKey: rand.smallPrimesProduct
+tags: [private]
 ```
 
 ```Go
@@ -122,14 +118,11 @@ smallPrimesProduct is the product of the values in smallPrimes and allows us to 
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="devReader" href="#devReader">type devReader struct</a>
 
 ```
 searchKey: rand.devReader
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +140,7 @@ A devReader satisfies reads by reading the file named name.
 
 ```
 searchKey: rand.devReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +151,7 @@ func (r *devReader) Read(b []byte) (n int, err error)
 
 ```
 searchKey: rand.hideAgainReader
+tags: [private]
 ```
 
 ```Go
@@ -171,6 +166,7 @@ hideAgainReader masks EAGAIN reads from /dev/urandom. See golang.org/issue/9205
 
 ```
 searchKey: rand.hideAgainReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -181,6 +177,7 @@ func (hr hideAgainReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: rand.reader
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +194,7 @@ type reader struct {
 
 ```
 searchKey: rand.reader.Read
+tags: [private]
 ```
 
 ```Go
@@ -205,14 +203,11 @@ func (r *reader) Read(b []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
-### <a id="init" href="#init">func init()</a>
+### <a id="init.eagain.go" href="#init.eagain.go">func init()</a>
 
 ```
 searchKey: rand.init
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +218,7 @@ func init()
 
 ```
 searchKey: rand.unixIsEAGAIN
+tags: [private]
 ```
 
 ```Go
@@ -235,7 +231,6 @@ unixIsEAGAIN reports whether err is a syscall.EAGAIN wrapped in a PathError. See
 
 ```
 searchKey: rand.Read
-tags: [exported]
 ```
 
 ```Go
@@ -244,10 +239,11 @@ func Read(b []byte) (n int, err error)
 
 Read is a helper function that calls Reader.Read using io.ReadFull. On return, n == len(b) if and only if err == nil. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.rand_getentropy.go" href="#init.rand_getentropy.go">func init()</a>
 
 ```
 searchKey: rand.init
+tags: [private]
 ```
 
 ```Go
@@ -258,16 +254,18 @@ func init()
 
 ```
 searchKey: rand.getEntropy
+tags: [private]
 ```
 
 ```Go
 func getEntropy(p []byte) (ok bool)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.rand_unix.go" href="#init.rand_unix.go">func init()</a>
 
 ```
 searchKey: rand.init
+tags: [private]
 ```
 
 ```Go
@@ -278,6 +276,7 @@ func init()
 
 ```
 searchKey: rand.warnBlocked
+tags: [private]
 ```
 
 ```Go
@@ -288,6 +287,7 @@ func warnBlocked()
 
 ```
 searchKey: rand.newReader
+tags: [private]
 ```
 
 ```Go
@@ -302,7 +302,6 @@ The generator uses the X9.31 algorithm with AES-128, reseeding after every 1 MB 
 
 ```
 searchKey: rand.Prime
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +314,6 @@ Prime returns a number, p, of the given size, such that p is prime with high pro
 
 ```
 searchKey: rand.Int
-tags: [exported]
 ```
 
 ```Go
@@ -328,6 +326,7 @@ Int returns a uniform random value in [0, max). It panics if max <= 0.
 
 ```
 searchKey: rand.TestRead
+tags: [private]
 ```
 
 ```Go
@@ -338,6 +337,7 @@ func TestRead(t *testing.T)
 
 ```
 searchKey: rand.TestReadEmpty
+tags: [private]
 ```
 
 ```Go

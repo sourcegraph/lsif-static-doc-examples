@@ -11,10 +11,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="usersStore" href="#usersStore">type usersStore struct</a>
 
 ```
 searchKey: init.usersStore
+tags: [private]
 ```
 
 ```Go
@@ -27,6 +32,7 @@ type usersStore struct {
 
 ```
 searchKey: init.usersStore.Count
+tags: [private]
 ```
 
 ```Go
@@ -35,11 +41,14 @@ func (u *usersStore) Count(ctx context.Context) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Init" href="#Init">func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error</a>
 
 ```
 searchKey: init.Init
-tags: [exported]
 ```
 
 ```Go

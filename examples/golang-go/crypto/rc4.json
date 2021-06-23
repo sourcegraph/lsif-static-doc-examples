@@ -4,9 +4,7 @@
     "identifier": "rc4",
     "newPage": true,
     "searchKey": "crypto/rc4",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "golden",
                 "newPage": false,
                 "searchKey": "rc4.golden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,9 +83,7 @@
                 "identifier": "Cipher",
                 "newPage": false,
                 "searchKey": "rc4.Cipher",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -107,9 +101,7 @@
                       "identifier": "NewCipher",
                       "newPage": false,
                       "searchKey": "rc4.NewCipher",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -130,7 +122,6 @@
                       "newPage": false,
                       "searchKey": "rc4.Cipher.Reset",
                       "tags": [
-                        "exported",
                         "deprecated"
                       ]
                     },
@@ -152,9 +143,7 @@
                       "identifier": "Cipher.XORKeyStream",
                       "newPage": false,
                       "searchKey": "rc4.Cipher.XORKeyStream",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -177,9 +166,7 @@
                 "identifier": "KeySizeError",
                 "newPage": false,
                 "searchKey": "rc4.KeySizeError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -197,9 +184,7 @@
                       "identifier": "KeySizeError.Error",
                       "newPage": false,
                       "searchKey": "rc4.KeySizeError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -222,7 +207,9 @@
                 "identifier": "rc4Test",
                 "newPage": false,
                 "searchKey": "rc4.rc4Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -245,9 +232,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -265,7 +250,9 @@
                 "identifier": "testEncrypt",
                 "newPage": false,
                 "searchKey": "rc4.testEncrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -285,7 +272,9 @@
                 "identifier": "TestGolden",
                 "newPage": false,
                 "searchKey": "rc4.TestGolden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -305,7 +294,9 @@
                 "identifier": "TestBlock",
                 "newPage": false,
                 "searchKey": "rc4.TestBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -325,7 +316,9 @@
                 "identifier": "benchmark",
                 "newPage": false,
                 "searchKey": "rc4.benchmark",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -345,7 +338,9 @@
                 "identifier": "BenchmarkRC4_128",
                 "newPage": false,
                 "searchKey": "rc4.BenchmarkRC4_128",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -365,7 +360,9 @@
                 "identifier": "BenchmarkRC4_1K",
                 "newPage": false,
                 "searchKey": "rc4.BenchmarkRC4_1K",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -385,7 +382,9 @@
                 "identifier": "BenchmarkRC4_8K",
                 "newPage": false,
                 "searchKey": "rc4.BenchmarkRC4_8K",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

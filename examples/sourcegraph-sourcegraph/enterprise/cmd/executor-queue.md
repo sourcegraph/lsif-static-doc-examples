@@ -18,14 +18,11 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="port" href="#port">const port</a>
 
 ```
 searchKey: main.port
+tags: [private]
 ```
 
 ```Go
@@ -34,15 +31,10 @@ const port = 3191
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
 searchKey: main.Config
-tags: [exported]
 ```
 
 ```Go
@@ -60,7 +52,6 @@ type Config struct {
 
 ```
 searchKey: main.Config.Load
-tags: [exported]
 ```
 
 ```Go
@@ -71,7 +62,6 @@ func (c *Config) Load()
 
 ```
 searchKey: main.Config.ServerOptions
-tags: [exported]
 ```
 
 ```Go
@@ -82,6 +72,7 @@ func (c *Config) ServerOptions(queueOptions map[string]apiserver.QueueOptions) a
 
 ```
 searchKey: main.config
+tags: [private]
 ```
 
 ```Go
@@ -93,14 +84,11 @@ type config interface {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +99,7 @@ func main()
 
 ```
 searchKey: main.connectToDatabase
+tags: [private]
 ```
 
 ```Go

@@ -56,15 +56,10 @@ for e := l.Front(); e != nil; e = e.Next() {
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Element" href="#Element">type Element struct</a>
 
 ```
 searchKey: list.Element
-tags: [exported]
 ```
 
 ```Go
@@ -90,7 +85,6 @@ Element is an element of a linked list.
 
 ```
 searchKey: list.Element.Next
-tags: [exported]
 ```
 
 ```Go
@@ -103,7 +97,6 @@ Next returns the next list element or nil.
 
 ```
 searchKey: list.Element.Prev
-tags: [exported]
 ```
 
 ```Go
@@ -116,7 +109,6 @@ Prev returns the previous list element or nil.
 
 ```
 searchKey: list.List
-tags: [exported]
 ```
 
 ```Go
@@ -132,7 +124,6 @@ List represents a doubly linked list. The zero value for List is an empty list r
 
 ```
 searchKey: list.New
-tags: [exported]
 ```
 
 ```Go
@@ -145,7 +136,6 @@ New returns an initialized list.
 
 ```
 searchKey: list.List.Init
-tags: [exported]
 ```
 
 ```Go
@@ -158,7 +148,6 @@ Init initializes or clears list l.
 
 ```
 searchKey: list.List.Len
-tags: [exported]
 ```
 
 ```Go
@@ -171,7 +160,6 @@ Len returns the number of elements of list l. The complexity is O(1).
 
 ```
 searchKey: list.List.Front
-tags: [exported]
 ```
 
 ```Go
@@ -184,7 +172,6 @@ Front returns the first element of list l or nil if the list is empty.
 
 ```
 searchKey: list.List.Back
-tags: [exported]
 ```
 
 ```Go
@@ -197,6 +184,7 @@ Back returns the last element of list l or nil if the list is empty.
 
 ```
 searchKey: list.List.lazyInit
+tags: [private]
 ```
 
 ```Go
@@ -209,6 +197,7 @@ lazyInit lazily initializes a zero List value.
 
 ```
 searchKey: list.List.insert
+tags: [private]
 ```
 
 ```Go
@@ -221,6 +210,7 @@ insert inserts e after at, increments l.len, and returns e.
 
 ```
 searchKey: list.List.insertValue
+tags: [private]
 ```
 
 ```Go
@@ -233,6 +223,7 @@ insertValue is a convenience wrapper for insert(&Element{Value: v}, at).
 
 ```
 searchKey: list.List.remove
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +236,7 @@ remove removes e from its list, decrements l.len, and returns e.
 
 ```
 searchKey: list.List.move
+tags: [private]
 ```
 
 ```Go
@@ -257,7 +249,6 @@ move moves e to next to at and returns e.
 
 ```
 searchKey: list.List.Remove
-tags: [exported]
 ```
 
 ```Go
@@ -270,7 +261,6 @@ Remove removes e from l if e is an element of list l. It returns the element val
 
 ```
 searchKey: list.List.PushFront
-tags: [exported]
 ```
 
 ```Go
@@ -283,7 +273,6 @@ PushFront inserts a new element e with value v at the front of list l and return
 
 ```
 searchKey: list.List.PushBack
-tags: [exported]
 ```
 
 ```Go
@@ -296,7 +285,6 @@ PushBack inserts a new element e with value v at the back of list l and returns 
 
 ```
 searchKey: list.List.InsertBefore
-tags: [exported]
 ```
 
 ```Go
@@ -309,7 +297,6 @@ InsertBefore inserts a new element e with value v immediately before mark and re
 
 ```
 searchKey: list.List.InsertAfter
-tags: [exported]
 ```
 
 ```Go
@@ -322,7 +309,6 @@ InsertAfter inserts a new element e with value v immediately after mark and retu
 
 ```
 searchKey: list.List.MoveToFront
-tags: [exported]
 ```
 
 ```Go
@@ -335,7 +321,6 @@ MoveToFront moves element e to the front of list l. If e is not an element of l,
 
 ```
 searchKey: list.List.MoveToBack
-tags: [exported]
 ```
 
 ```Go
@@ -348,7 +333,6 @@ MoveToBack moves element e to the back of list l. If e is not an element of l, t
 
 ```
 searchKey: list.List.MoveBefore
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +345,6 @@ MoveBefore moves element e to its new position before mark. If e or mark is not 
 
 ```
 searchKey: list.List.MoveAfter
-tags: [exported]
 ```
 
 ```Go
@@ -374,7 +357,6 @@ MoveAfter moves element e to its new position after mark. If e or mark is not an
 
 ```
 searchKey: list.List.PushBackList
-tags: [exported]
 ```
 
 ```Go
@@ -387,7 +369,6 @@ PushBackList inserts a copy of another list at the back of list l. The lists l a
 
 ```
 searchKey: list.List.PushFrontList
-tags: [exported]
 ```
 
 ```Go
@@ -398,14 +379,11 @@ PushFrontList inserts a copy of another list at the front of list l. The lists l
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="checkListLen" href="#checkListLen">func checkListLen(t *testing.T, l *List, len int) bool</a>
 
 ```
 searchKey: list.checkListLen
+tags: [private]
 ```
 
 ```Go
@@ -416,6 +394,7 @@ func checkListLen(t *testing.T, l *List, len int) bool
 
 ```
 searchKey: list.checkListPointers
+tags: [private]
 ```
 
 ```Go
@@ -426,6 +405,7 @@ func checkListPointers(t *testing.T, l *List, es []*Element)
 
 ```
 searchKey: list.TestList
+tags: [private]
 ```
 
 ```Go
@@ -436,6 +416,7 @@ func TestList(t *testing.T)
 
 ```
 searchKey: list.checkList
+tags: [private]
 ```
 
 ```Go
@@ -446,6 +427,7 @@ func checkList(t *testing.T, l *List, es []interface{})
 
 ```
 searchKey: list.TestExtending
+tags: [private]
 ```
 
 ```Go
@@ -456,6 +438,7 @@ func TestExtending(t *testing.T)
 
 ```
 searchKey: list.TestRemove
+tags: [private]
 ```
 
 ```Go
@@ -466,6 +449,7 @@ func TestRemove(t *testing.T)
 
 ```
 searchKey: list.TestIssue4103
+tags: [private]
 ```
 
 ```Go
@@ -476,6 +460,7 @@ func TestIssue4103(t *testing.T)
 
 ```
 searchKey: list.TestIssue6349
+tags: [private]
 ```
 
 ```Go
@@ -486,6 +471,7 @@ func TestIssue6349(t *testing.T)
 
 ```
 searchKey: list.TestMove
+tags: [private]
 ```
 
 ```Go
@@ -496,6 +482,7 @@ func TestMove(t *testing.T)
 
 ```
 searchKey: list.TestZeroList
+tags: [private]
 ```
 
 ```Go
@@ -508,6 +495,7 @@ Test PushFront, PushBack, PushFrontList, PushBackList with uninitialized List
 
 ```
 searchKey: list.TestInsertBeforeUnknownMark
+tags: [private]
 ```
 
 ```Go
@@ -520,6 +508,7 @@ Test that a list l is not modified when calling InsertBefore with a mark that is
 
 ```
 searchKey: list.TestInsertAfterUnknownMark
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +521,7 @@ Test that a list l is not modified when calling InsertAfter with a mark that is 
 
 ```
 searchKey: list.TestMoveUnknownMark
+tags: [private]
 ```
 
 ```Go

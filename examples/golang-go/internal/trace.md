@@ -192,11 +192,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="UtilSTW" href="#UtilSTW">const UtilSTW</a>
 
 ```
 searchKey: trace.UtilSTW
-tags: [exported]
 ```
 
 ```Go
@@ -209,7 +212,6 @@ UtilSTW means utilization should account for STW events.
 
 ```
 searchKey: trace.UtilBackground
-tags: [exported]
 ```
 
 ```Go
@@ -222,7 +224,6 @@ UtilBackground means utilization should account for background mark workers.
 
 ```
 searchKey: trace.UtilAssist
-tags: [exported]
 ```
 
 ```Go
@@ -235,7 +236,6 @@ UtilAssist means utilization should account for mark assists.
 
 ```
 searchKey: trace.UtilSweep
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +248,6 @@ UtilSweep means utilization should account for sweeping.
 
 ```
 searchKey: trace.UtilPerProc
-tags: [exported]
 ```
 
 ```Go
@@ -261,6 +260,7 @@ UtilPerProc means each P should be given a separate utilization function. Otherw
 
 ```
 searchKey: trace.mudDegree
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +273,7 @@ mudDegree is the number of buckets in the MUD summary histogram.
 
 ```
 searchKey: trace.gDead
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +284,7 @@ const gDead gStatus = iota
 
 ```
 searchKey: trace.gRunnable
+tags: [private]
 ```
 
 ```Go
@@ -293,6 +295,7 @@ const gRunnable
 
 ```
 searchKey: trace.gRunning
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +306,7 @@ const gRunning
 
 ```
 searchKey: trace.gWaiting
+tags: [private]
 ```
 
 ```Go
@@ -313,6 +317,7 @@ const gWaiting
 
 ```
 searchKey: trace.unordered
+tags: [private]
 ```
 
 ```Go
@@ -323,6 +328,7 @@ const unordered = ^uint64(0)
 
 ```
 searchKey: trace.garbage
+tags: [private]
 ```
 
 ```Go
@@ -333,6 +339,7 @@ const garbage = ^uint64(0) - 1
 
 ```
 searchKey: trace.noseq
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +350,7 @@ const noseq = ^uint64(0)
 
 ```
 searchKey: trace.seqinc
+tags: [private]
 ```
 
 ```Go
@@ -353,7 +361,6 @@ const seqinc = ^uint64(0) - 1
 
 ```
 searchKey: trace.FakeP
-tags: [exported]
 ```
 
 ```Go
@@ -366,7 +373,6 @@ Special P identifiers:
 
 ```
 searchKey: trace.TimerP
-tags: [exported]
 ```
 
 ```Go
@@ -378,7 +384,6 @@ const TimerP // depicts timer unblocks
 
 ```
 searchKey: trace.NetpollP
-tags: [exported]
 ```
 
 ```Go
@@ -390,7 +395,6 @@ const NetpollP // depicts network unblocks
 
 ```
 searchKey: trace.SyscallP
-tags: [exported]
 ```
 
 ```Go
@@ -402,7 +406,6 @@ const SyscallP // depicts returns from syscalls
 
 ```
 searchKey: trace.GCP
-tags: [exported]
 ```
 
 ```Go
@@ -414,7 +417,6 @@ const GCP // depicts GC state
 
 ```
 searchKey: trace.EvNone
-tags: [exported]
 ```
 
 ```Go
@@ -428,7 +430,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvBatch
-tags: [exported]
 ```
 
 ```Go
@@ -442,7 +443,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvFrequency
-tags: [exported]
 ```
 
 ```Go
@@ -456,7 +456,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvStack
-tags: [exported]
 ```
 
 ```Go
@@ -470,7 +469,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGomaxprocs
-tags: [exported]
 ```
 
 ```Go
@@ -484,7 +482,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvProcStart
-tags: [exported]
 ```
 
 ```Go
@@ -498,7 +495,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvProcStop
-tags: [exported]
 ```
 
 ```Go
@@ -512,7 +508,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGCStart
-tags: [exported]
 ```
 
 ```Go
@@ -526,7 +521,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGCDone
-tags: [exported]
 ```
 
 ```Go
@@ -540,7 +534,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGCSTWStart
-tags: [exported]
 ```
 
 ```Go
@@ -554,7 +547,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGCSTWDone
-tags: [exported]
 ```
 
 ```Go
@@ -568,7 +560,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGCSweepStart
-tags: [exported]
 ```
 
 ```Go
@@ -582,7 +573,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGCSweepDone
-tags: [exported]
 ```
 
 ```Go
@@ -596,7 +586,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoCreate
-tags: [exported]
 ```
 
 ```Go
@@ -610,7 +599,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoStart
-tags: [exported]
 ```
 
 ```Go
@@ -624,7 +612,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoEnd
-tags: [exported]
 ```
 
 ```Go
@@ -638,7 +625,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoStop
-tags: [exported]
 ```
 
 ```Go
@@ -652,7 +638,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoSched
-tags: [exported]
 ```
 
 ```Go
@@ -666,7 +651,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoPreempt
-tags: [exported]
 ```
 
 ```Go
@@ -680,7 +664,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoSleep
-tags: [exported]
 ```
 
 ```Go
@@ -694,7 +677,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoBlock
-tags: [exported]
 ```
 
 ```Go
@@ -708,7 +690,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoUnblock
-tags: [exported]
 ```
 
 ```Go
@@ -722,7 +703,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoBlockSend
-tags: [exported]
 ```
 
 ```Go
@@ -736,7 +716,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoBlockRecv
-tags: [exported]
 ```
 
 ```Go
@@ -750,7 +729,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoBlockSelect
-tags: [exported]
 ```
 
 ```Go
@@ -764,7 +742,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoBlockSync
-tags: [exported]
 ```
 
 ```Go
@@ -778,7 +755,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoBlockCond
-tags: [exported]
 ```
 
 ```Go
@@ -792,7 +768,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoBlockNet
-tags: [exported]
 ```
 
 ```Go
@@ -806,7 +781,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoSysCall
-tags: [exported]
 ```
 
 ```Go
@@ -820,7 +794,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoSysExit
-tags: [exported]
 ```
 
 ```Go
@@ -834,7 +807,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoSysBlock
-tags: [exported]
 ```
 
 ```Go
@@ -848,7 +820,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoWaiting
-tags: [exported]
 ```
 
 ```Go
@@ -862,7 +833,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoInSyscall
-tags: [exported]
 ```
 
 ```Go
@@ -876,7 +846,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvHeapAlloc
-tags: [exported]
 ```
 
 ```Go
@@ -890,7 +859,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvHeapGoal
-tags: [exported]
 ```
 
 ```Go
@@ -904,7 +872,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvTimerGoroutine
-tags: [exported]
 ```
 
 ```Go
@@ -918,7 +885,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvFutileWakeup
-tags: [exported]
 ```
 
 ```Go
@@ -932,7 +898,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvString
-tags: [exported]
 ```
 
 ```Go
@@ -946,7 +911,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoStartLocal
-tags: [exported]
 ```
 
 ```Go
@@ -960,7 +924,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoUnblockLocal
-tags: [exported]
 ```
 
 ```Go
@@ -974,7 +937,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoSysExitLocal
-tags: [exported]
 ```
 
 ```Go
@@ -988,7 +950,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoStartLabel
-tags: [exported]
 ```
 
 ```Go
@@ -1002,7 +963,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGoBlockGC
-tags: [exported]
 ```
 
 ```Go
@@ -1016,7 +976,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGCMarkAssistStart
-tags: [exported]
 ```
 
 ```Go
@@ -1030,7 +989,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvGCMarkAssistDone
-tags: [exported]
 ```
 
 ```Go
@@ -1044,7 +1002,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvUserTaskCreate
-tags: [exported]
 ```
 
 ```Go
@@ -1058,7 +1015,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvUserTaskEnd
-tags: [exported]
 ```
 
 ```Go
@@ -1072,7 +1028,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvUserRegion
-tags: [exported]
 ```
 
 ```Go
@@ -1086,7 +1041,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvUserLog
-tags: [exported]
 ```
 
 ```Go
@@ -1100,7 +1054,6 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ```
 searchKey: trace.EvCount
-tags: [exported]
 ```
 
 ```Go
@@ -1111,10 +1064,15 @@ Event types in the trace. Verbatim copy from src/runtime/trace.go with the "trac
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="bandsPerSeries" href="#bandsPerSeries">var bandsPerSeries</a>
 
 ```
 searchKey: trace.bandsPerSeries
+tags: [private]
 ```
 
 ```Go
@@ -1127,7 +1085,6 @@ bandsPerSeries is the number of bands to divide each series into. This is only c
 
 ```
 searchKey: trace.ErrTimeOrder
-tags: [exported]
 ```
 
 ```Go
@@ -1140,7 +1097,6 @@ ErrTimeOrder is returned by Parse when the trace contains time stamps that do no
 
 ```
 searchKey: trace.BreakTimestampsForTesting
-tags: [exported]
 ```
 
 ```Go
@@ -1153,7 +1109,6 @@ BreakTimestampsForTesting causes the parser to randomly alter timestamps (for te
 
 ```
 searchKey: trace.EventDescriptions
-tags: [exported]
 ```
 
 ```Go
@@ -1162,11 +1117,14 @@ var EventDescriptions = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MutatorUtil" href="#MutatorUtil">type MutatorUtil struct</a>
 
 ```
 searchKey: trace.MutatorUtil
-tags: [exported]
 ```
 
 ```Go
@@ -1184,7 +1142,6 @@ MutatorUtil is a change in mutator utilization at a particular time. Mutator uti
 
 ```
 searchKey: trace.UtilFlags
-tags: [exported]
 ```
 
 ```Go
@@ -1197,6 +1154,7 @@ UtilFlags controls the behavior of MutatorUtilization.
 
 ```
 searchKey: trace.totalUtil
+tags: [private]
 ```
 
 ```Go
@@ -1209,6 +1167,7 @@ totalUtil is total utilization, measured in nanoseconds. This is a separate type
 
 ```
 searchKey: trace.totalUtilOf
+tags: [private]
 ```
 
 ```Go
@@ -1219,6 +1178,7 @@ func totalUtilOf(meanUtil float64, dur int64) totalUtil
 
 ```
 searchKey: trace.totalUtil.mean
+tags: [private]
 ```
 
 ```Go
@@ -1231,7 +1191,6 @@ mean returns the mean utilization over dur.
 
 ```
 searchKey: trace.MMUCurve
-tags: [exported]
 ```
 
 ```Go
@@ -1246,7 +1205,6 @@ An MMUCurve is the minimum mutator utilization curve across multiple window size
 
 ```
 searchKey: trace.NewMMUCurve
-tags: [exported]
 ```
 
 ```Go
@@ -1259,7 +1217,6 @@ NewMMUCurve returns an MMU curve for the given mutator utilization function.
 
 ```
 searchKey: trace.MMUCurve.MMU
-tags: [exported]
 ```
 
 ```Go
@@ -1272,7 +1229,6 @@ MMU returns the minimum mutator utilization for the given time window. This is t
 
 ```
 searchKey: trace.MMUCurve.Examples
-tags: [exported]
 ```
 
 ```Go
@@ -1285,7 +1241,6 @@ Examples returns n specific examples of the lowest mutator utilization for the g
 
 ```
 searchKey: trace.MMUCurve.MUD
-tags: [exported]
 ```
 
 ```Go
@@ -1302,6 +1257,7 @@ The minimum mutator utilization is the minimum (0th percentile) of this distribu
 
 ```
 searchKey: trace.MMUCurve.mmu
+tags: [private]
 ```
 
 ```Go
@@ -1312,6 +1268,7 @@ func (c *MMUCurve) mmu(window time.Duration, acc *accumulator)
 
 ```
 searchKey: trace.mmuSeries
+tags: [private]
 ```
 
 ```Go
@@ -1331,6 +1288,7 @@ type mmuSeries struct {
 
 ```
 searchKey: trace.newMMUSeries
+tags: [private]
 ```
 
 ```Go
@@ -1341,6 +1299,7 @@ func newMMUSeries(util []MutatorUtil) mmuSeries
 
 ```
 searchKey: trace.mmuSeries.bandTime
+tags: [private]
 ```
 
 ```Go
@@ -1351,6 +1310,7 @@ func (s *mmuSeries) bandTime(i int) (start, end int64)
 
 ```
 searchKey: trace.mmuSeries.mkBandUtil
+tags: [private]
 ```
 
 ```Go
@@ -1361,6 +1321,7 @@ func (c *mmuSeries) mkBandUtil(series int, window time.Duration) []bandUtil
 
 ```
 searchKey: trace.mmuSeries.bandMMU
+tags: [private]
 ```
 
 ```Go
@@ -1373,6 +1334,7 @@ bandMMU computes the precise minimum mutator utilization for windows with a left
 
 ```
 searchKey: trace.mmuBand
+tags: [private]
 ```
 
 ```Go
@@ -1394,6 +1356,7 @@ type mmuBand struct {
 
 ```
 searchKey: trace.bandUtil
+tags: [private]
 ```
 
 ```Go
@@ -1412,6 +1375,7 @@ type bandUtil struct {
 
 ```
 searchKey: trace.bandUtilHeap
+tags: [private]
 ```
 
 ```Go
@@ -1422,6 +1386,7 @@ type bandUtilHeap []bandUtil
 
 ```
 searchKey: trace.bandUtilHeap.Len
+tags: [private]
 ```
 
 ```Go
@@ -1432,6 +1397,7 @@ func (h bandUtilHeap) Len() int
 
 ```
 searchKey: trace.bandUtilHeap.Less
+tags: [private]
 ```
 
 ```Go
@@ -1442,6 +1408,7 @@ func (h bandUtilHeap) Less(i, j int) bool
 
 ```
 searchKey: trace.bandUtilHeap.Swap
+tags: [private]
 ```
 
 ```Go
@@ -1452,6 +1419,7 @@ func (h bandUtilHeap) Swap(i, j int)
 
 ```
 searchKey: trace.bandUtilHeap.Push
+tags: [private]
 ```
 
 ```Go
@@ -1462,6 +1430,7 @@ func (h *bandUtilHeap) Push(x interface{})
 
 ```
 searchKey: trace.bandUtilHeap.Pop
+tags: [private]
 ```
 
 ```Go
@@ -1472,7 +1441,6 @@ func (h *bandUtilHeap) Pop() interface{}
 
 ```
 searchKey: trace.UtilWindow
-tags: [exported]
 ```
 
 ```Go
@@ -1489,6 +1457,7 @@ UtilWindow is a specific window at Time.
 
 ```
 searchKey: trace.utilHeap
+tags: [private]
 ```
 
 ```Go
@@ -1499,6 +1468,7 @@ type utilHeap []UtilWindow
 
 ```
 searchKey: trace.utilHeap.Len
+tags: [private]
 ```
 
 ```Go
@@ -1509,6 +1479,7 @@ func (h utilHeap) Len() int
 
 ```
 searchKey: trace.utilHeap.Less
+tags: [private]
 ```
 
 ```Go
@@ -1519,6 +1490,7 @@ func (h utilHeap) Less(i, j int) bool
 
 ```
 searchKey: trace.utilHeap.Swap
+tags: [private]
 ```
 
 ```Go
@@ -1529,6 +1501,7 @@ func (h utilHeap) Swap(i, j int)
 
 ```
 searchKey: trace.utilHeap.Push
+tags: [private]
 ```
 
 ```Go
@@ -1539,6 +1512,7 @@ func (h *utilHeap) Push(x interface{})
 
 ```
 searchKey: trace.utilHeap.Pop
+tags: [private]
 ```
 
 ```Go
@@ -1549,6 +1523,7 @@ func (h *utilHeap) Pop() interface{}
 
 ```
 searchKey: trace.accumulator
+tags: [private]
 ```
 
 ```Go
@@ -1582,6 +1557,7 @@ An accumulator takes a windowed mutator utilization function and tracks various 
 
 ```
 searchKey: trace.accumulator.resetTime
+tags: [private]
 ```
 
 ```Go
@@ -1594,6 +1570,7 @@ resetTime declares a discontinuity in the windowed mutator utilization function 
 
 ```
 searchKey: trace.accumulator.addMU
+tags: [private]
 ```
 
 ```Go
@@ -1608,6 +1585,7 @@ It returns true if further calls to addMU would be pointless.
 
 ```
 searchKey: trace.integrator
+tags: [private]
 ```
 
 ```Go
@@ -1625,6 +1603,7 @@ An integrator tracks a position in a utilization function and integrates it.
 
 ```
 searchKey: trace.integrator.advance
+tags: [private]
 ```
 
 ```Go
@@ -1637,6 +1616,7 @@ advance returns the integral of the utilization function from 0 to time. advance
 
 ```
 searchKey: trace.integrator.next
+tags: [private]
 ```
 
 ```Go
@@ -1649,7 +1629,6 @@ next returns the smallest time t' > time of a change in the utilization function
 
 ```
 searchKey: trace.GDesc
-tags: [exported]
 ```
 
 ```Go
@@ -1677,6 +1656,7 @@ GDesc contains statistics and execution details of a single goroutine.
 
 ```
 searchKey: trace.GDesc.snapshotStat
+tags: [private]
 ```
 
 ```Go
@@ -1689,6 +1669,7 @@ snapshotStat returns the snapshot of the goroutine execution statistics. This is
 
 ```
 searchKey: trace.GDesc.finalize
+tags: [private]
 ```
 
 ```Go
@@ -1701,7 +1682,6 @@ finalize is called when processing a goroutine end event or at the end of trace 
 
 ```
 searchKey: trace.UserRegionDesc
-tags: [exported]
 ```
 
 ```Go
@@ -1729,7 +1709,6 @@ UserRegionDesc represents a region and goroutine execution stats while the regio
 
 ```
 searchKey: trace.GExecutionStat
-tags: [exported]
 ```
 
 ```Go
@@ -1751,6 +1730,7 @@ GExecutionStat contains statistics about a goroutine's execution during a period
 
 ```
 searchKey: trace.GExecutionStat.sub
+tags: [private]
 ```
 
 ```Go
@@ -1763,6 +1743,7 @@ sub returns the stats v-s.
 
 ```
 searchKey: trace.gdesc
+tags: [private]
 ```
 
 ```Go
@@ -1785,6 +1766,7 @@ gdesc is a private part of GDesc that is required only during analysis.
 
 ```
 searchKey: trace.mud
+tags: [private]
 ```
 
 ```Go
@@ -1819,6 +1801,7 @@ It is represented as the sum of scaled uniform distribution functions and Dirac 
 
 ```
 searchKey: trace.mud.add
+tags: [private]
 ```
 
 ```Go
@@ -1831,6 +1814,7 @@ add adds a uniform function over [l, r] scaled so the total weight of the unifor
 
 ```
 searchKey: trace.mud.setTrackMass
+tags: [private]
 ```
 
 ```Go
@@ -1845,6 +1829,7 @@ Specifically, mass is a cumulative duration, and the mutator utilization bounds 
 
 ```
 searchKey: trace.mud.approxInvCumulativeSum
+tags: [private]
 ```
 
 ```Go
@@ -1859,6 +1844,7 @@ The true inverse cumulative sum will be in the range [lower, upper).
 
 ```
 searchKey: trace.mud.invCumulativeSum
+tags: [private]
 ```
 
 ```Go
@@ -1873,6 +1859,7 @@ Specifically, y is a cumulative duration, and invCumulativeSum returns the mutat
 
 ```
 searchKey: trace.edge
+tags: [private]
 ```
 
 ```Go
@@ -1888,6 +1875,7 @@ type edge struct {
 
 ```
 searchKey: trace.eventBatch
+tags: [private]
 ```
 
 ```Go
@@ -1901,6 +1889,7 @@ type eventBatch struct {
 
 ```
 searchKey: trace.orderEvent
+tags: [private]
 ```
 
 ```Go
@@ -1917,6 +1906,7 @@ type orderEvent struct {
 
 ```
 searchKey: trace.gStatus
+tags: [private]
 ```
 
 ```Go
@@ -1927,6 +1917,7 @@ type gStatus int
 
 ```
 searchKey: trace.gState
+tags: [private]
 ```
 
 ```Go
@@ -1940,6 +1931,7 @@ type gState struct {
 
 ```
 searchKey: trace.stateTransition
+tags: [private]
 ```
 
 ```Go
@@ -1952,6 +1944,7 @@ stateTransition returns goroutine state (sequence and status) when the event bec
 
 ```
 searchKey: trace.orderEventList
+tags: [private]
 ```
 
 ```Go
@@ -1962,6 +1955,7 @@ type orderEventList []orderEvent
 
 ```
 searchKey: trace.orderEventList.Len
+tags: [private]
 ```
 
 ```Go
@@ -1972,6 +1966,7 @@ func (l orderEventList) Len() int
 
 ```
 searchKey: trace.orderEventList.Less
+tags: [private]
 ```
 
 ```Go
@@ -1982,6 +1977,7 @@ func (l orderEventList) Less(i, j int) bool
 
 ```
 searchKey: trace.orderEventList.Swap
+tags: [private]
 ```
 
 ```Go
@@ -1992,6 +1988,7 @@ func (l orderEventList) Swap(i, j int)
 
 ```
 searchKey: trace.eventList
+tags: [private]
 ```
 
 ```Go
@@ -2002,6 +1999,7 @@ type eventList []*Event
 
 ```
 searchKey: trace.eventList.Len
+tags: [private]
 ```
 
 ```Go
@@ -2012,6 +2010,7 @@ func (l eventList) Len() int
 
 ```
 searchKey: trace.eventList.Less
+tags: [private]
 ```
 
 ```Go
@@ -2022,6 +2021,7 @@ func (l eventList) Less(i, j int) bool
 
 ```
 searchKey: trace.eventList.Swap
+tags: [private]
 ```
 
 ```Go
@@ -2032,6 +2032,7 @@ func (l eventList) Swap(i, j int)
 
 ```
 searchKey: trace.eventSeqList
+tags: [private]
 ```
 
 ```Go
@@ -2042,6 +2043,7 @@ type eventSeqList []*Event
 
 ```
 searchKey: trace.eventSeqList.Len
+tags: [private]
 ```
 
 ```Go
@@ -2052,6 +2054,7 @@ func (l eventSeqList) Len() int
 
 ```
 searchKey: trace.eventSeqList.Less
+tags: [private]
 ```
 
 ```Go
@@ -2062,6 +2065,7 @@ func (l eventSeqList) Less(i, j int) bool
 
 ```
 searchKey: trace.eventSeqList.Swap
+tags: [private]
 ```
 
 ```Go
@@ -2072,7 +2076,6 @@ func (l eventSeqList) Swap(i, j int)
 
 ```
 searchKey: trace.Event
-tags: [exported]
 ```
 
 ```Go
@@ -2111,7 +2114,6 @@ Event describes one event in the trace.
 
 ```
 searchKey: trace.Event.String
-tags: [exported]
 ```
 
 ```Go
@@ -2122,7 +2124,6 @@ func (ev *Event) String() string
 
 ```
 searchKey: trace.Frame
-tags: [exported]
 ```
 
 ```Go
@@ -2140,7 +2141,6 @@ Frame is a frame in stack traces.
 
 ```
 searchKey: trace.ParseResult
-tags: [exported]
 ```
 
 ```Go
@@ -2158,7 +2158,6 @@ ParseResult is the result of Parse.
 
 ```
 searchKey: trace.Parse
-tags: [exported]
 ```
 
 ```Go
@@ -2171,6 +2170,7 @@ Parse parses, post-processes and verifies the trace.
 
 ```
 searchKey: trace.parse
+tags: [private]
 ```
 
 ```Go
@@ -2183,6 +2183,7 @@ parse parses, post-processes and verifies the trace. It returns the trace versio
 
 ```
 searchKey: trace.rawEvent
+tags: [private]
 ```
 
 ```Go
@@ -2200,7 +2201,6 @@ rawEvent is a helper type used during parsing.
 
 ```
 searchKey: trace.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -2215,7 +2215,6 @@ Writer is a test trace writer.
 
 ```
 searchKey: trace.NewWriter
-tags: [exported]
 ```
 
 ```Go
@@ -2226,7 +2225,6 @@ func NewWriter() *Writer
 
 ```
 searchKey: trace.Writer.Emit
-tags: [exported]
 ```
 
 ```Go
@@ -2237,11 +2235,14 @@ Emit writes an event record to the trace. See Event types for valid types and re
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MutatorUtilization" href="#MutatorUtilization">func MutatorUtilization(events []*Event, flags UtilFlags) [][]MutatorUtil</a>
 
 ```
 searchKey: trace.MutatorUtilization
-tags: [exported]
 ```
 
 ```Go
@@ -2256,6 +2257,7 @@ If the UtilPerProc flag is not given, this always returns a single utilization f
 
 ```
 searchKey: trace.addUtil
+tags: [private]
 ```
 
 ```Go
@@ -2266,7 +2268,6 @@ func addUtil(util []MutatorUtil, mu MutatorUtil) []MutatorUtil
 
 ```
 searchKey: trace.GoroutineStats
-tags: [exported]
 ```
 
 ```Go
@@ -2279,7 +2280,6 @@ GoroutineStats generates statistics for all goroutines in the trace.
 
 ```
 searchKey: trace.RelatedGoroutines
-tags: [exported]
 ```
 
 ```Go
@@ -2292,6 +2292,7 @@ RelatedGoroutines finds a set of goroutines related to goroutine goid.
 
 ```
 searchKey: trace.order1007
+tags: [private]
 ```
 
 ```Go
@@ -2304,6 +2305,7 @@ order1007 merges a set of per-P event batches into a single, consistent stream. 
 
 ```
 searchKey: trace.transitionReady
+tags: [private]
 ```
 
 ```Go
@@ -2314,6 +2316,7 @@ func transitionReady(g uint64, curr, init gState) bool
 
 ```
 searchKey: trace.transition
+tags: [private]
 ```
 
 ```Go
@@ -2324,6 +2327,7 @@ func transition(gs map[uint64]gState, g uint64, init, next gState)
 
 ```
 searchKey: trace.order1005
+tags: [private]
 ```
 
 ```Go
@@ -2336,6 +2340,7 @@ order1005 merges a set of per-P event batches into a single, consistent stream.
 
 ```
 searchKey: trace.goCmd
+tags: [private]
 ```
 
 ```Go
@@ -2346,6 +2351,7 @@ func goCmd() string
 
 ```
 searchKey: trace.readTrace
+tags: [private]
 ```
 
 ```Go
@@ -2358,6 +2364,7 @@ readTrace does wire-format parsing and verification. It does not care about spec
 
 ```
 searchKey: trace.readStr
+tags: [private]
 ```
 
 ```Go
@@ -2368,6 +2375,7 @@ func readStr(r io.Reader, off0 int) (s string, off int, err error)
 
 ```
 searchKey: trace.parseHeader
+tags: [private]
 ```
 
 ```Go
@@ -2380,6 +2388,7 @@ parseHeader parses trace header of the form "go 1.7 trace\x00\x00\x00\x00" and r
 
 ```
 searchKey: trace.parseEvents
+tags: [private]
 ```
 
 ```Go
@@ -2392,6 +2401,7 @@ Parse events transforms raw events into events. It does analyze and verify per-e
 
 ```
 searchKey: trace.removeFutile
+tags: [private]
 ```
 
 ```Go
@@ -2404,6 +2414,7 @@ removeFutile removes all constituents of futile wakeups (block, unblock, start).
 
 ```
 searchKey: trace.postProcessTrace
+tags: [private]
 ```
 
 ```Go
@@ -2416,6 +2427,7 @@ postProcessTrace does inter-event verification and information restoration. The 
 
 ```
 searchKey: trace.symbolize
+tags: [private]
 ```
 
 ```Go
@@ -2428,6 +2440,7 @@ symbolize attaches func/file/line info to stack traces.
 
 ```
 searchKey: trace.readVal
+tags: [private]
 ```
 
 ```Go
@@ -2440,7 +2453,6 @@ readVal reads unsigned base-128 value from r.
 
 ```
 searchKey: trace.Print
-tags: [exported]
 ```
 
 ```Go
@@ -2453,7 +2465,6 @@ Print dumps events to stdout. For debugging.
 
 ```
 searchKey: trace.PrintEvent
-tags: [exported]
 ```
 
 ```Go
@@ -2466,6 +2477,7 @@ PrintEvent dumps the event to stdout. For debugging.
 
 ```
 searchKey: trace.argNum
+tags: [private]
 ```
 
 ```Go
@@ -2478,6 +2490,7 @@ argNum returns total number of args for the event accounting for timestamps, seq
 
 ```
 searchKey: trace.appendVarint
+tags: [private]
 ```
 
 ```Go
@@ -2488,6 +2501,7 @@ func appendVarint(buf []byte, v uint64) []byte
 
 ```
 searchKey: trace.aeq
+tags: [private]
 ```
 
 ```Go
@@ -2500,6 +2514,7 @@ aeq returns true if x and y are equal up to 8 digits (1 part in 100 million).
 
 ```
 searchKey: trace.TestMMU
+tags: [private]
 ```
 
 ```Go
@@ -2510,6 +2525,7 @@ func TestMMU(t *testing.T)
 
 ```
 searchKey: trace.TestMMUTrace
+tags: [private]
 ```
 
 ```Go
@@ -2520,6 +2536,7 @@ func TestMMUTrace(t *testing.T)
 
 ```
 searchKey: trace.BenchmarkMMU
+tags: [private]
 ```
 
 ```Go
@@ -2530,6 +2547,7 @@ func BenchmarkMMU(b *testing.B)
 
 ```
 searchKey: trace.mmuSlow
+tags: [private]
 ```
 
 ```Go
@@ -2540,6 +2558,7 @@ func mmuSlow(util []MutatorUtil, window time.Duration) (mmu float64)
 
 ```
 searchKey: trace.TestMUD
+tags: [private]
 ```
 
 ```Go
@@ -2550,6 +2569,7 @@ func TestMUD(t *testing.T)
 
 ```
 searchKey: trace.TestMUDTracking
+tags: [private]
 ```
 
 ```Go
@@ -2560,6 +2580,7 @@ func TestMUDTracking(t *testing.T)
 
 ```
 searchKey: trace.TestCorruptedInputs
+tags: [private]
 ```
 
 ```Go
@@ -2570,6 +2591,7 @@ func TestCorruptedInputs(t *testing.T)
 
 ```
 searchKey: trace.TestParseCanned
+tags: [private]
 ```
 
 ```Go
@@ -2580,6 +2602,7 @@ func TestParseCanned(t *testing.T)
 
 ```
 searchKey: trace.TestParseVersion
+tags: [private]
 ```
 
 ```Go
@@ -2590,6 +2613,7 @@ func TestParseVersion(t *testing.T)
 
 ```
 searchKey: trace.TestTimestampOverflow
+tags: [private]
 ```
 
 ```Go

@@ -24,10 +24,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="config" href="#config">var config</a>
 
 ```
 searchKey: config.config
+tags: [private]
 ```
 
 ```Go
@@ -40,6 +45,7 @@ This is a singleton because, well, the entire site configuration system essentia
 
 ```
 searchKey: config.mu
+tags: [private]
 ```
 
 ```Go
@@ -50,10 +56,15 @@ This is a singleton because, well, the entire site configuration system essentia
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="configuration" href="#configuration">type configuration struct</a>
 
 ```
 searchKey: config.configuration
+tags: [private]
 ```
 
 ```Go
@@ -71,6 +82,7 @@ configuration wraps window.Configuration in a thread-safe manner, while allowing
 
 ```
 searchKey: config.ensureConfig
+tags: [private]
 ```
 
 ```Go
@@ -83,6 +95,7 @@ ensureConfig grabs the current configuration, lazily constructing it if necessar
 
 ```
 searchKey: config.newConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -93,6 +106,7 @@ func newConfiguration() *configuration
 
 ```
 searchKey: config.configuration.Active
+tags: [private]
 ```
 
 ```Go
@@ -103,6 +117,7 @@ func (c *configuration) Active() *window.Configuration
 
 ```
 searchKey: config.configuration.Subscribe
+tags: [private]
 ```
 
 ```Go
@@ -113,6 +128,7 @@ func (c *configuration) Subscribe() chan *window.Configuration
 
 ```
 searchKey: config.configuration.Unsubscribe
+tags: [private]
 ```
 
 ```Go
@@ -123,6 +139,7 @@ func (c *configuration) Unsubscribe(ch chan *window.Configuration)
 
 ```
 searchKey: config.configuration.notify
+tags: [private]
 ```
 
 ```Go
@@ -131,11 +148,14 @@ func (c *configuration) notify()
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ActiveWindow" href="#ActiveWindow">func ActiveWindow() *window.Configuration</a>
 
 ```
 searchKey: config.ActiveWindow
-tags: [exported]
 ```
 
 ```Go
@@ -148,7 +168,6 @@ ActiveWindow returns the window configuration in effect at the present time. Thi
 
 ```
 searchKey: config.Subscribe
-tags: [exported]
 ```
 
 ```Go
@@ -161,7 +180,6 @@ Subscribe returns a channel that will receive a message with the new configurati
 
 ```
 searchKey: config.Unsubscribe
-tags: [exported]
 ```
 
 ```Go
@@ -174,7 +192,6 @@ Unsubscribe removes a channel returned from Subscribe() from the notification li
 
 ```
 searchKey: config.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -187,6 +204,7 @@ Reset destroys the existing singleton and forces it to be reinitialised the next
 
 ```
 searchKey: config.sameConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +215,7 @@ func sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool
 
 ```
 searchKey: config.TestConfiguration
+tags: [private]
 ```
 
 ```Go

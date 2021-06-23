@@ -13,11 +13,14 @@ Package testcert contains a test-only localhost certificate.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="LocalhostCert" href="#LocalhostCert">var LocalhostCert</a>
 
 ```
 searchKey: testcert.LocalhostCert
-tags: [exported]
 ```
 
 ```Go
@@ -30,7 +33,6 @@ LocalhostCert is a PEM-encoded TLS cert with SAN IPs "127.0.0.1" and "[::1]", ex
 
 ```
 searchKey: testcert.LocalhostKey
-tags: [exported]
 ```
 
 ```Go
@@ -41,10 +43,15 @@ LocalhostKey is the private key for LocalhostCert.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="testingKey" href="#testingKey">func testingKey(s string) string</a>
 
 ```
 searchKey: testcert.testingKey
+tags: [private]
 ```
 
 ```Go

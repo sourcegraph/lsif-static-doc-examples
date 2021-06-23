@@ -4,9 +4,7 @@
     "identifier": "plugin",
     "newPage": true,
     "searchKey": "plugin",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "pluginsMu",
                 "newPage": false,
                 "searchKey": "plugin.pluginsMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "plugins",
                 "newPage": false,
                 "searchKey": "plugin.plugins",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,9 +87,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -107,9 +105,7 @@
                 "identifier": "Plugin",
                 "newPage": false,
                 "searchKey": "plugin.Plugin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +123,7 @@
                       "identifier": "Open",
                       "newPage": false,
                       "searchKey": "plugin.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -149,7 +143,9 @@
                       "identifier": "open",
                       "newPage": false,
                       "searchKey": "plugin.open",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -169,9 +165,7 @@
                       "identifier": "Plugin.Lookup",
                       "newPage": false,
                       "searchKey": "plugin.Plugin.Lookup",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -194,9 +188,7 @@
                 "identifier": "Symbol",
                 "newPage": false,
                 "searchKey": "plugin.Symbol",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -214,7 +206,9 @@
                       "identifier": "lookup",
                       "newPage": false,
                       "searchKey": "plugin.lookup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -240,9 +234,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -260,7 +252,9 @@
                 "identifier": "lastmoduleinit",
                 "newPage": false,
                 "searchKey": "plugin.lastmoduleinit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -280,7 +274,9 @@
                 "identifier": "doInit",
                 "newPage": false,
                 "searchKey": "plugin.doInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

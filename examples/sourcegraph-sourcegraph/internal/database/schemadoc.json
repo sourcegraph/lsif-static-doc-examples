@@ -4,7 +4,9 @@
     "identifier": "schemadoc",
     "newPage": true,
     "searchKey": "internal/database/schemadoc",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "databaseNamePrefix",
                 "newPage": false,
                 "searchKey": "main.databaseNamePrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "containerName",
                 "newPage": false,
                 "searchKey": "main.containerName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "logger",
                 "newPage": false,
                 "searchKey": "main.logger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "versionRe",
                 "newPage": false,
                 "searchKey": "main.versionRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "databases",
                 "newPage": false,
                 "searchKey": "main.databases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +180,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -182,7 +200,9 @@
                 "identifier": "runFunc",
                 "newPage": false,
                 "searchKey": "main.runFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -200,7 +220,9 @@
                       "identifier": "runWithPrefix",
                       "newPage": false,
                       "searchKey": "main.runWithPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -223,7 +245,9 @@
                 "identifier": "table",
                 "newPage": false,
                 "searchKey": "main.table",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -246,7 +270,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -264,7 +290,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -284,7 +312,9 @@
                 "identifier": "mainErr",
                 "newPage": false,
                 "searchKey": "main.mainErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,7 +334,9 @@
                 "identifier": "mainLocal",
                 "newPage": false,
                 "searchKey": "main.mainLocal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -324,7 +356,9 @@
                 "identifier": "mainContainer",
                 "newPage": false,
                 "searchKey": "main.mainContainer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -344,7 +378,9 @@
                 "identifier": "generateAndWrite",
                 "newPage": false,
                 "searchKey": "main.generateAndWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,7 +400,9 @@
                 "identifier": "startDocker",
                 "newPage": false,
                 "searchKey": "main.startDocker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -384,7 +422,9 @@
                 "identifier": "generateInternal",
                 "newPage": false,
                 "searchKey": "main.generateInternal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -404,7 +444,9 @@
                 "identifier": "getTables",
                 "newPage": false,
                 "searchKey": "main.getTables",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -424,7 +466,9 @@
                 "identifier": "describeTable",
                 "newPage": false,
                 "searchKey": "main.describeTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -444,7 +488,9 @@
                 "identifier": "getTableComment",
                 "newPage": false,
                 "searchKey": "main.getTableComment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -464,7 +510,9 @@
                 "identifier": "getViewQuery",
                 "newPage": false,
                 "searchKey": "main.getViewQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -484,7 +532,9 @@
                 "identifier": "getColumnComments",
                 "newPage": false,
                 "searchKey": "main.getColumnComments",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -504,7 +554,9 @@
                 "identifier": "describeTypes",
                 "newPage": false,
                 "searchKey": "main.describeTypes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

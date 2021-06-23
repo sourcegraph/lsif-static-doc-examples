@@ -4,7 +4,9 @@
     "identifier": "fiat",
     "newPage": true,
     "searchKey": "crypto/elliptic/internal/fiat",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "p521ZeroEncoding",
                 "newPage": false,
                 "searchKey": "fiat.p521ZeroEncoding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "P521Element",
                 "newPage": false,
                 "searchKey": "fiat.P521Element",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -101,9 +107,7 @@
                       "identifier": "P521Element.One",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.One",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -123,9 +127,7 @@
                       "identifier": "P521Element.Equal",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -145,9 +147,7 @@
                       "identifier": "P521Element.IsZero",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.IsZero",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -167,9 +167,7 @@
                       "identifier": "P521Element.Set",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -189,9 +187,7 @@
                       "identifier": "P521Element.Bytes",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Bytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -211,9 +207,7 @@
                       "identifier": "P521Element.SetBytes",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.SetBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -233,9 +227,7 @@
                       "identifier": "P521Element.Add",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -255,9 +247,7 @@
                       "identifier": "P521Element.Sub",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Sub",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -277,9 +267,7 @@
                       "identifier": "P521Element.Mul",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Mul",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -299,9 +287,7 @@
                       "identifier": "P521Element.Square",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Square",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -321,9 +307,7 @@
                       "identifier": "P521Element.Select",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Select",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -343,9 +327,7 @@
                       "identifier": "P521Element.Invert",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Invert",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -368,7 +350,9 @@
                 "identifier": "p521Uint1",
                 "newPage": false,
                 "searchKey": "fiat.p521Uint1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -386,7 +370,9 @@
                       "identifier": "p521AddcarryxU64",
                       "newPage": false,
                       "searchKey": "fiat.p521AddcarryxU64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -406,7 +392,9 @@
                       "identifier": "p521SubborrowxU64",
                       "newPage": false,
                       "searchKey": "fiat.p521SubborrowxU64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -429,7 +417,9 @@
                 "identifier": "p521Int1",
                 "newPage": false,
                 "searchKey": "fiat.p521Int1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -452,7 +442,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -470,7 +462,9 @@
                 "identifier": "p521AddcarryxU58",
                 "newPage": false,
                 "searchKey": "fiat.p521AddcarryxU58",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -490,7 +484,9 @@
                 "identifier": "p521SubborrowxU58",
                 "newPage": false,
                 "searchKey": "fiat.p521SubborrowxU58",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -510,7 +506,9 @@
                 "identifier": "p521AddcarryxU57",
                 "newPage": false,
                 "searchKey": "fiat.p521AddcarryxU57",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -530,7 +528,9 @@
                 "identifier": "p521SubborrowxU57",
                 "newPage": false,
                 "searchKey": "fiat.p521SubborrowxU57",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -550,7 +550,9 @@
                 "identifier": "p521CmovznzU64",
                 "newPage": false,
                 "searchKey": "fiat.p521CmovznzU64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -570,7 +572,9 @@
                 "identifier": "p521CarryMul",
                 "newPage": false,
                 "searchKey": "fiat.p521CarryMul",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -590,7 +594,9 @@
                 "identifier": "p521CarrySquare",
                 "newPage": false,
                 "searchKey": "fiat.p521CarrySquare",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -610,7 +616,9 @@
                 "identifier": "p521Carry",
                 "newPage": false,
                 "searchKey": "fiat.p521Carry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -630,7 +638,9 @@
                 "identifier": "p521Add",
                 "newPage": false,
                 "searchKey": "fiat.p521Add",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -650,7 +660,9 @@
                 "identifier": "p521Sub",
                 "newPage": false,
                 "searchKey": "fiat.p521Sub",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -670,7 +682,9 @@
                 "identifier": "p521ToBytes",
                 "newPage": false,
                 "searchKey": "fiat.p521ToBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -690,7 +704,9 @@
                 "identifier": "p521FromBytes",
                 "newPage": false,
                 "searchKey": "fiat.p521FromBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -710,7 +726,9 @@
                 "identifier": "p521Selectznz",
                 "newPage": false,
                 "searchKey": "fiat.p521Selectznz",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

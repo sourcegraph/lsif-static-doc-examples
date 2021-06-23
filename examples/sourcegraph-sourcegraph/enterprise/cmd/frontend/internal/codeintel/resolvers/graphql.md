@@ -206,7 +206,7 @@
     * [func TestDiagnostics(t *testing.T)](#TestDiagnostics)
     * [func TestDiagnosticsDefaultLimit(t *testing.T)](#TestDiagnosticsDefaultLimit)
     * [func TestDiagnosticsDefaultIllegalLimit(t *testing.T)](#TestDiagnosticsDefaultIllegalLimit)
-    * [func init()](#init)
+    * [func init()](#init.resolver_test.go)
     * [func TestDeleteLSIFUpload(t *testing.T)](#TestDeleteLSIFUpload)
     * [func TestDeleteLSIFUploadUnauthenticated(t *testing.T)](#TestDeleteLSIFUploadUnauthenticated)
     * [func TestDeleteLSIFIndex(t *testing.T)](#TestDeleteLSIFIndex)
@@ -222,11 +222,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DefaultReferencesPageSize" href="#DefaultReferencesPageSize">const DefaultReferencesPageSize</a>
 
 ```
 searchKey: graphql.DefaultReferencesPageSize
-tags: [exported]
 ```
 
 ```Go
@@ -239,7 +242,6 @@ DefaultReferencesPageSize is the reference result page size when no limit is sup
 
 ```
 searchKey: graphql.DefaultDiagnosticsPageSize
-tags: [exported]
 ```
 
 ```Go
@@ -252,7 +254,6 @@ DefaultDiagnosticsPageSize is the diagnostic result page size when no limit is s
 
 ```
 searchKey: graphql.DefaultUploadPageSize
-tags: [exported]
 ```
 
 ```Go
@@ -263,7 +264,6 @@ const DefaultUploadPageSize = 50
 
 ```
 searchKey: graphql.DefaultIndexPageSize
-tags: [exported]
 ```
 
 ```Go
@@ -274,6 +274,7 @@ const DefaultIndexPageSize = 50
 
 ```
 searchKey: graphql.numRoutines
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +285,7 @@ const numRoutines = 5
 
 ```
 searchKey: graphql.numRepositories
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +296,7 @@ const numRepositories = 10
 
 ```
 searchKey: graphql.numCommits
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +308,7 @@ const numCommits = 10 // per repo
 
 ```
 searchKey: graphql.numPaths
+tags: [private]
 ```
 
 ```Go
@@ -314,10 +318,15 @@ const numPaths = 10 // per commit
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="severities" href="#severities">var severities</a>
 
 ```
 searchKey: graphql.severities
+tags: [private]
 ```
 
 ```Go
@@ -333,7 +342,6 @@ var severities = map[int]string{
 
 ```
 searchKey: graphql.ErrIllegalLimit
-tags: [exported]
 ```
 
 ```Go
@@ -346,7 +354,6 @@ ErrIllegalLimit occurs when the user requests less than one object per page.
 
 ```
 searchKey: graphql.ErrIllegalBounds
-tags: [exported]
 ```
 
 ```Go
@@ -359,6 +366,7 @@ ErrIllegalBounds occurs when a negative or zero-width bound is supplied by the u
 
 ```
 searchKey: graphql.errAutoIndexingNotEnabled
+tags: [private]
 ```
 
 ```Go
@@ -369,6 +377,7 @@ var errAutoIndexingNotEnabled = errors.New("precise code intelligence auto index
 
 ```
 searchKey: graphql.autoIndexingEnabled
+tags: [private]
 ```
 
 ```Go
@@ -377,11 +386,14 @@ var autoIndexingEnabled = conf.CodeIntelAutoIndexingEnabled
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DiagnosticResolver" href="#DiagnosticResolver">type DiagnosticResolver struct</a>
 
 ```
 searchKey: graphql.DiagnosticResolver
-tags: [exported]
 ```
 
 ```Go
@@ -395,7 +407,6 @@ type DiagnosticResolver struct {
 
 ```
 searchKey: graphql.DiagnosticResolver.Severity
-tags: [exported]
 ```
 
 ```Go
@@ -406,7 +417,6 @@ func (r *DiagnosticResolver) Severity() (*string, error)
 
 ```
 searchKey: graphql.DiagnosticResolver.Code
-tags: [exported]
 ```
 
 ```Go
@@ -417,7 +427,6 @@ func (r *DiagnosticResolver) Code() (*string, error)
 
 ```
 searchKey: graphql.DiagnosticResolver.Source
-tags: [exported]
 ```
 
 ```Go
@@ -428,7 +437,6 @@ func (r *DiagnosticResolver) Source() (*string, error)
 
 ```
 searchKey: graphql.DiagnosticResolver.Message
-tags: [exported]
 ```
 
 ```Go
@@ -439,7 +447,6 @@ func (r *DiagnosticResolver) Message() (*string, error)
 
 ```
 searchKey: graphql.DiagnosticResolver.Location
-tags: [exported]
 ```
 
 ```Go
@@ -450,7 +457,6 @@ func (r *DiagnosticResolver) Location(ctx context.Context) (gql.LocationResolver
 
 ```
 searchKey: graphql.DiagnosticConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -465,7 +471,6 @@ type DiagnosticConnectionResolver struct {
 
 ```
 searchKey: graphql.DiagnosticConnectionResolver.Nodes
-tags: [exported]
 ```
 
 ```Go
@@ -476,7 +481,6 @@ func (r *DiagnosticConnectionResolver) Nodes(ctx context.Context) ([]gql.Diagnos
 
 ```
 searchKey: graphql.DiagnosticConnectionResolver.TotalCount
-tags: [exported]
 ```
 
 ```Go
@@ -487,7 +491,6 @@ func (r *DiagnosticConnectionResolver) TotalCount(ctx context.Context) (int32, e
 
 ```
 searchKey: graphql.DiagnosticConnectionResolver.PageInfo
-tags: [exported]
 ```
 
 ```Go
@@ -498,6 +501,7 @@ func (r *DiagnosticConnectionResolver) PageInfo(ctx context.Context) (*graphqlut
 
 ```
 searchKey: graphql.executionLogEntryResolver
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +514,7 @@ type executionLogEntryResolver struct {
 
 ```
 searchKey: graphql.executionLogEntryResolver.Key
+tags: [private]
 ```
 
 ```Go
@@ -520,6 +525,7 @@ func (r *executionLogEntryResolver) Key() string
 
 ```
 searchKey: graphql.executionLogEntryResolver.Command
+tags: [private]
 ```
 
 ```Go
@@ -530,6 +536,7 @@ func (r *executionLogEntryResolver) Command() []string
 
 ```
 searchKey: graphql.executionLogEntryResolver.ExitCode
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +547,7 @@ func (r *executionLogEntryResolver) ExitCode() int32
 
 ```
 searchKey: graphql.executionLogEntryResolver.StartTime
+tags: [private]
 ```
 
 ```Go
@@ -550,6 +558,7 @@ func (r *executionLogEntryResolver) StartTime() gql.DateTime
 
 ```
 searchKey: graphql.executionLogEntryResolver.DurationMilliseconds
+tags: [private]
 ```
 
 ```Go
@@ -560,6 +569,7 @@ func (r *executionLogEntryResolver) DurationMilliseconds() int32
 
 ```
 searchKey: graphql.executionLogEntryResolver.Out
+tags: [private]
 ```
 
 ```Go
@@ -570,7 +580,6 @@ func (r *executionLogEntryResolver) Out(ctx context.Context) (string, error)
 
 ```
 searchKey: graphql.HoverResolver
-tags: [exported]
 ```
 
 ```Go
@@ -584,7 +593,6 @@ type HoverResolver struct {
 
 ```
 searchKey: graphql.HoverResolver.Markdown
-tags: [exported]
 ```
 
 ```Go
@@ -595,7 +603,6 @@ func (r *HoverResolver) Markdown() gql.Markdown
 
 ```
 searchKey: graphql.HoverResolver.Range
-tags: [exported]
 ```
 
 ```Go
@@ -606,7 +613,6 @@ func (r *HoverResolver) Range() gql.RangeResolver
 
 ```
 searchKey: graphql.IndexResolver
-tags: [exported]
 ```
 
 ```Go
@@ -621,7 +627,6 @@ type IndexResolver struct {
 
 ```
 searchKey: graphql.IndexResolver.ID
-tags: [exported]
 ```
 
 ```Go
@@ -632,7 +637,6 @@ func (r *IndexResolver) ID() graphql.ID
 
 ```
 searchKey: graphql.IndexResolver.InputCommit
-tags: [exported]
 ```
 
 ```Go
@@ -643,7 +647,6 @@ func (r *IndexResolver) InputCommit() string
 
 ```
 searchKey: graphql.IndexResolver.InputRoot
-tags: [exported]
 ```
 
 ```Go
@@ -654,7 +657,6 @@ func (r *IndexResolver) InputRoot() string
 
 ```
 searchKey: graphql.IndexResolver.InputIndexer
-tags: [exported]
 ```
 
 ```Go
@@ -665,7 +667,6 @@ func (r *IndexResolver) InputIndexer() string
 
 ```
 searchKey: graphql.IndexResolver.QueuedAt
-tags: [exported]
 ```
 
 ```Go
@@ -676,7 +677,6 @@ func (r *IndexResolver) QueuedAt() gql.DateTime
 
 ```
 searchKey: graphql.IndexResolver.Failure
-tags: [exported]
 ```
 
 ```Go
@@ -687,7 +687,6 @@ func (r *IndexResolver) Failure() *string
 
 ```
 searchKey: graphql.IndexResolver.StartedAt
-tags: [exported]
 ```
 
 ```Go
@@ -698,7 +697,6 @@ func (r *IndexResolver) StartedAt() *gql.DateTime
 
 ```
 searchKey: graphql.IndexResolver.FinishedAt
-tags: [exported]
 ```
 
 ```Go
@@ -709,7 +707,6 @@ func (r *IndexResolver) FinishedAt() *gql.DateTime
 
 ```
 searchKey: graphql.IndexResolver.Steps
-tags: [exported]
 ```
 
 ```Go
@@ -720,7 +717,6 @@ func (r *IndexResolver) Steps() gql.IndexStepsResolver
 
 ```
 searchKey: graphql.IndexResolver.PlaceInQueue
-tags: [exported]
 ```
 
 ```Go
@@ -731,7 +727,6 @@ func (r *IndexResolver) PlaceInQueue() *int32
 
 ```
 searchKey: graphql.IndexResolver.State
-tags: [exported]
 ```
 
 ```Go
@@ -742,7 +737,6 @@ func (r *IndexResolver) State() string
 
 ```
 searchKey: graphql.IndexResolver.AssociatedUpload
-tags: [exported]
 ```
 
 ```Go
@@ -753,7 +747,6 @@ func (r *IndexResolver) AssociatedUpload(ctx context.Context) (gql.LSIFUploadRes
 
 ```
 searchKey: graphql.IndexResolver.ProjectRoot
-tags: [exported]
 ```
 
 ```Go
@@ -764,7 +757,6 @@ func (r *IndexResolver) ProjectRoot(ctx context.Context) (*gql.GitTreeEntryResol
 
 ```
 searchKey: graphql.IndexConfigurationResolver
-tags: [exported]
 ```
 
 ```Go
@@ -777,7 +769,6 @@ type IndexConfigurationResolver struct {
 
 ```
 searchKey: graphql.IndexConfigurationResolver.Configuration
-tags: [exported]
 ```
 
 ```Go
@@ -788,7 +779,6 @@ func (r *IndexConfigurationResolver) Configuration() *string
 
 ```
 searchKey: graphql.IndexConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -803,7 +793,6 @@ type IndexConnectionResolver struct {
 
 ```
 searchKey: graphql.IndexConnectionResolver.Nodes
-tags: [exported]
 ```
 
 ```Go
@@ -814,7 +803,6 @@ func (r *IndexConnectionResolver) Nodes(ctx context.Context) ([]gql.LSIFIndexRes
 
 ```
 searchKey: graphql.IndexConnectionResolver.TotalCount
-tags: [exported]
 ```
 
 ```Go
@@ -825,7 +813,6 @@ func (r *IndexConnectionResolver) TotalCount(ctx context.Context) (*int32, error
 
 ```
 searchKey: graphql.IndexConnectionResolver.PageInfo
-tags: [exported]
 ```
 
 ```Go
@@ -836,6 +823,7 @@ func (r *IndexConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.Pa
 
 ```
 searchKey: graphql.indexStepsResolver
+tags: [private]
 ```
 
 ```Go
@@ -860,6 +848,7 @@ The setup and teardown steps match the executor setup and teardown.
 
 ```
 searchKey: graphql.indexStepsResolver.Setup
+tags: [private]
 ```
 
 ```Go
@@ -870,6 +859,7 @@ func (r *indexStepsResolver) Setup() []gql.ExecutionLogEntryResolver
 
 ```
 searchKey: graphql.indexStepsResolver.PreIndex
+tags: [private]
 ```
 
 ```Go
@@ -880,6 +870,7 @@ func (r *indexStepsResolver) PreIndex() []gql.PreIndexStepResolver
 
 ```
 searchKey: graphql.indexStepsResolver.Index
+tags: [private]
 ```
 
 ```Go
@@ -890,6 +881,7 @@ func (r *indexStepsResolver) Index() gql.IndexStepResolver
 
 ```
 searchKey: graphql.indexStepsResolver.Upload
+tags: [private]
 ```
 
 ```Go
@@ -900,6 +892,7 @@ func (r *indexStepsResolver) Upload() gql.ExecutionLogEntryResolver
 
 ```
 searchKey: graphql.indexStepsResolver.Teardown
+tags: [private]
 ```
 
 ```Go
@@ -910,6 +903,7 @@ func (r *indexStepsResolver) Teardown() []gql.ExecutionLogEntryResolver
 
 ```
 searchKey: graphql.indexStepsResolver.findExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -920,6 +914,7 @@ func (r *indexStepsResolver) findExecutionLogEntry(key string) (workerutil.Execu
 
 ```
 searchKey: graphql.indexStepsResolver.executionLogEntryResolversWithPrefix
+tags: [private]
 ```
 
 ```Go
@@ -930,6 +925,7 @@ func (r *indexStepsResolver) executionLogEntryResolversWithPrefix(prefix string)
 
 ```
 searchKey: graphql.indexStepResolver
+tags: [private]
 ```
 
 ```Go
@@ -943,6 +939,7 @@ type indexStepResolver struct {
 
 ```
 searchKey: graphql.indexStepResolver.IndexerArgs
+tags: [private]
 ```
 
 ```Go
@@ -953,6 +950,7 @@ func (r *indexStepResolver) IndexerArgs() []string
 
 ```
 searchKey: graphql.indexStepResolver.Outfile
+tags: [private]
 ```
 
 ```Go
@@ -963,6 +961,7 @@ func (r *indexStepResolver) Outfile() *string
 
 ```
 searchKey: graphql.indexStepResolver.LogEntry
+tags: [private]
 ```
 
 ```Go
@@ -973,6 +972,7 @@ func (r *indexStepResolver) LogEntry() gql.ExecutionLogEntryResolver
 
 ```
 searchKey: graphql.preIndexStepResolver
+tags: [private]
 ```
 
 ```Go
@@ -986,6 +986,7 @@ type preIndexStepResolver struct {
 
 ```
 searchKey: graphql.preIndexStepResolver.Root
+tags: [private]
 ```
 
 ```Go
@@ -996,6 +997,7 @@ func (r *preIndexStepResolver) Root() string
 
 ```
 searchKey: graphql.preIndexStepResolver.Image
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +1008,7 @@ func (r *preIndexStepResolver) Image() string
 
 ```
 searchKey: graphql.preIndexStepResolver.Commands
+tags: [private]
 ```
 
 ```Go
@@ -1016,6 +1019,7 @@ func (r *preIndexStepResolver) Commands() []string
 
 ```
 searchKey: graphql.preIndexStepResolver.LogEntry
+tags: [private]
 ```
 
 ```Go
@@ -1026,7 +1030,6 @@ func (r *preIndexStepResolver) LogEntry() gql.ExecutionLogEntryResolver
 
 ```
 searchKey: graphql.LocationConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1041,7 +1044,6 @@ type LocationConnectionResolver struct {
 
 ```
 searchKey: graphql.LocationConnectionResolver.Nodes
-tags: [exported]
 ```
 
 ```Go
@@ -1052,7 +1054,6 @@ func (r *LocationConnectionResolver) Nodes(ctx context.Context) ([]gql.LocationR
 
 ```
 searchKey: graphql.LocationConnectionResolver.PageInfo
-tags: [exported]
 ```
 
 ```Go
@@ -1063,7 +1064,6 @@ func (r *LocationConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil
 
 ```
 searchKey: graphql.CachedLocationResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1082,7 +1082,6 @@ This resolver maintains a hierarchy of caches as a way to decrease lock contenti
 
 ```
 searchKey: graphql.NewCachedLocationResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1095,7 +1094,6 @@ NewCachedLocationResolver creates a location resolver with an empty cache.
 
 ```
 searchKey: graphql.CachedLocationResolver.Repository
-tags: [exported]
 ```
 
 ```Go
@@ -1108,7 +1106,6 @@ Repository resolves the repository with the given identifier. This method may re
 
 ```
 searchKey: graphql.CachedLocationResolver.Commit
-tags: [exported]
 ```
 
 ```Go
@@ -1121,7 +1118,6 @@ Commit resolves the git commit with the given repository identifier and commit h
 
 ```
 searchKey: graphql.CachedLocationResolver.Path
-tags: [exported]
 ```
 
 ```Go
@@ -1134,6 +1130,7 @@ Path resolves the git tree entry with the given repository identifier, commit ha
 
 ```
 searchKey: graphql.CachedLocationResolver.cachedRepository
+tags: [private]
 ```
 
 ```Go
@@ -1148,6 +1145,7 @@ See [https://en.wikipedia.org/wiki/Double-checked_locking](https://en.wikipedia.
 
 ```
 searchKey: graphql.CachedLocationResolver.cachedCommit
+tags: [private]
 ```
 
 ```Go
@@ -1162,6 +1160,7 @@ See [https://en.wikipedia.org/wiki/Double-checked_locking](https://en.wikipedia.
 
 ```
 searchKey: graphql.CachedLocationResolver.cachedPath
+tags: [private]
 ```
 
 ```Go
@@ -1176,6 +1175,7 @@ See [https://en.wikipedia.org/wiki/Double-checked_locking](https://en.wikipedia.
 
 ```
 searchKey: graphql.CachedLocationResolver.resolveRepository
+tags: [private]
 ```
 
 ```Go
@@ -1188,6 +1188,7 @@ Repository resolves the repository with the given identifier. This method may re
 
 ```
 searchKey: graphql.CachedLocationResolver.resolveCommit
+tags: [private]
 ```
 
 ```Go
@@ -1200,6 +1201,7 @@ Commit resolves the git commit with the given repository resolver and commit has
 
 ```
 searchKey: graphql.CachedLocationResolver.resolvePath
+tags: [private]
 ```
 
 ```Go
@@ -1212,6 +1214,7 @@ Path resolves the git tree entry with the given commit resolver and relative pat
 
 ```
 searchKey: graphql.cachedRepositoryResolver
+tags: [private]
 ```
 
 ```Go
@@ -1226,6 +1229,7 @@ type cachedRepositoryResolver struct {
 
 ```
 searchKey: graphql.cachedCommitResolver
+tags: [private]
 ```
 
 ```Go
@@ -1240,7 +1244,6 @@ type cachedCommitResolver struct {
 
 ```
 searchKey: graphql.Prefetcher
-tags: [exported]
 ```
 
 ```Go
@@ -1260,7 +1263,6 @@ Prefetcher is a batch query utility and cache used to reduce the amount of datab
 
 ```
 searchKey: graphql.NewPrefetcher
-tags: [exported]
 ```
 
 ```Go
@@ -1273,7 +1275,6 @@ NewPrefetcher returns a prefetcher with an empty cache.
 
 ```
 searchKey: graphql.Prefetcher.MarkUpload
-tags: [exported]
 ```
 
 ```Go
@@ -1286,7 +1287,6 @@ MarkUpload adds the given identifier to the next batch of uploads to fetch.
 
 ```
 searchKey: graphql.Prefetcher.GetUploadByID
-tags: [exported]
 ```
 
 ```Go
@@ -1299,7 +1299,6 @@ GetUploadByID will return an upload with the given identifier as well as a boole
 
 ```
 searchKey: graphql.Prefetcher.MarkIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1312,7 +1311,6 @@ MarkIndex adds the given identifier to the next batch of indexes to fetch.
 
 ```
 searchKey: graphql.Prefetcher.GetIndexByID
-tags: [exported]
 ```
 
 ```Go
@@ -1325,7 +1323,6 @@ GetIndexByID will return an index with the given identifier as well as a boolean
 
 ```
 searchKey: graphql.QueryResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1341,7 +1338,6 @@ QueryResolver is the main interface to bundle-related operations exposed to the 
 
 ```
 searchKey: graphql.QueryResolver.ToGitTreeLSIFData
-tags: [exported]
 ```
 
 ```Go
@@ -1352,7 +1348,6 @@ func (r *QueryResolver) ToGitTreeLSIFData() (gql.GitTreeLSIFDataResolver, bool)
 
 ```
 searchKey: graphql.QueryResolver.ToGitBlobLSIFData
-tags: [exported]
 ```
 
 ```Go
@@ -1363,7 +1358,6 @@ func (r *QueryResolver) ToGitBlobLSIFData() (gql.GitBlobLSIFDataResolver, bool)
 
 ```
 searchKey: graphql.QueryResolver.Ranges
-tags: [exported]
 ```
 
 ```Go
@@ -1374,7 +1368,6 @@ func (r *QueryResolver) Ranges(ctx context.Context, args *gql.LSIFRangesArgs) (g
 
 ```
 searchKey: graphql.QueryResolver.Definitions
-tags: [exported]
 ```
 
 ```Go
@@ -1385,7 +1378,6 @@ func (r *QueryResolver) Definitions(ctx context.Context, args *gql.LSIFQueryPosi
 
 ```
 searchKey: graphql.QueryResolver.References
-tags: [exported]
 ```
 
 ```Go
@@ -1396,7 +1388,6 @@ func (r *QueryResolver) References(ctx context.Context, args *gql.LSIFPagedQuery
 
 ```
 searchKey: graphql.QueryResolver.Hover
-tags: [exported]
 ```
 
 ```Go
@@ -1407,7 +1398,6 @@ func (r *QueryResolver) Hover(ctx context.Context, args *gql.LSIFQueryPositionAr
 
 ```
 searchKey: graphql.QueryResolver.Diagnostics
-tags: [exported]
 ```
 
 ```Go
@@ -1418,7 +1408,6 @@ func (r *QueryResolver) Diagnostics(ctx context.Context, args *gql.LSIFDiagnosti
 
 ```
 searchKey: graphql.QueryResolver.DocumentationPage
-tags: [exported]
 ```
 
 ```Go
@@ -1429,7 +1418,6 @@ func (r *QueryResolver) DocumentationPage(ctx context.Context, args *gql.LSIFDoc
 
 ```
 searchKey: graphql.DocumentationPageResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1442,7 +1430,6 @@ type DocumentationPageResolver struct {
 
 ```
 searchKey: graphql.DocumentationPageResolver.Tree
-tags: [exported]
 ```
 
 ```Go
@@ -1453,7 +1440,6 @@ func (r *DocumentationPageResolver) Tree() gql.JSONValue
 
 ```
 searchKey: graphql.CodeIntelligenceRangeResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1467,7 +1453,6 @@ type CodeIntelligenceRangeResolver struct {
 
 ```
 searchKey: graphql.CodeIntelligenceRangeResolver.Range
-tags: [exported]
 ```
 
 ```Go
@@ -1478,7 +1463,6 @@ func (r *CodeIntelligenceRangeResolver) Range(ctx context.Context) (gql.RangeRes
 
 ```
 searchKey: graphql.CodeIntelligenceRangeResolver.Definitions
-tags: [exported]
 ```
 
 ```Go
@@ -1489,7 +1473,6 @@ func (r *CodeIntelligenceRangeResolver) Definitions(ctx context.Context) (gql.Lo
 
 ```
 searchKey: graphql.CodeIntelligenceRangeResolver.References
-tags: [exported]
 ```
 
 ```Go
@@ -1500,7 +1483,6 @@ func (r *CodeIntelligenceRangeResolver) References(ctx context.Context) (gql.Loc
 
 ```
 searchKey: graphql.CodeIntelligenceRangeResolver.Hover
-tags: [exported]
 ```
 
 ```Go
@@ -1511,7 +1493,6 @@ func (r *CodeIntelligenceRangeResolver) Hover(ctx context.Context) (gql.HoverRes
 
 ```
 searchKey: graphql.CodeIntelligenceRangeConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1525,7 +1506,6 @@ type CodeIntelligenceRangeConnectionResolver struct {
 
 ```
 searchKey: graphql.CodeIntelligenceRangeConnectionResolver.Nodes
-tags: [exported]
 ```
 
 ```Go
@@ -1536,7 +1516,6 @@ func (r *CodeIntelligenceRangeConnectionResolver) Nodes(ctx context.Context) ([]
 
 ```
 searchKey: graphql.Resolver
-tags: [exported]
 ```
 
 ```Go
@@ -1552,7 +1531,6 @@ Resolver is the main interface to code intel-related operations exposted to the 
 
 ```
 searchKey: graphql.Resolver.NodeResolvers
-tags: [exported]
 ```
 
 ```Go
@@ -1563,7 +1541,6 @@ func (r *Resolver) NodeResolvers() map[string]gql.NodeByIDFunc
 
 ```
 searchKey: graphql.Resolver.LSIFUploadByID
-tags: [exported]
 ```
 
 ```Go
@@ -1574,7 +1551,6 @@ func (r *Resolver) LSIFUploadByID(ctx context.Context, id graphql.ID) (gql.LSIFU
 
 ```
 searchKey: graphql.Resolver.LSIFUploads
-tags: [exported]
 ```
 
 ```Go
@@ -1585,7 +1561,6 @@ func (r *Resolver) LSIFUploads(ctx context.Context, args *gql.LSIFUploadsQueryAr
 
 ```
 searchKey: graphql.Resolver.LSIFUploadsByRepo
-tags: [exported]
 ```
 
 ```Go
@@ -1596,7 +1571,6 @@ func (r *Resolver) LSIFUploadsByRepo(ctx context.Context, args *gql.LSIFReposito
 
 ```
 searchKey: graphql.Resolver.DeleteLSIFUpload
-tags: [exported]
 ```
 
 ```Go
@@ -1607,7 +1581,6 @@ func (r *Resolver) DeleteLSIFUpload(ctx context.Context, args *struct{ ID graphq
 
 ```
 searchKey: graphql.Resolver.LSIFIndexByID
-tags: [exported]
 ```
 
 ```Go
@@ -1618,7 +1591,6 @@ func (r *Resolver) LSIFIndexByID(ctx context.Context, id graphql.ID) (gql.LSIFIn
 
 ```
 searchKey: graphql.Resolver.LSIFIndexes
-tags: [exported]
 ```
 
 ```Go
@@ -1629,7 +1601,6 @@ func (r *Resolver) LSIFIndexes(ctx context.Context, args *gql.LSIFIndexesQueryAr
 
 ```
 searchKey: graphql.Resolver.LSIFIndexesByRepo
-tags: [exported]
 ```
 
 ```Go
@@ -1640,7 +1611,6 @@ func (r *Resolver) LSIFIndexesByRepo(ctx context.Context, args *gql.LSIFReposito
 
 ```
 searchKey: graphql.Resolver.DeleteLSIFIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1651,7 +1621,6 @@ func (r *Resolver) DeleteLSIFIndex(ctx context.Context, args *struct{ ID graphql
 
 ```
 searchKey: graphql.Resolver.IndexConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -1662,7 +1631,6 @@ func (r *Resolver) IndexConfiguration(ctx context.Context, id graphql.ID) (gql.I
 
 ```
 searchKey: graphql.Resolver.UpdateRepositoryIndexConfiguration
-tags: [exported]
 ```
 
 ```Go
@@ -1673,7 +1641,6 @@ func (r *Resolver) UpdateRepositoryIndexConfiguration(ctx context.Context, args 
 
 ```
 searchKey: graphql.Resolver.CommitGraph
-tags: [exported]
 ```
 
 ```Go
@@ -1684,7 +1651,6 @@ func (r *Resolver) CommitGraph(ctx context.Context, id graphql.ID) (gql.CodeInte
 
 ```
 searchKey: graphql.Resolver.QueueAutoIndexJobForRepo
-tags: [exported]
 ```
 
 ```Go
@@ -1695,7 +1661,6 @@ func (r *Resolver) QueueAutoIndexJobForRepo(ctx context.Context, args *struct{ R
 
 ```
 searchKey: graphql.Resolver.GitBlobLSIFData
-tags: [exported]
 ```
 
 ```Go
@@ -1706,7 +1671,6 @@ func (r *Resolver) GitBlobLSIFData(ctx context.Context, args *gql.GitBlobLSIFDat
 
 ```
 searchKey: graphql.UploadResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1721,7 +1685,6 @@ type UploadResolver struct {
 
 ```
 searchKey: graphql.UploadResolver.ID
-tags: [exported]
 ```
 
 ```Go
@@ -1732,7 +1695,6 @@ func (r *UploadResolver) ID() graphql.ID
 
 ```
 searchKey: graphql.UploadResolver.InputCommit
-tags: [exported]
 ```
 
 ```Go
@@ -1743,7 +1705,6 @@ func (r *UploadResolver) InputCommit() string
 
 ```
 searchKey: graphql.UploadResolver.InputRoot
-tags: [exported]
 ```
 
 ```Go
@@ -1754,7 +1715,6 @@ func (r *UploadResolver) InputRoot() string
 
 ```
 searchKey: graphql.UploadResolver.IsLatestForRepo
-tags: [exported]
 ```
 
 ```Go
@@ -1765,7 +1725,6 @@ func (r *UploadResolver) IsLatestForRepo() bool
 
 ```
 searchKey: graphql.UploadResolver.UploadedAt
-tags: [exported]
 ```
 
 ```Go
@@ -1776,7 +1735,6 @@ func (r *UploadResolver) UploadedAt() gql.DateTime
 
 ```
 searchKey: graphql.UploadResolver.Failure
-tags: [exported]
 ```
 
 ```Go
@@ -1787,7 +1745,6 @@ func (r *UploadResolver) Failure() *string
 
 ```
 searchKey: graphql.UploadResolver.StartedAt
-tags: [exported]
 ```
 
 ```Go
@@ -1798,7 +1755,6 @@ func (r *UploadResolver) StartedAt() *gql.DateTime
 
 ```
 searchKey: graphql.UploadResolver.FinishedAt
-tags: [exported]
 ```
 
 ```Go
@@ -1809,7 +1765,6 @@ func (r *UploadResolver) FinishedAt() *gql.DateTime
 
 ```
 searchKey: graphql.UploadResolver.InputIndexer
-tags: [exported]
 ```
 
 ```Go
@@ -1820,7 +1775,6 @@ func (r *UploadResolver) InputIndexer() string
 
 ```
 searchKey: graphql.UploadResolver.PlaceInQueue
-tags: [exported]
 ```
 
 ```Go
@@ -1831,7 +1785,6 @@ func (r *UploadResolver) PlaceInQueue() *int32
 
 ```
 searchKey: graphql.UploadResolver.State
-tags: [exported]
 ```
 
 ```Go
@@ -1842,7 +1795,6 @@ func (r *UploadResolver) State() string
 
 ```
 searchKey: graphql.UploadResolver.AssociatedIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1853,7 +1805,6 @@ func (r *UploadResolver) AssociatedIndex(ctx context.Context) (gql.LSIFIndexReso
 
 ```
 searchKey: graphql.UploadResolver.ProjectRoot
-tags: [exported]
 ```
 
 ```Go
@@ -1864,7 +1815,6 @@ func (r *UploadResolver) ProjectRoot(ctx context.Context) (*gql.GitTreeEntryReso
 
 ```
 searchKey: graphql.UploadConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1879,7 +1829,6 @@ type UploadConnectionResolver struct {
 
 ```
 searchKey: graphql.UploadConnectionResolver.Nodes
-tags: [exported]
 ```
 
 ```Go
@@ -1890,7 +1839,6 @@ func (r *UploadConnectionResolver) Nodes(ctx context.Context) ([]gql.LSIFUploadR
 
 ```
 searchKey: graphql.UploadConnectionResolver.TotalCount
-tags: [exported]
 ```
 
 ```Go
@@ -1901,7 +1849,6 @@ func (r *UploadConnectionResolver) TotalCount(ctx context.Context) (*int32, erro
 
 ```
 searchKey: graphql.UploadConnectionResolver.PageInfo
-tags: [exported]
 ```
 
 ```Go
@@ -1910,10 +1857,15 @@ func (r *UploadConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.P
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="encodeCursor" href="#encodeCursor">func encodeCursor(val *string) *graphqlutil.PageInfo</a>
 
 ```
 searchKey: graphql.encodeCursor
+tags: [private]
 ```
 
 ```Go
@@ -1926,6 +1878,7 @@ encodeCursor creates a PageInfo object from the given cursor. If the cursor is n
 
 ```
 searchKey: graphql.decodeCursor
+tags: [private]
 ```
 
 ```Go
@@ -1938,6 +1891,7 @@ decodeCursor decodes the given cursor value. It is assumed to be a value previou
 
 ```
 searchKey: graphql.encodeIntCursor
+tags: [private]
 ```
 
 ```Go
@@ -1950,6 +1904,7 @@ encodeIntCursor creates a PageInfo object from the given new offset value. If th
 
 ```
 searchKey: graphql.decodeIntCursor
+tags: [private]
 ```
 
 ```Go
@@ -1962,7 +1917,6 @@ decodeIntCursor decodes the given integer cursor value. It is assumed to be a va
 
 ```
 searchKey: graphql.NewDiagnosticResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1973,6 +1927,7 @@ func NewDiagnosticResolver(diagnostic resolvers.AdjustedDiagnostic, locationReso
 
 ```
 searchKey: graphql.toSeverity
+tags: [private]
 ```
 
 ```Go
@@ -1983,7 +1938,6 @@ func toSeverity(val int) (*string, error)
 
 ```
 searchKey: graphql.NewDiagnosticConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1994,7 +1948,6 @@ func NewDiagnosticConnectionResolver(diagnostics []resolvers.AdjustedDiagnostic,
 
 ```
 searchKey: graphql.NewHoverResolver
-tags: [exported]
 ```
 
 ```Go
@@ -2005,6 +1958,7 @@ func NewHoverResolver(text string, lspRange lsp.Range) gql.HoverResolver
 
 ```
 searchKey: graphql.marshalLSIFUploadGQLID
+tags: [private]
 ```
 
 ```Go
@@ -2015,6 +1969,7 @@ func marshalLSIFUploadGQLID(uploadID int64) graphql.ID
 
 ```
 searchKey: graphql.unmarshalLSIFUploadGQLID
+tags: [private]
 ```
 
 ```Go
@@ -2025,6 +1980,7 @@ func unmarshalLSIFUploadGQLID(id graphql.ID) (uploadID int64, err error)
 
 ```
 searchKey: graphql.marshalLSIFIndexGQLID
+tags: [private]
 ```
 
 ```Go
@@ -2035,6 +1991,7 @@ func marshalLSIFIndexGQLID(indexID int64) graphql.ID
 
 ```
 searchKey: graphql.unmarshalLSIFIndexGQLID
+tags: [private]
 ```
 
 ```Go
@@ -2045,7 +2002,6 @@ func unmarshalLSIFIndexGQLID(id graphql.ID) (indexID int64, err error)
 
 ```
 searchKey: graphql.NewIndexResolver
-tags: [exported]
 ```
 
 ```Go
@@ -2056,7 +2012,6 @@ func NewIndexResolver(index store.Index, prefetcher *Prefetcher, locationResolve
 
 ```
 searchKey: graphql.NewIndexConfigurationResolver
-tags: [exported]
 ```
 
 ```Go
@@ -2067,7 +2022,6 @@ func NewIndexConfigurationResolver(configuration []byte) gql.IndexConfigurationR
 
 ```
 searchKey: graphql.NewIndexConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -2078,7 +2032,6 @@ func NewIndexConnectionResolver(resolver *resolvers.IndexesResolver, prefetcher 
 
 ```
 searchKey: graphql.NewLocationConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -2089,6 +2042,7 @@ func NewLocationConnectionResolver(locations []resolvers.AdjustedLocation, curso
 
 ```
 searchKey: graphql.resolveLocations
+tags: [private]
 ```
 
 ```Go
@@ -2101,6 +2055,7 @@ resolveLocations creates a slide of LocationResolvers for the given list of adju
 
 ```
 searchKey: graphql.resolveLocation
+tags: [private]
 ```
 
 ```Go
@@ -2113,7 +2068,6 @@ resolveLocation creates a LocationResolver for the given adjusted location. This
 
 ```
 searchKey: graphql.NewQueryResolver
-tags: [exported]
 ```
 
 ```Go
@@ -2126,7 +2080,6 @@ NewQueryResolver creates a new QueryResolver with the given resolver that define
 
 ```
 searchKey: graphql.NewResolver
-tags: [exported]
 ```
 
 ```Go
@@ -2139,6 +2092,7 @@ NewResolver creates a new Resolver with the given resolver that defines all code
 
 ```
 searchKey: graphql.makeGetUploadsOptions
+tags: [private]
 ```
 
 ```Go
@@ -2151,6 +2105,7 @@ makeGetUploadsOptions translates the given GraphQL arguments into options define
 
 ```
 searchKey: graphql.makeGetIndexesOptions
+tags: [private]
 ```
 
 ```Go
@@ -2163,6 +2118,7 @@ makeGetIndexesOptions translates the given GraphQL arguments into options define
 
 ```
 searchKey: graphql.resolveRepositoryID
+tags: [private]
 ```
 
 ```Go
@@ -2175,7 +2131,6 @@ resolveRepositoryByID gets a repository's internal identifier from a GraphQL ide
 
 ```
 searchKey: graphql.NewUploadResolver
-tags: [exported]
 ```
 
 ```Go
@@ -2186,7 +2141,6 @@ func NewUploadResolver(upload store.Upload, prefetcher *Prefetcher, locationReso
 
 ```
 searchKey: graphql.NewUploadConnectionResolver
-tags: [exported]
 ```
 
 ```Go
@@ -2197,6 +2151,7 @@ func NewUploadConnectionResolver(resolver *resolvers.UploadsResolver, prefetcher
 
 ```
 searchKey: graphql.strPtr
+tags: [private]
 ```
 
 ```Go
@@ -2209,6 +2164,7 @@ strPtr creates a pointer to the given value. If the value is an empty string, a 
 
 ```
 searchKey: graphql.intPtr
+tags: [private]
 ```
 
 ```Go
@@ -2221,6 +2177,7 @@ intPtr creates a pointer to the given value.
 
 ```
 searchKey: graphql.boolPtr
+tags: [private]
 ```
 
 ```Go
@@ -2233,6 +2190,7 @@ intPtr creates a pointer to the given value.
 
 ```
 searchKey: graphql.toInt32
+tags: [private]
 ```
 
 ```Go
@@ -2245,6 +2203,7 @@ toInt32 translates the given int pointer into an int32 pointer.
 
 ```
 searchKey: graphql.derefString
+tags: [private]
 ```
 
 ```Go
@@ -2257,6 +2216,7 @@ derefString returns the underlying value in the given pointer. If the pointer is
 
 ```
 searchKey: graphql.derefInt32
+tags: [private]
 ```
 
 ```Go
@@ -2269,6 +2229,7 @@ derefInt32 returns the underlying value in the given pointer. If the pointer is 
 
 ```
 searchKey: graphql.derefBool
+tags: [private]
 ```
 
 ```Go
@@ -2281,6 +2242,7 @@ derefBool returns the underlying value in the given pointer. If the pointer is n
 
 ```
 searchKey: graphql.convertRange
+tags: [private]
 ```
 
 ```Go
@@ -2293,6 +2255,7 @@ convertRange creates an LSP range from a bundle range.
 
 ```
 searchKey: graphql.convertPosition
+tags: [private]
 ```
 
 ```Go
@@ -2305,6 +2268,7 @@ convertPosition creates an LSP position from a line and character pair.
 
 ```
 searchKey: graphql.TestCursor
+tags: [private]
 ```
 
 ```Go
@@ -2315,6 +2279,7 @@ func TestCursor(t *testing.T)
 
 ```
 searchKey: graphql.TestCursorEmpty
+tags: [private]
 ```
 
 ```Go
@@ -2325,6 +2290,7 @@ func TestCursorEmpty(t *testing.T)
 
 ```
 searchKey: graphql.TestIntCursor
+tags: [private]
 ```
 
 ```Go
@@ -2335,6 +2301,7 @@ func TestIntCursor(t *testing.T)
 
 ```
 searchKey: graphql.TestIntCursorEmpty
+tags: [private]
 ```
 
 ```Go
@@ -2345,6 +2312,7 @@ func TestIntCursorEmpty(t *testing.T)
 
 ```
 searchKey: graphql.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -2355,6 +2323,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: graphql.TestUploadID
+tags: [private]
 ```
 
 ```Go
@@ -2365,6 +2334,7 @@ func TestUploadID(t *testing.T)
 
 ```
 searchKey: graphql.TestUnmarshalUploadIDString
+tags: [private]
 ```
 
 ```Go
@@ -2375,6 +2345,7 @@ func TestUnmarshalUploadIDString(t *testing.T)
 
 ```
 searchKey: graphql.TestIndexID
+tags: [private]
 ```
 
 ```Go
@@ -2385,6 +2356,7 @@ func TestIndexID(t *testing.T)
 
 ```
 searchKey: graphql.TestCachedLocationResolver
+tags: [private]
 ```
 
 ```Go
@@ -2395,6 +2367,7 @@ func TestCachedLocationResolver(t *testing.T)
 
 ```
 searchKey: graphql.TestCachedLocationResolverUnknownRepository
+tags: [private]
 ```
 
 ```Go
@@ -2405,6 +2378,7 @@ func TestCachedLocationResolverUnknownRepository(t *testing.T)
 
 ```
 searchKey: graphql.TestCachedLocationResolverUnknownCommit
+tags: [private]
 ```
 
 ```Go
@@ -2415,6 +2389,7 @@ func TestCachedLocationResolverUnknownCommit(t *testing.T)
 
 ```
 searchKey: graphql.TestResolveLocations
+tags: [private]
 ```
 
 ```Go
@@ -2425,6 +2400,7 @@ func TestResolveLocations(t *testing.T)
 
 ```
 searchKey: graphql.TestPrefetcherUploads
+tags: [private]
 ```
 
 ```Go
@@ -2435,6 +2411,7 @@ func TestPrefetcherUploads(t *testing.T)
 
 ```
 searchKey: graphql.TestPrefetcherIndexes
+tags: [private]
 ```
 
 ```Go
@@ -2445,6 +2422,7 @@ func TestPrefetcherIndexes(t *testing.T)
 
 ```
 searchKey: graphql.TestRanges
+tags: [private]
 ```
 
 ```Go
@@ -2455,6 +2433,7 @@ func TestRanges(t *testing.T)
 
 ```
 searchKey: graphql.TestDefinitions
+tags: [private]
 ```
 
 ```Go
@@ -2465,6 +2444,7 @@ func TestDefinitions(t *testing.T)
 
 ```
 searchKey: graphql.TestReferences
+tags: [private]
 ```
 
 ```Go
@@ -2475,6 +2455,7 @@ func TestReferences(t *testing.T)
 
 ```
 searchKey: graphql.TestReferencesDefaultLimit
+tags: [private]
 ```
 
 ```Go
@@ -2485,6 +2466,7 @@ func TestReferencesDefaultLimit(t *testing.T)
 
 ```
 searchKey: graphql.TestReferencesDefaultIllegalLimit
+tags: [private]
 ```
 
 ```Go
@@ -2495,6 +2477,7 @@ func TestReferencesDefaultIllegalLimit(t *testing.T)
 
 ```
 searchKey: graphql.TestHover
+tags: [private]
 ```
 
 ```Go
@@ -2505,6 +2488,7 @@ func TestHover(t *testing.T)
 
 ```
 searchKey: graphql.TestDiagnostics
+tags: [private]
 ```
 
 ```Go
@@ -2515,6 +2499,7 @@ func TestDiagnostics(t *testing.T)
 
 ```
 searchKey: graphql.TestDiagnosticsDefaultLimit
+tags: [private]
 ```
 
 ```Go
@@ -2525,16 +2510,18 @@ func TestDiagnosticsDefaultLimit(t *testing.T)
 
 ```
 searchKey: graphql.TestDiagnosticsDefaultIllegalLimit
+tags: [private]
 ```
 
 ```Go
 func TestDiagnosticsDefaultIllegalLimit(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.resolver_test.go" href="#init.resolver_test.go">func init()</a>
 
 ```
 searchKey: graphql.init
+tags: [private]
 ```
 
 ```Go
@@ -2545,6 +2532,7 @@ func init()
 
 ```
 searchKey: graphql.TestDeleteLSIFUpload
+tags: [private]
 ```
 
 ```Go
@@ -2555,6 +2543,7 @@ func TestDeleteLSIFUpload(t *testing.T)
 
 ```
 searchKey: graphql.TestDeleteLSIFUploadUnauthenticated
+tags: [private]
 ```
 
 ```Go
@@ -2565,6 +2554,7 @@ func TestDeleteLSIFUploadUnauthenticated(t *testing.T)
 
 ```
 searchKey: graphql.TestDeleteLSIFIndex
+tags: [private]
 ```
 
 ```Go
@@ -2575,6 +2565,7 @@ func TestDeleteLSIFIndex(t *testing.T)
 
 ```
 searchKey: graphql.TestDeleteLSIFIndexUnauthenticated
+tags: [private]
 ```
 
 ```Go
@@ -2585,6 +2576,7 @@ func TestDeleteLSIFIndexUnauthenticated(t *testing.T)
 
 ```
 searchKey: graphql.TestMakeGetUploadsOptions
+tags: [private]
 ```
 
 ```Go
@@ -2595,6 +2587,7 @@ func TestMakeGetUploadsOptions(t *testing.T)
 
 ```
 searchKey: graphql.TestMakeGetUploadsOptionsDefaults
+tags: [private]
 ```
 
 ```Go
@@ -2605,6 +2598,7 @@ func TestMakeGetUploadsOptionsDefaults(t *testing.T)
 
 ```
 searchKey: graphql.TestMakeGetIndexesOptions
+tags: [private]
 ```
 
 ```Go
@@ -2615,6 +2609,7 @@ func TestMakeGetIndexesOptions(t *testing.T)
 
 ```
 searchKey: graphql.TestMakeGetIndexesOptionsDefaults
+tags: [private]
 ```
 
 ```Go
@@ -2625,6 +2620,7 @@ func TestMakeGetIndexesOptionsDefaults(t *testing.T)
 
 ```
 searchKey: graphql.TestDerefString
+tags: [private]
 ```
 
 ```Go
@@ -2635,6 +2631,7 @@ func TestDerefString(t *testing.T)
 
 ```
 searchKey: graphql.TestDerefInt32
+tags: [private]
 ```
 
 ```Go
@@ -2645,6 +2642,7 @@ func TestDerefInt32(t *testing.T)
 
 ```
 searchKey: graphql.TestDerefBool
+tags: [private]
 ```
 
 ```Go

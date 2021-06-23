@@ -4,7 +4,9 @@
     "identifier": "singleflight",
     "newPage": true,
     "searchKey": "internal/singleflight",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "call",
                 "newPage": false,
                 "searchKey": "singleflight.call",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "Group",
                 "newPage": false,
                 "searchKey": "singleflight.Group",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -80,9 +84,7 @@
                       "identifier": "Group.Do",
                       "newPage": false,
                       "searchKey": "singleflight.Group.Do",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -102,9 +104,7 @@
                       "identifier": "Group.DoChan",
                       "newPage": false,
                       "searchKey": "singleflight.Group.DoChan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -124,7 +124,9 @@
                       "identifier": "Group.doCall",
                       "newPage": false,
                       "searchKey": "singleflight.Group.doCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -144,9 +146,7 @@
                       "identifier": "Group.ForgetUnshared",
                       "newPage": false,
                       "searchKey": "singleflight.Group.ForgetUnshared",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -169,9 +169,7 @@
                 "identifier": "Result",
                 "newPage": false,
                 "searchKey": "singleflight.Result",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,7 +192,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -212,7 +212,9 @@
                 "identifier": "TestDo",
                 "newPage": false,
                 "searchKey": "singleflight.TestDo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -232,7 +234,9 @@
                 "identifier": "TestDoErr",
                 "newPage": false,
                 "searchKey": "singleflight.TestDoErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -252,7 +256,9 @@
                 "identifier": "TestDoDupSuppress",
                 "newPage": false,
                 "searchKey": "singleflight.TestDoDupSuppress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -106,10 +106,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="getCommitsInRangeStr" href="#getCommitsInRangeStr">const getCommitsInRangeStr</a>
 
 ```
 searchKey: compression.getCommitsInRangeStr
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +125,7 @@ const getCommitsInRangeStr = ...
 
 ```
 searchKey: compression.insertCommitIndexStr
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +136,7 @@ const insertCommitIndexStr = ...
 
 ```
 searchKey: compression.getCommitIndexMetadataStr
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +147,7 @@ const getCommitIndexMetadataStr = ...
 
 ```
 searchKey: compression.upsertCommitIndexMetadataStampStr
+tags: [private]
 ```
 
 ```Go
@@ -148,11 +156,14 @@ const upsertCommitIndexMetadataStampStr = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DBCommitStore" href="#DBCommitStore">type DBCommitStore struct</a>
 
 ```
 searchKey: compression.DBCommitStore
-tags: [exported]
 ```
 
 ```Go
@@ -165,7 +176,6 @@ type DBCommitStore struct {
 
 ```
 searchKey: compression.NewCommitStore
-tags: [exported]
 ```
 
 ```Go
@@ -176,7 +186,6 @@ func NewCommitStore(db dbutil.DB) *DBCommitStore
 
 ```
 searchKey: compression.DBCommitStore.With
-tags: [exported]
 ```
 
 ```Go
@@ -187,7 +196,6 @@ func (c *DBCommitStore) With(other basestore.ShareableStore) *DBCommitStore
 
 ```
 searchKey: compression.DBCommitStore.Transact
-tags: [exported]
 ```
 
 ```Go
@@ -198,7 +206,6 @@ func (c *DBCommitStore) Transact(ctx context.Context) (*DBCommitStore, error)
 
 ```
 searchKey: compression.DBCommitStore.Save
-tags: [exported]
 ```
 
 ```Go
@@ -209,7 +216,6 @@ func (c *DBCommitStore) Save(ctx context.Context, id api.RepoID, commit *git.Com
 
 ```
 searchKey: compression.DBCommitStore.InsertCommits
-tags: [exported]
 ```
 
 ```Go
@@ -220,7 +226,6 @@ func (c *DBCommitStore) InsertCommits(ctx context.Context, id api.RepoID, commit
 
 ```
 searchKey: compression.DBCommitStore.Get
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +238,6 @@ Get Fetch all commits that occur for a specific repository and fall in a specifi
 
 ```
 searchKey: compression.DBCommitStore.GetMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -246,7 +250,6 @@ GetMetadata Returns commit index metadata for a given repository
 
 ```
 searchKey: compression.DBCommitStore.UpsertMetadataStamp
-tags: [exported]
 ```
 
 ```Go
@@ -259,7 +262,6 @@ UpsertMetadataStamp inserts (or updates, if the row already exists) the index me
 
 ```
 searchKey: compression.CommitStore
-tags: [exported]
 ```
 
 ```Go
@@ -276,7 +278,6 @@ type CommitStore interface {
 
 ```
 searchKey: compression.CommitStamp
-tags: [exported]
 ```
 
 ```Go
@@ -291,7 +292,6 @@ type CommitStamp struct {
 
 ```
 searchKey: compression.CommitIndexMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -306,6 +306,7 @@ type CommitIndexMetadata struct {
 
 ```
 searchKey: compression.getMetadata
+tags: [private]
 ```
 
 ```Go
@@ -318,7 +319,6 @@ getMetadata gets the index metadata for a repository. The metadata will be gener
 
 ```
 searchKey: compression.MockCommitStore
-tags: [exported]
 ```
 
 ```Go
@@ -347,7 +347,6 @@ MockCommitStore is a mock implementation of the CommitStore interface (from the 
 
 ```
 searchKey: compression.NewMockCommitStore
-tags: [exported]
 ```
 
 ```Go
@@ -360,7 +359,6 @@ NewMockCommitStore creates a new mock of the CommitStore interface. All methods 
 
 ```
 searchKey: compression.NewMockCommitStoreFrom
-tags: [exported]
 ```
 
 ```Go
@@ -373,7 +371,6 @@ NewMockCommitStoreFrom creates a new mock of the MockCommitStore interface. All 
 
 ```
 searchKey: compression.MockCommitStore.Get
-tags: [exported]
 ```
 
 ```Go
@@ -386,7 +383,6 @@ Get delegates to the next hook function in the queue and stores the parameter an
 
 ```
 searchKey: compression.MockCommitStore.GetMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -399,7 +395,6 @@ GetMetadata delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: compression.MockCommitStore.InsertCommits
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +407,6 @@ InsertCommits delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: compression.MockCommitStore.Save
-tags: [exported]
 ```
 
 ```Go
@@ -425,7 +419,6 @@ Save delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: compression.MockCommitStore.UpsertMetadataStamp
-tags: [exported]
 ```
 
 ```Go
@@ -438,7 +431,6 @@ UpsertMetadataStamp delegates to the next hook function in the queue and stores 
 
 ```
 searchKey: compression.CommitStoreGetFunc
-tags: [exported]
 ```
 
 ```Go
@@ -456,7 +448,6 @@ CommitStoreGetFunc describes the behavior when the Get method of the parent Mock
 
 ```
 searchKey: compression.CommitStoreGetFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -469,7 +460,6 @@ SetDefaultHook sets function that is called when the Get method of the parent Mo
 
 ```
 searchKey: compression.CommitStoreGetFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -482,7 +472,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Get me
 
 ```
 searchKey: compression.CommitStoreGetFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -495,7 +484,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: compression.CommitStoreGetFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -508,6 +496,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: compression.CommitStoreGetFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -518,6 +507,7 @@ func (f *CommitStoreGetFunc) nextHook() func(context.Context, api.RepoID, time.T
 
 ```
 searchKey: compression.CommitStoreGetFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -528,7 +518,6 @@ func (f *CommitStoreGetFunc) appendCall(r0 CommitStoreGetFuncCall)
 
 ```
 searchKey: compression.CommitStoreGetFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -541,7 +530,6 @@ History returns a sequence of CommitStoreGetFuncCall objects describing the invo
 
 ```
 searchKey: compression.CommitStoreGetFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -573,7 +561,6 @@ CommitStoreGetFuncCall is an object that describes an invocation of method Get o
 
 ```
 searchKey: compression.CommitStoreGetFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -586,7 +573,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: compression.CommitStoreGetFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -599,7 +585,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: compression.CommitStoreGetMetadataFunc
-tags: [exported]
 ```
 
 ```Go
@@ -617,7 +602,6 @@ CommitStoreGetMetadataFunc describes the behavior when the GetMetadata method of
 
 ```
 searchKey: compression.CommitStoreGetMetadataFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -630,7 +614,6 @@ SetDefaultHook sets function that is called when the GetMetadata method of the p
 
 ```
 searchKey: compression.CommitStoreGetMetadataFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -643,7 +626,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the GetMet
 
 ```
 searchKey: compression.CommitStoreGetMetadataFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -656,7 +638,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: compression.CommitStoreGetMetadataFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -669,6 +650,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: compression.CommitStoreGetMetadataFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -679,6 +661,7 @@ func (f *CommitStoreGetMetadataFunc) nextHook() func(context.Context, api.RepoID
 
 ```
 searchKey: compression.CommitStoreGetMetadataFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -689,7 +672,6 @@ func (f *CommitStoreGetMetadataFunc) appendCall(r0 CommitStoreGetMetadataFuncCal
 
 ```
 searchKey: compression.CommitStoreGetMetadataFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -702,7 +684,6 @@ History returns a sequence of CommitStoreGetMetadataFuncCall objects describing 
 
 ```
 searchKey: compression.CommitStoreGetMetadataFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -728,7 +709,6 @@ CommitStoreGetMetadataFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: compression.CommitStoreGetMetadataFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -741,7 +721,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: compression.CommitStoreGetMetadataFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -754,7 +733,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -772,7 +750,6 @@ CommitStoreInsertCommitsFunc describes the behavior when the InsertCommits metho
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -785,7 +762,6 @@ SetDefaultHook sets function that is called when the InsertCommits method of the
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -798,7 +774,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Insert
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -811,7 +786,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -824,6 +798,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -834,6 +809,7 @@ func (f *CommitStoreInsertCommitsFunc) nextHook() func(context.Context, api.Repo
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -844,7 +820,6 @@ func (f *CommitStoreInsertCommitsFunc) appendCall(r0 CommitStoreInsertCommitsFun
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -857,7 +832,6 @@ History returns a sequence of CommitStoreInsertCommitsFuncCall objects describin
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -883,7 +857,6 @@ CommitStoreInsertCommitsFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -896,7 +869,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -909,7 +881,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: compression.CommitStoreSaveFunc
-tags: [exported]
 ```
 
 ```Go
@@ -927,7 +898,6 @@ CommitStoreSaveFunc describes the behavior when the Save method of the parent Mo
 
 ```
 searchKey: compression.CommitStoreSaveFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -940,7 +910,6 @@ SetDefaultHook sets function that is called when the Save method of the parent M
 
 ```
 searchKey: compression.CommitStoreSaveFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -953,7 +922,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Save m
 
 ```
 searchKey: compression.CommitStoreSaveFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -966,7 +934,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: compression.CommitStoreSaveFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -979,6 +946,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: compression.CommitStoreSaveFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -989,6 +957,7 @@ func (f *CommitStoreSaveFunc) nextHook() func(context.Context, api.RepoID, *git.
 
 ```
 searchKey: compression.CommitStoreSaveFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -999,7 +968,6 @@ func (f *CommitStoreSaveFunc) appendCall(r0 CommitStoreSaveFuncCall)
 
 ```
 searchKey: compression.CommitStoreSaveFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1012,7 +980,6 @@ History returns a sequence of CommitStoreSaveFuncCall objects describing the inv
 
 ```
 searchKey: compression.CommitStoreSaveFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1038,7 +1005,6 @@ CommitStoreSaveFuncCall is an object that describes an invocation of method Save
 
 ```
 searchKey: compression.CommitStoreSaveFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1051,7 +1017,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: compression.CommitStoreSaveFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1064,7 +1029,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1082,7 +1046,6 @@ CommitStoreUpsertMetadataStampFunc describes the behavior when the UpsertMetadat
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1095,7 +1058,6 @@ SetDefaultHook sets function that is called when the UpsertMetadataStamp method 
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1108,7 +1070,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Upsert
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1121,7 +1082,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1134,6 +1094,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1105,7 @@ func (f *CommitStoreUpsertMetadataStampFunc) nextHook() func(context.Context, ap
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1154,7 +1116,6 @@ func (f *CommitStoreUpsertMetadataStampFunc) appendCall(r0 CommitStoreUpsertMeta
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1167,7 +1128,6 @@ History returns a sequence of CommitStoreUpsertMetadataStampFuncCall objects des
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1193,7 +1153,6 @@ CommitStoreUpsertMetadataStampFuncCall is an object that describes an invocation
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1206,7 +1165,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1219,7 +1177,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: compression.RepoStore
-tags: [exported]
 ```
 
 ```Go
@@ -1232,7 +1189,6 @@ type RepoStore interface {
 
 ```
 searchKey: compression.CommitIndexer
-tags: [exported]
 ```
 
 ```Go
@@ -1251,7 +1207,6 @@ type CommitIndexer struct {
 
 ```
 searchKey: compression.NewCommitIndexer
-tags: [exported]
 ```
 
 ```Go
@@ -1262,7 +1217,6 @@ func NewCommitIndexer(background context.Context, base dbutil.DB, insights dbuti
 
 ```
 searchKey: compression.CommitIndexer.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -1273,6 +1227,7 @@ func (i *CommitIndexer) Handler(ctx context.Context) goroutine.BackgroundRoutine
 
 ```
 searchKey: compression.CommitIndexer.indexAll
+tags: [private]
 ```
 
 ```Go
@@ -1283,6 +1238,7 @@ func (i *CommitIndexer) indexAll(ctx context.Context) error
 
 ```
 searchKey: compression.CommitIndexer.indexRepository
+tags: [private]
 ```
 
 ```Go
@@ -1295,6 +1251,7 @@ indexRepository attempts to index the commits given a repository name. This meth
 
 ```
 searchKey: compression.CommitIndexer.index
+tags: [private]
 ```
 
 ```Go
@@ -1303,11 +1260,14 @@ func (i *CommitIndexer) index(name string) error
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewCommitIndexerWorker" href="#NewCommitIndexerWorker">func NewCommitIndexerWorker(ctx context.Context, base dbutil.DB, insights dbutil.DB) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: compression.NewCommitIndexerWorker
-tags: [exported]
 ```
 
 ```Go
@@ -1318,6 +1278,7 @@ func NewCommitIndexerWorker(ctx context.Context, base dbutil.DB, insights dbutil
 
 ```
 searchKey: compression.getCommits
+tags: [private]
 ```
 
 ```Go
@@ -1330,6 +1291,7 @@ getCommits fetches the commits from the remote gitserver for a repository after 
 
 ```
 searchKey: compression.max
+tags: [private]
 ```
 
 ```Go
@@ -1340,6 +1302,7 @@ func max(a, b time.Time) time.Time
 
 ```
 searchKey: compression.TestCommitIndexer_indexAll
+tags: [private]
 ```
 
 ```Go
@@ -1350,6 +1313,7 @@ func TestCommitIndexer_indexAll(t *testing.T)
 
 ```
 searchKey: compression.Test_getMetadata_InsertNewRecord
+tags: [private]
 ```
 
 ```Go
@@ -1360,6 +1324,7 @@ func Test_getMetadata_InsertNewRecord(t *testing.T)
 
 ```
 searchKey: compression.Test_getMetadata_NoInsertRequired
+tags: [private]
 ```
 
 ```Go
@@ -1370,6 +1335,7 @@ func Test_getMetadata_NoInsertRequired(t *testing.T)
 
 ```
 searchKey: compression.mockIterator
+tags: [private]
 ```
 
 ```Go
@@ -1382,6 +1348,7 @@ mockIterator generates iterator methods given a list of repo names for test scen
 
 ```
 searchKey: compression.commit
+tags: [private]
 ```
 
 ```Go
@@ -1394,6 +1361,7 @@ commit build a fake commit for test scenarios
 
 ```
 searchKey: compression.mockCommits
+tags: [private]
 ```
 
 ```Go
@@ -1404,6 +1372,7 @@ func mockCommits(commits map[string][]*git.Commit) func(ctx context.Context, nam
 
 ```
 searchKey: compression.mockIds
+tags: [private]
 ```
 
 ```Go

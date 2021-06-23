@@ -4,9 +4,7 @@
     "identifier": "shared",
     "newPage": true,
     "searchKey": "cmd/server/shared",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "prometheusProcLine",
                 "newPage": false,
                 "searchKey": "shared.prometheusProcLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "grafanaProcLine",
                 "newPage": false,
                 "searchKey": "shared.grafanaProcLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "jaegerProcLine",
                 "newPage": false,
                 "searchKey": "shared.jaegerProcLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,9 +106,7 @@
                 "identifier": "FrontendInternalHost",
                 "newPage": false,
                 "searchKey": "shared.FrontendInternalHost",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -129,9 +129,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -149,9 +147,7 @@
                 "identifier": "SrcProfServices",
                 "newPage": false,
                 "searchKey": "shared.SrcProfServices",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -171,9 +167,7 @@
                 "identifier": "ProcfileAdditions",
                 "newPage": false,
                 "searchKey": "shared.ProcfileAdditions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -193,9 +187,7 @@
                 "identifier": "DataDir",
                 "newPage": false,
                 "searchKey": "shared.DataDir",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -215,7 +207,9 @@
                 "identifier": "databases",
                 "newPage": false,
                 "searchKey": "shared.databases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -235,7 +229,9 @@
                 "identifier": "logLevelConverter",
                 "newPage": false,
                 "searchKey": "shared.logLevelConverter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -255,7 +251,9 @@
                 "identifier": "redisStoreConfTmpl",
                 "newPage": false,
                 "searchKey": "shared.redisStoreConfTmpl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -275,7 +273,9 @@
                 "identifier": "redisCacheConfTmpl",
                 "newPage": false,
                 "searchKey": "shared.redisCacheConfTmpl",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -295,9 +295,7 @@
                 "identifier": "DefaultEnv",
                 "newPage": false,
                 "searchKey": "shared.DefaultEnv",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -317,7 +315,9 @@
                 "identifier": "verbose",
                 "newPage": false,
                 "searchKey": "shared.verbose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -340,9 +340,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -360,7 +358,9 @@
                 "identifier": "execer",
                 "newPage": false,
                 "searchKey": "shared.execer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -378,7 +378,9 @@
                       "identifier": "execer.Command",
                       "newPage": false,
                       "searchKey": "shared.execer.Command",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -398,7 +400,9 @@
                       "identifier": "execer.Run",
                       "newPage": false,
                       "searchKey": "shared.execer.Run",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -418,7 +422,9 @@
                       "identifier": "execer.CommandWithFilter",
                       "newPage": false,
                       "searchKey": "shared.execer.CommandWithFilter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -438,7 +444,9 @@
                       "identifier": "execer.RunWithFilter",
                       "newPage": false,
                       "searchKey": "shared.execer.RunWithFilter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -458,7 +466,9 @@
                       "identifier": "execer.Error",
                       "newPage": false,
                       "searchKey": "shared.execer.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -481,7 +491,9 @@
                 "identifier": "errorFilter",
                 "newPage": false,
                 "searchKey": "shared.errorFilter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -501,7 +513,9 @@
                 "identifier": "redisProcfileConfig",
                 "newPage": false,
                 "searchKey": "shared.redisProcfileConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -521,7 +535,9 @@
                 "identifier": "yesReader",
                 "newPage": false,
                 "searchKey": "shared.yesReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -539,7 +555,9 @@
                       "identifier": "yesReader.Read",
                       "newPage": false,
                       "searchKey": "shared.yesReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -565,9 +583,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -585,9 +601,7 @@
                 "identifier": "SetDefaultEnv",
                 "newPage": false,
                 "searchKey": "shared.SetDefaultEnv",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -607,7 +621,9 @@
                 "identifier": "copyConfigs",
                 "newPage": false,
                 "searchKey": "shared.copyConfigs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -627,7 +643,9 @@
                 "identifier": "copySSH",
                 "newPage": false,
                 "searchKey": "shared.copySSH",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -647,7 +665,9 @@
                 "identifier": "defaultErrorFilter",
                 "newPage": false,
                 "searchKey": "shared.defaultErrorFilter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -667,7 +687,9 @@
                 "identifier": "maybeMinio",
                 "newPage": false,
                 "searchKey": "shared.maybeMinio",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -687,7 +709,9 @@
                 "identifier": "maybeMonitoring",
                 "newPage": false,
                 "searchKey": "shared.maybeMonitoring",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -707,7 +731,9 @@
                 "identifier": "nginxProcFile",
                 "newPage": false,
                 "searchKey": "shared.nginxProcFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -727,7 +753,9 @@
                 "identifier": "nginxWriteFiles",
                 "newPage": false,
                 "searchKey": "shared.nginxWriteFiles",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -747,7 +775,9 @@
                 "identifier": "maybePostgresProcFile",
                 "newPage": false,
                 "searchKey": "shared.maybePostgresProcFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -767,7 +797,9 @@
                 "identifier": "postgresProcfile",
                 "newPage": false,
                 "searchKey": "shared.postgresProcfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -787,7 +819,9 @@
                 "identifier": "fileExists",
                 "newPage": false,
                 "searchKey": "shared.fileExists",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -807,7 +841,9 @@
                 "identifier": "isPostgresConfigured",
                 "newPage": false,
                 "searchKey": "shared.isPostgresConfigured",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -827,7 +863,9 @@
                 "identifier": "pgPrintf",
                 "newPage": false,
                 "searchKey": "shared.pgPrintf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -847,7 +885,9 @@
                 "identifier": "convertLogLevel",
                 "newPage": false,
                 "searchKey": "shared.convertLogLevel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -867,7 +907,9 @@
                 "identifier": "maybeRedisStoreProcFile",
                 "newPage": false,
                 "searchKey": "shared.maybeRedisStoreProcFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -887,7 +929,9 @@
                 "identifier": "maybeRedisCacheProcFile",
                 "newPage": false,
                 "searchKey": "shared.maybeRedisCacheProcFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -907,7 +951,9 @@
                 "identifier": "maybeRedisProcFile",
                 "newPage": false,
                 "searchKey": "shared.maybeRedisProcFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -927,7 +973,9 @@
                 "identifier": "tryCreateRedisConf",
                 "newPage": false,
                 "searchKey": "shared.tryCreateRedisConf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -947,7 +995,9 @@
                 "identifier": "redisProcFileEntry",
                 "newPage": false,
                 "searchKey": "shared.redisProcFileEntry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -967,7 +1017,9 @@
                 "identifier": "redisFixAOF",
                 "newPage": false,
                 "searchKey": "shared.redisFixAOF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -987,9 +1039,7 @@
                 "identifier": "Main",
                 "newPage": false,
                 "searchKey": "shared.Main",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1009,7 +1059,9 @@
                 "identifier": "maybeZoektProcFile",
                 "newPage": false,
                 "searchKey": "shared.maybeZoektProcFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1029,7 +1081,9 @@
                 "identifier": "TestNginx",
                 "newPage": false,
                 "searchKey": "shared.TestNginx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1049,7 +1103,9 @@
                 "identifier": "TestRedisFixAOF",
                 "newPage": false,
                 "searchKey": "shared.TestRedisFixAOF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1069,7 +1125,9 @@
                 "identifier": "redisCmd",
                 "newPage": false,
                 "searchKey": "shared.redisCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1089,7 +1147,9 @@
                 "identifier": "TestYesReader",
                 "newPage": false,
                 "searchKey": "shared.TestYesReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1109,7 +1169,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "shared.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

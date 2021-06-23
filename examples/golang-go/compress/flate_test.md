@@ -10,10 +10,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example_reset" href="#Example_reset">func Example_reset()</a>
 
 ```
 searchKey: flate_test.Example_reset
+tags: [private]
 ```
 
 ```Go
@@ -26,6 +31,7 @@ In performance critical applications, Reset can be used to discard the current c
 
 ```
 searchKey: flate_test.Example_dictionary
+tags: [private]
 ```
 
 ```Go
@@ -38,6 +44,7 @@ A preset dictionary can be used to improve the compression ratio. The downside t
 
 ```
 searchKey: flate_test.Example_synchronization
+tags: [private]
 ```
 
 ```Go

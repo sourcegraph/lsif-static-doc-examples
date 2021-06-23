@@ -4,7 +4,9 @@
     "identifier": "socktest",
     "newPage": true,
     "searchKey": "net/internal/socktest",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "FilterSocket",
                 "newPage": false,
                 "searchKey": "socktest.FilterSocket",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "FilterConnect",
                 "newPage": false,
                 "searchKey": "socktest.FilterConnect",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "FilterListen",
                 "newPage": false,
                 "searchKey": "socktest.FilterListen",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "FilterAccept",
                 "newPage": false,
                 "searchKey": "socktest.FilterAccept",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "FilterGetsockoptInt",
                 "newPage": false,
                 "searchKey": "socktest.FilterGetsockoptInt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "FilterClose",
                 "newPage": false,
                 "searchKey": "socktest.FilterClose",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -175,7 +167,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -193,9 +187,7 @@
                 "identifier": "Switch",
                 "newPage": false,
                 "searchKey": "socktest.Switch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -208,12 +200,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/net/internal/socktest#Switch.init",
+                    "pathID": "/net/internal/socktest#Switch.init.switch.go",
                     "documentation": {
-                      "identifier": "Switch.init",
+                      "identifier": "Switch.init.switch.go",
                       "newPage": false,
                       "searchKey": "socktest.Switch.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -233,9 +227,7 @@
                       "identifier": "Switch.Stats",
                       "newPage": false,
                       "searchKey": "socktest.Switch.Stats",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -255,9 +247,7 @@
                       "identifier": "Switch.Sockets",
                       "newPage": false,
                       "searchKey": "socktest.Switch.Sockets",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -277,9 +267,7 @@
                       "identifier": "Switch.Set",
                       "newPage": false,
                       "searchKey": "socktest.Switch.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -299,7 +287,9 @@
                       "identifier": "Switch.sockso",
                       "newPage": false,
                       "searchKey": "socktest.Switch.sockso",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -319,7 +309,9 @@
                       "identifier": "Switch.addLocked",
                       "newPage": false,
                       "searchKey": "socktest.Switch.addLocked",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -339,9 +331,7 @@
                       "identifier": "Switch.Socket",
                       "newPage": false,
                       "searchKey": "socktest.Switch.Socket",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -361,9 +351,7 @@
                       "identifier": "Switch.Close",
                       "newPage": false,
                       "searchKey": "socktest.Switch.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -383,9 +371,7 @@
                       "identifier": "Switch.Connect",
                       "newPage": false,
                       "searchKey": "socktest.Switch.Connect",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -405,9 +391,7 @@
                       "identifier": "Switch.Listen",
                       "newPage": false,
                       "searchKey": "socktest.Switch.Listen",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -427,9 +411,7 @@
                       "identifier": "Switch.Accept",
                       "newPage": false,
                       "searchKey": "socktest.Switch.Accept",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -449,9 +431,7 @@
                       "identifier": "Switch.GetsockoptInt",
                       "newPage": false,
                       "searchKey": "socktest.Switch.GetsockoptInt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -474,9 +454,7 @@
                 "identifier": "Cookie",
                 "newPage": false,
                 "searchKey": "socktest.Cookie",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -494,7 +472,9 @@
                       "identifier": "cookie",
                       "newPage": false,
                       "searchKey": "socktest.cookie",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -514,9 +494,7 @@
                       "identifier": "Cookie.Family",
                       "newPage": false,
                       "searchKey": "socktest.Cookie.Family",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -536,9 +514,7 @@
                       "identifier": "Cookie.Type",
                       "newPage": false,
                       "searchKey": "socktest.Cookie.Type",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -558,9 +534,7 @@
                       "identifier": "Cookie.Protocol",
                       "newPage": false,
                       "searchKey": "socktest.Cookie.Protocol",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -583,9 +557,7 @@
                 "identifier": "Status",
                 "newPage": false,
                 "searchKey": "socktest.Status",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -603,9 +575,7 @@
                       "identifier": "Status.String",
                       "newPage": false,
                       "searchKey": "socktest.Status.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -628,9 +598,7 @@
                 "identifier": "Stat",
                 "newPage": false,
                 "searchKey": "socktest.Stat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -648,9 +616,7 @@
                       "identifier": "Stat.String",
                       "newPage": false,
                       "searchKey": "socktest.Stat.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -673,7 +639,9 @@
                 "identifier": "stats",
                 "newPage": false,
                 "searchKey": "socktest.stats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -691,7 +659,9 @@
                       "identifier": "stats.getLocked",
                       "newPage": false,
                       "searchKey": "socktest.stats.getLocked",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -714,9 +684,7 @@
                 "identifier": "FilterType",
                 "newPage": false,
                 "searchKey": "socktest.FilterType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -736,9 +704,7 @@
                 "identifier": "Filter",
                 "newPage": false,
                 "searchKey": "socktest.Filter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -756,7 +722,9 @@
                       "identifier": "Filter.apply",
                       "newPage": false,
                       "searchKey": "socktest.Filter.apply",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -779,9 +747,7 @@
                 "identifier": "AfterFilter",
                 "newPage": false,
                 "searchKey": "socktest.AfterFilter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -799,7 +765,9 @@
                       "identifier": "AfterFilter.apply",
                       "newPage": false,
                       "searchKey": "socktest.AfterFilter.apply",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -822,9 +790,7 @@
                 "identifier": "Sockets",
                 "newPage": false,
                 "searchKey": "socktest.Sockets",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -847,7 +813,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -865,7 +833,9 @@
                 "identifier": "familyString",
                 "newPage": false,
                 "searchKey": "socktest.familyString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -885,7 +855,9 @@
                 "identifier": "typeString",
                 "newPage": false,
                 "searchKey": "socktest.typeString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -905,7 +877,9 @@
                 "identifier": "protocolString",
                 "newPage": false,
                 "searchKey": "socktest.protocolString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

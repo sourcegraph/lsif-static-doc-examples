@@ -102,11 +102,14 @@ package sys contains system- and configuration- and architecture-specific consta
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="AMD64" href="#AMD64">const AMD64</a>
 
 ```
 searchKey: sys.AMD64
-tags: [exported]
 ```
 
 ```Go
@@ -117,7 +120,6 @@ const AMD64 ArchFamilyType = iota
 
 ```
 searchKey: sys.ARM
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +130,6 @@ const ARM
 
 ```
 searchKey: sys.ARM64
-tags: [exported]
 ```
 
 ```Go
@@ -139,7 +140,6 @@ const ARM64
 
 ```
 searchKey: sys.I386
-tags: [exported]
 ```
 
 ```Go
@@ -150,7 +150,6 @@ const I386
 
 ```
 searchKey: sys.MIPS
-tags: [exported]
 ```
 
 ```Go
@@ -161,7 +160,6 @@ const MIPS
 
 ```
 searchKey: sys.MIPS64
-tags: [exported]
 ```
 
 ```Go
@@ -172,7 +170,6 @@ const MIPS64
 
 ```
 searchKey: sys.PPC64
-tags: [exported]
 ```
 
 ```Go
@@ -183,7 +180,6 @@ const PPC64
 
 ```
 searchKey: sys.RISCV64
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +190,6 @@ const RISCV64
 
 ```
 searchKey: sys.S390X
-tags: [exported]
 ```
 
 ```Go
@@ -205,7 +200,6 @@ const S390X
 
 ```
 searchKey: sys.WASM
-tags: [exported]
 ```
 
 ```Go
@@ -216,7 +210,6 @@ const WASM
 
 ```
 searchKey: sys.PtrSize
-tags: [exported]
 ```
 
 ```Go
@@ -229,7 +222,6 @@ PtrSize is the size of a pointer in bytes - unsafe.Sizeof(uintptr(0)) but as an 
 
 ```
 searchKey: sys.StackGuardMultiplier
-tags: [exported]
 ```
 
 ```Go
@@ -242,7 +234,6 @@ AIX requires a larger stack for syscalls.
 
 ```
 searchKey: sys.ArchFamily
-tags: [exported]
 ```
 
 ```Go
@@ -255,7 +246,6 @@ ArchFamily is the architecture family (AMD64, ARM, ...)
 
 ```
 searchKey: sys.BigEndian
-tags: [exported]
 ```
 
 ```Go
@@ -268,7 +258,6 @@ BigEndian reports whether the architecture is big-endian.
 
 ```
 searchKey: sys.DefaultPhysPageSize
-tags: [exported]
 ```
 
 ```Go
@@ -281,7 +270,6 @@ DefaultPhysPageSize is the default physical page size.
 
 ```
 searchKey: sys.PCQuantum
-tags: [exported]
 ```
 
 ```Go
@@ -294,7 +282,6 @@ PCQuantum is the minimal unit for a program counter (1 on x86, 4 on most other s
 
 ```
 searchKey: sys.Int64Align
-tags: [exported]
 ```
 
 ```Go
@@ -307,7 +294,6 @@ Int64Align is the required alignment for a 64-bit integer (4 on 32-bit systems, 
 
 ```
 searchKey: sys.MinFrameSize
-tags: [exported]
 ```
 
 ```Go
@@ -320,7 +306,6 @@ MinFrameSize is the size of the system-reserved words at the bottom of a frame (
 
 ```
 searchKey: sys.StackAlign
-tags: [exported]
 ```
 
 ```Go
@@ -333,6 +318,7 @@ StackAlign is the required alignment of the SP register. The stack must be at le
 
 ```
 searchKey: sys._ArchFamily
+tags: [private]
 ```
 
 ```Go
@@ -343,6 +329,7 @@ const _ArchFamily = AMD64
 
 ```
 searchKey: sys._DefaultPhysPageSize
+tags: [private]
 ```
 
 ```Go
@@ -353,6 +340,7 @@ const _DefaultPhysPageSize = 4096
 
 ```
 searchKey: sys._PCQuantum
+tags: [private]
 ```
 
 ```Go
@@ -363,6 +351,7 @@ const _PCQuantum = 1
 
 ```
 searchKey: sys._MinFrameSize
+tags: [private]
 ```
 
 ```Go
@@ -373,6 +362,7 @@ const _MinFrameSize = 0
 
 ```
 searchKey: sys._StackAlign
+tags: [private]
 ```
 
 ```Go
@@ -383,6 +373,7 @@ const _StackAlign = PtrSize
 
 ```
 searchKey: sys.deBruijn64ctz
+tags: [private]
 ```
 
 ```Go
@@ -393,6 +384,7 @@ const deBruijn64ctz = 0x0218a392cd3d5dbf
 
 ```
 searchKey: sys.deBruijn32ctz
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +395,7 @@ const deBruijn32ctz = 0x04653adf
 
 ```
 searchKey: sys.m0
+tags: [private]
 ```
 
 ```Go
@@ -414,6 +407,7 @@ const m0 = 0x5555555555555555 // 01010101 ...
 
 ```
 searchKey: sys.m1
+tags: [private]
 ```
 
 ```Go
@@ -425,6 +419,7 @@ const m1 = 0x3333333333333333 // 00110011 ...
 
 ```
 searchKey: sys.m2
+tags: [private]
 ```
 
 ```Go
@@ -436,6 +431,7 @@ const m2 = 0x0f0f0f0f0f0f0f0f // 00001111 ...
 
 ```
 searchKey: sys.deBruijn64
+tags: [private]
 ```
 
 ```Go
@@ -446,7 +442,6 @@ const deBruijn64 = 0x03f79d71b4ca8b09
 
 ```
 searchKey: sys.GOARCH
-tags: [exported]
 ```
 
 ```Go
@@ -457,7 +452,6 @@ const GOARCH = `amd64`
 
 ```
 searchKey: sys.Goarch386
-tags: [exported]
 ```
 
 ```Go
@@ -468,7 +462,6 @@ const Goarch386 = 0
 
 ```
 searchKey: sys.GoarchAmd64
-tags: [exported]
 ```
 
 ```Go
@@ -479,7 +472,6 @@ const GoarchAmd64 = 1
 
 ```
 searchKey: sys.GoarchAmd64p32
-tags: [exported]
 ```
 
 ```Go
@@ -490,7 +482,6 @@ const GoarchAmd64p32 = 0
 
 ```
 searchKey: sys.GoarchArm
-tags: [exported]
 ```
 
 ```Go
@@ -501,7 +492,6 @@ const GoarchArm = 0
 
 ```
 searchKey: sys.GoarchArmbe
-tags: [exported]
 ```
 
 ```Go
@@ -512,7 +502,6 @@ const GoarchArmbe = 0
 
 ```
 searchKey: sys.GoarchArm64
-tags: [exported]
 ```
 
 ```Go
@@ -523,7 +512,6 @@ const GoarchArm64 = 0
 
 ```
 searchKey: sys.GoarchArm64be
-tags: [exported]
 ```
 
 ```Go
@@ -534,7 +522,6 @@ const GoarchArm64be = 0
 
 ```
 searchKey: sys.GoarchPpc64
-tags: [exported]
 ```
 
 ```Go
@@ -545,7 +532,6 @@ const GoarchPpc64 = 0
 
 ```
 searchKey: sys.GoarchPpc64le
-tags: [exported]
 ```
 
 ```Go
@@ -556,7 +542,6 @@ const GoarchPpc64le = 0
 
 ```
 searchKey: sys.GoarchMips
-tags: [exported]
 ```
 
 ```Go
@@ -567,7 +552,6 @@ const GoarchMips = 0
 
 ```
 searchKey: sys.GoarchMipsle
-tags: [exported]
 ```
 
 ```Go
@@ -578,7 +562,6 @@ const GoarchMipsle = 0
 
 ```
 searchKey: sys.GoarchMips64
-tags: [exported]
 ```
 
 ```Go
@@ -589,7 +572,6 @@ const GoarchMips64 = 0
 
 ```
 searchKey: sys.GoarchMips64le
-tags: [exported]
 ```
 
 ```Go
@@ -600,7 +582,6 @@ const GoarchMips64le = 0
 
 ```
 searchKey: sys.GoarchMips64p32
-tags: [exported]
 ```
 
 ```Go
@@ -611,7 +592,6 @@ const GoarchMips64p32 = 0
 
 ```
 searchKey: sys.GoarchMips64p32le
-tags: [exported]
 ```
 
 ```Go
@@ -622,7 +602,6 @@ const GoarchMips64p32le = 0
 
 ```
 searchKey: sys.GoarchPpc
-tags: [exported]
 ```
 
 ```Go
@@ -633,7 +612,6 @@ const GoarchPpc = 0
 
 ```
 searchKey: sys.GoarchRiscv
-tags: [exported]
 ```
 
 ```Go
@@ -644,7 +622,6 @@ const GoarchRiscv = 0
 
 ```
 searchKey: sys.GoarchRiscv64
-tags: [exported]
 ```
 
 ```Go
@@ -655,7 +632,6 @@ const GoarchRiscv64 = 0
 
 ```
 searchKey: sys.GoarchS390
-tags: [exported]
 ```
 
 ```Go
@@ -666,7 +642,6 @@ const GoarchS390 = 0
 
 ```
 searchKey: sys.GoarchS390x
-tags: [exported]
 ```
 
 ```Go
@@ -677,7 +652,6 @@ const GoarchS390x = 0
 
 ```
 searchKey: sys.GoarchSparc
-tags: [exported]
 ```
 
 ```Go
@@ -688,7 +662,6 @@ const GoarchSparc = 0
 
 ```
 searchKey: sys.GoarchSparc64
-tags: [exported]
 ```
 
 ```Go
@@ -699,7 +672,6 @@ const GoarchSparc64 = 0
 
 ```
 searchKey: sys.GoarchWasm
-tags: [exported]
 ```
 
 ```Go
@@ -710,7 +682,6 @@ const GoarchWasm = 0
 
 ```
 searchKey: sys.GOOS
-tags: [exported]
 ```
 
 ```Go
@@ -721,7 +692,6 @@ const GOOS = `darwin`
 
 ```
 searchKey: sys.GoosAix
-tags: [exported]
 ```
 
 ```Go
@@ -732,7 +702,6 @@ const GoosAix = 0
 
 ```
 searchKey: sys.GoosAndroid
-tags: [exported]
 ```
 
 ```Go
@@ -743,7 +712,6 @@ const GoosAndroid = 0
 
 ```
 searchKey: sys.GoosDarwin
-tags: [exported]
 ```
 
 ```Go
@@ -754,7 +722,6 @@ const GoosDarwin = 1
 
 ```
 searchKey: sys.GoosDragonfly
-tags: [exported]
 ```
 
 ```Go
@@ -765,7 +732,6 @@ const GoosDragonfly = 0
 
 ```
 searchKey: sys.GoosFreebsd
-tags: [exported]
 ```
 
 ```Go
@@ -776,7 +742,6 @@ const GoosFreebsd = 0
 
 ```
 searchKey: sys.GoosHurd
-tags: [exported]
 ```
 
 ```Go
@@ -787,7 +752,6 @@ const GoosHurd = 0
 
 ```
 searchKey: sys.GoosIllumos
-tags: [exported]
 ```
 
 ```Go
@@ -798,7 +762,6 @@ const GoosIllumos = 0
 
 ```
 searchKey: sys.GoosIos
-tags: [exported]
 ```
 
 ```Go
@@ -809,7 +772,6 @@ const GoosIos = 0
 
 ```
 searchKey: sys.GoosJs
-tags: [exported]
 ```
 
 ```Go
@@ -820,7 +782,6 @@ const GoosJs = 0
 
 ```
 searchKey: sys.GoosLinux
-tags: [exported]
 ```
 
 ```Go
@@ -831,7 +792,6 @@ const GoosLinux = 0
 
 ```
 searchKey: sys.GoosNacl
-tags: [exported]
 ```
 
 ```Go
@@ -842,7 +802,6 @@ const GoosNacl = 0
 
 ```
 searchKey: sys.GoosNetbsd
-tags: [exported]
 ```
 
 ```Go
@@ -853,7 +812,6 @@ const GoosNetbsd = 0
 
 ```
 searchKey: sys.GoosOpenbsd
-tags: [exported]
 ```
 
 ```Go
@@ -864,7 +822,6 @@ const GoosOpenbsd = 0
 
 ```
 searchKey: sys.GoosPlan9
-tags: [exported]
 ```
 
 ```Go
@@ -875,7 +832,6 @@ const GoosPlan9 = 0
 
 ```
 searchKey: sys.GoosSolaris
-tags: [exported]
 ```
 
 ```Go
@@ -886,7 +842,6 @@ const GoosSolaris = 0
 
 ```
 searchKey: sys.GoosWindows
-tags: [exported]
 ```
 
 ```Go
@@ -897,7 +852,6 @@ const GoosWindows = 0
 
 ```
 searchKey: sys.GoosZos
-tags: [exported]
 ```
 
 ```Go
@@ -906,10 +860,15 @@ const GoosZos = 0
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="deBruijnIdx64ctz" href="#deBruijnIdx64ctz">var deBruijnIdx64ctz</a>
 
 ```
 searchKey: sys.deBruijnIdx64ctz
+tags: [private]
 ```
 
 ```Go
@@ -920,6 +879,7 @@ var deBruijnIdx64ctz = ...
 
 ```
 searchKey: sys.deBruijnIdx32ctz
+tags: [private]
 ```
 
 ```Go
@@ -930,6 +890,7 @@ var deBruijnIdx32ctz = ...
 
 ```
 searchKey: sys.len8tab
+tags: [private]
 ```
 
 ```Go
@@ -940,6 +901,7 @@ var len8tab = ...
 
 ```
 searchKey: sys.ntz8tab
+tags: [private]
 ```
 
 ```Go
@@ -950,6 +912,7 @@ var ntz8tab = ...
 
 ```
 searchKey: sys.deBruijn64tab
+tags: [private]
 ```
 
 ```Go
@@ -958,11 +921,14 @@ var deBruijn64tab = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ArchFamilyType" href="#ArchFamilyType">type ArchFamilyType int</a>
 
 ```
 searchKey: sys.ArchFamilyType
-tags: [exported]
 ```
 
 ```Go
@@ -971,11 +937,14 @@ type ArchFamilyType int
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Ctz64" href="#Ctz64">func Ctz64(x uint64) int</a>
 
 ```
 searchKey: sys.Ctz64
-tags: [exported]
 ```
 
 ```Go
@@ -988,7 +957,6 @@ Ctz64 counts trailing (low-order) zeroes, and if all are zero, then 64.
 
 ```
 searchKey: sys.Ctz32
-tags: [exported]
 ```
 
 ```Go
@@ -1001,7 +969,6 @@ Ctz32 counts trailing (low-order) zeroes, and if all are zero, then 32.
 
 ```
 searchKey: sys.Ctz8
-tags: [exported]
 ```
 
 ```Go
@@ -1014,7 +981,6 @@ Ctz8 returns the number of trailing zero bits in x; the result is 8 for x == 0.
 
 ```
 searchKey: sys.Bswap64
-tags: [exported]
 ```
 
 ```Go
@@ -1027,7 +993,6 @@ Bswap64 returns its input with byte order reversed 0x0102030405060708 -> 0x08070
 
 ```
 searchKey: sys.Bswap32
-tags: [exported]
 ```
 
 ```Go
@@ -1040,7 +1005,6 @@ Bswap32 returns its input with byte order reversed 0x01020304 -> 0x04030201
 
 ```
 searchKey: sys.Len64
-tags: [exported]
 ```
 
 ```Go
@@ -1053,7 +1017,6 @@ len64 returns the minimum number of bits required to represent x; the result is 
 
 ```
 searchKey: sys.OnesCount64
-tags: [exported]
 ```
 
 ```Go
@@ -1066,7 +1029,6 @@ OnesCount64 returns the number of one bits ("population count") in x.
 
 ```
 searchKey: sys.TrailingZeros64
-tags: [exported]
 ```
 
 ```Go
@@ -1079,7 +1041,6 @@ TrailingZeros64 returns the number of trailing zero bits in x; the result is 64 
 
 ```
 searchKey: sys.LeadingZeros64
-tags: [exported]
 ```
 
 ```Go
@@ -1092,7 +1053,6 @@ LeadingZeros64 returns the number of leading zero bits in x; the result is 64 fo
 
 ```
 searchKey: sys.LeadingZeros8
-tags: [exported]
 ```
 
 ```Go
@@ -1105,7 +1065,6 @@ LeadingZeros8 returns the number of leading zero bits in x; the result is 8 for 
 
 ```
 searchKey: sys.TrailingZeros8
-tags: [exported]
 ```
 
 ```Go
@@ -1118,7 +1077,6 @@ TrailingZeros8 returns the number of trailing zero bits in x; the result is 8 fo
 
 ```
 searchKey: sys.Len8
-tags: [exported]
 ```
 
 ```Go

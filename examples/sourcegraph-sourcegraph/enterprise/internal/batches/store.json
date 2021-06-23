@@ -4,7 +4,9 @@
     "identifier": "store",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/store",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "batchSpecInsertColsFmt",
                 "newPage": false,
                 "searchKey": "store.batchSpecInsertColsFmt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "getNewestBatchSpecQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getNewestBatchSpecQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "changesetEventsBatchQueryPrefix",
                 "newPage": false,
                 "searchKey": "store.changesetEventsBatchQueryPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "batchChangesetEventsQuerySuffix",
                 "newPage": false,
                 "searchKey": "store.batchChangesetEventsQuerySuffix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "listChangesetSyncDataQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.listChangesetSyncDataQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -140,7 +154,9 @@
                 "identifier": "cancelQueuedBatchChangeChangesetsFmtstr",
                 "newPage": false,
                 "searchKey": "store.cancelQueuedBatchChangeChangesetsFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -160,7 +176,9 @@
                 "identifier": "enqueueChangesetsToCloseFmtstr",
                 "newPage": false,
                 "searchKey": "store.enqueueChangesetsToCloseFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -180,7 +198,9 @@
                 "identifier": "getChangesetStatsFmtstr",
                 "newPage": false,
                 "searchKey": "store.getChangesetStatsFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -200,7 +220,9 @@
                 "identifier": "enqueueNextScheduledChangesetFmtstr",
                 "newPage": false,
                 "searchKey": "store.enqueueNextScheduledChangesetFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +242,9 @@
                 "identifier": "getChangesetPlaceInSchedulerQueueFmtstr",
                 "newPage": false,
                 "searchKey": "store.getChangesetPlaceInSchedulerQueueFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -240,7 +264,9 @@
                 "identifier": "getExternalServiceIDsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getExternalServiceIDsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +286,9 @@
                 "identifier": "updateSiteCredentialQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.updateSiteCredentialQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -283,7 +311,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -301,7 +331,9 @@
                 "identifier": "batchChangeColumns",
                 "newPage": false,
                 "searchKey": "store.batchChangeColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -321,7 +353,9 @@
                 "identifier": "batchChangeInsertColumns",
                 "newPage": false,
                 "searchKey": "store.batchChangeInsertColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -341,7 +375,9 @@
                 "identifier": "createBatchChangeQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.createBatchChangeQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -361,7 +397,9 @@
                 "identifier": "updateBatchChangeQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.updateBatchChangeQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -381,7 +419,9 @@
                 "identifier": "deleteBatchChangeQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.deleteBatchChangeQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -401,7 +441,9 @@
                 "identifier": "countBatchChangesQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.countBatchChangesQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -421,7 +463,9 @@
                 "identifier": "getBatchChangesQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getBatchChangesQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -441,7 +485,9 @@
                 "identifier": "getBatchChangeDiffStatQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getBatchChangeDiffStatQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -461,7 +507,9 @@
                 "identifier": "listBatchChangesQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.listBatchChangesQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -481,7 +529,9 @@
                 "identifier": "batchSpecColumns",
                 "newPage": false,
                 "searchKey": "store.batchSpecColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -501,7 +551,9 @@
                 "identifier": "batchSpecInsertColumns",
                 "newPage": false,
                 "searchKey": "store.batchSpecInsertColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -521,7 +573,9 @@
                 "identifier": "createBatchSpecQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.createBatchSpecQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -541,7 +595,9 @@
                 "identifier": "updateBatchSpecQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.updateBatchSpecQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -561,7 +617,9 @@
                 "identifier": "deleteBatchSpecQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.deleteBatchSpecQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,7 +639,9 @@
                 "identifier": "countBatchSpecsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.countBatchSpecsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -601,7 +661,9 @@
                 "identifier": "getBatchSpecsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getBatchSpecsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -621,7 +683,9 @@
                 "identifier": "listBatchSpecsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.listBatchSpecsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -641,7 +705,9 @@
                 "identifier": "deleteExpiredBatchSpecsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.deleteExpiredBatchSpecsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -661,7 +727,9 @@
                 "identifier": "bulkOperationColumns",
                 "newPage": false,
                 "searchKey": "store.bulkOperationColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -681,7 +749,9 @@
                 "identifier": "getBulkOperationQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getBulkOperationQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -701,7 +771,9 @@
                 "identifier": "listBulkOperationsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.listBulkOperationsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -721,7 +793,9 @@
                 "identifier": "countBulkOperationsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.countBulkOperationsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -741,7 +815,9 @@
                 "identifier": "listBulkOperationErrorsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.listBulkOperationErrorsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -761,7 +837,9 @@
                 "identifier": "getChangesetEventsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getChangesetEventsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -781,7 +859,9 @@
                 "identifier": "listChangesetEventsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.listChangesetEventsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -801,7 +881,9 @@
                 "identifier": "countChangesetEventsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.countChangesetEventsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -821,7 +903,9 @@
                 "identifier": "upsertChangesetEventsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.upsertChangesetEventsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -841,7 +925,9 @@
                 "identifier": "changesetJobInsertColumns",
                 "newPage": false,
                 "searchKey": "store.changesetJobInsertColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -861,9 +947,7 @@
                 "identifier": "ChangesetJobColumns",
                 "newPage": false,
                 "searchKey": "store.ChangesetJobColumns",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -883,7 +967,9 @@
                 "identifier": "getChangesetJobsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getChangesetJobsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -903,7 +989,9 @@
                 "identifier": "changesetSpecInsertColumns",
                 "newPage": false,
                 "searchKey": "store.changesetSpecInsertColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -923,7 +1011,9 @@
                 "identifier": "changesetSpecColumns",
                 "newPage": false,
                 "searchKey": "store.changesetSpecColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -943,7 +1033,9 @@
                 "identifier": "createChangesetSpecQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.createChangesetSpecQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -963,7 +1055,9 @@
                 "identifier": "updateChangesetSpecQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.updateChangesetSpecQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -983,7 +1077,9 @@
                 "identifier": "deleteChangesetSpecQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.deleteChangesetSpecQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1003,7 +1099,9 @@
                 "identifier": "countChangesetSpecsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.countChangesetSpecsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1023,7 +1121,9 @@
                 "identifier": "getChangesetSpecsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getChangesetSpecsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1043,7 +1143,9 @@
                 "identifier": "listChangesetSpecsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.listChangesetSpecsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1063,7 +1165,9 @@
                 "identifier": "deleteExpiredChangesetSpecsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.deleteExpiredChangesetSpecsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1083,7 +1187,9 @@
                 "identifier": "getRewirerMappingsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getRewirerMappingsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1103,9 +1209,7 @@
                 "identifier": "ChangesetColumns",
                 "newPage": false,
                 "searchKey": "store.ChangesetColumns",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1125,7 +1229,9 @@
                 "identifier": "changesetInsertColumns",
                 "newPage": false,
                 "searchKey": "store.changesetInsertColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1145,7 +1251,9 @@
                 "identifier": "createChangesetQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.createChangesetQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1165,7 +1273,9 @@
                 "identifier": "deleteChangesetQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.deleteChangesetQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1185,7 +1295,9 @@
                 "identifier": "countChangesetsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.countChangesetsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1205,7 +1317,9 @@
                 "identifier": "getChangesetsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getChangesetsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1225,7 +1339,9 @@
                 "identifier": "listChangesetsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.listChangesetsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1245,7 +1361,9 @@
                 "identifier": "updateChangesetQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.updateChangesetQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1265,9 +1383,7 @@
                 "identifier": "CanceledChangesetFailureMessage",
                 "newPage": false,
                 "searchKey": "store.CanceledChangesetFailureMessage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1287,7 +1403,9 @@
                 "identifier": "listCodeHostsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.listCodeHostsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1307,7 +1425,9 @@
                 "identifier": "createSiteCredentialQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.createSiteCredentialQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1327,7 +1447,9 @@
                 "identifier": "deleteSiteCredentialQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.deleteSiteCredentialQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1347,7 +1469,9 @@
                 "identifier": "getSiteCredentialQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.getSiteCredentialQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1367,7 +1491,9 @@
                 "identifier": "listSiteCredentialsQueryFmtstr",
                 "newPage": false,
                 "searchKey": "store.listSiteCredentialsQueryFmtstr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1387,7 +1513,9 @@
                 "identifier": "siteCredentialColumns",
                 "newPage": false,
                 "searchKey": "store.siteCredentialColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1407,7 +1535,9 @@
                 "identifier": "seededRand",
                 "newPage": false,
                 "searchKey": "store.seededRand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1427,9 +1557,7 @@
                 "identifier": "ErrNoResults",
                 "newPage": false,
                 "searchKey": "store.ErrNoResults",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1449,7 +1577,9 @@
                 "identifier": "cmtRewirerMappingsOpts",
                 "newPage": false,
                 "searchKey": "store.cmtRewirerMappingsOpts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1472,7 +1602,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1490,9 +1622,7 @@
                 "identifier": "CountBatchChangesOpts",
                 "newPage": false,
                 "searchKey": "store.CountBatchChangesOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1512,9 +1642,7 @@
                 "identifier": "GetBatchChangeOpts",
                 "newPage": false,
                 "searchKey": "store.GetBatchChangeOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1534,9 +1662,7 @@
                 "identifier": "GetBatchChangeDiffStatOpts",
                 "newPage": false,
                 "searchKey": "store.GetBatchChangeDiffStatOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1556,9 +1682,7 @@
                 "identifier": "ListBatchChangesOpts",
                 "newPage": false,
                 "searchKey": "store.ListBatchChangesOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1578,9 +1702,7 @@
                 "identifier": "GetBatchSpecOpts",
                 "newPage": false,
                 "searchKey": "store.GetBatchSpecOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1600,9 +1722,7 @@
                 "identifier": "GetNewestBatchSpecOpts",
                 "newPage": false,
                 "searchKey": "store.GetNewestBatchSpecOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1622,9 +1742,7 @@
                 "identifier": "ListBatchSpecsOpts",
                 "newPage": false,
                 "searchKey": "store.ListBatchSpecsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1644,9 +1762,7 @@
                 "identifier": "GetBulkOperationOpts",
                 "newPage": false,
                 "searchKey": "store.GetBulkOperationOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1666,9 +1782,7 @@
                 "identifier": "ListBulkOperationsOpts",
                 "newPage": false,
                 "searchKey": "store.ListBulkOperationsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1688,9 +1802,7 @@
                 "identifier": "CountBulkOperationsOpts",
                 "newPage": false,
                 "searchKey": "store.CountBulkOperationsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1710,9 +1822,7 @@
                 "identifier": "ListBulkOperationErrorsOpts",
                 "newPage": false,
                 "searchKey": "store.ListBulkOperationErrorsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1732,9 +1842,7 @@
                 "identifier": "GetChangesetEventOpts",
                 "newPage": false,
                 "searchKey": "store.GetChangesetEventOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1754,9 +1862,7 @@
                 "identifier": "ListChangesetEventsOpts",
                 "newPage": false,
                 "searchKey": "store.ListChangesetEventsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1776,9 +1882,7 @@
                 "identifier": "CountChangesetEventsOpts",
                 "newPage": false,
                 "searchKey": "store.CountChangesetEventsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1798,9 +1902,7 @@
                 "identifier": "GetChangesetJobOpts",
                 "newPage": false,
                 "searchKey": "store.GetChangesetJobOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1820,9 +1922,7 @@
                 "identifier": "CountChangesetSpecsOpts",
                 "newPage": false,
                 "searchKey": "store.CountChangesetSpecsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1842,9 +1942,7 @@
                 "identifier": "GetChangesetSpecOpts",
                 "newPage": false,
                 "searchKey": "store.GetChangesetSpecOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1864,9 +1962,7 @@
                 "identifier": "ListChangesetSpecsOpts",
                 "newPage": false,
                 "searchKey": "store.ListChangesetSpecsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1886,9 +1982,7 @@
                 "identifier": "GetRewirerMappingsOpts",
                 "newPage": false,
                 "searchKey": "store.GetRewirerMappingsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1908,9 +2002,7 @@
                 "identifier": "CountChangesetsOpts",
                 "newPage": false,
                 "searchKey": "store.CountChangesetsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1930,9 +2022,7 @@
                 "identifier": "GetChangesetOpts",
                 "newPage": false,
                 "searchKey": "store.GetChangesetOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1952,9 +2042,7 @@
                 "identifier": "ListChangesetSyncDataOpts",
                 "newPage": false,
                 "searchKey": "store.ListChangesetSyncDataOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1974,9 +2062,7 @@
                 "identifier": "ListChangesetsOpts",
                 "newPage": false,
                 "searchKey": "store.ListChangesetsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1996,7 +2082,9 @@
                 "identifier": "jsonBatchChangeChangesetSet",
                 "newPage": false,
                 "searchKey": "store.jsonBatchChangeChangesetSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2014,7 +2102,9 @@
                       "identifier": "jsonBatchChangeChangesetSet.Scan",
                       "newPage": false,
                       "searchKey": "store.jsonBatchChangeChangesetSet.Scan",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2034,7 +2124,9 @@
                       "identifier": "jsonBatchChangeChangesetSet.Value",
                       "newPage": false,
                       "searchKey": "store.jsonBatchChangeChangesetSet.Value",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2057,9 +2149,7 @@
                 "identifier": "ListCodeHostsOpts",
                 "newPage": false,
                 "searchKey": "store.ListCodeHostsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2079,9 +2169,7 @@
                 "identifier": "GetExternalServiceIDsOpts",
                 "newPage": false,
                 "searchKey": "store.GetExternalServiceIDsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2101,9 +2189,7 @@
                 "identifier": "GetSiteCredentialOpts",
                 "newPage": false,
                 "searchKey": "store.GetSiteCredentialOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2123,9 +2209,7 @@
                 "identifier": "ListSiteCredentialsOpts",
                 "newPage": false,
                 "searchKey": "store.ListSiteCredentialsOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2145,9 +2229,7 @@
                 "identifier": "SQLColumns",
                 "newPage": false,
                 "searchKey": "store.SQLColumns",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2165,9 +2247,7 @@
                       "identifier": "SQLColumns.ToSqlf",
                       "newPage": false,
                       "searchKey": "store.SQLColumns.ToSqlf",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2190,9 +2270,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "store.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2210,9 +2288,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "store.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2232,9 +2308,7 @@
                       "identifier": "NewWithClock",
                       "newPage": false,
                       "searchKey": "store.NewWithClock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2254,9 +2328,7 @@
                       "identifier": "Store.CreateBatchChange",
                       "newPage": false,
                       "searchKey": "store.Store.CreateBatchChange",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2276,7 +2348,9 @@
                       "identifier": "Store.createBatchChangeQuery",
                       "newPage": false,
                       "searchKey": "store.Store.createBatchChangeQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2296,9 +2370,7 @@
                       "identifier": "Store.UpdateBatchChange",
                       "newPage": false,
                       "searchKey": "store.Store.UpdateBatchChange",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2318,7 +2390,9 @@
                       "identifier": "Store.updateBatchChangeQuery",
                       "newPage": false,
                       "searchKey": "store.Store.updateBatchChangeQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2338,9 +2412,7 @@
                       "identifier": "Store.DeleteBatchChange",
                       "newPage": false,
                       "searchKey": "store.Store.DeleteBatchChange",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2360,9 +2432,7 @@
                       "identifier": "Store.CountBatchChanges",
                       "newPage": false,
                       "searchKey": "store.Store.CountBatchChanges",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2382,9 +2452,7 @@
                       "identifier": "Store.GetBatchChange",
                       "newPage": false,
                       "searchKey": "store.Store.GetBatchChange",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2404,9 +2472,7 @@
                       "identifier": "Store.GetBatchChangeDiffStat",
                       "newPage": false,
                       "searchKey": "store.Store.GetBatchChangeDiffStat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2426,9 +2492,7 @@
                       "identifier": "Store.ListBatchChanges",
                       "newPage": false,
                       "searchKey": "store.Store.ListBatchChanges",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2448,9 +2512,7 @@
                       "identifier": "Store.CreateBatchSpec",
                       "newPage": false,
                       "searchKey": "store.Store.CreateBatchSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2470,7 +2532,9 @@
                       "identifier": "Store.createBatchSpecQuery",
                       "newPage": false,
                       "searchKey": "store.Store.createBatchSpecQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2490,9 +2554,7 @@
                       "identifier": "Store.UpdateBatchSpec",
                       "newPage": false,
                       "searchKey": "store.Store.UpdateBatchSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2512,7 +2574,9 @@
                       "identifier": "Store.updateBatchSpecQuery",
                       "newPage": false,
                       "searchKey": "store.Store.updateBatchSpecQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2532,9 +2596,7 @@
                       "identifier": "Store.DeleteBatchSpec",
                       "newPage": false,
                       "searchKey": "store.Store.DeleteBatchSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2554,9 +2616,7 @@
                       "identifier": "Store.CountBatchSpecs",
                       "newPage": false,
                       "searchKey": "store.Store.CountBatchSpecs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2576,9 +2636,7 @@
                       "identifier": "Store.GetBatchSpec",
                       "newPage": false,
                       "searchKey": "store.Store.GetBatchSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2598,9 +2656,7 @@
                       "identifier": "Store.GetNewestBatchSpec",
                       "newPage": false,
                       "searchKey": "store.Store.GetNewestBatchSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2620,9 +2676,7 @@
                       "identifier": "Store.ListBatchSpecs",
                       "newPage": false,
                       "searchKey": "store.Store.ListBatchSpecs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2642,9 +2696,7 @@
                       "identifier": "Store.DeleteExpiredBatchSpecs",
                       "newPage": false,
                       "searchKey": "store.Store.DeleteExpiredBatchSpecs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2664,9 +2716,7 @@
                       "identifier": "Store.GetBulkOperation",
                       "newPage": false,
                       "searchKey": "store.Store.GetBulkOperation",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2686,9 +2736,7 @@
                       "identifier": "Store.ListBulkOperations",
                       "newPage": false,
                       "searchKey": "store.Store.ListBulkOperations",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2708,9 +2756,7 @@
                       "identifier": "Store.CountBulkOperations",
                       "newPage": false,
                       "searchKey": "store.Store.CountBulkOperations",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2730,9 +2776,7 @@
                       "identifier": "Store.ListBulkOperationErrors",
                       "newPage": false,
                       "searchKey": "store.Store.ListBulkOperationErrors",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2752,9 +2796,7 @@
                       "identifier": "Store.GetChangesetEvent",
                       "newPage": false,
                       "searchKey": "store.Store.GetChangesetEvent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2774,9 +2816,7 @@
                       "identifier": "Store.ListChangesetEvents",
                       "newPage": false,
                       "searchKey": "store.Store.ListChangesetEvents",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2796,9 +2836,7 @@
                       "identifier": "Store.CountChangesetEvents",
                       "newPage": false,
                       "searchKey": "store.Store.CountChangesetEvents",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2818,9 +2856,7 @@
                       "identifier": "Store.UpsertChangesetEvents",
                       "newPage": false,
                       "searchKey": "store.Store.UpsertChangesetEvents",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2840,7 +2876,9 @@
                       "identifier": "Store.upsertChangesetEventsQuery",
                       "newPage": false,
                       "searchKey": "store.Store.upsertChangesetEventsQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2860,9 +2898,7 @@
                       "identifier": "Store.CreateChangesetJob",
                       "newPage": false,
                       "searchKey": "store.Store.CreateChangesetJob",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2882,9 +2918,7 @@
                       "identifier": "Store.GetChangesetJob",
                       "newPage": false,
                       "searchKey": "store.Store.GetChangesetJob",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2904,9 +2938,7 @@
                       "identifier": "Store.CreateChangesetSpec",
                       "newPage": false,
                       "searchKey": "store.Store.CreateChangesetSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2926,7 +2958,9 @@
                       "identifier": "Store.createChangesetSpecQuery",
                       "newPage": false,
                       "searchKey": "store.Store.createChangesetSpecQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2946,9 +2980,7 @@
                       "identifier": "Store.UpdateChangesetSpec",
                       "newPage": false,
                       "searchKey": "store.Store.UpdateChangesetSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2968,7 +3000,9 @@
                       "identifier": "Store.updateChangesetSpecQuery",
                       "newPage": false,
                       "searchKey": "store.Store.updateChangesetSpecQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2988,9 +3022,7 @@
                       "identifier": "Store.DeleteChangesetSpec",
                       "newPage": false,
                       "searchKey": "store.Store.DeleteChangesetSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3010,9 +3042,7 @@
                       "identifier": "Store.CountChangesetSpecs",
                       "newPage": false,
                       "searchKey": "store.Store.CountChangesetSpecs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3032,9 +3062,7 @@
                       "identifier": "Store.GetChangesetSpec",
                       "newPage": false,
                       "searchKey": "store.Store.GetChangesetSpec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3054,9 +3082,7 @@
                       "identifier": "Store.GetChangesetSpecByID",
                       "newPage": false,
                       "searchKey": "store.Store.GetChangesetSpecByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3076,9 +3102,7 @@
                       "identifier": "Store.ListChangesetSpecs",
                       "newPage": false,
                       "searchKey": "store.Store.ListChangesetSpecs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3098,9 +3122,7 @@
                       "identifier": "Store.DeleteExpiredChangesetSpecs",
                       "newPage": false,
                       "searchKey": "store.Store.DeleteExpiredChangesetSpecs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3120,9 +3142,7 @@
                       "identifier": "Store.GetRewirerMappings",
                       "newPage": false,
                       "searchKey": "store.Store.GetRewirerMappings",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3142,7 +3162,9 @@
                       "identifier": "Store.changesetWriteQuery",
                       "newPage": false,
                       "searchKey": "store.Store.changesetWriteQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3162,9 +3184,7 @@
                       "identifier": "Store.UpsertChangeset",
                       "newPage": false,
                       "searchKey": "store.Store.UpsertChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3184,9 +3204,7 @@
                       "identifier": "Store.CreateChangeset",
                       "newPage": false,
                       "searchKey": "store.Store.CreateChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3206,9 +3224,7 @@
                       "identifier": "Store.DeleteChangeset",
                       "newPage": false,
                       "searchKey": "store.Store.DeleteChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3228,9 +3244,7 @@
                       "identifier": "Store.CountChangesets",
                       "newPage": false,
                       "searchKey": "store.Store.CountChangesets",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3250,9 +3264,7 @@
                       "identifier": "Store.GetChangesetByID",
                       "newPage": false,
                       "searchKey": "store.Store.GetChangesetByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3272,9 +3284,7 @@
                       "identifier": "Store.GetChangeset",
                       "newPage": false,
                       "searchKey": "store.Store.GetChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3294,9 +3304,7 @@
                       "identifier": "Store.ListChangesetSyncData",
                       "newPage": false,
                       "searchKey": "store.Store.ListChangesetSyncData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3316,9 +3324,7 @@
                       "identifier": "Store.ListChangesets",
                       "newPage": false,
                       "searchKey": "store.Store.ListChangesets",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3338,9 +3344,7 @@
                       "identifier": "Store.UpdateChangeset",
                       "newPage": false,
                       "searchKey": "store.Store.UpdateChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3360,9 +3364,7 @@
                       "identifier": "Store.GetChangesetExternalIDs",
                       "newPage": false,
                       "searchKey": "store.Store.GetChangesetExternalIDs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3382,9 +3384,7 @@
                       "identifier": "Store.CancelQueuedBatchChangeChangesets",
                       "newPage": false,
                       "searchKey": "store.Store.CancelQueuedBatchChangeChangesets",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3404,9 +3404,7 @@
                       "identifier": "Store.EnqueueChangesetsToClose",
                       "newPage": false,
                       "searchKey": "store.Store.EnqueueChangesetsToClose",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3426,9 +3424,7 @@
                       "identifier": "Store.GetChangesetsStats",
                       "newPage": false,
                       "searchKey": "store.Store.GetChangesetsStats",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3448,9 +3444,7 @@
                       "identifier": "Store.EnqueueNextScheduledChangeset",
                       "newPage": false,
                       "searchKey": "store.Store.EnqueueNextScheduledChangeset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3470,9 +3464,7 @@
                       "identifier": "Store.GetChangesetPlaceInSchedulerQueue",
                       "newPage": false,
                       "searchKey": "store.Store.GetChangesetPlaceInSchedulerQueue",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3492,9 +3484,7 @@
                       "identifier": "Store.ListCodeHosts",
                       "newPage": false,
                       "searchKey": "store.Store.ListCodeHosts",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3514,9 +3504,7 @@
                       "identifier": "Store.GetExternalServiceIDs",
                       "newPage": false,
                       "searchKey": "store.Store.GetExternalServiceIDs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3536,9 +3524,7 @@
                       "identifier": "Store.CreateSiteCredential",
                       "newPage": false,
                       "searchKey": "store.Store.CreateSiteCredential",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3558,9 +3544,7 @@
                       "identifier": "Store.DeleteSiteCredential",
                       "newPage": false,
                       "searchKey": "store.Store.DeleteSiteCredential",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3580,9 +3564,7 @@
                       "identifier": "Store.GetSiteCredential",
                       "newPage": false,
                       "searchKey": "store.Store.GetSiteCredential",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3602,9 +3584,7 @@
                       "identifier": "Store.ListSiteCredentials",
                       "newPage": false,
                       "searchKey": "store.Store.ListSiteCredentials",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3624,9 +3604,7 @@
                       "identifier": "Store.UpdateSiteCredential",
                       "newPage": false,
                       "searchKey": "store.Store.UpdateSiteCredential",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3646,7 +3624,9 @@
                       "identifier": "Store.updateSiteCredentialQuery",
                       "newPage": false,
                       "searchKey": "store.Store.updateSiteCredentialQuery",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3666,9 +3646,7 @@
                       "identifier": "Store.Clock",
                       "newPage": false,
                       "searchKey": "store.Store.Clock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3688,9 +3666,7 @@
                       "identifier": "Store.DB",
                       "newPage": false,
                       "searchKey": "store.Store.DB",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3710,9 +3686,7 @@
                       "identifier": "Store.Handle",
                       "newPage": false,
                       "searchKey": "store.Store.Handle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3732,9 +3706,7 @@
                       "identifier": "Store.With",
                       "newPage": false,
                       "searchKey": "store.Store.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3754,9 +3726,7 @@
                       "identifier": "Store.Transact",
                       "newPage": false,
                       "searchKey": "store.Store.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3776,9 +3746,7 @@
                       "identifier": "Store.Repos",
                       "newPage": false,
                       "searchKey": "store.Store.Repos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3798,9 +3766,7 @@
                       "identifier": "Store.ExternalServices",
                       "newPage": false,
                       "searchKey": "store.Store.ExternalServices",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3820,9 +3786,7 @@
                       "identifier": "Store.UserCredentials",
                       "newPage": false,
                       "searchKey": "store.Store.UserCredentials",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3842,7 +3806,9 @@
                       "identifier": "Store.query",
                       "newPage": false,
                       "searchKey": "store.Store.query",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3862,7 +3828,9 @@
                       "identifier": "Store.queryCount",
                       "newPage": false,
                       "searchKey": "store.Store.queryCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3885,7 +3853,9 @@
                 "identifier": "scanner",
                 "newPage": false,
                 "searchKey": "store.scanner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3905,7 +3875,9 @@
                 "identifier": "scanFunc",
                 "newPage": false,
                 "searchKey": "store.scanFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3925,9 +3897,7 @@
                 "identifier": "LimitOpts",
                 "newPage": false,
                 "searchKey": "store.LimitOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3945,9 +3915,7 @@
                       "identifier": "LimitOpts.DBLimit",
                       "newPage": false,
                       "searchKey": "store.LimitOpts.DBLimit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3967,9 +3935,7 @@
                       "identifier": "LimitOpts.ToDB",
                       "newPage": false,
                       "searchKey": "store.LimitOpts.ToDB",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3992,7 +3958,9 @@
                 "identifier": "storeTestFunc",
                 "newPage": false,
                 "searchKey": "store.storeTestFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4015,7 +3983,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -4033,7 +4003,9 @@
                 "identifier": "countBatchChangesQuery",
                 "newPage": false,
                 "searchKey": "store.countBatchChangesQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4053,7 +4025,9 @@
                 "identifier": "getBatchChangeQuery",
                 "newPage": false,
                 "searchKey": "store.getBatchChangeQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4073,7 +4047,9 @@
                 "identifier": "getBatchChangeDiffStatQuery",
                 "newPage": false,
                 "searchKey": "store.getBatchChangeDiffStatQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4093,7 +4069,9 @@
                 "identifier": "listBatchChangesQuery",
                 "newPage": false,
                 "searchKey": "store.listBatchChangesQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4113,7 +4091,9 @@
                 "identifier": "scanBatchChange",
                 "newPage": false,
                 "searchKey": "store.scanBatchChange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4133,7 +4113,9 @@
                 "identifier": "getBatchSpecQuery",
                 "newPage": false,
                 "searchKey": "store.getBatchSpecQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4153,7 +4135,9 @@
                 "identifier": "getNewestBatchSpecQuery",
                 "newPage": false,
                 "searchKey": "store.getNewestBatchSpecQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4173,7 +4157,9 @@
                 "identifier": "listBatchSpecsQuery",
                 "newPage": false,
                 "searchKey": "store.listBatchSpecsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4193,7 +4179,9 @@
                 "identifier": "scanBatchSpec",
                 "newPage": false,
                 "searchKey": "store.scanBatchSpec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4213,7 +4201,9 @@
                 "identifier": "getBulkOperationQuery",
                 "newPage": false,
                 "searchKey": "store.getBulkOperationQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4233,7 +4223,9 @@
                 "identifier": "listBulkOperationsQuery",
                 "newPage": false,
                 "searchKey": "store.listBulkOperationsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4253,7 +4245,9 @@
                 "identifier": "countBulkOperationsQuery",
                 "newPage": false,
                 "searchKey": "store.countBulkOperationsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4273,7 +4267,9 @@
                 "identifier": "listBulkOperationErrorsQuery",
                 "newPage": false,
                 "searchKey": "store.listBulkOperationErrorsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4293,7 +4289,9 @@
                 "identifier": "scanBulkOperation",
                 "newPage": false,
                 "searchKey": "store.scanBulkOperation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4313,7 +4311,9 @@
                 "identifier": "scanBulkOperationError",
                 "newPage": false,
                 "searchKey": "store.scanBulkOperationError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4333,7 +4333,9 @@
                 "identifier": "getChangesetEventQuery",
                 "newPage": false,
                 "searchKey": "store.getChangesetEventQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4353,7 +4355,9 @@
                 "identifier": "listChangesetEventsQuery",
                 "newPage": false,
                 "searchKey": "store.listChangesetEventsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4373,7 +4377,9 @@
                 "identifier": "countChangesetEventsQuery",
                 "newPage": false,
                 "searchKey": "store.countChangesetEventsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4393,7 +4399,9 @@
                 "identifier": "batchChangesetEventsQuery",
                 "newPage": false,
                 "searchKey": "store.batchChangesetEventsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4413,7 +4421,9 @@
                 "identifier": "scanChangesetEvent",
                 "newPage": false,
                 "searchKey": "store.scanChangesetEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4433,7 +4443,9 @@
                 "identifier": "getChangesetJobQuery",
                 "newPage": false,
                 "searchKey": "store.getChangesetJobQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4453,7 +4465,9 @@
                 "identifier": "scanChangesetJob",
                 "newPage": false,
                 "searchKey": "store.scanChangesetJob",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4473,9 +4487,7 @@
                 "identifier": "ScanFirstChangesetJob",
                 "newPage": false,
                 "searchKey": "store.ScanFirstChangesetJob",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4495,7 +4507,9 @@
                 "identifier": "scanChangesetJobs",
                 "newPage": false,
                 "searchKey": "store.scanChangesetJobs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4515,7 +4529,9 @@
                 "identifier": "countChangesetSpecsQuery",
                 "newPage": false,
                 "searchKey": "store.countChangesetSpecsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4535,7 +4551,9 @@
                 "identifier": "getChangesetSpecQuery",
                 "newPage": false,
                 "searchKey": "store.getChangesetSpecQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4555,7 +4573,9 @@
                 "identifier": "listChangesetSpecsQuery",
                 "newPage": false,
                 "searchKey": "store.listChangesetSpecsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4575,7 +4595,9 @@
                 "identifier": "scanChangesetSpec",
                 "newPage": false,
                 "searchKey": "store.scanChangesetSpec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4595,7 +4617,9 @@
                 "identifier": "getRewirerMappingsQuery",
                 "newPage": false,
                 "searchKey": "store.getRewirerMappingsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4615,7 +4639,9 @@
                 "identifier": "getRewirerMappingCurrentState",
                 "newPage": false,
                 "searchKey": "store.getRewirerMappingCurrentState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4635,7 +4661,9 @@
                 "identifier": "getRewirerMappingTextSearch",
                 "newPage": false,
                 "searchKey": "store.getRewirerMappingTextSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4655,7 +4683,9 @@
                 "identifier": "countChangesetsQuery",
                 "newPage": false,
                 "searchKey": "store.countChangesetsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4675,7 +4705,9 @@
                 "identifier": "getChangesetQuery",
                 "newPage": false,
                 "searchKey": "store.getChangesetQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4695,7 +4727,9 @@
                 "identifier": "scanChangesetSyncData",
                 "newPage": false,
                 "searchKey": "store.scanChangesetSyncData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4715,7 +4749,9 @@
                 "identifier": "listChangesetSyncDataQuery",
                 "newPage": false,
                 "searchKey": "store.listChangesetSyncDataQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4735,7 +4771,9 @@
                 "identifier": "listChangesetsQuery",
                 "newPage": false,
                 "searchKey": "store.listChangesetsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4755,9 +4793,7 @@
                 "identifier": "ScanFirstChangeset",
                 "newPage": false,
                 "searchKey": "store.ScanFirstChangeset",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4777,7 +4813,9 @@
                 "identifier": "scanChangesets",
                 "newPage": false,
                 "searchKey": "store.scanChangesets",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4797,7 +4835,9 @@
                 "identifier": "scanChangeset",
                 "newPage": false,
                 "searchKey": "store.scanChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4817,7 +4857,9 @@
                 "identifier": "archivedInBatchChange",
                 "newPage": false,
                 "searchKey": "store.archivedInBatchChange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4837,7 +4879,9 @@
                 "identifier": "getChangesetsStatsQuery",
                 "newPage": false,
                 "searchKey": "store.getChangesetsStatsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4857,7 +4901,9 @@
                 "identifier": "listCodeHostsQuery",
                 "newPage": false,
                 "searchKey": "store.listCodeHostsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4877,7 +4923,9 @@
                 "identifier": "scanCodeHost",
                 "newPage": false,
                 "searchKey": "store.scanCodeHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4897,7 +4945,9 @@
                 "identifier": "getExternalServiceIDsQuery",
                 "newPage": false,
                 "searchKey": "store.getExternalServiceIDsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4917,7 +4967,9 @@
                 "identifier": "createSiteCredentialQuery",
                 "newPage": false,
                 "searchKey": "store.createSiteCredentialQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4937,7 +4989,9 @@
                 "identifier": "deleteSiteCredentialQuery",
                 "newPage": false,
                 "searchKey": "store.deleteSiteCredentialQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4957,7 +5011,9 @@
                 "identifier": "getSiteCredentialQuery",
                 "newPage": false,
                 "searchKey": "store.getSiteCredentialQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4977,7 +5033,9 @@
                 "identifier": "listSiteCredentialsQuery",
                 "newPage": false,
                 "searchKey": "store.listSiteCredentialsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4997,7 +5055,9 @@
                 "identifier": "scanSiteCredential",
                 "newPage": false,
                 "searchKey": "store.scanSiteCredential",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5017,9 +5077,7 @@
                 "identifier": "RandomID",
                 "newPage": false,
                 "searchKey": "store.RandomID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -5039,7 +5097,9 @@
                 "identifier": "scanAll",
                 "newPage": false,
                 "searchKey": "store.scanAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5059,7 +5119,9 @@
                 "identifier": "jsonbColumn",
                 "newPage": false,
                 "searchKey": "store.jsonbColumn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5079,7 +5141,9 @@
                 "identifier": "nullInt32Column",
                 "newPage": false,
                 "searchKey": "store.nullInt32Column",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5099,7 +5163,9 @@
                 "identifier": "nullInt64Column",
                 "newPage": false,
                 "searchKey": "store.nullInt64Column",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5119,7 +5185,9 @@
                 "identifier": "nullTimeColumn",
                 "newPage": false,
                 "searchKey": "store.nullTimeColumn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5139,7 +5207,9 @@
                 "identifier": "nullStringColumn",
                 "newPage": false,
                 "searchKey": "store.nullStringColumn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5159,7 +5229,9 @@
                 "identifier": "textSearchTermToClause",
                 "newPage": false,
                 "searchKey": "store.textSearchTermToClause",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5179,7 +5251,9 @@
                 "identifier": "testStoreBatchChanges",
                 "newPage": false,
                 "searchKey": "store.testStoreBatchChanges",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5199,7 +5273,9 @@
                 "identifier": "testUserDeleteCascades",
                 "newPage": false,
                 "searchKey": "store.testUserDeleteCascades",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5219,7 +5295,9 @@
                 "identifier": "testStoreBatchSpecs",
                 "newPage": false,
                 "searchKey": "store.testStoreBatchSpecs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5239,7 +5317,9 @@
                 "identifier": "testStoreBulkOperations",
                 "newPage": false,
                 "searchKey": "store.testStoreBulkOperations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5259,7 +5339,9 @@
                 "identifier": "testStoreChangesetEvents",
                 "newPage": false,
                 "searchKey": "store.testStoreChangesetEvents",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5279,7 +5361,9 @@
                 "identifier": "testStoreChangesetJobs",
                 "newPage": false,
                 "searchKey": "store.testStoreChangesetJobs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5299,7 +5383,9 @@
                 "identifier": "testStoreChangesetSpecs",
                 "newPage": false,
                 "searchKey": "store.testStoreChangesetSpecs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5319,7 +5405,9 @@
                 "identifier": "testStoreChangesetSpecsCurrentState",
                 "newPage": false,
                 "searchKey": "store.testStoreChangesetSpecsCurrentState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5339,7 +5427,9 @@
                 "identifier": "testStoreChangesetSpecsCurrentStateAndTextSearch",
                 "newPage": false,
                 "searchKey": "store.testStoreChangesetSpecsCurrentStateAndTextSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5359,7 +5449,9 @@
                 "identifier": "testStoreChangesetSpecsTextSearch",
                 "newPage": false,
                 "searchKey": "store.testStoreChangesetSpecsTextSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5379,7 +5471,9 @@
                 "identifier": "testStoreChangesets",
                 "newPage": false,
                 "searchKey": "store.testStoreChangesets",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5399,7 +5493,9 @@
                 "identifier": "testStoreListChangesetSyncData",
                 "newPage": false,
                 "searchKey": "store.testStoreListChangesetSyncData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5419,7 +5515,9 @@
                 "identifier": "testStoreListChangesetsTextSearch",
                 "newPage": false,
                 "searchKey": "store.testStoreListChangesetsTextSearch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5439,7 +5537,9 @@
                 "identifier": "testStoreChangesetScheduling",
                 "newPage": false,
                 "searchKey": "store.testStoreChangesetScheduling",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5459,7 +5559,9 @@
                 "identifier": "testStoreCodeHost",
                 "newPage": false,
                 "searchKey": "store.testStoreCodeHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5479,7 +5581,9 @@
                 "identifier": "TestIntegration",
                 "newPage": false,
                 "searchKey": "store.TestIntegration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5499,7 +5603,9 @@
                 "identifier": "testStoreSiteCredentials",
                 "newPage": false,
                 "searchKey": "store.testStoreSiteCredentials",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5519,7 +5625,9 @@
                 "identifier": "storeTest",
                 "newPage": false,
                 "searchKey": "store.storeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5539,7 +5647,9 @@
                 "identifier": "TestTextSearchTermToClause",
                 "newPage": false,
                 "searchKey": "store.TestTextSearchTermToClause",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,7 +4,9 @@
     "identifier": "highlight",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/highlight",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "syntectServer",
                 "newPage": false,
                 "searchKey": "highlight.syntectServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "highlight.client",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,9 +88,7 @@
                 "identifier": "ErrBinary",
                 "newPage": false,
                 "searchKey": "highlight.ErrBinary",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -102,7 +108,9 @@
                 "identifier": "requestCounter",
                 "newPage": false,
                 "searchKey": "highlight.requestCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -122,7 +130,9 @@
                 "identifier": "metricRequestHistogram",
                 "newPage": false,
                 "searchKey": "highlight.metricRequestHistogram",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -142,9 +152,7 @@
                 "identifier": "Mocks",
                 "newPage": false,
                 "searchKey": "highlight.Mocks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "emptyMocks",
                 "newPage": false,
                 "searchKey": "highlight.emptyMocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,9 +194,7 @@
                 "identifier": "SyntectLanguageMap",
                 "newPage": false,
                 "searchKey": "highlight.SyntectLanguageMap",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -209,7 +217,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -227,9 +237,7 @@
                 "identifier": "Params",
                 "newPage": false,
                 "searchKey": "highlight.Params",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -249,9 +257,7 @@
                 "identifier": "Metadata",
                 "newPage": false,
                 "searchKey": "highlight.Metadata",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -271,9 +277,7 @@
                 "identifier": "LineRange",
                 "newPage": false,
                 "searchKey": "highlight.LineRange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -296,7 +300,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -309,12 +315,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/highlight#init",
+              "pathID": "/cmd/frontend/internal/highlight#init.highlight.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.highlight.go",
                 "newPage": false,
                 "searchKey": "highlight.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -334,9 +342,7 @@
                 "identifier": "IsBinary",
                 "newPage": false,
                 "searchKey": "highlight.IsBinary",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -356,9 +362,7 @@
                 "identifier": "Code",
                 "newPage": false,
                 "searchKey": "highlight.Code",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -378,7 +382,9 @@
                 "identifier": "firstCharacters",
                 "newPage": false,
                 "searchKey": "highlight.firstCharacters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -398,7 +404,9 @@
                 "identifier": "generatePlainTable",
                 "newPage": false,
                 "searchKey": "highlight.generatePlainTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -418,9 +426,7 @@
                 "identifier": "CodeAsLines",
                 "newPage": false,
                 "searchKey": "highlight.CodeAsLines",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -440,7 +446,9 @@
                 "identifier": "splitHighlightedLines",
                 "newPage": false,
                 "searchKey": "highlight.splitHighlightedLines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -460,7 +468,9 @@
                 "identifier": "normalizeFilepath",
                 "newPage": false,
                 "searchKey": "highlight.normalizeFilepath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -480,9 +490,7 @@
                 "identifier": "SplitLineRanges",
                 "newPage": false,
                 "searchKey": "highlight.SplitLineRanges",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -502,9 +510,7 @@
                 "identifier": "ResetMocks",
                 "newPage": false,
                 "searchKey": "highlight.ResetMocks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -524,7 +530,9 @@
                 "identifier": "TestGeneratePlainTable",
                 "newPage": false,
                 "searchKey": "highlight.TestGeneratePlainTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -544,7 +552,9 @@
                 "identifier": "TestGeneratePlainTableSecurity",
                 "newPage": false,
                 "searchKey": "highlight.TestGeneratePlainTableSecurity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -564,7 +574,9 @@
                 "identifier": "TestSplitHighlightedLines",
                 "newPage": false,
                 "searchKey": "highlight.TestSplitHighlightedLines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -584,7 +596,9 @@
                 "identifier": "TestCodeAsLines",
                 "newPage": false,
                 "searchKey": "highlight.TestCodeAsLines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -604,7 +618,9 @@
                 "identifier": "Test_normalizeFilepath",
                 "newPage": false,
                 "searchKey": "highlight.Test_normalizeFilepath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -624,7 +640,9 @@
                 "identifier": "TestSplitLineRanges",
                 "newPage": false,
                 "searchKey": "highlight.TestSplitLineRanges",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

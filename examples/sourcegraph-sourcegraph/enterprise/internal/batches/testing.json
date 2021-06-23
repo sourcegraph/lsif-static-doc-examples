@@ -4,7 +4,9 @@
     "identifier": "testing",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/testing",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "TestRawBatchSpec",
                 "newPage": false,
                 "searchKey": "testing.TestRawBatchSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "TestRawBatchSpecYAML",
                 "newPage": false,
                 "searchKey": "testing.TestRawBatchSpecYAML",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "ChangesetSpecAuthorEmail",
                 "newPage": false,
                 "searchKey": "testing.ChangesetSpecAuthorEmail",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "ChangesetSpecDiff",
                 "newPage": false,
                 "searchKey": "testing.ChangesetSpecDiff",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -131,7 +127,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -149,9 +147,7 @@
                 "identifier": "FailedChangesetFailureMessage",
                 "newPage": false,
                 "searchKey": "testing.FailedChangesetFailureMessage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -171,9 +167,7 @@
                 "identifier": "TestChangsetSpecDiffStat",
                 "newPage": false,
                 "searchKey": "testing.TestChangsetSpecDiffStat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -193,9 +187,7 @@
                 "identifier": "ChangesetSpecDiffStat",
                 "newPage": false,
                 "searchKey": "testing.ChangesetSpecDiffStat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -215,7 +207,9 @@
                 "identifier": "baseChangesetSpecGitBranch",
                 "newPage": false,
                 "searchKey": "testing.baseChangesetSpecGitBranch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -235,9 +229,7 @@
                 "identifier": "CreateTestUser",
                 "newPage": false,
                 "searchKey": "testing.CreateTestUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +252,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -278,9 +272,7 @@
                 "identifier": "CreateBatchChanger",
                 "newPage": false,
                 "searchKey": "testing.CreateBatchChanger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -300,9 +292,7 @@
                 "identifier": "CreateBatchSpecer",
                 "newPage": false,
                 "searchKey": "testing.CreateBatchSpecer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -322,9 +312,7 @@
                 "identifier": "TestChangesetOpts",
                 "newPage": false,
                 "searchKey": "testing.TestChangesetOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -344,9 +332,7 @@
                 "identifier": "CreateChangeseter",
                 "newPage": false,
                 "searchKey": "testing.CreateChangeseter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -366,9 +352,7 @@
                 "identifier": "ChangesetAssertions",
                 "newPage": false,
                 "searchKey": "testing.ChangesetAssertions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -388,9 +372,7 @@
                 "identifier": "GetChangesetByIDer",
                 "newPage": false,
                 "searchKey": "testing.GetChangesetByIDer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -410,9 +392,7 @@
                 "identifier": "UpdateChangeseter",
                 "newPage": false,
                 "searchKey": "testing.UpdateChangeseter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -432,9 +412,7 @@
                 "identifier": "TestSpecOpts",
                 "newPage": false,
                 "searchKey": "testing.TestSpecOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -454,9 +432,7 @@
                 "identifier": "CreateChangesetSpecer",
                 "newPage": false,
                 "searchKey": "testing.CreateChangesetSpecer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -476,9 +452,7 @@
                 "identifier": "Clock",
                 "newPage": false,
                 "searchKey": "testing.Clock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -498,9 +472,7 @@
                 "identifier": "TestClock",
                 "newPage": false,
                 "searchKey": "testing.TestClock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -518,9 +490,7 @@
                       "identifier": "TestClock.Now",
                       "newPage": false,
                       "searchKey": "testing.TestClock.Now",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -540,9 +510,7 @@
                       "identifier": "TestClock.Add",
                       "newPage": false,
                       "searchKey": "testing.TestClock.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -565,7 +533,9 @@
                 "identifier": "createSiteCredentialer",
                 "newPage": false,
                 "searchKey": "testing.createSiteCredentialer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -585,9 +555,7 @@
                 "identifier": "FakeGitserverClient",
                 "newPage": false,
                 "searchKey": "testing.FakeGitserverClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -605,9 +573,7 @@
                       "identifier": "FakeGitserverClient.CreateCommitFromPatch",
                       "newPage": false,
                       "searchKey": "testing.FakeGitserverClient.CreateCommitFromPatch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -630,9 +596,7 @@
                 "identifier": "MockedChangesetSyncState",
                 "newPage": false,
                 "searchKey": "testing.MockedChangesetSyncState",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -650,9 +614,7 @@
                       "identifier": "MockChangesetSyncState",
                       "newPage": false,
                       "searchKey": "testing.MockChangesetSyncState",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -672,9 +634,7 @@
                       "identifier": "MockedChangesetSyncState.Unmock",
                       "newPage": false,
                       "searchKey": "testing.MockedChangesetSyncState.Unmock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -700,7 +660,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -718,9 +680,7 @@
                 "identifier": "BuildBatchChange",
                 "newPage": false,
                 "searchKey": "testing.BuildBatchChange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -740,9 +700,7 @@
                 "identifier": "CreateBatchChange",
                 "newPage": false,
                 "searchKey": "testing.CreateBatchChange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -762,9 +720,7 @@
                 "identifier": "CreateBatchSpec",
                 "newPage": false,
                 "searchKey": "testing.CreateBatchSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -784,9 +740,7 @@
                 "identifier": "CreateChangeset",
                 "newPage": false,
                 "searchKey": "testing.CreateChangeset",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -806,9 +760,7 @@
                 "identifier": "BuildChangeset",
                 "newPage": false,
                 "searchKey": "testing.BuildChangeset",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -828,9 +780,7 @@
                 "identifier": "AssertChangeset",
                 "newPage": false,
                 "searchKey": "testing.AssertChangeset",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -850,9 +800,7 @@
                 "identifier": "ReloadAndAssertChangeset",
                 "newPage": false,
                 "searchKey": "testing.ReloadAndAssertChangeset",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -872,9 +820,7 @@
                 "identifier": "SetChangesetPublished",
                 "newPage": false,
                 "searchKey": "testing.SetChangesetPublished",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -894,9 +840,7 @@
                 "identifier": "SetChangesetFailed",
                 "newPage": false,
                 "searchKey": "testing.SetChangesetFailed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -916,9 +860,7 @@
                 "identifier": "SetChangesetClosed",
                 "newPage": false,
                 "searchKey": "testing.SetChangesetClosed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -938,9 +880,7 @@
                 "identifier": "BuildChangesetSpec",
                 "newPage": false,
                 "searchKey": "testing.BuildChangesetSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -960,9 +900,7 @@
                 "identifier": "CreateChangesetSpec",
                 "newPage": false,
                 "searchKey": "testing.CreateChangesetSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -982,9 +920,7 @@
                 "identifier": "MockConfig",
                 "newPage": false,
                 "searchKey": "testing.MockConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1004,9 +940,7 @@
                 "identifier": "CreateTestSiteCredential",
                 "newPage": false,
                 "searchKey": "testing.CreateTestSiteCredential",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1026,9 +960,7 @@
                 "identifier": "TruncateTables",
                 "newPage": false,
                 "searchKey": "testing.TruncateTables",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1048,9 +980,7 @@
                 "identifier": "MockRepoPermissions",
                 "newPage": false,
                 "searchKey": "testing.MockRepoPermissions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1070,9 +1000,7 @@
                 "identifier": "InsertTestOrg",
                 "newPage": false,
                 "searchKey": "testing.InsertTestOrg",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1092,9 +1020,7 @@
                 "identifier": "TestRepo",
                 "newPage": false,
                 "searchKey": "testing.TestRepo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1114,9 +1040,7 @@
                 "identifier": "TestRepoWithService",
                 "newPage": false,
                 "searchKey": "testing.TestRepoWithService",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1136,9 +1060,7 @@
                 "identifier": "CreateTestRepos",
                 "newPage": false,
                 "searchKey": "testing.CreateTestRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1158,9 +1080,7 @@
                 "identifier": "CreateGitlabTestRepos",
                 "newPage": false,
                 "searchKey": "testing.CreateGitlabTestRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1180,9 +1100,7 @@
                 "identifier": "CreateBbsTestRepos",
                 "newPage": false,
                 "searchKey": "testing.CreateBbsTestRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1202,9 +1120,7 @@
                 "identifier": "CreateGitHubSSHTestRepos",
                 "newPage": false,
                 "searchKey": "testing.CreateGitHubSSHTestRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1224,9 +1140,7 @@
                 "identifier": "CreateBbsSSHTestRepos",
                 "newPage": false,
                 "searchKey": "testing.CreateBbsSSHTestRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1246,7 +1160,9 @@
                 "identifier": "createBbsRepos",
                 "newPage": false,
                 "searchKey": "testing.createBbsRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1266,9 +1182,7 @@
                 "identifier": "MockRSAKeygen",
                 "newPage": false,
                 "searchKey": "testing.MockRSAKeygen",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1288,9 +1202,7 @@
                 "identifier": "NewRawChangesetSpecGitBranch",
                 "newPage": false,
                 "searchKey": "testing.NewRawChangesetSpecGitBranch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1310,9 +1222,7 @@
                 "identifier": "NewPublishedRawChangesetSpecGitBranch",
                 "newPage": false,
                 "searchKey": "testing.NewPublishedRawChangesetSpecGitBranch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1332,9 +1242,7 @@
                 "identifier": "NewRawChangesetSpecExisting",
                 "newPage": false,
                 "searchKey": "testing.NewRawChangesetSpecExisting",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1354,9 +1262,7 @@
                 "identifier": "MarshalJSON",
                 "newPage": false,
                 "searchKey": "testing.MarshalJSON",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

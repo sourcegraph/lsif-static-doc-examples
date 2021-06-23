@@ -23,11 +23,14 @@ Package execabs is a drop-in replacement for os/exec that requires PATH lookups 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrNotFound" href="#ErrNotFound">var ErrNotFound</a>
 
 ```
 searchKey: execabs.ErrNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -36,11 +39,14 @@ var ErrNotFound = exec.ErrNotFound
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Cmd" href="#Cmd">type Cmd exec.Cmd</a>
 
 ```
 searchKey: execabs.Cmd
-tags: [exported]
 ```
 
 ```Go
@@ -51,7 +57,6 @@ type Cmd = exec.Cmd
 
 ```
 searchKey: execabs.CommandContext
-tags: [exported]
 ```
 
 ```Go
@@ -62,7 +67,6 @@ func CommandContext(ctx context.Context, name string, arg ...string) *exec.Cmd
 
 ```
 searchKey: execabs.Command
-tags: [exported]
 ```
 
 ```Go
@@ -73,7 +77,6 @@ func Command(name string, arg ...string) *exec.Cmd
 
 ```
 searchKey: execabs.Error
-tags: [exported]
 ```
 
 ```Go
@@ -84,7 +87,6 @@ type Error = exec.Error
 
 ```
 searchKey: execabs.ExitError
-tags: [exported]
 ```
 
 ```Go
@@ -93,10 +95,15 @@ type ExitError = exec.ExitError
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="relError" href="#relError">func relError(file, path string) error</a>
 
 ```
 searchKey: execabs.relError
+tags: [private]
 ```
 
 ```Go
@@ -107,7 +114,6 @@ func relError(file, path string) error
 
 ```
 searchKey: execabs.LookPath
-tags: [exported]
 ```
 
 ```Go
@@ -118,6 +124,7 @@ func LookPath(file string) (string, error)
 
 ```
 searchKey: execabs.fixCmd
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +135,7 @@ func fixCmd(name string, cmd *exec.Cmd)
 
 ```
 searchKey: execabs.TestFixCmd
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +146,7 @@ func TestFixCmd(t *testing.T)
 
 ```
 searchKey: execabs.TestCommand
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +157,7 @@ func TestCommand(t *testing.T)
 
 ```
 searchKey: execabs.TestLookPath
+tags: [private]
 ```
 
 ```Go

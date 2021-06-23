@@ -4,9 +4,7 @@
     "identifier": "subtle",
     "newPage": true,
     "searchKey": "crypto/subtle",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "testConstantTimeCompareData",
                 "newPage": false,
                 "searchKey": "subtle.testConstantTimeCompareData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "testConstandTimeByteEqData",
                 "newPage": false,
                 "searchKey": "subtle.testConstandTimeByteEqData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "lessOrEqTests",
                 "newPage": false,
                 "searchKey": "subtle.lessOrEqTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "benchmarkGlobal",
                 "newPage": false,
                 "searchKey": "subtle.benchmarkGlobal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +131,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "TestConstantTimeCompareStruct",
                 "newPage": false,
                 "searchKey": "subtle.TestConstantTimeCompareStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "TestConstantTimeByteEqStruct",
                 "newPage": false,
                 "searchKey": "subtle.TestConstantTimeByteEqStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -190,9 +196,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -210,9 +214,7 @@
                 "identifier": "ConstantTimeCompare",
                 "newPage": false,
                 "searchKey": "subtle.ConstantTimeCompare",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -232,9 +234,7 @@
                 "identifier": "ConstantTimeSelect",
                 "newPage": false,
                 "searchKey": "subtle.ConstantTimeSelect",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -254,9 +254,7 @@
                 "identifier": "ConstantTimeByteEq",
                 "newPage": false,
                 "searchKey": "subtle.ConstantTimeByteEq",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -276,9 +274,7 @@
                 "identifier": "ConstantTimeEq",
                 "newPage": false,
                 "searchKey": "subtle.ConstantTimeEq",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -298,9 +294,7 @@
                 "identifier": "ConstantTimeCopy",
                 "newPage": false,
                 "searchKey": "subtle.ConstantTimeCopy",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -320,9 +314,7 @@
                 "identifier": "ConstantTimeLessOrEq",
                 "newPage": false,
                 "searchKey": "subtle.ConstantTimeLessOrEq",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -342,7 +334,9 @@
                 "identifier": "TestConstantTimeCompare",
                 "newPage": false,
                 "searchKey": "subtle.TestConstantTimeCompare",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -362,7 +356,9 @@
                 "identifier": "byteEq",
                 "newPage": false,
                 "searchKey": "subtle.byteEq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -382,7 +378,9 @@
                 "identifier": "TestConstantTimeByteEq",
                 "newPage": false,
                 "searchKey": "subtle.TestConstantTimeByteEq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -402,7 +400,9 @@
                 "identifier": "eq",
                 "newPage": false,
                 "searchKey": "subtle.eq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -422,7 +422,9 @@
                 "identifier": "TestConstantTimeEq",
                 "newPage": false,
                 "searchKey": "subtle.TestConstantTimeEq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -442,7 +444,9 @@
                 "identifier": "makeCopy",
                 "newPage": false,
                 "searchKey": "subtle.makeCopy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -462,7 +466,9 @@
                 "identifier": "constantTimeCopyWrapper",
                 "newPage": false,
                 "searchKey": "subtle.constantTimeCopyWrapper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -482,7 +488,9 @@
                 "identifier": "TestConstantTimeCopy",
                 "newPage": false,
                 "searchKey": "subtle.TestConstantTimeCopy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -502,7 +510,9 @@
                 "identifier": "TestConstantTimeLessOrEq",
                 "newPage": false,
                 "searchKey": "subtle.TestConstantTimeLessOrEq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -522,7 +532,9 @@
                 "identifier": "BenchmarkConstantTimeByteEq",
                 "newPage": false,
                 "searchKey": "subtle.BenchmarkConstantTimeByteEq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -542,7 +554,9 @@
                 "identifier": "BenchmarkConstantTimeEq",
                 "newPage": false,
                 "searchKey": "subtle.BenchmarkConstantTimeEq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -562,7 +576,9 @@
                 "identifier": "BenchmarkConstantTimeLessOrEq",
                 "newPage": false,
                 "searchKey": "subtle.BenchmarkConstantTimeLessOrEq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

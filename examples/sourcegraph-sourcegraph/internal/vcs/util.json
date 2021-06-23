@@ -4,7 +4,9 @@
     "identifier": "util",
     "newPage": true,
     "searchKey": "internal/vcs/util",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "FileInfo",
                 "newPage": false,
                 "searchKey": "util.FileInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "FileInfo.Name",
                       "newPage": false,
                       "searchKey": "util.FileInfo.Name",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "FileInfo.Size",
                       "newPage": false,
                       "searchKey": "util.FileInfo.Size",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "FileInfo.Mode",
                       "newPage": false,
                       "searchKey": "util.FileInfo.Mode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,9 +122,7 @@
                       "identifier": "FileInfo.ModTime",
                       "newPage": false,
                       "searchKey": "util.FileInfo.ModTime",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -148,9 +142,7 @@
                       "identifier": "FileInfo.IsDir",
                       "newPage": false,
                       "searchKey": "util.FileInfo.IsDir",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -170,9 +162,7 @@
                       "identifier": "FileInfo.Sys",
                       "newPage": false,
                       "searchKey": "util.FileInfo.Sys",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -195,7 +185,9 @@
                 "identifier": "fileInfosByName",
                 "newPage": false,
                 "searchKey": "util.fileInfosByName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -213,7 +205,9 @@
                       "identifier": "fileInfosByName.Len",
                       "newPage": false,
                       "searchKey": "util.fileInfosByName.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -233,7 +227,9 @@
                       "identifier": "fileInfosByName.Less",
                       "newPage": false,
                       "searchKey": "util.fileInfosByName.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -253,7 +249,9 @@
                       "identifier": "fileInfosByName.Swap",
                       "newPage": false,
                       "searchKey": "util.fileInfosByName.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -279,7 +277,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -297,9 +297,7 @@
                 "identifier": "SortFileInfosByName",
                 "newPage": false,
                 "searchKey": "util.SortFileInfosByName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -319,9 +317,7 @@
                 "identifier": "Rel",
                 "newPage": false,
                 "searchKey": "util.Rel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -341,9 +337,7 @@
                 "identifier": "ScriptFile",
                 "newPage": false,
                 "searchKey": "util.ScriptFile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -363,9 +357,7 @@
                 "identifier": "WriteFileWithPermissions",
                 "newPage": false,
                 "searchKey": "util.WriteFileWithPermissions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -385,7 +377,9 @@
                 "identifier": "TestScriptFile",
                 "newPage": false,
                 "searchKey": "util.TestScriptFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,9 +4,7 @@
     "identifier": "binary",
     "newPage": true,
     "searchKey": "encoding/binary",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "MaxVarintLen16",
                 "newPage": false,
                 "searchKey": "binary.MaxVarintLen16",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "MaxVarintLen32",
                 "newPage": false,
                 "searchKey": "binary.MaxVarintLen32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "MaxVarintLen64",
                 "newPage": false,
                 "searchKey": "binary.MaxVarintLen64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -113,9 +103,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -133,9 +121,7 @@
                 "identifier": "LittleEndian",
                 "newPage": false,
                 "searchKey": "binary.LittleEndian",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -155,9 +141,7 @@
                 "identifier": "BigEndian",
                 "newPage": false,
                 "searchKey": "binary.BigEndian",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -177,7 +161,9 @@
                 "identifier": "structSize",
                 "newPage": false,
                 "searchKey": "binary.structSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -197,7 +183,9 @@
                 "identifier": "overflow",
                 "newPage": false,
                 "searchKey": "binary.overflow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -217,7 +205,9 @@
                 "identifier": "s",
                 "newPage": false,
                 "searchKey": "binary.s",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -237,7 +227,9 @@
                 "identifier": "big",
                 "newPage": false,
                 "searchKey": "binary.big",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -257,7 +249,9 @@
                 "identifier": "little",
                 "newPage": false,
                 "searchKey": "binary.little",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -277,7 +271,9 @@
                 "identifier": "src",
                 "newPage": false,
                 "searchKey": "binary.src",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -297,7 +293,9 @@
                 "identifier": "res",
                 "newPage": false,
                 "searchKey": "binary.res",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -317,7 +315,9 @@
                 "identifier": "putbuf",
                 "newPage": false,
                 "searchKey": "binary.putbuf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -337,7 +337,9 @@
                 "identifier": "intArrays",
                 "newPage": false,
                 "searchKey": "binary.intArrays",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -357,7 +359,9 @@
                 "identifier": "tests",
                 "newPage": false,
                 "searchKey": "binary.tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -380,9 +384,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -400,9 +402,7 @@
                 "identifier": "ByteOrder",
                 "newPage": false,
                 "searchKey": "binary.ByteOrder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -422,7 +422,9 @@
                 "identifier": "littleEndian",
                 "newPage": false,
                 "searchKey": "binary.littleEndian",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -440,7 +442,9 @@
                       "identifier": "littleEndian.Uint16",
                       "newPage": false,
                       "searchKey": "binary.littleEndian.Uint16",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -460,7 +464,9 @@
                       "identifier": "littleEndian.PutUint16",
                       "newPage": false,
                       "searchKey": "binary.littleEndian.PutUint16",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -480,7 +486,9 @@
                       "identifier": "littleEndian.Uint32",
                       "newPage": false,
                       "searchKey": "binary.littleEndian.Uint32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -500,7 +508,9 @@
                       "identifier": "littleEndian.PutUint32",
                       "newPage": false,
                       "searchKey": "binary.littleEndian.PutUint32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -520,7 +530,9 @@
                       "identifier": "littleEndian.Uint64",
                       "newPage": false,
                       "searchKey": "binary.littleEndian.Uint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -540,7 +552,9 @@
                       "identifier": "littleEndian.PutUint64",
                       "newPage": false,
                       "searchKey": "binary.littleEndian.PutUint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -560,7 +574,9 @@
                       "identifier": "littleEndian.String",
                       "newPage": false,
                       "searchKey": "binary.littleEndian.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -580,7 +596,9 @@
                       "identifier": "littleEndian.GoString",
                       "newPage": false,
                       "searchKey": "binary.littleEndian.GoString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -603,7 +621,9 @@
                 "identifier": "bigEndian",
                 "newPage": false,
                 "searchKey": "binary.bigEndian",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -621,7 +641,9 @@
                       "identifier": "bigEndian.Uint16",
                       "newPage": false,
                       "searchKey": "binary.bigEndian.Uint16",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -641,7 +663,9 @@
                       "identifier": "bigEndian.PutUint16",
                       "newPage": false,
                       "searchKey": "binary.bigEndian.PutUint16",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -661,7 +685,9 @@
                       "identifier": "bigEndian.Uint32",
                       "newPage": false,
                       "searchKey": "binary.bigEndian.Uint32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -681,7 +707,9 @@
                       "identifier": "bigEndian.PutUint32",
                       "newPage": false,
                       "searchKey": "binary.bigEndian.PutUint32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -701,7 +729,9 @@
                       "identifier": "bigEndian.Uint64",
                       "newPage": false,
                       "searchKey": "binary.bigEndian.Uint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -721,7 +751,9 @@
                       "identifier": "bigEndian.PutUint64",
                       "newPage": false,
                       "searchKey": "binary.bigEndian.PutUint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -741,7 +773,9 @@
                       "identifier": "bigEndian.String",
                       "newPage": false,
                       "searchKey": "binary.bigEndian.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -761,7 +795,9 @@
                       "identifier": "bigEndian.GoString",
                       "newPage": false,
                       "searchKey": "binary.bigEndian.GoString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -784,7 +820,9 @@
                 "identifier": "coder",
                 "newPage": false,
                 "searchKey": "binary.coder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -804,7 +842,9 @@
                 "identifier": "decoder",
                 "newPage": false,
                 "searchKey": "binary.decoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -822,7 +862,9 @@
                       "identifier": "decoder.bool",
                       "newPage": false,
                       "searchKey": "binary.decoder.bool",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -842,7 +884,9 @@
                       "identifier": "decoder.uint8",
                       "newPage": false,
                       "searchKey": "binary.decoder.uint8",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -862,7 +906,9 @@
                       "identifier": "decoder.uint16",
                       "newPage": false,
                       "searchKey": "binary.decoder.uint16",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -882,7 +928,9 @@
                       "identifier": "decoder.uint32",
                       "newPage": false,
                       "searchKey": "binary.decoder.uint32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -902,7 +950,9 @@
                       "identifier": "decoder.uint64",
                       "newPage": false,
                       "searchKey": "binary.decoder.uint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -922,7 +972,9 @@
                       "identifier": "decoder.int8",
                       "newPage": false,
                       "searchKey": "binary.decoder.int8",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -942,7 +994,9 @@
                       "identifier": "decoder.int16",
                       "newPage": false,
                       "searchKey": "binary.decoder.int16",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -962,7 +1016,9 @@
                       "identifier": "decoder.int32",
                       "newPage": false,
                       "searchKey": "binary.decoder.int32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -982,7 +1038,9 @@
                       "identifier": "decoder.int64",
                       "newPage": false,
                       "searchKey": "binary.decoder.int64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1002,7 +1060,9 @@
                       "identifier": "decoder.value",
                       "newPage": false,
                       "searchKey": "binary.decoder.value",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1022,7 +1082,9 @@
                       "identifier": "decoder.skip",
                       "newPage": false,
                       "searchKey": "binary.decoder.skip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1045,7 +1107,9 @@
                 "identifier": "encoder",
                 "newPage": false,
                 "searchKey": "binary.encoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1063,7 +1127,9 @@
                       "identifier": "encoder.bool",
                       "newPage": false,
                       "searchKey": "binary.encoder.bool",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1083,7 +1149,9 @@
                       "identifier": "encoder.uint8",
                       "newPage": false,
                       "searchKey": "binary.encoder.uint8",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1103,7 +1171,9 @@
                       "identifier": "encoder.uint16",
                       "newPage": false,
                       "searchKey": "binary.encoder.uint16",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1123,7 +1193,9 @@
                       "identifier": "encoder.uint32",
                       "newPage": false,
                       "searchKey": "binary.encoder.uint32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1143,7 +1215,9 @@
                       "identifier": "encoder.uint64",
                       "newPage": false,
                       "searchKey": "binary.encoder.uint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1163,7 +1237,9 @@
                       "identifier": "encoder.int8",
                       "newPage": false,
                       "searchKey": "binary.encoder.int8",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1183,7 +1259,9 @@
                       "identifier": "encoder.int16",
                       "newPage": false,
                       "searchKey": "binary.encoder.int16",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1203,7 +1281,9 @@
                       "identifier": "encoder.int32",
                       "newPage": false,
                       "searchKey": "binary.encoder.int32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1223,7 +1303,9 @@
                       "identifier": "encoder.int64",
                       "newPage": false,
                       "searchKey": "binary.encoder.int64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1243,7 +1325,9 @@
                       "identifier": "encoder.value",
                       "newPage": false,
                       "searchKey": "binary.encoder.value",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1263,7 +1347,9 @@
                       "identifier": "encoder.skip",
                       "newPage": false,
                       "searchKey": "binary.encoder.skip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1286,7 +1372,9 @@
                 "identifier": "Struct",
                 "newPage": false,
                 "searchKey": "binary.Struct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1306,7 +1394,9 @@
                 "identifier": "T",
                 "newPage": false,
                 "searchKey": "binary.T",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1326,7 +1416,9 @@
                 "identifier": "BlankFields",
                 "newPage": false,
                 "searchKey": "binary.BlankFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1346,7 +1438,9 @@
                 "identifier": "BlankFieldsProbe",
                 "newPage": false,
                 "searchKey": "binary.BlankFieldsProbe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1366,7 +1460,9 @@
                 "identifier": "Unexported",
                 "newPage": false,
                 "searchKey": "binary.Unexported",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1386,7 +1482,9 @@
                 "identifier": "byteSliceReader",
                 "newPage": false,
                 "searchKey": "binary.byteSliceReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1404,7 +1502,9 @@
                       "identifier": "byteSliceReader.Read",
                       "newPage": false,
                       "searchKey": "binary.byteSliceReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1430,9 +1530,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1450,9 +1548,7 @@
                 "identifier": "Read",
                 "newPage": false,
                 "searchKey": "binary.Read",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1472,9 +1568,7 @@
                 "identifier": "Write",
                 "newPage": false,
                 "searchKey": "binary.Write",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1494,9 +1588,7 @@
                 "identifier": "Size",
                 "newPage": false,
                 "searchKey": "binary.Size",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1516,7 +1608,9 @@
                 "identifier": "dataSize",
                 "newPage": false,
                 "searchKey": "binary.dataSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1536,7 +1630,9 @@
                 "identifier": "sizeof",
                 "newPage": false,
                 "searchKey": "binary.sizeof",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1556,7 +1652,9 @@
                 "identifier": "intDataSize",
                 "newPage": false,
                 "searchKey": "binary.intDataSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1576,9 +1674,7 @@
                 "identifier": "PutUvarint",
                 "newPage": false,
                 "searchKey": "binary.PutUvarint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1598,9 +1694,7 @@
                 "identifier": "Uvarint",
                 "newPage": false,
                 "searchKey": "binary.Uvarint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1620,9 +1714,7 @@
                 "identifier": "PutVarint",
                 "newPage": false,
                 "searchKey": "binary.PutVarint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1642,9 +1734,7 @@
                 "identifier": "Varint",
                 "newPage": false,
                 "searchKey": "binary.Varint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1664,9 +1754,7 @@
                 "identifier": "ReadUvarint",
                 "newPage": false,
                 "searchKey": "binary.ReadUvarint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1686,9 +1774,7 @@
                 "identifier": "ReadVarint",
                 "newPage": false,
                 "searchKey": "binary.ReadVarint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1708,7 +1794,9 @@
                 "identifier": "checkResult",
                 "newPage": false,
                 "searchKey": "binary.checkResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1728,7 +1816,9 @@
                 "identifier": "testRead",
                 "newPage": false,
                 "searchKey": "binary.testRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1748,7 +1838,9 @@
                 "identifier": "testWrite",
                 "newPage": false,
                 "searchKey": "binary.testWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1768,7 +1860,9 @@
                 "identifier": "TestLittleEndianRead",
                 "newPage": false,
                 "searchKey": "binary.TestLittleEndianRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1788,7 +1882,9 @@
                 "identifier": "TestLittleEndianWrite",
                 "newPage": false,
                 "searchKey": "binary.TestLittleEndianWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1808,7 +1904,9 @@
                 "identifier": "TestLittleEndianPtrWrite",
                 "newPage": false,
                 "searchKey": "binary.TestLittleEndianPtrWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1828,7 +1926,9 @@
                 "identifier": "TestBigEndianRead",
                 "newPage": false,
                 "searchKey": "binary.TestBigEndianRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1848,7 +1948,9 @@
                 "identifier": "TestBigEndianWrite",
                 "newPage": false,
                 "searchKey": "binary.TestBigEndianWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1868,7 +1970,9 @@
                 "identifier": "TestBigEndianPtrWrite",
                 "newPage": false,
                 "searchKey": "binary.TestBigEndianPtrWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1888,7 +1992,9 @@
                 "identifier": "TestReadSlice",
                 "newPage": false,
                 "searchKey": "binary.TestReadSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1908,7 +2014,9 @@
                 "identifier": "TestWriteSlice",
                 "newPage": false,
                 "searchKey": "binary.TestWriteSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1928,7 +2036,9 @@
                 "identifier": "TestReadBool",
                 "newPage": false,
                 "searchKey": "binary.TestReadBool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1948,7 +2058,9 @@
                 "identifier": "TestReadBoolSlice",
                 "newPage": false,
                 "searchKey": "binary.TestReadBoolSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1968,7 +2080,9 @@
                 "identifier": "TestSliceRoundTrip",
                 "newPage": false,
                 "searchKey": "binary.TestSliceRoundTrip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1988,7 +2102,9 @@
                 "identifier": "TestWriteT",
                 "newPage": false,
                 "searchKey": "binary.TestWriteT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2008,7 +2124,9 @@
                 "identifier": "TestBlankFields",
                 "newPage": false,
                 "searchKey": "binary.TestBlankFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2028,7 +2146,9 @@
                 "identifier": "TestSizeStructCache",
                 "newPage": false,
                 "searchKey": "binary.TestSizeStructCache",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2048,7 +2168,9 @@
                 "identifier": "TestUnexportedRead",
                 "newPage": false,
                 "searchKey": "binary.TestUnexportedRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2068,7 +2190,9 @@
                 "identifier": "TestReadErrorMsg",
                 "newPage": false,
                 "searchKey": "binary.TestReadErrorMsg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2088,7 +2212,9 @@
                 "identifier": "TestReadTruncated",
                 "newPage": false,
                 "searchKey": "binary.TestReadTruncated",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2108,7 +2234,9 @@
                 "identifier": "testUint64SmallSliceLengthPanics",
                 "newPage": false,
                 "searchKey": "binary.testUint64SmallSliceLengthPanics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2128,7 +2256,9 @@
                 "identifier": "testPutUint64SmallSliceLengthPanics",
                 "newPage": false,
                 "searchKey": "binary.testPutUint64SmallSliceLengthPanics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2148,7 +2278,9 @@
                 "identifier": "TestEarlyBoundsChecks",
                 "newPage": false,
                 "searchKey": "binary.TestEarlyBoundsChecks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2168,7 +2300,9 @@
                 "identifier": "TestReadInvalidDestination",
                 "newPage": false,
                 "searchKey": "binary.TestReadInvalidDestination",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2188,7 +2322,9 @@
                 "identifier": "testReadInvalidDestination",
                 "newPage": false,
                 "searchKey": "binary.testReadInvalidDestination",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2208,7 +2344,9 @@
                 "identifier": "BenchmarkReadSlice1000Int32s",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadSlice1000Int32s",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2228,7 +2366,9 @@
                 "identifier": "BenchmarkReadStruct",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2248,7 +2388,9 @@
                 "identifier": "BenchmarkWriteStruct",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2268,7 +2410,9 @@
                 "identifier": "BenchmarkReadInts",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadInts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2288,7 +2432,9 @@
                 "identifier": "BenchmarkWriteInts",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteInts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2308,7 +2454,9 @@
                 "identifier": "BenchmarkWriteSlice1000Int32s",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteSlice1000Int32s",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2328,7 +2476,9 @@
                 "identifier": "BenchmarkPutUint16",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkPutUint16",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2348,7 +2498,9 @@
                 "identifier": "BenchmarkPutUint32",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkPutUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2368,7 +2520,9 @@
                 "identifier": "BenchmarkPutUint64",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkPutUint64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2388,7 +2542,9 @@
                 "identifier": "BenchmarkLittleEndianPutUint16",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkLittleEndianPutUint16",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2408,7 +2564,9 @@
                 "identifier": "BenchmarkLittleEndianPutUint32",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkLittleEndianPutUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2428,7 +2586,9 @@
                 "identifier": "BenchmarkLittleEndianPutUint64",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkLittleEndianPutUint64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2448,7 +2608,9 @@
                 "identifier": "BenchmarkReadFloats",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadFloats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2468,7 +2630,9 @@
                 "identifier": "BenchmarkWriteFloats",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteFloats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2488,7 +2652,9 @@
                 "identifier": "BenchmarkReadSlice1000Float32s",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadSlice1000Float32s",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2508,7 +2674,9 @@
                 "identifier": "BenchmarkWriteSlice1000Float32s",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteSlice1000Float32s",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2528,7 +2696,9 @@
                 "identifier": "BenchmarkReadSlice1000Uint8s",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadSlice1000Uint8s",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2548,7 +2718,9 @@
                 "identifier": "BenchmarkWriteSlice1000Uint8s",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteSlice1000Uint8s",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2568,7 +2740,9 @@
                 "identifier": "testConstant",
                 "newPage": false,
                 "searchKey": "binary.testConstant",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2588,7 +2762,9 @@
                 "identifier": "TestConstants",
                 "newPage": false,
                 "searchKey": "binary.TestConstants",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2608,7 +2784,9 @@
                 "identifier": "testVarint",
                 "newPage": false,
                 "searchKey": "binary.testVarint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2628,7 +2806,9 @@
                 "identifier": "testUvarint",
                 "newPage": false,
                 "searchKey": "binary.testUvarint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2648,7 +2828,9 @@
                 "identifier": "TestVarint",
                 "newPage": false,
                 "searchKey": "binary.TestVarint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2668,7 +2850,9 @@
                 "identifier": "TestUvarint",
                 "newPage": false,
                 "searchKey": "binary.TestUvarint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2688,7 +2872,9 @@
                 "identifier": "TestBufferTooSmall",
                 "newPage": false,
                 "searchKey": "binary.TestBufferTooSmall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2708,7 +2894,9 @@
                 "identifier": "TestBufferTooBigWithOverflow",
                 "newPage": false,
                 "searchKey": "binary.TestBufferTooBigWithOverflow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2728,7 +2916,9 @@
                 "identifier": "testOverflow",
                 "newPage": false,
                 "searchKey": "binary.testOverflow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2748,7 +2938,9 @@
                 "identifier": "TestOverflow",
                 "newPage": false,
                 "searchKey": "binary.TestOverflow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2768,7 +2960,9 @@
                 "identifier": "TestNonCanonicalZero",
                 "newPage": false,
                 "searchKey": "binary.TestNonCanonicalZero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2788,7 +2982,9 @@
                 "identifier": "BenchmarkPutUvarint32",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkPutUvarint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2808,7 +3004,9 @@
                 "identifier": "BenchmarkPutUvarint64",
                 "newPage": false,
                 "searchKey": "binary.BenchmarkPutUvarint64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

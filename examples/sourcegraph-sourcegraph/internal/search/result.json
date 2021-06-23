@@ -4,7 +4,9 @@
     "identifier": "result",
     "newPage": true,
     "searchKey": "internal/search/result",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "rankFileMatch",
                 "newPage": false,
                 "searchKey": "result.rankFileMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "rankCommitMatch",
                 "newPage": false,
                 "searchKey": "result.rankCommitMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "rankDiffMatch",
                 "newPage": false,
                 "searchKey": "result.rankDiffMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "rankRepoMatch",
                 "newPage": false,
                 "searchKey": "result.rankRepoMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,9 +132,7 @@
                 "identifier": "TypeEmpty",
                 "newPage": false,
                 "searchKey": "result.TypeEmpty",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -142,9 +152,7 @@
                 "identifier": "TypeRepo",
                 "newPage": false,
                 "searchKey": "result.TypeRepo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -164,9 +172,7 @@
                 "identifier": "TypeSymbol",
                 "newPage": false,
                 "searchKey": "result.TypeSymbol",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -186,9 +192,7 @@
                 "identifier": "TypeFile",
                 "newPage": false,
                 "searchKey": "result.TypeFile",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -208,9 +212,7 @@
                 "identifier": "TypePath",
                 "newPage": false,
                 "searchKey": "result.TypePath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -230,9 +232,7 @@
                 "identifier": "TypeDiff",
                 "newPage": false,
                 "searchKey": "result.TypeDiff",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -252,9 +252,7 @@
                 "identifier": "TypeCommit",
                 "newPage": false,
                 "searchKey": "result.TypeCommit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -277,7 +275,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -295,9 +295,7 @@
                 "identifier": "TypeFromString",
                 "newPage": false,
                 "searchKey": "result.TypeFromString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -317,7 +315,9 @@
                 "identifier": "toSelectKind",
                 "newPage": false,
                 "searchKey": "result.toSelectKind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -340,7 +340,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -358,9 +360,7 @@
                 "identifier": "CommitMatch",
                 "newPage": false,
                 "searchKey": "result.CommitMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -378,9 +378,7 @@
                       "identifier": "CommitMatch.ResultCount",
                       "newPage": false,
                       "searchKey": "result.CommitMatch.ResultCount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -400,9 +398,7 @@
                       "identifier": "CommitMatch.RepoName",
                       "newPage": false,
                       "searchKey": "result.CommitMatch.RepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -422,9 +418,7 @@
                       "identifier": "CommitMatch.Limit",
                       "newPage": false,
                       "searchKey": "result.CommitMatch.Limit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -444,9 +438,7 @@
                       "identifier": "CommitMatch.Select",
                       "newPage": false,
                       "searchKey": "result.CommitMatch.Select",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -466,9 +458,7 @@
                       "identifier": "CommitMatch.Key",
                       "newPage": false,
                       "searchKey": "result.CommitMatch.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -488,9 +478,7 @@
                       "identifier": "CommitMatch.Label",
                       "newPage": false,
                       "searchKey": "result.CommitMatch.Label",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -510,9 +498,7 @@
                       "identifier": "CommitMatch.Detail",
                       "newPage": false,
                       "searchKey": "result.CommitMatch.Detail",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -532,9 +518,7 @@
                       "identifier": "CommitMatch.URL",
                       "newPage": false,
                       "searchKey": "result.CommitMatch.URL",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -554,7 +538,9 @@
                       "identifier": "CommitMatch.searchResultMarker",
                       "newPage": false,
                       "searchKey": "result.CommitMatch.searchResultMarker",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -577,7 +563,9 @@
                 "identifier": "deduper",
                 "newPage": false,
                 "searchKey": "result.deduper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -595,9 +583,7 @@
                       "identifier": "NewDeduper",
                       "newPage": false,
                       "searchKey": "result.NewDeduper",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -617,7 +603,9 @@
                       "identifier": "deduper.Add",
                       "newPage": false,
                       "searchKey": "result.deduper.Add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -637,7 +625,9 @@
                       "identifier": "deduper.Seen",
                       "newPage": false,
                       "searchKey": "result.deduper.Seen",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -657,7 +647,9 @@
                       "identifier": "deduper.Results",
                       "newPage": false,
                       "searchKey": "result.deduper.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -680,9 +672,7 @@
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "result.File",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -700,9 +690,7 @@
                       "identifier": "File.URL",
                       "newPage": false,
                       "searchKey": "result.File.URL",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -725,9 +713,7 @@
                 "identifier": "FileMatch",
                 "newPage": false,
                 "searchKey": "result.FileMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -745,9 +731,7 @@
                       "identifier": "FileMatch.RepoName",
                       "newPage": false,
                       "searchKey": "result.FileMatch.RepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -767,7 +751,9 @@
                       "identifier": "FileMatch.searchResultMarker",
                       "newPage": false,
                       "searchKey": "result.FileMatch.searchResultMarker",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -787,9 +773,7 @@
                       "identifier": "FileMatch.ResultCount",
                       "newPage": false,
                       "searchKey": "result.FileMatch.ResultCount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -809,9 +793,7 @@
                       "identifier": "FileMatch.Select",
                       "newPage": false,
                       "searchKey": "result.FileMatch.Select",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -831,9 +813,7 @@
                       "identifier": "FileMatch.AppendMatches",
                       "newPage": false,
                       "searchKey": "result.FileMatch.AppendMatches",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -853,9 +833,7 @@
                       "identifier": "FileMatch.Limit",
                       "newPage": false,
                       "searchKey": "result.FileMatch.Limit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -875,9 +853,7 @@
                       "identifier": "FileMatch.Key",
                       "newPage": false,
                       "searchKey": "result.FileMatch.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -900,9 +876,7 @@
                 "identifier": "LineMatch",
                 "newPage": false,
                 "searchKey": "result.LineMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -922,9 +896,7 @@
                 "identifier": "HighlightedRange",
                 "newPage": false,
                 "searchKey": "result.HighlightedRange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -944,9 +916,7 @@
                 "identifier": "HighlightedString",
                 "newPage": false,
                 "searchKey": "result.HighlightedString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -966,9 +936,7 @@
                 "identifier": "Match",
                 "newPage": false,
                 "searchKey": "result.Match",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -986,7 +954,9 @@
                       "identifier": "selectCommitDiffKind",
                       "newPage": false,
                       "searchKey": "result.selectCommitDiffKind",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1009,9 +979,7 @@
                 "identifier": "Key",
                 "newPage": false,
                 "searchKey": "result.Key",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1029,9 +997,7 @@
                       "identifier": "Key.Less",
                       "newPage": false,
                       "searchKey": "result.Key.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1054,9 +1020,7 @@
                 "identifier": "Matches",
                 "newPage": false,
                 "searchKey": "result.Matches",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1074,9 +1038,7 @@
                       "identifier": "Matches.Len",
                       "newPage": false,
                       "searchKey": "result.Matches.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1096,9 +1058,7 @@
                       "identifier": "Matches.Less",
                       "newPage": false,
                       "searchKey": "result.Matches.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1118,9 +1078,7 @@
                       "identifier": "Matches.Swap",
                       "newPage": false,
                       "searchKey": "result.Matches.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1143,9 +1101,7 @@
                 "identifier": "RepoMatch",
                 "newPage": false,
                 "searchKey": "result.RepoMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1163,9 +1119,7 @@
                       "identifier": "RepoMatch.RepoName",
                       "newPage": false,
                       "searchKey": "result.RepoMatch.RepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1185,9 +1139,7 @@
                       "identifier": "RepoMatch.Limit",
                       "newPage": false,
                       "searchKey": "result.RepoMatch.Limit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1207,9 +1159,7 @@
                       "identifier": "RepoMatch.ResultCount",
                       "newPage": false,
                       "searchKey": "result.RepoMatch.ResultCount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1229,9 +1179,7 @@
                       "identifier": "RepoMatch.Select",
                       "newPage": false,
                       "searchKey": "result.RepoMatch.Select",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1251,9 +1199,7 @@
                       "identifier": "RepoMatch.URL",
                       "newPage": false,
                       "searchKey": "result.RepoMatch.URL",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1273,9 +1219,7 @@
                       "identifier": "RepoMatch.Key",
                       "newPage": false,
                       "searchKey": "result.RepoMatch.Key",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1295,7 +1239,9 @@
                       "identifier": "RepoMatch.searchResultMarker",
                       "newPage": false,
                       "searchKey": "result.RepoMatch.searchResultMarker",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1318,9 +1264,7 @@
                 "identifier": "Types",
                 "newPage": false,
                 "searchKey": "result.Types",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1338,9 +1282,7 @@
                       "identifier": "Types.Has",
                       "newPage": false,
                       "searchKey": "result.Types.Has",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1360,9 +1302,7 @@
                       "identifier": "Types.With",
                       "newPage": false,
                       "searchKey": "result.Types.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1382,9 +1322,7 @@
                       "identifier": "Types.Without",
                       "newPage": false,
                       "searchKey": "result.Types.Without",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1404,9 +1342,7 @@
                       "identifier": "Types.String",
                       "newPage": false,
                       "searchKey": "result.Types.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1429,9 +1365,7 @@
                 "identifier": "Symbol",
                 "newPage": false,
                 "searchKey": "result.Symbol",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1449,9 +1383,7 @@
                       "identifier": "Symbol.LSPKind",
                       "newPage": false,
                       "searchKey": "result.Symbol.LSPKind",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1471,7 +1403,9 @@
                       "identifier": "Symbol.offset",
                       "newPage": false,
                       "searchKey": "result.Symbol.offset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1491,9 +1425,7 @@
                       "identifier": "Symbol.Range",
                       "newPage": false,
                       "searchKey": "result.Symbol.Range",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1516,9 +1448,7 @@
                 "identifier": "Symbols",
                 "newPage": false,
                 "searchKey": "result.Symbols",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1538,9 +1468,7 @@
                 "identifier": "SymbolMatch",
                 "newPage": false,
                 "searchKey": "result.SymbolMatch",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1558,9 +1486,7 @@
                       "identifier": "SymbolMatch.URL",
                       "newPage": false,
                       "searchKey": "result.SymbolMatch.URL",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1586,7 +1512,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1604,7 +1532,9 @@
                 "identifier": "displayRepoName",
                 "newPage": false,
                 "searchKey": "result.displayRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1624,7 +1554,9 @@
                 "identifier": "selectModifiedLines",
                 "newPage": false,
                 "searchKey": "result.selectModifiedLines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1644,7 +1576,9 @@
                 "identifier": "modifiedLinesExist",
                 "newPage": false,
                 "searchKey": "result.modifiedLinesExist",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1664,7 +1598,9 @@
                 "identifier": "unescapePattern",
                 "newPage": false,
                 "searchKey": "result.unescapePattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1684,7 +1620,9 @@
                 "identifier": "urlFragmentFromRange",
                 "newPage": false,
                 "searchKey": "result.urlFragmentFromRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1704,7 +1642,9 @@
                 "identifier": "lineSpecFromPosition",
                 "newPage": false,
                 "searchKey": "result.lineSpecFromPosition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1724,7 +1664,9 @@
                 "identifier": "pick",
                 "newPage": false,
                 "searchKey": "result.pick",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1744,9 +1686,7 @@
                 "identifier": "SelectSymbolKind",
                 "newPage": false,
                 "searchKey": "result.SelectSymbolKind",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1766,7 +1706,9 @@
                 "identifier": "TestDeduper",
                 "newPage": false,
                 "searchKey": "result.TestDeduper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1786,7 +1728,9 @@
                 "identifier": "TestSelect",
                 "newPage": false,
                 "searchKey": "result.TestSelect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1806,7 +1750,9 @@
                 "identifier": "TestSymbolRange",
                 "newPage": false,
                 "searchKey": "result.TestSymbolRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1826,7 +1772,9 @@
                 "identifier": "TestSymbolURL",
                 "newPage": false,
                 "searchKey": "result.TestSymbolURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

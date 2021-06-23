@@ -4,7 +4,9 @@
     "identifier": "userpasswd",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/auth/userpasswd",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "providerType",
                 "newPage": false,
                 "searchKey": "userpasswd.providerType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "resetPasswordEmailTemplates",
                 "newPage": false,
                 "searchKey": "userpasswd.resetPasswordEmailTemplates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "setPasswordEmailTemplates",
                 "newPage": false,
                 "searchKey": "userpasswd.setPasswordEmailTemplates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +136,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -142,7 +156,9 @@
                 "identifier": "credentials",
                 "newPage": false,
                 "searchKey": "userpasswd.credentials",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -162,7 +178,9 @@
                 "identifier": "provider",
                 "newPage": false,
                 "searchKey": "userpasswd.provider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -180,7 +198,9 @@
                       "identifier": "provider.ConfigID",
                       "newPage": false,
                       "searchKey": "userpasswd.provider.ConfigID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -200,7 +220,9 @@
                       "identifier": "provider.Config",
                       "newPage": false,
                       "searchKey": "userpasswd.provider.Config",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -220,7 +242,9 @@
                       "identifier": "provider.Refresh",
                       "newPage": false,
                       "searchKey": "userpasswd.provider.Refresh",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -240,7 +264,9 @@
                       "identifier": "provider.CachedInfo",
                       "newPage": false,
                       "searchKey": "userpasswd.provider.CachedInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -266,7 +292,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -284,9 +312,7 @@
                 "identifier": "ResetPasswordEnabled",
                 "newPage": false,
                 "searchKey": "userpasswd.ResetPasswordEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -306,7 +332,9 @@
                 "identifier": "getProviderConfig",
                 "newPage": false,
                 "searchKey": "userpasswd.getProviderConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -326,7 +354,9 @@
                 "identifier": "handleEnabledCheck",
                 "newPage": false,
                 "searchKey": "userpasswd.handleEnabledCheck",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -341,12 +371,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#init",
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#init.config.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.config.go",
                 "newPage": false,
                 "searchKey": "userpasswd.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -366,7 +398,9 @@
                 "identifier": "validateConfig",
                 "newPage": false,
                 "searchKey": "userpasswd.validateConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -381,12 +415,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#init",
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#init.config_watch.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.config_watch.go",
                 "newPage": false,
                 "searchKey": "userpasswd.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -406,9 +442,7 @@
                 "identifier": "HandleSignUp",
                 "newPage": false,
                 "searchKey": "userpasswd.HandleSignUp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -428,9 +462,7 @@
                 "identifier": "HandleSiteInit",
                 "newPage": false,
                 "searchKey": "userpasswd.HandleSiteInit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -450,7 +482,9 @@
                 "identifier": "checkEmailAbuse",
                 "newPage": false,
                 "searchKey": "userpasswd.checkEmailAbuse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -470,7 +504,9 @@
                 "identifier": "handleSignUp",
                 "newPage": false,
                 "searchKey": "userpasswd.handleSignUp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -490,7 +526,9 @@
                 "identifier": "getByEmailOrUsername",
                 "newPage": false,
                 "searchKey": "userpasswd.getByEmailOrUsername",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -510,9 +548,7 @@
                 "identifier": "HandleSignIn",
                 "newPage": false,
                 "searchKey": "userpasswd.HandleSignIn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -532,9 +568,7 @@
                 "identifier": "HandleCheckUsernameTaken",
                 "newPage": false,
                 "searchKey": "userpasswd.HandleCheckUsernameTaken",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -554,7 +588,9 @@
                 "identifier": "httpLogAndError",
                 "newPage": false,
                 "searchKey": "userpasswd.httpLogAndError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -574,9 +610,7 @@
                 "identifier": "HandleResetPasswordInit",
                 "newPage": false,
                 "searchKey": "userpasswd.HandleResetPasswordInit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -596,9 +630,7 @@
                 "identifier": "HandleSetPasswordEmail",
                 "newPage": false,
                 "searchKey": "userpasswd.HandleSetPasswordEmail",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -618,9 +650,7 @@
                 "identifier": "HandleResetPasswordCode",
                 "newPage": false,
                 "searchKey": "userpasswd.HandleResetPasswordCode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -640,7 +670,9 @@
                 "identifier": "handleNotAuthenticatedCheck",
                 "newPage": false,
                 "searchKey": "userpasswd.handleNotAuthenticatedCheck",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -660,7 +692,9 @@
                 "identifier": "TestValidateCustom",
                 "newPage": false,
                 "searchKey": "userpasswd.TestValidateCustom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -680,7 +714,9 @@
                 "identifier": "TestCheckEmailAbuse",
                 "newPage": false,
                 "searchKey": "userpasswd.TestCheckEmailAbuse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -700,7 +736,9 @@
                 "identifier": "TestHandleSetPasswordEmail",
                 "newPage": false,
                 "searchKey": "userpasswd.TestHandleSetPasswordEmail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

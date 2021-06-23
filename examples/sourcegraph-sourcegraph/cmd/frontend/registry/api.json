@@ -4,9 +4,7 @@
     "identifier": "api",
     "newPage": true,
     "searchKey": "cmd/frontend/registry/api",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "WorkInProgressExtensionTitlePostgreSQLPattern",
                 "newPage": false,
                 "searchKey": "api.WorkInProgressExtensionTitlePostgreSQLPattern",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -69,9 +63,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -89,9 +81,7 @@
                 "identifier": "HandleRegistryExtensionBundle",
                 "newPage": false,
                 "searchKey": "api.HandleRegistryExtensionBundle",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -111,9 +101,7 @@
                 "identifier": "ListLocalRegistryExtensions",
                 "newPage": false,
                 "searchKey": "api.ListLocalRegistryExtensions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -133,9 +121,7 @@
                 "identifier": "CountLocalRegistryExtensions",
                 "newPage": false,
                 "searchKey": "api.CountLocalRegistryExtensions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -155,9 +141,7 @@
                 "identifier": "RegistryExtensionByIDInt32",
                 "newPage": false,
                 "searchKey": "api.RegistryExtensionByIDInt32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -177,9 +161,7 @@
                 "identifier": "RegistryPublisherByID",
                 "newPage": false,
                 "searchKey": "api.RegistryPublisherByID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -199,9 +181,7 @@
                 "identifier": "GetLocalExtensionByExtensionID",
                 "newPage": false,
                 "searchKey": "api.GetLocalExtensionByExtensionID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -221,7 +201,9 @@
                 "identifier": "mockLocalRegistryExtensionIDPrefix",
                 "newPage": false,
                 "searchKey": "api.mockLocalRegistryExtensionIDPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -241,9 +223,7 @@
                 "identifier": "IsRemoteExtensionAllowed",
                 "newPage": false,
                 "searchKey": "api.IsRemoteExtensionAllowed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -263,7 +243,9 @@
                 "identifier": "mockGetRemoteRegistryExtension",
                 "newPage": false,
                 "searchKey": "api.mockGetRemoteRegistryExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -283,9 +265,7 @@
                 "identifier": "FilterRemoteExtensions",
                 "newPage": false,
                 "searchKey": "api.FilterRemoteExtensions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -305,9 +285,7 @@
                 "identifier": "GetLocalFeaturedExtensions",
                 "newPage": false,
                 "searchKey": "api.GetLocalFeaturedExtensions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -327,9 +305,7 @@
                 "identifier": "HandleRegistry",
                 "newPage": false,
                 "searchKey": "api.HandleRegistry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -349,9 +325,7 @@
                 "identifier": "ExtensionRegistry",
                 "newPage": false,
                 "searchKey": "api.ExtensionRegistry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -371,7 +345,9 @@
                 "identifier": "errNoLocalExtensionRegistry",
                 "newPage": false,
                 "searchKey": "api.errNoLocalExtensionRegistry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -391,9 +367,7 @@
                 "identifier": "ExtensionURL",
                 "newPage": false,
                 "searchKey": "api.ExtensionURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -413,9 +387,7 @@
                 "identifier": "PublisherExtensionsURL",
                 "newPage": false,
                 "searchKey": "api.PublisherExtensionsURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -435,7 +407,9 @@
                 "identifier": "strnilptr",
                 "newPage": false,
                 "searchKey": "api.strnilptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -458,9 +432,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -478,7 +450,9 @@
                 "identifier": "registryExtensionConnectionResolver",
                 "newPage": false,
                 "searchKey": "api.registryExtensionConnectionResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -496,7 +470,9 @@
                       "identifier": "registryExtensionConnectionResolver.compute",
                       "newPage": false,
                       "searchKey": "api.registryExtensionConnectionResolver.compute",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -516,7 +492,9 @@
                       "identifier": "registryExtensionConnectionResolver.Nodes",
                       "newPage": false,
                       "searchKey": "api.registryExtensionConnectionResolver.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -536,7 +514,9 @@
                       "identifier": "registryExtensionConnectionResolver.TotalCount",
                       "newPage": false,
                       "searchKey": "api.registryExtensionConnectionResolver.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -556,7 +536,9 @@
                       "identifier": "registryExtensionConnectionResolver.PageInfo",
                       "newPage": false,
                       "searchKey": "api.registryExtensionConnectionResolver.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -576,7 +558,9 @@
                       "identifier": "registryExtensionConnectionResolver.URL",
                       "newPage": false,
                       "searchKey": "api.registryExtensionConnectionResolver.URL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -596,7 +580,9 @@
                       "identifier": "registryExtensionConnectionResolver.Error",
                       "newPage": false,
                       "searchKey": "api.registryExtensionConnectionResolver.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -619,9 +605,7 @@
                 "identifier": "RegistryExtensionID",
                 "newPage": false,
                 "searchKey": "api.RegistryExtensionID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -639,9 +623,7 @@
                       "identifier": "UnmarshalRegistryExtensionID",
                       "newPage": false,
                       "searchKey": "api.UnmarshalRegistryExtensionID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -664,7 +646,9 @@
                 "identifier": "extensionManifest",
                 "newPage": false,
                 "searchKey": "api.extensionManifest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -682,7 +666,9 @@
                       "identifier": "extensionManifest.parse",
                       "newPage": false,
                       "searchKey": "api.extensionManifest.parse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -702,7 +688,9 @@
                       "identifier": "extensionManifest.Raw",
                       "newPage": false,
                       "searchKey": "api.extensionManifest.Raw",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -722,7 +710,9 @@
                       "identifier": "extensionManifest.Description",
                       "newPage": false,
                       "searchKey": "api.extensionManifest.Description",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -742,7 +732,9 @@
                       "identifier": "extensionManifest.BundleURL",
                       "newPage": false,
                       "searchKey": "api.extensionManifest.BundleURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -765,7 +757,9 @@
                 "identifier": "registryExtensionRemoteResolver",
                 "newPage": false,
                 "searchKey": "api.registryExtensionRemoteResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -783,7 +777,9 @@
                       "identifier": "registryExtensionRemoteResolver.ID",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.ID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -803,7 +799,9 @@
                       "identifier": "registryExtensionRemoteResolver.UUID",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.UUID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -823,7 +821,9 @@
                       "identifier": "registryExtensionRemoteResolver.ExtensionID",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.ExtensionID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -843,7 +843,9 @@
                       "identifier": "registryExtensionRemoteResolver.ExtensionIDWithoutRegistry",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.ExtensionIDWithoutRegistry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -863,7 +865,9 @@
                       "identifier": "registryExtensionRemoteResolver.Publisher",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.Publisher",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -883,7 +887,9 @@
                       "identifier": "registryExtensionRemoteResolver.Name",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.Name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -903,7 +909,9 @@
                       "identifier": "registryExtensionRemoteResolver.Manifest",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.Manifest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -923,7 +931,9 @@
                       "identifier": "registryExtensionRemoteResolver.CreatedAt",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.CreatedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -943,7 +953,9 @@
                       "identifier": "registryExtensionRemoteResolver.UpdatedAt",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.UpdatedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -963,7 +975,9 @@
                       "identifier": "registryExtensionRemoteResolver.PublishedAt",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.PublishedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -983,7 +997,9 @@
                       "identifier": "registryExtensionRemoteResolver.URL",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.URL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1003,7 +1019,9 @@
                       "identifier": "registryExtensionRemoteResolver.RemoteURL",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.RemoteURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1023,7 +1041,9 @@
                       "identifier": "registryExtensionRemoteResolver.RegistryName",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.RegistryName",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1043,7 +1063,9 @@
                       "identifier": "registryExtensionRemoteResolver.IsLocal",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.IsLocal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1063,7 +1085,9 @@
                       "identifier": "registryExtensionRemoteResolver.IsWorkInProgress",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.IsWorkInProgress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1083,7 +1107,9 @@
                       "identifier": "registryExtensionRemoteResolver.ViewerCanAdminister",
                       "newPage": false,
                       "searchKey": "api.registryExtensionRemoteResolver.ViewerCanAdminister",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1106,7 +1132,9 @@
                 "identifier": "registryExtensionRemoteID",
                 "newPage": false,
                 "searchKey": "api.registryExtensionRemoteID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1126,7 +1154,9 @@
                 "identifier": "featuredExtensionsResolver",
                 "newPage": false,
                 "searchKey": "api.featuredExtensionsResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1144,7 +1174,9 @@
                       "identifier": "featuredExtensionsResolver.compute",
                       "newPage": false,
                       "searchKey": "api.featuredExtensionsResolver.compute",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1164,7 +1196,9 @@
                       "identifier": "featuredExtensionsResolver.Nodes",
                       "newPage": false,
                       "searchKey": "api.featuredExtensionsResolver.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1184,7 +1218,9 @@
                       "identifier": "featuredExtensionsResolver.Error",
                       "newPage": false,
                       "searchKey": "api.featuredExtensionsResolver.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1207,7 +1243,9 @@
                 "identifier": "extensionRegistryResolver",
                 "newPage": false,
                 "searchKey": "api.extensionRegistryResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1225,7 +1263,9 @@
                       "identifier": "extensionRegistryResolver.Extensions",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.Extensions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1245,7 +1285,9 @@
                       "identifier": "extensionRegistryResolver.FeaturedExtensions",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.FeaturedExtensions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1265,7 +1307,9 @@
                       "identifier": "extensionRegistryResolver.Publishers",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.Publishers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1285,7 +1329,9 @@
                       "identifier": "extensionRegistryResolver.ViewerPublishers",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.ViewerPublishers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1305,7 +1351,9 @@
                       "identifier": "extensionRegistryResolver.Extension",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.Extension",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1325,7 +1373,9 @@
                       "identifier": "extensionRegistryResolver.CreateExtension",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.CreateExtension",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1345,7 +1395,9 @@
                       "identifier": "extensionRegistryResolver.UpdateExtension",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.UpdateExtension",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1365,7 +1417,9 @@
                       "identifier": "extensionRegistryResolver.PublishExtension",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.PublishExtension",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1385,7 +1439,9 @@
                       "identifier": "extensionRegistryResolver.DeleteExtension",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.DeleteExtension",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1405,7 +1461,9 @@
                       "identifier": "extensionRegistryResolver.LocalExtensionIDPrefix",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.LocalExtensionIDPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1425,7 +1483,9 @@
                       "identifier": "extensionRegistryResolver.ImplementsLocalExtensionRegistry",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.ImplementsLocalExtensionRegistry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1445,7 +1505,9 @@
                       "identifier": "extensionRegistryResolver.FilterRemoteExtensions",
                       "newPage": false,
                       "searchKey": "api.extensionRegistryResolver.FilterRemoteExtensions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1468,9 +1530,7 @@
                 "identifier": "ExtensionRegistryMutationResult",
                 "newPage": false,
                 "searchKey": "api.ExtensionRegistryMutationResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1488,9 +1548,7 @@
                       "identifier": "ExtensionRegistryMutationResult.Extension",
                       "newPage": false,
                       "searchKey": "api.ExtensionRegistryMutationResult.Extension",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1513,7 +1571,9 @@
                 "identifier": "mockRegistryExtension",
                 "newPage": false,
                 "searchKey": "api.mockRegistryExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1536,9 +1596,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1556,7 +1614,9 @@
                 "identifier": "makePrioritizeExtensionIDsSet",
                 "newPage": false,
                 "searchKey": "api.makePrioritizeExtensionIDsSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1576,7 +1636,9 @@
                 "identifier": "strptr",
                 "newPage": false,
                 "searchKey": "api.strptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1591,12 +1653,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/registry/api#init",
+              "pathID": "/cmd/frontend/registry/api#init.extension_graphql.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.extension_graphql.go",
                 "newPage": false,
                 "searchKey": "api.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1616,9 +1680,7 @@
                 "identifier": "MarshalRegistryExtensionID",
                 "newPage": false,
                 "searchKey": "api.MarshalRegistryExtensionID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1638,7 +1700,9 @@
                 "identifier": "registryExtensionByID",
                 "newPage": false,
                 "searchKey": "api.registryExtensionByID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1658,9 +1722,7 @@
                 "identifier": "NewExtensionManifest",
                 "newPage": false,
                 "searchKey": "api.NewExtensionManifest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1680,9 +1742,7 @@
                 "identifier": "SplitExtensionID",
                 "newPage": false,
                 "searchKey": "api.SplitExtensionID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1702,9 +1762,7 @@
                 "identifier": "ParseExtensionID",
                 "newPage": false,
                 "searchKey": "api.ParseExtensionID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1724,9 +1782,7 @@
                 "identifier": "GetExtensionByExtensionID",
                 "newPage": false,
                 "searchKey": "api.GetExtensionByExtensionID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1746,7 +1802,9 @@
                 "identifier": "getLocalRegistryName",
                 "newPage": false,
                 "searchKey": "api.getLocalRegistryName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1766,9 +1824,7 @@
                 "identifier": "GetLocalRegistryExtensionIDPrefix",
                 "newPage": false,
                 "searchKey": "api.GetLocalRegistryExtensionIDPrefix",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1788,7 +1844,9 @@
                 "identifier": "getRemoteRegistryURL",
                 "newPage": false,
                 "searchKey": "api.getRemoteRegistryURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1808,7 +1866,9 @@
                 "identifier": "getRemoteRegistryExtension",
                 "newPage": false,
                 "searchKey": "api.getRemoteRegistryExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1828,7 +1888,9 @@
                 "identifier": "listRemoteRegistryExtensions",
                 "newPage": false,
                 "searchKey": "api.listRemoteRegistryExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1848,9 +1910,7 @@
                 "identifier": "GetFeaturedExtensions",
                 "newPage": false,
                 "searchKey": "api.GetFeaturedExtensions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1870,9 +1930,7 @@
                 "identifier": "IsWorkInProgressExtension",
                 "newPage": false,
                 "searchKey": "api.IsWorkInProgressExtension",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1892,9 +1950,7 @@
                 "identifier": "FilterRegistryExtensions",
                 "newPage": false,
                 "searchKey": "api.FilterRegistryExtensions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1914,9 +1970,7 @@
                 "identifier": "FindRegistryExtension",
                 "newPage": false,
                 "searchKey": "api.FindRegistryExtension",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1931,12 +1985,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/registry/api#init",
+              "pathID": "/cmd/frontend/registry/api#init.registry_graphql.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.registry_graphql.go",
                 "newPage": false,
                 "searchKey": "api.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1956,7 +2012,9 @@
                 "identifier": "getExtensionByExtensionID",
                 "newPage": false,
                 "searchKey": "api.getExtensionByExtensionID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1976,7 +2034,9 @@
                 "identifier": "TestSplitExtensionID",
                 "newPage": false,
                 "searchKey": "api.TestSplitExtensionID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1996,7 +2056,9 @@
                 "identifier": "TestParseExtensionID",
                 "newPage": false,
                 "searchKey": "api.TestParseExtensionID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2016,7 +2078,9 @@
                 "identifier": "TestGetExtensionByExtensionID",
                 "newPage": false,
                 "searchKey": "api.TestGetExtensionByExtensionID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2036,7 +2100,9 @@
                 "identifier": "TestIsWorkInProgressExtension",
                 "newPage": false,
                 "searchKey": "api.TestIsWorkInProgressExtension",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2056,7 +2122,9 @@
                 "identifier": "strptrptr",
                 "newPage": false,
                 "searchKey": "api.strptrptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

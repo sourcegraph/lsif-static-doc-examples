@@ -44,11 +44,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="DB" href="#DB">type DB interface</a>
 
 ```
 searchKey: dbutil.DB
-tags: [exported]
 ```
 
 ```Go
@@ -65,7 +68,6 @@ A DB captures the essential method of a sql.DB: QueryContext.
 
 ```
 searchKey: dbutil.Tx
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +83,6 @@ A Tx captures the essential methods of a sql.Tx.
 
 ```
 searchKey: dbutil.TxBeginner
-tags: [exported]
 ```
 
 ```Go
@@ -96,7 +97,6 @@ A TxBeginner captures BeginTx method of a sql.DB
 
 ```
 searchKey: dbutil.NullTime
-tags: [exported]
 ```
 
 ```Go
@@ -109,7 +109,6 @@ NullTime represents a time.Time that may be null. nullTime implements the sql.Sc
 
 ```
 searchKey: dbutil.NullTime.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -122,7 +121,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullTime.Value
-tags: [exported]
 ```
 
 ```Go
@@ -135,7 +133,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: dbutil.NullString
-tags: [exported]
 ```
 
 ```Go
@@ -148,7 +145,6 @@ NullString represents a string that may be null. NullString implements the sql.S
 
 ```
 searchKey: dbutil.NewNullString
-tags: [exported]
 ```
 
 ```Go
@@ -161,7 +157,6 @@ NewNullString returns a NullString treating zero value as null.
 
 ```
 searchKey: dbutil.NullString.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -174,7 +169,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullString.Value
-tags: [exported]
 ```
 
 ```Go
@@ -187,7 +181,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: dbutil.NullInt32
-tags: [exported]
 ```
 
 ```Go
@@ -200,7 +193,6 @@ NullInt32 represents an int32 that may be null. NullInt32 implements the sql.Sca
 
 ```
 searchKey: dbutil.NullInt32.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -213,7 +205,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullInt32.Value
-tags: [exported]
 ```
 
 ```Go
@@ -226,7 +217,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: dbutil.NullInt64
-tags: [exported]
 ```
 
 ```Go
@@ -239,7 +229,6 @@ NullInt64 represents an int64 that may be null. NullInt64 implements the sql.Sca
 
 ```
 searchKey: dbutil.NewNullInt64
-tags: [exported]
 ```
 
 ```Go
@@ -252,7 +241,6 @@ NewNullInt64 returns a NullInt64 treating zero value as null.
 
 ```
 searchKey: dbutil.NullInt64.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -265,7 +253,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullInt64.Value
-tags: [exported]
 ```
 
 ```Go
@@ -278,7 +265,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: dbutil.NullInt
-tags: [exported]
 ```
 
 ```Go
@@ -291,7 +277,6 @@ NullInt represents an int that may be null. NullInt implements the sql.Scanner i
 
 ```
 searchKey: dbutil.NewNullInt
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +289,6 @@ NewNullInt returns a NullInt treating zero value as null.
 
 ```
 searchKey: dbutil.NullInt.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -317,7 +301,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullInt.Value
-tags: [exported]
 ```
 
 ```Go
@@ -330,7 +313,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: dbutil.JSONInt64Set
-tags: [exported]
 ```
 
 ```Go
@@ -343,7 +325,6 @@ JSONInt64Set represents an int64 set as a JSONB object where the keys are the id
 
 ```
 searchKey: dbutil.JSONInt64Set.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -356,7 +337,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.JSONInt64Set.Value
-tags: [exported]
 ```
 
 ```Go
@@ -369,7 +349,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: dbutil.NullJSONRawMessage
-tags: [exported]
 ```
 
 ```Go
@@ -384,7 +363,6 @@ NullJSONRawMessage represents a json.RawMessage that may be null. NullJSONRawMes
 
 ```
 searchKey: dbutil.NullJSONRawMessage.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -397,7 +375,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullJSONRawMessage.Value
-tags: [exported]
 ```
 
 ```Go
@@ -410,7 +387,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: dbutil.CommitBytea
-tags: [exported]
 ```
 
 ```Go
@@ -423,7 +399,6 @@ CommitBytea represents a hex-encoded string that is efficiently encoded in Postg
 
 ```
 searchKey: dbutil.CommitBytea.Scan
-tags: [exported]
 ```
 
 ```Go
@@ -436,7 +411,6 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.CommitBytea.Value
-tags: [exported]
 ```
 
 ```Go
@@ -449,7 +423,6 @@ Value implements the driver Valuer interface.
 
 ```
 searchKey: dbutil.Scanner
-tags: [exported]
 ```
 
 ```Go
@@ -464,7 +437,6 @@ Scanner captures the Scan method of sql.Rows and sql.Row
 
 ```
 searchKey: dbutil.ScanFunc
-tags: [exported]
 ```
 
 ```Go
@@ -475,11 +447,14 @@ A ScanFunc scans one or more rows from a scanner, returning the last id column s
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Transaction" href="#Transaction">func Transaction(ctx context.Context, db *sql.DB, f func(tx *sql.Tx) error) (err error)</a>
 
 ```
 searchKey: dbutil.Transaction
-tags: [exported]
 ```
 
 ```Go
@@ -492,7 +467,6 @@ Transaction calls f within a transaction, rolling back if any error is returned 
 
 ```
 searchKey: dbutil.IsPostgresError
-tags: [exported]
 ```
 
 ```Go
@@ -503,7 +477,6 @@ func IsPostgresError(err error, codename string) bool
 
 ```
 searchKey: dbutil.PostgresDSN
-tags: [exported]
 ```
 
 ```Go
@@ -514,6 +487,7 @@ func PostgresDSN(prefix, currentUser string, getenv func(string) string) string
 
 ```
 searchKey: dbutil.TestPostgresDSN
+tags: [private]
 ```
 
 ```Go

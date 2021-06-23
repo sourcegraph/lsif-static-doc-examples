@@ -4,7 +4,9 @@
     "identifier": "race",
     "newPage": true,
     "searchKey": "internal/race",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Enabled",
                 "newPage": false,
                 "searchKey": "race.Enabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +67,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,9 +87,7 @@
                 "identifier": "Acquire",
                 "newPage": false,
                 "searchKey": "race.Acquire",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -105,9 +107,7 @@
                 "identifier": "Release",
                 "newPage": false,
                 "searchKey": "race.Release",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +127,7 @@
                 "identifier": "ReleaseMerge",
                 "newPage": false,
                 "searchKey": "race.ReleaseMerge",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -149,9 +147,7 @@
                 "identifier": "Disable",
                 "newPage": false,
                 "searchKey": "race.Disable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -171,9 +167,7 @@
                 "identifier": "Enable",
                 "newPage": false,
                 "searchKey": "race.Enable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -193,9 +187,7 @@
                 "identifier": "Read",
                 "newPage": false,
                 "searchKey": "race.Read",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -215,9 +207,7 @@
                 "identifier": "Write",
                 "newPage": false,
                 "searchKey": "race.Write",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -237,9 +227,7 @@
                 "identifier": "ReadRange",
                 "newPage": false,
                 "searchKey": "race.ReadRange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -259,9 +247,7 @@
                 "identifier": "WriteRange",
                 "newPage": false,
                 "searchKey": "race.WriteRange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -281,9 +267,7 @@
                 "identifier": "Errors",
                 "newPage": false,
                 "searchKey": "race.Errors",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

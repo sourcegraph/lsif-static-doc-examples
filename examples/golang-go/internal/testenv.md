@@ -37,16 +37,21 @@ It is an internal package because these details are specific to the Go team's te
     * [func CleanCmdEnv(cmd *exec.Cmd) *exec.Cmd](#CleanCmdEnv)
     * [func CPUIsSlow() bool](#CPUIsSlow)
     * [func SkipIfShortAndSlow(t testing.TB)](#SkipIfShortAndSlow)
-    * [func init()](#init)
+    * [func init()](#init.testenv_cgo.go)
     * [func hasSymlink() (ok bool, reason string)](#hasSymlink)
 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="execPaths" href="#execPaths">var execPaths</a>
 
 ```
 searchKey: testenv.execPaths
+tags: [private]
 ```
 
 ```Go
@@ -58,6 +63,7 @@ var execPaths sync.Map // path -> error
 
 ```
 searchKey: testenv.haveCGO
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +74,7 @@ var haveCGO bool
 
 ```
 searchKey: testenv.flaky
+tags: [private]
 ```
 
 ```Go
@@ -76,11 +83,14 @@ var flaky = flag.Bool("flaky", false, "run known-flaky tests too")
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Builder" href="#Builder">func Builder() string</a>
 
 ```
 searchKey: testenv.Builder
-tags: [exported]
 ```
 
 ```Go
@@ -93,7 +103,6 @@ Builder reports the name of the builder running this test (for example, "linux-a
 
 ```
 searchKey: testenv.HasGoBuild
-tags: [exported]
 ```
 
 ```Go
@@ -106,7 +115,6 @@ HasGoBuild reports whether the current system can build programs with `go build'
 
 ```
 searchKey: testenv.MustHaveGoBuild
-tags: [exported]
 ```
 
 ```Go
@@ -119,7 +127,6 @@ MustHaveGoBuild checks that the current system can build programs with `go build
 
 ```
 searchKey: testenv.HasGoRun
-tags: [exported]
 ```
 
 ```Go
@@ -132,7 +139,6 @@ HasGoRun reports whether the current system can run programs with `go run.'
 
 ```
 searchKey: testenv.MustHaveGoRun
-tags: [exported]
 ```
 
 ```Go
@@ -145,7 +151,6 @@ MustHaveGoRun checks that the current system can run programs with `go run.' If 
 
 ```
 searchKey: testenv.GoToolPath
-tags: [exported]
 ```
 
 ```Go
@@ -158,7 +163,6 @@ GoToolPath reports the path to the Go tool. It is a convenience wrapper around G
 
 ```
 searchKey: testenv.GoTool
-tags: [exported]
 ```
 
 ```Go
@@ -171,7 +175,6 @@ GoTool reports the path to the Go tool.
 
 ```
 searchKey: testenv.HasExec
-tags: [exported]
 ```
 
 ```Go
@@ -184,7 +187,6 @@ HasExec reports whether the current system can start new processes using os.Star
 
 ```
 searchKey: testenv.HasSrc
-tags: [exported]
 ```
 
 ```Go
@@ -197,7 +199,6 @@ HasSrc reports whether the entire source tree is available under GOROOT.
 
 ```
 searchKey: testenv.MustHaveExec
-tags: [exported]
 ```
 
 ```Go
@@ -210,7 +211,6 @@ MustHaveExec checks that the current system can start new processes using os.Sta
 
 ```
 searchKey: testenv.MustHaveExecPath
-tags: [exported]
 ```
 
 ```Go
@@ -223,7 +223,6 @@ MustHaveExecPath checks that the current system can start the named executable u
 
 ```
 searchKey: testenv.HasExternalNetwork
-tags: [exported]
 ```
 
 ```Go
@@ -236,7 +235,6 @@ HasExternalNetwork reports whether the current system can use external (non-loca
 
 ```
 searchKey: testenv.MustHaveExternalNetwork
-tags: [exported]
 ```
 
 ```Go
@@ -249,7 +247,6 @@ MustHaveExternalNetwork checks that the current system can use external (non-loc
 
 ```
 searchKey: testenv.HasCGO
-tags: [exported]
 ```
 
 ```Go
@@ -262,7 +259,6 @@ HasCGO reports whether the current system can use cgo.
 
 ```
 searchKey: testenv.MustHaveCGO
-tags: [exported]
 ```
 
 ```Go
@@ -275,7 +271,6 @@ MustHaveCGO calls t.Skip if cgo is not available.
 
 ```
 searchKey: testenv.CanInternalLink
-tags: [exported]
 ```
 
 ```Go
@@ -288,7 +283,6 @@ CanInternalLink reports whether the current system can link programs with intern
 
 ```
 searchKey: testenv.MustInternalLink
-tags: [exported]
 ```
 
 ```Go
@@ -301,7 +295,6 @@ MustInternalLink checks that the current system can link programs with internal 
 
 ```
 searchKey: testenv.HasSymlink
-tags: [exported]
 ```
 
 ```Go
@@ -314,7 +307,6 @@ HasSymlink reports whether the current system can use os.Symlink.
 
 ```
 searchKey: testenv.MustHaveSymlink
-tags: [exported]
 ```
 
 ```Go
@@ -327,7 +319,6 @@ MustHaveSymlink reports whether the current system can use os.Symlink. If not, M
 
 ```
 searchKey: testenv.HasLink
-tags: [exported]
 ```
 
 ```Go
@@ -340,7 +331,6 @@ HasLink reports whether the current system can use os.Link.
 
 ```
 searchKey: testenv.MustHaveLink
-tags: [exported]
 ```
 
 ```Go
@@ -353,7 +343,6 @@ MustHaveLink reports whether the current system can use os.Link. If not, MustHav
 
 ```
 searchKey: testenv.SkipFlaky
-tags: [exported]
 ```
 
 ```Go
@@ -364,7 +353,6 @@ func SkipFlaky(t testing.TB, issue int)
 
 ```
 searchKey: testenv.SkipFlakyNet
-tags: [exported]
 ```
 
 ```Go
@@ -375,7 +363,6 @@ func SkipFlakyNet(t testing.TB)
 
 ```
 searchKey: testenv.CleanCmdEnv
-tags: [exported]
 ```
 
 ```Go
@@ -388,7 +375,6 @@ CleanCmdEnv will fill cmd.Env with the environment, excluding certain variables 
 
 ```
 searchKey: testenv.CPUIsSlow
-tags: [exported]
 ```
 
 ```Go
@@ -401,7 +387,6 @@ CPUIsSlow reports whether the CPU running the test is suspected to be slow.
 
 ```
 searchKey: testenv.SkipIfShortAndSlow
-tags: [exported]
 ```
 
 ```Go
@@ -412,10 +397,11 @@ SkipIfShortAndSlow skips t if -short is set and the CPU running the test is susp
 
 (This is useful for CPU-intensive tests that otherwise complete quickly.) 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.testenv_cgo.go" href="#init.testenv_cgo.go">func init()</a>
 
 ```
 searchKey: testenv.init
+tags: [private]
 ```
 
 ```Go
@@ -426,6 +412,7 @@ func init()
 
 ```
 searchKey: testenv.hasSymlink
+tags: [private]
 ```
 
 ```Go

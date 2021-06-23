@@ -102,7 +102,7 @@ The PNG specification is at [https://www.w3.org/TR/PNG/](https://www.w3.org/TR/P
     * [func min(a, b int) int](#min)
     * [func Decode(r io.Reader) (image.Image, error)](#Decode)
     * [func DecodeConfig(r io.Reader) (image.Config, error)](#DecodeConfig)
-    * [func init()](#init)
+    * [func init()](#init.reader.go)
     * [func opaque(m image.Image) bool](#opaque)
     * [func abs8(d uint8) int](#abs8)
     * [func filter(cr *[nFilter][]byte, pr []byte, bpp int) int](#filter)
@@ -152,14 +152,11 @@ The PNG specification is at [https://www.w3.org/TR/PNG/](https://www.w3.org/TR/P
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="intSize" href="#intSize">const intSize</a>
 
 ```
 searchKey: png.intSize
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +169,7 @@ intSize is either 32 or 64.
 
 ```
 searchKey: png.ctGrayscale
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +182,7 @@ Color type, as per the PNG spec.
 
 ```
 searchKey: png.ctTrueColor
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +195,7 @@ Color type, as per the PNG spec.
 
 ```
 searchKey: png.ctPaletted
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +208,7 @@ Color type, as per the PNG spec.
 
 ```
 searchKey: png.ctGrayscaleAlpha
+tags: [private]
 ```
 
 ```Go
@@ -220,6 +221,7 @@ Color type, as per the PNG spec.
 
 ```
 searchKey: png.ctTrueColorAlpha
+tags: [private]
 ```
 
 ```Go
@@ -232,6 +234,7 @@ Color type, as per the PNG spec.
 
 ```
 searchKey: png.cbInvalid
+tags: [private]
 ```
 
 ```Go
@@ -244,6 +247,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbG1
+tags: [private]
 ```
 
 ```Go
@@ -256,6 +260,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbG2
+tags: [private]
 ```
 
 ```Go
@@ -268,6 +273,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbG4
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +286,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbG8
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +299,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbGA8
+tags: [private]
 ```
 
 ```Go
@@ -304,6 +312,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbTC8
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +325,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbP1
+tags: [private]
 ```
 
 ```Go
@@ -328,6 +338,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbP2
+tags: [private]
 ```
 
 ```Go
@@ -340,6 +351,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbP4
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +364,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbP8
+tags: [private]
 ```
 
 ```Go
@@ -364,6 +377,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbTCA8
+tags: [private]
 ```
 
 ```Go
@@ -376,6 +390,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbG16
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +403,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbGA16
+tags: [private]
 ```
 
 ```Go
@@ -400,6 +416,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbTC16
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +429,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.cbTCA16
+tags: [private]
 ```
 
 ```Go
@@ -424,6 +442,7 @@ A cb is a combination of color type and bit depth.
 
 ```
 searchKey: png.ftNone
+tags: [private]
 ```
 
 ```Go
@@ -436,6 +455,7 @@ Filter type, as per the PNG spec.
 
 ```
 searchKey: png.ftSub
+tags: [private]
 ```
 
 ```Go
@@ -448,6 +468,7 @@ Filter type, as per the PNG spec.
 
 ```
 searchKey: png.ftUp
+tags: [private]
 ```
 
 ```Go
@@ -460,6 +481,7 @@ Filter type, as per the PNG spec.
 
 ```
 searchKey: png.ftAverage
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +494,7 @@ Filter type, as per the PNG spec.
 
 ```
 searchKey: png.ftPaeth
+tags: [private]
 ```
 
 ```Go
@@ -484,6 +507,7 @@ Filter type, as per the PNG spec.
 
 ```
 searchKey: png.nFilter
+tags: [private]
 ```
 
 ```Go
@@ -496,6 +520,7 @@ Filter type, as per the PNG spec.
 
 ```
 searchKey: png.itNone
+tags: [private]
 ```
 
 ```Go
@@ -508,6 +533,7 @@ Interlace type.
 
 ```
 searchKey: png.itAdam7
+tags: [private]
 ```
 
 ```Go
@@ -520,6 +546,7 @@ Interlace type.
 
 ```
 searchKey: png.dsStart
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +559,7 @@ Decoding stage. The PNG specification says that the IHDR, PLTE (if present), tRN
 
 ```
 searchKey: png.dsSeenIHDR
+tags: [private]
 ```
 
 ```Go
@@ -544,6 +572,7 @@ Decoding stage. The PNG specification says that the IHDR, PLTE (if present), tRN
 
 ```
 searchKey: png.dsSeenPLTE
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +585,7 @@ Decoding stage. The PNG specification says that the IHDR, PLTE (if present), tRN
 
 ```
 searchKey: png.dsSeentRNS
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +598,7 @@ Decoding stage. The PNG specification says that the IHDR, PLTE (if present), tRN
 
 ```
 searchKey: png.dsSeenIDAT
+tags: [private]
 ```
 
 ```Go
@@ -580,6 +611,7 @@ Decoding stage. The PNG specification says that the IHDR, PLTE (if present), tRN
 
 ```
 searchKey: png.dsSeenIEND
+tags: [private]
 ```
 
 ```Go
@@ -592,6 +624,7 @@ Decoding stage. The PNG specification says that the IHDR, PLTE (if present), tRN
 
 ```
 searchKey: png.pngHeader
+tags: [private]
 ```
 
 ```Go
@@ -602,7 +635,6 @@ const pngHeader = "\x89PNG\r\n\x1a\n"
 
 ```
 searchKey: png.DefaultCompression
-tags: [exported]
 ```
 
 ```Go
@@ -613,7 +645,6 @@ const DefaultCompression CompressionLevel = 0
 
 ```
 searchKey: png.NoCompression
-tags: [exported]
 ```
 
 ```Go
@@ -624,7 +655,6 @@ const NoCompression CompressionLevel = -1
 
 ```
 searchKey: png.BestSpeed
-tags: [exported]
 ```
 
 ```Go
@@ -635,7 +665,6 @@ const BestSpeed CompressionLevel = -2
 
 ```
 searchKey: png.BestCompression
-tags: [exported]
 ```
 
 ```Go
@@ -644,14 +673,11 @@ const BestCompression CompressionLevel = -3
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="interlacing" href="#interlacing">var interlacing</a>
 
 ```
 searchKey: png.interlacing
+tags: [private]
 ```
 
 ```Go
@@ -664,6 +690,7 @@ interlacing defines Adam7 interlacing, with 7 passes of reduced images. See [htt
 
 ```
 searchKey: png.chunkOrderError
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +701,7 @@ var chunkOrderError = FormatError("chunk out of order")
 
 ```
 searchKey: png.filenames
+tags: [private]
 ```
 
 ```Go
@@ -684,6 +712,7 @@ var filenames = ...
 
 ```
 searchKey: png.filenamesPaletted
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +723,7 @@ var filenamesPaletted = ...
 
 ```
 searchKey: png.filenamesShort
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +738,7 @@ var filenamesShort = []string{
 
 ```
 searchKey: png.fakebKGDs
+tags: [private]
 ```
 
 ```Go
@@ -720,6 +751,7 @@ fakebKGDs maps from filenames to fake bKGD chunks for our approximation to the s
 
 ```
 searchKey: png.fakegAMAs
+tags: [private]
 ```
 
 ```Go
@@ -735,6 +767,7 @@ fakegAMAs maps from filenames to fake gAMA chunks for our approximation to the s
 
 ```
 searchKey: png.fakeIHDRUsings
+tags: [private]
 ```
 
 ```Go
@@ -747,6 +780,7 @@ fakeIHDRUsings maps from filenames to fake IHDR "using" lines for our approximat
 
 ```
 searchKey: png.readerErrors
+tags: [private]
 ```
 
 ```Go
@@ -755,14 +789,11 @@ var readerErrors = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="interlaceScan" href="#interlaceScan">type interlaceScan struct</a>
 
 ```
 searchKey: png.interlaceScan
+tags: [private]
 ```
 
 ```Go
@@ -777,6 +808,7 @@ interlaceScan defines the placement and size of a pass for Adam7 interlacing.
 
 ```
 searchKey: png.decoder
+tags: [private]
 ```
 
 ```Go
@@ -804,6 +836,7 @@ type decoder struct {
 
 ```
 searchKey: png.decoder.parseIHDR
+tags: [private]
 ```
 
 ```Go
@@ -814,6 +847,7 @@ func (d *decoder) parseIHDR(length uint32) error
 
 ```
 searchKey: png.decoder.parsePLTE
+tags: [private]
 ```
 
 ```Go
@@ -824,6 +858,7 @@ func (d *decoder) parsePLTE(length uint32) error
 
 ```
 searchKey: png.decoder.parsetRNS
+tags: [private]
 ```
 
 ```Go
@@ -834,6 +869,7 @@ func (d *decoder) parsetRNS(length uint32) error
 
 ```
 searchKey: png.decoder.Read
+tags: [private]
 ```
 
 ```Go
@@ -852,6 +888,7 @@ then this reader presents xxxyy. For well-formed PNG data, the decoder state imm
 
 ```
 searchKey: png.decoder.decode
+tags: [private]
 ```
 
 ```Go
@@ -864,6 +901,7 @@ decode decodes the IDAT data into an image.
 
 ```
 searchKey: png.decoder.readImagePass
+tags: [private]
 ```
 
 ```Go
@@ -876,6 +914,7 @@ readImagePass reads a single image pass, sized according to the pass number.
 
 ```
 searchKey: png.decoder.mergePassInto
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +927,7 @@ mergePassInto merges a single pass into a full sized image.
 
 ```
 searchKey: png.decoder.parseIDAT
+tags: [private]
 ```
 
 ```Go
@@ -898,6 +938,7 @@ func (d *decoder) parseIDAT(length uint32) (err error)
 
 ```
 searchKey: png.decoder.parseIEND
+tags: [private]
 ```
 
 ```Go
@@ -908,6 +949,7 @@ func (d *decoder) parseIEND(length uint32) error
 
 ```
 searchKey: png.decoder.parseChunk
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +960,7 @@ func (d *decoder) parseChunk() error
 
 ```
 searchKey: png.decoder.verifyChecksum
+tags: [private]
 ```
 
 ```Go
@@ -928,6 +971,7 @@ func (d *decoder) verifyChecksum() error
 
 ```
 searchKey: png.decoder.checkHeader
+tags: [private]
 ```
 
 ```Go
@@ -938,7 +982,6 @@ func (d *decoder) checkHeader() error
 
 ```
 searchKey: png.FormatError
-tags: [exported]
 ```
 
 ```Go
@@ -951,7 +994,6 @@ A FormatError reports that the input is not a valid PNG.
 
 ```
 searchKey: png.FormatError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -962,7 +1004,6 @@ func (e FormatError) Error() string
 
 ```
 searchKey: png.UnsupportedError
-tags: [exported]
 ```
 
 ```Go
@@ -975,7 +1016,6 @@ An UnsupportedError reports that the input uses a valid but unimplemented PNG fe
 
 ```
 searchKey: png.UnsupportedError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -986,7 +1026,6 @@ func (e UnsupportedError) Error() string
 
 ```
 searchKey: png.Encoder
-tags: [exported]
 ```
 
 ```Go
@@ -1005,7 +1044,6 @@ Encoder configures encoding PNG images.
 
 ```
 searchKey: png.Encoder.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -1018,7 +1056,6 @@ Encode writes the Image m to w in PNG format.
 
 ```
 searchKey: png.EncoderBufferPool
-tags: [exported]
 ```
 
 ```Go
@@ -1034,7 +1071,6 @@ EncoderBufferPool is an interface for getting and returning temporary instances 
 
 ```
 searchKey: png.EncoderBuffer
-tags: [exported]
 ```
 
 ```Go
@@ -1047,6 +1083,7 @@ EncoderBuffer holds the buffers used for encoding PNG images.
 
 ```
 searchKey: png.encoder
+tags: [private]
 ```
 
 ```Go
@@ -1071,6 +1108,7 @@ type encoder struct {
 
 ```
 searchKey: png.encoder.writeChunk
+tags: [private]
 ```
 
 ```Go
@@ -1081,6 +1119,7 @@ func (e *encoder) writeChunk(b []byte, name string)
 
 ```
 searchKey: png.encoder.writeIHDR
+tags: [private]
 ```
 
 ```Go
@@ -1091,6 +1130,7 @@ func (e *encoder) writeIHDR()
 
 ```
 searchKey: png.encoder.writePLTEAndTRNS
+tags: [private]
 ```
 
 ```Go
@@ -1101,6 +1141,7 @@ func (e *encoder) writePLTEAndTRNS(p color.Palette)
 
 ```
 searchKey: png.encoder.Write
+tags: [private]
 ```
 
 ```Go
@@ -1115,6 +1156,7 @@ This method should only be called from writeIDATs (via writeImage). No other cod
 
 ```
 searchKey: png.encoder.writeImage
+tags: [private]
 ```
 
 ```Go
@@ -1125,6 +1167,7 @@ func (e *encoder) writeImage(w io.Writer, m image.Image, cb int, level int) erro
 
 ```
 searchKey: png.encoder.writeIDATs
+tags: [private]
 ```
 
 ```Go
@@ -1137,6 +1180,7 @@ Write the actual image data to one or more IDAT chunks.
 
 ```
 searchKey: png.encoder.writeIEND
+tags: [private]
 ```
 
 ```Go
@@ -1147,7 +1191,6 @@ func (e *encoder) writeIEND()
 
 ```
 searchKey: png.CompressionLevel
-tags: [exported]
 ```
 
 ```Go
@@ -1160,6 +1203,7 @@ CompressionLevel indicates the compression level.
 
 ```
 searchKey: png.opaquer
+tags: [private]
 ```
 
 ```Go
@@ -1172,6 +1216,7 @@ type opaquer interface {
 
 ```
 searchKey: png.pool
+tags: [private]
 ```
 
 ```Go
@@ -1184,6 +1229,7 @@ type pool struct {
 
 ```
 searchKey: png.pool.Get
+tags: [private]
 ```
 
 ```Go
@@ -1194,6 +1240,7 @@ func (p *pool) Get() *EncoderBuffer
 
 ```
 searchKey: png.pool.Put
+tags: [private]
 ```
 
 ```Go
@@ -1202,14 +1249,11 @@ func (p *pool) Put(b *EncoderBuffer)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="abs" href="#abs">func abs(x int) int</a>
 
 ```
 searchKey: png.abs
+tags: [private]
 ```
 
 ```Go
@@ -1220,6 +1264,7 @@ func abs(x int) int
 
 ```
 searchKey: png.paeth
+tags: [private]
 ```
 
 ```Go
@@ -1232,6 +1277,7 @@ paeth implements the Paeth filter function, as per the PNG specification.
 
 ```
 searchKey: png.filterPaeth
+tags: [private]
 ```
 
 ```Go
@@ -1244,6 +1290,7 @@ filterPaeth applies the Paeth filter to the cdat slice. cdat is the current row'
 
 ```
 searchKey: png.cbPaletted
+tags: [private]
 ```
 
 ```Go
@@ -1254,6 +1301,7 @@ func cbPaletted(cb int) bool
 
 ```
 searchKey: png.min
+tags: [private]
 ```
 
 ```Go
@@ -1264,7 +1312,6 @@ func min(a, b int) int
 
 ```
 searchKey: png.Decode
-tags: [exported]
 ```
 
 ```Go
@@ -1277,7 +1324,6 @@ Decode reads a PNG image from r and returns it as an image.Image. The type of Im
 
 ```
 searchKey: png.DecodeConfig
-tags: [exported]
 ```
 
 ```Go
@@ -1286,10 +1332,11 @@ func DecodeConfig(r io.Reader) (image.Config, error)
 
 DecodeConfig returns the color model and dimensions of a PNG image without decoding the entire image. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.reader.go" href="#init.reader.go">func init()</a>
 
 ```
 searchKey: png.init
+tags: [private]
 ```
 
 ```Go
@@ -1300,6 +1347,7 @@ func init()
 
 ```
 searchKey: png.opaque
+tags: [private]
 ```
 
 ```Go
@@ -1312,6 +1360,7 @@ Returns whether or not the image is fully opaque.
 
 ```
 searchKey: png.abs8
+tags: [private]
 ```
 
 ```Go
@@ -1324,6 +1373,7 @@ The absolute value of a byte interpreted as a signed int8.
 
 ```
 searchKey: png.filter
+tags: [private]
 ```
 
 ```Go
@@ -1336,6 +1386,7 @@ Chooses the filter to use for encoding the current row, and applies it. The retu
 
 ```
 searchKey: png.zeroMemory
+tags: [private]
 ```
 
 ```Go
@@ -1346,6 +1397,7 @@ func zeroMemory(v []uint8)
 
 ```
 searchKey: png.levelToZlib
+tags: [private]
 ```
 
 ```Go
@@ -1358,7 +1410,6 @@ This function is required because we want the zero value of Encoder.CompressionL
 
 ```
 searchKey: png.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -1371,6 +1422,7 @@ Encode writes the Image m to w in PNG format. Any Image may be encoded, but imag
 
 ```
 searchKey: png.slowAbs
+tags: [private]
 ```
 
 ```Go
@@ -1381,6 +1433,7 @@ func slowAbs(x int) int
 
 ```
 searchKey: png.slowPaeth
+tags: [private]
 ```
 
 ```Go
@@ -1393,6 +1446,7 @@ slowPaeth is a slow but simple implementation of the Paeth function. It is a str
 
 ```
 searchKey: png.slowFilterPaeth
+tags: [private]
 ```
 
 ```Go
@@ -1405,6 +1459,7 @@ slowFilterPaeth is a slow but simple implementation of func filterPaeth.
 
 ```
 searchKey: png.TestPaeth
+tags: [private]
 ```
 
 ```Go
@@ -1415,6 +1470,7 @@ func TestPaeth(t *testing.T)
 
 ```
 searchKey: png.BenchmarkPaeth
+tags: [private]
 ```
 
 ```Go
@@ -1425,6 +1481,7 @@ func BenchmarkPaeth(b *testing.B)
 
 ```
 searchKey: png.TestPaethDecode
+tags: [private]
 ```
 
 ```Go
@@ -1435,6 +1492,7 @@ func TestPaethDecode(t *testing.T)
 
 ```
 searchKey: png.readPNG
+tags: [private]
 ```
 
 ```Go
@@ -1445,6 +1503,7 @@ func readPNG(filename string) (image.Image, error)
 
 ```
 searchKey: png.sng
+tags: [private]
 ```
 
 ```Go
@@ -1457,6 +1516,7 @@ An approximation of the sng command-line tool.
 
 ```
 searchKey: png.TestReader
+tags: [private]
 ```
 
 ```Go
@@ -1467,6 +1527,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: png.TestReaderError
+tags: [private]
 ```
 
 ```Go
@@ -1477,6 +1538,7 @@ func TestReaderError(t *testing.T)
 
 ```
 searchKey: png.TestPalettedDecodeConfig
+tags: [private]
 ```
 
 ```Go
@@ -1487,6 +1549,7 @@ func TestPalettedDecodeConfig(t *testing.T)
 
 ```
 searchKey: png.TestInterlaced
+tags: [private]
 ```
 
 ```Go
@@ -1497,6 +1560,7 @@ func TestInterlaced(t *testing.T)
 
 ```
 searchKey: png.TestIncompleteIDATOnRowBoundary
+tags: [private]
 ```
 
 ```Go
@@ -1507,6 +1571,7 @@ func TestIncompleteIDATOnRowBoundary(t *testing.T)
 
 ```
 searchKey: png.TestTrailingIDATChunks
+tags: [private]
 ```
 
 ```Go
@@ -1517,6 +1582,7 @@ func TestTrailingIDATChunks(t *testing.T)
 
 ```
 searchKey: png.TestMultipletRNSChunks
+tags: [private]
 ```
 
 ```Go
@@ -1527,6 +1593,7 @@ func TestMultipletRNSChunks(t *testing.T)
 
 ```
 searchKey: png.TestUnknownChunkLengthUnderflow
+tags: [private]
 ```
 
 ```Go
@@ -1537,6 +1604,7 @@ func TestUnknownChunkLengthUnderflow(t *testing.T)
 
 ```
 searchKey: png.TestPaletted8OutOfRangePixel
+tags: [private]
 ```
 
 ```Go
@@ -1547,6 +1615,7 @@ func TestPaletted8OutOfRangePixel(t *testing.T)
 
 ```
 searchKey: png.TestGray8Transparent
+tags: [private]
 ```
 
 ```Go
@@ -1557,6 +1626,7 @@ func TestGray8Transparent(t *testing.T)
 
 ```
 searchKey: png.TestDimensionOverflow
+tags: [private]
 ```
 
 ```Go
@@ -1567,6 +1637,7 @@ func TestDimensionOverflow(t *testing.T)
 
 ```
 searchKey: png.benchmarkDecode
+tags: [private]
 ```
 
 ```Go
@@ -1577,6 +1648,7 @@ func benchmarkDecode(b *testing.B, filename string, bytesPerPixel int)
 
 ```
 searchKey: png.BenchmarkDecodeGray
+tags: [private]
 ```
 
 ```Go
@@ -1587,6 +1659,7 @@ func BenchmarkDecodeGray(b *testing.B)
 
 ```
 searchKey: png.BenchmarkDecodeNRGBAGradient
+tags: [private]
 ```
 
 ```Go
@@ -1597,6 +1670,7 @@ func BenchmarkDecodeNRGBAGradient(b *testing.B)
 
 ```
 searchKey: png.BenchmarkDecodeNRGBAOpaque
+tags: [private]
 ```
 
 ```Go
@@ -1607,6 +1681,7 @@ func BenchmarkDecodeNRGBAOpaque(b *testing.B)
 
 ```
 searchKey: png.BenchmarkDecodePaletted
+tags: [private]
 ```
 
 ```Go
@@ -1617,6 +1692,7 @@ func BenchmarkDecodePaletted(b *testing.B)
 
 ```
 searchKey: png.BenchmarkDecodeRGB
+tags: [private]
 ```
 
 ```Go
@@ -1627,6 +1703,7 @@ func BenchmarkDecodeRGB(b *testing.B)
 
 ```
 searchKey: png.BenchmarkDecodeInterlacing
+tags: [private]
 ```
 
 ```Go
@@ -1637,6 +1714,7 @@ func BenchmarkDecodeInterlacing(b *testing.B)
 
 ```
 searchKey: png.diff
+tags: [private]
 ```
 
 ```Go
@@ -1647,6 +1725,7 @@ func diff(m0, m1 image.Image) error
 
 ```
 searchKey: png.encodeDecode
+tags: [private]
 ```
 
 ```Go
@@ -1657,6 +1736,7 @@ func encodeDecode(m image.Image) (image.Image, error)
 
 ```
 searchKey: png.TestWriter
+tags: [private]
 ```
 
 ```Go
@@ -1667,6 +1747,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: png.TestWriterPaletted
+tags: [private]
 ```
 
 ```Go
@@ -1677,6 +1758,7 @@ func TestWriterPaletted(t *testing.T)
 
 ```
 searchKey: png.TestWriterLevels
+tags: [private]
 ```
 
 ```Go
@@ -1687,6 +1769,7 @@ func TestWriterLevels(t *testing.T)
 
 ```
 searchKey: png.TestSubImage
+tags: [private]
 ```
 
 ```Go
@@ -1697,6 +1780,7 @@ func TestSubImage(t *testing.T)
 
 ```
 searchKey: png.BenchmarkEncodeGray
+tags: [private]
 ```
 
 ```Go
@@ -1707,6 +1791,7 @@ func BenchmarkEncodeGray(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeGrayWithBufferPool
+tags: [private]
 ```
 
 ```Go
@@ -1717,6 +1802,7 @@ func BenchmarkEncodeGrayWithBufferPool(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeNRGBOpaque
+tags: [private]
 ```
 
 ```Go
@@ -1727,6 +1813,7 @@ func BenchmarkEncodeNRGBOpaque(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeNRGBA
+tags: [private]
 ```
 
 ```Go
@@ -1737,6 +1824,7 @@ func BenchmarkEncodeNRGBA(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodePaletted
+tags: [private]
 ```
 
 ```Go
@@ -1747,6 +1835,7 @@ func BenchmarkEncodePaletted(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeRGBOpaque
+tags: [private]
 ```
 
 ```Go
@@ -1757,6 +1846,7 @@ func BenchmarkEncodeRGBOpaque(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeRGBA
+tags: [private]
 ```
 
 ```Go

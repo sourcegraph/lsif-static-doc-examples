@@ -22,14 +22,11 @@ Package httptrace provides mechanisms to trace the events within HTTP client req
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="clientEventContextKey" href="#clientEventContextKey">type clientEventContextKey struct{}</a>
 
 ```
 searchKey: httptrace.clientEventContextKey
+tags: [private]
 ```
 
 ```Go
@@ -42,7 +39,6 @@ unique type to prevent assignment.
 
 ```
 searchKey: httptrace.ClientTrace
-tags: [exported]
 ```
 
 ```Go
@@ -143,7 +139,6 @@ See [https://blog.golang.org/http-tracing](https://blog.golang.org/http-tracing)
 
 ```
 searchKey: httptrace.ContextClientTrace
-tags: [exported]
 ```
 
 ```Go
@@ -156,6 +151,7 @@ ContextClientTrace returns the ClientTrace associated with the provided context.
 
 ```
 searchKey: httptrace.ClientTrace.compose
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +164,7 @@ compose modifies t such that it respects the previously-registered hooks in old,
 
 ```
 searchKey: httptrace.ClientTrace.hasNetHooks
+tags: [private]
 ```
 
 ```Go
@@ -178,7 +175,6 @@ func (t *ClientTrace) hasNetHooks() bool
 
 ```
 searchKey: httptrace.WroteRequestInfo
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +190,6 @@ WroteRequestInfo contains information provided to the WroteRequest hook.
 
 ```
 searchKey: httptrace.DNSStartInfo
-tags: [exported]
 ```
 
 ```Go
@@ -209,7 +204,6 @@ DNSStartInfo contains information about a DNS request.
 
 ```
 searchKey: httptrace.DNSDoneInfo
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +227,6 @@ DNSDoneInfo contains information about the results of a DNS lookup.
 
 ```
 searchKey: httptrace.GotConnInfo
-tags: [exported]
 ```
 
 ```Go
@@ -261,15 +254,10 @@ GotConnInfo is the argument to the ClientTrace.GotConn function and contains inf
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="WithClientTrace" href="#WithClientTrace">func WithClientTrace(ctx context.Context, trace *ClientTrace) context.Context</a>
 
 ```
 searchKey: httptrace.WithClientTrace
-tags: [exported]
 ```
 
 ```Go
@@ -282,6 +270,7 @@ WithClientTrace returns a new context based on the provided parent ctx. HTTP cli
 
 ```
 searchKey: httptrace.TestWithClientTrace
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +281,7 @@ func TestWithClientTrace(t *testing.T)
 
 ```
 searchKey: httptrace.TestCompose
+tags: [private]
 ```
 
 ```Go

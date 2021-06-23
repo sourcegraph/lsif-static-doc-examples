@@ -90,15 +90,10 @@ Package fs defines basic interfaces to a file system. A file system can be provi
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ModeDir" href="#ModeDir">const ModeDir</a>
 
 ```
 searchKey: fs.ModeDir
-tags: [exported]
 ```
 
 ```Go
@@ -114,7 +109,6 @@ The single letters are the abbreviations used by the String method's formatting.
 
 ```
 searchKey: fs.ModeAppend
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +122,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeExclusive
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +135,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeTemporary
-tags: [exported]
 ```
 
 ```Go
@@ -156,7 +148,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeSymlink
-tags: [exported]
 ```
 
 ```Go
@@ -170,7 +161,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeDevice
-tags: [exported]
 ```
 
 ```Go
@@ -184,7 +174,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeNamedPipe
-tags: [exported]
 ```
 
 ```Go
@@ -198,7 +187,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeSocket
-tags: [exported]
 ```
 
 ```Go
@@ -212,7 +200,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeSetuid
-tags: [exported]
 ```
 
 ```Go
@@ -226,7 +213,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeSetgid
-tags: [exported]
 ```
 
 ```Go
@@ -240,7 +226,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeCharDevice
-tags: [exported]
 ```
 
 ```Go
@@ -254,7 +239,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeSticky
-tags: [exported]
 ```
 
 ```Go
@@ -268,7 +252,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeIrregular
-tags: [exported]
 ```
 
 ```Go
@@ -282,7 +265,6 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ```
 searchKey: fs.ModeType
-tags: [exported]
 ```
 
 ```Go
@@ -297,7 +279,6 @@ Mask for the type bits. For regular files, none will be set.
 
 ```
 searchKey: fs.ModePerm
-tags: [exported]
 ```
 
 ```Go
@@ -309,15 +290,10 @@ The defined file mode bits are the most significant bits of the FileMode. The ni
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrInvalid" href="#ErrInvalid">var ErrInvalid</a>
 
 ```
 searchKey: fs.ErrInvalid
-tags: [exported]
 ```
 
 ```Go
@@ -331,7 +307,6 @@ Generic file system errors. Errors returned by file systems can be tested agains
 
 ```
 searchKey: fs.ErrPermission
-tags: [exported]
 ```
 
 ```Go
@@ -345,7 +320,6 @@ Generic file system errors. Errors returned by file systems can be tested agains
 
 ```
 searchKey: fs.ErrExist
-tags: [exported]
 ```
 
 ```Go
@@ -359,7 +333,6 @@ Generic file system errors. Errors returned by file systems can be tested agains
 
 ```
 searchKey: fs.ErrNotExist
-tags: [exported]
 ```
 
 ```Go
@@ -373,7 +346,6 @@ Generic file system errors. Errors returned by file systems can be tested agains
 
 ```
 searchKey: fs.ErrClosed
-tags: [exported]
 ```
 
 ```Go
@@ -387,7 +359,6 @@ Generic file system errors. Errors returned by file systems can be tested agains
 
 ```
 searchKey: fs.SkipDir
-tags: [exported]
 ```
 
 ```Go
@@ -398,15 +369,10 @@ SkipDir is used as a return value from WalkDirFuncs to indicate that the directo
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="FS" href="#FS">type FS interface</a>
 
 ```
 searchKey: fs.FS
-tags: [exported]
 ```
 
 ```Go
@@ -432,7 +398,6 @@ The FS interface is the minimum implementation required of the file system. A fi
 
 ```
 searchKey: fs.Sub
-tags: [exported]
 ```
 
 ```Go
@@ -449,7 +414,6 @@ Note that Sub(os.DirFS("/"), "prefix") is equivalent to os.DirFS("/prefix") and 
 
 ```
 searchKey: fs.File
-tags: [exported]
 ```
 
 ```Go
@@ -466,7 +430,6 @@ A File provides access to a single file. The File interface is the minimum imple
 
 ```
 searchKey: fs.DirEntry
-tags: [exported]
 ```
 
 ```Go
@@ -499,7 +462,6 @@ A DirEntry is an entry read from a directory (using the ReadDir function or a Re
 
 ```
 searchKey: fs.FileInfoToDirEntry
-tags: [exported]
 ```
 
 ```Go
@@ -512,7 +474,6 @@ FileInfoToDirEntry returns a DirEntry that returns information from info. If inf
 
 ```
 searchKey: fs.ReadDirFile
-tags: [exported]
 ```
 
 ```Go
@@ -543,7 +504,6 @@ A ReadDirFile is a directory file whose entries can be read with the ReadDir met
 
 ```
 searchKey: fs.FileInfo
-tags: [exported]
 ```
 
 ```Go
@@ -563,7 +523,6 @@ A FileInfo describes a file and is returned by Stat.
 
 ```
 searchKey: fs.Stat
-tags: [exported]
 ```
 
 ```Go
@@ -578,7 +537,6 @@ If fs implements StatFS, Stat calls fs.Stat. Otherwise, Stat opens the file to s
 
 ```
 searchKey: fs.FileMode
-tags: [exported]
 ```
 
 ```Go
@@ -591,7 +549,6 @@ A FileMode represents a file's mode and permission bits. The bits have the same 
 
 ```
 searchKey: fs.FileMode.String
-tags: [exported]
 ```
 
 ```Go
@@ -602,7 +559,6 @@ func (m FileMode) String() string
 
 ```
 searchKey: fs.FileMode.IsDir
-tags: [exported]
 ```
 
 ```Go
@@ -615,7 +571,6 @@ IsDir reports whether m describes a directory. That is, it tests for the ModeDir
 
 ```
 searchKey: fs.FileMode.IsRegular
-tags: [exported]
 ```
 
 ```Go
@@ -628,7 +583,6 @@ IsRegular reports whether m describes a regular file. That is, it tests that no 
 
 ```
 searchKey: fs.FileMode.Perm
-tags: [exported]
 ```
 
 ```Go
@@ -641,7 +595,6 @@ Perm returns the Unix permission bits in m (m & ModePerm).
 
 ```
 searchKey: fs.FileMode.Type
-tags: [exported]
 ```
 
 ```Go
@@ -654,7 +607,6 @@ Type returns type bits in m (m & ModeType).
 
 ```
 searchKey: fs.PathError
-tags: [exported]
 ```
 
 ```Go
@@ -671,7 +623,6 @@ PathError records an error and the operation and file path that caused it.
 
 ```
 searchKey: fs.PathError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -682,7 +633,6 @@ func (e *PathError) Error() string
 
 ```
 searchKey: fs.PathError.Unwrap
-tags: [exported]
 ```
 
 ```Go
@@ -693,7 +643,6 @@ func (e *PathError) Unwrap() error
 
 ```
 searchKey: fs.PathError.Timeout
-tags: [exported]
 ```
 
 ```Go
@@ -706,7 +655,6 @@ Timeout reports whether this error represents a timeout.
 
 ```
 searchKey: fs.GlobFS
-tags: [exported]
 ```
 
 ```Go
@@ -726,7 +674,6 @@ A GlobFS is a file system with a Glob method.
 
 ```
 searchKey: fs.ReadDirFS
-tags: [exported]
 ```
 
 ```Go
@@ -745,6 +692,7 @@ ReadDirFS is the interface implemented by a file system that provides an optimiz
 
 ```
 searchKey: fs.dirInfo
+tags: [private]
 ```
 
 ```Go
@@ -759,6 +707,7 @@ dirInfo is a DirEntry based on a FileInfo.
 
 ```
 searchKey: fs.dirInfo.IsDir
+tags: [private]
 ```
 
 ```Go
@@ -769,6 +718,7 @@ func (di dirInfo) IsDir() bool
 
 ```
 searchKey: fs.dirInfo.Type
+tags: [private]
 ```
 
 ```Go
@@ -779,6 +729,7 @@ func (di dirInfo) Type() FileMode
 
 ```
 searchKey: fs.dirInfo.Info
+tags: [private]
 ```
 
 ```Go
@@ -789,6 +740,7 @@ func (di dirInfo) Info() (FileInfo, error)
 
 ```
 searchKey: fs.dirInfo.Name
+tags: [private]
 ```
 
 ```Go
@@ -799,7 +751,6 @@ func (di dirInfo) Name() string
 
 ```
 searchKey: fs.ReadFileFS
-tags: [exported]
 ```
 
 ```Go
@@ -823,7 +774,6 @@ ReadFileFS is the interface implemented by a file system that provides an optimi
 
 ```
 searchKey: fs.StatFS
-tags: [exported]
 ```
 
 ```Go
@@ -842,7 +792,6 @@ A StatFS is a file system with a Stat method.
 
 ```
 searchKey: fs.SubFS
-tags: [exported]
 ```
 
 ```Go
@@ -860,6 +809,7 @@ A SubFS is a file system with a Sub method.
 
 ```
 searchKey: fs.subFS
+tags: [private]
 ```
 
 ```Go
@@ -873,6 +823,7 @@ type subFS struct {
 
 ```
 searchKey: fs.subFS.fullName
+tags: [private]
 ```
 
 ```Go
@@ -885,6 +836,7 @@ fullName maps name to the fully-qualified name dir/name.
 
 ```
 searchKey: fs.subFS.shorten
+tags: [private]
 ```
 
 ```Go
@@ -897,6 +849,7 @@ shorten maps name, which should start with f.dir, back to the suffix after f.dir
 
 ```
 searchKey: fs.subFS.fixErr
+tags: [private]
 ```
 
 ```Go
@@ -909,6 +862,7 @@ fixErr shortens any reported names in PathErrors by stripping f.dir.
 
 ```
 searchKey: fs.subFS.Open
+tags: [private]
 ```
 
 ```Go
@@ -919,6 +873,7 @@ func (f *subFS) Open(name string) (File, error)
 
 ```
 searchKey: fs.subFS.ReadDir
+tags: [private]
 ```
 
 ```Go
@@ -929,6 +884,7 @@ func (f *subFS) ReadDir(name string) ([]DirEntry, error)
 
 ```
 searchKey: fs.subFS.ReadFile
+tags: [private]
 ```
 
 ```Go
@@ -939,6 +895,7 @@ func (f *subFS) ReadFile(name string) ([]byte, error)
 
 ```
 searchKey: fs.subFS.Glob
+tags: [private]
 ```
 
 ```Go
@@ -949,6 +906,7 @@ func (f *subFS) Glob(pattern string) ([]string, error)
 
 ```
 searchKey: fs.subFS.Sub
+tags: [private]
 ```
 
 ```Go
@@ -959,7 +917,6 @@ func (f *subFS) Sub(dir string) (FS, error)
 
 ```
 searchKey: fs.WalkDirFunc
-tags: [exported]
 ```
 
 ```Go
@@ -996,6 +953,7 @@ The differences between WalkDirFunc compared to filepath.WalkFunc are:
 
 ```
 searchKey: fs.statDirEntry
+tags: [private]
 ```
 
 ```Go
@@ -1008,6 +966,7 @@ type statDirEntry struct {
 
 ```
 searchKey: fs.statDirEntry.Name
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +977,7 @@ func (d *statDirEntry) Name() string
 
 ```
 searchKey: fs.statDirEntry.IsDir
+tags: [private]
 ```
 
 ```Go
@@ -1028,6 +988,7 @@ func (d *statDirEntry) IsDir() bool
 
 ```
 searchKey: fs.statDirEntry.Type
+tags: [private]
 ```
 
 ```Go
@@ -1038,6 +999,7 @@ func (d *statDirEntry) Type() FileMode
 
 ```
 searchKey: fs.statDirEntry.Info
+tags: [private]
 ```
 
 ```Go
@@ -1046,15 +1008,10 @@ func (d *statDirEntry) Info() (FileInfo, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ValidPath" href="#ValidPath">func ValidPath(name string) bool</a>
 
 ```
 searchKey: fs.ValidPath
-tags: [exported]
 ```
 
 ```Go
@@ -1071,6 +1028,7 @@ Note that paths are slash-separated on all systems, even Windows. Paths containi
 
 ```
 searchKey: fs.errInvalid
+tags: [private]
 ```
 
 ```Go
@@ -1081,6 +1039,7 @@ func errInvalid() error
 
 ```
 searchKey: fs.errPermission
+tags: [private]
 ```
 
 ```Go
@@ -1091,6 +1050,7 @@ func errPermission() error
 
 ```
 searchKey: fs.errExist
+tags: [private]
 ```
 
 ```Go
@@ -1101,6 +1061,7 @@ func errExist() error
 
 ```
 searchKey: fs.errNotExist
+tags: [private]
 ```
 
 ```Go
@@ -1111,6 +1072,7 @@ func errNotExist() error
 
 ```
 searchKey: fs.errClosed
+tags: [private]
 ```
 
 ```Go
@@ -1121,7 +1083,6 @@ func errClosed() error
 
 ```
 searchKey: fs.Glob
-tags: [exported]
 ```
 
 ```Go
@@ -1138,6 +1099,7 @@ If fs implements GlobFS, Glob calls fs.Glob. Otherwise, Glob uses ReadDir to tra
 
 ```
 searchKey: fs.cleanGlobPath
+tags: [private]
 ```
 
 ```Go
@@ -1150,6 +1112,7 @@ cleanGlobPath prepares path for glob matching.
 
 ```
 searchKey: fs.glob
+tags: [private]
 ```
 
 ```Go
@@ -1162,6 +1125,7 @@ glob searches for files matching pattern in the directory dir and appends them t
 
 ```
 searchKey: fs.hasMeta
+tags: [private]
 ```
 
 ```Go
@@ -1174,7 +1138,6 @@ hasMeta reports whether path contains any of the magic characters recognized by 
 
 ```
 searchKey: fs.ReadDir
-tags: [exported]
 ```
 
 ```Go
@@ -1189,7 +1152,6 @@ If fs implements ReadDirFS, ReadDir calls fs.ReadDir. Otherwise ReadDir calls fs
 
 ```
 searchKey: fs.ReadFile
-tags: [exported]
 ```
 
 ```Go
@@ -1204,6 +1166,7 @@ If fs implements ReadFileFS, ReadFile calls fs.ReadFile. Otherwise ReadFile call
 
 ```
 searchKey: fs.walkDir
+tags: [private]
 ```
 
 ```Go
@@ -1216,7 +1179,6 @@ walkDir recursively descends path, calling walkDirFn.
 
 ```
 searchKey: fs.WalkDir
-tags: [exported]
 ```
 
 ```Go

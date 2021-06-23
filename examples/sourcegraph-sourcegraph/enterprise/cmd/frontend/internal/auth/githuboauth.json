@@ -4,7 +4,9 @@
     "identifier": "githuboauth",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/auth/githuboauth",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "authPrefix",
                 "newPage": false,
                 "searchKey": "githuboauth.authPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "sessionKey",
                 "newPage": false,
                 "searchKey": "githuboauth.sessionKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "clientIDSecretValidator",
                 "newPage": false,
                 "searchKey": "githuboauth.clientIDSecretValidator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +136,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -142,9 +156,7 @@
                 "identifier": "Provider",
                 "newPage": false,
                 "searchKey": "githuboauth.Provider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +176,9 @@
                 "identifier": "sessionIssuerHelper",
                 "newPage": false,
                 "searchKey": "githuboauth.sessionIssuerHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -182,7 +196,9 @@
                       "identifier": "sessionIssuerHelper.GetOrCreateUser",
                       "newPage": false,
                       "searchKey": "githuboauth.sessionIssuerHelper.GetOrCreateUser",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -202,7 +218,9 @@
                       "identifier": "sessionIssuerHelper.CreateCodeHostConnection",
                       "newPage": false,
                       "searchKey": "githuboauth.sessionIssuerHelper.CreateCodeHostConnection",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -222,7 +240,9 @@
                       "identifier": "sessionIssuerHelper.DeleteStateCookie",
                       "newPage": false,
                       "searchKey": "githuboauth.sessionIssuerHelper.DeleteStateCookie",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -242,7 +262,9 @@
                       "identifier": "sessionIssuerHelper.SessionData",
                       "newPage": false,
                       "searchKey": "githuboauth.sessionIssuerHelper.SessionData",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -262,7 +284,9 @@
                       "identifier": "sessionIssuerHelper.newClient",
                       "newPage": false,
                       "searchKey": "githuboauth.sessionIssuerHelper.newClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -282,7 +306,9 @@
                       "identifier": "sessionIssuerHelper.verifyUserOrgs",
                       "newPage": false,
                       "searchKey": "githuboauth.sessionIssuerHelper.verifyUserOrgs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -305,7 +331,9 @@
                 "identifier": "MockProvider",
                 "newPage": false,
                 "searchKey": "githuboauth.MockProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -323,7 +351,9 @@
                       "identifier": "newMockProvider",
                       "newPage": false,
                       "searchKey": "githuboauth.newMockProvider",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -349,7 +379,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -362,12 +394,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#init",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#init.config.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.config.go",
                 "newPage": false,
                 "searchKey": "githuboauth.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +421,9 @@
                 "identifier": "parseConfig",
                 "newPage": false,
                 "searchKey": "githuboauth.parseConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,7 +443,9 @@
                 "identifier": "getStateConfig",
                 "newPage": false,
                 "searchKey": "githuboauth.getStateConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -422,12 +460,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#init",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#init.middleware.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.middleware.go",
                 "newPage": false,
                 "searchKey": "githuboauth.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,9 +487,7 @@
                 "identifier": "Middleware",
                 "newPage": false,
                 "searchKey": "githuboauth.Middleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -469,7 +507,9 @@
                 "identifier": "parseProvider",
                 "newPage": false,
                 "searchKey": "githuboauth.parseProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -489,7 +529,9 @@
                 "identifier": "validateClientIDAndSecret",
                 "newPage": false,
                 "searchKey": "githuboauth.validateClientIDAndSecret",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -509,7 +551,9 @@
                 "identifier": "requestedScopes",
                 "newPage": false,
                 "searchKey": "githuboauth.requestedScopes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -529,7 +573,9 @@
                 "identifier": "deref",
                 "newPage": false,
                 "searchKey": "githuboauth.deref",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -549,7 +595,9 @@
                 "identifier": "derefInt64",
                 "newPage": false,
                 "searchKey": "githuboauth.derefInt64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -569,7 +617,9 @@
                 "identifier": "getVerifiedEmails",
                 "newPage": false,
                 "searchKey": "githuboauth.getVerifiedEmails",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -589,7 +639,9 @@
                 "identifier": "TestParseConfig",
                 "newPage": false,
                 "searchKey": "githuboauth.TestParseConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -609,7 +661,9 @@
                 "identifier": "provider",
                 "newPage": false,
                 "searchKey": "githuboauth.provider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -629,7 +683,9 @@
                 "identifier": "TestMiddleware",
                 "newPage": false,
                 "searchKey": "githuboauth.TestMiddleware",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -649,7 +705,9 @@
                 "identifier": "TestRequestedScopes",
                 "newPage": false,
                 "searchKey": "githuboauth.TestRequestedScopes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -664,12 +722,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#init",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#init.session_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.session_test.go",
                 "newPage": false,
                 "searchKey": "githuboauth.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -689,7 +749,9 @@
                 "identifier": "TestSessionIssuerHelper_GetOrCreateUser",
                 "newPage": false,
                 "searchKey": "githuboauth.TestSessionIssuerHelper_GetOrCreateUser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -709,7 +771,9 @@
                 "identifier": "TestSessionIssuerHelper_CreateCodeHostConnection",
                 "newPage": false,
                 "searchKey": "githuboauth.TestSessionIssuerHelper_CreateCodeHostConnection",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -729,7 +793,9 @@
                 "identifier": "TestSessionIssuerHelper_CreateCodeHostConnectionHandlesExistingService",
                 "newPage": false,
                 "searchKey": "githuboauth.TestSessionIssuerHelper_CreateCodeHostConnectionHandlesExistingService",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -749,7 +815,9 @@
                 "identifier": "createCodeHostConnectionHelper",
                 "newPage": false,
                 "searchKey": "githuboauth.createCodeHostConnectionHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -769,7 +837,9 @@
                 "identifier": "u",
                 "newPage": false,
                 "searchKey": "githuboauth.u",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -789,7 +859,9 @@
                 "identifier": "acct",
                 "newPage": false,
                 "searchKey": "githuboauth.acct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -72,7 +72,7 @@ See [https://docs.sourcegraph.com/dev/background-information/observability/prome
     * [func boolP(v bool) *bool](#boolP)
     * [func newMatchersFromSilence(silence string) models.Matchers](#newMatchersFromSilence)
     * [func newSilenceFromMatchers(matchers models.Matchers) string](#newSilenceFromMatchers)
-    * [func init()](#init)
+    * [func init()](#init.siteconfig.go)
     * [func TestAlertSolutionsURL(t *testing.T)](#TestAlertSolutionsURL)
     * [func TestNewRoutesAndReceivers(t *testing.T)](#TestNewRoutesAndReceivers)
     * [func TestMatchersAndSilences(t *testing.T)](#TestMatchersAndSilences)
@@ -81,14 +81,11 @@ See [https://docs.sourcegraph.com/dev/background-information/observability/prome
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="alertmanagerPathPrefix" href="#alertmanagerPathPrefix">const alertmanagerPathPrefix</a>
 
 ```
 searchKey: main.alertmanagerPathPrefix
+tags: [private]
 ```
 
 ```Go
@@ -101,6 +98,7 @@ Prefix to serve alertmanager on. If you change this, make sure you update promet
 
 ```
 searchKey: main.alertmanagerNoopReceiver
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +109,7 @@ const alertmanagerNoopReceiver = "src-noop-receiver"
 
 ```
 searchKey: main.alertmanagerWarningReceiver
+tags: [private]
 ```
 
 ```Go
@@ -121,6 +120,7 @@ const alertmanagerWarningReceiver = "src-warning-receiver"
 
 ```
 searchKey: main.alertmanagerCriticalReceiver
+tags: [private]
 ```
 
 ```Go
@@ -131,6 +131,7 @@ const alertmanagerCriticalReceiver = "src-critical-receiver"
 
 ```
 searchKey: main.colorWarning
+tags: [private]
 ```
 
 ```Go
@@ -142,6 +143,7 @@ const colorWarning = "#FFFF00" // yellow
 
 ```
 searchKey: main.colorCritical
+tags: [private]
 ```
 
 ```Go
@@ -153,6 +155,7 @@ const colorCritical = "#FF0000" // red
 
 ```
 searchKey: main.colorGood
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +167,7 @@ const colorGood = "#00FF00" // green
 
 ```
 searchKey: main.docsURL
+tags: [private]
 ```
 
 ```Go
@@ -174,6 +178,7 @@ const docsURL = "https://docs.sourcegraph.com"
 
 ```
 searchKey: main.alertSolutionsPagePath
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +189,7 @@ const alertSolutionsPagePath = "admin/observability/alert_solutions"
 
 ```
 searchKey: main.matcherRegexPrefix
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +200,7 @@ const matcherRegexPrefix = "^("
 
 ```
 searchKey: main.matcherRegexSuffix
+tags: [private]
 ```
 
 ```Go
@@ -202,14 +209,11 @@ const matcherRegexSuffix = ")$"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="noConfig" href="#noConfig">var noConfig</a>
 
 ```
 searchKey: main.noConfig
+tags: [private]
 ```
 
 ```Go
@@ -222,6 +226,7 @@ prom-wrapper configuration options
 
 ```
 searchKey: main.noAlertmanager
+tags: [private]
 ```
 
 ```Go
@@ -234,6 +239,7 @@ prom-wrapper configuration options
 
 ```
 searchKey: main.exportPort
+tags: [private]
 ```
 
 ```Go
@@ -246,6 +252,7 @@ prom-wrapper configuration options
 
 ```
 searchKey: main.prometheusPort
+tags: [private]
 ```
 
 ```Go
@@ -258,6 +265,7 @@ prom-wrapper configuration options
 
 ```
 searchKey: main.alertmanagerPort
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +278,7 @@ prom-wrapper configuration options
 
 ```
 searchKey: main.alertmanagerConfigPath
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +291,7 @@ prom-wrapper configuration options
 
 ```
 searchKey: main.alertmanagerEnableCluster
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +304,7 @@ prom-wrapper configuration options
 
 ```
 searchKey: main.opsGenieAPIKey
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +317,7 @@ prom-wrapper configuration options
 
 ```
 searchKey: main.commonLabels
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +334,7 @@ When changing this, make sure to update the webhook body documentation in /doc/a
 
 ```
 searchKey: main.observableDocAnchorTemplate
+tags: [private]
 ```
 
 ```Go
@@ -338,6 +351,7 @@ observableDocAnchorTemplate must match anchors generated in `monitoring/monitori
 
 ```
 searchKey: main.alertSolutionsURLTemplate
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +366,7 @@ All `.CommonLabels` labels used in these templates should be included in `route.
 
 ```
 searchKey: main.firingTitleTemplate
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +383,7 @@ Title templates
 
 ```
 searchKey: main.resolvedTitleTemplate
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +398,7 @@ All `.CommonLabels` labels used in these templates should be included in `route.
 
 ```
 searchKey: main.notificationTitleTemplate
+tags: [private]
 ```
 
 ```Go
@@ -394,15 +411,10 @@ All `.CommonLabels` labels used in these templates should be included in `route.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ChangeContext" href="#ChangeContext">type ChangeContext struct</a>
 
 ```
 searchKey: main.ChangeContext
-tags: [exported]
 ```
 
 ```Go
@@ -416,7 +428,6 @@ type ChangeContext struct {
 
 ```
 searchKey: main.ChangeResult
-tags: [exported]
 ```
 
 ```Go
@@ -431,6 +442,7 @@ ChangeResult indicates output from a Change
 
 ```
 searchKey: main.changeReceivers
+tags: [private]
 ```
 
 ```Go
@@ -443,6 +455,7 @@ changeReceivers applies `observability.alerts` as Alertmanager receivers.
 
 ```
 searchKey: main.changeSMTP
+tags: [private]
 ```
 
 ```Go
@@ -455,6 +468,7 @@ changeSMTP applies SMTP server configuration.
 
 ```
 searchKey: main.changeSilences
+tags: [private]
 ```
 
 ```Go
@@ -467,7 +481,6 @@ changeSilences syncs Alertmanager silences with silences configured in observabi
 
 ```
 searchKey: main.Change
-tags: [exported]
 ```
 
 ```Go
@@ -480,6 +493,7 @@ Change implements a change to configuration
 
 ```
 searchKey: main.siteEmailConfig
+tags: [private]
 ```
 
 ```Go
@@ -493,6 +507,7 @@ type siteEmailConfig struct {
 
 ```
 searchKey: main.subscribedSiteConfig
+tags: [private]
 ```
 
 ```Go
@@ -516,6 +531,7 @@ subscribedSiteConfig contains fields from SiteConfiguration relevant to the site
 
 ```
 searchKey: main.newSubscribedSiteConfig
+tags: [private]
 ```
 
 ```Go
@@ -528,6 +544,7 @@ newSubscribedSiteConfig creates a subscribedSiteConfig with sha256 sums calculat
 
 ```
 searchKey: main.subscribedSiteConfig.Diff
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +557,7 @@ Diff returns a set of changes to apply.
 
 ```
 searchKey: main.siteConfigDiff
+tags: [private]
 ```
 
 ```Go
@@ -553,7 +571,6 @@ type siteConfigDiff struct {
 
 ```
 searchKey: main.SiteConfigSubscriber
-tags: [exported]
 ```
 
 ```Go
@@ -573,7 +590,6 @@ SiteConfigSubscriber is a sidecar service that subscribes to Sourcegraph site co
 
 ```
 searchKey: main.NewSiteConfigSubscriber
-tags: [exported]
 ```
 
 ```Go
@@ -584,7 +600,6 @@ func NewSiteConfigSubscriber(logger log15.Logger, alertmanager *amclient.Alertma
 
 ```
 searchKey: main.SiteConfigSubscriber.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -595,7 +610,6 @@ func (c *SiteConfigSubscriber) Handler() http.Handler
 
 ```
 searchKey: main.SiteConfigSubscriber.Subscribe
-tags: [exported]
 ```
 
 ```Go
@@ -606,6 +620,7 @@ func (c *SiteConfigSubscriber) Subscribe(ctx context.Context)
 
 ```
 searchKey: main.SiteConfigSubscriber.execDiffs
+tags: [private]
 ```
 
 ```Go
@@ -618,7 +633,6 @@ execDiffs updates grafanaAlertsSubscriber state and writes it to disk. It never 
 
 ```
 searchKey: main.AlertsStatusReporter
-tags: [exported]
 ```
 
 ```Go
@@ -635,7 +649,6 @@ AlertsStatusReporter summarizes alert activity from Alertmanager
 
 ```
 searchKey: main.NewAlertsStatusReporter
-tags: [exported]
 ```
 
 ```Go
@@ -646,7 +659,6 @@ func NewAlertsStatusReporter(logger log15.Logger, alertmanager *amclient.Alertma
 
 ```
 searchKey: main.AlertsStatusReporter.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -655,14 +667,11 @@ func (s *AlertsStatusReporter) Handler() http.Handler
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="waitForAlertmanager" href="#waitForAlertmanager">func waitForAlertmanager(ctx context.Context, alertmanager *amclient.Alertmanager) error</a>
 
 ```
 searchKey: main.waitForAlertmanager
+tags: [private]
 ```
 
 ```Go
@@ -673,6 +682,7 @@ func waitForAlertmanager(ctx context.Context, alertmanager *amclient.Alertmanage
 
 ```
 searchKey: main.reloadAlertmanager
+tags: [private]
 ```
 
 ```Go
@@ -685,6 +695,7 @@ reloadAlertmanager triggers a realod of the Alertmanager configuration file, bec
 
 ```
 searchKey: main.renderConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +708,7 @@ renderConfiguration marshals the given Alertmanager configuration to a format ac
 
 ```
 searchKey: main.applyConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -709,6 +721,7 @@ applyConfiguration writes validates and writes the given Alertmanager configurat
 
 ```
 searchKey: main.duration
+tags: [private]
 ```
 
 ```Go
@@ -719,6 +732,7 @@ func duration(dur time.Duration) *model.Duration
 
 ```
 searchKey: main.runCmd
+tags: [private]
 ```
 
 ```Go
@@ -729,7 +743,6 @@ func runCmd(log log15.Logger, errs chan<- error, cmd *exec.Cmd)
 
 ```
 searchKey: main.NewPrometheusCmd
-tags: [exported]
 ```
 
 ```Go
@@ -742,7 +755,6 @@ NewPrometheusCmd instantiates a new command to run Prometheus. Parameter promArg
 
 ```
 searchKey: main.NewAlertmanagerCmd
-tags: [exported]
 ```
 
 ```Go
@@ -753,6 +765,7 @@ func NewAlertmanagerCmd(configPath string) *exec.Cmd
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -763,6 +776,7 @@ func main()
 
 ```
 searchKey: main.alertSolutionsURL
+tags: [private]
 ```
 
 ```Go
@@ -775,6 +789,7 @@ alertSolutionsURL generates a link to the alert solutions page that embeds the a
 
 ```
 searchKey: main.newRoutesAndReceivers
+tags: [private]
 ```
 
 ```Go
@@ -789,6 +804,7 @@ newRoutesAndReceivers converts the given alerts from Sourcegraph site configurat
 
 ```
 searchKey: main.newRootRoute
+tags: [private]
 ```
 
 ```Go
@@ -801,6 +817,7 @@ newRootRoute generates a base Route required by Alertmanager to wrap all routes
 
 ```
 searchKey: main.stringP
+tags: [private]
 ```
 
 ```Go
@@ -811,6 +828,7 @@ func stringP(v string) *string
 
 ```
 searchKey: main.boolP
+tags: [private]
 ```
 
 ```Go
@@ -821,6 +839,7 @@ func boolP(v bool) *bool
 
 ```
 searchKey: main.newMatchersFromSilence
+tags: [private]
 ```
 
 ```Go
@@ -833,6 +852,7 @@ newMatchersFromSilence creates Alertmanager alert matchers from a configured sil
 
 ```
 searchKey: main.newSilenceFromMatchers
+tags: [private]
 ```
 
 ```Go
@@ -841,10 +861,11 @@ func newSilenceFromMatchers(matchers models.Matchers) string
 
 newSilenceFromMatchers returns the silenced alert from Alertmanager alert matchers 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.siteconfig.go" href="#init.siteconfig.go">func init()</a>
 
 ```
 searchKey: main.init
+tags: [private]
 ```
 
 ```Go
@@ -855,6 +876,7 @@ func init()
 
 ```
 searchKey: main.TestAlertSolutionsURL
+tags: [private]
 ```
 
 ```Go
@@ -865,6 +887,7 @@ func TestAlertSolutionsURL(t *testing.T)
 
 ```
 searchKey: main.TestNewRoutesAndReceivers
+tags: [private]
 ```
 
 ```Go
@@ -875,6 +898,7 @@ func TestNewRoutesAndReceivers(t *testing.T)
 
 ```
 searchKey: main.TestMatchersAndSilences
+tags: [private]
 ```
 
 ```Go
@@ -885,6 +909,7 @@ func TestMatchersAndSilences(t *testing.T)
 
 ```
 searchKey: main.TestAlertsStatusReporterHistory
+tags: [private]
 ```
 
 ```Go

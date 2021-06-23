@@ -98,7 +98,7 @@ This set may grow. Note that regular expression matches may need to examine text
     * [type entry struct](#entry)
     * [type thread struct](#thread)
     * [type machine struct](#machine)
-        * [func (m *machine) init(ncap int)](#machine.init)
+        * [func (m *machine) init(ncap int)](#machine.init.exec.go.0xc05f359588)
         * [func (m *machine) alloc(i *syntax.Inst) *thread](#machine.alloc)
         * [func (m *machine) match(i input, pos int) bool](#machine.match)
         * [func (m *machine) clear(q *queue)](#machine.clear)
@@ -109,7 +109,7 @@ This set may grow. Note that regular expression matches may need to examine text
         * [func (i *inputs) newString(s string) input](#inputs.newString)
         * [func (i *inputs) newReader(r io.RuneReader) input](#inputs.newReader)
         * [func (i *inputs) clear()](#inputs.clear)
-        * [func (i *inputs) init(r io.RuneReader, b []byte, s string) (input, int)](#inputs.init)
+        * [func (i *inputs) init(r io.RuneReader, b []byte, s string) (input, int)](#inputs.init.exec.go)
     * [type lazyFlag uint64](#lazyFlag)
         * [func newLazyFlag(r1, r2 rune) lazyFlag](#newLazyFlag)
         * [func (f lazyFlag) match(op syntax.EmptyOp) bool](#lazyFlag.match)
@@ -231,7 +231,7 @@ This set may grow. Note that regular expression matches may need to examine text
     * [func MatchString(pattern string, s string) (matched bool, err error)](#MatchString)
     * [func Match(pattern string, b []byte) (matched bool, err error)](#Match)
     * [func special(b byte) bool](#special)
-    * [func init()](#init)
+    * [func init()](#init.regexp.go)
     * [func QuoteMeta(s string) string](#QuoteMeta)
     * [func extract(str string) (name string, num int, rest string, ok bool)](#extract)
     * [func TestGoodCompile(t *testing.T)](#TestGoodCompile)
@@ -334,14 +334,11 @@ This set may grow. Note that regular expression matches may need to examine text
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="visitedBits" href="#visitedBits">const visitedBits</a>
 
 ```
 searchKey: regexp.visitedBits
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +349,7 @@ const visitedBits = 32
 
 ```
 searchKey: regexp.maxBacktrackProg
+tags: [private]
 ```
 
 ```Go
@@ -363,6 +361,7 @@ const maxBacktrackProg = 500 // len(prog.Inst) <= max
 
 ```
 searchKey: regexp.maxBacktrackVector
+tags: [private]
 ```
 
 ```Go
@@ -374,6 +373,7 @@ const maxBacktrackVector = 256 * 1024 // bit vector size <= max (bits)
 
 ```
 searchKey: regexp.mergeFailed
+tags: [private]
 ```
 
 ```Go
@@ -386,6 +386,7 @@ mergeRuneSets merges two non-intersecting runesets, and returns the merged resul
 
 ```
 searchKey: regexp.endOfText
+tags: [private]
 ```
 
 ```Go
@@ -396,6 +397,7 @@ const endOfText rune = -1
 
 ```
 searchKey: regexp.startSize
+tags: [private]
 ```
 
 ```Go
@@ -405,14 +407,11 @@ const startSize = 10 // The size at which to start a slice in the 'All' routines
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="bitStatePool" href="#bitStatePool">var bitStatePool</a>
 
 ```
 searchKey: regexp.bitStatePool
+tags: [private]
 ```
 
 ```Go
@@ -423,6 +422,7 @@ var bitStatePool sync.Pool
 
 ```
 searchKey: regexp.onePassPool
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +433,7 @@ var onePassPool sync.Pool
 
 ```
 searchKey: regexp.arrayNoInts
+tags: [private]
 ```
 
 ```Go
@@ -445,6 +446,7 @@ arrayNoInts is returned by doExecute match if nil dstCap is passed to it with nc
 
 ```
 searchKey: regexp.noRune
+tags: [private]
 ```
 
 ```Go
@@ -455,6 +457,7 @@ var noRune = []rune{}
 
 ```
 searchKey: regexp.noNext
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +468,7 @@ var noNext = []uint32{mergeFailed}
 
 ```
 searchKey: regexp.anyRuneNotNL
+tags: [private]
 ```
 
 ```Go
@@ -475,6 +479,7 @@ var anyRuneNotNL = []rune{0, '\n' - 1, '\n' + 1, unicode.MaxRune}
 
 ```
 searchKey: regexp.anyRune
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +490,7 @@ var anyRune = []rune{0, unicode.MaxRune}
 
 ```
 searchKey: regexp.matchSize
+tags: [private]
 ```
 
 ```Go
@@ -497,6 +503,7 @@ Pools of *machine for use during (*Regexp).doExecute, split up by the size of th
 
 ```
 searchKey: regexp.matchPool
+tags: [private]
 ```
 
 ```Go
@@ -509,6 +516,7 @@ Pools of *machine for use during (*Regexp).doExecute, split up by the size of th
 
 ```
 searchKey: regexp.specialBytes
+tags: [private]
 ```
 
 ```Go
@@ -521,6 +529,7 @@ Bitmap used by func special to check whether a character needs to be escaped.
 
 ```
 searchKey: regexp.goodRe
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +540,7 @@ var goodRe = ...
 
 ```
 searchKey: regexp.badRe
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +551,7 @@ var badRe = ...
 
 ```
 searchKey: regexp.replaceTests
+tags: [private]
 ```
 
 ```Go
@@ -551,6 +562,7 @@ var replaceTests = ...
 
 ```
 searchKey: regexp.replaceLiteralTests
+tags: [private]
 ```
 
 ```Go
@@ -561,6 +573,7 @@ var replaceLiteralTests = ...
 
 ```
 searchKey: regexp.replaceFuncTests
+tags: [private]
 ```
 
 ```Go
@@ -571,6 +584,7 @@ var replaceFuncTests = ...
 
 ```
 searchKey: regexp.metaTests
+tags: [private]
 ```
 
 ```Go
@@ -581,6 +595,7 @@ var metaTests = ...
 
 ```
 searchKey: regexp.literalPrefixTests
+tags: [private]
 ```
 
 ```Go
@@ -591,6 +606,7 @@ var literalPrefixTests = ...
 
 ```
 searchKey: regexp.emptySubexpIndices
+tags: [private]
 ```
 
 ```Go
@@ -601,6 +617,7 @@ var emptySubexpIndices = []subexpIndex{{"", -1}, {"missing", -1}}
 
 ```
 searchKey: regexp.subexpCases
+tags: [private]
 ```
 
 ```Go
@@ -611,6 +628,7 @@ var subexpCases = ...
 
 ```
 searchKey: regexp.splitTests
+tags: [private]
 ```
 
 ```Go
@@ -621,6 +639,7 @@ var splitTests = ...
 
 ```
 searchKey: regexp.sink
+tags: [private]
 ```
 
 ```Go
@@ -631,6 +650,7 @@ var sink string
 
 ```
 searchKey: regexp.compileBenchData
+tags: [private]
 ```
 
 ```Go
@@ -641,6 +661,7 @@ var compileBenchData = ...
 
 ```
 searchKey: regexp.minInputLenTests
+tags: [private]
 ```
 
 ```Go
@@ -651,6 +672,7 @@ var minInputLenTests = ...
 
 ```
 searchKey: regexp.run
+tags: [private]
 ```
 
 ```Go
@@ -661,6 +683,7 @@ var run = ...
 
 ```
 searchKey: regexp.match
+tags: [private]
 ```
 
 ```Go
@@ -671,6 +694,7 @@ var match = ...
 
 ```
 searchKey: regexp.notab
+tags: [private]
 ```
 
 ```Go
@@ -681,6 +705,7 @@ var notab = MustCompilePOSIX(`[^\t]+`)
 
 ```
 searchKey: regexp.text
+tags: [private]
 ```
 
 ```Go
@@ -691,6 +716,7 @@ var text []byte
 
 ```
 searchKey: regexp.benchData
+tags: [private]
 ```
 
 ```Go
@@ -701,6 +727,7 @@ var benchData = ...
 
 ```
 searchKey: regexp.benchSizes
+tags: [private]
 ```
 
 ```Go
@@ -711,6 +738,7 @@ var benchSizes = ...
 
 ```
 searchKey: regexp.findTests
+tags: [private]
 ```
 
 ```Go
@@ -721,6 +749,7 @@ var findTests = ...
 
 ```
 searchKey: regexp.runeMergeTests
+tags: [private]
 ```
 
 ```Go
@@ -731,6 +760,7 @@ var runeMergeTests = ...
 
 ```
 searchKey: regexp.onePassTests
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +771,7 @@ var onePassTests = ...
 
 ```
 searchKey: regexp.onePassTests1
+tags: [private]
 ```
 
 ```Go
@@ -756,14 +787,11 @@ TODO(cespare): Unify with onePassTests and rationalize one-pass test cases.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="job" href="#job">type job struct</a>
 
 ```
 searchKey: regexp.job
+tags: [private]
 ```
 
 ```Go
@@ -780,6 +808,7 @@ A job is an entry on the backtracker's job stack. It holds the instruction pc an
 
 ```
 searchKey: regexp.bitState
+tags: [private]
 ```
 
 ```Go
@@ -800,6 +829,7 @@ bitState holds state for the backtracker.
 
 ```
 searchKey: regexp.newBitState
+tags: [private]
 ```
 
 ```Go
@@ -810,6 +840,7 @@ func newBitState() *bitState
 
 ```
 searchKey: regexp.bitState.reset
+tags: [private]
 ```
 
 ```Go
@@ -822,6 +853,7 @@ reset resets the state of the backtracker. end is the end position in the input.
 
 ```
 searchKey: regexp.bitState.shouldVisit
+tags: [private]
 ```
 
 ```Go
@@ -834,6 +866,7 @@ shouldVisit reports whether the combination of (pc, pos) has not been visited ye
 
 ```
 searchKey: regexp.bitState.push
+tags: [private]
 ```
 
 ```Go
@@ -846,6 +879,7 @@ push pushes (pc, pos, arg) onto the job stack if it should be visited.
 
 ```
 searchKey: regexp.queue
+tags: [private]
 ```
 
 ```Go
@@ -861,6 +895,7 @@ A queue is a 'sparse array' holding pending threads of execution. See [https://r
 
 ```
 searchKey: regexp.entry
+tags: [private]
 ```
 
 ```Go
@@ -876,6 +911,7 @@ An entry is an entry on a queue. It holds both the instruction pc and the actual
 
 ```
 searchKey: regexp.thread
+tags: [private]
 ```
 
 ```Go
@@ -891,6 +927,7 @@ A thread is the state of a single path through the machine: an instruction and a
 
 ```
 searchKey: regexp.machine
+tags: [private]
 ```
 
 ```Go
@@ -908,10 +945,11 @@ type machine struct {
 
 A machine holds all the state during an NFA simulation for p. 
 
-#### <a id="machine.init" href="#machine.init">func (m *machine) init(ncap int)</a>
+#### <a id="machine.init.exec.go.0xc05f359588" href="#machine.init.exec.go.0xc05f359588">func (m *machine) init(ncap int)</a>
 
 ```
 searchKey: regexp.machine.init
+tags: [private]
 ```
 
 ```Go
@@ -922,6 +960,7 @@ func (m *machine) init(ncap int)
 
 ```
 searchKey: regexp.machine.alloc
+tags: [private]
 ```
 
 ```Go
@@ -934,6 +973,7 @@ alloc allocates a new thread with the given instruction. It uses the free pool i
 
 ```
 searchKey: regexp.machine.match
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +986,7 @@ match runs the machine over the input starting at pos. It reports whether a matc
 
 ```
 searchKey: regexp.machine.clear
+tags: [private]
 ```
 
 ```Go
@@ -958,6 +999,7 @@ clear frees all threads on the thread queue.
 
 ```
 searchKey: regexp.machine.step
+tags: [private]
 ```
 
 ```Go
@@ -970,6 +1012,7 @@ step executes one step of the machine, running each of the threads on runq and a
 
 ```
 searchKey: regexp.machine.add
+tags: [private]
 ```
 
 ```Go
@@ -982,6 +1025,7 @@ add adds an entry to q for pc, unless the q already has such an entry. It also r
 
 ```
 searchKey: regexp.inputs
+tags: [private]
 ```
 
 ```Go
@@ -997,6 +1041,7 @@ type inputs struct {
 
 ```
 searchKey: regexp.inputs.newBytes
+tags: [private]
 ```
 
 ```Go
@@ -1007,6 +1052,7 @@ func (i *inputs) newBytes(b []byte) input
 
 ```
 searchKey: regexp.inputs.newString
+tags: [private]
 ```
 
 ```Go
@@ -1017,6 +1063,7 @@ func (i *inputs) newString(s string) input
 
 ```
 searchKey: regexp.inputs.newReader
+tags: [private]
 ```
 
 ```Go
@@ -1027,16 +1074,18 @@ func (i *inputs) newReader(r io.RuneReader) input
 
 ```
 searchKey: regexp.inputs.clear
+tags: [private]
 ```
 
 ```Go
 func (i *inputs) clear()
 ```
 
-#### <a id="inputs.init" href="#inputs.init">func (i *inputs) init(r io.RuneReader, b []byte, s string) (input, int)</a>
+#### <a id="inputs.init.exec.go" href="#inputs.init.exec.go">func (i *inputs) init(r io.RuneReader, b []byte, s string) (input, int)</a>
 
 ```
 searchKey: regexp.inputs.init
+tags: [private]
 ```
 
 ```Go
@@ -1047,6 +1096,7 @@ func (i *inputs) init(r io.RuneReader, b []byte, s string) (input, int)
 
 ```
 searchKey: regexp.lazyFlag
+tags: [private]
 ```
 
 ```Go
@@ -1059,6 +1109,7 @@ A lazyFlag is a lazily-evaluated syntax.EmptyOp, for checking zero-width flags l
 
 ```
 searchKey: regexp.newLazyFlag
+tags: [private]
 ```
 
 ```Go
@@ -1069,6 +1120,7 @@ func newLazyFlag(r1, r2 rune) lazyFlag
 
 ```
 searchKey: regexp.lazyFlag.match
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1131,7 @@ func (f lazyFlag) match(op syntax.EmptyOp) bool
 
 ```
 searchKey: regexp.onePassMachine
+tags: [private]
 ```
 
 ```Go
@@ -1092,6 +1145,7 @@ type onePassMachine struct {
 
 ```
 searchKey: regexp.newOnePassMachine
+tags: [private]
 ```
 
 ```Go
@@ -1102,6 +1156,7 @@ func newOnePassMachine() *onePassMachine
 
 ```
 searchKey: regexp.onePassProg
+tags: [private]
 ```
 
 ```Go
@@ -1118,6 +1173,7 @@ A onePassProg is a compiled one-pass regular expression program. It is the same 
 
 ```
 searchKey: regexp.onePassCopy
+tags: [private]
 ```
 
 ```Go
@@ -1130,6 +1186,7 @@ onePassCopy creates a copy of the original Prog, as we'll be modifying it
 
 ```
 searchKey: regexp.makeOnePass
+tags: [private]
 ```
 
 ```Go
@@ -1142,6 +1199,7 @@ makeOnePass creates a onepass Prog, if possible. It is possible if at any alt, t
 
 ```
 searchKey: regexp.compileOnePass
+tags: [private]
 ```
 
 ```Go
@@ -1154,6 +1212,7 @@ compileOnePass returns a new *syntax.Prog suitable for onePass execution if the 
 
 ```
 searchKey: regexp.onePassInst
+tags: [private]
 ```
 
 ```Go
@@ -1169,6 +1228,7 @@ A onePassInst is a single instruction in a one-pass regular expression program. 
 
 ```
 searchKey: regexp.queueOnePass
+tags: [private]
 ```
 
 ```Go
@@ -1185,6 +1245,7 @@ Sparse Array implementation is used as a queueOnePass.
 
 ```
 searchKey: regexp.newQueue
+tags: [private]
 ```
 
 ```Go
@@ -1195,6 +1256,7 @@ func newQueue(size int) (q *queueOnePass)
 
 ```
 searchKey: regexp.queueOnePass.empty
+tags: [private]
 ```
 
 ```Go
@@ -1205,6 +1267,7 @@ func (q *queueOnePass) empty() bool
 
 ```
 searchKey: regexp.queueOnePass.next
+tags: [private]
 ```
 
 ```Go
@@ -1215,6 +1278,7 @@ func (q *queueOnePass) next() (n uint32)
 
 ```
 searchKey: regexp.queueOnePass.clear
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1289,7 @@ func (q *queueOnePass) clear()
 
 ```
 searchKey: regexp.queueOnePass.contains
+tags: [private]
 ```
 
 ```Go
@@ -1235,6 +1300,7 @@ func (q *queueOnePass) contains(u uint32) bool
 
 ```
 searchKey: regexp.queueOnePass.insert
+tags: [private]
 ```
 
 ```Go
@@ -1245,6 +1311,7 @@ func (q *queueOnePass) insert(u uint32)
 
 ```
 searchKey: regexp.queueOnePass.insertNew
+tags: [private]
 ```
 
 ```Go
@@ -1255,6 +1322,7 @@ func (q *queueOnePass) insertNew(u uint32)
 
 ```
 searchKey: regexp.runeSlice
+tags: [private]
 ```
 
 ```Go
@@ -1267,6 +1335,7 @@ runeSlice exists to permit sorting the case-folded rune sets.
 
 ```
 searchKey: regexp.runeSlice.Len
+tags: [private]
 ```
 
 ```Go
@@ -1277,6 +1346,7 @@ func (p runeSlice) Len() int
 
 ```
 searchKey: regexp.runeSlice.Less
+tags: [private]
 ```
 
 ```Go
@@ -1287,6 +1357,7 @@ func (p runeSlice) Less(i, j int) bool
 
 ```
 searchKey: regexp.runeSlice.Swap
+tags: [private]
 ```
 
 ```Go
@@ -1297,7 +1368,6 @@ func (p runeSlice) Swap(i, j int)
 
 ```
 searchKey: regexp.Regexp
-tags: [exported]
 ```
 
 ```Go
@@ -1330,7 +1400,6 @@ Regexp is the representation of a compiled regular expression. A Regexp is safe 
 
 ```
 searchKey: regexp.Compile
-tags: [exported]
 ```
 
 ```Go
@@ -1345,7 +1414,6 @@ When matching against text, the regexp returns a match that begins as early as p
 
 ```
 searchKey: regexp.CompilePOSIX
-tags: [exported]
 ```
 
 ```Go
@@ -1362,6 +1430,7 @@ However, there can be multiple leftmost-longest matches, with different submatch
 
 ```
 searchKey: regexp.compile
+tags: [private]
 ```
 
 ```Go
@@ -1372,7 +1441,6 @@ func compile(expr string, mode syntax.Flags, longest bool) (*Regexp, error)
 
 ```
 searchKey: regexp.MustCompile
-tags: [exported]
 ```
 
 ```Go
@@ -1385,7 +1453,6 @@ MustCompile is like Compile but panics if the expression cannot be parsed. It si
 
 ```
 searchKey: regexp.MustCompilePOSIX
-tags: [exported]
 ```
 
 ```Go
@@ -1398,6 +1465,7 @@ MustCompilePOSIX is like CompilePOSIX but panics if the expression cannot be par
 
 ```
 searchKey: regexp.compileTest
+tags: [private]
 ```
 
 ```Go
@@ -1408,6 +1476,7 @@ func compileTest(t *testing.T, expr string, error string) *Regexp
 
 ```
 searchKey: regexp.tryCompile
+tags: [private]
 ```
 
 ```Go
@@ -1418,6 +1487,7 @@ func tryCompile(s string) (re *Regexp, err error)
 
 ```
 searchKey: regexp.Regexp.tryBacktrack
+tags: [private]
 ```
 
 ```Go
@@ -1430,6 +1500,7 @@ tryBacktrack runs a backtracking search starting at pos.
 
 ```
 searchKey: regexp.Regexp.backtrack
+tags: [private]
 ```
 
 ```Go
@@ -1442,6 +1513,7 @@ backtrack runs a backtracking search of prog on the input starting at pos.
 
 ```
 searchKey: regexp.Regexp.doOnePass
+tags: [private]
 ```
 
 ```Go
@@ -1454,6 +1526,7 @@ doOnePass implements r.doExecute using the one-pass execution engine.
 
 ```
 searchKey: regexp.Regexp.doMatch
+tags: [private]
 ```
 
 ```Go
@@ -1466,6 +1539,7 @@ doMatch reports whether either r, b or s match the regexp.
 
 ```
 searchKey: regexp.Regexp.doExecute
+tags: [private]
 ```
 
 ```Go
@@ -1480,7 +1554,6 @@ nil is returned if no matches are found and non-nil if matches are found.
 
 ```
 searchKey: regexp.Regexp.String
-tags: [exported]
 ```
 
 ```Go
@@ -1493,7 +1566,7 @@ String returns the source text used to compile the regular expression.
 
 ```
 searchKey: regexp.Regexp.Copy
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -1508,7 +1581,6 @@ Deprecated: In earlier releases, when using a Regexp in multiple goroutines, giv
 
 ```
 searchKey: regexp.Regexp.Longest
-tags: [exported]
 ```
 
 ```Go
@@ -1521,6 +1593,7 @@ Longest makes future searches prefer the leftmost-longest match. That is, when m
 
 ```
 searchKey: regexp.Regexp.get
+tags: [private]
 ```
 
 ```Go
@@ -1533,6 +1606,7 @@ get returns a machine to use for matching re. It uses the re's machine cache if 
 
 ```
 searchKey: regexp.Regexp.put
+tags: [private]
 ```
 
 ```Go
@@ -1545,7 +1619,6 @@ put returns a machine to the correct machine pool.
 
 ```
 searchKey: regexp.Regexp.NumSubexp
-tags: [exported]
 ```
 
 ```Go
@@ -1558,7 +1631,6 @@ NumSubexp returns the number of parenthesized subexpressions in this Regexp.
 
 ```
 searchKey: regexp.Regexp.SubexpNames
-tags: [exported]
 ```
 
 ```Go
@@ -1571,7 +1643,6 @@ SubexpNames returns the names of the parenthesized subexpressions in this Regexp
 
 ```
 searchKey: regexp.Regexp.SubexpIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1586,7 +1657,6 @@ Note that multiple subexpressions can be written using the same name, as in (?P<
 
 ```
 searchKey: regexp.Regexp.LiteralPrefix
-tags: [exported]
 ```
 
 ```Go
@@ -1599,7 +1669,6 @@ LiteralPrefix returns a literal string that must begin any match of the regular 
 
 ```
 searchKey: regexp.Regexp.MatchReader
-tags: [exported]
 ```
 
 ```Go
@@ -1612,7 +1681,6 @@ MatchReader reports whether the text returned by the RuneReader contains any mat
 
 ```
 searchKey: regexp.Regexp.MatchString
-tags: [exported]
 ```
 
 ```Go
@@ -1625,7 +1693,6 @@ MatchString reports whether the string s contains any match of the regular expre
 
 ```
 searchKey: regexp.Regexp.Match
-tags: [exported]
 ```
 
 ```Go
@@ -1638,7 +1705,6 @@ Match reports whether the byte slice b contains any match of the regular express
 
 ```
 searchKey: regexp.Regexp.ReplaceAllString
-tags: [exported]
 ```
 
 ```Go
@@ -1651,7 +1717,6 @@ ReplaceAllString returns a copy of src, replacing matches of the Regexp with the
 
 ```
 searchKey: regexp.Regexp.ReplaceAllLiteralString
-tags: [exported]
 ```
 
 ```Go
@@ -1664,7 +1729,6 @@ ReplaceAllLiteralString returns a copy of src, replacing matches of the Regexp w
 
 ```
 searchKey: regexp.Regexp.ReplaceAllStringFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1677,6 +1741,7 @@ ReplaceAllStringFunc returns a copy of src in which all matches of the Regexp ha
 
 ```
 searchKey: regexp.Regexp.replaceAll
+tags: [private]
 ```
 
 ```Go
@@ -1687,7 +1752,6 @@ func (re *Regexp) replaceAll(bsrc []byte, src string, nmatch int, repl func(dst 
 
 ```
 searchKey: regexp.Regexp.ReplaceAll
-tags: [exported]
 ```
 
 ```Go
@@ -1700,7 +1764,6 @@ ReplaceAll returns a copy of src, replacing matches of the Regexp with the repla
 
 ```
 searchKey: regexp.Regexp.ReplaceAllLiteral
-tags: [exported]
 ```
 
 ```Go
@@ -1713,7 +1776,6 @@ ReplaceAllLiteral returns a copy of src, replacing matches of the Regexp with th
 
 ```
 searchKey: regexp.Regexp.ReplaceAllFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1726,6 +1788,7 @@ ReplaceAllFunc returns a copy of src in which all matches of the Regexp have bee
 
 ```
 searchKey: regexp.Regexp.pad
+tags: [private]
 ```
 
 ```Go
@@ -1738,6 +1801,7 @@ The number of capture values in the program may correspond to fewer capturing ex
 
 ```
 searchKey: regexp.Regexp.allMatches
+tags: [private]
 ```
 
 ```Go
@@ -1750,7 +1814,6 @@ allMatches calls deliver at most n times with the location of successive matches
 
 ```
 searchKey: regexp.Regexp.Find
-tags: [exported]
 ```
 
 ```Go
@@ -1763,7 +1826,6 @@ Find returns a slice holding the text of the leftmost match in b of the regular 
 
 ```
 searchKey: regexp.Regexp.FindIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1776,7 +1838,6 @@ FindIndex returns a two-element slice of integers defining the location of the l
 
 ```
 searchKey: regexp.Regexp.FindString
-tags: [exported]
 ```
 
 ```Go
@@ -1789,7 +1850,6 @@ FindString returns a string holding the text of the leftmost match in s of the r
 
 ```
 searchKey: regexp.Regexp.FindStringIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1802,7 +1862,6 @@ FindStringIndex returns a two-element slice of integers defining the location of
 
 ```
 searchKey: regexp.Regexp.FindReaderIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1815,7 +1874,6 @@ FindReaderIndex returns a two-element slice of integers defining the location of
 
 ```
 searchKey: regexp.Regexp.FindSubmatch
-tags: [exported]
 ```
 
 ```Go
@@ -1828,7 +1886,6 @@ FindSubmatch returns a slice of slices holding the text of the leftmost match of
 
 ```
 searchKey: regexp.Regexp.Expand
-tags: [exported]
 ```
 
 ```Go
@@ -1847,7 +1904,6 @@ To insert a literal $ in the output, use $$ in the template.
 
 ```
 searchKey: regexp.Regexp.ExpandString
-tags: [exported]
 ```
 
 ```Go
@@ -1860,6 +1916,7 @@ ExpandString is like Expand but the template and source are strings. It appends 
 
 ```
 searchKey: regexp.Regexp.expand
+tags: [private]
 ```
 
 ```Go
@@ -1870,7 +1927,6 @@ func (re *Regexp) expand(dst []byte, template string, bsrc []byte, src string, m
 
 ```
 searchKey: regexp.Regexp.FindSubmatchIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1883,7 +1939,6 @@ FindSubmatchIndex returns a slice holding the index pairs identifying the leftmo
 
 ```
 searchKey: regexp.Regexp.FindStringSubmatch
-tags: [exported]
 ```
 
 ```Go
@@ -1896,7 +1951,6 @@ FindStringSubmatch returns a slice of strings holding the text of the leftmost m
 
 ```
 searchKey: regexp.Regexp.FindStringSubmatchIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1909,7 +1963,6 @@ FindStringSubmatchIndex returns a slice holding the index pairs identifying the 
 
 ```
 searchKey: regexp.Regexp.FindReaderSubmatchIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1922,7 +1975,6 @@ FindReaderSubmatchIndex returns a slice holding the index pairs identifying the 
 
 ```
 searchKey: regexp.Regexp.FindAll
-tags: [exported]
 ```
 
 ```Go
@@ -1935,7 +1987,6 @@ FindAll is the 'All' version of Find; it returns a slice of all successive match
 
 ```
 searchKey: regexp.Regexp.FindAllIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1948,7 +1999,6 @@ FindAllIndex is the 'All' version of FindIndex; it returns a slice of all succes
 
 ```
 searchKey: regexp.Regexp.FindAllString
-tags: [exported]
 ```
 
 ```Go
@@ -1961,7 +2011,6 @@ FindAllString is the 'All' version of FindString; it returns a slice of all succ
 
 ```
 searchKey: regexp.Regexp.FindAllStringIndex
-tags: [exported]
 ```
 
 ```Go
@@ -1974,7 +2023,6 @@ FindAllStringIndex is the 'All' version of FindStringIndex; it returns a slice o
 
 ```
 searchKey: regexp.Regexp.FindAllSubmatch
-tags: [exported]
 ```
 
 ```Go
@@ -1987,7 +2035,6 @@ FindAllSubmatch is the 'All' version of FindSubmatch; it returns a slice of all 
 
 ```
 searchKey: regexp.Regexp.FindAllSubmatchIndex
-tags: [exported]
 ```
 
 ```Go
@@ -2000,7 +2047,6 @@ FindAllSubmatchIndex is the 'All' version of FindSubmatchIndex; it returns a sli
 
 ```
 searchKey: regexp.Regexp.FindAllStringSubmatch
-tags: [exported]
 ```
 
 ```Go
@@ -2013,7 +2059,6 @@ FindAllStringSubmatch is the 'All' version of FindStringSubmatch; it returns a s
 
 ```
 searchKey: regexp.Regexp.FindAllStringSubmatchIndex
-tags: [exported]
 ```
 
 ```Go
@@ -2026,7 +2071,6 @@ FindAllStringSubmatchIndex is the 'All' version of FindStringSubmatchIndex; it r
 
 ```
 searchKey: regexp.Regexp.Split
-tags: [exported]
 ```
 
 ```Go
@@ -2056,6 +2100,7 @@ n < 0: all substrings
 
 ```
 searchKey: regexp.input
+tags: [private]
 ```
 
 ```Go
@@ -2074,6 +2119,7 @@ input abstracts different representations of the input text. It provides one-cha
 
 ```
 searchKey: regexp.inputString
+tags: [private]
 ```
 
 ```Go
@@ -2088,6 +2134,7 @@ inputString scans a string.
 
 ```
 searchKey: regexp.inputString.step
+tags: [private]
 ```
 
 ```Go
@@ -2098,6 +2145,7 @@ func (i *inputString) step(pos int) (rune, int)
 
 ```
 searchKey: regexp.inputString.canCheckPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2108,6 +2156,7 @@ func (i *inputString) canCheckPrefix() bool
 
 ```
 searchKey: regexp.inputString.hasPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2118,6 +2167,7 @@ func (i *inputString) hasPrefix(re *Regexp) bool
 
 ```
 searchKey: regexp.inputString.index
+tags: [private]
 ```
 
 ```Go
@@ -2128,6 +2178,7 @@ func (i *inputString) index(re *Regexp, pos int) int
 
 ```
 searchKey: regexp.inputString.context
+tags: [private]
 ```
 
 ```Go
@@ -2138,6 +2189,7 @@ func (i *inputString) context(pos int) lazyFlag
 
 ```
 searchKey: regexp.inputBytes
+tags: [private]
 ```
 
 ```Go
@@ -2152,6 +2204,7 @@ inputBytes scans a byte slice.
 
 ```
 searchKey: regexp.inputBytes.step
+tags: [private]
 ```
 
 ```Go
@@ -2162,6 +2215,7 @@ func (i *inputBytes) step(pos int) (rune, int)
 
 ```
 searchKey: regexp.inputBytes.canCheckPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2172,6 +2226,7 @@ func (i *inputBytes) canCheckPrefix() bool
 
 ```
 searchKey: regexp.inputBytes.hasPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2182,6 +2237,7 @@ func (i *inputBytes) hasPrefix(re *Regexp) bool
 
 ```
 searchKey: regexp.inputBytes.index
+tags: [private]
 ```
 
 ```Go
@@ -2192,6 +2248,7 @@ func (i *inputBytes) index(re *Regexp, pos int) int
 
 ```
 searchKey: regexp.inputBytes.context
+tags: [private]
 ```
 
 ```Go
@@ -2202,6 +2259,7 @@ func (i *inputBytes) context(pos int) lazyFlag
 
 ```
 searchKey: regexp.inputReader
+tags: [private]
 ```
 
 ```Go
@@ -2218,6 +2276,7 @@ inputReader scans a RuneReader.
 
 ```
 searchKey: regexp.inputReader.step
+tags: [private]
 ```
 
 ```Go
@@ -2228,6 +2287,7 @@ func (i *inputReader) step(pos int) (rune, int)
 
 ```
 searchKey: regexp.inputReader.canCheckPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2238,6 +2298,7 @@ func (i *inputReader) canCheckPrefix() bool
 
 ```
 searchKey: regexp.inputReader.hasPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2248,6 +2309,7 @@ func (i *inputReader) hasPrefix(re *Regexp) bool
 
 ```
 searchKey: regexp.inputReader.index
+tags: [private]
 ```
 
 ```Go
@@ -2258,6 +2320,7 @@ func (i *inputReader) index(re *Regexp, pos int) int
 
 ```
 searchKey: regexp.inputReader.context
+tags: [private]
 ```
 
 ```Go
@@ -2268,6 +2331,7 @@ func (i *inputReader) context(pos int) lazyFlag
 
 ```
 searchKey: regexp.stringError
+tags: [private]
 ```
 
 ```Go
@@ -2281,6 +2345,7 @@ type stringError struct {
 
 ```
 searchKey: regexp.ReplaceTest
+tags: [private]
 ```
 
 ```Go
@@ -2293,6 +2358,7 @@ type ReplaceTest struct {
 
 ```
 searchKey: regexp.ReplaceFuncTest
+tags: [private]
 ```
 
 ```Go
@@ -2307,6 +2373,7 @@ type ReplaceFuncTest struct {
 
 ```
 searchKey: regexp.MetaTest
+tags: [private]
 ```
 
 ```Go
@@ -2320,6 +2387,7 @@ type MetaTest struct {
 
 ```
 searchKey: regexp.subexpIndex
+tags: [private]
 ```
 
 ```Go
@@ -2333,6 +2401,7 @@ type subexpIndex struct {
 
 ```
 searchKey: regexp.subexpCase
+tags: [private]
 ```
 
 ```Go
@@ -2348,6 +2417,7 @@ type subexpCase struct {
 
 ```
 searchKey: regexp.FindTest
+tags: [private]
 ```
 
 ```Go
@@ -2364,6 +2434,7 @@ For each pattern/text pair, what is the expected output of each function? We can
 
 ```
 searchKey: regexp.FindTest.String
+tags: [private]
 ```
 
 ```Go
@@ -2372,14 +2443,11 @@ func (t FindTest) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="freeBitState" href="#freeBitState">func freeBitState(b *bitState)</a>
 
 ```
 searchKey: regexp.freeBitState
+tags: [private]
 ```
 
 ```Go
@@ -2390,6 +2458,7 @@ func freeBitState(b *bitState)
 
 ```
 searchKey: regexp.maxBitStateLen
+tags: [private]
 ```
 
 ```Go
@@ -2402,6 +2471,7 @@ maxBitStateLen returns the maximum length of a string to search with the backtra
 
 ```
 searchKey: regexp.shouldBacktrack
+tags: [private]
 ```
 
 ```Go
@@ -2414,6 +2484,7 @@ shouldBacktrack reports whether the program is too long for the backtracker to r
 
 ```
 searchKey: regexp.freeOnePassMachine
+tags: [private]
 ```
 
 ```Go
@@ -2424,6 +2495,7 @@ func freeOnePassMachine(m *onePassMachine)
 
 ```
 searchKey: regexp.onePassPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2436,6 +2508,7 @@ OnePassPrefix returns a literal string that all matches for the regexp must star
 
 ```
 searchKey: regexp.onePassNext
+tags: [private]
 ```
 
 ```Go
@@ -2448,6 +2521,7 @@ OnePassNext selects the next actionable state of the prog, based on the input ch
 
 ```
 searchKey: regexp.iop
+tags: [private]
 ```
 
 ```Go
@@ -2458,6 +2532,7 @@ func iop(i *syntax.Inst) syntax.InstOp
 
 ```
 searchKey: regexp.mergeRuneSets
+tags: [private]
 ```
 
 ```Go
@@ -2468,6 +2543,7 @@ func mergeRuneSets(leftRunes, rightRunes *[]rune, leftPC, rightPC uint32) ([]run
 
 ```
 searchKey: regexp.cleanupOnePass
+tags: [private]
 ```
 
 ```Go
@@ -2480,6 +2556,7 @@ cleanupOnePass drops working memory, and restores certain shortcut instructions.
 
 ```
 searchKey: regexp.minInputLen
+tags: [private]
 ```
 
 ```Go
@@ -2492,6 +2569,7 @@ minInputLen walks the regexp to find the minimum length of any matchable input
 
 ```
 searchKey: regexp.quote
+tags: [private]
 ```
 
 ```Go
@@ -2502,7 +2580,6 @@ func quote(s string) string
 
 ```
 searchKey: regexp.MatchReader
-tags: [exported]
 ```
 
 ```Go
@@ -2515,7 +2592,6 @@ MatchReader reports whether the text returned by the RuneReader contains any mat
 
 ```
 searchKey: regexp.MatchString
-tags: [exported]
 ```
 
 ```Go
@@ -2528,7 +2604,6 @@ MatchString reports whether the string s contains any match of the regular expre
 
 ```
 searchKey: regexp.Match
-tags: [exported]
 ```
 
 ```Go
@@ -2541,6 +2616,7 @@ Match reports whether the byte slice b contains any match of the regular express
 
 ```
 searchKey: regexp.special
+tags: [private]
 ```
 
 ```Go
@@ -2549,10 +2625,11 @@ func special(b byte) bool
 
 special reports whether byte b needs to be escaped by QuoteMeta. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.regexp.go" href="#init.regexp.go">func init()</a>
 
 ```
 searchKey: regexp.init
+tags: [private]
 ```
 
 ```Go
@@ -2563,7 +2640,6 @@ func init()
 
 ```
 searchKey: regexp.QuoteMeta
-tags: [exported]
 ```
 
 ```Go
@@ -2576,6 +2652,7 @@ QuoteMeta returns a string that escapes all regular expression metacharacters in
 
 ```
 searchKey: regexp.extract
+tags: [private]
 ```
 
 ```Go
@@ -2588,6 +2665,7 @@ extract returns the name from a leading "$name" or "${name}" in str. If it is a 
 
 ```
 searchKey: regexp.TestGoodCompile
+tags: [private]
 ```
 
 ```Go
@@ -2598,6 +2676,7 @@ func TestGoodCompile(t *testing.T)
 
 ```
 searchKey: regexp.TestBadCompile
+tags: [private]
 ```
 
 ```Go
@@ -2608,6 +2687,7 @@ func TestBadCompile(t *testing.T)
 
 ```
 searchKey: regexp.matchTest
+tags: [private]
 ```
 
 ```Go
@@ -2618,6 +2698,7 @@ func matchTest(t *testing.T, test *FindTest)
 
 ```
 searchKey: regexp.TestMatch
+tags: [private]
 ```
 
 ```Go
@@ -2628,6 +2709,7 @@ func TestMatch(t *testing.T)
 
 ```
 searchKey: regexp.matchFunctionTest
+tags: [private]
 ```
 
 ```Go
@@ -2638,6 +2720,7 @@ func matchFunctionTest(t *testing.T, test *FindTest)
 
 ```
 searchKey: regexp.TestMatchFunction
+tags: [private]
 ```
 
 ```Go
@@ -2648,6 +2731,7 @@ func TestMatchFunction(t *testing.T)
 
 ```
 searchKey: regexp.copyMatchTest
+tags: [private]
 ```
 
 ```Go
@@ -2658,6 +2742,7 @@ func copyMatchTest(t *testing.T, test *FindTest)
 
 ```
 searchKey: regexp.TestCopyMatch
+tags: [private]
 ```
 
 ```Go
@@ -2668,6 +2753,7 @@ func TestCopyMatch(t *testing.T)
 
 ```
 searchKey: regexp.TestReplaceAll
+tags: [private]
 ```
 
 ```Go
@@ -2678,6 +2764,7 @@ func TestReplaceAll(t *testing.T)
 
 ```
 searchKey: regexp.TestReplaceAllLiteral
+tags: [private]
 ```
 
 ```Go
@@ -2688,6 +2775,7 @@ func TestReplaceAllLiteral(t *testing.T)
 
 ```
 searchKey: regexp.TestReplaceAllFunc
+tags: [private]
 ```
 
 ```Go
@@ -2698,6 +2786,7 @@ func TestReplaceAllFunc(t *testing.T)
 
 ```
 searchKey: regexp.TestQuoteMeta
+tags: [private]
 ```
 
 ```Go
@@ -2708,6 +2797,7 @@ func TestQuoteMeta(t *testing.T)
 
 ```
 searchKey: regexp.TestLiteralPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2718,6 +2808,7 @@ func TestLiteralPrefix(t *testing.T)
 
 ```
 searchKey: regexp.TestSubexp
+tags: [private]
 ```
 
 ```Go
@@ -2728,6 +2819,7 @@ func TestSubexp(t *testing.T)
 
 ```
 searchKey: regexp.TestSplit
+tags: [private]
 ```
 
 ```Go
@@ -2738,6 +2830,7 @@ func TestSplit(t *testing.T)
 
 ```
 searchKey: regexp.TestParseAndCompile
+tags: [private]
 ```
 
 ```Go
@@ -2750,6 +2843,7 @@ The following sequence of Match calls used to panic. See issue #12980.
 
 ```
 searchKey: regexp.TestOnePassCutoff
+tags: [private]
 ```
 
 ```Go
@@ -2762,6 +2856,7 @@ Check that one-pass cutoff does trigger.
 
 ```
 searchKey: regexp.TestSwitchBacktrack
+tags: [private]
 ```
 
 ```Go
@@ -2774,6 +2869,7 @@ Check that the same machine can be used with the standard matcher and then the b
 
 ```
 searchKey: regexp.BenchmarkFind
+tags: [private]
 ```
 
 ```Go
@@ -2784,6 +2880,7 @@ func BenchmarkFind(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkFindAllNoMatches
+tags: [private]
 ```
 
 ```Go
@@ -2794,6 +2891,7 @@ func BenchmarkFindAllNoMatches(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkFindString
+tags: [private]
 ```
 
 ```Go
@@ -2804,6 +2902,7 @@ func BenchmarkFindString(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkFindSubmatch
+tags: [private]
 ```
 
 ```Go
@@ -2814,6 +2913,7 @@ func BenchmarkFindSubmatch(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkFindStringSubmatch
+tags: [private]
 ```
 
 ```Go
@@ -2824,6 +2924,7 @@ func BenchmarkFindStringSubmatch(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkLiteral
+tags: [private]
 ```
 
 ```Go
@@ -2834,6 +2935,7 @@ func BenchmarkLiteral(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkNotLiteral
+tags: [private]
 ```
 
 ```Go
@@ -2844,6 +2946,7 @@ func BenchmarkNotLiteral(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkMatchClass
+tags: [private]
 ```
 
 ```Go
@@ -2854,6 +2957,7 @@ func BenchmarkMatchClass(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkMatchClass_InRange
+tags: [private]
 ```
 
 ```Go
@@ -2864,6 +2968,7 @@ func BenchmarkMatchClass_InRange(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkReplaceAll
+tags: [private]
 ```
 
 ```Go
@@ -2874,6 +2979,7 @@ func BenchmarkReplaceAll(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkAnchoredLiteralShortNonMatch
+tags: [private]
 ```
 
 ```Go
@@ -2884,6 +2990,7 @@ func BenchmarkAnchoredLiteralShortNonMatch(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkAnchoredLiteralLongNonMatch
+tags: [private]
 ```
 
 ```Go
@@ -2894,6 +3001,7 @@ func BenchmarkAnchoredLiteralLongNonMatch(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkAnchoredShortMatch
+tags: [private]
 ```
 
 ```Go
@@ -2904,6 +3012,7 @@ func BenchmarkAnchoredShortMatch(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkAnchoredLongMatch
+tags: [private]
 ```
 
 ```Go
@@ -2914,6 +3023,7 @@ func BenchmarkAnchoredLongMatch(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkOnePassShortA
+tags: [private]
 ```
 
 ```Go
@@ -2924,6 +3034,7 @@ func BenchmarkOnePassShortA(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkNotOnePassShortA
+tags: [private]
 ```
 
 ```Go
@@ -2934,6 +3045,7 @@ func BenchmarkNotOnePassShortA(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkOnePassShortB
+tags: [private]
 ```
 
 ```Go
@@ -2944,6 +3056,7 @@ func BenchmarkOnePassShortB(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkNotOnePassShortB
+tags: [private]
 ```
 
 ```Go
@@ -2954,6 +3067,7 @@ func BenchmarkNotOnePassShortB(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkOnePassLongPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2964,6 +3078,7 @@ func BenchmarkOnePassLongPrefix(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkOnePassLongNotPrefix
+tags: [private]
 ```
 
 ```Go
@@ -2974,6 +3089,7 @@ func BenchmarkOnePassLongNotPrefix(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkMatchParallelShared
+tags: [private]
 ```
 
 ```Go
@@ -2984,6 +3100,7 @@ func BenchmarkMatchParallelShared(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkMatchParallelCopied
+tags: [private]
 ```
 
 ```Go
@@ -2994,6 +3111,7 @@ func BenchmarkMatchParallelCopied(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkQuoteMetaAll
+tags: [private]
 ```
 
 ```Go
@@ -3004,6 +3122,7 @@ func BenchmarkQuoteMetaAll(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkQuoteMetaNone
+tags: [private]
 ```
 
 ```Go
@@ -3014,6 +3133,7 @@ func BenchmarkQuoteMetaNone(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkCompile
+tags: [private]
 ```
 
 ```Go
@@ -3024,6 +3144,7 @@ func BenchmarkCompile(b *testing.B)
 
 ```
 searchKey: regexp.TestDeepEqual
+tags: [private]
 ```
 
 ```Go
@@ -3034,6 +3155,7 @@ func TestDeepEqual(t *testing.T)
 
 ```
 searchKey: regexp.TestMinInputLen
+tags: [private]
 ```
 
 ```Go
@@ -3044,6 +3166,7 @@ func TestMinInputLen(t *testing.T)
 
 ```
 searchKey: regexp.TestRE2Exhaustive
+tags: [private]
 ```
 
 ```Go
@@ -3056,6 +3179,7 @@ This test is excluded when running under the race detector because it is a very 
 
 ```
 searchKey: regexp.TestRE2Search
+tags: [private]
 ```
 
 ```Go
@@ -3089,6 +3213,7 @@ At time of writing, re2-exhaustive.txt is 59 MB but compresses to 385 kB, so we 
 
 ```
 searchKey: regexp.testRE2
+tags: [private]
 ```
 
 ```Go
@@ -3099,6 +3224,7 @@ func testRE2(t *testing.T, file string)
 
 ```
 searchKey: regexp.runFull
+tags: [private]
 ```
 
 ```Go
@@ -3109,6 +3235,7 @@ func runFull(re, refull *Regexp, text string) ([]int, string)
 
 ```
 searchKey: regexp.runPartial
+tags: [private]
 ```
 
 ```Go
@@ -3119,6 +3246,7 @@ func runPartial(re, refull *Regexp, text string) ([]int, string)
 
 ```
 searchKey: regexp.runFullLongest
+tags: [private]
 ```
 
 ```Go
@@ -3129,6 +3257,7 @@ func runFullLongest(re, refull *Regexp, text string) ([]int, string)
 
 ```
 searchKey: regexp.runPartialLongest
+tags: [private]
 ```
 
 ```Go
@@ -3139,6 +3268,7 @@ func runPartialLongest(re, refull *Regexp, text string) ([]int, string)
 
 ```
 searchKey: regexp.matchFull
+tags: [private]
 ```
 
 ```Go
@@ -3149,6 +3279,7 @@ func matchFull(re, refull *Regexp, text string) (bool, string)
 
 ```
 searchKey: regexp.matchPartial
+tags: [private]
 ```
 
 ```Go
@@ -3159,6 +3290,7 @@ func matchPartial(re, refull *Regexp, text string) (bool, string)
 
 ```
 searchKey: regexp.matchFullLongest
+tags: [private]
 ```
 
 ```Go
@@ -3169,6 +3301,7 @@ func matchFullLongest(re, refull *Regexp, text string) (bool, string)
 
 ```
 searchKey: regexp.matchPartialLongest
+tags: [private]
 ```
 
 ```Go
@@ -3179,6 +3312,7 @@ func matchPartialLongest(re, refull *Regexp, text string) (bool, string)
 
 ```
 searchKey: regexp.isSingleBytes
+tags: [private]
 ```
 
 ```Go
@@ -3189,6 +3323,7 @@ func isSingleBytes(s string) bool
 
 ```
 searchKey: regexp.parseResult
+tags: [private]
 ```
 
 ```Go
@@ -3199,6 +3334,7 @@ func parseResult(t *testing.T, file string, lineno int, res string) []int
 
 ```
 searchKey: regexp.same
+tags: [private]
 ```
 
 ```Go
@@ -3209,6 +3345,7 @@ func same(x, y []int) bool
 
 ```
 searchKey: regexp.TestFowler
+tags: [private]
 ```
 
 ```Go
@@ -3221,6 +3358,7 @@ TestFowler runs this package's regexp API against the POSIX regular expression t
 
 ```
 searchKey: regexp.testFowler
+tags: [private]
 ```
 
 ```Go
@@ -3231,6 +3369,7 @@ func testFowler(t *testing.T, file string)
 
 ```
 searchKey: regexp.parseFowlerResult
+tags: [private]
 ```
 
 ```Go
@@ -3241,6 +3380,7 @@ func parseFowlerResult(s string) (ok, compiled, matched bool, pos []int)
 
 ```
 searchKey: regexp.makeText
+tags: [private]
 ```
 
 ```Go
@@ -3251,6 +3391,7 @@ func makeText(n int) []byte
 
 ```
 searchKey: regexp.BenchmarkMatch
+tags: [private]
 ```
 
 ```Go
@@ -3261,6 +3402,7 @@ func BenchmarkMatch(b *testing.B)
 
 ```
 searchKey: regexp.BenchmarkMatch_onepass_regex
+tags: [private]
 ```
 
 ```Go
@@ -3271,6 +3413,7 @@ func BenchmarkMatch_onepass_regex(b *testing.B)
 
 ```
 searchKey: regexp.TestLongest
+tags: [private]
 ```
 
 ```Go
@@ -3281,6 +3424,7 @@ func TestLongest(t *testing.T)
 
 ```
 searchKey: regexp.TestProgramTooLongForBacktrack
+tags: [private]
 ```
 
 ```Go
@@ -3293,6 +3437,7 @@ TestProgramTooLongForBacktrack tests that a regex which is too long for the back
 
 ```
 searchKey: regexp.build
+tags: [private]
 ```
 
 ```Go
@@ -3305,6 +3450,7 @@ build is a helper to construct a [][]int by extracting n sequences from x. This 
 
 ```
 searchKey: regexp.TestFind
+tags: [private]
 ```
 
 ```Go
@@ -3315,6 +3461,7 @@ func TestFind(t *testing.T)
 
 ```
 searchKey: regexp.TestFindString
+tags: [private]
 ```
 
 ```Go
@@ -3325,6 +3472,7 @@ func TestFindString(t *testing.T)
 
 ```
 searchKey: regexp.testFindIndex
+tags: [private]
 ```
 
 ```Go
@@ -3335,6 +3483,7 @@ func testFindIndex(test *FindTest, result []int, t *testing.T)
 
 ```
 searchKey: regexp.TestFindIndex
+tags: [private]
 ```
 
 ```Go
@@ -3345,6 +3494,7 @@ func TestFindIndex(t *testing.T)
 
 ```
 searchKey: regexp.TestFindStringIndex
+tags: [private]
 ```
 
 ```Go
@@ -3355,6 +3505,7 @@ func TestFindStringIndex(t *testing.T)
 
 ```
 searchKey: regexp.TestFindReaderIndex
+tags: [private]
 ```
 
 ```Go
@@ -3365,6 +3516,7 @@ func TestFindReaderIndex(t *testing.T)
 
 ```
 searchKey: regexp.TestFindAll
+tags: [private]
 ```
 
 ```Go
@@ -3375,6 +3527,7 @@ func TestFindAll(t *testing.T)
 
 ```
 searchKey: regexp.TestFindAllString
+tags: [private]
 ```
 
 ```Go
@@ -3385,6 +3538,7 @@ func TestFindAllString(t *testing.T)
 
 ```
 searchKey: regexp.testFindAllIndex
+tags: [private]
 ```
 
 ```Go
@@ -3395,6 +3549,7 @@ func testFindAllIndex(test *FindTest, result [][]int, t *testing.T)
 
 ```
 searchKey: regexp.TestFindAllIndex
+tags: [private]
 ```
 
 ```Go
@@ -3405,6 +3560,7 @@ func TestFindAllIndex(t *testing.T)
 
 ```
 searchKey: regexp.TestFindAllStringIndex
+tags: [private]
 ```
 
 ```Go
@@ -3415,6 +3571,7 @@ func TestFindAllStringIndex(t *testing.T)
 
 ```
 searchKey: regexp.testSubmatchBytes
+tags: [private]
 ```
 
 ```Go
@@ -3425,6 +3582,7 @@ func testSubmatchBytes(test *FindTest, n int, submatches []int, result [][]byte,
 
 ```
 searchKey: regexp.TestFindSubmatch
+tags: [private]
 ```
 
 ```Go
@@ -3435,6 +3593,7 @@ func TestFindSubmatch(t *testing.T)
 
 ```
 searchKey: regexp.testSubmatchString
+tags: [private]
 ```
 
 ```Go
@@ -3445,6 +3604,7 @@ func testSubmatchString(test *FindTest, n int, submatches []int, result []string
 
 ```
 searchKey: regexp.TestFindStringSubmatch
+tags: [private]
 ```
 
 ```Go
@@ -3455,6 +3615,7 @@ func TestFindStringSubmatch(t *testing.T)
 
 ```
 searchKey: regexp.testSubmatchIndices
+tags: [private]
 ```
 
 ```Go
@@ -3465,6 +3626,7 @@ func testSubmatchIndices(test *FindTest, n int, expect, result []int, t *testing
 
 ```
 searchKey: regexp.testFindSubmatchIndex
+tags: [private]
 ```
 
 ```Go
@@ -3475,6 +3637,7 @@ func testFindSubmatchIndex(test *FindTest, result []int, t *testing.T)
 
 ```
 searchKey: regexp.TestFindSubmatchIndex
+tags: [private]
 ```
 
 ```Go
@@ -3485,6 +3648,7 @@ func TestFindSubmatchIndex(t *testing.T)
 
 ```
 searchKey: regexp.TestFindStringSubmatchIndex
+tags: [private]
 ```
 
 ```Go
@@ -3495,6 +3659,7 @@ func TestFindStringSubmatchIndex(t *testing.T)
 
 ```
 searchKey: regexp.TestFindReaderSubmatchIndex
+tags: [private]
 ```
 
 ```Go
@@ -3505,6 +3670,7 @@ func TestFindReaderSubmatchIndex(t *testing.T)
 
 ```
 searchKey: regexp.TestFindAllSubmatch
+tags: [private]
 ```
 
 ```Go
@@ -3515,6 +3681,7 @@ func TestFindAllSubmatch(t *testing.T)
 
 ```
 searchKey: regexp.TestFindAllStringSubmatch
+tags: [private]
 ```
 
 ```Go
@@ -3525,6 +3692,7 @@ func TestFindAllStringSubmatch(t *testing.T)
 
 ```
 searchKey: regexp.testFindAllSubmatchIndex
+tags: [private]
 ```
 
 ```Go
@@ -3535,6 +3703,7 @@ func testFindAllSubmatchIndex(test *FindTest, result [][]int, t *testing.T)
 
 ```
 searchKey: regexp.TestFindAllSubmatchIndex
+tags: [private]
 ```
 
 ```Go
@@ -3545,6 +3714,7 @@ func TestFindAllSubmatchIndex(t *testing.T)
 
 ```
 searchKey: regexp.TestFindAllStringSubmatchIndex
+tags: [private]
 ```
 
 ```Go
@@ -3555,6 +3725,7 @@ func TestFindAllStringSubmatchIndex(t *testing.T)
 
 ```
 searchKey: regexp.TestMergeRuneSet
+tags: [private]
 ```
 
 ```Go
@@ -3565,6 +3736,7 @@ func TestMergeRuneSet(t *testing.T)
 
 ```
 searchKey: regexp.TestCompileOnePass
+tags: [private]
 ```
 
 ```Go
@@ -3575,6 +3747,7 @@ func TestCompileOnePass(t *testing.T)
 
 ```
 searchKey: regexp.TestRunOnePass
+tags: [private]
 ```
 
 ```Go

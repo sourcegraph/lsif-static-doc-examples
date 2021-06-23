@@ -16,11 +16,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Job" href="#Job">type Job struct</a>
 
 ```
 searchKey: executor.Job
-tags: [exported]
 ```
 
 ```Go
@@ -64,7 +67,6 @@ Job describes a series of steps to perform within an executor.
 
 ```
 searchKey: executor.Job.RecordID
-tags: [exported]
 ```
 
 ```Go
@@ -75,7 +77,6 @@ func (j Job) RecordID() int
 
 ```
 searchKey: executor.DockerStep
-tags: [exported]
 ```
 
 ```Go
@@ -98,7 +99,6 @@ type DockerStep struct {
 
 ```
 searchKey: executor.CliStep
-tags: [exported]
 ```
 
 ```Go
@@ -118,7 +118,6 @@ type CliStep struct {
 
 ```
 searchKey: executor.DequeueRequest
-tags: [exported]
 ```
 
 ```Go
@@ -131,7 +130,6 @@ type DequeueRequest struct {
 
 ```
 searchKey: executor.AddExecutionLogEntryRequest
-tags: [exported]
 ```
 
 ```Go
@@ -146,7 +144,6 @@ type AddExecutionLogEntryRequest struct {
 
 ```
 searchKey: executor.MarkCompleteRequest
-tags: [exported]
 ```
 
 ```Go
@@ -160,7 +157,6 @@ type MarkCompleteRequest struct {
 
 ```
 searchKey: executor.MarkErroredRequest
-tags: [exported]
 ```
 
 ```Go
@@ -175,7 +171,6 @@ type MarkErroredRequest struct {
 
 ```
 searchKey: executor.HeartbeatRequest
-tags: [exported]
 ```
 
 ```Go

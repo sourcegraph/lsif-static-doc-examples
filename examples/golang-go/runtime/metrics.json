@@ -4,9 +4,7 @@
     "identifier": "metrics",
     "newPage": true,
     "searchKey": "runtime/metrics",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "KindBad",
                 "newPage": false,
                 "searchKey": "metrics.KindBad",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "KindUint64",
                 "newPage": false,
                 "searchKey": "metrics.KindUint64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "KindFloat64",
                 "newPage": false,
                 "searchKey": "metrics.KindFloat64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "KindFloat64Histogram",
                 "newPage": false,
                 "searchKey": "metrics.KindFloat64Histogram",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -135,9 +123,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -155,7 +141,9 @@
                 "identifier": "allDesc",
                 "newPage": false,
                 "searchKey": "metrics.allDesc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -178,9 +166,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -198,9 +184,7 @@
                 "identifier": "Description",
                 "newPage": false,
                 "searchKey": "metrics.Description",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -220,9 +204,7 @@
                 "identifier": "Float64Histogram",
                 "newPage": false,
                 "searchKey": "metrics.Float64Histogram",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -242,9 +224,7 @@
                 "identifier": "Sample",
                 "newPage": false,
                 "searchKey": "metrics.Sample",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -264,9 +244,7 @@
                 "identifier": "ValueKind",
                 "newPage": false,
                 "searchKey": "metrics.ValueKind",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -286,9 +264,7 @@
                 "identifier": "Value",
                 "newPage": false,
                 "searchKey": "metrics.Value",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -306,9 +282,7 @@
                       "identifier": "Value.Kind",
                       "newPage": false,
                       "searchKey": "metrics.Value.Kind",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,9 +302,7 @@
                       "identifier": "Value.Uint64",
                       "newPage": false,
                       "searchKey": "metrics.Value.Uint64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -350,9 +322,7 @@
                       "identifier": "Value.Float64",
                       "newPage": false,
                       "searchKey": "metrics.Value.Float64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -372,9 +342,7 @@
                       "identifier": "Value.Float64Histogram",
                       "newPage": false,
                       "searchKey": "metrics.Value.Float64Histogram",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -400,9 +368,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -420,9 +386,7 @@
                 "identifier": "All",
                 "newPage": false,
                 "searchKey": "metrics.All",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -442,7 +406,9 @@
                 "identifier": "runtime_readMetrics",
                 "newPage": false,
                 "searchKey": "metrics.runtime_readMetrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -462,9 +428,7 @@
                 "identifier": "Read",
                 "newPage": false,
                 "searchKey": "metrics.Read",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

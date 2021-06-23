@@ -4,7 +4,9 @@
     "identifier": "honey",
     "newPage": true,
     "searchKey": "internal/honey",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "apiKey",
                 "newPage": false,
                 "searchKey": "honey.apiKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "SearchEventArgs",
                 "newPage": false,
                 "searchKey": "honey.SearchEventArgs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +112,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -124,9 +132,7 @@
                 "identifier": "Enabled",
                 "newPage": false,
                 "searchKey": "honey.Enabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -146,9 +152,7 @@
                 "identifier": "Event",
                 "newPage": false,
                 "searchKey": "honey.Event",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -168,9 +172,7 @@
                 "identifier": "EventWithFields",
                 "newPage": false,
                 "searchKey": "honey.EventWithFields",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -190,9 +192,7 @@
                 "identifier": "Builder",
                 "newPage": false,
                 "searchKey": "honey.Builder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -207,12 +207,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/honey#init",
+              "pathID": "/internal/honey#init.honey.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.honey.go",
                 "newPage": false,
                 "searchKey": "honey.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -232,9 +234,7 @@
                 "identifier": "SearchEvent",
                 "newPage": false,
                 "searchKey": "honey.SearchEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

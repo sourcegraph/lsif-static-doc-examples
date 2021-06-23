@@ -4,7 +4,9 @@
     "identifier": "init",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/licensing/init",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "usersStore",
                 "newPage": false,
                 "searchKey": "init.usersStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -58,7 +64,9 @@
                       "identifier": "usersStore.Count",
                       "newPage": false,
                       "searchKey": "init.usersStore.Count",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -84,7 +92,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -102,9 +112,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "init.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

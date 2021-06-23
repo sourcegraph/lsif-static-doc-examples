@@ -4,9 +4,7 @@
     "identifier": "testing",
     "newPage": true,
     "searchKey": "testing",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -27,9 +25,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -47,7 +43,9 @@
                 "identifier": "maxStackLen",
                 "newPage": false,
                 "searchKey": "testing.maxStackLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,7 +65,9 @@
                 "identifier": "normalPanic",
                 "newPage": false,
                 "searchKey": "testing.normalPanic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
                 "identifier": "recoverAndReturnPanic",
                 "newPage": false,
                 "searchKey": "testing.recoverAndReturnPanic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +112,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -130,7 +130,9 @@
                 "identifier": "matchBenchmarks",
                 "newPage": false,
                 "searchKey": "testing.matchBenchmarks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -150,7 +152,9 @@
                 "identifier": "benchmarkMemory",
                 "newPage": false,
                 "searchKey": "testing.benchmarkMemory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -170,7 +174,9 @@
                 "identifier": "benchTime",
                 "newPage": false,
                 "searchKey": "testing.benchTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -190,7 +196,9 @@
                 "identifier": "benchmarkLock",
                 "newPage": false,
                 "searchKey": "testing.benchmarkLock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,7 +218,9 @@
                 "identifier": "memStats",
                 "newPage": false,
                 "searchKey": "testing.memStats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,7 +240,9 @@
                 "identifier": "labelsOnce",
                 "newPage": false,
                 "searchKey": "testing.labelsOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -250,7 +262,9 @@
                 "identifier": "cover",
                 "newPage": false,
                 "searchKey": "testing.cover",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -270,7 +284,9 @@
                 "identifier": "matchMutex",
                 "newPage": false,
                 "searchKey": "testing.matchMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -290,7 +306,9 @@
                 "identifier": "initRan",
                 "newPage": false,
                 "searchKey": "testing.initRan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -310,7 +328,9 @@
                 "identifier": "short",
                 "newPage": false,
                 "searchKey": "testing.short",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -330,7 +350,9 @@
                 "identifier": "failFast",
                 "newPage": false,
                 "searchKey": "testing.failFast",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -350,7 +372,9 @@
                 "identifier": "outputDir",
                 "newPage": false,
                 "searchKey": "testing.outputDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -370,7 +394,9 @@
                 "identifier": "chatty",
                 "newPage": false,
                 "searchKey": "testing.chatty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -390,7 +416,9 @@
                 "identifier": "count",
                 "newPage": false,
                 "searchKey": "testing.count",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -410,7 +438,9 @@
                 "identifier": "coverProfile",
                 "newPage": false,
                 "searchKey": "testing.coverProfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -430,7 +460,9 @@
                 "identifier": "matchList",
                 "newPage": false,
                 "searchKey": "testing.matchList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -450,7 +482,9 @@
                 "identifier": "match",
                 "newPage": false,
                 "searchKey": "testing.match",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -470,7 +504,9 @@
                 "identifier": "memProfile",
                 "newPage": false,
                 "searchKey": "testing.memProfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -490,7 +526,9 @@
                 "identifier": "memProfileRate",
                 "newPage": false,
                 "searchKey": "testing.memProfileRate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -510,7 +548,9 @@
                 "identifier": "cpuProfile",
                 "newPage": false,
                 "searchKey": "testing.cpuProfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -530,7 +570,9 @@
                 "identifier": "blockProfile",
                 "newPage": false,
                 "searchKey": "testing.blockProfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -550,7 +592,9 @@
                 "identifier": "blockProfileRate",
                 "newPage": false,
                 "searchKey": "testing.blockProfileRate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -570,7 +614,9 @@
                 "identifier": "mutexProfile",
                 "newPage": false,
                 "searchKey": "testing.mutexProfile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -590,7 +636,9 @@
                 "identifier": "mutexProfileFraction",
                 "newPage": false,
                 "searchKey": "testing.mutexProfileFraction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -610,7 +658,9 @@
                 "identifier": "panicOnExit0",
                 "newPage": false,
                 "searchKey": "testing.panicOnExit0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -630,7 +680,9 @@
                 "identifier": "traceFile",
                 "newPage": false,
                 "searchKey": "testing.traceFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -650,7 +702,9 @@
                 "identifier": "timeout",
                 "newPage": false,
                 "searchKey": "testing.timeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -670,7 +724,9 @@
                 "identifier": "cpuListStr",
                 "newPage": false,
                 "searchKey": "testing.cpuListStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -690,7 +746,9 @@
                 "identifier": "parallel",
                 "newPage": false,
                 "searchKey": "testing.parallel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -710,7 +768,9 @@
                 "identifier": "shuffle",
                 "newPage": false,
                 "searchKey": "testing.shuffle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -730,7 +790,9 @@
                 "identifier": "testlog",
                 "newPage": false,
                 "searchKey": "testing.testlog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -750,7 +812,9 @@
                 "identifier": "haveExamples",
                 "newPage": false,
                 "searchKey": "testing.haveExamples",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -770,7 +834,9 @@
                 "identifier": "cpuList",
                 "newPage": false,
                 "searchKey": "testing.cpuList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -790,7 +856,9 @@
                 "identifier": "testlogFile",
                 "newPage": false,
                 "searchKey": "testing.testlogFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -810,7 +878,9 @@
                 "identifier": "numFailed",
                 "newPage": false,
                 "searchKey": "testing.numFailed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -830,7 +900,9 @@
                 "identifier": "errNilPanicOrGoexit",
                 "newPage": false,
                 "searchKey": "testing.errNilPanicOrGoexit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -850,7 +922,9 @@
                 "identifier": "errMain",
                 "newPage": false,
                 "searchKey": "testing.errMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -870,7 +944,9 @@
                 "identifier": "PrettyPrint",
                 "newPage": false,
                 "searchKey": "testing.PrettyPrint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -893,9 +969,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -913,7 +987,9 @@
                 "identifier": "benchTimeFlag",
                 "newPage": false,
                 "searchKey": "testing.benchTimeFlag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -931,7 +1007,9 @@
                       "identifier": "benchTimeFlag.String",
                       "newPage": false,
                       "searchKey": "testing.benchTimeFlag.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -951,7 +1029,9 @@
                       "identifier": "benchTimeFlag.Set",
                       "newPage": false,
                       "searchKey": "testing.benchTimeFlag.Set",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -974,9 +1054,7 @@
                 "identifier": "InternalBenchmark",
                 "newPage": false,
                 "searchKey": "testing.InternalBenchmark",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -996,9 +1074,7 @@
                 "identifier": "B",
                 "newPage": false,
                 "searchKey": "testing.B",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1016,9 +1092,7 @@
                       "identifier": "B.StartTimer",
                       "newPage": false,
                       "searchKey": "testing.B.StartTimer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1038,9 +1112,7 @@
                       "identifier": "B.StopTimer",
                       "newPage": false,
                       "searchKey": "testing.B.StopTimer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1060,9 +1132,7 @@
                       "identifier": "B.ResetTimer",
                       "newPage": false,
                       "searchKey": "testing.B.ResetTimer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1082,9 +1152,7 @@
                       "identifier": "B.SetBytes",
                       "newPage": false,
                       "searchKey": "testing.B.SetBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1104,9 +1172,7 @@
                       "identifier": "B.ReportAllocs",
                       "newPage": false,
                       "searchKey": "testing.B.ReportAllocs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1126,7 +1192,9 @@
                       "identifier": "B.runN",
                       "newPage": false,
                       "searchKey": "testing.B.runN",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1146,7 +1214,9 @@
                       "identifier": "B.run1",
                       "newPage": false,
                       "searchKey": "testing.B.run1",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1166,7 +1236,9 @@
                       "identifier": "B.run",
                       "newPage": false,
                       "searchKey": "testing.B.run",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1186,7 +1258,9 @@
                       "identifier": "B.doBench",
                       "newPage": false,
                       "searchKey": "testing.B.doBench",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1206,7 +1280,9 @@
                       "identifier": "B.launch",
                       "newPage": false,
                       "searchKey": "testing.B.launch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1226,9 +1302,7 @@
                       "identifier": "B.ReportMetric",
                       "newPage": false,
                       "searchKey": "testing.B.ReportMetric",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1248,9 +1322,7 @@
                       "identifier": "B.Run",
                       "newPage": false,
                       "searchKey": "testing.B.Run",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1270,7 +1342,9 @@
                       "identifier": "B.add",
                       "newPage": false,
                       "searchKey": "testing.B.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1290,7 +1364,9 @@
                       "identifier": "B.trimOutput",
                       "newPage": false,
                       "searchKey": "testing.B.trimOutput",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1310,9 +1386,7 @@
                       "identifier": "B.RunParallel",
                       "newPage": false,
                       "searchKey": "testing.B.RunParallel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1332,9 +1406,7 @@
                       "identifier": "B.SetParallelism",
                       "newPage": false,
                       "searchKey": "testing.B.SetParallelism",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1357,9 +1429,7 @@
                 "identifier": "BenchmarkResult",
                 "newPage": false,
                 "searchKey": "testing.BenchmarkResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1377,9 +1447,7 @@
                       "identifier": "Benchmark",
                       "newPage": false,
                       "searchKey": "testing.Benchmark",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1399,9 +1467,7 @@
                       "identifier": "BenchmarkResult.NsPerOp",
                       "newPage": false,
                       "searchKey": "testing.BenchmarkResult.NsPerOp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1421,7 +1487,9 @@
                       "identifier": "BenchmarkResult.mbPerSec",
                       "newPage": false,
                       "searchKey": "testing.BenchmarkResult.mbPerSec",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1441,9 +1509,7 @@
                       "identifier": "BenchmarkResult.AllocsPerOp",
                       "newPage": false,
                       "searchKey": "testing.BenchmarkResult.AllocsPerOp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1463,9 +1529,7 @@
                       "identifier": "BenchmarkResult.AllocedBytesPerOp",
                       "newPage": false,
                       "searchKey": "testing.BenchmarkResult.AllocedBytesPerOp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1485,9 +1549,7 @@
                       "identifier": "BenchmarkResult.String",
                       "newPage": false,
                       "searchKey": "testing.BenchmarkResult.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1507,9 +1569,7 @@
                       "identifier": "BenchmarkResult.MemString",
                       "newPage": false,
                       "searchKey": "testing.BenchmarkResult.MemString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1532,7 +1592,9 @@
                 "identifier": "benchContext",
                 "newPage": false,
                 "searchKey": "testing.benchContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1550,7 +1612,9 @@
                       "identifier": "benchContext.processBench",
                       "newPage": false,
                       "searchKey": "testing.benchContext.processBench",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1573,9 +1637,7 @@
                 "identifier": "PB",
                 "newPage": false,
                 "searchKey": "testing.PB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1593,9 +1655,7 @@
                       "identifier": "PB.Next",
                       "newPage": false,
                       "searchKey": "testing.PB.Next",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1618,7 +1678,9 @@
                 "identifier": "discard",
                 "newPage": false,
                 "searchKey": "testing.discard",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1636,7 +1698,9 @@
                       "identifier": "discard.Write",
                       "newPage": false,
                       "searchKey": "testing.discard.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1659,9 +1723,7 @@
                 "identifier": "CoverBlock",
                 "newPage": false,
                 "searchKey": "testing.CoverBlock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1681,9 +1743,7 @@
                 "identifier": "Cover",
                 "newPage": false,
                 "searchKey": "testing.Cover",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1703,9 +1763,7 @@
                 "identifier": "InternalExample",
                 "newPage": false,
                 "searchKey": "testing.InternalExample",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1723,7 +1781,9 @@
                       "identifier": "InternalExample.processRunResult",
                       "newPage": false,
                       "searchKey": "testing.InternalExample.processRunResult",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1746,7 +1806,9 @@
                 "identifier": "matcher",
                 "newPage": false,
                 "searchKey": "testing.matcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1764,7 +1826,9 @@
                       "identifier": "newMatcher",
                       "newPage": false,
                       "searchKey": "testing.newMatcher",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1784,7 +1848,9 @@
                       "identifier": "matcher.fullName",
                       "newPage": false,
                       "searchKey": "testing.matcher.fullName",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1804,7 +1870,9 @@
                       "identifier": "matcher.unique",
                       "newPage": false,
                       "searchKey": "testing.matcher.unique",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1827,7 +1895,9 @@
                 "identifier": "chattyPrinter",
                 "newPage": false,
                 "searchKey": "testing.chattyPrinter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1845,7 +1915,9 @@
                       "identifier": "newChattyPrinter",
                       "newPage": false,
                       "searchKey": "testing.newChattyPrinter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1865,7 +1937,9 @@
                       "identifier": "chattyPrinter.Updatef",
                       "newPage": false,
                       "searchKey": "testing.chattyPrinter.Updatef",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1885,7 +1959,9 @@
                       "identifier": "chattyPrinter.Printf",
                       "newPage": false,
                       "searchKey": "testing.chattyPrinter.Printf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1908,7 +1984,9 @@
                 "identifier": "common",
                 "newPage": false,
                 "searchKey": "testing.common",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1926,7 +2004,9 @@
                       "identifier": "common.frameSkip",
                       "newPage": false,
                       "searchKey": "testing.common.frameSkip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1946,7 +2026,9 @@
                       "identifier": "common.decorate",
                       "newPage": false,
                       "searchKey": "testing.common.decorate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1966,7 +2048,9 @@
                       "identifier": "common.flushToParent",
                       "newPage": false,
                       "searchKey": "testing.common.flushToParent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1986,7 +2070,9 @@
                       "identifier": "common.private",
                       "newPage": false,
                       "searchKey": "testing.common.private",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2006,7 +2092,9 @@
                       "identifier": "common.Name",
                       "newPage": false,
                       "searchKey": "testing.common.Name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2026,7 +2114,9 @@
                       "identifier": "common.setRan",
                       "newPage": false,
                       "searchKey": "testing.common.setRan",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2046,7 +2136,9 @@
                       "identifier": "common.Fail",
                       "newPage": false,
                       "searchKey": "testing.common.Fail",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2066,7 +2158,9 @@
                       "identifier": "common.Failed",
                       "newPage": false,
                       "searchKey": "testing.common.Failed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2086,7 +2180,9 @@
                       "identifier": "common.FailNow",
                       "newPage": false,
                       "searchKey": "testing.common.FailNow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2106,7 +2202,9 @@
                       "identifier": "common.log",
                       "newPage": false,
                       "searchKey": "testing.common.log",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2126,7 +2224,9 @@
                       "identifier": "common.logDepth",
                       "newPage": false,
                       "searchKey": "testing.common.logDepth",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2146,7 +2246,9 @@
                       "identifier": "common.Log",
                       "newPage": false,
                       "searchKey": "testing.common.Log",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2166,7 +2268,9 @@
                       "identifier": "common.Logf",
                       "newPage": false,
                       "searchKey": "testing.common.Logf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2186,7 +2290,9 @@
                       "identifier": "common.Error",
                       "newPage": false,
                       "searchKey": "testing.common.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2206,7 +2312,9 @@
                       "identifier": "common.Errorf",
                       "newPage": false,
                       "searchKey": "testing.common.Errorf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2226,7 +2334,9 @@
                       "identifier": "common.Fatal",
                       "newPage": false,
                       "searchKey": "testing.common.Fatal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2246,7 +2356,9 @@
                       "identifier": "common.Fatalf",
                       "newPage": false,
                       "searchKey": "testing.common.Fatalf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2266,7 +2378,9 @@
                       "identifier": "common.Skip",
                       "newPage": false,
                       "searchKey": "testing.common.Skip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2286,7 +2400,9 @@
                       "identifier": "common.Skipf",
                       "newPage": false,
                       "searchKey": "testing.common.Skipf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2306,7 +2422,9 @@
                       "identifier": "common.SkipNow",
                       "newPage": false,
                       "searchKey": "testing.common.SkipNow",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2326,7 +2444,9 @@
                       "identifier": "common.Skipped",
                       "newPage": false,
                       "searchKey": "testing.common.Skipped",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2346,7 +2466,9 @@
                       "identifier": "common.Helper",
                       "newPage": false,
                       "searchKey": "testing.common.Helper",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2366,7 +2488,9 @@
                       "identifier": "common.Cleanup",
                       "newPage": false,
                       "searchKey": "testing.common.Cleanup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2386,7 +2510,9 @@
                       "identifier": "common.TempDir",
                       "newPage": false,
                       "searchKey": "testing.common.TempDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2406,7 +2532,9 @@
                       "identifier": "common.Setenv",
                       "newPage": false,
                       "searchKey": "testing.common.Setenv",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2426,7 +2554,9 @@
                       "identifier": "common.runCleanup",
                       "newPage": false,
                       "searchKey": "testing.common.runCleanup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2449,7 +2579,9 @@
                 "identifier": "indenter",
                 "newPage": false,
                 "searchKey": "testing.indenter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2467,7 +2599,9 @@
                       "identifier": "indenter.Write",
                       "newPage": false,
                       "searchKey": "testing.indenter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2490,9 +2624,7 @@
                 "identifier": "TB",
                 "newPage": false,
                 "searchKey": "testing.TB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2512,9 +2644,7 @@
                 "identifier": "T",
                 "newPage": false,
                 "searchKey": "testing.T",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2532,9 +2662,7 @@
                       "identifier": "T.Parallel",
                       "newPage": false,
                       "searchKey": "testing.T.Parallel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2554,9 +2682,7 @@
                       "identifier": "T.Setenv",
                       "newPage": false,
                       "searchKey": "testing.T.Setenv",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2576,9 +2702,7 @@
                       "identifier": "T.Run",
                       "newPage": false,
                       "searchKey": "testing.T.Run",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2598,9 +2722,7 @@
                       "identifier": "T.Deadline",
                       "newPage": false,
                       "searchKey": "testing.T.Deadline",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2620,7 +2742,9 @@
                       "identifier": "T.report",
                       "newPage": false,
                       "searchKey": "testing.T.report",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2643,7 +2767,9 @@
                 "identifier": "panicHandling",
                 "newPage": false,
                 "searchKey": "testing.panicHandling",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2663,9 +2789,7 @@
                 "identifier": "InternalTest",
                 "newPage": false,
                 "searchKey": "testing.InternalTest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2685,7 +2809,9 @@
                 "identifier": "testContext",
                 "newPage": false,
                 "searchKey": "testing.testContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2703,7 +2829,9 @@
                       "identifier": "newTestContext",
                       "newPage": false,
                       "searchKey": "testing.newTestContext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2723,7 +2851,9 @@
                       "identifier": "testContext.waitParallel",
                       "newPage": false,
                       "searchKey": "testing.testContext.waitParallel",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2743,7 +2873,9 @@
                       "identifier": "testContext.release",
                       "newPage": false,
                       "searchKey": "testing.testContext.release",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2766,7 +2898,9 @@
                 "identifier": "matchStringOnly",
                 "newPage": false,
                 "searchKey": "testing.matchStringOnly",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2784,7 +2918,9 @@
                       "identifier": "matchStringOnly.MatchString",
                       "newPage": false,
                       "searchKey": "testing.matchStringOnly.MatchString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2804,7 +2940,9 @@
                       "identifier": "matchStringOnly.StartCPUProfile",
                       "newPage": false,
                       "searchKey": "testing.matchStringOnly.StartCPUProfile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2824,7 +2962,9 @@
                       "identifier": "matchStringOnly.StopCPUProfile",
                       "newPage": false,
                       "searchKey": "testing.matchStringOnly.StopCPUProfile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2844,7 +2984,9 @@
                       "identifier": "matchStringOnly.WriteProfileTo",
                       "newPage": false,
                       "searchKey": "testing.matchStringOnly.WriteProfileTo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2864,7 +3006,9 @@
                       "identifier": "matchStringOnly.ImportPath",
                       "newPage": false,
                       "searchKey": "testing.matchStringOnly.ImportPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2884,7 +3028,9 @@
                       "identifier": "matchStringOnly.StartTestLog",
                       "newPage": false,
                       "searchKey": "testing.matchStringOnly.StartTestLog",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2904,7 +3050,9 @@
                       "identifier": "matchStringOnly.StopTestLog",
                       "newPage": false,
                       "searchKey": "testing.matchStringOnly.StopTestLog",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2924,7 +3072,9 @@
                       "identifier": "matchStringOnly.SetPanicOnExit0",
                       "newPage": false,
                       "searchKey": "testing.matchStringOnly.SetPanicOnExit0",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2947,9 +3097,7 @@
                 "identifier": "M",
                 "newPage": false,
                 "searchKey": "testing.M",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2967,9 +3115,7 @@
                       "identifier": "MainStart",
                       "newPage": false,
                       "searchKey": "testing.MainStart",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2989,9 +3135,7 @@
                       "identifier": "M.Run",
                       "newPage": false,
                       "searchKey": "testing.M.Run",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3011,7 +3155,9 @@
                       "identifier": "M.before",
                       "newPage": false,
                       "searchKey": "testing.M.before",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3031,7 +3177,9 @@
                       "identifier": "M.after",
                       "newPage": false,
                       "searchKey": "testing.M.after",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3051,7 +3199,9 @@
                       "identifier": "M.writeProfiles",
                       "newPage": false,
                       "searchKey": "testing.M.writeProfiles",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3071,7 +3221,9 @@
                       "identifier": "M.startAlarm",
                       "newPage": false,
                       "searchKey": "testing.M.startAlarm",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3091,7 +3243,9 @@
                       "identifier": "M.stopAlarm",
                       "newPage": false,
                       "searchKey": "testing.M.stopAlarm",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3114,7 +3268,9 @@
                 "identifier": "testDeps",
                 "newPage": false,
                 "searchKey": "testing.testDeps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3134,7 +3290,9 @@
                 "identifier": "noopWriter",
                 "newPage": false,
                 "searchKey": "testing.noopWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3152,7 +3310,9 @@
                       "identifier": "noopWriter.Write",
                       "newPage": false,
                       "searchKey": "testing.noopWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3175,7 +3335,9 @@
                 "identifier": "funcWriter",
                 "newPage": false,
                 "searchKey": "testing.funcWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3193,7 +3355,9 @@
                       "identifier": "funcWriter.Write",
                       "newPage": false,
                       "searchKey": "testing.funcWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3219,9 +3383,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -3239,9 +3401,7 @@
                 "identifier": "AllocsPerRun",
                 "newPage": false,
                 "searchKey": "testing.AllocsPerRun",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3261,7 +3421,9 @@
                 "identifier": "initBenchmarkFlags",
                 "newPage": false,
                 "searchKey": "testing.initBenchmarkFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3281,7 +3443,9 @@
                 "identifier": "min",
                 "newPage": false,
                 "searchKey": "testing.min",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3301,7 +3465,9 @@
                 "identifier": "max",
                 "newPage": false,
                 "searchKey": "testing.max",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3321,7 +3487,9 @@
                 "identifier": "prettyPrint",
                 "newPage": false,
                 "searchKey": "testing.prettyPrint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3341,7 +3509,9 @@
                 "identifier": "benchmarkName",
                 "newPage": false,
                 "searchKey": "testing.benchmarkName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3361,9 +3531,7 @@
                 "identifier": "RunBenchmarks",
                 "newPage": false,
                 "searchKey": "testing.RunBenchmarks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3383,7 +3551,9 @@
                 "identifier": "runBenchmarks",
                 "newPage": false,
                 "searchKey": "testing.runBenchmarks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3403,9 +3573,7 @@
                 "identifier": "Coverage",
                 "newPage": false,
                 "searchKey": "testing.Coverage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3425,9 +3593,7 @@
                 "identifier": "RegisterCover",
                 "newPage": false,
                 "searchKey": "testing.RegisterCover",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3447,7 +3613,9 @@
                 "identifier": "mustBeNil",
                 "newPage": false,
                 "searchKey": "testing.mustBeNil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3467,7 +3635,9 @@
                 "identifier": "coverReport",
                 "newPage": false,
                 "searchKey": "testing.coverReport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3487,9 +3657,7 @@
                 "identifier": "RunExamples",
                 "newPage": false,
                 "searchKey": "testing.RunExamples",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3509,7 +3677,9 @@
                 "identifier": "runExamples",
                 "newPage": false,
                 "searchKey": "testing.runExamples",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3529,7 +3699,9 @@
                 "identifier": "sortLines",
                 "newPage": false,
                 "searchKey": "testing.sortLines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3549,7 +3721,9 @@
                 "identifier": "splitRegexp",
                 "newPage": false,
                 "searchKey": "testing.splitRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3569,7 +3743,9 @@
                 "identifier": "rewrite",
                 "newPage": false,
                 "searchKey": "testing.rewrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3589,7 +3765,9 @@
                 "identifier": "isSpace",
                 "newPage": false,
                 "searchKey": "testing.isSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3609,7 +3787,9 @@
                 "identifier": "runExample",
                 "newPage": false,
                 "searchKey": "testing.runExample",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3629,9 +3809,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "testing.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3651,9 +3829,7 @@
                 "identifier": "Short",
                 "newPage": false,
                 "searchKey": "testing.Short",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3673,9 +3849,7 @@
                 "identifier": "CoverMode",
                 "newPage": false,
                 "searchKey": "testing.CoverMode",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3695,9 +3869,7 @@
                 "identifier": "Verbose",
                 "newPage": false,
                 "searchKey": "testing.Verbose",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3717,7 +3889,9 @@
                 "identifier": "fmtDuration",
                 "newPage": false,
                 "searchKey": "testing.fmtDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3737,7 +3911,9 @@
                 "identifier": "callerName",
                 "newPage": false,
                 "searchKey": "testing.callerName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3757,7 +3933,9 @@
                 "identifier": "pcToName",
                 "newPage": false,
                 "searchKey": "testing.pcToName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3777,7 +3955,9 @@
                 "identifier": "tRunner",
                 "newPage": false,
                 "searchKey": "testing.tRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3797,9 +3977,7 @@
                 "identifier": "Main",
                 "newPage": false,
                 "searchKey": "testing.Main",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3819,7 +3997,9 @@
                 "identifier": "listTests",
                 "newPage": false,
                 "searchKey": "testing.listTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3839,9 +4019,7 @@
                 "identifier": "RunTests",
                 "newPage": false,
                 "searchKey": "testing.RunTests",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3861,7 +4039,9 @@
                 "identifier": "runTests",
                 "newPage": false,
                 "searchKey": "testing.runTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3881,7 +4061,9 @@
                 "identifier": "toOutputDir",
                 "newPage": false,
                 "searchKey": "testing.toOutputDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3901,7 +4083,9 @@
                 "identifier": "parseCpuList",
                 "newPage": false,
                 "searchKey": "testing.parseCpuList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3921,7 +4105,9 @@
                 "identifier": "shouldFailFast",
                 "newPage": false,
                 "searchKey": "testing.shouldFailFast",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3941,7 +4127,9 @@
                 "identifier": "TestTBHelper",
                 "newPage": false,
                 "searchKey": "testing.TestTBHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3961,7 +4149,9 @@
                 "identifier": "TestTBHelperParallel",
                 "newPage": false,
                 "searchKey": "testing.TestTBHelperParallel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3981,7 +4171,9 @@
                 "identifier": "TestTBHelperLineNumer",
                 "newPage": false,
                 "searchKey": "testing.TestTBHelperLineNumer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4001,7 +4193,9 @@
                 "identifier": "BenchmarkTBHelper",
                 "newPage": false,
                 "searchKey": "testing.BenchmarkTBHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4021,7 +4215,9 @@
                 "identifier": "notHelper",
                 "newPage": false,
                 "searchKey": "testing.notHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4041,7 +4237,9 @@
                 "identifier": "helper",
                 "newPage": false,
                 "searchKey": "testing.helper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4061,7 +4259,9 @@
                 "identifier": "notHelperCallingHelper",
                 "newPage": false,
                 "searchKey": "testing.notHelperCallingHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4081,7 +4281,9 @@
                 "identifier": "helperCallingHelper",
                 "newPage": false,
                 "searchKey": "testing.helperCallingHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4101,7 +4303,9 @@
                 "identifier": "testHelper",
                 "newPage": false,
                 "searchKey": "testing.testHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4121,7 +4325,9 @@
                 "identifier": "parallelTestHelper",
                 "newPage": false,
                 "searchKey": "testing.parallelTestHelper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4141,7 +4347,9 @@
                 "identifier": "TestIsSpace",
                 "newPage": false,
                 "searchKey": "testing.TestIsSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4161,7 +4369,9 @@
                 "identifier": "TestSplitRegexp",
                 "newPage": false,
                 "searchKey": "testing.TestSplitRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4181,7 +4391,9 @@
                 "identifier": "TestMatcher",
                 "newPage": false,
                 "searchKey": "testing.TestMatcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4201,7 +4413,9 @@
                 "identifier": "TestNaming",
                 "newPage": false,
                 "searchKey": "testing.TestNaming",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4216,12 +4430,14 @@
           },
           {
             "node": {
-              "pathID": "/testing#init",
+              "pathID": "/testing#init.sub_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.sub_test.go",
                 "newPage": false,
                 "searchKey": "testing.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4241,7 +4457,9 @@
                 "identifier": "TestTestContext",
                 "newPage": false,
                 "searchKey": "testing.TestTestContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4261,7 +4479,9 @@
                 "identifier": "TestTRun",
                 "newPage": false,
                 "searchKey": "testing.TestTRun",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4281,7 +4501,9 @@
                 "identifier": "TestBRun",
                 "newPage": false,
                 "searchKey": "testing.TestBRun",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4301,7 +4523,9 @@
                 "identifier": "makeRegexp",
                 "newPage": false,
                 "searchKey": "testing.makeRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4321,7 +4545,9 @@
                 "identifier": "TestBenchmarkOutput",
                 "newPage": false,
                 "searchKey": "testing.TestBenchmarkOutput",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4341,7 +4567,9 @@
                 "identifier": "TestBenchmarkStartsFrom1",
                 "newPage": false,
                 "searchKey": "testing.TestBenchmarkStartsFrom1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4361,7 +4589,9 @@
                 "identifier": "TestBenchmarkReadMemStatsBeforeFirstRun",
                 "newPage": false,
                 "searchKey": "testing.TestBenchmarkReadMemStatsBeforeFirstRun",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4381,7 +4611,9 @@
                 "identifier": "TestParallelSub",
                 "newPage": false,
                 "searchKey": "testing.TestParallelSub",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4401,7 +4633,9 @@
                 "identifier": "TestRacyOutput",
                 "newPage": false,
                 "searchKey": "testing.TestRacyOutput",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4421,7 +4655,9 @@
                 "identifier": "TestLogAfterComplete",
                 "newPage": false,
                 "searchKey": "testing.TestLogAfterComplete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4441,7 +4677,9 @@
                 "identifier": "TestBenchmark",
                 "newPage": false,
                 "searchKey": "testing.TestBenchmark",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4461,7 +4699,9 @@
                 "identifier": "TestCleanup",
                 "newPage": false,
                 "searchKey": "testing.TestCleanup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4481,7 +4721,9 @@
                 "identifier": "TestConcurrentCleanup",
                 "newPage": false,
                 "searchKey": "testing.TestConcurrentCleanup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4501,7 +4743,9 @@
                 "identifier": "TestCleanupCalledEvenAfterGoexit",
                 "newPage": false,
                 "searchKey": "testing.TestCleanupCalledEvenAfterGoexit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4521,7 +4765,9 @@
                 "identifier": "TestRunCleanup",
                 "newPage": false,
                 "searchKey": "testing.TestRunCleanup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4541,7 +4787,9 @@
                 "identifier": "TestCleanupParallelSubtests",
                 "newPage": false,
                 "searchKey": "testing.TestCleanupParallelSubtests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4561,7 +4809,9 @@
                 "identifier": "TestNestedCleanup",
                 "newPage": false,
                 "searchKey": "testing.TestNestedCleanup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

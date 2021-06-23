@@ -511,10 +511,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="batchChangeIDKind" href="#batchChangeIDKind">const batchChangeIDKind</a>
 
 ```
 searchKey: resolvers.batchChangeIDKind
+tags: [private]
 ```
 
 ```Go
@@ -525,6 +530,7 @@ const batchChangeIDKind = "BatchChange"
 
 ```
 searchKey: resolvers.batchSpecIDKind
+tags: [private]
 ```
 
 ```Go
@@ -535,6 +541,7 @@ const batchSpecIDKind = "BatchSpec"
 
 ```
 searchKey: resolvers.bulkOperationIDKind
+tags: [private]
 ```
 
 ```Go
@@ -545,6 +552,7 @@ const bulkOperationIDKind = "BulkOperation"
 
 ```
 searchKey: resolvers.changesetIDKind
+tags: [private]
 ```
 
 ```Go
@@ -555,6 +563,7 @@ const changesetIDKind = "Changeset"
 
 ```
 searchKey: resolvers.changesetEventIDKind
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +574,7 @@ const changesetEventIDKind = "ChangesetEvent"
 
 ```
 searchKey: resolvers.changesetSpecIDKind
+tags: [private]
 ```
 
 ```Go
@@ -575,6 +585,7 @@ const changesetSpecIDKind = "ChangesetSpec"
 
 ```
 searchKey: resolvers.batchChangesCredentialIDKind
+tags: [private]
 ```
 
 ```Go
@@ -585,6 +596,7 @@ const batchChangesCredentialIDKind = "BatchChangesCredential"
 
 ```
 searchKey: resolvers.siteCredentialPrefix
+tags: [private]
 ```
 
 ```Go
@@ -595,6 +607,7 @@ const siteCredentialPrefix = "site"
 
 ```
 searchKey: resolvers.userCredentialPrefix
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +618,7 @@ const userCredentialPrefix = "user"
 
 ```
 searchKey: resolvers.maxUnlicensedChangesets
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +631,7 @@ maxUnlicensedChangesets is the maximum number of changesets that can be attached
 
 ```
 searchKey: resolvers.defaultMaxFirstParam
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +642,7 @@ const defaultMaxFirstParam = 10000
 
 ```
 searchKey: resolvers.queryBatchChangesConnection
+tags: [private]
 ```
 
 ```Go
@@ -637,6 +653,7 @@ const queryBatchChangesConnection = ...
 
 ```
 searchKey: resolvers.listNamespacesBatchChanges
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +664,7 @@ const listNamespacesBatchChanges = ...
 
 ```
 searchKey: resolvers.queryBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -657,6 +675,7 @@ const queryBatchChange = ...
 
 ```
 searchKey: resolvers.queryBatchChangeByName
+tags: [private]
 ```
 
 ```Go
@@ -667,6 +686,7 @@ const queryBatchChangeByName = ...
 
 ```
 searchKey: resolvers.queryBatchSpecNode
+tags: [private]
 ```
 
 ```Go
@@ -677,6 +697,7 @@ const queryBatchSpecNode = ...
 
 ```
 searchKey: resolvers.queryBulkOperationConnection
+tags: [private]
 ```
 
 ```Go
@@ -687,6 +708,7 @@ const queryBulkOperationConnection = ...
 
 ```
 searchKey: resolvers.queryBulkOperation
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +719,7 @@ const queryBulkOperation = ...
 
 ```
 searchKey: resolvers.queryChangesetApplyPreviewConnection
+tags: [private]
 ```
 
 ```Go
@@ -707,6 +730,7 @@ const queryChangesetApplyPreviewConnection = ...
 
 ```
 searchKey: resolvers.queryChangesetApplyPreview
+tags: [private]
 ```
 
 ```Go
@@ -717,6 +741,7 @@ const queryChangesetApplyPreview = ...
 
 ```
 searchKey: resolvers.queryChangesetConnection
+tags: [private]
 ```
 
 ```Go
@@ -727,6 +752,7 @@ const queryChangesetConnection = ...
 
 ```
 searchKey: resolvers.queryChangesetCountsConnection
+tags: [private]
 ```
 
 ```Go
@@ -737,6 +763,7 @@ const queryChangesetCountsConnection = ...
 
 ```
 searchKey: resolvers.queryChangesetEventConnection
+tags: [private]
 ```
 
 ```Go
@@ -747,6 +774,7 @@ const queryChangesetEventConnection = ...
 
 ```
 searchKey: resolvers.queryChangesetSpecConnection
+tags: [private]
 ```
 
 ```Go
@@ -757,6 +785,7 @@ const queryChangesetSpecConnection = ...
 
 ```
 searchKey: resolvers.queryChangesetSpecNode
+tags: [private]
 ```
 
 ```Go
@@ -767,6 +796,7 @@ const queryChangesetSpecNode = ...
 
 ```
 searchKey: resolvers.queryChangeset
+tags: [private]
 ```
 
 ```Go
@@ -777,6 +807,7 @@ const queryChangeset = ...
 
 ```
 searchKey: resolvers.queryUserCodeHostConnection
+tags: [private]
 ```
 
 ```Go
@@ -787,6 +818,7 @@ const queryUserCodeHostConnection = ...
 
 ```
 searchKey: resolvers.queryCodeHostConnection
+tags: [private]
 ```
 
 ```Go
@@ -797,6 +829,7 @@ const queryCodeHostConnection = ...
 
 ```
 searchKey: resolvers.testDiff
+tags: [private]
 ```
 
 ```Go
@@ -807,6 +840,7 @@ const testDiff = ...
 
 ```
 searchKey: resolvers.queryBatchChangePermLevels
+tags: [private]
 ```
 
 ```Go
@@ -817,6 +851,7 @@ const queryBatchChangePermLevels = ...
 
 ```
 searchKey: resolvers.queryChangesetPermLevels
+tags: [private]
 ```
 
 ```Go
@@ -827,6 +862,7 @@ const queryChangesetPermLevels = ...
 
 ```
 searchKey: resolvers.queryBatchSpecPermLevels
+tags: [private]
 ```
 
 ```Go
@@ -837,6 +873,7 @@ const queryBatchSpecPermLevels = ...
 
 ```
 searchKey: resolvers.queryChangesetSpecPermLevels
+tags: [private]
 ```
 
 ```Go
@@ -847,6 +884,7 @@ const queryChangesetSpecPermLevels = ...
 
 ```
 searchKey: resolvers.mutationCreateBatchSpec
+tags: [private]
 ```
 
 ```Go
@@ -857,6 +895,7 @@ const mutationCreateBatchSpec = ...
 
 ```
 searchKey: resolvers.mutationCreateChangesetSpec
+tags: [private]
 ```
 
 ```Go
@@ -867,6 +906,7 @@ const mutationCreateChangesetSpec = ...
 
 ```
 searchKey: resolvers.mutationApplyBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -877,6 +917,7 @@ const mutationApplyBatchChange = ...
 
 ```
 searchKey: resolvers.mutationCreateBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -887,6 +928,7 @@ const mutationCreateBatchChange = ...
 
 ```
 searchKey: resolvers.mutationMoveBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -897,6 +939,7 @@ const mutationMoveBatchChange = ...
 
 ```
 searchKey: resolvers.mutationCreateCredential
+tags: [private]
 ```
 
 ```Go
@@ -907,6 +950,7 @@ const mutationCreateCredential = ...
 
 ```
 searchKey: resolvers.mutationDeleteCredential
+tags: [private]
 ```
 
 ```Go
@@ -917,6 +961,7 @@ const mutationDeleteCredential = ...
 
 ```
 searchKey: resolvers.mutationCreateChangesetComments
+tags: [private]
 ```
 
 ```Go
@@ -927,6 +972,7 @@ const mutationCreateChangesetComments = ...
 
 ```
 searchKey: resolvers.mutationReenqueueChangesets
+tags: [private]
 ```
 
 ```Go
@@ -937,6 +983,7 @@ const mutationReenqueueChangesets = ...
 
 ```
 searchKey: resolvers.mutationMergeChangesets
+tags: [private]
 ```
 
 ```Go
@@ -945,10 +992,15 @@ const mutationMergeChangesets = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="update" href="#update">var update</a>
 
 ```
 searchKey: resolvers.update
+tags: [private]
 ```
 
 ```Go
@@ -959,6 +1011,7 @@ var update = flag.Bool("update", false, "update testdata")
 
 ```
 searchKey: resolvers.testDiffGraphQL
+tags: [private]
 ```
 
 ```Go
@@ -969,10 +1022,15 @@ testDiffGraphQL is the parsed representation of testDiff.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="batchChangeResolver" href="#batchChangeResolver">type batchChangeResolver struct</a>
 
 ```
 searchKey: resolvers.batchChangeResolver
+tags: [private]
 ```
 
 ```Go
@@ -995,6 +1053,7 @@ type batchChangeResolver struct {
 
 ```
 searchKey: resolvers.batchChangeResolver.ActAsCampaign
+tags: [private]
 ```
 
 ```Go
@@ -1005,6 +1064,7 @@ func (r *batchChangeResolver) ActAsCampaign() bool
 
 ```
 searchKey: resolvers.batchChangeResolver.ID
+tags: [private]
 ```
 
 ```Go
@@ -1015,6 +1075,7 @@ func (r *batchChangeResolver) ID() graphql.ID
 
 ```
 searchKey: resolvers.batchChangeResolver.Name
+tags: [private]
 ```
 
 ```Go
@@ -1025,6 +1086,7 @@ func (r *batchChangeResolver) Name() string
 
 ```
 searchKey: resolvers.batchChangeResolver.Description
+tags: [private]
 ```
 
 ```Go
@@ -1035,6 +1097,7 @@ func (r *batchChangeResolver) Description() *string
 
 ```
 searchKey: resolvers.batchChangeResolver.InitialApplier
+tags: [private]
 ```
 
 ```Go
@@ -1045,6 +1108,7 @@ func (r *batchChangeResolver) InitialApplier(ctx context.Context) (*graphqlbacke
 
 ```
 searchKey: resolvers.batchChangeResolver.LastApplier
+tags: [private]
 ```
 
 ```Go
@@ -1055,6 +1119,7 @@ func (r *batchChangeResolver) LastApplier(ctx context.Context) (*graphqlbackend.
 
 ```
 searchKey: resolvers.batchChangeResolver.LastAppliedAt
+tags: [private]
 ```
 
 ```Go
@@ -1065,6 +1130,7 @@ func (r *batchChangeResolver) LastAppliedAt() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.batchChangeResolver.SpecCreator
+tags: [private]
 ```
 
 ```Go
@@ -1075,6 +1141,7 @@ func (r *batchChangeResolver) SpecCreator(ctx context.Context) (*graphqlbackend.
 
 ```
 searchKey: resolvers.batchChangeResolver.ViewerCanAdminister
+tags: [private]
 ```
 
 ```Go
@@ -1085,6 +1152,7 @@ func (r *batchChangeResolver) ViewerCanAdminister(ctx context.Context) (bool, er
 
 ```
 searchKey: resolvers.batchChangeResolver.URL
+tags: [private]
 ```
 
 ```Go
@@ -1095,6 +1163,7 @@ func (r *batchChangeResolver) URL(ctx context.Context) (string, error)
 
 ```
 searchKey: resolvers.batchChangeResolver.Namespace
+tags: [private]
 ```
 
 ```Go
@@ -1105,6 +1174,7 @@ func (r *batchChangeResolver) Namespace(ctx context.Context) (graphqlbackend.Nam
 
 ```
 searchKey: resolvers.batchChangeResolver.computeNamespace
+tags: [private]
 ```
 
 ```Go
@@ -1115,6 +1185,7 @@ func (r *batchChangeResolver) computeNamespace(ctx context.Context) (graphqlback
 
 ```
 searchKey: resolvers.batchChangeResolver.CreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -1125,6 +1196,7 @@ func (r *batchChangeResolver) CreatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.batchChangeResolver.UpdatedAt
+tags: [private]
 ```
 
 ```Go
@@ -1135,6 +1207,7 @@ func (r *batchChangeResolver) UpdatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.batchChangeResolver.ClosedAt
+tags: [private]
 ```
 
 ```Go
@@ -1145,6 +1218,7 @@ func (r *batchChangeResolver) ClosedAt() *graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.batchChangeResolver.ChangesetsStats
+tags: [private]
 ```
 
 ```Go
@@ -1155,6 +1229,7 @@ func (r *batchChangeResolver) ChangesetsStats(ctx context.Context) (graphqlbacke
 
 ```
 searchKey: resolvers.batchChangeResolver.Changesets
+tags: [private]
 ```
 
 ```Go
@@ -1168,6 +1243,7 @@ func (r *batchChangeResolver) Changesets(
 
 ```
 searchKey: resolvers.batchChangeResolver.ChangesetCountsOverTime
+tags: [private]
 ```
 
 ```Go
@@ -1181,6 +1257,7 @@ func (r *batchChangeResolver) ChangesetCountsOverTime(
 
 ```
 searchKey: resolvers.batchChangeResolver.DiffStat
+tags: [private]
 ```
 
 ```Go
@@ -1191,6 +1268,7 @@ func (r *batchChangeResolver) DiffStat(ctx context.Context) (*graphqlbackend.Dif
 
 ```
 searchKey: resolvers.batchChangeResolver.CurrentSpec
+tags: [private]
 ```
 
 ```Go
@@ -1201,6 +1279,7 @@ func (r *batchChangeResolver) CurrentSpec(ctx context.Context) (graphqlbackend.B
 
 ```
 searchKey: resolvers.batchChangeResolver.BulkOperations
+tags: [private]
 ```
 
 ```Go
@@ -1214,6 +1293,7 @@ func (r *batchChangeResolver) BulkOperations(
 
 ```
 searchKey: resolvers.batchChangesConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -1233,6 +1313,7 @@ type batchChangesConnectionResolver struct {
 
 ```
 searchKey: resolvers.batchChangesConnectionResolver.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -1243,6 +1324,7 @@ func (r *batchChangesConnectionResolver) Nodes(ctx context.Context) ([]graphqlba
 
 ```
 searchKey: resolvers.batchChangesConnectionResolver.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -1253,6 +1335,7 @@ func (r *batchChangesConnectionResolver) TotalCount(ctx context.Context) (int32,
 
 ```
 searchKey: resolvers.batchChangesConnectionResolver.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -1263,6 +1346,7 @@ func (r *batchChangesConnectionResolver) PageInfo(ctx context.Context) (*graphql
 
 ```
 searchKey: resolvers.batchChangesConnectionResolver.compute
+tags: [private]
 ```
 
 ```Go
@@ -1273,6 +1357,7 @@ func (r *batchChangesConnectionResolver) compute(ctx context.Context) ([]*btypes
 
 ```
 searchKey: resolvers.batchSpecResolver
+tags: [private]
 ```
 
 ```Go
@@ -1296,6 +1381,7 @@ type batchSpecResolver struct {
 
 ```
 searchKey: resolvers.batchSpecResolver.ActAsCampaignSpec
+tags: [private]
 ```
 
 ```Go
@@ -1306,6 +1392,7 @@ func (r *batchSpecResolver) ActAsCampaignSpec() bool
 
 ```
 searchKey: resolvers.batchSpecResolver.ID
+tags: [private]
 ```
 
 ```Go
@@ -1316,6 +1403,7 @@ func (r *batchSpecResolver) ID() graphql.ID
 
 ```
 searchKey: resolvers.batchSpecResolver.OriginalInput
+tags: [private]
 ```
 
 ```Go
@@ -1326,6 +1414,7 @@ func (r *batchSpecResolver) OriginalInput() (string, error)
 
 ```
 searchKey: resolvers.batchSpecResolver.ParsedInput
+tags: [private]
 ```
 
 ```Go
@@ -1336,6 +1425,7 @@ func (r *batchSpecResolver) ParsedInput() (graphqlbackend.JSONValue, error)
 
 ```
 searchKey: resolvers.batchSpecResolver.ChangesetSpecs
+tags: [private]
 ```
 
 ```Go
@@ -1346,6 +1436,7 @@ func (r *batchSpecResolver) ChangesetSpecs(ctx context.Context, args *graphqlbac
 
 ```
 searchKey: resolvers.batchSpecResolver.ApplyPreview
+tags: [private]
 ```
 
 ```Go
@@ -1356,6 +1447,7 @@ func (r *batchSpecResolver) ApplyPreview(ctx context.Context, args *graphqlbacke
 
 ```
 searchKey: resolvers.batchSpecResolver.Description
+tags: [private]
 ```
 
 ```Go
@@ -1366,6 +1458,7 @@ func (r *batchSpecResolver) Description() graphqlbackend.BatchChangeDescriptionR
 
 ```
 searchKey: resolvers.batchSpecResolver.Creator
+tags: [private]
 ```
 
 ```Go
@@ -1376,6 +1469,7 @@ func (r *batchSpecResolver) Creator(ctx context.Context) (*graphqlbackend.UserRe
 
 ```
 searchKey: resolvers.batchSpecResolver.Namespace
+tags: [private]
 ```
 
 ```Go
@@ -1386,6 +1480,7 @@ func (r *batchSpecResolver) Namespace(ctx context.Context) (*graphqlbackend.Name
 
 ```
 searchKey: resolvers.batchSpecResolver.computeNamespace
+tags: [private]
 ```
 
 ```Go
@@ -1396,6 +1491,7 @@ func (r *batchSpecResolver) computeNamespace(ctx context.Context) (*graphqlbacke
 
 ```
 searchKey: resolvers.batchSpecResolver.ApplyURL
+tags: [private]
 ```
 
 ```Go
@@ -1406,6 +1502,7 @@ func (r *batchSpecResolver) ApplyURL(ctx context.Context) (string, error)
 
 ```
 searchKey: resolvers.batchSpecResolver.CreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -1416,6 +1513,7 @@ func (r *batchSpecResolver) CreatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.batchSpecResolver.ExpiresAt
+tags: [private]
 ```
 
 ```Go
@@ -1426,6 +1524,7 @@ func (r *batchSpecResolver) ExpiresAt() *graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.batchSpecResolver.ViewerCanAdminister
+tags: [private]
 ```
 
 ```Go
@@ -1436,6 +1535,7 @@ func (r *batchSpecResolver) ViewerCanAdminister(ctx context.Context) (bool, erro
 
 ```
 searchKey: resolvers.batchSpecResolver.DiffStat
+tags: [private]
 ```
 
 ```Go
@@ -1446,6 +1546,7 @@ func (r *batchSpecResolver) DiffStat(ctx context.Context) (*graphqlbackend.DiffS
 
 ```
 searchKey: resolvers.batchSpecResolver.AppliesToCampaign
+tags: [private]
 ```
 
 ```Go
@@ -1458,6 +1559,7 @@ TODO(campaigns-deprecation): This should be removed once we remove campaigns com
 
 ```
 searchKey: resolvers.batchSpecResolver.AppliesToBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -1468,6 +1570,7 @@ func (r *batchSpecResolver) AppliesToBatchChange(ctx context.Context) (graphqlba
 
 ```
 searchKey: resolvers.batchSpecResolver.SupersedingCampaignSpec
+tags: [private]
 ```
 
 ```Go
@@ -1480,6 +1583,7 @@ TODO(campaigns-deprecation): This should be removed once we remove campaigns com
 
 ```
 searchKey: resolvers.batchSpecResolver.SupersedingBatchSpec
+tags: [private]
 ```
 
 ```Go
@@ -1490,6 +1594,7 @@ func (r *batchSpecResolver) SupersedingBatchSpec(ctx context.Context) (graphqlba
 
 ```
 searchKey: resolvers.batchSpecResolver.ViewerBatchChangesCodeHosts
+tags: [private]
 ```
 
 ```Go
@@ -1500,6 +1605,7 @@ func (r *batchSpecResolver) ViewerBatchChangesCodeHosts(ctx context.Context, arg
 
 ```
 searchKey: resolvers.batchSpecResolver.ViewerCampaignsCodeHosts
+tags: [private]
 ```
 
 ```Go
@@ -1512,6 +1618,7 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.batchChangeDescriptionResolver
+tags: [private]
 ```
 
 ```Go
@@ -1524,6 +1631,7 @@ type batchChangeDescriptionResolver struct {
 
 ```
 searchKey: resolvers.batchChangeDescriptionResolver.Name
+tags: [private]
 ```
 
 ```Go
@@ -1534,6 +1642,7 @@ func (r *batchChangeDescriptionResolver) Name() string
 
 ```
 searchKey: resolvers.batchChangeDescriptionResolver.Description
+tags: [private]
 ```
 
 ```Go
@@ -1544,6 +1653,7 @@ func (r *batchChangeDescriptionResolver) Description() string
 
 ```
 searchKey: resolvers.bulkOperationResolver
+tags: [private]
 ```
 
 ```Go
@@ -1557,6 +1667,7 @@ type bulkOperationResolver struct {
 
 ```
 searchKey: resolvers.bulkOperationResolver.ID
+tags: [private]
 ```
 
 ```Go
@@ -1567,6 +1678,7 @@ func (r *bulkOperationResolver) ID() graphql.ID
 
 ```
 searchKey: resolvers.bulkOperationResolver.Type
+tags: [private]
 ```
 
 ```Go
@@ -1577,6 +1689,7 @@ func (r *bulkOperationResolver) Type() (string, error)
 
 ```
 searchKey: resolvers.bulkOperationResolver.State
+tags: [private]
 ```
 
 ```Go
@@ -1587,6 +1700,7 @@ func (r *bulkOperationResolver) State() string
 
 ```
 searchKey: resolvers.bulkOperationResolver.Progress
+tags: [private]
 ```
 
 ```Go
@@ -1597,6 +1711,7 @@ func (r *bulkOperationResolver) Progress() float64
 
 ```
 searchKey: resolvers.bulkOperationResolver.Errors
+tags: [private]
 ```
 
 ```Go
@@ -1607,6 +1722,7 @@ func (r *bulkOperationResolver) Errors(ctx context.Context) ([]graphqlbackend.Ch
 
 ```
 searchKey: resolvers.bulkOperationResolver.Initiator
+tags: [private]
 ```
 
 ```Go
@@ -1617,6 +1733,7 @@ func (r *bulkOperationResolver) Initiator(ctx context.Context) (*graphqlbackend.
 
 ```
 searchKey: resolvers.bulkOperationResolver.ChangesetCount
+tags: [private]
 ```
 
 ```Go
@@ -1627,6 +1744,7 @@ func (r *bulkOperationResolver) ChangesetCount() int32
 
 ```
 searchKey: resolvers.bulkOperationResolver.CreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -1637,6 +1755,7 @@ func (r *bulkOperationResolver) CreatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.bulkOperationResolver.FinishedAt
+tags: [private]
 ```
 
 ```Go
@@ -1647,6 +1766,7 @@ func (r *bulkOperationResolver) FinishedAt() *graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.bulkOperationConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -1667,6 +1787,7 @@ type bulkOperationConnectionResolver struct {
 
 ```
 searchKey: resolvers.bulkOperationConnectionResolver.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -1677,6 +1798,7 @@ func (r *bulkOperationConnectionResolver) TotalCount(ctx context.Context) (int32
 
 ```
 searchKey: resolvers.bulkOperationConnectionResolver.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -1687,6 +1809,7 @@ func (r *bulkOperationConnectionResolver) PageInfo(ctx context.Context) (*graphq
 
 ```
 searchKey: resolvers.bulkOperationConnectionResolver.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -1697,6 +1820,7 @@ func (r *bulkOperationConnectionResolver) Nodes(ctx context.Context) ([]graphqlb
 
 ```
 searchKey: resolvers.bulkOperationConnectionResolver.compute
+tags: [private]
 ```
 
 ```Go
@@ -1707,6 +1831,7 @@ func (r *bulkOperationConnectionResolver) compute(ctx context.Context) ([]*btype
 
 ```
 searchKey: resolvers.changesetResolver
+tags: [private]
 ```
 
 ```Go
@@ -1737,7 +1862,6 @@ type changesetResolver struct {
 
 ```
 searchKey: resolvers.NewChangesetResolverWithNextSync
-tags: [exported]
 ```
 
 ```Go
@@ -1748,7 +1872,6 @@ func NewChangesetResolverWithNextSync(store *store.Store, changeset *btypes.Chan
 
 ```
 searchKey: resolvers.NewChangesetResolver
-tags: [exported]
 ```
 
 ```Go
@@ -1759,6 +1882,7 @@ func NewChangesetResolver(store *store.Store, changeset *btypes.Changeset, repo 
 
 ```
 searchKey: resolvers.changesetResolver.ToExternalChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1769,6 +1893,7 @@ func (r *changesetResolver) ToExternalChangeset() (graphqlbackend.ExternalChange
 
 ```
 searchKey: resolvers.changesetResolver.ToHiddenExternalChangeset
+tags: [private]
 ```
 
 ```Go
@@ -1779,6 +1904,7 @@ func (r *changesetResolver) ToHiddenExternalChangeset() (graphqlbackend.HiddenEx
 
 ```
 searchKey: resolvers.changesetResolver.repoAccessible
+tags: [private]
 ```
 
 ```Go
@@ -1789,6 +1915,7 @@ func (r *changesetResolver) repoAccessible() bool
 
 ```
 searchKey: resolvers.changesetResolver.computeSpec
+tags: [private]
 ```
 
 ```Go
@@ -1799,6 +1926,7 @@ func (r *changesetResolver) computeSpec(ctx context.Context) (*btypes.ChangesetS
 
 ```
 searchKey: resolvers.changesetResolver.computeNextSyncAt
+tags: [private]
 ```
 
 ```Go
@@ -1809,6 +1937,7 @@ func (r *changesetResolver) computeNextSyncAt(ctx context.Context) (time.Time, e
 
 ```
 searchKey: resolvers.changesetResolver.ID
+tags: [private]
 ```
 
 ```Go
@@ -1819,6 +1948,7 @@ func (r *changesetResolver) ID() graphql.ID
 
 ```
 searchKey: resolvers.changesetResolver.ExternalID
+tags: [private]
 ```
 
 ```Go
@@ -1829,6 +1959,7 @@ func (r *changesetResolver) ExternalID() *string
 
 ```
 searchKey: resolvers.changesetResolver.Repository
+tags: [private]
 ```
 
 ```Go
@@ -1839,6 +1970,7 @@ func (r *changesetResolver) Repository(ctx context.Context) *graphqlbackend.Repo
 
 ```
 searchKey: resolvers.changesetResolver.Campaigns
+tags: [private]
 ```
 
 ```Go
@@ -1851,6 +1983,7 @@ TODO(campaigns-deprecation): This should be removed once we remove campaigns com
 
 ```
 searchKey: resolvers.changesetResolver.BatchChanges
+tags: [private]
 ```
 
 ```Go
@@ -1861,6 +1994,7 @@ func (r *changesetResolver) BatchChanges(ctx context.Context, args *graphqlbacke
 
 ```
 searchKey: resolvers.changesetResolver.CreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -1871,6 +2005,7 @@ func (r *changesetResolver) CreatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.changesetResolver.UpdatedAt
+tags: [private]
 ```
 
 ```Go
@@ -1881,6 +2016,7 @@ func (r *changesetResolver) UpdatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.changesetResolver.NextSyncAt
+tags: [private]
 ```
 
 ```Go
@@ -1891,6 +2027,7 @@ func (r *changesetResolver) NextSyncAt(ctx context.Context) (*graphqlbackend.Dat
 
 ```
 searchKey: resolvers.changesetResolver.Title
+tags: [private]
 ```
 
 ```Go
@@ -1901,6 +2038,7 @@ func (r *changesetResolver) Title(ctx context.Context) (*string, error)
 
 ```
 searchKey: resolvers.changesetResolver.Author
+tags: [private]
 ```
 
 ```Go
@@ -1911,6 +2049,7 @@ func (r *changesetResolver) Author() (*graphqlbackend.PersonResolver, error)
 
 ```
 searchKey: resolvers.changesetResolver.Body
+tags: [private]
 ```
 
 ```Go
@@ -1921,6 +2060,7 @@ func (r *changesetResolver) Body(ctx context.Context) (*string, error)
 
 ```
 searchKey: resolvers.changesetResolver.getBranchSpecDescription
+tags: [private]
 ```
 
 ```Go
@@ -1931,6 +2071,7 @@ func (r *changesetResolver) getBranchSpecDescription(ctx context.Context) (*btyp
 
 ```
 searchKey: resolvers.changesetResolver.PublicationState
+tags: [private]
 ```
 
 ```Go
@@ -1941,6 +2082,7 @@ func (r *changesetResolver) PublicationState() string
 
 ```
 searchKey: resolvers.changesetResolver.ReconcilerState
+tags: [private]
 ```
 
 ```Go
@@ -1951,6 +2093,7 @@ func (r *changesetResolver) ReconcilerState() string
 
 ```
 searchKey: resolvers.changesetResolver.ExternalState
+tags: [private]
 ```
 
 ```Go
@@ -1961,6 +2104,7 @@ func (r *changesetResolver) ExternalState() *string
 
 ```
 searchKey: resolvers.changesetResolver.State
+tags: [private]
 ```
 
 ```Go
@@ -1971,6 +2115,7 @@ func (r *changesetResolver) State() (string, error)
 
 ```
 searchKey: resolvers.changesetResolver.ExternalURL
+tags: [private]
 ```
 
 ```Go
@@ -1981,6 +2126,7 @@ func (r *changesetResolver) ExternalURL() (*externallink.Resolver, error)
 
 ```
 searchKey: resolvers.changesetResolver.ReviewState
+tags: [private]
 ```
 
 ```Go
@@ -1991,6 +2137,7 @@ func (r *changesetResolver) ReviewState(ctx context.Context) *string
 
 ```
 searchKey: resolvers.changesetResolver.CheckState
+tags: [private]
 ```
 
 ```Go
@@ -2001,6 +2148,7 @@ func (r *changesetResolver) CheckState() *string
 
 ```
 searchKey: resolvers.changesetResolver.Error
+tags: [private]
 ```
 
 ```Go
@@ -2011,6 +2159,7 @@ func (r *changesetResolver) Error() *string
 
 ```
 searchKey: resolvers.changesetResolver.SyncerError
+tags: [private]
 ```
 
 ```Go
@@ -2021,6 +2170,7 @@ func (r *changesetResolver) SyncerError() *string
 
 ```
 searchKey: resolvers.changesetResolver.ScheduleEstimateAt
+tags: [private]
 ```
 
 ```Go
@@ -2031,6 +2181,7 @@ func (r *changesetResolver) ScheduleEstimateAt(ctx context.Context) (*graphqlbac
 
 ```
 searchKey: resolvers.changesetResolver.CurrentSpec
+tags: [private]
 ```
 
 ```Go
@@ -2041,6 +2192,7 @@ func (r *changesetResolver) CurrentSpec(ctx context.Context) (graphqlbackend.Vis
 
 ```
 searchKey: resolvers.changesetResolver.Labels
+tags: [private]
 ```
 
 ```Go
@@ -2051,6 +2203,7 @@ func (r *changesetResolver) Labels(ctx context.Context) ([]graphqlbackend.Change
 
 ```
 searchKey: resolvers.changesetResolver.Events
+tags: [private]
 ```
 
 ```Go
@@ -2061,6 +2214,7 @@ func (r *changesetResolver) Events(ctx context.Context, args *graphqlbackend.Cha
 
 ```
 searchKey: resolvers.changesetResolver.Diff
+tags: [private]
 ```
 
 ```Go
@@ -2071,6 +2225,7 @@ func (r *changesetResolver) Diff(ctx context.Context) (graphqlbackend.Repository
 
 ```
 searchKey: resolvers.changesetResolver.DiffStat
+tags: [private]
 ```
 
 ```Go
@@ -2081,6 +2236,7 @@ func (r *changesetResolver) DiffStat(ctx context.Context) (*graphqlbackend.DiffS
 
 ```
 searchKey: resolvers.changesetLabelResolver
+tags: [private]
 ```
 
 ```Go
@@ -2093,6 +2249,7 @@ type changesetLabelResolver struct {
 
 ```
 searchKey: resolvers.changesetLabelResolver.Text
+tags: [private]
 ```
 
 ```Go
@@ -2103,6 +2260,7 @@ func (r *changesetLabelResolver) Text() string
 
 ```
 searchKey: resolvers.changesetLabelResolver.Color
+tags: [private]
 ```
 
 ```Go
@@ -2113,6 +2271,7 @@ func (r *changesetLabelResolver) Color() string
 
 ```
 searchKey: resolvers.changesetLabelResolver.Description
+tags: [private]
 ```
 
 ```Go
@@ -2123,6 +2282,7 @@ func (r *changesetLabelResolver) Description() *string
 
 ```
 searchKey: resolvers.changesetApplyPreviewResolver
+tags: [private]
 ```
 
 ```Go
@@ -2140,6 +2300,7 @@ type changesetApplyPreviewResolver struct {
 
 ```
 searchKey: resolvers.changesetApplyPreviewResolver.repoAccessible
+tags: [private]
 ```
 
 ```Go
@@ -2150,6 +2311,7 @@ func (r *changesetApplyPreviewResolver) repoAccessible() bool
 
 ```
 searchKey: resolvers.changesetApplyPreviewResolver.ToVisibleChangesetApplyPreview
+tags: [private]
 ```
 
 ```Go
@@ -2160,6 +2322,7 @@ func (r *changesetApplyPreviewResolver) ToVisibleChangesetApplyPreview() (graphq
 
 ```
 searchKey: resolvers.changesetApplyPreviewResolver.ToHiddenChangesetApplyPreview
+tags: [private]
 ```
 
 ```Go
@@ -2170,6 +2333,7 @@ func (r *changesetApplyPreviewResolver) ToHiddenChangesetApplyPreview() (graphql
 
 ```
 searchKey: resolvers.hiddenChangesetApplyPreviewResolver
+tags: [private]
 ```
 
 ```Go
@@ -2185,6 +2349,7 @@ type hiddenChangesetApplyPreviewResolver struct {
 
 ```
 searchKey: resolvers.hiddenChangesetApplyPreviewResolver.Operations
+tags: [private]
 ```
 
 ```Go
@@ -2195,6 +2360,7 @@ func (r *hiddenChangesetApplyPreviewResolver) Operations(ctx context.Context) ([
 
 ```
 searchKey: resolvers.hiddenChangesetApplyPreviewResolver.Delta
+tags: [private]
 ```
 
 ```Go
@@ -2205,6 +2371,7 @@ func (r *hiddenChangesetApplyPreviewResolver) Delta(ctx context.Context) (graphq
 
 ```
 searchKey: resolvers.hiddenChangesetApplyPreviewResolver.Targets
+tags: [private]
 ```
 
 ```Go
@@ -2215,6 +2382,7 @@ func (r *hiddenChangesetApplyPreviewResolver) Targets() graphqlbackend.HiddenApp
 
 ```
 searchKey: resolvers.hiddenApplyPreviewTargetsResolver
+tags: [private]
 ```
 
 ```Go
@@ -2230,6 +2398,7 @@ type hiddenApplyPreviewTargetsResolver struct {
 
 ```
 searchKey: resolvers.hiddenApplyPreviewTargetsResolver.ToHiddenApplyPreviewTargetsAttach
+tags: [private]
 ```
 
 ```Go
@@ -2240,6 +2409,7 @@ func (r *hiddenApplyPreviewTargetsResolver) ToHiddenApplyPreviewTargetsAttach() 
 
 ```
 searchKey: resolvers.hiddenApplyPreviewTargetsResolver.ToHiddenApplyPreviewTargetsUpdate
+tags: [private]
 ```
 
 ```Go
@@ -2250,6 +2420,7 @@ func (r *hiddenApplyPreviewTargetsResolver) ToHiddenApplyPreviewTargetsUpdate() 
 
 ```
 searchKey: resolvers.hiddenApplyPreviewTargetsResolver.ToHiddenApplyPreviewTargetsDetach
+tags: [private]
 ```
 
 ```Go
@@ -2260,6 +2431,7 @@ func (r *hiddenApplyPreviewTargetsResolver) ToHiddenApplyPreviewTargetsDetach() 
 
 ```
 searchKey: resolvers.hiddenApplyPreviewTargetsResolver.ChangesetSpec
+tags: [private]
 ```
 
 ```Go
@@ -2270,6 +2442,7 @@ func (r *hiddenApplyPreviewTargetsResolver) ChangesetSpec(ctx context.Context) (
 
 ```
 searchKey: resolvers.hiddenApplyPreviewTargetsResolver.Changeset
+tags: [private]
 ```
 
 ```Go
@@ -2280,6 +2453,7 @@ func (r *hiddenApplyPreviewTargetsResolver) Changeset(ctx context.Context) (grap
 
 ```
 searchKey: resolvers.visibleChangesetApplyPreviewResolver
+tags: [private]
 ```
 
 ```Go
@@ -2305,6 +2479,7 @@ type visibleChangesetApplyPreviewResolver struct {
 
 ```
 searchKey: resolvers.visibleChangesetApplyPreviewResolver.Operations
+tags: [private]
 ```
 
 ```Go
@@ -2315,6 +2490,7 @@ func (r *visibleChangesetApplyPreviewResolver) Operations(ctx context.Context) (
 
 ```
 searchKey: resolvers.visibleChangesetApplyPreviewResolver.Delta
+tags: [private]
 ```
 
 ```Go
@@ -2325,6 +2501,7 @@ func (r *visibleChangesetApplyPreviewResolver) Delta(ctx context.Context) (graph
 
 ```
 searchKey: resolvers.visibleChangesetApplyPreviewResolver.Targets
+tags: [private]
 ```
 
 ```Go
@@ -2335,6 +2512,7 @@ func (r *visibleChangesetApplyPreviewResolver) Targets() graphqlbackend.VisibleA
 
 ```
 searchKey: resolvers.visibleChangesetApplyPreviewResolver.computePlan
+tags: [private]
 ```
 
 ```Go
@@ -2345,6 +2523,7 @@ func (r *visibleChangesetApplyPreviewResolver) computePlan(ctx context.Context) 
 
 ```
 searchKey: resolvers.visibleChangesetApplyPreviewResolver.computeBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -2355,6 +2534,7 @@ func (r *visibleChangesetApplyPreviewResolver) computeBatchChange(ctx context.Co
 
 ```
 searchKey: resolvers.visibleApplyPreviewTargetsResolver
+tags: [private]
 ```
 
 ```Go
@@ -2370,6 +2550,7 @@ type visibleApplyPreviewTargetsResolver struct {
 
 ```
 searchKey: resolvers.visibleApplyPreviewTargetsResolver.ToVisibleApplyPreviewTargetsAttach
+tags: [private]
 ```
 
 ```Go
@@ -2380,6 +2561,7 @@ func (r *visibleApplyPreviewTargetsResolver) ToVisibleApplyPreviewTargetsAttach(
 
 ```
 searchKey: resolvers.visibleApplyPreviewTargetsResolver.ToVisibleApplyPreviewTargetsUpdate
+tags: [private]
 ```
 
 ```Go
@@ -2390,6 +2572,7 @@ func (r *visibleApplyPreviewTargetsResolver) ToVisibleApplyPreviewTargetsUpdate(
 
 ```
 searchKey: resolvers.visibleApplyPreviewTargetsResolver.ToVisibleApplyPreviewTargetsDetach
+tags: [private]
 ```
 
 ```Go
@@ -2400,6 +2583,7 @@ func (r *visibleApplyPreviewTargetsResolver) ToVisibleApplyPreviewTargetsDetach(
 
 ```
 searchKey: resolvers.visibleApplyPreviewTargetsResolver.ChangesetSpec
+tags: [private]
 ```
 
 ```Go
@@ -2410,6 +2594,7 @@ func (r *visibleApplyPreviewTargetsResolver) ChangesetSpec(ctx context.Context) 
 
 ```
 searchKey: resolvers.visibleApplyPreviewTargetsResolver.Changeset
+tags: [private]
 ```
 
 ```Go
@@ -2420,6 +2605,7 @@ func (r *visibleApplyPreviewTargetsResolver) Changeset(ctx context.Context) (gra
 
 ```
 searchKey: resolvers.changesetSpecDeltaResolver
+tags: [private]
 ```
 
 ```Go
@@ -2432,6 +2618,7 @@ type changesetSpecDeltaResolver struct {
 
 ```
 searchKey: resolvers.changesetSpecDeltaResolver.TitleChanged
+tags: [private]
 ```
 
 ```Go
@@ -2442,6 +2629,7 @@ func (c *changesetSpecDeltaResolver) TitleChanged() bool
 
 ```
 searchKey: resolvers.changesetSpecDeltaResolver.BodyChanged
+tags: [private]
 ```
 
 ```Go
@@ -2452,6 +2640,7 @@ func (c *changesetSpecDeltaResolver) BodyChanged() bool
 
 ```
 searchKey: resolvers.changesetSpecDeltaResolver.Undraft
+tags: [private]
 ```
 
 ```Go
@@ -2462,6 +2651,7 @@ func (c *changesetSpecDeltaResolver) Undraft() bool
 
 ```
 searchKey: resolvers.changesetSpecDeltaResolver.BaseRefChanged
+tags: [private]
 ```
 
 ```Go
@@ -2472,6 +2662,7 @@ func (c *changesetSpecDeltaResolver) BaseRefChanged() bool
 
 ```
 searchKey: resolvers.changesetSpecDeltaResolver.DiffChanged
+tags: [private]
 ```
 
 ```Go
@@ -2482,6 +2673,7 @@ func (c *changesetSpecDeltaResolver) DiffChanged() bool
 
 ```
 searchKey: resolvers.changesetSpecDeltaResolver.CommitMessageChanged
+tags: [private]
 ```
 
 ```Go
@@ -2492,6 +2684,7 @@ func (c *changesetSpecDeltaResolver) CommitMessageChanged() bool
 
 ```
 searchKey: resolvers.changesetSpecDeltaResolver.AuthorNameChanged
+tags: [private]
 ```
 
 ```Go
@@ -2502,6 +2695,7 @@ func (c *changesetSpecDeltaResolver) AuthorNameChanged() bool
 
 ```
 searchKey: resolvers.changesetSpecDeltaResolver.AuthorEmailChanged
+tags: [private]
 ```
 
 ```Go
@@ -2512,6 +2706,7 @@ func (c *changesetSpecDeltaResolver) AuthorEmailChanged() bool
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -2532,6 +2727,7 @@ type changesetApplyPreviewConnectionResolver struct {
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionResolver.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -2542,6 +2738,7 @@ func (r *changesetApplyPreviewConnectionResolver) TotalCount(ctx context.Context
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionResolver.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -2552,6 +2749,7 @@ func (r *changesetApplyPreviewConnectionResolver) PageInfo(ctx context.Context) 
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionResolver.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -2562,6 +2760,7 @@ func (r *changesetApplyPreviewConnectionResolver) Nodes(ctx context.Context) ([]
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionResolver.Stats
+tags: [private]
 ```
 
 ```Go
@@ -2572,6 +2771,7 @@ func (r *changesetApplyPreviewConnectionResolver) Stats(ctx context.Context) (gr
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionResolver.compute
+tags: [private]
 ```
 
 ```Go
@@ -2582,6 +2782,7 @@ func (r *changesetApplyPreviewConnectionResolver) compute(ctx context.Context) (
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver
+tags: [private]
 ```
 
 ```Go
@@ -2609,6 +2810,7 @@ type changesetApplyPreviewConnectionStatsResolver struct {
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Push
+tags: [private]
 ```
 
 ```Go
@@ -2619,6 +2821,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Push() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Update
+tags: [private]
 ```
 
 ```Go
@@ -2629,6 +2832,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Update() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Undraft
+tags: [private]
 ```
 
 ```Go
@@ -2639,6 +2843,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Undraft() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Publish
+tags: [private]
 ```
 
 ```Go
@@ -2649,6 +2854,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Publish() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.PublishDraft
+tags: [private]
 ```
 
 ```Go
@@ -2659,6 +2865,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) PublishDraft() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Sync
+tags: [private]
 ```
 
 ```Go
@@ -2669,6 +2876,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Sync() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Import
+tags: [private]
 ```
 
 ```Go
@@ -2679,6 +2887,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Import() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Close
+tags: [private]
 ```
 
 ```Go
@@ -2689,6 +2898,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Close() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Reopen
+tags: [private]
 ```
 
 ```Go
@@ -2699,6 +2909,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Reopen() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Sleep
+tags: [private]
 ```
 
 ```Go
@@ -2709,6 +2920,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Sleep() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Detach
+tags: [private]
 ```
 
 ```Go
@@ -2719,6 +2931,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Detach() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Archive
+tags: [private]
 ```
 
 ```Go
@@ -2729,6 +2942,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Archive() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Added
+tags: [private]
 ```
 
 ```Go
@@ -2739,6 +2953,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Added() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Modified
+tags: [private]
 ```
 
 ```Go
@@ -2749,6 +2964,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Modified() int32
 
 ```
 searchKey: resolvers.changesetApplyPreviewConnectionStatsResolver.Removed
+tags: [private]
 ```
 
 ```Go
@@ -2759,6 +2975,7 @@ func (r *changesetApplyPreviewConnectionStatsResolver) Removed() int32
 
 ```
 searchKey: resolvers.rewirerMappingsFacade
+tags: [private]
 ```
 
 ```Go
@@ -2788,6 +3005,7 @@ rewirerMappingsFacade wraps btypes.RewirerMappings to provide memoised paginatio
 
 ```
 searchKey: resolvers.newRewirerMappingsFacade
+tags: [private]
 ```
 
 ```Go
@@ -2800,6 +3018,7 @@ newRewirerMappingsFacade creates a new rewirer mappings object, which includes d
 
 ```
 searchKey: resolvers.rewirerMappingsFacade.compute
+tags: [private]
 ```
 
 ```Go
@@ -2810,6 +3029,7 @@ func (rmf *rewirerMappingsFacade) compute(ctx context.Context, opts store.GetRew
 
 ```
 searchKey: resolvers.rewirerMappingsFacade.Page
+tags: [private]
 ```
 
 ```Go
@@ -2822,6 +3042,7 @@ Page applies the given filter, and paginates the results.
 
 ```
 searchKey: resolvers.rewirerMappingsFacade.Resolver
+tags: [private]
 ```
 
 ```Go
@@ -2832,6 +3053,7 @@ func (rmf *rewirerMappingsFacade) Resolver(mapping *btypes.RewirerMapping) graph
 
 ```
 searchKey: resolvers.rewirerMappingsFacade.ResolverWithNextSync
+tags: [private]
 ```
 
 ```Go
@@ -2842,6 +3064,7 @@ func (rmf *rewirerMappingsFacade) ResolverWithNextSync(mapping *btypes.RewirerMa
 
 ```
 searchKey: resolvers.rewirerMappingPageOpts
+tags: [private]
 ```
 
 ```Go
@@ -2855,6 +3078,7 @@ type rewirerMappingPageOpts struct {
 
 ```
 searchKey: resolvers.rewirerMappingPage
+tags: [private]
 ```
 
 ```Go
@@ -2871,6 +3095,7 @@ type rewirerMappingPage struct {
 
 ```
 searchKey: resolvers.changesetsConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -2895,6 +3120,7 @@ type changesetsConnectionResolver struct {
 
 ```
 searchKey: resolvers.changesetsConnectionResolver.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -2905,6 +3131,7 @@ func (r *changesetsConnectionResolver) Nodes(ctx context.Context) ([]graphqlback
 
 ```
 searchKey: resolvers.changesetsConnectionResolver.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -2915,6 +3142,7 @@ func (r *changesetsConnectionResolver) TotalCount(ctx context.Context) (int32, e
 
 ```
 searchKey: resolvers.changesetsConnectionResolver.compute
+tags: [private]
 ```
 
 ```Go
@@ -2927,6 +3155,7 @@ compute loads all changesets matched by r.opts. If r.optsSafe is true, it return
 
 ```
 searchKey: resolvers.changesetsConnectionResolver.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -2937,6 +3166,7 @@ func (r *changesetsConnectionResolver) PageInfo(ctx context.Context) (*graphqlut
 
 ```
 searchKey: resolvers.changesetCountsResolver
+tags: [private]
 ```
 
 ```Go
@@ -2949,6 +3179,7 @@ type changesetCountsResolver struct {
 
 ```
 searchKey: resolvers.changesetCountsResolver.Date
+tags: [private]
 ```
 
 ```Go
@@ -2959,6 +3190,7 @@ func (r *changesetCountsResolver) Date() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.changesetCountsResolver.Total
+tags: [private]
 ```
 
 ```Go
@@ -2969,6 +3201,7 @@ func (r *changesetCountsResolver) Total() int32
 
 ```
 searchKey: resolvers.changesetCountsResolver.Merged
+tags: [private]
 ```
 
 ```Go
@@ -2979,6 +3212,7 @@ func (r *changesetCountsResolver) Merged() int32
 
 ```
 searchKey: resolvers.changesetCountsResolver.Closed
+tags: [private]
 ```
 
 ```Go
@@ -2989,6 +3223,7 @@ func (r *changesetCountsResolver) Closed() int32
 
 ```
 searchKey: resolvers.changesetCountsResolver.Draft
+tags: [private]
 ```
 
 ```Go
@@ -2999,6 +3234,7 @@ func (r *changesetCountsResolver) Draft() int32
 
 ```
 searchKey: resolvers.changesetCountsResolver.Open
+tags: [private]
 ```
 
 ```Go
@@ -3009,6 +3245,7 @@ func (r *changesetCountsResolver) Open() int32
 
 ```
 searchKey: resolvers.changesetCountsResolver.OpenApproved
+tags: [private]
 ```
 
 ```Go
@@ -3019,6 +3256,7 @@ func (r *changesetCountsResolver) OpenApproved() int32
 
 ```
 searchKey: resolvers.changesetCountsResolver.OpenChangesRequested
+tags: [private]
 ```
 
 ```Go
@@ -3029,6 +3267,7 @@ func (r *changesetCountsResolver) OpenChangesRequested() int32
 
 ```
 searchKey: resolvers.changesetCountsResolver.OpenPending
+tags: [private]
 ```
 
 ```Go
@@ -3039,6 +3278,7 @@ func (r *changesetCountsResolver) OpenPending() int32
 
 ```
 searchKey: resolvers.changesetEventResolver
+tags: [private]
 ```
 
 ```Go
@@ -3053,6 +3293,7 @@ type changesetEventResolver struct {
 
 ```
 searchKey: resolvers.changesetEventResolver.ID
+tags: [private]
 ```
 
 ```Go
@@ -3063,6 +3304,7 @@ func (r *changesetEventResolver) ID() graphql.ID
 
 ```
 searchKey: resolvers.changesetEventResolver.CreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -3073,6 +3315,7 @@ func (r *changesetEventResolver) CreatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.changesetEventResolver.Changeset
+tags: [private]
 ```
 
 ```Go
@@ -3083,6 +3326,7 @@ func (r *changesetEventResolver) Changeset() graphqlbackend.ExternalChangesetRes
 
 ```
 searchKey: resolvers.changesetEventsConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -3104,6 +3348,7 @@ type changesetEventsConnectionResolver struct {
 
 ```
 searchKey: resolvers.changesetEventsConnectionResolver.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -3114,6 +3359,7 @@ func (r *changesetEventsConnectionResolver) Nodes(ctx context.Context) ([]graphq
 
 ```
 searchKey: resolvers.changesetEventsConnectionResolver.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -3124,6 +3370,7 @@ func (r *changesetEventsConnectionResolver) TotalCount(ctx context.Context) (int
 
 ```
 searchKey: resolvers.changesetEventsConnectionResolver.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -3134,6 +3381,7 @@ func (r *changesetEventsConnectionResolver) PageInfo(ctx context.Context) (*grap
 
 ```
 searchKey: resolvers.changesetEventsConnectionResolver.compute
+tags: [private]
 ```
 
 ```Go
@@ -3144,6 +3392,7 @@ func (r *changesetEventsConnectionResolver) compute(ctx context.Context) ([]*bty
 
 ```
 searchKey: resolvers.changesetJobErrorResolver
+tags: [private]
 ```
 
 ```Go
@@ -3159,6 +3408,7 @@ type changesetJobErrorResolver struct {
 
 ```
 searchKey: resolvers.changesetJobErrorResolver.Changeset
+tags: [private]
 ```
 
 ```Go
@@ -3169,6 +3419,7 @@ func (r *changesetJobErrorResolver) Changeset() graphqlbackend.ChangesetResolver
 
 ```
 searchKey: resolvers.changesetJobErrorResolver.Error
+tags: [private]
 ```
 
 ```Go
@@ -3179,6 +3430,7 @@ func (r *changesetJobErrorResolver) Error() *string
 
 ```
 searchKey: resolvers.changesetSpecResolver
+tags: [private]
 ```
 
 ```Go
@@ -3195,7 +3447,6 @@ type changesetSpecResolver struct {
 
 ```
 searchKey: resolvers.NewChangesetSpecResolver
-tags: [exported]
 ```
 
 ```Go
@@ -3206,7 +3457,6 @@ func NewChangesetSpecResolver(ctx context.Context, store *store.Store, changeset
 
 ```
 searchKey: resolvers.NewChangesetSpecResolverWithRepo
-tags: [exported]
 ```
 
 ```Go
@@ -3217,6 +3467,7 @@ func NewChangesetSpecResolverWithRepo(store *store.Store, repo *types.Repo, chan
 
 ```
 searchKey: resolvers.changesetSpecResolver.ID
+tags: [private]
 ```
 
 ```Go
@@ -3227,6 +3478,7 @@ func (r *changesetSpecResolver) ID() graphql.ID
 
 ```
 searchKey: resolvers.changesetSpecResolver.Type
+tags: [private]
 ```
 
 ```Go
@@ -3237,6 +3489,7 @@ func (r *changesetSpecResolver) Type() string
 
 ```
 searchKey: resolvers.changesetSpecResolver.Description
+tags: [private]
 ```
 
 ```Go
@@ -3247,6 +3500,7 @@ func (r *changesetSpecResolver) Description(ctx context.Context) (graphqlbackend
 
 ```
 searchKey: resolvers.changesetSpecResolver.ExpiresAt
+tags: [private]
 ```
 
 ```Go
@@ -3257,6 +3511,7 @@ func (r *changesetSpecResolver) ExpiresAt() *graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.changesetSpecResolver.repoAccessible
+tags: [private]
 ```
 
 ```Go
@@ -3267,6 +3522,7 @@ func (r *changesetSpecResolver) repoAccessible() bool
 
 ```
 searchKey: resolvers.changesetSpecResolver.ToHiddenChangesetSpec
+tags: [private]
 ```
 
 ```Go
@@ -3277,6 +3533,7 @@ func (r *changesetSpecResolver) ToHiddenChangesetSpec() (graphqlbackend.HiddenCh
 
 ```
 searchKey: resolvers.changesetSpecResolver.ToVisibleChangesetSpec
+tags: [private]
 ```
 
 ```Go
@@ -3287,6 +3544,7 @@ func (r *changesetSpecResolver) ToVisibleChangesetSpec() (graphqlbackend.Visible
 
 ```
 searchKey: resolvers.changesetDescriptionResolver
+tags: [private]
 ```
 
 ```Go
@@ -3304,6 +3562,7 @@ changesetDescriptionResolver implements both ChangesetDescription interfaces: Ex
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.ToExistingChangesetReference
+tags: [private]
 ```
 
 ```Go
@@ -3314,6 +3573,7 @@ func (r *changesetDescriptionResolver) ToExistingChangesetReference() (graphqlba
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.ToGitBranchChangesetDescription
+tags: [private]
 ```
 
 ```Go
@@ -3324,6 +3584,7 @@ func (r *changesetDescriptionResolver) ToGitBranchChangesetDescription() (graphq
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.BaseRepository
+tags: [private]
 ```
 
 ```Go
@@ -3334,6 +3595,7 @@ func (r *changesetDescriptionResolver) BaseRepository() *graphqlbackend.Reposito
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.ExternalID
+tags: [private]
 ```
 
 ```Go
@@ -3344,6 +3606,7 @@ func (r *changesetDescriptionResolver) ExternalID() string
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.BaseRef
+tags: [private]
 ```
 
 ```Go
@@ -3354,6 +3617,7 @@ func (r *changesetDescriptionResolver) BaseRef() string
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.BaseRev
+tags: [private]
 ```
 
 ```Go
@@ -3364,6 +3628,7 @@ func (r *changesetDescriptionResolver) BaseRev() string
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.HeadRepository
+tags: [private]
 ```
 
 ```Go
@@ -3374,6 +3639,7 @@ func (r *changesetDescriptionResolver) HeadRepository() *graphqlbackend.Reposito
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.HeadRef
+tags: [private]
 ```
 
 ```Go
@@ -3384,6 +3650,7 @@ func (r *changesetDescriptionResolver) HeadRef() string
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.Title
+tags: [private]
 ```
 
 ```Go
@@ -3394,6 +3661,7 @@ func (r *changesetDescriptionResolver) Title() string
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.Body
+tags: [private]
 ```
 
 ```Go
@@ -3404,6 +3672,7 @@ func (r *changesetDescriptionResolver) Body() string
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.Published
+tags: [private]
 ```
 
 ```Go
@@ -3414,6 +3683,7 @@ func (r *changesetDescriptionResolver) Published() batches.PublishedValue
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.DiffStat
+tags: [private]
 ```
 
 ```Go
@@ -3424,6 +3694,7 @@ func (r *changesetDescriptionResolver) DiffStat() *graphqlbackend.DiffStat
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.Diff
+tags: [private]
 ```
 
 ```Go
@@ -3434,6 +3705,7 @@ func (r *changesetDescriptionResolver) Diff(ctx context.Context) (graphqlbackend
 
 ```
 searchKey: resolvers.changesetDescriptionResolver.Commits
+tags: [private]
 ```
 
 ```Go
@@ -3444,6 +3716,7 @@ func (r *changesetDescriptionResolver) Commits() []graphqlbackend.GitCommitDescr
 
 ```
 searchKey: resolvers.gitCommitDescriptionResolver
+tags: [private]
 ```
 
 ```Go
@@ -3460,6 +3733,7 @@ type gitCommitDescriptionResolver struct {
 
 ```
 searchKey: resolvers.gitCommitDescriptionResolver.Author
+tags: [private]
 ```
 
 ```Go
@@ -3470,6 +3744,7 @@ func (r *gitCommitDescriptionResolver) Author() *graphqlbackend.PersonResolver
 
 ```
 searchKey: resolvers.gitCommitDescriptionResolver.Message
+tags: [private]
 ```
 
 ```Go
@@ -3480,6 +3755,7 @@ func (r *gitCommitDescriptionResolver) Message() string
 
 ```
 searchKey: resolvers.gitCommitDescriptionResolver.Subject
+tags: [private]
 ```
 
 ```Go
@@ -3490,6 +3766,7 @@ func (r *gitCommitDescriptionResolver) Subject() string
 
 ```
 searchKey: resolvers.gitCommitDescriptionResolver.Body
+tags: [private]
 ```
 
 ```Go
@@ -3500,6 +3777,7 @@ func (r *gitCommitDescriptionResolver) Body() *string
 
 ```
 searchKey: resolvers.gitCommitDescriptionResolver.Diff
+tags: [private]
 ```
 
 ```Go
@@ -3510,6 +3788,7 @@ func (r *gitCommitDescriptionResolver) Diff() string
 
 ```
 searchKey: resolvers.changesetSpecConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -3532,6 +3811,7 @@ type changesetSpecConnectionResolver struct {
 
 ```
 searchKey: resolvers.changesetSpecConnectionResolver.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -3542,6 +3822,7 @@ func (r *changesetSpecConnectionResolver) TotalCount(ctx context.Context) (int32
 
 ```
 searchKey: resolvers.changesetSpecConnectionResolver.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -3552,6 +3833,7 @@ func (r *changesetSpecConnectionResolver) PageInfo(ctx context.Context) (*graphq
 
 ```
 searchKey: resolvers.changesetSpecConnectionResolver.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -3562,6 +3844,7 @@ func (r *changesetSpecConnectionResolver) Nodes(ctx context.Context) ([]graphqlb
 
 ```
 searchKey: resolvers.changesetSpecConnectionResolver.compute
+tags: [private]
 ```
 
 ```Go
@@ -3572,6 +3855,7 @@ func (r *changesetSpecConnectionResolver) compute(ctx context.Context) (btypes.C
 
 ```
 searchKey: resolvers.changesetsStatsResolver
+tags: [private]
 ```
 
 ```Go
@@ -3584,6 +3868,7 @@ type changesetsStatsResolver struct {
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Retrying
+tags: [private]
 ```
 
 ```Go
@@ -3594,6 +3879,7 @@ func (r *changesetsStatsResolver) Retrying() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Failed
+tags: [private]
 ```
 
 ```Go
@@ -3604,6 +3890,7 @@ func (r *changesetsStatsResolver) Failed() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Scheduled
+tags: [private]
 ```
 
 ```Go
@@ -3614,6 +3901,7 @@ func (r *changesetsStatsResolver) Scheduled() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Processing
+tags: [private]
 ```
 
 ```Go
@@ -3624,6 +3912,7 @@ func (r *changesetsStatsResolver) Processing() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Unpublished
+tags: [private]
 ```
 
 ```Go
@@ -3634,6 +3923,7 @@ func (r *changesetsStatsResolver) Unpublished() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Draft
+tags: [private]
 ```
 
 ```Go
@@ -3644,6 +3934,7 @@ func (r *changesetsStatsResolver) Draft() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Open
+tags: [private]
 ```
 
 ```Go
@@ -3654,6 +3945,7 @@ func (r *changesetsStatsResolver) Open() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Merged
+tags: [private]
 ```
 
 ```Go
@@ -3664,6 +3956,7 @@ func (r *changesetsStatsResolver) Merged() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Closed
+tags: [private]
 ```
 
 ```Go
@@ -3674,6 +3967,7 @@ func (r *changesetsStatsResolver) Closed() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Deleted
+tags: [private]
 ```
 
 ```Go
@@ -3684,6 +3978,7 @@ func (r *changesetsStatsResolver) Deleted() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Archived
+tags: [private]
 ```
 
 ```Go
@@ -3694,6 +3989,7 @@ func (r *changesetsStatsResolver) Archived() int32
 
 ```
 searchKey: resolvers.changesetsStatsResolver.Total
+tags: [private]
 ```
 
 ```Go
@@ -3704,6 +4000,7 @@ func (r *changesetsStatsResolver) Total() int32
 
 ```
 searchKey: resolvers.batchChangesCodeHostResolver
+tags: [private]
 ```
 
 ```Go
@@ -3717,6 +4014,7 @@ type batchChangesCodeHostResolver struct {
 
 ```
 searchKey: resolvers.batchChangesCodeHostResolver.ExternalServiceKind
+tags: [private]
 ```
 
 ```Go
@@ -3727,6 +4025,7 @@ func (c *batchChangesCodeHostResolver) ExternalServiceKind() string
 
 ```
 searchKey: resolvers.batchChangesCodeHostResolver.ExternalServiceURL
+tags: [private]
 ```
 
 ```Go
@@ -3737,6 +4036,7 @@ func (c *batchChangesCodeHostResolver) ExternalServiceURL() string
 
 ```
 searchKey: resolvers.batchChangesCodeHostResolver.Credential
+tags: [private]
 ```
 
 ```Go
@@ -3747,6 +4047,7 @@ func (c *batchChangesCodeHostResolver) Credential() graphqlbackend.BatchChangesC
 
 ```
 searchKey: resolvers.batchChangesCodeHostResolver.RequiresSSH
+tags: [private]
 ```
 
 ```Go
@@ -3757,6 +4058,7 @@ func (c *batchChangesCodeHostResolver) RequiresSSH() bool
 
 ```
 searchKey: resolvers.batchChangesCodeHostConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -3779,6 +4081,7 @@ type batchChangesCodeHostConnectionResolver struct {
 
 ```
 searchKey: resolvers.batchChangesCodeHostConnectionResolver.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -3789,6 +4092,7 @@ func (c *batchChangesCodeHostConnectionResolver) TotalCount(ctx context.Context)
 
 ```
 searchKey: resolvers.batchChangesCodeHostConnectionResolver.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -3799,6 +4103,7 @@ func (c *batchChangesCodeHostConnectionResolver) PageInfo(ctx context.Context) (
 
 ```
 searchKey: resolvers.batchChangesCodeHostConnectionResolver.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -3809,6 +4114,7 @@ func (c *batchChangesCodeHostConnectionResolver) Nodes(ctx context.Context) ([]g
 
 ```
 searchKey: resolvers.batchChangesCodeHostConnectionResolver.compute
+tags: [private]
 ```
 
 ```Go
@@ -3819,6 +4125,7 @@ func (c *batchChangesCodeHostConnectionResolver) compute(ctx context.Context) (a
 
 ```
 searchKey: resolvers.idType
+tags: [private]
 ```
 
 ```Go
@@ -3832,6 +4139,7 @@ type idType struct {
 
 ```
 searchKey: resolvers.batchChangesUserCredentialResolver
+tags: [private]
 ```
 
 ```Go
@@ -3844,6 +4152,7 @@ type batchChangesUserCredentialResolver struct {
 
 ```
 searchKey: resolvers.batchChangesUserCredentialResolver.ID
+tags: [private]
 ```
 
 ```Go
@@ -3854,6 +4163,7 @@ func (c *batchChangesUserCredentialResolver) ID() graphql.ID
 
 ```
 searchKey: resolvers.batchChangesUserCredentialResolver.ExternalServiceKind
+tags: [private]
 ```
 
 ```Go
@@ -3864,6 +4174,7 @@ func (c *batchChangesUserCredentialResolver) ExternalServiceKind() string
 
 ```
 searchKey: resolvers.batchChangesUserCredentialResolver.ExternalServiceURL
+tags: [private]
 ```
 
 ```Go
@@ -3874,6 +4185,7 @@ func (c *batchChangesUserCredentialResolver) ExternalServiceURL() string
 
 ```
 searchKey: resolvers.batchChangesUserCredentialResolver.SSHPublicKey
+tags: [private]
 ```
 
 ```Go
@@ -3884,6 +4196,7 @@ func (c *batchChangesUserCredentialResolver) SSHPublicKey(ctx context.Context) (
 
 ```
 searchKey: resolvers.batchChangesUserCredentialResolver.CreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -3894,6 +4207,7 @@ func (c *batchChangesUserCredentialResolver) CreatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.batchChangesUserCredentialResolver.IsSiteCredential
+tags: [private]
 ```
 
 ```Go
@@ -3904,6 +4218,7 @@ func (c *batchChangesUserCredentialResolver) IsSiteCredential() bool
 
 ```
 searchKey: resolvers.batchChangesSiteCredentialResolver
+tags: [private]
 ```
 
 ```Go
@@ -3916,6 +4231,7 @@ type batchChangesSiteCredentialResolver struct {
 
 ```
 searchKey: resolvers.batchChangesSiteCredentialResolver.ID
+tags: [private]
 ```
 
 ```Go
@@ -3926,6 +4242,7 @@ func (c *batchChangesSiteCredentialResolver) ID() graphql.ID
 
 ```
 searchKey: resolvers.batchChangesSiteCredentialResolver.ExternalServiceKind
+tags: [private]
 ```
 
 ```Go
@@ -3936,6 +4253,7 @@ func (c *batchChangesSiteCredentialResolver) ExternalServiceKind() string
 
 ```
 searchKey: resolvers.batchChangesSiteCredentialResolver.ExternalServiceURL
+tags: [private]
 ```
 
 ```Go
@@ -3946,6 +4264,7 @@ func (c *batchChangesSiteCredentialResolver) ExternalServiceURL() string
 
 ```
 searchKey: resolvers.batchChangesSiteCredentialResolver.SSHPublicKey
+tags: [private]
 ```
 
 ```Go
@@ -3956,6 +4275,7 @@ func (c *batchChangesSiteCredentialResolver) SSHPublicKey(ctx context.Context) (
 
 ```
 searchKey: resolvers.batchChangesSiteCredentialResolver.CreatedAt
+tags: [private]
 ```
 
 ```Go
@@ -3966,6 +4286,7 @@ func (c *batchChangesSiteCredentialResolver) CreatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.batchChangesSiteCredentialResolver.IsSiteCredential
+tags: [private]
 ```
 
 ```Go
@@ -3976,6 +4297,7 @@ func (c *batchChangesSiteCredentialResolver) IsSiteCredential() bool
 
 ```
 searchKey: resolvers.campaignsCodeHostResolver
+tags: [private]
 ```
 
 ```Go
@@ -3990,6 +4312,7 @@ TODO(campaigns-deprecation): Remove this wrapper type. It just exists to fulfil 
 
 ```
 searchKey: resolvers.campaignsCodeHostResolver.ExternalServiceKind
+tags: [private]
 ```
 
 ```Go
@@ -4000,6 +4323,7 @@ func (c *campaignsCodeHostResolver) ExternalServiceKind() string
 
 ```
 searchKey: resolvers.campaignsCodeHostResolver.ExternalServiceURL
+tags: [private]
 ```
 
 ```Go
@@ -4010,6 +4334,7 @@ func (c *campaignsCodeHostResolver) ExternalServiceURL() string
 
 ```
 searchKey: resolvers.campaignsCodeHostResolver.Credential
+tags: [private]
 ```
 
 ```Go
@@ -4020,6 +4345,7 @@ func (c *campaignsCodeHostResolver) Credential() graphqlbackend.CampaignsCredent
 
 ```
 searchKey: resolvers.campaignsCodeHostResolver.RequiresSSH
+tags: [private]
 ```
 
 ```Go
@@ -4030,6 +4356,7 @@ func (c *campaignsCodeHostResolver) RequiresSSH() bool
 
 ```
 searchKey: resolvers.campaignsCodeHostConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -4042,6 +4369,7 @@ type campaignsCodeHostConnectionResolver struct {
 
 ```
 searchKey: resolvers.campaignsCodeHostConnectionResolver.TotalCount
+tags: [private]
 ```
 
 ```Go
@@ -4052,6 +4380,7 @@ func (c *campaignsCodeHostConnectionResolver) TotalCount(ctx context.Context) (i
 
 ```
 searchKey: resolvers.campaignsCodeHostConnectionResolver.PageInfo
+tags: [private]
 ```
 
 ```Go
@@ -4062,6 +4391,7 @@ func (c *campaignsCodeHostConnectionResolver) PageInfo(ctx context.Context) (*gr
 
 ```
 searchKey: resolvers.campaignsCodeHostConnectionResolver.Nodes
+tags: [private]
 ```
 
 ```Go
@@ -4072,7 +4402,6 @@ func (c *campaignsCodeHostConnectionResolver) Nodes(ctx context.Context) ([]grap
 
 ```
 searchKey: resolvers.ErrInvalidFirstParameter
-tags: [exported]
 ```
 
 ```Go
@@ -4085,7 +4414,6 @@ type ErrInvalidFirstParameter struct {
 
 ```
 searchKey: resolvers.ErrInvalidFirstParameter.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4096,7 +4424,6 @@ func (e ErrInvalidFirstParameter) Error() string
 
 ```
 searchKey: resolvers.ErrInvalidFirstParameter.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4107,7 +4434,6 @@ func (e ErrInvalidFirstParameter) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.ErrIDIsZero
-tags: [exported]
 ```
 
 ```Go
@@ -4118,7 +4444,6 @@ type ErrIDIsZero struct{}
 
 ```
 searchKey: resolvers.ErrIDIsZero.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4129,7 +4454,6 @@ func (e ErrIDIsZero) Error() string
 
 ```
 searchKey: resolvers.ErrIDIsZero.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4140,7 +4464,6 @@ func (e ErrIDIsZero) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.ErrBatchChangesDisabled
-tags: [exported]
 ```
 
 ```Go
@@ -4151,7 +4474,6 @@ type ErrBatchChangesDisabled struct{}
 
 ```
 searchKey: resolvers.ErrBatchChangesDisabled.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4162,7 +4484,6 @@ func (e ErrBatchChangesDisabled) Error() string
 
 ```
 searchKey: resolvers.ErrBatchChangesDisabled.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4173,7 +4494,6 @@ func (e ErrBatchChangesDisabled) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.ErrBatchChangesDisabledForUser
-tags: [exported]
 ```
 
 ```Go
@@ -4184,7 +4504,6 @@ type ErrBatchChangesDisabledForUser struct{}
 
 ```
 searchKey: resolvers.ErrBatchChangesDisabledForUser.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4195,7 +4514,6 @@ func (e ErrBatchChangesDisabledForUser) Error() string
 
 ```
 searchKey: resolvers.ErrBatchChangesDisabledForUser.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4206,7 +4524,6 @@ func (e ErrBatchChangesDisabledForUser) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.ErrBatchChangesUnlicensed
-tags: [exported]
 ```
 
 ```Go
@@ -4219,7 +4536,6 @@ ErrBatchChangesUnlicensed wraps an underlying licensing.featureNotActivatedError
 
 ```
 searchKey: resolvers.ErrBatchChangesUnlicensed.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4230,7 +4546,6 @@ func (e ErrBatchChangesUnlicensed) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.ErrBatchChangesDotcom
-tags: [exported]
 ```
 
 ```Go
@@ -4241,7 +4556,6 @@ type ErrBatchChangesDotcom struct{}
 
 ```
 searchKey: resolvers.ErrBatchChangesDotcom.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4252,7 +4566,6 @@ func (e ErrBatchChangesDotcom) Error() string
 
 ```
 searchKey: resolvers.ErrBatchChangesDotcom.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4263,7 +4576,6 @@ func (e ErrBatchChangesDotcom) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.ErrEnsureBatchChangeFailed
-tags: [exported]
 ```
 
 ```Go
@@ -4274,7 +4586,6 @@ type ErrEnsureBatchChangeFailed struct{}
 
 ```
 searchKey: resolvers.ErrEnsureBatchChangeFailed.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4285,7 +4596,6 @@ func (e ErrEnsureBatchChangeFailed) Error() string
 
 ```
 searchKey: resolvers.ErrEnsureBatchChangeFailed.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4296,7 +4606,6 @@ func (e ErrEnsureBatchChangeFailed) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.ErrApplyClosedBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -4307,7 +4616,6 @@ type ErrApplyClosedBatchChange struct{}
 
 ```
 searchKey: resolvers.ErrApplyClosedBatchChange.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4318,7 +4626,6 @@ func (e ErrApplyClosedBatchChange) Error() string
 
 ```
 searchKey: resolvers.ErrApplyClosedBatchChange.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4329,7 +4636,6 @@ func (e ErrApplyClosedBatchChange) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.ErrMatchingBatchChangeExists
-tags: [exported]
 ```
 
 ```Go
@@ -4340,7 +4646,6 @@ type ErrMatchingBatchChangeExists struct{}
 
 ```
 searchKey: resolvers.ErrMatchingBatchChangeExists.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4351,7 +4656,6 @@ func (e ErrMatchingBatchChangeExists) Error() string
 
 ```
 searchKey: resolvers.ErrMatchingBatchChangeExists.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4362,7 +4666,6 @@ func (e ErrMatchingBatchChangeExists) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.ErrDuplicateCredential
-tags: [exported]
 ```
 
 ```Go
@@ -4373,7 +4676,6 @@ type ErrDuplicateCredential struct{}
 
 ```
 searchKey: resolvers.ErrDuplicateCredential.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4384,7 +4686,6 @@ func (e ErrDuplicateCredential) Error() string
 
 ```
 searchKey: resolvers.ErrDuplicateCredential.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4395,7 +4696,6 @@ func (e ErrDuplicateCredential) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.ErrVerifyCredentialFailed
-tags: [exported]
 ```
 
 ```Go
@@ -4408,7 +4708,6 @@ type ErrVerifyCredentialFailed struct {
 
 ```
 searchKey: resolvers.ErrVerifyCredentialFailed.Error
-tags: [exported]
 ```
 
 ```Go
@@ -4419,7 +4718,6 @@ func (e ErrVerifyCredentialFailed) Error() string
 
 ```
 searchKey: resolvers.ErrVerifyCredentialFailed.Extensions
-tags: [exported]
 ```
 
 ```Go
@@ -4430,7 +4728,6 @@ func (e ErrVerifyCredentialFailed) Extensions() map[string]interface{}
 
 ```
 searchKey: resolvers.Resolver
-tags: [exported]
 ```
 
 ```Go
@@ -4445,6 +4742,7 @@ Resolver is the GraphQL resolver of all things related to batch changes.
 
 ```
 searchKey: resolvers.Resolver.campaignByID
+tags: [private]
 ```
 
 ```Go
@@ -4457,7 +4755,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.Campaign
-tags: [exported]
 ```
 
 ```Go
@@ -4470,6 +4767,7 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.campaignSpecByID
+tags: [private]
 ```
 
 ```Go
@@ -4482,7 +4780,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.CreateCampaignSpec
-tags: [exported]
 ```
 
 ```Go
@@ -4495,7 +4792,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.MoveCampaign
-tags: [exported]
 ```
 
 ```Go
@@ -4508,7 +4804,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.DeleteCampaign
-tags: [exported]
 ```
 
 ```Go
@@ -4521,7 +4816,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.Campaigns
-tags: [exported]
 ```
 
 ```Go
@@ -4534,7 +4828,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.CampaignsCodeHosts
-tags: [exported]
 ```
 
 ```Go
@@ -4547,7 +4840,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.CreateCampaignsCredential
-tags: [exported]
 ```
 
 ```Go
@@ -4560,7 +4852,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.DeleteCampaignsCredential
-tags: [exported]
 ```
 
 ```Go
@@ -4573,6 +4864,7 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.campaignsCredentialByID
+tags: [private]
 ```
 
 ```Go
@@ -4585,7 +4877,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.CreateCampaign
-tags: [exported]
 ```
 
 ```Go
@@ -4598,7 +4889,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.ApplyCampaign
-tags: [exported]
 ```
 
 ```Go
@@ -4611,7 +4901,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.CloseCampaign
-tags: [exported]
 ```
 
 ```Go
@@ -4624,7 +4913,6 @@ TODO(campaigns-deprecation): Remove when campaigns are fully removed
 
 ```
 searchKey: resolvers.Resolver.NodeResolvers
-tags: [exported]
 ```
 
 ```Go
@@ -4635,6 +4923,7 @@ func (r *Resolver) NodeResolvers() map[string]graphqlbackend.NodeByIDFunc
 
 ```
 searchKey: resolvers.Resolver.changesetByID
+tags: [private]
 ```
 
 ```Go
@@ -4645,6 +4934,7 @@ func (r *Resolver) changesetByID(ctx context.Context, id graphql.ID) (graphqlbac
 
 ```
 searchKey: resolvers.Resolver.batchChangeByID
+tags: [private]
 ```
 
 ```Go
@@ -4655,7 +4945,6 @@ func (r *Resolver) batchChangeByID(ctx context.Context, id graphql.ID) (graphqlb
 
 ```
 searchKey: resolvers.Resolver.BatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -4666,6 +4955,7 @@ func (r *Resolver) BatchChange(ctx context.Context, args *graphqlbackend.BatchCh
 
 ```
 searchKey: resolvers.Resolver.batchSpecByID
+tags: [private]
 ```
 
 ```Go
@@ -4676,6 +4966,7 @@ func (r *Resolver) batchSpecByID(ctx context.Context, id graphql.ID) (graphqlbac
 
 ```
 searchKey: resolvers.Resolver.changesetSpecByID
+tags: [private]
 ```
 
 ```Go
@@ -4686,6 +4977,7 @@ func (r *Resolver) changesetSpecByID(ctx context.Context, id graphql.ID) (graphq
 
 ```
 searchKey: resolvers.Resolver.batchChangesCredentialByID
+tags: [private]
 ```
 
 ```Go
@@ -4696,6 +4988,7 @@ func (r *Resolver) batchChangesCredentialByID(ctx context.Context, id graphql.ID
 
 ```
 searchKey: resolvers.Resolver.batchChangesUserCredentialByID
+tags: [private]
 ```
 
 ```Go
@@ -4706,6 +4999,7 @@ func (r *Resolver) batchChangesUserCredentialByID(ctx context.Context, id int64)
 
 ```
 searchKey: resolvers.Resolver.batchChangesSiteCredentialByID
+tags: [private]
 ```
 
 ```Go
@@ -4716,6 +5010,7 @@ func (r *Resolver) batchChangesSiteCredentialByID(ctx context.Context, id int64)
 
 ```
 searchKey: resolvers.Resolver.bulkOperationByID
+tags: [private]
 ```
 
 ```Go
@@ -4726,6 +5021,7 @@ func (r *Resolver) bulkOperationByID(ctx context.Context, id graphql.ID) (graphq
 
 ```
 searchKey: resolvers.Resolver.bulkOperationByIDString
+tags: [private]
 ```
 
 ```Go
@@ -4736,7 +5032,6 @@ func (r *Resolver) bulkOperationByIDString(ctx context.Context, id string) (grap
 
 ```
 searchKey: resolvers.Resolver.CreateBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -4747,7 +5042,6 @@ func (r *Resolver) CreateBatchChange(ctx context.Context, args *graphqlbackend.C
 
 ```
 searchKey: resolvers.Resolver.ApplyBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -4758,7 +5052,6 @@ func (r *Resolver) ApplyBatchChange(ctx context.Context, args *graphqlbackend.Ap
 
 ```
 searchKey: resolvers.Resolver.CreateBatchSpec
-tags: [exported]
 ```
 
 ```Go
@@ -4769,7 +5062,6 @@ func (r *Resolver) CreateBatchSpec(ctx context.Context, args *graphqlbackend.Cre
 
 ```
 searchKey: resolvers.Resolver.CreateChangesetSpec
-tags: [exported]
 ```
 
 ```Go
@@ -4780,7 +5072,6 @@ func (r *Resolver) CreateChangesetSpec(ctx context.Context, args *graphqlbackend
 
 ```
 searchKey: resolvers.Resolver.MoveBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -4791,7 +5082,6 @@ func (r *Resolver) MoveBatchChange(ctx context.Context, args *graphqlbackend.Mov
 
 ```
 searchKey: resolvers.Resolver.DeleteBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -4802,7 +5092,6 @@ func (r *Resolver) DeleteBatchChange(ctx context.Context, args *graphqlbackend.D
 
 ```
 searchKey: resolvers.Resolver.BatchChanges
-tags: [exported]
 ```
 
 ```Go
@@ -4813,7 +5102,6 @@ func (r *Resolver) BatchChanges(ctx context.Context, args *graphqlbackend.ListBa
 
 ```
 searchKey: resolvers.Resolver.BatchChangesCodeHosts
-tags: [exported]
 ```
 
 ```Go
@@ -4824,7 +5112,6 @@ func (r *Resolver) BatchChangesCodeHosts(ctx context.Context, args *graphqlbacke
 
 ```
 searchKey: resolvers.Resolver.CloseBatchChange
-tags: [exported]
 ```
 
 ```Go
@@ -4835,7 +5122,6 @@ func (r *Resolver) CloseBatchChange(ctx context.Context, args *graphqlbackend.Cl
 
 ```
 searchKey: resolvers.Resolver.SyncChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -4846,7 +5132,6 @@ func (r *Resolver) SyncChangeset(ctx context.Context, args *graphqlbackend.SyncC
 
 ```
 searchKey: resolvers.Resolver.ReenqueueChangeset
-tags: [exported]
 ```
 
 ```Go
@@ -4857,7 +5142,6 @@ func (r *Resolver) ReenqueueChangeset(ctx context.Context, args *graphqlbackend.
 
 ```
 searchKey: resolvers.Resolver.CreateBatchChangesCredential
-tags: [exported]
 ```
 
 ```Go
@@ -4868,6 +5152,7 @@ func (r *Resolver) CreateBatchChangesCredential(ctx context.Context, args *graph
 
 ```
 searchKey: resolvers.Resolver.createBatchChangesUserCredential
+tags: [private]
 ```
 
 ```Go
@@ -4878,6 +5163,7 @@ func (r *Resolver) createBatchChangesUserCredential(ctx context.Context, externa
 
 ```
 searchKey: resolvers.Resolver.createBatchChangesSiteCredential
+tags: [private]
 ```
 
 ```Go
@@ -4888,6 +5174,7 @@ func (r *Resolver) createBatchChangesSiteCredential(ctx context.Context, externa
 
 ```
 searchKey: resolvers.Resolver.generateAuthenticatorForCredential
+tags: [private]
 ```
 
 ```Go
@@ -4898,7 +5185,6 @@ func (r *Resolver) generateAuthenticatorForCredential(ctx context.Context, exter
 
 ```
 searchKey: resolvers.Resolver.DeleteBatchChangesCredential
-tags: [exported]
 ```
 
 ```Go
@@ -4909,6 +5195,7 @@ func (r *Resolver) DeleteBatchChangesCredential(ctx context.Context, args *graph
 
 ```
 searchKey: resolvers.Resolver.deleteBatchChangesUserCredential
+tags: [private]
 ```
 
 ```Go
@@ -4919,6 +5206,7 @@ func (r *Resolver) deleteBatchChangesUserCredential(ctx context.Context, credent
 
 ```
 searchKey: resolvers.Resolver.deleteBatchChangesSiteCredential
+tags: [private]
 ```
 
 ```Go
@@ -4929,7 +5217,6 @@ func (r *Resolver) deleteBatchChangesSiteCredential(ctx context.Context, credent
 
 ```
 searchKey: resolvers.Resolver.DetachChangesets
-tags: [exported]
 ```
 
 ```Go
@@ -4940,7 +5227,6 @@ func (r *Resolver) DetachChangesets(ctx context.Context, args *graphqlbackend.De
 
 ```
 searchKey: resolvers.Resolver.CreateChangesetComments
-tags: [exported]
 ```
 
 ```Go
@@ -4951,7 +5237,6 @@ func (r *Resolver) CreateChangesetComments(ctx context.Context, args *graphqlbac
 
 ```
 searchKey: resolvers.Resolver.ReenqueueChangesets
-tags: [exported]
 ```
 
 ```Go
@@ -4962,7 +5247,6 @@ func (r *Resolver) ReenqueueChangesets(ctx context.Context, args *graphqlbackend
 
 ```
 searchKey: resolvers.Resolver.MergeChangesets
-tags: [exported]
 ```
 
 ```Go
@@ -4973,6 +5257,7 @@ func (r *Resolver) MergeChangesets(ctx context.Context, args *graphqlbackend.Mer
 
 ```
 searchKey: resolvers.batchSpecCreatedArg
+tags: [private]
 ```
 
 ```Go
@@ -4985,6 +5270,7 @@ type batchSpecCreatedArg struct {
 
 ```
 searchKey: resolvers.batchChangeEventArg
+tags: [private]
 ```
 
 ```Go
@@ -4997,6 +5283,7 @@ type batchChangeEventArg struct {
 
 ```
 searchKey: resolvers.mockChangesetApplyPreviewResolver
+tags: [private]
 ```
 
 ```Go
@@ -5010,6 +5297,7 @@ type mockChangesetApplyPreviewResolver struct {
 
 ```
 searchKey: resolvers.mockChangesetApplyPreviewResolver.ToHiddenChangesetApplyPreview
+tags: [private]
 ```
 
 ```Go
@@ -5020,6 +5308,7 @@ func (r *mockChangesetApplyPreviewResolver) ToHiddenChangesetApplyPreview() (gra
 
 ```
 searchKey: resolvers.mockChangesetApplyPreviewResolver.ToVisibleChangesetApplyPreview
+tags: [private]
 ```
 
 ```Go
@@ -5030,6 +5319,7 @@ func (r *mockChangesetApplyPreviewResolver) ToVisibleChangesetApplyPreview() (gr
 
 ```
 searchKey: resolvers.mockHiddenChangesetApplyPreviewResolver
+tags: [private]
 ```
 
 ```Go
@@ -5040,6 +5330,7 @@ type mockHiddenChangesetApplyPreviewResolver struct{}
 
 ```
 searchKey: resolvers.mockHiddenChangesetApplyPreviewResolver.Operations
+tags: [private]
 ```
 
 ```Go
@@ -5050,6 +5341,7 @@ func (*mockHiddenChangesetApplyPreviewResolver) Operations(context.Context) ([]s
 
 ```
 searchKey: resolvers.mockHiddenChangesetApplyPreviewResolver.Delta
+tags: [private]
 ```
 
 ```Go
@@ -5060,6 +5352,7 @@ func (*mockHiddenChangesetApplyPreviewResolver) Delta(context.Context) (graphqlb
 
 ```
 searchKey: resolvers.mockHiddenChangesetApplyPreviewResolver.Targets
+tags: [private]
 ```
 
 ```Go
@@ -5070,6 +5363,7 @@ func (*mockHiddenChangesetApplyPreviewResolver) Targets() graphqlbackend.HiddenA
 
 ```
 searchKey: resolvers.mockVisibleChangesetApplyPreviewResolver
+tags: [private]
 ```
 
 ```Go
@@ -5086,6 +5380,7 @@ type mockVisibleChangesetApplyPreviewResolver struct {
 
 ```
 searchKey: resolvers.mockVisibleChangesetApplyPreviewResolver.Operations
+tags: [private]
 ```
 
 ```Go
@@ -5096,6 +5391,7 @@ func (r *mockVisibleChangesetApplyPreviewResolver) Operations(context.Context) (
 
 ```
 searchKey: resolvers.mockVisibleChangesetApplyPreviewResolver.Delta
+tags: [private]
 ```
 
 ```Go
@@ -5106,6 +5402,7 @@ func (r *mockVisibleChangesetApplyPreviewResolver) Delta(context.Context) (graph
 
 ```
 searchKey: resolvers.mockVisibleChangesetApplyPreviewResolver.Targets
+tags: [private]
 ```
 
 ```Go
@@ -5116,6 +5413,7 @@ func (r *mockVisibleChangesetApplyPreviewResolver) Targets() graphqlbackend.Visi
 
 ```
 searchKey: resolvers.wantBatchChangeResponse
+tags: [private]
 ```
 
 ```Go
@@ -5131,6 +5429,7 @@ type wantBatchChangeResponse struct {
 
 ```
 searchKey: resolvers.wantBatchSpecResponse
+tags: [private]
 ```
 
 ```Go
@@ -5145,10 +5444,15 @@ type wantBatchSpecResponse struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="marshalBatchChangeID" href="#marshalBatchChangeID">func marshalBatchChangeID(id int64) graphql.ID</a>
 
 ```
 searchKey: resolvers.marshalBatchChangeID
+tags: [private]
 ```
 
 ```Go
@@ -5159,6 +5463,7 @@ func marshalBatchChangeID(id int64) graphql.ID
 
 ```
 searchKey: resolvers.unmarshalBatchChangeID
+tags: [private]
 ```
 
 ```Go
@@ -5169,6 +5474,7 @@ func unmarshalBatchChangeID(id graphql.ID) (batchChangeID int64, err error)
 
 ```
 searchKey: resolvers.marshalBatchSpecRandID
+tags: [private]
 ```
 
 ```Go
@@ -5179,6 +5485,7 @@ func marshalBatchSpecRandID(id string) graphql.ID
 
 ```
 searchKey: resolvers.unmarshalBatchSpecID
+tags: [private]
 ```
 
 ```Go
@@ -5189,6 +5496,7 @@ func unmarshalBatchSpecID(id graphql.ID) (batchSpecRandID string, err error)
 
 ```
 searchKey: resolvers.marshalBulkOperationID
+tags: [private]
 ```
 
 ```Go
@@ -5199,6 +5507,7 @@ func marshalBulkOperationID(id string) graphql.ID
 
 ```
 searchKey: resolvers.unmarshalBulkOperationID
+tags: [private]
 ```
 
 ```Go
@@ -5209,6 +5518,7 @@ func unmarshalBulkOperationID(id graphql.ID) (bulkOperationID string, err error)
 
 ```
 searchKey: resolvers.changesetJobTypeToBulkOperationType
+tags: [private]
 ```
 
 ```Go
@@ -5219,6 +5529,7 @@ func changesetJobTypeToBulkOperationType(t btypes.ChangesetJobType) (string, err
 
 ```
 searchKey: resolvers.uniqueChangesetIDsForBulkOperationErrors
+tags: [private]
 ```
 
 ```Go
@@ -5229,6 +5540,7 @@ func uniqueChangesetIDsForBulkOperationErrors(errors []*btypes.BulkOperationErro
 
 ```
 searchKey: resolvers.marshalChangesetID
+tags: [private]
 ```
 
 ```Go
@@ -5239,6 +5551,7 @@ func marshalChangesetID(id int64) graphql.ID
 
 ```
 searchKey: resolvers.unmarshalChangesetID
+tags: [private]
 ```
 
 ```Go
@@ -5249,6 +5562,7 @@ func unmarshalChangesetID(id graphql.ID) (cid int64, err error)
 
 ```
 searchKey: resolvers.marshalChangesetEventID
+tags: [private]
 ```
 
 ```Go
@@ -5259,6 +5573,7 @@ func marshalChangesetEventID(id int64) graphql.ID
 
 ```
 searchKey: resolvers.marshalChangesetSpecRandID
+tags: [private]
 ```
 
 ```Go
@@ -5269,6 +5584,7 @@ func marshalChangesetSpecRandID(id string) graphql.ID
 
 ```
 searchKey: resolvers.unmarshalChangesetSpecID
+tags: [private]
 ```
 
 ```Go
@@ -5279,6 +5595,7 @@ func unmarshalChangesetSpecID(id graphql.ID) (changesetSpecRandID string, err er
 
 ```
 searchKey: resolvers.marshalBatchChangesCredentialID
+tags: [private]
 ```
 
 ```Go
@@ -5289,6 +5606,7 @@ func marshalBatchChangesCredentialID(id int64, isSiteCredential bool) graphql.ID
 
 ```
 searchKey: resolvers.unmarshalBatchChangesCredentialID
+tags: [private]
 ```
 
 ```Go
@@ -5299,6 +5617,7 @@ func unmarshalBatchChangesCredentialID(id graphql.ID) (credentialID int64, isSit
 
 ```
 searchKey: resolvers.commentSSHKey
+tags: [private]
 ```
 
 ```Go
@@ -5309,7 +5628,6 @@ func commentSSHKey(ssh auth.AuthenticatorWithSSH) string
 
 ```
 searchKey: resolvers.New
-tags: [exported]
 ```
 
 ```Go
@@ -5322,6 +5640,7 @@ New returns a new Resolver whose store uses the given database
 
 ```
 searchKey: resolvers.batchChangesEnabled
+tags: [private]
 ```
 
 ```Go
@@ -5332,6 +5651,7 @@ func batchChangesEnabled(ctx context.Context, db dbutil.DB) error
 
 ```
 searchKey: resolvers.batchChangesCreateAccess
+tags: [private]
 ```
 
 ```Go
@@ -5344,6 +5664,7 @@ batchChangesCreateAccess returns true if the current user can create batchChange
 
 ```
 searchKey: resolvers.checkLicense
+tags: [private]
 ```
 
 ```Go
@@ -5356,6 +5677,7 @@ checkLicense returns a user-facing error if the batchChanges feature is not purc
 
 ```
 searchKey: resolvers.logBackendEvent
+tags: [private]
 ```
 
 ```Go
@@ -5366,6 +5688,7 @@ func logBackendEvent(ctx context.Context, db dbutil.DB, name string, args interf
 
 ```
 searchKey: resolvers.listChangesetOptsFromArgs
+tags: [private]
 ```
 
 ```Go
@@ -5378,6 +5701,7 @@ listChangesetOptsFromArgs turns the graphqlbackend.ListChangesetsArgs into ListC
 
 ```
 searchKey: resolvers.parseBatchChangeState
+tags: [private]
 ```
 
 ```Go
@@ -5388,6 +5712,7 @@ func parseBatchChangeState(s *string) (btypes.BatchChangeState, error)
 
 ```
 searchKey: resolvers.checkSiteAdminOrSameUser
+tags: [private]
 ```
 
 ```Go
@@ -5398,6 +5723,7 @@ func checkSiteAdminOrSameUser(ctx context.Context, db dbutil.DB, userID int32) (
 
 ```
 searchKey: resolvers.validateFirstParam
+tags: [private]
 ```
 
 ```Go
@@ -5408,6 +5734,7 @@ func validateFirstParam(first int32, max int) error
 
 ```
 searchKey: resolvers.validateFirstParamDefaults
+tags: [private]
 ```
 
 ```Go
@@ -5418,6 +5745,7 @@ func validateFirstParamDefaults(first int32) error
 
 ```
 searchKey: resolvers.unmarshalBulkOperationBaseArgs
+tags: [private]
 ```
 
 ```Go
@@ -5428,6 +5756,7 @@ func unmarshalBulkOperationBaseArgs(args graphqlbackend.BulkOperationBaseArgs) (
 
 ```
 searchKey: resolvers.batchChangesApplyURL
+tags: [private]
 ```
 
 ```Go
@@ -5438,6 +5767,7 @@ func batchChangesApplyURL(n graphqlbackend.Namespace, c graphqlbackend.BatchSpec
 
 ```
 searchKey: resolvers.batchChangeURL
+tags: [private]
 ```
 
 ```Go
@@ -5448,6 +5778,7 @@ func batchChangeURL(n graphqlbackend.Namespace, c graphqlbackend.BatchChangeReso
 
 ```
 searchKey: resolvers.TestBatchChangeConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -5458,6 +5789,7 @@ func TestBatchChangeConnectionResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestBatchChangesListing
+tags: [private]
 ```
 
 ```Go
@@ -5468,6 +5800,7 @@ func TestBatchChangesListing(t *testing.T)
 
 ```
 searchKey: resolvers.TestBatchChangeResolver
+tags: [private]
 ```
 
 ```Go
@@ -5478,6 +5811,7 @@ func TestBatchChangeResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestBatchSpecResolver
+tags: [private]
 ```
 
 ```Go
@@ -5488,6 +5822,7 @@ func TestBatchSpecResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestBulkOperationConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -5498,6 +5833,7 @@ func TestBulkOperationConnectionResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestBulkOperationResolver
+tags: [private]
 ```
 
 ```Go
@@ -5508,6 +5844,7 @@ func TestBulkOperationResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestChangesetApplyPreviewConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -5518,6 +5855,7 @@ func TestChangesetApplyPreviewConnectionResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestRewirerMappings
+tags: [private]
 ```
 
 ```Go
@@ -5528,6 +5866,7 @@ func TestRewirerMappings(t *testing.T)
 
 ```
 searchKey: resolvers.TestChangesetApplyPreviewResolver
+tags: [private]
 ```
 
 ```Go
@@ -5538,6 +5877,7 @@ func TestChangesetApplyPreviewResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestChangesetConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -5548,6 +5888,7 @@ func TestChangesetConnectionResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestChangesetCountsOverTimeResolver
+tags: [private]
 ```
 
 ```Go
@@ -5558,6 +5899,7 @@ func TestChangesetCountsOverTimeResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestChangesetCountsOverTimeIntegration
+tags: [private]
 ```
 
 ```Go
@@ -5568,6 +5910,7 @@ func TestChangesetCountsOverTimeIntegration(t *testing.T)
 
 ```
 searchKey: resolvers.TestChangesetEventConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -5578,6 +5921,7 @@ func TestChangesetEventConnectionResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestChangesetSpecConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -5588,6 +5932,7 @@ func TestChangesetSpecConnectionResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestChangesetSpecResolver
+tags: [private]
 ```
 
 ```Go
@@ -5598,6 +5943,7 @@ func TestChangesetSpecResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestChangesetResolver
+tags: [private]
 ```
 
 ```Go
@@ -5608,6 +5954,7 @@ func TestChangesetResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestCodeHostConnectionResolver
+tags: [private]
 ```
 
 ```Go
@@ -5618,6 +5965,7 @@ func TestCodeHostConnectionResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestUnmarshalBatchChangesCredentialID
+tags: [private]
 ```
 
 ```Go
@@ -5628,6 +5976,7 @@ func TestUnmarshalBatchChangesCredentialID(t *testing.T)
 
 ```
 searchKey: resolvers.TestCommentSSHKey
+tags: [private]
 ```
 
 ```Go
@@ -5638,6 +5987,7 @@ func TestCommentSSHKey(t *testing.T)
 
 ```
 searchKey: resolvers.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -5648,6 +5998,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: resolvers.marshalDateTime
+tags: [private]
 ```
 
 ```Go
@@ -5658,6 +6009,7 @@ func marshalDateTime(t testing.TB, ts time.Time) string
 
 ```
 searchKey: resolvers.parseJSONTime
+tags: [private]
 ```
 
 ```Go
@@ -5668,6 +6020,7 @@ func parseJSONTime(t testing.TB, ts string) time.Time
 
 ```
 searchKey: resolvers.newGitHubExternalService
+tags: [private]
 ```
 
 ```Go
@@ -5678,6 +6031,7 @@ func newGitHubExternalService(t *testing.T, store *database.ExternalServiceStore
 
 ```
 searchKey: resolvers.newGitHubTestRepo
+tags: [private]
 ```
 
 ```Go
@@ -5688,6 +6042,7 @@ func newGitHubTestRepo(name string, externalService *types.ExternalService) *typ
 
 ```
 searchKey: resolvers.mockBackendCommits
+tags: [private]
 ```
 
 ```Go
@@ -5698,6 +6053,7 @@ func mockBackendCommits(t *testing.T, revs ...api.CommitID)
 
 ```
 searchKey: resolvers.mockRepoComparison
+tags: [private]
 ```
 
 ```Go
@@ -5708,6 +6064,7 @@ func mockRepoComparison(t *testing.T, baseRev, headRev, diff string)
 
 ```
 searchKey: resolvers.addChangeset
+tags: [private]
 ```
 
 ```Go
@@ -5718,6 +6075,7 @@ func addChangeset(t *testing.T, ctx context.Context, s *store.Store, c *btypes.C
 
 ```
 searchKey: resolvers.pruneUserCredentials
+tags: [private]
 ```
 
 ```Go
@@ -5728,6 +6086,7 @@ func pruneUserCredentials(t *testing.T, db dbutil.DB, key encryption.Key)
 
 ```
 searchKey: resolvers.pruneSiteCredentials
+tags: [private]
 ```
 
 ```Go
@@ -5738,6 +6097,7 @@ func pruneSiteCredentials(t *testing.T, cstore *store.Store)
 
 ```
 searchKey: resolvers.strPtr
+tags: [private]
 ```
 
 ```Go
@@ -5748,6 +6108,7 @@ func strPtr(s string) *string
 
 ```
 searchKey: resolvers.TestPermissionLevels
+tags: [private]
 ```
 
 ```Go
@@ -5758,6 +6119,7 @@ func TestPermissionLevels(t *testing.T)
 
 ```
 searchKey: resolvers.TestRepositoryPermissions
+tags: [private]
 ```
 
 ```Go
@@ -5768,6 +6130,7 @@ func TestRepositoryPermissions(t *testing.T)
 
 ```
 searchKey: resolvers.testBatchChangeResponse
+tags: [private]
 ```
 
 ```Go
@@ -5778,6 +6141,7 @@ func testBatchChangeResponse(t *testing.T, s *graphql.Schema, ctx context.Contex
 
 ```
 searchKey: resolvers.testChangesetResponse
+tags: [private]
 ```
 
 ```Go
@@ -5788,6 +6152,7 @@ func testChangesetResponse(t *testing.T, s *graphql.Schema, ctx context.Context,
 
 ```
 searchKey: resolvers.testBatchSpecResponse
+tags: [private]
 ```
 
 ```Go
@@ -5798,6 +6163,7 @@ func testBatchSpecResponse(t *testing.T, s *graphql.Schema, ctx context.Context,
 
 ```
 searchKey: resolvers.testChangesetSpecResponse
+tags: [private]
 ```
 
 ```Go
@@ -5808,6 +6174,7 @@ func testChangesetSpecResponse(t *testing.T, s *graphql.Schema, ctx context.Cont
 
 ```
 searchKey: resolvers.TestNullIDResilience
+tags: [private]
 ```
 
 ```Go
@@ -5818,6 +6185,7 @@ func TestNullIDResilience(t *testing.T)
 
 ```
 searchKey: resolvers.TestCreateBatchSpec
+tags: [private]
 ```
 
 ```Go
@@ -5828,6 +6196,7 @@ func TestCreateBatchSpec(t *testing.T)
 
 ```
 searchKey: resolvers.TestCreateChangesetSpec
+tags: [private]
 ```
 
 ```Go
@@ -5838,6 +6207,7 @@ func TestCreateChangesetSpec(t *testing.T)
 
 ```
 searchKey: resolvers.TestApplyBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -5848,6 +6218,7 @@ func TestApplyBatchChange(t *testing.T)
 
 ```
 searchKey: resolvers.TestCreateBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -5858,6 +6229,7 @@ func TestCreateBatchChange(t *testing.T)
 
 ```
 searchKey: resolvers.TestMoveBatchChange
+tags: [private]
 ```
 
 ```Go
@@ -5868,6 +6240,7 @@ func TestMoveBatchChange(t *testing.T)
 
 ```
 searchKey: resolvers.TestListChangesetOptsFromArgs
+tags: [private]
 ```
 
 ```Go
@@ -5878,6 +6251,7 @@ func TestListChangesetOptsFromArgs(t *testing.T)
 
 ```
 searchKey: resolvers.TestCreateBatchChangesCredential
+tags: [private]
 ```
 
 ```Go
@@ -5888,6 +6262,7 @@ func TestCreateBatchChangesCredential(t *testing.T)
 
 ```
 searchKey: resolvers.TestDeleteBatchChangesCredential
+tags: [private]
 ```
 
 ```Go
@@ -5898,6 +6273,7 @@ func TestDeleteBatchChangesCredential(t *testing.T)
 
 ```
 searchKey: resolvers.TestCreateChangesetComments
+tags: [private]
 ```
 
 ```Go
@@ -5908,6 +6284,7 @@ func TestCreateChangesetComments(t *testing.T)
 
 ```
 searchKey: resolvers.TestReenqueueChangesets
+tags: [private]
 ```
 
 ```Go
@@ -5918,6 +6295,7 @@ func TestReenqueueChangesets(t *testing.T)
 
 ```
 searchKey: resolvers.TestMergeChangesets
+tags: [private]
 ```
 
 ```Go
@@ -5928,6 +6306,7 @@ func TestMergeChangesets(t *testing.T)
 
 ```
 searchKey: resolvers.stringPtr
+tags: [private]
 ```
 
 ```Go

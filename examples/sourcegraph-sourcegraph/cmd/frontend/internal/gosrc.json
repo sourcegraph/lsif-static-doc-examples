@@ -4,7 +4,9 @@
     "identifier": "gosrc",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/gosrc",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "RuntimeVersion",
                 "newPage": false,
                 "searchKey": "gosrc.RuntimeVersion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "errNoMatch",
                 "newPage": false,
                 "searchKey": "gosrc.errNoMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -82,7 +86,9 @@
                 "identifier": "gopkgSrcTemplate",
                 "newPage": false,
                 "searchKey": "gosrc.gopkgSrcTemplate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -102,7 +108,9 @@
                 "identifier": "stdlibInternalPackagePrefixes",
                 "newPage": false,
                 "searchKey": "gosrc.stdlibInternalPackagePrefixes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -122,7 +130,9 @@
                 "identifier": "stdlibPackagePaths",
                 "newPage": false,
                 "searchKey": "gosrc.stdlibPackagePaths",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -145,7 +155,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -163,9 +175,7 @@
                 "identifier": "Directory",
                 "newPage": false,
                 "searchKey": "gosrc.Directory",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -183,9 +193,7 @@
                       "identifier": "ResolveImportPath",
                       "newPage": false,
                       "searchKey": "gosrc.ResolveImportPath",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -205,7 +213,9 @@
                       "identifier": "resolveStaticImportPath",
                       "newPage": false,
                       "searchKey": "gosrc.resolveStaticImportPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -225,7 +235,9 @@
                       "identifier": "resolveDynamicImportPath",
                       "newPage": false,
                       "searchKey": "gosrc.resolveDynamicImportPath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -248,7 +260,9 @@
                 "identifier": "importMeta",
                 "newPage": false,
                 "searchKey": "gosrc.importMeta",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -266,7 +280,9 @@
                       "identifier": "fetchMeta",
                       "newPage": false,
                       "searchKey": "gosrc.fetchMeta",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -286,7 +302,9 @@
                       "identifier": "parseMeta",
                       "newPage": false,
                       "searchKey": "gosrc.parseMeta",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -309,7 +327,9 @@
                 "identifier": "sourceMeta",
                 "newPage": false,
                 "searchKey": "gosrc.sourceMeta",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -319,48 +339,7 @@
                 "kind": "markdown",
                 "value": "```Go\ntype sourceMeta struct {\n\tprefix       string\n\tprojectURL   string\n\tdirTemplate  string\n\tfileTemplate string\n}\n```\n\nsourceMeta represents the values in a go-source meta tag. \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/gosrc#fetchMeta",
-                    "documentation": {
-                      "identifier": "fetchMeta",
-                      "newPage": false,
-                      "searchKey": "gosrc.fetchMeta",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/gosrc#parseMeta",
-                    "documentation": {
-                      "identifier": "parseMeta",
-                      "newPage": false,
-                      "searchKey": "gosrc.parseMeta",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -370,7 +349,9 @@
                 "identifier": "testTransport",
                 "newPage": false,
                 "searchKey": "gosrc.testTransport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -388,7 +369,9 @@
                       "identifier": "testTransport.RoundTrip",
                       "newPage": false,
                       "searchKey": "gosrc.testTransport.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -414,7 +397,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -432,7 +417,9 @@
                 "identifier": "attrValue",
                 "newPage": false,
                 "searchKey": "gosrc.attrValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -452,9 +439,7 @@
                 "identifier": "IsStdlibPkg",
                 "newPage": false,
                 "searchKey": "gosrc.IsStdlibPkg",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -474,7 +459,9 @@
                 "identifier": "TestResolveImportPath",
                 "newPage": false,
                 "searchKey": "gosrc.TestResolveImportPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

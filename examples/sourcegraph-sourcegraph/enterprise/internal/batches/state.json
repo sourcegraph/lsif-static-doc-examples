@@ -4,7 +4,9 @@
     "identifier": "state",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/state",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "timestampCount",
                 "newPage": false,
                 "searchKey": "state.timestampCount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "RequiredEventTypesForHistory",
                 "newPage": false,
                 "searchKey": "state.RequiredEventTypesForHistory",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,9 +109,7 @@
                 "identifier": "ComputeLabelsRequiredEventTypes",
                 "newPage": false,
                 "searchKey": "state.ComputeLabelsRequiredEventTypes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,7 +132,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -146,9 +152,7 @@
                 "identifier": "ChangesetEvents",
                 "newPage": false,
                 "searchKey": "state.ChangesetEvents",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -166,9 +170,7 @@
                       "identifier": "ChangesetEvents.Len",
                       "newPage": false,
                       "searchKey": "state.ChangesetEvents.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -188,9 +190,7 @@
                       "identifier": "ChangesetEvents.Swap",
                       "newPage": false,
                       "searchKey": "state.ChangesetEvents.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -210,9 +210,7 @@
                       "identifier": "ChangesetEvents.Less",
                       "newPage": false,
                       "searchKey": "state.ChangesetEvents.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -235,7 +233,9 @@
                 "identifier": "changesetHistory",
                 "newPage": false,
                 "searchKey": "state.changesetHistory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -253,7 +253,9 @@
                       "identifier": "computeHistory",
                       "newPage": false,
                       "searchKey": "state.computeHistory",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -273,7 +275,9 @@
                       "identifier": "changesetHistory.StatesAtTime",
                       "newPage": false,
                       "searchKey": "state.changesetHistory.StatesAtTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -296,7 +300,9 @@
                 "identifier": "changesetStatesAtTime",
                 "newPage": false,
                 "searchKey": "state.changesetStatesAtTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -316,9 +322,7 @@
                 "identifier": "ChangesetCounts",
                 "newPage": false,
                 "searchKey": "state.ChangesetCounts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -336,9 +340,7 @@
                       "identifier": "ChangesetCounts.String",
                       "newPage": false,
                       "searchKey": "state.ChangesetCounts.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -364,7 +366,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -382,7 +386,9 @@
                 "identifier": "reduceReviewStates",
                 "newPage": false,
                 "searchKey": "state.reduceReviewStates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -402,7 +408,9 @@
                 "identifier": "initialExternalState",
                 "newPage": false,
                 "searchKey": "state.initialExternalState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -422,9 +430,7 @@
                 "identifier": "CalcCounts",
                 "newPage": false,
                 "searchKey": "state.CalcCounts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -444,9 +450,7 @@
                 "identifier": "GenerateTimestamps",
                 "newPage": false,
                 "searchKey": "state.GenerateTimestamps",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -466,9 +470,7 @@
                 "identifier": "SetDerivedState",
                 "newPage": false,
                 "searchKey": "state.SetDerivedState",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -488,7 +490,9 @@
                 "identifier": "computeCheckState",
                 "newPage": false,
                 "searchKey": "state.computeCheckState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -508,7 +512,9 @@
                 "identifier": "computeExternalState",
                 "newPage": false,
                 "searchKey": "state.computeExternalState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -528,7 +534,9 @@
                 "identifier": "computeReviewState",
                 "newPage": false,
                 "searchKey": "state.computeReviewState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -548,7 +556,9 @@
                 "identifier": "computeBitbucketBuildStatus",
                 "newPage": false,
                 "searchKey": "state.computeBitbucketBuildStatus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -568,7 +578,9 @@
                 "identifier": "parseBitbucketBuildState",
                 "newPage": false,
                 "searchKey": "state.parseBitbucketBuildState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -588,7 +600,9 @@
                 "identifier": "computeGitHubCheckState",
                 "newPage": false,
                 "searchKey": "state.computeGitHubCheckState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -608,7 +622,9 @@
                 "identifier": "combineCheckStates",
                 "newPage": false,
                 "searchKey": "state.combineCheckStates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -628,7 +644,9 @@
                 "identifier": "parseGithubCheckState",
                 "newPage": false,
                 "searchKey": "state.parseGithubCheckState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -648,7 +666,9 @@
                 "identifier": "parseGithubCheckSuiteState",
                 "newPage": false,
                 "searchKey": "state.parseGithubCheckSuiteState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -668,7 +688,9 @@
                 "identifier": "computeGitLabCheckState",
                 "newPage": false,
                 "searchKey": "state.computeGitLabCheckState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -688,7 +710,9 @@
                 "identifier": "parseGitLabPipelineStatus",
                 "newPage": false,
                 "searchKey": "state.parseGitLabPipelineStatus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -708,7 +732,9 @@
                 "identifier": "computeSingleChangesetExternalState",
                 "newPage": false,
                 "searchKey": "state.computeSingleChangesetExternalState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -728,7 +754,9 @@
                 "identifier": "computeSingleChangesetReviewState",
                 "newPage": false,
                 "searchKey": "state.computeSingleChangesetReviewState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -748,7 +776,9 @@
                 "identifier": "selectReviewState",
                 "newPage": false,
                 "searchKey": "state.selectReviewState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -768,7 +798,9 @@
                 "identifier": "computeDiffStat",
                 "newPage": false,
                 "searchKey": "state.computeDiffStat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -788,7 +820,9 @@
                 "identifier": "computeSyncState",
                 "newPage": false,
                 "searchKey": "state.computeSyncState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -808,7 +842,9 @@
                 "identifier": "computeRev",
                 "newPage": false,
                 "searchKey": "state.computeRev",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -828,7 +864,9 @@
                 "identifier": "changesetRepoName",
                 "newPage": false,
                 "searchKey": "state.changesetRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -848,7 +886,9 @@
                 "identifier": "unixMilliToTime",
                 "newPage": false,
                 "searchKey": "state.unixMilliToTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -868,9 +908,7 @@
                 "identifier": "ComputeLabels",
                 "newPage": false,
                 "searchKey": "state.ComputeLabels",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -890,7 +928,9 @@
                 "identifier": "TestCalcCounts",
                 "newPage": false,
                 "searchKey": "state.TestCalcCounts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -910,7 +950,9 @@
                 "identifier": "ghChangeset",
                 "newPage": false,
                 "searchKey": "state.ghChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -930,7 +972,9 @@
                 "identifier": "bbsChangeset",
                 "newPage": false,
                 "searchKey": "state.bbsChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -950,7 +994,9 @@
                 "identifier": "glChangeset",
                 "newPage": false,
                 "searchKey": "state.glChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -970,7 +1016,9 @@
                 "identifier": "setExternalDeletedAt",
                 "newPage": false,
                 "searchKey": "state.setExternalDeletedAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -990,7 +1038,9 @@
                 "identifier": "event",
                 "newPage": false,
                 "searchKey": "state.event",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1010,7 +1060,9 @@
                 "identifier": "ghReview",
                 "newPage": false,
                 "searchKey": "state.ghReview",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1030,7 +1082,9 @@
                 "identifier": "ghReviewDismissed",
                 "newPage": false,
                 "searchKey": "state.ghReviewDismissed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1050,7 +1104,9 @@
                 "identifier": "ghReadyForReview",
                 "newPage": false,
                 "searchKey": "state.ghReadyForReview",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1070,7 +1126,9 @@
                 "identifier": "ghConvertToDraft",
                 "newPage": false,
                 "searchKey": "state.ghConvertToDraft",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1090,7 +1148,9 @@
                 "identifier": "glUnmarkWorkInProgress",
                 "newPage": false,
                 "searchKey": "state.glUnmarkWorkInProgress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1110,7 +1170,9 @@
                 "identifier": "glMarkWorkInProgress",
                 "newPage": false,
                 "searchKey": "state.glMarkWorkInProgress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1130,7 +1192,9 @@
                 "identifier": "glClosed",
                 "newPage": false,
                 "searchKey": "state.glClosed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1150,7 +1214,9 @@
                 "identifier": "glReopen",
                 "newPage": false,
                 "searchKey": "state.glReopen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1170,7 +1236,9 @@
                 "identifier": "bbsActivity",
                 "newPage": false,
                 "searchKey": "state.bbsActivity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1190,7 +1258,9 @@
                 "identifier": "bbsParticipantEvent",
                 "newPage": false,
                 "searchKey": "state.bbsParticipantEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1210,7 +1280,9 @@
                 "identifier": "setDraft",
                 "newPage": false,
                 "searchKey": "state.setDraft",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1230,7 +1302,9 @@
                 "identifier": "timeToUnixMilli",
                 "newPage": false,
                 "searchKey": "state.timeToUnixMilli",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1250,7 +1324,9 @@
                 "identifier": "TestComputeGithubCheckState",
                 "newPage": false,
                 "searchKey": "state.TestComputeGithubCheckState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1270,7 +1346,9 @@
                 "identifier": "TestComputeBitbucketBuildStatus",
                 "newPage": false,
                 "searchKey": "state.TestComputeBitbucketBuildStatus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1290,7 +1368,9 @@
                 "identifier": "TestComputeGitLabCheckState",
                 "newPage": false,
                 "searchKey": "state.TestComputeGitLabCheckState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1310,7 +1390,9 @@
                 "identifier": "TestComputeReviewState",
                 "newPage": false,
                 "searchKey": "state.TestComputeReviewState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1330,7 +1412,9 @@
                 "identifier": "TestComputeExternalState",
                 "newPage": false,
                 "searchKey": "state.TestComputeExternalState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1350,7 +1434,9 @@
                 "identifier": "TestComputeLabels",
                 "newPage": false,
                 "searchKey": "state.TestComputeLabels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1370,7 +1456,9 @@
                 "identifier": "bitbucketChangeset",
                 "newPage": false,
                 "searchKey": "state.bitbucketChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1390,7 +1478,9 @@
                 "identifier": "githubChangeset",
                 "newPage": false,
                 "searchKey": "state.githubChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1410,7 +1500,9 @@
                 "identifier": "gitLabChangeset",
                 "newPage": false,
                 "searchKey": "state.gitLabChangeset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1430,7 +1522,9 @@
                 "identifier": "setDeletedAt",
                 "newPage": false,
                 "searchKey": "state.setDeletedAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

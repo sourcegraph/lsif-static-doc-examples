@@ -119,14 +119,11 @@ The testing/quick package is frozen and is not accepting new features.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="complexSize" href="#complexSize">const complexSize</a>
 
 ```
 searchKey: quick.complexSize
+tags: [private]
 ```
 
 ```Go
@@ -137,14 +134,11 @@ complexSize is the maximum length of arbitrary values that contain other values.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="defaultMaxCount" href="#defaultMaxCount">var defaultMaxCount</a>
 
 ```
 searchKey: quick.defaultMaxCount
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +149,7 @@ var defaultMaxCount *int = ...
 
 ```
 searchKey: quick.defaultConfig
+tags: [private]
 ```
 
 ```Go
@@ -163,15 +158,10 @@ var defaultConfig Config
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Generator" href="#Generator">type Generator interface</a>
 
 ```
 searchKey: quick.Generator
-tags: [exported]
 ```
 
 ```Go
@@ -188,7 +178,6 @@ A Generator can generate random values of its own type.
 
 ```
 searchKey: quick.Config
-tags: [exported]
 ```
 
 ```Go
@@ -218,6 +207,7 @@ A Config structure contains options for running a test.
 
 ```
 searchKey: quick.Config.getRand
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +220,7 @@ getRand returns the *rand.Rand to use for a given Config.
 
 ```
 searchKey: quick.Config.getMaxCount
+tags: [private]
 ```
 
 ```Go
@@ -242,7 +233,6 @@ getMaxCount returns the maximum number of iterations to run for a given Config.
 
 ```
 searchKey: quick.SetupError
-tags: [exported]
 ```
 
 ```Go
@@ -255,7 +245,6 @@ A SetupError is the result of an error in the way that check is being used, inde
 
 ```
 searchKey: quick.SetupError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -266,7 +255,6 @@ func (s SetupError) Error() string
 
 ```
 searchKey: quick.CheckError
-tags: [exported]
 ```
 
 ```Go
@@ -282,7 +270,6 @@ A CheckError is the result of Check finding an error.
 
 ```
 searchKey: quick.CheckError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +280,6 @@ func (s *CheckError) Error() string
 
 ```
 searchKey: quick.CheckEqualError
-tags: [exported]
 ```
 
 ```Go
@@ -310,7 +296,6 @@ A CheckEqualError is the result CheckEqual finding an error.
 
 ```
 searchKey: quick.CheckEqualError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -321,6 +306,7 @@ func (s *CheckEqualError) Error() string
 
 ```
 searchKey: quick.TestArrayAlias
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +317,7 @@ type TestArrayAlias [4]byte
 
 ```
 searchKey: quick.fArrayAlias
+tags: [private]
 ```
 
 ```Go
@@ -341,6 +328,7 @@ func fArrayAlias(a TestArrayAlias) TestArrayAlias
 
 ```
 searchKey: quick.TestBoolAlias
+tags: [private]
 ```
 
 ```Go
@@ -351,6 +339,7 @@ type TestBoolAlias bool
 
 ```
 searchKey: quick.fBoolAlias
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +350,7 @@ func fBoolAlias(a TestBoolAlias) TestBoolAlias
 
 ```
 searchKey: quick.TestFloat32Alias
+tags: [private]
 ```
 
 ```Go
@@ -371,6 +361,7 @@ type TestFloat32Alias float32
 
 ```
 searchKey: quick.fFloat32Alias
+tags: [private]
 ```
 
 ```Go
@@ -381,6 +372,7 @@ func fFloat32Alias(a TestFloat32Alias) TestFloat32Alias
 
 ```
 searchKey: quick.TestFloat64Alias
+tags: [private]
 ```
 
 ```Go
@@ -391,6 +383,7 @@ type TestFloat64Alias float64
 
 ```
 searchKey: quick.fFloat64Alias
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +394,7 @@ func fFloat64Alias(a TestFloat64Alias) TestFloat64Alias
 
 ```
 searchKey: quick.TestComplex64Alias
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +405,7 @@ type TestComplex64Alias complex64
 
 ```
 searchKey: quick.fComplex64Alias
+tags: [private]
 ```
 
 ```Go
@@ -421,6 +416,7 @@ func fComplex64Alias(a TestComplex64Alias) TestComplex64Alias
 
 ```
 searchKey: quick.TestComplex128Alias
+tags: [private]
 ```
 
 ```Go
@@ -431,6 +427,7 @@ type TestComplex128Alias complex128
 
 ```
 searchKey: quick.fComplex128Alias
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +438,7 @@ func fComplex128Alias(a TestComplex128Alias) TestComplex128Alias
 
 ```
 searchKey: quick.TestInt16Alias
+tags: [private]
 ```
 
 ```Go
@@ -451,6 +449,7 @@ type TestInt16Alias int16
 
 ```
 searchKey: quick.fInt16Alias
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +460,7 @@ func fInt16Alias(a TestInt16Alias) TestInt16Alias
 
 ```
 searchKey: quick.TestInt32Alias
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +471,7 @@ type TestInt32Alias int32
 
 ```
 searchKey: quick.fInt32Alias
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +482,7 @@ func fInt32Alias(a TestInt32Alias) TestInt32Alias
 
 ```
 searchKey: quick.TestInt64Alias
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +493,7 @@ type TestInt64Alias int64
 
 ```
 searchKey: quick.fInt64Alias
+tags: [private]
 ```
 
 ```Go
@@ -501,6 +504,7 @@ func fInt64Alias(a TestInt64Alias) TestInt64Alias
 
 ```
 searchKey: quick.TestInt8Alias
+tags: [private]
 ```
 
 ```Go
@@ -511,6 +515,7 @@ type TestInt8Alias int8
 
 ```
 searchKey: quick.fInt8Alias
+tags: [private]
 ```
 
 ```Go
@@ -521,6 +526,7 @@ func fInt8Alias(a TestInt8Alias) TestInt8Alias
 
 ```
 searchKey: quick.TestIntAlias
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +537,7 @@ type TestIntAlias int
 
 ```
 searchKey: quick.fIntAlias
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +548,7 @@ func fIntAlias(a TestIntAlias) TestIntAlias
 
 ```
 searchKey: quick.TestMapAlias
+tags: [private]
 ```
 
 ```Go
@@ -551,6 +559,7 @@ type TestMapAlias map[int]int
 
 ```
 searchKey: quick.fMapAlias
+tags: [private]
 ```
 
 ```Go
@@ -561,6 +570,7 @@ func fMapAlias(a TestMapAlias) TestMapAlias
 
 ```
 searchKey: quick.TestPtrAlias
+tags: [private]
 ```
 
 ```Go
@@ -571,6 +581,7 @@ type TestPtrAlias *int
 
 ```
 searchKey: quick.fPtrAlias
+tags: [private]
 ```
 
 ```Go
@@ -581,6 +592,7 @@ func fPtrAlias(a TestPtrAlias) TestPtrAlias
 
 ```
 searchKey: quick.TestSliceAlias
+tags: [private]
 ```
 
 ```Go
@@ -591,6 +603,7 @@ type TestSliceAlias []byte
 
 ```
 searchKey: quick.fSliceAlias
+tags: [private]
 ```
 
 ```Go
@@ -601,6 +614,7 @@ func fSliceAlias(a TestSliceAlias) TestSliceAlias
 
 ```
 searchKey: quick.TestStringAlias
+tags: [private]
 ```
 
 ```Go
@@ -611,6 +625,7 @@ type TestStringAlias string
 
 ```
 searchKey: quick.fStringAlias
+tags: [private]
 ```
 
 ```Go
@@ -621,6 +636,7 @@ func fStringAlias(a TestStringAlias) TestStringAlias
 
 ```
 searchKey: quick.TestStruct
+tags: [private]
 ```
 
 ```Go
@@ -634,6 +650,7 @@ type TestStruct struct {
 
 ```
 searchKey: quick.fStruct
+tags: [private]
 ```
 
 ```Go
@@ -644,6 +661,7 @@ func fStruct(a TestStruct) TestStruct
 
 ```
 searchKey: quick.TestStructAlias
+tags: [private]
 ```
 
 ```Go
@@ -654,6 +672,7 @@ type TestStructAlias TestStruct
 
 ```
 searchKey: quick.fStructAlias
+tags: [private]
 ```
 
 ```Go
@@ -664,6 +683,7 @@ func fStructAlias(a TestStructAlias) TestStructAlias
 
 ```
 searchKey: quick.TestUint16Alias
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +694,7 @@ type TestUint16Alias uint16
 
 ```
 searchKey: quick.fUint16Alias
+tags: [private]
 ```
 
 ```Go
@@ -684,6 +705,7 @@ func fUint16Alias(a TestUint16Alias) TestUint16Alias
 
 ```
 searchKey: quick.TestUint32Alias
+tags: [private]
 ```
 
 ```Go
@@ -694,6 +716,7 @@ type TestUint32Alias uint32
 
 ```
 searchKey: quick.fUint32Alias
+tags: [private]
 ```
 
 ```Go
@@ -704,6 +727,7 @@ func fUint32Alias(a TestUint32Alias) TestUint32Alias
 
 ```
 searchKey: quick.TestUint64Alias
+tags: [private]
 ```
 
 ```Go
@@ -714,6 +738,7 @@ type TestUint64Alias uint64
 
 ```
 searchKey: quick.fUint64Alias
+tags: [private]
 ```
 
 ```Go
@@ -724,6 +749,7 @@ func fUint64Alias(a TestUint64Alias) TestUint64Alias
 
 ```
 searchKey: quick.TestUint8Alias
+tags: [private]
 ```
 
 ```Go
@@ -734,6 +760,7 @@ type TestUint8Alias uint8
 
 ```
 searchKey: quick.fUint8Alias
+tags: [private]
 ```
 
 ```Go
@@ -744,6 +771,7 @@ func fUint8Alias(a TestUint8Alias) TestUint8Alias
 
 ```
 searchKey: quick.TestUintAlias
+tags: [private]
 ```
 
 ```Go
@@ -754,6 +782,7 @@ type TestUintAlias uint
 
 ```
 searchKey: quick.fUintAlias
+tags: [private]
 ```
 
 ```Go
@@ -764,6 +793,7 @@ func fUintAlias(a TestUintAlias) TestUintAlias
 
 ```
 searchKey: quick.TestUintptrAlias
+tags: [private]
 ```
 
 ```Go
@@ -774,6 +804,7 @@ type TestUintptrAlias uintptr
 
 ```
 searchKey: quick.fUintptrAlias
+tags: [private]
 ```
 
 ```Go
@@ -784,6 +815,7 @@ func fUintptrAlias(a TestUintptrAlias) TestUintptrAlias
 
 ```
 searchKey: quick.myStruct
+tags: [private]
 ```
 
 ```Go
@@ -798,6 +830,7 @@ This tests that ArbitraryValue is working by checking that all the arbitrary val
 
 ```
 searchKey: quick.myStruct.Generate
+tags: [private]
 ```
 
 ```Go
@@ -808,6 +841,7 @@ func (m myStruct) Generate(r *rand.Rand, _ int) reflect.Value
 
 ```
 searchKey: quick.A
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +852,7 @@ type A struct{ B *B }
 
 ```
 searchKey: quick.B
+tags: [private]
 ```
 
 ```Go
@@ -826,14 +861,11 @@ type B struct{ A *A }
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="randFloat32" href="#randFloat32">func randFloat32(rand *rand.Rand) float32</a>
 
 ```
 searchKey: quick.randFloat32
+tags: [private]
 ```
 
 ```Go
@@ -846,6 +878,7 @@ randFloat32 generates a random float taking the full range of a float32.
 
 ```
 searchKey: quick.randFloat64
+tags: [private]
 ```
 
 ```Go
@@ -858,6 +891,7 @@ randFloat64 generates a random float taking the full range of a float64.
 
 ```
 searchKey: quick.randInt64
+tags: [private]
 ```
 
 ```Go
@@ -870,7 +904,6 @@ randInt64 returns a random int64.
 
 ```
 searchKey: quick.Value
-tags: [exported]
 ```
 
 ```Go
@@ -883,6 +916,7 @@ Value returns an arbitrary value of the given type. If the type implements the G
 
 ```
 searchKey: quick.sizedValue
+tags: [private]
 ```
 
 ```Go
@@ -895,7 +929,6 @@ sizedValue returns an arbitrary value of the given type. The size hint is used f
 
 ```
 searchKey: quick.Check
-tags: [exported]
 ```
 
 ```Go
@@ -920,7 +953,6 @@ func TestOddMultipleOfThree(t *testing.T) {
 
 ```
 searchKey: quick.CheckEqual
-tags: [exported]
 ```
 
 ```Go
@@ -933,6 +965,7 @@ CheckEqual looks for an input on which f and g return different results. It call
 
 ```
 searchKey: quick.arbitraryValues
+tags: [private]
 ```
 
 ```Go
@@ -945,6 +978,7 @@ arbitraryValues writes Values to args such that args contains Values suitable fo
 
 ```
 searchKey: quick.functionAndType
+tags: [private]
 ```
 
 ```Go
@@ -955,6 +989,7 @@ func functionAndType(f interface{}) (v reflect.Value, t reflect.Type, ok bool)
 
 ```
 searchKey: quick.toInterfaces
+tags: [private]
 ```
 
 ```Go
@@ -965,6 +1000,7 @@ func toInterfaces(values []reflect.Value) []interface{}
 
 ```
 searchKey: quick.toString
+tags: [private]
 ```
 
 ```Go
@@ -975,6 +1011,7 @@ func toString(interfaces []interface{}) string
 
 ```
 searchKey: quick.fArray
+tags: [private]
 ```
 
 ```Go
@@ -985,6 +1022,7 @@ func fArray(a [4]byte) [4]byte
 
 ```
 searchKey: quick.fBool
+tags: [private]
 ```
 
 ```Go
@@ -995,6 +1033,7 @@ func fBool(a bool) bool
 
 ```
 searchKey: quick.fFloat32
+tags: [private]
 ```
 
 ```Go
@@ -1005,6 +1044,7 @@ func fFloat32(a float32) float32
 
 ```
 searchKey: quick.fFloat64
+tags: [private]
 ```
 
 ```Go
@@ -1015,6 +1055,7 @@ func fFloat64(a float64) float64
 
 ```
 searchKey: quick.fComplex64
+tags: [private]
 ```
 
 ```Go
@@ -1025,6 +1066,7 @@ func fComplex64(a complex64) complex64
 
 ```
 searchKey: quick.fComplex128
+tags: [private]
 ```
 
 ```Go
@@ -1035,6 +1077,7 @@ func fComplex128(a complex128) complex128
 
 ```
 searchKey: quick.fInt16
+tags: [private]
 ```
 
 ```Go
@@ -1045,6 +1088,7 @@ func fInt16(a int16) int16
 
 ```
 searchKey: quick.fInt32
+tags: [private]
 ```
 
 ```Go
@@ -1055,6 +1099,7 @@ func fInt32(a int32) int32
 
 ```
 searchKey: quick.fInt64
+tags: [private]
 ```
 
 ```Go
@@ -1065,6 +1110,7 @@ func fInt64(a int64) int64
 
 ```
 searchKey: quick.fInt8
+tags: [private]
 ```
 
 ```Go
@@ -1075,6 +1121,7 @@ func fInt8(a int8) int8
 
 ```
 searchKey: quick.fInt
+tags: [private]
 ```
 
 ```Go
@@ -1085,6 +1132,7 @@ func fInt(a int) int
 
 ```
 searchKey: quick.fMap
+tags: [private]
 ```
 
 ```Go
@@ -1095,6 +1143,7 @@ func fMap(a map[int]int) map[int]int
 
 ```
 searchKey: quick.fPtr
+tags: [private]
 ```
 
 ```Go
@@ -1105,6 +1154,7 @@ func fPtr(a *int) *int
 
 ```
 searchKey: quick.fSlice
+tags: [private]
 ```
 
 ```Go
@@ -1115,6 +1165,7 @@ func fSlice(a []byte) []byte
 
 ```
 searchKey: quick.fString
+tags: [private]
 ```
 
 ```Go
@@ -1125,6 +1176,7 @@ func fString(a string) string
 
 ```
 searchKey: quick.fUint16
+tags: [private]
 ```
 
 ```Go
@@ -1135,6 +1187,7 @@ func fUint16(a uint16) uint16
 
 ```
 searchKey: quick.fUint32
+tags: [private]
 ```
 
 ```Go
@@ -1145,6 +1198,7 @@ func fUint32(a uint32) uint32
 
 ```
 searchKey: quick.fUint64
+tags: [private]
 ```
 
 ```Go
@@ -1155,6 +1209,7 @@ func fUint64(a uint64) uint64
 
 ```
 searchKey: quick.fUint8
+tags: [private]
 ```
 
 ```Go
@@ -1165,6 +1220,7 @@ func fUint8(a uint8) uint8
 
 ```
 searchKey: quick.fUint
+tags: [private]
 ```
 
 ```Go
@@ -1175,6 +1231,7 @@ func fUint(a uint) uint
 
 ```
 searchKey: quick.fUintptr
+tags: [private]
 ```
 
 ```Go
@@ -1185,6 +1242,7 @@ func fUintptr(a uintptr) uintptr
 
 ```
 searchKey: quick.reportError
+tags: [private]
 ```
 
 ```Go
@@ -1195,6 +1253,7 @@ func reportError(property string, err error, t *testing.T)
 
 ```
 searchKey: quick.TestCheckEqual
+tags: [private]
 ```
 
 ```Go
@@ -1205,6 +1264,7 @@ func TestCheckEqual(t *testing.T)
 
 ```
 searchKey: quick.myStructProperty
+tags: [private]
 ```
 
 ```Go
@@ -1215,6 +1275,7 @@ func myStructProperty(in myStruct) bool
 
 ```
 searchKey: quick.TestCheckProperty
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1286,7 @@ func TestCheckProperty(t *testing.T)
 
 ```
 searchKey: quick.TestFailure
+tags: [private]
 ```
 
 ```Go
@@ -1235,6 +1297,7 @@ func TestFailure(t *testing.T)
 
 ```
 searchKey: quick.TestRecursive
+tags: [private]
 ```
 
 ```Go
@@ -1247,6 +1310,7 @@ Recursive data structures didn't terminate. Issues 8818 and 11148.
 
 ```
 searchKey: quick.TestEmptyStruct
+tags: [private]
 ```
 
 ```Go
@@ -1257,6 +1321,7 @@ func TestEmptyStruct(t *testing.T)
 
 ```
 searchKey: quick.TestMutuallyRecursive
+tags: [private]
 ```
 
 ```Go
@@ -1267,6 +1332,7 @@ func TestMutuallyRecursive(t *testing.T)
 
 ```
 searchKey: quick.TestNonZeroSliceAndMap
+tags: [private]
 ```
 
 ```Go
@@ -1279,6 +1345,7 @@ Some serialization formats (e.g. encoding/pem) cannot distinguish between a nil 
 
 ```
 searchKey: quick.TestInt64
+tags: [private]
 ```
 
 ```Go

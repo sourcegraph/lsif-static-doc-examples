@@ -26,15 +26,10 @@ Package queryrunnerapi implements a client for the query-runner service.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="PathSavedQueryWasCreatedOrUpdated" href="#PathSavedQueryWasCreatedOrUpdated">const PathSavedQueryWasCreatedOrUpdated</a>
 
 ```
 searchKey: queryrunnerapi.PathSavedQueryWasCreatedOrUpdated
-tags: [exported]
 ```
 
 ```Go
@@ -45,7 +40,6 @@ const PathSavedQueryWasCreatedOrUpdated = "/saved-query-was-created-or-updated"
 
 ```
 searchKey: queryrunnerapi.PathSavedQueryWasDeleted
-tags: [exported]
 ```
 
 ```Go
@@ -56,7 +50,6 @@ const PathSavedQueryWasDeleted = "/saved-query-was-deleted"
 
 ```
 searchKey: queryrunnerapi.PathTestNotification
-tags: [exported]
 ```
 
 ```Go
@@ -65,14 +58,11 @@ const PathTestNotification = "/test-notification"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="queryRunnerURL" href="#queryRunnerURL">var queryRunnerURL</a>
 
 ```
 searchKey: queryrunnerapi.queryRunnerURL
+tags: [private]
 ```
 
 ```Go
@@ -83,7 +73,6 @@ var queryRunnerURL = ...
 
 ```
 searchKey: queryrunnerapi.Client
-tags: [exported]
 ```
 
 ```Go
@@ -96,15 +85,10 @@ var Client = &client{
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="SubjectAndConfig" href="#SubjectAndConfig">type SubjectAndConfig struct</a>
 
 ```
 searchKey: queryrunnerapi.SubjectAndConfig
-tags: [exported]
 ```
 
 ```Go
@@ -118,7 +102,6 @@ type SubjectAndConfig struct {
 
 ```
 searchKey: queryrunnerapi.ErrorResponse
-tags: [exported]
 ```
 
 ```Go
@@ -131,6 +114,7 @@ type ErrorResponse struct {
 
 ```
 searchKey: queryrunnerapi.client
+tags: [private]
 ```
 
 ```Go
@@ -143,6 +127,7 @@ type client struct {
 
 ```
 searchKey: queryrunnerapi.client.SavedQueryWasCreatedOrUpdated
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +140,7 @@ SavedQueryWasCreated should be called whenever a saved query was created or upda
 
 ```
 searchKey: queryrunnerapi.client.SavedQueryWasDeleted
+tags: [private]
 ```
 
 ```Go
@@ -167,6 +153,7 @@ SavedQueryWasDeleted should be called whenever a saved query was deleted after t
 
 ```
 searchKey: queryrunnerapi.client.TestNotification
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +166,7 @@ TestNotification is called to send a test notification for a saved search. Users
 
 ```
 searchKey: queryrunnerapi.client.post
+tags: [private]
 ```
 
 ```Go
@@ -189,7 +177,6 @@ func (c *client) post(path string, data interface{}) error
 
 ```
 searchKey: queryrunnerapi.SavedQueryWasCreatedOrUpdatedArgs
-tags: [exported]
 ```
 
 ```Go
@@ -203,7 +190,6 @@ type SavedQueryWasCreatedOrUpdatedArgs struct {
 
 ```
 searchKey: queryrunnerapi.SavedQueryWasDeletedArgs
-tags: [exported]
 ```
 
 ```Go
@@ -217,7 +203,6 @@ type SavedQueryWasDeletedArgs struct {
 
 ```
 searchKey: queryrunnerapi.TestNotificationArgs
-tags: [exported]
 ```
 
 ```Go

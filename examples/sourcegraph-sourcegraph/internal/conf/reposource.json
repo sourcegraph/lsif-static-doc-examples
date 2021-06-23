@@ -4,7 +4,9 @@
     "identifier": "reposource",
     "newPage": true,
     "searchKey": "internal/conf/reposource",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "NameTransformationRegex",
                 "newPage": false,
                 "searchKey": "reposource.NameTransformationRegex",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "DefaultRepositoryPathPattern",
                 "newPage": false,
                 "searchKey": "reposource.DefaultRepositoryPathPattern",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,7 +107,9 @@
                 "identifier": "nonSCPURLRegex",
                 "newPage": false,
                 "searchKey": "reposource.nonSCPURLRegex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +129,9 @@
                 "identifier": "cloneURLResolvers",
                 "newPage": false,
                 "searchKey": "reposource.cloneURLResolvers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -145,7 +151,9 @@
                 "identifier": "otherRepoNameReplacer",
                 "newPage": false,
                 "searchKey": "reposource.otherRepoNameReplacer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +176,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -186,9 +196,7 @@
                 "identifier": "AWS",
                 "newPage": false,
                 "searchKey": "reposource.AWS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -206,9 +214,7 @@
                       "identifier": "AWS.CloneURLToRepoName",
                       "newPage": false,
                       "searchKey": "reposource.AWS.CloneURLToRepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -231,9 +237,7 @@
                 "identifier": "BitbucketCloud",
                 "newPage": false,
                 "searchKey": "reposource.BitbucketCloud",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -251,9 +255,7 @@
                       "identifier": "BitbucketCloud.CloneURLToRepoName",
                       "newPage": false,
                       "searchKey": "reposource.BitbucketCloud.CloneURLToRepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -276,9 +278,7 @@
                 "identifier": "BitbucketServer",
                 "newPage": false,
                 "searchKey": "reposource.BitbucketServer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -296,9 +296,7 @@
                       "identifier": "BitbucketServer.CloneURLToRepoName",
                       "newPage": false,
                       "searchKey": "reposource.BitbucketServer.CloneURLToRepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -321,9 +319,7 @@
                 "identifier": "RepoSource",
                 "newPage": false,
                 "searchKey": "reposource.RepoSource",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -343,9 +339,7 @@
                 "identifier": "NameTransformationKind",
                 "newPage": false,
                 "searchKey": "reposource.NameTransformationKind",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -365,9 +359,7 @@
                 "identifier": "NameTransformation",
                 "newPage": false,
                 "searchKey": "reposource.NameTransformation",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -385,9 +377,7 @@
                       "identifier": "NewNameTransformation",
                       "newPage": false,
                       "searchKey": "reposource.NewNameTransformation",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -407,9 +397,7 @@
                       "identifier": "NameTransformation.Kind",
                       "newPage": false,
                       "searchKey": "reposource.NameTransformation.Kind",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -429,9 +417,7 @@
                       "identifier": "NameTransformation.Transform",
                       "newPage": false,
                       "searchKey": "reposource.NameTransformation.Transform",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -454,9 +440,7 @@
                 "identifier": "NameTransformationOptions",
                 "newPage": false,
                 "searchKey": "reposource.NameTransformationOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -476,9 +460,7 @@
                 "identifier": "NameTransformations",
                 "newPage": false,
                 "searchKey": "reposource.NameTransformations",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -496,9 +478,7 @@
                       "identifier": "CompileGitLabNameTransformations",
                       "newPage": false,
                       "searchKey": "reposource.CompileGitLabNameTransformations",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -518,9 +498,7 @@
                       "identifier": "NameTransformations.Transform",
                       "newPage": false,
                       "searchKey": "reposource.NameTransformations.Transform",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -543,7 +521,9 @@
                 "identifier": "cloneURLResolver",
                 "newPage": false,
                 "searchKey": "reposource.cloneURLResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -563,9 +543,7 @@
                 "identifier": "GitHub",
                 "newPage": false,
                 "searchKey": "reposource.GitHub",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -583,9 +561,7 @@
                       "identifier": "GitHub.CloneURLToRepoName",
                       "newPage": false,
                       "searchKey": "reposource.GitHub.CloneURLToRepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -608,9 +584,7 @@
                 "identifier": "GitLab",
                 "newPage": false,
                 "searchKey": "reposource.GitLab",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -628,9 +602,7 @@
                       "identifier": "GitLab.CloneURLToRepoName",
                       "newPage": false,
                       "searchKey": "reposource.GitLab.CloneURLToRepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -653,9 +625,7 @@
                 "identifier": "Gitolite",
                 "newPage": false,
                 "searchKey": "reposource.Gitolite",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -673,9 +643,7 @@
                       "identifier": "Gitolite.CloneURLToRepoName",
                       "newPage": false,
                       "searchKey": "reposource.Gitolite.CloneURLToRepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -698,9 +666,7 @@
                 "identifier": "Other",
                 "newPage": false,
                 "searchKey": "reposource.Other",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -718,9 +684,7 @@
                       "identifier": "Other.CloneURLToRepoURI",
                       "newPage": false,
                       "searchKey": "reposource.Other.CloneURLToRepoURI",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -740,9 +704,7 @@
                       "identifier": "Other.CloneURLToRepoName",
                       "newPage": false,
                       "searchKey": "reposource.Other.CloneURLToRepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -765,7 +727,9 @@
                 "identifier": "urlToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.urlToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -785,7 +749,9 @@
                 "identifier": "urlToRepoNameErr",
                 "newPage": false,
                 "searchKey": "reposource.urlToRepoNameErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -808,7 +774,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -826,9 +794,7 @@
                 "identifier": "AWSRepoName",
                 "newPage": false,
                 "searchKey": "reposource.AWSRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -848,9 +814,7 @@
                 "identifier": "BitbucketCloudRepoName",
                 "newPage": false,
                 "searchKey": "reposource.BitbucketCloudRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -870,9 +834,7 @@
                 "identifier": "BitbucketServerRepoName",
                 "newPage": false,
                 "searchKey": "reposource.BitbucketServerRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -892,7 +854,9 @@
                 "identifier": "parseCloneURL",
                 "newPage": false,
                 "searchKey": "reposource.parseCloneURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -912,7 +876,9 @@
                 "identifier": "hostname",
                 "newPage": false,
                 "searchKey": "reposource.hostname",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -932,7 +898,9 @@
                 "identifier": "parseURLs",
                 "newPage": false,
                 "searchKey": "reposource.parseURLs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -947,12 +915,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/conf/reposource#init",
+              "pathID": "/internal/conf/reposource#init.custom.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.custom.go",
                 "newPage": false,
                 "searchKey": "reposource.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -972,9 +942,7 @@
                 "identifier": "CustomCloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.CustomCloneURLToRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -994,7 +962,9 @@
                 "identifier": "mapString",
                 "newPage": false,
                 "searchKey": "reposource.mapString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1014,9 +984,7 @@
                 "identifier": "GitHubRepoName",
                 "newPage": false,
                 "searchKey": "reposource.GitHubRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1036,9 +1004,7 @@
                 "identifier": "GitLabRepoName",
                 "newPage": false,
                 "searchKey": "reposource.GitLabRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1058,9 +1024,7 @@
                 "identifier": "GitoliteRepoName",
                 "newPage": false,
                 "searchKey": "reposource.GitoliteRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1080,7 +1044,9 @@
                 "identifier": "cloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.cloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1100,9 +1066,7 @@
                 "identifier": "OtherRepoName",
                 "newPage": false,
                 "searchKey": "reposource.OtherRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1122,9 +1086,7 @@
                 "identifier": "PerforceRepoName",
                 "newPage": false,
                 "searchKey": "reposource.PerforceRepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1144,7 +1106,9 @@
                 "identifier": "TestAWS_cloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.TestAWS_cloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1164,7 +1128,9 @@
                 "identifier": "TestBitbucketCloud_cloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.TestBitbucketCloud_cloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1184,7 +1150,9 @@
                 "identifier": "TestBitbucketServer_cloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.TestBitbucketServer_cloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1204,7 +1172,9 @@
                 "identifier": "TestParseCloneURL",
                 "newPage": false,
                 "searchKey": "reposource.TestParseCloneURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1224,7 +1194,9 @@
                 "identifier": "TestNameTransformations",
                 "newPage": false,
                 "searchKey": "reposource.TestNameTransformations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1244,7 +1216,9 @@
                 "identifier": "TestCustomCloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.TestCustomCloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1264,7 +1238,9 @@
                 "identifier": "TestGitHub_cloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.TestGitHub_cloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1284,7 +1260,9 @@
                 "identifier": "TestGitLab_cloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.TestGitLab_cloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1304,7 +1282,9 @@
                 "identifier": "TestGitolite_cloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.TestGitolite_cloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1324,7 +1304,9 @@
                 "identifier": "TestOtherCloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "reposource.TestOtherCloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

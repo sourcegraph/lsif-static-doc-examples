@@ -4,7 +4,9 @@
     "identifier": "executor",
     "newPage": true,
     "searchKey": "enterprise/internal/executor",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Job",
                 "newPage": false,
                 "searchKey": "executor.Job",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "Job.RecordID",
                       "newPage": false,
                       "searchKey": "executor.Job.RecordID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -85,9 +85,7 @@
                 "identifier": "DockerStep",
                 "newPage": false,
                 "searchKey": "executor.DockerStep",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -107,9 +105,7 @@
                 "identifier": "CliStep",
                 "newPage": false,
                 "searchKey": "executor.CliStep",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -129,9 +125,7 @@
                 "identifier": "DequeueRequest",
                 "newPage": false,
                 "searchKey": "executor.DequeueRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -151,9 +145,7 @@
                 "identifier": "AddExecutionLogEntryRequest",
                 "newPage": false,
                 "searchKey": "executor.AddExecutionLogEntryRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -173,9 +165,7 @@
                 "identifier": "MarkCompleteRequest",
                 "newPage": false,
                 "searchKey": "executor.MarkCompleteRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -195,9 +185,7 @@
                 "identifier": "MarkErroredRequest",
                 "newPage": false,
                 "searchKey": "executor.MarkErroredRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -217,9 +205,7 @@
                 "identifier": "HeartbeatRequest",
                 "newPage": false,
                 "searchKey": "executor.HeartbeatRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

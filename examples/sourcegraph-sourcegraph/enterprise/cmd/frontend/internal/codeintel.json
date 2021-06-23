@@ -4,7 +4,9 @@
     "identifier": "codeintel",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/codeintel",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "config",
                 "newPage": false,
                 "searchKey": "codeintel.config",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "services",
                 "newPage": false,
                 "searchKey": "codeintel.services",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "once",
                 "newPage": false,
                 "searchKey": "codeintel.once",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +113,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -121,9 +133,7 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "codeintel.Config",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -146,7 +156,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -159,12 +171,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel#init",
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#init.config.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.config.go",
                 "newPage": false,
                 "searchKey": "codeintel.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,9 +198,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "codeintel.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -206,7 +218,9 @@
                 "identifier": "newResolver",
                 "newPage": false,
                 "searchKey": "codeintel.newResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -226,7 +240,9 @@
                 "identifier": "newUploadHandler",
                 "newPage": false,
                 "searchKey": "codeintel.newUploadHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -246,7 +262,9 @@
                 "identifier": "registerMigrations",
                 "newPage": false,
                 "searchKey": "codeintel.registerMigrations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -266,7 +284,9 @@
                 "identifier": "initServices",
                 "newPage": false,
                 "searchKey": "codeintel.initServices",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -286,7 +306,9 @@
                 "identifier": "mustInitializeCodeIntelDB",
                 "newPage": false,
                 "searchKey": "codeintel.mustInitializeCodeIntelDB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -306,9 +328,7 @@
                 "identifier": "NewCodeIntelUploadHandler",
                 "newPage": false,
                 "searchKey": "codeintel.NewCodeIntelUploadHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

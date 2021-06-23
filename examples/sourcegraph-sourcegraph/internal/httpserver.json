@@ -4,7 +4,9 @@
     "identifier": "httpserver",
     "newPage": true,
     "searchKey": "internal/httpserver",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "server",
                 "newPage": false,
                 "searchKey": "httpserver.server",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -58,7 +64,9 @@
                       "identifier": "server.Start",
                       "newPage": false,
                       "searchKey": "httpserver.server.Start",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -78,7 +86,9 @@
                       "identifier": "server.Stop",
                       "newPage": false,
                       "searchKey": "httpserver.server.Stop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,7 +114,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -122,9 +134,7 @@
                 "identifier": "NewHandler",
                 "newPage": false,
                 "searchKey": "httpserver.NewHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -144,9 +154,7 @@
                 "identifier": "NewListener",
                 "newPage": false,
                 "searchKey": "httpserver.NewListener",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -166,9 +174,7 @@
                 "identifier": "SanitizeAddr",
                 "newPage": false,
                 "searchKey": "httpserver.SanitizeAddr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -188,9 +194,7 @@
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "httpserver.New",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +214,7 @@
                 "identifier": "NewFromAddr",
                 "newPage": false,
                 "searchKey": "httpserver.NewFromAddr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

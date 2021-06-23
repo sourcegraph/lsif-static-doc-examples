@@ -4,9 +4,7 @@
     "identifier": "builtin",
     "newPage": true,
     "searchKey": "builtin",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "true",
                 "newPage": false,
                 "searchKey": "builtin.true",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "false",
                 "newPage": false,
                 "searchKey": "builtin.false",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "iota",
                 "newPage": false,
                 "searchKey": "builtin.iota",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,9 +109,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "nil",
                 "newPage": false,
                 "searchKey": "builtin.nil",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +152,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -170,7 +170,9 @@
                 "identifier": "bool",
                 "newPage": false,
                 "searchKey": "builtin.bool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -190,7 +192,9 @@
                 "identifier": "uint8",
                 "newPage": false,
                 "searchKey": "builtin.uint8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,7 +214,9 @@
                 "identifier": "uint16",
                 "newPage": false,
                 "searchKey": "builtin.uint16",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,7 +236,9 @@
                 "identifier": "uint32",
                 "newPage": false,
                 "searchKey": "builtin.uint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -250,7 +258,9 @@
                 "identifier": "uint64",
                 "newPage": false,
                 "searchKey": "builtin.uint64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -270,7 +280,9 @@
                 "identifier": "int8",
                 "newPage": false,
                 "searchKey": "builtin.int8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -290,7 +302,9 @@
                 "identifier": "int16",
                 "newPage": false,
                 "searchKey": "builtin.int16",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -310,7 +324,9 @@
                 "identifier": "int32",
                 "newPage": false,
                 "searchKey": "builtin.int32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -330,7 +346,9 @@
                 "identifier": "int64",
                 "newPage": false,
                 "searchKey": "builtin.int64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -350,7 +368,9 @@
                 "identifier": "float32",
                 "newPage": false,
                 "searchKey": "builtin.float32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -370,7 +390,9 @@
                 "identifier": "float64",
                 "newPage": false,
                 "searchKey": "builtin.float64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -390,7 +412,9 @@
                 "identifier": "complex64",
                 "newPage": false,
                 "searchKey": "builtin.complex64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -410,7 +434,9 @@
                 "identifier": "complex128",
                 "newPage": false,
                 "searchKey": "builtin.complex128",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -430,7 +456,9 @@
                 "identifier": "string",
                 "newPage": false,
                 "searchKey": "builtin.string",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -450,7 +478,9 @@
                 "identifier": "int",
                 "newPage": false,
                 "searchKey": "builtin.int",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -468,7 +498,9 @@
                       "identifier": "copy",
                       "newPage": false,
                       "searchKey": "builtin.copy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -488,7 +520,9 @@
                       "identifier": "len",
                       "newPage": false,
                       "searchKey": "builtin.len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -508,7 +542,9 @@
                       "identifier": "cap",
                       "newPage": false,
                       "searchKey": "builtin.cap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -531,7 +567,9 @@
                 "identifier": "uint",
                 "newPage": false,
                 "searchKey": "builtin.uint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -551,7 +589,9 @@
                 "identifier": "uintptr",
                 "newPage": false,
                 "searchKey": "builtin.uintptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -571,7 +611,9 @@
                 "identifier": "byte",
                 "newPage": false,
                 "searchKey": "builtin.byte",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -591,7 +633,9 @@
                 "identifier": "rune",
                 "newPage": false,
                 "searchKey": "builtin.rune",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -611,9 +655,7 @@
                 "identifier": "Type",
                 "newPage": false,
                 "searchKey": "builtin.Type",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -631,7 +673,9 @@
                       "identifier": "make",
                       "newPage": false,
                       "searchKey": "builtin.make",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -651,7 +695,9 @@
                       "identifier": "new",
                       "newPage": false,
                       "searchKey": "builtin.new",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -674,9 +720,7 @@
                 "identifier": "Type1",
                 "newPage": false,
                 "searchKey": "builtin.Type1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -696,9 +740,7 @@
                 "identifier": "IntegerType",
                 "newPage": false,
                 "searchKey": "builtin.IntegerType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -718,9 +760,7 @@
                 "identifier": "FloatType",
                 "newPage": false,
                 "searchKey": "builtin.FloatType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -738,7 +778,9 @@
                       "identifier": "real",
                       "newPage": false,
                       "searchKey": "builtin.real",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -758,7 +800,9 @@
                       "identifier": "imag",
                       "newPage": false,
                       "searchKey": "builtin.imag",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -781,9 +825,7 @@
                 "identifier": "ComplexType",
                 "newPage": false,
                 "searchKey": "builtin.ComplexType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -801,7 +843,9 @@
                       "identifier": "complex",
                       "newPage": false,
                       "searchKey": "builtin.complex",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -824,7 +868,9 @@
                 "identifier": "error",
                 "newPage": false,
                 "searchKey": "builtin.error",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -847,9 +893,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -867,7 +911,9 @@
                 "identifier": "append",
                 "newPage": false,
                 "searchKey": "builtin.append",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -887,7 +933,9 @@
                 "identifier": "delete",
                 "newPage": false,
                 "searchKey": "builtin.delete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -907,7 +955,9 @@
                 "identifier": "close",
                 "newPage": false,
                 "searchKey": "builtin.close",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -927,7 +977,9 @@
                 "identifier": "panic",
                 "newPage": false,
                 "searchKey": "builtin.panic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -947,7 +999,9 @@
                 "identifier": "recover",
                 "newPage": false,
                 "searchKey": "builtin.recover",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -967,7 +1021,9 @@
                 "identifier": "print",
                 "newPage": false,
                 "searchKey": "builtin.print",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -987,7 +1043,9 @@
                 "identifier": "println",
                 "newPage": false,
                 "searchKey": "builtin.println",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

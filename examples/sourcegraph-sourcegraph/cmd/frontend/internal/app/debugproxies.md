@@ -30,10 +30,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="proxyEndpoint" href="#proxyEndpoint">type proxyEndpoint struct</a>
 
 ```
 searchKey: debugproxies.proxyEndpoint
+tags: [private]
 ```
 
 ```Go
@@ -49,7 +54,6 @@ proxyEndpoint couples the reverse proxy with the endpoint it proxies.
 
 ```
 searchKey: debugproxies.ReverseProxyHandler
-tags: [exported]
 ```
 
 ```Go
@@ -67,7 +71,6 @@ ReverseProxyHandler handles serving the index page and routing the requests bein
 
 ```
 searchKey: debugproxies.ReverseProxyHandler.AddToRouter
-tags: [exported]
 ```
 
 ```Go
@@ -78,6 +81,7 @@ func (rph *ReverseProxyHandler) AddToRouter(r *mux.Router)
 
 ```
 searchKey: debugproxies.ReverseProxyHandler.serveIndex
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +94,7 @@ serveIndex composes the simple index page with the endpoints sorted by their nam
 
 ```
 searchKey: debugproxies.ReverseProxyHandler.serveReverseProxy
+tags: [private]
 ```
 
 ```Go
@@ -102,7 +107,6 @@ serveReverseProxy routes the request to the appropriate reverse proxy by splitti
 
 ```
 searchKey: debugproxies.ReverseProxyHandler.Populate
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +119,6 @@ Populate declares the proxyEndpoints to use. This method can be called at any ti
 
 ```
 searchKey: debugproxies.Endpoint
-tags: [exported]
 ```
 
 ```Go
@@ -136,7 +139,6 @@ Represents an endpoint
 
 ```
 searchKey: debugproxies.ScanConsumer
-tags: [exported]
 ```
 
 ```Go
@@ -149,6 +151,7 @@ ScanConsumer is the callback to consume scan results.
 
 ```
 searchKey: debugproxies.clusterScanner
+tags: [private]
 ```
 
 ```Go
@@ -165,6 +168,7 @@ clusterScanner scans the cluster for endpoints belonging to services that have a
 
 ```
 searchKey: debugproxies.clusterScanner.runEventLoop
+tags: [private]
 ```
 
 ```Go
@@ -177,6 +181,7 @@ Runs the k8s.Watch endpoints event loop, and triggers a rescan of cluster when s
 
 ```
 searchKey: debugproxies.clusterScanner.watchEndpointEvents
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +194,7 @@ watchEndpointEvents uses the k8s watch API operation to watch for endpoint event
 
 ```
 searchKey: debugproxies.clusterScanner.scanCluster
+tags: [private]
 ```
 
 ```Go
@@ -199,10 +205,15 @@ scanCluster looks for endpoints belonging to services that have annotation sourc
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="displayNameFromEndpoint" href="#displayNameFromEndpoint">func displayNameFromEndpoint(ep Endpoint) string</a>
 
 ```
 searchKey: debugproxies.displayNameFromEndpoint
+tags: [private]
 ```
 
 ```Go
@@ -215,6 +226,7 @@ Creates a display name from an endpoint suited for using in a URL link.
 
 ```
 searchKey: debugproxies.reverseProxyFromHost
+tags: [private]
 ```
 
 ```Go
@@ -227,6 +239,7 @@ reverseProxyFromHost creates a reverse proxy from specified host with the path p
 
 ```
 searchKey: debugproxies.adminOnly
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +252,7 @@ adminOnly is a HTTP middleware which only allows requests by admins.
 
 ```
 searchKey: debugproxies.startClusterScannerWithClient
+tags: [private]
 ```
 
 ```Go
@@ -251,7 +265,6 @@ Starts a cluster scanner with the specified client and consumer. Does not block.
 
 ```
 searchKey: debugproxies.StartClusterScanner
-tags: [exported]
 ```
 
 ```Go
@@ -264,6 +277,7 @@ Starts a cluster scanner with the specified consumer. Does not block.
 
 ```
 searchKey: debugproxies.namespace
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +290,7 @@ namespace returns the namespace the pod is currently running in this is done bec
 
 ```
 searchKey: debugproxies.TestReverseProxyRequestPaths
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +301,7 @@ func TestReverseProxyRequestPaths(t *testing.T)
 
 ```
 searchKey: debugproxies.TestIndexLinks
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +312,7 @@ func TestIndexLinks(t *testing.T)
 
 ```
 searchKey: debugproxies.TestDisplayNameFromEndpoint
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +323,7 @@ func TestDisplayNameFromEndpoint(t *testing.T)
 
 ```
 searchKey: debugproxies.TestClusterScan
+tags: [private]
 ```
 
 ```Go

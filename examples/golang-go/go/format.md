@@ -34,14 +34,11 @@ For example, pre-submit checks that use this package directly would behave diffe
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="tabWidth" href="#tabWidth">const tabWidth</a>
 
 ```
 searchKey: format.tabWidth
+tags: [private]
 ```
 
 ```Go
@@ -54,6 +51,7 @@ Keep these in sync with cmd/gofmt/gofmt.go.
 
 ```
 searchKey: format.printerMode
+tags: [private]
 ```
 
 ```Go
@@ -66,6 +64,7 @@ Keep these in sync with cmd/gofmt/gofmt.go.
 
 ```
 searchKey: format.printerNormalizeNumbers
+tags: [private]
 ```
 
 ```Go
@@ -82,6 +81,7 @@ This value is defined in go/printer specifically for go/format and cmd/gofmt.
 
 ```
 searchKey: format.parserMode
+tags: [private]
 ```
 
 ```Go
@@ -92,6 +92,7 @@ const parserMode = parser.ParseComments
 
 ```
 searchKey: format.testfile
+tags: [private]
 ```
 
 ```Go
@@ -100,14 +101,11 @@ const testfile = "format_test.go"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="config" href="#config">var config</a>
 
 ```
 searchKey: format.config
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +116,7 @@ var config = printer.Config{Mode: printerMode, Tabwidth: tabWidth}
 
 ```
 searchKey: format.tests
+tags: [private]
 ```
 
 ```Go
@@ -128,15 +127,10 @@ Test cases that are expected to fail are marked by the prefix "ERROR". The forma
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Node" href="#Node">func Node(dst io.Writer, fset *token.FileSet, node interface{}) error</a>
 
 ```
 searchKey: format.Node
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +147,6 @@ The function may return early (before the entire result is written) and return a
 
 ```
 searchKey: format.Source
-tags: [exported]
 ```
 
 ```Go
@@ -168,6 +161,7 @@ If src is a partial source file, the leading and trailing space of src is applie
 
 ```
 searchKey: format.hasUnsortedImports
+tags: [private]
 ```
 
 ```Go
@@ -178,6 +172,7 @@ func hasUnsortedImports(file *ast.File) bool
 
 ```
 searchKey: format.parse
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +190,7 @@ parse parses src, which was read from the named file, as a Go source file, decla
 
 ```
 searchKey: format.format
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +210,7 @@ format formats the given package file originally obtained from src and adjusts t
 
 ```
 searchKey: format.isSpace
+tags: [private]
 ```
 
 ```Go
@@ -226,6 +223,7 @@ isSpace reports whether the byte is a space character. isSpace defines a space a
 
 ```
 searchKey: format.diff
+tags: [private]
 ```
 
 ```Go
@@ -236,6 +234,7 @@ func diff(t *testing.T, dst, src []byte)
 
 ```
 searchKey: format.TestNode
+tags: [private]
 ```
 
 ```Go
@@ -246,6 +245,7 @@ func TestNode(t *testing.T)
 
 ```
 searchKey: format.TestNodeNoModify
+tags: [private]
 ```
 
 ```Go
@@ -258,6 +258,7 @@ Node is documented to not modify the AST. Test that it is so even when numbers a
 
 ```
 searchKey: format.TestSource
+tags: [private]
 ```
 
 ```Go
@@ -268,6 +269,7 @@ func TestSource(t *testing.T)
 
 ```
 searchKey: format.String
+tags: [private]
 ```
 
 ```Go
@@ -278,6 +280,7 @@ func String(s string) (string, error)
 
 ```
 searchKey: format.TestPartial
+tags: [private]
 ```
 
 ```Go

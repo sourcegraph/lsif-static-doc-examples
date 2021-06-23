@@ -20,11 +20,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Commit" href="#Commit">const Commit</a>
 
 ```
 searchKey: filter.Commit
-tags: [exported]
 ```
 
 ```Go
@@ -35,7 +38,6 @@ const Commit = "commit"
 
 ```
 searchKey: filter.Content
-tags: [exported]
 ```
 
 ```Go
@@ -46,7 +48,6 @@ const Content = "content"
 
 ```
 searchKey: filter.File
-tags: [exported]
 ```
 
 ```Go
@@ -57,7 +58,6 @@ const File = "file"
 
 ```
 searchKey: filter.Repository
-tags: [exported]
 ```
 
 ```Go
@@ -68,7 +68,6 @@ const Repository = "repo"
 
 ```
 searchKey: filter.Symbol
-tags: [exported]
 ```
 
 ```Go
@@ -77,10 +76,15 @@ const Symbol = "symbol"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="validSelectors" href="#validSelectors">var validSelectors</a>
 
 ```
 searchKey: filter.validSelectors
+tags: [private]
 ```
 
 ```Go
@@ -89,11 +93,14 @@ var validSelectors = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SelectPath" href="#SelectPath">type SelectPath []string</a>
 
 ```
 searchKey: filter.SelectPath
-tags: [exported]
 ```
 
 ```Go
@@ -106,7 +113,6 @@ SelectPath represents a parsed and validated select value
 
 ```
 searchKey: filter.SelectPathFromString
-tags: [exported]
 ```
 
 ```Go
@@ -117,7 +123,6 @@ func SelectPathFromString(s string) (SelectPath, error)
 
 ```
 searchKey: filter.SelectPath.String
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +133,6 @@ func (sp SelectPath) String() string
 
 ```
 searchKey: filter.SelectPath.Root
-tags: [exported]
 ```
 
 ```Go
@@ -141,6 +145,7 @@ Root is the top-level result type that is being selected. Returns an empty strin
 
 ```
 searchKey: filter.object
+tags: [private]
 ```
 
 ```Go

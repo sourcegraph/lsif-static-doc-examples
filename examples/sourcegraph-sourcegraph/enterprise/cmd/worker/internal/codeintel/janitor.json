@@ -4,7 +4,9 @@
     "identifier": "janitor",
     "newPage": true,
     "searchKey": "enterprise/cmd/worker/internal/codeintel/janitor",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "uploadsBatchSize",
                 "newPage": false,
                 "searchKey": "janitor.uploadsBatchSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "NewMetrics",
                 "newPage": false,
                 "searchKey": "janitor.NewMetrics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "testSourcedCommits",
                 "newPage": false,
                 "searchKey": "janitor.testSourcedCommits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -126,7 +134,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -144,7 +154,9 @@
                 "identifier": "abandonedUploadJanitor",
                 "newPage": false,
                 "searchKey": "janitor.abandonedUploadJanitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -162,7 +174,9 @@
                       "identifier": "abandonedUploadJanitor.Handle",
                       "newPage": false,
                       "searchKey": "janitor.abandonedUploadJanitor.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -182,7 +196,9 @@
                       "identifier": "abandonedUploadJanitor.HandleError",
                       "newPage": false,
                       "searchKey": "janitor.abandonedUploadJanitor.HandleError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -205,7 +221,9 @@
                 "identifier": "deletedRepositoryJanitor",
                 "newPage": false,
                 "searchKey": "janitor.deletedRepositoryJanitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -223,7 +241,9 @@
                       "identifier": "deletedRepositoryJanitor.Handle",
                       "newPage": false,
                       "searchKey": "janitor.deletedRepositoryJanitor.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -243,7 +263,9 @@
                       "identifier": "deletedRepositoryJanitor.HandleError",
                       "newPage": false,
                       "searchKey": "janitor.deletedRepositoryJanitor.HandleError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -266,7 +288,9 @@
                 "identifier": "recordCount",
                 "newPage": false,
                 "searchKey": "janitor.recordCount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -286,7 +310,9 @@
                 "identifier": "hardDeleter",
                 "newPage": false,
                 "searchKey": "janitor.hardDeleter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,7 +330,9 @@
                       "identifier": "hardDeleter.Handle",
                       "newPage": false,
                       "searchKey": "janitor.hardDeleter.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -324,7 +352,9 @@
                       "identifier": "hardDeleter.HandleError",
                       "newPage": false,
                       "searchKey": "janitor.hardDeleter.HandleError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -344,7 +374,9 @@
                       "identifier": "hardDeleter.deleteBatch",
                       "newPage": false,
                       "searchKey": "janitor.hardDeleter.deleteBatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -367,9 +399,7 @@
                 "identifier": "DBStore",
                 "newPage": false,
                 "searchKey": "janitor.DBStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -389,9 +419,7 @@
                 "identifier": "DBStoreShim",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreShim",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -409,9 +437,7 @@
                       "identifier": "DBStoreShim.Transact",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreShim.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,9 +460,7 @@
                 "identifier": "LSIFStore",
                 "newPage": false,
                 "searchKey": "janitor.LSIFStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -456,9 +480,7 @@
                 "identifier": "MockDBStore",
                 "newPage": false,
                 "searchKey": "janitor.MockDBStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -476,9 +498,7 @@
                       "identifier": "NewMockDBStore",
                       "newPage": false,
                       "searchKey": "janitor.NewMockDBStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -498,9 +518,7 @@
                       "identifier": "NewMockDBStoreFrom",
                       "newPage": false,
                       "searchKey": "janitor.NewMockDBStoreFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -520,9 +538,7 @@
                       "identifier": "MockDBStore.DeleteIndexesWithoutRepository",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.DeleteIndexesWithoutRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -542,9 +558,7 @@
                       "identifier": "MockDBStore.DeleteOldIndexes",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.DeleteOldIndexes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -564,9 +578,7 @@
                       "identifier": "MockDBStore.DeleteUploadsStuckUploading",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.DeleteUploadsStuckUploading",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -586,9 +598,7 @@
                       "identifier": "MockDBStore.DeleteUploadsWithoutRepository",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.DeleteUploadsWithoutRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -608,9 +618,7 @@
                       "identifier": "MockDBStore.DirtyRepositories",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.DirtyRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -630,9 +638,7 @@
                       "identifier": "MockDBStore.Done",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.Done",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -652,9 +658,7 @@
                       "identifier": "MockDBStore.GetUploads",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.GetUploads",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -674,9 +678,7 @@
                       "identifier": "MockDBStore.Handle",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.Handle",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -696,9 +698,7 @@
                       "identifier": "MockDBStore.HardDeleteUploadByID",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.HardDeleteUploadByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -718,9 +718,7 @@
                       "identifier": "MockDBStore.RefreshCommitResolvability",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.RefreshCommitResolvability",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -740,9 +738,7 @@
                       "identifier": "MockDBStore.SoftDeleteOldUploads",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.SoftDeleteOldUploads",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -762,9 +758,7 @@
                       "identifier": "MockDBStore.StaleSourcedCommits",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.StaleSourcedCommits",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -784,9 +778,7 @@
                       "identifier": "MockDBStore.Transact",
                       "newPage": false,
                       "searchKey": "janitor.MockDBStore.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -809,9 +801,7 @@
                 "identifier": "DBStoreDeleteIndexesWithoutRepositoryFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -829,9 +819,7 @@
                       "identifier": "DBStoreDeleteIndexesWithoutRepositoryFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -851,9 +839,7 @@
                       "identifier": "DBStoreDeleteIndexesWithoutRepositoryFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -873,9 +859,7 @@
                       "identifier": "DBStoreDeleteIndexesWithoutRepositoryFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -895,9 +879,7 @@
                       "identifier": "DBStoreDeleteIndexesWithoutRepositoryFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -917,7 +899,9 @@
                       "identifier": "DBStoreDeleteIndexesWithoutRepositoryFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -937,7 +921,9 @@
                       "identifier": "DBStoreDeleteIndexesWithoutRepositoryFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -957,9 +943,7 @@
                       "identifier": "DBStoreDeleteIndexesWithoutRepositoryFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -982,9 +966,7 @@
                 "identifier": "DBStoreDeleteIndexesWithoutRepositoryFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1002,9 +984,7 @@
                       "identifier": "DBStoreDeleteIndexesWithoutRepositoryFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1024,9 +1004,7 @@
                       "identifier": "DBStoreDeleteIndexesWithoutRepositoryFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteIndexesWithoutRepositoryFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1049,9 +1027,7 @@
                 "identifier": "DBStoreDeleteOldIndexesFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDeleteOldIndexesFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1069,9 +1045,7 @@
                       "identifier": "DBStoreDeleteOldIndexesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteOldIndexesFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1091,9 +1065,7 @@
                       "identifier": "DBStoreDeleteOldIndexesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteOldIndexesFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1113,9 +1085,7 @@
                       "identifier": "DBStoreDeleteOldIndexesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteOldIndexesFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1135,9 +1105,7 @@
                       "identifier": "DBStoreDeleteOldIndexesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteOldIndexesFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1157,7 +1125,9 @@
                       "identifier": "DBStoreDeleteOldIndexesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteOldIndexesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1177,7 +1147,9 @@
                       "identifier": "DBStoreDeleteOldIndexesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteOldIndexesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1197,9 +1169,7 @@
                       "identifier": "DBStoreDeleteOldIndexesFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteOldIndexesFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1222,9 +1192,7 @@
                 "identifier": "DBStoreDeleteOldIndexesFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDeleteOldIndexesFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1242,9 +1210,7 @@
                       "identifier": "DBStoreDeleteOldIndexesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteOldIndexesFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1264,9 +1230,7 @@
                       "identifier": "DBStoreDeleteOldIndexesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteOldIndexesFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1289,9 +1253,7 @@
                 "identifier": "DBStoreDeleteUploadsStuckUploadingFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1309,9 +1271,7 @@
                       "identifier": "DBStoreDeleteUploadsStuckUploadingFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1331,9 +1291,7 @@
                       "identifier": "DBStoreDeleteUploadsStuckUploadingFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1353,9 +1311,7 @@
                       "identifier": "DBStoreDeleteUploadsStuckUploadingFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1375,9 +1331,7 @@
                       "identifier": "DBStoreDeleteUploadsStuckUploadingFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1397,7 +1351,9 @@
                       "identifier": "DBStoreDeleteUploadsStuckUploadingFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1417,7 +1373,9 @@
                       "identifier": "DBStoreDeleteUploadsStuckUploadingFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1437,9 +1395,7 @@
                       "identifier": "DBStoreDeleteUploadsStuckUploadingFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1462,9 +1418,7 @@
                 "identifier": "DBStoreDeleteUploadsStuckUploadingFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1482,9 +1436,7 @@
                       "identifier": "DBStoreDeleteUploadsStuckUploadingFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1504,9 +1456,7 @@
                       "identifier": "DBStoreDeleteUploadsStuckUploadingFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsStuckUploadingFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1529,9 +1479,7 @@
                 "identifier": "DBStoreDeleteUploadsWithoutRepositoryFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1549,9 +1497,7 @@
                       "identifier": "DBStoreDeleteUploadsWithoutRepositoryFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1571,9 +1517,7 @@
                       "identifier": "DBStoreDeleteUploadsWithoutRepositoryFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1593,9 +1537,7 @@
                       "identifier": "DBStoreDeleteUploadsWithoutRepositoryFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1615,9 +1557,7 @@
                       "identifier": "DBStoreDeleteUploadsWithoutRepositoryFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1637,7 +1577,9 @@
                       "identifier": "DBStoreDeleteUploadsWithoutRepositoryFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1657,7 +1599,9 @@
                       "identifier": "DBStoreDeleteUploadsWithoutRepositoryFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1677,9 +1621,7 @@
                       "identifier": "DBStoreDeleteUploadsWithoutRepositoryFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1702,9 +1644,7 @@
                 "identifier": "DBStoreDeleteUploadsWithoutRepositoryFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1722,9 +1662,7 @@
                       "identifier": "DBStoreDeleteUploadsWithoutRepositoryFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1744,9 +1682,7 @@
                       "identifier": "DBStoreDeleteUploadsWithoutRepositoryFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDeleteUploadsWithoutRepositoryFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1769,9 +1705,7 @@
                 "identifier": "DBStoreDirtyRepositoriesFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDirtyRepositoriesFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1789,9 +1723,7 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDirtyRepositoriesFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1811,9 +1743,7 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDirtyRepositoriesFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1833,9 +1763,7 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDirtyRepositoriesFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1855,9 +1783,7 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDirtyRepositoriesFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1877,7 +1803,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDirtyRepositoriesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1897,7 +1825,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDirtyRepositoriesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1917,9 +1847,7 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDirtyRepositoriesFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1942,9 +1870,7 @@
                 "identifier": "DBStoreDirtyRepositoriesFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDirtyRepositoriesFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1962,9 +1888,7 @@
                       "identifier": "DBStoreDirtyRepositoriesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDirtyRepositoriesFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1984,9 +1908,7 @@
                       "identifier": "DBStoreDirtyRepositoriesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDirtyRepositoriesFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2009,9 +1931,7 @@
                 "identifier": "DBStoreDoneFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDoneFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2029,9 +1949,7 @@
                       "identifier": "DBStoreDoneFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDoneFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2051,9 +1969,7 @@
                       "identifier": "DBStoreDoneFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDoneFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2073,9 +1989,7 @@
                       "identifier": "DBStoreDoneFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDoneFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2095,9 +2009,7 @@
                       "identifier": "DBStoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDoneFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2117,7 +2029,9 @@
                       "identifier": "DBStoreDoneFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDoneFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2137,7 +2051,9 @@
                       "identifier": "DBStoreDoneFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDoneFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2157,9 +2073,7 @@
                       "identifier": "DBStoreDoneFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDoneFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2182,9 +2096,7 @@
                 "identifier": "DBStoreDoneFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreDoneFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2202,9 +2114,7 @@
                       "identifier": "DBStoreDoneFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDoneFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2224,9 +2134,7 @@
                       "identifier": "DBStoreDoneFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreDoneFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2249,9 +2157,7 @@
                 "identifier": "DBStoreGetUploadsFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreGetUploadsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2269,9 +2175,7 @@
                       "identifier": "DBStoreGetUploadsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreGetUploadsFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2291,9 +2195,7 @@
                       "identifier": "DBStoreGetUploadsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreGetUploadsFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2313,9 +2215,7 @@
                       "identifier": "DBStoreGetUploadsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreGetUploadsFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2335,9 +2235,7 @@
                       "identifier": "DBStoreGetUploadsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreGetUploadsFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2357,7 +2255,9 @@
                       "identifier": "DBStoreGetUploadsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreGetUploadsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2377,7 +2277,9 @@
                       "identifier": "DBStoreGetUploadsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreGetUploadsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2397,9 +2299,7 @@
                       "identifier": "DBStoreGetUploadsFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreGetUploadsFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2422,9 +2322,7 @@
                 "identifier": "DBStoreGetUploadsFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreGetUploadsFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2442,9 +2340,7 @@
                       "identifier": "DBStoreGetUploadsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreGetUploadsFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2464,9 +2360,7 @@
                       "identifier": "DBStoreGetUploadsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreGetUploadsFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2489,9 +2383,7 @@
                 "identifier": "DBStoreHandleFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreHandleFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2509,9 +2401,7 @@
                       "identifier": "DBStoreHandleFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHandleFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2531,9 +2421,7 @@
                       "identifier": "DBStoreHandleFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHandleFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2553,9 +2441,7 @@
                       "identifier": "DBStoreHandleFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHandleFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2575,9 +2461,7 @@
                       "identifier": "DBStoreHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHandleFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2597,7 +2481,9 @@
                       "identifier": "DBStoreHandleFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHandleFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2617,7 +2503,9 @@
                       "identifier": "DBStoreHandleFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHandleFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2637,9 +2525,7 @@
                       "identifier": "DBStoreHandleFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHandleFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2662,9 +2548,7 @@
                 "identifier": "DBStoreHandleFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreHandleFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2682,9 +2566,7 @@
                       "identifier": "DBStoreHandleFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHandleFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2704,9 +2586,7 @@
                       "identifier": "DBStoreHandleFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHandleFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2729,9 +2609,7 @@
                 "identifier": "DBStoreHardDeleteUploadByIDFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreHardDeleteUploadByIDFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2749,9 +2627,7 @@
                       "identifier": "DBStoreHardDeleteUploadByIDFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHardDeleteUploadByIDFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2771,9 +2647,7 @@
                       "identifier": "DBStoreHardDeleteUploadByIDFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHardDeleteUploadByIDFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2793,9 +2667,7 @@
                       "identifier": "DBStoreHardDeleteUploadByIDFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHardDeleteUploadByIDFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2815,9 +2687,7 @@
                       "identifier": "DBStoreHardDeleteUploadByIDFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHardDeleteUploadByIDFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2837,7 +2707,9 @@
                       "identifier": "DBStoreHardDeleteUploadByIDFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHardDeleteUploadByIDFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2857,7 +2729,9 @@
                       "identifier": "DBStoreHardDeleteUploadByIDFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHardDeleteUploadByIDFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2877,9 +2751,7 @@
                       "identifier": "DBStoreHardDeleteUploadByIDFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHardDeleteUploadByIDFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2902,9 +2774,7 @@
                 "identifier": "DBStoreHardDeleteUploadByIDFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreHardDeleteUploadByIDFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2922,9 +2792,7 @@
                       "identifier": "DBStoreHardDeleteUploadByIDFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHardDeleteUploadByIDFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2944,9 +2812,7 @@
                       "identifier": "DBStoreHardDeleteUploadByIDFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreHardDeleteUploadByIDFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2969,9 +2835,7 @@
                 "identifier": "DBStoreRefreshCommitResolvabilityFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2989,9 +2853,7 @@
                       "identifier": "DBStoreRefreshCommitResolvabilityFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3011,9 +2873,7 @@
                       "identifier": "DBStoreRefreshCommitResolvabilityFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3033,9 +2893,7 @@
                       "identifier": "DBStoreRefreshCommitResolvabilityFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3055,9 +2913,7 @@
                       "identifier": "DBStoreRefreshCommitResolvabilityFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3077,7 +2933,9 @@
                       "identifier": "DBStoreRefreshCommitResolvabilityFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3097,7 +2955,9 @@
                       "identifier": "DBStoreRefreshCommitResolvabilityFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3117,9 +2977,7 @@
                       "identifier": "DBStoreRefreshCommitResolvabilityFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3142,9 +3000,7 @@
                 "identifier": "DBStoreRefreshCommitResolvabilityFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3162,9 +3018,7 @@
                       "identifier": "DBStoreRefreshCommitResolvabilityFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3184,9 +3038,7 @@
                       "identifier": "DBStoreRefreshCommitResolvabilityFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreRefreshCommitResolvabilityFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3209,9 +3061,7 @@
                 "identifier": "DBStoreSoftDeleteOldUploadsFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3229,9 +3079,7 @@
                       "identifier": "DBStoreSoftDeleteOldUploadsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3251,9 +3099,7 @@
                       "identifier": "DBStoreSoftDeleteOldUploadsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3273,9 +3119,7 @@
                       "identifier": "DBStoreSoftDeleteOldUploadsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3295,9 +3139,7 @@
                       "identifier": "DBStoreSoftDeleteOldUploadsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3317,7 +3159,9 @@
                       "identifier": "DBStoreSoftDeleteOldUploadsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3337,7 +3181,9 @@
                       "identifier": "DBStoreSoftDeleteOldUploadsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3357,9 +3203,7 @@
                       "identifier": "DBStoreSoftDeleteOldUploadsFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3382,9 +3226,7 @@
                 "identifier": "DBStoreSoftDeleteOldUploadsFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3402,9 +3244,7 @@
                       "identifier": "DBStoreSoftDeleteOldUploadsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3424,9 +3264,7 @@
                       "identifier": "DBStoreSoftDeleteOldUploadsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreSoftDeleteOldUploadsFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3449,9 +3287,7 @@
                 "identifier": "DBStoreStaleSourcedCommitsFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreStaleSourcedCommitsFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3469,9 +3305,7 @@
                       "identifier": "DBStoreStaleSourcedCommitsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreStaleSourcedCommitsFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3491,9 +3325,7 @@
                       "identifier": "DBStoreStaleSourcedCommitsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreStaleSourcedCommitsFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3513,9 +3345,7 @@
                       "identifier": "DBStoreStaleSourcedCommitsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreStaleSourcedCommitsFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3535,9 +3365,7 @@
                       "identifier": "DBStoreStaleSourcedCommitsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreStaleSourcedCommitsFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3557,7 +3385,9 @@
                       "identifier": "DBStoreStaleSourcedCommitsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreStaleSourcedCommitsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3577,7 +3407,9 @@
                       "identifier": "DBStoreStaleSourcedCommitsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreStaleSourcedCommitsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3597,9 +3429,7 @@
                       "identifier": "DBStoreStaleSourcedCommitsFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreStaleSourcedCommitsFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3622,9 +3452,7 @@
                 "identifier": "DBStoreStaleSourcedCommitsFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreStaleSourcedCommitsFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3642,9 +3470,7 @@
                       "identifier": "DBStoreStaleSourcedCommitsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreStaleSourcedCommitsFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3664,9 +3490,7 @@
                       "identifier": "DBStoreStaleSourcedCommitsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreStaleSourcedCommitsFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3689,9 +3513,7 @@
                 "identifier": "DBStoreTransactFunc",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreTransactFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3709,9 +3531,7 @@
                       "identifier": "DBStoreTransactFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreTransactFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3731,9 +3551,7 @@
                       "identifier": "DBStoreTransactFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreTransactFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3753,9 +3571,7 @@
                       "identifier": "DBStoreTransactFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreTransactFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3775,9 +3591,7 @@
                       "identifier": "DBStoreTransactFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreTransactFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3797,7 +3611,9 @@
                       "identifier": "DBStoreTransactFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreTransactFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3817,7 +3633,9 @@
                       "identifier": "DBStoreTransactFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreTransactFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3837,9 +3655,7 @@
                       "identifier": "DBStoreTransactFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreTransactFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3862,9 +3678,7 @@
                 "identifier": "DBStoreTransactFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.DBStoreTransactFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3882,9 +3696,7 @@
                       "identifier": "DBStoreTransactFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreTransactFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3904,9 +3716,7 @@
                       "identifier": "DBStoreTransactFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.DBStoreTransactFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3929,9 +3739,7 @@
                 "identifier": "MockLSIFStore",
                 "newPage": false,
                 "searchKey": "janitor.MockLSIFStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3949,9 +3757,7 @@
                       "identifier": "NewMockLSIFStore",
                       "newPage": false,
                       "searchKey": "janitor.NewMockLSIFStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3971,9 +3777,7 @@
                       "identifier": "NewMockLSIFStoreFrom",
                       "newPage": false,
                       "searchKey": "janitor.NewMockLSIFStoreFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3993,9 +3797,7 @@
                       "identifier": "MockLSIFStore.Clear",
                       "newPage": false,
                       "searchKey": "janitor.MockLSIFStore.Clear",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4018,9 +3820,7 @@
                 "identifier": "LSIFStoreClearFunc",
                 "newPage": false,
                 "searchKey": "janitor.LSIFStoreClearFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4038,9 +3838,7 @@
                       "identifier": "LSIFStoreClearFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "janitor.LSIFStoreClearFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4060,9 +3858,7 @@
                       "identifier": "LSIFStoreClearFunc.PushHook",
                       "newPage": false,
                       "searchKey": "janitor.LSIFStoreClearFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4082,9 +3878,7 @@
                       "identifier": "LSIFStoreClearFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "janitor.LSIFStoreClearFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4104,9 +3898,7 @@
                       "identifier": "LSIFStoreClearFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "janitor.LSIFStoreClearFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4126,7 +3918,9 @@
                       "identifier": "LSIFStoreClearFunc.nextHook",
                       "newPage": false,
                       "searchKey": "janitor.LSIFStoreClearFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4146,7 +3940,9 @@
                       "identifier": "LSIFStoreClearFunc.appendCall",
                       "newPage": false,
                       "searchKey": "janitor.LSIFStoreClearFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4166,9 +3962,7 @@
                       "identifier": "LSIFStoreClearFunc.History",
                       "newPage": false,
                       "searchKey": "janitor.LSIFStoreClearFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4191,9 +3985,7 @@
                 "identifier": "LSIFStoreClearFuncCall",
                 "newPage": false,
                 "searchKey": "janitor.LSIFStoreClearFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4211,9 +4003,7 @@
                       "identifier": "LSIFStoreClearFuncCall.Args",
                       "newPage": false,
                       "searchKey": "janitor.LSIFStoreClearFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4233,9 +4023,7 @@
                       "identifier": "LSIFStoreClearFuncCall.Results",
                       "newPage": false,
                       "searchKey": "janitor.LSIFStoreClearFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4258,7 +4046,9 @@
                 "identifier": "metrics",
                 "newPage": false,
                 "searchKey": "janitor.metrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4276,7 +4066,9 @@
                       "identifier": "newMetrics",
                       "newPage": false,
                       "searchKey": "janitor.newMetrics",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4299,7 +4091,9 @@
                 "identifier": "recordExpirer",
                 "newPage": false,
                 "searchKey": "janitor.recordExpirer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4317,7 +4111,9 @@
                       "identifier": "recordExpirer.Handle",
                       "newPage": false,
                       "searchKey": "janitor.recordExpirer.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4337,7 +4133,9 @@
                       "identifier": "recordExpirer.HandleError",
                       "newPage": false,
                       "searchKey": "janitor.recordExpirer.HandleError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4360,7 +4158,9 @@
                 "identifier": "unknownCommitJanitor",
                 "newPage": false,
                 "searchKey": "janitor.unknownCommitJanitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4378,7 +4178,9 @@
                       "identifier": "newJanitor",
                       "newPage": false,
                       "searchKey": "janitor.newJanitor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4398,7 +4200,9 @@
                       "identifier": "unknownCommitJanitor.Handle",
                       "newPage": false,
                       "searchKey": "janitor.unknownCommitJanitor.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4418,7 +4222,9 @@
                       "identifier": "unknownCommitJanitor.HandleError",
                       "newPage": false,
                       "searchKey": "janitor.unknownCommitJanitor.HandleError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4438,7 +4244,9 @@
                       "identifier": "unknownCommitJanitor.handleSourcedCommits",
                       "newPage": false,
                       "searchKey": "janitor.unknownCommitJanitor.handleSourcedCommits",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4458,7 +4266,9 @@
                       "identifier": "unknownCommitJanitor.handleCommit",
                       "newPage": false,
                       "searchKey": "janitor.unknownCommitJanitor.handleCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4481,7 +4291,9 @@
                 "identifier": "refreshCommitResolvabilityFuncInvocation",
                 "newPage": false,
                 "searchKey": "janitor.refreshCommitResolvabilityFuncInvocation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4504,7 +4316,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -4522,9 +4336,7 @@
                 "identifier": "NewAbandonedUploadJanitor",
                 "newPage": false,
                 "searchKey": "janitor.NewAbandonedUploadJanitor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4544,9 +4356,7 @@
                 "identifier": "NewDeletedRepositoryJanitor",
                 "newPage": false,
                 "searchKey": "janitor.NewDeletedRepositoryJanitor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4566,7 +4376,9 @@
                 "identifier": "gatherCounts",
                 "newPage": false,
                 "searchKey": "janitor.gatherCounts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4586,9 +4398,7 @@
                 "identifier": "NewHardDeleter",
                 "newPage": false,
                 "searchKey": "janitor.NewHardDeleter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4608,7 +4418,9 @@
                 "identifier": "uploadIDs",
                 "newPage": false,
                 "searchKey": "janitor.uploadIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4628,9 +4440,7 @@
                 "identifier": "NewRecordExpirer",
                 "newPage": false,
                 "searchKey": "janitor.NewRecordExpirer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4650,9 +4460,7 @@
                 "identifier": "NewUploadResetter",
                 "newPage": false,
                 "searchKey": "janitor.NewUploadResetter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4672,9 +4480,7 @@
                 "identifier": "NewIndexResetter",
                 "newPage": false,
                 "searchKey": "janitor.NewIndexResetter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4694,9 +4500,7 @@
                 "identifier": "NewUnknownCommitJanitor",
                 "newPage": false,
                 "searchKey": "janitor.NewUnknownCommitJanitor",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4716,7 +4520,9 @@
                 "identifier": "isRepositoryNotFound",
                 "newPage": false,
                 "searchKey": "janitor.isRepositoryNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4736,7 +4542,9 @@
                 "identifier": "isRevisionNotFound",
                 "newPage": false,
                 "searchKey": "janitor.isRevisionNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4756,7 +4564,9 @@
                 "identifier": "TestUnknownCommitsJanitor",
                 "newPage": false,
                 "searchKey": "janitor.TestUnknownCommitsJanitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4776,7 +4586,9 @@
                 "identifier": "TestUnknownCommitsJanitorUnknownCommit",
                 "newPage": false,
                 "searchKey": "janitor.TestUnknownCommitsJanitorUnknownCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4796,7 +4608,9 @@
                 "identifier": "TestUnknownCommitsJanitorUnknownRepository",
                 "newPage": false,
                 "searchKey": "janitor.TestUnknownCommitsJanitorUnknownRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4816,7 +4630,9 @@
                 "identifier": "testUnknownCommitsJanitor",
                 "newPage": false,
                 "searchKey": "janitor.testUnknownCommitsJanitor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

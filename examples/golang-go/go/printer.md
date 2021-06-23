@@ -84,7 +84,7 @@ Package printer implements printing of AST nodes.
         * [func (p *printer) decl(decl ast.Decl)](#printer.decl)
         * [func (p *printer) declList(list []ast.Decl)](#printer.declList)
         * [func (p *printer) file(src *ast.File)](#printer.file)
-        * [func (p *printer) init(cfg *Config, fset *token.FileSet, nodeSizes map[ast.Node]int)](#printer.init)
+        * [func (p *printer) init(cfg *Config, fset *token.FileSet, nodeSizes map[ast.Node]int)](#printer.init.printer.go)
         * [func (p *printer) internalError(msg ...interface{})](#printer.internalError)
         * [func (p *printer) commentsHaveNewline(list []*ast.Comment) bool](#printer.commentsHaveNewline)
         * [func (p *printer) nextComment()](#printer.nextComment)
@@ -156,7 +156,7 @@ Package printer implements printing of AST nodes.
     * [func check(t *testing.T, source, golden string, mode checkMode)](#check)
     * [func TestFiles(t *testing.T)](#TestFiles)
     * [func TestLineComments(t *testing.T)](#TestLineComments)
-    * [func init()](#init)
+    * [func init()](#init.printer_test.go)
     * [func TestBadNodes(t *testing.T)](#TestBadNodes)
     * [func testComment(t *testing.T, f *ast.File, srclen int, comment *ast.Comment)](#testComment)
     * [func TestBadComments(t *testing.T)](#TestBadComments)
@@ -178,14 +178,11 @@ Package printer implements printing of AST nodes.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="commaTerm" href="#commaTerm">const commaTerm</a>
 
 ```
 searchKey: printer.commaTerm
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +194,7 @@ const commaTerm exprListMode = 1 << iota // list is optionally terminated by a c
 
 ```
 searchKey: printer.noIndent
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +206,7 @@ const noIndent // no extra indentation in multi-line lists
 
 ```
 searchKey: printer.filteredMsg
+tags: [private]
 ```
 
 ```Go
@@ -218,6 +217,7 @@ const filteredMsg = "contains filtered or unexported fields"
 
 ```
 searchKey: printer.maxNewlines
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +229,7 @@ const maxNewlines = 2 // max. number of newlines between source text
 
 ```
 searchKey: printer.debug
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +241,7 @@ const debug = false // enable for debugging
 
 ```
 searchKey: printer.infinity
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +252,7 @@ const infinity = 1 << 30
 
 ```
 searchKey: printer.ignore
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +263,7 @@ const ignore = whiteSpace(0)
 
 ```
 searchKey: printer.blank
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +274,7 @@ const blank = whiteSpace(' ')
 
 ```
 searchKey: printer.vtab
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +285,7 @@ const vtab = whiteSpace('\v')
 
 ```
 searchKey: printer.newline
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +296,7 @@ const newline = whiteSpace('\n')
 
 ```
 searchKey: printer.formfeed
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +307,7 @@ const formfeed = whiteSpace('\f')
 
 ```
 searchKey: printer.indent
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +318,7 @@ const indent = whiteSpace('>')
 
 ```
 searchKey: printer.unindent
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +329,7 @@ const unindent = whiteSpace('<')
 
 ```
 searchKey: printer.noExtraBlank
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +341,7 @@ const noExtraBlank pmode = 1 << iota // disables extra blank after /*-style comm
 
 ```
 searchKey: printer.noExtraLinebreak
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +353,7 @@ const noExtraLinebreak // disables extra line break after /*-style comment
 
 ```
 searchKey: printer.inSpace
+tags: [private]
 ```
 
 ```Go
@@ -355,6 +367,7 @@ trimmer is implemented as a state machine. It can be in one of the following sta
 
 ```
 searchKey: printer.inEscape
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +381,7 @@ trimmer is implemented as a state machine. It can be in one of the following sta
 
 ```
 searchKey: printer.inText
+tags: [private]
 ```
 
 ```Go
@@ -381,7 +395,6 @@ trimmer is implemented as a state machine. It can be in one of the following sta
 
 ```
 searchKey: printer.RawFormat
-tags: [exported]
 ```
 
 ```Go
@@ -393,7 +406,6 @@ const RawFormat Mode = 1 << iota // do not use a tabwriter; if set, UseSpaces is
 
 ```
 searchKey: printer.TabIndent
-tags: [exported]
 ```
 
 ```Go
@@ -405,7 +417,6 @@ const TabIndent // use tabs for indentation independent of UseSpaces
 
 ```
 searchKey: printer.UseSpaces
-tags: [exported]
 ```
 
 ```Go
@@ -417,7 +428,6 @@ const UseSpaces // use spaces instead of tabs for alignment
 
 ```
 searchKey: printer.SourcePos
-tags: [exported]
 ```
 
 ```Go
@@ -429,6 +439,7 @@ const SourcePos // emit //line directives to preserve original source positions
 
 ```
 searchKey: printer.normalizeNumbers
+tags: [private]
 ```
 
 ```Go
@@ -445,6 +456,7 @@ This value is known in and used by go/format and cmd/gofmt. It is currently more
 
 ```
 searchKey: printer.dataDir
+tags: [private]
 ```
 
 ```Go
@@ -455,6 +467,7 @@ const dataDir = "testdata"
 
 ```
 searchKey: printer.tabwidth
+tags: [private]
 ```
 
 ```Go
@@ -465,6 +478,7 @@ const tabwidth = 8
 
 ```
 searchKey: printer.export
+tags: [private]
 ```
 
 ```Go
@@ -475,6 +489,7 @@ const export checkMode = 1 << iota
 
 ```
 searchKey: printer.rawFormat
+tags: [private]
 ```
 
 ```Go
@@ -485,6 +500,7 @@ const rawFormat
 
 ```
 searchKey: printer.normNumber
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +511,7 @@ const normNumber
 
 ```
 searchKey: printer.idempotent
+tags: [private]
 ```
 
 ```Go
@@ -505,6 +522,7 @@ const idempotent
 
 ```
 searchKey: printer.allowTypeParams
+tags: [private]
 ```
 
 ```Go
@@ -513,14 +531,11 @@ const allowTypeParams
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="aNewline" href="#aNewline">var aNewline</a>
 
 ```
 searchKey: printer.aNewline
+tags: [private]
 ```
 
 ```Go
@@ -531,6 +546,7 @@ var aNewline = []byte("\n")
 
 ```
 searchKey: printer.testfile
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +557,7 @@ var testfile *ast.File
 
 ```
 searchKey: printer.update
+tags: [private]
 ```
 
 ```Go
@@ -551,6 +568,7 @@ var update = flag.Bool("update", false, "update golden files")
 
 ```
 searchKey: printer.fset
+tags: [private]
 ```
 
 ```Go
@@ -561,6 +579,7 @@ var fset = token.NewFileSet()
 
 ```
 searchKey: printer.data
+tags: [private]
 ```
 
 ```Go
@@ -573,6 +592,7 @@ Use go test -update to create/update the respective golden files.
 
 ```
 searchKey: printer.decls
+tags: [private]
 ```
 
 ```Go
@@ -583,6 +603,7 @@ var decls = ...
 
 ```
 searchKey: printer.stmts
+tags: [private]
 ```
 
 ```Go
@@ -591,14 +612,11 @@ var stmts = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="exprListMode" href="#exprListMode">type exprListMode uint</a>
 
 ```
 searchKey: printer.exprListMode
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +627,7 @@ type exprListMode uint
 
 ```
 searchKey: printer.whiteSpace
+tags: [private]
 ```
 
 ```Go
@@ -619,6 +638,7 @@ type whiteSpace byte
 
 ```
 searchKey: printer.pmode
+tags: [private]
 ```
 
 ```Go
@@ -631,6 +651,7 @@ A pmode value represents the current printer mode.
 
 ```
 searchKey: printer.commentInfo
+tags: [private]
 ```
 
 ```Go
@@ -646,6 +667,7 @@ type commentInfo struct {
 
 ```
 searchKey: printer.printer
+tags: [private]
 ```
 
 ```Go
@@ -698,6 +720,7 @@ type printer struct {
 
 ```
 searchKey: printer.printer.fixGoBuildLines
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +731,7 @@ func (p *printer) fixGoBuildLines()
 
 ```
 searchKey: printer.printer.lineAt
+tags: [private]
 ```
 
 ```Go
@@ -718,6 +742,7 @@ func (p *printer) lineAt(start int) []byte
 
 ```
 searchKey: printer.printer.commentTextAt
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +753,7 @@ func (p *printer) commentTextAt(start int) string
 
 ```
 searchKey: printer.printer.linebreak
+tags: [private]
 ```
 
 ```Go
@@ -751,6 +777,7 @@ future (not yet interspersed) comments in this function.
 
 ```
 searchKey: printer.printer.setComment
+tags: [private]
 ```
 
 ```Go
@@ -763,6 +790,7 @@ setComment sets g as the next comment if g != nil and if node comments are enabl
 
 ```
 searchKey: printer.printer.identList
+tags: [private]
 ```
 
 ```Go
@@ -775,6 +803,7 @@ If indent is set, a multi-line identifier list is indented after the first lineb
 
 ```
 searchKey: printer.printer.exprList
+tags: [private]
 ```
 
 ```Go
@@ -794,6 +823,7 @@ so that we can use the algorithm for any kind of list
 
 ```
 searchKey: printer.printer.parameters
+tags: [private]
 ```
 
 ```Go
@@ -804,6 +834,7 @@ func (p *printer) parameters(fields *ast.FieldList, isTypeParam bool)
 
 ```
 searchKey: printer.printer.signature
+tags: [private]
 ```
 
 ```Go
@@ -814,6 +845,7 @@ func (p *printer) signature(sig *ast.FuncType)
 
 ```
 searchKey: printer.printer.isOneLineFieldList
+tags: [private]
 ```
 
 ```Go
@@ -824,6 +856,7 @@ func (p *printer) isOneLineFieldList(list []*ast.Field) bool
 
 ```
 searchKey: printer.printer.setLineComment
+tags: [private]
 ```
 
 ```Go
@@ -834,6 +867,7 @@ func (p *printer) setLineComment(text string)
 
 ```
 searchKey: printer.printer.fieldList
+tags: [private]
 ```
 
 ```Go
@@ -844,6 +878,7 @@ func (p *printer) fieldList(fields *ast.FieldList, isStruct, isIncomplete bool)
 
 ```
 searchKey: printer.printer.binaryExpr
+tags: [private]
 ```
 
 ```Go
@@ -891,6 +926,7 @@ To choose the cutoff, look at the whole expression but excluding primary express
 
 ```
 searchKey: printer.printer.expr1
+tags: [private]
 ```
 
 ```Go
@@ -901,6 +937,7 @@ func (p *printer) expr1(expr ast.Expr, prec1, depth int)
 
 ```
 searchKey: printer.printer.possibleSelectorExpr
+tags: [private]
 ```
 
 ```Go
@@ -911,6 +948,7 @@ func (p *printer) possibleSelectorExpr(expr ast.Expr, prec1, depth int) bool
 
 ```
 searchKey: printer.printer.selectorExpr
+tags: [private]
 ```
 
 ```Go
@@ -923,6 +961,7 @@ selectorExpr handles an *ast.SelectorExpr node and reports whether x spans multi
 
 ```
 searchKey: printer.printer.expr0
+tags: [private]
 ```
 
 ```Go
@@ -933,6 +972,7 @@ func (p *printer) expr0(x ast.Expr, depth int)
 
 ```
 searchKey: printer.printer.expr
+tags: [private]
 ```
 
 ```Go
@@ -943,6 +983,7 @@ func (p *printer) expr(x ast.Expr)
 
 ```
 searchKey: printer.printer.stmtList
+tags: [private]
 ```
 
 ```Go
@@ -955,6 +996,7 @@ Print the statement list indented, but without a newline after the last statemen
 
 ```
 searchKey: printer.printer.block
+tags: [private]
 ```
 
 ```Go
@@ -967,6 +1009,7 @@ block prints an *ast.BlockStmt; it always spans at least two lines.
 
 ```
 searchKey: printer.printer.controlClause
+tags: [private]
 ```
 
 ```Go
@@ -977,6 +1020,7 @@ func (p *printer) controlClause(isForStmt bool, init ast.Stmt, expr ast.Expr, po
 
 ```
 searchKey: printer.printer.indentList
+tags: [private]
 ```
 
 ```Go
@@ -989,6 +1033,7 @@ indentList reports whether an expression list would look better if it were inden
 
 ```
 searchKey: printer.printer.stmt
+tags: [private]
 ```
 
 ```Go
@@ -999,6 +1044,7 @@ func (p *printer) stmt(stmt ast.Stmt, nextIsRBrace bool)
 
 ```
 searchKey: printer.printer.valueSpec
+tags: [private]
 ```
 
 ```Go
@@ -1009,6 +1055,7 @@ func (p *printer) valueSpec(s *ast.ValueSpec, keepType bool)
 
 ```
 searchKey: printer.printer.spec
+tags: [private]
 ```
 
 ```Go
@@ -1021,6 +1068,7 @@ The parameter n is the number of specs in the group. If doIndent is set, multi-l
 
 ```
 searchKey: printer.printer.genDecl
+tags: [private]
 ```
 
 ```Go
@@ -1031,6 +1079,7 @@ func (p *printer) genDecl(d *ast.GenDecl)
 
 ```
 searchKey: printer.printer.nodeSize
+tags: [private]
 ```
 
 ```Go
@@ -1043,6 +1092,7 @@ nodeSize determines the size of n in chars after formatting. The result is <= ma
 
 ```
 searchKey: printer.printer.numLines
+tags: [private]
 ```
 
 ```Go
@@ -1055,6 +1105,7 @@ numLines returns the number of lines spanned by node n in the original source.
 
 ```
 searchKey: printer.printer.bodySize
+tags: [private]
 ```
 
 ```Go
@@ -1067,6 +1118,7 @@ bodySize is like nodeSize but it is specialized for *ast.BlockStmt's.
 
 ```
 searchKey: printer.printer.funcBody
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1131,7 @@ funcBody prints a function body following a function header of given headerSize.
 
 ```
 searchKey: printer.printer.distanceFrom
+tags: [private]
 ```
 
 ```Go
@@ -1091,6 +1144,7 @@ distanceFrom returns the column difference between p.out (the current output pos
 
 ```
 searchKey: printer.printer.funcDecl
+tags: [private]
 ```
 
 ```Go
@@ -1101,6 +1155,7 @@ func (p *printer) funcDecl(d *ast.FuncDecl)
 
 ```
 searchKey: printer.printer.decl
+tags: [private]
 ```
 
 ```Go
@@ -1111,6 +1166,7 @@ func (p *printer) decl(decl ast.Decl)
 
 ```
 searchKey: printer.printer.declList
+tags: [private]
 ```
 
 ```Go
@@ -1121,16 +1177,18 @@ func (p *printer) declList(list []ast.Decl)
 
 ```
 searchKey: printer.printer.file
+tags: [private]
 ```
 
 ```Go
 func (p *printer) file(src *ast.File)
 ```
 
-#### <a id="printer.init" href="#printer.init">func (p *printer) init(cfg *Config, fset *token.FileSet, nodeSizes map[ast.Node]int)</a>
+#### <a id="printer.init.printer.go" href="#printer.init.printer.go">func (p *printer) init(cfg *Config, fset *token.FileSet, nodeSizes map[ast.Node]int)</a>
 
 ```
 searchKey: printer.printer.init
+tags: [private]
 ```
 
 ```Go
@@ -1141,6 +1199,7 @@ func (p *printer) init(cfg *Config, fset *token.FileSet, nodeSizes map[ast.Node]
 
 ```
 searchKey: printer.printer.internalError
+tags: [private]
 ```
 
 ```Go
@@ -1151,6 +1210,7 @@ func (p *printer) internalError(msg ...interface{})
 
 ```
 searchKey: printer.printer.commentsHaveNewline
+tags: [private]
 ```
 
 ```Go
@@ -1163,6 +1223,7 @@ commentsHaveNewline reports whether a list of comments belonging to an *ast.Comm
 
 ```
 searchKey: printer.printer.nextComment
+tags: [private]
 ```
 
 ```Go
@@ -1173,6 +1234,7 @@ func (p *printer) nextComment()
 
 ```
 searchKey: printer.printer.commentBefore
+tags: [private]
 ```
 
 ```Go
@@ -1185,6 +1247,7 @@ commentBefore reports whether the current comment group occurs before the next p
 
 ```
 searchKey: printer.printer.commentSizeBefore
+tags: [private]
 ```
 
 ```Go
@@ -1197,6 +1260,7 @@ commentSizeBefore returns the estimated size of the comments on the same line be
 
 ```
 searchKey: printer.printer.recordLine
+tags: [private]
 ```
 
 ```Go
@@ -1209,6 +1273,7 @@ recordLine records the output line number for the next non-whitespace token in *
 
 ```
 searchKey: printer.printer.linesFrom
+tags: [private]
 ```
 
 ```Go
@@ -1221,6 +1286,7 @@ linesFrom returns the number of output lines between the current output line and
 
 ```
 searchKey: printer.printer.posFor
+tags: [private]
 ```
 
 ```Go
@@ -1231,6 +1297,7 @@ func (p *printer) posFor(pos token.Pos) token.Position
 
 ```
 searchKey: printer.printer.lineFor
+tags: [private]
 ```
 
 ```Go
@@ -1241,6 +1308,7 @@ func (p *printer) lineFor(pos token.Pos) int
 
 ```
 searchKey: printer.printer.writeLineDirective
+tags: [private]
 ```
 
 ```Go
@@ -1253,6 +1321,7 @@ writeLineDirective writes a //line directive if necessary.
 
 ```
 searchKey: printer.printer.writeIndent
+tags: [private]
 ```
 
 ```Go
@@ -1265,6 +1334,7 @@ writeIndent writes indentation.
 
 ```
 searchKey: printer.printer.writeByte
+tags: [private]
 ```
 
 ```Go
@@ -1277,6 +1347,7 @@ writeByte writes ch n times to p.output and updates p.pos. Only used to write fo
 
 ```
 searchKey: printer.printer.writeString
+tags: [private]
 ```
 
 ```Go
@@ -1291,6 +1362,7 @@ Note: writeString is only used to write Go tokens, literals, and comments, all o
 
 ```
 searchKey: printer.printer.writeCommentPrefix
+tags: [private]
 ```
 
 ```Go
@@ -1303,6 +1375,7 @@ writeCommentPrefix writes the whitespace before a comment. If there is any pendi
 
 ```
 searchKey: printer.printer.writeComment
+tags: [private]
 ```
 
 ```Go
@@ -1313,6 +1386,7 @@ func (p *printer) writeComment(comment *ast.Comment)
 
 ```
 searchKey: printer.printer.writeCommentSuffix
+tags: [private]
 ```
 
 ```Go
@@ -1325,6 +1399,7 @@ writeCommentSuffix writes a line break after a comment if indicated and processe
 
 ```
 searchKey: printer.printer.containsLinebreak
+tags: [private]
 ```
 
 ```Go
@@ -1337,6 +1412,7 @@ containsLinebreak reports whether the whitespace buffer contains any line breaks
 
 ```
 searchKey: printer.printer.intersperseComments
+tags: [private]
 ```
 
 ```Go
@@ -1349,6 +1425,7 @@ intersperseComments consumes all comments that appear before the next token tok 
 
 ```
 searchKey: printer.printer.writeWhitespace
+tags: [private]
 ```
 
 ```Go
@@ -1361,6 +1438,7 @@ whiteWhitespace writes the first n whitespace entries.
 
 ```
 searchKey: printer.printer.print
+tags: [private]
 ```
 
 ```Go
@@ -1375,6 +1453,7 @@ Whitespace is accumulated until a non-whitespace token appears. Any comments tha
 
 ```
 searchKey: printer.printer.flush
+tags: [private]
 ```
 
 ```Go
@@ -1387,6 +1466,7 @@ flush prints any pending comments and whitespace occurring textually before the 
 
 ```
 searchKey: printer.printer.printNode
+tags: [private]
 ```
 
 ```Go
@@ -1397,6 +1477,7 @@ func (p *printer) printNode(node interface{}) error
 
 ```
 searchKey: printer.trimmer
+tags: [private]
 ```
 
 ```Go
@@ -1413,6 +1494,7 @@ A trimmer is an io.Writer filter for stripping tabwriter.Escape characters, trai
 
 ```
 searchKey: printer.trimmer.resetSpace
+tags: [private]
 ```
 
 ```Go
@@ -1423,6 +1505,7 @@ func (p *trimmer) resetSpace()
 
 ```
 searchKey: printer.trimmer.Write
+tags: [private]
 ```
 
 ```Go
@@ -1433,7 +1516,6 @@ func (p *trimmer) Write(data []byte) (n int, err error)
 
 ```
 searchKey: printer.Mode
-tags: [exported]
 ```
 
 ```Go
@@ -1446,7 +1528,6 @@ A Mode value is a set of flags (or 0). They control printing.
 
 ```
 searchKey: printer.Config
-tags: [exported]
 ```
 
 ```Go
@@ -1463,6 +1544,7 @@ A Config node controls the output of Fprint.
 
 ```
 searchKey: printer.Config.fprint
+tags: [private]
 ```
 
 ```Go
@@ -1475,7 +1557,6 @@ fprint implements Fprint and takes a nodesSizes map for setting up the printer s
 
 ```
 searchKey: printer.Config.Fprint
-tags: [exported]
 ```
 
 ```Go
@@ -1488,7 +1569,6 @@ Fprint "pretty-prints" an AST node to output for a given configuration cfg. Posi
 
 ```
 searchKey: printer.CommentedNode
-tags: [exported]
 ```
 
 ```Go
@@ -1504,6 +1584,7 @@ A CommentedNode bundles an AST node and corresponding comments. It may be provid
 
 ```
 searchKey: printer.checkMode
+tags: [private]
 ```
 
 ```Go
@@ -1514,6 +1595,7 @@ type checkMode uint
 
 ```
 searchKey: printer.entry
+tags: [private]
 ```
 
 ```Go
@@ -1527,6 +1609,7 @@ type entry struct {
 
 ```
 searchKey: printer.visitor
+tags: [private]
 ```
 
 ```Go
@@ -1537,6 +1620,7 @@ type visitor chan *ast.Ident
 
 ```
 searchKey: printer.visitor.Visit
+tags: [private]
 ```
 
 ```Go
@@ -1547,6 +1631,7 @@ func (v visitor) Visit(n ast.Node) (w ast.Visitor)
 
 ```
 searchKey: printer.limitWriter
+tags: [private]
 ```
 
 ```Go
@@ -1560,6 +1645,7 @@ type limitWriter struct {
 
 ```
 searchKey: printer.limitWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -1568,14 +1654,11 @@ func (l *limitWriter) Write(buf []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="appendLines" href="#appendLines">func appendLines(x, y []byte) []byte</a>
 
 ```
 searchKey: printer.appendLines
+tags: [private]
 ```
 
 ```Go
@@ -1588,6 +1671,7 @@ appendLines is like append(x, y...) but it avoids creating doubled blank lines, 
 
 ```
 searchKey: printer.isNL
+tags: [private]
 ```
 
 ```Go
@@ -1598,6 +1682,7 @@ func isNL(b byte) bool
 
 ```
 searchKey: printer.identListSize
+tags: [private]
 ```
 
 ```Go
@@ -1608,6 +1693,7 @@ func identListSize(list []*ast.Ident, maxSize int) (size int)
 
 ```
 searchKey: printer.walkBinary
+tags: [private]
 ```
 
 ```Go
@@ -1618,6 +1704,7 @@ func walkBinary(e *ast.BinaryExpr) (has4, has5 bool, maxProblem int)
 
 ```
 searchKey: printer.cutoff
+tags: [private]
 ```
 
 ```Go
@@ -1628,6 +1715,7 @@ func cutoff(e *ast.BinaryExpr, depth int) int
 
 ```
 searchKey: printer.diffPrec
+tags: [private]
 ```
 
 ```Go
@@ -1638,6 +1726,7 @@ func diffPrec(expr ast.Expr, prec int) int
 
 ```
 searchKey: printer.reduceDepth
+tags: [private]
 ```
 
 ```Go
@@ -1648,6 +1737,7 @@ func reduceDepth(depth int) int
 
 ```
 searchKey: printer.isBinary
+tags: [private]
 ```
 
 ```Go
@@ -1658,6 +1748,7 @@ func isBinary(expr ast.Expr) bool
 
 ```
 searchKey: printer.normalizedNumber
+tags: [private]
 ```
 
 ```Go
@@ -1672,6 +1763,7 @@ normalizedNumber doesn't modify the ast.BasicLit value lit points to. If lit is 
 
 ```
 searchKey: printer.isTypeName
+tags: [private]
 ```
 
 ```Go
@@ -1682,6 +1774,7 @@ func isTypeName(x ast.Expr) bool
 
 ```
 searchKey: printer.stripParens
+tags: [private]
 ```
 
 ```Go
@@ -1692,6 +1785,7 @@ func stripParens(x ast.Expr) ast.Expr
 
 ```
 searchKey: printer.stripParensAlways
+tags: [private]
 ```
 
 ```Go
@@ -1702,6 +1796,7 @@ func stripParensAlways(x ast.Expr) ast.Expr
 
 ```
 searchKey: printer.keepTypeColumn
+tags: [private]
 ```
 
 ```Go
@@ -1736,6 +1831,7 @@ leads to the type/values matrix below. A run of value columns (V) can be moved i
 
 ```
 searchKey: printer.sanitizeImportPath
+tags: [private]
 ```
 
 ```Go
@@ -1746,6 +1842,7 @@ func sanitizeImportPath(lit *ast.BasicLit) *ast.BasicLit
 
 ```
 searchKey: printer.declToken
+tags: [private]
 ```
 
 ```Go
@@ -1756,6 +1853,7 @@ func declToken(decl ast.Decl) (tok token.Token)
 
 ```
 searchKey: printer.isBlank
+tags: [private]
 ```
 
 ```Go
@@ -1768,6 +1866,7 @@ Returns true if s contains only white space (only tabs and blanks can appear in 
 
 ```
 searchKey: printer.commonPrefix
+tags: [private]
 ```
 
 ```Go
@@ -1780,6 +1879,7 @@ commonPrefix returns the common prefix of a and b.
 
 ```
 searchKey: printer.trimRight
+tags: [private]
 ```
 
 ```Go
@@ -1792,6 +1892,7 @@ trimRight returns s with trailing whitespace removed.
 
 ```
 searchKey: printer.stripCommonPrefix
+tags: [private]
 ```
 
 ```Go
@@ -1804,6 +1905,7 @@ stripCommonPrefix removes a common prefix from /*-style comment lines (unless no
 
 ```
 searchKey: printer.nlimit
+tags: [private]
 ```
 
 ```Go
@@ -1816,6 +1918,7 @@ nlimit limits n to maxNewlines.
 
 ```
 searchKey: printer.mayCombine
+tags: [private]
 ```
 
 ```Go
@@ -1826,6 +1929,7 @@ func mayCombine(prev token.Token, next byte) (b bool)
 
 ```
 searchKey: printer.getDoc
+tags: [private]
 ```
 
 ```Go
@@ -1838,6 +1942,7 @@ getNode returns the ast.CommentGroup associated with n, if any.
 
 ```
 searchKey: printer.getLastComment
+tags: [private]
 ```
 
 ```Go
@@ -1848,7 +1953,6 @@ func getLastComment(n ast.Node) *ast.CommentGroup
 
 ```
 searchKey: printer.Fprint
-tags: [exported]
 ```
 
 ```Go
@@ -1861,6 +1965,7 @@ Fprint "pretty-prints" an AST node to output. It calls Config.Fprint with defaul
 
 ```
 searchKey: printer.testprint
+tags: [private]
 ```
 
 ```Go
@@ -1871,6 +1976,7 @@ func testprint(out io.Writer, file *ast.File)
 
 ```
 searchKey: printer.initialize
+tags: [private]
 ```
 
 ```Go
@@ -1883,6 +1989,7 @@ cannot initialize in init because (printer) Fprint launches goroutines.
 
 ```
 searchKey: printer.BenchmarkPrint
+tags: [private]
 ```
 
 ```Go
@@ -1893,6 +2000,7 @@ func BenchmarkPrint(b *testing.B)
 
 ```
 searchKey: printer.format
+tags: [private]
 ```
 
 ```Go
@@ -1905,6 +2013,7 @@ format parses src, prints the corresponding AST, verifies the resulting src is s
 
 ```
 searchKey: printer.lineAt
+tags: [private]
 ```
 
 ```Go
@@ -1917,6 +2026,7 @@ lineAt returns the line in text starting at offset offs.
 
 ```
 searchKey: printer.diff
+tags: [private]
 ```
 
 ```Go
@@ -1929,6 +2039,7 @@ diff compares a and b.
 
 ```
 searchKey: printer.runcheck
+tags: [private]
 ```
 
 ```Go
@@ -1939,6 +2050,7 @@ func runcheck(t *testing.T, source, golden string, mode checkMode)
 
 ```
 searchKey: printer.check
+tags: [private]
 ```
 
 ```Go
@@ -1949,6 +2061,7 @@ func check(t *testing.T, source, golden string, mode checkMode)
 
 ```
 searchKey: printer.TestFiles
+tags: [private]
 ```
 
 ```Go
@@ -1959,6 +2072,7 @@ func TestFiles(t *testing.T)
 
 ```
 searchKey: printer.TestLineComments
+tags: [private]
 ```
 
 ```Go
@@ -1967,10 +2081,11 @@ func TestLineComments(t *testing.T)
 
 TestLineComments, using a simple test case, checks that consecutive line comments are properly terminated with a newline even if the AST position information is incorrect. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.printer_test.go" href="#init.printer_test.go">func init()</a>
 
 ```
 searchKey: printer.init
+tags: [private]
 ```
 
 ```Go
@@ -1983,6 +2098,7 @@ Verify that the printer can be invoked during initialization.
 
 ```
 searchKey: printer.TestBadNodes
+tags: [private]
 ```
 
 ```Go
@@ -1995,6 +2111,7 @@ Verify that the printer doesn't crash if the AST contains BadXXX nodes.
 
 ```
 searchKey: printer.testComment
+tags: [private]
 ```
 
 ```Go
@@ -2007,6 +2124,7 @@ testComment verifies that f can be parsed again after printing it with its first
 
 ```
 searchKey: printer.TestBadComments
+tags: [private]
 ```
 
 ```Go
@@ -2019,6 +2137,7 @@ Verify that the printer produces a correct program even if the position informat
 
 ```
 searchKey: printer.idents
+tags: [private]
 ```
 
 ```Go
@@ -2031,6 +2150,7 @@ idents is an iterator that returns all idents in f via the result channel.
 
 ```
 searchKey: printer.identCount
+tags: [private]
 ```
 
 ```Go
@@ -2043,6 +2163,7 @@ identCount returns the number of identifiers found in f.
 
 ```
 searchKey: printer.TestSourcePos
+tags: [private]
 ```
 
 ```Go
@@ -2055,6 +2176,7 @@ Verify that the SourcePos mode emits correct //line directives by testing that p
 
 ```
 searchKey: printer.TestIssue5945
+tags: [private]
 ```
 
 ```Go
@@ -2067,6 +2189,7 @@ Verify that the SourcePos mode doesn't emit unnecessary //line directives before
 
 ```
 searchKey: printer.TestDeclLists
+tags: [private]
 ```
 
 ```Go
@@ -2077,6 +2200,7 @@ func TestDeclLists(t *testing.T)
 
 ```
 searchKey: printer.TestStmtLists
+tags: [private]
 ```
 
 ```Go
@@ -2087,6 +2211,7 @@ func TestStmtLists(t *testing.T)
 
 ```
 searchKey: printer.TestBaseIndent
+tags: [private]
 ```
 
 ```Go
@@ -2097,6 +2222,7 @@ func TestBaseIndent(t *testing.T)
 
 ```
 searchKey: printer.TestFuncType
+tags: [private]
 ```
 
 ```Go
@@ -2109,6 +2235,7 @@ TestFuncType tests that an ast.FuncType with a nil Params field can be printed (
 
 ```
 searchKey: printer.TestWriteErrors
+tags: [private]
 ```
 
 ```Go
@@ -2121,6 +2248,7 @@ Test whether the printer stops writing after the first error
 
 ```
 searchKey: printer.TestX
+tags: [private]
 ```
 
 ```Go
@@ -2133,6 +2261,7 @@ TextX is a skeleton test that can be filled in for debugging one-off cases. Do n
 
 ```
 searchKey: printer.TestCommentedNode
+tags: [private]
 ```
 
 ```Go
@@ -2143,6 +2272,7 @@ func TestCommentedNode(t *testing.T)
 
 ```
 searchKey: printer.TestIssue11151
+tags: [private]
 ```
 
 ```Go
@@ -2153,6 +2283,7 @@ func TestIssue11151(t *testing.T)
 
 ```
 searchKey: printer.TestParenthesizedDecl
+tags: [private]
 ```
 
 ```Go
@@ -2165,6 +2296,7 @@ If a declaration has multiple specifications, a parenthesized declaration must b
 
 ```
 searchKey: printer.TestIssue32854
+tags: [private]
 ```
 
 ```Go

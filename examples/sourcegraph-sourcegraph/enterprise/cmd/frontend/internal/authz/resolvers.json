@@ -4,7 +4,9 @@
     "identifier": "resolvers",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/authz/resolvers",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "errDisabledSourcegraphDotCom",
                 "newPage": false,
                 "searchKey": "resolvers.errDisabledSourcegraphDotCom",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "now",
                 "newPage": false,
                 "searchKey": "resolvers.now",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "parseSchemaOnce",
                 "newPage": false,
                 "searchKey": "resolvers.parseSchemaOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "parseSchemaErr",
                 "newPage": false,
                 "searchKey": "resolvers.parseSchemaErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "parsedSchema",
                 "newPage": false,
                 "searchKey": "resolvers.parsedSchema",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +157,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "repositoryConnectionResolver",
                 "newPage": false,
                 "searchKey": "resolvers.repositoryConnectionResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -179,7 +197,9 @@
                       "identifier": "repositoryConnectionResolver.compute",
                       "newPage": false,
                       "searchKey": "resolvers.repositoryConnectionResolver.compute",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -199,7 +219,9 @@
                       "identifier": "repositoryConnectionResolver.Nodes",
                       "newPage": false,
                       "searchKey": "resolvers.repositoryConnectionResolver.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -219,7 +241,9 @@
                       "identifier": "repositoryConnectionResolver.TotalCount",
                       "newPage": false,
                       "searchKey": "resolvers.repositoryConnectionResolver.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -239,7 +263,9 @@
                       "identifier": "repositoryConnectionResolver.PageInfo",
                       "newPage": false,
                       "searchKey": "resolvers.repositoryConnectionResolver.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -262,9 +288,7 @@
                 "identifier": "Resolver",
                 "newPage": false,
                 "searchKey": "resolvers.Resolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,7 +306,9 @@
                       "identifier": "Resolver.checkLicense",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.checkLicense",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -302,9 +328,7 @@
                       "identifier": "Resolver.SetRepositoryPermissionsForUsers",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.SetRepositoryPermissionsForUsers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -324,9 +348,7 @@
                       "identifier": "Resolver.ScheduleRepositoryPermissionsSync",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.ScheduleRepositoryPermissionsSync",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -346,9 +368,7 @@
                       "identifier": "Resolver.ScheduleUserPermissionsSync",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.ScheduleUserPermissionsSync",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -368,9 +388,7 @@
                       "identifier": "Resolver.AuthorizedUserRepositories",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.AuthorizedUserRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -390,9 +408,7 @@
                       "identifier": "Resolver.UsersWithPendingPermissions",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.UsersWithPendingPermissions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -412,9 +428,7 @@
                       "identifier": "Resolver.AuthorizedUsers",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.AuthorizedUsers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,9 +448,7 @@
                       "identifier": "Resolver.RepositoryPermissionsInfo",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.RepositoryPermissionsInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -456,9 +468,7 @@
                       "identifier": "Resolver.UserPermissionsInfo",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.UserPermissionsInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -481,7 +491,9 @@
                 "identifier": "permissionsInfoResolver",
                 "newPage": false,
                 "searchKey": "resolvers.permissionsInfoResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -499,7 +511,9 @@
                       "identifier": "permissionsInfoResolver.Permissions",
                       "newPage": false,
                       "searchKey": "resolvers.permissionsInfoResolver.Permissions",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -519,7 +533,9 @@
                       "identifier": "permissionsInfoResolver.SyncedAt",
                       "newPage": false,
                       "searchKey": "resolvers.permissionsInfoResolver.SyncedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -539,7 +555,9 @@
                       "identifier": "permissionsInfoResolver.UpdatedAt",
                       "newPage": false,
                       "searchKey": "resolvers.permissionsInfoResolver.UpdatedAt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -562,7 +580,9 @@
                 "identifier": "userConnectionResolver",
                 "newPage": false,
                 "searchKey": "resolvers.userConnectionResolver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -580,7 +600,9 @@
                       "identifier": "userConnectionResolver.compute",
                       "newPage": false,
                       "searchKey": "resolvers.userConnectionResolver.compute",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -600,7 +622,9 @@
                       "identifier": "userConnectionResolver.Nodes",
                       "newPage": false,
                       "searchKey": "resolvers.userConnectionResolver.Nodes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -620,7 +644,9 @@
                       "identifier": "userConnectionResolver.TotalCount",
                       "newPage": false,
                       "searchKey": "resolvers.userConnectionResolver.TotalCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -640,7 +666,9 @@
                       "identifier": "userConnectionResolver.PageInfo",
                       "newPage": false,
                       "searchKey": "resolvers.userConnectionResolver.PageInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -663,7 +691,9 @@
                 "identifier": "fakeRepoupdaterClient",
                 "newPage": false,
                 "searchKey": "resolvers.fakeRepoupdaterClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -681,7 +711,9 @@
                       "identifier": "fakeRepoupdaterClient.SchedulePermsSync",
                       "newPage": false,
                       "searchKey": "resolvers.fakeRepoupdaterClient.SchedulePermsSync",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -707,7 +739,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -725,9 +759,7 @@
                 "identifier": "NewResolver",
                 "newPage": false,
                 "searchKey": "resolvers.NewResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -747,7 +779,9 @@
                 "identifier": "clock",
                 "newPage": false,
                 "searchKey": "resolvers.clock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -767,7 +801,9 @@
                 "identifier": "mustParseGraphQLSchema",
                 "newPage": false,
                 "searchKey": "resolvers.mustParseGraphQLSchema",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -787,7 +823,9 @@
                 "identifier": "TestResolver_SetRepositoryPermissionsForUsers",
                 "newPage": false,
                 "searchKey": "resolvers.TestResolver_SetRepositoryPermissionsForUsers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -807,7 +845,9 @@
                 "identifier": "TestResolver_ScheduleRepositoryPermissionsSync",
                 "newPage": false,
                 "searchKey": "resolvers.TestResolver_ScheduleRepositoryPermissionsSync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -827,7 +867,9 @@
                 "identifier": "TestResolver_ScheduleUserPermissionsSync",
                 "newPage": false,
                 "searchKey": "resolvers.TestResolver_ScheduleUserPermissionsSync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -847,7 +889,9 @@
                 "identifier": "TestResolver_AuthorizedUserRepositories",
                 "newPage": false,
                 "searchKey": "resolvers.TestResolver_AuthorizedUserRepositories",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -867,7 +911,9 @@
                 "identifier": "TestResolver_UsersWithPendingPermissions",
                 "newPage": false,
                 "searchKey": "resolvers.TestResolver_UsersWithPendingPermissions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -887,7 +933,9 @@
                 "identifier": "TestResolver_AuthorizedUsers",
                 "newPage": false,
                 "searchKey": "resolvers.TestResolver_AuthorizedUsers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -907,7 +955,9 @@
                 "identifier": "TestResolver_RepositoryPermissionsInfo",
                 "newPage": false,
                 "searchKey": "resolvers.TestResolver_RepositoryPermissionsInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -927,7 +977,9 @@
                 "identifier": "TestResolver_UserPermissionsInfo",
                 "newPage": false,
                 "searchKey": "resolvers.TestResolver_UserPermissionsInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

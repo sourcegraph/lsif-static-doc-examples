@@ -114,7 +114,7 @@ Package httputil provides HTTP utility functions, complementing the more common 
     * [func mustReadRequest(s string) *http.Request](#mustReadRequest)
     * [func TestDumpResponse(t *testing.T)](#TestDumpResponse)
     * [func TestDumpRequestOutIssue38352(t *testing.T)](#TestDumpRequestOutIssue38352)
-    * [func init()](#init)
+    * [func init()](#init.reverseproxy_test.go)
     * [func TestReverseProxy(t *testing.T)](#TestReverseProxy)
     * [func TestReverseProxyStripHeadersPresentInConnection(t *testing.T)](#TestReverseProxyStripHeadersPresentInConnection)
     * [func TestReverseProxyStripEmptyConnection(t *testing.T)](#TestReverseProxyStripEmptyConnection)
@@ -149,14 +149,11 @@ Package httputil provides HTTP utility functions, complementing the more common 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="fakeHopHeader" href="#fakeHopHeader">const fakeHopHeader</a>
 
 ```
 searchKey: httputil.fakeHopHeader
+tags: [private]
 ```
 
 ```Go
@@ -165,14 +162,11 @@ const fakeHopHeader = "X-Fake-Hop-Header-For-Test"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="reqWriteExcludeHeaderDump" href="#reqWriteExcludeHeaderDump">var reqWriteExcludeHeaderDump</a>
 
 ```
 searchKey: httputil.reqWriteExcludeHeaderDump
+tags: [private]
 ```
 
 ```Go
@@ -183,6 +177,7 @@ var reqWriteExcludeHeaderDump = ...
 
 ```
 searchKey: httputil.errNoBody
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +190,7 @@ errNoBody is a sentinel error value used by failureToReadBody so we can detect t
 
 ```
 searchKey: httputil.emptyBody
+tags: [private]
 ```
 
 ```Go
@@ -207,7 +203,6 @@ emptyBody is an instance of empty reader.
 
 ```
 searchKey: httputil.ErrLineTooLong
-tags: [exported]
 ```
 
 ```Go
@@ -220,7 +215,7 @@ ErrLineTooLong is returned when reading malformed chunked data with lines that a
 
 ```
 searchKey: httputil.ErrPersistEOF
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -233,7 +228,7 @@ Deprecated: No longer used.
 
 ```
 searchKey: httputil.ErrClosed
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -246,7 +241,7 @@ Deprecated: No longer used.
 
 ```
 searchKey: httputil.ErrPipeline
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -259,6 +254,7 @@ Deprecated: No longer used.
 
 ```
 searchKey: httputil.errClosed
+tags: [private]
 ```
 
 ```Go
@@ -271,6 +267,7 @@ This is an API usage error - the local side is closed. ErrPersistEOF (above) rep
 
 ```
 searchKey: httputil.hopHeaders
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +280,7 @@ Hop-by-hop headers. These are removed when sent to the backend. As of RFC 7230, 
 
 ```
 searchKey: httputil.inOurTests
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +292,7 @@ var inOurTests bool // whether we're in our own tests
 
 ```
 searchKey: httputil.dumpTests
+tags: [private]
 ```
 
 ```Go
@@ -304,6 +303,7 @@ var dumpTests = ...
 
 ```
 searchKey: httputil.dumpResTests
+tags: [private]
 ```
 
 ```Go
@@ -314,6 +314,7 @@ var dumpResTests = ...
 
 ```
 searchKey: httputil.proxyQueryTests
+tags: [private]
 ```
 
 ```Go
@@ -322,14 +323,11 @@ var proxyQueryTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="dumpConn" href="#dumpConn">type dumpConn struct</a>
 
 ```
 searchKey: httputil.dumpConn
+tags: [private]
 ```
 
 ```Go
@@ -345,6 +343,7 @@ dumpConn is a net.Conn which writes to Writer and reads from Reader
 
 ```
 searchKey: httputil.dumpConn.Close
+tags: [private]
 ```
 
 ```Go
@@ -355,6 +354,7 @@ func (c *dumpConn) Close() error
 
 ```
 searchKey: httputil.dumpConn.LocalAddr
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +365,7 @@ func (c *dumpConn) LocalAddr() net.Addr
 
 ```
 searchKey: httputil.dumpConn.RemoteAddr
+tags: [private]
 ```
 
 ```Go
@@ -375,6 +376,7 @@ func (c *dumpConn) RemoteAddr() net.Addr
 
 ```
 searchKey: httputil.dumpConn.SetDeadline
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +387,7 @@ func (c *dumpConn) SetDeadline(t time.Time) error
 
 ```
 searchKey: httputil.dumpConn.SetReadDeadline
+tags: [private]
 ```
 
 ```Go
@@ -395,6 +398,7 @@ func (c *dumpConn) SetReadDeadline(t time.Time) error
 
 ```
 searchKey: httputil.dumpConn.SetWriteDeadline
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +409,7 @@ func (c *dumpConn) SetWriteDeadline(t time.Time) error
 
 ```
 searchKey: httputil.neverEnding
+tags: [private]
 ```
 
 ```Go
@@ -415,6 +420,7 @@ type neverEnding byte
 
 ```
 searchKey: httputil.neverEnding.Read
+tags: [private]
 ```
 
 ```Go
@@ -425,6 +431,7 @@ func (b neverEnding) Read(p []byte) (n int, err error)
 
 ```
 searchKey: httputil.delegateReader
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +448,7 @@ delegateReader is a reader that delegates to another reader, once it arrives on 
 
 ```
 searchKey: httputil.delegateReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -451,6 +459,7 @@ func (r *delegateReader) Read(p []byte) (int, error)
 
 ```
 searchKey: httputil.failureToReadBody
+tags: [private]
 ```
 
 ```Go
@@ -463,6 +472,7 @@ failureToReadBody is a io.ReadCloser that just returns errNoBody on Read. It's s
 
 ```
 searchKey: httputil.failureToReadBody.Read
+tags: [private]
 ```
 
 ```Go
@@ -473,6 +483,7 @@ func (failureToReadBody) Read([]byte) (int, error)
 
 ```
 searchKey: httputil.failureToReadBody.Close
+tags: [private]
 ```
 
 ```Go
@@ -483,7 +494,6 @@ func (failureToReadBody) Close() error
 
 ```
 searchKey: httputil.ServerConn
-tags: [exported]
 ```
 
 ```Go
@@ -508,7 +518,7 @@ Deprecated: Use the Server in package net/http instead.
 
 ```
 searchKey: httputil.NewServerConn
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -523,7 +533,6 @@ Deprecated: Use the Server in package net/http instead.
 
 ```
 searchKey: httputil.ServerConn.Hijack
-tags: [exported]
 ```
 
 ```Go
@@ -536,7 +545,6 @@ Hijack detaches the ServerConn and returns the underlying connection as well as 
 
 ```
 searchKey: httputil.ServerConn.Close
-tags: [exported]
 ```
 
 ```Go
@@ -549,7 +557,6 @@ Close calls Hijack and then also closes the underlying connection.
 
 ```
 searchKey: httputil.ServerConn.Read
-tags: [exported]
 ```
 
 ```Go
@@ -562,7 +569,6 @@ Read returns the next request on the wire. An ErrPersistEOF is returned if it is
 
 ```
 searchKey: httputil.ServerConn.Pending
-tags: [exported]
 ```
 
 ```Go
@@ -575,7 +581,6 @@ Pending returns the number of unanswered requests that have been received on the
 
 ```
 searchKey: httputil.ServerConn.Write
-tags: [exported]
 ```
 
 ```Go
@@ -588,7 +593,6 @@ Write writes resp in response to req. To close the connection gracefully, set th
 
 ```
 searchKey: httputil.ClientConn
-tags: [exported]
 ```
 
 ```Go
@@ -614,7 +618,7 @@ Deprecated: Use Client or Transport in package net/http instead.
 
 ```
 searchKey: httputil.NewClientConn
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -629,7 +633,7 @@ Deprecated: Use the Client or Transport in package net/http instead.
 
 ```
 searchKey: httputil.NewProxyClientConn
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -644,7 +648,6 @@ Deprecated: Use the Client or Transport in package net/http instead.
 
 ```
 searchKey: httputil.ClientConn.Hijack
-tags: [exported]
 ```
 
 ```Go
@@ -657,7 +660,6 @@ Hijack detaches the ClientConn and returns the underlying connection as well as 
 
 ```
 searchKey: httputil.ClientConn.Close
-tags: [exported]
 ```
 
 ```Go
@@ -670,7 +672,6 @@ Close calls Hijack and then also closes the underlying connection.
 
 ```
 searchKey: httputil.ClientConn.Write
-tags: [exported]
 ```
 
 ```Go
@@ -683,7 +684,6 @@ Write writes a request. An ErrPersistEOF error is returned if the connection has
 
 ```
 searchKey: httputil.ClientConn.Pending
-tags: [exported]
 ```
 
 ```Go
@@ -696,7 +696,6 @@ Pending returns the number of unanswered requests that have been sent on the con
 
 ```
 searchKey: httputil.ClientConn.Read
-tags: [exported]
 ```
 
 ```Go
@@ -709,7 +708,6 @@ Read reads the next response from the wire. A valid response might be returned t
 
 ```
 searchKey: httputil.ClientConn.Do
-tags: [exported]
 ```
 
 ```Go
@@ -722,7 +720,6 @@ Do is convenience method that writes a request and reads a response.
 
 ```
 searchKey: httputil.ReverseProxy
-tags: [exported]
 ```
 
 ```Go
@@ -793,7 +790,6 @@ To prevent IP spoofing, be sure to delete any pre-existing X-Forwarded-For heade
 
 ```
 searchKey: httputil.NewSingleHostReverseProxy
-tags: [exported]
 ```
 
 ```Go
@@ -806,6 +802,7 @@ NewSingleHostReverseProxy returns a new ReverseProxy that routes URLs to the sch
 
 ```
 searchKey: httputil.ReverseProxy.defaultErrorHandler
+tags: [private]
 ```
 
 ```Go
@@ -816,6 +813,7 @@ func (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Req
 
 ```
 searchKey: httputil.ReverseProxy.getErrorHandler
+tags: [private]
 ```
 
 ```Go
@@ -826,6 +824,7 @@ func (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request
 
 ```
 searchKey: httputil.ReverseProxy.modifyResponse
+tags: [private]
 ```
 
 ```Go
@@ -838,7 +837,6 @@ modifyResponse conditionally runs the optional ModifyResponse hook and reports w
 
 ```
 searchKey: httputil.ReverseProxy.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -849,6 +847,7 @@ func (p *ReverseProxy) ServeHTTP(rw http.ResponseWriter, req *http.Request)
 
 ```
 searchKey: httputil.ReverseProxy.flushInterval
+tags: [private]
 ```
 
 ```Go
@@ -861,6 +860,7 @@ flushInterval returns the p.FlushInterval value, conditionally overriding its va
 
 ```
 searchKey: httputil.ReverseProxy.copyResponse
+tags: [private]
 ```
 
 ```Go
@@ -871,6 +871,7 @@ func (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval 
 
 ```
 searchKey: httputil.ReverseProxy.copyBuffer
+tags: [private]
 ```
 
 ```Go
@@ -883,6 +884,7 @@ copyBuffer returns any write errors or non-EOF read errors, and the amount of by
 
 ```
 searchKey: httputil.ReverseProxy.logf
+tags: [private]
 ```
 
 ```Go
@@ -893,6 +895,7 @@ func (p *ReverseProxy) logf(format string, args ...interface{})
 
 ```
 searchKey: httputil.ReverseProxy.handleUpgradeResponse
+tags: [private]
 ```
 
 ```Go
@@ -903,7 +906,6 @@ func (p *ReverseProxy) handleUpgradeResponse(rw http.ResponseWriter, req *http.R
 
 ```
 searchKey: httputil.BufferPool
-tags: [exported]
 ```
 
 ```Go
@@ -919,6 +921,7 @@ A BufferPool is an interface for getting and returning temporary byte slices for
 
 ```
 searchKey: httputil.writeFlusher
+tags: [private]
 ```
 
 ```Go
@@ -932,6 +935,7 @@ type writeFlusher interface {
 
 ```
 searchKey: httputil.maxLatencyWriter
+tags: [private]
 ```
 
 ```Go
@@ -949,6 +953,7 @@ type maxLatencyWriter struct {
 
 ```
 searchKey: httputil.maxLatencyWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -959,6 +964,7 @@ func (m *maxLatencyWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: httputil.maxLatencyWriter.delayedFlush
+tags: [private]
 ```
 
 ```Go
@@ -969,6 +975,7 @@ func (m *maxLatencyWriter) delayedFlush()
 
 ```
 searchKey: httputil.maxLatencyWriter.stop
+tags: [private]
 ```
 
 ```Go
@@ -979,6 +986,7 @@ func (m *maxLatencyWriter) stop()
 
 ```
 searchKey: httputil.switchProtocolCopier
+tags: [private]
 ```
 
 ```Go
@@ -993,6 +1001,7 @@ switchProtocolCopier exists so goroutines proxying data back and forth have nice
 
 ```
 searchKey: httputil.switchProtocolCopier.copyFromBackend
+tags: [private]
 ```
 
 ```Go
@@ -1003,6 +1012,7 @@ func (c switchProtocolCopier) copyFromBackend(errc chan<- error)
 
 ```
 searchKey: httputil.switchProtocolCopier.copyToBackend
+tags: [private]
 ```
 
 ```Go
@@ -1013,6 +1023,7 @@ func (c switchProtocolCopier) copyToBackend(errc chan<- error)
 
 ```
 searchKey: httputil.eofReader
+tags: [private]
 ```
 
 ```Go
@@ -1023,6 +1034,7 @@ type eofReader struct{}
 
 ```
 searchKey: httputil.eofReader.Close
+tags: [private]
 ```
 
 ```Go
@@ -1033,6 +1045,7 @@ func (n eofReader) Close() error
 
 ```
 searchKey: httputil.eofReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -1043,6 +1056,7 @@ func (n eofReader) Read([]byte) (int, error)
 
 ```
 searchKey: httputil.dumpTest
+tags: [private]
 ```
 
 ```Go
@@ -1064,6 +1078,7 @@ type dumpTest struct {
 
 ```
 searchKey: httputil.bufferPool
+tags: [private]
 ```
 
 ```Go
@@ -1077,6 +1092,7 @@ type bufferPool struct {
 
 ```
 searchKey: httputil.bufferPool.Get
+tags: [private]
 ```
 
 ```Go
@@ -1087,6 +1103,7 @@ func (bp bufferPool) Get() []byte
 
 ```
 searchKey: httputil.bufferPool.Put
+tags: [private]
 ```
 
 ```Go
@@ -1097,6 +1114,7 @@ func (bp bufferPool) Put(v []byte)
 
 ```
 searchKey: httputil.RoundTripperFunc
+tags: [private]
 ```
 
 ```Go
@@ -1107,6 +1125,7 @@ type RoundTripperFunc func(*http.Request) (*http.Response, error)
 
 ```
 searchKey: httputil.RoundTripperFunc.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -1117,6 +1136,7 @@ func (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)
 
 ```
 searchKey: httputil.failingRoundTripper
+tags: [private]
 ```
 
 ```Go
@@ -1127,6 +1147,7 @@ type failingRoundTripper struct{}
 
 ```
 searchKey: httputil.failingRoundTripper.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -1137,6 +1158,7 @@ func (failingRoundTripper) RoundTrip(*http.Request) (*http.Response, error)
 
 ```
 searchKey: httputil.staticResponseRoundTripper
+tags: [private]
 ```
 
 ```Go
@@ -1147,6 +1169,7 @@ type staticResponseRoundTripper struct{ res *http.Response }
 
 ```
 searchKey: httputil.staticResponseRoundTripper.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -1157,6 +1180,7 @@ func (rt staticResponseRoundTripper) RoundTrip(*http.Request) (*http.Response, e
 
 ```
 searchKey: httputil.staticTransport
+tags: [private]
 ```
 
 ```Go
@@ -1169,6 +1193,7 @@ type staticTransport struct {
 
 ```
 searchKey: httputil.staticTransport.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -1179,6 +1204,7 @@ func (t *staticTransport) RoundTrip(r *http.Request) (*http.Response, error)
 
 ```
 searchKey: httputil.roundTripperFunc
+tags: [private]
 ```
 
 ```Go
@@ -1189,6 +1215,7 @@ type roundTripperFunc func(req *http.Request) (*http.Response, error)
 
 ```
 searchKey: httputil.roundTripperFunc.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -1199,6 +1226,7 @@ func (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)
 
 ```
 searchKey: httputil.checkCloser
+tags: [private]
 ```
 
 ```Go
@@ -1211,6 +1239,7 @@ type checkCloser struct {
 
 ```
 searchKey: httputil.checkCloser.Close
+tags: [private]
 ```
 
 ```Go
@@ -1221,6 +1250,7 @@ func (cc *checkCloser) Close() error
 
 ```
 searchKey: httputil.checkCloser.Read
+tags: [private]
 ```
 
 ```Go
@@ -1229,14 +1259,11 @@ func (cc *checkCloser) Read(b []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="drainBody" href="#drainBody">func drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)</a>
 
 ```
 searchKey: httputil.drainBody
+tags: [private]
 ```
 
 ```Go
@@ -1251,6 +1278,7 @@ It returns an error if the initial slurp of all bytes fails. It does not attempt
 
 ```
 searchKey: httputil.outgoingLength
+tags: [private]
 ```
 
 ```Go
@@ -1263,7 +1291,6 @@ outGoingLength is a copy of the unexported (*http.Request).outgoingLength method
 
 ```
 searchKey: httputil.DumpRequestOut
-tags: [exported]
 ```
 
 ```Go
@@ -1276,6 +1303,7 @@ DumpRequestOut is like DumpRequest but for outgoing client requests. It includes
 
 ```
 searchKey: httputil.valueOrDefault
+tags: [private]
 ```
 
 ```Go
@@ -1288,7 +1316,6 @@ Return value if nonempty, def otherwise.
 
 ```
 searchKey: httputil.DumpRequest
-tags: [exported]
 ```
 
 ```Go
@@ -1305,7 +1332,6 @@ The documentation for http.Request.Write details which fields of req are include
 
 ```
 searchKey: httputil.DumpResponse
-tags: [exported]
 ```
 
 ```Go
@@ -1318,7 +1344,6 @@ DumpResponse is like DumpRequest but dumps a response.
 
 ```
 searchKey: httputil.NewChunkedReader
-tags: [exported]
 ```
 
 ```Go
@@ -1333,7 +1358,6 @@ NewChunkedReader is not needed by normal applications. The http package automati
 
 ```
 searchKey: httputil.NewChunkedWriter
-tags: [exported]
 ```
 
 ```Go
@@ -1348,6 +1372,7 @@ NewChunkedWriter is not needed by normal applications. The http package adds chu
 
 ```
 searchKey: httputil.singleJoiningSlash
+tags: [private]
 ```
 
 ```Go
@@ -1358,6 +1383,7 @@ func singleJoiningSlash(a, b string) string
 
 ```
 searchKey: httputil.joinURLPath
+tags: [private]
 ```
 
 ```Go
@@ -1368,6 +1394,7 @@ func joinURLPath(a, b *url.URL) (path, rawpath string)
 
 ```
 searchKey: httputil.copyHeader
+tags: [private]
 ```
 
 ```Go
@@ -1378,6 +1405,7 @@ func copyHeader(dst, src http.Header)
 
 ```
 searchKey: httputil.shouldPanicOnCopyError
+tags: [private]
 ```
 
 ```Go
@@ -1390,6 +1418,7 @@ shouldPanicOnCopyError reports whether the reverse proxy should panic with http.
 
 ```
 searchKey: httputil.removeConnectionHeaders
+tags: [private]
 ```
 
 ```Go
@@ -1402,6 +1431,7 @@ removeConnectionHeaders removes hop-by-hop headers listed in the "Connection" he
 
 ```
 searchKey: httputil.upgradeType
+tags: [private]
 ```
 
 ```Go
@@ -1412,6 +1442,7 @@ func upgradeType(h http.Header) string
 
 ```
 searchKey: httputil.TestDumpRequest
+tags: [private]
 ```
 
 ```Go
@@ -1422,6 +1453,7 @@ func TestDumpRequest(t *testing.T)
 
 ```
 searchKey: httputil.deadline
+tags: [private]
 ```
 
 ```Go
@@ -1434,6 +1466,7 @@ deadline returns the time which is needed before t.Deadline() if one is configur
 
 ```
 searchKey: httputil.chunk
+tags: [private]
 ```
 
 ```Go
@@ -1444,6 +1477,7 @@ func chunk(s string) string
 
 ```
 searchKey: httputil.mustParseURL
+tags: [private]
 ```
 
 ```Go
@@ -1454,6 +1488,7 @@ func mustParseURL(s string) *url.URL
 
 ```
 searchKey: httputil.mustNewRequest
+tags: [private]
 ```
 
 ```Go
@@ -1464,6 +1499,7 @@ func mustNewRequest(method, url string, body io.Reader) *http.Request
 
 ```
 searchKey: httputil.mustReadRequest
+tags: [private]
 ```
 
 ```Go
@@ -1474,6 +1510,7 @@ func mustReadRequest(s string) *http.Request
 
 ```
 searchKey: httputil.TestDumpResponse
+tags: [private]
 ```
 
 ```Go
@@ -1484,6 +1521,7 @@ func TestDumpResponse(t *testing.T)
 
 ```
 searchKey: httputil.TestDumpRequestOutIssue38352
+tags: [private]
 ```
 
 ```Go
@@ -1492,10 +1530,11 @@ func TestDumpRequestOutIssue38352(t *testing.T)
 
 Issue 38352: Check for deadlock on canceled requests. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.reverseproxy_test.go" href="#init.reverseproxy_test.go">func init()</a>
 
 ```
 searchKey: httputil.init
+tags: [private]
 ```
 
 ```Go
@@ -1506,6 +1545,7 @@ func init()
 
 ```
 searchKey: httputil.TestReverseProxy
+tags: [private]
 ```
 
 ```Go
@@ -1516,6 +1556,7 @@ func TestReverseProxy(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxyStripHeadersPresentInConnection
+tags: [private]
 ```
 
 ```Go
@@ -1528,6 +1569,7 @@ Issue 16875: remove any proxied headers mentioned in the "Connection" header val
 
 ```
 searchKey: httputil.TestReverseProxyStripEmptyConnection
+tags: [private]
 ```
 
 ```Go
@@ -1538,6 +1580,7 @@ func TestReverseProxyStripEmptyConnection(t *testing.T)
 
 ```
 searchKey: httputil.TestXForwardedFor
+tags: [private]
 ```
 
 ```Go
@@ -1548,6 +1591,7 @@ func TestXForwardedFor(t *testing.T)
 
 ```
 searchKey: httputil.TestXForwardedFor_Omit
+tags: [private]
 ```
 
 ```Go
@@ -1560,6 +1604,7 @@ Issue 38079: don't append to X-Forwarded-For if it's present but nil
 
 ```
 searchKey: httputil.TestReverseProxyQuery
+tags: [private]
 ```
 
 ```Go
@@ -1570,6 +1615,7 @@ func TestReverseProxyQuery(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxyFlushInterval
+tags: [private]
 ```
 
 ```Go
@@ -1580,6 +1626,7 @@ func TestReverseProxyFlushInterval(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxyFlushIntervalHeaders
+tags: [private]
 ```
 
 ```Go
@@ -1590,6 +1637,7 @@ func TestReverseProxyFlushIntervalHeaders(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxyCancellation
+tags: [private]
 ```
 
 ```Go
@@ -1600,6 +1648,7 @@ func TestReverseProxyCancellation(t *testing.T)
 
 ```
 searchKey: httputil.req
+tags: [private]
 ```
 
 ```Go
@@ -1610,6 +1659,7 @@ func req(t *testing.T, v string) *http.Request
 
 ```
 searchKey: httputil.TestNilBody
+tags: [private]
 ```
 
 ```Go
@@ -1622,6 +1672,7 @@ Issue 12344
 
 ```
 searchKey: httputil.TestUserAgentHeader
+tags: [private]
 ```
 
 ```Go
@@ -1634,6 +1685,7 @@ Issue 15524
 
 ```
 searchKey: httputil.TestReverseProxyGetPutBuffer
+tags: [private]
 ```
 
 ```Go
@@ -1644,6 +1696,7 @@ func TestReverseProxyGetPutBuffer(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxy_Post
+tags: [private]
 ```
 
 ```Go
@@ -1654,6 +1707,7 @@ func TestReverseProxy_Post(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxy_NilBody
+tags: [private]
 ```
 
 ```Go
@@ -1666,6 +1720,7 @@ Issue 16036: send a Request with a nil Body when possible
 
 ```
 searchKey: httputil.TestReverseProxy_AllocatedHeader
+tags: [private]
 ```
 
 ```Go
@@ -1678,6 +1733,7 @@ Issue 33142: always allocate the request headers
 
 ```
 searchKey: httputil.TestReverseProxyModifyResponse
+tags: [private]
 ```
 
 ```Go
@@ -1690,6 +1746,7 @@ Issue 14237. Test ModifyResponse and that an error from it causes the proxy to r
 
 ```
 searchKey: httputil.TestReverseProxyErrorHandler
+tags: [private]
 ```
 
 ```Go
@@ -1700,6 +1757,7 @@ func TestReverseProxyErrorHandler(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxy_CopyBuffer
+tags: [private]
 ```
 
 ```Go
@@ -1712,6 +1770,7 @@ Issue 16659: log errors from short read
 
 ```
 searchKey: httputil.BenchmarkServeHTTP
+tags: [private]
 ```
 
 ```Go
@@ -1722,6 +1781,7 @@ func BenchmarkServeHTTP(b *testing.B)
 
 ```
 searchKey: httputil.TestServeHTTPDeepCopy
+tags: [private]
 ```
 
 ```Go
@@ -1732,6 +1792,7 @@ func TestServeHTTPDeepCopy(t *testing.T)
 
 ```
 searchKey: httputil.TestClonesRequestHeaders
+tags: [private]
 ```
 
 ```Go
@@ -1744,6 +1805,7 @@ Issue 18327: verify we always do a deep copy of the Request.Header map before an
 
 ```
 searchKey: httputil.TestModifyResponseClosesBody
+tags: [private]
 ```
 
 ```Go
@@ -1754,6 +1816,7 @@ func TestModifyResponseClosesBody(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxy_PanicBodyError
+tags: [private]
 ```
 
 ```Go
@@ -1766,6 +1829,7 @@ Issue 23643: panic on body copy error
 
 ```
 searchKey: httputil.TestSelectFlushInterval
+tags: [private]
 ```
 
 ```Go
@@ -1776,6 +1840,7 @@ func TestSelectFlushInterval(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxyWebSocket
+tags: [private]
 ```
 
 ```Go
@@ -1786,6 +1851,7 @@ func TestReverseProxyWebSocket(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxyWebSocketCancellation
+tags: [private]
 ```
 
 ```Go
@@ -1796,6 +1862,7 @@ func TestReverseProxyWebSocketCancellation(t *testing.T)
 
 ```
 searchKey: httputil.TestUnannouncedTrailer
+tags: [private]
 ```
 
 ```Go
@@ -1806,6 +1873,7 @@ func TestUnannouncedTrailer(t *testing.T)
 
 ```
 searchKey: httputil.TestSingleJoinSlash
+tags: [private]
 ```
 
 ```Go
@@ -1816,6 +1884,7 @@ func TestSingleJoinSlash(t *testing.T)
 
 ```
 searchKey: httputil.TestJoinURLPath
+tags: [private]
 ```
 
 ```Go

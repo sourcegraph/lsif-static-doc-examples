@@ -4,9 +4,7 @@
     "identifier": "csv",
     "newPage": true,
     "searchKey": "encoding/csv",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "benchmarkCSVData",
                 "newPage": false,
                 "searchKey": "csv.benchmarkCSVData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,9 +83,7 @@
                 "identifier": "ErrTrailingComma",
                 "newPage": false,
                 "searchKey": "csv.ErrTrailingComma",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -109,9 +103,7 @@
                 "identifier": "ErrBareQuote",
                 "newPage": false,
                 "searchKey": "csv.ErrBareQuote",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -131,9 +123,7 @@
                 "identifier": "ErrQuote",
                 "newPage": false,
                 "searchKey": "csv.ErrQuote",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -153,9 +143,7 @@
                 "identifier": "ErrFieldCount",
                 "newPage": false,
                 "searchKey": "csv.ErrFieldCount",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -175,7 +163,9 @@
                 "identifier": "errInvalidDelim",
                 "newPage": false,
                 "searchKey": "csv.errInvalidDelim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -195,7 +185,9 @@
                 "identifier": "readTests",
                 "newPage": false,
                 "searchKey": "csv.readTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -215,7 +207,9 @@
                 "identifier": "writeTests",
                 "newPage": false,
                 "searchKey": "csv.writeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -235,7 +229,9 @@
                 "identifier": "benchmarkWriteData",
                 "newPage": false,
                 "searchKey": "csv.benchmarkWriteData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -258,9 +254,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -278,9 +272,7 @@
                 "identifier": "ParseError",
                 "newPage": false,
                 "searchKey": "csv.ParseError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -298,9 +290,7 @@
                       "identifier": "ParseError.Error",
                       "newPage": false,
                       "searchKey": "csv.ParseError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -320,9 +310,7 @@
                       "identifier": "ParseError.Unwrap",
                       "newPage": false,
                       "searchKey": "csv.ParseError.Unwrap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -345,9 +333,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "csv.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -365,9 +351,7 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "csv.NewReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -387,9 +371,7 @@
                       "identifier": "Reader.Read",
                       "newPage": false,
                       "searchKey": "csv.Reader.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -409,9 +391,7 @@
                       "identifier": "Reader.FieldPos",
                       "newPage": false,
                       "searchKey": "csv.Reader.FieldPos",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -431,9 +411,7 @@
                       "identifier": "Reader.ReadAll",
                       "newPage": false,
                       "searchKey": "csv.Reader.ReadAll",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -453,7 +431,9 @@
                       "identifier": "Reader.readLine",
                       "newPage": false,
                       "searchKey": "csv.Reader.readLine",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -473,7 +453,9 @@
                       "identifier": "Reader.readRecord",
                       "newPage": false,
                       "searchKey": "csv.Reader.readRecord",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -496,7 +478,9 @@
                 "identifier": "position",
                 "newPage": false,
                 "searchKey": "csv.position",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -516,9 +500,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "csv.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -536,9 +518,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "csv.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -558,9 +538,7 @@
                       "identifier": "Writer.Write",
                       "newPage": false,
                       "searchKey": "csv.Writer.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -580,9 +558,7 @@
                       "identifier": "Writer.Flush",
                       "newPage": false,
                       "searchKey": "csv.Writer.Flush",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -602,9 +578,7 @@
                       "identifier": "Writer.Error",
                       "newPage": false,
                       "searchKey": "csv.Writer.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -624,9 +598,7 @@
                       "identifier": "Writer.WriteAll",
                       "newPage": false,
                       "searchKey": "csv.Writer.WriteAll",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -646,7 +618,9 @@
                       "identifier": "Writer.fieldNeedsQuotes",
                       "newPage": false,
                       "searchKey": "csv.Writer.fieldNeedsQuotes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -669,7 +643,9 @@
                 "identifier": "readTest",
                 "newPage": false,
                 "searchKey": "csv.readTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -689,7 +665,9 @@
                 "identifier": "nTimes",
                 "newPage": false,
                 "searchKey": "csv.nTimes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -707,7 +685,9 @@
                       "identifier": "nTimes.Read",
                       "newPage": false,
                       "searchKey": "csv.nTimes.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -730,7 +710,9 @@
                 "identifier": "errorWriter",
                 "newPage": false,
                 "searchKey": "csv.errorWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -748,7 +730,9 @@
                       "identifier": "errorWriter.Write",
                       "newPage": false,
                       "searchKey": "csv.errorWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -774,9 +758,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -794,7 +776,9 @@
                 "identifier": "validDelim",
                 "newPage": false,
                 "searchKey": "csv.validDelim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -814,7 +798,9 @@
                 "identifier": "lengthNL",
                 "newPage": false,
                 "searchKey": "csv.lengthNL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -834,7 +820,9 @@
                 "identifier": "nextRune",
                 "newPage": false,
                 "searchKey": "csv.nextRune",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -854,7 +842,9 @@
                 "identifier": "TestRead",
                 "newPage": false,
                 "searchKey": "csv.TestRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -874,7 +864,9 @@
                 "identifier": "firstError",
                 "newPage": false,
                 "searchKey": "csv.firstError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -894,7 +886,9 @@
                 "identifier": "errorWithPosition",
                 "newPage": false,
                 "searchKey": "csv.errorWithPosition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -914,7 +908,9 @@
                 "identifier": "makePositions",
                 "newPage": false,
                 "searchKey": "csv.makePositions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -934,7 +930,9 @@
                 "identifier": "benchmarkRead",
                 "newPage": false,
                 "searchKey": "csv.benchmarkRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -954,7 +952,9 @@
                 "identifier": "BenchmarkRead",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -974,7 +974,9 @@
                 "identifier": "BenchmarkReadWithFieldsPerRecord",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadWithFieldsPerRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -994,7 +996,9 @@
                 "identifier": "BenchmarkReadWithoutFieldsPerRecord",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadWithoutFieldsPerRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1014,7 +1018,9 @@
                 "identifier": "BenchmarkReadLargeFields",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadLargeFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1034,7 +1040,9 @@
                 "identifier": "BenchmarkReadReuseRecord",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1054,7 +1062,9 @@
                 "identifier": "BenchmarkReadReuseRecordWithFieldsPerRecord",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecordWithFieldsPerRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1074,7 +1084,9 @@
                 "identifier": "BenchmarkReadReuseRecordWithoutFieldsPerRecord",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecordWithoutFieldsPerRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1094,7 +1106,9 @@
                 "identifier": "BenchmarkReadReuseRecordLargeFields",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecordLargeFields",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1114,7 +1128,9 @@
                 "identifier": "TestWrite",
                 "newPage": false,
                 "searchKey": "csv.TestWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1134,7 +1150,9 @@
                 "identifier": "TestError",
                 "newPage": false,
                 "searchKey": "csv.TestError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1154,7 +1172,9 @@
                 "identifier": "BenchmarkWrite",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

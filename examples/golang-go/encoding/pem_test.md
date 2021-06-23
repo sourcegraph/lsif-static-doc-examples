@@ -9,10 +9,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleDecode" href="#ExampleDecode">func ExampleDecode()</a>
 
 ```
 searchKey: pem_test.ExampleDecode
+tags: [private]
 ```
 
 ```Go
@@ -23,6 +28,7 @@ func ExampleDecode()
 
 ```
 searchKey: pem_test.ExampleEncode
+tags: [private]
 ```
 
 ```Go

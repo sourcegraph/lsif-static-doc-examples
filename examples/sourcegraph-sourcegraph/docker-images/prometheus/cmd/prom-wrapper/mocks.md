@@ -226,15 +226,10 @@
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="MockAPI" href="#MockAPI">type MockAPI struct</a>
 
 ```
 searchKey: mocks.MockAPI
-tags: [exported]
 ```
 
 ```Go
@@ -302,7 +297,6 @@ MockAPI is a mock implementation of the API interface (from the package github.c
 
 ```
 searchKey: mocks.NewMockAPI
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +309,6 @@ NewMockAPI creates a new mock of the API interface. All methods return zero valu
 
 ```
 searchKey: mocks.NewMockAPIFrom
-tags: [exported]
 ```
 
 ```Go
@@ -328,7 +321,6 @@ NewMockAPIFrom creates a new mock of the MockAPI interface. All methods delegate
 
 ```
 searchKey: mocks.MockAPI.AlertManagers
-tags: [exported]
 ```
 
 ```Go
@@ -341,7 +333,6 @@ AlertManagers delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: mocks.MockAPI.Alerts
-tags: [exported]
 ```
 
 ```Go
@@ -354,7 +345,6 @@ Alerts delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockAPI.CleanTombstones
-tags: [exported]
 ```
 
 ```Go
@@ -367,7 +357,6 @@ CleanTombstones delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: mocks.MockAPI.Config
-tags: [exported]
 ```
 
 ```Go
@@ -380,7 +369,6 @@ Config delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockAPI.DeleteSeries
-tags: [exported]
 ```
 
 ```Go
@@ -393,7 +381,6 @@ DeleteSeries delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: mocks.MockAPI.Flags
-tags: [exported]
 ```
 
 ```Go
@@ -406,7 +393,6 @@ Flags delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: mocks.MockAPI.LabelNames
-tags: [exported]
 ```
 
 ```Go
@@ -419,7 +405,6 @@ LabelNames delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: mocks.MockAPI.LabelValues
-tags: [exported]
 ```
 
 ```Go
@@ -432,7 +417,6 @@ LabelValues delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockAPI.Metadata
-tags: [exported]
 ```
 
 ```Go
@@ -445,7 +429,6 @@ Metadata delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: mocks.MockAPI.Query
-tags: [exported]
 ```
 
 ```Go
@@ -458,7 +441,6 @@ Query delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: mocks.MockAPI.QueryRange
-tags: [exported]
 ```
 
 ```Go
@@ -471,7 +453,6 @@ QueryRange delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: mocks.MockAPI.Rules
-tags: [exported]
 ```
 
 ```Go
@@ -484,7 +465,6 @@ Rules delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: mocks.MockAPI.Runtimeinfo
-tags: [exported]
 ```
 
 ```Go
@@ -497,7 +477,6 @@ Runtimeinfo delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockAPI.Series
-tags: [exported]
 ```
 
 ```Go
@@ -510,7 +489,6 @@ Series delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockAPI.Snapshot
-tags: [exported]
 ```
 
 ```Go
@@ -523,7 +501,6 @@ Snapshot delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: mocks.MockAPI.TSDB
-tags: [exported]
 ```
 
 ```Go
@@ -536,7 +513,6 @@ TSDB delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: mocks.MockAPI.Targets
-tags: [exported]
 ```
 
 ```Go
@@ -549,7 +525,6 @@ Targets delegates to the next hook function in the queue and stores the paramete
 
 ```
 searchKey: mocks.MockAPI.TargetsMetadata
-tags: [exported]
 ```
 
 ```Go
@@ -562,7 +537,6 @@ TargetsMetadata delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: mocks.APIAlertManagersFunc
-tags: [exported]
 ```
 
 ```Go
@@ -580,7 +554,6 @@ APIAlertManagersFunc describes the behavior when the AlertManagers method of the
 
 ```
 searchKey: mocks.APIAlertManagersFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -593,7 +566,6 @@ SetDefaultHook sets function that is called when the AlertManagers method of the
 
 ```
 searchKey: mocks.APIAlertManagersFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -606,7 +578,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the AlertM
 
 ```
 searchKey: mocks.APIAlertManagersFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -619,7 +590,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APIAlertManagersFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -632,6 +602,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APIAlertManagersFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +613,7 @@ func (f *APIAlertManagersFunc) nextHook() func(context.Context) (v1.AlertManager
 
 ```
 searchKey: mocks.APIAlertManagersFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -652,7 +624,6 @@ func (f *APIAlertManagersFunc) appendCall(r0 APIAlertManagersFuncCall)
 
 ```
 searchKey: mocks.APIAlertManagersFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -665,7 +636,6 @@ History returns a sequence of APIAlertManagersFuncCall objects describing the in
 
 ```
 searchKey: mocks.APIAlertManagersFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -688,7 +658,6 @@ APIAlertManagersFuncCall is an object that describes an invocation of method Ale
 
 ```
 searchKey: mocks.APIAlertManagersFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -701,7 +670,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIAlertManagersFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -714,7 +682,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APIAlertsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -732,7 +699,6 @@ APIAlertsFunc describes the behavior when the Alerts method of the parent MockAP
 
 ```
 searchKey: mocks.APIAlertsFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -745,7 +711,6 @@ SetDefaultHook sets function that is called when the Alerts method of the parent
 
 ```
 searchKey: mocks.APIAlertsFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -758,7 +723,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Alerts
 
 ```
 searchKey: mocks.APIAlertsFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -771,7 +735,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APIAlertsFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -784,6 +747,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APIAlertsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -794,6 +758,7 @@ func (f *APIAlertsFunc) nextHook() func(context.Context) (v1.AlertsResult, error
 
 ```
 searchKey: mocks.APIAlertsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -804,7 +769,6 @@ func (f *APIAlertsFunc) appendCall(r0 APIAlertsFuncCall)
 
 ```
 searchKey: mocks.APIAlertsFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -817,7 +781,6 @@ History returns a sequence of APIAlertsFuncCall objects describing the invocatio
 
 ```
 searchKey: mocks.APIAlertsFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -840,7 +803,6 @@ APIAlertsFuncCall is an object that describes an invocation of method Alerts on 
 
 ```
 searchKey: mocks.APIAlertsFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -853,7 +815,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIAlertsFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -866,7 +827,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APICleanTombstonesFunc
-tags: [exported]
 ```
 
 ```Go
@@ -884,7 +844,6 @@ APICleanTombstonesFunc describes the behavior when the CleanTombstones method of
 
 ```
 searchKey: mocks.APICleanTombstonesFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -897,7 +856,6 @@ SetDefaultHook sets function that is called when the CleanTombstones method of t
 
 ```
 searchKey: mocks.APICleanTombstonesFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -910,7 +868,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the CleanT
 
 ```
 searchKey: mocks.APICleanTombstonesFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -923,7 +880,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APICleanTombstonesFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -936,6 +892,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APICleanTombstonesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +903,7 @@ func (f *APICleanTombstonesFunc) nextHook() func(context.Context) error
 
 ```
 searchKey: mocks.APICleanTombstonesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -956,7 +914,6 @@ func (f *APICleanTombstonesFunc) appendCall(r0 APICleanTombstonesFuncCall)
 
 ```
 searchKey: mocks.APICleanTombstonesFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -969,7 +926,6 @@ History returns a sequence of APICleanTombstonesFuncCall objects describing the 
 
 ```
 searchKey: mocks.APICleanTombstonesFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -989,7 +945,6 @@ APICleanTombstonesFuncCall is an object that describes an invocation of method C
 
 ```
 searchKey: mocks.APICleanTombstonesFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1002,7 +957,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APICleanTombstonesFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1015,7 +969,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APIConfigFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1033,7 +986,6 @@ APIConfigFunc describes the behavior when the Config method of the parent MockAP
 
 ```
 searchKey: mocks.APIConfigFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1046,7 +998,6 @@ SetDefaultHook sets function that is called when the Config method of the parent
 
 ```
 searchKey: mocks.APIConfigFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1059,7 +1010,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Config
 
 ```
 searchKey: mocks.APIConfigFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1072,7 +1022,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APIConfigFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1085,6 +1034,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APIConfigFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1095,6 +1045,7 @@ func (f *APIConfigFunc) nextHook() func(context.Context) (v1.ConfigResult, error
 
 ```
 searchKey: mocks.APIConfigFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1105,7 +1056,6 @@ func (f *APIConfigFunc) appendCall(r0 APIConfigFuncCall)
 
 ```
 searchKey: mocks.APIConfigFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1118,7 +1068,6 @@ History returns a sequence of APIConfigFuncCall objects describing the invocatio
 
 ```
 searchKey: mocks.APIConfigFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1141,7 +1090,6 @@ APIConfigFuncCall is an object that describes an invocation of method Config on 
 
 ```
 searchKey: mocks.APIConfigFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1154,7 +1102,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIConfigFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1167,7 +1114,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APIDeleteSeriesFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1185,7 +1131,6 @@ APIDeleteSeriesFunc describes the behavior when the DeleteSeries method of the p
 
 ```
 searchKey: mocks.APIDeleteSeriesFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1198,7 +1143,6 @@ SetDefaultHook sets function that is called when the DeleteSeries method of the 
 
 ```
 searchKey: mocks.APIDeleteSeriesFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1211,7 +1155,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Delete
 
 ```
 searchKey: mocks.APIDeleteSeriesFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1224,7 +1167,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APIDeleteSeriesFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1237,6 +1179,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APIDeleteSeriesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1247,6 +1190,7 @@ func (f *APIDeleteSeriesFunc) nextHook() func(context.Context, []string, time.Ti
 
 ```
 searchKey: mocks.APIDeleteSeriesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1257,7 +1201,6 @@ func (f *APIDeleteSeriesFunc) appendCall(r0 APIDeleteSeriesFuncCall)
 
 ```
 searchKey: mocks.APIDeleteSeriesFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1270,7 +1213,6 @@ History returns a sequence of APIDeleteSeriesFuncCall objects describing the inv
 
 ```
 searchKey: mocks.APIDeleteSeriesFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1299,7 +1241,6 @@ APIDeleteSeriesFuncCall is an object that describes an invocation of method Dele
 
 ```
 searchKey: mocks.APIDeleteSeriesFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1312,7 +1253,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIDeleteSeriesFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1325,7 +1265,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APIFlagsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1343,7 +1282,6 @@ APIFlagsFunc describes the behavior when the Flags method of the parent MockAPI 
 
 ```
 searchKey: mocks.APIFlagsFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1356,7 +1294,6 @@ SetDefaultHook sets function that is called when the Flags method of the parent 
 
 ```
 searchKey: mocks.APIFlagsFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1369,7 +1306,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Flags 
 
 ```
 searchKey: mocks.APIFlagsFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1382,7 +1318,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APIFlagsFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1395,6 +1330,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APIFlagsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1405,6 +1341,7 @@ func (f *APIFlagsFunc) nextHook() func(context.Context) (v1.FlagsResult, error)
 
 ```
 searchKey: mocks.APIFlagsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1415,7 +1352,6 @@ func (f *APIFlagsFunc) appendCall(r0 APIFlagsFuncCall)
 
 ```
 searchKey: mocks.APIFlagsFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1428,7 +1364,6 @@ History returns a sequence of APIFlagsFuncCall objects describing the invocation
 
 ```
 searchKey: mocks.APIFlagsFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1451,7 +1386,6 @@ APIFlagsFuncCall is an object that describes an invocation of method Flags on an
 
 ```
 searchKey: mocks.APIFlagsFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1464,7 +1398,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIFlagsFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1477,7 +1410,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APILabelNamesFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1495,7 +1427,6 @@ APILabelNamesFunc describes the behavior when the LabelNames method of the paren
 
 ```
 searchKey: mocks.APILabelNamesFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1508,7 +1439,6 @@ SetDefaultHook sets function that is called when the LabelNames method of the pa
 
 ```
 searchKey: mocks.APILabelNamesFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1521,7 +1451,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the LabelN
 
 ```
 searchKey: mocks.APILabelNamesFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1534,7 +1463,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APILabelNamesFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1547,6 +1475,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APILabelNamesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1557,6 +1486,7 @@ func (f *APILabelNamesFunc) nextHook() func(context.Context, time.Time, time.Tim
 
 ```
 searchKey: mocks.APILabelNamesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1567,7 +1497,6 @@ func (f *APILabelNamesFunc) appendCall(r0 APILabelNamesFuncCall)
 
 ```
 searchKey: mocks.APILabelNamesFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1580,7 +1509,6 @@ History returns a sequence of APILabelNamesFuncCall objects describing the invoc
 
 ```
 searchKey: mocks.APILabelNamesFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1612,7 +1540,6 @@ APILabelNamesFuncCall is an object that describes an invocation of method LabelN
 
 ```
 searchKey: mocks.APILabelNamesFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1625,7 +1552,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APILabelNamesFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1638,7 +1564,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APILabelValuesFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1656,7 +1581,6 @@ APILabelValuesFunc describes the behavior when the LabelValues method of the par
 
 ```
 searchKey: mocks.APILabelValuesFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1669,7 +1593,6 @@ SetDefaultHook sets function that is called when the LabelValues method of the p
 
 ```
 searchKey: mocks.APILabelValuesFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1682,7 +1605,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the LabelV
 
 ```
 searchKey: mocks.APILabelValuesFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1695,7 +1617,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APILabelValuesFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1708,6 +1629,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APILabelValuesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1718,6 +1640,7 @@ func (f *APILabelValuesFunc) nextHook() func(context.Context, string, time.Time,
 
 ```
 searchKey: mocks.APILabelValuesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1728,7 +1651,6 @@ func (f *APILabelValuesFunc) appendCall(r0 APILabelValuesFuncCall)
 
 ```
 searchKey: mocks.APILabelValuesFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1741,7 +1663,6 @@ History returns a sequence of APILabelValuesFuncCall objects describing the invo
 
 ```
 searchKey: mocks.APILabelValuesFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1776,7 +1697,6 @@ APILabelValuesFuncCall is an object that describes an invocation of method Label
 
 ```
 searchKey: mocks.APILabelValuesFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1789,7 +1709,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APILabelValuesFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1802,7 +1721,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APIMetadataFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1820,7 +1738,6 @@ APIMetadataFunc describes the behavior when the Metadata method of the parent Mo
 
 ```
 searchKey: mocks.APIMetadataFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1833,7 +1750,6 @@ SetDefaultHook sets function that is called when the Metadata method of the pare
 
 ```
 searchKey: mocks.APIMetadataFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1846,7 +1762,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Metada
 
 ```
 searchKey: mocks.APIMetadataFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1859,7 +1774,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APIMetadataFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1872,6 +1786,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APIMetadataFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1882,6 +1797,7 @@ func (f *APIMetadataFunc) nextHook() func(context.Context, string, string) (map[
 
 ```
 searchKey: mocks.APIMetadataFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1892,7 +1808,6 @@ func (f *APIMetadataFunc) appendCall(r0 APIMetadataFuncCall)
 
 ```
 searchKey: mocks.APIMetadataFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1905,7 +1820,6 @@ History returns a sequence of APIMetadataFuncCall objects describing the invocat
 
 ```
 searchKey: mocks.APIMetadataFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1934,7 +1848,6 @@ APIMetadataFuncCall is an object that describes an invocation of method Metadata
 
 ```
 searchKey: mocks.APIMetadataFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1947,7 +1860,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIMetadataFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1960,7 +1872,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APIQueryFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1978,7 +1889,6 @@ APIQueryFunc describes the behavior when the Query method of the parent MockAPI 
 
 ```
 searchKey: mocks.APIQueryFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1991,7 +1901,6 @@ SetDefaultHook sets function that is called when the Query method of the parent 
 
 ```
 searchKey: mocks.APIQueryFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2004,7 +1913,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Query 
 
 ```
 searchKey: mocks.APIQueryFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2017,7 +1925,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APIQueryFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2030,6 +1937,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APIQueryFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2040,6 +1948,7 @@ func (f *APIQueryFunc) nextHook() func(context.Context, string, time.Time) (mode
 
 ```
 searchKey: mocks.APIQueryFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2050,7 +1959,6 @@ func (f *APIQueryFunc) appendCall(r0 APIQueryFuncCall)
 
 ```
 searchKey: mocks.APIQueryFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2063,7 +1971,6 @@ History returns a sequence of APIQueryFuncCall objects describing the invocation
 
 ```
 searchKey: mocks.APIQueryFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2095,7 +2002,6 @@ APIQueryFuncCall is an object that describes an invocation of method Query on an
 
 ```
 searchKey: mocks.APIQueryFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2108,7 +2014,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIQueryFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2121,7 +2026,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APIQueryRangeFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2139,7 +2043,6 @@ APIQueryRangeFunc describes the behavior when the QueryRange method of the paren
 
 ```
 searchKey: mocks.APIQueryRangeFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2152,7 +2055,6 @@ SetDefaultHook sets function that is called when the QueryRange method of the pa
 
 ```
 searchKey: mocks.APIQueryRangeFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2165,7 +2067,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the QueryR
 
 ```
 searchKey: mocks.APIQueryRangeFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2178,7 +2079,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APIQueryRangeFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2191,6 +2091,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APIQueryRangeFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2201,6 +2102,7 @@ func (f *APIQueryRangeFunc) nextHook() func(context.Context, string, v1.Range) (
 
 ```
 searchKey: mocks.APIQueryRangeFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2211,7 +2113,6 @@ func (f *APIQueryRangeFunc) appendCall(r0 APIQueryRangeFuncCall)
 
 ```
 searchKey: mocks.APIQueryRangeFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2224,7 +2125,6 @@ History returns a sequence of APIQueryRangeFuncCall objects describing the invoc
 
 ```
 searchKey: mocks.APIQueryRangeFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2256,7 +2156,6 @@ APIQueryRangeFuncCall is an object that describes an invocation of method QueryR
 
 ```
 searchKey: mocks.APIQueryRangeFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2269,7 +2168,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIQueryRangeFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2282,7 +2180,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APIRulesFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2300,7 +2197,6 @@ APIRulesFunc describes the behavior when the Rules method of the parent MockAPI 
 
 ```
 searchKey: mocks.APIRulesFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2313,7 +2209,6 @@ SetDefaultHook sets function that is called when the Rules method of the parent 
 
 ```
 searchKey: mocks.APIRulesFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2326,7 +2221,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Rules 
 
 ```
 searchKey: mocks.APIRulesFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2339,7 +2233,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APIRulesFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2352,6 +2245,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APIRulesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2362,6 +2256,7 @@ func (f *APIRulesFunc) nextHook() func(context.Context) (v1.RulesResult, error)
 
 ```
 searchKey: mocks.APIRulesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2372,7 +2267,6 @@ func (f *APIRulesFunc) appendCall(r0 APIRulesFuncCall)
 
 ```
 searchKey: mocks.APIRulesFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2385,7 +2279,6 @@ History returns a sequence of APIRulesFuncCall objects describing the invocation
 
 ```
 searchKey: mocks.APIRulesFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2408,7 +2301,6 @@ APIRulesFuncCall is an object that describes an invocation of method Rules on an
 
 ```
 searchKey: mocks.APIRulesFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2421,7 +2313,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIRulesFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2434,7 +2325,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APIRuntimeinfoFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2452,7 +2342,6 @@ APIRuntimeinfoFunc describes the behavior when the Runtimeinfo method of the par
 
 ```
 searchKey: mocks.APIRuntimeinfoFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2465,7 +2354,6 @@ SetDefaultHook sets function that is called when the Runtimeinfo method of the p
 
 ```
 searchKey: mocks.APIRuntimeinfoFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2478,7 +2366,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Runtim
 
 ```
 searchKey: mocks.APIRuntimeinfoFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2491,7 +2378,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APIRuntimeinfoFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2504,6 +2390,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APIRuntimeinfoFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2514,6 +2401,7 @@ func (f *APIRuntimeinfoFunc) nextHook() func(context.Context) (v1.RuntimeinfoRes
 
 ```
 searchKey: mocks.APIRuntimeinfoFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2524,7 +2412,6 @@ func (f *APIRuntimeinfoFunc) appendCall(r0 APIRuntimeinfoFuncCall)
 
 ```
 searchKey: mocks.APIRuntimeinfoFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2537,7 +2424,6 @@ History returns a sequence of APIRuntimeinfoFuncCall objects describing the invo
 
 ```
 searchKey: mocks.APIRuntimeinfoFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2560,7 +2446,6 @@ APIRuntimeinfoFuncCall is an object that describes an invocation of method Runti
 
 ```
 searchKey: mocks.APIRuntimeinfoFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2573,7 +2458,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIRuntimeinfoFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2586,7 +2470,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APISeriesFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2604,7 +2487,6 @@ APISeriesFunc describes the behavior when the Series method of the parent MockAP
 
 ```
 searchKey: mocks.APISeriesFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2617,7 +2499,6 @@ SetDefaultHook sets function that is called when the Series method of the parent
 
 ```
 searchKey: mocks.APISeriesFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2630,7 +2511,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Series
 
 ```
 searchKey: mocks.APISeriesFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2643,7 +2523,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APISeriesFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2656,6 +2535,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APISeriesFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2666,6 +2546,7 @@ func (f *APISeriesFunc) nextHook() func(context.Context, []string, time.Time, ti
 
 ```
 searchKey: mocks.APISeriesFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2676,7 +2557,6 @@ func (f *APISeriesFunc) appendCall(r0 APISeriesFuncCall)
 
 ```
 searchKey: mocks.APISeriesFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2689,7 +2569,6 @@ History returns a sequence of APISeriesFuncCall objects describing the invocatio
 
 ```
 searchKey: mocks.APISeriesFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2724,7 +2603,6 @@ APISeriesFuncCall is an object that describes an invocation of method Series on 
 
 ```
 searchKey: mocks.APISeriesFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2737,7 +2615,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APISeriesFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2750,7 +2627,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APISnapshotFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2768,7 +2644,6 @@ APISnapshotFunc describes the behavior when the Snapshot method of the parent Mo
 
 ```
 searchKey: mocks.APISnapshotFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2781,7 +2656,6 @@ SetDefaultHook sets function that is called when the Snapshot method of the pare
 
 ```
 searchKey: mocks.APISnapshotFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2794,7 +2668,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Snapsh
 
 ```
 searchKey: mocks.APISnapshotFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2807,7 +2680,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APISnapshotFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2820,6 +2692,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APISnapshotFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2830,6 +2703,7 @@ func (f *APISnapshotFunc) nextHook() func(context.Context, bool) (v1.SnapshotRes
 
 ```
 searchKey: mocks.APISnapshotFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2840,7 +2714,6 @@ func (f *APISnapshotFunc) appendCall(r0 APISnapshotFuncCall)
 
 ```
 searchKey: mocks.APISnapshotFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2853,7 +2726,6 @@ History returns a sequence of APISnapshotFuncCall objects describing the invocat
 
 ```
 searchKey: mocks.APISnapshotFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2879,7 +2751,6 @@ APISnapshotFuncCall is an object that describes an invocation of method Snapshot
 
 ```
 searchKey: mocks.APISnapshotFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2892,7 +2763,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APISnapshotFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -2905,7 +2775,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APITSDBFunc
-tags: [exported]
 ```
 
 ```Go
@@ -2923,7 +2792,6 @@ APITSDBFunc describes the behavior when the TSDB method of the parent MockAPI in
 
 ```
 searchKey: mocks.APITSDBFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -2936,7 +2804,6 @@ SetDefaultHook sets function that is called when the TSDB method of the parent M
 
 ```
 searchKey: mocks.APITSDBFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -2949,7 +2816,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the TSDB m
 
 ```
 searchKey: mocks.APITSDBFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2962,7 +2828,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APITSDBFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -2975,6 +2840,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APITSDBFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2985,6 +2851,7 @@ func (f *APITSDBFunc) nextHook() func(context.Context) (v1.TSDBResult, error)
 
 ```
 searchKey: mocks.APITSDBFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2995,7 +2862,6 @@ func (f *APITSDBFunc) appendCall(r0 APITSDBFuncCall)
 
 ```
 searchKey: mocks.APITSDBFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -3008,7 +2874,6 @@ History returns a sequence of APITSDBFuncCall objects describing the invocations
 
 ```
 searchKey: mocks.APITSDBFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -3031,7 +2896,6 @@ APITSDBFuncCall is an object that describes an invocation of method TSDB on an i
 
 ```
 searchKey: mocks.APITSDBFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -3044,7 +2908,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APITSDBFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -3057,7 +2920,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APITargetsFunc
-tags: [exported]
 ```
 
 ```Go
@@ -3075,7 +2937,6 @@ APITargetsFunc describes the behavior when the Targets method of the parent Mock
 
 ```
 searchKey: mocks.APITargetsFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -3088,7 +2949,6 @@ SetDefaultHook sets function that is called when the Targets method of the paren
 
 ```
 searchKey: mocks.APITargetsFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -3101,7 +2961,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Target
 
 ```
 searchKey: mocks.APITargetsFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3114,7 +2973,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APITargetsFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3127,6 +2985,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APITargetsFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3137,6 +2996,7 @@ func (f *APITargetsFunc) nextHook() func(context.Context) (v1.TargetsResult, err
 
 ```
 searchKey: mocks.APITargetsFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3147,7 +3007,6 @@ func (f *APITargetsFunc) appendCall(r0 APITargetsFuncCall)
 
 ```
 searchKey: mocks.APITargetsFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -3160,7 +3019,6 @@ History returns a sequence of APITargetsFuncCall objects describing the invocati
 
 ```
 searchKey: mocks.APITargetsFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -3183,7 +3041,6 @@ APITargetsFuncCall is an object that describes an invocation of method Targets o
 
 ```
 searchKey: mocks.APITargetsFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -3196,7 +3053,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APITargetsFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -3209,7 +3065,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.APITargetsMetadataFunc
-tags: [exported]
 ```
 
 ```Go
@@ -3227,7 +3082,6 @@ APITargetsMetadataFunc describes the behavior when the TargetsMetadata method of
 
 ```
 searchKey: mocks.APITargetsMetadataFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -3240,7 +3094,6 @@ SetDefaultHook sets function that is called when the TargetsMetadata method of t
 
 ```
 searchKey: mocks.APITargetsMetadataFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -3253,7 +3106,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Target
 
 ```
 searchKey: mocks.APITargetsMetadataFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3266,7 +3118,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.APITargetsMetadataFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -3279,6 +3130,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.APITargetsMetadataFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -3289,6 +3141,7 @@ func (f *APITargetsMetadataFunc) nextHook() func(context.Context, string, string
 
 ```
 searchKey: mocks.APITargetsMetadataFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -3299,7 +3152,6 @@ func (f *APITargetsMetadataFunc) appendCall(r0 APITargetsMetadataFuncCall)
 
 ```
 searchKey: mocks.APITargetsMetadataFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -3312,7 +3164,6 @@ History returns a sequence of APITargetsMetadataFuncCall objects describing the 
 
 ```
 searchKey: mocks.APITargetsMetadataFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -3344,7 +3195,6 @@ APITargetsMetadataFuncCall is an object that describes an invocation of method T
 
 ```
 searchKey: mocks.APITargetsMetadataFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -3357,7 +3207,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APITargetsMetadataFuncCall.Results
-tags: [exported]
 ```
 
 ```Go

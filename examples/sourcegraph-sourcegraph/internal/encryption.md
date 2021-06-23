@@ -34,11 +34,14 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MockGenerateRSAKey" href="#MockGenerateRSAKey">var MockGenerateRSAKey</a>
 
 ```
 searchKey: encryption.MockGenerateRSAKey
-tags: [exported]
 ```
 
 ```Go
@@ -49,11 +52,14 @@ MockGenerateRSAKey can be used in tests to speed up key generation.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Key" href="#Key">type Key interface</a>
 
 ```
 searchKey: encryption.Key
-tags: [exported]
 ```
 
 ```Go
@@ -73,7 +79,6 @@ Key combines the Encrypter & Decrypter interfaces.
 
 ```
 searchKey: encryption.KeyVersion
-tags: [exported]
 ```
 
 ```Go
@@ -89,7 +94,6 @@ type KeyVersion struct {
 
 ```
 searchKey: encryption.KeyVersion.JSON
-tags: [exported]
 ```
 
 ```Go
@@ -100,7 +104,6 @@ func (v KeyVersion) JSON() string
 
 ```
 searchKey: encryption.Encrypter
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +118,6 @@ Encrypter is anything that can encrypt a value
 
 ```
 searchKey: encryption.Decrypter
-tags: [exported]
 ```
 
 ```Go
@@ -130,7 +132,6 @@ Decrypter is anything that can decrypt a value
 
 ```
 searchKey: encryption.Secret
-tags: [exported]
 ```
 
 ```Go
@@ -145,7 +146,6 @@ Secret is a utility type to make it harder to accidentally leak secret values in
 
 ```
 searchKey: encryption.NewSecret
-tags: [exported]
 ```
 
 ```Go
@@ -156,7 +156,6 @@ func NewSecret(v string) Secret
 
 ```
 searchKey: encryption.Secret.String
-tags: [exported]
 ```
 
 ```Go
@@ -169,7 +168,6 @@ String implements stringer, obfuscating the value
 
 ```
 searchKey: encryption.Secret.Secret
-tags: [exported]
 ```
 
 ```Go
@@ -182,7 +180,6 @@ Secret returns the unobfuscated value
 
 ```
 searchKey: encryption.Secret.MarshalJSON
-tags: [exported]
 ```
 
 ```Go
@@ -195,7 +192,6 @@ MarshalJSON overrides the default JSON marshaling implementation, obfuscating th
 
 ```
 searchKey: encryption.NoopKey
-tags: [exported]
 ```
 
 ```Go
@@ -206,7 +202,6 @@ type NoopKey struct{}
 
 ```
 searchKey: encryption.NoopKey.Version
-tags: [exported]
 ```
 
 ```Go
@@ -217,7 +212,6 @@ func (k *NoopKey) Version(ctx context.Context) (KeyVersion, error)
 
 ```
 searchKey: encryption.NoopKey.Encrypt
-tags: [exported]
 ```
 
 ```Go
@@ -228,7 +222,6 @@ func (k *NoopKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)
 
 ```
 searchKey: encryption.NoopKey.Decrypt
-tags: [exported]
 ```
 
 ```Go
@@ -239,7 +232,6 @@ func (k *NoopKey) Decrypt(ctx context.Context, ciphertext []byte) (*Secret, erro
 
 ```
 searchKey: encryption.RSAKey
-tags: [exported]
 ```
 
 ```Go
@@ -254,7 +246,6 @@ type RSAKey struct {
 
 ```
 searchKey: encryption.GenerateRSAKey
-tags: [exported]
 ```
 
 ```Go
@@ -265,10 +256,15 @@ GenerateRSAKey generates an RSA key pair and encrypts the private key with a pas
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestGenerateKey" href="#TestGenerateKey">func TestGenerateKey(t *testing.T)</a>
 
 ```
 searchKey: encryption.TestGenerateKey
+tags: [private]
 ```
 
 ```Go

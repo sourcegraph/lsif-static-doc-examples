@@ -4,7 +4,9 @@
     "identifier": "github",
     "newPage": true,
     "searchKey": "internal/authz/github",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "github.client",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "ClientAdapter",
                 "newPage": false,
                 "searchKey": "github.ClientAdapter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -80,9 +84,7 @@
                       "identifier": "ClientAdapter.WithToken",
                       "newPage": false,
                       "searchKey": "github.ClientAdapter.WithToken",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -105,7 +107,9 @@
                 "identifier": "mockClient",
                 "newPage": false,
                 "searchKey": "github.mockClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +127,9 @@
                       "identifier": "mockClient.ListAffiliatedRepositories",
                       "newPage": false,
                       "searchKey": "github.mockClient.ListAffiliatedRepositories",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -143,7 +149,9 @@
                       "identifier": "mockClient.ListRepositoryCollaborators",
                       "newPage": false,
                       "searchKey": "github.mockClient.ListRepositoryCollaborators",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -163,7 +171,9 @@
                       "identifier": "mockClient.WithToken",
                       "newPage": false,
                       "searchKey": "github.mockClient.WithToken",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -186,9 +196,7 @@
                 "identifier": "Provider",
                 "newPage": false,
                 "searchKey": "github.Provider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -206,9 +214,7 @@
                       "identifier": "NewProvider",
                       "newPage": false,
                       "searchKey": "github.NewProvider",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -228,9 +234,7 @@
                       "identifier": "Provider.FetchAccount",
                       "newPage": false,
                       "searchKey": "github.Provider.FetchAccount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -250,9 +254,7 @@
                       "identifier": "Provider.URN",
                       "newPage": false,
                       "searchKey": "github.Provider.URN",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -272,9 +274,7 @@
                       "identifier": "Provider.ServiceID",
                       "newPage": false,
                       "searchKey": "github.Provider.ServiceID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,9 +294,7 @@
                       "identifier": "Provider.ServiceType",
                       "newPage": false,
                       "searchKey": "github.Provider.ServiceType",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -316,9 +314,7 @@
                       "identifier": "Provider.Validate",
                       "newPage": false,
                       "searchKey": "github.Provider.Validate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -338,9 +334,7 @@
                       "identifier": "Provider.FetchUserPerms",
                       "newPage": false,
                       "searchKey": "github.Provider.FetchUserPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -360,9 +354,7 @@
                       "identifier": "Provider.FetchRepoPerms",
                       "newPage": false,
                       "searchKey": "github.Provider.FetchRepoPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -388,7 +380,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -406,9 +400,7 @@
                 "identifier": "NewAuthzProviders",
                 "newPage": false,
                 "searchKey": "github.NewAuthzProviders",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -428,7 +420,9 @@
                 "identifier": "newAuthzProvider",
                 "newPage": false,
                 "searchKey": "github.newAuthzProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -448,9 +442,7 @@
                 "identifier": "ValidateAuthz",
                 "newPage": false,
                 "searchKey": "github.ValidateAuthz",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -470,7 +462,9 @@
                 "identifier": "mustURL",
                 "newPage": false,
                 "searchKey": "github.mustURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -490,7 +484,9 @@
                 "identifier": "TestProvider_FetchUserPerms",
                 "newPage": false,
                 "searchKey": "github.TestProvider_FetchUserPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -510,7 +506,9 @@
                 "identifier": "TestProvider_FetchRepoPerms",
                 "newPage": false,
                 "searchKey": "github.TestProvider_FetchRepoPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -78,14 +78,11 @@ Package bits implements bit counting and manipulation functions for the predecla
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="uintSize" href="#uintSize">const uintSize</a>
 
 ```
 searchKey: bits.uintSize
+tags: [private]
 ```
 
 ```Go
@@ -97,7 +94,6 @@ const uintSize = 32 << (^uint(0) >> 63) // 32 or 64
 
 ```
 searchKey: bits.UintSize
-tags: [exported]
 ```
 
 ```Go
@@ -110,6 +106,7 @@ UintSize is the size of a uint in bits.
 
 ```
 searchKey: bits.deBruijn32
+tags: [private]
 ```
 
 ```Go
@@ -122,6 +119,7 @@ See [http://supertech.csail.mit.edu/papers/debruijn.pdf](http://supertech.csail.
 
 ```
 searchKey: bits.deBruijn64
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +130,7 @@ const deBruijn64 = 0x03f79d71b4ca8b09
 
 ```
 searchKey: bits.m0
+tags: [private]
 ```
 
 ```Go
@@ -143,6 +142,7 @@ const m0 = 0x5555555555555555 // 01010101 ...
 
 ```
 searchKey: bits.m1
+tags: [private]
 ```
 
 ```Go
@@ -154,6 +154,7 @@ const m1 = 0x3333333333333333 // 00110011 ...
 
 ```
 searchKey: bits.m2
+tags: [private]
 ```
 
 ```Go
@@ -165,6 +166,7 @@ const m2 = 0x0f0f0f0f0f0f0f0f // 00001111 ...
 
 ```
 searchKey: bits.m3
+tags: [private]
 ```
 
 ```Go
@@ -176,6 +178,7 @@ const m3 = 0x00ff00ff00ff00ff // etc.
 
 ```
 searchKey: bits.m4
+tags: [private]
 ```
 
 ```Go
@@ -186,6 +189,7 @@ const m4 = 0x0000ffff0000ffff
 
 ```
 searchKey: bits.ntz8tab
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +200,7 @@ const ntz8tab = ...
 
 ```
 searchKey: bits.pop8tab
+tags: [private]
 ```
 
 ```Go
@@ -206,6 +211,7 @@ const pop8tab = ...
 
 ```
 searchKey: bits.rev8tab
+tags: [private]
 ```
 
 ```Go
@@ -216,6 +222,7 @@ const rev8tab = ...
 
 ```
 searchKey: bits.len8tab
+tags: [private]
 ```
 
 ```Go
@@ -226,6 +233,7 @@ const len8tab = ...
 
 ```
 searchKey: bits.DeBruijn64
+tags: [private]
 ```
 
 ```Go
@@ -234,14 +242,11 @@ const DeBruijn64 = deBruijn64
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="deBruijn32tab" href="#deBruijn32tab">var deBruijn32tab</a>
 
 ```
 searchKey: bits.deBruijn32tab
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +257,7 @@ var deBruijn32tab = ...
 
 ```
 searchKey: bits.deBruijn64tab
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +268,7 @@ var deBruijn64tab = ...
 
 ```
 searchKey: bits.overflowError
+tags: [private]
 ```
 
 ```Go
@@ -272,6 +279,7 @@ var overflowError error
 
 ```
 searchKey: bits.divideError
+tags: [private]
 ```
 
 ```Go
@@ -280,15 +288,10 @@ var divideError error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="LeadingZeros" href="#LeadingZeros">func LeadingZeros(x uint) int</a>
 
 ```
 searchKey: bits.LeadingZeros
-tags: [exported]
 ```
 
 ```Go
@@ -301,7 +304,6 @@ LeadingZeros returns the number of leading zero bits in x; the result is UintSiz
 
 ```
 searchKey: bits.LeadingZeros8
-tags: [exported]
 ```
 
 ```Go
@@ -314,7 +316,6 @@ LeadingZeros8 returns the number of leading zero bits in x; the result is 8 for 
 
 ```
 searchKey: bits.LeadingZeros16
-tags: [exported]
 ```
 
 ```Go
@@ -327,7 +328,6 @@ LeadingZeros16 returns the number of leading zero bits in x; the result is 16 fo
 
 ```
 searchKey: bits.LeadingZeros32
-tags: [exported]
 ```
 
 ```Go
@@ -340,7 +340,6 @@ LeadingZeros32 returns the number of leading zero bits in x; the result is 32 fo
 
 ```
 searchKey: bits.LeadingZeros64
-tags: [exported]
 ```
 
 ```Go
@@ -353,7 +352,6 @@ LeadingZeros64 returns the number of leading zero bits in x; the result is 64 fo
 
 ```
 searchKey: bits.TrailingZeros
-tags: [exported]
 ```
 
 ```Go
@@ -366,7 +364,6 @@ TrailingZeros returns the number of trailing zero bits in x; the result is UintS
 
 ```
 searchKey: bits.TrailingZeros8
-tags: [exported]
 ```
 
 ```Go
@@ -379,7 +376,6 @@ TrailingZeros8 returns the number of trailing zero bits in x; the result is 8 fo
 
 ```
 searchKey: bits.TrailingZeros16
-tags: [exported]
 ```
 
 ```Go
@@ -392,7 +388,6 @@ TrailingZeros16 returns the number of trailing zero bits in x; the result is 16 
 
 ```
 searchKey: bits.TrailingZeros32
-tags: [exported]
 ```
 
 ```Go
@@ -405,7 +400,6 @@ TrailingZeros32 returns the number of trailing zero bits in x; the result is 32 
 
 ```
 searchKey: bits.TrailingZeros64
-tags: [exported]
 ```
 
 ```Go
@@ -418,7 +412,6 @@ TrailingZeros64 returns the number of trailing zero bits in x; the result is 64 
 
 ```
 searchKey: bits.OnesCount
-tags: [exported]
 ```
 
 ```Go
@@ -431,7 +424,6 @@ OnesCount returns the number of one bits ("population count") in x.
 
 ```
 searchKey: bits.OnesCount8
-tags: [exported]
 ```
 
 ```Go
@@ -444,7 +436,6 @@ OnesCount8 returns the number of one bits ("population count") in x.
 
 ```
 searchKey: bits.OnesCount16
-tags: [exported]
 ```
 
 ```Go
@@ -457,7 +448,6 @@ OnesCount16 returns the number of one bits ("population count") in x.
 
 ```
 searchKey: bits.OnesCount32
-tags: [exported]
 ```
 
 ```Go
@@ -470,7 +460,6 @@ OnesCount32 returns the number of one bits ("population count") in x.
 
 ```
 searchKey: bits.OnesCount64
-tags: [exported]
 ```
 
 ```Go
@@ -483,7 +472,6 @@ OnesCount64 returns the number of one bits ("population count") in x.
 
 ```
 searchKey: bits.RotateLeft
-tags: [exported]
 ```
 
 ```Go
@@ -498,7 +486,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.RotateLeft8
-tags: [exported]
 ```
 
 ```Go
@@ -513,7 +500,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.RotateLeft16
-tags: [exported]
 ```
 
 ```Go
@@ -528,7 +514,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.RotateLeft32
-tags: [exported]
 ```
 
 ```Go
@@ -543,7 +528,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.RotateLeft64
-tags: [exported]
 ```
 
 ```Go
@@ -558,7 +542,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Reverse
-tags: [exported]
 ```
 
 ```Go
@@ -571,7 +554,6 @@ Reverse returns the value of x with its bits in reversed order.
 
 ```
 searchKey: bits.Reverse8
-tags: [exported]
 ```
 
 ```Go
@@ -584,7 +566,6 @@ Reverse8 returns the value of x with its bits in reversed order.
 
 ```
 searchKey: bits.Reverse16
-tags: [exported]
 ```
 
 ```Go
@@ -597,7 +578,6 @@ Reverse16 returns the value of x with its bits in reversed order.
 
 ```
 searchKey: bits.Reverse32
-tags: [exported]
 ```
 
 ```Go
@@ -610,7 +590,6 @@ Reverse32 returns the value of x with its bits in reversed order.
 
 ```
 searchKey: bits.Reverse64
-tags: [exported]
 ```
 
 ```Go
@@ -623,7 +602,6 @@ Reverse64 returns the value of x with its bits in reversed order.
 
 ```
 searchKey: bits.ReverseBytes
-tags: [exported]
 ```
 
 ```Go
@@ -638,7 +616,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.ReverseBytes16
-tags: [exported]
 ```
 
 ```Go
@@ -653,7 +630,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.ReverseBytes32
-tags: [exported]
 ```
 
 ```Go
@@ -668,7 +644,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.ReverseBytes64
-tags: [exported]
 ```
 
 ```Go
@@ -683,7 +658,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Len
-tags: [exported]
 ```
 
 ```Go
@@ -696,7 +670,6 @@ Len returns the minimum number of bits required to represent x; the result is 0 
 
 ```
 searchKey: bits.Len8
-tags: [exported]
 ```
 
 ```Go
@@ -709,7 +682,6 @@ Len8 returns the minimum number of bits required to represent x; the result is 0
 
 ```
 searchKey: bits.Len16
-tags: [exported]
 ```
 
 ```Go
@@ -722,7 +694,6 @@ Len16 returns the minimum number of bits required to represent x; the result is 
 
 ```
 searchKey: bits.Len32
-tags: [exported]
 ```
 
 ```Go
@@ -735,7 +706,6 @@ Len32 returns the minimum number of bits required to represent x; the result is 
 
 ```
 searchKey: bits.Len64
-tags: [exported]
 ```
 
 ```Go
@@ -748,7 +718,6 @@ Len64 returns the minimum number of bits required to represent x; the result is 
 
 ```
 searchKey: bits.Add
-tags: [exported]
 ```
 
 ```Go
@@ -763,7 +732,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Add32
-tags: [exported]
 ```
 
 ```Go
@@ -778,7 +746,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Add64
-tags: [exported]
 ```
 
 ```Go
@@ -793,7 +760,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Sub
-tags: [exported]
 ```
 
 ```Go
@@ -808,7 +774,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Sub32
-tags: [exported]
 ```
 
 ```Go
@@ -823,7 +788,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Sub64
-tags: [exported]
 ```
 
 ```Go
@@ -838,7 +802,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Mul
-tags: [exported]
 ```
 
 ```Go
@@ -853,7 +816,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Mul32
-tags: [exported]
 ```
 
 ```Go
@@ -868,7 +830,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Mul64
-tags: [exported]
 ```
 
 ```Go
@@ -883,7 +844,6 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Div
-tags: [exported]
 ```
 
 ```Go
@@ -896,7 +856,6 @@ Div returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/
 
 ```
 searchKey: bits.Div32
-tags: [exported]
 ```
 
 ```Go
@@ -909,7 +868,6 @@ Div32 returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo
 
 ```
 searchKey: bits.Div64
-tags: [exported]
 ```
 
 ```Go
@@ -922,7 +880,6 @@ Div64 returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo
 
 ```
 searchKey: bits.Rem
-tags: [exported]
 ```
 
 ```Go
@@ -935,7 +892,6 @@ Rem returns the remainder of (hi, lo) divided by y. Rem panics for y == 0 (divis
 
 ```
 searchKey: bits.Rem32
-tags: [exported]
 ```
 
 ```Go
@@ -948,7 +904,6 @@ Rem32 returns the remainder of (hi, lo) divided by y. Rem32 panics for y == 0 (d
 
 ```
 searchKey: bits.Rem64
-tags: [exported]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "streaming",
     "newPage": true,
     "searchKey": "internal/search/streaming",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "commonFileFilters",
                 "newPage": false,
                 "searchKey": "streaming.commonFileFilters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "Filter",
                 "newPage": false,
                 "searchKey": "streaming.Filter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -101,9 +107,7 @@
                       "identifier": "Filter.Less",
                       "newPage": false,
                       "searchKey": "streaming.Filter.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,9 +130,7 @@
                 "identifier": "Filters",
                 "newPage": false,
                 "searchKey": "streaming.Filters",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -146,9 +148,7 @@
                       "identifier": "Filters.Add",
                       "newPage": false,
                       "searchKey": "streaming.Filters.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -168,9 +168,7 @@
                       "identifier": "Filters.MarkImportant",
                       "newPage": false,
                       "searchKey": "streaming.Filters.MarkImportant",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -190,9 +188,7 @@
                       "identifier": "Filters.Compute",
                       "newPage": false,
                       "searchKey": "streaming.Filters.Compute",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -215,7 +211,9 @@
                 "identifier": "filterSlice",
                 "newPage": false,
                 "searchKey": "streaming.filterSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -233,7 +231,9 @@
                       "identifier": "filterSlice.Len",
                       "newPage": false,
                       "searchKey": "streaming.filterSlice.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -253,7 +253,9 @@
                       "identifier": "filterSlice.Less",
                       "newPage": false,
                       "searchKey": "streaming.filterSlice.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -273,7 +275,9 @@
                       "identifier": "filterSlice.Swap",
                       "newPage": false,
                       "searchKey": "streaming.filterSlice.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -296,7 +300,9 @@
                 "identifier": "filterHeap",
                 "newPage": false,
                 "searchKey": "streaming.filterHeap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -314,7 +320,9 @@
                       "identifier": "filterHeap.Add",
                       "newPage": false,
                       "searchKey": "streaming.filterHeap.Add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -334,7 +342,9 @@
                       "identifier": "filterHeap.Less",
                       "newPage": false,
                       "searchKey": "streaming.filterHeap.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -354,7 +364,9 @@
                       "identifier": "filterHeap.Push",
                       "newPage": false,
                       "searchKey": "streaming.filterHeap.Push",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -374,7 +386,9 @@
                       "identifier": "filterHeap.Pop",
                       "newPage": false,
                       "searchKey": "streaming.filterHeap.Pop",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -397,9 +411,7 @@
                 "identifier": "Stats",
                 "newPage": false,
                 "searchKey": "streaming.Stats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -417,9 +429,7 @@
                       "identifier": "CollectStream",
                       "newPage": false,
                       "searchKey": "streaming.CollectStream",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -439,9 +449,7 @@
                       "identifier": "Stats.Update",
                       "newPage": false,
                       "searchKey": "streaming.Stats.Update",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -461,9 +469,7 @@
                       "identifier": "Stats.Zero",
                       "newPage": false,
                       "searchKey": "streaming.Stats.Zero",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -483,9 +489,7 @@
                       "identifier": "Stats.String",
                       "newPage": false,
                       "searchKey": "streaming.Stats.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -505,9 +509,7 @@
                       "identifier": "Stats.Equal",
                       "newPage": false,
                       "searchKey": "streaming.Stats.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -527,9 +529,7 @@
                       "identifier": "Stats.AllReposTimedOut",
                       "newPage": false,
                       "searchKey": "streaming.Stats.AllReposTimedOut",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -552,9 +552,7 @@
                 "identifier": "SearchFilters",
                 "newPage": false,
                 "searchKey": "streaming.SearchFilters",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -572,9 +570,7 @@
                       "identifier": "SearchFilters.Update",
                       "newPage": false,
                       "searchKey": "streaming.SearchFilters.Update",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -594,9 +590,7 @@
                       "identifier": "SearchFilters.Compute",
                       "newPage": false,
                       "searchKey": "streaming.SearchFilters.Compute",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -619,9 +613,7 @@
                 "identifier": "SearchEvent",
                 "newPage": false,
                 "searchKey": "streaming.SearchEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -641,9 +633,7 @@
                 "identifier": "Sender",
                 "newPage": false,
                 "searchKey": "streaming.Sender",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -661,9 +651,7 @@
                       "identifier": "WithLimit",
                       "newPage": false,
                       "searchKey": "streaming.WithLimit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -683,9 +671,7 @@
                       "identifier": "WithSelect",
                       "newPage": false,
                       "searchKey": "streaming.WithSelect",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -708,9 +694,7 @@
                 "identifier": "LimitStream",
                 "newPage": false,
                 "searchKey": "streaming.LimitStream",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -728,9 +712,7 @@
                       "identifier": "LimitStream.Send",
                       "newPage": false,
                       "searchKey": "streaming.LimitStream.Send",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -753,9 +735,7 @@
                 "identifier": "StreamFunc",
                 "newPage": false,
                 "searchKey": "streaming.StreamFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -773,9 +753,7 @@
                       "identifier": "StreamFunc.Send",
                       "newPage": false,
                       "searchKey": "streaming.StreamFunc.Send",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -801,7 +779,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -819,7 +799,9 @@
                 "identifier": "TestFilters",
                 "newPage": false,
                 "searchKey": "streaming.TestFilters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

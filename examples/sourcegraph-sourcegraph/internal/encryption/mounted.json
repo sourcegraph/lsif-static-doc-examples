@@ -4,7 +4,9 @@
     "identifier": "mounted",
     "newPage": true,
     "searchKey": "internal/encryption/mounted",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "theScriptOfBeeMovie",
                 "newPage": false,
                 "searchKey": "mounted.theScriptOfBeeMovie",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "Key",
                 "newPage": false,
                 "searchKey": "mounted.Key",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -101,9 +107,7 @@
                       "identifier": "NewKey",
                       "newPage": false,
                       "searchKey": "mounted.NewKey",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -123,9 +127,7 @@
                       "identifier": "Key.Version",
                       "newPage": false,
                       "searchKey": "mounted.Key.Version",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -145,9 +147,7 @@
                       "identifier": "Key.Encrypt",
                       "newPage": false,
                       "searchKey": "mounted.Key.Encrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -167,9 +167,7 @@
                       "identifier": "Key.Decrypt",
                       "newPage": false,
                       "searchKey": "mounted.Key.Decrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -192,7 +190,9 @@
                 "identifier": "encryptedValue",
                 "newPage": false,
                 "searchKey": "mounted.encryptedValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -215,7 +215,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -233,7 +235,9 @@
                 "identifier": "crc32Sum",
                 "newPage": false,
                 "searchKey": "mounted.crc32Sum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -253,7 +257,9 @@
                 "identifier": "TestRoundTrip",
                 "newPage": false,
                 "searchKey": "mounted.TestRoundTrip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

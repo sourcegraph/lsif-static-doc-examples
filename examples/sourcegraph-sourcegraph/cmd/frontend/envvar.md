@@ -18,15 +18,10 @@ Package envvar contains helpers for reading common environment variables.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="HTTPAddrInternal" href="#HTTPAddrInternal">var HTTPAddrInternal</a>
 
 ```
 searchKey: envvar.HTTPAddrInternal
-tags: [exported]
 ```
 
 ```Go
@@ -37,6 +32,7 @@ var HTTPAddrInternal = ...
 
 ```
 searchKey: envvar.sourcegraphDotComMode
+tags: [private]
 ```
 
 ```Go
@@ -47,6 +43,7 @@ var sourcegraphDotComMode, _ = ...
 
 ```
 searchKey: envvar.disableProfiler
+tags: [private]
 ```
 
 ```Go
@@ -57,6 +54,7 @@ var disableProfiler, _ = ...
 
 ```
 searchKey: envvar.openGraphPreviewServiceURL
+tags: [private]
 ```
 
 ```Go
@@ -65,15 +63,10 @@ var openGraphPreviewServiceURL = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="SourcegraphDotComMode" href="#SourcegraphDotComMode">func SourcegraphDotComMode() bool</a>
 
 ```
 searchKey: envvar.SourcegraphDotComMode
-tags: [exported]
 ```
 
 ```Go
@@ -86,7 +79,6 @@ SourcegraphDotComMode is true if this server is running Sourcegraph.com (solely 
 
 ```
 searchKey: envvar.MockSourcegraphDotComMode
-tags: [exported]
 ```
 
 ```Go
@@ -99,7 +91,6 @@ MockSourcegraphDotComMode is used by tests to mock the result of SourcegraphDotC
 
 ```
 searchKey: envvar.DisableProfiler
-tags: [exported]
 ```
 
 ```Go
@@ -110,7 +101,6 @@ func DisableProfiler() bool
 
 ```
 searchKey: envvar.OpenGraphPreviewServiceURL
-tags: [exported]
 ```
 
 ```Go

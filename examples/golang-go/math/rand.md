@@ -90,14 +90,11 @@ This package's outputs might be easily predictable regardless of how it's seeded
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="re" href="#re">const re</a>
 
 ```
 searchKey: rand.re
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +105,7 @@ const re = 7.69711747013104972
 
 ```
 searchKey: rand.rn
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +116,7 @@ const rn = 3.442619855899
 
 ```
 searchKey: rand.rngLen
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +127,7 @@ const rngLen = 607
 
 ```
 searchKey: rand.rngTap
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +138,7 @@ const rngTap = 273
 
 ```
 searchKey: rand.rngMax
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +149,7 @@ const rngMax = 1 << 63
 
 ```
 searchKey: rand.rngMask
+tags: [private]
 ```
 
 ```Go
@@ -158,6 +160,7 @@ const rngMask = rngMax - 1
 
 ```
 searchKey: rand.int32max
+tags: [private]
 ```
 
 ```Go
@@ -166,14 +169,11 @@ const int32max = (1 << 31) - 1
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ke" href="#ke">var ke</a>
 
 ```
 searchKey: rand.ke
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +184,7 @@ var ke = ...
 
 ```
 searchKey: rand.we
+tags: [private]
 ```
 
 ```Go
@@ -194,6 +195,7 @@ var we = ...
 
 ```
 searchKey: rand.fe
+tags: [private]
 ```
 
 ```Go
@@ -204,6 +206,7 @@ var fe = ...
 
 ```
 searchKey: rand.kn
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +217,7 @@ var kn = ...
 
 ```
 searchKey: rand.wn
+tags: [private]
 ```
 
 ```Go
@@ -224,6 +228,7 @@ var wn = ...
 
 ```
 searchKey: rand.fn
+tags: [private]
 ```
 
 ```Go
@@ -234,6 +239,7 @@ var fn = ...
 
 ```
 searchKey: rand.globalRand
+tags: [private]
 ```
 
 ```Go
@@ -244,6 +250,7 @@ var globalRand = New(&lockedSource{src: NewSource(1).(*rngSource)})
 
 ```
 searchKey: rand.rngCooked
+tags: [private]
 ```
 
 ```Go
@@ -254,15 +261,10 @@ rngCooked used for seeding. See gen_cooked.go for details.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Source" href="#Source">type Source interface</a>
 
 ```
 searchKey: rand.Source
-tags: [exported]
 ```
 
 ```Go
@@ -278,7 +280,6 @@ A Source represents a source of uniformly-distributed pseudo-random int64 values
 
 ```
 searchKey: rand.NewSource
-tags: [exported]
 ```
 
 ```Go
@@ -291,7 +292,6 @@ NewSource returns a new pseudo-random Source seeded with the given value. Unlike
 
 ```
 searchKey: rand.Source64
-tags: [exported]
 ```
 
 ```Go
@@ -307,7 +307,6 @@ A Source64 is a Source that can also generate uniformly-distributed pseudo-rando
 
 ```
 searchKey: rand.Rand
-tags: [exported]
 ```
 
 ```Go
@@ -332,7 +331,6 @@ A Rand is a source of random numbers.
 
 ```
 searchKey: rand.New
-tags: [exported]
 ```
 
 ```Go
@@ -345,7 +343,6 @@ New returns a new Rand that uses random values from src to generate other random
 
 ```
 searchKey: rand.Rand.ExpFloat64
-tags: [exported]
 ```
 
 ```Go
@@ -362,7 +359,6 @@ sample = ExpFloat64() / desiredRateParameter
 
 ```
 searchKey: rand.Rand.NormFloat64
-tags: [exported]
 ```
 
 ```Go
@@ -379,7 +375,6 @@ sample = NormFloat64() * desiredStdDev + desiredMean
 
 ```
 searchKey: rand.Rand.Seed
-tags: [exported]
 ```
 
 ```Go
@@ -392,7 +387,6 @@ Seed uses the provided seed value to initialize the generator to a deterministic
 
 ```
 searchKey: rand.Rand.Int63
-tags: [exported]
 ```
 
 ```Go
@@ -405,7 +399,6 @@ Int63 returns a non-negative pseudo-random 63-bit integer as an int64.
 
 ```
 searchKey: rand.Rand.Uint32
-tags: [exported]
 ```
 
 ```Go
@@ -418,7 +411,6 @@ Uint32 returns a pseudo-random 32-bit value as a uint32.
 
 ```
 searchKey: rand.Rand.Uint64
-tags: [exported]
 ```
 
 ```Go
@@ -431,7 +423,6 @@ Uint64 returns a pseudo-random 64-bit value as a uint64.
 
 ```
 searchKey: rand.Rand.Int31
-tags: [exported]
 ```
 
 ```Go
@@ -444,7 +435,6 @@ Int31 returns a non-negative pseudo-random 31-bit integer as an int32.
 
 ```
 searchKey: rand.Rand.Int
-tags: [exported]
 ```
 
 ```Go
@@ -457,7 +447,6 @@ Int returns a non-negative pseudo-random int.
 
 ```
 searchKey: rand.Rand.Int63n
-tags: [exported]
 ```
 
 ```Go
@@ -470,7 +459,6 @@ Int63n returns, as an int64, a non-negative pseudo-random number in the half-ope
 
 ```
 searchKey: rand.Rand.Int31n
-tags: [exported]
 ```
 
 ```Go
@@ -483,6 +471,7 @@ Int31n returns, as an int32, a non-negative pseudo-random number in the half-ope
 
 ```
 searchKey: rand.Rand.int31n
+tags: [private]
 ```
 
 ```Go
@@ -497,7 +486,6 @@ For implementation details, see: [https://lemire.me/blog/2016/06/27/a-fast-alter
 
 ```
 searchKey: rand.Rand.Intn
-tags: [exported]
 ```
 
 ```Go
@@ -510,7 +498,6 @@ Intn returns, as an int, a non-negative pseudo-random number in the half-open in
 
 ```
 searchKey: rand.Rand.Float64
-tags: [exported]
 ```
 
 ```Go
@@ -523,7 +510,6 @@ Float64 returns, as a float64, a pseudo-random number in the half-open interval 
 
 ```
 searchKey: rand.Rand.Float32
-tags: [exported]
 ```
 
 ```Go
@@ -536,7 +522,6 @@ Float32 returns, as a float32, a pseudo-random number in the half-open interval 
 
 ```
 searchKey: rand.Rand.Perm
-tags: [exported]
 ```
 
 ```Go
@@ -549,7 +534,6 @@ Perm returns, as a slice of n ints, a pseudo-random permutation of the integers 
 
 ```
 searchKey: rand.Rand.Shuffle
-tags: [exported]
 ```
 
 ```Go
@@ -562,7 +546,6 @@ Shuffle pseudo-randomizes the order of elements. n is the number of elements. Sh
 
 ```
 searchKey: rand.Rand.Read
-tags: [exported]
 ```
 
 ```Go
@@ -575,6 +558,7 @@ Read generates len(p) random bytes and writes them into p. It always returns len
 
 ```
 searchKey: rand.lockedSource
+tags: [private]
 ```
 
 ```Go
@@ -588,6 +572,7 @@ type lockedSource struct {
 
 ```
 searchKey: rand.lockedSource.Int63
+tags: [private]
 ```
 
 ```Go
@@ -598,6 +583,7 @@ func (r *lockedSource) Int63() (n int64)
 
 ```
 searchKey: rand.lockedSource.Uint64
+tags: [private]
 ```
 
 ```Go
@@ -608,6 +594,7 @@ func (r *lockedSource) Uint64() (n uint64)
 
 ```
 searchKey: rand.lockedSource.Seed
+tags: [private]
 ```
 
 ```Go
@@ -618,6 +605,7 @@ func (r *lockedSource) Seed(seed int64)
 
 ```
 searchKey: rand.lockedSource.seedPos
+tags: [private]
 ```
 
 ```Go
@@ -630,6 +618,7 @@ seedPos implements Seed for a lockedSource without a race condition.
 
 ```
 searchKey: rand.lockedSource.read
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +631,7 @@ read implements Read for a lockedSource without a race condition.
 
 ```
 searchKey: rand.rngSource
+tags: [private]
 ```
 
 ```Go
@@ -656,6 +646,7 @@ type rngSource struct {
 
 ```
 searchKey: rand.rngSource.Seed
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +659,7 @@ Seed uses the provided seed value to initialize the generator to a deterministic
 
 ```
 searchKey: rand.rngSource.Int63
+tags: [private]
 ```
 
 ```Go
@@ -680,6 +672,7 @@ Int63 returns a non-negative pseudo-random 63-bit integer as an int64.
 
 ```
 searchKey: rand.rngSource.Uint64
+tags: [private]
 ```
 
 ```Go
@@ -692,7 +685,6 @@ Uint64 returns a non-negative pseudo-random 64-bit integer as an uint64.
 
 ```
 searchKey: rand.Zipf
-tags: [exported]
 ```
 
 ```Go
@@ -715,7 +707,6 @@ A Zipf generates Zipf distributed variates.
 
 ```
 searchKey: rand.NewZipf
-tags: [exported]
 ```
 
 ```Go
@@ -728,6 +719,7 @@ NewZipf returns a Zipf variate generator. The generator generates values k ∈ [
 
 ```
 searchKey: rand.Zipf.h
+tags: [private]
 ```
 
 ```Go
@@ -738,6 +730,7 @@ func (z *Zipf) h(x float64) float64
 
 ```
 searchKey: rand.Zipf.hinv
+tags: [private]
 ```
 
 ```Go
@@ -748,7 +741,6 @@ func (z *Zipf) hinv(x float64) float64
 
 ```
 searchKey: rand.Zipf.Uint64
-tags: [exported]
 ```
 
 ```Go
@@ -759,14 +751,11 @@ Uint64 returns a value drawn from the Zipf distribution described by the Zipf ob
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="absInt32" href="#absInt32">func absInt32(i int32) uint32</a>
 
 ```
 searchKey: rand.absInt32
+tags: [private]
 ```
 
 ```Go
@@ -777,6 +766,7 @@ func absInt32(i int32) uint32
 
 ```
 searchKey: rand.read
+tags: [private]
 ```
 
 ```Go
@@ -787,7 +777,6 @@ func read(p []byte, src Source, readVal *int64, readPos *int8) (n int, err error
 
 ```
 searchKey: rand.Seed
-tags: [exported]
 ```
 
 ```Go
@@ -800,7 +789,6 @@ Seed uses the provided seed value to initialize the default Source to a determin
 
 ```
 searchKey: rand.Int63
-tags: [exported]
 ```
 
 ```Go
@@ -813,7 +801,6 @@ Int63 returns a non-negative pseudo-random 63-bit integer as an int64 from the d
 
 ```
 searchKey: rand.Uint32
-tags: [exported]
 ```
 
 ```Go
@@ -826,7 +813,6 @@ Uint32 returns a pseudo-random 32-bit value as a uint32 from the default Source.
 
 ```
 searchKey: rand.Uint64
-tags: [exported]
 ```
 
 ```Go
@@ -839,7 +825,6 @@ Uint64 returns a pseudo-random 64-bit value as a uint64 from the default Source.
 
 ```
 searchKey: rand.Int31
-tags: [exported]
 ```
 
 ```Go
@@ -852,7 +837,6 @@ Int31 returns a non-negative pseudo-random 31-bit integer as an int32 from the d
 
 ```
 searchKey: rand.Int
-tags: [exported]
 ```
 
 ```Go
@@ -865,7 +849,6 @@ Int returns a non-negative pseudo-random int from the default Source.
 
 ```
 searchKey: rand.Int63n
-tags: [exported]
 ```
 
 ```Go
@@ -878,7 +861,6 @@ Int63n returns, as an int64, a non-negative pseudo-random number in the half-ope
 
 ```
 searchKey: rand.Int31n
-tags: [exported]
 ```
 
 ```Go
@@ -891,7 +873,6 @@ Int31n returns, as an int32, a non-negative pseudo-random number in the half-ope
 
 ```
 searchKey: rand.Intn
-tags: [exported]
 ```
 
 ```Go
@@ -904,7 +885,6 @@ Intn returns, as an int, a non-negative pseudo-random number in the half-open in
 
 ```
 searchKey: rand.Float64
-tags: [exported]
 ```
 
 ```Go
@@ -917,7 +897,6 @@ Float64 returns, as a float64, a pseudo-random number in the half-open interval 
 
 ```
 searchKey: rand.Float32
-tags: [exported]
 ```
 
 ```Go
@@ -930,7 +909,6 @@ Float32 returns, as a float32, a pseudo-random number in the half-open interval 
 
 ```
 searchKey: rand.Perm
-tags: [exported]
 ```
 
 ```Go
@@ -943,7 +921,6 @@ Perm returns, as a slice of n ints, a pseudo-random permutation of the integers 
 
 ```
 searchKey: rand.Shuffle
-tags: [exported]
 ```
 
 ```Go
@@ -956,7 +933,6 @@ Shuffle pseudo-randomizes the order of elements using the default Source. n is t
 
 ```
 searchKey: rand.Read
-tags: [exported]
 ```
 
 ```Go
@@ -969,7 +945,6 @@ Read generates len(p) random bytes from the default Source and writes them into 
 
 ```
 searchKey: rand.NormFloat64
-tags: [exported]
 ```
 
 ```Go
@@ -986,7 +961,6 @@ sample = NormFloat64() * desiredStdDev + desiredMean
 
 ```
 searchKey: rand.ExpFloat64
-tags: [exported]
 ```
 
 ```Go
@@ -1003,6 +977,7 @@ sample = ExpFloat64() / desiredRateParameter
 
 ```
 searchKey: rand.seedrand
+tags: [private]
 ```
 
 ```Go
@@ -1015,6 +990,7 @@ seed rng x[n+1] = 48271 * x[n] mod (2**31 - 1)
 
 ```
 searchKey: rand.Int31nForTest
+tags: [private]
 ```
 
 ```Go
@@ -1025,6 +1001,7 @@ func Int31nForTest(r *Rand, n int32) int32
 
 ```
 searchKey: rand.GetNormalDistributionParameters
+tags: [private]
 ```
 
 ```Go
@@ -1035,6 +1012,7 @@ func GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128
 
 ```
 searchKey: rand.GetExponentialDistributionParameters
+tags: [private]
 ```
 
 ```Go

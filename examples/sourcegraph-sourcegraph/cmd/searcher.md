@@ -20,14 +20,11 @@ Command searcher is a simple service which exposes an API to text search a repo 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="port" href="#port">const port</a>
 
 ```
 searchKey: main.port
+tags: [private]
 ```
 
 ```Go
@@ -36,14 +33,11 @@ const port = "3181"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="cacheDir" href="#cacheDir">var cacheDir</a>
 
 ```
 searchKey: main.cacheDir
+tags: [private]
 ```
 
 ```Go
@@ -54,6 +48,7 @@ var cacheDir = env.Get("CACHE_DIR", "/tmp", "directory to store cached archives.
 
 ```
 searchKey: main.cacheSizeMB
+tags: [private]
 ```
 
 ```Go
@@ -62,14 +57,11 @@ var cacheSizeMB = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +72,7 @@ func main()
 
 ```
 searchKey: main.shutdownOnSIGINT
+tags: [private]
 ```
 
 ```Go

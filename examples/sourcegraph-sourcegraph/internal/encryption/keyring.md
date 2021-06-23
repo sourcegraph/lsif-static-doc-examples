@@ -17,10 +17,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="mu" href="#mu">var mu</a>
 
 ```
 searchKey: keyring.mu
+tags: [private]
 ```
 
 ```Go
@@ -31,6 +36,7 @@ var mu sync.RWMutex
 
 ```
 searchKey: keyring.defaultRing
+tags: [private]
 ```
 
 ```Go
@@ -39,11 +45,14 @@ var defaultRing Ring
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Ring" href="#Ring">type Ring struct</a>
 
 ```
 searchKey: keyring.Ring
-tags: [exported]
 ```
 
 ```Go
@@ -58,7 +67,6 @@ type Ring struct {
 
 ```
 searchKey: keyring.Default
-tags: [exported]
 ```
 
 ```Go
@@ -71,7 +79,6 @@ Default returns the default keyring, if you can avoid using this from arbitrary 
 
 ```
 searchKey: keyring.NewRing
-tags: [exported]
 ```
 
 ```Go
@@ -82,11 +89,14 @@ NewRing creates a keyring.Ring containing all the keys configured in site config
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MockDefault" href="#MockDefault">func MockDefault(r Ring)</a>
 
 ```
 searchKey: keyring.MockDefault
-tags: [exported]
 ```
 
 ```Go
@@ -99,7 +109,6 @@ MockDefault overrides the default keyring. Note: This function is defined for te
 
 ```
 searchKey: keyring.Init
-tags: [exported]
 ```
 
 ```Go
@@ -110,7 +119,6 @@ func Init(ctx context.Context) error
 
 ```
 searchKey: keyring.NewKey
-tags: [exported]
 ```
 
 ```Go

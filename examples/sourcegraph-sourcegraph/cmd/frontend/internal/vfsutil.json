@@ -4,7 +4,9 @@
     "identifier": "vfsutil",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/vfsutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ArchiveFormatZip",
                 "newPage": false,
                 "searchKey": "vfsutil.ArchiveFormatZip",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "ArchiveFormatTar",
                 "newPage": false,
                 "searchKey": "vfsutil.ArchiveFormatTar",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,9 +107,7 @@
                 "identifier": "ArchiveCacheDir",
                 "newPage": false,
                 "searchKey": "vfsutil.ArchiveCacheDir",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "initOnce",
                 "newPage": false,
                 "searchKey": "vfsutil.initOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "cachedFileEvict",
                 "newPage": false,
                 "searchKey": "vfsutil.cachedFileEvict",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "githubRepoRx",
                 "newPage": false,
                 "searchKey": "vfsutil.githubRepoRx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "ghFetch",
                 "newPage": false,
                 "searchKey": "vfsutil.ghFetch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "ghFetchFailed",
                 "newPage": false,
                 "searchKey": "vfsutil.ghFetchFailed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -227,7 +237,9 @@
                 "identifier": "gitserverFetchTotal",
                 "newPage": false,
                 "searchKey": "vfsutil.gitserverFetchTotal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "gitserverFetchFailedTotal",
                 "newPage": false,
                 "searchKey": "vfsutil.gitserverFetchFailedTotal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -270,7 +284,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -288,7 +304,9 @@
                 "identifier": "archiveReader",
                 "newPage": false,
                 "searchKey": "vfsutil.archiveReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -308,9 +326,7 @@
                 "identifier": "ArchiveFS",
                 "newPage": false,
                 "searchKey": "vfsutil.ArchiveFS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -328,9 +344,7 @@
                       "identifier": "NewGitHubRepoVFS",
                       "newPage": false,
                       "searchKey": "vfsutil.NewGitHubRepoVFS",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -350,9 +364,7 @@
                       "identifier": "NewGitServer",
                       "newPage": false,
                       "searchKey": "vfsutil.NewGitServer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -372,9 +384,7 @@
                       "identifier": "NewZipVFS",
                       "newPage": false,
                       "searchKey": "vfsutil.NewZipVFS",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -394,7 +404,9 @@
                       "identifier": "ArchiveFS.fetchOrWait",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveFS.fetchOrWait",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -414,9 +426,7 @@
                       "identifier": "ArchiveFS.Open",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveFS.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -436,9 +446,7 @@
                       "identifier": "ArchiveFS.Lstat",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveFS.Lstat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -458,9 +466,7 @@
                       "identifier": "ArchiveFS.Stat",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveFS.Stat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -480,9 +486,7 @@
                       "identifier": "ArchiveFS.ReadDir",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveFS.ReadDir",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -502,9 +506,7 @@
                       "identifier": "ArchiveFS.ListAllFiles",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveFS.ListAllFiles",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -524,9 +526,7 @@
                       "identifier": "ArchiveFS.Close",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveFS.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -546,9 +546,7 @@
                       "identifier": "ArchiveFS.String",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveFS.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -571,9 +569,7 @@
                 "identifier": "Evicter",
                 "newPage": false,
                 "searchKey": "vfsutil.Evicter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -591,9 +587,7 @@
                       "identifier": "GitServerFetchArchive",
                       "newPage": false,
                       "searchKey": "vfsutil.GitServerFetchArchive",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -616,7 +610,9 @@
                 "identifier": "cachedFile",
                 "newPage": false,
                 "searchKey": "vfsutil.cachedFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -634,7 +630,9 @@
                       "identifier": "cachedFetch",
                       "newPage": false,
                       "searchKey": "vfsutil.cachedFetch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -654,7 +652,9 @@
                       "identifier": "cachedFile.Evict",
                       "newPage": false,
                       "searchKey": "vfsutil.cachedFile.Evict",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -677,9 +677,7 @@
                 "identifier": "ArchiveFormat",
                 "newPage": false,
                 "searchKey": "vfsutil.ArchiveFormat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -699,9 +697,7 @@
                 "identifier": "ArchiveOpts",
                 "newPage": false,
                 "searchKey": "vfsutil.ArchiveOpts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -719,7 +715,9 @@
                       "identifier": "ArchiveOpts.cacheKey",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveOpts.cacheKey",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -745,7 +743,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -763,7 +763,9 @@
                 "identifier": "zipNewFileReader",
                 "newPage": false,
                 "searchKey": "vfsutil.zipNewFileReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -783,7 +785,9 @@
                 "identifier": "initArchiveCacheDir",
                 "newPage": false,
                 "searchKey": "vfsutil.initArchiveCacheDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -803,7 +807,9 @@
                 "identifier": "TestGitHubRepoVFS",
                 "newPage": false,
                 "searchKey": "vfsutil.TestGitHubRepoVFS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -823,7 +829,9 @@
                 "identifier": "useEmptyArchiveCacheDir",
                 "newPage": false,
                 "searchKey": "vfsutil.useEmptyArchiveCacheDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -843,7 +851,9 @@
                 "identifier": "testVFS",
                 "newPage": false,
                 "searchKey": "vfsutil.testVFS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

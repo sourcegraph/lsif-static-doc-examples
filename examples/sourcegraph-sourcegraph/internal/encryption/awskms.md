@@ -27,10 +27,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="testKeyID" href="#testKeyID">const testKeyID</a>
 
 ```
 searchKey: awskms.testKeyID
+tags: [private]
 ```
 
 ```Go
@@ -41,10 +46,15 @@ testKeyID is the ID of a key defined here: [https://us-west-2.console.aws.amazon
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="shouldUpdate" href="#shouldUpdate">var shouldUpdate</a>
 
 ```
 searchKey: awskms.shouldUpdate
+tags: [private]
 ```
 
 ```Go
@@ -53,11 +63,14 @@ var shouldUpdate = flag.Bool("update", false, "Update testdata")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Key" href="#Key">type Key struct</a>
 
 ```
 searchKey: awskms.Key
-tags: [exported]
 ```
 
 ```Go
@@ -71,7 +84,6 @@ type Key struct {
 
 ```
 searchKey: awskms.Key.Version
-tags: [exported]
 ```
 
 ```Go
@@ -82,7 +94,6 @@ func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)
 
 ```
 searchKey: awskms.Key.Decrypt
-tags: [exported]
 ```
 
 ```Go
@@ -95,7 +106,6 @@ Decrypt a secret, it must have been encrypted with the same Key. Encrypted secre
 
 ```
 searchKey: awskms.Key.Encrypt
-tags: [exported]
 ```
 
 ```Go
@@ -108,6 +118,7 @@ Encrypt a secret, storing it as a base64 encoded string.
 
 ```
 searchKey: awskms.encryptedValue
+tags: [private]
 ```
 
 ```Go
@@ -120,11 +131,14 @@ type encryptedValue struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewKey" href="#NewKey">func NewKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey) (encryption.Key, error)</a>
 
 ```
 searchKey: awskms.NewKey
-tags: [exported]
 ```
 
 ```Go
@@ -135,6 +149,7 @@ func NewKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey) (encrypti
 
 ```
 searchKey: awskms.newKey
+tags: [private]
 ```
 
 ```Go
@@ -145,6 +160,7 @@ func newKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey, config aw
 
 ```
 searchKey: awskms.awsConfigOptsForKeyConfig
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +171,7 @@ func awsConfigOptsForKeyConfig(keyConfig schema.AWSKMSEncryptionKey) []func(*con
 
 ```
 searchKey: awskms.aesEncrypt
+tags: [private]
 ```
 
 ```Go
@@ -165,6 +182,7 @@ func aesEncrypt(plaintext, key []byte) ([]byte, []byte, error)
 
 ```
 searchKey: awskms.aesDecrypt
+tags: [private]
 ```
 
 ```Go
@@ -175,6 +193,7 @@ func aesDecrypt(ciphertext, key, nonce []byte) ([]byte, error)
 
 ```
 searchKey: awskms.TestRoundtrip
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +204,7 @@ func TestRoundtrip(t *testing.T)
 
 ```
 searchKey: awskms.newClientFactory
+tags: [private]
 ```
 
 ```Go
@@ -195,6 +215,7 @@ func newClientFactory(t testing.TB, name string, mws ...httpcli.Middleware) (*ht
 
 ```
 searchKey: awskms.newRecorder
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +226,7 @@ func newRecorder(t testing.TB, file string, record bool) *recorder.Recorder
 
 ```
 searchKey: awskms.save
+tags: [private]
 ```
 
 ```Go
@@ -215,6 +237,7 @@ func save(t testing.TB, rec *recorder.Recorder)
 
 ```
 searchKey: awskms.readEnvFallback
+tags: [private]
 ```
 
 ```Go

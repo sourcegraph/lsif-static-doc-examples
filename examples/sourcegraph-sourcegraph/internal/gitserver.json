@@ -4,7 +4,9 @@
     "identifier": "gitserver",
     "newPage": true,
     "searchKey": "internal/gitserver",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "requestMeter",
                 "newPage": false,
                 "searchKey": "gitserver.requestMeter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "defaultTransport",
                 "newPage": false,
                 "searchKey": "gitserver.defaultTransport",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,9 +88,7 @@
                 "identifier": "DefaultClient",
                 "newPage": false,
                 "searchKey": "gitserver.DefaultClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -102,7 +108,9 @@
                 "identifier": "deadlineExceededCounter",
                 "newPage": false,
                 "searchKey": "gitserver.deadlineExceededCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -122,9 +130,7 @@
                 "identifier": "MockIsRepoCloneable",
                 "newPage": false,
                 "searchKey": "gitserver.MockIsRepoCloneable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -144,9 +150,7 @@
                 "identifier": "DefaultReverseProxy",
                 "newPage": false,
                 "searchKey": "gitserver.DefaultReverseProxy",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -169,7 +173,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -187,9 +193,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "gitserver.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -207,9 +211,7 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "gitserver.NewClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -229,9 +231,7 @@
                       "identifier": "Client.AddrForRepo",
                       "newPage": false,
                       "searchKey": "gitserver.Client.AddrForRepo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -251,7 +251,9 @@
                       "identifier": "Client.addrForKey",
                       "newPage": false,
                       "searchKey": "gitserver.Client.addrForKey",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -271,9 +273,7 @@
                       "identifier": "Client.ArchiveURL",
                       "newPage": false,
                       "searchKey": "gitserver.Client.ArchiveURL",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -293,9 +293,7 @@
                       "identifier": "Client.Archive",
                       "newPage": false,
                       "searchKey": "gitserver.Client.Archive",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -315,9 +313,7 @@
                       "identifier": "Client.P4Exec",
                       "newPage": false,
                       "searchKey": "gitserver.Client.P4Exec",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -337,9 +333,7 @@
                       "identifier": "Client.Command",
                       "newPage": false,
                       "searchKey": "gitserver.Client.Command",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -359,9 +353,7 @@
                       "identifier": "Client.WaitForGitServers",
                       "newPage": false,
                       "searchKey": "gitserver.Client.WaitForGitServers",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -381,7 +373,9 @@
                       "identifier": "Client.pingAll",
                       "newPage": false,
                       "searchKey": "gitserver.Client.pingAll",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -401,7 +395,9 @@
                       "identifier": "Client.ping",
                       "newPage": false,
                       "searchKey": "gitserver.Client.ping",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -421,9 +417,7 @@
                       "identifier": "Client.ListGitolite",
                       "newPage": false,
                       "searchKey": "gitserver.Client.ListGitolite",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -443,9 +437,7 @@
                       "identifier": "Client.ListCloned",
                       "newPage": false,
                       "searchKey": "gitserver.Client.ListCloned",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -465,9 +457,7 @@
                       "identifier": "Client.GetGitolitePhabricatorMetadata",
                       "newPage": false,
                       "searchKey": "gitserver.Client.GetGitolitePhabricatorMetadata",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -487,7 +477,9 @@
                       "identifier": "Client.doListOne",
                       "newPage": false,
                       "searchKey": "gitserver.Client.doListOne",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -507,9 +499,7 @@
                       "identifier": "Client.RequestRepoUpdate",
                       "newPage": false,
                       "searchKey": "gitserver.Client.RequestRepoUpdate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -529,9 +519,7 @@
                       "identifier": "Client.IsRepoCloneable",
                       "newPage": false,
                       "searchKey": "gitserver.Client.IsRepoCloneable",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -551,9 +539,7 @@
                       "identifier": "Client.IsRepoCloned",
                       "newPage": false,
                       "searchKey": "gitserver.Client.IsRepoCloned",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -573,9 +559,7 @@
                       "identifier": "Client.RepoCloneProgress",
                       "newPage": false,
                       "searchKey": "gitserver.Client.RepoCloneProgress",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -595,9 +579,7 @@
                       "identifier": "Client.RepoInfo",
                       "newPage": false,
                       "searchKey": "gitserver.Client.RepoInfo",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -617,9 +599,7 @@
                       "identifier": "Client.ReposStats",
                       "newPage": false,
                       "searchKey": "gitserver.Client.ReposStats",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -639,7 +619,9 @@
                       "identifier": "Client.doReposStats",
                       "newPage": false,
                       "searchKey": "gitserver.Client.doReposStats",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -659,9 +641,7 @@
                       "identifier": "Client.Remove",
                       "newPage": false,
                       "searchKey": "gitserver.Client.Remove",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -681,7 +661,9 @@
                       "identifier": "Client.httpPost",
                       "newPage": false,
                       "searchKey": "gitserver.Client.httpPost",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -701,7 +683,9 @@
                       "identifier": "Client.do",
                       "newPage": false,
                       "searchKey": "gitserver.Client.do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -721,9 +705,7 @@
                       "identifier": "Client.CreateCommitFromPatch",
                       "newPage": false,
                       "searchKey": "gitserver.Client.CreateCommitFromPatch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -746,9 +728,7 @@
                 "identifier": "ArchiveOptions",
                 "newPage": false,
                 "searchKey": "gitserver.ArchiveOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -768,7 +748,9 @@
                 "identifier": "archiveReader",
                 "newPage": false,
                 "searchKey": "gitserver.archiveReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -786,7 +768,9 @@
                       "identifier": "archiveReader.Read",
                       "newPage": false,
                       "searchKey": "gitserver.archiveReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -806,7 +790,9 @@
                       "identifier": "archiveReader.Close",
                       "newPage": false,
                       "searchKey": "gitserver.archiveReader.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -829,7 +815,9 @@
                 "identifier": "badRequestError",
                 "newPage": false,
                 "searchKey": "gitserver.badRequestError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -847,7 +835,9 @@
                       "identifier": "badRequestError.BadRequest",
                       "newPage": false,
                       "searchKey": "gitserver.badRequestError.BadRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -870,9 +860,7 @@
                 "identifier": "Cmd",
                 "newPage": false,
                 "searchKey": "gitserver.Cmd",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -890,7 +878,9 @@
                       "identifier": "Cmd.sendExec",
                       "newPage": false,
                       "searchKey": "gitserver.Cmd.sendExec",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -910,9 +900,7 @@
                       "identifier": "Cmd.DividedOutput",
                       "newPage": false,
                       "searchKey": "gitserver.Cmd.DividedOutput",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -932,9 +920,7 @@
                       "identifier": "Cmd.Run",
                       "newPage": false,
                       "searchKey": "gitserver.Cmd.Run",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -954,9 +940,7 @@
                       "identifier": "Cmd.Output",
                       "newPage": false,
                       "searchKey": "gitserver.Cmd.Output",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -976,9 +960,7 @@
                       "identifier": "Cmd.CombinedOutput",
                       "newPage": false,
                       "searchKey": "gitserver.Cmd.CombinedOutput",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -998,9 +980,7 @@
                       "identifier": "Cmd.String",
                       "newPage": false,
                       "searchKey": "gitserver.Cmd.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1023,7 +1003,9 @@
                 "identifier": "cmdReader",
                 "newPage": false,
                 "searchKey": "gitserver.cmdReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1041,7 +1023,9 @@
                       "identifier": "cmdReader.Read",
                       "newPage": false,
                       "searchKey": "gitserver.cmdReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1061,7 +1045,9 @@
                       "identifier": "cmdReader.Close",
                       "newPage": false,
                       "searchKey": "gitserver.cmdReader.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1084,9 +1070,7 @@
                 "identifier": "RepoNotCloneableErr",
                 "newPage": false,
                 "searchKey": "gitserver.RepoNotCloneableErr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1104,9 +1088,7 @@
                       "identifier": "RepoNotCloneableErr.NotFound",
                       "newPage": false,
                       "searchKey": "gitserver.RepoNotCloneableErr.NotFound",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1126,9 +1108,7 @@
                       "identifier": "RepoNotCloneableErr.Error",
                       "newPage": false,
                       "searchKey": "gitserver.RepoNotCloneableErr.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1151,9 +1131,7 @@
                 "identifier": "RevisionNotFoundError",
                 "newPage": false,
                 "searchKey": "gitserver.RevisionNotFoundError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1171,9 +1149,7 @@
                       "identifier": "RevisionNotFoundError.Error",
                       "newPage": false,
                       "searchKey": "gitserver.RevisionNotFoundError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1193,9 +1169,7 @@
                       "identifier": "RevisionNotFoundError.HTTPStatusCode",
                       "newPage": false,
                       "searchKey": "gitserver.RevisionNotFoundError.HTTPStatusCode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1215,9 +1189,7 @@
                       "identifier": "RevisionNotFoundError.NotFound",
                       "newPage": false,
                       "searchKey": "gitserver.RevisionNotFoundError.NotFound",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1240,9 +1212,7 @@
                 "identifier": "ReverseProxy",
                 "newPage": false,
                 "searchKey": "gitserver.ReverseProxy",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1260,9 +1230,7 @@
                       "identifier": "NewReverseProxy",
                       "newPage": false,
                       "searchKey": "gitserver.NewReverseProxy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1282,9 +1250,7 @@
                       "identifier": "ReverseProxy.ServeHTTP",
                       "newPage": false,
                       "searchKey": "gitserver.ReverseProxy.ServeHTTP",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1310,7 +1276,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1328,9 +1296,7 @@
                 "identifier": "AddrForRepo",
                 "newPage": false,
                 "searchKey": "gitserver.AddrForRepo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1350,7 +1316,9 @@
                 "identifier": "addrForKey",
                 "newPage": false,
                 "searchKey": "gitserver.addrForKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1370,9 +1338,7 @@
                 "identifier": "StdoutReader",
                 "newPage": false,
                 "searchKey": "gitserver.StdoutReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1392,7 +1358,9 @@
                 "identifier": "userFromContext",
                 "newPage": false,
                 "searchKey": "gitserver.userFromContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1412,9 +1380,7 @@
                 "identifier": "IsRevisionNotFound",
                 "newPage": false,
                 "searchKey": "gitserver.IsRevisionNotFound",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

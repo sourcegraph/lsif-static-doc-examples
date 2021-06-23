@@ -67,14 +67,11 @@ r.Close()
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="zlibDeflate" href="#zlibDeflate">const zlibDeflate</a>
 
 ```
 searchKey: zlib.zlibDeflate
+tags: [private]
 ```
 
 ```Go
@@ -85,7 +82,6 @@ const zlibDeflate = 8
 
 ```
 searchKey: zlib.NoCompression
-tags: [exported]
 ```
 
 ```Go
@@ -98,7 +94,6 @@ These constants are copied from the flate package, so that code that imports "co
 
 ```
 searchKey: zlib.BestSpeed
-tags: [exported]
 ```
 
 ```Go
@@ -111,7 +106,6 @@ These constants are copied from the flate package, so that code that imports "co
 
 ```
 searchKey: zlib.BestCompression
-tags: [exported]
 ```
 
 ```Go
@@ -124,7 +118,6 @@ These constants are copied from the flate package, so that code that imports "co
 
 ```
 searchKey: zlib.DefaultCompression
-tags: [exported]
 ```
 
 ```Go
@@ -137,7 +130,6 @@ These constants are copied from the flate package, so that code that imports "co
 
 ```
 searchKey: zlib.HuffmanOnly
-tags: [exported]
 ```
 
 ```Go
@@ -148,15 +140,10 @@ These constants are copied from the flate package, so that code that imports "co
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrChecksum" href="#ErrChecksum">var ErrChecksum</a>
 
 ```
 searchKey: zlib.ErrChecksum
-tags: [exported]
 ```
 
 ```Go
@@ -169,7 +156,6 @@ ErrChecksum is returned when reading ZLIB data that has an invalid checksum.
 
 ```
 searchKey: zlib.ErrDictionary
-tags: [exported]
 ```
 
 ```Go
@@ -182,7 +168,6 @@ ErrDictionary is returned when reading ZLIB data that has an invalid dictionary.
 
 ```
 searchKey: zlib.ErrHeader
-tags: [exported]
 ```
 
 ```Go
@@ -195,6 +180,7 @@ ErrHeader is returned when reading ZLIB data that has an invalid header.
 
 ```
 searchKey: zlib.zlibTests
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +191,7 @@ var zlibTests = ...
 
 ```
 searchKey: zlib.filenames
+tags: [private]
 ```
 
 ```Go
@@ -215,6 +202,7 @@ var filenames = ...
 
 ```
 searchKey: zlib.data
+tags: [private]
 ```
 
 ```Go
@@ -225,14 +213,11 @@ var data = []string{
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="reader" href="#reader">type reader struct</a>
 
 ```
 searchKey: zlib.reader
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +234,7 @@ type reader struct {
 
 ```
 searchKey: zlib.reader.Read
+tags: [private]
 ```
 
 ```Go
@@ -259,6 +245,7 @@ func (z *reader) Read(p []byte) (int, error)
 
 ```
 searchKey: zlib.reader.Close
+tags: [private]
 ```
 
 ```Go
@@ -271,6 +258,7 @@ Calling Close does not close the wrapped io.Reader originally passed to NewReade
 
 ```
 searchKey: zlib.reader.Reset
+tags: [private]
 ```
 
 ```Go
@@ -281,7 +269,6 @@ func (z *reader) Reset(r io.Reader, dict []byte) error
 
 ```
 searchKey: zlib.Resetter
-tags: [exported]
 ```
 
 ```Go
@@ -298,7 +285,6 @@ Resetter resets a ReadCloser returned by NewReader or NewReaderDict to switch to
 
 ```
 searchKey: zlib.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -320,7 +306,6 @@ A Writer takes data written to it and writes the compressed form of that data to
 
 ```
 searchKey: zlib.NewWriter
-tags: [exported]
 ```
 
 ```Go
@@ -335,7 +320,6 @@ It is the caller's responsibility to call Close on the Writer when done. Writes 
 
 ```
 searchKey: zlib.NewWriterLevel
-tags: [exported]
 ```
 
 ```Go
@@ -350,7 +334,6 @@ The compression level can be DefaultCompression, NoCompression, HuffmanOnly or a
 
 ```
 searchKey: zlib.NewWriterLevelDict
-tags: [exported]
 ```
 
 ```Go
@@ -365,7 +348,6 @@ The dictionary may be nil. If not, its contents should not be modified until the
 
 ```
 searchKey: zlib.Writer.Reset
-tags: [exported]
 ```
 
 ```Go
@@ -378,6 +360,7 @@ Reset clears the state of the Writer z such that it is equivalent to its initial
 
 ```
 searchKey: zlib.Writer.writeHeader
+tags: [private]
 ```
 
 ```Go
@@ -390,7 +373,6 @@ writeHeader writes the ZLIB header.
 
 ```
 searchKey: zlib.Writer.Write
-tags: [exported]
 ```
 
 ```Go
@@ -403,7 +385,6 @@ Write writes a compressed form of p to the underlying io.Writer. The compressed 
 
 ```
 searchKey: zlib.Writer.Flush
-tags: [exported]
 ```
 
 ```Go
@@ -416,7 +397,6 @@ Flush flushes the Writer to its underlying io.Writer.
 
 ```
 searchKey: zlib.Writer.Close
-tags: [exported]
 ```
 
 ```Go
@@ -429,6 +409,7 @@ Close closes the Writer, flushing any unwritten data to the underlying io.Writer
 
 ```
 searchKey: zlib.zlibTest
+tags: [private]
 ```
 
 ```Go
@@ -443,15 +424,10 @@ type zlibTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NewReader" href="#NewReader">func NewReader(r io.Reader) (io.ReadCloser, error)</a>
 
 ```
 searchKey: zlib.NewReader
-tags: [exported]
 ```
 
 ```Go
@@ -466,7 +442,6 @@ The ReadCloser returned by NewReader also implements Resetter.
 
 ```
 searchKey: zlib.NewReaderDict
-tags: [exported]
 ```
 
 ```Go
@@ -481,6 +456,7 @@ The ReadCloser returned by NewReaderDict also implements Resetter.
 
 ```
 searchKey: zlib.TestDecompressor
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +467,7 @@ func TestDecompressor(t *testing.T)
 
 ```
 searchKey: zlib.testFileLevelDict
+tags: [private]
 ```
 
 ```Go
@@ -503,6 +480,7 @@ Tests that compressing and then decompressing the given file at the given compre
 
 ```
 searchKey: zlib.testLevelDict
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +491,7 @@ func testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)
 
 ```
 searchKey: zlib.testFileLevelDictReset
+tags: [private]
 ```
 
 ```Go
@@ -523,6 +502,7 @@ func testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)
 
 ```
 searchKey: zlib.TestWriter
+tags: [private]
 ```
 
 ```Go
@@ -533,6 +513,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: zlib.TestWriterBig
+tags: [private]
 ```
 
 ```Go
@@ -543,6 +524,7 @@ func TestWriterBig(t *testing.T)
 
 ```
 searchKey: zlib.TestWriterDict
+tags: [private]
 ```
 
 ```Go
@@ -553,6 +535,7 @@ func TestWriterDict(t *testing.T)
 
 ```
 searchKey: zlib.TestWriterReset
+tags: [private]
 ```
 
 ```Go
@@ -563,6 +546,7 @@ func TestWriterReset(t *testing.T)
 
 ```
 searchKey: zlib.TestWriterDictIsUsed
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "reconciler",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/reconciler",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "internalClient",
                 "newPage": false,
                 "searchKey": "reconciler.internalClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "operationPrecedence",
                 "newPage": false,
                 "searchKey": "reconciler.operationPrecedence",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "executor",
                 "newPage": false,
                 "searchKey": "reconciler.executor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -119,7 +131,9 @@
                       "identifier": "executor.Run",
                       "newPage": false,
                       "searchKey": "reconciler.executor.Run",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -139,7 +153,9 @@
                       "identifier": "executor.pushChangesetPatch",
                       "newPage": false,
                       "searchKey": "reconciler.executor.pushChangesetPatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -159,7 +175,9 @@
                       "identifier": "executor.publishChangeset",
                       "newPage": false,
                       "searchKey": "reconciler.executor.publishChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -179,7 +197,9 @@
                       "identifier": "executor.syncChangeset",
                       "newPage": false,
                       "searchKey": "reconciler.executor.syncChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -199,7 +219,9 @@
                       "identifier": "executor.importChangeset",
                       "newPage": false,
                       "searchKey": "reconciler.executor.importChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -219,7 +241,9 @@
                       "identifier": "executor.loadChangeset",
                       "newPage": false,
                       "searchKey": "reconciler.executor.loadChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -239,7 +263,9 @@
                       "identifier": "executor.updateChangeset",
                       "newPage": false,
                       "searchKey": "reconciler.executor.updateChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -259,7 +285,9 @@
                       "identifier": "executor.reopenChangeset",
                       "newPage": false,
                       "searchKey": "reconciler.executor.reopenChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -279,7 +307,9 @@
                       "identifier": "executor.detachChangeset",
                       "newPage": false,
                       "searchKey": "reconciler.executor.detachChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -299,7 +329,9 @@
                       "identifier": "executor.archiveChangeset",
                       "newPage": false,
                       "searchKey": "reconciler.executor.archiveChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -319,7 +351,9 @@
                       "identifier": "executor.closeChangeset",
                       "newPage": false,
                       "searchKey": "reconciler.executor.closeChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -339,7 +373,9 @@
                       "identifier": "executor.undraftChangeset",
                       "newPage": false,
                       "searchKey": "reconciler.executor.undraftChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -359,7 +395,9 @@
                       "identifier": "executor.sleep",
                       "newPage": false,
                       "searchKey": "reconciler.executor.sleep",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -379,7 +417,9 @@
                       "identifier": "executor.pushCommit",
                       "newPage": false,
                       "searchKey": "reconciler.executor.pushCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -402,7 +442,9 @@
                 "identifier": "getBatchChanger",
                 "newPage": false,
                 "searchKey": "reconciler.getBatchChanger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -422,7 +464,9 @@
                 "identifier": "getNamespacer",
                 "newPage": false,
                 "searchKey": "reconciler.getNamespacer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -442,7 +486,9 @@
                 "identifier": "errPublishSameBranch",
                 "newPage": false,
                 "searchKey": "reconciler.errPublishSameBranch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -460,7 +506,9 @@
                       "identifier": "errPublishSameBranch.Error",
                       "newPage": false,
                       "searchKey": "reconciler.errPublishSameBranch.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -480,7 +528,9 @@
                       "identifier": "errPublishSameBranch.NonRetryable",
                       "newPage": false,
                       "searchKey": "reconciler.errPublishSameBranch.NonRetryable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -503,7 +553,9 @@
                 "identifier": "errNoSSHCredential",
                 "newPage": false,
                 "searchKey": "reconciler.errNoSSHCredential",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -521,7 +573,9 @@
                       "identifier": "errNoSSHCredential.Error",
                       "newPage": false,
                       "searchKey": "reconciler.errNoSSHCredential.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -541,7 +595,9 @@
                       "identifier": "errNoSSHCredential.NonRetryable",
                       "newPage": false,
                       "searchKey": "reconciler.errNoSSHCredential.NonRetryable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -564,7 +620,9 @@
                 "identifier": "errMissingCredentials",
                 "newPage": false,
                 "searchKey": "reconciler.errMissingCredentials",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -582,7 +640,9 @@
                       "identifier": "errMissingCredentials.Error",
                       "newPage": false,
                       "searchKey": "reconciler.errMissingCredentials.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -602,7 +662,9 @@
                       "identifier": "errMissingCredentials.NonRetryable",
                       "newPage": false,
                       "searchKey": "reconciler.errMissingCredentials.NonRetryable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -622,7 +684,9 @@
                       "identifier": "errMissingCredentials.Is",
                       "newPage": false,
                       "searchKey": "reconciler.errMissingCredentials.Is",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -645,7 +709,9 @@
                 "identifier": "errNoPushCredentials",
                 "newPage": false,
                 "searchKey": "reconciler.errNoPushCredentials",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -663,7 +729,9 @@
                       "identifier": "errNoPushCredentials.Error",
                       "newPage": false,
                       "searchKey": "reconciler.errNoPushCredentials.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -683,7 +751,9 @@
                       "identifier": "errNoPushCredentials.NonRetryable",
                       "newPage": false,
                       "searchKey": "reconciler.errNoPushCredentials.NonRetryable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -706,9 +776,7 @@
                 "identifier": "Operations",
                 "newPage": false,
                 "searchKey": "reconciler.Operations",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -726,9 +794,7 @@
                       "identifier": "Operations.IsNone",
                       "newPage": false,
                       "searchKey": "reconciler.Operations.IsNone",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -748,9 +814,7 @@
                       "identifier": "Operations.Equal",
                       "newPage": false,
                       "searchKey": "reconciler.Operations.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -770,9 +834,7 @@
                       "identifier": "Operations.String",
                       "newPage": false,
                       "searchKey": "reconciler.Operations.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -792,9 +854,7 @@
                       "identifier": "Operations.ExecutionOrder",
                       "newPage": false,
                       "searchKey": "reconciler.Operations.ExecutionOrder",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -817,9 +877,7 @@
                 "identifier": "Plan",
                 "newPage": false,
                 "searchKey": "reconciler.Plan",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -837,9 +895,7 @@
                       "identifier": "DeterminePlan",
                       "newPage": false,
                       "searchKey": "reconciler.DeterminePlan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -859,9 +915,7 @@
                       "identifier": "Plan.AddOp",
                       "newPage": false,
                       "searchKey": "reconciler.Plan.AddOp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -881,9 +935,7 @@
                       "identifier": "Plan.SetOp",
                       "newPage": false,
                       "searchKey": "reconciler.Plan.SetOp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -906,9 +958,7 @@
                 "identifier": "ChangesetSpecDelta",
                 "newPage": false,
                 "searchKey": "reconciler.ChangesetSpecDelta",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -926,7 +976,9 @@
                       "identifier": "compareChangesetSpecs",
                       "newPage": false,
                       "searchKey": "reconciler.compareChangesetSpecs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -946,9 +998,7 @@
                       "identifier": "ChangesetSpecDelta.String",
                       "newPage": false,
                       "searchKey": "reconciler.ChangesetSpecDelta.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -968,9 +1018,7 @@
                       "identifier": "ChangesetSpecDelta.NeedCommitUpdate",
                       "newPage": false,
                       "searchKey": "reconciler.ChangesetSpecDelta.NeedCommitUpdate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -990,9 +1038,7 @@
                       "identifier": "ChangesetSpecDelta.NeedCodeHostUpdate",
                       "newPage": false,
                       "searchKey": "reconciler.ChangesetSpecDelta.NeedCodeHostUpdate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1012,9 +1058,7 @@
                       "identifier": "ChangesetSpecDelta.AttributesChanged",
                       "newPage": false,
                       "searchKey": "reconciler.ChangesetSpecDelta.AttributesChanged",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1037,9 +1081,7 @@
                 "identifier": "GitserverClient",
                 "newPage": false,
                 "searchKey": "reconciler.GitserverClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1059,9 +1101,7 @@
                 "identifier": "Reconciler",
                 "newPage": false,
                 "searchKey": "reconciler.Reconciler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1079,9 +1119,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "reconciler.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1101,9 +1139,7 @@
                       "identifier": "Reconciler.HandlerFunc",
                       "newPage": false,
                       "searchKey": "reconciler.Reconciler.HandlerFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1123,7 +1159,9 @@
                       "identifier": "Reconciler.process",
                       "newPage": false,
                       "searchKey": "reconciler.Reconciler.process",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1146,7 +1184,9 @@
                 "identifier": "mockInternalClient",
                 "newPage": false,
                 "searchKey": "reconciler.mockInternalClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1164,7 +1204,9 @@
                       "identifier": "mockInternalClient.ExternalURL",
                       "newPage": false,
                       "searchKey": "reconciler.mockInternalClient.ExternalURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1187,7 +1229,9 @@
                 "identifier": "mockMissingErr",
                 "newPage": false,
                 "searchKey": "reconciler.mockMissingErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1205,7 +1249,9 @@
                       "identifier": "mockMissingErr.Error",
                       "newPage": false,
                       "searchKey": "reconciler.mockMissingErr.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1228,7 +1274,9 @@
                 "identifier": "FakeStore",
                 "newPage": false,
                 "searchKey": "reconciler.FakeStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1246,7 +1294,9 @@
                       "identifier": "FakeStore.GetBatchChange",
                       "newPage": false,
                       "searchKey": "reconciler.FakeStore.GetBatchChange",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1272,7 +1322,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1290,7 +1342,9 @@
                 "identifier": "executePlan",
                 "newPage": false,
                 "searchKey": "reconciler.executePlan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1310,7 +1364,9 @@
                 "identifier": "loadChangesetSource",
                 "newPage": false,
                 "searchKey": "reconciler.loadChangesetSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1330,7 +1386,9 @@
                 "identifier": "buildCommitOpts",
                 "newPage": false,
                 "searchKey": "reconciler.buildCommitOpts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1350,7 +1408,9 @@
                 "identifier": "loadBatchChange",
                 "newPage": false,
                 "searchKey": "reconciler.loadBatchChange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1370,7 +1430,9 @@
                 "identifier": "decorateChangesetBody",
                 "newPage": false,
                 "searchKey": "reconciler.decorateChangesetBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1390,7 +1452,9 @@
                 "identifier": "batchChangeURL",
                 "newPage": false,
                 "searchKey": "reconciler.batchChangeURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1410,7 +1474,9 @@
                 "identifier": "namespaceURL",
                 "newPage": false,
                 "searchKey": "reconciler.namespaceURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1430,7 +1496,9 @@
                 "identifier": "reopenAfterDetach",
                 "newPage": false,
                 "searchKey": "reconciler.reopenAfterDetach",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1450,7 +1518,9 @@
                 "identifier": "loadChangesetSpecs",
                 "newPage": false,
                 "searchKey": "reconciler.loadChangesetSpecs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1470,7 +1540,9 @@
                 "identifier": "TestExecutor_ExecutePlan",
                 "newPage": false,
                 "searchKey": "reconciler.TestExecutor_ExecutePlan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1490,7 +1562,9 @@
                 "identifier": "TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch",
                 "newPage": false,
                 "searchKey": "reconciler.TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1510,7 +1584,9 @@
                 "identifier": "TestLoadChangesetSource",
                 "newPage": false,
                 "searchKey": "reconciler.TestLoadChangesetSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1530,7 +1606,9 @@
                 "identifier": "TestExecutor_UserCredentialsForGitserver",
                 "newPage": false,
                 "searchKey": "reconciler.TestExecutor_UserCredentialsForGitserver",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1550,7 +1628,9 @@
                 "identifier": "TestDecorateChangesetBody",
                 "newPage": false,
                 "searchKey": "reconciler.TestDecorateChangesetBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1570,7 +1650,9 @@
                 "identifier": "TestBatchChangeURL",
                 "newPage": false,
                 "searchKey": "reconciler.TestBatchChangeURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1590,7 +1672,9 @@
                 "identifier": "TestNamespaceURL",
                 "newPage": false,
                 "searchKey": "reconciler.TestNamespaceURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1610,7 +1694,9 @@
                 "identifier": "buildGithubPR",
                 "newPage": false,
                 "searchKey": "reconciler.buildGithubPR",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1630,7 +1716,9 @@
                 "identifier": "TestDetermineReconcilerPlan",
                 "newPage": false,
                 "searchKey": "reconciler.TestDetermineReconcilerPlan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1650,7 +1738,9 @@
                 "identifier": "TestReconcilerProcess_IntegrationTest",
                 "newPage": false,
                 "searchKey": "reconciler.TestReconcilerProcess_IntegrationTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -84,10 +84,15 @@ Package field implements fast arithmetic modulo 2^255-19.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="maskLow51Bits" href="#maskLow51Bits">const maskLow51Bits</a>
 
 ```
 searchKey: field.maskLow51Bits
+tags: [private]
 ```
 
 ```Go
@@ -96,10 +101,15 @@ const maskLow51Bits uint64 = (1 << 51) - 1
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="feZero" href="#feZero">var feZero</a>
 
 ```
 searchKey: field.feZero
+tags: [private]
 ```
 
 ```Go
@@ -110,6 +120,7 @@ var feZero = &Element{0, 0, 0, 0, 0}
 
 ```
 searchKey: field.feOne
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +131,7 @@ var feOne = &Element{1, 0, 0, 0, 0}
 
 ```
 searchKey: field.sqrtM1
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +144,7 @@ sqrtM1 is 2^((p-1)/4), which squared is equal to -1 by Euler's Criterion.
 
 ```
 searchKey: field.quickCheckConfig1024
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +157,7 @@ quickCheckConfig1024 will make each quickcheck test run (1024 * -quickchecks) ti
 
 ```
 searchKey: field.weirdLimbs51
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +170,7 @@ weirdLimbs can be combined to generate a range of edge-case field elements. 0 an
 
 ```
 searchKey: field.weirdLimbs52
+tags: [private]
 ```
 
 ```Go
@@ -166,11 +181,14 @@ weirdLimbs can be combined to generate a range of edge-case field elements. 0 an
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Element" href="#Element">type Element struct</a>
 
 ```
 searchKey: field.Element
-tags: [exported]
 ```
 
 ```Go
@@ -197,6 +215,7 @@ The zero value is a valid zero element.
 
 ```
 searchKey: field.generateFieldElement
+tags: [private]
 ```
 
 ```Go
@@ -207,6 +226,7 @@ func generateFieldElement(rand *mathrand.Rand) Element
 
 ```
 searchKey: field.generateWeirdFieldElement
+tags: [private]
 ```
 
 ```Go
@@ -217,7 +237,6 @@ func generateWeirdFieldElement(rand *mathrand.Rand) Element
 
 ```
 searchKey: field.Element.Zero
-tags: [exported]
 ```
 
 ```Go
@@ -230,7 +249,6 @@ Zero sets v = 0, and returns v.
 
 ```
 searchKey: field.Element.One
-tags: [exported]
 ```
 
 ```Go
@@ -243,6 +261,7 @@ One sets v = 1, and returns v.
 
 ```
 searchKey: field.Element.reduce
+tags: [private]
 ```
 
 ```Go
@@ -255,7 +274,6 @@ reduce reduces v modulo 2^255 - 19 and returns it.
 
 ```
 searchKey: field.Element.Add
-tags: [exported]
 ```
 
 ```Go
@@ -268,7 +286,6 @@ Add sets v = a + b, and returns v.
 
 ```
 searchKey: field.Element.Subtract
-tags: [exported]
 ```
 
 ```Go
@@ -281,7 +298,6 @@ Subtract sets v = a - b, and returns v.
 
 ```
 searchKey: field.Element.Negate
-tags: [exported]
 ```
 
 ```Go
@@ -294,7 +310,6 @@ Negate sets v = -a, and returns v.
 
 ```
 searchKey: field.Element.Invert
-tags: [exported]
 ```
 
 ```Go
@@ -309,7 +324,6 @@ If z == 0, Invert returns v = 0.
 
 ```
 searchKey: field.Element.Set
-tags: [exported]
 ```
 
 ```Go
@@ -322,7 +336,6 @@ Set sets v = a, and returns v.
 
 ```
 searchKey: field.Element.SetBytes
-tags: [exported]
 ```
 
 ```Go
@@ -337,7 +350,6 @@ Consistent with RFC 7748, the most significant bit (the high bit of the last byt
 
 ```
 searchKey: field.Element.Bytes
-tags: [exported]
 ```
 
 ```Go
@@ -350,6 +362,7 @@ Bytes returns the canonical 32-byte little-endian encoding of v.
 
 ```
 searchKey: field.Element.bytes
+tags: [private]
 ```
 
 ```Go
@@ -360,7 +373,6 @@ func (v *Element) bytes(out *[32]byte) []byte
 
 ```
 searchKey: field.Element.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -373,7 +385,6 @@ Equal returns 1 if v and u are equal, and 0 otherwise.
 
 ```
 searchKey: field.Element.Select
-tags: [exported]
 ```
 
 ```Go
@@ -386,7 +397,6 @@ Select sets v to a if cond == 1, and to b if cond == 0.
 
 ```
 searchKey: field.Element.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -399,7 +409,6 @@ Swap swaps v and u if cond == 1 or leaves them unchanged if cond == 0, and retur
 
 ```
 searchKey: field.Element.IsNegative
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +421,6 @@ IsNegative returns 1 if v is negative, and 0 otherwise.
 
 ```
 searchKey: field.Element.Absolute
-tags: [exported]
 ```
 
 ```Go
@@ -425,7 +433,6 @@ Absolute sets v to |u|, and returns v.
 
 ```
 searchKey: field.Element.Multiply
-tags: [exported]
 ```
 
 ```Go
@@ -438,7 +445,6 @@ Multiply sets v = x * y, and returns v.
 
 ```
 searchKey: field.Element.Square
-tags: [exported]
 ```
 
 ```Go
@@ -451,7 +457,6 @@ Square sets v = x * x, and returns v.
 
 ```
 searchKey: field.Element.Mult32
-tags: [exported]
 ```
 
 ```Go
@@ -464,7 +469,6 @@ Mult32 sets v = x * y, and returns v.
 
 ```
 searchKey: field.Element.Pow22523
-tags: [exported]
 ```
 
 ```Go
@@ -477,7 +481,6 @@ Pow22523 set v = x^((p-5)/8), and returns v. (p-5)/8 is 2^252-3.
 
 ```
 searchKey: field.Element.SqrtRatio
-tags: [exported]
 ```
 
 ```Go
@@ -492,6 +495,7 @@ If u/v is square, SqrtRatio returns r and 1. If u/v is not square, SqrtRatio set
 
 ```
 searchKey: field.Element.carryPropagate
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +506,7 @@ func (v *Element) carryPropagate() *Element
 
 ```
 searchKey: field.Element.carryPropagateGeneric
+tags: [private]
 ```
 
 ```Go
@@ -514,6 +519,7 @@ carryPropagate brings the limbs below 52 bits by applying the reduction identity
 
 ```
 searchKey: field.Element.String
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +530,7 @@ func (v Element) String() string
 
 ```
 searchKey: field.Element.Generate
+tags: [private]
 ```
 
 ```Go
@@ -534,6 +541,7 @@ func (Element) Generate(rand *mathrand.Rand, size int) reflect.Value
 
 ```
 searchKey: field.Element.fromBig
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +554,7 @@ fromBig sets v = n, and returns v. The bit length of n must not exceed 256.
 
 ```
 searchKey: field.Element.fromDecimal
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +565,7 @@ func (v *Element) fromDecimal(s string) *Element
 
 ```
 searchKey: field.Element.toBig
+tags: [private]
 ```
 
 ```Go
@@ -568,6 +578,7 @@ toBig returns v as a big.Int.
 
 ```
 searchKey: field.uint128
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +593,7 @@ uint128 holds a 128-bit number as two 64-bit limbs, for use with the bits.Mul64 
 
 ```
 searchKey: field.mul64
+tags: [private]
 ```
 
 ```Go
@@ -594,6 +606,7 @@ mul64 returns a * b.
 
 ```
 searchKey: field.addMul64
+tags: [private]
 ```
 
 ```Go
@@ -604,10 +617,15 @@ addMul64 returns v + a * b.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="mask64Bits" href="#mask64Bits">func mask64Bits(cond int) uint64</a>
 
 ```
 searchKey: field.mask64Bits
+tags: [private]
 ```
 
 ```Go
@@ -620,6 +638,7 @@ mask64Bits returns 0xffffffff if cond is 1, and 0 otherwise.
 
 ```
 searchKey: field.mul51
+tags: [private]
 ```
 
 ```Go
@@ -632,6 +651,7 @@ mul51 returns lo + hi * 2⁵¹ = a * b.
 
 ```
 searchKey: field.feMul
+tags: [private]
 ```
 
 ```Go
@@ -644,6 +664,7 @@ feMul sets out = a * b. It works like feMulGeneric.
 
 ```
 searchKey: field.feSquare
+tags: [private]
 ```
 
 ```Go
@@ -656,6 +677,7 @@ feSquare sets out = a * a. It works like feSquareGeneric.
 
 ```
 searchKey: field.shiftRightBy51
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +690,7 @@ shiftRightBy51 returns a >> 51. a is assumed to be at most 115 bits.
 
 ```
 searchKey: field.feMulGeneric
+tags: [private]
 ```
 
 ```Go
@@ -678,6 +701,7 @@ func feMulGeneric(v, a, b *Element)
 
 ```
 searchKey: field.feSquareGeneric
+tags: [private]
 ```
 
 ```Go
@@ -688,6 +712,7 @@ func feSquareGeneric(v, a *Element)
 
 ```
 searchKey: field.checkAliasingOneArg
+tags: [private]
 ```
 
 ```Go
@@ -698,6 +723,7 @@ func checkAliasingOneArg(f func(v, x *Element) *Element) func(v, x Element) bool
 
 ```
 searchKey: field.checkAliasingTwoArgs
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +734,7 @@ func checkAliasingTwoArgs(f func(v, x, y *Element) *Element) func(v, x, y Elemen
 
 ```
 searchKey: field.TestAliasing
+tags: [private]
 ```
 
 ```Go
@@ -732,6 +759,7 @@ without any of the inputs getting clobbered by the output being written.
 
 ```
 searchKey: field.BenchmarkAdd
+tags: [private]
 ```
 
 ```Go
@@ -742,6 +770,7 @@ func BenchmarkAdd(b *testing.B)
 
 ```
 searchKey: field.BenchmarkMultiply
+tags: [private]
 ```
 
 ```Go
@@ -752,6 +781,7 @@ func BenchmarkMultiply(b *testing.B)
 
 ```
 searchKey: field.BenchmarkMult32
+tags: [private]
 ```
 
 ```Go
@@ -762,6 +792,7 @@ func BenchmarkMult32(b *testing.B)
 
 ```
 searchKey: field.isInBounds
+tags: [private]
 ```
 
 ```Go
@@ -774,6 +805,7 @@ isInBounds returns whether the element is within the expected bit size bounds af
 
 ```
 searchKey: field.TestMultiplyDistributesOverAdd
+tags: [private]
 ```
 
 ```Go
@@ -784,6 +816,7 @@ func TestMultiplyDistributesOverAdd(t *testing.T)
 
 ```
 searchKey: field.TestMul64to128
+tags: [private]
 ```
 
 ```Go
@@ -794,6 +827,7 @@ func TestMul64to128(t *testing.T)
 
 ```
 searchKey: field.TestSetBytesRoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -804,6 +838,7 @@ func TestSetBytesRoundTrip(t *testing.T)
 
 ```
 searchKey: field.swapEndianness
+tags: [private]
 ```
 
 ```Go
@@ -814,6 +849,7 @@ func swapEndianness(buf []byte) []byte
 
 ```
 searchKey: field.TestBytesBigEquivalence
+tags: [private]
 ```
 
 ```Go
@@ -824,6 +860,7 @@ func TestBytesBigEquivalence(t *testing.T)
 
 ```
 searchKey: field.TestDecimalConstants
+tags: [private]
 ```
 
 ```Go
@@ -834,6 +871,7 @@ func TestDecimalConstants(t *testing.T)
 
 ```
 searchKey: field.TestSetBytesRoundTripEdgeCases
+tags: [private]
 ```
 
 ```Go
@@ -844,6 +882,7 @@ func TestSetBytesRoundTripEdgeCases(t *testing.T)
 
 ```
 searchKey: field.TestConsistency
+tags: [private]
 ```
 
 ```Go
@@ -856,6 +895,7 @@ Tests self-consistency between Multiply and Square.
 
 ```
 searchKey: field.TestEqual
+tags: [private]
 ```
 
 ```Go
@@ -866,6 +906,7 @@ func TestEqual(t *testing.T)
 
 ```
 searchKey: field.TestInvert
+tags: [private]
 ```
 
 ```Go
@@ -876,6 +917,7 @@ func TestInvert(t *testing.T)
 
 ```
 searchKey: field.TestSelectSwap
+tags: [private]
 ```
 
 ```Go
@@ -886,6 +928,7 @@ func TestSelectSwap(t *testing.T)
 
 ```
 searchKey: field.TestMult32
+tags: [private]
 ```
 
 ```Go
@@ -896,6 +939,7 @@ func TestMult32(t *testing.T)
 
 ```
 searchKey: field.TestSqrtRatio
+tags: [private]
 ```
 
 ```Go
@@ -906,6 +950,7 @@ func TestSqrtRatio(t *testing.T)
 
 ```
 searchKey: field.TestCarryPropagate
+tags: [private]
 ```
 
 ```Go
@@ -916,6 +961,7 @@ func TestCarryPropagate(t *testing.T)
 
 ```
 searchKey: field.TestFeSquare
+tags: [private]
 ```
 
 ```Go
@@ -926,6 +972,7 @@ func TestFeSquare(t *testing.T)
 
 ```
 searchKey: field.TestFeMul
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +983,7 @@ func TestFeMul(t *testing.T)
 
 ```
 searchKey: field.decodeHex
+tags: [private]
 ```
 
 ```Go

@@ -9,10 +9,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Example_writerReader" href="#Example_writerReader">func Example_writerReader()</a>
 
 ```
 searchKey: gzip_test.Example_writerReader
+tags: [private]
 ```
 
 ```Go
@@ -23,6 +28,7 @@ func Example_writerReader()
 
 ```
 searchKey: gzip_test.ExampleReader_Multistream
+tags: [private]
 ```
 
 ```Go

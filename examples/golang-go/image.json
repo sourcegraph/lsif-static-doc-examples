@@ -4,9 +4,7 @@
     "identifier": "image",
     "newPage": true,
     "searchKey": "image",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -27,9 +25,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -47,9 +43,7 @@
                 "identifier": "YCbCrSubsampleRatio444",
                 "newPage": false,
                 "searchKey": "image.YCbCrSubsampleRatio444",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -69,9 +63,7 @@
                 "identifier": "YCbCrSubsampleRatio422",
                 "newPage": false,
                 "searchKey": "image.YCbCrSubsampleRatio422",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -91,9 +83,7 @@
                 "identifier": "YCbCrSubsampleRatio420",
                 "newPage": false,
                 "searchKey": "image.YCbCrSubsampleRatio420",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -113,9 +103,7 @@
                 "identifier": "YCbCrSubsampleRatio440",
                 "newPage": false,
                 "searchKey": "image.YCbCrSubsampleRatio440",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -135,9 +123,7 @@
                 "identifier": "YCbCrSubsampleRatio411",
                 "newPage": false,
                 "searchKey": "image.YCbCrSubsampleRatio411",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -157,9 +143,7 @@
                 "identifier": "YCbCrSubsampleRatio410",
                 "newPage": false,
                 "searchKey": "image.YCbCrSubsampleRatio410",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -182,9 +166,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -202,9 +184,7 @@
                 "identifier": "ErrFormat",
                 "newPage": false,
                 "searchKey": "image.ErrFormat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +204,9 @@
                 "identifier": "formatsMu",
                 "newPage": false,
                 "searchKey": "image.formatsMu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -244,7 +226,9 @@
                 "identifier": "atomicFormats",
                 "newPage": false,
                 "searchKey": "image.atomicFormats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -264,9 +248,7 @@
                 "identifier": "ZP",
                 "newPage": false,
                 "searchKey": "image.ZP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -286,9 +268,7 @@
                 "identifier": "ZR",
                 "newPage": false,
                 "searchKey": "image.ZR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -308,9 +288,7 @@
                 "identifier": "Black",
                 "newPage": false,
                 "searchKey": "image.Black",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -330,9 +308,7 @@
                 "identifier": "White",
                 "newPage": false,
                 "searchKey": "image.White",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -352,9 +328,7 @@
                 "identifier": "Transparent",
                 "newPage": false,
                 "searchKey": "image.Transparent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -374,9 +348,7 @@
                 "identifier": "Opaque",
                 "newPage": false,
                 "searchKey": "image.Opaque",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -396,7 +368,9 @@
                 "identifier": "testImages",
                 "newPage": false,
                 "searchKey": "image.testImages",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -419,9 +393,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -439,7 +411,9 @@
                 "identifier": "format",
                 "newPage": false,
                 "searchKey": "image.format",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -457,7 +431,9 @@
                       "identifier": "sniff",
                       "newPage": false,
                       "searchKey": "image.sniff",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -480,7 +456,9 @@
                 "identifier": "reader",
                 "newPage": false,
                 "searchKey": "image.reader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -498,7 +476,9 @@
                       "identifier": "asReader",
                       "newPage": false,
                       "searchKey": "image.asReader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -521,9 +501,7 @@
                 "identifier": "Point",
                 "newPage": false,
                 "searchKey": "image.Point",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -541,9 +519,7 @@
                       "identifier": "Pt",
                       "newPage": false,
                       "searchKey": "image.Pt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -563,9 +539,7 @@
                       "identifier": "Point.String",
                       "newPage": false,
                       "searchKey": "image.Point.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -585,9 +559,7 @@
                       "identifier": "Point.Add",
                       "newPage": false,
                       "searchKey": "image.Point.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -607,9 +579,7 @@
                       "identifier": "Point.Sub",
                       "newPage": false,
                       "searchKey": "image.Point.Sub",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -629,9 +599,7 @@
                       "identifier": "Point.Mul",
                       "newPage": false,
                       "searchKey": "image.Point.Mul",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -651,9 +619,7 @@
                       "identifier": "Point.Div",
                       "newPage": false,
                       "searchKey": "image.Point.Div",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -673,9 +639,7 @@
                       "identifier": "Point.In",
                       "newPage": false,
                       "searchKey": "image.Point.In",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -695,9 +659,7 @@
                       "identifier": "Point.Mod",
                       "newPage": false,
                       "searchKey": "image.Point.Mod",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -717,9 +679,7 @@
                       "identifier": "Point.Eq",
                       "newPage": false,
                       "searchKey": "image.Point.Eq",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -742,9 +702,7 @@
                 "identifier": "Rectangle",
                 "newPage": false,
                 "searchKey": "image.Rectangle",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -762,9 +720,7 @@
                       "identifier": "Rect",
                       "newPage": false,
                       "searchKey": "image.Rect",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -784,9 +740,7 @@
                       "identifier": "Rectangle.String",
                       "newPage": false,
                       "searchKey": "image.Rectangle.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -806,9 +760,7 @@
                       "identifier": "Rectangle.Dx",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Dx",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -828,9 +780,7 @@
                       "identifier": "Rectangle.Dy",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Dy",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -850,9 +800,7 @@
                       "identifier": "Rectangle.Size",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Size",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -872,9 +820,7 @@
                       "identifier": "Rectangle.Add",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -894,9 +840,7 @@
                       "identifier": "Rectangle.Sub",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Sub",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -916,9 +860,7 @@
                       "identifier": "Rectangle.Inset",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Inset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -938,9 +880,7 @@
                       "identifier": "Rectangle.Intersect",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Intersect",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -960,9 +900,7 @@
                       "identifier": "Rectangle.Union",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Union",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -982,9 +920,7 @@
                       "identifier": "Rectangle.Empty",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Empty",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1004,9 +940,7 @@
                       "identifier": "Rectangle.Eq",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Eq",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1026,9 +960,7 @@
                       "identifier": "Rectangle.Overlaps",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Overlaps",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1048,9 +980,7 @@
                       "identifier": "Rectangle.In",
                       "newPage": false,
                       "searchKey": "image.Rectangle.In",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1070,9 +1000,7 @@
                       "identifier": "Rectangle.Canon",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Canon",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1092,9 +1020,7 @@
                       "identifier": "Rectangle.At",
                       "newPage": false,
                       "searchKey": "image.Rectangle.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1114,9 +1040,7 @@
                       "identifier": "Rectangle.Bounds",
                       "newPage": false,
                       "searchKey": "image.Rectangle.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1136,9 +1060,7 @@
                       "identifier": "Rectangle.ColorModel",
                       "newPage": false,
                       "searchKey": "image.Rectangle.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1161,9 +1083,7 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "image.Config",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1181,9 +1101,7 @@
                       "identifier": "DecodeConfig",
                       "newPage": false,
                       "searchKey": "image.DecodeConfig",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1206,9 +1124,7 @@
                 "identifier": "Image",
                 "newPage": false,
                 "searchKey": "image.Image",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1226,9 +1142,7 @@
                       "identifier": "Decode",
                       "newPage": false,
                       "searchKey": "image.Decode",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1251,9 +1165,7 @@
                 "identifier": "RGBA64Image",
                 "newPage": false,
                 "searchKey": "image.RGBA64Image",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1273,9 +1185,7 @@
                 "identifier": "PalettedImage",
                 "newPage": false,
                 "searchKey": "image.PalettedImage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1295,9 +1205,7 @@
                 "identifier": "RGBA",
                 "newPage": false,
                 "searchKey": "image.RGBA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1315,9 +1223,7 @@
                       "identifier": "NewRGBA",
                       "newPage": false,
                       "searchKey": "image.NewRGBA",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1337,9 +1243,7 @@
                       "identifier": "RGBA.ColorModel",
                       "newPage": false,
                       "searchKey": "image.RGBA.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1359,9 +1263,7 @@
                       "identifier": "RGBA.Bounds",
                       "newPage": false,
                       "searchKey": "image.RGBA.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1381,9 +1283,7 @@
                       "identifier": "RGBA.At",
                       "newPage": false,
                       "searchKey": "image.RGBA.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1403,9 +1303,7 @@
                       "identifier": "RGBA.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.RGBA.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1425,9 +1323,7 @@
                       "identifier": "RGBA.RGBAAt",
                       "newPage": false,
                       "searchKey": "image.RGBA.RGBAAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1447,9 +1343,7 @@
                       "identifier": "RGBA.PixOffset",
                       "newPage": false,
                       "searchKey": "image.RGBA.PixOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1469,9 +1363,7 @@
                       "identifier": "RGBA.Set",
                       "newPage": false,
                       "searchKey": "image.RGBA.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1491,9 +1383,7 @@
                       "identifier": "RGBA.SetRGBA64",
                       "newPage": false,
                       "searchKey": "image.RGBA.SetRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1513,9 +1403,7 @@
                       "identifier": "RGBA.SetRGBA",
                       "newPage": false,
                       "searchKey": "image.RGBA.SetRGBA",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1535,9 +1423,7 @@
                       "identifier": "RGBA.SubImage",
                       "newPage": false,
                       "searchKey": "image.RGBA.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1557,9 +1443,7 @@
                       "identifier": "RGBA.Opaque",
                       "newPage": false,
                       "searchKey": "image.RGBA.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1582,9 +1466,7 @@
                 "identifier": "RGBA64",
                 "newPage": false,
                 "searchKey": "image.RGBA64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1602,9 +1484,7 @@
                       "identifier": "NewRGBA64",
                       "newPage": false,
                       "searchKey": "image.NewRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1624,9 +1504,7 @@
                       "identifier": "RGBA64.ColorModel",
                       "newPage": false,
                       "searchKey": "image.RGBA64.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1646,9 +1524,7 @@
                       "identifier": "RGBA64.Bounds",
                       "newPage": false,
                       "searchKey": "image.RGBA64.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1668,9 +1544,7 @@
                       "identifier": "RGBA64.At",
                       "newPage": false,
                       "searchKey": "image.RGBA64.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1690,9 +1564,7 @@
                       "identifier": "RGBA64.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.RGBA64.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1712,9 +1584,7 @@
                       "identifier": "RGBA64.PixOffset",
                       "newPage": false,
                       "searchKey": "image.RGBA64.PixOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1734,9 +1604,7 @@
                       "identifier": "RGBA64.Set",
                       "newPage": false,
                       "searchKey": "image.RGBA64.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1756,9 +1624,7 @@
                       "identifier": "RGBA64.SetRGBA64",
                       "newPage": false,
                       "searchKey": "image.RGBA64.SetRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1778,9 +1644,7 @@
                       "identifier": "RGBA64.SubImage",
                       "newPage": false,
                       "searchKey": "image.RGBA64.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1800,9 +1664,7 @@
                       "identifier": "RGBA64.Opaque",
                       "newPage": false,
                       "searchKey": "image.RGBA64.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1825,9 +1687,7 @@
                 "identifier": "NRGBA",
                 "newPage": false,
                 "searchKey": "image.NRGBA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1845,9 +1705,7 @@
                       "identifier": "NewNRGBA",
                       "newPage": false,
                       "searchKey": "image.NewNRGBA",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1867,9 +1725,7 @@
                       "identifier": "NRGBA.ColorModel",
                       "newPage": false,
                       "searchKey": "image.NRGBA.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1889,9 +1745,7 @@
                       "identifier": "NRGBA.Bounds",
                       "newPage": false,
                       "searchKey": "image.NRGBA.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1911,9 +1765,7 @@
                       "identifier": "NRGBA.At",
                       "newPage": false,
                       "searchKey": "image.NRGBA.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1933,9 +1785,7 @@
                       "identifier": "NRGBA.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.NRGBA.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1955,9 +1805,7 @@
                       "identifier": "NRGBA.NRGBAAt",
                       "newPage": false,
                       "searchKey": "image.NRGBA.NRGBAAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1977,9 +1825,7 @@
                       "identifier": "NRGBA.PixOffset",
                       "newPage": false,
                       "searchKey": "image.NRGBA.PixOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1999,9 +1845,7 @@
                       "identifier": "NRGBA.Set",
                       "newPage": false,
                       "searchKey": "image.NRGBA.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2021,9 +1865,7 @@
                       "identifier": "NRGBA.SetRGBA64",
                       "newPage": false,
                       "searchKey": "image.NRGBA.SetRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2043,9 +1885,7 @@
                       "identifier": "NRGBA.SetNRGBA",
                       "newPage": false,
                       "searchKey": "image.NRGBA.SetNRGBA",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2065,9 +1905,7 @@
                       "identifier": "NRGBA.SubImage",
                       "newPage": false,
                       "searchKey": "image.NRGBA.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2087,9 +1925,7 @@
                       "identifier": "NRGBA.Opaque",
                       "newPage": false,
                       "searchKey": "image.NRGBA.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2112,9 +1948,7 @@
                 "identifier": "NRGBA64",
                 "newPage": false,
                 "searchKey": "image.NRGBA64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2132,9 +1966,7 @@
                       "identifier": "NewNRGBA64",
                       "newPage": false,
                       "searchKey": "image.NewNRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2154,9 +1986,7 @@
                       "identifier": "NRGBA64.ColorModel",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2176,9 +2006,7 @@
                       "identifier": "NRGBA64.Bounds",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2198,9 +2026,7 @@
                       "identifier": "NRGBA64.At",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2220,9 +2046,7 @@
                       "identifier": "NRGBA64.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2242,9 +2066,7 @@
                       "identifier": "NRGBA64.NRGBA64At",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.NRGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2264,9 +2086,7 @@
                       "identifier": "NRGBA64.PixOffset",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.PixOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2286,9 +2106,7 @@
                       "identifier": "NRGBA64.Set",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2308,9 +2126,7 @@
                       "identifier": "NRGBA64.SetRGBA64",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.SetRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2330,9 +2146,7 @@
                       "identifier": "NRGBA64.SetNRGBA64",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.SetNRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2352,9 +2166,7 @@
                       "identifier": "NRGBA64.SubImage",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2374,9 +2186,7 @@
                       "identifier": "NRGBA64.Opaque",
                       "newPage": false,
                       "searchKey": "image.NRGBA64.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2399,9 +2209,7 @@
                 "identifier": "Alpha",
                 "newPage": false,
                 "searchKey": "image.Alpha",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2419,9 +2227,7 @@
                       "identifier": "NewAlpha",
                       "newPage": false,
                       "searchKey": "image.NewAlpha",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2441,9 +2247,7 @@
                       "identifier": "Alpha.ColorModel",
                       "newPage": false,
                       "searchKey": "image.Alpha.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2463,9 +2267,7 @@
                       "identifier": "Alpha.Bounds",
                       "newPage": false,
                       "searchKey": "image.Alpha.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2485,9 +2287,7 @@
                       "identifier": "Alpha.At",
                       "newPage": false,
                       "searchKey": "image.Alpha.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2507,9 +2307,7 @@
                       "identifier": "Alpha.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.Alpha.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2529,9 +2327,7 @@
                       "identifier": "Alpha.AlphaAt",
                       "newPage": false,
                       "searchKey": "image.Alpha.AlphaAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2551,9 +2347,7 @@
                       "identifier": "Alpha.PixOffset",
                       "newPage": false,
                       "searchKey": "image.Alpha.PixOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2573,9 +2367,7 @@
                       "identifier": "Alpha.Set",
                       "newPage": false,
                       "searchKey": "image.Alpha.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2595,9 +2387,7 @@
                       "identifier": "Alpha.SetRGBA64",
                       "newPage": false,
                       "searchKey": "image.Alpha.SetRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2617,9 +2407,7 @@
                       "identifier": "Alpha.SetAlpha",
                       "newPage": false,
                       "searchKey": "image.Alpha.SetAlpha",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2639,9 +2427,7 @@
                       "identifier": "Alpha.SubImage",
                       "newPage": false,
                       "searchKey": "image.Alpha.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2661,9 +2447,7 @@
                       "identifier": "Alpha.Opaque",
                       "newPage": false,
                       "searchKey": "image.Alpha.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2686,9 +2470,7 @@
                 "identifier": "Alpha16",
                 "newPage": false,
                 "searchKey": "image.Alpha16",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2706,9 +2488,7 @@
                       "identifier": "NewAlpha16",
                       "newPage": false,
                       "searchKey": "image.NewAlpha16",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2728,9 +2508,7 @@
                       "identifier": "Alpha16.ColorModel",
                       "newPage": false,
                       "searchKey": "image.Alpha16.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2750,9 +2528,7 @@
                       "identifier": "Alpha16.Bounds",
                       "newPage": false,
                       "searchKey": "image.Alpha16.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2772,9 +2548,7 @@
                       "identifier": "Alpha16.At",
                       "newPage": false,
                       "searchKey": "image.Alpha16.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2794,9 +2568,7 @@
                       "identifier": "Alpha16.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.Alpha16.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2816,9 +2588,7 @@
                       "identifier": "Alpha16.Alpha16At",
                       "newPage": false,
                       "searchKey": "image.Alpha16.Alpha16At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2838,9 +2608,7 @@
                       "identifier": "Alpha16.PixOffset",
                       "newPage": false,
                       "searchKey": "image.Alpha16.PixOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2860,9 +2628,7 @@
                       "identifier": "Alpha16.Set",
                       "newPage": false,
                       "searchKey": "image.Alpha16.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2882,9 +2648,7 @@
                       "identifier": "Alpha16.SetRGBA64",
                       "newPage": false,
                       "searchKey": "image.Alpha16.SetRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2904,9 +2668,7 @@
                       "identifier": "Alpha16.SetAlpha16",
                       "newPage": false,
                       "searchKey": "image.Alpha16.SetAlpha16",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2926,9 +2688,7 @@
                       "identifier": "Alpha16.SubImage",
                       "newPage": false,
                       "searchKey": "image.Alpha16.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2948,9 +2708,7 @@
                       "identifier": "Alpha16.Opaque",
                       "newPage": false,
                       "searchKey": "image.Alpha16.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2973,9 +2731,7 @@
                 "identifier": "Gray",
                 "newPage": false,
                 "searchKey": "image.Gray",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2993,9 +2749,7 @@
                       "identifier": "NewGray",
                       "newPage": false,
                       "searchKey": "image.NewGray",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3015,9 +2769,7 @@
                       "identifier": "Gray.ColorModel",
                       "newPage": false,
                       "searchKey": "image.Gray.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3037,9 +2789,7 @@
                       "identifier": "Gray.Bounds",
                       "newPage": false,
                       "searchKey": "image.Gray.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3059,9 +2809,7 @@
                       "identifier": "Gray.At",
                       "newPage": false,
                       "searchKey": "image.Gray.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3081,9 +2829,7 @@
                       "identifier": "Gray.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.Gray.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3103,9 +2849,7 @@
                       "identifier": "Gray.GrayAt",
                       "newPage": false,
                       "searchKey": "image.Gray.GrayAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3125,9 +2869,7 @@
                       "identifier": "Gray.PixOffset",
                       "newPage": false,
                       "searchKey": "image.Gray.PixOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3147,9 +2889,7 @@
                       "identifier": "Gray.Set",
                       "newPage": false,
                       "searchKey": "image.Gray.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3169,9 +2909,7 @@
                       "identifier": "Gray.SetRGBA64",
                       "newPage": false,
                       "searchKey": "image.Gray.SetRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3191,9 +2929,7 @@
                       "identifier": "Gray.SetGray",
                       "newPage": false,
                       "searchKey": "image.Gray.SetGray",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3213,9 +2949,7 @@
                       "identifier": "Gray.SubImage",
                       "newPage": false,
                       "searchKey": "image.Gray.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3235,9 +2969,7 @@
                       "identifier": "Gray.Opaque",
                       "newPage": false,
                       "searchKey": "image.Gray.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3260,9 +2992,7 @@
                 "identifier": "Gray16",
                 "newPage": false,
                 "searchKey": "image.Gray16",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3280,9 +3010,7 @@
                       "identifier": "NewGray16",
                       "newPage": false,
                       "searchKey": "image.NewGray16",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3302,9 +3030,7 @@
                       "identifier": "Gray16.ColorModel",
                       "newPage": false,
                       "searchKey": "image.Gray16.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3324,9 +3050,7 @@
                       "identifier": "Gray16.Bounds",
                       "newPage": false,
                       "searchKey": "image.Gray16.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3346,9 +3070,7 @@
                       "identifier": "Gray16.At",
                       "newPage": false,
                       "searchKey": "image.Gray16.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3368,9 +3090,7 @@
                       "identifier": "Gray16.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.Gray16.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3390,9 +3110,7 @@
                       "identifier": "Gray16.Gray16At",
                       "newPage": false,
                       "searchKey": "image.Gray16.Gray16At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3412,9 +3130,7 @@
                       "identifier": "Gray16.PixOffset",
                       "newPage": false,
                       "searchKey": "image.Gray16.PixOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3434,9 +3150,7 @@
                       "identifier": "Gray16.Set",
                       "newPage": false,
                       "searchKey": "image.Gray16.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3456,9 +3170,7 @@
                       "identifier": "Gray16.SetRGBA64",
                       "newPage": false,
                       "searchKey": "image.Gray16.SetRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3478,9 +3190,7 @@
                       "identifier": "Gray16.SetGray16",
                       "newPage": false,
                       "searchKey": "image.Gray16.SetGray16",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3500,9 +3210,7 @@
                       "identifier": "Gray16.SubImage",
                       "newPage": false,
                       "searchKey": "image.Gray16.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3522,9 +3230,7 @@
                       "identifier": "Gray16.Opaque",
                       "newPage": false,
                       "searchKey": "image.Gray16.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3547,9 +3253,7 @@
                 "identifier": "CMYK",
                 "newPage": false,
                 "searchKey": "image.CMYK",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3567,9 +3271,7 @@
                       "identifier": "NewCMYK",
                       "newPage": false,
                       "searchKey": "image.NewCMYK",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3589,9 +3291,7 @@
                       "identifier": "CMYK.ColorModel",
                       "newPage": false,
                       "searchKey": "image.CMYK.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3611,9 +3311,7 @@
                       "identifier": "CMYK.Bounds",
                       "newPage": false,
                       "searchKey": "image.CMYK.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3633,9 +3331,7 @@
                       "identifier": "CMYK.At",
                       "newPage": false,
                       "searchKey": "image.CMYK.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3655,9 +3351,7 @@
                       "identifier": "CMYK.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.CMYK.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3677,9 +3371,7 @@
                       "identifier": "CMYK.CMYKAt",
                       "newPage": false,
                       "searchKey": "image.CMYK.CMYKAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3699,9 +3391,7 @@
                       "identifier": "CMYK.PixOffset",
                       "newPage": false,
                       "searchKey": "image.CMYK.PixOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3721,9 +3411,7 @@
                       "identifier": "CMYK.Set",
                       "newPage": false,
                       "searchKey": "image.CMYK.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3743,9 +3431,7 @@
                       "identifier": "CMYK.SetRGBA64",
                       "newPage": false,
                       "searchKey": "image.CMYK.SetRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3765,9 +3451,7 @@
                       "identifier": "CMYK.SetCMYK",
                       "newPage": false,
                       "searchKey": "image.CMYK.SetCMYK",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3787,9 +3471,7 @@
                       "identifier": "CMYK.SubImage",
                       "newPage": false,
                       "searchKey": "image.CMYK.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3809,9 +3491,7 @@
                       "identifier": "CMYK.Opaque",
                       "newPage": false,
                       "searchKey": "image.CMYK.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3834,9 +3514,7 @@
                 "identifier": "Paletted",
                 "newPage": false,
                 "searchKey": "image.Paletted",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3854,9 +3532,7 @@
                       "identifier": "NewPaletted",
                       "newPage": false,
                       "searchKey": "image.NewPaletted",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3876,9 +3552,7 @@
                       "identifier": "Paletted.ColorModel",
                       "newPage": false,
                       "searchKey": "image.Paletted.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3898,9 +3572,7 @@
                       "identifier": "Paletted.Bounds",
                       "newPage": false,
                       "searchKey": "image.Paletted.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3920,9 +3592,7 @@
                       "identifier": "Paletted.At",
                       "newPage": false,
                       "searchKey": "image.Paletted.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3942,9 +3612,7 @@
                       "identifier": "Paletted.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.Paletted.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3964,9 +3632,7 @@
                       "identifier": "Paletted.PixOffset",
                       "newPage": false,
                       "searchKey": "image.Paletted.PixOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3986,9 +3652,7 @@
                       "identifier": "Paletted.Set",
                       "newPage": false,
                       "searchKey": "image.Paletted.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4008,9 +3672,7 @@
                       "identifier": "Paletted.SetRGBA64",
                       "newPage": false,
                       "searchKey": "image.Paletted.SetRGBA64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4030,9 +3692,7 @@
                       "identifier": "Paletted.ColorIndexAt",
                       "newPage": false,
                       "searchKey": "image.Paletted.ColorIndexAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4052,9 +3712,7 @@
                       "identifier": "Paletted.SetColorIndex",
                       "newPage": false,
                       "searchKey": "image.Paletted.SetColorIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4074,9 +3732,7 @@
                       "identifier": "Paletted.SubImage",
                       "newPage": false,
                       "searchKey": "image.Paletted.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4096,9 +3752,7 @@
                       "identifier": "Paletted.Opaque",
                       "newPage": false,
                       "searchKey": "image.Paletted.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4121,9 +3775,7 @@
                 "identifier": "Uniform",
                 "newPage": false,
                 "searchKey": "image.Uniform",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4141,9 +3793,7 @@
                       "identifier": "NewUniform",
                       "newPage": false,
                       "searchKey": "image.NewUniform",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4163,9 +3813,7 @@
                       "identifier": "Uniform.RGBA",
                       "newPage": false,
                       "searchKey": "image.Uniform.RGBA",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4185,9 +3833,7 @@
                       "identifier": "Uniform.ColorModel",
                       "newPage": false,
                       "searchKey": "image.Uniform.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4207,9 +3853,7 @@
                       "identifier": "Uniform.Convert",
                       "newPage": false,
                       "searchKey": "image.Uniform.Convert",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4229,9 +3873,7 @@
                       "identifier": "Uniform.Bounds",
                       "newPage": false,
                       "searchKey": "image.Uniform.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4251,9 +3893,7 @@
                       "identifier": "Uniform.At",
                       "newPage": false,
                       "searchKey": "image.Uniform.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4273,9 +3913,7 @@
                       "identifier": "Uniform.Opaque",
                       "newPage": false,
                       "searchKey": "image.Uniform.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4298,9 +3936,7 @@
                 "identifier": "YCbCrSubsampleRatio",
                 "newPage": false,
                 "searchKey": "image.YCbCrSubsampleRatio",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4318,9 +3954,7 @@
                       "identifier": "YCbCrSubsampleRatio.String",
                       "newPage": false,
                       "searchKey": "image.YCbCrSubsampleRatio.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4343,9 +3977,7 @@
                 "identifier": "YCbCr",
                 "newPage": false,
                 "searchKey": "image.YCbCr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4363,9 +3995,7 @@
                       "identifier": "NewYCbCr",
                       "newPage": false,
                       "searchKey": "image.NewYCbCr",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4385,9 +4015,7 @@
                       "identifier": "YCbCr.ColorModel",
                       "newPage": false,
                       "searchKey": "image.YCbCr.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4407,9 +4035,7 @@
                       "identifier": "YCbCr.Bounds",
                       "newPage": false,
                       "searchKey": "image.YCbCr.Bounds",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4429,9 +4055,7 @@
                       "identifier": "YCbCr.At",
                       "newPage": false,
                       "searchKey": "image.YCbCr.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4451,9 +4075,7 @@
                       "identifier": "YCbCr.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.YCbCr.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4473,9 +4095,7 @@
                       "identifier": "YCbCr.YCbCrAt",
                       "newPage": false,
                       "searchKey": "image.YCbCr.YCbCrAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4495,9 +4115,7 @@
                       "identifier": "YCbCr.YOffset",
                       "newPage": false,
                       "searchKey": "image.YCbCr.YOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4517,9 +4135,7 @@
                       "identifier": "YCbCr.COffset",
                       "newPage": false,
                       "searchKey": "image.YCbCr.COffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4539,9 +4155,7 @@
                       "identifier": "YCbCr.SubImage",
                       "newPage": false,
                       "searchKey": "image.YCbCr.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4561,9 +4175,7 @@
                       "identifier": "YCbCr.Opaque",
                       "newPage": false,
                       "searchKey": "image.YCbCr.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4586,9 +4198,7 @@
                 "identifier": "NYCbCrA",
                 "newPage": false,
                 "searchKey": "image.NYCbCrA",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4606,9 +4216,7 @@
                       "identifier": "NewNYCbCrA",
                       "newPage": false,
                       "searchKey": "image.NewNYCbCrA",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4628,9 +4236,7 @@
                       "identifier": "NYCbCrA.ColorModel",
                       "newPage": false,
                       "searchKey": "image.NYCbCrA.ColorModel",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4650,9 +4256,7 @@
                       "identifier": "NYCbCrA.At",
                       "newPage": false,
                       "searchKey": "image.NYCbCrA.At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4672,9 +4276,7 @@
                       "identifier": "NYCbCrA.RGBA64At",
                       "newPage": false,
                       "searchKey": "image.NYCbCrA.RGBA64At",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4694,9 +4296,7 @@
                       "identifier": "NYCbCrA.NYCbCrAAt",
                       "newPage": false,
                       "searchKey": "image.NYCbCrA.NYCbCrAAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4716,9 +4316,7 @@
                       "identifier": "NYCbCrA.AOffset",
                       "newPage": false,
                       "searchKey": "image.NYCbCrA.AOffset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4738,9 +4336,7 @@
                       "identifier": "NYCbCrA.SubImage",
                       "newPage": false,
                       "searchKey": "image.NYCbCrA.SubImage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4760,9 +4356,7 @@
                       "identifier": "NYCbCrA.Opaque",
                       "newPage": false,
                       "searchKey": "image.NYCbCrA.Opaque",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4785,7 +4379,9 @@
                 "identifier": "image",
                 "newPage": false,
                 "searchKey": "image.image",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4808,9 +4404,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -4828,9 +4422,7 @@
                 "identifier": "RegisterFormat",
                 "newPage": false,
                 "searchKey": "image.RegisterFormat",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4850,7 +4442,9 @@
                 "identifier": "match",
                 "newPage": false,
                 "searchKey": "image.match",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4870,7 +4464,9 @@
                 "identifier": "mul3NonNeg",
                 "newPage": false,
                 "searchKey": "image.mul3NonNeg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4890,7 +4486,9 @@
                 "identifier": "add2NonNeg",
                 "newPage": false,
                 "searchKey": "image.add2NonNeg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4910,7 +4508,9 @@
                 "identifier": "pixelBufferLength",
                 "newPage": false,
                 "searchKey": "image.pixelBufferLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4930,7 +4530,9 @@
                 "identifier": "yCbCrSize",
                 "newPage": false,
                 "searchKey": "image.yCbCrSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4950,7 +4552,9 @@
                 "identifier": "TestRectangle",
                 "newPage": false,
                 "searchKey": "image.TestRectangle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4970,7 +4574,9 @@
                 "identifier": "cmp",
                 "newPage": false,
                 "searchKey": "image.cmp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4990,7 +4596,9 @@
                 "identifier": "TestImage",
                 "newPage": false,
                 "searchKey": "image.TestImage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5010,7 +4618,9 @@
                 "identifier": "TestNewXxxBadRectangle",
                 "newPage": false,
                 "searchKey": "image.TestNewXxxBadRectangle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5030,7 +4640,9 @@
                 "identifier": "Test16BitsPerColorChannel",
                 "newPage": false,
                 "searchKey": "image.Test16BitsPerColorChannel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5050,7 +4662,9 @@
                 "identifier": "TestRGBA64Image",
                 "newPage": false,
                 "searchKey": "image.TestRGBA64Image",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5070,7 +4684,9 @@
                 "identifier": "BenchmarkAt",
                 "newPage": false,
                 "searchKey": "image.BenchmarkAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5090,7 +4706,9 @@
                 "identifier": "BenchmarkSet",
                 "newPage": false,
                 "searchKey": "image.BenchmarkSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5110,7 +4728,9 @@
                 "identifier": "BenchmarkRGBAAt",
                 "newPage": false,
                 "searchKey": "image.BenchmarkRGBAAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5130,7 +4750,9 @@
                 "identifier": "BenchmarkRGBASetRGBA",
                 "newPage": false,
                 "searchKey": "image.BenchmarkRGBASetRGBA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5150,7 +4772,9 @@
                 "identifier": "BenchmarkRGBA64At",
                 "newPage": false,
                 "searchKey": "image.BenchmarkRGBA64At",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5170,7 +4794,9 @@
                 "identifier": "BenchmarkRGBA64SetRGBA64",
                 "newPage": false,
                 "searchKey": "image.BenchmarkRGBA64SetRGBA64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5190,7 +4816,9 @@
                 "identifier": "BenchmarkNRGBAAt",
                 "newPage": false,
                 "searchKey": "image.BenchmarkNRGBAAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5210,7 +4838,9 @@
                 "identifier": "BenchmarkNRGBASetNRGBA",
                 "newPage": false,
                 "searchKey": "image.BenchmarkNRGBASetNRGBA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5230,7 +4860,9 @@
                 "identifier": "BenchmarkNRGBA64At",
                 "newPage": false,
                 "searchKey": "image.BenchmarkNRGBA64At",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5250,7 +4882,9 @@
                 "identifier": "BenchmarkNRGBA64SetNRGBA64",
                 "newPage": false,
                 "searchKey": "image.BenchmarkNRGBA64SetNRGBA64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5270,7 +4904,9 @@
                 "identifier": "BenchmarkAlphaAt",
                 "newPage": false,
                 "searchKey": "image.BenchmarkAlphaAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5290,7 +4926,9 @@
                 "identifier": "BenchmarkAlphaSetAlpha",
                 "newPage": false,
                 "searchKey": "image.BenchmarkAlphaSetAlpha",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5310,7 +4948,9 @@
                 "identifier": "BenchmarkAlpha16At",
                 "newPage": false,
                 "searchKey": "image.BenchmarkAlpha16At",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5330,7 +4970,9 @@
                 "identifier": "BenchmarkAlphaSetAlpha16",
                 "newPage": false,
                 "searchKey": "image.BenchmarkAlphaSetAlpha16",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5350,7 +4992,9 @@
                 "identifier": "BenchmarkGrayAt",
                 "newPage": false,
                 "searchKey": "image.BenchmarkGrayAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5370,7 +5014,9 @@
                 "identifier": "BenchmarkGraySetGray",
                 "newPage": false,
                 "searchKey": "image.BenchmarkGraySetGray",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5390,7 +5036,9 @@
                 "identifier": "BenchmarkGray16At",
                 "newPage": false,
                 "searchKey": "image.BenchmarkGray16At",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5410,7 +5058,9 @@
                 "identifier": "BenchmarkGraySetGray16",
                 "newPage": false,
                 "searchKey": "image.BenchmarkGraySetGray16",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5430,7 +5080,9 @@
                 "identifier": "TestYCbCr",
                 "newPage": false,
                 "searchKey": "image.TestYCbCr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5450,7 +5102,9 @@
                 "identifier": "testYCbCr",
                 "newPage": false,
                 "searchKey": "image.testYCbCr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5470,7 +5124,9 @@
                 "identifier": "TestYCbCrSlicesDontOverlap",
                 "newPage": false,
                 "searchKey": "image.TestYCbCrSlicesDontOverlap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

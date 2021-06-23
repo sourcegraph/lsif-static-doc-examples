@@ -4,9 +4,7 @@
     "identifier": "smtp",
     "newPage": true,
     "searchKey": "net/smtp",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "testHookStartTLS",
                 "newPage": false,
                 "searchKey": "smtp.testHookStartTLS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "authTests",
                 "newPage": false,
                 "searchKey": "smtp.authTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "basicServer",
                 "newPage": false,
                 "searchKey": "smtp.basicServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "basicClient",
                 "newPage": false,
                 "searchKey": "smtp.basicClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "newClientServer",
                 "newPage": false,
                 "searchKey": "smtp.newClientServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "newClientClient",
                 "newPage": false,
                 "searchKey": "smtp.newClientClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "newClient2Server",
                 "newPage": false,
                 "searchKey": "smtp.newClient2Server",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "newClient2Client",
                 "newPage": false,
                 "searchKey": "smtp.newClient2Client",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                 "identifier": "baseHelloServer",
                 "newPage": false,
                 "searchKey": "smtp.baseHelloServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +238,9 @@
                 "identifier": "helloServer",
                 "newPage": false,
                 "searchKey": "smtp.helloServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -244,7 +260,9 @@
                 "identifier": "baseHelloClient",
                 "newPage": false,
                 "searchKey": "smtp.baseHelloClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -264,7 +282,9 @@
                 "identifier": "helloClient",
                 "newPage": false,
                 "searchKey": "smtp.helloClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -284,7 +304,9 @@
                 "identifier": "sendMailServer",
                 "newPage": false,
                 "searchKey": "smtp.sendMailServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,7 +326,9 @@
                 "identifier": "sendMailClient",
                 "newPage": false,
                 "searchKey": "smtp.sendMailClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -324,7 +348,9 @@
                 "identifier": "authFailedServer",
                 "newPage": false,
                 "searchKey": "smtp.authFailedServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -344,7 +370,9 @@
                 "identifier": "authFailedClient",
                 "newPage": false,
                 "searchKey": "smtp.authFailedClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,7 +392,9 @@
                 "identifier": "localhostCert",
                 "newPage": false,
                 "searchKey": "smtp.localhostCert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -384,7 +414,9 @@
                 "identifier": "localhostKey",
                 "newPage": false,
                 "searchKey": "smtp.localhostKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,9 +439,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -427,9 +457,7 @@
                 "identifier": "Auth",
                 "newPage": false,
                 "searchKey": "smtp.Auth",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -447,9 +475,7 @@
                       "identifier": "PlainAuth",
                       "newPage": false,
                       "searchKey": "smtp.PlainAuth",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -469,9 +495,7 @@
                       "identifier": "CRAMMD5Auth",
                       "newPage": false,
                       "searchKey": "smtp.CRAMMD5Auth",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -494,9 +518,7 @@
                 "identifier": "ServerInfo",
                 "newPage": false,
                 "searchKey": "smtp.ServerInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -516,7 +538,9 @@
                 "identifier": "plainAuth",
                 "newPage": false,
                 "searchKey": "smtp.plainAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -534,7 +558,9 @@
                       "identifier": "plainAuth.Start",
                       "newPage": false,
                       "searchKey": "smtp.plainAuth.Start",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -554,7 +580,9 @@
                       "identifier": "plainAuth.Next",
                       "newPage": false,
                       "searchKey": "smtp.plainAuth.Next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -577,7 +605,9 @@
                 "identifier": "cramMD5Auth",
                 "newPage": false,
                 "searchKey": "smtp.cramMD5Auth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -595,7 +625,9 @@
                       "identifier": "cramMD5Auth.Start",
                       "newPage": false,
                       "searchKey": "smtp.cramMD5Auth.Start",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -615,7 +647,9 @@
                       "identifier": "cramMD5Auth.Next",
                       "newPage": false,
                       "searchKey": "smtp.cramMD5Auth.Next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -638,9 +672,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "smtp.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -658,9 +690,7 @@
                       "identifier": "Dial",
                       "newPage": false,
                       "searchKey": "smtp.Dial",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -680,9 +710,7 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "smtp.NewClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -702,9 +730,7 @@
                       "identifier": "Client.Close",
                       "newPage": false,
                       "searchKey": "smtp.Client.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -724,7 +750,9 @@
                       "identifier": "Client.hello",
                       "newPage": false,
                       "searchKey": "smtp.Client.hello",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -744,9 +772,7 @@
                       "identifier": "Client.Hello",
                       "newPage": false,
                       "searchKey": "smtp.Client.Hello",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -766,7 +792,9 @@
                       "identifier": "Client.cmd",
                       "newPage": false,
                       "searchKey": "smtp.Client.cmd",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -786,7 +814,9 @@
                       "identifier": "Client.helo",
                       "newPage": false,
                       "searchKey": "smtp.Client.helo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -806,7 +836,9 @@
                       "identifier": "Client.ehlo",
                       "newPage": false,
                       "searchKey": "smtp.Client.ehlo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -826,9 +858,7 @@
                       "identifier": "Client.StartTLS",
                       "newPage": false,
                       "searchKey": "smtp.Client.StartTLS",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -848,9 +878,7 @@
                       "identifier": "Client.TLSConnectionState",
                       "newPage": false,
                       "searchKey": "smtp.Client.TLSConnectionState",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -870,9 +898,7 @@
                       "identifier": "Client.Verify",
                       "newPage": false,
                       "searchKey": "smtp.Client.Verify",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -892,9 +918,7 @@
                       "identifier": "Client.Auth",
                       "newPage": false,
                       "searchKey": "smtp.Client.Auth",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -914,9 +938,7 @@
                       "identifier": "Client.Mail",
                       "newPage": false,
                       "searchKey": "smtp.Client.Mail",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -936,9 +958,7 @@
                       "identifier": "Client.Rcpt",
                       "newPage": false,
                       "searchKey": "smtp.Client.Rcpt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -958,9 +978,7 @@
                       "identifier": "Client.Data",
                       "newPage": false,
                       "searchKey": "smtp.Client.Data",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -980,9 +998,7 @@
                       "identifier": "Client.Extension",
                       "newPage": false,
                       "searchKey": "smtp.Client.Extension",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1002,9 +1018,7 @@
                       "identifier": "Client.Reset",
                       "newPage": false,
                       "searchKey": "smtp.Client.Reset",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1024,9 +1038,7 @@
                       "identifier": "Client.Noop",
                       "newPage": false,
                       "searchKey": "smtp.Client.Noop",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1046,9 +1058,7 @@
                       "identifier": "Client.Quit",
                       "newPage": false,
                       "searchKey": "smtp.Client.Quit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1071,7 +1081,9 @@
                 "identifier": "dataCloser",
                 "newPage": false,
                 "searchKey": "smtp.dataCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1089,7 +1101,9 @@
                       "identifier": "dataCloser.Close",
                       "newPage": false,
                       "searchKey": "smtp.dataCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1112,7 +1126,9 @@
                 "identifier": "authTest",
                 "newPage": false,
                 "searchKey": "smtp.authTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1132,7 +1148,9 @@
                 "identifier": "toServerEmptyAuth",
                 "newPage": false,
                 "searchKey": "smtp.toServerEmptyAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1150,7 +1168,9 @@
                       "identifier": "toServerEmptyAuth.Start",
                       "newPage": false,
                       "searchKey": "smtp.toServerEmptyAuth.Start",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1170,7 +1190,9 @@
                       "identifier": "toServerEmptyAuth.Next",
                       "newPage": false,
                       "searchKey": "smtp.toServerEmptyAuth.Next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1193,7 +1215,9 @@
                 "identifier": "faker",
                 "newPage": false,
                 "searchKey": "smtp.faker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1211,7 +1235,9 @@
                       "identifier": "faker.Close",
                       "newPage": false,
                       "searchKey": "smtp.faker.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1231,7 +1257,9 @@
                       "identifier": "faker.LocalAddr",
                       "newPage": false,
                       "searchKey": "smtp.faker.LocalAddr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1251,7 +1279,9 @@
                       "identifier": "faker.RemoteAddr",
                       "newPage": false,
                       "searchKey": "smtp.faker.RemoteAddr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1271,7 +1301,9 @@
                       "identifier": "faker.SetDeadline",
                       "newPage": false,
                       "searchKey": "smtp.faker.SetDeadline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1291,7 +1323,9 @@
                       "identifier": "faker.SetReadDeadline",
                       "newPage": false,
                       "searchKey": "smtp.faker.SetReadDeadline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1311,7 +1345,9 @@
                       "identifier": "faker.SetWriteDeadline",
                       "newPage": false,
                       "searchKey": "smtp.faker.SetWriteDeadline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1334,7 +1370,9 @@
                 "identifier": "smtpSender",
                 "newPage": false,
                 "searchKey": "smtp.smtpSender",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1352,7 +1390,9 @@
                       "identifier": "smtpSender.send",
                       "newPage": false,
                       "searchKey": "smtp.smtpSender.send",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1378,9 +1418,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1398,7 +1436,9 @@
                 "identifier": "isLocalhost",
                 "newPage": false,
                 "searchKey": "smtp.isLocalhost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1418,9 +1458,7 @@
                 "identifier": "SendMail",
                 "newPage": false,
                 "searchKey": "smtp.SendMail",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1440,7 +1478,9 @@
                 "identifier": "validateLine",
                 "newPage": false,
                 "searchKey": "smtp.validateLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1460,7 +1500,9 @@
                 "identifier": "TestAuth",
                 "newPage": false,
                 "searchKey": "smtp.TestAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1480,7 +1522,9 @@
                 "identifier": "TestAuthPlain",
                 "newPage": false,
                 "searchKey": "smtp.TestAuthPlain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1500,7 +1544,9 @@
                 "identifier": "TestClientAuthTrimSpace",
                 "newPage": false,
                 "searchKey": "smtp.TestClientAuthTrimSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1520,7 +1566,9 @@
                 "identifier": "TestBasic",
                 "newPage": false,
                 "searchKey": "smtp.TestBasic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1540,7 +1588,9 @@
                 "identifier": "TestExtensions",
                 "newPage": false,
                 "searchKey": "smtp.TestExtensions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1560,7 +1610,9 @@
                 "identifier": "TestNewClient",
                 "newPage": false,
                 "searchKey": "smtp.TestNewClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1580,7 +1632,9 @@
                 "identifier": "TestNewClient2",
                 "newPage": false,
                 "searchKey": "smtp.TestNewClient2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1600,7 +1654,9 @@
                 "identifier": "TestNewClientWithTLS",
                 "newPage": false,
                 "searchKey": "smtp.TestNewClientWithTLS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1620,7 +1676,9 @@
                 "identifier": "TestHello",
                 "newPage": false,
                 "searchKey": "smtp.TestHello",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1640,7 +1698,9 @@
                 "identifier": "TestSendMail",
                 "newPage": false,
                 "searchKey": "smtp.TestSendMail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1660,7 +1720,9 @@
                 "identifier": "TestSendMailWithAuth",
                 "newPage": false,
                 "searchKey": "smtp.TestSendMailWithAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1680,7 +1742,9 @@
                 "identifier": "TestAuthFailed",
                 "newPage": false,
                 "searchKey": "smtp.TestAuthFailed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1700,7 +1764,9 @@
                 "identifier": "TestTLSClient",
                 "newPage": false,
                 "searchKey": "smtp.TestTLSClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1720,7 +1786,9 @@
                 "identifier": "TestTLSConnState",
                 "newPage": false,
                 "searchKey": "smtp.TestTLSConnState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1740,7 +1808,9 @@
                 "identifier": "newLocalListener",
                 "newPage": false,
                 "searchKey": "smtp.newLocalListener",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1760,7 +1830,9 @@
                 "identifier": "serverHandle",
                 "newPage": false,
                 "searchKey": "smtp.serverHandle",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1780,7 +1852,9 @@
                 "identifier": "serverHandleTLS",
                 "newPage": false,
                 "searchKey": "smtp.serverHandleTLS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1795,12 +1869,14 @@
           },
           {
             "node": {
-              "pathID": "/net/smtp#init",
+              "pathID": "/net/smtp#init.smtp_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.smtp_test.go",
                 "newPage": false,
                 "searchKey": "smtp.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1820,7 +1896,9 @@
                 "identifier": "sendMail",
                 "newPage": false,
                 "searchKey": "smtp.sendMail",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1840,7 +1918,9 @@
                 "identifier": "testingKey",
                 "newPage": false,
                 "searchKey": "smtp.testingKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

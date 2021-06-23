@@ -41,10 +41,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="shortDuration" href="#shortDuration">const shortDuration</a>
 
 ```
 searchKey: context_test.shortDuration
+tags: [private]
 ```
 
 ```Go
@@ -54,10 +59,15 @@ const shortDuration = 1 * time.Millisecond // a reasonable duration to block in 
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="BenchmarkCommonParentCancel" href="#BenchmarkCommonParentCancel">func BenchmarkCommonParentCancel(b *testing.B)</a>
 
 ```
 searchKey: context_test.BenchmarkCommonParentCancel
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +78,7 @@ func BenchmarkCommonParentCancel(b *testing.B)
 
 ```
 searchKey: context_test.BenchmarkWithTimeout
+tags: [private]
 ```
 
 ```Go
@@ -78,6 +89,7 @@ func BenchmarkWithTimeout(b *testing.B)
 
 ```
 searchKey: context_test.benchmarkWithTimeout
+tags: [private]
 ```
 
 ```Go
@@ -88,6 +100,7 @@ func benchmarkWithTimeout(b *testing.B, concurrentContexts int)
 
 ```
 searchKey: context_test.BenchmarkCancelTree
+tags: [private]
 ```
 
 ```Go
@@ -98,6 +111,7 @@ func BenchmarkCancelTree(b *testing.B)
 
 ```
 searchKey: context_test.buildContextTree
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +122,7 @@ func buildContextTree(root Context, depth int)
 
 ```
 searchKey: context_test.BenchmarkCheckCanceled
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +133,7 @@ func BenchmarkCheckCanceled(b *testing.B)
 
 ```
 searchKey: context_test.BenchmarkContextCancelDone
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +144,7 @@ func BenchmarkContextCancelDone(b *testing.B)
 
 ```
 searchKey: context_test.ExampleWithCancel
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +157,7 @@ This example demonstrates the use of a cancelable context to prevent a goroutine
 
 ```
 searchKey: context_test.ExampleWithDeadline
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +170,7 @@ This example passes a context with an arbitrary deadline to tell a blocking func
 
 ```
 searchKey: context_test.ExampleWithTimeout
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +183,7 @@ This example passes a context with a timeout to tell a blocking function that it
 
 ```
 searchKey: context_test.ExampleWithValue
+tags: [private]
 ```
 
 ```Go
@@ -176,6 +196,7 @@ This example demonstrates how a value can be passed to the context and also how 
 
 ```
 searchKey: context_test.TestDeadlineExceededIsNetError
+tags: [private]
 ```
 
 ```Go
@@ -186,6 +207,7 @@ func TestDeadlineExceededIsNetError(t *testing.T)
 
 ```
 searchKey: context_test.TestBackground
+tags: [private]
 ```
 
 ```Go
@@ -196,6 +218,7 @@ func TestBackground(t *testing.T)
 
 ```
 searchKey: context_test.TestTODO
+tags: [private]
 ```
 
 ```Go
@@ -206,6 +229,7 @@ func TestTODO(t *testing.T)
 
 ```
 searchKey: context_test.TestWithCancel
+tags: [private]
 ```
 
 ```Go
@@ -216,6 +240,7 @@ func TestWithCancel(t *testing.T)
 
 ```
 searchKey: context_test.TestParentFinishesChild
+tags: [private]
 ```
 
 ```Go
@@ -226,6 +251,7 @@ func TestParentFinishesChild(t *testing.T)
 
 ```
 searchKey: context_test.TestChildFinishesFirst
+tags: [private]
 ```
 
 ```Go
@@ -236,6 +262,7 @@ func TestChildFinishesFirst(t *testing.T)
 
 ```
 searchKey: context_test.TestDeadline
+tags: [private]
 ```
 
 ```Go
@@ -246,6 +273,7 @@ func TestDeadline(t *testing.T)
 
 ```
 searchKey: context_test.TestTimeout
+tags: [private]
 ```
 
 ```Go
@@ -256,6 +284,7 @@ func TestTimeout(t *testing.T)
 
 ```
 searchKey: context_test.TestCanceledTimeout
+tags: [private]
 ```
 
 ```Go
@@ -266,6 +295,7 @@ func TestCanceledTimeout(t *testing.T)
 
 ```
 searchKey: context_test.TestValues
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +306,7 @@ func TestValues(t *testing.T)
 
 ```
 searchKey: context_test.TestAllocs
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +317,7 @@ func TestAllocs(t *testing.T)
 
 ```
 searchKey: context_test.TestSimultaneousCancels
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +328,7 @@ func TestSimultaneousCancels(t *testing.T)
 
 ```
 searchKey: context_test.TestInterlockedCancels
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +339,7 @@ func TestInterlockedCancels(t *testing.T)
 
 ```
 searchKey: context_test.TestLayersCancel
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +350,7 @@ func TestLayersCancel(t *testing.T)
 
 ```
 searchKey: context_test.TestLayersTimeout
+tags: [private]
 ```
 
 ```Go
@@ -326,6 +361,7 @@ func TestLayersTimeout(t *testing.T)
 
 ```
 searchKey: context_test.TestCancelRemoves
+tags: [private]
 ```
 
 ```Go
@@ -336,6 +372,7 @@ func TestCancelRemoves(t *testing.T)
 
 ```
 searchKey: context_test.TestWithCancelCanceledParent
+tags: [private]
 ```
 
 ```Go
@@ -346,6 +383,7 @@ func TestWithCancelCanceledParent(t *testing.T)
 
 ```
 searchKey: context_test.TestWithValueChecksKey
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +394,7 @@ func TestWithValueChecksKey(t *testing.T)
 
 ```
 searchKey: context_test.TestInvalidDerivedFail
+tags: [private]
 ```
 
 ```Go
@@ -366,6 +405,7 @@ func TestInvalidDerivedFail(t *testing.T)
 
 ```
 searchKey: context_test.TestDeadlineExceededSupportsTimeout
+tags: [private]
 ```
 
 ```Go
@@ -376,6 +416,7 @@ func TestDeadlineExceededSupportsTimeout(t *testing.T)
 
 ```
 searchKey: context_test.TestCustomContextGoroutines
+tags: [private]
 ```
 
 ```Go

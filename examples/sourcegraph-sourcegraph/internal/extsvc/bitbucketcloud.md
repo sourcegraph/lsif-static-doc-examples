@@ -38,10 +38,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="rateLimitRequestsPerSecond" href="#rateLimitRequestsPerSecond">const rateLimitRequestsPerSecond</a>
 
 ```
 searchKey: bitbucketcloud.rateLimitRequestsPerSecond
+tags: [private]
 ```
 
 ```Go
@@ -59,7 +64,6 @@ The limits chosen here are based on the following logic: Bitbucket Cloud restric
 
 ```
 searchKey: bitbucketcloud.RateLimitMaxBurstRequests
-tags: [exported]
 ```
 
 ```Go
@@ -74,10 +78,15 @@ The limits chosen here are based on the following logic: Bitbucket Cloud restric
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="requestCounter" href="#requestCounter">var requestCounter</a>
 
 ```
 searchKey: bitbucketcloud.requestCounter
+tags: [private]
 ```
 
 ```Go
@@ -88,6 +97,7 @@ var requestCounter = ...
 
 ```
 searchKey: bitbucketcloud.normalizer
+tags: [private]
 ```
 
 ```Go
@@ -98,6 +108,7 @@ var normalizer = lazyregexp.New("[^A-Za-z0-9-]+")
 
 ```
 searchKey: bitbucketcloud.update
+tags: [private]
 ```
 
 ```Go
@@ -106,11 +117,14 @@ var update = flag.Bool("update", false, "update testdata")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: bitbucketcloud.Client
-tags: [exported]
 ```
 
 ```Go
@@ -136,7 +150,6 @@ Client access a Bitbucket Cloud via the REST API 2.0.
 
 ```
 searchKey: bitbucketcloud.NewClient
-tags: [exported]
 ```
 
 ```Go
@@ -149,7 +162,6 @@ NewClient creates a new Bitbucket Cloud API client with given apiURL. If a nil h
 
 ```
 searchKey: bitbucketcloud.NewTestClient
-tags: [exported]
 ```
 
 ```Go
@@ -162,7 +174,6 @@ NewTestClient returns a bitbucketcloud.Client that records its interactions to t
 
 ```
 searchKey: bitbucketcloud.Client.Repos
-tags: [exported]
 ```
 
 ```Go
@@ -175,6 +186,7 @@ Repos returns a list of repositories that are fetched and populated based on giv
 
 ```
 searchKey: bitbucketcloud.Client.page
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +197,7 @@ func (c *Client) page(ctx context.Context, path string, qry url.Values, token *P
 
 ```
 searchKey: bitbucketcloud.Client.reqPage
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +210,7 @@ reqPage directly requests resources from given URL assuming all attributes have 
 
 ```
 searchKey: bitbucketcloud.Client.do
+tags: [private]
 ```
 
 ```Go
@@ -207,6 +221,7 @@ func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) 
 
 ```
 searchKey: bitbucketcloud.Client.authenticate
+tags: [private]
 ```
 
 ```Go
@@ -217,7 +232,6 @@ func (c *Client) authenticate(req *http.Request) error
 
 ```
 searchKey: bitbucketcloud.PageToken
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +247,6 @@ type PageToken struct {
 
 ```
 searchKey: bitbucketcloud.PageToken.HasMore
-tags: [exported]
 ```
 
 ```Go
@@ -244,7 +257,6 @@ func (t *PageToken) HasMore() bool
 
 ```
 searchKey: bitbucketcloud.PageToken.Values
-tags: [exported]
 ```
 
 ```Go
@@ -255,7 +267,6 @@ func (t *PageToken) Values() url.Values
 
 ```
 searchKey: bitbucketcloud.Repo
-tags: [exported]
 ```
 
 ```Go
@@ -276,7 +287,6 @@ type Repo struct {
 
 ```
 searchKey: bitbucketcloud.Links
-tags: [exported]
 ```
 
 ```Go
@@ -290,7 +300,6 @@ type Links struct {
 
 ```
 searchKey: bitbucketcloud.CloneLinks
-tags: [exported]
 ```
 
 ```Go
@@ -304,7 +313,6 @@ type CloneLinks []struct {
 
 ```
 searchKey: bitbucketcloud.CloneLinks.HTTPS
-tags: [exported]
 ```
 
 ```Go
@@ -317,7 +325,6 @@ HTTPS returns clone link named "https", it returns an error if not found.
 
 ```
 searchKey: bitbucketcloud.Link
-tags: [exported]
 ```
 
 ```Go
@@ -330,6 +337,7 @@ type Link struct {
 
 ```
 searchKey: bitbucketcloud.httpError
+tags: [private]
 ```
 
 ```Go
@@ -344,6 +352,7 @@ type httpError struct {
 
 ```
 searchKey: bitbucketcloud.httpError.Error
+tags: [private]
 ```
 
 ```Go
@@ -354,6 +363,7 @@ func (e *httpError) Error() string
 
 ```
 searchKey: bitbucketcloud.httpError.Unauthorized
+tags: [private]
 ```
 
 ```Go
@@ -364,6 +374,7 @@ func (e *httpError) Unauthorized() bool
 
 ```
 searchKey: bitbucketcloud.httpError.NotFound
+tags: [private]
 ```
 
 ```Go
@@ -372,11 +383,14 @@ func (e *httpError) NotFound() bool
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="GetenvTestBitbucketCloudUsername" href="#GetenvTestBitbucketCloudUsername">func GetenvTestBitbucketCloudUsername() string</a>
 
 ```
 searchKey: bitbucketcloud.GetenvTestBitbucketCloudUsername
-tags: [exported]
 ```
 
 ```Go
@@ -387,6 +401,7 @@ func GetenvTestBitbucketCloudUsername() string
 
 ```
 searchKey: bitbucketcloud.normalize
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +412,7 @@ func normalize(path string) string
 
 ```
 searchKey: bitbucketcloud.TestClient_Repos
+tags: [private]
 ```
 
 ```Go

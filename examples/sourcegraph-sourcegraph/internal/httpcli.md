@@ -52,10 +52,15 @@ Package httpcli provides higher level abstractions for constructing http.Clients
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="redisCache" href="#redisCache">var redisCache</a>
 
 ```
 searchKey: httpcli.redisCache
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +73,7 @@ redisCache is a HTTP cache backed by Redis. The TTL of a week is a balance betwe
 
 ```
 searchKey: httpcli.externalOnce
+tags: [private]
 ```
 
 ```Go
@@ -78,6 +84,7 @@ var externalOnce sync.Once
 
 ```
 searchKey: httpcli.externalDoer
+tags: [private]
 ```
 
 ```Go
@@ -88,6 +95,7 @@ var externalDoer Doer
 
 ```
 searchKey: httpcli.externalHTTPClient
+tags: [private]
 ```
 
 ```Go
@@ -96,11 +104,14 @@ var externalHTTPClient *http.Client
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Doer" href="#Doer">type Doer interface</a>
 
 ```
 searchKey: httpcli.Doer
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +126,6 @@ A Doer captures the Do method of an http.Client. It facilitates decorating an ht
 
 ```
 searchKey: httpcli.ExternalDoer
-tags: [exported]
 ```
 
 ```Go
@@ -130,7 +140,6 @@ NOTE: Use this for legacy code. New code should generally take in a httpcli.Doer
 
 ```
 searchKey: httpcli.ContextErrorMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -143,7 +152,6 @@ ContextErrorMiddleware wraps a Doer with context.Context error handling.  It che
 
 ```
 searchKey: httpcli.GitHubProxyRedirectMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -156,6 +164,7 @@ GitHubProxyRedirectMiddleware rewrites requests to the "github-proxy" host to "[
 
 ```
 searchKey: httpcli.newFakeClient
+tags: [private]
 ```
 
 ```Go
@@ -166,7 +175,6 @@ func newFakeClient(code int, body []byte, err error) Doer
 
 ```
 searchKey: httpcli.DoerFunc
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +187,6 @@ DoerFunc is function adapter that implements the http.RoundTripper interface by 
 
 ```
 searchKey: httpcli.DoerFunc.Do
-tags: [exported]
 ```
 
 ```Go
@@ -192,7 +199,6 @@ Do implements the Doer interface.
 
 ```
 searchKey: httpcli.Middleware
-tags: [exported]
 ```
 
 ```Go
@@ -205,7 +211,6 @@ A Middleware function wraps a Doer with a layer of behaviour. It's used to decor
 
 ```
 searchKey: httpcli.NewMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +223,6 @@ NewMiddleware returns a Middleware stack composed of the given Middlewares.
 
 ```
 searchKey: httpcli.HeadersMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -231,7 +235,6 @@ HeadersMiddleware returns a middleware that wraps a Doer and sets the given head
 
 ```
 searchKey: httpcli.Opt
-tags: [exported]
 ```
 
 ```Go
@@ -244,7 +247,6 @@ A Opt configures an aspect of a given *http.Client, returning an error in case o
 
 ```
 searchKey: httpcli.NewCertPoolOpt
-tags: [exported]
 ```
 
 ```Go
@@ -257,7 +259,6 @@ NewCertPoolOpt returns a Opt that sets the RootCAs pool of an http.Client's tran
 
 ```
 searchKey: httpcli.NewCachedTransportOpt
-tags: [exported]
 ```
 
 ```Go
@@ -270,7 +271,6 @@ NewCachedTransportOpt returns an Opt that wraps the existing http.Transport of a
 
 ```
 searchKey: httpcli.NewIdleConnTimeoutOpt
-tags: [exported]
 ```
 
 ```Go
@@ -283,7 +283,6 @@ NewIdleConnTimeoutOpt returns a Opt that sets the IdleConnTimeout of an http.Cli
 
 ```
 searchKey: httpcli.NewTimeoutOpt
-tags: [exported]
 ```
 
 ```Go
@@ -296,7 +295,6 @@ NewTimeoutOpt returns a Opt that sets the Timeout field of an http.Client.
 
 ```
 searchKey: httpcli.Factory
-tags: [exported]
 ```
 
 ```Go
@@ -312,7 +310,6 @@ A Factory constructs an http.Client with the given functional options applied, r
 
 ```
 searchKey: httpcli.NewExternalHTTPClientFactory
-tags: [exported]
 ```
 
 ```Go
@@ -325,7 +322,6 @@ NewExternalHTTPClientFactory returns an httpcli.Factory with common options and 
 
 ```
 searchKey: httpcli.NewFactory
-tags: [exported]
 ```
 
 ```Go
@@ -340,7 +336,6 @@ If the given Middleware stack is not nil, the final configured client will be wr
 
 ```
 searchKey: httpcli.Factory.Doer
-tags: [exported]
 ```
 
 ```Go
@@ -353,7 +348,6 @@ Doer returns a new Doer wrapped with the middleware stack provided in the Factor
 
 ```
 searchKey: httpcli.Factory.Client
-tags: [exported]
 ```
 
 ```Go
@@ -366,6 +360,7 @@ Client returns a new http.Client configured with the given common and base opts,
 
 ```
 searchKey: httpcli.externalTransport
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +377,7 @@ type externalTransport struct {
 
 ```
 searchKey: httpcli.externalTransport.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +388,7 @@ func (t *externalTransport) RoundTrip(r *http.Request) (*http.Response, error)
 
 ```
 searchKey: httpcli.externalTransport.update
+tags: [private]
 ```
 
 ```Go
@@ -402,6 +399,7 @@ func (t *externalTransport) update() *http.Transport
 
 ```
 searchKey: httpcli.bogusTransport
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +410,7 @@ type bogusTransport struct{}
 
 ```
 searchKey: httpcli.bogusTransport.RoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -420,10 +419,15 @@ func (t bogusTransport) RoundTrip(*http.Request) (*http.Response, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="externalInit" href="#externalInit">func externalInit()</a>
 
 ```
 searchKey: httpcli.externalInit
+tags: [private]
 ```
 
 ```Go
@@ -434,7 +438,6 @@ func externalInit()
 
 ```
 searchKey: httpcli.ExternalHTTPClient
-tags: [exported]
 ```
 
 ```Go
@@ -449,7 +452,6 @@ NOTE: Use this for legacy code. New code should generally take in a httpcli.Doer
 
 ```
 searchKey: httpcli.ExternalTransportOpt
-tags: [exported]
 ```
 
 ```Go
@@ -462,6 +464,7 @@ ExternalTransportOpt returns an Opt that ensures the http.Client.Transport can c
 
 ```
 searchKey: httpcli.isUnwrappableTransport
+tags: [private]
 ```
 
 ```Go
@@ -472,7 +475,6 @@ func isUnwrappableTransport(cli *http.Client) bool
 
 ```
 searchKey: httpcli.TracedTransportOpt
-tags: [exported]
 ```
 
 ```Go
@@ -485,6 +487,7 @@ TracedTransportOpt wraps an existing http.Transport of an http.Client with traci
 
 ```
 searchKey: httpcli.getTransportForMutation
+tags: [private]
 ```
 
 ```Go
@@ -499,6 +502,7 @@ Use this function when you intend on mutating the transport.
 
 ```
 searchKey: httpcli.TestHeadersMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -509,6 +513,7 @@ func TestHeadersMiddleware(t *testing.T)
 
 ```
 searchKey: httpcli.TestContextErrorMiddleware
+tags: [private]
 ```
 
 ```Go
@@ -519,6 +524,7 @@ func TestContextErrorMiddleware(t *testing.T)
 
 ```
 searchKey: httpcli.genCert
+tags: [private]
 ```
 
 ```Go
@@ -529,6 +535,7 @@ func genCert(subject string) (string, error)
 
 ```
 searchKey: httpcli.TestNewCertPool
+tags: [private]
 ```
 
 ```Go
@@ -539,6 +546,7 @@ func TestNewCertPool(t *testing.T)
 
 ```
 searchKey: httpcli.TestNewIdleConnTimeoutOpt
+tags: [private]
 ```
 
 ```Go
@@ -549,6 +557,7 @@ func TestNewIdleConnTimeoutOpt(t *testing.T)
 
 ```
 searchKey: httpcli.TestNewTimeoutOpt
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "jsonc",
     "newPage": true,
     "searchKey": "internal/jsonc",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "DefaultFormatOptions",
                 "newPage": false,
                 "searchKey": "jsonc.DefaultFormatOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +67,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,9 +87,7 @@
                 "identifier": "Unmarshal",
                 "newPage": false,
                 "searchKey": "jsonc.Unmarshal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -105,9 +107,7 @@
                 "identifier": "Parse",
                 "newPage": false,
                 "searchKey": "jsonc.Parse",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +127,7 @@
                 "identifier": "Normalize",
                 "newPage": false,
                 "searchKey": "jsonc.Normalize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -149,9 +147,7 @@
                 "identifier": "Remove",
                 "newPage": false,
                 "searchKey": "jsonc.Remove",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -171,9 +167,7 @@
                 "identifier": "Edit",
                 "newPage": false,
                 "searchKey": "jsonc.Edit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -193,9 +187,7 @@
                 "identifier": "ReadProperty",
                 "newPage": false,
                 "searchKey": "jsonc.ReadProperty",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -215,9 +207,7 @@
                 "identifier": "Format",
                 "newPage": false,
                 "searchKey": "jsonc.Format",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -237,7 +227,9 @@
                 "identifier": "TestUnmarshal",
                 "newPage": false,
                 "searchKey": "jsonc.TestUnmarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -257,7 +249,9 @@
                 "identifier": "TestNormalize",
                 "newPage": false,
                 "searchKey": "jsonc.TestNormalize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

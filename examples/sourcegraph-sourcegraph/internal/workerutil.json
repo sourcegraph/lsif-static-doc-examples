@@ -4,7 +4,9 @@
     "identifier": "workerutil",
     "newPage": true,
     "searchKey": "internal/workerutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Handler",
                 "newPage": false,
                 "searchKey": "workerutil.Handler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "WithPreDequeue",
                 "newPage": false,
                 "searchKey": "workerutil.WithPreDequeue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "WithHooks",
                 "newPage": false,
                 "searchKey": "workerutil.WithHooks",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "WorkerMetrics",
                 "newPage": false,
                 "searchKey": "workerutil.WorkerMetrics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -126,9 +122,7 @@
                       "identifier": "NewMetrics",
                       "newPage": false,
                       "searchKey": "workerutil.NewMetrics",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -151,7 +145,9 @@
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "workerutil.operations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -169,7 +165,9 @@
                       "identifier": "newOperations",
                       "newPage": false,
                       "searchKey": "workerutil.newOperations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -192,9 +190,7 @@
                 "identifier": "Record",
                 "newPage": false,
                 "searchKey": "workerutil.Record",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -214,9 +210,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "workerutil.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -236,9 +230,7 @@
                 "identifier": "ExecutionLogEntry",
                 "newPage": false,
                 "searchKey": "workerutil.ExecutionLogEntry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -258,9 +250,7 @@
                 "identifier": "Worker",
                 "newPage": false,
                 "searchKey": "workerutil.Worker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -278,9 +268,7 @@
                       "identifier": "NewWorker",
                       "newPage": false,
                       "searchKey": "workerutil.NewWorker",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -300,7 +288,9 @@
                       "identifier": "newWorker",
                       "newPage": false,
                       "searchKey": "workerutil.newWorker",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -320,9 +310,7 @@
                       "identifier": "Worker.Start",
                       "newPage": false,
                       "searchKey": "workerutil.Worker.Start",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -342,9 +330,7 @@
                       "identifier": "Worker.Stop",
                       "newPage": false,
                       "searchKey": "workerutil.Worker.Stop",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -364,7 +350,9 @@
                       "identifier": "Worker.dequeueAndHandle",
                       "newPage": false,
                       "searchKey": "workerutil.Worker.dequeueAndHandle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -384,7 +372,9 @@
                       "identifier": "Worker.handle",
                       "newPage": false,
                       "searchKey": "workerutil.Worker.handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -404,7 +394,9 @@
                       "identifier": "Worker.preDequeueHook",
                       "newPage": false,
                       "searchKey": "workerutil.Worker.preDequeueHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -427,9 +419,7 @@
                 "identifier": "WorkerOptions",
                 "newPage": false,
                 "searchKey": "workerutil.WorkerOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -449,7 +439,9 @@
                 "identifier": "MockHandler",
                 "newPage": false,
                 "searchKey": "workerutil.MockHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,7 +459,9 @@
                       "identifier": "NewMockHandler",
                       "newPage": false,
                       "searchKey": "workerutil.NewMockHandler",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -487,7 +481,9 @@
                       "identifier": "NewMockHandlerFrom",
                       "newPage": false,
                       "searchKey": "workerutil.NewMockHandlerFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -507,7 +503,9 @@
                       "identifier": "MockHandler.Handle",
                       "newPage": false,
                       "searchKey": "workerutil.MockHandler.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -530,7 +528,9 @@
                 "identifier": "HandlerHandleFunc",
                 "newPage": false,
                 "searchKey": "workerutil.HandlerHandleFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -548,7 +548,9 @@
                       "identifier": "HandlerHandleFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -568,7 +570,9 @@
                       "identifier": "HandlerHandleFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -588,7 +592,9 @@
                       "identifier": "HandlerHandleFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -608,7 +614,9 @@
                       "identifier": "HandlerHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -628,7 +636,9 @@
                       "identifier": "HandlerHandleFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -648,7 +658,9 @@
                       "identifier": "HandlerHandleFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -668,7 +680,9 @@
                       "identifier": "HandlerHandleFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -691,7 +705,9 @@
                 "identifier": "HandlerHandleFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.HandlerHandleFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -709,7 +725,9 @@
                       "identifier": "HandlerHandleFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -729,7 +747,9 @@
                       "identifier": "HandlerHandleFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -752,7 +772,9 @@
                 "identifier": "MockStore",
                 "newPage": false,
                 "searchKey": "workerutil.MockStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -770,7 +792,9 @@
                       "identifier": "NewMockStore",
                       "newPage": false,
                       "searchKey": "workerutil.NewMockStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -790,7 +814,9 @@
                       "identifier": "NewMockStoreFrom",
                       "newPage": false,
                       "searchKey": "workerutil.NewMockStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -810,7 +836,9 @@
                       "identifier": "MockStore.AddExecutionLogEntry",
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.AddExecutionLogEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -830,7 +858,9 @@
                       "identifier": "MockStore.Dequeue",
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.Dequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -850,7 +880,9 @@
                       "identifier": "MockStore.Done",
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -870,7 +902,9 @@
                       "identifier": "MockStore.MarkComplete",
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.MarkComplete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -890,7 +924,9 @@
                       "identifier": "MockStore.MarkErrored",
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.MarkErrored",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -910,7 +946,9 @@
                       "identifier": "MockStore.MarkFailed",
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.MarkFailed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -930,7 +968,9 @@
                       "identifier": "MockStore.QueuedCount",
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.QueuedCount",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -953,7 +993,9 @@
                 "identifier": "StoreAddExecutionLogEntryFunc",
                 "newPage": false,
                 "searchKey": "workerutil.StoreAddExecutionLogEntryFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -971,7 +1013,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -991,7 +1035,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1011,7 +1057,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1031,7 +1079,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1051,7 +1101,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1071,7 +1123,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1091,7 +1145,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1114,7 +1170,9 @@
                 "identifier": "StoreAddExecutionLogEntryFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.StoreAddExecutionLogEntryFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1132,7 +1190,9 @@
                       "identifier": "StoreAddExecutionLogEntryFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1152,7 +1212,9 @@
                       "identifier": "StoreAddExecutionLogEntryFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1175,7 +1237,9 @@
                 "identifier": "StoreDequeueFunc",
                 "newPage": false,
                 "searchKey": "workerutil.StoreDequeueFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1193,7 +1257,9 @@
                       "identifier": "StoreDequeueFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1213,7 +1279,9 @@
                       "identifier": "StoreDequeueFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1233,7 +1301,9 @@
                       "identifier": "StoreDequeueFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1253,7 +1323,9 @@
                       "identifier": "StoreDequeueFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1273,7 +1345,9 @@
                       "identifier": "StoreDequeueFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1293,7 +1367,9 @@
                       "identifier": "StoreDequeueFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1313,7 +1389,9 @@
                       "identifier": "StoreDequeueFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1336,7 +1414,9 @@
                 "identifier": "StoreDequeueFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.StoreDequeueFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1354,7 +1434,9 @@
                       "identifier": "StoreDequeueFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1374,7 +1456,9 @@
                       "identifier": "StoreDequeueFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1397,7 +1481,9 @@
                 "identifier": "StoreDoneFunc",
                 "newPage": false,
                 "searchKey": "workerutil.StoreDoneFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1415,7 +1501,9 @@
                       "identifier": "StoreDoneFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1435,7 +1523,9 @@
                       "identifier": "StoreDoneFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1455,7 +1545,9 @@
                       "identifier": "StoreDoneFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1475,7 +1567,9 @@
                       "identifier": "StoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1495,7 +1589,9 @@
                       "identifier": "StoreDoneFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1515,7 +1611,9 @@
                       "identifier": "StoreDoneFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1535,7 +1633,9 @@
                       "identifier": "StoreDoneFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1558,7 +1658,9 @@
                 "identifier": "StoreDoneFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.StoreDoneFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1576,7 +1678,9 @@
                       "identifier": "StoreDoneFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1596,7 +1700,9 @@
                       "identifier": "StoreDoneFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1619,7 +1725,9 @@
                 "identifier": "StoreMarkCompleteFunc",
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkCompleteFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1637,7 +1745,9 @@
                       "identifier": "StoreMarkCompleteFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1657,7 +1767,9 @@
                       "identifier": "StoreMarkCompleteFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1677,7 +1789,9 @@
                       "identifier": "StoreMarkCompleteFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1697,7 +1811,9 @@
                       "identifier": "StoreMarkCompleteFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1717,7 +1833,9 @@
                       "identifier": "StoreMarkCompleteFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1737,7 +1855,9 @@
                       "identifier": "StoreMarkCompleteFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1757,7 +1877,9 @@
                       "identifier": "StoreMarkCompleteFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1780,7 +1902,9 @@
                 "identifier": "StoreMarkCompleteFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkCompleteFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1798,7 +1922,9 @@
                       "identifier": "StoreMarkCompleteFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1818,7 +1944,9 @@
                       "identifier": "StoreMarkCompleteFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1841,7 +1969,9 @@
                 "identifier": "StoreMarkErroredFunc",
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkErroredFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1859,7 +1989,9 @@
                       "identifier": "StoreMarkErroredFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1879,7 +2011,9 @@
                       "identifier": "StoreMarkErroredFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1899,7 +2033,9 @@
                       "identifier": "StoreMarkErroredFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1919,7 +2055,9 @@
                       "identifier": "StoreMarkErroredFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1939,7 +2077,9 @@
                       "identifier": "StoreMarkErroredFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1959,7 +2099,9 @@
                       "identifier": "StoreMarkErroredFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1979,7 +2121,9 @@
                       "identifier": "StoreMarkErroredFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2002,7 +2146,9 @@
                 "identifier": "StoreMarkErroredFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkErroredFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2020,7 +2166,9 @@
                       "identifier": "StoreMarkErroredFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2040,7 +2188,9 @@
                       "identifier": "StoreMarkErroredFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2063,7 +2213,9 @@
                 "identifier": "StoreMarkFailedFunc",
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkFailedFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2081,7 +2233,9 @@
                       "identifier": "StoreMarkFailedFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2101,7 +2255,9 @@
                       "identifier": "StoreMarkFailedFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2121,7 +2277,9 @@
                       "identifier": "StoreMarkFailedFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2141,7 +2299,9 @@
                       "identifier": "StoreMarkFailedFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2161,7 +2321,9 @@
                       "identifier": "StoreMarkFailedFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2181,7 +2343,9 @@
                       "identifier": "StoreMarkFailedFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2201,7 +2365,9 @@
                       "identifier": "StoreMarkFailedFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2224,7 +2390,9 @@
                 "identifier": "StoreMarkFailedFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkFailedFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2242,7 +2410,9 @@
                       "identifier": "StoreMarkFailedFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2262,7 +2432,9 @@
                       "identifier": "StoreMarkFailedFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2285,7 +2457,9 @@
                 "identifier": "StoreQueuedCountFunc",
                 "newPage": false,
                 "searchKey": "workerutil.StoreQueuedCountFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2303,7 +2477,9 @@
                       "identifier": "StoreQueuedCountFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2323,7 +2499,9 @@
                       "identifier": "StoreQueuedCountFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2343,7 +2521,9 @@
                       "identifier": "StoreQueuedCountFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2363,7 +2543,9 @@
                       "identifier": "StoreQueuedCountFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2383,7 +2565,9 @@
                       "identifier": "StoreQueuedCountFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2403,7 +2587,9 @@
                       "identifier": "StoreQueuedCountFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2423,7 +2609,9 @@
                       "identifier": "StoreQueuedCountFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2446,7 +2634,9 @@
                 "identifier": "StoreQueuedCountFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.StoreQueuedCountFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2464,7 +2654,9 @@
                       "identifier": "StoreQueuedCountFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2484,7 +2676,9 @@
                       "identifier": "StoreQueuedCountFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2507,7 +2701,9 @@
                 "identifier": "MockWithHooks",
                 "newPage": false,
                 "searchKey": "workerutil.MockWithHooks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2525,7 +2721,9 @@
                       "identifier": "NewMockWithHooks",
                       "newPage": false,
                       "searchKey": "workerutil.NewMockWithHooks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2545,7 +2743,9 @@
                       "identifier": "NewMockWithHooksFrom",
                       "newPage": false,
                       "searchKey": "workerutil.NewMockWithHooksFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2565,7 +2765,9 @@
                       "identifier": "MockWithHooks.PostHandle",
                       "newPage": false,
                       "searchKey": "workerutil.MockWithHooks.PostHandle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2585,7 +2787,9 @@
                       "identifier": "MockWithHooks.PreHandle",
                       "newPage": false,
                       "searchKey": "workerutil.MockWithHooks.PreHandle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2608,7 +2812,9 @@
                 "identifier": "WithHooksPostHandleFunc",
                 "newPage": false,
                 "searchKey": "workerutil.WithHooksPostHandleFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2626,7 +2832,9 @@
                       "identifier": "WithHooksPostHandleFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2646,7 +2854,9 @@
                       "identifier": "WithHooksPostHandleFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2666,7 +2876,9 @@
                       "identifier": "WithHooksPostHandleFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2686,7 +2898,9 @@
                       "identifier": "WithHooksPostHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2706,7 +2920,9 @@
                       "identifier": "WithHooksPostHandleFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2726,7 +2942,9 @@
                       "identifier": "WithHooksPostHandleFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2746,7 +2964,9 @@
                       "identifier": "WithHooksPostHandleFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2769,7 +2989,9 @@
                 "identifier": "WithHooksPostHandleFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.WithHooksPostHandleFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2787,7 +3009,9 @@
                       "identifier": "WithHooksPostHandleFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2807,7 +3031,9 @@
                       "identifier": "WithHooksPostHandleFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2830,7 +3056,9 @@
                 "identifier": "WithHooksPreHandleFunc",
                 "newPage": false,
                 "searchKey": "workerutil.WithHooksPreHandleFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2848,7 +3076,9 @@
                       "identifier": "WithHooksPreHandleFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2868,7 +3098,9 @@
                       "identifier": "WithHooksPreHandleFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2888,7 +3120,9 @@
                       "identifier": "WithHooksPreHandleFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2908,7 +3142,9 @@
                       "identifier": "WithHooksPreHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2928,7 +3164,9 @@
                       "identifier": "WithHooksPreHandleFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2948,7 +3186,9 @@
                       "identifier": "WithHooksPreHandleFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2968,7 +3208,9 @@
                       "identifier": "WithHooksPreHandleFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2991,7 +3233,9 @@
                 "identifier": "WithHooksPreHandleFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.WithHooksPreHandleFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3009,7 +3253,9 @@
                       "identifier": "WithHooksPreHandleFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3029,7 +3275,9 @@
                       "identifier": "WithHooksPreHandleFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3052,7 +3300,9 @@
                 "identifier": "MockWithPreDequeue",
                 "newPage": false,
                 "searchKey": "workerutil.MockWithPreDequeue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3070,7 +3320,9 @@
                       "identifier": "NewMockWithPreDequeue",
                       "newPage": false,
                       "searchKey": "workerutil.NewMockWithPreDequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3090,7 +3342,9 @@
                       "identifier": "NewMockWithPreDequeueFrom",
                       "newPage": false,
                       "searchKey": "workerutil.NewMockWithPreDequeueFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3110,7 +3364,9 @@
                       "identifier": "MockWithPreDequeue.PreDequeue",
                       "newPage": false,
                       "searchKey": "workerutil.MockWithPreDequeue.PreDequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3133,7 +3389,9 @@
                 "identifier": "WithPreDequeuePreDequeueFunc",
                 "newPage": false,
                 "searchKey": "workerutil.WithPreDequeuePreDequeueFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3151,7 +3409,9 @@
                       "identifier": "WithPreDequeuePreDequeueFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3171,7 +3431,9 @@
                       "identifier": "WithPreDequeuePreDequeueFunc.PushHook",
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3191,7 +3453,9 @@
                       "identifier": "WithPreDequeuePreDequeueFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3211,7 +3475,9 @@
                       "identifier": "WithPreDequeuePreDequeueFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3231,7 +3497,9 @@
                       "identifier": "WithPreDequeuePreDequeueFunc.nextHook",
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3251,7 +3519,9 @@
                       "identifier": "WithPreDequeuePreDequeueFunc.appendCall",
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3271,7 +3541,9 @@
                       "identifier": "WithPreDequeuePreDequeueFunc.History",
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3294,7 +3566,9 @@
                 "identifier": "WithPreDequeuePreDequeueFuncCall",
                 "newPage": false,
                 "searchKey": "workerutil.WithPreDequeuePreDequeueFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3312,7 +3586,9 @@
                       "identifier": "WithPreDequeuePreDequeueFuncCall.Args",
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3332,7 +3608,9 @@
                       "identifier": "WithPreDequeuePreDequeueFuncCall.Results",
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3355,7 +3633,9 @@
                 "identifier": "TestRecord",
                 "newPage": false,
                 "searchKey": "workerutil.TestRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3373,7 +3653,9 @@
                       "identifier": "TestRecord.RecordID",
                       "newPage": false,
                       "searchKey": "workerutil.TestRecord.RecordID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3396,7 +3678,9 @@
                 "identifier": "nonRetryableTestErr",
                 "newPage": false,
                 "searchKey": "workerutil.nonRetryableTestErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3414,7 +3698,9 @@
                       "identifier": "nonRetryableTestErr.Error",
                       "newPage": false,
                       "searchKey": "workerutil.nonRetryableTestErr.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3434,7 +3720,9 @@
                       "identifier": "nonRetryableTestErr.NonRetryable",
                       "newPage": false,
                       "searchKey": "workerutil.nonRetryableTestErr.NonRetryable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3457,7 +3745,9 @@
                 "identifier": "MockHandlerWithPreDequeue",
                 "newPage": false,
                 "searchKey": "workerutil.MockHandlerWithPreDequeue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3475,7 +3765,9 @@
                       "identifier": "NewMockHandlerWithPreDequeue",
                       "newPage": false,
                       "searchKey": "workerutil.NewMockHandlerWithPreDequeue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3498,7 +3790,9 @@
                 "identifier": "MockHandlerWithHooks",
                 "newPage": false,
                 "searchKey": "workerutil.MockHandlerWithHooks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3516,7 +3810,9 @@
                       "identifier": "NewMockHandlerWithHooks",
                       "newPage": false,
                       "searchKey": "workerutil.NewMockHandlerWithHooks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3542,7 +3838,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -3560,7 +3858,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "workerutil.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3580,7 +3880,9 @@
                 "identifier": "TestWorkerHandlerSuccess",
                 "newPage": false,
                 "searchKey": "workerutil.TestWorkerHandlerSuccess",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3600,7 +3902,9 @@
                 "identifier": "TestWorkerHandlerFailure",
                 "newPage": false,
                 "searchKey": "workerutil.TestWorkerHandlerFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3620,7 +3924,9 @@
                 "identifier": "TestWorkerHandlerNonRetryableFailure",
                 "newPage": false,
                 "searchKey": "workerutil.TestWorkerHandlerNonRetryableFailure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3640,7 +3946,9 @@
                 "identifier": "TestWorkerConcurrent",
                 "newPage": false,
                 "searchKey": "workerutil.TestWorkerConcurrent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3660,7 +3968,9 @@
                 "identifier": "TestWorkerBlockingPreDequeueHook",
                 "newPage": false,
                 "searchKey": "workerutil.TestWorkerBlockingPreDequeueHook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3680,7 +3990,9 @@
                 "identifier": "TestWorkerConditionalPreDequeueHook",
                 "newPage": false,
                 "searchKey": "workerutil.TestWorkerConditionalPreDequeueHook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

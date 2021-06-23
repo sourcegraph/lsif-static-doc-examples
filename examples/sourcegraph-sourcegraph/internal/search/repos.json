@@ -4,7 +4,9 @@
     "identifier": "repos",
     "newPage": true,
     "searchKey": "internal/search/repos",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "regexpFlags",
                 "newPage": false,
                 "searchKey": "repos.regexpFlags",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "MockResolveRepoGroups",
                 "newPage": false,
                 "searchKey": "repos.MockResolveRepoGroups",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "dsn",
                 "newPage": false,
                 "searchKey": "repos.dsn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -126,7 +134,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -144,9 +154,7 @@
                 "identifier": "RepoGroupValue",
                 "newPage": false,
                 "searchKey": "repos.RepoGroupValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -166,9 +174,7 @@
                 "identifier": "RepoPath",
                 "newPage": false,
                 "searchKey": "repos.RepoPath",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -186,7 +192,9 @@
                       "identifier": "RepoPath.value",
                       "newPage": false,
                       "searchKey": "repos.RepoPath.value",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -206,9 +214,7 @@
                       "identifier": "RepoPath.String",
                       "newPage": false,
                       "searchKey": "repos.RepoPath.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -231,9 +237,7 @@
                 "identifier": "RepoRegexpPattern",
                 "newPage": false,
                 "searchKey": "repos.RepoRegexpPattern",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -251,7 +255,9 @@
                       "identifier": "RepoRegexpPattern.value",
                       "newPage": false,
                       "searchKey": "repos.RepoRegexpPattern.value",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -271,9 +277,7 @@
                       "identifier": "RepoRegexpPattern.String",
                       "newPage": false,
                       "searchKey": "repos.RepoRegexpPattern.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -296,9 +300,7 @@
                 "identifier": "Resolved",
                 "newPage": false,
                 "searchKey": "repos.Resolved",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -316,9 +318,7 @@
                       "identifier": "Resolved.String",
                       "newPage": false,
                       "searchKey": "repos.Resolved.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -341,9 +341,7 @@
                 "identifier": "Resolver",
                 "newPage": false,
                 "searchKey": "repos.Resolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -361,9 +359,7 @@
                       "identifier": "Resolver.Resolve",
                       "newPage": false,
                       "searchKey": "repos.Resolver.Resolve",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -386,9 +382,7 @@
                 "identifier": "Options",
                 "newPage": false,
                 "searchKey": "repos.Options",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -406,9 +400,7 @@
                       "identifier": "Options.String",
                       "newPage": false,
                       "searchKey": "repos.Options.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -431,9 +423,7 @@
                 "identifier": "ExcludedRepos",
                 "newPage": false,
                 "searchKey": "repos.ExcludedRepos",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -451,7 +441,9 @@
                       "identifier": "computeExcludedRepositories",
                       "newPage": false,
                       "searchKey": "repos.computeExcludedRepositories",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -474,7 +466,9 @@
                 "identifier": "patternRevspec",
                 "newPage": false,
                 "searchKey": "repos.patternRevspec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -494,7 +488,9 @@
                 "identifier": "defaultReposFunc",
                 "newPage": false,
                 "searchKey": "repos.defaultReposFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -514,7 +510,9 @@
                 "identifier": "badRequestError",
                 "newPage": false,
                 "searchKey": "repos.badRequestError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -532,7 +530,9 @@
                       "identifier": "badRequestError.BadRequest",
                       "newPage": false,
                       "searchKey": "repos.badRequestError.BadRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -552,7 +552,9 @@
                       "identifier": "badRequestError.Error",
                       "newPage": false,
                       "searchKey": "repos.badRequestError.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -572,7 +574,9 @@
                       "identifier": "badRequestError.Cause",
                       "newPage": false,
                       "searchKey": "repos.badRequestError.Cause",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -598,7 +602,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -616,9 +622,7 @@
                 "identifier": "RepoGroupsToIncludePatterns",
                 "newPage": false,
                 "searchKey": "repos.RepoGroupsToIncludePatterns",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -638,9 +642,7 @@
                 "identifier": "ResolveRepoGroups",
                 "newPage": false,
                 "searchKey": "repos.ResolveRepoGroups",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -660,9 +662,7 @@
                 "identifier": "ResolveRepoGroupsFromSettings",
                 "newPage": false,
                 "searchKey": "repos.ResolveRepoGroupsFromSettings",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -682,7 +682,9 @@
                 "identifier": "repoGroupValuesToRegexp",
                 "newPage": false,
                 "searchKey": "repos.repoGroupValuesToRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -702,9 +704,7 @@
                 "identifier": "SearchLimits",
                 "newPage": false,
                 "searchKey": "repos.SearchLimits",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -724,9 +724,7 @@
                 "identifier": "ExactlyOneRepo",
                 "newPage": false,
                 "searchKey": "repos.ExactlyOneRepo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -746,9 +744,7 @@
                 "identifier": "UnionRegExps",
                 "newPage": false,
                 "searchKey": "repos.UnionRegExps",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -768,7 +764,9 @@
                 "identifier": "resolveVersionContext",
                 "newPage": false,
                 "searchKey": "repos.resolveVersionContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -788,7 +786,9 @@
                 "identifier": "getRevsForMatchedRepo",
                 "newPage": false,
                 "searchKey": "repos.getRevsForMatchedRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -808,7 +808,9 @@
                 "identifier": "findPatternRevs",
                 "newPage": false,
                 "searchKey": "repos.findPatternRevs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -828,7 +830,9 @@
                 "identifier": "defaultRepositories",
                 "newPage": false,
                 "searchKey": "repos.defaultRepositories",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -848,7 +852,9 @@
                 "identifier": "filterRepoHasCommitAfter",
                 "newPage": false,
                 "searchKey": "repos.filterRepoHasCommitAfter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -868,7 +874,9 @@
                 "identifier": "optimizeRepoPatternWithHeuristics",
                 "newPage": false,
                 "searchKey": "repos.optimizeRepoPatternWithHeuristics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -888,7 +896,9 @@
                 "identifier": "TestRepoGroupValuesToRegexp",
                 "newPage": false,
                 "searchKey": "repos.TestRepoGroupValuesToRegexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -908,7 +918,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "repos.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -928,7 +940,9 @@
                 "identifier": "TestRevisionValidation",
                 "newPage": false,
                 "searchKey": "repos.TestRevisionValidation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -948,7 +962,9 @@
                 "identifier": "TestSearchRevspecs",
                 "newPage": false,
                 "searchKey": "repos.TestSearchRevspecs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -968,7 +984,9 @@
                 "identifier": "BenchmarkGetRevsForMatchedRepo",
                 "newPage": false,
                 "searchKey": "repos.BenchmarkGetRevsForMatchedRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -988,7 +1006,9 @@
                 "identifier": "TestDefaultRepositories",
                 "newPage": false,
                 "searchKey": "repos.TestDefaultRepositories",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1008,7 +1028,9 @@
                 "identifier": "TestUseDefaultReposIfMissingOrGlobalSearchContext",
                 "newPage": false,
                 "searchKey": "repos.TestUseDefaultReposIfMissingOrGlobalSearchContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1028,7 +1050,9 @@
                 "identifier": "TestResolveRepositoriesWithUserSearchContext",
                 "newPage": false,
                 "searchKey": "repos.TestResolveRepositoriesWithUserSearchContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1048,7 +1072,9 @@
                 "identifier": "stringSliceToRevisionSpecifiers",
                 "newPage": false,
                 "searchKey": "repos.stringSliceToRevisionSpecifiers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1068,7 +1094,9 @@
                 "identifier": "TestResolveRepositoriesWithSearchContext",
                 "newPage": false,
                 "searchKey": "repos.TestResolveRepositoriesWithSearchContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

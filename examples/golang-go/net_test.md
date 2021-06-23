@@ -20,10 +20,15 @@
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleListener" href="#ExampleListener">func ExampleListener()</a>
 
 ```
 searchKey: net_test.ExampleListener
+tags: [private]
 ```
 
 ```Go
@@ -34,6 +39,7 @@ func ExampleListener()
 
 ```
 searchKey: net_test.ExampleDialer
+tags: [private]
 ```
 
 ```Go
@@ -44,6 +50,7 @@ func ExampleDialer()
 
 ```
 searchKey: net_test.ExampleDialer_unix
+tags: [private]
 ```
 
 ```Go
@@ -54,6 +61,7 @@ func ExampleDialer_unix()
 
 ```
 searchKey: net_test.ExampleIPv4
+tags: [private]
 ```
 
 ```Go
@@ -64,6 +72,7 @@ func ExampleIPv4()
 
 ```
 searchKey: net_test.ExampleParseCIDR
+tags: [private]
 ```
 
 ```Go
@@ -74,6 +83,7 @@ func ExampleParseCIDR()
 
 ```
 searchKey: net_test.ExampleParseIP
+tags: [private]
 ```
 
 ```Go
@@ -84,6 +94,7 @@ func ExampleParseIP()
 
 ```
 searchKey: net_test.ExampleIP_DefaultMask
+tags: [private]
 ```
 
 ```Go
@@ -94,6 +105,7 @@ func ExampleIP_DefaultMask()
 
 ```
 searchKey: net_test.ExampleIP_Mask
+tags: [private]
 ```
 
 ```Go
@@ -104,6 +116,7 @@ func ExampleIP_Mask()
 
 ```
 searchKey: net_test.ExampleCIDRMask
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +127,7 @@ func ExampleCIDRMask()
 
 ```
 searchKey: net_test.ExampleIPv4Mask
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +138,7 @@ func ExampleIPv4Mask()
 
 ```
 searchKey: net_test.ExampleUDPConn_WriteTo
+tags: [private]
 ```
 
 ```Go
@@ -134,6 +149,7 @@ func ExampleUDPConn_WriteTo()
 
 ```
 searchKey: net_test.TestPipe
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +160,7 @@ func TestPipe(t *testing.T)
 
 ```
 searchKey: net_test.TestPipeCloseError
+tags: [private]
 ```
 
 ```Go

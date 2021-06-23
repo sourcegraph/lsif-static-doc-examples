@@ -30,11 +30,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="RepoUpdateSchedulerInfoArgs" href="#RepoUpdateSchedulerInfoArgs">type RepoUpdateSchedulerInfoArgs struct</a>
 
 ```
 searchKey: protocol.RepoUpdateSchedulerInfoArgs
-tags: [exported]
 ```
 
 ```Go
@@ -51,7 +54,6 @@ type RepoUpdateSchedulerInfoArgs struct {
 
 ```
 searchKey: protocol.RepoUpdateSchedulerInfoResult
-tags: [exported]
 ```
 
 ```Go
@@ -65,7 +67,6 @@ type RepoUpdateSchedulerInfoResult struct {
 
 ```
 searchKey: protocol.RepoScheduleState
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +82,6 @@ type RepoScheduleState struct {
 
 ```
 searchKey: protocol.RepoQueueState
-tags: [exported]
 ```
 
 ```Go
@@ -96,7 +96,6 @@ type RepoQueueState struct {
 
 ```
 searchKey: protocol.RepoExternalServicesRequest
-tags: [exported]
 ```
 
 ```Go
@@ -112,7 +111,6 @@ RepoExternalServicesRequest is a request for the external services associated wi
 
 ```
 searchKey: protocol.RepoExternalServicesResponse
-tags: [exported]
 ```
 
 ```Go
@@ -127,7 +125,6 @@ RepoExternalServicesResponse is returned in response to an RepoExternalServicesR
 
 ```
 searchKey: protocol.RepoLookupArgs
-tags: [exported]
 ```
 
 ```Go
@@ -145,7 +142,6 @@ Exactly one of Repo and ExternalRepo should be set.
 
 ```
 searchKey: protocol.RepoLookupArgs.String
-tags: [exported]
 ```
 
 ```Go
@@ -156,7 +152,6 @@ func (a *RepoLookupArgs) String() string
 
 ```
 searchKey: protocol.RepoLookupResult
-tags: [exported]
 ```
 
 ```Go
@@ -176,7 +171,6 @@ RepoLookupResult is the response to a repository information request (RepoLookup
 
 ```
 searchKey: protocol.RepoLookupResult.String
-tags: [exported]
 ```
 
 ```Go
@@ -187,7 +181,6 @@ func (r *RepoLookupResult) String() string
 
 ```
 searchKey: protocol.RepoInfo
-tags: [exported]
 ```
 
 ```Go
@@ -217,7 +210,6 @@ RepoInfo is information about a repository that lives on an external service (su
 
 ```
 searchKey: protocol.RepoInfo.String
-tags: [exported]
 ```
 
 ```Go
@@ -228,7 +220,6 @@ func (r *RepoInfo) String() string
 
 ```
 searchKey: protocol.VCSInfo
-tags: [exported]
 ```
 
 ```Go
@@ -243,7 +234,6 @@ VCSInfo describes how to access an external repository's Git data (to clone or u
 
 ```
 searchKey: protocol.RepoLinks
-tags: [exported]
 ```
 
 ```Go
@@ -261,7 +251,6 @@ RepoLinks contains URLs and URL patterns for objects in this repository.
 
 ```
 searchKey: protocol.RepoUpdateRequest
-tags: [exported]
 ```
 
 ```Go
@@ -276,7 +265,6 @@ RepoUpdateRequest is a request to update the contents of a given repo, or clone 
 
 ```
 searchKey: protocol.RepoUpdateRequest.String
-tags: [exported]
 ```
 
 ```Go
@@ -287,7 +275,6 @@ func (a *RepoUpdateRequest) String() string
 
 ```
 searchKey: protocol.RepoUpdateResponse
-tags: [exported]
 ```
 
 ```Go
@@ -307,7 +294,6 @@ RepoUpdateResponse is a response type to a RepoUpdateRequest.
 
 ```
 searchKey: protocol.ChangesetSyncRequest
-tags: [exported]
 ```
 
 ```Go
@@ -322,7 +308,6 @@ ChangesetSyncRequest is a request to sync a number of changesets
 
 ```
 searchKey: protocol.ChangesetSyncResponse
-tags: [exported]
 ```
 
 ```Go
@@ -337,7 +322,6 @@ ChangesetSyncResponse is a response to sync a number of changesets
 
 ```
 searchKey: protocol.PermsSyncRequest
-tags: [exported]
 ```
 
 ```Go
@@ -353,7 +337,6 @@ PermsSyncRequest is a request to sync permissions.
 
 ```
 searchKey: protocol.PermsSyncResponse
-tags: [exported]
 ```
 
 ```Go
@@ -368,7 +351,6 @@ PermsSyncResponse is a response to sync permissions.
 
 ```
 searchKey: protocol.ExternalServiceSyncRequest
-tags: [exported]
 ```
 
 ```Go
@@ -385,7 +367,6 @@ The FrontendAPI is one of the issuers of this request. It does so when creating 
 
 ```
 searchKey: protocol.ExternalServiceSyncResult
-tags: [exported]
 ```
 
 ```Go

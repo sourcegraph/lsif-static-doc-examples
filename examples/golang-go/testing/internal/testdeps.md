@@ -31,10 +31,15 @@ This package is imported by the generated main package, which passes TestDeps in
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="matchPat" href="#matchPat">var matchPat</a>
 
 ```
 searchKey: testdeps.matchPat
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +50,7 @@ var matchPat string
 
 ```
 searchKey: testdeps.matchRe
+tags: [private]
 ```
 
 ```Go
@@ -55,7 +61,6 @@ var matchRe *regexp.Regexp
 
 ```
 searchKey: testdeps.ImportPath
-tags: [exported]
 ```
 
 ```Go
@@ -68,6 +73,7 @@ ImportPath is the import path of the testing binary, set by the generated main f
 
 ```
 searchKey: testdeps.log
+tags: [private]
 ```
 
 ```Go
@@ -76,11 +82,14 @@ var log testLog
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestDeps" href="#TestDeps">type TestDeps struct{}</a>
 
 ```
 searchKey: testdeps.TestDeps
-tags: [exported]
 ```
 
 ```Go
@@ -93,7 +102,6 @@ TestDeps is an implementation of the testing.testDeps interface, suitable for pa
 
 ```
 searchKey: testdeps.TestDeps.MatchString
-tags: [exported]
 ```
 
 ```Go
@@ -104,7 +112,6 @@ func (TestDeps) MatchString(pat, str string) (result bool, err error)
 
 ```
 searchKey: testdeps.TestDeps.StartCPUProfile
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +122,6 @@ func (TestDeps) StartCPUProfile(w io.Writer) error
 
 ```
 searchKey: testdeps.TestDeps.StopCPUProfile
-tags: [exported]
 ```
 
 ```Go
@@ -126,7 +132,6 @@ func (TestDeps) StopCPUProfile()
 
 ```
 searchKey: testdeps.TestDeps.WriteProfileTo
-tags: [exported]
 ```
 
 ```Go
@@ -137,7 +142,6 @@ func (TestDeps) WriteProfileTo(name string, w io.Writer, debug int) error
 
 ```
 searchKey: testdeps.TestDeps.ImportPath
-tags: [exported]
 ```
 
 ```Go
@@ -148,7 +152,6 @@ func (TestDeps) ImportPath() string
 
 ```
 searchKey: testdeps.TestDeps.StartTestLog
-tags: [exported]
 ```
 
 ```Go
@@ -159,7 +162,6 @@ func (TestDeps) StartTestLog(w io.Writer)
 
 ```
 searchKey: testdeps.TestDeps.StopTestLog
-tags: [exported]
 ```
 
 ```Go
@@ -170,7 +172,6 @@ func (TestDeps) StopTestLog() error
 
 ```
 searchKey: testdeps.TestDeps.SetPanicOnExit0
-tags: [exported]
 ```
 
 ```Go
@@ -183,6 +184,7 @@ SetPanicOnExit0 tells the os package whether to panic on os.Exit(0).
 
 ```
 searchKey: testdeps.testLog
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +201,7 @@ testLog implements testlog.Interface, logging actions by package os.
 
 ```
 searchKey: testdeps.testLog.Getenv
+tags: [private]
 ```
 
 ```Go
@@ -209,6 +212,7 @@ func (l *testLog) Getenv(key string)
 
 ```
 searchKey: testdeps.testLog.Open
+tags: [private]
 ```
 
 ```Go
@@ -219,6 +223,7 @@ func (l *testLog) Open(name string)
 
 ```
 searchKey: testdeps.testLog.Stat
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +234,7 @@ func (l *testLog) Stat(name string)
 
 ```
 searchKey: testdeps.testLog.Chdir
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +245,7 @@ func (l *testLog) Chdir(name string)
 
 ```
 searchKey: testdeps.testLog.add
+tags: [private]
 ```
 
 ```Go

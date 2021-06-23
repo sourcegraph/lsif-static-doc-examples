@@ -4,7 +4,9 @@
     "identifier": "buildcfg",
     "newPage": true,
     "searchKey": "internal/buildcfg",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "defaultGOROOT",
                 "newPage": false,
                 "searchKey": "buildcfg.defaultGOROOT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "GOROOT",
                 "newPage": false,
                 "searchKey": "buildcfg.GOROOT",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -82,9 +86,7 @@
                 "identifier": "GOARCH",
                 "newPage": false,
                 "searchKey": "buildcfg.GOARCH",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -104,9 +106,7 @@
                 "identifier": "GOOS",
                 "newPage": false,
                 "searchKey": "buildcfg.GOOS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -126,9 +126,7 @@
                 "identifier": "GO386",
                 "newPage": false,
                 "searchKey": "buildcfg.GO386",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -148,9 +146,7 @@
                 "identifier": "GOARM",
                 "newPage": false,
                 "searchKey": "buildcfg.GOARM",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -170,9 +166,7 @@
                 "identifier": "GOMIPS",
                 "newPage": false,
                 "searchKey": "buildcfg.GOMIPS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -192,9 +186,7 @@
                 "identifier": "GOMIPS64",
                 "newPage": false,
                 "searchKey": "buildcfg.GOMIPS64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -214,9 +206,7 @@
                 "identifier": "GOPPC64",
                 "newPage": false,
                 "searchKey": "buildcfg.GOPPC64",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -236,9 +226,7 @@
                 "identifier": "GOWASM",
                 "newPage": false,
                 "searchKey": "buildcfg.GOWASM",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -258,9 +246,7 @@
                 "identifier": "GO_LDSO",
                 "newPage": false,
                 "searchKey": "buildcfg.GO_LDSO",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -280,9 +266,7 @@
                 "identifier": "Version",
                 "newPage": false,
                 "searchKey": "buildcfg.Version",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -302,9 +286,7 @@
                 "identifier": "Error",
                 "newPage": false,
                 "searchKey": "buildcfg.Error",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -324,9 +306,7 @@
                 "identifier": "Experiment",
                 "newPage": false,
                 "searchKey": "buildcfg.Experiment",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -346,7 +326,9 @@
                 "identifier": "regabiSupported",
                 "newPage": false,
                 "searchKey": "buildcfg.regabiSupported",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -366,7 +348,9 @@
                 "identifier": "experimentBaseline",
                 "newPage": false,
                 "searchKey": "buildcfg.experimentBaseline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -386,9 +370,7 @@
                 "identifier": "FramePointerEnabled",
                 "newPage": false,
                 "searchKey": "buildcfg.FramePointerEnabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -411,7 +393,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -429,7 +413,9 @@
                 "identifier": "gowasmFeatures",
                 "newPage": false,
                 "searchKey": "buildcfg.gowasmFeatures",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,7 +433,9 @@
                       "identifier": "gowasm",
                       "newPage": false,
                       "searchKey": "buildcfg.gowasm",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -467,7 +455,9 @@
                       "identifier": "gowasmFeatures.String",
                       "newPage": false,
                       "searchKey": "buildcfg.gowasmFeatures.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -493,7 +483,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -511,9 +503,7 @@
                 "identifier": "Check",
                 "newPage": false,
                 "searchKey": "buildcfg.Check",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -533,7 +523,9 @@
                 "identifier": "envOr",
                 "newPage": false,
                 "searchKey": "buildcfg.envOr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -553,7 +545,9 @@
                 "identifier": "goarm",
                 "newPage": false,
                 "searchKey": "buildcfg.goarm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -573,7 +567,9 @@
                 "identifier": "gomips",
                 "newPage": false,
                 "searchKey": "buildcfg.gomips",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -593,7 +589,9 @@
                 "identifier": "gomips64",
                 "newPage": false,
                 "searchKey": "buildcfg.gomips64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -613,7 +611,9 @@
                 "identifier": "goppc64",
                 "newPage": false,
                 "searchKey": "buildcfg.goppc64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -633,9 +633,7 @@
                 "identifier": "Getgoextlinkenabled",
                 "newPage": false,
                 "searchKey": "buildcfg.Getgoextlinkenabled",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -655,7 +653,9 @@
                 "identifier": "parseExperiments",
                 "newPage": false,
                 "searchKey": "buildcfg.parseExperiments",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -675,7 +675,9 @@
                 "identifier": "expList",
                 "newPage": false,
                 "searchKey": "buildcfg.expList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -695,9 +697,7 @@
                 "identifier": "GOEXPERIMENT",
                 "newPage": false,
                 "searchKey": "buildcfg.GOEXPERIMENT",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -717,9 +717,7 @@
                 "identifier": "EnabledExperiments",
                 "newPage": false,
                 "searchKey": "buildcfg.EnabledExperiments",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -739,9 +737,7 @@
                 "identifier": "AllExperiments",
                 "newPage": false,
                 "searchKey": "buildcfg.AllExperiments",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

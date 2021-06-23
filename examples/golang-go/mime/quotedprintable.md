@@ -45,14 +45,11 @@ Package quotedprintable implements quoted-printable encoding as specified by RFC
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="lineMaxLen" href="#lineMaxLen">const lineMaxLen</a>
 
 ```
 searchKey: quotedprintable.lineMaxLen
+tags: [private]
 ```
 
 ```Go
@@ -63,6 +60,7 @@ const lineMaxLen = 76
 
 ```
 searchKey: quotedprintable.upperhex
+tags: [private]
 ```
 
 ```Go
@@ -71,14 +69,11 @@ const upperhex = "0123456789ABCDEF"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="crlf" href="#crlf">var crlf</a>
 
 ```
 searchKey: quotedprintable.crlf
+tags: [private]
 ```
 
 ```Go
@@ -89,6 +84,7 @@ var crlf = []byte("\r\n")
 
 ```
 searchKey: quotedprintable.lf
+tags: [private]
 ```
 
 ```Go
@@ -99,6 +95,7 @@ var lf = []byte("\n")
 
 ```
 searchKey: quotedprintable.softSuffix
+tags: [private]
 ```
 
 ```Go
@@ -109,6 +106,7 @@ var softSuffix = []byte("=")
 
 ```
 searchKey: quotedprintable.useQprint
+tags: [private]
 ```
 
 ```Go
@@ -119,6 +117,7 @@ var useQprint = flag.Bool("qprint", false, "Compare against the 'qprint' program
 
 ```
 searchKey: quotedprintable.badSoftRx
+tags: [private]
 ```
 
 ```Go
@@ -129,6 +128,7 @@ var badSoftRx = regexp.MustCompile(`=([^\r\n]+?\n)|([^\r\n]+$)|(\r$)|(\r[^\n]+\n
 
 ```
 searchKey: quotedprintable.testMsg
+tags: [private]
 ```
 
 ```Go
@@ -139,15 +139,10 @@ From [https://fr.wikipedia.org/wiki/Quoted-Printable](https://fr.wikipedia.org/w
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Reader" href="#Reader">type Reader struct</a>
 
 ```
 searchKey: quotedprintable.Reader
-tags: [exported]
 ```
 
 ```Go
@@ -164,7 +159,6 @@ Reader is a quoted-printable decoder.
 
 ```
 searchKey: quotedprintable.NewReader
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +171,6 @@ NewReader returns a quoted-printable reader, decoding from r.
 
 ```
 searchKey: quotedprintable.Reader.Read
-tags: [exported]
 ```
 
 ```Go
@@ -190,7 +183,6 @@ Read reads and decodes quoted-printable data from the underlying reader.
 
 ```
 searchKey: quotedprintable.Writer
-tags: [exported]
 ```
 
 ```Go
@@ -212,7 +204,6 @@ A Writer is a quoted-printable writer that implements io.WriteCloser.
 
 ```
 searchKey: quotedprintable.NewWriter
-tags: [exported]
 ```
 
 ```Go
@@ -225,7 +216,6 @@ NewWriter returns a new Writer that writes to w.
 
 ```
 searchKey: quotedprintable.Writer.Write
-tags: [exported]
 ```
 
 ```Go
@@ -238,7 +228,6 @@ Write encodes p using quoted-printable encoding and writes it to the underlying 
 
 ```
 searchKey: quotedprintable.Writer.Close
-tags: [exported]
 ```
 
 ```Go
@@ -251,6 +240,7 @@ Close closes the Writer, flushing any unwritten data to the underlying io.Writer
 
 ```
 searchKey: quotedprintable.Writer.write
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +253,7 @@ write limits text encoded in quoted-printable to 76 characters per line.
 
 ```
 searchKey: quotedprintable.Writer.encode
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +264,7 @@ func (w *Writer) encode(b byte) error
 
 ```
 searchKey: quotedprintable.Writer.checkLastByte
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +277,7 @@ checkLastByte encodes the last buffered byte if it is a space or a tab.
 
 ```
 searchKey: quotedprintable.Writer.insertSoftLineBreak
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +288,7 @@ func (w *Writer) insertSoftLineBreak() error
 
 ```
 searchKey: quotedprintable.Writer.insertCRLF
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +299,7 @@ func (w *Writer) insertCRLF() error
 
 ```
 searchKey: quotedprintable.Writer.flush
+tags: [private]
 ```
 
 ```Go
@@ -313,14 +308,11 @@ func (w *Writer) flush() error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="fromHex" href="#fromHex">func fromHex(b byte) (byte, error)</a>
 
 ```
 searchKey: quotedprintable.fromHex
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +323,7 @@ func fromHex(b byte) (byte, error)
 
 ```
 searchKey: quotedprintable.readHexByte
+tags: [private]
 ```
 
 ```Go
@@ -341,6 +334,7 @@ func readHexByte(v []byte) (b byte, err error)
 
 ```
 searchKey: quotedprintable.isQPDiscardWhitespace
+tags: [private]
 ```
 
 ```Go
@@ -351,6 +345,7 @@ func isQPDiscardWhitespace(r rune) bool
 
 ```
 searchKey: quotedprintable.isWhitespace
+tags: [private]
 ```
 
 ```Go
@@ -361,6 +356,7 @@ func isWhitespace(b byte) bool
 
 ```
 searchKey: quotedprintable.TestReader
+tags: [private]
 ```
 
 ```Go
@@ -371,6 +367,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: quotedprintable.everySequence
+tags: [private]
 ```
 
 ```Go
@@ -381,6 +378,7 @@ func everySequence(base, alpha string, length int, fn func(string))
 
 ```
 searchKey: quotedprintable.TestExhaustive
+tags: [private]
 ```
 
 ```Go
@@ -391,6 +389,7 @@ func TestExhaustive(t *testing.T)
 
 ```
 searchKey: quotedprintable.TestWriter
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +400,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: quotedprintable.TestWriterBinary
+tags: [private]
 ```
 
 ```Go
@@ -411,6 +411,7 @@ func TestWriterBinary(t *testing.T)
 
 ```
 searchKey: quotedprintable.testWriter
+tags: [private]
 ```
 
 ```Go
@@ -421,6 +422,7 @@ func testWriter(t *testing.T, binary bool)
 
 ```
 searchKey: quotedprintable.TestRoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -431,6 +433,7 @@ func TestRoundTrip(t *testing.T)
 
 ```
 searchKey: quotedprintable.BenchmarkWriter
+tags: [private]
 ```
 
 ```Go

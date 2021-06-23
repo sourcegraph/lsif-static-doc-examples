@@ -4,9 +4,7 @@
     "identifier": "md5",
     "newPage": true,
     "searchKey": "crypto/md5",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Size",
                 "newPage": false,
                 "searchKey": "md5.Size",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "BlockSize",
                 "newPage": false,
                 "searchKey": "md5.BlockSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,7 +80,9 @@
                 "identifier": "init0",
                 "newPage": false,
                 "searchKey": "md5.init0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -108,7 +102,9 @@
                 "identifier": "init1",
                 "newPage": false,
                 "searchKey": "md5.init1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -128,7 +124,9 @@
                 "identifier": "init2",
                 "newPage": false,
                 "searchKey": "md5.init2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,7 +146,9 @@
                 "identifier": "init3",
                 "newPage": false,
                 "searchKey": "md5.init3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +168,9 @@
                 "identifier": "magic",
                 "newPage": false,
                 "searchKey": "md5.magic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -188,7 +190,9 @@
                 "identifier": "marshaledSize",
                 "newPage": false,
                 "searchKey": "md5.marshaledSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -208,7 +212,9 @@
                 "identifier": "haveAsm",
                 "newPage": false,
                 "searchKey": "md5.haveAsm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -231,9 +237,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -251,7 +255,9 @@
                 "identifier": "golden",
                 "newPage": false,
                 "searchKey": "md5.golden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -271,7 +277,9 @@
                 "identifier": "largeUnmarshalTests",
                 "newPage": false,
                 "searchKey": "md5.largeUnmarshalTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -291,7 +299,9 @@
                 "identifier": "bench",
                 "newPage": false,
                 "searchKey": "md5.bench",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -311,7 +321,9 @@
                 "identifier": "buf",
                 "newPage": false,
                 "searchKey": "md5.buf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -331,7 +343,9 @@
                 "identifier": "sum",
                 "newPage": false,
                 "searchKey": "md5.sum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -354,9 +368,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -374,7 +386,9 @@
                 "identifier": "digest",
                 "newPage": false,
                 "searchKey": "md5.digest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -392,7 +406,9 @@
                       "identifier": "digest.Reset",
                       "newPage": false,
                       "searchKey": "md5.digest.Reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -412,7 +428,9 @@
                       "identifier": "digest.MarshalBinary",
                       "newPage": false,
                       "searchKey": "md5.digest.MarshalBinary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -432,7 +450,9 @@
                       "identifier": "digest.UnmarshalBinary",
                       "newPage": false,
                       "searchKey": "md5.digest.UnmarshalBinary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -452,7 +472,9 @@
                       "identifier": "digest.Size",
                       "newPage": false,
                       "searchKey": "md5.digest.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -472,7 +494,9 @@
                       "identifier": "digest.BlockSize",
                       "newPage": false,
                       "searchKey": "md5.digest.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -492,7 +516,9 @@
                       "identifier": "digest.Write",
                       "newPage": false,
                       "searchKey": "md5.digest.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -512,7 +538,9 @@
                       "identifier": "digest.Sum",
                       "newPage": false,
                       "searchKey": "md5.digest.Sum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -532,7 +560,9 @@
                       "identifier": "digest.checkSum",
                       "newPage": false,
                       "searchKey": "md5.digest.checkSum",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -555,7 +585,9 @@
                 "identifier": "md5Test",
                 "newPage": false,
                 "searchKey": "md5.md5Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -575,7 +607,9 @@
                 "identifier": "unmarshalTest",
                 "newPage": false,
                 "searchKey": "md5.unmarshalTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -598,9 +632,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -613,12 +645,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/md5#init",
+              "pathID": "/crypto/md5#init.md5.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.md5.go",
                 "newPage": false,
                 "searchKey": "md5.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -638,7 +672,9 @@
                 "identifier": "appendUint64",
                 "newPage": false,
                 "searchKey": "md5.appendUint64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -658,7 +694,9 @@
                 "identifier": "appendUint32",
                 "newPage": false,
                 "searchKey": "md5.appendUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -678,7 +716,9 @@
                 "identifier": "consumeUint64",
                 "newPage": false,
                 "searchKey": "md5.consumeUint64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -698,7 +738,9 @@
                 "identifier": "consumeUint32",
                 "newPage": false,
                 "searchKey": "md5.consumeUint32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -718,9 +760,7 @@
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "md5.New",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -740,9 +780,7 @@
                 "identifier": "Sum",
                 "newPage": false,
                 "searchKey": "md5.Sum",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -762,7 +800,9 @@
                 "identifier": "blockGeneric",
                 "newPage": false,
                 "searchKey": "md5.blockGeneric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -782,7 +822,9 @@
                 "identifier": "block",
                 "newPage": false,
                 "searchKey": "md5.block",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -802,7 +844,9 @@
                 "identifier": "TestGolden",
                 "newPage": false,
                 "searchKey": "md5.TestGolden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -822,7 +866,9 @@
                 "identifier": "TestGoldenMarshal",
                 "newPage": false,
                 "searchKey": "md5.TestGoldenMarshal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -842,7 +888,9 @@
                 "identifier": "TestLarge",
                 "newPage": false,
                 "searchKey": "md5.TestLarge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -862,7 +910,9 @@
                 "identifier": "TestBlockGeneric",
                 "newPage": false,
                 "searchKey": "md5.TestBlockGeneric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -882,7 +932,9 @@
                 "identifier": "safeSum",
                 "newPage": false,
                 "searchKey": "md5.safeSum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -902,7 +954,9 @@
                 "identifier": "TestLargeHashes",
                 "newPage": false,
                 "searchKey": "md5.TestLargeHashes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -922,7 +976,9 @@
                 "identifier": "benchmarkSize",
                 "newPage": false,
                 "searchKey": "md5.benchmarkSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -942,7 +998,9 @@
                 "identifier": "BenchmarkHash8Bytes",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash8Bytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -962,7 +1020,9 @@
                 "identifier": "BenchmarkHash64",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -982,7 +1042,9 @@
                 "identifier": "BenchmarkHash128",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash128",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1002,7 +1064,9 @@
                 "identifier": "BenchmarkHash256",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash256",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1022,7 +1086,9 @@
                 "identifier": "BenchmarkHash512",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash512",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1042,7 +1108,9 @@
                 "identifier": "BenchmarkHash1K",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash1K",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1062,7 +1130,9 @@
                 "identifier": "BenchmarkHash8K",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash8K",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1082,7 +1152,9 @@
                 "identifier": "BenchmarkHash1M",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash1M",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1102,7 +1174,9 @@
                 "identifier": "BenchmarkHash8M",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash8M",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1122,7 +1196,9 @@
                 "identifier": "BenchmarkHash8BytesUnaligned",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash8BytesUnaligned",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1142,7 +1218,9 @@
                 "identifier": "BenchmarkHash1KUnaligned",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash1KUnaligned",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1162,7 +1240,9 @@
                 "identifier": "BenchmarkHash8KUnaligned",
                 "newPage": false,
                 "searchKey": "md5.BenchmarkHash8KUnaligned",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

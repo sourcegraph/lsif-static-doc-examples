@@ -20,9 +20,9 @@ Package userpasswd implements builtin username-password authentication and signu
     * [func ResetPasswordEnabled() bool](#ResetPasswordEnabled)
     * [func getProviderConfig() (pc *schema.BuiltinAuthProvider, multiple bool)](#getProviderConfig)
     * [func handleEnabledCheck(w http.ResponseWriter) (handled bool)](#handleEnabledCheck)
-    * [func init()](#init)
+    * [func init()](#init.config.go)
     * [func validateConfig(c conf.Unified) (problems conf.Problems)](#validateConfig)
-    * [func init()](#init)
+    * [func init()](#init.config_watch.go)
     * [func HandleSignUp(w http.ResponseWriter, r *http.Request)](#HandleSignUp)
     * [func HandleSiteInit(w http.ResponseWriter, r *http.Request)](#HandleSiteInit)
     * [func checkEmailAbuse(ctx context.Context, addr string) (abused bool, reason string, err error)](#checkEmailAbuse)
@@ -42,10 +42,15 @@ Package userpasswd implements builtin username-password authentication and signu
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="providerType" href="#providerType">const providerType</a>
 
 ```
 searchKey: userpasswd.providerType
+tags: [private]
 ```
 
 ```Go
@@ -54,10 +59,15 @@ const providerType = "builtin"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="resetPasswordEmailTemplates" href="#resetPasswordEmailTemplates">var resetPasswordEmailTemplates</a>
 
 ```
 searchKey: userpasswd.resetPasswordEmailTemplates
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +78,7 @@ var resetPasswordEmailTemplates = ...
 
 ```
 searchKey: userpasswd.setPasswordEmailTemplates
+tags: [private]
 ```
 
 ```Go
@@ -76,10 +87,15 @@ var setPasswordEmailTemplates = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="credentials" href="#credentials">type credentials struct</a>
 
 ```
 searchKey: userpasswd.credentials
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +112,7 @@ type credentials struct {
 
 ```
 searchKey: userpasswd.provider
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +125,7 @@ type provider struct {
 
 ```
 searchKey: userpasswd.provider.ConfigID
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +138,7 @@ ConfigID implements providers.Provider.
 
 ```
 searchKey: userpasswd.provider.Config
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +151,7 @@ Config implements providers.Provider.
 
 ```
 searchKey: userpasswd.provider.Refresh
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +164,7 @@ Refresh implements providers.Provider.
 
 ```
 searchKey: userpasswd.provider.CachedInfo
+tags: [private]
 ```
 
 ```Go
@@ -154,11 +175,14 @@ CachedInfo implements providers.Provider.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ResetPasswordEnabled" href="#ResetPasswordEnabled">func ResetPasswordEnabled() bool</a>
 
 ```
 searchKey: userpasswd.ResetPasswordEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -171,6 +195,7 @@ ResetPasswordEnabled reports whether the reset-password flow is enabled (per sit
 
 ```
 searchKey: userpasswd.getProviderConfig
+tags: [private]
 ```
 
 ```Go
@@ -183,16 +208,18 @@ getProviderConfig returns the builtin auth provider config. At most 1 can be spe
 
 ```
 searchKey: userpasswd.handleEnabledCheck
+tags: [private]
 ```
 
 ```Go
 func handleEnabledCheck(w http.ResponseWriter) (handled bool)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.config.go" href="#init.config.go">func init()</a>
 
 ```
 searchKey: userpasswd.init
+tags: [private]
 ```
 
 ```Go
@@ -203,16 +230,18 @@ func init()
 
 ```
 searchKey: userpasswd.validateConfig
+tags: [private]
 ```
 
 ```Go
 func validateConfig(c conf.Unified) (problems conf.Problems)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.config_watch.go" href="#init.config_watch.go">func init()</a>
 
 ```
 searchKey: userpasswd.init
+tags: [private]
 ```
 
 ```Go
@@ -225,7 +254,6 @@ Watch for configuration changes related to the builtin auth provider.
 
 ```
 searchKey: userpasswd.HandleSignUp
-tags: [exported]
 ```
 
 ```Go
@@ -238,7 +266,6 @@ HandleSignUp handles submission of the user signup form.
 
 ```
 searchKey: userpasswd.HandleSiteInit
-tags: [exported]
 ```
 
 ```Go
@@ -251,6 +278,7 @@ HandleSiteInit handles submission of the site initialization form, where the ini
 
 ```
 searchKey: userpasswd.checkEmailAbuse
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +291,7 @@ checkEmailAbuse performs abuse prevention checks to prevent email abuse, i.e. us
 
 ```
 searchKey: userpasswd.handleSignUp
+tags: [private]
 ```
 
 ```Go
@@ -277,6 +306,7 @@ doServeSignUp is called to create a new user account. It is called for the norma
 
 ```
 searchKey: userpasswd.getByEmailOrUsername
+tags: [private]
 ```
 
 ```Go
@@ -287,7 +317,6 @@ func getByEmailOrUsername(ctx context.Context, emailOrUsername string) (*types.U
 
 ```
 searchKey: userpasswd.HandleSignIn
-tags: [exported]
 ```
 
 ```Go
@@ -300,7 +329,6 @@ HandleSignIn accepts a POST containing username-password credentials and authent
 
 ```
 searchKey: userpasswd.HandleCheckUsernameTaken
-tags: [exported]
 ```
 
 ```Go
@@ -313,6 +341,7 @@ Check availability of username for signup form
 
 ```
 searchKey: userpasswd.httpLogAndError
+tags: [private]
 ```
 
 ```Go
@@ -323,7 +352,6 @@ func httpLogAndError(w http.ResponseWriter, msg string, code int, errArgs ...int
 
 ```
 searchKey: userpasswd.HandleResetPasswordInit
-tags: [exported]
 ```
 
 ```Go
@@ -336,7 +364,6 @@ HandleResetPasswordInit initiates the builtin-auth password reset flow by sendin
 
 ```
 searchKey: userpasswd.HandleSetPasswordEmail
-tags: [exported]
 ```
 
 ```Go
@@ -349,7 +376,6 @@ HandleSetPasswordEmail sends the password reset email directly to the user for u
 
 ```
 searchKey: userpasswd.HandleResetPasswordCode
-tags: [exported]
 ```
 
 ```Go
@@ -362,6 +388,7 @@ HandleResetPasswordCode resets the password if the correct code is provided.
 
 ```
 searchKey: userpasswd.handleNotAuthenticatedCheck
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +399,7 @@ func handleNotAuthenticatedCheck(w http.ResponseWriter, r *http.Request) (handle
 
 ```
 searchKey: userpasswd.TestValidateCustom
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +410,7 @@ func TestValidateCustom(t *testing.T)
 
 ```
 searchKey: userpasswd.TestCheckEmailAbuse
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +421,7 @@ func TestCheckEmailAbuse(t *testing.T)
 
 ```
 searchKey: userpasswd.TestHandleSetPasswordEmail
+tags: [private]
 ```
 
 ```Go

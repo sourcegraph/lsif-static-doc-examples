@@ -4,7 +4,9 @@
     "identifier": "codemonitors",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/codemonitors",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "codemonitors.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

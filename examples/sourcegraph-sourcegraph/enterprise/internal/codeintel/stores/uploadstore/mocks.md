@@ -70,11 +70,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MockStore" href="#MockStore">type MockStore struct</a>
 
 ```
 searchKey: mocks.MockStore
-tags: [exported]
 ```
 
 ```Go
@@ -103,7 +106,6 @@ MockStore is a mock implementation of the Store interface (from the package gith
 
 ```
 searchKey: mocks.NewMockStore
-tags: [exported]
 ```
 
 ```Go
@@ -116,7 +118,6 @@ NewMockStore creates a new mock of the Store interface. All methods return zero 
 
 ```
 searchKey: mocks.NewMockStoreFrom
-tags: [exported]
 ```
 
 ```Go
@@ -129,7 +130,6 @@ NewMockStoreFrom creates a new mock of the MockStore interface. All methods dele
 
 ```
 searchKey: mocks.MockStore.Compose
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +142,6 @@ Compose delegates to the next hook function in the queue and stores the paramete
 
 ```
 searchKey: mocks.MockStore.Delete
-tags: [exported]
 ```
 
 ```Go
@@ -155,7 +154,6 @@ Delete delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockStore.Get
-tags: [exported]
 ```
 
 ```Go
@@ -168,7 +166,6 @@ Get delegates to the next hook function in the queue and stores the parameter an
 
 ```
 searchKey: mocks.MockStore.Init
-tags: [exported]
 ```
 
 ```Go
@@ -181,7 +178,6 @@ Init delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: mocks.MockStore.Upload
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +190,6 @@ Upload delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.StoreComposeFunc
-tags: [exported]
 ```
 
 ```Go
@@ -212,7 +207,6 @@ StoreComposeFunc describes the behavior when the Compose method of the parent Mo
 
 ```
 searchKey: mocks.StoreComposeFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -225,7 +219,6 @@ SetDefaultHook sets function that is called when the Compose method of the paren
 
 ```
 searchKey: mocks.StoreComposeFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -238,7 +231,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Compos
 
 ```
 searchKey: mocks.StoreComposeFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -251,7 +243,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreComposeFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -264,6 +255,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreComposeFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +266,7 @@ func (f *StoreComposeFunc) nextHook() func(context.Context, string, ...string) (
 
 ```
 searchKey: mocks.StoreComposeFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -284,7 +277,6 @@ func (f *StoreComposeFunc) appendCall(r0 StoreComposeFuncCall)
 
 ```
 searchKey: mocks.StoreComposeFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -297,7 +289,6 @@ History returns a sequence of StoreComposeFuncCall objects describing the invoca
 
 ```
 searchKey: mocks.StoreComposeFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +317,6 @@ StoreComposeFuncCall is an object that describes an invocation of method Compose
 
 ```
 searchKey: mocks.StoreComposeFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -339,7 +329,6 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: mocks.StoreComposeFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -352,7 +341,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreDeleteFunc
-tags: [exported]
 ```
 
 ```Go
@@ -370,7 +358,6 @@ StoreDeleteFunc describes the behavior when the Delete method of the parent Mock
 
 ```
 searchKey: mocks.StoreDeleteFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -383,7 +370,6 @@ SetDefaultHook sets function that is called when the Delete method of the parent
 
 ```
 searchKey: mocks.StoreDeleteFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -396,7 +382,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Delete
 
 ```
 searchKey: mocks.StoreDeleteFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -409,7 +394,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreDeleteFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -422,6 +406,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreDeleteFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +417,7 @@ func (f *StoreDeleteFunc) nextHook() func(context.Context, string) error
 
 ```
 searchKey: mocks.StoreDeleteFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -442,7 +428,6 @@ func (f *StoreDeleteFunc) appendCall(r0 StoreDeleteFuncCall)
 
 ```
 searchKey: mocks.StoreDeleteFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -455,7 +440,6 @@ History returns a sequence of StoreDeleteFuncCall objects describing the invocat
 
 ```
 searchKey: mocks.StoreDeleteFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -478,7 +462,6 @@ StoreDeleteFuncCall is an object that describes an invocation of method Delete o
 
 ```
 searchKey: mocks.StoreDeleteFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -491,7 +474,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreDeleteFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -504,7 +486,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreGetFunc
-tags: [exported]
 ```
 
 ```Go
@@ -522,7 +503,6 @@ StoreGetFunc describes the behavior when the Get method of the parent MockStore 
 
 ```
 searchKey: mocks.StoreGetFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -535,7 +515,6 @@ SetDefaultHook sets function that is called when the Get method of the parent Mo
 
 ```
 searchKey: mocks.StoreGetFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -548,7 +527,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Get me
 
 ```
 searchKey: mocks.StoreGetFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -561,7 +539,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreGetFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -574,6 +551,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreGetFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -584,6 +562,7 @@ func (f *StoreGetFunc) nextHook() func(context.Context, string) (io.ReadCloser, 
 
 ```
 searchKey: mocks.StoreGetFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -594,7 +573,6 @@ func (f *StoreGetFunc) appendCall(r0 StoreGetFuncCall)
 
 ```
 searchKey: mocks.StoreGetFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -607,7 +585,6 @@ History returns a sequence of StoreGetFuncCall objects describing the invocation
 
 ```
 searchKey: mocks.StoreGetFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -633,7 +610,6 @@ StoreGetFuncCall is an object that describes an invocation of method Get on an i
 
 ```
 searchKey: mocks.StoreGetFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -646,7 +622,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreGetFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -659,7 +634,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreInitFunc
-tags: [exported]
 ```
 
 ```Go
@@ -677,7 +651,6 @@ StoreInitFunc describes the behavior when the Init method of the parent MockStor
 
 ```
 searchKey: mocks.StoreInitFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -690,7 +663,6 @@ SetDefaultHook sets function that is called when the Init method of the parent M
 
 ```
 searchKey: mocks.StoreInitFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -703,7 +675,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Init m
 
 ```
 searchKey: mocks.StoreInitFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -716,7 +687,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreInitFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -729,6 +699,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreInitFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -739,6 +710,7 @@ func (f *StoreInitFunc) nextHook() func(context.Context) error
 
 ```
 searchKey: mocks.StoreInitFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -749,7 +721,6 @@ func (f *StoreInitFunc) appendCall(r0 StoreInitFuncCall)
 
 ```
 searchKey: mocks.StoreInitFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -762,7 +733,6 @@ History returns a sequence of StoreInitFuncCall objects describing the invocatio
 
 ```
 searchKey: mocks.StoreInitFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -782,7 +752,6 @@ StoreInitFuncCall is an object that describes an invocation of method Init on an
 
 ```
 searchKey: mocks.StoreInitFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -795,7 +764,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreInitFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -808,7 +776,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreUploadFunc
-tags: [exported]
 ```
 
 ```Go
@@ -826,7 +793,6 @@ StoreUploadFunc describes the behavior when the Upload method of the parent Mock
 
 ```
 searchKey: mocks.StoreUploadFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -839,7 +805,6 @@ SetDefaultHook sets function that is called when the Upload method of the parent
 
 ```
 searchKey: mocks.StoreUploadFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -852,7 +817,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Upload
 
 ```
 searchKey: mocks.StoreUploadFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -865,7 +829,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreUploadFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -878,6 +841,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreUploadFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +852,7 @@ func (f *StoreUploadFunc) nextHook() func(context.Context, string, io.Reader) (i
 
 ```
 searchKey: mocks.StoreUploadFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -898,7 +863,6 @@ func (f *StoreUploadFunc) appendCall(r0 StoreUploadFuncCall)
 
 ```
 searchKey: mocks.StoreUploadFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -911,7 +875,6 @@ History returns a sequence of StoreUploadFuncCall objects describing the invocat
 
 ```
 searchKey: mocks.StoreUploadFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -940,7 +903,6 @@ StoreUploadFuncCall is an object that describes an invocation of method Upload o
 
 ```
 searchKey: mocks.StoreUploadFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -953,7 +915,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreUploadFuncCall.Results
-tags: [exported]
 ```
 
 ```Go

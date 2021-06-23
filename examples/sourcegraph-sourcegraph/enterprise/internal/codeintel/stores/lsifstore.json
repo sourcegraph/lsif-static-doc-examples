@@ -4,7 +4,9 @@
     "identifier": "lsifstore",
     "newPage": true,
     "searchKey": "enterprise/internal/codeintel/stores/lsifstore",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "clearQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.clearQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "CurrentDocumentSchemaVersion",
                 "newPage": false,
                 "searchKey": "lsifstore.CurrentDocumentSchemaVersion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -82,9 +86,7 @@
                 "identifier": "CurrentDefinitionsSchemaVersion",
                 "newPage": false,
                 "searchKey": "lsifstore.CurrentDefinitionsSchemaVersion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -104,9 +106,7 @@
                 "identifier": "CurrentReferencesSchemaVersion",
                 "newPage": false,
                 "searchKey": "lsifstore.CurrentReferencesSchemaVersion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -126,7 +126,9 @@
                 "identifier": "writeDocumentsTemporaryTableQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.writeDocumentsTemporaryTableQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -146,7 +148,9 @@
                 "identifier": "writeDocumentsInsertQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.writeDocumentsInsertQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -166,7 +170,9 @@
                 "identifier": "writeResultChunksTemporaryTableQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.writeResultChunksTemporaryTableQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -186,7 +192,9 @@
                 "identifier": "writeResultChunksInsertQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.writeResultChunksInsertQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -206,7 +214,9 @@
                 "identifier": "writeDefinitionsReferencesTemporaryTableQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.writeDefinitionsReferencesTemporaryTableQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -226,7 +236,9 @@
                 "identifier": "writeDefinitionReferencesInsertQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.writeDefinitionReferencesInsertQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -246,7 +258,9 @@
                 "identifier": "writeDocumentationPagesTemporaryTableQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.writeDocumentationPagesTemporaryTableQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -266,7 +280,9 @@
                 "identifier": "writeDocumentationPagesInsertQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.writeDocumentationPagesInsertQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -286,7 +302,9 @@
                 "identifier": "diagnosticsQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.diagnosticsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -306,7 +324,9 @@
                 "identifier": "documentationPageDataQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.documentationPageDataQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -326,7 +346,9 @@
                 "identifier": "existsQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.existsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -346,7 +368,9 @@
                 "identifier": "hoverDocumentQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.hoverDocumentQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -366,7 +390,9 @@
                 "identifier": "translateIDsToResultChunkIndexesQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.translateIDsToResultChunkIndexesQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -386,7 +412,9 @@
                 "identifier": "resultChunkBatchSize",
                 "newPage": false,
                 "searchKey": "lsifstore.resultChunkBatchSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -406,7 +434,9 @@
                 "identifier": "readLocationsFromResultChunksQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.readLocationsFromResultChunksQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -426,7 +456,9 @@
                 "identifier": "documentBatchSize",
                 "newPage": false,
                 "searchKey": "lsifstore.documentBatchSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -446,7 +478,9 @@
                 "identifier": "readRangesFromDocumentsQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.readRangesFromDocumentsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -466,7 +500,9 @@
                 "identifier": "locationsDocumentQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.locationsDocumentQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -486,7 +522,9 @@
                 "identifier": "monikersDocumentQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.monikersDocumentQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -506,7 +544,9 @@
                 "identifier": "bulkMonikerResultsQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.bulkMonikerResultsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -526,7 +566,9 @@
                 "identifier": "packageInformationQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.packageInformationQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -546,9 +588,7 @@
                 "identifier": "MaximumRangesDefinitionLocations",
                 "newPage": false,
                 "searchKey": "lsifstore.MaximumRangesDefinitionLocations",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -568,7 +608,9 @@
                 "identifier": "rangesDocumentQuery",
                 "newPage": false,
                 "searchKey": "lsifstore.rangesDocumentQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -588,7 +630,9 @@
                 "identifier": "testBundleID",
                 "newPage": false,
                 "searchKey": "lsifstore.testBundleID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -611,7 +655,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -629,7 +675,9 @@
                 "identifier": "tableNames",
                 "newPage": false,
                 "searchKey": "lsifstore.tableNames",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -649,9 +697,7 @@
                 "identifier": "ErrNoMetadata",
                 "newPage": false,
                 "searchKey": "lsifstore.ErrNoMetadata",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -674,7 +720,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -692,7 +740,9 @@
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "lsifstore.operations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -710,7 +760,9 @@
                       "identifier": "newOperations",
                       "newPage": false,
                       "searchKey": "lsifstore.newOperations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -733,9 +785,7 @@
                 "identifier": "QualifiedDocumentData",
                 "newPage": false,
                 "searchKey": "lsifstore.QualifiedDocumentData",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -755,9 +805,7 @@
                 "identifier": "QualifiedMonikerLocations",
                 "newPage": false,
                 "searchKey": "lsifstore.QualifiedMonikerLocations",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -777,9 +825,7 @@
                 "identifier": "Serializer",
                 "newPage": false,
                 "searchKey": "lsifstore.Serializer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -797,9 +843,7 @@
                       "identifier": "NewSerializer",
                       "newPage": false,
                       "searchKey": "lsifstore.NewSerializer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -819,9 +863,7 @@
                       "identifier": "Serializer.MarshalDocumentData",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.MarshalDocumentData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -841,9 +883,7 @@
                       "identifier": "Serializer.MarshalLegacyDocumentData",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.MarshalLegacyDocumentData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -863,9 +903,7 @@
                       "identifier": "Serializer.MarshalResultChunkData",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.MarshalResultChunkData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -885,9 +923,7 @@
                       "identifier": "Serializer.MarshalLocations",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.MarshalLocations",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -907,7 +943,9 @@
                       "identifier": "Serializer.encode",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.encode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -927,9 +965,7 @@
                       "identifier": "Serializer.UnmarshalDocumentData",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.UnmarshalDocumentData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -949,9 +985,7 @@
                       "identifier": "Serializer.UnmarshalLegacyDocumentData",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.UnmarshalLegacyDocumentData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -971,9 +1005,7 @@
                       "identifier": "Serializer.UnmarshalResultChunkData",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.UnmarshalResultChunkData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -993,9 +1025,7 @@
                       "identifier": "Serializer.UnmarshalLocations",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.UnmarshalLocations",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1015,7 +1045,9 @@
                       "identifier": "Serializer.decode",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.decode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1035,9 +1067,7 @@
                       "identifier": "Serializer.MarshalDocumentationPageData",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.MarshalDocumentationPageData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1057,9 +1087,7 @@
                       "identifier": "Serializer.UnmarshalDocumentationPageData",
                       "newPage": false,
                       "searchKey": "lsifstore.Serializer.UnmarshalDocumentationPageData",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1082,9 +1110,7 @@
                 "identifier": "MarshalledDocumentData",
                 "newPage": false,
                 "searchKey": "lsifstore.MarshalledDocumentData",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1104,9 +1130,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "lsifstore.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1124,9 +1148,7 @@
                       "identifier": "NewStore",
                       "newPage": false,
                       "searchKey": "lsifstore.NewStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1146,7 +1168,9 @@
                       "identifier": "populateTestStore",
                       "newPage": false,
                       "searchKey": "lsifstore.populateTestStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1166,9 +1190,7 @@
                       "identifier": "Store.Clear",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.Clear",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1188,9 +1210,7 @@
                       "identifier": "Store.WriteMeta",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.WriteMeta",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1210,9 +1230,7 @@
                       "identifier": "Store.WriteDocuments",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.WriteDocuments",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1232,9 +1250,7 @@
                       "identifier": "Store.WriteResultChunks",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.WriteResultChunks",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1254,9 +1270,7 @@
                       "identifier": "Store.WriteDefinitions",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.WriteDefinitions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1276,9 +1290,7 @@
                       "identifier": "Store.WriteReferences",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.WriteReferences",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1298,7 +1310,9 @@
                       "identifier": "Store.writeDefinitionReferences",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.writeDefinitionReferences",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1318,9 +1332,7 @@
                       "identifier": "Store.WriteDocumentationPages",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.WriteDocumentationPages",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1340,9 +1352,7 @@
                       "identifier": "Store.Diagnostics",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.Diagnostics",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1362,9 +1372,7 @@
                       "identifier": "Store.DocumentationPage",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.DocumentationPage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1384,7 +1392,9 @@
                       "identifier": "Store.scanFirstDocumentationPageData",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.scanFirstDocumentationPageData",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1404,9 +1414,7 @@
                       "identifier": "Store.Exists",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.Exists",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1426,9 +1434,7 @@
                       "identifier": "Store.Hover",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.Hover",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1448,9 +1454,7 @@
                       "identifier": "Store.Definitions",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.Definitions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1470,9 +1474,7 @@
                       "identifier": "Store.References",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.References",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1492,7 +1494,9 @@
                       "identifier": "Store.definitionsReferences",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.definitionsReferences",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1512,7 +1516,9 @@
                       "identifier": "Store.locations",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.locations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1532,7 +1538,9 @@
                       "identifier": "Store.translateIDsToResultChunkIndexes",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.translateIDsToResultChunkIndexes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1552,7 +1560,9 @@
                       "identifier": "Store.readLocationsFromResultChunks",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.readLocationsFromResultChunks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1572,7 +1582,9 @@
                       "identifier": "Store.readRangesFromDocuments",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.readRangesFromDocuments",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1592,7 +1604,9 @@
                       "identifier": "Store.readRangesFromDocument",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.readRangesFromDocument",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1612,9 +1626,7 @@
                       "identifier": "Store.MonikersByPosition",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.MonikersByPosition",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1634,9 +1646,7 @@
                       "identifier": "Store.BulkMonikerResults",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.BulkMonikerResults",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1656,9 +1666,7 @@
                       "identifier": "Store.PackageInformation",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.PackageInformation",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1678,9 +1686,7 @@
                       "identifier": "Store.Ranges",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.Ranges",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1700,7 +1706,9 @@
                       "identifier": "Store.locationsWithinFile",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.locationsWithinFile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1720,7 +1728,9 @@
                       "identifier": "Store.scanDocumentData",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.scanDocumentData",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1740,7 +1750,9 @@
                       "identifier": "Store.makeDocumentVisitor",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.makeDocumentVisitor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1760,7 +1772,9 @@
                       "identifier": "Store.scanFirstDocumentData",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.scanFirstDocumentData",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1780,7 +1794,9 @@
                       "identifier": "Store.scanSingleDocumentDataObject",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.scanSingleDocumentDataObject",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1800,7 +1816,9 @@
                       "identifier": "Store.makeResultChunkVisitor",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.makeResultChunkVisitor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1820,7 +1838,9 @@
                       "identifier": "Store.scanQualifiedMonikerLocations",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.scanQualifiedMonikerLocations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1840,7 +1860,9 @@
                       "identifier": "Store.scanSingleQualifiedMonikerLocationsObject",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.scanSingleQualifiedMonikerLocationsObject",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1860,9 +1882,7 @@
                       "identifier": "Store.Transact",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1882,9 +1902,7 @@
                       "identifier": "Store.Done",
                       "newPage": false,
                       "searchKey": "lsifstore.Store.Done",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1907,9 +1925,7 @@
                 "identifier": "Package",
                 "newPage": false,
                 "searchKey": "lsifstore.Package",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1929,9 +1945,7 @@
                 "identifier": "PackageReference",
                 "newPage": false,
                 "searchKey": "lsifstore.PackageReference",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1951,9 +1965,7 @@
                 "identifier": "Location",
                 "newPage": false,
                 "searchKey": "lsifstore.Location",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1973,9 +1985,7 @@
                 "identifier": "Range",
                 "newPage": false,
                 "searchKey": "lsifstore.Range",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1993,7 +2003,9 @@
                       "identifier": "newRange",
                       "newPage": false,
                       "searchKey": "lsifstore.newRange",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2016,9 +2028,7 @@
                 "identifier": "Position",
                 "newPage": false,
                 "searchKey": "lsifstore.Position",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2038,9 +2048,7 @@
                 "identifier": "Diagnostic",
                 "newPage": false,
                 "searchKey": "lsifstore.Diagnostic",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2060,9 +2068,7 @@
                 "identifier": "CodeIntelligenceRange",
                 "newPage": false,
                 "searchKey": "lsifstore.CodeIntelligenceRange",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2085,7 +2091,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2103,7 +2111,9 @@
                 "identifier": "intsToString",
                 "newPage": false,
                 "searchKey": "lsifstore.intsToString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2123,7 +2133,9 @@
                 "identifier": "withBatchInserter",
                 "newPage": false,
                 "searchKey": "lsifstore.withBatchInserter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2143,7 +2155,9 @@
                 "identifier": "limitResultMap",
                 "newPage": false,
                 "searchKey": "lsifstore.limitResultMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2163,7 +2177,9 @@
                 "identifier": "pathsFromResultMap",
                 "newPage": false,
                 "searchKey": "lsifstore.pathsFromResultMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2183,7 +2199,9 @@
                 "identifier": "sortLocations",
                 "newPage": false,
                 "searchKey": "lsifstore.sortLocations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2203,7 +2221,9 @@
                 "identifier": "compareBundleRanges",
                 "newPage": false,
                 "searchKey": "lsifstore.compareBundleRanges",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2223,7 +2243,9 @@
                 "identifier": "idsToString",
                 "newPage": false,
                 "searchKey": "lsifstore.idsToString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2243,7 +2265,9 @@
                 "identifier": "extractResultIDs",
                 "newPage": false,
                 "searchKey": "lsifstore.extractResultIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2263,7 +2287,9 @@
                 "identifier": "monikersToString",
                 "newPage": false,
                 "searchKey": "lsifstore.monikersToString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2278,12 +2304,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore#init",
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore#init.serializer.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.serializer.go",
                 "newPage": false,
                 "searchKey": "lsifstore.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2298,12 +2326,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore#init",
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore#init.serializer_documentation.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.serializer_documentation.go",
                 "newPage": false,
                 "searchKey": "lsifstore.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2323,7 +2353,9 @@
                 "identifier": "TestClear",
                 "newPage": false,
                 "searchKey": "lsifstore.TestClear",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2343,7 +2375,9 @@
                 "identifier": "TestDatabaseExists",
                 "newPage": false,
                 "searchKey": "lsifstore.TestDatabaseExists",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2363,7 +2397,9 @@
                 "identifier": "TestDatabaseHover",
                 "newPage": false,
                 "searchKey": "lsifstore.TestDatabaseHover",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2383,7 +2419,9 @@
                 "identifier": "TestDatabaseDefinitions",
                 "newPage": false,
                 "searchKey": "lsifstore.TestDatabaseDefinitions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2403,7 +2441,9 @@
                 "identifier": "TestDatabaseReferences",
                 "newPage": false,
                 "searchKey": "lsifstore.TestDatabaseReferences",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2423,7 +2463,9 @@
                 "identifier": "TestDatabaseMonikersByPosition",
                 "newPage": false,
                 "searchKey": "lsifstore.TestDatabaseMonikersByPosition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2443,7 +2485,9 @@
                 "identifier": "TestDatabaseBulkMonikerResults",
                 "newPage": false,
                 "searchKey": "lsifstore.TestDatabaseBulkMonikerResults",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2463,7 +2507,9 @@
                 "identifier": "TestDatabasePackageInformation",
                 "newPage": false,
                 "searchKey": "lsifstore.TestDatabasePackageInformation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2483,7 +2529,9 @@
                 "identifier": "TestDatabaseRanges",
                 "newPage": false,
                 "searchKey": "lsifstore.TestDatabaseRanges",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2503,7 +2551,9 @@
                 "identifier": "TestDocumentData",
                 "newPage": false,
                 "searchKey": "lsifstore.TestDocumentData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2523,7 +2573,9 @@
                 "identifier": "TestResultChunkData",
                 "newPage": false,
                 "searchKey": "lsifstore.TestResultChunkData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2543,7 +2595,9 @@
                 "identifier": "TestLocations",
                 "newPage": false,
                 "searchKey": "lsifstore.TestLocations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2558,12 +2612,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore#init",
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore#init.store_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.store_test.go",
                 "newPage": false,
                 "searchKey": "lsifstore.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -35,11 +35,14 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ErrNotConditions" href="#ErrNotConditions">var ErrNotConditions</a>
 
 ```
 searchKey: dbworker.ErrNotConditions
-tags: [exported]
 ```
 
 ```Go
@@ -50,11 +53,14 @@ ErrNotConditions occurs when a PreDequeue handler returns non-sql query extra ar
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Handler" href="#Handler">type Handler interface</a>
 
 ```
 searchKey: dbworker.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -80,7 +86,6 @@ Handler is a version of workerutil.Handler that refines the store type.
 
 ```
 searchKey: dbworker.HandlerFunc
-tags: [exported]
 ```
 
 ```Go
@@ -93,7 +98,6 @@ HandlerFunc is a function version of the Handler interface.
 
 ```
 searchKey: dbworker.HandlerFunc.Handle
-tags: [exported]
 ```
 
 ```Go
@@ -106,6 +110,7 @@ Handle processes a single record. See the Handler interface for additional detai
 
 ```
 searchKey: dbworker.handlerShim
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +125,7 @@ handlerShim converts a Handler into a workerutil.Handler.
 
 ```
 searchKey: dbworker.handlerShim.Handle
+tags: [private]
 ```
 
 ```Go
@@ -132,6 +138,7 @@ Handle processes a single record.
 
 ```
 searchKey: dbworker.handlerShim.PreDequeue
+tags: [private]
 ```
 
 ```Go
@@ -144,6 +151,7 @@ PreDequeue calls into the inner handler if it implements the HandlerWithPreDeque
 
 ```
 searchKey: dbworker.handlerShim.PreHandle
+tags: [private]
 ```
 
 ```Go
@@ -156,6 +164,7 @@ PreHandle calls into the inner handler if it implements the HandlerWithHooks int
 
 ```
 searchKey: dbworker.handlerShim.PostHandle
+tags: [private]
 ```
 
 ```Go
@@ -168,7 +177,6 @@ PostHandle calls into the inner handler if it implements the HandlerWithHooks in
 
 ```
 searchKey: dbworker.Resetter
-tags: [exported]
 ```
 
 ```Go
@@ -190,7 +198,6 @@ An unlocked record signifies that it is not actively being processed and records
 
 ```
 searchKey: dbworker.NewResetter
-tags: [exported]
 ```
 
 ```Go
@@ -201,6 +208,7 @@ func NewResetter(store store.Store, options ResetterOptions) *Resetter
 
 ```
 searchKey: dbworker.newResetter
+tags: [private]
 ```
 
 ```Go
@@ -211,7 +219,6 @@ func newResetter(store store.Store, options ResetterOptions, clock glock.Clock) 
 
 ```
 searchKey: dbworker.Resetter.Start
-tags: [exported]
 ```
 
 ```Go
@@ -224,7 +231,6 @@ Start begins periodically calling reset stalled on the underlying store.
 
 ```
 searchKey: dbworker.Resetter.Stop
-tags: [exported]
 ```
 
 ```Go
@@ -237,7 +243,6 @@ Stop will cause the resetter loop to exit after the current iteration.
 
 ```
 searchKey: dbworker.ResetterOptions
-tags: [exported]
 ```
 
 ```Go
@@ -252,7 +257,6 @@ type ResetterOptions struct {
 
 ```
 searchKey: dbworker.ResetterMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -267,6 +271,7 @@ type ResetterMetrics struct {
 
 ```
 searchKey: dbworker.storeShim
+tags: [private]
 ```
 
 ```Go
@@ -281,6 +286,7 @@ storeShim converts a store.Store into a workerutil.Store.
 
 ```
 searchKey: dbworker.storeShim.QueuedCount
+tags: [private]
 ```
 
 ```Go
@@ -293,6 +299,7 @@ QueuedCount calls into the inner store.
 
 ```
 searchKey: dbworker.storeShim.Dequeue
+tags: [private]
 ```
 
 ```Go
@@ -303,10 +310,15 @@ Dequeue calls into the inner store.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="newHandlerShim" href="#newHandlerShim">func newHandlerShim(handler Handler) workerutil.Handler</a>
 
 ```
 searchKey: dbworker.newHandlerShim
+tags: [private]
 ```
 
 ```Go
@@ -319,6 +331,7 @@ newHandlerShim wraps the given handler in a shim.
 
 ```
 searchKey: dbworker.newStoreShim
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +344,7 @@ newStoreShim wraps the given store in a shim.
 
 ```
 searchKey: dbworker.convertArguments
+tags: [private]
 ```
 
 ```Go
@@ -343,7 +357,6 @@ convertArguments converts the given interface value into a slice of *sqlf.Query 
 
 ```
 searchKey: dbworker.NewWorker
-tags: [exported]
 ```
 
 ```Go
@@ -354,6 +367,7 @@ func NewWorker(ctx context.Context, store store.Store, handler Handler, options 
 
 ```
 searchKey: dbworker.TestResetter
+tags: [private]
 ```
 
 ```Go

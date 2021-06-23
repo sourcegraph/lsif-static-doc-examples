@@ -4,7 +4,9 @@
     "identifier": "gitlab",
     "newPage": true,
     "searchKey": "internal/authz/gitlab",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "NewOAuthProvider",
                 "newPage": false,
                 "searchKey": "gitlab.NewOAuthProvider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "NewSudoProvider",
                 "newPage": false,
                 "searchKey": "gitlab.NewSudoProvider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -87,7 +87,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,9 +107,7 @@
                 "identifier": "OAuthProvider",
                 "newPage": false,
                 "searchKey": "gitlab.OAuthProvider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +125,9 @@
                       "identifier": "newOAuthProvider",
                       "newPage": false,
                       "searchKey": "gitlab.newOAuthProvider",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -145,9 +147,7 @@
                       "identifier": "OAuthProvider.Validate",
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.Validate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -167,9 +167,7 @@
                       "identifier": "OAuthProvider.URN",
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.URN",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -189,9 +187,7 @@
                       "identifier": "OAuthProvider.ServiceID",
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.ServiceID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -211,9 +207,7 @@
                       "identifier": "OAuthProvider.ServiceType",
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.ServiceType",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -233,9 +227,7 @@
                       "identifier": "OAuthProvider.FetchAccount",
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.FetchAccount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -255,9 +247,7 @@
                       "identifier": "OAuthProvider.FetchUserPerms",
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.FetchUserPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -277,9 +267,7 @@
                       "identifier": "OAuthProvider.FetchRepoPerms",
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.FetchRepoPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -302,9 +290,7 @@
                 "identifier": "OAuthProviderOp",
                 "newPage": false,
                 "searchKey": "gitlab.OAuthProviderOp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -324,9 +310,7 @@
                 "identifier": "SudoProvider",
                 "newPage": false,
                 "searchKey": "gitlab.SudoProvider",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -344,7 +328,9 @@
                       "identifier": "newSudoProvider",
                       "newPage": false,
                       "searchKey": "gitlab.newSudoProvider",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -364,9 +350,7 @@
                       "identifier": "SudoProvider.Validate",
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.Validate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -386,9 +370,7 @@
                       "identifier": "SudoProvider.URN",
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.URN",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -408,9 +390,7 @@
                       "identifier": "SudoProvider.ServiceID",
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.ServiceID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -430,9 +410,7 @@
                       "identifier": "SudoProvider.ServiceType",
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.ServiceType",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -452,9 +430,7 @@
                       "identifier": "SudoProvider.FetchAccount",
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.FetchAccount",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -474,7 +450,9 @@
                       "identifier": "SudoProvider.fetchAccountByExternalUID",
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.fetchAccountByExternalUID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -494,7 +472,9 @@
                       "identifier": "SudoProvider.fetchAccountByUsername",
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.fetchAccountByUsername",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -514,9 +494,7 @@
                       "identifier": "SudoProvider.FetchUserPerms",
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.FetchUserPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -536,9 +514,7 @@
                       "identifier": "SudoProvider.FetchRepoPerms",
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.FetchRepoPerms",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -561,9 +537,7 @@
                 "identifier": "SudoProviderOp",
                 "newPage": false,
                 "searchKey": "gitlab.SudoProviderOp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -583,7 +557,9 @@
                 "identifier": "mockGitLab",
                 "newPage": false,
                 "searchKey": "gitlab.mockGitLab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -601,7 +577,9 @@
                       "identifier": "newMockGitLab",
                       "newPage": false,
                       "searchKey": "gitlab.newMockGitLab",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -621,7 +599,9 @@
                       "identifier": "mockGitLab.GetProject",
                       "newPage": false,
                       "searchKey": "gitlab.mockGitLab.GetProject",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -641,7 +621,9 @@
                       "identifier": "mockGitLab.ListProjects",
                       "newPage": false,
                       "searchKey": "gitlab.mockGitLab.ListProjects",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -661,7 +643,9 @@
                       "identifier": "mockGitLab.ListTree",
                       "newPage": false,
                       "searchKey": "gitlab.mockGitLab.ListTree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -681,7 +665,9 @@
                       "identifier": "mockGitLab.isClientAuthenticated",
                       "newPage": false,
                       "searchKey": "gitlab.mockGitLab.isClientAuthenticated",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -701,7 +687,9 @@
                       "identifier": "mockGitLab.getAcctID",
                       "newPage": false,
                       "searchKey": "gitlab.mockGitLab.getAcctID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -721,7 +709,9 @@
                       "identifier": "mockGitLab.ListUsers",
                       "newPage": false,
                       "searchKey": "gitlab.mockGitLab.ListUsers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -744,7 +734,9 @@
                 "identifier": "mockGitLabOp",
                 "newPage": false,
                 "searchKey": "gitlab.mockGitLabOp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -764,7 +756,9 @@
                 "identifier": "mockAuthnProvider",
                 "newPage": false,
                 "searchKey": "gitlab.mockAuthnProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -782,7 +776,9 @@
                       "identifier": "mockAuthnProvider.ConfigID",
                       "newPage": false,
                       "searchKey": "gitlab.mockAuthnProvider.ConfigID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -802,7 +798,9 @@
                       "identifier": "mockAuthnProvider.Config",
                       "newPage": false,
                       "searchKey": "gitlab.mockAuthnProvider.Config",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -822,7 +820,9 @@
                       "identifier": "mockAuthnProvider.CachedInfo",
                       "newPage": false,
                       "searchKey": "gitlab.mockAuthnProvider.CachedInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -842,7 +842,9 @@
                       "identifier": "mockAuthnProvider.Refresh",
                       "newPage": false,
                       "searchKey": "gitlab.mockAuthnProvider.Refresh",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -865,7 +867,9 @@
                 "identifier": "projSort",
                 "newPage": false,
                 "searchKey": "gitlab.projSort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -883,7 +887,9 @@
                       "identifier": "projSort.Len",
                       "newPage": false,
                       "searchKey": "gitlab.projSort.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -903,7 +909,9 @@
                       "identifier": "projSort.Less",
                       "newPage": false,
                       "searchKey": "gitlab.projSort.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -923,7 +931,9 @@
                       "identifier": "projSort.Swap",
                       "newPage": false,
                       "searchKey": "gitlab.projSort.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -946,7 +956,9 @@
                 "identifier": "mockDoer",
                 "newPage": false,
                 "searchKey": "gitlab.mockDoer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -964,7 +976,9 @@
                       "identifier": "mockDoer.Do",
                       "newPage": false,
                       "searchKey": "gitlab.mockDoer.Do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -990,7 +1004,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1008,9 +1024,7 @@
                 "identifier": "NewAuthzProviders",
                 "newPage": false,
                 "searchKey": "gitlab.NewAuthzProviders",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1030,7 +1044,9 @@
                 "identifier": "newAuthzProvider",
                 "newPage": false,
                 "searchKey": "gitlab.newAuthzProvider",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1050,9 +1066,7 @@
                 "identifier": "ValidateAuthz",
                 "newPage": false,
                 "searchKey": "gitlab.ValidateAuthz",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1072,7 +1086,9 @@
                 "identifier": "listProjects",
                 "newPage": false,
                 "searchKey": "gitlab.listProjects",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1092,7 +1108,9 @@
                 "identifier": "listMembers",
                 "newPage": false,
                 "searchKey": "gitlab.listMembers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1107,12 +1125,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz/gitlab#init",
+              "pathID": "/internal/authz/gitlab#init.common_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.common_test.go",
                 "newPage": false,
                 "searchKey": "gitlab.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1132,7 +1152,9 @@
                 "identifier": "acct",
                 "newPage": false,
                 "searchKey": "gitlab.acct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1152,7 +1174,9 @@
                 "identifier": "mustURL",
                 "newPage": false,
                 "searchKey": "gitlab.mustURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1172,7 +1196,9 @@
                 "identifier": "getIntOrDefault",
                 "newPage": false,
                 "searchKey": "gitlab.getIntOrDefault",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1192,7 +1218,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "gitlab.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1212,7 +1240,9 @@
                 "identifier": "TestOAuthProvider_FetchUserPerms",
                 "newPage": false,
                 "searchKey": "gitlab.TestOAuthProvider_FetchUserPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1232,7 +1262,9 @@
                 "identifier": "TestOAuthProvider_FetchRepoPerms",
                 "newPage": false,
                 "searchKey": "gitlab.TestOAuthProvider_FetchRepoPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1252,7 +1284,9 @@
                 "identifier": "Test_GitLab_FetchAccount",
                 "newPage": false,
                 "searchKey": "gitlab.Test_GitLab_FetchAccount",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1272,7 +1306,9 @@
                 "identifier": "TestSudoProvider_FetchUserPerms",
                 "newPage": false,
                 "searchKey": "gitlab.TestSudoProvider_FetchUserPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1292,7 +1328,9 @@
                 "identifier": "TestSudoProvider_FetchRepoPerms",
                 "newPage": false,
                 "searchKey": "gitlab.TestSudoProvider_FetchRepoPerms",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,7 +4,9 @@
     "identifier": "trace",
     "newPage": true,
     "searchKey": "internal/trace",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "routeNameKey",
                 "newPage": false,
                 "searchKey": "trace.routeNameKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "userKey",
                 "newPage": false,
                 "searchKey": "trace.userKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "requestErrorCauseKey",
                 "newPage": false,
                 "searchKey": "trace.requestErrorCauseKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "graphQLRequestNameKey",
                 "newPage": false,
                 "searchKey": "trace.graphQLRequestNameKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "originKey",
                 "newPage": false,
                 "searchKey": "trace.originKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -140,7 +154,9 @@
                 "identifier": "sourceKey",
                 "newPage": false,
                 "searchKey": "trace.sourceKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -160,9 +176,7 @@
                 "identifier": "GraphQLQueryKey",
                 "newPage": false,
                 "searchKey": "trace.GraphQLQueryKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -182,9 +196,7 @@
                 "identifier": "SourceBrowser",
                 "newPage": false,
                 "searchKey": "trace.SourceBrowser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -204,9 +216,7 @@
                 "identifier": "SourceOther",
                 "newPage": false,
                 "searchKey": "trace.SourceOther",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -226,7 +236,9 @@
                 "identifier": "traceKey",
                 "newPage": false,
                 "searchKey": "trace.traceKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -249,7 +261,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -267,9 +281,7 @@
                 "identifier": "UserLatencyBuckets",
                 "newPage": false,
                 "searchKey": "trace.UserLatencyBuckets",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -289,7 +301,9 @@
                 "identifier": "trackOrigin",
                 "newPage": false,
                 "searchKey": "trace.trackOrigin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -309,7 +323,9 @@
                 "identifier": "metricLabels",
                 "newPage": false,
                 "searchKey": "trace.metricLabels",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -329,7 +345,9 @@
                 "identifier": "requestDuration",
                 "newPage": false,
                 "searchKey": "trace.requestDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -349,7 +367,9 @@
                 "identifier": "requestHeartbeat",
                 "newPage": false,
                 "searchKey": "trace.requestHeartbeat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -369,7 +389,9 @@
                 "identifier": "spanURL",
                 "newPage": false,
                 "searchKey": "trace.spanURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -392,7 +414,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -410,7 +434,9 @@
                 "identifier": "key",
                 "newPage": false,
                 "searchKey": "trace.key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -430,9 +456,7 @@
                 "identifier": "SourceType",
                 "newPage": false,
                 "searchKey": "trace.SourceType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -450,9 +474,7 @@
                       "identifier": "RequestSource",
                       "newPage": false,
                       "searchKey": "trace.RequestSource",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -475,7 +497,9 @@
                 "identifier": "httpErr",
                 "newPage": false,
                 "searchKey": "trace.httpErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -493,7 +517,9 @@
                       "identifier": "httpErr.Error",
                       "newPage": false,
                       "searchKey": "trace.httpErr.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -516,9 +542,7 @@
                 "identifier": "Tracer",
                 "newPage": false,
                 "searchKey": "trace.Tracer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -536,9 +560,7 @@
                       "identifier": "Tracer.New",
                       "newPage": false,
                       "searchKey": "trace.Tracer.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -561,7 +583,9 @@
                 "identifier": "traceContextKey",
                 "newPage": false,
                 "searchKey": "trace.traceContextKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,9 +605,7 @@
                 "identifier": "Trace",
                 "newPage": false,
                 "searchKey": "trace.Trace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -601,9 +623,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "trace.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -623,9 +643,7 @@
                       "identifier": "TraceFromContext",
                       "newPage": false,
                       "searchKey": "trace.TraceFromContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -645,9 +663,7 @@
                       "identifier": "Trace.LazyPrintf",
                       "newPage": false,
                       "searchKey": "trace.Trace.LazyPrintf",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -667,9 +683,7 @@
                       "identifier": "Trace.LogFields",
                       "newPage": false,
                       "searchKey": "trace.Trace.LogFields",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -689,9 +703,7 @@
                       "identifier": "Trace.SetError",
                       "newPage": false,
                       "searchKey": "trace.Trace.SetError",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -711,9 +723,7 @@
                       "identifier": "Trace.SetErrorIfNotContext",
                       "newPage": false,
                       "searchKey": "trace.Trace.SetErrorIfNotContext",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -733,9 +743,7 @@
                       "identifier": "Trace.Finish",
                       "newPage": false,
                       "searchKey": "trace.Trace.Finish",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -758,9 +766,7 @@
                 "identifier": "Tag",
                 "newPage": false,
                 "searchKey": "trace.Tag",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -780,7 +786,9 @@
                 "identifier": "tagsOpt",
                 "newPage": false,
                 "searchKey": "trace.tagsOpt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -798,7 +806,9 @@
                       "identifier": "tagsOpt.Apply",
                       "newPage": false,
                       "searchKey": "trace.tagsOpt.Apply",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -821,7 +831,9 @@
                 "identifier": "fieldsStringer",
                 "newPage": false,
                 "searchKey": "trace.fieldsStringer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -839,7 +851,9 @@
                       "identifier": "fieldsStringer.String",
                       "newPage": false,
                       "searchKey": "trace.fieldsStringer.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -862,7 +876,9 @@
                 "identifier": "encoder",
                 "newPage": false,
                 "searchKey": "trace.encoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -880,7 +896,9 @@
                       "identifier": "encoder.EmitString",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -900,7 +918,9 @@
                       "identifier": "encoder.EmitBool",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitBool",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -920,7 +940,9 @@
                       "identifier": "encoder.EmitInt",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitInt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -940,7 +962,9 @@
                       "identifier": "encoder.EmitInt32",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitInt32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -960,7 +984,9 @@
                       "identifier": "encoder.EmitInt64",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitInt64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -980,7 +1006,9 @@
                       "identifier": "encoder.EmitUint32",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitUint32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1000,7 +1028,9 @@
                       "identifier": "encoder.EmitUint64",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitUint64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1020,7 +1050,9 @@
                       "identifier": "encoder.EmitFloat32",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitFloat32",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1040,7 +1072,9 @@
                       "identifier": "encoder.EmitFloat64",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitFloat64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1060,7 +1094,9 @@
                       "identifier": "encoder.EmitObject",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitObject",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1080,7 +1116,9 @@
                       "identifier": "encoder.EmitLazyLogger",
                       "newPage": false,
                       "searchKey": "trace.encoder.EmitLazyLogger",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1106,7 +1144,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1124,9 +1164,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "trace.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1146,9 +1184,7 @@
                 "identifier": "GraphQLRequestName",
                 "newPage": false,
                 "searchKey": "trace.GraphQLRequestName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1168,9 +1204,7 @@
                 "identifier": "WithGraphQLRequestName",
                 "newPage": false,
                 "searchKey": "trace.WithGraphQLRequestName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1190,9 +1224,7 @@
                 "identifier": "RequestOrigin",
                 "newPage": false,
                 "searchKey": "trace.RequestOrigin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1212,9 +1244,7 @@
                 "identifier": "WithRequestOrigin",
                 "newPage": false,
                 "searchKey": "trace.WithRequestOrigin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1234,9 +1264,7 @@
                 "identifier": "WithRequestSource",
                 "newPage": false,
                 "searchKey": "trace.WithRequestSource",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1256,9 +1284,7 @@
                 "identifier": "HTTPTraceMiddleware",
                 "newPage": false,
                 "searchKey": "trace.HTTPTraceMiddleware",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1278,9 +1304,7 @@
                 "identifier": "Route",
                 "newPage": false,
                 "searchKey": "trace.Route",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1300,9 +1324,7 @@
                 "identifier": "User",
                 "newPage": false,
                 "searchKey": "trace.User",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1322,9 +1344,7 @@
                 "identifier": "SetRequestErrorCause",
                 "newPage": false,
                 "searchKey": "trace.SetRequestErrorCause",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1344,9 +1364,7 @@
                 "identifier": "SetRouteName",
                 "newPage": false,
                 "searchKey": "trace.SetRouteName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1366,9 +1384,7 @@
                 "identifier": "SpanURL",
                 "newPage": false,
                 "searchKey": "trace.SpanURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1388,9 +1404,7 @@
                 "identifier": "SpanURLFromContext",
                 "newPage": false,
                 "searchKey": "trace.SpanURLFromContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1410,9 +1424,7 @@
                 "identifier": "SetSpanURLFunc",
                 "newPage": false,
                 "searchKey": "trace.SetSpanURLFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1432,7 +1444,9 @@
                 "identifier": "contextWithTrace",
                 "newPage": false,
                 "searchKey": "trace.contextWithTrace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1452,9 +1466,7 @@
                 "identifier": "CopyContext",
                 "newPage": false,
                 "searchKey": "trace.CopyContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1474,9 +1486,7 @@
                 "identifier": "Printf",
                 "newPage": false,
                 "searchKey": "trace.Printf",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1496,9 +1506,7 @@
                 "identifier": "Stringer",
                 "newPage": false,
                 "searchKey": "trace.Stringer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1518,9 +1526,7 @@
                 "identifier": "SQL",
                 "newPage": false,
                 "searchKey": "trace.SQL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1540,7 +1546,9 @@
                 "identifier": "TestSpanURL",
                 "newPage": false,
                 "searchKey": "trace.TestSpanURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

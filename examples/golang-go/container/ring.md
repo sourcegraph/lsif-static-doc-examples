@@ -8,7 +8,7 @@ Package ring implements operations on circular lists.
     * [type Ring struct](#Ring)
         * [func New(n int) *Ring](#New)
         * [func makeN(n int) *Ring](#makeN)
-        * [func (r *Ring) init() *Ring](#Ring.init)
+        * [func (r *Ring) init() *Ring](#Ring.init.ring.go)
         * [func (r *Ring) Next() *Ring](#Ring.Next)
         * [func (r *Ring) Prev() *Ring](#Ring.Prev)
         * [func (r *Ring) Move(n int) *Ring](#Ring.Move)
@@ -32,15 +32,10 @@ Package ring implements operations on circular lists.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Ring" href="#Ring">type Ring struct</a>
 
 ```
 searchKey: ring.Ring
-tags: [exported]
 ```
 
 ```Go
@@ -56,7 +51,6 @@ A Ring is an element of a circular list, or ring. Rings do not have a beginning 
 
 ```
 searchKey: ring.New
-tags: [exported]
 ```
 
 ```Go
@@ -69,16 +63,18 @@ New creates a ring of n elements.
 
 ```
 searchKey: ring.makeN
+tags: [private]
 ```
 
 ```Go
 func makeN(n int) *Ring
 ```
 
-#### <a id="Ring.init" href="#Ring.init">func (r *Ring) init() *Ring</a>
+#### <a id="Ring.init.ring.go" href="#Ring.init.ring.go">func (r *Ring) init() *Ring</a>
 
 ```
 searchKey: ring.Ring.init
+tags: [private]
 ```
 
 ```Go
@@ -89,7 +85,6 @@ func (r *Ring) init() *Ring
 
 ```
 searchKey: ring.Ring.Next
-tags: [exported]
 ```
 
 ```Go
@@ -102,7 +97,6 @@ Next returns the next ring element. r must not be empty.
 
 ```
 searchKey: ring.Ring.Prev
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +109,6 @@ Prev returns the previous ring element. r must not be empty.
 
 ```
 searchKey: ring.Ring.Move
-tags: [exported]
 ```
 
 ```Go
@@ -128,7 +121,6 @@ Move moves n % r.Len() elements backward (n < 0) or forward (n >= 0) in the ring
 
 ```
 searchKey: ring.Ring.Link
-tags: [exported]
 ```
 
 ```Go
@@ -145,7 +137,6 @@ If r and s point to different rings, linking them creates a single ring with the
 
 ```
 searchKey: ring.Ring.Unlink
-tags: [exported]
 ```
 
 ```Go
@@ -158,7 +149,6 @@ Unlink removes n % r.Len() elements from the ring r, starting at r.Next(). If n 
 
 ```
 searchKey: ring.Ring.Len
-tags: [exported]
 ```
 
 ```Go
@@ -171,7 +161,6 @@ Len computes the number of elements in ring r. It executes in time proportional 
 
 ```
 searchKey: ring.Ring.Do
-tags: [exported]
 ```
 
 ```Go
@@ -182,14 +171,11 @@ Do calls function f on each element of the ring, in forward order. The behavior 
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="dump" href="#dump">func dump(r *Ring)</a>
 
 ```
 searchKey: ring.dump
+tags: [private]
 ```
 
 ```Go
@@ -202,6 +188,7 @@ For debugging - keep around.
 
 ```
 searchKey: ring.verify
+tags: [private]
 ```
 
 ```Go
@@ -212,6 +199,7 @@ func verify(t *testing.T, r *Ring, N int, sum int)
 
 ```
 searchKey: ring.TestCornerCases
+tags: [private]
 ```
 
 ```Go
@@ -222,6 +210,7 @@ func TestCornerCases(t *testing.T)
 
 ```
 searchKey: ring.sumN
+tags: [private]
 ```
 
 ```Go
@@ -232,6 +221,7 @@ func sumN(n int) int
 
 ```
 searchKey: ring.TestNew
+tags: [private]
 ```
 
 ```Go
@@ -242,6 +232,7 @@ func TestNew(t *testing.T)
 
 ```
 searchKey: ring.TestLink1
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +243,7 @@ func TestLink1(t *testing.T)
 
 ```
 searchKey: ring.TestLink2
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +254,7 @@ func TestLink2(t *testing.T)
 
 ```
 searchKey: ring.TestLink3
+tags: [private]
 ```
 
 ```Go
@@ -272,6 +265,7 @@ func TestLink3(t *testing.T)
 
 ```
 searchKey: ring.TestUnlink
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +276,7 @@ func TestUnlink(t *testing.T)
 
 ```
 searchKey: ring.TestLinkUnlink
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +287,7 @@ func TestLinkUnlink(t *testing.T)
 
 ```
 searchKey: ring.TestMoveEmptyRing
+tags: [private]
 ```
 
 ```Go

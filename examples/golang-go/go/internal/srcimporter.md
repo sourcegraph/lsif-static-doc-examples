@@ -38,10 +38,15 @@ Package srcimporter implements importing directly from source files rather than 
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="maxTime" href="#maxTime">const maxTime</a>
 
 ```
 searchKey: srcimporter.maxTime
+tags: [private]
 ```
 
 ```Go
@@ -50,10 +55,15 @@ const maxTime = 2 * time.Second
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="importing" href="#importing">var importing</a>
 
 ```
 searchKey: srcimporter.importing
+tags: [private]
 ```
 
 ```Go
@@ -66,6 +76,7 @@ Importing is a sentinel taking the place in Importer.packages for a package that
 
 ```
 searchKey: srcimporter.importer
+tags: [private]
 ```
 
 ```Go
@@ -76,6 +87,7 @@ var importer = New(&build.Default, token.NewFileSet(), make(map[string]*types.Pa
 
 ```
 searchKey: srcimporter.importedObjectTests
+tags: [private]
 ```
 
 ```Go
@@ -84,11 +96,14 @@ var importedObjectTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Importer" href="#Importer">type Importer struct</a>
 
 ```
 searchKey: srcimporter.Importer
-tags: [exported]
 ```
 
 ```Go
@@ -106,7 +121,6 @@ An Importer provides the context for importing packages from source code.
 
 ```
 searchKey: srcimporter.New
-tags: [exported]
 ```
 
 ```Go
@@ -119,7 +133,6 @@ New returns a new Importer for the given context, file set, and map of packages.
 
 ```
 searchKey: srcimporter.Importer.Import
-tags: [exported]
 ```
 
 ```Go
@@ -132,7 +145,6 @@ Import(path) is a shortcut for ImportFrom(path, ".", 0).
 
 ```
 searchKey: srcimporter.Importer.ImportFrom
-tags: [exported]
 ```
 
 ```Go
@@ -145,6 +157,7 @@ ImportFrom imports the package with the given import path resolved from the give
 
 ```
 searchKey: srcimporter.Importer.parseFiles
+tags: [private]
 ```
 
 ```Go
@@ -155,6 +168,7 @@ func (p *Importer) parseFiles(dir string, filenames []string) ([]*ast.File, erro
 
 ```
 searchKey: srcimporter.Importer.cgo
+tags: [private]
 ```
 
 ```Go
@@ -165,6 +179,7 @@ func (p *Importer) cgo(bp *build.Package) (*ast.File, error)
 
 ```
 searchKey: srcimporter.Importer.absPath
+tags: [private]
 ```
 
 ```Go
@@ -175,6 +190,7 @@ func (p *Importer) absPath(path string) (string, error)
 
 ```
 searchKey: srcimporter.Importer.isAbsPath
+tags: [private]
 ```
 
 ```Go
@@ -185,6 +201,7 @@ func (p *Importer) isAbsPath(path string) bool
 
 ```
 searchKey: srcimporter.Importer.joinPath
+tags: [private]
 ```
 
 ```Go
@@ -193,10 +210,15 @@ func (p *Importer) joinPath(elem ...string) string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="setUsesCgo" href="#setUsesCgo">func setUsesCgo(conf *types.Config)</a>
 
 ```
 searchKey: srcimporter.setUsesCgo
+tags: [private]
 ```
 
 ```Go
@@ -207,6 +229,7 @@ func setUsesCgo(conf *types.Config)
 
 ```
 searchKey: srcimporter.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -217,6 +240,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: srcimporter.doImport
+tags: [private]
 ```
 
 ```Go
@@ -227,6 +251,7 @@ func doImport(t *testing.T, path, srcDir string)
 
 ```
 searchKey: srcimporter.walkDir
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +264,7 @@ walkDir imports the all the packages with the given path prefix recursively. It 
 
 ```
 searchKey: srcimporter.TestImportStdLib
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +275,7 @@ func TestImportStdLib(t *testing.T)
 
 ```
 searchKey: srcimporter.TestImportedTypes
+tags: [private]
 ```
 
 ```Go
@@ -259,6 +286,7 @@ func TestImportedTypes(t *testing.T)
 
 ```
 searchKey: srcimporter.verifyInterfaceMethodRecvs
+tags: [private]
 ```
 
 ```Go
@@ -271,6 +299,7 @@ verifyInterfaceMethodRecvs verifies that method receiver types are named if the 
 
 ```
 searchKey: srcimporter.TestReimport
+tags: [private]
 ```
 
 ```Go
@@ -281,6 +310,7 @@ func TestReimport(t *testing.T)
 
 ```
 searchKey: srcimporter.TestIssue20855
+tags: [private]
 ```
 
 ```Go
@@ -291,6 +321,7 @@ func TestIssue20855(t *testing.T)
 
 ```
 searchKey: srcimporter.testImportPath
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +332,7 @@ func testImportPath(t *testing.T, pkgPath string)
 
 ```
 searchKey: srcimporter.TestIssue23092
+tags: [private]
 ```
 
 ```Go
@@ -313,6 +345,7 @@ TestIssue23092 tests relative imports.
 
 ```
 searchKey: srcimporter.TestIssue24392
+tags: [private]
 ```
 
 ```Go
@@ -325,6 +358,7 @@ TestIssue24392 tests imports against a path containing 'testdata'.
 
 ```
 searchKey: srcimporter.TestCgo
+tags: [private]
 ```
 
 ```Go

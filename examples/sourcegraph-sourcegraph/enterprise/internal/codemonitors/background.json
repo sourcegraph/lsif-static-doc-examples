@@ -4,7 +4,9 @@
     "identifier": "background",
     "newPage": true,
     "searchKey": "enterprise/internal/codemonitors/background",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "gqlSearchQuery",
                 "newPage": false,
                 "searchKey": "background.gqlSearchQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "eventRetentionInDays",
                 "newPage": false,
                 "searchKey": "background.eventRetentionInDays",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "graphQLQuery",
                 "newPage": false,
                 "searchKey": "background.graphQLQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "gqlSearchVars",
                 "newPage": false,
                 "searchKey": "background.gqlSearchVars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "gqlSearchResponse",
                 "newPage": false,
                 "searchKey": "background.gqlSearchResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -159,7 +175,9 @@
                       "identifier": "search",
                       "newPage": false,
                       "searchKey": "background.search",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -182,7 +200,9 @@
                 "identifier": "codeMonitorsMetrics",
                 "newPage": false,
                 "searchKey": "background.codeMonitorsMetrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -200,7 +220,9 @@
                       "identifier": "newMetricsForTriggerQueries",
                       "newPage": false,
                       "searchKey": "background.newMetricsForTriggerQueries",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -220,7 +242,9 @@
                       "identifier": "newActionMetrics",
                       "newPage": false,
                       "searchKey": "background.newActionMetrics",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -243,7 +267,9 @@
                 "identifier": "queryRunner",
                 "newPage": false,
                 "searchKey": "background.queryRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,7 +287,9 @@
                       "identifier": "queryRunner.Handle",
                       "newPage": false,
                       "searchKey": "background.queryRunner.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -284,7 +312,9 @@
                 "identifier": "actionRunner",
                 "newPage": false,
                 "searchKey": "background.actionRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -302,7 +332,9 @@
                       "identifier": "actionRunner.Handle",
                       "newPage": false,
                       "searchKey": "background.actionRunner.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,7 +360,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -346,9 +380,7 @@
                 "identifier": "StartBackgroundJobs",
                 "newPage": false,
                 "searchKey": "background.StartBackgroundJobs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -368,7 +400,9 @@
                 "identifier": "gqlURL",
                 "newPage": false,
                 "searchKey": "background.gqlURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -388,7 +422,9 @@
                 "identifier": "extractTime",
                 "newPage": false,
                 "searchKey": "background.extractTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -408,7 +444,9 @@
                 "identifier": "newTriggerQueryRunner",
                 "newPage": false,
                 "searchKey": "background.newTriggerQueryRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -428,7 +466,9 @@
                 "identifier": "newTriggerQueryEnqueuer",
                 "newPage": false,
                 "searchKey": "background.newTriggerQueryEnqueuer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -448,7 +488,9 @@
                 "identifier": "newTriggerQueryResetter",
                 "newPage": false,
                 "searchKey": "background.newTriggerQueryResetter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -468,7 +510,9 @@
                 "identifier": "newTriggerJobsLogDeleter",
                 "newPage": false,
                 "searchKey": "background.newTriggerJobsLogDeleter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -488,7 +532,9 @@
                 "identifier": "newActionRunner",
                 "newPage": false,
                 "searchKey": "background.newActionRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -508,7 +554,9 @@
                 "identifier": "newActionJobResetter",
                 "newPage": false,
                 "searchKey": "background.newActionJobResetter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -528,7 +576,9 @@
                 "identifier": "createDBWorkerStoreForTriggerJobs",
                 "newPage": false,
                 "searchKey": "background.createDBWorkerStoreForTriggerJobs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -548,7 +598,9 @@
                 "identifier": "createDBWorkerStoreForActionJobs",
                 "newPage": false,
                 "searchKey": "background.createDBWorkerStoreForActionJobs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -568,7 +620,9 @@
                 "identifier": "newQueryWithAfterFilter",
                 "newPage": false,
                 "searchKey": "background.newQueryWithAfterFilter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -588,7 +642,9 @@
                 "identifier": "latestResultTime",
                 "newPage": false,
                 "searchKey": "background.latestResultTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -608,7 +664,9 @@
                 "identifier": "zeroOrVal",
                 "newPage": false,
                 "searchKey": "background.zeroOrVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -623,12 +681,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codemonitors/background#init",
+              "pathID": "/enterprise/internal/codemonitors/background#init.workers_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.workers_test.go",
                 "newPage": false,
                 "searchKey": "background.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -648,7 +708,9 @@
                 "identifier": "TestActionRunner",
                 "newPage": false,
                 "searchKey": "background.TestActionRunner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

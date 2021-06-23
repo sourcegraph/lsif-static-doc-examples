@@ -4,7 +4,9 @@
     "identifier": "api",
     "newPage": true,
     "searchKey": "internal/api",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "frontendInternal",
                 "newPage": false,
                 "searchKey": "api.frontendInternal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "InternalClient",
                 "newPage": false,
                 "searchKey": "api.InternalClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -82,7 +86,9 @@
                 "identifier": "requestDuration",
                 "newPage": false,
                 "searchKey": "api.requestDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -102,9 +108,7 @@
                 "identifier": "MockOrgsListUsers",
                 "newPage": false,
                 "searchKey": "api.MockOrgsListUsers",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -124,9 +128,7 @@
                 "identifier": "MockInternalClientConfiguration",
                 "newPage": false,
                 "searchKey": "api.MockInternalClientConfiguration",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -146,9 +148,7 @@
                 "identifier": "MockExternalServiceConfigs",
                 "newPage": false,
                 "searchKey": "api.MockExternalServiceConfigs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -171,7 +171,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -189,9 +191,7 @@
                 "identifier": "RepoID",
                 "newPage": false,
                 "searchKey": "api.RepoID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -211,9 +211,7 @@
                 "identifier": "RepoName",
                 "newPage": false,
                 "searchKey": "api.RepoName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -233,9 +231,7 @@
                 "identifier": "CommitID",
                 "newPage": false,
                 "searchKey": "api.CommitID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -253,9 +249,7 @@
                       "identifier": "CommitID.Short",
                       "newPage": false,
                       "searchKey": "api.CommitID.Short",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -278,9 +272,7 @@
                 "identifier": "Repo",
                 "newPage": false,
                 "searchKey": "api.Repo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -300,9 +292,7 @@
                 "identifier": "ExternalRepoSpec",
                 "newPage": false,
                 "searchKey": "api.ExternalRepoSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -320,9 +310,7 @@
                       "identifier": "ExternalRepoSpec.Equal",
                       "newPage": false,
                       "searchKey": "api.ExternalRepoSpec.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -342,9 +330,7 @@
                       "identifier": "ExternalRepoSpec.Compare",
                       "newPage": false,
                       "searchKey": "api.ExternalRepoSpec.Compare",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -364,9 +350,7 @@
                       "identifier": "ExternalRepoSpec.String",
                       "newPage": false,
                       "searchKey": "api.ExternalRepoSpec.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -389,9 +373,7 @@
                 "identifier": "SettingsSubject",
                 "newPage": false,
                 "searchKey": "api.SettingsSubject",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -409,9 +391,7 @@
                       "identifier": "SettingsSubject.String",
                       "newPage": false,
                       "searchKey": "api.SettingsSubject.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,9 +414,7 @@
                 "identifier": "Settings",
                 "newPage": false,
                 "searchKey": "api.Settings",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -456,9 +434,7 @@
                 "identifier": "ExternalService",
                 "newPage": false,
                 "searchKey": "api.ExternalService",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -478,9 +454,7 @@
                 "identifier": "RepoCreateOrUpdateRequest",
                 "newPage": false,
                 "searchKey": "api.RepoCreateOrUpdateRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -500,9 +474,7 @@
                 "identifier": "PhabricatorRepoCreateRequest",
                 "newPage": false,
                 "searchKey": "api.PhabricatorRepoCreateRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -522,9 +494,7 @@
                 "identifier": "ExternalServiceConfigsRequest",
                 "newPage": false,
                 "searchKey": "api.ExternalServiceConfigsRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -544,9 +514,7 @@
                 "identifier": "ExternalServicesListRequest",
                 "newPage": false,
                 "searchKey": "api.ExternalServicesListRequest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -566,7 +534,9 @@
                 "identifier": "internalClient",
                 "newPage": false,
                 "searchKey": "api.internalClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -584,7 +554,9 @@
                       "identifier": "internalClient.WaitForFrontend",
                       "newPage": false,
                       "searchKey": "api.internalClient.WaitForFrontend",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -604,7 +576,9 @@
                       "identifier": "internalClient.SavedQueriesListAll",
                       "newPage": false,
                       "searchKey": "api.internalClient.SavedQueriesListAll",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -624,7 +598,9 @@
                       "identifier": "internalClient.SavedQueriesGetInfo",
                       "newPage": false,
                       "searchKey": "api.internalClient.SavedQueriesGetInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -644,7 +620,9 @@
                       "identifier": "internalClient.SavedQueriesSetInfo",
                       "newPage": false,
                       "searchKey": "api.internalClient.SavedQueriesSetInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -664,7 +642,9 @@
                       "identifier": "internalClient.SavedQueriesDeleteInfo",
                       "newPage": false,
                       "searchKey": "api.internalClient.SavedQueriesDeleteInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -684,7 +664,9 @@
                       "identifier": "internalClient.SettingsGetForSubject",
                       "newPage": false,
                       "searchKey": "api.internalClient.SettingsGetForSubject",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -704,7 +686,9 @@
                       "identifier": "internalClient.OrgsListUsers",
                       "newPage": false,
                       "searchKey": "api.internalClient.OrgsListUsers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -724,7 +708,9 @@
                       "identifier": "internalClient.OrgsGetByName",
                       "newPage": false,
                       "searchKey": "api.internalClient.OrgsGetByName",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -744,7 +730,9 @@
                       "identifier": "internalClient.UsersGetByUsername",
                       "newPage": false,
                       "searchKey": "api.internalClient.UsersGetByUsername",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -764,7 +752,9 @@
                       "identifier": "internalClient.UserEmailsGetEmail",
                       "newPage": false,
                       "searchKey": "api.internalClient.UserEmailsGetEmail",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -784,7 +774,9 @@
                       "identifier": "internalClient.ExternalURL",
                       "newPage": false,
                       "searchKey": "api.internalClient.ExternalURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -804,7 +796,9 @@
                       "identifier": "internalClient.CanSendEmail",
                       "newPage": false,
                       "searchKey": "api.internalClient.CanSendEmail",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -824,7 +818,9 @@
                       "identifier": "internalClient.SendEmail",
                       "newPage": false,
                       "searchKey": "api.internalClient.SendEmail",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -844,7 +840,9 @@
                       "identifier": "internalClient.ReposListEnabled",
                       "newPage": false,
                       "searchKey": "api.internalClient.ReposListEnabled",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -864,7 +862,9 @@
                       "identifier": "internalClient.Configuration",
                       "newPage": false,
                       "searchKey": "api.internalClient.Configuration",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -884,7 +884,9 @@
                       "identifier": "internalClient.ReposGetByName",
                       "newPage": false,
                       "searchKey": "api.internalClient.ReposGetByName",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -904,7 +906,9 @@
                       "identifier": "internalClient.PhabricatorRepoCreate",
                       "newPage": false,
                       "searchKey": "api.internalClient.PhabricatorRepoCreate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -924,7 +928,9 @@
                       "identifier": "internalClient.ExternalServiceConfigs",
                       "newPage": false,
                       "searchKey": "api.internalClient.ExternalServiceConfigs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -944,7 +950,9 @@
                       "identifier": "internalClient.ExternalServicesList",
                       "newPage": false,
                       "searchKey": "api.internalClient.ExternalServicesList",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -964,7 +972,9 @@
                       "identifier": "internalClient.LogTelemetry",
                       "newPage": false,
                       "searchKey": "api.internalClient.LogTelemetry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -984,7 +994,9 @@
                       "identifier": "internalClient.postInternal",
                       "newPage": false,
                       "searchKey": "api.internalClient.postInternal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1004,7 +1016,9 @@
                       "identifier": "internalClient.meteredPost",
                       "newPage": false,
                       "searchKey": "api.internalClient.meteredPost",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1024,7 +1038,9 @@
                       "identifier": "internalClient.post",
                       "newPage": false,
                       "searchKey": "api.internalClient.post",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1047,9 +1063,7 @@
                 "identifier": "SavedQueryIDSpec",
                 "newPage": false,
                 "searchKey": "api.SavedQueryIDSpec",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1069,9 +1083,7 @@
                 "identifier": "ConfigSavedQuery",
                 "newPage": false,
                 "searchKey": "api.ConfigSavedQuery",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1089,9 +1101,7 @@
                       "identifier": "ConfigSavedQuery.Equals",
                       "newPage": false,
                       "searchKey": "api.ConfigSavedQuery.Equals",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1114,9 +1124,7 @@
                 "identifier": "PartialConfigSavedQueries",
                 "newPage": false,
                 "searchKey": "api.PartialConfigSavedQueries",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1136,9 +1144,7 @@
                 "identifier": "SavedQuerySpecAndConfig",
                 "newPage": false,
                 "searchKey": "api.SavedQuerySpecAndConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1158,9 +1164,7 @@
                 "identifier": "SavedQueryInfo",
                 "newPage": false,
                 "searchKey": "api.SavedQueryInfo",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1183,7 +1187,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1201,7 +1207,9 @@
                 "identifier": "cmp",
                 "newPage": false,
                 "searchKey": "api.cmp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1221,7 +1229,9 @@
                 "identifier": "checkAPIResponse",
                 "newPage": false,
                 "searchKey": "api.checkAPIResponse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

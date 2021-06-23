@@ -91,14 +91,11 @@ See "The Go image/draw package" for an introduction to this package: [https://go
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="m" href="#m">const m</a>
 
 ```
 searchKey: draw.m
+tags: [private]
 ```
 
 ```Go
@@ -111,7 +108,6 @@ m is the maximum color value returned by image.Color.RGBA.
 
 ```
 searchKey: draw.Over
-tags: [exported]
 ```
 
 ```Go
@@ -124,7 +120,6 @@ Over specifies `(src in mask) over dst'.
 
 ```
 searchKey: draw.Src
-tags: [exported]
 ```
 
 ```Go
@@ -137,6 +132,7 @@ Src specifies `src in mask'.
 
 ```
 searchKey: draw.dstw
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +143,7 @@ const dstw, dsth = 640, 480
 
 ```
 searchKey: draw.dsth
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +154,7 @@ const dstw, dsth = 640, 480
 
 ```
 searchKey: draw.srcw
+tags: [private]
 ```
 
 ```Go
@@ -167,6 +165,7 @@ const srcw, srch = 400, 300
 
 ```
 searchKey: draw.srch
+tags: [private]
 ```
 
 ```Go
@@ -175,15 +174,10 @@ const srcw, srch = 400, 300
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="FloydSteinberg" href="#FloydSteinberg">var FloydSteinberg</a>
 
 ```
 searchKey: draw.FloydSteinberg
-tags: [exported]
 ```
 
 ```Go
@@ -196,6 +190,7 @@ FloydSteinberg is a Drawer that is the Src Op with Floyd-Steinberg error diffusi
 
 ```
 searchKey: draw.palette
+tags: [private]
 ```
 
 ```Go
@@ -209,6 +204,7 @@ var palette = color.Palette{
 
 ```
 searchKey: draw.clipTests
+tags: [private]
 ```
 
 ```Go
@@ -219,6 +215,7 @@ var clipTests = ...
 
 ```
 searchKey: draw.drawTests
+tags: [private]
 ```
 
 ```Go
@@ -227,15 +224,10 @@ var drawTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Image" href="#Image">type Image interface</a>
 
 ```
 searchKey: draw.Image
-tags: [exported]
 ```
 
 ```Go
@@ -251,6 +243,7 @@ Image is an image.Image with a Set method to change a single pixel.
 
 ```
 searchKey: draw.hgradRed
+tags: [private]
 ```
 
 ```Go
@@ -261,6 +254,7 @@ func hgradRed(alpha int) Image
 
 ```
 searchKey: draw.gradYellow
+tags: [private]
 ```
 
 ```Go
@@ -271,7 +265,6 @@ func gradYellow(alpha int) Image
 
 ```
 searchKey: draw.RGBA64Image
-tags: [exported]
 ```
 
 ```Go
@@ -288,7 +281,6 @@ RGBA64Image extends both the Image and image.RGBA64Image interfaces with a SetRG
 
 ```
 searchKey: draw.Quantizer
-tags: [exported]
 ```
 
 ```Go
@@ -305,7 +297,6 @@ Quantizer produces a palette for an image.
 
 ```
 searchKey: draw.Op
-tags: [exported]
 ```
 
 ```Go
@@ -318,7 +309,6 @@ Op is a Porter-Duff compositing operator.
 
 ```
 searchKey: draw.Op.Draw
-tags: [exported]
 ```
 
 ```Go
@@ -331,7 +321,6 @@ Draw implements the Drawer interface by calling the Draw function with this Op.
 
 ```
 searchKey: draw.Drawer
-tags: [exported]
 ```
 
 ```Go
@@ -348,6 +337,7 @@ Drawer contains the Draw method.
 
 ```
 searchKey: draw.floydSteinberg
+tags: [private]
 ```
 
 ```Go
@@ -358,6 +348,7 @@ type floydSteinberg struct{}
 
 ```
 searchKey: draw.floydSteinberg.Draw
+tags: [private]
 ```
 
 ```Go
@@ -368,6 +359,7 @@ func (floydSteinberg) Draw(dst Image, r image.Rectangle, src image.Image, sp ima
 
 ```
 searchKey: draw.clipTest
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +377,7 @@ type clipTest struct {
 
 ```
 searchKey: draw.drawTest
+tags: [private]
 ```
 
 ```Go
@@ -401,6 +394,7 @@ type drawTest struct {
 
 ```
 searchKey: draw.embeddedPaletted
+tags: [private]
 ```
 
 ```Go
@@ -413,14 +407,11 @@ embeddedPaletted is an Image that behaves like an *image.Paletted but whose type
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="clip" href="#clip">func clip(dst Image, r *image.Rectangle, src image.Image, sp *image.Point, mask image.Image, mp *image.Point)</a>
 
 ```
 searchKey: draw.clip
+tags: [private]
 ```
 
 ```Go
@@ -433,6 +424,7 @@ clip clips r against each image's bounds (after translating into the destination
 
 ```
 searchKey: draw.processBackward
+tags: [private]
 ```
 
 ```Go
@@ -443,7 +435,6 @@ func processBackward(dst image.Image, r image.Rectangle, src image.Image, sp ima
 
 ```
 searchKey: draw.Draw
-tags: [exported]
 ```
 
 ```Go
@@ -456,7 +447,6 @@ Draw calls DrawMask with a nil mask.
 
 ```
 searchKey: draw.DrawMask
-tags: [exported]
 ```
 
 ```Go
@@ -469,6 +459,7 @@ DrawMask aligns r.Min in dst with sp in src and mp in mask and then replaces the
 
 ```
 searchKey: draw.drawFillOver
+tags: [private]
 ```
 
 ```Go
@@ -479,6 +470,7 @@ func drawFillOver(dst *image.RGBA, r image.Rectangle, sr, sg, sb, sa uint32)
 
 ```
 searchKey: draw.drawFillSrc
+tags: [private]
 ```
 
 ```Go
@@ -489,6 +481,7 @@ func drawFillSrc(dst *image.RGBA, r image.Rectangle, sr, sg, sb, sa uint32)
 
 ```
 searchKey: draw.drawCopyOver
+tags: [private]
 ```
 
 ```Go
@@ -499,6 +492,7 @@ func drawCopyOver(dst *image.RGBA, r image.Rectangle, src *image.RGBA, sp image.
 
 ```
 searchKey: draw.drawCopySrc
+tags: [private]
 ```
 
 ```Go
@@ -509,6 +503,7 @@ func drawCopySrc(dst *image.RGBA, r image.Rectangle, src *image.RGBA, sp image.P
 
 ```
 searchKey: draw.drawNRGBAOver
+tags: [private]
 ```
 
 ```Go
@@ -519,6 +514,7 @@ func drawNRGBAOver(dst *image.RGBA, r image.Rectangle, src *image.NRGBA, sp imag
 
 ```
 searchKey: draw.drawNRGBASrc
+tags: [private]
 ```
 
 ```Go
@@ -529,6 +525,7 @@ func drawNRGBASrc(dst *image.RGBA, r image.Rectangle, src *image.NRGBA, sp image
 
 ```
 searchKey: draw.drawGray
+tags: [private]
 ```
 
 ```Go
@@ -539,6 +536,7 @@ func drawGray(dst *image.RGBA, r image.Rectangle, src *image.Gray, sp image.Poin
 
 ```
 searchKey: draw.drawCMYK
+tags: [private]
 ```
 
 ```Go
@@ -549,6 +547,7 @@ func drawCMYK(dst *image.RGBA, r image.Rectangle, src *image.CMYK, sp image.Poin
 
 ```
 searchKey: draw.drawGlyphOver
+tags: [private]
 ```
 
 ```Go
@@ -559,6 +558,7 @@ func drawGlyphOver(dst *image.RGBA, r image.Rectangle, src *image.Uniform, mask 
 
 ```
 searchKey: draw.drawRGBA
+tags: [private]
 ```
 
 ```Go
@@ -569,6 +569,7 @@ func drawRGBA(dst *image.RGBA, r image.Rectangle, src image.Image, sp image.Poin
 
 ```
 searchKey: draw.clamp
+tags: [private]
 ```
 
 ```Go
@@ -581,6 +582,7 @@ clamp clamps i to the interval [0, 0xffff].
 
 ```
 searchKey: draw.sqDiff
+tags: [private]
 ```
 
 ```Go
@@ -595,6 +597,7 @@ x and y are both assumed to be in the range [0, 0xffff].
 
 ```
 searchKey: draw.drawPaletted
+tags: [private]
 ```
 
 ```Go
@@ -605,6 +608,7 @@ func drawPaletted(dst Image, r image.Rectangle, src image.Image, sp image.Point,
 
 ```
 searchKey: draw.bench
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +621,7 @@ bench benchmarks drawing src and mask images onto a dst image with the given op 
 
 ```
 searchKey: draw.BenchmarkFillOver
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +632,7 @@ func BenchmarkFillOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkFillSrc
+tags: [private]
 ```
 
 ```Go
@@ -637,6 +643,7 @@ func BenchmarkFillSrc(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkCopyOver
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +654,7 @@ func BenchmarkCopyOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkCopySrc
+tags: [private]
 ```
 
 ```Go
@@ -657,6 +665,7 @@ func BenchmarkCopySrc(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkNRGBAOver
+tags: [private]
 ```
 
 ```Go
@@ -667,6 +676,7 @@ func BenchmarkNRGBAOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkNRGBASrc
+tags: [private]
 ```
 
 ```Go
@@ -677,6 +687,7 @@ func BenchmarkNRGBASrc(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -687,6 +698,7 @@ func BenchmarkYCbCr(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGray
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +709,7 @@ func BenchmarkGray(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkCMYK
+tags: [private]
 ```
 
 ```Go
@@ -707,6 +720,7 @@ func BenchmarkCMYK(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGlyphOver
+tags: [private]
 ```
 
 ```Go
@@ -717,6 +731,7 @@ func BenchmarkGlyphOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkRGBA
+tags: [private]
 ```
 
 ```Go
@@ -727,6 +742,7 @@ func BenchmarkRGBA(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkPalettedFill
+tags: [private]
 ```
 
 ```Go
@@ -737,6 +753,7 @@ func BenchmarkPalettedFill(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkPalettedRGBA
+tags: [private]
 ```
 
 ```Go
@@ -747,6 +764,7 @@ func BenchmarkPalettedRGBA(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGenericOver
+tags: [private]
 ```
 
 ```Go
@@ -757,6 +775,7 @@ func BenchmarkGenericOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGenericMaskOver
+tags: [private]
 ```
 
 ```Go
@@ -767,6 +786,7 @@ func BenchmarkGenericMaskOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGenericSrc
+tags: [private]
 ```
 
 ```Go
@@ -777,6 +797,7 @@ func BenchmarkGenericSrc(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGenericMaskSrc
+tags: [private]
 ```
 
 ```Go
@@ -787,6 +808,7 @@ func BenchmarkGenericMaskSrc(b *testing.B)
 
 ```
 searchKey: draw.TestClip
+tags: [private]
 ```
 
 ```Go
@@ -797,6 +819,7 @@ func TestClip(t *testing.T)
 
 ```
 searchKey: draw.eq
+tags: [private]
 ```
 
 ```Go
@@ -807,6 +830,7 @@ func eq(c0, c1 color.Color) bool
 
 ```
 searchKey: draw.fillBlue
+tags: [private]
 ```
 
 ```Go
@@ -817,6 +841,7 @@ func fillBlue(alpha int) image.Image
 
 ```
 searchKey: draw.fillAlpha
+tags: [private]
 ```
 
 ```Go
@@ -827,6 +852,7 @@ func fillAlpha(alpha int) image.Image
 
 ```
 searchKey: draw.vgradGreen
+tags: [private]
 ```
 
 ```Go
@@ -837,6 +863,7 @@ func vgradGreen(alpha int) image.Image
 
 ```
 searchKey: draw.vgradAlpha
+tags: [private]
 ```
 
 ```Go
@@ -847,6 +874,7 @@ func vgradAlpha(alpha int) image.Image
 
 ```
 searchKey: draw.vgradGreenNRGBA
+tags: [private]
 ```
 
 ```Go
@@ -857,6 +885,7 @@ func vgradGreenNRGBA(alpha int) image.Image
 
 ```
 searchKey: draw.vgradCr
+tags: [private]
 ```
 
 ```Go
@@ -867,6 +896,7 @@ func vgradCr() image.Image
 
 ```
 searchKey: draw.vgradGray
+tags: [private]
 ```
 
 ```Go
@@ -877,6 +907,7 @@ func vgradGray() image.Image
 
 ```
 searchKey: draw.vgradMagenta
+tags: [private]
 ```
 
 ```Go
@@ -887,6 +918,7 @@ func vgradMagenta() image.Image
 
 ```
 searchKey: draw.makeGolden
+tags: [private]
 ```
 
 ```Go
@@ -897,6 +929,7 @@ func makeGolden(dst image.Image, r image.Rectangle, src image.Image, sp image.Po
 
 ```
 searchKey: draw.TestDraw
+tags: [private]
 ```
 
 ```Go
@@ -907,6 +940,7 @@ func TestDraw(t *testing.T)
 
 ```
 searchKey: draw.TestDrawOverlap
+tags: [private]
 ```
 
 ```Go
@@ -917,6 +951,7 @@ func TestDrawOverlap(t *testing.T)
 
 ```
 searchKey: draw.TestNonZeroSrcPt
+tags: [private]
 ```
 
 ```Go
@@ -929,6 +964,7 @@ TestNonZeroSrcPt checks drawing with a non-zero src point parameter.
 
 ```
 searchKey: draw.TestFill
+tags: [private]
 ```
 
 ```Go
@@ -939,6 +975,7 @@ func TestFill(t *testing.T)
 
 ```
 searchKey: draw.TestFloydSteinbergCheckerboard
+tags: [private]
 ```
 
 ```Go
@@ -951,6 +988,7 @@ TestFloydSteinbergCheckerboard tests that the result of Floyd-Steinberg error di
 
 ```
 searchKey: draw.TestPaletted
+tags: [private]
 ```
 
 ```Go
@@ -963,6 +1001,7 @@ TestPaletted tests that the drawPaletted function behaves the same regardless of
 
 ```
 searchKey: draw.TestSqDiff
+tags: [private]
 ```
 
 ```Go

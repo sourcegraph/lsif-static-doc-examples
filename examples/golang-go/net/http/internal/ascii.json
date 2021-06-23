@@ -4,7 +4,9 @@
     "identifier": "ascii",
     "newPage": true,
     "searchKey": "net/http/internal/ascii",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "EqualFold",
                 "newPage": false,
                 "searchKey": "ascii.EqualFold",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +64,9 @@
                 "identifier": "lower",
                 "newPage": false,
                 "searchKey": "ascii.lower",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -82,9 +86,7 @@
                 "identifier": "IsPrint",
                 "newPage": false,
                 "searchKey": "ascii.IsPrint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -104,9 +106,7 @@
                 "identifier": "Is",
                 "newPage": false,
                 "searchKey": "ascii.Is",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -126,9 +126,7 @@
                 "identifier": "ToLower",
                 "newPage": false,
                 "searchKey": "ascii.ToLower",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -148,7 +146,9 @@
                 "identifier": "TestEqualFold",
                 "newPage": false,
                 "searchKey": "ascii.TestEqualFold",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +168,9 @@
                 "identifier": "TestIsPrint",
                 "newPage": false,
                 "searchKey": "ascii.TestIsPrint",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

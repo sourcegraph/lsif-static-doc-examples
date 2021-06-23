@@ -4,7 +4,9 @@
     "identifier": "testing",
     "newPage": true,
     "searchKey": "internal/encryption/testing",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "TestKey",
                 "newPage": false,
                 "searchKey": "testing.TestKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "TestKey.Encrypt",
                       "newPage": false,
                       "searchKey": "testing.TestKey.Encrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "TestKey.Decrypt",
                       "newPage": false,
                       "searchKey": "testing.TestKey.Decrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "TestKey.Version",
                       "newPage": false,
                       "searchKey": "testing.TestKey.Version",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -129,9 +125,7 @@
                 "identifier": "BadKey",
                 "newPage": false,
                 "searchKey": "testing.BadKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -149,9 +143,7 @@
                       "identifier": "BadKey.Encrypt",
                       "newPage": false,
                       "searchKey": "testing.BadKey.Encrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -171,9 +163,7 @@
                       "identifier": "BadKey.Decrypt",
                       "newPage": false,
                       "searchKey": "testing.BadKey.Decrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -193,9 +183,7 @@
                       "identifier": "BadKey.Version",
                       "newPage": false,
                       "searchKey": "testing.BadKey.Version",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -218,9 +206,7 @@
                 "identifier": "TransparentKey",
                 "newPage": false,
                 "searchKey": "testing.TransparentKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -238,9 +224,7 @@
                       "identifier": "NewTransparentKey",
                       "newPage": false,
                       "searchKey": "testing.NewTransparentKey",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -260,9 +244,7 @@
                       "identifier": "TransparentKey.Decrypt",
                       "newPage": false,
                       "searchKey": "testing.TransparentKey.Decrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -282,9 +264,7 @@
                       "identifier": "TransparentKey.Encrypt",
                       "newPage": false,
                       "searchKey": "testing.TransparentKey.Encrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -304,9 +284,7 @@
                       "identifier": "TransparentKey.Version",
                       "newPage": false,
                       "searchKey": "testing.TransparentKey.Version",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",

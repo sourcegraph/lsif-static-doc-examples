@@ -4,9 +4,7 @@
     "identifier": "aes",
     "newPage": true,
     "searchKey": "crypto/aes",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "gcmBlockSize",
                 "newPage": false,
                 "searchKey": "aes.gcmBlockSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "gcmTagSize",
                 "newPage": false,
                 "searchKey": "aes.gcmTagSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "gcmMinimumTagSize",
                 "newPage": false,
                 "searchKey": "aes.gcmMinimumTagSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "gcmStandardNonceSize",
                 "newPage": false,
                 "searchKey": "aes.gcmStandardNonceSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,9 +128,7 @@
                 "identifier": "BlockSize",
                 "newPage": false,
                 "searchKey": "aes.BlockSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -146,7 +148,9 @@
                 "identifier": "poly",
                 "newPage": false,
                 "searchKey": "aes.poly",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -169,9 +173,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -189,7 +191,9 @@
                 "identifier": "errOpen",
                 "newPage": false,
                 "searchKey": "aes.errOpen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -209,7 +213,9 @@
                 "identifier": "supportsAES",
                 "newPage": false,
                 "searchKey": "aes.supportsAES",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -229,7 +235,9 @@
                 "identifier": "supportsGFMUL",
                 "newPage": false,
                 "searchKey": "aes.supportsGFMUL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -249,7 +257,9 @@
                 "identifier": "powx",
                 "newPage": false,
                 "searchKey": "aes.powx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -269,7 +279,9 @@
                 "identifier": "sbox0",
                 "newPage": false,
                 "searchKey": "aes.sbox0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -289,7 +301,9 @@
                 "identifier": "sbox1",
                 "newPage": false,
                 "searchKey": "aes.sbox1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -309,7 +323,9 @@
                 "identifier": "te0",
                 "newPage": false,
                 "searchKey": "aes.te0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -329,7 +345,9 @@
                 "identifier": "te1",
                 "newPage": false,
                 "searchKey": "aes.te1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -349,7 +367,9 @@
                 "identifier": "te2",
                 "newPage": false,
                 "searchKey": "aes.te2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -369,7 +389,9 @@
                 "identifier": "te3",
                 "newPage": false,
                 "searchKey": "aes.te3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -389,7 +411,9 @@
                 "identifier": "td0",
                 "newPage": false,
                 "searchKey": "aes.td0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -409,7 +433,9 @@
                 "identifier": "td1",
                 "newPage": false,
                 "searchKey": "aes.td1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -429,7 +455,9 @@
                 "identifier": "td2",
                 "newPage": false,
                 "searchKey": "aes.td2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -449,7 +477,9 @@
                 "identifier": "td3",
                 "newPage": false,
                 "searchKey": "aes.td3",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -469,7 +499,9 @@
                 "identifier": "keyTests",
                 "newPage": false,
                 "searchKey": "aes.keyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -489,7 +521,9 @@
                 "identifier": "encryptTests",
                 "newPage": false,
                 "searchKey": "aes.encryptTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -512,9 +546,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -532,7 +564,9 @@
                 "identifier": "aesCipherGCM",
                 "newPage": false,
                 "searchKey": "aes.aesCipherGCM",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -550,7 +584,9 @@
                       "identifier": "aesCipherGCM.NewGCM",
                       "newPage": false,
                       "searchKey": "aes.aesCipherGCM.NewGCM",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -573,7 +609,9 @@
                 "identifier": "gcmAsm",
                 "newPage": false,
                 "searchKey": "aes.gcmAsm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -591,7 +629,9 @@
                       "identifier": "gcmAsm.NonceSize",
                       "newPage": false,
                       "searchKey": "aes.gcmAsm.NonceSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -611,7 +651,9 @@
                       "identifier": "gcmAsm.Overhead",
                       "newPage": false,
                       "searchKey": "aes.gcmAsm.Overhead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -631,7 +673,9 @@
                       "identifier": "gcmAsm.Seal",
                       "newPage": false,
                       "searchKey": "aes.gcmAsm.Seal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -651,7 +695,9 @@
                       "identifier": "gcmAsm.Open",
                       "newPage": false,
                       "searchKey": "aes.gcmAsm.Open",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -674,7 +720,9 @@
                 "identifier": "aesCipher",
                 "newPage": false,
                 "searchKey": "aes.aesCipher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -692,7 +740,9 @@
                       "identifier": "aesCipher.BlockSize",
                       "newPage": false,
                       "searchKey": "aes.aesCipher.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -712,7 +762,9 @@
                       "identifier": "aesCipher.Encrypt",
                       "newPage": false,
                       "searchKey": "aes.aesCipher.Encrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -732,7 +784,9 @@
                       "identifier": "aesCipher.Decrypt",
                       "newPage": false,
                       "searchKey": "aes.aesCipher.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -755,9 +809,7 @@
                 "identifier": "KeySizeError",
                 "newPage": false,
                 "searchKey": "aes.KeySizeError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -775,9 +827,7 @@
                       "identifier": "KeySizeError.Error",
                       "newPage": false,
                       "searchKey": "aes.KeySizeError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -800,7 +850,9 @@
                 "identifier": "aesCipherAsm",
                 "newPage": false,
                 "searchKey": "aes.aesCipherAsm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -818,7 +870,9 @@
                       "identifier": "aesCipherAsm.BlockSize",
                       "newPage": false,
                       "searchKey": "aes.aesCipherAsm.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -838,7 +892,9 @@
                       "identifier": "aesCipherAsm.Encrypt",
                       "newPage": false,
                       "searchKey": "aes.aesCipherAsm.Encrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -858,7 +914,9 @@
                       "identifier": "aesCipherAsm.Decrypt",
                       "newPage": false,
                       "searchKey": "aes.aesCipherAsm.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -881,7 +939,9 @@
                 "identifier": "gcmAble",
                 "newPage": false,
                 "searchKey": "aes.gcmAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -901,7 +961,9 @@
                 "identifier": "cbcEncAble",
                 "newPage": false,
                 "searchKey": "aes.cbcEncAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -921,7 +983,9 @@
                 "identifier": "cbcDecAble",
                 "newPage": false,
                 "searchKey": "aes.cbcDecAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -941,7 +1005,9 @@
                 "identifier": "ctrAble",
                 "newPage": false,
                 "searchKey": "aes.ctrAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -961,7 +1027,9 @@
                 "identifier": "KeyTest",
                 "newPage": false,
                 "searchKey": "aes.KeyTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -981,7 +1049,9 @@
                 "identifier": "CryptTest",
                 "newPage": false,
                 "searchKey": "aes.CryptTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1001,7 +1071,9 @@
                 "identifier": "testInterface",
                 "newPage": false,
                 "searchKey": "aes.testInterface",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1021,7 +1093,9 @@
                 "identifier": "testBlock",
                 "newPage": false,
                 "searchKey": "aes.testBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1039,7 +1113,9 @@
                       "identifier": "testBlock.BlockSize",
                       "newPage": false,
                       "searchKey": "aes.testBlock.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1059,7 +1135,9 @@
                       "identifier": "testBlock.Encrypt",
                       "newPage": false,
                       "searchKey": "aes.testBlock.Encrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1079,7 +1157,9 @@
                       "identifier": "testBlock.Decrypt",
                       "newPage": false,
                       "searchKey": "aes.testBlock.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1099,7 +1179,9 @@
                       "identifier": "testBlock.NewGCM",
                       "newPage": false,
                       "searchKey": "aes.testBlock.NewGCM",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1119,7 +1201,9 @@
                       "identifier": "testBlock.NewCBCEncrypter",
                       "newPage": false,
                       "searchKey": "aes.testBlock.NewCBCEncrypter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1139,7 +1223,9 @@
                       "identifier": "testBlock.NewCBCDecrypter",
                       "newPage": false,
                       "searchKey": "aes.testBlock.NewCBCDecrypter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1159,7 +1245,9 @@
                       "identifier": "testBlock.NewCTR",
                       "newPage": false,
                       "searchKey": "aes.testBlock.NewCTR",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1182,7 +1270,9 @@
                 "identifier": "testAEAD",
                 "newPage": false,
                 "searchKey": "aes.testAEAD",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1200,7 +1290,9 @@
                       "identifier": "testAEAD.NonceSize",
                       "newPage": false,
                       "searchKey": "aes.testAEAD.NonceSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1220,7 +1312,9 @@
                       "identifier": "testAEAD.Overhead",
                       "newPage": false,
                       "searchKey": "aes.testAEAD.Overhead",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1240,7 +1334,9 @@
                       "identifier": "testAEAD.Seal",
                       "newPage": false,
                       "searchKey": "aes.testAEAD.Seal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1260,7 +1356,9 @@
                       "identifier": "testAEAD.Open",
                       "newPage": false,
                       "searchKey": "aes.testAEAD.Open",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1280,7 +1378,9 @@
                       "identifier": "testAEAD.InAESPackage",
                       "newPage": false,
                       "searchKey": "aes.testAEAD.InAESPackage",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1303,7 +1403,9 @@
                 "identifier": "testBlockMode",
                 "newPage": false,
                 "searchKey": "aes.testBlockMode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1321,7 +1423,9 @@
                       "identifier": "testBlockMode.BlockSize",
                       "newPage": false,
                       "searchKey": "aes.testBlockMode.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1341,7 +1445,9 @@
                       "identifier": "testBlockMode.CryptBlocks",
                       "newPage": false,
                       "searchKey": "aes.testBlockMode.CryptBlocks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1361,7 +1467,9 @@
                       "identifier": "testBlockMode.InAESPackage",
                       "newPage": false,
                       "searchKey": "aes.testBlockMode.InAESPackage",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1384,7 +1492,9 @@
                 "identifier": "testStream",
                 "newPage": false,
                 "searchKey": "aes.testStream",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1402,7 +1512,9 @@
                       "identifier": "testStream.XORKeyStream",
                       "newPage": false,
                       "searchKey": "aes.testStream.XORKeyStream",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1422,7 +1534,9 @@
                       "identifier": "testStream.InAESPackage",
                       "newPage": false,
                       "searchKey": "aes.testStream.InAESPackage",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1448,9 +1562,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1468,7 +1580,9 @@
                 "identifier": "gcmAesInit",
                 "newPage": false,
                 "searchKey": "aes.gcmAesInit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1488,7 +1602,9 @@
                 "identifier": "gcmAesData",
                 "newPage": false,
                 "searchKey": "aes.gcmAesData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1508,7 +1624,9 @@
                 "identifier": "gcmAesEnc",
                 "newPage": false,
                 "searchKey": "aes.gcmAesEnc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1528,7 +1646,9 @@
                 "identifier": "gcmAesDec",
                 "newPage": false,
                 "searchKey": "aes.gcmAesDec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1548,7 +1668,9 @@
                 "identifier": "gcmAesFinish",
                 "newPage": false,
                 "searchKey": "aes.gcmAesFinish",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1568,7 +1690,9 @@
                 "identifier": "sliceForAppend",
                 "newPage": false,
                 "searchKey": "aes.sliceForAppend",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1588,7 +1712,9 @@
                 "identifier": "encryptBlockGo",
                 "newPage": false,
                 "searchKey": "aes.encryptBlockGo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1608,7 +1734,9 @@
                 "identifier": "decryptBlockGo",
                 "newPage": false,
                 "searchKey": "aes.decryptBlockGo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1628,7 +1756,9 @@
                 "identifier": "subw",
                 "newPage": false,
                 "searchKey": "aes.subw",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1648,7 +1778,9 @@
                 "identifier": "rotw",
                 "newPage": false,
                 "searchKey": "aes.rotw",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1668,7 +1800,9 @@
                 "identifier": "expandKeyGo",
                 "newPage": false,
                 "searchKey": "aes.expandKeyGo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1688,9 +1822,7 @@
                 "identifier": "NewCipher",
                 "newPage": false,
                 "searchKey": "aes.NewCipher",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1710,7 +1842,9 @@
                 "identifier": "newCipherGeneric",
                 "newPage": false,
                 "searchKey": "aes.newCipherGeneric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1730,7 +1864,9 @@
                 "identifier": "encryptBlockAsm",
                 "newPage": false,
                 "searchKey": "aes.encryptBlockAsm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1750,7 +1886,9 @@
                 "identifier": "decryptBlockAsm",
                 "newPage": false,
                 "searchKey": "aes.decryptBlockAsm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1770,7 +1908,9 @@
                 "identifier": "expandKeyAsm",
                 "newPage": false,
                 "searchKey": "aes.expandKeyAsm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1790,7 +1930,9 @@
                 "identifier": "newCipher",
                 "newPage": false,
                 "searchKey": "aes.newCipher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1810,7 +1952,9 @@
                 "identifier": "expandKey",
                 "newPage": false,
                 "searchKey": "aes.expandKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1830,7 +1974,9 @@
                 "identifier": "TestPowx",
                 "newPage": false,
                 "searchKey": "aes.TestPowx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1850,7 +1996,9 @@
                 "identifier": "mul",
                 "newPage": false,
                 "searchKey": "aes.mul",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1870,7 +2018,9 @@
                 "identifier": "TestMul",
                 "newPage": false,
                 "searchKey": "aes.TestMul",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1890,7 +2040,9 @@
                 "identifier": "TestSboxes",
                 "newPage": false,
                 "searchKey": "aes.TestSboxes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1910,7 +2062,9 @@
                 "identifier": "TestTe",
                 "newPage": false,
                 "searchKey": "aes.TestTe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1930,7 +2084,9 @@
                 "identifier": "TestTd",
                 "newPage": false,
                 "searchKey": "aes.TestTd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1950,7 +2106,9 @@
                 "identifier": "TestExpandKey",
                 "newPage": false,
                 "searchKey": "aes.TestExpandKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1970,7 +2128,9 @@
                 "identifier": "TestCipherEncrypt",
                 "newPage": false,
                 "searchKey": "aes.TestCipherEncrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1990,7 +2150,9 @@
                 "identifier": "TestCipherDecrypt",
                 "newPage": false,
                 "searchKey": "aes.TestCipherDecrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2010,7 +2172,9 @@
                 "identifier": "TestShortBlocks",
                 "newPage": false,
                 "searchKey": "aes.TestShortBlocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2030,7 +2194,9 @@
                 "identifier": "mustPanic",
                 "newPage": false,
                 "searchKey": "aes.mustPanic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2050,7 +2216,9 @@
                 "identifier": "BenchmarkEncrypt",
                 "newPage": false,
                 "searchKey": "aes.BenchmarkEncrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2070,7 +2238,9 @@
                 "identifier": "BenchmarkDecrypt",
                 "newPage": false,
                 "searchKey": "aes.BenchmarkDecrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2090,7 +2260,9 @@
                 "identifier": "BenchmarkExpand",
                 "newPage": false,
                 "searchKey": "aes.BenchmarkExpand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2110,7 +2282,9 @@
                 "identifier": "TestGCMAble",
                 "newPage": false,
                 "searchKey": "aes.TestGCMAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2130,7 +2304,9 @@
                 "identifier": "TestCBCEncAble",
                 "newPage": false,
                 "searchKey": "aes.TestCBCEncAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2150,7 +2326,9 @@
                 "identifier": "TestCBCDecAble",
                 "newPage": false,
                 "searchKey": "aes.TestCBCDecAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2170,7 +2348,9 @@
                 "identifier": "TestCTRAble",
                 "newPage": false,
                 "searchKey": "aes.TestCTRAble",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

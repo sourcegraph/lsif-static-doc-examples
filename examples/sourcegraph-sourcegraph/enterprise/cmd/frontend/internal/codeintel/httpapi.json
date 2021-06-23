@@ -4,7 +4,9 @@
     "identifier": "httpapi",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/codeintel/httpapi",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "testCommit",
                 "newPage": false,
                 "searchKey": "httpapi.testCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "githubURL",
                 "newPage": false,
                 "searchKey": "httpapi.githubURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "revhashPattern",
                 "newPage": false,
                 "searchKey": "httpapi.revhashPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +136,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -142,9 +156,7 @@
                 "identifier": "ClientError",
                 "newPage": false,
                 "searchKey": "httpapi.ClientError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -162,9 +174,7 @@
                       "identifier": "ClientError.Error",
                       "newPage": false,
                       "searchKey": "httpapi.ClientError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -187,9 +197,7 @@
                 "identifier": "DBStore",
                 "newPage": false,
                 "searchKey": "httpapi.DBStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -209,9 +217,7 @@
                 "identifier": "DBStoreShim",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreShim",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -229,9 +235,7 @@
                       "identifier": "DBStoreShim.Transact",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreShim.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -254,9 +258,7 @@
                 "identifier": "UploadHandler",
                 "newPage": false,
                 "searchKey": "httpapi.UploadHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -274,7 +276,9 @@
                       "identifier": "UploadHandler.handleEnqueue",
                       "newPage": false,
                       "searchKey": "httpapi.UploadHandler.handleEnqueue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,7 +298,9 @@
                       "identifier": "UploadHandler.handleEnqueueErr",
                       "newPage": false,
                       "searchKey": "httpapi.UploadHandler.handleEnqueueErr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -314,7 +320,9 @@
                       "identifier": "UploadHandler.handleEnqueueSinglePayload",
                       "newPage": false,
                       "searchKey": "httpapi.UploadHandler.handleEnqueueSinglePayload",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -334,7 +342,9 @@
                       "identifier": "UploadHandler.handleEnqueueMultipartSetup",
                       "newPage": false,
                       "searchKey": "httpapi.UploadHandler.handleEnqueueMultipartSetup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -354,7 +364,9 @@
                       "identifier": "UploadHandler.handleEnqueueMultipartUpload",
                       "newPage": false,
                       "searchKey": "httpapi.UploadHandler.handleEnqueueMultipartUpload",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -374,7 +386,9 @@
                       "identifier": "UploadHandler.handleEnqueueMultipartFinalize",
                       "newPage": false,
                       "searchKey": "httpapi.UploadHandler.handleEnqueueMultipartFinalize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -394,7 +408,9 @@
                       "identifier": "UploadHandler.markUploadAsFailed",
                       "newPage": false,
                       "searchKey": "httpapi.UploadHandler.markUploadAsFailed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -417,9 +433,7 @@
                 "identifier": "UploadArgs",
                 "newPage": false,
                 "searchKey": "httpapi.UploadArgs",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -439,7 +453,9 @@
                 "identifier": "enqueuePayload",
                 "newPage": false,
                 "searchKey": "httpapi.enqueuePayload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -459,7 +475,9 @@
                 "identifier": "MockDBStore",
                 "newPage": false,
                 "searchKey": "httpapi.MockDBStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -477,7 +495,9 @@
                       "identifier": "NewMockDBStore",
                       "newPage": false,
                       "searchKey": "httpapi.NewMockDBStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -497,7 +517,9 @@
                       "identifier": "NewMockDBStoreFrom",
                       "newPage": false,
                       "searchKey": "httpapi.NewMockDBStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -517,7 +539,9 @@
                       "identifier": "MockDBStore.AddUploadPart",
                       "newPage": false,
                       "searchKey": "httpapi.MockDBStore.AddUploadPart",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -537,7 +561,9 @@
                       "identifier": "MockDBStore.Done",
                       "newPage": false,
                       "searchKey": "httpapi.MockDBStore.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -557,7 +583,9 @@
                       "identifier": "MockDBStore.GetUploadByID",
                       "newPage": false,
                       "searchKey": "httpapi.MockDBStore.GetUploadByID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -577,7 +605,9 @@
                       "identifier": "MockDBStore.InsertUpload",
                       "newPage": false,
                       "searchKey": "httpapi.MockDBStore.InsertUpload",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -597,7 +627,9 @@
                       "identifier": "MockDBStore.MarkFailed",
                       "newPage": false,
                       "searchKey": "httpapi.MockDBStore.MarkFailed",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -617,7 +649,9 @@
                       "identifier": "MockDBStore.MarkQueued",
                       "newPage": false,
                       "searchKey": "httpapi.MockDBStore.MarkQueued",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -637,7 +671,9 @@
                       "identifier": "MockDBStore.Transact",
                       "newPage": false,
                       "searchKey": "httpapi.MockDBStore.Transact",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -660,7 +696,9 @@
                 "identifier": "DBStoreAddUploadPartFunc",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreAddUploadPartFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -678,7 +716,9 @@
                       "identifier": "DBStoreAddUploadPartFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -698,7 +738,9 @@
                       "identifier": "DBStoreAddUploadPartFunc.PushHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -718,7 +760,9 @@
                       "identifier": "DBStoreAddUploadPartFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -738,7 +782,9 @@
                       "identifier": "DBStoreAddUploadPartFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -758,7 +804,9 @@
                       "identifier": "DBStoreAddUploadPartFunc.nextHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -778,7 +826,9 @@
                       "identifier": "DBStoreAddUploadPartFunc.appendCall",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -798,7 +848,9 @@
                       "identifier": "DBStoreAddUploadPartFunc.History",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -821,7 +873,9 @@
                 "identifier": "DBStoreAddUploadPartFuncCall",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreAddUploadPartFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -839,7 +893,9 @@
                       "identifier": "DBStoreAddUploadPartFuncCall.Args",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -859,7 +915,9 @@
                       "identifier": "DBStoreAddUploadPartFuncCall.Results",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -882,7 +940,9 @@
                 "identifier": "DBStoreDoneFunc",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreDoneFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -900,7 +960,9 @@
                       "identifier": "DBStoreDoneFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -920,7 +982,9 @@
                       "identifier": "DBStoreDoneFunc.PushHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -940,7 +1004,9 @@
                       "identifier": "DBStoreDoneFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -960,7 +1026,9 @@
                       "identifier": "DBStoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -980,7 +1048,9 @@
                       "identifier": "DBStoreDoneFunc.nextHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1000,7 +1070,9 @@
                       "identifier": "DBStoreDoneFunc.appendCall",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1020,7 +1092,9 @@
                       "identifier": "DBStoreDoneFunc.History",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1043,7 +1117,9 @@
                 "identifier": "DBStoreDoneFuncCall",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreDoneFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1061,7 +1137,9 @@
                       "identifier": "DBStoreDoneFuncCall.Args",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1081,7 +1159,9 @@
                       "identifier": "DBStoreDoneFuncCall.Results",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1104,7 +1184,9 @@
                 "identifier": "DBStoreGetUploadByIDFunc",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreGetUploadByIDFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1122,7 +1204,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1142,7 +1226,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.PushHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1162,7 +1248,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1182,7 +1270,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1202,7 +1292,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.nextHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1222,7 +1314,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.appendCall",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1242,7 +1336,9 @@
                       "identifier": "DBStoreGetUploadByIDFunc.History",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1265,7 +1361,9 @@
                 "identifier": "DBStoreGetUploadByIDFuncCall",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreGetUploadByIDFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1283,7 +1381,9 @@
                       "identifier": "DBStoreGetUploadByIDFuncCall.Args",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1303,7 +1403,9 @@
                       "identifier": "DBStoreGetUploadByIDFuncCall.Results",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1326,7 +1428,9 @@
                 "identifier": "DBStoreInsertUploadFunc",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreInsertUploadFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1344,7 +1448,9 @@
                       "identifier": "DBStoreInsertUploadFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1364,7 +1470,9 @@
                       "identifier": "DBStoreInsertUploadFunc.PushHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1384,7 +1492,9 @@
                       "identifier": "DBStoreInsertUploadFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1404,7 +1514,9 @@
                       "identifier": "DBStoreInsertUploadFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1424,7 +1536,9 @@
                       "identifier": "DBStoreInsertUploadFunc.nextHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1444,7 +1558,9 @@
                       "identifier": "DBStoreInsertUploadFunc.appendCall",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1464,7 +1580,9 @@
                       "identifier": "DBStoreInsertUploadFunc.History",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1487,7 +1605,9 @@
                 "identifier": "DBStoreInsertUploadFuncCall",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreInsertUploadFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1505,7 +1625,9 @@
                       "identifier": "DBStoreInsertUploadFuncCall.Args",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1525,7 +1647,9 @@
                       "identifier": "DBStoreInsertUploadFuncCall.Results",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1548,7 +1672,9 @@
                 "identifier": "DBStoreMarkFailedFunc",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreMarkFailedFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1566,7 +1692,9 @@
                       "identifier": "DBStoreMarkFailedFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1586,7 +1714,9 @@
                       "identifier": "DBStoreMarkFailedFunc.PushHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1606,7 +1736,9 @@
                       "identifier": "DBStoreMarkFailedFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1626,7 +1758,9 @@
                       "identifier": "DBStoreMarkFailedFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1646,7 +1780,9 @@
                       "identifier": "DBStoreMarkFailedFunc.nextHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1666,7 +1802,9 @@
                       "identifier": "DBStoreMarkFailedFunc.appendCall",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1686,7 +1824,9 @@
                       "identifier": "DBStoreMarkFailedFunc.History",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1709,7 +1849,9 @@
                 "identifier": "DBStoreMarkFailedFuncCall",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreMarkFailedFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1727,7 +1869,9 @@
                       "identifier": "DBStoreMarkFailedFuncCall.Args",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1747,7 +1891,9 @@
                       "identifier": "DBStoreMarkFailedFuncCall.Results",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1770,7 +1916,9 @@
                 "identifier": "DBStoreMarkQueuedFunc",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreMarkQueuedFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1788,7 +1936,9 @@
                       "identifier": "DBStoreMarkQueuedFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1808,7 +1958,9 @@
                       "identifier": "DBStoreMarkQueuedFunc.PushHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1828,7 +1980,9 @@
                       "identifier": "DBStoreMarkQueuedFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1848,7 +2002,9 @@
                       "identifier": "DBStoreMarkQueuedFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1868,7 +2024,9 @@
                       "identifier": "DBStoreMarkQueuedFunc.nextHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1888,7 +2046,9 @@
                       "identifier": "DBStoreMarkQueuedFunc.appendCall",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1908,7 +2068,9 @@
                       "identifier": "DBStoreMarkQueuedFunc.History",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1931,7 +2093,9 @@
                 "identifier": "DBStoreMarkQueuedFuncCall",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreMarkQueuedFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1949,7 +2113,9 @@
                       "identifier": "DBStoreMarkQueuedFuncCall.Args",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1969,7 +2135,9 @@
                       "identifier": "DBStoreMarkQueuedFuncCall.Results",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1992,7 +2160,9 @@
                 "identifier": "DBStoreTransactFunc",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreTransactFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2010,7 +2180,9 @@
                       "identifier": "DBStoreTransactFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2030,7 +2202,9 @@
                       "identifier": "DBStoreTransactFunc.PushHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2050,7 +2224,9 @@
                       "identifier": "DBStoreTransactFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2070,7 +2246,9 @@
                       "identifier": "DBStoreTransactFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2090,7 +2268,9 @@
                       "identifier": "DBStoreTransactFunc.nextHook",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2110,7 +2290,9 @@
                       "identifier": "DBStoreTransactFunc.appendCall",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2130,7 +2312,9 @@
                       "identifier": "DBStoreTransactFunc.History",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2153,7 +2337,9 @@
                 "identifier": "DBStoreTransactFuncCall",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreTransactFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2171,7 +2357,9 @@
                       "identifier": "DBStoreTransactFuncCall.Args",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2191,7 +2379,9 @@
                       "identifier": "DBStoreTransactFuncCall.Results",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2217,7 +2407,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2235,7 +2427,9 @@
                 "identifier": "isSiteAdmin",
                 "newPage": false,
                 "searchKey": "httpapi.isSiteAdmin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2255,7 +2449,9 @@
                 "identifier": "enforceAuth",
                 "newPage": false,
                 "searchKey": "httpapi.enforceAuth",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2275,7 +2471,9 @@
                 "identifier": "enforceAuthGithub",
                 "newPage": false,
                 "searchKey": "httpapi.enforceAuthGithub",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2295,7 +2493,9 @@
                 "identifier": "clientError",
                 "newPage": false,
                 "searchKey": "httpapi.clientError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2315,9 +2515,7 @@
                 "identifier": "NewUploadHandler",
                 "newPage": false,
                 "searchKey": "httpapi.NewUploadHandler",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2337,7 +2535,9 @@
                 "identifier": "inferIndexer",
                 "newPage": false,
                 "searchKey": "httpapi.inferIndexer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2357,7 +2557,9 @@
                 "identifier": "ensureRepoAndCommitExist",
                 "newPage": false,
                 "searchKey": "httpapi.ensureRepoAndCommitExist",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2377,7 +2579,9 @@
                 "identifier": "formatAWSError",
                 "newPage": false,
                 "searchKey": "httpapi.formatAWSError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2397,7 +2601,9 @@
                 "identifier": "sanitizeRoot",
                 "newPage": false,
                 "searchKey": "httpapi.sanitizeRoot",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2417,7 +2623,9 @@
                 "identifier": "hasQuery",
                 "newPage": false,
                 "searchKey": "httpapi.hasQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2437,7 +2645,9 @@
                 "identifier": "getQuery",
                 "newPage": false,
                 "searchKey": "httpapi.getQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2457,7 +2667,9 @@
                 "identifier": "getQueryInt",
                 "newPage": false,
                 "searchKey": "httpapi.getQueryInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2477,7 +2689,9 @@
                 "identifier": "copyAll",
                 "newPage": false,
                 "searchKey": "httpapi.copyAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2497,7 +2711,9 @@
                 "identifier": "writeJSON",
                 "newPage": false,
                 "searchKey": "httpapi.writeJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2517,7 +2733,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "httpapi.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2537,7 +2755,9 @@
                 "identifier": "TestHandleEnqueueSinglePayload",
                 "newPage": false,
                 "searchKey": "httpapi.TestHandleEnqueueSinglePayload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2557,7 +2777,9 @@
                 "identifier": "TestHandleEnqueueSinglePayloadNoIndexerName",
                 "newPage": false,
                 "searchKey": "httpapi.TestHandleEnqueueSinglePayloadNoIndexerName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2577,7 +2799,9 @@
                 "identifier": "TestHandleEnqueueMultipartSetup",
                 "newPage": false,
                 "searchKey": "httpapi.TestHandleEnqueueMultipartSetup",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2597,7 +2821,9 @@
                 "identifier": "TestHandleEnqueueMultipartUpload",
                 "newPage": false,
                 "searchKey": "httpapi.TestHandleEnqueueMultipartUpload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2617,7 +2843,9 @@
                 "identifier": "TestHandleEnqueueMultipartFinalize",
                 "newPage": false,
                 "searchKey": "httpapi.TestHandleEnqueueMultipartFinalize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2637,7 +2865,9 @@
                 "identifier": "TestHandleEnqueueMultipartFinalizeIncompleteUpload",
                 "newPage": false,
                 "searchKey": "httpapi.TestHandleEnqueueMultipartFinalizeIncompleteUpload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2657,7 +2887,9 @@
                 "identifier": "setupRepoMocks",
                 "newPage": false,
                 "searchKey": "httpapi.setupRepoMocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

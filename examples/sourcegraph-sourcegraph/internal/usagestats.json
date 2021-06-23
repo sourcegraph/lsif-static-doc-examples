@@ -4,7 +4,9 @@
     "identifier": "usagestats",
     "newPage": true,
     "searchKey": "internal/usagestats",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "keyPrefix",
                 "newPage": false,
                 "searchKey": "usagestats.keyPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "fSearchOccurred",
                 "newPage": false,
                 "searchKey": "usagestats.fSearchOccurred",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "fFindRefsOccurred",
                 "newPage": false,
                 "searchKey": "usagestats.fFindRefsOccurred",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,9 +110,7 @@
                 "identifier": "Hour",
                 "newPage": false,
                 "searchKey": "usagestats.Hour",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -122,9 +130,7 @@
                 "identifier": "Day",
                 "newPage": false,
                 "searchKey": "usagestats.Day",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -144,9 +150,7 @@
                 "identifier": "Week",
                 "newPage": false,
                 "searchKey": "usagestats.Week",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -166,9 +170,7 @@
                 "identifier": "Month",
                 "newPage": false,
                 "searchKey": "usagestats.Month",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -188,9 +190,7 @@
                 "identifier": "Year",
                 "newPage": false,
                 "searchKey": "usagestats.Year",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -210,7 +210,9 @@
                 "identifier": "templatePingQueryStr",
                 "newPage": false,
                 "searchKey": "usagestats.templatePingQueryStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,9 +232,7 @@
                 "identifier": "Org",
                 "newPage": false,
                 "searchKey": "usagestats.Org",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -252,9 +252,7 @@
                 "identifier": "User",
                 "newPage": false,
                 "searchKey": "usagestats.User",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -274,9 +272,7 @@
                 "identifier": "All",
                 "newPage": false,
                 "searchKey": "usagestats.All",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -296,7 +292,9 @@
                 "identifier": "defaultDays",
                 "newPage": false,
                 "searchKey": "usagestats.defaultDays",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -316,7 +314,9 @@
                 "identifier": "defaultWeeks",
                 "newPage": false,
                 "searchKey": "usagestats.defaultWeeks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -336,7 +336,9 @@
                 "identifier": "defaultMonths",
                 "newPage": false,
                 "searchKey": "usagestats.defaultMonths",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -356,7 +358,9 @@
                 "identifier": "maxStorageDays",
                 "newPage": false,
                 "searchKey": "usagestats.maxStorageDays",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -376,7 +380,9 @@
                 "identifier": "getHomepagePanelsQuery",
                 "newPage": false,
                 "searchKey": "usagestats.getHomepagePanelsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -396,7 +402,9 @@
                 "identifier": "insightSettingSimple",
                 "newPage": false,
                 "searchKey": "usagestats.insightSettingSimple",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -416,7 +424,9 @@
                 "identifier": "insightSettingMulti",
                 "newPage": false,
                 "searchKey": "usagestats.insightSettingMulti",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -436,7 +446,9 @@
                 "identifier": "insightAloneSettingStr",
                 "newPage": false,
                 "searchKey": "usagestats.insightAloneSettingStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -456,7 +468,9 @@
                 "identifier": "insightInlineSettingStr",
                 "newPage": false,
                 "searchKey": "usagestats.insightInlineSettingStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -476,7 +490,9 @@
                 "identifier": "langStatsInsightSettingStr",
                 "newPage": false,
                 "searchKey": "usagestats.langStatsInsightSettingStr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -499,7 +515,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -517,7 +535,9 @@
                 "identifier": "actionMap",
                 "newPage": false,
                 "searchKey": "usagestats.actionMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -537,7 +557,9 @@
                 "identifier": "sourceMap",
                 "newPage": false,
                 "searchKey": "usagestats.sourceMap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -557,7 +579,9 @@
                 "identifier": "searchLatencyExtractors",
                 "newPage": false,
                 "searchKey": "usagestats.searchLatencyExtractors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -577,7 +601,9 @@
                 "identifier": "searchFilterCountExtractors",
                 "newPage": false,
                 "searchKey": "usagestats.searchFilterCountExtractors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -597,7 +623,9 @@
                 "identifier": "pool",
                 "newPage": false,
                 "searchKey": "usagestats.pool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -617,7 +645,9 @@
                 "identifier": "searchOccurred",
                 "newPage": false,
                 "searchKey": "usagestats.searchOccurred",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -637,7 +667,9 @@
                 "identifier": "findRefsOccurred",
                 "newPage": false,
                 "searchKey": "usagestats.findRefsOccurred",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -657,7 +689,9 @@
                 "identifier": "pubSubDotComEventsTopicID",
                 "newPage": false,
                 "searchKey": "usagestats.pubSubDotComEventsTopicID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -677,7 +711,9 @@
                 "identifier": "timeNow",
                 "newPage": false,
                 "searchKey": "usagestats.timeNow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -697,9 +733,7 @@
                 "identifier": "MockGetByUserID",
                 "newPage": false,
                 "searchKey": "usagestats.MockGetByUserID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -722,7 +756,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -740,9 +776,7 @@
                 "identifier": "PingQueryBuilder",
                 "newPage": false,
                 "searchKey": "usagestats.PingQueryBuilder",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -760,7 +794,9 @@
                       "identifier": "creationPagesPingBuilder",
                       "newPage": false,
                       "searchKey": "usagestats.creationPagesPingBuilder",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -780,9 +816,7 @@
                       "identifier": "NewPingBuilder",
                       "newPage": false,
                       "searchKey": "usagestats.NewPingBuilder",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -802,9 +836,7 @@
                       "identifier": "PingQueryBuilder.WithAll",
                       "newPage": false,
                       "searchKey": "usagestats.PingQueryBuilder.WithAll",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -824,9 +856,7 @@
                       "identifier": "PingQueryBuilder.With",
                       "newPage": false,
                       "searchKey": "usagestats.PingQueryBuilder.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -846,9 +876,7 @@
                       "identifier": "PingQueryBuilder.Sample",
                       "newPage": false,
                       "searchKey": "usagestats.PingQueryBuilder.Sample",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -871,9 +899,7 @@
                 "identifier": "TimeWindow",
                 "newPage": false,
                 "searchKey": "usagestats.TimeWindow",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -893,9 +919,7 @@
                 "identifier": "TimeSeries",
                 "newPage": false,
                 "searchKey": "usagestats.TimeSeries",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -915,9 +939,7 @@
                 "identifier": "Interval",
                 "newPage": false,
                 "searchKey": "usagestats.Interval",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -937,9 +959,7 @@
                 "identifier": "SearchInsight",
                 "newPage": false,
                 "searchKey": "usagestats.SearchInsight",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -959,9 +979,7 @@
                 "identifier": "LangStatsInsight",
                 "newPage": false,
                 "searchKey": "usagestats.LangStatsInsight",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -981,9 +999,7 @@
                 "identifier": "SettingFilter",
                 "newPage": false,
                 "searchKey": "usagestats.SettingFilter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1003,9 +1019,7 @@
                 "identifier": "Event",
                 "newPage": false,
                 "searchKey": "usagestats.Event",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1025,7 +1039,9 @@
                 "identifier": "bigQueryEvent",
                 "newPage": false,
                 "searchKey": "usagestats.bigQueryEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1045,9 +1061,7 @@
                 "identifier": "Repositories",
                 "newPage": false,
                 "searchKey": "usagestats.Repositories",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1065,9 +1079,7 @@
                       "identifier": "GetRepositories",
                       "newPage": false,
                       "searchKey": "usagestats.GetRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1090,9 +1102,7 @@
                 "identifier": "SiteUsageStatisticsOptions",
                 "newPage": false,
                 "searchKey": "usagestats.SiteUsageStatisticsOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1115,7 +1125,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1133,9 +1145,7 @@
                 "identifier": "GetSiteUsageStats",
                 "newPage": false,
                 "searchKey": "usagestats.GetSiteUsageStats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1155,7 +1165,9 @@
                 "identifier": "groupSiteUsageStats",
                 "newPage": false,
                 "searchKey": "usagestats.groupSiteUsageStats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1175,9 +1187,7 @@
                 "identifier": "GetAggregatedCodeIntelStats",
                 "newPage": false,
                 "searchKey": "usagestats.GetAggregatedCodeIntelStats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1197,7 +1207,9 @@
                 "identifier": "groupAggregatedCodeIntelStats",
                 "newPage": false,
                 "searchKey": "usagestats.groupAggregatedCodeIntelStats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1217,9 +1229,7 @@
                 "identifier": "GetAggregatedSearchStats",
                 "newPage": false,
                 "searchKey": "usagestats.GetAggregatedSearchStats",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1239,7 +1249,9 @@
                 "identifier": "groupAggregatedSearchStats",
                 "newPage": false,
                 "searchKey": "usagestats.groupAggregatedSearchStats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1259,7 +1271,9 @@
                 "identifier": "populateSearchEventStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.populateSearchEventStatistics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1279,7 +1293,9 @@
                 "identifier": "populateSearchFilterCountStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.populateSearchFilterCountStatistics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1299,7 +1315,9 @@
                 "identifier": "newSearchEventPeriod",
                 "newPage": false,
                 "searchKey": "usagestats.newSearchEventPeriod",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1319,7 +1337,9 @@
                 "identifier": "newSearchEventStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.newSearchEventStatistics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1339,7 +1359,9 @@
                 "identifier": "newSearchCountStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.newSearchCountStatistics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1359,7 +1381,9 @@
                 "identifier": "newSearchModeUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.newSearchModeUsageStatistics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1379,7 +1403,9 @@
                 "identifier": "int32Ptr",
                 "newPage": false,
                 "searchKey": "usagestats.int32Ptr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1399,7 +1425,9 @@
                 "identifier": "logSiteSearchOccurred",
                 "newPage": false,
                 "searchKey": "usagestats.logSiteSearchOccurred",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1419,7 +1447,9 @@
                 "identifier": "logSiteFindRefsOccurred",
                 "newPage": false,
                 "searchKey": "usagestats.logSiteFindRefsOccurred",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1439,9 +1469,7 @@
                 "identifier": "HasSearchOccurred",
                 "newPage": false,
                 "searchKey": "usagestats.HasSearchOccurred",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1461,9 +1489,7 @@
                 "identifier": "HasFindRefsOccurred",
                 "newPage": false,
                 "searchKey": "usagestats.HasFindRefsOccurred",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1483,9 +1509,7 @@
                 "identifier": "GetBatchChangesUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.GetBatchChangesUsageStatistics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1505,9 +1529,7 @@
                 "identifier": "GetCodeInsightsUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.GetCodeInsightsUsageStatistics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1527,9 +1549,7 @@
                 "identifier": "GetTimeStepCounts",
                 "newPage": false,
                 "searchKey": "usagestats.GetTimeStepCounts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1549,7 +1569,9 @@
                 "identifier": "convertStepToDays",
                 "newPage": false,
                 "searchKey": "usagestats.convertStepToDays",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1569,9 +1591,7 @@
                 "identifier": "GetOrgInsightCounts",
                 "newPage": false,
                 "searchKey": "usagestats.GetOrgInsightCounts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1591,9 +1611,7 @@
                 "identifier": "GetCreationViewUsage",
                 "newPage": false,
                 "searchKey": "usagestats.GetCreationViewUsage",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1613,9 +1631,7 @@
                 "identifier": "GetSettings",
                 "newPage": false,
                 "searchKey": "usagestats.GetSettings",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1635,9 +1651,7 @@
                 "identifier": "FilterSettingJson",
                 "newPage": false,
                 "searchKey": "usagestats.FilterSettingJson",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1657,9 +1671,7 @@
                 "identifier": "GetSearchInsights",
                 "newPage": false,
                 "searchKey": "usagestats.GetSearchInsights",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1679,9 +1691,7 @@
                 "identifier": "GetLangStatsInsights",
                 "newPage": false,
                 "searchKey": "usagestats.GetLangStatsInsights",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1701,9 +1711,7 @@
                 "identifier": "GetCodeMonitoringUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.GetCodeMonitoringUsageStatistics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1723,9 +1731,7 @@
                 "identifier": "LogBackendEvent",
                 "newPage": false,
                 "searchKey": "usagestats.LogBackendEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1745,9 +1751,7 @@
                 "identifier": "LogEvent",
                 "newPage": false,
                 "searchKey": "usagestats.LogEvent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1767,7 +1771,9 @@
                 "identifier": "publishSourcegraphDotComEvent",
                 "newPage": false,
                 "searchKey": "usagestats.publishSourcegraphDotComEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1787,7 +1793,9 @@
                 "identifier": "logLocalEvent",
                 "newPage": false,
                 "searchKey": "usagestats.logLocalEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1807,9 +1815,7 @@
                 "identifier": "GetExtensionsUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.GetExtensionsUsageStatistics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1829,9 +1835,7 @@
                 "identifier": "GetGrowthStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.GetGrowthStatistics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1851,9 +1855,7 @@
                 "identifier": "GetHomepagePanels",
                 "newPage": false,
                 "searchKey": "usagestats.GetHomepagePanels",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1873,9 +1875,7 @@
                 "identifier": "GetRetentionStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.GetRetentionStatistics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1895,9 +1895,7 @@
                 "identifier": "GetSavedSearches",
                 "newPage": false,
                 "searchKey": "usagestats.GetSavedSearches",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1917,9 +1915,7 @@
                 "identifier": "GetSearchOnboarding",
                 "newPage": false,
                 "searchKey": "usagestats.GetSearchOnboarding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1939,9 +1935,7 @@
                 "identifier": "GetArchive",
                 "newPage": false,
                 "searchKey": "usagestats.GetArchive",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1961,9 +1955,7 @@
                 "identifier": "GetByUserID",
                 "newPage": false,
                 "searchKey": "usagestats.GetByUserID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1983,9 +1975,7 @@
                 "identifier": "GetUsersActiveTodayCount",
                 "newPage": false,
                 "searchKey": "usagestats.GetUsersActiveTodayCount",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2005,9 +1995,7 @@
                 "identifier": "ListRegisteredUsersToday",
                 "newPage": false,
                 "searchKey": "usagestats.ListRegisteredUsersToday",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2027,9 +2015,7 @@
                 "identifier": "ListRegisteredUsersThisWeek",
                 "newPage": false,
                 "searchKey": "usagestats.ListRegisteredUsersThisWeek",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2049,9 +2035,7 @@
                 "identifier": "ListRegisteredUsersThisMonth",
                 "newPage": false,
                 "searchKey": "usagestats.ListRegisteredUsersThisMonth",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2071,9 +2055,7 @@
                 "identifier": "GetSiteUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.GetSiteUsageStatistics",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2093,7 +2075,9 @@
                 "identifier": "activeUsers",
                 "newPage": false,
                 "searchKey": "usagestats.activeUsers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2113,7 +2097,9 @@
                 "identifier": "minIntOrZero",
                 "newPage": false,
                 "searchKey": "usagestats.minIntOrZero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2133,7 +2119,9 @@
                 "identifier": "TestGroupSiteUsageStats",
                 "newPage": false,
                 "searchKey": "usagestats.TestGroupSiteUsageStats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2153,7 +2141,9 @@
                 "identifier": "TestGroupSiteUsageStatsMonthsOnly",
                 "newPage": false,
                 "searchKey": "usagestats.TestGroupSiteUsageStatsMonthsOnly",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2173,7 +2163,9 @@
                 "identifier": "newSearchUsagePeriod",
                 "newPage": false,
                 "searchKey": "usagestats.newSearchUsagePeriod",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2193,7 +2185,9 @@
                 "identifier": "newSearchTestEvent",
                 "newPage": false,
                 "searchKey": "usagestats.newSearchTestEvent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2213,7 +2207,9 @@
                 "identifier": "TestGroupAggregateSearchStats",
                 "newPage": false,
                 "searchKey": "usagestats.TestGroupAggregateSearchStats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2233,7 +2229,9 @@
                 "identifier": "TestGroupAggregatedCodeIntelStats",
                 "newPage": false,
                 "searchKey": "usagestats.TestGroupAggregatedCodeIntelStats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2253,7 +2251,9 @@
                 "identifier": "TestGetBatchChangesUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.TestGetBatchChangesUsageStatistics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2273,7 +2273,9 @@
                 "identifier": "TestCodeInsightsUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.TestCodeInsightsUsageStatistics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2293,7 +2295,9 @@
                 "identifier": "TestWithCreationPings",
                 "newPage": false,
                 "searchKey": "usagestats.TestWithCreationPings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2313,7 +2317,9 @@
                 "identifier": "TestFilterSettingJson",
                 "newPage": false,
                 "searchKey": "usagestats.TestFilterSettingJson",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2333,7 +2339,9 @@
                 "identifier": "TestGetSearchInsights",
                 "newPage": false,
                 "searchKey": "usagestats.TestGetSearchInsights",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2353,7 +2361,9 @@
                 "identifier": "TestGetLangStatsInsights",
                 "newPage": false,
                 "searchKey": "usagestats.TestGetLangStatsInsights",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2373,7 +2383,9 @@
                 "identifier": "TestCodeMonitoringUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.TestCodeMonitoringUsageStatistics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2393,7 +2405,9 @@
                 "identifier": "TestExtensionsUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.TestExtensionsUsageStatistics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2408,12 +2422,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#init",
+              "pathID": "/internal/usagestats#init.main_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.main_test.go",
                 "newPage": false,
                 "searchKey": "usagestats.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2433,7 +2449,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "usagestats.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2453,7 +2471,9 @@
                 "identifier": "TestRetentionUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.TestRetentionUsageStatistics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2473,7 +2493,9 @@
                 "identifier": "TestGetArchive",
                 "newPage": false,
                 "searchKey": "usagestats.TestGetArchive",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2493,7 +2515,9 @@
                 "identifier": "TestUserUsageStatistics_None",
                 "newPage": false,
                 "searchKey": "usagestats.TestUserUsageStatistics_None",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2513,7 +2537,9 @@
                 "identifier": "TestUserUsageStatistics_LogPageView",
                 "newPage": false,
                 "searchKey": "usagestats.TestUserUsageStatistics_LogPageView",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2533,7 +2559,9 @@
                 "identifier": "TestUserUsageStatistics_LogSearchQuery",
                 "newPage": false,
                 "searchKey": "usagestats.TestUserUsageStatistics_LogSearchQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2553,7 +2581,9 @@
                 "identifier": "TestUserUsageStatistics_LogCodeIntelAction",
                 "newPage": false,
                 "searchKey": "usagestats.TestUserUsageStatistics_LogCodeIntelAction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2573,7 +2603,9 @@
                 "identifier": "TestUserUsageStatistics_LogCodeHostIntegrationUsage",
                 "newPage": false,
                 "searchKey": "usagestats.TestUserUsageStatistics_LogCodeHostIntegrationUsage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2593,7 +2625,9 @@
                 "identifier": "TestUserUsageStatistics_getUsersActiveToday",
                 "newPage": false,
                 "searchKey": "usagestats.TestUserUsageStatistics_getUsersActiveToday",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2613,7 +2647,9 @@
                 "identifier": "TestUserUsageStatistics_DAUs_WAUs_MAUs",
                 "newPage": false,
                 "searchKey": "usagestats.TestUserUsageStatistics_DAUs_WAUs_MAUs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2633,7 +2669,9 @@
                 "identifier": "setupForTest",
                 "newPage": false,
                 "searchKey": "usagestats.setupForTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2653,7 +2691,9 @@
                 "identifier": "mockTimeNow",
                 "newPage": false,
                 "searchKey": "usagestats.mockTimeNow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2673,7 +2713,9 @@
                 "identifier": "siteActivityCompare",
                 "newPage": false,
                 "searchKey": "usagestats.siteActivityCompare",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2693,7 +2735,9 @@
                 "identifier": "siteActivityPeriodSliceCompare",
                 "newPage": false,
                 "searchKey": "usagestats.siteActivityPeriodSliceCompare",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2713,7 +2757,9 @@
                 "identifier": "siteActivityPeriodCompare",
                 "newPage": false,
                 "searchKey": "usagestats.siteActivityPeriodCompare",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,9 +4,7 @@
     "identifier": "constant",
     "newPage": true,
     "searchKey": "go/constant",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "Unknown",
                 "newPage": false,
                 "searchKey": "constant.Unknown",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "Bool",
                 "newPage": false,
                 "searchKey": "constant.Bool",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "String",
                 "newPage": false,
                 "searchKey": "constant.String",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "Int",
                 "newPage": false,
                 "searchKey": "constant.Int",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -132,9 +120,7 @@
                 "identifier": "Float",
                 "newPage": false,
                 "searchKey": "constant.Float",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -154,9 +140,7 @@
                 "identifier": "Complex",
                 "newPage": false,
                 "searchKey": "constant.Complex",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -176,7 +160,9 @@
                 "identifier": "prec",
                 "newPage": false,
                 "searchKey": "constant.prec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -196,7 +182,9 @@
                 "identifier": "maxExp",
                 "newPage": false,
                 "searchKey": "constant.maxExp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -216,7 +204,9 @@
                 "identifier": "_m",
                 "newPage": false,
                 "searchKey": "constant._m",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -236,7 +226,9 @@
                 "identifier": "_log",
                 "newPage": false,
                 "searchKey": "constant._log",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -256,7 +248,9 @@
                 "identifier": "wordSize",
                 "newPage": false,
                 "searchKey": "constant.wordSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -279,9 +273,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -299,7 +291,9 @@
                 "identifier": "floatVal0",
                 "newPage": false,
                 "searchKey": "constant.floatVal0",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -319,7 +313,9 @@
                 "identifier": "intTests",
                 "newPage": false,
                 "searchKey": "constant.intTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -339,7 +335,9 @@
                 "identifier": "floatTests",
                 "newPage": false,
                 "searchKey": "constant.floatTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -359,7 +357,9 @@
                 "identifier": "imagTests",
                 "newPage": false,
                 "searchKey": "constant.imagTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -379,7 +379,9 @@
                 "identifier": "opTests",
                 "newPage": false,
                 "searchKey": "constant.opTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -399,7 +401,9 @@
                 "identifier": "xxx",
                 "newPage": false,
                 "searchKey": "constant.xxx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -419,7 +423,9 @@
                 "identifier": "issue14262",
                 "newPage": false,
                 "searchKey": "constant.issue14262",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -439,7 +445,9 @@
                 "identifier": "stringTests",
                 "newPage": false,
                 "searchKey": "constant.stringTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -459,7 +467,9 @@
                 "identifier": "optab",
                 "newPage": false,
                 "searchKey": "constant.optab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -479,7 +489,9 @@
                 "identifier": "fracTests",
                 "newPage": false,
                 "searchKey": "constant.fracTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -499,7 +511,9 @@
                 "identifier": "bytesTests",
                 "newPage": false,
                 "searchKey": "constant.bytesTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -519,7 +533,9 @@
                 "identifier": "bitLenTests",
                 "newPage": false,
                 "searchKey": "constant.bitLenTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -542,9 +558,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -562,9 +576,7 @@
                 "identifier": "Kind",
                 "newPage": false,
                 "searchKey": "constant.Kind",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -584,9 +596,7 @@
                 "identifier": "Value",
                 "newPage": false,
                 "searchKey": "constant.Value",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -604,7 +614,9 @@
                       "identifier": "makeInt",
                       "newPage": false,
                       "searchKey": "constant.makeInt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -624,7 +636,9 @@
                       "identifier": "makeRat",
                       "newPage": false,
                       "searchKey": "constant.makeRat",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -644,7 +658,9 @@
                       "identifier": "makeFloat",
                       "newPage": false,
                       "searchKey": "constant.makeFloat",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -664,7 +680,9 @@
                       "identifier": "makeComplex",
                       "newPage": false,
                       "searchKey": "constant.makeComplex",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -684,7 +702,9 @@
                       "identifier": "makeFloatFromLiteral",
                       "newPage": false,
                       "searchKey": "constant.makeFloatFromLiteral",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -704,9 +724,7 @@
                       "identifier": "MakeUnknown",
                       "newPage": false,
                       "searchKey": "constant.MakeUnknown",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -726,9 +744,7 @@
                       "identifier": "MakeBool",
                       "newPage": false,
                       "searchKey": "constant.MakeBool",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -748,9 +764,7 @@
                       "identifier": "MakeString",
                       "newPage": false,
                       "searchKey": "constant.MakeString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -770,9 +784,7 @@
                       "identifier": "MakeInt64",
                       "newPage": false,
                       "searchKey": "constant.MakeInt64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -792,9 +804,7 @@
                       "identifier": "MakeUint64",
                       "newPage": false,
                       "searchKey": "constant.MakeUint64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -814,9 +824,7 @@
                       "identifier": "MakeFloat64",
                       "newPage": false,
                       "searchKey": "constant.MakeFloat64",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -836,9 +844,7 @@
                       "identifier": "MakeFromLiteral",
                       "newPage": false,
                       "searchKey": "constant.MakeFromLiteral",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -858,9 +864,7 @@
                       "identifier": "Make",
                       "newPage": false,
                       "searchKey": "constant.Make",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -880,9 +884,7 @@
                       "identifier": "MakeFromBytes",
                       "newPage": false,
                       "searchKey": "constant.MakeFromBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -902,9 +904,7 @@
                       "identifier": "Num",
                       "newPage": false,
                       "searchKey": "constant.Num",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -924,9 +924,7 @@
                       "identifier": "Denom",
                       "newPage": false,
                       "searchKey": "constant.Denom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -946,9 +944,7 @@
                       "identifier": "MakeImag",
                       "newPage": false,
                       "searchKey": "constant.MakeImag",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -968,9 +964,7 @@
                       "identifier": "Real",
                       "newPage": false,
                       "searchKey": "constant.Real",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -990,9 +984,7 @@
                       "identifier": "Imag",
                       "newPage": false,
                       "searchKey": "constant.Imag",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1012,9 +1004,7 @@
                       "identifier": "ToInt",
                       "newPage": false,
                       "searchKey": "constant.ToInt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1034,9 +1024,7 @@
                       "identifier": "ToFloat",
                       "newPage": false,
                       "searchKey": "constant.ToFloat",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1056,9 +1044,7 @@
                       "identifier": "ToComplex",
                       "newPage": false,
                       "searchKey": "constant.ToComplex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1078,9 +1064,7 @@
                       "identifier": "UnaryOp",
                       "newPage": false,
                       "searchKey": "constant.UnaryOp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1100,7 +1084,9 @@
                       "identifier": "match",
                       "newPage": false,
                       "searchKey": "constant.match",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1120,7 +1106,9 @@
                       "identifier": "match0",
                       "newPage": false,
                       "searchKey": "constant.match0",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1140,9 +1128,7 @@
                       "identifier": "BinaryOp",
                       "newPage": false,
                       "searchKey": "constant.BinaryOp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1162,7 +1148,9 @@
                       "identifier": "add",
                       "newPage": false,
                       "searchKey": "constant.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1182,7 +1170,9 @@
                       "identifier": "sub",
                       "newPage": false,
                       "searchKey": "constant.sub",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1202,7 +1192,9 @@
                       "identifier": "mul",
                       "newPage": false,
                       "searchKey": "constant.mul",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1222,7 +1214,9 @@
                       "identifier": "quo",
                       "newPage": false,
                       "searchKey": "constant.quo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1242,9 +1236,7 @@
                       "identifier": "Shift",
                       "newPage": false,
                       "searchKey": "constant.Shift",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1264,7 +1256,9 @@
                       "identifier": "val",
                       "newPage": false,
                       "searchKey": "constant.val",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1284,7 +1278,9 @@
                       "identifier": "doOp",
                       "newPage": false,
                       "searchKey": "constant.doOp",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1307,7 +1303,9 @@
                 "identifier": "unknownVal",
                 "newPage": false,
                 "searchKey": "constant.unknownVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1325,7 +1323,9 @@
                       "identifier": "unknownVal.Kind",
                       "newPage": false,
                       "searchKey": "constant.unknownVal.Kind",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1345,7 +1345,9 @@
                       "identifier": "unknownVal.String",
                       "newPage": false,
                       "searchKey": "constant.unknownVal.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1365,7 +1367,9 @@
                       "identifier": "unknownVal.ExactString",
                       "newPage": false,
                       "searchKey": "constant.unknownVal.ExactString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1385,7 +1389,9 @@
                       "identifier": "unknownVal.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.unknownVal.implementsValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1408,7 +1414,9 @@
                 "identifier": "boolVal",
                 "newPage": false,
                 "searchKey": "constant.boolVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1426,7 +1434,9 @@
                       "identifier": "boolVal.Kind",
                       "newPage": false,
                       "searchKey": "constant.boolVal.Kind",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1446,7 +1456,9 @@
                       "identifier": "boolVal.String",
                       "newPage": false,
                       "searchKey": "constant.boolVal.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1466,7 +1478,9 @@
                       "identifier": "boolVal.ExactString",
                       "newPage": false,
                       "searchKey": "constant.boolVal.ExactString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1486,7 +1500,9 @@
                       "identifier": "boolVal.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.boolVal.implementsValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1509,7 +1525,9 @@
                 "identifier": "stringVal",
                 "newPage": false,
                 "searchKey": "constant.stringVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1527,7 +1545,9 @@
                       "identifier": "stringVal.Kind",
                       "newPage": false,
                       "searchKey": "constant.stringVal.Kind",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1547,7 +1567,9 @@
                       "identifier": "stringVal.String",
                       "newPage": false,
                       "searchKey": "constant.stringVal.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1567,7 +1589,9 @@
                       "identifier": "stringVal.string",
                       "newPage": false,
                       "searchKey": "constant.stringVal.string",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1587,7 +1611,9 @@
                       "identifier": "stringVal.appendReverse",
                       "newPage": false,
                       "searchKey": "constant.stringVal.appendReverse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1607,7 +1633,9 @@
                       "identifier": "stringVal.ExactString",
                       "newPage": false,
                       "searchKey": "constant.stringVal.ExactString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1627,7 +1655,9 @@
                       "identifier": "stringVal.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.stringVal.implementsValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1650,7 +1680,9 @@
                 "identifier": "int64Val",
                 "newPage": false,
                 "searchKey": "constant.int64Val",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1668,7 +1700,9 @@
                       "identifier": "int64Val.Kind",
                       "newPage": false,
                       "searchKey": "constant.int64Val.Kind",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1688,7 +1722,9 @@
                       "identifier": "int64Val.String",
                       "newPage": false,
                       "searchKey": "constant.int64Val.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1708,7 +1744,9 @@
                       "identifier": "int64Val.ExactString",
                       "newPage": false,
                       "searchKey": "constant.int64Val.ExactString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1728,7 +1766,9 @@
                       "identifier": "int64Val.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.int64Val.implementsValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1751,7 +1791,9 @@
                 "identifier": "intVal",
                 "newPage": false,
                 "searchKey": "constant.intVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1769,7 +1811,9 @@
                       "identifier": "i64toi",
                       "newPage": false,
                       "searchKey": "constant.i64toi",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1789,7 +1833,9 @@
                       "identifier": "intVal.Kind",
                       "newPage": false,
                       "searchKey": "constant.intVal.Kind",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1809,7 +1855,9 @@
                       "identifier": "intVal.String",
                       "newPage": false,
                       "searchKey": "constant.intVal.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1829,7 +1877,9 @@
                       "identifier": "intVal.ExactString",
                       "newPage": false,
                       "searchKey": "constant.intVal.ExactString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1849,7 +1899,9 @@
                       "identifier": "intVal.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.intVal.implementsValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1872,7 +1924,9 @@
                 "identifier": "ratVal",
                 "newPage": false,
                 "searchKey": "constant.ratVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1890,7 +1944,9 @@
                       "identifier": "i64tor",
                       "newPage": false,
                       "searchKey": "constant.i64tor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1910,7 +1966,9 @@
                       "identifier": "itor",
                       "newPage": false,
                       "searchKey": "constant.itor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1930,7 +1988,9 @@
                       "identifier": "ratVal.Kind",
                       "newPage": false,
                       "searchKey": "constant.ratVal.Kind",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1950,7 +2010,9 @@
                       "identifier": "ratVal.String",
                       "newPage": false,
                       "searchKey": "constant.ratVal.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1970,7 +2032,9 @@
                       "identifier": "ratVal.ExactString",
                       "newPage": false,
                       "searchKey": "constant.ratVal.ExactString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1990,7 +2054,9 @@
                       "identifier": "ratVal.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.ratVal.implementsValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2013,7 +2079,9 @@
                 "identifier": "floatVal",
                 "newPage": false,
                 "searchKey": "constant.floatVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2031,7 +2099,9 @@
                       "identifier": "i64tof",
                       "newPage": false,
                       "searchKey": "constant.i64tof",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2051,7 +2121,9 @@
                       "identifier": "itof",
                       "newPage": false,
                       "searchKey": "constant.itof",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2071,7 +2143,9 @@
                       "identifier": "rtof",
                       "newPage": false,
                       "searchKey": "constant.rtof",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2091,7 +2165,9 @@
                       "identifier": "floatVal.Kind",
                       "newPage": false,
                       "searchKey": "constant.floatVal.Kind",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2111,7 +2187,9 @@
                       "identifier": "floatVal.String",
                       "newPage": false,
                       "searchKey": "constant.floatVal.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2131,7 +2209,9 @@
                       "identifier": "floatVal.ExactString",
                       "newPage": false,
                       "searchKey": "constant.floatVal.ExactString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2151,7 +2231,9 @@
                       "identifier": "floatVal.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.floatVal.implementsValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2174,7 +2256,9 @@
                 "identifier": "complexVal",
                 "newPage": false,
                 "searchKey": "constant.complexVal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2192,7 +2276,9 @@
                       "identifier": "vtoc",
                       "newPage": false,
                       "searchKey": "constant.vtoc",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2212,7 +2298,9 @@
                       "identifier": "complexVal.Kind",
                       "newPage": false,
                       "searchKey": "constant.complexVal.Kind",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2232,7 +2320,9 @@
                       "identifier": "complexVal.String",
                       "newPage": false,
                       "searchKey": "constant.complexVal.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2252,7 +2342,9 @@
                       "identifier": "complexVal.ExactString",
                       "newPage": false,
                       "searchKey": "constant.complexVal.ExactString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2272,7 +2364,9 @@
                       "identifier": "complexVal.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.complexVal.implementsValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2295,7 +2389,9 @@
                 "identifier": "makeTestCase",
                 "newPage": false,
                 "searchKey": "constant.makeTestCase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2313,7 +2409,9 @@
                       "identifier": "dup",
                       "newPage": false,
                       "searchKey": "constant.dup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2339,9 +2437,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2359,7 +2455,9 @@
                 "identifier": "reverse",
                 "newPage": false,
                 "searchKey": "constant.reverse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2379,7 +2477,9 @@
                 "identifier": "newInt",
                 "newPage": false,
                 "searchKey": "constant.newInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2399,7 +2499,9 @@
                 "identifier": "newRat",
                 "newPage": false,
                 "searchKey": "constant.newRat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2419,7 +2521,9 @@
                 "identifier": "newFloat",
                 "newPage": false,
                 "searchKey": "constant.newFloat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2439,7 +2543,9 @@
                 "identifier": "smallInt",
                 "newPage": false,
                 "searchKey": "constant.smallInt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2459,7 +2565,9 @@
                 "identifier": "smallFloat64",
                 "newPage": false,
                 "searchKey": "constant.smallFloat64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2479,7 +2587,9 @@
                 "identifier": "smallFloat",
                 "newPage": false,
                 "searchKey": "constant.smallFloat",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2499,9 +2609,7 @@
                 "identifier": "BoolVal",
                 "newPage": false,
                 "searchKey": "constant.BoolVal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2521,9 +2629,7 @@
                 "identifier": "StringVal",
                 "newPage": false,
                 "searchKey": "constant.StringVal",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2543,9 +2649,7 @@
                 "identifier": "Int64Val",
                 "newPage": false,
                 "searchKey": "constant.Int64Val",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2565,9 +2669,7 @@
                 "identifier": "Uint64Val",
                 "newPage": false,
                 "searchKey": "constant.Uint64Val",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2587,9 +2689,7 @@
                 "identifier": "Float32Val",
                 "newPage": false,
                 "searchKey": "constant.Float32Val",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2609,9 +2709,7 @@
                 "identifier": "Float64Val",
                 "newPage": false,
                 "searchKey": "constant.Float64Val",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2631,9 +2729,7 @@
                 "identifier": "Val",
                 "newPage": false,
                 "searchKey": "constant.Val",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2653,9 +2749,7 @@
                 "identifier": "BitLen",
                 "newPage": false,
                 "searchKey": "constant.BitLen",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2675,9 +2769,7 @@
                 "identifier": "Sign",
                 "newPage": false,
                 "searchKey": "constant.Sign",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2697,9 +2789,7 @@
                 "identifier": "Bytes",
                 "newPage": false,
                 "searchKey": "constant.Bytes",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2719,7 +2809,9 @@
                 "identifier": "is32bit",
                 "newPage": false,
                 "searchKey": "constant.is32bit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2739,7 +2831,9 @@
                 "identifier": "is63bit",
                 "newPage": false,
                 "searchKey": "constant.is63bit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2759,7 +2853,9 @@
                 "identifier": "ord",
                 "newPage": false,
                 "searchKey": "constant.ord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2779,7 +2875,9 @@
                 "identifier": "cmpZero",
                 "newPage": false,
                 "searchKey": "constant.cmpZero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2799,9 +2897,7 @@
                 "identifier": "Compare",
                 "newPage": false,
                 "searchKey": "constant.Compare",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2821,7 +2917,9 @@
                 "identifier": "testNumbers",
                 "newPage": false,
                 "searchKey": "constant.testNumbers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2841,7 +2939,9 @@
                 "identifier": "TestNumbers",
                 "newPage": false,
                 "searchKey": "constant.TestNumbers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2861,7 +2961,9 @@
                 "identifier": "TestOps",
                 "newPage": false,
                 "searchKey": "constant.TestOps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2881,7 +2983,9 @@
                 "identifier": "eql",
                 "newPage": false,
                 "searchKey": "constant.eql",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2901,7 +3005,9 @@
                 "identifier": "TestString",
                 "newPage": false,
                 "searchKey": "constant.TestString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2921,7 +3027,9 @@
                 "identifier": "panicHandler",
                 "newPage": false,
                 "searchKey": "constant.panicHandler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2941,7 +3049,9 @@
                 "identifier": "TestFractions",
                 "newPage": false,
                 "searchKey": "constant.TestFractions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2961,7 +3071,9 @@
                 "identifier": "TestBytes",
                 "newPage": false,
                 "searchKey": "constant.TestBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2981,7 +3093,9 @@
                 "identifier": "TestUnknown",
                 "newPage": false,
                 "searchKey": "constant.TestUnknown",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3001,7 +3115,9 @@
                 "identifier": "TestMakeFloat64",
                 "newPage": false,
                 "searchKey": "constant.TestMakeFloat64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3021,7 +3137,9 @@
                 "identifier": "TestMake",
                 "newPage": false,
                 "searchKey": "constant.TestMake",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3041,7 +3159,9 @@
                 "identifier": "BenchmarkStringAdd",
                 "newPage": false,
                 "searchKey": "constant.BenchmarkStringAdd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3061,7 +3181,9 @@
                 "identifier": "TestBitLen",
                 "newPage": false,
                 "searchKey": "constant.TestBitLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

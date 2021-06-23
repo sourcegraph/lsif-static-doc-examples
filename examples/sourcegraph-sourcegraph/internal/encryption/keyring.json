@@ -4,7 +4,9 @@
     "identifier": "keyring",
     "newPage": true,
     "searchKey": "internal/encryption/keyring",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "mu",
                 "newPage": false,
                 "searchKey": "keyring.mu",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "defaultRing",
                 "newPage": false,
                 "searchKey": "keyring.defaultRing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,7 +91,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -101,9 +111,7 @@
                 "identifier": "Ring",
                 "newPage": false,
                 "searchKey": "keyring.Ring",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -121,9 +129,7 @@
                       "identifier": "Default",
                       "newPage": false,
                       "searchKey": "keyring.Default",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -143,9 +149,7 @@
                       "identifier": "NewRing",
                       "newPage": false,
                       "searchKey": "keyring.NewRing",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -171,7 +175,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -189,9 +195,7 @@
                 "identifier": "MockDefault",
                 "newPage": false,
                 "searchKey": "keyring.MockDefault",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -211,9 +215,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "keyring.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -233,9 +235,7 @@
                 "identifier": "NewKey",
                 "newPage": false,
                 "searchKey": "keyring.NewKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

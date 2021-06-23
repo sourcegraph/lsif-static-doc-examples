@@ -14,14 +14,11 @@ Command watchmanwrapper runs watchman subscribe and parses its output to trigger
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="neverRead" href="#neverRead">var neverRead</a>
 
 ```
 searchKey: main.neverRead
+tags: [private]
 ```
 
 ```Go
@@ -30,15 +27,10 @@ var neverRead = (chan<- []string)(make(chan []string))
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Response" href="#Response">type Response struct</a>
 
 ```
 searchKey: main.Response
-tags: [exported]
 ```
 
 ```Go
@@ -50,14 +42,11 @@ type Response struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go

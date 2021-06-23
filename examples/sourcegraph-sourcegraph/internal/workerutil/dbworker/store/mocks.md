@@ -142,11 +142,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MockStore" href="#MockStore">type MockStore struct</a>
 
 ```
 searchKey: mocks.MockStore
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +197,6 @@ MockStore is a mock implementation of the Store interface (from the package gith
 
 ```
 searchKey: mocks.NewMockStore
-tags: [exported]
 ```
 
 ```Go
@@ -207,7 +209,6 @@ NewMockStore creates a new mock of the Store interface. All methods return zero 
 
 ```
 searchKey: mocks.NewMockStoreFrom
-tags: [exported]
 ```
 
 ```Go
@@ -220,7 +221,6 @@ NewMockStoreFrom creates a new mock of the MockStore interface. All methods dele
 
 ```
 searchKey: mocks.MockStore.AddExecutionLogEntry
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +233,6 @@ AddExecutionLogEntry delegates to the next hook function in the queue and stores
 
 ```
 searchKey: mocks.MockStore.Dequeue
-tags: [exported]
 ```
 
 ```Go
@@ -246,7 +245,6 @@ Dequeue delegates to the next hook function in the queue and stores the paramete
 
 ```
 searchKey: mocks.MockStore.DequeueWithIndependentTransactionContext
-tags: [exported]
 ```
 
 ```Go
@@ -259,7 +257,6 @@ DequeueWithIndependentTransactionContext delegates to the next hook function in 
 
 ```
 searchKey: mocks.MockStore.Done
-tags: [exported]
 ```
 
 ```Go
@@ -272,7 +269,6 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: mocks.MockStore.Handle
-tags: [exported]
 ```
 
 ```Go
@@ -285,7 +281,6 @@ Handle delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockStore.MarkComplete
-tags: [exported]
 ```
 
 ```Go
@@ -298,7 +293,6 @@ MarkComplete delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: mocks.MockStore.MarkErrored
-tags: [exported]
 ```
 
 ```Go
@@ -311,7 +305,6 @@ MarkErrored delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockStore.MarkFailed
-tags: [exported]
 ```
 
 ```Go
@@ -324,7 +317,6 @@ MarkFailed delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: mocks.MockStore.QueuedCount
-tags: [exported]
 ```
 
 ```Go
@@ -337,7 +329,6 @@ QueuedCount delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockStore.Requeue
-tags: [exported]
 ```
 
 ```Go
@@ -350,7 +341,6 @@ Requeue delegates to the next hook function in the queue and stores the paramete
 
 ```
 searchKey: mocks.MockStore.ResetStalled
-tags: [exported]
 ```
 
 ```Go
@@ -363,7 +353,6 @@ ResetStalled delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFunc
-tags: [exported]
 ```
 
 ```Go
@@ -381,7 +370,6 @@ StoreAddExecutionLogEntryFunc describes the behavior when the AddExecutionLogEnt
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -394,7 +382,6 @@ SetDefaultHook sets function that is called when the AddExecutionLogEntry method
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -407,7 +394,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the AddExe
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -420,7 +406,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -433,6 +418,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -443,6 +429,7 @@ func (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, wo
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -453,7 +440,6 @@ func (f *StoreAddExecutionLogEntryFunc) appendCall(r0 StoreAddExecutionLogEntryF
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -466,7 +452,6 @@ History returns a sequence of StoreAddExecutionLogEntryFuncCall objects describi
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -492,7 +477,6 @@ StoreAddExecutionLogEntryFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -505,7 +489,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -518,7 +501,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreDequeueFunc
-tags: [exported]
 ```
 
 ```Go
@@ -536,7 +518,6 @@ StoreDequeueFunc describes the behavior when the Dequeue method of the parent Mo
 
 ```
 searchKey: mocks.StoreDequeueFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -549,7 +530,6 @@ SetDefaultHook sets function that is called when the Dequeue method of the paren
 
 ```
 searchKey: mocks.StoreDequeueFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -562,7 +542,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Dequeu
 
 ```
 searchKey: mocks.StoreDequeueFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -575,7 +554,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreDequeueFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -588,6 +566,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreDequeueFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -598,6 +577,7 @@ func (f *StoreDequeueFunc) nextHook() func(context.Context, []*sqlf.Query) (work
 
 ```
 searchKey: mocks.StoreDequeueFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -608,7 +588,6 @@ func (f *StoreDequeueFunc) appendCall(r0 StoreDequeueFuncCall)
 
 ```
 searchKey: mocks.StoreDequeueFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -621,7 +600,6 @@ History returns a sequence of StoreDequeueFuncCall objects describing the invoca
 
 ```
 searchKey: mocks.StoreDequeueFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -653,7 +631,6 @@ StoreDequeueFuncCall is an object that describes an invocation of method Dequeue
 
 ```
 searchKey: mocks.StoreDequeueFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -666,7 +643,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreDequeueFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -679,7 +655,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFunc
-tags: [exported]
 ```
 
 ```Go
@@ -697,7 +672,6 @@ StoreDequeueWithIndependentTransactionContextFunc describes the behavior when th
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -710,7 +684,6 @@ SetDefaultHook sets function that is called when the DequeueWithIndependentTrans
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -723,7 +696,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Dequeu
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -736,7 +708,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -749,6 +720,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -759,6 +731,7 @@ func (f *StoreDequeueWithIndependentTransactionContextFunc) nextHook() func(cont
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -769,7 +742,6 @@ func (f *StoreDequeueWithIndependentTransactionContextFunc) appendCall(r0 StoreD
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -782,7 +754,6 @@ History returns a sequence of StoreDequeueWithIndependentTransactionContextFuncC
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -814,7 +785,6 @@ StoreDequeueWithIndependentTransactionContextFuncCall is an object that describe
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -827,7 +797,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -840,7 +809,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreDoneFunc
-tags: [exported]
 ```
 
 ```Go
@@ -858,7 +826,6 @@ StoreDoneFunc describes the behavior when the Done method of the parent MockStor
 
 ```
 searchKey: mocks.StoreDoneFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -871,7 +838,6 @@ SetDefaultHook sets function that is called when the Done method of the parent M
 
 ```
 searchKey: mocks.StoreDoneFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -884,7 +850,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Done m
 
 ```
 searchKey: mocks.StoreDoneFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -897,7 +862,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreDoneFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -910,6 +874,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreDoneFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -920,6 +885,7 @@ func (f *StoreDoneFunc) nextHook() func(error) error
 
 ```
 searchKey: mocks.StoreDoneFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -930,7 +896,6 @@ func (f *StoreDoneFunc) appendCall(r0 StoreDoneFuncCall)
 
 ```
 searchKey: mocks.StoreDoneFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -943,7 +908,6 @@ History returns a sequence of StoreDoneFuncCall objects describing the invocatio
 
 ```
 searchKey: mocks.StoreDoneFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -963,7 +927,6 @@ StoreDoneFuncCall is an object that describes an invocation of method Done on an
 
 ```
 searchKey: mocks.StoreDoneFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -976,7 +939,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreDoneFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -989,7 +951,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreHandleFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1007,7 +968,6 @@ StoreHandleFunc describes the behavior when the Handle method of the parent Mock
 
 ```
 searchKey: mocks.StoreHandleFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1020,7 +980,6 @@ SetDefaultHook sets function that is called when the Handle method of the parent
 
 ```
 searchKey: mocks.StoreHandleFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1033,7 +992,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Handle
 
 ```
 searchKey: mocks.StoreHandleFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1046,7 +1004,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreHandleFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1059,6 +1016,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreHandleFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1069,6 +1027,7 @@ func (f *StoreHandleFunc) nextHook() func() *basestore.TransactableHandle
 
 ```
 searchKey: mocks.StoreHandleFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1079,7 +1038,6 @@ func (f *StoreHandleFunc) appendCall(r0 StoreHandleFuncCall)
 
 ```
 searchKey: mocks.StoreHandleFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1092,7 +1050,6 @@ History returns a sequence of StoreHandleFuncCall objects describing the invocat
 
 ```
 searchKey: mocks.StoreHandleFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1109,7 +1066,6 @@ StoreHandleFuncCall is an object that describes an invocation of method Handle o
 
 ```
 searchKey: mocks.StoreHandleFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1122,7 +1078,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreHandleFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1135,7 +1090,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreMarkCompleteFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1153,7 +1107,6 @@ StoreMarkCompleteFunc describes the behavior when the MarkComplete method of the
 
 ```
 searchKey: mocks.StoreMarkCompleteFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1166,7 +1119,6 @@ SetDefaultHook sets function that is called when the MarkComplete method of the 
 
 ```
 searchKey: mocks.StoreMarkCompleteFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1179,7 +1131,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkCo
 
 ```
 searchKey: mocks.StoreMarkCompleteFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1192,7 +1143,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreMarkCompleteFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1205,6 +1155,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreMarkCompleteFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1215,6 +1166,7 @@ func (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, err
 
 ```
 searchKey: mocks.StoreMarkCompleteFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1225,7 +1177,6 @@ func (f *StoreMarkCompleteFunc) appendCall(r0 StoreMarkCompleteFuncCall)
 
 ```
 searchKey: mocks.StoreMarkCompleteFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1238,7 +1189,6 @@ History returns a sequence of StoreMarkCompleteFuncCall objects describing the i
 
 ```
 searchKey: mocks.StoreMarkCompleteFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1264,7 +1214,6 @@ StoreMarkCompleteFuncCall is an object that describes an invocation of method Ma
 
 ```
 searchKey: mocks.StoreMarkCompleteFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1277,7 +1226,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreMarkCompleteFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1290,7 +1238,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreMarkErroredFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1308,7 +1255,6 @@ StoreMarkErroredFunc describes the behavior when the MarkErrored method of the p
 
 ```
 searchKey: mocks.StoreMarkErroredFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1321,7 +1267,6 @@ SetDefaultHook sets function that is called when the MarkErrored method of the p
 
 ```
 searchKey: mocks.StoreMarkErroredFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1334,7 +1279,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkEr
 
 ```
 searchKey: mocks.StoreMarkErroredFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1347,7 +1291,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreMarkErroredFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1360,6 +1303,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreMarkErroredFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1370,6 +1314,7 @@ func (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bo
 
 ```
 searchKey: mocks.StoreMarkErroredFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1380,7 +1325,6 @@ func (f *StoreMarkErroredFunc) appendCall(r0 StoreMarkErroredFuncCall)
 
 ```
 searchKey: mocks.StoreMarkErroredFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1393,7 +1337,6 @@ History returns a sequence of StoreMarkErroredFuncCall objects describing the in
 
 ```
 searchKey: mocks.StoreMarkErroredFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1422,7 +1365,6 @@ StoreMarkErroredFuncCall is an object that describes an invocation of method Mar
 
 ```
 searchKey: mocks.StoreMarkErroredFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1435,7 +1377,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreMarkErroredFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1448,7 +1389,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreMarkFailedFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1466,7 +1406,6 @@ StoreMarkFailedFunc describes the behavior when the MarkFailed method of the par
 
 ```
 searchKey: mocks.StoreMarkFailedFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1479,7 +1418,6 @@ SetDefaultHook sets function that is called when the MarkFailed method of the pa
 
 ```
 searchKey: mocks.StoreMarkFailedFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1492,7 +1430,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkFa
 
 ```
 searchKey: mocks.StoreMarkFailedFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1505,7 +1442,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreMarkFailedFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1518,6 +1454,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreMarkFailedFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1528,6 +1465,7 @@ func (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (boo
 
 ```
 searchKey: mocks.StoreMarkFailedFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1538,7 +1476,6 @@ func (f *StoreMarkFailedFunc) appendCall(r0 StoreMarkFailedFuncCall)
 
 ```
 searchKey: mocks.StoreMarkFailedFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1551,7 +1488,6 @@ History returns a sequence of StoreMarkFailedFuncCall objects describing the inv
 
 ```
 searchKey: mocks.StoreMarkFailedFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1580,7 +1516,6 @@ StoreMarkFailedFuncCall is an object that describes an invocation of method Mark
 
 ```
 searchKey: mocks.StoreMarkFailedFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1593,7 +1528,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreMarkFailedFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1606,7 +1540,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreQueuedCountFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1624,7 +1557,6 @@ StoreQueuedCountFunc describes the behavior when the QueuedCount method of the p
 
 ```
 searchKey: mocks.StoreQueuedCountFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1637,7 +1569,6 @@ SetDefaultHook sets function that is called when the QueuedCount method of the p
 
 ```
 searchKey: mocks.StoreQueuedCountFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1650,7 +1581,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Queued
 
 ```
 searchKey: mocks.StoreQueuedCountFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1663,7 +1593,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreQueuedCountFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1676,6 +1605,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreQueuedCountFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1686,6 +1616,7 @@ func (f *StoreQueuedCountFunc) nextHook() func(context.Context, []*sqlf.Query) (
 
 ```
 searchKey: mocks.StoreQueuedCountFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1696,7 +1627,6 @@ func (f *StoreQueuedCountFunc) appendCall(r0 StoreQueuedCountFuncCall)
 
 ```
 searchKey: mocks.StoreQueuedCountFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1709,7 +1639,6 @@ History returns a sequence of StoreQueuedCountFuncCall objects describing the in
 
 ```
 searchKey: mocks.StoreQueuedCountFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1735,7 +1664,6 @@ StoreQueuedCountFuncCall is an object that describes an invocation of method Que
 
 ```
 searchKey: mocks.StoreQueuedCountFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1748,7 +1676,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreQueuedCountFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1761,7 +1688,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreRequeueFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1779,7 +1705,6 @@ StoreRequeueFunc describes the behavior when the Requeue method of the parent Mo
 
 ```
 searchKey: mocks.StoreRequeueFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1792,7 +1717,6 @@ SetDefaultHook sets function that is called when the Requeue method of the paren
 
 ```
 searchKey: mocks.StoreRequeueFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1805,7 +1729,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the Requeu
 
 ```
 searchKey: mocks.StoreRequeueFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1818,7 +1741,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreRequeueFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1831,6 +1753,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreRequeueFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1841,6 +1764,7 @@ func (f *StoreRequeueFunc) nextHook() func(context.Context, int, time.Time) erro
 
 ```
 searchKey: mocks.StoreRequeueFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1851,7 +1775,6 @@ func (f *StoreRequeueFunc) appendCall(r0 StoreRequeueFuncCall)
 
 ```
 searchKey: mocks.StoreRequeueFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -1864,7 +1787,6 @@ History returns a sequence of StoreRequeueFuncCall objects describing the invoca
 
 ```
 searchKey: mocks.StoreRequeueFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -1890,7 +1812,6 @@ StoreRequeueFuncCall is an object that describes an invocation of method Requeue
 
 ```
 searchKey: mocks.StoreRequeueFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -1903,7 +1824,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreRequeueFuncCall.Results
-tags: [exported]
 ```
 
 ```Go
@@ -1916,7 +1836,6 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreResetStalledFunc
-tags: [exported]
 ```
 
 ```Go
@@ -1934,7 +1853,6 @@ StoreResetStalledFunc describes the behavior when the ResetStalled method of the
 
 ```
 searchKey: mocks.StoreResetStalledFunc.SetDefaultHook
-tags: [exported]
 ```
 
 ```Go
@@ -1947,7 +1865,6 @@ SetDefaultHook sets function that is called when the ResetStalled method of the 
 
 ```
 searchKey: mocks.StoreResetStalledFunc.PushHook
-tags: [exported]
 ```
 
 ```Go
@@ -1960,7 +1877,6 @@ PushHook adds a function to the end of hook queue. Each invocation of the ResetS
 
 ```
 searchKey: mocks.StoreResetStalledFunc.SetDefaultReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1973,7 +1889,6 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: mocks.StoreResetStalledFunc.PushReturn
-tags: [exported]
 ```
 
 ```Go
@@ -1986,6 +1901,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: mocks.StoreResetStalledFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1996,6 +1912,7 @@ func (f *StoreResetStalledFunc) nextHook() func(context.Context) ([]int, []int, 
 
 ```
 searchKey: mocks.StoreResetStalledFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2006,7 +1923,6 @@ func (f *StoreResetStalledFunc) appendCall(r0 StoreResetStalledFuncCall)
 
 ```
 searchKey: mocks.StoreResetStalledFunc.History
-tags: [exported]
 ```
 
 ```Go
@@ -2019,7 +1935,6 @@ History returns a sequence of StoreResetStalledFuncCall objects describing the i
 
 ```
 searchKey: mocks.StoreResetStalledFuncCall
-tags: [exported]
 ```
 
 ```Go
@@ -2045,7 +1960,6 @@ StoreResetStalledFuncCall is an object that describes an invocation of method Re
 
 ```
 searchKey: mocks.StoreResetStalledFuncCall.Args
-tags: [exported]
 ```
 
 ```Go
@@ -2058,7 +1972,6 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreResetStalledFuncCall.Results
-tags: [exported]
 ```
 
 ```Go

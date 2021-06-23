@@ -21,10 +21,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="src" href="#src">const src</a>
 
 ```
 searchKey: ast_test.src
+tags: [private]
 ```
 
 ```Go
@@ -35,6 +40,7 @@ const src = ...
 
 ```
 searchKey: ast_test.input
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +51,7 @@ const input = ...
 
 ```
 searchKey: ast_test.golden
+tags: [private]
 ```
 
 ```Go
@@ -55,10 +62,15 @@ Calling ast.MergePackageFiles with ast.FilterFuncDuplicates keeps a duplicate en
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="res" href="#res">var res</a>
 
 ```
 searchKey: ast_test.res
+tags: [private]
 ```
 
 ```Go
@@ -69,10 +81,15 @@ res maps a key of the form "line number: node type" to the associated comments' 
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ctext" href="#ctext">func ctext(list []*CommentGroup) string</a>
 
 ```
 searchKey: ast_test.ctext
+tags: [private]
 ```
 
 ```Go
@@ -83,6 +100,7 @@ func ctext(list []*CommentGroup) string
 
 ```
 searchKey: ast_test.TestCommentMap
+tags: [private]
 ```
 
 ```Go
@@ -93,6 +111,7 @@ func TestCommentMap(t *testing.T)
 
 ```
 searchKey: ast_test.TestFilter
+tags: [private]
 ```
 
 ```Go
@@ -103,6 +122,7 @@ func TestFilter(t *testing.T)
 
 ```
 searchKey: ast_test.ExampleInspect
+tags: [private]
 ```
 
 ```Go
@@ -115,6 +135,7 @@ This example demonstrates how to inspect the AST of a Go program.
 
 ```
 searchKey: ast_test.ExamplePrint
+tags: [private]
 ```
 
 ```Go
@@ -127,6 +148,7 @@ This example shows what an AST looks like when printed for debugging.
 
 ```
 searchKey: ast_test.ExampleCommentMap
+tags: [private]
 ```
 
 ```Go
@@ -139,6 +161,7 @@ This example illustrates how to remove a variable declaration in a Go program wh
 
 ```
 searchKey: ast_test.TestFilterDuplicates
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +172,7 @@ func TestFilterDuplicates(t *testing.T)
 
 ```
 searchKey: ast_test.TestIssue33649
+tags: [private]
 ```
 
 ```Go

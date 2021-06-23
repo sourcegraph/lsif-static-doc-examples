@@ -151,7 +151,7 @@ status=500 -- controls the status code
     * [func TestRepoShortName(t *testing.T)](#TestRepoShortName)
     * [func TestNewCommon_repo_error(t *testing.T)](#TestNewCommon_repo_error)
     * [func TestRedirectTreeOrBlob(t *testing.T)](#TestRedirectTreeOrBlob)
-    * [func init()](#init)
+    * [func init()](#init.handlers_test.go)
     * [func TestServeHelp(t *testing.T)](#TestServeHelp)
     * [func TestFindLineRangeInQueryParameters(t *testing.T)](#TestFindLineRangeInQueryParameters)
     * [func TestGetBlobPreviewImageURL(t *testing.T)](#TestGetBlobPreviewImageURL)
@@ -160,7 +160,7 @@ status=500 -- controls the status code
     * [func Test_serveRawWithHTTPRequestMethodHEAD(t *testing.T)](#Test_serveRawWithHTTPRequestMethodHEAD)
     * [func Test_serveRawWithContentArchive(t *testing.T)](#Test_serveRawWithContentArchive)
     * [func Test_serveRawWithContentTypePlain(t *testing.T)](#Test_serveRawWithContentTypePlain)
-    * [func init()](#init)
+    * [func init()](#init.router_test.go)
     * [func TestRouter(t *testing.T)](#TestRouter)
     * [func TestRouter_RootPath(t *testing.T)](#TestRouter_RootPath)
     * [func TestLoadTemplate(t *testing.T)](#TestLoadTemplate)
@@ -168,10 +168,15 @@ status=500 -- controls the status code
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="routeHome" href="#routeHome">const routeHome</a>
 
 ```
 searchKey: ui.routeHome
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +187,7 @@ const routeHome = "home"
 
 ```
 searchKey: ui.routeSearch
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +198,7 @@ const routeSearch = "search"
 
 ```
 searchKey: ui.routeSearchBadge
+tags: [private]
 ```
 
 ```Go
@@ -202,6 +209,7 @@ const routeSearchBadge = "search-badge"
 
 ```
 searchKey: ui.routeRepo
+tags: [private]
 ```
 
 ```Go
@@ -212,6 +220,7 @@ const routeRepo = "repo"
 
 ```
 searchKey: ui.routeRepoSettings
+tags: [private]
 ```
 
 ```Go
@@ -222,6 +231,7 @@ const routeRepoSettings = "repo-settings"
 
 ```
 searchKey: ui.routeRepoCommit
+tags: [private]
 ```
 
 ```Go
@@ -232,6 +242,7 @@ const routeRepoCommit = "repo-commit"
 
 ```
 searchKey: ui.routeRepoBranches
+tags: [private]
 ```
 
 ```Go
@@ -242,6 +253,7 @@ const routeRepoBranches = "repo-branches"
 
 ```
 searchKey: ui.routeRepoDocs
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +264,7 @@ const routeRepoDocs = "repo-docs"
 
 ```
 searchKey: ui.routeRepoCommits
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +275,7 @@ const routeRepoCommits = "repo-commits"
 
 ```
 searchKey: ui.routeRepoTags
+tags: [private]
 ```
 
 ```Go
@@ -272,6 +286,7 @@ const routeRepoTags = "repo-tags"
 
 ```
 searchKey: ui.routeRepoCompare
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +297,7 @@ const routeRepoCompare = "repo-compare"
 
 ```
 searchKey: ui.routeRepoStats
+tags: [private]
 ```
 
 ```Go
@@ -292,6 +308,7 @@ const routeRepoStats = "repo-stats"
 
 ```
 searchKey: ui.routeInsights
+tags: [private]
 ```
 
 ```Go
@@ -302,6 +319,7 @@ const routeInsights = "insights"
 
 ```
 searchKey: ui.routeBatchChanges
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +330,7 @@ const routeBatchChanges = "batch-changes"
 
 ```
 searchKey: ui.routeCodeMonitoring
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +341,7 @@ const routeCodeMonitoring = "code-monitoring"
 
 ```
 searchKey: ui.routeContexts
+tags: [private]
 ```
 
 ```Go
@@ -332,6 +352,7 @@ const routeContexts = "contexts"
 
 ```
 searchKey: ui.routeThreads
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +363,7 @@ const routeThreads = "threads"
 
 ```
 searchKey: ui.routeTree
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +374,7 @@ const routeTree = "tree"
 
 ```
 searchKey: ui.routeBlob
+tags: [private]
 ```
 
 ```Go
@@ -362,6 +385,7 @@ const routeBlob = "blob"
 
 ```
 searchKey: ui.routeRaw
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +396,7 @@ const routeRaw = "raw"
 
 ```
 searchKey: ui.routeOrganizations
+tags: [private]
 ```
 
 ```Go
@@ -382,6 +407,7 @@ const routeOrganizations = "org"
 
 ```
 searchKey: ui.routeSettings
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +418,7 @@ const routeSettings = "settings"
 
 ```
 searchKey: ui.routeSiteAdmin
+tags: [private]
 ```
 
 ```Go
@@ -402,6 +429,7 @@ const routeSiteAdmin = "site-admin"
 
 ```
 searchKey: ui.routeAPIConsole
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +440,7 @@ const routeAPIConsole = "api-console"
 
 ```
 searchKey: ui.routeUser
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +451,7 @@ const routeUser = "user"
 
 ```
 searchKey: ui.routeUserSettings
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +462,7 @@ const routeUserSettings = "user-settings"
 
 ```
 searchKey: ui.routeUserRedirect
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +473,7 @@ const routeUserRedirect = "user-redirect"
 
 ```
 searchKey: ui.routeAboutSubdomain
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +484,7 @@ const routeAboutSubdomain = "about-subdomain"
 
 ```
 searchKey: ui.aboutRedirectScheme
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +495,7 @@ const aboutRedirectScheme = "https"
 
 ```
 searchKey: ui.aboutRedirectHost
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +506,7 @@ const aboutRedirectHost = "about.sourcegraph.com"
 
 ```
 searchKey: ui.routeSurvey
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +517,7 @@ const routeSurvey = "survey"
 
 ```
 searchKey: ui.routeSurveyScore
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +528,7 @@ const routeSurveyScore = "survey-score"
 
 ```
 searchKey: ui.routeRegistry
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +539,7 @@ const routeRegistry = "registry"
 
 ```
 searchKey: ui.routeExtensions
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +550,7 @@ const routeExtensions = "extensions"
 
 ```
 searchKey: ui.routeHelp
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +561,7 @@ const routeHelp = "help"
 
 ```
 searchKey: ui.routeRepoGroups
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +572,7 @@ const routeRepoGroups = "repo-groups"
 
 ```
 searchKey: ui.routeCncf
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +583,7 @@ const routeCncf = "repo-groups.cncf"
 
 ```
 searchKey: ui.routeSnippets
+tags: [private]
 ```
 
 ```Go
@@ -552,6 +594,7 @@ const routeSnippets = "snippets"
 
 ```
 searchKey: ui.routeSubscriptions
+tags: [private]
 ```
 
 ```Go
@@ -562,6 +605,7 @@ const routeSubscriptions = "subscriptions"
 
 ```
 searchKey: ui.routeStats
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +616,7 @@ const routeStats = "stats"
 
 ```
 searchKey: ui.routeViews
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +627,7 @@ const routeViews = "views"
 
 ```
 searchKey: ui.routeDevToolTime
+tags: [private]
 ```
 
 ```Go
@@ -592,6 +638,7 @@ const routeDevToolTime = "devtooltime"
 
 ```
 searchKey: ui.routeSearchQueryBuilder
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +649,7 @@ const routeSearchQueryBuilder = "search.query-builder"
 
 ```
 searchKey: ui.routeSearchStream
+tags: [private]
 ```
 
 ```Go
@@ -612,6 +660,7 @@ const routeSearchStream = "search.stream"
 
 ```
 searchKey: ui.routeSearchConsole
+tags: [private]
 ```
 
 ```Go
@@ -622,6 +671,7 @@ const routeSearchConsole = "search.console"
 
 ```
 searchKey: ui.routeLegacyLogin
+tags: [private]
 ```
 
 ```Go
@@ -634,6 +684,7 @@ Legacy redirects
 
 ```
 searchKey: ui.routeLegacyCareers
+tags: [private]
 ```
 
 ```Go
@@ -644,6 +695,7 @@ const routeLegacyCareers = "careers"
 
 ```
 searchKey: ui.routeLegacyDefLanding
+tags: [private]
 ```
 
 ```Go
@@ -654,6 +706,7 @@ const routeLegacyDefLanding = "page.def.landing"
 
 ```
 searchKey: ui.routeLegacyOldRouteDefLanding
+tags: [private]
 ```
 
 ```Go
@@ -664,6 +717,7 @@ const routeLegacyOldRouteDefLanding = "page.def.landing.old"
 
 ```
 searchKey: ui.routeLegacyRepoLanding
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +728,7 @@ const routeLegacyRepoLanding = "page.repo.landing"
 
 ```
 searchKey: ui.routeLegacyDefRedirectToDefLanding
+tags: [private]
 ```
 
 ```Go
@@ -684,6 +739,7 @@ const routeLegacyDefRedirectToDefLanding = "page.def.redirect"
 
 ```
 searchKey: ui.routeLegacyCampaigns
+tags: [private]
 ```
 
 ```Go
@@ -692,10 +748,15 @@ const routeLegacyCampaigns = "campaigns"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="webpackDevServer" href="#webpackDevServer">var webpackDevServer</a>
 
 ```
 searchKey: ui.webpackDevServer
+tags: [private]
 ```
 
 ```Go
@@ -706,6 +767,7 @@ var webpackDevServer, _ = strconv.ParseBool(os.Getenv("WEBPACK_DEV_SERVER"))
 
 ```
 searchKey: ui.mockNewCommon
+tags: [private]
 ```
 
 ```Go
@@ -726,6 +788,7 @@ defer func() {
 
 ```
 searchKey: ui.goSymbolReg
+tags: [private]
 ```
 
 ```Go
@@ -736,6 +799,7 @@ var goSymbolReg = lazyregexp.New("/info/GoPackage/(.+)$")
 
 ```
 searchKey: ui.legacyDefLandingCounter
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +810,7 @@ var legacyDefLandingCounter = ...
 
 ```
 searchKey: ui.legacyRepoLandingCounter
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +821,7 @@ var legacyRepoLandingCounter = ...
 
 ```
 searchKey: ui.singleLineRegexp
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +832,7 @@ var singleLineRegexp = lazyregexp.New(`^L(\d+)(?::\d+)?$`)
 
 ```
 searchKey: ui.multiLineRangeRegexp
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +843,7 @@ var multiLineRangeRegexp = lazyregexp.New(`^L(\d+)(?::\d+)?-(\d+)(?::\d+)?$`)
 
 ```
 searchKey: ui.metricRawDuration
+tags: [private]
 ```
 
 ```Go
@@ -786,6 +854,7 @@ var metricRawDuration = ...
 
 ```
 searchKey: ui.metricRawArchiveRunning
+tags: [private]
 ```
 
 ```Go
@@ -796,6 +865,7 @@ var metricRawArchiveRunning = ...
 
 ```
 searchKey: ui.aboutRedirects
+tags: [private]
 ```
 
 ```Go
@@ -808,6 +878,7 @@ aboutRedirects contains map entries, each of which indicates that sourcegraph.co
 
 ```
 searchKey: ui.mockServeRepo
+tags: [private]
 ```
 
 ```Go
@@ -818,6 +889,7 @@ var mockServeRepo func(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: ui.appHTML
+tags: [private]
 ```
 
 ```Go
@@ -828,6 +900,7 @@ var appHTML string
 
 ```
 searchKey: ui.errorHTML
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +911,7 @@ var errorHTML string
 
 ```
 searchKey: ui.versionCacheMu
+tags: [private]
 ```
 
 ```Go
@@ -848,6 +922,7 @@ var versionCacheMu sync.RWMutex
 
 ```
 searchKey: ui.versionCache
+tags: [private]
 ```
 
 ```Go
@@ -858,6 +933,7 @@ var versionCache = make(map[string]string)
 
 ```
 searchKey: ui.noAssetVersionString
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +944,7 @@ var _, noAssetVersionString = os.LookupEnv("WEBPACK_DEV_SERVER")
 
 ```
 searchKey: ui.funcMap
+tags: [private]
 ```
 
 ```Go
@@ -880,6 +957,7 @@ Functions that are exposed to templates.
 
 ```
 searchKey: ui.loadTemplateMu
+tags: [private]
 ```
 
 ```Go
@@ -890,6 +968,7 @@ var loadTemplateMu sync.RWMutex
 
 ```
 searchKey: ui.loadTemplateCache
+tags: [private]
 ```
 
 ```Go
@@ -898,11 +977,14 @@ var loadTemplateCache = map[string]*template.Template{}
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="InjectedHTML" href="#InjectedHTML">type InjectedHTML struct</a>
 
 ```
 searchKey: ui.InjectedHTML
-tags: [exported]
 ```
 
 ```Go
@@ -918,7 +1000,6 @@ type InjectedHTML struct {
 
 ```
 searchKey: ui.Metadata
-tags: [exported]
 ```
 
 ```Go
@@ -943,7 +1024,6 @@ type Metadata struct {
 
 ```
 searchKey: ui.Common
-tags: [exported]
 ```
 
 ```Go
@@ -969,6 +1049,7 @@ type Common struct {
 
 ```
 searchKey: ui.newCommon
+tags: [private]
 ```
 
 ```Go
@@ -995,6 +1076,7 @@ In the case of a repository that is cloning, a Common data structure is returned
 
 ```
 searchKey: ui.serveErrorHandler
+tags: [private]
 ```
 
 ```Go
@@ -1007,6 +1089,7 @@ serveErrorHandler is a function signature used in newCommon and mockNewCommon. T
 
 ```
 searchKey: ui.handlerFunc
+tags: [private]
 ```
 
 ```Go
@@ -1017,6 +1100,7 @@ type handlerFunc func(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: ui.serveBrandedPageString
+tags: [private]
 ```
 
 ```Go
@@ -1027,6 +1111,7 @@ func serveBrandedPageString(titles string, description *string) handlerFunc
 
 ```
 searchKey: ui.serveBasicPage
+tags: [private]
 ```
 
 ```Go
@@ -1037,6 +1122,7 @@ func serveBasicPage(title func(c *Common, r *http.Request) string, description *
 
 ```
 searchKey: ui.serveTree
+tags: [private]
 ```
 
 ```Go
@@ -1049,6 +1135,7 @@ serveTree serves the tree (directory) pages.
 
 ```
 searchKey: ui.serveRepoOrBlob
+tags: [private]
 ```
 
 ```Go
@@ -1059,6 +1146,7 @@ func serveRepoOrBlob(routeName string, title func(c *Common, r *http.Request) st
 
 ```
 searchKey: ui.lineRange
+tags: [private]
 ```
 
 ```Go
@@ -1072,6 +1160,7 @@ type lineRange struct {
 
 ```
 searchKey: ui.findLineRangeInQueryParameters
+tags: [private]
 ```
 
 ```Go
@@ -1082,6 +1171,7 @@ func findLineRangeInQueryParameters(queryParameters map[string][]string) *lineRa
 
 ```
 searchKey: ui.getLineRange
+tags: [private]
 ```
 
 ```Go
@@ -1092,6 +1182,7 @@ func getLineRange(value string) *lineRange
 
 ```
 searchKey: ui.recoverError
+tags: [private]
 ```
 
 ```Go
@@ -1105,6 +1196,7 @@ type recoverError struct {
 
 ```
 searchKey: ui.recoverError.Error
+tags: [private]
 ```
 
 ```Go
@@ -1115,6 +1207,7 @@ func (r recoverError) Error() string
 
 ```
 searchKey: ui.pageError
+tags: [private]
 ```
 
 ```Go
@@ -1128,10 +1221,15 @@ type pageError struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="repoShortName" href="#repoShortName">func repoShortName(name api.RepoName) string</a>
 
 ```
 searchKey: ui.repoShortName
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1242,7 @@ repoShortName trims the first path element of the given repo name if it has at l
 
 ```
 searchKey: ui.serveHome
+tags: [private]
 ```
 
 ```Go
@@ -1154,6 +1253,7 @@ func serveHome(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: ui.serveSignIn
+tags: [private]
 ```
 
 ```Go
@@ -1164,6 +1264,7 @@ func serveSignIn(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: ui.redirectTreeOrBlob
+tags: [private]
 ```
 
 ```Go
@@ -1176,6 +1277,7 @@ redirectTreeOrBlob redirects a blob page to a tree page if the file is actually 
 
 ```
 searchKey: ui.searchBadgeHandler
+tags: [private]
 ```
 
 ```Go
@@ -1188,6 +1290,7 @@ searchBadgeHandler serves the search readme badges from the search-badger servic
 
 ```
 searchKey: ui.servePingFromSelfHosted
+tags: [private]
 ```
 
 ```Go
@@ -1198,6 +1301,7 @@ func servePingFromSelfHosted(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: ui.serveHelp
+tags: [private]
 ```
 
 ```Go
@@ -1210,6 +1314,7 @@ serveHelp redirects to documentation pages on [https://docs.sourcegraph.com](htt
 
 ```
 searchKey: ui.serveRepoLanding
+tags: [private]
 ```
 
 ```Go
@@ -1222,6 +1327,7 @@ serveRepoLanding simply redirects the old (sourcegraph.com/<repo>/-/info) repo l
 
 ```
 searchKey: ui.serveDefLanding
+tags: [private]
 ```
 
 ```Go
@@ -1232,6 +1338,7 @@ func serveDefLanding(w http.ResponseWriter, r *http.Request) (err error)
 
 ```
 searchKey: ui.serveDefRedirectToDefLanding
+tags: [private]
 ```
 
 ```Go
@@ -1244,6 +1351,7 @@ serveDefRedirectToDefLanding redirects from /REPO/refs/... and /REPO/def/... URL
 
 ```
 searchKey: ui.serveOldRouteDefLanding
+tags: [private]
 ```
 
 ```Go
@@ -1256,6 +1364,7 @@ Redirect from old /land/ def landing URLs to new /info/ URLs
 
 ```
 searchKey: ui.formatLineRange
+tags: [private]
 ```
 
 ```Go
@@ -1266,6 +1375,7 @@ func formatLineRange(lineRange *lineRange) string
 
 ```
 searchKey: ui.getBlobPreviewImageURL
+tags: [private]
 ```
 
 ```Go
@@ -1276,6 +1386,7 @@ func getBlobPreviewImageURL(previewServiceURL string, blobURLPath string, lineRa
 
 ```
 searchKey: ui.getBlobPreviewTitle
+tags: [private]
 ```
 
 ```Go
@@ -1286,6 +1397,7 @@ func getBlobPreviewTitle(blobFilePath string, lineRange *lineRange) string
 
 ```
 searchKey: ui.serveRaw
+tags: [private]
 ```
 
 ```Go
@@ -1296,6 +1408,7 @@ func serveRaw(w http.ResponseWriter, r *http.Request) (err error)
 
 ```
 searchKey: ui.openArchiveReader
+tags: [private]
 ```
 
 ```Go
@@ -1308,7 +1421,6 @@ openArchiveReader runs git archive and streams the output. Note: we do not use v
 
 ```
 searchKey: ui.Router
-tags: [exported]
 ```
 
 ```Go
@@ -1321,7 +1433,6 @@ Router returns the router that serves pages for our web app.
 
 ```
 searchKey: ui.InitRouter
-tags: [exported]
 ```
 
 ```Go
@@ -1334,6 +1445,7 @@ InitRouter create the router that serves pages for our web app and assigns it to
 
 ```
 searchKey: ui.newRouter
+tags: [private]
 ```
 
 ```Go
@@ -1344,6 +1456,7 @@ func newRouter() *mux.Router
 
 ```
 searchKey: ui.brandNameSubtitle
+tags: [private]
 ```
 
 ```Go
@@ -1356,6 +1469,7 @@ brandNameSubtitle returns a string with the specified title sequence and the bra
 
 ```
 searchKey: ui.initRouter
+tags: [private]
 ```
 
 ```Go
@@ -1366,6 +1480,7 @@ func initRouter(db dbutil.DB, router *mux.Router)
 
 ```
 searchKey: ui.staticRedirectHandler
+tags: [private]
 ```
 
 ```Go
@@ -1385,6 +1500,7 @@ staticRedirectHandler("/foo") serving "[https://sourcegraph.com/bar?q=foo](https
 
 ```
 searchKey: ui.limitString
+tags: [private]
 ```
 
 ```Go
@@ -1397,6 +1513,7 @@ limitString limits the given string to at most N characters, optionally adding a
 
 ```
 searchKey: ui.handler
+tags: [private]
 ```
 
 ```Go
@@ -1416,6 +1533,7 @@ Clients that wish to return their own HTTP status code should use this from thei
 
 ```
 searchKey: ui.serveError
+tags: [private]
 ```
 
 ```Go
@@ -1428,6 +1546,7 @@ serveError serves the error template with the specified error message. It is ass
 
 ```
 searchKey: ui.dangerouslyServeError
+tags: [private]
 ```
 
 ```Go
@@ -1442,6 +1561,7 @@ See [https://github.com/sourcegraph/sourcegraph/issues/9453](https://github.com/
 
 ```
 searchKey: ui.serveErrorNoDebug
+tags: [private]
 ```
 
 ```Go
@@ -1454,6 +1574,7 @@ serveErrorNoDebug should not be called by anyone except serveErrorTest.
 
 ```
 searchKey: ui.serveErrorTest
+tags: [private]
 ```
 
 ```Go
@@ -1472,6 +1593,7 @@ The `nodebug=true` parameter hides error messages (which is ALWAYS the case in p
 
 ```
 searchKey: ui.mapKeys
+tags: [private]
 ```
 
 ```Go
@@ -1482,6 +1604,7 @@ func mapKeys(m map[string]string) (keys []string)
 
 ```
 searchKey: ui.loadTemplate
+tags: [private]
 ```
 
 ```Go
@@ -1494,6 +1617,7 @@ loadTemplate loads the template with the given path. Also loaded along with that
 
 ```
 searchKey: ui.doLoadTemplate
+tags: [private]
 ```
 
 ```Go
@@ -1506,6 +1630,7 @@ doLoadTemplate should only be called by loadTemplate.
 
 ```
 searchKey: ui.renderTemplate
+tags: [private]
 ```
 
 ```Go
@@ -1520,6 +1645,7 @@ The given data is accessible in the template via $.Foobar
 
 ```
 searchKey: ui.TestRedirects
+tags: [private]
 ```
 
 ```Go
@@ -1530,6 +1656,7 @@ func TestRedirects(t *testing.T)
 
 ```
 searchKey: ui.TestRepoShortName
+tags: [private]
 ```
 
 ```Go
@@ -1540,6 +1667,7 @@ func TestRepoShortName(t *testing.T)
 
 ```
 searchKey: ui.TestNewCommon_repo_error
+tags: [private]
 ```
 
 ```Go
@@ -1550,16 +1678,18 @@ func TestNewCommon_repo_error(t *testing.T)
 
 ```
 searchKey: ui.TestRedirectTreeOrBlob
+tags: [private]
 ```
 
 ```Go
 func TestRedirectTreeOrBlob(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.handlers_test.go" href="#init.handlers_test.go">func init()</a>
 
 ```
 searchKey: ui.init
+tags: [private]
 ```
 
 ```Go
@@ -1570,6 +1700,7 @@ func init()
 
 ```
 searchKey: ui.TestServeHelp
+tags: [private]
 ```
 
 ```Go
@@ -1580,6 +1711,7 @@ func TestServeHelp(t *testing.T)
 
 ```
 searchKey: ui.TestFindLineRangeInQueryParameters
+tags: [private]
 ```
 
 ```Go
@@ -1590,6 +1722,7 @@ func TestFindLineRangeInQueryParameters(t *testing.T)
 
 ```
 searchKey: ui.TestGetBlobPreviewImageURL
+tags: [private]
 ```
 
 ```Go
@@ -1600,6 +1733,7 @@ func TestGetBlobPreviewImageURL(t *testing.T)
 
 ```
 searchKey: ui.TestGetBlobPreviewTitle
+tags: [private]
 ```
 
 ```Go
@@ -1610,6 +1744,7 @@ func TestGetBlobPreviewTitle(t *testing.T)
 
 ```
 searchKey: ui.initHTTPTestGitServer
+tags: [private]
 ```
 
 ```Go
@@ -1626,6 +1761,7 @@ TL;DR: This function helps us to mock the gitserver without having to define moc
 
 ```
 searchKey: ui.Test_serveRawWithHTTPRequestMethodHEAD
+tags: [private]
 ```
 
 ```Go
@@ -1636,6 +1772,7 @@ func Test_serveRawWithHTTPRequestMethodHEAD(t *testing.T)
 
 ```
 searchKey: ui.Test_serveRawWithContentArchive
+tags: [private]
 ```
 
 ```Go
@@ -1646,16 +1783,18 @@ func Test_serveRawWithContentArchive(t *testing.T)
 
 ```
 searchKey: ui.Test_serveRawWithContentTypePlain
+tags: [private]
 ```
 
 ```Go
 func Test_serveRawWithContentTypePlain(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.router_test.go" href="#init.router_test.go">func init()</a>
 
 ```
 searchKey: ui.init
+tags: [private]
 ```
 
 ```Go
@@ -1666,6 +1805,7 @@ func init()
 
 ```
 searchKey: ui.TestRouter
+tags: [private]
 ```
 
 ```Go
@@ -1676,6 +1816,7 @@ func TestRouter(t *testing.T)
 
 ```
 searchKey: ui.TestRouter_RootPath
+tags: [private]
 ```
 
 ```Go
@@ -1686,6 +1827,7 @@ func TestRouter_RootPath(t *testing.T)
 
 ```
 searchKey: ui.TestLoadTemplate
+tags: [private]
 ```
 
 ```Go

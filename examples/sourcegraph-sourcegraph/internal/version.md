@@ -11,7 +11,7 @@
     * [var version](#version)
     * [var timestamp](#timestamp)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.version.go)
     * [func Version() string](#Version)
     * [func IsDev(version string) bool](#IsDev)
     * [func Mock(mockVersion string)](#Mock)
@@ -26,10 +26,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="devVersion" href="#devVersion">const devVersion</a>
 
 ```
 searchKey: version.devVersion
+tags: [private]
 ```
 
 ```Go
@@ -39,10 +44,15 @@ const devVersion = "0.0.0+dev" // version string for unreleased development buil
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="devTimestamp" href="#devTimestamp">var devTimestamp</a>
 
 ```
 searchKey: version.devTimestamp
+tags: [private]
 ```
 
 ```Go
@@ -54,6 +64,7 @@ var devTimestamp // build timestamp for unreleased development builds
 
 ```
 searchKey: version.version
+tags: [private]
 ```
 
 ```Go
@@ -68,6 +79,7 @@ The version may not be semver-compatible, e.g. `insiders` or `65769_2020-06-05_9
 
 ```
 searchKey: version.timestamp
+tags: [private]
 ```
 
 ```Go
@@ -78,10 +90,15 @@ timestamp is the build timestamp configured at build time via ldflags like this:
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.version.go" href="#init.version.go">func init()</a>
 
 ```
 searchKey: version.init
+tags: [private]
 ```
 
 ```Go
@@ -92,7 +109,6 @@ func init()
 
 ```
 searchKey: version.Version
-tags: [exported]
 ```
 
 ```Go
@@ -105,7 +121,6 @@ Version returns the version string configured at build time.
 
 ```
 searchKey: version.IsDev
-tags: [exported]
 ```
 
 ```Go
@@ -118,7 +133,6 @@ IsDev reports whether the version string is an unreleased development build.
 
 ```
 searchKey: version.Mock
-tags: [exported]
 ```
 
 ```Go
@@ -131,7 +145,6 @@ Mock is used by tests to mock the result of Version and IsDev.
 
 ```
 searchKey: version.MockTimestamp
-tags: [exported]
 ```
 
 ```Go
@@ -144,7 +157,6 @@ MockTimeStamp is used by tests to mock the current build timestamp
 
 ```
 searchKey: version.HowLongOutOfDate
-tags: [exported]
 ```
 
 ```Go
@@ -157,6 +169,7 @@ HowLongOutOfDate returns a time in months since this build of Sourcegraph was cr
 
 ```
 searchKey: version.monthsFromDays
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +182,7 @@ monthsFromDays roughly determines the number of months given days
 
 ```
 searchKey: version.TestVersion
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +193,7 @@ func TestVersion(t *testing.T)
 
 ```
 searchKey: version.TestIsDev
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +204,7 @@ func TestIsDev(t *testing.T)
 
 ```
 searchKey: version.Test_monthsFromDays
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +215,7 @@ func Test_monthsFromDays(t *testing.T)
 
 ```
 searchKey: version.TestHowLongOutOfDate
+tags: [private]
 ```
 
 ```Go

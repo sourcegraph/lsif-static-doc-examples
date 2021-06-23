@@ -56,14 +56,11 @@ Package hex implements hexadecimal encoding and decoding.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="hextable" href="#hextable">const hextable</a>
 
 ```
 searchKey: hex.hextable
+tags: [private]
 ```
 
 ```Go
@@ -74,6 +71,7 @@ const hextable = "0123456789abcdef"
 
 ```
 searchKey: hex.bufferSize
+tags: [private]
 ```
 
 ```Go
@@ -84,15 +82,10 @@ bufferSize is the number of hexadecimal characters to buffer in encoder and deco
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrLength" href="#ErrLength">var ErrLength</a>
 
 ```
 searchKey: hex.ErrLength
-tags: [exported]
 ```
 
 ```Go
@@ -105,6 +98,7 @@ ErrLength reports an attempt to decode an odd-length input using Decode or Decod
 
 ```
 searchKey: hex.encDecTests
+tags: [private]
 ```
 
 ```Go
@@ -115,6 +109,7 @@ var encDecTests = ...
 
 ```
 searchKey: hex.errTests
+tags: [private]
 ```
 
 ```Go
@@ -125,6 +120,7 @@ var errTests = ...
 
 ```
 searchKey: hex.expectedHexDump
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +131,7 @@ var expectedHexDump = ...
 
 ```
 searchKey: hex.sink
+tags: [private]
 ```
 
 ```Go
@@ -143,15 +140,10 @@ var sink []byte
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="InvalidByteError" href="#InvalidByteError">type InvalidByteError byte</a>
 
 ```
 searchKey: hex.InvalidByteError
-tags: [exported]
 ```
 
 ```Go
@@ -164,7 +156,6 @@ InvalidByteError values describe errors resulting from an invalid byte in a hex 
 
 ```
 searchKey: hex.InvalidByteError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -175,6 +166,7 @@ func (e InvalidByteError) Error() string
 
 ```
 searchKey: hex.encoder
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +181,7 @@ type encoder struct {
 
 ```
 searchKey: hex.encoder.Write
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +192,7 @@ func (e *encoder) Write(p []byte) (n int, err error)
 
 ```
 searchKey: hex.decoder
+tags: [private]
 ```
 
 ```Go
@@ -214,6 +208,7 @@ type decoder struct {
 
 ```
 searchKey: hex.decoder.Read
+tags: [private]
 ```
 
 ```Go
@@ -224,6 +219,7 @@ func (d *decoder) Read(p []byte) (n int, err error)
 
 ```
 searchKey: hex.dumper
+tags: [private]
 ```
 
 ```Go
@@ -241,6 +237,7 @@ type dumper struct {
 
 ```
 searchKey: hex.dumper.Write
+tags: [private]
 ```
 
 ```Go
@@ -251,6 +248,7 @@ func (h *dumper) Write(data []byte) (n int, err error)
 
 ```
 searchKey: hex.dumper.Close
+tags: [private]
 ```
 
 ```Go
@@ -261,6 +259,7 @@ func (h *dumper) Close() (err error)
 
 ```
 searchKey: hex.encDecTest
+tags: [private]
 ```
 
 ```Go
@@ -272,15 +271,10 @@ type encDecTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="EncodedLen" href="#EncodedLen">func EncodedLen(n int) int</a>
 
 ```
 searchKey: hex.EncodedLen
-tags: [exported]
 ```
 
 ```Go
@@ -293,7 +287,6 @@ EncodedLen returns the length of an encoding of n source bytes. Specifically, it
 
 ```
 searchKey: hex.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -306,7 +299,6 @@ Encode encodes src into EncodedLen(len(src)) bytes of dst. As a convenience, it 
 
 ```
 searchKey: hex.DecodedLen
-tags: [exported]
 ```
 
 ```Go
@@ -319,7 +311,6 @@ DecodedLen returns the length of a decoding of x source bytes. Specifically, it 
 
 ```
 searchKey: hex.Decode
-tags: [exported]
 ```
 
 ```Go
@@ -334,6 +325,7 @@ Decode expects that src contains only hexadecimal characters and that src has ev
 
 ```
 searchKey: hex.fromHexChar
+tags: [private]
 ```
 
 ```Go
@@ -346,7 +338,6 @@ fromHexChar converts a hex character into its value and a success flag.
 
 ```
 searchKey: hex.EncodeToString
-tags: [exported]
 ```
 
 ```Go
@@ -359,7 +350,6 @@ EncodeToString returns the hexadecimal encoding of src.
 
 ```
 searchKey: hex.DecodeString
-tags: [exported]
 ```
 
 ```Go
@@ -374,7 +364,6 @@ DecodeString expects that src contains only hexadecimal characters and that src 
 
 ```
 searchKey: hex.Dump
-tags: [exported]
 ```
 
 ```Go
@@ -387,7 +376,6 @@ Dump returns a string that contains a hex dump of the given data. The format of 
 
 ```
 searchKey: hex.NewEncoder
-tags: [exported]
 ```
 
 ```Go
@@ -400,7 +388,6 @@ NewEncoder returns an io.Writer that writes lowercase hexadecimal characters to 
 
 ```
 searchKey: hex.NewDecoder
-tags: [exported]
 ```
 
 ```Go
@@ -413,7 +400,6 @@ NewDecoder returns an io.Reader that decodes hexadecimal characters from r. NewD
 
 ```
 searchKey: hex.Dumper
-tags: [exported]
 ```
 
 ```Go
@@ -426,6 +412,7 @@ Dumper returns a WriteCloser that writes a hex dump of all written data to w. Th
 
 ```
 searchKey: hex.toChar
+tags: [private]
 ```
 
 ```Go
@@ -436,6 +423,7 @@ func toChar(b byte) byte
 
 ```
 searchKey: hex.TestEncode
+tags: [private]
 ```
 
 ```Go
@@ -446,6 +434,7 @@ func TestEncode(t *testing.T)
 
 ```
 searchKey: hex.TestDecode
+tags: [private]
 ```
 
 ```Go
@@ -456,6 +445,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: hex.TestEncodeToString
+tags: [private]
 ```
 
 ```Go
@@ -466,6 +456,7 @@ func TestEncodeToString(t *testing.T)
 
 ```
 searchKey: hex.TestDecodeString
+tags: [private]
 ```
 
 ```Go
@@ -476,6 +467,7 @@ func TestDecodeString(t *testing.T)
 
 ```
 searchKey: hex.TestDecodeErr
+tags: [private]
 ```
 
 ```Go
@@ -486,6 +478,7 @@ func TestDecodeErr(t *testing.T)
 
 ```
 searchKey: hex.TestDecodeStringErr
+tags: [private]
 ```
 
 ```Go
@@ -496,6 +489,7 @@ func TestDecodeStringErr(t *testing.T)
 
 ```
 searchKey: hex.TestEncoderDecoder
+tags: [private]
 ```
 
 ```Go
@@ -506,6 +500,7 @@ func TestEncoderDecoder(t *testing.T)
 
 ```
 searchKey: hex.TestDecoderErr
+tags: [private]
 ```
 
 ```Go
@@ -516,6 +511,7 @@ func TestDecoderErr(t *testing.T)
 
 ```
 searchKey: hex.TestDumper
+tags: [private]
 ```
 
 ```Go
@@ -526,6 +522,7 @@ func TestDumper(t *testing.T)
 
 ```
 searchKey: hex.TestDumper_doubleclose
+tags: [private]
 ```
 
 ```Go
@@ -536,6 +533,7 @@ func TestDumper_doubleclose(t *testing.T)
 
 ```
 searchKey: hex.TestDumper_earlyclose
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +544,7 @@ func TestDumper_earlyclose(t *testing.T)
 
 ```
 searchKey: hex.TestDump
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +555,7 @@ func TestDump(t *testing.T)
 
 ```
 searchKey: hex.BenchmarkEncode
+tags: [private]
 ```
 
 ```Go
@@ -566,6 +566,7 @@ func BenchmarkEncode(b *testing.B)
 
 ```
 searchKey: hex.BenchmarkDecode
+tags: [private]
 ```
 
 ```Go
@@ -576,6 +577,7 @@ func BenchmarkDecode(b *testing.B)
 
 ```
 searchKey: hex.BenchmarkDump
+tags: [private]
 ```
 
 ```Go

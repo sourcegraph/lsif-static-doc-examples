@@ -4,9 +4,7 @@
     "identifier": "iotest",
     "newPage": true,
     "searchKey": "testing/iotest",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "ErrTimeout",
                 "newPage": false,
                 "searchKey": "iotest.ErrTimeout",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,7 +60,9 @@
                 "identifier": "truncateWriterTests",
                 "newPage": false,
                 "searchKey": "iotest.truncateWriterTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -89,9 +85,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -109,7 +103,9 @@
                 "identifier": "writeLogger",
                 "newPage": false,
                 "searchKey": "iotest.writeLogger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +123,9 @@
                       "identifier": "writeLogger.Write",
                       "newPage": false,
                       "searchKey": "iotest.writeLogger.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -150,7 +148,9 @@
                 "identifier": "readLogger",
                 "newPage": false,
                 "searchKey": "iotest.readLogger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +168,9 @@
                       "identifier": "readLogger.Read",
                       "newPage": false,
                       "searchKey": "iotest.readLogger.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -191,7 +193,9 @@
                 "identifier": "oneByteReader",
                 "newPage": false,
                 "searchKey": "iotest.oneByteReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -209,7 +213,9 @@
                       "identifier": "oneByteReader.Read",
                       "newPage": false,
                       "searchKey": "iotest.oneByteReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -232,7 +238,9 @@
                 "identifier": "halfReader",
                 "newPage": false,
                 "searchKey": "iotest.halfReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -250,7 +258,9 @@
                       "identifier": "halfReader.Read",
                       "newPage": false,
                       "searchKey": "iotest.halfReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -273,7 +283,9 @@
                 "identifier": "dataErrReader",
                 "newPage": false,
                 "searchKey": "iotest.dataErrReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -291,7 +303,9 @@
                       "identifier": "dataErrReader.Read",
                       "newPage": false,
                       "searchKey": "iotest.dataErrReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -314,7 +328,9 @@
                 "identifier": "timeoutReader",
                 "newPage": false,
                 "searchKey": "iotest.timeoutReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -332,7 +348,9 @@
                       "identifier": "timeoutReader.Read",
                       "newPage": false,
                       "searchKey": "iotest.timeoutReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -355,7 +373,9 @@
                 "identifier": "errReader",
                 "newPage": false,
                 "searchKey": "iotest.errReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -373,7 +393,9 @@
                       "identifier": "errReader.Read",
                       "newPage": false,
                       "searchKey": "iotest.errReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -396,7 +418,9 @@
                 "identifier": "smallByteReader",
                 "newPage": false,
                 "searchKey": "iotest.smallByteReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -414,7 +438,9 @@
                       "identifier": "smallByteReader.Read",
                       "newPage": false,
                       "searchKey": "iotest.smallByteReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -437,7 +463,9 @@
                 "identifier": "truncateWriter",
                 "newPage": false,
                 "searchKey": "iotest.truncateWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -455,7 +483,9 @@
                       "identifier": "truncateWriter.Write",
                       "newPage": false,
                       "searchKey": "iotest.truncateWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -478,7 +508,9 @@
                 "identifier": "errWriter",
                 "newPage": false,
                 "searchKey": "iotest.errWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -496,7 +528,9 @@
                       "identifier": "errWriter.Write",
                       "newPage": false,
                       "searchKey": "iotest.errWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -522,9 +556,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -542,9 +574,7 @@
                 "identifier": "NewWriteLogger",
                 "newPage": false,
                 "searchKey": "iotest.NewWriteLogger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -564,9 +594,7 @@
                 "identifier": "NewReadLogger",
                 "newPage": false,
                 "searchKey": "iotest.NewReadLogger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -586,9 +614,7 @@
                 "identifier": "OneByteReader",
                 "newPage": false,
                 "searchKey": "iotest.OneByteReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -608,9 +634,7 @@
                 "identifier": "HalfReader",
                 "newPage": false,
                 "searchKey": "iotest.HalfReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -630,9 +654,7 @@
                 "identifier": "DataErrReader",
                 "newPage": false,
                 "searchKey": "iotest.DataErrReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -652,9 +674,7 @@
                 "identifier": "TimeoutReader",
                 "newPage": false,
                 "searchKey": "iotest.TimeoutReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -674,9 +694,7 @@
                 "identifier": "ErrReader",
                 "newPage": false,
                 "searchKey": "iotest.ErrReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -696,9 +714,7 @@
                 "identifier": "TestReader",
                 "newPage": false,
                 "searchKey": "iotest.TestReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -718,9 +734,7 @@
                 "identifier": "TruncateWriter",
                 "newPage": false,
                 "searchKey": "iotest.TruncateWriter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -740,7 +754,9 @@
                 "identifier": "TestWriteLogger",
                 "newPage": false,
                 "searchKey": "iotest.TestWriteLogger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -760,7 +776,9 @@
                 "identifier": "TestWriteLogger_errorOnWrite",
                 "newPage": false,
                 "searchKey": "iotest.TestWriteLogger_errorOnWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -780,7 +798,9 @@
                 "identifier": "TestReadLogger",
                 "newPage": false,
                 "searchKey": "iotest.TestReadLogger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -800,7 +820,9 @@
                 "identifier": "TestReadLogger_errorOnRead",
                 "newPage": false,
                 "searchKey": "iotest.TestReadLogger_errorOnRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -820,7 +842,9 @@
                 "identifier": "TestOneByteReader_nonEmptyReader",
                 "newPage": false,
                 "searchKey": "iotest.TestOneByteReader_nonEmptyReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -840,7 +864,9 @@
                 "identifier": "TestOneByteReader_emptyReader",
                 "newPage": false,
                 "searchKey": "iotest.TestOneByteReader_emptyReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -860,7 +886,9 @@
                 "identifier": "TestHalfReader_nonEmptyReader",
                 "newPage": false,
                 "searchKey": "iotest.TestHalfReader_nonEmptyReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -880,7 +908,9 @@
                 "identifier": "TestHalfReader_emptyReader",
                 "newPage": false,
                 "searchKey": "iotest.TestHalfReader_emptyReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -900,7 +930,9 @@
                 "identifier": "TestTimeOutReader_nonEmptyReader",
                 "newPage": false,
                 "searchKey": "iotest.TestTimeOutReader_nonEmptyReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -920,7 +952,9 @@
                 "identifier": "TestTimeOutReader_emptyReader",
                 "newPage": false,
                 "searchKey": "iotest.TestTimeOutReader_emptyReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -940,7 +974,9 @@
                 "identifier": "TestDataErrReader_nonEmptyReader",
                 "newPage": false,
                 "searchKey": "iotest.TestDataErrReader_nonEmptyReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -960,7 +996,9 @@
                 "identifier": "TestDataErrReader_emptyReader",
                 "newPage": false,
                 "searchKey": "iotest.TestDataErrReader_emptyReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -980,7 +1018,9 @@
                 "identifier": "TestErrReader",
                 "newPage": false,
                 "searchKey": "iotest.TestErrReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1000,7 +1040,9 @@
                 "identifier": "TestStringsReader",
                 "newPage": false,
                 "searchKey": "iotest.TestStringsReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1020,7 +1062,9 @@
                 "identifier": "TestTruncateWriter",
                 "newPage": false,
                 "searchKey": "iotest.TestTruncateWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

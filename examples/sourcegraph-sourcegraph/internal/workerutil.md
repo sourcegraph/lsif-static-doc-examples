@@ -189,11 +189,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Handler" href="#Handler">type Handler interface</a>
 
 ```
 searchKey: workerutil.Handler
-tags: [exported]
 ```
 
 ```Go
@@ -210,7 +213,6 @@ Handler is the configurable consumer within a worker. Types that conform to this
 
 ```
 searchKey: workerutil.WithPreDequeue
-tags: [exported]
 ```
 
 ```Go
@@ -229,7 +231,6 @@ WithPreDequeue is an extension of the Handler interface.
 
 ```
 searchKey: workerutil.WithHooks
-tags: [exported]
 ```
 
 ```Go
@@ -255,7 +256,6 @@ Example use case: The processor for LSIF uploads has a maximum budget based on i
 
 ```
 searchKey: workerutil.WorkerMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -269,7 +269,6 @@ type WorkerMetrics struct {
 
 ```
 searchKey: workerutil.NewMetrics
-tags: [exported]
 ```
 
 ```Go
@@ -291,6 +290,7 @@ The given labels are emitted on each metric.
 
 ```
 searchKey: workerutil.operations
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +303,7 @@ type operations struct {
 
 ```
 searchKey: workerutil.newOperations
+tags: [private]
 ```
 
 ```Go
@@ -313,7 +314,6 @@ func newOperations(observationContext *observation.Context, prefix string, keys,
 
 ```
 searchKey: workerutil.Record
-tags: [exported]
 ```
 
 ```Go
@@ -329,7 +329,6 @@ Record is a generic interface for record conforming to the requirements of the s
 
 ```
 searchKey: workerutil.Store
-tags: [exported]
 ```
 
 ```Go
@@ -372,7 +371,6 @@ Store is the persistence layer for the workerutil package that handles worker-si
 
 ```
 searchKey: workerutil.ExecutionLogEntry
-tags: [exported]
 ```
 
 ```Go
@@ -392,7 +390,6 @@ ExecutionLogEntry represents a command run by the executor.
 
 ```
 searchKey: workerutil.Worker
-tags: [exported]
 ```
 
 ```Go
@@ -415,7 +412,6 @@ Worker is a generic consumer of records from the workerutil store.
 
 ```
 searchKey: workerutil.NewWorker
-tags: [exported]
 ```
 
 ```Go
@@ -426,6 +422,7 @@ func NewWorker(ctx context.Context, store Store, handler Handler, options Worker
 
 ```
 searchKey: workerutil.newWorker
+tags: [private]
 ```
 
 ```Go
@@ -436,7 +433,6 @@ func newWorker(ctx context.Context, store Store, handler Handler, options Worker
 
 ```
 searchKey: workerutil.Worker.Start
-tags: [exported]
 ```
 
 ```Go
@@ -449,7 +445,6 @@ Start begins polling for work from the underlying store and processing records.
 
 ```
 searchKey: workerutil.Worker.Stop
-tags: [exported]
 ```
 
 ```Go
@@ -462,6 +457,7 @@ Stop will cause the worker loop to exit after the current iteration. This is don
 
 ```
 searchKey: workerutil.Worker.dequeueAndHandle
+tags: [private]
 ```
 
 ```Go
@@ -474,6 +470,7 @@ dequeueAndHandle selects a queued record to process. This method returns false i
 
 ```
 searchKey: workerutil.Worker.handle
+tags: [private]
 ```
 
 ```Go
@@ -486,6 +483,7 @@ handle processes the given record locked by the given transaction. This method r
 
 ```
 searchKey: workerutil.Worker.preDequeueHook
+tags: [private]
 ```
 
 ```Go
@@ -498,7 +496,6 @@ preDequeueHook invokes the handler's pre-dequeue hook if it exists.
 
 ```
 searchKey: workerutil.WorkerOptions
-tags: [exported]
 ```
 
 ```Go
@@ -525,6 +522,7 @@ type WorkerOptions struct {
 
 ```
 searchKey: workerutil.MockHandler
+tags: [private]
 ```
 
 ```Go
@@ -541,6 +539,7 @@ MockHandler is a mock implementation of the Handler interface (from the package 
 
 ```
 searchKey: workerutil.NewMockHandler
+tags: [private]
 ```
 
 ```Go
@@ -553,6 +552,7 @@ NewMockHandler creates a new mock of the Handler interface. All methods return z
 
 ```
 searchKey: workerutil.NewMockHandlerFrom
+tags: [private]
 ```
 
 ```Go
@@ -565,6 +565,7 @@ NewMockHandlerFrom creates a new mock of the MockHandler interface. All methods 
 
 ```
 searchKey: workerutil.MockHandler.Handle
+tags: [private]
 ```
 
 ```Go
@@ -577,6 +578,7 @@ Handle delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: workerutil.HandlerHandleFunc
+tags: [private]
 ```
 
 ```Go
@@ -594,6 +596,7 @@ HandlerHandleFunc describes the behavior when the Handle method of the parent Mo
 
 ```
 searchKey: workerutil.HandlerHandleFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -606,6 +609,7 @@ SetDefaultHook sets function that is called when the Handle method of the parent
 
 ```
 searchKey: workerutil.HandlerHandleFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -618,6 +622,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Handle
 
 ```
 searchKey: workerutil.HandlerHandleFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -630,6 +635,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.HandlerHandleFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +648,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.HandlerHandleFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -652,6 +659,7 @@ func (f *HandlerHandleFunc) nextHook() func(context.Context, Store, Record) erro
 
 ```
 searchKey: workerutil.HandlerHandleFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +670,7 @@ func (f *HandlerHandleFunc) appendCall(r0 HandlerHandleFuncCall)
 
 ```
 searchKey: workerutil.HandlerHandleFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +683,7 @@ History returns a sequence of HandlerHandleFuncCall objects describing the invoc
 
 ```
 searchKey: workerutil.HandlerHandleFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -699,6 +709,7 @@ HandlerHandleFuncCall is an object that describes an invocation of method Handle
 
 ```
 searchKey: workerutil.HandlerHandleFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -711,6 +722,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.HandlerHandleFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -723,6 +735,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.MockStore
+tags: [private]
 ```
 
 ```Go
@@ -757,6 +770,7 @@ MockStore is a mock implementation of the Store interface (from the package gith
 
 ```
 searchKey: workerutil.NewMockStore
+tags: [private]
 ```
 
 ```Go
@@ -769,6 +783,7 @@ NewMockStore creates a new mock of the Store interface. All methods return zero 
 
 ```
 searchKey: workerutil.NewMockStoreFrom
+tags: [private]
 ```
 
 ```Go
@@ -781,6 +796,7 @@ NewMockStoreFrom creates a new mock of the MockStore interface. All methods dele
 
 ```
 searchKey: workerutil.MockStore.AddExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -793,6 +809,7 @@ AddExecutionLogEntry delegates to the next hook function in the queue and stores
 
 ```
 searchKey: workerutil.MockStore.Dequeue
+tags: [private]
 ```
 
 ```Go
@@ -805,6 +822,7 @@ Dequeue delegates to the next hook function in the queue and stores the paramete
 
 ```
 searchKey: workerutil.MockStore.Done
+tags: [private]
 ```
 
 ```Go
@@ -817,6 +835,7 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: workerutil.MockStore.MarkComplete
+tags: [private]
 ```
 
 ```Go
@@ -829,6 +848,7 @@ MarkComplete delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: workerutil.MockStore.MarkErrored
+tags: [private]
 ```
 
 ```Go
@@ -841,6 +861,7 @@ MarkErrored delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: workerutil.MockStore.MarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -853,6 +874,7 @@ MarkFailed delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: workerutil.MockStore.QueuedCount
+tags: [private]
 ```
 
 ```Go
@@ -865,6 +887,7 @@ QueuedCount delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFunc
+tags: [private]
 ```
 
 ```Go
@@ -882,6 +905,7 @@ StoreAddExecutionLogEntryFunc describes the behavior when the AddExecutionLogEnt
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -894,6 +918,7 @@ SetDefaultHook sets function that is called when the AddExecutionLogEntry method
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -906,6 +931,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the AddExe
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +944,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -930,6 +957,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -940,6 +968,7 @@ func (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, Ex
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -950,6 +979,7 @@ func (f *StoreAddExecutionLogEntryFunc) appendCall(r0 StoreAddExecutionLogEntryF
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -962,6 +992,7 @@ History returns a sequence of StoreAddExecutionLogEntryFuncCall objects describi
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -987,6 +1018,7 @@ StoreAddExecutionLogEntryFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -999,6 +1031,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.StoreAddExecutionLogEntryFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1011,6 +1044,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.StoreDequeueFunc
+tags: [private]
 ```
 
 ```Go
@@ -1028,6 +1062,7 @@ StoreDequeueFunc describes the behavior when the Dequeue method of the parent Mo
 
 ```
 searchKey: workerutil.StoreDequeueFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1040,6 +1075,7 @@ SetDefaultHook sets function that is called when the Dequeue method of the paren
 
 ```
 searchKey: workerutil.StoreDequeueFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1052,6 +1088,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Dequeu
 
 ```
 searchKey: workerutil.StoreDequeueFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1064,6 +1101,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.StoreDequeueFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1076,6 +1114,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.StoreDequeueFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1086,6 +1125,7 @@ func (f *StoreDequeueFunc) nextHook() func(context.Context, interface{}) (Record
 
 ```
 searchKey: workerutil.StoreDequeueFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1096,6 +1136,7 @@ func (f *StoreDequeueFunc) appendCall(r0 StoreDequeueFuncCall)
 
 ```
 searchKey: workerutil.StoreDequeueFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1108,6 +1149,7 @@ History returns a sequence of StoreDequeueFuncCall objects describing the invoca
 
 ```
 searchKey: workerutil.StoreDequeueFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1139,6 +1181,7 @@ StoreDequeueFuncCall is an object that describes an invocation of method Dequeue
 
 ```
 searchKey: workerutil.StoreDequeueFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1151,6 +1194,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.StoreDequeueFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1163,6 +1207,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.StoreDoneFunc
+tags: [private]
 ```
 
 ```Go
@@ -1180,6 +1225,7 @@ StoreDoneFunc describes the behavior when the Done method of the parent MockStor
 
 ```
 searchKey: workerutil.StoreDoneFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1192,6 +1238,7 @@ SetDefaultHook sets function that is called when the Done method of the parent M
 
 ```
 searchKey: workerutil.StoreDoneFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1204,6 +1251,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Done m
 
 ```
 searchKey: workerutil.StoreDoneFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1216,6 +1264,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.StoreDoneFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1228,6 +1277,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.StoreDoneFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1238,6 +1288,7 @@ func (f *StoreDoneFunc) nextHook() func(error) error
 
 ```
 searchKey: workerutil.StoreDoneFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1248,6 +1299,7 @@ func (f *StoreDoneFunc) appendCall(r0 StoreDoneFuncCall)
 
 ```
 searchKey: workerutil.StoreDoneFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1260,6 +1312,7 @@ History returns a sequence of StoreDoneFuncCall objects describing the invocatio
 
 ```
 searchKey: workerutil.StoreDoneFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1279,6 +1332,7 @@ StoreDoneFuncCall is an object that describes an invocation of method Done on an
 
 ```
 searchKey: workerutil.StoreDoneFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1291,6 +1345,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.StoreDoneFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1303,6 +1358,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.StoreMarkCompleteFunc
+tags: [private]
 ```
 
 ```Go
@@ -1320,6 +1376,7 @@ StoreMarkCompleteFunc describes the behavior when the MarkComplete method of the
 
 ```
 searchKey: workerutil.StoreMarkCompleteFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1332,6 +1389,7 @@ SetDefaultHook sets function that is called when the MarkComplete method of the 
 
 ```
 searchKey: workerutil.StoreMarkCompleteFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1344,6 +1402,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkCo
 
 ```
 searchKey: workerutil.StoreMarkCompleteFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1356,6 +1415,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.StoreMarkCompleteFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1368,6 +1428,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.StoreMarkCompleteFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1378,6 +1439,7 @@ func (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, err
 
 ```
 searchKey: workerutil.StoreMarkCompleteFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1388,6 +1450,7 @@ func (f *StoreMarkCompleteFunc) appendCall(r0 StoreMarkCompleteFuncCall)
 
 ```
 searchKey: workerutil.StoreMarkCompleteFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1400,6 +1463,7 @@ History returns a sequence of StoreMarkCompleteFuncCall objects describing the i
 
 ```
 searchKey: workerutil.StoreMarkCompleteFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1425,6 +1489,7 @@ StoreMarkCompleteFuncCall is an object that describes an invocation of method Ma
 
 ```
 searchKey: workerutil.StoreMarkCompleteFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1437,6 +1502,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.StoreMarkCompleteFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1449,6 +1515,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.StoreMarkErroredFunc
+tags: [private]
 ```
 
 ```Go
@@ -1466,6 +1533,7 @@ StoreMarkErroredFunc describes the behavior when the MarkErrored method of the p
 
 ```
 searchKey: workerutil.StoreMarkErroredFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1546,7 @@ SetDefaultHook sets function that is called when the MarkErrored method of the p
 
 ```
 searchKey: workerutil.StoreMarkErroredFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1490,6 +1559,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkEr
 
 ```
 searchKey: workerutil.StoreMarkErroredFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1502,6 +1572,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.StoreMarkErroredFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1514,6 +1585,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.StoreMarkErroredFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1524,6 +1596,7 @@ func (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bo
 
 ```
 searchKey: workerutil.StoreMarkErroredFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1534,6 +1607,7 @@ func (f *StoreMarkErroredFunc) appendCall(r0 StoreMarkErroredFuncCall)
 
 ```
 searchKey: workerutil.StoreMarkErroredFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1546,6 +1620,7 @@ History returns a sequence of StoreMarkErroredFuncCall objects describing the in
 
 ```
 searchKey: workerutil.StoreMarkErroredFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1574,6 +1649,7 @@ StoreMarkErroredFuncCall is an object that describes an invocation of method Mar
 
 ```
 searchKey: workerutil.StoreMarkErroredFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1586,6 +1662,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.StoreMarkErroredFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1598,6 +1675,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.StoreMarkFailedFunc
+tags: [private]
 ```
 
 ```Go
@@ -1615,6 +1693,7 @@ StoreMarkFailedFunc describes the behavior when the MarkFailed method of the par
 
 ```
 searchKey: workerutil.StoreMarkFailedFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1627,6 +1706,7 @@ SetDefaultHook sets function that is called when the MarkFailed method of the pa
 
 ```
 searchKey: workerutil.StoreMarkFailedFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1639,6 +1719,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the MarkFa
 
 ```
 searchKey: workerutil.StoreMarkFailedFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1651,6 +1732,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.StoreMarkFailedFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1663,6 +1745,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.StoreMarkFailedFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1673,6 +1756,7 @@ func (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (boo
 
 ```
 searchKey: workerutil.StoreMarkFailedFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1683,6 +1767,7 @@ func (f *StoreMarkFailedFunc) appendCall(r0 StoreMarkFailedFuncCall)
 
 ```
 searchKey: workerutil.StoreMarkFailedFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1695,6 +1780,7 @@ History returns a sequence of StoreMarkFailedFuncCall objects describing the inv
 
 ```
 searchKey: workerutil.StoreMarkFailedFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1723,6 +1809,7 @@ StoreMarkFailedFuncCall is an object that describes an invocation of method Mark
 
 ```
 searchKey: workerutil.StoreMarkFailedFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1735,6 +1822,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.StoreMarkFailedFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1747,6 +1835,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.StoreQueuedCountFunc
+tags: [private]
 ```
 
 ```Go
@@ -1764,6 +1853,7 @@ StoreQueuedCountFunc describes the behavior when the QueuedCount method of the p
 
 ```
 searchKey: workerutil.StoreQueuedCountFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1776,6 +1866,7 @@ SetDefaultHook sets function that is called when the QueuedCount method of the p
 
 ```
 searchKey: workerutil.StoreQueuedCountFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -1788,6 +1879,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the Queued
 
 ```
 searchKey: workerutil.StoreQueuedCountFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -1800,6 +1892,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.StoreQueuedCountFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -1812,6 +1905,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.StoreQueuedCountFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -1822,6 +1916,7 @@ func (f *StoreQueuedCountFunc) nextHook() func(context.Context, interface{}) (in
 
 ```
 searchKey: workerutil.StoreQueuedCountFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -1832,6 +1927,7 @@ func (f *StoreQueuedCountFunc) appendCall(r0 StoreQueuedCountFuncCall)
 
 ```
 searchKey: workerutil.StoreQueuedCountFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -1844,6 +1940,7 @@ History returns a sequence of StoreQueuedCountFuncCall objects describing the in
 
 ```
 searchKey: workerutil.StoreQueuedCountFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -1869,6 +1966,7 @@ StoreQueuedCountFuncCall is an object that describes an invocation of method Que
 
 ```
 searchKey: workerutil.StoreQueuedCountFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -1881,6 +1979,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.StoreQueuedCountFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -1893,6 +1992,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.MockWithHooks
+tags: [private]
 ```
 
 ```Go
@@ -1912,6 +2012,7 @@ MockWithHooks is a mock implementation of the WithHooks interface (from the pack
 
 ```
 searchKey: workerutil.NewMockWithHooks
+tags: [private]
 ```
 
 ```Go
@@ -1924,6 +2025,7 @@ NewMockWithHooks creates a new mock of the WithHooks interface. All methods retu
 
 ```
 searchKey: workerutil.NewMockWithHooksFrom
+tags: [private]
 ```
 
 ```Go
@@ -1936,6 +2038,7 @@ NewMockWithHooksFrom creates a new mock of the MockWithHooks interface. All meth
 
 ```
 searchKey: workerutil.MockWithHooks.PostHandle
+tags: [private]
 ```
 
 ```Go
@@ -1948,6 +2051,7 @@ PostHandle delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: workerutil.MockWithHooks.PreHandle
+tags: [private]
 ```
 
 ```Go
@@ -1960,6 +2064,7 @@ PreHandle delegates to the next hook function in the queue and stores the parame
 
 ```
 searchKey: workerutil.WithHooksPostHandleFunc
+tags: [private]
 ```
 
 ```Go
@@ -1977,6 +2082,7 @@ WithHooksPostHandleFunc describes the behavior when the PostHandle method of the
 
 ```
 searchKey: workerutil.WithHooksPostHandleFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -1989,6 +2095,7 @@ SetDefaultHook sets function that is called when the PostHandle method of the pa
 
 ```
 searchKey: workerutil.WithHooksPostHandleFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2001,6 +2108,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the PostHa
 
 ```
 searchKey: workerutil.WithHooksPostHandleFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2013,6 +2121,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.WithHooksPostHandleFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2025,6 +2134,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.WithHooksPostHandleFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2035,6 +2145,7 @@ func (f *WithHooksPostHandleFunc) nextHook() func(context.Context, Record)
 
 ```
 searchKey: workerutil.WithHooksPostHandleFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2045,6 +2156,7 @@ func (f *WithHooksPostHandleFunc) appendCall(r0 WithHooksPostHandleFuncCall)
 
 ```
 searchKey: workerutil.WithHooksPostHandleFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2057,6 +2169,7 @@ History returns a sequence of WithHooksPostHandleFuncCall objects describing the
 
 ```
 searchKey: workerutil.WithHooksPostHandleFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2076,6 +2189,7 @@ WithHooksPostHandleFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: workerutil.WithHooksPostHandleFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2088,6 +2202,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.WithHooksPostHandleFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2100,6 +2215,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.WithHooksPreHandleFunc
+tags: [private]
 ```
 
 ```Go
@@ -2117,6 +2233,7 @@ WithHooksPreHandleFunc describes the behavior when the PreHandle method of the p
 
 ```
 searchKey: workerutil.WithHooksPreHandleFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2129,6 +2246,7 @@ SetDefaultHook sets function that is called when the PreHandle method of the par
 
 ```
 searchKey: workerutil.WithHooksPreHandleFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2141,6 +2259,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the PreHan
 
 ```
 searchKey: workerutil.WithHooksPreHandleFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2153,6 +2272,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.WithHooksPreHandleFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2165,6 +2285,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.WithHooksPreHandleFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2175,6 +2296,7 @@ func (f *WithHooksPreHandleFunc) nextHook() func(context.Context, Record)
 
 ```
 searchKey: workerutil.WithHooksPreHandleFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2185,6 +2307,7 @@ func (f *WithHooksPreHandleFunc) appendCall(r0 WithHooksPreHandleFuncCall)
 
 ```
 searchKey: workerutil.WithHooksPreHandleFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2197,6 +2320,7 @@ History returns a sequence of WithHooksPreHandleFuncCall objects describing the 
 
 ```
 searchKey: workerutil.WithHooksPreHandleFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2216,6 +2340,7 @@ WithHooksPreHandleFuncCall is an object that describes an invocation of method P
 
 ```
 searchKey: workerutil.WithHooksPreHandleFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2228,6 +2353,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.WithHooksPreHandleFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2240,6 +2366,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.MockWithPreDequeue
+tags: [private]
 ```
 
 ```Go
@@ -2256,6 +2383,7 @@ MockWithPreDequeue is a mock implementation of the WithPreDequeue interface (fro
 
 ```
 searchKey: workerutil.NewMockWithPreDequeue
+tags: [private]
 ```
 
 ```Go
@@ -2268,6 +2396,7 @@ NewMockWithPreDequeue creates a new mock of the WithPreDequeue interface. All me
 
 ```
 searchKey: workerutil.NewMockWithPreDequeueFrom
+tags: [private]
 ```
 
 ```Go
@@ -2280,6 +2409,7 @@ NewMockWithPreDequeueFrom creates a new mock of the MockWithPreDequeue interface
 
 ```
 searchKey: workerutil.MockWithPreDequeue.PreDequeue
+tags: [private]
 ```
 
 ```Go
@@ -2292,6 +2422,7 @@ PreDequeue delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFunc
+tags: [private]
 ```
 
 ```Go
@@ -2309,6 +2440,7 @@ WithPreDequeuePreDequeueFunc describes the behavior when the PreDequeue method o
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFunc.SetDefaultHook
+tags: [private]
 ```
 
 ```Go
@@ -2321,6 +2453,7 @@ SetDefaultHook sets function that is called when the PreDequeue method of the pa
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFunc.PushHook
+tags: [private]
 ```
 
 ```Go
@@ -2333,6 +2466,7 @@ PushHook adds a function to the end of hook queue. Each invocation of the PreDeq
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFunc.SetDefaultReturn
+tags: [private]
 ```
 
 ```Go
@@ -2345,6 +2479,7 @@ SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the gi
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFunc.PushReturn
+tags: [private]
 ```
 
 ```Go
@@ -2357,6 +2492,7 @@ PushReturn calls PushDefaultHook with a function that returns the given values.
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFunc.nextHook
+tags: [private]
 ```
 
 ```Go
@@ -2367,6 +2503,7 @@ func (f *WithPreDequeuePreDequeueFunc) nextHook() func(context.Context) (bool, i
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFunc.appendCall
+tags: [private]
 ```
 
 ```Go
@@ -2377,6 +2514,7 @@ func (f *WithPreDequeuePreDequeueFunc) appendCall(r0 WithPreDequeuePreDequeueFun
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFunc.History
+tags: [private]
 ```
 
 ```Go
@@ -2389,6 +2527,7 @@ History returns a sequence of WithPreDequeuePreDequeueFuncCall objects describin
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFuncCall
+tags: [private]
 ```
 
 ```Go
@@ -2414,6 +2553,7 @@ WithPreDequeuePreDequeueFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFuncCall.Args
+tags: [private]
 ```
 
 ```Go
@@ -2426,6 +2566,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: workerutil.WithPreDequeuePreDequeueFuncCall.Results
+tags: [private]
 ```
 
 ```Go
@@ -2438,6 +2579,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: workerutil.TestRecord
+tags: [private]
 ```
 
 ```Go
@@ -2451,6 +2593,7 @@ type TestRecord struct {
 
 ```
 searchKey: workerutil.TestRecord.RecordID
+tags: [private]
 ```
 
 ```Go
@@ -2461,6 +2604,7 @@ func (v TestRecord) RecordID() int
 
 ```
 searchKey: workerutil.nonRetryableTestErr
+tags: [private]
 ```
 
 ```Go
@@ -2471,6 +2615,7 @@ type nonRetryableTestErr struct{}
 
 ```
 searchKey: workerutil.nonRetryableTestErr.Error
+tags: [private]
 ```
 
 ```Go
@@ -2481,6 +2626,7 @@ func (e nonRetryableTestErr) Error() string
 
 ```
 searchKey: workerutil.nonRetryableTestErr.NonRetryable
+tags: [private]
 ```
 
 ```Go
@@ -2491,6 +2637,7 @@ func (e nonRetryableTestErr) NonRetryable() bool
 
 ```
 searchKey: workerutil.MockHandlerWithPreDequeue
+tags: [private]
 ```
 
 ```Go
@@ -2504,6 +2651,7 @@ type MockHandlerWithPreDequeue struct {
 
 ```
 searchKey: workerutil.NewMockHandlerWithPreDequeue
+tags: [private]
 ```
 
 ```Go
@@ -2514,6 +2662,7 @@ func NewMockHandlerWithPreDequeue() *MockHandlerWithPreDequeue
 
 ```
 searchKey: workerutil.MockHandlerWithHooks
+tags: [private]
 ```
 
 ```Go
@@ -2527,6 +2676,7 @@ type MockHandlerWithHooks struct {
 
 ```
 searchKey: workerutil.NewMockHandlerWithHooks
+tags: [private]
 ```
 
 ```Go
@@ -2535,10 +2685,15 @@ func NewMockHandlerWithHooks() *MockHandlerWithHooks
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestMain" href="#TestMain">func TestMain(m *testing.M)</a>
 
 ```
 searchKey: workerutil.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -2549,6 +2704,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: workerutil.TestWorkerHandlerSuccess
+tags: [private]
 ```
 
 ```Go
@@ -2559,6 +2715,7 @@ func TestWorkerHandlerSuccess(t *testing.T)
 
 ```
 searchKey: workerutil.TestWorkerHandlerFailure
+tags: [private]
 ```
 
 ```Go
@@ -2569,6 +2726,7 @@ func TestWorkerHandlerFailure(t *testing.T)
 
 ```
 searchKey: workerutil.TestWorkerHandlerNonRetryableFailure
+tags: [private]
 ```
 
 ```Go
@@ -2579,6 +2737,7 @@ func TestWorkerHandlerNonRetryableFailure(t *testing.T)
 
 ```
 searchKey: workerutil.TestWorkerConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -2589,6 +2748,7 @@ func TestWorkerConcurrent(t *testing.T)
 
 ```
 searchKey: workerutil.TestWorkerBlockingPreDequeueHook
+tags: [private]
 ```
 
 ```Go
@@ -2599,6 +2759,7 @@ func TestWorkerBlockingPreDequeueHook(t *testing.T)
 
 ```
 searchKey: workerutil.TestWorkerConditionalPreDequeueHook
+tags: [private]
 ```
 
 ```Go

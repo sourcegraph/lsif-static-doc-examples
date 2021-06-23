@@ -12,7 +12,7 @@
 * [Types](#type)
     * [type Config struct](#Config)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.config.go)
     * [func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error](#Init)
     * [func newResolver(ctx context.Context, db dbutil.DB, observationContext *observation.Context) (gql.CodeIntelResolver, error)](#newResolver)
     * [func newUploadHandler(ctx context.Context, db dbutil.DB) (func(internal bool) http.Handler, error)](#newUploadHandler)
@@ -24,10 +24,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="config" href="#config">var config</a>
 
 ```
 searchKey: codeintel.config
+tags: [private]
 ```
 
 ```Go
@@ -38,6 +43,7 @@ var config = &Config{}
 
 ```
 searchKey: codeintel.services
+tags: [private]
 ```
 
 ```Go
@@ -56,6 +62,7 @@ var services struct {
 
 ```
 searchKey: codeintel.once
+tags: [private]
 ```
 
 ```Go
@@ -64,11 +71,14 @@ var once sync.Once
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
 searchKey: codeintel.Config
-tags: [exported]
 ```
 
 ```Go
@@ -92,10 +102,15 @@ type Config struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.config.go" href="#init.config.go">func init()</a>
 
 ```
 searchKey: codeintel.init
+tags: [private]
 ```
 
 ```Go
@@ -106,7 +121,6 @@ func init()
 
 ```
 searchKey: codeintel.Init
-tags: [exported]
 ```
 
 ```Go
@@ -117,6 +131,7 @@ func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigrat
 
 ```
 searchKey: codeintel.newResolver
+tags: [private]
 ```
 
 ```Go
@@ -127,6 +142,7 @@ func newResolver(ctx context.Context, db dbutil.DB, observationContext *observat
 
 ```
 searchKey: codeintel.newUploadHandler
+tags: [private]
 ```
 
 ```Go
@@ -137,6 +153,7 @@ func newUploadHandler(ctx context.Context, db dbutil.DB) (func(internal bool) ht
 
 ```
 searchKey: codeintel.registerMigrations
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +166,7 @@ registerMigrations registers all out-of-band migration instances that should run
 
 ```
 searchKey: codeintel.initServices
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +177,7 @@ func initServices(ctx context.Context, db dbutil.DB) error
 
 ```
 searchKey: codeintel.mustInitializeCodeIntelDB
+tags: [private]
 ```
 
 ```Go
@@ -169,7 +188,6 @@ func mustInitializeCodeIntelDB() *sql.DB
 
 ```
 searchKey: codeintel.NewCodeIntelUploadHandler
-tags: [exported]
 ```
 
 ```Go

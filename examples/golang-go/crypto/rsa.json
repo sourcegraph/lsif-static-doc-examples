@@ -4,9 +4,7 @@
     "identifier": "rsa",
     "newPage": true,
     "searchKey": "crypto/rsa",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "PSSSaltLengthAuto",
                 "newPage": false,
                 "searchKey": "rsa.PSSSaltLengthAuto",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "PSSSaltLengthEqualsHash",
                 "newPage": false,
                 "searchKey": "rsa.PSSSaltLengthEqualsHash",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -91,9 +83,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -111,7 +101,9 @@
                 "identifier": "hashPrefixes",
                 "newPage": false,
                 "searchKey": "rsa.hashPrefixes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -131,7 +123,9 @@
                 "identifier": "bigZero",
                 "newPage": false,
                 "searchKey": "rsa.bigZero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -151,7 +145,9 @@
                 "identifier": "bigOne",
                 "newPage": false,
                 "searchKey": "rsa.bigOne",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -171,7 +167,9 @@
                 "identifier": "errPublicModulus",
                 "newPage": false,
                 "searchKey": "rsa.errPublicModulus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -191,7 +189,9 @@
                 "identifier": "errPublicExponentSmall",
                 "newPage": false,
                 "searchKey": "rsa.errPublicExponentSmall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -211,7 +211,9 @@
                 "identifier": "errPublicExponentLarge",
                 "newPage": false,
                 "searchKey": "rsa.errPublicExponentLarge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -231,9 +233,7 @@
                 "identifier": "ErrMessageTooLong",
                 "newPage": false,
                 "searchKey": "rsa.ErrMessageTooLong",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -253,9 +253,7 @@
                 "identifier": "ErrDecryption",
                 "newPage": false,
                 "searchKey": "rsa.ErrDecryption",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -275,9 +273,7 @@
                 "identifier": "ErrVerification",
                 "newPage": false,
                 "searchKey": "rsa.ErrVerification",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -297,7 +293,9 @@
                 "identifier": "decryptPKCS1v15Tests",
                 "newPage": false,
                 "searchKey": "rsa.decryptPKCS1v15Tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -317,7 +315,9 @@
                 "identifier": "decryptPKCS1v15SessionKeyTests",
                 "newPage": false,
                 "searchKey": "rsa.decryptPKCS1v15SessionKeyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -337,7 +337,9 @@
                 "identifier": "signPKCS1v15Tests",
                 "newPage": false,
                 "searchKey": "rsa.signPKCS1v15Tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -357,7 +359,9 @@
                 "identifier": "rsaPrivateKey",
                 "newPage": false,
                 "searchKey": "rsa.rsaPrivateKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -377,7 +381,9 @@
                 "identifier": "test2048Key",
                 "newPage": false,
                 "searchKey": "rsa.test2048Key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -397,7 +403,9 @@
                 "identifier": "testEncryptOAEPData",
                 "newPage": false,
                 "searchKey": "rsa.testEncryptOAEPData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -420,9 +428,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -440,9 +446,7 @@
                 "identifier": "PKCS1v15DecryptOptions",
                 "newPage": false,
                 "searchKey": "rsa.PKCS1v15DecryptOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -462,9 +466,7 @@
                 "identifier": "PSSOptions",
                 "newPage": false,
                 "searchKey": "rsa.PSSOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -482,9 +484,7 @@
                       "identifier": "PSSOptions.HashFunc",
                       "newPage": false,
                       "searchKey": "rsa.PSSOptions.HashFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -504,7 +504,9 @@
                       "identifier": "PSSOptions.saltLength",
                       "newPage": false,
                       "searchKey": "rsa.PSSOptions.saltLength",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -527,9 +529,7 @@
                 "identifier": "PublicKey",
                 "newPage": false,
                 "searchKey": "rsa.PublicKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -547,9 +547,7 @@
                       "identifier": "PublicKey.Size",
                       "newPage": false,
                       "searchKey": "rsa.PublicKey.Size",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -569,9 +567,7 @@
                       "identifier": "PublicKey.Equal",
                       "newPage": false,
                       "searchKey": "rsa.PublicKey.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -594,9 +590,7 @@
                 "identifier": "OAEPOptions",
                 "newPage": false,
                 "searchKey": "rsa.OAEPOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -616,9 +610,7 @@
                 "identifier": "PrivateKey",
                 "newPage": false,
                 "searchKey": "rsa.PrivateKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -636,9 +628,7 @@
                       "identifier": "GenerateKey",
                       "newPage": false,
                       "searchKey": "rsa.GenerateKey",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -658,9 +648,7 @@
                       "identifier": "GenerateMultiPrimeKey",
                       "newPage": false,
                       "searchKey": "rsa.GenerateMultiPrimeKey",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -680,9 +668,7 @@
                       "identifier": "PrivateKey.Public",
                       "newPage": false,
                       "searchKey": "rsa.PrivateKey.Public",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -702,9 +688,7 @@
                       "identifier": "PrivateKey.Equal",
                       "newPage": false,
                       "searchKey": "rsa.PrivateKey.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -724,9 +708,7 @@
                       "identifier": "PrivateKey.Sign",
                       "newPage": false,
                       "searchKey": "rsa.PrivateKey.Sign",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -746,9 +728,7 @@
                       "identifier": "PrivateKey.Decrypt",
                       "newPage": false,
                       "searchKey": "rsa.PrivateKey.Decrypt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -768,9 +748,7 @@
                       "identifier": "PrivateKey.Validate",
                       "newPage": false,
                       "searchKey": "rsa.PrivateKey.Validate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -790,9 +768,7 @@
                       "identifier": "PrivateKey.Precompute",
                       "newPage": false,
                       "searchKey": "rsa.PrivateKey.Precompute",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -815,9 +791,7 @@
                 "identifier": "PrecomputedValues",
                 "newPage": false,
                 "searchKey": "rsa.PrecomputedValues",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -837,9 +811,7 @@
                 "identifier": "CRTValue",
                 "newPage": false,
                 "searchKey": "rsa.CRTValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -859,7 +831,9 @@
                 "identifier": "DecryptPKCS1v15Test",
                 "newPage": false,
                 "searchKey": "rsa.DecryptPKCS1v15Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -879,7 +853,9 @@
                 "identifier": "signPKCS1v15Test",
                 "newPage": false,
                 "searchKey": "rsa.signPKCS1v15Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -899,7 +875,9 @@
                 "identifier": "testEncryptOAEPMessage",
                 "newPage": false,
                 "searchKey": "rsa.testEncryptOAEPMessage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -919,7 +897,9 @@
                 "identifier": "testEncryptOAEPStruct",
                 "newPage": false,
                 "searchKey": "rsa.testEncryptOAEPStruct",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -942,9 +922,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -962,9 +940,7 @@
                 "identifier": "EncryptPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.EncryptPKCS1v15",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -984,9 +960,7 @@
                 "identifier": "DecryptPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.DecryptPKCS1v15",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1006,9 +980,7 @@
                 "identifier": "DecryptPKCS1v15SessionKey",
                 "newPage": false,
                 "searchKey": "rsa.DecryptPKCS1v15SessionKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1028,7 +1000,9 @@
                 "identifier": "decryptPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.decryptPKCS1v15",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1048,7 +1022,9 @@
                 "identifier": "nonZeroRandomBytes",
                 "newPage": false,
                 "searchKey": "rsa.nonZeroRandomBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1068,9 +1044,7 @@
                 "identifier": "SignPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.SignPKCS1v15",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1090,9 +1064,7 @@
                 "identifier": "VerifyPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.VerifyPKCS1v15",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1112,7 +1084,9 @@
                 "identifier": "pkcs1v15HashInfo",
                 "newPage": false,
                 "searchKey": "rsa.pkcs1v15HashInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1132,7 +1106,9 @@
                 "identifier": "emsaPSSEncode",
                 "newPage": false,
                 "searchKey": "rsa.emsaPSSEncode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1152,7 +1128,9 @@
                 "identifier": "emsaPSSVerify",
                 "newPage": false,
                 "searchKey": "rsa.emsaPSSVerify",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1172,7 +1150,9 @@
                 "identifier": "signPSSWithSalt",
                 "newPage": false,
                 "searchKey": "rsa.signPSSWithSalt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1192,9 +1172,7 @@
                 "identifier": "SignPSS",
                 "newPage": false,
                 "searchKey": "rsa.SignPSS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1214,9 +1192,7 @@
                 "identifier": "VerifyPSS",
                 "newPage": false,
                 "searchKey": "rsa.VerifyPSS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1236,7 +1212,9 @@
                 "identifier": "checkPub",
                 "newPage": false,
                 "searchKey": "rsa.checkPub",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1256,7 +1234,9 @@
                 "identifier": "incCounter",
                 "newPage": false,
                 "searchKey": "rsa.incCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1276,7 +1256,9 @@
                 "identifier": "mgf1XOR",
                 "newPage": false,
                 "searchKey": "rsa.mgf1XOR",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1296,7 +1278,9 @@
                 "identifier": "encrypt",
                 "newPage": false,
                 "searchKey": "rsa.encrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1316,9 +1300,7 @@
                 "identifier": "EncryptOAEP",
                 "newPage": false,
                 "searchKey": "rsa.EncryptOAEP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1338,7 +1320,9 @@
                 "identifier": "decrypt",
                 "newPage": false,
                 "searchKey": "rsa.decrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1358,7 +1342,9 @@
                 "identifier": "decryptAndCheck",
                 "newPage": false,
                 "searchKey": "rsa.decryptAndCheck",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1378,9 +1364,7 @@
                 "identifier": "DecryptOAEP",
                 "newPage": false,
                 "searchKey": "rsa.DecryptOAEP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1400,7 +1384,9 @@
                 "identifier": "ExampleDecryptPKCS1v15SessionKey",
                 "newPage": false,
                 "searchKey": "rsa.ExampleDecryptPKCS1v15SessionKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1420,7 +1406,9 @@
                 "identifier": "ExampleSignPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.ExampleSignPKCS1v15",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1440,7 +1428,9 @@
                 "identifier": "ExampleVerifyPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.ExampleVerifyPKCS1v15",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1460,7 +1450,9 @@
                 "identifier": "ExampleEncryptOAEP",
                 "newPage": false,
                 "searchKey": "rsa.ExampleEncryptOAEP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1480,7 +1472,9 @@
                 "identifier": "ExampleDecryptOAEP",
                 "newPage": false,
                 "searchKey": "rsa.ExampleDecryptOAEP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1500,7 +1494,9 @@
                 "identifier": "decodeBase64",
                 "newPage": false,
                 "searchKey": "rsa.decodeBase64",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1520,7 +1516,9 @@
                 "identifier": "TestDecryptPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.TestDecryptPKCS1v15",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1540,7 +1538,9 @@
                 "identifier": "TestEncryptPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.TestEncryptPKCS1v15",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1560,7 +1560,9 @@
                 "identifier": "TestEncryptPKCS1v15SessionKey",
                 "newPage": false,
                 "searchKey": "rsa.TestEncryptPKCS1v15SessionKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1580,7 +1582,9 @@
                 "identifier": "TestEncryptPKCS1v15DecrypterSessionKey",
                 "newPage": false,
                 "searchKey": "rsa.TestEncryptPKCS1v15DecrypterSessionKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1600,7 +1604,9 @@
                 "identifier": "TestNonZeroRandomBytes",
                 "newPage": false,
                 "searchKey": "rsa.TestNonZeroRandomBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1620,7 +1626,9 @@
                 "identifier": "TestSignPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.TestSignPKCS1v15",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1640,7 +1648,9 @@
                 "identifier": "TestVerifyPKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.TestVerifyPKCS1v15",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1660,7 +1670,9 @@
                 "identifier": "TestOverlongMessagePKCS1v15",
                 "newPage": false,
                 "searchKey": "rsa.TestOverlongMessagePKCS1v15",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1680,7 +1692,9 @@
                 "identifier": "TestUnpaddedSignature",
                 "newPage": false,
                 "searchKey": "rsa.TestUnpaddedSignature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1700,7 +1714,9 @@
                 "identifier": "TestShortSessionKey",
                 "newPage": false,
                 "searchKey": "rsa.TestShortSessionKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1720,7 +1736,9 @@
                 "identifier": "TestShortPKCS1v15Signature",
                 "newPage": false,
                 "searchKey": "rsa.TestShortPKCS1v15Signature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1740,7 +1758,9 @@
                 "identifier": "TestEMSAPSS",
                 "newPage": false,
                 "searchKey": "rsa.TestEMSAPSS",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1760,7 +1780,9 @@
                 "identifier": "TestPSSGolden",
                 "newPage": false,
                 "searchKey": "rsa.TestPSSGolden",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1780,7 +1802,9 @@
                 "identifier": "TestPSSOpenSSL",
                 "newPage": false,
                 "searchKey": "rsa.TestPSSOpenSSL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1800,7 +1824,9 @@
                 "identifier": "TestPSSNilOpts",
                 "newPage": false,
                 "searchKey": "rsa.TestPSSNilOpts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1820,7 +1846,9 @@
                 "identifier": "TestPSSSigning",
                 "newPage": false,
                 "searchKey": "rsa.TestPSSSigning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1840,7 +1868,9 @@
                 "identifier": "TestSignWithPSSSaltLengthAuto",
                 "newPage": false,
                 "searchKey": "rsa.TestSignWithPSSSaltLengthAuto",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1860,7 +1890,9 @@
                 "identifier": "bigFromHex",
                 "newPage": false,
                 "searchKey": "rsa.bigFromHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1880,7 +1912,9 @@
                 "identifier": "intFromHex",
                 "newPage": false,
                 "searchKey": "rsa.intFromHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1900,7 +1934,9 @@
                 "identifier": "fromHex",
                 "newPage": false,
                 "searchKey": "rsa.fromHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1920,7 +1956,9 @@
                 "identifier": "TestKeyGeneration",
                 "newPage": false,
                 "searchKey": "rsa.TestKeyGeneration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1940,7 +1978,9 @@
                 "identifier": "Test3PrimeKeyGeneration",
                 "newPage": false,
                 "searchKey": "rsa.Test3PrimeKeyGeneration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1960,7 +2000,9 @@
                 "identifier": "Test4PrimeKeyGeneration",
                 "newPage": false,
                 "searchKey": "rsa.Test4PrimeKeyGeneration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1980,7 +2022,9 @@
                 "identifier": "TestNPrimeKeyGeneration",
                 "newPage": false,
                 "searchKey": "rsa.TestNPrimeKeyGeneration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2000,7 +2044,9 @@
                 "identifier": "TestImpossibleKeyGeneration",
                 "newPage": false,
                 "searchKey": "rsa.TestImpossibleKeyGeneration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2020,7 +2066,9 @@
                 "identifier": "TestGnuTLSKey",
                 "newPage": false,
                 "searchKey": "rsa.TestGnuTLSKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2040,7 +2088,9 @@
                 "identifier": "testKeyBasics",
                 "newPage": false,
                 "searchKey": "rsa.testKeyBasics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2060,7 +2110,9 @@
                 "identifier": "fromBase10",
                 "newPage": false,
                 "searchKey": "rsa.fromBase10",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2075,12 +2127,14 @@
           },
           {
             "node": {
-              "pathID": "/crypto/rsa#init",
+              "pathID": "/crypto/rsa#init.rsa_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.rsa_test.go",
                 "newPage": false,
                 "searchKey": "rsa.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2100,7 +2154,9 @@
                 "identifier": "BenchmarkRSA2048Decrypt",
                 "newPage": false,
                 "searchKey": "rsa.BenchmarkRSA2048Decrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2120,7 +2176,9 @@
                 "identifier": "BenchmarkRSA2048Sign",
                 "newPage": false,
                 "searchKey": "rsa.BenchmarkRSA2048Sign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2140,7 +2198,9 @@
                 "identifier": "Benchmark3PrimeRSA2048Decrypt",
                 "newPage": false,
                 "searchKey": "rsa.Benchmark3PrimeRSA2048Decrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2160,7 +2220,9 @@
                 "identifier": "TestEncryptOAEP",
                 "newPage": false,
                 "searchKey": "rsa.TestEncryptOAEP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2180,7 +2242,9 @@
                 "identifier": "TestDecryptOAEP",
                 "newPage": false,
                 "searchKey": "rsa.TestDecryptOAEP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

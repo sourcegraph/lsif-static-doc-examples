@@ -120,7 +120,7 @@ Values containing the types defined in this package should not be copied.
     * [func fastrand() uint32](#fastrand)
     * [func poolRaceAddr(x interface{}) unsafe.Pointer](#poolRaceAddr)
     * [func poolCleanup()](#poolCleanup)
-    * [func init()](#init)
+    * [func init()](#init.pool.go)
     * [func runtime_registerPoolCleanup(cleanup func())](#runtime_registerPoolCleanup)
     * [func runtime_procPin() int](#runtime_procPin)
     * [func runtime_procUnpin()](#runtime_procUnpin)
@@ -135,7 +135,7 @@ Values containing the types defined in this package should not be copied.
     * [func runtime_notifyListNotifyAll(l *notifyList)](#runtime_notifyListNotifyAll)
     * [func runtime_notifyListNotifyOne(l *notifyList)](#runtime_notifyListNotifyOne)
     * [func runtime_notifyListCheck(size uintptr)](#runtime_notifyListCheck)
-    * [func init()](#init)
+    * [func init()](#init.runtime.go)
     * [func runtime_canSpin(i int) bool](#runtime_canSpin)
     * [func runtime_doSpin()](#runtime_doSpin)
     * [func runtime_nanotime() int64](#runtime_nanotime)
@@ -143,14 +143,11 @@ Values containing the types defined in this package should not be copied.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="mutexLocked" href="#mutexLocked">const mutexLocked</a>
 
 ```
 searchKey: sync.mutexLocked
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +159,7 @@ const mutexLocked = 1 << iota // mutex is locked
 
 ```
 searchKey: sync.mutexWoken
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +170,7 @@ const mutexWoken
 
 ```
 searchKey: sync.mutexStarving
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +181,7 @@ const mutexStarving
 
 ```
 searchKey: sync.mutexWaiterShift
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +192,7 @@ const mutexWaiterShift = iota
 
 ```
 searchKey: sync.starvationThresholdNs
+tags: [private]
 ```
 
 ```Go
@@ -212,6 +213,7 @@ Normal mode has considerably better performance as a goroutine can acquire a mut
 
 ```
 searchKey: sync.dequeueBits
+tags: [private]
 ```
 
 ```Go
@@ -222,6 +224,7 @@ const dequeueBits = 32
 
 ```
 searchKey: sync.dequeueLimit
+tags: [private]
 ```
 
 ```Go
@@ -236,6 +239,7 @@ This must be at most (1<<dequeueBits)/2 because detecting fullness depends on wr
 
 ```
 searchKey: sync.rwmutexMaxReaders
+tags: [private]
 ```
 
 ```Go
@@ -244,14 +248,11 @@ const rwmutexMaxReaders = 1 << 30
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="expunged" href="#expunged">var expunged</a>
 
 ```
 searchKey: sync.expunged
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +265,7 @@ expunged is an arbitrary pointer that marks entries which have been deleted from
 
 ```
 searchKey: sync.poolRaceHash
+tags: [private]
 ```
 
 ```Go
@@ -274,6 +276,7 @@ var poolRaceHash [128]uint64
 
 ```
 searchKey: sync.allPoolsMu
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +287,7 @@ var allPoolsMu Mutex
 
 ```
 searchKey: sync.allPools
+tags: [private]
 ```
 
 ```Go
@@ -296,6 +300,7 @@ allPools is the set of pools that have non-empty primary caches. Protected by ei
 
 ```
 searchKey: sync.oldPools
+tags: [private]
 ```
 
 ```Go
@@ -308,6 +313,7 @@ oldPools is the set of pools that may have non-empty victim caches. Protected by
 
 ```
 searchKey: sync.Runtime_Semacquire
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +326,7 @@ Export for testing.
 
 ```
 searchKey: sync.Runtime_Semrelease
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +337,7 @@ var Runtime_Semrelease = runtime_Semrelease
 
 ```
 searchKey: sync.Runtime_procPin
+tags: [private]
 ```
 
 ```Go
@@ -340,6 +348,7 @@ var Runtime_procPin = runtime_procPin
 
 ```
 searchKey: sync.Runtime_procUnpin
+tags: [private]
 ```
 
 ```Go
@@ -348,15 +357,10 @@ var Runtime_procUnpin = runtime_procUnpin
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Cond" href="#Cond">type Cond struct</a>
 
 ```
 searchKey: sync.Cond
-tags: [exported]
 ```
 
 ```Go
@@ -381,7 +385,6 @@ A Cond must not be copied after first use.
 
 ```
 searchKey: sync.NewCond
-tags: [exported]
 ```
 
 ```Go
@@ -394,7 +397,6 @@ NewCond returns a new Cond with Locker l.
 
 ```
 searchKey: sync.Cond.Wait
-tags: [exported]
 ```
 
 ```Go
@@ -418,7 +420,6 @@ c.L.Unlock()
 
 ```
 searchKey: sync.Cond.Signal
-tags: [exported]
 ```
 
 ```Go
@@ -433,7 +434,6 @@ It is allowed but not required for the caller to hold c.L during the call.
 
 ```
 searchKey: sync.Cond.Broadcast
-tags: [exported]
 ```
 
 ```Go
@@ -448,6 +448,7 @@ It is allowed but not required for the caller to hold c.L during the call.
 
 ```
 searchKey: sync.copyChecker
+tags: [private]
 ```
 
 ```Go
@@ -460,6 +461,7 @@ copyChecker holds back pointer to itself to detect object copying.
 
 ```
 searchKey: sync.copyChecker.check
+tags: [private]
 ```
 
 ```Go
@@ -470,6 +472,7 @@ func (c *copyChecker) check()
 
 ```
 searchKey: sync.noCopy
+tags: [private]
 ```
 
 ```Go
@@ -484,6 +487,7 @@ See [https://golang.org/issues/8005#issuecomment-190753527](https://golang.org/i
 
 ```
 searchKey: sync.noCopy.Lock
+tags: [private]
 ```
 
 ```Go
@@ -496,6 +500,7 @@ Lock is a no-op used by -copylocks checker from `go vet`.
 
 ```
 searchKey: sync.noCopy.Unlock
+tags: [private]
 ```
 
 ```Go
@@ -506,7 +511,6 @@ func (*noCopy) Unlock()
 
 ```
 searchKey: sync.Map
-tags: [exported]
 ```
 
 ```Go
@@ -558,7 +562,6 @@ The zero Map is empty and ready for use. A Map must not be copied after first us
 
 ```
 searchKey: sync.Map.Load
-tags: [exported]
 ```
 
 ```Go
@@ -571,7 +574,6 @@ Load returns the value stored in the map for a key, or nil if no value is presen
 
 ```
 searchKey: sync.Map.Store
-tags: [exported]
 ```
 
 ```Go
@@ -584,7 +586,6 @@ Store sets the value for a key.
 
 ```
 searchKey: sync.Map.LoadOrStore
-tags: [exported]
 ```
 
 ```Go
@@ -597,7 +598,6 @@ LoadOrStore returns the existing value for the key if present. Otherwise, it sto
 
 ```
 searchKey: sync.Map.LoadAndDelete
-tags: [exported]
 ```
 
 ```Go
@@ -610,7 +610,6 @@ LoadAndDelete deletes the value for a key, returning the previous value if any. 
 
 ```
 searchKey: sync.Map.Delete
-tags: [exported]
 ```
 
 ```Go
@@ -623,7 +622,6 @@ Delete deletes the value for a key.
 
 ```
 searchKey: sync.Map.Range
-tags: [exported]
 ```
 
 ```Go
@@ -640,6 +638,7 @@ Range may be O(N) with the number of elements in the map even if f returns false
 
 ```
 searchKey: sync.Map.missLocked
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +649,7 @@ func (m *Map) missLocked()
 
 ```
 searchKey: sync.Map.dirtyLocked
+tags: [private]
 ```
 
 ```Go
@@ -660,6 +660,7 @@ func (m *Map) dirtyLocked()
 
 ```
 searchKey: sync.readOnly
+tags: [private]
 ```
 
 ```Go
@@ -675,6 +676,7 @@ readOnly is an immutable struct stored atomically in the Map.read field.
 
 ```
 searchKey: sync.entry
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +710,7 @@ An entry is a slot in the map corresponding to a particular key.
 
 ```
 searchKey: sync.newEntry
+tags: [private]
 ```
 
 ```Go
@@ -718,6 +721,7 @@ func newEntry(i interface{}) *entry
 
 ```
 searchKey: sync.entry.load
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +732,7 @@ func (e *entry) load() (value interface{}, ok bool)
 
 ```
 searchKey: sync.entry.tryStore
+tags: [private]
 ```
 
 ```Go
@@ -742,6 +747,7 @@ If the entry is expunged, tryStore returns false and leaves the entry unchanged.
 
 ```
 searchKey: sync.entry.unexpungeLocked
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +762,7 @@ If the entry was previously expunged, it must be added to the dirty map before m
 
 ```
 searchKey: sync.entry.storeLocked
+tags: [private]
 ```
 
 ```Go
@@ -770,6 +777,7 @@ The entry must be known not to be expunged.
 
 ```
 searchKey: sync.entry.tryLoadOrStore
+tags: [private]
 ```
 
 ```Go
@@ -784,6 +792,7 @@ If the entry is expunged, tryLoadOrStore leaves the entry unchanged and returns 
 
 ```
 searchKey: sync.entry.delete
+tags: [private]
 ```
 
 ```Go
@@ -794,6 +803,7 @@ func (e *entry) delete() (value interface{}, ok bool)
 
 ```
 searchKey: sync.entry.tryExpungeLocked
+tags: [private]
 ```
 
 ```Go
@@ -804,7 +814,6 @@ func (e *entry) tryExpungeLocked() (isExpunged bool)
 
 ```
 searchKey: sync.Mutex
-tags: [exported]
 ```
 
 ```Go
@@ -822,7 +831,6 @@ A Mutex must not be copied after first use.
 
 ```
 searchKey: sync.Mutex.Lock
-tags: [exported]
 ```
 
 ```Go
@@ -835,6 +843,7 @@ Lock locks m. If the lock is already in use, the calling goroutine blocks until 
 
 ```
 searchKey: sync.Mutex.lockSlow
+tags: [private]
 ```
 
 ```Go
@@ -845,7 +854,6 @@ func (m *Mutex) lockSlow()
 
 ```
 searchKey: sync.Mutex.Unlock
-tags: [exported]
 ```
 
 ```Go
@@ -860,6 +868,7 @@ A locked Mutex is not associated with a particular goroutine. It is allowed for 
 
 ```
 searchKey: sync.Mutex.unlockSlow
+tags: [private]
 ```
 
 ```Go
@@ -870,7 +879,6 @@ func (m *Mutex) unlockSlow(new int32)
 
 ```
 searchKey: sync.Locker
-tags: [exported]
 ```
 
 ```Go
@@ -886,7 +894,6 @@ A Locker represents an object that can be locked and unlocked.
 
 ```
 searchKey: sync.Once
-tags: [exported]
 ```
 
 ```Go
@@ -909,7 +916,6 @@ A Once must not be copied after first use.
 
 ```
 searchKey: sync.Once.Do
-tags: [exported]
 ```
 
 ```Go
@@ -938,6 +944,7 @@ If f panics, Do considers it to have returned; future calls of Do return without
 
 ```
 searchKey: sync.Once.doSlow
+tags: [private]
 ```
 
 ```Go
@@ -948,7 +955,6 @@ func (o *Once) doSlow(f func())
 
 ```
 searchKey: sync.Pool
-tags: [exported]
 ```
 
 ```Go
@@ -988,7 +994,6 @@ A Pool must not be copied after first use.
 
 ```
 searchKey: sync.Pool.Put
-tags: [exported]
 ```
 
 ```Go
@@ -1001,7 +1006,6 @@ Put adds x to the pool.
 
 ```
 searchKey: sync.Pool.Get
-tags: [exported]
 ```
 
 ```Go
@@ -1016,6 +1020,7 @@ If Get would otherwise return nil and p.New is non-nil, Get returns the result o
 
 ```
 searchKey: sync.Pool.getSlow
+tags: [private]
 ```
 
 ```Go
@@ -1026,6 +1031,7 @@ func (p *Pool) getSlow(pid int) interface{}
 
 ```
 searchKey: sync.Pool.pin
+tags: [private]
 ```
 
 ```Go
@@ -1038,6 +1044,7 @@ pin pins the current goroutine to P, disables preemption and returns poolLocal p
 
 ```
 searchKey: sync.Pool.pinSlow
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1055,7 @@ func (p *Pool) pinSlow() (*poolLocal, int)
 
 ```
 searchKey: sync.poolLocalInternal
+tags: [private]
 ```
 
 ```Go
@@ -1063,6 +1071,7 @@ Local per-P Pool appendix.
 
 ```
 searchKey: sync.poolLocal
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1088,7 @@ type poolLocal struct {
 
 ```
 searchKey: sync.indexLocal
+tags: [private]
 ```
 
 ```Go
@@ -1089,6 +1099,7 @@ func indexLocal(l unsafe.Pointer, i int) *poolLocal
 
 ```
 searchKey: sync.poolDequeue
+tags: [private]
 ```
 
 ```Go
@@ -1129,6 +1140,7 @@ It has the added feature that it nils out unused slots to avoid unnecessary rete
 
 ```
 searchKey: sync.poolDequeue.unpack
+tags: [private]
 ```
 
 ```Go
@@ -1139,6 +1151,7 @@ func (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)
 
 ```
 searchKey: sync.poolDequeue.pack
+tags: [private]
 ```
 
 ```Go
@@ -1149,6 +1162,7 @@ func (d *poolDequeue) pack(head, tail uint32) uint64
 
 ```
 searchKey: sync.poolDequeue.pushHead
+tags: [private]
 ```
 
 ```Go
@@ -1161,6 +1175,7 @@ pushHead adds val at the head of the queue. It returns false if the queue is ful
 
 ```
 searchKey: sync.poolDequeue.popHead
+tags: [private]
 ```
 
 ```Go
@@ -1173,6 +1188,7 @@ popHead removes and returns the element at the head of the queue. It returns fal
 
 ```
 searchKey: sync.poolDequeue.popTail
+tags: [private]
 ```
 
 ```Go
@@ -1185,6 +1201,7 @@ popTail removes and returns the element at the tail of the queue. It returns fal
 
 ```
 searchKey: sync.poolDequeue.PushHead
+tags: [private]
 ```
 
 ```Go
@@ -1195,6 +1212,7 @@ func (d *poolDequeue) PushHead(val interface{}) bool
 
 ```
 searchKey: sync.poolDequeue.PopHead
+tags: [private]
 ```
 
 ```Go
@@ -1205,6 +1223,7 @@ func (d *poolDequeue) PopHead() (interface{}, bool)
 
 ```
 searchKey: sync.poolDequeue.PopTail
+tags: [private]
 ```
 
 ```Go
@@ -1215,6 +1234,7 @@ func (d *poolDequeue) PopTail() (interface{}, bool)
 
 ```
 searchKey: sync.eface
+tags: [private]
 ```
 
 ```Go
@@ -1227,6 +1247,7 @@ type eface struct {
 
 ```
 searchKey: sync.dequeueNil
+tags: [private]
 ```
 
 ```Go
@@ -1239,6 +1260,7 @@ dequeueNil is used in poolDequeue to represent interface{}(nil). Since we use ni
 
 ```
 searchKey: sync.poolChain
+tags: [private]
 ```
 
 ```Go
@@ -1261,6 +1283,7 @@ This is implemented as a doubly-linked list queue of poolDequeues where each deq
 
 ```
 searchKey: sync.poolChain.pushHead
+tags: [private]
 ```
 
 ```Go
@@ -1271,6 +1294,7 @@ func (c *poolChain) pushHead(val interface{})
 
 ```
 searchKey: sync.poolChain.popHead
+tags: [private]
 ```
 
 ```Go
@@ -1281,6 +1305,7 @@ func (c *poolChain) popHead() (interface{}, bool)
 
 ```
 searchKey: sync.poolChain.popTail
+tags: [private]
 ```
 
 ```Go
@@ -1291,6 +1316,7 @@ func (c *poolChain) popTail() (interface{}, bool)
 
 ```
 searchKey: sync.poolChain.PushHead
+tags: [private]
 ```
 
 ```Go
@@ -1301,6 +1327,7 @@ func (c *poolChain) PushHead(val interface{}) bool
 
 ```
 searchKey: sync.poolChain.PopHead
+tags: [private]
 ```
 
 ```Go
@@ -1311,6 +1338,7 @@ func (c *poolChain) PopHead() (interface{}, bool)
 
 ```
 searchKey: sync.poolChain.PopTail
+tags: [private]
 ```
 
 ```Go
@@ -1321,6 +1349,7 @@ func (c *poolChain) PopTail() (interface{}, bool)
 
 ```
 searchKey: sync.poolChainElt
+tags: [private]
 ```
 
 ```Go
@@ -1345,6 +1374,7 @@ type poolChainElt struct {
 
 ```
 searchKey: sync.loadPoolChainElt
+tags: [private]
 ```
 
 ```Go
@@ -1355,6 +1385,7 @@ func loadPoolChainElt(pp **poolChainElt) *poolChainElt
 
 ```
 searchKey: sync.notifyList
+tags: [private]
 ```
 
 ```Go
@@ -1373,7 +1404,6 @@ Approximation of notifyList in runtime/sema.go. Size and alignment must agree.
 
 ```
 searchKey: sync.RWMutex
-tags: [exported]
 ```
 
 ```Go
@@ -1396,7 +1426,6 @@ If a goroutine holds a RWMutex for reading and another goroutine might call Lock
 
 ```
 searchKey: sync.RWMutex.RLock
-tags: [exported]
 ```
 
 ```Go
@@ -1411,7 +1440,6 @@ It should not be used for recursive read locking; a blocked Lock call excludes n
 
 ```
 searchKey: sync.RWMutex.RUnlock
-tags: [exported]
 ```
 
 ```Go
@@ -1424,6 +1452,7 @@ RUnlock undoes a single RLock call; it does not affect other simultaneous reader
 
 ```
 searchKey: sync.RWMutex.rUnlockSlow
+tags: [private]
 ```
 
 ```Go
@@ -1434,7 +1463,6 @@ func (rw *RWMutex) rUnlockSlow(r int32)
 
 ```
 searchKey: sync.RWMutex.Lock
-tags: [exported]
 ```
 
 ```Go
@@ -1447,7 +1475,6 @@ Lock locks rw for writing. If the lock is already locked for reading or writing,
 
 ```
 searchKey: sync.RWMutex.Unlock
-tags: [exported]
 ```
 
 ```Go
@@ -1462,7 +1489,6 @@ As with Mutexes, a locked RWMutex is not associated with a particular goroutine.
 
 ```
 searchKey: sync.RWMutex.RLocker
-tags: [exported]
 ```
 
 ```Go
@@ -1475,6 +1501,7 @@ RLocker returns a Locker interface that implements the Lock and Unlock methods b
 
 ```
 searchKey: sync.rlocker
+tags: [private]
 ```
 
 ```Go
@@ -1485,6 +1512,7 @@ type rlocker RWMutex
 
 ```
 searchKey: sync.rlocker.Lock
+tags: [private]
 ```
 
 ```Go
@@ -1495,6 +1523,7 @@ func (r *rlocker) Lock()
 
 ```
 searchKey: sync.rlocker.Unlock
+tags: [private]
 ```
 
 ```Go
@@ -1505,7 +1534,6 @@ func (r *rlocker) Unlock()
 
 ```
 searchKey: sync.WaitGroup
-tags: [exported]
 ```
 
 ```Go
@@ -1529,6 +1557,7 @@ A WaitGroup must not be copied after first use.
 
 ```
 searchKey: sync.WaitGroup.state
+tags: [private]
 ```
 
 ```Go
@@ -1541,7 +1570,6 @@ state returns pointers to the state and sema fields stored within wg.state1.
 
 ```
 searchKey: sync.WaitGroup.Add
-tags: [exported]
 ```
 
 ```Go
@@ -1556,7 +1584,6 @@ Note that calls with a positive delta that occur when the counter is zero must h
 
 ```
 searchKey: sync.WaitGroup.Done
-tags: [exported]
 ```
 
 ```Go
@@ -1569,7 +1596,6 @@ Done decrements the WaitGroup counter by one.
 
 ```
 searchKey: sync.WaitGroup.Wait
-tags: [exported]
 ```
 
 ```Go
@@ -1582,6 +1608,7 @@ Wait blocks until the WaitGroup counter is zero.
 
 ```
 searchKey: sync.PoolDequeue
+tags: [private]
 ```
 
 ```Go
@@ -1598,6 +1625,7 @@ poolDequeue testing.
 
 ```
 searchKey: sync.NewPoolDequeue
+tags: [private]
 ```
 
 ```Go
@@ -1608,6 +1636,7 @@ func NewPoolDequeue(n int) PoolDequeue
 
 ```
 searchKey: sync.NewPoolChain
+tags: [private]
 ```
 
 ```Go
@@ -1616,14 +1645,11 @@ func NewPoolChain() PoolDequeue
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="throw" href="#throw">func throw(string)</a>
 
 ```
 searchKey: sync.throw
+tags: [private]
 ```
 
 ```Go
@@ -1634,6 +1660,7 @@ func throw(string)
 
 ```
 searchKey: sync.fastrand
+tags: [private]
 ```
 
 ```Go
@@ -1646,6 +1673,7 @@ from runtime
 
 ```
 searchKey: sync.poolRaceAddr
+tags: [private]
 ```
 
 ```Go
@@ -1658,16 +1686,18 @@ poolRaceAddr returns an address to use as the synchronization point for race det
 
 ```
 searchKey: sync.poolCleanup
+tags: [private]
 ```
 
 ```Go
 func poolCleanup()
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.pool.go" href="#init.pool.go">func init()</a>
 
 ```
 searchKey: sync.init
+tags: [private]
 ```
 
 ```Go
@@ -1678,6 +1708,7 @@ func init()
 
 ```
 searchKey: sync.runtime_registerPoolCleanup
+tags: [private]
 ```
 
 ```Go
@@ -1690,6 +1721,7 @@ Implemented in runtime.
 
 ```
 searchKey: sync.runtime_procPin
+tags: [private]
 ```
 
 ```Go
@@ -1700,6 +1732,7 @@ func runtime_procPin() int
 
 ```
 searchKey: sync.runtime_procUnpin
+tags: [private]
 ```
 
 ```Go
@@ -1710,6 +1743,7 @@ func runtime_procUnpin()
 
 ```
 searchKey: sync.runtime_LoadAcquintptr
+tags: [private]
 ```
 
 ```Go
@@ -1720,6 +1754,7 @@ func runtime_LoadAcquintptr(ptr *uintptr) uintptr
 
 ```
 searchKey: sync.runtime_StoreReluintptr
+tags: [private]
 ```
 
 ```Go
@@ -1730,6 +1765,7 @@ func runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr
 
 ```
 searchKey: sync.storePoolChainElt
+tags: [private]
 ```
 
 ```Go
@@ -1740,6 +1776,7 @@ func storePoolChainElt(pp **poolChainElt, v *poolChainElt)
 
 ```
 searchKey: sync.runtime_Semacquire
+tags: [private]
 ```
 
 ```Go
@@ -1752,6 +1789,7 @@ Semacquire waits until *s > 0 and then atomically decrements it. It is intended 
 
 ```
 searchKey: sync.runtime_SemacquireMutex
+tags: [private]
 ```
 
 ```Go
@@ -1764,6 +1802,7 @@ SemacquireMutex is like Semacquire, but for profiling contended Mutexes. If lifo
 
 ```
 searchKey: sync.runtime_Semrelease
+tags: [private]
 ```
 
 ```Go
@@ -1776,6 +1815,7 @@ Semrelease atomically increments *s and notifies a waiting goroutine if one is b
 
 ```
 searchKey: sync.runtime_notifyListAdd
+tags: [private]
 ```
 
 ```Go
@@ -1788,6 +1828,7 @@ See runtime/sema.go for documentation.
 
 ```
 searchKey: sync.runtime_notifyListWait
+tags: [private]
 ```
 
 ```Go
@@ -1800,6 +1841,7 @@ See runtime/sema.go for documentation.
 
 ```
 searchKey: sync.runtime_notifyListNotifyAll
+tags: [private]
 ```
 
 ```Go
@@ -1812,6 +1854,7 @@ See runtime/sema.go for documentation.
 
 ```
 searchKey: sync.runtime_notifyListNotifyOne
+tags: [private]
 ```
 
 ```Go
@@ -1824,6 +1867,7 @@ See runtime/sema.go for documentation.
 
 ```
 searchKey: sync.runtime_notifyListCheck
+tags: [private]
 ```
 
 ```Go
@@ -1832,10 +1876,11 @@ func runtime_notifyListCheck(size uintptr)
 
 Ensure that sync and runtime agree on size of notifyList. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.runtime.go" href="#init.runtime.go">func init()</a>
 
 ```
 searchKey: sync.init
+tags: [private]
 ```
 
 ```Go
@@ -1846,6 +1891,7 @@ func init()
 
 ```
 searchKey: sync.runtime_canSpin
+tags: [private]
 ```
 
 ```Go
@@ -1858,6 +1904,7 @@ Active spinning runtime support. runtime_canSpin reports whether spinning makes 
 
 ```
 searchKey: sync.runtime_doSpin
+tags: [private]
 ```
 
 ```Go
@@ -1870,6 +1917,7 @@ runtime_doSpin does active spinning.
 
 ```
 searchKey: sync.runtime_nanotime
+tags: [private]
 ```
 
 ```Go

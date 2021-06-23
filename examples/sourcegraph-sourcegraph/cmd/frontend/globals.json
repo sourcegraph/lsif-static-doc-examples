@@ -4,9 +4,7 @@
     "identifier": "globals",
     "newPage": true,
     "searchKey": "cmd/frontend/globals",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "externalURLWatchers",
                 "newPage": false,
                 "searchKey": "globals.externalURLWatchers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "defaultexternalURL",
                 "newPage": false,
                 "searchKey": "globals.defaultexternalURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "externalURL",
                 "newPage": false,
                 "searchKey": "globals.externalURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "defaultPermissionsUserMapping",
                 "newPage": false,
                 "searchKey": "globals.defaultPermissionsUserMapping",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "permissionsUserMapping",
                 "newPage": false,
                 "searchKey": "globals.permissionsUserMapping",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "permissionsUserMappingWatchers",
                 "newPage": false,
                 "searchKey": "globals.permissionsUserMappingWatchers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "defaultBranding",
                 "newPage": false,
                 "searchKey": "globals.defaultBranding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "branding",
                 "newPage": false,
                 "searchKey": "globals.branding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                 "identifier": "brandingWatchers",
                 "newPage": false,
                 "searchKey": "globals.brandingWatchers",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,9 +238,7 @@
                 "identifier": "ConfigurationServerFrontendOnly",
                 "newPage": false,
                 "searchKey": "globals.ConfigurationServerFrontendOnly",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -249,9 +261,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -269,9 +279,7 @@
                 "identifier": "WatchExternalURL",
                 "newPage": false,
                 "searchKey": "globals.WatchExternalURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -291,9 +299,7 @@
                 "identifier": "ExternalURL",
                 "newPage": false,
                 "searchKey": "globals.ExternalURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -313,9 +319,7 @@
                 "identifier": "SetExternalURL",
                 "newPage": false,
                 "searchKey": "globals.SetExternalURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -335,9 +339,7 @@
                 "identifier": "WatchPermissionsUserMapping",
                 "newPage": false,
                 "searchKey": "globals.WatchPermissionsUserMapping",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -357,9 +359,7 @@
                 "identifier": "PermissionsUserMapping",
                 "newPage": false,
                 "searchKey": "globals.PermissionsUserMapping",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -379,9 +379,7 @@
                 "identifier": "SetPermissionsUserMapping",
                 "newPage": false,
                 "searchKey": "globals.SetPermissionsUserMapping",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -401,9 +399,7 @@
                 "identifier": "WatchBranding",
                 "newPage": false,
                 "searchKey": "globals.WatchBranding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -423,9 +419,7 @@
                 "identifier": "Branding",
                 "newPage": false,
                 "searchKey": "globals.Branding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -445,9 +439,7 @@
                 "identifier": "SetBranding",
                 "newPage": false,
                 "searchKey": "globals.SetBranding",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",

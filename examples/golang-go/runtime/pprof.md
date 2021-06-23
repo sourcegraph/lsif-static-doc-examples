@@ -351,14 +351,11 @@ For more information about pprof, see [https://github.com/google/pprof/blob/mast
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="lookupTried" href="#lookupTried">const lookupTried</a>
 
 ```
 searchKey: pprof.lookupTried
+tags: [private]
 ```
 
 ```Go
@@ -369,6 +366,7 @@ const lookupTried symbolizeFlag = 1 << iota
 
 ```
 searchKey: pprof.lookupFailed
+tags: [private]
 ```
 
 ```Go
@@ -379,6 +377,7 @@ const lookupFailed symbolizeFlag = 1 << iota
 
 ```
 searchKey: pprof.tagProfile_SampleType
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +391,7 @@ message Profile
 
 ```
 searchKey: pprof.tagProfile_Sample
+tags: [private]
 ```
 
 ```Go
@@ -403,6 +403,7 @@ const tagProfile_Sample = 2 // repeated Sample
 
 ```
 searchKey: pprof.tagProfile_Mapping
+tags: [private]
 ```
 
 ```Go
@@ -414,6 +415,7 @@ const tagProfile_Mapping = 3 // repeated Mapping
 
 ```
 searchKey: pprof.tagProfile_Location
+tags: [private]
 ```
 
 ```Go
@@ -425,6 +427,7 @@ const tagProfile_Location = 4 // repeated Location
 
 ```
 searchKey: pprof.tagProfile_Function
+tags: [private]
 ```
 
 ```Go
@@ -436,6 +439,7 @@ const tagProfile_Function = 5 // repeated Function
 
 ```
 searchKey: pprof.tagProfile_StringTable
+tags: [private]
 ```
 
 ```Go
@@ -447,6 +451,7 @@ const tagProfile_StringTable = 6 // repeated string
 
 ```
 searchKey: pprof.tagProfile_DropFrames
+tags: [private]
 ```
 
 ```Go
@@ -458,6 +463,7 @@ const tagProfile_DropFrames = 7 // int64 (string table index)
 
 ```
 searchKey: pprof.tagProfile_KeepFrames
+tags: [private]
 ```
 
 ```Go
@@ -469,6 +475,7 @@ const tagProfile_KeepFrames = 8 // int64 (string table index)
 
 ```
 searchKey: pprof.tagProfile_TimeNanos
+tags: [private]
 ```
 
 ```Go
@@ -480,6 +487,7 @@ const tagProfile_TimeNanos = 9 // int64
 
 ```
 searchKey: pprof.tagProfile_DurationNanos
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +499,7 @@ const tagProfile_DurationNanos = 10 // int64
 
 ```
 searchKey: pprof.tagProfile_PeriodType
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +511,7 @@ const tagProfile_PeriodType = 11 // ValueType (really optional string???)
 
 ```
 searchKey: pprof.tagProfile_Period
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +523,7 @@ const tagProfile_Period = 12 // int64
 
 ```
 searchKey: pprof.tagProfile_Comment
+tags: [private]
 ```
 
 ```Go
@@ -524,6 +535,7 @@ const tagProfile_Comment = 13 // repeated int64
 
 ```
 searchKey: pprof.tagProfile_DefaultSampleType
+tags: [private]
 ```
 
 ```Go
@@ -535,6 +547,7 @@ const tagProfile_DefaultSampleType = 14 // int64
 
 ```
 searchKey: pprof.tagValueType_Type
+tags: [private]
 ```
 
 ```Go
@@ -548,6 +561,7 @@ message ValueType
 
 ```
 searchKey: pprof.tagValueType_Unit
+tags: [private]
 ```
 
 ```Go
@@ -559,6 +573,7 @@ const tagValueType_Unit = 2 // int64 (string table index)
 
 ```
 searchKey: pprof.tagSample_Location
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +587,7 @@ message Sample
 
 ```
 searchKey: pprof.tagSample_Value
+tags: [private]
 ```
 
 ```Go
@@ -583,6 +599,7 @@ const tagSample_Value = 2 // repeated int64
 
 ```
 searchKey: pprof.tagSample_Label
+tags: [private]
 ```
 
 ```Go
@@ -594,6 +611,7 @@ const tagSample_Label = 3 // repeated Label
 
 ```
 searchKey: pprof.tagLabel_Key
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +625,7 @@ message Label
 
 ```
 searchKey: pprof.tagLabel_Str
+tags: [private]
 ```
 
 ```Go
@@ -618,6 +637,7 @@ const tagLabel_Str = 2 // int64 (string table index)
 
 ```
 searchKey: pprof.tagLabel_Num
+tags: [private]
 ```
 
 ```Go
@@ -629,6 +649,7 @@ const tagLabel_Num = 3 // int64
 
 ```
 searchKey: pprof.tagMapping_ID
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +663,7 @@ message Mapping
 
 ```
 searchKey: pprof.tagMapping_Start
+tags: [private]
 ```
 
 ```Go
@@ -653,6 +675,7 @@ const tagMapping_Start = 2 // uint64
 
 ```
 searchKey: pprof.tagMapping_Limit
+tags: [private]
 ```
 
 ```Go
@@ -664,6 +687,7 @@ const tagMapping_Limit = 3 // uint64
 
 ```
 searchKey: pprof.tagMapping_Offset
+tags: [private]
 ```
 
 ```Go
@@ -675,6 +699,7 @@ const tagMapping_Offset = 4 // uint64
 
 ```
 searchKey: pprof.tagMapping_Filename
+tags: [private]
 ```
 
 ```Go
@@ -686,6 +711,7 @@ const tagMapping_Filename = 5 // int64 (string table index)
 
 ```
 searchKey: pprof.tagMapping_BuildID
+tags: [private]
 ```
 
 ```Go
@@ -697,6 +723,7 @@ const tagMapping_BuildID = 6 // int64 (string table index)
 
 ```
 searchKey: pprof.tagMapping_HasFunctions
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +735,7 @@ const tagMapping_HasFunctions = 7 // bool
 
 ```
 searchKey: pprof.tagMapping_HasFilenames
+tags: [private]
 ```
 
 ```Go
@@ -719,6 +747,7 @@ const tagMapping_HasFilenames = 8 // bool
 
 ```
 searchKey: pprof.tagMapping_HasLineNumbers
+tags: [private]
 ```
 
 ```Go
@@ -730,6 +759,7 @@ const tagMapping_HasLineNumbers = 9 // bool
 
 ```
 searchKey: pprof.tagMapping_HasInlineFrames
+tags: [private]
 ```
 
 ```Go
@@ -741,6 +771,7 @@ const tagMapping_HasInlineFrames = 10 // bool
 
 ```
 searchKey: pprof.tagLocation_ID
+tags: [private]
 ```
 
 ```Go
@@ -754,6 +785,7 @@ message Location
 
 ```
 searchKey: pprof.tagLocation_MappingID
+tags: [private]
 ```
 
 ```Go
@@ -765,6 +797,7 @@ const tagLocation_MappingID = 2 // uint64
 
 ```
 searchKey: pprof.tagLocation_Address
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +809,7 @@ const tagLocation_Address = 3 // uint64
 
 ```
 searchKey: pprof.tagLocation_Line
+tags: [private]
 ```
 
 ```Go
@@ -787,6 +821,7 @@ const tagLocation_Line = 4 // repeated Line
 
 ```
 searchKey: pprof.tagLine_FunctionID
+tags: [private]
 ```
 
 ```Go
@@ -800,6 +835,7 @@ message Line
 
 ```
 searchKey: pprof.tagLine_Line
+tags: [private]
 ```
 
 ```Go
@@ -811,6 +847,7 @@ const tagLine_Line = 2 // int64
 
 ```
 searchKey: pprof.tagFunction_ID
+tags: [private]
 ```
 
 ```Go
@@ -824,6 +861,7 @@ message Function
 
 ```
 searchKey: pprof.tagFunction_Name
+tags: [private]
 ```
 
 ```Go
@@ -835,6 +873,7 @@ const tagFunction_Name = 2 // int64 (string table index)
 
 ```
 searchKey: pprof.tagFunction_SystemName
+tags: [private]
 ```
 
 ```Go
@@ -846,6 +885,7 @@ const tagFunction_SystemName = 3 // int64 (string table index)
 
 ```
 searchKey: pprof.tagFunction_Filename
+tags: [private]
 ```
 
 ```Go
@@ -857,6 +897,7 @@ const tagFunction_Filename = 4 // int64 (string table index)
 
 ```
 searchKey: pprof.tagFunction_StartLine
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +909,7 @@ const tagFunction_StartLine = 5 // int64
 
 ```
 searchKey: pprof.blockDelay
+tags: [private]
 ```
 
 ```Go
@@ -876,14 +918,11 @@ const blockDelay = 10 * time.Millisecond
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="errBadELF" href="#errBadELF">var errBadELF</a>
 
 ```
 searchKey: pprof.errBadELF
+tags: [private]
 ```
 
 ```Go
@@ -894,6 +933,7 @@ var errBadELF = errors.New("malformed ELF binary")
 
 ```
 searchKey: pprof.errNoBuildID
+tags: [private]
 ```
 
 ```Go
@@ -904,6 +944,7 @@ var errNoBuildID = errors.New("no NT_GNU_BUILD_ID found in ELF binary")
 
 ```
 searchKey: pprof.profiles
+tags: [private]
 ```
 
 ```Go
@@ -919,6 +960,7 @@ profiles records all registered profiles.
 
 ```
 searchKey: pprof.goroutineProfile
+tags: [private]
 ```
 
 ```Go
@@ -929,6 +971,7 @@ var goroutineProfile = ...
 
 ```
 searchKey: pprof.threadcreateProfile
+tags: [private]
 ```
 
 ```Go
@@ -939,6 +982,7 @@ var threadcreateProfile = ...
 
 ```
 searchKey: pprof.heapProfile
+tags: [private]
 ```
 
 ```Go
@@ -953,6 +997,7 @@ var heapProfile = &Profile{
 
 ```
 searchKey: pprof.allocsProfile
+tags: [private]
 ```
 
 ```Go
@@ -967,6 +1012,7 @@ var allocsProfile = &Profile{
 
 ```
 searchKey: pprof.blockProfile
+tags: [private]
 ```
 
 ```Go
@@ -981,6 +1027,7 @@ var blockProfile = &Profile{
 
 ```
 searchKey: pprof.mutexProfile
+tags: [private]
 ```
 
 ```Go
@@ -995,6 +1042,7 @@ var mutexProfile = &Profile{
 
 ```
 searchKey: pprof.cpu
+tags: [private]
 ```
 
 ```Go
@@ -1009,6 +1057,7 @@ var cpu struct {
 
 ```
 searchKey: pprof.memSink
+tags: [private]
 ```
 
 ```Go
@@ -1019,6 +1068,7 @@ var memSink interface{}
 
 ```
 searchKey: pprof.persistentMemSink
+tags: [private]
 ```
 
 ```Go
@@ -1029,6 +1079,7 @@ var persistentMemSink *Obj32
 
 ```
 searchKey: pprof.memoryProfilerRun
+tags: [private]
 ```
 
 ```Go
@@ -1039,6 +1090,7 @@ var memoryProfilerRun = 0
 
 ```
 searchKey: pprof.salt1
+tags: [private]
 ```
 
 ```Go
@@ -1049,6 +1101,7 @@ var salt1 = 0
 
 ```
 searchKey: pprof.salt2
+tags: [private]
 ```
 
 ```Go
@@ -1059,6 +1112,7 @@ var salt2 = 0
 
 ```
 searchKey: pprof.emptyCallStackTestRun
+tags: [private]
 ```
 
 ```Go
@@ -1069,6 +1123,7 @@ var emptyCallStackTestRun int64
 
 ```
 searchKey: pprof.profSelfMapsTests
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1134,7 @@ var profSelfMapsTests = ...
 
 ```
 searchKey: pprof.profSelfMapsTestsWithDeleted
+tags: [private]
 ```
 
 ```Go
@@ -1087,14 +1143,11 @@ var profSelfMapsTestsWithDeleted = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="label" href="#label">type label struct</a>
 
 ```
 searchKey: pprof.label
+tags: [private]
 ```
 
 ```Go
@@ -1108,7 +1161,6 @@ type label struct {
 
 ```
 searchKey: pprof.LabelSet
-tags: [exported]
 ```
 
 ```Go
@@ -1123,7 +1175,6 @@ LabelSet is a set of labels.
 
 ```
 searchKey: pprof.Labels
-tags: [exported]
 ```
 
 ```Go
@@ -1136,6 +1187,7 @@ Labels takes an even number of strings representing key-value pairs and makes a 
 
 ```
 searchKey: pprof.labelContextKey
+tags: [private]
 ```
 
 ```Go
@@ -1148,6 +1200,7 @@ labelContextKey is the type of contextKeys used for profiler labels.
 
 ```
 searchKey: pprof.labelMap
+tags: [private]
 ```
 
 ```Go
@@ -1160,6 +1213,7 @@ labelMap is the representation of the label set held in the context type. This i
 
 ```
 searchKey: pprof.labelValue
+tags: [private]
 ```
 
 ```Go
@@ -1170,6 +1224,7 @@ func labelValue(ctx context.Context) labelMap
 
 ```
 searchKey: pprof.labelMap.String
+tags: [private]
 ```
 
 ```Go
@@ -1182,6 +1237,7 @@ String statisfies Stringer and returns key, value pairs in a consistent order.
 
 ```
 searchKey: pprof.profMap
+tags: [private]
 ```
 
 ```Go
@@ -1200,6 +1256,7 @@ A profMap is a map from (stack, tag) to mapEntry. It grows without bound, but th
 
 ```
 searchKey: pprof.profMap.lookup
+tags: [private]
 ```
 
 ```Go
@@ -1210,6 +1267,7 @@ func (m *profMap) lookup(stk []uint64, tag unsafe.Pointer) *profMapEntry
 
 ```
 searchKey: pprof.profMapEntry
+tags: [private]
 ```
 
 ```Go
@@ -1228,7 +1286,6 @@ A profMapEntry is a single entry in the profMap.
 
 ```
 searchKey: pprof.Profile
-tags: [exported]
 ```
 
 ```Go
@@ -1270,7 +1327,6 @@ The CPU profile is not available as a Profile. It has a special API, the StartCP
 
 ```
 searchKey: pprof.NewProfile
-tags: [exported]
 ```
 
 ```Go
@@ -1283,7 +1339,6 @@ NewProfile creates a new profile with the given name. If a profile with that nam
 
 ```
 searchKey: pprof.Lookup
-tags: [exported]
 ```
 
 ```Go
@@ -1296,7 +1351,6 @@ Lookup returns the profile with the given name, or nil if no such profile exists
 
 ```
 searchKey: pprof.Profile.Name
-tags: [exported]
 ```
 
 ```Go
@@ -1309,7 +1363,6 @@ Name returns this profile's name, which can be passed to Lookup to reobtain the 
 
 ```
 searchKey: pprof.Profile.Count
-tags: [exported]
 ```
 
 ```Go
@@ -1322,7 +1375,6 @@ Count returns the number of execution stacks currently in the profile.
 
 ```
 searchKey: pprof.Profile.Add
-tags: [exported]
 ```
 
 ```Go
@@ -1346,7 +1398,6 @@ Passing skip=0 begins the stack trace at the call to Add inside rpc.NewClient. P
 
 ```
 searchKey: pprof.Profile.Remove
-tags: [exported]
 ```
 
 ```Go
@@ -1359,7 +1410,6 @@ Remove removes the execution stack associated with value from the profile. It is
 
 ```
 searchKey: pprof.Profile.WriteTo
-tags: [exported]
 ```
 
 ```Go
@@ -1376,6 +1426,7 @@ The predefined profiles may assign meaning to other debug values; for example, w
 
 ```
 searchKey: pprof.stackProfile
+tags: [private]
 ```
 
 ```Go
@@ -1386,6 +1437,7 @@ type stackProfile [][]uintptr
 
 ```
 searchKey: pprof.stackProfile.Len
+tags: [private]
 ```
 
 ```Go
@@ -1396,6 +1448,7 @@ func (x stackProfile) Len() int
 
 ```
 searchKey: pprof.stackProfile.Stack
+tags: [private]
 ```
 
 ```Go
@@ -1406,6 +1459,7 @@ func (x stackProfile) Stack(i int) []uintptr
 
 ```
 searchKey: pprof.stackProfile.Label
+tags: [private]
 ```
 
 ```Go
@@ -1416,6 +1470,7 @@ func (x stackProfile) Label(i int) *labelMap
 
 ```
 searchKey: pprof.countProfile
+tags: [private]
 ```
 
 ```Go
@@ -1432,6 +1487,7 @@ A countProfile is a set of stack traces to be printed as counts grouped by stack
 
 ```
 searchKey: pprof.keysByCount
+tags: [private]
 ```
 
 ```Go
@@ -1447,6 +1503,7 @@ keysByCount sorts keys with higher counts first, breaking ties by key string ord
 
 ```
 searchKey: pprof.keysByCount.Len
+tags: [private]
 ```
 
 ```Go
@@ -1457,6 +1514,7 @@ func (x *keysByCount) Len() int
 
 ```
 searchKey: pprof.keysByCount.Swap
+tags: [private]
 ```
 
 ```Go
@@ -1467,6 +1525,7 @@ func (x *keysByCount) Swap(i, j int)
 
 ```
 searchKey: pprof.keysByCount.Less
+tags: [private]
 ```
 
 ```Go
@@ -1477,6 +1536,7 @@ func (x *keysByCount) Less(i, j int) bool
 
 ```
 searchKey: pprof.runtimeProfile
+tags: [private]
 ```
 
 ```Go
@@ -1490,6 +1550,7 @@ type runtimeProfile struct {
 
 ```
 searchKey: pprof.runtimeProfile.Len
+tags: [private]
 ```
 
 ```Go
@@ -1500,6 +1561,7 @@ func (p *runtimeProfile) Len() int
 
 ```
 searchKey: pprof.runtimeProfile.Stack
+tags: [private]
 ```
 
 ```Go
@@ -1510,6 +1572,7 @@ func (p *runtimeProfile) Stack(i int) []uintptr
 
 ```
 searchKey: pprof.runtimeProfile.Label
+tags: [private]
 ```
 
 ```Go
@@ -1520,6 +1583,7 @@ func (p *runtimeProfile) Label(i int) *labelMap
 
 ```
 searchKey: pprof.profileBuilder
+tags: [private]
 ```
 
 ```Go
@@ -1549,6 +1613,7 @@ A profileBuilder writes a profile incrementally from a stream of profile samples
 
 ```
 searchKey: pprof.newProfileBuilder
+tags: [private]
 ```
 
 ```Go
@@ -1561,6 +1626,7 @@ newProfileBuilder returns a new profileBuilder. CPU profiling data obtained from
 
 ```
 searchKey: pprof.profileBuilder.stringIndex
+tags: [private]
 ```
 
 ```Go
@@ -1573,6 +1639,7 @@ stringIndex adds s to the string table if not already present and returns the in
 
 ```
 searchKey: pprof.profileBuilder.flush
+tags: [private]
 ```
 
 ```Go
@@ -1583,6 +1650,7 @@ func (b *profileBuilder) flush()
 
 ```
 searchKey: pprof.profileBuilder.pbValueType
+tags: [private]
 ```
 
 ```Go
@@ -1595,6 +1663,7 @@ pbValueType encodes a ValueType message to b.pb.
 
 ```
 searchKey: pprof.profileBuilder.pbSample
+tags: [private]
 ```
 
 ```Go
@@ -1607,6 +1676,7 @@ pbSample encodes a Sample message to b.pb.
 
 ```
 searchKey: pprof.profileBuilder.pbLabel
+tags: [private]
 ```
 
 ```Go
@@ -1619,6 +1689,7 @@ pbLabel encodes a Label message to b.pb.
 
 ```
 searchKey: pprof.profileBuilder.pbLine
+tags: [private]
 ```
 
 ```Go
@@ -1631,6 +1702,7 @@ pbLine encodes a Line message to b.pb.
 
 ```
 searchKey: pprof.profileBuilder.pbMapping
+tags: [private]
 ```
 
 ```Go
@@ -1643,6 +1715,7 @@ pbMapping encodes a Mapping message to b.pb.
 
 ```
 searchKey: pprof.profileBuilder.addCPUData
+tags: [private]
 ```
 
 ```Go
@@ -1655,6 +1728,7 @@ addCPUData adds the CPU profiling data to the profile. The data must be a whole 
 
 ```
 searchKey: pprof.profileBuilder.build
+tags: [private]
 ```
 
 ```Go
@@ -1667,6 +1741,7 @@ build completes and returns the constructed profile.
 
 ```
 searchKey: pprof.profileBuilder.appendLocsForStack
+tags: [private]
 ```
 
 ```Go
@@ -1681,6 +1756,7 @@ It may emit to b.pb, so there must be no message encoding in progress.
 
 ```
 searchKey: pprof.profileBuilder.emitLocation
+tags: [private]
 ```
 
 ```Go
@@ -1693,6 +1769,7 @@ emitLocation emits the new location and function information recorded in the dec
 
 ```
 searchKey: pprof.profileBuilder.readMapping
+tags: [private]
 ```
 
 ```Go
@@ -1705,6 +1782,7 @@ readMapping reads /proc/self/maps and writes mappings to b.pb. It saves the addr
 
 ```
 searchKey: pprof.profileBuilder.addMapping
+tags: [private]
 ```
 
 ```Go
@@ -1715,6 +1793,7 @@ func (b *profileBuilder) addMapping(lo, hi, offset uint64, file, buildID string)
 
 ```
 searchKey: pprof.profileBuilder.addMappingEntry
+tags: [private]
 ```
 
 ```Go
@@ -1725,6 +1804,7 @@ func (b *profileBuilder) addMappingEntry(lo, hi, offset uint64, file, buildID st
 
 ```
 searchKey: pprof.memMap
+tags: [private]
 ```
 
 ```Go
@@ -1744,6 +1824,7 @@ type memMap struct {
 
 ```
 searchKey: pprof.symbolizeFlag
+tags: [private]
 ```
 
 ```Go
@@ -1762,6 +1843,7 @@ symbolizeFlag keeps track of symbolization result.
 
 ```
 searchKey: pprof.allFrames
+tags: [private]
 ```
 
 ```Go
@@ -1772,6 +1854,7 @@ func allFrames(addr uintptr) ([]runtime.Frame, symbolizeFlag)
 
 ```
 searchKey: pprof.locInfo
+tags: [private]
 ```
 
 ```Go
@@ -1790,6 +1873,7 @@ type locInfo struct {
 
 ```
 searchKey: pprof.pcDeck
+tags: [private]
 ```
 
 ```Go
@@ -1818,6 +1902,7 @@ As reading and processing the pcs in a stack trace one by one (from leaf to the 
 
 ```
 searchKey: pprof.pcDeck.reset
+tags: [private]
 ```
 
 ```Go
@@ -1828,6 +1913,7 @@ func (d *pcDeck) reset()
 
 ```
 searchKey: pprof.pcDeck.tryAdd
+tags: [private]
 ```
 
 ```Go
@@ -1840,6 +1926,7 @@ tryAdd tries to add the pc and Frames expanded from it (most likely one, since t
 
 ```
 searchKey: pprof.protobuf
+tags: [private]
 ```
 
 ```Go
@@ -1856,6 +1943,7 @@ A protobuf is a simple protocol buffer encoder.
 
 ```
 searchKey: pprof.protobuf.varint
+tags: [private]
 ```
 
 ```Go
@@ -1866,6 +1954,7 @@ func (b *protobuf) varint(x uint64)
 
 ```
 searchKey: pprof.protobuf.length
+tags: [private]
 ```
 
 ```Go
@@ -1876,6 +1965,7 @@ func (b *protobuf) length(tag int, len int)
 
 ```
 searchKey: pprof.protobuf.uint64
+tags: [private]
 ```
 
 ```Go
@@ -1886,6 +1976,7 @@ func (b *protobuf) uint64(tag int, x uint64)
 
 ```
 searchKey: pprof.protobuf.uint64s
+tags: [private]
 ```
 
 ```Go
@@ -1896,6 +1987,7 @@ func (b *protobuf) uint64s(tag int, x []uint64)
 
 ```
 searchKey: pprof.protobuf.uint64Opt
+tags: [private]
 ```
 
 ```Go
@@ -1906,6 +1998,7 @@ func (b *protobuf) uint64Opt(tag int, x uint64)
 
 ```
 searchKey: pprof.protobuf.int64
+tags: [private]
 ```
 
 ```Go
@@ -1916,6 +2009,7 @@ func (b *protobuf) int64(tag int, x int64)
 
 ```
 searchKey: pprof.protobuf.int64Opt
+tags: [private]
 ```
 
 ```Go
@@ -1926,6 +2020,7 @@ func (b *protobuf) int64Opt(tag int, x int64)
 
 ```
 searchKey: pprof.protobuf.int64s
+tags: [private]
 ```
 
 ```Go
@@ -1936,6 +2031,7 @@ func (b *protobuf) int64s(tag int, x []int64)
 
 ```
 searchKey: pprof.protobuf.string
+tags: [private]
 ```
 
 ```Go
@@ -1946,6 +2042,7 @@ func (b *protobuf) string(tag int, x string)
 
 ```
 searchKey: pprof.protobuf.strings
+tags: [private]
 ```
 
 ```Go
@@ -1956,6 +2053,7 @@ func (b *protobuf) strings(tag int, x []string)
 
 ```
 searchKey: pprof.protobuf.stringOpt
+tags: [private]
 ```
 
 ```Go
@@ -1966,6 +2064,7 @@ func (b *protobuf) stringOpt(tag int, x string)
 
 ```
 searchKey: pprof.protobuf.bool
+tags: [private]
 ```
 
 ```Go
@@ -1976,6 +2075,7 @@ func (b *protobuf) bool(tag int, x bool)
 
 ```
 searchKey: pprof.protobuf.boolOpt
+tags: [private]
 ```
 
 ```Go
@@ -1986,6 +2086,7 @@ func (b *protobuf) boolOpt(tag int, x bool)
 
 ```
 searchKey: pprof.protobuf.startMessage
+tags: [private]
 ```
 
 ```Go
@@ -1996,6 +2097,7 @@ func (b *protobuf) startMessage() msgOffset
 
 ```
 searchKey: pprof.protobuf.endMessage
+tags: [private]
 ```
 
 ```Go
@@ -2006,6 +2108,7 @@ func (b *protobuf) endMessage(tag int, start msgOffset)
 
 ```
 searchKey: pprof.msgOffset
+tags: [private]
 ```
 
 ```Go
@@ -2016,6 +2119,7 @@ type msgOffset int
 
 ```
 searchKey: pprof.labelSorter
+tags: [private]
 ```
 
 ```Go
@@ -2026,6 +2130,7 @@ type labelSorter []label
 
 ```
 searchKey: pprof.labelSorter.Len
+tags: [private]
 ```
 
 ```Go
@@ -2036,6 +2141,7 @@ func (s labelSorter) Len() int
 
 ```
 searchKey: pprof.labelSorter.Swap
+tags: [private]
 ```
 
 ```Go
@@ -2046,6 +2152,7 @@ func (s labelSorter) Swap(i, j int)
 
 ```
 searchKey: pprof.labelSorter.Less
+tags: [private]
 ```
 
 ```Go
@@ -2056,6 +2163,7 @@ func (s labelSorter) Less(i, j int) bool
 
 ```
 searchKey: pprof.Obj32
+tags: [private]
 ```
 
 ```Go
@@ -2069,6 +2177,7 @@ type Obj32 struct {
 
 ```
 searchKey: pprof.matchFunc
+tags: [private]
 ```
 
 ```Go
@@ -2077,14 +2186,11 @@ type matchFunc func(spec string, count uintptr, stk []*profile.Location, labels 
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="elfBuildID" href="#elfBuildID">func elfBuildID(file string) (string, error)</a>
 
 ```
 searchKey: pprof.elfBuildID
+tags: [private]
 ```
 
 ```Go
@@ -2097,7 +2203,6 @@ elfBuildID returns the GNU build ID of the named ELF binary, without introducing
 
 ```
 searchKey: pprof.WithLabels
-tags: [exported]
 ```
 
 ```Go
@@ -2110,7 +2215,6 @@ WithLabels returns a new context.Context with the given labels added. A label ov
 
 ```
 searchKey: pprof.Label
-tags: [exported]
 ```
 
 ```Go
@@ -2123,7 +2227,6 @@ Label returns the value of the label with the given key on ctx, and a boolean in
 
 ```
 searchKey: pprof.ForLabels
-tags: [exported]
 ```
 
 ```Go
@@ -2136,6 +2239,7 @@ ForLabels invokes f with each label set on the context. The function f should re
 
 ```
 searchKey: pprof.lockProfiles
+tags: [private]
 ```
 
 ```Go
@@ -2146,6 +2250,7 @@ func lockProfiles()
 
 ```
 searchKey: pprof.unlockProfiles
+tags: [private]
 ```
 
 ```Go
@@ -2156,7 +2261,6 @@ func unlockProfiles()
 
 ```
 searchKey: pprof.Profiles
-tags: [exported]
 ```
 
 ```Go
@@ -2169,6 +2273,7 @@ Profiles returns a slice of all the known profiles, sorted by name.
 
 ```
 searchKey: pprof.printCountCycleProfile
+tags: [private]
 ```
 
 ```Go
@@ -2181,6 +2286,7 @@ printCountCycleProfile outputs block profile records (for block or mutex profile
 
 ```
 searchKey: pprof.printCountProfile
+tags: [private]
 ```
 
 ```Go
@@ -2193,6 +2299,7 @@ printCountProfile prints a countProfile at the specified debug level. The profil
 
 ```
 searchKey: pprof.printStackRecord
+tags: [private]
 ```
 
 ```Go
@@ -2205,7 +2312,6 @@ printStackRecord prints the function + source line information for a single stac
 
 ```
 searchKey: pprof.WriteHeapProfile
-tags: [exported]
 ```
 
 ```Go
@@ -2218,6 +2324,7 @@ WriteHeapProfile is shorthand for Lookup("heap").WriteTo(w, 0). It is preserved 
 
 ```
 searchKey: pprof.countHeap
+tags: [private]
 ```
 
 ```Go
@@ -2230,6 +2337,7 @@ countHeap returns the number of records in the heap profile.
 
 ```
 searchKey: pprof.writeHeap
+tags: [private]
 ```
 
 ```Go
@@ -2242,6 +2350,7 @@ writeHeap writes the current runtime heap profile to w.
 
 ```
 searchKey: pprof.writeAlloc
+tags: [private]
 ```
 
 ```Go
@@ -2254,6 +2363,7 @@ writeAlloc writes the current runtime heap profile to w with the total allocatio
 
 ```
 searchKey: pprof.writeHeapInternal
+tags: [private]
 ```
 
 ```Go
@@ -2264,6 +2374,7 @@ func writeHeapInternal(w io.Writer, debug int, defaultSampleType string) error
 
 ```
 searchKey: pprof.countThreadCreate
+tags: [private]
 ```
 
 ```Go
@@ -2276,6 +2387,7 @@ countThreadCreate returns the size of the current ThreadCreateProfile.
 
 ```
 searchKey: pprof.writeThreadCreate
+tags: [private]
 ```
 
 ```Go
@@ -2288,6 +2400,7 @@ writeThreadCreate writes the current runtime ThreadCreateProfile to w.
 
 ```
 searchKey: pprof.countGoroutine
+tags: [private]
 ```
 
 ```Go
@@ -2300,6 +2413,7 @@ countGoroutine returns the number of goroutines.
 
 ```
 searchKey: pprof.runtime_goroutineProfileWithLabels
+tags: [private]
 ```
 
 ```Go
@@ -2312,6 +2426,7 @@ runtime_goroutineProfileWithLabels is defined in runtime/mprof.go
 
 ```
 searchKey: pprof.writeGoroutine
+tags: [private]
 ```
 
 ```Go
@@ -2324,6 +2439,7 @@ writeGoroutine writes the current runtime GoroutineProfile to w.
 
 ```
 searchKey: pprof.writeGoroutineStacks
+tags: [private]
 ```
 
 ```Go
@@ -2334,6 +2450,7 @@ func writeGoroutineStacks(w io.Writer) error
 
 ```
 searchKey: pprof.writeRuntimeProfile
+tags: [private]
 ```
 
 ```Go
@@ -2344,7 +2461,6 @@ func writeRuntimeProfile(w io.Writer, debug int, name string, fetch func([]runti
 
 ```
 searchKey: pprof.StartCPUProfile
-tags: [exported]
 ```
 
 ```Go
@@ -2359,6 +2475,7 @@ On Unix-like systems, StartCPUProfile does not work by default for Go code built
 
 ```
 searchKey: pprof.readProfile
+tags: [private]
 ```
 
 ```Go
@@ -2371,6 +2488,7 @@ readProfile, provided by the runtime, returns the next chunk of binary CPU profi
 
 ```
 searchKey: pprof.profileWriter
+tags: [private]
 ```
 
 ```Go
@@ -2381,7 +2499,6 @@ func profileWriter(w io.Writer)
 
 ```
 searchKey: pprof.StopCPUProfile
-tags: [exported]
 ```
 
 ```Go
@@ -2394,6 +2511,7 @@ StopCPUProfile stops the current CPU profile, if any. StopCPUProfile only return
 
 ```
 searchKey: pprof.countBlock
+tags: [private]
 ```
 
 ```Go
@@ -2406,6 +2524,7 @@ countBlock returns the number of records in the blocking profile.
 
 ```
 searchKey: pprof.countMutex
+tags: [private]
 ```
 
 ```Go
@@ -2418,6 +2537,7 @@ countMutex returns the number of records in the mutex profile.
 
 ```
 searchKey: pprof.writeBlock
+tags: [private]
 ```
 
 ```Go
@@ -2430,6 +2550,7 @@ writeBlock writes the current blocking profile to w.
 
 ```
 searchKey: pprof.scaleBlockProfile
+tags: [private]
 ```
 
 ```Go
@@ -2440,6 +2561,7 @@ func scaleBlockProfile(cnt int64, ns float64) (int64, float64)
 
 ```
 searchKey: pprof.writeMutex
+tags: [private]
 ```
 
 ```Go
@@ -2452,6 +2574,7 @@ writeMutex writes the current mutex profile to w.
 
 ```
 searchKey: pprof.writeProfileInternal
+tags: [private]
 ```
 
 ```Go
@@ -2464,6 +2587,7 @@ writeProfileInternal writes the current blocking or mutex profile depending on t
 
 ```
 searchKey: pprof.scaleMutexProfile
+tags: [private]
 ```
 
 ```Go
@@ -2474,6 +2598,7 @@ func scaleMutexProfile(cnt int64, ns float64) (int64, float64)
 
 ```
 searchKey: pprof.runtime_cyclesPerSecond
+tags: [private]
 ```
 
 ```Go
@@ -2484,6 +2609,7 @@ func runtime_cyclesPerSecond() int64
 
 ```
 searchKey: pprof.addMaxRSS
+tags: [private]
 ```
 
 ```Go
@@ -2496,6 +2622,7 @@ Adds MaxRSS to platforms that are supported.
 
 ```
 searchKey: pprof.lostProfileEvent
+tags: [private]
 ```
 
 ```Go
@@ -2508,6 +2635,7 @@ lostProfileEvent is the function to which lost profiling events are attributed. 
 
 ```
 searchKey: pprof.funcPC
+tags: [private]
 ```
 
 ```Go
@@ -2520,6 +2648,7 @@ funcPC returns the PC for the func value f.
 
 ```
 searchKey: pprof.parseProcSelfMaps
+tags: [private]
 ```
 
 ```Go
@@ -2530,6 +2659,7 @@ func parseProcSelfMaps(data []byte, addMapping func(lo, hi, offset uint64, file,
 
 ```
 searchKey: pprof.writeHeapProto
+tags: [private]
 ```
 
 ```Go
@@ -2542,6 +2672,7 @@ writeHeapProto writes the current heap profile in protobuf format to w.
 
 ```
 searchKey: pprof.scaleHeapSample
+tags: [private]
 ```
 
 ```Go
@@ -2554,6 +2685,7 @@ scaleHeapSample adjusts the data from a heap Sample to account for its probabili
 
 ```
 searchKey: pprof.runtime_expandFinalInlineFrame
+tags: [private]
 ```
 
 ```Go
@@ -2566,6 +2698,7 @@ runtime_expandFinalInlineFrame is defined in runtime/symtab.go.
 
 ```
 searchKey: pprof.runtime_setProfLabel
+tags: [private]
 ```
 
 ```Go
@@ -2578,6 +2711,7 @@ runtime_setProfLabel is defined in runtime/proflabel.go.
 
 ```
 searchKey: pprof.runtime_getProfLabel
+tags: [private]
 ```
 
 ```Go
@@ -2590,7 +2724,6 @@ runtime_getProfLabel is defined in runtime/proflabel.go.
 
 ```
 searchKey: pprof.SetGoroutineLabels
-tags: [exported]
 ```
 
 ```Go
@@ -2603,7 +2736,6 @@ SetGoroutineLabels sets the current goroutine's labels to match ctx. A new gorou
 
 ```
 searchKey: pprof.Do
-tags: [exported]
 ```
 
 ```Go
@@ -2616,6 +2748,7 @@ Do calls f with a copy of the parent context with the given labels added to the 
 
 ```
 searchKey: pprof.labelsSorted
+tags: [private]
 ```
 
 ```Go
@@ -2626,6 +2759,7 @@ func labelsSorted(ctx context.Context) []label
 
 ```
 searchKey: pprof.TestContextLabels
+tags: [private]
 ```
 
 ```Go
@@ -2636,6 +2770,7 @@ func TestContextLabels(t *testing.T)
 
 ```
 searchKey: pprof.TestLabelMapStringer
+tags: [private]
 ```
 
 ```Go
@@ -2646,6 +2781,7 @@ func TestLabelMapStringer(t *testing.T)
 
 ```
 searchKey: pprof.allocateTransient1M
+tags: [private]
 ```
 
 ```Go
@@ -2656,6 +2792,7 @@ func allocateTransient1M()
 
 ```
 searchKey: pprof.allocateTransient2M
+tags: [private]
 ```
 
 ```Go
@@ -2666,6 +2803,7 @@ func allocateTransient2M()
 
 ```
 searchKey: pprof.allocateTransient2MInline
+tags: [private]
 ```
 
 ```Go
@@ -2676,6 +2814,7 @@ func allocateTransient2MInline()
 
 ```
 searchKey: pprof.allocatePersistent1K
+tags: [private]
 ```
 
 ```Go
@@ -2686,6 +2825,7 @@ func allocatePersistent1K()
 
 ```
 searchKey: pprof.allocateReflectTransient
+tags: [private]
 ```
 
 ```Go
@@ -2696,6 +2836,7 @@ func allocateReflectTransient()
 
 ```
 searchKey: pprof.allocateReflect
+tags: [private]
 ```
 
 ```Go
@@ -2706,6 +2847,7 @@ func allocateReflect()
 
 ```
 searchKey: pprof.TestMemoryProfiler
+tags: [private]
 ```
 
 ```Go
@@ -2716,6 +2858,7 @@ func TestMemoryProfiler(t *testing.T)
 
 ```
 searchKey: pprof.cpuHogger
+tags: [private]
 ```
 
 ```Go
@@ -2726,6 +2869,7 @@ func cpuHogger(f func(x int) int, y *int, dur time.Duration)
 
 ```
 searchKey: pprof.cpuHog1
+tags: [private]
 ```
 
 ```Go
@@ -2738,6 +2882,7 @@ The actual CPU hogging function. Must not call other functions nor access heap/g
 
 ```
 searchKey: pprof.cpuHog0
+tags: [private]
 ```
 
 ```Go
@@ -2748,6 +2893,7 @@ func cpuHog0(x, n int) int
 
 ```
 searchKey: pprof.cpuHog2
+tags: [private]
 ```
 
 ```Go
@@ -2758,6 +2904,7 @@ func cpuHog2(x int) int
 
 ```
 searchKey: pprof.avoidFunctions
+tags: [private]
 ```
 
 ```Go
@@ -2770,6 +2917,7 @@ Return a list of functions that we don't want to ever appear in CPU profiles. Fo
 
 ```
 searchKey: pprof.TestCPUProfile
+tags: [private]
 ```
 
 ```Go
@@ -2780,6 +2928,7 @@ func TestCPUProfile(t *testing.T)
 
 ```
 searchKey: pprof.TestCPUProfileMultithreaded
+tags: [private]
 ```
 
 ```Go
@@ -2790,6 +2939,7 @@ func TestCPUProfileMultithreaded(t *testing.T)
 
 ```
 searchKey: pprof.containsInlinedCall
+tags: [private]
 ```
 
 ```Go
@@ -2802,6 +2952,7 @@ containsInlinedCall reports whether the function body for the function f is know
 
 ```
 searchKey: pprof.findInlinedCall
+tags: [private]
 ```
 
 ```Go
@@ -2814,6 +2965,7 @@ findInlinedCall returns the PC of an inlined function call within the function b
 
 ```
 searchKey: pprof.TestCPUProfileInlining
+tags: [private]
 ```
 
 ```Go
@@ -2824,6 +2976,7 @@ func TestCPUProfileInlining(t *testing.T)
 
 ```
 searchKey: pprof.inlinedCaller
+tags: [private]
 ```
 
 ```Go
@@ -2834,6 +2987,7 @@ func inlinedCaller(x int) int
 
 ```
 searchKey: pprof.inlinedCallee
+tags: [private]
 ```
 
 ```Go
@@ -2844,6 +2998,7 @@ func inlinedCallee(x, n int) int
 
 ```
 searchKey: pprof.dumpCallers
+tags: [private]
 ```
 
 ```Go
@@ -2854,6 +3009,7 @@ func dumpCallers(pcs []uintptr)
 
 ```
 searchKey: pprof.inlinedCallerDump
+tags: [private]
 ```
 
 ```Go
@@ -2864,6 +3020,7 @@ func inlinedCallerDump(pcs []uintptr)
 
 ```
 searchKey: pprof.inlinedCalleeDump
+tags: [private]
 ```
 
 ```Go
@@ -2874,6 +3031,7 @@ func inlinedCalleeDump(pcs []uintptr)
 
 ```
 searchKey: pprof.TestCPUProfileRecursion
+tags: [private]
 ```
 
 ```Go
@@ -2884,6 +3042,7 @@ func TestCPUProfileRecursion(t *testing.T)
 
 ```
 searchKey: pprof.recursionCaller
+tags: [private]
 ```
 
 ```Go
@@ -2894,6 +3053,7 @@ func recursionCaller(x int) int
 
 ```
 searchKey: pprof.recursionCallee
+tags: [private]
 ```
 
 ```Go
@@ -2904,6 +3064,7 @@ func recursionCallee(n, x int) int
 
 ```
 searchKey: pprof.recursionChainTop
+tags: [private]
 ```
 
 ```Go
@@ -2914,6 +3075,7 @@ func recursionChainTop(x int, pcs []uintptr)
 
 ```
 searchKey: pprof.recursionChainMiddle
+tags: [private]
 ```
 
 ```Go
@@ -2924,6 +3086,7 @@ func recursionChainMiddle(x int, pcs []uintptr)
 
 ```
 searchKey: pprof.recursionChainBottom
+tags: [private]
 ```
 
 ```Go
@@ -2934,6 +3097,7 @@ func recursionChainBottom(x int, pcs []uintptr)
 
 ```
 searchKey: pprof.parseProfile
+tags: [private]
 ```
 
 ```Go
@@ -2944,6 +3108,7 @@ func parseProfile(t *testing.T, valBytes []byte, f func(uintptr, []*profile.Loca
 
 ```
 searchKey: pprof.cpuProfilingBroken
+tags: [private]
 ```
 
 ```Go
@@ -2954,6 +3119,7 @@ func cpuProfilingBroken() bool
 
 ```
 searchKey: pprof.testCPUProfile
+tags: [private]
 ```
 
 ```Go
@@ -2966,6 +3132,7 @@ testCPUProfile runs f under the CPU profiler, checking for some conditions speci
 
 ```
 searchKey: pprof.contains
+tags: [private]
 ```
 
 ```Go
@@ -2976,6 +3143,7 @@ func contains(slice []string, s string) bool
 
 ```
 searchKey: pprof.stackContains
+tags: [private]
 ```
 
 ```Go
@@ -2988,6 +3156,7 @@ stackContains matches if a function named spec appears anywhere in the stack tra
 
 ```
 searchKey: pprof.profileOk
+tags: [private]
 ```
 
 ```Go
@@ -2998,6 +3167,7 @@ func profileOk(t *testing.T, matches matchFunc, need []string, avoid []string, p
 
 ```
 searchKey: pprof.TestCPUProfileWithFork
+tags: [private]
 ```
 
 ```Go
@@ -3010,6 +3180,7 @@ Fork can hang if preempted with signals frequently enough (see issue 5517). Ensu
 
 ```
 searchKey: pprof.TestGoroutineSwitch
+tags: [private]
 ```
 
 ```Go
@@ -3022,6 +3193,7 @@ Test that profiler does not observe runtime.gogo as "user" goroutine execution. 
 
 ```
 searchKey: pprof.fprintStack
+tags: [private]
 ```
 
 ```Go
@@ -3032,6 +3204,7 @@ func fprintStack(w io.Writer, stk []*profile.Location)
 
 ```
 searchKey: pprof.TestMathBigDivide
+tags: [private]
 ```
 
 ```Go
@@ -3044,6 +3217,7 @@ Test that profiling of division operations is okay, especially on ARM. See issue
 
 ```
 searchKey: pprof.stackContainsAll
+tags: [private]
 ```
 
 ```Go
@@ -3056,6 +3230,7 @@ stackContainsAll matches if all functions in spec (comma-separated) appear somew
 
 ```
 searchKey: pprof.TestMorestack
+tags: [private]
 ```
 
 ```Go
@@ -3066,6 +3241,7 @@ func TestMorestack(t *testing.T)
 
 ```
 searchKey: pprof.growstack1
+tags: [private]
 ```
 
 ```Go
@@ -3076,6 +3252,7 @@ func growstack1()
 
 ```
 searchKey: pprof.growstack
+tags: [private]
 ```
 
 ```Go
@@ -3086,6 +3263,7 @@ func growstack(n int)
 
 ```
 searchKey: pprof.use
+tags: [private]
 ```
 
 ```Go
@@ -3096,6 +3274,7 @@ func use(x [8 << 16]byte)
 
 ```
 searchKey: pprof.TestBlockProfile
+tags: [private]
 ```
 
 ```Go
@@ -3106,6 +3285,7 @@ func TestBlockProfile(t *testing.T)
 
 ```
 searchKey: pprof.stacks
+tags: [private]
 ```
 
 ```Go
@@ -3116,6 +3296,7 @@ func stacks(p *profile.Profile) (res [][]string)
 
 ```
 searchKey: pprof.containsStack
+tags: [private]
 ```
 
 ```Go
@@ -3126,6 +3307,7 @@ func containsStack(got [][]string, want []string) bool
 
 ```
 searchKey: pprof.blockChanRecv
+tags: [private]
 ```
 
 ```Go
@@ -3136,6 +3318,7 @@ func blockChanRecv()
 
 ```
 searchKey: pprof.blockChanSend
+tags: [private]
 ```
 
 ```Go
@@ -3146,6 +3329,7 @@ func blockChanSend()
 
 ```
 searchKey: pprof.blockChanClose
+tags: [private]
 ```
 
 ```Go
@@ -3156,6 +3340,7 @@ func blockChanClose()
 
 ```
 searchKey: pprof.blockSelectRecvAsync
+tags: [private]
 ```
 
 ```Go
@@ -3166,6 +3351,7 @@ func blockSelectRecvAsync()
 
 ```
 searchKey: pprof.blockSelectSendSync
+tags: [private]
 ```
 
 ```Go
@@ -3176,6 +3362,7 @@ func blockSelectSendSync()
 
 ```
 searchKey: pprof.blockMutex
+tags: [private]
 ```
 
 ```Go
@@ -3186,6 +3373,7 @@ func blockMutex()
 
 ```
 searchKey: pprof.blockCond
+tags: [private]
 ```
 
 ```Go
@@ -3196,6 +3384,7 @@ func blockCond()
 
 ```
 searchKey: pprof.TestBlockProfileBias
+tags: [private]
 ```
 
 ```Go
@@ -3208,6 +3397,7 @@ See [http://golang.org/cl/299991](http://golang.org/cl/299991).
 
 ```
 searchKey: pprof.blockFrequentShort
+tags: [private]
 ```
 
 ```Go
@@ -3220,6 +3410,7 @@ blockFrequentShort produces 100000 block events with an average duration of rate
 
 ```
 searchKey: pprof.blockInfrequentLong
+tags: [private]
 ```
 
 ```Go
@@ -3232,6 +3423,7 @@ blockFrequentShort produces 10000 block events with an average duration of rate.
 
 ```
 searchKey: pprof.blockevent
+tags: [private]
 ```
 
 ```Go
@@ -3244,6 +3436,7 @@ Used by TestBlockProfileBias.
 
 ```
 searchKey: pprof.TestMutexProfile
+tags: [private]
 ```
 
 ```Go
@@ -3254,6 +3447,7 @@ func TestMutexProfile(t *testing.T)
 
 ```
 searchKey: pprof.func1
+tags: [private]
 ```
 
 ```Go
@@ -3264,6 +3458,7 @@ func func1(c chan int)
 
 ```
 searchKey: pprof.func2
+tags: [private]
 ```
 
 ```Go
@@ -3274,6 +3469,7 @@ func func2(c chan int)
 
 ```
 searchKey: pprof.func3
+tags: [private]
 ```
 
 ```Go
@@ -3284,6 +3480,7 @@ func func3(c chan int)
 
 ```
 searchKey: pprof.func4
+tags: [private]
 ```
 
 ```Go
@@ -3294,6 +3491,7 @@ func func4(c chan int)
 
 ```
 searchKey: pprof.TestGoroutineCounts
+tags: [private]
 ```
 
 ```Go
@@ -3304,6 +3502,7 @@ func TestGoroutineCounts(t *testing.T)
 
 ```
 searchKey: pprof.containsInOrder
+tags: [private]
 ```
 
 ```Go
@@ -3314,6 +3513,7 @@ func containsInOrder(s string, all ...string) bool
 
 ```
 searchKey: pprof.containsCountsLabels
+tags: [private]
 ```
 
 ```Go
@@ -3324,6 +3524,7 @@ func containsCountsLabels(prof *profile.Profile, countLabels map[int64]map[strin
 
 ```
 searchKey: pprof.TestEmptyCallStack
+tags: [private]
 ```
 
 ```Go
@@ -3336,6 +3537,7 @@ Issue 18836.
 
 ```
 searchKey: pprof.stackContainsLabeled
+tags: [private]
 ```
 
 ```Go
@@ -3348,6 +3550,7 @@ stackContainsLabeled takes a spec like funcname;key=value and matches if the sta
 
 ```
 searchKey: pprof.TestCPUProfileLabel
+tags: [private]
 ```
 
 ```Go
@@ -3358,6 +3561,7 @@ func TestCPUProfileLabel(t *testing.T)
 
 ```
 searchKey: pprof.TestLabelRace
+tags: [private]
 ```
 
 ```Go
@@ -3368,6 +3572,7 @@ func TestLabelRace(t *testing.T)
 
 ```
 searchKey: pprof.TestAtomicLoadStore64
+tags: [private]
 ```
 
 ```Go
@@ -3380,6 +3585,7 @@ Check that there is no deadlock when the program receives SIGPROF while in 64bit
 
 ```
 searchKey: pprof.TestTracebackAll
+tags: [private]
 ```
 
 ```Go
@@ -3390,6 +3596,7 @@ func TestTracebackAll(t *testing.T)
 
 ```
 searchKey: pprof.TestTryAdd
+tags: [private]
 ```
 
 ```Go
@@ -3404,6 +3611,7 @@ For example, the current go compilers may not always inline functions involved i
 
 ```
 searchKey: pprof.translateCPUProfile
+tags: [private]
 ```
 
 ```Go
@@ -3416,6 +3624,7 @@ translateCPUProfile parses binary CPU profiling stack trace data generated by ru
 
 ```
 searchKey: pprof.fmtJSON
+tags: [private]
 ```
 
 ```Go
@@ -3428,6 +3637,7 @@ fmtJSON returns a pretty-printed JSON form for x. It works reasonbly well for pr
 
 ```
 searchKey: pprof.TestConvertCPUProfileEmpty
+tags: [private]
 ```
 
 ```Go
@@ -3438,6 +3648,7 @@ func TestConvertCPUProfileEmpty(t *testing.T)
 
 ```
 searchKey: pprof.f1
+tags: [private]
 ```
 
 ```Go
@@ -3448,6 +3659,7 @@ func f1()
 
 ```
 searchKey: pprof.f2
+tags: [private]
 ```
 
 ```Go
@@ -3458,6 +3670,7 @@ func f2()
 
 ```
 searchKey: pprof.testPCs
+tags: [private]
 ```
 
 ```Go
@@ -3470,6 +3683,7 @@ testPCs returns two PCs and two corresponding memory mappings to use in test pro
 
 ```
 searchKey: pprof.TestConvertCPUProfile
+tags: [private]
 ```
 
 ```Go
@@ -3480,6 +3694,7 @@ func TestConvertCPUProfile(t *testing.T)
 
 ```
 searchKey: pprof.checkProfile
+tags: [private]
 ```
 
 ```Go
@@ -3490,6 +3705,7 @@ func checkProfile(t *testing.T, p *profile.Profile, period int64, periodType *pr
 
 ```
 searchKey: pprof.TestProcSelfMaps
+tags: [private]
 ```
 
 ```Go
@@ -3500,6 +3716,7 @@ func TestProcSelfMaps(t *testing.T)
 
 ```
 searchKey: pprof.TestMapping
+tags: [private]
 ```
 
 ```Go
@@ -3512,6 +3729,7 @@ TestMapping checks the mapping section of CPU profiles has the HasFunctions fiel
 
 ```
 searchKey: pprof.symbolized
+tags: [private]
 ```
 
 ```Go
@@ -3522,6 +3740,7 @@ func symbolized(loc *profile.Location) bool
 
 ```
 searchKey: pprof.TestFakeMapping
+tags: [private]
 ```
 
 ```Go
@@ -3534,6 +3753,7 @@ TestFakeMapping tests if at least one mapping exists (including a fake mapping),
 
 ```
 searchKey: pprof.TestEmptyStack
+tags: [private]
 ```
 
 ```Go
@@ -3546,6 +3766,7 @@ Make sure the profiler can handle an empty stack trace. See issue 37967.
 
 ```
 searchKey: pprof.TestConvertMemProfile
+tags: [private]
 ```
 
 ```Go
@@ -3556,6 +3777,7 @@ func TestConvertMemProfile(t *testing.T)
 
 ```
 searchKey: pprof.TestSetGoroutineLabels
+tags: [private]
 ```
 
 ```Go
@@ -3566,6 +3788,7 @@ func TestSetGoroutineLabels(t *testing.T)
 
 ```
 searchKey: pprof.TestDo
+tags: [private]
 ```
 
 ```Go
@@ -3576,6 +3799,7 @@ func TestDo(t *testing.T)
 
 ```
 searchKey: pprof.getProfLabel
+tags: [private]
 ```
 
 ```Go

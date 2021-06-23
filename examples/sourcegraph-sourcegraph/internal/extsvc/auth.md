@@ -33,11 +33,14 @@ Package auth provides the Authenticator interface, which can be used to add auth
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Authenticator" href="#Authenticator">type Authenticator interface</a>
 
 ```
 searchKey: auth.Authenticator
-tags: [exported]
 ```
 
 ```Go
@@ -61,7 +64,6 @@ Note that, while Authenticate provides generic functionality, the concrete types
 
 ```
 searchKey: auth.AuthenticatorWithSSH
-tags: [exported]
 ```
 
 ```Go
@@ -83,7 +85,6 @@ AuthenticatorWithSSH wraps the Authenticator interface and augments it by additi
 
 ```
 searchKey: auth.BasicAuth
-tags: [exported]
 ```
 
 ```Go
@@ -99,7 +100,6 @@ BasicAuth implements HTTP Basic Authentication for extsvc clients.
 
 ```
 searchKey: auth.BasicAuth.Authenticate
-tags: [exported]
 ```
 
 ```Go
@@ -110,7 +110,6 @@ func (basic *BasicAuth) Authenticate(req *http.Request) error
 
 ```
 searchKey: auth.BasicAuth.Hash
-tags: [exported]
 ```
 
 ```Go
@@ -121,7 +120,6 @@ func (basic *BasicAuth) Hash() string
 
 ```
 searchKey: auth.BasicAuthWithSSH
-tags: [exported]
 ```
 
 ```Go
@@ -140,7 +138,6 @@ BasicAuthWithSSH implements HTTP Basic Authentication for extsvc clients and hol
 
 ```
 searchKey: auth.BasicAuthWithSSH.SSHPrivateKey
-tags: [exported]
 ```
 
 ```Go
@@ -151,7 +148,6 @@ func (basic *BasicAuthWithSSH) SSHPrivateKey() (privateKey, passphrase string)
 
 ```
 searchKey: auth.BasicAuthWithSSH.SSHPublicKey
-tags: [exported]
 ```
 
 ```Go
@@ -162,7 +158,6 @@ func (basic *BasicAuthWithSSH) SSHPublicKey() string
 
 ```
 searchKey: auth.BasicAuthWithSSH.Hash
-tags: [exported]
 ```
 
 ```Go
@@ -173,7 +168,6 @@ func (basic *BasicAuthWithSSH) Hash() string
 
 ```
 searchKey: auth.OAuthClient
-tags: [exported]
 ```
 
 ```Go
@@ -186,6 +180,7 @@ OAuthClient implements OAuth 1 signature authentication for extsvc implementatio
 
 ```
 searchKey: auth.newOAuthClient
+tags: [private]
 ```
 
 ```Go
@@ -196,7 +191,6 @@ func newOAuthClient(token, secret string) *OAuthClient
 
 ```
 searchKey: auth.OAuthClient.Authenticate
-tags: [exported]
 ```
 
 ```Go
@@ -207,7 +201,6 @@ func (c *OAuthClient) Authenticate(req *http.Request) error
 
 ```
 searchKey: auth.OAuthClient.Hash
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +211,6 @@ func (c *OAuthClient) Hash() string
 
 ```
 searchKey: auth.OAuthBearerToken
-tags: [exported]
 ```
 
 ```Go
@@ -233,7 +225,6 @@ OAuthBearerToken implements OAuth Bearer Token authentication for extsvc clients
 
 ```
 searchKey: auth.OAuthBearerToken.Authenticate
-tags: [exported]
 ```
 
 ```Go
@@ -244,7 +235,6 @@ func (token *OAuthBearerToken) Authenticate(req *http.Request) error
 
 ```
 searchKey: auth.OAuthBearerToken.Hash
-tags: [exported]
 ```
 
 ```Go
@@ -255,7 +245,6 @@ func (token *OAuthBearerToken) Hash() string
 
 ```
 searchKey: auth.OAuthBearerTokenWithSSH
-tags: [exported]
 ```
 
 ```Go
@@ -274,7 +263,6 @@ OAuthBearerTokenWithSSH implements OAuth Bearer Token authentication for extsvc 
 
 ```
 searchKey: auth.OAuthBearerTokenWithSSH.SSHPrivateKey
-tags: [exported]
 ```
 
 ```Go
@@ -285,7 +273,6 @@ func (token *OAuthBearerTokenWithSSH) SSHPrivateKey() (privateKey, passphrase st
 
 ```
 searchKey: auth.OAuthBearerTokenWithSSH.SSHPublicKey
-tags: [exported]
 ```
 
 ```Go
@@ -296,7 +283,6 @@ func (token *OAuthBearerTokenWithSSH) SSHPublicKey() string
 
 ```
 searchKey: auth.OAuthBearerTokenWithSSH.Hash
-tags: [exported]
 ```
 
 ```Go
@@ -305,10 +291,15 @@ func (token *OAuthBearerTokenWithSSH) Hash() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestBasicAuth" href="#TestBasicAuth">func TestBasicAuth(t *testing.T)</a>
 
 ```
 searchKey: auth.TestBasicAuth
+tags: [private]
 ```
 
 ```Go
@@ -319,6 +310,7 @@ func TestBasicAuth(t *testing.T)
 
 ```
 searchKey: auth.TestOAuthClient
+tags: [private]
 ```
 
 ```Go
@@ -329,6 +321,7 @@ func TestOAuthClient(t *testing.T)
 
 ```
 searchKey: auth.TestOAuthBearerToken
+tags: [private]
 ```
 
 ```Go

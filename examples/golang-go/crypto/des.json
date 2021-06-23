@@ -4,9 +4,7 @@
     "identifier": "des",
     "newPage": true,
     "searchKey": "crypto/des",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "BlockSize",
                 "newPage": false,
                 "searchKey": "des.BlockSize",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -69,9 +63,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -89,7 +81,9 @@
                 "identifier": "feistelBox",
                 "newPage": false,
                 "searchKey": "des.feistelBox",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -109,7 +103,9 @@
                 "identifier": "feistelBoxOnce",
                 "newPage": false,
                 "searchKey": "des.feistelBoxOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -129,7 +125,9 @@
                 "identifier": "initialPermutation",
                 "newPage": false,
                 "searchKey": "des.initialPermutation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -149,7 +147,9 @@
                 "identifier": "finalPermutation",
                 "newPage": false,
                 "searchKey": "des.finalPermutation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -169,7 +169,9 @@
                 "identifier": "expansionFunction",
                 "newPage": false,
                 "searchKey": "des.expansionFunction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -189,7 +191,9 @@
                 "identifier": "permutationFunction",
                 "newPage": false,
                 "searchKey": "des.permutationFunction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -209,7 +213,9 @@
                 "identifier": "permutedChoice1",
                 "newPage": false,
                 "searchKey": "des.permutedChoice1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -229,7 +235,9 @@
                 "identifier": "permutedChoice2",
                 "newPage": false,
                 "searchKey": "des.permutedChoice2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -249,7 +257,9 @@
                 "identifier": "sBoxes",
                 "newPage": false,
                 "searchKey": "des.sBoxes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -269,7 +279,9 @@
                 "identifier": "ksRotations",
                 "newPage": false,
                 "searchKey": "des.ksRotations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -289,7 +301,9 @@
                 "identifier": "encryptDESTests",
                 "newPage": false,
                 "searchKey": "des.encryptDESTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -309,7 +323,9 @@
                 "identifier": "weakKeyTests",
                 "newPage": false,
                 "searchKey": "des.weakKeyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -329,7 +345,9 @@
                 "identifier": "semiWeakKeyTests",
                 "newPage": false,
                 "searchKey": "des.semiWeakKeyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -349,7 +367,9 @@
                 "identifier": "encryptTripleDESTests",
                 "newPage": false,
                 "searchKey": "des.encryptTripleDESTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -369,7 +389,9 @@
                 "identifier": "tableA1Key",
                 "newPage": false,
                 "searchKey": "des.tableA1Key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -389,7 +411,9 @@
                 "identifier": "tableA1Tests",
                 "newPage": false,
                 "searchKey": "des.tableA1Tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -409,7 +433,9 @@
                 "identifier": "tableA2Plaintext",
                 "newPage": false,
                 "searchKey": "des.tableA2Plaintext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -429,7 +455,9 @@
                 "identifier": "tableA2Tests",
                 "newPage": false,
                 "searchKey": "des.tableA2Tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -449,7 +477,9 @@
                 "identifier": "tableA3Plaintext",
                 "newPage": false,
                 "searchKey": "des.tableA3Plaintext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -469,7 +499,9 @@
                 "identifier": "tableA3Tests",
                 "newPage": false,
                 "searchKey": "des.tableA3Tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -489,7 +521,9 @@
                 "identifier": "tableA4Tests",
                 "newPage": false,
                 "searchKey": "des.tableA4Tests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -512,9 +546,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -532,9 +564,7 @@
                 "identifier": "KeySizeError",
                 "newPage": false,
                 "searchKey": "des.KeySizeError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -552,9 +582,7 @@
                       "identifier": "KeySizeError.Error",
                       "newPage": false,
                       "searchKey": "des.KeySizeError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -577,7 +605,9 @@
                 "identifier": "desCipher",
                 "newPage": false,
                 "searchKey": "des.desCipher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -595,7 +625,9 @@
                       "identifier": "newCipher",
                       "newPage": false,
                       "searchKey": "des.newCipher",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -615,7 +647,9 @@
                       "identifier": "desCipher.generateSubkeys",
                       "newPage": false,
                       "searchKey": "des.desCipher.generateSubkeys",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -635,7 +669,9 @@
                       "identifier": "desCipher.BlockSize",
                       "newPage": false,
                       "searchKey": "des.desCipher.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -655,7 +691,9 @@
                       "identifier": "desCipher.Encrypt",
                       "newPage": false,
                       "searchKey": "des.desCipher.Encrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -675,7 +713,9 @@
                       "identifier": "desCipher.Decrypt",
                       "newPage": false,
                       "searchKey": "des.desCipher.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -698,7 +738,9 @@
                 "identifier": "tripleDESCipher",
                 "newPage": false,
                 "searchKey": "des.tripleDESCipher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -716,7 +758,9 @@
                       "identifier": "tripleDESCipher.BlockSize",
                       "newPage": false,
                       "searchKey": "des.tripleDESCipher.BlockSize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -736,7 +780,9 @@
                       "identifier": "tripleDESCipher.Encrypt",
                       "newPage": false,
                       "searchKey": "des.tripleDESCipher.Encrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -756,7 +802,9 @@
                       "identifier": "tripleDESCipher.Decrypt",
                       "newPage": false,
                       "searchKey": "des.tripleDESCipher.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -779,7 +827,9 @@
                 "identifier": "CryptTest",
                 "newPage": false,
                 "searchKey": "des.CryptTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -802,9 +852,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -822,7 +870,9 @@
                 "identifier": "cryptBlock",
                 "newPage": false,
                 "searchKey": "des.cryptBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -842,7 +892,9 @@
                 "identifier": "encryptBlock",
                 "newPage": false,
                 "searchKey": "des.encryptBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -862,7 +914,9 @@
                 "identifier": "decryptBlock",
                 "newPage": false,
                 "searchKey": "des.decryptBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -882,7 +936,9 @@
                 "identifier": "feistel",
                 "newPage": false,
                 "searchKey": "des.feistel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -902,7 +958,9 @@
                 "identifier": "permuteBlock",
                 "newPage": false,
                 "searchKey": "des.permuteBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -922,7 +980,9 @@
                 "identifier": "initFeistelBox",
                 "newPage": false,
                 "searchKey": "des.initFeistelBox",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -942,7 +1002,9 @@
                 "identifier": "permuteInitialBlock",
                 "newPage": false,
                 "searchKey": "des.permuteInitialBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -962,7 +1024,9 @@
                 "identifier": "permuteFinalBlock",
                 "newPage": false,
                 "searchKey": "des.permuteFinalBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -982,7 +1046,9 @@
                 "identifier": "ksRotate",
                 "newPage": false,
                 "searchKey": "des.ksRotate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1002,7 +1068,9 @@
                 "identifier": "unpack",
                 "newPage": false,
                 "searchKey": "des.unpack",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1022,9 +1090,7 @@
                 "identifier": "NewCipher",
                 "newPage": false,
                 "searchKey": "des.NewCipher",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1044,9 +1110,7 @@
                 "identifier": "NewTripleDESCipher",
                 "newPage": false,
                 "searchKey": "des.NewTripleDESCipher",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1066,7 +1130,9 @@
                 "identifier": "TestWeakKeys",
                 "newPage": false,
                 "searchKey": "des.TestWeakKeys",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1086,7 +1152,9 @@
                 "identifier": "TestSemiWeakKeyPairs",
                 "newPage": false,
                 "searchKey": "des.TestSemiWeakKeyPairs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1106,7 +1174,9 @@
                 "identifier": "TestDESEncryptBlock",
                 "newPage": false,
                 "searchKey": "des.TestDESEncryptBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1126,7 +1196,9 @@
                 "identifier": "TestDESDecryptBlock",
                 "newPage": false,
                 "searchKey": "des.TestDESDecryptBlock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1146,7 +1218,9 @@
                 "identifier": "TestEncryptTripleDES",
                 "newPage": false,
                 "searchKey": "des.TestEncryptTripleDES",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1166,7 +1240,9 @@
                 "identifier": "TestDecryptTripleDES",
                 "newPage": false,
                 "searchKey": "des.TestDecryptTripleDES",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1186,7 +1262,9 @@
                 "identifier": "TestVariablePlaintextKnownAnswer",
                 "newPage": false,
                 "searchKey": "des.TestVariablePlaintextKnownAnswer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1206,7 +1284,9 @@
                 "identifier": "TestVariableCiphertextKnownAnswer",
                 "newPage": false,
                 "searchKey": "des.TestVariableCiphertextKnownAnswer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1226,7 +1306,9 @@
                 "identifier": "TestInversePermutationKnownAnswer",
                 "newPage": false,
                 "searchKey": "des.TestInversePermutationKnownAnswer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1246,7 +1328,9 @@
                 "identifier": "TestInitialPermutationKnownAnswer",
                 "newPage": false,
                 "searchKey": "des.TestInitialPermutationKnownAnswer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1266,7 +1350,9 @@
                 "identifier": "TestVariableKeyKnownAnswerEncrypt",
                 "newPage": false,
                 "searchKey": "des.TestVariableKeyKnownAnswerEncrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1286,7 +1372,9 @@
                 "identifier": "TestVariableKeyKnownAnswerDecrypt",
                 "newPage": false,
                 "searchKey": "des.TestVariableKeyKnownAnswerDecrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1306,7 +1394,9 @@
                 "identifier": "TestPermutationOperationKnownAnswerEncrypt",
                 "newPage": false,
                 "searchKey": "des.TestPermutationOperationKnownAnswerEncrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1326,7 +1416,9 @@
                 "identifier": "TestPermutationOperationKnownAnswerDecrypt",
                 "newPage": false,
                 "searchKey": "des.TestPermutationOperationKnownAnswerDecrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1346,7 +1438,9 @@
                 "identifier": "TestSubstitutionTableKnownAnswerEncrypt",
                 "newPage": false,
                 "searchKey": "des.TestSubstitutionTableKnownAnswerEncrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1366,7 +1460,9 @@
                 "identifier": "TestSubstitutionTableKnownAnswerDecrypt",
                 "newPage": false,
                 "searchKey": "des.TestSubstitutionTableKnownAnswerDecrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1386,7 +1482,9 @@
                 "identifier": "TestInitialPermute",
                 "newPage": false,
                 "searchKey": "des.TestInitialPermute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1406,7 +1504,9 @@
                 "identifier": "TestFinalPermute",
                 "newPage": false,
                 "searchKey": "des.TestFinalPermute",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1426,7 +1526,9 @@
                 "identifier": "BenchmarkEncrypt",
                 "newPage": false,
                 "searchKey": "des.BenchmarkEncrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1446,7 +1548,9 @@
                 "identifier": "BenchmarkDecrypt",
                 "newPage": false,
                 "searchKey": "des.BenchmarkDecrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1466,7 +1570,9 @@
                 "identifier": "BenchmarkTDESEncrypt",
                 "newPage": false,
                 "searchKey": "des.BenchmarkTDESEncrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1486,7 +1592,9 @@
                 "identifier": "BenchmarkTDESDecrypt",
                 "newPage": false,
                 "searchKey": "des.BenchmarkTDESDecrypt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

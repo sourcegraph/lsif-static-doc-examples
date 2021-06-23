@@ -26,7 +26,7 @@
     * [func ExampleCommandContext()](#ExampleCommandContext)
     * [func TestCredentialNoSetGroups(t *testing.T)](#TestCredentialNoSetGroups)
     * [func TestWaitid(t *testing.T)](#TestWaitid)
-    * [func init()](#init)
+    * [func init()](#init.exec_test.go)
     * [func helperCommandContext(t *testing.T, ctx context.Context, s ...string) (cmd *exec.Cmd)](#helperCommandContext)
     * [func helperCommand(t *testing.T, s ...string) *exec.Cmd](#helperCommand)
     * [func TestEcho(t *testing.T)](#TestEcho)
@@ -59,10 +59,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="stdinCloseTestString" href="#stdinCloseTestString">const stdinCloseTestString</a>
 
 ```
 searchKey: exec_test.stdinCloseTestString
+tags: [private]
 ```
 
 ```Go
@@ -71,10 +76,15 @@ const stdinCloseTestString = "Some test string."
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="haveUnexpectedFDs" href="#haveUnexpectedFDs">var haveUnexpectedFDs</a>
 
 ```
 searchKey: exec_test.haveUnexpectedFDs
+tags: [private]
 ```
 
 ```Go
@@ -87,6 +97,7 @@ haveUnexpectedFDs is set at init time to report whether any file descriptors wer
 
 ```
 searchKey: exec_test.unfinalizedFiles
+tags: [private]
 ```
 
 ```Go
@@ -97,10 +108,15 @@ unfinalizedFiles holds files that should not be finalized, because that would cl
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="delayedInfiniteReader" href="#delayedInfiniteReader">type delayedInfiniteReader struct{}</a>
 
 ```
 searchKey: exec_test.delayedInfiniteReader
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +127,7 @@ type delayedInfiniteReader struct{}
 
 ```
 searchKey: exec_test.delayedInfiniteReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -121,6 +138,7 @@ func (delayedInfiniteReader) Read(b []byte) (int, error)
 
 ```
 searchKey: exec_test.badWriter
+tags: [private]
 ```
 
 ```Go
@@ -131,6 +149,7 @@ type badWriter struct{}
 
 ```
 searchKey: exec_test.badWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -139,10 +158,15 @@ func (w *badWriter) Write(data []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExampleLookPath" href="#ExampleLookPath">func ExampleLookPath()</a>
 
 ```
 searchKey: exec_test.ExampleLookPath
+tags: [private]
 ```
 
 ```Go
@@ -153,6 +177,7 @@ func ExampleLookPath()
 
 ```
 searchKey: exec_test.ExampleCommand
+tags: [private]
 ```
 
 ```Go
@@ -163,6 +188,7 @@ func ExampleCommand()
 
 ```
 searchKey: exec_test.ExampleCommand_environment
+tags: [private]
 ```
 
 ```Go
@@ -173,6 +199,7 @@ func ExampleCommand_environment()
 
 ```
 searchKey: exec_test.ExampleCmd_Output
+tags: [private]
 ```
 
 ```Go
@@ -183,6 +210,7 @@ func ExampleCmd_Output()
 
 ```
 searchKey: exec_test.ExampleCmd_Run
+tags: [private]
 ```
 
 ```Go
@@ -193,6 +221,7 @@ func ExampleCmd_Run()
 
 ```
 searchKey: exec_test.ExampleCmd_Start
+tags: [private]
 ```
 
 ```Go
@@ -203,6 +232,7 @@ func ExampleCmd_Start()
 
 ```
 searchKey: exec_test.ExampleCmd_StdoutPipe
+tags: [private]
 ```
 
 ```Go
@@ -213,6 +243,7 @@ func ExampleCmd_StdoutPipe()
 
 ```
 searchKey: exec_test.ExampleCmd_StdinPipe
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +254,7 @@ func ExampleCmd_StdinPipe()
 
 ```
 searchKey: exec_test.ExampleCmd_StderrPipe
+tags: [private]
 ```
 
 ```Go
@@ -233,6 +265,7 @@ func ExampleCmd_StderrPipe()
 
 ```
 searchKey: exec_test.ExampleCmd_CombinedOutput
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +276,7 @@ func ExampleCmd_CombinedOutput()
 
 ```
 searchKey: exec_test.ExampleCommandContext
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +287,7 @@ func ExampleCommandContext()
 
 ```
 searchKey: exec_test.TestCredentialNoSetGroups
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +298,7 @@ func TestCredentialNoSetGroups(t *testing.T)
 
 ```
 searchKey: exec_test.TestWaitid
+tags: [private]
 ```
 
 ```Go
@@ -271,10 +307,11 @@ func TestWaitid(t *testing.T)
 
 For issue #19314: make sure that SIGSTOP does not cause the process to appear done. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.exec_test.go" href="#init.exec_test.go">func init()</a>
 
 ```
 searchKey: exec_test.init
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +322,7 @@ func init()
 
 ```
 searchKey: exec_test.helperCommandContext
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +333,7 @@ func helperCommandContext(t *testing.T, ctx context.Context, s ...string) (cmd *
 
 ```
 searchKey: exec_test.helperCommand
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +344,7 @@ func helperCommand(t *testing.T, s ...string) *exec.Cmd
 
 ```
 searchKey: exec_test.TestEcho
+tags: [private]
 ```
 
 ```Go
@@ -315,6 +355,7 @@ func TestEcho(t *testing.T)
 
 ```
 searchKey: exec_test.TestCommandRelativeName
+tags: [private]
 ```
 
 ```Go
@@ -325,6 +366,7 @@ func TestCommandRelativeName(t *testing.T)
 
 ```
 searchKey: exec_test.TestCatStdin
+tags: [private]
 ```
 
 ```Go
@@ -335,6 +377,7 @@ func TestCatStdin(t *testing.T)
 
 ```
 searchKey: exec_test.TestEchoFileRace
+tags: [private]
 ```
 
 ```Go
@@ -345,6 +388,7 @@ func TestEchoFileRace(t *testing.T)
 
 ```
 searchKey: exec_test.TestCatGoodAndBadFile
+tags: [private]
 ```
 
 ```Go
@@ -355,6 +399,7 @@ func TestCatGoodAndBadFile(t *testing.T)
 
 ```
 searchKey: exec_test.TestNoExistExecutable
+tags: [private]
 ```
 
 ```Go
@@ -365,6 +410,7 @@ func TestNoExistExecutable(t *testing.T)
 
 ```
 searchKey: exec_test.TestExitStatus
+tags: [private]
 ```
 
 ```Go
@@ -375,6 +421,7 @@ func TestExitStatus(t *testing.T)
 
 ```
 searchKey: exec_test.TestExitCode
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +432,7 @@ func TestExitCode(t *testing.T)
 
 ```
 searchKey: exec_test.TestPipes
+tags: [private]
 ```
 
 ```Go
@@ -395,6 +443,7 @@ func TestPipes(t *testing.T)
 
 ```
 searchKey: exec_test.TestStdinClose
+tags: [private]
 ```
 
 ```Go
@@ -407,6 +456,7 @@ Issue 6270.
 
 ```
 searchKey: exec_test.TestStdinCloseRace
+tags: [private]
 ```
 
 ```Go
@@ -419,6 +469,7 @@ Issue 17647. It used to be the case that TestStdinClose, above, would fail when 
 
 ```
 searchKey: exec_test.TestPipeLookPathLeak
+tags: [private]
 ```
 
 ```Go
@@ -431,6 +482,7 @@ Issue 5071
 
 ```
 searchKey: exec_test.numOpenFDsAndroid
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +493,7 @@ func numOpenFDsAndroid(t *testing.T) (n int, lsof []byte)
 
 ```
 searchKey: exec_test.TestExtraFilesFDShuffle
+tags: [private]
 ```
 
 ```Go
@@ -451,6 +504,7 @@ func TestExtraFilesFDShuffle(t *testing.T)
 
 ```
 searchKey: exec_test.TestExtraFiles
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +515,7 @@ func TestExtraFiles(t *testing.T)
 
 ```
 searchKey: exec_test.TestExtraFilesRace
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +526,7 @@ func TestExtraFilesRace(t *testing.T)
 
 ```
 searchKey: exec_test.TestHelperProcess
+tags: [private]
 ```
 
 ```Go
@@ -483,6 +539,7 @@ TestHelperProcess isn't a real test. It's used as a helper process for TestParam
 
 ```
 searchKey: exec_test.TestIgnorePipeErrorOnSuccess
+tags: [private]
 ```
 
 ```Go
@@ -495,6 +552,7 @@ Issue 9173: ignore stdin pipe writes if the program completes successfully.
 
 ```
 searchKey: exec_test.TestClosePipeOnCopyError
+tags: [private]
 ```
 
 ```Go
@@ -505,6 +563,7 @@ func TestClosePipeOnCopyError(t *testing.T)
 
 ```
 searchKey: exec_test.TestOutputStderrCapture
+tags: [private]
 ```
 
 ```Go
@@ -515,6 +574,7 @@ func TestOutputStderrCapture(t *testing.T)
 
 ```
 searchKey: exec_test.TestContext
+tags: [private]
 ```
 
 ```Go
@@ -525,6 +585,7 @@ func TestContext(t *testing.T)
 
 ```
 searchKey: exec_test.TestContextCancel
+tags: [private]
 ```
 
 ```Go
@@ -535,6 +596,7 @@ func TestContextCancel(t *testing.T)
 
 ```
 searchKey: exec_test.TestDedupEnvEcho
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +609,7 @@ test that environment variables are de-duped.
 
 ```
 searchKey: exec_test.TestString
+tags: [private]
 ```
 
 ```Go
@@ -557,6 +620,7 @@ func TestString(t *testing.T)
 
 ```
 searchKey: exec_test.TestStringPathNotResolved
+tags: [private]
 ```
 
 ```Go
@@ -567,6 +631,7 @@ func TestStringPathNotResolved(t *testing.T)
 
 ```
 searchKey: exec_test.TestChildCriticalEnv
+tags: [private]
 ```
 
 ```Go

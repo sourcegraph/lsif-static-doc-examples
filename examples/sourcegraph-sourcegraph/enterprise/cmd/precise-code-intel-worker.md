@@ -21,14 +21,11 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="addr" href="#addr">const addr</a>
 
 ```
 searchKey: main.addr
+tags: [private]
 ```
 
 ```Go
@@ -37,15 +34,10 @@ const addr = ":3188"
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
 searchKey: main.Config
-tags: [exported]
 ```
 
 ```Go
@@ -63,7 +55,6 @@ type Config struct {
 
 ```
 searchKey: main.Config.Load
-tags: [exported]
 ```
 
 ```Go
@@ -72,14 +63,11 @@ func (c *Config) Load()
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +78,7 @@ func main()
 
 ```
 searchKey: main.mustInitializeDB
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +89,7 @@ func mustInitializeDB() *sql.DB
 
 ```
 searchKey: main.mustInitializeCodeIntelDB
+tags: [private]
 ```
 
 ```Go
@@ -110,6 +100,7 @@ func mustInitializeCodeIntelDB() *sql.DB
 
 ```
 searchKey: main.mustRegisterQueueMetric
+tags: [private]
 ```
 
 ```Go
@@ -120,6 +111,7 @@ func mustRegisterQueueMetric(observationContext *observation.Context, workerStor
 
 ```
 searchKey: main.makeWorkerMetrics
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +122,7 @@ func makeWorkerMetrics(observationContext *observation.Context) workerutil.Worke
 
 ```
 searchKey: main.initializeUploadStore
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +133,7 @@ func initializeUploadStore(ctx context.Context, uploadStore uploadstore.Store) e
 
 ```
 searchKey: main.isRequestError
+tags: [private]
 ```
 
 ```Go

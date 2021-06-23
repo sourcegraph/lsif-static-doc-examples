@@ -4,9 +4,7 @@
     "identifier": "tabwriter",
     "newPage": true,
     "searchKey": "text/tabwriter",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "FilterHTML",
                 "newPage": false,
                 "searchKey": "tabwriter.FilterHTML",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "StripEscape",
                 "newPage": false,
                 "searchKey": "tabwriter.StripEscape",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "AlignRight",
                 "newPage": false,
                 "searchKey": "tabwriter.AlignRight",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "DiscardEmptyColumns",
                 "newPage": false,
                 "searchKey": "tabwriter.DiscardEmptyColumns",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -132,9 +120,7 @@
                 "identifier": "TabIndent",
                 "newPage": false,
                 "searchKey": "tabwriter.TabIndent",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -154,9 +140,7 @@
                 "identifier": "Debug",
                 "newPage": false,
                 "searchKey": "tabwriter.Debug",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -176,9 +160,7 @@
                 "identifier": "Escape",
                 "newPage": false,
                 "searchKey": "tabwriter.Escape",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -201,9 +183,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -221,7 +201,9 @@
                 "identifier": "newline",
                 "newPage": false,
                 "searchKey": "tabwriter.newline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -241,7 +223,9 @@
                 "identifier": "tabs",
                 "newPage": false,
                 "searchKey": "tabwriter.tabs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -261,7 +245,9 @@
                 "identifier": "vbar",
                 "newPage": false,
                 "searchKey": "tabwriter.vbar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -281,7 +267,9 @@
                 "identifier": "hbar",
                 "newPage": false,
                 "searchKey": "tabwriter.hbar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,9 +292,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -324,7 +310,9 @@
                 "identifier": "cell",
                 "newPage": false,
                 "searchKey": "tabwriter.cell",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -344,9 +332,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "tabwriter.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -364,9 +350,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "tabwriter.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -386,7 +370,9 @@
                       "identifier": "Writer.addLine",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.addLine",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -406,7 +392,9 @@
                       "identifier": "Writer.reset",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -426,9 +414,7 @@
                       "identifier": "Writer.Init",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.Init",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -448,7 +434,9 @@
                       "identifier": "Writer.dump",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.dump",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -468,7 +456,9 @@
                       "identifier": "Writer.write0",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.write0",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -488,7 +478,9 @@
                       "identifier": "Writer.writeN",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.writeN",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -508,7 +500,9 @@
                       "identifier": "Writer.writePadding",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.writePadding",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -528,7 +522,9 @@
                       "identifier": "Writer.writeLines",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.writeLines",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -548,7 +544,9 @@
                       "identifier": "Writer.format",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.format",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -568,7 +566,9 @@
                       "identifier": "Writer.append",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.append",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -588,7 +588,9 @@
                       "identifier": "Writer.updateWidth",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.updateWidth",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -608,7 +610,9 @@
                       "identifier": "Writer.startEscape",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.startEscape",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -628,7 +632,9 @@
                       "identifier": "Writer.endEscape",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.endEscape",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -648,7 +654,9 @@
                       "identifier": "Writer.terminateCell",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.terminateCell",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -668,7 +676,9 @@
                       "identifier": "Writer.handlePanic",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.handlePanic",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -688,9 +698,7 @@
                       "identifier": "Writer.Flush",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.Flush",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -710,7 +718,9 @@
                       "identifier": "Writer.flush",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.flush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -730,7 +740,9 @@
                       "identifier": "Writer.flushNoDefers",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.flushNoDefers",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -750,9 +762,7 @@
                       "identifier": "Writer.Write",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -775,7 +785,9 @@
                 "identifier": "osError",
                 "newPage": false,
                 "searchKey": "tabwriter.osError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -37,10 +37,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="exampleTestFile" href="#exampleTestFile">const exampleTestFile</a>
 
 ```
 searchKey: doc_test.exampleTestFile
+tags: [private]
 ```
 
 ```Go
@@ -51,6 +56,7 @@ const exampleTestFile = ...
 
 ```
 searchKey: doc_test.exampleHelloPlay
+tags: [private]
 ```
 
 ```Go
@@ -61,6 +67,7 @@ const exampleHelloPlay = ...
 
 ```
 searchKey: doc_test.exampleImportPlay
+tags: [private]
 ```
 
 ```Go
@@ -71,6 +78,7 @@ const exampleImportPlay = ...
 
 ```
 searchKey: doc_test.exampleKeyValuePlay
+tags: [private]
 ```
 
 ```Go
@@ -81,6 +89,7 @@ const exampleKeyValuePlay = ...
 
 ```
 searchKey: doc_test.exampleKeyValueImportPlay
+tags: [private]
 ```
 
 ```Go
@@ -91,6 +100,7 @@ const exampleKeyValueImportPlay = ...
 
 ```
 searchKey: doc_test.exampleKeyValueTopDeclPlay
+tags: [private]
 ```
 
 ```Go
@@ -101,6 +111,7 @@ const exampleKeyValueTopDeclPlay = ...
 
 ```
 searchKey: doc_test.exampleSortPlay
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +122,7 @@ const exampleSortPlay = ...
 
 ```
 searchKey: doc_test.exampleWholeFile
+tags: [private]
 ```
 
 ```Go
@@ -121,6 +133,7 @@ const exampleWholeFile = ...
 
 ```
 searchKey: doc_test.exampleWholeFileOutput
+tags: [private]
 ```
 
 ```Go
@@ -131,6 +144,7 @@ const exampleWholeFileOutput = ...
 
 ```
 searchKey: doc_test.exampleWholeFileFunction
+tags: [private]
 ```
 
 ```Go
@@ -141,6 +155,7 @@ const exampleWholeFileFunction = ...
 
 ```
 searchKey: doc_test.exampleWholeFileFunctionOutput
+tags: [private]
 ```
 
 ```Go
@@ -151,6 +166,7 @@ const exampleWholeFileFunctionOutput = ...
 
 ```
 searchKey: doc_test.exampleWholeFileExternalFunction
+tags: [private]
 ```
 
 ```Go
@@ -161,6 +177,7 @@ const exampleWholeFileExternalFunction = ...
 
 ```
 searchKey: doc_test.exampleWholeFileExternalFunctionOutput
+tags: [private]
 ```
 
 ```Go
@@ -171,6 +188,7 @@ const exampleWholeFileExternalFunctionOutput = ...
 
 ```
 searchKey: doc_test.exampleInspectSignature
+tags: [private]
 ```
 
 ```Go
@@ -181,6 +199,7 @@ const exampleInspectSignature = ...
 
 ```
 searchKey: doc_test.exampleInspectSignatureOutput
+tags: [private]
 ```
 
 ```Go
@@ -191,6 +210,7 @@ const exampleInspectSignatureOutput = ...
 
 ```
 searchKey: doc_test.exampleEmpty
+tags: [private]
 ```
 
 ```Go
@@ -205,6 +225,7 @@ func Example_a()
 
 ```
 searchKey: doc_test.exampleEmptyOutput
+tags: [private]
 ```
 
 ```Go
@@ -217,10 +238,15 @@ func main()
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="exampleTestCases" href="#exampleTestCases">var exampleTestCases</a>
 
 ```
 searchKey: doc_test.exampleTestCases
+tags: [private]
 ```
 
 ```Go
@@ -231,6 +257,7 @@ var exampleTestCases = ...
 
 ```
 searchKey: doc_test.exampleWholeFileTestCases
+tags: [private]
 ```
 
 ```Go
@@ -239,10 +266,15 @@ var exampleWholeFileTestCases = ...
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestExamples" href="#TestExamples">func TestExamples(t *testing.T)</a>
 
 ```
 searchKey: doc_test.TestExamples
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +285,7 @@ func TestExamples(t *testing.T)
 
 ```
 searchKey: doc_test.TestExamplesWholeFile
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +296,7 @@ func TestExamplesWholeFile(t *testing.T)
 
 ```
 searchKey: doc_test.TestExampleInspectSignature
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +307,7 @@ func TestExampleInspectSignature(t *testing.T)
 
 ```
 searchKey: doc_test.TestExampleEmpty
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +318,7 @@ func TestExampleEmpty(t *testing.T)
 
 ```
 searchKey: doc_test.formatFile
+tags: [private]
 ```
 
 ```Go
@@ -293,6 +329,7 @@ func formatFile(t *testing.T, fset *token.FileSet, n *ast.File) string
 
 ```
 searchKey: doc_test.ExampleNewFromFiles
+tags: [private]
 ```
 
 ```Go
@@ -305,6 +342,7 @@ This example illustrates how to use NewFromFiles to compute package documentatio
 
 ```
 searchKey: doc_test.TestClassifyExamples
+tags: [private]
 ```
 
 ```Go
@@ -315,6 +353,7 @@ func TestClassifyExamples(t *testing.T)
 
 ```
 searchKey: doc_test.exampleNames
+tags: [private]
 ```
 
 ```Go
@@ -325,6 +364,7 @@ func exampleNames(exs []*doc.Example) (out []string)
 
 ```
 searchKey: doc_test.mustParse
+tags: [private]
 ```
 
 ```Go

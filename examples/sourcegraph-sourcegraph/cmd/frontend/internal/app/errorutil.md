@@ -10,11 +10,14 @@ Package errorutil exports a HTTP Middleware for HTTP handlers which return error
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Handler" href="#Handler">func Handler(h func(http.ResponseWriter, *http.Request) error) http.Handler</a>
 
 ```
 searchKey: errorutil.Handler
-tags: [exported]
 ```
 
 ```Go

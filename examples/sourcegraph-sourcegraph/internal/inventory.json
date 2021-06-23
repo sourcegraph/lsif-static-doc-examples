@@ -4,7 +4,9 @@
     "identifier": "inventory",
     "newPage": true,
     "searchKey": "internal/inventory",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "fileReadBufferSize",
                 "newPage": false,
                 "searchKey": "inventory.fileReadBufferSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "newLine",
                 "newPage": false,
                 "searchKey": "inventory.newLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +114,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -122,9 +134,7 @@
                 "identifier": "Context",
                 "newPage": false,
                 "searchKey": "inventory.Context",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -142,9 +152,7 @@
                       "identifier": "Context.Entries",
                       "newPage": false,
                       "searchKey": "inventory.Context.Entries",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -164,7 +172,9 @@
                       "identifier": "Context.entries",
                       "newPage": false,
                       "searchKey": "inventory.Context.entries",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -184,7 +194,9 @@
                       "identifier": "Context.tree",
                       "newPage": false,
                       "searchKey": "inventory.Context.tree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -204,7 +216,9 @@
                       "identifier": "Context.file",
                       "newPage": false,
                       "searchKey": "inventory.Context.file",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -227,9 +241,7 @@
                 "identifier": "Inventory",
                 "newPage": false,
                 "searchKey": "inventory.Inventory",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -247,9 +259,7 @@
                       "identifier": "Sum",
                       "newPage": false,
                       "searchKey": "inventory.Sum",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -272,9 +282,7 @@
                 "identifier": "Lang",
                 "newPage": false,
                 "searchKey": "inventory.Lang",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -292,7 +300,9 @@
                       "identifier": "getLang",
                       "newPage": false,
                       "searchKey": "inventory.getLang",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -315,7 +325,9 @@
                 "identifier": "fi",
                 "newPage": false,
                 "searchKey": "inventory.fi",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -333,7 +345,9 @@
                       "identifier": "fi.Name",
                       "newPage": false,
                       "searchKey": "inventory.fi.Name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -353,7 +367,9 @@
                       "identifier": "fi.Size",
                       "newPage": false,
                       "searchKey": "inventory.fi.Size",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -373,7 +389,9 @@
                       "identifier": "fi.IsDir",
                       "newPage": false,
                       "searchKey": "inventory.fi.IsDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -393,7 +411,9 @@
                       "identifier": "fi.Mode",
                       "newPage": false,
                       "searchKey": "inventory.fi.Mode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -413,7 +433,9 @@
                       "identifier": "fi.ModTime",
                       "newPage": false,
                       "searchKey": "inventory.fi.ModTime",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -433,7 +455,9 @@
                       "identifier": "fi.Sys",
                       "newPage": false,
                       "searchKey": "inventory.fi.Sys",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -456,7 +480,9 @@
                 "identifier": "nopReadCloser",
                 "newPage": false,
                 "searchKey": "inventory.nopReadCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -474,7 +500,9 @@
                       "identifier": "nopReadCloser.Read",
                       "newPage": false,
                       "searchKey": "inventory.nopReadCloser.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -494,7 +522,9 @@
                       "identifier": "nopReadCloser.Close",
                       "newPage": false,
                       "searchKey": "inventory.nopReadCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -520,7 +550,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -538,7 +570,9 @@
                 "identifier": "countLines",
                 "newPage": false,
                 "searchKey": "inventory.countLines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -558,9 +592,7 @@
                 "identifier": "GetLanguageByFilename",
                 "newPage": false,
                 "searchKey": "inventory.GetLanguageByFilename",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -575,12 +607,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/inventory#init",
+              "pathID": "/internal/inventory#init.inventory.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.inventory.go",
                 "newPage": false,
                 "searchKey": "inventory.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -600,7 +634,9 @@
                 "identifier": "preferLanguage",
                 "newPage": false,
                 "searchKey": "inventory.preferLanguage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -620,7 +656,9 @@
                 "identifier": "TestContext_Entries",
                 "newPage": false,
                 "searchKey": "inventory.TestContext_Entries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -640,7 +678,9 @@
                 "identifier": "TestGetLang_language",
                 "newPage": false,
                 "searchKey": "inventory.TestGetLang_language",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -660,7 +700,9 @@
                 "identifier": "makeFileReader",
                 "newPage": false,
                 "searchKey": "inventory.makeFileReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -680,7 +722,9 @@
                 "identifier": "TestGet_readFile",
                 "newPage": false,
                 "searchKey": "inventory.TestGet_readFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -700,7 +744,9 @@
                 "identifier": "BenchmarkGetLang",
                 "newPage": false,
                 "searchKey": "inventory.BenchmarkGetLang",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -720,7 +766,9 @@
                 "identifier": "BenchmarkIsVendor",
                 "newPage": false,
                 "searchKey": "inventory.BenchmarkIsVendor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -740,7 +788,9 @@
                 "identifier": "newFileReader",
                 "newPage": false,
                 "searchKey": "inventory.newFileReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -760,7 +810,9 @@
                 "identifier": "readFileTree",
                 "newPage": false,
                 "searchKey": "inventory.readFileTree",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -780,7 +832,9 @@
                 "identifier": "fakeContents",
                 "newPage": false,
                 "searchKey": "inventory.fakeContents",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

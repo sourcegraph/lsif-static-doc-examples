@@ -4,9 +4,7 @@
     "identifier": "html",
     "newPage": true,
     "searchKey": "html",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "longestEntityWithoutSemicolon",
                 "newPage": false,
                 "searchKey": "html.longestEntityWithoutSemicolon",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -67,9 +65,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -87,7 +83,9 @@
                 "identifier": "entity",
                 "newPage": false,
                 "searchKey": "html.entity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +105,9 @@
                 "identifier": "entity2",
                 "newPage": false,
                 "searchKey": "html.entity2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +127,9 @@
                 "identifier": "populateMapsOnce",
                 "newPage": false,
                 "searchKey": "html.populateMapsOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "replacementTable",
                 "newPage": false,
                 "searchKey": "html.replacementTable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "htmlEscaper",
                 "newPage": false,
                 "searchKey": "html.htmlEscaper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "unescapeTests",
                 "newPage": false,
                 "searchKey": "html.unescapeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "benchEscapeData",
                 "newPage": false,
                 "searchKey": "html.benchEscapeData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -227,7 +237,9 @@
                 "identifier": "benchEscapeNone",
                 "newPage": false,
                 "searchKey": "html.benchEscapeNone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "benchUnescapeSparse",
                 "newPage": false,
                 "searchKey": "html.benchUnescapeSparse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "benchUnescapeDense",
                 "newPage": false,
                 "searchKey": "html.benchUnescapeDense",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -290,9 +306,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -310,7 +324,9 @@
                 "identifier": "unescapeTest",
                 "newPage": false,
                 "searchKey": "html.unescapeTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -333,9 +349,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -353,7 +367,9 @@
                 "identifier": "populateMaps",
                 "newPage": false,
                 "searchKey": "html.populateMaps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -373,7 +389,9 @@
                 "identifier": "unescapeEntity",
                 "newPage": false,
                 "searchKey": "html.unescapeEntity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -393,9 +411,7 @@
                 "identifier": "EscapeString",
                 "newPage": false,
                 "searchKey": "html.EscapeString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -415,9 +431,7 @@
                 "identifier": "UnescapeString",
                 "newPage": false,
                 "searchKey": "html.UnescapeString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -432,12 +446,14 @@
           },
           {
             "node": {
-              "pathID": "/html#init",
+              "pathID": "/html#init.entity_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.entity_test.go",
                 "newPage": false,
                 "searchKey": "html.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -457,7 +473,9 @@
                 "identifier": "TestEntityLength",
                 "newPage": false,
                 "searchKey": "html.TestEntityLength",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -477,7 +495,9 @@
                 "identifier": "TestUnescape",
                 "newPage": false,
                 "searchKey": "html.TestUnescape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -497,7 +517,9 @@
                 "identifier": "TestUnescapeEscape",
                 "newPage": false,
                 "searchKey": "html.TestUnescapeEscape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -517,7 +539,9 @@
                 "identifier": "BenchmarkEscape",
                 "newPage": false,
                 "searchKey": "html.BenchmarkEscape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -537,7 +561,9 @@
                 "identifier": "BenchmarkEscapeNone",
                 "newPage": false,
                 "searchKey": "html.BenchmarkEscapeNone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -557,7 +583,9 @@
                 "identifier": "BenchmarkUnescape",
                 "newPage": false,
                 "searchKey": "html.BenchmarkUnescape",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -577,7 +605,9 @@
                 "identifier": "BenchmarkUnescapeNone",
                 "newPage": false,
                 "searchKey": "html.BenchmarkUnescapeNone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -597,7 +627,9 @@
                 "identifier": "BenchmarkUnescapeSparse",
                 "newPage": false,
                 "searchKey": "html.BenchmarkUnescapeSparse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -617,7 +649,9 @@
                 "identifier": "BenchmarkUnescapeDense",
                 "newPage": false,
                 "searchKey": "html.BenchmarkUnescapeDense",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

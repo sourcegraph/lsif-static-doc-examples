@@ -4,7 +4,9 @@
     "identifier": "dbstore",
     "newPage": true,
     "searchKey": "enterprise/internal/codeintel/stores/dbstore",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "hasRepositoryQuery",
                 "newPage": false,
                 "searchKey": "dbstore.hasRepositoryQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "hasCommitQuery",
                 "newPage": false,
                 "searchKey": "dbstore.hasCommitQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "markRepositoryAsDirtyQuery",
                 "newPage": false,
                 "searchKey": "dbstore.markRepositoryAsDirtyQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +110,9 @@
                 "identifier": "dirtyRepositoriesQuery",
                 "newPage": false,
                 "searchKey": "dbstore.dirtyRepositoriesQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +132,9 @@
                 "identifier": "commitGraphQuery",
                 "newPage": false,
                 "searchKey": "dbstore.commitGraphQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -140,7 +154,9 @@
                 "identifier": "calculateVisibleUploadsCommitGraphQuery",
                 "newPage": false,
                 "searchKey": "dbstore.calculateVisibleUploadsCommitGraphQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -160,7 +176,9 @@
                 "identifier": "calculateVisibleUploadsDirtyRepositoryQuery",
                 "newPage": false,
                 "searchKey": "dbstore.calculateVisibleUploadsDirtyRepositoryQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -180,7 +198,9 @@
                 "identifier": "temporaryNearestUploadsTableQuery",
                 "newPage": false,
                 "searchKey": "dbstore.temporaryNearestUploadsTableQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -200,7 +220,9 @@
                 "identifier": "temporaryNearestUploadsLinksTableQuery",
                 "newPage": false,
                 "searchKey": "dbstore.temporaryNearestUploadsLinksTableQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +242,9 @@
                 "identifier": "temporaryUploadsVisibleAtTipTableQuery",
                 "newPage": false,
                 "searchKey": "dbstore.temporaryUploadsVisibleAtTipTableQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -240,7 +264,9 @@
                 "identifier": "nearestUploadsInsertQuery",
                 "newPage": false,
                 "searchKey": "dbstore.nearestUploadsInsertQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +286,9 @@
                 "identifier": "nearestUploadsUpdateQuery",
                 "newPage": false,
                 "searchKey": "dbstore.nearestUploadsUpdateQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -280,7 +308,9 @@
                 "identifier": "nearestUploadsDeleteQuery",
                 "newPage": false,
                 "searchKey": "dbstore.nearestUploadsDeleteQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -300,7 +330,9 @@
                 "identifier": "nearestUploadsLinksInsertQuery",
                 "newPage": false,
                 "searchKey": "dbstore.nearestUploadsLinksInsertQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -320,7 +352,9 @@
                 "identifier": "nearestUploadsLinksUpdateQuery",
                 "newPage": false,
                 "searchKey": "dbstore.nearestUploadsLinksUpdateQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -340,7 +374,9 @@
                 "identifier": "nearestUploadsLinksDeleteQuery",
                 "newPage": false,
                 "searchKey": "dbstore.nearestUploadsLinksDeleteQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -360,7 +396,9 @@
                 "identifier": "uploadsVisibleAtTipInsertQuery",
                 "newPage": false,
                 "searchKey": "dbstore.uploadsVisibleAtTipInsertQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -380,7 +418,9 @@
                 "identifier": "uploadsVisibleAtTipDeleteQuery",
                 "newPage": false,
                 "searchKey": "dbstore.uploadsVisibleAtTipDeleteQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -400,7 +440,9 @@
                 "identifier": "bulkTransferQuery",
                 "newPage": false,
                 "searchKey": "dbstore.bulkTransferQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -420,7 +462,9 @@
                 "identifier": "insertDependencyIndexingJobQuery",
                 "newPage": false,
                 "searchKey": "dbstore.insertDependencyIndexingJobQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -440,7 +484,9 @@
                 "identifier": "getDumpsByIDsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getDumpsByIDsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -460,7 +506,9 @@
                 "identifier": "findClosestDumpsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.findClosestDumpsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -480,7 +528,9 @@
                 "identifier": "findClosestDumpsFromGraphFragmentCommitGraphQuery",
                 "newPage": false,
                 "searchKey": "dbstore.findClosestDumpsFromGraphFragmentCommitGraphQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -500,7 +550,9 @@
                 "identifier": "findClosestDumpsFromGraphFragmentQuery",
                 "newPage": false,
                 "searchKey": "dbstore.findClosestDumpsFromGraphFragmentQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -520,7 +572,9 @@
                 "identifier": "visibleUploadCandidatesQuery",
                 "newPage": false,
                 "searchKey": "dbstore.visibleUploadCandidatesQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -540,7 +594,9 @@
                 "identifier": "visibleUploadsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.visibleUploadsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -560,7 +616,9 @@
                 "identifier": "deleteOverlappingDumpsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.deleteOverlappingDumpsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -580,7 +638,9 @@
                 "identifier": "getRepositoriesWithIndexConfigurationQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getRepositoriesWithIndexConfigurationQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -600,7 +660,9 @@
                 "identifier": "getAutoIndexDisabledRepositoriesQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getAutoIndexDisabledRepositoriesQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -620,7 +682,9 @@
                 "identifier": "getIndexConfigurationByRepositoryIDQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getIndexConfigurationByRepositoryIDQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -640,7 +704,9 @@
                 "identifier": "updateIndexConfigurationByRepositoryIDQuery",
                 "newPage": false,
                 "searchKey": "dbstore.updateIndexConfigurationByRepositoryIDQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -660,7 +726,9 @@
                 "identifier": "indexAssociatedUploadIDQueryFragment",
                 "newPage": false,
                 "searchKey": "dbstore.indexAssociatedUploadIDQueryFragment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -680,7 +748,9 @@
                 "identifier": "indexRankQueryFragment",
                 "newPage": false,
                 "searchKey": "dbstore.indexRankQueryFragment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -700,7 +770,9 @@
                 "identifier": "getIndexByIDQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getIndexByIDQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -720,7 +792,9 @@
                 "identifier": "getIndexesByIDsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getIndexesByIDsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -740,7 +814,9 @@
                 "identifier": "getIndexesCountQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getIndexesCountQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -760,7 +836,9 @@
                 "identifier": "getIndexesQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getIndexesQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -780,7 +858,9 @@
                 "identifier": "isQueuedQuery",
                 "newPage": false,
                 "searchKey": "dbstore.isQueuedQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -800,7 +880,9 @@
                 "identifier": "insertIndexQuery",
                 "newPage": false,
                 "searchKey": "dbstore.insertIndexQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -820,7 +902,9 @@
                 "identifier": "deleteIndexByIDQuery",
                 "newPage": false,
                 "searchKey": "dbstore.deleteIndexByIDQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -840,7 +924,9 @@
                 "identifier": "deleteIndexesWithoutRepositoryQuery",
                 "newPage": false,
                 "searchKey": "dbstore.deleteIndexesWithoutRepositoryQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -860,7 +946,9 @@
                 "identifier": "deleteOldIndexesQuery",
                 "newPage": false,
                 "searchKey": "dbstore.deleteOldIndexesQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -880,7 +968,9 @@
                 "identifier": "staleSourcedCommitsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.staleSourcedCommitsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -900,7 +990,9 @@
                 "identifier": "staleSourcedCommitsSubquery",
                 "newPage": false,
                 "searchKey": "dbstore.staleSourcedCommitsSubquery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -920,7 +1012,9 @@
                 "identifier": "refreshCommitResolvabilityQuery",
                 "newPage": false,
                 "searchKey": "dbstore.refreshCommitResolvabilityQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -940,7 +1034,9 @@
                 "identifier": "updatePackagesTemporaryTableQuery",
                 "newPage": false,
                 "searchKey": "dbstore.updatePackagesTemporaryTableQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -960,7 +1056,9 @@
                 "identifier": "updatePackagesInsertQuery",
                 "newPage": false,
                 "searchKey": "dbstore.updatePackagesInsertQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -980,7 +1078,9 @@
                 "identifier": "updateReferencesTemporaryTableQuery",
                 "newPage": false,
                 "searchKey": "dbstore.updateReferencesTemporaryTableQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1000,7 +1100,9 @@
                 "identifier": "updateReferencesInsertQuery",
                 "newPage": false,
                 "searchKey": "dbstore.updateReferencesInsertQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1020,7 +1122,9 @@
                 "identifier": "repoNameQuery",
                 "newPage": false,
                 "searchKey": "dbstore.repoNameQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1040,7 +1144,9 @@
                 "identifier": "uploadRankQueryFragment",
                 "newPage": false,
                 "searchKey": "dbstore.uploadRankQueryFragment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1060,7 +1166,9 @@
                 "identifier": "getUploadByIDQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getUploadByIDQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1080,7 +1188,9 @@
                 "identifier": "visibleAtTipSubselectQuery",
                 "newPage": false,
                 "searchKey": "dbstore.visibleAtTipSubselectQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1100,7 +1210,9 @@
                 "identifier": "getUploadsByIDsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getUploadsByIDsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1120,7 +1232,9 @@
                 "identifier": "deleteUploadsStuckUploadingQuery",
                 "newPage": false,
                 "searchKey": "dbstore.deleteUploadsStuckUploadingQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1140,7 +1254,9 @@
                 "identifier": "getUploadsCountQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getUploadsCountQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1160,7 +1276,9 @@
                 "identifier": "getUploadsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getUploadsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1180,7 +1298,9 @@
                 "identifier": "insertUploadQuery",
                 "newPage": false,
                 "searchKey": "dbstore.insertUploadQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1200,7 +1320,9 @@
                 "identifier": "addUploadPartQuery",
                 "newPage": false,
                 "searchKey": "dbstore.addUploadPartQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1220,7 +1342,9 @@
                 "identifier": "markQueuedQuery",
                 "newPage": false,
                 "searchKey": "dbstore.markQueuedQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1240,7 +1364,9 @@
                 "identifier": "markFailedQuery",
                 "newPage": false,
                 "searchKey": "dbstore.markFailedQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1260,7 +1386,9 @@
                 "identifier": "deleteUploadByIDQuery",
                 "newPage": false,
                 "searchKey": "dbstore.deleteUploadByIDQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1280,9 +1408,7 @@
                 "identifier": "DeletedRepositoryGracePeriod",
                 "newPage": false,
                 "searchKey": "dbstore.DeletedRepositoryGracePeriod",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1302,7 +1428,9 @@
                 "identifier": "deleteUploadsWithoutRepositoryQuery",
                 "newPage": false,
                 "searchKey": "dbstore.deleteUploadsWithoutRepositoryQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1322,7 +1450,9 @@
                 "identifier": "hardDeleteUploadByIDQuery",
                 "newPage": false,
                 "searchKey": "dbstore.hardDeleteUploadByIDQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1342,7 +1472,9 @@
                 "identifier": "softDeleteOldUploadsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.softDeleteOldUploadsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1362,7 +1494,9 @@
                 "identifier": "getOldestCommitDateQuery",
                 "newPage": false,
                 "searchKey": "dbstore.getOldestCommitDateQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1382,7 +1516,9 @@
                 "identifier": "updateCommitedAtQuery",
                 "newPage": false,
                 "searchKey": "dbstore.updateCommitedAtQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1402,9 +1538,7 @@
                 "identifier": "StalledUploadMaxAge",
                 "newPage": false,
                 "searchKey": "dbstore.StalledUploadMaxAge",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1424,9 +1558,7 @@
                 "identifier": "UploadMaxNumResets",
                 "newPage": false,
                 "searchKey": "dbstore.UploadMaxNumResets",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1446,9 +1578,7 @@
                 "identifier": "StalledIndexMaxAge",
                 "newPage": false,
                 "searchKey": "dbstore.StalledIndexMaxAge",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1468,9 +1598,7 @@
                 "identifier": "IndexMaxNumResets",
                 "newPage": false,
                 "searchKey": "dbstore.IndexMaxNumResets",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1490,9 +1618,7 @@
                 "identifier": "StalledDependencyIndexingJobMaxAge",
                 "newPage": false,
                 "searchKey": "dbstore.StalledDependencyIndexingJobMaxAge",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1512,9 +1638,7 @@
                 "identifier": "DependencyIndexingJobMaxNumResets",
                 "newPage": false,
                 "searchKey": "dbstore.DependencyIndexingJobMaxNumResets",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1534,9 +1658,7 @@
                 "identifier": "DefinitionDumpsLimit",
                 "newPage": false,
                 "searchKey": "dbstore.DefinitionDumpsLimit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1556,7 +1678,9 @@
                 "identifier": "definitionDumpsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.definitionDumpsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1576,7 +1700,9 @@
                 "identifier": "referenceIDsAndFiltersCTEDefinitions",
                 "newPage": false,
                 "searchKey": "dbstore.referenceIDsAndFiltersCTEDefinitions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1596,7 +1722,9 @@
                 "identifier": "referenceIDsAndFiltersBaseQuery",
                 "newPage": false,
                 "searchKey": "dbstore.referenceIDsAndFiltersBaseQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1616,7 +1744,9 @@
                 "identifier": "referenceIDsAndFiltersQuery",
                 "newPage": false,
                 "searchKey": "dbstore.referenceIDsAndFiltersQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1636,7 +1766,9 @@
                 "identifier": "referenceIDsAndFiltersCountQuery",
                 "newPage": false,
                 "searchKey": "dbstore.referenceIDsAndFiltersCountQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1656,7 +1788,9 @@
                 "identifier": "referencesForUploadQuery",
                 "newPage": false,
                 "searchKey": "dbstore.referencesForUploadQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1679,7 +1813,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1697,7 +1833,9 @@
                 "identifier": "dependencyIndexingJobColumns",
                 "newPage": false,
                 "searchKey": "dbstore.dependencyIndexingJobColumns",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1717,9 +1855,7 @@
                 "identifier": "ErrNotTransactable",
                 "newPage": false,
                 "searchKey": "dbstore.ErrNotTransactable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1739,9 +1875,7 @@
                 "identifier": "ErrNoTransaction",
                 "newPage": false,
                 "searchKey": "dbstore.ErrNoTransaction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1761,9 +1895,7 @@
                 "identifier": "ErrDequeueTransaction",
                 "newPage": false,
                 "searchKey": "dbstore.ErrDequeueTransaction",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1783,9 +1915,7 @@
                 "identifier": "ErrDequeueRace",
                 "newPage": false,
                 "searchKey": "dbstore.ErrDequeueRace",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1805,9 +1935,7 @@
                 "identifier": "ErrNoSavepoint",
                 "newPage": false,
                 "searchKey": "dbstore.ErrNoSavepoint",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1827,9 +1955,7 @@
                 "identifier": "ErrUnknownRepository",
                 "newPage": false,
                 "searchKey": "dbstore.ErrUnknownRepository",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1849,9 +1975,7 @@
                 "identifier": "ErrIllegalLimit",
                 "newPage": false,
                 "searchKey": "dbstore.ErrIllegalLimit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1871,9 +1995,7 @@
                 "identifier": "ScanFirstIndexRecord",
                 "newPage": false,
                 "searchKey": "dbstore.ScanFirstIndexRecord",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1893,7 +2015,9 @@
                 "identifier": "indexColumnsWithNullRank",
                 "newPage": false,
                 "searchKey": "dbstore.indexColumnsWithNullRank",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1913,9 +2037,7 @@
                 "identifier": "IndexColumnsWithNullRank",
                 "newPage": false,
                 "searchKey": "dbstore.IndexColumnsWithNullRank",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1935,7 +2057,9 @@
                 "identifier": "uploadColumnsWithNullRank",
                 "newPage": false,
                 "searchKey": "dbstore.uploadColumnsWithNullRank",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1955,7 +2079,9 @@
                 "identifier": "uploadWorkerStoreOptions",
                 "newPage": false,
                 "searchKey": "dbstore.uploadWorkerStoreOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1975,7 +2101,9 @@
                 "identifier": "indexWorkerStoreOptions",
                 "newPage": false,
                 "searchKey": "dbstore.indexWorkerStoreOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1995,7 +2123,9 @@
                 "identifier": "dependencyIndexingJobWorkerStoreOptions",
                 "newPage": false,
                 "searchKey": "dbstore.dependencyIndexingJobWorkerStoreOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2018,7 +2148,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2036,7 +2168,9 @@
                 "identifier": "uploadMetaListSerializer",
                 "newPage": false,
                 "searchKey": "dbstore.uploadMetaListSerializer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2054,9 +2188,7 @@
                       "identifier": "NewUploadMetaListSerializer",
                       "newPage": false,
                       "searchKey": "dbstore.NewUploadMetaListSerializer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2076,7 +2208,9 @@
                       "identifier": "uploadMetaListSerializer.Serialize",
                       "newPage": false,
                       "searchKey": "dbstore.uploadMetaListSerializer.Serialize",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2096,7 +2230,9 @@
                       "identifier": "uploadMetaListSerializer.write",
                       "newPage": false,
                       "searchKey": "dbstore.uploadMetaListSerializer.write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2116,7 +2252,9 @@
                       "identifier": "uploadMetaListSerializer.writeUploadMeta",
                       "newPage": false,
                       "searchKey": "dbstore.uploadMetaListSerializer.writeUploadMeta",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2136,7 +2274,9 @@
                       "identifier": "uploadMetaListSerializer.writeInteger",
                       "newPage": false,
                       "searchKey": "dbstore.uploadMetaListSerializer.writeInteger",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2156,7 +2296,9 @@
                       "identifier": "uploadMetaListSerializer.take",
                       "newPage": false,
                       "searchKey": "dbstore.uploadMetaListSerializer.take",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2179,7 +2321,9 @@
                 "identifier": "sanitizedCommitInput",
                 "newPage": false,
                 "searchKey": "dbstore.sanitizedCommitInput",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2197,7 +2341,9 @@
                       "identifier": "sanitizeCommitInput",
                       "newPage": false,
                       "searchKey": "dbstore.sanitizeCommitInput",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2220,9 +2366,7 @@
                 "identifier": "DependencyIndexingJob",
                 "newPage": false,
                 "searchKey": "dbstore.DependencyIndexingJob",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2240,7 +2384,9 @@
                       "identifier": "scanFirstDependencyIndexingJob",
                       "newPage": false,
                       "searchKey": "dbstore.scanFirstDependencyIndexingJob",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2260,9 +2406,7 @@
                       "identifier": "DependencyIndexingJob.RecordID",
                       "newPage": false,
                       "searchKey": "dbstore.DependencyIndexingJob.RecordID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2285,9 +2429,7 @@
                 "identifier": "DockerStep",
                 "newPage": false,
                 "searchKey": "dbstore.DockerStep",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2305,9 +2447,7 @@
                       "identifier": "DockerStep.Scan",
                       "newPage": false,
                       "searchKey": "dbstore.DockerStep.Scan",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2327,9 +2467,7 @@
                       "identifier": "DockerStep.Value",
                       "newPage": false,
                       "searchKey": "dbstore.DockerStep.Value",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2352,9 +2490,7 @@
                 "identifier": "Dump",
                 "newPage": false,
                 "searchKey": "dbstore.Dump",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2374,9 +2510,7 @@
                 "identifier": "IndexConfiguration",
                 "newPage": false,
                 "searchKey": "dbstore.IndexConfiguration",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2394,7 +2528,9 @@
                       "identifier": "scanFirstIndexConfiguration",
                       "newPage": false,
                       "searchKey": "dbstore.scanFirstIndexConfiguration",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2417,9 +2553,7 @@
                 "identifier": "Index",
                 "newPage": false,
                 "searchKey": "dbstore.Index",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2437,7 +2571,9 @@
                       "identifier": "scanFirstIndex",
                       "newPage": false,
                       "searchKey": "dbstore.scanFirstIndex",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2457,9 +2593,7 @@
                       "identifier": "Index.RecordID",
                       "newPage": false,
                       "searchKey": "dbstore.Index.RecordID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2482,9 +2616,7 @@
                 "identifier": "GetIndexesOptions",
                 "newPage": false,
                 "searchKey": "dbstore.GetIndexesOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2504,9 +2636,7 @@
                 "identifier": "SourcedCommits",
                 "newPage": false,
                 "searchKey": "dbstore.SourcedCommits",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2526,7 +2656,9 @@
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "dbstore.operations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2544,7 +2676,9 @@
                       "identifier": "newOperations",
                       "newPage": false,
                       "searchKey": "dbstore.newOperations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2567,9 +2701,7 @@
                 "identifier": "Store",
                 "newPage": false,
                 "searchKey": "dbstore.Store",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2587,9 +2719,7 @@
                       "identifier": "NewWithDB",
                       "newPage": false,
                       "searchKey": "dbstore.NewWithDB",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2609,7 +2739,9 @@
                       "identifier": "testStore",
                       "newPage": false,
                       "searchKey": "dbstore.testStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2629,9 +2761,7 @@
                       "identifier": "Store.HasRepository",
                       "newPage": false,
                       "searchKey": "dbstore.Store.HasRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2651,9 +2781,7 @@
                       "identifier": "Store.HasCommit",
                       "newPage": false,
                       "searchKey": "dbstore.Store.HasCommit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2673,9 +2801,7 @@
                       "identifier": "Store.MarkRepositoryAsDirty",
                       "newPage": false,
                       "searchKey": "dbstore.Store.MarkRepositoryAsDirty",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2695,9 +2821,7 @@
                       "identifier": "Store.DirtyRepositories",
                       "newPage": false,
                       "searchKey": "dbstore.Store.DirtyRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2717,9 +2841,7 @@
                       "identifier": "Store.CommitGraphMetadata",
                       "newPage": false,
                       "searchKey": "dbstore.Store.CommitGraphMetadata",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2739,9 +2861,7 @@
                       "identifier": "Store.CalculateVisibleUploads",
                       "newPage": false,
                       "searchKey": "dbstore.Store.CalculateVisibleUploads",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2761,7 +2881,9 @@
                       "identifier": "Store.writeVisibleUploads",
                       "newPage": false,
                       "searchKey": "dbstore.Store.writeVisibleUploads",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2781,7 +2903,9 @@
                       "identifier": "Store.createTemporaryNearestUploadsTables",
                       "newPage": false,
                       "searchKey": "dbstore.Store.createTemporaryNearestUploadsTables",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2801,7 +2925,9 @@
                       "identifier": "Store.persistNearestUploads",
                       "newPage": false,
                       "searchKey": "dbstore.Store.persistNearestUploads",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2821,7 +2947,9 @@
                       "identifier": "Store.persistNearestUploadsLinks",
                       "newPage": false,
                       "searchKey": "dbstore.Store.persistNearestUploadsLinks",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2841,7 +2969,9 @@
                       "identifier": "Store.persistUploadsVisibleAtTip",
                       "newPage": false,
                       "searchKey": "dbstore.Store.persistUploadsVisibleAtTip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2861,7 +2991,9 @@
                       "identifier": "Store.bulkTransfer",
                       "newPage": false,
                       "searchKey": "dbstore.Store.bulkTransfer",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2881,9 +3013,7 @@
                       "identifier": "Store.InsertDependencyIndexingJob",
                       "newPage": false,
                       "searchKey": "dbstore.Store.InsertDependencyIndexingJob",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2903,9 +3033,7 @@
                       "identifier": "Store.GetDumpsByIDs",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetDumpsByIDs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2925,9 +3053,7 @@
                       "identifier": "Store.FindClosestDumps",
                       "newPage": false,
                       "searchKey": "dbstore.Store.FindClosestDumps",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2947,9 +3073,7 @@
                       "identifier": "Store.FindClosestDumpsFromGraphFragment",
                       "newPage": false,
                       "searchKey": "dbstore.Store.FindClosestDumpsFromGraphFragment",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2969,9 +3093,7 @@
                       "identifier": "Store.DeleteOverlappingDumps",
                       "newPage": false,
                       "searchKey": "dbstore.Store.DeleteOverlappingDumps",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2991,9 +3113,7 @@
                       "identifier": "Store.GetRepositoriesWithIndexConfiguration",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetRepositoriesWithIndexConfiguration",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3013,9 +3133,7 @@
                       "identifier": "Store.GetAutoindexDisabledRepositories",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetAutoindexDisabledRepositories",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3035,9 +3153,7 @@
                       "identifier": "Store.GetIndexConfigurationByRepositoryID",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetIndexConfigurationByRepositoryID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3057,9 +3173,7 @@
                       "identifier": "Store.UpdateIndexConfigurationByRepositoryID",
                       "newPage": false,
                       "searchKey": "dbstore.Store.UpdateIndexConfigurationByRepositoryID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3079,9 +3193,7 @@
                       "identifier": "Store.GetIndexByID",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetIndexByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3101,9 +3213,7 @@
                       "identifier": "Store.GetIndexesByIDs",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetIndexesByIDs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3123,9 +3233,7 @@
                       "identifier": "Store.GetIndexes",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetIndexes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3145,9 +3253,7 @@
                       "identifier": "Store.IsQueued",
                       "newPage": false,
                       "searchKey": "dbstore.Store.IsQueued",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3167,9 +3273,7 @@
                       "identifier": "Store.InsertIndex",
                       "newPage": false,
                       "searchKey": "dbstore.Store.InsertIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3189,9 +3293,7 @@
                       "identifier": "Store.DeleteIndexByID",
                       "newPage": false,
                       "searchKey": "dbstore.Store.DeleteIndexByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3211,9 +3313,7 @@
                       "identifier": "Store.DeleteIndexesWithoutRepository",
                       "newPage": false,
                       "searchKey": "dbstore.Store.DeleteIndexesWithoutRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3233,9 +3333,7 @@
                       "identifier": "Store.DeleteOldIndexes",
                       "newPage": false,
                       "searchKey": "dbstore.Store.DeleteOldIndexes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3255,9 +3353,7 @@
                       "identifier": "Store.StaleSourcedCommits",
                       "newPage": false,
                       "searchKey": "dbstore.Store.StaleSourcedCommits",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3277,9 +3373,7 @@
                       "identifier": "Store.RefreshCommitResolvability",
                       "newPage": false,
                       "searchKey": "dbstore.Store.RefreshCommitResolvability",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3299,9 +3393,7 @@
                       "identifier": "Store.UpdatePackages",
                       "newPage": false,
                       "searchKey": "dbstore.Store.UpdatePackages",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3321,9 +3413,7 @@
                       "identifier": "Store.UpdatePackageReferences",
                       "newPage": false,
                       "searchKey": "dbstore.Store.UpdatePackageReferences",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3343,9 +3433,7 @@
                       "identifier": "Store.RepoName",
                       "newPage": false,
                       "searchKey": "dbstore.Store.RepoName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3365,9 +3453,7 @@
                       "identifier": "Store.With",
                       "newPage": false,
                       "searchKey": "dbstore.Store.With",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3387,9 +3473,7 @@
                       "identifier": "Store.Transact",
                       "newPage": false,
                       "searchKey": "dbstore.Store.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3409,7 +3493,9 @@
                       "identifier": "Store.transact",
                       "newPage": false,
                       "searchKey": "dbstore.Store.transact",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3429,9 +3515,7 @@
                       "identifier": "Store.GetUploadByID",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetUploadByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3451,9 +3535,7 @@
                       "identifier": "Store.GetUploadsByIDs",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetUploadsByIDs",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3473,9 +3555,7 @@
                       "identifier": "Store.DeleteUploadsStuckUploading",
                       "newPage": false,
                       "searchKey": "dbstore.Store.DeleteUploadsStuckUploading",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3495,9 +3575,7 @@
                       "identifier": "Store.GetUploads",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetUploads",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3517,9 +3595,7 @@
                       "identifier": "Store.InsertUpload",
                       "newPage": false,
                       "searchKey": "dbstore.Store.InsertUpload",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3539,9 +3615,7 @@
                       "identifier": "Store.AddUploadPart",
                       "newPage": false,
                       "searchKey": "dbstore.Store.AddUploadPart",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3561,9 +3635,7 @@
                       "identifier": "Store.MarkQueued",
                       "newPage": false,
                       "searchKey": "dbstore.Store.MarkQueued",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3583,9 +3655,7 @@
                       "identifier": "Store.MarkFailed",
                       "newPage": false,
                       "searchKey": "dbstore.Store.MarkFailed",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3605,9 +3675,7 @@
                       "identifier": "Store.DeleteUploadByID",
                       "newPage": false,
                       "searchKey": "dbstore.Store.DeleteUploadByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3627,9 +3695,7 @@
                       "identifier": "Store.DeleteUploadsWithoutRepository",
                       "newPage": false,
                       "searchKey": "dbstore.Store.DeleteUploadsWithoutRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3649,9 +3715,7 @@
                       "identifier": "Store.HardDeleteUploadByID",
                       "newPage": false,
                       "searchKey": "dbstore.Store.HardDeleteUploadByID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3671,9 +3735,7 @@
                       "identifier": "Store.SoftDeleteOldUploads",
                       "newPage": false,
                       "searchKey": "dbstore.Store.SoftDeleteOldUploads",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3693,9 +3755,7 @@
                       "identifier": "Store.GetOldestCommitDate",
                       "newPage": false,
                       "searchKey": "dbstore.Store.GetOldestCommitDate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3715,9 +3775,7 @@
                       "identifier": "Store.UpdateCommitedAt",
                       "newPage": false,
                       "searchKey": "dbstore.Store.UpdateCommitedAt",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3737,9 +3795,7 @@
                       "identifier": "Store.DefinitionDumps",
                       "newPage": false,
                       "searchKey": "dbstore.Store.DefinitionDumps",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3759,9 +3815,7 @@
                       "identifier": "Store.ReferenceIDsAndFilters",
                       "newPage": false,
                       "searchKey": "dbstore.Store.ReferenceIDsAndFilters",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3781,9 +3835,7 @@
                       "identifier": "Store.ReferencesForUpload",
                       "newPage": false,
                       "searchKey": "dbstore.Store.ReferencesForUpload",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3806,9 +3858,7 @@
                 "identifier": "Upload",
                 "newPage": false,
                 "searchKey": "dbstore.Upload",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3826,7 +3876,9 @@
                       "identifier": "scanFirstUpload",
                       "newPage": false,
                       "searchKey": "dbstore.scanFirstUpload",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3846,7 +3898,9 @@
                       "identifier": "dumpToUpload",
                       "newPage": false,
                       "searchKey": "dbstore.dumpToUpload",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3866,9 +3920,7 @@
                       "identifier": "Upload.RecordID",
                       "newPage": false,
                       "searchKey": "dbstore.Upload.RecordID",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3891,9 +3943,7 @@
                 "identifier": "GetUploadsOptions",
                 "newPage": false,
                 "searchKey": "dbstore.GetUploadsOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3913,9 +3963,7 @@
                 "identifier": "PackageReferenceScanner",
                 "newPage": false,
                 "searchKey": "dbstore.PackageReferenceScanner",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3933,7 +3981,9 @@
                       "identifier": "packageReferenceScannerFromRows",
                       "newPage": false,
                       "searchKey": "dbstore.packageReferenceScannerFromRows",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3953,9 +4003,7 @@
                       "identifier": "PackageReferenceScannerFromSlice",
                       "newPage": false,
                       "searchKey": "dbstore.PackageReferenceScannerFromSlice",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3978,7 +4026,9 @@
                 "identifier": "rowScanner",
                 "newPage": false,
                 "searchKey": "dbstore.rowScanner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3996,7 +4046,9 @@
                       "identifier": "rowScanner.Next",
                       "newPage": false,
                       "searchKey": "dbstore.rowScanner.Next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4016,7 +4068,9 @@
                       "identifier": "rowScanner.Close",
                       "newPage": false,
                       "searchKey": "dbstore.rowScanner.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4039,7 +4093,9 @@
                 "identifier": "sliceScanner",
                 "newPage": false,
                 "searchKey": "dbstore.sliceScanner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4057,7 +4113,9 @@
                       "identifier": "sliceScanner.Next",
                       "newPage": false,
                       "searchKey": "dbstore.sliceScanner.Next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4077,7 +4135,9 @@
                       "identifier": "sliceScanner.Close",
                       "newPage": false,
                       "searchKey": "dbstore.sliceScanner.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4100,7 +4160,9 @@
                 "identifier": "FindClosestDumpsTestCase",
                 "newPage": false,
                 "searchKey": "dbstore.FindClosestDumpsTestCase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4120,7 +4182,9 @@
                 "identifier": "printableRank",
                 "newPage": false,
                 "searchKey": "dbstore.printableRank",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4138,7 +4202,9 @@
                       "identifier": "printableRank.String",
                       "newPage": false,
                       "searchKey": "dbstore.printableRank.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4164,7 +4230,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -4182,7 +4250,9 @@
                 "identifier": "scanCommitGraphView",
                 "newPage": false,
                 "searchKey": "dbstore.scanCommitGraphView",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4202,7 +4272,9 @@
                 "identifier": "scanIntPairs",
                 "newPage": false,
                 "searchKey": "dbstore.scanIntPairs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4222,7 +4294,9 @@
                 "identifier": "scanCommitGraphMetadata",
                 "newPage": false,
                 "searchKey": "dbstore.scanCommitGraphMetadata",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4242,7 +4316,9 @@
                 "identifier": "countingWrite",
                 "newPage": false,
                 "searchKey": "dbstore.countingWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4262,7 +4338,9 @@
                 "identifier": "scanDependencyIndexingJobs",
                 "newPage": false,
                 "searchKey": "dbstore.scanDependencyIndexingJobs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4282,7 +4360,9 @@
                 "identifier": "scanFirstDependencyIndexingJobRecord",
                 "newPage": false,
                 "searchKey": "dbstore.scanFirstDependencyIndexingJobRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4302,7 +4382,9 @@
                 "identifier": "scanDumps",
                 "newPage": false,
                 "searchKey": "dbstore.scanDumps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4322,7 +4404,9 @@
                 "identifier": "makeVisibleUploadCandidatesQuery",
                 "newPage": false,
                 "searchKey": "dbstore.makeVisibleUploadCandidatesQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4342,7 +4426,9 @@
                 "identifier": "makeVisibleUploadsQuery",
                 "newPage": false,
                 "searchKey": "dbstore.makeVisibleUploadsQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4362,7 +4448,9 @@
                 "identifier": "makeFindClosestDumpConditions",
                 "newPage": false,
                 "searchKey": "dbstore.makeFindClosestDumpConditions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4382,7 +4470,9 @@
                 "identifier": "scanIndexConfigurations",
                 "newPage": false,
                 "searchKey": "dbstore.scanIndexConfigurations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4402,7 +4492,9 @@
                 "identifier": "scanIndexes",
                 "newPage": false,
                 "searchKey": "dbstore.scanIndexes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4422,7 +4514,9 @@
                 "identifier": "scanFirstIndexRecord",
                 "newPage": false,
                 "searchKey": "dbstore.scanFirstIndexRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4442,7 +4536,9 @@
                 "identifier": "makeIndexSearchCondition",
                 "newPage": false,
                 "searchKey": "dbstore.makeIndexSearchCondition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4462,9 +4558,7 @@
                 "identifier": "ScanSourcedCommits",
                 "newPage": false,
                 "searchKey": "dbstore.ScanSourcedCommits",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4484,7 +4578,9 @@
                 "identifier": "loadPackagesChannel",
                 "newPage": false,
                 "searchKey": "dbstore.loadPackagesChannel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4504,7 +4600,9 @@
                 "identifier": "loadReferencesChannel",
                 "newPage": false,
                 "searchKey": "dbstore.loadReferencesChannel",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4524,7 +4622,9 @@
                 "identifier": "intsToQueries",
                 "newPage": false,
                 "searchKey": "dbstore.intsToQueries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4544,7 +4644,9 @@
                 "identifier": "scanUploads",
                 "newPage": false,
                 "searchKey": "dbstore.scanUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4564,7 +4666,9 @@
                 "identifier": "scanFirstUploadRecord",
                 "newPage": false,
                 "searchKey": "dbstore.scanFirstUploadRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4584,7 +4688,9 @@
                 "identifier": "scanCounts",
                 "newPage": false,
                 "searchKey": "dbstore.scanCounts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4604,7 +4710,9 @@
                 "identifier": "makeSearchCondition",
                 "newPage": false,
                 "searchKey": "dbstore.makeSearchCondition",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4624,7 +4732,9 @@
                 "identifier": "intsToString",
                 "newPage": false,
                 "searchKey": "dbstore.intsToString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4644,7 +4754,9 @@
                 "identifier": "nilTimeToString",
                 "newPage": false,
                 "searchKey": "dbstore.nilTimeToString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4664,9 +4776,7 @@
                 "identifier": "WorkerutilUploadStore",
                 "newPage": false,
                 "searchKey": "dbstore.WorkerutilUploadStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4686,9 +4796,7 @@
                 "identifier": "WorkerutilIndexStore",
                 "newPage": false,
                 "searchKey": "dbstore.WorkerutilIndexStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4708,9 +4816,7 @@
                 "identifier": "WorkerutilDependencyIndexingJobStore",
                 "newPage": false,
                 "searchKey": "dbstore.WorkerutilDependencyIndexingJobStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4730,7 +4836,9 @@
                 "identifier": "monikersToString",
                 "newPage": false,
                 "searchKey": "dbstore.monikersToString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4750,7 +4858,9 @@
                 "identifier": "TestHasRepository",
                 "newPage": false,
                 "searchKey": "dbstore.TestHasRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4770,7 +4880,9 @@
                 "identifier": "TestHasCommit",
                 "newPage": false,
                 "searchKey": "dbstore.TestHasCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4790,7 +4902,9 @@
                 "identifier": "TestMarkRepositoryAsDirty",
                 "newPage": false,
                 "searchKey": "dbstore.TestMarkRepositoryAsDirty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4810,7 +4924,9 @@
                 "identifier": "TestSkipsDeletedRepositories",
                 "newPage": false,
                 "searchKey": "dbstore.TestSkipsDeletedRepositories",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4830,7 +4946,9 @@
                 "identifier": "TestCommitGraphMetadata",
                 "newPage": false,
                 "searchKey": "dbstore.TestCommitGraphMetadata",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4850,7 +4968,9 @@
                 "identifier": "TestCalculateVisibleUploads",
                 "newPage": false,
                 "searchKey": "dbstore.TestCalculateVisibleUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4870,7 +4990,9 @@
                 "identifier": "TestCalculateVisibleUploadsAlternateCommitGraph",
                 "newPage": false,
                 "searchKey": "dbstore.TestCalculateVisibleUploadsAlternateCommitGraph",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4890,7 +5012,9 @@
                 "identifier": "TestCalculateVisibleUploadsDistinctRoots",
                 "newPage": false,
                 "searchKey": "dbstore.TestCalculateVisibleUploadsDistinctRoots",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4910,7 +5034,9 @@
                 "identifier": "TestCalculateVisibleUploadsOverlappingRoots",
                 "newPage": false,
                 "searchKey": "dbstore.TestCalculateVisibleUploadsOverlappingRoots",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4930,7 +5056,9 @@
                 "identifier": "TestCalculateVisibleUploadsIndexerName",
                 "newPage": false,
                 "searchKey": "dbstore.TestCalculateVisibleUploadsIndexerName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4950,7 +5078,9 @@
                 "identifier": "TestCalculateVisibleUploadsResetsDirtyFlag",
                 "newPage": false,
                 "searchKey": "dbstore.TestCalculateVisibleUploadsResetsDirtyFlag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4970,7 +5100,9 @@
                 "identifier": "keysOf",
                 "newPage": false,
                 "searchKey": "dbstore.keysOf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4990,7 +5122,9 @@
                 "identifier": "BenchmarkCalculateVisibleUploads",
                 "newPage": false,
                 "searchKey": "dbstore.BenchmarkCalculateVisibleUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5010,7 +5144,9 @@
                 "identifier": "readBenchmarkCommitGraph",
                 "newPage": false,
                 "searchKey": "dbstore.readBenchmarkCommitGraph",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5030,7 +5166,9 @@
                 "identifier": "readBenchmarkCommitGraphView",
                 "newPage": false,
                 "searchKey": "dbstore.readBenchmarkCommitGraphView",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5050,7 +5188,9 @@
                 "identifier": "readBenchmarkFile",
                 "newPage": false,
                 "searchKey": "dbstore.readBenchmarkFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5070,7 +5210,9 @@
                 "identifier": "TestInsertDependencyIndexingJob",
                 "newPage": false,
                 "searchKey": "dbstore.TestInsertDependencyIndexingJob",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5090,7 +5232,9 @@
                 "identifier": "TestGetDumpsByIDs",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetDumpsByIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5110,7 +5254,9 @@
                 "identifier": "TestFindClosestDumps",
                 "newPage": false,
                 "searchKey": "dbstore.TestFindClosestDumps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5130,7 +5276,9 @@
                 "identifier": "TestFindClosestDumpsAlternateCommitGraph",
                 "newPage": false,
                 "searchKey": "dbstore.TestFindClosestDumpsAlternateCommitGraph",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5150,7 +5298,9 @@
                 "identifier": "TestFindClosestDumpsAlternateCommitGraphWithOverwrittenVisibleUploads",
                 "newPage": false,
                 "searchKey": "dbstore.TestFindClosestDumpsAlternateCommitGraphWithOverwrittenVisibleUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5170,7 +5320,9 @@
                 "identifier": "TestFindClosestDumpsDistinctRoots",
                 "newPage": false,
                 "searchKey": "dbstore.TestFindClosestDumpsDistinctRoots",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5190,7 +5342,9 @@
                 "identifier": "TestFindClosestDumpsOverlappingRoots",
                 "newPage": false,
                 "searchKey": "dbstore.TestFindClosestDumpsOverlappingRoots",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5210,7 +5364,9 @@
                 "identifier": "TestFindClosestDumpsIndexerName",
                 "newPage": false,
                 "searchKey": "dbstore.TestFindClosestDumpsIndexerName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5230,7 +5386,9 @@
                 "identifier": "TestFindClosestDumpsIntersectingPath",
                 "newPage": false,
                 "searchKey": "dbstore.TestFindClosestDumpsIntersectingPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5250,7 +5408,9 @@
                 "identifier": "TestFindClosestDumpsFromGraphFragment",
                 "newPage": false,
                 "searchKey": "dbstore.TestFindClosestDumpsFromGraphFragment",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5270,7 +5430,9 @@
                 "identifier": "testFindClosestDumps",
                 "newPage": false,
                 "searchKey": "dbstore.testFindClosestDumps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5290,7 +5452,9 @@
                 "identifier": "testAnyOf",
                 "newPage": false,
                 "searchKey": "dbstore.testAnyOf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5310,7 +5474,9 @@
                 "identifier": "testAllOf",
                 "newPage": false,
                 "searchKey": "dbstore.testAllOf",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5330,7 +5496,9 @@
                 "identifier": "testPresence",
                 "newPage": false,
                 "searchKey": "dbstore.testPresence",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5350,7 +5518,9 @@
                 "identifier": "TestDeleteOverlappingDumps",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteOverlappingDumps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5370,7 +5540,9 @@
                 "identifier": "TestDeleteOverlappingDumpsNoMatches",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteOverlappingDumpsNoMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5390,7 +5562,9 @@
                 "identifier": "TestDeleteOverlappingDumpsIgnoresIncompleteUploads",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteOverlappingDumpsIgnoresIncompleteUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5410,7 +5584,9 @@
                 "identifier": "makeCommit",
                 "newPage": false,
                 "searchKey": "dbstore.makeCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5430,7 +5606,9 @@
                 "identifier": "insertUploads",
                 "newPage": false,
                 "searchKey": "dbstore.insertUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5450,7 +5628,9 @@
                 "identifier": "insertIndexes",
                 "newPage": false,
                 "searchKey": "dbstore.insertIndexes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5470,7 +5650,9 @@
                 "identifier": "insertRepo",
                 "newPage": false,
                 "searchKey": "dbstore.insertRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5490,7 +5672,9 @@
                 "identifier": "deleteRepo",
                 "newPage": false,
                 "searchKey": "dbstore.deleteRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5510,7 +5694,9 @@
                 "identifier": "insertPackageReferences",
                 "newPage": false,
                 "searchKey": "dbstore.insertPackageReferences",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5530,7 +5716,9 @@
                 "identifier": "insertVisibleAtTip",
                 "newPage": false,
                 "searchKey": "dbstore.insertVisibleAtTip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5550,7 +5738,9 @@
                 "identifier": "insertNearestUploads",
                 "newPage": false,
                 "searchKey": "dbstore.insertNearestUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5570,7 +5760,9 @@
                 "identifier": "insertLinks",
                 "newPage": false,
                 "searchKey": "dbstore.insertLinks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5590,7 +5782,9 @@
                 "identifier": "toCommitGraphView",
                 "newPage": false,
                 "searchKey": "dbstore.toCommitGraphView",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5610,7 +5804,9 @@
                 "identifier": "getVisibleUploads",
                 "newPage": false,
                 "searchKey": "dbstore.getVisibleUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5630,7 +5826,9 @@
                 "identifier": "getUploadsVisibleAtTip",
                 "newPage": false,
                 "searchKey": "dbstore.getUploadsVisibleAtTip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5650,7 +5848,9 @@
                 "identifier": "normalizeVisibleUploads",
                 "newPage": false,
                 "searchKey": "dbstore.normalizeVisibleUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5670,7 +5870,9 @@
                 "identifier": "getUploadStates",
                 "newPage": false,
                 "searchKey": "dbstore.getUploadStates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5690,7 +5892,9 @@
                 "identifier": "getIndexStates",
                 "newPage": false,
                 "searchKey": "dbstore.getIndexStates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5710,7 +5914,9 @@
                 "identifier": "scanStates",
                 "newPage": false,
                 "searchKey": "dbstore.scanStates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5730,7 +5936,9 @@
                 "identifier": "TestGetRepositoriesWithIndexConfiguration",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetRepositoriesWithIndexConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5750,7 +5958,9 @@
                 "identifier": "TestGetIndexConfigurationByRepositoryID",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetIndexConfigurationByRepositoryID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5770,7 +5980,9 @@
                 "identifier": "TestGetRepositoriesWithIndexConfigurationIgnoresDisabledRepos",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetRepositoriesWithIndexConfigurationIgnoresDisabledRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5790,7 +6002,9 @@
                 "identifier": "TestGetIndexByID",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetIndexByID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5810,7 +6024,9 @@
                 "identifier": "TestGetQueuedIndexRank",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetQueuedIndexRank",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5830,7 +6046,9 @@
                 "identifier": "TestGetIndexesByIDs",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetIndexesByIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5850,7 +6068,9 @@
                 "identifier": "TestGetIndexes",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetIndexes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5870,7 +6090,9 @@
                 "identifier": "TestIsQueued",
                 "newPage": false,
                 "searchKey": "dbstore.TestIsQueued",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5890,7 +6112,9 @@
                 "identifier": "TestInsertIndex",
                 "newPage": false,
                 "searchKey": "dbstore.TestInsertIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5910,7 +6134,9 @@
                 "identifier": "TestDeleteIndexByID",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteIndexByID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5930,7 +6156,9 @@
                 "identifier": "TestDeleteIndexByIDMissingRow",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteIndexByIDMissingRow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5950,7 +6178,9 @@
                 "identifier": "TestDeleteIndexesWithoutRepository",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteIndexesWithoutRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5970,7 +6200,9 @@
                 "identifier": "TestDeleteOldIndexes",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteOldIndexes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5990,7 +6222,9 @@
                 "identifier": "TestStaleSourcedCommits",
                 "newPage": false,
                 "searchKey": "dbstore.TestStaleSourcedCommits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6010,7 +6244,9 @@
                 "identifier": "TestRefreshCommitResolvability",
                 "newPage": false,
                 "searchKey": "dbstore.TestRefreshCommitResolvability",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6030,7 +6266,9 @@
                 "identifier": "TestUpdatePackages",
                 "newPage": false,
                 "searchKey": "dbstore.TestUpdatePackages",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6050,7 +6288,9 @@
                 "identifier": "TestUpdatePackagesEmpty",
                 "newPage": false,
                 "searchKey": "dbstore.TestUpdatePackagesEmpty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6070,7 +6310,9 @@
                 "identifier": "TestUpdatePackageReferences",
                 "newPage": false,
                 "searchKey": "dbstore.TestUpdatePackageReferences",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6090,7 +6332,9 @@
                 "identifier": "TestUpdatePackageReferencesEmpty",
                 "newPage": false,
                 "searchKey": "dbstore.TestUpdatePackageReferencesEmpty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6110,7 +6354,9 @@
                 "identifier": "TestUpdatePackageReferencesWithDuplicates",
                 "newPage": false,
                 "searchKey": "dbstore.TestUpdatePackageReferencesWithDuplicates",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6130,7 +6376,9 @@
                 "identifier": "TestRepoName",
                 "newPage": false,
                 "searchKey": "dbstore.TestRepoName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6145,12 +6393,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore#init",
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore#init.store_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.store_test.go",
                 "newPage": false,
                 "searchKey": "dbstore.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6170,7 +6420,9 @@
                 "identifier": "TestGetUploadByID",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetUploadByID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6190,7 +6442,9 @@
                 "identifier": "TestGetUploadByIDDeleted",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetUploadByIDDeleted",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6210,7 +6464,9 @@
                 "identifier": "TestGetQueuedUploadRank",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetQueuedUploadRank",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6230,7 +6486,9 @@
                 "identifier": "TestGetUploadsByIDs",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetUploadsByIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6250,7 +6508,9 @@
                 "identifier": "TestDeleteUploadsStuckUploading",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteUploadsStuckUploading",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6270,7 +6530,9 @@
                 "identifier": "TestGetUploads",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6290,7 +6552,9 @@
                 "identifier": "TestInsertUploadUploading",
                 "newPage": false,
                 "searchKey": "dbstore.TestInsertUploadUploading",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6310,7 +6574,9 @@
                 "identifier": "TestInsertUploadQueued",
                 "newPage": false,
                 "searchKey": "dbstore.TestInsertUploadQueued",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6330,7 +6596,9 @@
                 "identifier": "TestInsertUploadWithAssociatedIndexID",
                 "newPage": false,
                 "searchKey": "dbstore.TestInsertUploadWithAssociatedIndexID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6350,7 +6618,9 @@
                 "identifier": "TestMarkQueued",
                 "newPage": false,
                 "searchKey": "dbstore.TestMarkQueued",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6370,7 +6640,9 @@
                 "identifier": "TestMarkFailed",
                 "newPage": false,
                 "searchKey": "dbstore.TestMarkFailed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6390,7 +6662,9 @@
                 "identifier": "TestAddUploadPart",
                 "newPage": false,
                 "searchKey": "dbstore.TestAddUploadPart",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6410,7 +6684,9 @@
                 "identifier": "TestDeleteUploadByID",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteUploadByID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6430,7 +6706,9 @@
                 "identifier": "TestDeleteUploadByIDMissingRow",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteUploadByIDMissingRow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6450,7 +6728,9 @@
                 "identifier": "TestDeleteUploadsWithoutRepository",
                 "newPage": false,
                 "searchKey": "dbstore.TestDeleteUploadsWithoutRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6470,7 +6750,9 @@
                 "identifier": "TestHardDeleteUploadByID",
                 "newPage": false,
                 "searchKey": "dbstore.TestHardDeleteUploadByID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6490,7 +6772,9 @@
                 "identifier": "TestSoftDeleteOldUploads",
                 "newPage": false,
                 "searchKey": "dbstore.TestSoftDeleteOldUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6510,7 +6794,9 @@
                 "identifier": "TestGetOldestCommitDate",
                 "newPage": false,
                 "searchKey": "dbstore.TestGetOldestCommitDate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6530,7 +6816,9 @@
                 "identifier": "TestUpdateCommitedAt",
                 "newPage": false,
                 "searchKey": "dbstore.TestUpdateCommitedAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6550,7 +6838,9 @@
                 "identifier": "TestDefinitionDumps",
                 "newPage": false,
                 "searchKey": "dbstore.TestDefinitionDumps",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6570,7 +6860,9 @@
                 "identifier": "TestReferenceIDsAndFilters",
                 "newPage": false,
                 "searchKey": "dbstore.TestReferenceIDsAndFilters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6590,7 +6882,9 @@
                 "identifier": "TestReferenceIDsAndFiltersVisibility",
                 "newPage": false,
                 "searchKey": "dbstore.TestReferenceIDsAndFiltersVisibility",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6610,7 +6904,9 @@
                 "identifier": "TestReferenceIDsAndFiltersRemoteVisibility",
                 "newPage": false,
                 "searchKey": "dbstore.TestReferenceIDsAndFiltersRemoteVisibility",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6630,7 +6926,9 @@
                 "identifier": "TestReferencesForUpload",
                 "newPage": false,
                 "searchKey": "dbstore.TestReferencesForUpload",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -6650,7 +6948,9 @@
                 "identifier": "consumeScanner",
                 "newPage": false,
                 "searchKey": "dbstore.consumeScanner",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

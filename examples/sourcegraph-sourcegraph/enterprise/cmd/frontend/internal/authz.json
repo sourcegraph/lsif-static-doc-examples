@@ -4,7 +4,9 @@
     "identifier": "authz",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/authz",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "clock",
                 "newPage": false,
                 "searchKey": "authz.clock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "authz.Init",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -98,12 +104,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz#init",
+              "pathID": "/enterprise/cmd/frontend/internal/authz#init.init.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.init.go",
                 "newPage": false,
                 "searchKey": "authz.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

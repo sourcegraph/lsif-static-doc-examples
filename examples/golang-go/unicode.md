@@ -562,14 +562,11 @@ Package unicode provides data and functions to test some properties of Unicode c
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="pC" href="#pC">const pC</a>
 
 ```
 searchKey: unicode.pC
+tags: [private]
 ```
 
 ```Go
@@ -583,6 +580,7 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.pP
+tags: [private]
 ```
 
 ```Go
@@ -596,6 +594,7 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.pN
+tags: [private]
 ```
 
 ```Go
@@ -609,6 +608,7 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.pS
+tags: [private]
 ```
 
 ```Go
@@ -622,6 +622,7 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.pZ
+tags: [private]
 ```
 
 ```Go
@@ -635,6 +636,7 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.pLu
+tags: [private]
 ```
 
 ```Go
@@ -648,6 +650,7 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.pLl
+tags: [private]
 ```
 
 ```Go
@@ -661,6 +664,7 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.pp
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +678,7 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.pg
+tags: [private]
 ```
 
 ```Go
@@ -687,6 +692,7 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.pLo
+tags: [private]
 ```
 
 ```Go
@@ -700,6 +706,7 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.pLmask
+tags: [private]
 ```
 
 ```Go
@@ -712,7 +719,6 @@ Bit masks for each code point under U+0100, for fast lookup.
 
 ```
 searchKey: unicode.MaxRune
-tags: [exported]
 ```
 
 ```Go
@@ -724,7 +730,6 @@ const MaxRune = '\U0010FFFF' // Maximum valid Unicode code point.
 
 ```
 searchKey: unicode.ReplacementChar
-tags: [exported]
 ```
 
 ```Go
@@ -736,7 +741,6 @@ const ReplacementChar = '\uFFFD' // Represents invalid code points.
 
 ```
 searchKey: unicode.MaxASCII
-tags: [exported]
 ```
 
 ```Go
@@ -748,7 +752,6 @@ const MaxASCII = '\u007F' // maximum ASCII value.
 
 ```
 searchKey: unicode.MaxLatin1
-tags: [exported]
 ```
 
 ```Go
@@ -760,7 +763,6 @@ const MaxLatin1 = '\u00FF' // maximum Latin-1 value.
 
 ```
 searchKey: unicode.UpperCase
-tags: [exported]
 ```
 
 ```Go
@@ -773,7 +775,6 @@ Indices into the Delta arrays inside CaseRanges for case mapping.
 
 ```
 searchKey: unicode.LowerCase
-tags: [exported]
 ```
 
 ```Go
@@ -786,7 +787,6 @@ Indices into the Delta arrays inside CaseRanges for case mapping.
 
 ```
 searchKey: unicode.TitleCase
-tags: [exported]
 ```
 
 ```Go
@@ -799,7 +799,6 @@ Indices into the Delta arrays inside CaseRanges for case mapping.
 
 ```
 searchKey: unicode.MaxCase
-tags: [exported]
 ```
 
 ```Go
@@ -812,7 +811,6 @@ Indices into the Delta arrays inside CaseRanges for case mapping.
 
 ```
 searchKey: unicode.UpperLower
-tags: [exported]
 ```
 
 ```Go
@@ -826,6 +824,7 @@ If the Delta field of a CaseRange is UpperLower, it means this CaseRange represe
 
 ```
 searchKey: unicode.linearMax
+tags: [private]
 ```
 
 ```Go
@@ -838,7 +837,6 @@ linearMax is the maximum size table for linear search for non-Latin1 rune. Deriv
 
 ```
 searchKey: unicode.Version
-tags: [exported]
 ```
 
 ```Go
@@ -849,15 +847,10 @@ Version is the Unicode edition from which the tables are derived.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="TurkishCase" href="#TurkishCase">var TurkishCase</a>
 
 ```
 searchKey: unicode.TurkishCase
-tags: [exported]
 ```
 
 ```Go
@@ -868,6 +861,7 @@ var TurkishCase SpecialCase = _TurkishCase
 
 ```
 searchKey: unicode._TurkishCase
+tags: [private]
 ```
 
 ```Go
@@ -878,7 +872,6 @@ var _TurkishCase = ...
 
 ```
 searchKey: unicode.AzeriCase
-tags: [exported]
 ```
 
 ```Go
@@ -889,7 +882,6 @@ var AzeriCase SpecialCase = _TurkishCase
 
 ```
 searchKey: unicode.GraphicRanges
-tags: [exported]
 ```
 
 ```Go
@@ -904,7 +896,6 @@ GraphicRanges defines the set of graphic characters according to Unicode.
 
 ```
 searchKey: unicode.PrintRanges
-tags: [exported]
 ```
 
 ```Go
@@ -919,7 +910,6 @@ PrintRanges defines the set of printable characters according to Go. ASCII space
 
 ```
 searchKey: unicode.Categories
-tags: [exported]
 ```
 
 ```Go
@@ -932,6 +922,7 @@ Categories is the set of Unicode category tables.
 
 ```
 searchKey: unicode._C
+tags: [private]
 ```
 
 ```Go
@@ -942,6 +933,7 @@ var _C = ...
 
 ```
 searchKey: unicode._Cc
+tags: [private]
 ```
 
 ```Go
@@ -952,6 +944,7 @@ var _Cc = ...
 
 ```
 searchKey: unicode._Cf
+tags: [private]
 ```
 
 ```Go
@@ -962,6 +955,7 @@ var _Cf = ...
 
 ```
 searchKey: unicode._Co
+tags: [private]
 ```
 
 ```Go
@@ -972,6 +966,7 @@ var _Co = ...
 
 ```
 searchKey: unicode._Cs
+tags: [private]
 ```
 
 ```Go
@@ -986,6 +981,7 @@ var _Cs = &RangeTable{
 
 ```
 searchKey: unicode._L
+tags: [private]
 ```
 
 ```Go
@@ -996,6 +992,7 @@ var _L = ...
 
 ```
 searchKey: unicode._Ll
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +1003,7 @@ var _Ll = ...
 
 ```
 searchKey: unicode._Lm
+tags: [private]
 ```
 
 ```Go
@@ -1016,6 +1014,7 @@ var _Lm = ...
 
 ```
 searchKey: unicode._Lo
+tags: [private]
 ```
 
 ```Go
@@ -1026,6 +1025,7 @@ var _Lo = ...
 
 ```
 searchKey: unicode._Lt
+tags: [private]
 ```
 
 ```Go
@@ -1036,6 +1036,7 @@ var _Lt = ...
 
 ```
 searchKey: unicode._Lu
+tags: [private]
 ```
 
 ```Go
@@ -1046,6 +1047,7 @@ var _Lu = ...
 
 ```
 searchKey: unicode._M
+tags: [private]
 ```
 
 ```Go
@@ -1056,6 +1058,7 @@ var _M = ...
 
 ```
 searchKey: unicode._Mc
+tags: [private]
 ```
 
 ```Go
@@ -1066,6 +1069,7 @@ var _Mc = ...
 
 ```
 searchKey: unicode._Me
+tags: [private]
 ```
 
 ```Go
@@ -1076,6 +1080,7 @@ var _Me = ...
 
 ```
 searchKey: unicode._Mn
+tags: [private]
 ```
 
 ```Go
@@ -1086,6 +1091,7 @@ var _Mn = ...
 
 ```
 searchKey: unicode._N
+tags: [private]
 ```
 
 ```Go
@@ -1096,6 +1102,7 @@ var _N = ...
 
 ```
 searchKey: unicode._Nd
+tags: [private]
 ```
 
 ```Go
@@ -1106,6 +1113,7 @@ var _Nd = ...
 
 ```
 searchKey: unicode._Nl
+tags: [private]
 ```
 
 ```Go
@@ -1116,6 +1124,7 @@ var _Nl = ...
 
 ```
 searchKey: unicode._No
+tags: [private]
 ```
 
 ```Go
@@ -1126,6 +1135,7 @@ var _No = ...
 
 ```
 searchKey: unicode._P
+tags: [private]
 ```
 
 ```Go
@@ -1136,6 +1146,7 @@ var _P = ...
 
 ```
 searchKey: unicode._Pc
+tags: [private]
 ```
 
 ```Go
@@ -1146,6 +1157,7 @@ var _Pc = ...
 
 ```
 searchKey: unicode._Pd
+tags: [private]
 ```
 
 ```Go
@@ -1156,6 +1168,7 @@ var _Pd = ...
 
 ```
 searchKey: unicode._Pe
+tags: [private]
 ```
 
 ```Go
@@ -1166,6 +1179,7 @@ var _Pe = ...
 
 ```
 searchKey: unicode._Pf
+tags: [private]
 ```
 
 ```Go
@@ -1176,6 +1190,7 @@ var _Pf = ...
 
 ```
 searchKey: unicode._Pi
+tags: [private]
 ```
 
 ```Go
@@ -1186,6 +1201,7 @@ var _Pi = ...
 
 ```
 searchKey: unicode._Po
+tags: [private]
 ```
 
 ```Go
@@ -1196,6 +1212,7 @@ var _Po = ...
 
 ```
 searchKey: unicode._Ps
+tags: [private]
 ```
 
 ```Go
@@ -1206,6 +1223,7 @@ var _Ps = ...
 
 ```
 searchKey: unicode._S
+tags: [private]
 ```
 
 ```Go
@@ -1216,6 +1234,7 @@ var _S = ...
 
 ```
 searchKey: unicode._Sc
+tags: [private]
 ```
 
 ```Go
@@ -1226,6 +1245,7 @@ var _Sc = ...
 
 ```
 searchKey: unicode._Sk
+tags: [private]
 ```
 
 ```Go
@@ -1236,6 +1256,7 @@ var _Sk = ...
 
 ```
 searchKey: unicode._Sm
+tags: [private]
 ```
 
 ```Go
@@ -1246,6 +1267,7 @@ var _Sm = ...
 
 ```
 searchKey: unicode._So
+tags: [private]
 ```
 
 ```Go
@@ -1256,6 +1278,7 @@ var _So = ...
 
 ```
 searchKey: unicode._Z
+tags: [private]
 ```
 
 ```Go
@@ -1266,6 +1289,7 @@ var _Z = ...
 
 ```
 searchKey: unicode._Zl
+tags: [private]
 ```
 
 ```Go
@@ -1280,6 +1304,7 @@ var _Zl = &RangeTable{
 
 ```
 searchKey: unicode._Zp
+tags: [private]
 ```
 
 ```Go
@@ -1294,6 +1319,7 @@ var _Zp = &RangeTable{
 
 ```
 searchKey: unicode._Zs
+tags: [private]
 ```
 
 ```Go
@@ -1304,7 +1330,6 @@ var _Zs = ...
 
 ```
 searchKey: unicode.Cc
-tags: [exported]
 ```
 
 ```Go
@@ -1318,7 +1343,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Cf
-tags: [exported]
 ```
 
 ```Go
@@ -1332,7 +1356,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Co
-tags: [exported]
 ```
 
 ```Go
@@ -1346,7 +1369,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Cs
-tags: [exported]
 ```
 
 ```Go
@@ -1360,7 +1382,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Digit
-tags: [exported]
 ```
 
 ```Go
@@ -1374,7 +1395,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Nd
-tags: [exported]
 ```
 
 ```Go
@@ -1388,7 +1408,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Letter
-tags: [exported]
 ```
 
 ```Go
@@ -1402,7 +1421,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.L
-tags: [exported]
 ```
 
 ```Go
@@ -1415,7 +1433,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Lm
-tags: [exported]
 ```
 
 ```Go
@@ -1429,7 +1446,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Lo
-tags: [exported]
 ```
 
 ```Go
@@ -1443,7 +1459,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Lower
-tags: [exported]
 ```
 
 ```Go
@@ -1457,7 +1472,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Ll
-tags: [exported]
 ```
 
 ```Go
@@ -1471,7 +1485,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Mark
-tags: [exported]
 ```
 
 ```Go
@@ -1485,7 +1498,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.M
-tags: [exported]
 ```
 
 ```Go
@@ -1498,7 +1510,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Mc
-tags: [exported]
 ```
 
 ```Go
@@ -1512,7 +1523,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Me
-tags: [exported]
 ```
 
 ```Go
@@ -1526,7 +1536,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Mn
-tags: [exported]
 ```
 
 ```Go
@@ -1540,7 +1549,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Nl
-tags: [exported]
 ```
 
 ```Go
@@ -1554,7 +1562,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.No
-tags: [exported]
 ```
 
 ```Go
@@ -1568,7 +1575,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Number
-tags: [exported]
 ```
 
 ```Go
@@ -1582,7 +1588,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.N
-tags: [exported]
 ```
 
 ```Go
@@ -1595,7 +1600,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Other
-tags: [exported]
 ```
 
 ```Go
@@ -1609,7 +1613,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.C
-tags: [exported]
 ```
 
 ```Go
@@ -1622,7 +1625,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Pc
-tags: [exported]
 ```
 
 ```Go
@@ -1636,7 +1638,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Pd
-tags: [exported]
 ```
 
 ```Go
@@ -1650,7 +1651,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Pe
-tags: [exported]
 ```
 
 ```Go
@@ -1664,7 +1664,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Pf
-tags: [exported]
 ```
 
 ```Go
@@ -1678,7 +1677,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Pi
-tags: [exported]
 ```
 
 ```Go
@@ -1692,7 +1690,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Po
-tags: [exported]
 ```
 
 ```Go
@@ -1706,7 +1703,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Ps
-tags: [exported]
 ```
 
 ```Go
@@ -1720,7 +1716,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Punct
-tags: [exported]
 ```
 
 ```Go
@@ -1734,7 +1729,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.P
-tags: [exported]
 ```
 
 ```Go
@@ -1747,7 +1741,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Sc
-tags: [exported]
 ```
 
 ```Go
@@ -1761,7 +1754,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Sk
-tags: [exported]
 ```
 
 ```Go
@@ -1775,7 +1767,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Sm
-tags: [exported]
 ```
 
 ```Go
@@ -1789,7 +1780,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.So
-tags: [exported]
 ```
 
 ```Go
@@ -1803,7 +1793,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Space
-tags: [exported]
 ```
 
 ```Go
@@ -1817,7 +1806,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Z
-tags: [exported]
 ```
 
 ```Go
@@ -1830,7 +1818,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Symbol
-tags: [exported]
 ```
 
 ```Go
@@ -1844,7 +1831,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.S
-tags: [exported]
 ```
 
 ```Go
@@ -1857,7 +1843,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Title
-tags: [exported]
 ```
 
 ```Go
@@ -1871,7 +1856,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Lt
-tags: [exported]
 ```
 
 ```Go
@@ -1885,7 +1869,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Upper
-tags: [exported]
 ```
 
 ```Go
@@ -1899,7 +1882,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Lu
-tags: [exported]
 ```
 
 ```Go
@@ -1913,7 +1895,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Zl
-tags: [exported]
 ```
 
 ```Go
@@ -1927,7 +1908,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Zp
-tags: [exported]
 ```
 
 ```Go
@@ -1941,7 +1921,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Zs
-tags: [exported]
 ```
 
 ```Go
@@ -1955,7 +1934,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Scripts
-tags: [exported]
 ```
 
 ```Go
@@ -1968,6 +1946,7 @@ Scripts is the set of Unicode script tables.
 
 ```
 searchKey: unicode._Adlam
+tags: [private]
 ```
 
 ```Go
@@ -1978,6 +1957,7 @@ var _Adlam = ...
 
 ```
 searchKey: unicode._Ahom
+tags: [private]
 ```
 
 ```Go
@@ -1988,6 +1968,7 @@ var _Ahom = ...
 
 ```
 searchKey: unicode._Anatolian_Hieroglyphs
+tags: [private]
 ```
 
 ```Go
@@ -1998,6 +1979,7 @@ var _Anatolian_Hieroglyphs = ...
 
 ```
 searchKey: unicode._Arabic
+tags: [private]
 ```
 
 ```Go
@@ -2008,6 +1990,7 @@ var _Arabic = ...
 
 ```
 searchKey: unicode._Armenian
+tags: [private]
 ```
 
 ```Go
@@ -2018,6 +2001,7 @@ var _Armenian = ...
 
 ```
 searchKey: unicode._Avestan
+tags: [private]
 ```
 
 ```Go
@@ -2028,6 +2012,7 @@ var _Avestan = ...
 
 ```
 searchKey: unicode._Balinese
+tags: [private]
 ```
 
 ```Go
@@ -2043,6 +2028,7 @@ var _Balinese = &RangeTable{
 
 ```
 searchKey: unicode._Bamum
+tags: [private]
 ```
 
 ```Go
@@ -2053,6 +2039,7 @@ var _Bamum = ...
 
 ```
 searchKey: unicode._Bassa_Vah
+tags: [private]
 ```
 
 ```Go
@@ -2063,6 +2050,7 @@ var _Bassa_Vah = ...
 
 ```
 searchKey: unicode._Batak
+tags: [private]
 ```
 
 ```Go
@@ -2078,6 +2066,7 @@ var _Batak = &RangeTable{
 
 ```
 searchKey: unicode._Bengali
+tags: [private]
 ```
 
 ```Go
@@ -2088,6 +2077,7 @@ var _Bengali = ...
 
 ```
 searchKey: unicode._Bhaiksuki
+tags: [private]
 ```
 
 ```Go
@@ -2098,6 +2088,7 @@ var _Bhaiksuki = ...
 
 ```
 searchKey: unicode._Bopomofo
+tags: [private]
 ```
 
 ```Go
@@ -2108,6 +2099,7 @@ var _Bopomofo = ...
 
 ```
 searchKey: unicode._Brahmi
+tags: [private]
 ```
 
 ```Go
@@ -2118,6 +2110,7 @@ var _Brahmi = ...
 
 ```
 searchKey: unicode._Braille
+tags: [private]
 ```
 
 ```Go
@@ -2132,6 +2125,7 @@ var _Braille = &RangeTable{
 
 ```
 searchKey: unicode._Buginese
+tags: [private]
 ```
 
 ```Go
@@ -2147,6 +2141,7 @@ var _Buginese = &RangeTable{
 
 ```
 searchKey: unicode._Buhid
+tags: [private]
 ```
 
 ```Go
@@ -2161,6 +2156,7 @@ var _Buhid = &RangeTable{
 
 ```
 searchKey: unicode._Canadian_Aboriginal
+tags: [private]
 ```
 
 ```Go
@@ -2171,6 +2167,7 @@ var _Canadian_Aboriginal = ...
 
 ```
 searchKey: unicode._Carian
+tags: [private]
 ```
 
 ```Go
@@ -2186,6 +2183,7 @@ var _Carian = &RangeTable{
 
 ```
 searchKey: unicode._Caucasian_Albanian
+tags: [private]
 ```
 
 ```Go
@@ -2196,6 +2194,7 @@ var _Caucasian_Albanian = ...
 
 ```
 searchKey: unicode._Chakma
+tags: [private]
 ```
 
 ```Go
@@ -2206,6 +2205,7 @@ var _Chakma = ...
 
 ```
 searchKey: unicode._Cham
+tags: [private]
 ```
 
 ```Go
@@ -2216,6 +2216,7 @@ var _Cham = ...
 
 ```
 searchKey: unicode._Cherokee
+tags: [private]
 ```
 
 ```Go
@@ -2226,6 +2227,7 @@ var _Cherokee = ...
 
 ```
 searchKey: unicode._Chorasmian
+tags: [private]
 ```
 
 ```Go
@@ -2241,6 +2243,7 @@ var _Chorasmian = &RangeTable{
 
 ```
 searchKey: unicode._Common
+tags: [private]
 ```
 
 ```Go
@@ -2251,6 +2254,7 @@ var _Common = ...
 
 ```
 searchKey: unicode._Coptic
+tags: [private]
 ```
 
 ```Go
@@ -2261,6 +2265,7 @@ var _Coptic = ...
 
 ```
 searchKey: unicode._Cuneiform
+tags: [private]
 ```
 
 ```Go
@@ -2271,6 +2276,7 @@ var _Cuneiform = ...
 
 ```
 searchKey: unicode._Cypriot
+tags: [private]
 ```
 
 ```Go
@@ -2281,6 +2287,7 @@ var _Cypriot = ...
 
 ```
 searchKey: unicode._Cyrillic
+tags: [private]
 ```
 
 ```Go
@@ -2291,6 +2298,7 @@ var _Cyrillic = ...
 
 ```
 searchKey: unicode._Deseret
+tags: [private]
 ```
 
 ```Go
@@ -2306,6 +2314,7 @@ var _Deseret = &RangeTable{
 
 ```
 searchKey: unicode._Devanagari
+tags: [private]
 ```
 
 ```Go
@@ -2316,6 +2325,7 @@ var _Devanagari = ...
 
 ```
 searchKey: unicode._Dives_Akuru
+tags: [private]
 ```
 
 ```Go
@@ -2326,6 +2336,7 @@ var _Dives_Akuru = ...
 
 ```
 searchKey: unicode._Dogra
+tags: [private]
 ```
 
 ```Go
@@ -2341,6 +2352,7 @@ var _Dogra = &RangeTable{
 
 ```
 searchKey: unicode._Duployan
+tags: [private]
 ```
 
 ```Go
@@ -2351,6 +2363,7 @@ var _Duployan = ...
 
 ```
 searchKey: unicode._Egyptian_Hieroglyphs
+tags: [private]
 ```
 
 ```Go
@@ -2361,6 +2374,7 @@ var _Egyptian_Hieroglyphs = ...
 
 ```
 searchKey: unicode._Elbasan
+tags: [private]
 ```
 
 ```Go
@@ -2376,6 +2390,7 @@ var _Elbasan = &RangeTable{
 
 ```
 searchKey: unicode._Elymaic
+tags: [private]
 ```
 
 ```Go
@@ -2391,6 +2406,7 @@ var _Elymaic = &RangeTable{
 
 ```
 searchKey: unicode._Ethiopic
+tags: [private]
 ```
 
 ```Go
@@ -2401,6 +2417,7 @@ var _Ethiopic = ...
 
 ```
 searchKey: unicode._Georgian
+tags: [private]
 ```
 
 ```Go
@@ -2411,6 +2428,7 @@ var _Georgian = ...
 
 ```
 searchKey: unicode._Glagolitic
+tags: [private]
 ```
 
 ```Go
@@ -2421,6 +2439,7 @@ var _Glagolitic = ...
 
 ```
 searchKey: unicode._Gothic
+tags: [private]
 ```
 
 ```Go
@@ -2436,6 +2455,7 @@ var _Gothic = &RangeTable{
 
 ```
 searchKey: unicode._Grantha
+tags: [private]
 ```
 
 ```Go
@@ -2446,6 +2466,7 @@ var _Grantha = ...
 
 ```
 searchKey: unicode._Greek
+tags: [private]
 ```
 
 ```Go
@@ -2456,6 +2477,7 @@ var _Greek = ...
 
 ```
 searchKey: unicode._Gujarati
+tags: [private]
 ```
 
 ```Go
@@ -2466,6 +2488,7 @@ var _Gujarati = ...
 
 ```
 searchKey: unicode._Gunjala_Gondi
+tags: [private]
 ```
 
 ```Go
@@ -2476,6 +2499,7 @@ var _Gunjala_Gondi = ...
 
 ```
 searchKey: unicode._Gurmukhi
+tags: [private]
 ```
 
 ```Go
@@ -2486,6 +2510,7 @@ var _Gurmukhi = ...
 
 ```
 searchKey: unicode._Han
+tags: [private]
 ```
 
 ```Go
@@ -2496,6 +2521,7 @@ var _Han = ...
 
 ```
 searchKey: unicode._Hangul
+tags: [private]
 ```
 
 ```Go
@@ -2506,6 +2532,7 @@ var _Hangul = ...
 
 ```
 searchKey: unicode._Hanifi_Rohingya
+tags: [private]
 ```
 
 ```Go
@@ -2516,6 +2543,7 @@ var _Hanifi_Rohingya = ...
 
 ```
 searchKey: unicode._Hanunoo
+tags: [private]
 ```
 
 ```Go
@@ -2530,6 +2558,7 @@ var _Hanunoo = &RangeTable{
 
 ```
 searchKey: unicode._Hatran
+tags: [private]
 ```
 
 ```Go
@@ -2540,6 +2569,7 @@ var _Hatran = ...
 
 ```
 searchKey: unicode._Hebrew
+tags: [private]
 ```
 
 ```Go
@@ -2550,6 +2580,7 @@ var _Hebrew = ...
 
 ```
 searchKey: unicode._Hiragana
+tags: [private]
 ```
 
 ```Go
@@ -2560,6 +2591,7 @@ var _Hiragana = ...
 
 ```
 searchKey: unicode._Imperial_Aramaic
+tags: [private]
 ```
 
 ```Go
@@ -2570,6 +2602,7 @@ var _Imperial_Aramaic = ...
 
 ```
 searchKey: unicode._Inherited
+tags: [private]
 ```
 
 ```Go
@@ -2580,6 +2613,7 @@ var _Inherited = ...
 
 ```
 searchKey: unicode._Inscriptional_Pahlavi
+tags: [private]
 ```
 
 ```Go
@@ -2590,6 +2624,7 @@ var _Inscriptional_Pahlavi = ...
 
 ```
 searchKey: unicode._Inscriptional_Parthian
+tags: [private]
 ```
 
 ```Go
@@ -2600,6 +2635,7 @@ var _Inscriptional_Parthian = ...
 
 ```
 searchKey: unicode._Javanese
+tags: [private]
 ```
 
 ```Go
@@ -2610,6 +2646,7 @@ var _Javanese = ...
 
 ```
 searchKey: unicode._Kaithi
+tags: [private]
 ```
 
 ```Go
@@ -2620,6 +2657,7 @@ var _Kaithi = ...
 
 ```
 searchKey: unicode._Kannada
+tags: [private]
 ```
 
 ```Go
@@ -2630,6 +2668,7 @@ var _Kannada = ...
 
 ```
 searchKey: unicode._Katakana
+tags: [private]
 ```
 
 ```Go
@@ -2640,6 +2679,7 @@ var _Katakana = ...
 
 ```
 searchKey: unicode._Kayah_Li
+tags: [private]
 ```
 
 ```Go
@@ -2655,6 +2695,7 @@ var _Kayah_Li = &RangeTable{
 
 ```
 searchKey: unicode._Kharoshthi
+tags: [private]
 ```
 
 ```Go
@@ -2665,6 +2706,7 @@ var _Kharoshthi = ...
 
 ```
 searchKey: unicode._Khitan_Small_Script
+tags: [private]
 ```
 
 ```Go
@@ -2675,6 +2717,7 @@ var _Khitan_Small_Script = ...
 
 ```
 searchKey: unicode._Khmer
+tags: [private]
 ```
 
 ```Go
@@ -2685,6 +2728,7 @@ var _Khmer = ...
 
 ```
 searchKey: unicode._Khojki
+tags: [private]
 ```
 
 ```Go
@@ -2695,6 +2739,7 @@ var _Khojki = ...
 
 ```
 searchKey: unicode._Khudawadi
+tags: [private]
 ```
 
 ```Go
@@ -2705,6 +2750,7 @@ var _Khudawadi = ...
 
 ```
 searchKey: unicode._Lao
+tags: [private]
 ```
 
 ```Go
@@ -2715,6 +2761,7 @@ var _Lao = ...
 
 ```
 searchKey: unicode._Latin
+tags: [private]
 ```
 
 ```Go
@@ -2725,6 +2772,7 @@ var _Latin = ...
 
 ```
 searchKey: unicode._Lepcha
+tags: [private]
 ```
 
 ```Go
@@ -2735,6 +2783,7 @@ var _Lepcha = ...
 
 ```
 searchKey: unicode._Limbu
+tags: [private]
 ```
 
 ```Go
@@ -2745,6 +2794,7 @@ var _Limbu = ...
 
 ```
 searchKey: unicode._Linear_A
+tags: [private]
 ```
 
 ```Go
@@ -2755,6 +2805,7 @@ var _Linear_A = ...
 
 ```
 searchKey: unicode._Linear_B
+tags: [private]
 ```
 
 ```Go
@@ -2765,6 +2816,7 @@ var _Linear_B = ...
 
 ```
 searchKey: unicode._Lisu
+tags: [private]
 ```
 
 ```Go
@@ -2775,6 +2827,7 @@ var _Lisu = ...
 
 ```
 searchKey: unicode._Lycian
+tags: [private]
 ```
 
 ```Go
@@ -2790,6 +2843,7 @@ var _Lycian = &RangeTable{
 
 ```
 searchKey: unicode._Lydian
+tags: [private]
 ```
 
 ```Go
@@ -2800,6 +2854,7 @@ var _Lydian = ...
 
 ```
 searchKey: unicode._Mahajani
+tags: [private]
 ```
 
 ```Go
@@ -2815,6 +2870,7 @@ var _Mahajani = &RangeTable{
 
 ```
 searchKey: unicode._Makasar
+tags: [private]
 ```
 
 ```Go
@@ -2830,6 +2886,7 @@ var _Makasar = &RangeTable{
 
 ```
 searchKey: unicode._Malayalam
+tags: [private]
 ```
 
 ```Go
@@ -2840,6 +2897,7 @@ var _Malayalam = ...
 
 ```
 searchKey: unicode._Mandaic
+tags: [private]
 ```
 
 ```Go
@@ -2855,6 +2913,7 @@ var _Mandaic = &RangeTable{
 
 ```
 searchKey: unicode._Manichaean
+tags: [private]
 ```
 
 ```Go
@@ -2865,6 +2924,7 @@ var _Manichaean = ...
 
 ```
 searchKey: unicode._Marchen
+tags: [private]
 ```
 
 ```Go
@@ -2875,6 +2935,7 @@ var _Marchen = ...
 
 ```
 searchKey: unicode._Masaram_Gondi
+tags: [private]
 ```
 
 ```Go
@@ -2885,6 +2946,7 @@ var _Masaram_Gondi = ...
 
 ```
 searchKey: unicode._Medefaidrin
+tags: [private]
 ```
 
 ```Go
@@ -2900,6 +2962,7 @@ var _Medefaidrin = &RangeTable{
 
 ```
 searchKey: unicode._Meetei_Mayek
+tags: [private]
 ```
 
 ```Go
@@ -2910,6 +2973,7 @@ var _Meetei_Mayek = ...
 
 ```
 searchKey: unicode._Mende_Kikakui
+tags: [private]
 ```
 
 ```Go
@@ -2920,6 +2984,7 @@ var _Mende_Kikakui = ...
 
 ```
 searchKey: unicode._Meroitic_Cursive
+tags: [private]
 ```
 
 ```Go
@@ -2930,6 +2995,7 @@ var _Meroitic_Cursive = ...
 
 ```
 searchKey: unicode._Meroitic_Hieroglyphs
+tags: [private]
 ```
 
 ```Go
@@ -2940,6 +3006,7 @@ var _Meroitic_Hieroglyphs = ...
 
 ```
 searchKey: unicode._Miao
+tags: [private]
 ```
 
 ```Go
@@ -2950,6 +3017,7 @@ var _Miao = ...
 
 ```
 searchKey: unicode._Modi
+tags: [private]
 ```
 
 ```Go
@@ -2960,6 +3028,7 @@ var _Modi = ...
 
 ```
 searchKey: unicode._Mongolian
+tags: [private]
 ```
 
 ```Go
@@ -2970,6 +3039,7 @@ var _Mongolian = ...
 
 ```
 searchKey: unicode._Mro
+tags: [private]
 ```
 
 ```Go
@@ -2980,6 +3050,7 @@ var _Mro = ...
 
 ```
 searchKey: unicode._Multani
+tags: [private]
 ```
 
 ```Go
@@ -2990,6 +3061,7 @@ var _Multani = ...
 
 ```
 searchKey: unicode._Myanmar
+tags: [private]
 ```
 
 ```Go
@@ -3000,6 +3072,7 @@ var _Myanmar = ...
 
 ```
 searchKey: unicode._Nabataean
+tags: [private]
 ```
 
 ```Go
@@ -3010,6 +3083,7 @@ var _Nabataean = ...
 
 ```
 searchKey: unicode._Nandinagari
+tags: [private]
 ```
 
 ```Go
@@ -3020,6 +3094,7 @@ var _Nandinagari = ...
 
 ```
 searchKey: unicode._New_Tai_Lue
+tags: [private]
 ```
 
 ```Go
@@ -3030,6 +3105,7 @@ var _New_Tai_Lue = ...
 
 ```
 searchKey: unicode._Newa
+tags: [private]
 ```
 
 ```Go
@@ -3040,6 +3116,7 @@ var _Newa = ...
 
 ```
 searchKey: unicode._Nko
+tags: [private]
 ```
 
 ```Go
@@ -3055,6 +3132,7 @@ var _Nko = &RangeTable{
 
 ```
 searchKey: unicode._Nushu
+tags: [private]
 ```
 
 ```Go
@@ -3065,6 +3143,7 @@ var _Nushu = ...
 
 ```
 searchKey: unicode._Nyiakeng_Puachue_Hmong
+tags: [private]
 ```
 
 ```Go
@@ -3075,6 +3154,7 @@ var _Nyiakeng_Puachue_Hmong = ...
 
 ```
 searchKey: unicode._Ogham
+tags: [private]
 ```
 
 ```Go
@@ -3089,6 +3169,7 @@ var _Ogham = &RangeTable{
 
 ```
 searchKey: unicode._Ol_Chiki
+tags: [private]
 ```
 
 ```Go
@@ -3103,6 +3184,7 @@ var _Ol_Chiki = &RangeTable{
 
 ```
 searchKey: unicode._Old_Hungarian
+tags: [private]
 ```
 
 ```Go
@@ -3113,6 +3195,7 @@ var _Old_Hungarian = ...
 
 ```
 searchKey: unicode._Old_Italic
+tags: [private]
 ```
 
 ```Go
@@ -3123,6 +3206,7 @@ var _Old_Italic = ...
 
 ```
 searchKey: unicode._Old_North_Arabian
+tags: [private]
 ```
 
 ```Go
@@ -3133,6 +3217,7 @@ var _Old_North_Arabian = ...
 
 ```
 searchKey: unicode._Old_Permic
+tags: [private]
 ```
 
 ```Go
@@ -3148,6 +3233,7 @@ var _Old_Permic = &RangeTable{
 
 ```
 searchKey: unicode._Old_Persian
+tags: [private]
 ```
 
 ```Go
@@ -3158,6 +3244,7 @@ var _Old_Persian = ...
 
 ```
 searchKey: unicode._Old_Sogdian
+tags: [private]
 ```
 
 ```Go
@@ -3173,6 +3260,7 @@ var _Old_Sogdian = &RangeTable{
 
 ```
 searchKey: unicode._Old_South_Arabian
+tags: [private]
 ```
 
 ```Go
@@ -3183,6 +3271,7 @@ var _Old_South_Arabian = ...
 
 ```
 searchKey: unicode._Old_Turkic
+tags: [private]
 ```
 
 ```Go
@@ -3198,6 +3287,7 @@ var _Old_Turkic = &RangeTable{
 
 ```
 searchKey: unicode._Oriya
+tags: [private]
 ```
 
 ```Go
@@ -3208,6 +3298,7 @@ var _Oriya = ...
 
 ```
 searchKey: unicode._Osage
+tags: [private]
 ```
 
 ```Go
@@ -3218,6 +3309,7 @@ var _Osage = ...
 
 ```
 searchKey: unicode._Osmanya
+tags: [private]
 ```
 
 ```Go
@@ -3228,6 +3320,7 @@ var _Osmanya = ...
 
 ```
 searchKey: unicode._Pahawh_Hmong
+tags: [private]
 ```
 
 ```Go
@@ -3238,6 +3331,7 @@ var _Pahawh_Hmong = ...
 
 ```
 searchKey: unicode._Palmyrene
+tags: [private]
 ```
 
 ```Go
@@ -3253,6 +3347,7 @@ var _Palmyrene = &RangeTable{
 
 ```
 searchKey: unicode._Pau_Cin_Hau
+tags: [private]
 ```
 
 ```Go
@@ -3268,6 +3363,7 @@ var _Pau_Cin_Hau = &RangeTable{
 
 ```
 searchKey: unicode._Phags_Pa
+tags: [private]
 ```
 
 ```Go
@@ -3282,6 +3378,7 @@ var _Phags_Pa = &RangeTable{
 
 ```
 searchKey: unicode._Phoenician
+tags: [private]
 ```
 
 ```Go
@@ -3292,6 +3389,7 @@ var _Phoenician = ...
 
 ```
 searchKey: unicode._Psalter_Pahlavi
+tags: [private]
 ```
 
 ```Go
@@ -3302,6 +3400,7 @@ var _Psalter_Pahlavi = ...
 
 ```
 searchKey: unicode._Rejang
+tags: [private]
 ```
 
 ```Go
@@ -3317,6 +3416,7 @@ var _Rejang = &RangeTable{
 
 ```
 searchKey: unicode._Runic
+tags: [private]
 ```
 
 ```Go
@@ -3332,6 +3432,7 @@ var _Runic = &RangeTable{
 
 ```
 searchKey: unicode._Samaritan
+tags: [private]
 ```
 
 ```Go
@@ -3347,6 +3448,7 @@ var _Samaritan = &RangeTable{
 
 ```
 searchKey: unicode._Saurashtra
+tags: [private]
 ```
 
 ```Go
@@ -3362,6 +3464,7 @@ var _Saurashtra = &RangeTable{
 
 ```
 searchKey: unicode._Sharada
+tags: [private]
 ```
 
 ```Go
@@ -3377,6 +3480,7 @@ var _Sharada = &RangeTable{
 
 ```
 searchKey: unicode._Shavian
+tags: [private]
 ```
 
 ```Go
@@ -3392,6 +3496,7 @@ var _Shavian = &RangeTable{
 
 ```
 searchKey: unicode._Siddham
+tags: [private]
 ```
 
 ```Go
@@ -3402,6 +3507,7 @@ var _Siddham = ...
 
 ```
 searchKey: unicode._SignWriting
+tags: [private]
 ```
 
 ```Go
@@ -3412,6 +3518,7 @@ var _SignWriting = ...
 
 ```
 searchKey: unicode._Sinhala
+tags: [private]
 ```
 
 ```Go
@@ -3422,6 +3529,7 @@ var _Sinhala = ...
 
 ```
 searchKey: unicode._Sogdian
+tags: [private]
 ```
 
 ```Go
@@ -3437,6 +3545,7 @@ var _Sogdian = &RangeTable{
 
 ```
 searchKey: unicode._Sora_Sompeng
+tags: [private]
 ```
 
 ```Go
@@ -3447,6 +3556,7 @@ var _Sora_Sompeng = ...
 
 ```
 searchKey: unicode._Soyombo
+tags: [private]
 ```
 
 ```Go
@@ -3462,6 +3572,7 @@ var _Soyombo = &RangeTable{
 
 ```
 searchKey: unicode._Sundanese
+tags: [private]
 ```
 
 ```Go
@@ -3477,6 +3588,7 @@ var _Sundanese = &RangeTable{
 
 ```
 searchKey: unicode._Syloti_Nagri
+tags: [private]
 ```
 
 ```Go
@@ -3491,6 +3603,7 @@ var _Syloti_Nagri = &RangeTable{
 
 ```
 searchKey: unicode._Syriac
+tags: [private]
 ```
 
 ```Go
@@ -3501,6 +3614,7 @@ var _Syriac = ...
 
 ```
 searchKey: unicode._Tagalog
+tags: [private]
 ```
 
 ```Go
@@ -3516,6 +3630,7 @@ var _Tagalog = &RangeTable{
 
 ```
 searchKey: unicode._Tagbanwa
+tags: [private]
 ```
 
 ```Go
@@ -3526,6 +3641,7 @@ var _Tagbanwa = ...
 
 ```
 searchKey: unicode._Tai_Le
+tags: [private]
 ```
 
 ```Go
@@ -3541,6 +3657,7 @@ var _Tai_Le = &RangeTable{
 
 ```
 searchKey: unicode._Tai_Tham
+tags: [private]
 ```
 
 ```Go
@@ -3551,6 +3668,7 @@ var _Tai_Tham = ...
 
 ```
 searchKey: unicode._Tai_Viet
+tags: [private]
 ```
 
 ```Go
@@ -3566,6 +3684,7 @@ var _Tai_Viet = &RangeTable{
 
 ```
 searchKey: unicode._Takri
+tags: [private]
 ```
 
 ```Go
@@ -3576,6 +3695,7 @@ var _Takri = ...
 
 ```
 searchKey: unicode._Tamil
+tags: [private]
 ```
 
 ```Go
@@ -3586,6 +3706,7 @@ var _Tamil = ...
 
 ```
 searchKey: unicode._Tangut
+tags: [private]
 ```
 
 ```Go
@@ -3596,6 +3717,7 @@ var _Tangut = ...
 
 ```
 searchKey: unicode._Telugu
+tags: [private]
 ```
 
 ```Go
@@ -3606,6 +3728,7 @@ var _Telugu = ...
 
 ```
 searchKey: unicode._Thaana
+tags: [private]
 ```
 
 ```Go
@@ -3620,6 +3743,7 @@ var _Thaana = &RangeTable{
 
 ```
 searchKey: unicode._Thai
+tags: [private]
 ```
 
 ```Go
@@ -3635,6 +3759,7 @@ var _Thai = &RangeTable{
 
 ```
 searchKey: unicode._Tibetan
+tags: [private]
 ```
 
 ```Go
@@ -3645,6 +3770,7 @@ var _Tibetan = ...
 
 ```
 searchKey: unicode._Tifinagh
+tags: [private]
 ```
 
 ```Go
@@ -3655,6 +3781,7 @@ var _Tifinagh = ...
 
 ```
 searchKey: unicode._Tirhuta
+tags: [private]
 ```
 
 ```Go
@@ -3665,6 +3792,7 @@ var _Tirhuta = ...
 
 ```
 searchKey: unicode._Ugaritic
+tags: [private]
 ```
 
 ```Go
@@ -3675,6 +3803,7 @@ var _Ugaritic = ...
 
 ```
 searchKey: unicode._Vai
+tags: [private]
 ```
 
 ```Go
@@ -3689,6 +3818,7 @@ var _Vai = &RangeTable{
 
 ```
 searchKey: unicode._Wancho
+tags: [private]
 ```
 
 ```Go
@@ -3699,6 +3829,7 @@ var _Wancho = ...
 
 ```
 searchKey: unicode._Warang_Citi
+tags: [private]
 ```
 
 ```Go
@@ -3709,6 +3840,7 @@ var _Warang_Citi = ...
 
 ```
 searchKey: unicode._Yezidi
+tags: [private]
 ```
 
 ```Go
@@ -3719,6 +3851,7 @@ var _Yezidi = ...
 
 ```
 searchKey: unicode._Yi
+tags: [private]
 ```
 
 ```Go
@@ -3734,6 +3867,7 @@ var _Yi = &RangeTable{
 
 ```
 searchKey: unicode._Zanabazar_Square
+tags: [private]
 ```
 
 ```Go
@@ -3744,7 +3878,6 @@ var _Zanabazar_Square = ...
 
 ```
 searchKey: unicode.Adlam
-tags: [exported]
 ```
 
 ```Go
@@ -3758,7 +3891,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Ahom
-tags: [exported]
 ```
 
 ```Go
@@ -3772,7 +3904,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Anatolian_Hieroglyphs
-tags: [exported]
 ```
 
 ```Go
@@ -3786,7 +3917,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Arabic
-tags: [exported]
 ```
 
 ```Go
@@ -3800,7 +3930,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Armenian
-tags: [exported]
 ```
 
 ```Go
@@ -3814,7 +3943,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Avestan
-tags: [exported]
 ```
 
 ```Go
@@ -3828,7 +3956,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Balinese
-tags: [exported]
 ```
 
 ```Go
@@ -3842,7 +3969,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Bamum
-tags: [exported]
 ```
 
 ```Go
@@ -3856,7 +3982,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Bassa_Vah
-tags: [exported]
 ```
 
 ```Go
@@ -3870,7 +3995,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Batak
-tags: [exported]
 ```
 
 ```Go
@@ -3884,7 +4008,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Bengali
-tags: [exported]
 ```
 
 ```Go
@@ -3898,7 +4021,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Bhaiksuki
-tags: [exported]
 ```
 
 ```Go
@@ -3912,7 +4034,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Bopomofo
-tags: [exported]
 ```
 
 ```Go
@@ -3926,7 +4047,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Brahmi
-tags: [exported]
 ```
 
 ```Go
@@ -3940,7 +4060,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Braille
-tags: [exported]
 ```
 
 ```Go
@@ -3954,7 +4073,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Buginese
-tags: [exported]
 ```
 
 ```Go
@@ -3968,7 +4086,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Buhid
-tags: [exported]
 ```
 
 ```Go
@@ -3982,7 +4099,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Canadian_Aboriginal
-tags: [exported]
 ```
 
 ```Go
@@ -3996,7 +4112,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Carian
-tags: [exported]
 ```
 
 ```Go
@@ -4010,7 +4125,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Caucasian_Albanian
-tags: [exported]
 ```
 
 ```Go
@@ -4024,7 +4138,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Chakma
-tags: [exported]
 ```
 
 ```Go
@@ -4038,7 +4151,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Cham
-tags: [exported]
 ```
 
 ```Go
@@ -4052,7 +4164,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Cherokee
-tags: [exported]
 ```
 
 ```Go
@@ -4066,7 +4177,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Chorasmian
-tags: [exported]
 ```
 
 ```Go
@@ -4080,7 +4190,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Common
-tags: [exported]
 ```
 
 ```Go
@@ -4094,7 +4203,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Coptic
-tags: [exported]
 ```
 
 ```Go
@@ -4108,7 +4216,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Cuneiform
-tags: [exported]
 ```
 
 ```Go
@@ -4122,7 +4229,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Cypriot
-tags: [exported]
 ```
 
 ```Go
@@ -4136,7 +4242,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Cyrillic
-tags: [exported]
 ```
 
 ```Go
@@ -4150,7 +4255,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Deseret
-tags: [exported]
 ```
 
 ```Go
@@ -4164,7 +4268,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Devanagari
-tags: [exported]
 ```
 
 ```Go
@@ -4178,7 +4281,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Dives_Akuru
-tags: [exported]
 ```
 
 ```Go
@@ -4192,7 +4294,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Dogra
-tags: [exported]
 ```
 
 ```Go
@@ -4206,7 +4307,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Duployan
-tags: [exported]
 ```
 
 ```Go
@@ -4220,7 +4320,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Egyptian_Hieroglyphs
-tags: [exported]
 ```
 
 ```Go
@@ -4234,7 +4333,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Elbasan
-tags: [exported]
 ```
 
 ```Go
@@ -4248,7 +4346,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Elymaic
-tags: [exported]
 ```
 
 ```Go
@@ -4262,7 +4359,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Ethiopic
-tags: [exported]
 ```
 
 ```Go
@@ -4276,7 +4372,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Georgian
-tags: [exported]
 ```
 
 ```Go
@@ -4290,7 +4385,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Glagolitic
-tags: [exported]
 ```
 
 ```Go
@@ -4304,7 +4398,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Gothic
-tags: [exported]
 ```
 
 ```Go
@@ -4318,7 +4411,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Grantha
-tags: [exported]
 ```
 
 ```Go
@@ -4332,7 +4424,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Greek
-tags: [exported]
 ```
 
 ```Go
@@ -4346,7 +4437,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Gujarati
-tags: [exported]
 ```
 
 ```Go
@@ -4360,7 +4450,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Gunjala_Gondi
-tags: [exported]
 ```
 
 ```Go
@@ -4374,7 +4463,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Gurmukhi
-tags: [exported]
 ```
 
 ```Go
@@ -4388,7 +4476,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Han
-tags: [exported]
 ```
 
 ```Go
@@ -4402,7 +4489,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Hangul
-tags: [exported]
 ```
 
 ```Go
@@ -4416,7 +4502,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Hanifi_Rohingya
-tags: [exported]
 ```
 
 ```Go
@@ -4430,7 +4515,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Hanunoo
-tags: [exported]
 ```
 
 ```Go
@@ -4444,7 +4528,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Hatran
-tags: [exported]
 ```
 
 ```Go
@@ -4458,7 +4541,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Hebrew
-tags: [exported]
 ```
 
 ```Go
@@ -4472,7 +4554,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Hiragana
-tags: [exported]
 ```
 
 ```Go
@@ -4486,7 +4567,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Imperial_Aramaic
-tags: [exported]
 ```
 
 ```Go
@@ -4500,7 +4580,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Inherited
-tags: [exported]
 ```
 
 ```Go
@@ -4514,7 +4593,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Inscriptional_Pahlavi
-tags: [exported]
 ```
 
 ```Go
@@ -4528,7 +4606,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Inscriptional_Parthian
-tags: [exported]
 ```
 
 ```Go
@@ -4542,7 +4619,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Javanese
-tags: [exported]
 ```
 
 ```Go
@@ -4556,7 +4632,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Kaithi
-tags: [exported]
 ```
 
 ```Go
@@ -4570,7 +4645,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Kannada
-tags: [exported]
 ```
 
 ```Go
@@ -4584,7 +4658,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Katakana
-tags: [exported]
 ```
 
 ```Go
@@ -4598,7 +4671,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Kayah_Li
-tags: [exported]
 ```
 
 ```Go
@@ -4612,7 +4684,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Kharoshthi
-tags: [exported]
 ```
 
 ```Go
@@ -4626,7 +4697,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Khitan_Small_Script
-tags: [exported]
 ```
 
 ```Go
@@ -4640,7 +4710,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Khmer
-tags: [exported]
 ```
 
 ```Go
@@ -4654,7 +4723,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Khojki
-tags: [exported]
 ```
 
 ```Go
@@ -4668,7 +4736,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Khudawadi
-tags: [exported]
 ```
 
 ```Go
@@ -4682,7 +4749,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Lao
-tags: [exported]
 ```
 
 ```Go
@@ -4696,7 +4762,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Latin
-tags: [exported]
 ```
 
 ```Go
@@ -4710,7 +4775,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Lepcha
-tags: [exported]
 ```
 
 ```Go
@@ -4724,7 +4788,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Limbu
-tags: [exported]
 ```
 
 ```Go
@@ -4738,7 +4801,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Linear_A
-tags: [exported]
 ```
 
 ```Go
@@ -4752,7 +4814,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Linear_B
-tags: [exported]
 ```
 
 ```Go
@@ -4766,7 +4827,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Lisu
-tags: [exported]
 ```
 
 ```Go
@@ -4780,7 +4840,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Lycian
-tags: [exported]
 ```
 
 ```Go
@@ -4794,7 +4853,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Lydian
-tags: [exported]
 ```
 
 ```Go
@@ -4808,7 +4866,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Mahajani
-tags: [exported]
 ```
 
 ```Go
@@ -4822,7 +4879,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Makasar
-tags: [exported]
 ```
 
 ```Go
@@ -4836,7 +4892,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Malayalam
-tags: [exported]
 ```
 
 ```Go
@@ -4850,7 +4905,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Mandaic
-tags: [exported]
 ```
 
 ```Go
@@ -4864,7 +4918,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Manichaean
-tags: [exported]
 ```
 
 ```Go
@@ -4878,7 +4931,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Marchen
-tags: [exported]
 ```
 
 ```Go
@@ -4892,7 +4944,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Masaram_Gondi
-tags: [exported]
 ```
 
 ```Go
@@ -4906,7 +4957,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Medefaidrin
-tags: [exported]
 ```
 
 ```Go
@@ -4920,7 +4970,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Meetei_Mayek
-tags: [exported]
 ```
 
 ```Go
@@ -4934,7 +4983,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Mende_Kikakui
-tags: [exported]
 ```
 
 ```Go
@@ -4948,7 +4996,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Meroitic_Cursive
-tags: [exported]
 ```
 
 ```Go
@@ -4962,7 +5009,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Meroitic_Hieroglyphs
-tags: [exported]
 ```
 
 ```Go
@@ -4976,7 +5022,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Miao
-tags: [exported]
 ```
 
 ```Go
@@ -4990,7 +5035,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Modi
-tags: [exported]
 ```
 
 ```Go
@@ -5004,7 +5048,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Mongolian
-tags: [exported]
 ```
 
 ```Go
@@ -5018,7 +5061,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Mro
-tags: [exported]
 ```
 
 ```Go
@@ -5032,7 +5074,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Multani
-tags: [exported]
 ```
 
 ```Go
@@ -5046,7 +5087,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Myanmar
-tags: [exported]
 ```
 
 ```Go
@@ -5060,7 +5100,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Nabataean
-tags: [exported]
 ```
 
 ```Go
@@ -5074,7 +5113,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Nandinagari
-tags: [exported]
 ```
 
 ```Go
@@ -5088,7 +5126,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.New_Tai_Lue
-tags: [exported]
 ```
 
 ```Go
@@ -5102,7 +5139,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Newa
-tags: [exported]
 ```
 
 ```Go
@@ -5116,7 +5152,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Nko
-tags: [exported]
 ```
 
 ```Go
@@ -5130,7 +5165,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Nushu
-tags: [exported]
 ```
 
 ```Go
@@ -5144,7 +5178,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Nyiakeng_Puachue_Hmong
-tags: [exported]
 ```
 
 ```Go
@@ -5158,7 +5191,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Ogham
-tags: [exported]
 ```
 
 ```Go
@@ -5172,7 +5204,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Ol_Chiki
-tags: [exported]
 ```
 
 ```Go
@@ -5186,7 +5217,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Old_Hungarian
-tags: [exported]
 ```
 
 ```Go
@@ -5200,7 +5230,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Old_Italic
-tags: [exported]
 ```
 
 ```Go
@@ -5214,7 +5243,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Old_North_Arabian
-tags: [exported]
 ```
 
 ```Go
@@ -5228,7 +5256,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Old_Permic
-tags: [exported]
 ```
 
 ```Go
@@ -5242,7 +5269,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Old_Persian
-tags: [exported]
 ```
 
 ```Go
@@ -5256,7 +5282,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Old_Sogdian
-tags: [exported]
 ```
 
 ```Go
@@ -5270,7 +5295,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Old_South_Arabian
-tags: [exported]
 ```
 
 ```Go
@@ -5284,7 +5308,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Old_Turkic
-tags: [exported]
 ```
 
 ```Go
@@ -5298,7 +5321,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Oriya
-tags: [exported]
 ```
 
 ```Go
@@ -5312,7 +5334,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Osage
-tags: [exported]
 ```
 
 ```Go
@@ -5326,7 +5347,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Osmanya
-tags: [exported]
 ```
 
 ```Go
@@ -5340,7 +5360,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Pahawh_Hmong
-tags: [exported]
 ```
 
 ```Go
@@ -5354,7 +5373,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Palmyrene
-tags: [exported]
 ```
 
 ```Go
@@ -5368,7 +5386,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Pau_Cin_Hau
-tags: [exported]
 ```
 
 ```Go
@@ -5382,7 +5399,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Phags_Pa
-tags: [exported]
 ```
 
 ```Go
@@ -5396,7 +5412,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Phoenician
-tags: [exported]
 ```
 
 ```Go
@@ -5410,7 +5425,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Psalter_Pahlavi
-tags: [exported]
 ```
 
 ```Go
@@ -5424,7 +5438,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Rejang
-tags: [exported]
 ```
 
 ```Go
@@ -5438,7 +5451,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Runic
-tags: [exported]
 ```
 
 ```Go
@@ -5452,7 +5464,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Samaritan
-tags: [exported]
 ```
 
 ```Go
@@ -5466,7 +5477,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Saurashtra
-tags: [exported]
 ```
 
 ```Go
@@ -5480,7 +5490,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Sharada
-tags: [exported]
 ```
 
 ```Go
@@ -5494,7 +5503,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Shavian
-tags: [exported]
 ```
 
 ```Go
@@ -5508,7 +5516,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Siddham
-tags: [exported]
 ```
 
 ```Go
@@ -5522,7 +5529,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.SignWriting
-tags: [exported]
 ```
 
 ```Go
@@ -5536,7 +5542,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Sinhala
-tags: [exported]
 ```
 
 ```Go
@@ -5550,7 +5555,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Sogdian
-tags: [exported]
 ```
 
 ```Go
@@ -5564,7 +5568,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Sora_Sompeng
-tags: [exported]
 ```
 
 ```Go
@@ -5578,7 +5581,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Soyombo
-tags: [exported]
 ```
 
 ```Go
@@ -5592,7 +5594,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Sundanese
-tags: [exported]
 ```
 
 ```Go
@@ -5606,7 +5607,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Syloti_Nagri
-tags: [exported]
 ```
 
 ```Go
@@ -5620,7 +5620,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Syriac
-tags: [exported]
 ```
 
 ```Go
@@ -5634,7 +5633,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Tagalog
-tags: [exported]
 ```
 
 ```Go
@@ -5648,7 +5646,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Tagbanwa
-tags: [exported]
 ```
 
 ```Go
@@ -5662,7 +5659,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Tai_Le
-tags: [exported]
 ```
 
 ```Go
@@ -5676,7 +5672,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Tai_Tham
-tags: [exported]
 ```
 
 ```Go
@@ -5690,7 +5685,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Tai_Viet
-tags: [exported]
 ```
 
 ```Go
@@ -5704,7 +5698,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Takri
-tags: [exported]
 ```
 
 ```Go
@@ -5718,7 +5711,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Tamil
-tags: [exported]
 ```
 
 ```Go
@@ -5732,7 +5724,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Tangut
-tags: [exported]
 ```
 
 ```Go
@@ -5746,7 +5737,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Telugu
-tags: [exported]
 ```
 
 ```Go
@@ -5760,7 +5750,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Thaana
-tags: [exported]
 ```
 
 ```Go
@@ -5774,7 +5763,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Thai
-tags: [exported]
 ```
 
 ```Go
@@ -5788,7 +5776,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Tibetan
-tags: [exported]
 ```
 
 ```Go
@@ -5802,7 +5789,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Tifinagh
-tags: [exported]
 ```
 
 ```Go
@@ -5816,7 +5802,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Tirhuta
-tags: [exported]
 ```
 
 ```Go
@@ -5830,7 +5815,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Ugaritic
-tags: [exported]
 ```
 
 ```Go
@@ -5844,7 +5828,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Vai
-tags: [exported]
 ```
 
 ```Go
@@ -5858,7 +5841,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Wancho
-tags: [exported]
 ```
 
 ```Go
@@ -5872,7 +5854,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Warang_Citi
-tags: [exported]
 ```
 
 ```Go
@@ -5886,7 +5867,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Yezidi
-tags: [exported]
 ```
 
 ```Go
@@ -5900,7 +5880,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Yi
-tags: [exported]
 ```
 
 ```Go
@@ -5914,7 +5893,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Zanabazar_Square
-tags: [exported]
 ```
 
 ```Go
@@ -5928,7 +5906,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Properties
-tags: [exported]
 ```
 
 ```Go
@@ -5941,6 +5918,7 @@ Properties is the set of Unicode property tables.
 
 ```
 searchKey: unicode._ASCII_Hex_Digit
+tags: [private]
 ```
 
 ```Go
@@ -5951,6 +5929,7 @@ var _ASCII_Hex_Digit = ...
 
 ```
 searchKey: unicode._Bidi_Control
+tags: [private]
 ```
 
 ```Go
@@ -5961,6 +5940,7 @@ var _Bidi_Control = ...
 
 ```
 searchKey: unicode._Dash
+tags: [private]
 ```
 
 ```Go
@@ -5971,6 +5951,7 @@ var _Dash = ...
 
 ```
 searchKey: unicode._Deprecated
+tags: [private]
 ```
 
 ```Go
@@ -5981,6 +5962,7 @@ var _Deprecated = ...
 
 ```
 searchKey: unicode._Diacritic
+tags: [private]
 ```
 
 ```Go
@@ -5991,6 +5973,7 @@ var _Diacritic = ...
 
 ```
 searchKey: unicode._Extender
+tags: [private]
 ```
 
 ```Go
@@ -6001,6 +5984,7 @@ var _Extender = ...
 
 ```
 searchKey: unicode._Hex_Digit
+tags: [private]
 ```
 
 ```Go
@@ -6011,6 +5995,7 @@ var _Hex_Digit = ...
 
 ```
 searchKey: unicode._Hyphen
+tags: [private]
 ```
 
 ```Go
@@ -6021,6 +6006,7 @@ var _Hyphen = ...
 
 ```
 searchKey: unicode._IDS_Binary_Operator
+tags: [private]
 ```
 
 ```Go
@@ -6031,6 +6017,7 @@ var _IDS_Binary_Operator = ...
 
 ```
 searchKey: unicode._IDS_Trinary_Operator
+tags: [private]
 ```
 
 ```Go
@@ -6045,6 +6032,7 @@ var _IDS_Trinary_Operator = &RangeTable{
 
 ```
 searchKey: unicode._Ideographic
+tags: [private]
 ```
 
 ```Go
@@ -6055,6 +6043,7 @@ var _Ideographic = ...
 
 ```
 searchKey: unicode._Join_Control
+tags: [private]
 ```
 
 ```Go
@@ -6069,6 +6058,7 @@ var _Join_Control = &RangeTable{
 
 ```
 searchKey: unicode._Logical_Order_Exception
+tags: [private]
 ```
 
 ```Go
@@ -6079,6 +6069,7 @@ var _Logical_Order_Exception = ...
 
 ```
 searchKey: unicode._Noncharacter_Code_Point
+tags: [private]
 ```
 
 ```Go
@@ -6089,6 +6080,7 @@ var _Noncharacter_Code_Point = ...
 
 ```
 searchKey: unicode._Other_Alphabetic
+tags: [private]
 ```
 
 ```Go
@@ -6099,6 +6091,7 @@ var _Other_Alphabetic = ...
 
 ```
 searchKey: unicode._Other_Default_Ignorable_Code_Point
+tags: [private]
 ```
 
 ```Go
@@ -6109,6 +6102,7 @@ var _Other_Default_Ignorable_Code_Point = ...
 
 ```
 searchKey: unicode._Other_Grapheme_Extend
+tags: [private]
 ```
 
 ```Go
@@ -6119,6 +6113,7 @@ var _Other_Grapheme_Extend = ...
 
 ```
 searchKey: unicode._Other_ID_Continue
+tags: [private]
 ```
 
 ```Go
@@ -6129,6 +6124,7 @@ var _Other_ID_Continue = ...
 
 ```
 searchKey: unicode._Other_ID_Start
+tags: [private]
 ```
 
 ```Go
@@ -6139,6 +6135,7 @@ var _Other_ID_Start = ...
 
 ```
 searchKey: unicode._Other_Lowercase
+tags: [private]
 ```
 
 ```Go
@@ -6149,6 +6146,7 @@ var _Other_Lowercase = ...
 
 ```
 searchKey: unicode._Other_Math
+tags: [private]
 ```
 
 ```Go
@@ -6159,6 +6157,7 @@ var _Other_Math = ...
 
 ```
 searchKey: unicode._Other_Uppercase
+tags: [private]
 ```
 
 ```Go
@@ -6169,6 +6168,7 @@ var _Other_Uppercase = ...
 
 ```
 searchKey: unicode._Pattern_Syntax
+tags: [private]
 ```
 
 ```Go
@@ -6179,6 +6179,7 @@ var _Pattern_Syntax = ...
 
 ```
 searchKey: unicode._Pattern_White_Space
+tags: [private]
 ```
 
 ```Go
@@ -6189,6 +6190,7 @@ var _Pattern_White_Space = ...
 
 ```
 searchKey: unicode._Prepended_Concatenation_Mark
+tags: [private]
 ```
 
 ```Go
@@ -6199,6 +6201,7 @@ var _Prepended_Concatenation_Mark = ...
 
 ```
 searchKey: unicode._Quotation_Mark
+tags: [private]
 ```
 
 ```Go
@@ -6209,6 +6212,7 @@ var _Quotation_Mark = ...
 
 ```
 searchKey: unicode._Radical
+tags: [private]
 ```
 
 ```Go
@@ -6219,6 +6223,7 @@ var _Radical = ...
 
 ```
 searchKey: unicode._Regional_Indicator
+tags: [private]
 ```
 
 ```Go
@@ -6229,6 +6234,7 @@ var _Regional_Indicator = ...
 
 ```
 searchKey: unicode._Sentence_Terminal
+tags: [private]
 ```
 
 ```Go
@@ -6239,6 +6245,7 @@ var _Sentence_Terminal = ...
 
 ```
 searchKey: unicode._Soft_Dotted
+tags: [private]
 ```
 
 ```Go
@@ -6249,6 +6256,7 @@ var _Soft_Dotted = ...
 
 ```
 searchKey: unicode._Terminal_Punctuation
+tags: [private]
 ```
 
 ```Go
@@ -6259,6 +6267,7 @@ var _Terminal_Punctuation = ...
 
 ```
 searchKey: unicode._Unified_Ideograph
+tags: [private]
 ```
 
 ```Go
@@ -6269,6 +6278,7 @@ var _Unified_Ideograph = ...
 
 ```
 searchKey: unicode._Variation_Selector
+tags: [private]
 ```
 
 ```Go
@@ -6279,6 +6289,7 @@ var _Variation_Selector = ...
 
 ```
 searchKey: unicode._White_Space
+tags: [private]
 ```
 
 ```Go
@@ -6289,7 +6300,6 @@ var _White_Space = ...
 
 ```
 searchKey: unicode.ASCII_Hex_Digit
-tags: [exported]
 ```
 
 ```Go
@@ -6303,7 +6313,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Bidi_Control
-tags: [exported]
 ```
 
 ```Go
@@ -6317,7 +6326,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Dash
-tags: [exported]
 ```
 
 ```Go
@@ -6331,7 +6339,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Deprecated
-tags: [exported]
 ```
 
 ```Go
@@ -6345,7 +6352,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Diacritic
-tags: [exported]
 ```
 
 ```Go
@@ -6359,7 +6365,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Extender
-tags: [exported]
 ```
 
 ```Go
@@ -6373,7 +6378,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Hex_Digit
-tags: [exported]
 ```
 
 ```Go
@@ -6387,7 +6391,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Hyphen
-tags: [exported]
 ```
 
 ```Go
@@ -6401,7 +6404,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.IDS_Binary_Operator
-tags: [exported]
 ```
 
 ```Go
@@ -6415,7 +6417,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.IDS_Trinary_Operator
-tags: [exported]
 ```
 
 ```Go
@@ -6429,7 +6430,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Ideographic
-tags: [exported]
 ```
 
 ```Go
@@ -6443,7 +6443,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Join_Control
-tags: [exported]
 ```
 
 ```Go
@@ -6457,7 +6456,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Logical_Order_Exception
-tags: [exported]
 ```
 
 ```Go
@@ -6471,7 +6469,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Noncharacter_Code_Point
-tags: [exported]
 ```
 
 ```Go
@@ -6485,7 +6482,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Other_Alphabetic
-tags: [exported]
 ```
 
 ```Go
@@ -6499,7 +6495,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Other_Default_Ignorable_Code_Point
-tags: [exported]
 ```
 
 ```Go
@@ -6513,7 +6508,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Other_Grapheme_Extend
-tags: [exported]
 ```
 
 ```Go
@@ -6527,7 +6521,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Other_ID_Continue
-tags: [exported]
 ```
 
 ```Go
@@ -6541,7 +6534,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Other_ID_Start
-tags: [exported]
 ```
 
 ```Go
@@ -6555,7 +6547,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Other_Lowercase
-tags: [exported]
 ```
 
 ```Go
@@ -6569,7 +6560,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Other_Math
-tags: [exported]
 ```
 
 ```Go
@@ -6583,7 +6573,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Other_Uppercase
-tags: [exported]
 ```
 
 ```Go
@@ -6597,7 +6586,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Pattern_Syntax
-tags: [exported]
 ```
 
 ```Go
@@ -6611,7 +6599,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Pattern_White_Space
-tags: [exported]
 ```
 
 ```Go
@@ -6625,7 +6612,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Prepended_Concatenation_Mark
-tags: [exported]
 ```
 
 ```Go
@@ -6639,7 +6625,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Quotation_Mark
-tags: [exported]
 ```
 
 ```Go
@@ -6653,7 +6638,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Radical
-tags: [exported]
 ```
 
 ```Go
@@ -6667,7 +6651,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Regional_Indicator
-tags: [exported]
 ```
 
 ```Go
@@ -6681,7 +6664,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.STerm
-tags: [exported]
 ```
 
 ```Go
@@ -6695,7 +6677,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Sentence_Terminal
-tags: [exported]
 ```
 
 ```Go
@@ -6709,7 +6690,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Soft_Dotted
-tags: [exported]
 ```
 
 ```Go
@@ -6723,7 +6703,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Terminal_Punctuation
-tags: [exported]
 ```
 
 ```Go
@@ -6737,7 +6716,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Unified_Ideograph
-tags: [exported]
 ```
 
 ```Go
@@ -6751,7 +6729,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.Variation_Selector
-tags: [exported]
 ```
 
 ```Go
@@ -6765,7 +6742,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.White_Space
-tags: [exported]
 ```
 
 ```Go
@@ -6779,7 +6755,6 @@ These variables have type *RangeTable.
 
 ```
 searchKey: unicode.CaseRanges
-tags: [exported]
 ```
 
 ```Go
@@ -6792,6 +6767,7 @@ CaseRanges is the table describing case mappings for all letters with non-self m
 
 ```
 searchKey: unicode._CaseRanges
+tags: [private]
 ```
 
 ```Go
@@ -6802,6 +6778,7 @@ var _CaseRanges = ...
 
 ```
 searchKey: unicode.properties
+tags: [private]
 ```
 
 ```Go
@@ -6812,6 +6789,7 @@ var properties = ...
 
 ```
 searchKey: unicode.asciiFold
+tags: [private]
 ```
 
 ```Go
@@ -6822,6 +6800,7 @@ var asciiFold = ...
 
 ```
 searchKey: unicode.caseOrbit
+tags: [private]
 ```
 
 ```Go
@@ -6832,7 +6811,6 @@ var caseOrbit = ...
 
 ```
 searchKey: unicode.FoldCategory
-tags: [exported]
 ```
 
 ```Go
@@ -6845,6 +6823,7 @@ FoldCategory maps a category name to a table of code points outside the category
 
 ```
 searchKey: unicode.foldL
+tags: [private]
 ```
 
 ```Go
@@ -6859,6 +6838,7 @@ var foldL = &RangeTable{
 
 ```
 searchKey: unicode.foldLl
+tags: [private]
 ```
 
 ```Go
@@ -6869,6 +6849,7 @@ var foldLl = ...
 
 ```
 searchKey: unicode.foldLt
+tags: [private]
 ```
 
 ```Go
@@ -6879,6 +6860,7 @@ var foldLt = ...
 
 ```
 searchKey: unicode.foldLu
+tags: [private]
 ```
 
 ```Go
@@ -6889,6 +6871,7 @@ var foldLu = ...
 
 ```
 searchKey: unicode.foldM
+tags: [private]
 ```
 
 ```Go
@@ -6904,6 +6887,7 @@ var foldM = &RangeTable{
 
 ```
 searchKey: unicode.foldMn
+tags: [private]
 ```
 
 ```Go
@@ -6919,7 +6903,6 @@ var foldMn = &RangeTable{
 
 ```
 searchKey: unicode.FoldScript
-tags: [exported]
 ```
 
 ```Go
@@ -6932,6 +6915,7 @@ FoldScript maps a script name to a table of code points outside the script that 
 
 ```
 searchKey: unicode.foldCommon
+tags: [private]
 ```
 
 ```Go
@@ -6946,6 +6930,7 @@ var foldCommon = &RangeTable{
 
 ```
 searchKey: unicode.foldGreek
+tags: [private]
 ```
 
 ```Go
@@ -6960,6 +6945,7 @@ var foldGreek = &RangeTable{
 
 ```
 searchKey: unicode.foldInherited
+tags: [private]
 ```
 
 ```Go
@@ -6968,15 +6954,10 @@ var foldInherited = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="RangeTable" href="#RangeTable">type RangeTable struct</a>
 
 ```
 searchKey: unicode.RangeTable
-tags: [exported]
 ```
 
 ```Go
@@ -6993,7 +6974,6 @@ RangeTable defines a set of Unicode code points by listing the ranges of code po
 
 ```
 searchKey: unicode.Range16
-tags: [exported]
 ```
 
 ```Go
@@ -7010,7 +6990,6 @@ Range16 represents of a range of 16-bit Unicode code points. The range runs from
 
 ```
 searchKey: unicode.Range32
-tags: [exported]
 ```
 
 ```Go
@@ -7027,7 +7006,6 @@ Range32 represents of a range of Unicode code points and is used when one or mor
 
 ```
 searchKey: unicode.CaseRange
-tags: [exported]
 ```
 
 ```Go
@@ -7050,7 +7028,6 @@ The constant UpperLower has an otherwise impossible delta value.
 
 ```
 searchKey: unicode.SpecialCase
-tags: [exported]
 ```
 
 ```Go
@@ -7063,7 +7040,6 @@ SpecialCase represents language-specific case mappings such as Turkish. Methods 
 
 ```
 searchKey: unicode.SpecialCase.ToUpper
-tags: [exported]
 ```
 
 ```Go
@@ -7076,7 +7052,6 @@ ToUpper maps the rune to upper case giving priority to the special mapping.
 
 ```
 searchKey: unicode.SpecialCase.ToTitle
-tags: [exported]
 ```
 
 ```Go
@@ -7089,7 +7064,6 @@ ToTitle maps the rune to title case giving priority to the special mapping.
 
 ```
 searchKey: unicode.SpecialCase.ToLower
-tags: [exported]
 ```
 
 ```Go
@@ -7102,6 +7076,7 @@ ToLower maps the rune to lower case giving priority to the special mapping.
 
 ```
 searchKey: unicode.d
+tags: [private]
 ```
 
 ```Go
@@ -7113,6 +7088,7 @@ type d [MaxCase]rune // to make the CaseRanges text shorter
 
 ```
 searchKey: unicode.foldPair
+tags: [private]
 ```
 
 ```Go
@@ -7126,15 +7102,10 @@ caseOrbit is defined in tables.go as []foldPair. Right now all the entries fit i
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="IsDigit" href="#IsDigit">func IsDigit(r rune) bool</a>
 
 ```
 searchKey: unicode.IsDigit
-tags: [exported]
 ```
 
 ```Go
@@ -7147,7 +7118,6 @@ IsDigit reports whether the rune is a decimal digit.
 
 ```
 searchKey: unicode.IsGraphic
-tags: [exported]
 ```
 
 ```Go
@@ -7160,7 +7130,6 @@ IsGraphic reports whether the rune is defined as a Graphic by Unicode. Such char
 
 ```
 searchKey: unicode.IsPrint
-tags: [exported]
 ```
 
 ```Go
@@ -7173,7 +7142,6 @@ IsPrint reports whether the rune is defined as printable by Go. Such characters 
 
 ```
 searchKey: unicode.IsOneOf
-tags: [exported]
 ```
 
 ```Go
@@ -7186,7 +7154,6 @@ IsOneOf reports whether the rune is a member of one of the ranges. The function 
 
 ```
 searchKey: unicode.In
-tags: [exported]
 ```
 
 ```Go
@@ -7199,7 +7166,6 @@ In reports whether the rune is a member of one of the ranges.
 
 ```
 searchKey: unicode.IsControl
-tags: [exported]
 ```
 
 ```Go
@@ -7212,7 +7178,6 @@ IsControl reports whether the rune is a control character. The C (Other) Unicode
 
 ```
 searchKey: unicode.IsLetter
-tags: [exported]
 ```
 
 ```Go
@@ -7225,7 +7190,6 @@ IsLetter reports whether the rune is a letter (category L).
 
 ```
 searchKey: unicode.IsMark
-tags: [exported]
 ```
 
 ```Go
@@ -7238,7 +7202,6 @@ IsMark reports whether the rune is a mark character (category M).
 
 ```
 searchKey: unicode.IsNumber
-tags: [exported]
 ```
 
 ```Go
@@ -7251,7 +7214,6 @@ IsNumber reports whether the rune is a number (category N).
 
 ```
 searchKey: unicode.IsPunct
-tags: [exported]
 ```
 
 ```Go
@@ -7264,7 +7226,6 @@ IsPunct reports whether the rune is a Unicode punctuation character (category P)
 
 ```
 searchKey: unicode.IsSpace
-tags: [exported]
 ```
 
 ```Go
@@ -7283,7 +7244,6 @@ Other definitions of spacing characters are set by category Z and property Patte
 
 ```
 searchKey: unicode.IsSymbol
-tags: [exported]
 ```
 
 ```Go
@@ -7296,6 +7256,7 @@ IsSymbol reports whether the rune is a symbolic character.
 
 ```
 searchKey: unicode.is16
+tags: [private]
 ```
 
 ```Go
@@ -7308,6 +7269,7 @@ is16 reports whether r is in the sorted slice of 16-bit ranges.
 
 ```
 searchKey: unicode.is32
+tags: [private]
 ```
 
 ```Go
@@ -7320,7 +7282,6 @@ is32 reports whether r is in the sorted slice of 32-bit ranges.
 
 ```
 searchKey: unicode.Is
-tags: [exported]
 ```
 
 ```Go
@@ -7333,6 +7294,7 @@ Is reports whether the rune is in the specified table of ranges.
 
 ```
 searchKey: unicode.isExcludingLatin
+tags: [private]
 ```
 
 ```Go
@@ -7343,7 +7305,6 @@ func isExcludingLatin(rangeTab *RangeTable, r rune) bool
 
 ```
 searchKey: unicode.IsUpper
-tags: [exported]
 ```
 
 ```Go
@@ -7356,7 +7317,6 @@ IsUpper reports whether the rune is an upper case letter.
 
 ```
 searchKey: unicode.IsLower
-tags: [exported]
 ```
 
 ```Go
@@ -7369,7 +7329,6 @@ IsLower reports whether the rune is a lower case letter.
 
 ```
 searchKey: unicode.IsTitle
-tags: [exported]
 ```
 
 ```Go
@@ -7382,6 +7341,7 @@ IsTitle reports whether the rune is a title case letter.
 
 ```
 searchKey: unicode.to
+tags: [private]
 ```
 
 ```Go
@@ -7394,7 +7354,6 @@ to maps the rune using the specified case mapping. It additionally reports wheth
 
 ```
 searchKey: unicode.To
-tags: [exported]
 ```
 
 ```Go
@@ -7407,7 +7366,6 @@ To maps the rune to the specified case: UpperCase, LowerCase, or TitleCase.
 
 ```
 searchKey: unicode.ToUpper
-tags: [exported]
 ```
 
 ```Go
@@ -7420,7 +7378,6 @@ ToUpper maps the rune to upper case.
 
 ```
 searchKey: unicode.ToLower
-tags: [exported]
 ```
 
 ```Go
@@ -7433,7 +7390,6 @@ ToLower maps the rune to lower case.
 
 ```
 searchKey: unicode.ToTitle
-tags: [exported]
 ```
 
 ```Go
@@ -7446,7 +7402,6 @@ ToTitle maps the rune to title case.
 
 ```
 searchKey: unicode.SimpleFold
-tags: [exported]
 ```
 
 ```Go

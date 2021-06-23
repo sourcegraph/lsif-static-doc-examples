@@ -39,14 +39,13 @@ Deprecated: DSA is a legacy algorithm, and modern alternatives such as Ed25519 (
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="L1024N160" href="#L1024N160">const L1024N160</a>
 
 ```
 searchKey: dsa.L1024N160
-tags: [exported]
 ```
 
 ```Go
@@ -57,7 +56,6 @@ const L1024N160 ParameterSizes = iota
 
 ```
 searchKey: dsa.L2048N224
-tags: [exported]
 ```
 
 ```Go
@@ -68,7 +66,6 @@ const L2048N224
 
 ```
 searchKey: dsa.L2048N256
-tags: [exported]
 ```
 
 ```Go
@@ -79,7 +76,6 @@ const L2048N256
 
 ```
 searchKey: dsa.L3072N256
-tags: [exported]
 ```
 
 ```Go
@@ -90,6 +86,7 @@ const L3072N256
 
 ```
 searchKey: dsa.numMRTests
+tags: [private]
 ```
 
 ```Go
@@ -101,14 +98,13 @@ numMRTests is the number of Miller-Rabin primality tests that we perform. We pic
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="ErrInvalidPublicKey" href="#ErrInvalidPublicKey">var ErrInvalidPublicKey</a>
 
 ```
 searchKey: dsa.ErrInvalidPublicKey
-tags: [exported]
 ```
 
 ```Go
@@ -120,14 +116,13 @@ ErrInvalidPublicKey results when a public key is not usable by this code. FIPS i
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="Parameters" href="#Parameters">type Parameters struct</a>
 
 ```
 searchKey: dsa.Parameters
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +137,6 @@ Parameters represents the domain parameters for a key. These parameters can be s
 
 ```
 searchKey: dsa.PublicKey
-tags: [exported]
 ```
 
 ```Go
@@ -158,7 +152,6 @@ PublicKey represents a DSA public key.
 
 ```
 searchKey: dsa.PrivateKey
-tags: [exported]
 ```
 
 ```Go
@@ -174,7 +167,6 @@ PrivateKey represents a DSA private key.
 
 ```
 searchKey: dsa.ParameterSizes
-tags: [exported]
 ```
 
 ```Go
@@ -186,14 +178,13 @@ ParameterSizes is an enumeration of the acceptable bit lengths of the primes in 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="GenerateParameters" href="#GenerateParameters">func GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error</a>
 
 ```
 searchKey: dsa.GenerateParameters
-tags: [exported]
 ```
 
 ```Go
@@ -206,7 +197,6 @@ GenerateParameters puts a random, valid set of DSA parameters into params. This 
 
 ```
 searchKey: dsa.GenerateKey
-tags: [exported]
 ```
 
 ```Go
@@ -219,6 +209,7 @@ GenerateKey generates a public&private key pair. The Parameters of the PrivateKe
 
 ```
 searchKey: dsa.fermatInverse
+tags: [private]
 ```
 
 ```Go
@@ -231,7 +222,6 @@ fermatInverse calculates the inverse of k in GF(P) using Fermat's method. This h
 
 ```
 searchKey: dsa.Sign
-tags: [exported]
 ```
 
 ```Go
@@ -248,7 +238,6 @@ Be aware that calling Sign with an attacker-controlled PrivateKey may require an
 
 ```
 searchKey: dsa.Verify
-tags: [exported]
 ```
 
 ```Go
@@ -263,6 +252,7 @@ Note that FIPS 186-3 section 4.6 specifies that the hash should be truncated to 
 
 ```
 searchKey: dsa.testSignAndVerify
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +263,7 @@ func testSignAndVerify(t *testing.T, i int, priv *PrivateKey)
 
 ```
 searchKey: dsa.testParameterGeneration
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +274,7 @@ func testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)
 
 ```
 searchKey: dsa.TestParameterGeneration
+tags: [private]
 ```
 
 ```Go
@@ -293,6 +285,7 @@ func TestParameterGeneration(t *testing.T)
 
 ```
 searchKey: dsa.fromHex
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +296,7 @@ func fromHex(s string) *big.Int
 
 ```
 searchKey: dsa.TestSignAndVerify
+tags: [private]
 ```
 
 ```Go
@@ -313,6 +307,7 @@ func TestSignAndVerify(t *testing.T)
 
 ```
 searchKey: dsa.TestSignAndVerifyWithBadPublicKey
+tags: [private]
 ```
 
 ```Go
@@ -323,6 +318,7 @@ func TestSignAndVerifyWithBadPublicKey(t *testing.T)
 
 ```
 searchKey: dsa.TestSigningWithDegenerateKeys
+tags: [private]
 ```
 
 ```Go

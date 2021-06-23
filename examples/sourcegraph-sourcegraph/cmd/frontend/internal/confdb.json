@@ -4,7 +4,9 @@
     "identifier": "confdb",
     "newPage": true,
     "searchKey": "cmd/frontend/internal/confdb",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "ErrNewerEdit",
                 "newPage": false,
                 "searchKey": "confdb.ErrNewerEdit",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +67,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,9 +87,7 @@
                 "identifier": "SiteConfig",
                 "newPage": false,
                 "searchKey": "confdb.SiteConfig",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,9 +105,7 @@
                       "identifier": "SiteCreateIfUpToDate",
                       "newPage": false,
                       "searchKey": "confdb.SiteCreateIfUpToDate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -125,9 +125,7 @@
                       "identifier": "SiteGetLatest",
                       "newPage": false,
                       "searchKey": "confdb.SiteGetLatest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -147,7 +145,9 @@
                       "identifier": "createIfUpToDate",
                       "newPage": false,
                       "searchKey": "confdb.createIfUpToDate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -167,7 +167,9 @@
                       "identifier": "getLatest",
                       "newPage": false,
                       "searchKey": "confdb.getLatest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -190,7 +192,9 @@
                 "identifier": "queryable",
                 "newPage": false,
                 "searchKey": "confdb.queryable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -208,7 +212,9 @@
                       "identifier": "newTransaction",
                       "newPage": false,
                       "searchKey": "confdb.newTransaction",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -234,7 +240,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -252,7 +260,9 @@
                 "identifier": "addDefault",
                 "newPage": false,
                 "searchKey": "confdb.addDefault",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -272,7 +282,9 @@
                 "identifier": "parseQueryRows",
                 "newPage": false,
                 "searchKey": "confdb.parseQueryRows",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -292,7 +304,9 @@
                 "identifier": "TestSiteGetLatestDefault",
                 "newPage": false,
                 "searchKey": "confdb.TestSiteGetLatestDefault",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -312,7 +326,9 @@
                 "identifier": "TestSiteCreate_RejectInvalidJSON",
                 "newPage": false,
                 "searchKey": "confdb.TestSiteCreate_RejectInvalidJSON",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -332,7 +348,9 @@
                 "identifier": "TestSiteCreateIfUpToDate",
                 "newPage": false,
                 "searchKey": "confdb.TestSiteCreateIfUpToDate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,12 +365,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/confdb#init",
+              "pathID": "/cmd/frontend/internal/confdb#init.db_test.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "confdb.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

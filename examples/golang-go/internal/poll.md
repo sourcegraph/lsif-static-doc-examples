@@ -51,7 +51,7 @@ Package poll supports non-blocking I/O on file descriptors with polling. This su
         * [func (mu *fdMutex) rwlock(read bool) bool](#fdMutex.rwlock)
         * [func (mu *fdMutex) rwunlock(read bool) bool](#fdMutex.rwunlock)
     * [type pollDesc struct](#pollDesc)
-        * [func (pd *pollDesc) init(fd *FD) error](#pollDesc.init)
+        * [func (pd *pollDesc) init(fd *FD) error](#pollDesc.init.fd_poll_runtime.go)
         * [func (pd *pollDesc) close()](#pollDesc.close)
         * [func (pd *pollDesc) evict()](#pollDesc.evict)
         * [func (pd *pollDesc) prepare(mode int, isFile bool) error](#pollDesc.prepare)
@@ -148,10 +148,15 @@ Package poll supports non-blocking I/O on file descriptors with polling. This su
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="mutexClosed" href="#mutexClosed">const mutexClosed</a>
 
 ```
 searchKey: poll.mutexClosed
+tags: [private]
 ```
 
 ```Go
@@ -164,6 +169,7 @@ fdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all 
 
 ```
 searchKey: poll.mutexRLock
+tags: [private]
 ```
 
 ```Go
@@ -176,6 +182,7 @@ fdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all 
 
 ```
 searchKey: poll.mutexWLock
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +195,7 @@ fdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all 
 
 ```
 searchKey: poll.mutexRef
+tags: [private]
 ```
 
 ```Go
@@ -200,6 +208,7 @@ fdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all 
 
 ```
 searchKey: poll.mutexRefMask
+tags: [private]
 ```
 
 ```Go
@@ -212,6 +221,7 @@ fdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all 
 
 ```
 searchKey: poll.mutexRWait
+tags: [private]
 ```
 
 ```Go
@@ -224,6 +234,7 @@ fdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all 
 
 ```
 searchKey: poll.mutexRMask
+tags: [private]
 ```
 
 ```Go
@@ -236,6 +247,7 @@ fdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all 
 
 ```
 searchKey: poll.mutexWWait
+tags: [private]
 ```
 
 ```Go
@@ -248,6 +260,7 @@ fdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all 
 
 ```
 searchKey: poll.mutexWMask
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +273,7 @@ fdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all 
 
 ```
 searchKey: poll.overflowMsg
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +284,7 @@ const overflowMsg = "too many concurrent operations on a single file or socket (
 
 ```
 searchKey: poll.pollNoError
+tags: [private]
 ```
 
 ```Go
@@ -282,6 +297,7 @@ Error values returned by runtime_pollReset and runtime_pollWait. These must matc
 
 ```
 searchKey: poll.pollErrClosing
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +310,7 @@ Error values returned by runtime_pollReset and runtime_pollWait. These must matc
 
 ```
 searchKey: poll.pollErrTimeout
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +323,7 @@ Error values returned by runtime_pollReset and runtime_pollWait. These must matc
 
 ```
 searchKey: poll.pollErrNotPollable
+tags: [private]
 ```
 
 ```Go
@@ -318,6 +336,7 @@ Error values returned by runtime_pollReset and runtime_pollWait. These must matc
 
 ```
 searchKey: poll.maxRW
+tags: [private]
 ```
 
 ```Go
@@ -328,10 +347,15 @@ Darwin and FreeBSD can't read or write 2GB+ files at a time, even on 64-bit syst
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="errEAGAIN" href="#errEAGAIN">var errEAGAIN</a>
 
 ```
 searchKey: poll.errEAGAIN
+tags: [private]
 ```
 
 ```Go
@@ -344,6 +368,7 @@ Do the interface allocations only once for common Errno values.
 
 ```
 searchKey: poll.errEINVAL
+tags: [private]
 ```
 
 ```Go
@@ -356,6 +381,7 @@ Do the interface allocations only once for common Errno values.
 
 ```
 searchKey: poll.errENOENT
+tags: [private]
 ```
 
 ```Go
@@ -368,7 +394,6 @@ Do the interface allocations only once for common Errno values.
 
 ```
 searchKey: poll.ErrNetClosing
-tags: [exported]
 ```
 
 ```Go
@@ -381,7 +406,6 @@ ErrNetClosing is returned when a network descriptor is used after it has been cl
 
 ```
 searchKey: poll.ErrFileClosing
-tags: [exported]
 ```
 
 ```Go
@@ -394,7 +418,6 @@ ErrFileClosing is returned when a file descriptor is used after it has been clos
 
 ```
 searchKey: poll.ErrNoDeadline
-tags: [exported]
 ```
 
 ```Go
@@ -407,7 +430,6 @@ ErrNoDeadline is returned when a request is made to set a deadline on a file typ
 
 ```
 searchKey: poll.ErrDeadlineExceeded
-tags: [exported]
 ```
 
 ```Go
@@ -420,7 +442,6 @@ ErrDeadlineExceeded is returned for an expired deadline. This is exported by the
 
 ```
 searchKey: poll.ErrNotPollable
-tags: [exported]
 ```
 
 ```Go
@@ -433,7 +454,6 @@ ErrNotPollable is returned when the file or socket is not suitable for event not
 
 ```
 searchKey: poll.TestHookDidWritev
-tags: [exported]
 ```
 
 ```Go
@@ -446,6 +466,7 @@ TestHookDidWritev is a hook for testing writev.
 
 ```
 searchKey: poll.serverInit
+tags: [private]
 ```
 
 ```Go
@@ -456,6 +477,7 @@ var serverInit sync.Once
 
 ```
 searchKey: poll.tryDupCloexec
+tags: [private]
 ```
 
 ```Go
@@ -468,7 +490,6 @@ tryDupCloexec indicates whether F_DUPFD_CLOEXEC should be used. If the kernel do
 
 ```
 searchKey: poll.CloseFunc
-tags: [exported]
 ```
 
 ```Go
@@ -481,7 +502,6 @@ CloseFunc is used to hook the close call.
 
 ```
 searchKey: poll.AcceptFunc
-tags: [exported]
 ```
 
 ```Go
@@ -494,6 +514,7 @@ AcceptFunc is used to hook the accept call.
 
 ```
 searchKey: poll.Consume
+tags: [private]
 ```
 
 ```Go
@@ -502,10 +523,15 @@ var Consume = consume
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="errNetClosing" href="#errNetClosing">type errNetClosing struct{}</a>
 
 ```
 searchKey: poll.errNetClosing
+tags: [private]
 ```
 
 ```Go
@@ -518,6 +544,7 @@ errNetClosing is the type of the variable ErrNetClosing. This is used to impleme
 
 ```
 searchKey: poll.errNetClosing.Error
+tags: [private]
 ```
 
 ```Go
@@ -530,6 +557,7 @@ Error returns the error message for ErrNetClosing. Keep this string consistent b
 
 ```
 searchKey: poll.errNetClosing.Timeout
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +568,7 @@ func (e errNetClosing) Timeout() bool
 
 ```
 searchKey: poll.errNetClosing.Temporary
+tags: [private]
 ```
 
 ```Go
@@ -550,7 +579,6 @@ func (e errNetClosing) Temporary() bool
 
 ```
 searchKey: poll.DeadlineExceededError
-tags: [exported]
 ```
 
 ```Go
@@ -563,7 +591,6 @@ DeadlineExceededError is returned for an expired deadline.
 
 ```
 searchKey: poll.DeadlineExceededError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -576,7 +603,6 @@ Implement the net.Error interface. The string is "i/o timeout" because that is w
 
 ```
 searchKey: poll.DeadlineExceededError.Timeout
-tags: [exported]
 ```
 
 ```Go
@@ -587,7 +613,6 @@ func (e *DeadlineExceededError) Timeout() bool
 
 ```
 searchKey: poll.DeadlineExceededError.Temporary
-tags: [exported]
 ```
 
 ```Go
@@ -598,6 +623,7 @@ func (e *DeadlineExceededError) Temporary() bool
 
 ```
 searchKey: poll.fdMutex
+tags: [private]
 ```
 
 ```Go
@@ -614,6 +640,7 @@ fdMutex is a specialized synchronization primitive that manages lifetime of an f
 
 ```
 searchKey: poll.fdMutex.incref
+tags: [private]
 ```
 
 ```Go
@@ -626,6 +653,7 @@ incref adds a reference to mu. It reports whether mu is available for reading or
 
 ```
 searchKey: poll.fdMutex.increfAndClose
+tags: [private]
 ```
 
 ```Go
@@ -638,6 +666,7 @@ increfAndClose sets the state of mu to closed. It returns false if the file was 
 
 ```
 searchKey: poll.fdMutex.decref
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +679,7 @@ decref removes a reference from mu. It reports whether there is no remaining ref
 
 ```
 searchKey: poll.fdMutex.rwlock
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +692,7 @@ lock adds a reference to mu and locks mu. It reports whether mu is available for
 
 ```
 searchKey: poll.fdMutex.rwunlock
+tags: [private]
 ```
 
 ```Go
@@ -674,6 +705,7 @@ unlock removes a reference from mu and unlocks mu. It reports whether there is n
 
 ```
 searchKey: poll.pollDesc
+tags: [private]
 ```
 
 ```Go
@@ -682,10 +714,11 @@ type pollDesc struct {
 }
 ```
 
-#### <a id="pollDesc.init" href="#pollDesc.init">func (pd *pollDesc) init(fd *FD) error</a>
+#### <a id="pollDesc.init.fd_poll_runtime.go" href="#pollDesc.init.fd_poll_runtime.go">func (pd *pollDesc) init(fd *FD) error</a>
 
 ```
 searchKey: poll.pollDesc.init
+tags: [private]
 ```
 
 ```Go
@@ -696,6 +729,7 @@ func (pd *pollDesc) init(fd *FD) error
 
 ```
 searchKey: poll.pollDesc.close
+tags: [private]
 ```
 
 ```Go
@@ -706,6 +740,7 @@ func (pd *pollDesc) close()
 
 ```
 searchKey: poll.pollDesc.evict
+tags: [private]
 ```
 
 ```Go
@@ -718,6 +753,7 @@ Evict evicts fd from the pending list, unblocking any I/O running on fd.
 
 ```
 searchKey: poll.pollDesc.prepare
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +764,7 @@ func (pd *pollDesc) prepare(mode int, isFile bool) error
 
 ```
 searchKey: poll.pollDesc.prepareRead
+tags: [private]
 ```
 
 ```Go
@@ -738,6 +775,7 @@ func (pd *pollDesc) prepareRead(isFile bool) error
 
 ```
 searchKey: poll.pollDesc.prepareWrite
+tags: [private]
 ```
 
 ```Go
@@ -748,6 +786,7 @@ func (pd *pollDesc) prepareWrite(isFile bool) error
 
 ```
 searchKey: poll.pollDesc.wait
+tags: [private]
 ```
 
 ```Go
@@ -758,6 +797,7 @@ func (pd *pollDesc) wait(mode int, isFile bool) error
 
 ```
 searchKey: poll.pollDesc.waitRead
+tags: [private]
 ```
 
 ```Go
@@ -768,6 +808,7 @@ func (pd *pollDesc) waitRead(isFile bool) error
 
 ```
 searchKey: poll.pollDesc.waitWrite
+tags: [private]
 ```
 
 ```Go
@@ -778,6 +819,7 @@ func (pd *pollDesc) waitWrite(isFile bool) error
 
 ```
 searchKey: poll.pollDesc.waitCanceled
+tags: [private]
 ```
 
 ```Go
@@ -788,6 +830,7 @@ func (pd *pollDesc) waitCanceled(mode int)
 
 ```
 searchKey: poll.pollDesc.pollable
+tags: [private]
 ```
 
 ```Go
@@ -798,7 +841,6 @@ func (pd *pollDesc) pollable() bool
 
 ```
 searchKey: poll.FD
-tags: [exported]
 ```
 
 ```Go
@@ -840,7 +882,6 @@ FD is a file descriptor. The net and os packages use this type as a field of a l
 
 ```
 searchKey: poll.FD.Fsync
-tags: [exported]
 ```
 
 ```Go
@@ -853,6 +894,7 @@ Fsync invokes SYS_FCNTL with SYS_FULLFSYNC because on OS X, SYS_FSYNC doesn't fu
 
 ```
 searchKey: poll.FD.incref
+tags: [private]
 ```
 
 ```Go
@@ -865,6 +907,7 @@ incref adds a reference to fd. It returns an error when fd cannot be used.
 
 ```
 searchKey: poll.FD.decref
+tags: [private]
 ```
 
 ```Go
@@ -877,6 +920,7 @@ decref removes a reference from fd. It also closes fd when the state of fd is se
 
 ```
 searchKey: poll.FD.readLock
+tags: [private]
 ```
 
 ```Go
@@ -889,6 +933,7 @@ readLock adds a reference to fd and locks fd for reading. It returns an error wh
 
 ```
 searchKey: poll.FD.readUnlock
+tags: [private]
 ```
 
 ```Go
@@ -901,6 +946,7 @@ readUnlock removes a reference from fd and unlocks fd for reading. It also close
 
 ```
 searchKey: poll.FD.writeLock
+tags: [private]
 ```
 
 ```Go
@@ -913,6 +959,7 @@ writeLock adds a reference to fd and locks fd for writing. It returns an error w
 
 ```
 searchKey: poll.FD.writeUnlock
+tags: [private]
 ```
 
 ```Go
@@ -925,7 +972,6 @@ writeUnlock removes a reference from fd and unlocks fd for writing. It also clos
 
 ```
 searchKey: poll.FD.OpenDir
-tags: [exported]
 ```
 
 ```Go
@@ -938,7 +984,6 @@ OpenDir returns a pointer to a DIR structure suitable for ReadDir. In case of an
 
 ```
 searchKey: poll.FD.SetDeadline
-tags: [exported]
 ```
 
 ```Go
@@ -951,7 +996,6 @@ SetDeadline sets the read and write deadlines associated with fd.
 
 ```
 searchKey: poll.FD.SetReadDeadline
-tags: [exported]
 ```
 
 ```Go
@@ -964,7 +1008,6 @@ SetReadDeadline sets the read deadline associated with fd.
 
 ```
 searchKey: poll.FD.SetWriteDeadline
-tags: [exported]
 ```
 
 ```Go
@@ -977,6 +1020,7 @@ SetWriteDeadline sets the write deadline associated with fd.
 
 ```
 searchKey: poll.FD.eofError
+tags: [private]
 ```
 
 ```Go
@@ -989,7 +1033,6 @@ eofError returns io.EOF when fd is available for reading end of file.
 
 ```
 searchKey: poll.FD.Shutdown
-tags: [exported]
 ```
 
 ```Go
@@ -1002,7 +1045,6 @@ Shutdown wraps syscall.Shutdown.
 
 ```
 searchKey: poll.FD.Fchown
-tags: [exported]
 ```
 
 ```Go
@@ -1015,7 +1057,6 @@ Fchown wraps syscall.Fchown.
 
 ```
 searchKey: poll.FD.Ftruncate
-tags: [exported]
 ```
 
 ```Go
@@ -1028,7 +1069,6 @@ Ftruncate wraps syscall.Ftruncate.
 
 ```
 searchKey: poll.FD.RawControl
-tags: [exported]
 ```
 
 ```Go
@@ -1041,7 +1081,6 @@ RawControl invokes the user-defined function f for a non-IO operation.
 
 ```
 searchKey: poll.FD.Init
-tags: [exported]
 ```
 
 ```Go
@@ -1054,6 +1093,7 @@ Init initializes the FD. The Sysfd field should already be set. This can be call
 
 ```
 searchKey: poll.FD.destroy
+tags: [private]
 ```
 
 ```Go
@@ -1066,7 +1106,6 @@ Destroy closes the file descriptor. This is called when there are no remaining r
 
 ```
 searchKey: poll.FD.Close
-tags: [exported]
 ```
 
 ```Go
@@ -1079,7 +1118,6 @@ Close closes the FD. The underlying file descriptor is closed by the destroy met
 
 ```
 searchKey: poll.FD.SetBlocking
-tags: [exported]
 ```
 
 ```Go
@@ -1092,7 +1130,6 @@ SetBlocking puts the file into blocking mode.
 
 ```
 searchKey: poll.FD.Read
-tags: [exported]
 ```
 
 ```Go
@@ -1105,7 +1142,6 @@ Read implements io.Reader.
 
 ```
 searchKey: poll.FD.Pread
-tags: [exported]
 ```
 
 ```Go
@@ -1118,7 +1154,6 @@ Pread wraps the pread system call.
 
 ```
 searchKey: poll.FD.ReadFrom
-tags: [exported]
 ```
 
 ```Go
@@ -1131,7 +1166,6 @@ ReadFrom wraps the recvfrom network call.
 
 ```
 searchKey: poll.FD.ReadMsg
-tags: [exported]
 ```
 
 ```Go
@@ -1144,7 +1178,6 @@ ReadMsg wraps the recvmsg network call.
 
 ```
 searchKey: poll.FD.Write
-tags: [exported]
 ```
 
 ```Go
@@ -1157,7 +1190,6 @@ Write implements io.Writer.
 
 ```
 searchKey: poll.FD.Pwrite
-tags: [exported]
 ```
 
 ```Go
@@ -1170,7 +1202,6 @@ Pwrite wraps the pwrite system call.
 
 ```
 searchKey: poll.FD.WriteTo
-tags: [exported]
 ```
 
 ```Go
@@ -1183,7 +1214,6 @@ WriteTo wraps the sendto network call.
 
 ```
 searchKey: poll.FD.WriteMsg
-tags: [exported]
 ```
 
 ```Go
@@ -1196,7 +1226,6 @@ WriteMsg wraps the sendmsg network call.
 
 ```
 searchKey: poll.FD.Accept
-tags: [exported]
 ```
 
 ```Go
@@ -1209,7 +1238,6 @@ Accept wraps the accept network call.
 
 ```
 searchKey: poll.FD.Seek
-tags: [exported]
 ```
 
 ```Go
@@ -1222,7 +1250,6 @@ Seek wraps syscall.Seek.
 
 ```
 searchKey: poll.FD.ReadDirent
-tags: [exported]
 ```
 
 ```Go
@@ -1235,7 +1262,6 @@ ReadDirent wraps syscall.ReadDirent. We treat this like an ordinary system call 
 
 ```
 searchKey: poll.FD.Fchmod
-tags: [exported]
 ```
 
 ```Go
@@ -1248,7 +1274,6 @@ Fchmod wraps syscall.Fchmod.
 
 ```
 searchKey: poll.FD.Fchdir
-tags: [exported]
 ```
 
 ```Go
@@ -1261,7 +1286,6 @@ Fchdir wraps syscall.Fchdir.
 
 ```
 searchKey: poll.FD.Fstat
-tags: [exported]
 ```
 
 ```Go
@@ -1274,7 +1298,6 @@ Fstat wraps syscall.Fstat
 
 ```
 searchKey: poll.FD.Dup
-tags: [exported]
 ```
 
 ```Go
@@ -1287,7 +1310,6 @@ Dup duplicates the file descriptor.
 
 ```
 searchKey: poll.FD.WaitWrite
-tags: [exported]
 ```
 
 ```Go
@@ -1300,7 +1322,6 @@ WaitWrite waits until data can be read from fd.
 
 ```
 searchKey: poll.FD.WriteOnce
-tags: [exported]
 ```
 
 ```Go
@@ -1313,7 +1334,6 @@ WriteOnce is for testing only. It makes a single write call.
 
 ```
 searchKey: poll.FD.RawRead
-tags: [exported]
 ```
 
 ```Go
@@ -1326,7 +1346,6 @@ RawRead invokes the user-defined function f for a read operation.
 
 ```
 searchKey: poll.FD.RawWrite
-tags: [exported]
 ```
 
 ```Go
@@ -1339,7 +1358,6 @@ RawWrite invokes the user-defined function f for a write operation.
 
 ```
 searchKey: poll.FD.SetsockoptInt
-tags: [exported]
 ```
 
 ```Go
@@ -1352,7 +1370,6 @@ SetsockoptInt wraps the setsockopt network call with an int argument.
 
 ```
 searchKey: poll.FD.SetsockoptInet4Addr
-tags: [exported]
 ```
 
 ```Go
@@ -1365,7 +1382,6 @@ SetsockoptInet4Addr wraps the setsockopt network call with an IPv4 address.
 
 ```
 searchKey: poll.FD.SetsockoptLinger
-tags: [exported]
 ```
 
 ```Go
@@ -1378,7 +1394,6 @@ SetsockoptLinger wraps the setsockopt network call with a Linger argument.
 
 ```
 searchKey: poll.FD.SetsockoptByte
-tags: [exported]
 ```
 
 ```Go
@@ -1391,7 +1406,6 @@ SetsockoptByte wraps the setsockopt network call with a byte argument.
 
 ```
 searchKey: poll.FD.SetsockoptIPMreq
-tags: [exported]
 ```
 
 ```Go
@@ -1404,7 +1418,6 @@ SetsockoptIPMreq wraps the setsockopt network call with an IPMreq argument.
 
 ```
 searchKey: poll.FD.SetsockoptIPv6Mreq
-tags: [exported]
 ```
 
 ```Go
@@ -1417,7 +1430,6 @@ SetsockoptIPv6Mreq wraps the setsockopt network call with an IPv6Mreq argument.
 
 ```
 searchKey: poll.FD.Writev
-tags: [exported]
 ```
 
 ```Go
@@ -1430,6 +1442,7 @@ Writev wraps the writev system call.
 
 ```
 searchKey: poll.FD.EOFError
+tags: [private]
 ```
 
 ```Go
@@ -1440,6 +1453,7 @@ func (fd *FD) EOFError(n int, err error) error
 
 ```
 searchKey: poll.FDMutex
+tags: [private]
 ```
 
 ```Go
@@ -1452,6 +1466,7 @@ type FDMutex struct {
 
 ```
 searchKey: poll.FDMutex.Incref
+tags: [private]
 ```
 
 ```Go
@@ -1462,6 +1477,7 @@ func (mu *FDMutex) Incref() bool
 
 ```
 searchKey: poll.FDMutex.IncrefAndClose
+tags: [private]
 ```
 
 ```Go
@@ -1472,6 +1488,7 @@ func (mu *FDMutex) IncrefAndClose() bool
 
 ```
 searchKey: poll.FDMutex.Decref
+tags: [private]
 ```
 
 ```Go
@@ -1482,6 +1499,7 @@ func (mu *FDMutex) Decref() bool
 
 ```
 searchKey: poll.FDMutex.RWLock
+tags: [private]
 ```
 
 ```Go
@@ -1492,6 +1510,7 @@ func (mu *FDMutex) RWLock(read bool) bool
 
 ```
 searchKey: poll.FDMutex.RWUnlock
+tags: [private]
 ```
 
 ```Go
@@ -1500,10 +1519,15 @@ func (mu *FDMutex) RWUnlock(read bool) bool
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="errnoErr" href="#errnoErr">func errnoErr(e syscall.Errno) error</a>
 
 ```
 searchKey: poll.errnoErr
+tags: [private]
 ```
 
 ```Go
@@ -1516,6 +1540,7 @@ errnoErr returns common boxed Errno values, to prevent allocations at runtime.
 
 ```
 searchKey: poll.fcntl
+tags: [private]
 ```
 
 ```Go
@@ -1528,6 +1553,7 @@ Implemented in the syscall package.
 
 ```
 searchKey: poll.errClosing
+tags: [private]
 ```
 
 ```Go
@@ -1540,6 +1566,7 @@ Return the appropriate closing error based on isFile.
 
 ```
 searchKey: poll.consume
+tags: [private]
 ```
 
 ```Go
@@ -1552,6 +1579,7 @@ consume removes data from a slice of byte slices, for writev.
 
 ```
 searchKey: poll.runtime_Semacquire
+tags: [private]
 ```
 
 ```Go
@@ -1564,6 +1592,7 @@ Implemented in runtime package.
 
 ```
 searchKey: poll.runtime_Semrelease
+tags: [private]
 ```
 
 ```Go
@@ -1574,6 +1603,7 @@ func runtime_Semrelease(sema *uint32)
 
 ```
 searchKey: poll.fdopendir
+tags: [private]
 ```
 
 ```Go
@@ -1586,6 +1616,7 @@ Implemented in syscall/syscall_darwin.go.
 
 ```
 searchKey: poll.runtimeNano
+tags: [private]
 ```
 
 ```Go
@@ -1598,6 +1629,7 @@ runtimeNano returns the current value of the runtime clock in nanoseconds.
 
 ```
 searchKey: poll.runtime_pollServerInit
+tags: [private]
 ```
 
 ```Go
@@ -1608,6 +1640,7 @@ func runtime_pollServerInit()
 
 ```
 searchKey: poll.runtime_pollOpen
+tags: [private]
 ```
 
 ```Go
@@ -1618,6 +1651,7 @@ func runtime_pollOpen(fd uintptr) (uintptr, int)
 
 ```
 searchKey: poll.runtime_pollClose
+tags: [private]
 ```
 
 ```Go
@@ -1628,6 +1662,7 @@ func runtime_pollClose(ctx uintptr)
 
 ```
 searchKey: poll.runtime_pollWait
+tags: [private]
 ```
 
 ```Go
@@ -1638,6 +1673,7 @@ func runtime_pollWait(ctx uintptr, mode int) int
 
 ```
 searchKey: poll.runtime_pollWaitCanceled
+tags: [private]
 ```
 
 ```Go
@@ -1648,6 +1684,7 @@ func runtime_pollWaitCanceled(ctx uintptr, mode int) int
 
 ```
 searchKey: poll.runtime_pollReset
+tags: [private]
 ```
 
 ```Go
@@ -1658,6 +1695,7 @@ func runtime_pollReset(ctx uintptr, mode int) int
 
 ```
 searchKey: poll.runtime_pollSetDeadline
+tags: [private]
 ```
 
 ```Go
@@ -1668,6 +1706,7 @@ func runtime_pollSetDeadline(ctx uintptr, d int64, mode int)
 
 ```
 searchKey: poll.runtime_pollUnblock
+tags: [private]
 ```
 
 ```Go
@@ -1678,6 +1717,7 @@ func runtime_pollUnblock(ctx uintptr)
 
 ```
 searchKey: poll.runtime_isPollServerDescriptor
+tags: [private]
 ```
 
 ```Go
@@ -1688,6 +1728,7 @@ func runtime_isPollServerDescriptor(fd uintptr) bool
 
 ```
 searchKey: poll.convertErr
+tags: [private]
 ```
 
 ```Go
@@ -1698,6 +1739,7 @@ func convertErr(res int, isFile bool) error
 
 ```
 searchKey: poll.setDeadlineImpl
+tags: [private]
 ```
 
 ```Go
@@ -1708,7 +1750,6 @@ func setDeadlineImpl(fd *FD, t time.Time, mode int) error
 
 ```
 searchKey: poll.IsPollDescriptor
-tags: [exported]
 ```
 
 ```Go
@@ -1721,6 +1762,7 @@ IsPollDescriptor reports whether fd is the descriptor being used by the poller. 
 
 ```
 searchKey: poll.ignoringEINTR
+tags: [private]
 ```
 
 ```Go
@@ -1733,7 +1775,6 @@ ignoringEINTR makes a function call and repeats it if it returns an EINTR error.
 
 ```
 searchKey: poll.DupCloseOnExec
-tags: [exported]
 ```
 
 ```Go
@@ -1746,6 +1787,7 @@ DupCloseOnExec dups fd and marks it close-on-exec.
 
 ```
 searchKey: poll.dupCloseOnExecOld
+tags: [private]
 ```
 
 ```Go
@@ -1758,6 +1800,7 @@ dupCloseOnExecOld is the traditional way to dup an fd and set its O_CLOEXEC bit,
 
 ```
 searchKey: poll.ignoringEINTRIO
+tags: [private]
 ```
 
 ```Go
@@ -1770,6 +1813,7 @@ ignoringEINTRIO is like ignoringEINTR, but just for IO calls.
 
 ```
 searchKey: poll.writev
+tags: [private]
 ```
 
 ```Go
@@ -1782,6 +1826,7 @@ Implemented in syscall/syscall_darwin.go.
 
 ```
 searchKey: poll.newIovecWithBase
+tags: [private]
 ```
 
 ```Go
@@ -1792,6 +1837,7 @@ func newIovecWithBase(base *byte) syscall.Iovec
 
 ```
 searchKey: poll.accept
+tags: [private]
 ```
 
 ```Go

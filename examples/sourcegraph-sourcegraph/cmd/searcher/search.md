@@ -56,7 +56,7 @@ Architecture Notes: * Archive is fetched from gitserver * Simple HTTP API expose
     * [func newIgnoreMatcher(ctx context.Context, repo api.RepoName, commit api.CommitID) (*ignore.Matcher, error)](#newIgnoreMatcher)
     * [func bytesToLowerASCIIgeneric(dst, src []byte)](#bytesToLowerASCIIgeneric)
     * [func bytesToLowerASCII(dst, src []byte)](#bytesToLowerASCII)
-    * [func init()](#init)
+    * [func init()](#init.search.go)
     * [func validateParams(p *protocol.Request) error](#validateParams)
     * [func isBadRequest(err error) bool](#isBadRequest)
     * [func isTemporary(err error) bool](#isTemporary)
@@ -103,7 +103,7 @@ Architecture Notes: * Archive is fetched from gitserver * Simple HTTP API expose
     * [func TestReadAll(t *testing.T)](#TestReadAll)
     * [func TestMaxMatches(t *testing.T)](#TestMaxMatches)
     * [func TestPathMatches(t *testing.T)](#TestPathMatches)
-    * [func init()](#init)
+    * [func init()](#init.search_regex_test.go)
     * [func TestRegexSearch(t *testing.T)](#TestRegexSearch)
     * [func TestMatcherLookupByLanguage(t *testing.T)](#TestMatcherLookupByLanguage)
     * [func TestMatcherLookupByExtension(t *testing.T)](#TestMatcherLookupByExtension)
@@ -118,14 +118,11 @@ Architecture Notes: * Archive is fetched from gitserver * Simple HTTP API expose
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="maxFileMatches" href="#maxFileMatches">const maxFileMatches</a>
 
 ```
 searchKey: search.maxFileMatches
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +135,7 @@ maxFileMatches is the limit on number of matching files we return.
 
 ```
 searchKey: search.maxLineMatches
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +148,7 @@ maxLineMatches is the limit on number of matches to return in a file.
 
 ```
 searchKey: search.numWorkers
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +161,7 @@ numWorkers is how many concurrent readerGreps run in the case of regexSearch, an
 
 ```
 searchKey: search.maxFileMatchLimit
+tags: [private]
 ```
 
 ```Go
@@ -172,6 +172,7 @@ const maxFileMatchLimit = 100
 
 ```
 searchKey: search.megabyte
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +183,7 @@ const megabyte = float64(1000 * 1000)
 
 ```
 searchKey: search.defaultMaxSearchResults
+tags: [private]
 ```
 
 ```Go
@@ -190,14 +192,11 @@ const defaultMaxSearchResults = 30
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="lowerTable" href="#lowerTable">var lowerTable</a>
 
 ```
 searchKey: search.lowerTable
+tags: [private]
 ```
 
 ```Go
@@ -210,6 +209,7 @@ python to generate ', '.join(hex(ord(chr(i).lower())) for i in range(256))
 
 ```
 searchKey: search.decoder
+tags: [private]
 ```
 
 ```Go
@@ -220,6 +220,7 @@ var decoder = schema.NewDecoder()
 
 ```
 searchKey: search.running
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +231,7 @@ var running = ...
 
 ```
 searchKey: search.archiveSize
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +242,7 @@ var archiveSize = ...
 
 ```
 searchKey: search.archiveFiles
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +253,7 @@ var archiveFiles = ...
 
 ```
 searchKey: search.requestTotal
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +264,7 @@ var requestTotal = ...
 
 ```
 searchKey: search.isValidMatcher
+tags: [private]
 ```
 
 ```Go
@@ -270,7 +275,6 @@ var isValidMatcher = ...
 
 ```
 searchKey: search.All
-tags: [exported]
 ```
 
 ```Go
@@ -281,6 +285,7 @@ var All UniversalSet = struct{}{}
 
 ```
 searchKey: search.requestTotalStructuralSearch
+tags: [private]
 ```
 
 ```Go
@@ -291,6 +296,7 @@ var requestTotalStructuralSearch = ...
 
 ```
 searchKey: search.zoektOnce
+tags: [private]
 ```
 
 ```Go
@@ -301,6 +307,7 @@ var zoektOnce sync.Once
 
 ```
 searchKey: search.endpointMap
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +318,7 @@ var endpointMap atomicEndpoints
 
 ```
 searchKey: search.zoektClient
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +329,7 @@ var zoektClient zoekt.Streamer
 
 ```
 searchKey: search.errNoResultsInTimeout
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +340,7 @@ var errNoResultsInTimeout = errors.New("no results found in specified timeout")
 
 ```
 searchKey: search.githubStore
+tags: [private]
 ```
 
 ```Go
@@ -341,15 +351,10 @@ githubStore fetches from github and caches across test runs.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Service" href="#Service">type Service struct</a>
 
 ```
 searchKey: search.Service
-tags: [exported]
 ```
 
 ```Go
@@ -365,7 +370,6 @@ Service is the search service. It is an http.Handler.
 
 ```
 searchKey: search.Service.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -378,6 +382,7 @@ ServeHTTP handles HTTP based search requests
 
 ```
 searchKey: search.Service.search
+tags: [private]
 ```
 
 ```Go
@@ -388,6 +393,7 @@ func (s *Service) search(ctx context.Context, p *protocol.Request) (matches []pr
 
 ```
 searchKey: search.badRequestError
+tags: [private]
 ```
 
 ```Go
@@ -398,6 +404,7 @@ type badRequestError struct{ msg string }
 
 ```
 searchKey: search.badRequestError.Error
+tags: [private]
 ```
 
 ```Go
@@ -408,6 +415,7 @@ func (e badRequestError) Error() string
 
 ```
 searchKey: search.badRequestError.BadRequest
+tags: [private]
 ```
 
 ```Go
@@ -418,6 +426,7 @@ func (e badRequestError) BadRequest() bool
 
 ```
 searchKey: search.readerGrep
+tags: [private]
 ```
 
 ```Go
@@ -460,6 +469,7 @@ TODO(keegan) return search statistics
 
 ```
 searchKey: search.compile
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +482,7 @@ compile returns a readerGrep for matching p.
 
 ```
 searchKey: search.readerGrep.Copy
+tags: [private]
 ```
 
 ```Go
@@ -484,6 +495,7 @@ Copy returns a copied version of rg that is safe to use from another goroutine.
 
 ```
 searchKey: search.readerGrep.matchString
+tags: [private]
 ```
 
 ```Go
@@ -496,6 +508,7 @@ matchString returns whether rg's regexp pattern matches s. It is intended to be 
 
 ```
 searchKey: search.readerGrep.Find
+tags: [private]
 ```
 
 ```Go
@@ -508,6 +521,7 @@ Find returns a LineMatch for each line that matches rg in reader. LimitHit is tr
 
 ```
 searchKey: search.readerGrep.FindZip
+tags: [private]
 ```
 
 ```Go
@@ -520,6 +534,7 @@ FindZip is a convenience function to run Find on f.
 
 ```
 searchKey: search.filePatterns
+tags: [private]
 ```
 
 ```Go
@@ -534,7 +549,6 @@ A variant type that represents whether to search all files in a Zip file (type U
 
 ```
 searchKey: search.UniversalSet
-tags: [exported]
 ```
 
 ```Go
@@ -545,7 +559,6 @@ type UniversalSet struct{}
 
 ```
 searchKey: search.UniversalSet.Value
-tags: [exported]
 ```
 
 ```Go
@@ -556,7 +569,6 @@ func (UniversalSet) Value()
 
 ```
 searchKey: search.Subset
-tags: [exported]
 ```
 
 ```Go
@@ -567,7 +579,6 @@ type Subset []string
 
 ```
 searchKey: search.Subset.Value
-tags: [exported]
 ```
 
 ```Go
@@ -578,6 +589,7 @@ func (Subset) Value()
 
 ```
 searchKey: search.zoektSearchStreamEvent
+tags: [private]
 ```
 
 ```Go
@@ -593,6 +605,7 @@ type zoektSearchStreamEvent struct {
 
 ```
 searchKey: search.atomicEndpoints
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +620,7 @@ atomicEndpoints allows us to update the endpoints used by our zoekt client.
 
 ```
 searchKey: search.atomicEndpoints.Endpoints
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +631,7 @@ func (a *atomicEndpoints) Endpoints() (map[string]struct{}, error)
 
 ```
 searchKey: search.atomicEndpoints.Set
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +642,7 @@ func (a *atomicEndpoints) Set(endpoints []string)
 
 ```
 searchKey: search.atomicEndpoints.needsUpdate
+tags: [private]
 ```
 
 ```Go
@@ -635,15 +651,10 @@ func (a *atomicEndpoints) needsUpdate(endpoints []string) bool
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NewFilter" href="#NewFilter">func NewFilter(ctx context.Context, repo api.RepoName, commit api.CommitID) (store.FilterFunc, error)</a>
 
 ```
 searchKey: search.NewFilter
-tags: [exported]
 ```
 
 ```Go
@@ -656,6 +667,7 @@ NewFilter is a wrapper around newIgnoreMatcher.
 
 ```
 searchKey: search.newIgnoreMatcher
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +680,7 @@ newIgnoreMatcher calls gitserver to retrieve the ignore-file. If the file doesn'
 
 ```
 searchKey: search.bytesToLowerASCIIgeneric
+tags: [private]
 ```
 
 ```Go
@@ -678,6 +691,7 @@ func bytesToLowerASCIIgeneric(dst, src []byte)
 
 ```
 searchKey: search.bytesToLowerASCII
+tags: [private]
 ```
 
 ```Go
@@ -686,10 +700,11 @@ func bytesToLowerASCII(dst, src []byte)
 
 implemented in assembly, see lower_amd64.s 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.search.go" href="#init.search.go">func init()</a>
 
 ```
 searchKey: search.init
+tags: [private]
 ```
 
 ```Go
@@ -700,6 +715,7 @@ func init()
 
 ```
 searchKey: search.validateParams
+tags: [private]
 ```
 
 ```Go
@@ -710,6 +726,7 @@ func validateParams(p *protocol.Request) error
 
 ```
 searchKey: search.isBadRequest
+tags: [private]
 ```
 
 ```Go
@@ -720,6 +737,7 @@ func isBadRequest(err error) bool
 
 ```
 searchKey: search.isTemporary
+tags: [private]
 ```
 
 ```Go
@@ -730,6 +748,7 @@ func isTemporary(err error) bool
 
 ```
 searchKey: search.hydrateLineNumbers
+tags: [private]
 ```
 
 ```Go
@@ -740,6 +759,7 @@ func hydrateLineNumbers(fileBuf []byte, lastLineNumber, lastMatchIndex, lineStar
 
 ```
 searchKey: search.appendMatches
+tags: [private]
 ```
 
 ```Go
@@ -752,6 +772,7 @@ matchLineBuf is a byte slice that contains the full line(s) that the match appea
 
 ```
 searchKey: search.regexSearch
+tags: [private]
 ```
 
 ```Go
@@ -764,6 +785,7 @@ regexSearch concurrently searches files in zr looking for matches using rg.
 
 ```
 searchKey: search.lowerRegexpASCII
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +798,7 @@ lowerRegexpASCII lowers rune literals and expands char classes to include lowerc
 
 ```
 searchKey: search.longestLiteral
+tags: [private]
 ```
 
 ```Go
@@ -790,6 +813,7 @@ Note: There may be a longer substring that is guaranteed to appear. For example 
 
 ```
 searchKey: search.readAll
+tags: [private]
 ```
 
 ```Go
@@ -802,6 +826,7 @@ readAll will read r until EOF into b. It returns the number of bytes read. If we
 
 ```
 searchKey: search.highlightMultipleLines
+tags: [private]
 ```
 
 ```Go
@@ -814,7 +839,6 @@ The Sourcegraph frontend and interface only allow LineMatches (matches on a sing
 
 ```
 searchKey: search.ToFileMatch
-tags: [exported]
 ```
 
 ```Go
@@ -825,6 +849,7 @@ func ToFileMatch(combyMatches []comby.FileMatch) (matches []protocol.FileMatch)
 
 ```
 searchKey: search.extensionToMatcher
+tags: [private]
 ```
 
 ```Go
@@ -835,6 +860,7 @@ func extensionToMatcher(extension string) string
 
 ```
 searchKey: search.lookupMatcher
+tags: [private]
 ```
 
 ```Go
@@ -847,6 +873,7 @@ lookupMatcher looks up a key for specifying -matcher in comby. Comby accepts a r
 
 ```
 searchKey: search.filteredStructuralSearch
+tags: [private]
 ```
 
 ```Go
@@ -859,6 +886,7 @@ filteredStructuralSearch filters the list of files with a regex search before pa
 
 ```
 searchKey: search.toMatcher
+tags: [private]
 ```
 
 ```Go
@@ -871,6 +899,7 @@ toMatcher returns the matcher that parameterizes structural search. It derives e
 
 ```
 searchKey: search.structuralSearch
+tags: [private]
 ```
 
 ```Go
@@ -881,6 +910,7 @@ func structuralSearch(ctx context.Context, zipPath string, paths filePatterns, e
 
 ```
 searchKey: search.structuralSearchWithZoekt
+tags: [private]
 ```
 
 ```Go
@@ -891,6 +921,7 @@ func structuralSearchWithZoekt(ctx context.Context, p *protocol.Request) (matche
 
 ```
 searchKey: search.getZoektClient
+tags: [private]
 ```
 
 ```Go
@@ -901,7 +932,6 @@ func getZoektClient(indexerEndpoints []string) zoekt.Streamer
 
 ```
 searchKey: search.HandleFilePathPatterns
-tags: [exported]
 ```
 
 ```Go
@@ -912,6 +942,7 @@ func HandleFilePathPatterns(query *search.TextPatternInfo) (zoektquery.Q, error)
 
 ```
 searchKey: search.buildQuery
+tags: [private]
 ```
 
 ```Go
@@ -922,6 +953,7 @@ func buildQuery(args *search.TextPatternInfo, repoBranches map[string][]string, 
 
 ```
 searchKey: search.zoektSearch
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +968,7 @@ Timeouts are reported through the context, and as a special case errNoResultsInT
 
 ```
 searchKey: search.writeZip
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +979,7 @@ func writeZip(ctx context.Context, w io.Writer, fileMatches []zoekt.FileMatch) (
 
 ```
 searchKey: search.contextWithoutDeadline
+tags: [private]
 ```
 
 ```Go
@@ -958,6 +992,7 @@ contextWithoutDeadline returns a context which will cancel if the cOld is cancel
 
 ```
 searchKey: search.TestNewIgnoreMatcher
+tags: [private]
 ```
 
 ```Go
@@ -968,6 +1003,7 @@ func TestNewIgnoreMatcher(t *testing.T)
 
 ```
 searchKey: search.TestMissingIgnoreFile
+tags: [private]
 ```
 
 ```Go
@@ -978,6 +1014,7 @@ func TestMissingIgnoreFile(t *testing.T)
 
 ```
 searchKey: search.benchBytesToLower
+tags: [private]
 ```
 
 ```Go
@@ -988,6 +1025,7 @@ func benchBytesToLower(b *testing.B, src []byte)
 
 ```
 searchKey: search.BenchmarkBytesToLowerASCII
+tags: [private]
 ```
 
 ```Go
@@ -998,6 +1036,7 @@ func BenchmarkBytesToLowerASCII(b *testing.B)
 
 ```
 searchKey: search.checkBytesToLower
+tags: [private]
 ```
 
 ```Go
@@ -1008,6 +1047,7 @@ func checkBytesToLower(t *testing.T, b []byte)
 
 ```
 searchKey: search.TestBytesToLowerASCII
+tags: [private]
 ```
 
 ```Go
@@ -1018,6 +1058,7 @@ func TestBytesToLowerASCII(t *testing.T)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_fixed
+tags: [private]
 ```
 
 ```Go
@@ -1028,6 +1069,7 @@ func BenchmarkSearchRegex_large_fixed(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_fixed_casesensitive
+tags: [private]
 ```
 
 ```Go
@@ -1038,6 +1080,7 @@ func BenchmarkSearchRegex_large_fixed_casesensitive(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_re_dotstar
+tags: [private]
 ```
 
 ```Go
@@ -1048,6 +1091,7 @@ func BenchmarkSearchRegex_large_re_dotstar(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_re_common
+tags: [private]
 ```
 
 ```Go
@@ -1058,6 +1102,7 @@ func BenchmarkSearchRegex_large_re_common(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_re_anchor
+tags: [private]
 ```
 
 ```Go
@@ -1068,6 +1113,7 @@ func BenchmarkSearchRegex_large_re_anchor(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_path
+tags: [private]
 ```
 
 ```Go
@@ -1078,6 +1124,7 @@ func BenchmarkSearchRegex_large_path(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_small_fixed
+tags: [private]
 ```
 
 ```Go
@@ -1088,6 +1135,7 @@ func BenchmarkSearchRegex_small_fixed(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_small_fixed_casesensitive
+tags: [private]
 ```
 
 ```Go
@@ -1098,6 +1146,7 @@ func BenchmarkSearchRegex_small_fixed_casesensitive(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_small_re_dotstar
+tags: [private]
 ```
 
 ```Go
@@ -1108,6 +1157,7 @@ func BenchmarkSearchRegex_small_re_dotstar(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_small_re_common
+tags: [private]
 ```
 
 ```Go
@@ -1118,6 +1168,7 @@ func BenchmarkSearchRegex_small_re_common(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_small_re_anchor
+tags: [private]
 ```
 
 ```Go
@@ -1128,6 +1179,7 @@ func BenchmarkSearchRegex_small_re_anchor(b *testing.B)
 
 ```
 searchKey: search.benchSearchRegex
+tags: [private]
 ```
 
 ```Go
@@ -1138,6 +1190,7 @@ func benchSearchRegex(b *testing.B, p *protocol.Request)
 
 ```
 searchKey: search.TestLowerRegexp
+tags: [private]
 ```
 
 ```Go
@@ -1148,6 +1201,7 @@ func TestLowerRegexp(t *testing.T)
 
 ```
 searchKey: search.TestLongestLiteral
+tags: [private]
 ```
 
 ```Go
@@ -1158,6 +1212,7 @@ func TestLongestLiteral(t *testing.T)
 
 ```
 searchKey: search.TestReadAll
+tags: [private]
 ```
 
 ```Go
@@ -1168,6 +1223,7 @@ func TestReadAll(t *testing.T)
 
 ```
 searchKey: search.TestMaxMatches
+tags: [private]
 ```
 
 ```Go
@@ -1178,6 +1234,7 @@ func TestMaxMatches(t *testing.T)
 
 ```
 searchKey: search.TestPathMatches
+tags: [private]
 ```
 
 ```Go
@@ -1188,10 +1245,11 @@ Tests that:
 
 - IncludePatterns can match the path in any order - A path must match all (not any) of the IncludePatterns - An empty pattern is allowed 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.search_regex_test.go" href="#init.search_regex_test.go">func init()</a>
 
 ```
 searchKey: search.init
+tags: [private]
 ```
 
 ```Go
@@ -1202,6 +1260,7 @@ func init()
 
 ```
 searchKey: search.TestRegexSearch
+tags: [private]
 ```
 
 ```Go
@@ -1212,6 +1271,7 @@ func TestRegexSearch(t *testing.T)
 
 ```
 searchKey: search.TestMatcherLookupByLanguage
+tags: [private]
 ```
 
 ```Go
@@ -1222,6 +1282,7 @@ func TestMatcherLookupByLanguage(t *testing.T)
 
 ```
 searchKey: search.TestMatcherLookupByExtension
+tags: [private]
 ```
 
 ```Go
@@ -1232,6 +1293,7 @@ func TestMatcherLookupByExtension(t *testing.T)
 
 ```
 searchKey: search.TestInferredMatcher
+tags: [private]
 ```
 
 ```Go
@@ -1244,6 +1306,7 @@ Tests that structural search correctly infers the Go matcher from the .go file e
 
 ```
 searchKey: search.TestRecordMetrics
+tags: [private]
 ```
 
 ```Go
@@ -1254,6 +1317,7 @@ func TestRecordMetrics(t *testing.T)
 
 ```
 searchKey: search.TestIncludePatterns
+tags: [private]
 ```
 
 ```Go
@@ -1266,6 +1330,7 @@ Tests that includePatterns works. includePatterns serve a similar role in struct
 
 ```
 searchKey: search.TestRule
+tags: [private]
 ```
 
 ```Go
@@ -1276,6 +1341,7 @@ func TestRule(t *testing.T)
 
 ```
 searchKey: search.TestHighlightMultipleLines
+tags: [private]
 ```
 
 ```Go
@@ -1286,6 +1352,7 @@ func TestHighlightMultipleLines(t *testing.T)
 
 ```
 searchKey: search.TestMatchCountForMultilineMatches
+tags: [private]
 ```
 
 ```Go
@@ -1296,6 +1363,7 @@ func TestMatchCountForMultilineMatches(t *testing.T)
 
 ```
 searchKey: search.TestBuildQuery
+tags: [private]
 ```
 
 ```Go

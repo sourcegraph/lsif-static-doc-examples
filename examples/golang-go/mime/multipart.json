@@ -4,9 +4,7 @@
     "identifier": "multipart",
     "newPage": true,
     "searchKey": "mime/multipart",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "peekBufferSize",
                 "newPage": false,
                 "searchKey": "multipart.peekBufferSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "fileaContents",
                 "newPage": false,
                 "searchKey": "multipart.fileaContents",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "filebContents",
                 "newPage": false,
                 "searchKey": "multipart.filebContents",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "textaValue",
                 "newPage": false,
                 "searchKey": "multipart.textaValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "textbValue",
                 "newPage": false,
                 "searchKey": "multipart.textbValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "boundary",
                 "newPage": false,
                 "searchKey": "multipart.boundary",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "messageWithFileWithoutName",
                 "newPage": false,
                 "searchKey": "multipart.messageWithFileWithoutName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "messageWithTextContentType",
                 "newPage": false,
                 "searchKey": "multipart.messageWithTextContentType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                 "identifier": "message",
                 "newPage": false,
                 "searchKey": "multipart.message",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +238,9 @@
                 "identifier": "maxReadThreshold",
                 "newPage": false,
                 "searchKey": "multipart.maxReadThreshold",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,9 +263,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -267,9 +281,7 @@
                 "identifier": "ErrMessageTooLarge",
                 "newPage": false,
                 "searchKey": "multipart.ErrMessageTooLarge",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -289,7 +301,9 @@
                 "identifier": "emptyParams",
                 "newPage": false,
                 "searchKey": "multipart.emptyParams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -309,7 +323,9 @@
                 "identifier": "quoteEscaper",
                 "newPage": false,
                 "searchKey": "multipart.quoteEscaper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -329,7 +345,9 @@
                 "identifier": "longLine",
                 "newPage": false,
                 "searchKey": "multipart.longLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -349,7 +367,9 @@
                 "identifier": "parseTests",
                 "newPage": false,
                 "searchKey": "multipart.parseTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -372,9 +392,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -392,9 +410,7 @@
                 "identifier": "Form",
                 "newPage": false,
                 "searchKey": "multipart.Form",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -412,9 +428,7 @@
                       "identifier": "Form.RemoveAll",
                       "newPage": false,
                       "searchKey": "multipart.Form.RemoveAll",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -437,9 +451,7 @@
                 "identifier": "FileHeader",
                 "newPage": false,
                 "searchKey": "multipart.FileHeader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -457,9 +469,7 @@
                       "identifier": "FileHeader.Open",
                       "newPage": false,
                       "searchKey": "multipart.FileHeader.Open",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -482,9 +492,7 @@
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "multipart.File",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -502,7 +510,9 @@
                       "identifier": "testFile",
                       "newPage": false,
                       "searchKey": "multipart.testFile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -525,7 +535,9 @@
                 "identifier": "sectionReadCloser",
                 "newPage": false,
                 "searchKey": "multipart.sectionReadCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -543,7 +555,9 @@
                       "identifier": "sectionReadCloser.Close",
                       "newPage": false,
                       "searchKey": "multipart.sectionReadCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -566,9 +580,7 @@
                 "identifier": "Part",
                 "newPage": false,
                 "searchKey": "multipart.Part",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -586,7 +598,9 @@
                       "identifier": "newPart",
                       "newPage": false,
                       "searchKey": "multipart.newPart",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -606,9 +620,7 @@
                       "identifier": "Part.FormName",
                       "newPage": false,
                       "searchKey": "multipart.Part.FormName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -628,9 +640,7 @@
                       "identifier": "Part.FileName",
                       "newPage": false,
                       "searchKey": "multipart.Part.FileName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -650,7 +660,9 @@
                       "identifier": "Part.parseContentDisposition",
                       "newPage": false,
                       "searchKey": "multipart.Part.parseContentDisposition",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -670,7 +682,9 @@
                       "identifier": "Part.populateHeaders",
                       "newPage": false,
                       "searchKey": "multipart.Part.populateHeaders",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -690,9 +704,7 @@
                       "identifier": "Part.Read",
                       "newPage": false,
                       "searchKey": "multipart.Part.Read",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -712,9 +724,7 @@
                       "identifier": "Part.Close",
                       "newPage": false,
                       "searchKey": "multipart.Part.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -737,7 +747,9 @@
                 "identifier": "stickyErrorReader",
                 "newPage": false,
                 "searchKey": "multipart.stickyErrorReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -755,7 +767,9 @@
                       "identifier": "stickyErrorReader.Read",
                       "newPage": false,
                       "searchKey": "multipart.stickyErrorReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -778,7 +792,9 @@
                 "identifier": "partReader",
                 "newPage": false,
                 "searchKey": "multipart.partReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -796,7 +812,9 @@
                       "identifier": "partReader.Read",
                       "newPage": false,
                       "searchKey": "multipart.partReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -819,9 +837,7 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "multipart.Reader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -839,9 +855,7 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "multipart.NewReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -861,9 +875,7 @@
                       "identifier": "Reader.ReadForm",
                       "newPage": false,
                       "searchKey": "multipart.Reader.ReadForm",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -883,7 +895,9 @@
                       "identifier": "Reader.readForm",
                       "newPage": false,
                       "searchKey": "multipart.Reader.readForm",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -903,9 +917,7 @@
                       "identifier": "Reader.NextPart",
                       "newPage": false,
                       "searchKey": "multipart.Reader.NextPart",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -925,9 +937,7 @@
                       "identifier": "Reader.NextRawPart",
                       "newPage": false,
                       "searchKey": "multipart.Reader.NextRawPart",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -947,7 +957,9 @@
                       "identifier": "Reader.nextPart",
                       "newPage": false,
                       "searchKey": "multipart.Reader.nextPart",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -967,7 +979,9 @@
                       "identifier": "Reader.isFinalBoundary",
                       "newPage": false,
                       "searchKey": "multipart.Reader.isFinalBoundary",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -987,7 +1001,9 @@
                       "identifier": "Reader.isBoundaryDelimiterLine",
                       "newPage": false,
                       "searchKey": "multipart.Reader.isBoundaryDelimiterLine",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1010,9 +1026,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "multipart.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1030,9 +1044,7 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "multipart.NewWriter",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1052,9 +1064,7 @@
                       "identifier": "Writer.Boundary",
                       "newPage": false,
                       "searchKey": "multipart.Writer.Boundary",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1074,9 +1084,7 @@
                       "identifier": "Writer.SetBoundary",
                       "newPage": false,
                       "searchKey": "multipart.Writer.SetBoundary",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1096,9 +1104,7 @@
                       "identifier": "Writer.FormDataContentType",
                       "newPage": false,
                       "searchKey": "multipart.Writer.FormDataContentType",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1118,9 +1124,7 @@
                       "identifier": "Writer.CreatePart",
                       "newPage": false,
                       "searchKey": "multipart.Writer.CreatePart",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1140,9 +1144,7 @@
                       "identifier": "Writer.CreateFormFile",
                       "newPage": false,
                       "searchKey": "multipart.Writer.CreateFormFile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1162,9 +1164,7 @@
                       "identifier": "Writer.CreateFormField",
                       "newPage": false,
                       "searchKey": "multipart.Writer.CreateFormField",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1184,9 +1184,7 @@
                       "identifier": "Writer.WriteField",
                       "newPage": false,
                       "searchKey": "multipart.Writer.WriteField",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1206,9 +1204,7 @@
                       "identifier": "Writer.Close",
                       "newPage": false,
                       "searchKey": "multipart.Writer.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1231,7 +1227,9 @@
                 "identifier": "part",
                 "newPage": false,
                 "searchKey": "multipart.part",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1249,7 +1247,9 @@
                       "identifier": "part.close",
                       "newPage": false,
                       "searchKey": "multipart.part.close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1269,7 +1269,9 @@
                       "identifier": "part.Write",
                       "newPage": false,
                       "searchKey": "multipart.part.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1292,7 +1294,9 @@
                 "identifier": "failOnReadAfterErrorReader",
                 "newPage": false,
                 "searchKey": "multipart.failOnReadAfterErrorReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1310,7 +1314,9 @@
                       "identifier": "failOnReadAfterErrorReader.Read",
                       "newPage": false,
                       "searchKey": "multipart.failOnReadAfterErrorReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1333,7 +1339,9 @@
                 "identifier": "maliciousReader",
                 "newPage": false,
                 "searchKey": "multipart.maliciousReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1351,7 +1359,9 @@
                       "identifier": "maliciousReader.Read",
                       "newPage": false,
                       "searchKey": "multipart.maliciousReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1374,7 +1384,9 @@
                 "identifier": "slowReader",
                 "newPage": false,
                 "searchKey": "multipart.slowReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1392,7 +1404,9 @@
                       "identifier": "slowReader.Read",
                       "newPage": false,
                       "searchKey": "multipart.slowReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1415,7 +1429,9 @@
                 "identifier": "sentinelReader",
                 "newPage": false,
                 "searchKey": "multipart.sentinelReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1433,7 +1449,9 @@
                       "identifier": "sentinelReader.Read",
                       "newPage": false,
                       "searchKey": "multipart.sentinelReader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1456,7 +1474,9 @@
                 "identifier": "headerBody",
                 "newPage": false,
                 "searchKey": "multipart.headerBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1474,7 +1494,9 @@
                       "identifier": "formData",
                       "newPage": false,
                       "searchKey": "multipart.formData",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1497,7 +1519,9 @@
                 "identifier": "parseTest",
                 "newPage": false,
                 "searchKey": "multipart.parseTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1515,7 +1539,9 @@
                       "identifier": "roundTripParseTest",
                       "newPage": false,
                       "searchKey": "multipart.roundTripParseTest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1541,9 +1567,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1561,7 +1585,9 @@
                 "identifier": "scanUntilBoundary",
                 "newPage": false,
                 "searchKey": "multipart.scanUntilBoundary",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1581,7 +1607,9 @@
                 "identifier": "matchAfterPrefix",
                 "newPage": false,
                 "searchKey": "multipart.matchAfterPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1601,7 +1629,9 @@
                 "identifier": "skipLWSPChar",
                 "newPage": false,
                 "searchKey": "multipart.skipLWSPChar",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1621,7 +1651,9 @@
                 "identifier": "randomBoundary",
                 "newPage": false,
                 "searchKey": "multipart.randomBoundary",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1641,7 +1673,9 @@
                 "identifier": "escapeQuotes",
                 "newPage": false,
                 "searchKey": "multipart.escapeQuotes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1661,7 +1695,9 @@
                 "identifier": "TestReadForm",
                 "newPage": false,
                 "searchKey": "multipart.TestReadForm",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1681,7 +1717,9 @@
                 "identifier": "TestReadFormWithNamelessFile",
                 "newPage": false,
                 "searchKey": "multipart.TestReadFormWithNamelessFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1701,7 +1739,9 @@
                 "identifier": "TestReadFormMaxMemoryOverflow",
                 "newPage": false,
                 "searchKey": "multipart.TestReadFormMaxMemoryOverflow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1721,7 +1761,9 @@
                 "identifier": "TestReadFormWithTextContentType",
                 "newPage": false,
                 "searchKey": "multipart.TestReadFormWithTextContentType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1741,7 +1783,9 @@
                 "identifier": "TestReadForm_NoReadAfterEOF",
                 "newPage": false,
                 "searchKey": "multipart.TestReadForm_NoReadAfterEOF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1761,7 +1805,9 @@
                 "identifier": "TestReadForm_NonFileMaxMemory",
                 "newPage": false,
                 "searchKey": "multipart.TestReadForm_NonFileMaxMemory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1781,7 +1827,9 @@
                 "identifier": "TestBoundaryLine",
                 "newPage": false,
                 "searchKey": "multipart.TestBoundaryLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1801,7 +1849,9 @@
                 "identifier": "escapeString",
                 "newPage": false,
                 "searchKey": "multipart.escapeString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1821,7 +1871,9 @@
                 "identifier": "expectEq",
                 "newPage": false,
                 "searchKey": "multipart.expectEq",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1841,7 +1893,9 @@
                 "identifier": "TestNameAccessors",
                 "newPage": false,
                 "searchKey": "multipart.TestNameAccessors",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1861,7 +1915,9 @@
                 "identifier": "testMultipartBody",
                 "newPage": false,
                 "searchKey": "multipart.testMultipartBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1881,7 +1937,9 @@
                 "identifier": "TestMultipart",
                 "newPage": false,
                 "searchKey": "multipart.TestMultipart",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1901,7 +1959,9 @@
                 "identifier": "TestMultipartOnlyNewlines",
                 "newPage": false,
                 "searchKey": "multipart.TestMultipartOnlyNewlines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1921,7 +1981,9 @@
                 "identifier": "TestMultipartSlowInput",
                 "newPage": false,
                 "searchKey": "multipart.TestMultipartSlowInput",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1941,7 +2003,9 @@
                 "identifier": "testMultipart",
                 "newPage": false,
                 "searchKey": "multipart.testMultipart",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1961,7 +2025,9 @@
                 "identifier": "TestVariousTextLineEndings",
                 "newPage": false,
                 "searchKey": "multipart.TestVariousTextLineEndings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1981,7 +2047,9 @@
                 "identifier": "TestLineLimit",
                 "newPage": false,
                 "searchKey": "multipart.TestLineLimit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2001,7 +2069,9 @@
                 "identifier": "TestMultipartTruncated",
                 "newPage": false,
                 "searchKey": "multipart.TestMultipartTruncated",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2021,7 +2091,9 @@
                 "identifier": "TestMultipartStreamReadahead",
                 "newPage": false,
                 "searchKey": "multipart.TestMultipartStreamReadahead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2041,7 +2113,9 @@
                 "identifier": "TestLineContinuation",
                 "newPage": false,
                 "searchKey": "multipart.TestLineContinuation",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2061,7 +2135,9 @@
                 "identifier": "TestQuotedPrintableEncoding",
                 "newPage": false,
                 "searchKey": "multipart.TestQuotedPrintableEncoding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2081,7 +2157,9 @@
                 "identifier": "testQuotedPrintableEncoding",
                 "newPage": false,
                 "searchKey": "multipart.testQuotedPrintableEncoding",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2101,7 +2179,9 @@
                 "identifier": "TestRawPart",
                 "newPage": false,
                 "searchKey": "multipart.TestRawPart",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2121,7 +2201,9 @@
                 "identifier": "TestNested",
                 "newPage": false,
                 "searchKey": "multipart.TestNested",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2141,7 +2223,9 @@
                 "identifier": "TestParse",
                 "newPage": false,
                 "searchKey": "multipart.TestParse",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2161,7 +2245,9 @@
                 "identifier": "partsFromReader",
                 "newPage": false,
                 "searchKey": "multipart.partsFromReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2181,7 +2267,9 @@
                 "identifier": "TestParseAllSizes",
                 "newPage": false,
                 "searchKey": "multipart.TestParseAllSizes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2201,7 +2289,9 @@
                 "identifier": "TestNoBoundary",
                 "newPage": false,
                 "searchKey": "multipart.TestNoBoundary",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2221,7 +2311,9 @@
                 "identifier": "TestWriter",
                 "newPage": false,
                 "searchKey": "multipart.TestWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2241,7 +2333,9 @@
                 "identifier": "TestWriterSetBoundary",
                 "newPage": false,
                 "searchKey": "multipart.TestWriterSetBoundary",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2261,7 +2355,9 @@
                 "identifier": "TestWriterBoundaryGoroutines",
                 "newPage": false,
                 "searchKey": "multipart.TestWriterBoundaryGoroutines",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2281,7 +2377,9 @@
                 "identifier": "TestSortedHeader",
                 "newPage": false,
                 "searchKey": "multipart.TestSortedHeader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

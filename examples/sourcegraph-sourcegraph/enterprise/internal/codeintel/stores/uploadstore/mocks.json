@@ -4,7 +4,9 @@
     "identifier": "mocks",
     "newPage": true,
     "searchKey": "enterprise/internal/codeintel/stores/uploadstore/mocks",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "MockStore",
                 "newPage": false,
                 "searchKey": "mocks.MockStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "NewMockStore",
                       "newPage": false,
                       "searchKey": "mocks.NewMockStore",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "NewMockStoreFrom",
                       "newPage": false,
                       "searchKey": "mocks.NewMockStoreFrom",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "MockStore.Compose",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.Compose",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,9 +122,7 @@
                       "identifier": "MockStore.Delete",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.Delete",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -148,9 +142,7 @@
                       "identifier": "MockStore.Get",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -170,9 +162,7 @@
                       "identifier": "MockStore.Init",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.Init",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -192,9 +182,7 @@
                       "identifier": "MockStore.Upload",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.Upload",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -217,9 +205,7 @@
                 "identifier": "StoreComposeFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreComposeFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -237,9 +223,7 @@
                       "identifier": "StoreComposeFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreComposeFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -259,9 +243,7 @@
                       "identifier": "StoreComposeFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreComposeFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -281,9 +263,7 @@
                       "identifier": "StoreComposeFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreComposeFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -303,9 +283,7 @@
                       "identifier": "StoreComposeFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreComposeFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -325,7 +303,9 @@
                       "identifier": "StoreComposeFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreComposeFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -345,7 +325,9 @@
                       "identifier": "StoreComposeFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.StoreComposeFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -365,9 +347,7 @@
                       "identifier": "StoreComposeFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.StoreComposeFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -390,9 +370,7 @@
                 "identifier": "StoreComposeFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreComposeFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -410,9 +388,7 @@
                       "identifier": "StoreComposeFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreComposeFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -432,9 +408,7 @@
                       "identifier": "StoreComposeFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreComposeFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -457,9 +431,7 @@
                 "identifier": "StoreDeleteFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreDeleteFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -477,9 +449,7 @@
                       "identifier": "StoreDeleteFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreDeleteFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -499,9 +469,7 @@
                       "identifier": "StoreDeleteFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreDeleteFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -521,9 +489,7 @@
                       "identifier": "StoreDeleteFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreDeleteFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -543,9 +509,7 @@
                       "identifier": "StoreDeleteFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreDeleteFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -565,7 +529,9 @@
                       "identifier": "StoreDeleteFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreDeleteFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -585,7 +551,9 @@
                       "identifier": "StoreDeleteFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.StoreDeleteFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -605,9 +573,7 @@
                       "identifier": "StoreDeleteFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.StoreDeleteFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -630,9 +596,7 @@
                 "identifier": "StoreDeleteFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreDeleteFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -650,9 +614,7 @@
                       "identifier": "StoreDeleteFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreDeleteFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -672,9 +634,7 @@
                       "identifier": "StoreDeleteFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreDeleteFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -697,9 +657,7 @@
                 "identifier": "StoreGetFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreGetFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -717,9 +675,7 @@
                       "identifier": "StoreGetFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreGetFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -739,9 +695,7 @@
                       "identifier": "StoreGetFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreGetFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -761,9 +715,7 @@
                       "identifier": "StoreGetFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreGetFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -783,9 +735,7 @@
                       "identifier": "StoreGetFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreGetFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -805,7 +755,9 @@
                       "identifier": "StoreGetFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreGetFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -825,7 +777,9 @@
                       "identifier": "StoreGetFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.StoreGetFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -845,9 +799,7 @@
                       "identifier": "StoreGetFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.StoreGetFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -870,9 +822,7 @@
                 "identifier": "StoreGetFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreGetFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -890,9 +840,7 @@
                       "identifier": "StoreGetFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreGetFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -912,9 +860,7 @@
                       "identifier": "StoreGetFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreGetFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -937,9 +883,7 @@
                 "identifier": "StoreInitFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreInitFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -957,9 +901,7 @@
                       "identifier": "StoreInitFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreInitFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -979,9 +921,7 @@
                       "identifier": "StoreInitFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreInitFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1001,9 +941,7 @@
                       "identifier": "StoreInitFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreInitFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1023,9 +961,7 @@
                       "identifier": "StoreInitFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreInitFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1045,7 +981,9 @@
                       "identifier": "StoreInitFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreInitFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1065,7 +1003,9 @@
                       "identifier": "StoreInitFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.StoreInitFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1085,9 +1025,7 @@
                       "identifier": "StoreInitFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.StoreInitFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1110,9 +1048,7 @@
                 "identifier": "StoreInitFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreInitFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1130,9 +1066,7 @@
                       "identifier": "StoreInitFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreInitFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1152,9 +1086,7 @@
                       "identifier": "StoreInitFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreInitFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1177,9 +1109,7 @@
                 "identifier": "StoreUploadFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreUploadFunc",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1197,9 +1127,7 @@
                       "identifier": "StoreUploadFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreUploadFunc.SetDefaultHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1219,9 +1147,7 @@
                       "identifier": "StoreUploadFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreUploadFunc.PushHook",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1241,9 +1167,7 @@
                       "identifier": "StoreUploadFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreUploadFunc.SetDefaultReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1263,9 +1187,7 @@
                       "identifier": "StoreUploadFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreUploadFunc.PushReturn",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1285,7 +1207,9 @@
                       "identifier": "StoreUploadFunc.nextHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreUploadFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1305,7 +1229,9 @@
                       "identifier": "StoreUploadFunc.appendCall",
                       "newPage": false,
                       "searchKey": "mocks.StoreUploadFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1325,9 +1251,7 @@
                       "identifier": "StoreUploadFunc.History",
                       "newPage": false,
                       "searchKey": "mocks.StoreUploadFunc.History",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1350,9 +1274,7 @@
                 "identifier": "StoreUploadFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreUploadFuncCall",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1370,9 +1292,7 @@
                       "identifier": "StoreUploadFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreUploadFuncCall.Args",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1392,9 +1312,7 @@
                       "identifier": "StoreUploadFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreUploadFuncCall.Results",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",

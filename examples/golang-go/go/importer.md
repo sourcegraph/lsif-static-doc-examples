@@ -21,15 +21,10 @@ Package importer provides access to export data importers.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Lookup" href="#Lookup">type Lookup func(path string) (io.ReadCloser, error)</a>
 
 ```
 searchKey: importer.Lookup
-tags: [exported]
 ```
 
 ```Go
@@ -42,6 +37,7 @@ A Lookup function returns a reader to access package data for a given import pat
 
 ```
 searchKey: importer.gcimports
+tags: [private]
 ```
 
 ```Go
@@ -56,6 +52,7 @@ type gcimports struct {
 
 ```
 searchKey: importer.gcimports.Import
+tags: [private]
 ```
 
 ```Go
@@ -66,6 +63,7 @@ func (m *gcimports) Import(path string) (*types.Package, error)
 
 ```
 searchKey: importer.gcimports.ImportFrom
+tags: [private]
 ```
 
 ```Go
@@ -76,6 +74,7 @@ func (m *gcimports) ImportFrom(path, srcDir string, mode types.ImportMode) (*typ
 
 ```
 searchKey: importer.gccgoimports
+tags: [private]
 ```
 
 ```Go
@@ -90,6 +89,7 @@ type gccgoimports struct {
 
 ```
 searchKey: importer.gccgoimports.Import
+tags: [private]
 ```
 
 ```Go
@@ -100,6 +100,7 @@ func (m *gccgoimports) Import(path string) (*types.Package, error)
 
 ```
 searchKey: importer.gccgoimports.ImportFrom
+tags: [private]
 ```
 
 ```Go
@@ -108,15 +109,11 @@ func (m *gccgoimports) ImportFrom(path, srcDir string, mode types.ImportMode) (*
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ForCompiler" href="#ForCompiler">func ForCompiler(fset *token.FileSet, compiler string, lookup Lookup) types.Importer</a>
 
 ```
 searchKey: importer.ForCompiler
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -133,7 +130,7 @@ A lookup function must be provided for correct module-aware operation. Deprecate
 
 ```
 searchKey: importer.For
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -148,7 +145,6 @@ Deprecated: Use ForCompiler, which populates a FileSet with the positions of obj
 
 ```
 searchKey: importer.Default
-tags: [exported]
 ```
 
 ```Go
@@ -161,6 +157,7 @@ Default returns an Importer for the compiler that built the running binary. If a
 
 ```
 searchKey: importer.TestForCompiler
+tags: [private]
 ```
 
 ```Go

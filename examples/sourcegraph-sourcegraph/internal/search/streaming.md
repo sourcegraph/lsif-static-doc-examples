@@ -47,10 +47,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="commonFileFilters" href="#commonFileFilters">var commonFileFilters</a>
 
 ```
 searchKey: streaming.commonFileFilters
+tags: [private]
 ```
 
 ```Go
@@ -61,11 +66,14 @@ commonFileFilters are common filters used. It is used by SearchFilters to propos
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Filter" href="#Filter">type Filter struct</a>
 
 ```
 searchKey: streaming.Filter
-tags: [exported]
 ```
 
 ```Go
@@ -95,7 +103,6 @@ type Filter struct {
 
 ```
 searchKey: streaming.Filter.Less
-tags: [exported]
 ```
 
 ```Go
@@ -108,7 +115,6 @@ Less returns true if f is more important the o.
 
 ```
 searchKey: streaming.Filters
-tags: [exported]
 ```
 
 ```Go
@@ -121,7 +127,6 @@ Filters is a map of filter values to the Filter.
 
 ```
 searchKey: streaming.Filters.Add
-tags: [exported]
 ```
 
 ```Go
@@ -134,7 +139,6 @@ Add the count to the filter with value.
 
 ```
 searchKey: streaming.Filters.MarkImportant
-tags: [exported]
 ```
 
 ```Go
@@ -147,7 +151,6 @@ MarkImportant sets the filter with value as important. Can only be called after 
 
 ```
 searchKey: streaming.Filters.Compute
-tags: [exported]
 ```
 
 ```Go
@@ -160,6 +163,7 @@ Compute returns an ordered slice of Filter to present to the user.
 
 ```
 searchKey: streaming.filterSlice
+tags: [private]
 ```
 
 ```Go
@@ -170,6 +174,7 @@ type filterSlice []*Filter
 
 ```
 searchKey: streaming.filterSlice.Len
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +185,7 @@ func (fs filterSlice) Len() int
 
 ```
 searchKey: streaming.filterSlice.Less
+tags: [private]
 ```
 
 ```Go
@@ -190,6 +196,7 @@ func (fs filterSlice) Less(i, j int) bool
 
 ```
 searchKey: streaming.filterSlice.Swap
+tags: [private]
 ```
 
 ```Go
@@ -200,6 +207,7 @@ func (fs filterSlice) Swap(i, j int)
 
 ```
 searchKey: streaming.filterHeap
+tags: [private]
 ```
 
 ```Go
@@ -215,6 +223,7 @@ filterHeap allows us to avoid creating an O(N) slice, sorting it O(NlogN) and th
 
 ```
 searchKey: streaming.filterHeap.Add
+tags: [private]
 ```
 
 ```Go
@@ -225,6 +234,7 @@ func (h *filterHeap) Add(f *Filter)
 
 ```
 searchKey: streaming.filterHeap.Less
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +245,7 @@ func (h *filterHeap) Less(i, j int) bool
 
 ```
 searchKey: streaming.filterHeap.Push
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +256,7 @@ func (h *filterHeap) Push(x interface{})
 
 ```
 searchKey: streaming.filterHeap.Pop
+tags: [private]
 ```
 
 ```Go
@@ -255,7 +267,6 @@ func (h *filterHeap) Pop() interface{}
 
 ```
 searchKey: streaming.Stats
-tags: [exported]
 ```
 
 ```Go
@@ -289,7 +300,6 @@ Stats contains fields that should be returned by all funcs that contribute to th
 
 ```
 searchKey: streaming.CollectStream
-tags: [exported]
 ```
 
 ```Go
@@ -302,7 +312,6 @@ CollectStream will call search and aggregates all events it sends. It then retur
 
 ```
 searchKey: streaming.Stats.Update
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +324,6 @@ update updates c with the other data, deduping as necessary. It modifies c but d
 
 ```
 searchKey: streaming.Stats.Zero
-tags: [exported]
 ```
 
 ```Go
@@ -328,7 +336,6 @@ Zero returns true if stats is empty. IE calling Update will result in no change.
 
 ```
 searchKey: streaming.Stats.String
-tags: [exported]
 ```
 
 ```Go
@@ -339,7 +346,6 @@ func (c *Stats) String() string
 
 ```
 searchKey: streaming.Stats.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -352,7 +358,6 @@ Equal provides custom comparison which is used by go-cmp
 
 ```
 searchKey: streaming.Stats.AllReposTimedOut
-tags: [exported]
 ```
 
 ```Go
@@ -363,7 +368,6 @@ func (c *Stats) AllReposTimedOut() bool
 
 ```
 searchKey: streaming.SearchFilters
-tags: [exported]
 ```
 
 ```Go
@@ -383,7 +387,6 @@ Note: it currently live in graphqlbackend. However, once we have a non resolver 
 
 ```
 searchKey: streaming.SearchFilters.Update
-tags: [exported]
 ```
 
 ```Go
@@ -396,7 +399,6 @@ Update internal state for the results in event.
 
 ```
 searchKey: streaming.SearchFilters.Compute
-tags: [exported]
 ```
 
 ```Go
@@ -409,7 +411,6 @@ Compute returns an ordered slice of Filters to present to the user based on even
 
 ```
 searchKey: streaming.SearchEvent
-tags: [exported]
 ```
 
 ```Go
@@ -423,7 +424,6 @@ type SearchEvent struct {
 
 ```
 searchKey: streaming.Sender
-tags: [exported]
 ```
 
 ```Go
@@ -436,7 +436,6 @@ type Sender interface {
 
 ```
 searchKey: streaming.WithLimit
-tags: [exported]
 ```
 
 ```Go
@@ -451,7 +450,6 @@ Canceling this context releases resources associated with it, so code should cal
 
 ```
 searchKey: streaming.WithSelect
-tags: [exported]
 ```
 
 ```Go
@@ -464,7 +462,6 @@ WithSelect returns a child Stream of parent that runs the select operation on ea
 
 ```
 searchKey: streaming.LimitStream
-tags: [exported]
 ```
 
 ```Go
@@ -479,7 +476,6 @@ type LimitStream struct {
 
 ```
 searchKey: streaming.LimitStream.Send
-tags: [exported]
 ```
 
 ```Go
@@ -490,7 +486,6 @@ func (s *LimitStream) Send(event SearchEvent)
 
 ```
 searchKey: streaming.StreamFunc
-tags: [exported]
 ```
 
 ```Go
@@ -501,7 +496,6 @@ type StreamFunc func(SearchEvent)
 
 ```
 searchKey: streaming.StreamFunc.Send
-tags: [exported]
 ```
 
 ```Go
@@ -510,10 +504,15 @@ func (f StreamFunc) Send(se SearchEvent)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestFilters" href="#TestFilters">func TestFilters(t *testing.T)</a>
 
 ```
 searchKey: streaming.TestFilters
+tags: [private]
 ```
 
 ```Go

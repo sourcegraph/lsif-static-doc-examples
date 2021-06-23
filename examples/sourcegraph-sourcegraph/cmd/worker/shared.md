@@ -33,14 +33,11 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="addr" href="#addr">const addr</a>
 
 ```
 searchKey: shared.addr
+tags: [private]
 ```
 
 ```Go
@@ -49,14 +46,11 @@ const addr = ":3189"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="config" href="#config">var config</a>
 
 ```
 searchKey: shared.config
+tags: [private]
 ```
 
 ```Go
@@ -67,6 +61,7 @@ var config = &Config{}
 
 ```
 searchKey: shared.initDatabaseMemo
+tags: [private]
 ```
 
 ```Go
@@ -77,6 +72,7 @@ var initDatabaseMemo = ...
 
 ```
 searchKey: shared.builtins
+tags: [private]
 ```
 
 ```Go
@@ -85,15 +81,10 @@ var builtins = map[string]Job{}
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
 searchKey: shared.Config
-tags: [exported]
 ```
 
 ```Go
@@ -112,7 +103,6 @@ Config is the configuration that controls what jobs will be initialized and moni
 
 ```
 searchKey: shared.Config.Load
-tags: [exported]
 ```
 
 ```Go
@@ -125,7 +115,6 @@ Load reads from the environment and stores the transformed data on the config ob
 
 ```
 searchKey: shared.Config.Validate
-tags: [exported]
 ```
 
 ```Go
@@ -140,7 +129,6 @@ This method assumes that the name field has been set externally.
 
 ```
 searchKey: shared.Job
-tags: [exported]
 ```
 
 ```Go
@@ -173,6 +161,7 @@ Job creates configuration struct and background routine instances to be run as p
 
 ```
 searchKey: shared.routinesResult
+tags: [private]
 ```
 
 ```Go
@@ -187,7 +176,6 @@ type routinesResult struct {
 
 ```
 searchKey: shared.MemoizedConstructor
-tags: [exported]
 ```
 
 ```Go
@@ -205,7 +193,6 @@ MemoizedConstructor wraps a function returning a value and an error and memoizes
 
 ```
 searchKey: shared.NewMemoizedConstructor
-tags: [exported]
 ```
 
 ```Go
@@ -218,7 +205,6 @@ NewMemoizedConstructor memoizes the given constructor
 
 ```
 searchKey: shared.MemoizedConstructor.Init
-tags: [exported]
 ```
 
 ```Go
@@ -229,14 +215,11 @@ Init ensures that the given constructor has been called exactly once, then retur
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="shouldRunJob" href="#shouldRunJob">func shouldRunJob(name string) bool</a>
 
 ```
 searchKey: shared.shouldRunJob
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +232,7 @@ shouldRunJob returns true if the given job should be run.
 
 ```
 searchKey: shared.safeSplit
+tags: [private]
 ```
 
 ```Go
@@ -261,7 +245,6 @@ safeSplit is strings.Split but returns nil (not a []string{""}) on empty input.
 
 ```
 searchKey: shared.InitDatabase
-tags: [exported]
 ```
 
 ```Go
@@ -274,7 +257,6 @@ InitDatabase initializes and returns a connection to the frontend database.
 
 ```
 searchKey: shared.Start
-tags: [exported]
 ```
 
 ```Go
@@ -287,6 +269,7 @@ Start runs the worker. This method does not return.
 
 ```
 searchKey: shared.loadConfigs
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +282,7 @@ loadConfigs calls Load on the configs of each of the jobs registered in this bin
 
 ```
 searchKey: shared.mustValidateConfigs
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +295,7 @@ mustValidateConfigs calls Validate on the configs of each of the jobs that will 
 
 ```
 searchKey: shared.emitJobCountMetrics
+tags: [private]
 ```
 
 ```Go
@@ -323,6 +308,7 @@ emitJobCountMetrics registers and emits an initial value for gauges referencing 
 
 ```
 searchKey: shared.mustCreateBackgroundRoutines
+tags: [private]
 ```
 
 ```Go
@@ -335,6 +321,7 @@ mustCreateBackgroundRoutines runs the Routines function of each of the given job
 
 ```
 searchKey: shared.runRoutinesConcurrently
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +334,7 @@ runRoutinesConcurrently returns a channel that will be populated with the return
 
 ```
 searchKey: shared.jobNames
+tags: [private]
 ```
 
 ```Go
@@ -359,7 +347,6 @@ jobNames returns an ordered slice of keys from the given map.
 
 ```
 searchKey: shared.WatchServiceConnectionValue
-tags: [exported]
 ```
 
 ```Go

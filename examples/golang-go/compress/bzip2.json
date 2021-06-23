@@ -4,9 +4,7 @@
     "identifier": "bzip2",
     "newPage": true,
     "searchKey": "compress/bzip2",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "bzip2FileMagic",
                 "newPage": false,
                 "searchKey": "bzip2.bzip2FileMagic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "bzip2BlockMagic",
                 "newPage": false,
                 "searchKey": "bzip2.bzip2BlockMagic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "bzip2FinalMagic",
                 "newPage": false,
                 "searchKey": "bzip2.bzip2FinalMagic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "invalidNodeValue",
                 "newPage": false,
                 "searchKey": "bzip2.invalidNodeValue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,9 +131,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -147,7 +149,9 @@
                 "identifier": "crctab",
                 "newPage": false,
                 "searchKey": "bzip2.crctab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "digits",
                 "newPage": false,
                 "searchKey": "bzip2.digits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "newton",
                 "newPage": false,
                 "searchKey": "bzip2.newton",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "random",
                 "newPage": false,
                 "searchKey": "bzip2.random",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,9 +240,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -250,7 +258,9 @@
                 "identifier": "bitReader",
                 "newPage": false,
                 "searchKey": "bzip2.bitReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -268,7 +278,9 @@
                       "identifier": "newBitReader",
                       "newPage": false,
                       "searchKey": "bzip2.newBitReader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -288,7 +300,9 @@
                       "identifier": "bitReader.ReadBits64",
                       "newPage": false,
                       "searchKey": "bzip2.bitReader.ReadBits64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -308,7 +322,9 @@
                       "identifier": "bitReader.ReadBits",
                       "newPage": false,
                       "searchKey": "bzip2.bitReader.ReadBits",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,7 +344,9 @@
                       "identifier": "bitReader.ReadBit",
                       "newPage": false,
                       "searchKey": "bzip2.bitReader.ReadBit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -348,7 +366,9 @@
                       "identifier": "bitReader.Err",
                       "newPage": false,
                       "searchKey": "bzip2.bitReader.Err",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -371,9 +391,7 @@
                 "identifier": "StructuralError",
                 "newPage": false,
                 "searchKey": "bzip2.StructuralError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -391,9 +409,7 @@
                       "identifier": "StructuralError.Error",
                       "newPage": false,
                       "searchKey": "bzip2.StructuralError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -416,7 +432,9 @@
                 "identifier": "reader",
                 "newPage": false,
                 "searchKey": "bzip2.reader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -434,7 +452,9 @@
                       "identifier": "reader.setup",
                       "newPage": false,
                       "searchKey": "bzip2.reader.setup",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -454,7 +474,9 @@
                       "identifier": "reader.Read",
                       "newPage": false,
                       "searchKey": "bzip2.reader.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -474,7 +496,9 @@
                       "identifier": "reader.readFromBlock",
                       "newPage": false,
                       "searchKey": "bzip2.reader.readFromBlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -494,7 +518,9 @@
                       "identifier": "reader.read",
                       "newPage": false,
                       "searchKey": "bzip2.reader.read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -514,7 +540,9 @@
                       "identifier": "reader.readBlock",
                       "newPage": false,
                       "searchKey": "bzip2.reader.readBlock",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -537,7 +565,9 @@
                 "identifier": "huffmanTree",
                 "newPage": false,
                 "searchKey": "bzip2.huffmanTree",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -555,7 +585,9 @@
                       "identifier": "newHuffmanTree",
                       "newPage": false,
                       "searchKey": "bzip2.newHuffmanTree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -575,7 +607,9 @@
                       "identifier": "huffmanTree.Decode",
                       "newPage": false,
                       "searchKey": "bzip2.huffmanTree.Decode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -598,7 +632,9 @@
                 "identifier": "huffmanNode",
                 "newPage": false,
                 "searchKey": "bzip2.huffmanNode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -618,7 +654,9 @@
                 "identifier": "huffmanSymbolLengthPair",
                 "newPage": false,
                 "searchKey": "bzip2.huffmanSymbolLengthPair",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -638,7 +676,9 @@
                 "identifier": "huffmanCode",
                 "newPage": false,
                 "searchKey": "bzip2.huffmanCode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -658,7 +698,9 @@
                 "identifier": "moveToFrontDecoder",
                 "newPage": false,
                 "searchKey": "bzip2.moveToFrontDecoder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -676,7 +718,9 @@
                       "identifier": "newMTFDecoder",
                       "newPage": false,
                       "searchKey": "bzip2.newMTFDecoder",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -696,7 +740,9 @@
                       "identifier": "newMTFDecoderWithRange",
                       "newPage": false,
                       "searchKey": "bzip2.newMTFDecoderWithRange",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -716,7 +762,9 @@
                       "identifier": "moveToFrontDecoder.Decode",
                       "newPage": false,
                       "searchKey": "bzip2.moveToFrontDecoder.Decode",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -736,7 +784,9 @@
                       "identifier": "moveToFrontDecoder.First",
                       "newPage": false,
                       "searchKey": "bzip2.moveToFrontDecoder.First",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -762,9 +812,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -782,9 +830,7 @@
                 "identifier": "NewReader",
                 "newPage": false,
                 "searchKey": "bzip2.NewReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -804,7 +850,9 @@
                 "identifier": "inverseBWT",
                 "newPage": false,
                 "searchKey": "bzip2.inverseBWT",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -819,12 +867,14 @@
           },
           {
             "node": {
-              "pathID": "/compress/bzip2#init",
+              "pathID": "/compress/bzip2#init.bzip2.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.bzip2.go",
                 "newPage": false,
                 "searchKey": "bzip2.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -844,7 +894,9 @@
                 "identifier": "updateCRC",
                 "newPage": false,
                 "searchKey": "bzip2.updateCRC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -864,7 +916,9 @@
                 "identifier": "buildHuffmanNode",
                 "newPage": false,
                 "searchKey": "bzip2.buildHuffmanNode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -884,7 +938,9 @@
                 "identifier": "mustDecodeHex",
                 "newPage": false,
                 "searchKey": "bzip2.mustDecodeHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -904,7 +960,9 @@
                 "identifier": "mustLoadFile",
                 "newPage": false,
                 "searchKey": "bzip2.mustLoadFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -924,7 +982,9 @@
                 "identifier": "trim",
                 "newPage": false,
                 "searchKey": "bzip2.trim",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -944,7 +1004,9 @@
                 "identifier": "TestReader",
                 "newPage": false,
                 "searchKey": "bzip2.TestReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -964,7 +1026,9 @@
                 "identifier": "TestBitReader",
                 "newPage": false,
                 "searchKey": "bzip2.TestBitReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -984,7 +1048,9 @@
                 "identifier": "TestMTF",
                 "newPage": false,
                 "searchKey": "bzip2.TestMTF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1004,7 +1070,9 @@
                 "identifier": "TestZeroRead",
                 "newPage": false,
                 "searchKey": "bzip2.TestZeroRead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1024,7 +1092,9 @@
                 "identifier": "benchmarkDecode",
                 "newPage": false,
                 "searchKey": "bzip2.benchmarkDecode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1044,7 +1114,9 @@
                 "identifier": "BenchmarkDecodeDigits",
                 "newPage": false,
                 "searchKey": "bzip2.BenchmarkDecodeDigits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1064,7 +1136,9 @@
                 "identifier": "BenchmarkDecodeNewton",
                 "newPage": false,
                 "searchKey": "bzip2.BenchmarkDecodeNewton",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1084,7 +1158,9 @@
                 "identifier": "BenchmarkDecodeRand",
                 "newPage": false,
                 "searchKey": "bzip2.BenchmarkDecodeRand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

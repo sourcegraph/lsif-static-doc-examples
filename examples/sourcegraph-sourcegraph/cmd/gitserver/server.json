@@ -4,9 +4,7 @@
     "identifier": "server",
     "newPage": true,
     "searchKey": "cmd/gitserver/server",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "repoTTL",
                 "newPage": false,
                 "searchKey": "server.repoTTL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "repoTTLGC",
                 "newPage": false,
                 "searchKey": "server.repoTTLGC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "gitConfigMaybeCorrupt",
                 "newPage": false,
                 "searchKey": "server.gitConfigMaybeCorrupt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "reposStatsName",
                 "newPage": false,
                 "searchKey": "server.reposStatsName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "tempDirName",
                 "newPage": false,
                 "searchKey": "server.tempDirName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "headFileRefPrefix",
                 "newPage": false,
                 "searchKey": "server.headFileRefPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "testRepoA",
                 "newPage": false,
                 "searchKey": "server.testRepoA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "testRepoC",
                 "newPage": false,
                 "searchKey": "server.testRepoC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,9 +219,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -227,7 +237,9 @@
                 "identifier": "enableGCAuto",
                 "newPage": false,
                 "searchKey": "server.enableGCAuto",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "reposRemoved",
                 "newPage": false,
                 "searchKey": "server.reposRemoved",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "reposRecloned",
                 "newPage": false,
                 "searchKey": "server.reposRecloned",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -287,7 +303,9 @@
                 "identifier": "reposRemovedDiskPressure",
                 "newPage": false,
                 "searchKey": "server.reposRemovedDiskPressure",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -307,7 +325,9 @@
                 "identifier": "janitorRunning",
                 "newPage": false,
                 "searchKey": "server.janitorRunning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -327,7 +347,9 @@
                 "identifier": "jobTimer",
                 "newPage": false,
                 "searchKey": "server.jobTimer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,7 +369,9 @@
                 "identifier": "maybeCorruptStderrRe",
                 "newPage": false,
                 "searchKey": "server.maybeCorruptStderrRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +391,9 @@
                 "identifier": "customGitFetch",
                 "newPage": false,
                 "searchKey": "server.customGitFetch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +413,9 @@
                 "identifier": "callSignPattern",
                 "newPage": false,
                 "searchKey": "server.callSignPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,7 +435,9 @@
                 "identifier": "metricServiceDuration",
                 "newPage": false,
                 "searchKey": "server.metricServiceDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -427,7 +457,9 @@
                 "identifier": "metricServiceRunning",
                 "newPage": false,
                 "searchKey": "server.metricServiceRunning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,7 +479,9 @@
                 "identifier": "defaultGitolite",
                 "newPage": false,
                 "searchKey": "server.defaultGitolite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,7 +501,9 @@
                 "identifier": "patchID",
                 "newPage": false,
                 "searchKey": "server.patchID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,7 +523,9 @@
                 "identifier": "refspecOverrides",
                 "newPage": false,
                 "searchKey": "server.refspecOverrides",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +545,9 @@
                 "identifier": "traceLogs",
                 "newPage": false,
                 "searchKey": "server.traceLogs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,7 +567,9 @@
                 "identifier": "lastCheckAt",
                 "newPage": false,
                 "searchKey": "server.lastCheckAt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -547,7 +589,9 @@
                 "identifier": "lastCheckMutex",
                 "newPage": false,
                 "searchKey": "server.lastCheckMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -567,7 +611,9 @@
                 "identifier": "runCommandMock",
                 "newPage": false,
                 "searchKey": "server.runCommandMock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -587,7 +633,9 @@
                 "identifier": "longGitCommandTimeout",
                 "newPage": false,
                 "searchKey": "server.longGitCommandTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -607,7 +655,9 @@
                 "identifier": "repoSyncStateCounter",
                 "newPage": false,
                 "searchKey": "server.repoSyncStateCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -627,7 +677,9 @@
                 "identifier": "repoSyncStatePercentComplete",
                 "newPage": false,
                 "searchKey": "server.repoSyncStatePercentComplete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -647,7 +699,9 @@
                 "identifier": "repoStateUpsertCounter",
                 "newPage": false,
                 "searchKey": "server.repoStateUpsertCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -667,7 +721,9 @@
                 "identifier": "testRepoCorrupter",
                 "newPage": false,
                 "searchKey": "server.testRepoCorrupter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -687,7 +743,9 @@
                 "identifier": "testGitRepoExists",
                 "newPage": false,
                 "searchKey": "server.testGitRepoExists",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -707,7 +765,9 @@
                 "identifier": "execRunning",
                 "newPage": false,
                 "searchKey": "server.execRunning",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -727,7 +787,9 @@
                 "identifier": "execDuration",
                 "newPage": false,
                 "searchKey": "server.execDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -747,7 +809,9 @@
                 "identifier": "cloneQueue",
                 "newPage": false,
                 "searchKey": "server.cloneQueue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -767,7 +831,9 @@
                 "identifier": "lsRemoteQueue",
                 "newPage": false,
                 "searchKey": "server.lsRemoteQueue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -787,7 +853,9 @@
                 "identifier": "repoClonedCounter",
                 "newPage": false,
                 "searchKey": "server.repoClonedCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -807,7 +875,9 @@
                 "identifier": "headBranchPattern",
                 "newPage": false,
                 "searchKey": "server.headBranchPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -827,7 +897,9 @@
                 "identifier": "doBackgroundRepoUpdateMock",
                 "newPage": false,
                 "searchKey": "server.doBackgroundRepoUpdateMock",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -847,7 +919,9 @@
                 "identifier": "badRefsOnce",
                 "newPage": false,
                 "searchKey": "server.badRefsOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -867,7 +941,9 @@
                 "identifier": "badRefs",
                 "newPage": false,
                 "searchKey": "server.badRefs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -887,7 +963,9 @@
                 "identifier": "tlsExternal",
                 "newPage": false,
                 "searchKey": "server.tlsExternal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -907,7 +985,9 @@
                 "identifier": "repoCloned",
                 "newPage": false,
                 "searchKey": "server.repoCloned",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -927,7 +1007,9 @@
                 "identifier": "repoLastFetched",
                 "newPage": false,
                 "searchKey": "server.repoLastFetched",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -947,7 +1029,9 @@
                 "identifier": "repoLastChanged",
                 "newPage": false,
                 "searchKey": "server.repoLastChanged",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -967,7 +1051,9 @@
                 "identifier": "repoRemoteRefs",
                 "newPage": false,
                 "searchKey": "server.repoRemoteRefs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -987,7 +1073,9 @@
                 "identifier": "logUnflushableResponseWriterOnce",
                 "newPage": false,
                 "searchKey": "server.logUnflushableResponseWriterOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1007,7 +1095,9 @@
                 "identifier": "sshAgentSockID",
                 "newPage": false,
                 "searchKey": "server.sshAgentSockID",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1030,9 +1120,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1050,9 +1138,7 @@
                 "identifier": "DiskSizer",
                 "newPage": false,
                 "searchKey": "server.DiskSizer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1072,9 +1158,7 @@
                 "identifier": "StatDiskSizer",
                 "newPage": false,
                 "searchKey": "server.StatDiskSizer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1092,9 +1176,7 @@
                       "identifier": "StatDiskSizer.BytesFreeOnDisk",
                       "newPage": false,
                       "searchKey": "server.StatDiskSizer.BytesFreeOnDisk",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1114,9 +1196,7 @@
                       "identifier": "StatDiskSizer.DiskSizeBytes",
                       "newPage": false,
                       "searchKey": "server.StatDiskSizer.DiskSizeBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1139,7 +1219,9 @@
                 "identifier": "gitoliteFetcher",
                 "newPage": false,
                 "searchKey": "server.gitoliteFetcher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1157,7 +1239,9 @@
                       "identifier": "gitoliteFetcher.listRepos",
                       "newPage": false,
                       "searchKey": "server.gitoliteFetcher.listRepos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1180,7 +1264,9 @@
                 "identifier": "iGitoliteClient",
                 "newPage": false,
                 "searchKey": "server.iGitoliteClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1200,7 +1286,9 @@
                 "identifier": "gitoliteClient",
                 "newPage": false,
                 "searchKey": "server.gitoliteClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1218,7 +1306,9 @@
                       "identifier": "gitoliteClient.ListRepos",
                       "newPage": false,
                       "searchKey": "server.gitoliteClient.ListRepos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1241,9 +1331,7 @@
                 "identifier": "RepositoryLocker",
                 "newPage": false,
                 "searchKey": "server.RepositoryLocker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1261,9 +1349,7 @@
                       "identifier": "RepositoryLocker.TryAcquire",
                       "newPage": false,
                       "searchKey": "server.RepositoryLocker.TryAcquire",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1283,9 +1369,7 @@
                       "identifier": "RepositoryLocker.Status",
                       "newPage": false,
                       "searchKey": "server.RepositoryLocker.Status",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1308,9 +1392,7 @@
                 "identifier": "RepositoryLock",
                 "newPage": false,
                 "searchKey": "server.RepositoryLock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1328,9 +1410,7 @@
                       "identifier": "RepositoryLock.SetStatus",
                       "newPage": false,
                       "searchKey": "server.RepositoryLock.SetStatus",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1350,9 +1430,7 @@
                       "identifier": "RepositoryLock.Release",
                       "newPage": false,
                       "searchKey": "server.RepositoryLock.Release",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1375,9 +1453,7 @@
                 "identifier": "Server",
                 "newPage": false,
                 "searchKey": "server.Server",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1395,7 +1471,9 @@
                       "identifier": "makeTestServer",
                       "newPage": false,
                       "searchKey": "server.makeTestServer",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1415,7 +1493,9 @@
                       "identifier": "Server.cleanupRepos",
                       "newPage": false,
                       "searchKey": "server.Server.cleanupRepos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1435,7 +1515,9 @@
                       "identifier": "Server.howManyBytesToFree",
                       "newPage": false,
                       "searchKey": "server.Server.howManyBytesToFree",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1455,7 +1537,9 @@
                       "identifier": "Server.freeUpSpace",
                       "newPage": false,
                       "searchKey": "server.Server.freeUpSpace",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1475,7 +1559,9 @@
                       "identifier": "Server.findGitDirs",
                       "newPage": false,
                       "searchKey": "server.Server.findGitDirs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1495,7 +1581,9 @@
                       "identifier": "Server.removeRepoDirectory",
                       "newPage": false,
                       "searchKey": "server.Server.removeRepoDirectory",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1515,7 +1603,9 @@
                       "identifier": "Server.cleanTmpFiles",
                       "newPage": false,
                       "searchKey": "server.Server.cleanTmpFiles",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1535,9 +1625,7 @@
                       "identifier": "Server.SetupAndClearTmp",
                       "newPage": false,
                       "searchKey": "server.Server.SetupAndClearTmp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1557,7 +1645,9 @@
                       "identifier": "Server.handleGetGitolitePhabricatorMetadata",
                       "newPage": false,
                       "searchKey": "server.Server.handleGetGitolitePhabricatorMetadata",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1577,7 +1667,9 @@
                       "identifier": "Server.gitServiceHandler",
                       "newPage": false,
                       "searchKey": "server.Server.gitServiceHandler",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1597,7 +1689,9 @@
                       "identifier": "Server.handleListGitolite",
                       "newPage": false,
                       "searchKey": "server.Server.handleListGitolite",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1617,7 +1711,9 @@
                       "identifier": "Server.handleList",
                       "newPage": false,
                       "searchKey": "server.Server.handleList",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1637,7 +1733,9 @@
                       "identifier": "Server.handleCreateCommitFromPatch",
                       "newPage": false,
                       "searchKey": "server.Server.handleCreateCommitFromPatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1657,7 +1755,9 @@
                       "identifier": "Server.createCommitFromPatch",
                       "newPage": false,
                       "searchKey": "server.Server.createCommitFromPatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1677,7 +1777,9 @@
                       "identifier": "Server.repoInfo",
                       "newPage": false,
                       "searchKey": "server.Server.repoInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1697,7 +1799,9 @@
                       "identifier": "Server.repoCloneProgress",
                       "newPage": false,
                       "searchKey": "server.Server.repoCloneProgress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1717,7 +1821,9 @@
                       "identifier": "Server.handleRepoInfo",
                       "newPage": false,
                       "searchKey": "server.Server.handleRepoInfo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1737,7 +1843,9 @@
                       "identifier": "Server.handleReposStats",
                       "newPage": false,
                       "searchKey": "server.Server.handleReposStats",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1757,7 +1865,9 @@
                       "identifier": "Server.handleRepoCloneProgress",
                       "newPage": false,
                       "searchKey": "server.Server.handleRepoCloneProgress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1777,7 +1887,9 @@
                       "identifier": "Server.handleRepoDelete",
                       "newPage": false,
                       "searchKey": "server.Server.handleRepoDelete",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1797,7 +1909,9 @@
                       "identifier": "Server.deleteRepo",
                       "newPage": false,
                       "searchKey": "server.Server.deleteRepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1817,9 +1931,7 @@
                       "identifier": "Server.Handler",
                       "newPage": false,
                       "searchKey": "server.Server.Handler",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1839,9 +1951,7 @@
                       "identifier": "Server.Janitor",
                       "newPage": false,
                       "searchKey": "server.Server.Janitor",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1861,9 +1971,7 @@
                       "identifier": "Server.SyncRepoState",
                       "newPage": false,
                       "searchKey": "server.Server.SyncRepoState",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1883,7 +1991,9 @@
                       "identifier": "Server.hostnameMatch",
                       "newPage": false,
                       "searchKey": "server.Server.hostnameMatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1903,7 +2013,9 @@
                       "identifier": "Server.syncRepoState",
                       "newPage": false,
                       "searchKey": "server.Server.syncRepoState",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1923,9 +2035,7 @@
                       "identifier": "Server.Stop",
                       "newPage": false,
                       "searchKey": "server.Server.Stop",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1945,7 +2055,9 @@
                       "identifier": "Server.serverContext",
                       "newPage": false,
                       "searchKey": "server.Server.serverContext",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1965,7 +2077,9 @@
                       "identifier": "Server.getRemoteURL",
                       "newPage": false,
                       "searchKey": "server.Server.getRemoteURL",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1985,7 +2099,9 @@
                       "identifier": "Server.acquireCloneLimiter",
                       "newPage": false,
                       "searchKey": "server.Server.acquireCloneLimiter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2005,7 +2121,9 @@
                       "identifier": "Server.queryCloneLimiter",
                       "newPage": false,
                       "searchKey": "server.Server.queryCloneLimiter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2025,7 +2143,9 @@
                       "identifier": "Server.acquireCloneableLimiter",
                       "newPage": false,
                       "searchKey": "server.Server.acquireCloneableLimiter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2045,7 +2165,9 @@
                       "identifier": "Server.tempDir",
                       "newPage": false,
                       "searchKey": "server.Server.tempDir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2065,7 +2187,9 @@
                       "identifier": "Server.ignorePath",
                       "newPage": false,
                       "searchKey": "server.Server.ignorePath",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2085,7 +2209,9 @@
                       "identifier": "Server.handleIsRepoCloneable",
                       "newPage": false,
                       "searchKey": "server.Server.handleIsRepoCloneable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2105,7 +2231,9 @@
                       "identifier": "Server.handleIsRepoCloned",
                       "newPage": false,
                       "searchKey": "server.Server.handleIsRepoCloned",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2125,7 +2253,9 @@
                       "identifier": "Server.handleRepoUpdate",
                       "newPage": false,
                       "searchKey": "server.Server.handleRepoUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2145,7 +2275,9 @@
                       "identifier": "Server.handleArchive",
                       "newPage": false,
                       "searchKey": "server.Server.handleArchive",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2165,7 +2297,9 @@
                       "identifier": "Server.handleExec",
                       "newPage": false,
                       "searchKey": "server.Server.handleExec",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2185,7 +2319,9 @@
                       "identifier": "Server.exec",
                       "newPage": false,
                       "searchKey": "server.Server.exec",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2205,7 +2341,9 @@
                       "identifier": "Server.handleP4Exec",
                       "newPage": false,
                       "searchKey": "server.Server.handleP4Exec",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2225,7 +2363,9 @@
                       "identifier": "Server.p4exec",
                       "newPage": false,
                       "searchKey": "server.Server.p4exec",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2245,7 +2385,9 @@
                       "identifier": "Server.setLastError",
                       "newPage": false,
                       "searchKey": "server.Server.setLastError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2265,7 +2407,9 @@
                       "identifier": "Server.setLastErrorNonFatal",
                       "newPage": false,
                       "searchKey": "server.Server.setLastErrorNonFatal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2285,7 +2429,9 @@
                       "identifier": "Server.setCloneStatus",
                       "newPage": false,
                       "searchKey": "server.Server.setCloneStatus",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2305,7 +2451,9 @@
                       "identifier": "Server.setCloneStatusNonFatal",
                       "newPage": false,
                       "searchKey": "server.Server.setCloneStatusNonFatal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2325,7 +2473,9 @@
                       "identifier": "Server.cloneRepo",
                       "newPage": false,
                       "searchKey": "server.Server.cloneRepo",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2345,7 +2495,9 @@
                       "identifier": "Server.doRepoUpdate",
                       "newPage": false,
                       "searchKey": "server.Server.doRepoUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2365,7 +2517,9 @@
                       "identifier": "Server.doBackgroundRepoUpdate",
                       "newPage": false,
                       "searchKey": "server.Server.doBackgroundRepoUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2385,7 +2539,9 @@
                       "identifier": "Server.ensureRevision",
                       "newPage": false,
                       "searchKey": "server.Server.ensureRevision",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2405,9 +2561,7 @@
                       "identifier": "Server.RegisterMetrics",
                       "newPage": false,
                       "searchKey": "server.Server.RegisterMetrics",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2427,7 +2581,9 @@
                       "identifier": "Server.dir",
                       "newPage": false,
                       "searchKey": "server.Server.dir",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2447,7 +2603,9 @@
                       "identifier": "Server.name",
                       "newPage": false,
                       "searchKey": "server.Server.name",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2470,7 +2628,9 @@
                 "identifier": "locks",
                 "newPage": false,
                 "searchKey": "server.locks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2490,7 +2650,9 @@
                 "identifier": "cloneOptions",
                 "newPage": false,
                 "searchKey": "server.cloneOptions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2510,7 +2672,9 @@
                 "identifier": "urlRedactor",
                 "newPage": false,
                 "searchKey": "server.urlRedactor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2528,7 +2692,9 @@
                       "identifier": "newURLRedactor",
                       "newPage": false,
                       "searchKey": "server.newURLRedactor",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2548,7 +2714,9 @@
                       "identifier": "urlRedactor.redact",
                       "newPage": false,
                       "searchKey": "server.urlRedactor.redact",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2571,9 +2739,7 @@
                 "identifier": "GitDir",
                 "newPage": false,
                 "searchKey": "server.GitDir",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -2591,9 +2757,7 @@
                       "identifier": "GitDir.Path",
                       "newPage": false,
                       "searchKey": "server.GitDir.Path",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2613,9 +2777,7 @@
                       "identifier": "GitDir.Set",
                       "newPage": false,
                       "searchKey": "server.GitDir.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2638,7 +2800,9 @@
                 "identifier": "tlsConfig",
                 "newPage": false,
                 "searchKey": "server.tlsConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2658,7 +2822,9 @@
                 "identifier": "writeCounter",
                 "newPage": false,
                 "searchKey": "server.writeCounter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2676,7 +2842,9 @@
                       "identifier": "writeCounter.Write",
                       "newPage": false,
                       "searchKey": "server.writeCounter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2699,7 +2867,9 @@
                 "identifier": "limitWriter",
                 "newPage": false,
                 "searchKey": "server.limitWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2717,7 +2887,9 @@
                       "identifier": "limitWriter.Write",
                       "newPage": false,
                       "searchKey": "server.limitWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2740,7 +2912,9 @@
                 "identifier": "flushingResponseWriter",
                 "newPage": false,
                 "searchKey": "server.flushingResponseWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2758,7 +2932,9 @@
                       "identifier": "newFlushingResponseWriter",
                       "newPage": false,
                       "searchKey": "server.newFlushingResponseWriter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2778,7 +2954,9 @@
                       "identifier": "flushingResponseWriter.Header",
                       "newPage": false,
                       "searchKey": "server.flushingResponseWriter.Header",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2798,7 +2976,9 @@
                       "identifier": "flushingResponseWriter.WriteHeader",
                       "newPage": false,
                       "searchKey": "server.flushingResponseWriter.WriteHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2818,7 +2998,9 @@
                       "identifier": "flushingResponseWriter.Write",
                       "newPage": false,
                       "searchKey": "server.flushingResponseWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2838,7 +3020,9 @@
                       "identifier": "flushingResponseWriter.periodicFlush",
                       "newPage": false,
                       "searchKey": "server.flushingResponseWriter.periodicFlush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2858,7 +3042,9 @@
                       "identifier": "flushingResponseWriter.Close",
                       "newPage": false,
                       "searchKey": "server.flushingResponseWriter.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2881,7 +3067,9 @@
                 "identifier": "progressWriter",
                 "newPage": false,
                 "searchKey": "server.progressWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2899,7 +3087,9 @@
                       "identifier": "progressWriter.Write",
                       "newPage": false,
                       "searchKey": "server.progressWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2919,7 +3109,9 @@
                       "identifier": "progressWriter.String",
                       "newPage": false,
                       "searchKey": "server.progressWriter.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2939,7 +3131,9 @@
                       "identifier": "progressWriter.Bytes",
                       "newPage": false,
                       "searchKey": "server.progressWriter.Bytes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2962,7 +3156,9 @@
                 "identifier": "sshAgent",
                 "newPage": false,
                 "searchKey": "server.sshAgent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2980,7 +3176,9 @@
                       "identifier": "newSSHAgent",
                       "newPage": false,
                       "searchKey": "server.newSSHAgent",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3000,7 +3198,9 @@
                       "identifier": "sshAgent.Listen",
                       "newPage": false,
                       "searchKey": "server.sshAgent.Listen",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3020,7 +3220,9 @@
                       "identifier": "sshAgent.Close",
                       "newPage": false,
                       "searchKey": "server.sshAgent.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3040,7 +3242,9 @@
                       "identifier": "sshAgent.Socket",
                       "newPage": false,
                       "searchKey": "server.sshAgent.Socket",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3063,9 +3267,7 @@
                 "identifier": "VCSSyncer",
                 "newPage": false,
                 "searchKey": "server.VCSSyncer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3085,9 +3287,7 @@
                 "identifier": "GitRepoSyncer",
                 "newPage": false,
                 "searchKey": "server.GitRepoSyncer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3105,9 +3305,7 @@
                       "identifier": "GitRepoSyncer.Type",
                       "newPage": false,
                       "searchKey": "server.GitRepoSyncer.Type",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3127,9 +3325,7 @@
                       "identifier": "GitRepoSyncer.IsCloneable",
                       "newPage": false,
                       "searchKey": "server.GitRepoSyncer.IsCloneable",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3149,9 +3345,7 @@
                       "identifier": "GitRepoSyncer.CloneCommand",
                       "newPage": false,
                       "searchKey": "server.GitRepoSyncer.CloneCommand",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3171,7 +3365,9 @@
                       "identifier": "GitRepoSyncer.fetchCommand",
                       "newPage": false,
                       "searchKey": "server.GitRepoSyncer.fetchCommand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3191,9 +3387,7 @@
                       "identifier": "GitRepoSyncer.Fetch",
                       "newPage": false,
                       "searchKey": "server.GitRepoSyncer.Fetch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3213,9 +3407,7 @@
                       "identifier": "GitRepoSyncer.RemoteShowCommand",
                       "newPage": false,
                       "searchKey": "server.GitRepoSyncer.RemoteShowCommand",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3238,9 +3430,7 @@
                 "identifier": "PerforceDepotSyncer",
                 "newPage": false,
                 "searchKey": "server.PerforceDepotSyncer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3258,9 +3448,7 @@
                       "identifier": "PerforceDepotSyncer.Type",
                       "newPage": false,
                       "searchKey": "server.PerforceDepotSyncer.Type",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3280,9 +3468,7 @@
                       "identifier": "PerforceDepotSyncer.IsCloneable",
                       "newPage": false,
                       "searchKey": "server.PerforceDepotSyncer.IsCloneable",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3302,9 +3488,7 @@
                       "identifier": "PerforceDepotSyncer.CloneCommand",
                       "newPage": false,
                       "searchKey": "server.PerforceDepotSyncer.CloneCommand",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3324,9 +3508,7 @@
                       "identifier": "PerforceDepotSyncer.Fetch",
                       "newPage": false,
                       "searchKey": "server.PerforceDepotSyncer.Fetch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3346,9 +3528,7 @@
                       "identifier": "PerforceDepotSyncer.RemoteShowCommand",
                       "newPage": false,
                       "searchKey": "server.PerforceDepotSyncer.RemoteShowCommand",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3371,7 +3551,9 @@
                 "identifier": "fakeDiskSizer",
                 "newPage": false,
                 "searchKey": "server.fakeDiskSizer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3389,7 +3571,9 @@
                       "identifier": "fakeDiskSizer.BytesFreeOnDisk",
                       "newPage": false,
                       "searchKey": "server.fakeDiskSizer.BytesFreeOnDisk",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3409,7 +3593,9 @@
                       "identifier": "fakeDiskSizer.DiskSizeBytes",
                       "newPage": false,
                       "searchKey": "server.fakeDiskSizer.DiskSizeBytes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3432,7 +3618,9 @@
                 "identifier": "stubGitoliteClient",
                 "newPage": false,
                 "searchKey": "server.stubGitoliteClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3450,7 +3638,9 @@
                       "identifier": "stubGitoliteClient.ListRepos",
                       "newPage": false,
                       "searchKey": "server.stubGitoliteClient.ListRepos",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3473,7 +3663,9 @@
                 "identifier": "Test",
                 "newPage": false,
                 "searchKey": "server.Test",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3493,7 +3685,9 @@
                 "identifier": "flushFunc",
                 "newPage": false,
                 "searchKey": "server.flushFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3511,7 +3705,9 @@
                       "identifier": "flushFunc.Flush",
                       "newPage": false,
                       "searchKey": "server.flushFunc.Flush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3537,9 +3733,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -3557,7 +3751,9 @@
                 "identifier": "gitDirModTime",
                 "newPage": false,
                 "searchKey": "server.gitDirModTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3577,7 +3773,9 @@
                 "identifier": "dirSize",
                 "newPage": false,
                 "searchKey": "server.dirSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3597,7 +3795,9 @@
                 "identifier": "setRepositoryType",
                 "newPage": false,
                 "searchKey": "server.setRepositoryType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3617,7 +3817,9 @@
                 "identifier": "getRepositoryType",
                 "newPage": false,
                 "searchKey": "server.getRepositoryType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3637,7 +3839,9 @@
                 "identifier": "setRecloneTime",
                 "newPage": false,
                 "searchKey": "server.setRecloneTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3657,7 +3861,9 @@
                 "identifier": "getRecloneTime",
                 "newPage": false,
                 "searchKey": "server.getRecloneTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3677,7 +3883,9 @@
                 "identifier": "checkMaybeCorruptRepo",
                 "newPage": false,
                 "searchKey": "server.checkMaybeCorruptRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3697,7 +3905,9 @@
                 "identifier": "gitGC",
                 "newPage": false,
                 "searchKey": "server.gitGC",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3717,7 +3927,9 @@
                 "identifier": "gitConfigGet",
                 "newPage": false,
                 "searchKey": "server.gitConfigGet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3737,7 +3949,9 @@
                 "identifier": "gitConfigSet",
                 "newPage": false,
                 "searchKey": "server.gitConfigSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3757,7 +3971,9 @@
                 "identifier": "gitConfigUnset",
                 "newPage": false,
                 "searchKey": "server.gitConfigUnset",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3777,7 +3993,9 @@
                 "identifier": "jitterDuration",
                 "newPage": false,
                 "searchKey": "server.jitterDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3797,7 +4015,9 @@
                 "identifier": "wrapCmdError",
                 "newPage": false,
                 "searchKey": "server.wrapCmdError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3817,7 +4037,9 @@
                 "identifier": "removeFileOlderThan",
                 "newPage": false,
                 "searchKey": "server.removeFileOlderThan",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3837,7 +4059,9 @@
                 "identifier": "buildCustomFetchMappings",
                 "newPage": false,
                 "searchKey": "server.buildCustomFetchMappings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3857,7 +4081,9 @@
                 "identifier": "customFetchCmd",
                 "newPage": false,
                 "searchKey": "server.customFetchCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3877,7 +4103,9 @@
                 "identifier": "getGitolitePhabCallsign",
                 "newPage": false,
                 "searchKey": "server.getGitolitePhabCallsign",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3897,7 +4125,9 @@
                 "identifier": "flowrateWriter",
                 "newPage": false,
                 "searchKey": "server.flowrateWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3917,7 +4147,9 @@
                 "identifier": "cleanUpTmpRepo",
                 "newPage": false,
                 "searchKey": "server.cleanUpTmpRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3937,7 +4169,9 @@
                 "identifier": "ensureRefPrefix",
                 "newPage": false,
                 "searchKey": "server.ensureRefPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3957,7 +4191,9 @@
                 "identifier": "useRefspecOverrides",
                 "newPage": false,
                 "searchKey": "server.useRefspecOverrides",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3977,7 +4213,9 @@
                 "identifier": "refspecOverridesFetchCmd",
                 "newPage": false,
                 "searchKey": "server.refspecOverridesFetchCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3997,7 +4235,9 @@
                 "identifier": "debounce",
                 "newPage": false,
                 "searchKey": "server.debounce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4012,12 +4252,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/gitserver/server#init",
+              "pathID": "/cmd/gitserver/server#init.server.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.server.go",
                 "newPage": false,
                 "searchKey": "server.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4037,7 +4279,9 @@
                 "identifier": "runCommand",
                 "newPage": false,
                 "searchKey": "server.runCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4057,7 +4301,9 @@
                 "identifier": "shortGitCommandTimeout",
                 "newPage": false,
                 "searchKey": "server.shortGitCommandTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4077,7 +4323,9 @@
                 "identifier": "shortGitCommandSlow",
                 "newPage": false,
                 "searchKey": "server.shortGitCommandSlow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4097,7 +4345,9 @@
                 "identifier": "setGitAttributes",
                 "newPage": false,
                 "searchKey": "server.setGitAttributes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4117,7 +4367,9 @@
                 "identifier": "readCloneProgress",
                 "newPage": false,
                 "searchKey": "server.readCloneProgress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4137,7 +4389,9 @@
                 "identifier": "scanCRLF",
                 "newPage": false,
                 "searchKey": "server.scanCRLF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4157,7 +4411,9 @@
                 "identifier": "honeySampleRate",
                 "newPage": false,
                 "searchKey": "server.honeySampleRate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4177,7 +4433,9 @@
                 "identifier": "removeBadRefs",
                 "newPage": false,
                 "searchKey": "server.removeBadRefs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4197,7 +4455,9 @@
                 "identifier": "ensureHEAD",
                 "newPage": false,
                 "searchKey": "server.ensureHEAD",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4217,7 +4477,9 @@
                 "identifier": "setHEAD",
                 "newPage": false,
                 "searchKey": "server.setHEAD",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4237,7 +4499,9 @@
                 "identifier": "setLastChanged",
                 "newPage": false,
                 "searchKey": "server.setLastChanged",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4257,7 +4521,9 @@
                 "identifier": "computeLatestCommitTimestamp",
                 "newPage": false,
                 "searchKey": "server.computeLatestCommitTimestamp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4277,7 +4543,9 @@
                 "identifier": "computeRefHash",
                 "newPage": false,
                 "searchKey": "server.computeRefHash",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4297,7 +4565,9 @@
                 "identifier": "quickSymbolicRefHead",
                 "newPage": false,
                 "searchKey": "server.quickSymbolicRefHead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4317,7 +4587,9 @@
                 "identifier": "quickRevParseHead",
                 "newPage": false,
                 "searchKey": "server.quickRevParseHead",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4337,7 +4609,9 @@
                 "identifier": "errorString",
                 "newPage": false,
                 "searchKey": "server.errorString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4357,7 +4631,9 @@
                 "identifier": "isAbsoluteRevision",
                 "newPage": false,
                 "searchKey": "server.isAbsoluteRevision",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4377,7 +4653,9 @@
                 "identifier": "cloneStatus",
                 "newPage": false,
                 "searchKey": "server.cloneStatus",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4397,7 +4675,9 @@
                 "identifier": "isAlwaysCloningTest",
                 "newPage": false,
                 "searchKey": "server.isAlwaysCloningTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4417,7 +4697,9 @@
                 "identifier": "checkSpecArgSafety",
                 "newPage": false,
                 "searchKey": "server.checkSpecArgSafety",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4437,7 +4719,9 @@
                 "identifier": "runWithRemoteOpts",
                 "newPage": false,
                 "searchKey": "server.runWithRemoteOpts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4457,7 +4741,9 @@
                 "identifier": "runWith",
                 "newPage": false,
                 "searchKey": "server.runWith",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4477,7 +4763,9 @@
                 "identifier": "configureRemoteGitCommand",
                 "newPage": false,
                 "searchKey": "server.configureRemoteGitCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4497,7 +4785,9 @@
                 "identifier": "writeTempFile",
                 "newPage": false,
                 "searchKey": "server.writeTempFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4517,7 +4807,9 @@
                 "identifier": "hackilyGetHTTPFlusher",
                 "newPage": false,
                 "searchKey": "server.hackilyGetHTTPFlusher",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4537,7 +4829,9 @@
                 "identifier": "mapToLog15Ctx",
                 "newPage": false,
                 "searchKey": "server.mapToLog15Ctx",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4557,7 +4851,9 @@
                 "identifier": "updateFileIfDifferent",
                 "newPage": false,
                 "searchKey": "server.updateFileIfDifferent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4577,7 +4873,9 @@
                 "identifier": "renameAndSync",
                 "newPage": false,
                 "searchKey": "server.renameAndSync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4597,7 +4895,9 @@
                 "identifier": "fsync",
                 "newPage": false,
                 "searchKey": "server.fsync",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4617,7 +4917,9 @@
                 "identifier": "bestEffortWalk",
                 "newPage": false,
                 "searchKey": "server.bestEffortWalk",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4637,7 +4939,9 @@
                 "identifier": "generateSocketFilename",
                 "newPage": false,
                 "searchKey": "server.generateSocketFilename",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4657,7 +4961,9 @@
                 "identifier": "decomposePerforceRemoteURL",
                 "newPage": false,
                 "searchKey": "server.decomposePerforceRemoteURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4677,7 +4983,9 @@
                 "identifier": "p4ping",
                 "newPage": false,
                 "searchKey": "server.p4ping",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4697,7 +5005,9 @@
                 "identifier": "p4trust",
                 "newPage": false,
                 "searchKey": "server.p4trust",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4717,7 +5027,9 @@
                 "identifier": "p4pingWithTrust",
                 "newPage": false,
                 "searchKey": "server.p4pingWithTrust",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4737,7 +5049,9 @@
                 "identifier": "TestCleanup_computeStats",
                 "newPage": false,
                 "searchKey": "server.TestCleanup_computeStats",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4757,7 +5071,9 @@
                 "identifier": "TestCleanupInactive",
                 "newPage": false,
                 "searchKey": "server.TestCleanupInactive",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4777,7 +5093,9 @@
                 "identifier": "TestGitGCAuto",
                 "newPage": false,
                 "searchKey": "server.TestGitGCAuto",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4797,7 +5115,9 @@
                 "identifier": "TestCleanupExpired",
                 "newPage": false,
                 "searchKey": "server.TestCleanupExpired",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4817,7 +5137,9 @@
                 "identifier": "TestCleanupOldLocks",
                 "newPage": false,
                 "searchKey": "server.TestCleanupOldLocks",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4837,7 +5159,9 @@
                 "identifier": "TestSetupAndClearTmp",
                 "newPage": false,
                 "searchKey": "server.TestSetupAndClearTmp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4857,7 +5181,9 @@
                 "identifier": "TestSetupAndClearTmp_Empty",
                 "newPage": false,
                 "searchKey": "server.TestSetupAndClearTmp_Empty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4877,7 +5203,9 @@
                 "identifier": "TestRemoveRepoDirectory",
                 "newPage": false,
                 "searchKey": "server.TestRemoveRepoDirectory",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4897,7 +5225,9 @@
                 "identifier": "TestRemoveRepoDirectory_Empty",
                 "newPage": false,
                 "searchKey": "server.TestRemoveRepoDirectory_Empty",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4917,7 +5247,9 @@
                 "identifier": "TestHowManyBytesToFree",
                 "newPage": false,
                 "searchKey": "server.TestHowManyBytesToFree",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4937,7 +5269,9 @@
                 "identifier": "mkFiles",
                 "newPage": false,
                 "searchKey": "server.mkFiles",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4957,7 +5291,9 @@
                 "identifier": "writeFile",
                 "newPage": false,
                 "searchKey": "server.writeFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4977,7 +5313,9 @@
                 "identifier": "assertPaths",
                 "newPage": false,
                 "searchKey": "server.assertPaths",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4997,7 +5335,9 @@
                 "identifier": "isEmptyDir",
                 "newPage": false,
                 "searchKey": "server.isEmptyDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5017,7 +5357,9 @@
                 "identifier": "TestFreeUpSpace",
                 "newPage": false,
                 "searchKey": "server.TestFreeUpSpace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5037,7 +5379,9 @@
                 "identifier": "makeFakeRepo",
                 "newPage": false,
                 "searchKey": "server.makeFakeRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5057,7 +5401,9 @@
                 "identifier": "TestMaybeCorruptStderrRe",
                 "newPage": false,
                 "searchKey": "server.TestMaybeCorruptStderrRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5077,7 +5423,9 @@
                 "identifier": "TestJitterDuration",
                 "newPage": false,
                 "searchKey": "server.TestJitterDuration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5097,7 +5445,9 @@
                 "identifier": "TestEmptyCustomGitFetch",
                 "newPage": false,
                 "searchKey": "server.TestEmptyCustomGitFetch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5117,7 +5467,9 @@
                 "identifier": "TestCustomGitFetch",
                 "newPage": false,
                 "searchKey": "server.TestCustomGitFetch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5137,7 +5489,9 @@
                 "identifier": "TestServer_handleGet",
                 "newPage": false,
                 "searchKey": "server.TestServer_handleGet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5157,7 +5511,9 @@
                 "identifier": "TestServer_handleGet_invalid",
                 "newPage": false,
                 "searchKey": "server.TestServer_handleGet_invalid",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5177,7 +5533,9 @@
                 "identifier": "Test_Gitolite_listRepos",
                 "newPage": false,
                 "searchKey": "server.Test_Gitolite_listRepos",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5197,7 +5555,9 @@
                 "identifier": "TestServer_handleList",
                 "newPage": false,
                 "searchKey": "server.TestServer_handleList",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5217,7 +5577,9 @@
                 "identifier": "TestServer_handleRepoInfo",
                 "newPage": false,
                 "searchKey": "server.TestServer_handleRepoInfo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5237,7 +5599,9 @@
                 "identifier": "TestRequest",
                 "newPage": false,
                 "searchKey": "server.TestRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5257,7 +5621,9 @@
                 "identifier": "TestServer_handleP4Exec",
                 "newPage": false,
                 "searchKey": "server.TestServer_handleP4Exec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5277,7 +5643,9 @@
                 "identifier": "BenchmarkQuickRevParseHeadQuickSymbolicRefHead_packed_refs",
                 "newPage": false,
                 "searchKey": "server.BenchmarkQuickRevParseHeadQuickSymbolicRefHead_packed_refs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5297,7 +5665,9 @@
                 "identifier": "BenchmarkQuickRevParseHeadQuickSymbolicRefHead_unpacked_refs",
                 "newPage": false,
                 "searchKey": "server.BenchmarkQuickRevParseHeadQuickSymbolicRefHead_unpacked_refs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5317,7 +5687,9 @@
                 "identifier": "TestUrlRedactor",
                 "newPage": false,
                 "searchKey": "server.TestUrlRedactor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5337,7 +5709,9 @@
                 "identifier": "runCmd",
                 "newPage": false,
                 "searchKey": "server.runCmd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5357,7 +5731,9 @@
                 "identifier": "staticGetRemoteURL",
                 "newPage": false,
                 "searchKey": "server.staticGetRemoteURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5377,7 +5753,9 @@
                 "identifier": "makeSingleCommitRepo",
                 "newPage": false,
                 "searchKey": "server.makeSingleCommitRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5397,7 +5775,9 @@
                 "identifier": "TestCloneRepo",
                 "newPage": false,
                 "searchKey": "server.TestCloneRepo",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5417,7 +5797,9 @@
                 "identifier": "TestHandleRepoUpdate",
                 "newPage": false,
                 "searchKey": "server.TestHandleRepoUpdate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5437,7 +5819,9 @@
                 "identifier": "TestRemoveBadRefs",
                 "newPage": false,
                 "searchKey": "server.TestRemoveBadRefs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5457,7 +5841,9 @@
                 "identifier": "TestCloneRepo_EnsureValidity",
                 "newPage": false,
                 "searchKey": "server.TestCloneRepo_EnsureValidity",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5477,7 +5863,9 @@
                 "identifier": "TestHostnameMatch",
                 "newPage": false,
                 "searchKey": "server.TestHostnameMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5497,7 +5885,9 @@
                 "identifier": "TestSyncRepoState",
                 "newPage": false,
                 "searchKey": "server.TestSyncRepoState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5517,7 +5907,9 @@
                 "identifier": "TestMain",
                 "newPage": false,
                 "searchKey": "server.TestMain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5537,7 +5929,9 @@
                 "identifier": "TestConfigureRemoteGitCommand",
                 "newPage": false,
                 "searchKey": "server.TestConfigureRemoteGitCommand",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5557,7 +5951,9 @@
                 "identifier": "TestConfigureRemoteGitCommand_tls",
                 "newPage": false,
                 "searchKey": "server.TestConfigureRemoteGitCommand_tls",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5577,7 +5973,9 @@
                 "identifier": "TestProgressWriter",
                 "newPage": false,
                 "searchKey": "server.TestProgressWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5597,7 +5995,9 @@
                 "identifier": "TestUpdateFileIfDifferent",
                 "newPage": false,
                 "searchKey": "server.TestUpdateFileIfDifferent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5617,7 +6017,9 @@
                 "identifier": "TestFlushingResponseWriter",
                 "newPage": false,
                 "searchKey": "server.TestFlushingResponseWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5637,7 +6039,9 @@
                 "identifier": "TestSSHAgent",
                 "newPage": false,
                 "searchKey": "server.TestSSHAgent",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5657,7 +6061,9 @@
                 "identifier": "TestDecomposePerforceRemoteURL",
                 "newPage": false,
                 "searchKey": "server.TestDecomposePerforceRemoteURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

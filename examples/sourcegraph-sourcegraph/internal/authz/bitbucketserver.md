@@ -44,10 +44,15 @@ Package bitbucketserver contains an authorization provider for Bitbucket Server.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="errNoResults" href="#errNoResults">var errNoResults</a>
 
 ```
 searchKey: bitbucketserver.errNoResults
+tags: [private]
 ```
 
 ```Go
@@ -58,6 +63,7 @@ var errNoResults = errors.New("no results returned by the Bitbucket Server API")
 
 ```
 searchKey: bitbucketserver.update
+tags: [private]
 ```
 
 ```Go
@@ -66,11 +72,14 @@ var update = flag.Bool("update", false, "update testdata")
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Provider" href="#Provider">type Provider struct</a>
 
 ```
 searchKey: bitbucketserver.Provider
-tags: [exported]
 ```
 
 ```Go
@@ -93,7 +102,6 @@ Provider is an implementation of AuthzProvider that provides repository permissi
 
 ```
 searchKey: bitbucketserver.NewProvider
-tags: [exported]
 ```
 
 ```Go
@@ -106,6 +114,7 @@ NewProvider returns a new Bitbucket Server authorization provider that uses the 
 
 ```
 searchKey: bitbucketserver.newProvider
+tags: [private]
 ```
 
 ```Go
@@ -116,7 +125,6 @@ func newProvider(cli *bitbucketserver.Client) *Provider
 
 ```
 searchKey: bitbucketserver.Provider.Validate
-tags: [exported]
 ```
 
 ```Go
@@ -129,7 +137,6 @@ Validate validates that the Provider has access to the Bitbucket Server API with
 
 ```
 searchKey: bitbucketserver.Provider.URN
-tags: [exported]
 ```
 
 ```Go
@@ -140,7 +147,6 @@ func (p *Provider) URN() string
 
 ```
 searchKey: bitbucketserver.Provider.ServiceID
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +159,6 @@ ServiceID returns the absolute URL that identifies the Bitbucket Server instance
 
 ```
 searchKey: bitbucketserver.Provider.ServiceType
-tags: [exported]
 ```
 
 ```Go
@@ -166,7 +171,6 @@ ServiceType returns the type of this Provider, namely, "bitbucketServer".
 
 ```
 searchKey: bitbucketserver.Provider.FetchAccount
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +183,6 @@ FetchAccount satisfies the authz.Provider interface.
 
 ```
 searchKey: bitbucketserver.Provider.FetchUserPerms
-tags: [exported]
 ```
 
 ```Go
@@ -196,7 +199,6 @@ API docs: [https://docs.atlassian.com/bitbucket-server/rest/5.16.0/bitbucket-res
 
 ```
 searchKey: bitbucketserver.Provider.FetchRepoPerms
-tags: [exported]
 ```
 
 ```Go
@@ -213,6 +215,7 @@ API docs: [https://docs.atlassian.com/bitbucket-server/rest/5.16.0/bitbucket-res
 
 ```
 searchKey: bitbucketserver.Provider.repoIDs
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +226,7 @@ func (p *Provider) repoIDs(ctx context.Context, username string, public bool) ([
 
 ```
 searchKey: bitbucketserver.Provider.repoIDsFromAPI
+tags: [private]
 ```
 
 ```Go
@@ -235,6 +239,7 @@ repoIDsFromAPI returns all repositories for which the given user has the permiss
 
 ```
 searchKey: bitbucketserver.Provider.repoIDsFromPlugin
+tags: [private]
 ```
 
 ```Go
@@ -245,6 +250,7 @@ func (p *Provider) repoIDsFromPlugin(ctx context.Context, username string) (ids 
 
 ```
 searchKey: bitbucketserver.Provider.user
+tags: [private]
 ```
 
 ```Go
@@ -255,6 +261,7 @@ func (p *Provider) user(ctx context.Context, username string, fs ...bitbucketser
 
 ```
 searchKey: bitbucketserver.Provider.userIDs
+tags: [private]
 ```
 
 ```Go
@@ -265,6 +272,7 @@ func (p *Provider) userIDs(ctx context.Context, repoID string) (ids []int, err e
 
 ```
 searchKey: bitbucketserver.fixtures
+tags: [private]
 ```
 
 ```Go
@@ -284,6 +292,7 @@ fixtures contains the data we need loaded in Bitbucket Server API to run the Pro
 
 ```
 searchKey: bitbucketserver.newFixtures
+tags: [private]
 ```
 
 ```Go
@@ -294,6 +303,7 @@ func newFixtures() *fixtures
 
 ```
 searchKey: bitbucketserver.fixtures.load
+tags: [private]
 ```
 
 ```Go
@@ -304,6 +314,7 @@ func (f fixtures) load(t *testing.T, cli *bitbucketserver.Client)
 
 ```
 searchKey: bitbucketserver.codeHost
+tags: [private]
 ```
 
 ```Go
@@ -316,6 +327,7 @@ type codeHost struct {
 
 ```
 searchKey: bitbucketserver.codeHost.externalAccount
+tags: [private]
 ```
 
 ```Go
@@ -324,11 +336,14 @@ func (h codeHost) externalAccount(userID int32, u *bitbucketserver.User) *extsvc
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewAuthzProviders" href="#NewAuthzProviders">func NewAuthzProviders(conns []*types.BitbucketServerConnection) (ps []authz.Provider, problems []string, warnings []string)</a>
 
 ```
 searchKey: bitbucketserver.NewAuthzProviders
-tags: [exported]
 ```
 
 ```Go
@@ -343,6 +358,7 @@ NewAuthzProviders returns the set of Bitbucket Server authz providers derived fr
 
 ```
 searchKey: bitbucketserver.newAuthzProvider
+tags: [private]
 ```
 
 ```Go
@@ -356,7 +372,6 @@ func newAuthzProvider(
 
 ```
 searchKey: bitbucketserver.ValidateAuthz
-tags: [exported]
 ```
 
 ```Go
@@ -369,6 +384,7 @@ ValidateAuthz validates the authorization fields of the given BitbucketServer ex
 
 ```
 searchKey: bitbucketserver.TestIntegration
+tags: [private]
 ```
 
 ```Go
@@ -379,6 +395,7 @@ func TestIntegration(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestMain
+tags: [private]
 ```
 
 ```Go
@@ -389,6 +406,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: bitbucketserver.TestProvider_Validate
+tags: [private]
 ```
 
 ```Go
@@ -399,6 +417,7 @@ func TestProvider_Validate(t *testing.T)
 
 ```
 searchKey: bitbucketserver.testProviderFetchAccount
+tags: [private]
 ```
 
 ```Go
@@ -409,6 +428,7 @@ func testProviderFetchAccount(f *fixtures, cli *bitbucketserver.Client) func(*te
 
 ```
 searchKey: bitbucketserver.testProviderFetchUserPerms
+tags: [private]
 ```
 
 ```Go
@@ -419,6 +439,7 @@ func testProviderFetchUserPerms(f *fixtures, cli *bitbucketserver.Client) func(*
 
 ```
 searchKey: bitbucketserver.testProviderFetchRepoPerms
+tags: [private]
 ```
 
 ```Go
@@ -429,6 +450,7 @@ func testProviderFetchRepoPerms(f *fixtures, cli *bitbucketserver.Client) func(*
 
 ```
 searchKey: bitbucketserver.marshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -439,6 +461,7 @@ func marshalJSON(v interface{}) []byte
 
 ```
 searchKey: bitbucketserver.newClient
+tags: [private]
 ```
 
 ```Go

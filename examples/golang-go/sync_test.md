@@ -88,7 +88,7 @@
     * [func BenchmarkContendedSemaphore(b *testing.B)](#BenchmarkContendedSemaphore)
     * [func HammerMutex(m *Mutex, loops int, cdone chan bool)](#HammerMutex)
     * [func TestMutex(t *testing.T)](#TestMutex)
-    * [func init()](#init)
+    * [func init()](#init.mutex_test.go)
     * [func TestMutexMisuse(t *testing.T)](#TestMutexMisuse)
     * [func TestMutexFairness(t *testing.T)](#TestMutexFairness)
     * [func BenchmarkMutexUncontended(b *testing.B)](#BenchmarkMutexUncontended)
@@ -157,10 +157,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="opLoad" href="#opLoad">const opLoad</a>
 
 ```
 searchKey: sync_test.opLoad
+tags: [private]
 ```
 
 ```Go
@@ -171,6 +176,7 @@ const opLoad = mapOp("Load")
 
 ```
 searchKey: sync_test.opStore
+tags: [private]
 ```
 
 ```Go
@@ -181,6 +187,7 @@ const opStore = mapOp("Store")
 
 ```
 searchKey: sync_test.opLoadOrStore
+tags: [private]
 ```
 
 ```Go
@@ -191,6 +198,7 @@ const opLoadOrStore = mapOp("LoadOrStore")
 
 ```
 searchKey: sync_test.opLoadAndDelete
+tags: [private]
 ```
 
 ```Go
@@ -201,6 +209,7 @@ const opLoadAndDelete = mapOp("LoadAndDelete")
 
 ```
 searchKey: sync_test.opDelete
+tags: [private]
 ```
 
 ```Go
@@ -209,10 +218,15 @@ const opDelete = mapOp("Delete")
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="bufPool" href="#bufPool">var bufPool</a>
 
 ```
 searchKey: sync_test.bufPool
+tags: [private]
 ```
 
 ```Go
@@ -228,6 +242,7 @@ var bufPool = sync.Pool{
 
 ```
 searchKey: sync_test.http
+tags: [private]
 ```
 
 ```Go
@@ -238,6 +253,7 @@ var http httpPkg
 
 ```
 searchKey: sync_test.mapOps
+tags: [private]
 ```
 
 ```Go
@@ -248,6 +264,7 @@ var mapOps = [...]mapOp{opLoad, opStore, opLoadOrStore, opLoadAndDelete, opDelet
 
 ```
 searchKey: sync_test.misuseTests
+tags: [private]
 ```
 
 ```Go
@@ -258,6 +275,7 @@ var misuseTests = ...
 
 ```
 searchKey: sync_test.globalSink
+tags: [private]
 ```
 
 ```Go
@@ -266,10 +284,15 @@ var globalSink interface{}
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="httpPkg" href="#httpPkg">type httpPkg struct{}</a>
 
 ```
 searchKey: sync_test.httpPkg
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +303,7 @@ type httpPkg struct{}
 
 ```
 searchKey: sync_test.httpPkg.Get
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +314,7 @@ func (httpPkg) Get(url string)
 
 ```
 searchKey: sync_test.bench
+tags: [private]
 ```
 
 ```Go
@@ -303,6 +328,7 @@ type bench struct {
 
 ```
 searchKey: sync_test.mapInterface
+tags: [private]
 ```
 
 ```Go
@@ -322,6 +348,7 @@ mapInterface is the interface Map implements.
 
 ```
 searchKey: sync_test.RWMutexMap
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +364,7 @@ RWMutexMap is an implementation of mapInterface using a sync.RWMutex.
 
 ```
 searchKey: sync_test.RWMutexMap.Load
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +375,7 @@ func (m *RWMutexMap) Load(key interface{}) (value interface{}, ok bool)
 
 ```
 searchKey: sync_test.RWMutexMap.Store
+tags: [private]
 ```
 
 ```Go
@@ -357,6 +386,7 @@ func (m *RWMutexMap) Store(key, value interface{})
 
 ```
 searchKey: sync_test.RWMutexMap.LoadOrStore
+tags: [private]
 ```
 
 ```Go
@@ -367,6 +397,7 @@ func (m *RWMutexMap) LoadOrStore(key, value interface{}) (actual interface{}, lo
 
 ```
 searchKey: sync_test.RWMutexMap.LoadAndDelete
+tags: [private]
 ```
 
 ```Go
@@ -377,6 +408,7 @@ func (m *RWMutexMap) LoadAndDelete(key interface{}) (value interface{}, loaded b
 
 ```
 searchKey: sync_test.RWMutexMap.Delete
+tags: [private]
 ```
 
 ```Go
@@ -387,6 +419,7 @@ func (m *RWMutexMap) Delete(key interface{})
 
 ```
 searchKey: sync_test.RWMutexMap.Range
+tags: [private]
 ```
 
 ```Go
@@ -397,6 +430,7 @@ func (m *RWMutexMap) Range(f func(key, value interface{}) (shouldContinue bool))
 
 ```
 searchKey: sync_test.DeepCopyMap
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +446,7 @@ DeepCopyMap is an implementation of mapInterface using a Mutex and atomic.Value.
 
 ```
 searchKey: sync_test.DeepCopyMap.Load
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +457,7 @@ func (m *DeepCopyMap) Load(key interface{}) (value interface{}, ok bool)
 
 ```
 searchKey: sync_test.DeepCopyMap.Store
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +468,7 @@ func (m *DeepCopyMap) Store(key, value interface{})
 
 ```
 searchKey: sync_test.DeepCopyMap.LoadOrStore
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +479,7 @@ func (m *DeepCopyMap) LoadOrStore(key, value interface{}) (actual interface{}, l
 
 ```
 searchKey: sync_test.DeepCopyMap.LoadAndDelete
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +490,7 @@ func (m *DeepCopyMap) LoadAndDelete(key interface{}) (value interface{}, loaded 
 
 ```
 searchKey: sync_test.DeepCopyMap.Delete
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +501,7 @@ func (m *DeepCopyMap) Delete(key interface{})
 
 ```
 searchKey: sync_test.DeepCopyMap.Range
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +512,7 @@ func (m *DeepCopyMap) Range(f func(key, value interface{}) (shouldContinue bool)
 
 ```
 searchKey: sync_test.DeepCopyMap.dirty
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +523,7 @@ func (m *DeepCopyMap) dirty() map[interface{}]interface{}
 
 ```
 searchKey: sync_test.mapOp
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +534,7 @@ type mapOp string
 
 ```
 searchKey: sync_test.mapCall
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +550,7 @@ mapCall is a quick.Generator for calls on mapInterface.
 
 ```
 searchKey: sync_test.mapCall.apply
+tags: [private]
 ```
 
 ```Go
@@ -517,6 +561,7 @@ func (c mapCall) apply(m mapInterface) (interface{}, bool)
 
 ```
 searchKey: sync_test.mapCall.Generate
+tags: [private]
 ```
 
 ```Go
@@ -527,6 +572,7 @@ func (mapCall) Generate(r *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: sync_test.mapResult
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +586,7 @@ type mapResult struct {
 
 ```
 searchKey: sync_test.one
+tags: [private]
 ```
 
 ```Go
@@ -550,6 +597,7 @@ type one int
 
 ```
 searchKey: sync_test.one.Increment
+tags: [private]
 ```
 
 ```Go
@@ -558,10 +606,15 @@ func (o *one) Increment()
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestCondSignal" href="#TestCondSignal">func TestCondSignal(t *testing.T)</a>
 
 ```
 searchKey: sync_test.TestCondSignal
+tags: [private]
 ```
 
 ```Go
@@ -572,6 +625,7 @@ func TestCondSignal(t *testing.T)
 
 ```
 searchKey: sync_test.TestCondSignalGenerations
+tags: [private]
 ```
 
 ```Go
@@ -582,6 +636,7 @@ func TestCondSignalGenerations(t *testing.T)
 
 ```
 searchKey: sync_test.TestCondBroadcast
+tags: [private]
 ```
 
 ```Go
@@ -592,6 +647,7 @@ func TestCondBroadcast(t *testing.T)
 
 ```
 searchKey: sync_test.TestRace
+tags: [private]
 ```
 
 ```Go
@@ -602,6 +658,7 @@ func TestRace(t *testing.T)
 
 ```
 searchKey: sync_test.TestCondSignalStealing
+tags: [private]
 ```
 
 ```Go
@@ -612,6 +669,7 @@ func TestCondSignalStealing(t *testing.T)
 
 ```
 searchKey: sync_test.TestCondCopy
+tags: [private]
 ```
 
 ```Go
@@ -622,6 +680,7 @@ func TestCondCopy(t *testing.T)
 
 ```
 searchKey: sync_test.BenchmarkCond1
+tags: [private]
 ```
 
 ```Go
@@ -632,6 +691,7 @@ func BenchmarkCond1(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkCond2
+tags: [private]
 ```
 
 ```Go
@@ -642,6 +702,7 @@ func BenchmarkCond2(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkCond4
+tags: [private]
 ```
 
 ```Go
@@ -652,6 +713,7 @@ func BenchmarkCond4(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkCond8
+tags: [private]
 ```
 
 ```Go
@@ -662,6 +724,7 @@ func BenchmarkCond8(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkCond16
+tags: [private]
 ```
 
 ```Go
@@ -672,6 +735,7 @@ func BenchmarkCond16(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkCond32
+tags: [private]
 ```
 
 ```Go
@@ -682,6 +746,7 @@ func BenchmarkCond32(b *testing.B)
 
 ```
 searchKey: sync_test.benchmarkCond
+tags: [private]
 ```
 
 ```Go
@@ -692,6 +757,7 @@ func benchmarkCond(b *testing.B, waiters int)
 
 ```
 searchKey: sync_test.timeNow
+tags: [private]
 ```
 
 ```Go
@@ -704,6 +770,7 @@ timeNow is a fake version of time.Now for tests.
 
 ```
 searchKey: sync_test.Log
+tags: [private]
 ```
 
 ```Go
@@ -714,6 +781,7 @@ func Log(w io.Writer, key, val string)
 
 ```
 searchKey: sync_test.ExamplePool
+tags: [private]
 ```
 
 ```Go
@@ -724,6 +792,7 @@ func ExamplePool()
 
 ```
 searchKey: sync_test.ExampleWaitGroup
+tags: [private]
 ```
 
 ```Go
@@ -736,6 +805,7 @@ This example fetches several URLs concurrently, using a WaitGroup to block until
 
 ```
 searchKey: sync_test.ExampleOnce
+tags: [private]
 ```
 
 ```Go
@@ -746,6 +816,7 @@ func ExampleOnce()
 
 ```
 searchKey: sync_test.benchMap
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +827,7 @@ func benchMap(b *testing.B, bench bench)
 
 ```
 searchKey: sync_test.BenchmarkLoadMostlyHits
+tags: [private]
 ```
 
 ```Go
@@ -766,6 +838,7 @@ func BenchmarkLoadMostlyHits(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkLoadMostlyMisses
+tags: [private]
 ```
 
 ```Go
@@ -776,6 +849,7 @@ func BenchmarkLoadMostlyMisses(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkLoadOrStoreBalanced
+tags: [private]
 ```
 
 ```Go
@@ -786,6 +860,7 @@ func BenchmarkLoadOrStoreBalanced(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkLoadOrStoreUnique
+tags: [private]
 ```
 
 ```Go
@@ -796,6 +871,7 @@ func BenchmarkLoadOrStoreUnique(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkLoadOrStoreCollision
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +882,7 @@ func BenchmarkLoadOrStoreCollision(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkLoadAndDeleteBalanced
+tags: [private]
 ```
 
 ```Go
@@ -816,6 +893,7 @@ func BenchmarkLoadAndDeleteBalanced(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkLoadAndDeleteUnique
+tags: [private]
 ```
 
 ```Go
@@ -826,6 +904,7 @@ func BenchmarkLoadAndDeleteUnique(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkLoadAndDeleteCollision
+tags: [private]
 ```
 
 ```Go
@@ -836,6 +915,7 @@ func BenchmarkLoadAndDeleteCollision(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkRange
+tags: [private]
 ```
 
 ```Go
@@ -846,6 +926,7 @@ func BenchmarkRange(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkAdversarialAlloc
+tags: [private]
 ```
 
 ```Go
@@ -860,6 +941,7 @@ This forces the Load calls to always acquire the map's mutex.
 
 ```
 searchKey: sync_test.BenchmarkAdversarialDelete
+tags: [private]
 ```
 
 ```Go
@@ -874,6 +956,7 @@ This forces the Load calls to always acquire the map's mutex and periodically ma
 
 ```
 searchKey: sync_test.BenchmarkDeleteCollision
+tags: [private]
 ```
 
 ```Go
@@ -884,6 +967,7 @@ func BenchmarkDeleteCollision(b *testing.B)
 
 ```
 searchKey: sync_test.randValue
+tags: [private]
 ```
 
 ```Go
@@ -894,6 +978,7 @@ func randValue(r *rand.Rand) interface{}
 
 ```
 searchKey: sync_test.applyCalls
+tags: [private]
 ```
 
 ```Go
@@ -904,6 +989,7 @@ func applyCalls(m mapInterface, calls []mapCall) (results []mapResult, final map
 
 ```
 searchKey: sync_test.applyMap
+tags: [private]
 ```
 
 ```Go
@@ -914,6 +1000,7 @@ func applyMap(calls []mapCall) ([]mapResult, map[interface{}]interface{})
 
 ```
 searchKey: sync_test.applyRWMutexMap
+tags: [private]
 ```
 
 ```Go
@@ -924,6 +1011,7 @@ func applyRWMutexMap(calls []mapCall) ([]mapResult, map[interface{}]interface{})
 
 ```
 searchKey: sync_test.applyDeepCopyMap
+tags: [private]
 ```
 
 ```Go
@@ -934,6 +1022,7 @@ func applyDeepCopyMap(calls []mapCall) ([]mapResult, map[interface{}]interface{}
 
 ```
 searchKey: sync_test.TestMapMatchesRWMutex
+tags: [private]
 ```
 
 ```Go
@@ -944,6 +1033,7 @@ func TestMapMatchesRWMutex(t *testing.T)
 
 ```
 searchKey: sync_test.TestMapMatchesDeepCopy
+tags: [private]
 ```
 
 ```Go
@@ -954,6 +1044,7 @@ func TestMapMatchesDeepCopy(t *testing.T)
 
 ```
 searchKey: sync_test.TestConcurrentRange
+tags: [private]
 ```
 
 ```Go
@@ -964,6 +1055,7 @@ func TestConcurrentRange(t *testing.T)
 
 ```
 searchKey: sync_test.TestIssue40999
+tags: [private]
 ```
 
 ```Go
@@ -974,6 +1066,7 @@ func TestIssue40999(t *testing.T)
 
 ```
 searchKey: sync_test.HammerSemaphore
+tags: [private]
 ```
 
 ```Go
@@ -984,6 +1077,7 @@ func HammerSemaphore(s *uint32, loops int, cdone chan bool)
 
 ```
 searchKey: sync_test.TestSemaphore
+tags: [private]
 ```
 
 ```Go
@@ -994,6 +1088,7 @@ func TestSemaphore(t *testing.T)
 
 ```
 searchKey: sync_test.BenchmarkUncontendedSemaphore
+tags: [private]
 ```
 
 ```Go
@@ -1004,6 +1099,7 @@ func BenchmarkUncontendedSemaphore(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkContendedSemaphore
+tags: [private]
 ```
 
 ```Go
@@ -1014,6 +1110,7 @@ func BenchmarkContendedSemaphore(b *testing.B)
 
 ```
 searchKey: sync_test.HammerMutex
+tags: [private]
 ```
 
 ```Go
@@ -1024,16 +1121,18 @@ func HammerMutex(m *Mutex, loops int, cdone chan bool)
 
 ```
 searchKey: sync_test.TestMutex
+tags: [private]
 ```
 
 ```Go
 func TestMutex(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.mutex_test.go" href="#init.mutex_test.go">func init()</a>
 
 ```
 searchKey: sync_test.init
+tags: [private]
 ```
 
 ```Go
@@ -1044,6 +1143,7 @@ func init()
 
 ```
 searchKey: sync_test.TestMutexMisuse
+tags: [private]
 ```
 
 ```Go
@@ -1054,6 +1154,7 @@ func TestMutexMisuse(t *testing.T)
 
 ```
 searchKey: sync_test.TestMutexFairness
+tags: [private]
 ```
 
 ```Go
@@ -1064,6 +1165,7 @@ func TestMutexFairness(t *testing.T)
 
 ```
 searchKey: sync_test.BenchmarkMutexUncontended
+tags: [private]
 ```
 
 ```Go
@@ -1074,6 +1176,7 @@ func BenchmarkMutexUncontended(b *testing.B)
 
 ```
 searchKey: sync_test.benchmarkMutex
+tags: [private]
 ```
 
 ```Go
@@ -1084,6 +1187,7 @@ func benchmarkMutex(b *testing.B, slack, work bool)
 
 ```
 searchKey: sync_test.BenchmarkMutex
+tags: [private]
 ```
 
 ```Go
@@ -1094,6 +1198,7 @@ func BenchmarkMutex(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkMutexSlack
+tags: [private]
 ```
 
 ```Go
@@ -1104,6 +1209,7 @@ func BenchmarkMutexSlack(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkMutexWork
+tags: [private]
 ```
 
 ```Go
@@ -1114,6 +1220,7 @@ func BenchmarkMutexWork(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkMutexWorkSlack
+tags: [private]
 ```
 
 ```Go
@@ -1124,6 +1231,7 @@ func BenchmarkMutexWorkSlack(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkMutexNoSpin
+tags: [private]
 ```
 
 ```Go
@@ -1134,6 +1242,7 @@ func BenchmarkMutexNoSpin(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkMutexSpin
+tags: [private]
 ```
 
 ```Go
@@ -1144,6 +1253,7 @@ func BenchmarkMutexSpin(b *testing.B)
 
 ```
 searchKey: sync_test.run
+tags: [private]
 ```
 
 ```Go
@@ -1154,6 +1264,7 @@ func run(t *testing.T, once *Once, o *one, c chan bool)
 
 ```
 searchKey: sync_test.TestOnce
+tags: [private]
 ```
 
 ```Go
@@ -1164,6 +1275,7 @@ func TestOnce(t *testing.T)
 
 ```
 searchKey: sync_test.TestOncePanic
+tags: [private]
 ```
 
 ```Go
@@ -1174,6 +1286,7 @@ func TestOncePanic(t *testing.T)
 
 ```
 searchKey: sync_test.BenchmarkOnce
+tags: [private]
 ```
 
 ```Go
@@ -1184,6 +1297,7 @@ func BenchmarkOnce(b *testing.B)
 
 ```
 searchKey: sync_test.TestPool
+tags: [private]
 ```
 
 ```Go
@@ -1194,6 +1308,7 @@ func TestPool(t *testing.T)
 
 ```
 searchKey: sync_test.TestPoolNew
+tags: [private]
 ```
 
 ```Go
@@ -1204,6 +1319,7 @@ func TestPoolNew(t *testing.T)
 
 ```
 searchKey: sync_test.TestPoolGC
+tags: [private]
 ```
 
 ```Go
@@ -1216,6 +1332,7 @@ Test that Pool does not hold pointers to previously cached resources.
 
 ```
 searchKey: sync_test.TestPoolRelease
+tags: [private]
 ```
 
 ```Go
@@ -1228,6 +1345,7 @@ Test that Pool releases resources on GC.
 
 ```
 searchKey: sync_test.testPool
+tags: [private]
 ```
 
 ```Go
@@ -1238,6 +1356,7 @@ func testPool(t *testing.T, drain bool)
 
 ```
 searchKey: sync_test.TestPoolStress
+tags: [private]
 ```
 
 ```Go
@@ -1248,6 +1367,7 @@ func TestPoolStress(t *testing.T)
 
 ```
 searchKey: sync_test.TestPoolDequeue
+tags: [private]
 ```
 
 ```Go
@@ -1258,6 +1378,7 @@ func TestPoolDequeue(t *testing.T)
 
 ```
 searchKey: sync_test.TestPoolChain
+tags: [private]
 ```
 
 ```Go
@@ -1268,6 +1389,7 @@ func TestPoolChain(t *testing.T)
 
 ```
 searchKey: sync_test.testPoolDequeue
+tags: [private]
 ```
 
 ```Go
@@ -1278,6 +1400,7 @@ func testPoolDequeue(t *testing.T, d PoolDequeue)
 
 ```
 searchKey: sync_test.BenchmarkPool
+tags: [private]
 ```
 
 ```Go
@@ -1288,6 +1411,7 @@ func BenchmarkPool(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkPoolOverflow
+tags: [private]
 ```
 
 ```Go
@@ -1298,6 +1422,7 @@ func BenchmarkPoolOverflow(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkPoolSTW
+tags: [private]
 ```
 
 ```Go
@@ -1308,6 +1433,7 @@ func BenchmarkPoolSTW(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkPoolExpensiveNew
+tags: [private]
 ```
 
 ```Go
@@ -1318,6 +1444,7 @@ func BenchmarkPoolExpensiveNew(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkSemaUncontended
+tags: [private]
 ```
 
 ```Go
@@ -1328,6 +1455,7 @@ func BenchmarkSemaUncontended(b *testing.B)
 
 ```
 searchKey: sync_test.benchmarkSema
+tags: [private]
 ```
 
 ```Go
@@ -1338,6 +1466,7 @@ func benchmarkSema(b *testing.B, block, work bool)
 
 ```
 searchKey: sync_test.BenchmarkSemaSyntNonblock
+tags: [private]
 ```
 
 ```Go
@@ -1348,6 +1477,7 @@ func BenchmarkSemaSyntNonblock(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkSemaSyntBlock
+tags: [private]
 ```
 
 ```Go
@@ -1358,6 +1488,7 @@ func BenchmarkSemaSyntBlock(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkSemaWorkNonblock
+tags: [private]
 ```
 
 ```Go
@@ -1368,6 +1499,7 @@ func BenchmarkSemaWorkNonblock(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkSemaWorkBlock
+tags: [private]
 ```
 
 ```Go
@@ -1378,6 +1510,7 @@ func BenchmarkSemaWorkBlock(b *testing.B)
 
 ```
 searchKey: sync_test.parallelReader
+tags: [private]
 ```
 
 ```Go
@@ -1388,6 +1521,7 @@ func parallelReader(m *RWMutex, clocked, cunlock, cdone chan bool)
 
 ```
 searchKey: sync_test.doTestParallelReaders
+tags: [private]
 ```
 
 ```Go
@@ -1398,6 +1532,7 @@ func doTestParallelReaders(numReaders, gomaxprocs int)
 
 ```
 searchKey: sync_test.TestParallelReaders
+tags: [private]
 ```
 
 ```Go
@@ -1408,6 +1543,7 @@ func TestParallelReaders(t *testing.T)
 
 ```
 searchKey: sync_test.reader
+tags: [private]
 ```
 
 ```Go
@@ -1418,6 +1554,7 @@ func reader(rwm *RWMutex, num_iterations int, activity *int32, cdone chan bool)
 
 ```
 searchKey: sync_test.writer
+tags: [private]
 ```
 
 ```Go
@@ -1428,6 +1565,7 @@ func writer(rwm *RWMutex, num_iterations int, activity *int32, cdone chan bool)
 
 ```
 searchKey: sync_test.HammerRWMutex
+tags: [private]
 ```
 
 ```Go
@@ -1438,6 +1576,7 @@ func HammerRWMutex(gomaxprocs, numReaders, num_iterations int)
 
 ```
 searchKey: sync_test.TestRWMutex
+tags: [private]
 ```
 
 ```Go
@@ -1448,6 +1587,7 @@ func TestRWMutex(t *testing.T)
 
 ```
 searchKey: sync_test.TestRLocker
+tags: [private]
 ```
 
 ```Go
@@ -1458,6 +1598,7 @@ func TestRLocker(t *testing.T)
 
 ```
 searchKey: sync_test.BenchmarkRWMutexUncontended
+tags: [private]
 ```
 
 ```Go
@@ -1468,6 +1609,7 @@ func BenchmarkRWMutexUncontended(b *testing.B)
 
 ```
 searchKey: sync_test.benchmarkRWMutex
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1620,7 @@ func benchmarkRWMutex(b *testing.B, localWork, writeRatio int)
 
 ```
 searchKey: sync_test.BenchmarkRWMutexWrite100
+tags: [private]
 ```
 
 ```Go
@@ -1488,6 +1631,7 @@ func BenchmarkRWMutexWrite100(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkRWMutexWrite10
+tags: [private]
 ```
 
 ```Go
@@ -1498,6 +1642,7 @@ func BenchmarkRWMutexWrite10(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkRWMutexWorkWrite100
+tags: [private]
 ```
 
 ```Go
@@ -1508,6 +1653,7 @@ func BenchmarkRWMutexWorkWrite100(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkRWMutexWorkWrite10
+tags: [private]
 ```
 
 ```Go
@@ -1518,6 +1664,7 @@ func BenchmarkRWMutexWorkWrite10(b *testing.B)
 
 ```
 searchKey: sync_test.testWaitGroup
+tags: [private]
 ```
 
 ```Go
@@ -1528,6 +1675,7 @@ func testWaitGroup(t *testing.T, wg1 *WaitGroup, wg2 *WaitGroup)
 
 ```
 searchKey: sync_test.TestWaitGroup
+tags: [private]
 ```
 
 ```Go
@@ -1538,6 +1686,7 @@ func TestWaitGroup(t *testing.T)
 
 ```
 searchKey: sync_test.knownRacy
+tags: [private]
 ```
 
 ```Go
@@ -1548,6 +1697,7 @@ func knownRacy(t *testing.T)
 
 ```
 searchKey: sync_test.TestWaitGroupMisuse
+tags: [private]
 ```
 
 ```Go
@@ -1558,6 +1708,7 @@ func TestWaitGroupMisuse(t *testing.T)
 
 ```
 searchKey: sync_test.pollUntilEqual
+tags: [private]
 ```
 
 ```Go
@@ -1570,6 +1721,7 @@ pollUntilEqual blocks until v, loaded atomically, is equal to the target.
 
 ```
 searchKey: sync_test.TestWaitGroupMisuse2
+tags: [private]
 ```
 
 ```Go
@@ -1580,6 +1732,7 @@ func TestWaitGroupMisuse2(t *testing.T)
 
 ```
 searchKey: sync_test.TestWaitGroupMisuse3
+tags: [private]
 ```
 
 ```Go
@@ -1590,6 +1743,7 @@ func TestWaitGroupMisuse3(t *testing.T)
 
 ```
 searchKey: sync_test.TestWaitGroupRace
+tags: [private]
 ```
 
 ```Go
@@ -1600,6 +1754,7 @@ func TestWaitGroupRace(t *testing.T)
 
 ```
 searchKey: sync_test.TestWaitGroupAlign
+tags: [private]
 ```
 
 ```Go
@@ -1610,6 +1765,7 @@ func TestWaitGroupAlign(t *testing.T)
 
 ```
 searchKey: sync_test.BenchmarkWaitGroupUncontended
+tags: [private]
 ```
 
 ```Go
@@ -1620,6 +1776,7 @@ func BenchmarkWaitGroupUncontended(b *testing.B)
 
 ```
 searchKey: sync_test.benchmarkWaitGroupAddDone
+tags: [private]
 ```
 
 ```Go
@@ -1630,6 +1787,7 @@ func benchmarkWaitGroupAddDone(b *testing.B, localWork int)
 
 ```
 searchKey: sync_test.BenchmarkWaitGroupAddDone
+tags: [private]
 ```
 
 ```Go
@@ -1640,6 +1798,7 @@ func BenchmarkWaitGroupAddDone(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkWaitGroupAddDoneWork
+tags: [private]
 ```
 
 ```Go
@@ -1650,6 +1809,7 @@ func BenchmarkWaitGroupAddDoneWork(b *testing.B)
 
 ```
 searchKey: sync_test.benchmarkWaitGroupWait
+tags: [private]
 ```
 
 ```Go
@@ -1660,6 +1820,7 @@ func benchmarkWaitGroupWait(b *testing.B, localWork int)
 
 ```
 searchKey: sync_test.BenchmarkWaitGroupWait
+tags: [private]
 ```
 
 ```Go
@@ -1670,6 +1831,7 @@ func BenchmarkWaitGroupWait(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkWaitGroupWaitWork
+tags: [private]
 ```
 
 ```Go
@@ -1680,6 +1842,7 @@ func BenchmarkWaitGroupWaitWork(b *testing.B)
 
 ```
 searchKey: sync_test.BenchmarkWaitGroupActuallyWait
+tags: [private]
 ```
 
 ```Go

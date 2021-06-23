@@ -75,11 +75,14 @@ Package authz contains common logic and interfaces for authorization to external
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SourcegraphServiceType" href="#SourcegraphServiceType">const SourcegraphServiceType</a>
 
 ```
 searchKey: authz.SourcegraphServiceType
-tags: [exported]
 ```
 
 ```Go
@@ -92,7 +95,6 @@ The service type and service ID for explicit repository permissions APIs (aka So
 
 ```
 searchKey: authz.SourcegraphServiceID
-tags: [exported]
 ```
 
 ```Go
@@ -105,7 +107,6 @@ The service type and service ID for explicit repository permissions APIs (aka So
 
 ```
 searchKey: authz.SchemeToken
-tags: [exported]
 ```
 
 ```Go
@@ -117,7 +118,6 @@ const SchemeToken = "token" // Scheme for Authorization header with only an acce
 
 ```
 searchKey: authz.SchemeTokenSudo
-tags: [exported]
 ```
 
 ```Go
@@ -129,7 +129,6 @@ const SchemeTokenSudo // Scheme for Authorization header with access token and s
 
 ```
 searchKey: authz.None
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +141,6 @@ Perm constants.
 
 ```
 searchKey: authz.Read
-tags: [exported]
 ```
 
 ```Go
@@ -155,7 +153,6 @@ Perm constants.
 
 ```
 searchKey: authz.Write
-tags: [exported]
 ```
 
 ```Go
@@ -168,7 +165,6 @@ Perm constants.
 
 ```
 searchKey: authz.PermRepos
-tags: [exported]
 ```
 
 ```Go
@@ -181,7 +177,6 @@ PermRepos is the list of available user permission types.
 
 ```
 searchKey: authz.ScopeUserAll
-tags: [exported]
 ```
 
 ```Go
@@ -195,7 +190,6 @@ Access token scopes.
 
 ```
 searchKey: authz.ScopeSiteAdminSudo
-tags: [exported]
 ```
 
 ```Go
@@ -205,10 +199,15 @@ const ScopeSiteAdminSudo = "site-admin:sudo" // Ability to perform any action as
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="errUnrecognizedScheme" href="#errUnrecognizedScheme">var errUnrecognizedScheme</a>
 
 ```
 searchKey: authz.errUnrecognizedScheme
+tags: [private]
 ```
 
 ```Go
@@ -221,6 +220,7 @@ errUnrecognizedScheme occurs when the Authorization header scheme (the first tok
 
 ```
 searchKey: authz.errHTTPAuthParamsDuplicateKey
+tags: [private]
 ```
 
 ```Go
@@ -231,6 +231,7 @@ var errHTTPAuthParamsDuplicateKey = errors.New("duplicate key in HTTP auth-param
 
 ```
 searchKey: authz.errHTTPAuthParamsNoEquals
+tags: [private]
 ```
 
 ```Go
@@ -241,7 +242,6 @@ var errHTTPAuthParamsNoEquals = errors.New("invalid HTTP auth-params list (param
 
 ```
 searchKey: authz.ErrPermsNotFound
-tags: [exported]
 ```
 
 ```Go
@@ -252,6 +252,7 @@ var ErrPermsNotFound = errors.New("permissions not found")
 
 ```
 searchKey: authz.allowAccessByDefault
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +265,7 @@ allowAccessByDefault, if set to true, grants all users access to repositories th
 
 ```
 searchKey: authz.authzProvidersReadyOnce
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +278,7 @@ authzProvidersReady and authzProvidersReadyOnce together indicate when GetProvid
 
 ```
 searchKey: authz.authzProvidersReady
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +289,7 @@ var authzProvidersReady = make(chan struct{})
 
 ```
 searchKey: authz.authzProviders
+tags: [private]
 ```
 
 ```Go
@@ -298,6 +302,7 @@ authzProviders is the currently registered list of authorization providers.
 
 ```
 searchKey: authz.authzMu
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +315,7 @@ authzMu protects access to both allowAccessByDefault and authzProviders
 
 ```
 searchKey: authz.isTest
+tags: [private]
 ```
 
 ```Go
@@ -320,7 +326,6 @@ var isTest = ...
 
 ```
 searchKey: authz.AllScopes
-tags: [exported]
 ```
 
 ```Go
@@ -334,11 +339,14 @@ AllScopes is a list of all known access token scopes.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ExternalUserPermissions" href="#ExternalUserPermissions">type ExternalUserPermissions struct</a>
 
 ```
 searchKey: authz.ExternalUserPermissions
-tags: [exported]
 ```
 
 ```Go
@@ -357,7 +365,6 @@ ExternalUserPermissions is a collection of accessible repository/project IDs (on
 
 ```
 searchKey: authz.Provider
-tags: [exported]
 ```
 
 ```Go
@@ -426,7 +433,6 @@ In most cases, an authz provider represents a code host, because it is the sourc
 
 ```
 searchKey: authz.RepoPerms
-tags: [exported]
 ```
 
 ```Go
@@ -442,7 +448,6 @@ RepoPerms contains a repo and the permissions a given user has associated with i
 
 ```
 searchKey: authz.Perms
-tags: [exported]
 ```
 
 ```Go
@@ -455,7 +460,6 @@ Perms is a permission set represented as bitset.
 
 ```
 searchKey: authz.Perms.Include
-tags: [exported]
 ```
 
 ```Go
@@ -468,7 +472,6 @@ Include is a convenience method to test if Perms includes all the other Perms.
 
 ```
 searchKey: authz.Perms.String
-tags: [exported]
 ```
 
 ```Go
@@ -481,7 +484,6 @@ String implements the fmt.Stringer interface.
 
 ```
 searchKey: authz.PermType
-tags: [exported]
 ```
 
 ```Go
@@ -494,7 +496,6 @@ PermType is the object type of the user permissions.
 
 ```
 searchKey: authz.RepoPermsSort
-tags: [exported]
 ```
 
 ```Go
@@ -507,7 +508,6 @@ RepoPermsSort sorts a slice of RepoPerms to guarantee a stable ordering.
 
 ```
 searchKey: authz.RepoPermsSort.Len
-tags: [exported]
 ```
 
 ```Go
@@ -518,7 +518,6 @@ func (s RepoPermsSort) Len() int
 
 ```
 searchKey: authz.RepoPermsSort.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -529,7 +528,6 @@ func (s RepoPermsSort) Swap(i, j int)
 
 ```
 searchKey: authz.RepoPermsSort.Less
-tags: [exported]
 ```
 
 ```Go
@@ -540,7 +538,6 @@ func (s RepoPermsSort) Less(i, j int) bool
 
 ```
 searchKey: authz.ErrStalePermissions
-tags: [exported]
 ```
 
 ```Go
@@ -557,7 +554,6 @@ ErrStalePermissions is returned by LoadPermissions when the stored permissions a
 
 ```
 searchKey: authz.ErrStalePermissions.Error
-tags: [exported]
 ```
 
 ```Go
@@ -570,7 +566,6 @@ Error implements the error interface.
 
 ```
 searchKey: authz.UserPermissions
-tags: [exported]
 ```
 
 ```Go
@@ -590,7 +585,6 @@ UserPermissions are the permissions of a user to perform an action on the given 
 
 ```
 searchKey: authz.UserPermissions.Expired
-tags: [exported]
 ```
 
 ```Go
@@ -603,7 +597,6 @@ Expired returns true if these UserPermissions have elapsed the given ttl.
 
 ```
 searchKey: authz.UserPermissions.AuthorizedRepos
-tags: [exported]
 ```
 
 ```Go
@@ -616,7 +609,6 @@ AuthorizedRepos returns the intersection of the given repository IDs with the au
 
 ```
 searchKey: authz.UserPermissions.TracingFields
-tags: [exported]
 ```
 
 ```Go
@@ -629,7 +621,6 @@ TracingFields returns tracing fields for the opentracing log.
 
 ```
 searchKey: authz.RepoPermissions
-tags: [exported]
 ```
 
 ```Go
@@ -648,7 +639,6 @@ RepoPermissions declares which users have access to a given repository
 
 ```
 searchKey: authz.RepoPermissions.Expired
-tags: [exported]
 ```
 
 ```Go
@@ -661,7 +651,6 @@ Expired returns true if these RepoPermissions have elapsed the given ttl.
 
 ```
 searchKey: authz.RepoPermissions.TracingFields
-tags: [exported]
 ```
 
 ```Go
@@ -674,7 +663,6 @@ TracingFields returns tracing fields for the opentracing log.
 
 ```
 searchKey: authz.UserPendingPermissions
-tags: [exported]
 ```
 
 ```Go
@@ -711,7 +699,6 @@ UserPendingPermissions defines permissions that a not-yet-created user has to pe
 
 ```
 searchKey: authz.UserPendingPermissions.TracingFields
-tags: [exported]
 ```
 
 ```Go
@@ -722,11 +709,14 @@ TracingFields returns tracing fields for the opentracing log.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IsUnrecognizedScheme" href="#IsUnrecognizedScheme">func IsUnrecognizedScheme(err error) bool</a>
 
 ```
 searchKey: authz.IsUnrecognizedScheme
-tags: [exported]
 ```
 
 ```Go
@@ -739,7 +729,6 @@ IsUnrecognizedScheme reports whether err indicates that the request's Authorizat
 
 ```
 searchKey: authz.ParseAuthorizationHeader
-tags: [exported]
 ```
 
 ```Go
@@ -762,6 +751,7 @@ The returned values are derived directly from user input and have not been valid
 
 ```
 searchKey: authz.parseHTTPCredentials
+tags: [private]
 ```
 
 ```Go
@@ -774,6 +764,7 @@ parseHTTPCredentials parses the "credentials" token as defined in [RFC 7235 Appe
 
 ```
 searchKey: authz.parseHTTPAuthParams
+tags: [private]
 ```
 
 ```Go
@@ -788,6 +779,7 @@ The resulting values are unquoted. The keys are matched case-insensitively, and 
 
 ```
 searchKey: authz.parseHTTPHeaderList
+tags: [private]
 ```
 
 ```Go
@@ -800,7 +792,6 @@ parseHTTPHeaderList parses a "#rule" as defined in [RFC 2068 Section 2.1]([https
 
 ```
 searchKey: authz.SetProviders
-tags: [exported]
 ```
 
 ```Go
@@ -813,7 +804,6 @@ SetProviders sets the current authz parameters. It is concurrency-safe.
 
 ```
 searchKey: authz.GetProviders
-tags: [exported]
 ```
 
 ```Go
@@ -828,6 +818,7 @@ It blocks until SetProviders has been called at least once.
 
 ```
 searchKey: authz.TestParseAuthorizationHeader
+tags: [private]
 ```
 
 ```Go
@@ -838,6 +829,7 @@ func TestParseAuthorizationHeader(t *testing.T)
 
 ```
 searchKey: authz.TestParseHTTPCredentials
+tags: [private]
 ```
 
 ```Go
@@ -848,6 +840,7 @@ func TestParseHTTPCredentials(t *testing.T)
 
 ```
 searchKey: authz.TestPermsInclude
+tags: [private]
 ```
 
 ```Go
@@ -858,6 +851,7 @@ func TestPermsInclude(t *testing.T)
 
 ```
 searchKey: authz.BenchmarkPermsInclude
+tags: [private]
 ```
 
 ```Go
@@ -868,6 +862,7 @@ func BenchmarkPermsInclude(b *testing.B)
 
 ```
 searchKey: authz.TestPermsString
+tags: [private]
 ```
 
 ```Go
@@ -878,6 +873,7 @@ func TestPermsString(t *testing.T)
 
 ```
 searchKey: authz.BenchmarkPermsString
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +884,7 @@ func BenchmarkPermsString(b *testing.B)
 
 ```
 searchKey: authz.bitmap
+tags: [private]
 ```
 
 ```Go
@@ -898,6 +895,7 @@ func bitmap(ids ...uint32) *roaring.Bitmap
 
 ```
 searchKey: authz.TestUserPermissions_AuthorizedRepos
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "dbconn",
     "newPage": true,
     "searchKey": "internal/database/dbconn",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "bulkInsertionKey",
                 "newPage": false,
                 "searchKey": "dbconn.bulkInsertionKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,9 +89,7 @@
                 "identifier": "Global",
                 "newPage": false,
                 "searchKey": "dbconn.Global",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "defaultDataSource",
                 "newPage": false,
                 "searchKey": "dbconn.defaultDataSource",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +131,9 @@
                 "identifier": "defaultApplicationName",
                 "newPage": false,
                 "searchKey": "dbconn.defaultApplicationName",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -143,7 +153,9 @@
                 "identifier": "versionPattern",
                 "newPage": false,
                 "searchKey": "dbconn.versionPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -163,7 +175,9 @@
                 "identifier": "startupTimeout",
                 "newPage": false,
                 "searchKey": "dbconn.startupTimeout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -183,7 +197,9 @@
                 "identifier": "registerOnce",
                 "newPage": false,
                 "searchKey": "dbconn.registerOnce",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -203,7 +219,9 @@
                 "identifier": "postgresBulkInsertRowsPattern",
                 "newPage": false,
                 "searchKey": "dbconn.postgresBulkInsertRowsPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -223,7 +241,9 @@
                 "identifier": "postgresBulkInsertRowsReplacement",
                 "newPage": false,
                 "searchKey": "dbconn.postgresBulkInsertRowsReplacement",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -243,9 +263,7 @@
                 "identifier": "Frontend",
                 "newPage": false,
                 "searchKey": "dbconn.Frontend",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -265,9 +283,7 @@
                 "identifier": "CodeIntel",
                 "newPage": false,
                 "searchKey": "dbconn.CodeIntel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -287,9 +303,7 @@
                 "identifier": "CodeInsights",
                 "newPage": false,
                 "searchKey": "dbconn.CodeInsights",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -312,7 +326,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -330,7 +346,9 @@
                 "identifier": "key",
                 "newPage": false,
                 "searchKey": "dbconn.key",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -350,7 +368,9 @@
                 "identifier": "hook",
                 "newPage": false,
                 "searchKey": "dbconn.hook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -368,7 +388,9 @@
                       "identifier": "hook.Before",
                       "newPage": false,
                       "searchKey": "dbconn.hook.Before",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -388,7 +410,9 @@
                       "identifier": "hook.After",
                       "newPage": false,
                       "searchKey": "dbconn.hook.After",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -408,7 +432,9 @@
                       "identifier": "hook.OnError",
                       "newPage": false,
                       "searchKey": "dbconn.hook.OnError",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -431,9 +457,7 @@
                 "identifier": "Database",
                 "newPage": false,
                 "searchKey": "dbconn.Database",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -453,7 +477,9 @@
                 "identifier": "stdoutLogger",
                 "newPage": false,
                 "searchKey": "dbconn.stdoutLogger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -471,7 +497,9 @@
                       "identifier": "stdoutLogger.Printf",
                       "newPage": false,
                       "searchKey": "dbconn.stdoutLogger.Printf",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -491,7 +519,9 @@
                       "identifier": "stdoutLogger.Verbose",
                       "newPage": false,
                       "searchKey": "dbconn.stdoutLogger.Verbose",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -517,7 +547,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -535,9 +567,7 @@
                 "identifier": "SetupGlobalConnection",
                 "newPage": false,
                 "searchKey": "dbconn.SetupGlobalConnection",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -557,9 +587,7 @@
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "dbconn.New",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -579,9 +607,7 @@
                 "identifier": "NewRaw",
                 "newPage": false,
                 "searchKey": "dbconn.NewRaw",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -601,7 +627,9 @@
                 "identifier": "checkVersion",
                 "newPage": false,
                 "searchKey": "dbconn.checkVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -621,7 +649,9 @@
                 "identifier": "buildConfig",
                 "newPage": false,
                 "searchKey": "dbconn.buildConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -641,7 +671,9 @@
                 "identifier": "openDBWithStartupWait",
                 "newPage": false,
                 "searchKey": "dbconn.openDBWithStartupWait",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -661,7 +693,9 @@
                 "identifier": "isDatabaseLikelyStartingUp",
                 "newPage": false,
                 "searchKey": "dbconn.isDatabaseLikelyStartingUp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -681,9 +715,7 @@
                 "identifier": "Open",
                 "newPage": false,
                 "searchKey": "dbconn.Open",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -703,7 +735,9 @@
                 "identifier": "open",
                 "newPage": false,
                 "searchKey": "dbconn.open",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -723,9 +757,7 @@
                 "identifier": "Ping",
                 "newPage": false,
                 "searchKey": "dbconn.Ping",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -745,9 +777,7 @@
                 "identifier": "BulkInsertion",
                 "newPage": false,
                 "searchKey": "dbconn.BulkInsertion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -767,9 +797,7 @@
                 "identifier": "WithBulkInsertion",
                 "newPage": false,
                 "searchKey": "dbconn.WithBulkInsertion",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -789,7 +817,9 @@
                 "identifier": "registerPrometheusCollector",
                 "newPage": false,
                 "searchKey": "dbconn.registerPrometheusCollector",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -809,7 +839,9 @@
                 "identifier": "configureConnectionPool",
                 "newPage": false,
                 "searchKey": "dbconn.configureConnectionPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -829,9 +861,7 @@
                 "identifier": "MigrateDB",
                 "newPage": false,
                 "searchKey": "dbconn.MigrateDB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -851,9 +881,7 @@
                 "identifier": "NewMigrate",
                 "newPage": false,
                 "searchKey": "dbconn.NewMigrate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -873,9 +901,7 @@
                 "identifier": "DoMigrate",
                 "newPage": false,
                 "searchKey": "dbconn.DoMigrate",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -895,7 +921,9 @@
                 "identifier": "TestBuildConfig",
                 "newPage": false,
                 "searchKey": "dbconn.TestBuildConfig",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

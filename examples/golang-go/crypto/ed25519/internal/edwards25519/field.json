@@ -4,7 +4,9 @@
     "identifier": "field",
     "newPage": true,
     "searchKey": "crypto/ed25519/internal/edwards25519/field",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "maskLow51Bits",
                 "newPage": false,
                 "searchKey": "field.maskLow51Bits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +69,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +89,9 @@
                 "identifier": "feZero",
                 "newPage": false,
                 "searchKey": "field.feZero",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                 "identifier": "feOne",
                 "newPage": false,
                 "searchKey": "field.feOne",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,7 +133,9 @@
                 "identifier": "sqrtM1",
                 "newPage": false,
                 "searchKey": "field.sqrtM1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -141,7 +155,9 @@
                 "identifier": "quickCheckConfig1024",
                 "newPage": false,
                 "searchKey": "field.quickCheckConfig1024",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -161,7 +177,9 @@
                 "identifier": "weirdLimbs51",
                 "newPage": false,
                 "searchKey": "field.weirdLimbs51",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "weirdLimbs52",
                 "newPage": false,
                 "searchKey": "field.weirdLimbs52",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +224,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -222,9 +244,7 @@
                 "identifier": "Element",
                 "newPage": false,
                 "searchKey": "field.Element",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -242,7 +262,9 @@
                       "identifier": "generateFieldElement",
                       "newPage": false,
                       "searchKey": "field.generateFieldElement",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -262,7 +284,9 @@
                       "identifier": "generateWeirdFieldElement",
                       "newPage": false,
                       "searchKey": "field.generateWeirdFieldElement",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -282,9 +306,7 @@
                       "identifier": "Element.Zero",
                       "newPage": false,
                       "searchKey": "field.Element.Zero",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -304,9 +326,7 @@
                       "identifier": "Element.One",
                       "newPage": false,
                       "searchKey": "field.Element.One",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -326,7 +346,9 @@
                       "identifier": "Element.reduce",
                       "newPage": false,
                       "searchKey": "field.Element.reduce",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -346,9 +368,7 @@
                       "identifier": "Element.Add",
                       "newPage": false,
                       "searchKey": "field.Element.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -368,9 +388,7 @@
                       "identifier": "Element.Subtract",
                       "newPage": false,
                       "searchKey": "field.Element.Subtract",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -390,9 +408,7 @@
                       "identifier": "Element.Negate",
                       "newPage": false,
                       "searchKey": "field.Element.Negate",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -412,9 +428,7 @@
                       "identifier": "Element.Invert",
                       "newPage": false,
                       "searchKey": "field.Element.Invert",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,9 +448,7 @@
                       "identifier": "Element.Set",
                       "newPage": false,
                       "searchKey": "field.Element.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -456,9 +468,7 @@
                       "identifier": "Element.SetBytes",
                       "newPage": false,
                       "searchKey": "field.Element.SetBytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -478,9 +488,7 @@
                       "identifier": "Element.Bytes",
                       "newPage": false,
                       "searchKey": "field.Element.Bytes",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -500,7 +508,9 @@
                       "identifier": "Element.bytes",
                       "newPage": false,
                       "searchKey": "field.Element.bytes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -520,9 +530,7 @@
                       "identifier": "Element.Equal",
                       "newPage": false,
                       "searchKey": "field.Element.Equal",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -542,9 +550,7 @@
                       "identifier": "Element.Select",
                       "newPage": false,
                       "searchKey": "field.Element.Select",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -564,9 +570,7 @@
                       "identifier": "Element.Swap",
                       "newPage": false,
                       "searchKey": "field.Element.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -586,9 +590,7 @@
                       "identifier": "Element.IsNegative",
                       "newPage": false,
                       "searchKey": "field.Element.IsNegative",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -608,9 +610,7 @@
                       "identifier": "Element.Absolute",
                       "newPage": false,
                       "searchKey": "field.Element.Absolute",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -630,9 +630,7 @@
                       "identifier": "Element.Multiply",
                       "newPage": false,
                       "searchKey": "field.Element.Multiply",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -652,9 +650,7 @@
                       "identifier": "Element.Square",
                       "newPage": false,
                       "searchKey": "field.Element.Square",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -674,9 +670,7 @@
                       "identifier": "Element.Mult32",
                       "newPage": false,
                       "searchKey": "field.Element.Mult32",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -696,9 +690,7 @@
                       "identifier": "Element.Pow22523",
                       "newPage": false,
                       "searchKey": "field.Element.Pow22523",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -718,9 +710,7 @@
                       "identifier": "Element.SqrtRatio",
                       "newPage": false,
                       "searchKey": "field.Element.SqrtRatio",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -740,7 +730,9 @@
                       "identifier": "Element.carryPropagate",
                       "newPage": false,
                       "searchKey": "field.Element.carryPropagate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -760,7 +752,9 @@
                       "identifier": "Element.carryPropagateGeneric",
                       "newPage": false,
                       "searchKey": "field.Element.carryPropagateGeneric",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -780,7 +774,9 @@
                       "identifier": "Element.String",
                       "newPage": false,
                       "searchKey": "field.Element.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -800,7 +796,9 @@
                       "identifier": "Element.Generate",
                       "newPage": false,
                       "searchKey": "field.Element.Generate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -820,7 +818,9 @@
                       "identifier": "Element.fromBig",
                       "newPage": false,
                       "searchKey": "field.Element.fromBig",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -840,7 +840,9 @@
                       "identifier": "Element.fromDecimal",
                       "newPage": false,
                       "searchKey": "field.Element.fromDecimal",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -860,7 +862,9 @@
                       "identifier": "Element.toBig",
                       "newPage": false,
                       "searchKey": "field.Element.toBig",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -883,7 +887,9 @@
                 "identifier": "uint128",
                 "newPage": false,
                 "searchKey": "field.uint128",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -901,7 +907,9 @@
                       "identifier": "mul64",
                       "newPage": false,
                       "searchKey": "field.mul64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -921,7 +929,9 @@
                       "identifier": "addMul64",
                       "newPage": false,
                       "searchKey": "field.addMul64",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -947,7 +957,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -965,7 +977,9 @@
                 "identifier": "mask64Bits",
                 "newPage": false,
                 "searchKey": "field.mask64Bits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -985,7 +999,9 @@
                 "identifier": "mul51",
                 "newPage": false,
                 "searchKey": "field.mul51",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1005,7 +1021,9 @@
                 "identifier": "feMul",
                 "newPage": false,
                 "searchKey": "field.feMul",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1025,7 +1043,9 @@
                 "identifier": "feSquare",
                 "newPage": false,
                 "searchKey": "field.feSquare",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1045,7 +1065,9 @@
                 "identifier": "shiftRightBy51",
                 "newPage": false,
                 "searchKey": "field.shiftRightBy51",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1065,7 +1087,9 @@
                 "identifier": "feMulGeneric",
                 "newPage": false,
                 "searchKey": "field.feMulGeneric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1085,7 +1109,9 @@
                 "identifier": "feSquareGeneric",
                 "newPage": false,
                 "searchKey": "field.feSquareGeneric",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1105,7 +1131,9 @@
                 "identifier": "checkAliasingOneArg",
                 "newPage": false,
                 "searchKey": "field.checkAliasingOneArg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1125,7 +1153,9 @@
                 "identifier": "checkAliasingTwoArgs",
                 "newPage": false,
                 "searchKey": "field.checkAliasingTwoArgs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1145,7 +1175,9 @@
                 "identifier": "TestAliasing",
                 "newPage": false,
                 "searchKey": "field.TestAliasing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1165,7 +1197,9 @@
                 "identifier": "BenchmarkAdd",
                 "newPage": false,
                 "searchKey": "field.BenchmarkAdd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1185,7 +1219,9 @@
                 "identifier": "BenchmarkMultiply",
                 "newPage": false,
                 "searchKey": "field.BenchmarkMultiply",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1205,7 +1241,9 @@
                 "identifier": "BenchmarkMult32",
                 "newPage": false,
                 "searchKey": "field.BenchmarkMult32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1225,7 +1263,9 @@
                 "identifier": "isInBounds",
                 "newPage": false,
                 "searchKey": "field.isInBounds",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1245,7 +1285,9 @@
                 "identifier": "TestMultiplyDistributesOverAdd",
                 "newPage": false,
                 "searchKey": "field.TestMultiplyDistributesOverAdd",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1265,7 +1307,9 @@
                 "identifier": "TestMul64to128",
                 "newPage": false,
                 "searchKey": "field.TestMul64to128",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1285,7 +1329,9 @@
                 "identifier": "TestSetBytesRoundTrip",
                 "newPage": false,
                 "searchKey": "field.TestSetBytesRoundTrip",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1305,7 +1351,9 @@
                 "identifier": "swapEndianness",
                 "newPage": false,
                 "searchKey": "field.swapEndianness",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1325,7 +1373,9 @@
                 "identifier": "TestBytesBigEquivalence",
                 "newPage": false,
                 "searchKey": "field.TestBytesBigEquivalence",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1345,7 +1395,9 @@
                 "identifier": "TestDecimalConstants",
                 "newPage": false,
                 "searchKey": "field.TestDecimalConstants",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1365,7 +1417,9 @@
                 "identifier": "TestSetBytesRoundTripEdgeCases",
                 "newPage": false,
                 "searchKey": "field.TestSetBytesRoundTripEdgeCases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1385,7 +1439,9 @@
                 "identifier": "TestConsistency",
                 "newPage": false,
                 "searchKey": "field.TestConsistency",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1405,7 +1461,9 @@
                 "identifier": "TestEqual",
                 "newPage": false,
                 "searchKey": "field.TestEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1425,7 +1483,9 @@
                 "identifier": "TestInvert",
                 "newPage": false,
                 "searchKey": "field.TestInvert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1445,7 +1505,9 @@
                 "identifier": "TestSelectSwap",
                 "newPage": false,
                 "searchKey": "field.TestSelectSwap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1465,7 +1527,9 @@
                 "identifier": "TestMult32",
                 "newPage": false,
                 "searchKey": "field.TestMult32",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1485,7 +1549,9 @@
                 "identifier": "TestSqrtRatio",
                 "newPage": false,
                 "searchKey": "field.TestSqrtRatio",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1505,7 +1571,9 @@
                 "identifier": "TestCarryPropagate",
                 "newPage": false,
                 "searchKey": "field.TestCarryPropagate",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1525,7 +1593,9 @@
                 "identifier": "TestFeSquare",
                 "newPage": false,
                 "searchKey": "field.TestFeSquare",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1545,7 +1615,9 @@
                 "identifier": "TestFeMul",
                 "newPage": false,
                 "searchKey": "field.TestFeMul",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1565,7 +1637,9 @@
                 "identifier": "decodeHex",
                 "newPage": false,
                 "searchKey": "field.decodeHex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

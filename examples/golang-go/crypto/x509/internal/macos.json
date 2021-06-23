@@ -4,7 +4,9 @@
     "identifier": "macos",
     "newPage": true,
     "searchKey": "crypto/x509/internal/macos",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "kCFAllocatorDefault",
                 "newPage": false,
                 "searchKey": "macOS.kCFAllocatorDefault",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "kCFStringEncodingUTF8",
                 "newPage": false,
                 "searchKey": "macOS.kCFStringEncodingUTF8",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +88,9 @@
                 "identifier": "kCFNumberSInt32Type",
                 "newPage": false,
                 "searchKey": "macOS.kCFNumberSInt32Type",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,9 +110,7 @@
                 "identifier": "SecTrustSettingsResultInvalid",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsResultInvalid",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -122,9 +130,7 @@
                 "identifier": "SecTrustSettingsResultTrustRoot",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsResultTrustRoot",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -144,9 +150,7 @@
                 "identifier": "SecTrustSettingsResultTrustAsRoot",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsResultTrustAsRoot",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -166,9 +170,7 @@
                 "identifier": "SecTrustSettingsResultDeny",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsResultDeny",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -188,9 +190,7 @@
                 "identifier": "SecTrustSettingsResultUnspecified",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsResultUnspecified",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -210,9 +210,7 @@
                 "identifier": "SecTrustSettingsDomainUser",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsDomainUser",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -232,9 +230,7 @@
                 "identifier": "SecTrustSettingsDomainAdmin",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsDomainAdmin",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -254,9 +250,7 @@
                 "identifier": "SecTrustSettingsDomainSystem",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsDomainSystem",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -276,7 +270,9 @@
                 "identifier": "errSecNoTrustSettings",
                 "newPage": false,
                 "searchKey": "macOS.errSecNoTrustSettings",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -296,7 +292,9 @@
                 "identifier": "kSecFormatX509Cert",
                 "newPage": false,
                 "searchKey": "macOS.kSecFormatX509Cert",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -316,7 +314,9 @@
                 "identifier": "errSecItemNotFound",
                 "newPage": false,
                 "searchKey": "macOS.errSecItemNotFound",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -339,7 +339,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -357,9 +359,7 @@
                 "identifier": "SecTrustSettingsResultKey",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsResultKey",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -379,9 +379,7 @@
                 "identifier": "SecTrustSettingsPolicy",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsPolicy",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -401,9 +399,7 @@
                 "identifier": "SecTrustSettingsPolicyString",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsPolicyString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -423,9 +419,7 @@
                 "identifier": "SecPolicyOid",
                 "newPage": false,
                 "searchKey": "macOS.SecPolicyOid",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -445,9 +439,7 @@
                 "identifier": "SecPolicyAppleSSL",
                 "newPage": false,
                 "searchKey": "macOS.SecPolicyAppleSSL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -467,9 +459,7 @@
                 "identifier": "ErrNoTrustSettings",
                 "newPage": false,
                 "searchKey": "macOS.ErrNoTrustSettings",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -492,7 +482,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -510,9 +502,7 @@
                 "identifier": "CFRef",
                 "newPage": false,
                 "searchKey": "macOS.CFRef",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -530,9 +520,7 @@
                       "identifier": "CFDictionaryGetValueIfPresent",
                       "newPage": false,
                       "searchKey": "macOS.CFDictionaryGetValueIfPresent",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -552,9 +540,7 @@
                       "identifier": "CFArrayGetValueAtIndex",
                       "newPage": false,
                       "searchKey": "macOS.CFArrayGetValueAtIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -574,9 +560,7 @@
                       "identifier": "SecTrustSettingsCopyCertificates",
                       "newPage": false,
                       "searchKey": "macOS.SecTrustSettingsCopyCertificates",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -596,9 +580,7 @@
                       "identifier": "SecItemExport",
                       "newPage": false,
                       "searchKey": "macOS.SecItemExport",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -618,9 +600,7 @@
                       "identifier": "SecTrustSettingsCopyTrustSettings",
                       "newPage": false,
                       "searchKey": "macOS.SecTrustSettingsCopyTrustSettings",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -640,9 +620,7 @@
                       "identifier": "SecPolicyCopyProperties",
                       "newPage": false,
                       "searchKey": "macOS.SecPolicyCopyProperties",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -665,9 +643,7 @@
                 "identifier": "CFString",
                 "newPage": false,
                 "searchKey": "macOS.CFString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -685,9 +661,7 @@
                       "identifier": "StringToCFString",
                       "newPage": false,
                       "searchKey": "macOS.StringToCFString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -710,9 +684,7 @@
                 "identifier": "SecTrustSettingsResult",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsResult",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -732,9 +704,7 @@
                 "identifier": "SecTrustSettingsDomain",
                 "newPage": false,
                 "searchKey": "macOS.SecTrustSettingsDomain",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -754,9 +724,7 @@
                 "identifier": "OSStatus",
                 "newPage": false,
                 "searchKey": "macOS.OSStatus",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -774,9 +742,7 @@
                       "identifier": "OSStatus.Error",
                       "newPage": false,
                       "searchKey": "macOS.OSStatus.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -802,7 +768,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -820,9 +788,7 @@
                 "identifier": "CFDataToSlice",
                 "newPage": false,
                 "searchKey": "macOS.CFDataToSlice",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -842,7 +808,9 @@
                 "identifier": "x509_CFStringCreateWithBytes_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_CFStringCreateWithBytes_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -862,7 +830,9 @@
                 "identifier": "x509_CFDictionaryGetValueIfPresent_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_CFDictionaryGetValueIfPresent_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -882,9 +852,7 @@
                 "identifier": "CFNumberGetValue",
                 "newPage": false,
                 "searchKey": "macOS.CFNumberGetValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -904,7 +872,9 @@
                 "identifier": "x509_CFNumberGetValue_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_CFNumberGetValue_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -924,9 +894,7 @@
                 "identifier": "CFDataGetLength",
                 "newPage": false,
                 "searchKey": "macOS.CFDataGetLength",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -946,7 +914,9 @@
                 "identifier": "x509_CFDataGetLength_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_CFDataGetLength_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -966,9 +936,7 @@
                 "identifier": "CFDataGetBytePtr",
                 "newPage": false,
                 "searchKey": "macOS.CFDataGetBytePtr",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -988,7 +956,9 @@
                 "identifier": "x509_CFDataGetBytePtr_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_CFDataGetBytePtr_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1008,9 +978,7 @@
                 "identifier": "CFArrayGetCount",
                 "newPage": false,
                 "searchKey": "macOS.CFArrayGetCount",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1030,7 +998,9 @@
                 "identifier": "x509_CFArrayGetCount_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_CFArrayGetCount_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1050,7 +1020,9 @@
                 "identifier": "x509_CFArrayGetValueAtIndex_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_CFArrayGetValueAtIndex_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1070,9 +1042,7 @@
                 "identifier": "CFEqual",
                 "newPage": false,
                 "searchKey": "macOS.CFEqual",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1092,7 +1062,9 @@
                 "identifier": "x509_CFEqual_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_CFEqual_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1112,9 +1084,7 @@
                 "identifier": "CFRelease",
                 "newPage": false,
                 "searchKey": "macOS.CFRelease",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1134,7 +1104,9 @@
                 "identifier": "x509_CFRelease_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_CFRelease_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1154,7 +1126,9 @@
                 "identifier": "syscall",
                 "newPage": false,
                 "searchKey": "macOS.syscall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1174,7 +1148,9 @@
                 "identifier": "x509_SecTrustSettingsCopyCertificates_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_SecTrustSettingsCopyCertificates_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1194,7 +1170,9 @@
                 "identifier": "x509_SecItemExport_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_SecItemExport_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1214,7 +1192,9 @@
                 "identifier": "x509_SecTrustSettingsCopyTrustSettings_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_SecTrustSettingsCopyTrustSettings_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1234,7 +1214,9 @@
                 "identifier": "x509_SecPolicyCopyProperties_trampoline",
                 "newPage": false,
                 "searchKey": "macOS.x509_SecPolicyCopyProperties_trampoline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

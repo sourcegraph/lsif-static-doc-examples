@@ -4,7 +4,9 @@
     "identifier": "enqueuer",
     "newPage": true,
     "searchKey": "enterprise/internal/codeintel/autoindex/enqueuer",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "defaultMaxJobsPerCommit",
                 "newPage": false,
                 "searchKey": "enqueuer.defaultMaxJobsPerCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +66,7 @@
                 "identifier": "GitHubScheme",
                 "newPage": false,
                 "searchKey": "enqueuer.GitHubScheme",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -85,7 +89,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -103,7 +109,9 @@
                 "identifier": "goVersionPattern",
                 "newPage": false,
                 "searchKey": "enqueuer.goVersionPattern",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +131,9 @@
                 "identifier": "yamlIndexConfiguration",
                 "newPage": false,
                 "searchKey": "enqueuer.yamlIndexConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -146,7 +156,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -164,9 +176,7 @@
                 "identifier": "IndexEnqueuer",
                 "newPage": false,
                 "searchKey": "enqueuer.IndexEnqueuer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -184,9 +194,7 @@
                       "identifier": "NewIndexEnqueuer",
                       "newPage": false,
                       "searchKey": "enqueuer.NewIndexEnqueuer",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -206,9 +214,7 @@
                       "identifier": "IndexEnqueuer.QueueIndexesForRepository",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.QueueIndexesForRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -228,9 +234,7 @@
                       "identifier": "IndexEnqueuer.ForceQueueIndexesForRepository",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.ForceQueueIndexesForRepository",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -250,9 +254,7 @@
                       "identifier": "IndexEnqueuer.InferIndexConfiguration",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.InferIndexConfiguration",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -272,9 +274,7 @@
                       "identifier": "IndexEnqueuer.QueueIndexesForPackage",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.QueueIndexesForPackage",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,7 +294,9 @@
                       "identifier": "IndexEnqueuer.queueIndexForRepository",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.queueIndexForRepository",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -314,7 +316,9 @@
                       "identifier": "IndexEnqueuer.queueIndexForRepositoryAndCommit",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.queueIndexForRepositoryAndCommit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -334,7 +338,9 @@
                       "identifier": "IndexEnqueuer.queueIndexes",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.queueIndexes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -354,7 +360,9 @@
                       "identifier": "IndexEnqueuer.inferIndexJobsFromRepositoryStructure",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.inferIndexJobsFromRepositoryStructure",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -374,7 +382,9 @@
                       "identifier": "IndexEnqueuer.getIndexRecords",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.getIndexRecords",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -394,7 +404,9 @@
                       "identifier": "IndexEnqueuer.getIndexRecordsFromConfigurationInDatabase",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.getIndexRecordsFromConfigurationInDatabase",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -414,7 +426,9 @@
                       "identifier": "IndexEnqueuer.getIndexRecordsFromConfigurationInRepository",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.getIndexRecordsFromConfigurationInRepository",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -434,7 +448,9 @@
                       "identifier": "IndexEnqueuer.inferIndexRecordsFromRepositoryStructure",
                       "newPage": false,
                       "searchKey": "enqueuer.IndexEnqueuer.inferIndexRecordsFromRepositoryStructure",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -457,9 +473,7 @@
                 "identifier": "DBStore",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStore",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -479,9 +493,7 @@
                 "identifier": "DBStoreShim",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreShim",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -499,9 +511,7 @@
                       "identifier": "DBStoreShim.Transact",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreShim.Transact",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -524,9 +534,7 @@
                 "identifier": "RepoUpdaterClient",
                 "newPage": false,
                 "searchKey": "enqueuer.RepoUpdaterClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -546,9 +554,7 @@
                 "identifier": "GitserverClient",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClient",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -568,7 +574,9 @@
                 "identifier": "gitClient",
                 "newPage": false,
                 "searchKey": "enqueuer.gitClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -586,7 +594,9 @@
                       "identifier": "newGitClient",
                       "newPage": false,
                       "searchKey": "enqueuer.newGitClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -606,7 +616,9 @@
                       "identifier": "gitClient.ListFiles",
                       "newPage": false,
                       "searchKey": "enqueuer.gitClient.ListFiles",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -626,7 +638,9 @@
                       "identifier": "gitClient.FileExists",
                       "newPage": false,
                       "searchKey": "enqueuer.gitClient.FileExists",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -646,7 +660,9 @@
                       "identifier": "gitClient.RawContents",
                       "newPage": false,
                       "searchKey": "enqueuer.gitClient.RawContents",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -669,7 +685,9 @@
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "enqueuer.operations",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -687,7 +705,9 @@
                       "identifier": "newOperations",
                       "newPage": false,
                       "searchKey": "enqueuer.newOperations",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -710,7 +730,9 @@
                 "identifier": "MockDBStore",
                 "newPage": false,
                 "searchKey": "enqueuer.MockDBStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -728,7 +750,9 @@
                       "identifier": "NewMockDBStore",
                       "newPage": false,
                       "searchKey": "enqueuer.NewMockDBStore",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -748,7 +772,9 @@
                       "identifier": "NewMockDBStoreFrom",
                       "newPage": false,
                       "searchKey": "enqueuer.NewMockDBStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -768,7 +794,9 @@
                       "identifier": "MockDBStore.DirtyRepositories",
                       "newPage": false,
                       "searchKey": "enqueuer.MockDBStore.DirtyRepositories",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -788,7 +816,9 @@
                       "identifier": "MockDBStore.Done",
                       "newPage": false,
                       "searchKey": "enqueuer.MockDBStore.Done",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -808,7 +838,9 @@
                       "identifier": "MockDBStore.GetIndexConfigurationByRepositoryID",
                       "newPage": false,
                       "searchKey": "enqueuer.MockDBStore.GetIndexConfigurationByRepositoryID",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -828,7 +860,9 @@
                       "identifier": "MockDBStore.GetRepositoriesWithIndexConfiguration",
                       "newPage": false,
                       "searchKey": "enqueuer.MockDBStore.GetRepositoriesWithIndexConfiguration",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -848,7 +882,9 @@
                       "identifier": "MockDBStore.Handle",
                       "newPage": false,
                       "searchKey": "enqueuer.MockDBStore.Handle",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -868,7 +904,9 @@
                       "identifier": "MockDBStore.InsertIndex",
                       "newPage": false,
                       "searchKey": "enqueuer.MockDBStore.InsertIndex",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -888,7 +926,9 @@
                       "identifier": "MockDBStore.IsQueued",
                       "newPage": false,
                       "searchKey": "enqueuer.MockDBStore.IsQueued",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -908,7 +948,9 @@
                       "identifier": "MockDBStore.Transact",
                       "newPage": false,
                       "searchKey": "enqueuer.MockDBStore.Transact",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -931,7 +973,9 @@
                 "identifier": "DBStoreDirtyRepositoriesFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreDirtyRepositoriesFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -949,7 +993,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDirtyRepositoriesFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -969,7 +1015,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDirtyRepositoriesFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -989,7 +1037,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDirtyRepositoriesFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1009,7 +1059,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDirtyRepositoriesFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1029,7 +1081,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDirtyRepositoriesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1049,7 +1103,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDirtyRepositoriesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1069,7 +1125,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDirtyRepositoriesFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1092,7 +1150,9 @@
                 "identifier": "DBStoreDirtyRepositoriesFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreDirtyRepositoriesFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1110,7 +1170,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDirtyRepositoriesFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1130,7 +1192,9 @@
                       "identifier": "DBStoreDirtyRepositoriesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDirtyRepositoriesFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1153,7 +1217,9 @@
                 "identifier": "DBStoreDoneFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreDoneFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1171,7 +1237,9 @@
                       "identifier": "DBStoreDoneFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDoneFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1191,7 +1259,9 @@
                       "identifier": "DBStoreDoneFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDoneFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1211,7 +1281,9 @@
                       "identifier": "DBStoreDoneFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDoneFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1231,7 +1303,9 @@
                       "identifier": "DBStoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDoneFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1251,7 +1325,9 @@
                       "identifier": "DBStoreDoneFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDoneFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1271,7 +1347,9 @@
                       "identifier": "DBStoreDoneFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDoneFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1291,7 +1369,9 @@
                       "identifier": "DBStoreDoneFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDoneFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1314,7 +1394,9 @@
                 "identifier": "DBStoreDoneFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreDoneFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1332,7 +1414,9 @@
                       "identifier": "DBStoreDoneFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDoneFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1352,7 +1436,9 @@
                       "identifier": "DBStoreDoneFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreDoneFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1375,7 +1461,9 @@
                 "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1393,7 +1481,9 @@
                       "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1413,7 +1503,9 @@
                       "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1433,7 +1525,9 @@
                       "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1453,7 +1547,9 @@
                       "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1473,7 +1569,9 @@
                       "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1493,7 +1591,9 @@
                       "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1513,7 +1613,9 @@
                       "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1536,7 +1638,9 @@
                 "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1554,7 +1658,9 @@
                       "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1574,7 +1680,9 @@
                       "identifier": "DBStoreGetIndexConfigurationByRepositoryIDFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetIndexConfigurationByRepositoryIDFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1597,7 +1705,9 @@
                 "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1615,7 +1725,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1635,7 +1747,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1655,7 +1769,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1675,7 +1791,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1695,7 +1813,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1715,7 +1835,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1735,7 +1857,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1758,7 +1882,9 @@
                 "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1776,7 +1902,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1796,7 +1924,9 @@
                       "identifier": "DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1819,7 +1949,9 @@
                 "identifier": "DBStoreHandleFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreHandleFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1837,7 +1969,9 @@
                       "identifier": "DBStoreHandleFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreHandleFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1857,7 +1991,9 @@
                       "identifier": "DBStoreHandleFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreHandleFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1877,7 +2013,9 @@
                       "identifier": "DBStoreHandleFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreHandleFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1897,7 +2035,9 @@
                       "identifier": "DBStoreHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreHandleFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1917,7 +2057,9 @@
                       "identifier": "DBStoreHandleFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreHandleFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1937,7 +2079,9 @@
                       "identifier": "DBStoreHandleFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreHandleFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1957,7 +2101,9 @@
                       "identifier": "DBStoreHandleFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreHandleFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1980,7 +2126,9 @@
                 "identifier": "DBStoreHandleFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreHandleFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1998,7 +2146,9 @@
                       "identifier": "DBStoreHandleFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreHandleFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2018,7 +2168,9 @@
                       "identifier": "DBStoreHandleFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreHandleFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2041,7 +2193,9 @@
                 "identifier": "DBStoreInsertIndexFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreInsertIndexFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2059,7 +2213,9 @@
                       "identifier": "DBStoreInsertIndexFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreInsertIndexFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2079,7 +2235,9 @@
                       "identifier": "DBStoreInsertIndexFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreInsertIndexFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2099,7 +2257,9 @@
                       "identifier": "DBStoreInsertIndexFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreInsertIndexFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2119,7 +2279,9 @@
                       "identifier": "DBStoreInsertIndexFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreInsertIndexFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2139,7 +2301,9 @@
                       "identifier": "DBStoreInsertIndexFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreInsertIndexFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2159,7 +2323,9 @@
                       "identifier": "DBStoreInsertIndexFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreInsertIndexFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2179,7 +2345,9 @@
                       "identifier": "DBStoreInsertIndexFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreInsertIndexFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2202,7 +2370,9 @@
                 "identifier": "DBStoreInsertIndexFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreInsertIndexFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2220,7 +2390,9 @@
                       "identifier": "DBStoreInsertIndexFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreInsertIndexFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2240,7 +2412,9 @@
                       "identifier": "DBStoreInsertIndexFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreInsertIndexFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2263,7 +2437,9 @@
                 "identifier": "DBStoreIsQueuedFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreIsQueuedFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2281,7 +2457,9 @@
                       "identifier": "DBStoreIsQueuedFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreIsQueuedFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2301,7 +2479,9 @@
                       "identifier": "DBStoreIsQueuedFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreIsQueuedFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2321,7 +2501,9 @@
                       "identifier": "DBStoreIsQueuedFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreIsQueuedFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2341,7 +2523,9 @@
                       "identifier": "DBStoreIsQueuedFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreIsQueuedFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2361,7 +2545,9 @@
                       "identifier": "DBStoreIsQueuedFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreIsQueuedFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2381,7 +2567,9 @@
                       "identifier": "DBStoreIsQueuedFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreIsQueuedFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2401,7 +2589,9 @@
                       "identifier": "DBStoreIsQueuedFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreIsQueuedFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2424,7 +2614,9 @@
                 "identifier": "DBStoreIsQueuedFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreIsQueuedFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2442,7 +2634,9 @@
                       "identifier": "DBStoreIsQueuedFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreIsQueuedFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2462,7 +2656,9 @@
                       "identifier": "DBStoreIsQueuedFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreIsQueuedFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2485,7 +2681,9 @@
                 "identifier": "DBStoreTransactFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreTransactFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2503,7 +2701,9 @@
                       "identifier": "DBStoreTransactFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreTransactFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2523,7 +2723,9 @@
                       "identifier": "DBStoreTransactFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreTransactFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2543,7 +2745,9 @@
                       "identifier": "DBStoreTransactFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreTransactFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2563,7 +2767,9 @@
                       "identifier": "DBStoreTransactFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreTransactFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2583,7 +2789,9 @@
                       "identifier": "DBStoreTransactFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreTransactFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2603,7 +2811,9 @@
                       "identifier": "DBStoreTransactFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreTransactFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2623,7 +2833,9 @@
                       "identifier": "DBStoreTransactFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreTransactFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2646,7 +2858,9 @@
                 "identifier": "DBStoreTransactFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.DBStoreTransactFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2664,7 +2878,9 @@
                       "identifier": "DBStoreTransactFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreTransactFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2684,7 +2900,9 @@
                       "identifier": "DBStoreTransactFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.DBStoreTransactFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2707,7 +2925,9 @@
                 "identifier": "MockGitserverClient",
                 "newPage": false,
                 "searchKey": "enqueuer.MockGitserverClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2725,7 +2945,9 @@
                       "identifier": "NewMockGitserverClient",
                       "newPage": false,
                       "searchKey": "enqueuer.NewMockGitserverClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2745,7 +2967,9 @@
                       "identifier": "NewMockGitserverClientFrom",
                       "newPage": false,
                       "searchKey": "enqueuer.NewMockGitserverClientFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2765,7 +2989,9 @@
                       "identifier": "MockGitserverClient.FileExists",
                       "newPage": false,
                       "searchKey": "enqueuer.MockGitserverClient.FileExists",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2785,7 +3011,9 @@
                       "identifier": "MockGitserverClient.Head",
                       "newPage": false,
                       "searchKey": "enqueuer.MockGitserverClient.Head",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2805,7 +3033,9 @@
                       "identifier": "MockGitserverClient.ListFiles",
                       "newPage": false,
                       "searchKey": "enqueuer.MockGitserverClient.ListFiles",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2825,7 +3055,9 @@
                       "identifier": "MockGitserverClient.RawContents",
                       "newPage": false,
                       "searchKey": "enqueuer.MockGitserverClient.RawContents",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2845,7 +3077,9 @@
                       "identifier": "MockGitserverClient.ResolveRevision",
                       "newPage": false,
                       "searchKey": "enqueuer.MockGitserverClient.ResolveRevision",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2868,7 +3102,9 @@
                 "identifier": "GitserverClientFileExistsFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClientFileExistsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2886,7 +3122,9 @@
                       "identifier": "GitserverClientFileExistsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientFileExistsFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2906,7 +3144,9 @@
                       "identifier": "GitserverClientFileExistsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientFileExistsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2926,7 +3166,9 @@
                       "identifier": "GitserverClientFileExistsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientFileExistsFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2946,7 +3188,9 @@
                       "identifier": "GitserverClientFileExistsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientFileExistsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2966,7 +3210,9 @@
                       "identifier": "GitserverClientFileExistsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientFileExistsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2986,7 +3232,9 @@
                       "identifier": "GitserverClientFileExistsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientFileExistsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3006,7 +3254,9 @@
                       "identifier": "GitserverClientFileExistsFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientFileExistsFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3029,7 +3279,9 @@
                 "identifier": "GitserverClientFileExistsFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClientFileExistsFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3047,7 +3299,9 @@
                       "identifier": "GitserverClientFileExistsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientFileExistsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3067,7 +3321,9 @@
                       "identifier": "GitserverClientFileExistsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientFileExistsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3090,7 +3346,9 @@
                 "identifier": "GitserverClientHeadFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClientHeadFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3108,7 +3366,9 @@
                       "identifier": "GitserverClientHeadFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientHeadFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3128,7 +3388,9 @@
                       "identifier": "GitserverClientHeadFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientHeadFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3148,7 +3410,9 @@
                       "identifier": "GitserverClientHeadFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientHeadFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3168,7 +3432,9 @@
                       "identifier": "GitserverClientHeadFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientHeadFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3188,7 +3454,9 @@
                       "identifier": "GitserverClientHeadFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientHeadFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3208,7 +3476,9 @@
                       "identifier": "GitserverClientHeadFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientHeadFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3228,7 +3498,9 @@
                       "identifier": "GitserverClientHeadFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientHeadFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3251,7 +3523,9 @@
                 "identifier": "GitserverClientHeadFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClientHeadFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3269,7 +3543,9 @@
                       "identifier": "GitserverClientHeadFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientHeadFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3289,7 +3565,9 @@
                       "identifier": "GitserverClientHeadFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientHeadFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3312,7 +3590,9 @@
                 "identifier": "GitserverClientListFilesFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClientListFilesFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3330,7 +3610,9 @@
                       "identifier": "GitserverClientListFilesFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientListFilesFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3350,7 +3632,9 @@
                       "identifier": "GitserverClientListFilesFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientListFilesFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3370,7 +3654,9 @@
                       "identifier": "GitserverClientListFilesFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientListFilesFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3390,7 +3676,9 @@
                       "identifier": "GitserverClientListFilesFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientListFilesFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3410,7 +3698,9 @@
                       "identifier": "GitserverClientListFilesFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientListFilesFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3430,7 +3720,9 @@
                       "identifier": "GitserverClientListFilesFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientListFilesFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3450,7 +3742,9 @@
                       "identifier": "GitserverClientListFilesFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientListFilesFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3473,7 +3767,9 @@
                 "identifier": "GitserverClientListFilesFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClientListFilesFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3491,7 +3787,9 @@
                       "identifier": "GitserverClientListFilesFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientListFilesFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3511,7 +3809,9 @@
                       "identifier": "GitserverClientListFilesFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientListFilesFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3534,7 +3834,9 @@
                 "identifier": "GitserverClientRawContentsFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClientRawContentsFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3552,7 +3854,9 @@
                       "identifier": "GitserverClientRawContentsFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientRawContentsFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3572,7 +3876,9 @@
                       "identifier": "GitserverClientRawContentsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientRawContentsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3592,7 +3898,9 @@
                       "identifier": "GitserverClientRawContentsFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientRawContentsFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3612,7 +3920,9 @@
                       "identifier": "GitserverClientRawContentsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientRawContentsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3632,7 +3942,9 @@
                       "identifier": "GitserverClientRawContentsFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientRawContentsFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3652,7 +3964,9 @@
                       "identifier": "GitserverClientRawContentsFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientRawContentsFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3672,7 +3986,9 @@
                       "identifier": "GitserverClientRawContentsFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientRawContentsFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3695,7 +4011,9 @@
                 "identifier": "GitserverClientRawContentsFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClientRawContentsFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3713,7 +4031,9 @@
                       "identifier": "GitserverClientRawContentsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientRawContentsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3733,7 +4053,9 @@
                       "identifier": "GitserverClientRawContentsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientRawContentsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3756,7 +4078,9 @@
                 "identifier": "GitserverClientResolveRevisionFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClientResolveRevisionFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3774,7 +4098,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientResolveRevisionFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3794,7 +4120,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientResolveRevisionFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3814,7 +4142,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientResolveRevisionFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3834,7 +4164,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientResolveRevisionFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3854,7 +4186,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientResolveRevisionFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3874,7 +4208,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientResolveRevisionFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3894,7 +4230,9 @@
                       "identifier": "GitserverClientResolveRevisionFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientResolveRevisionFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3917,7 +4255,9 @@
                 "identifier": "GitserverClientResolveRevisionFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.GitserverClientResolveRevisionFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3935,7 +4275,9 @@
                       "identifier": "GitserverClientResolveRevisionFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientResolveRevisionFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3955,7 +4297,9 @@
                       "identifier": "GitserverClientResolveRevisionFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.GitserverClientResolveRevisionFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3978,7 +4322,9 @@
                 "identifier": "MockRepoUpdaterClient",
                 "newPage": false,
                 "searchKey": "enqueuer.MockRepoUpdaterClient",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3996,7 +4342,9 @@
                       "identifier": "NewMockRepoUpdaterClient",
                       "newPage": false,
                       "searchKey": "enqueuer.NewMockRepoUpdaterClient",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4016,7 +4364,9 @@
                       "identifier": "NewMockRepoUpdaterClientFrom",
                       "newPage": false,
                       "searchKey": "enqueuer.NewMockRepoUpdaterClientFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4036,7 +4386,9 @@
                       "identifier": "MockRepoUpdaterClient.EnqueueRepoUpdate",
                       "newPage": false,
                       "searchKey": "enqueuer.MockRepoUpdaterClient.EnqueueRepoUpdate",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4059,7 +4411,9 @@
                 "identifier": "RepoUpdaterClientEnqueueRepoUpdateFunc",
                 "newPage": false,
                 "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4077,7 +4431,9 @@
                       "identifier": "RepoUpdaterClientEnqueueRepoUpdateFunc.SetDefaultHook",
                       "newPage": false,
                       "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.SetDefaultHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4097,7 +4453,9 @@
                       "identifier": "RepoUpdaterClientEnqueueRepoUpdateFunc.PushHook",
                       "newPage": false,
                       "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4117,7 +4475,9 @@
                       "identifier": "RepoUpdaterClientEnqueueRepoUpdateFunc.SetDefaultReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.SetDefaultReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4137,7 +4497,9 @@
                       "identifier": "RepoUpdaterClientEnqueueRepoUpdateFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4157,7 +4519,9 @@
                       "identifier": "RepoUpdaterClientEnqueueRepoUpdateFunc.nextHook",
                       "newPage": false,
                       "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.nextHook",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4177,7 +4541,9 @@
                       "identifier": "RepoUpdaterClientEnqueueRepoUpdateFunc.appendCall",
                       "newPage": false,
                       "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.appendCall",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4197,7 +4563,9 @@
                       "identifier": "RepoUpdaterClientEnqueueRepoUpdateFunc.History",
                       "newPage": false,
                       "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFunc.History",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4220,7 +4588,9 @@
                 "identifier": "RepoUpdaterClientEnqueueRepoUpdateFuncCall",
                 "newPage": false,
                 "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFuncCall",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4238,7 +4608,9 @@
                       "identifier": "RepoUpdaterClientEnqueueRepoUpdateFuncCall.Args",
                       "newPage": false,
                       "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4258,7 +4630,9 @@
                       "identifier": "RepoUpdaterClientEnqueueRepoUpdateFuncCall.Results",
                       "newPage": false,
                       "searchKey": "enqueuer.RepoUpdaterClientEnqueueRepoUpdateFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -4284,7 +4658,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -4302,7 +4678,9 @@
                 "identifier": "isNotFoundError",
                 "newPage": false,
                 "searchKey": "enqueuer.isNotFoundError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4322,9 +4700,7 @@
                 "identifier": "InferGoRepositoryAndRevision",
                 "newPage": false,
                 "searchKey": "enqueuer.InferGoRepositoryAndRevision",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -4344,7 +4720,9 @@
                 "identifier": "convertIndexConfiguration",
                 "newPage": false,
                 "searchKey": "enqueuer.convertIndexConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4364,7 +4742,9 @@
                 "identifier": "convertInferredConfiguration",
                 "newPage": false,
                 "searchKey": "enqueuer.convertInferredConfiguration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4384,7 +4764,9 @@
                 "identifier": "TestQueueIndexesForRepositoryInDatabase",
                 "newPage": false,
                 "searchKey": "enqueuer.TestQueueIndexesForRepositoryInDatabase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4404,7 +4786,9 @@
                 "identifier": "TestQueueIndexesForRepositoryInRepository",
                 "newPage": false,
                 "searchKey": "enqueuer.TestQueueIndexesForRepositoryInRepository",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4424,7 +4808,9 @@
                 "identifier": "TestQueueIndexesForRepositoryInferred",
                 "newPage": false,
                 "searchKey": "enqueuer.TestQueueIndexesForRepositoryInferred",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4444,7 +4830,9 @@
                 "identifier": "TestQueueIndexesForRepositoryInferredTooLarge",
                 "newPage": false,
                 "searchKey": "enqueuer.TestQueueIndexesForRepositoryInferredTooLarge",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4464,7 +4852,9 @@
                 "identifier": "TestQueueIndexesForPackage",
                 "newPage": false,
                 "searchKey": "enqueuer.TestQueueIndexesForPackage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4484,7 +4874,9 @@
                 "identifier": "TestInferGoRepositoryAndRevision",
                 "newPage": false,
                 "searchKey": "enqueuer.TestInferGoRepositoryAndRevision",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

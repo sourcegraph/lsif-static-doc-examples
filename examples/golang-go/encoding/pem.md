@@ -54,14 +54,11 @@ Package pem implements the PEM data encoding, which originated in Privacy Enhanc
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="pemLineLength" href="#pemLineLength">const pemLineLength</a>
 
 ```
 searchKey: pem.pemLineLength
+tags: [private]
 ```
 
 ```Go
@@ -72,6 +69,7 @@ const pemLineLength = 64
 
 ```
 searchKey: pem.pemTooFewEndingDashes
+tags: [private]
 ```
 
 ```Go
@@ -85,6 +83,7 @@ dGVzdA==
 
 ```
 searchKey: pem.pemTooManyEndingDashes
+tags: [private]
 ```
 
 ```Go
@@ -98,6 +97,7 @@ dGVzdA==
 
 ```
 searchKey: pem.pemTrailingNonWhitespace
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +111,7 @@ dGVzdA==
 
 ```
 searchKey: pem.pemWrongEndingType
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +125,7 @@ dGVzdA==
 
 ```
 searchKey: pem.pemMissingEndingSpace
+tags: [private]
 ```
 
 ```Go
@@ -137,6 +139,7 @@ dGVzdA==
 
 ```
 searchKey: pem.sixtyFourCharString
+tags: [private]
 ```
 
 ```Go
@@ -145,14 +148,11 @@ const sixtyFourCharString = "012345678901234567890123456789012345678901234567890
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="pemStart" href="#pemStart">var pemStart</a>
 
 ```
 searchKey: pem.pemStart
+tags: [private]
 ```
 
 ```Go
@@ -163,6 +163,7 @@ var pemStart = []byte("\n-----BEGIN ")
 
 ```
 searchKey: pem.pemEnd
+tags: [private]
 ```
 
 ```Go
@@ -173,6 +174,7 @@ var pemEnd = []byte("\n-----END ")
 
 ```
 searchKey: pem.pemEndOfLine
+tags: [private]
 ```
 
 ```Go
@@ -183,6 +185,7 @@ var pemEndOfLine = []byte("-----")
 
 ```
 searchKey: pem.nl
+tags: [private]
 ```
 
 ```Go
@@ -193,6 +196,7 @@ var nl = []byte{'\n'}
 
 ```
 searchKey: pem.getLineTests
+tags: [private]
 ```
 
 ```Go
@@ -203,6 +207,7 @@ var getLineTests = ...
 
 ```
 searchKey: pem.badPEMTests
+tags: [private]
 ```
 
 ```Go
@@ -213,6 +218,7 @@ var badPEMTests = ...
 
 ```
 searchKey: pem.lineBreakerTests
+tags: [private]
 ```
 
 ```Go
@@ -223,6 +229,7 @@ var lineBreakerTests = ...
 
 ```
 searchKey: pem.pemData
+tags: [private]
 ```
 
 ```Go
@@ -233,6 +240,7 @@ var pemData = ...
 
 ```
 searchKey: pem.certificate
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +251,7 @@ var certificate = ...
 
 ```
 searchKey: pem.privateKey
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +262,7 @@ var privateKey = ...
 
 ```
 searchKey: pem.privateKey2
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +273,7 @@ var privateKey2 = ...
 
 ```
 searchKey: pem.pemPrivateKey2
+tags: [private]
 ```
 
 ```Go
@@ -271,15 +282,10 @@ var pemPrivateKey2 = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Block" href="#Block">type Block struct</a>
 
 ```
 searchKey: pem.Block
-tags: [exported]
 ```
 
 ```Go
@@ -307,7 +313,6 @@ where Headers is a possibly empty sequence of Key: Value lines.
 
 ```
 searchKey: pem.Decode
-tags: [exported]
 ```
 
 ```Go
@@ -320,6 +325,7 @@ Decode will find the next PEM formatted block (certificate, private key etc) in 
 
 ```
 searchKey: pem.decodeError
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +336,7 @@ func decodeError(data, rest []byte) (*Block, []byte)
 
 ```
 searchKey: pem.lineBreaker
+tags: [private]
 ```
 
 ```Go
@@ -344,6 +351,7 @@ type lineBreaker struct {
 
 ```
 searchKey: pem.lineBreaker.Write
+tags: [private]
 ```
 
 ```Go
@@ -354,6 +362,7 @@ func (l *lineBreaker) Write(b []byte) (n int, err error)
 
 ```
 searchKey: pem.lineBreaker.Close
+tags: [private]
 ```
 
 ```Go
@@ -364,6 +373,7 @@ func (l *lineBreaker) Close() (err error)
 
 ```
 searchKey: pem.GetLineTest
+tags: [private]
 ```
 
 ```Go
@@ -376,6 +386,7 @@ type GetLineTest struct {
 
 ```
 searchKey: pem.lineBreakerTest
+tags: [private]
 ```
 
 ```Go
@@ -386,14 +397,11 @@ type lineBreakerTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="getLine" href="#getLine">func getLine(data []byte) (line, rest []byte)</a>
 
 ```
 searchKey: pem.getLine
+tags: [private]
 ```
 
 ```Go
@@ -406,6 +414,7 @@ getLine results the first \r\n or \n delineated line from the given byte array. 
 
 ```
 searchKey: pem.removeSpacesAndTabs
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +429,7 @@ The base64 decoder already skips newline characters, so we don't need to filter 
 
 ```
 searchKey: pem.writeHeader
+tags: [private]
 ```
 
 ```Go
@@ -430,7 +440,6 @@ func writeHeader(out io.Writer, k, v string) error
 
 ```
 searchKey: pem.Encode
-tags: [exported]
 ```
 
 ```Go
@@ -443,7 +452,6 @@ Encode writes the PEM encoding of b to out.
 
 ```
 searchKey: pem.EncodeToMemory
-tags: [exported]
 ```
 
 ```Go
@@ -458,6 +466,7 @@ If b has invalid headers and cannot be encoded, EncodeToMemory returns nil. If i
 
 ```
 searchKey: pem.TestGetLine
+tags: [private]
 ```
 
 ```Go
@@ -468,6 +477,7 @@ func TestGetLine(t *testing.T)
 
 ```
 searchKey: pem.TestDecode
+tags: [private]
 ```
 
 ```Go
@@ -478,6 +488,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: pem.TestBadDecode
+tags: [private]
 ```
 
 ```Go
@@ -488,6 +499,7 @@ func TestBadDecode(t *testing.T)
 
 ```
 searchKey: pem.TestEncode
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +510,7 @@ func TestEncode(t *testing.T)
 
 ```
 searchKey: pem.TestLineBreaker
+tags: [private]
 ```
 
 ```Go
@@ -508,6 +521,7 @@ func TestLineBreaker(t *testing.T)
 
 ```
 searchKey: pem.TestFuzz
+tags: [private]
 ```
 
 ```Go
@@ -518,6 +532,7 @@ func TestFuzz(t *testing.T)
 
 ```
 searchKey: pem.BenchmarkEncode
+tags: [private]
 ```
 
 ```Go
@@ -528,6 +543,7 @@ func BenchmarkEncode(b *testing.B)
 
 ```
 searchKey: pem.BenchmarkDecode
+tags: [private]
 ```
 
 ```Go
@@ -538,6 +554,7 @@ func BenchmarkDecode(b *testing.B)
 
 ```
 searchKey: pem.TestBadEncode
+tags: [private]
 ```
 
 ```Go
@@ -548,6 +565,7 @@ func TestBadEncode(t *testing.T)
 
 ```
 searchKey: pem.testingKey
+tags: [private]
 ```
 
 ```Go

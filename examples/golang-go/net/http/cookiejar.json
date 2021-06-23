@@ -4,9 +4,7 @@
     "identifier": "cookiejar",
     "newPage": true,
     "searchKey": "net/http/cookiejar",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "base",
                 "newPage": false,
                 "searchKey": "cookiejar.base",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "damp",
                 "newPage": false,
                 "searchKey": "cookiejar.damp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "initialBias",
                 "newPage": false,
                 "searchKey": "cookiejar.initialBias",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "initialN",
                 "newPage": false,
                 "searchKey": "cookiejar.initialN",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "skew",
                 "newPage": false,
                 "searchKey": "cookiejar.skew",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "tmax",
                 "newPage": false,
                 "searchKey": "cookiejar.tmax",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "tmin",
                 "newPage": false,
                 "searchKey": "cookiejar.tmin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "acePrefix",
                 "newPage": false,
                 "searchKey": "cookiejar.acePrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,9 +219,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -227,7 +237,9 @@
                 "identifier": "errIllegalDomain",
                 "newPage": false,
                 "searchKey": "cookiejar.errIllegalDomain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "errMalformedDomain",
                 "newPage": false,
                 "searchKey": "cookiejar.errMalformedDomain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "errNoHostname",
                 "newPage": false,
                 "searchKey": "cookiejar.errNoHostname",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -287,7 +303,9 @@
                 "identifier": "endOfTime",
                 "newPage": false,
                 "searchKey": "cookiejar.endOfTime",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -307,7 +325,9 @@
                 "identifier": "tNow",
                 "newPage": false,
                 "searchKey": "cookiejar.tNow",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -327,7 +347,9 @@
                 "identifier": "hasDotSuffixTests",
                 "newPage": false,
                 "searchKey": "cookiejar.hasDotSuffixTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,7 +369,9 @@
                 "identifier": "canonicalHostTests",
                 "newPage": false,
                 "searchKey": "cookiejar.canonicalHostTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +391,9 @@
                 "identifier": "hasPortTests",
                 "newPage": false,
                 "searchKey": "cookiejar.hasPortTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +413,9 @@
                 "identifier": "jarKeyTests",
                 "newPage": false,
                 "searchKey": "cookiejar.jarKeyTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,7 +435,9 @@
                 "identifier": "jarKeyNilPSLTests",
                 "newPage": false,
                 "searchKey": "cookiejar.jarKeyNilPSLTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -427,7 +457,9 @@
                 "identifier": "isIPTests",
                 "newPage": false,
                 "searchKey": "cookiejar.isIPTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,7 +479,9 @@
                 "identifier": "defaultPathTests",
                 "newPage": false,
                 "searchKey": "cookiejar.defaultPathTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,7 +501,9 @@
                 "identifier": "domainAndTypeTests",
                 "newPage": false,
                 "searchKey": "cookiejar.domainAndTypeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,7 +523,9 @@
                 "identifier": "basicsTests",
                 "newPage": false,
                 "searchKey": "cookiejar.basicsTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +545,9 @@
                 "identifier": "updateAndDeleteTests",
                 "newPage": false,
                 "searchKey": "cookiejar.updateAndDeleteTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,7 +567,9 @@
                 "identifier": "chromiumBasicsTests",
                 "newPage": false,
                 "searchKey": "cookiejar.chromiumBasicsTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -547,7 +589,9 @@
                 "identifier": "chromiumDomainTests",
                 "newPage": false,
                 "searchKey": "cookiejar.chromiumDomainTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -567,7 +611,9 @@
                 "identifier": "chromiumDeletionTests",
                 "newPage": false,
                 "searchKey": "cookiejar.chromiumDeletionTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -587,7 +633,9 @@
                 "identifier": "domainHandlingTests",
                 "newPage": false,
                 "searchKey": "cookiejar.domainHandlingTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -607,7 +655,9 @@
                 "identifier": "punycodeTestCases",
                 "newPage": false,
                 "searchKey": "cookiejar.punycodeTestCases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -630,9 +680,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -650,9 +698,7 @@
                 "identifier": "PublicSuffixList",
                 "newPage": false,
                 "searchKey": "cookiejar.PublicSuffixList",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -672,9 +718,7 @@
                 "identifier": "Options",
                 "newPage": false,
                 "searchKey": "cookiejar.Options",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -694,9 +738,7 @@
                 "identifier": "Jar",
                 "newPage": false,
                 "searchKey": "cookiejar.Jar",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -714,9 +756,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "cookiejar.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -736,7 +776,9 @@
                       "identifier": "newTestJar",
                       "newPage": false,
                       "searchKey": "cookiejar.newTestJar",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -756,9 +798,7 @@
                       "identifier": "Jar.Cookies",
                       "newPage": false,
                       "searchKey": "cookiejar.Jar.Cookies",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -778,7 +818,9 @@
                       "identifier": "Jar.cookies",
                       "newPage": false,
                       "searchKey": "cookiejar.Jar.cookies",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -798,9 +840,7 @@
                       "identifier": "Jar.SetCookies",
                       "newPage": false,
                       "searchKey": "cookiejar.Jar.SetCookies",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -820,7 +860,9 @@
                       "identifier": "Jar.setCookies",
                       "newPage": false,
                       "searchKey": "cookiejar.Jar.setCookies",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -840,7 +882,9 @@
                       "identifier": "Jar.newEntry",
                       "newPage": false,
                       "searchKey": "cookiejar.Jar.newEntry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -860,7 +904,9 @@
                       "identifier": "Jar.domainAndType",
                       "newPage": false,
                       "searchKey": "cookiejar.Jar.domainAndType",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -883,7 +929,9 @@
                 "identifier": "entry",
                 "newPage": false,
                 "searchKey": "cookiejar.entry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -901,7 +949,9 @@
                       "identifier": "entry.id",
                       "newPage": false,
                       "searchKey": "cookiejar.entry.id",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -921,7 +971,9 @@
                       "identifier": "entry.shouldSend",
                       "newPage": false,
                       "searchKey": "cookiejar.entry.shouldSend",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -941,7 +993,9 @@
                       "identifier": "entry.domainMatch",
                       "newPage": false,
                       "searchKey": "cookiejar.entry.domainMatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -961,7 +1015,9 @@
                       "identifier": "entry.pathMatch",
                       "newPage": false,
                       "searchKey": "cookiejar.entry.pathMatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -984,7 +1040,9 @@
                 "identifier": "testPSL",
                 "newPage": false,
                 "searchKey": "cookiejar.testPSL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1002,7 +1060,9 @@
                       "identifier": "testPSL.String",
                       "newPage": false,
                       "searchKey": "cookiejar.testPSL.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1022,7 +1082,9 @@
                       "identifier": "testPSL.PublicSuffix",
                       "newPage": false,
                       "searchKey": "cookiejar.testPSL.PublicSuffix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1045,7 +1107,9 @@
                 "identifier": "jarTest",
                 "newPage": false,
                 "searchKey": "cookiejar.jarTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1063,7 +1127,9 @@
                       "identifier": "jarTest.run",
                       "newPage": false,
                       "searchKey": "cookiejar.jarTest.run",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1086,7 +1152,9 @@
                 "identifier": "query",
                 "newPage": false,
                 "searchKey": "cookiejar.query",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1109,9 +1177,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1129,7 +1195,9 @@
                 "identifier": "hasDotSuffix",
                 "newPage": false,
                 "searchKey": "cookiejar.hasDotSuffix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1149,7 +1217,9 @@
                 "identifier": "canonicalHost",
                 "newPage": false,
                 "searchKey": "cookiejar.canonicalHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1169,7 +1239,9 @@
                 "identifier": "hasPort",
                 "newPage": false,
                 "searchKey": "cookiejar.hasPort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1189,7 +1261,9 @@
                 "identifier": "jarKey",
                 "newPage": false,
                 "searchKey": "cookiejar.jarKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1209,7 +1283,9 @@
                 "identifier": "isIP",
                 "newPage": false,
                 "searchKey": "cookiejar.isIP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1229,7 +1305,9 @@
                 "identifier": "defaultPath",
                 "newPage": false,
                 "searchKey": "cookiejar.defaultPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1249,7 +1327,9 @@
                 "identifier": "encode",
                 "newPage": false,
                 "searchKey": "cookiejar.encode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1269,7 +1349,9 @@
                 "identifier": "encodeDigit",
                 "newPage": false,
                 "searchKey": "cookiejar.encodeDigit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1289,7 +1371,9 @@
                 "identifier": "adapt",
                 "newPage": false,
                 "searchKey": "cookiejar.adapt",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1309,7 +1393,9 @@
                 "identifier": "toASCII",
                 "newPage": false,
                 "searchKey": "cookiejar.toASCII",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1329,7 +1415,9 @@
                 "identifier": "TestHasDotSuffix",
                 "newPage": false,
                 "searchKey": "cookiejar.TestHasDotSuffix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1349,7 +1437,9 @@
                 "identifier": "TestCanonicalHost",
                 "newPage": false,
                 "searchKey": "cookiejar.TestCanonicalHost",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1369,7 +1459,9 @@
                 "identifier": "TestHasPort",
                 "newPage": false,
                 "searchKey": "cookiejar.TestHasPort",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1389,7 +1481,9 @@
                 "identifier": "TestJarKey",
                 "newPage": false,
                 "searchKey": "cookiejar.TestJarKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1409,7 +1503,9 @@
                 "identifier": "TestJarKeyNilPSL",
                 "newPage": false,
                 "searchKey": "cookiejar.TestJarKeyNilPSL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1429,7 +1525,9 @@
                 "identifier": "TestIsIP",
                 "newPage": false,
                 "searchKey": "cookiejar.TestIsIP",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1449,7 +1547,9 @@
                 "identifier": "TestDefaultPath",
                 "newPage": false,
                 "searchKey": "cookiejar.TestDefaultPath",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1469,7 +1569,9 @@
                 "identifier": "TestDomainAndType",
                 "newPage": false,
                 "searchKey": "cookiejar.TestDomainAndType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1489,7 +1591,9 @@
                 "identifier": "expiresIn",
                 "newPage": false,
                 "searchKey": "cookiejar.expiresIn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1509,7 +1613,9 @@
                 "identifier": "mustParseURL",
                 "newPage": false,
                 "searchKey": "cookiejar.mustParseURL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1529,7 +1635,9 @@
                 "identifier": "TestBasics",
                 "newPage": false,
                 "searchKey": "cookiejar.TestBasics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1549,7 +1657,9 @@
                 "identifier": "TestUpdateAndDelete",
                 "newPage": false,
                 "searchKey": "cookiejar.TestUpdateAndDelete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1569,7 +1679,9 @@
                 "identifier": "TestExpiration",
                 "newPage": false,
                 "searchKey": "cookiejar.TestExpiration",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1589,7 +1701,9 @@
                 "identifier": "TestChromiumBasics",
                 "newPage": false,
                 "searchKey": "cookiejar.TestChromiumBasics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1609,7 +1723,9 @@
                 "identifier": "TestChromiumDomain",
                 "newPage": false,
                 "searchKey": "cookiejar.TestChromiumDomain",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1629,7 +1745,9 @@
                 "identifier": "TestChromiumDeletion",
                 "newPage": false,
                 "searchKey": "cookiejar.TestChromiumDeletion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1649,7 +1767,9 @@
                 "identifier": "TestDomainHandling",
                 "newPage": false,
                 "searchKey": "cookiejar.TestDomainHandling",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1669,7 +1789,9 @@
                 "identifier": "TestIssue19384",
                 "newPage": false,
                 "searchKey": "cookiejar.TestIssue19384",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1689,7 +1811,9 @@
                 "identifier": "TestPunycode",
                 "newPage": false,
                 "searchKey": "cookiejar.TestPunycode",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

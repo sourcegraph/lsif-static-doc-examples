@@ -4,9 +4,7 @@
     "identifier": "frontend",
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -27,9 +25,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -47,7 +43,9 @@
                 "identifier": "initFunctions",
                 "newPage": false,
                 "searchKey": "main.initFunctions",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -70,9 +68,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -90,7 +86,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -105,12 +103,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend#init",
+              "pathID": "/enterprise/cmd/frontend#init.main.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.main.go",
                 "newPage": false,
                 "searchKey": "main.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -130,7 +130,9 @@
                 "identifier": "enterpriseSetupHook",
                 "newPage": false,
                 "searchKey": "main.enterpriseSetupHook",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

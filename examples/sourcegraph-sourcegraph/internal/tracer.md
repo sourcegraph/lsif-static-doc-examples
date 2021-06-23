@@ -18,7 +18,7 @@ Package tracer initializes distributed tracing and log15 behavior. It also updat
         * [func (t *switchableTracer) Extract(format interface{}, carrier interface{}) (opentracing.SpanContext, error)](#switchableTracer.Extract)
         * [func (t *switchableTracer) set(tracer opentracing.Tracer, tracerCloser io.Closer, log bool)](#switchableTracer.set)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.tracer.go)
     * [func Init(options ...Option)](#Init)
     * [func initTracer(serviceName string)](#initTracer)
     * [func newTracer(opts *jaegerOpts) (opentracing.Tracer, func(span opentracing.Span) string, io.Closer, error)](#newTracer)
@@ -26,10 +26,15 @@ Package tracer initializes distributed tracing and log15 behavior. It also updat
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="tracingNotEnabledURL" href="#tracingNotEnabledURL">const tracingNotEnabledURL</a>
 
 ```
 searchKey: tracer.tracingNotEnabledURL
+tags: [private]
 ```
 
 ```Go
@@ -38,11 +43,14 @@ const tracingNotEnabledURL = "#tracing_not_enabled_for_this_request_add_?trace=1
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Options" href="#Options">type Options struct</a>
 
 ```
 searchKey: tracer.Options
-tags: [exported]
 ```
 
 ```Go
@@ -57,7 +65,6 @@ Options control the behavior of a tracer.
 
 ```
 searchKey: tracer.Option
-tags: [exported]
 ```
 
 ```Go
@@ -70,7 +77,6 @@ If this idiom seems strange: [https://github.com/tmrts/go-patterns/blob/master/i
 
 ```
 searchKey: tracer.ServiceName
-tags: [exported]
 ```
 
 ```Go
@@ -81,6 +87,7 @@ func ServiceName(s string) Option
 
 ```
 searchKey: tracer.jaegerOpts
+tags: [private]
 ```
 
 ```Go
@@ -96,6 +103,7 @@ type jaegerOpts struct {
 
 ```
 searchKey: tracer.switchableTracer
+tags: [private]
 ```
 
 ```Go
@@ -113,6 +121,7 @@ switchableTracer implements opentracing.Tracer. The underlying tracer used is sw
 
 ```
 searchKey: tracer.newSwitchableTracer
+tags: [private]
 ```
 
 ```Go
@@ -123,6 +132,7 @@ func newSwitchableTracer() *switchableTracer
 
 ```
 searchKey: tracer.switchableTracer.StartSpan
+tags: [private]
 ```
 
 ```Go
@@ -133,6 +143,7 @@ func (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.S
 
 ```
 searchKey: tracer.switchableTracer.Inject
+tags: [private]
 ```
 
 ```Go
@@ -143,6 +154,7 @@ func (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}
 
 ```
 searchKey: tracer.switchableTracer.Extract
+tags: [private]
 ```
 
 ```Go
@@ -153,6 +165,7 @@ func (t *switchableTracer) Extract(format interface{}, carrier interface{}) (ope
 
 ```
 searchKey: tracer.switchableTracer.set
+tags: [private]
 ```
 
 ```Go
@@ -161,10 +174,15 @@ func (t *switchableTracer) set(tracer opentracing.Tracer, tracerCloser io.Closer
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.tracer.go" href="#init.tracer.go">func init()</a>
 
 ```
 searchKey: tracer.init
+tags: [private]
 ```
 
 ```Go
@@ -175,7 +193,6 @@ func init()
 
 ```
 searchKey: tracer.Init
-tags: [exported]
 ```
 
 ```Go
@@ -186,6 +203,7 @@ func Init(options ...Option)
 
 ```
 searchKey: tracer.initTracer
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +216,7 @@ initTracer is a helper that should be called exactly once (from Init).
 
 ```
 searchKey: tracer.newTracer
+tags: [private]
 ```
 
 ```Go

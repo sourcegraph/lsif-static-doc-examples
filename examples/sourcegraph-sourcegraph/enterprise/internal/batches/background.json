@@ -4,7 +4,9 @@
     "identifier": "background",
     "newPage": true,
     "searchKey": "enterprise/internal/batches/background",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "bulkProcessorMaxNumRetries",
                 "newPage": false,
                 "searchKey": "background.bulkProcessorMaxNumRetries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +66,9 @@
                 "identifier": "bulkProcessorMaxNumResets",
                 "newPage": false,
                 "searchKey": "background.bulkProcessorMaxNumResets",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,9 +88,7 @@
                 "identifier": "BatchChangesSSHMigrationID",
                 "newPage": false,
                 "searchKey": "background.BatchChangesSSHMigrationID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -102,9 +108,7 @@
                 "identifier": "BatchChangesUserCredentialMigrationID",
                 "newPage": false,
                 "searchKey": "background.BatchChangesUserCredentialMigrationID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -124,9 +128,7 @@
                 "identifier": "BatchChangesSiteCredentialMigrationID",
                 "newPage": false,
                 "searchKey": "background.BatchChangesSiteCredentialMigrationID",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -146,7 +148,9 @@
                 "identifier": "reconcilerMaxNumRetries",
                 "newPage": false,
                 "searchKey": "background.reconcilerMaxNumRetries",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -166,7 +170,9 @@
                 "identifier": "reconcilerMaxNumResets",
                 "newPage": false,
                 "searchKey": "background.reconcilerMaxNumResets",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -186,7 +192,9 @@
                 "identifier": "siteCredentialMigrationCountPerRun",
                 "newPage": false,
                 "searchKey": "background.siteCredentialMigrationCountPerRun",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -206,7 +214,9 @@
                 "identifier": "siteCredentialMigratorProgressQuery",
                 "newPage": false,
                 "searchKey": "background.siteCredentialMigratorProgressQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -226,7 +236,9 @@
                 "identifier": "sshMigrationCountPerRun",
                 "newPage": false,
                 "searchKey": "background.sshMigrationCountPerRun",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -246,7 +258,9 @@
                 "identifier": "sshMigratorProgressQuery",
                 "newPage": false,
                 "searchKey": "background.sshMigratorProgressQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -266,7 +280,9 @@
                 "identifier": "userCredentialMigrationCountPerRun",
                 "newPage": false,
                 "searchKey": "background.userCredentialMigrationCountPerRun",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -286,7 +302,9 @@
                 "identifier": "userCredentialMigratorProgressQuery",
                 "newPage": false,
                 "searchKey": "background.userCredentialMigratorProgressQuery",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -309,7 +327,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -327,7 +347,9 @@
                 "identifier": "unknownJobTypeErr",
                 "newPage": false,
                 "searchKey": "background.unknownJobTypeErr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -345,7 +367,9 @@
                       "identifier": "unknownJobTypeErr.Error",
                       "newPage": false,
                       "searchKey": "background.unknownJobTypeErr.Error",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -365,7 +389,9 @@
                       "identifier": "unknownJobTypeErr.NonRetryable",
                       "newPage": false,
                       "searchKey": "background.unknownJobTypeErr.NonRetryable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -388,7 +414,9 @@
                 "identifier": "bulkProcessor",
                 "newPage": false,
                 "searchKey": "background.bulkProcessor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -406,7 +434,9 @@
                       "identifier": "bulkProcessor.process",
                       "newPage": false,
                       "searchKey": "background.bulkProcessor.process",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -426,7 +456,9 @@
                       "identifier": "bulkProcessor.comment",
                       "newPage": false,
                       "searchKey": "background.bulkProcessor.comment",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -446,7 +478,9 @@
                       "identifier": "bulkProcessor.detach",
                       "newPage": false,
                       "searchKey": "background.bulkProcessor.detach",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -466,7 +500,9 @@
                       "identifier": "bulkProcessor.reenqueueChangeset",
                       "newPage": false,
                       "searchKey": "background.bulkProcessor.reenqueueChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -486,7 +522,9 @@
                       "identifier": "bulkProcessor.mergeChangeset",
                       "newPage": false,
                       "searchKey": "background.bulkProcessor.mergeChangeset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -509,7 +547,9 @@
                 "identifier": "bulkProcessorWorker",
                 "newPage": false,
                 "searchKey": "background.bulkProcessorWorker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,7 +567,9 @@
                       "identifier": "bulkProcessorWorker.HandlerFunc",
                       "newPage": false,
                       "searchKey": "background.bulkProcessorWorker.HandlerFunc",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -550,7 +592,9 @@
                 "identifier": "batchChangesMetrics",
                 "newPage": false,
                 "searchKey": "background.batchChangesMetrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -568,7 +612,9 @@
                       "identifier": "newMetrics",
                       "newPage": false,
                       "searchKey": "background.newMetrics",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -591,7 +637,9 @@
                 "identifier": "siteCredentialMigrator",
                 "newPage": false,
                 "searchKey": "background.siteCredentialMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -609,7 +657,9 @@
                       "identifier": "siteCredentialMigrator.Progress",
                       "newPage": false,
                       "searchKey": "background.siteCredentialMigrator.Progress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -629,7 +679,9 @@
                       "identifier": "siteCredentialMigrator.Up",
                       "newPage": false,
                       "searchKey": "background.siteCredentialMigrator.Up",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -649,7 +701,9 @@
                       "identifier": "siteCredentialMigrator.Down",
                       "newPage": false,
                       "searchKey": "background.siteCredentialMigrator.Down",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -672,7 +726,9 @@
                 "identifier": "sshMigrator",
                 "newPage": false,
                 "searchKey": "background.sshMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -690,7 +746,9 @@
                       "identifier": "sshMigrator.Progress",
                       "newPage": false,
                       "searchKey": "background.sshMigrator.Progress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -710,7 +768,9 @@
                       "identifier": "sshMigrator.Up",
                       "newPage": false,
                       "searchKey": "background.sshMigrator.Up",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -730,7 +790,9 @@
                       "identifier": "sshMigrator.Down",
                       "newPage": false,
                       "searchKey": "background.sshMigrator.Down",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -753,7 +815,9 @@
                 "identifier": "userCredentialMigrator",
                 "newPage": false,
                 "searchKey": "background.userCredentialMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -771,7 +835,9 @@
                       "identifier": "userCredentialMigrator.Progress",
                       "newPage": false,
                       "searchKey": "background.userCredentialMigrator.Progress",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -791,7 +857,9 @@
                       "identifier": "userCredentialMigrator.Up",
                       "newPage": false,
                       "searchKey": "background.userCredentialMigrator.Up",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -811,7 +879,9 @@
                       "identifier": "userCredentialMigrator.Down",
                       "newPage": false,
                       "searchKey": "background.userCredentialMigrator.Down",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -837,7 +907,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -855,9 +927,7 @@
                 "identifier": "Routines",
                 "newPage": false,
                 "searchKey": "background.Routines",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -877,7 +947,9 @@
                 "identifier": "newBulkOperationWorker",
                 "newPage": false,
                 "searchKey": "background.newBulkOperationWorker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -897,7 +969,9 @@
                 "identifier": "newBulkOperationWorkerResetter",
                 "newPage": false,
                 "searchKey": "background.newBulkOperationWorkerResetter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -917,7 +991,9 @@
                 "identifier": "createBulkOperationDBWorkerStore",
                 "newPage": false,
                 "searchKey": "background.createBulkOperationDBWorkerStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -937,7 +1013,9 @@
                 "identifier": "scanFirstChangesetJobRecord",
                 "newPage": false,
                 "searchKey": "background.scanFirstChangesetJobRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -957,7 +1035,9 @@
                 "identifier": "makeResetterMetrics",
                 "newPage": false,
                 "searchKey": "background.makeResetterMetrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -977,9 +1057,7 @@
                 "identifier": "RegisterMigrations",
                 "newPage": false,
                 "searchKey": "background.RegisterMigrations",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -999,7 +1077,9 @@
                 "identifier": "newReconcilerWorker",
                 "newPage": false,
                 "searchKey": "background.newReconcilerWorker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1019,7 +1099,9 @@
                 "identifier": "newReconcilerWorkerResetter",
                 "newPage": false,
                 "searchKey": "background.newReconcilerWorkerResetter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1039,7 +1121,9 @@
                 "identifier": "scanFirstChangesetRecord",
                 "newPage": false,
                 "searchKey": "background.scanFirstChangesetRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1059,7 +1143,9 @@
                 "identifier": "createReconcilerDBWorkerStore",
                 "newPage": false,
                 "searchKey": "background.createReconcilerDBWorkerStore",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1079,7 +1165,9 @@
                 "identifier": "newSpecExpireWorker",
                 "newPage": false,
                 "searchKey": "background.newSpecExpireWorker",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1099,7 +1187,9 @@
                 "identifier": "TestBulkProcessor",
                 "newPage": false,
                 "searchKey": "background.TestBulkProcessor",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1119,7 +1209,9 @@
                 "identifier": "TestReconcilerWorkerView",
                 "newPage": false,
                 "searchKey": "background.TestReconcilerWorkerView",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1139,7 +1231,9 @@
                 "identifier": "assertReturnedChangesetIDs",
                 "newPage": false,
                 "searchKey": "background.assertReturnedChangesetIDs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1159,7 +1253,9 @@
                 "identifier": "TestSiteCredentialMigrator",
                 "newPage": false,
                 "searchKey": "background.TestSiteCredentialMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1179,7 +1275,9 @@
                 "identifier": "TestSSHMigrator",
                 "newPage": false,
                 "searchKey": "background.TestSSHMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1199,7 +1297,9 @@
                 "identifier": "TestUserCredentialMigrator",
                 "newPage": false,
                 "searchKey": "background.TestUserCredentialMigrator",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1219,7 +1319,9 @@
                 "identifier": "assertProgress",
                 "newPage": false,
                 "searchKey": "background.assertProgress",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1239,7 +1341,9 @@
                 "identifier": "createUnencryptedUserCredential",
                 "newPage": false,
                 "searchKey": "background.createUnencryptedUserCredential",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1259,7 +1363,9 @@
                 "identifier": "createPreviouslyEncryptedUserCredential",
                 "newPage": false,
                 "searchKey": "background.createPreviouslyEncryptedUserCredential",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

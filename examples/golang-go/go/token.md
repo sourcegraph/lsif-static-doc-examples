@@ -150,7 +150,7 @@ Package token defines constants representing the lexical tokens of the Go progra
     * [func searchLineInfos(a []lineInfo, x int) int](#searchLineInfos)
     * [func searchFiles(a []*File, x int) int](#searchFiles)
     * [func searchInts(a []int, x int) int](#searchInts)
-    * [func init()](#init)
+    * [func init()](#init.token.go)
     * [func IsExported(name string) bool](#IsExported)
     * [func IsKeyword(name string) bool](#IsKeyword)
     * [func IsIdentifier(name string) bool](#IsIdentifier)
@@ -177,15 +177,10 @@ Package token defines constants representing the lexical tokens of the Go progra
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NoPos" href="#NoPos">const NoPos</a>
 
 ```
 searchKey: token.NoPos
-tags: [exported]
 ```
 
 ```Go
@@ -198,7 +193,6 @@ The zero value for Pos is NoPos; there is no file and line information associate
 
 ```
 searchKey: token.ILLEGAL
-tags: [exported]
 ```
 
 ```Go
@@ -213,7 +207,6 @@ Special tokens
 
 ```
 searchKey: token.EOF
-tags: [exported]
 ```
 
 ```Go
@@ -226,7 +219,6 @@ The list of tokens.
 
 ```
 searchKey: token.COMMENT
-tags: [exported]
 ```
 
 ```Go
@@ -239,6 +231,7 @@ The list of tokens.
 
 ```
 searchKey: token.literal_beg
+tags: [private]
 ```
 
 ```Go
@@ -251,7 +244,6 @@ The list of tokens.
 
 ```
 searchKey: token.IDENT
-tags: [exported]
 ```
 
 ```Go
@@ -267,7 +259,6 @@ Identifiers and basic type literals (these tokens stand for classes of literals)
 
 ```
 searchKey: token.INT
-tags: [exported]
 ```
 
 ```Go
@@ -281,7 +272,6 @@ The list of tokens.
 
 ```
 searchKey: token.FLOAT
-tags: [exported]
 ```
 
 ```Go
@@ -295,7 +285,6 @@ The list of tokens.
 
 ```
 searchKey: token.IMAG
-tags: [exported]
 ```
 
 ```Go
@@ -309,7 +298,6 @@ The list of tokens.
 
 ```
 searchKey: token.CHAR
-tags: [exported]
 ```
 
 ```Go
@@ -323,7 +311,6 @@ The list of tokens.
 
 ```
 searchKey: token.STRING
-tags: [exported]
 ```
 
 ```Go
@@ -337,6 +324,7 @@ The list of tokens.
 
 ```
 searchKey: token.literal_end
+tags: [private]
 ```
 
 ```Go
@@ -349,6 +337,7 @@ The list of tokens.
 
 ```
 searchKey: token.operator_beg
+tags: [private]
 ```
 
 ```Go
@@ -361,7 +350,6 @@ The list of tokens.
 
 ```
 searchKey: token.ADD
-tags: [exported]
 ```
 
 ```Go
@@ -377,7 +365,6 @@ Operators and delimiters
 
 ```
 searchKey: token.SUB
-tags: [exported]
 ```
 
 ```Go
@@ -391,7 +378,6 @@ The list of tokens.
 
 ```
 searchKey: token.MUL
-tags: [exported]
 ```
 
 ```Go
@@ -405,7 +391,6 @@ The list of tokens.
 
 ```
 searchKey: token.QUO
-tags: [exported]
 ```
 
 ```Go
@@ -419,7 +404,6 @@ The list of tokens.
 
 ```
 searchKey: token.REM
-tags: [exported]
 ```
 
 ```Go
@@ -433,7 +417,6 @@ The list of tokens.
 
 ```
 searchKey: token.AND
-tags: [exported]
 ```
 
 ```Go
@@ -447,7 +430,6 @@ The list of tokens.
 
 ```
 searchKey: token.OR
-tags: [exported]
 ```
 
 ```Go
@@ -461,7 +443,6 @@ The list of tokens.
 
 ```
 searchKey: token.XOR
-tags: [exported]
 ```
 
 ```Go
@@ -475,7 +456,6 @@ The list of tokens.
 
 ```
 searchKey: token.SHL
-tags: [exported]
 ```
 
 ```Go
@@ -489,7 +469,6 @@ The list of tokens.
 
 ```
 searchKey: token.SHR
-tags: [exported]
 ```
 
 ```Go
@@ -503,7 +482,6 @@ The list of tokens.
 
 ```
 searchKey: token.AND_NOT
-tags: [exported]
 ```
 
 ```Go
@@ -517,7 +495,6 @@ The list of tokens.
 
 ```
 searchKey: token.ADD_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -531,7 +508,6 @@ The list of tokens.
 
 ```
 searchKey: token.SUB_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -545,7 +521,6 @@ The list of tokens.
 
 ```
 searchKey: token.MUL_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -559,7 +534,6 @@ The list of tokens.
 
 ```
 searchKey: token.QUO_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -573,7 +547,6 @@ The list of tokens.
 
 ```
 searchKey: token.REM_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -587,7 +560,6 @@ The list of tokens.
 
 ```
 searchKey: token.AND_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -601,7 +573,6 @@ The list of tokens.
 
 ```
 searchKey: token.OR_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -615,7 +586,6 @@ The list of tokens.
 
 ```
 searchKey: token.XOR_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -629,7 +599,6 @@ The list of tokens.
 
 ```
 searchKey: token.SHL_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -643,7 +612,6 @@ The list of tokens.
 
 ```
 searchKey: token.SHR_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -657,7 +625,6 @@ The list of tokens.
 
 ```
 searchKey: token.AND_NOT_ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -671,7 +638,6 @@ The list of tokens.
 
 ```
 searchKey: token.LAND
-tags: [exported]
 ```
 
 ```Go
@@ -685,7 +651,6 @@ The list of tokens.
 
 ```
 searchKey: token.LOR
-tags: [exported]
 ```
 
 ```Go
@@ -699,7 +664,6 @@ The list of tokens.
 
 ```
 searchKey: token.ARROW
-tags: [exported]
 ```
 
 ```Go
@@ -713,7 +677,6 @@ The list of tokens.
 
 ```
 searchKey: token.INC
-tags: [exported]
 ```
 
 ```Go
@@ -727,7 +690,6 @@ The list of tokens.
 
 ```
 searchKey: token.DEC
-tags: [exported]
 ```
 
 ```Go
@@ -741,7 +703,6 @@ The list of tokens.
 
 ```
 searchKey: token.EQL
-tags: [exported]
 ```
 
 ```Go
@@ -755,7 +716,6 @@ The list of tokens.
 
 ```
 searchKey: token.LSS
-tags: [exported]
 ```
 
 ```Go
@@ -769,7 +729,6 @@ The list of tokens.
 
 ```
 searchKey: token.GTR
-tags: [exported]
 ```
 
 ```Go
@@ -783,7 +742,6 @@ The list of tokens.
 
 ```
 searchKey: token.ASSIGN
-tags: [exported]
 ```
 
 ```Go
@@ -797,7 +755,6 @@ The list of tokens.
 
 ```
 searchKey: token.NOT
-tags: [exported]
 ```
 
 ```Go
@@ -811,7 +768,6 @@ The list of tokens.
 
 ```
 searchKey: token.NEQ
-tags: [exported]
 ```
 
 ```Go
@@ -825,7 +781,6 @@ The list of tokens.
 
 ```
 searchKey: token.LEQ
-tags: [exported]
 ```
 
 ```Go
@@ -839,7 +794,6 @@ The list of tokens.
 
 ```
 searchKey: token.GEQ
-tags: [exported]
 ```
 
 ```Go
@@ -853,7 +807,6 @@ The list of tokens.
 
 ```
 searchKey: token.DEFINE
-tags: [exported]
 ```
 
 ```Go
@@ -867,7 +820,6 @@ The list of tokens.
 
 ```
 searchKey: token.ELLIPSIS
-tags: [exported]
 ```
 
 ```Go
@@ -881,7 +833,6 @@ The list of tokens.
 
 ```
 searchKey: token.LPAREN
-tags: [exported]
 ```
 
 ```Go
@@ -895,7 +846,6 @@ The list of tokens.
 
 ```
 searchKey: token.LBRACK
-tags: [exported]
 ```
 
 ```Go
@@ -909,7 +859,6 @@ The list of tokens.
 
 ```
 searchKey: token.LBRACE
-tags: [exported]
 ```
 
 ```Go
@@ -923,7 +872,6 @@ The list of tokens.
 
 ```
 searchKey: token.COMMA
-tags: [exported]
 ```
 
 ```Go
@@ -937,7 +885,6 @@ The list of tokens.
 
 ```
 searchKey: token.PERIOD
-tags: [exported]
 ```
 
 ```Go
@@ -951,7 +898,6 @@ The list of tokens.
 
 ```
 searchKey: token.RPAREN
-tags: [exported]
 ```
 
 ```Go
@@ -965,7 +911,6 @@ The list of tokens.
 
 ```
 searchKey: token.RBRACK
-tags: [exported]
 ```
 
 ```Go
@@ -979,7 +924,6 @@ The list of tokens.
 
 ```
 searchKey: token.RBRACE
-tags: [exported]
 ```
 
 ```Go
@@ -993,7 +937,6 @@ The list of tokens.
 
 ```
 searchKey: token.SEMICOLON
-tags: [exported]
 ```
 
 ```Go
@@ -1007,7 +950,6 @@ The list of tokens.
 
 ```
 searchKey: token.COLON
-tags: [exported]
 ```
 
 ```Go
@@ -1021,6 +963,7 @@ The list of tokens.
 
 ```
 searchKey: token.operator_end
+tags: [private]
 ```
 
 ```Go
@@ -1033,6 +976,7 @@ The list of tokens.
 
 ```
 searchKey: token.keyword_beg
+tags: [private]
 ```
 
 ```Go
@@ -1045,7 +989,6 @@ The list of tokens.
 
 ```
 searchKey: token.BREAK
-tags: [exported]
 ```
 
 ```Go
@@ -1060,7 +1003,6 @@ Keywords
 
 ```
 searchKey: token.CASE
-tags: [exported]
 ```
 
 ```Go
@@ -1073,7 +1015,6 @@ The list of tokens.
 
 ```
 searchKey: token.CHAN
-tags: [exported]
 ```
 
 ```Go
@@ -1086,7 +1027,6 @@ The list of tokens.
 
 ```
 searchKey: token.CONST
-tags: [exported]
 ```
 
 ```Go
@@ -1099,7 +1039,6 @@ The list of tokens.
 
 ```
 searchKey: token.CONTINUE
-tags: [exported]
 ```
 
 ```Go
@@ -1112,7 +1051,6 @@ The list of tokens.
 
 ```
 searchKey: token.DEFAULT
-tags: [exported]
 ```
 
 ```Go
@@ -1125,7 +1063,6 @@ The list of tokens.
 
 ```
 searchKey: token.DEFER
-tags: [exported]
 ```
 
 ```Go
@@ -1138,7 +1075,6 @@ The list of tokens.
 
 ```
 searchKey: token.ELSE
-tags: [exported]
 ```
 
 ```Go
@@ -1151,7 +1087,6 @@ The list of tokens.
 
 ```
 searchKey: token.FALLTHROUGH
-tags: [exported]
 ```
 
 ```Go
@@ -1164,7 +1099,6 @@ The list of tokens.
 
 ```
 searchKey: token.FOR
-tags: [exported]
 ```
 
 ```Go
@@ -1177,7 +1111,6 @@ The list of tokens.
 
 ```
 searchKey: token.FUNC
-tags: [exported]
 ```
 
 ```Go
@@ -1190,7 +1123,6 @@ The list of tokens.
 
 ```
 searchKey: token.GO
-tags: [exported]
 ```
 
 ```Go
@@ -1203,7 +1135,6 @@ The list of tokens.
 
 ```
 searchKey: token.GOTO
-tags: [exported]
 ```
 
 ```Go
@@ -1216,7 +1147,6 @@ The list of tokens.
 
 ```
 searchKey: token.IF
-tags: [exported]
 ```
 
 ```Go
@@ -1229,7 +1159,6 @@ The list of tokens.
 
 ```
 searchKey: token.IMPORT
-tags: [exported]
 ```
 
 ```Go
@@ -1242,7 +1171,6 @@ The list of tokens.
 
 ```
 searchKey: token.INTERFACE
-tags: [exported]
 ```
 
 ```Go
@@ -1255,7 +1183,6 @@ The list of tokens.
 
 ```
 searchKey: token.MAP
-tags: [exported]
 ```
 
 ```Go
@@ -1268,7 +1195,6 @@ The list of tokens.
 
 ```
 searchKey: token.PACKAGE
-tags: [exported]
 ```
 
 ```Go
@@ -1281,7 +1207,6 @@ The list of tokens.
 
 ```
 searchKey: token.RANGE
-tags: [exported]
 ```
 
 ```Go
@@ -1294,7 +1219,6 @@ The list of tokens.
 
 ```
 searchKey: token.RETURN
-tags: [exported]
 ```
 
 ```Go
@@ -1307,7 +1231,6 @@ The list of tokens.
 
 ```
 searchKey: token.SELECT
-tags: [exported]
 ```
 
 ```Go
@@ -1320,7 +1243,6 @@ The list of tokens.
 
 ```
 searchKey: token.STRUCT
-tags: [exported]
 ```
 
 ```Go
@@ -1333,7 +1255,6 @@ The list of tokens.
 
 ```
 searchKey: token.SWITCH
-tags: [exported]
 ```
 
 ```Go
@@ -1346,7 +1267,6 @@ The list of tokens.
 
 ```
 searchKey: token.TYPE
-tags: [exported]
 ```
 
 ```Go
@@ -1359,7 +1279,6 @@ The list of tokens.
 
 ```
 searchKey: token.VAR
-tags: [exported]
 ```
 
 ```Go
@@ -1372,6 +1291,7 @@ The list of tokens.
 
 ```
 searchKey: token.keyword_end
+tags: [private]
 ```
 
 ```Go
@@ -1384,7 +1304,6 @@ The list of tokens.
 
 ```
 searchKey: token.LowestPrec
-tags: [exported]
 ```
 
 ```Go
@@ -1398,7 +1317,6 @@ A set of constants for precedence-based expression parsing. Non-operators have l
 
 ```
 searchKey: token.UnaryPrec
-tags: [exported]
 ```
 
 ```Go
@@ -1411,7 +1329,6 @@ A set of constants for precedence-based expression parsing. Non-operators have l
 
 ```
 searchKey: token.HighestPrec
-tags: [exported]
 ```
 
 ```Go
@@ -1422,14 +1339,11 @@ A set of constants for precedence-based expression parsing. Non-operators have l
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="tokens" href="#tokens">var tokens</a>
 
 ```
 searchKey: token.tokens
+tags: [private]
 ```
 
 ```Go
@@ -1440,6 +1354,7 @@ var tokens = ...
 
 ```
 searchKey: token.keywords
+tags: [private]
 ```
 
 ```Go
@@ -1450,6 +1365,7 @@ var keywords map[string]Token
 
 ```
 searchKey: token.tests
+tags: [private]
 ```
 
 ```Go
@@ -1458,15 +1374,10 @@ var tests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Position" href="#Position">type Position struct</a>
 
 ```
 searchKey: token.Position
-tags: [exported]
 ```
 
 ```Go
@@ -1484,7 +1395,6 @@ Position describes an arbitrary source position including the file, line, and co
 
 ```
 searchKey: token.Position.IsValid
-tags: [exported]
 ```
 
 ```Go
@@ -1497,7 +1407,6 @@ IsValid reports whether the position is valid.
 
 ```
 searchKey: token.Position.String
-tags: [exported]
 ```
 
 ```Go
@@ -1519,7 +1428,6 @@ file                invalid position with file name
 
 ```
 searchKey: token.Pos
-tags: [exported]
 ```
 
 ```Go
@@ -1538,7 +1446,6 @@ Pos values can be compared directly with the usual comparison operators: If two 
 
 ```
 searchKey: token.Pos.IsValid
-tags: [exported]
 ```
 
 ```Go
@@ -1551,7 +1458,6 @@ IsValid reports whether the position is valid.
 
 ```
 searchKey: token.File
-tags: [exported]
 ```
 
 ```Go
@@ -1574,7 +1480,6 @@ A File is a handle for a file belonging to a FileSet. A File has a name, size, a
 
 ```
 searchKey: token.File.Name
-tags: [exported]
 ```
 
 ```Go
@@ -1587,7 +1492,6 @@ Name returns the file name of file f as registered with AddFile.
 
 ```
 searchKey: token.File.Base
-tags: [exported]
 ```
 
 ```Go
@@ -1600,7 +1504,6 @@ Base returns the base offset of file f as registered with AddFile.
 
 ```
 searchKey: token.File.Size
-tags: [exported]
 ```
 
 ```Go
@@ -1613,7 +1516,6 @@ Size returns the size of file f as registered with AddFile.
 
 ```
 searchKey: token.File.LineCount
-tags: [exported]
 ```
 
 ```Go
@@ -1626,7 +1528,6 @@ LineCount returns the number of lines in file f.
 
 ```
 searchKey: token.File.AddLine
-tags: [exported]
 ```
 
 ```Go
@@ -1639,7 +1540,6 @@ AddLine adds the line offset for a new line. The line offset must be larger than
 
 ```
 searchKey: token.File.MergeLine
-tags: [exported]
 ```
 
 ```Go
@@ -1652,7 +1552,6 @@ MergeLine merges a line with the following line. It is akin to replacing the new
 
 ```
 searchKey: token.File.SetLines
-tags: [exported]
 ```
 
 ```Go
@@ -1665,7 +1564,6 @@ SetLines sets the line offsets for a file and reports whether it succeeded. The 
 
 ```
 searchKey: token.File.SetLinesForContent
-tags: [exported]
 ```
 
 ```Go
@@ -1678,7 +1576,6 @@ SetLinesForContent sets the line offsets for the given file content. It ignores 
 
 ```
 searchKey: token.File.LineStart
-tags: [exported]
 ```
 
 ```Go
@@ -1691,7 +1588,6 @@ LineStart returns the Pos value of the start of the specified line. It ignores a
 
 ```
 searchKey: token.File.AddLineInfo
-tags: [exported]
 ```
 
 ```Go
@@ -1704,7 +1600,6 @@ AddLineInfo is like AddLineColumnInfo with a column = 1 argument. It is here for
 
 ```
 searchKey: token.File.AddLineColumnInfo
-tags: [exported]
 ```
 
 ```Go
@@ -1719,7 +1614,6 @@ AddLineColumnInfo is typically used to register alternative position information
 
 ```
 searchKey: token.File.Pos
-tags: [exported]
 ```
 
 ```Go
@@ -1732,7 +1626,6 @@ Pos returns the Pos value for the given file offset; the offset must be <= f.Siz
 
 ```
 searchKey: token.File.Offset
-tags: [exported]
 ```
 
 ```Go
@@ -1745,7 +1638,6 @@ Offset returns the offset for the given file position p; p must be a valid Pos v
 
 ```
 searchKey: token.File.Line
-tags: [exported]
 ```
 
 ```Go
@@ -1758,6 +1650,7 @@ Line returns the line number for the given file position p; p must be a Pos valu
 
 ```
 searchKey: token.File.unpack
+tags: [private]
 ```
 
 ```Go
@@ -1770,6 +1663,7 @@ unpack returns the filename and line and column number for a file offset. If adj
 
 ```
 searchKey: token.File.position
+tags: [private]
 ```
 
 ```Go
@@ -1780,7 +1674,6 @@ func (f *File) position(p Pos, adjusted bool) (pos Position)
 
 ```
 searchKey: token.File.PositionFor
-tags: [exported]
 ```
 
 ```Go
@@ -1793,7 +1686,6 @@ PositionFor returns the Position value for the given file position p. If adjuste
 
 ```
 searchKey: token.File.Position
-tags: [exported]
 ```
 
 ```Go
@@ -1806,6 +1698,7 @@ Position returns the Position value for the given file position p. Calling f.Pos
 
 ```
 searchKey: token.lineInfo
+tags: [private]
 ```
 
 ```Go
@@ -1823,7 +1716,6 @@ A lineInfo object describes alternative file, line, and column number informatio
 
 ```
 searchKey: token.FileSet
-tags: [exported]
 ```
 
 ```Go
@@ -1845,7 +1737,6 @@ When adding a new file, a file base must be provided. That can be any integer va
 
 ```
 searchKey: token.NewFileSet
-tags: [exported]
 ```
 
 ```Go
@@ -1858,7 +1749,6 @@ NewFileSet creates a new file set.
 
 ```
 searchKey: token.FileSet.Base
-tags: [exported]
 ```
 
 ```Go
@@ -1871,7 +1761,6 @@ Base returns the minimum base offset that must be provided to AddFile when addin
 
 ```
 searchKey: token.FileSet.AddFile
-tags: [exported]
 ```
 
 ```Go
@@ -1892,7 +1781,6 @@ with offs in the range [0, size] and thus p in the range [base, base+size]. For 
 
 ```
 searchKey: token.FileSet.Iterate
-tags: [exported]
 ```
 
 ```Go
@@ -1905,6 +1793,7 @@ Iterate calls f for the files in the file set in the order they were added until
 
 ```
 searchKey: token.FileSet.file
+tags: [private]
 ```
 
 ```Go
@@ -1915,7 +1804,6 @@ func (s *FileSet) file(p Pos) *File
 
 ```
 searchKey: token.FileSet.File
-tags: [exported]
 ```
 
 ```Go
@@ -1928,7 +1816,6 @@ File returns the file that contains the position p. If no such file is found (fo
 
 ```
 searchKey: token.FileSet.PositionFor
-tags: [exported]
 ```
 
 ```Go
@@ -1941,7 +1828,6 @@ PositionFor converts a Pos p in the fileset into a Position value. If adjusted i
 
 ```
 searchKey: token.FileSet.Position
-tags: [exported]
 ```
 
 ```Go
@@ -1954,7 +1840,6 @@ Position converts a Pos p in the fileset into a Position value. Calling s.Positi
 
 ```
 searchKey: token.FileSet.Read
-tags: [exported]
 ```
 
 ```Go
@@ -1967,7 +1852,6 @@ Read calls decode to deserialize a file set into s; s must not be nil.
 
 ```
 searchKey: token.FileSet.Write
-tags: [exported]
 ```
 
 ```Go
@@ -1980,6 +1864,7 @@ Write calls encode to serialize the file set s.
 
 ```
 searchKey: token.serializedFile
+tags: [private]
 ```
 
 ```Go
@@ -1997,6 +1882,7 @@ type serializedFile struct {
 
 ```
 searchKey: token.serializedFileSet
+tags: [private]
 ```
 
 ```Go
@@ -2010,7 +1896,6 @@ type serializedFileSet struct {
 
 ```
 searchKey: token.Token
-tags: [exported]
 ```
 
 ```Go
@@ -2023,7 +1908,6 @@ Token is the set of lexical tokens of the Go programming language.
 
 ```
 searchKey: token.Lookup
-tags: [exported]
 ```
 
 ```Go
@@ -2036,7 +1920,6 @@ Lookup maps an identifier to its keyword token or IDENT (if not a keyword).
 
 ```
 searchKey: token.Token.String
-tags: [exported]
 ```
 
 ```Go
@@ -2049,7 +1932,6 @@ String returns the string corresponding to the token tok. For operators, delimit
 
 ```
 searchKey: token.Token.Precedence
-tags: [exported]
 ```
 
 ```Go
@@ -2062,7 +1944,6 @@ Precedence returns the operator precedence of the binary operator op. If op is n
 
 ```
 searchKey: token.Token.IsLiteral
-tags: [exported]
 ```
 
 ```Go
@@ -2075,7 +1956,6 @@ IsLiteral returns true for tokens corresponding to identifiers and basic type li
 
 ```
 searchKey: token.Token.IsOperator
-tags: [exported]
 ```
 
 ```Go
@@ -2088,7 +1968,6 @@ IsOperator returns true for tokens corresponding to operators and delimiters; it
 
 ```
 searchKey: token.Token.IsKeyword
-tags: [exported]
 ```
 
 ```Go
@@ -2099,14 +1978,11 @@ IsKeyword returns true for tokens corresponding to keywords; it returns false ot
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="searchLineInfos" href="#searchLineInfos">func searchLineInfos(a []lineInfo, x int) int</a>
 
 ```
 searchKey: token.searchLineInfos
+tags: [private]
 ```
 
 ```Go
@@ -2117,6 +1993,7 @@ func searchLineInfos(a []lineInfo, x int) int
 
 ```
 searchKey: token.searchFiles
+tags: [private]
 ```
 
 ```Go
@@ -2127,16 +2004,18 @@ func searchFiles(a []*File, x int) int
 
 ```
 searchKey: token.searchInts
+tags: [private]
 ```
 
 ```Go
 func searchInts(a []int, x int) int
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.token.go" href="#init.token.go">func init()</a>
 
 ```
 searchKey: token.init
+tags: [private]
 ```
 
 ```Go
@@ -2147,7 +2026,6 @@ func init()
 
 ```
 searchKey: token.IsExported
-tags: [exported]
 ```
 
 ```Go
@@ -2160,7 +2038,6 @@ IsExported reports whether name starts with an upper-case letter.
 
 ```
 searchKey: token.IsKeyword
-tags: [exported]
 ```
 
 ```Go
@@ -2173,7 +2050,6 @@ IsKeyword reports whether name is a Go keyword, such as "func" or "return".
 
 ```
 searchKey: token.IsIdentifier
-tags: [exported]
 ```
 
 ```Go
@@ -2186,6 +2062,7 @@ IsIdentifier reports whether name is a Go identifier, that is, a non-empty strin
 
 ```
 searchKey: token.BenchmarkSearchInts
+tags: [private]
 ```
 
 ```Go
@@ -2196,6 +2073,7 @@ func BenchmarkSearchInts(b *testing.B)
 
 ```
 searchKey: token.checkPos
+tags: [private]
 ```
 
 ```Go
@@ -2206,6 +2084,7 @@ func checkPos(t *testing.T, msg string, got, want Position)
 
 ```
 searchKey: token.TestNoPos
+tags: [private]
 ```
 
 ```Go
@@ -2216,6 +2095,7 @@ func TestNoPos(t *testing.T)
 
 ```
 searchKey: token.linecol
+tags: [private]
 ```
 
 ```Go
@@ -2226,6 +2106,7 @@ func linecol(lines []int, offs int) (int, int)
 
 ```
 searchKey: token.verifyPositions
+tags: [private]
 ```
 
 ```Go
@@ -2236,6 +2117,7 @@ func verifyPositions(t *testing.T, fset *FileSet, f *File, lines []int)
 
 ```
 searchKey: token.makeTestSource
+tags: [private]
 ```
 
 ```Go
@@ -2246,6 +2128,7 @@ func makeTestSource(size int, lines []int) []byte
 
 ```
 searchKey: token.TestPositions
+tags: [private]
 ```
 
 ```Go
@@ -2256,6 +2139,7 @@ func TestPositions(t *testing.T)
 
 ```
 searchKey: token.TestLineInfo
+tags: [private]
 ```
 
 ```Go
@@ -2266,6 +2150,7 @@ func TestLineInfo(t *testing.T)
 
 ```
 searchKey: token.TestFiles
+tags: [private]
 ```
 
 ```Go
@@ -2276,6 +2161,7 @@ func TestFiles(t *testing.T)
 
 ```
 searchKey: token.TestFileSetPastEnd
+tags: [private]
 ```
 
 ```Go
@@ -2288,6 +2174,7 @@ FileSet.File should return nil if Pos is past the end of the FileSet.
 
 ```
 searchKey: token.TestFileSetCacheUnlikely
+tags: [private]
 ```
 
 ```Go
@@ -2298,6 +2185,7 @@ func TestFileSetCacheUnlikely(t *testing.T)
 
 ```
 searchKey: token.TestFileSetRace
+tags: [private]
 ```
 
 ```Go
@@ -2310,6 +2198,7 @@ issue 4345. Test that concurrent use of FileSet.Pos does not trigger a race in t
 
 ```
 searchKey: token.TestFileSetRace2
+tags: [private]
 ```
 
 ```Go
@@ -2322,6 +2211,7 @@ issue 16548. Test that concurrent use of File.AddLine and FileSet.PositionFor do
 
 ```
 searchKey: token.TestPositionFor
+tags: [private]
 ```
 
 ```Go
@@ -2332,6 +2222,7 @@ func TestPositionFor(t *testing.T)
 
 ```
 searchKey: token.TestLineStart
+tags: [private]
 ```
 
 ```Go
@@ -2342,6 +2233,7 @@ func TestLineStart(t *testing.T)
 
 ```
 searchKey: token.equal
+tags: [private]
 ```
 
 ```Go
@@ -2354,6 +2246,7 @@ equal returns nil if p and q describe the same file set; otherwise it returns an
 
 ```
 searchKey: token.checkSerialize
+tags: [private]
 ```
 
 ```Go
@@ -2364,6 +2257,7 @@ func checkSerialize(t *testing.T, p *FileSet)
 
 ```
 searchKey: token.TestSerialization
+tags: [private]
 ```
 
 ```Go
@@ -2374,6 +2268,7 @@ func TestSerialization(t *testing.T)
 
 ```
 searchKey: token.TestIsIdentifier
+tags: [private]
 ```
 
 ```Go

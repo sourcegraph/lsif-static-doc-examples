@@ -28,14 +28,11 @@ RC4 is cryptographically broken and should not be used for secure applications.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="golden" href="#golden">var golden</a>
 
 ```
 searchKey: rc4.golden
+tags: [private]
 ```
 
 ```Go
@@ -44,15 +41,10 @@ var golden = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Cipher" href="#Cipher">type Cipher struct</a>
 
 ```
 searchKey: rc4.Cipher
-tags: [exported]
 ```
 
 ```Go
@@ -68,7 +60,6 @@ A Cipher is an instance of RC4 using a particular key.
 
 ```
 searchKey: rc4.NewCipher
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +72,7 @@ NewCipher creates and returns a new Cipher. The key argument should be the RC4 k
 
 ```
 searchKey: rc4.Cipher.Reset
-tags: [exported deprecated]
+tags: [deprecated]
 ```
 
 ```Go
@@ -96,7 +87,6 @@ Deprecated: Reset can't guarantee that the key will be entirely removed from the
 
 ```
 searchKey: rc4.Cipher.XORKeyStream
-tags: [exported]
 ```
 
 ```Go
@@ -109,7 +99,6 @@ XORKeyStream sets dst to the result of XORing src with the key stream. Dst and s
 
 ```
 searchKey: rc4.KeySizeError
-tags: [exported]
 ```
 
 ```Go
@@ -120,7 +109,6 @@ type KeySizeError int
 
 ```
 searchKey: rc4.KeySizeError.Error
-tags: [exported]
 ```
 
 ```Go
@@ -131,6 +119,7 @@ func (k KeySizeError) Error() string
 
 ```
 searchKey: rc4.rc4Test
+tags: [private]
 ```
 
 ```Go
@@ -141,14 +130,11 @@ type rc4Test struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="testEncrypt" href="#testEncrypt">func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)</a>
 
 ```
 searchKey: rc4.testEncrypt
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +145,7 @@ func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)
 
 ```
 searchKey: rc4.TestGolden
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +156,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: rc4.TestBlock
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +167,7 @@ func TestBlock(t *testing.T)
 
 ```
 searchKey: rc4.benchmark
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +178,7 @@ func benchmark(b *testing.B, size int64)
 
 ```
 searchKey: rc4.BenchmarkRC4_128
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +189,7 @@ func BenchmarkRC4_128(b *testing.B)
 
 ```
 searchKey: rc4.BenchmarkRC4_1K
+tags: [private]
 ```
 
 ```Go
@@ -209,6 +200,7 @@ func BenchmarkRC4_1K(b *testing.B)
 
 ```
 searchKey: rc4.BenchmarkRC4_8K
+tags: [private]
 ```
 
 ```Go

@@ -58,11 +58,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TextRequest" href="#TextRequest">const TextRequest</a>
 
 ```
 searchKey: zoekt.TextRequest
-tags: [exported]
 ```
 
 ```Go
@@ -73,7 +76,6 @@ const TextRequest IndexedRequestType = "text"
 
 ```
 searchKey: zoekt.SymbolRequest
-tags: [exported]
 ```
 
 ```Go
@@ -84,6 +86,7 @@ const SymbolRequest IndexedRequestType = "symbol"
 
 ```
 searchKey: zoekt.maxUnindexedRepoRevSearchesPerQuery
+tags: [private]
 ```
 
 ```Go
@@ -94,6 +97,7 @@ const maxUnindexedRepoRevSearchesPerQuery = 200
 
 ```
 searchKey: zoekt.defaultMaxSearchResults
+tags: [private]
 ```
 
 ```Go
@@ -102,10 +106,15 @@ const defaultMaxSearchResults = 30
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="headBranch" href="#headBranch">var headBranch</a>
 
 ```
 searchKey: zoekt.headBranch
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +127,7 @@ headBranch is used as a singleton of the indexedRepoRevs.repoBranches to save co
 
 ```
 searchKey: zoekt.defaultTimeout
+tags: [private]
 ```
 
 ```Go
@@ -126,11 +136,14 @@ var defaultTimeout = 20 * time.Second
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IndexedRequestType" href="#IndexedRequestType">type IndexedRequestType string</a>
 
 ```
 searchKey: zoekt.IndexedRequestType
-tags: [exported]
 ```
 
 ```Go
@@ -141,7 +154,6 @@ type IndexedRequestType string
 
 ```
 searchKey: zoekt.IndexedRepoRevs
-tags: [exported]
 ```
 
 ```Go
@@ -165,6 +177,7 @@ indexedRepoRevs creates both the Sourcegraph and Zoekt representation of a list 
 
 ```
 searchKey: zoekt.zoektIndexedRepos
+tags: [private]
 ```
 
 ```Go
@@ -177,6 +190,7 @@ zoektIndexedRepos splits the revs into two parts: (1) the repository revisions i
 
 ```
 searchKey: zoekt.IndexedRepoRevs.add
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +203,7 @@ add will add reporev and repo to the list of repository and branches to search i
 
 ```
 searchKey: zoekt.IndexedRepoRevs.getRepoInputRev
+tags: [private]
 ```
 
 ```Go
@@ -201,7 +216,6 @@ getRepoInputRev returns the repo and inputRev associated with file.
 
 ```
 searchKey: zoekt.IndexedSearchRequest
-tags: [exported]
 ```
 
 ```Go
@@ -241,7 +255,6 @@ IndexedSearchRequest is responsible for translating a Sourcegraph search query i
 
 ```
 searchKey: zoekt.NewIndexedSearchRequest
-tags: [exported]
 ```
 
 ```Go
@@ -252,7 +265,6 @@ func NewIndexedSearchRequest(ctx context.Context, args *search.TextParameters, t
 
 ```
 searchKey: zoekt.IndexedSearchRequest.Repos
-tags: [exported]
 ```
 
 ```Go
@@ -265,7 +277,6 @@ Repos is a map of repository revisions that are indexed and will be searched by 
 
 ```
 searchKey: zoekt.IndexedSearchRequest.Search
-tags: [exported]
 ```
 
 ```Go
@@ -278,6 +289,7 @@ Search streams 0 or more events to c.
 
 ```
 searchKey: zoekt.repoRevFunc
+tags: [private]
 ```
 
 ```Go
@@ -288,10 +300,15 @@ repoRevFunc is a function which maps repository names returned from Zoekt into t
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="zoektSearch" href="#zoektSearch">func zoektSearch(ctx context.Context, args *search.TextParameters, repos *IndexedRepoRevs, typ IndexedRequestType, since func(t time.Time) time.Duration, c streaming.Sender) error</a>
 
 ```
 searchKey: zoekt.zoektSearch
+tags: [private]
 ```
 
 ```Go
@@ -306,6 +323,7 @@ Timeouts are reported through the context, and as a special case errNoResultsInT
 
 ```
 searchKey: zoekt.getRepos
+tags: [private]
 ```
 
 ```Go
@@ -318,6 +336,7 @@ getRepos is a wrapper around p.Get. It returns an error if the promise contains 
 
 ```
 searchKey: zoekt.bufferedSender
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +349,7 @@ bufferedSender returns a buffered Sender with capacity cap, and a cleanup functi
 
 ```
 searchKey: zoekt.zoektSearchReposOnly
+tags: [private]
 ```
 
 ```Go
@@ -342,6 +362,7 @@ zoektSearchReposOnly is used when select:repo is set, in which case we can ask z
 
 ```
 searchKey: zoekt.zoektFileMatchToLineMatches
+tags: [private]
 ```
 
 ```Go
@@ -352,6 +373,7 @@ func zoektFileMatchToLineMatches(file *zoekt.FileMatch) []*result.LineMatch
 
 ```
 searchKey: zoekt.escape
+tags: [private]
 ```
 
 ```Go
@@ -362,6 +384,7 @@ func escape(s string) string
 
 ```
 searchKey: zoekt.zoektFileMatchToSymbolResults
+tags: [private]
 ```
 
 ```Go
@@ -372,6 +395,7 @@ func zoektFileMatchToSymbolResults(repoName types.RepoName, inputRev string, fil
 
 ```
 searchKey: zoekt.contextWithoutDeadline
+tags: [private]
 ```
 
 ```Go
@@ -384,6 +408,7 @@ contextWithoutDeadline returns a context which will cancel if the cOld is cancel
 
 ```
 searchKey: zoekt.queryToZoektQuery
+tags: [private]
 ```
 
 ```Go
@@ -394,6 +419,7 @@ func queryToZoektQuery(query *search.TextPatternInfo, typ IndexedRequestType) (z
 
 ```
 searchKey: zoekt.limitUnindexedRepos
+tags: [private]
 ```
 
 ```Go
@@ -410,7 +436,6 @@ A slice to the input list is returned, it is not copied.
 
 ```
 searchKey: zoekt.FileRe
-tags: [exported]
 ```
 
 ```Go
@@ -421,6 +446,7 @@ func FileRe(pattern string, queryIsCaseSensitive bool) (zoektquery.Q, error)
 
 ```
 searchKey: zoekt.noOpAnyChar
+tags: [private]
 ```
 
 ```Go
@@ -431,6 +457,7 @@ func noOpAnyChar(re *syntax.Regexp)
 
 ```
 searchKey: zoekt.parseRe
+tags: [private]
 ```
 
 ```Go
@@ -441,6 +468,7 @@ func parseRe(pattern string, filenameOnly bool, contentOnly bool, queryIsCaseSen
 
 ```
 searchKey: zoekt.getSpanContext
+tags: [private]
 ```
 
 ```Go
@@ -451,7 +479,6 @@ func getSpanContext(ctx context.Context) (shouldTrace bool, spanContext map[stri
 
 ```
 searchKey: zoekt.SearchOpts
-tags: [exported]
 ```
 
 ```Go
@@ -462,7 +489,6 @@ func SearchOpts(ctx context.Context, k int, query *search.TextPatternInfo) zoekt
 
 ```
 searchKey: zoekt.ResultCountFactor
-tags: [exported]
 ```
 
 ```Go
@@ -473,6 +499,7 @@ func ResultCountFactor(numRepos int, fileMatchLimit int32, globalSearch bool) (k
 
 ```
 searchKey: zoekt.TestIndexedSearch
+tags: [private]
 ```
 
 ```Go
@@ -483,6 +510,7 @@ func TestIndexedSearch(t *testing.T)
 
 ```
 searchKey: zoekt.mkStatusMap
+tags: [private]
 ```
 
 ```Go
@@ -493,6 +521,7 @@ func mkStatusMap(m map[string]search.RepoStatus) search.RepoStatusMap
 
 ```
 searchKey: zoekt.TestZoektIndexedRepos
+tags: [private]
 ```
 
 ```Go
@@ -503,6 +532,7 @@ func TestZoektIndexedRepos(t *testing.T)
 
 ```
 searchKey: zoekt.TestZoektResultCountFactor
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +543,7 @@ func TestZoektResultCountFactor(t *testing.T)
 
 ```
 searchKey: zoekt.TestQueryToZoektQuery
+tags: [private]
 ```
 
 ```Go
@@ -523,6 +554,7 @@ func TestQueryToZoektQuery(t *testing.T)
 
 ```
 searchKey: zoekt.queryEqual
+tags: [private]
 ```
 
 ```Go
@@ -533,6 +565,7 @@ func queryEqual(a, b zoektquery.Q) bool
 
 ```
 searchKey: zoekt.generateZoektMatches
+tags: [private]
 ```
 
 ```Go
@@ -543,6 +576,7 @@ func generateZoektMatches(count int) []zoekt.FileMatch
 
 ```
 searchKey: zoekt.TestZoektIndexedRepos_single
+tags: [private]
 ```
 
 ```Go
@@ -553,6 +587,7 @@ func TestZoektIndexedRepos_single(t *testing.T)
 
 ```
 searchKey: zoekt.TestZoektFileMatchToSymbolResults
+tags: [private]
 ```
 
 ```Go
@@ -563,6 +598,7 @@ func TestZoektFileMatchToSymbolResults(t *testing.T)
 
 ```
 searchKey: zoekt.repoRevsSliceToMap
+tags: [private]
 ```
 
 ```Go
@@ -573,6 +609,7 @@ func repoRevsSliceToMap(rs []*search.RepositoryRevisions) map[string]*search.Rep
 
 ```
 searchKey: zoekt.TestContextWithoutDeadline
+tags: [private]
 ```
 
 ```Go
@@ -583,6 +620,7 @@ func TestContextWithoutDeadline(t *testing.T)
 
 ```
 searchKey: zoekt.TestContextWithoutDeadline_cancel
+tags: [private]
 ```
 
 ```Go
@@ -593,6 +631,7 @@ func TestContextWithoutDeadline_cancel(t *testing.T)
 
 ```
 searchKey: zoekt.TestBufferedSender
+tags: [private]
 ```
 
 ```Go
@@ -603,6 +642,7 @@ func TestBufferedSender(t *testing.T)
 
 ```
 searchKey: zoekt.makeRepositoryRevisions
+tags: [private]
 ```
 
 ```Go
@@ -613,6 +653,7 @@ func makeRepositoryRevisions(repos ...string) []*search.RepositoryRevisions
 
 ```
 searchKey: zoekt.mkRepos
+tags: [private]
 ```
 
 ```Go
@@ -623,6 +664,7 @@ func mkRepos(names ...string) []types.RepoName
 
 ```
 searchKey: zoekt.matchesToFileMatches
+tags: [private]
 ```
 
 ```Go

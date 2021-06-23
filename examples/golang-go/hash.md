@@ -20,15 +20,10 @@ Package hash provides interfaces for hash functions.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Hash" href="#Hash">type Hash interface</a>
 
 ```
 searchKey: hash.Hash
-tags: [exported]
 ```
 
 ```Go
@@ -65,7 +60,6 @@ Compatibility: Any future changes to hash or crypto packages will endeavor to ma
 
 ```
 searchKey: hash.Hash32
-tags: [exported]
 ```
 
 ```Go
@@ -81,7 +75,6 @@ Hash32 is the common interface implemented by all 32-bit hash functions.
 
 ```
 searchKey: hash.Hash64
-tags: [exported]
 ```
 
 ```Go

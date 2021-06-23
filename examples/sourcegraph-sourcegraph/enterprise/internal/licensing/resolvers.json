@@ -4,7 +4,9 @@
     "identifier": "resolvers",
     "newPage": true,
     "searchKey": "enterprise/internal/licensing/resolvers",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "LicenseResolver",
                 "newPage": false,
                 "searchKey": "resolvers.LicenseResolver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "LicenseResolver.EnterpriseLicenseHasFeature",
                       "newPage": false,
                       "searchKey": "resolvers.LicenseResolver.EnterpriseLicenseHasFeature",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -88,7 +88,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -106,7 +108,9 @@
                 "identifier": "TestEnterpriseLicenseHasFeature",
                 "newPage": false,
                 "searchKey": "resolvers.TestEnterpriseLicenseHasFeature",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

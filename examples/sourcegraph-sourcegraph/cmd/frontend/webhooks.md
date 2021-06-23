@@ -27,14 +27,11 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="dsn" href="#dsn">var dsn</a>
 
 ```
 searchKey: webhooks.dsn
+tags: [private]
 ```
 
 ```Go
@@ -45,6 +42,7 @@ var dsn = flag.String("dsn", "", "Database connection string to use in integrati
 
 ```
 searchKey: webhooks.eventPayload
+tags: [private]
 ```
 
 ```Go
@@ -53,15 +51,10 @@ var eventPayload = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Registerer" href="#Registerer">type Registerer interface</a>
 
 ```
 searchKey: webhooks.Registerer
-tags: [exported]
 ```
 
 ```Go
@@ -74,7 +67,6 @@ type Registerer interface {
 
 ```
 searchKey: webhooks.WebhookHandler
-tags: [exported]
 ```
 
 ```Go
@@ -87,7 +79,6 @@ WebhookHandler is a handler for a webhook event, the 'event' param could be any 
 
 ```
 searchKey: webhooks.GitHubWebhook
-tags: [exported]
 ```
 
 ```Go
@@ -105,7 +96,6 @@ GitHubWebhook is responsible for handling incoming http requests for github webh
 
 ```
 searchKey: webhooks.GitHubWebhook.ServeHTTP
-tags: [exported]
 ```
 
 ```Go
@@ -116,7 +106,6 @@ func (h *GitHubWebhook) ServeHTTP(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: webhooks.GitHubWebhook.Dispatch
-tags: [exported]
 ```
 
 ```Go
@@ -129,7 +118,6 @@ Dispatch accepts an event for a particular event type and dispatches it to the a
 
 ```
 searchKey: webhooks.GitHubWebhook.Register
-tags: [exported]
 ```
 
 ```Go
@@ -142,6 +130,7 @@ Register associates a given event type(s) with the specified handler. Handlers a
 
 ```
 searchKey: webhooks.GitHubWebhook.getExternalService
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +141,7 @@ func (h *GitHubWebhook) getExternalService(r *http.Request, body []byte) (*types
 
 ```
 searchKey: webhooks.GitHubWebhook.findAndValidateExternalService
+tags: [private]
 ```
 
 ```Go
@@ -162,14 +152,11 @@ findExternalService is the slow path for validating an incoming webhook against 
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="TestGithubWebhookDispatchSuccess" href="#TestGithubWebhookDispatchSuccess">func TestGithubWebhookDispatchSuccess(t *testing.T)</a>
 
 ```
 searchKey: webhooks.TestGithubWebhookDispatchSuccess
+tags: [private]
 ```
 
 ```Go
@@ -180,6 +167,7 @@ func TestGithubWebhookDispatchSuccess(t *testing.T)
 
 ```
 searchKey: webhooks.TestGithubWebhookDispatchNoHandler
+tags: [private]
 ```
 
 ```Go
@@ -190,6 +178,7 @@ func TestGithubWebhookDispatchNoHandler(t *testing.T)
 
 ```
 searchKey: webhooks.TestGithubWebhookDispatchSuccessMultiple
+tags: [private]
 ```
 
 ```Go
@@ -200,6 +189,7 @@ func TestGithubWebhookDispatchSuccessMultiple(t *testing.T)
 
 ```
 searchKey: webhooks.TestGithubWebhookDispatchError
+tags: [private]
 ```
 
 ```Go
@@ -210,6 +200,7 @@ func TestGithubWebhookDispatchError(t *testing.T)
 
 ```
 searchKey: webhooks.errString
+tags: [private]
 ```
 
 ```Go
@@ -220,6 +211,7 @@ func errString(err error) string
 
 ```
 searchKey: webhooks.TestGithubWebhookExternalServices
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +222,7 @@ func TestGithubWebhookExternalServices(t *testing.T)
 
 ```
 searchKey: webhooks.marshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +233,7 @@ func marshalJSON(t testing.TB, v interface{}) string
 
 ```
 searchKey: webhooks.sign
+tags: [private]
 ```
 
 ```Go

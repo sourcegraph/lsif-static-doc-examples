@@ -81,10 +81,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="routeNameKey" href="#routeNameKey">const routeNameKey</a>
 
 ```
 searchKey: trace.routeNameKey
+tags: [private]
 ```
 
 ```Go
@@ -95,6 +100,7 @@ const routeNameKey key = iota
 
 ```
 searchKey: trace.userKey
+tags: [private]
 ```
 
 ```Go
@@ -105,6 +111,7 @@ const userKey
 
 ```
 searchKey: trace.requestErrorCauseKey
+tags: [private]
 ```
 
 ```Go
@@ -115,6 +122,7 @@ const requestErrorCauseKey
 
 ```
 searchKey: trace.graphQLRequestNameKey
+tags: [private]
 ```
 
 ```Go
@@ -125,6 +133,7 @@ const graphQLRequestNameKey
 
 ```
 searchKey: trace.originKey
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +144,7 @@ const originKey
 
 ```
 searchKey: trace.sourceKey
+tags: [private]
 ```
 
 ```Go
@@ -145,7 +155,6 @@ const sourceKey
 
 ```
 searchKey: trace.GraphQLQueryKey
-tags: [exported]
 ```
 
 ```Go
@@ -156,7 +165,6 @@ const GraphQLQueryKey
 
 ```
 searchKey: trace.SourceBrowser
-tags: [exported]
 ```
 
 ```Go
@@ -169,7 +177,6 @@ SourceBrowser indicates the request likely came from a web browser.
 
 ```
 searchKey: trace.SourceOther
-tags: [exported]
 ```
 
 ```Go
@@ -182,6 +189,7 @@ SourceOther indicates the request likely came from a non-browser HTTP client.
 
 ```
 searchKey: trace.traceKey
+tags: [private]
 ```
 
 ```Go
@@ -190,11 +198,14 @@ const traceKey = traceContextKey("trace")
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="UserLatencyBuckets" href="#UserLatencyBuckets">var UserLatencyBuckets</a>
 
 ```
 searchKey: trace.UserLatencyBuckets
-tags: [exported]
 ```
 
 ```Go
@@ -207,6 +218,7 @@ UserLatencyBuckets is a recommended list of buckets for use in prometheus histog
 
 ```
 searchKey: trace.trackOrigin
+tags: [private]
 ```
 
 ```Go
@@ -219,6 +231,7 @@ trackOrigin specifies a URL value. When an incoming request has the request head
 
 ```
 searchKey: trace.metricLabels
+tags: [private]
 ```
 
 ```Go
@@ -229,6 +242,7 @@ var metricLabels = []string{"route", "method", "code", "repo", "origin"}
 
 ```
 searchKey: trace.requestDuration
+tags: [private]
 ```
 
 ```Go
@@ -239,6 +253,7 @@ var requestDuration = ...
 
 ```
 searchKey: trace.requestHeartbeat
+tags: [private]
 ```
 
 ```Go
@@ -249,6 +264,7 @@ var requestHeartbeat = ...
 
 ```
 searchKey: trace.spanURL
+tags: [private]
 ```
 
 ```Go
@@ -257,10 +273,15 @@ var spanURL atomic.Value
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="key" href="#key">type key int</a>
 
 ```
 searchKey: trace.key
+tags: [private]
 ```
 
 ```Go
@@ -271,7 +292,6 @@ type key int
 
 ```
 searchKey: trace.SourceType
-tags: [exported]
 ```
 
 ```Go
@@ -284,7 +304,6 @@ SourceType indicates the type of source that likely created the request.
 
 ```
 searchKey: trace.RequestSource
-tags: [exported]
 ```
 
 ```Go
@@ -297,6 +316,7 @@ RequestSource returns the request source constant for a request context.
 
 ```
 searchKey: trace.httpErr
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +331,7 @@ type httpErr struct {
 
 ```
 searchKey: trace.httpErr.Error
+tags: [private]
 ```
 
 ```Go
@@ -321,7 +342,6 @@ func (e *httpErr) Error() string
 
 ```
 searchKey: trace.Tracer
-tags: [exported]
 ```
 
 ```Go
@@ -336,7 +356,6 @@ A Tracer for trace creation, parameterised over an opentracing.Tracer. Use this 
 
 ```
 searchKey: trace.Tracer.New
-tags: [exported]
 ```
 
 ```Go
@@ -349,6 +368,7 @@ New returns a new Trace with the specified family and title.
 
 ```
 searchKey: trace.traceContextKey
+tags: [private]
 ```
 
 ```Go
@@ -359,7 +379,6 @@ type traceContextKey string
 
 ```
 searchKey: trace.Trace
-tags: [exported]
 ```
 
 ```Go
@@ -376,7 +395,6 @@ Trace is a combined version of golang.org/x/net/trace.Trace and opentracing.Span
 
 ```
 searchKey: trace.New
-tags: [exported]
 ```
 
 ```Go
@@ -389,7 +407,6 @@ New returns a new Trace with the specified family and title.
 
 ```
 searchKey: trace.TraceFromContext
-tags: [exported]
 ```
 
 ```Go
@@ -402,7 +419,6 @@ TraceFromContext returns the Trace previously associated with ctx, or nil if no 
 
 ```
 searchKey: trace.Trace.LazyPrintf
-tags: [exported]
 ```
 
 ```Go
@@ -415,7 +431,6 @@ LazyPrintf evaluates its arguments with fmt.Sprintf each time the /debug/request
 
 ```
 searchKey: trace.Trace.LogFields
-tags: [exported]
 ```
 
 ```Go
@@ -428,7 +443,6 @@ LogFields logs fields to the opentracing.Span as well as the nettrace.Trace.
 
 ```
 searchKey: trace.Trace.SetError
-tags: [exported]
 ```
 
 ```Go
@@ -441,7 +455,6 @@ SetError declares that this trace and span resulted in an error.
 
 ```
 searchKey: trace.Trace.SetErrorIfNotContext
-tags: [exported]
 ```
 
 ```Go
@@ -454,7 +467,6 @@ SetErrorIfNotContext calls SetError unless err is context.Canceled or context.De
 
 ```
 searchKey: trace.Trace.Finish
-tags: [exported]
 ```
 
 ```Go
@@ -467,7 +479,6 @@ Finish declares that this trace and span is complete. The trace should not be us
 
 ```
 searchKey: trace.Tag
-tags: [exported]
 ```
 
 ```Go
@@ -483,6 +494,7 @@ Tag may be passed when creating a new span. See [https://github.com/opentracing/
 
 ```
 searchKey: trace.tagsOpt
+tags: [private]
 ```
 
 ```Go
@@ -498,6 +510,7 @@ tagsOpt is an opentracing.StartSpanOption which applies all the tags
 
 ```
 searchKey: trace.tagsOpt.Apply
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +523,7 @@ Apply satisfies the StartSpanOption interface.
 
 ```
 searchKey: trace.fieldsStringer
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +536,7 @@ fieldsStringer lazily marshals a slice of log.Field into a string for printing i
 
 ```
 searchKey: trace.fieldsStringer.String
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +547,7 @@ func (fs fieldsStringer) String() string
 
 ```
 searchKey: trace.encoder
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +563,7 @@ encoder is a log.Encoder used by fieldsStringer.
 
 ```
 searchKey: trace.encoder.EmitString
+tags: [private]
 ```
 
 ```Go
@@ -557,6 +574,7 @@ func (e *encoder) EmitString(key, value string)
 
 ```
 searchKey: trace.encoder.EmitBool
+tags: [private]
 ```
 
 ```Go
@@ -567,6 +585,7 @@ func (e *encoder) EmitBool(key string, value bool)
 
 ```
 searchKey: trace.encoder.EmitInt
+tags: [private]
 ```
 
 ```Go
@@ -577,6 +596,7 @@ func (e *encoder) EmitInt(key string, value int)
 
 ```
 searchKey: trace.encoder.EmitInt32
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +607,7 @@ func (e *encoder) EmitInt32(key string, value int32)
 
 ```
 searchKey: trace.encoder.EmitInt64
+tags: [private]
 ```
 
 ```Go
@@ -597,6 +618,7 @@ func (e *encoder) EmitInt64(key string, value int64)
 
 ```
 searchKey: trace.encoder.EmitUint32
+tags: [private]
 ```
 
 ```Go
@@ -607,6 +629,7 @@ func (e *encoder) EmitUint32(key string, value uint32)
 
 ```
 searchKey: trace.encoder.EmitUint64
+tags: [private]
 ```
 
 ```Go
@@ -617,6 +640,7 @@ func (e *encoder) EmitUint64(key string, value uint64)
 
 ```
 searchKey: trace.encoder.EmitFloat32
+tags: [private]
 ```
 
 ```Go
@@ -627,6 +651,7 @@ func (e *encoder) EmitFloat32(key string, value float32)
 
 ```
 searchKey: trace.encoder.EmitFloat64
+tags: [private]
 ```
 
 ```Go
@@ -637,6 +662,7 @@ func (e *encoder) EmitFloat64(key string, value float64)
 
 ```
 searchKey: trace.encoder.EmitObject
+tags: [private]
 ```
 
 ```Go
@@ -647,6 +673,7 @@ func (e *encoder) EmitObject(key string, value interface{})
 
 ```
 searchKey: trace.encoder.EmitLazyLogger
+tags: [private]
 ```
 
 ```Go
@@ -655,11 +682,14 @@ func (e *encoder) EmitLazyLogger(value log.LazyLogger)
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Init" href="#Init">func Init(shouldInitSentry bool)</a>
 
 ```
 searchKey: trace.Init
-tags: [exported]
 ```
 
 ```Go
@@ -670,7 +700,6 @@ func Init(shouldInitSentry bool)
 
 ```
 searchKey: trace.GraphQLRequestName
-tags: [exported]
 ```
 
 ```Go
@@ -683,7 +712,6 @@ GraphQLRequestName returns the GraphQL request name for a request context. For e
 
 ```
 searchKey: trace.WithGraphQLRequestName
-tags: [exported]
 ```
 
 ```Go
@@ -696,7 +724,6 @@ WithGraphQLRequestName sets the GraphQL request name in the context.
 
 ```
 searchKey: trace.RequestOrigin
-tags: [exported]
 ```
 
 ```Go
@@ -709,7 +736,6 @@ RequestOrigin returns the request origin (the value of the request header "Origi
 
 ```
 searchKey: trace.WithRequestOrigin
-tags: [exported]
 ```
 
 ```Go
@@ -722,7 +748,6 @@ WithRequestOrigin sets the request origin in the context.
 
 ```
 searchKey: trace.WithRequestSource
-tags: [exported]
 ```
 
 ```Go
@@ -735,7 +760,6 @@ WithRequestSource sets the request source type in the context.
 
 ```
 searchKey: trace.HTTPTraceMiddleware
-tags: [exported]
 ```
 
 ```Go
@@ -750,7 +774,6 @@ HTTPTraceMiddleware captures and exports metrics to Prometheus, etc.
 
 ```
 searchKey: trace.Route
-tags: [exported]
 ```
 
 ```Go
@@ -761,7 +784,6 @@ func Route(next http.Handler) http.Handler
 
 ```
 searchKey: trace.User
-tags: [exported]
 ```
 
 ```Go
@@ -772,7 +794,6 @@ func User(ctx context.Context, userID int32)
 
 ```
 searchKey: trace.SetRequestErrorCause
-tags: [exported]
 ```
 
 ```Go
@@ -785,7 +806,6 @@ SetRequestErrorCause will set the error for the request to err. This is used in 
 
 ```
 searchKey: trace.SetRouteName
-tags: [exported]
 ```
 
 ```Go
@@ -798,7 +818,6 @@ SetRouteName manually sets the name for the route. This should only be used for 
 
 ```
 searchKey: trace.SpanURL
-tags: [exported]
 ```
 
 ```Go
@@ -811,7 +830,6 @@ SpanURL returns the URL to the tracing UI for the given span. The span must be n
 
 ```
 searchKey: trace.SpanURLFromContext
-tags: [exported]
 ```
 
 ```Go
@@ -824,7 +842,6 @@ SpanURLFromContext returns the URL to the tracing UI for the span attached to th
 
 ```
 searchKey: trace.SetSpanURLFunc
-tags: [exported]
 ```
 
 ```Go
@@ -837,6 +854,7 @@ SetSpanURLFunc sets the function that SpanURL sets.
 
 ```
 searchKey: trace.contextWithTrace
+tags: [private]
 ```
 
 ```Go
@@ -849,7 +867,6 @@ contextWithTrace returns a new context.Context that holds a reference to trace's
 
 ```
 searchKey: trace.CopyContext
-tags: [exported]
 ```
 
 ```Go
@@ -862,7 +879,6 @@ CopyContext copies the tracing-related context items from one context to another
 
 ```
 searchKey: trace.Printf
-tags: [exported]
 ```
 
 ```Go
@@ -875,7 +891,6 @@ Printf is an opentracing log.Field which is a LazyLogger. So the format string w
 
 ```
 searchKey: trace.Stringer
-tags: [exported]
 ```
 
 ```Go
@@ -888,7 +903,6 @@ Stringer is an opentracing log.Field which is a LazyLogger. So the String() will
 
 ```
 searchKey: trace.SQL
-tags: [exported]
 ```
 
 ```Go
@@ -901,6 +915,7 @@ SQL is an opentracing log.Field which is a LazyLogger. It will log the query as 
 
 ```
 searchKey: trace.TestSpanURL
+tags: [private]
 ```
 
 ```Go

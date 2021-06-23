@@ -57,15 +57,10 @@ Package iotest implements Readers and Writers useful mainly for testing.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrTimeout" href="#ErrTimeout">var ErrTimeout</a>
 
 ```
 searchKey: iotest.ErrTimeout
-tags: [exported]
 ```
 
 ```Go
@@ -78,6 +73,7 @@ ErrTimeout is a fake timeout error.
 
 ```
 searchKey: iotest.truncateWriterTests
+tags: [private]
 ```
 
 ```Go
@@ -86,14 +82,11 @@ var truncateWriterTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="writeLogger" href="#writeLogger">type writeLogger struct</a>
 
 ```
 searchKey: iotest.writeLogger
+tags: [private]
 ```
 
 ```Go
@@ -107,6 +100,7 @@ type writeLogger struct {
 
 ```
 searchKey: iotest.writeLogger.Write
+tags: [private]
 ```
 
 ```Go
@@ -117,6 +111,7 @@ func (l *writeLogger) Write(p []byte) (n int, err error)
 
 ```
 searchKey: iotest.readLogger
+tags: [private]
 ```
 
 ```Go
@@ -130,6 +125,7 @@ type readLogger struct {
 
 ```
 searchKey: iotest.readLogger.Read
+tags: [private]
 ```
 
 ```Go
@@ -140,6 +136,7 @@ func (l *readLogger) Read(p []byte) (n int, err error)
 
 ```
 searchKey: iotest.oneByteReader
+tags: [private]
 ```
 
 ```Go
@@ -152,6 +149,7 @@ type oneByteReader struct {
 
 ```
 searchKey: iotest.oneByteReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -162,6 +160,7 @@ func (r *oneByteReader) Read(p []byte) (int, error)
 
 ```
 searchKey: iotest.halfReader
+tags: [private]
 ```
 
 ```Go
@@ -174,6 +173,7 @@ type halfReader struct {
 
 ```
 searchKey: iotest.halfReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -184,6 +184,7 @@ func (r *halfReader) Read(p []byte) (int, error)
 
 ```
 searchKey: iotest.dataErrReader
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +199,7 @@ type dataErrReader struct {
 
 ```
 searchKey: iotest.dataErrReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +210,7 @@ func (r *dataErrReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: iotest.timeoutReader
+tags: [private]
 ```
 
 ```Go
@@ -221,6 +224,7 @@ type timeoutReader struct {
 
 ```
 searchKey: iotest.timeoutReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -231,6 +235,7 @@ func (r *timeoutReader) Read(p []byte) (int, error)
 
 ```
 searchKey: iotest.errReader
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +248,7 @@ type errReader struct {
 
 ```
 searchKey: iotest.errReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +259,7 @@ func (r *errReader) Read(p []byte) (int, error)
 
 ```
 searchKey: iotest.smallByteReader
+tags: [private]
 ```
 
 ```Go
@@ -267,6 +274,7 @@ type smallByteReader struct {
 
 ```
 searchKey: iotest.smallByteReader.Read
+tags: [private]
 ```
 
 ```Go
@@ -277,6 +285,7 @@ func (r *smallByteReader) Read(p []byte) (int, error)
 
 ```
 searchKey: iotest.truncateWriter
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +299,7 @@ type truncateWriter struct {
 
 ```
 searchKey: iotest.truncateWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +310,7 @@ func (t *truncateWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: iotest.errWriter
+tags: [private]
 ```
 
 ```Go
@@ -312,6 +323,7 @@ type errWriter struct {
 
 ```
 searchKey: iotest.errWriter.Write
+tags: [private]
 ```
 
 ```Go
@@ -320,15 +332,10 @@ func (w errWriter) Write([]byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="NewWriteLogger" href="#NewWriteLogger">func NewWriteLogger(prefix string, w io.Writer) io.Writer</a>
 
 ```
 searchKey: iotest.NewWriteLogger
-tags: [exported]
 ```
 
 ```Go
@@ -341,7 +348,6 @@ NewWriteLogger returns a writer that behaves like w except that it logs (using l
 
 ```
 searchKey: iotest.NewReadLogger
-tags: [exported]
 ```
 
 ```Go
@@ -354,7 +360,6 @@ NewReadLogger returns a reader that behaves like r except that it logs (using lo
 
 ```
 searchKey: iotest.OneByteReader
-tags: [exported]
 ```
 
 ```Go
@@ -367,7 +372,6 @@ OneByteReader returns a Reader that implements each non-empty Read by reading on
 
 ```
 searchKey: iotest.HalfReader
-tags: [exported]
 ```
 
 ```Go
@@ -380,7 +384,6 @@ HalfReader returns a Reader that implements Read by reading half as many request
 
 ```
 searchKey: iotest.DataErrReader
-tags: [exported]
 ```
 
 ```Go
@@ -393,7 +396,6 @@ DataErrReader changes the way errors are handled by a Reader. Normally, a Reader
 
 ```
 searchKey: iotest.TimeoutReader
-tags: [exported]
 ```
 
 ```Go
@@ -406,7 +408,6 @@ TimeoutReader returns ErrTimeout on the second read with no data. Subsequent cal
 
 ```
 searchKey: iotest.ErrReader
-tags: [exported]
 ```
 
 ```Go
@@ -419,7 +420,6 @@ ErrReader returns an io.Reader that returns 0, err from all Read calls.
 
 ```
 searchKey: iotest.TestReader
-tags: [exported]
 ```
 
 ```Go
@@ -434,7 +434,6 @@ If TestReader finds any misbehaviors, it returns an error reporting them. The er
 
 ```
 searchKey: iotest.TruncateWriter
-tags: [exported]
 ```
 
 ```Go
@@ -447,6 +446,7 @@ TruncateWriter returns a Writer that writes to w but stops silently after n byte
 
 ```
 searchKey: iotest.TestWriteLogger
+tags: [private]
 ```
 
 ```Go
@@ -457,6 +457,7 @@ func TestWriteLogger(t *testing.T)
 
 ```
 searchKey: iotest.TestWriteLogger_errorOnWrite
+tags: [private]
 ```
 
 ```Go
@@ -467,6 +468,7 @@ func TestWriteLogger_errorOnWrite(t *testing.T)
 
 ```
 searchKey: iotest.TestReadLogger
+tags: [private]
 ```
 
 ```Go
@@ -477,6 +479,7 @@ func TestReadLogger(t *testing.T)
 
 ```
 searchKey: iotest.TestReadLogger_errorOnRead
+tags: [private]
 ```
 
 ```Go
@@ -487,6 +490,7 @@ func TestReadLogger_errorOnRead(t *testing.T)
 
 ```
 searchKey: iotest.TestOneByteReader_nonEmptyReader
+tags: [private]
 ```
 
 ```Go
@@ -497,6 +501,7 @@ func TestOneByteReader_nonEmptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestOneByteReader_emptyReader
+tags: [private]
 ```
 
 ```Go
@@ -507,6 +512,7 @@ func TestOneByteReader_emptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestHalfReader_nonEmptyReader
+tags: [private]
 ```
 
 ```Go
@@ -517,6 +523,7 @@ func TestHalfReader_nonEmptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestHalfReader_emptyReader
+tags: [private]
 ```
 
 ```Go
@@ -527,6 +534,7 @@ func TestHalfReader_emptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestTimeOutReader_nonEmptyReader
+tags: [private]
 ```
 
 ```Go
@@ -537,6 +545,7 @@ func TestTimeOutReader_nonEmptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestTimeOutReader_emptyReader
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +556,7 @@ func TestTimeOutReader_emptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestDataErrReader_nonEmptyReader
+tags: [private]
 ```
 
 ```Go
@@ -557,6 +567,7 @@ func TestDataErrReader_nonEmptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestDataErrReader_emptyReader
+tags: [private]
 ```
 
 ```Go
@@ -567,6 +578,7 @@ func TestDataErrReader_emptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestErrReader
+tags: [private]
 ```
 
 ```Go
@@ -577,6 +589,7 @@ func TestErrReader(t *testing.T)
 
 ```
 searchKey: iotest.TestStringsReader
+tags: [private]
 ```
 
 ```Go
@@ -587,6 +600,7 @@ func TestStringsReader(t *testing.T)
 
 ```
 searchKey: iotest.TestTruncateWriter
+tags: [private]
 ```
 
 ```Go

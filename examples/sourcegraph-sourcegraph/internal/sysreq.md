@@ -22,10 +22,15 @@ Package sysreq implements checking for Sourcegraph system requirements.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="checks" href="#checks">var checks</a>
 
 ```
 searchKey: sysreq.checks
+tags: [private]
 ```
 
 ```Go
@@ -39,11 +44,14 @@ var checks = []check{
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Status" href="#Status">type Status struct</a>
 
 ```
 searchKey: sysreq.Status
-tags: [exported]
 ```
 
 ```Go
@@ -62,7 +70,6 @@ Status describes the status of a system requirement.
 
 ```
 searchKey: sysreq.Status.OK
-tags: [exported]
 ```
 
 ```Go
@@ -75,7 +82,6 @@ OK is whether the component is present, has no errors, and was not skipped.
 
 ```
 searchKey: sysreq.Status.Failed
-tags: [exported]
 ```
 
 ```Go
@@ -86,6 +92,7 @@ func (s *Status) Failed() bool
 
 ```
 searchKey: sysreq.check
+tags: [private]
 ```
 
 ```Go
@@ -99,7 +106,6 @@ type check struct {
 
 ```
 searchKey: sysreq.CheckFunc
-tags: [exported]
 ```
 
 ```Go
@@ -110,11 +116,14 @@ CheckFunc is a function that checks for a system requirement. If any of problem,
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Check" href="#Check">func Check(ctx context.Context, skip []string) []Status</a>
 
 ```
 searchKey: sysreq.Check
-tags: [exported]
 ```
 
 ```Go
@@ -127,7 +136,6 @@ Check checks for the presence of system requirements, such as Docker and Git. Th
 
 ```
 searchKey: sysreq.AddCheck
-tags: [exported]
 ```
 
 ```Go
@@ -140,6 +148,7 @@ AddCheck adds a new check that will be run when this package's Check func is cal
 
 ```
 searchKey: sysreq.rlimitCheck
+tags: [private]
 ```
 
 ```Go
@@ -150,6 +159,7 @@ func rlimitCheck(ctx context.Context) (problem, fix string, err error)
 
 ```
 searchKey: sysreq.TestCheck
+tags: [private]
 ```
 
 ```Go
@@ -160,6 +170,7 @@ func TestCheck(t *testing.T)
 
 ```
 searchKey: sysreq.TestCheck_skip
+tags: [private]
 ```
 
 ```Go

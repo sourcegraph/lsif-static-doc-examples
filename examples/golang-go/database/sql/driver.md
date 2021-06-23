@@ -104,15 +104,10 @@ Before a connection is returned to the connection pool after use, IsValid is cal
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrSkip" href="#ErrSkip">var ErrSkip</a>
 
 ```
 searchKey: driver.ErrSkip
-tags: [exported]
 ```
 
 ```Go
@@ -125,7 +120,6 @@ ErrSkip may be returned by some optional interfaces' methods to indicate at runt
 
 ```
 searchKey: driver.ErrBadConn
-tags: [exported]
 ```
 
 ```Go
@@ -140,7 +134,6 @@ To prevent duplicate operations, ErrBadConn should NOT be returned if there's a 
 
 ```
 searchKey: driver.ErrRemoveArgument
-tags: [exported]
 ```
 
 ```Go
@@ -153,7 +146,6 @@ ErrRemoveArgument may be returned from NamedValueChecker to instruct the sql pac
 
 ```
 searchKey: driver.ResultNoRows
-tags: [exported]
 ```
 
 ```Go
@@ -166,7 +158,6 @@ ResultNoRows is a pre-defined Result for drivers to return when a DDL command (s
 
 ```
 searchKey: driver.Bool
-tags: [exported]
 ```
 
 ```Go
@@ -191,7 +182,6 @@ The conversion rules are:
 
 ```
 searchKey: driver.Int32
-tags: [exported]
 ```
 
 ```Go
@@ -204,7 +194,6 @@ Int32 is a ValueConverter that converts input values to int64, respecting the li
 
 ```
 searchKey: driver.String
-tags: [exported]
 ```
 
 ```Go
@@ -217,7 +206,6 @@ String is a ValueConverter that converts its input to a string. If the value is 
 
 ```
 searchKey: driver.DefaultParameterConverter
-tags: [exported]
 ```
 
 ```Go
@@ -232,6 +220,7 @@ DefaultParameterConverter returns its argument directly if IsValue(arg). Otherwi
 
 ```
 searchKey: driver.valuerReflectType
+tags: [private]
 ```
 
 ```Go
@@ -242,6 +231,7 @@ var valuerReflectType = reflect.TypeOf((*Valuer)(nil)).Elem()
 
 ```
 searchKey: driver.now
+tags: [private]
 ```
 
 ```Go
@@ -252,6 +242,7 @@ var now = time.Now()
 
 ```
 searchKey: driver.answer
+tags: [private]
 ```
 
 ```Go
@@ -262,6 +253,7 @@ var answer int64 = 42
 
 ```
 searchKey: driver.valueConverterTests
+tags: [private]
 ```
 
 ```Go
@@ -270,15 +262,10 @@ var valueConverterTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Value" href="#Value">type Value interface{}</a>
 
 ```
 searchKey: driver.Value
-tags: [exported]
 ```
 
 ```Go
@@ -302,6 +289,7 @@ If the driver supports cursors, a returned Value may also implement the Rows int
 
 ```
 searchKey: driver.callValuerValue
+tags: [private]
 ```
 
 ```Go
@@ -318,7 +306,6 @@ This function is mirrored in the database/sql package.
 
 ```
 searchKey: driver.NamedValue
-tags: [exported]
 ```
 
 ```Go
@@ -343,7 +330,6 @@ NamedValue holds both the value name and value.
 
 ```
 searchKey: driver.Driver
-tags: [exported]
 ```
 
 ```Go
@@ -369,7 +355,6 @@ Database drivers may implement DriverContext for access to contexts and to parse
 
 ```
 searchKey: driver.DriverContext
-tags: [exported]
 ```
 
 ```Go
@@ -386,7 +371,6 @@ If a Driver implements DriverContext, then sql.DB will call OpenConnector to obt
 
 ```
 searchKey: driver.Connector
-tags: [exported]
 ```
 
 ```Go
@@ -423,7 +407,6 @@ If a Connector implements io.Closer, the sql package's DB.Close method will call
 
 ```
 searchKey: driver.Pinger
-tags: [exported]
 ```
 
 ```Go
@@ -442,7 +425,6 @@ If Conn.Ping returns ErrBadConn, DB.Ping and DB.PingContext will remove the Conn
 
 ```
 searchKey: driver.Execer
-tags: [exported]
 ```
 
 ```Go
@@ -463,7 +445,6 @@ Deprecated: Drivers should implement ExecerContext instead.
 
 ```
 searchKey: driver.ExecerContext
-tags: [exported]
 ```
 
 ```Go
@@ -484,7 +465,6 @@ ExecerContext must honor the context timeout and return when the context is canc
 
 ```
 searchKey: driver.Queryer
-tags: [exported]
 ```
 
 ```Go
@@ -505,7 +485,6 @@ Deprecated: Drivers should implement QueryerContext instead.
 
 ```
 searchKey: driver.QueryerContext
-tags: [exported]
 ```
 
 ```Go
@@ -526,7 +505,6 @@ QueryerContext must honor the context timeout and return when the context is can
 
 ```
 searchKey: driver.Conn
-tags: [exported]
 ```
 
 ```Go
@@ -562,7 +540,6 @@ Conn is assumed to be stateful.
 
 ```
 searchKey: driver.ConnPrepareContext
-tags: [exported]
 ```
 
 ```Go
@@ -580,7 +557,6 @@ ConnPrepareContext enhances the Conn interface with context.
 
 ```
 searchKey: driver.IsolationLevel
-tags: [exported]
 ```
 
 ```Go
@@ -595,7 +571,6 @@ This type should be considered identical to sql.IsolationLevel along with any va
 
 ```
 searchKey: driver.TxOptions
-tags: [exported]
 ```
 
 ```Go
@@ -613,7 +588,6 @@ This type should be considered identical to sql.TxOptions.
 
 ```
 searchKey: driver.ConnBeginTx
-tags: [exported]
 ```
 
 ```Go
@@ -640,7 +614,6 @@ ConnBeginTx enhances the Conn interface with context and TxOptions.
 
 ```
 searchKey: driver.SessionResetter
-tags: [exported]
 ```
 
 ```Go
@@ -658,7 +631,6 @@ SessionResetter may be implemented by Conn to allow drivers to reset the session
 
 ```
 searchKey: driver.Validator
-tags: [exported]
 ```
 
 ```Go
@@ -677,7 +649,6 @@ If implemented, drivers may return the underlying error from queries, even if th
 
 ```
 searchKey: driver.Result
-tags: [exported]
 ```
 
 ```Go
@@ -699,7 +670,6 @@ Result is the result of a query execution.
 
 ```
 searchKey: driver.Stmt
-tags: [exported]
 ```
 
 ```Go
@@ -744,7 +714,6 @@ Stmt is a prepared statement. It is bound to a Conn and not used by multiple gor
 
 ```
 searchKey: driver.StmtExecContext
-tags: [exported]
 ```
 
 ```Go
@@ -763,7 +732,6 @@ StmtExecContext enhances the Stmt interface by providing Exec with context.
 
 ```
 searchKey: driver.StmtQueryContext
-tags: [exported]
 ```
 
 ```Go
@@ -782,7 +750,6 @@ StmtQueryContext enhances the Stmt interface by providing Query with context.
 
 ```
 searchKey: driver.NamedValueChecker
-tags: [exported]
 ```
 
 ```Go
@@ -806,7 +773,6 @@ If ErrSkip is returned the column converter error checking path is used for the 
 
 ```
 searchKey: driver.ColumnConverter
-tags: [exported]
 ```
 
 ```Go
@@ -827,7 +793,6 @@ Deprecated: Drivers should implement NamedValueChecker.
 
 ```
 searchKey: driver.Rows
-tags: [exported]
 ```
 
 ```Go
@@ -860,7 +825,6 @@ Rows is an iterator over an executed query's results.
 
 ```
 searchKey: driver.RowsNextResultSet
-tags: [exported]
 ```
 
 ```Go
@@ -885,7 +849,6 @@ RowsNextResultSet extends the Rows interface by providing a way to signal the dr
 
 ```
 searchKey: driver.RowsColumnTypeScanType
-tags: [exported]
 ```
 
 ```Go
@@ -901,7 +864,6 @@ RowsColumnTypeScanType may be implemented by Rows. It should return the value ty
 
 ```
 searchKey: driver.RowsColumnTypeDatabaseTypeName
-tags: [exported]
 ```
 
 ```Go
@@ -917,7 +879,6 @@ RowsColumnTypeDatabaseTypeName may be implemented by Rows. It should return the 
 
 ```
 searchKey: driver.RowsColumnTypeLength
-tags: [exported]
 ```
 
 ```Go
@@ -942,7 +903,6 @@ bytea(30)     (30, true)
 
 ```
 searchKey: driver.RowsColumnTypeNullable
-tags: [exported]
 ```
 
 ```Go
@@ -958,7 +918,6 @@ RowsColumnTypeNullable may be implemented by Rows. The nullable value should be 
 
 ```
 searchKey: driver.RowsColumnTypePrecisionScale
-tags: [exported]
 ```
 
 ```Go
@@ -980,7 +939,6 @@ decimal           (math.MaxInt64, math.MaxInt64, true)
 
 ```
 searchKey: driver.Tx
-tags: [exported]
 ```
 
 ```Go
@@ -996,7 +954,6 @@ Tx is a transaction.
 
 ```
 searchKey: driver.RowsAffected
-tags: [exported]
 ```
 
 ```Go
@@ -1009,7 +966,6 @@ RowsAffected implements Result for an INSERT or UPDATE operation which mutates a
 
 ```
 searchKey: driver.RowsAffected.LastInsertId
-tags: [exported]
 ```
 
 ```Go
@@ -1020,7 +976,6 @@ func (RowsAffected) LastInsertId() (int64, error)
 
 ```
 searchKey: driver.RowsAffected.RowsAffected
-tags: [exported]
 ```
 
 ```Go
@@ -1031,6 +986,7 @@ func (v RowsAffected) RowsAffected() (int64, error)
 
 ```
 searchKey: driver.noRows
+tags: [private]
 ```
 
 ```Go
@@ -1041,6 +997,7 @@ type noRows struct{}
 
 ```
 searchKey: driver.noRows.LastInsertId
+tags: [private]
 ```
 
 ```Go
@@ -1051,6 +1008,7 @@ func (noRows) LastInsertId() (int64, error)
 
 ```
 searchKey: driver.noRows.RowsAffected
+tags: [private]
 ```
 
 ```Go
@@ -1061,7 +1019,6 @@ func (noRows) RowsAffected() (int64, error)
 
 ```
 searchKey: driver.ValueConverter
-tags: [exported]
 ```
 
 ```Go
@@ -1092,7 +1049,6 @@ Various implementations of ValueConverter are provided by the driver package to 
 
 ```
 searchKey: driver.Valuer
-tags: [exported]
 ```
 
 ```Go
@@ -1111,6 +1067,7 @@ Types implementing Valuer interface are able to convert themselves to a driver V
 
 ```
 searchKey: driver.boolType
+tags: [private]
 ```
 
 ```Go
@@ -1121,6 +1078,7 @@ type boolType struct{}
 
 ```
 searchKey: driver.boolType.String
+tags: [private]
 ```
 
 ```Go
@@ -1131,6 +1089,7 @@ func (boolType) String() string
 
 ```
 searchKey: driver.boolType.ConvertValue
+tags: [private]
 ```
 
 ```Go
@@ -1141,6 +1100,7 @@ func (boolType) ConvertValue(src interface{}) (Value, error)
 
 ```
 searchKey: driver.int32Type
+tags: [private]
 ```
 
 ```Go
@@ -1151,6 +1111,7 @@ type int32Type struct{}
 
 ```
 searchKey: driver.int32Type.ConvertValue
+tags: [private]
 ```
 
 ```Go
@@ -1161,6 +1122,7 @@ func (int32Type) ConvertValue(v interface{}) (Value, error)
 
 ```
 searchKey: driver.stringType
+tags: [private]
 ```
 
 ```Go
@@ -1171,6 +1133,7 @@ type stringType struct{}
 
 ```
 searchKey: driver.stringType.ConvertValue
+tags: [private]
 ```
 
 ```Go
@@ -1181,7 +1144,6 @@ func (stringType) ConvertValue(v interface{}) (Value, error)
 
 ```
 searchKey: driver.Null
-tags: [exported]
 ```
 
 ```Go
@@ -1196,7 +1158,6 @@ Null is a type that implements ValueConverter by allowing nil values but otherwi
 
 ```
 searchKey: driver.Null.ConvertValue
-tags: [exported]
 ```
 
 ```Go
@@ -1207,7 +1168,6 @@ func (n Null) ConvertValue(v interface{}) (Value, error)
 
 ```
 searchKey: driver.NotNull
-tags: [exported]
 ```
 
 ```Go
@@ -1222,7 +1182,6 @@ NotNull is a type that implements ValueConverter by disallowing nil values but o
 
 ```
 searchKey: driver.NotNull.ConvertValue
-tags: [exported]
 ```
 
 ```Go
@@ -1233,6 +1192,7 @@ func (n NotNull) ConvertValue(v interface{}) (Value, error)
 
 ```
 searchKey: driver.defaultConverter
+tags: [private]
 ```
 
 ```Go
@@ -1243,6 +1203,7 @@ type defaultConverter struct{}
 
 ```
 searchKey: driver.defaultConverter.ConvertValue
+tags: [private]
 ```
 
 ```Go
@@ -1253,6 +1214,7 @@ func (defaultConverter) ConvertValue(v interface{}) (Value, error)
 
 ```
 searchKey: driver.decimalDecompose
+tags: [private]
 ```
 
 ```Go
@@ -1268,6 +1230,7 @@ type decimalDecompose interface {
 
 ```
 searchKey: driver.valueConverterTest
+tags: [private]
 ```
 
 ```Go
@@ -1283,6 +1246,7 @@ type valueConverterTest struct {
 
 ```
 searchKey: driver.i
+tags: [private]
 ```
 
 ```Go
@@ -1293,6 +1257,7 @@ type i int64
 
 ```
 searchKey: driver.f
+tags: [private]
 ```
 
 ```Go
@@ -1303,6 +1268,7 @@ type f float64
 
 ```
 searchKey: driver.b
+tags: [private]
 ```
 
 ```Go
@@ -1313,6 +1279,7 @@ type b bool
 
 ```
 searchKey: driver.bs
+tags: [private]
 ```
 
 ```Go
@@ -1323,6 +1290,7 @@ type bs []byte
 
 ```
 searchKey: driver.s
+tags: [private]
 ```
 
 ```Go
@@ -1333,6 +1301,7 @@ type s string
 
 ```
 searchKey: driver.t
+tags: [private]
 ```
 
 ```Go
@@ -1343,6 +1312,7 @@ type t time.Time
 
 ```
 searchKey: driver.is
+tags: [private]
 ```
 
 ```Go
@@ -1353,6 +1323,7 @@ type is []int
 
 ```
 searchKey: driver.dec
+tags: [private]
 ```
 
 ```Go
@@ -1368,6 +1339,7 @@ type dec struct {
 
 ```
 searchKey: driver.dec.Decompose
+tags: [private]
 ```
 
 ```Go
@@ -1376,15 +1348,10 @@ func (d dec) Decompose(buf []byte) (form byte, negative bool, coefficient []byte
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="IsValue" href="#IsValue">func IsValue(v interface{}) bool</a>
 
 ```
 searchKey: driver.IsValue
-tags: [exported]
 ```
 
 ```Go
@@ -1397,7 +1364,6 @@ IsValue reports whether v is a valid Value parameter type.
 
 ```
 searchKey: driver.IsScanValue
-tags: [exported]
 ```
 
 ```Go
@@ -1410,6 +1376,7 @@ IsScanValue is equivalent to IsValue. It exists for compatibility.
 
 ```
 searchKey: driver.TestValueConverters
+tags: [private]
 ```
 
 ```Go

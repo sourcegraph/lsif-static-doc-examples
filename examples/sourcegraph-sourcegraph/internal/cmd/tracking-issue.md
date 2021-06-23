@@ -125,10 +125,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="costPerSearch" href="#costPerSearch">const costPerSearch</a>
 
 ```
 searchKey: main.costPerSearch
+tags: [private]
 ```
 
 ```Go
@@ -139,6 +144,7 @@ const costPerSearch = 30
 
 ```
 searchKey: main.maxCostPerRequest
+tags: [private]
 ```
 
 ```Go
@@ -149,6 +155,7 @@ const maxCostPerRequest = 1000
 
 ```
 searchKey: main.queriesPerLoadRequest
+tags: [private]
 ```
 
 ```Go
@@ -159,6 +166,7 @@ const queriesPerLoadRequest = 10
 
 ```
 searchKey: main.beginWorkMarker
+tags: [private]
 ```
 
 ```Go
@@ -169,6 +177,7 @@ const beginWorkMarker = "<!-- BEGIN WORK -->"
 
 ```
 searchKey: main.endWorkMarker
+tags: [private]
 ```
 
 ```Go
@@ -179,6 +188,7 @@ const endWorkMarker = "<!-- END WORK -->"
 
 ```
 searchKey: main.beginAssigneeMarkerFmt
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +199,7 @@ const beginAssigneeMarkerFmt = "<!-- BEGIN ASSIGNEE: %s -->"
 
 ```
 searchKey: main.endAssigneeMarker
+tags: [private]
 ```
 
 ```Go
@@ -199,6 +210,7 @@ const endAssigneeMarker = "<!-- END ASSIGNEE -->"
 
 ```
 searchKey: main.issueFields
+tags: [private]
 ```
 
 ```Go
@@ -209,6 +221,7 @@ const issueFields = ...
 
 ```
 searchKey: main.pullRequestFields
+tags: [private]
 ```
 
 ```Go
@@ -219,10 +232,15 @@ const pullRequestFields = issueFields + `
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="categorizers" href="#categorizers">var categorizers</a>
 
 ```
 searchKey: main.categorizers
+tags: [private]
 ```
 
 ```Go
@@ -233,6 +251,7 @@ var categorizers = ...
 
 ```
 searchKey: main.customerMatcher
+tags: [private]
 ```
 
 ```Go
@@ -243,6 +262,7 @@ var customerMatcher = regexp.MustCompile(`https://app\.hubspot\.com/contacts/276
 
 ```
 searchKey: main.emojis
+tags: [private]
 ```
 
 ```Go
@@ -253,6 +273,7 @@ var emojis = ...
 
 ```
 searchKey: main.issueOrPullRequestMatcher
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +284,7 @@ var issueOrPullRequestMatcher = ...
 
 ```
 searchKey: main.now
+tags: [private]
 ```
 
 ```Go
@@ -275,6 +297,7 @@ now returns the current time for relative formatting. This is overwritten during
 
 ```
 searchKey: main.testUpdate
+tags: [private]
 ```
 
 ```Go
@@ -285,6 +308,7 @@ var testUpdate = flag.Bool("update", false, "update testdata golden")
 
 ```
 searchKey: main.testUpdateFixture
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +319,7 @@ var testUpdateFixture = flag.Bool("update.fixture", false, "update testdata API 
 
 ```
 searchKey: main.testIssues
+tags: [private]
 ```
 
 ```Go
@@ -308,11 +333,14 @@ var testIssues = []int{
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="IssueContext" href="#IssueContext">type IssueContext struct</a>
 
 ```
 searchKey: main.IssueContext
-tags: [exported]
 ```
 
 ```Go
@@ -330,7 +358,6 @@ IssueContext tracks a visible set of issues, tracking issues, and pull requests 
 
 ```
 searchKey: main.NewIssueContext
-tags: [exported]
 ```
 
 ```Go
@@ -343,7 +370,6 @@ NewIssueContext creates  anew issue context with the given visible issues, track
 
 ```
 searchKey: main.IssueContext.Match
-tags: [exported]
 ```
 
 ```Go
@@ -356,7 +382,6 @@ Match will return a new issue context where all visible issues and pull requests
 
 ```
 searchKey: main.Issue
-tags: [exported]
 ```
 
 ```Go
@@ -389,6 +414,7 @@ Issue represents an existing GitHub Issue.
 
 ```
 searchKey: main.unmarshalIssue
+tags: [private]
 ```
 
 ```Go
@@ -401,7 +427,6 @@ unmarshalIssue unmarshals the given node into an issue object.
 
 ```
 searchKey: main.Issue.Closed
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +437,6 @@ func (issue *Issue) Closed() bool
 
 ```
 searchKey: main.Issue.SafeTitle
-tags: [exported]
 ```
 
 ```Go
@@ -423,7 +447,6 @@ func (issue *Issue) SafeTitle() string
 
 ```
 searchKey: main.Issue.SafeLabels
-tags: [exported]
 ```
 
 ```Go
@@ -434,7 +457,6 @@ func (issue *Issue) SafeLabels() []string
 
 ```
 searchKey: main.Issue.UpdateBody
-tags: [exported]
 ```
 
 ```Go
@@ -445,7 +467,6 @@ func (issue *Issue) UpdateBody(markdown string) (updated bool, ok bool)
 
 ```
 searchKey: main.IssueLoader
-tags: [exported]
 ```
 
 ```Go
@@ -464,7 +485,6 @@ IssueLoader efficiently fetches issues and pull request that match a given set o
 
 ```
 searchKey: main.NewIssueLoader
-tags: [exported]
 ```
 
 ```Go
@@ -477,7 +497,6 @@ NewIssueLoader creates a new IssueLoader with the given queries.
 
 ```
 searchKey: main.IssueLoader.Load
-tags: [exported]
 ```
 
 ```Go
@@ -490,6 +509,7 @@ Load will load all issues and pull requests matching the configured queries. Tra
 
 ```
 searchKey: main.IssueLoader.makeNextRequest
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +522,7 @@ makeNextRequest will construct a new request based on the given cursor values. I
 
 ```
 searchKey: main.IssueLoader.performRequest
+tags: [private]
 ```
 
 ```Go
@@ -514,7 +535,6 @@ performRequest will perform the given request and return the deserialized list o
 
 ```
 searchKey: main.Matcher
-tags: [exported]
 ```
 
 ```Go
@@ -530,7 +550,6 @@ type Matcher struct {
 
 ```
 searchKey: main.NewMatcher
-tags: [exported]
 ```
 
 ```Go
@@ -543,7 +562,6 @@ NewMatcher returns a matcher with the given expected properties.
 
 ```
 searchKey: main.Matcher.Issue
-tags: [exported]
 ```
 
 ```Go
@@ -556,7 +574,6 @@ Issue returns true if the given issue matches the expected properties. An issue 
 
 ```
 searchKey: main.Matcher.PullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -569,6 +586,7 @@ PullRequest returns true if the given pull request matches the expected properti
 
 ```
 searchKey: main.Matcher.testAssignee
+tags: [private]
 ```
 
 ```Go
@@ -581,6 +599,7 @@ testAssignee returns true if this matcher was configured with a non-empty assign
 
 ```
 searchKey: main.Matcher.testLabels
+tags: [private]
 ```
 
 ```Go
@@ -593,6 +612,7 @@ testLabels returns true if every label that this matcher was configured with exi
 
 ```
 searchKey: main.Matcher.testMilestone
+tags: [private]
 ```
 
 ```Go
@@ -605,7 +625,6 @@ testMilestone returns true if the given milestone matches the milestone the matc
 
 ```
 searchKey: main.PullRequest
-tags: [exported]
 ```
 
 ```Go
@@ -637,6 +656,7 @@ PullRequest represents an existing GitHub PullRequest.
 
 ```
 searchKey: main.unmarshalPullRequest
+tags: [private]
 ```
 
 ```Go
@@ -649,7 +669,6 @@ unmarshalPullRequest unmarshals the given node into an pull request object.
 
 ```
 searchKey: main.PullRequest.Closed
-tags: [exported]
 ```
 
 ```Go
@@ -660,7 +679,6 @@ func (pullRequest *PullRequest) Closed() bool
 
 ```
 searchKey: main.PullRequest.Merged
-tags: [exported]
 ```
 
 ```Go
@@ -671,7 +689,6 @@ func (pullRequest *PullRequest) Merged() bool
 
 ```
 searchKey: main.PullRequest.Done
-tags: [exported]
 ```
 
 ```Go
@@ -682,7 +699,6 @@ func (pullRequest *PullRequest) Done() bool
 
 ```
 searchKey: main.PullRequest.SafeTitle
-tags: [exported]
 ```
 
 ```Go
@@ -693,7 +709,6 @@ func (pullRequest *PullRequest) SafeTitle() string
 
 ```
 searchKey: main.PullRequest.SafeLabels
-tags: [exported]
 ```
 
 ```Go
@@ -704,7 +719,6 @@ func (pullRequest *PullRequest) SafeLabels() []string
 
 ```
 searchKey: main.AssigneeRenderer
-tags: [exported]
 ```
 
 ```Go
@@ -720,7 +734,6 @@ type AssigneeRenderer struct {
 
 ```
 searchKey: main.NewAssigneeRenderer
-tags: [exported]
 ```
 
 ```Go
@@ -731,7 +744,6 @@ func NewAssigneeRenderer(context IssueContext, assignee string) *AssigneeRendere
 
 ```
 searchKey: main.AssigneeRenderer.Render
-tags: [exported]
 ```
 
 ```Go
@@ -744,6 +756,7 @@ Render returns the assignee section of the configured tracking issue for the con
 
 ```
 searchKey: main.AssigneeRenderer.renderPendingWork
+tags: [private]
 ```
 
 ```Go
@@ -756,6 +769,7 @@ renderPendingWork returns a list of pending work items rendered in markdown.
 
 ```
 searchKey: main.AssigneeRenderer.renderPendingTrackingIssues
+tags: [private]
 ```
 
 ```Go
@@ -768,6 +782,7 @@ renderPendingTrackingIssues returns a rendered list of tracking issues (with ren
 
 ```
 searchKey: main.AssigneeRenderer.renderPendingIssues
+tags: [private]
 ```
 
 ```Go
@@ -780,6 +795,7 @@ renderPendingIssues returns a rendered list of unclosed issues along with that i
 
 ```
 searchKey: main.AssigneeRenderer.renderPendingPullRequests
+tags: [private]
 ```
 
 ```Go
@@ -792,6 +808,7 @@ renderPendingPullRequests returns a rendered list of unclosed pull requests alon
 
 ```
 searchKey: main.AssigneeRenderer.renderCompletedWork
+tags: [private]
 ```
 
 ```Go
@@ -804,6 +821,7 @@ renderCompletedWork returns a list of completed work items rendered in markdown.
 
 ```
 searchKey: main.AssigneeRenderer.renderCompletedTrackingIssues
+tags: [private]
 ```
 
 ```Go
@@ -816,6 +834,7 @@ renderCompletedTrackingIsssues returns a rendered list of closed tracking issues
 
 ```
 searchKey: main.AssigneeRenderer.renderCompletedIssues
+tags: [private]
 ```
 
 ```Go
@@ -828,6 +847,7 @@ renderCompletedIssues returns a rendered list of closed issues along with that i
 
 ```
 searchKey: main.AssigneeRenderer.renderCompletedPullRequests
+tags: [private]
 ```
 
 ```Go
@@ -840,6 +860,7 @@ renderCompletedPullRequests returns a rendered list of closed pull request along
 
 ```
 searchKey: main.AssigneeRenderer.renderIssue
+tags: [private]
 ```
 
 ```Go
@@ -852,6 +873,7 @@ renderIssue returns the given issue rendered as markdown. This will also set the
 
 ```
 searchKey: main.AssigneeRenderer.renderPullRequest
+tags: [private]
 ```
 
 ```Go
@@ -864,6 +886,7 @@ renderPullRequest returns the given pull request rendered as markdown. This will
 
 ```
 searchKey: main.AssigneeRenderer.findIssue
+tags: [private]
 ```
 
 ```Go
@@ -876,6 +899,7 @@ findIssue returns the index of the given issue in the current context. If the is
 
 ```
 searchKey: main.AssigneeRenderer.findPullRequest
+tags: [private]
 ```
 
 ```Go
@@ -888,6 +912,7 @@ findPullRequest returns the index of the given pull request in the current conte
 
 ```
 searchKey: main.AssigneeRenderer.readTrackingIssueURLs
+tags: [private]
 ```
 
 ```Go
@@ -902,6 +927,7 @@ Note: We use the fact that rendered work items always reference themselves first
 
 ```
 searchKey: main.AssigneeRenderer.resetDisplayFlags
+tags: [private]
 ```
 
 ```Go
@@ -914,6 +940,7 @@ resetDisplayFlags unsets the displayed flag for all issues and pull requests.
 
 ```
 searchKey: main.AssigneeRenderer.doRenderIssue
+tags: [private]
 ```
 
 ```Go
@@ -926,7 +953,6 @@ doRenderIssue returns the given issue rendered in markdown.
 
 ```
 searchKey: main.MarkdownByStringKey
-tags: [exported]
 ```
 
 ```Go
@@ -940,7 +966,6 @@ type MarkdownByStringKey struct {
 
 ```
 searchKey: main.MarkdownByIntegerKeyPair
-tags: [exported]
 ```
 
 ```Go
@@ -955,7 +980,6 @@ type MarkdownByIntegerKeyPair struct {
 
 ```
 searchKey: main.SearchResult
-tags: [exported]
 ```
 
 ```Go
@@ -972,7 +996,6 @@ type SearchResult struct {
 
 ```
 searchKey: main.SearchNode
-tags: [exported]
 ```
 
 ```Go
@@ -1007,6 +1030,7 @@ type SearchNode struct {
 
 ```
 searchKey: main.FixturePayload
+tags: [private]
 ```
 
 ```Go
@@ -1019,11 +1043,14 @@ type FixturePayload struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="ListTrackingIssues" href="#ListTrackingIssues">func ListTrackingIssues(ctx context.Context, cli *graphql.Client, org string) ([]*Issue, error)</a>
 
 ```
 searchKey: main.ListTrackingIssues
-tags: [exported]
 ```
 
 ```Go
@@ -1036,7 +1063,6 @@ ListTrackingIssues returns all issues with the `tracking` label (and at least on
 
 ```
 searchKey: main.LoadTrackingIssues
-tags: [exported]
 ```
 
 ```Go
@@ -1049,6 +1075,7 @@ LoadTrackingIssues returns all issues and pull requests which are relevant to th
 
 ```
 searchKey: main.makeQueries
+tags: [private]
 ```
 
 ```Go
@@ -1061,6 +1088,7 @@ makeQueries returns a set of search queries that, when queried together, should 
 
 ```
 searchKey: main.matchingIssues
+tags: [private]
 ```
 
 ```Go
@@ -1073,6 +1101,7 @@ matchingIssues returns the given issues that match the given matcher.
 
 ```
 searchKey: main.matchingPullRequests
+tags: [private]
 ```
 
 ```Go
@@ -1085,6 +1114,7 @@ matchingPullRequests returns the given pull requests that match the given matche
 
 ```
 searchKey: main.matchingTrackingIssues
+tags: [private]
 ```
 
 ```Go
@@ -1097,6 +1127,7 @@ matchingTrackingIssues returns the given tracking issues that match the matcher 
 
 ```
 searchKey: main.deduplicateIssues
+tags: [private]
 ```
 
 ```Go
@@ -1107,6 +1138,7 @@ func deduplicateIssues(issues []*Issue) (deduplicated []*Issue)
 
 ```
 searchKey: main.deduplicatePullRequests
+tags: [private]
 ```
 
 ```Go
@@ -1117,7 +1149,6 @@ func deduplicatePullRequests(pullRequests []*PullRequest) (deduplicated []*PullR
 
 ```
 searchKey: main.Emojis
-tags: [exported]
 ```
 
 ```Go
@@ -1130,6 +1161,7 @@ Emojis returns a string of emojis that should be displayed with an issue or a pu
 
 ```
 searchKey: main.categorizeSecurityIssue
+tags: [private]
 ```
 
 ```Go
@@ -1142,6 +1174,7 @@ categorizeSecurityIssue adds a security emoji if the repository matches sourcegr
 
 ```
 searchKey: main.categorizeCustomerIssue
+tags: [private]
 ```
 
 ```Go
@@ -1154,6 +1187,7 @@ categorizeCustomerIssue adds a customer emoji if the repository matches sourcegr
 
 ```
 searchKey: main.categorizeLabels
+tags: [private]
 ```
 
 ```Go
@@ -1166,7 +1200,6 @@ categorizeLabels adds emojis based on the issue labels.
 
 ```
 searchKey: main.LoadIssues
-tags: [exported]
 ```
 
 ```Go
@@ -1179,6 +1212,7 @@ LoadIssues will load all issues and pull requests matching the configured querie
 
 ```
 searchKey: main.chunkQueries
+tags: [private]
 ```
 
 ```Go
@@ -1191,6 +1225,7 @@ chunkQueries returns the given queries spread across a number of slices. Each sl
 
 ```
 searchKey: main.loadIssues
+tags: [private]
 ```
 
 ```Go
@@ -1203,6 +1238,7 @@ loadIssues will load all issues and pull requests matching the configured querie
 
 ```
 searchKey: main.makeFragmentArgs
+tags: [private]
 ```
 
 ```Go
@@ -1215,6 +1251,7 @@ makeFragmentArgs makes `n` named GraphQL fragment and an associated set of varia
 
 ```
 searchKey: main.contains
+tags: [private]
 ```
 
 ```Go
@@ -1225,6 +1262,7 @@ func contains(haystack []string, needle string) bool
 
 ```
 searchKey: main.nonTrackingLabels
+tags: [private]
 ```
 
 ```Go
@@ -1235,6 +1273,7 @@ func nonTrackingLabels(labels []string) (filtered []string)
 
 ```
 searchKey: main.redactLabels
+tags: [private]
 ```
 
 ```Go
@@ -1245,6 +1284,7 @@ func redactLabels(labels []string) (redacted []string)
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -1255,6 +1295,7 @@ func main()
 
 ```
 searchKey: main.run
+tags: [private]
 ```
 
 ```Go
@@ -1265,6 +1306,7 @@ func run(token, org string, dry, verbose bool) (err error)
 
 ```
 searchKey: main.testAll
+tags: [private]
 ```
 
 ```Go
@@ -1277,7 +1319,6 @@ testAll returns true if all of the given values are true.
 
 ```
 searchKey: main.RenderTrackingIssue
-tags: [exported]
 ```
 
 ```Go
@@ -1290,6 +1331,7 @@ RenderTrackingIssue renders the work section of the given tracking issue.
 
 ```
 searchKey: main.findAssignees
+tags: [private]
 ```
 
 ```Go
@@ -1302,7 +1344,6 @@ findAssignees returns the list of assignees for the given tracking issue. A user
 
 ```
 searchKey: main.SortByIntegerKeyPair
-tags: [exported]
 ```
 
 ```Go
@@ -1313,6 +1354,7 @@ func SortByIntegerKeyPair(parts []MarkdownByIntegerKeyPair) (markdown []string)
 
 ```
 searchKey: main.renderPullRequest
+tags: [private]
 ```
 
 ```Go
@@ -1325,6 +1367,7 @@ renderPullRequest returns the given pull request rendered in markdown.
 
 ```
 searchKey: main.estimateFromLabelSets
+tags: [private]
 ```
 
 ```Go
@@ -1337,6 +1380,7 @@ estimateFromLabelSets returns the sum of `estimate/` labels in the given label s
 
 ```
 searchKey: main.estimateFromLabelSet
+tags: [private]
 ```
 
 ```Go
@@ -1349,7 +1393,6 @@ estimateFromLabelSet returns the value of a `estimate/` lables in the given labe
 
 ```
 searchKey: main.Resolve
-tags: [exported]
 ```
 
 ```Go
@@ -1362,6 +1405,7 @@ Resolve will populate the relationship fields of the registered issues and pull 
 
 ```
 searchKey: main.linkPullRequestsAndIssues
+tags: [private]
 ```
 
 ```Go
@@ -1374,6 +1418,7 @@ linkPullRequestsAndIssues populates the LinkedPullRequests and LinkedIssues fiel
 
 ```
 searchKey: main.linkTrackingIssues
+tags: [private]
 ```
 
 ```Go
@@ -1386,6 +1431,7 @@ linkTrackingIssues populates the TrackedIssues, TrackedPullRequests, and Tracked
 
 ```
 searchKey: main.checkForCycles
+tags: [private]
 ```
 
 ```Go
@@ -1398,6 +1444,7 @@ checkForCycles checks for a cycle over the tracked issues relationship in the se
 
 ```
 searchKey: main.visitNode
+tags: [private]
 ```
 
 ```Go
@@ -1410,6 +1457,7 @@ visitNode performs a depth-first-search over tracked issues relationships. This 
 
 ```
 searchKey: main.makeSearchQuery
+tags: [private]
 ```
 
 ```Go
@@ -1422,6 +1470,7 @@ makeSearchQuery creates a GraphQL `search` fragment that captures the fields of 
 
 ```
 searchKey: main.unmarshalSearchNodes
+tags: [private]
 ```
 
 ```Go
@@ -1434,6 +1483,7 @@ unmarshalSearchNodes unmarshals the given nodes into a list of issues and a list
 
 ```
 searchKey: main.partition
+tags: [private]
 ```
 
 ```Go
@@ -1444,6 +1494,7 @@ func partition(s, beginMarker, endMarker string) (string, string, string, bool)
 
 ```
 searchKey: main.indexOf
+tags: [private]
 ```
 
 ```Go
@@ -1454,6 +1505,7 @@ func indexOf(s, marker string) (int, bool)
 
 ```
 searchKey: main.formatTimeSince
+tags: [private]
 ```
 
 ```Go
@@ -1466,6 +1518,7 @@ formatTimeSince will return a string containing the number of days since the giv
 
 ```
 searchKey: main.updateIssues
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1531,7 @@ updateIssues will update the body of each of the given issues. Each issue update
 
 ```
 searchKey: main.updateIssue
+tags: [private]
 ```
 
 ```Go
@@ -1488,6 +1542,7 @@ func updateIssue(ctx context.Context, cli *graphql.Client, issue *Issue) (err er
 
 ```
 searchKey: main.TestIntegration
+tags: [private]
 ```
 
 ```Go
@@ -1498,6 +1553,7 @@ func TestIntegration(t *testing.T)
 
 ```
 searchKey: main.mockLastUpdate
+tags: [private]
 ```
 
 ```Go
@@ -1508,6 +1564,7 @@ func mockLastUpdate(t *testing.T)
 
 ```
 searchKey: main.getOrUpdateLastUpdateTime
+tags: [private]
 ```
 
 ```Go
@@ -1518,6 +1575,7 @@ func getOrUpdateLastUpdateTime(update bool) (time.Time, error)
 
 ```
 searchKey: main.testFixtures
+tags: [private]
 ```
 
 ```Go
@@ -1528,6 +1586,7 @@ func testFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequests []*P
 
 ```
 searchKey: main.updateTestFixtures
+tags: [private]
 ```
 
 ```Go
@@ -1538,6 +1597,7 @@ func updateTestFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequest
 
 ```
 searchKey: main.readFixturesFile
+tags: [private]
 ```
 
 ```Go
@@ -1548,6 +1608,7 @@ func readFixturesFile() (trackingIssues []*Issue, issues []*Issue, pullRequests 
 
 ```
 searchKey: main.writeFixturesFile
+tags: [private]
 ```
 
 ```Go

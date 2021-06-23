@@ -111,7 +111,7 @@ The RSA operations in this package are not implemented using constant-time algor
     * [func TestGnuTLSKey(t *testing.T)](#TestGnuTLSKey)
     * [func testKeyBasics(t *testing.T, priv *PrivateKey)](#testKeyBasics)
     * [func fromBase10(base10 string) *big.Int](#fromBase10)
-    * [func init()](#init)
+    * [func init()](#init.rsa_test.go)
     * [func BenchmarkRSA2048Decrypt(b *testing.B)](#BenchmarkRSA2048Decrypt)
     * [func BenchmarkRSA2048Sign(b *testing.B)](#BenchmarkRSA2048Sign)
     * [func Benchmark3PrimeRSA2048Decrypt(b *testing.B)](#Benchmark3PrimeRSA2048Decrypt)
@@ -121,15 +121,10 @@ The RSA operations in this package are not implemented using constant-time algor
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="PSSSaltLengthAuto" href="#PSSSaltLengthAuto">const PSSSaltLengthAuto</a>
 
 ```
 searchKey: rsa.PSSSaltLengthAuto
-tags: [exported]
 ```
 
 ```Go
@@ -142,7 +137,6 @@ PSSSaltLengthAuto causes the salt in a PSS signature to be as large as possible 
 
 ```
 searchKey: rsa.PSSSaltLengthEqualsHash
-tags: [exported]
 ```
 
 ```Go
@@ -153,14 +147,11 @@ PSSSaltLengthEqualsHash causes the salt length to equal the length of the hash u
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="hashPrefixes" href="#hashPrefixes">var hashPrefixes</a>
 
 ```
 searchKey: rsa.hashPrefixes
+tags: [private]
 ```
 
 ```Go
@@ -182,6 +173,7 @@ For performance, we don't use the generic ASN1 encoder. Rather, we precompute a 
 
 ```
 searchKey: rsa.bigZero
+tags: [private]
 ```
 
 ```Go
@@ -192,6 +184,7 @@ var bigZero = big.NewInt(0)
 
 ```
 searchKey: rsa.bigOne
+tags: [private]
 ```
 
 ```Go
@@ -202,6 +195,7 @@ var bigOne = big.NewInt(1)
 
 ```
 searchKey: rsa.errPublicModulus
+tags: [private]
 ```
 
 ```Go
@@ -212,6 +206,7 @@ var errPublicModulus = errors.New("crypto/rsa: missing public modulus")
 
 ```
 searchKey: rsa.errPublicExponentSmall
+tags: [private]
 ```
 
 ```Go
@@ -222,6 +217,7 @@ var errPublicExponentSmall = errors.New("crypto/rsa: public exponent too small")
 
 ```
 searchKey: rsa.errPublicExponentLarge
+tags: [private]
 ```
 
 ```Go
@@ -232,7 +228,6 @@ var errPublicExponentLarge = errors.New("crypto/rsa: public exponent too large")
 
 ```
 searchKey: rsa.ErrMessageTooLong
-tags: [exported]
 ```
 
 ```Go
@@ -245,7 +240,6 @@ ErrMessageTooLong is returned when attempting to encrypt a message which is too 
 
 ```
 searchKey: rsa.ErrDecryption
-tags: [exported]
 ```
 
 ```Go
@@ -258,7 +252,6 @@ ErrDecryption represents a failure to decrypt a message. It is deliberately vagu
 
 ```
 searchKey: rsa.ErrVerification
-tags: [exported]
 ```
 
 ```Go
@@ -271,6 +264,7 @@ ErrVerification represents a failure to verify a signature. It is deliberately v
 
 ```
 searchKey: rsa.decryptPKCS1v15Tests
+tags: [private]
 ```
 
 ```Go
@@ -283,6 +277,7 @@ These test vectors were generated with `openssl rsautl -pkcs -encrypt`
 
 ```
 searchKey: rsa.decryptPKCS1v15SessionKeyTests
+tags: [private]
 ```
 
 ```Go
@@ -295,6 +290,7 @@ These test vectors were generated with `openssl rsautl -pkcs -encrypt`
 
 ```
 searchKey: rsa.signPKCS1v15Tests
+tags: [private]
 ```
 
 ```Go
@@ -311,6 +307,7 @@ These vectors have been tested with
 
 ```
 searchKey: rsa.rsaPrivateKey
+tags: [private]
 ```
 
 ```Go
@@ -321,6 +318,7 @@ var rsaPrivateKey = ...
 
 ```
 searchKey: rsa.test2048Key
+tags: [private]
 ```
 
 ```Go
@@ -331,6 +329,7 @@ var test2048Key *PrivateKey
 
 ```
 searchKey: rsa.testEncryptOAEPData
+tags: [private]
 ```
 
 ```Go
@@ -341,15 +340,10 @@ testEncryptOAEPData contains a subset of the vectors from RSA's "Test vectors fo
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="PKCS1v15DecryptOptions" href="#PKCS1v15DecryptOptions">type PKCS1v15DecryptOptions struct</a>
 
 ```
 searchKey: rsa.PKCS1v15DecryptOptions
-tags: [exported]
 ```
 
 ```Go
@@ -368,7 +362,6 @@ PKCS1v15DecrypterOpts is for passing options to PKCS #1 v1.5 decryption using th
 
 ```
 searchKey: rsa.PSSOptions
-tags: [exported]
 ```
 
 ```Go
@@ -391,7 +384,6 @@ PSSOptions contains options for creating and verifying PSS signatures.
 
 ```
 searchKey: rsa.PSSOptions.HashFunc
-tags: [exported]
 ```
 
 ```Go
@@ -404,6 +396,7 @@ HashFunc returns opts.Hash so that PSSOptions implements crypto.SignerOpts.
 
 ```
 searchKey: rsa.PSSOptions.saltLength
+tags: [private]
 ```
 
 ```Go
@@ -414,7 +407,6 @@ func (opts *PSSOptions) saltLength() int
 
 ```
 searchKey: rsa.PublicKey
-tags: [exported]
 ```
 
 ```Go
@@ -430,7 +422,6 @@ A PublicKey represents the public part of an RSA key.
 
 ```
 searchKey: rsa.PublicKey.Size
-tags: [exported]
 ```
 
 ```Go
@@ -443,7 +434,6 @@ Size returns the modulus size in bytes. Raw signatures and ciphertexts for or by
 
 ```
 searchKey: rsa.PublicKey.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -456,7 +446,6 @@ Equal reports whether pub and x have the same value.
 
 ```
 searchKey: rsa.OAEPOptions
-tags: [exported]
 ```
 
 ```Go
@@ -475,7 +464,6 @@ OAEPOptions is an interface for passing options to OAEP decryption using the cry
 
 ```
 searchKey: rsa.PrivateKey
-tags: [exported]
 ```
 
 ```Go
@@ -496,7 +484,6 @@ A PrivateKey represents an RSA key
 
 ```
 searchKey: rsa.GenerateKey
-tags: [exported]
 ```
 
 ```Go
@@ -509,7 +496,6 @@ GenerateKey generates an RSA keypair of the given bit size using the random sour
 
 ```
 searchKey: rsa.GenerateMultiPrimeKey
-tags: [exported]
 ```
 
 ```Go
@@ -526,7 +512,6 @@ Table 1 in [2] suggests maximum numbers of primes for a given size.
 
 ```
 searchKey: rsa.PrivateKey.Public
-tags: [exported]
 ```
 
 ```Go
@@ -539,7 +524,6 @@ Public returns the public key corresponding to priv.
 
 ```
 searchKey: rsa.PrivateKey.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -552,7 +536,6 @@ Equal reports whether priv and x have equivalent values. It ignores Precomputed 
 
 ```
 searchKey: rsa.PrivateKey.Sign
-tags: [exported]
 ```
 
 ```Go
@@ -567,7 +550,6 @@ This method implements crypto.Signer, which is an interface to support keys wher
 
 ```
 searchKey: rsa.PrivateKey.Decrypt
-tags: [exported]
 ```
 
 ```Go
@@ -580,7 +562,6 @@ Decrypt decrypts ciphertext with priv. If opts is nil or of type *PKCS1v15Decryp
 
 ```
 searchKey: rsa.PrivateKey.Validate
-tags: [exported]
 ```
 
 ```Go
@@ -593,7 +574,6 @@ Validate performs basic sanity checks on the key. It returns nil if the key is v
 
 ```
 searchKey: rsa.PrivateKey.Precompute
-tags: [exported]
 ```
 
 ```Go
@@ -606,7 +586,6 @@ Precompute performs some calculations that speed up private key operations in th
 
 ```
 searchKey: rsa.PrecomputedValues
-tags: [exported]
 ```
 
 ```Go
@@ -626,7 +605,6 @@ type PrecomputedValues struct {
 
 ```
 searchKey: rsa.CRTValue
-tags: [exported]
 ```
 
 ```Go
@@ -643,6 +621,7 @@ CRTValue contains the precomputed Chinese remainder theorem values.
 
 ```
 searchKey: rsa.DecryptPKCS1v15Test
+tags: [private]
 ```
 
 ```Go
@@ -655,6 +634,7 @@ type DecryptPKCS1v15Test struct {
 
 ```
 searchKey: rsa.signPKCS1v15Test
+tags: [private]
 ```
 
 ```Go
@@ -667,6 +647,7 @@ type signPKCS1v15Test struct {
 
 ```
 searchKey: rsa.testEncryptOAEPMessage
+tags: [private]
 ```
 
 ```Go
@@ -681,6 +662,7 @@ type testEncryptOAEPMessage struct {
 
 ```
 searchKey: rsa.testEncryptOAEPStruct
+tags: [private]
 ```
 
 ```Go
@@ -694,15 +676,10 @@ type testEncryptOAEPStruct struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="EncryptPKCS1v15" href="#EncryptPKCS1v15">func EncryptPKCS1v15(rand io.Reader, pub *PublicKey, msg []byte) ([]byte, error)</a>
 
 ```
 searchKey: rsa.EncryptPKCS1v15
-tags: [exported]
 ```
 
 ```Go
@@ -719,7 +696,6 @@ WARNING: use of this function to encrypt plaintexts other than session keys is d
 
 ```
 searchKey: rsa.DecryptPKCS1v15
-tags: [exported]
 ```
 
 ```Go
@@ -734,7 +710,6 @@ Note that whether this function returns an error or not discloses secret informa
 
 ```
 searchKey: rsa.DecryptPKCS1v15SessionKey
-tags: [exported]
 ```
 
 ```Go
@@ -749,6 +724,7 @@ Note that if the session key is too small then it may be possible for an attacke
 
 ```
 searchKey: rsa.decryptPKCS1v15
+tags: [private]
 ```
 
 ```Go
@@ -761,6 +737,7 @@ decryptPKCS1v15 decrypts ciphertext using priv and blinds the operation if rand 
 
 ```
 searchKey: rsa.nonZeroRandomBytes
+tags: [private]
 ```
 
 ```Go
@@ -773,7 +750,6 @@ nonZeroRandomBytes fills the given slice with non-zero random octets.
 
 ```
 searchKey: rsa.SignPKCS1v15
-tags: [exported]
 ```
 
 ```Go
@@ -790,7 +766,6 @@ This function is deterministic. Thus, if the set of possible messages is small, 
 
 ```
 searchKey: rsa.VerifyPKCS1v15
-tags: [exported]
 ```
 
 ```Go
@@ -803,6 +778,7 @@ VerifyPKCS1v15 verifies an RSA PKCS #1 v1.5 signature. hashed is the result of h
 
 ```
 searchKey: rsa.pkcs1v15HashInfo
+tags: [private]
 ```
 
 ```Go
@@ -813,6 +789,7 @@ func pkcs1v15HashInfo(hash crypto.Hash, inLen int) (hashLen int, prefix []byte, 
 
 ```
 searchKey: rsa.emsaPSSEncode
+tags: [private]
 ```
 
 ```Go
@@ -823,6 +800,7 @@ func emsaPSSEncode(mHash []byte, emBits int, salt []byte, hash hash.Hash) ([]byt
 
 ```
 searchKey: rsa.emsaPSSVerify
+tags: [private]
 ```
 
 ```Go
@@ -833,6 +811,7 @@ func emsaPSSVerify(mHash, em []byte, emBits, sLen int, hash hash.Hash) error
 
 ```
 searchKey: rsa.signPSSWithSalt
+tags: [private]
 ```
 
 ```Go
@@ -845,7 +824,6 @@ signPSSWithSalt calculates the signature of hashed using PSS with specified salt
 
 ```
 searchKey: rsa.SignPSS
-tags: [exported]
 ```
 
 ```Go
@@ -860,7 +838,6 @@ digest must be the result of hashing the input message using the given hash func
 
 ```
 searchKey: rsa.VerifyPSS
-tags: [exported]
 ```
 
 ```Go
@@ -875,6 +852,7 @@ A valid signature is indicated by returning a nil error. digest must be the resu
 
 ```
 searchKey: rsa.checkPub
+tags: [private]
 ```
 
 ```Go
@@ -887,6 +865,7 @@ checkPub sanity checks the public key before we use it. We require pub.E to fit 
 
 ```
 searchKey: rsa.incCounter
+tags: [private]
 ```
 
 ```Go
@@ -899,6 +878,7 @@ incCounter increments a four byte, big-endian counter.
 
 ```
 searchKey: rsa.mgf1XOR
+tags: [private]
 ```
 
 ```Go
@@ -911,6 +891,7 @@ mgf1XOR XORs the bytes in out with a mask generated using the MGF1 function spec
 
 ```
 searchKey: rsa.encrypt
+tags: [private]
 ```
 
 ```Go
@@ -921,7 +902,6 @@ func encrypt(c *big.Int, pub *PublicKey, m *big.Int) *big.Int
 
 ```
 searchKey: rsa.EncryptOAEP
-tags: [exported]
 ```
 
 ```Go
@@ -942,6 +922,7 @@ The message must be no longer than the length of the public modulus minus twice 
 
 ```
 searchKey: rsa.decrypt
+tags: [private]
 ```
 
 ```Go
@@ -954,6 +935,7 @@ decrypt performs an RSA decryption, resulting in a plaintext integer. If a rando
 
 ```
 searchKey: rsa.decryptAndCheck
+tags: [private]
 ```
 
 ```Go
@@ -964,7 +946,6 @@ func decryptAndCheck(random io.Reader, priv *PrivateKey, c *big.Int) (m *big.Int
 
 ```
 searchKey: rsa.DecryptOAEP
-tags: [exported]
 ```
 
 ```Go
@@ -983,6 +964,7 @@ The label parameter must match the value given when encrypting. See EncryptOAEP 
 
 ```
 searchKey: rsa.ExampleDecryptPKCS1v15SessionKey
+tags: [private]
 ```
 
 ```Go
@@ -999,6 +981,7 @@ In these designs, when using PKCS #1 v1.5, it's vitally important to avoid discl
 
 ```
 searchKey: rsa.ExampleSignPKCS1v15
+tags: [private]
 ```
 
 ```Go
@@ -1009,6 +992,7 @@ func ExampleSignPKCS1v15()
 
 ```
 searchKey: rsa.ExampleVerifyPKCS1v15
+tags: [private]
 ```
 
 ```Go
@@ -1019,6 +1003,7 @@ func ExampleVerifyPKCS1v15()
 
 ```
 searchKey: rsa.ExampleEncryptOAEP
+tags: [private]
 ```
 
 ```Go
@@ -1029,6 +1014,7 @@ func ExampleEncryptOAEP()
 
 ```
 searchKey: rsa.ExampleDecryptOAEP
+tags: [private]
 ```
 
 ```Go
@@ -1039,6 +1025,7 @@ func ExampleDecryptOAEP()
 
 ```
 searchKey: rsa.decodeBase64
+tags: [private]
 ```
 
 ```Go
@@ -1049,6 +1036,7 @@ func decodeBase64(in string) []byte
 
 ```
 searchKey: rsa.TestDecryptPKCS1v15
+tags: [private]
 ```
 
 ```Go
@@ -1059,6 +1047,7 @@ func TestDecryptPKCS1v15(t *testing.T)
 
 ```
 searchKey: rsa.TestEncryptPKCS1v15
+tags: [private]
 ```
 
 ```Go
@@ -1069,6 +1058,7 @@ func TestEncryptPKCS1v15(t *testing.T)
 
 ```
 searchKey: rsa.TestEncryptPKCS1v15SessionKey
+tags: [private]
 ```
 
 ```Go
@@ -1079,6 +1069,7 @@ func TestEncryptPKCS1v15SessionKey(t *testing.T)
 
 ```
 searchKey: rsa.TestEncryptPKCS1v15DecrypterSessionKey
+tags: [private]
 ```
 
 ```Go
@@ -1089,6 +1080,7 @@ func TestEncryptPKCS1v15DecrypterSessionKey(t *testing.T)
 
 ```
 searchKey: rsa.TestNonZeroRandomBytes
+tags: [private]
 ```
 
 ```Go
@@ -1099,6 +1091,7 @@ func TestNonZeroRandomBytes(t *testing.T)
 
 ```
 searchKey: rsa.TestSignPKCS1v15
+tags: [private]
 ```
 
 ```Go
@@ -1109,6 +1102,7 @@ func TestSignPKCS1v15(t *testing.T)
 
 ```
 searchKey: rsa.TestVerifyPKCS1v15
+tags: [private]
 ```
 
 ```Go
@@ -1119,6 +1113,7 @@ func TestVerifyPKCS1v15(t *testing.T)
 
 ```
 searchKey: rsa.TestOverlongMessagePKCS1v15
+tags: [private]
 ```
 
 ```Go
@@ -1129,6 +1124,7 @@ func TestOverlongMessagePKCS1v15(t *testing.T)
 
 ```
 searchKey: rsa.TestUnpaddedSignature
+tags: [private]
 ```
 
 ```Go
@@ -1139,6 +1135,7 @@ func TestUnpaddedSignature(t *testing.T)
 
 ```
 searchKey: rsa.TestShortSessionKey
+tags: [private]
 ```
 
 ```Go
@@ -1149,6 +1146,7 @@ func TestShortSessionKey(t *testing.T)
 
 ```
 searchKey: rsa.TestShortPKCS1v15Signature
+tags: [private]
 ```
 
 ```Go
@@ -1159,6 +1157,7 @@ func TestShortPKCS1v15Signature(t *testing.T)
 
 ```
 searchKey: rsa.TestEMSAPSS
+tags: [private]
 ```
 
 ```Go
@@ -1169,6 +1168,7 @@ func TestEMSAPSS(t *testing.T)
 
 ```
 searchKey: rsa.TestPSSGolden
+tags: [private]
 ```
 
 ```Go
@@ -1181,6 +1181,7 @@ TestPSSGolden tests all the test vectors in pss-vect.txt from [ftp://ftp.rsasecu
 
 ```
 searchKey: rsa.TestPSSOpenSSL
+tags: [private]
 ```
 
 ```Go
@@ -1193,6 +1194,7 @@ TestPSSOpenSSL ensures that we can verify a PSS signature from OpenSSL with the 
 
 ```
 searchKey: rsa.TestPSSNilOpts
+tags: [private]
 ```
 
 ```Go
@@ -1203,6 +1205,7 @@ func TestPSSNilOpts(t *testing.T)
 
 ```
 searchKey: rsa.TestPSSSigning
+tags: [private]
 ```
 
 ```Go
@@ -1213,6 +1216,7 @@ func TestPSSSigning(t *testing.T)
 
 ```
 searchKey: rsa.TestSignWithPSSSaltLengthAuto
+tags: [private]
 ```
 
 ```Go
@@ -1223,6 +1227,7 @@ func TestSignWithPSSSaltLengthAuto(t *testing.T)
 
 ```
 searchKey: rsa.bigFromHex
+tags: [private]
 ```
 
 ```Go
@@ -1233,6 +1238,7 @@ func bigFromHex(hex string) *big.Int
 
 ```
 searchKey: rsa.intFromHex
+tags: [private]
 ```
 
 ```Go
@@ -1243,6 +1249,7 @@ func intFromHex(hex string) int
 
 ```
 searchKey: rsa.fromHex
+tags: [private]
 ```
 
 ```Go
@@ -1253,6 +1260,7 @@ func fromHex(hexStr string) []byte
 
 ```
 searchKey: rsa.TestKeyGeneration
+tags: [private]
 ```
 
 ```Go
@@ -1263,6 +1271,7 @@ func TestKeyGeneration(t *testing.T)
 
 ```
 searchKey: rsa.Test3PrimeKeyGeneration
+tags: [private]
 ```
 
 ```Go
@@ -1273,6 +1282,7 @@ func Test3PrimeKeyGeneration(t *testing.T)
 
 ```
 searchKey: rsa.Test4PrimeKeyGeneration
+tags: [private]
 ```
 
 ```Go
@@ -1283,6 +1293,7 @@ func Test4PrimeKeyGeneration(t *testing.T)
 
 ```
 searchKey: rsa.TestNPrimeKeyGeneration
+tags: [private]
 ```
 
 ```Go
@@ -1293,6 +1304,7 @@ func TestNPrimeKeyGeneration(t *testing.T)
 
 ```
 searchKey: rsa.TestImpossibleKeyGeneration
+tags: [private]
 ```
 
 ```Go
@@ -1303,6 +1315,7 @@ func TestImpossibleKeyGeneration(t *testing.T)
 
 ```
 searchKey: rsa.TestGnuTLSKey
+tags: [private]
 ```
 
 ```Go
@@ -1313,6 +1326,7 @@ func TestGnuTLSKey(t *testing.T)
 
 ```
 searchKey: rsa.testKeyBasics
+tags: [private]
 ```
 
 ```Go
@@ -1323,16 +1337,18 @@ func testKeyBasics(t *testing.T, priv *PrivateKey)
 
 ```
 searchKey: rsa.fromBase10
+tags: [private]
 ```
 
 ```Go
 func fromBase10(base10 string) *big.Int
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.rsa_test.go" href="#init.rsa_test.go">func init()</a>
 
 ```
 searchKey: rsa.init
+tags: [private]
 ```
 
 ```Go
@@ -1343,6 +1359,7 @@ func init()
 
 ```
 searchKey: rsa.BenchmarkRSA2048Decrypt
+tags: [private]
 ```
 
 ```Go
@@ -1353,6 +1370,7 @@ func BenchmarkRSA2048Decrypt(b *testing.B)
 
 ```
 searchKey: rsa.BenchmarkRSA2048Sign
+tags: [private]
 ```
 
 ```Go
@@ -1363,6 +1381,7 @@ func BenchmarkRSA2048Sign(b *testing.B)
 
 ```
 searchKey: rsa.Benchmark3PrimeRSA2048Decrypt
+tags: [private]
 ```
 
 ```Go
@@ -1373,6 +1392,7 @@ func Benchmark3PrimeRSA2048Decrypt(b *testing.B)
 
 ```
 searchKey: rsa.TestEncryptOAEP
+tags: [private]
 ```
 
 ```Go
@@ -1383,6 +1403,7 @@ func TestEncryptOAEP(t *testing.T)
 
 ```
 searchKey: rsa.TestDecryptOAEP
+tags: [private]
 ```
 
 ```Go

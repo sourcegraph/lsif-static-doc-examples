@@ -49,11 +49,14 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="BaseClient" href="#BaseClient">type BaseClient struct</a>
 
 ```
 searchKey: apiclient.BaseClient
-tags: [exported]
 ```
 
 ```Go
@@ -92,7 +95,6 @@ func (c *SprocketClient) Fabricate(ctx context.Context(), spec SprocketSpec) (Sp
 
 ```
 searchKey: apiclient.NewBaseClient
-tags: [exported]
 ```
 
 ```Go
@@ -105,7 +107,6 @@ NewBaseClient creates a new BaseClient with the given transport.
 
 ```
 searchKey: apiclient.BaseClient.Do
-tags: [exported]
 ```
 
 ```Go
@@ -118,7 +119,6 @@ Do performs the given HTTP request and returns the body. If there is no content 
 
 ```
 searchKey: apiclient.BaseClient.DoAndDecode
-tags: [exported]
 ```
 
 ```Go
@@ -131,7 +131,6 @@ DoAndDecode performs the given HTTP request and unmarshals the response body int
 
 ```
 searchKey: apiclient.BaseClient.DoAndDrop
-tags: [exported]
 ```
 
 ```Go
@@ -144,7 +143,6 @@ DoAndDrop performs the given HTTP request and ignores the response body.
 
 ```
 searchKey: apiclient.BaseClientOptions
-tags: [exported]
 ```
 
 ```Go
@@ -162,7 +160,6 @@ type BaseClientOptions struct {
 
 ```
 searchKey: apiclient.Client
-tags: [exported]
 ```
 
 ```Go
@@ -179,7 +176,6 @@ Client is the client used to communicate with a remote job queue API.
 
 ```
 searchKey: apiclient.New
-tags: [exported]
 ```
 
 ```Go
@@ -190,7 +186,6 @@ func New(options Options, observationContext *observation.Context) *Client
 
 ```
 searchKey: apiclient.Client.Dequeue
-tags: [exported]
 ```
 
 ```Go
@@ -201,7 +196,6 @@ func (c *Client) Dequeue(ctx context.Context, queueName string, job *executor.Jo
 
 ```
 searchKey: apiclient.Client.AddExecutionLogEntry
-tags: [exported]
 ```
 
 ```Go
@@ -212,7 +206,6 @@ func (c *Client) AddExecutionLogEntry(ctx context.Context, queueName string, job
 
 ```
 searchKey: apiclient.Client.MarkComplete
-tags: [exported]
 ```
 
 ```Go
@@ -223,7 +216,6 @@ func (c *Client) MarkComplete(ctx context.Context, queueName string, jobID int) 
 
 ```
 searchKey: apiclient.Client.MarkErrored
-tags: [exported]
 ```
 
 ```Go
@@ -234,7 +226,6 @@ func (c *Client) MarkErrored(ctx context.Context, queueName string, jobID int, e
 
 ```
 searchKey: apiclient.Client.MarkFailed
-tags: [exported]
 ```
 
 ```Go
@@ -245,7 +236,6 @@ func (c *Client) MarkFailed(ctx context.Context, queueName string, jobID int, er
 
 ```
 searchKey: apiclient.Client.Ping
-tags: [exported]
 ```
 
 ```Go
@@ -256,7 +246,6 @@ func (c *Client) Ping(ctx context.Context, jobIDs []int) (err error)
 
 ```
 searchKey: apiclient.Client.Heartbeat
-tags: [exported]
 ```
 
 ```Go
@@ -267,6 +256,7 @@ func (c *Client) Heartbeat(ctx context.Context, jobIDs []int) (unknownIDs []int,
 
 ```
 searchKey: apiclient.Client.makeRequest
+tags: [private]
 ```
 
 ```Go
@@ -277,7 +267,6 @@ func (c *Client) makeRequest(method, path string, payload interface{}) (*http.Re
 
 ```
 searchKey: apiclient.Options
-tags: [exported]
 ```
 
 ```Go
@@ -300,7 +289,6 @@ type Options struct {
 
 ```
 searchKey: apiclient.EndpointOptions
-tags: [exported]
 ```
 
 ```Go
@@ -320,6 +308,7 @@ type EndpointOptions struct {
 
 ```
 searchKey: apiclient.operations
+tags: [private]
 ```
 
 ```Go
@@ -337,6 +326,7 @@ type operations struct {
 
 ```
 searchKey: apiclient.newOperations
+tags: [private]
 ```
 
 ```Go
@@ -347,6 +337,7 @@ func newOperations(observationContext *observation.Context) *operations
 
 ```
 searchKey: apiclient.routeSpec
+tags: [private]
 ```
 
 ```Go
@@ -363,11 +354,14 @@ type routeSpec struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="MakeJSONRequest" href="#MakeJSONRequest">func MakeJSONRequest(method string, url *url.URL, payload interface{}) (*http.Request, error)</a>
 
 ```
 searchKey: apiclient.MakeJSONRequest
-tags: [exported]
 ```
 
 ```Go
@@ -380,6 +374,7 @@ MakeJSONRequest creates an HTTP request with the given payload serialized as JSO
 
 ```
 searchKey: apiclient.makeHTTPClient
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +387,7 @@ makeHTTPClient creates an HTTP client with the given round tripper.
 
 ```
 searchKey: apiclient.makeURL
+tags: [private]
 ```
 
 ```Go
@@ -402,6 +398,7 @@ func makeURL(base, username, password string, path ...string) (*url.URL, error)
 
 ```
 searchKey: apiclient.makeRelativeURL
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +409,7 @@ func makeRelativeURL(base string, path ...string) (*url.URL, error)
 
 ```
 searchKey: apiclient.intsToString
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +420,7 @@ func intsToString(ints []int) string
 
 ```
 searchKey: apiclient.TestDequeue
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +431,7 @@ func TestDequeue(t *testing.T)
 
 ```
 searchKey: apiclient.TestDequeueNoRecord
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +442,7 @@ func TestDequeueNoRecord(t *testing.T)
 
 ```
 searchKey: apiclient.TestDequeueBadResponse
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +453,7 @@ func TestDequeueBadResponse(t *testing.T)
 
 ```
 searchKey: apiclient.TestAddExecutionLogEntry
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +464,7 @@ func TestAddExecutionLogEntry(t *testing.T)
 
 ```
 searchKey: apiclient.TestAddExecutionLogEntryBadResponse
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +475,7 @@ func TestAddExecutionLogEntryBadResponse(t *testing.T)
 
 ```
 searchKey: apiclient.TestMarkComplete
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +486,7 @@ func TestMarkComplete(t *testing.T)
 
 ```
 searchKey: apiclient.TestMarkCompleteBadResponse
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +497,7 @@ func TestMarkCompleteBadResponse(t *testing.T)
 
 ```
 searchKey: apiclient.TestMarkErrored
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +508,7 @@ func TestMarkErrored(t *testing.T)
 
 ```
 searchKey: apiclient.TestMarkErroredBadResponse
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +519,7 @@ func TestMarkErroredBadResponse(t *testing.T)
 
 ```
 searchKey: apiclient.TestMarkFailed
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +530,7 @@ func TestMarkFailed(t *testing.T)
 
 ```
 searchKey: apiclient.TestHeartbeat
+tags: [private]
 ```
 
 ```Go
@@ -532,6 +541,7 @@ func TestHeartbeat(t *testing.T)
 
 ```
 searchKey: apiclient.TestHeartbeatBadResponse
+tags: [private]
 ```
 
 ```Go
@@ -542,6 +552,7 @@ func TestHeartbeatBadResponse(t *testing.T)
 
 ```
 searchKey: apiclient.testRoute
+tags: [private]
 ```
 
 ```Go
@@ -552,6 +563,7 @@ func testRoute(t *testing.T, spec routeSpec, f func(client *Client))
 
 ```
 searchKey: apiclient.testServer
+tags: [private]
 ```
 
 ```Go
@@ -562,6 +574,7 @@ func testServer(t *testing.T, spec routeSpec) *httptest.Server
 
 ```
 searchKey: apiclient.normalizeJSON
+tags: [private]
 ```
 
 ```Go

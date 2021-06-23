@@ -16,10 +16,15 @@
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="server" href="#server">type server struct</a>
 
 ```
 searchKey: httpserver.server
+tags: [private]
 ```
 
 ```Go
@@ -34,6 +39,7 @@ type server struct {
 
 ```
 searchKey: httpserver.server.Start
+tags: [private]
 ```
 
 ```Go
@@ -44,6 +50,7 @@ func (s *server) Start()
 
 ```
 searchKey: httpserver.server.Stop
+tags: [private]
 ```
 
 ```Go
@@ -52,11 +59,14 @@ func (s *server) Stop()
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="NewHandler" href="#NewHandler">func NewHandler(setupRoutes func(router *mux.Router)) http.Handler</a>
 
 ```
 searchKey: httpserver.NewHandler
-tags: [exported]
 ```
 
 ```Go
@@ -69,7 +79,6 @@ NewHandler creates an HTTP handler with a default /healthz endpoint. If a functi
 
 ```
 searchKey: httpserver.NewListener
-tags: [exported]
 ```
 
 ```Go
@@ -82,7 +91,6 @@ NewListener returns a TCP listener accepting connections on the given address.
 
 ```
 searchKey: httpserver.SanitizeAddr
-tags: [exported]
 ```
 
 ```Go
@@ -95,7 +103,6 @@ SanitizeAddr replaces the host in the given address with 127.0.0.1 if no host is
 
 ```
 searchKey: httpserver.New
-tags: [exported]
 ```
 
 ```Go
@@ -108,7 +115,6 @@ New returns a BackgroundRoutine that serves the given server on the given listen
 
 ```
 searchKey: httpserver.NewFromAddr
-tags: [exported]
 ```
 
 ```Go

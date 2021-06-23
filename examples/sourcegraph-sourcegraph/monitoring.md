@@ -14,14 +14,11 @@
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="optsFromEnv" href="#optsFromEnv">func optsFromEnv() monitoring.GenerateOptions</a>
 
 ```
 searchKey: main.optsFromEnv
+tags: [private]
 ```
 
 ```Go
@@ -32,6 +29,7 @@ func optsFromEnv() monitoring.GenerateOptions
 
 ```
 searchKey: main.main
+tags: [private]
 ```
 
 ```Go
@@ -42,6 +40,7 @@ func main()
 
 ```
 searchKey: main.getEnvStr
+tags: [private]
 ```
 
 ```Go
@@ -52,6 +51,7 @@ func getEnvStr(key, defaultValue string) string
 
 ```
 searchKey: main.getEnvBool
+tags: [private]
 ```
 
 ```Go

@@ -4,9 +4,7 @@
     "identifier": "syslog",
     "newPage": true,
     "searchKey": "log/syslog",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "severityMask",
                 "newPage": false,
                 "searchKey": "syslog.severityMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "facilityMask",
                 "newPage": false,
                 "searchKey": "syslog.facilityMask",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "LOG_EMERG",
                 "newPage": false,
                 "searchKey": "syslog.LOG_EMERG",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,9 +104,7 @@
                 "identifier": "LOG_ALERT",
                 "newPage": false,
                 "searchKey": "syslog.LOG_ALERT",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -128,9 +124,7 @@
                 "identifier": "LOG_CRIT",
                 "newPage": false,
                 "searchKey": "syslog.LOG_CRIT",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -150,9 +144,7 @@
                 "identifier": "LOG_ERR",
                 "newPage": false,
                 "searchKey": "syslog.LOG_ERR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +164,7 @@
                 "identifier": "LOG_WARNING",
                 "newPage": false,
                 "searchKey": "syslog.LOG_WARNING",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,9 +184,7 @@
                 "identifier": "LOG_NOTICE",
                 "newPage": false,
                 "searchKey": "syslog.LOG_NOTICE",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -216,9 +204,7 @@
                 "identifier": "LOG_INFO",
                 "newPage": false,
                 "searchKey": "syslog.LOG_INFO",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -238,9 +224,7 @@
                 "identifier": "LOG_DEBUG",
                 "newPage": false,
                 "searchKey": "syslog.LOG_DEBUG",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -260,9 +244,7 @@
                 "identifier": "LOG_KERN",
                 "newPage": false,
                 "searchKey": "syslog.LOG_KERN",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -282,9 +264,7 @@
                 "identifier": "LOG_USER",
                 "newPage": false,
                 "searchKey": "syslog.LOG_USER",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -304,9 +284,7 @@
                 "identifier": "LOG_MAIL",
                 "newPage": false,
                 "searchKey": "syslog.LOG_MAIL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -326,9 +304,7 @@
                 "identifier": "LOG_DAEMON",
                 "newPage": false,
                 "searchKey": "syslog.LOG_DAEMON",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -348,9 +324,7 @@
                 "identifier": "LOG_AUTH",
                 "newPage": false,
                 "searchKey": "syslog.LOG_AUTH",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -370,9 +344,7 @@
                 "identifier": "LOG_SYSLOG",
                 "newPage": false,
                 "searchKey": "syslog.LOG_SYSLOG",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -392,9 +364,7 @@
                 "identifier": "LOG_LPR",
                 "newPage": false,
                 "searchKey": "syslog.LOG_LPR",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -414,9 +384,7 @@
                 "identifier": "LOG_NEWS",
                 "newPage": false,
                 "searchKey": "syslog.LOG_NEWS",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -436,9 +404,7 @@
                 "identifier": "LOG_UUCP",
                 "newPage": false,
                 "searchKey": "syslog.LOG_UUCP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -458,9 +424,7 @@
                 "identifier": "LOG_CRON",
                 "newPage": false,
                 "searchKey": "syslog.LOG_CRON",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -480,9 +444,7 @@
                 "identifier": "LOG_AUTHPRIV",
                 "newPage": false,
                 "searchKey": "syslog.LOG_AUTHPRIV",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -502,9 +464,7 @@
                 "identifier": "LOG_FTP",
                 "newPage": false,
                 "searchKey": "syslog.LOG_FTP",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -524,9 +484,7 @@
                 "identifier": "LOG_LOCAL0",
                 "newPage": false,
                 "searchKey": "syslog.LOG_LOCAL0",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -546,9 +504,7 @@
                 "identifier": "LOG_LOCAL1",
                 "newPage": false,
                 "searchKey": "syslog.LOG_LOCAL1",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -568,9 +524,7 @@
                 "identifier": "LOG_LOCAL2",
                 "newPage": false,
                 "searchKey": "syslog.LOG_LOCAL2",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -590,9 +544,7 @@
                 "identifier": "LOG_LOCAL3",
                 "newPage": false,
                 "searchKey": "syslog.LOG_LOCAL3",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -612,9 +564,7 @@
                 "identifier": "LOG_LOCAL4",
                 "newPage": false,
                 "searchKey": "syslog.LOG_LOCAL4",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -634,9 +584,7 @@
                 "identifier": "LOG_LOCAL5",
                 "newPage": false,
                 "searchKey": "syslog.LOG_LOCAL5",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -656,9 +604,7 @@
                 "identifier": "LOG_LOCAL6",
                 "newPage": false,
                 "searchKey": "syslog.LOG_LOCAL6",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -678,9 +624,7 @@
                 "identifier": "LOG_LOCAL7",
                 "newPage": false,
                 "searchKey": "syslog.LOG_LOCAL7",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -703,9 +647,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -723,7 +665,9 @@
                 "identifier": "crashy",
                 "newPage": false,
                 "searchKey": "syslog.crashy",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -746,9 +690,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -766,9 +708,7 @@
                 "identifier": "Priority",
                 "newPage": false,
                 "searchKey": "syslog.Priority",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -788,9 +728,7 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "syslog.Writer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -808,9 +746,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "syslog.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -830,9 +766,7 @@
                       "identifier": "Dial",
                       "newPage": false,
                       "searchKey": "syslog.Dial",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -852,7 +786,9 @@
                       "identifier": "Writer.connect",
                       "newPage": false,
                       "searchKey": "syslog.Writer.connect",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -872,9 +808,7 @@
                       "identifier": "Writer.Write",
                       "newPage": false,
                       "searchKey": "syslog.Writer.Write",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -894,9 +828,7 @@
                       "identifier": "Writer.Close",
                       "newPage": false,
                       "searchKey": "syslog.Writer.Close",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -916,9 +848,7 @@
                       "identifier": "Writer.Emerg",
                       "newPage": false,
                       "searchKey": "syslog.Writer.Emerg",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -938,9 +868,7 @@
                       "identifier": "Writer.Alert",
                       "newPage": false,
                       "searchKey": "syslog.Writer.Alert",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -960,9 +888,7 @@
                       "identifier": "Writer.Crit",
                       "newPage": false,
                       "searchKey": "syslog.Writer.Crit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -982,9 +908,7 @@
                       "identifier": "Writer.Err",
                       "newPage": false,
                       "searchKey": "syslog.Writer.Err",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1004,9 +928,7 @@
                       "identifier": "Writer.Warning",
                       "newPage": false,
                       "searchKey": "syslog.Writer.Warning",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1026,9 +948,7 @@
                       "identifier": "Writer.Notice",
                       "newPage": false,
                       "searchKey": "syslog.Writer.Notice",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1048,9 +968,7 @@
                       "identifier": "Writer.Info",
                       "newPage": false,
                       "searchKey": "syslog.Writer.Info",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1070,9 +988,7 @@
                       "identifier": "Writer.Debug",
                       "newPage": false,
                       "searchKey": "syslog.Writer.Debug",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1092,7 +1008,9 @@
                       "identifier": "Writer.writeAndRetry",
                       "newPage": false,
                       "searchKey": "syslog.Writer.writeAndRetry",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1112,7 +1030,9 @@
                       "identifier": "Writer.write",
                       "newPage": false,
                       "searchKey": "syslog.Writer.write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1135,7 +1055,9 @@
                 "identifier": "serverConn",
                 "newPage": false,
                 "searchKey": "syslog.serverConn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1153,7 +1075,9 @@
                       "identifier": "unixSyslog",
                       "newPage": false,
                       "searchKey": "syslog.unixSyslog",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1176,7 +1100,9 @@
                 "identifier": "netConn",
                 "newPage": false,
                 "searchKey": "syslog.netConn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1194,7 +1120,9 @@
                       "identifier": "netConn.writeString",
                       "newPage": false,
                       "searchKey": "syslog.netConn.writeString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1214,7 +1142,9 @@
                       "identifier": "netConn.close",
                       "newPage": false,
                       "searchKey": "syslog.netConn.close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1240,9 +1170,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1260,9 +1188,7 @@
                 "identifier": "NewLogger",
                 "newPage": false,
                 "searchKey": "syslog.NewLogger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1282,7 +1208,9 @@
                 "identifier": "runPktSyslog",
                 "newPage": false,
                 "searchKey": "syslog.runPktSyslog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1302,7 +1230,9 @@
                 "identifier": "testableNetwork",
                 "newPage": false,
                 "searchKey": "syslog.testableNetwork",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1322,7 +1252,9 @@
                 "identifier": "runStreamSyslog",
                 "newPage": false,
                 "searchKey": "syslog.runStreamSyslog",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1342,7 +1274,9 @@
                 "identifier": "startServer",
                 "newPage": false,
                 "searchKey": "syslog.startServer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1362,7 +1296,9 @@
                 "identifier": "TestWithSimulated",
                 "newPage": false,
                 "searchKey": "syslog.TestWithSimulated",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1382,7 +1318,9 @@
                 "identifier": "TestFlap",
                 "newPage": false,
                 "searchKey": "syslog.TestFlap",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1402,7 +1340,9 @@
                 "identifier": "TestNew",
                 "newPage": false,
                 "searchKey": "syslog.TestNew",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1422,7 +1362,9 @@
                 "identifier": "TestNewLogger",
                 "newPage": false,
                 "searchKey": "syslog.TestNewLogger",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1442,7 +1384,9 @@
                 "identifier": "TestDial",
                 "newPage": false,
                 "searchKey": "syslog.TestDial",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1462,7 +1406,9 @@
                 "identifier": "check",
                 "newPage": false,
                 "searchKey": "syslog.check",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1482,7 +1428,9 @@
                 "identifier": "TestWrite",
                 "newPage": false,
                 "searchKey": "syslog.TestWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1502,7 +1450,9 @@
                 "identifier": "TestConcurrentWrite",
                 "newPage": false,
                 "searchKey": "syslog.TestConcurrentWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1522,7 +1472,9 @@
                 "identifier": "TestConcurrentReconnect",
                 "newPage": false,
                 "searchKey": "syslog.TestConcurrentReconnect",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

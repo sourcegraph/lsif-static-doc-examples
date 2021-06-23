@@ -14,17 +14,20 @@
     * [func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)](#SiteInitialized)
     * [func EnsureInitialized(ctx context.Context, dbh queryExecDatabaseHandler) (alreadyInitialized bool, err error)](#EnsureInitialized)
     * [func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error](#tryInsertNew)
-    * [func init()](#init)
+    * [func init()](#init.db_test.go)
     * [func TestGet(t *testing.T)](#TestGet)
 
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Mock" href="#Mock">var Mock</a>
 
 ```
 searchKey: globalstatedb.Mock
-tags: [exported]
 ```
 
 ```Go
@@ -35,11 +38,14 @@ var Mock = struct {
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="State" href="#State">type State struct</a>
 
 ```
 searchKey: globalstatedb.State
-tags: [exported]
 ```
 
 ```Go
@@ -53,7 +59,6 @@ type State struct {
 
 ```
 searchKey: globalstatedb.Get
-tags: [exported]
 ```
 
 ```Go
@@ -64,6 +69,7 @@ func Get(ctx context.Context) (*State, error)
 
 ```
 searchKey: globalstatedb.getConfiguration
+tags: [private]
 ```
 
 ```Go
@@ -74,6 +80,7 @@ func getConfiguration(ctx context.Context) (*State, error)
 
 ```
 searchKey: globalstatedb.queryExecDatabaseHandler
+tags: [private]
 ```
 
 ```Go
@@ -87,6 +94,7 @@ type queryExecDatabaseHandler interface {
 
 ```
 searchKey: globalstatedb.execDatabaseHandler
+tags: [private]
 ```
 
 ```Go
@@ -97,11 +105,14 @@ type execDatabaseHandler interface {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SiteInitialized" href="#SiteInitialized">func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)</a>
 
 ```
 searchKey: globalstatedb.SiteInitialized
-tags: [exported]
 ```
 
 ```Go
@@ -112,7 +123,6 @@ func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)
 
 ```
 searchKey: globalstatedb.EnsureInitialized
-tags: [exported]
 ```
 
 ```Go
@@ -127,16 +137,18 @@ EnsureInitialized ensures the site is marked as having been initialized. If the 
 
 ```
 searchKey: globalstatedb.tryInsertNew
+tags: [private]
 ```
 
 ```Go
 func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
 
 ```
 searchKey: globalstatedb.init
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +159,7 @@ func init()
 
 ```
 searchKey: globalstatedb.TestGet
+tags: [private]
 ```
 
 ```Go

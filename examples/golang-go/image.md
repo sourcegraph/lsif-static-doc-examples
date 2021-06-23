@@ -280,15 +280,10 @@ See "The Go image package" for more details: [https://golang.org/doc/articles/im
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="YCbCrSubsampleRatio444" href="#YCbCrSubsampleRatio444">const YCbCrSubsampleRatio444</a>
 
 ```
 searchKey: image.YCbCrSubsampleRatio444
-tags: [exported]
 ```
 
 ```Go
@@ -299,7 +294,6 @@ const YCbCrSubsampleRatio444 YCbCrSubsampleRatio = iota
 
 ```
 searchKey: image.YCbCrSubsampleRatio422
-tags: [exported]
 ```
 
 ```Go
@@ -310,7 +304,6 @@ const YCbCrSubsampleRatio422
 
 ```
 searchKey: image.YCbCrSubsampleRatio420
-tags: [exported]
 ```
 
 ```Go
@@ -321,7 +314,6 @@ const YCbCrSubsampleRatio420
 
 ```
 searchKey: image.YCbCrSubsampleRatio440
-tags: [exported]
 ```
 
 ```Go
@@ -332,7 +324,6 @@ const YCbCrSubsampleRatio440
 
 ```
 searchKey: image.YCbCrSubsampleRatio411
-tags: [exported]
 ```
 
 ```Go
@@ -343,7 +334,6 @@ const YCbCrSubsampleRatio411
 
 ```
 searchKey: image.YCbCrSubsampleRatio410
-tags: [exported]
 ```
 
 ```Go
@@ -352,15 +342,10 @@ const YCbCrSubsampleRatio410
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ErrFormat" href="#ErrFormat">var ErrFormat</a>
 
 ```
 searchKey: image.ErrFormat
-tags: [exported]
 ```
 
 ```Go
@@ -373,6 +358,7 @@ ErrFormat indicates that decoding encountered an unknown format.
 
 ```
 searchKey: image.formatsMu
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +371,7 @@ Formats is the list of registered formats.
 
 ```
 searchKey: image.atomicFormats
+tags: [private]
 ```
 
 ```Go
@@ -397,7 +384,6 @@ Formats is the list of registered formats.
 
 ```
 searchKey: image.ZP
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +398,6 @@ Deprecated: Use a literal image.Point{} instead.
 
 ```
 searchKey: image.ZR
-tags: [exported]
 ```
 
 ```Go
@@ -427,7 +412,6 @@ Deprecated: Use a literal image.Rectangle{} instead.
 
 ```
 searchKey: image.Black
-tags: [exported]
 ```
 
 ```Go
@@ -440,7 +424,6 @@ Black is an opaque black uniform image.
 
 ```
 searchKey: image.White
-tags: [exported]
 ```
 
 ```Go
@@ -453,7 +436,6 @@ White is an opaque white uniform image.
 
 ```
 searchKey: image.Transparent
-tags: [exported]
 ```
 
 ```Go
@@ -466,7 +448,6 @@ Transparent is a fully transparent uniform image.
 
 ```
 searchKey: image.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -479,6 +460,7 @@ Opaque is a fully opaque uniform image.
 
 ```
 searchKey: image.testImages
+tags: [private]
 ```
 
 ```Go
@@ -487,14 +469,11 @@ var testImages = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="format" href="#format">type format struct</a>
 
 ```
 searchKey: image.format
+tags: [private]
 ```
 
 ```Go
@@ -511,6 +490,7 @@ A format holds an image format's name, magic header and how to decode it.
 
 ```
 searchKey: image.sniff
+tags: [private]
 ```
 
 ```Go
@@ -523,6 +503,7 @@ Sniff determines the format of r's data.
 
 ```
 searchKey: image.reader
+tags: [private]
 ```
 
 ```Go
@@ -538,6 +519,7 @@ A reader is an io.Reader that can also peek ahead.
 
 ```
 searchKey: image.asReader
+tags: [private]
 ```
 
 ```Go
@@ -550,7 +532,6 @@ asReader converts an io.Reader to a reader.
 
 ```
 searchKey: image.Point
-tags: [exported]
 ```
 
 ```Go
@@ -565,7 +546,6 @@ A Point is an X, Y coordinate pair. The axes increase right and down.
 
 ```
 searchKey: image.Pt
-tags: [exported]
 ```
 
 ```Go
@@ -578,7 +558,6 @@ Pt is shorthand for Point{X, Y}.
 
 ```
 searchKey: image.Point.String
-tags: [exported]
 ```
 
 ```Go
@@ -591,7 +570,6 @@ String returns a string representation of p like "(3,4)".
 
 ```
 searchKey: image.Point.Add
-tags: [exported]
 ```
 
 ```Go
@@ -604,7 +582,6 @@ Add returns the vector p+q.
 
 ```
 searchKey: image.Point.Sub
-tags: [exported]
 ```
 
 ```Go
@@ -617,7 +594,6 @@ Sub returns the vector p-q.
 
 ```
 searchKey: image.Point.Mul
-tags: [exported]
 ```
 
 ```Go
@@ -630,7 +606,6 @@ Mul returns the vector p*k.
 
 ```
 searchKey: image.Point.Div
-tags: [exported]
 ```
 
 ```Go
@@ -643,7 +618,6 @@ Div returns the vector p/k.
 
 ```
 searchKey: image.Point.In
-tags: [exported]
 ```
 
 ```Go
@@ -656,7 +630,6 @@ In reports whether p is in r.
 
 ```
 searchKey: image.Point.Mod
-tags: [exported]
 ```
 
 ```Go
@@ -669,7 +642,6 @@ Mod returns the point q in r such that p.X-q.X is a multiple of r's width and p.
 
 ```
 searchKey: image.Point.Eq
-tags: [exported]
 ```
 
 ```Go
@@ -682,7 +654,6 @@ Eq reports whether p and q are equal.
 
 ```
 searchKey: image.Rectangle
-tags: [exported]
 ```
 
 ```Go
@@ -699,7 +670,6 @@ A Rectangle is also an Image whose bounds are the rectangle itself. At returns c
 
 ```
 searchKey: image.Rect
-tags: [exported]
 ```
 
 ```Go
@@ -712,7 +682,6 @@ Rect is shorthand for Rectangle{Pt(x0, y0), Pt(x1, y1)}. The returned rectangle 
 
 ```
 searchKey: image.Rectangle.String
-tags: [exported]
 ```
 
 ```Go
@@ -725,7 +694,6 @@ String returns a string representation of r like "(3,4)-(6,5)".
 
 ```
 searchKey: image.Rectangle.Dx
-tags: [exported]
 ```
 
 ```Go
@@ -738,7 +706,6 @@ Dx returns r's width.
 
 ```
 searchKey: image.Rectangle.Dy
-tags: [exported]
 ```
 
 ```Go
@@ -751,7 +718,6 @@ Dy returns r's height.
 
 ```
 searchKey: image.Rectangle.Size
-tags: [exported]
 ```
 
 ```Go
@@ -764,7 +730,6 @@ Size returns r's width and height.
 
 ```
 searchKey: image.Rectangle.Add
-tags: [exported]
 ```
 
 ```Go
@@ -777,7 +742,6 @@ Add returns the rectangle r translated by p.
 
 ```
 searchKey: image.Rectangle.Sub
-tags: [exported]
 ```
 
 ```Go
@@ -790,7 +754,6 @@ Sub returns the rectangle r translated by -p.
 
 ```
 searchKey: image.Rectangle.Inset
-tags: [exported]
 ```
 
 ```Go
@@ -803,7 +766,6 @@ Inset returns the rectangle r inset by n, which may be negative. If either of r'
 
 ```
 searchKey: image.Rectangle.Intersect
-tags: [exported]
 ```
 
 ```Go
@@ -816,7 +778,6 @@ Intersect returns the largest rectangle contained by both r and s. If the two re
 
 ```
 searchKey: image.Rectangle.Union
-tags: [exported]
 ```
 
 ```Go
@@ -829,7 +790,6 @@ Union returns the smallest rectangle that contains both r and s.
 
 ```
 searchKey: image.Rectangle.Empty
-tags: [exported]
 ```
 
 ```Go
@@ -842,7 +802,6 @@ Empty reports whether the rectangle contains no points.
 
 ```
 searchKey: image.Rectangle.Eq
-tags: [exported]
 ```
 
 ```Go
@@ -855,7 +814,6 @@ Eq reports whether r and s contain the same set of points. All empty rectangles 
 
 ```
 searchKey: image.Rectangle.Overlaps
-tags: [exported]
 ```
 
 ```Go
@@ -868,7 +826,6 @@ Overlaps reports whether r and s have a non-empty intersection.
 
 ```
 searchKey: image.Rectangle.In
-tags: [exported]
 ```
 
 ```Go
@@ -881,7 +838,6 @@ In reports whether every point in r is in s.
 
 ```
 searchKey: image.Rectangle.Canon
-tags: [exported]
 ```
 
 ```Go
@@ -894,7 +850,6 @@ Canon returns the canonical version of r. The returned rectangle has minimum and
 
 ```
 searchKey: image.Rectangle.At
-tags: [exported]
 ```
 
 ```Go
@@ -907,7 +862,6 @@ At implements the Image interface.
 
 ```
 searchKey: image.Rectangle.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -920,7 +874,6 @@ Bounds implements the Image interface.
 
 ```
 searchKey: image.Rectangle.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -933,7 +886,6 @@ ColorModel implements the Image interface.
 
 ```
 searchKey: image.Config
-tags: [exported]
 ```
 
 ```Go
@@ -949,7 +901,6 @@ Config holds an image's color model and dimensions.
 
 ```
 searchKey: image.DecodeConfig
-tags: [exported]
 ```
 
 ```Go
@@ -962,7 +913,6 @@ DecodeConfig decodes the color model and dimensions of an image that has been en
 
 ```
 searchKey: image.Image
-tags: [exported]
 ```
 
 ```Go
@@ -985,7 +935,6 @@ Image is a finite rectangular grid of color.Color values taken from a color mode
 
 ```
 searchKey: image.Decode
-tags: [exported]
 ```
 
 ```Go
@@ -998,7 +947,6 @@ Decode decodes an image that has been encoded in a registered format. The string
 
 ```
 searchKey: image.RGBA64Image
-tags: [exported]
 ```
 
 ```Go
@@ -1018,7 +966,6 @@ RGBA64Image is an Image whose pixels can be converted directly to a color.RGBA64
 
 ```
 searchKey: image.PalettedImage
-tags: [exported]
 ```
 
 ```Go
@@ -1035,7 +982,6 @@ PalettedImage is an image whose colors may come from a limited palette. If m is 
 
 ```
 searchKey: image.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -1056,7 +1002,6 @@ RGBA is an in-memory image whose At method returns color.RGBA values.
 
 ```
 searchKey: image.NewRGBA
-tags: [exported]
 ```
 
 ```Go
@@ -1069,7 +1014,6 @@ NewRGBA returns a new RGBA image with the given bounds.
 
 ```
 searchKey: image.RGBA.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -1080,7 +1024,6 @@ func (p *RGBA) ColorModel() color.Model
 
 ```
 searchKey: image.RGBA.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -1091,7 +1034,6 @@ func (p *RGBA) Bounds() Rectangle
 
 ```
 searchKey: image.RGBA.At
-tags: [exported]
 ```
 
 ```Go
@@ -1102,7 +1044,6 @@ func (p *RGBA) At(x, y int) color.Color
 
 ```
 searchKey: image.RGBA.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -1113,7 +1054,6 @@ func (p *RGBA) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.RGBA.RGBAAt
-tags: [exported]
 ```
 
 ```Go
@@ -1124,7 +1064,6 @@ func (p *RGBA) RGBAAt(x, y int) color.RGBA
 
 ```
 searchKey: image.RGBA.PixOffset
-tags: [exported]
 ```
 
 ```Go
@@ -1137,7 +1076,6 @@ PixOffset returns the index of the first element of Pix that corresponds to the 
 
 ```
 searchKey: image.RGBA.Set
-tags: [exported]
 ```
 
 ```Go
@@ -1148,7 +1086,6 @@ func (p *RGBA) Set(x, y int, c color.Color)
 
 ```
 searchKey: image.RGBA.SetRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1159,7 +1096,6 @@ func (p *RGBA) SetRGBA64(x, y int, c color.RGBA64)
 
 ```
 searchKey: image.RGBA.SetRGBA
-tags: [exported]
 ```
 
 ```Go
@@ -1170,7 +1106,6 @@ func (p *RGBA) SetRGBA(x, y int, c color.RGBA)
 
 ```
 searchKey: image.RGBA.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -1183,7 +1118,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.RGBA.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -1196,7 +1130,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.RGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1217,7 +1150,6 @@ RGBA64 is an in-memory image whose At method returns color.RGBA64 values.
 
 ```
 searchKey: image.NewRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1230,7 +1162,6 @@ NewRGBA64 returns a new RGBA64 image with the given bounds.
 
 ```
 searchKey: image.RGBA64.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -1241,7 +1172,6 @@ func (p *RGBA64) ColorModel() color.Model
 
 ```
 searchKey: image.RGBA64.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -1252,7 +1182,6 @@ func (p *RGBA64) Bounds() Rectangle
 
 ```
 searchKey: image.RGBA64.At
-tags: [exported]
 ```
 
 ```Go
@@ -1263,7 +1192,6 @@ func (p *RGBA64) At(x, y int) color.Color
 
 ```
 searchKey: image.RGBA64.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -1274,7 +1202,6 @@ func (p *RGBA64) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.RGBA64.PixOffset
-tags: [exported]
 ```
 
 ```Go
@@ -1287,7 +1214,6 @@ PixOffset returns the index of the first element of Pix that corresponds to the 
 
 ```
 searchKey: image.RGBA64.Set
-tags: [exported]
 ```
 
 ```Go
@@ -1298,7 +1224,6 @@ func (p *RGBA64) Set(x, y int, c color.Color)
 
 ```
 searchKey: image.RGBA64.SetRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1309,7 +1234,6 @@ func (p *RGBA64) SetRGBA64(x, y int, c color.RGBA64)
 
 ```
 searchKey: image.RGBA64.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -1322,7 +1246,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.RGBA64.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -1335,7 +1258,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.NRGBA
-tags: [exported]
 ```
 
 ```Go
@@ -1356,7 +1278,6 @@ NRGBA is an in-memory image whose At method returns color.NRGBA values.
 
 ```
 searchKey: image.NewNRGBA
-tags: [exported]
 ```
 
 ```Go
@@ -1369,7 +1290,6 @@ NewNRGBA returns a new NRGBA image with the given bounds.
 
 ```
 searchKey: image.NRGBA.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -1380,7 +1300,6 @@ func (p *NRGBA) ColorModel() color.Model
 
 ```
 searchKey: image.NRGBA.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -1391,7 +1310,6 @@ func (p *NRGBA) Bounds() Rectangle
 
 ```
 searchKey: image.NRGBA.At
-tags: [exported]
 ```
 
 ```Go
@@ -1402,7 +1320,6 @@ func (p *NRGBA) At(x, y int) color.Color
 
 ```
 searchKey: image.NRGBA.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -1413,7 +1330,6 @@ func (p *NRGBA) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.NRGBA.NRGBAAt
-tags: [exported]
 ```
 
 ```Go
@@ -1424,7 +1340,6 @@ func (p *NRGBA) NRGBAAt(x, y int) color.NRGBA
 
 ```
 searchKey: image.NRGBA.PixOffset
-tags: [exported]
 ```
 
 ```Go
@@ -1437,7 +1352,6 @@ PixOffset returns the index of the first element of Pix that corresponds to the 
 
 ```
 searchKey: image.NRGBA.Set
-tags: [exported]
 ```
 
 ```Go
@@ -1448,7 +1362,6 @@ func (p *NRGBA) Set(x, y int, c color.Color)
 
 ```
 searchKey: image.NRGBA.SetRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1459,7 +1372,6 @@ func (p *NRGBA) SetRGBA64(x, y int, c color.RGBA64)
 
 ```
 searchKey: image.NRGBA.SetNRGBA
-tags: [exported]
 ```
 
 ```Go
@@ -1470,7 +1382,6 @@ func (p *NRGBA) SetNRGBA(x, y int, c color.NRGBA)
 
 ```
 searchKey: image.NRGBA.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -1483,7 +1394,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.NRGBA.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -1496,7 +1406,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.NRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1517,7 +1426,6 @@ NRGBA64 is an in-memory image whose At method returns color.NRGBA64 values.
 
 ```
 searchKey: image.NewNRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1530,7 +1438,6 @@ NewNRGBA64 returns a new NRGBA64 image with the given bounds.
 
 ```
 searchKey: image.NRGBA64.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -1541,7 +1448,6 @@ func (p *NRGBA64) ColorModel() color.Model
 
 ```
 searchKey: image.NRGBA64.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -1552,7 +1458,6 @@ func (p *NRGBA64) Bounds() Rectangle
 
 ```
 searchKey: image.NRGBA64.At
-tags: [exported]
 ```
 
 ```Go
@@ -1563,7 +1468,6 @@ func (p *NRGBA64) At(x, y int) color.Color
 
 ```
 searchKey: image.NRGBA64.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -1574,7 +1478,6 @@ func (p *NRGBA64) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.NRGBA64.NRGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -1585,7 +1488,6 @@ func (p *NRGBA64) NRGBA64At(x, y int) color.NRGBA64
 
 ```
 searchKey: image.NRGBA64.PixOffset
-tags: [exported]
 ```
 
 ```Go
@@ -1598,7 +1500,6 @@ PixOffset returns the index of the first element of Pix that corresponds to the 
 
 ```
 searchKey: image.NRGBA64.Set
-tags: [exported]
 ```
 
 ```Go
@@ -1609,7 +1510,6 @@ func (p *NRGBA64) Set(x, y int, c color.Color)
 
 ```
 searchKey: image.NRGBA64.SetRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1620,7 +1520,6 @@ func (p *NRGBA64) SetRGBA64(x, y int, c color.RGBA64)
 
 ```
 searchKey: image.NRGBA64.SetNRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1631,7 +1530,6 @@ func (p *NRGBA64) SetNRGBA64(x, y int, c color.NRGBA64)
 
 ```
 searchKey: image.NRGBA64.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -1644,7 +1542,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.NRGBA64.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -1657,7 +1554,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.Alpha
-tags: [exported]
 ```
 
 ```Go
@@ -1678,7 +1574,6 @@ Alpha is an in-memory image whose At method returns color.Alpha values.
 
 ```
 searchKey: image.NewAlpha
-tags: [exported]
 ```
 
 ```Go
@@ -1691,7 +1586,6 @@ NewAlpha returns a new Alpha image with the given bounds.
 
 ```
 searchKey: image.Alpha.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -1702,7 +1596,6 @@ func (p *Alpha) ColorModel() color.Model
 
 ```
 searchKey: image.Alpha.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -1713,7 +1606,6 @@ func (p *Alpha) Bounds() Rectangle
 
 ```
 searchKey: image.Alpha.At
-tags: [exported]
 ```
 
 ```Go
@@ -1724,7 +1616,6 @@ func (p *Alpha) At(x, y int) color.Color
 
 ```
 searchKey: image.Alpha.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -1735,7 +1626,6 @@ func (p *Alpha) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.Alpha.AlphaAt
-tags: [exported]
 ```
 
 ```Go
@@ -1746,7 +1636,6 @@ func (p *Alpha) AlphaAt(x, y int) color.Alpha
 
 ```
 searchKey: image.Alpha.PixOffset
-tags: [exported]
 ```
 
 ```Go
@@ -1759,7 +1648,6 @@ PixOffset returns the index of the first element of Pix that corresponds to the 
 
 ```
 searchKey: image.Alpha.Set
-tags: [exported]
 ```
 
 ```Go
@@ -1770,7 +1658,6 @@ func (p *Alpha) Set(x, y int, c color.Color)
 
 ```
 searchKey: image.Alpha.SetRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1781,7 +1668,6 @@ func (p *Alpha) SetRGBA64(x, y int, c color.RGBA64)
 
 ```
 searchKey: image.Alpha.SetAlpha
-tags: [exported]
 ```
 
 ```Go
@@ -1792,7 +1678,6 @@ func (p *Alpha) SetAlpha(x, y int, c color.Alpha)
 
 ```
 searchKey: image.Alpha.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -1805,7 +1690,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.Alpha.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -1818,7 +1702,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.Alpha16
-tags: [exported]
 ```
 
 ```Go
@@ -1839,7 +1722,6 @@ Alpha16 is an in-memory image whose At method returns color.Alpha16 values.
 
 ```
 searchKey: image.NewAlpha16
-tags: [exported]
 ```
 
 ```Go
@@ -1852,7 +1734,6 @@ NewAlpha16 returns a new Alpha16 image with the given bounds.
 
 ```
 searchKey: image.Alpha16.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -1863,7 +1744,6 @@ func (p *Alpha16) ColorModel() color.Model
 
 ```
 searchKey: image.Alpha16.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -1874,7 +1754,6 @@ func (p *Alpha16) Bounds() Rectangle
 
 ```
 searchKey: image.Alpha16.At
-tags: [exported]
 ```
 
 ```Go
@@ -1885,7 +1764,6 @@ func (p *Alpha16) At(x, y int) color.Color
 
 ```
 searchKey: image.Alpha16.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -1896,7 +1774,6 @@ func (p *Alpha16) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.Alpha16.Alpha16At
-tags: [exported]
 ```
 
 ```Go
@@ -1907,7 +1784,6 @@ func (p *Alpha16) Alpha16At(x, y int) color.Alpha16
 
 ```
 searchKey: image.Alpha16.PixOffset
-tags: [exported]
 ```
 
 ```Go
@@ -1920,7 +1796,6 @@ PixOffset returns the index of the first element of Pix that corresponds to the 
 
 ```
 searchKey: image.Alpha16.Set
-tags: [exported]
 ```
 
 ```Go
@@ -1931,7 +1806,6 @@ func (p *Alpha16) Set(x, y int, c color.Color)
 
 ```
 searchKey: image.Alpha16.SetRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -1942,7 +1816,6 @@ func (p *Alpha16) SetRGBA64(x, y int, c color.RGBA64)
 
 ```
 searchKey: image.Alpha16.SetAlpha16
-tags: [exported]
 ```
 
 ```Go
@@ -1953,7 +1826,6 @@ func (p *Alpha16) SetAlpha16(x, y int, c color.Alpha16)
 
 ```
 searchKey: image.Alpha16.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -1966,7 +1838,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.Alpha16.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -1979,7 +1850,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.Gray
-tags: [exported]
 ```
 
 ```Go
@@ -2000,7 +1870,6 @@ Gray is an in-memory image whose At method returns color.Gray values.
 
 ```
 searchKey: image.NewGray
-tags: [exported]
 ```
 
 ```Go
@@ -2013,7 +1882,6 @@ NewGray returns a new Gray image with the given bounds.
 
 ```
 searchKey: image.Gray.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -2024,7 +1892,6 @@ func (p *Gray) ColorModel() color.Model
 
 ```
 searchKey: image.Gray.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -2035,7 +1902,6 @@ func (p *Gray) Bounds() Rectangle
 
 ```
 searchKey: image.Gray.At
-tags: [exported]
 ```
 
 ```Go
@@ -2046,7 +1912,6 @@ func (p *Gray) At(x, y int) color.Color
 
 ```
 searchKey: image.Gray.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -2057,7 +1922,6 @@ func (p *Gray) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.Gray.GrayAt
-tags: [exported]
 ```
 
 ```Go
@@ -2068,7 +1932,6 @@ func (p *Gray) GrayAt(x, y int) color.Gray
 
 ```
 searchKey: image.Gray.PixOffset
-tags: [exported]
 ```
 
 ```Go
@@ -2081,7 +1944,6 @@ PixOffset returns the index of the first element of Pix that corresponds to the 
 
 ```
 searchKey: image.Gray.Set
-tags: [exported]
 ```
 
 ```Go
@@ -2092,7 +1954,6 @@ func (p *Gray) Set(x, y int, c color.Color)
 
 ```
 searchKey: image.Gray.SetRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -2103,7 +1964,6 @@ func (p *Gray) SetRGBA64(x, y int, c color.RGBA64)
 
 ```
 searchKey: image.Gray.SetGray
-tags: [exported]
 ```
 
 ```Go
@@ -2114,7 +1974,6 @@ func (p *Gray) SetGray(x, y int, c color.Gray)
 
 ```
 searchKey: image.Gray.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -2127,7 +1986,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.Gray.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -2140,7 +1998,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.Gray16
-tags: [exported]
 ```
 
 ```Go
@@ -2161,7 +2018,6 @@ Gray16 is an in-memory image whose At method returns color.Gray16 values.
 
 ```
 searchKey: image.NewGray16
-tags: [exported]
 ```
 
 ```Go
@@ -2174,7 +2030,6 @@ NewGray16 returns a new Gray16 image with the given bounds.
 
 ```
 searchKey: image.Gray16.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -2185,7 +2040,6 @@ func (p *Gray16) ColorModel() color.Model
 
 ```
 searchKey: image.Gray16.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -2196,7 +2050,6 @@ func (p *Gray16) Bounds() Rectangle
 
 ```
 searchKey: image.Gray16.At
-tags: [exported]
 ```
 
 ```Go
@@ -2207,7 +2060,6 @@ func (p *Gray16) At(x, y int) color.Color
 
 ```
 searchKey: image.Gray16.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -2218,7 +2070,6 @@ func (p *Gray16) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.Gray16.Gray16At
-tags: [exported]
 ```
 
 ```Go
@@ -2229,7 +2080,6 @@ func (p *Gray16) Gray16At(x, y int) color.Gray16
 
 ```
 searchKey: image.Gray16.PixOffset
-tags: [exported]
 ```
 
 ```Go
@@ -2242,7 +2092,6 @@ PixOffset returns the index of the first element of Pix that corresponds to the 
 
 ```
 searchKey: image.Gray16.Set
-tags: [exported]
 ```
 
 ```Go
@@ -2253,7 +2102,6 @@ func (p *Gray16) Set(x, y int, c color.Color)
 
 ```
 searchKey: image.Gray16.SetRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -2264,7 +2112,6 @@ func (p *Gray16) SetRGBA64(x, y int, c color.RGBA64)
 
 ```
 searchKey: image.Gray16.SetGray16
-tags: [exported]
 ```
 
 ```Go
@@ -2275,7 +2122,6 @@ func (p *Gray16) SetGray16(x, y int, c color.Gray16)
 
 ```
 searchKey: image.Gray16.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -2288,7 +2134,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.Gray16.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -2301,7 +2146,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.CMYK
-tags: [exported]
 ```
 
 ```Go
@@ -2322,7 +2166,6 @@ CMYK is an in-memory image whose At method returns color.CMYK values.
 
 ```
 searchKey: image.NewCMYK
-tags: [exported]
 ```
 
 ```Go
@@ -2335,7 +2178,6 @@ NewCMYK returns a new CMYK image with the given bounds.
 
 ```
 searchKey: image.CMYK.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -2346,7 +2188,6 @@ func (p *CMYK) ColorModel() color.Model
 
 ```
 searchKey: image.CMYK.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -2357,7 +2198,6 @@ func (p *CMYK) Bounds() Rectangle
 
 ```
 searchKey: image.CMYK.At
-tags: [exported]
 ```
 
 ```Go
@@ -2368,7 +2208,6 @@ func (p *CMYK) At(x, y int) color.Color
 
 ```
 searchKey: image.CMYK.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -2379,7 +2218,6 @@ func (p *CMYK) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.CMYK.CMYKAt
-tags: [exported]
 ```
 
 ```Go
@@ -2390,7 +2228,6 @@ func (p *CMYK) CMYKAt(x, y int) color.CMYK
 
 ```
 searchKey: image.CMYK.PixOffset
-tags: [exported]
 ```
 
 ```Go
@@ -2403,7 +2240,6 @@ PixOffset returns the index of the first element of Pix that corresponds to the 
 
 ```
 searchKey: image.CMYK.Set
-tags: [exported]
 ```
 
 ```Go
@@ -2414,7 +2250,6 @@ func (p *CMYK) Set(x, y int, c color.Color)
 
 ```
 searchKey: image.CMYK.SetRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -2425,7 +2260,6 @@ func (p *CMYK) SetRGBA64(x, y int, c color.RGBA64)
 
 ```
 searchKey: image.CMYK.SetCMYK
-tags: [exported]
 ```
 
 ```Go
@@ -2436,7 +2270,6 @@ func (p *CMYK) SetCMYK(x, y int, c color.CMYK)
 
 ```
 searchKey: image.CMYK.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -2449,7 +2282,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.CMYK.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -2462,7 +2294,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.Paletted
-tags: [exported]
 ```
 
 ```Go
@@ -2485,7 +2316,6 @@ Paletted is an in-memory image of uint8 indices into a given palette.
 
 ```
 searchKey: image.NewPaletted
-tags: [exported]
 ```
 
 ```Go
@@ -2498,7 +2328,6 @@ NewPaletted returns a new Paletted image with the given width, height and palett
 
 ```
 searchKey: image.Paletted.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -2509,7 +2338,6 @@ func (p *Paletted) ColorModel() color.Model
 
 ```
 searchKey: image.Paletted.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -2520,7 +2348,6 @@ func (p *Paletted) Bounds() Rectangle
 
 ```
 searchKey: image.Paletted.At
-tags: [exported]
 ```
 
 ```Go
@@ -2531,7 +2358,6 @@ func (p *Paletted) At(x, y int) color.Color
 
 ```
 searchKey: image.Paletted.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -2542,7 +2368,6 @@ func (p *Paletted) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.Paletted.PixOffset
-tags: [exported]
 ```
 
 ```Go
@@ -2555,7 +2380,6 @@ PixOffset returns the index of the first element of Pix that corresponds to the 
 
 ```
 searchKey: image.Paletted.Set
-tags: [exported]
 ```
 
 ```Go
@@ -2566,7 +2390,6 @@ func (p *Paletted) Set(x, y int, c color.Color)
 
 ```
 searchKey: image.Paletted.SetRGBA64
-tags: [exported]
 ```
 
 ```Go
@@ -2577,7 +2400,6 @@ func (p *Paletted) SetRGBA64(x, y int, c color.RGBA64)
 
 ```
 searchKey: image.Paletted.ColorIndexAt
-tags: [exported]
 ```
 
 ```Go
@@ -2588,7 +2410,6 @@ func (p *Paletted) ColorIndexAt(x, y int) uint8
 
 ```
 searchKey: image.Paletted.SetColorIndex
-tags: [exported]
 ```
 
 ```Go
@@ -2599,7 +2420,6 @@ func (p *Paletted) SetColorIndex(x, y int, index uint8)
 
 ```
 searchKey: image.Paletted.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -2612,7 +2432,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.Paletted.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -2625,7 +2444,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.Uniform
-tags: [exported]
 ```
 
 ```Go
@@ -2640,7 +2458,6 @@ Uniform is an infinite-sized Image of uniform color. It implements the color.Col
 
 ```
 searchKey: image.NewUniform
-tags: [exported]
 ```
 
 ```Go
@@ -2653,7 +2470,6 @@ NewUniform returns a new Uniform image of the given color.
 
 ```
 searchKey: image.Uniform.RGBA
-tags: [exported]
 ```
 
 ```Go
@@ -2664,7 +2480,6 @@ func (c *Uniform) RGBA() (r, g, b, a uint32)
 
 ```
 searchKey: image.Uniform.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -2675,7 +2490,6 @@ func (c *Uniform) ColorModel() color.Model
 
 ```
 searchKey: image.Uniform.Convert
-tags: [exported]
 ```
 
 ```Go
@@ -2686,7 +2500,6 @@ func (c *Uniform) Convert(color.Color) color.Color
 
 ```
 searchKey: image.Uniform.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -2697,7 +2510,6 @@ func (c *Uniform) Bounds() Rectangle
 
 ```
 searchKey: image.Uniform.At
-tags: [exported]
 ```
 
 ```Go
@@ -2708,7 +2520,6 @@ func (c *Uniform) At(x, y int) color.Color
 
 ```
 searchKey: image.Uniform.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -2721,7 +2532,6 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.YCbCrSubsampleRatio
-tags: [exported]
 ```
 
 ```Go
@@ -2734,7 +2544,6 @@ YCbCrSubsampleRatio is the chroma subsample ratio used in a YCbCr image.
 
 ```
 searchKey: image.YCbCrSubsampleRatio.String
-tags: [exported]
 ```
 
 ```Go
@@ -2745,7 +2554,6 @@ func (s YCbCrSubsampleRatio) String() string
 
 ```
 searchKey: image.YCbCr
-tags: [exported]
 ```
 
 ```Go
@@ -2773,7 +2581,6 @@ For 4:1:0, CStride == YStride/4 && len(Cb) == len(Cr) == len(Y)/8.
 
 ```
 searchKey: image.NewYCbCr
-tags: [exported]
 ```
 
 ```Go
@@ -2786,7 +2593,6 @@ NewYCbCr returns a new YCbCr image with the given bounds and subsample ratio.
 
 ```
 searchKey: image.YCbCr.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -2797,7 +2603,6 @@ func (p *YCbCr) ColorModel() color.Model
 
 ```
 searchKey: image.YCbCr.Bounds
-tags: [exported]
 ```
 
 ```Go
@@ -2808,7 +2613,6 @@ func (p *YCbCr) Bounds() Rectangle
 
 ```
 searchKey: image.YCbCr.At
-tags: [exported]
 ```
 
 ```Go
@@ -2819,7 +2623,6 @@ func (p *YCbCr) At(x, y int) color.Color
 
 ```
 searchKey: image.YCbCr.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -2830,7 +2633,6 @@ func (p *YCbCr) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.YCbCr.YCbCrAt
-tags: [exported]
 ```
 
 ```Go
@@ -2841,7 +2643,6 @@ func (p *YCbCr) YCbCrAt(x, y int) color.YCbCr
 
 ```
 searchKey: image.YCbCr.YOffset
-tags: [exported]
 ```
 
 ```Go
@@ -2854,7 +2655,6 @@ YOffset returns the index of the first element of Y that corresponds to the pixe
 
 ```
 searchKey: image.YCbCr.COffset
-tags: [exported]
 ```
 
 ```Go
@@ -2867,7 +2667,6 @@ COffset returns the index of the first element of Cb or Cr that corresponds to t
 
 ```
 searchKey: image.YCbCr.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -2880,7 +2679,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.YCbCr.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -2891,7 +2689,6 @@ func (p *YCbCr) Opaque() bool
 
 ```
 searchKey: image.NYCbCrA
-tags: [exported]
 ```
 
 ```Go
@@ -2908,7 +2705,6 @@ NYCbCrA is an in-memory image of non-alpha-premultiplied Y'CbCr-with-alpha color
 
 ```
 searchKey: image.NewNYCbCrA
-tags: [exported]
 ```
 
 ```Go
@@ -2921,7 +2717,6 @@ NewNYCbCrA returns a new NYCbCrA image with the given bounds and subsample ratio
 
 ```
 searchKey: image.NYCbCrA.ColorModel
-tags: [exported]
 ```
 
 ```Go
@@ -2932,7 +2727,6 @@ func (p *NYCbCrA) ColorModel() color.Model
 
 ```
 searchKey: image.NYCbCrA.At
-tags: [exported]
 ```
 
 ```Go
@@ -2943,7 +2737,6 @@ func (p *NYCbCrA) At(x, y int) color.Color
 
 ```
 searchKey: image.NYCbCrA.RGBA64At
-tags: [exported]
 ```
 
 ```Go
@@ -2954,7 +2747,6 @@ func (p *NYCbCrA) RGBA64At(x, y int) color.RGBA64
 
 ```
 searchKey: image.NYCbCrA.NYCbCrAAt
-tags: [exported]
 ```
 
 ```Go
@@ -2965,7 +2757,6 @@ func (p *NYCbCrA) NYCbCrAAt(x, y int) color.NYCbCrA
 
 ```
 searchKey: image.NYCbCrA.AOffset
-tags: [exported]
 ```
 
 ```Go
@@ -2978,7 +2769,6 @@ AOffset returns the index of the first element of A that corresponds to the pixe
 
 ```
 searchKey: image.NYCbCrA.SubImage
-tags: [exported]
 ```
 
 ```Go
@@ -2991,7 +2781,6 @@ SubImage returns an image representing the portion of the image p visible throug
 
 ```
 searchKey: image.NYCbCrA.Opaque
-tags: [exported]
 ```
 
 ```Go
@@ -3004,6 +2793,7 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.image
+tags: [private]
 ```
 
 ```Go
@@ -3017,15 +2807,10 @@ type image interface {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="RegisterFormat" href="#RegisterFormat">func RegisterFormat(name, magic string, decode func(io.Reader) (Image, error), decodeConfig func(io.Reader) (Config, error))</a>
 
 ```
 searchKey: image.RegisterFormat
-tags: [exported]
 ```
 
 ```Go
@@ -3038,6 +2823,7 @@ RegisterFormat registers an image format for use by Decode. Name is the name of 
 
 ```
 searchKey: image.match
+tags: [private]
 ```
 
 ```Go
@@ -3050,6 +2836,7 @@ Match reports whether magic matches b. Magic may contain "?" wildcards.
 
 ```
 searchKey: image.mul3NonNeg
+tags: [private]
 ```
 
 ```Go
@@ -3062,6 +2849,7 @@ mul3NonNeg returns (x * y * z), unless at least one argument is negative or if t
 
 ```
 searchKey: image.add2NonNeg
+tags: [private]
 ```
 
 ```Go
@@ -3074,6 +2862,7 @@ add2NonNeg returns (x + y), unless at least one argument is negative or if the c
 
 ```
 searchKey: image.pixelBufferLength
+tags: [private]
 ```
 
 ```Go
@@ -3088,6 +2877,7 @@ This panics instead of returning an error because of backwards compatibility. Th
 
 ```
 searchKey: image.yCbCrSize
+tags: [private]
 ```
 
 ```Go
@@ -3098,6 +2888,7 @@ func yCbCrSize(r Rectangle, subsampleRatio YCbCrSubsampleRatio) (w, h, cw, ch in
 
 ```
 searchKey: image.TestRectangle
+tags: [private]
 ```
 
 ```Go
@@ -3108,6 +2899,7 @@ func TestRectangle(t *testing.T)
 
 ```
 searchKey: image.cmp
+tags: [private]
 ```
 
 ```Go
@@ -3118,6 +2910,7 @@ func cmp(cm color.Model, c0, c1 color.Color) bool
 
 ```
 searchKey: image.TestImage
+tags: [private]
 ```
 
 ```Go
@@ -3128,6 +2921,7 @@ func TestImage(t *testing.T)
 
 ```
 searchKey: image.TestNewXxxBadRectangle
+tags: [private]
 ```
 
 ```Go
@@ -3138,6 +2932,7 @@ func TestNewXxxBadRectangle(t *testing.T)
 
 ```
 searchKey: image.Test16BitsPerColorChannel
+tags: [private]
 ```
 
 ```Go
@@ -3148,6 +2943,7 @@ func Test16BitsPerColorChannel(t *testing.T)
 
 ```
 searchKey: image.TestRGBA64Image
+tags: [private]
 ```
 
 ```Go
@@ -3158,6 +2954,7 @@ func TestRGBA64Image(t *testing.T)
 
 ```
 searchKey: image.BenchmarkAt
+tags: [private]
 ```
 
 ```Go
@@ -3168,6 +2965,7 @@ func BenchmarkAt(b *testing.B)
 
 ```
 searchKey: image.BenchmarkSet
+tags: [private]
 ```
 
 ```Go
@@ -3178,6 +2976,7 @@ func BenchmarkSet(b *testing.B)
 
 ```
 searchKey: image.BenchmarkRGBAAt
+tags: [private]
 ```
 
 ```Go
@@ -3188,6 +2987,7 @@ func BenchmarkRGBAAt(b *testing.B)
 
 ```
 searchKey: image.BenchmarkRGBASetRGBA
+tags: [private]
 ```
 
 ```Go
@@ -3198,6 +2998,7 @@ func BenchmarkRGBASetRGBA(b *testing.B)
 
 ```
 searchKey: image.BenchmarkRGBA64At
+tags: [private]
 ```
 
 ```Go
@@ -3208,6 +3009,7 @@ func BenchmarkRGBA64At(b *testing.B)
 
 ```
 searchKey: image.BenchmarkRGBA64SetRGBA64
+tags: [private]
 ```
 
 ```Go
@@ -3218,6 +3020,7 @@ func BenchmarkRGBA64SetRGBA64(b *testing.B)
 
 ```
 searchKey: image.BenchmarkNRGBAAt
+tags: [private]
 ```
 
 ```Go
@@ -3228,6 +3031,7 @@ func BenchmarkNRGBAAt(b *testing.B)
 
 ```
 searchKey: image.BenchmarkNRGBASetNRGBA
+tags: [private]
 ```
 
 ```Go
@@ -3238,6 +3042,7 @@ func BenchmarkNRGBASetNRGBA(b *testing.B)
 
 ```
 searchKey: image.BenchmarkNRGBA64At
+tags: [private]
 ```
 
 ```Go
@@ -3248,6 +3053,7 @@ func BenchmarkNRGBA64At(b *testing.B)
 
 ```
 searchKey: image.BenchmarkNRGBA64SetNRGBA64
+tags: [private]
 ```
 
 ```Go
@@ -3258,6 +3064,7 @@ func BenchmarkNRGBA64SetNRGBA64(b *testing.B)
 
 ```
 searchKey: image.BenchmarkAlphaAt
+tags: [private]
 ```
 
 ```Go
@@ -3268,6 +3075,7 @@ func BenchmarkAlphaAt(b *testing.B)
 
 ```
 searchKey: image.BenchmarkAlphaSetAlpha
+tags: [private]
 ```
 
 ```Go
@@ -3278,6 +3086,7 @@ func BenchmarkAlphaSetAlpha(b *testing.B)
 
 ```
 searchKey: image.BenchmarkAlpha16At
+tags: [private]
 ```
 
 ```Go
@@ -3288,6 +3097,7 @@ func BenchmarkAlpha16At(b *testing.B)
 
 ```
 searchKey: image.BenchmarkAlphaSetAlpha16
+tags: [private]
 ```
 
 ```Go
@@ -3298,6 +3108,7 @@ func BenchmarkAlphaSetAlpha16(b *testing.B)
 
 ```
 searchKey: image.BenchmarkGrayAt
+tags: [private]
 ```
 
 ```Go
@@ -3308,6 +3119,7 @@ func BenchmarkGrayAt(b *testing.B)
 
 ```
 searchKey: image.BenchmarkGraySetGray
+tags: [private]
 ```
 
 ```Go
@@ -3318,6 +3130,7 @@ func BenchmarkGraySetGray(b *testing.B)
 
 ```
 searchKey: image.BenchmarkGray16At
+tags: [private]
 ```
 
 ```Go
@@ -3328,6 +3141,7 @@ func BenchmarkGray16At(b *testing.B)
 
 ```
 searchKey: image.BenchmarkGraySetGray16
+tags: [private]
 ```
 
 ```Go
@@ -3338,6 +3152,7 @@ func BenchmarkGraySetGray16(b *testing.B)
 
 ```
 searchKey: image.TestYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -3348,6 +3163,7 @@ func TestYCbCr(t *testing.T)
 
 ```
 searchKey: image.testYCbCr
+tags: [private]
 ```
 
 ```Go
@@ -3358,6 +3174,7 @@ func testYCbCr(t *testing.T, r Rectangle, subsampleRatio YCbCrSubsampleRatio, de
 
 ```
 searchKey: image.TestYCbCrSlicesDontOverlap
+tags: [private]
 ```
 
 ```Go

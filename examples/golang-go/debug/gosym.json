@@ -4,9 +4,7 @@
     "identifier": "gosym",
     "newPage": true,
     "searchKey": "debug/gosym",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "verUnknown",
                 "newPage": false,
                 "searchKey": "gosym.verUnknown",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "ver11",
                 "newPage": false,
                 "searchKey": "gosym.ver11",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "ver12",
                 "newPage": false,
                 "searchKey": "gosym.ver12",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "ver116",
                 "newPage": false,
                 "searchKey": "gosym.ver116",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "oldQuantum",
                 "newPage": false,
                 "searchKey": "gosym.oldQuantum",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "go12magic",
                 "newPage": false,
                 "searchKey": "gosym.go12magic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "go116magic",
                 "newPage": false,
                 "searchKey": "gosym.go116magic",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,9 +197,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "littleEndianSymtab",
                 "newPage": false,
                 "searchKey": "gosym.littleEndianSymtab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -227,7 +237,9 @@
                 "identifier": "bigEndianSymtab",
                 "newPage": false,
                 "searchKey": "gosym.bigEndianSymtab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "oldLittleEndianSymtab",
                 "newPage": false,
                 "searchKey": "gosym.oldLittleEndianSymtab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "pclineTempDir",
                 "newPage": false,
                 "searchKey": "gosym.pclineTempDir",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -287,7 +303,9 @@
                 "identifier": "pclinetestBinary",
                 "newPage": false,
                 "searchKey": "gosym.pclinetestBinary",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -310,9 +328,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -330,7 +346,9 @@
                 "identifier": "version",
                 "newPage": false,
                 "searchKey": "gosym.version",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -350,9 +368,7 @@
                 "identifier": "LineTable",
                 "newPage": false,
                 "searchKey": "gosym.LineTable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -370,9 +386,7 @@
                       "identifier": "NewLineTable",
                       "newPage": false,
                       "searchKey": "gosym.NewLineTable",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -392,7 +406,9 @@
                       "identifier": "LineTable.parse",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.parse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -412,7 +428,9 @@
                       "identifier": "LineTable.slice",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.slice",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -433,7 +451,6 @@
                       "newPage": false,
                       "searchKey": "gosym.LineTable.PCToLine",
                       "tags": [
-                        "exported",
                         "deprecated"
                       ]
                     },
@@ -456,7 +473,6 @@
                       "newPage": false,
                       "searchKey": "gosym.LineTable.LineToPC",
                       "tags": [
-                        "exported",
                         "deprecated"
                       ]
                     },
@@ -478,7 +494,9 @@
                       "identifier": "LineTable.isGo12",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.isGo12",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -498,7 +516,9 @@
                       "identifier": "LineTable.uintptr",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.uintptr",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -518,7 +538,9 @@
                       "identifier": "LineTable.parsePclnTab",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.parsePclnTab",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -538,7 +560,9 @@
                       "identifier": "LineTable.go12Funcs",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.go12Funcs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -558,7 +582,9 @@
                       "identifier": "LineTable.findFunc",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.findFunc",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -578,7 +604,9 @@
                       "identifier": "LineTable.readvarint",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.readvarint",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -598,7 +626,9 @@
                       "identifier": "LineTable.funcName",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.funcName",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -618,7 +648,9 @@
                       "identifier": "LineTable.stringFrom",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.stringFrom",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -638,7 +670,9 @@
                       "identifier": "LineTable.string",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.string",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -658,7 +692,9 @@
                       "identifier": "LineTable.step",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.step",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -678,7 +714,9 @@
                       "identifier": "LineTable.pcvalue",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.pcvalue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -698,7 +736,9 @@
                       "identifier": "LineTable.findFileLine",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.findFileLine",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -718,7 +758,9 @@
                       "identifier": "LineTable.go12PCToLine",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.go12PCToLine",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -738,7 +780,9 @@
                       "identifier": "LineTable.go12PCToFile",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.go12PCToFile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -758,7 +802,9 @@
                       "identifier": "LineTable.go12LineToPC",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.go12LineToPC",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -778,7 +824,9 @@
                       "identifier": "LineTable.initFileMap",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.initFileMap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -798,7 +846,9 @@
                       "identifier": "LineTable.go12MapFiles",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.go12MapFiles",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -821,9 +871,7 @@
                 "identifier": "Sym",
                 "newPage": false,
                 "searchKey": "gosym.Sym",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -841,9 +889,7 @@
                       "identifier": "Sym.Static",
                       "newPage": false,
                       "searchKey": "gosym.Sym.Static",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -863,9 +909,7 @@
                       "identifier": "Sym.PackageName",
                       "newPage": false,
                       "searchKey": "gosym.Sym.PackageName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -885,9 +929,7 @@
                       "identifier": "Sym.ReceiverName",
                       "newPage": false,
                       "searchKey": "gosym.Sym.ReceiverName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -907,9 +949,7 @@
                       "identifier": "Sym.BaseName",
                       "newPage": false,
                       "searchKey": "gosym.Sym.BaseName",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -932,9 +972,7 @@
                 "identifier": "Func",
                 "newPage": false,
                 "searchKey": "gosym.Func",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -954,9 +992,7 @@
                 "identifier": "Obj",
                 "newPage": false,
                 "searchKey": "gosym.Obj",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -974,7 +1010,9 @@
                       "identifier": "Obj.lineFromAline",
                       "newPage": false,
                       "searchKey": "gosym.Obj.lineFromAline",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -994,7 +1032,9 @@
                       "identifier": "Obj.alineFromLine",
                       "newPage": false,
                       "searchKey": "gosym.Obj.alineFromLine",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1017,9 +1057,7 @@
                 "identifier": "Table",
                 "newPage": false,
                 "searchKey": "gosym.Table",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1037,9 +1075,7 @@
                       "identifier": "NewTable",
                       "newPage": false,
                       "searchKey": "gosym.NewTable",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1059,7 +1095,9 @@
                       "identifier": "getTable",
                       "newPage": false,
                       "searchKey": "gosym.getTable",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1079,7 +1117,9 @@
                       "identifier": "crack",
                       "newPage": false,
                       "searchKey": "gosym.crack",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1099,7 +1139,9 @@
                       "identifier": "parse",
                       "newPage": false,
                       "searchKey": "gosym.parse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1119,9 +1161,7 @@
                       "identifier": "Table.PCToFunc",
                       "newPage": false,
                       "searchKey": "gosym.Table.PCToFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1141,9 +1181,7 @@
                       "identifier": "Table.PCToLine",
                       "newPage": false,
                       "searchKey": "gosym.Table.PCToLine",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1163,9 +1201,7 @@
                       "identifier": "Table.LineToPC",
                       "newPage": false,
                       "searchKey": "gosym.Table.LineToPC",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1185,9 +1221,7 @@
                       "identifier": "Table.LookupSym",
                       "newPage": false,
                       "searchKey": "gosym.Table.LookupSym",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1207,9 +1241,7 @@
                       "identifier": "Table.LookupFunc",
                       "newPage": false,
                       "searchKey": "gosym.Table.LookupFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1229,9 +1261,7 @@
                       "identifier": "Table.SymByAddr",
                       "newPage": false,
                       "searchKey": "gosym.Table.SymByAddr",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1254,7 +1284,9 @@
                 "identifier": "sym",
                 "newPage": false,
                 "searchKey": "gosym.sym",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1274,9 +1306,7 @@
                 "identifier": "UnknownFileError",
                 "newPage": false,
                 "searchKey": "gosym.UnknownFileError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1294,9 +1324,7 @@
                       "identifier": "UnknownFileError.Error",
                       "newPage": false,
                       "searchKey": "gosym.UnknownFileError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1319,9 +1347,7 @@
                 "identifier": "UnknownLineError",
                 "newPage": false,
                 "searchKey": "gosym.UnknownLineError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1339,9 +1365,7 @@
                       "identifier": "UnknownLineError.Error",
                       "newPage": false,
                       "searchKey": "gosym.UnknownLineError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1364,9 +1388,7 @@
                 "identifier": "DecodingError",
                 "newPage": false,
                 "searchKey": "gosym.DecodingError",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1384,9 +1406,7 @@
                       "identifier": "DecodingError.Error",
                       "newPage": false,
                       "searchKey": "gosym.DecodingError.Error",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1412,9 +1432,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1432,7 +1450,9 @@
                 "identifier": "walksymtab",
                 "newPage": false,
                 "searchKey": "gosym.walksymtab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1452,7 +1472,9 @@
                 "identifier": "dotest",
                 "newPage": false,
                 "searchKey": "gosym.dotest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1472,7 +1494,9 @@
                 "identifier": "endtest",
                 "newPage": false,
                 "searchKey": "gosym.endtest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1492,7 +1516,9 @@
                 "identifier": "skipIfNotELF",
                 "newPage": false,
                 "searchKey": "gosym.skipIfNotELF",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1512,7 +1538,9 @@
                 "identifier": "TestLineFromAline",
                 "newPage": false,
                 "searchKey": "gosym.TestLineFromAline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1532,7 +1560,9 @@
                 "identifier": "TestLineAline",
                 "newPage": false,
                 "searchKey": "gosym.TestLineAline",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1552,7 +1582,9 @@
                 "identifier": "TestPCLine",
                 "newPage": false,
                 "searchKey": "gosym.TestPCLine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1572,7 +1604,9 @@
                 "identifier": "Test115PclnParsing",
                 "newPage": false,
                 "searchKey": "gosym.Test115PclnParsing",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1592,7 +1626,9 @@
                 "identifier": "assertString",
                 "newPage": false,
                 "searchKey": "gosym.assertString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1612,7 +1648,9 @@
                 "identifier": "TestStandardLibPackage",
                 "newPage": false,
                 "searchKey": "gosym.TestStandardLibPackage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1632,7 +1670,9 @@
                 "identifier": "TestStandardLibPathPackage",
                 "newPage": false,
                 "searchKey": "gosym.TestStandardLibPathPackage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1652,7 +1692,9 @@
                 "identifier": "TestRemotePackage",
                 "newPage": false,
                 "searchKey": "gosym.TestRemotePackage",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1672,7 +1714,9 @@
                 "identifier": "TestIssue29551",
                 "newPage": false,
                 "searchKey": "gosym.TestIssue29551",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,9 +4,7 @@
     "identifier": "driver",
     "newPage": true,
     "searchKey": "database/sql/driver",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,9 +40,7 @@
                 "identifier": "ErrSkip",
                 "newPage": false,
                 "searchKey": "driver.ErrSkip",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -66,9 +60,7 @@
                 "identifier": "ErrBadConn",
                 "newPage": false,
                 "searchKey": "driver.ErrBadConn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -88,9 +80,7 @@
                 "identifier": "ErrRemoveArgument",
                 "newPage": false,
                 "searchKey": "driver.ErrRemoveArgument",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +100,7 @@
                 "identifier": "ResultNoRows",
                 "newPage": false,
                 "searchKey": "driver.ResultNoRows",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -132,9 +120,7 @@
                 "identifier": "Bool",
                 "newPage": false,
                 "searchKey": "driver.Bool",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -154,9 +140,7 @@
                 "identifier": "Int32",
                 "newPage": false,
                 "searchKey": "driver.Int32",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -176,9 +160,7 @@
                 "identifier": "String",
                 "newPage": false,
                 "searchKey": "driver.String",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -198,9 +180,7 @@
                 "identifier": "DefaultParameterConverter",
                 "newPage": false,
                 "searchKey": "driver.DefaultParameterConverter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +200,9 @@
                 "identifier": "valuerReflectType",
                 "newPage": false,
                 "searchKey": "driver.valuerReflectType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -240,7 +222,9 @@
                 "identifier": "now",
                 "newPage": false,
                 "searchKey": "driver.now",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +244,9 @@
                 "identifier": "answer",
                 "newPage": false,
                 "searchKey": "driver.answer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -280,7 +266,9 @@
                 "identifier": "valueConverterTests",
                 "newPage": false,
                 "searchKey": "driver.valueConverterTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -303,9 +291,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -323,9 +309,7 @@
                 "identifier": "Value",
                 "newPage": false,
                 "searchKey": "driver.Value",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -343,7 +327,9 @@
                       "identifier": "callValuerValue",
                       "newPage": false,
                       "searchKey": "driver.callValuerValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -366,9 +352,7 @@
                 "identifier": "NamedValue",
                 "newPage": false,
                 "searchKey": "driver.NamedValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -388,9 +372,7 @@
                 "identifier": "Driver",
                 "newPage": false,
                 "searchKey": "driver.Driver",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -410,9 +392,7 @@
                 "identifier": "DriverContext",
                 "newPage": false,
                 "searchKey": "driver.DriverContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -432,9 +412,7 @@
                 "identifier": "Connector",
                 "newPage": false,
                 "searchKey": "driver.Connector",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -454,9 +432,7 @@
                 "identifier": "Pinger",
                 "newPage": false,
                 "searchKey": "driver.Pinger",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -476,9 +452,7 @@
                 "identifier": "Execer",
                 "newPage": false,
                 "searchKey": "driver.Execer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -498,9 +472,7 @@
                 "identifier": "ExecerContext",
                 "newPage": false,
                 "searchKey": "driver.ExecerContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -520,9 +492,7 @@
                 "identifier": "Queryer",
                 "newPage": false,
                 "searchKey": "driver.Queryer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -542,9 +512,7 @@
                 "identifier": "QueryerContext",
                 "newPage": false,
                 "searchKey": "driver.QueryerContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -564,9 +532,7 @@
                 "identifier": "Conn",
                 "newPage": false,
                 "searchKey": "driver.Conn",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -586,9 +552,7 @@
                 "identifier": "ConnPrepareContext",
                 "newPage": false,
                 "searchKey": "driver.ConnPrepareContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -608,9 +572,7 @@
                 "identifier": "IsolationLevel",
                 "newPage": false,
                 "searchKey": "driver.IsolationLevel",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -630,9 +592,7 @@
                 "identifier": "TxOptions",
                 "newPage": false,
                 "searchKey": "driver.TxOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -652,9 +612,7 @@
                 "identifier": "ConnBeginTx",
                 "newPage": false,
                 "searchKey": "driver.ConnBeginTx",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -674,9 +632,7 @@
                 "identifier": "SessionResetter",
                 "newPage": false,
                 "searchKey": "driver.SessionResetter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -696,9 +652,7 @@
                 "identifier": "Validator",
                 "newPage": false,
                 "searchKey": "driver.Validator",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -718,9 +672,7 @@
                 "identifier": "Result",
                 "newPage": false,
                 "searchKey": "driver.Result",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -740,9 +692,7 @@
                 "identifier": "Stmt",
                 "newPage": false,
                 "searchKey": "driver.Stmt",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -762,9 +712,7 @@
                 "identifier": "StmtExecContext",
                 "newPage": false,
                 "searchKey": "driver.StmtExecContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -784,9 +732,7 @@
                 "identifier": "StmtQueryContext",
                 "newPage": false,
                 "searchKey": "driver.StmtQueryContext",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -806,9 +752,7 @@
                 "identifier": "NamedValueChecker",
                 "newPage": false,
                 "searchKey": "driver.NamedValueChecker",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -828,9 +772,7 @@
                 "identifier": "ColumnConverter",
                 "newPage": false,
                 "searchKey": "driver.ColumnConverter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -850,9 +792,7 @@
                 "identifier": "Rows",
                 "newPage": false,
                 "searchKey": "driver.Rows",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -872,9 +812,7 @@
                 "identifier": "RowsNextResultSet",
                 "newPage": false,
                 "searchKey": "driver.RowsNextResultSet",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -894,9 +832,7 @@
                 "identifier": "RowsColumnTypeScanType",
                 "newPage": false,
                 "searchKey": "driver.RowsColumnTypeScanType",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -916,9 +852,7 @@
                 "identifier": "RowsColumnTypeDatabaseTypeName",
                 "newPage": false,
                 "searchKey": "driver.RowsColumnTypeDatabaseTypeName",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -938,9 +872,7 @@
                 "identifier": "RowsColumnTypeLength",
                 "newPage": false,
                 "searchKey": "driver.RowsColumnTypeLength",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -960,9 +892,7 @@
                 "identifier": "RowsColumnTypeNullable",
                 "newPage": false,
                 "searchKey": "driver.RowsColumnTypeNullable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -982,9 +912,7 @@
                 "identifier": "RowsColumnTypePrecisionScale",
                 "newPage": false,
                 "searchKey": "driver.RowsColumnTypePrecisionScale",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1004,9 +932,7 @@
                 "identifier": "Tx",
                 "newPage": false,
                 "searchKey": "driver.Tx",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1026,9 +952,7 @@
                 "identifier": "RowsAffected",
                 "newPage": false,
                 "searchKey": "driver.RowsAffected",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1046,9 +970,7 @@
                       "identifier": "RowsAffected.LastInsertId",
                       "newPage": false,
                       "searchKey": "driver.RowsAffected.LastInsertId",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1068,9 +990,7 @@
                       "identifier": "RowsAffected.RowsAffected",
                       "newPage": false,
                       "searchKey": "driver.RowsAffected.RowsAffected",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1093,7 +1013,9 @@
                 "identifier": "noRows",
                 "newPage": false,
                 "searchKey": "driver.noRows",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1111,7 +1033,9 @@
                       "identifier": "noRows.LastInsertId",
                       "newPage": false,
                       "searchKey": "driver.noRows.LastInsertId",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1131,7 +1055,9 @@
                       "identifier": "noRows.RowsAffected",
                       "newPage": false,
                       "searchKey": "driver.noRows.RowsAffected",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1154,9 +1080,7 @@
                 "identifier": "ValueConverter",
                 "newPage": false,
                 "searchKey": "driver.ValueConverter",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1176,9 +1100,7 @@
                 "identifier": "Valuer",
                 "newPage": false,
                 "searchKey": "driver.Valuer",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1198,7 +1120,9 @@
                 "identifier": "boolType",
                 "newPage": false,
                 "searchKey": "driver.boolType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1216,7 +1140,9 @@
                       "identifier": "boolType.String",
                       "newPage": false,
                       "searchKey": "driver.boolType.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1236,7 +1162,9 @@
                       "identifier": "boolType.ConvertValue",
                       "newPage": false,
                       "searchKey": "driver.boolType.ConvertValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1259,7 +1187,9 @@
                 "identifier": "int32Type",
                 "newPage": false,
                 "searchKey": "driver.int32Type",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1277,7 +1207,9 @@
                       "identifier": "int32Type.ConvertValue",
                       "newPage": false,
                       "searchKey": "driver.int32Type.ConvertValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1300,7 +1232,9 @@
                 "identifier": "stringType",
                 "newPage": false,
                 "searchKey": "driver.stringType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1318,7 +1252,9 @@
                       "identifier": "stringType.ConvertValue",
                       "newPage": false,
                       "searchKey": "driver.stringType.ConvertValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1341,9 +1277,7 @@
                 "identifier": "Null",
                 "newPage": false,
                 "searchKey": "driver.Null",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1361,9 +1295,7 @@
                       "identifier": "Null.ConvertValue",
                       "newPage": false,
                       "searchKey": "driver.Null.ConvertValue",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1386,9 +1318,7 @@
                 "identifier": "NotNull",
                 "newPage": false,
                 "searchKey": "driver.NotNull",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1406,9 +1336,7 @@
                       "identifier": "NotNull.ConvertValue",
                       "newPage": false,
                       "searchKey": "driver.NotNull.ConvertValue",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1431,7 +1359,9 @@
                 "identifier": "defaultConverter",
                 "newPage": false,
                 "searchKey": "driver.defaultConverter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1449,7 +1379,9 @@
                       "identifier": "defaultConverter.ConvertValue",
                       "newPage": false,
                       "searchKey": "driver.defaultConverter.ConvertValue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1472,7 +1404,9 @@
                 "identifier": "decimalDecompose",
                 "newPage": false,
                 "searchKey": "driver.decimalDecompose",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1492,7 +1426,9 @@
                 "identifier": "valueConverterTest",
                 "newPage": false,
                 "searchKey": "driver.valueConverterTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1512,7 +1448,9 @@
                 "identifier": "i",
                 "newPage": false,
                 "searchKey": "driver.i",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1532,7 +1470,9 @@
                 "identifier": "f",
                 "newPage": false,
                 "searchKey": "driver.f",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1552,7 +1492,9 @@
                 "identifier": "b",
                 "newPage": false,
                 "searchKey": "driver.b",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1572,7 +1514,9 @@
                 "identifier": "bs",
                 "newPage": false,
                 "searchKey": "driver.bs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1592,7 +1536,9 @@
                 "identifier": "s",
                 "newPage": false,
                 "searchKey": "driver.s",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1612,7 +1558,9 @@
                 "identifier": "t",
                 "newPage": false,
                 "searchKey": "driver.t",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1632,7 +1580,9 @@
                 "identifier": "is",
                 "newPage": false,
                 "searchKey": "driver.is",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1652,7 +1602,9 @@
                 "identifier": "dec",
                 "newPage": false,
                 "searchKey": "driver.dec",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1670,7 +1622,9 @@
                       "identifier": "dec.Decompose",
                       "newPage": false,
                       "searchKey": "driver.dec.Decompose",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1696,9 +1650,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1716,9 +1668,7 @@
                 "identifier": "IsValue",
                 "newPage": false,
                 "searchKey": "driver.IsValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1738,9 +1688,7 @@
                 "identifier": "IsScanValue",
                 "newPage": false,
                 "searchKey": "driver.IsScanValue",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1760,7 +1708,9 @@
                 "identifier": "TestValueConverters",
                 "newPage": false,
                 "searchKey": "driver.TestValueConverters",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

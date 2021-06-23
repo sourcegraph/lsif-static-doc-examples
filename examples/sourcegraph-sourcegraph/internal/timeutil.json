@@ -4,7 +4,9 @@
     "identifier": "timeutil",
     "newPage": true,
     "searchKey": "internal/timeutil",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "FakeClock",
                 "newPage": false,
                 "searchKey": "timeutil.FakeClock",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "NewFakeClock",
                       "newPage": false,
                       "searchKey": "timeutil.NewFakeClock",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "FakeClock.Now",
                       "newPage": false,
                       "searchKey": "timeutil.FakeClock.Now",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "FakeClock.Time",
                       "newPage": false,
                       "searchKey": "timeutil.FakeClock.Time",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -132,7 +128,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -150,9 +148,7 @@
                 "identifier": "Now",
                 "newPage": false,
                 "searchKey": "timeutil.Now",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -172,9 +168,7 @@
                 "identifier": "StartOfWeek",
                 "newPage": false,
                 "searchKey": "timeutil.StartOfWeek",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -194,7 +188,9 @@
                 "identifier": "TestWeek_StartOfWeek",
                 "newPage": false,
                 "searchKey": "timeutil.TestWeek_StartOfWeek",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

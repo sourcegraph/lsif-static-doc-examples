@@ -10,7 +10,7 @@
     * [type Service struct](#Service)
     * [type Dumper interface](#Dumper)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.debug.go)
     * [func NewServerRoutine(ready <-chan struct{}, extra ...Endpoint) goroutine.BackgroundRoutine](#NewServerRoutine)
     * [func expvarHandler(w http.ResponseWriter, r *http.Request)](#expvarHandler)
     * [func gcHandler(w http.ResponseWriter, r *http.Request)](#gcHandler)
@@ -22,10 +22,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="addr" href="#addr">var addr</a>
 
 ```
 searchKey: debugserver.addr
+tags: [private]
 ```
 
 ```Go
@@ -36,7 +41,6 @@ var addr = env.Get("SRC_PROF_HTTP", ":6060", "net/http/pprof http bind address."
 
 ```
 searchKey: debugserver.Services
-tags: [exported]
 ```
 
 ```Go
@@ -47,11 +51,14 @@ Services is the list of registered services' debug addresses. Populated from SRC
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Endpoint" href="#Endpoint">type Endpoint struct</a>
 
 ```
 searchKey: debugserver.Endpoint
-tags: [exported]
 ```
 
 ```Go
@@ -71,7 +78,6 @@ Endpoint is a handler for the debug server. It will be displayed on the debug in
 
 ```
 searchKey: debugserver.Service
-tags: [exported]
 ```
 
 ```Go
@@ -94,7 +100,6 @@ Service is a service's debug addr (host:port).
 
 ```
 searchKey: debugserver.Dumper
-tags: [exported]
 ```
 
 ```Go
@@ -108,10 +113,15 @@ Dumper is a service which can dump its state for debugging.
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init" href="#init">func init()</a>
+```
+tags: [private]
+```
+
+### <a id="init.debug.go" href="#init.debug.go">func init()</a>
 
 ```
 searchKey: debugserver.init
+tags: [private]
 ```
 
 ```Go
@@ -122,7 +132,6 @@ func init()
 
 ```
 searchKey: debugserver.NewServerRoutine
-tags: [exported]
 ```
 
 ```Go
@@ -135,6 +144,7 @@ NewServerRoutine returns a background routine that exposes pprof and metrics end
 
 ```
 searchKey: debugserver.expvarHandler
+tags: [private]
 ```
 
 ```Go
@@ -147,6 +157,7 @@ expvarHandler is copied from package expvar and exported so that it can be mount
 
 ```
 searchKey: debugserver.gcHandler
+tags: [private]
 ```
 
 ```Go
@@ -157,6 +168,7 @@ func gcHandler(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: debugserver.freeOSMemoryHandler
+tags: [private]
 ```
 
 ```Go
@@ -167,6 +179,7 @@ func freeOSMemoryHandler(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: debugserver.registerMetadataGauge
+tags: [private]
 ```
 
 ```Go
@@ -177,6 +190,7 @@ func registerMetadataGauge()
 
 ```
 searchKey: debugserver.healthzHandler
+tags: [private]
 ```
 
 ```Go
@@ -189,6 +203,7 @@ healthzHandler is the http.HandlerFunc that responds to /healthz requests on the
 
 ```
 searchKey: debugserver.readyHandler
+tags: [private]
 ```
 
 ```Go

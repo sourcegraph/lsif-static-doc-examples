@@ -4,9 +4,7 @@
     "identifier": "fcgi",
     "newPage": true,
     "searchKey": "net/http/fcgi",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "typeBeginRequest",
                 "newPage": false,
                 "searchKey": "fcgi.typeBeginRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "typeAbortRequest",
                 "newPage": false,
                 "searchKey": "fcgi.typeAbortRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "typeEndRequest",
                 "newPage": false,
                 "searchKey": "fcgi.typeEndRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "typeParams",
                 "newPage": false,
                 "searchKey": "fcgi.typeParams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "typeStdin",
                 "newPage": false,
                 "searchKey": "fcgi.typeStdin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "typeStdout",
                 "newPage": false,
                 "searchKey": "fcgi.typeStdout",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,7 +172,9 @@
                 "identifier": "typeStderr",
                 "newPage": false,
                 "searchKey": "fcgi.typeStderr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +194,9 @@
                 "identifier": "typeData",
                 "newPage": false,
                 "searchKey": "fcgi.typeData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +216,9 @@
                 "identifier": "typeGetValues",
                 "newPage": false,
                 "searchKey": "fcgi.typeGetValues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +238,9 @@
                 "identifier": "typeGetValuesResult",
                 "newPage": false,
                 "searchKey": "fcgi.typeGetValuesResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -244,7 +260,9 @@
                 "identifier": "typeUnknownType",
                 "newPage": false,
                 "searchKey": "fcgi.typeUnknownType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -264,7 +282,9 @@
                 "identifier": "flagKeepConn",
                 "newPage": false,
                 "searchKey": "fcgi.flagKeepConn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -284,7 +304,9 @@
                 "identifier": "maxWrite",
                 "newPage": false,
                 "searchKey": "fcgi.maxWrite",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,7 +326,9 @@
                 "identifier": "maxPad",
                 "newPage": false,
                 "searchKey": "fcgi.maxPad",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -324,7 +348,9 @@
                 "identifier": "roleResponder",
                 "newPage": false,
                 "searchKey": "fcgi.roleResponder",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -344,7 +370,9 @@
                 "identifier": "roleAuthorizer",
                 "newPage": false,
                 "searchKey": "fcgi.roleAuthorizer",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,7 +392,9 @@
                 "identifier": "roleFilter",
                 "newPage": false,
                 "searchKey": "fcgi.roleFilter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -384,7 +414,9 @@
                 "identifier": "statusRequestComplete",
                 "newPage": false,
                 "searchKey": "fcgi.statusRequestComplete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -404,7 +436,9 @@
                 "identifier": "statusCantMultiplex",
                 "newPage": false,
                 "searchKey": "fcgi.statusCantMultiplex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -424,7 +458,9 @@
                 "identifier": "statusOverloaded",
                 "newPage": false,
                 "searchKey": "fcgi.statusOverloaded",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -444,7 +480,9 @@
                 "identifier": "statusUnknownRole",
                 "newPage": false,
                 "searchKey": "fcgi.statusUnknownRole",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,9 +505,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -487,7 +523,9 @@
                 "identifier": "errCloseConn",
                 "newPage": false,
                 "searchKey": "fcgi.errCloseConn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +545,9 @@
                 "identifier": "emptyBody",
                 "newPage": false,
                 "searchKey": "fcgi.emptyBody",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,9 +567,7 @@
                 "identifier": "ErrRequestAborted",
                 "newPage": false,
                 "searchKey": "fcgi.ErrRequestAborted",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -549,9 +587,7 @@
                 "identifier": "ErrConnClosed",
                 "newPage": false,
                 "searchKey": "fcgi.ErrConnClosed",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -571,7 +607,9 @@
                 "identifier": "pad",
                 "newPage": false,
                 "searchKey": "fcgi.pad",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -591,7 +629,9 @@
                 "identifier": "sizeTests",
                 "newPage": false,
                 "searchKey": "fcgi.sizeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -611,7 +651,9 @@
                 "identifier": "streamTests",
                 "newPage": false,
                 "searchKey": "fcgi.streamTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -631,7 +673,9 @@
                 "identifier": "streamBeginTypeStdin",
                 "newPage": false,
                 "searchKey": "fcgi.streamBeginTypeStdin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -651,7 +695,9 @@
                 "identifier": "cleanUpTests",
                 "newPage": false,
                 "searchKey": "fcgi.cleanUpTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -671,7 +717,9 @@
                 "identifier": "streamFullRequestStdin",
                 "newPage": false,
                 "searchKey": "fcgi.streamFullRequestStdin",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -691,7 +739,9 @@
                 "identifier": "envVarTests",
                 "newPage": false,
                 "searchKey": "fcgi.envVarTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -714,9 +764,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -734,7 +782,9 @@
                 "identifier": "request",
                 "newPage": false,
                 "searchKey": "fcgi.request",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -752,7 +802,9 @@
                       "identifier": "newRequest",
                       "newPage": false,
                       "searchKey": "fcgi.newRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -772,7 +824,9 @@
                       "identifier": "request.parseParams",
                       "newPage": false,
                       "searchKey": "fcgi.request.parseParams",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -795,7 +849,9 @@
                 "identifier": "envVarsContextKey",
                 "newPage": false,
                 "searchKey": "fcgi.envVarsContextKey",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -815,7 +871,9 @@
                 "identifier": "response",
                 "newPage": false,
                 "searchKey": "fcgi.response",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -833,7 +891,9 @@
                       "identifier": "newResponse",
                       "newPage": false,
                       "searchKey": "fcgi.newResponse",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -853,7 +913,9 @@
                       "identifier": "response.Header",
                       "newPage": false,
                       "searchKey": "fcgi.response.Header",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -873,7 +935,9 @@
                       "identifier": "response.Write",
                       "newPage": false,
                       "searchKey": "fcgi.response.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -893,7 +957,9 @@
                       "identifier": "response.WriteHeader",
                       "newPage": false,
                       "searchKey": "fcgi.response.WriteHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -913,7 +979,9 @@
                       "identifier": "response.writeCGIHeader",
                       "newPage": false,
                       "searchKey": "fcgi.response.writeCGIHeader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -933,7 +1001,9 @@
                       "identifier": "response.Flush",
                       "newPage": false,
                       "searchKey": "fcgi.response.Flush",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -953,7 +1023,9 @@
                       "identifier": "response.Close",
                       "newPage": false,
                       "searchKey": "fcgi.response.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -976,7 +1048,9 @@
                 "identifier": "child",
                 "newPage": false,
                 "searchKey": "fcgi.child",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -994,7 +1068,9 @@
                       "identifier": "newChild",
                       "newPage": false,
                       "searchKey": "fcgi.newChild",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1014,7 +1090,9 @@
                       "identifier": "child.serve",
                       "newPage": false,
                       "searchKey": "fcgi.child.serve",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1034,7 +1112,9 @@
                       "identifier": "child.handleRecord",
                       "newPage": false,
                       "searchKey": "fcgi.child.handleRecord",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1054,7 +1134,9 @@
                       "identifier": "child.serveRequest",
                       "newPage": false,
                       "searchKey": "fcgi.child.serveRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1074,7 +1156,9 @@
                       "identifier": "child.cleanUp",
                       "newPage": false,
                       "searchKey": "fcgi.child.cleanUp",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1097,7 +1181,9 @@
                 "identifier": "recType",
                 "newPage": false,
                 "searchKey": "fcgi.recType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1117,7 +1203,9 @@
                 "identifier": "header",
                 "newPage": false,
                 "searchKey": "fcgi.header",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1130,12 +1218,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/net/http/fcgi#header.init",
+                    "pathID": "/net/http/fcgi#header.init.fcgi.go",
                     "documentation": {
-                      "identifier": "header.init",
+                      "identifier": "header.init.fcgi.go",
                       "newPage": false,
                       "searchKey": "fcgi.header.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1158,7 +1248,9 @@
                 "identifier": "beginRequest",
                 "newPage": false,
                 "searchKey": "fcgi.beginRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1176,7 +1268,9 @@
                       "identifier": "beginRequest.read",
                       "newPage": false,
                       "searchKey": "fcgi.beginRequest.read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1199,7 +1293,9 @@
                 "identifier": "conn",
                 "newPage": false,
                 "searchKey": "fcgi.conn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1217,7 +1313,9 @@
                       "identifier": "newConn",
                       "newPage": false,
                       "searchKey": "fcgi.newConn",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1237,7 +1335,9 @@
                       "identifier": "conn.Close",
                       "newPage": false,
                       "searchKey": "fcgi.conn.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1257,7 +1357,9 @@
                       "identifier": "conn.writeRecord",
                       "newPage": false,
                       "searchKey": "fcgi.conn.writeRecord",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1277,7 +1379,9 @@
                       "identifier": "conn.writeEndRequest",
                       "newPage": false,
                       "searchKey": "fcgi.conn.writeEndRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1297,7 +1401,9 @@
                       "identifier": "conn.writePairs",
                       "newPage": false,
                       "searchKey": "fcgi.conn.writePairs",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1320,7 +1426,9 @@
                 "identifier": "record",
                 "newPage": false,
                 "searchKey": "fcgi.record",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1338,7 +1446,9 @@
                       "identifier": "record.read",
                       "newPage": false,
                       "searchKey": "fcgi.record.read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1358,7 +1468,9 @@
                       "identifier": "record.content",
                       "newPage": false,
                       "searchKey": "fcgi.record.content",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1381,7 +1493,9 @@
                 "identifier": "bufWriter",
                 "newPage": false,
                 "searchKey": "fcgi.bufWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1399,7 +1513,9 @@
                       "identifier": "newWriter",
                       "newPage": false,
                       "searchKey": "fcgi.newWriter",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1419,7 +1535,9 @@
                       "identifier": "bufWriter.Close",
                       "newPage": false,
                       "searchKey": "fcgi.bufWriter.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1442,7 +1560,9 @@
                 "identifier": "streamWriter",
                 "newPage": false,
                 "searchKey": "fcgi.streamWriter",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1460,7 +1580,9 @@
                       "identifier": "streamWriter.Write",
                       "newPage": false,
                       "searchKey": "fcgi.streamWriter.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1480,7 +1602,9 @@
                       "identifier": "streamWriter.Close",
                       "newPage": false,
                       "searchKey": "fcgi.streamWriter.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1503,7 +1627,9 @@
                 "identifier": "nilCloser",
                 "newPage": false,
                 "searchKey": "fcgi.nilCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1521,7 +1647,9 @@
                       "identifier": "nilCloser.Close",
                       "newPage": false,
                       "searchKey": "fcgi.nilCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1544,7 +1672,9 @@
                 "identifier": "writeOnlyConn",
                 "newPage": false,
                 "searchKey": "fcgi.writeOnlyConn",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1562,7 +1692,9 @@
                       "identifier": "writeOnlyConn.Write",
                       "newPage": false,
                       "searchKey": "fcgi.writeOnlyConn.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1582,7 +1714,9 @@
                       "identifier": "writeOnlyConn.Read",
                       "newPage": false,
                       "searchKey": "fcgi.writeOnlyConn.Read",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1602,7 +1736,9 @@
                       "identifier": "writeOnlyConn.Close",
                       "newPage": false,
                       "searchKey": "fcgi.writeOnlyConn.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1625,7 +1761,9 @@
                 "identifier": "nopWriteCloser",
                 "newPage": false,
                 "searchKey": "fcgi.nopWriteCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1643,7 +1781,9 @@
                       "identifier": "nopWriteCloser.Write",
                       "newPage": false,
                       "searchKey": "fcgi.nopWriteCloser.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1663,7 +1803,9 @@
                       "identifier": "nopWriteCloser.Close",
                       "newPage": false,
                       "searchKey": "fcgi.nopWriteCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1686,7 +1828,9 @@
                 "identifier": "rwNopCloser",
                 "newPage": false,
                 "searchKey": "fcgi.rwNopCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1704,7 +1848,9 @@
                       "identifier": "rwNopCloser.Close",
                       "newPage": false,
                       "searchKey": "fcgi.rwNopCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1727,7 +1873,9 @@
                 "identifier": "signallingNopCloser",
                 "newPage": false,
                 "searchKey": "fcgi.signallingNopCloser",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1745,7 +1893,9 @@
                       "identifier": "signallingNopCloser.Write",
                       "newPage": false,
                       "searchKey": "fcgi.signallingNopCloser.Write",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1765,7 +1915,9 @@
                       "identifier": "signallingNopCloser.Close",
                       "newPage": false,
                       "searchKey": "fcgi.signallingNopCloser.Close",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1791,9 +1943,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1811,7 +1961,9 @@
                 "identifier": "filterOutUsedEnvVars",
                 "newPage": false,
                 "searchKey": "fcgi.filterOutUsedEnvVars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1831,9 +1983,7 @@
                 "identifier": "Serve",
                 "newPage": false,
                 "searchKey": "fcgi.Serve",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1853,9 +2003,7 @@
                 "identifier": "ProcessEnv",
                 "newPage": false,
                 "searchKey": "fcgi.ProcessEnv",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1875,7 +2023,9 @@
                 "identifier": "addFastCGIEnvToContext",
                 "newPage": false,
                 "searchKey": "fcgi.addFastCGIEnvToContext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1895,7 +2045,9 @@
                 "identifier": "readSize",
                 "newPage": false,
                 "searchKey": "fcgi.readSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1915,7 +2067,9 @@
                 "identifier": "readString",
                 "newPage": false,
                 "searchKey": "fcgi.readString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1935,7 +2089,9 @@
                 "identifier": "encodeSize",
                 "newPage": false,
                 "searchKey": "fcgi.encodeSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1955,7 +2111,9 @@
                 "identifier": "TestSize",
                 "newPage": false,
                 "searchKey": "fcgi.TestSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1975,7 +2133,9 @@
                 "identifier": "TestStreams",
                 "newPage": false,
                 "searchKey": "fcgi.TestStreams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1995,7 +2155,9 @@
                 "identifier": "TestGetValues",
                 "newPage": false,
                 "searchKey": "fcgi.TestGetValues",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2015,7 +2177,9 @@
                 "identifier": "nameValuePair11",
                 "newPage": false,
                 "searchKey": "fcgi.nameValuePair11",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2035,7 +2199,9 @@
                 "identifier": "makeRecord",
                 "newPage": false,
                 "searchKey": "fcgi.makeRecord",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2055,7 +2221,9 @@
                 "identifier": "TestChildServeCleansUp",
                 "newPage": false,
                 "searchKey": "fcgi.TestChildServeCleansUp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2075,7 +2243,9 @@
                 "identifier": "TestMalformedParams",
                 "newPage": false,
                 "searchKey": "fcgi.TestMalformedParams",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2095,7 +2265,9 @@
                 "identifier": "TestChildServeReadsEnvVars",
                 "newPage": false,
                 "searchKey": "fcgi.TestChildServeReadsEnvVars",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2115,7 +2287,9 @@
                 "identifier": "TestResponseWriterSniffsContentType",
                 "newPage": false,
                 "searchKey": "fcgi.TestResponseWriterSniffsContentType",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2135,7 +2309,9 @@
                 "identifier": "TestSlowRequest",
                 "newPage": false,
                 "searchKey": "fcgi.TestSlowRequest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

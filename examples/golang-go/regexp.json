@@ -4,9 +4,7 @@
     "identifier": "regexp",
     "newPage": true,
     "searchKey": "regexp",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -24,9 +22,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -44,7 +40,9 @@
                 "identifier": "visitedBits",
                 "newPage": false,
                 "searchKey": "regexp.visitedBits",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +62,9 @@
                 "identifier": "maxBacktrackProg",
                 "newPage": false,
                 "searchKey": "regexp.maxBacktrackProg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +84,9 @@
                 "identifier": "maxBacktrackVector",
                 "newPage": false,
                 "searchKey": "regexp.maxBacktrackVector",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +106,9 @@
                 "identifier": "mergeFailed",
                 "newPage": false,
                 "searchKey": "regexp.mergeFailed",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +128,9 @@
                 "identifier": "endOfText",
                 "newPage": false,
                 "searchKey": "regexp.endOfText",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +150,9 @@
                 "identifier": "startSize",
                 "newPage": false,
                 "searchKey": "regexp.startSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,9 +175,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "bitStatePool",
                 "newPage": false,
                 "searchKey": "regexp.bitStatePool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "onePassPool",
                 "newPage": false,
                 "searchKey": "regexp.onePassPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -227,7 +237,9 @@
                 "identifier": "arrayNoInts",
                 "newPage": false,
                 "searchKey": "regexp.arrayNoInts",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -247,7 +259,9 @@
                 "identifier": "noRune",
                 "newPage": false,
                 "searchKey": "regexp.noRune",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,7 +281,9 @@
                 "identifier": "noNext",
                 "newPage": false,
                 "searchKey": "regexp.noNext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -287,7 +303,9 @@
                 "identifier": "anyRuneNotNL",
                 "newPage": false,
                 "searchKey": "regexp.anyRuneNotNL",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -307,7 +325,9 @@
                 "identifier": "anyRune",
                 "newPage": false,
                 "searchKey": "regexp.anyRune",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -327,7 +347,9 @@
                 "identifier": "matchSize",
                 "newPage": false,
                 "searchKey": "regexp.matchSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,7 +369,9 @@
                 "identifier": "matchPool",
                 "newPage": false,
                 "searchKey": "regexp.matchPool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +391,9 @@
                 "identifier": "specialBytes",
                 "newPage": false,
                 "searchKey": "regexp.specialBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +413,9 @@
                 "identifier": "goodRe",
                 "newPage": false,
                 "searchKey": "regexp.goodRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,7 +435,9 @@
                 "identifier": "badRe",
                 "newPage": false,
                 "searchKey": "regexp.badRe",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -427,7 +457,9 @@
                 "identifier": "replaceTests",
                 "newPage": false,
                 "searchKey": "regexp.replaceTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,7 +479,9 @@
                 "identifier": "replaceLiteralTests",
                 "newPage": false,
                 "searchKey": "regexp.replaceLiteralTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,7 +501,9 @@
                 "identifier": "replaceFuncTests",
                 "newPage": false,
                 "searchKey": "regexp.replaceFuncTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,7 +523,9 @@
                 "identifier": "metaTests",
                 "newPage": false,
                 "searchKey": "regexp.metaTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +545,9 @@
                 "identifier": "literalPrefixTests",
                 "newPage": false,
                 "searchKey": "regexp.literalPrefixTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,7 +567,9 @@
                 "identifier": "emptySubexpIndices",
                 "newPage": false,
                 "searchKey": "regexp.emptySubexpIndices",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -547,7 +589,9 @@
                 "identifier": "subexpCases",
                 "newPage": false,
                 "searchKey": "regexp.subexpCases",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -567,7 +611,9 @@
                 "identifier": "splitTests",
                 "newPage": false,
                 "searchKey": "regexp.splitTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -587,7 +633,9 @@
                 "identifier": "sink",
                 "newPage": false,
                 "searchKey": "regexp.sink",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -607,7 +655,9 @@
                 "identifier": "compileBenchData",
                 "newPage": false,
                 "searchKey": "regexp.compileBenchData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -627,7 +677,9 @@
                 "identifier": "minInputLenTests",
                 "newPage": false,
                 "searchKey": "regexp.minInputLenTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -647,7 +699,9 @@
                 "identifier": "run",
                 "newPage": false,
                 "searchKey": "regexp.run",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -667,7 +721,9 @@
                 "identifier": "match",
                 "newPage": false,
                 "searchKey": "regexp.match",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -687,7 +743,9 @@
                 "identifier": "notab",
                 "newPage": false,
                 "searchKey": "regexp.notab",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -707,7 +765,9 @@
                 "identifier": "text",
                 "newPage": false,
                 "searchKey": "regexp.text",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -727,7 +787,9 @@
                 "identifier": "benchData",
                 "newPage": false,
                 "searchKey": "regexp.benchData",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -747,7 +809,9 @@
                 "identifier": "benchSizes",
                 "newPage": false,
                 "searchKey": "regexp.benchSizes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -767,7 +831,9 @@
                 "identifier": "findTests",
                 "newPage": false,
                 "searchKey": "regexp.findTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -787,7 +853,9 @@
                 "identifier": "runeMergeTests",
                 "newPage": false,
                 "searchKey": "regexp.runeMergeTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -807,7 +875,9 @@
                 "identifier": "onePassTests",
                 "newPage": false,
                 "searchKey": "regexp.onePassTests",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -827,7 +897,9 @@
                 "identifier": "onePassTests1",
                 "newPage": false,
                 "searchKey": "regexp.onePassTests1",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -850,9 +922,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -870,7 +940,9 @@
                 "identifier": "job",
                 "newPage": false,
                 "searchKey": "regexp.job",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -890,7 +962,9 @@
                 "identifier": "bitState",
                 "newPage": false,
                 "searchKey": "regexp.bitState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -908,7 +982,9 @@
                       "identifier": "newBitState",
                       "newPage": false,
                       "searchKey": "regexp.newBitState",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -928,7 +1004,9 @@
                       "identifier": "bitState.reset",
                       "newPage": false,
                       "searchKey": "regexp.bitState.reset",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -948,7 +1026,9 @@
                       "identifier": "bitState.shouldVisit",
                       "newPage": false,
                       "searchKey": "regexp.bitState.shouldVisit",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -968,7 +1048,9 @@
                       "identifier": "bitState.push",
                       "newPage": false,
                       "searchKey": "regexp.bitState.push",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -991,7 +1073,9 @@
                 "identifier": "queue",
                 "newPage": false,
                 "searchKey": "regexp.queue",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1011,7 +1095,9 @@
                 "identifier": "entry",
                 "newPage": false,
                 "searchKey": "regexp.entry",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1031,7 +1117,9 @@
                 "identifier": "thread",
                 "newPage": false,
                 "searchKey": "regexp.thread",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1051,7 +1139,9 @@
                 "identifier": "machine",
                 "newPage": false,
                 "searchKey": "regexp.machine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1064,12 +1154,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/regexp#machine.init",
+                    "pathID": "/regexp#machine.init.exec.go.0xc05f359588",
                     "documentation": {
-                      "identifier": "machine.init",
+                      "identifier": "machine.init.exec.go.0xc05f359588",
                       "newPage": false,
                       "searchKey": "regexp.machine.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1089,7 +1181,9 @@
                       "identifier": "machine.alloc",
                       "newPage": false,
                       "searchKey": "regexp.machine.alloc",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1109,7 +1203,9 @@
                       "identifier": "machine.match",
                       "newPage": false,
                       "searchKey": "regexp.machine.match",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1129,7 +1225,9 @@
                       "identifier": "machine.clear",
                       "newPage": false,
                       "searchKey": "regexp.machine.clear",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1149,7 +1247,9 @@
                       "identifier": "machine.step",
                       "newPage": false,
                       "searchKey": "regexp.machine.step",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1169,7 +1269,9 @@
                       "identifier": "machine.add",
                       "newPage": false,
                       "searchKey": "regexp.machine.add",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1192,7 +1294,9 @@
                 "identifier": "inputs",
                 "newPage": false,
                 "searchKey": "regexp.inputs",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1210,7 +1314,9 @@
                       "identifier": "inputs.newBytes",
                       "newPage": false,
                       "searchKey": "regexp.inputs.newBytes",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1230,7 +1336,9 @@
                       "identifier": "inputs.newString",
                       "newPage": false,
                       "searchKey": "regexp.inputs.newString",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1250,7 +1358,9 @@
                       "identifier": "inputs.newReader",
                       "newPage": false,
                       "searchKey": "regexp.inputs.newReader",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1270,7 +1380,9 @@
                       "identifier": "inputs.clear",
                       "newPage": false,
                       "searchKey": "regexp.inputs.clear",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1285,12 +1397,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/regexp#inputs.init",
+                    "pathID": "/regexp#inputs.init.exec.go",
                     "documentation": {
-                      "identifier": "inputs.init",
+                      "identifier": "inputs.init.exec.go",
                       "newPage": false,
                       "searchKey": "regexp.inputs.init",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1313,7 +1427,9 @@
                 "identifier": "lazyFlag",
                 "newPage": false,
                 "searchKey": "regexp.lazyFlag",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1331,7 +1447,9 @@
                       "identifier": "newLazyFlag",
                       "newPage": false,
                       "searchKey": "regexp.newLazyFlag",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1351,7 +1469,9 @@
                       "identifier": "lazyFlag.match",
                       "newPage": false,
                       "searchKey": "regexp.lazyFlag.match",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1374,7 +1494,9 @@
                 "identifier": "onePassMachine",
                 "newPage": false,
                 "searchKey": "regexp.onePassMachine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1392,7 +1514,9 @@
                       "identifier": "newOnePassMachine",
                       "newPage": false,
                       "searchKey": "regexp.newOnePassMachine",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1415,7 +1539,9 @@
                 "identifier": "onePassProg",
                 "newPage": false,
                 "searchKey": "regexp.onePassProg",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1433,7 +1559,9 @@
                       "identifier": "onePassCopy",
                       "newPage": false,
                       "searchKey": "regexp.onePassCopy",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1453,7 +1581,9 @@
                       "identifier": "makeOnePass",
                       "newPage": false,
                       "searchKey": "regexp.makeOnePass",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1473,7 +1603,9 @@
                       "identifier": "compileOnePass",
                       "newPage": false,
                       "searchKey": "regexp.compileOnePass",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1496,7 +1628,9 @@
                 "identifier": "onePassInst",
                 "newPage": false,
                 "searchKey": "regexp.onePassInst",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1516,7 +1650,9 @@
                 "identifier": "queueOnePass",
                 "newPage": false,
                 "searchKey": "regexp.queueOnePass",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1534,7 +1670,9 @@
                       "identifier": "newQueue",
                       "newPage": false,
                       "searchKey": "regexp.newQueue",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1554,7 +1692,9 @@
                       "identifier": "queueOnePass.empty",
                       "newPage": false,
                       "searchKey": "regexp.queueOnePass.empty",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1574,7 +1714,9 @@
                       "identifier": "queueOnePass.next",
                       "newPage": false,
                       "searchKey": "regexp.queueOnePass.next",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1594,7 +1736,9 @@
                       "identifier": "queueOnePass.clear",
                       "newPage": false,
                       "searchKey": "regexp.queueOnePass.clear",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1614,7 +1758,9 @@
                       "identifier": "queueOnePass.contains",
                       "newPage": false,
                       "searchKey": "regexp.queueOnePass.contains",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1634,7 +1780,9 @@
                       "identifier": "queueOnePass.insert",
                       "newPage": false,
                       "searchKey": "regexp.queueOnePass.insert",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1654,7 +1802,9 @@
                       "identifier": "queueOnePass.insertNew",
                       "newPage": false,
                       "searchKey": "regexp.queueOnePass.insertNew",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1677,7 +1827,9 @@
                 "identifier": "runeSlice",
                 "newPage": false,
                 "searchKey": "regexp.runeSlice",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1695,7 +1847,9 @@
                       "identifier": "runeSlice.Len",
                       "newPage": false,
                       "searchKey": "regexp.runeSlice.Len",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1715,7 +1869,9 @@
                       "identifier": "runeSlice.Less",
                       "newPage": false,
                       "searchKey": "regexp.runeSlice.Less",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1735,7 +1891,9 @@
                       "identifier": "runeSlice.Swap",
                       "newPage": false,
                       "searchKey": "regexp.runeSlice.Swap",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1758,9 +1916,7 @@
                 "identifier": "Regexp",
                 "newPage": false,
                 "searchKey": "regexp.Regexp",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -1778,9 +1934,7 @@
                       "identifier": "Compile",
                       "newPage": false,
                       "searchKey": "regexp.Compile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1800,9 +1954,7 @@
                       "identifier": "CompilePOSIX",
                       "newPage": false,
                       "searchKey": "regexp.CompilePOSIX",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1822,7 +1974,9 @@
                       "identifier": "compile",
                       "newPage": false,
                       "searchKey": "regexp.compile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1842,9 +1996,7 @@
                       "identifier": "MustCompile",
                       "newPage": false,
                       "searchKey": "regexp.MustCompile",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1864,9 +2016,7 @@
                       "identifier": "MustCompilePOSIX",
                       "newPage": false,
                       "searchKey": "regexp.MustCompilePOSIX",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1886,7 +2036,9 @@
                       "identifier": "compileTest",
                       "newPage": false,
                       "searchKey": "regexp.compileTest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1906,7 +2058,9 @@
                       "identifier": "tryCompile",
                       "newPage": false,
                       "searchKey": "regexp.tryCompile",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1926,7 +2080,9 @@
                       "identifier": "Regexp.tryBacktrack",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.tryBacktrack",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1946,7 +2102,9 @@
                       "identifier": "Regexp.backtrack",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.backtrack",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1966,7 +2124,9 @@
                       "identifier": "Regexp.doOnePass",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.doOnePass",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1986,7 +2146,9 @@
                       "identifier": "Regexp.doMatch",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.doMatch",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2006,7 +2168,9 @@
                       "identifier": "Regexp.doExecute",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.doExecute",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2026,9 +2190,7 @@
                       "identifier": "Regexp.String",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.String",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2049,7 +2211,6 @@
                       "newPage": false,
                       "searchKey": "regexp.Regexp.Copy",
                       "tags": [
-                        "exported",
                         "deprecated"
                       ]
                     },
@@ -2071,9 +2232,7 @@
                       "identifier": "Regexp.Longest",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.Longest",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2093,7 +2252,9 @@
                       "identifier": "Regexp.get",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.get",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2113,7 +2274,9 @@
                       "identifier": "Regexp.put",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.put",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2133,9 +2296,7 @@
                       "identifier": "Regexp.NumSubexp",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.NumSubexp",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2155,9 +2316,7 @@
                       "identifier": "Regexp.SubexpNames",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.SubexpNames",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2177,9 +2336,7 @@
                       "identifier": "Regexp.SubexpIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.SubexpIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2199,9 +2356,7 @@
                       "identifier": "Regexp.LiteralPrefix",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.LiteralPrefix",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2221,9 +2376,7 @@
                       "identifier": "Regexp.MatchReader",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.MatchReader",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2243,9 +2396,7 @@
                       "identifier": "Regexp.MatchString",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.MatchString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2265,9 +2416,7 @@
                       "identifier": "Regexp.Match",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.Match",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2287,9 +2436,7 @@
                       "identifier": "Regexp.ReplaceAllString",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.ReplaceAllString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2309,9 +2456,7 @@
                       "identifier": "Regexp.ReplaceAllLiteralString",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.ReplaceAllLiteralString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2331,9 +2476,7 @@
                       "identifier": "Regexp.ReplaceAllStringFunc",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.ReplaceAllStringFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2353,7 +2496,9 @@
                       "identifier": "Regexp.replaceAll",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.replaceAll",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2373,9 +2518,7 @@
                       "identifier": "Regexp.ReplaceAll",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.ReplaceAll",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2395,9 +2538,7 @@
                       "identifier": "Regexp.ReplaceAllLiteral",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.ReplaceAllLiteral",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2417,9 +2558,7 @@
                       "identifier": "Regexp.ReplaceAllFunc",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.ReplaceAllFunc",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2439,7 +2578,9 @@
                       "identifier": "Regexp.pad",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.pad",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2459,7 +2600,9 @@
                       "identifier": "Regexp.allMatches",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.allMatches",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2479,9 +2622,7 @@
                       "identifier": "Regexp.Find",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.Find",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2501,9 +2642,7 @@
                       "identifier": "Regexp.FindIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2523,9 +2662,7 @@
                       "identifier": "Regexp.FindString",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2545,9 +2682,7 @@
                       "identifier": "Regexp.FindStringIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindStringIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2567,9 +2702,7 @@
                       "identifier": "Regexp.FindReaderIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindReaderIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2589,9 +2722,7 @@
                       "identifier": "Regexp.FindSubmatch",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindSubmatch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2611,9 +2742,7 @@
                       "identifier": "Regexp.Expand",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.Expand",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2633,9 +2762,7 @@
                       "identifier": "Regexp.ExpandString",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.ExpandString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2655,7 +2782,9 @@
                       "identifier": "Regexp.expand",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.expand",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2675,9 +2804,7 @@
                       "identifier": "Regexp.FindSubmatchIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindSubmatchIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2697,9 +2824,7 @@
                       "identifier": "Regexp.FindStringSubmatch",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindStringSubmatch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2719,9 +2844,7 @@
                       "identifier": "Regexp.FindStringSubmatchIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindStringSubmatchIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2741,9 +2864,7 @@
                       "identifier": "Regexp.FindReaderSubmatchIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindReaderSubmatchIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2763,9 +2884,7 @@
                       "identifier": "Regexp.FindAll",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindAll",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2785,9 +2904,7 @@
                       "identifier": "Regexp.FindAllIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindAllIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2807,9 +2924,7 @@
                       "identifier": "Regexp.FindAllString",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindAllString",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2829,9 +2944,7 @@
                       "identifier": "Regexp.FindAllStringIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindAllStringIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2851,9 +2964,7 @@
                       "identifier": "Regexp.FindAllSubmatch",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindAllSubmatch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2873,9 +2984,7 @@
                       "identifier": "Regexp.FindAllSubmatchIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindAllSubmatchIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2895,9 +3004,7 @@
                       "identifier": "Regexp.FindAllStringSubmatch",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindAllStringSubmatch",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2917,9 +3024,7 @@
                       "identifier": "Regexp.FindAllStringSubmatchIndex",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.FindAllStringSubmatchIndex",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2939,9 +3044,7 @@
                       "identifier": "Regexp.Split",
                       "newPage": false,
                       "searchKey": "regexp.Regexp.Split",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2964,7 +3067,9 @@
                 "identifier": "input",
                 "newPage": false,
                 "searchKey": "regexp.input",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2984,7 +3089,9 @@
                 "identifier": "inputString",
                 "newPage": false,
                 "searchKey": "regexp.inputString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3002,7 +3109,9 @@
                       "identifier": "inputString.step",
                       "newPage": false,
                       "searchKey": "regexp.inputString.step",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3022,7 +3131,9 @@
                       "identifier": "inputString.canCheckPrefix",
                       "newPage": false,
                       "searchKey": "regexp.inputString.canCheckPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3042,7 +3153,9 @@
                       "identifier": "inputString.hasPrefix",
                       "newPage": false,
                       "searchKey": "regexp.inputString.hasPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3062,7 +3175,9 @@
                       "identifier": "inputString.index",
                       "newPage": false,
                       "searchKey": "regexp.inputString.index",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3082,7 +3197,9 @@
                       "identifier": "inputString.context",
                       "newPage": false,
                       "searchKey": "regexp.inputString.context",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3105,7 +3222,9 @@
                 "identifier": "inputBytes",
                 "newPage": false,
                 "searchKey": "regexp.inputBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3123,7 +3242,9 @@
                       "identifier": "inputBytes.step",
                       "newPage": false,
                       "searchKey": "regexp.inputBytes.step",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3143,7 +3264,9 @@
                       "identifier": "inputBytes.canCheckPrefix",
                       "newPage": false,
                       "searchKey": "regexp.inputBytes.canCheckPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3163,7 +3286,9 @@
                       "identifier": "inputBytes.hasPrefix",
                       "newPage": false,
                       "searchKey": "regexp.inputBytes.hasPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3183,7 +3308,9 @@
                       "identifier": "inputBytes.index",
                       "newPage": false,
                       "searchKey": "regexp.inputBytes.index",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3203,7 +3330,9 @@
                       "identifier": "inputBytes.context",
                       "newPage": false,
                       "searchKey": "regexp.inputBytes.context",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3226,7 +3355,9 @@
                 "identifier": "inputReader",
                 "newPage": false,
                 "searchKey": "regexp.inputReader",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3244,7 +3375,9 @@
                       "identifier": "inputReader.step",
                       "newPage": false,
                       "searchKey": "regexp.inputReader.step",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3264,7 +3397,9 @@
                       "identifier": "inputReader.canCheckPrefix",
                       "newPage": false,
                       "searchKey": "regexp.inputReader.canCheckPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3284,7 +3419,9 @@
                       "identifier": "inputReader.hasPrefix",
                       "newPage": false,
                       "searchKey": "regexp.inputReader.hasPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3304,7 +3441,9 @@
                       "identifier": "inputReader.index",
                       "newPage": false,
                       "searchKey": "regexp.inputReader.index",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3324,7 +3463,9 @@
                       "identifier": "inputReader.context",
                       "newPage": false,
                       "searchKey": "regexp.inputReader.context",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3347,7 +3488,9 @@
                 "identifier": "stringError",
                 "newPage": false,
                 "searchKey": "regexp.stringError",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3367,7 +3510,9 @@
                 "identifier": "ReplaceTest",
                 "newPage": false,
                 "searchKey": "regexp.ReplaceTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3387,7 +3532,9 @@
                 "identifier": "ReplaceFuncTest",
                 "newPage": false,
                 "searchKey": "regexp.ReplaceFuncTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3407,7 +3554,9 @@
                 "identifier": "MetaTest",
                 "newPage": false,
                 "searchKey": "regexp.MetaTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3427,7 +3576,9 @@
                 "identifier": "subexpIndex",
                 "newPage": false,
                 "searchKey": "regexp.subexpIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3447,7 +3598,9 @@
                 "identifier": "subexpCase",
                 "newPage": false,
                 "searchKey": "regexp.subexpCase",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3467,7 +3620,9 @@
                 "identifier": "FindTest",
                 "newPage": false,
                 "searchKey": "regexp.FindTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3485,7 +3640,9 @@
                       "identifier": "FindTest.String",
                       "newPage": false,
                       "searchKey": "regexp.FindTest.String",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -3511,9 +3668,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -3531,7 +3686,9 @@
                 "identifier": "freeBitState",
                 "newPage": false,
                 "searchKey": "regexp.freeBitState",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3551,7 +3708,9 @@
                 "identifier": "maxBitStateLen",
                 "newPage": false,
                 "searchKey": "regexp.maxBitStateLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3571,7 +3730,9 @@
                 "identifier": "shouldBacktrack",
                 "newPage": false,
                 "searchKey": "regexp.shouldBacktrack",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3591,7 +3752,9 @@
                 "identifier": "freeOnePassMachine",
                 "newPage": false,
                 "searchKey": "regexp.freeOnePassMachine",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3611,7 +3774,9 @@
                 "identifier": "onePassPrefix",
                 "newPage": false,
                 "searchKey": "regexp.onePassPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3631,7 +3796,9 @@
                 "identifier": "onePassNext",
                 "newPage": false,
                 "searchKey": "regexp.onePassNext",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3651,7 +3818,9 @@
                 "identifier": "iop",
                 "newPage": false,
                 "searchKey": "regexp.iop",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3671,7 +3840,9 @@
                 "identifier": "mergeRuneSets",
                 "newPage": false,
                 "searchKey": "regexp.mergeRuneSets",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3691,7 +3862,9 @@
                 "identifier": "cleanupOnePass",
                 "newPage": false,
                 "searchKey": "regexp.cleanupOnePass",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3711,7 +3884,9 @@
                 "identifier": "minInputLen",
                 "newPage": false,
                 "searchKey": "regexp.minInputLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3731,7 +3906,9 @@
                 "identifier": "quote",
                 "newPage": false,
                 "searchKey": "regexp.quote",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3751,9 +3928,7 @@
                 "identifier": "MatchReader",
                 "newPage": false,
                 "searchKey": "regexp.MatchReader",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3773,9 +3948,7 @@
                 "identifier": "MatchString",
                 "newPage": false,
                 "searchKey": "regexp.MatchString",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3795,9 +3968,7 @@
                 "identifier": "Match",
                 "newPage": false,
                 "searchKey": "regexp.Match",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3817,7 +3988,9 @@
                 "identifier": "special",
                 "newPage": false,
                 "searchKey": "regexp.special",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3832,12 +4005,14 @@
           },
           {
             "node": {
-              "pathID": "/regexp#init",
+              "pathID": "/regexp#init.regexp.go",
               "documentation": {
-                "identifier": "init",
+                "identifier": "init.regexp.go",
                 "newPage": false,
                 "searchKey": "regexp.init",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3857,9 +4032,7 @@
                 "identifier": "QuoteMeta",
                 "newPage": false,
                 "searchKey": "regexp.QuoteMeta",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -3879,7 +4052,9 @@
                 "identifier": "extract",
                 "newPage": false,
                 "searchKey": "regexp.extract",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3899,7 +4074,9 @@
                 "identifier": "TestGoodCompile",
                 "newPage": false,
                 "searchKey": "regexp.TestGoodCompile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3919,7 +4096,9 @@
                 "identifier": "TestBadCompile",
                 "newPage": false,
                 "searchKey": "regexp.TestBadCompile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3939,7 +4118,9 @@
                 "identifier": "matchTest",
                 "newPage": false,
                 "searchKey": "regexp.matchTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3959,7 +4140,9 @@
                 "identifier": "TestMatch",
                 "newPage": false,
                 "searchKey": "regexp.TestMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3979,7 +4162,9 @@
                 "identifier": "matchFunctionTest",
                 "newPage": false,
                 "searchKey": "regexp.matchFunctionTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -3999,7 +4184,9 @@
                 "identifier": "TestMatchFunction",
                 "newPage": false,
                 "searchKey": "regexp.TestMatchFunction",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4019,7 +4206,9 @@
                 "identifier": "copyMatchTest",
                 "newPage": false,
                 "searchKey": "regexp.copyMatchTest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4039,7 +4228,9 @@
                 "identifier": "TestCopyMatch",
                 "newPage": false,
                 "searchKey": "regexp.TestCopyMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4059,7 +4250,9 @@
                 "identifier": "TestReplaceAll",
                 "newPage": false,
                 "searchKey": "regexp.TestReplaceAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4079,7 +4272,9 @@
                 "identifier": "TestReplaceAllLiteral",
                 "newPage": false,
                 "searchKey": "regexp.TestReplaceAllLiteral",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4099,7 +4294,9 @@
                 "identifier": "TestReplaceAllFunc",
                 "newPage": false,
                 "searchKey": "regexp.TestReplaceAllFunc",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4119,7 +4316,9 @@
                 "identifier": "TestQuoteMeta",
                 "newPage": false,
                 "searchKey": "regexp.TestQuoteMeta",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4139,7 +4338,9 @@
                 "identifier": "TestLiteralPrefix",
                 "newPage": false,
                 "searchKey": "regexp.TestLiteralPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4159,7 +4360,9 @@
                 "identifier": "TestSubexp",
                 "newPage": false,
                 "searchKey": "regexp.TestSubexp",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4179,7 +4382,9 @@
                 "identifier": "TestSplit",
                 "newPage": false,
                 "searchKey": "regexp.TestSplit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4199,7 +4404,9 @@
                 "identifier": "TestParseAndCompile",
                 "newPage": false,
                 "searchKey": "regexp.TestParseAndCompile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4219,7 +4426,9 @@
                 "identifier": "TestOnePassCutoff",
                 "newPage": false,
                 "searchKey": "regexp.TestOnePassCutoff",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4239,7 +4448,9 @@
                 "identifier": "TestSwitchBacktrack",
                 "newPage": false,
                 "searchKey": "regexp.TestSwitchBacktrack",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4259,7 +4470,9 @@
                 "identifier": "BenchmarkFind",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkFind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4279,7 +4492,9 @@
                 "identifier": "BenchmarkFindAllNoMatches",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkFindAllNoMatches",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4299,7 +4514,9 @@
                 "identifier": "BenchmarkFindString",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkFindString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4319,7 +4536,9 @@
                 "identifier": "BenchmarkFindSubmatch",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkFindSubmatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4339,7 +4558,9 @@
                 "identifier": "BenchmarkFindStringSubmatch",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkFindStringSubmatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4359,7 +4580,9 @@
                 "identifier": "BenchmarkLiteral",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkLiteral",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4379,7 +4602,9 @@
                 "identifier": "BenchmarkNotLiteral",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkNotLiteral",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4399,7 +4624,9 @@
                 "identifier": "BenchmarkMatchClass",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkMatchClass",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4419,7 +4646,9 @@
                 "identifier": "BenchmarkMatchClass_InRange",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkMatchClass_InRange",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4439,7 +4668,9 @@
                 "identifier": "BenchmarkReplaceAll",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkReplaceAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4459,7 +4690,9 @@
                 "identifier": "BenchmarkAnchoredLiteralShortNonMatch",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkAnchoredLiteralShortNonMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4479,7 +4712,9 @@
                 "identifier": "BenchmarkAnchoredLiteralLongNonMatch",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkAnchoredLiteralLongNonMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4499,7 +4734,9 @@
                 "identifier": "BenchmarkAnchoredShortMatch",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkAnchoredShortMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4519,7 +4756,9 @@
                 "identifier": "BenchmarkAnchoredLongMatch",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkAnchoredLongMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4539,7 +4778,9 @@
                 "identifier": "BenchmarkOnePassShortA",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkOnePassShortA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4559,7 +4800,9 @@
                 "identifier": "BenchmarkNotOnePassShortA",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkNotOnePassShortA",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4579,7 +4822,9 @@
                 "identifier": "BenchmarkOnePassShortB",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkOnePassShortB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4599,7 +4844,9 @@
                 "identifier": "BenchmarkNotOnePassShortB",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkNotOnePassShortB",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4619,7 +4866,9 @@
                 "identifier": "BenchmarkOnePassLongPrefix",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkOnePassLongPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4639,7 +4888,9 @@
                 "identifier": "BenchmarkOnePassLongNotPrefix",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkOnePassLongNotPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4659,7 +4910,9 @@
                 "identifier": "BenchmarkMatchParallelShared",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkMatchParallelShared",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4679,7 +4932,9 @@
                 "identifier": "BenchmarkMatchParallelCopied",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkMatchParallelCopied",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4699,7 +4954,9 @@
                 "identifier": "BenchmarkQuoteMetaAll",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkQuoteMetaAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4719,7 +4976,9 @@
                 "identifier": "BenchmarkQuoteMetaNone",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkQuoteMetaNone",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4739,7 +4998,9 @@
                 "identifier": "BenchmarkCompile",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkCompile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4759,7 +5020,9 @@
                 "identifier": "TestDeepEqual",
                 "newPage": false,
                 "searchKey": "regexp.TestDeepEqual",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4779,7 +5042,9 @@
                 "identifier": "TestMinInputLen",
                 "newPage": false,
                 "searchKey": "regexp.TestMinInputLen",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4799,7 +5064,9 @@
                 "identifier": "TestRE2Exhaustive",
                 "newPage": false,
                 "searchKey": "regexp.TestRE2Exhaustive",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4819,7 +5086,9 @@
                 "identifier": "TestRE2Search",
                 "newPage": false,
                 "searchKey": "regexp.TestRE2Search",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4839,7 +5108,9 @@
                 "identifier": "testRE2",
                 "newPage": false,
                 "searchKey": "regexp.testRE2",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4859,7 +5130,9 @@
                 "identifier": "runFull",
                 "newPage": false,
                 "searchKey": "regexp.runFull",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4879,7 +5152,9 @@
                 "identifier": "runPartial",
                 "newPage": false,
                 "searchKey": "regexp.runPartial",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4899,7 +5174,9 @@
                 "identifier": "runFullLongest",
                 "newPage": false,
                 "searchKey": "regexp.runFullLongest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4919,7 +5196,9 @@
                 "identifier": "runPartialLongest",
                 "newPage": false,
                 "searchKey": "regexp.runPartialLongest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4939,7 +5218,9 @@
                 "identifier": "matchFull",
                 "newPage": false,
                 "searchKey": "regexp.matchFull",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4959,7 +5240,9 @@
                 "identifier": "matchPartial",
                 "newPage": false,
                 "searchKey": "regexp.matchPartial",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4979,7 +5262,9 @@
                 "identifier": "matchFullLongest",
                 "newPage": false,
                 "searchKey": "regexp.matchFullLongest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -4999,7 +5284,9 @@
                 "identifier": "matchPartialLongest",
                 "newPage": false,
                 "searchKey": "regexp.matchPartialLongest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5019,7 +5306,9 @@
                 "identifier": "isSingleBytes",
                 "newPage": false,
                 "searchKey": "regexp.isSingleBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5039,7 +5328,9 @@
                 "identifier": "parseResult",
                 "newPage": false,
                 "searchKey": "regexp.parseResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5059,7 +5350,9 @@
                 "identifier": "same",
                 "newPage": false,
                 "searchKey": "regexp.same",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5079,7 +5372,9 @@
                 "identifier": "TestFowler",
                 "newPage": false,
                 "searchKey": "regexp.TestFowler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5099,7 +5394,9 @@
                 "identifier": "testFowler",
                 "newPage": false,
                 "searchKey": "regexp.testFowler",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5119,7 +5416,9 @@
                 "identifier": "parseFowlerResult",
                 "newPage": false,
                 "searchKey": "regexp.parseFowlerResult",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5139,7 +5438,9 @@
                 "identifier": "makeText",
                 "newPage": false,
                 "searchKey": "regexp.makeText",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5159,7 +5460,9 @@
                 "identifier": "BenchmarkMatch",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkMatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5179,7 +5482,9 @@
                 "identifier": "BenchmarkMatch_onepass_regex",
                 "newPage": false,
                 "searchKey": "regexp.BenchmarkMatch_onepass_regex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5199,7 +5504,9 @@
                 "identifier": "TestLongest",
                 "newPage": false,
                 "searchKey": "regexp.TestLongest",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5219,7 +5526,9 @@
                 "identifier": "TestProgramTooLongForBacktrack",
                 "newPage": false,
                 "searchKey": "regexp.TestProgramTooLongForBacktrack",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5239,7 +5548,9 @@
                 "identifier": "build",
                 "newPage": false,
                 "searchKey": "regexp.build",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5259,7 +5570,9 @@
                 "identifier": "TestFind",
                 "newPage": false,
                 "searchKey": "regexp.TestFind",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5279,7 +5592,9 @@
                 "identifier": "TestFindString",
                 "newPage": false,
                 "searchKey": "regexp.TestFindString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5299,7 +5614,9 @@
                 "identifier": "testFindIndex",
                 "newPage": false,
                 "searchKey": "regexp.testFindIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5319,7 +5636,9 @@
                 "identifier": "TestFindIndex",
                 "newPage": false,
                 "searchKey": "regexp.TestFindIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5339,7 +5658,9 @@
                 "identifier": "TestFindStringIndex",
                 "newPage": false,
                 "searchKey": "regexp.TestFindStringIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5359,7 +5680,9 @@
                 "identifier": "TestFindReaderIndex",
                 "newPage": false,
                 "searchKey": "regexp.TestFindReaderIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5379,7 +5702,9 @@
                 "identifier": "TestFindAll",
                 "newPage": false,
                 "searchKey": "regexp.TestFindAll",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5399,7 +5724,9 @@
                 "identifier": "TestFindAllString",
                 "newPage": false,
                 "searchKey": "regexp.TestFindAllString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5419,7 +5746,9 @@
                 "identifier": "testFindAllIndex",
                 "newPage": false,
                 "searchKey": "regexp.testFindAllIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5439,7 +5768,9 @@
                 "identifier": "TestFindAllIndex",
                 "newPage": false,
                 "searchKey": "regexp.TestFindAllIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5459,7 +5790,9 @@
                 "identifier": "TestFindAllStringIndex",
                 "newPage": false,
                 "searchKey": "regexp.TestFindAllStringIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5479,7 +5812,9 @@
                 "identifier": "testSubmatchBytes",
                 "newPage": false,
                 "searchKey": "regexp.testSubmatchBytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5499,7 +5834,9 @@
                 "identifier": "TestFindSubmatch",
                 "newPage": false,
                 "searchKey": "regexp.TestFindSubmatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5519,7 +5856,9 @@
                 "identifier": "testSubmatchString",
                 "newPage": false,
                 "searchKey": "regexp.testSubmatchString",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5539,7 +5878,9 @@
                 "identifier": "TestFindStringSubmatch",
                 "newPage": false,
                 "searchKey": "regexp.TestFindStringSubmatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5559,7 +5900,9 @@
                 "identifier": "testSubmatchIndices",
                 "newPage": false,
                 "searchKey": "regexp.testSubmatchIndices",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5579,7 +5922,9 @@
                 "identifier": "testFindSubmatchIndex",
                 "newPage": false,
                 "searchKey": "regexp.testFindSubmatchIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5599,7 +5944,9 @@
                 "identifier": "TestFindSubmatchIndex",
                 "newPage": false,
                 "searchKey": "regexp.TestFindSubmatchIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5619,7 +5966,9 @@
                 "identifier": "TestFindStringSubmatchIndex",
                 "newPage": false,
                 "searchKey": "regexp.TestFindStringSubmatchIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5639,7 +5988,9 @@
                 "identifier": "TestFindReaderSubmatchIndex",
                 "newPage": false,
                 "searchKey": "regexp.TestFindReaderSubmatchIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5659,7 +6010,9 @@
                 "identifier": "TestFindAllSubmatch",
                 "newPage": false,
                 "searchKey": "regexp.TestFindAllSubmatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5679,7 +6032,9 @@
                 "identifier": "TestFindAllStringSubmatch",
                 "newPage": false,
                 "searchKey": "regexp.TestFindAllStringSubmatch",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5699,7 +6054,9 @@
                 "identifier": "testFindAllSubmatchIndex",
                 "newPage": false,
                 "searchKey": "regexp.testFindAllSubmatchIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5719,7 +6076,9 @@
                 "identifier": "TestFindAllSubmatchIndex",
                 "newPage": false,
                 "searchKey": "regexp.TestFindAllSubmatchIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5739,7 +6098,9 @@
                 "identifier": "TestFindAllStringSubmatchIndex",
                 "newPage": false,
                 "searchKey": "regexp.TestFindAllStringSubmatchIndex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5759,7 +6120,9 @@
                 "identifier": "TestMergeRuneSet",
                 "newPage": false,
                 "searchKey": "regexp.TestMergeRuneSet",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5779,7 +6142,9 @@
                 "identifier": "TestCompileOnePass",
                 "newPage": false,
                 "searchKey": "regexp.TestCompileOnePass",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -5799,7 +6164,9 @@
                 "identifier": "TestRunOnePass",
                 "newPage": false,
                 "searchKey": "regexp.TestRunOnePass",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

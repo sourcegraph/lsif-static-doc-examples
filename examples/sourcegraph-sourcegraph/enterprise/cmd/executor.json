@@ -4,9 +4,7 @@
     "identifier": "executor",
     "newPage": true,
     "searchKey": "enterprise/cmd/executor",
-    "tags": [
-      "exported"
-    ]
+    "tags": []
   },
   "label": {
     "kind": "plaintext",
@@ -27,9 +25,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -47,7 +43,9 @@
                 "identifier": "addr",
                 "newPage": false,
                 "searchKey": "main.addr",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -70,9 +68,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -90,9 +86,7 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "main.Config",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -110,9 +104,7 @@
                       "identifier": "Config.Load",
                       "newPage": false,
                       "searchKey": "main.Config.Load",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -132,9 +124,7 @@
                       "identifier": "Config.APIWorkerOptions",
                       "newPage": false,
                       "searchKey": "main.Config.APIWorkerOptions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -154,9 +144,7 @@
                       "identifier": "Config.WorkerOptions",
                       "newPage": false,
                       "searchKey": "main.Config.WorkerOptions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -176,9 +164,7 @@
                       "identifier": "Config.FirecrackerOptions",
                       "newPage": false,
                       "searchKey": "main.Config.FirecrackerOptions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -198,9 +184,7 @@
                       "identifier": "Config.ResourceOptions",
                       "newPage": false,
                       "searchKey": "main.Config.ResourceOptions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -220,9 +204,7 @@
                       "identifier": "Config.ClientOptions",
                       "newPage": false,
                       "searchKey": "main.Config.ClientOptions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -242,9 +224,7 @@
                       "identifier": "Config.BaseClientOptions",
                       "newPage": false,
                       "searchKey": "main.Config.BaseClientOptions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -264,9 +244,7 @@
                       "identifier": "Config.EndpointOptions",
                       "newPage": false,
                       "searchKey": "main.Config.EndpointOptions",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -292,9 +270,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "exported"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -312,7 +288,9 @@
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -332,7 +310,9 @@
                 "identifier": "makeWorkerMetrics",
                 "newPage": false,
                 "searchKey": "main.makeWorkerMetrics",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

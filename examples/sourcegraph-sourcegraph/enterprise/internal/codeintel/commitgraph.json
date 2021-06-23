@@ -4,7 +4,9 @@
     "identifier": "commitgraph",
     "newPage": true,
     "searchKey": "enterprise/internal/codeintel/commitgraph",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "Graph",
                 "newPage": false,
                 "searchKey": "commitgraph.Graph",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -60,9 +62,7 @@
                       "identifier": "NewGraph",
                       "newPage": false,
                       "searchKey": "commitgraph.NewGraph",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,9 +82,7 @@
                       "identifier": "Graph.UploadsVisibleAtCommit",
                       "newPage": false,
                       "searchKey": "commitgraph.Graph.UploadsVisibleAtCommit",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,9 +102,7 @@
                       "identifier": "Graph.Stream",
                       "newPage": false,
                       "searchKey": "commitgraph.Graph.Stream",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,9 +122,7 @@
                       "identifier": "Graph.Gather",
                       "newPage": false,
                       "searchKey": "commitgraph.Graph.Gather",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -151,9 +145,7 @@
                 "identifier": "Envelope",
                 "newPage": false,
                 "searchKey": "commitgraph.Envelope",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -173,9 +165,7 @@
                 "identifier": "VisibilityRelationship",
                 "newPage": false,
                 "searchKey": "commitgraph.VisibilityRelationship",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -195,9 +185,7 @@
                 "identifier": "LinkRelationship",
                 "newPage": false,
                 "searchKey": "commitgraph.LinkRelationship",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -217,9 +205,7 @@
                 "identifier": "CommitGraphView",
                 "newPage": false,
                 "searchKey": "commitgraph.CommitGraphView",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -237,9 +223,7 @@
                       "identifier": "NewCommitGraphView",
                       "newPage": false,
                       "searchKey": "commitgraph.NewCommitGraphView",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -259,7 +243,9 @@
                       "identifier": "readBenchmarkCommitGraphView",
                       "newPage": false,
                       "searchKey": "commitgraph.readBenchmarkCommitGraphView",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -279,9 +265,7 @@
                       "identifier": "CommitGraphView.Add",
                       "newPage": false,
                       "searchKey": "commitgraph.CommitGraphView.Add",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -304,9 +288,7 @@
                 "identifier": "UploadMeta",
                 "newPage": false,
                 "searchKey": "commitgraph.UploadMeta",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -329,7 +311,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -347,7 +331,9 @@
                 "identifier": "reverseGraph",
                 "newPage": false,
                 "searchKey": "commitgraph.reverseGraph",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -367,7 +353,9 @@
                 "identifier": "populateUploadsByTraversal",
                 "newPage": false,
                 "searchKey": "commitgraph.populateUploadsByTraversal",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -387,7 +375,9 @@
                 "identifier": "populateUploadsForCommit",
                 "newPage": false,
                 "searchKey": "commitgraph.populateUploadsForCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,7 +397,9 @@
                 "identifier": "traverseForUploads",
                 "newPage": false,
                 "searchKey": "commitgraph.traverseForUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -427,7 +419,9 @@
                 "identifier": "traverseForCommit",
                 "newPage": false,
                 "searchKey": "commitgraph.traverseForCommit",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -447,7 +441,9 @@
                 "identifier": "adjustVisibleUploads",
                 "newPage": false,
                 "searchKey": "commitgraph.adjustVisibleUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,7 +463,9 @@
                 "identifier": "replaces",
                 "newPage": false,
                 "searchKey": "commitgraph.replaces",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,7 +485,9 @@
                 "identifier": "TestCalculateVisibleUploads",
                 "newPage": false,
                 "searchKey": "commitgraph.TestCalculateVisibleUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -507,7 +507,9 @@
                 "identifier": "TestCalculateVisibleUploadsAlternateCommitGraph",
                 "newPage": false,
                 "searchKey": "commitgraph.TestCalculateVisibleUploadsAlternateCommitGraph",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,7 +529,9 @@
                 "identifier": "BenchmarkCalculateVisibleUploads",
                 "newPage": false,
                 "searchKey": "commitgraph.BenchmarkCalculateVisibleUploads",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -547,7 +551,9 @@
                 "identifier": "readBenchmarkCommitGraph",
                 "newPage": false,
                 "searchKey": "commitgraph.readBenchmarkCommitGraph",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -567,7 +573,9 @@
                 "identifier": "readBenchmarkFile",
                 "newPage": false,
                 "searchKey": "commitgraph.readBenchmarkFile",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -587,7 +595,9 @@
                 "identifier": "makeTestGraph",
                 "newPage": false,
                 "searchKey": "commitgraph.makeTestGraph",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

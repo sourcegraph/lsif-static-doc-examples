@@ -47,7 +47,7 @@
     * [func TestStoreUint64(t *testing.T)](#TestStoreUint64)
     * [func TestStoreUintptr(t *testing.T)](#TestStoreUintptr)
     * [func TestStorePointer(t *testing.T)](#TestStorePointer)
-    * [func init()](#init)
+    * [func init()](#init.atomic_test.go)
     * [func hammerSwapInt32(uaddr *uint32, count int)](#hammerSwapInt32)
     * [func hammerSwapUint32(addr *uint32, count int)](#hammerSwapUint32)
     * [func hammerSwapUintptr32(uaddr *uint32, count int)](#hammerSwapUintptr32)
@@ -58,7 +58,7 @@
     * [func hammerCompareAndSwapUint32(addr *uint32, count int)](#hammerCompareAndSwapUint32)
     * [func hammerCompareAndSwapUintptr32(uaddr *uint32, count int)](#hammerCompareAndSwapUintptr32)
     * [func TestHammer32(t *testing.T)](#TestHammer32)
-    * [func init()](#init)
+    * [func init()](#init.atomic_test.go.0xc06204b7a8)
     * [func hammerSwapInt64(uaddr *uint64, count int)](#hammerSwapInt64)
     * [func hammerSwapUint64(addr *uint64, count int)](#hammerSwapUint64)
     * [func hammerSwapUintptr64(uaddr *uint64, count int)](#hammerSwapUintptr64)
@@ -100,10 +100,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="magic32" href="#magic32">const magic32</a>
 
 ```
 searchKey: atomic_test.magic32
+tags: [private]
 ```
 
 ```Go
@@ -114,6 +119,7 @@ const magic32 = 0xdedbeef
 
 ```
 searchKey: atomic_test.magic64
+tags: [private]
 ```
 
 ```Go
@@ -124,6 +130,7 @@ const magic64 = 0xdeddeadbeefbeef
 
 ```
 searchKey: atomic_test.arch32
+tags: [private]
 ```
 
 ```Go
@@ -132,10 +139,15 @@ const arch32 = unsafe.Sizeof(uintptr(0)) == 4
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="test64err" href="#test64err">var test64err</a>
 
 ```
 searchKey: atomic_test.test64err
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +160,7 @@ Do the 64-bit functions panic? If so, don't bother testing.
 
 ```
 searchKey: atomic_test.global
+tags: [private]
 ```
 
 ```Go
@@ -158,6 +171,7 @@ var global [1024]byte
 
 ```
 searchKey: atomic_test.hammer32
+tags: [private]
 ```
 
 ```Go
@@ -168,6 +182,7 @@ var hammer32 = ...
 
 ```
 searchKey: atomic_test.hammer64
+tags: [private]
 ```
 
 ```Go
@@ -178,6 +193,7 @@ var hammer64 = ...
 
 ```
 searchKey: atomic_test.Value_SwapTests
+tags: [private]
 ```
 
 ```Go
@@ -188,6 +204,7 @@ var Value_SwapTests = ...
 
 ```
 searchKey: atomic_test.heapA
+tags: [private]
 ```
 
 ```Go
@@ -198,6 +215,7 @@ var heapA, heapB = struct{ uint }{0}, struct{ uint }{0}
 
 ```
 searchKey: atomic_test.heapB
+tags: [private]
 ```
 
 ```Go
@@ -208,6 +226,7 @@ var heapA, heapB = struct{ uint }{0}, struct{ uint }{0}
 
 ```
 searchKey: atomic_test.Value_CompareAndSwapTests
+tags: [private]
 ```
 
 ```Go
@@ -216,10 +235,15 @@ var Value_CompareAndSwapTests = ...
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TestSwapInt32" href="#TestSwapInt32">func TestSwapInt32(t *testing.T)</a>
 
 ```
 searchKey: atomic_test.TestSwapInt32
+tags: [private]
 ```
 
 ```Go
@@ -230,6 +254,7 @@ func TestSwapInt32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestSwapUint32
+tags: [private]
 ```
 
 ```Go
@@ -240,6 +265,7 @@ func TestSwapUint32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestSwapInt64
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +276,7 @@ func TestSwapInt64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestSwapUint64
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +287,7 @@ func TestSwapUint64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestSwapUintptr
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +298,7 @@ func TestSwapUintptr(t *testing.T)
 
 ```
 searchKey: atomic_test.testPointers
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +309,7 @@ func testPointers() []unsafe.Pointer
 
 ```
 searchKey: atomic_test.TestSwapPointer
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +320,7 @@ func TestSwapPointer(t *testing.T)
 
 ```
 searchKey: atomic_test.TestAddInt32
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +331,7 @@ func TestAddInt32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestAddUint32
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +342,7 @@ func TestAddUint32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestAddInt64
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +353,7 @@ func TestAddInt64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestAddUint64
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +364,7 @@ func TestAddUint64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestAddUintptr
+tags: [private]
 ```
 
 ```Go
@@ -340,6 +375,7 @@ func TestAddUintptr(t *testing.T)
 
 ```
 searchKey: atomic_test.TestCompareAndSwapInt32
+tags: [private]
 ```
 
 ```Go
@@ -350,6 +386,7 @@ func TestCompareAndSwapInt32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestCompareAndSwapUint32
+tags: [private]
 ```
 
 ```Go
@@ -360,6 +397,7 @@ func TestCompareAndSwapUint32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestCompareAndSwapInt64
+tags: [private]
 ```
 
 ```Go
@@ -370,6 +408,7 @@ func TestCompareAndSwapInt64(t *testing.T)
 
 ```
 searchKey: atomic_test.testCompareAndSwapUint64
+tags: [private]
 ```
 
 ```Go
@@ -380,6 +419,7 @@ func testCompareAndSwapUint64(t *testing.T, cas func(*uint64, uint64, uint64) bo
 
 ```
 searchKey: atomic_test.TestCompareAndSwapUint64
+tags: [private]
 ```
 
 ```Go
@@ -390,6 +430,7 @@ func TestCompareAndSwapUint64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestCompareAndSwapUintptr
+tags: [private]
 ```
 
 ```Go
@@ -400,6 +441,7 @@ func TestCompareAndSwapUintptr(t *testing.T)
 
 ```
 searchKey: atomic_test.TestCompareAndSwapPointer
+tags: [private]
 ```
 
 ```Go
@@ -410,6 +452,7 @@ func TestCompareAndSwapPointer(t *testing.T)
 
 ```
 searchKey: atomic_test.TestLoadInt32
+tags: [private]
 ```
 
 ```Go
@@ -420,6 +463,7 @@ func TestLoadInt32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestLoadUint32
+tags: [private]
 ```
 
 ```Go
@@ -430,6 +474,7 @@ func TestLoadUint32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestLoadInt64
+tags: [private]
 ```
 
 ```Go
@@ -440,6 +485,7 @@ func TestLoadInt64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestLoadUint64
+tags: [private]
 ```
 
 ```Go
@@ -450,6 +496,7 @@ func TestLoadUint64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestLoadUintptr
+tags: [private]
 ```
 
 ```Go
@@ -460,6 +507,7 @@ func TestLoadUintptr(t *testing.T)
 
 ```
 searchKey: atomic_test.TestLoadPointer
+tags: [private]
 ```
 
 ```Go
@@ -470,6 +518,7 @@ func TestLoadPointer(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStoreInt32
+tags: [private]
 ```
 
 ```Go
@@ -480,6 +529,7 @@ func TestStoreInt32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStoreUint32
+tags: [private]
 ```
 
 ```Go
@@ -490,6 +540,7 @@ func TestStoreUint32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStoreInt64
+tags: [private]
 ```
 
 ```Go
@@ -500,6 +551,7 @@ func TestStoreInt64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStoreUint64
+tags: [private]
 ```
 
 ```Go
@@ -510,6 +562,7 @@ func TestStoreUint64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStoreUintptr
+tags: [private]
 ```
 
 ```Go
@@ -520,16 +573,18 @@ func TestStoreUintptr(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStorePointer
+tags: [private]
 ```
 
 ```Go
 func TestStorePointer(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.atomic_test.go" href="#init.atomic_test.go">func init()</a>
 
 ```
 searchKey: atomic_test.init
+tags: [private]
 ```
 
 ```Go
@@ -540,6 +595,7 @@ func init()
 
 ```
 searchKey: atomic_test.hammerSwapInt32
+tags: [private]
 ```
 
 ```Go
@@ -550,6 +606,7 @@ func hammerSwapInt32(uaddr *uint32, count int)
 
 ```
 searchKey: atomic_test.hammerSwapUint32
+tags: [private]
 ```
 
 ```Go
@@ -560,6 +617,7 @@ func hammerSwapUint32(addr *uint32, count int)
 
 ```
 searchKey: atomic_test.hammerSwapUintptr32
+tags: [private]
 ```
 
 ```Go
@@ -570,6 +628,7 @@ func hammerSwapUintptr32(uaddr *uint32, count int)
 
 ```
 searchKey: atomic_test.hammerAddInt32
+tags: [private]
 ```
 
 ```Go
@@ -580,6 +639,7 @@ func hammerAddInt32(uaddr *uint32, count int)
 
 ```
 searchKey: atomic_test.hammerAddUint32
+tags: [private]
 ```
 
 ```Go
@@ -590,6 +650,7 @@ func hammerAddUint32(addr *uint32, count int)
 
 ```
 searchKey: atomic_test.hammerAddUintptr32
+tags: [private]
 ```
 
 ```Go
@@ -600,6 +661,7 @@ func hammerAddUintptr32(uaddr *uint32, count int)
 
 ```
 searchKey: atomic_test.hammerCompareAndSwapInt32
+tags: [private]
 ```
 
 ```Go
@@ -610,6 +672,7 @@ func hammerCompareAndSwapInt32(uaddr *uint32, count int)
 
 ```
 searchKey: atomic_test.hammerCompareAndSwapUint32
+tags: [private]
 ```
 
 ```Go
@@ -620,6 +683,7 @@ func hammerCompareAndSwapUint32(addr *uint32, count int)
 
 ```
 searchKey: atomic_test.hammerCompareAndSwapUintptr32
+tags: [private]
 ```
 
 ```Go
@@ -630,16 +694,18 @@ func hammerCompareAndSwapUintptr32(uaddr *uint32, count int)
 
 ```
 searchKey: atomic_test.TestHammer32
+tags: [private]
 ```
 
 ```Go
 func TestHammer32(t *testing.T)
 ```
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.atomic_test.go.0xc06204b7a8" href="#init.atomic_test.go.0xc06204b7a8">func init()</a>
 
 ```
 searchKey: atomic_test.init
+tags: [private]
 ```
 
 ```Go
@@ -650,6 +716,7 @@ func init()
 
 ```
 searchKey: atomic_test.hammerSwapInt64
+tags: [private]
 ```
 
 ```Go
@@ -660,6 +727,7 @@ func hammerSwapInt64(uaddr *uint64, count int)
 
 ```
 searchKey: atomic_test.hammerSwapUint64
+tags: [private]
 ```
 
 ```Go
@@ -670,6 +738,7 @@ func hammerSwapUint64(addr *uint64, count int)
 
 ```
 searchKey: atomic_test.hammerSwapUintptr64
+tags: [private]
 ```
 
 ```Go
@@ -680,6 +749,7 @@ func hammerSwapUintptr64(uaddr *uint64, count int)
 
 ```
 searchKey: atomic_test.hammerAddInt64
+tags: [private]
 ```
 
 ```Go
@@ -690,6 +760,7 @@ func hammerAddInt64(uaddr *uint64, count int)
 
 ```
 searchKey: atomic_test.hammerAddUint64
+tags: [private]
 ```
 
 ```Go
@@ -700,6 +771,7 @@ func hammerAddUint64(addr *uint64, count int)
 
 ```
 searchKey: atomic_test.hammerAddUintptr64
+tags: [private]
 ```
 
 ```Go
@@ -710,6 +782,7 @@ func hammerAddUintptr64(uaddr *uint64, count int)
 
 ```
 searchKey: atomic_test.hammerCompareAndSwapInt64
+tags: [private]
 ```
 
 ```Go
@@ -720,6 +793,7 @@ func hammerCompareAndSwapInt64(uaddr *uint64, count int)
 
 ```
 searchKey: atomic_test.hammerCompareAndSwapUint64
+tags: [private]
 ```
 
 ```Go
@@ -730,6 +804,7 @@ func hammerCompareAndSwapUint64(addr *uint64, count int)
 
 ```
 searchKey: atomic_test.hammerCompareAndSwapUintptr64
+tags: [private]
 ```
 
 ```Go
@@ -740,6 +815,7 @@ func hammerCompareAndSwapUintptr64(uaddr *uint64, count int)
 
 ```
 searchKey: atomic_test.TestHammer64
+tags: [private]
 ```
 
 ```Go
@@ -750,6 +826,7 @@ func TestHammer64(t *testing.T)
 
 ```
 searchKey: atomic_test.hammerStoreLoadInt32
+tags: [private]
 ```
 
 ```Go
@@ -760,6 +837,7 @@ func hammerStoreLoadInt32(t *testing.T, paddr unsafe.Pointer)
 
 ```
 searchKey: atomic_test.hammerStoreLoadUint32
+tags: [private]
 ```
 
 ```Go
@@ -770,6 +848,7 @@ func hammerStoreLoadUint32(t *testing.T, paddr unsafe.Pointer)
 
 ```
 searchKey: atomic_test.hammerStoreLoadInt64
+tags: [private]
 ```
 
 ```Go
@@ -780,6 +859,7 @@ func hammerStoreLoadInt64(t *testing.T, paddr unsafe.Pointer)
 
 ```
 searchKey: atomic_test.hammerStoreLoadUint64
+tags: [private]
 ```
 
 ```Go
@@ -790,6 +870,7 @@ func hammerStoreLoadUint64(t *testing.T, paddr unsafe.Pointer)
 
 ```
 searchKey: atomic_test.hammerStoreLoadUintptr
+tags: [private]
 ```
 
 ```Go
@@ -800,6 +881,7 @@ func hammerStoreLoadUintptr(t *testing.T, paddr unsafe.Pointer)
 
 ```
 searchKey: atomic_test.hammerStoreLoadPointer
+tags: [private]
 ```
 
 ```Go
@@ -812,6 +894,7 @@ This code is just testing that LoadPointer/StorePointer operate atomically; it's
 
 ```
 searchKey: atomic_test.TestHammerStoreLoad
+tags: [private]
 ```
 
 ```Go
@@ -822,6 +905,7 @@ func TestHammerStoreLoad(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStoreLoadSeqCst32
+tags: [private]
 ```
 
 ```Go
@@ -832,6 +916,7 @@ func TestStoreLoadSeqCst32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStoreLoadSeqCst64
+tags: [private]
 ```
 
 ```Go
@@ -842,6 +927,7 @@ func TestStoreLoadSeqCst64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStoreLoadRelAcq32
+tags: [private]
 ```
 
 ```Go
@@ -852,6 +938,7 @@ func TestStoreLoadRelAcq32(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStoreLoadRelAcq64
+tags: [private]
 ```
 
 ```Go
@@ -862,6 +949,7 @@ func TestStoreLoadRelAcq64(t *testing.T)
 
 ```
 searchKey: atomic_test.shouldPanic
+tags: [private]
 ```
 
 ```Go
@@ -872,6 +960,7 @@ func shouldPanic(t *testing.T, name string, f func())
 
 ```
 searchKey: atomic_test.TestUnaligned64
+tags: [private]
 ```
 
 ```Go
@@ -882,6 +971,7 @@ func TestUnaligned64(t *testing.T)
 
 ```
 searchKey: atomic_test.TestNilDeref
+tags: [private]
 ```
 
 ```Go
@@ -892,6 +982,7 @@ func TestNilDeref(t *testing.T)
 
 ```
 searchKey: atomic_test.loadConfig
+tags: [private]
 ```
 
 ```Go
@@ -902,6 +993,7 @@ func loadConfig() map[string]string
 
 ```
 searchKey: atomic_test.requests
+tags: [private]
 ```
 
 ```Go
@@ -912,6 +1004,7 @@ func requests() chan int
 
 ```
 searchKey: atomic_test.ExampleValue_config
+tags: [private]
 ```
 
 ```Go
@@ -924,6 +1017,7 @@ The following example shows how to use Value for periodic program config updates
 
 ```
 searchKey: atomic_test.ExampleValue_readMostly
+tags: [private]
 ```
 
 ```Go
@@ -936,6 +1030,7 @@ The following example shows how to maintain a scalable frequently read, but infr
 
 ```
 searchKey: atomic_test.TestValue
+tags: [private]
 ```
 
 ```Go
@@ -946,6 +1041,7 @@ func TestValue(t *testing.T)
 
 ```
 searchKey: atomic_test.TestValueLarge
+tags: [private]
 ```
 
 ```Go
@@ -956,6 +1052,7 @@ func TestValueLarge(t *testing.T)
 
 ```
 searchKey: atomic_test.TestValuePanic
+tags: [private]
 ```
 
 ```Go
@@ -966,6 +1063,7 @@ func TestValuePanic(t *testing.T)
 
 ```
 searchKey: atomic_test.TestValueConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -976,6 +1074,7 @@ func TestValueConcurrent(t *testing.T)
 
 ```
 searchKey: atomic_test.BenchmarkValueRead
+tags: [private]
 ```
 
 ```Go
@@ -986,6 +1085,7 @@ func BenchmarkValueRead(b *testing.B)
 
 ```
 searchKey: atomic_test.TestValue_Swap
+tags: [private]
 ```
 
 ```Go
@@ -996,6 +1096,7 @@ func TestValue_Swap(t *testing.T)
 
 ```
 searchKey: atomic_test.TestValueSwapConcurrent
+tags: [private]
 ```
 
 ```Go
@@ -1006,6 +1107,7 @@ func TestValueSwapConcurrent(t *testing.T)
 
 ```
 searchKey: atomic_test.TestValue_CompareAndSwap
+tags: [private]
 ```
 
 ```Go
@@ -1016,6 +1118,7 @@ func TestValue_CompareAndSwap(t *testing.T)
 
 ```
 searchKey: atomic_test.TestValueCompareAndSwapConcurrent
+tags: [private]
 ```
 
 ```Go

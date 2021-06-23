@@ -4,7 +4,9 @@
     "identifier": "src-prometheus",
     "newPage": true,
     "searchKey": "internal/src-prometheus",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "EndpointAlertsStatus",
                 "newPage": false,
                 "searchKey": "srcprometheus.EndpointAlertsStatus",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "EndpointAlertsStatusHistory",
                 "newPage": false,
                 "searchKey": "srcprometheus.EndpointAlertsStatusHistory",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "EndpointConfigSubscriber",
                 "newPage": false,
                 "searchKey": "srcprometheus.EndpointConfigSubscriber",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -109,7 +107,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -127,9 +127,7 @@
                 "identifier": "ErrPrometheusUnavailable",
                 "newPage": false,
                 "searchKey": "srcprometheus.ErrPrometheusUnavailable",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -149,9 +147,7 @@
                 "identifier": "PrometheusURL",
                 "newPage": false,
                 "searchKey": "srcprometheus.PrometheusURL",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -174,7 +170,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -192,9 +190,7 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "srcprometheus.Client",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -212,9 +208,7 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "srcprometheus.NewClient",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -237,7 +231,9 @@
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "srcprometheus.client",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -255,7 +251,9 @@
                       "identifier": "client.newRequest",
                       "newPage": false,
                       "searchKey": "srcprometheus.client.newRequest",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -275,7 +273,9 @@
                       "identifier": "client.do",
                       "newPage": false,
                       "searchKey": "srcprometheus.client.do",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -295,7 +295,9 @@
                       "identifier": "client.GetAlertsStatus",
                       "newPage": false,
                       "searchKey": "srcprometheus.client.GetAlertsStatus",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -315,7 +317,9 @@
                       "identifier": "client.GetAlertsHistory",
                       "newPage": false,
                       "searchKey": "srcprometheus.client.GetAlertsHistory",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -335,7 +339,9 @@
                       "identifier": "client.GetConfigStatus",
                       "newPage": false,
                       "searchKey": "srcprometheus.client.GetConfigStatus",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -358,7 +364,9 @@
                 "identifier": "roundTripper",
                 "newPage": false,
                 "searchKey": "srcprometheus.roundTripper",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -376,7 +384,9 @@
                       "identifier": "roundTripper.RoundTrip",
                       "newPage": false,
                       "searchKey": "srcprometheus.roundTripper.RoundTrip",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -399,9 +409,7 @@
                 "identifier": "AlertsStatus",
                 "newPage": false,
                 "searchKey": "srcprometheus.AlertsStatus",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -421,9 +429,7 @@
                 "identifier": "MonitoringAlert",
                 "newPage": false,
                 "searchKey": "srcprometheus.MonitoringAlert",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -443,9 +449,7 @@
                 "identifier": "MonitoringAlerts",
                 "newPage": false,
                 "searchKey": "srcprometheus.MonitoringAlerts",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -463,9 +467,7 @@
                       "identifier": "MonitoringAlerts.Less",
                       "newPage": false,
                       "searchKey": "srcprometheus.MonitoringAlerts.Less",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -485,9 +487,7 @@
                       "identifier": "MonitoringAlerts.Swap",
                       "newPage": false,
                       "searchKey": "srcprometheus.MonitoringAlerts.Swap",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -507,9 +507,7 @@
                       "identifier": "MonitoringAlerts.Len",
                       "newPage": false,
                       "searchKey": "srcprometheus.MonitoringAlerts.Len",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -532,9 +530,7 @@
                 "identifier": "AlertsHistory",
                 "newPage": false,
                 "searchKey": "srcprometheus.AlertsHistory",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -554,9 +550,7 @@
                 "identifier": "ConfigStatus",
                 "newPage": false,
                 "searchKey": "srcprometheus.ConfigStatus",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -579,7 +573,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -597,7 +593,9 @@
                 "identifier": "Test_roundTripper_PrometheusUnavailable",
                 "newPage": false,
                 "searchKey": "srcprometheus.Test_roundTripper_PrometheusUnavailable",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -43,11 +43,14 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="RefTypeUnknown" href="#RefTypeUnknown">const RefTypeUnknown</a>
 
 ```
 searchKey: gitserver.RefTypeUnknown
-tags: [exported]
 ```
 
 ```Go
@@ -58,7 +61,6 @@ const RefTypeUnknown RefType = iota
 
 ```
 searchKey: gitserver.RefTypeBranch
-tags: [exported]
 ```
 
 ```Go
@@ -69,7 +71,6 @@ const RefTypeBranch
 
 ```
 searchKey: gitserver.RefTypeTag
-tags: [exported]
 ```
 
 ```Go
@@ -78,10 +79,15 @@ const RefTypeTag
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="refPrefixes" href="#refPrefixes">var refPrefixes</a>
 
 ```
 searchKey: gitserver.refPrefixes
+tags: [private]
 ```
 
 ```Go
@@ -93,11 +99,14 @@ var refPrefixes = map[string]RefType{
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: gitserver.Client
-tags: [exported]
 ```
 
 ```Go
@@ -111,7 +120,6 @@ type Client struct {
 
 ```
 searchKey: gitserver.New
-tags: [exported]
 ```
 
 ```Go
@@ -122,7 +130,6 @@ func New(dbStore DBStore, observationContext *observation.Context) *Client
 
 ```
 searchKey: gitserver.Client.CommitExists
-tags: [exported]
 ```
 
 ```Go
@@ -135,7 +142,6 @@ Head determines the tip commit of the default branch for the given repository.
 
 ```
 searchKey: gitserver.Client.Head
-tags: [exported]
 ```
 
 ```Go
@@ -148,7 +154,6 @@ Head determines the tip commit of the default branch for the given repository.
 
 ```
 searchKey: gitserver.Client.CommitDate
-tags: [exported]
 ```
 
 ```Go
@@ -161,7 +166,6 @@ CommitDate returns the time that the given commit was committed.
 
 ```
 searchKey: gitserver.Client.CommitGraph
-tags: [exported]
 ```
 
 ```Go
@@ -174,7 +178,6 @@ CommitGraph returns the commit graph for the given repository as a mapping from 
 
 ```
 searchKey: gitserver.Client.RefDescriptions
-tags: [exported]
 ```
 
 ```Go
@@ -187,7 +190,6 @@ RefDescriptions returns a map from commits to descriptions of the tip of each br
 
 ```
 searchKey: gitserver.Client.RawContents
-tags: [exported]
 ```
 
 ```Go
@@ -200,7 +202,6 @@ RawContents returns the contents of a file in a particular commit of a repositor
 
 ```
 searchKey: gitserver.Client.DirectoryChildren
-tags: [exported]
 ```
 
 ```Go
@@ -213,7 +214,6 @@ DirectoryChildren determines all children known to git for the given directory n
 
 ```
 searchKey: gitserver.Client.FileExists
-tags: [exported]
 ```
 
 ```Go
@@ -226,7 +226,6 @@ FileExists determines whether a file exists in a particular commit of a reposito
 
 ```
 searchKey: gitserver.Client.ListFiles
-tags: [exported]
 ```
 
 ```Go
@@ -239,7 +238,6 @@ ListFiles returns a list of root-relative file paths matching the given pattern 
 
 ```
 searchKey: gitserver.Client.ResolveRevision
-tags: [exported]
 ```
 
 ```Go
@@ -252,6 +250,7 @@ ResolveRevision returns the absolute commit for a commit-ish spec.
 
 ```
 searchKey: gitserver.Client.execGitCommand
+tags: [private]
 ```
 
 ```Go
@@ -264,6 +263,7 @@ execGitCommand executes a git command for the given repository by identifier.
 
 ```
 searchKey: gitserver.Client.execResolveRevGitCommand
+tags: [private]
 ```
 
 ```Go
@@ -276,6 +276,7 @@ execResolveRevGitCommand executes a git command for the given repository by iden
 
 ```
 searchKey: gitserver.Client.repositoryIDToRepo
+tags: [private]
 ```
 
 ```Go
@@ -288,7 +289,6 @@ repositoryIDToRepo creates a api.RepoName from a repository identifier.
 
 ```
 searchKey: gitserver.CommitGraph
-tags: [exported]
 ```
 
 ```Go
@@ -302,7 +302,6 @@ type CommitGraph struct {
 
 ```
 searchKey: gitserver.ParseCommitGraph
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +314,6 @@ ParseCommitGraph converts the output of git log into a map from commits to paren
 
 ```
 searchKey: gitserver.CommitGraph.Graph
-tags: [exported]
 ```
 
 ```Go
@@ -326,7 +324,6 @@ func (c *CommitGraph) Graph() map[string][]string
 
 ```
 searchKey: gitserver.CommitGraph.Order
-tags: [exported]
 ```
 
 ```Go
@@ -337,7 +334,6 @@ func (c *CommitGraph) Order() []string
 
 ```
 searchKey: gitserver.CommitGraphOptions
-tags: [exported]
 ```
 
 ```Go
@@ -353,7 +349,6 @@ type CommitGraphOptions struct {
 
 ```
 searchKey: gitserver.RefDescription
-tags: [exported]
 ```
 
 ```Go
@@ -371,7 +366,6 @@ RefDescription describes a commit at the head of a branch or tag.
 
 ```
 searchKey: gitserver.RefType
-tags: [exported]
 ```
 
 ```Go
@@ -382,7 +376,6 @@ type RefType int
 
 ```
 searchKey: gitserver.DBStore
-tags: [exported]
 ```
 
 ```Go
@@ -395,6 +388,7 @@ type DBStore interface {
 
 ```
 searchKey: gitserver.operations
+tags: [private]
 ```
 
 ```Go
@@ -416,6 +410,7 @@ type operations struct {
 
 ```
 searchKey: gitserver.newOperations
+tags: [private]
 ```
 
 ```Go
@@ -424,10 +419,15 @@ func newOperations(observationContext *observation.Context) *operations
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="parseRefDescriptions" href="#parseRefDescriptions">func parseRefDescriptions(lines []string) (map[string]RefDescription, error)</a>
 
 ```
 searchKey: gitserver.parseRefDescriptions
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +442,7 @@ parseRefDescriptions converts the output of the for-each-ref command in the RefD
 
 ```
 searchKey: gitserver.TestParseCommitGraph
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +453,7 @@ func TestParseCommitGraph(t *testing.T)
 
 ```
 searchKey: gitserver.TestParseCommitGraphPartial
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +464,7 @@ func TestParseCommitGraphPartial(t *testing.T)
 
 ```
 searchKey: gitserver.TestParseRefDescriptions
+tags: [private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "rcache",
     "newPage": true,
     "searchKey": "internal/rcache",
-    "tags": []
+    "tags": [
+      "private"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,9 +44,7 @@
                 "identifier": "DefaultMutexExpiry",
                 "newPage": false,
                 "searchKey": "rcache.DefaultMutexExpiry",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -62,9 +64,7 @@
                 "identifier": "DefaultMutexTries",
                 "newPage": false,
                 "searchKey": "rcache.DefaultMutexTries",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -84,9 +84,7 @@
                 "identifier": "DefaultMutexDelay",
                 "newPage": false,
                 "searchKey": "rcache.DefaultMutexDelay",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +104,9 @@
                 "identifier": "dataVersion",
                 "newPage": false,
                 "searchKey": "rcache.dataVersion",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -126,7 +126,9 @@
                 "identifier": "dataVersionToDelete",
                 "newPage": false,
                 "searchKey": "rcache.dataVersionToDelete",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -149,7 +151,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -167,7 +171,9 @@
                 "identifier": "deleteBatchSize",
                 "newPage": false,
                 "searchKey": "rcache.deleteBatchSize",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +193,9 @@
                 "identifier": "pool",
                 "newPage": false,
                 "searchKey": "rcache.pool",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,7 +215,9 @@
                 "identifier": "globalPrefix",
                 "newPage": false,
                 "searchKey": "rcache.globalPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,7 +240,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -248,9 +260,7 @@
                 "identifier": "MutexOptions",
                 "newPage": false,
                 "searchKey": "rcache.MutexOptions",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -270,9 +280,7 @@
                 "identifier": "Cache",
                 "newPage": false,
                 "searchKey": "rcache.Cache",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -290,9 +298,7 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "rcache.New",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -312,9 +318,7 @@
                       "identifier": "NewWithTTL",
                       "newPage": false,
                       "searchKey": "rcache.NewWithTTL",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -334,9 +338,7 @@
                       "identifier": "Cache.GetMulti",
                       "newPage": false,
                       "searchKey": "rcache.Cache.GetMulti",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -356,9 +358,7 @@
                       "identifier": "Cache.SetMulti",
                       "newPage": false,
                       "searchKey": "rcache.Cache.SetMulti",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -378,9 +378,7 @@
                       "identifier": "Cache.Get",
                       "newPage": false,
                       "searchKey": "rcache.Cache.Get",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -400,9 +398,7 @@
                       "identifier": "Cache.Set",
                       "newPage": false,
                       "searchKey": "rcache.Cache.Set",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -422,9 +418,7 @@
                       "identifier": "Cache.Delete",
                       "newPage": false,
                       "searchKey": "rcache.Cache.Delete",
-                      "tags": [
-                        "exported"
-                      ]
+                      "tags": null
                     },
                     "label": {
                       "kind": "plaintext",
@@ -444,7 +438,9 @@
                       "identifier": "Cache.rkeyPrefix",
                       "newPage": false,
                       "searchKey": "rcache.Cache.rkeyPrefix",
-                      "tags": null
+                      "tags": [
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -467,9 +463,7 @@
                 "identifier": "TB",
                 "newPage": false,
                 "searchKey": "rcache.TB",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -492,7 +486,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "private"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -510,9 +506,7 @@
                 "identifier": "TryAcquireMutex",
                 "newPage": false,
                 "searchKey": "rcache.TryAcquireMutex",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -532,9 +526,7 @@
                 "identifier": "DeleteOldCacheData",
                 "newPage": false,
                 "searchKey": "rcache.DeleteOldCacheData",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -554,9 +546,7 @@
                 "identifier": "SetupForTest",
                 "newPage": false,
                 "searchKey": "rcache.SetupForTest",
-                "tags": [
-                  "exported"
-                ]
+                "tags": null
               },
               "label": {
                 "kind": "plaintext",
@@ -576,7 +566,9 @@
                 "identifier": "deleteKeysWithPrefix",
                 "newPage": false,
                 "searchKey": "rcache.deleteKeysWithPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -596,7 +588,9 @@
                 "identifier": "TestTryAcquireMutex",
                 "newPage": false,
                 "searchKey": "rcache.TestTryAcquireMutex",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -616,7 +610,9 @@
                 "identifier": "TestCache_namespace",
                 "newPage": false,
                 "searchKey": "rcache.TestCache_namespace",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -636,7 +632,9 @@
                 "identifier": "TestCache_simple",
                 "newPage": false,
                 "searchKey": "rcache.TestCache_simple",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -656,7 +654,9 @@
                 "identifier": "TestCache_multi",
                 "newPage": false,
                 "searchKey": "rcache.TestCache_multi",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -676,7 +676,9 @@
                 "identifier": "TestCache_deleteKeysWithPrefix",
                 "newPage": false,
                 "searchKey": "rcache.TestCache_deleteKeysWithPrefix",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -696,7 +698,9 @@
                 "identifier": "bytes",
                 "newPage": false,
                 "searchKey": "rcache.bytes",
-                "tags": null
+                "tags": [
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -13,7 +13,7 @@ Package socktest provides utilities for socket testing.
     * [const FilterClose](#FilterClose)
 * [Types](#type)
     * [type Switch struct](#Switch)
-        * [func (sw *Switch) init()](#Switch.init)
+        * [func (sw *Switch) init()](#Switch.init.switch.go)
         * [func (sw *Switch) Stats() []Stat](#Switch.Stats)
         * [func (sw *Switch) Sockets() Sockets](#Switch.Sockets)
         * [func (sw *Switch) Set(t FilterType, f Filter)](#Switch.Set)
@@ -50,11 +50,14 @@ Package socktest provides utilities for socket testing.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="FilterSocket" href="#FilterSocket">const FilterSocket</a>
 
 ```
 searchKey: socktest.FilterSocket
-tags: [exported]
 ```
 
 ```Go
@@ -66,7 +69,6 @@ const FilterSocket FilterType = iota // for Socket
 
 ```
 searchKey: socktest.FilterConnect
-tags: [exported]
 ```
 
 ```Go
@@ -78,7 +80,6 @@ const FilterConnect // for Connect or ConnectEx
 
 ```
 searchKey: socktest.FilterListen
-tags: [exported]
 ```
 
 ```Go
@@ -90,7 +91,6 @@ const FilterListen // for Listen
 
 ```
 searchKey: socktest.FilterAccept
-tags: [exported]
 ```
 
 ```Go
@@ -102,7 +102,6 @@ const FilterAccept // for Accept, Accept4 or AcceptEx
 
 ```
 searchKey: socktest.FilterGetsockoptInt
-tags: [exported]
 ```
 
 ```Go
@@ -114,7 +113,6 @@ const FilterGetsockoptInt // for GetsockoptInt
 
 ```
 searchKey: socktest.FilterClose
-tags: [exported]
 ```
 
 ```Go
@@ -124,11 +122,14 @@ const FilterClose // for Close or Closesocket
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Switch" href="#Switch">type Switch struct</a>
 
 ```
 searchKey: socktest.Switch
-tags: [exported]
 ```
 
 ```Go
@@ -146,10 +147,11 @@ type Switch struct {
 
 A Switch represents a callpath point switch for socket system calls. 
 
-#### <a id="Switch.init" href="#Switch.init">func (sw *Switch) init()</a>
+#### <a id="Switch.init.switch.go" href="#Switch.init.switch.go">func (sw *Switch) init()</a>
 
 ```
 searchKey: socktest.Switch.init
+tags: [private]
 ```
 
 ```Go
@@ -160,7 +162,6 @@ func (sw *Switch) init()
 
 ```
 searchKey: socktest.Switch.Stats
-tags: [exported]
 ```
 
 ```Go
@@ -173,7 +174,6 @@ Stats returns a list of per-cookie socket statistics.
 
 ```
 searchKey: socktest.Switch.Sockets
-tags: [exported]
 ```
 
 ```Go
@@ -186,7 +186,6 @@ Sockets returns mappings of socket descriptor to socket status.
 
 ```
 searchKey: socktest.Switch.Set
-tags: [exported]
 ```
 
 ```Go
@@ -199,6 +198,7 @@ Set deploys the socket system call filter f for the filter type t.
 
 ```
 searchKey: socktest.Switch.sockso
+tags: [private]
 ```
 
 ```Go
@@ -209,6 +209,7 @@ func (sw *Switch) sockso(s int) *Status
 
 ```
 searchKey: socktest.Switch.addLocked
+tags: [private]
 ```
 
 ```Go
@@ -221,7 +222,6 @@ addLocked returns a new Status without locking. sw.smu must be held before call.
 
 ```
 searchKey: socktest.Switch.Socket
-tags: [exported]
 ```
 
 ```Go
@@ -234,7 +234,6 @@ Socket wraps syscall.Socket.
 
 ```
 searchKey: socktest.Switch.Close
-tags: [exported]
 ```
 
 ```Go
@@ -247,7 +246,6 @@ Close wraps syscall.Close.
 
 ```
 searchKey: socktest.Switch.Connect
-tags: [exported]
 ```
 
 ```Go
@@ -260,7 +258,6 @@ Connect wraps syscall.Connect.
 
 ```
 searchKey: socktest.Switch.Listen
-tags: [exported]
 ```
 
 ```Go
@@ -273,7 +270,6 @@ Listen wraps syscall.Listen.
 
 ```
 searchKey: socktest.Switch.Accept
-tags: [exported]
 ```
 
 ```Go
@@ -286,7 +282,6 @@ Accept wraps syscall.Accept.
 
 ```
 searchKey: socktest.Switch.GetsockoptInt
-tags: [exported]
 ```
 
 ```Go
@@ -299,7 +294,6 @@ GetsockoptInt wraps syscall.GetsockoptInt.
 
 ```
 searchKey: socktest.Cookie
-tags: [exported]
 ```
 
 ```Go
@@ -312,6 +306,7 @@ A Cookie represents a 3-tuple of a socket; address family, socket type and proto
 
 ```
 searchKey: socktest.cookie
+tags: [private]
 ```
 
 ```Go
@@ -322,7 +317,6 @@ func cookie(family, sotype, proto int) Cookie
 
 ```
 searchKey: socktest.Cookie.Family
-tags: [exported]
 ```
 
 ```Go
@@ -335,7 +329,6 @@ Family returns an address family.
 
 ```
 searchKey: socktest.Cookie.Type
-tags: [exported]
 ```
 
 ```Go
@@ -348,7 +341,6 @@ Type returns a socket type.
 
 ```
 searchKey: socktest.Cookie.Protocol
-tags: [exported]
 ```
 
 ```Go
@@ -361,7 +353,6 @@ Protocol returns a protocol number.
 
 ```
 searchKey: socktest.Status
-tags: [exported]
 ```
 
 ```Go
@@ -378,7 +369,6 @@ A Status represents the status of a socket.
 
 ```
 searchKey: socktest.Status.String
-tags: [exported]
 ```
 
 ```Go
@@ -389,7 +379,6 @@ func (so Status) String() string
 
 ```
 searchKey: socktest.Stat
-tags: [exported]
 ```
 
 ```Go
@@ -418,7 +407,6 @@ A Stat represents a per-cookie socket statistics.
 
 ```
 searchKey: socktest.Stat.String
-tags: [exported]
 ```
 
 ```Go
@@ -429,6 +417,7 @@ func (st Stat) String() string
 
 ```
 searchKey: socktest.stats
+tags: [private]
 ```
 
 ```Go
@@ -439,6 +428,7 @@ type stats map[Cookie]*Stat
 
 ```
 searchKey: socktest.stats.getLocked
+tags: [private]
 ```
 
 ```Go
@@ -449,7 +439,6 @@ func (st stats) getLocked(c Cookie) *Stat
 
 ```
 searchKey: socktest.FilterType
-tags: [exported]
 ```
 
 ```Go
@@ -462,7 +451,6 @@ A FilterType represents a filter type.
 
 ```
 searchKey: socktest.Filter
-tags: [exported]
 ```
 
 ```Go
@@ -477,6 +465,7 @@ It will only be executed before a system call for a socket that has an entry in 
 
 ```
 searchKey: socktest.Filter.apply
+tags: [private]
 ```
 
 ```Go
@@ -487,7 +476,6 @@ func (f Filter) apply(st *Status) (AfterFilter, error)
 
 ```
 searchKey: socktest.AfterFilter
-tags: [exported]
 ```
 
 ```Go
@@ -502,6 +490,7 @@ It will only be executed after a system call for a socket that has an entry in i
 
 ```
 searchKey: socktest.AfterFilter.apply
+tags: [private]
 ```
 
 ```Go
@@ -512,7 +501,6 @@ func (f AfterFilter) apply(st *Status) error
 
 ```
 searchKey: socktest.Sockets
-tags: [exported]
 ```
 
 ```Go
@@ -523,10 +511,15 @@ Sockets maps a socket descriptor to the status of socket.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="familyString" href="#familyString">func familyString(family int) string</a>
 
 ```
 searchKey: socktest.familyString
+tags: [private]
 ```
 
 ```Go
@@ -537,6 +530,7 @@ func familyString(family int) string
 
 ```
 searchKey: socktest.typeString
+tags: [private]
 ```
 
 ```Go
@@ -547,6 +541,7 @@ func typeString(sotype int) string
 
 ```
 searchKey: socktest.protocolString
+tags: [private]
 ```
 
 ```Go

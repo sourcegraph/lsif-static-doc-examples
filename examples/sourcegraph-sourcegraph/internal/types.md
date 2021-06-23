@@ -162,11 +162,14 @@ Package types defines types used by the frontend.
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="UnknownAction" href="#UnknownAction">const UnknownAction</a>
 
 ```
 searchKey: types.UnknownAction
-tags: [exported]
 ```
 
 ```Go
@@ -177,7 +180,6 @@ const UnknownAction CodeIntelAction = iota
 
 ```
 searchKey: types.HoverAction
-tags: [exported]
 ```
 
 ```Go
@@ -188,7 +190,6 @@ const HoverAction
 
 ```
 searchKey: types.DefinitionsAction
-tags: [exported]
 ```
 
 ```Go
@@ -199,7 +200,6 @@ const DefinitionsAction
 
 ```
 searchKey: types.ReferencesAction
-tags: [exported]
 ```
 
 ```Go
@@ -210,7 +210,6 @@ const ReferencesAction
 
 ```
 searchKey: types.UnknownSource
-tags: [exported]
 ```
 
 ```Go
@@ -221,7 +220,6 @@ const UnknownSource CodeIntelSource = iota
 
 ```
 searchKey: types.PreciseSource
-tags: [exported]
 ```
 
 ```Go
@@ -232,7 +230,6 @@ const PreciseSource
 
 ```
 searchKey: types.SearchSource
-tags: [exported]
 ```
 
 ```Go
@@ -243,7 +240,6 @@ const SearchSource
 
 ```
 searchKey: types.RedactedSecret
-tags: [exported]
 ```
 
 ```Go
@@ -256,7 +252,6 @@ RedactedSecret is used as a placeholder for secret fields when reading external 
 
 ```
 searchKey: types.CloneStatusUnknown
-tags: [exported]
 ```
 
 ```Go
@@ -267,7 +262,6 @@ const CloneStatusUnknown CloneStatus = ""
 
 ```
 searchKey: types.CloneStatusNotCloned
-tags: [exported]
 ```
 
 ```Go
@@ -278,7 +272,6 @@ const CloneStatusNotCloned CloneStatus = "not_cloned"
 
 ```
 searchKey: types.CloneStatusCloning
-tags: [exported]
 ```
 
 ```Go
@@ -289,7 +282,6 @@ const CloneStatusCloning CloneStatus = "cloning"
 
 ```
 searchKey: types.CloneStatusCloned
-tags: [exported]
 ```
 
 ```Go
@@ -298,11 +290,14 @@ const CloneStatusCloned CloneStatus = "cloned"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Opt" href="#Opt">var Opt</a>
 
 ```
 searchKey: types.Opt
-tags: [exported]
 ```
 
 ```Go
@@ -315,7 +310,6 @@ Opt contains functional options to be used in tests.
 
 ```
 searchKey: types.Assert
-tags: [exported]
 ```
 
 ```Go
@@ -328,6 +322,7 @@ Assert contains assertion functions to be used in tests.
 
 ```
 searchKey: types.newValue
+tags: [private]
 ```
 
 ```Go
@@ -336,11 +331,14 @@ var newValue = "a different value"
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="CodeIntelAggregatedEvent" href="#CodeIntelAggregatedEvent">type CodeIntelAggregatedEvent struct</a>
 
 ```
 searchKey: types.CodeIntelAggregatedEvent
-tags: [exported]
 ```
 
 ```Go
@@ -359,7 +357,6 @@ CodeIntelAggregatedEvent represents the total events and unique users within the
 
 ```
 searchKey: types.NewCodeIntelUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -383,7 +380,6 @@ NewCodeIntelUsageStatistics is the type used within the updatecheck handler. Thi
 
 ```
 searchKey: types.CodeIntelEventSummary
-tags: [exported]
 ```
 
 ```Go
@@ -401,7 +397,6 @@ type CodeIntelEventSummary struct {
 
 ```
 searchKey: types.CodeIntelAction
-tags: [exported]
 ```
 
 ```Go
@@ -412,7 +407,6 @@ type CodeIntelAction int
 
 ```
 searchKey: types.CodeIntelSource
-tags: [exported]
 ```
 
 ```Go
@@ -423,7 +417,6 @@ type CodeIntelSource int
 
 ```
 searchKey: types.OldCodeIntelUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -438,7 +431,6 @@ OldCodeIntelUsageStatistics is an old version the code intelligence usage static
 
 ```
 searchKey: types.OldCodeIntelUsagePeriod
-tags: [exported]
 ```
 
 ```Go
@@ -454,7 +446,6 @@ type OldCodeIntelUsagePeriod struct {
 
 ```
 searchKey: types.OldCodeIntelEventCategoryStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -468,7 +459,6 @@ type OldCodeIntelEventCategoryStatistics struct {
 
 ```
 searchKey: types.OldCodeIntelEventStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -482,7 +472,6 @@ type OldCodeIntelEventStatistics struct {
 
 ```
 searchKey: types.BitbucketServerConnection
-tags: [exported]
 ```
 
 ```Go
@@ -497,7 +486,6 @@ type BitbucketServerConnection struct {
 
 ```
 searchKey: types.GitHubConnection
-tags: [exported]
 ```
 
 ```Go
@@ -512,7 +500,6 @@ type GitHubConnection struct {
 
 ```
 searchKey: types.GitLabConnection
-tags: [exported]
 ```
 
 ```Go
@@ -527,7 +514,6 @@ type GitLabConnection struct {
 
 ```
 searchKey: types.PerforceConnection
-tags: [exported]
 ```
 
 ```Go
@@ -542,7 +528,6 @@ type PerforceConnection struct {
 
 ```
 searchKey: types.SavedSearch
-tags: [exported]
 ```
 
 ```Go
@@ -564,6 +549,7 @@ SavedSearch represents a saved search
 
 ```
 searchKey: types.jsonStringField
+tags: [private]
 ```
 
 ```Go
@@ -577,7 +563,6 @@ type jsonStringField struct {
 
 ```
 searchKey: types.ReposAssertion
-tags: [exported]
 ```
 
 ```Go
@@ -590,7 +575,6 @@ A ReposAssertion performs an assertion on the given Repos.
 
 ```
 searchKey: types.ExternalServicesAssertion
-tags: [exported]
 ```
 
 ```Go
@@ -603,7 +587,6 @@ An ExternalServicesAssertion performs an assertion on the given ExternalServices
 
 ```
 searchKey: types.SourceInfo
-tags: [exported]
 ```
 
 ```Go
@@ -619,7 +602,6 @@ A SourceInfo represents a source a Repo belongs to (such as an external service)
 
 ```
 searchKey: types.SourceInfo.ExternalServiceID
-tags: [exported]
 ```
 
 ```Go
@@ -632,7 +614,6 @@ ExternalServiceID returns the ID of the external service this SourceInfo refers 
 
 ```
 searchKey: types.Repo
-tags: [exported]
 ```
 
 ```Go
@@ -681,7 +662,6 @@ Repo represents a source code repository.
 
 ```
 searchKey: types.MakeRepo
-tags: [exported]
 ```
 
 ```Go
@@ -692,7 +672,6 @@ func MakeRepo(name, serviceID, serviceType string, services ...*ExternalService)
 
 ```
 searchKey: types.MakeGithubRepo
-tags: [exported]
 ```
 
 ```Go
@@ -705,7 +684,6 @@ MakeGithubRepo returns a configured Github repository.
 
 ```
 searchKey: types.MakeGitlabRepo
-tags: [exported]
 ```
 
 ```Go
@@ -718,7 +696,6 @@ MakeGitlabRepo returns a configured Gitlab repository.
 
 ```
 searchKey: types.MakeBitbucketServerRepo
-tags: [exported]
 ```
 
 ```Go
@@ -731,7 +708,6 @@ MakeBitbucketServerRepo returns a configured Bitbucket Server repository.
 
 ```
 searchKey: types.MakeAWSCodeCommitRepo
-tags: [exported]
 ```
 
 ```Go
@@ -744,7 +720,6 @@ MakeAWSCodeCommitRepo returns a configured AWS Code Commit repository.
 
 ```
 searchKey: types.MakeOtherRepo
-tags: [exported]
 ```
 
 ```Go
@@ -757,7 +732,6 @@ MakeOtherRepo returns a configured repository from a custom host.
 
 ```
 searchKey: types.MakeGitoliteRepo
-tags: [exported]
 ```
 
 ```Go
@@ -770,7 +744,6 @@ MakeGitoliteRepo returns a configured Gitolite repository.
 
 ```
 searchKey: types.Repo.CloneURLs
-tags: [exported]
 ```
 
 ```Go
@@ -783,7 +756,6 @@ CloneURLs returns all the clone URLs this repo is clonable from.
 
 ```
 searchKey: types.Repo.IsDeleted
-tags: [exported]
 ```
 
 ```Go
@@ -796,7 +768,6 @@ IsDeleted returns true if the repo is deleted.
 
 ```
 searchKey: types.Repo.ExternalServiceIDs
-tags: [exported]
 ```
 
 ```Go
@@ -809,7 +780,6 @@ ExternalServiceIDs returns the IDs of the external services this repo belongs to
 
 ```
 searchKey: types.Repo.Update
-tags: [exported]
 ```
 
 ```Go
@@ -822,7 +792,6 @@ Update updates Repo r with the fields from the given newer Repo n, returning tru
 
 ```
 searchKey: types.Repo.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -835,7 +804,6 @@ Clone returns a clone of the given repo.
 
 ```
 searchKey: types.Repo.Apply
-tags: [exported]
 ```
 
 ```Go
@@ -848,7 +816,6 @@ Apply applies the given functional options to the Repo.
 
 ```
 searchKey: types.Repo.With
-tags: [exported]
 ```
 
 ```Go
@@ -861,7 +828,6 @@ With returns a clone of the given repo with the given functional options applied
 
 ```
 searchKey: types.Repo.Less
-tags: [exported]
 ```
 
 ```Go
@@ -884,7 +850,6 @@ Context on using other fields such as timestamps to order/resolve conflicts: We 
 
 ```
 searchKey: types.Repo.String
-tags: [exported]
 ```
 
 ```Go
@@ -895,7 +860,6 @@ func (r *Repo) String() string
 
 ```
 searchKey: types.Repos
-tags: [exported]
 ```
 
 ```Go
@@ -908,7 +872,6 @@ Repos is an utility type with convenience methods for operating on lists of Repo
 
 ```
 searchKey: types.GenerateRepos
-tags: [exported]
 ```
 
 ```Go
@@ -921,7 +884,6 @@ GenerateRepos takes a list of base repos and generates n ones with different nam
 
 ```
 searchKey: types.Repos.Len
-tags: [exported]
 ```
 
 ```Go
@@ -932,7 +894,6 @@ func (rs Repos) Len() int
 
 ```
 searchKey: types.Repos.Less
-tags: [exported]
 ```
 
 ```Go
@@ -943,7 +904,6 @@ func (rs Repos) Less(i, j int) bool
 
 ```
 searchKey: types.Repos.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -954,7 +914,6 @@ func (rs Repos) Swap(i, j int)
 
 ```
 searchKey: types.Repos.IDs
-tags: [exported]
 ```
 
 ```Go
@@ -967,7 +926,6 @@ IDs returns the list of ids from all Repos.
 
 ```
 searchKey: types.Repos.Names
-tags: [exported]
 ```
 
 ```Go
@@ -980,7 +938,6 @@ Names returns the list of names from all Repos.
 
 ```
 searchKey: types.Repos.NamesSummary
-tags: [exported]
 ```
 
 ```Go
@@ -993,7 +950,6 @@ NamesSummary caps the number of repos to 20 when composing a space-separated lis
 
 ```
 searchKey: types.Repos.Kinds
-tags: [exported]
 ```
 
 ```Go
@@ -1006,7 +962,6 @@ Kinds returns the unique set of kinds from all Repos.
 
 ```
 searchKey: types.Repos.ExternalRepos
-tags: [exported]
 ```
 
 ```Go
@@ -1019,7 +974,6 @@ ExternalRepos returns the list of set ExternalRepoSpecs from all Repos.
 
 ```
 searchKey: types.Repos.Sources
-tags: [exported]
 ```
 
 ```Go
@@ -1032,7 +986,6 @@ Sources returns a map of all the sources per repo id.
 
 ```
 searchKey: types.Repos.Concat
-tags: [exported]
 ```
 
 ```Go
@@ -1045,7 +998,6 @@ Concat adds the given Repos to the end of rs.
 
 ```
 searchKey: types.Repos.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -1058,7 +1010,6 @@ Clone returns a clone of Repos.
 
 ```
 searchKey: types.Repos.Apply
-tags: [exported]
 ```
 
 ```Go
@@ -1071,7 +1022,6 @@ Apply applies the given functional options to the Repo.
 
 ```
 searchKey: types.Repos.With
-tags: [exported]
 ```
 
 ```Go
@@ -1084,7 +1034,6 @@ With returns a clone of the given repos with the given functional options applie
 
 ```
 searchKey: types.Repos.Filter
-tags: [exported]
 ```
 
 ```Go
@@ -1097,7 +1046,6 @@ Filter returns all the Repos that match the given predicate.
 
 ```
 searchKey: types.RepoName
-tags: [exported]
 ```
 
 ```Go
@@ -1113,7 +1061,6 @@ RepoName represents a source code repository name and its ID.
 
 ```
 searchKey: types.RepoName.ToRepo
-tags: [exported]
 ```
 
 ```Go
@@ -1124,7 +1071,6 @@ func (r *RepoName) ToRepo() *Repo
 
 ```
 searchKey: types.RepoNames
-tags: [exported]
 ```
 
 ```Go
@@ -1137,7 +1083,6 @@ RepoNames is an utility type with convenience methods for operating on lists of 
 
 ```
 searchKey: types.RepoNames.Len
-tags: [exported]
 ```
 
 ```Go
@@ -1148,7 +1093,6 @@ func (rs RepoNames) Len() int
 
 ```
 searchKey: types.RepoNames.Less
-tags: [exported]
 ```
 
 ```Go
@@ -1159,7 +1103,6 @@ func (rs RepoNames) Less(i, j int) bool
 
 ```
 searchKey: types.RepoNames.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -1170,7 +1113,6 @@ func (rs RepoNames) Swap(i, j int)
 
 ```
 searchKey: types.CodeHostRepository
-tags: [exported]
 ```
 
 ```Go
@@ -1185,7 +1127,6 @@ type CodeHostRepository struct {
 
 ```
 searchKey: types.RepoGitserverStatus
-tags: [exported]
 ```
 
 ```Go
@@ -1206,7 +1147,6 @@ RepoGitserverStatus includes basic repo data along with the current gitserver st
 
 ```
 searchKey: types.CloneStatus
-tags: [exported]
 ```
 
 ```Go
@@ -1217,7 +1157,6 @@ type CloneStatus string
 
 ```
 searchKey: types.ParseCloneStatus
-tags: [exported]
 ```
 
 ```Go
@@ -1228,7 +1167,6 @@ func ParseCloneStatus(s string) CloneStatus
 
 ```
 searchKey: types.GitserverRepo
-tags: [exported]
 ```
 
 ```Go
@@ -1251,7 +1189,6 @@ GitserverRepo  represents the data gitserver knows about a repo
 
 ```
 searchKey: types.ExternalService
-tags: [exported]
 ```
 
 ```Go
@@ -1277,7 +1214,6 @@ ExternalService is a connection to an external service.
 
 ```
 searchKey: types.ExternalService.RedactConfigSecrets
-tags: [exported]
 ```
 
 ```Go
@@ -1290,7 +1226,6 @@ RedactConfigSecrets replaces any secret fields in the Config field with Redacted
 
 ```
 searchKey: types.ExternalService.UnredactConfig
-tags: [exported]
 ```
 
 ```Go
@@ -1303,7 +1238,6 @@ UnredactConfig will replace redacted fields with their undredacted form from the
 
 ```
 searchKey: types.ExternalService.URN
-tags: [exported]
 ```
 
 ```Go
@@ -1316,7 +1250,6 @@ URN returns a unique resource identifier of this external service, used as the k
 
 ```
 searchKey: types.ExternalService.IsDeleted
-tags: [exported]
 ```
 
 ```Go
@@ -1329,7 +1262,6 @@ IsDeleted returns true if the external service is deleted.
 
 ```
 searchKey: types.ExternalService.Update
-tags: [exported]
 ```
 
 ```Go
@@ -1342,7 +1274,6 @@ Update updates ExternalService e with the fields from the given newer ExternalSe
 
 ```
 searchKey: types.ExternalService.Configuration
-tags: [exported]
 ```
 
 ```Go
@@ -1355,7 +1286,6 @@ Configuration returns the external service config.
 
 ```
 searchKey: types.ExternalService.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -1368,7 +1298,6 @@ Clone returns a clone of the given external service.
 
 ```
 searchKey: types.ExternalService.Apply
-tags: [exported]
 ```
 
 ```Go
@@ -1381,7 +1310,6 @@ Apply applies the given functional options to the ExternalService.
 
 ```
 searchKey: types.ExternalService.With
-tags: [exported]
 ```
 
 ```Go
@@ -1394,7 +1322,6 @@ With returns a clone of the given repo with the given functional options applied
 
 ```
 searchKey: types.ExternalServiceSyncJob
-tags: [exported]
 ```
 
 ```Go
@@ -1417,7 +1344,6 @@ ExternalServiceSyncJob represents an sync job for an external service
 
 ```
 searchKey: types.ExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -1430,7 +1356,6 @@ ExternalServices is an utility type with convenience methods for operating on li
 
 ```
 searchKey: types.MakeExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -1443,7 +1368,6 @@ MakeExternalServices creates one configured external service per kind and return
 
 ```
 searchKey: types.GenerateExternalServices
-tags: [exported]
 ```
 
 ```Go
@@ -1456,7 +1380,6 @@ GenerateExternalServices takes a list of base external services and generates n 
 
 ```
 searchKey: types.ExternalServices.IDs
-tags: [exported]
 ```
 
 ```Go
@@ -1469,7 +1392,6 @@ IDs returns the list of ids from all ExternalServices.
 
 ```
 searchKey: types.ExternalServices.DisplayNames
-tags: [exported]
 ```
 
 ```Go
@@ -1482,7 +1404,6 @@ DisplayNames returns the list of display names from all ExternalServices.
 
 ```
 searchKey: types.ExternalServices.Kinds
-tags: [exported]
 ```
 
 ```Go
@@ -1495,7 +1416,6 @@ Kinds returns the unique set of Kinds in the given external services list.
 
 ```
 searchKey: types.ExternalServices.URNs
-tags: [exported]
 ```
 
 ```Go
@@ -1508,7 +1428,6 @@ URNs returns the list of URNs from all ExternalServices.
 
 ```
 searchKey: types.ExternalServices.Len
-tags: [exported]
 ```
 
 ```Go
@@ -1519,7 +1438,6 @@ func (es ExternalServices) Len() int
 
 ```
 searchKey: types.ExternalServices.Swap
-tags: [exported]
 ```
 
 ```Go
@@ -1530,7 +1448,6 @@ func (es ExternalServices) Swap(i, j int)
 
 ```
 searchKey: types.ExternalServices.Less
-tags: [exported]
 ```
 
 ```Go
@@ -1541,7 +1458,6 @@ func (es ExternalServices) Less(i, j int) bool
 
 ```
 searchKey: types.ExternalServices.Clone
-tags: [exported]
 ```
 
 ```Go
@@ -1554,7 +1470,6 @@ Clone returns a clone of the given external services.
 
 ```
 searchKey: types.ExternalServices.Apply
-tags: [exported]
 ```
 
 ```Go
@@ -1567,7 +1482,6 @@ Apply applies the given functional options to the ExternalService.
 
 ```
 searchKey: types.ExternalServices.With
-tags: [exported]
 ```
 
 ```Go
@@ -1580,7 +1494,6 @@ With returns a clone of the given external services with the given functional op
 
 ```
 searchKey: types.GlobalState
-tags: [exported]
 ```
 
 ```Go
@@ -1594,7 +1507,6 @@ type GlobalState struct {
 
 ```
 searchKey: types.User
-tags: [exported]
 ```
 
 ```Go
@@ -1618,7 +1530,6 @@ User represents a registered user.
 
 ```
 searchKey: types.Org
-tags: [exported]
 ```
 
 ```Go
@@ -1635,7 +1546,6 @@ type Org struct {
 
 ```
 searchKey: types.OrgMembership
-tags: [exported]
 ```
 
 ```Go
@@ -1652,7 +1562,6 @@ type OrgMembership struct {
 
 ```
 searchKey: types.PhabricatorRepo
-tags: [exported]
 ```
 
 ```Go
@@ -1668,7 +1577,6 @@ type PhabricatorRepo struct {
 
 ```
 searchKey: types.UserUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -1687,7 +1595,6 @@ type UserUsageStatistics struct {
 
 ```
 searchKey: types.UserUsageCounts
-tags: [exported]
 ```
 
 ```Go
@@ -1705,7 +1612,6 @@ UserUsageCounts captures the usage numbers of a user in a single day.
 
 ```
 searchKey: types.UserDates
-tags: [exported]
 ```
 
 ```Go
@@ -1722,7 +1628,6 @@ UserDates captures the created and deleted dates of a single user.
 
 ```
 searchKey: types.SiteUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -1739,7 +1644,6 @@ NOTE: DO NOT alter this struct without making a symmetric change to the updatech
 
 ```
 searchKey: types.SiteActivityPeriod
-tags: [exported]
 ```
 
 ```Go
@@ -1758,7 +1662,6 @@ NOTE: DO NOT alter this struct without making a symmetric change to the updatech
 
 ```
 searchKey: types.BatchChangesUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -1865,7 +1768,6 @@ NOTE: DO NOT alter this struct without making a symmetric change to the updatech
 
 ```
 searchKey: types.BatchChangesCohort
-tags: [exported]
 ```
 
 ```Go
@@ -1898,7 +1800,6 @@ NOTE: DO NOT alter this struct without making a symmetric change to the updatech
 
 ```
 searchKey: types.SearchUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -1915,7 +1816,6 @@ NOTE: DO NOT alter this struct without making a symmetric change to the updatech
 
 ```
 searchKey: types.SearchUsagePeriod
-tags: [exported]
 ```
 
 ```Go
@@ -1983,7 +1883,6 @@ NOTE: DO NOT alter this struct without making a symmetric change to the updatech
 
 ```
 searchKey: types.SearchModeUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -1997,7 +1896,6 @@ type SearchModeUsageStatistics struct {
 
 ```
 searchKey: types.SearchCountStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -2011,7 +1909,6 @@ type SearchCountStatistics struct {
 
 ```
 searchKey: types.SearchEventStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -2028,7 +1925,6 @@ NOTE: DO NOT alter this struct without making a symmetric change to the updatech
 
 ```
 searchKey: types.SearchEventLatencies
-tags: [exported]
 ```
 
 ```Go
@@ -2045,7 +1941,6 @@ NOTE: DO NOT alter this struct without making a symmetric change to the updatech
 
 ```
 searchKey: types.SiteUsageSummary
-tags: [exported]
 ```
 
 ```Go
@@ -2079,7 +1974,6 @@ SiteUsageSummary is an alternate view of SiteUsageStatistics which is calculated
 
 ```
 searchKey: types.SearchAggregatedEvent
-tags: [exported]
 ```
 
 ```Go
@@ -2106,7 +2000,6 @@ SearchAggregatedEvent represents the total events, unique users, and latencies o
 
 ```
 searchKey: types.SurveyResponse
-tags: [exported]
 ```
 
 ```Go
@@ -2125,7 +2018,6 @@ type SurveyResponse struct {
 
 ```
 searchKey: types.Event
-tags: [exported]
 ```
 
 ```Go
@@ -2146,7 +2038,6 @@ type Event struct {
 
 ```
 searchKey: types.GrowthStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -2165,7 +2056,6 @@ GrowthStatistics represents the total users that were created, deleted, resurrec
 
 ```
 searchKey: types.SavedSearches
-tags: [exported]
 ```
 
 ```Go
@@ -2185,7 +2075,6 @@ SavedSearches represents the total number of saved searches, users using saved s
 
 ```
 searchKey: types.HomepagePanels
-tags: [exported]
 ```
 
 ```Go
@@ -2211,7 +2100,6 @@ Panel homepage represents interaction data on the enterprise homepage panels.
 
 ```
 searchKey: types.WeeklyRetentionStats
-tags: [exported]
 ```
 
 ```Go
@@ -2237,7 +2125,6 @@ type WeeklyRetentionStats struct {
 
 ```
 searchKey: types.RetentionStats
-tags: [exported]
 ```
 
 ```Go
@@ -2250,7 +2137,6 @@ type RetentionStats struct {
 
 ```
 searchKey: types.SearchOnboarding
-tags: [exported]
 ```
 
 ```Go
@@ -2269,7 +2155,6 @@ type SearchOnboarding struct {
 
 ```
 searchKey: types.ExtensionsUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -2290,7 +2175,6 @@ Weekly usage statistics for the extensions platform
 
 ```
 searchKey: types.ExtensionUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -2310,7 +2194,6 @@ Weekly statistics for an individual extension
 
 ```
 searchKey: types.CodeInsightsUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -2333,7 +2216,6 @@ type CodeInsightsUsageStatistics struct {
 
 ```
 searchKey: types.InsightUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -2354,7 +2236,6 @@ Usage statistics for a type of code insight
 
 ```
 searchKey: types.PingName
-tags: [exported]
 ```
 
 ```Go
@@ -2365,7 +2246,6 @@ type PingName string
 
 ```
 searchKey: types.AggregatedPingStats
-tags: [exported]
 ```
 
 ```Go
@@ -2382,7 +2262,6 @@ AggregatedPingStats is a generic representation of an aggregated ping statistic
 
 ```
 searchKey: types.InsightTimeIntervalPing
-tags: [exported]
 ```
 
 ```Go
@@ -2396,7 +2275,6 @@ type InsightTimeIntervalPing struct {
 
 ```
 searchKey: types.OrgVisibleInsightPing
-tags: [exported]
 ```
 
 ```Go
@@ -2410,7 +2288,6 @@ type OrgVisibleInsightPing struct {
 
 ```
 searchKey: types.CodeMonitoringUsageStatistics
-tags: [exported]
 ```
 
 ```Go
@@ -2428,7 +2305,6 @@ type CodeMonitoringUsageStatistics struct {
 
 ```
 searchKey: types.Secret
-tags: [exported]
 ```
 
 ```Go
@@ -2455,7 +2331,6 @@ Secret represents the secrets table
 
 ```
 searchKey: types.SearchContext
-tags: [exported]
 ```
 
 ```Go
@@ -2491,7 +2366,6 @@ type SearchContext struct {
 
 ```
 searchKey: types.SearchContextRepositoryRevisions
-tags: [exported]
 ```
 
 ```Go
@@ -2505,10 +2379,15 @@ SearchContextRepositoryRevisions is a simple wrapper for a repository and its re
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="redactField" href="#redactField">func redactField(buf string, fields ...string) (string, error)</a>
 
 ```
 searchKey: types.redactField
+tags: [private]
 ```
 
 ```Go
@@ -2521,6 +2400,7 @@ redactField will unmarshal the passed JSON string into the passed value, and the
 
 ```
 searchKey: types.unredactField
+tags: [private]
 ```
 
 ```Go
@@ -2531,6 +2411,7 @@ func unredactField(old, new string, cfg interface{}, fields ...jsonStringField) 
 
 ```
 searchKey: types.zeroFields
+tags: [private]
 ```
 
 ```Go
@@ -2543,6 +2424,7 @@ zeroFields zeroes the fields of a struct
 
 ```
 searchKey: types.unmarshalConfig
+tags: [private]
 ```
 
 ```Go
@@ -2555,7 +2437,6 @@ config may contain comments, normalize with jsonc before unmarshaling with jsoni
 
 ```
 searchKey: types.ExternalServicesToMap
-tags: [exported]
 ```
 
 ```Go
@@ -2568,6 +2449,7 @@ ExternalServicesToMap is a helper function that returns a map whose key is the e
 
 ```
 searchKey: types.sourcesKeys
+tags: [private]
 ```
 
 ```Go
@@ -2578,6 +2460,7 @@ func sourcesKeys(m map[string]*SourceInfo) []string
 
 ```
 searchKey: types.sortedSliceLess
+tags: [private]
 ```
 
 ```Go
@@ -2590,6 +2473,7 @@ sortedSliceLess returns true if a < b
 
 ```
 searchKey: types.TestRoundTripRedactExternalServiceConfig
+tags: [private]
 ```
 
 ```Go

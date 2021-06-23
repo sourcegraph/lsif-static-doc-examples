@@ -250,7 +250,7 @@
     * [func TestTimeAddSecOverflow(t *testing.T)](#TestTimeAddSecOverflow)
     * [func TestEmbeddedTZData(t *testing.T)](#TestEmbeddedTZData)
     * [func equal(t *testing.T, f1, f2 reflect.Value) bool](#equal)
-    * [func init()](#init)
+    * [func init()](#init.zoneinfo_test.go)
     * [func TestEnvVarUsage(t *testing.T)](#TestEnvVarUsage)
     * [func TestBadLocationErrMsg(t *testing.T)](#TestBadLocationErrMsg)
     * [func TestLoadLocationValidatesNames(t *testing.T)](#TestLoadLocationValidatesNames)
@@ -270,10 +270,15 @@
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="windowsInaccuracy" href="#windowsInaccuracy">const windowsInaccuracy</a>
 
 ```
 searchKey: time_test.windowsInaccuracy
+tags: [private]
 ```
 
 ```Go
@@ -286,6 +291,7 @@ Go runtime uses different Windows timers for time.Now and sleeping. These can ti
 
 ```
 searchKey: time_test.unixToZero
+tags: [private]
 ```
 
 ```Go
@@ -298,6 +304,7 @@ The time routines provide no way to get absolute time (seconds since zero), but 
 
 ```
 searchKey: time_test.minDuration
+tags: [private]
 ```
 
 ```Go
@@ -308,6 +315,7 @@ const minDuration Duration = -1 << 63
 
 ```
 searchKey: time_test.maxDuration
+tags: [private]
 ```
 
 ```Go
@@ -316,10 +324,15 @@ const maxDuration Duration = 1<<63 - 1
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="c" href="#c">var c</a>
 
 ```
 searchKey: time_test.c
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +343,7 @@ var c chan int
 
 ```
 searchKey: time_test.nextStdChunkTests
+tags: [private]
 ```
 
 ```Go
@@ -340,6 +354,7 @@ var nextStdChunkTests = ...
 
 ```
 searchKey: time_test.rfc3339Formats
+tags: [private]
 ```
 
 ```Go
@@ -350,6 +365,7 @@ var rfc3339Formats = ...
 
 ```
 searchKey: time_test.formatTests
+tags: [private]
 ```
 
 ```Go
@@ -360,6 +376,7 @@ var formatTests = ...
 
 ```
 searchKey: time_test.goStringTests
+tags: [private]
 ```
 
 ```Go
@@ -370,6 +387,7 @@ var goStringTests = ...
 
 ```
 searchKey: time_test.parseTests
+tags: [private]
 ```
 
 ```Go
@@ -380,6 +398,7 @@ var parseTests = ...
 
 ```
 searchKey: time_test.dayOutOfRangeTests
+tags: [private]
 ```
 
 ```Go
@@ -392,6 +411,7 @@ All parsed with ANSIC.
 
 ```
 searchKey: time_test.rubyTests
+tags: [private]
 ```
 
 ```Go
@@ -402,6 +422,7 @@ var rubyTests = ...
 
 ```
 searchKey: time_test.parseTimeZoneTests
+tags: [private]
 ```
 
 ```Go
@@ -412,6 +433,7 @@ var parseTimeZoneTests = ...
 
 ```
 searchKey: time_test.parseErrorTests
+tags: [private]
 ```
 
 ```Go
@@ -422,6 +444,7 @@ var parseErrorTests = ...
 
 ```
 searchKey: time_test.secondsTimeZoneOffsetTests
+tags: [private]
 ```
 
 ```Go
@@ -432,6 +455,7 @@ var secondsTimeZoneOffsetTests = ...
 
 ```
 searchKey: time_test.monthOutOfRangeTests
+tags: [private]
 ```
 
 ```Go
@@ -442,6 +466,7 @@ var monthOutOfRangeTests = ...
 
 ```
 searchKey: time_test.monotonicStringTests
+tags: [private]
 ```
 
 ```Go
@@ -452,6 +477,7 @@ var monotonicStringTests = ...
 
 ```
 searchKey: time_test.slots
+tags: [private]
 ```
 
 ```Go
@@ -462,6 +488,7 @@ var slots = []int{5, 3, 6, 6, 6, 1, 1, 2, 7, 9, 4, 8, 0}
 
 ```
 searchKey: time_test.utctests
+tags: [private]
 ```
 
 ```Go
@@ -472,6 +499,7 @@ var utctests = ...
 
 ```
 searchKey: time_test.nanoutctests
+tags: [private]
 ```
 
 ```Go
@@ -482,6 +510,7 @@ var nanoutctests = ...
 
 ```
 searchKey: time_test.localtests
+tags: [private]
 ```
 
 ```Go
@@ -492,6 +521,7 @@ var localtests = ...
 
 ```
 searchKey: time_test.nanolocaltests
+tags: [private]
 ```
 
 ```Go
@@ -502,6 +532,7 @@ var nanolocaltests = ...
 
 ```
 searchKey: time_test.truncateRoundTests
+tags: [private]
 ```
 
 ```Go
@@ -512,6 +543,7 @@ var truncateRoundTests = ...
 
 ```
 searchKey: time_test.isoWeekTests
+tags: [private]
 ```
 
 ```Go
@@ -522,6 +554,7 @@ var isoWeekTests = ...
 
 ```
 searchKey: time_test.yearDayTests
+tags: [private]
 ```
 
 ```Go
@@ -534,6 +567,7 @@ Test YearDay in several different scenarios and corner cases
 
 ```
 searchKey: time_test.yearDayLocations
+tags: [private]
 ```
 
 ```Go
@@ -546,6 +580,7 @@ Check to see if YearDay is location sensitive
 
 ```
 searchKey: time_test.durationTests
+tags: [private]
 ```
 
 ```Go
@@ -556,6 +591,7 @@ var durationTests = ...
 
 ```
 searchKey: time_test.dateTests
+tags: [private]
 ```
 
 ```Go
@@ -566,6 +602,7 @@ var dateTests = ...
 
 ```
 searchKey: time_test.addDateTests
+tags: [private]
 ```
 
 ```Go
@@ -578,6 +615,7 @@ Several ways of getting from Fri Nov 18 7:56:35 PST 2011 to Thu Mar 19 7:56:35 P
 
 ```
 searchKey: time_test.daysInTests
+tags: [private]
 ```
 
 ```Go
@@ -588,6 +626,7 @@ var daysInTests = ...
 
 ```
 searchKey: time_test.gobTests
+tags: [private]
 ```
 
 ```Go
@@ -598,6 +637,7 @@ var gobTests = ...
 
 ```
 searchKey: time_test.invalidEncodingTests
+tags: [private]
 ```
 
 ```Go
@@ -608,6 +648,7 @@ var invalidEncodingTests = ...
 
 ```
 searchKey: time_test.notEncodableTimes
+tags: [private]
 ```
 
 ```Go
@@ -618,6 +659,7 @@ var notEncodableTimes = ...
 
 ```
 searchKey: time_test.jsonTests
+tags: [private]
 ```
 
 ```Go
@@ -628,6 +670,7 @@ var jsonTests = ...
 
 ```
 searchKey: time_test.notJSONEncodableTimes
+tags: [private]
 ```
 
 ```Go
@@ -638,6 +681,7 @@ var notJSONEncodableTimes = ...
 
 ```
 searchKey: time_test.parseDurationTests
+tags: [private]
 ```
 
 ```Go
@@ -648,6 +692,7 @@ var parseDurationTests = ...
 
 ```
 searchKey: time_test.parseDurationErrorTests
+tags: [private]
 ```
 
 ```Go
@@ -658,6 +703,7 @@ var parseDurationErrorTests = ...
 
 ```
 searchKey: time_test.t
+tags: [private]
 ```
 
 ```Go
@@ -668,6 +714,7 @@ var t Time
 
 ```
 searchKey: time_test.u
+tags: [private]
 ```
 
 ```Go
@@ -678,6 +725,7 @@ var u int64
 
 ```
 searchKey: time_test.mallocTest
+tags: [private]
 ```
 
 ```Go
@@ -688,6 +736,7 @@ var mallocTest = ...
 
 ```
 searchKey: time_test.subTests
+tags: [private]
 ```
 
 ```Go
@@ -698,6 +747,7 @@ var subTests = ...
 
 ```
 searchKey: time_test.nsDurationTests
+tags: [private]
 ```
 
 ```Go
@@ -708,6 +758,7 @@ var nsDurationTests = ...
 
 ```
 searchKey: time_test.usDurationTests
+tags: [private]
 ```
 
 ```Go
@@ -718,6 +769,7 @@ var usDurationTests = ...
 
 ```
 searchKey: time_test.msDurationTests
+tags: [private]
 ```
 
 ```Go
@@ -728,6 +780,7 @@ var msDurationTests = ...
 
 ```
 searchKey: time_test.secDurationTests
+tags: [private]
 ```
 
 ```Go
@@ -743,6 +796,7 @@ var secDurationTests = []struct {
 
 ```
 searchKey: time_test.minDurationTests
+tags: [private]
 ```
 
 ```Go
@@ -753,6 +807,7 @@ var minDurationTests = ...
 
 ```
 searchKey: time_test.hourDurationTests
+tags: [private]
 ```
 
 ```Go
@@ -763,6 +818,7 @@ var hourDurationTests = ...
 
 ```
 searchKey: time_test.durationTruncateTests
+tags: [private]
 ```
 
 ```Go
@@ -773,6 +829,7 @@ var durationTruncateTests = ...
 
 ```
 searchKey: time_test.durationRoundTests
+tags: [private]
 ```
 
 ```Go
@@ -783,6 +840,7 @@ var durationRoundTests = ...
 
 ```
 searchKey: time_test.defaultLocTests
+tags: [private]
 ```
 
 ```Go
@@ -793,6 +851,7 @@ var defaultLocTests = ...
 
 ```
 searchKey: time_test.zones
+tags: [private]
 ```
 
 ```Go
@@ -806,6 +865,7 @@ var zones = []string{
 
 ```
 searchKey: time_test.slimTests
+tags: [private]
 ```
 
 ```Go
@@ -814,10 +874,15 @@ var slimTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="TimeFormatTest" href="#TimeFormatTest">type TimeFormatTest struct</a>
 
 ```
 searchKey: time_test.TimeFormatTest
+tags: [private]
 ```
 
 ```Go
@@ -831,6 +896,7 @@ type TimeFormatTest struct {
 
 ```
 searchKey: time_test.FormatTest
+tags: [private]
 ```
 
 ```Go
@@ -845,6 +911,7 @@ type FormatTest struct {
 
 ```
 searchKey: time_test.ParseTest
+tags: [private]
 ```
 
 ```Go
@@ -863,6 +930,7 @@ type ParseTest struct {
 
 ```
 searchKey: time_test.ParseTimeZoneTest
+tags: [private]
 ```
 
 ```Go
@@ -877,6 +945,7 @@ type ParseTimeZoneTest struct {
 
 ```
 searchKey: time_test.ParseErrorTest
+tags: [private]
 ```
 
 ```Go
@@ -891,6 +960,7 @@ type ParseErrorTest struct {
 
 ```
 searchKey: time_test.SecondsTimeZoneOffsetTest
+tags: [private]
 ```
 
 ```Go
@@ -905,6 +975,7 @@ type SecondsTimeZoneOffsetTest struct {
 
 ```
 searchKey: time_test.afterResult
+tags: [private]
 ```
 
 ```Go
@@ -918,6 +989,7 @@ type afterResult struct {
 
 ```
 searchKey: time_test.parsedTime
+tags: [private]
 ```
 
 ```Go
@@ -939,6 +1011,7 @@ parsedTime is the struct representing a parsed time value.
 
 ```
 searchKey: time_test.TimeTest
+tags: [private]
 ```
 
 ```Go
@@ -952,6 +1025,7 @@ type TimeTest struct {
 
 ```
 searchKey: time_test.ISOWeekTest
+tags: [private]
 ```
 
 ```Go
@@ -967,6 +1041,7 @@ type ISOWeekTest struct {
 
 ```
 searchKey: time_test.YearDayTest
+tags: [private]
 ```
 
 ```Go
@@ -978,10 +1053,15 @@ type YearDayTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="expensiveCall" href="#expensiveCall">func expensiveCall()</a>
 
 ```
 searchKey: time_test.expensiveCall
+tags: [private]
 ```
 
 ```Go
@@ -992,6 +1072,7 @@ func expensiveCall()
 
 ```
 searchKey: time_test.ExampleDuration
+tags: [private]
 ```
 
 ```Go
@@ -1002,6 +1083,7 @@ func ExampleDuration()
 
 ```
 searchKey: time_test.ExampleDuration_Round
+tags: [private]
 ```
 
 ```Go
@@ -1012,6 +1094,7 @@ func ExampleDuration_Round()
 
 ```
 searchKey: time_test.ExampleDuration_String
+tags: [private]
 ```
 
 ```Go
@@ -1022,6 +1105,7 @@ func ExampleDuration_String()
 
 ```
 searchKey: time_test.ExampleDuration_Truncate
+tags: [private]
 ```
 
 ```Go
@@ -1032,6 +1116,7 @@ func ExampleDuration_Truncate()
 
 ```
 searchKey: time_test.ExampleParseDuration
+tags: [private]
 ```
 
 ```Go
@@ -1042,6 +1127,7 @@ func ExampleParseDuration()
 
 ```
 searchKey: time_test.ExampleDuration_Hours
+tags: [private]
 ```
 
 ```Go
@@ -1052,6 +1138,7 @@ func ExampleDuration_Hours()
 
 ```
 searchKey: time_test.ExampleDuration_Microseconds
+tags: [private]
 ```
 
 ```Go
@@ -1062,6 +1149,7 @@ func ExampleDuration_Microseconds()
 
 ```
 searchKey: time_test.ExampleDuration_Milliseconds
+tags: [private]
 ```
 
 ```Go
@@ -1072,6 +1160,7 @@ func ExampleDuration_Milliseconds()
 
 ```
 searchKey: time_test.ExampleDuration_Minutes
+tags: [private]
 ```
 
 ```Go
@@ -1082,6 +1171,7 @@ func ExampleDuration_Minutes()
 
 ```
 searchKey: time_test.ExampleDuration_Nanoseconds
+tags: [private]
 ```
 
 ```Go
@@ -1092,6 +1182,7 @@ func ExampleDuration_Nanoseconds()
 
 ```
 searchKey: time_test.ExampleDuration_Seconds
+tags: [private]
 ```
 
 ```Go
@@ -1102,6 +1193,7 @@ func ExampleDuration_Seconds()
 
 ```
 searchKey: time_test.handle
+tags: [private]
 ```
 
 ```Go
@@ -1112,6 +1204,7 @@ func handle(int)
 
 ```
 searchKey: time_test.ExampleAfter
+tags: [private]
 ```
 
 ```Go
@@ -1122,6 +1215,7 @@ func ExampleAfter()
 
 ```
 searchKey: time_test.ExampleSleep
+tags: [private]
 ```
 
 ```Go
@@ -1132,6 +1226,7 @@ func ExampleSleep()
 
 ```
 searchKey: time_test.statusUpdate
+tags: [private]
 ```
 
 ```Go
@@ -1142,6 +1237,7 @@ func statusUpdate() string
 
 ```
 searchKey: time_test.ExampleTick
+tags: [private]
 ```
 
 ```Go
@@ -1152,6 +1248,7 @@ func ExampleTick()
 
 ```
 searchKey: time_test.ExampleMonth
+tags: [private]
 ```
 
 ```Go
@@ -1162,6 +1259,7 @@ func ExampleMonth()
 
 ```
 searchKey: time_test.ExampleDate
+tags: [private]
 ```
 
 ```Go
@@ -1172,6 +1270,7 @@ func ExampleDate()
 
 ```
 searchKey: time_test.ExampleNewTicker
+tags: [private]
 ```
 
 ```Go
@@ -1182,6 +1281,7 @@ func ExampleNewTicker()
 
 ```
 searchKey: time_test.ExampleTime_Format
+tags: [private]
 ```
 
 ```Go
@@ -1192,6 +1292,7 @@ func ExampleTime_Format()
 
 ```
 searchKey: time_test.ExampleTime_Format_pad
+tags: [private]
 ```
 
 ```Go
@@ -1202,6 +1303,7 @@ func ExampleTime_Format_pad()
 
 ```
 searchKey: time_test.ExampleParse
+tags: [private]
 ```
 
 ```Go
@@ -1212,6 +1314,7 @@ func ExampleParse()
 
 ```
 searchKey: time_test.ExampleParseInLocation
+tags: [private]
 ```
 
 ```Go
@@ -1222,6 +1325,7 @@ func ExampleParseInLocation()
 
 ```
 searchKey: time_test.ExampleTime_Unix
+tags: [private]
 ```
 
 ```Go
@@ -1232,6 +1336,7 @@ func ExampleTime_Unix()
 
 ```
 searchKey: time_test.ExampleTime_Round
+tags: [private]
 ```
 
 ```Go
@@ -1242,6 +1347,7 @@ func ExampleTime_Round()
 
 ```
 searchKey: time_test.ExampleTime_Truncate
+tags: [private]
 ```
 
 ```Go
@@ -1252,6 +1358,7 @@ func ExampleTime_Truncate()
 
 ```
 searchKey: time_test.ExampleLoadLocation
+tags: [private]
 ```
 
 ```Go
@@ -1262,6 +1369,7 @@ func ExampleLoadLocation()
 
 ```
 searchKey: time_test.ExampleLocation
+tags: [private]
 ```
 
 ```Go
@@ -1272,6 +1380,7 @@ func ExampleLocation()
 
 ```
 searchKey: time_test.ExampleTime_Add
+tags: [private]
 ```
 
 ```Go
@@ -1282,6 +1391,7 @@ func ExampleTime_Add()
 
 ```
 searchKey: time_test.ExampleTime_AddDate
+tags: [private]
 ```
 
 ```Go
@@ -1292,6 +1402,7 @@ func ExampleTime_AddDate()
 
 ```
 searchKey: time_test.ExampleTime_After
+tags: [private]
 ```
 
 ```Go
@@ -1302,6 +1413,7 @@ func ExampleTime_After()
 
 ```
 searchKey: time_test.ExampleTime_Before
+tags: [private]
 ```
 
 ```Go
@@ -1312,6 +1424,7 @@ func ExampleTime_Before()
 
 ```
 searchKey: time_test.ExampleTime_Date
+tags: [private]
 ```
 
 ```Go
@@ -1322,6 +1435,7 @@ func ExampleTime_Date()
 
 ```
 searchKey: time_test.ExampleTime_Day
+tags: [private]
 ```
 
 ```Go
@@ -1332,6 +1446,7 @@ func ExampleTime_Day()
 
 ```
 searchKey: time_test.ExampleTime_Equal
+tags: [private]
 ```
 
 ```Go
@@ -1342,6 +1457,7 @@ func ExampleTime_Equal()
 
 ```
 searchKey: time_test.ExampleTime_String
+tags: [private]
 ```
 
 ```Go
@@ -1352,6 +1468,7 @@ func ExampleTime_String()
 
 ```
 searchKey: time_test.ExampleTime_Sub
+tags: [private]
 ```
 
 ```Go
@@ -1362,6 +1479,7 @@ func ExampleTime_Sub()
 
 ```
 searchKey: time_test.ExampleTime_AppendFormat
+tags: [private]
 ```
 
 ```Go
@@ -1372,6 +1490,7 @@ func ExampleTime_AppendFormat()
 
 ```
 searchKey: time_test.ExampleFixedZone
+tags: [private]
 ```
 
 ```Go
@@ -1382,6 +1501,7 @@ func ExampleFixedZone()
 
 ```
 searchKey: time_test.TestNextStdChunk
+tags: [private]
 ```
 
 ```Go
@@ -1392,6 +1512,7 @@ func TestNextStdChunk(t *testing.T)
 
 ```
 searchKey: time_test.TestRFC3339Conversion
+tags: [private]
 ```
 
 ```Go
@@ -1402,6 +1523,7 @@ func TestRFC3339Conversion(t *testing.T)
 
 ```
 searchKey: time_test.TestFormat
+tags: [private]
 ```
 
 ```Go
@@ -1412,6 +1534,7 @@ func TestFormat(t *testing.T)
 
 ```
 searchKey: time_test.TestGoString
+tags: [private]
 ```
 
 ```Go
@@ -1422,6 +1545,7 @@ func TestGoString(t *testing.T)
 
 ```
 searchKey: time_test.TestFormatSingleDigits
+tags: [private]
 ```
 
 ```Go
@@ -1434,6 +1558,7 @@ issue 12440.
 
 ```
 searchKey: time_test.TestFormatShortYear
+tags: [private]
 ```
 
 ```Go
@@ -1444,6 +1569,7 @@ func TestFormatShortYear(t *testing.T)
 
 ```
 searchKey: time_test.TestParse
+tags: [private]
 ```
 
 ```Go
@@ -1454,6 +1580,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: time_test.TestParseDayOutOfRange
+tags: [private]
 ```
 
 ```Go
@@ -1464,6 +1591,7 @@ func TestParseDayOutOfRange(t *testing.T)
 
 ```
 searchKey: time_test.TestParseInLocation
+tags: [private]
 ```
 
 ```Go
@@ -1478,6 +1606,7 @@ ICANN has been slowly phasing out invented abbreviation in favor of numeric time
 
 ```
 searchKey: time_test.TestLoadLocationZipFile
+tags: [private]
 ```
 
 ```Go
@@ -1488,6 +1617,7 @@ func TestLoadLocationZipFile(t *testing.T)
 
 ```
 searchKey: time_test.TestRubyParse
+tags: [private]
 ```
 
 ```Go
@@ -1500,6 +1630,7 @@ Problematic time zone format needs special tests.
 
 ```
 searchKey: time_test.checkTime
+tags: [private]
 ```
 
 ```Go
@@ -1510,6 +1641,7 @@ func checkTime(time Time, test *ParseTest, t *testing.T)
 
 ```
 searchKey: time_test.TestFormatAndParse
+tags: [private]
 ```
 
 ```Go
@@ -1520,6 +1652,7 @@ func TestFormatAndParse(t *testing.T)
 
 ```
 searchKey: time_test.TestParseTimeZone
+tags: [private]
 ```
 
 ```Go
@@ -1530,6 +1663,7 @@ func TestParseTimeZone(t *testing.T)
 
 ```
 searchKey: time_test.TestParseErrors
+tags: [private]
 ```
 
 ```Go
@@ -1540,6 +1674,7 @@ func TestParseErrors(t *testing.T)
 
 ```
 searchKey: time_test.TestNoonIs12PM
+tags: [private]
 ```
 
 ```Go
@@ -1550,6 +1685,7 @@ func TestNoonIs12PM(t *testing.T)
 
 ```
 searchKey: time_test.TestMidnightIs12AM
+tags: [private]
 ```
 
 ```Go
@@ -1560,6 +1696,7 @@ func TestMidnightIs12AM(t *testing.T)
 
 ```
 searchKey: time_test.Test12PMIsNoon
+tags: [private]
 ```
 
 ```Go
@@ -1570,6 +1707,7 @@ func Test12PMIsNoon(t *testing.T)
 
 ```
 searchKey: time_test.Test12AMIsMidnight
+tags: [private]
 ```
 
 ```Go
@@ -1580,6 +1718,7 @@ func Test12AMIsMidnight(t *testing.T)
 
 ```
 searchKey: time_test.TestMissingZone
+tags: [private]
 ```
 
 ```Go
@@ -1592,6 +1731,7 @@ Check that a time without a Zone still produces a (numeric) time zone when forma
 
 ```
 searchKey: time_test.TestMinutesInTimeZone
+tags: [private]
 ```
 
 ```Go
@@ -1602,6 +1742,7 @@ func TestMinutesInTimeZone(t *testing.T)
 
 ```
 searchKey: time_test.TestParseSecondsInTimeZone
+tags: [private]
 ```
 
 ```Go
@@ -1612,6 +1753,7 @@ func TestParseSecondsInTimeZone(t *testing.T)
 
 ```
 searchKey: time_test.TestFormatSecondsInTimeZone
+tags: [private]
 ```
 
 ```Go
@@ -1622,6 +1764,7 @@ func TestFormatSecondsInTimeZone(t *testing.T)
 
 ```
 searchKey: time_test.TestUnderscoreTwoThousand
+tags: [private]
 ```
 
 ```Go
@@ -1634,6 +1777,7 @@ Issue 11334.
 
 ```
 searchKey: time_test.TestStd0xParseError
+tags: [private]
 ```
 
 ```Go
@@ -1646,6 +1790,7 @@ Issue 29918, 29916
 
 ```
 searchKey: time_test.TestParseMonthOutOfRange
+tags: [private]
 ```
 
 ```Go
@@ -1656,6 +1801,7 @@ func TestParseMonthOutOfRange(t *testing.T)
 
 ```
 searchKey: time_test.TestParseYday
+tags: [private]
 ```
 
 ```Go
@@ -1668,6 +1814,7 @@ Issue 37387.
 
 ```
 searchKey: time_test.TestQuote
+tags: [private]
 ```
 
 ```Go
@@ -1680,6 +1827,7 @@ Issue 45391.
 
 ```
 searchKey: time_test.TestHasMonotonicClock
+tags: [private]
 ```
 
 ```Go
@@ -1690,6 +1838,7 @@ func TestHasMonotonicClock(t *testing.T)
 
 ```
 searchKey: time_test.TestMonotonicAdd
+tags: [private]
 ```
 
 ```Go
@@ -1700,6 +1849,7 @@ func TestMonotonicAdd(t *testing.T)
 
 ```
 searchKey: time_test.TestMonotonicSub
+tags: [private]
 ```
 
 ```Go
@@ -1710,6 +1860,7 @@ func TestMonotonicSub(t *testing.T)
 
 ```
 searchKey: time_test.TestMonotonicOverflow
+tags: [private]
 ```
 
 ```Go
@@ -1720,6 +1871,7 @@ func TestMonotonicOverflow(t *testing.T)
 
 ```
 searchKey: time_test.TestMonotonicString
+tags: [private]
 ```
 
 ```Go
@@ -1730,6 +1882,7 @@ func TestMonotonicString(t *testing.T)
 
 ```
 searchKey: time_test.TestSleep
+tags: [private]
 ```
 
 ```Go
@@ -1740,6 +1893,7 @@ func TestSleep(t *testing.T)
 
 ```
 searchKey: time_test.TestAfterFunc
+tags: [private]
 ```
 
 ```Go
@@ -1752,6 +1906,7 @@ Test the basic function calling behavior. Correct queueing behavior is tested el
 
 ```
 searchKey: time_test.TestAfterStress
+tags: [private]
 ```
 
 ```Go
@@ -1762,6 +1917,7 @@ func TestAfterStress(t *testing.T)
 
 ```
 searchKey: time_test.benchmark
+tags: [private]
 ```
 
 ```Go
@@ -1772,6 +1928,7 @@ func benchmark(b *testing.B, bench func(n int))
 
 ```
 searchKey: time_test.BenchmarkAfterFunc
+tags: [private]
 ```
 
 ```Go
@@ -1782,6 +1939,7 @@ func BenchmarkAfterFunc(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkAfter
+tags: [private]
 ```
 
 ```Go
@@ -1792,6 +1950,7 @@ func BenchmarkAfter(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkStop
+tags: [private]
 ```
 
 ```Go
@@ -1802,6 +1961,7 @@ func BenchmarkStop(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkSimultaneousAfterFunc
+tags: [private]
 ```
 
 ```Go
@@ -1812,6 +1972,7 @@ func BenchmarkSimultaneousAfterFunc(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkStartStop
+tags: [private]
 ```
 
 ```Go
@@ -1822,6 +1983,7 @@ func BenchmarkStartStop(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkReset
+tags: [private]
 ```
 
 ```Go
@@ -1832,6 +1994,7 @@ func BenchmarkReset(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkSleep
+tags: [private]
 ```
 
 ```Go
@@ -1842,6 +2005,7 @@ func BenchmarkSleep(b *testing.B)
 
 ```
 searchKey: time_test.TestAfter
+tags: [private]
 ```
 
 ```Go
@@ -1852,6 +2016,7 @@ func TestAfter(t *testing.T)
 
 ```
 searchKey: time_test.TestAfterTick
+tags: [private]
 ```
 
 ```Go
@@ -1862,6 +2027,7 @@ func TestAfterTick(t *testing.T)
 
 ```
 searchKey: time_test.TestAfterStop
+tags: [private]
 ```
 
 ```Go
@@ -1872,6 +2038,7 @@ func TestAfterStop(t *testing.T)
 
 ```
 searchKey: time_test.TestAfterQueuing
+tags: [private]
 ```
 
 ```Go
@@ -1882,6 +2049,7 @@ func TestAfterQueuing(t *testing.T)
 
 ```
 searchKey: time_test.await
+tags: [private]
 ```
 
 ```Go
@@ -1892,6 +2060,7 @@ func await(slot int, result chan<- afterResult, ac <-chan Time)
 
 ```
 searchKey: time_test.testAfterQueuing
+tags: [private]
 ```
 
 ```Go
@@ -1902,6 +2071,7 @@ func testAfterQueuing(delta Duration) error
 
 ```
 searchKey: time_test.TestTimerStopStress
+tags: [private]
 ```
 
 ```Go
@@ -1912,6 +2082,7 @@ func TestTimerStopStress(t *testing.T)
 
 ```
 searchKey: time_test.TestSleepZeroDeadlock
+tags: [private]
 ```
 
 ```Go
@@ -1922,6 +2093,7 @@ func TestSleepZeroDeadlock(t *testing.T)
 
 ```
 searchKey: time_test.testReset
+tags: [private]
 ```
 
 ```Go
@@ -1932,6 +2104,7 @@ func testReset(d Duration) error
 
 ```
 searchKey: time_test.TestReset
+tags: [private]
 ```
 
 ```Go
@@ -1942,6 +2115,7 @@ func TestReset(t *testing.T)
 
 ```
 searchKey: time_test.TestOverflowSleep
+tags: [private]
 ```
 
 ```Go
@@ -1954,6 +2128,7 @@ Test that sleeping (via Sleep or Timer) for an interval so large it overflows do
 
 ```
 searchKey: time_test.TestIssue5745
+tags: [private]
 ```
 
 ```Go
@@ -1966,6 +2141,7 @@ Test that a panic while deleting a timer does not leave the timers mutex held, d
 
 ```
 searchKey: time_test.TestOverflowPeriodRuntimeTimer
+tags: [private]
 ```
 
 ```Go
@@ -1976,6 +2152,7 @@ func TestOverflowPeriodRuntimeTimer(t *testing.T)
 
 ```
 searchKey: time_test.checkZeroPanicString
+tags: [private]
 ```
 
 ```Go
@@ -1986,6 +2163,7 @@ func checkZeroPanicString(t *testing.T)
 
 ```
 searchKey: time_test.TestZeroTimerResetPanics
+tags: [private]
 ```
 
 ```Go
@@ -1996,6 +2174,7 @@ func TestZeroTimerResetPanics(t *testing.T)
 
 ```
 searchKey: time_test.TestZeroTimerStopPanics
+tags: [private]
 ```
 
 ```Go
@@ -2006,6 +2185,7 @@ func TestZeroTimerStopPanics(t *testing.T)
 
 ```
 searchKey: time_test.TestZeroTimer
+tags: [private]
 ```
 
 ```Go
@@ -2018,6 +2198,7 @@ Test that zero duration timers aren't missed by the scheduler. Regression test f
 
 ```
 searchKey: time_test.BenchmarkParallelTimerLatency
+tags: [private]
 ```
 
 ```Go
@@ -2030,6 +2211,7 @@ Benchmark timer latency when the thread that creates the timer is busy with othe
 
 ```
 searchKey: time_test.BenchmarkStaggeredTickerLatency
+tags: [private]
 ```
 
 ```Go
@@ -2042,6 +2224,7 @@ Benchmark timer latency with staggered wakeup times and varying CPU bound worklo
 
 ```
 searchKey: time_test.warmupScheduler
+tags: [private]
 ```
 
 ```Go
@@ -2054,6 +2237,7 @@ warmupScheduler ensures the scheduler has at least targetThreadCount threads in 
 
 ```
 searchKey: time_test.doWork
+tags: [private]
 ```
 
 ```Go
@@ -2064,6 +2248,7 @@ func doWork(dur Duration)
 
 ```
 searchKey: time_test.TestTicker
+tags: [private]
 ```
 
 ```Go
@@ -2074,6 +2259,7 @@ func TestTicker(t *testing.T)
 
 ```
 searchKey: time_test.TestTickerStopWithDirectInitialization
+tags: [private]
 ```
 
 ```Go
@@ -2086,6 +2272,7 @@ Issue 21874
 
 ```
 searchKey: time_test.TestTeardown
+tags: [private]
 ```
 
 ```Go
@@ -2098,6 +2285,7 @@ Test that a bug tearing down a ticker has been fixed. This routine should not de
 
 ```
 searchKey: time_test.TestTick
+tags: [private]
 ```
 
 ```Go
@@ -2110,6 +2298,7 @@ Test the Tick convenience wrapper.
 
 ```
 searchKey: time_test.TestNewTickerLtZeroDuration
+tags: [private]
 ```
 
 ```Go
@@ -2122,6 +2311,7 @@ Test that NewTicker panics when given a duration less than zero.
 
 ```
 searchKey: time_test.BenchmarkTicker
+tags: [private]
 ```
 
 ```Go
@@ -2132,6 +2322,7 @@ func BenchmarkTicker(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkTickerReset
+tags: [private]
 ```
 
 ```Go
@@ -2142,6 +2333,7 @@ func BenchmarkTickerReset(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkTickerResetNaive
+tags: [private]
 ```
 
 ```Go
@@ -2152,6 +2344,7 @@ func BenchmarkTickerResetNaive(b *testing.B)
 
 ```
 searchKey: time_test.TestZoneData
+tags: [private]
 ```
 
 ```Go
@@ -2164,6 +2357,7 @@ We should be in PST/PDT, but if the time zone files are missing we won't be. The
 
 ```
 searchKey: time_test.same
+tags: [private]
 ```
 
 ```Go
@@ -2174,6 +2368,7 @@ func same(t Time, u *parsedTime) bool
 
 ```
 searchKey: time_test.TestSecondsToUTC
+tags: [private]
 ```
 
 ```Go
@@ -2184,6 +2379,7 @@ func TestSecondsToUTC(t *testing.T)
 
 ```
 searchKey: time_test.TestNanosecondsToUTC
+tags: [private]
 ```
 
 ```Go
@@ -2194,6 +2390,7 @@ func TestNanosecondsToUTC(t *testing.T)
 
 ```
 searchKey: time_test.TestSecondsToLocalTime
+tags: [private]
 ```
 
 ```Go
@@ -2204,6 +2401,7 @@ func TestSecondsToLocalTime(t *testing.T)
 
 ```
 searchKey: time_test.TestNanosecondsToLocalTime
+tags: [private]
 ```
 
 ```Go
@@ -2214,6 +2412,7 @@ func TestNanosecondsToLocalTime(t *testing.T)
 
 ```
 searchKey: time_test.TestSecondsToUTCAndBack
+tags: [private]
 ```
 
 ```Go
@@ -2224,6 +2423,7 @@ func TestSecondsToUTCAndBack(t *testing.T)
 
 ```
 searchKey: time_test.TestNanosecondsToUTCAndBack
+tags: [private]
 ```
 
 ```Go
@@ -2234,6 +2434,7 @@ func TestNanosecondsToUTCAndBack(t *testing.T)
 
 ```
 searchKey: time_test.TestUnixMilli
+tags: [private]
 ```
 
 ```Go
@@ -2244,6 +2445,7 @@ func TestUnixMilli(t *testing.T)
 
 ```
 searchKey: time_test.TestUnixMicro
+tags: [private]
 ```
 
 ```Go
@@ -2254,6 +2456,7 @@ func TestUnixMicro(t *testing.T)
 
 ```
 searchKey: time_test.abs
+tags: [private]
 ```
 
 ```Go
@@ -2266,6 +2469,7 @@ abs returns the absolute time stored in t, as seconds and nanoseconds.
 
 ```
 searchKey: time_test.absString
+tags: [private]
 ```
 
 ```Go
@@ -2278,6 +2482,7 @@ absString returns abs as a decimal string.
 
 ```
 searchKey: time_test.TestTruncateRound
+tags: [private]
 ```
 
 ```Go
@@ -2288,6 +2493,7 @@ func TestTruncateRound(t *testing.T)
 
 ```
 searchKey: time_test.TestISOWeek
+tags: [private]
 ```
 
 ```Go
@@ -2298,6 +2504,7 @@ func TestISOWeek(t *testing.T)
 
 ```
 searchKey: time_test.TestYearDay
+tags: [private]
 ```
 
 ```Go
@@ -2308,6 +2515,7 @@ func TestYearDay(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationString
+tags: [private]
 ```
 
 ```Go
@@ -2318,6 +2526,7 @@ func TestDurationString(t *testing.T)
 
 ```
 searchKey: time_test.TestDate
+tags: [private]
 ```
 
 ```Go
@@ -2328,6 +2537,7 @@ func TestDate(t *testing.T)
 
 ```
 searchKey: time_test.TestAddDate
+tags: [private]
 ```
 
 ```Go
@@ -2338,6 +2548,7 @@ func TestAddDate(t *testing.T)
 
 ```
 searchKey: time_test.TestDaysIn
+tags: [private]
 ```
 
 ```Go
@@ -2348,6 +2559,7 @@ func TestDaysIn(t *testing.T)
 
 ```
 searchKey: time_test.TestAddToExactSecond
+tags: [private]
 ```
 
 ```Go
@@ -2358,6 +2570,7 @@ func TestAddToExactSecond(t *testing.T)
 
 ```
 searchKey: time_test.equalTimeAndZone
+tags: [private]
 ```
 
 ```Go
@@ -2368,6 +2581,7 @@ func equalTimeAndZone(a, b Time) bool
 
 ```
 searchKey: time_test.TestTimeGob
+tags: [private]
 ```
 
 ```Go
@@ -2378,6 +2592,7 @@ func TestTimeGob(t *testing.T)
 
 ```
 searchKey: time_test.TestInvalidTimeGob
+tags: [private]
 ```
 
 ```Go
@@ -2388,6 +2603,7 @@ func TestInvalidTimeGob(t *testing.T)
 
 ```
 searchKey: time_test.TestNotGobEncodableTime
+tags: [private]
 ```
 
 ```Go
@@ -2398,6 +2614,7 @@ func TestNotGobEncodableTime(t *testing.T)
 
 ```
 searchKey: time_test.TestTimeJSON
+tags: [private]
 ```
 
 ```Go
@@ -2408,6 +2625,7 @@ func TestTimeJSON(t *testing.T)
 
 ```
 searchKey: time_test.TestInvalidTimeJSON
+tags: [private]
 ```
 
 ```Go
@@ -2418,6 +2636,7 @@ func TestInvalidTimeJSON(t *testing.T)
 
 ```
 searchKey: time_test.TestNotJSONEncodableTime
+tags: [private]
 ```
 
 ```Go
@@ -2428,6 +2647,7 @@ func TestNotJSONEncodableTime(t *testing.T)
 
 ```
 searchKey: time_test.TestParseDuration
+tags: [private]
 ```
 
 ```Go
@@ -2438,6 +2658,7 @@ func TestParseDuration(t *testing.T)
 
 ```
 searchKey: time_test.TestParseDurationErrors
+tags: [private]
 ```
 
 ```Go
@@ -2448,6 +2669,7 @@ func TestParseDurationErrors(t *testing.T)
 
 ```
 searchKey: time_test.TestParseDurationRoundTrip
+tags: [private]
 ```
 
 ```Go
@@ -2458,6 +2680,7 @@ func TestParseDurationRoundTrip(t *testing.T)
 
 ```
 searchKey: time_test.TestLocationRace
+tags: [private]
 ```
 
 ```Go
@@ -2470,6 +2693,7 @@ golang.org/issue/4622
 
 ```
 searchKey: time_test.TestCountMallocs
+tags: [private]
 ```
 
 ```Go
@@ -2480,6 +2704,7 @@ func TestCountMallocs(t *testing.T)
 
 ```
 searchKey: time_test.TestLoadFixed
+tags: [private]
 ```
 
 ```Go
@@ -2490,6 +2715,7 @@ func TestLoadFixed(t *testing.T)
 
 ```
 searchKey: time_test.TestSub
+tags: [private]
 ```
 
 ```Go
@@ -2500,6 +2726,7 @@ func TestSub(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationNanoseconds
+tags: [private]
 ```
 
 ```Go
@@ -2510,6 +2737,7 @@ func TestDurationNanoseconds(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationMicroseconds
+tags: [private]
 ```
 
 ```Go
@@ -2520,6 +2748,7 @@ func TestDurationMicroseconds(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationMilliseconds
+tags: [private]
 ```
 
 ```Go
@@ -2530,6 +2759,7 @@ func TestDurationMilliseconds(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationSeconds
+tags: [private]
 ```
 
 ```Go
@@ -2540,6 +2770,7 @@ func TestDurationSeconds(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationMinutes
+tags: [private]
 ```
 
 ```Go
@@ -2550,6 +2781,7 @@ func TestDurationMinutes(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationHours
+tags: [private]
 ```
 
 ```Go
@@ -2560,6 +2792,7 @@ func TestDurationHours(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationTruncate
+tags: [private]
 ```
 
 ```Go
@@ -2570,6 +2803,7 @@ func TestDurationTruncate(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationRound
+tags: [private]
 ```
 
 ```Go
@@ -2580,6 +2814,7 @@ func TestDurationRound(t *testing.T)
 
 ```
 searchKey: time_test.TestDefaultLoc
+tags: [private]
 ```
 
 ```Go
@@ -2590,6 +2825,7 @@ func TestDefaultLoc(t *testing.T)
 
 ```
 searchKey: time_test.BenchmarkNow
+tags: [private]
 ```
 
 ```Go
@@ -2600,6 +2836,7 @@ func BenchmarkNow(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkNowUnixNano
+tags: [private]
 ```
 
 ```Go
@@ -2610,6 +2847,7 @@ func BenchmarkNowUnixNano(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkNowUnixMilli
+tags: [private]
 ```
 
 ```Go
@@ -2620,6 +2858,7 @@ func BenchmarkNowUnixMilli(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkNowUnixMicro
+tags: [private]
 ```
 
 ```Go
@@ -2630,6 +2869,7 @@ func BenchmarkNowUnixMicro(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkFormat
+tags: [private]
 ```
 
 ```Go
@@ -2640,6 +2880,7 @@ func BenchmarkFormat(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkFormatNow
+tags: [private]
 ```
 
 ```Go
@@ -2650,6 +2891,7 @@ func BenchmarkFormatNow(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkMarshalJSON
+tags: [private]
 ```
 
 ```Go
@@ -2660,6 +2902,7 @@ func BenchmarkMarshalJSON(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkMarshalText
+tags: [private]
 ```
 
 ```Go
@@ -2670,6 +2913,7 @@ func BenchmarkMarshalText(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkParse
+tags: [private]
 ```
 
 ```Go
@@ -2680,6 +2924,7 @@ func BenchmarkParse(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkParseDuration
+tags: [private]
 ```
 
 ```Go
@@ -2690,6 +2935,7 @@ func BenchmarkParseDuration(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkHour
+tags: [private]
 ```
 
 ```Go
@@ -2700,6 +2946,7 @@ func BenchmarkHour(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkSecond
+tags: [private]
 ```
 
 ```Go
@@ -2710,6 +2957,7 @@ func BenchmarkSecond(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkYear
+tags: [private]
 ```
 
 ```Go
@@ -2720,6 +2968,7 @@ func BenchmarkYear(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkDay
+tags: [private]
 ```
 
 ```Go
@@ -2730,6 +2979,7 @@ func BenchmarkDay(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkISOWeek
+tags: [private]
 ```
 
 ```Go
@@ -2740,6 +2990,7 @@ func BenchmarkISOWeek(b *testing.B)
 
 ```
 searchKey: time_test.TestMarshalBinaryZeroTime
+tags: [private]
 ```
 
 ```Go
@@ -2750,6 +3001,7 @@ func TestMarshalBinaryZeroTime(t *testing.T)
 
 ```
 searchKey: time_test.TestZeroMonthString
+tags: [private]
 ```
 
 ```Go
@@ -2762,6 +3014,7 @@ Issue 17720: Zero value of time.Month fails to print
 
 ```
 searchKey: time_test.TestWeekdayString
+tags: [private]
 ```
 
 ```Go
@@ -2774,6 +3027,7 @@ Issue 24692: Out of range weekday panics
 
 ```
 searchKey: time_test.TestReadFileLimit
+tags: [private]
 ```
 
 ```Go
@@ -2784,6 +3038,7 @@ func TestReadFileLimit(t *testing.T)
 
 ```
 searchKey: time_test.TestConcurrentTimerReset
+tags: [private]
 ```
 
 ```Go
@@ -2796,6 +3051,7 @@ Issue 25686: hard crash on concurrent timer access. Issue 37400: panic with "rac
 
 ```
 searchKey: time_test.TestConcurrentTimerResetStop
+tags: [private]
 ```
 
 ```Go
@@ -2808,6 +3064,7 @@ Issue 37400: panic with "racy use of timers".
 
 ```
 searchKey: time_test.TestTimeIsDST
+tags: [private]
 ```
 
 ```Go
@@ -2818,6 +3075,7 @@ func TestTimeIsDST(t *testing.T)
 
 ```
 searchKey: time_test.TestTimeAddSecOverflow
+tags: [private]
 ```
 
 ```Go
@@ -2828,6 +3086,7 @@ func TestTimeAddSecOverflow(t *testing.T)
 
 ```
 searchKey: time_test.TestEmbeddedTZData
+tags: [private]
 ```
 
 ```Go
@@ -2838,6 +3097,7 @@ func TestEmbeddedTZData(t *testing.T)
 
 ```
 searchKey: time_test.equal
+tags: [private]
 ```
 
 ```Go
@@ -2846,10 +3106,11 @@ func equal(t *testing.T, f1, f2 reflect.Value) bool
 
 equal is a small version of reflect.DeepEqual that we use to compare the values of zoneinfo unexported fields. 
 
-### <a id="init" href="#init">func init()</a>
+### <a id="init.zoneinfo_test.go" href="#init.zoneinfo_test.go">func init()</a>
 
 ```
 searchKey: time_test.init
+tags: [private]
 ```
 
 ```Go
@@ -2860,6 +3121,7 @@ func init()
 
 ```
 searchKey: time_test.TestEnvVarUsage
+tags: [private]
 ```
 
 ```Go
@@ -2870,6 +3132,7 @@ func TestEnvVarUsage(t *testing.T)
 
 ```
 searchKey: time_test.TestBadLocationErrMsg
+tags: [private]
 ```
 
 ```Go
@@ -2880,6 +3143,7 @@ func TestBadLocationErrMsg(t *testing.T)
 
 ```
 searchKey: time_test.TestLoadLocationValidatesNames
+tags: [private]
 ```
 
 ```Go
@@ -2890,6 +3154,7 @@ func TestLoadLocationValidatesNames(t *testing.T)
 
 ```
 searchKey: time_test.TestVersion3
+tags: [private]
 ```
 
 ```Go
@@ -2900,6 +3165,7 @@ func TestVersion3(t *testing.T)
 
 ```
 searchKey: time_test.TestFirstZone
+tags: [private]
 ```
 
 ```Go
@@ -2912,6 +3178,7 @@ Test that we get the correct results for times before the first transition time.
 
 ```
 searchKey: time_test.TestLocationNames
+tags: [private]
 ```
 
 ```Go
@@ -2922,6 +3189,7 @@ func TestLocationNames(t *testing.T)
 
 ```
 searchKey: time_test.TestLoadLocationFromTZData
+tags: [private]
 ```
 
 ```Go
@@ -2932,6 +3200,7 @@ func TestLoadLocationFromTZData(t *testing.T)
 
 ```
 searchKey: time_test.TestEarlyLocation
+tags: [private]
 ```
 
 ```Go
@@ -2944,6 +3213,7 @@ Issue 30099.
 
 ```
 searchKey: time_test.TestMalformedTZData
+tags: [private]
 ```
 
 ```Go
@@ -2954,6 +3224,7 @@ func TestMalformedTZData(t *testing.T)
 
 ```
 searchKey: time_test.TestLoadLocationFromTZDataSlim
+tags: [private]
 ```
 
 ```Go
@@ -2964,6 +3235,7 @@ func TestLoadLocationFromTZDataSlim(t *testing.T)
 
 ```
 searchKey: time_test.TestTzset
+tags: [private]
 ```
 
 ```Go
@@ -2974,6 +3246,7 @@ func TestTzset(t *testing.T)
 
 ```
 searchKey: time_test.TestTzsetName
+tags: [private]
 ```
 
 ```Go
@@ -2984,6 +3257,7 @@ func TestTzsetName(t *testing.T)
 
 ```
 searchKey: time_test.TestTzsetOffset
+tags: [private]
 ```
 
 ```Go
@@ -2994,6 +3268,7 @@ func TestTzsetOffset(t *testing.T)
 
 ```
 searchKey: time_test.TestTzsetRule
+tags: [private]
 ```
 
 ```Go
@@ -3004,6 +3279,7 @@ func TestTzsetRule(t *testing.T)
 
 ```
 searchKey: time_test.TestEnvTZUsage
+tags: [private]
 ```
 
 ```Go

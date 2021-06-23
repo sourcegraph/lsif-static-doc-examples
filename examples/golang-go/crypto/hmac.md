@@ -41,14 +41,11 @@ func ValidMAC(message, messageMAC, key []byte) bool {
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="hmacTests" href="#hmacTests">var hmacTests</a>
 
 ```
 searchKey: hmac.hmacTests
+tags: [private]
 ```
 
 ```Go
@@ -57,14 +54,11 @@ var hmacTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="marshalable" href="#marshalable">type marshalable interface</a>
 
 ```
 searchKey: hmac.marshalable
+tags: [private]
 ```
 
 ```Go
@@ -80,6 +74,7 @@ Marshalable is the combination of encoding.BinaryMarshaler and encoding.BinaryUn
 
 ```
 searchKey: hmac.hmac
+tags: [private]
 ```
 
 ```Go
@@ -98,6 +93,7 @@ type hmac struct {
 
 ```
 searchKey: hmac.hmac.Sum
+tags: [private]
 ```
 
 ```Go
@@ -108,6 +104,7 @@ func (h *hmac) Sum(in []byte) []byte
 
 ```
 searchKey: hmac.hmac.Write
+tags: [private]
 ```
 
 ```Go
@@ -118,6 +115,7 @@ func (h *hmac) Write(p []byte) (n int, err error)
 
 ```
 searchKey: hmac.hmac.Size
+tags: [private]
 ```
 
 ```Go
@@ -128,6 +126,7 @@ func (h *hmac) Size() int
 
 ```
 searchKey: hmac.hmac.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -138,6 +137,7 @@ func (h *hmac) BlockSize() int
 
 ```
 searchKey: hmac.hmac.Reset
+tags: [private]
 ```
 
 ```Go
@@ -148,6 +148,7 @@ func (h *hmac) Reset()
 
 ```
 searchKey: hmac.hmacTest
+tags: [private]
 ```
 
 ```Go
@@ -165,6 +166,7 @@ type hmacTest struct {
 
 ```
 searchKey: hmac.justHash
+tags: [private]
 ```
 
 ```Go
@@ -177,15 +179,10 @@ justHash implements just the hash.Hash methods and nothing else
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="New" href="#New">func New(h func() hash.Hash, key []byte) hash.Hash</a>
 
 ```
 searchKey: hmac.New
-tags: [exported]
 ```
 
 ```Go
@@ -198,7 +195,6 @@ New returns a new HMAC hash using the given hash.Hash type and key. New function
 
 ```
 searchKey: hmac.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -211,6 +207,7 @@ Equal compares two MACs for equality without leaking timing information.
 
 ```
 searchKey: hmac.TestHMAC
+tags: [private]
 ```
 
 ```Go
@@ -221,6 +218,7 @@ func TestHMAC(t *testing.T)
 
 ```
 searchKey: hmac.TestNonUniqueHash
+tags: [private]
 ```
 
 ```Go
@@ -231,6 +229,7 @@ func TestNonUniqueHash(t *testing.T)
 
 ```
 searchKey: hmac.TestEqual
+tags: [private]
 ```
 
 ```Go
@@ -241,6 +240,7 @@ func TestEqual(t *testing.T)
 
 ```
 searchKey: hmac.BenchmarkHMACSHA256_1K
+tags: [private]
 ```
 
 ```Go
@@ -251,6 +251,7 @@ func BenchmarkHMACSHA256_1K(b *testing.B)
 
 ```
 searchKey: hmac.BenchmarkHMACSHA256_32
+tags: [private]
 ```
 
 ```Go
@@ -261,6 +262,7 @@ func BenchmarkHMACSHA256_32(b *testing.B)
 
 ```
 searchKey: hmac.BenchmarkNewWriteSum
+tags: [private]
 ```
 
 ```Go

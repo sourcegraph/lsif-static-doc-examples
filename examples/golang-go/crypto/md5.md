@@ -35,7 +35,7 @@ MD5 is cryptographically broken and should not be used for secure applications.
     * [type md5Test struct](#md5Test)
     * [type unmarshalTest struct](#unmarshalTest)
 * [Functions](#func)
-    * [func init()](#init)
+    * [func init()](#init.md5.go)
     * [func appendUint64(b []byte, x uint64) []byte](#appendUint64)
     * [func appendUint32(b []byte, x uint32) []byte](#appendUint32)
     * [func consumeUint64(b []byte) ([]byte, uint64)](#consumeUint64)
@@ -67,15 +67,10 @@ MD5 is cryptographically broken and should not be used for secure applications.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="Size" href="#Size">const Size</a>
 
 ```
 searchKey: md5.Size
-tags: [exported]
 ```
 
 ```Go
@@ -88,7 +83,6 @@ The size of an MD5 checksum in bytes.
 
 ```
 searchKey: md5.BlockSize
-tags: [exported]
 ```
 
 ```Go
@@ -101,6 +95,7 @@ The blocksize of MD5 in bytes.
 
 ```
 searchKey: md5.init0
+tags: [private]
 ```
 
 ```Go
@@ -111,6 +106,7 @@ const init0 = 0x67452301
 
 ```
 searchKey: md5.init1
+tags: [private]
 ```
 
 ```Go
@@ -121,6 +117,7 @@ const init1 = 0xEFCDAB89
 
 ```
 searchKey: md5.init2
+tags: [private]
 ```
 
 ```Go
@@ -131,6 +128,7 @@ const init2 = 0x98BADCFE
 
 ```
 searchKey: md5.init3
+tags: [private]
 ```
 
 ```Go
@@ -141,6 +139,7 @@ const init3 = 0x10325476
 
 ```
 searchKey: md5.magic
+tags: [private]
 ```
 
 ```Go
@@ -151,6 +150,7 @@ const magic = "md5\x01"
 
 ```
 searchKey: md5.marshaledSize
+tags: [private]
 ```
 
 ```Go
@@ -161,6 +161,7 @@ const marshaledSize = len(magic) + 4*4 + BlockSize + 8
 
 ```
 searchKey: md5.haveAsm
+tags: [private]
 ```
 
 ```Go
@@ -169,14 +170,11 @@ const haveAsm = true
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="golden" href="#golden">var golden</a>
 
 ```
 searchKey: md5.golden
+tags: [private]
 ```
 
 ```Go
@@ -187,6 +185,7 @@ var golden = ...
 
 ```
 searchKey: md5.largeUnmarshalTests
+tags: [private]
 ```
 
 ```Go
@@ -197,6 +196,7 @@ var largeUnmarshalTests = ...
 
 ```
 searchKey: md5.bench
+tags: [private]
 ```
 
 ```Go
@@ -207,6 +207,7 @@ var bench = New()
 
 ```
 searchKey: md5.buf
+tags: [private]
 ```
 
 ```Go
@@ -217,6 +218,7 @@ var buf = make([]byte, 1024*1024*8+1)
 
 ```
 searchKey: md5.sum
+tags: [private]
 ```
 
 ```Go
@@ -225,14 +227,11 @@ var sum = make([]byte, bench.Size())
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="digest" href="#digest">type digest struct</a>
 
 ```
 searchKey: md5.digest
+tags: [private]
 ```
 
 ```Go
@@ -250,6 +249,7 @@ digest represents the partial evaluation of a checksum.
 
 ```
 searchKey: md5.digest.Reset
+tags: [private]
 ```
 
 ```Go
@@ -260,6 +260,7 @@ func (d *digest) Reset()
 
 ```
 searchKey: md5.digest.MarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -270,6 +271,7 @@ func (d *digest) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: md5.digest.UnmarshalBinary
+tags: [private]
 ```
 
 ```Go
@@ -280,6 +282,7 @@ func (d *digest) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: md5.digest.Size
+tags: [private]
 ```
 
 ```Go
@@ -290,6 +293,7 @@ func (d *digest) Size() int
 
 ```
 searchKey: md5.digest.BlockSize
+tags: [private]
 ```
 
 ```Go
@@ -300,6 +304,7 @@ func (d *digest) BlockSize() int
 
 ```
 searchKey: md5.digest.Write
+tags: [private]
 ```
 
 ```Go
@@ -310,6 +315,7 @@ func (d *digest) Write(p []byte) (nn int, err error)
 
 ```
 searchKey: md5.digest.Sum
+tags: [private]
 ```
 
 ```Go
@@ -320,6 +326,7 @@ func (d *digest) Sum(in []byte) []byte
 
 ```
 searchKey: md5.digest.checkSum
+tags: [private]
 ```
 
 ```Go
@@ -330,6 +337,7 @@ func (d *digest) checkSum() [Size]byte
 
 ```
 searchKey: md5.md5Test
+tags: [private]
 ```
 
 ```Go
@@ -344,6 +352,7 @@ type md5Test struct {
 
 ```
 searchKey: md5.unmarshalTest
+tags: [private]
 ```
 
 ```Go
@@ -357,14 +366,11 @@ Tests for unmarshaling hashes that have hashed a large amount of data The initia
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
-### <a id="init" href="#init">func init()</a>
+### <a id="init.md5.go" href="#init.md5.go">func init()</a>
 
 ```
 searchKey: md5.init
+tags: [private]
 ```
 
 ```Go
@@ -375,6 +381,7 @@ func init()
 
 ```
 searchKey: md5.appendUint64
+tags: [private]
 ```
 
 ```Go
@@ -385,6 +392,7 @@ func appendUint64(b []byte, x uint64) []byte
 
 ```
 searchKey: md5.appendUint32
+tags: [private]
 ```
 
 ```Go
@@ -395,6 +403,7 @@ func appendUint32(b []byte, x uint32) []byte
 
 ```
 searchKey: md5.consumeUint64
+tags: [private]
 ```
 
 ```Go
@@ -405,6 +414,7 @@ func consumeUint64(b []byte) ([]byte, uint64)
 
 ```
 searchKey: md5.consumeUint32
+tags: [private]
 ```
 
 ```Go
@@ -415,7 +425,6 @@ func consumeUint32(b []byte) ([]byte, uint32)
 
 ```
 searchKey: md5.New
-tags: [exported]
 ```
 
 ```Go
@@ -428,7 +437,6 @@ New returns a new hash.Hash computing the MD5 checksum. The Hash also implements
 
 ```
 searchKey: md5.Sum
-tags: [exported]
 ```
 
 ```Go
@@ -441,6 +449,7 @@ Sum returns the MD5 checksum of the data.
 
 ```
 searchKey: md5.blockGeneric
+tags: [private]
 ```
 
 ```Go
@@ -451,6 +460,7 @@ func blockGeneric(dig *digest, p []byte)
 
 ```
 searchKey: md5.block
+tags: [private]
 ```
 
 ```Go
@@ -461,6 +471,7 @@ func block(dig *digest, p []byte)
 
 ```
 searchKey: md5.TestGolden
+tags: [private]
 ```
 
 ```Go
@@ -471,6 +482,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: md5.TestGoldenMarshal
+tags: [private]
 ```
 
 ```Go
@@ -481,6 +493,7 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: md5.TestLarge
+tags: [private]
 ```
 
 ```Go
@@ -491,6 +504,7 @@ func TestLarge(t *testing.T)
 
 ```
 searchKey: md5.TestBlockGeneric
+tags: [private]
 ```
 
 ```Go
@@ -503,6 +517,7 @@ Tests that blockGeneric (pure Go) and block (in assembly for amd64, 386, arm) ma
 
 ```
 searchKey: md5.safeSum
+tags: [private]
 ```
 
 ```Go
@@ -513,6 +528,7 @@ func safeSum(h hash.Hash) (sum []byte, err error)
 
 ```
 searchKey: md5.TestLargeHashes
+tags: [private]
 ```
 
 ```Go
@@ -523,6 +539,7 @@ func TestLargeHashes(t *testing.T)
 
 ```
 searchKey: md5.benchmarkSize
+tags: [private]
 ```
 
 ```Go
@@ -533,6 +550,7 @@ func benchmarkSize(b *testing.B, size int, unaligned bool)
 
 ```
 searchKey: md5.BenchmarkHash8Bytes
+tags: [private]
 ```
 
 ```Go
@@ -543,6 +561,7 @@ func BenchmarkHash8Bytes(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash64
+tags: [private]
 ```
 
 ```Go
@@ -553,6 +572,7 @@ func BenchmarkHash64(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash128
+tags: [private]
 ```
 
 ```Go
@@ -563,6 +583,7 @@ func BenchmarkHash128(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash256
+tags: [private]
 ```
 
 ```Go
@@ -573,6 +594,7 @@ func BenchmarkHash256(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash512
+tags: [private]
 ```
 
 ```Go
@@ -583,6 +605,7 @@ func BenchmarkHash512(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash1K
+tags: [private]
 ```
 
 ```Go
@@ -593,6 +616,7 @@ func BenchmarkHash1K(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash8K
+tags: [private]
 ```
 
 ```Go
@@ -603,6 +627,7 @@ func BenchmarkHash8K(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash1M
+tags: [private]
 ```
 
 ```Go
@@ -613,6 +638,7 @@ func BenchmarkHash1M(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash8M
+tags: [private]
 ```
 
 ```Go
@@ -623,6 +649,7 @@ func BenchmarkHash8M(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash8BytesUnaligned
+tags: [private]
 ```
 
 ```Go
@@ -633,6 +660,7 @@ func BenchmarkHash8BytesUnaligned(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash1KUnaligned
+tags: [private]
 ```
 
 ```Go
@@ -643,6 +671,7 @@ func BenchmarkHash1KUnaligned(b *testing.B)
 
 ```
 searchKey: md5.BenchmarkHash8KUnaligned
+tags: [private]
 ```
 
 ```Go

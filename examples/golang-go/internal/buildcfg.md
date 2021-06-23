@@ -45,10 +45,15 @@ Note that it does NOT provide access to the build configuration used to build th
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="defaultGOROOT" href="#defaultGOROOT">var defaultGOROOT</a>
 
 ```
 searchKey: buildcfg.defaultGOROOT
+tags: [private]
 ```
 
 ```Go
@@ -60,7 +65,6 @@ var defaultGOROOT string // set by linker
 
 ```
 searchKey: buildcfg.GOROOT
-tags: [exported]
 ```
 
 ```Go
@@ -71,7 +75,6 @@ var GOROOT = envOr("GOROOT", defaultGOROOT)
 
 ```
 searchKey: buildcfg.GOARCH
-tags: [exported]
 ```
 
 ```Go
@@ -82,7 +85,6 @@ var GOARCH = envOr("GOARCH", defaultGOARCH)
 
 ```
 searchKey: buildcfg.GOOS
-tags: [exported]
 ```
 
 ```Go
@@ -93,7 +95,6 @@ var GOOS = envOr("GOOS", defaultGOOS)
 
 ```
 searchKey: buildcfg.GO386
-tags: [exported]
 ```
 
 ```Go
@@ -104,7 +105,6 @@ var GO386 = envOr("GO386", defaultGO386)
 
 ```
 searchKey: buildcfg.GOARM
-tags: [exported]
 ```
 
 ```Go
@@ -115,7 +115,6 @@ var GOARM = goarm()
 
 ```
 searchKey: buildcfg.GOMIPS
-tags: [exported]
 ```
 
 ```Go
@@ -126,7 +125,6 @@ var GOMIPS = gomips()
 
 ```
 searchKey: buildcfg.GOMIPS64
-tags: [exported]
 ```
 
 ```Go
@@ -137,7 +135,6 @@ var GOMIPS64 = gomips64()
 
 ```
 searchKey: buildcfg.GOPPC64
-tags: [exported]
 ```
 
 ```Go
@@ -148,7 +145,6 @@ var GOPPC64 = goppc64()
 
 ```
 searchKey: buildcfg.GOWASM
-tags: [exported]
 ```
 
 ```Go
@@ -159,7 +155,6 @@ var GOWASM = gowasm()
 
 ```
 searchKey: buildcfg.GO_LDSO
-tags: [exported]
 ```
 
 ```Go
@@ -170,7 +165,6 @@ var GO_LDSO = defaultGO_LDSO
 
 ```
 searchKey: buildcfg.Version
-tags: [exported]
 ```
 
 ```Go
@@ -181,7 +175,6 @@ var Version = version
 
 ```
 searchKey: buildcfg.Error
-tags: [exported]
 ```
 
 ```Go
@@ -194,7 +187,6 @@ Error is one of the errors found (if any) in the build configuration.
 
 ```
 searchKey: buildcfg.Experiment
-tags: [exported]
 ```
 
 ```Go
@@ -209,6 +201,7 @@ Experiment contains the toolchain experiments enabled for the current build.
 
 ```
 searchKey: buildcfg.regabiSupported
+tags: [private]
 ```
 
 ```Go
@@ -219,6 +212,7 @@ var regabiSupported = ...
 
 ```
 searchKey: buildcfg.experimentBaseline
+tags: [private]
 ```
 
 ```Go
@@ -231,7 +225,6 @@ experimentBaseline specifies the experiment flags that are enabled by default in
 
 ```
 searchKey: buildcfg.FramePointerEnabled
-tags: [exported]
 ```
 
 ```Go
@@ -246,10 +239,15 @@ Note: must agree with runtime.framepointer_enabled.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="gowasmFeatures" href="#gowasmFeatures">type gowasmFeatures struct</a>
 
 ```
 searchKey: buildcfg.gowasmFeatures
+tags: [private]
 ```
 
 ```Go
@@ -263,6 +261,7 @@ type gowasmFeatures struct {
 
 ```
 searchKey: buildcfg.gowasm
+tags: [private]
 ```
 
 ```Go
@@ -273,6 +272,7 @@ func gowasm() (f gowasmFeatures)
 
 ```
 searchKey: buildcfg.gowasmFeatures.String
+tags: [private]
 ```
 
 ```Go
@@ -281,11 +281,14 @@ func (f gowasmFeatures) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Check" href="#Check">func Check()</a>
 
 ```
 searchKey: buildcfg.Check
-tags: [exported]
 ```
 
 ```Go
@@ -298,6 +301,7 @@ Check exits the program with a fatal error if Error is non-nil.
 
 ```
 searchKey: buildcfg.envOr
+tags: [private]
 ```
 
 ```Go
@@ -308,6 +312,7 @@ func envOr(key, value string) string
 
 ```
 searchKey: buildcfg.goarm
+tags: [private]
 ```
 
 ```Go
@@ -318,6 +323,7 @@ func goarm() int
 
 ```
 searchKey: buildcfg.gomips
+tags: [private]
 ```
 
 ```Go
@@ -328,6 +334,7 @@ func gomips() string
 
 ```
 searchKey: buildcfg.gomips64
+tags: [private]
 ```
 
 ```Go
@@ -338,6 +345,7 @@ func gomips64() string
 
 ```
 searchKey: buildcfg.goppc64
+tags: [private]
 ```
 
 ```Go
@@ -348,7 +356,6 @@ func goppc64() int
 
 ```
 searchKey: buildcfg.Getgoextlinkenabled
-tags: [exported]
 ```
 
 ```Go
@@ -359,6 +366,7 @@ func Getgoextlinkenabled() string
 
 ```
 searchKey: buildcfg.parseExperiments
+tags: [private]
 ```
 
 ```Go
@@ -369,6 +377,7 @@ func parseExperiments() goexperiment.Flags
 
 ```
 searchKey: buildcfg.expList
+tags: [private]
 ```
 
 ```Go
@@ -381,7 +390,6 @@ expList returns the list of lower-cased experiment names for experiments that di
 
 ```
 searchKey: buildcfg.GOEXPERIMENT
-tags: [exported]
 ```
 
 ```Go
@@ -394,7 +402,6 @@ GOEXPERIMENT is a comma-separated list of enabled or disabled experiments that d
 
 ```
 searchKey: buildcfg.EnabledExperiments
-tags: [exported]
 ```
 
 ```Go
@@ -407,7 +414,6 @@ EnabledExperiments returns a list of enabled experiments, as lower-cased experim
 
 ```
 searchKey: buildcfg.AllExperiments
-tags: [exported]
 ```
 
 ```Go

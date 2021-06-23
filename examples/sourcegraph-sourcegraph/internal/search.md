@@ -42,7 +42,7 @@ Validation logic for TextPatternInfo
     * [var globalSearchModeStrings](#globalSearchModeStrings)
 * [Types](#type)
     * [type Promise struct](#Promise)
-        * [func (p *Promise) init()](#Promise.init)
+        * [func (p *Promise) init()](#Promise.init.promise.go)
         * [func (p *Promise) Resolve(v interface{}) *Promise](#Promise.Resolve)
         * [func (p *Promise) Get(ctx context.Context) (interface{}, error)](#Promise.Get)
     * [type Protocol int](#Protocol)
@@ -121,10 +121,15 @@ Validation logic for TextPatternInfo
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [private]
+```
+
 ### <a id="defaultMaxSearchResults" href="#defaultMaxSearchResults">const defaultMaxSearchResults</a>
 
 ```
 searchKey: search.defaultMaxSearchResults
+tags: [private]
 ```
 
 ```Go
@@ -135,6 +140,7 @@ const defaultMaxSearchResults = 30
 
 ```
 searchKey: search.defaultMaxSearchResultsStreaming
+tags: [private]
 ```
 
 ```Go
@@ -145,7 +151,6 @@ const defaultMaxSearchResultsStreaming = 500
 
 ```
 searchKey: search.Streaming
-tags: [exported]
 ```
 
 ```Go
@@ -156,7 +161,6 @@ const Streaming Protocol = iota
 
 ```
 searchKey: search.Batch
-tags: [exported]
 ```
 
 ```Go
@@ -167,7 +171,6 @@ const Batch
 
 ```
 searchKey: search.Pagination
-tags: [exported]
 ```
 
 ```Go
@@ -178,7 +181,6 @@ const Pagination
 
 ```
 searchKey: search.RepoStatusCloning
-tags: [exported]
 ```
 
 ```Go
@@ -190,7 +192,6 @@ const RepoStatusCloning RepoStatus // could not be searched because they were st
 
 ```
 searchKey: search.RepoStatusMissing
-tags: [exported]
 ```
 
 ```Go
@@ -202,7 +203,6 @@ const RepoStatusMissing // could not be searched because they do not exist
 
 ```
 searchKey: search.RepoStatusLimitHit
-tags: [exported]
 ```
 
 ```Go
@@ -214,7 +214,6 @@ const RepoStatusLimitHit // searched, but have results that were not returned du
 
 ```
 searchKey: search.RepoStatusTimedout
-tags: [exported]
 ```
 
 ```Go
@@ -226,7 +225,6 @@ const RepoStatusTimedout // repos that were not searched due to timeout
 
 ```
 searchKey: search.ZoektGlobalSearch
-tags: [exported]
 ```
 
 ```Go
@@ -241,7 +239,6 @@ Note: Even for a global search we have to resolve repos to filter search results
 
 ```
 searchKey: search.SearcherOnly
-tags: [exported]
 ```
 
 ```Go
@@ -254,7 +251,6 @@ SearcherOnly designated a code path on which we skip indexed search, even if the
 
 ```
 searchKey: search.NoFilePath
-tags: [exported]
 ```
 
 ```Go
@@ -265,10 +261,15 @@ Disables file/path search. Used only in conjunction with ZoektGlobalSearch on So
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [private]
+```
+
 ### <a id="searcherURL" href="#searcherURL">var searcherURL</a>
 
 ```
 searchKey: search.searcherURL
+tags: [private]
 ```
 
 ```Go
@@ -279,6 +280,7 @@ var searcherURL = env.Get("SEARCHER_URL", "k8s+http://searcher:3181", "searcher 
 
 ```
 searchKey: search.searcherURLsOnce
+tags: [private]
 ```
 
 ```Go
@@ -289,6 +291,7 @@ var searcherURLsOnce sync.Once
 
 ```
 searchKey: search.searcherURLs
+tags: [private]
 ```
 
 ```Go
@@ -299,6 +302,7 @@ var searcherURLs *endpoint.Map
 
 ```
 searchKey: search.indexedSearchOnce
+tags: [private]
 ```
 
 ```Go
@@ -309,6 +313,7 @@ var indexedSearchOnce sync.Once
 
 ```
 searchKey: search.indexedSearch
+tags: [private]
 ```
 
 ```Go
@@ -319,6 +324,7 @@ var indexedSearch *backend.Zoekt
 
 ```
 searchKey: search.indexersOnce
+tags: [private]
 ```
 
 ```Go
@@ -329,6 +335,7 @@ var indexersOnce sync.Once
 
 ```
 searchKey: search.indexers
+tags: [private]
 ```
 
 ```Go
@@ -339,6 +346,7 @@ var indexers *backend.Indexers
 
 ```
 searchKey: search.repoStatusName
+tags: [private]
 ```
 
 ```Go
@@ -349,6 +357,7 @@ var repoStatusName = ...
 
 ```
 searchKey: search.globalSearchModeStrings
+tags: [private]
 ```
 
 ```Go
@@ -357,11 +366,14 @@ var globalSearchModeStrings = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [private]
+```
+
 ### <a id="Promise" href="#Promise">type Promise struct</a>
 
 ```
 searchKey: search.Promise
-tags: [exported]
 ```
 
 ```Go
@@ -374,10 +386,11 @@ type Promise struct {
 }
 ```
 
-#### <a id="Promise.init" href="#Promise.init">func (p *Promise) init()</a>
+#### <a id="Promise.init.promise.go" href="#Promise.init.promise.go">func (p *Promise) init()</a>
 
 ```
 searchKey: search.Promise.init
+tags: [private]
 ```
 
 ```Go
@@ -388,7 +401,6 @@ func (p *Promise) init()
 
 ```
 searchKey: search.Promise.Resolve
-tags: [exported]
 ```
 
 ```Go
@@ -401,7 +413,6 @@ Resolve returns a promise that is resolved with a given value.
 
 ```
 searchKey: search.Promise.Get
-tags: [exported]
 ```
 
 ```Go
@@ -414,7 +425,6 @@ Get returns the value. It blocks until the promise resolves or the context is ca
 
 ```
 searchKey: search.Protocol
-tags: [exported]
 ```
 
 ```Go
@@ -425,7 +435,6 @@ type Protocol int
 
 ```
 searchKey: search.RevisionSpecifier
-tags: [exported]
 ```
 
 ```Go
@@ -450,6 +459,7 @@ RevisionSpecifier represents either a revspec or a ref glob. At most one field i
 
 ```
 searchKey: search.parseRev
+tags: [private]
 ```
 
 ```Go
@@ -460,7 +470,6 @@ func parseRev(spec string) RevisionSpecifier
 
 ```
 searchKey: search.RevisionSpecifier.String
-tags: [exported]
 ```
 
 ```Go
@@ -471,7 +480,6 @@ func (r1 RevisionSpecifier) String() string
 
 ```
 searchKey: search.RevisionSpecifier.Less
-tags: [exported]
 ```
 
 ```Go
@@ -486,7 +494,6 @@ possibly-undesired: this results in treating an entity with no revspec, but a re
 
 ```
 searchKey: search.RepositoryRevisions
-tags: [exported]
 ```
 
 ```Go
@@ -517,7 +524,6 @@ RepositoryRevisions specifies a repository and 0 or more revspecs and ref globs.
 
 ```
 searchKey: search.RepositoryRevisions.Copy
-tags: [exported]
 ```
 
 ```Go
@@ -528,7 +534,6 @@ func (r *RepositoryRevisions) Copy() *RepositoryRevisions
 
 ```
 searchKey: search.RepositoryRevisions.Equal
-tags: [exported]
 ```
 
 ```Go
@@ -541,7 +546,6 @@ Equal provides custom comparison which is used by go-cmp
 
 ```
 searchKey: search.RepositoryRevisions.GitserverRepo
-tags: [exported]
 ```
 
 ```Go
@@ -554,7 +558,6 @@ GitserverRepo is a convenience function to return the api.RepoName for r.Repo. T
 
 ```
 searchKey: search.RepositoryRevisions.String
-tags: [exported]
 ```
 
 ```Go
@@ -565,7 +568,6 @@ func (r *RepositoryRevisions) String() string
 
 ```
 searchKey: search.RepositoryRevisions.OnlyExplicit
-tags: [exported]
 ```
 
 ```Go
@@ -578,7 +580,6 @@ OnlyExplicit returns true if all revspecs in Revs are explicit.
 
 ```
 searchKey: search.RepositoryRevisions.RevSpecs
-tags: [exported]
 ```
 
 ```Go
@@ -591,7 +592,6 @@ RevSpecs returns a list of all explicitly listed Git revspecs. It does not expan
 
 ```
 searchKey: search.RepositoryRevisions.ExpandedRevSpecs
-tags: [exported]
 ```
 
 ```Go
@@ -608,7 +608,6 @@ Not all callers need to expand ref glob expressions. If a caller is passing the 
 
 ```
 searchKey: search.RepoStatus
-tags: [exported]
 ```
 
 ```Go
@@ -621,7 +620,6 @@ RepoStatus is a bit flag encoding the status of a search on a repository. A repo
 
 ```
 searchKey: search.RepoStatus.String
-tags: [exported]
 ```
 
 ```Go
@@ -632,7 +630,6 @@ func (s RepoStatus) String() string
 
 ```
 searchKey: search.RepoStatusMap
-tags: [exported]
 ```
 
 ```Go
@@ -650,7 +647,6 @@ RepoStatusMap is a mutable map from repository IDs to a union of RepoStatus.
 
 ```
 searchKey: search.RepoStatusSingleton
-tags: [exported]
 ```
 
 ```Go
@@ -663,6 +659,7 @@ RepoStatusSingleton is a convenience function to contain a RepoStatusMap with on
 
 ```
 searchKey: search.mkStatusMap
+tags: [private]
 ```
 
 ```Go
@@ -673,7 +670,6 @@ func mkStatusMap(m map[api.RepoID]RepoStatus) RepoStatusMap
 
 ```
 searchKey: search.RepoStatusMap.Iterate
-tags: [exported]
 ```
 
 ```Go
@@ -686,7 +682,6 @@ Iterate will call f for each RepoID in m.
 
 ```
 searchKey: search.RepoStatusMap.Filter
-tags: [exported]
 ```
 
 ```Go
@@ -699,7 +694,6 @@ Filter calls f for each repo RepoID where mask is a subset of the repo status.
 
 ```
 searchKey: search.RepoStatusMap.Get
-tags: [exported]
 ```
 
 ```Go
@@ -712,7 +706,6 @@ Get returns the RepoStatus for id.
 
 ```
 searchKey: search.RepoStatusMap.Update
-tags: [exported]
 ```
 
 ```Go
@@ -725,7 +718,6 @@ Update unions status for id with the current status.
 
 ```
 searchKey: search.RepoStatusMap.Union
-tags: [exported]
 ```
 
 ```Go
@@ -738,7 +730,6 @@ Union is a fast path for calling m.Update on all entries in o.
 
 ```
 searchKey: search.RepoStatusMap.Any
-tags: [exported]
 ```
 
 ```Go
@@ -751,7 +742,6 @@ Any returns true if there are any entries which contain a status in mask.
 
 ```
 searchKey: search.RepoStatusMap.All
-tags: [exported]
 ```
 
 ```Go
@@ -764,7 +754,6 @@ All returns true if all entries contain status.
 
 ```
 searchKey: search.RepoStatusMap.Len
-tags: [exported]
 ```
 
 ```Go
@@ -777,7 +766,6 @@ Len is the number of entries in the map.
 
 ```
 searchKey: search.RepoStatusMap.String
-tags: [exported]
 ```
 
 ```Go
@@ -788,7 +776,6 @@ func (m *RepoStatusMap) String() string
 
 ```
 searchKey: search.TypeParameters
-tags: [exported]
 ```
 
 ```Go
@@ -801,7 +788,6 @@ type TypeParameters interface {
 
 ```
 searchKey: search.CommitParameters
-tags: [exported]
 ```
 
 ```Go
@@ -818,6 +804,7 @@ type CommitParameters struct {
 
 ```
 searchKey: search.CommitParameters.typeParametersValue
+tags: [private]
 ```
 
 ```Go
@@ -828,7 +815,6 @@ func (CommitParameters) typeParametersValue()
 
 ```
 searchKey: search.DiffParameters
-tags: [exported]
 ```
 
 ```Go
@@ -842,6 +828,7 @@ type DiffParameters struct {
 
 ```
 searchKey: search.DiffParameters.typeParametersValue
+tags: [private]
 ```
 
 ```Go
@@ -852,7 +839,6 @@ func (DiffParameters) typeParametersValue()
 
 ```
 searchKey: search.CommitPatternInfo
-tags: [exported]
 ```
 
 ```Go
@@ -876,7 +862,6 @@ CommitPatternInfo is the data type that describes the properties of a pattern us
 
 ```
 searchKey: search.CommitPatternInfo.IsEmpty
-tags: [exported]
 ```
 
 ```Go
@@ -887,7 +872,6 @@ func (p *CommitPatternInfo) IsEmpty() bool
 
 ```
 searchKey: search.CommitPatternInfo.Validate
-tags: [exported]
 ```
 
 ```Go
@@ -898,7 +882,6 @@ func (p *CommitPatternInfo) Validate() error
 
 ```
 searchKey: search.SymbolsParameters
-tags: [exported]
 ```
 
 ```Go
@@ -941,6 +924,7 @@ type SymbolsParameters struct {
 
 ```
 searchKey: search.SymbolsParameters.typeParametersValue
+tags: [private]
 ```
 
 ```Go
@@ -951,7 +935,6 @@ func (SymbolsParameters) typeParametersValue()
 
 ```
 searchKey: search.GlobalSearchMode
-tags: [exported]
 ```
 
 ```Go
@@ -964,7 +947,6 @@ GlobalSearchMode designates code paths which optimize performance for global sea
 
 ```
 searchKey: search.GlobalSearchMode.String
-tags: [exported]
 ```
 
 ```Go
@@ -975,7 +957,6 @@ func (m GlobalSearchMode) String() string
 
 ```
 searchKey: search.TextParameters
-tags: [exported]
 ```
 
 ```Go
@@ -1012,6 +993,7 @@ TextParameters are the parameters passed to a search backend. It contains the Pa
 
 ```
 searchKey: search.TextParameters.typeParametersValue
+tags: [private]
 ```
 
 ```Go
@@ -1022,7 +1004,6 @@ func (TextParameters) typeParametersValue()
 
 ```
 searchKey: search.TextParametersForCommitParameters
-tags: [exported]
 ```
 
 ```Go
@@ -1039,7 +1020,6 @@ TextParametersForCommitParameters is an intermediate type based on TextParameter
 
 ```
 searchKey: search.TextPatternInfo
-tags: [exported]
 ```
 
 ```Go
@@ -1078,7 +1058,6 @@ TextPatternInfo is the struct used by vscode pass on search queries. Keep it in 
 
 ```
 searchKey: search.ToTextPatternInfo
-tags: [exported]
 ```
 
 ```Go
@@ -1091,7 +1070,6 @@ ToTextPatternInfo converts a an atomic query to internal values that drive text 
 
 ```
 searchKey: search.TextPatternInfo.IsEmpty
-tags: [exported]
 ```
 
 ```Go
@@ -1102,7 +1080,6 @@ func (p *TextPatternInfo) IsEmpty() bool
 
 ```
 searchKey: search.TextPatternInfo.Validate
-tags: [exported]
 ```
 
 ```Go
@@ -1113,7 +1090,6 @@ func (p *TextPatternInfo) Validate() error
 
 ```
 searchKey: search.TextPatternInfo.String
-tags: [exported]
 ```
 
 ```Go
@@ -1122,11 +1098,14 @@ func (p *TextPatternInfo) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [private]
+```
+
 ### <a id="SearcherURLs" href="#SearcherURLs">func SearcherURLs() *endpoint.Map</a>
 
 ```
 searchKey: search.SearcherURLs
-tags: [exported]
 ```
 
 ```Go
@@ -1137,7 +1116,6 @@ func SearcherURLs() *endpoint.Map
 
 ```
 searchKey: search.Indexed
-tags: [exported]
 ```
 
 ```Go
@@ -1148,7 +1126,6 @@ func Indexed() *backend.Zoekt
 
 ```
 searchKey: search.Indexers
-tags: [exported]
 ```
 
 ```Go
@@ -1159,6 +1136,7 @@ func Indexers() *backend.Indexers
 
 ```
 searchKey: search.zoektAddr
+tags: [private]
 ```
 
 ```Go
@@ -1169,6 +1147,7 @@ func zoektAddr(environ []string) string
 
 ```
 searchKey: search.getEnv
+tags: [private]
 ```
 
 ```Go
@@ -1179,6 +1158,7 @@ func getEnv(environ []string, key string) (string, bool)
 
 ```
 searchKey: search.reposAtEndpoint
+tags: [private]
 ```
 
 ```Go
@@ -1189,6 +1169,7 @@ func reposAtEndpoint(ctx context.Context, endpoint string) map[string]struct{}
 
 ```
 searchKey: search.unionRegexp
+tags: [private]
 ```
 
 ```Go
@@ -1201,6 +1182,7 @@ unionRegexp separates values with a | operator to create a string representing a
 
 ```
 searchKey: search.langToFileRegexp
+tags: [private]
 ```
 
 ```Go
@@ -1213,6 +1195,7 @@ langToFileRegexp converts a lang: parameter to its corresponding file patterns f
 
 ```
 searchKey: search.mapSlice
+tags: [private]
 ```
 
 ```Go
@@ -1223,7 +1206,6 @@ func mapSlice(values []string, f func(string) string) []string
 
 ```
 searchKey: search.IncludeExcludeValues
-tags: [exported]
 ```
 
 ```Go
@@ -1234,6 +1216,7 @@ func IncludeExcludeValues(q query.Basic, field string) (include, exclude []strin
 
 ```
 searchKey: search.count
+tags: [private]
 ```
 
 ```Go
@@ -1244,7 +1227,6 @@ func count(q query.Basic, p Protocol) int
 
 ```
 searchKey: search.ParseRepositoryRevisions
-tags: [exported]
 ```
 
 ```Go
@@ -1278,6 +1260,7 @@ section on the --glob flag)
 
 ```
 searchKey: search.expandedRevSpec
+tags: [private]
 ```
 
 ```Go
@@ -1290,6 +1273,7 @@ expandedRevSpecs evaluates all of r's ref glob expressions and returns the full,
 
 ```
 searchKey: search.TestZoektAddr
+tags: [private]
 ```
 
 ```Go
@@ -1300,6 +1284,7 @@ func TestZoektAddr(t *testing.T)
 
 ```
 searchKey: search.overrideSearchType
+tags: [private]
 ```
 
 ```Go
@@ -1310,6 +1295,7 @@ func overrideSearchType(input string, searchType query.SearchType) query.SearchT
 
 ```
 searchKey: search.TestToTextPatternInfo
+tags: [private]
 ```
 
 ```Go
@@ -1320,6 +1306,7 @@ func TestToTextPatternInfo(t *testing.T)
 
 ```
 searchKey: search.TestParseRepositoryRevisions
+tags: [private]
 ```
 
 ```Go
@@ -1330,6 +1317,7 @@ func TestParseRepositoryRevisions(t *testing.T)
 
 ```
 searchKey: search.TestRepoStatusMap
+tags: [private]
 ```
 
 ```Go
@@ -1340,6 +1328,7 @@ func TestRepoStatusMap(t *testing.T)
 
 ```
 searchKey: search.TestRepoStatusMap_nil
+tags: [private]
 ```
 
 ```Go
@@ -1352,6 +1341,7 @@ Test we have reasonable behaviour on nil maps
 
 ```
 searchKey: search.TestRepoStatusSingleton
+tags: [private]
 ```
 
 ```Go
@@ -1362,6 +1352,7 @@ func TestRepoStatusSingleton(t *testing.T)
 
 ```
 searchKey: search.assertReposStatusEqual
+tags: [private]
 ```
 
 ```Go
@@ -1372,6 +1363,7 @@ func assertReposStatusEqual(t *testing.T, want, got RepoStatusMap)
 
 ```
 searchKey: search.TestPromiseGet
+tags: [private]
 ```
 
 ```Go
@@ -1382,6 +1374,7 @@ func TestPromiseGet(t *testing.T)
 
 ```
 searchKey: search.TestPromiseGetWithCancel
+tags: [private]
 ```
 
 ```Go
@@ -1392,6 +1385,7 @@ func TestPromiseGetWithCancel(t *testing.T)
 
 ```
 searchKey: search.TestPromiseGetConcurrent
+tags: [private]
 ```
 
 ```Go

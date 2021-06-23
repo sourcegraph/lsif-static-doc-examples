@@ -28,14 +28,11 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="workerJobs" href="#workerJobs">var workerJobs</a>
 
 ```
 searchKey: definitions.workerJobs
+tags: [private]
 ```
 
 ```Go
@@ -44,15 +41,10 @@ var workerJobs = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [exported]
-```
-
 ### <a id="ExecutorQueue" href="#ExecutorQueue">func ExecutorQueue() *monitoring.Container</a>
 
 ```
 searchKey: definitions.ExecutorQueue
-tags: [exported]
 ```
 
 ```Go
@@ -63,7 +55,6 @@ func ExecutorQueue() *monitoring.Container
 
 ```
 searchKey: definitions.Frontend
-tags: [exported]
 ```
 
 ```Go
@@ -74,7 +65,6 @@ func Frontend() *monitoring.Container
 
 ```
 searchKey: definitions.GitServer
-tags: [exported]
 ```
 
 ```Go
@@ -85,7 +75,6 @@ func GitServer() *monitoring.Container
 
 ```
 searchKey: definitions.GitHubProxy
-tags: [exported]
 ```
 
 ```Go
@@ -96,7 +85,6 @@ func GitHubProxy() *monitoring.Container
 
 ```
 searchKey: definitions.Postgres
-tags: [exported]
 ```
 
 ```Go
@@ -107,7 +95,6 @@ func Postgres() *monitoring.Container
 
 ```
 searchKey: definitions.PreciseCodeIntelIndexer
-tags: [exported]
 ```
 
 ```Go
@@ -118,7 +105,6 @@ func PreciseCodeIntelIndexer() *monitoring.Container
 
 ```
 searchKey: definitions.PreciseCodeIntelWorker
-tags: [exported]
 ```
 
 ```Go
@@ -129,7 +115,6 @@ func PreciseCodeIntelWorker() *monitoring.Container
 
 ```
 searchKey: definitions.Prometheus
-tags: [exported]
 ```
 
 ```Go
@@ -140,7 +125,6 @@ func Prometheus() *monitoring.Container
 
 ```
 searchKey: definitions.QueryRunner
-tags: [exported]
 ```
 
 ```Go
@@ -151,7 +135,6 @@ func QueryRunner() *monitoring.Container
 
 ```
 searchKey: definitions.RepoUpdater
-tags: [exported]
 ```
 
 ```Go
@@ -162,7 +145,6 @@ func RepoUpdater() *monitoring.Container
 
 ```
 searchKey: definitions.Searcher
-tags: [exported]
 ```
 
 ```Go
@@ -173,7 +155,6 @@ func Searcher() *monitoring.Container
 
 ```
 searchKey: definitions.Symbols
-tags: [exported]
 ```
 
 ```Go
@@ -184,7 +165,6 @@ func Symbols() *monitoring.Container
 
 ```
 searchKey: definitions.SyntectServer
-tags: [exported]
 ```
 
 ```Go
@@ -195,7 +175,6 @@ func SyntectServer() *monitoring.Container
 
 ```
 searchKey: definitions.Worker
-tags: [exported]
 ```
 
 ```Go
@@ -206,6 +185,7 @@ func Worker() *monitoring.Container
 
 ```
 searchKey: definitions.createWorkerActiveJobRows
+tags: [private]
 ```
 
 ```Go
@@ -216,7 +196,6 @@ func createWorkerActiveJobRows() []monitoring.Row
 
 ```
 searchKey: definitions.ZoektIndexServer
-tags: [exported]
 ```
 
 ```Go
@@ -227,7 +206,6 @@ func ZoektIndexServer() *monitoring.Container
 
 ```
 searchKey: definitions.ZoektWebServer
-tags: [exported]
 ```
 
 ```Go
